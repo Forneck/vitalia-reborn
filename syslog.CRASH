@@ -1,30 +1,30 @@
-Oct 30 23:13:12 2020 :: Cansian had no variable file
-Oct 30 23:13:12 2020 :: Cansian retrieving crash-saved items and entering game.
-Oct 30 23:13:12 2020 :: Cansian (level 110) has 2 objects (max 100).
-Oct 30 23:13:23 2020 :: OLC: Cansian starts editing zone 69 allowed zone 0
-Oct 30 23:13:27 2020 :: Warning: columns too narrow for correct output to Cansian in simple_column_list (utils.c)
-Oct 30 23:13:29 2020 :: Warning: columns too narrow for correct output to Cansian in simple_column_list (utils.c)
-Oct 30 23:13:31 2020 :: Warning: columns too narrow for correct output to Cansian in simple_column_list (utils.c)
-Oct 30 23:13:36 2020 :: Warning: columns too narrow for correct output to Cansian in simple_column_list (utils.c)
-Oct 30 23:13:41 2020 :: OLC: Cansian edits zone info for room 6909.
-Oct 30 23:13:41 2020 :: OLC: Cansian stops editing zone 69 allowed zone 0
-Oct 30 23:18:01 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Oct 30 23:18:01 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 21204
-Oct 30 23:23:01 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Oct 30 23:23:01 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 21204
-Oct 30 23:24:45 2020 :: Cansian has quit the game.
-Oct 30 23:24:46 2020 :: Losing player: Cansian.
-Oct 30 23:24:46 2020 :: No connections.  Going to sleep.
-Oct 30 23:25:34 2020 :: New connection.  Waking up.
-Oct 30 23:25:44 2020 :: Cansian has connected.
-Oct 30 23:25:45 2020 :: Cansian had no variable file
-Oct 30 23:25:45 2020 :: Cansian un-renting and entering game.
-Oct 30 23:25:45 2020 :: Cansian (level 110) has 2 objects (max 100).
-Oct 30 23:25:52 2020 :: (GC) Reboot by Cansian.
-Oct 30 23:25:52 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Oct 30 23:25:52 2020 :: Closing all sockets.
-Oct 30 23:25:52 2020 :: Closing link to: Cansian.
-Oct 30 23:25:52 2020 :: Saving current MUD time.
-Oct 30 23:25:52 2020 :: Rebooting.
+Oct 31 00:36:00 2020 :: rusage: user time: 7 sec, system time: 0 sec, max res size: 22748
+Oct 31 00:41:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 00:41:00 2020 :: rusage: user time: 7 sec, system time: 0 sec, max res size: 22748
+Oct 31 00:46:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 00:46:00 2020 :: rusage: user time: 8 sec, system time: 0 sec, max res size: 22852
+Oct 31 00:51:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 00:51:00 2020 :: rusage: user time: 9 sec, system time: 0 sec, max res size: 23112
+Oct 31 00:56:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 00:56:00 2020 :: rusage: user time: 9 sec, system time: 0 sec, max res size: 23112
+Oct 31 01:01:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 01:01:00 2020 :: rusage: user time: 10 sec, system time: 0 sec, max res size: 23332
+Oct 31 01:06:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 01:06:00 2020 :: rusage: user time: 11 sec, system time: 0 sec, max res size: 23452
+Oct 31 01:11:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 01:11:00 2020 :: rusage: user time: 11 sec, system time: 0 sec, max res size: 23452
+Oct 31 01:11:36 2020 :: Anyte killed by o Grande Cavaleiro dos Paladinos at Do Lado de fora da Moradia de Redferne
+Oct 31 01:11:38 2020 :: add_to_lookup updating existing value for uid=6 (0x555c25888180 -> 0x555c25888180)
+Oct 31 01:11:38 2020 :: Anyte entering game with no equipment.
+Oct 31 01:16:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 01:16:00 2020 :: rusage: user time: 11 sec, system time: 0 sec, max res size: 23548
+Oct 31 01:16:11 2020 :: (GC) Cansian forced Anyte to n
+Oct 31 01:17:50 2020 :: (GC) Reboot by Cansian.
+Oct 31 01:17:50 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Oct 31 01:17:50 2020 :: Closing all sockets.
+Oct 31 01:17:50 2020 :: Closing link to: Anyte.
+Oct 31 01:17:50 2020 :: Closing link to: Cansian.
+Oct 31 01:17:50 2020 :: Saving current MUD time.
+Oct 31 01:17:50 2020 :: Rebooting.
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.

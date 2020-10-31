@@ -6,25 +6,25 @@ Clas: 4
 Levl: 32
 Id  : 6
 Brth: 1603323580
-Plyd: 48642
-Last: 1604102910
+Plyd: 52710
+Last: 1604107429
 Lmot: 1603324480
 Lnew: 1604011239
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: -240
+Alin: -151
 Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
-Room: 3001
+Room: 5518
 Lern: 29
-Hung: 11
-Thir: 8
-Hit : 372/342
+Hung: 17
+Thir: 17
+Hit : 287/342
 Mana : 603/603
-Move: 116/146
+Move: 139/146
 Str : 17/0
 Int : 9
 Wis : 11
@@ -32,8 +32,8 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 329922
-Exp : 7564173
+Gold: 371448
+Exp : 6700290
 Olc : 0
 Skil:
 7 100
@@ -43,7 +43,13 @@ Skil:
 231 80
 243 25
 0 0
-Alis: 13
+Alis: 15
+ isharet
+         e;e;d;e;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;n;n
+1
+ isha
+            s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;u;w;w
+1
  redfern
          s;s;w;w;w;s;s;s;s;s;s;e;e;e;n;w;s;s;s;w;s;u;u;u;u;u
 1
