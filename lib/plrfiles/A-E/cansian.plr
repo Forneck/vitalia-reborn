@@ -15,10 +15,10 @@ Host: 127.0.0.1
 Hite: 151
 Wate: 113
 Alin: -176
-Act : 0 0 0 0
+Act : g 0 0 0
 Aff : 0 0 0 0
 Pref: efghimnoqrvxAB cd 0 0
-Room: 65535
+Room: 3001
 Hit : 2000/2000
 Mana : 100/100
 Move: 82/82

@@ -7,7 +7,7 @@ Levl: 32
 Id  : 6
 Brth: 1603323580
 Plyd: 52710
-Last: 1604107429
+Last: 1604110240
 Lmot: 1603324480
 Lnew: 1604011239
 Htwn: 3001
@@ -44,48 +44,48 @@ Skil:
 243 25
 0 0
 Alis: 15
- isharet
-         e;e;d;e;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;n;n
+ say
+ say @g$*@n
 1
- isha
-            s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;u;w;w
-1
- redfern
-         s;s;w;w;w;s;s;s;s;s;s;e;e;e;n;w;s;s;s;w;s;u;u;u;u;u
-1
- pocao_volta
-     s;s;s;w;w;w;w;n;n;n;n;n;e
-1
- pocao_ida
-       sw;s;s;s;s;e;e;e;e;n;n;n
-1
- elfos
-           s;s;w;w;w;s;s;s;s;s;s;e;e;n;n;e;e;e;ne;e;se;e
-1
- otavia
-          n;n;n;n;n;n;w;w;w;w;w;n;e;n;w;w;w;nw;nw;n;n;n;w;w;nw;w;nw;nw
-1
- duwick
-          s;s;e;e;e;e;e;e;n;n;e;e;d;e;e;e;e;s;s;s;w;s;w;s;e;e;n;e;e;s;e;s;e;n;n;w;n
-1
- cailvehpath
-     s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;w;n;n;n;n;n;w;w;w;nw;w;n;open por sw
-1
- drows
-           s;s;s;s;e;e;s;s;e;e;e;e;n;d;n;d
+ 1
+ say
+0
+ bash
+ bash $*;st
+0
+ newthalos
+       s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open grad;e;e;e;u
 1
  labirinto:
       s;s;w;w;w;s;s;s;s;s;s;w;s;s;s;s;s;s;w;w;s;s;s;w;w;w;w;n
 1
- newthalos
-       s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open grad;e;e;e;u
+ drows
+           s;s;s;s;e;e;s;s;e;e;e;e;n;d;n;d
 1
- bash
- bash $*;st
-0
- 1
- say
-0
- say
- say @g$*@n
+ cailvehpath
+     s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;w;n;n;n;n;n;w;w;w;nw;w;n;open por sw
+1
+ duwick
+          s;s;e;e;e;e;e;e;n;n;e;e;d;e;e;e;e;s;s;s;w;s;w;s;e;e;n;e;e;s;e;s;e;n;n;w;n
+1
+ otavia
+          n;n;n;n;n;n;w;w;w;w;w;n;e;n;w;w;w;nw;nw;n;n;n;w;w;nw;w;nw;nw
+1
+ elfos
+           s;s;w;w;w;s;s;s;s;s;s;e;e;n;n;e;e;e;ne;e;se;e
+1
+ pocao_ida
+       sw;s;s;s;s;e;e;e;e;n;n;n
+1
+ pocao_volta
+     s;s;s;w;w;w;w;n;n;n;n;n;e
+1
+ redfern
+         s;s;w;w;w;s;s;s;s;s;s;e;e;e;n;w;s;s;s;w;s;u;u;u;u;u
+1
+ isha
+            s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;u;w;w
+1
+ isharet
+         e;e;d;e;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;n;n
 1
