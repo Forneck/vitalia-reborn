@@ -16,7 +16,7 @@ Você pode ver escadas levando para cima, para a escuridão.
 ~
 2 -1 7102
 E
-inscrição parede~
+inscricao parede~
 A inscrição diz @R'CUIDADO AVENTUREIRO'@n
 ~
 S
@@ -225,7 +225,7 @@ Você vê um corredor MUITO longo.
 ~
 0 -1 7311
 E
-estátua pequena~
+estatua pequena~
 Esta é a estátua de um demônio, apontando para o oeste.  O demônio parece
 um homem com chifres e um rabo.
 ~
@@ -448,7 +448,7 @@ Eles foram, obviamente, mortos de alguma maneira, mas não parece ter sido
 por uma espada ou maça.
 ~
 E
-dragão estátua~
+dragao estatua~
 Ele parece ser um dragão de prata.  Ele está cravado no centro da mesa.  O
 dragão está em cima de um dragão vermelho que parece estar morto.  Mas os
 olhos do dragão vermelho estão brilhando, com uma cor vermelha.  Você
@@ -517,17 +517,17 @@ cabeças petrificadas penduradas na parede.
 D0
 Você vê a cabeça de um dragão vermelho pendurada na parede.
 ~
-cabeça vermelha~
+cabeca vermelha~
 2 0 7324
 D1
 Você vê a cabeça de um dragão verde pendurada na parede.
 ~
-cabeça verde~
+cabeca verde~
 1 -1 7325
 D2
 Você vê a cabeça de um dragão azul pendurada na parede.
 ~
-cabeça azul~
+cabeca azul~
 2 0 7324
 D3
 Você vê uma sala, ao longe.
@@ -535,7 +535,7 @@ Você vê uma sala, ao longe.
 ~
 0 -1 7323
 E
-cabeça cabeças~
+cabeca cabecas~
 Quando você observa os rostos das cabeças você vê que são rostos de dragões.
 O rosto ao norte é vermelho, o rosto ao leste é verde e o rosto ao sul é azul.
 ~
@@ -594,7 +594,7 @@ D3
 ~
 0 -1 7325
 E
-pegadas pé~
+pegadas pe~
 Você nunca tinha visto pegadas como estas antes!
 ~
 S
@@ -655,7 +655,7 @@ D3
 ~
 0 -1 7330
 E
-inscrição~
+inscricao~
 A inscrição diz:
 
                         PERIGO
