@@ -816,7 +816,6 @@ void command_interpreter(struct char_data *ch, char *argument)
 				if (!is_name(arg1, EXIT(ch, door)->keyword))
 					door = -1;
 			}
-			else
 		}
 		else
 		{
