@@ -1291,11 +1291,11 @@ ACMD(do_suggestion)
 	input[28] = 1/(1+exp(-count_obj));
 
 	calc_output = fann_run(ann, input);
-
+   calc_output[0] = calc_output[0] * 780;
 		if (calc_output[3] <= 0 )
 		send_to_char(ch, "Sugestão de comando: %s \r\n", cmd_info[(int)calc_output[0]].command);    else if (calc_output[5] > 0)
 	send_to_char(ch, "Comando Sugerido %s %f %f \r\n",
 			cmd_info[(int)calc_output[0]].command, calc_output[3], calc_output[5]);
 	else 
-		send_to_char(ch, "Comando Sugerido %f %f \r\n",calc_output[0], calc_output[3]);
+		send_to_char(ch, "Comando Sugerido %s %f \r\n",cmd_info[(int)calc_output[0]].command, calc_output[3]);
 }
