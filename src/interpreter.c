@@ -512,6 +512,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	/* ann teste - forneck */
 	int i, type1, type2;
 	struct fann *ann;
+	struct fann_type *calc;
 
 	ann = fann_create_from_file("etc/aventureiro.fann");
 	fann_type input[29];
@@ -898,9 +899,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 		{
 			send_to_char(ch, "%f, %f, %f, %f, %f, %f, %d\r\n", output[0], output[1], output[2], output[3],
 						 output[4], output[5], cmd);
-			output = fann_run(ann,input,output);
-			send_to_char(ch, "%f, %f, %f, %f, %f, %f, %d\r\n", output[0], output[1], output[2], output[3],
-						 output[4], output[5], cmd);
+			calc = fann_run(ann,input);
+			send_to_char(ch, "%f, %f, %f, %f, %f, %f, %d\r\n", calc[0], calc[1], calc[2], calc[3], calc[4], calc[5], cmd);
 		}
 		fann_destroy(ann);
 		
