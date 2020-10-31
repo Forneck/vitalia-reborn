@@ -1,692 +1,692 @@
 #7200
 A Tesouraria~
-   Você está num pequena porém bem equipada tesouraria.  Você pode ver algumas
-escrituras nas paredes.  O teto tem um brilho esquisito, que permite você
-enxergar.  Você pode voltar à toca secreta, atravessando a porta de pedra
-que está a leste.
+   VocÃª estÃ¡ num pequena porÃ©m bem equipada tesouraria.  VocÃª pode ver algumas
+escrituras nas paredes.  O teto tem um brilho esquisito, que permite vocÃª
+enxergar.  VocÃª pode voltar Ã  toca secreta, atravessando a porta de pedra
+que estÃ¡ a leste.
 ~
-72 12 0 0 0 0
+72 cd 0
 D1
-Você olha através da abertura que leva a toca secreta.
+VocÃª olha atravÃ©s da abertura que leva a toca secreta.
 ~
 porta pedra~
 2 7205 7201
 E
-escritura~
-Você lê o número '666'.
+porta pedra~
+Esta Ã© uma pesada porta de pedra negra, ela parece ser bastante sÃ³lida.
 ~
 E
-porta pedra~
-Esta é uma pesada porta de pedra negra, ela parece ser bastante sólida.
+escritura~
+VocÃª lÃª o nÃºmero '666'.
 ~
 S
 #7201
 A Toca Secreta~
-   Você está numa sala octogonal, com sujas paredes de pedra roxa.  O piso é
-feito de pedra negra.  Na parede oeste você vê um grande porta de pedra
-negra, enquanto uma espécie de caverna parece ter surgido na parede direita.
+   VocÃª estÃ¡ numa sala octogonal, com sujas paredes de pedra roxa.  O piso Ã©
+feito de pedra negra.  Na parede oeste vocÃª vÃª um grande porta de pedra
+negra, enquanto uma espÃ©cie de caverna parece ter surgido na parede direita.
 ~
-72 9 0 0 0 0
+72 ad 0
 D1
-Há ali uma estranha caverna que, aparentemente, surgiu do nada.
+HÃ¡ ali uma estranha caverna que, aparentemente, surgiu do nada.
 ~
 ~
 0 -1 6971
 D2
-Você olha através da porta que leva a toca.
+VocÃª olha atravÃ©s da porta que leva a toca.
 ~
 porta madeira~
 1 -1 7202
 D3
-Você vê a tesouraria.
+VocÃª vÃª a tesouraria.
 ~
 porta pedra~
 2 7205 7200
 S
 #7202
 A Toca~
-   No chão você vê muitos restos humanos, como ossos e caveiras.  Você vê
-também muito lodo.  Na parede há uma tocha que serve de iluminação.  Ao norte
-há uma parede de madeira.
+   No chÃ£o vocÃª vÃª muitos restos humanos, como ossos e caveiras.  VocÃª vÃª
+tambÃ©m muito lodo.  Na parede hÃ¡ uma tocha que serve de iluminaÃ§Ã£o.  Ao norte
+hÃ¡ uma parede de madeira.
 ~
-72 8 0 0 0 1
+72 d 1
 D0
-Você pode ver a toca secreta.
+VocÃª pode ver a toca secreta.
 ~
 porta madeira~
 1 -1 7201
 D1
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7205
 D2
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7203
 E
-tocha castiçal~
-A tocha está num castiçal e o castiçal está na parede.
+caveira caveiras ossos restos~
+Em todas as caveiras vocÃª percebe que hÃ¡ uma perfuraÃ§Ã£o de trÃªs polegadas
+em suas frontes.  Todos os ossos estÃ£o velhos e quebrados.
 ~
 E
 lodo~
-O lodo é nojento e desinteressante.
+O lodo Ã© nojento e desinteressante.
 ~
 E
-caveira caveiras ossos restos~
-Em todas as caveiras você percebe que há uma perfuração de três polegadas
-em suas frontes.  Todos os ossos estão velhos e quebrados.
+tocha castiÃ§al~
+A tocha estÃ¡ num castiÃ§al e o castiÃ§al estÃ¡ na parede.
 ~
 S
 #7203
 A Toca~
-   No chão você vê muitos restos humanos, como ossos e caveiras.  Você vê
-também muito lodo.  Na parede há uma tocha que serve de iluminação.
+   No chÃ£o vocÃª vÃª muitos restos humanos, como ossos e caveiras.  VocÃª vÃª
+tambÃ©m muito lodo.  Na parede hÃ¡ uma tocha que serve de iluminaÃ§Ã£o.
 ~
-72 8 0 0 0 1
+72 d 1
 D0
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7202
 D1
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7206
 D2
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7204
 E
-tocha castiçal~
-A tocha está num castiçal e o castiçal está na parede.
+caveira caveiras ossos restos~
+Em todas as caveiras vocÃª percebe que hÃ¡ uma perfuraÃ§Ã£o de trÃªs polegadas
+em suas frontes.  Todos os ossos estÃ£o velhos e quebrados.
 ~
 E
 lodo~
-O lodo é nojento e desinteressante.
+O lodo Ã© nojento e desinteressante.
 ~
 E
-caveira caveiras ossos restos~
-Em todas as caveiras você percebe que há uma perfuração de três polegadas
-em suas frontes.  Todos os ossos estão velhos e quebrados.
+tocha castical~
+A tocha estÃ¡ num castiÃ§al e o castiÃ§al estÃ¡ na parede.
 ~
 S
 #7204
 A Toca~
-   No chão você vê muitos restos humanos, como ossos e caveiras.  Você vê
-também muito lodo.  Na parede há uma tocha que serve de iluminação.
+   No chÃ£o vocÃª vÃª muitos restos humanos, como ossos e caveiras.  VocÃª vÃª
+tambÃ©m muito lodo.  Na parede hÃ¡ uma tocha que serve de iluminaÃ§Ã£o.
 ~
-72 8 0 0 0 1
+72 d 1
 D0
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7203
 D1
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7207
 D2
-Você vê a entrada da toca.
+VocÃª vÃª a entrada da toca.
 ~
 porta madeira~
 1 -1 7208
 E
-tocha castiçal~
-A tocha está num castiçal e o castiçal está na parede.
+caveira caveiras ossos restos~
+Em todas as caveiras vocÃª percebe que hÃ¡ uma perfuraÃ§Ã£o de trÃªs polegadas
+em suas frontes.  Todos os ossos estÃ£o velhos e quebrados.
 ~
 E
 lodo~
-O lodo é nojento e desinteressante.
+O lodo Ã© nojento e desinteressante.
 ~
 E
-caveira caveiras ossos restos~
-Em todas as caveiras você percebe que há uma perfuração de três polegadas
-em suas frontes.  Todos os ossos estão velhos e quebrados.
+tocha castical~
+A tocha estÃ¡ num castiÃ§al e o castiÃ§al estÃ¡ na parede.
 ~
 S
 #7205
 A Toca~
-   No chão você vê muitos restos humanos, como ossos e caveiras.  Você vê
-também muito lodo.  Na parede há uma tocha que serve de iluminação.
+   No chÃ£o vocÃª vÃª muitos restos humanos, como ossos e caveiras.  VocÃª vÃª
+tambÃ©m muito lodo.  Na parede hÃ¡ uma tocha que serve de iluminaÃ§Ã£o.
 ~
-72 8 0 0 0 1
+72 d 1
 D2
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7206
 D3
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7202
 E
-tocha castiçal~
-A tocha está num castiçal e o castiçal está na parede.
+caveira caveiras ossos restos~
+Em todas as caveiras vocÃª percebe que hÃ¡ uma perfuraÃ§Ã£o de trÃªs polegadas
+em suas frontes.  Todos os ossos estÃ£o velhos e quebrados.
 ~
 E
 lodo~
-O lodo é nojento e desinteressante.
+O lodo Ã© nojento e desinteressante.
 ~
 E
-caveira caveiras ossos restos~
-Em todas as caveiras você percebe que há uma perfuração de três polegadas
-em suas frontes.  Todos os ossos estão velhos e quebrados.
+tocha castical~
+A tocha estÃ¡ num castiÃ§al e o castiÃ§al estÃ¡ na parede.
 ~
 S
 #7206
 A Toca~
-   No chão você vê muitos restos humanos, como ossos e caveiras.  Você vê
-também muito lodo.  Na parede há uma tocha que serve de iluminação.
+   No chÃ£o vocÃª vÃª muitos restos humanos, como ossos e caveiras.  VocÃª vÃª
+tambÃ©m muito lodo.  Na parede hÃ¡ uma tocha que serve de iluminaÃ§Ã£o.
 ~
-72 12 0 0 0 1
+72 cd 1
 D0
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7205
 D2
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7207
 D3
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7203
 E
-tocha castiçal~
-A tocha está num castiçal e o castiçal está na parede.
+ossos restos~
+Todos os ossos estÃ£o velhos e quebrados.
 ~
 E
 lodo~
-O lodo é nojento e desinteressante.
+O lodo Ã© nojento e desinteressante.
 ~
 E
-ossos restos~
-Todos os ossos estão velhos e quebrados.
+tocha castical~
+A tocha estÃ¡ num castiÃ§al e o castiÃ§al estÃ¡ na parede.
 ~
 S
 #7207
 A Toca~
-   No chão você vê muitos restos humanos, como ossos e caveiras.  Você vê
-também muito lodo.  Na parede há uma tocha que serve de iluminação.
+   No chÃ£o vocÃª vÃª muitos restos humanos, como ossos e caveiras.  VocÃª vÃª
+tambÃ©m muito lodo.  Na parede hÃ¡ uma tocha que serve de iluminaÃ§Ã£o.
 ~
-72 12 0 0 0 1
+72 cd 1
 D0
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 0 -1 7206
 D3
-Você vê outra parte da toca.
+VocÃª vÃª outra parte da toca.
 ~
 ~
 1 -1 7204
 E
-tocha castiçal~
-A tocha está num castiçal e o castiçal está na parede.
+caveira caveiras ossos restos~
+Em todas as caveiras vocÃª percebe que hÃ¡ uma perfuraÃ§Ã£o de trÃªs polegadas
+em suas frontes.  Todos os ossos estÃ£o velhos e quebrados.
 ~
 E
 lodo~
-O lodo é nojento e desinteressante.
+O lodo Ã© nojento e desinteressante.
 ~
 E
-caveira caveiras ossos restos~
-Em todas as caveiras você percebe que há uma perfuração de três polegadas
-em suas frontes.  Todos os ossos estão velhos e quebrados.
+tocha castical~
+A tocha estÃ¡ num castiÃ§al e o castiÃ§al estÃ¡ na parede.
 ~
 S
 #7208
 A Entrada da Toca~
-   Você está numa parte seca do esgoto.  Ao norte está uma porta de madeira e
-você pode ver um pouco de lodo na parte mais baixa da porta.  Você pode ver
-também algumas caveiras e alguns ossos quebrados.
+   VocÃª estÃ¡ numa parte seca do esgoto.  Ao norte estÃ¡ uma porta de madeira e
+vocÃª pode ver um pouco de lodo na parte mais baixa da porta.  VocÃª pode ver
+tambÃ©m algumas caveiras e alguns ossos quebrados.
 ~
-72 13 0 0 0 2
+72 acd 2
 D0
-Você pode ver a toca.
+VocÃª pode ver a toca.
 ~
 porta madeira~
 1 -1 7204
 D1
-Você vê um caminho de cobra.
+VocÃª vÃª um caminho de cobra.
 ~
 ~
 0 -1 7209
 E
 lodo~
-O lodo é nojento e desinteressante.
+O lodo Ã© nojento e desinteressante.
 ~
 S
 #7209
 O Caminho de Cobra~
-   Você está num estreito caminho de cobra.  É muito chato andar aqui.
+   VocÃª estÃ¡ num estreito caminho de cobra.  Ã‰ muito chato andar aqui.
 ~
-72 9 0 0 0 3
+72 ad 3
 D1
-Você vê a junção de quatro caminhos.
+VocÃª vÃª a junÃ§Ã£o de quatro caminhos.
 ~
 ~
 0 -1 7210
 D3
-Você vê a entrada de uma toca.
+VocÃª vÃª a entrada de uma toca.
 ~
 ~
 0 -1 7208
 S
 #7210
-A Junção de Quatro Caminhos~
-   Você está num junção de canos de esgoto.  Ao norte há um pequeno buraco,
-a oeste está o estreito caminho de cobra e a leste e sul continuam os canos
+A JunÃ§Ã£o de Quatro Caminhos~
+   VocÃª estÃ¡ num junÃ§Ã£o de canos de esgoto.  Ao norte hÃ¡ um pequeno buraco,
+a oeste estÃ¡ o estreito caminho de cobra e a leste e sul continuam os canos
 de esgoto.
 ~
-72 9 0 0 0 3
+72 ad 3
 D0
-Você pode ver uma pequena sala em forma de caverna.
+VocÃª pode ver uma pequena sala em forma de caverna.
 ~
 ~
 0 -1 7211
 D1
-Você vê um dreno de esgoto.
+VocÃª vÃª um dreno de esgoto.
 ~
 ~
 0 -1 7212
 D2
-Você vê um dreno de esgoto.
+VocÃª vÃª um dreno de esgoto.
 ~
 ~
 0 -1 7215
 D3
-Você pode ver um estreito caminho de cobra.
+VocÃª pode ver um estreito caminho de cobra.
 ~
 ~
 0 -1 7209
 S
 #7211
 A Pequena Caverna~
-   Você está num dreno de esgoto ruído, agora mais parece com uma pequena
+   VocÃª estÃ¡ num dreno de esgoto ruÃ­do, agora mais parece com uma pequena
 caverna.
 ~
-72 9 0 0 0 3
+72 ad 3
 D2
-Você vê em direção a junção de quatro caminhos.
+VocÃª vÃª em direÃ§Ã£o a junÃ§Ã£o de quatro caminhos.
 ~
 ~
 0 -1 7210
 S
 #7212
 O Dreno do Esgoto~
-   Você está numa parte seca do dreno de esgoto que leva ao norte.
+   VocÃª estÃ¡ numa parte seca do dreno de esgoto que leva ao norte.
 ~
-72 9 0 0 0 3
+72 ad 3
 D0
-Você pode ver o dreno continuando ao norte.
+VocÃª pode ver o dreno continuando ao norte.
 ~
 ~
 0 -1 7213
 D3
-Você pode ver a junção de quatro caminhos.
+VocÃª pode ver a junÃ§Ã£o de quatro caminhos.
 ~
 ~
 0 -1 7210
 S
 #7213
 O Dreno do Esgoto~
-   Você está numa parte seca do dreno do esgoto que leva a leste.
+   VocÃª estÃ¡ numa parte seca do dreno do esgoto que leva a leste.
 ~
-72 9 0 0 0 3
+72 ad 3
 D1
-Você pode ver o dreno continuando a leste.
+VocÃª pode ver o dreno continuando a leste.
 ~
 ~
 0 -1 7214
 D2
-Você pode ver o dreno continuando a sul.
+VocÃª pode ver o dreno continuando a sul.
 ~
 ~
 0 -1 7212
 S
 #7214
 O Fim do Dreno~
-   Você está no final do dreno, a sua volta o cano ruiu, a única saída fica
+   VocÃª estÃ¡ no final do dreno, a sua volta o cano ruiu, a Ãºnica saÃ­da fica
 a oeste.
 ~
-72 9 0 0 0 3
+72 ad 3
 D3
-Você vê o dreno do esgoto.
+VocÃª vÃª o dreno do esgoto.
 ~
 ~
 0 -1 7213
 S
 #7215
 O Dreno Parcialmente Inundado~
-   Você está num dreno do esgoto onde o chão está coberto com água.  Ao
+   VocÃª estÃ¡ num dreno do esgoto onde o chÃ£o estÃ¡ coberto com Ã¡gua.  Ao
 norte ele parece estar mais seco, ao sul o dreno leva para baixo em meio
-a água.
+a Ã¡gua.
 ~
-72 9 0 0 0 4
+72 ad 4
 D0
-Ao norte está uma seca junção de quatro caminhos.
+Ao norte estÃ¡ uma seca junÃ§Ã£o de quatro caminhos.
 ~
 ~
 0 -1 7210
 D2
-Ao sul você vê um dreno de esgoto cheio com água.
+Ao sul vocÃª vÃª um dreno de esgoto cheio com Ã¡gua.
 ~
 ~
 0 -1 7216
 E
-água~
-A água é suja mas você parece ser capaz de nadar nela.
+agua~
+A Ã¡gua Ã© suja mas vocÃª parece ser capaz de nadar nela.
 ~
 S
 #7216
-Embaixo D'Água no Esgoto~
-   Você está nadando em uma água suja e segurando sua respiração.  É melhor
-você continuar adiante antes de submergir.  Uma boa coisa que você pode
-fazer é segurar sua luz um pouco acima do nível da água.
+Embaixo D'Ãgua no Esgoto~
+   VocÃª estÃ¡ nadando em uma Ã¡gua suja e segurando sua respiraÃ§Ã£o.  Ã‰ melhor
+vocÃª continuar adiante antes de submergir.  Uma boa coisa que vocÃª pode
+fazer Ã© segurar sua luz um pouco acima do nÃ­vel da Ã¡gua.
 ~
-72 9 0 0 0 8
+72 ad 8
 D0
-É difícil enxergar, mas parece que o dreno vai subindo levemente.
+Ã‰ difÃ­cil enxergar, mas parece que o dreno vai subindo levemente.
 ~
 ~
 0 -1 7215
 D2
-É difícil enxergar, mas parece que o dreno sobe um pouco mais.
+Ã‰ difÃ­cil enxergar, mas parece que o dreno sobe um pouco mais.
 ~
 ~
 0 -1 7217
 S
 #7217
 O Dreno Parcialmente Seco~
-   Você está num dreno parcialmente seco.  Ao norte o dreno desce um pouco
-levando em direção a água ao leste você pode ver um pequeno buraco.  A oeste
-você vê outro dreno.
+   VocÃª estÃ¡ num dreno parcialmente seco.  Ao norte o dreno desce um pouco
+levando em direÃ§Ã£o a Ã¡gua ao leste vocÃª pode ver um pequeno buraco.  A oeste
+vocÃª vÃª outro dreno.
 ~
-72 9 0 0 0 4
+72 ad 4
 D0
-Você vê o dreno conduzir para baixo em direção a água.
+VocÃª vÃª o dreno conduzir para baixo em direÃ§Ã£o a Ã¡gua.
 ~
 ~
 0 -1 7216
 D1
-Através do buraco você pode notar uma pequenina sala.
+AtravÃ©s do buraco vocÃª pode notar uma pequenina sala.
 ~
 ~
 0 -1 7218
 D3
-Você vê um dreno levando a oeste.
+VocÃª vÃª um dreno levando a oeste.
 ~
 ~
 0 -1 7219
 E
-buraco~
-Através do buraco você pode notar uma pequenina sala.
+agua~
+A Ã¡gua Ã© suja mas vocÃª parece ser capaz de nadar nela.
 ~
 E
-água~
-A água é suja mas você parece ser capaz de nadar nela.
+buraco~
+AtravÃ©s do buraco vocÃª pode notar uma pequenina sala.
 ~
 S
 #7218
 A Sala Pequenina~
-  Você está numa sala muito pequena, ela é bonita porém desinteressante.
+  VocÃª estÃ¡ numa sala muito pequena, ela Ã© bonita porÃ©m desinteressante.
 ~
-72 9 0 0 0 3
+72 ad 3
 D3
-Através do pequeno buraco você pode ver um dreno parcialmente seco.
+AtravÃ©s do pequeno buraco vocÃª pode ver um dreno parcialmente seco.
 ~
 ~
 0 -1 7217
 S
 #7219
 Um Dreno de Esgoto Seco~
-   Você está num seco mas sujo dreno de esgoto.  O dreno continua para leste
+   VocÃª estÃ¡ num seco mas sujo dreno de esgoto.  O dreno continua para leste
 e sul.
 ~
-72 9 0 0 0 3
+72 ad 3
 D1
-Você vê um dreno parcialmente seco.
+VocÃª vÃª um dreno parcialmente seco.
 ~
 ~
 0 -1 7217
 D2
-Você vê outro dreno de esgoto perfurado.
+VocÃª vÃª outro dreno de esgoto perfurado.
 ~
 ~
 0 -1 7220
 S
 #7220
 Um Dreno Perfurado~
-   Você está num outro dreno de esgoto.
+   VocÃª estÃ¡ num outro dreno de esgoto.
 ~
-72 9 0 0 0 3
+72 ad 3
 D0
-Você vê um dreno de esgoto continuando ao norte.
+VocÃª vÃª um dreno de esgoto continuando ao norte.
 ~
 ~
 0 -1 7219
 D1
-Você pode ver outro dreno de esgoto ao leste.
+VocÃª pode ver outro dreno de esgoto ao leste.
 ~
 ~
 0 -1 7221
 S
 #7221
 O Dreno de Esgoto~
-   Você está num dreno de esgoto, não há nada de especial aqui, exceto por
+   VocÃª estÃ¡ num dreno de esgoto, nÃ£o hÃ¡ nada de especial aqui, exceto por
 um eco bastante baixo.
 ~
-72 9 0 0 0 3
+72 ad 3
 D1
-Você pode ver outro dreno de esgoto.
+VocÃª pode ver outro dreno de esgoto.
 ~
 ~
 0 -1 7222
 D3
-Você percebe um dreno de esgoto ao oeste.
+VocÃª percebe um dreno de esgoto ao oeste.
 ~
 ~
 0 -1 7220
 D4
-Você pode ver uma linha de canos de esgoto.
+VocÃª pode ver uma linha de canos de esgoto.
 ~
 ~
 0 -1 7129
 S
 #7222
 O Dreno de Esgoto~
-   Você está num dreno, com algum lodo no chão.
+   VocÃª estÃ¡ num dreno, com algum lodo no chÃ£o.
 ~
-72 9 0 0 0 3
+72 ad 3
 D1
-Você vê uma curva no esgoto.
+VocÃª vÃª uma curva no esgoto.
 ~
 ~
 0 -1 7223
 D3
-Você vê um dreno de esgoto.
+VocÃª vÃª um dreno de esgoto.
 ~
 ~
 0 -1 7221
 E
-lodo água~
-A água flui a leste daqui.
+lodo agua~
+A Ã¡gua flui a leste daqui.
 ~
 S
 #7223
 A Curva no Esgoto~
-   Você encontra-se numa regular curva no esgoto, que encurva-se do oeste
+   VocÃª encontra-se numa regular curva no esgoto, que encurva-se do oeste
 para o norte.
 ~
-72 9 0 0 0 3
+72 ad 3
 D0
-Você vê um dreno de esgoto.
+VocÃª vÃª um dreno de esgoto.
 ~
 ~
 0 -1 7224
 D3
-Você vê um dreno de esgoto.
+VocÃª vÃª um dreno de esgoto.
 ~
 ~
 0 -1 7222
 S
 #7224
-A Junção de Canos de Esgoto~
-   Você está numa junção de três drenos de esgoto.  Você vê estranhos
-arranhões nos canos, como se fossem de um rato gigante.  Norte e sul os
+A JunÃ§Ã£o de Canos de Esgoto~
+   VocÃª estÃ¡ numa junÃ§Ã£o de trÃªs drenos de esgoto.  VocÃª vÃª estranhos
+arranhÃµes nos canos, como se fossem de um rato gigante.  Norte e sul os
 canos continuam normamente mas a oeste parece haver algo estranho.
 ~
-72 9 0 0 0 3
+72 ad 3
 D0
-Você não vê nada além do dreno de esgoto.
+VocÃª nÃ£o vÃª nada alÃ©m do dreno de esgoto.
 ~
 ~
 0 -1 7225
 D2
-Você não vê nada além do dreno de esgoto.
+VocÃª nÃ£o vÃª nada alÃ©m do dreno de esgoto.
 ~
 ~
 0 -1 7223
 D3
-Você vê um estranho cano de esgoto.
+VocÃª vÃª um estranho cano de esgoto.
 ~
 ~
 0 -1 7229
 S
 #7225
 O Cano de Esgoto~
-   Você está num cano, onde o lodo conduz até um minúsculo buraco.  Você vê
-estranhos arranhões nos canos, como se fossem de um rato gigante.
-Há um dreno de esgoto ao sul.
+   VocÃª estÃ¡ num cano, onde o lodo conduz atÃ© um minÃºsculo buraco.  VocÃª vÃª
+estranhos arranhÃµes nos canos, como se fossem de um rato gigante.
+HÃ¡ um dreno de esgoto ao sul.
 ~
-72 9 0 0 0 3
+72 ad 3
 D2
-Você vê um dreno de esgoto.
+VocÃª vÃª um dreno de esgoto.
 ~
 ~
 0 -1 7224
 S
 #7229
 O Estranho Cano de Esgoto~
-   Você está num cano de esgoto bastante estranho, há estranhos arranhões
-nos canos, como se fossem de um rato gigante.  Você pode ver muitos restos
-orgânicos como ossos de animais e humanos.  A oeste o dreno sobe levemente.
+   VocÃª estÃ¡ num cano de esgoto bastante estranho, hÃ¡ estranhos arranhÃµes
+nos canos, como se fossem de um rato gigante.  VocÃª pode ver muitos restos
+orgÃ¢nicos como ossos de animais e humanos.  A oeste o dreno sobe levemente.
 ~
-72 9 0 0 0 3
+72 ad 3
 D1
-Você vê uma junção de canos de esgoto.
+VocÃª vÃª uma junÃ§Ã£o de canos de esgoto.
 ~
 ~
 0 -1 7224
 D3
-Você vê um lodoso dreno de esgoto.
+VocÃª vÃª um lodoso dreno de esgoto.
 ~
 ~
 0 -1 7230
 S
 #7230
 O Cano de Esgoto Umedecido~
-   Você está num dreno de esgoto com uma estranha e umedecida substância no
-chão, na substância você vê restos.  Você vê estranhos arranhões na parede,
+   VocÃª estÃ¡ num dreno de esgoto com uma estranha e umedecida substÃ¢ncia no
+chÃ£o, na substÃ¢ncia vocÃª vÃª restos.  VocÃª vÃª estranhos arranhÃµes na parede,
 como se fossem de um rato gigante.  A leste e oeste o cano parece levar
 para baixo.
 ~
-72 13 0 0 0 3
+72 acd 3
 D1
-Você vê um cano de esgoto.
+VocÃª vÃª um cano de esgoto.
 ~
 ~
 0 -1 7229
 D3
-Você vê um cano de esgoto.
+VocÃª vÃª um cano de esgoto.
 ~
 ~
 0 -1 7231
 S
 #7231
 O Estranho Cano de Esgoto~
-   Você está num cano de esgoto simples exceto pela enorme quantidade de
-arranhões nas paredes do cano e pelos escombros no chão.
+   VocÃª estÃ¡ num cano de esgoto simples exceto pela enorme quantidade de
+arranhÃµes nas paredes do cano e pelos escombros no chÃ£o.
 ~
-72 9 0 0 0 3
+72 ad 3
 D1
-Você vê um cano de esgoto.
+VocÃª vÃª um cano de esgoto.
 ~
 ~
 0 -1 7230
 D3
-Você vê outro cano de esgoto.
+VocÃª vÃª outro cano de esgoto.
 ~
 ~
 0 -1 7232
 E
 escombros~
-Você vê muitos restos orgânicos no chão.
+VocÃª vÃª muitos restos orgÃ¢nicos no chÃ£o.
 ~
 S
 #7232
 O Cano de Esgoto~
-   Você está num cano com mais arranhões nas paredes.  E é claro, muitos
-restos no chão.  O dreno leva ao leste e norte.
+   VocÃª estÃ¡ num cano com mais arranhÃµes nas paredes.  E Ã© claro, muitos
+restos no chÃ£o.  O dreno leva ao leste e norte.
 ~
-72 9 0 0 0 3
+72 ad 3
 D0
-Você vê outro cano de esgoto.
+VocÃª vÃª outro cano de esgoto.
 ~
 ~
 0 -1 7233
 D1
-Você vê um cano de esgoto.
+VocÃª vÃª um cano de esgoto.
 ~
 ~
 0 -1 7231
 S
 #7233
 O Dreno de Esgoto~
-   Você está num dreno de esgoto, você é capaz de ver algo parecido com uma
-caverna.  Você vê alguns estranhos arranhões nas paredes do dreno, como se
+   VocÃª estÃ¡ num dreno de esgoto, vocÃª Ã© capaz de ver algo parecido com uma
+caverna.  VocÃª vÃª alguns estranhos arranhÃµes nas paredes do dreno, como se
 fossem de um rato gigante.  O cano leva ao sul.
 ~
-72 9 0 0 0 3
+72 ad 3
 D1
-Você vê uma sala parecida com uma caverna.
+VocÃª vÃª uma sala parecida com uma caverna.
 ~
 ~
 0 -1 7234
 D2
-Você vê um cano de esgoto.
+VocÃª vÃª um cano de esgoto.
 ~
 ~
 0 -1 7232
 S
 #7234
 A Toca do Rato~
-   Você está numa pequena caverna.  Você é capaz de ver muitos escombros no
-chão.  Há um dreno de esgoto a oeste daqui.
+   VocÃª estÃ¡ numa pequena caverna.  VocÃª Ã© capaz de ver muitos escombros no
+chÃ£o.  HÃ¡ um dreno de esgoto a oeste daqui.
 ~
-72 9 0 0 0 3
+72 ad 3
 D3
-Você vê os sistema de canos de esgoto nesse caminho.
+VocÃª vÃª os sistema de canos de esgoto nesse caminho.
 ~
 ~
 0 -1 7233
 S
 #7279
 As Paredes do Abismo~
-   Você pendura-se em alguns degraus que levam para baixo em meio a total
-escuridão, há uma saída levando para cima, você deverá terá de abrir a
-minúscula rocha novamente para fazê-lo.
+   VocÃª pendura-se em alguns degraus que levam para baixo em meio a total
+escuridÃ£o, hÃ¡ uma saÃ­da levando para cima, vocÃª deverÃ¡ terÃ¡ de abrir a
+minÃºscula rocha novamente para fazÃª-lo.
 ~
-72 9 0 0 0 5
+72 ad 5
 D4
 ~
 rocha~
@@ -698,13 +698,13 @@ D5
 S
 #7280
 A Entrada~
-   Você está numa sala muito escura.  Você nota que alguns rostos estão
-olhando para você de dentro das paredes.  No centro da sala há um pequeno
-altar.  Ao norte há uma pequena sala circular.
+   VocÃª estÃ¡ numa sala muito escura.  VocÃª nota que alguns rostos estÃ£o
+olhando para vocÃª de dentro das paredes.  No centro da sala hÃ¡ um pequeno
+altar.  Ao norte hÃ¡ uma pequena sala circular.
 ~
-72 9 0 0 0 1
+72 ad 1
 D0
-Um raio de luz vermelho brota através do buraco da porta.
+Um raio de luz vermelho brota atravÃ©s do buraco da porta.
 ~
 porta pequena circular~
 1 -1 7281
@@ -713,23 +713,23 @@ D4
 altar secreto~
 1 -1 7116
 E
-triângulo~
-O triângulo éstá cheio de pequenos símbolos.  Eles parecem ser de uma
-língua que você nunca viu antes.
+altar~
+Este altar Ã© muito especial.  Rostos parecem estar sorrindo dele.  HÃ¡ um
+triÃ¢ngulo cravado em seu topo.
 ~
 E
-altar~
-Este altar é muito especial.  Rostos parecem estar sorrindo dele.  Há um
-triângulo cravado em seu topo.
+triangulo~
+O triÃ¢ngulo Ã©stÃ¡ cheio de pequenos sÃ­mbolos.  Eles parecem ser de uma
+lÃ­ngua que vocÃª nunca viu antes.
 ~
 S
 #7281
 O Corredor~
-   O corredor está chamejando opressivamente com um tom vermelho.  Você
-pode ouvir gemidos vindos de um buraco negro ao leste.  Ao sul há uma sala
+   O corredor estÃ¡ chamejando opressivamente com um tom vermelho.  VocÃª
+pode ouvir gemidos vindos de um buraco negro ao leste.  Ao sul hÃ¡ uma sala
 circular.
 ~
-72 8 0 0 0 1
+72 d 1
 D1
 O buraco parece mais negro que a noite.  Ele parece estar comendo a luz
 vermelha ao seu redor.
@@ -741,32 +741,32 @@ D2
 porta pequena circular~
 1 -1 7280
 E
-paredes~
-As paredes parecem estar vivas.
+porta pequena circular~
+A porta estÃ¡ completamente rodeada por buracos de fechadura.
 ~
 E
 luz vermelha~
 A luz vermelha surge das paredes.
 ~
 E
-porta pequena circular~
-A porta está completamente rodeada por buracos de fechadura.
+paredes~
+As paredes parecem estar vivas.
 ~
 S
 #7282
 O Reino das Almas Perdidas~
-   Você está no nada.  Tudo ao seu redor são estrelas.  Algumas vezes uma
-sombra voa para perto de você, gemendo bem baixinho.  Ao norte há um pequeno
-buraco brilhante.  Ao oeste há um pequeno buraco vermelho.
+   VocÃª estÃ¡ no nada.  Tudo ao seu redor sÃ£o estrelas.  Algumas vezes uma
+sombra voa para perto de vocÃª, gemendo bem baixinho.  Ao norte hÃ¡ um pequeno
+buraco brilhante.  Ao oeste hÃ¡ um pequeno buraco vermelho.
 ~
-72 8 0 0 0 0
+72 d 0
 D0
-Você vê dentro do buraco muito brilhante.
+VocÃª vÃª dentro do buraco muito brilhante.
 ~
 ~
 0 -1 7283
 D3
-Você vê dentro do buraco vermelho.
+VocÃª vÃª dentro do buraco vermelho.
 ~
 ~
 0 -1 7281
@@ -777,13 +777,13 @@ A sombra parece um homem com muita dor.
 S
 #7283
 O Cruzamento em T~
-   Você está num pequeno saguão.  Há portas ao leste e a oeste.  Ao sul há
-um buraco negro.  Há uma inscrição na parede.  Gemidos podem ser ouvidos ao
+   VocÃª estÃ¡ num pequeno saguÃ£o.  HÃ¡ portas ao leste e a oeste.  Ao sul hÃ¡
+um buraco negro.  HÃ¡ uma inscriÃ§Ã£o na parede.  Gemidos podem ser ouvidos ao
 sul.
 ~
-72 13 0 0 0 1
+72 acd 1
 D1
-Está muito escuro para falar.
+EstÃ¡ muito escuro para falar.
 ~
 ~
 0 -1 7286
@@ -793,87 +793,87 @@ Um buraco negro na parede.
 ~
 0 -1 7282
 D3
-Você pode ver um grande fogo a oeste.  Não parece ser um lugar saudável para
+VocÃª pode ver um grande fogo a oeste.  NÃ£o parece ser um lugar saudÃ¡vel para
 entrar.
 ~
 ~
 0 -1 7284
 E
-inscrições~
-As inscrições dizem 'Ao seu leste está a Besta. Ao oeste você termina sua
+inscricoes~
+As inscriÃ§Ãµes dizem 'Ao seu leste estÃ¡ a Besta. Ao oeste vocÃª termina sua
 aventura!'.
 ~
 S
 #7284
 O Fogo da Morte~
-   Esta sala é muito quente.  Há chamas ao seu redor.  Você não consegue
-ver saída daqui!  Esqueletos estão no chão.
+   Esta sala Ã© muito quente.  HÃ¡ chamas ao seu redor.  VocÃª nÃ£o consegue
+ver saÃ­da daqui!  Esqueletos estÃ£o no chÃ£o.
 ~
-72 12 0 0 0 1
-E
-inscrição parede~
-A inscrição diz 'Uma oração aos Deuses não serão ouvidas, portanto a única
-saída é a morte... Mamãe , eu te amo'.
-~
+72 cd 1
 E
 esqueletos~
 Os esqueletos parecem ter morrido de fome.  Um deles parece ter escrito
 algo na parede.
 ~
+E
+inscricao parede~
+A inscriÃ§Ã£o diz 'Uma oraÃ§Ã£o aos Deuses nÃ£o serÃ¡ ouvida, portanto a Ãºnica
+saÃ­da Ã© a morte... MamÃ£e , eu te amo'.
+~
 S
 #7285
 A Sala de Tortura~
-   Você está no meio de uma sala quadrada.  Pelas paredes estão espalhados
-esqueletos, pendurados por algemas enferrujadas.  No meio da sala está uma
-grande caixa de metal, coberta de poeira.  Ao sul você pode notar uma
-pequena saída.
+   VocÃª estÃ¡ no meio de uma sala quadrada.  Pelas paredes estÃ£o espalhados
+esqueletos, pendurados por algemas enferrujadas.  No meio da sala estÃ¡ uma
+grande caixa de metal, coberta de poeira.  Ao sul vocÃª pode notar uma
+pequena saÃ­da.
 ~
-72 8 0 0 0 1
+72 d 1
 D2
-Está muito escuro para falar.
+EstÃ¡ muito escuro para falar.
 ~
 porta ferro~
 1 -1 7286
 E
-grande caixa metal~
-O metal está coberto pela poeira.  Você nota que ele foi preenchido com brasas
-e consegue-se ver pedaços de carvão dentro dele.
+esqueletos~
+Quando vocÃª olha para os esqueletos, vocÃª pode ver que eles sentiram muita
+dor.  Eles estÃ£o pendurados por seus braÃ§os, e alguns deles foram mortos
+com um instrumento muito afiado.
 ~
 E
-esqueletos~
-Quando você olha para os esqueletos, você pode ver que eles sentiram muita
-dor.  Eles estão pendurados por seus braços, e alguns deles foram mortos
-com um instrumento muito afiado.
+grande caixa metal~
+O metal estÃ¡ coberto pela poeira.  VocÃª nota que ele foi preenchido com brasas
+e consegue-se ver pedaÃ§os de carvÃ£o dentro dele.
 ~
 S
 #7286
-O Pátio do Inferno~
-   Você está no meio de um monte de lama.  Um desagradável cheiro cerca o
-lugar, e faz você sentir-se mal.  Pequenas chamas saem da lama quente.  A
-oeste há uma pequena porta.  Ao norte você pode ver um porta de ferro.
+O PÃ¡tio do Inferno~
+   VocÃª estÃ¡ no meio de um monte de lama.  Um desagradÃ¡vel cheiro cerca o
+lugar, e faz vocÃª sentir-se mal.  Pequenas chamas saem da lama quente.  A
+oeste hÃ¡ uma pequena porta.  Ao norte vocÃª pode ver um porta de ferro.
 ~
-72 12 0 0 0 5
+72 cd 5
 D0
-Está muito escuro para falar.
+EstÃ¡ muito escuro para falar.
 ~
 porta ferro~
 1 -1 7285
 D3
-Está muito escuro para falar.
+EstÃ¡ muito escuro para falar.
 ~
 ~
 0 -1 7283
 S
 #7299
 As Paredes do Abismo~
-   Você está agarrado nos degraus da parede para não cair no chão.  Você
-não consegue ver nenhum apoio entre você e os degraus abaixo.  a única
-saída é ir para cima.
+   VocÃª estÃ¡ agarrado nos degraus da parede para nÃ£o cair no chÃ£o.  VocÃª
+nÃ£o consegue ver nenhum apoio entre vocÃª e os degraus abaixo.  a Ãºnica
+saÃ­da Ã© ir para cima.
 ~
-72 9 0 0 0 5
+72 ad 5
 D4
 ~
 ~
 0 -1 7279
 S
-$~
+$
