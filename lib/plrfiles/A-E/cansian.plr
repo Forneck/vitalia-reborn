@@ -6,8 +6,8 @@ Clas: 4
 Levl: 110
 Id  : 1
 Brth: 1601790482
-Plyd: 81361
-Last: 1604107318
+Plyd: 81717
+Last: 1604111958
 Lmot: 1603226112
 Lnew: 1604007974
 Htwn: 1372
@@ -15,10 +15,10 @@ Host: 127.0.0.1
 Hite: 151
 Wate: 113
 Alin: -176
-Act : g 0 0 0
+Act : 0 0 0 0
 Aff : 0 0 0 0
 Pref: efghimnoqrvxAB cd 0 0
-Room: 3001
+Room: 65535
 Hit : 2000/2000
 Mana : 100/100
 Move: 82/82
@@ -33,15 +33,15 @@ Gold: 4294
 Exp : 7000001
 Olc : 0
 Alis: 4
- goss
- goss @Y$*@n
-1
- sa
- say @Y$*@n
-1
- reset
- shutdown reboot
-0
  ha
  history all
 0
+ reset
+ shutdown reboot
+0
+ sa
+ say @Y$*@n
+1
+ goss
+ goss @Y$*@n
+1

@@ -71,7 +71,7 @@ D1
 O túnel continua a leste.
 ~
 porta~
-0 2208 2203
+1 2208 2203
 D4
 O quarto de preparação da busca está sobre você. 
 ~
@@ -133,7 +133,7 @@ D3
 Existe uma porta aqui.
 ~
 porta~
-0 2208 2206
+1 2208 2206
 D4
 Existe um buraco no teto que conduz acima.
 ~
@@ -168,7 +168,7 @@ Uma porta bloqueia seu caminho, a menos que ela esteja aberta para não mais
 bloquear seu caminho.
 ~
 porta~
-0 2208 2205
+1 2208 2205
 D3
 Um corredor começa a aparecer ao leste.
 ~
@@ -321,7 +321,7 @@ D1
 Uma grande porta bloqueia seu caminho.
 ~
 porta~
-0 2205 2214
+1 2205 2214
 D5
 Existe um buraco que conduz abaixo.  Evidente não é?
 ~

@@ -1,30 +1,30 @@
-Oct 31 00:36:00 2020 :: rusage: user time: 7 sec, system time: 0 sec, max res size: 22748
-Oct 31 00:41:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Oct 31 00:41:00 2020 :: rusage: user time: 7 sec, system time: 0 sec, max res size: 22748
-Oct 31 00:46:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Oct 31 00:46:00 2020 :: rusage: user time: 8 sec, system time: 0 sec, max res size: 22852
-Oct 31 00:51:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Oct 31 00:51:00 2020 :: rusage: user time: 9 sec, system time: 0 sec, max res size: 23112
-Oct 31 00:56:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Oct 31 00:56:00 2020 :: rusage: user time: 9 sec, system time: 0 sec, max res size: 23112
-Oct 31 01:01:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Oct 31 01:01:00 2020 :: rusage: user time: 10 sec, system time: 0 sec, max res size: 23332
-Oct 31 01:06:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Oct 31 01:06:00 2020 :: rusage: user time: 11 sec, system time: 0 sec, max res size: 23452
-Oct 31 01:11:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Oct 31 01:11:00 2020 :: rusage: user time: 11 sec, system time: 0 sec, max res size: 23452
-Oct 31 01:11:36 2020 :: Anyte killed by o Grande Cavaleiro dos Paladinos at Do Lado de fora da Moradia de Redferne
-Oct 31 01:11:38 2020 :: add_to_lookup updating existing value for uid=6 (0x555c25888180 -> 0x555c25888180)
-Oct 31 01:11:38 2020 :: Anyte entering game with no equipment.
-Oct 31 01:16:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Oct 31 01:16:00 2020 :: rusage: user time: 11 sec, system time: 0 sec, max res size: 23548
-Oct 31 01:16:11 2020 :: (GC) Cansian forced Anyte to n
-Oct 31 01:17:50 2020 :: (GC) Reboot by Cansian.
-Oct 31 01:17:50 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Oct 31 01:17:50 2020 :: Closing all sockets.
-Oct 31 01:17:50 2020 :: Closing link to: Anyte.
-Oct 31 01:17:50 2020 :: Closing link to: Cansian.
-Oct 31 01:17:50 2020 :: Saving current MUD time.
-Oct 31 01:17:50 2020 :: Rebooting.
-Quick boot mode -- rent check supressed.
-Using file descriptor for logging.
+Oct 31 02:16:29 2020 :: Cansian (level 110) has 2 objects (max 100).
+Oct 31 02:21:21 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 02:21:21 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 21520
+Oct 31 02:22:48 2020 :: (GC) Cansian snoops Anyte
+Oct 31 02:26:21 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 02:26:21 2020 :: rusage: user time: 2 sec, system time: 0 sec, max res size: 21784
+Oct 31 02:31:21 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 02:31:21 2020 :: rusage: user time: 3 sec, system time: 0 sec, max res size: 22240
+Oct 31 02:35:12 2020 :: OLC: Cansian starts editing zone 22 allowed zone 0
+Oct 31 02:35:31 2020 :: GenOLC: add_room: Updated existing room #2202.
+Oct 31 02:35:31 2020 :: OLC: Cansian edits room 2202.
+Oct 31 02:35:31 2020 :: GenOLC: save_rooms: Saving rooms in zone #22 (2200-2299).
+Oct 31 02:35:31 2020 :: OLC: Cansian stops editing zone 22 allowed zone 0
+Oct 31 02:36:00 2020 :: OLC: Cansian starts editing zone 22 allowed zone 0
+Oct 31 02:36:12 2020 :: GenOLC: add_room: Updated existing room #2205.
+Oct 31 02:36:12 2020 :: OLC: Cansian edits room 2205.
+Oct 31 02:36:12 2020 :: GenOLC: save_rooms: Saving rooms in zone #22 (2200-2299).
+Oct 31 02:36:12 2020 :: OLC: Cansian stops editing zone 22 allowed zone 0
+Oct 31 02:36:21 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Oct 31 02:36:21 2020 :: rusage: user time: 4 sec, system time: 0 sec, max res size: 22468
+Oct 31 02:36:29 2020 :: OLC: Cansian starts editing zone 22 allowed zone 0
+Oct 31 02:36:56 2020 :: OLC: Cansian stops editing zone 22 allowed zone 0
+Oct 31 02:37:08 2020 :: OLC: Cansian starts editing zone 22 allowed zone 0
+Oct 31 02:37:19 2020 :: GenOLC: add_room: Updated existing room #2206.
+Oct 31 02:37:19 2020 :: OLC: Cansian edits room 2206.
+Oct 31 02:37:19 2020 :: GenOLC: save_rooms: Saving rooms in zone #22 (2200-2299).
+Oct 31 02:37:19 2020 :: OLC: Cansian stops editing zone 22 allowed zone 0
+Oct 31 02:37:29 2020 :: (GC) Cansian stops snooping
+Oct 31 02:37:33 2020 :: (GC) Cansian snoops Anyte
+Segmentation fault (core dumped)
