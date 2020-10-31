@@ -46,7 +46,7 @@ IdNum     1
 Dated     1603259862
 Level     110
 Room      1204
-Flags     0 0 0 0
+Flags     1 0 0 0
 End
 Text      guilda ranger~
 Body      fazer guilda de ranger em mid e nt
@@ -58,7 +58,7 @@ Level     110
 Room      3001
 Flags     0 0 0 0
 End
-Text       practice~
+Text      practice~
 Body      Diz que so pode praticar no mestre mas acaba praticando.
 ~
 Name      Althair~
@@ -66,5 +66,25 @@ IdNum     3
 Dated     1603764619
 Level     1
 Room      18601
+Flags     0 0 0 0
+End
+Text      xp cap~
+Body      Esta sem limites por nivel.
+~
+Name      Cansian~
+IdNum     1
+Dated     1604000874
+Level     110
+Room      3001
+Flags     0 0 0 0
+End
+Text       away vazado~
+Body      o verde no away na hora de mostrar na sala ta vazando
+~
+Name      Cansian~
+IdNum     1
+Dated     1604012800
+Level     110
+Room      3001
 Flags     0 0 0 0
 End

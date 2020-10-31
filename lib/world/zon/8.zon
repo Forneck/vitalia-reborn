@@ -1,7 +1,7 @@
 #8
 Vitalia~
 O Castelo dos Vampiros~
-800 899 100 1 aek 0 0 0 -1 -1
+800 899 100 1 j 0 0 0 -1 -1
 M 0 803 3 801 	(o Cigano Ornah)
 E 1 804 3 13 	(um cinto precioso)
 E 1 805 3 1 	(um antigo anel de topázio)
@@ -40,11 +40,11 @@ E 1 800 1 1 	(o Anel de Sangue dos Anciões )
 E 1 802 1 1 	(um brilhante anel verde)
 D 0 837 0 1 	(Sala de Tortura)
 D 0 836 2 1 	(Um Escuro Corredor Gotejante)
-D 0 824 3 1 	(O Po�o Negro das Escadas)
+D 0 824 3 1 	(O Poço Negro das Escadas)
 D 0 812 1 1 	(Um Corredor com Eco)
 D 0 816 2 1 	(Uma Passagem Estreita)
 D 0 821 0 1 	(O Topo das Escadas)
-D 0 809 0 1 	(Os Port�es do Castelo)
+D 0 809 0 1 	(Os Portões do Castelo)
 D 0 810 2 1 	(Um Corredor com Eco)
 S
 $

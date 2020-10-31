@@ -1,7 +1,7 @@
 #7
 Vitalia~
 A Floresta Sombria~
-700 799 50 2 k 0 0 0 -1 -1
+700 799 50 2 j 0 0 0 -1 -1
 O 0 730 1 743 	(a Chave D)
 M 0 775 2 715 	(o caçador Drow)
 M 0 710 15 755 	(o Guarda maldito)
@@ -55,8 +55,8 @@ M 0 717 6 781 	(o Prisioneiro desesperado)
 M 0 715 3 794 	(a Criatura Maior)
 M 0 715 3 795 	(a Criatura Maior)
 M 0 714 1 796 	(o Tempestuoso Cavaleiro Negro)
-D 0 750 3 1 	(A Antec�mara da Fortaleza)
-D 0 729 1 1 	(O Port�o Frontal)
+D 0 750 3 1 	(A Antecâmara da Fortaleza)
+D 0 729 1 1 	(O Portão Frontal)
 M 0 713 10 759 	(o zumbi legionário)
 M 0 713 10 765 	(o zumbi legionário)
 M 0 713 10 767 	(o zumbi legionário)
@@ -67,7 +67,7 @@ M 0 711 5 775 	(um Guardião)
 O 0 707 4 771 	(um orbe de cristal)
 O 0 707 4 772 	(um orbe de cristal)
 O 0 707 4 756 	(um orbe de cristal)
-D 0 757 0 1 	(Os Sal�es da Fortaleza)
+D 0 757 0 1 	(Os Salões da Fortaleza)
 O 0 707 4 757 	(um orbe de cristal)
 O 0 702 5 703 	(uma tocha)
 O 0 705 4 703 	(uma erva brilhante)

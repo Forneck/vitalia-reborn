@@ -1,15 +1,15 @@
 #110
 Vitalia~
 As Mesnadas de Vitália~
-11000 11099 0 0 abcdek 0 0 0 -1 -1
-R 0 11026 11099 -1 	(o portal da sa�da)
-R 0 11027 11099 -1 	(o portal da sa�da)
-R 0 11028 11099 -1 	(o portal da sa�da)
-R 0 11029 11099 -1 	(o portal da sa�da)
-O 0 11099 4 11026 	(o portal da sa�da)
-O 0 11099 4 11027 	(o portal da sa�da)
-O 0 11099 4 11028 	(o portal da sa�da)
-O 0 11099 4 11029 	(o portal da sa�da)
+11000 11099 0 0 abcde 0 0 0 -1 -1
+R 0 11026 11099 -1 	(o portal da saída)
+R 0 11027 11099 -1 	(o portal da saída)
+R 0 11028 11099 -1 	(o portal da saída)
+R 0 11029 11099 -1 	(o portal da saída)
+O 0 11099 4 11026 	(o portal da saída)
+O 0 11099 4 11027 	(o portal da saída)
+O 0 11099 4 11028 	(o portal da saída)
+O 0 11099 4 11029 	(o portal da saída)
 M 0 11011 1 11007 	(o pipoqueiro)
 M 0 11011 1 11009 	(o pipoqueiro)
 M 0 11011 1 11011 	(o pipoqueiro)

@@ -1,17 +1,17 @@
 Name: Cansian
 Pass: CaIkC99//ZoX.
-Titl: Arrumando Objetos
+Titl: Arrumando Salas
 Sex : 2
 Clas: 4
 Levl: 110
 Id  : 1
 Brth: 1601790482
-Plyd: 66218
-Last: 1603996026
+Plyd: 75663
+Last: 1604100376
 Lmot: 1603226112
-Lnew: 1603501210
+Lnew: 1604007974
 Htwn: 1372
-Host: 177.220.172.133
+Host: 127.0.0.1
 Hite: 151
 Wate: 113
 Alin: -135
@@ -32,7 +32,13 @@ Ac  : 100
 Gold: 964
 Exp : 7000001
 Olc : 0
-Alis: 1
+Alis: 3
+ reset
+ shutdown reboot
+0
  sa
  say @Y$*@n
+1
+ goss
+ goss @Y$*@n
 1

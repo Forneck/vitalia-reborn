@@ -1,7 +1,7 @@
 #64
 Vitalia~
 A Torre de Rand~
-6400 6499 20 1 k 0 0 0 -1 -1
+6400 6499 20 1 j 0 0 0 -1 -1
 M 0 6400 3 6400 	(o bode mont√™s)
 M 0 6400 3 6402 	(o bode mont√™s)
 M 0 6400 3 6404 	(o bode mont√™s)
@@ -53,22 +53,22 @@ D 0 6411 2 1 	(O Quarto Principal)
 D 0 6412 1 1 	(A Biblioteca)
 D 0 6412 3 1 	(A Biblioteca)
 D 0 6413 3 1 	(A Escadaria)
-D 0 6414 1 1 	(Um Sagu„o Escondido)
-D 0 6414 5 1 	(Um Sagu„o Escondido)
+D 0 6414 1 1 	(Um Sagu√£o Escondido)
+D 0 6414 5 1 	(Um Sagu√£o Escondido)
 D 0 6415 3 1 	(A Escadaria)
 D 0 6416 4 1 	(A Sala Escondida do Tesouro)
-D 0 6417 0 1 	(Um Sagu„o)
-D 0 6417 1 1 	(Um Sagu„o)
-D 0 6417 2 1 	(Um Sagu„o)
+D 0 6417 0 1 	(Um Sagu√£o)
+D 0 6417 1 1 	(Um Sagu√£o)
+D 0 6417 2 1 	(Um Sagu√£o)
 D 0 6418 0 1 	(A Sala dos Criados)
 D 0 6419 2 1 	(A Sala dos Criados)
-D 0 6420 0 1 	(Um Sagu„o)
+D 0 6420 0 1 	(Um Sagu√£o)
 D 0 6421 2 1 	(A Sala dos Criados)
 D 0 6423 0 1 	(A Sala de Jantar)
 D 0 6424 2 1 	(A Cozinha)
 D 0 6435 3 2 	(A Entrada)
 D 0 6436 1 2 	(A Passagem)
-D 0 6437 3 1 	(O Sagu„o)
+D 0 6437 3 1 	(O Sagu√£o)
 D 0 6438 1 1 	(As Escadas)
 S
 $

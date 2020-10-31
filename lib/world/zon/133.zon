@@ -1,7 +1,7 @@
 #133
 Vitalia~
 O Templo do Grande Búfalo~
-13300 13399 30 1 k 0 0 0 -1 -1
+13300 13399 30 1
 D 0 13303 0 2 	(Sob o Grande Arco)
 D 0 13305 2 2 	(O Templo)
 D 0 13314 1 2 	(O Quarto de Mateon)
@@ -9,7 +9,7 @@ D 0 13315 3 2 	(A Parte Superior do Templo)
 D 0 13321 3 2 	(O Quarto Sombrio)
 D 0 13320 1 2 	(O Quarto de Wabat)
 M 0 13301 2 13303 	(o Monge Shaggy)
-G 1 13305 3 -1 	(uma chave de m�rmore)
+G 1 13305 3 -1 	(uma chave de mármore)
 M 0 13307 10 13305 	(um acólito)
 M 0 13307 10 13307 	(um acólito)
 M 0 13307 10 13309 	(um acólito)
@@ -42,7 +42,7 @@ E 1 13304 10 17 	(uma vassoura de pelo molhada)
 M 0 13306 1 13322 	(Taurus)
 E 1 13308 10 1 	(um anel de taurus)
 E 1 13310 10 12 	(o grande manto de pele)
-E 1 13311 10 6 	(uma m�scara dourada com chifres)
+E 1 13311 10 6 	(uma máscara dourada com chifres)
 E 1 13316 10 7 	(um par de perneiras marrons de pele)
 E 1 13317 20 14 	(um bracelete de chifre retorcido)
 S

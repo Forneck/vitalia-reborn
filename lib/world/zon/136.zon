@@ -1,7 +1,7 @@
 #136
 Vitalia~
 A Floresta Leste de Thewster~
-13600 13699 15 2 k 0 0 0 -1 -1
+13600 13699 15 2
 M 0 13600 5 13587 	(uma andorinha)
 M 0 13600 5 13587 	(uma andorinha)
 M 0 13600 5 13587 	(uma andorinha)
@@ -27,7 +27,7 @@ M 0 13607 5 13588 	(uma borboleta)
 M 0 13608 5 13588 	(um grande girassol)
 M 0 13608 5 13588 	(um grande girassol)
 M 0 13609 1 13588 	(uma árvore Nirin)
-G 1 13601 5 -1 	(um peda�o de casca de Nirin)
+G 1 13601 5 -1 	(um pedaço de casca de Nirin)
 M 0 13610 2 13588 	(um inseto-pedra)
 M 0 13608 5 13588 	(um grande girassol)
 M 0 13608 5 13588 	(um grande girassol)

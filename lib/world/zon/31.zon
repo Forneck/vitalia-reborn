@@ -1,7 +1,14 @@
 #31
 Vitalia~
 Sul da Cidade de Midgaard~
-3100 3299 40 2 k 0 0 0 -1 -1
+3100 3299 40 2 j 0 0 0 -1 -1
+M 0 3068 4 3106 	(a bolha gelatinosa verde)
+M 0 3100 1 3106 	(a criada)
+G 1 3100 99 -1 	(uma xícara)
+G 1 3101 99 -1 	(uma xícara)
+G 1 3102 99 -1 	(uma xícara)
+M 0 3101 1 3106 	(o Sacristão)
+G 1 3106 2 -1 	(uma chave enferrujada)
 M 0 3060 20 3111 	(o sentinela)
 E 1 3022 100 16 	(uma espada longa)
 G 1 3105 2 -1 	(uma chave de ferro)
@@ -11,10 +18,6 @@ M 0 3060 20 3111 	(o sentinela)
 E 1 3022 100 16 	(uma espada longa)
 M 0 3060 20 3111 	(o sentinela)
 E 1 3022 100 16 	(uma espada longa)
-M 0 3068 4 3106 	(a bolha gelatinosa verde)
-M 0 3100 1 3106 	(a criada)
-M 0 3101 1 3106 	(o Sacristão)
-G 1 3106 2 -1 	(uma chave enferrujada)
 M 0 3102 1 3110 	(o Chefe dos Sentinelas)
 G 1 3107 2 -1 	(uma chave de madeira)
 M 0 3103 4 3110 	(o sentinela transtornado)
@@ -52,8 +55,8 @@ R 0 3124 3117 -1 	(um olmo)
 O 0 3117 1 3124 	(um olmo)
 D 0 3111 3 2 	(Estrada do Parque)
 D 0 3110 1 2 	(Quartel da Guarda)
-D 0 3129 2 2 	(Na Conflu�ncia)
-D 0 3150 0 2 	(Uma Estrada de Cascalho no Cemit�rio)
+D 0 3129 2 2 	(Na Confluência)
+D 0 3150 0 2 	(Uma Estrada de Cascalho no Cemitério)
 D 0 3154 2 1 	(Na Frente da Capela)
 D 0 3155 0 1 	(Dentro da Capela)
 S

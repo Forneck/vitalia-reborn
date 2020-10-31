@@ -1,11 +1,11 @@
 #186
 Vitalia~
 Zona dos Iniciantes~
-18600 18699 10 2 k 0 0 0 -1 -1
-M 0 18601 1 18605 	(o demônio da sepultura)
-E 1 18604 50 12 	(um manto escuro novo)
+18600 18699 10 2 j 0 0 0 -1 -1
 M 0 18602 3 18600 	(o monstro novato)
 E 1 18602 99 5 	(uma camisa verde nova)
+M 0 18601 1 18605 	(o demônio da sepultura)
+E 1 18604 50 12 	(um manto escuro novo)
 M 0 18602 3 18607 	(o monstro novato)
 E 1 18606 99 16 	(uma brilhante adaga nova)
 M 0 18611 1 18646 	(o imbecil chato)
@@ -16,12 +16,12 @@ E 1 18602 99 5 	(uma camisa verde nova)
 M 0 18614 1 18604 	(o novato perdido)
 E 1 3831 1 17 	(o Card Novatos)
 M 0 18615 1 18645 	(o novato esperto)
-E 1 18613 99 10 	(um par de bonitas bra�adeiras novas)
+E 1 18613 99 10 	(um par de bonitas braçadeiras novas)
 E 1 18612 99 7 	(um par de bonitas perneiras novas)
 E 1 18602 99 5 	(uma camisa verde nova)
-E 1 18614 30 16 	(um bast�o incandescente novo)
+E 1 18614 30 16 	(um bastão incandescente novo)
 M 0 18603 1 18602 	(o dragão-bebê)
-E 1 18607 99 3 	(uma coleira de drag�o)
+E 1 18607 99 3 	(uma coleira de dragão)
 E 1 3852 1 17 	(o Card Bebê Dragão)
 M 0 18604 1 18606 	(o Guarda Novato)
 E 1 18605 10 1 	(um sinete novo)

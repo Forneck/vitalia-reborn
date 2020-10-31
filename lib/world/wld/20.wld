@@ -4,12 +4,12 @@ O Hall de Entrada~
 possuindo uma grande porta de bronze com o Símbolo da Ordem.  A construção,
 em estilo corinthio relembra um pouco as construções de Roma.
 ~
-20.1 cgr 2
-D 0
+20 131140 0 0 0 2
+D0
 ~
 ~
 0 -1 2001
-D 2
+D2
 Há areia até onde seus olhos conseguem ver.
 ~
 ~
@@ -25,25 +25,24 @@ formando o símbolo da Ordem dos Discípulos da Luz.  No teto pode-se ver uma
 grande pintura retratando a batalha na qual os Cavaleiros da Luz derrotaram
 as Forças da Entropia.  Muita luz vem da sala acima.
 ~
-20.1 d 0
-ON discipulos
-D 0
+20 8 0 0 0 0
+D0
 ~
 ~
 0 -1 2005
-D 1
+D1
 ~
 ~
 0 -1 2003
-D 2
+D2
 ~
 ~
 0 -1 2000
-D 3
+D3
 ~
 ~
 0 -1 2004
-D 4
+D4
 ~
 ~
 0 -1 2002
@@ -57,8 +56,8 @@ seus ferimentos de batalha...  Seus olhos são ofuscados com a linda luz
 emitida pela esfera, isso de alguma forma o acalma.  É perigoso, você pode
 pegar no sono...
 ~
-20.1 deht 0
-D 5
+20 524440 0 0 0 0
+D5
 ~
 ~
 0 -1 2001
@@ -71,8 +70,8 @@ armas e armaduras.  Esta sala funciona assim como a sala de doações do
 templo de Midgaard.  O estilo de construção utilizado nele segue o padrão da
 Ordem, o estilo helenístico, utilizado em toda essa enorme construção.
 ~
-20.1 d 0
-D 3
+20 8 0 0 0 0
+D3
 ~
 ~
 0 -1 2001
@@ -86,8 +85,8 @@ estão aqui, pelo que dizem, é a maior biblioteca existente.  Existem
 pinturas das várias batalhas realizadas pêlos grandes Cavaleiros da Luz em
 toda a sala.
 ~
-20.1 cd 0
-D 1
+20 12 0 0 0 0
+D1
 ~
 ~
 0 -1 2001
@@ -101,12 +100,12 @@ ao entrar nessa sala sentem uma enorme saudade assim como uma enorme
 sensação de paz, estes também afirmar que os restos "mortais" de tais
 aventureiros estão enterrados na base de suas respectivas estátuas.
 ~
-20.1 d 0
-D 0
+20 8 0 0 0 0
+D0
 ~
 ~
 0 -1 2006
-D 2
+D2
 ~
 ~
 0 -1 2001
@@ -116,16 +115,16 @@ O Corredor dos Guerreiros Lendários~
    Este corredor é uma extensão da sala anterior, também aqui você pode
 notar inúmeras estátuas de aventureiros.
 ~
-20.1 d 0
-D 0
+20 8 0 0 0 0
+D0
 ~
 ~
 0 -1 2008
-D 1
+D1
 ~
 ~
 0 -1 2007
-D 2
+D2
 ~
 ~
 0 -1 2005
@@ -139,8 +138,8 @@ feita de um reluzente metal.  Ela representa o primeiro Discípulo da Luz
 que, com bravura e dignidade, entregou sua vida em nome de todos aqueles que
 lutam pelo bem.  Em sua base há uma placa com alguns dizeres.
 ~
-20.1 d 0
-D 3
+20 8 0 0 0 0
+D3
 ~
 ~
 0 -1 2006
@@ -154,12 +153,12 @@ jardins.  Muitos magos da ordem utilizam de tal raras ervas para suas
 fórmulas mágicas.  Bem ao centro do jardim você pode ver uma grande fonte e
 mais ao fundo um grande e belo edifício.
 ~
-20.1 0 1
-D 0
+20 0 0 0 0 1
+D0
 ~
 ~
 0 -1 2009
-D 2
+D2
 ~
 ~
 0 -1 2006
@@ -172,8 +171,8 @@ ser de luz que abençoa àqueles que estão do lado do Bem.  As límpidas águas
 que acompanham a magnífica figura com certeza irão não apenas saciar a sede
 dos que precisam, mas fornecer nova energia aos bravos merecem.
 ~
-20.1 0 1
-D 2
+20 0 0 0 0 1
+D2
 ~
 ~
 0 -1 2008
@@ -187,13 +186,13 @@ BRASÃO suspenso no alto da parede, por sobre o grande portão de aço, parece
 como novo, apesar dos muitos anos pelos quais perpetua.  A oeste, você
 estará dentro da sede.  Só é permitida a entrada para membros do clã.
 ~
-20.2 cgr 2
-D 1
+20 131140 0 0 0 2
+D1
 À leste você ve uma maravilhosa praia deserta.
 ~
 ~
 0 -1 910
-D 3
+D3
 À oeste, um caminho muito seguro que o levará até o Templo do Legado Atlante.
 ~
 ~
@@ -207,14 +206,13 @@ feitos de safira e ônix encaixados em suas paredes.  Você se sente muito
 protegido ao saber que esta dentro da sede do clã.  A leste, está a entrada
 da sede do clã.  A oeste, você vê o Templo do Legado Atlante.
 ~
-20.2 d 1
-ON atlantes
-D 1
+20 8 0 0 0 1
+D1
 À Leste, está a entrada da sede dos Guardiões do Legado de Atlântida.
 ~
 ~
 0 -1 2010
-D 3
+D3
 O Poderoso Templo do Legado Atlante está à oeste daqui.
 ~
 ~
@@ -227,23 +225,23 @@ Templo foi a primeira sala a ser construída quando os defensores lemurianos
 chegaram em Vitália.  Voltado para o crescente, a luz do dia irradia em
 todas as direções, tornando-o uma potência em luminosidade.
 ~
-20.2 dt 1
-D 0
+20 524296 0 0 0 1
+D0
 Para norte daqui está a Sala do Conhecimento.
 ~
 ~
 0 -1 2013
-D 1
+D1
 À Leste, um vasto caminho lhe atrai.
 ~
 ~
 0 -1 2011
-D 2
+D2
 Uma maravilhosa Praça está a sul do Templo.
 ~
 ~
 0 -1 2016
-D 3
+D3
 Uma Passagem que lhe levará para o Laboratório de Sindicâncias fica a oeste daqui.
 ~
 ~
@@ -257,18 +255,18 @@ sabedoria.  Vários quadros estão pendurados nas paredes.
 aprofundar sua prática de vida ao lê-lo.  A oeste está o santuário e ao sul
 a sala de doações.
 ~
-20.2 d 1
-D 0
+20 8 0 0 0 1
+D0
 A Sala de Concessoes fica ao norte.
 ~
 ~
 0 -1 2015
-D 2
+D2
 Para sul o Templo dos Atlantes está sempre disposto a acolhê-lo.
 ~
 ~
 0 -1 2012
-D 3
+D3
 O Santuário está a oeste daqui.
 ~
 ~
@@ -281,8 +279,8 @@ poder salutar do santuário.  Sacerdotes em túnicas luminosas andam por aqui,
 eles bendizem cada ser que aqui repousa ou caminha.  A este você retorna
 para a sala do conhecimento.
 ~
-20.2 d 1
-D 1
+20 8 0 0 0 1
+D1
 Para leste daqui está a Sala do Conhecimento.
 ~
 ~
@@ -295,8 +293,8 @@ itens organizados que possam ser úteis em sua jornada.  Você opta pelo que
 mais lhe servir e pode levá-lo, eles estão aqui para ter serventia e nenhum
 valor será cobrado.
 ~
-20.2 d 1
-D 2
+20 8 0 0 0 1
+D2
 Para sul daqui está a Sala do Conhecimento.
 ~
 ~
@@ -310,13 +308,13 @@ corpo dando-lhe energia e uma agradável sensação de bem estar.  Tulipas,
 orquídeas, violetas e crisântemos colorem a praça.  Ao sul você estará na
 sala de reunião.
 ~
-20.2 d 1
-D 0
+20 8 0 0 0 1
+D0
 Para norte o Templo dos Atlantes está sempre disposto a acolhê-lo.
 ~
 ~
 0 -1 2012
-D 2
+D2
 A Grande Cúpula das Decisões está a sul daqui.
 ~
 ~
@@ -329,8 +327,8 @@ clarabóia no alto permite a entrada do feixe de luz que reflete na távola.
 É aqui que os Atlantes congregam-se para examinar e deliberar acerca das
 questões que os preocupam.
 ~
-20.2 df 1
-D 0
+20 40 0 0 0 1
+D0
 Uma maravilhosa Praça está a norte da Cúpula.
 ~
 ~
@@ -342,13 +340,13 @@ Um Atrium~
 longe uma entrada.  Através desta trilha você chegará no laboratório de
 sindicâncias.
 ~
-20.2 d 1
-D 1
+20 8 0 0 0 1
+D1
 Para leste o Templo dos Atlantes está sempre disposto a acolhê-lo.
 ~
 ~
 0 -1 2012
-D 5
+D5
 Para baixo está o Laboratório de Sindicâncias.
 ~
 ~
@@ -363,8 +361,8 @@ lhe proporá uma questão acerca da família e do mundo que você deseja
 associar-se.  Aqui não poderá haver qualquer comunicação com o mundo
 exterior.
 ~
-20.2 df 1
-D 4
+20 40 0 0 0 1
+D4
 Para cima há uma passagem que lhe levará ao Templo.
 ~
 ~
@@ -379,8 +377,8 @@ Ferro, que parece ser bem resistente, e por trás dela, você consegue ver uma
 Grande Porta de Madeira que lhe faz pensar o quanto de trabalho os
 construtores devem tem tido para levantá-la.
 ~
-20.3 cgr 2
-D 0
+20 131140 0 0 0 2
+D0
      ¤                   ¥`"-.,.-`           ¤
                 ¤        Å``"-"`
                         .Å.              .
@@ -410,7 +408,7 @@ D 0
 ~
 ~
 0 -1 2022
-D 2
+D2
 ~
 ~
 0 -1 3313
@@ -423,12 +421,11 @@ mais visitadas da Sede.  E você acaba sentindo um pouco de culpa por isto...
    Mas o que mais lhe chama a atenção, é um grande livro no meio da sala, e
 uma grande pedra mais ao canto da parede, parece que há algo escrito lá...
 ~
-20.3 d 1
-D 1
+20 8 0 0 0 1
+D1
 Você vê uma pequena porta no meio de tantos livros.
 ~
 porta~
-:n 2 a porta
 1 -1 2022
 S
 #2022
@@ -442,26 +439,24 @@ Salão Principal, a Oeste você avista um porta com uma placa em cima, a Leste
 há apenas cortinas de cor lilas e atrás de você está a Grande Porta de
 Entrada com suas grades e proteções.
 ~
-20.3 d 1
-ON mitra
-D 0
+20 8 0 0 0 1
+D0
 Você vê uma imensa porta que leva ao Salão Principal.
 ~
 porta~
-:n 2 a porta
 1 -1 2025
-D 1
+D1
 Você sente uma enorme energia e uma grande calma ao olhar para o caminho
 entre as cortinas.
 ~
 ~
 1 -1 2023
-D 2
+D2
 O grande portão de entrada por onde você veio.
 ~
 ~
 0 -1 2020
-D 3
+D3
 Você vê uma pequena porta com uma placa em cima onde diz "Biblioteca".
 ~
 ~
@@ -482,12 +477,11 @@ antes, o deixa encantado e atraido por ela.
 Vitalia parece passar por esta sala.  Este lugar parece ser o local perfeito
 para meditar e recuperar a energia perdida em combate.
 ~
-20.3 adt 1
-D 3
+20 524297 0 0 0 1
+D3
 Você vê enormes cortinas de cor lilas.
 ~
 porta~
-:n 2 a porta
 1 -1 2022
 E
 parede~
@@ -501,8 +495,8 @@ Armorial~
 não irão mais usar para os mais novos.
    Você vê uma placa aqui.
 ~
-20.3 d 1
-D 1
+20 8 0 0 0 1
+D1
 ~
 ~
 0 -1 2025
@@ -522,30 +516,29 @@ aventuras pelos mais destemidos aventureiros.  Você percebe que são
 equipamentos de alta qualidade, mas um conselho, não toque em nenhum
 deles...
 ~
-20.3 d 1
-D 0
+20 8 0 0 0 1
+D0
 Você sente uma grande paz vindo deste lugar.
 ~
 ~
 0 -1 2028
-D 1
+D1
 Está é a sala do conselho, ela parece estar protegida por algum tipo de
 magia.
 ~
 ~
 0 -1 2026
-D 2
+D2
 Você vê a grande porta de entrada por onde passou.
 ~
 porta~
-:n 2 a porta
 1 -1 2022
-D 3
+D3
 Você vê o brilho de alguma arma lá, e fica curioso para saber o que é.
 ~
 ~
 0 -1 2024
-D 4
+D4
 Você vê uma grande escadaria neste lugar.
 ~
 ~
@@ -560,12 +553,12 @@ antigas batalhas vistas pelos observadores.  Bem ao centro da mesas se
 encontra um cristal, que ao primeiro sinal de perigo para o planeta da um
 sinal de alerta para os membros do conselho.
 ~
-20.3 d 1
-D 3
+20 8 0 0 0 1
+D3
 ~
 ~
 0 -1 2025
-D 5
+D5
 ~
 ~
 0 -1 2029
@@ -580,16 +573,17 @@ hoje.  Quem sabe...?
    Em cima de cada mesa há garrafas de vinho e comida que parecem não
 acabar.  Será que os Magos de Mitra têm algo a ver com isso?
 ~
-20.3 d 1
-D 5
+20 8 0 0 0 1
+D5
 Você vê a grande escadaria pela qual chegou.  Você fica pensando como é
 grande e nem se cansou ao subi-la.
 ~
 ~
 0 -1 2025
 E
-mesa~
-Você vê uma mesa feita de carvalho, cheia das mais variadas especiarias.
+salao~
+As mesas se agrupam de uma tal maneira que uma pista de dança.  é formada.
+O que está esperando?  Vá e tire alguém para dançar!
 ~
 E
 palco~
@@ -597,9 +591,8 @@ O Palco está todo arrumado e as cortinas estão se fechando.
 Oba! Hoje tem show!
 ~
 E
-salao~
-As mesas se agrupam de uma tal maneira que uma pista de dança.  é formada.
-O que está esperando?  Vá e tire alguém para dançar!
+mesa~
+Você vê uma mesa feita de carvalho, cheia das mais variadas especiarias.
 ~
 S
 #2028
@@ -611,8 +604,8 @@ a moral aqui...
    Este local é diferente dos outros templos, aqui não há estatuas, apenas
 um altar, onde cada um pode horar para seu próprio Deus.
 ~
-20.3 d 1
-D 2
+20 8 0 0 0 1
+D2
 Está é a saída para o salão principal.
 ~
 ~
@@ -629,8 +622,8 @@ pedras preciosas até armas encantadas, estes itens foram obtidos pelo
 membros do clã desde sua existência, e estes itens so saem daqui como
 premios para valorozos aventureiros que o fazem por merecer.
 ~
-20.3 ad 1
-D 4
+20 9 0 0 0 1
+D4
 ~
 ~
 0 -1 2026
@@ -644,15 +637,14 @@ sente pena pelos que renegaram aos Deuses de Vitália e ajudaram o mal a
 prevalecer, morrendo por estes motivos de forma horrenda.  Gradativamente ao
 entrar no Clã, você passa a sentir uma sensação de calma e tranquilidade.
 ~
-20.4 cgr 2
-D 0
+20 131140 0 0 0 2
+D0
 A imagem de uma sala aparenta se formar em sua imaginação, mas some
 derrepente quando os portões são fechados.
 ~
 portoes portao~
-:n 1 o portão
 0 -1 2031
-D 2
+D2
 Uma obscura floresta pode ser vista nesta direção.
 ~
 ~
@@ -668,18 +660,16 @@ um pergaminho diferente dos outros, com uma luz celestial refletindo em seus
 olhos.  Este com certeza é o pergaminho contendo a história dos Cavaleiros
 da Virtude, o grande Pergaminho das Virtudes.
 ~
-20.4 d 1
-ON virtude
-D 0
+20 8 0 0 0 1
+D0
 Um longo corredor com um brilho estranho.
 ~
 ~
 0 -1 2033
-D 2
+D2
 Enormes portões entalhados com cenas do grande cataclisma.
 ~
 portoes portao~
-:n 1 o portão
 0 -1 2030
 S
 #2032
@@ -690,12 +680,12 @@ pequena devida a grande quantidade de pergaminhos nela existente, aqui se
 fazem leituras deles em volta da mesa de carvalho localizada no centro,
 sendo ela iluminada por uma vasta irradiação solar.
 ~
-20.4 d 1
-D 1
+20 8 0 0 0 1
+D1
 Um forte brilho emana desta direção.
 ~
 ~
-a -1 2033
+1 -1 2033
 S
 #2033
 O Corredor da Fé~
@@ -703,27 +693,27 @@ O Corredor da Fé~
 dizem que quanto maior sua fé e suas virtudes, maior será o brilho do
 corredor, nota-se que este corredor continua ao norte.
 ~
-20.4 d 1
-D 0
+20 8 0 0 0 1
+D0
 Um pátio de treinamento.
 ~
 ~
 0 -1 2035
-D 1
+D1
 Você repara em uma sala com inúmeros armamentos de guerra.
 ~
 ~
 0 -1 2034
-D 2
+D2
 Um enorme salão retratando as grandiosas batalhas dos Cavaleiros da Virtude.
 ~
 ~
 0 -1 2031
-D 3
+D3
 Esta sala é restrita somente aos grandes Cavaleiros deste Clã.
 ~
 ~
-a -1 2032
+1 -1 2032
 S
 #2034
 A Sala da Justiça~
@@ -733,8 +723,8 @@ Estas armaduras e armas foram deixadas aqui, para que você e outros
 cavaleiros possam usa-las em suas batalhas contra o mal.  Em uma das paredes
 existe algumas palavras gravadas em uma placa de bronze.
 ~
-20.4 d 1
-D 3
+20 8 0 0 0 1
+D3
 Um forte brilho emana desta direção.
 ~
 ~
@@ -755,19 +745,19 @@ lado do pátio existem alguns objetos mágicos.  Ao norte, o pátio termina em
 um portão, que leva a um belo jardim.  Ao leste pode-se ver uma sala um mal
 iluminada por algumas tochas, um ar sobrio preenche a sala.
 ~
-20.4 0 1
-D 0
+20 0 0 0 0 1
+D0
 Um belo jardim com uma fonte natural.
 ~
 ~
 0 -1 2038
-D 1
+D1
 Uma sala iluminada por tochas, certamente brincadeiras não são permitidas
 ali dentro.
 ~
 ~
 0 -1 2036
-D 2
+D2
 Um forte brilho emana desta direção.
 ~
 ~
@@ -782,8 +772,8 @@ encravas em pedestais de bronze.  Ao olhar para a parede norte destaca-se um
 imenso quadro de mogno, rabiscado por gravetos queimados pelas tochas que o
 iluminam.
 ~
-20.4 d 1
-D 3
+20 8 0 0 0 1
+D3
 Um pátio de treinamento.
 ~
 ~
@@ -798,8 +788,8 @@ a estátua você identifica o símbolo deste Clã, os Deuses de Vitália.  Este
 é um local sagrado e muito respeitado, tenha cuidado com suas atitudes
 quando estiver aqui.
 ~
-20.4 0 1
-D 1
+20 0 0 0 0 1
+D1
 Um belo jardim com uma fonte natural.
 ~
 ~
@@ -817,18 +807,18 @@ abastecida infinitamente por águas cristalinas de um riacho vindo do oeste.
 A oeste segue uma trilha por arbustos e pequenas árvores, a leste, podesse
 ver um enorme templo.
 ~
-20.4 0 1
-D 1
+20 0 0 0 0 1
+D1
 Uma construção diferente das outras, com um brilho mágico.
 ~
 ~
 0 -1 2039
-D 2
+D2
 Um pátio de treinamento.
 ~
 ~
 0 -1 2035
-D 3
+D3
 Ao final desta trilha você repara em uma enorme pedra esculpida.
 ~
 ~
@@ -846,8 +836,8 @@ deixavam aqui um pouco de sua vitalidade e disposição, para que os futuros
 Cavaleiros pudessem se curar mais rápido, feito em um ritual mágico por
 velhos anciões.
 ~
-20.4 deht 1
-D 3
+20 524440 0 0 0 1
+D3
 Um belo jardim com uma fonte natural.
 ~
 ~
@@ -870,18 +860,18 @@ haver algo interessante entalhado em seu tronco.  Com sorte, e a colaboração
 das imóveis criaturas a sua frente, você poderá chegar perto o suficiente
 para observá-la.
 ~
-20.5 cgr 1
-D 7
-O caminho estreito segue ao nordeste através da floresta.
-~
-~
-0 -1 6103
-D 5
+20 131140 0 0 0 1
+D5
 Parece que, entre as grandes raízes da árvore, há uma abertura por onde,
 apesar de com dificuldade, passaria um homem.
 ~
 ~
 0 -1 2041
+D7
+O caminho estreito segue ao nordeste através da floresta.
+~
+~
+0 -1 6103
 E
 arvore sequoia~
                                 #####
@@ -921,14 +911,13 @@ moldadas para facilitar sua descida...  Exato!  Você está descendo por uma
 exuberante escada de raízes!  Voltando para cima, você estará na pequena
 clareira.  Um lusco-fosco de chamas ilumina suavemente a sala a leste.
 ~
-20.5 ad 0
-ON numenor
-D 1
+20 9 0 0 0 0
+D1
 Pouco se vê, por causa da escassa iluminação.
 ~
 ~
 0 -1 2043
-D 4
+D4
 Subindo pela escada, você poderá sair daqui, e voltar para a clareira.
 ~
 ~
@@ -947,8 +936,8 @@ trabalho da Mãe Natureza em filtrá-la, algo espetacular, que poucos goles
 desta água pode saciar uma pessoa com MUITA sede.  Para o Sul, você consegue
 ver a fraca iluminação das tochas, e já sente o sufocante ar que vem de lá.
 ~
-20.5 ad 0
-D 2
+20 9 0 0 0 0
+D2
 Um túnel com saídas para todas as direções.
 ~
 ~
@@ -965,23 +954,23 @@ uma iluminação fraca vem do sul.  Enfim, a fumaça das tochas lhe faz
 lacrimejar e sua respiração é difícil.  Você tem que sair rápido daqui,
 antes que caia inconsciente e morra asfixiado aqui mesmo.
 ~
-20.5 d 0
-D 0
+20 8 0 0 0 0
+D0
 Não há nada demais ali, apenas você ouve o pingar de gotas d'água.
 ~
 ~
 0 -1 2042
-D 1
+D1
 Uma enorme sala, com uma grande pedra ao centro.
 ~
 ~
 0 -1 2047
-D 2
+D2
 Alguns montes de feno. Parece um bom lugar para se descansar.
 ~
 ~
 0 -1 2044
-D 3
+D3
 Um emaranhado de raízes que parecem formar uma escada que sobe.
 ~
 ~
@@ -997,8 +986,8 @@ iluminação é feita por tochas nas paredes, que servem-se de um estranho
 sistema de ventilação que dissipa toda a fumaça, mas mantendo a sala com um
 clima incrivelmente agradável.
 ~
-20.5 det 0
-D 0
+20 524312 0 0 0 0
+D0
 Um túnel com saídas para todas as direções.
 ~
 ~
@@ -1017,8 +1006,8 @@ que será que ninguém aparece por aqui para tentar diminuir a bagunça?
 Hey...  Remexendo nas tralhas, você acaba encontrando uma PLACA
 interessante.  Parece ser muito velha, mas não custa nada examiná-la.
 ~
-20.5 d 0
-D 2
+20 8 0 0 0 0
+D2
 Algumas runas aparecem por esta entrada, e seguem para o seu interior.
 ~
 ~
@@ -1034,13 +1023,13 @@ prendem firmemente às paredes do túnel.  Há algumas coisas escritas nele.
 Alias, o que será que um talhadeira e um martelo fazem presos ao lado do
 quadro, pendurados em raízes?
 ~
-20.5 d 0
-D 0
+20 8 0 0 0 0
+D0
 O fim do túnel, com uma enorme pilha de tranqueiras.
 ~
 ~
 0 -1 2045
-D 2
+D2
 Uma enorme sala, com uma grande pedra ao centro.
 ~
 ~
@@ -1058,25 +1047,24 @@ raízes e pedras, que fazem a sustentação do lugar.  A oeste, você volta para
 a encruzilhada de túneis.  Ao norte, há mais um túnel.  E raízes tapam o que
 parecem ser outras entradas, ao leste e ao sul.
 ~
-20.5 d 0
-D 0
+20 8 0 0 0 0
+D0
 Algumas runas aparecem por esta entrada, e seguem para o seu interior.
 ~
 ~
 0 -1 2046
-D 1
+D1
 Um lugar pequeno e sujo, com um cipó no centro.
 ~
 raiz~
-:n 2 a raíz
-a -1 2049
-D 2
+1 -1 2049
+D2
 Esta sala lhe transmite dignidade e honra, as decisões dos Núdenains são
 tomadas ali dentro.
 ~
 ~
 0 -1 2048
-D 3
+D3
 Um túnel com saídas para todas as direções.
 ~
 ~
@@ -1093,8 +1081,8 @@ uma enorme raiz, cuidadosamente esculpida formando uma mesa de centro.  Este
 local é utilizado apenas pelos mais sábios remanescentes dos Dúdedains, se
 você esta aqui, é por que você tem um grande valor para nós.
 ~
-20.5 d 0
-D 0
+20 8 0 0 0 0
+D0
 Uma enorme sala, com uma grande pedra ao centro.
 ~
 ~
@@ -1112,13 +1100,12 @@ deste um lugar perfeito para um esconderijo.  Andando mais um pouco você
 esbarra num cipó, que vem da mesma direção do feixe de luz.  Esse cipó
 parece ser resistente o bastante para aguentar seu peso.
 ~
-20.5 d 0
-D 3
+20 8 0 0 0 0
+D3
 Uma enorme sala, com uma grande pedra ao centro.
 ~
 raiz~
-:n 2 a raíz
-a -1 2047
+1 -1 2047
 S
 #2050
 O Grande Portão Dourado~
@@ -1130,13 +1117,12 @@ grande e lindo Sol.  Para dentro do Portão, o caminho de grama sob seus pés
 continua, farfalhando e brilhando com a farta luz do Sol, que bate nas
 gotículas de orvalho.  Dois fortes e gentis sentinelas guardam a entrada.
 ~
-20.6 cgr 1
-D 0
+20 131140 0 0 0 1
+D0
 ~
 portao~
-:n 1 o portão
-a -1 2051
-D 2
+1 -1 2051
+D2
 ~
 ~
 0 -1 5703
@@ -1148,17 +1134,15 @@ e reflete a luz do Sol em suas gotículas, dando-lhe uma delicada sensação de
 pureza e harmonia.  Daqui você pode avistar uma fonte para o norte.  E ao
 sul se localiza o grande Portão.
 ~
-20.6 0 1
-ON solis
-D 0
+20 0 0 0 0 1
+D0
 ~
 ~
 0 -1 2052
-D 2
+D2
 ~
 portao~
-:n 1 o portão
-a -1 2050
+1 -1 2050
 S
 #2052
 A Fonte~
@@ -1168,23 +1152,23 @@ oeste uma construção branca.  Para sul e leste, o gramado continua,
 verdejante e atrativo.  A temperatura daqui é mais quente, porém ainda
 agradável, pois nenhuma árvore impede a entrada do Sol.
 ~
-20.6 0 1
-D 0
+20 0 0 0 0 1
+D0
 ~
 ~
 0 -1 2053
-D 2
-~
-~
-0 -1 2051
-D 3
-~
-~
-0 -1 2055
-D 1
+D1
 ~
 ~
 0 -1 2056
+D2
+~
+~
+0 -1 2051
+D3
+~
+~
+0 -1 2055
 S
 #2053
 O Templo Solis~
@@ -1196,24 +1180,24 @@ proporcionam uma agradável sombra para o Templo, para norte esta um altar, e
 ao sul uma fonte.  Você se sente bem aqui, leve como uma pluma, e parece não
 sentir dor.
 ~
-20.6 et 1
-D 0
+20 524304 0 0 0 1
+D0
 ~
 ~
 0 -1 2054
-D 2
-~
-~
-0 -1 2052
-D 3
-~
-~
-0 -1 2058
-D 1
+D1
 ~
 ~
 0 -1 2057
-D 4
+D2
+~
+~
+0 -1 2052
+D3
+~
+~
+0 -1 2058
+D4
 Você vê uma grande sala, parecendo um auditório no topo de uma escadaria
 prateada.
 ~
@@ -1229,8 +1213,8 @@ esta exposta, em cima de uma coluna.  Para traz, o Templo se perde quase que
 totalmente entre os galhos.  Este lugar é bem reservado, e assim você se
 sente protegido.
 ~
-20.6 0 1
-D 2
+20 0 0 0 0 1
+D2
 ~
 ~
 0 -1 2053
@@ -1243,8 +1227,8 @@ grande árvore pode ser vista, e para o sul, um campo de grama deveras
 aprazível.  Nas paredes você nota, pendurados, alguns objetos, guardados,
 prontos para serem usados.  Após a porta, a grande fonte jorra água.
 ~
-20.6 d 0
-D 1
+20 8 0 0 0 0
+D1
 ~
 ~
 0 -1 2052
@@ -1257,12 +1241,12 @@ das asas de um pássaro.  Perdido no campo, um pouco ao norte, a trilha segue
 e no meio da grama pode-se notar uma árvore grande.  Para oeste, a fonte
 pode ser vista.
 ~
-20.6 0 1
-D 0
+20 0 0 0 0 1
+D0
 ~
 ~
 0 -1 2057
-D 3
+D3
 ~
 ~
 0 -1 2052
@@ -1275,15 +1259,15 @@ assim um macio colchão marrom, no qual você sente vontade de deitar.  Você
 nota, em cima, galhos largos.  Para sul, a trila segue e para oeste um
 Templo branco se apresenta.
 ~
-20.6 0 1
-D 3
-~
-~
-0 -1 2053
-D 2
+20 0 0 0 0 1
+D2
 ~
 ~
 0 -1 2056
+D3
+~
+~
+0 -1 2053
 S
 #2058
 A Árvore do Oeste~
@@ -1293,8 +1277,8 @@ um macio colchão marrom, no qual você sente vontade de deitar.  Você nota,
 em cima, galhos largos.  Para sul, uma pequena construção se ergue em meio o
 gramado e para leste um Templo branco se apresenta.
 ~
-20.6 0 1
-D 1
+20 0 0 0 0 1
+D1
 ~
 ~
 0 -1 2053
@@ -1311,8 +1295,8 @@ onde são definidas as idéias que fazem de Solis o clã que é hoje, cheio de
 dignidade e compaixão.  Uma enorme escadaria mesclada entre o brilho da
 prata e a escuridão do mogno o leva para baixo, devolta ao Templo Solis.
 ~
-20.6 defh 0
-D 5
+20 184 0 0 0 0
+D5
 Raios de Sol ofuscam sua visão, lembrando-o que o Templo Solis se encontra
 abaixo.
 ~
@@ -1327,16 +1311,16 @@ Você pondera se não seria esta a morada de um titan.  Um voltuoso portão
 adornado em prata e ouro é guardado por imponentes sentinelas, nele lê-se:
 JVKB.
 ~
-20.7 cgr 1
-D 5
-~
-~
-0 -1 5723
-D 0
+20 131140 0 0 0 1
+D0
 O sentinela bloqueia sua visão.
 ~
 ~
 0 -1 2061
+D5
+~
+~
+0 -1 5723
 S
 #2061
 O Saguão~
@@ -1344,28 +1328,27 @@ O Saguão~
 saguão redondo.  No centro uma fonte jorra água cristalina.  Próximo a
 entrada há um caixa e quadro de avisos.
 ~
-20.7 d 0
-ON jvkb
-D 1
+20 8 0 0 0 0
+D1
 Você vê vários suportes de armas e armaduras.
 ~
 ~
 0 -1 2063
-D 3
-Ao oeste há piscinas naturais que parece dar uma sensação agradável.
-~
-~
-0 -1 2062
-D 4
-Acima você vê um altar e algumas estatuas.
-~
-~
-0 -1 2064
-D 2
+D2
 Você vê dois sentinelas que protegem a entrada.
 ~
 ~
 0 -1 2060
+D3
+Ao oeste há piscinas naturais que parece dar uma sensação agradável.
+~
+~
+0 -1 2062
+D4
+Acima você vê um altar e algumas estatuas.
+~
+~
+0 -1 2064
 S
 #2062
 Termas Divinas~
@@ -1374,8 +1357,8 @@ nenhum mal pudesse afetá-lo.  Não há tochas, piscinas naturais emanam vapor
 e uma suave luz por todo lugar.  Parece ser este o lugar onde os deuses
 descansam.
 ~
-20.7 deft 0
-D 1
+20 524344 0 0 0 0
+D1
 Você vê um grande salão com uma fonte no centro.
 ~
 ~
@@ -1386,8 +1369,8 @@ O Arsenal~
    O imenso depósito abriga em seu interior armas, armaduras e itens mágicos
 de todos os tipos, dignos dos mais poderosos exércitos.
 ~
-20.7 d 0
-D 3
+20 8 0 0 0 0
+D3
 Você vê um grande salão com uma fonte no centro.
 ~
 ~
@@ -1402,33 +1385,33 @@ atento lhe diz que tudo parece ter milhares de anos e que todo o resto foi
 construído em volta desta sala.  Você se assusta ao perceber onde de fato
 está: na Caverna das Orquídeas Sussurrantes.
 ~
-20.7 d 0
-D 0
+20 8 0 0 0 0
+D0
 Você observa algo que se parece com um K.
 ~
 ~
 0 -1 2067
-D 1
+D1
 Você observa algo que se parece com um J.
 ~
 ~
 0 -1 2065
-D 2
+D2
 Você observa algo que se parece com um B.
 ~
 ~
 0 -1 2068
-D 3
+D3
 Você observa algo que se parece com um V.
 ~
 ~
 0 -1 2066
-D 4
+D4
 Você vê uma sala de reunião.
 ~
 ~
 0 -1 2069
-D 5
+D5
 Você vê um grande salão com uma fonte no centro.
 ~
 ~
@@ -1440,8 +1423,8 @@ O Julgamento Mundano~
 O altar em forma de J é parcamente iluminado e esta vazio, mal se consegue
 ler: "Julgar os outros é condenar a si próprio."
 ~
-20.7 d 0
-D 3
+20 8 0 0 0 0
+D3
 Ao oeste você vê um altar e algumas estatuas.
 ~
 ~
@@ -1453,8 +1436,8 @@ A Luxuria Perdida~
 nenhuma ostentação.  Talhado na parte interior os dizeres: "Pagara em vida
 seus pecados e nada daqui levará."
 ~
-20.7 d 0
-D 1
+20 8 0 0 0 0
+D1
 Ao leste você vê um altar e algumas estatuas.
 ~
 ~
@@ -1467,8 +1450,8 @@ em forma de K tem sobre ele um guerreiro que parece se proteger com uma
 frágil cruz de madeira, ao lado dele esta escrito: "O brado de um tolo é o
 disfarce de um covarde."
 ~
-20.7 d 0
-D 2
+20 8 0 0 0 0
+D2
 Ao sul você vê um altar e algumas estatuas.
 ~
 ~
@@ -1481,8 +1464,8 @@ mais valioso do homem: sua família.  Runas desconhecidas na base podem de
 algum modo ser facilmente lidas por você, trazem um recado estranho: "Melhor
 uma criança pia que um pastor iníquo."
 ~
-20.7 d 0
-D 0
+20 8 0 0 0 0
+D0
 Ao norte você vê um altar e algumas estatuas.
 ~
 ~
@@ -1495,8 +1478,8 @@ assentos, dois tronos maiores lado a lado ao centro, em volta disposto dois
 a dois diagonalmente mais quatro cadeiras. Uma enorme mesa pode abrigar o
 conselho, no fundo próximo a porta um banco que parece ser o dos réus.
 ~
-20.7 d 0
-D 5
+20 8 0 0 0 0
+D5
 Abaixo você vê um altar e algumas estatuas.
 ~
 ~
@@ -1509,17 +1492,17 @@ quardar segredos muito antigos.  Bem a sua frente há um grande portão negro,
 e ao lado dele você repara em dois guerreiros que parecem ser muito fortes,
 e dispostos a proteger este templo dos invasores.
 ~
-20.29 cgr 1
-D 3
-Você pode ver a floresta élfica.
-~
-~
-0 -1 19001
-D 0
+20 131140 0 0 0 1
+D0
 Você pode ver uma linda fonte no centro da sala.
 ~
 ~
 0 -1 2071
+D3
+Você pode ver a floresta élfica.
+~
+~
+0 -1 19001
 S
 #2071
 Dentro do Grande Templo~
@@ -1530,18 +1513,17 @@ ouve os mais variados sons, que em seu todo parecem formar uma belíssima
 canção homenageando todos os bravos que protegem Vitália com suas próprias
 vidas.
 ~
-20.29 0 1
-ON dragoon
-D 2
-Você pode ver o grande portao negro.
-~
-~
-0 -1 2070
-D 0
+20 0 0 0 0 1
+D0
 Você pode ver um grande corredor.
 ~
 ~
 0 -1 2072
+D2
+Você pode ver o grande portao negro.
+~
+~
+0 -1 2070
 S
 #2072
 O Corredor de Acesso~
@@ -1549,27 +1531,27 @@ O Corredor de Acesso~
 pode ver um grande quadro.  A leste pode ver guerreiros se equipando para
 novas batalhas.
 ~
-20.29 0 1
-D 2
-Você pode ver uma linda fonte no centro da sala.
-~
-~
-0 -1 2071
-D 3
-Você pode ver um grande quadro na parede.
-~
-~
-0 -1 2073
-D 1
-Você pode ver os guerreiros se equipando.
-~
-~
-0 -1 2074
-D 0
+20 0 0 0 0 1
+D0
 Você pode ver a continuação do corredor.
 ~
 ~
 0 -1 2075
+D1
+Você pode ver os guerreiros se equipando.
+~
+~
+0 -1 2074
+D2
+Você pode ver uma linda fonte no centro da sala.
+~
+~
+0 -1 2071
+D3
+Você pode ver um grande quadro na parede.
+~
+~
+0 -1 2073
 S
 #2073
 A Sala de Mensagens~
@@ -1577,8 +1559,8 @@ A Sala de Mensagens~
 membros.  Nesta sala há um quadro de mensagens pendurado em uma das paredes.
 Quando você olha para ele acha que deve o ler.
 ~
-20.29 0 1
-D 1
+20 0 0 0 0 1
+D1
 Você pode ver um grande corredor.
 ~
 ~
@@ -1590,8 +1572,8 @@ O Quarto de Preparação~
 foram usados por poderosos aventureiros de Vitália, e que agora estão aqui
 para serem utilizados em novas batalhas.
 ~
-20.29 0 1
-D 3
+20 0 0 0 0 1
+D3
 Você pode ver um grande corredor.
 ~
 ~
@@ -1603,47 +1585,47 @@ O Final do Corredor de Acesso~
 você vê os guerreiros feridos repousando.  A leste você vê vários Guerreiros
 reunidos descutindo alguma coisa que não dá para se ouvir.
 ~
-20.29 0 1
-D 2
-Você pode ver o início do corredor.
-~
-~
-0 -1 2072
-D 0
+20 0 0 0 0 1
+D0
 Você pode ver guerreiros repousando.
 ~
 ~
 0 -1 2078
-D 1
+D1
 Você pode ver a grande sala de reuniões.
 ~
 ~
 0 -1 2076
+D2
+Você pode ver o início do corredor.
+~
+~
+0 -1 2072
 S
 #2076
 A Sala de Reuniões~
    Nesta sala são discutidos os problemas do clã.  Aqui também são
 discutidos planos para matar os mais poderosos monstros deste mundo.
 ~
-20.29 0 1
-D 3
-Você pode ver o final do corredor.
-~
-~
-0 -1 2075
-D 0
+20 0 0 0 0 1
+D0
 Você pode ver a sala do Líder.
 ~
 ~
 0 -1 2077
+D3
+Você pode ver o final do corredor.
+~
+~
+0 -1 2075
 S
 #2077
 A Sala do Líder~
    Este é o local onde são realizados encontros dos líderes e seus homens de
 confiança.  Aqui são discutidos os assuntos administrtivos do clã.
 ~
-20.29 0 1
-D 2
+20 0 0 0 0 1
+D2
 Você pode ver a grande sala de reuniões.
 ~
 ~
@@ -1655,8 +1637,8 @@ A Sala de Recuperação~
 está envolvida por um poder de cura, permitindo que seus ferimentos
 cicatrizem mais rápido.
 ~
-20.29 et 1
-D 2
+20 524304 0 0 0 1
+D2
 Você pode ver o final do corredor.
 ~
 ~
@@ -1671,18 +1653,18 @@ ver, bem ao fundo, uma enorme construção de pedra que se assemelha muito com
 uma pirâmide.  Você vê duas imponente esfinges e cada uma esta com um lindo
 medalhão de ouro, parece existir um símbolo em cada medalhão.
 ~
-20.9 cgr 1
-D 4
+20 131140 0 0 0 1
+D2
+Há um imenso rio pra lá.
+~
+~
+0 -1 8109
+D4
 São enormes degraus formando uma imensa escadaria.  Parece haver algumas
 árvores bem ao fundo, embora você não esteja muito certo disso...
 ~
 ~
 0 -1 2081
-D 2
-Há um imenso rio pra lá.
-~
-~
-0 -1 8109
 E
 medalhao~
 Esse parece ser um símbolo de uma esfinge.  O medalhão é feito de puro ouro
@@ -1728,15 +1710,14 @@ mais visível as árvores de um belo oásis que se forma após mais alguns
 degraus.  Você olha para os lados e vê que desta escadaria pode observar
 todo Egito, e sua enorme magnitude.
 ~
-20.9 0 1
-ON seth
-D 4
+20 0 0 0 0 1
+D4
 Após alguns degraus você vê o oásis muito belo, com muitas árvores.  É um
 lugar maravilhosamente belo.
 ~
 ~
 0 -1 2082
-D 5
+D5
 A escadaria parece ser bem maior aqui de cima, tropeçar não parece uma boa
 idéia...
 ~
@@ -1751,18 +1732,18 @@ fazem sombra em um pequeno lago de água cristalina onde os aventureiros
 saciam sua sede após a longa subida.  À sua frente, agora já bem nítida,
 está uma pirâmide.  A entrada da pirâmide está logo a sua frente.
 ~
-20.9 0 1
-D 5
+20 0 0 0 0 1
+D0
+A entrada é muito estreita, logo, pouco pode ser visto.
+~
+~
+0 -1 2083
+D5
 A escadaria parece ser bem maior aqui de cima, tropeçar não parece uma boa
 idéia...
 ~
 ~
 0 -1 2081
-D 0
-A entrada é muito estreita, logo, pouco pode ser visto.
-~
-~
-0 -1 2083
 S
 #2083
 O Salão das Tempestades~
@@ -1774,27 +1755,27 @@ Ainda há alguns hieróglifos, tão antigos, que talvez ninguém nesse mundo
 possa traduzi-los.  No fim do salão há uma escada.  Há também mais duas
 salas, a Leste e Oeste.  Esse lugar é realmente grande!
 ~
-20.9 d 0
-D 2
-Um lindo Oásis chama sua atenção.
-~
-~
-0 -1 2082
-D 4
-Você consegue ver algumas partes de uma estatua muito bem esculpida.
-~
-~
-0 -1 2086
-D 1
+20 8 0 0 0 0
+D1
 Por entre as colunas você pode ver alguns papiros jogados ao chão.
 ~
 ~
 0 -1 2085
-D 3
+D2
+Um lindo Oásis chama sua atenção.
+~
+~
+0 -1 2082
+D3
 Você consegue ver algumas confortáveis almofadas no chão.
 ~
 ~
 0 -1 2084
+D4
+Você consegue ver algumas partes de uma estatua muito bem esculpida.
+~
+~
+0 -1 2086
 E
 desenho~
 Uma figura do Deus Seth segurando um cajado em forma de cobra, parece estar
@@ -1808,8 +1789,8 @@ o ambiente é um pouco mais confortável.  As confortáveis almofadas que no
 chão se encontram fazem você ter vontade de deitar-se sobre elas e ficar ali
 o resto do dia.
 ~
-20.9 det 0
-D 1
+20 524312 0 0 0 0
+D1
 Você consegue ver pouca coisa por causa da quantidade de pilares.
 ~
 ~
@@ -1823,8 +1804,8 @@ seus estudos místicos.  Há uma grande quantidade de papiros atirados ao
 chão.  Que desperdício!  Porém há um papiro em destaque na parede.  Parece
 estar ali para ser lido.
 ~
-20.9 d 0
-D 3
+20 8 0 0 0 0
+D3
 Você consegue ver pouca coisa por causa da quantidade de pilares.
 ~
 ~
@@ -1839,26 +1820,26 @@ colossal poder do Deus.  Mais ao fundo da sala há um altar, coberto por um
 pano aveludado vermelho.  Sobre ele há diversas oferendas feitas pelos seus
 filhos.  Atrás do altar há mais uma escada..
 ~
-20.9 d 0
-D 4
-A escada que leva para cima é de tamanha grandeza que não possível ver o seu
-fim.
-~
-~
-0 -1 2089
-D 3
-Um imenso clarão vem desta sala, algo muito estranho parece estar ali
-guardado...
-~
-~
-0 -1 2087
-D 1
+20 8 0 0 0 0
+D1
 Nada de importante pode ser visto ali, com exceção de um livro, vermelho
 como o fogo.
 ~
 ~
 0 -1 2088
-D 5
+D3
+Um imenso clarão vem desta sala, algo muito estranho parece estar ali
+guardado...
+~
+~
+0 -1 2087
+D4
+A escada que leva para cima é de tamanha grandeza que não possível ver o seu
+fim.
+~
+~
+0 -1 2089
+D5
 Você consegue ver pouca coisa por causa da quantidade de pilares.
 ~
 ~
@@ -1874,8 +1855,8 @@ uma pequena pilha de objetos usados em batalha.  Ao lado dessa pilha há uma
 tabuleta de cedro destinada aqueles que desejam pegar os objetos que ali se
 encontram.
 ~
-20.9 d 0
-D 1
+20 8 0 0 0 0
+D1
 Parece ser um altar, descansam ali muitas oferendas.
 ~
 ~
@@ -1888,8 +1869,8 @@ emanando uma luz vermelha.  Há muitas lendas sobre esse livro.  Todos os
 segredos que os Filhos de Seth guardam estão escritos nesse livros.  Poucas
 pessoas conseguem entender oque esta escrito no livro.
 ~
-20.9 d 0
-D 3
+20 8 0 0 0 0
+D3
 Parece ser um altar, descansam ali muitas oferendas.
 ~
 ~
@@ -1903,8 +1884,8 @@ segredos de Seth.  Nas paredes, há desenhos que representam uma boa passagem
 para a outra vida.  Os membros superiores reúnem-se aqui para resolver os
 problemas pedindo ajuda para a sapiência de Muwattali.
 ~
-20.9 df 0
-D 5
+20 40 0 0 0 0
+D5
 É possível ver apenas a enorme escada por onde você passou.
 ~
 ~
@@ -1919,17 +1900,17 @@ vontade de entrar.
 pelo bem do clã desaparecem quando você avista dois guardas protegendo a
 entrada.
 ~
-20.30 cgr 1
-D 3
-Você não ve nada especial.
-~
-~
-0 -1 3068
-D 1
+20 131140 0 0 0 1
+D1
 Você vê uma das dependências do clã.
 ~
 ~
 0 -1 2091
+D3
+Você não ve nada especial.
+~
+~
+0 -1 3068
 S
 #2091
 O Templo de Trevor~
@@ -1938,23 +1919,22 @@ presença de uma estátua no centro.  Está é uma sala totalmente forjada a
 ouro branco e amarelo, o que dá um brilho especial a este local.  Você vê
 uma longa escadaria seguindo para cima.
 ~
-20.30 0 1
-ON protetores
-D 1
+20 0 0 0 0 1
+D1
 Você vê uma das dependências do clã.
 ~
 ~
 0 -1 2094
-D 4
-Você vê uma das dependências do clã.
-~
-~
-0 -1 2092
-D 3
+D3
 Você vê uma das dependências do clã.
 ~
 ~
 0 -1 2090
+D4
+Você vê uma das dependências do clã.
+~
+~
+0 -1 2092
 S
 #2092
 O Dormitório~
@@ -1963,13 +1943,13 @@ confortável, o que lhe dá sono e uma grande vontade de descansar.  Há uma
 luz azul no teto, o que da uma maior tranqüilidade ao local.  Você vê duas
 longas escadarias, seguindo para cima e outra para baixo.
 ~
-20.30 et 1
-D 4
+20 524304 0 0 0 1
+D4
 Você vê uma das dependências do clã.
 ~
 ~
 0 -1 2093
-D 5
+D5
 Você vê uma das dependências do clã.
 ~
 ~
@@ -1981,8 +1961,8 @@ O Escritório~
 diversas pessoas, no centro da mesa existe algo que emite uma forte e bonita
 luz, dando um ar mais sério ao local.
 ~
-20.30 0 1
-D 5
+20 0 0 0 0 1
+D5
 Você vê uma das dependências do clã.
 ~
 ~
@@ -1994,13 +1974,13 @@ O Jardim~
 fonte de água cristalina.  Apenas entrando nesta sala você já se sente mais
 hidratado.
 ~
-20.30 0 1
-D 1
+20 0 0 0 0 1
+D1
 Você vê uma das dependências do clã.
 ~
 ~
 0 -1 2095
-D 3
+D3
 Você vê uma das dependências do clã.
 ~
 ~
@@ -2014,22 +1994,22 @@ possui alguns livros em suas estantes e um LIVRO que provavelmente seja
 especial, pois está num local em destaque.  Escadas conduzem até o andar de
 cima.
 ~
-20.30 0 1
-D 4
-Você vê uma das dependências do clã.
-~
-~
-0 -1 2096
-D 1
+20 0 0 0 0 1
+D1
 Você vê uma das dependências do clã.
 ~
 ~
 0 -1 2098
-D 3
+D3
 Você vê uma das dependências do clã.
 ~
 ~
 0 -1 2094
+D4
+Você vê uma das dependências do clã.
+~
+~
+0 -1 2096
 S
 #2096
 A Transição~
@@ -2038,13 +2018,13 @@ poucos passos você pode ter tudo o que precisar para manter suas
 necessidades alimentares.  Você pode ver duas grandes escadarias seguindo
 para cima ou para baixo.
 ~
-20.30 0 1
-D 4
+20 0 0 0 0 1
+D4
 Você vê uma das dependências do clã.
 ~
 ~
 0 -1 2097
-D 5
+D5
 Você vê uma das dependências do clã.
 ~
 ~
@@ -2057,8 +2037,8 @@ ouvir vozes de quem estiver fora da mesma.  Esta sala possui uma grande mesa
 redonda que dá a impressão de ter sido construída para representar
 igualdade.
 ~
-20.30 0 1
-D 5
+20 0 0 0 0 1
+D5
 Você vê uma das dependências do clã.
 ~
 ~
@@ -2070,13 +2050,13 @@ O Corredor~
 depositados todos os itens que são doados ao clã.  No final deste corredor
 parece haver uma escada.
 ~
-20.30 0 1
-D 3
+20 0 0 0 0 1
+D3
 Você vê uma das dependências do clã.
 ~
 ~
 0 -1 2095
-D 5
+D5
 Você vê uma das dependências do clã.
 ~
 ~
@@ -2088,8 +2068,8 @@ O Armazém~
 ela é uma sala cheia de itens brilhantes e muitos valiosos.  Um aviso na
 perede diz o seguinte: MANTENHA A SALA ARRUMADA!
 ~
-20.30 0 1
-D 4
+20 0 0 0 0 1
+D4
 Você vê uma das dependências do clã.
 ~
 ~
@@ -2103,13 +2083,13 @@ brasão coroa o centro do portão, que é guardado por duas sentinelas fortement
 armadas.  Você percebe o topo de uma grande construção gótica erguida no
 interior do vale, grande o suficiente para abrigar um exército.
 ~
-20.11 cgr 1
-D 0
+20 131140 0 0 0 1
+D0
 Você pode ver um belo Jardim e ao fundo uma grande construção.
 ~
 ~
 0 -1 2101
-D 2
+D2
 Você pode ver a rua...
 ~
 ~
@@ -2128,14 +2108,13 @@ se exercitar ao ar livre.
 gótico que abriga o Quartel General do Exército Suicida de Vitália.  Ao sul está
 a saída do vale onde o QG encontra-se protegido!
 ~
-20.11 0 1
-ON exercito
-D 0
+20 0 0 0 0 1
+D0
 Você pode ver uma enorme construção em estilo gótico.
 ~
 ~
 0 -1 2102
-D 2
+D2
 Você pode ver os portões de entrada do Quartel.
 ~
 ~
@@ -2149,28 +2128,28 @@ entre o bem e o mal ocorrida no começo dos tempos.  No centro do salão está u
 grande estátua de cristal.  Existem saídas para todos as direções e há também uma
 escada que o leva para o piso superior.
 ~
-20.11 d 0
-D 0
+20 8 0 0 0 0
+D0
 Você pode ver um corredor que segue para o norte.
 ~
 ~
 0 -1 2106
-D 2
-Você pode ver um belo jardim com uma fonte.
-~
-~
-0 -1 2101
-D 1
+D1
 Você pode ver uma grande porta blindada protegida com runas mágicas.
 ~
 ~
 0 -1 2104
-D 3
+D2
+Você pode ver um belo jardim com uma fonte.
+~
+~
+0 -1 2101
+D3
 Você pode ver uma sala com uma mesa e algumas cadeiras em volta.
 ~
 ~
 0 -1 2103
-D 4
+D4
 Você pode ver uma escada que segue para o segundo andar.
 ~
 ~
@@ -2186,18 +2165,17 @@ estão dispostas no fundo da sala, e entre elas na parede foi colocado um
 imenso quadro de avisos.  Do lado oposto ao da porta de entrada há um
 estandarte com alguns dizeres.  Sá há saída por onde você veio.
 ~
-20.11 d 0
-D 1
+20 8 0 0 0 0
+D0
+Biblioteca do Exercito.
+~
+armadura~
+1 -1 2107
+D1
 Você pode ver um salão circular com uma grande estátua no centro.
 ~
 ~
 0 -1 2102
-D 0
-Biblioteca do Exercito.
-~
-armadura~
-:n 2 a armadura
-ad -1 2107
 S
 #2104
 Arsenal~
@@ -2210,8 +2188,8 @@ aumentando ainda mais a segurança dessa sala.  Enormes baús são usados para
 se guardar os itens que podem ajudar os Suicidas a triunfar em batalhas
 futuras.  O salão principal fica a oeste daqui.
 ~
-20.11 d 0
-D 3
+20 8 0 0 0 0
+D3
 Você pode ver um salão circular com uma grande estátua no centro.
 ~
 ~
@@ -2229,8 +2207,8 @@ alaranjada que parece restaurar suas forças.  É óbvio que descansando aqui,
 os soldados do Exército Suicida logo estarão prontos para enfrentar a
 próxima batalha.
 ~
-20.11 det 0
-D 5
+20 524312 0 0 0 0
+D5
 Você pode ver uma escada que leva para o primeiro andar.
 ~
 ~
@@ -2242,27 +2220,27 @@ Corredor~
 porta aparentemente trancada com um aviso pregado nela.  Há uma outra saída
 para o oeste no meio do corredor e ao sul, você pode ver o Salão Principal.
 ~
-20.11 d 0
-D 2
-Você pode ver um salão redondo com algumas gravuras nas paredes.
-~
-~
-0 -1 2102
-D 0
+20 8 0 0 0 0
+D0
 Você pode ver uma porta trancada com um aviso.
 ~
 ~
 0 -1 2108
-D 3
-Você pode ver várias estantes com livros.
-~
-~
-0 -1 2107
-D 1
+D1
 Você vê um salão enorme e bem decorado.
 ~
 ~
 0 -1 2109
+D2
+Você pode ver um salão redondo com algumas gravuras nas paredes.
+~
+~
+0 -1 2102
+D3
+Você pode ver várias estantes com livros.
+~
+~
+0 -1 2107
 E
 aviso~
                               *********************
@@ -2280,18 +2258,17 @@ muitos livros sobre grandes heróis.  Uma placa de bronze foi afixada acima
 da porta.  Um silêncio intransponível toma conta deste local.  Só há saída
 para leste.
 ~
-20.11 df 0
-D 1
+20 40 0 0 0 0
+D1
 Você pode ver um corredor que segue para o norte e para o sul.
 ~
 ~
 0 -1 2106
-D 2
+D2
 Sala de Reuniões.
 ~
 estante~
-:n 2 a estante
-ad -1 2103
+1 -1 2103
 E
 placa~
 Você pode ler os dizeres:
@@ -2307,8 +2284,8 @@ indica onde o Conselho de Oficiais se reúne pra tomar suas decisões mais
 importantes.  Se você conseguiu entrar neste quarto é sinal que você goza
 de um status alto.  Portanto, use de seu posto com sabedoria.
 ~
-20.11 d 0
-D 2
+20 8 0 0 0 0
+D2
 Você pode ver uma porta trancada.
 ~
 ~
@@ -2339,8 +2316,8 @@ de um minuto para a parede atrás do pódio, ela se torna transparente e o
 Vazio pode ser contemplado, com o Ceifeiro olhando em sua direção, em seu
 habitual silêncio.
 ~
-20.11 d 0
-D 3
+20 8 0 0 0 0
+D3
 Você vê um corredor no sentido norte-sul.
 ~
 ~
@@ -2355,13 +2332,13 @@ percebe que ele começa a se transformar em nuvens cinzentas, e, num piscar
 de olhos, volta ao seu estado inicial.
    Em cima do portal, talhada em madeira, existe uma palavra: Vingança.
 ~
-20.12 cgr 1
-D 0
+20 131140 0 0 0 1
+D0
 Você pode ver um rio.
 ~
 ~
 0 -1 5669
-D 2
+D2
 Uma estranha movimentação pode ser percebida.
 ~
 ~
@@ -2377,14 +2354,13 @@ diamante.  Você percebe que dentro desta cúpula estão os lendários amuletos
 e espadas, utilizados pelos mais importantes discípulos da rainha.  É
 incrível descobrir que aquela velha lenda é verídica.
 ~
-20.12 dh 0
-ON vingadores
-D 0
+20 136 0 0 0 0
+D0
 Você vê a entrada.
 ~
 ~
 0 -1 2110
-D 1
+D1
 Você vê uma superficie estranha.
 ~
 ~
@@ -2397,17 +2373,17 @@ Segundo os anciões, era neste local que os guerreiros se abasteciam com água
 e alimentos para as batalhas.  Você se sente aliviado ao tomar um pouco de
 água após tanto andar.
 ~
-20.12 0 1
-D 3
-Você vê uma espécie de Santuário.
-~
-~
-0 -1 2111
-D 1
+20 0 0 0 0 1
+D1
 Uma linda cúpula divina pode ser vista.
 ~
 ~
 0 -1 2113
+D3
+Você vê uma espécie de Santuário.
+~
+~
+0 -1 2111
 S
 #2113
 Os Aposentos de Iris~
@@ -2418,28 +2394,27 @@ encontra-se uma estátua, rodeada por tochas, que aquecem e iluminam o
 ambiente.  Aproximando-se da bela obra, você logo percebe que se trata da
 sábia Deusa Miuma.
 ~
-20.12 det 0
-D 5
-Um porão pode ser visto.
-~
-~
-0 -1 2114
-D 0
+20 524312 0 0 0 0
+D0
 Você vê algo muito diferente.
 ~
 porta~
-:n 2
-a -1 2115
-D 2
+1 -1 2115
+D2
 Você não consegue ver muita coisa.
 ~
 ~
 0 -1 2116
-D 3
+D3
 Você ve uma enorme fonte.
 ~
 ~
 0 -1 2112
+D5
+Um porão pode ser visto.
+~
+~
+0 -1 2114
 S
 #2114
 O Porão~
@@ -2447,8 +2422,8 @@ O Porão~
 defensores do vilarejo usam como depósito para seus armamentos.  Se você
 está se preparando para um combate, veio ao lugar certo.
 ~
-20.12 d 0
-D 4
+20 8 0 0 0 0
+D4
 Você vê o lindo aposento de Iris.
 ~
 ~
@@ -2462,13 +2437,12 @@ como caberiam mais de cinco pessoas nesta minuscula sala. O ar torna-se mais
 escasso a medida que os minutos passam. Seria uma boa ideia sair daqui
 depressa.
 ~
-20.12 d 0
-D 2
+20 8 0 0 0 0
+D2
 Você vê os aposentos de Iris
 ~
 porta~
-:n 2
-a -1 2113
+1 -1 2113
 S
 #2116
 A Sala dos Ensinamentos~
@@ -2477,13 +2451,13 @@ adquiridas nesta sala.  Livros e alguns instrumentos de estudo se distribuem
 pelas prateleiras.  Aqui estão registrados todos os feitos dos discípulos da
 rainha.  É provável que você encontre todas as respostas que precisa.
 ~
-20.12 0 1
-D 0
+20 0 0 0 0 1
+D0
 Você vê o aposento de Iris.
 ~
 ~
 0 -1 2113
-D 2
+D2
 Você vê os Planejamentos.
 ~
 ~
@@ -2495,13 +2469,13 @@ Os Planejamentos~
 refinado tipo de madeira.  É aqui que os moradores se reúnem para discussões
 sobre a vila.  Uma lareira é a fonte de calor deste lugar.
 ~
-20.12 d 0
-D 0
+20 8 0 0 0 0
+D0
 Você vê a Sala de Ensinamentos.
 ~
 ~
 0 -1 2116
-D 1
+D1
 Uma enorme sala brilha a leste.
 ~
 ~
@@ -2515,8 +2489,8 @@ grande altar da Deusa Miuma se encontra aqui, rodeado por minúsculas velas,
 mas, que estranhamente, produzem uma quantidade descomunal de luz.  Apenas
 uma pessoa com um coração puro poderia estar aqui.
 ~
-20.12 df 0
-D 3
+20 40 0 0 0 0
+D3
 Há muitas coisas, você não consegue enchergar muito.
 ~
 ~
@@ -2533,13 +2507,13 @@ de perceber as quatros torres unidas por imensos paredões, onde em cada uma
 há uma escultura de anjos, que parecem estar vivos vigiando o local.  O
 lugar está muito bem cuidado, com árvores podadas e um belo jardim.
 ~
-20.13 cgr 1
-D 0
+20 131140 0 0 0 1
+D0
 Ao Norte, você vê um lindo e ensolarado gramado.
 ~
 ~
 0 -1 13652
-D 2
+D2
 Você ve um imenso portão, com belas esculturas de anjos e o brasão do clan
 dos Senhores da Tempestade.
 ~
@@ -2557,15 +2531,14 @@ podado que parece que alguém esteve trabalhando nele neste momento.  Para
 norte você encontra o portão do castelo, para sul, a sala principal do
 castelo.
 ~
-20.13 0 1
-ON tempestade
-D 0
+20 0 0 0 0 1
+D0
 Você ve um imenso portão, com belas esculturas da luta dos Senhores das
 Tempestade, contra a força do mal, em Vitalia.
 ~
 ~
 0 -1 2120
-D 2
+D2
 Você observa a sala principal do castelo dos Senhores da Tempestade.
 ~
 ~
@@ -2579,23 +2552,23 @@ paredes são rodeadas de todos os lados por grandes blocos de granito, nos
 cantos da sala você percebe alguns querubins esculpidos em mármore.  Você
 observa uma luz dourada, saindo da sala ao lado.
 ~
-20.13 d 1
-D 0
+20 8 0 0 0 1
+D0
 Você observa um belo jardim, muito bem cuidado e no centro, uma linda fonte.
 ~
 ~
 0 -1 2121
-D 3
+D2
+Você observa um longo corredor.
+~
+~
+0 -1 2124
+D3
 Você observa que no meio da parede há uma passagem.  De dentro dela, reluz
 uma luz dourada.
 ~
 ~
 0 -1 2123
-D 2
-Você observa um longo corredor.
-~
-~
-0 -1 2124
 S
 #2123
 A Herança dos Anjos~
@@ -2604,8 +2577,8 @@ mármore; só de entrar você sente sendo curado.  A trombeta foi um dos
 presentes deixados pelos Anjos da Luz.  A luz é tão forte e a sensação de
 cura é tão magnífica que você sente vontade de dormir.
 ~
-20.13 det 1
-D 1
+20 524312 0 0 0 1
+D1
 Você observa a sala principal do castelo dos Senhores da Tempestade.
 ~
 ~
@@ -2618,13 +2591,13 @@ pintados, alguns fazendo menção aos Deuses de Vitália, outros aos Anjos da
 Luz.  Muito bem iluminado, você observa o Brasão dos Senhores da Tempestade
 pendurado em uma parede.
 ~
-20.13 d 1
-D 0
+20 8 0 0 0 1
+D0
 Você observa a sala principal do castelo dos Senhores da Tempestade.
 ~
 ~
 0 -1 2122
-D 2
+D2
 Você vê a sala da reflexão, uma luz branca, vem de um dos lados da sala,
 consegue ver também uma escada.
 ~
@@ -2642,23 +2615,23 @@ de madeira maciça fecha uma sala, onde os líderes se reúnem para reuniões
 importantes.  Para baixo, está o depósito de armas.  Para leste, um caminho
 que da acesso a biblioteca.
 ~
-20.13 d 1
-D 0
+20 8 0 0 0 1
+D0
 Você observa um longo corredor.
 ~
 ~
 0 -1 2124
-D 1
+D1
 Um acesso para a Biblioteca.
 ~
 ~
 0 -1 2127
-D 3
+D3
 Uma Bela porta de madeira maciça.
 ~
 ~
-a -1 2126
-D 5
+1 -1 2126
+D5
 Uma escada o conduz até o depósito de armas.
 ~
 ~
@@ -2671,12 +2644,12 @@ livros narrando as conquistas dos Senhores da Tempestade contra o exército
 de Khell.  Uma bela mesa redonda está posicionada no meio da sala.  Rodeando
 a mesa, você vê várias cadeiras.
 ~
-20.13 df 1
-D 1
+20 40 0 0 0 1
+D1
 Uma Bela porta de madeira maciça.
 ~
 ~
-a -1 2125
+1 -1 2125
 S
 #2127
 A Biblioteca~
@@ -2687,8 +2660,8 @@ deslumbrante.  No canto da sala você percebe um livro aberto sobre uma
 coluna de mármore, onde estão as regras e o código de honra dos Senhores da
 Tempestade.
 ~
-20.13 df 1
-D 3
+20 40 0 0 0 1
+D3
 Você vê a sala da reflexão, uma luz branca, vem de um dos lados da sala,
 consegue ver também uma escada.
 ~
@@ -2702,8 +2675,8 @@ vários baus com ótimos equipamentos, a sensação de orgulho e ao mesmo tempo
 um frio na espinha não pode deixar de ser sentida por você, ao imaginar Os
 Senhores da Tempestade em combate para adquiri-los.
 ~
-20.13 d 1
-D 4
+20 8 0 0 0 1
+D4
 Você observa uma escada, que o levará ao piso superior.
 ~
 ~
@@ -2716,13 +2689,13 @@ parece ser muito calmo e bonito.  O local é rodeado por imensas árvores e do
 lado de fora do portão pode-se ver uma árvore quase gigante.  Pode-se ouvir
 dali o suave burburinho de uma queda d'água.
 ~
-20.14 cgr 1
-D 0
+20 131140 0 0 0 1
+D0
 Você vê uma bela alameda nessa direção.
 ~
 ~
 0 -1 19028
-D 2
+D2
 Os Jardins do Templo.
 ~
 ~
@@ -2738,19 +2711,18 @@ dali, pode-se perceber o som de uma cachoeira que parece estar seguindo o
 ritmo alegre e despreocupado dos passarinhos que chegam ali para se banhar e
 matar a sede.
 ~
-20.14 0 1
-ON dinastia
-D 2
-O imponente templo de Breyldon
-~
-~
-0 -1 2132
-D 0
+20 0 0 0 0 1
+D0
 O grande portão.
 ~
 ~
 0 -1 2130
-D 3
+D2
+O imponente templo de Breyldon
+~
+~
+0 -1 2132
+D3
 Com muita clareza você pode ver a imensa Árvore Frondosa.
 ~
 ~
@@ -2767,27 +2739,27 @@ nuvens.  Apesar de sua imponência, quase se pode sentir a presença
 espiritual dos lendários guerreiros de Breyldon, que parecem estar zelando
 por este verdadeiro santuário.
 ~
-20.14 0 1
-D 0
+20 0 0 0 0 1
+D0
 Os Jardins do Templo.
 ~
 ~
 0 -1 2131
-D 2
-O altar do Templo.
-~
-~
-0 -1 2135
-D 3
-A Sala de Doações.
-~
-~
-0 -1 2136
-D 1
+D1
 Você pode ver daqui a bonita cachoeira
 ~
 ~
 0 -1 2133
+D2
+O altar do Templo.
+~
+~
+0 -1 2135
+D3
+A Sala de Doações.
+~
+~
+0 -1 2136
 S
 #2133
 Nas Próximidades da Cachoeira~
@@ -2796,13 +2768,13 @@ pedras vai se tornando cada vez mais alto.  E prestando mais atenção, você
 nota o ruído dos diversos animais que devem estar ali por perto, saciando a
 sede ou simplesmente banhando-se nas águas límpidas e claras.
 ~
-20.14 0 1
-D 1
+20 0 0 0 0 1
+D1
 Pode-se perceber daqui uma pequena parte da cachoeira.
 ~
 ~
 0 -1 2134
-D 3
+D3
 Você pode ver o majestoso Templo.
 ~
 ~
@@ -2815,8 +2787,8 @@ são claras e muito limpas e você se sente muito mais leve e mais puro neste
 local, talvez porque estas águas parecem estar impregnadas com os poderes
 mágicos de alguém.
 ~
-20.14 0 1
-D 3
+20 0 0 0 0 1
+D3
 Você pode ver uma imensa pedra.
 ~
 ~
@@ -2831,13 +2803,13 @@ são tomadas as decisões que afetam a vida de todos os membros do Clã.  Este
 coberto por um granito absolutamente branco e o teto abobodado, possui
 afrescos que contam a saga dos Breyldon.
 ~
-20.14 d 1
-D 0
+20 8 0 0 0 1
+D0
 Pode-se ver daqui o Templo.
 ~
 ~
 0 -1 2132
-D 2
+D2
 Deste local não se pode ver nada alem da luz que penetra difusa e suave.
 ~
 ~
@@ -2851,13 +2823,13 @@ cachoeira.  Uma suave lufada de vento o envolve de quando em quando,
 arejando o ambiente e deixando-o fresco e ameno, mesmo nos dias mais
 quentes.  Esta sala parece ser muito antiga.
 ~
-20.14 d 1
-D 0
+20 8 0 0 0 1
+D0
 Você vê um imensa árvore daqui.
 ~
 ~
 0 -1 2137
-D 1
+D1
 Você pode ver uma pequena parte do Templo.
 ~
 ~
@@ -2870,13 +2842,13 @@ foi alcançado por ninguém.  Ela parece ser mágica, pois seus frutos
 vermelhos e de aspecto suculento não estouram ao caírem no chão,
 permanecendo intactos, prontos para serem comidos.
 ~
-20.14 et 1
-D 1
+20 524304 0 0 0 1
+D1
 Você vê um lindo jardim daqui.
 ~
 ~
 0 -1 2131
-D 2
+D2
 Você vê uma grande sala.
 ~
 ~
@@ -2891,8 +2863,8 @@ assim, uma vasta galeria de quadros pintados à óleo, que foram pendurados
 nas paredes.  Estes quadros perpetuam a imagem de todos os heróis que
 pertenceram ao clã dos Breyldon.
 ~
-20.14 d 1
-D 0
+20 8 0 0 0 1
+D0
 Você pode ver a sala dos Guardiães.
 ~
 ~
@@ -2904,41 +2876,40 @@ Os Portões da Montanha~
 tesouros, por cima da muralha você vê uma montanha, mas não consegue olhar
 por muito tempo, pois uma luz muito forte e reluzente parece cegar-lhe.
 ~
-20.15 cgr 4
-D 3
-Volta para nos contrafortes.
-~
-~
-0 -1 5612
-D 1
+20 131140 0 0 0 4
+D1
 Você vê uma linda fonte no centro de uma sala.
 ~
 ~
 0 -1 2141
+D3
+Volta para nos contrafortes.
+~
+~
+0 -1 5612
 S
 #2141
 Ao Pé da Montanha~
    Ao entrar nessa sala, uma sensação muito boa percorre todo o seu corpo.
 Daqui você vê melhor uma grande montanha.
 ~
-20.15 0 4
-ON guardioes
-D 0
+20 0 0 0 0 4
+D0
 Você vê uma sala com muitos itens.
 ~
 ~
 0 -1 2143
-D 2
-Você vê uma grande estátua no que parece um grande santuário.
-~
-~
-0 -1 2142
-D 1
+D1
 Você vê uma grande montanha com algumas inscrições lapidadas nela.
 ~
 ~
 0 -1 2144
-D 3
+D2
+Você vê uma grande estátua no que parece um grande santuário.
+~
+~
+0 -1 2142
+D3
 Você vê a entrada do clã, onde dois sentinelas estão posicionados para a
 guarda.
 ~
@@ -2952,8 +2923,8 @@ Esse e um santuário muito lindo e enfeitado, o cheiro daqui e muito bom e
 daqui se ouve um relaxante som de água corrente.  Você vê um altar com uma
 estatua sobre ele.
 ~
-20.15 et 4
-D 0
+20 524304 0 0 0 4
+D0
 Você vê uma linda fonte no centro de uma sala.
 ~
 ~
@@ -2964,8 +2935,8 @@ A Sala de Doações~
    E uma sala muito grande e ventilada onde generosos combatentes ofertam
 seus achados.
 ~
-20.15 0 4
-D 2
+20 0 0 0 0 4
+D2
 Você vê uma linda fonte no centro de uma sala.
 ~
 ~
@@ -2976,17 +2947,17 @@ Escadarias na Montanha~
    Nesse lugar você vê uma linda escadaria de prata que parece levar ao céu,
 aqui você também vê algo lapidado na montanha.
 ~
-20.15 0 4
-D 4
-Você vê uma longa escadaria que parece não ter fim.
-~
-~
-0 -1 2145
-D 3
+20 0 0 0 0 4
+D3
 Você vê uma linda fonte no centro de uma sala.
 ~
 ~
 0 -1 2141
+D4
+Você vê uma longa escadaria que parece não ter fim.
+~
+~
+0 -1 2145
 S
 #2145
 O Topo da Montanha~
@@ -2995,17 +2966,17 @@ clã.  Um vento frio refresca todo o lugar para que ninguém esquente sua
 cabeça aqui.  Essa e uma grande sala de reuniões onde o destino de muitos
 será decidido.
 ~
-20.15 0 4
-D 5
-Você vê uma grande montanha com algumas inscrições lapidadas nela.
-~
-~
-0 -1 2144
-D 1
+20 0 0 0 0 4
+D1
 Você vê uma sala com muitos desenhos enigmáticos, você não os entende.
 ~
 ~
 0 -1 2146
+D5
+Você vê uma grande montanha com algumas inscrições lapidadas nela.
+~
+~
+0 -1 2144
 S
 #2146
 O Segredo da Montanha~
@@ -3013,18 +2984,18 @@ O Segredo da Montanha~
 retratando a histórica batalha contra as forças do mal nas paredes, que
 ainda são segredos para muitos aventureiros.
 ~
-20.15 0 4
-D 5
+20 0 0 0 0 4
+D3
+Você vê uma sala vazia, parece um lugar de reuniões.
+~
+~
+0 -1 2145
+D5
 Você vê uma sala trancada, com magias e uma grande porta, parece aprisionar
 alguém.
 ~
 ~
 0 -1 -1
-D 3
-Você vê uma sala vazia, parece um lugar de reuniões.
-~
-~
-0 -1 2145
 S
 #2150
 O Enorme Obelisco~
@@ -3034,17 +3005,17 @@ Quando tenta espiar por entre a passagem, sente o arrepio percorrer seu
 corpo quando escuta uma voz rouca sussurrar em seu ouvido: - Se não fases
 parte dessa sociedade, retira-se antes do fim.
 ~
-20.16 cgr 1
-D 2
-Você observa atentamente uma passagem por entre os arbustos.
-~
-~
-0 -1 1106
-D 0
+20 131140 0 0 0 1
+D0
 Um grandioso templo esculpido na rocha lhe traz grande harmonia ao coração.
 ~
 ~
 0 -1 2151
+D2
+Você observa atentamente uma passagem por entre os arbustos.
+~
+~
+0 -1 1106
 S
 #2151
 O Hall de entrada do Templo da Luz~
@@ -3053,29 +3024,28 @@ Tudo nesse templo é natural, utilizando toda a grandiosidade da natureza.
 Existem duas Portas Laterais, uma Grande escada ao centro, que dá acesso ao
 piso superior e uma maravilhosa fonte de água límpida nesse hall de entrada.
 ~
-20.16 0 1
-ON luz
-D 4
+20 0 0 0 0 1
+D1
+Você vê uma maravilhosa estatua com as palmas das mãos viradas para baixo.
+~
+~
+0 -1 2153
+D2
+Você vê uma pequena passagem por entre os arbustos.
+~
+~
+0 -1 2150
+D3
+Uma imensa sala com uma mesa surpreendentemente grande, cercada de cadeiras.
+~
+~
+0 -1 2152
+D4
 Você vê ao alto uma grande rocha levitando que traz algo escrito.  Vá e
 leia.
 ~
 ~
 0 -1 2154
-D 2
-Você vê uma pequena passagem por entre os arbustos.
-~
-~
-0 -1 2150
-D 3
-Uma imensa sala com uma mesa surpreendentemente grande, cercada de cadeiras.
-~
-~
-0 -1 2152
-D 1
-Você vê uma maravilhosa estatua com as palmas das mãos viradas para baixo.
-~
-~
-0 -1 2153
 S
 #2152
 Grande Salão de Reuniões~
@@ -3085,8 +3055,8 @@ impressionantes sobre as reuniões aqui realizadas.  Do mais baixo, ao mais
 alto posto do clan utilizam estas cadeiras para decidir o futuro da
 sociedade.
 ~
-20.16 0 1
-D 1
+20 0 0 0 0 1
+D1
 Um grandioso Hall de Entrada lhe dá acesso as outras dependências da
 Sociedade.
 ~
@@ -3101,8 +3071,8 @@ misterioso ao meio.  Da imagem saem duas mãos com as palmas apontadas para o
 centro da sala, lhe convidando para entrar sob as palmas.  Suas feridas
 começam a cicatrizar à medida que adentra a sala.
 ~
-20.16 et 1
-D 3
+20 524304 0 0 0 1
+D3
 Um grandioso Hall de entrada lhe da acesso as outras dependências da
 Sociedade.
 ~
@@ -3117,24 +3087,24 @@ Acima da rocha esta escrita a frase: "Meus problemas não são maiores que os
 meus Deuses e não irão me impedir de caminhar.  Se diante de mim não se
 abrir o mar, andarei por sobre as águas".
 ~
-20.16 0 1
-D 4
-O piso acima é dedicado à manutenção da Sociedade.  Poucas pessoas aqui
-transitam.
-~
-~
-0 -1 2156
-D 5
-Você avista o Hall por onde passou, com uma maravilhosa fonte ao centro.
-~
-~
-0 -1 2151
-D 3
+20 0 0 0 0 1
+D3
 Você avista na sala ao lado um quadro utilizado para informar toda a
 sociedade.
 ~
 ~
 0 -1 2155
+D4
+O piso acima é dedicado à manutenção da Sociedade.  Poucas pessoas aqui
+transitam.
+~
+~
+0 -1 2156
+D5
+Você avista o Hall por onde passou, com uma maravilhosa fonte ao centro.
+~
+~
+0 -1 2151
 S
 #2155
 Participando da Sociedade~
@@ -3142,8 +3112,8 @@ Participando da Sociedade~
 sociedade, este é um lugar muito freqüentado por aqueles que se importam e
 ajudam no andamento da sociedade.
 ~
-20.16 0 1
-D 1
+20 0 0 0 0 1
+D1
 Ao lado encontra-se a rocha com as regras para a purificação de toda a
 Sociedade.
 ~
@@ -3156,29 +3126,29 @@ Altar aos Deuses~
 Vitália.  Lembre-se sempre de agradecer e nem sempre de pedir.  Há uma
 grande e confortável almofada para se ajoelhar e meditar.
 ~
-20.16 0 1
-D 4
-Uma estranha força embaralha suas vistas e o impede de olhar para cima.
-~
-~
-0 -1 2159
-D 5
-Abaixo esta a rocha sagrada com as regras para a purificação de toda a
-Sociedade.
-~
-~
-0 -1 2154
-D 3
-Você pode ver uma série de equipamentos por toda a parede dessa sala.
-~
-~
-0 -1 2157
-D 1
+20 0 0 0 0 1
+D1
 Uma clara sala com mesa e algumas cadeiras.  Certamente utilizada pela
 diretoria.
 ~
 ~
 0 -1 2158
+D3
+Você pode ver uma série de equipamentos por toda a parede dessa sala.
+~
+~
+0 -1 2157
+D4
+Uma estranha força embaralha suas vistas e o impede de olhar para cima.
+~
+~
+0 -1 2159
+D5
+Abaixo esta a rocha sagrada com as regras para a purificação de toda a
+Sociedade.
+~
+~
+0 -1 2154
 S
 #2157
 Sala de Equipamentos~
@@ -3187,8 +3157,8 @@ pendurados inúmeros equipamentos, que serão utilizados por toda a Sociedade.
 Esta sala é um privilegio.  Use os equipamentos com sabedoria e nunca
 faltarão.
 ~
-20.16 0 1
-D 1
+20 0 0 0 0 1
+D1
 Você vê um lindo altar para orar aos Deuses.  Agradeça as bênçãos recebidas.
 ~
 ~
@@ -3201,8 +3171,8 @@ centro encontram-se algumas cadeiras destinadas aos líderes da Sociedade.
 Você sente o poder da sociedade invadindo a sala, para iluminar as mentes
 que aqui estão.
 ~
-20.16 0 1
-D 3
+20 0 0 0 0 1
+D3
 Você vê um lindo altar para orar aos Deuses.  Agradeça as bênçãos recebidas.
 ~
 ~
@@ -3215,8 +3185,8 @@ preenchida com um enorme poder que é emitido pelo espírito do campeão do
 clã.  Ele fica aqui a espera de seus equipamentos para poder defender, com
 a sua vida, os ideais da Sociedade da Luz.
 ~
-20.16 0 1
-D 5
+20 0 0 0 0 1
+D5
 Você vê um lindo altar para orar aos Deuses.  Agradeça as bênçãos recebidas.
 ~
 ~
@@ -3229,17 +3199,17 @@ por incrível que pareça, ainda está intacta.  Essa arquitetura lembra a
 arquitetura escocesa do século X.  Você percebe uma placa dourada acima de
 um grande portão.
 ~
-20.17 cgr 1
-D 5
-As Terras Altas.
-~
-~
-0 -1 17385
-D 0
+20 131140 0 0 0 1
+D0
 O Templo do Clã Mclaud.
 ~
 ~
 0 -1 2161
+D5
+As Terras Altas.
+~
+~
+0 -1 17385
 E
 placa~
                            BEM VINDO AO CLÃ MCLAUD
@@ -3252,24 +3222,23 @@ surpreende com a variedade de cores e formas desenhadas nos vitrais.  O
 cheiro agradável e a luminosidade suave e aconchegante lhe trazem uma imensa
 paz interior.
 ~
-20.17 0 1
-ON mclaud
-D 0
+20 0 0 0 0 1
+D0
 Um grande altar.
 ~
 ~
 0 -1 2162
-D 2
-A Entrada Colossal.
-~
-~
-0 -1 2160
-D 1
+D1
 Uma sala iluminada.
 ~
 ~
 0 -1 2163
-D 3
+D2
+A Entrada Colossal.
+~
+~
+0 -1 2160
+D3
 A sala de doações.
 ~
 ~
@@ -3282,18 +3251,18 @@ preciosas, presas à parede, com imagens e nomes de antigos membros da
 família Mclaud.  Ao olhar para cima, você vê a estátua de um anjo pendurada
 a alguns metros da sua cabeça.
 ~
-20.17 0 1
-D 0
+20 0 0 0 0 1
+D0
 A Fonte de Água.
 ~
 ~
 0 -1 2165
-D 2
+D2
 O Templo do Clã Mclaud.
 ~
 ~
 0 -1 2161
-D 4
+D4
 A Sala de Reuniões.
 ~
 ~
@@ -3306,8 +3275,8 @@ muito branca, ofuscando seus olhos, como os raios de Sol.  Ao entrar nessa
 sala, você se esquece do mundo.  Aqui você pode dormir e se concentrar o
 bastante para poder voltar às suas batalhas.
 ~
-20.17 et 0
-D 3
+20 524304 0 0 0 0
+D3
 O Templo do Clã Mclaud.
 ~
 ~
@@ -3319,8 +3288,8 @@ A Sala de Doações~
 irmãos, deixando alguns itens que sejam desnecessários para você mas que
 talvez sejam muito necessários para outros membros.
 ~
-20.17 0 0
-D 1
+20 0 0 0 0 0
+D1
 O Templo do Clã Mclaud.
 ~
 ~
@@ -3331,8 +3300,8 @@ A Fonte de Água~
    Você observa uma linda fonte jorrando água limpa.  Pare aqui para matar a
 sua sede e encher seu cantil.
 ~
-20.17 0 1
-D 2
+20 0 0 0 0 1
+D2
 Um grande altar.
 ~
 ~
@@ -3344,8 +3313,8 @@ A Sala de Reuniões~
 Clã.  Aqui são discutidas sugestões e críticas sobre as regras e onde são
 implementadas as modificações necessárias.
 ~
-20.17 0 0
-D 5
+20 0 0 0 0 0
+D5
 O grande altar.
 ~
 ~
@@ -3359,17 +3328,17 @@ fica encantado com a beleza desta jovem.  Ela tem os pés descalços e usa um
 vestido longo.  Existem duas criaturas parecidas com dragões protegendo os
 portões.
 ~
-20.18 acegr 1
-D 2
-Você vê um longo túnel escuro.
-~
-~
-0 -1 5001
-D 0
+20 131157 0 0 0 1
+D0
 Há um jardim com uma fonte negra no centro.
 ~
 ~
 0 -1 2171
+D2
+Você vê um longo túnel escuro.
+~
+~
+0 -1 5001
 S
 #2171
 O Jardim Negro~
@@ -3377,24 +3346,23 @@ O Jardim Negro~
 todas as flores tem as pétalas negras deixando o jardim sombrio.  No centro
 do jardim se encontra uma fonte negra.
 ~
-20.18 0 1
-ON trevas
-D 0
+20 0 0 0 0 1
+D0
 Você vê um grande templo negro.
 ~
 ~
 0 -1 2176
-D 1
+D1
 Você vê uma sala com uma grande mesa no centro.
 ~
 ~
 0 -1 2173
-D 2
+D2
 Ao sul se encontram dois grandes portões negros.
 ~
 ~
 0 -1 2170
-D 3
+D3
 Você vê uma sala com inúmeros equipamentos.
 ~
 ~
@@ -3407,8 +3375,8 @@ estão em excelente estado e bem preservados.  A lâmina das armas de corte
 são bem afiadas.  É como se uma magia protegesse os equipamentos do
 desgaste do tempo.
 ~
-20.18 0 1
-D 1
+20 0 0 0 0 1
+D1
 Há um jardim com uma fonte negra no centro.
 ~
 ~
@@ -3422,8 +3390,8 @@ passos, nota que nela existem milhares de papéis pregados sujos de sangue.
 Ao ouvir passos vindo, entende que só tem duas escolhas: ficar e ler ou
 fugir para nunca mais voltar.
 ~
-20.18 a 1
-D 3
+20 1 0 0 0 1
+D3
 Há um jardim com uma fonte negra no centro.
 ~
 ~
@@ -3436,8 +3404,8 @@ da batalha de Tenebra contra Azgher e as aventuras de seus cinco primeiros
 discípulos.  No centro do salão se encontra um pequeno altar com um
 pergaminho sobre ele.
 ~
-20.18 0 1
-D 1
+20 0 0 0 0 1
+D1
 Você vê um grande templo negro.
 ~
 ~
@@ -3450,8 +3418,8 @@ você pode ver a beleza das estrelas e da lua.  Aqui é sempre noite e você
 se sente tranqüilo e relaxado.  Muitos vem aqui para admirar as estrelas,
 descansar ou meditar neste clima de tranqüilidade.
 ~
-20.18 et 1
-D 3
+20 524304 0 0 0 1
+D3
 Você vê um grande templo negro.
 ~
 ~
@@ -3464,23 +3432,23 @@ belo altar com a estátua de Tenebra e um pouco antes do altar está o trono
 dela.  Aqui é onde a Deusa protetora do clã faz suas aparições para dar
 mais ensinamentos e abençoar seus seguidores.
 ~
-20.18 e 1
-D 0
+20 16 0 0 0 1
+D0
 Você vê um belo altar com uma estátua no centro.
 ~
 ~
 0 -1 2177
-D 1
+D1
 Você vê uma sala sem teto.
 ~
 ~
 0 -1 2175
-D 2
+D2
 Há um jardim com uma fonte negra no centro.
 ~
 ~
 0 -1 2171
-D 3
+D3
 Você uma sala com vários murais.
 ~
 ~
@@ -3494,12 +3462,12 @@ bela jovem de cabelos longos e lisos com os pés descalços usando um vestido
 longo e justo aberto nas laterais.  A beleza de seu rosto é indescritivel
 e seus olhos encantam a todos.
 ~
-20.18 e 1
-D 1
+20 16 0 0 0 1
+D1
 ~
 ~
 0 -1 2178
-D 2
+D2
 Você vê um grande templo negro.
 ~
 ~
@@ -3514,11 +3482,11 @@ fogo azul que flutua no teto.  Logo no primeiro passo dentro desse recinto,
 você sente vontade de calar-se e falar somente quando necessário, afinal, é
 uma honra pisar nesse chão antigo.
 ~
-20.18 adf 0
-D 3
+20 41 0 0 0 0
+D3
 Você enxerga a mais bela estátua já esculpida.
 ~
 ~
 0 -1 2177
 S
-$
+$~

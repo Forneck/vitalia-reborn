@@ -1,7 +1,7 @@
  1 P 1 1 2 8194 7 0
  2 armor
-10 You feel less protected.
-12 You feel someone protecting you.
+10 Você se sente menos protegid$r.
+12 Você sente alguém $r protegendo.
 80 17 -20
 99 24
 90 0 3 
@@ -14,21 +14,21 @@
  4 100
  1 P 3 1 130 8210 8 0
  2 bless
-10 You feel less righteous.
-11 $b glows briefly.
-12 You feel righteous.
-80 18 2
+10 Você se sente menos abençoad$r.
+11 $p brilha por alguns instantes.
+12 Você se sente $x(virtuoso,virtuosa).
+80 18 1 + (1 + (self.level / 30))
 99 6
-81 24 -1
+81 24 -(1 + (self.level / 30))
 99 6
 90 1 6 
 99 (35 - (3 * self.level)) > 5 ? (35 - (3 * self.level)) : 5
  4 100
  1 P 4 1 66 2 8 0
  2 blindness
-10 You feel a cloak of blindness dissolve.
-12 You have been blinded!
-13 $N seems to be blinded!
+10 Você volta a enxergar.
+12 Você está ceg$r!
+13 $N parece estar ceg$r!
 80 18 -4
 99 2
 81 17 40
@@ -54,7 +54,7 @@
  4 100
  1 P 7 1 66 5120 7 0
  2 charm person
-10 You feel more self-confident.
+10 Você se sente mais auto-confiante.
 90 0 25 
 99 (75 - (2 * self.level)) > 50 ? (75 - (2 * self.level)) : 50
 91 1 28 
@@ -65,8 +65,8 @@
  1 P 8 1 18 12291 7 100
  2 chill touch
  3 dice(1, self.class == 0 ? 8 : 6) + 1
-10 You feel your strength return.
-12 You feel your strength wither!
+10 Você se sente retomando suas forças.
+12 Você sente sua força indo embora!
 80 1 -1
 99 4
 90 0 3 
@@ -74,12 +74,12 @@
  4 100
  1 P 9 1 1 256 8 0
  2 clone
-13 $N magically divides!
+13 $N magicamente se divide!
  8 10
  9 161
 90 0 100 
 99 (80 - (5 * self.level)) > 65 ? (80 - (5 * self.level)) : 65
- 4 100
+ 4 50
  1 P 10 1 18 4097 7 100
  2 color spray
  3 dice(9, self.class == 0 ? 8 : 6) + 9
@@ -100,10 +100,6 @@
 40 10
 90 1 2 
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
-91 4 7 
-99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
-92 6 12 
-99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
  4 100
  1 P 13 1 1152 1024 8 0
  2 create water
@@ -114,22 +110,22 @@
  4 100
  1 P 14 1 2 4 8 0
  2 cure blind
-12 Your vision returns!
-13 There's a momentary gleam in $N's eyes.
+12 Sua visão retorna!
+13 Os olhos de $n brilham momentaneamente.
 25 4
 90 1 5 
 99 (30 - (2 * self.level)) > 5 ? (30 - (2 * self.level)) : 5
  4 100
  1 P 15 1 2 8 7 0
  2 cure critic
-12 You feel a lot better!
+12 Você se sente muito melhor!
 50 dice(3, 8) + 3 + (param / 4)
 90 1 14 
 99 (30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10
  4 100
  1 P 16 1 2 8 7 0
  2 cure light
-12 You feel better.
+12 Você se sente melhor.
 50 dice(1, 8) + 1 + (param / 4)
 90 1 1 
 99 (30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10
@@ -138,23 +134,23 @@
  4 100
  1 P 17 1 130 28690 8 0
  2 curse
-10 You feel more optimistic.
-11 $b briefly glows red.
-12 You feel very uncomfortable.
-13 $N briefly glows red!
-80 18 -1
-99 1 + (self.level / 2)
-81 19 -1
-99 1 + (self.level / 2)
+10 Você se sente mais otimista.
+11 Você brilha avermelhado!
+12 Você sente um leve desconforto.
+13 $N brilha avermelhado!
+80 18 -1 * (1 + (self.level / 50))
+99 1 + (self.level / 10)
+81 19 -1 * (1 + (self.level / 50))
+99 1 + (self.level / 10)
 82 35 
-99 1 + (self.level / 2)
+99 1 + (self.level / 10)
 90 0 20 
 99 (80 - (2 * self.level)) > 50 ? (80 - (2 * self.level)) : 50
  4 100
  1 P 18 1 34 8194 8 0
  2 detect alignment
-10 You feel less aware.
-12 Your eyes tingle.
+10 Você perde sua sensibilidade.
+12 Você sente suas pupilas se dilatando.
 80 28 
 99 12 + param
 90 1 4 
@@ -162,19 +158,21 @@
  4 100
  1 P 19 1 34 8194 8 0
  2 detect invisibility
-10 Your eyes stop tingling.
-12 Your eyes tingle.
+10 Suas pupilas voltam ao normal.
+12 Você sente suas pupilas se dilatando.
 80 29 
 99 12 + param
 90 0 2 
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
 91 1 8 
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
+92 6 20 
+99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
  4 100
  1 P 20 1 34 8194 8 0
  2 detect magic
-10 The detect magic wears off.
-12 Your eyes tingle.
+10 Suas pupilas voltam ao normal.
+12 Você sente suas pupilas se dilatando.
 80 30 
 99 12 + param
 90 0 2 
@@ -182,7 +180,7 @@
  4 100
  1 P 21 1 386 1024 8 0
  2 detect poison
-10 The detect poison wears off.
+10 A detecção de veneno se encerra.
 90 0 16 
 99 (15 - (1 * self.level)) > 5 ? (15 - (1 * self.level)) : 5
 91 1 4 
@@ -201,8 +199,8 @@
  1 P 23 1 1 4224 7 100
  2 earthquake
  3 dice(2, 8) + param
-11 You gesture and the earth begins to shake all around you!
-13 $N gracefully gestures and the earth begins to shake violently!
+11 Você gesticula e a terra toda começa a tremer em a sua volta!
+13 $n faz alguns gestos graciosos e a terra começa a tremer violentamente!
 90 1 18 
 99 (40 - (3 * self.level)) > 25 ? (40 - (3 * self.level)) : 25
 91 4 70 
@@ -210,7 +208,7 @@
  4 100
  1 P 24 1 128 1024 8 0
  2 enchant weapon
-90 0 34 
+90 0 65 
 99 (150 - (10 * self.level)) > 100 ? (150 - (10 * self.level)) : 100
  4 100
  1 P 25 1 18 5121 7 100
@@ -233,7 +231,8 @@
  4 100
  1 P 28 1 2 12 7 0
  2 heal
-12 A warm feeling floods your body.
+12 Uma calorosa sensação percorre o seu corpo.
+
 25 4
 50 100 + dice(3, 8)
 90 1 24 
@@ -243,10 +242,10 @@
  4 100
  1 P 29 1 386 8210 8 0
  2 invisibility
-10 You feel yourself exposed.
-11 $b vanishes.
-12 You vanish.
-13 $N slowly fades out of existence.
+10 Você se sente expost$r.
+11 $n desaparece.
+12 Você desaparece.
+13 $n começa a ficar mais clar$r e acaba por desaparecer.
 80 17 -40
 99 12 + (self.level / 4)
 81 27 
@@ -259,7 +258,7 @@
  3 dice(7, self.class == 0 ? 8 : 6) + 7
 90 0 12 
 99 (30 - (1 * self.level)) > 15 ? (30 - (1 * self.level)) : 15
-91 0 80 
+91 6 80 
 99 (30 - (1 * self.level)) > 15 ? (30 - (1 * self.level)) : 15
  4 100
  1 P 31 1 512 1024 8 0
@@ -484,6 +483,16 @@
 90 0 22 
 99 (40 - (2 * self.level)) > 20 ? (40 - (2 * self.level)) : 20
  4 100
+ 1 P 66 1 68 1024 8 0
+ 2 portal
+90 0 90 
+99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
+ 4 100
+ 1 P 88 1 1152 1024 8 0
+ 2 create nectar
+90 4 7 
+99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
+ 4 100
  1 P 92 1 1 2048 8 0
  2 darkness
 11 You cast a shroud of darkness upon the area.
@@ -575,31 +584,55 @@
  4 100
  1 K 231 1 0 0 0 0
  2 swords
-90 3 3
+90 3 3 
 99 
  4 100
-1 K 232 1 0 0 0 0
+ 1 K 232 1 0 0 0 0
  2 daggers
-90 2 25
+90 3 3 
 99 
-90 3 3
+91 2 25 
 99 
-90 5 4
+92 5 4 
+99 
+93 6 0 
 99 
  4 100
  1 K 233 1 0 0 0 0
  2 whips
-90 3 8
+90 3 8 
+99 
+ 4 100
+ 1 K 234 1 0 0 0 0
+ 2 talonous arms
+90 3 13 
+99 
+ 4 100
+ 1 K 235 1 0 0 0 0
+ 2 bludgeons
+90 3 15 
+99 
+ 4 100
+ 1 K 236 1 0 0 0 0
+ 2 exotics
+90 3 20 
+99 
+91 6 10 
 99 
  4 100
  1 K 239 1 0 0 0 0
  2 backflip
-90 2 29
+90 2 24 
 99 
  4 100
-  1 K 240 1 0 0 0 0
+ 1 K 240 1 0 0 0 0
  2 bandage
 90 3 7 
+99 
+ 4 100
+ 1 K 242 1 0 0 0 0
+ 2 nighthammer
+90 2 50 
 99 
  4 100
  1 K 243 1 0 0 0 0
@@ -615,6 +648,16 @@
 94 5 56 
 99 
  4 100
+ 1 K 245 1 0 0 0 0
+ 2 combo attack
+90 3 30 
+99 
+ 4 100
+ 1 K 249 1 0 0 0 0
+ 2 trip
+90 5 35 
+99 
+ 4 100
  1 K 250 1 0 0 0 0
  2 whirlwind
 90 3 16 
@@ -623,6 +666,8 @@
  1 K 251 1 0 0 0 0
  2 scan
 90 6 10 
+99 
+91 2 7 
 99 
  4 100
  7

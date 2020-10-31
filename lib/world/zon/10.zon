@@ -1,7 +1,9 @@
 #10
 Vitalia~
 Vila de Midgaard~
-1000 1099 15 2 k 0 0 0 -1 -1
+1000 1099 15 2 j 0 0 0 -1 -1
+R 0 1000 3035 -1 	(a grande fonte)
+O 0 3035 1 1000 	(a grande fonte)
 D 0 1050 3 1 	(A Casa 1 da Rua do Luar de Prata)
 D 0 1002 1 1 	(A Rua do Luar de Prata)
 D 0 1051 1 1 	(A Casa 2 da Rua do Luar de Prata)
@@ -102,7 +104,5 @@ D 0 1078 3 1 	(A Casa 9 da Rua da Luz)
 D 0 1044 1 1 	(A Rua da Luz)
 D 0 1079 1 1 	(A Casa 10 da Rua da Luz)
 D 0 1044 3 1 	(A Rua da Luz)
-R 0 1000 3035 -1 	(a grande fonte)
-O 0 3035 1 1000 	(a grande fonte)
 S
 $

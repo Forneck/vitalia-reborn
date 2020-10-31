@@ -7,7 +7,7 @@ leva, geralmente, em direção ao leste e para o alto em direção a um solo
 rochoso.  Existe um sinal aqui, aparentemente fora do lugar, neste
 turbulento território.
 ~
-33 cg 5
+33 68 0 0 0 5
 D1
 ~
 ~
@@ -40,7 +40,7 @@ em direção a um pequeno vale onde se encontra uma pequena casa antecedida de
 um jardim bem cuidado.  A porta para a casa está aberta e atraente,
 convidando você para uma visita.
 ~
-33 c 5
+33 4 0 0 0 5
 D1
 Há uma estranha construção ali.
 ~
@@ -64,7 +64,7 @@ atraente, mas seu interior parece muito escuro.  Um caminho rodeado por
 arbustos leva direto para o edifício e termina onde você está parado: bem no
 mais fácil caminho de volta para cima das montanhas.
 ~
-33 0 5
+33 0 0 0 0 5
 D1
 ~
 ~
@@ -82,12 +82,11 @@ demais.  Uma pequena voz dentro da sua cabeça, a mesma voz que salvou sua
 vida em incontáveis ocasiões, parece estar lhe dizendo que alguma coisa está
 muito, muito errada por aqui.
 ~
-33 0 2
+33 0 0 0 0 2
 D1
 Esta é uma porta da frente normal para uma casa.
 ~
 porta frente~
-:n 2 a porta
 1 -1 3304
 D3
 ~
@@ -103,7 +102,7 @@ uma grande desordem, e a cama do ferreiro ainda arde, mas sem fogo.  Este
 lugar foi completamente destruído por mais de um homem, você presume pelos
 vários rastros que existem na poeira...
 ~
-33 d 0
+33 8 0 0 0 0
 D1
 Este é um buraco normal na parede levando para fora no jardim.
 ~
@@ -113,8 +112,12 @@ D3
 Esta é a porta da frente.
 ~
 porta frente~
-:n 2 a porta
 1 -1 3303
+E
+rastros poeira~
+As posições dos três vestígios levam para fora onde a porta dos fundos
+costumava estar.
+~
 E
 cama~
 Ha!  Sortudo!  Você sempre tem sorte!  Embaixo do travesseiro existe uma
@@ -125,11 +128,6 @@ que vieram antes, descartadas como 'Não exatamente o que eu estava
 trabalhando'.  Olhando ao redor, você repara uma visível falta de espadas.
 Você pensa que você teria um motivo agora...
 ~
-E
-rastros poeira~
-As posições dos três vestígios levam para fora onde a porta dos fundos
-costumava estar.
-~
 S
 #3305
 O Pequeno Jardim~
@@ -139,7 +137,7 @@ manuseio de uma bola de fogo.  Não há nada mais aqui além das marcas de
 destruição e cinzas, e ainda permanece os restos de uma trilha levando para
 a margem leste deste pequeno vale.
 ~
-33 0 2
+33 0 0 0 0 2
 D1
 ~
 ~
@@ -160,7 +158,7 @@ avista uma pequena cabana assentada no centro do vale, e o cume continua
 para o sul.  Olhando para os desvios que levam para um penhasco ao norte e
 oeste, você prefere não tomar aquelas direções.
 ~
-33 0 5
+33 0 0 0 0 5
 D2
 ~
 ~
@@ -183,7 +181,7 @@ privilegiada visão panorâmica para o sul, incluindo o que parece ser uma
 pequena vila de montanha para o sul e oeste, e um alto e imponente pico em
 direção ao oeste daqui.
 ~
-33 0 5
+33 0 0 0 0 5
 D0
 ~
 ~
@@ -206,7 +204,7 @@ diferentes áreas das montanhas.
    Um gigante e escuro pico olha para você do oeste, parecendo, realmente,
 muito fantasmagórico!
 ~
-33 0 5
+33 0 0 0 0 5
 D0
 ~
 ~
@@ -237,7 +235,7 @@ existir sinais de tráfego nesta área, levando para dentro de uma enorme
 depressão.  A aparência desta ladeira é muito perigosa, e você decide
 exercitar um pouco sua precaução.
 ~
-33 0 4
+33 0 0 0 0 4
 D0
 ~
 ~
@@ -264,7 +262,7 @@ rochas maciça ao norte.  Você pode escalar pela ladeira ao leste, ou
 continuar pela área plana para o oeste.  Outra ladeira leva mais embaixo
 pelo sul, parecendo perigosa mas escalável.
 ~
-33 0 4
+33 0 0 0 0 4
 D1
 ~
 ~
@@ -287,7 +285,7 @@ oeste daqui.  Você é preenchido pela bela visão das regiões mais baixas
 desta depressão, e você avista o que deve ser uma caverna ao sul e para
 baixo daqui...
 ~
-33 0 4
+33 0 0 0 0 4
 D1
 ~
 ~
@@ -305,7 +303,7 @@ também parece consideravelmente mais seguro que as outras opções.  O xisto
 sob os seus pés escorrega muito e você quase perde o equilíbrio; este não é
 um lugar para se ficar sem um equipamento de montanhismo.
 ~
-33 0 5
+33 0 0 0 0 5
 D0
 ~
 ~
@@ -324,7 +322,7 @@ sombrio.  Você tem uma péssima impressão daquela montanha por alguma razão,
 e por isso, não parece uma boa idéia tentar achar uma maneira de chegar até
 ela.
 ~
-33 0 4
+33 0 0 0 0 4
 D0
 ~
 ~
@@ -341,7 +339,7 @@ desesperadamente manter o equilíbrio.  Você pode escalar em direção a um
 pequeno planalto para o norte daqui, ou, cuidadosamente, ir para baixo, para
 a base da depressão ao oeste.  Você não está certo de qual é mais seguro...
 ~
-33 0 5
+33 0 0 0 0 5
 D0
 ~
 ~
@@ -359,7 +357,7 @@ causa do tráfego intenso.  Olhando para cima, você nota paredes rochosas
 cercando uma grande parte da depressão, fazendo deste lugar uma efetiva
 fortaleza.
 ~
-33 0 4
+33 0 0 0 0 4
 D1
 ~
 ~
@@ -376,7 +374,7 @@ parece ser uma grande caverna oca que surge de dentro da montanha.  O lugar
 todo parece silencioso, muito silencioso aliás.  Sua pequena intuição de
 aventureiro está insistentemente avisando a você sobre armadilhas.
 ~
-33 0 4
+33 0 0 0 0 4
 D0
 ~
 ~
@@ -394,7 +392,7 @@ pequeno poço de fogo.  Escombros esculhambam a área; esqueletos de coelhos,
 uma pedra de amolar parcialmente quebrada e um poço de água marcado por
 muitos pares de botas.  Estranho alguém viver tão fundo nas montanhas...
 ~
-33 c 0
+33 4 0 0 0 0
 D1
 ~
 ~
@@ -413,7 +411,7 @@ passagem vai norte e sul daqui, cada rota parecendo mais escura e abafada do
 que lá fora.  Pelas pegadas no chão você presume que a rota norte é a mais
 usada.
 ~
-33 d 0
+33 8 0 0 0 0
 D0
 ~
 ~
@@ -435,7 +433,7 @@ A luz das tochas mantém a área clara o suficiente para você ver, mas não
 clara o suficiente para você sentir-se confortável neste lugar estranho.
 Distante ao longe, você ouve os ecos do que parecem ser vozes.
 ~
-33 d 0
+33 8 0 0 0 0
 D1
 ~
 ~
@@ -452,7 +450,7 @@ você escuta inequívocos sons de vozes baixas.  Os ecos parecem estar fazendo
 divertidos efeitos em você, contudo, e você não está certo da distância da
 origem dessas vozes.
 ~
-33 d 0
+33 8 0 0 0 0
 D1
 ~
 ~
@@ -469,7 +467,7 @@ apagada, fazendo esta área extremamente escura e difícil de ver.  Você
 avista luzes vindas do sul.  Contudo, estas luzes parecem ser mais claras
 que as luzes proferidas pelas tochas que você viu ao longo das paredes.
 ~
-33 d 0
+33 8 0 0 0 0
 D2
 ~
 ~
@@ -487,7 +485,7 @@ bem iluminada.  Em direção ao leste, a passagem continua dentro de uma
 sombria alcova da montanha.  Os ecos de vozes estão confundindo você um
 pouco, e você não tem certeza se você deveria tentar ficar quieto ou não.
 ~
-33 d 0
+33 8 0 0 0 0
 D0
 ~
 ~
@@ -508,7 +506,7 @@ prateleiras de armas e baús de armaduras.  Tudo está arrumado, ordenado e,
 de fato, livre de poeira.  Alguém cuida muito destes itens...  Com
 freqüência, pelo que parece.
 ~
-33 d 0
+33 8 0 0 0 0
 D1
 ~
 ~
@@ -521,7 +519,7 @@ pelo chão da caverna, dificultando o caminhar na escassa luz oriunda das
 poucas tochas nas paredes.  Você ouve continuamente o eco de vozes,
 parecendo mais tênues agora.  Deve ser a estranha acústica deste lugar...
 ~
-33 d 0
+33 8 0 0 0 0
 D2
 ~
 ~
@@ -537,7 +535,7 @@ Uma Passagem na Caverna~
 norte daqui.  Você começa a se perguntar se suas orientações ainda estão
 corretas.  Isto o deixa preocupado por alguma razão.
 ~
-33 d 0
+33 8 0 0 0 0
 D0
 ~
 ~
@@ -556,7 +554,7 @@ parecem vir da passagem ao norte.  Você sente frio com o ar congelado da
 caverna e arrepia-se um pouco com o fraco sussuro da brisa.  Este lugar é um
 tanto assustador e escuro para se sentir confortável.
 ~
-33 d 0
+33 8 0 0 0 0
 D0
 ~
 ~
@@ -574,7 +572,7 @@ passagem.  Você depara-se com uma pequena peça de roupa vermelha rasgada
 sobre uma rocha pontuda projetada do lado da pasagem.  Esta peça parece ser
 de seda, muito fina de fato.
 ~
-33 d 0
+33 8 0 0 0 0
 D0
 ~
 ~
@@ -592,7 +590,7 @@ sujeira e musgos.  Um papel que serviu para envolver comida está jogado
 entre vários pares de pés aqui: na melhor das hipóteses, você diria que aqui
 seria, provavelmente, um posto de guarda.
 ~
-33 d 0
+33 8 0 0 0 0
 D2
 ~
 ~
@@ -611,12 +609,11 @@ onde parece ser mais iluminado do que aqui.  Um eco do fundo da passagem faz
 você refletir por um momento se não estaria sendo perseguido, mas você não
 vê nada para lá.
 ~
-33 d 0
+33 8 0 0 0 0
 D0
 Esta é uma sólida porta de madeira.
 ~
 porta madeira~
-:n 2 a porta
 1 -1 3330
 D1
 ~
@@ -632,12 +629,11 @@ paredes e uma escrivaninha de carvalho batido encontra-se perto da porta,
 cheia de papéis escritos por uma mão trêmula.  Algumas grandes lanternas
 mantém o lugar muito bem iluminado.
 ~
-33 d 0
+33 8 0 0 0 0
 D2
 Esta é um sólida porta de madeira.
 ~
 porta madeira~
-:n 2 a porta
 1 -1 3329
 S
 #3331
@@ -648,7 +644,7 @@ alinhadas na parede a cada 4 metros ou mais.  De algum lugar do fundo da
 caverna, você escuta o som de uma fraca batida rítmica, distorcida pela
 estranha acústica da passagem.
 ~
-33 d 0
+33 8 0 0 0 0
 D0
 ~
 ~
@@ -666,7 +662,7 @@ até você, fazendo este lugar parecer, de alguma forma, vivo, com uma batida
 de coração.  Este lugar torna-se muito arrepiante, agora que você percebeu
 isso tudo.
 ~
-33 d 0
+33 8 0 0 0 0
 D0
 ~
 ~
@@ -683,7 +679,7 @@ em direção ao outro lado do "U".  O ar é úmido e difícil de respirar.
 Alguns musgos crescem perto do chão nos lugares lisos, gerando um sutil e
 definido cheiro de podridão no ar.
 ~
-33 d 0
+33 8 0 0 0 0
 D0
 ~
 ~
@@ -699,7 +695,7 @@ Uma Passagem na Caverna~
 parecendo melancólico e morto.  O som de uma fraca batida repercute das
 paredes, fazendo você apontar suas orelhas em direção do barulho.
 ~
-33 d 0
+33 8 0 0 0 0
 D1
 ~
 ~
@@ -717,7 +713,7 @@ completamente escuro, em direto contraste com o túnel para o oeste.  Você
 observa atentamente para o sul, mas não pode avistar nada na impenetrável
 escuridão.  E ainda aquela distante batida pesa em sua consciência...
 ~
-33 d 0
+33 8 0 0 0 0
 D2
 ~
 ~
@@ -735,7 +731,7 @@ paredes, banindo a profunda escuridão em que você se encontrava.  O som de
 uma batida profunda parece estar ficando mais alto, vindo de algum lugar
 adiante.
 ~
-33 ad 0
+33 9 0 0 0 0
 D0
 ~
 ~
@@ -752,7 +748,7 @@ montanha, conduzindo ao norte e leste daqui.  Quando você percorre o canto,
 um truque da acústica faz a profunda batida que você vinha ouvindo, parecer
 como se estivesse vindo de algo a um metro de distância!!  Muito instigante.
 ~
-33 ad 0
+33 9 0 0 0 0
 D0
 ~
 ~
@@ -769,7 +765,7 @@ escuridão ao seu redor é total.  À frente, você ouve os sons de algum metal
 sendo batido contra uma pedra.  Poderia alguém estar escavando o túnel,
 talvez?
 ~
-33 ad 0
+33 9 0 0 0 0
 D0
 ~
 ~
@@ -787,7 +783,7 @@ leva para dentro de uma completa escuridão.  Por toda a parte no chão
 existem pilhas de terra e pedras, fazendo você dirigir-se pelo túnel
 cuidadosamente.  Hmm.
 ~
-33 ad 0
+33 9 0 0 0 0
 D1
 ~
 ~
@@ -804,7 +800,7 @@ existem no chão rochas e cascalhos, vindos da fissura na tentativa de
 faze-la larga o suficiente para se passar.  Umas pequenas peças de papel de
 cobertura contam a você que o trabalho aqui é relativamente recente.
 ~
-33 d 0
+33 8 0 0 0 0
 D3
 ~
 ~
@@ -820,7 +816,7 @@ ainda desabitado.
    Agora, se você pode ir para baixo da ladeira somente quebrando um
 tornozelo...
 ~
-33 0 5
+33 0 0 0 0 5
 D1
 ~
 ~
@@ -838,7 +834,7 @@ movimento na vila, dando provas de que o lugar não é uma cidade-fantasma.
    A rua principal da vila começa na base da ladeira, logo para o leste, e a
 ladeira continua ao oeste e para cima para longe, longe acima na motanha.
 ~
-33 c 5
+33 4 0 0 0 5
 D1
 ~
 ~
@@ -858,7 +854,7 @@ abertas feitas de madeira e pedra estão para o norte e sul.  A rua continua
 em direção ao leste.
    Existe um pequeno sinal aqui.
 ~
-33 0 1
+33 0 0 0 0 1
 D0
 ~
 ~
@@ -901,7 +897,7 @@ As paredes foram decoradas com cabeças de animais emolduradas e flechas e
 arcos longos e outros equipamentos/troféus de caça.  Tudo pareceria melhor
 se o bar fosse mais modesto.
 ~
-33 d 0
+33 8 0 0 0 0
 D2
 ~
 ~
@@ -912,7 +908,7 @@ A Loja Comum~
    Um aborrecido lojista acena com sua mão desocupada para seu estoque de
 coisas.  Folheie, escreva uma lista, compre, venda, não importa...
 ~
-33 d 0
+33 8 0 0 0 0
 D0
 ~
 ~
@@ -924,7 +920,7 @@ Rua Principal~
 atual interseção e para o oeste você avista uma das extremidades desta rua.
 Uma larga área gramada para sul é cercada, servindo de curral para cavalos.
 ~
-33 0 1
+33 0 0 0 0 1
 D1
 ~
 ~
@@ -946,7 +942,7 @@ parecer estarem muito felizes por serem mantidos aqui.  Você não avista
 ninguém ao redor cuidando destes cavalos, mas alguém, provavelmente, está
 por perto.
 ~
-33 d 0
+33 8 0 0 0 0
 D0
 ~
 ~
@@ -959,7 +955,7 @@ Montanhas.  De fato, esta é a ÚNICA interseção da cidade, ao que parece.
    Existem alguns prédios para o norte, sul, leste e oeste.  Nenhum,
 particularmente, destaca-se dos outros.
 ~
-33 0 1
+33 0 0 0 0 1
 D0
 ~
 ~
@@ -985,7 +981,7 @@ oeste existe um pequeno prédio a céu aberto que parece ser uma feira de
 agricultores.  A estrada em que você está continua para o norte e chega a
 uma interseção logo ao sul daqui.
 ~
-33 0 1
+33 0 0 0 0 1
 D0
 ~
 ~
@@ -1005,7 +1001,7 @@ A Feira de Agricultores~
 comida que a família dela plantou.  Ela parece aborrecida, mas não
 infeliz...  Sem competição!
 ~
-33 0 1
+33 0 0 0 0 1
 D1
 ~
 ~
@@ -1018,13 +1014,12 @@ Montanhas acaba aqui, tornando-se um acesso de entrada para uma casa
 particular para o leste.  A rua vai para o sul desta casa em direção ao
 centro da vila.
 ~
-33 0 1
+33 0 0 0 0 1
 D1
 Uma porta da frente de casa de madeira normal. Não existe nada
 para se escrever casa sobre.
 ~
 porta frente~
-:n 2 a porta
 1 -1 3352
 D2
 ~
@@ -1039,12 +1034,11 @@ cadeira de rocha feita em casa encontra-se curvada no canto, decorada com
 uma velha aparência afeganesa.  Esta casa é um lugar bonito e muito
 aconchegante.
 ~
-33 d 0
+33 8 0 0 0 0
 D3
 Existe uma porta aparentemente normal colocada na parede oeste.
 ~
 porta frente~
-:n 2 a porta
 1 -1 3351
 S
 #3353
@@ -1054,7 +1048,7 @@ para o sul.  A Fumaça levanta da chaminé em uma corrente negra e as janelas
 estão cobertas pela humidade.  Ao norte você avista a interseção principal
 da cidade de Stanneg.
 ~
-33 0 1
+33 0 0 0 0 1
 D0
 ~
 ~
@@ -1063,7 +1057,6 @@ D2
 Uma aparente porta normal da frente feita de madeira serve de entrada.
 ~
 porta frente~
-:n 2 a porta
 1 -1 3354
 S
 #3354
@@ -1073,12 +1066,11 @@ parecendo uma fogueira e uma imensa pilha de madeira encontra-se ao lado
 dela contra a parede.  A decoração parece algo espartano e modesto: uma
 pintura, um velho arco longo...  Nada de muito interessante.
 ~
-33 d 0
+33 8 0 0 0 0
 D0
 Você avista uma porta de madeira aparentemente normal.
 ~
 porta frente~
-:n 2 a porta
 1 -1 3353
 S
 #3355
@@ -1090,12 +1082,11 @@ oeste você vê a interseção da rua no centro da pequena vila.  Ao redor você
 observa um terreno rochoso no meio desta cadeia de montanhas...  Não existem
 muitos lugares para se ir.
 ~
-33 0 1
+33 0 0 0 0 1
 D0
 Existe uma grande porta dupla feita de madeira bloqueando o caminho.
 ~
 porta portas dupla~
-:n 2 a porta
 1 -1 3356
 D3
 ~
@@ -1111,12 +1102,11 @@ para os quartos lá de cima.  Um velho e surrado tapete felpudo encontra-se
 no meio do chão, evidentemente, adorado por um gato ou dois, pela quantidade
 de pelos presentes nele.
 ~
-33 d 0
+33 8 0 0 0 0
 D2
 Existe uma grande porta dupla feita de madeira colocada na parede.
 ~
 porta portas dupla~
-:n 2 a porta
 1 -1 3355
 D3
 ~
@@ -1134,7 +1124,7 @@ combater o frio proveniente das janelas dos lados oeste e norte desta peça.
 Alguns poucos bancos e mesas estão agrupados no centro da sala, para uso
 local.  Muito simples para um lugar de reuniões muito frequentado.
 ~
-33 d 0
+33 8 0 0 0 0
 D1
 ~
 ~
@@ -1148,7 +1138,7 @@ salão é simples e sem qualquer decoração, exceto pelo bonito quadro de uma
 montanha situada sobre as escadas que levam de volta para baixo,
 convenientemente em direção da hospedaria.
 ~
-33 d 0
+33 8 0 0 0 0
 D5
 ~
 ~
@@ -1163,7 +1153,7 @@ para cima e para baixo da montanha.  Alto acima de você, para seu oeste,
 está aquele grande, pico negro, que parece irradiar uma sensação de
 desesperança...
 ~
-33 0 5
+33 0 0 0 0 5
 D1
 ~
 ~
@@ -1183,7 +1173,7 @@ espirais.  Acima, o caminho parece levar em direção daquele pico negro
 furando o céu.  Você nota algumas marcas de botas na terra, parecendo levar
 para baixo em direção da cabana.
 ~
-33 0 4
+33 0 0 0 0 4
 D1
 ~
 ~
@@ -1205,7 +1195,7 @@ Alguma coisa colocou fogo neste lugar, maldosamente.  Você nota sinais de
 vida entre os destroços.  Você pode entrar por entre um dos vários buracos
 gigantes na parede para oeste, com cautela.
 ~
-33 0 4
+33 0 0 0 0 4
 D3
 ~
 ~
@@ -1223,7 +1213,7 @@ existe um corpo de um homem queimado, dissecado e cinzento.  Não existe
 muito para ver aqui; o que quer que seja que tenha decidido destruir este
 lugar, o fez muito bem.
 ~
-33 0 1
+33 0 0 0 0 1
 D1
 ~
 ~
@@ -1236,7 +1226,7 @@ Bem acima de você, o pico da montanha parece radiar perigo e medo, e a
 trilha parece levar até lá.  Você hesita se deve continuar por este caminho...
    A trilha segue para oeste, e para baixo.
 ~
-33 0 5
+33 0 0 0 0 5
 D3
 ~
 ~
@@ -1253,7 +1243,7 @@ no momento que o frio ar da montanha recai sobre você, e você sente picadas
 ao pensar que alguém poderia viver por aqui ou algo perigoso por esse
 motivo.  Talvez voltar para o leste seria uma boa idéia...
 ~
-33 0 5
+33 0 0 0 0 5
 D1
 ~
 ~
@@ -1269,7 +1259,7 @@ Uma Trilha da Montanha~
 aquela que espeta o céu escuro como um monumento para morte e futilidade.  A
 trilha leva de volta para a segurança ao leste e vai mais alto para o oeste.
 ~
-33 0 5
+33 0 0 0 0 5
 D1
 ~
 ~
@@ -1287,7 +1277,7 @@ norte.  Alto, ao lado da montanha você vê uma grande caverna oca e o seu
 interior muito escuro.  O caminho que leva para baixo das montanhas fica
 para o leste, o qual lhe parece o melhor lugar para se ir.
 ~
-33 gj 5
+33 576 0 0 0 5
 D0
 ~
 ~
@@ -1307,7 +1297,7 @@ Um Pequeno e Perigoso Caminho~
 aparentemente maligna.  Ele também leva para baixo ao sul -- um lugar muito
 mais seguro para se estar.  De fato, você ouve passos sobre a sua cabeça...
 ~
-33 gj 5
+33 576 0 0 0 5
 D2
 ~
 ~
@@ -1324,7 +1314,7 @@ leva para o norte para uma caverna escura seria um bom lugar para uma
 emboscada.  Este desfiladeiro lhe dá uma bela visão panorâmica da cadeia de
 montanhas inteira.  Entretanto, lhe faz perder o fôlego!!
 ~
-33 gj 5
+33 576 0 0 0 5
 D0
 ~
 ~
@@ -1343,7 +1333,7 @@ chão, levando para dentro da profunda caverna.
    Dois túneis levam para fora daqui: um para cima e outro para baixo.
 Existem marcas de garras para ambas as direções.
 ~
-33 adgj 4
+33 585 0 0 0 4
 D2
 ~
 ~
@@ -1364,7 +1354,7 @@ brisa um tanto forte atinge sua roupa vinda de algum lugar à frente.  As
 marcas de garras no chão de pedras continuam ao longo da passagem, em
 direção à escuridão.
 ~
-33 adgj 0
+33 585 0 0 0 0
 D0
 ~
 ~
@@ -1381,7 +1371,7 @@ forte.  As pistas de garras na pedra desaparecem bruscamente aqui, onde
 parecem existir muita terra desenterrada e pedras ao redor, empilhadas no
 chão.  Você se sente inquieto neste lugar.
 ~
-33 adgj 4
+33 585 0 0 0 4
 D0
 ~
 ~
@@ -1391,8 +1381,9 @@ D2
 ~
 0 -1 3370
 E
-sujeira pedras~
-Elas foram desenterradas de algum lugar, mas onde?
+chao~
+O chão à frente parece... estranho. Você pensa que ir em frente
+seria uma má idéia.
 ~
 E
 garra garras pista pistas marca marcas~
@@ -1400,9 +1391,8 @@ Elas terminam muito bruscamente aqui, bem onde as pilhas de terra começam,
 ao que parece.
 ~
 E
-chao~
-O chão à frente parece... estranho. Você pensa que ir em frente
-seria uma má idéia.
+sujeira pedras~
+Elas foram desenterradas de algum lugar, mas onde?
 ~
 S
 #3372
@@ -1421,7 +1411,7 @@ desajeitado.
 
 
 ~
-33 bdgj 0
+33 586 0 0 0 0
 D2
 ~
 ~
@@ -1434,7 +1424,7 @@ ar lhe parece carregado e inconfortavelmente aquecido, apesar da proximidade
 da entrada da caverna sobre você.  Existe um profundo odor no ar e as
 gigantes marcas de garras continuam para baixo.
 ~
-33 adgj 4
+33 585 0 0 0 4
 D4
 ~
 ~
@@ -1453,7 +1443,7 @@ intenso agora, sobrepondo-se sobre qualquer coisa no ar e fazendo o ar
 difícil de respirar.  Alguma coisa em seu intestino começa a se retorcer
 desconfortavelmente ao pensar o que lhe espera à frente...
 ~
-33 adgj 4
+33 585 0 0 0 4
 D0
 ~
 ~
@@ -1473,10 +1463,10 @@ outros confortos de uma vida humana.  Existe até mesmo uma gigantesca cama
 do tamanho de um dragão -- sem dúvida conjurado à vida pelo ancião e
 possuidor do dragão.
 ~
-33 dgj 4
+33 584 0 0 0 4
 D2
 ~
 ~
 0 -1 3374
 S
-$
+$~

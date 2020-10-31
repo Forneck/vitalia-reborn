@@ -1,7 +1,8 @@
 #17
 Vitalia~
 Ancalador e A Guilda de Necromantes~
-1700 1799 23 2 k 0 0 0 -1 -1
+1700 1799 23 2 j 0 0 0 -1 -1
+M 0 1707 1 1700 	(o eremita)
 M 0 1700 4 1727 	(o zumbi pútrido)
 M 0 1700 4 1751 	(o zumbi pútrido)
 M 0 1700 4 1751 	(o zumbi pútrido)
@@ -30,7 +31,6 @@ E 1 1700 50 16 	(uma cimitarra)
 M 0 1706 1 1754 	(o Guardião da Cripta)
 E 1 1711 2 16 	(a Clava do Morto-Vivo Fred)
 E 1 1708 1 17 	(a Pedra de Sangue)
-M 0 1707 1 1700 	(o eremita)
 M 0 1708 2 1703 	(a lama verde)
 M 0 1708 2 1703 	(a lama verde)
 M 0 1709 2 1708 	(o habitante da chama)
@@ -93,16 +93,16 @@ P 1 1721 5 1714 	(uma adaga enferrujada)
 P 1 1724 9 1714 	(uma tocha verde)
 P 1 1725 5 1714 	(um elmo de prata)
 P 1 1726 5 1714 	(uma quase decomposta jaqueta de couro)
-D 0 1726 1 2 	(O Fim do Estom�go)
+D 0 1726 1 2 	(O Fim do Estomâgo)
 D 0 1756 3 2 	(Um Corredor de Pedra)
-D 0 1727 0 1 	(O P�ncreas do Drag�o)
+D 0 1727 0 1 	(O Pâncreas do Dragão)
 D 0 1756 2 1 	(Um Corredor de Pedra)
 D 0 1752 3 1 	(A Sala da Guilda)
-D 0 1753 1 1 	(O Altar da Aniquila��o)
+D 0 1753 1 1 	(O Altar da Aniquilação)
 D 0 1747 1 1 	(O Anfiteatro Macabro)
-D 0 1746 3 1 	(As C�maras Privadas)
-D 0 1753 5 2 	(O Altar da Aniquila��o)
-D 0 1754 4 2 	(O Po�o Escuro)
-D 0 1757 4 1 	(Al�m da Lareira)
+D 0 1746 3 1 	(As Câmaras Privadas)
+D 0 1753 5 2 	(O Altar da Aniquilação)
+D 0 1754 4 2 	(O Poço Escuro)
+D 0 1757 4 1 	(Além da Lareira)
 S
 $

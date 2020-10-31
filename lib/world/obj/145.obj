@@ -244,15 +244,15 @@ Um pequenino anel de ouro foi esquecido aqui.~
 0 0 0 0
 3 8000 800 20 0
 E
-inscricoes superficie~
-                                    @Y****
-                                    @Y*@g-@Y*YwSB@Y*@g-@Y*
-                                    @Y****
-~
-E
 ouro anel brandebuques~
 Você observa um maravilhoso anel de ouro com algumas inscrições em sua
 superfície.
+~
+E
+inscricoes superficie~
+                                    	Y****
+                                    	Y*	g-	Y*YwSB	Y*	g-	Y*
+                                    	Y****
 ~
 A
 18 1
@@ -286,16 +286,16 @@ Um antigo cinturão de metal foi deixado aqui.~
 0 0 0 0
 8 6500 650 5 0
 E
-superficie desenhos~
-@W+()+()+()+()+()+()+()+()+()+@w#####@W+()+()+()+()+()+()+()+()+()+
-@y. . . . . . . . . . . . . . @w#####@y . . . . . . . . . . . . . .
-@y . . . . . . . . . . . . . .@w#####@y. . . . . . . . . . . . . .  
-@W+()+()+()+()+()+()+()+()+()+@w#####@W+()+()+()+()+()+()+()+()+()+
-~
-E
 cinturao metal~
 Você observa um antigo cinturão feito de metal e com alguns desenhos em sua
 superfície.
+~
+E
+superficie desenhos~
+	W+()+()+()+()+()+()+()+()+()+	w#####	W+()+()+()+()+()+()+()+()+()+
+	y. . . . . . . . . . . . . . 	w#####	y . . . . . . . . . . . . . .
+	y . . . . . . . . . . . . . .	w#####	y. . . . . . . . . . . . . .  
+	W+()+()+()+()+()+()+()+()+()+	w#####	W+()+()+()+()+()+()+()+()+()+
 ~
 A
 5 1
@@ -552,13 +552,13 @@ Um pequeno livro de capa vermelha foi esquecido aqui.~
 0 0 0 0
 2 500 50 1 0
 E
-inscrições estranhas~
-@RVocê não entende nada!!!
-~
-E
 pequeno livro vermelho~
 Você observa um pequeno livro de capa vermelha com algumas inscrições
 estranhas.
+~
+E
+inscrições estranhas~
+	RVocê não entende nada!!!
 ~
 A
 4 1
@@ -590,18 +590,18 @@ Uma pequenina caixa de madeira foi deixada aqui.~
 0 0 0 0
 4 500 50 1 0
 E
-inscrição~
-@gVV   VV  AAAA  LL     LL     EEEEEE 
-@gVV   VV AA  AA LL     LL     EE
-@g VV VV  AAAAAA LL     LL     EEEE 
-@g  V V   AA  AA LLLLLL LLLLLL EE
-@g   V    AA  AA LLLLLL LLLLLL EEEEEE
-~
-E
 caixa estojo musical madeira~
 Você observa um belo estojo musical de madeira com vários pequeninos
 instrumentos de fabricação perfeita e tons encantadores.  Na tampa do estojo
 você observa uma pequena inscrição em alto relevo.
+~
+E
+inscrição~
+	gVV   VV  AAAA  LL     LL     EEEEEE 
+	gVV   VV AA  AA LL     LL     EE
+	g VV VV  AAAAAA LL     LL     EEEE 
+	g  V V   AA  AA LLLLLL LLLLLL EE
+	g   V    AA  AA LLLLLL LLLLLL EEEEEE
 ~
 A
 5 1
@@ -616,20 +616,20 @@ Uma pequena bolsa de couro foi esquecida aqui.~
 25 1 -1 0
 4 5300 530 1 0
 E
-inscrições superfície~
-                 @Y-@R=@Y> @wF@Wredegar @wB@Wolger @Y<@R=@Y-
-~
-E
 bolsa couro~
 Você observa uma pequena bolsa de couro feita pelos pequeninos hobbits do
 Condado.  Você percebe algumas pequenas inscrições na superfície da bolsa.
+~
+E
+inscrições superfície~
+                 	Y-	R=	Y> 	wF	Wredegar 	wB	Wolger 	Y<	R=	Y-
 ~
 #14538
 buque flores~
 um buquê de flores~
 Um belo buquê de flores foi deixado aqui.~
 ~
-12 0 0 0 0 ao 0 0 0 0 0 0 0
+28 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 3 200 20 1 0
 E

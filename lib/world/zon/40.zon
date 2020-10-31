@@ -1,7 +1,7 @@
 #40
 Vitalia~
 Moria~
-4000 4199 20 2 k 0 0 0 -1 -1
+4000 4199 20 2 j 0 0 0 -1 -1
 M 0 4000 1 4030 	(a serpente)
 G 1 4001 1 -1 	(um corpo de goblin)
 P 1 4002 1 4001 	(algumas moedas)
@@ -67,7 +67,7 @@ G 1 4101 1 -1 	(Um par de luvas de espadachim)
 M 0 4107 1 4119 	(o kobold)
 G 1 4104 10 -1 	(Um limo verde e mofado)
 D 0 4119 3 1 	(A Caverna)
-D 0 4121 1 1 	(O T�nel Secreto)
+D 0 4121 1 1 	(O Túnel Secreto)
 M 0 4057 2 4038 	(o leão da montanha)
 M 0 4057 2 4041 	(o leão da montanha)
 M 0 4058 1 4044 	(o gigante da colina)

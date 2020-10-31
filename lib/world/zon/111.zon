@@ -1,7 +1,7 @@
 #111
 Vitalia~
 O Reino das Pedras~
-11100 11199 180 0 bck 0 0 0 -1 -1
+11100 11199 180 0 bc 0 0 0 -1 -1
 M 0 11101 1 11176 	(o GuardiÃ£o de Pedra)
 G 1 11105 1 -1 	(uma chave antiga e suja)
 M 0 11101 1 11182 	(o GuardiÃ£o de Pedra)
@@ -36,11 +36,11 @@ O 0 9322 5 11187 	(um monolito de pedra)
 O 0 6402 25 11190 	(uma Ã¡gata)
 O 0 11100 10 11198 	(uma pedra)
 O 0 8146 20 11199 	(uma pedra egÃ­pcia)
-R 0 11139 11103 -1 	(um antigo baú)
-O 0 11103 1 11139 	(um antigo baú)
+R 0 11139 11103 -1 	(um antigo baÃº)
+O 0 11103 1 11139 	(um antigo baÃº)
 P 1 11106 1 11103 	(um papel muito velho)
-R 0 11198 11104 -1 	(um antigo baú)
-O 0 11104 1 11198 	(um antigo baú)
+R 0 11198 11104 -1 	(um antigo baÃº)
+O 0 11104 1 11198 	(um antigo baÃº)
 P 1 11102 1 11104 	(uma chave antiga e suja)
 D 0 11176 3 2 	(Dentro do Portão Oeste de Midgaard)
 D 0 11198 1 2 	(O Calabouço de Pedra)

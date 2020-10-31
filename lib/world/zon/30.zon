@@ -1,7 +1,9 @@
 #30
 Vitalia~
 Norte da Cidade de Midgaard~
-3000 3099 15 2
+3000 3099 15 2 j 0 0 0 -1 -1
+R 0 3000 3099 -1 	(um quadro de mensagens)
+O 0 3099 13 3000 	(um quadro de mensagens)
 M 0 3032 1 3090 	(a garçonete)
 G 1 3003 100 -1 	(uma garrafa)
 G 1 3004 100 -1 	(um frasco)
@@ -138,8 +140,6 @@ R 0 3021 3034 -1 	(um caixa automático)
 O 0 3034 100 3021 	(um caixa automático)
 R 0 3027 3034 -1 	(um caixa automático)
 O 0 3034 100 3027 	(um caixa automático)
-R 0 3000 3099 -1 	(um quadro de mensagens)
-O 0 3099 13 3000 	(um quadro de mensagens)
 R 0 3003 3096 -1 	(um quadro de mensagens sociais)
 O 0 3096 13 3003 	(um quadro de mensagens sociais)
 R 0 3018 3096 -1 	(um quadro de mensagens sociais)
@@ -156,7 +156,7 @@ R 0 3087 3096 -1 	(um quadro de mensagens sociais)
 O 0 3096 13 3087 	(um quadro de mensagens sociais)
 R 0 3081 3199 -1 	(um quadro de recados)
 O 0 3199 10 3081 	(um quadro de recados)
-D 0 3082 0 1 	(Em Frente � Taverna)
+D 0 3082 0 1 	(Em Frente à Taverna)
 D 0 3083 2 1 	(A Baderna)
 D 0 3083 1 0 	(A Baderna)
 D 0 3083 3 0 	(A Baderna)

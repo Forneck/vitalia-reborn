@@ -1,29 +1,30 @@
 Name: Anyte
 Pass: AnRCfBykX0mXk
-Titl: a Iniciada no Terceiro Círculo
+Titl: a Iniciada no Quinto C�rculo
 Sex : 2
 Clas: 4
-Levl: 22
+Levl: 32
 Id  : 6
 Brth: 1603323580
-Plyd: 27710
-Last: 1603997581
+Plyd: 48012
+Last: 1604102280
 Lmot: 1603324480
-Lnew: 1603323627
+Lnew: 1604011239
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: -298
+Alin: -240
 Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
-Room: 5518
-Lern: 9
-Thir: 21
-Hit : 236/257
-Mana : 237/237
-Move: 63/126
+Room: 3001
+Lern: 29
+Hung: 20
+Thir: 17
+Hit : 129/342
+Mana : 574/603
+Move: 94/146
 Str : 17/0
 Int : 9
 Wis : 11
@@ -31,8 +32,8 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 162352
-Exp : 3536320
+Gold: 329922
+Exp : 7564173
 Olc : 0
 Skil:
 7 100
@@ -42,10 +43,43 @@ Skil:
 231 80
 243 25
 0 0
-Alis: 2
- 1
- say
-0
+Alis: 13
+ redfern
+         s;s;w;w;w;s;s;s;s;s;s;e;e;e;n;w;s;s;s;w;s;u;u;u;u;u
+1
+ pocao_volta
+     s;s;s;w;w;w;w;n;n;n;n;n;e
+1
+ pocao_ida
+       sw;s;s;s;s;e;e;e;e;n;n;n
+1
+ elfos
+           s;s;w;w;w;s;s;s;s;s;s;e;e;n;n;e;e;e;ne;e;se;e
+1
+ otavia
+          n;n;n;n;n;n;w;w;w;w;w;n;e;n;w;w;w;nw;nw;n;n;n;w;w;nw;w;nw;nw
+1
+ duwick
+          s;s;e;e;e;e;e;e;n;n;e;e;d;e;e;e;e;s;s;s;w;s;w;s;e;e;n;e;e;s;e;s;e;n;n;w;n
+1
+ cailvehpath
+     s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;w;n;n;n;n;n;w;w;w;nw;w;n;open por sw
+1
+ drows
+           s;s;s;s;e;e;s;s;e;e;e;e;n;d;n;d
+1
+ labirinto:
+      s;s;w;w;w;s;s;s;s;s;s;w;s;s;s;s;s;s;w;w;s;s;s;w;w;w;w;n
+1
+ newthalos
+       s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open grad;e;e;e;u
+1
  bash
  bash $*;st
 0
+ 1
+ say
+0
+ say
+ say @g$*@n
+1

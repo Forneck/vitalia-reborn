@@ -4,8 +4,8 @@ O Grande Portão de Thalos~
 foram arrombados e encontram-se enferrujados.  Uma súbita rajada de vento
 passa por você, adentrando a deserta e aparentemente destruída cidade.
 ~
-52 0 1
-D1 
+52 0 0 0 0 1
+D1
 As areias do deserto espalham-se por milhas e milhas.
 ~
 ~
@@ -25,7 +25,7 @@ estão estéreis e varridas pelo vento, aonde o silêncio parece ser eterno.
 Ao sul pode ser vista uma casa arruinada enquanto o norte leva a uma pequena
 rua escura.  Uivos e gritos ecoam através da cidade deserta.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 Parece ser um beco escuro.
 ~
@@ -56,7 +56,7 @@ grande mansão arruinada.  Sons sinistros ecoam através da mansão.  Perto do
 centro da cidade você vê um grande prédio com uma abóbada, relativamente
 intacto.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 Os restos de uma loja encontram-se nesta direção.
 ~
@@ -83,7 +83,7 @@ Um Caminho Pelos Jardins~
 flores murcharam e árvores outrora viçosas agora estão desnudas.  Videiras e
 heras arrastam-se pelos lados do templo e enroscam-se em seus pés.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 Um caminho pelos jardins continua ao redor do prédio.
 ~
@@ -112,7 +112,7 @@ Um Caminho Pelos Jardins~
 flores murcharam e árvores outrora viçosas agora estão desnudas.  Videiras e
 heras arrastam-se pelos lados do templo e enroscam-se em seus pés.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 Uma rua lateral leva à parte norte da cidade.
 ~
@@ -141,7 +141,7 @@ Um Caminho Pelos Jardins~
 flores murcharam e árvores outrora viçosas agora estão desnudas.  Videiras e
 heras arrastam-se pelos lados do templo e enroscam-se em seus pés.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 Um caminho pelos jardins continua ao redor do prédio.
 ~
@@ -170,7 +170,7 @@ Um Caminho Pelos Jardins~
 flores murcharam e árvores outrora viçosas agora estão desnudas.  Videiras e
 heras arrastam-se pelos lados do templo e enroscam-se em seus pés.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 Dentro do templo, pequenos fachos de luz passam através das entradas bem 
 como através de pequenos buracos no teto.
@@ -200,7 +200,7 @@ carroças e balcões de todas as formas e tamanhos. Abandonadas, estas pequenas
 lojas ainda contêm alguns de seus produtos outrora vendidos a um público
 consumidor.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 Uma pequena mesa encontra-se caída, espalhando finas jóias e gemas pelo chão.
 ~
@@ -228,7 +228,7 @@ O Mercado~
    Você encontra-se no final da praça. Balcões e carroças estão lado a lado,
 cheios com restos de finas iguarias e exóticas especiarias.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 Tapetes desgastados e pilhas destruídas de seda amontoam-se displicentemente
 sobre uma prateleira jogada ao chão.
@@ -251,7 +251,7 @@ Uma Rua Lateral~
    Esta pequena rua lateral leva de leste a oeste para becos enquanto para o
 sul você vê o templo.  O uivar incessante atormenta a sua mente.
 ~
-52 0 1
+52 0 0 0 0 1
 D1
 ~
 ~
@@ -273,7 +273,7 @@ pilhas de destroços, porém alguns parecem quase seguros para se arriscar a
 entrar.
    A rua continua a norte e sul e há construções ao lado da rua.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 ~
 ~
@@ -299,7 +299,7 @@ Uma Rua Lateral~
 estão grandes pilhas de destroços aonde eram as casas dos cidadãos. Um uivo
 solitário faz você se preocupar bastante com a sua segurança aqui.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 ~
 ~
@@ -327,7 +327,7 @@ comercial da cidade.  A destruição que alcançou esta cidade não foi
 despropositada; estes prédios de importante aparência foram quase totalmente
 destruídos. Há um buraco na parede de uma grande estrutura ao leste.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 Um pequeno caminho de jardins circunda o templo.
 ~
@@ -355,7 +355,7 @@ Uma Rua Lateral~
 prédios.  Ao oeste há um estrutura escura e ameaçadora enquanto ao leste
 há a entrada de uma pequena taverna.  A rua continua para o norte e o sul.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 ~
 ~
@@ -383,7 +383,7 @@ Uma Rua Lateral~
 Uma longa ruela escura leva ao leste e ao oeste. Há, a sul, uma
 via totalmente calçada.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 ~
 ~
@@ -392,21 +392,21 @@ D1
 ~
 ~
 0 -1 5229
-D3
-~
-~
-0 -1 5218
 D2
 ~
 ~
 0 -1 7500
+D3
+~
+~
+0 -1 5218
 S
 #5215
 Sob uma Torre de Guarda Arruinada~
    Você encontra-se na base de uma alta torre construída para proteger a
 cidade de invasores.  Mas pelo jeito, não serviu de muita coisa.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 ~
 ~
@@ -425,7 +425,7 @@ Uma Ruela~
    Esta ruela leva aos fundos do que aparenta ser um açougue.  Você se
 incomoda com o fedor.  Ao sul há uma das torres de guarda da cidade.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 Você vê a lateral do açougue do mercado.
 ~
@@ -444,7 +444,7 @@ madeira ao fundo.  Pendurados pelos ganchos há pequenos pedaços de carne e
 outras coisas.  Este balcão está relativamente vazio, e uma súbita irrupção
 de uivos e gritos fazem você compreender o porquê.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 O mercado fica deste lado.
 ~
@@ -465,7 +465,7 @@ Uma Ruela~
    Uma estreita ruela leva a leste para uma rua mais larga e para oeste para
 uma das torres de guarda da cidade.
 ~
-52 0 1
+52 0 0 0 0 1
 D1
 Uma pequena rua lateral surge convidativa.
 ~
@@ -485,7 +485,7 @@ uma grande batalha tivesse sido travada aqui.  Jogada ao lado da parede ao
 fundo está uma bandeira negra em farrapos, com o símbolo das Trevas sobre
 ela.
 ~
-52 d 1
+52 8 0 0 0 1
 D1
 Uma pequena rua lateral surge além deste prédio.
 ~
@@ -498,7 +498,7 @@ O Balcão de Produtos~
 vegetais.  Moscas infestam tudo o que parece ser o último resquício de
 alimentos deixados na cidade.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 O mercado está abandonado.
 ~
@@ -516,7 +516,7 @@ A Forja~
 e ítens.  As paredes foram "limpas" e poucas partes incompletas de armas e
 armaduras foram deixadas.
 ~
-52 d 1
+52 8 0 0 0 1
 D1
 Uma pequena rua lateral encontra-se além deste prédio.
 ~
@@ -531,7 +531,7 @@ Você prende seu olhar nestas estranhas pilhas por um longo tempo até que
 um uivo penetrante atraí sua atenção, fazendo você concluir finalmente que
 tratam-se de camas.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 ~
 ~
@@ -552,7 +552,7 @@ Uma Ruela~
    Uma estreita ruela leva ao norte para uma das torres de guarda, enquanto
 ao sul há um balcão repleto de roupas rasgadas e tapetes.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 Uma alta torre de guarda mantém uma silenciosa vigília sobre a cidade.
 ~
@@ -568,7 +568,7 @@ Abaixo da Torre de Guarda~
    Você encontra-se abaixo de uma das torres de guarda, construídas para
 proteger a cidade de invasores.  Obviamente, ela falhou.
 ~
-52 0 1
+52 0 0 0 0 1
 D1
 ~
 ~
@@ -589,7 +589,7 @@ O Balcão de Joalherias~
 local.  A maioria destas peças encontra-se deformada e sem brilho, e poucas
 ainda podem ter algum valor.
 ~
-52 0 1
+52 0 0 0 0 1
 D2
 O mercado encontra-se abandonado.
 ~
@@ -607,7 +607,7 @@ Uma Casa de Barro Arruinada~
 cadeiras e uma cama.  Uma fria lareira sugere que a cidade foi abandonada
 por um certo período.  Quase nada resta desta humilde casa.
 ~
-52 d 1
+52 8 0 0 0 1
 D1
 Lá fora há uma pequena rua lateral.
 ~
@@ -620,7 +620,7 @@ Uma Casa de Barro Arruinada~
 aqui e ali.  Poucas pilastras ainda encontram-se erguidas com palhas secas
 penduradas e um vento quente sopra através da casa.
 ~
-52 0 1
+52 0 0 0 0 1
 D1
 Uma pequena rua lateral passa além da casa.
 ~
@@ -632,7 +632,7 @@ Uma Ruela~
    Uma estreita ruela leva ao oeste para uma das torres de guarda e leste para 
 uma pequena rua lateral.
 ~
-52 0 1
+52 0 0 0 0 1
 D1
 ~
 ~
@@ -649,7 +649,7 @@ mas no interior deste local arruinado você descobre o que seria uma loja
 cheia de armaduras, armas e vários outros bens.  Um pequeno sinal balança ao
 vento.
 ~
-52 d 1
+52 8 0 0 0 1
 D3
 Uma pequena rua lateral passa além da loja.
 ~
@@ -665,7 +665,7 @@ pessoais encontram-se jogados sob os destroços, mas as pessoas as quais
 estes objetos pertenciam não estão com eles.  Olhando acima você observa que
 o segundo andar inteiro e teto desmoronaram, deixando um largo buraco acima.
 ~
-52 0 1
+52 0 0 0 0 1
 D3
 Uma pequena rua lateral passa além da taverna.
 ~
@@ -680,7 +680,7 @@ dos objetos de valor foram roubados, sobrando apenas destroços.  Algumas
 poucas cadeiras sobraram bem como uma larga escrivaninha.  Ao leste
 encontra-se um arco coberto por vinhas o qual leva a um saguão particular.
 ~
-52 d 1
+52 8 0 0 0 1
 D0
 O longo corredor conduz de volta à principal área de recepção da prefeitura.
 ~
@@ -699,7 +699,7 @@ de parede a parede.  Um grande buraco feito na parede oeste permite você ver
 uma das ruas laterais.  Obviamente, ninguém também estará lhe observando
 hoje.  Os corredores levam ao sul e ao leste.
 ~
-52 d 1
+52 8 0 0 0 1
 D0
 A rua principal passa além da prefeitura.
 ~
@@ -729,7 +729,7 @@ permanece intacta é um pequeno armário de vidro.  Um longo corredor leva de
 volta ao oeste para a área de recepção e um arco coberto por heras leva ao
 sul para um saguão privado.
 ~
-52 d 1
+52 8 0 0 0 1
 D2
 ~
 ~
@@ -749,7 +749,7 @@ resistindo a qualquer tentativa de destruir sua beleza.  Acima encontra-se
 os resquícios de uma das torres de guarda.  Arcos levam ao norte e oeste de
 volta para a prefeitura.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 ~
 ~
@@ -765,7 +765,7 @@ Uma Pequena Casa de Guarda~
 vazio, esta pequena casa ainda se mantém guardando ambas as entradas para a
 cidade e para a prefeitura.
 ~
-52 d 1
+52 8 0 0 0 1
 D0
 A rua principal passa além deste prédio.
 ~
@@ -778,7 +778,7 @@ Uma Casa Arruinada~
 uma enorme cratera.  Obviamente alguém ou algo importante habitava esta casa.
 Um uivo apavorante faz o seu sangue gelar.
 ~
-52 0 1
+52 0 0 0 0 1
 D2
 A rua principal passa além desta casa arruinada.
 ~
@@ -794,7 +794,7 @@ através de outra parede derrubada.  Entre os dois prédios encontram-se algumas
 crateras e escombros. Uma velha escadaria de madeira leva acima para o segundo
 andar cujo piso parece ranger.
 ~
-52 d 1
+52 8 0 0 0 1
 D1
 ~
 ~
@@ -820,7 +820,7 @@ sacos espalhando seu conteúdo por todo o chão.  Esta era possivelmente a
 loja de mágica desta cidade.  A entrada para leste está bloqueada, fazendo
 com que a única saída esteja, de volta, ao oeste.
 ~
-52 d 1
+52 8 0 0 0 1
 D3
 ~
 ~
@@ -831,7 +831,7 @@ Uma Ruela~
    Uma estreita ruela leva ao sul para a rua principal e norte em direção à
 torre de guarda.  Vários uivos chegam a surpreendê-lo.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 ~
 ~
@@ -848,7 +848,7 @@ Uma Ruela~
 enquanto ao sul conduz à rua principal.  Ao oeste encontra-se uma entrada para
 uma pequena casa bloqueada por destroços.
 ~
-52 0 1
+52 0 0 0 0 1
 D0
 Uma alta torre de guarda mantém uma silenciosa vigília sobre a cidade.
 ~
@@ -865,7 +865,7 @@ Sob uma Torre de Guarda~
 oeste e ao sul e uma escada de frágil aparência leva acima, para a torre.
 Logo acima, você ouve os gritos de dezenas de lâmias famintas.  Cuidado!
 ~
-52 0 1
+52 0 0 0 0 1
 D2
 ~
 ~
@@ -890,7 +890,7 @@ aqui muito mais justificada).  Uma observação mais aproximada revela um
 cadáver boiando ao lado, com a pele já derretida após meses de permanência
 neste local.  A parede oeste está derrubada, revelando outra casa arruinada.
 ~
-52 d 1
+52 8 0 0 0 1
 D0
 ~
 ~
@@ -907,7 +907,7 @@ Uma Ruela~
 uma das torres de guarda da cidade.  Grandes nuvens de vapor partem do prédio
 ao sul.
 ~
-52 0 1
+52 0 0 0 0 1
 D1
 Uma alta torre de guarda mantém uma silenciosa vigília sobre a cidade.
 ~
@@ -929,7 +929,7 @@ Uma Casa~
 exceção de um grande buraco na parede leste, tudo parece intacto, inclusive
 as janelas.  Grandes nuvens de vapor partem do buraco na parede leste.
 ~
-52 d 1
+52 8 0 0 0 1
 D1
 ~
 ~
@@ -946,7 +946,7 @@ No Segundo Andar~
 velhas tábuas apodrecidas do piso se rompem subitamente e você cai,
 empalando-se nas estacas de madeira logo abaixo.
 ~
-52 bd 1
+52 10 0 0 0 1
 S
 #5246
 A Torre de Guarda ao Noroeste~
@@ -954,7 +954,7 @@ A Torre de Guarda ao Noroeste~
 você pode ver todo o caminho em direção as montanhas ao oeste.  Não é surpresa
 que este local tenha se mantido por tanto tempo.
 ~
-52 0 1
+52 0 0 0 0 1
 D5
 A cidade encontra-se logo abaixo.
 ~
@@ -968,7 +968,7 @@ e você pode ver todo o caminho para as montanhas ao oeste.  Ao sul o deserto
 avança ao horizonte.  Não é surpresa que este local tenha se mantido por
 tanto tempo.
 ~
-52 0 1
+52 0 0 0 0 1
 D5
 A cidade encontra-se logo abaixo.
 ~
@@ -982,7 +982,7 @@ o deserto avança ao horizonte.  Não é surpresa que este local tenha se
 mantido por tanto tempo.  A escada que leva abaixo parece estar apodrecida em
 algumas partes.
 ~
-52 c 1
+52 4 0 0 0 1
 D5
 A cidade encontra-se abaixo... lá, lá embaixo.
 ~
@@ -994,7 +994,7 @@ Sob uma Torre de Guarda~
    Enquanto você desce a escada, os degraus apodrecidos quebram, lançando-o
 rapidamente para baixo, em direção à rua da cidade.  Splat!
 ~
-52 bd 1
+52 10 0 0 0 1
 S
 #5250
 O Templo de Thalos~
@@ -1008,7 +1008,7 @@ pelo local, mostrando a você uma mensagem sagrada em uma língua desconhecida.
    O vento sopra através dos quatro arcos do templo, e uivos e gritos podem
 ser ouvidos de todas as partes da cidade.
 ~
-52 cd 1
+52 12 0 0 0 1
 D0
 Uma rua lateral leva à parte norte da cidade.
 ~
@@ -1030,4 +1030,4 @@ O mercado fica nesta direção.
 ~
 0 -1 5205
 S
-$
+$~

@@ -8,7 +8,7 @@ Paris".  Daqui, você pode continuar nesta rua indo para o leste.  Se for
 para o sul, chegará até a cidade de Lyon ou entrar nos Champs Elyseés ao
 norte.
 ~
-43 c 1
+43 4 0 0 0 1
 D0
 ~
 ~
@@ -33,7 +33,7 @@ toda a sua extensão.  Se você prestasse mais atenção, notaria que todas as
 ruas são iguais.  Isto está começando a ficar enfadonho.  Você pode 
 continuar nesta rua por a leste ou retornar para o oeste.
 ~
-43 0 1
+43 0 0 0 0 1
 D1
 ~
 ~
@@ -52,7 +52,7 @@ comum, pois possui inúmeros detalhes, deduzindo então que ele deve
 pertencer a uma grande e importante catedral de Paris.  Daqui você só pode
 ir para o leste ou oeste.
 ~
-43 0 1
+43 0 0 0 0 1
 D1
 ~
 ~
@@ -70,7 +70,7 @@ olhar mais perto, irá notar os lindos ornamentos da porta, na qual estão
 representadas as figuras dos quatros evangelistas.  Você pode entrar na 
 catedral ao sul, ou pode continuar indo pelo leste ou oeste.
 ~
-43 0 1
+43 0 0 0 0 1
 D1
 ~
 ~
@@ -78,8 +78,7 @@ D1
 D2
 ~
 porta~
-:n 2 a porta
-a -1 4305
+1 -1 4305
 D3
 ~
 ~
@@ -92,7 +91,7 @@ uma enorme parede que bloqueia o seu caminho.  Olhando para cima você nota
 que há outro imenso campanário, o que só pode significar uma de coisa: você 
 ultrapassou a entrada da catedral.
 ~
-43 0 1
+43 0 0 0 0 1
 D3
 ~
 ~
@@ -107,12 +106,11 @@ chão é todo coberto por pedras de mármore.  No momento em que você se vira
 percebe que, em cada um dos lados da porta, existe uma linda coluna em 
 estilo dórico, com frisos e entalhes.
 ~
-43 df 0
+43 40 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 4303
+1 -1 4303
 D1
 ~
 ~
@@ -134,7 +132,7 @@ puro.  O chão é todo revestido por um raro e, com certeza, caríssimo
 mármore branco, lhe dando a vontade de ser um sacerdote para poder morar 
 em um lugar tão belo assim.
 ~
-43 df 0
+43 40 0 0 0 0
 D1
 ~
 ~
@@ -148,7 +146,7 @@ figura de Cristo e também alguns dos apóstolos.  No teto encontram-se
 muitos anjos feitos em ouro, entre os quais, os arcanjos Rafael, Miguel e 
 Gabriel.
 ~
-43 df 0
+43 40 0 0 0 0
 D3
 ~
 ~
@@ -162,7 +160,7 @@ pessoas podem se sentar e ouvir atentamente o sermão que o cardeal faz. Ao
 leste, encontra-se a capela e para o oeste você consegue enxergar um 
 quarto, com uma passagem para o segundo andar.
 ~
-43 df 0
+43 40 0 0 0 0
 D0
 ~
 ~
@@ -187,7 +185,7 @@ madeira apor todo o seu redor, nos quais há pessoas sentadas, sussurrando
 umas para as outras.  A leste, você vê um pequeno quarto que o conduz para 
 a capela.
 ~
-43 df 0
+43 40 0 0 0 0
 D1
 ~
 ~
@@ -208,12 +206,11 @@ no qual as pessoas se sentam, enquanto esperam pela vinda do padre.  Você
 pode abrir a porta e a leste, e entrar na capela, ou voltar para o 
 corredor.
 ~
-43 adf 0
+43 41 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 4311
+1 -1 4311
 D3
 ~
 ~
@@ -226,12 +223,11 @@ confissão daqueles que precisam.  Este quarto é muito escuro pois a única
 luz existente vem de uma vela, e não existe janela alguma por aqui.  A 
 única saída é a oeste, passando pela porta.
 ~
-43 adef 0
+43 57 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-a -1 4310
+1 -1 4310
 S
 #4312
 O Corredor Ocidental~
@@ -241,7 +237,7 @@ chegada do cardeal.  Nas laterais encontram-se enormes janelas com lindos
 vitrais, nas quais cenas bíblicas são representadas.  Há uma velha porta a 
 oeste.
 ~
-43 df 0
+43 40 0 0 0 0
 D1
 ~
 ~
@@ -253,8 +249,7 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-a -1 4313
+1 -1 4313
 S
 #4313
 Um Quarto Pequeno~
@@ -263,7 +258,7 @@ muito sujo, como se ninguém entrasse aqui há muito tempo.  Para o norte, há
 outro quarto com uma pequena escada que o conduz ao segundo andar da 
 catedral.
 ~
-43 adf 0
+43 41 0 0 0 0
 D0
 ~
 ~
@@ -271,8 +266,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 4312
+1 -1 4312
 S
 #4314
 Os Degraus para o Campanário~
@@ -281,7 +275,7 @@ na parede.  Logo a sua frente, há uma uma velha escada feita de madeira.
 Cuidado, ela parece ser muito velha e não muito segura... suba por sua 
 conta e risco.
 ~
-43 adf 0
+43 41 0 0 0 0
 D2
 ~
 ~
@@ -298,7 +292,7 @@ de madeira, e ao oeste, em um dos vitrais das janelas, está representada
 uma passagem muito especial da Bíblia: "O nascimento de Cristo", com 
 alguns pastores, vacas e ovelhas.
 ~
-43 df 0
+43 40 0 0 0 0
 D0
 ~
 ~
@@ -321,7 +315,7 @@ teto , que é feito de pedra cinzenta, assim como quase toda a catedral.  No
 teto encontram-se algumas vigas expostas, que parecem também terem sido 
 feitas de pedra.
 ~
-43 defh 0
+43 184 0 0 0 0
 D0
 ~
 ~
@@ -346,7 +340,7 @@ de madeira e ao leste há uma janela com vitrais que mostram as passagens
 da Bíblia.  Em uma delas há representado a "Última Ceia", na qual estão 
 localizadas as figuras de Cristo e os doze apóstolos.
 ~
-43 df 0
+43 40 0 0 0 0
 D0
 ~
 ~
@@ -367,7 +361,7 @@ ver muitos bancos de madeira, e no vidro sujo da janela, você vê
 representado a crucificação de Cristo.  No corredor há um aviso que 
 diz: "Não se esqueça de dar o dízimo ".
 ~
-43 df 0
+43 40 0 0 0 0
 D0
 ~
 ~
@@ -390,7 +384,7 @@ lugares onde ficam a classe média, e a alta sociedade da França.  Fazendo
 uma rápida comparação, você percebe que até mesmo os bancos parecem ser 
 mais confortáveis.
 ~
-43 defh 0
+43 184 0 0 0 0
 D0
 ~
 ~
@@ -415,7 +409,7 @@ janela, encontra-se a representação da cena em que Cristo foi para o templo
 e falou com os sacerdotes.  Ao leste você pode ver muitos bancos de 
 madeira.
 ~
-43 df 0
+43 40 0 0 0 0
 D0
 ~
 ~
@@ -435,7 +429,7 @@ O Corredor Ocidental~
 de madeira e alguns franceses de uma privilegiada classe social.  No vidro 
 manchado da janela, há a representação da cena em que João batiza Cristo.
 ~
-43 df 0
+43 40 0 0 0 0
 D0
 ~
 ~
@@ -453,7 +447,7 @@ são da alta sociedade da França, vestindo roupas elegantes e sofisticadas,
 e possuindo modos refinados.  A sua frente encontra-se o grande altar de 
 Notre Dame.
 ~
-43 defh 0
+43 184 0 0 0 0
 D0
 ~
 ~
@@ -478,7 +472,7 @@ No empoeirado vidro da janela, há retratado a cena da ressurreição de
 Cristo, seguido por muitos anjos e arcanjos.  Se você ainda tem dúvidas... 
 sim...  ainda existe MUITOS bancos.
 ~
-43 df 0
+43 40 0 0 0 0
 D0
 ~
 ~
@@ -496,7 +490,7 @@ de Paris faz a comunhão.  Na parede atrás do altar, há uma imensa
 representação de Cristo crucificado, e em cada um dos lados, encontram-se 
 as estátuas, em tamanho natural, de Maria e José.
 ~
-43 defh 0
+43 184 0 0 0 0
 D0
 ~
 ~
@@ -511,7 +505,7 @@ com uma radiante formosura.  O seu desejo era poder ficar aqui para poder
 ter esta vista durante a noite, mas você sabe que deve continuar seu 
 caminho.  Você pode abrir o alçapão, e seguir até o campanário.
 ~
-43 dfh 0
+43 168 0 0 0 0
 D1
 ~
 ~
@@ -519,8 +513,7 @@ D1
 D4
 ~
 alçapão~
-:n 1
-a -1 4326
+1 -1 4326
 D5
 ~
 ~
@@ -534,12 +527,11 @@ imaginar a condição dos pássaros e morcegos que aqui vivem.  Pode-se sentir
 o ar frio que está vindo do leste, e seus olhos mal acreditam em toda a 
 beleza desta cidade tão explendorosa.
 ~
-43 df 0
+43 40 0 0 0 0
 D5
 ~
 alcapao~
-:n 1
-a -1 4325
+1 -1 4325
 S
 #4327
 Um Corredor~
@@ -547,7 +539,7 @@ Um Corredor~
 e seguem para sul.  Aqui não há nenhuma parede, porém existem muitas 
 colunas dóricas, feitas de pedra, que sustentam o pesado teto.
 ~
-43 df 0
+43 40 0 0 0 0
 D1
 ~
 ~
@@ -568,7 +560,7 @@ ver as inúmeras colunas dóricas, e seus entalhes de pedra.  Ao leste há um
 pequeno quarto, talvez você devesse dar uma olhada nisso... quem sabe você 
 não encontra alguma coisa interessante por ali.
 ~
-43 df 0
+43 40 0 0 0 0
 D1
 ~
 ~
@@ -591,7 +583,7 @@ Aqui pode-se sentir um vento frio vindo da janela de arco que está a sua
 esquerda.  Você reconhece algumas das figuras, sendo uma o cardeal, e a 
 outra a figura de uma mulher que você viu na floresta.
 ~
-43 dfgh 0
+43 232 0 0 0 0
 D3
 ~
 ~
@@ -604,7 +596,7 @@ colunas decoradas de estilo dórico.  Aqui não existem paredes, permitindo
 assim que o ar corra livremente, vindo do leste do corredor.  Você está 
 começando a desejar ter trazido o seu suéter.
 ~
-43 df 0
+43 40 0 0 0 0
 D0
 ~
 ~
@@ -626,7 +618,7 @@ fato desse forte vento frio, que circula vindo do leste para oeste. O
 chão aqui já não é mais coberto pelo mármore branco, mas sim pelo mesmo 
 material das colunas, feitas de pedra cinzenta.
 ~
-43 df 0
+43 40 0 0 0 0
 D0
 ~
 ~
@@ -648,7 +640,7 @@ norte, há uma  rua onde muitas carruagens estão passando, supoestamente uma
 estação para carruagens.  Você pode passar para o outro corredor, que fica 
 a leste, ou ir para oeste e entrar no que parece ser um quarto.
 ~
-43 df 0
+43 40 0 0 0 0
 D0
 ~
 ~
@@ -670,7 +662,7 @@ você vê que alguém esqueceu de colocar uma escada para descer...portanto
 NÃO VÁ PARA BAIXO OU VOCÊ MORRERÁ CERTAMENTE.  Você pode voltar para o 
 norte, leste ou oeste...mas nunca para baixo.
 ~
-43 df 0
+43 40 0 0 0 0
 D0
 ~
 ~
@@ -696,7 +688,7 @@ de que um desses gárgulas pudessem adquirir vida o apavora até a morte.
 Lá embaixo você consegue ver uma cidade, mas não é Paris, pois o modo das 
 pessoas se vestirem é bem diferente.
 ~
-43 dghf 0
+43 232 0 0 0 0
 D3
 ~
 ~
@@ -709,7 +701,7 @@ ruído do seu pescoço estalando, antes de sua morte quase imediata.  Que
 pena que você não prestou atenção aos avisos de que ali não existia 
 nenhuma escada... Você está morto o_O 
 ~
-43 fb 0
+43 34 0 0 0 0
 S
 #4336
 O Quarto Ocidental do Segundo Andar~
@@ -719,8 +711,8 @@ demônio alado.  É um gárgula.  Olhando para baixo, você vê que há uma
 bonita cidade, mas você não consegue ter uma visão perfeita pois há uma 
 grande floresta ao sul, que bloqueia uma parte da vista.
 ~
-43 dfgh 0
-D1  
+43 232 0 0 0 0
+D1
 ~
 ~
 0 -1 4332
@@ -732,7 +724,7 @@ para baixo você vê a água cristalina.  O rio Sena está tão tranqüilo e
 limpo que você pode ver sua própria imagem refletida na água.  Há um aviso 
 aqui que você deveria ler.
 ~
-43 c 1
+43 4 0 0 0 1
 D0
 ~
 ~
@@ -755,7 +747,7 @@ pode achar a mais importante loja de magia de toda a França. Aqui há uma
 tabuleta que diz: " Bem-vindo a Lyon, onde os melhores vinhos de mesa 
 são produzidos ".
 ~
-43 0 1
+43 0 0 0 0 1
 D0
 ~
 ~
@@ -774,7 +766,7 @@ de rotina.  Seguindo para oeste, você pode entrar no parque, e para leste
 há uma casa.  Indo para o sul você se adentra pela cidade, mas pode voltar 
 para Paris ao norte.
 ~
-43 0 1
+43 0 0 0 0 1
 D0
 ~
 ~
@@ -800,7 +792,7 @@ feito de palha, possuindo uma mobília de madeira muito rústica.  Você só
 consegue ver uma escrivaninha a direita, e uma cama a esquerda.  A única 
 saída é voltar pelo oeste.
 ~
-43 cdegj 0
+43 604 0 0 0 0
 D3
 ~
 ~
@@ -813,7 +805,7 @@ que brincando despreocupadamente.  Alguns balanços encontram-se pendurados
 nas grandes árvores, e pode-se ver que um cachorro correndo através do 
 parque.  A única saída é voltar para as ruas da cidade, a leste.
 ~
-43 h 3
+43 128 0 0 0 3
 D1
 ~
 ~
@@ -827,7 +819,7 @@ uma pequena loja de mágica, e no alto rua foi estendida uma tosca faixa de
 pano, com os seguintes dizeres: " Nós somos a melhor Loja de Magia de toda 
 a França " .  A oeste há uma pequena loja de miudezas.
 ~
-43 0 1
+43 0 0 0 0 1
 D0
 ~
 ~
@@ -850,7 +842,7 @@ A Loja de Magia de Lyon~
    Você está em uma pequena barraca, feita de pano azul.  Aqui pode-se 
 comprar coisas muito interessantes, como por exemplo poções mágicas.
 ~
-43 e 0
+43 16 0 0 0 0
 D3
 ~
 ~
@@ -863,7 +855,7 @@ de carruagem, onde se pode alugar carruagens para levá-lo a qualquer cidade
 da França. Ao leste e oeste você ainda pode avistar algumas casas de Lyon, 
 e talvez visitá-las antes de deixar a cidade.
 ~
-43 0 1
+43 0 0 0 0 1
 D0
 ~
 ~
@@ -889,7 +881,7 @@ aproximar, olhando as assinaturas dos quadros, você vê em um deles o nome
 documentos na escrivaninha de madeira, e do outro lado há uma janela 
 quebrada, pela qual entram fortes correntes de vento.
 ~
-43 cdhj 0
+43 652 0 0 0 0
 D3
 ~
 ~
@@ -903,13 +895,13 @@ todo feito de palha, e a mobília é feita de madeira rústica.  Pode-se ver
 uma escrivaninha à sua direita e uma cama à esquerda.  A única saída é 
 voltar a leste.
 ~
-43 cdhj 0
+43 652 0 0 0 0
 D1
 ~
 ~
 0 -1 4344
 S
-#4347  
+#4347
 A Estação de Carruagens~
    Você nota uma construção diferente das que você viu até agora na 
 cidade.  Aqui existem muitos bancos, feitos de madeira e pintados de 
@@ -918,7 +910,7 @@ suas carruagens.  Você nota um pequeno aviso que talvez fosse interessante
 de ser lido.  Você pode voltar para o norte, ou entrar em um pequeno e 
 estreito túnel escuro ao leste.
 ~
-43 0 0
+43 0 0 0 0 0
 D0
 ~
 ~
@@ -943,7 +935,7 @@ estivesse pisando sobre algo macio e peludo, e quando olha para baixo, vê
 um feio e gordo rato. Oh céus!!  Em que lugar você foi parar.  Você pode 
 voltar para o oeste, ou pode continuar pelo túnel a leste.
 ~
-43 adf 6
+43 41 0 0 0 6
 D1
 ~
 ~
@@ -961,7 +953,7 @@ como...hmmm... bem, nem você sabe que cheiro é este, mas nem por isso você
 gostaria de ficar aqui.  Cuidado, pois são em lugares como estes que os 
 ladrões costumam se esconder.
 ~
-43 adfh 6
+43 169 0 0 0 6
 D3
 ~
 ~
@@ -975,12 +967,11 @@ pássaros e o som da brisa passando através das copas das árvores.  As
 árvores são tão altas que você não consegue ver o topo delas.
     Ao norte, há um portão dourado onde um pequeno aviso foi afixado.  
 ~
-43 f 3
+43 32 0 0 0 3
 D0
 ~
 portao~
-:n 1
-a -1 4351
+1 -1 4351
 D2
 ~
 ~
@@ -1002,7 +993,7 @@ nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez
 mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
 sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 afgh 0
+43 225 0 0 0 0
 D0
 ~
 ~
@@ -1014,8 +1005,7 @@ D1
 D2
 ~
 portao~
-:n 1
-a -1 4350
+1 -1 4350
 D3
 ~
 ~
@@ -1030,7 +1020,7 @@ nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez
 mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
 sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 afgh 0
+43 225 0 0 0 0
 D0
 ~
 ~
@@ -1057,7 +1047,7 @@ nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez
 mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
 sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 afgh 0
+43 225 0 0 0 0
 D0
 ~
 ~
@@ -1084,7 +1074,7 @@ nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez
 mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
 sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 afgh 0
+43 225 0 0 0 0
 D0
 ~
 ~
@@ -1111,7 +1101,7 @@ nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez
 mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
 sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 afgh 0
+43 225 0 0 0 0
 D0
 ~
 ~
@@ -1138,7 +1128,7 @@ nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez
 mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
 sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 afgh 0
+43 225 0 0 0 0
 D0
 ~
 ~
@@ -1163,7 +1153,7 @@ de ciganos em uma carroça de madeira.  Esta parte dos Champs Elyseés está
 um pouco mais iluminada do que o resto, e a pequena fogueira que os 
 ciganos acenderam, lhe dá uma gostosa sensação de  calor e de proteção.
 ~
-43 fgh 2
+43 224 0 0 0 2
 D2
 ~
 ~
@@ -1171,8 +1161,7 @@ D2
 D5
 ~
 alcapao~
-:n 1
-abg 4355 4396
+0 4355 4396
 S
 #4358
 Champs Elyseés~
@@ -1183,7 +1172,7 @@ nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez
 mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
 sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 afgh 0
+43 225 0 0 0 0
 D0
 ~
 ~
@@ -1210,7 +1199,7 @@ nozes para o inverno.  O tempo está muito frio e úmido, e você cada vez
 mais, deseja ter trazido seu suéter.  Você pode ir para o norte, leste, 
 sul, e oeste ...ou seja: você perdeu totalmente seu senso de direção.
 ~
-43 afcgh 0
+43 229 0 0 0 0
 D0
 ~
 ~
@@ -1234,7 +1223,7 @@ O Centro Histórico de Paris~
 monumento mais importante é a Praça Luís XIV, que é a mais bela praça que 
 você já viu.  Você pode avançar, em direção ao norte.
 ~
-43 g 2
+43 64 0 0 0 2
 D0
 ~
 ~
@@ -1252,7 +1241,7 @@ enfrentando.  O lugar é repleto de árvores frondosas e então você
 pensa... "Em Paris, onde não é cheio de árvores?"  Você pode ver um pequeno 
 aviso.
 ~
-43 0 1
+43 0 0 0 0 1
 D0
 ~
 ~
@@ -1281,7 +1270,7 @@ Praça Luís XIV~
 correndo e se escondendo nas casas que estão perto deste local.  Você se 
 pergunta se foi uma boa idéia vir visitar a França.
 ~
-43 0 1
+43 0 0 0 0 1
 D0
 ~
 ~
@@ -1299,7 +1288,7 @@ no Champs Elyseés, e pensa que talvez este não tenha sido o melhor momento
 para visitar a França, pois este parece ser um momento em que todos 
 parecem estar nervosos com a monarquia.
 ~
-43 0 1
+43 0 0 0 0 1
 D0
 ~
 ~
@@ -1308,10 +1297,6 @@ D1
 ~
 ~
 0 -1 4361
-D3
-~
-~
-0 0 -1
 S
 #4364
 Praça da Concórdia~
@@ -1322,7 +1307,7 @@ observa que o pavimento é feito de granito, e que em algumas partes
 somente existe grama.  Este lugar é iluminado como toda Paris, com grandes 
 postes a vela.
 ~
-43 h 1
+43 128 0 0 0 1
 D0
 ~
 ~
@@ -1342,7 +1327,7 @@ O Centro da Praça~
 Rei.  Neste local, as únicas coisas vivas são dois pombinhos que estão 
 empoleirados no topo da estátua.  Pelo menos eles acharam algum conforto.
 ~
-43 ceh 1
+43 148 0 0 0 1
 D0
 ~
 ~
@@ -1369,7 +1354,7 @@ observa que o pavimento é feito de granito, e que em algumas partes
 somente existe grama.  Este lugar é iluminado como toda Paris, com grandes 
 postes a vela.
 ~
-43 h 1
+43 128 0 0 0 1
 D0
 ~
 ~
@@ -1391,7 +1376,7 @@ reformas.  Desculpe-nos pelo transtorno que isto possa causar a você. "
    A oeste encontra-se a entrada do Quartel General e Escola de 
 Mosqueteiros.
 ~
-43 0 1
+43 0 0 0 0 1
 D1
 ~
 ~
@@ -1412,12 +1397,11 @@ nota que este local não parece ser muito seguro.  Ao norte você vê uma porta
 para o quartel general dos Mosqueteiros.  Se você quiser entrar, basta 
 abri-la.
 ~
-43 0 1
+43 0 0 0 0 1
 D0
 ~
 porta~
-:n 2 a porta
-abg 4368 4370
+0 4368 4370
 D1
 ~
 ~
@@ -1437,7 +1421,7 @@ Praça de Revolução~
 frente há um velho edifício com grandes janelas.  É o quartel general dos 
 Mosqueteiros.  A sua entrada fica ao leste.
 ~
-43 0 1
+43 0 0 0 0 1
 D1
 ~
 ~
@@ -1456,7 +1440,7 @@ feito de pedra.  O chão é a única coisa que o faz lembrar da importância
 deste lugar, pois é feito do mais branco e mais caro mármore.  Ao leste 
 você pode ver um refeitório.
 ~
-43 dc 0
+43 12 0 0 0 0
 D0
 ~
 ~
@@ -1468,8 +1452,7 @@ D1
 D2
 ~
 porta~
-:n 2 a porta
-abg 4368 4368
+0 4368 4368
 S
 #4371
 O Refeitório Francês~
@@ -1478,7 +1461,7 @@ dos Mosqueteiros.  Este local possui várias mesas e cadeiras, nas quais os
 soldados que protegem o Rei podem se sentar para beber um café ou comer 
 algo antes de irem trabalhar.
 ~
-43 d 0
+43 8 0 0 0 0
 D3
 ~
 ~
@@ -1491,7 +1474,7 @@ mármore verde, porém há uma corrente impedindo que você prossiga.  Você
 pode ir ao leste ou oeste, em direção a um corredor dentro do Q.G dos 
 Mosqueteiros, ou você pode voltar para a entrada, ao sul.
 ~
-43 d 0
+43 8 0 0 0 0
 D1
 ~
 ~
@@ -1513,7 +1496,7 @@ na França.  A passagem segue para o norte, onde você pode encontrar os
 quartos dos Mosqueteiros, ou o calabouço.  O pátio ao leste está fechado, 
 e não há como entrar, mas você ainda pode ir para o oeste ou para o norte. 
 ~
-43 d 0
+43 8 0 0 0 0
 D0
 ~
 ~
@@ -1531,7 +1514,7 @@ significa que não existem muitas janelas aqui, parecendo mais com uma
 fortaleza.  Este local não é muito saudável para se viver, pois é 
 absolutamente frio e úmido por dentro.
 ~
-43 d 0
+43 8 0 0 0 0
 D0
 ~
 ~
@@ -1546,7 +1529,7 @@ A Intersecção Oriental~
    Você está na interseção oriental, entre a passagem e um corredor.  Você 
 pode ir para oeste, leste ou voltar para sul.
 ~
-43 ad 0
+43 9 0 0 0 0
 D1
 ~
 ~
@@ -1566,7 +1549,7 @@ O Corredor Oriental~
 Este local pode ter sido uma fortaleza durante a idade das trevas.  Você 
 voltar, ou continuar seguindo para o leste.
 ~
-43 ad 0
+43 9 0 0 0 0
 D1
 ~
 ~
@@ -1584,7 +1567,7 @@ trabalho.  Do lado direito deste quarto, há uma grande janela em arco de
 onde pode-se ver toda a cidade.  As paredes são cinzas como as pedras que 
 encobrem o teto.
 ~
-43 d 0
+43 8 0 0 0 0
 D0
 ~
 ~
@@ -1602,12 +1585,11 @@ cadeiras e uma grande mesa de madeira, com alguns papéis sobre.  Todo o
 chão do quarto está coberto por um bonito tapete vermelho, e as paredes 
 estão enfeitadas com bonitos quadros pintados a óleo.  
 ~
-43 d 0
+43 8 0 0 0 0
 D1
 ~
 parede~
-:n 2 a parede
-ab 4392 4399
+1 4392 4399
 D2
 ~
 ~
@@ -1621,12 +1603,11 @@ calabouço, onde estão encarcerados muitos ladrões e revolutionários.  A
 leste e oeste, você pode ver algumas interseções para alguns corredores ou 
 passagens.
 ~
-43 d 0
+43 8 0 0 0 0
 D0
 ~
 porta~
-:n 2
-a -1 4380
+1 -1 4380
 D1
 ~
 ~
@@ -1643,12 +1624,11 @@ segue para baixo.  Provavelmente deve guiar para o calabouço, onde os
 Mosqueteiros aprisionam os prisioneiros capturados na cidade, pois os dias 
 atuais estão cheios de revolucionários.
 ~
-43 adf 0
+43 41 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-ag -1 4379
+0 -1 4379
 D5
 ~
 ~
@@ -1659,7 +1639,7 @@ A Interseção Ocidental~
    Você está na interseção ocidental, entre um corredor e uma passagem.  As 
 saídas são para leste, oeste, ou voltar para sul.
 ~
-43 df 0
+43 40 0 0 0 0
 D1
 ~
 ~
@@ -1680,7 +1660,7 @@ lugar, bem como todos os outros daqui, é muito frio, pois foi totalmente
 construído  de pedras.  Nem as paredes ou o teto foram pintados, e logo ao 
 chão há uma enorme barata.
 ~
-43 df 0
+43 40 0 0 0 0
 D1
 ~
 ~
@@ -1698,7 +1678,7 @@ percebe que apenas a entrada teve as paredes pintadas, pois aqui as
 paredes têm a cor da pedra cinzenta. Você pode voltar ou pode seguir para 
 o norte.
 ~
-43 d 0
+43 8 0 0 0 0
 D0
 ~
 ~
@@ -1717,7 +1697,7 @@ somente um quadro.  A escada é feita de pedra e muito resistente e segura,
 mas de qualquer modo, você precisa ter cuidado, pois os degraus são muito 
 estreitos.
 ~
-43 d 0
+43 8 0 0 0 0
 D2
 ~
 ~
@@ -1734,7 +1714,7 @@ ou de importante.  A oeste, encontra-se a fonte de mármore verde, dentro
 do Q.G., mas há uma corrente impedindo que você prossiga.  De qualquer 
 maneira, você não sente a menor vontade de ir para o pátio deste edifício.
 ~
-43 d 0
+43 8 0 0 0 0
 D0
 ~
 ~
@@ -1752,7 +1732,7 @@ ouvir alguns ruídos.  Estes sons não são de humanos, parece mais ser um
 cavalo.  Sendo assim, este local é provavelmente onde os cavalos dos 
 Mosqueteiros descansam durante a noite.
 ~
-43 d 0
+43 8 0 0 0 0
 D0
 ~
 ~
@@ -1764,10 +1744,9 @@ D1
 D3
 ~
 porta~
-:n 2 a porta
-ag -1 4387
+0 -1 4387
 S
-#4387 
+#4387
 Um Estábulo Francês~
    Você está no estábulo onde os cavalos dos Mosqueteiros permanecem 
 durante a noite.  Este local tem um terrível cheiro, e por alguns 
@@ -1775,12 +1754,11 @@ momentos, você imagina há quanto tempo estes cavalos estão sem tomar um
 banho.  A única que há aqui, são os cavalos e muito feno, para os 
 alimentar.
 ~
-43 dh 0
+43 136 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-ag -1 4386
+0 -1 4386
 S
 #4388
 Uma Hospedaria Francêsa~
@@ -1790,7 +1768,7 @@ pelo menos uma coisa muito bonita neste local: no teto há um belíssimo par
 de candelabros, feitos de ouro puro.  Você pode ver que há um recepcionista 
 aqui, e talvez possa perguntar quando a hospedaria estará novamente aberta.
 ~
-43 d 0
+43 8 0 0 0 0
 D3
 ~
 ~
@@ -1804,7 +1782,7 @@ presos.  Este local é muito frio e úmido, e você deveria ter muito
 cuidado ao tentar abrir uma das celas, pois os presos que aqui estão são 
 muito perigosos.
 ~
-43 acdf 0
+43 45 0 0 0 0
 D2
 ~
 ~
@@ -1824,7 +1802,7 @@ que algumas horas.  Você nota, espantado, que este lugar parece absorver
 todos os sons, pois não é possivel ouvir qualquer prisioneiro gritando, 
 ou qualquer outro barulho.
 ~
-43 adf 0
+43 41 0 0 0 0
 D0
 ~
 ~
@@ -1843,7 +1821,7 @@ neste local, e sabe que nem seus pergaminhos e varinhas irão funcionar
 aqui.  Você está rodeado por celas e se fosse realmente esperto, teria as 
 deixado fechadas.
 ~
-43 adf 0
+43 41 0 0 0 0
 D0
 ~
 ~
@@ -1851,18 +1829,15 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-ag -1 4392
+0 -1 4392
 D2
 ~
 porta~
-:n 2 a porta
-abg 4390 4394
+0 4390 4394
 D3
 ~
 porta~
-:n 2 a porta
-abg 4390 4393
+0 4390 4393
 S
 #4392
 Uma Cela do Calabouço~
@@ -1870,12 +1845,11 @@ Uma Cela do Calabouço~
 Mosqueteiros.  Este local é muito escuro e úmido.  Bem, como você esperava 
 que uma cela fosse?
 ~
-43 adf 0
+43 41 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-a -1 4391
+1 -1 4391
 S
 #4393
 Uma Cela Silenciosa~
@@ -1883,7 +1857,7 @@ Uma Cela Silenciosa~
 e aqui você não consegue ouvir um único ruído, a não ser o som do seu 
 coração batendo cada vez mais rápido e rápido. 
 ~
-43 adfgh 0
+43 233 0 0 0 0
 S
 #4394
 Uma Cela no Calabouço~
@@ -1891,12 +1865,11 @@ Uma Cela no Calabouço~
 Mosqueteiros.  Este lugar é muito escuro e úmido.  Bem, como você esperava 
 que uma cela fosse?
 ~
-43 adf 0
+43 41 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 4391
+1 -1 4391
 S
 #4395
 Uma Torre no Q.G dos Mosqueteiros~
@@ -1906,7 +1879,7 @@ quatro janelas aqui e através das quais pode-se ver o norte, sul, oeste, e
 até mesmo o leste da a cidade.  O lugar mais perto possível de se ver é a 
 praça que fica ao sul.
 ~
-43 d 0
+43 8 0 0 0 0
 D5
 ~
 ~
@@ -1919,7 +1892,7 @@ porém muito bem iluminada, mas não há sinal de velas ou tochas.  Ao norte
 e ao sul, pode-se ver alguns estranhos portais que o levam para diferentes
 e estranhos lugares.  Abra esta pequena porta e entre, se puder.
 ~
-43 dfg 0
+43 104 0 0 0 0
 D1
 ~
 ~
@@ -1936,7 +1909,7 @@ porém muito bem iluminada, mas não há sinal de velas ou tochas.  Ao norte
 e ao sul, pode-se ver alguns estranhos portais que o levam para diferentes
 e estranhos lugares.  Abra esta pequena porta e entre, se puder.
 ~
-43 dfg 0
+43 104 0 0 0 0
 D1
 ~
 ~
@@ -1953,7 +1926,7 @@ comparada com a loja mágica, que está ao leste.  Aqui você pode comprar
 muitas coisas diferentes, que poderão ser usadas no futuro, tais como 
 tecidos, armas e armaduras.
 ~
-43 deg 0
+43 88 0 0 0 0
 D1
 ~
 ~
@@ -1968,11 +1941,10 @@ enfeitando as paredes, e o chão é feito com o melhor mármore do mundo.
 No teto, você pode ver alguns candelabros de ouro puro, e parece que no 
 final do corredor encontra-se a Sala do Trono Real. 
 ~
-43 dg 0
+43 72 0 0 0 0
 D3
 ~
 parede~
-:n 2 a parede
-ab 4392 4378
+1 4392 4378
 S
-$
+$~

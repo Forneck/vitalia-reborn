@@ -8,7 +8,7 @@ caminho que leva a algum lugar significante ou importante, mas este entrou
 nas distantes montanhas ao norte.  Uma trilha estreita marca seu caminho
 para norte, levando em direção à ladeira.
 ~
-35 0 1
+35 0 0 0 0 1
 D0
 ~
 ~
@@ -30,7 +30,7 @@ cena uma aura de calma e serenidade.
    Você pode seguir a estrada para norte, sul ou oeste, por uma pequena
 ramificação.
 ~
-35 0 1
+35 0 0 0 0 1
 D0
 ~
 ~
@@ -55,7 +55,7 @@ vendedores de rua gritando.
    Um caminho escarpado desce daqui para nordeste em rumo à Vila dos Anões, e
 uma pequena trilha atravessa as árvores em direção às colinas ao norte.
 ~
-35 0 1
+35 0 0 0 0 1
 D0
 ~
 ~
@@ -83,7 +83,7 @@ perigos - da floresta. E para oeste a estrada se torna a Rua Principal da
 cidade; rodeada pela confusão das lojas, bares e mercados. Você pode ver
 uma vila de engraçadas criaturas ao sul.
 ~
-35 c 1
+35 4 0 0 0 1
 D1
 ~
 ~
@@ -104,7 +104,7 @@ portão Sul de Midgaard, para a floresta de Miden'Nir (que em globinóide
 significa 'Sangue Verde').  Você ainda pode ver a cidade à leste, mas para
 sul, há o ar fresco e as plantas verdes.
 ~
-35 0 3
+35 0 0 0 0 3
 D1
 Você pode ver os muros do Portão Sul.
 ~
@@ -123,7 +123,7 @@ passagem para leste é bastante fácil.  Para oeste, a fumaça pode ser vista
 subindo das copas das árvores.  O amontoamento de Midgaard está a norte
 daqui.
 ~
-35 c 3
+35 4 0 0 0 3
 D0
 Para norte, você vê o Portão Sul de Midgaard.
 ~
@@ -152,7 +152,7 @@ Miden'nir~
 sua passagem.  Daqui, somente a floresta iluminada à oeste ou ao sul
 oferecem um caminho para a viagem.
 ~
-35 0 3
+35 0 0 0 0 3
 D1
 As montanhas podem ser vistas sobresaindo ao leste.
 ~
@@ -176,7 +176,7 @@ através de seus cabelos.  Para norte, a floresta fica mais clara. No
 entanto, os caminhos para sul e para oeste colocam você cada vez mais
 fundo na floresta.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 A floresta é mais clara nesta direção.
 ~
@@ -198,7 +198,7 @@ Em um Pequeno Caminho~
    Aqui há um caminho, levando a oeste e a sul através da floresta escura
 de Miden'nir.  Montanhas cortam a vista a oeste daqui.
 ~
-35 0 3
+35 0 0 0 0 3
 D1
 Floresta do vento devastador.
 ~
@@ -217,7 +217,7 @@ espia nesta floresta.  As árvores se tornam muito abundantes para oeste, mas
 você pode ir para norte, sul ou viajar na direção das montanhas que estão a
 leste daqui.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 As árvores ficam mais esparsas neste caminho.
 ~
@@ -240,7 +240,7 @@ Um Cruzamento~
 As árvores parecem estar mais próximas de você neste ponto, e você dificilmente
 pode ver o céu através dos grossos galhos acima de sua cabeça.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 Árvores até o mais longe que seus olhos podem ver.
 ~
@@ -263,7 +263,7 @@ A Trilha~
 oeste, montanhas intranponíveis olham furiosamente para você, e a abundante
 floresta e os arbustos impendem qualquer movimento para oeste.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 A trilha dirige-se para o norte.
 ~
@@ -282,7 +282,7 @@ espia nesta floresta.  Você pode ir para norte rumo as montanhas, ou oeste
 para a floresta, mas as montanhas escarpadas impedem qualquer movimento
 para leste.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 As montanhas podem ser vistas ao norte.
 ~
@@ -305,7 +305,7 @@ Miden'nir~
 sente que há algo ruim escondido nesta floresta.  A floresta fica mais clara
 para o norte.  O vento bate em você enquanto você considera suas opções.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 Há uma pequena clareira ao norte.
 ~
@@ -324,7 +324,7 @@ floresta parece fechar-se a sua volta, e fica mais escuro e maior é o
 mau presságio que você sente. Esta pode ser a hora certa para voltar
 a um lugar mais seguro.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 Mais floresta.
 ~
@@ -352,7 +352,7 @@ A Floresta Clara~
 através da trilha.  Para leste, a floresta torna-se espessa e escura. Ao
 sul, a trilha continua.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 Uma trilha indo de norte ao sul.
 ~
@@ -376,7 +376,7 @@ Suas botas fazem um som nojento medida que você anda aqui.  Você pode ir em
 qualquer uma das quatro direções cardeais daqui. Esperançosamente, isto será
 mais seco.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 Miden'nir continua.
 ~
@@ -404,7 +404,7 @@ Perto das Montanhas~
 leste.  Daqui você pode ir somente para norte e oeste, já que as rochas
 impedem qualquer outro movimento.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 Muitas árvores para o norte.
 ~
@@ -422,7 +422,7 @@ A Trilha Pálida~
 que a floresta é relativamente clara.  Para o sul, você pode ver um
 caminho.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 Neste caminho, você pode ver uma trilha.
 ~
@@ -445,7 +445,7 @@ O Caminho Escuro~
 para norte e sul, enquanto é muito apertado para explorar para oeste, você
 pode desviar para o interior da floresta a oeste.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 A floresta fica mais clara neste caminho.
 ~
@@ -475,7 +475,7 @@ cabeça são tão grossos que bloqueiam toda a luz do sol direta.
 Enquanto está muito denso para avançar à leste, você é capaz de fazer
 seu caminho para sul e oeste.
 ~
-35 0 3
+35 0 0 0 0 3
 D2
 A floresta densa continua.
 ~
@@ -494,7 +494,7 @@ nas árvores e saturado no chão.  Dois esqueletos estão na sua frente,
 parecendo olhar para você.  A floresta é impassível para o sul, mas as outras
 direções parecem normais.
 ~
-35 1 3
+35 1 0 0 0 3
 D0
 Escuridão...
 ~
@@ -524,7 +524,7 @@ Fundo na Floresta de Miden'nir~
 pode ver alguns reflexos da luz do sol.  Para leste, você simplesmente não
 pode ver.  As árvores estão próximas e sufocantes, parecendo diferentes a oeste.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 Você vê a luz do dia e uma trilha para seguir.
 ~
@@ -548,7 +548,7 @@ ser uma área da floresta particulamente escura.  A floresta continua à leste,
 onde esta se encontra com as montanhas.  O ar é parado e asfixiante - um odor
 vem do oeste e uma horrível sensação faz o cabelo de sua nuca ficar de pé!
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 A floresta parece ficar muito escura nesta direção.
 ~
@@ -571,7 +571,7 @@ No Sopé das Montanhas~
 para norte ou leste.  Você vê a floresta exuberante e verde de Miden'nir para
 sul e oeste.
 ~
-35 0 5
+35 0 0 0 0 5
 D2
 A floresta de Miden'nir estende-se diante de você.
 ~
@@ -590,7 +590,7 @@ floresta nesta área muito escura.  A floresta continua a oeste. Mas as
 montanhas bloqueiam a exploração em qualquer outra direção, exceto ao sul,
 onde você nota um pequeno túnel escavado no lado da montanha.
 ~
-35 a 3
+35 1 0 0 0 3
 D2
 O túnel conduz ao lado da montanha.
 ~
@@ -608,7 +608,7 @@ O Túnel nas Montanhas~
 desta floresta.  O chão é batido e continua para o sul, entrando no monte,
 ou voltando para a floreste inda a norte.
 ~
-35 a 1
+35 1 0 0 0 1
 D0
 Lá fora, você vê a floresta de Miden'nir.
 ~
@@ -626,7 +626,7 @@ Um Túnel nas Montanhas~
 enquanto que para sul a passagem fica cada vez menor.  Uma pequena alcova
 foi esculpida na parede leste.
 ~
-35 a 1
+35 1 0 0 0 1
 D0
 O túnel fica maior nesta direção.
 ~
@@ -648,7 +648,7 @@ Uma Pequena Alcova~
    Uma pequena alcova foi esculpida aqui.  Aqui, há uma pilha de gravetos
 e folhas, provavelmente servindo como cama.
 ~
-35 a 1
+35 1 0 0 0 1
 D3
 Você vê a passagem principal.
 ~
@@ -666,7 +666,7 @@ Um Túnel nas Montanhas~
 menor indo para sul.  Você quase tem que se encurvar para poder passar por
 esta área.  Ao sul, uma pequena arcada leva a uma grande câmara.
 ~
-35 a 1
+35 1 0 0 0 1
 D0
 O túnel continua a sul.
 ~
@@ -685,7 +685,7 @@ que serve como quartel para os goblins de Miden'nir.  Os ossos de várias
 criaturas da floresta estão espalhados pela sala, os restos da última
 refeição.
 ~
-35 a 1
+35 1 0 0 0 1
 D0
 O túnel vai para norte.
 ~
@@ -699,7 +699,7 @@ Aqui há uma velha construção de madeira soltando fumaça de sua chaminé.
 Uma placa é visível na entrada à oeste.  Você pode ir para norte ou sul
 dando a volta na construção ou deixar este lugar e voltar para a floresta.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 Você pode dar a volta na construção pelo norte.
 ~
@@ -734,7 +734,7 @@ Ao Norte da Hospedaria~
 deste ângulo.  Aqui o ar está cheio de cheiros de fumaça e comida.  Ao sul,
 a porta da frente te espera... ou você pode ver se há uma porta dos fundos.
 ~
-35 0 3
+35 0 0 0 0 3
 D2
 Você vê a porta da frente da hospedaria.
 ~
@@ -748,7 +748,7 @@ e entrar pela porta da frente, ou para oeste e ir pelos fundos do
 estabelecimento.  Você escuta um choro abafado vindo da pequena trilha
 que leva ao sul.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 Este caminho leva à entrada da hospedaria.
 ~
@@ -773,7 +773,7 @@ Algumas pilhas de lixo está à oeste, mas você vai cheirar pior "metendo
 o nariz" lá.  Como uma alternativa mais limpa, você pode ir para norte
 ou oeste, contornando a hospedaria.
 ~
-35 0 3
+35 0 0 0 0 3
 D1
 Você pode contornar a hospedaria por este caminho.
 ~
@@ -793,7 +793,7 @@ foi invadida por goblins, e não é mais seguro estas bandas da floresta.
 O bar é ao norte daqui.  Se você prefere ter sua própria mesa, há uma vaga
 ao sul.
 ~
-35 cd 1
+35 12 0 0 0 1
 D0
 Aqui é o bar, gerenciado pelo dono da hospedaria.
 ~
@@ -822,7 +822,7 @@ continua a oeste, mas você é pressionado a segui-la.  Vários arbustos estão
 pisoteados e alguns galhos medianos foram derrubados.  Evidentemente, houve
 uma batalha aqui recentemente.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 A Hospedaria está ao norte.
 ~
@@ -842,7 +842,7 @@ para alguns poucos aventureiros que conseguem sobreviver à viagem
 através da floresta.
    Você pode sair para sul e retornar para o saguão da Hospedaria.
 ~
-35 df 1
+35 40 0 0 0 1
 D2
 Você pode se retirar para o saguão ao sul.
 ~
@@ -855,7 +855,7 @@ A Mesa dos Bardos~
 algumas cadeiras de madeira está aqui.  Há uma grande mancha na mesa, os
 restos de uma bebida derramada.
 ~
-35 d 1
+35 8 0 0 0 1
 D1
 A leste, você vê a área principal da hospedaria.
 ~
@@ -867,7 +867,7 @@ O Depósito de Lixo~
    Você tem lixo até os joelhos.  ECA!!!  Isto cheira mal e quem sabe que
 tipo de vermes vivem nesta sujeira...
 ~
-35 0 3
+35 0 0 0 0 3
 D1
 Você pode voltar para um lugar limpo por aqui.
 ~
@@ -879,7 +879,7 @@ Uma Parte Calma da Hospedaria~
    Parece não haver ninguém nesta parte da Hospedaria do Lenhador,
 provavelmente um lugar seguro para descansar e medicar suas feridas...
 ~
-35 d 0
+35 8 0 0 0 0
 D0
 Você vê o saguão da Hospedaria.
 ~
@@ -891,7 +891,7 @@ No Rastro do Cavaleiro~
    Daqui, o caminho continua a leste e a oeste.  Você nota marcas recentes
 no chão macio que mostram que o cavaleiro fugiu para oeste.
 ~
-35 0 3
+35 0 0 0 0 3
 D1
 De volta ao ponto da emboscada.
 ~
@@ -908,7 +908,7 @@ No Rastro do Cavaleiro~
    O caminho continua para leste e para sul.  Você nota marcas recentes no
 chão macio que denotam que o cavaleiro virou e seguiu para o sul.
 ~
-35 0 3
+35 0 0 0 0 3
 D1
 O rastro continua.
 ~
@@ -926,7 +926,7 @@ No Rastro do Cavaleiro~
 caminho através da floresta.  As marcas ainda estão frescas, então ele deve
 estar por perto.
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 O rastro continua.
 ~
@@ -948,7 +948,7 @@ que estar próximo...  Olhando mais atentamente, você consegue identificar
 uma pequena passagem seguindo norte.  Um cavaleiro negro não conseguiria
 ultrapassá-la, mas quem sabe você não o consiga?
 ~
-35 0 3
+35 0 0 0 0 3
 D0
 Parece um tanto apertada a passagem.
 ~
@@ -960,4 +960,4 @@ De volta ao caminho.
 ~
 0 -1 3583
 S
-$
+$~

@@ -1,14 +1,14 @@
 #49
 Vitalia~
 A Grande Árvore dos Inciantes~
-4900 4999 30 2 k 0 0 0 -1 -1
+4900 4999 30 2 j 0 0 0 -1 -1
+D 0 4900 0 1 	(O Galho Mais Baixo da Grande Árvore)
 O 0 4905 1 4905 	(um pequeno peitoral verde)
 P 1 4907 20 4905 	(um colar de folhas)
 P 1 4908 20 4905 	(um punhal em forma de folha)
-P 1 4909 20 4905 	(cal�as de couro verde)
+P 1 4909 20 4905 	(calças de couro verde)
 P 1 4906 20 4905 	(uma varinha de novato)
 D 0 4904 2 1 	(No Interior do Tronco)
-D 0 4900 0 1 	(O Galho Mais Baixo da Grande �rvore)
 M 0 4906 3 4906 	(um macaco carnívoro)
 M 0 4906 3 4922 	(um macaco carnívoro)
 M 0 4906 3 4920 	(um macaco carnívoro)
@@ -44,11 +44,11 @@ M 0 4917 2 4935 	(uma grigue)
 M 0 4917 2 4937 	(uma grigue)
 M 0 4915 3 4953 	(um xamã grigue)
 M 0 4908 2 4941 	(um atom)
-E 1 4900 100 16 	(uma lan�a Atom)
+E 1 4900 100 16 	(uma lança Atom)
 M 0 4908 2 4951 	(um atom)
-E 1 4900 100 16 	(uma lan�a Atom)
+E 1 4900 100 16 	(uma lança Atom)
 M 0 4907 2 4942 	(um xamã atom)
-E 1 4901 100 17 	(um livro com uma capa de casca de �rvore)
+E 1 4901 100 17 	(um livro com uma capa de casca de árvore)
 M 0 4910 2 4943 	(uma criança atom)
 M 0 4909 3 4943 	(uma atom)
 E 1 3834 7 17 	(o Card Atoms)

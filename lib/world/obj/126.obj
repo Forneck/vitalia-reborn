@@ -2492,6 +2492,10 @@ Uma tábua dourada foi deixada aqui, para lembrar a todos o dia do Ragnarok.~
 0 0 0 0
 30 3000 300 0 0
 E
+tabua ragnarok~
+Você observa uma magnífica tábua dourada com algumas runas e inscrições.
+~
+E
 inscricoes~
 O celestial e poderoso exercito de Odin deverá está sempre pronto para o
 pavoroso dia do Ragnarök.  Lembrem-se que este dia não virá inesperadamente.
@@ -2514,10 +2518,6 @@ Vigrid, onde também apareceriam o lobo Fenris, a serpente de Midgaard, o
 deus caluniador dos deuses e impostor com todos os seguidores de Hela e os
 gigantes do gelo.  Heindall levantar-se-ia e soaria a trombeta Gjall, para
 chamar à luta todos os deuses e heróis.
-~
-E
-tabua ragnarok~
-Você observa uma magnífica tábua dourada com algumas runas e inscrições.
 ~
 #12733
 pedra trono Odin~
@@ -2669,7 +2669,7 @@ amarelas verdes vermelhas flores~
 as flores do palácio de Sessrumir~
 Várias flores amarelas, verdes e vermelhas estão espalhadas aqui.~
 ~
-12 ei 0 0 0 ao 0 0 0 0 0 0 0
+28 ei 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 2 2000 200 0 0
 E

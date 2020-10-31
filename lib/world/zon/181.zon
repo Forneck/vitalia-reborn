@@ -1,7 +1,7 @@
 #181
 Vitalia~
 Os Caminhos Iniciais~
-18100 18199 3 1 dk 0 0 0 -1 -1
+18100 18199 3 1 df 0 0 0 0 2
 M 0 18110 1 18116 	(a cobra naja-rainha)
 G 1 18100 100 -1 	(o brinco da naja)
 G 1 18100 100 -1 	(o brinco da naja)
@@ -24,8 +24,8 @@ R 0 18111 18105 -1 	(uma adaga da gigantesca naja-rainha)
 O 0 18105 200 18111 	(uma adaga da gigantesca naja-rainha)
 R 0 18112 18104 -1 	(um colete de couro de cobra)
 O 0 18104 200 18112 	(um colete de couro de cobra)
-R 0 18112 18103 -1 	(um pétaso de couro de cobra)
-O 0 18103 200 18112 	(um pétaso de couro de cobra)
+R 0 18112 18103 -1 	(um pÃ©taso de couro de cobra)
+O 0 18103 200 18112 	(um pÃ©taso de couro de cobra)
 R 0 18112 18101 -1 	(um coxote de couro de cobra)
 O 0 18101 200 18112 	(um coxote de couro de cobra)
 R 0 18113 18109 -1 	(um archote de cobre)

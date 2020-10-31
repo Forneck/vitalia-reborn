@@ -4,7 +4,7 @@ A Costa do Rio Negro~
 usável.  Todo o litoral é uma extensa placa de granito que foi desgastado pela
 água durante o período da inundação.
 ~
-44 cg 3
+44 68 0 0 0 3
 D0
 ~
 ~
@@ -25,11 +25,7 @@ que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os son
 da floresta podem ser ouvidos a sua volta.  O caminho segue ao noroeste e ao 
 leste.
 ~
-44 gs 2
-D6
-~
-~
-0 -1 13534
+44 262208 0 0 0 2
 D1
 ~
 ~
@@ -42,6 +38,10 @@ D3
 ~
 ~
 0 -1 4400
+D6
+~
+~
+0 -1 13534
 S
 #4402
 O Caminho de Nirin~
@@ -50,7 +50,7 @@ que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os
 sons da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e 
 ao oeste.
 ~
-44 gs 2
+44 262208 0 0 0 2
 D1
 ~
 ~
@@ -70,7 +70,7 @@ O Caminho de Nirin~
 que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os sons
  da floresta podem ser ouvidos a sua volta.  O caminho segue ao sul.
 ~
-44 gs 2
+44 262208 0 0 0 2
 D1
 ~
 ~
@@ -91,7 +91,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D1
 ~
 ~
@@ -112,7 +112,7 @@ Caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D1
 ~
 ~
@@ -133,7 +133,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D1
 ~
 ~
@@ -154,7 +154,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D1
 ~
 ~
@@ -175,7 +175,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D1
 ~
 ~
@@ -196,7 +196,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D1
 ~
 ~
@@ -213,7 +213,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D2
 ~
 ~
@@ -230,7 +230,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -247,7 +247,7 @@ que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os
 sons da floresta podem ser ouvidos a sua volta.  O caminho segue ao norte e 
 ao leste.
 ~
-44 gs 2
+44 262208 0 0 0 2
 D0
 ~
 ~
@@ -268,7 +268,7 @@ que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os son
  da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e ao 
 oeste.
 ~
-44 gs 2
+44 262208 0 0 0 2
 D0
 ~
 ~
@@ -289,7 +289,7 @@ que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os son
  da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e ao 
 oeste.
 ~
-44 gs 2
+44 262208 0 0 0 2
 D0
 ~
 ~
@@ -310,7 +310,7 @@ que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os son
  da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e ao 
 oeste.
 ~
-44 gs 2
+44 262208 0 0 0 2
 D0
 ~
 ~
@@ -335,7 +335,7 @@ que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os son
  da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e ao 
 oeste.
 ~
-44 gs 2
+44 262208 0 0 0 2
 D0
 ~
 ~
@@ -360,7 +360,7 @@ que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os
 sons da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e 
 ao oeste.
 ~
-44 gs 2
+44 262208 0 0 0 2
 D0
 ~
 ~
@@ -385,7 +385,7 @@ que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os
 sons da floresta podem ser ouvidos a sua volta.  O caminho segue ao leste e
 ao oeste.
 ~
-44 gs 2
+44 262208 0 0 0 2
 D1
 ~
 ~
@@ -405,7 +405,7 @@ O Caminho de Nirin~
 que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os sons
 da floresta podem ser ouvidos a sua volta.  O caminho segue ao oeste e ao sul.
 ~
-44 gs 2
+44 262208 0 0 0 2
 D0
 ~
 ~
@@ -430,7 +430,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D1
 ~
 ~
@@ -451,7 +451,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D2
 ~
 ~
@@ -468,7 +468,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -489,7 +489,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -514,7 +514,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -539,7 +539,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -564,7 +564,7 @@ que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os
 sons da floresta podem ser ouvidos a sua volta.  O caminho segue ao norte e 
 ao sul.
 ~
-44 gs 2
+44 262208 0 0 0 2
 D0
 ~
 ~
@@ -589,7 +589,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -614,7 +614,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -635,7 +635,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -652,7 +652,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -673,7 +673,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -694,7 +694,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -715,7 +715,7 @@ que o cerca se fecha até onde seus olhos podem ver, formando um túnel.  Os
 sons da floresta podem ser ouvidos a sua volta.  O caminho segue ao norte e
 ao sul.
 ~
-44 gs 2
+44 262208 0 0 0 2
 D0
 ~
 ~
@@ -736,7 +736,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -757,7 +757,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -778,7 +778,7 @@ caminho verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por alguma abertura entre as folhas, e ainda mais sorte se passar pelos
 galhos emaranhados até chegar ao solo.
 ~
-44 g 3
+44 64 0 0 0 3
 D3
 ~
 ~
@@ -791,7 +791,7 @@ nos extremos e ajustadas ao fundo da lagoa.  O cheiro de sal é pesado no ar,
 pois o lago é de água salgada.  Pequenos caranguejos correm ao redor dos 
 postes, procurando alimentos.    
 ~
-44 gc 2
+44 68 0 0 0 2
 D0
 ~
 ~
@@ -811,7 +811,7 @@ A Lagoa~
 pouco de água para os lados.  Ao norte a lagoa estende-se ao horizonte, além 
 de onde sua visão alcança.
 ~
-44 gc 7
+44 68 0 0 0 7
 D0
 ~
 ~
@@ -836,7 +836,7 @@ nos extremos e ajustadas ao fundo da lagoa.  O cheiro de sal é pesado no ar,
 pois o lago é de água salgada.  Pequenos caranguejos correm ao redor dos postes
 procurando alimentos.    
 ~
-44 gc 2
+44 68 0 0 0 2
 D0
 ~
 ~
@@ -860,7 +860,7 @@ A Lagoa~
 pouco de água para os lados.  Ao norte a lagoa estende-se ao horizonte, além
 de onde sua visão alcança.    
 ~
-44 gc 7
+44 68 0 0 0 7
 D0
 ~
 ~
@@ -885,7 +885,7 @@ nos extremos e ajustadas ao fundo da lagoa.  O cheiro de sal é pesado no ar,
 pois o lago é de água salgada.  Pequenos caranguejos correm ao redor dos postes
 procurando alimentos.    
 ~
-44 gc 2
+44 68 0 0 0 2
 D0
 ~
 ~
@@ -909,7 +909,7 @@ A Lagoa~
 granito que está ao sul, obstruindo sua passagem por este caminho.  Em todos
 os outros sentidos, a lagoa estende-se além do horizonte.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -929,7 +929,7 @@ A Lagoa~
 granito que está ao sul, obstruindo sua passagem por este caminho.  Em todos 
 os outros sentidos, a lagoa estende-se além do horizonte.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -949,7 +949,7 @@ A Lagoa~
 granito que está ao sul, obstruindo sua passagem por este caminho.  Em todos 
 os outros sentidos, a lagoa estende-se além do horizonte.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -969,7 +969,7 @@ A Lagoa~
 granito que está ao sul, obstruindo sua passagem por este caminho.  Em todos 
 os outros sentidos, a lagoa estende-se além do horizonte.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -988,7 +988,7 @@ Uma Doca de Madeira~
    A doca termina aqui, mas estende-se completamente ao leste.  O cheiro de 
 sal é pesado no ar, pois um grande mar ou o oceano se encontra ao norte.
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1007,7 +1007,7 @@ Uma Doca de Madeira~
    As pranchas de madeira da doca tremem e rangem a cada passo que você dá.
 Um grande lago estende-se ao norte e a doca continua ao leste e ao oeste.    
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1031,7 +1031,7 @@ Uma Doca de Madeira~
 seu peso.  Ao norte uma vasta quantidade de água estende-se por todo o 
 horizonte até onde você consegue enxergar.    
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1055,7 +1055,7 @@ Uma Doca de Madeira~
 seu peso.  Ao norte uma vasta quantidade de água estende-se por todo o 
 horizonte até onde você consegue enxergar.    
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1080,7 +1080,7 @@ nos extremos e ajustadas ao fundo da lagoa.  O cheiro de sal é pesado no ar,
 pois o lago é de água salgada.  Pequenos caranguejos correm ao redor dos postes
 procurando alimentos.
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1101,7 +1101,7 @@ Uma Trilha Através da Aldeia~
 elas são de uma cor verde escura e folhas parecem ainda crescer nelas, 
 insinuando que podem estar vivas.
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1122,7 +1122,7 @@ Uma Trilha Através da Aldeia~
 elas são de uma cor verde escura e folhas parecem ainda crescer nelas, 
 insinuando que podem estar vivas.    
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1143,7 +1143,7 @@ de pequenas cabanas.  Todas estas tem o formato redondo com telhados cônicos,
 elas são de uma cor verde escura e folhas parecem ainda crescer nelas, 
 insinuando que podem estar vivas.    
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1164,7 +1164,7 @@ vila de choupanas, estranho, considerando que a maioria dos elfos vive em
 árvores.  Ao norte uma grande doca de madeira beira um lago de água salgada ou
 o oceano.  A floresta cerca a vila para todos os lados.    
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1183,7 +1183,7 @@ está andando continua ao leste e ao oeste.  Uma grande doca de madeira está ao
 norte, e depois dela uma grande quantidade de água salgada que parece 
 estender-se ao infinito.
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1191,8 +1191,7 @@ D0
 D1
 ~
 portao~
-:n 1 o portão
-ab -1 4456
+1 -1 4456
 D2
 ~
 ~
@@ -1209,7 +1208,7 @@ como um marcador de limites do que para manter pessoas para dentro ou para
 fora dele.  A floresta ainda cerca-o em todas as direções, mas ao norte, você 
 observa um pequeno posto de guarda.    
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1221,7 +1220,6 @@ D1
 D3
 ~
 portao~
-:n 1 o portão de madeira
 1 -1 4455
 S
 #4457
@@ -1230,7 +1228,7 @@ Uma Trilha Através da Floresta~
 sussurrando algo saindo da própria floresta que está em todas direções.  Mas 
 descarta está sensação pensando estar ficando paranóico.    
 ~
-44 g 2
+44 64 0 0 0 2
 D1
 ~
 ~
@@ -1248,7 +1246,7 @@ descarta está sensação pensando estar ficando paranóico.  Você respira um a
 salgado, estará perto do oceano?  
 
 ~
-44 g 2
+44 64 0 0 0 2
 D1
 ~
 ~
@@ -1266,7 +1264,7 @@ descarta está sensação pensando estar ficando paranóico.  Você respira um a
 salgado, estará perto do oceano?  
 
 ~
-44 g 2
+44 64 0 0 0 2
 D1
 ~
 ~
@@ -1283,7 +1281,7 @@ da cabana são protegidas e pequenas porcas de mármore também são produzidas.
 Uma pequena cama está encostada na parede leste e uma mesa com cadeiras fica 
 a sua esquerda.
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -1295,7 +1293,7 @@ Uma Trilha Através da Aldeia~
 têm o formato redondo com telhados cônicos, são de uma cor verde escura e 
 folhas parecem ainda crescer nelas, insinuando que podem estar vivas.    
 ~
-44 g 3
+44 64 0 0 0 3
 D0
 ~
 ~
@@ -1315,7 +1313,7 @@ Uma Cabana~
 da cabana são protegidas e pequenas porcas de mármore também são produzidas. 
 Esta cabana cheira levemente a peixe.
 ~
-44 8 0
+44 8 0 0 0 0
 D3
 ~
 ~
@@ -1329,7 +1327,7 @@ com telhados cônicos, são de uma cor verde escura e folhas parecem ainda
 crescer nelas, insinuando que podem estar vivas.
 
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1350,7 +1348,7 @@ Dentro da Cabana~
  No lado norte, uma pequena mesa com três cadeiras foram arrumadas e uma cama 
 está de encontro à parede sul.    
 ~
-44 8 0
+44 8 0 0 0 0
 D3
 ~
 ~
@@ -1363,7 +1361,7 @@ Uma Cabana~
   Bem ao centro uma grande mesa retangular de madeira nirin cercada por cadeira
 s torna o ambiente apropriado para as reuniões da cidade.
 ~
-44 8 0
+44 8 0 0 0 0
 D0
 ~
 ~
@@ -1376,7 +1374,7 @@ observar porcas de mármore feitas sob medida penduradas nas paredes da cabana.
 No lado leste, uma pequena mesa com duas cadeiras foram arrumadas e uma cama 
 está de encontro à parede sul.    
 ~
-44 8 0
+44 8 0 0 0 0
 D0
 ~
 ~
@@ -1389,7 +1387,7 @@ encontra-se próximo à parede norte enquanto uma cama de lona está armada na
 parede oriental.  Um largo balde está no meio da sala parcialmente cheio de 
 uma água marrom, ele deve servir conter a goteira do telhado.    
 ~
-44 8 0
+44 8 0 0 0 0
 D2
 ~
 ~
@@ -1401,7 +1399,7 @@ Uma Trilha Através da Floresta~
  desgastado e regular, nenhuma planta cresce na passagem.  Isto sugere que está
  em constante uso.    
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1421,7 +1419,7 @@ Uma Trilha Através da Floresta~
  desgastado e regular, nenhuma planta cresce na passagem.  Isto sugere que está
  em constante uso.    
 ~
-44 g 2
+44 64 0 0 0 2
 D0
 ~
 ~
@@ -1438,7 +1436,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso , aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam
 ao redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1463,7 +1461,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
 redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1484,7 +1482,7 @@ consegue avistar nenhum sinal de terra firme.  Entretanto abaixo você vê uma
 enorme construção de mármore bem lá no fundo da lagoa.  Será este o famoso 
 Templo da Água?
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1509,7 +1507,7 @@ consegue avistar nenhum sinal de terra firme.  Entretanto abaixo você vê uma
 enorme construção de mármore bem lá no fundo da lagoa.  Será este o famoso 
 Templo da Água?
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1534,7 +1532,7 @@ consegue avistar nenhum sinal de terra firme.  Entretanto abaixo você vê uma
 enorme construção de mármore bem lá no fundo da lagoa.  Será este o famoso 
 Templo da Água?
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1559,7 +1557,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
 redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1584,7 +1582,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
 redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1609,7 +1607,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
 redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1634,7 +1632,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam 
 ao redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1659,7 +1657,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
 redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D1
 ~
 ~
@@ -1680,7 +1678,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao
 redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D1
 ~
 ~
@@ -1701,7 +1699,7 @@ A Lagoa~
 aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao redor 
 e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D1
 ~
 ~
@@ -1722,7 +1720,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
 redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1747,7 +1745,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
 redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1772,7 +1770,7 @@ consegue avistar nenhum sinal de terra firme.  Entretanto abaixo você vê uma
 enorme construção de mármore bem lá no fundo da lagoa.  Será este o famoso 
 Templo da Água?
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1797,7 +1795,7 @@ consegue avistar nenhum sinal de terra firme.  Entretanto abaixo você vê uma
 enorme construção de mármore bem lá no fundo da lagoa.  Será este o famoso 
 Templo da Água?
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1822,7 +1820,7 @@ consegue avistar nenhum sinal de terra firme.  Entretanto abaixo você vê uma
 enorme construção de mármore bem lá no fundo da lagoa.  Será este o famoso 
 Templo da Água?
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1847,7 +1845,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
 redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D0
 ~
 ~
@@ -1868,7 +1866,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
 redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D1
 ~
 ~
@@ -1885,7 +1883,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
 redor e voltam a tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D1
 ~
 ~
@@ -1906,7 +1904,7 @@ A Lagoa~
 aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao redor e
 voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D1
 ~
 ~
@@ -1927,7 +1925,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
 redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D1
 ~
 ~
@@ -1948,7 +1946,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam ao 
 redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D1
 ~
 ~
@@ -1969,7 +1967,7 @@ até onde sua visão pode alcançar.  Olhando para baixo você avista um fundo
 arenoso, aproximadamente a vinte pés.  Pequenos pedaços de madeira flutuam 
 ao redor e voltam à tona com o suave movimento das ondas.
 ~
-44 g 7
+44 64 0 0 0 7
 D2
 ~
 ~
@@ -1979,4 +1977,4 @@ D3
 ~
 0 -1 4498
 S
-$
+$~

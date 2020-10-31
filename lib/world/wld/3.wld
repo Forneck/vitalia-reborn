@@ -6,7 +6,7 @@ Acima você pode ver o que sobrou de uma abandonada cidade que parece ser um
 centro de comércio.  Perto deste centro você pode ver uma vermelha luz
 brilhante, emanando de uma grande torre.
 ~
-3 fg 8
+3 96 0 0 0 8
 D1
 ~
 ~
@@ -24,7 +24,7 @@ Zumbis e mortos-vivos flutuam ao redor, com seus resquícios de cabelos sendo
 levados pelas correntes.  Seus olhos não têm qualquer expressão; a única
 história que eles contam é a morte.
 ~
-3 fg 8
+3 96 0 0 0 8
 D1
 ~
 ~
@@ -42,7 +42,7 @@ para atravessar a cidade.  Agora ela está coberta com escombros das
 construções à seu redor.  Cobrindo a rua, também estão centenas de zumbis
 malditos, amaldiçoados à vagar por estas ruas por todo o sempre.
 ~
-3 fg 8
+3 96 0 0 0 8
 D1
 ~
 ~
@@ -60,7 +60,7 @@ para atravessar a cidade.  Agora ela está coberta com escombros das
 construções à seu redor.  Cobrindo a rua, também estão centenas de zumbis
 malditos, amaldiçoados à vagar por estas ruas por todo o sempre.
 ~
-3 fg 8
+3 96 0 0 0 8
 D1
 ~
 ~
@@ -78,7 +78,7 @@ destruídas, exceto uma parte parece ter resistido, ao norte uma enorme torre
 que é a fonte da estranha luz que você notou desde que chegou nesta cidade
 amaldiçoada.
 ~
-3 fg 8
+3 96 0 0 0 8
 D0
 ~
 ~
@@ -100,7 +100,7 @@ para atravessar a cidade.  Agora ela está coberta com escombros das
 construções à seu redor.  Cobrindo a rua, também estão centenas de zumbis
 malditos, amaldiçoados à vagar por estas ruas por todo o sempre.
 ~
-3 fg 8
+3 96 0 0 0 8
 D1
 ~
 ~
@@ -118,7 +118,7 @@ para atravessar a cidade.  Agora ela está coberta com escombros das
 construções à seu redor.  Cobrindo a rua, também estão centenas de zumbis
 malditos, amaldiçoados à vagar por estas ruas por todo o sempre.
 ~
-3 fg 8
+3 96 0 0 0 8
 D1
 ~
 ~
@@ -136,7 +136,7 @@ para atravessar a cidade.  Agora ela está coberta com escombros das
 construções à seu redor.  Cobrindo a rua, também estão centenas de zumbis
 malditos, amaldiçoados à vagar por estas ruas por todo o sempre.
 ~
-3 fgcd 8
+3 108 0 0 0 8
 D1
 ~
 ~
@@ -157,7 +157,7 @@ paredes são baratas.  Você se surpreende ao encontrar uma poção mais cara na
 lista de itens.  Olhando através do vidro, você pode ver poções de todas as
 formas, tamanhos e variedades.
 ~
-3 fg 8
+3 96 0 0 0 8
 D0
 ~
 ~
@@ -170,7 +170,7 @@ de corpos pendurados no portão.  Embora cruel, o castigo parece ter sido
 efetivo.  A sua volta, enormes algas tocam sua carne, como enormes dedos que
 tentam te puxar na direção do portão, para receber seu frio flagelo eterno.
 ~
-3 fg 8
+3 96 0 0 0 8
 D2
 ~
 ~
@@ -188,7 +188,7 @@ aquáticas.  Você sente perigo, um calafrio toma sua espinha fazendo os pelos
 de seu braço se arrepiarem.  Seria melhor tomar cuidado onde pisa; nunca se
 sabe o que se pode encontrar aqui.
 ~
-3 fgcd 8
+3 108 0 0 0 8
 D0
 ~
 ~
@@ -211,7 +211,7 @@ pingo sua mente lentamente começa a perceber que o que quer que seja que
 esteja pingando em seu pé, é quente e viscoso...  Apenas um pensamento vem a
 sua mente....  CORRA!
 ~
-3 fg 8
+3 96 0 0 0 8
 D3
 ~
 ~
@@ -225,7 +225,7 @@ além de plantas.  Olhando em volta, você percebe que a areia embaixo de seus
 pés está ensopada de sangue.  Estaria você no meio de algum grotesco
 matadouro?
 ~
-3 fg 8
+3 96 0 0 0 8
 D0
 ~
 ~
@@ -244,7 +244,7 @@ a respeito da vida marinha, o modo como a cadeia alimentar é diferente aqui.
 O fato do homem ser mais vulnerável no oceano...  Isso faz você querer ter
 algum repelente de tubarões à seu alcance.
 ~
-3 fg 8
+3 96 0 0 0 8
 D3
 ~
 ~
@@ -261,7 +261,7 @@ Pequenos outros buracos servem de lugar de repouso para outras criaturas
 marinhas.  A cada toque você percebe que finalmente há alguma saída
 penetrando estas escuras águas.
 ~
-3 fg 8
+3 96 0 0 0 8
 D1
 ~
 ~
@@ -282,7 +282,7 @@ fresta no solo do oceano.  Você percebe que há uma pequena cabana feita de
 algas, estranhamente colocada aqui.  Uma aconchegante luz amarela e o cheiro
 de comida caseira penetra as paredes de água e alcança suas narinas.
 ~
-3 fgcd 8
+3 108 0 0 0 8
 D2
 ~
 ~
@@ -300,7 +300,7 @@ Desde leite a carne de porco, este lugar parece ter tudo, menos uma pia.
 Você sente-se um pouco desconfiado, mas rapidamente se senta e começa a se
 servir.
 ~
-3 fg 8
+3 96 0 0 0 8
 D0
 ~
 ~
@@ -314,7 +314,7 @@ encontrar água mais morna logo, irá morrer.  Cada braçada se torna mais e
 mais difícil, e você começa a parar de sentir seus membros.  Você pode
 avistar uma luminosidade vinda do leste.
 ~
-3 fg 8
+3 96 0 0 0 8
 D1
 ~
 ~
@@ -330,7 +330,7 @@ Uma Alcova~
 consideravelmente.  Seus movimentos começam a voltar ao normal.  Ao olhar em
 volta você nota que a luminosidade vem de cima.
 ~
-3 fg 8
+3 96 0 0 0 8
 D0
 ~
 ~
@@ -338,7 +338,7 @@ D0
 D3
 ~
 ~
-0 -1 317 0
+0 -1 317
 S
 #319
 Quase Lá~
@@ -347,7 +347,7 @@ passos de você.  Você sente como se estivesse levando horas atravessar
 apenas alguns metros, mas a busca pelo calor afasta este pensamento, e o
 mantêm andando em frente.
 ~
-3 fg 8
+3 96 0 0 0 8
 D2
 ~
 ~
@@ -364,7 +364,7 @@ bem decorado e mobiliado com bom gosto.  Cada peça da mobília tem seu lugar,
 dando uma atmosfera de suspense e mistério.  Para você este lugar é como um
 purgatório em vida, a espera pelo prêmio e glória.
 ~
-3 fgcd 8
+3 108 0 0 0 8
 D2
 ~
 ~
@@ -381,7 +381,7 @@ cuidada e parece fresca.  Pássaros voam a seu redor, abelhas zunem, formigas
 trabalham...  Mas apesar de tudo isso, você sente como se estivesse em um
 lugar fechado...estranhamente fechado.
 ~
-3 fgcd 8
+3 108 0 0 0 8
 D1
 ~
 ~
@@ -399,7 +399,7 @@ sentimento, cada cheiro, e cada toque faz com que você se sinta mais em
 casa.  Você quase sente-se deitado no sofá pronto para descansar a tarde
 toda.
 ~
-3 fg 8
+3 96 0 0 0 8
 D1
 ~
 ~
@@ -418,7 +418,7 @@ respire em baixo de água possa acabar, e você terá que lutar por ar e buscar
 pela superfície.  Você percebe que está a total mercê do oceano, de joelhos
 diante do poder do profundo...
 ~
-3 fg 8
+3 96 0 0 0 8
 D1
 ~
 ~
@@ -436,7 +436,7 @@ que causa um frio arrepio em sua espinha.  Uma voz dentro de sua cabeça
 começa a chamar por você...  Quase um choro pedindo ajuda.  Tudo isso lhe
 diz para voltar, mas o bravo em você deseja continuar adiante...  Não é?
 ~
-3 fg 8
+3 96 0 0 0 8
 D0
 ~
 ~
@@ -456,7 +456,7 @@ agonia e terror enchem suas orelhas.  Cada alma perdida dos aventureiros
 derrotados se torna um fantasma em sua mente.  Será que vale mesmo a pena se
 arriscar assim?
 ~
-3 fg 8
+3 96 0 0 0 8
 D0
 ~
 ~
@@ -473,7 +473,7 @@ perda de pessoas amadas.  Imagens de mães se lamentando vêm a sua cabeça.
 Você vê todos eles, vestidos em negro, chorando até que as lágrimas se
 acabem.  Você suportaria ver sua família assim?  Ousaria continuar?
 ~
-3 fg 8
+3 96 0 0 0 8
 D0
 ~
 ~
@@ -493,7 +493,7 @@ Um Corredor Indescritível~
 do oceano.  A costumeira onda de emoções não aparece aqui.  Você se sente
 mais nulo do que qualquer outra coisa...
 ~
-3 fg 8
+3 96 0 0 0 8
 D0
 ~
 ~
@@ -513,7 +513,7 @@ Um Corredor Indescritível~
 do oceano.  A costumeira onda de emoções não aparece aqui.  Você se sente
 mais nulo do que qualquer outra coisa...
 ~
-3 fgdc 8
+3 108 0 0 0 8
 D1
 ~
 ~
@@ -533,7 +533,7 @@ Um Corredor Indescritível~
 do oceano.  A costumeira onda de emoções não aparece aqui.  Você se sente
 mais nulo do que qualquer outra coisa...
 ~
-3 fgdc 8
+3 108 0 0 0 8
 D0
 ~
 ~
@@ -555,7 +555,7 @@ que você viu, é tudo seu, somente seu.  Use seus tesouros sabiamente meu
 amigo.  Eles podem ser a melhor coisa que já aconteceu a você, ou a pior
 maldição que alguém já proferiu...
 ~
-3 fg 8
+3 96 0 0 0 8
 D1
 ~
 ~
@@ -567,7 +567,7 @@ Um Corredor~
 três passagens, então ele tem apenas uma parede.  Todas as direções podem
 guardar novas aventuras, e ainda, armadilhas e terror.
 ~
-3 cdg 8
+3 76 0 0 0 8
 D0
 ~
 ~
@@ -586,21 +586,21 @@ Um Corredor~
 CAMINHO ERRADO!!!
 OOPS
 ~
-3 fg 8
+3 96 0 0 0 8
 S
 #333
 Um Corredor~
 SEM SAÍDA!!!
 DUHH!!!!    
 ~
-3 fg 8
+3 96 0 0 0 8
 S
 #334
 Um Corredor~
 SEM SAÍDA!!!
 DUHH!!!!    
 ~
-3 fg 8
+3 96 0 0 0 8
 S
 #335
 Um Corredor~
@@ -609,7 +609,7 @@ lhe dar aquela sensação confortável, como se você estivesse em sua casa, lhe
 dando o sentimento de que você realizou sua tarefa, e agora vai sentar e
 relaxar com a família.
 ~
-3 fg 8
+3 96 0 0 0 8
 D1
 ~
 ~
@@ -625,7 +625,7 @@ Um Corredor~
 lhe dar aquela sensação confortável, como se você procurasse por sua casa e
 que seu objetivo está a poucos passos daqui...
 ~
-3 fg 8
+3 96 0 0 0 8
 D0
 ~
 ~
@@ -643,7 +643,7 @@ volta da lareira.  Papai está sentado em sua grande poltrona, mamãe está lhe
 esperando, com uma bandeja nas mãos.  Sua irmã está sentada no sofá,
 esperando que você faça companhia a ela.
 ~
-3 fg 8
+3 96 0 0 0 8
 D0
 ~
 ~
@@ -659,7 +659,7 @@ A Recompensa Final~
 todas, lhe chamando para ela.  Até o cheiro da atmosfera mudou para um
 triunfante aroma.  Você tem certeza que conseguiu...
 ~
-3 fg 8
+3 96 0 0 0 8
 D0
 ~
 ~
@@ -672,7 +672,7 @@ doca, e resolveu investigar.  Um pouco depois, você constata estar em um
 túnel subaquático, nadando entre corais e algas.  O caminho parece ser
 bastante movimentado, tendo marcas de passagem recente por todos os lados.
 ~
-3 fgdi 8
+3 360 0 0 0 8
 D4
 ~
 ~
@@ -688,7 +688,7 @@ O Túnel Subaquático~
 caminho parece ser bastante movimentado, tendo marcas de passagem recente
 por todos os lados.
 ~
-3 fgdi 8
+3 360 0 0 0 8
 D4
 ~
 ~
@@ -704,7 +704,7 @@ O Túnel Subaquático~
 caminho parece ser bastante movimentado, tendo marcas de passagem recente
 por todos os lados.
 ~
-3 fgdi 8
+3 360 0 0 0 8
 D4
 ~
 ~

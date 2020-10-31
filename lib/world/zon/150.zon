@@ -1,11 +1,11 @@
 #150
 Vitalia~
 O Castelo do Rei Welmar~
-15000 15099 120 2 k 0 0 0 -1 -1
+15000 15099 120 2
 M 0 15001 1 15017 	(Rei Welmar)
 E 1 15002 1 17 	(um cetro dourado)
 E 1 15003 1 6 	(uma coroa dourada)
-E 1 15004 1 0 	(uma maçã dourada)
+E 1 15004 1 0 	(uma maÃ§Ã£ dourada)
 G 1 15014 2 -1 	(uma chave)
 M 0 15003 1 15042 	(Jim)
 E 1 3022 100 16 	(uma espada longa)
@@ -84,8 +84,8 @@ O 0 3021 100 15023 	(um espadim)
 R 0 15023 3022 -1 	(uma espada longa)
 O 0 3022 100 15023 	(uma espada longa)
 O 1 15001 1 15037 	(o ouro)
-O 0 15005 1 15052 	(um largo telescópio)
-O 0 15011 1 15026 	(um grande baú de madeira)
+O 0 15005 1 15052 	(um largo telescÃ³pio)
+O 0 15011 1 15026 	(um grande baÃº de madeira)
 D 0 15004 0 1 	(Na Ponte Levadiça)
 D 0 15007 2 1 	(O Salão de Entrada)
 D 0 15007 3 1 	(O Salão de Entrada)

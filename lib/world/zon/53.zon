@@ -1,7 +1,7 @@
 #53
 Vitalia~
 A Grande Pirâmide~
-5300 5399 80 2 k 0 0 0 -1 -1
+5300 5399 80 2 j 0 0 0 -1 -1
 M 0 5300 6 5302 	(a horrível cobra)
 M 0 5300 6 5305 	(a horrível cobra)
 M 0 5300 6 5313 	(a horrível cobra)
@@ -91,22 +91,22 @@ O 0 5323 2 5319 	(o diamante)
 O 0 5310 1 5345 	(um imponente sarcófago de pedra)
 P 1 5311 2 5310 	(alguma poeira antiga)
 P 1 5312 2 5310 	(uma esmeralda em forma de escaravelho)
-D 0 5306 5 1 	(O �pice da Grande Pir�mide)
+D 0 5306 5 1 	(O Ápice da Grande Pirâmide)
 D 0 5308 4 1 	(A Escada)
-D 0 5309 3 1 	(Uma C�mara Mofada)
+D 0 5309 3 1 	(Uma Câmara Mofada)
 D 0 5310 1 1 	(A Piscina de Fogo)
 D 0 5322 2 2 	(No Final da Fenda)
-D 0 5323 0 2 	(A Ab�bada de uma L�mpada)
+D 0 5323 0 2 	(A Abóbada de uma Lâmpada)
 D 0 5326 3 2 	(Uma Tumba Demolida)
 D 0 5327 1 2 	(Uma Escada)
 D 0 5329 2 1 	(Uma Escada)
 D 0 5330 0 1 	(O Corredor Antigo)
 D 0 5331 5 1 	(O Altar Elevado)
-D 0 5332 4 1 	(A Tumba de Rams�s)
-D 0 5343 5 1 	(Uma Sala sem Sa�da)
+D 0 5332 4 1 	(A Tumba de Ramsés)
+D 0 5343 5 1 	(Uma Sala sem Saída)
 D 0 5344 4 1 	(A Entrada da Tumba)
 D 0 5344 0 1 	(A Entrada da Tumba)
-D 0 5345 2 1 	(A Tumba dos Fara�s)
+D 0 5345 2 1 	(A Tumba dos Faraós)
 D 0 5358 2 2 	(Uma Volumosa Duna de Areia)
 S
 $

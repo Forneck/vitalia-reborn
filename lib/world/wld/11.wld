@@ -7,12 +7,7 @@ branca o impede de ver o que há depois da ponte.
    Ao norte há uma enorme árvore solitária, única na paisagem.
    A estrada retorna ao Templo pela direção oeste.
 ~
-11 0 2
-D2
-Você repara que ali está havendo uma estranha movimentação.
-~
-~
-0 -1 2200
+11 0 0 0 0 2
 D0
 Uma trilha conduz a uma árvore, única em toda a vegetação.
 ~
@@ -23,11 +18,15 @@ A estrada continua na direção da ponte.
 ~
 ~
 0 -1 1105
+D2
+Você repara que ali está havendo uma estranha movimentação.
+~
+~
+0 -1 2200
 D3
 Você vê o Templo de Midgaard.
 ~
 porta~
-:n 2
 1 -1 3063
 S
 #1101
@@ -41,7 +40,7 @@ alguns frutos em seus galhos mais altos, e o tronco oferece apoio suficiente
 para você tentar escalá-la.
    Para sul, uma trilha leva de volta à estrada de terra fofa.
 ~
-11 0 2
+11 0 0 0 0 2
 D2
 A trilha retorna a estrada de terra fofa.
 ~
@@ -63,7 +62,7 @@ pode se machucar se cair desta altura.
    Os frutos estão mais acima, na parte superior da copa.  Se você quiser,
 você pode se arriscar a subir lá e pegar alguns dos frutos...
 ~
-11 0 2
+11 0 0 0 0 2
 D4
 Você consegue ver os frutos na parte superior da copa.
 ~
@@ -90,7 +89,7 @@ galho isolado, você nota um fruto de cor dourada, diferente de todos os
 outros.  O galho em que ele esta mal resiste ao peso do proprio fruto.  Você
 precisaria voar para chegar até ele.
 ~
-11 0 2    
+11 0 0 0 0 2
 D1
 Um pequeno fruto solitário de cor dourada esta pendurado em um galho.
 ~
@@ -112,7 +111,7 @@ O Fruto Sagrado~
 voltar pelo mesmo galho ou já que voce esta voando, descer atá a base da
 árvore.
 ~
-11 0 9
+11 0 0 0 0 9
 D3
 Você pode voar até a copa superior da arvore.
 ~
@@ -133,7 +132,12 @@ direção à ponte.  A cada passo na direção leste, a ponte vai se aproximando
 junto com a nevoa espessa.
    A oeste, a trilha retorna em direção ao templo de Midgaard.
 ~
-11 0 2
+11 0 0 0 0 2
+D0
+Você vê um caminho que leva até um vasto campo...
+~
+~
+0 -1 5700
 D1
 A trilha continua na direção da ponte.
 ~
@@ -144,11 +148,6 @@ A trilha retorna na direção do Templo de Midgaard.
 ~
 ~
 0 -1 1100
-D0
-Você vê um caminho que leva até um vasto campo...
-~
-~
-0 -1 5700
 S
 #1106
 O Final da Trilha~
@@ -157,7 +156,7 @@ o caminho fica mais difícil e cansativo.
    Você pode continuar a leste em direção à ponte, que fica mais próxima a
 cada passo, ou retornar ao Templo, voltando pela trilha, para oeste.
 ~
-11 0 3
+11 0 0 0 0 3
 D0
 ~
 ~
@@ -184,12 +183,16 @@ Midgaard.
    Dentre os arbustos, você ouve um barulho vindo do sul.  Ao oeste, a
 folhagem parece abrir caminho para algum lugar.
 ~
-11 0 3
+11 0 0 0 0 3
 D0
 A folhagem parece menos densa nesta direção.
 ~
 ~
 0 -1 -1
+D1
+~
+~
+0 -1 2300
 D2
 Além do barulho, você não vê nada de especial.
 ~
@@ -200,10 +203,6 @@ Este caminho retorna de volta ao Templo de Midgaard.
 ~
 ~
 0 -1 1106
-D1
-~
-~
-0 -1 2300
 S
 #1108
 A Lagoa Escura~
@@ -218,7 +217,7 @@ totalmente, e é muito densa para você atravessar.  No desespero, você nota
 algumas bolhas vindo a superficie do lago.  Talvez a saída seja para
 baixo...
 ~
-11 0 6
+11 0 0 0 0 6
 D5
 Tem umas bolhas de ar vindo dessa direção.
 ~
@@ -235,7 +234,7 @@ Dentro da Lagoa Escura~
 muito além. Sem poder ver muito, suas únicas opções são voltar à superficie,
 ou nadar até o fundo da lagoa.
 ~
-11 afgrs 8
+11 393313 0 0 0 8
 D4
 Está muito escuro para você ver alguma coisa.
 ~
@@ -253,7 +252,7 @@ Dentro da Lagoa Escura~
 a uma grande tubulação desembocando aquí, vindo do leste.
    Você ainda pode voltar a superficie deste ponto.
 ~
-11 afgrs 8
+11 393313 0 0 0 8
 D1
 Parece que não é usada a anos.
 ~
@@ -275,12 +274,11 @@ velho, que não é usado a anos.  Na sua entrada, tem uma grade com um cadeado
 enferrujado.  Parece que se voce quiser entrar no cano, você vai ter que dar
 um jeito neste cadeado.
 ~
-11 afgrs 8
+11 393313 0 0 0 8
 D0
 O tubalacao parece continuar para norte.
 ~
 grade~
-:n 2
 1 -1 1112
 D3
 ~
@@ -295,12 +293,11 @@ ainda pior que o do lago.
    Essa tubulação termina repentinamente e a unica direção a se tomar é uma
 bifurcação que leva para baixo, ou retornar nadando até a lagoa.
 ~
-11 agrs 0
+11 393281 0 0 0 0
 D2
 A tubulação retorna à lagoa.
 ~
 grade~
-:n 2
 1 -1 1111
 D5
 Esta muito escuro para você ver algo.
@@ -308,4 +305,4 @@ Esta muito escuro para você ver algo.
 ~
 0 -1 7022
 S
-$
+$~

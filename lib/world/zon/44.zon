@@ -1,7 +1,7 @@
 #44
 Vitalia~
 Qui'Lur~
-4400 4499 45 1 ak 0 0 0 -1 -1
+4400 4499 45 1 j 0 0 0 -1 -1
 M 0 4401 5 4437 	(um estranho arbusto)
 M 0 4401 5 4437 	(um estranho arbusto)
 M 0 4401 5 4437 	(um estranho arbusto)
@@ -58,9 +58,9 @@ M 0 4413 1 4462 	(Um elfo)
 R 0 4462 4403 -1 	(uma estranha noz)
 O 1 4403 20 4462 	(uma estranha noz)
 M 0 4403 1 4467 	(O Sentinela do portão)
-D 0 4456 3 1 	(Em Frente ao Port�o de Madeira)
+D 0 4456 3 1 	(Em Frente ao Portão de Madeira)
 O 0 4457 1 4456 	(uma placa de madeira)
-D 0 4455 1 1 	(Uma Trilha Atrav�s da Aldeia)
+D 0 4455 1 1 	(Uma Trilha Através da Aldeia)
 M 0 4400 1 4433 	(Elkain)
 E 1 4400 10 3 	(um capote escuro)
 E 1 4401 5 17 	(um amaldiçoado cajado de madeira Nirin)

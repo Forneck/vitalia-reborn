@@ -6,16 +6,16 @@ chafariz de mármore que desperta sua atenção.  O gramado é muito bem cuidado
 com lindos jardins de flores e arbustos muito bem podados.  Para norte você
 chega ao Museu.
 ~
-38 0 1
-D 3
-~
-~
-0 -1 3126
-D 0
+38 0 0 0 0 1
+D0
 Você vê a portaria do museu.
 ~
 ~
 0 -1 3801
+D3
+~
+~
+0 -1 3126
 S
 #3801
 A Portaria do Museu~
@@ -24,24 +24,17 @@ surpresas o aguardarão do lado de dentro.  Ao lado do que parece ser um
 quadro de avisos, cheio de papéis colados, encontra-se um pequeno gabinete
 onde está sentada uma sorridente recepcionista.
 ~
-38 ce 0
-D 0
+38 20 0 0 0 0
+D0
 O golem impede sua visão.
 ~
 ~
 0 -1 3802
-D 2
+D2
 Você vê os jardins do Museu.
 ~
 ~
 0 -1 3800
-E
-quadro~
-   Bem vindo ao Museu do Colecionador, onde não estão expostos apenas
-coleções de itens, mas a coleção das memórias de um grande Explorador.
-Por favor, mantenha silêncio e não toque em nada.  A prefeitura de Midgaard
-agradece sua colaboração.
-~
 E
 papeis~
    Um panfleto chama sua atenção.  Está escrito: "Gosta de colecionar
@@ -51,6 +44,13 @@ você também!".
    Logo abaixo dele foi colocado um bilhete escrito às pressas: "ONDE
 CONSIGO O CARD DA PUFF?? Faço qualquer coisa por ele, até troco pelos
 meus 2 itens dourados!!!"
+~
+E
+quadro~
+   Bem vindo ao Museu do Colecionador, onde não estão expostos apenas
+coleções de itens, mas a coleção das memórias de um grande Explorador.
+Por favor, mantenha silêncio e não toque em nada.  A prefeitura de Midgaard
+agradece sua colaboração.
 ~
 S
 #3802
@@ -63,32 +63,37 @@ vários quadros pelas paredes e estátuas espalhadas por aqui.  Há duas grandes
 escadarias que se encontram num belo balcão que leva para o segundo andar.
 Você também pode ver portas para leste, oeste, norte e sul.
 ~
-38 f 0
-D 4
-O segundo andar do Museu, onde parece haver uma loja.
-~
-~
-0 -1 3811
-D 0
+38 32 0 0 0 0
+D0
 Uma pequena placa no alto da porta diz: "Sala dos MOB´s".
 ~
 ~
 0 -1 3803
-D 2
-Uma pequena placa no alto da porta diz: "Saída".
-~
-~
-0 -1 3801
-D 1
+D1
 Uma pequena placa no alto da porta diz: "Sala dos Itens".
 ~
 ~
 0 -1 3805
-D 3
+D2
+Uma pequena placa no alto da porta diz: "Saída".
+~
+~
+0 -1 3801
+D3
 Uma pequena placa no alto da porta diz: "Sala da Fama".
 ~
 ~
 0 -1 3806
+D4
+O segundo andar do Museu, onde parece haver uma loja.
+~
+~
+0 -1 3811
+E
+estatuas~
+   Várias estátuas que representam as divindades gregas estão espalhadas
+pelo salão.
+~
 E
 quadros~
    Cada quadro neste salão parece retratar uma paisagem vista através de uma
@@ -97,11 +102,6 @@ Roma e Midgaard.  Algumas dessas "janelas" retratam cenários mais inusitados,
 como a vila dos Gnomos ou o reino subterrâneo dos Drows, e outras se abrem
 para belas paisagens, como cadeias de montanhas, lagos e mares.  Se todos são
 obras do Explorador, ele deve ter visitado inúmeros lares.
-~
-E
-estatuas~
-   Várias estátuas que representam as divindades gregas estão espalhadas
-pelo salão.
 ~
 S
 #3803
@@ -113,17 +113,17 @@ asas abertas e garras afiadas, está preso no alto do teto, olhando
 diretamente para você.  Ao lado da porta você pode ver as listas de CARD´s
 das Séries MOB´s.
 ~
-38 f 0
-D 2
-Uma pequena placa no alto da porta diz: "Salão Principal".
-~
-~
-0 -1 3802
-D 0
+38 32 0 0 0 0
+D0
 Uma pequena placa no alto da porta diz: "Sala das Áreas".
 ~
 ~
 0 -1 3804
+D2
+Uma pequena placa no alto da porta diz: "Salão Principal".
+~
+~
+0 -1 3802
 E
 dragao~
    Você vê um enorme dragão verde empalhado, mas que ainda parece vivo o
@@ -145,71 +145,71 @@ fica claro que aqui é possível desfrutar de TODAS as áreas de Vitália.  Voc�
 pode ver as listas de CARD´S das Séries Áreas aparecerem cada hora num lugar
 diferente.  Por falar nisso, onde foi parar a porta por onde você entrou?
 ~
-38 fht 0
-D 0
+38 524448 0 0 0 0
+D0
 Você pode observar a tumultuada praça do mercado de Nova Thalos.  Uma pequena
 placa na entrada de uma loja diz: "Sala dos MOB´s".
 ~
 ~
-d -1 3803
-D 1
+1 -1 3803
+D1
 O gélido mar do Ártico se estende ao leste.  Há um grande navio de guerra
 viking com uma pequena placa que diz: "Sala dos MOB's" pregada em sua lateral.
 ~
 ~
-d -1 3803
-D 2
+1 -1 3803
+D2
 Você está diante de um solo infinito, que se estende até sumir de vista.
 Que lugar será esse?  Flutuando ao longe você vê uma pequena placa que
 diz: "Sala dos MOB's".
 ~
 ~
-d -1 3803
-D 3
+1 -1 3803
+D3
 A entrada de uma grande caverna de onde parece sair um forte ressonar
 encontra-se a oeste.  Ao lado de um corpo carbonizado você vê que uma
 pequena placa que diz: "Sala dos MOB's".
 ~
 ~
-d -1 3803
-D 4
+1 -1 3803
+D4
 Você está diante do famoso Templo de Midgaard.  Na sua entrada parece ter
 sido colocada uma importante placa que diz: "Sala dos MOB's".
 ~
 ~
-d -1 3803
-D 5
+1 -1 3803
+D5
 Você pode ver Morte, o Ceifeiro Cruel em pé aqui.  Espere? Quando foi que
 você morreu? E o que é aquilo na mão dele? Uma pequena placa que diz:
 "Sala dos MOB's"?!
 ~
 ~
-d -1 3803
-D 6
+1 -1 3803
+D6
 Uma pequena toca hobbit encontra-se nessa direção.  Na sua entrada há uma
 bela placa ricamente entalhada que diz: "Sala dos MOB's".
 ~
 ~
-d -1 3803
-D 7
+1 -1 3803
+D7
 Há um enorme tabuleiro de xadrez nessa direção.  Você vê uma grande torre
 branca com uma pequena placa que diz: "Sala dos MOB's".
 ~
 ~
-d -1 3803
-D 8
+1 -1 3803
+D8
 A floresta à sua frente o deixa tão desnorteado que você se sente perdido.
 Felizmente há uma pequena placa numa árvore que diz: "Sala dos MOB's".
 ~
 ~
-d -1 3803
-D 9
+1 -1 3803
+D9
 A música vinda daqui chega-lhe aos ouvidos antes mesmo de você avistar o
 Festival.  Sobre um carroção cigano há uma pequena placa que diz:
 "Sala dos MOB's".
 ~
 ~
-d -1 3803
+1 -1 3803
 S
 #3805
 A Sala dos Itens~
@@ -221,22 +221,15 @@ doados pelos próprios Deuses de Vitália.  No centro, uma grande cúpula de
 cristal chama sua atenção.  Ao lado da porta pode-se ver as listas de CARD´S
 das Séries Itens.
 ~
-38 fh 0
-D 3
+38 160 0 0 0 0
+D3
 Uma pequena placa no alto da porta diz: "Salão Principal".
 ~
 ~
 0 -1 3802
 E
-cúpula cristal~
-   Sobre um pedestal de ouro cravejado com jóias se encontra uma enorme
-Cúpula de Cristal, tão fina e transparente que parece não existir.  Dentro
-dela estão todos os itens DOURADOS de Vitália.  Você pode sentir uma
-radiação mágica emanando da Cúpula.
-~
-E
 dourados~
-@Ya Lâmina Élfica de Alaric
+	Ya Lâmina Élfica de Alaric
 um escudo de fogo
 as Manoplas de Zoghtu
 o Olho de Horus
@@ -254,7 +247,14 @@ O Bracelete do Verão
 O Cinturão do Outono
 O Anel da Primavera
 o Aro de Phanzyenon
-A Pena Dourada do Escritor@n
+A Pena Dourada do Escritor	n
+~
+E
+cúpula cristal~
+   Sobre um pedestal de ouro cravejado com jóias se encontra uma enorme
+Cúpula de Cristal, tão fina e transparente que parece não existir.  Dentro
+dela estão todos os itens DOURADOS de Vitália.  Você pode sentir uma
+radiação mágica emanando da Cúpula.
 ~
 S
 #3806
@@ -267,17 +267,16 @@ tantas personalidades famosas, parece haver uma estranha estátua sem rosto
 de um Ilustre Desconhecido.  Ao lado da porta pode-se ver as listas de
 CARD´S das Séries Personalidades.
 ~
-38 0 0
-D 1
+38 0 0 0 0 0
+D1
 Uma pequena placa no alto da porta diz: "Salão principal".
 ~
 ~
 0 -1 3802
-D 5
+D5
 ~
 estatua chao~
-:n 2 a estátua de um Ilustre Desconhecido
-ad -1 3807
+1 -1 3807
 S
 #3807
 A Passagem Secreta para Dentro de Si Mesmo~
@@ -292,8 +291,8 @@ duro conseguir aquele item pela segunda vez, depois da DT! Mas valeu a pena,
 você se esforçou tanto por ele... E quando você achou aquela área nova? Você
 se emocionou bastante aquele dia.
 ~
-38 cf 0
-D 3
+38 36 0 0 0 0
+D3
 Uma passagem que traz boas recordações.
 ~
 ~
@@ -312,8 +311,8 @@ quais você ajudou um amigo, sem esperar nada em troca e nem pensar duas vezes.
 Ou então quando foram seus amigos que ajudaram você.  Esses momentos você
 guardará para sempre com muito carinho.
 ~
-38 cf 0
-D 3
+38 36 0 0 0 0
+D3
 Uma passagem que traz boas recordações.
 ~
 ~
@@ -334,8 +333,8 @@ tão legais, tão preciosas.  E é justamente pensando em momentos como estes,
 que você decide apertar seu passos e sair logo daqui, para poder reencontrar
 seus amigos e dizer pra eles o quanto são importantes para você.
 ~
-38 cf 0
-D 3
+38 36 0 0 0 0
+D3
 O fim das recordações.
 ~
 ~
@@ -354,8 +353,8 @@ e nobre, dando o melhor de si para também ajudar a fazer dela um lugar melhor.
 Para você e para todos.  Com isso em mente, você se depara com uma bela
 escadaria, e no topo dela você parece avistar algumas estátuas.
 ~
-38 cf 0
-D 4
+38 36 0 0 0 0
+D4
 Voce ve as estatuas dos grandes Deuses Criadores e Supremos.
 ~
 ~
@@ -367,11 +366,11 @@ A Sala das Trocas~
 paredes pode-se ver várias cartas de todas as séries.  No fundo da sala,
 atrás de um balcão, pode-se ver o jovem Pilgoras separando algumas cartas.
 ~
-38 e 0
-D 5
+38 16 0 0 0 0
+D5
 O Salão principal do Museu.
 ~
 ~
 0 -1 3802
 S
-$
+$~

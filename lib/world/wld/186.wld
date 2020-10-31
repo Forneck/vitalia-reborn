@@ -3,7 +3,7 @@ A Entrada para a Zona dos Iniciantes~
    Ahhh... A entrada para a zona dos iniciantes! O lugar pelo qual você tem
 procurado. Bem, quando você estiver pronto, siga para o norte.
 ~
-186 c 1
+186 4 0 0 0 1
 D0
 Voce vê o começo da Zona dos Iniciantes.
 ~
@@ -17,7 +17,7 @@ de criaturas vagando por perto mas não pode dizer, com certeza, de onde
 o som vem exatamente.
    A saída fica ao leste, ao longo da antecâmara e ao sul de volta à entrada.
 ~
-186 d 0
+186 8 0 0 0 0
 D1
 Mais da antecâmara aqui... que excitante!
 ~
@@ -38,7 +38,7 @@ podiam arrumar alguém para limpar este lugar?   O que os iniciantes não
 irão pensar?
    Bem, você pode continuar ao longo da antecâmara para leste ou oeste.
 ~
-186 d 0
+186 8 0 0 0 0
 D1
 Mais da antecâmara aqui... que excitante!
 ~
@@ -48,7 +48,6 @@ D2
 Uma pequena sala fica ao sul... você ouve algo se movendo lá dentro.
 ~
 porta~
-:n 2
 1 -1 18606
 D3
 Mais da antecâmara aqui... que excitante!
@@ -61,18 +60,16 @@ Um Nexus~
    Bem... você alcançou uma intersecção de duas passagens, para norte
 e leste a passagem se ilumina mas a antecâmara escura continua ao sul.
 ~
-186 d 0
+186 8 0 0 0 0
 D0
 Uma antecâmara mais iluminada vai por esse caminho.
 ~
 porta~
-:n 2
 1 -1 18644
 D1
 Uma antecâmara mais iluminada vai por esse caminho.
 ~
 porta~
-:n 2
 1 -1 18646
 D2
 Mais da antecâmara aqui... que excitante!
@@ -90,7 +87,7 @@ Uma Passagem Estreita~
    A passagem estreita é limpa e sem nenhuma decoração.   Termina abruptamente
 ao sul em uma pequena porta de carvalho, atrás da qual você ouve movimento...
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 Um grande quarto abobadado.
 ~
@@ -100,7 +97,6 @@ D2
 Um pequeno quarto baguncado.
 ~
 porta~
-:n 2
 1 -1 18612
 S
 #18605
@@ -110,12 +106,11 @@ de lixo, olhando pra você de um canto?   ECCAAA!   Talvez você devesse voltar
 para cima, onde é um pouco mais seguro, a menos que você possa enfrentar
 aquela coisa nojenta...
 ~
-186 ad 0
+186 9 0 0 0 0
 D4
 Voce vê uma escada subindo.
 ~
 grade~
-:n 2
 1 18608 18606
 S
 #18606
@@ -126,24 +121,21 @@ surpreso com sua intromissão.   Você pode partir pela porta ao norte ou leste,
 ou você pode ficar e aborrece-lo um pouco mais.   Também parece haver um poço
 aqui mas há uma grade bastante segura e pesada que o está cobrindo.
 ~
-186 d 0
+186 8 0 0 0 0
 D0
 Mais da antecâmara aqui... que excitante!
 ~
 porta~
-:n 2
 1 -1 18602
 D1
 Mais da antecâmara aqui... que excitante!
 ~
 porta~
-:n 2
 1 -1 18607
 D5
 Uma escada desce para a escuridão.
 ~
 grade~
-:n 2
 1 18608 18605
 S
 #18607
@@ -152,7 +144,7 @@ Mais da Antecâmara~
 atrás daquela porta a oeste? Ou será que existem outras antecâmaras ao norte
 e ao sul?
 ~
-186 d 0
+186 8 0 0 0 0
 D0
 Mais da antecâmara aqui... que excitante!
 ~
@@ -166,7 +158,6 @@ Mais da antecâmara aqui... que excitante!
 D3
 ~
 porta~
-:n 2
 1 -1 18606
 S
 #18608
@@ -175,7 +166,7 @@ Um Campo Aberto no Grande Campo~
 novamente!  Você pode voltar àquele lugar nojento e fedorento ao leste ou
 usar a saída a norte, que parece ser um ótimo atalho para o Templo.
 ~
-186 c 0
+186 4 0 0 0 0
 D0
 Parece haver uma estrada no campo ao norte.
 ~
@@ -192,7 +183,7 @@ O Final da Passagem~
     Ahhh... Finalmente o final da antecâmara... Você pode sair ao ar livre
 ao oeste, ou voltar para leste e se certificar de não ter esquecido nada.
 ~
-186 d 0
+186 8 0 0 0 0
 D1
 Mais da antecâmara aqui... que excitante!
 ~
@@ -209,7 +200,7 @@ Uma Antecâmara Iluminada~
    A antecâmara continua em direção ao leste e oeste... e as coisas parecem 
 estar mais claras a oeste.
 ~
-186 d 0
+186 8 0 0 0 0
 D1
 Um canto na passagem fica a leste.
 ~
@@ -227,7 +218,7 @@ Outro Canto~
 quem sabe, talvez até mais!!!   Há uma porta ao leste...Para onde ela levará?
 Ah!!! e a antecâmara continua para o oeste e norte.
 ~
-186 d 0
+186 8 0 0 0 0
 D0
 Mais da antecâmara aqui... que excitante!
 ~
@@ -237,7 +228,6 @@ D1
 Voce espia dentro de um quartinho entulhado a leste.
 ~
 porta~
-:n 2
 1 -1 18612
 D3
 Mais da antecâmara aqui... que excitante!
@@ -254,18 +244,16 @@ também... Será que ele não possui dinheiro para comprar papel?   Há uma port
 ao norte e também uma escadaria escura num canto, que parece descer para algum
 lugar, com um grande aviso próximo a ela, que você talvez devesse ler...
 ~
-186 d 0
+186 8 0 0 0 0
 D0
 Uma bela e iluminada antecâmara!
 ~
 porta~
-:n 2
 1 -1 18604
 D3
 Um canto da passagem fica a oeste.
 ~
 porta~
-:n 2
 1 -1 18611
 D5
 Uma escaria escura descendo.
@@ -286,7 +274,7 @@ Uma Curva na Passagem~
    Este canto é bem parecido com os outros... Exceto por um pequeno brilho
 que você percebe, vindo do sul.   Poderia ser uma saída... Você espera...
 ~
-186 ad 0
+186 9 0 0 0 0
 D1
 A passagem continua a leste.
 ~
@@ -304,7 +292,7 @@ Uma Intersecção em "T" na Passagem~
 corredor que segue para o sul.   O ar parece um pouco mais claro, como se você
 estivesse se aproximando de uma saída.
 ~
-186 ad 0
+186 9 0 0 0 0
 D1
 ~
 ~
@@ -324,7 +312,7 @@ Outro Canto~
 As paredes ainda são cobertas com os mesmos fungos nojentos que você tem visto,
 e você ouve sons de criaturas se movendo à sua volta...
 ~
-186 ad 0
+186 9 0 0 0 0
 D2
 ~
 ~
@@ -341,7 +329,7 @@ muito reconfortantes, não.   Talvez nem fosse bom mencionar nada sobre a
 mobília...As paredes acinzentadas são lisas, com uma imensa quantidade de fungo 
 verde (ou alguma coisa) crescendo sobre elas.
 ~
-186 ad 0
+186 9 0 0 0 0
 D1
 ~
 ~
@@ -357,7 +345,7 @@ Outra Curva~
 que pode facilmente perder seu pertences se não for cuidadoso e começa a achar
 que talvez fosse melhor não perder muito tempo aqui...
 ~
-186 ad 0
+186 9 0 0 0 0
 D2
 ~
 ~
@@ -372,7 +360,7 @@ Uma Sala Maior~
    A passagem se abre para um grande salão oval.   Não há nada de muito
 interessante por aqui...
 ~
-186 ad 0
+186 9 0 0 0 0
 D1
 ~
 ~
@@ -388,7 +376,7 @@ Uma Longa Passagem Leste-Oeste~
 paredes sao úmidas e cobertas com bolor e fungos.   O ar aqui é pouco
 saudável e você começa a querer sair daqui... e rápido!
 ~
-186 ad 0
+186 9 0 0 0 0
 D1
 ~
 ~
@@ -404,7 +392,7 @@ Um Cruzamento de Corredores~
 ao norte e sul.   O ar é umido e há um cheiro de decadência e ruínas no ar.
 Realmente esse nao é um lugar muito agradável...
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 ~
 ~
@@ -427,7 +415,7 @@ Um Canto do Quarto~
    Este quarto é pouco mais que um cruzamento de passagens.   Você sente uma
 leve brisa vinda da passagem ao norte mas tem um cheiro ruim...
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 ~
 ~
@@ -446,7 +434,7 @@ indo em direção a um templo.  Mais estranho ainda: é tão real, que você
 consegue sentir o vento dos campos e a movimentação do templo, vindos da
 pintura.
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 ~
 ~
@@ -470,7 +458,7 @@ Uma Passagem Dividida~
    A passagem norte-sul se divide para o leste, daqui.   Há um estrambólico
 brilho vermelho vindo desse lado também, como se fosse uma leve brisa.
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 ~
 ~
@@ -492,7 +480,7 @@ mas a passagem é tão estreita, toda vez que você se mexe, você esbarra nelas
 por mais cuidadoso que você esteja sendo.   Você está quase convencido de que
 o fungo que cobre estas paredes, está quase cobrindo você também.
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 ~
 ~
@@ -512,7 +500,7 @@ A Entrada~
 criaturas se movendo à sua volta... De algum modo, elas não soam nada amigáveis.
 Talvez seja uma sábia atitude ter um pouco de cautela aqui...
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 ~
 ~
@@ -536,7 +524,7 @@ Outro Canto~
 brisa vinda do norte.   Talvez fosse bom que você pudesse aprender a andar 
 nesse lugar, não?
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 ~
 ~
@@ -552,7 +540,7 @@ Uma Intersecção de Passagens~
 com as sobras da verdura da semana.  Ainda assim, você não queria fazer nada
 aqui, apenas pretende sair o mais rápido possível.
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 ~
 ~
@@ -572,7 +560,7 @@ Uma Curva na Passagem~
 tivesse morrido aqui.   Você espera não ser o próximo mas, pelos sons que você
 ouve à sua volta, parece que alguma coisa tem outras idéias a este respeito.
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 ~
 ~
@@ -589,7 +577,7 @@ cheiro de morte.   Realmente, o bolor e o fungo das paredes ajuda bastante,
 mas por outro lado... bem... você não gostaria de pensar sobre o que mais 
 vive neste lugar.
 ~
-186 ad 0
+186 9 0 0 0 0
 D1
 ~
 ~
@@ -609,7 +597,7 @@ Mais Outro Canto~
 à sua frente, se seguir por este caminho, mas não está muito certo disso.
 Você não está muito seguro se quer realmente saber algo além desse ponto.
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 ~
 ~
@@ -627,7 +615,7 @@ está vulnerável em todos os sentidos.   Você não pode nem imaginar o tamanho
 desta sala, pois a mesma se extende para o leste, muito mais do que a sua luz
 consegue alcançar...
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 ~
 ~
@@ -646,7 +634,7 @@ além do alcance da sua luz e sombras escuras lhe deixam paranóico...
 Algo poderia se esconder lá.   Você está dolorosamente consciente, de como
 você fica exposto e frágil, quando não existem paredes à sua volta.
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 ~
 ~
@@ -657,12 +645,12 @@ A sala se estende ao longo (mais longe ainda) do que você consegue ver...
 ~
 0 -1 18638
 E
-escrita escrito palavras palavra~
-A escrita aparentemente diz: "Cuidado com o Minotauro..."
-~
-E
 parede~
 Há uma pintura de um homem com cabeca de touro, com alguns escritos perto.
+~
+E
+escrita escrito palavras palavra~
+A escrita aparentemente diz: "Cuidado com o Minotauro..."
 ~
 S
 #18640
@@ -670,7 +658,7 @@ A Sala da Estátua~
    Aqui a passagem entra em uma pequena sala.   A saída leva a leste e sul,
 e você vê uma maravilhosa e bastante grande (e de bom gosto) estátua, ao norte.
 ~
-186 ad 0
+186 9 0 0 0 0
 D1
 Uma longa antecâmara, terminando em uma escadaria.
 ~
@@ -682,15 +670,15 @@ A sala se estende ao sul e parece iluminar um pouco.
 ~
 0 -1 18644
 E
-estatua~
-Olhando de perto, você vê que a estátua tem uma pequena placa afixada nela.
-A face lhe parece impressionantemente familiar.
-~
-E
 placa~
 Diz:
 
 Maynard, o Bufão Morto dos Arlequins.
+~
+E
+estatua~
+Olhando de perto, você vê que a estátua tem uma pequena placa afixada nela.
+A face lhe parece impressionantemente familiar.
 ~
 S
 #18641
@@ -699,7 +687,7 @@ A Antecâmara~
 outras finas decorações que estão enfeitando as paredes ao longo da passagem.
 Parece muito diferente da passagem tão despojada e sem graça, de onde você veio.
 ~
-186 ad 0
+186 9 0 0 0 0
 D1
 A antecâmara termina em uma grande escadaria de mármore.
 ~
@@ -718,7 +706,7 @@ que você sai da passagem, você vê que a escada leva a uma sacada a céu abert
 que se debruça sobre a área.   Ao sul, a sala prolonga-se e outra escada é
 visível, unindo-se àquela que está à sua frente.
 ~
-186 ad 0
+186 9 0 0 0 0
 D2
 Você vê outra escadaria e duas passagens levando a oeste e sul.
 ~
@@ -746,7 +734,7 @@ semi-círculo que circunda todo o domo da sala, a sacada permite que você
 olhe em qualquer direção.   Ao extremo norte, você pode ver que os 
 Grandes Campos de Midgaard se prolongam até as Montanhas Dragonhelm, ao norte.
 ~
-186 0 0
+186 0 0 0 0 0
 D2
 O extremo sul da sacada.
 ~
@@ -768,7 +756,7 @@ Uma Antecâmara Iluminada~
 deve realmente gostar de iniciantes.   As paredes e o chão são limpos e
 lindamente decorados.   Você repara em um interesante desenho no chão.
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 Uma pequena sala com uma estátua.
 ~
@@ -778,7 +766,6 @@ D2
 Um cruzamento de passagens.
 ~
 porta~
-:n 2
 1 -1 18603
 E
 chao desenho~
@@ -792,7 +779,7 @@ semi-círculo que circunda todo o domo da sala, a sacada permite que você
 olhe para qualquer direção.   No extremo sul, você pode ver a grande Cidade de
 Midgaard.
 ~
-186 0 0
+186 0 0 0 0 0
 D0
 O extremo norte da sacada.
 ~
@@ -814,7 +801,7 @@ Uma Antecâmara Iluminada~
 deve realmente gostar de iniciantes.   As paredes e o chão são limpos e
 lindamente decorados.   Você repara num interesante desenho no chão.
 ~
-186 ad 0
+186 9 0 0 0 0
 D1
 A passagem se abre em uma sala abobadada com uma grande escadaria de mármore.
 ~
@@ -824,7 +811,6 @@ D3
 Uma escura interseção de passagens
 ~
 porta~
-:n 2
 1 -1 18603
 E
 chao desenho~
@@ -838,7 +824,7 @@ que você sai da passagem, você vê que a escada leva a uma sacada a céu abert
 que se debruça sobre a área.   Ao norte, a sala se prolonga e outra escada é
 visível, unindo-se àquela que está à sua frente.
 ~
-186 ad 0
+186 9 0 0 0 0
 D0
 Outra escadaria fica ao norte, assim como uma passagem para oeste.
 ~
@@ -870,16 +856,16 @@ A Saída para a Zona dos Iniciantes~
 aqui, vá embora seguindo para oeste, onde fica um pequeno atalho que leva
 direto ao Templo.  Caso de mudado de idéia, siga norte.
 ~
-186 c 1
-D3
-Ali fica o atalho.
-~
-~
-0 -1 50
+186 4 0 0 0 1
 D0
 Voce vê o começo da Zona dos Iniciantes.
 ~
 ~
 0 -1 18601
+D3
+Ali fica o atalho.
+~
+~
+0 -1 50
 S
-$
+$~

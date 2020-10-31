@@ -391,44 +391,44 @@ Um extenso pergaminho de papel muito branco foi afixado na porta.~
 E
 lista compras moveis~
 Você lê, gravados em letra dourada e caligrafia perfeita:
-@W"  
-@Y Lista de Móveis e Utensílios Disponíveis para os Locatários de Casas em
-Vitália:@n
+	W"  
+	Y Lista de Móveis e Utensílios Disponíveis para os Locatários de Casas em
+Vitália:	n
 
-@R01) @Yuma janela para as Montanhas Dragonhelm
-@R02) @Yuma janela para Midgaard
-@R03) @Yuma janela para as Terras Orientais
-@R04) @Yuma janela para as Florestas
-@R05) @Yuma estante de livros feita de ébano
-@R06) @Yuma mesa de refeições
-@R07) @Yum forno a lenha
-@R08) @Yuma poltrona estofada
-@R09) @Yum armário de ébano
-@R10) @Yuma cama com dossel
-@R11) @Yum tapete persa com motivos florais
-@R12) @Yuma grande lamparina
-@R13) @Yum espelho com moldura
-@R14) @Yum quadro de sua família
-@R15) @Yum tapete de carneiro
-@R16) @Yuma cadeira de carvalho
-@R17) @Yuma cama de carvalho
-@R18) @Yum vaso de flores campestres
-@R19) @Yum bule de chá
-@R20) @Yuma xícara de porcelana
-@R21) @Yum bolo de aniversário
-@R22) @Yuma bacia de água
-@R23) @Yuma lareira
-@R24) @Yuma escrivaninha
-@R25) @Yum largo telescópio
-@R26) @Yuma escultura
-@R27) @Yuma estátua
-@R28) @Ybaús@n
+	R01) 	Yuma janela para as Montanhas Dragonhelm
+	R02) 	Yuma janela para Midgaard
+	R03) 	Yuma janela para as Terras Orientais
+	R04) 	Yuma janela para as Florestas
+	R05) 	Yuma estante de livros feita de ébano
+	R06) 	Yuma mesa de refeições
+	R07) 	Yum forno a lenha
+	R08) 	Yuma poltrona estofada
+	R09) 	Yum armário de ébano
+	R10) 	Yuma cama com dossel
+	R11) 	Yum tapete persa com motivos florais
+	R12) 	Yuma grande lamparina
+	R13) 	Yum espelho com moldura
+	R14) 	Yum quadro de sua família
+	R15) 	Yum tapete de carneiro
+	R16) 	Yuma cadeira de carvalho
+	R17) 	Yuma cama de carvalho
+	R18) 	Yum vaso de flores campestres
+	R19) 	Yum bule de chá
+	R20) 	Yuma xícara de porcelana
+	R21) 	Yum bolo de aniversário
+	R22) 	Yuma bacia de água
+	R23) 	Yuma lareira
+	R24) 	Yuma escrivaninha
+	R25) 	Yum largo telescópio
+	R26) 	Yuma escultura
+	R27) 	Yuma estátua
+	R28) 	Ybaús	n
 
-@W   Assim que possível, comuniquem às divindades responsáveis sobre quais
+	W   Assim que possível, comuniquem às divindades responsáveis sobre quais
 itens serão encomendados.
-     Atenciosamente,@n
+     Atenciosamente,	n
 
-     @BDomus Negotium@W, a Imobiliária de Vitália."@n
+     	BDomus Negotium	W, a Imobiliária de Vitália."	n
 ~
 #1030
 escrivaninha~
@@ -649,22 +649,22 @@ Um extenso pergaminho de papel foi deixado aqui.~
 E
 lista presentes~
 Você lê, gravados em letra dourada e caligrafia perfeita:
-@W"  
-@Y Lista de Objetos para Presentes para entregas a Domicílio de Vitália:@
+	W"  
+	Y Lista de Objetos para Presentes para entregas a Domicílio de Vitália:	
 
-@R01) @YUm vidro de perfume frances
-@R02) @YUma aliança de Noivado
-@R03) @YUma aliança de Casamento
-@R04) @Yum espelho de cristal
-@R05) @Yum perfumado bouquet de flores
-@R06) @Yuma linda sombrinha rendada
-@R07) @Yuma boneca de porcelana
-@R08) @Yuma pequena bússola de prata
-@R09) @Yum monóculo de ouro
-@R10) @Yum vaso de flores campestres
-@R11) @Yum bule de chá
-@R12) @Yuma xícara de porcelana
-@R13) @Yum bolo de aniversário@n
+	R01) 	YUm vidro de perfume frances
+	R02) 	YUma aliança de Noivado
+	R03) 	YUma aliança de Casamento
+	R04) 	Yum espelho de cristal
+	R05) 	Yum perfumado bouquet de flores
+	R06) 	Yuma linda sombrinha rendada
+	R07) 	Yuma boneca de porcelana
+	R08) 	Yuma pequena bússola de prata
+	R09) 	Yum monóculo de ouro
+	R10) 	Yum vaso de flores campestres
+	R11) 	Yum bule de chá
+	R12) 	Yuma xícara de porcelana
+	R13) 	Yum bolo de aniversário	n
 ~
 #1050
 gorro noel vermelho papai~
@@ -867,7 +867,7 @@ Você fica extasiado ao olhar para este pinheiro gigantesco, totalmente
 enfeitado com belíssimas peças que mais parecem ser jóias. Uma suave luz
 dourada o envolve por completo, destacando uma pequena jóia que foi colocada
 na ponta de seu galho mais alto, onde se pode ler:
-@RT@Ge@Rn@Gh@Ra @Gu@Rm @RF@Ge@Rl@Gi@Rz @f@RN@Ga@Rt@Ga@Rl@n.
+	RT	Ge	Rn	Gh	Ra 	Gu	Rm 	RF	Ge	Rl	Gi	Rz 	f	RN	Ga	Rt	Ga	Rl	n.
 ~
 #1065
 banana fatal~

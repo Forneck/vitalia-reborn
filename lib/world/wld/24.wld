@@ -6,7 +6,7 @@ Brutas mobílias feitas de madeira flutuante e pedras se espalham pela sala,
 e alguns farrapos estão pendurados por um pino de madeira encravado em uma
 rachadura na parede de pedra.
 ~
-24 ci 0
+24 260 0 0 0 0
 D3
 ~
 ~
@@ -14,8 +14,7 @@ D3
 D5
 ~
 madeira~
-:n 2 uma madeira
-a -1 2407
+1 -1 2407
 S
 #2401
 Sala de Esqueletos~
@@ -24,7 +23,7 @@ tripulação que cometeram crimes ou outro tipo de irregularidade.  Há uma
 pilha de ossos humanos em um canto, sendo a única coisa da sala, exceto, é
 claro, pelo cheiro das envelhecidas caveiras.
 ~
-24 ad 0
+24 9 0 0 0 0
 D4
 ~
 ~
@@ -44,12 +43,11 @@ mais umido do que acima, perto do mar.
 todos misturados em um só, como o de centenas de avós sentadas em velhas
 cadeiras de balanço ao mesmo tempo.
 ~
-24 aci 0
+24 261 0 0 0 0
 D4
 ~
 madeira~
-:n 2 uma madeira
-a -1 2400
+1 -1 2400
 D5
 ~
 ~
@@ -67,7 +65,7 @@ principal deste navio.  Você não nota movimentos pelo convés, não o quanto
 você esperava, e parece que este navio esta encalhado aqui por décadas, e
 talvez, até centenas de anos.
 ~
-24 aci 0
+24 261 0 0 0 0
 D4
 ~
 ~
@@ -85,7 +83,7 @@ meio do navio.  Há cordas por todos os lados, mas nenhuma delas parece ser
 estável o suficiente.
    A corda segue para cima, através da névoa.
 ~
-24 0 5
+24 0 0 0 0 5
 D4
 ~
 ~
@@ -104,7 +102,7 @@ te-lo abandonado há muito tempo, ou morrido ao tentar sair desta caverna.
    O passadiço segue para norte e sul pela extensão do navio.  As amuradas
 seguem para leste e oeste de você.
 ~
-24 0 3
+24 0 0 0 0 3
 D0
 ~
 ~
@@ -133,7 +131,7 @@ Passadiço~
 sensação de um iminente perigo.  Uma escotilha aqui lhe da acesso ao convés
 inferior.
 ~
-24 0 3
+24 0 0 0 0 3
 D0
 ~
 ~
@@ -156,7 +154,7 @@ Passadiço no Mastro de Proa~
    O mastro de proa se ergue do convés aqui, e o cordame podre ainda selado
 às esfarrapadas velas.  O passadiço segue para norte e sul de você.
 ~
-24 0 0
+24 0 0 0 0 0
 D0
 ~
 ~
@@ -175,7 +173,7 @@ angra com águas profundas o suficiente para ancorar um navio.  A parede ao
 norte, agora uma grande pilha de entulho, deve ter desmoronado e aprisionado
 o navio.
 ~
-24 d 0
+24 8 0 0 0 0
 D0
 ~
 ~
@@ -191,7 +189,7 @@ A Proa~
 quadrada aqui seguindo para baixo, ou você pode seguir para sul ao longo do
 passadiço.
 ~
-24 0 0
+24 0 0 0 0 0
 D2
 ~
 ~
@@ -207,7 +205,7 @@ Convés da Popa~
 onde a maioria das velas devem ter sido feitas, quando este navio ainda não
 tinha sido aprisionado aqui.
 ~
-24 0 0
+24 0 0 0 0 0
 D0
 ~
 ~
@@ -225,7 +223,7 @@ senhum corte ou arranhão.  Há também uma bússola aqui, parecendo estar em
    Você pode seguir para norte em direção ao passadiço, ou para sul indo
 para a popa do navio.
 ~
-24 d 0
+24 8 0 0 0 0
 D0
 ~
 ~
@@ -242,7 +240,7 @@ caverna.  Os pisos aqui ainda parecem estar livres de qualquer tipo de
 sujeira ou entulhos, o que é estranho para um navio que parece estar
 empacado aqui por tanto tempo.
 ~
-24 d 0
+24 8 0 0 0 0
 D0
 ~
 ~
@@ -252,7 +250,7 @@ S
 Amurada Bombordo~
    Os lados do navio são inacabados, com três pés de altura.
 ~
-24 0 0
+24 0 0 0 0 0
 D1
 ~
 ~
@@ -262,7 +260,7 @@ S
 Amurada Estibordo~
    Os lados do navio são inacabados, com três pés de altura.
 ~
-24 0 0
+24 0 0 0 0 0
 D3
 ~
 ~
@@ -275,7 +273,7 @@ Você percebe portas em alguns momentos, na sua frente e atrás de você, mas
 nenhuma muito próxima.  As portas parecem estar fechadas no fim do corredor,
 nos dois sentidos.
 ~
-24 ad 0
+24 9 0 0 0 0
 D0
 ~
 ~
@@ -294,7 +292,7 @@ Em um Corredor - Convés Inferior~
    O corredor acaba a norte de você, em uma porta.  Portas o circulam em seu
 lado oeste e leste.
 ~
-24 ad 0
+24 9 0 0 0 0
 D0
 ~
 ~
@@ -318,12 +316,11 @@ Fim do Corredor Norte~
 Nenhuma marcação ou sinal adorna a porta, portanto poderia guiar para
 qualquer lugar.
 ~
-24 ad 0
+24 9 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 2426
+1 -1 2426
 D2
 ~
 ~
@@ -335,7 +332,7 @@ Um Corredor - Convés Inferior~
 você em uma porta fechada.  Portas orlam por seus lados, leste e oeste, ou
 você pode voltar para norte.
 ~
-24 ad 0
+24 9 0 0 0 0
 D0
 ~
 ~
@@ -358,7 +355,7 @@ Fim do Corredor Sul~
    Você está no final do corredor sul, em frente a uma grande porta de
 carvalho.  Você pode voltar ao norte, ou tentar a porta.
 ~
-24 ad 0
+24 9 0 0 0 0
 D0
 ~
 ~
@@ -367,8 +364,7 @@ D2
 A porta parece ser muito sólida e firme, apesar do tempo e decadência.
 ~
 porta~
-:n 2 a porta
-a -1 2425
+1 -1 2425
 S
 #2425
 Alojamento do Capitão~
@@ -377,12 +373,11 @@ mas não tão enorme.  Uma cama grande, e com aspecto confortável, está junto
 a uma das paredes, e uma mesa, cravada no chão, encostada em outra parede,
 junto a um banquinho.
 ~
-24 ad 0
+24 9 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 2424
+1 -1 2424
 S
 #2426
 Dormitório~
@@ -392,12 +387,11 @@ almofadas ja estão aos farrapos e até mesmo as madeiras que abrigavam a
 tripulação parecem estar em deterioração, não sendo capaz de suportar o peso
 de nenhum homem.
 ~
-24 ad 0
+24 9 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-a -1 2422
+1 -1 2422
 S
 #2427
 A Cozinha e o Refeitório~
@@ -406,7 +400,7 @@ pequena, mas eficiente cozinha, está montada no fim da sala, enquanto uma
 grande mesa com banquetas firmadas de ambos os lados, está no outro lado da
 sala.
 ~
-24 ad 0
+24 9 0 0 0 0
 D1
 ~
 ~
@@ -419,7 +413,7 @@ cheiro de quando este navio estava em operação.  Uma pequena e imunda bacia
 está no centro da sala, esperando por ser usada, parecendo sorrir para você,
 desafiando-o a usa-la.
 ~
-24 ad 0
+24 9 0 0 0 0
 D3
 ~
 ~
@@ -431,7 +425,7 @@ Sala do Remo - Estibordo~
 formando pares com velhos remos.  Que alegria devia ser ficar aqui remando
 quando não havia vento para mover o navio!
 ~
-24 ad 0
+24 9 0 0 0 0
 D3
 ~
 ~
@@ -444,7 +438,7 @@ formando pares com velhos remos.  Você consegue sentir o sofrimento dos
 homens que trabalhavam aqui, dando o coração e a alma, para manter este
 navio movendo, em águas calmas e sem ventos.
 ~
-24 ad 0
+24 9 0 0 0 0
 D1
 ~
 ~
@@ -457,14 +451,14 @@ bruxuleante luz dentro, que parece ser uma fogueira ou uma lanterna.  Essa
 luz também pode ser de uma fogueira para cozinhar - uma fogueira para
 cozinhar você!
 ~
-24 d 5
-D1
-~
-~
-0 -1 2400
+24 8 0 0 0 5
 D0
 ~
 ~
 0 -1 6200
+D1
+~
+~
+0 -1 2400
 S
-$
+$~

@@ -6,7 +6,7 @@ sul daqui.  Olhando para leste e oeste, você vê apenas as paredes dos
 precipícios rochosos.  Ao norte, um estranho caminho parece guiá-lo direto
 às profundezas da montanha.
 ~
-15 c 4
+15 4 0 0 0 4
 D0
 Um estranho caminho segue em direção ao norte.
 ~
@@ -25,7 +25,7 @@ caminho.  Sua honesta submissão aceita, mas a verdade de seu coração ainda
 está para ser contada.  Saia daqui agora e não volte até que tenha
 amadurecido.
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -42,15 +42,15 @@ pecado que poderia ter sido evitado que você se arrepende.  A dor da carne
 pecadora atinge você.  Algum tempo depois a dor desaparece e o caminho da
 virtude se revela a sua frente.
 ~
-15 d 0
-D2
-~
-~
-0 -1 1501
+15 8 0 0 0 0
 D0
 ~
 ~
 0 -1 1503
+D2
+~
+~
+0 -1 1501
 S
 #1503
 Um Longo Caminho~
@@ -59,7 +59,7 @@ passos vão sendo deixados para trás.  Apesar da súbita claridade, sua mente
 ainda é assombrada pelas imagens de uma velha mulher que se ajoelha em
 oração, fechando seus olhos, sorrindo e chorando.
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -75,7 +75,7 @@ Um Longo Caminho~
 logo chegará ao fim mas algo no frio e na suave brisa lhe diz que é apenas o
 início de sua jornada.
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -92,7 +92,7 @@ confronta você é bastante simples, adentrar na escuridão ou andar pelo
 caminho da luz.  Apenas as profundezas de sua alma podem decidir mas
 lembre-se: a mesma verdade jaz no fim dos dois caminhos.
 ~
-15 d 0
+15 8 0 0 0 0
 D4
 ~
 ~
@@ -108,7 +108,7 @@ O Corredor dos Esquecidos~
 neste lugar, tão vazio e esquecido, que Deus tem escolhido os piores e os
 traz para perto si por uma última vez.
 ~
-15 d 0
+15 8 0 0 0 0
 D1
 ~
 ~
@@ -129,7 +129,7 @@ idioma, que não há de fato um Deus mas sim "O Criador" e que Mohamed era o
 último dos seus profetas.  Com esse reconhecimento, tudo mais se torna vazio
 e sem sentido.
 ~
-15 d 0
+15 8 0 0 0 0
 D1
 ~
 ~
@@ -150,7 +150,7 @@ alimenta com todos seus braços.  Quando um homem nervoso tem sede de sangue,
 qualquer coisa servirá a ele como lança.  A fúria transforma um graveto em
 uma espada.
 ~
-15 ad 0
+15 9 0 0 0 0
 D0
 ~
 ~
@@ -166,15 +166,15 @@ Desorientação~
 fazer.  São estas, as pobres almas que foram presenteadas com causas justas
 e rejeitaram-nas, que merecem a nossa pena mais do que qualquer um.
 ~
-15 ad 0
-D2
-~
-~
-0 -1 1508
+15 9 0 0 0 0
 D0
 ~
 ~
 0 -1 1510
+D2
+~
+~
+0 -1 1508
 S
 #1510
 Tentação~
@@ -183,7 +183,7 @@ Jesus: o demônio lhe oferece um reino, vastas riquezas, a tentação de uma
 gloriosa pré-morte salva por seus anjos.  Até o Mensageiro de Deus foi
 forçado a parar e pensar.  Imagine o quão difícil seria para o resto.
 ~
-15 ad 0
+15 9 0 0 0 0
 D0
 ~
 ~
@@ -202,7 +202,7 @@ todas as riquezas e seguindo em trapos esfarrapados por sua cidade no lombo
 de um burro.  Mas apesar de tudo, lembre-se: atrás de portas fechadas todos
 os homens são hipócritas.
 ~
-15 ad 0
+15 9 0 0 0 0
 D0
 ~
 ~
@@ -221,15 +221,15 @@ alto, uma prece mecânica que submerge aos seus ouvidos em cólera.  Você ouve
 o constante repetir de uma mesma frase por inúmeras vezes:
 "Eu sigo o caminho que a história dita com a garantia cega de um sonâmbulo".
 ~
-15 ad 0
-D2
-~
-~
-0 -1 1511
+15 9 0 0 0 0
 D0
 ~
 ~
 0 -1 1528
+D2
+~
+~
+0 -1 1511
 S
 #1513
 Perigo Espiritual~
@@ -238,7 +238,7 @@ direto em sua cara.  Outros são mais inteligentes, mais sutis e são eles que
 representam o maior perigo.  Olhando abaixo, o corredor a sua frente, um
 grande medo preenche seu coração, e um grande e pesado desejo.
 ~
-15 ad 0
+15 9 0 0 0 0
 D0
 ~
 ~
@@ -254,15 +254,15 @@ A Queda~
 mais amada de Deus.  Olhe para sua própria beleza, humana, e faça o que ele
 não pode.  Olhe para sua beleza, e aprenda a ajoelhar-se!
 ~
-15 ad 0
-D2
-~
-~
-0 -1 1513
+15 9 0 0 0 0
 D0
 ~
 ~
 0 -1 1515
+D2
+~
+~
+0 -1 1513
 S
 #1515
 Tentação~
@@ -271,7 +271,7 @@ um homem melhor...  Se..." E isso é usualmente tomado, sentado sozinho,
 ouvindo aquela voz, chamando você, oferecendo-lhe um caminho tão mais fácil
 mas tão desonesto.
 ~
-15 ad 0
+15 9 0 0 0 0
 D0
 ~
 ~
@@ -288,15 +288,15 @@ da terra estourando às margens do "Fim dos Tempos".  Esteja pronto para este
 dia, esteja bem preparado e se você não estiver, Ele lhe chamará através de
 um dos seus.
 ~
-15 ad 0
-D2
-~
-~
-0 -1 1515
+15 9 0 0 0 0
 D0
 ~
 ~
 0 -1 1517
+D2
+~
+~
+0 -1 1515
 S
 #1517
 A Chama~
@@ -306,7 +306,7 @@ algum pedaço de madeira ardente ou lava fundida, mas sim do brilho e da dor
 das horríveis almas torturadas que estão em todos os lugares por onde você 
 caminha.   
 ~
-15 ad 0
+15 9 0 0 0 0
 D0
 ~
 ~
@@ -324,7 +324,7 @@ de seus caminhos pelo menos uma vez em suas vidas e ainda há alguma
 criatura que amaldiçoa o som de seus nomes. Não obstante, confronte-os 
 agora e deixe que seus atos lhe sirvam de exemplo.
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -342,7 +342,7 @@ futuro. Os Quatro que vieram depois são chamados Os Escolhidos, os bem
 aventurados Califas que podiam propagar a palavra e a luz ao mundo e com
 isso forjar uma das histórias dos maiores impérios.   
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -359,7 +359,7 @@ conselho dos anciões, cada um deles, desejando guiar o mundo do Islãm
 sózinho, votaram para eleger um, dentre aqueles que eles achavam o mais 
 fraco. Cada um era mais nobre e ainda mais virtuoso que o anterior.  
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -376,15 +376,15 @@ e assim ocorreu com a idade dourada do Califado. Os Escolhidos foram
 homens puros, homens bons, fiéis para o caminho mas seus seguidores cedo
 começaram a brigar e uma guerra civil pairava no horizonte.   
 ~
-15 d 0
-D2
-~
-~
-0 -1 1520
+15 8 0 0 0 0
 D0
 ~
 ~
 0 -1 1522
+D2
+~
+~
+0 -1 1520
 S
 #1522
 A Luz dos Escolhidos~
@@ -393,7 +393,7 @@ do profeta e o exemplo de vida dos Califas provaram serem insuficientes
 exemplos para os crentes. Ali morreu e alguns dizem que com ele o Califado
 morreu também...um mártir, seu sangue ainda flui no rio sem nome.
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -410,7 +410,7 @@ fiéis andassem no caminho da luz sem orientação. Ele proviu os Profetas,
 para que a paz estivesse sobre eles, e pelos exemplos de seus próprios
 crescimentos, deveremos nós encontrar a nossa própria verdade.   
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -426,7 +426,7 @@ Criação~
 há sinais para homens de bom senso. Aqueles que se lembram de Alá dizem: 
 "Senhor, não criastes isso em vão!"  
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -443,15 +443,15 @@ não posso!" A ordem foi repetida três vezes, até que o anjo mesmo leu:
 "Leia em nome de seu Senhor, que criou o homem através de coágulos de 
 sangue. Enalteça seu Deus, Senhor do Universo."  
 ~
-15 d 0
-D2
-~
-~
-0 -1 1524
+15 8 0 0 0 0
 D0
 ~
 ~
 0 -1 1526
+D2
+~
+~
+0 -1 1524
 S
 #1526
 Conversão~
@@ -459,7 +459,7 @@ Conversão~
 eu adoro. Eu nunca deverei adorar o que vocês adoram nem vocês nunca 
 adorarão o que eu adoro. Vocês têm sua própria religião e eu a minha.
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -475,7 +475,7 @@ A Libertação~
 finais tomadas. Para aqueles que chegaram até aqui, certamente este é
 o dia da imortalidade!
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -492,11 +492,7 @@ todo conhecimento e sabedoria. Mas Ele não perdoará aqueles que praticam o
 mal pelo mal e quando a morte chegar para eles, dirão: "Agora nós nos
 arrependemos!"   Para estes Nós preparamos um açoite de afliçao.
 ~
-15 ad 0
-D4
-~
-~
-0 -1 1534
+15 9 0 0 0 0
 D1
 ~
 ~
@@ -505,6 +501,10 @@ D2
 ~
 ~
 0 -1 1512
+D4
+~
+~
+0 -1 1534
 S
 #1529
 A Peregrinação~
@@ -514,11 +514,7 @@ que foram infelizes, pois seguiram suas vidas nos mais baixos níveis de
 maldades, tal peregrinação, se feita com um coração aberto e arrependido, 
 lhes trará o perdão total.
 ~
-15 ad 0
-D4
-~
-~
-0 -1 1535
+15 9 0 0 0 0
 D1
 ~
 ~
@@ -527,6 +523,10 @@ D3
 ~
 ~
 0 -1 1528
+D4
+~
+~
+0 -1 1535
 S
 #1530
 Intercessão~
@@ -534,11 +534,7 @@ Intercessão~
 Nenhuma oração de ninguém poderá salvar a alma de um homem condenado. Sua
 única esperança são suas próprias preces.   
 ~
-15 ad 0
-D4
-~
-~
-0 -1 1536
+15 9 0 0 0 0
 D2
 ~
 ~
@@ -547,6 +543,10 @@ D3
 ~
 ~
 0 -1 1529
+D4
+~
+~
+0 -1 1536
 S
 #1531
 Alcançando o Superior~
@@ -554,15 +554,15 @@ Alcançando o Superior~
 exemplos dos verdadeiros modelos do Profeta. Apenas a jornada final aguarda
 por você. Viva assim e deverás viver para sempre.
 ~
-15 d 0
-D2
-~
-~
-0 -1 1522
+15 8 0 0 0 0
 D1
 ~
 ~
 0 -1 1532
+D2
+~
+~
+0 -1 1522
 D5
 ~
 ~
@@ -574,7 +574,7 @@ Alcançando o Superior~
 desnudado; quando o Inferno queimar ferozmente e o Paraíso for trazido 
 para bem perto, então cada alma deverá saber aquilo que fez.
 ~
-15 d 0
+15 8 0 0 0 0
 D1
 ~
 ~
@@ -595,7 +595,7 @@ imitado a evolução da alma mais perfeita de todas. Apenas um caminho final
 aguarda por você; morra como aquele na sala anterior e sua morte não terá
 significado nada.   
 ~
-15 d 0
+15 8 0 0 0 0
 D2
 ~
 ~
@@ -615,7 +615,7 @@ O Encontro Final~
 caminho da virtude. Vá adiante de coração aberto. Apenas o penitente
 poderá encontrar aquilo que eles procuram.
 ~
-15 cd 0
+15 12 0 0 0 0
 D1
 ~
 ~
@@ -635,19 +635,19 @@ O Encontro Final~
 caminho da virtude. Vá adiante de coração aberto. Apenas o penitente
 poderá encontrar aquilo que eles procuram.
 ~
-15 cd 0
+15 12 0 0 0 0
 D0
 ~
 ~
 0 -1 1537
-D3
-~
-~
-0 -1 1534
 D1
 ~
 ~
 0 -1 1536
+D3
+~
+~
+0 -1 1534
 D4
 ~
 ~
@@ -663,7 +663,7 @@ O Encontro Final~
 caminho da virtude. Vá adiante de coração aberto. Apenas o penitente
 poderá encontrar aquilo que eles procuram.
 ~
-15 cd 0
+15 12 0 0 0 0
 D3
 ~
 ~
@@ -684,15 +684,15 @@ Só a Vós nós adoramos, e só a Vós nós pedimos ajuda. Guia-nos
 para o Caminho da Virtude, o caminho daqueles a quem Vós favorecestes,
 não daqueles que se perderam no caminho.
 ~
-15 d 0
-D2
-~
-~
-0 -1 1535
+15 8 0 0 0 0
 D0
 ~
 ~
 0 -1 1538
+D2
+~
+~
+0 -1 1535
 S
 #1538
 Progressão~
@@ -700,7 +700,7 @@ Progressão~
 a respeito da nova criação. NÓS criamos o homem. Nós sabemos os caminhos
 de sua alma e estamos mais perto dele do que sua veia jugular.
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -716,7 +716,7 @@ O Julgamento~
 um passo aguardando antes que uma decisão final seja tomada e um lar
 lhe seja dado para toda a eternidade.
 ~
-15 d 0
+15 8 0 0 0 0
 D0
 ~
 ~
@@ -734,7 +734,7 @@ circundam o trono e todos estão banhados por uma luz suave e clara. É aqui
 que a escolha final está para ser feita e nenhum desafio seu poderá mudar o 
 resultado.
 ~
-15 d 0
+15 8 0 0 0 0
 D2
 ~
 ~

@@ -6,7 +6,7 @@ direção ao sul, para uma área aberta onde um número bastante grande de
 pessoas se encontram.  Um pouco para o sul daqui, estão alguns vagões de
 carroças parados à margem da estrada.
 ~
-23 0 2
+23 0 0 0 0 2
 D2
 ~
 ~
@@ -23,7 +23,7 @@ estrada, e o volume de tráfego que tomou esta direção, acabou transformando
 este caminho, numa estrada transitável.  Ao leste há um vagão colorido com
 um homem sentado dentro acenando para você.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -45,7 +45,7 @@ batida.  Bem ao sul, há uma enorme área, onde se existe um grande número de
 exóticos homens e mulheres dançando, saltitando e brincando com as pessoas
 que passam ali por perto.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -66,7 +66,7 @@ viajou pelos lugares mais exóticos do mundo.  Pequenos sinos prateados foram
 pendurados nas lonas da carroça, pelo lado de fora e conforme o vento bate,
 eles batem delicadamente, como se entoassem uma suave melodia.
 ~
-23 0 2
+23 0 0 0 0 2
 D3
 ~
 ~
@@ -79,15 +79,11 @@ envolve este lugar.  Foram pintadas em sua lona, paisagens que retratam
 cachoeiras e pradarias rústicas, em cores berrantes e fortes.  Certamente
 este é um vagão que chama a atenção de todos.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
 0 -1 2302
-D2
-~
-~
-0 -1 -1
 S
 #2305
 Área do Festival~
@@ -96,7 +92,7 @@ uma caravana de ciganos ou uma companhia de artores parte surgem outros, no
 lugar.  Um grande panorama de espetáculos e de maravilhas estão à sua
 espera.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -121,7 +117,7 @@ tipos de homens e mulheres alegres se surpreendem e se deleitam diante dos
 inúmeros espetáculos que acontecem o tempo todo.  Esta é a esquina do lado
 nordeste da área - e a maioria das atividades estão mais para o sul e oeste.
 ~
-23 0 2
+23 0 0 0 0 2
 D2
 ~
 ~
@@ -139,7 +135,7 @@ foi pisoteada por mil pés parece pedir um descanso.  Neste local pode-se ver
 toda uma infinita gama das coisas mais curiosas e diferentes e
 originais...em sua grande a maioria ao sul e leste.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
@@ -154,7 +150,7 @@ S
    Uma fileira aberta através das árvores segue para o oeste e as maravilhas
 que estão nesta área continuam naquela direção.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -181,7 +177,7 @@ espetáculos, dando ao ambiente um ar de aventura e de espanto.  Os tipos
 mais estranhos circulam por todas as direções e seria preciso ter muito mal
 humor para não se divertir aqui.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -205,7 +201,7 @@ S
 aglutinar aqui.  Mais para o sul, algumas pessoas estão desempenhando seus
 números.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -228,7 +224,7 @@ S
    Aqui, a clareira chega até a extremidade da floresta, contudo, há uma
 pequena trilha que segue através das árvores, indo para o oeste.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -253,7 +249,7 @@ muita diversão.  As pessoas circulam por todos os lados, empurrando e dando
 cotoveladas em todos.  Para qualquer lado que se olhe é possível ver algo
 novo e maravilhoso.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -278,7 +274,7 @@ S
 neste lugar.  Este lugar deve ser meio mágico, pois com tanta gente pisando
 na grama, esta ainda consegue se manter viva sob os milhares de pés.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -304,7 +300,7 @@ podem passar por este lugar, todos eles de diferentes raças, tamanhos e
 estatura e ainda assim, todos parecem estar pacíficamente entrosados- até
 mesmo felizes por estarem juntos.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -324,7 +320,7 @@ S
 representando algum tipo de sátira.  Para o norte, leste e oeste estão
 muitas outras atrações.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -348,7 +344,7 @@ S
 no leste e no norte.  Para o sul fica o final da clareira, onde um pequeno
 caminho foi aberto, através dos bosques.
 ~
-23 8 2
+23 8 0 0 0 2
 D0
 ~
 ~
@@ -370,7 +366,7 @@ Há vagõesde carroças estacionados ao lado do gramado, com pequenas
 distâncias entre si.  Cada uma das carroças está mais cheia com mercadorias
 exóticas, para serem vendidas aos transeuntes da feira.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -391,7 +387,7 @@ aberta, onde mais pessoas se juntam para assistir aos espetáculos e comprar
 mercadorias.Vagões estão estacionados ao longo deste gramado, e você percebe
 que há um estacionado bem ao norte de onde você está parado.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -418,7 +414,7 @@ entre si para ver de quem é o mais extravagante.  Ao observar esta carroça,
 você tem a nítida impressão de que o dono deste vagão ganha a vida vendendo
 roupas e tecidos.
 ~
-23 0 2
+23 0 0 0 0 2
 D2
 ~
 ~
@@ -432,7 +428,7 @@ talentos a todos que queiram lhes dar algumas moedas.  Há uma grande
 concentração de pessoas ao leste, assistindo a algum espetáculo ou jogando
 qualquer tipo de jogo.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
@@ -453,7 +449,7 @@ darem algumas cotoveladas uns nos outros, sem contudo deixarem de se sentir
 felizes e se divertindo muito.  Ao sul há um vagão muito colorido, onde
 estão sendo vendidas uns adornos muito bonitos, muito parecidos com jóias.
 ~
-23 0 0
+23 0 0 0 0 0
 D0
 ~
 ~
@@ -478,7 +474,7 @@ suas vestimentas reais e repletos de jóias.  Mais abaixo, estão alguns
 quadros mostrando mãos cheias de anéis e pulseiras cintilantes, que chamam a
 atenção dos fregueses que espiam fascinados através da janela do vagão.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -491,7 +487,7 @@ os atores possam encenar suas peças que vão do mais profundo drama até a
 mais espalhafatosa comédia.  Uma grande multidão aguarda ansiosa pelo início
 do espetáculo.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
@@ -512,7 +508,7 @@ ficam as principais atrações, mas serve bem ao propósito.  Um grande palco
 foi montado no lado leste da clareira, onde peças satíricas e dramalhões
 pesados vão sendo encenados para o deleite da platéia entusiasmada.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -533,7 +529,7 @@ grande número de pessoas atentas e emocionadas.  Ao norte, há um restaurante
 ao ar livre - você pode sentir o delicioso cheiro do tempero da comida
 cigana, que enche o ar.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -555,7 +551,7 @@ uma área onde muitas pessoas estão confortavelmente sentadas em coloridas
 mesas de piquenique, degustando os pratos que foram comprados no pequeno
 restaurante cigano.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -577,7 +573,7 @@ enorme barraca de lona, sob a qual, muitos homens estão em pé, enquanto
 segurando firmes suas canecas de cerveja e ao mesmo tempo assistem à peça
 que vai sendo exibida no palco.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -598,7 +594,7 @@ de pessoas - em sua grande maioria homens - está em pé, enquanto bebe sua
 cerveja entre seus companheiros, desfrutando o dia de festa e alegrias.  O
 palco principal fica ao nordeste, e ao leste há uma área lateral.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -640,7 +636,7 @@ feira termina ou se muda, ele simplesmente coloca os cavalos em marcha e
 leva sua casa para um novo local onde ele possa novamente vender sua cerveja
 inglesa.
 ~
-23 8 0
+23 8 0 0 0 0
 D3
 ~
 ~
@@ -653,7 +649,7 @@ que as pessoas possam se sentar enquanto saboreiam a deliciosa comida que é
 vendida neste pequeno e original restaurante.  O cheiro da comida é tão bom
 que chega a dar água na boca daqueles que daqui se aproximam.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
@@ -672,7 +668,7 @@ dia, possam descansar na parte de dentro, à noite.  Por que será que as
 pessoas não podem ter um tipo de vida simples como este...  Quem pode
 responder?
 ~
-23 8 0 0
+23 0 0 0 0 0
 D3
 ~
 ~
@@ -684,7 +680,7 @@ O Palco~
 favor, siga para baixo, indo para o norte ou para o sul, mas SAIA DESTE
 PALCO AGORA MESMO!!
 ~
-23 0 2
+23 0 0 0 0 2
 D2
 ~
 ~
@@ -700,7 +696,7 @@ O Palco~
 favor, siga para baixo, indo para o norte ou para o sul, mas SAIA DESTE
 PALCO AGORA MESMO!!
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -716,7 +712,7 @@ O Caminho Gramado~
 oeste.  O mesmo tipo de felicidade e atmosfera festiva que toma conta de
 todo que estão no leste, parece tomar conta também dos que estão no oeste.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
@@ -733,7 +729,7 @@ erguidas para serem usadas apenas enquanto a grande feira durar.  Esta área
 é mais usada pelas famílias que estão visitando o festival, pois aqui
 existem tanto atrações para adultos como para as crianças.
 ~
-23 0 2
+23 0 0 0 0 2
 D1
 ~
 ~
@@ -750,7 +746,7 @@ grelhada chega abundante daquela direção.  Para o norte e sul, estão as
 extensões deste grande pátio, onde todos os tipos de atividades estão
 constantemente acontecendo.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -776,7 +772,7 @@ selvagens...lindinhos e graciosos.  Para o leste, há uma pequena área onde
 uma mulher lê um grosso tomo, contando uma vibrante história para uma
 multidão de crianças com olhos arregalados.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -800,7 +796,7 @@ sentadas que estão no chão do pequenino castelo.  Para o leste há uma área
 pequena onde estão alguns animais raros, enjaulados para que possam ser
 vistos pelo público de forma segura.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -824,7 +820,7 @@ são controlados por homens e mulheres, mestres na arte dos fantoches.  Os
 pequenos marionetes cantam, dançam, brigam entre si, causando nas crianças
 uma avalanche de barulhentas gargalhadas.
 ~
-23 0 2
+23 0 0 0 0 2
 D2
 ~
 ~
@@ -836,7 +832,7 @@ Exposição de Animais~
 um animal exótico e raro dentro.  Para o norte estão mais jaulas com
 animais.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -853,7 +849,7 @@ mesmo dormem.  O lugar não cheira muito bem - a cada vez que você inspira o
 ar, sente o odor fétido e forte.  Contudo, a beleza dos animais compensa o
 sacrifício...  Bem, pelo menos, parece que compensa.
 ~
-23 0 2
+23 0 0 0 0 2
 D2
 ~
 ~
@@ -866,7 +862,7 @@ pinturas que os transformam em monstrinhos assustadores, palhacinhos felizes
 ou qualquer outro tipo de pintura engraçada.  Um após o outro, vão se
 transformando e saem dali rindo alto, prontos para assustar as pessoas.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -880,7 +876,7 @@ barril cheio com um suco delicioso, foram colocados no fundo do restaurante,
 para atender os trabalhadores.  Este seria, certamente, um lugar relaxante
 para se sentar, comer e descansar um tempo.
 ~
-23 0 0
+23 0 0 0 0 0
 D1
 ~
 ~
@@ -893,7 +889,7 @@ um vagão passou por aqui.  A grama está amassada, formando duas linhas
 paralelas, que seguem em direção aos bosques do sul.  O caminho principal
 que vão para o festival são os do leste.
 ~
-23 0 3
+23 0 0 0 0 3
 D1
 ~
 ~
@@ -910,7 +906,7 @@ quebradas e arbustos amassados evidenciam que algum tipo de veículo grande e
 pesado passou por aqui.  O caminho para voltar para a área principal fica ao
 norte.
 ~
-23 0 3
+23 0 0 0 0 3
 D0
 ~
 ~
@@ -928,7 +924,7 @@ centro da porta.  Nenhum som vem de dentro, as cortinas estão todas fechados
 - pelo jeito, este carroção parece ter sido abandonado aqui por algum cigano
 que está no festival e que decidiu que não quer mais isto aqui.
 ~
-23 0 3
+23 0 0 0 0 3
 D0
 ~
 ~
@@ -947,7 +943,7 @@ fazer com que a maioria das pessoas dêm a meia volta para trás.  E isso é
 pouco.  Uma mesa pequena redonda foi colocado no centro do aposento, com uma
 bola de cristal brilhante sobre ela.
 ~
-23 8 0
+23 8 0 0 0 0
 D0
 ~
 porta~
@@ -959,7 +955,7 @@ S
 lado nordeste.  Um pequeno palco desmontável foi montado bem perto daqui, ao
 leste, onde um grupo de atores representam uma peça satírica.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -976,7 +972,7 @@ de Cyrrian", a história que conta como as escolhas egoístas de um homem
 podem afetar o curso da história de uma cidade inteira.  A área principal do
 festival fica ao norte.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -996,7 +992,7 @@ S
 sul, distanciando-se desta área principal.  A oeste há um pequeno palco
 desmontável, onde um diminuto grupo de atores representa uma peça satírica.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1017,7 +1013,7 @@ encontrar o caminho sem se perder requer muita concentração.  Por causa da
 lentidão, você consegue ouvir o motivo pelo qual os outros viajantes parecem
 ter escolhido o mesmo caminho que você - o som de água correndo.
 ~
-23 0 3
+23 0 0 0 0 3
 D0
 ~
 ~
@@ -1034,7 +1030,7 @@ melhor maneira é tentar seguir o trilho de grama amassada e de ramos
 quebrados e arrebentados.  Parece que você poderia ir para qualquer uma das
 três direções que seguem para oeste, sul ou norte.
 ~
-23 0 3
+23 0 0 0 0 3
 D0
 ~
 ~
@@ -1055,7 +1051,7 @@ grande quantidade de água, apenas o fluxo tranquilo do que parece ser um
 riacho.  Há um caminho aberto através da floresta que vai para o norte,
 leste e sul.
 ~
-23 0 3
+23 0 0 0 0 3
 D0
 ~
 ~
@@ -1076,7 +1072,7 @@ vistas muitas pessoas em plenas atividades.  Foram erguidas estruturas de
 algum tipo de material que não se pode reconhecer daqui.  A maneira de se
 voltar para o festival é seguir para o oeste.
 ~
-23 0 3
+23 0 0 0 0 3
 D1
 ~
 ~
@@ -1099,15 +1095,15 @@ por causa disso, pois caçar ali seria bem fácil e o jantar estaria
 garantido.  Os vagões e as barracas se distribuem ao leste, formando um
 grande círculo em volta da clareira.
 ~
-23 0 3
+23 0 0 0 0 3
 D1
 ~
 ~
-0 -1 2357 0
+0 -1 2357
 D3
 ~
 ~
-0 -1 2355 0
+0 -1 2355
 S
 #2357
 A Grande Clareira Aberta~
@@ -1117,7 +1113,7 @@ e vagões foram estacionados um pouco abaixo da extremidade onde ficam as
 lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
 depois de suas atividades no festival.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1143,7 +1139,7 @@ e vagões foram estacionados um pouco abaixo da extremidade onde ficam as
 lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
 depois de suas atividades no festival.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1169,7 +1165,7 @@ e vagões foram estacionados um pouco abaixo da extremidade onde ficam as
 lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
 depois de suas atividades no festival.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1195,7 +1191,7 @@ e vagões foram estacionados um pouco abaixo da extremidade onde ficam as
 lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
 depois de suas atividades no festival.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1221,7 +1217,7 @@ e vagões foram estacionados um pouco abaixo da extremidade onde ficam as
 lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
 depois de suas atividades no festival.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1247,7 +1243,7 @@ e vagões foram estacionados um pouco abaixo da extremidade onde ficam as
 lugar onde a maioria das pessoas se dirigem para dormir ou para descansarem
 depois de suas atividades no festival.
 ~
-23 0 2
+23 0 0 0 0 2
 D0
 ~
 ~
@@ -1274,7 +1270,7 @@ esta grande carroça evita que a chuva caia e molhe as cobertas que foram
 guardadas aqui dentro, bem como as pessoas que estiverem deitadas aqui
 dentro, mantendo assim, uma certa privacidade ao local.
 ~
-23 8 0
+23 8 0 0 0 0
 D1
 ~
 ~
@@ -1289,7 +1285,7 @@ esta grande carroça evita que a chuva caia e molhe as cobertas que foram
 guardadas aqui dentro, bem como as pessoas que estiverem deitadas aqui
 dentro, mantendo assim, uma certa privacidade ao local.
 ~
-23 8 0
+23 8 0 0 0 0
 D2
 ~
 ~
@@ -1304,7 +1300,7 @@ esta grande carroça evita que a chuva caia e molhe as cobertas que foram
 guardadas aqui dentro, bem como as pessoas que estiverem deitadas aqui
 dentro, mantendo assim, uma certa privacidade ao local.
 ~
-23 8 0
+23 8 0 0 0 0
 D2
 ~
 ~
@@ -1316,7 +1312,7 @@ Uma Barraca~
 sem grandes preocupações com conforto.  Seu dono parece que só vem até aqui
 para dormir, sem nenhum tempo por relaxar.
 ~
-23 8 0
+23 8 0 0 0 0
 D3
 ~
 ~
@@ -1328,7 +1324,7 @@ Uma Barraca~
 sem grandes preocupações com conforto.  Seu dono parece que só vem até aqui
 para dormir, sem nenhum tempo por relaxar.
 ~
-23 8 0
+23 8 0 0 0 0
 D3
 ~
 ~
@@ -1340,7 +1336,7 @@ Uma Barraca~
 sem grandes preocupações com conforto.  Seu dono parece que só vem até aqui
 para dormir, sem nenhum tempo por relaxar.
 ~
-23 8 0
+23 8 0 0 0 0
 D3
 ~
 ~
@@ -1355,7 +1351,7 @@ nenhum risco de se intoxicarem. Parece que aqui dentro poderiam dormir umas
 seis pessoas confortavelmente e pelo número de mantas espalhadas sobre o chão,
 o número deve estar mesmo bem próximo disso.
 ~
-23 8 0
+23 8 0 0 0 0
 D0
 ~
 ~
@@ -1370,7 +1366,7 @@ nenhum risco de se intoxicarem. Parece que aqui dentro poderiam dormir umas
 seis pessoas confortavelmente e pelo número de mantas espalhadas sobre o chão,
 o número deve estar mesmo bem próximo disso.
 ~
-23 8 0
+23 8 0 0 0 0
 D0
 ~
 ~
@@ -1385,7 +1381,7 @@ nenhum risco de se intoxicarem. Parece que aqui dentro poderiam dormir umas
 seis pessoas confortavelmente e pelo número de mantas espalhadas sobre o chão,
 o número deve estar mesmo bem próximo disso.
 ~
-23 8 0
+23 8 0 0 0 0
 D1
 ~
 ~
@@ -1398,7 +1394,7 @@ descansam um pouco depois de uma apresentação e podem então tomar uma gostosa
 cerveja inglesa, trazida por um dos membros do grupo. O palco, propriamente
 dito, fica ao norte.
 ~
-23 0 2
+23 0 0 0 0 2
 D3
 ~
 ~
@@ -1415,7 +1411,7 @@ no palco, ensaiando suas falas ou simplesmente esperando quietos, pela sua vez.
 Muitas risadas nervosas e ajustes de última hora nos trajes que serão usados
 em cena, são feitos aqui mesmo.
 ~
-23 0 2
+23 0 0 0 0 2
 D3
 ~
 ~
@@ -1433,7 +1429,7 @@ deve exceder uns oito pés.  Os sons produzidos pela água são muito
 relaxantes, e este é o tipo de lugar que os artistas procuram para se
 inspirar.
 ~
-23 0 3
+23 0 0 0 0 3
 D0
 ~
 ~
@@ -1449,7 +1445,7 @@ No Riacho~
 fria e muito clara e certamente é boa para se beber.  O caminho para a
 floresta fica ao norte.
 ~
-23 0 6
+23 0 0 0 0 6
 D0
 ~
 ~
@@ -1462,7 +1458,7 @@ excessão daquele pelo qual você veio.  Contudo, o toco de um imenso carvalho
 que está caído neste local parece ser exatamente o lugar para se fazer um
 feitiço, ou até mesmo, quem sabe, para se passar a noite...
 ~
-23 0 3
+23 0 0 0 0 3
 D1
 ~
 ~
@@ -1477,7 +1473,7 @@ Grande Tomo de Aventuras.  Com seus olhos muito abertos e em absoluto
 silêncio, elas se sentam no chão, mordendo seus lábios por causa do medo e
 da excitação - mas nunca saem antes do fim.
 ~
-23 0 2
+23 0 0 0 0 2
 D3
 ~
 ~
@@ -1488,13 +1484,13 @@ Uma Sala Estranhamente Vazia~
    Você se encontra em uma sala estranha...vazia...desprovida de vida,
 desprovida de sons, absolutamente vazia.
 ~
-23 0 0
+23 0 0 0 0 0
 S
 #2399
 Uma Sala Estranhamente Vazia~
     Você se encontra em uma sala estranha...vazia...desprovida de vida,
 desprovida de sons, absolutamente vazia.
 ~
-23 0 0
+23 0 0 0 0 0
 S
 $~

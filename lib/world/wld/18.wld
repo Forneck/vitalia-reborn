@@ -7,7 +7,7 @@ umas ao lado das outras.
    Ao leste você vê a verdejante zona rural de Midgaard, e a noroeste há um
 campo aberto.
 ~
-18 c 2
+18 4 0 0 0 2
 D1
 Você vê o verdejante campo de Midgaard.
 ~
@@ -26,8 +26,7 @@ O chão de grama verde está de certa forma, bem cuidada, o que lhe faz pensar
 que esse lugar não é tão esquecido quanto parece.  O caminho continua para
 oeste, e ao norte você vê uma cabana.
 ~
-18 0 2
-ON z18
+18 0 0 0 0 2
 D0
 Você pode seguir por um caminho que o levará até uma simples cabana.
 ~
@@ -52,7 +51,7 @@ para se ver ao redor, exceto a cabana, logo ao oeste.  Há uma luz azul saindo
 pela porta da cabana, e você sente uma profunda paz ao olhar para ela.
    Ao sul você retorna para o campo aberto.
 ~
-18 c 2
+18 4 0 0 0 2
 D0
 Você consegue ver, seguindo dessa direção, a Trilha do Destino.
 ~
@@ -82,8 +81,7 @@ bem preservados, e é isso que faz o ambiente não parecer como um cemitério.
 Provavelmente é a magia dos sacerdotes de Midgaard que preservam estes corpos
 aqui, até que algum amigo venha tentar os trazer devolta à vida.
 ~
-18 cdef 0
-ON cabana
+18 60 0 0 0 0
 D1
 Por esta direção você sai da cabana.
 ~
@@ -104,13 +102,13 @@ altas árvores nas laterais do caminho, que tornam cada vez mais densos
 conforme você caminha para oeste.  Para leste você volta para o campo
 aberto.
 ~
-18 0 2
-D 1
+18 0 0 0 0 2
+D1
 O caminho retorna ao campo aberto neste sentido.
 ~
 ~
 0 -1 1801
-D 3
+D3
 O caminho continua a oeste.  Você pode ver uma casa a uma certa distância.
 ~
 ~
@@ -125,13 +123,13 @@ altos das árvores à beira do caminho se cruzam sobre você, bloqueando os
 raios solares, e tornando o caminho mais úmido.  A oeste você pode ver uma
 área mais aberta, e uma pequena casa.
 ~
-18 0 2
-D 1
+18 0 0 0 0 2
+D1
 O caminho continua a leste.
 ~
 ~
 0 -1 1804
-D 3
+D3
 Para oeste você você ver uma área mais aberta, e uma pequena casa.
 ~
 ~
@@ -144,24 +142,23 @@ há uma pequena casa.  Você pode andar em volta da casa.  Você nota, agora,
 que atrás da casa está o pé de uma grande montanha, que parece tocar as
 núvens.  A leste, a mata se abre para o caminho que leva devolta à Midgaard.
 ~
-18 0 2
-D 1
+18 0 0 0 0 2
+D1
 O caminho que leva devolta à Midgaard segue a leste daquí.
 ~
 ~
 0 -1 1805
-D 3
+D3
 A porta da pequena casa.
 ~
 porta~
-:n 2
-ab 1800 1810
-D 6
+1 1800 1810
+D6
 Por este caminho, você irá até o lado direito da casa.
 ~
 ~
 0 -1 1807
-D 9
+D9
 Por este caminho, você irá até o lado esquerdo da casa.
 ~
 ~
@@ -183,17 +180,17 @@ Ao Lado da Pequena Casa~
    Você está caminhando em volta da casa.  Há uma janela deste lado da casa.
 Não há mais nada de especial aqui.
 ~
-18 0 2
-D 9
-Por este caminho, você irá até a parte de trás da casa.
-~
-~
-0 -1 1809
-D 8
+18 0 0 0 0 2
+D8
 Por este caminho, você irá até a parte da frente da casa.
 ~
 ~
 0 -1 1806
+D9
+Por este caminho, você irá até a parte de trás da casa.
+~
+~
+0 -1 1809
 E
 janela~
 A janela está fechada.  Você não pode ver nada por ela, pois está muito
@@ -205,13 +202,8 @@ Ao Lado da Pequena Casa~
    Você está caminhando em volta da casa.  Há duas janelas deste lado da
 casa.  Não há mais nada de especial aqui.
 ~
-18 0 2
-D 7
-Por este caminho, você irá até a parte de trás da casa.
-~
-~
-0 -1 1809
-D 7
+18 0 0 0 0 2
+D7
 Por este caminho, você irá até a parte da frente da casa.
 ~
 ~
@@ -231,19 +223,18 @@ não é qualquer um que poderia escalá-la.  Contudo, você é incapaz de
 encontrar uma forma de chegar até ela, pois a mata é densa demais para se
 atravessar.
 ~
-18 0 2
-D 1
+18 0 0 0 0 2
+D1
 A porta dos fundos da pequena casa.
 ~
 porta~
-:n 2
-ab 1801 1811
-D 7
+1 1801 1811
+D7
 Por este caminho, você irá até o lado direito da casa.
 ~
 ~
 0 -1 1807
-D 8
+D8
 Por este caminho, você irá até o lado esquerdo da casa.
 ~
 ~
@@ -258,26 +249,23 @@ um escudo pendurados.
    A leste está porta de entrada da casa.  Há ainda uma passagem para oeste,
 e portas para norte e sul.
 ~
-18 dfr 0
-D 0
+18 131112 0 0 0 0
+D0
 Uma porta, simples.
 ~
 porta~
-:n 2
-a -1 1812
-D 1
+1 -1 1812
+D1
 Esta é a porta de entrada da casa.
 ~
 porta~
-:n 2
-ab 1800 1806
-D 2
+1 1800 1806
+D2
 Uma porta, simples.
 ~
 porta~
-:n 2
-ab -1 1813
-D 3
+1 -1 1813
+D3
 Parece levar até a cozinha.
 ~
 ~
@@ -319,18 +307,17 @@ A Cozinha~
 tão limpos que brilham.  Há alguns frutos sobre uma mesa.  Você pode voltar
 para a sala para leste.  Há uma porta para oeste.
 ~
-18 dfr 0
-D 1
+18 131112 0 0 0 0
+D1
 Parece levar até a sala.
 ~
 ~
 0 -1 1810
-D 3
+D3
 Esta é a porta dos fundos da casa.
 ~
 porta~
-:n 2
-ab 1801 1809
+1 1801 1809
 E
 frutos~
 Você conta: 2 maçãs, 3 peras e uma laranja.  Nada incomum.
@@ -342,14 +329,12 @@ O Banheiro~
 Comparando com outros, este certamente é um dos banheiros mais limpos que
 existe.  É muito luxuoso, possui latrina, pia e um chuveiro.
 ~
-18 dfr 0
-OP 2
-D 2
+18 131368 0 0 0 0
+D2
 Uma porta, simples.
 ~
 porta~
-:n 2
-a -1 1810
+1 -1 1810
 S
 #1813
 O Quarto~
@@ -357,13 +342,12 @@ O Quarto~
 de livros que tem aqui.  Tem centenas de livros.  O quarto também possui uma
 cama, uma pequena mesa e uma cadeira.
 ~
-18 dfjr 0
-D 0
+18 131624 0 0 0 0
+D0
 Uma porta, simples.
 ~
 porta~
-:n 2
-ab -1 1810
+1 -1 1810
 S
 #1890
 A Entrada do Reino da Morte~
@@ -374,32 +358,31 @@ ilumina a sala de maneira uniforme, não deixando nenhuma sombra.
    O corredor continua para o norte, e há um grande portão de energia ao
 sul.
 ~
-18.2 dfghq 0
-D 0
+18 65768 0 0 0 0
+D0
 O corredor continua para o norte.
 ~
 ~
 0 -1 1891
-D 2
+D2
 Um grande portão de energia impede a passagem tanto dos vivos, quanto dos
 mortos.
 ~
 portao~
-:n 1 o grande portão de energia
-abc -1 0
+1 -1 -1
 S
 #1891
 A Entrada do Reino da Morte~
    Você está no corredor que leva para o Reino da Morte.  O corredor continua
 para o norte e para o sul.  Você nota uma pequena placa fixada na parede.
 ~
-18.2 dfghq 0
-D 0
+18 65768 0 0 0 0
+D0
 O corredor continua para o norte.
 ~
 ~
 0 -1 1892
-D 2
+D2
 O corredor continua para o sul.
 ~
 ~
@@ -417,15 +400,14 @@ A Entrada do Reino da Morte~
 provavelmente para algum tipo de palestra.  Há algumas faixas presas na
 plataforma.  Há um grande portão ao norte.  O corredor continua para o sul.
 ~
-18.2 dfghq 0
-D 0
+18 65768 0 0 0 0
+D0
 Sobre o grande portão, está escrito: "Reino da Morte".  Você sente um leve
 arrepio.
 ~
 portao~
-:n 1 o grande portão
-abc -1 1899
-D 2
+1 -1 1899
+D2
 O corredor continua para o sul.
 ~
 ~
@@ -442,24 +424,23 @@ O Reino da Morte~
 sua visão alcança, por todas as direções.  Ventos desagradáveis mergulhando
 do céu escuro e sem estrelas, batem selvagemente em seu fragil espírito.
 ~
-18.2 dghq 0
-ON morte
-D 0
+18 65736 0 0 0 0
+D0
 O grande solo parece ir ao infinito.
 ~
 ~
 0 -1 1899
-D 1
+D1
 O grande solo parece ir ao infinito.
 ~
 ~
 0 -1 1899
-D 2
+D2
 O grande solo parece ir ao infinito.
 ~
 ~
 0 -1 1899
-D 3
+D3
 O grande solo parece ir ao infinito.
 ~
 ~
@@ -475,4 +456,4 @@ céu ventos~
 Ventos gelados mergulham sobre você, vindos do céu escuro e sem núvens.
 ~
 S
-$
+$~

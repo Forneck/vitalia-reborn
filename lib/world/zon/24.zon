@@ -1,17 +1,17 @@
 #24
 Vitalia~
 O Navio Fantasma~
-2400 2499 20 1 k 0 0 0 -1 -1
+2400 2499 20 1 j 0 0 0 -1 -1
+D 0 2400 5 1 	(Casa do Velho Marinheiro)
+M 0 2405 1 2400 	(um velho marinheiro)
 M 0 2402 1 2425 	(o Capitão Fantasma)
 E 1 2405 1 16 	(o espadim do Capitão)
 E 1 2403 1 21 	(um tapa-olho)
 E 1 2401 4 19 	(um brinco em argola)
 M 0 2400 1 2425 	(um papagaio fantasma)
-D 0 2425 0 1 	(Alojamento do Capit�o)
+D 0 2425 0 1 	(Alojamento do Capitão)
 D 0 2407 4 1 	(Uma Escada de Corda)
-D 0 2400 5 1 	(Casa do Velho Marinheiro)
 M 0 2406 1 2401 	(a pilha de ossos)
-M 0 2405 1 2400 	(um velho marinheiro)
 M 0 2401 25 2412 	(um fantasma pirata)
 E 1 2404 20 16 	(uma adaga fantasma)
 M 0 2401 25 2414 	(um fantasma pirata)
@@ -30,7 +30,7 @@ M 0 2401 25 2426 	(um fantasma pirata)
 E 1 2404 20 16 	(uma adaga fantasma)
 M 0 2401 25 2426 	(um fantasma pirata)
 E 1 2404 20 16 	(uma adaga fantasma)
-D 0 2426 2 1 	(Dormit�rio)
+D 0 2426 2 1 	(Dormitório)
 M 0 2401 25 2422 	(um fantasma pirata)
 E 1 2404 20 16 	(uma adaga fantasma)
 D 0 2422 0 1 	(Fim do Corredor Norte)
