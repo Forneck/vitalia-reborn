@@ -1722,7 +1722,7 @@ D1
 Você observa uma magnífica casa.
 ~
 porta madeira~
-0 -1 8469
+1 -1 8469
 D2
 Você observa uma bela passarela de pedras.
 ~
@@ -1732,12 +1732,12 @@ D7
 Você observa uma magnífica casa.
 ~
 porta madeira~
-0 -1 8471
+1 -1 8471
 D8
 Você observa uma magnífica casa.
 ~
 porta madeira~
-0 -1 8468
+1 -1 8468
 S
 #8468
 Uma Belíssima Casa Élfica~
@@ -1755,7 +1755,7 @@ D6
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8467
+1 -1 8467
 S
 #8469
 Uma Esplendorosa Casa Élfica~
@@ -1773,7 +1773,7 @@ D3
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8467
+1 -1 8467
 S
 #8470
 A Alameda das Flores~
@@ -1814,7 +1814,7 @@ D9
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8467
+1 -1 8467
 S
 #8472
 A Alameda das Flores~
@@ -1855,7 +1855,7 @@ D6
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8474
+1 -1 8474
 S
 #8474
 Uma Magnífica Passarela de Pedras Brancas~
@@ -1880,7 +1880,7 @@ D8
 Você observa uma bela casa élfica.
 ~
 porta madeira~
-0 -1 8473
+1 -1 8473
 D9
 Você observa uma perfumada alameda de flores.
 ~
@@ -1927,7 +1927,7 @@ D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8478
+1 -1 8478
 S
 #8477
 Uma Belíssima Casa Élfica~
@@ -1945,7 +1945,7 @@ D6
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8478
+1 -1 8478
 S
 #8478
 Um Amplo Pátio no Centro de Imladris~
@@ -1963,27 +1963,27 @@ D0
 Você observa uma monumental casa élfica.
 ~
 porta madeira~
-0 -1 8481
+1 -1 8481
 D1
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8479
+1 -1 8479
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8476
+1 -1 8476
 D7
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8480
+1 -1 8480
 D8
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8477
+1 -1 8477
 D9
 Você observa uma passarela de pedras.
 ~
@@ -2006,7 +2006,7 @@ D3
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8478
+1 -1 8478
 S
 #8480
 Uma Esplendorosa Casa Élfica~
@@ -2024,7 +2024,7 @@ D9
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8478
+1 -1 8478
 S
 #8481
 A Monumental Casa do Senhor de Valfenda~
@@ -2050,7 +2050,7 @@ D2
 Você observa um belo pátio.
 ~
 porta madeira~
-0 -1 8478
+1 -1 8478
 D6
 Você observa os jardins de Elrond.
 ~
@@ -2182,12 +2182,12 @@ D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8489
+1 -1 8489
 D3
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8487
+1 -1 8487
 D4
 ~
 ~
@@ -2201,7 +2201,7 @@ D6
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 8426 8488
+1 8426 8488
 S
 #8487
 Um Belo Quarto~
@@ -2219,7 +2219,7 @@ D1
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8486
+1 -1 8486
 S
 #8488
 A Gloriosa Sala das Heranças~
@@ -2237,7 +2237,7 @@ D8
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 8426 8486
+1 8426 8486
 S
 #8489
 Um Maravilhoso Quarto~
@@ -2255,7 +2255,7 @@ D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8486
+1 -1 8486
 S
 #8490
 Um Longo Corredor no Interior da Casa do Senhor de Valfenda~
@@ -2401,17 +2401,17 @@ D1
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8498
+1 -1 8498
 D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8499
+1 -1 8499
 D7
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8497
+1 -1 8497
 D9
 Você observa uma ampla varanda.
 ~
@@ -2433,7 +2433,7 @@ D9
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8496
+1 -1 8496
 S
 #8498
 Os Aposentos de Elrond~
@@ -2451,7 +2451,7 @@ D3
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8496
+1 -1 8496
 S
 #8499
 O Quarto da Bela Arwen Undómiel~
@@ -2467,6 +2467,6 @@ D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-0 -1 8496
+1 -1 8496
 S
 $~
