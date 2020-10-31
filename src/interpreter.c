@@ -512,7 +512,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	/* ann teste - forneck */
 	int i, type1, type2;
 	struct fann *ann;
-	struct fann_type *calc;
+	fann_type *calc;
 
 	ann = fann_create_from_file("etc/aventureiro.fann");
 	fann_type input[29];
