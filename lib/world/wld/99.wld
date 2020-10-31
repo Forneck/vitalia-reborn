@@ -1,11 +1,11 @@
 #9900
-A Colina do T�mulo~
-   Voc� est� sobre a colina do t�mulo, a qual tem aproximadamente 5 metros 
-de di�metro.  N�o h� vegeta��o alguma dentro do c�rculo, realmente isto � 
-muito estranho.  Um pequeno redemoinho de n�voa o envolve dos joelhos aos 
-p�s, fazendo-o parecer que foi parcialmente enterrado.
+A Colina do Túmulo~
+   Você está sobre a colina do túmulo, a qual tem aproximadamente 5 metros 
+de diâmetro.  Não há vegetação alguma dentro do círculo, realmente isto é 
+muito estranho.  Um pequeno redemoinho de névoa o envolve dos joelhos aos 
+pés, fazendo-o parecer que foi parcialmente enterrado.
 ~
-99 5 0 0 0 3
+99 ac 3
 D2
 ~
 ~
@@ -13,18 +13,19 @@ D2
 D5
 ~
 colina~
+:n 2 a colina
 2 9903 9901
 S
 #9901
 Os Limites da Cidade de Ghenna~
-   Voc� est� dentro dos limites da cidade de Ghenna.  Outrora uma pr�spera 
-cidade comercial, � agora um ref�gio para o mal reproduzido por longos anos 
-sobre o dom�nio do sombrio Lorde Suzerain.  Praticamente em todos os cantos 
-voc� encontra ru�nas de diversos tipos, coisas bastante antigas e velhos 
-ossos esbranqui�ados das mais variadas esp�cies de criaturas. 
-   As sa�das conduzem a todas dire��es cardeais. 
+   Você está dentro dos limites da cidade de Ghenna.  Outrora uma próspera 
+cidade comercial, é agora um refúgio para o mal reproduzido por longos anos 
+sobre o domínio do sombrio Lorde Suzerain.  Praticamente em todos os cantos 
+você encontra ruínas de diversos tipos, coisas bastante antigas e velhos 
+ossos esbranquiçados das mais variadas espécies de criaturas. 
+   As saídas conduzem a todas direções cardeais. 
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
@@ -49,18 +50,19 @@ D4
 Muito escuro para saber.
 ~
 plataforma~
+:n 2
 1 -1 9900
 S
 #9902
-A Fonte das L�grimas~
-   Uma grande fonte contendo as l�grimas daqueles que foram mortos dentro 
-dos limites da cidade foi erguida aqui, est� localizada ao lado da muralha 
-leste - ela parece bastante profunda e ampla.  A �gua � l�mpida e azulada 
-exalando uma aura de santidade, algo muito estranho para uma cidade t�o 
-mal�fica.
-   As sa�das levam ao oeste, norte e sul.
+A Fonte das Lágrimas~
+   Uma grande fonte contendo as lágrimas daqueles que foram mortos dentro 
+dos limites da cidade foi erguida aqui, está localizada ao lado da muralha 
+leste - ela parece bastante profunda e ampla.  A água é límpida e azulada 
+exalando uma aura de santidade, algo muito estranho para uma cidade tão 
+maléfica.
+   As saídas levam ao oeste, norte e sul.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
@@ -79,14 +81,14 @@ Muito escuro para saber.
 S
 #9903
 O Cheiro da Morte~
-   Voc� est� onde parece ser o cemit�rio municipal.  Ningu�m percebeu a 
-necessidade de enterrar os mortos, ent�o os cad�veres est�o apenas 
+   Você está onde parece ser o cemitério municipal.  Ninguém percebeu a 
+necessidade de enterrar os mortos, então os cadáveres estão apenas 
 espalhados ao redor desordenadamente.  E o fedor, oh rapaz!  Tudo o que
-voc� consegue fazer � tentar prosseguir sem perder seu almo�o.  
-   Os cad�veres est�o empilhados muito alto ao leste, mas voc� pode passar 
+você consegue fazer é tentar prosseguir sem perder seu almoço.  
+   Os cadáveres estão empilhados muito alto ao leste, mas você pode passar 
 pelo norte, sul ou oeste.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
@@ -105,19 +107,21 @@ As ruas de Ghenna.
 D5
 ~
 coragem~
+:n 2
 1 -1 9912
 S
 #9904
 Uma Pedra Circular~
-   Voc� est� numa pequena pedra circular.  Ao leste fica uma grande fonte, e 
-uma porta est� situada ao norte, mais abaixo uma ampla taverna marcada com 
-um sinal descrevendo o que n�o se pode falar.
+   Você está numa pequena pedra circular.  Ao leste fica uma grande fonte, e 
+uma porta está situada ao norte, mais abaixo uma ampla taverna marcada com 
+um sinal descrevendo o que não se pode falar.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
 taverna~
+:n 2
 1 -1 9915
 D1
 Muito escuro para saber.
@@ -127,11 +131,11 @@ Muito escuro para saber.
 S
 #9905
 A Cerca Contorcida~
-   Voc� est� no meio de fileiras de cercas contorcidas de aproximadamente 
-dois metros de altura.  A trilha atrav�s da barreira conduz para todas as 
-dire��es cardeais.
+   Você está no meio de fileiras de cercas contorcidas de aproximadamente 
+dois metros de altura.  A trilha através da barreira conduz para todas as 
+direções cardeais.
 ~
-99 5 0 0 0 1
+99 ac 1
 D0
 A cerca contorcida.
 ~
@@ -155,11 +159,11 @@ A cerca contorcida.
 S
 #9906
 A Cerca Contorcida~
-   Voc� est� no meio de fileiras de cercas contorcidas de aproximadamente 
-dois metros de altura.  A trilha atrav�s da barreira conduz para todas as 
-dire��es cardeais.
+   Você está no meio de fileiras de cercas contorcidas de aproximadamente 
+dois metros de altura.  A trilha através da barreira conduz para todas as 
+direções cardeais.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 A cerca contorcida.
 ~
@@ -183,15 +187,16 @@ A cerca contorcida.
 D5
 ~
 oculto~
+:n 1
 1 -1 9910
 S
 #9907
 A Cerca Contorcida~
-   Voc� est� no meio de fileiras de cercas contorcidas de aproximadamente 
-dois metros de altura.  A trilha atrav�s da barreira conduz para todas as 
-dire��es cardeais.
+   Você está no meio de fileiras de cercas contorcidas de aproximadamente 
+dois metros de altura.  A trilha através da barreira conduz para todas as 
+direções cardeais.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 A cerca contorcida.
 ~
@@ -213,18 +218,19 @@ A cerca contorcida.
 ~
 0 -1 9909
 D5
-Os dom�nios da perdi��o.
+Os domínios da perdição.
 ~
 porta~
+:n 2
 1 -1 9910
 S
 #9908
 A Cerca Contorcida~
-   Voc� est� no meio de fileiras de cercas contorcidas de aproximadamente 
-dois metros de altura.  A trilha atrav�s da barreira conduz para todas as 
-dire��es cardeais.
+   Você está no meio de fileiras de cercas contorcidas de aproximadamente 
+dois metros de altura.  A trilha através da barreira conduz para todas as 
+direções cardeais.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 A cerca contorcida.
 ~
@@ -248,11 +254,11 @@ A cerca contorcida.
 S
 #9909
 A Cerca Contorcida~
-   Voc� est� no meio de fileiras de cercas contorcidas de aproximadamente 
-dois metros de altura.  A trilha atrav�s da barreira conduz para todas as 
-dire��es cardeais.
+   Você está no meio de fileiras de cercas contorcidas de aproximadamente 
+dois metros de altura.  A trilha através da barreira conduz para todas as 
+direções cardeais.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 A cerca contorcida.
 ~
@@ -275,14 +281,14 @@ A cerca contorcida.
 0 -1 9905
 S
 #9910
-Os Dom�nios da Perdi��o~
-   O incessante lamento das almas atormentadas causa horr�veis calafrios que 
-voc� sente de cima � baixo de sua espinha dorsal.  As paredes, assoalho e 
-teto s�o pegajosos, de uma cor vermelho sangue.  Uma brecha no teto sobre 
-voc� deixa entrar uma fraca brisa que arrepia seus pelos.  Um portal m�gico 
-est� ao sul, conduzindo ao desconhecido.
+Os Domínios da Perdição~
+   O incessante lamento das almas atormentadas causa horríveis calafrios que 
+você sente de cima à baixo de sua espinha dorsal.  As paredes, assoalho e 
+teto são pegajosos, de uma cor vermelho sangue.  Uma brecha no teto sobre 
+você deixa entrar uma fraca brisa que arrepia seus pelos.  Um portal mágico 
+está ao sul, conduzindo ao desconhecido.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
@@ -301,13 +307,13 @@ Muito escuro para saber.
 S
 #9911
 Uma Sala Ondulante~
-   Esta sala ondula com uma aura de inacredit�vel maldade.  O movimento do 
-ch�o causa a voc� uma tontura incontrol�vel, enquanto que o teto oscila 
-ritmicamente para cima e para baixo.  Voc� pode sentir a fonte de sua 
+   Esta sala ondula com uma aura de inacreditável maldade.  O movimento do 
+chão causa a você uma tontura incontrolável, enquanto que o teto oscila 
+ritmicamente para cima e para baixo.  Você pode sentir a fonte de sua 
 vitalidade sendo drenada para fora do seu corpo.  Se permanecer aqui durante 
-muito tempo certamente ser� o fim para voc�.
+muito tempo certamente será o fim para você.
 ~
-99 65537 0 0 0 1
+99 aq 1
 D0
 O buraco abissal.
 ~
@@ -319,7 +325,7 @@ Muito escuro para saber.
 ~
 0 -1 9924
 D2
-Os dom�nios da perdi��o.
+Os domínios da perdição.
 ~
 ~
 0 -1 9910
@@ -336,7 +342,7 @@ Muito escuro para saber.
 S
 #9912
 O Buraco Abissal~
-Voc� est� 
+Você está 
  
              ||  C        ||
              ||   A       ||
@@ -359,7 +365,7 @@ Voc� est�
              ||           ||
              ||           ||
 ~
-99 131077 0 0 0 0
+99 acr 0
 D0
 ~
 ~
@@ -386,8 +392,8 @@ D5
 0 -1 9913
 S
 #9913
-N�o � divertido!??~
-Voc� apenas continua
+Não é divertido!??~
+Você apenas continua
  
              ||           ||
              || C         ||
@@ -411,7 +417,7 @@ Voc� apenas continua
              ||           ||
              ||           ||
 ~
-99 131077 0 0 0 0
+99 acr 0
 D0
 ~
 ~
@@ -439,10 +445,10 @@ D5
 S
 #9914
 As Ruas de Ghenna~
-   Voc� est� nas indescrit�veis ruas da cidade de Ghenna.  A estrada 
+   Você está nas indescritíveis ruas da cidade de Ghenna.  A estrada 
 continua ao leste e oeste, contornando suavemente em torno de um vale.
 ~
-99 1 0 0 0 1
+99 a 1
 D1
 Muito escuro para saber.
 ~
@@ -456,14 +462,14 @@ Muito escuro para saber.
 S
 #9915
 Taverna Sangrenta~
-   Voc� est� no interior da Taverna Sangrenta - um local aparentemente 
-bizarro, � primeira vista.  O assoalho range sob o peso vindo de uma 
+   Você está no interior da Taverna Sangrenta - um local aparentemente 
+bizarro, à primeira vista.  O assoalho range sob o peso vindo de uma 
 estranha confraria que fica ao norte, este aparenta estar se movendo de 
-alguma forma.  Pr�ximo a confraria uma escadaria desaparece no interior da 
-escurid�o que est� l� em cima.  O teto � abobadado e ostenta tr�s 
-candelabros, nos quais provavelmente s�o enforcadas as v�timas.
+alguma forma.  Próximo a confraria uma escadaria desaparece no interior da 
+escuridão que está lá em cima.  O teto é abobadado e ostenta três 
+candelabros, nos quais provavelmente são enforcadas as vítimas.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
@@ -472,6 +478,7 @@ Muito escuro para saber.
 D2
 ~
 porta~
+:n 2
 1 -1 9904
 D3
 Muito escuro para saber.
@@ -481,14 +488,14 @@ Muito escuro para saber.
 S
 #9916
 Na Confraria dos Mortos-Vivos~
-   H� muito tempo uma confraria foi constru�da aqui, para que?  Apenas os 
-deuses sabem.  Ela da a impress�o de ser composta de carne humana costurada 
+   Há muito tempo uma confraria foi construída aqui, para que?  Apenas os 
+deuses sabem.  Ela da a impressão de ser composta de carne humana costurada 
 com os pelos das mais diversas criaturas.  Ainda que resistente, a confraria 
-� bastante male�vel ao toque, e ela parece estar se MOVENDO levemente, como 
+é bastante maleável ao toque, e ela parece estar se MOVENDO levemente, como 
 se isto estivesse VIVO!
-   Uma escadaria est� aqui, conduzindo para a escurid�o.     
+   Uma escadaria está aqui, conduzindo para a escuridão.     
 ~
-99 1 0 0 0 1
+99 a 1
 D2
 Muito escuro para saber.
 ~
@@ -502,13 +509,13 @@ Muito escuro para saber.
 S
 #9917
 A Mesa de Cartas~
-   Uma mesa de cartas constru�da a partir do esqueleto de um estranho 
-quadr�pede est� aqui com algumas m�os que foram abandonadas sobre ela... 
-Voc� pergunta a si mesmo onde estar� o resto dos corpos destes pobres 
+   Uma mesa de cartas construída a partir do esqueleto de um estranho 
+quadrúpede está aqui com algumas mãos que foram abandonadas sobre ela... 
+Você pergunta a si mesmo onde estará o resto dos corpos destes pobres 
 coitados.  A entrada da taverna fica para o leste, enquanto que ao norte 
-est� a confraria feita aparentemente de partes humanas.
+está a confraria feita aparentemente de partes humanas.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -522,11 +529,11 @@ Muito escuro para saber.
 S
 #9918
 No Topo dos Degraus~
-   Voc� est� no topo dos degraus da Taverna Sangrenta.  A escurid�o 
+   Você está no topo dos degraus da Taverna Sangrenta.  A escuridão 
 prevalece ao longo do pequeno corredor que segue de leste para oeste.  
-Abaixo de voc� est� a confraria de carne humana.
+Abaixo de você está a confraria de carne humana.
 ~
-99 9 0 0 0 0
+99 ad 0
 D1
 Muito escuro para saber.
 ~
@@ -545,15 +552,16 @@ Muito escuro para saber.
 S
 #9919
 O Corredor no Andar Superior~
-   Voc� est� num pequeno corredor no andar superior.  Para o oeste fica o 
-topo dos degraus enquanto que para o norte h� uma porta, de tr�s desta voc� 
-pode escutar um fraco c�ntico... a sombria voz soa quase feminina.
+   Você está num pequeno corredor no andar superior.  Para o oeste fica o 
+topo dos degraus enquanto que para o norte há uma porta, de trás desta você 
+pode escutar um fraco cântico... a sombria voz soa quase feminina.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
 porta~
+:n 2
 1 -1 9920
 D3
 Muito escuro para saber.
@@ -563,11 +571,11 @@ Muito escuro para saber.
 S
 #9920
 Um Quarto Desarrumado~
-   Voc� est� dentro de um quarto totalmente desarrumado, mobiliado com uma 
-cama MUITO manchada e uma simples mesa girat�ria.  Uma janela fica ao norte 
-dando uma vista panor�mica da escurid�o al�m.
+   Você está dentro de um quarto totalmente desarrumado, mobiliado com uma 
+cama MUITO manchada e uma simples mesa giratória.  Uma janela fica ao norte 
+dando uma vista panorâmica da escuridão além.
 ~
-99 9 0 0 0 0
+99 ad 0
 D2
 Muito escuro para saber.
 ~
@@ -576,10 +584,10 @@ Muito escuro para saber.
 S
 #9921
 O Corredor no Andar Superior~
-   Voc� est� num pequeno corredor no andar superior da Taverna Sangrenta.  
-Uma porta est� ao sul, para o leste fica o topo dos degraus.
+   Você está num pequeno corredor no andar superior da Taverna Sangrenta.  
+Uma porta está ao sul, para o leste fica o topo dos degraus.
 ~
-99 9 0 0 0 0
+99 ad 0
 D1
 Muito escuro para saber.
 ~
@@ -589,16 +597,17 @@ D2
 Muito escuro para saber.
 ~
 porta~
+:n 2
 2 9916 9922
 S
 #9922
-A Su�te Principal~
-   Esta � a su�te principal da Taverna Sangrenta.  Um arm�rio de bebidas 
-est� encostado contra a parede, cheio de garrafas empoeiradas, enquanto que 
-uma grande cama est� posicionada ao lado.  Uma porta parcialmente aberta ao 
-oeste o leva at� o banheiro.
+A Suíte Principal~
+   Esta é a suíte principal da Taverna Sangrenta.  Um armário de bebidas 
+está encostado contra a parede, cheio de garrafas empoeiradas, enquanto que 
+uma grande cama está posicionada ao lado.  Uma porta parcialmente aberta ao 
+oeste o leva até o banheiro.
 ~
-99 8 0 0 0 0
+99 d 0
 D0
 Muito escuro para saber.
 ~
@@ -612,16 +621,17 @@ Muito escuro para saber.
 S
 #9923
 O Banheiro~
-   Rapaz, o fedor que est� aqui � horr�vel!!  H� um buraco no assoalho que � 
-usado como vaso sanit�rio - extremamente primitivo.  Uma bacia foi deixada 
-no ch�o, cheia de �gua ensang�entada, e um imundo espelho reflete a sua 
+   Rapaz, o fedor que está aqui é horrível!!  Há um buraco no assoalho que é 
+usado como vaso sanitário - extremamente primitivo.  Uma bacia foi deixada 
+no chão, cheia de água ensangüentada, e um imundo espelho reflete a sua 
 imagem.
 ~
-99 8 0 0 0 0
+99 d 0
 D0
 Muito escuro para saber.
 ~
 espelho~
+:n 1
 1 -1 9943
 D1
 Muito escuro para saber.
@@ -631,12 +641,12 @@ Muito escuro para saber.
 S
 #9924
 Uma Dobra na Estrutura do Tempo~
-   Voc� foi capturado por um turbilh�o do tempo, e este � bastante 
-nauseante.  Voc� gira e gira, inseguro de onde ir� parar.  Parece como se 
-voc� pudesse terminar nos mais diferentes lugares apenas escolhendo uma 
-sa�da.
+   Você foi capturado por um turbilhão do tempo, e este é bastante 
+nauseante.  Você gira e gira, inseguro de onde irá parar.  Parece como se 
+você pudesse terminar nos mais diferentes lugares apenas escolhendo uma 
+saída.
 ~
-99 5 0 0 0 0
+99 ac 0
 D0
 Muito escuro para saber.
 ~
@@ -670,12 +680,12 @@ Muito escuro para saber.
 S
 #9925
 Um Labirinto de Corpos~
-   Voc� est� no interior de um labirinto criado a partir de corpos que foram 
-empilhados a 3 metros de altura.  Parece que de alguma forma os corpos est�o 
+   Você está no interior de um labirinto criado a partir de corpos que foram 
+empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão 
 ainda aquecidos, e ocasionalmente um grito de desespero sai de certas partes 
 do aglomerado.
 ~
-99 17 0 0 0 0
+99 ae 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -699,12 +709,12 @@ Um Labirinto de Corpos.
 S
 #9926
 Um Labirinto de Corpos~
-   Voc� est� no interior de um labirinto criado a partir de corpos que foram 
-empilhados a 3 metros de altura.  Parece que de alguma forma os corpos est�o 
+   Você está no interior de um labirinto criado a partir de corpos que foram 
+empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão 
 ainda aquecidos, e ocasionalmente um grito de desespero sai de certas partes 
 do aglomerado.
 ~
-99 17 0 0 0 0
+99 ae 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -727,12 +737,12 @@ Um Labirinto de Corpos.
 S
 #9927
 Um Labirinto de Corpos~
-   Voc� est� no interior de um labirinto criado a partir de corpos que foram 
-empilhados a 3 metros de altura.  Parece que de alguma forma os corpos est�o 
+   Você está no interior de um labirinto criado a partir de corpos que foram 
+empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão 
 ainda aquecidos, ocasionalmente lamentos de desespero saem de certas partes 
 do aglomerado.
 ~
-99 17 0 0 0 0
+99 ae 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -756,12 +766,12 @@ Um Labirinto de Corpos.
 S
 #9928
 Um Labirinto de Corpos~
-   Voc� est� no interior de um labirinto criado a partir de corpos que foram 
-empilhados a 3 metros de altura.  Parece que de alguma forma os corpos est�o 
+   Você está no interior de um labirinto criado a partir de corpos que foram 
+empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão 
 ainda aquecidos, e ocasionalmente gritos abafados saem de certas partes do 
 aglomerado.
 ~
-99 17 0 0 0 0
+99 ae 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -785,12 +795,12 @@ Um Labirinto de Corpos.
 S
 #9929
 Um Labirinto de Corpos~
-   Voc� est� no interior de um labirinto criado a partir de corpos que foram 
-empilhados a 3 metros de altura.  Parece que de alguma forma os corpos est�o 
+   Você está no interior de um labirinto criado a partir de corpos que foram 
+empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão 
 ainda aquecidos, e ocasionalmente suplicas de ajuda saem de certas partes do 
 aglomerado.
 ~
-99 17 0 0 0 0
+99 ae 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -814,12 +824,12 @@ Um Labirinto de Corpos.
 S
 #9930
 Um Labirinto de Corpos~
-   Voc� est� no interior de um labirinto criado a partir de corpos que foram 
-empilhados a 3 metros de altura.  Parece que de alguma forma os corpos est�o 
+   Você está no interior de um labirinto criado a partir de corpos que foram 
+empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão 
 ainda aquecidos, e ocasionalmente um grito de desespero sai de certas partes 
 do aglomerado.
 ~
-99 17 0 0 0 0
+99 ae 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -843,12 +853,12 @@ Um Labirinto de Corpos.
 S
 #9931
 Um Labirinto de Corpos~
-   Voc� est� no interior de um labirinto criado a partir de corpos que foram 
-empilhados a 3 metros de altura.  Parece que de alguma forma os corpos est�o 
+   Você está no interior de um labirinto criado a partir de corpos que foram 
+empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão 
 ainda aquecidos, e ocasionalmente gritos de horror saem de certas partes do 
 aglomerado.
 ~
-99 17 0 0 0 0
+99 ae 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -872,12 +882,12 @@ Um Labirinto de Corpos.
 S
 #9932
 Um Labirinto de Corpos~
-   Voc� est� no interior de um labirinto criado a partir de corpos que foram 
-empilhados a 3 metros de altura.  Parece que de alguma forma os corpos est�o 
+   Você está no interior de um labirinto criado a partir de corpos que foram 
+empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão 
 ainda aquecidos, e ocasionalmente gritos de desespero saem de certas partes 
 do aglomerado.
 ~
-99 17 0 0 0 0
+99 ae 0
 D0
 Um Labirinto de Ossos.
 ~
@@ -901,11 +911,11 @@ Um Labirinto de Ossos.
 S
 #9933
 A Boca da Grande Caverna~
-   Fora do labirinto finalmente!  Mas o que � isso?  Voc� est� na boca de 
-uma grande caverna de aproximadamente 30 metros de di�metro.  Um c�rrego de 
+   Fora do labirinto finalmente!  Mas o que é isso?  Você está na boca de 
+uma grande caverna de aproximadamente 30 metros de diâmetro.  Um córrego de 
 sangue corre pelos degraus de pedra que conduzem para cima - Ousas entrar?
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Um Labirinto de Corpos.
 ~
@@ -932,28 +942,30 @@ Dentro da caverna.
 ~
 0 -1 9934
 D5
-Um po�o cheio de lan�as (no qual ser� D 1FINITIVAMENTE a morte para voc� se 
+Um poço cheio de lanças (no qual será DEFINITIVAMENTE a morte para você se 
 cair).
 ~
-po�o~
+poco~
+:n 1
 1 -1 9999
 S
 #9934
 Dentro da Entrada da Caverna~
-   Voc� est� por dentro da entrada da caverna onde um forte cheiro de 
+   Você está por dentro da entrada da caverna onde um forte cheiro de 
 enxofre o faz vomitar.  Grandes degraus de pedra levam para baixo, onde fica 
-o labirinto de corpos.  Um c�rrego de sangue parece escorrer de algum lugar 
-ao norte, um ru�do parecido com um fole gigantesco pode ser ouvido. 
+o labirinto de corpos.  Um córrego de sangue parece escorrer de algum lugar 
+ao norte, um ruído parecido com um fole gigantesco pode ser ouvido. 
 ~
-99 5 0 0 0 0
+99 ac 0
 D0
-Devorado at� a morte.
+Devorado até a morte.
 ~
 ~
 0 -1 9935
 D4
 ~
 gruta~
+:n 2
 1 -1 9938
 D5
 A boca da grande caverna.
@@ -962,14 +974,14 @@ A boca da grande caverna.
 0 -1 9933
 S
 #9935
-Devorado at� a Morte~
+Devorado até a Morte~
    Rapaz, o cheiro de enxofre tornou-se mais forte - YUCK!  Como se ainda 
-n�o estivesse suficientemente ruim, h� aproximadamente uma centena horr�veis 
+não estivesse suficientemente ruim, há aproximadamente uma centena horríveis 
 corpos desfigurados deitados aqui.  Parece que a carne foi mastigada de seus 
-corpos ainda vivos para que tivessem dores terr�veis.  A correnteza de 
-sangue que voc� encontrou na entrada da caverna � muito maior aqui.
+corpos ainda vivos para que tivessem dores terríveis.  A correnteza de 
+sangue que você encontrou na entrada da caverna é muito maior aqui.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -983,14 +995,14 @@ Muito escuro para saber.
 S
 #9936
 A Entrada do Covil~
-   Esta � grande caverna tem a parte superior abobadada.  Um grande peitoril 
-de pedra fica logo acima da sua cabe�a derramando sobre voc� uma corrente 
-continua de sangue e tripas.  Um �spero ru�do de intestino sendo mastigado, 
-alternado com um ru�do de um gole de bebida, revolta seu estomago.  Ap�s 
-escutar isto... uma encorajadora voz fala repetidamente "Sim, sim, � isto... 
-apenas mais alguns passos... voc� est� quase l�".
+   Esta é grande caverna tem a parte superior abobadada.  Um grande peitoril 
+de pedra fica logo acima da sua cabeça derramando sobre você uma corrente 
+continua de sangue e tripas.  Um áspero ruído de intestino sendo mastigado, 
+alternado com um ruído de um gole de bebida, revolta seu estomago.  Após 
+escutar isto... uma encorajadora voz fala repetidamente "Sim, sim, é isto... 
+apenas mais alguns passos... você está quase lá".
 ~
-99 9 0 0 0 0
+99 ad 0
 D2
 Muito escuro para saber.
 ~
@@ -1003,20 +1015,21 @@ Muito escuro para saber.
 0 -1 9937
 S
 #9937
-Um Covil Cheio de Cad�veres~
-   Este peitoril � escorregadio, com o sangue de centenas de aventureiros 
-que fizeram a besteira de entrar aqui.  Cad�veres, cad�veres por toda parte.  
-Pelos menos voc� finalmente encontrou a origem daquele horr�vel odor de 
-enxofre.  Uma negra subst�ncia fumegante est� untada por toda parte nas 
-paredes, causando o p�nico.  Como se ainda n�o estivesse ruim o bastante, 
-voc� repentinamente tem a sensa��o de que a sua vida est� a ponto de 
+Um Covil Cheio de Cadáveres~
+   Este peitoril é escorregadio, com o sangue de centenas de aventureiros 
+que fizeram a besteira de entrar aqui.  Cadáveres, cadáveres por toda parte.  
+Pelos menos você finalmente encontrou a origem daquele horrível odor de 
+enxofre.  Uma negra substância fumegante está untada por toda parte nas 
+paredes, causando o pânico.  Como se ainda não estivesse ruim o bastante, 
+você repentinamente tem a sensação de que a sua vida está a ponto de 
 terminar antes do tempo. 
 ---> HASTA LA VISTA!
 ~
-99 9 0 0 0 0
+99 ad 0
 D4
 ~
 oculto~
+:n 1
 1 -1 9953
 D5
 Muito escuro para saber.
@@ -1026,11 +1039,11 @@ Muito escuro para saber.
 S
 #9938
 Uma Caverna~
-   Voc� est� em uma caverna apertada do outro lado da entrada.  Mesmo se 
-voc� n�o for claustrof�bico este local pode seguramente o tornar um.  H� um 
-espa�o para rastejar ao oeste.  Cuidado com a cabe�a.
+   Você está em uma caverna apertada do outro lado da entrada.  Mesmo se 
+você não for claustrofóbico este local pode seguramente o tornar um.  Há um 
+espaço para rastejar ao oeste.  Cuidado com a cabeça.
 ~
-99 9 0 0 0 0
+99 ad 0
 D3
 Muito escuro para saber.
 ~
@@ -1043,12 +1056,12 @@ Muito escuro para saber.
 0 -1 9934
 S
 #9939
-O T�nel~
-   A caverna abriu-se para o interior de um t�nel grande o suficiente para 
-voc� ficar de p�.  Estalagmites e estalactites formaram-se no ch�o e no 
-teto.  H� sa�das ao leste, norte e oeste.
+O Túnel~
+   A caverna abriu-se para o interior de um túnel grande o suficiente para 
+você ficar de pé.  Estalagmites e estalactites formaram-se no chão e no 
+teto.  Há saídas ao leste, norte e oeste.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -1067,11 +1080,11 @@ Muito escuro para saber.
 S
 #9940
 Um Caminho Estreito~
-   Voc� est� em um t�nel estreito onde � poss�vel passar apenas rastejando.  
-H� uma curva para a direita, mas n�o consegue descobrir aonde ir� levar.  � 
-t�o apertado aqui que n�o h� como voc� retornar por este caminho pelo sul. 
+   Você está em um túnel estreito onde é possível passar apenas rastejando.  
+Há uma curva para a direita, mas não consegue descobrir aonde irá levar.  É 
+tão apertado aqui que não há como você retornar por este caminho pelo sul. 
 ~
-99 9 0 0 0 0
+99 ad 0
 D1
 Muito escuro para saber.
 ~
@@ -1080,13 +1093,13 @@ Muito escuro para saber.
 S
 #9941
 A Morada do Efreeti~
-   Voc� penetrou na m�gica morada do grande Efreeti.  Feita em motivos 
-orientais, este local vislumbra com todo o conforto que algu�m pode desejar.  
-Almofadas, tapetes e candelabros est�o por toda parte.  Este certamente � um 
-dos locais mais luxuosos que voc� j� viu.  Ao norte est� a proibida sala do 
-tesouro, entrar l� � procurar a morte com certeza. 
+   Você penetrou na mágica morada do grande Efreeti.  Feita em motivos 
+orientais, este local vislumbra com todo o conforto que alguém pode desejar.  
+Almofadas, tapetes e candelabros estão por toda parte.  Este certamente é um 
+dos locais mais luxuosos que você já viu.  Ao norte está a proibida sala do 
+tesouro, entrar lá é procurar a morte com certeza. 
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 A morte certa.
 ~
@@ -1105,8 +1118,8 @@ Muito escuro para saber.
 S
 #9942
 A Morte Certa~
-   Voc� cometeu um erro tolo, meu amigo.  Est� � a tenta��o equivalente a do 
-fruto proibido.  Uma gigantesca m�o emerge atrav�s de uma fenda que se abre 
+   Você cometeu um erro tolo, meu amigo.  Está é a tentação equivalente a do 
+fruto proibido.  Uma gigantesca mão emerge através de uma fenda que se abre 
 no tempo e o esmaga, como um inseto.
  
                     ------------------
@@ -1114,9 +1127,9 @@ no tempo e o esmaga, como um inseto.
                           SPLAT!!
                               .
                                   .
-                                      .  VOC� EST� MORTO!!
+                                      .  VOCÊ ESTÁ MORTO!!
 ~
-99 6 0 0 0 0
+99 bc 0
 D2
 ~
 ~
@@ -1128,10 +1141,10 @@ D4
 S
 #9943
 Um Local Mofado~
-   Voc� est� em uma mofada �rea escondida atr�s da parede do banheiro.  Uma 
-estreita escadaria de granito conduz para baixo, na escurid�o.
+   Você está em uma mofada área escondida atrás da parede do banheiro.  Uma 
+estreita escadaria de granito conduz para baixo, na escuridão.
 ~
-99 9 0 0 0 0
+99 ad 0
 D2
 Muito escuro para saber.
 ~
@@ -1145,13 +1158,13 @@ Muito escuro para saber.
 S
 #9944
 A Base da Escadaria de Granito~
-   Voc� alcan�ou a base da escadaria de granito.  Este parece ser o por�o da 
-Taverna Sangrenta.  H� um buraco no teto, o qual est� sujo com excremento em 
-sua volta pois l� de cima caiu uma grande montanha de fezes (que legal).  
-   Paredes ficam ao oeste, norte e sul - mas � poss�vel passar pelo leste, em 
+   Você alcançou a base da escadaria de granito.  Este parece ser o porão da 
+Taverna Sangrenta.  Há um buraco no teto, o qual está sujo com excremento em 
+sua volta pois lá de cima caiu uma grande montanha de fezes (que legal).  
+   Paredes ficam ao oeste, norte e sul - mas é possível passar pelo leste, em 
 volta da pilha de estrume.
 ~
-99 9 0 0 0 0
+99 ad 0
 D1
 Muito escuro para saber.
 ~
@@ -1165,10 +1178,10 @@ Muito escuro para saber.
 S
 #9945
 A Escadaria de Granito~
-   Voc� est� em uma estreita escadaria de granito que em espirais suavemente 
-conduz para baixo.  Voc� pode subir, ou descer de acordo com sua vontade. 
+   Você está em uma estreita escadaria de granito que em espirais suavemente 
+conduz para baixo.  Você pode subir, ou descer de acordo com sua vontade. 
 ~
-99 9 0 0 0 0
+99 ad 0
 D4
 Muito escuro para saber.
 ~
@@ -1182,10 +1195,10 @@ Muito escuro para saber.
 S
 #9946
 Nos Degraus~
-   Voc� est� em uma estreita escadaria de granito que em espirais suavemente 
-conduz para baixo.  Voc� pode subir, ou descer de acordo com sua vontade.
+   Você está em uma estreita escadaria de granito que em espirais suavemente 
+conduz para baixo.  Você pode subir, ou descer de acordo com sua vontade.
 ~
-99 9 0 0 0 0
+99 ad 0
 D4
 Muito escuro para saber.
 ~
@@ -1199,17 +1212,18 @@ Muito escuro para saber.
 S
 #9947
 Na Parte Posterior~
-   Esta parte posterior do nicho � �mida, escura e cheia de p�.  Os tijolos 
-das paredes mostram sinais de decad�ncia - lascas vermelhas e negras est�o 
-espalhadas no ch�o.  Um velho barril de vinho do porto est� quebrado e 
-jogado em um canto, uma rel�quia dos tempos felizes.  A �nica sa�da vis�vel 
+   Esta parte posterior do nicho é úmida, escura e cheia de pó.  Os tijolos 
+das paredes mostram sinais de decadência - lascas vermelhas e negras estão 
+espalhadas no chão.  Um velho barril de vinho do porto está quebrado e 
+jogado em um canto, uma relíquia dos tempos felizes.  A única saída visível 
 fica ao oeste.
 ~
-99 9 0 0 0 0
+99 ad 0
 D2
 ~
 porto barril~
-1 -1 9948
+:n 1
+ad -1 9948
 D3
 Muito escuro para saber.
 ~
@@ -1236,32 +1250,33 @@ Você começa a
                                       \.
                                         \
 
-                                         E aterrisa num monte, pr�ximo
-                                          a um pequeno buraco no ch�o
+                                         E aterrisa num monte, próximo
+                                          a um pequeno buraco no chão
                                         que cheira como algo cozinhando.
 ~
-99 9 0 0 0 0
+99 ad 0
 D5
 ~
 ar~
+:n 1
 1 -1 9949
 S
 #9949
 Cercado de Labaredas~
-   Wow!  Parece como se voc� estivesse no inferno... ou pelo menos, em uma 
-pequena parte dele.  Chamas saltam nas paredes, causando clar�es que enganam 
-a sua vis�o.  Voc� pode com certa dificuldade perceber um vulto ao norte.  
-N�o h� como retornar pelo caminho que voc� usou para chegar at� aqui.  Voc� 
-pode, entretanto, ir em dire��o ao leste, ao oeste e ao norte.
+   Wow!  Parece como se você estivesse no inferno... ou pelo menos, em uma 
+pequena parte dele.  Chamas saltam nas paredes, causando clarões que enganam 
+a sua visão.  Você pode com certa dificuldade perceber um vulto ao norte.  
+Não há como retornar pelo caminho que você usou para chegar até aqui.  Você 
+pode, entretanto, ir em direção ao leste, ao oeste e ao norte.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
 ~
 0 -1 9952
 D1
-Um quarto provis�rio.
+Um quarto provisório.
 ~
 ~
 0 -1 9950
@@ -1272,13 +1287,13 @@ Muito escuro para saber.
 0 -1 9947
 S
 #9950
-Um Quarto Provis�rio~
-   Um colchonete est� encostado numa parede deste pequeno quarto de dormir, 
+Um Quarto Provisório~
+   Um colchonete está encostado numa parede deste pequeno quarto de dormir, 
 do outro lado um pentagrama invertido foi desenhado com sangue e uma maleta 
-de objetos pessoais em frente.  A �nica sa�da � voltando em dire��o ao 
+de objetos pessoais em frente.  A única saída é voltando em direção ao 
 oeste.
 ~
-99 9 0 0 0 0
+99 ad 0
 D3
 Muito escuro para saber.
 ~
@@ -1287,12 +1302,12 @@ Muito escuro para saber.
 S
 #9951
 A Estrada de Ghenna~
-   Voc� est� numa estrada da cidade de Ghenna.  Constru�da com pedras 
+   Você está numa estrada da cidade de Ghenna.  Construída com pedras 
 arredondadas e lisas, o caminho tornou-se escorregadio por causa do sangue 
 de muitos e incautos aventureiros.  
 Cuidado com seus passos! 
 ~
-99 1 0 0 0 1
+99 a 1
 D1
 Muito escuro para saber.
 ~
@@ -1306,12 +1321,12 @@ Muito escuro para saber.
 S
 #9952
 O Assento do Poder~
-   Fogo, fogo por toda parte.  Uma plataforma de m�rmore negro est� no 
-centro das chamas apoiando uma negra cadeira de m�rmore a qual est� vazia.  
+   Fogo, fogo por toda parte.  Uma plataforma de mármore negro está no 
+centro das chamas apoiando uma negra cadeira de mármore a qual está vazia.  
 Este parece ser algum tipo de trono.  As labaredas tornam todos os caminhos 
-intransit�veis exceto por aquele que chegou e a dire��o sacra.
+intransitáveis exceto por aquele que chegou e a direção sacra.
 ~
-99 1 0 0 0 0
+99 a 0
 D2
 Muito escuro para saber.
 ~
@@ -1325,11 +1340,11 @@ Muito escuro para saber.
 S
 #9953
 Abaixo dos Ossos~
-   Voc� est� sob uma pilha de ossos.  O c�u noturno transparece no vazio com 
-o olhar de uma caveira humana sobre voc�.  Com um m�nimo esfor�o para subir, 
-voc� pode libertar-se.
+   Você está sob uma pilha de ossos.  O céu noturno transparece no vazio com 
+o olhar de uma caveira humana sobre você.  Com um mínimo esforço para subir, 
+você pode libertar-se.
 ~
-99 5 0 0 0 0
+99 ac 0
 D4
 Muito escuro para saber.
 ~
@@ -1338,10 +1353,10 @@ Muito escuro para saber.
 S
 #9954
 As Ruas de Ghenna~
-   Voc� est� em uma das muitas ruas em Ghenna.  Uma grande muralha bloqueia 
+   Você está em uma das muitas ruas em Ghenna.  Uma grande muralha bloqueia 
 a passagem ocidental, mas pode-se seguir pelo norte, sul ou leste.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
@@ -1360,12 +1375,12 @@ Muito escuro para saber.
 S
 #9955
 As Ruas de Ghenna~
-   Voc� est� na rua que segue de norte a sul.  As pedras do cal�amento 
-machucam seus p�s impiedosamente.  Ao oeste fica a muralha da cidade, 
-enquanto uma constru��o incendiada est� ao leste, � imposs�vel permanecer 
+   Você está na rua que segue de norte a sul.  As pedras do calçamento 
+machucam seus pés impiedosamente.  Ao oeste fica a muralha da cidade, 
+enquanto uma construção incendiada está ao leste, é impossível permanecer 
 indiferente aos rumores do que houve por aqui.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
@@ -1383,13 +1398,13 @@ Muito escuro para saber.
 0 -1 9954
 S
 #9956
-Uma Constru��o Incendiada~
+Uma Construção Incendiada~
    Entulhos carbonizados preenchem totalmente este local, uma trave caiu 
-transversalmente sobre um esqueleto esbranqui�ado.  Ao oeste voc� consegue 
-enxergar as ruas de Ghenna.  Voc� provavelmente quer sair desta edifica��o o 
-mais r�pido, afinal isto pode desmoronar a qualquer momento.
+transversalmente sobre um esqueleto esbranquiçado.  Ao oeste você consegue 
+enxergar as ruas de Ghenna.  Você provavelmente quer sair desta edificação o 
+mais rápido, afinal isto pode desmoronar a qualquer momento.
 ~
-99 1 0 0 0 1
+99 a 1
 D3
 As Ruas de Ghenna.
 ~
@@ -1398,14 +1413,15 @@ As Ruas de Ghenna.
 S
 #9957
 As Ruas de Ghenna~
-   Voc� est� em uma esquina das ruas de Ghenna.  Ao oeste est�o as muralhas 
-da cidade ao passo que ao norte h� uma porta.  A rua continua ao sul, e ao 
-leste tamb�m.
+   Você está em uma esquina das ruas de Ghenna.  Ao oeste estão as muralhas 
+da cidade ao passo que ao norte há uma porta.  A rua continua ao sul, e ao 
+leste também.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 ~
 vermelha porta~
+:n 2
 1 -1 9958
 D1
 Muito escuro para saber.
@@ -1420,12 +1436,12 @@ Muito escuro para saber.
 S
 #9958
 A Morada da Dominatrix~
-   Este local est� recheado de todos os tipos de objetos de couro.  
-Chicotes, correntes e algemas est�o dispostos de forma destacada por toda 
+   Este local está recheado de todos os tipos de objetos de couro.  
+Chicotes, correntes e algemas estão dispostos de forma destacada por toda 
 parte.  Uma cadeira foi posicionada no meio da sala com o intuito de 
 satisfazer seus desejos.
 ~
-99 1 0 0 0 1
+99 a 1
 D2
 Muito escuro para saber.
 ~
@@ -1434,11 +1450,11 @@ Muito escuro para saber.
 S
 #9959
 As Ruas de Ghenna~
-   Este local estreito, conduz ao leste para o interior da escurid�o e ao 
-oeste dirige-se para a entrada da cidade.  Os pedregulhos de constru��es 
-arruinadas tornaram qualquer outra sa�da imposs�vel.
+   Este local estreito, conduz ao leste para o interior da escuridão e ao 
+oeste dirige-se para a entrada da cidade.  Os pedregulhos de construções 
+arruinadas tornaram qualquer outra saída impossível.
 ~
-99 1 0 0 0 1
+99 a 1
 D1
 Muito escuro para saber.
 ~
@@ -1452,13 +1468,13 @@ Muito escuro para saber.
 S
 #9960
 As Ruas de Ghenna~
-   H� tanta sujeira nas ruas por aqui que, voc�, precisa caminhar em zigezag 
-para desviar.  O contorno da estrutura � tudo o que restou do edif�cio que 
-ficava ao sul.  A constru��o ao norte, porem, parece um pouco mais intacta.  
-A rua termina indo-se em dire��o ao leste, numa montanha de entulhos.  Ao 
-oeste, a rua continua por alguma dist�ncia.
+   Há tanta sujeira nas ruas por aqui que, você, precisa caminhar em zigezag 
+para desviar.  O contorno da estrutura é tudo o que restou do edifício que 
+ficava ao sul.  A construção ao norte, porem, parece um pouco mais intacta.  
+A rua termina indo-se em direção ao leste, numa montanha de entulhos.  Ao 
+oeste, a rua continua por alguma distância.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
@@ -1482,12 +1498,12 @@ Muito escuro para saber.
 S
 #9961
 O Posto Comercial~
-   Voc� est� onde antigamente foi o com�rcio da cidade.  Um balc�o se situa 
-mais ao norte do local com um estrado ca�do sobre ele.  Bancos de madeira 
-est�o dispostos por toda a extens�o deste sal�o.  As ruas da cidade de 
+   Você está onde antigamente foi o comércio da cidade.  Um balcão se situa 
+mais ao norte do local com um estrado caído sobre ele.  Bancos de madeira 
+estão dispostos por toda a extensão deste salão.  As ruas da cidade de 
 Ghenna ficam ao sul daqui.
 ~
-99 9 0 0 0 0
+99 ad 0
 D2
 Muito escuro para saber.
 ~
@@ -1496,12 +1512,12 @@ Muito escuro para saber.
 S
 #9962
 Um Local Cheio de Lixo~
-   Este local parece j� ter sido um agrad�vel lar.  O mobili�rio, agora 
-completamente estragado, recorda ao estilo da �poca vitoriana.  Uma fr�gil 
-escadaria conduz para cima, ela parece bastante inst�vel.  Melhor cuidar 
+   Este local parece já ter sido um agradável lar.  O mobiliário, agora 
+completamente estragado, recorda ao estilo da época vitoriana.  Uma frágil 
+escadaria conduz para cima, ela parece bastante instável.  Melhor cuidar 
 onde pisa.
 ~
-99 1 0 0 0 0
+99 a 0
 D0
 Muito escuro para saber.
 ~
@@ -1515,12 +1531,12 @@ Muito escuro para saber.
 S
 #9963
 O Andar Superior da Casa~
-   Parece n�o ter sido uma boa id�ia subir aqui.  O teto desmoronou em ambos 
-os lados, bloqueando as sa�das leste e oeste.  Um cheiro asqueroso de mofo 
-emana de todas as partes.  Uma porta range sua dobradi�a em dire��o ao 
+   Parece não ter sido uma boa idéia subir aqui.  O teto desmoronou em ambos 
+os lados, bloqueando as saídas leste e oeste.  Um cheiro asqueroso de mofo 
+emana de todas as partes.  Uma porta range sua dobradiça em direção ao 
 norte.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -1533,13 +1549,13 @@ Muito escuro para saber.
 0 -1 9962
 S
 #9964
-Um Quarto de Crian�a~
-   Este, evidentemente, foi o quarto de uma crian�a.  Brinquedos (a maioria 
-deles quebrados) est�o espalhados por toda parte.  Um colch�o apoiado contra 
+Um Quarto de Criança~
+   Este, evidentemente, foi o quarto de uma criança.  Brinquedos (a maioria 
+deles quebrados) estão espalhados por toda parte.  Um colchão apoiado contra 
 a parede, completamente furado no meio, atrapalha a passagem.  Uma das 
 bonecas daqui tem a forma absolutamente real... Muito estranho!
 ~
-99 1 0 0 0 0
+99 a 0
 D2
 Muito escuro para saber.
 ~
@@ -1552,12 +1568,12 @@ Muito escuro para saber.
 0 -1 9965
 S
 #9965
-Um Arm�rio Destru�do~
-   Voc� est� em um pequeno arm�rio embutido.  Roupas de crian�as, e caixas 
-de sapatos est�o espalhados, fedendo a mofo.  Aparentemente s� h� uma sa�da 
+Um Armário Destruído~
+   Você está em um pequeno armário embutido.  Roupas de crianças, e caixas 
+de sapatos estão espalhados, fedendo a mofo.  Aparentemente só há uma saída 
 - leste.
 ~
-99 9 0 0 0 0
+99 ad 0
 D1
 Muito escuro para saber.
 ~
@@ -1566,15 +1582,16 @@ Muito escuro para saber.
 D5
 ~
 caixas~
+:n 2
 2 9965 9911
 S
 #9966
 As Ruas de Ghenna~
-   Voc� est� nas ruas de Ghenna.  A muralha da cidade fica ao leste, 
-bloqueando sua sa�da.  Voc� pode seguir ao norte, sul e oeste.  Tome cuidado 
-para n�o trope�ar nos muitos corpos espalhados nestas ruas.
+   Você está nas ruas de Ghenna.  A muralha da cidade fica ao leste, 
+bloqueando sua saída.  Você pode seguir ao norte, sul e oeste.  Tome cuidado 
+para não tropeçar nos muitos corpos espalhados nestas ruas.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
@@ -1593,11 +1610,11 @@ Muito escuro para saber.
 S
 #9967
 Uma Estrada em Ghenna~
-   Esta estrada � bastante estreita, mas parece abrir-se em dire��o ao sul.  
-Uma constru��o arruinada est� ao oeste, e a muralha da cidade bloqueia a 
-sa�da norte.
+   Esta estrada é bastante estreita, mas parece abrir-se em direção ao sul.  
+Uma construção arruinada está ao oeste, e a muralha da cidade bloqueia a 
+saída norte.
 ~
-99 1 0 0 0 1
+99 a 1
 D1
 Muito escuro para saber.
 ~
@@ -1612,10 +1629,10 @@ S
 #9968
 As Ruas de Ghenna~
    Esta estreita via segue de norte a sul.  A muralha da cidade eleva-se 
-sobre voc� ao leste, e uma porta fica ao oeste, uma luz vermelha brilha sob 
+sobre você ao leste, e uma porta fica ao oeste, uma luz vermelha brilha sob 
 ela.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
@@ -1634,10 +1651,10 @@ Muito escuro para saber.
 S
 #9969
 Uma Curva na Estrada~
-   Voc� est� em uma curva da estrada.  A muralha da cidade est� ao norte, e 
-ao leste as sa�das est�o impedidas.  Uma via estreita segue para o oeste.
+   Você está em uma curva da estrada.  A muralha da cidade está ao norte, e 
+ao leste as saídas estão impedidas.  Uma via estreita segue para o oeste.
 ~
-99 1 0 0 0 1
+99 a 1
 D2
 Muito escuro para saber.
 ~
@@ -1651,12 +1668,12 @@ Muito escuro para saber.
 S
 #9970
 O Melhor Inferninho de Ghenna~
-   Esta sala � iluminada pelo brilho de v�rias luzes vermelhas.  Mulheres, e 
-v�rios brinquedos de prazer est�o jogados pelo ch�o, o qual � coberto com um 
-agrad�vel tapete de pel�cia roxo.  Ao sul fica a sala de espera aonde voc� 
-pode ver uma cama posta atr�s de uma mesinha de vidro.
+   Esta sala é iluminada pelo brilho de várias luzes vermelhas.  Mulheres, e 
+vários brinquedos de prazer estão jogados pelo chão, o qual é coberto com um 
+agradável tapete de pelúcia roxo.  Ao sul fica a sala de espera aonde você 
+pode ver uma cama posta atrás de uma mesinha de vidro.
 ~
-99 9 0 0 0 0
+99 ad 0
 D1
 Muito escuro para saber.
 ~
@@ -1670,11 +1687,11 @@ Muito escuro para saber.
 S
 #9971
 A Sala de Espera~
-   Esta � uma curiosa sala de espera onde as pessoas podem relaxar enquanto 
+   Esta é uma curiosa sala de espera onde as pessoas podem relaxar enquanto 
 aguardam.  Uma bela cama florida foi posta em frente a uma mesinha de centro 
-de vidro cheia de revistas.  Ao oeste h� uma escadaria.
+de vidro cheia de revistas.  Ao oeste há uma escadaria.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -1692,7 +1709,7 @@ A Base dos Degraus~
 masculina, foram deixadas no parapeito.  Asqueroso!  Ao leste fica a sala de 
 espera.
 ~
-99 9 0 0 0 0
+99 ad 0
 D1
 A sala de espera.
 ~
@@ -1706,13 +1723,13 @@ Muito escuro para saber.
 S
 #9973
 O Topo dos Degraus~
-   Aparentemente as trabalhadoras do local s�o bastante relaxadas.  H� uma 
-grande variedade de roupas espalhadas pelo ch�o - a maioria totalmente suja.  
+   Aparentemente as trabalhadoras do local são bastante relaxadas.  Há uma 
+grande variedade de roupas espalhadas pelo chão - a maioria totalmente suja.  
 Um corredor fica ao oeste, clareado por uma luz vermelha.
 ~
-99 8 0 0 0 0
+99 d 0
 D3
-Um sagu�o.
+Um saguão.
 ~
 ~
 0 -1 9974
@@ -1725,11 +1742,11 @@ S
 #9974
 Um Corredor no Andar Superior~
    O corredor segue para o leste e oeste, enquanto que ao norte uma porta 
-est� entreaberta, um aviso foi pendurado na ma�aneta: "N�o Perturbe!".
+está entreaberta, um aviso foi pendurado na maçaneta: "Não Perturbe!".
 ~
-99 8 0 0 0 0
+99 d 0
 D0
-Imposs�vel enxergar.
+Impossível enxergar.
 ~
 ~
 0 -1 9975
@@ -1746,13 +1763,13 @@ O final do corredor.
 S
 #9975
 O Imundo Quarto de Dormir~
-   Bem, se voc� tinha inten��es amorosas com certeza elas desapareceram 
-assim que olhou para este quarto.  Uma cama est� aqui com um grande circulo 
-molhado bem no meio.  Manchas de gordura est�o na parede perto da cabeceira 
-da cama, aparentemente s�o de algu�m que se encostou nela.  O piso � 
-pegajoso - voc� pode imaginar o porque.
+   Bem, se você tinha intenções amorosas com certeza elas desapareceram 
+assim que olhou para este quarto.  Uma cama está aqui com um grande circulo 
+molhado bem no meio.  Manchas de gordura estão na parede perto da cabeceira 
+da cama, aparentemente são de alguém que se encostou nela.  O piso é 
+pegajoso - você pode imaginar o porque.
 ~
-99 9 0 0 0 0
+99 ad 0
 D2
 Um corredor no andar superior.
 ~
@@ -1761,11 +1778,11 @@ Um corredor no andar superior.
 S
 #9976
 O Final do Corredor~
-   Voc� alcan�ou o final do corredor.  Uma porta em dire��o ao sul est� 
+   Você alcançou o final do corredor.  Uma porta em direção ao sul está 
 entreaberta, enquanto que o corredor continua ao leste, voltando por onde 
-voc� veio.
+você veio.
 ~
-99 1 0 0 0 0
+99 a 0
 D1
 Um corredor no andar superior.
 ~
@@ -1779,11 +1796,11 @@ Muito escuro para saber.
 S
 #9977
 O Quarto da Madame~
-   Este � o quarto da madame.  Uma grande cama fica na parede oposta da entrada, sob o teto feito inteiramente de espelhos.  Os dois candelabros que 
-est�o localizados de cada lado da cama s�o envoltos com um pano vermelho 
-lan�ando assim um assustador brilho que ilumina o local.
+   Este é o quarto da madame.  Uma grande cama fica na parede oposta da entrada, sob o teto feito inteiramente de espelhos.  Os dois candelabros que 
+estão localizados de cada lado da cama são envoltos com um pano vermelho 
+lançando assim um assustador brilho que ilumina o local.
 ~
-99 8 0 0 0 0
+99 d 0
 D0
 O final do corredor.
 ~
@@ -1792,11 +1809,11 @@ O final do corredor.
 S
 #9978
 Um Caminho Encoberto~
-   Este caminho encoberto leva para baixo, em dire��o � escurid�o.  O ar � 
-t�o �mido por aqui que voc� consegue v�-lo.  Ao norte de onde est� a 
-passagem est� descoberta.
+   Este caminho encoberto leva para baixo, em direção à escuridão.  O ar é 
+tão úmido por aqui que você consegue vê-lo.  Ao norte de onde está a 
+passagem está descoberta.
 ~
-99 1 0 0 0 0
+99 a 0
 D0
 Muito escuro para saber.
 ~
@@ -1810,12 +1827,12 @@ Muito escuro para saber.
 S
 #9979
 Uma Trilha Enlodada~
-   Mas que inferno?!  Esta trilha � coberta por uma subst�ncia parecida com 
-ectoplasma - � realmente nojento.  O caminho � t�o escorregadio que torna 
-imposs�vel subir at� aquele caminho encoberto.  A sua �nica op��o � seguir 
+   Mas que inferno?!  Esta trilha é coberta por uma substância parecida com 
+ectoplasma - é realmente nojento.  O caminho é tão escorregadio que torna 
+impossível subir até aquele caminho encoberto.  A sua única opção é seguir 
 ao oeste.
 ~
-99 5 0 0 0 1
+99 ac 1
 D3
 Muito escuro para saber.
 ~
@@ -1824,11 +1841,11 @@ Muito escuro para saber.
 S
 #9980
 Uma Trilha Enlodada~
-   O lodo torna-se mais grosso na medida em que voc� segue adiante.  H� 
-muitos animais mortos que aparentemente atolaram aqui.  Existem sa�das ao 
+   O lodo torna-se mais grosso na medida em que você segue adiante.  Há 
+muitos animais mortos que aparentemente atolaram aqui.  Existem saídas ao 
 norte e ao leste.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
@@ -1842,11 +1859,11 @@ Muito escuro para saber.
 S
 #9981
 Uma Trilha Enlodada~
-   Lodo, lodo por toda parte.  Um An�o ferido est� deitado aqui, quase 
-totalmente submerso neste lodo vermelho.  Talvez voc� acabe como ele...
-Voc� pode seguir ao oeste, ou tamb�m para o sul.
+   Lodo, lodo por toda parte.  Um Anão ferido está deitado aqui, quase 
+totalmente submerso neste lodo vermelho.  Talvez você acabe como ele...
+Você pode seguir ao oeste, ou também para o sul.
 ~
-99 1 0 0 0 1
+99 a 1
 D2
 Muito escuro para saber.
 ~
@@ -1863,7 +1880,7 @@ Uma Trilha Enlodada~
    O lodo parece diminuir um pouco aqui, de qualquer forma o caminho 
 continua bastante escorregadio.  Uma clareira pode ser vista ao sul.
 ~
-99 1 0 0 0 1
+99 a 1
 D1
 Muito escuro para saber.
 ~
@@ -1877,12 +1894,12 @@ Uma pequena clareira.
 S
 #9983
 Uma Pequena Clareira~
-   N�o h� absolutamente nada daquela sujeira ectoplasm�tica por aqui.  Esta 
-clareira � constitu�da por um barro vermelho, com algumas rochas espalhadas 
-ao seu redor.  Aparentemente este � algum tipo de caminho antigo, para o sul 
-voc� pode avistar o que parece ser a boca de uma caverna.
+   Não há absolutamente nada daquela sujeira ectoplasmática por aqui.  Esta 
+clareira é constituída por um barro vermelho, com algumas rochas espalhadas 
+ao seu redor.  Aparentemente este é algum tipo de caminho antigo, para o sul 
+você pode avistar o que parece ser a boca de uma caverna.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Muito escuro para saber.
 ~
@@ -1896,11 +1913,11 @@ A boca de uma pequena caverna.
 S
 #9984
 A Boca de Uma Pequena Caverna~
-   Voc� chegou � boca de uma pequena caverna, a qual � cortada para o 
-interior de uma alto promont�rio.  Uma rudimentar escadaria talhada na rocha 
-conduz para baixo, ao norte h� uma pequena clareira.
+   Você chegou à boca de uma pequena caverna, a qual é cortada para o 
+interior de uma alto promontório.  Uma rudimentar escadaria talhada na rocha 
+conduz para baixo, ao norte há uma pequena clareira.
 ~
-99 1 0 0 0 1
+99 a 1
 D0
 Uma pequena clareira.
 ~
@@ -1913,13 +1930,13 @@ Muito escuro para saber.
 0 -1 9985
 S
 #9985
-Uma Caverna Subterr�nea~
-   Esta pequena caverna subterr�nea � o local mais �mido em que voc� j� 
+Uma Caverna Subterrânea~
+   Esta pequena caverna subterrânea é o local mais úmido em que você já 
 esteve.  A umidade escorre pelas lisas paredes rochosas formando um pequeno 
-riacho, al�m de pingos gotejarem do teto sobre a sua cabe�a.  Uma passagem 
+riacho, além de pingos gotejarem do teto sobre a sua cabeça.  Uma passagem 
 conduz ao sul.
 ~
-99 9 0 0 0 1
+99 ad 1
 D2
 Muito escuro para saber.
 ~
@@ -1932,11 +1949,11 @@ Muito escuro para saber.
 0 -1 9984
 S
 #9986
-Um T�nel Inclinado~
-   Voc� est� em um longo t�nel em declive que leva lentamente em dire��o ao 
-sul.  As lisas paredes rochosas parecem suar - h� MUITA umidade.
+Um Túnel Inclinado~
+   Você está em um longo túnel em declive que leva lentamente em direção ao 
+sul.  As lisas paredes rochosas parecem suar - há MUITA umidade.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -1949,11 +1966,11 @@ Muito escuro para saber.
 0 -1 9987
 S
 #9987
-Um T�nel Inclinado~
-   Voc� est� em um longo t�nel em declive que leva lentamente em dire��o ao 
-sul.  As lisas paredes rochosas parecem suar - h� MUITA umidade.
+Um Túnel Inclinado~
+   Você está em um longo túnel em declive que leva lentamente em direção ao 
+sul.  As lisas paredes rochosas parecem suar - há MUITA umidade.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -1966,11 +1983,11 @@ Muito escuro para saber.
 0 -1 9988
 S
 #9988
-Um T�nel Inclinado~
-   Voc� est� em um longo t�nel em declive que leva lentamente em dire��o ao 
-sul.  As lisas paredes rochosas parecem suar - h� MUITA umidade.
+Um Túnel Inclinado~
+   Você está em um longo túnel em declive que leva lentamente em direção ao 
+sul.  As lisas paredes rochosas parecem suar - há MUITA umidade.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -1983,13 +2000,13 @@ Muito escuro para saber.
 0 -1 9989
 S
 #9989
-O Fim do T�nel~
-   O t�nel abre-se em formato de T, permitindo seguir ao leste, ao oeste e 
-obviamente ao norte, voltando pelo caminho no qual chegou aqui.  A caverna � 
-abobadada, com uma altura de aproximadamente 8 metros... est� realmente 
+O Fim do Túnel~
+   O túnel abre-se em formato de T, permitindo seguir ao leste, ao oeste e 
+obviamente ao norte, voltando pelo caminho no qual chegou aqui.  A caverna é 
+abobadada, com uma altura de aproximadamente 8 metros... está realmente 
 muito escuro aqui.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -2007,12 +2024,12 @@ Muito escuro para saber.
 0 -1 9990
 S
 #9990
-O T�nel Leste-Oeste~
-   Este t�nel tem apenas um metro e meio de altura, para a sua decep��o.  H� 
-muito musgo pendurado no teto, ro�ando em seu rosto de vez em quando.  O 
-t�nel continua de leste a oeste.
+O Túnel Leste-Oeste~
+   Este túnel tem apenas um metro e meio de altura, para a sua decepção.  Há 
+muito musgo pendurado no teto, roçando em seu rosto de vez em quando.  O 
+túnel continua de leste a oeste.
 ~
-99 9 0 0 0 0
+99 ad 0
 D1
 Muito escuro para saber.
 ~
@@ -2025,11 +2042,11 @@ Muito escuro para saber.
 0 -1 9991
 S
 #9991
-O T�nel Leste-Oeste~
-   Este pequeno e apertado t�nel sem sa�da acaba numa gigantesca rocha.  A 
-�nica sa�da aparente � voltar por onde voc� veio.
+O Túnel Leste-Oeste~
+   Este pequeno e apertado túnel sem saída acaba numa gigantesca rocha.  A 
+única saída aparente é voltar por onde você veio.
 ~
-99 13 0 0 0 0
+99 acd 0
 D1
 Muito escuro para saber.
 ~
@@ -2038,15 +2055,16 @@ Muito escuro para saber.
 D3
 ~
 rocha~
+:n 2
 1 -1 9953
 S
 #9992
-Um Amplo T�nel~
-   Este t�nel � um bastante largo, sendo f�cil manobrar nele.  
-No entanto voc� come�ou a ficar confuso... por qual caminho seguir?  H� um 
+Um Amplo Túnel~
+   Este túnel é um bastante largo, sendo fácil manobrar nele.  
+No entanto você começou a ficar confuso... por qual caminho seguir?  Há um 
 buraco na parede ao norte, outro caminho segue ao sul.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -2064,13 +2082,13 @@ Muito escuro para saber.
 0 -1 9989
 S
 #9993
-O T�nel Estreito~
-   Voc� est� engatinhando dentro de um buraco infestado de insetos que v�o 
-sendo triturados pelo seu peso - grotesco!  Voc� pode continuar em dire��o 
-ao sul deste caminho, caso os insetos n�o lhe perturbem muito, ou voc� pode 
-voltar pelo t�nel em dire��o ao norte.
+O Túnel Estreito~
+   Você está engatinhando dentro de um buraco infestado de insetos que vão 
+sendo triturados pelo seu peso - grotesco!  Você pode continuar em direção 
+ao sul deste caminho, caso os insetos não lhe perturbem muito, ou você pode 
+voltar pelo túnel em direção ao norte.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -2083,13 +2101,13 @@ Muito escuro para saber.
 0 -1 9994
 S
 #9994
-O T�nel Estreito~
-   O estreito t�nel abre-se para o interior de uma pra�a cheia das mais 
-variadas esp�cies de insetos, a maioria deles s�o IMENSOS.  Esperamos que 
-voc� n�o tenha aracnofobia, pois caso tenha este local certamente ir� lhe 
-apavorar at� a morte.  H� sa�das para todas as dire��es.
+O Túnel Estreito~
+   O estreito túnel abre-se para o interior de uma praça cheia das mais 
+variadas espécies de insetos, a maioria deles são IMENSOS.  Esperamos que 
+você não tenha aracnofobia, pois caso tenha este local certamente irá lhe 
+apavorar até a morte.  Há saídas para todas as direções.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -2113,12 +2131,12 @@ Muito escuro para saber.
 S
 #9995
 Um Caminho Agitado~
-   Voc� entrou neste caminho bastante agitado.  Parece como se estivesse no 
+   Você entrou neste caminho bastante agitado.  Parece como se estivesse no 
 interior da barriga de um animal gigantesco.  As paredes de cor avermelhada, 
-parecem estar cobertas por saliva e vibram com energia.  A �nica sa�da fica 
+parecem estar cobertas por saliva e vibram com energia.  A única saída fica 
 ao norte.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 Muito escuro para saber.
 ~
@@ -2127,12 +2145,12 @@ Muito escuro para saber.
 S
 #9996
 Um Caminho Agitado~
-   Este local meche-se tanto que voc� quase n�o consegue permanecer em p�.
-A baba vermelha escorre das paredes e do teto causando-lhe enj�o de t�o 
-repugnante.  Uma mancha negra na parede oeste parece levar a �nica sa�da 
-poss�vel.
+   Este local meche-se tanto que você quase não consegue permanecer em pé.
+A baba vermelha escorre das paredes e do teto causando-lhe enjôo de tão 
+repugnante.  Uma mancha negra na parede oeste parece levar a única saída 
+possível.
 ~
-99 9 0 0 0 0
+99 ad 0
 D3
 Muito escuro para saber.
 ~
@@ -2141,13 +2159,13 @@ Muito escuro para saber.
 S
 #9997
 O Covil de Deepspawn~
-   Voc� entrou num local com aproximadamente 6 metros de altura que parece 
-ser o lar de algu�m.  Ossos est�o espalhados por toda parte - muitos deles 
-parecem ser ossos humanos.  Uma enorme pilha de tesouros est� no centro 
+   Você entrou num local com aproximadamente 6 metros de altura que parece 
+ser o lar de alguém.  Ossos estão espalhados por toda parte - muitos deles 
+parecem ser ossos humanos.  Uma enorme pilha de tesouros está no centro 
 deste local, coberto por uma baba vermelha que escorre pelas paredes.  
-Sa�das levam a todas as dire��es.
+Saídas levam a todas as direções.
 ~
-99 9 0 0 0 0
+99 ad 0
 D0
 A Cova Ilimitada.
 ~
@@ -2175,12 +2193,12 @@ Liberdade.
 0 -1 50
 S
 #9998
-Um Beco Sem Sa�da~
+Um Beco Sem Saída~
    A rua termina aqui em um aglomerado de arbustos.  Uma alta muralha da 
-cidade agiganta-se sobre voc� ao oeste.  Parece que a �nica sa�da � ao 
+cidade agiganta-se sobre você ao oeste.  Parece que a única saída é ao 
 norte.
 ~
-99 9 0 0 0 1
+99 ad 1
 D0
 Muito escuro para saber.
 ~
@@ -2189,24 +2207,25 @@ Muito escuro para saber.
 D2
 ~
 arbusto~
+:n 1
 1 -1 9905
 S
 #9999
-Um Buraco Cheio de Lan�as~
-Voc�
+Um Buraco Cheio de Lanças~
+Você
     C
       A
         I
           U
         
-              e  morreu, perfurado por uma d�zia de estacas.
+              e  morreu, perfurado por uma dúzia de estacas.
  
   ^    ^    ^    ^    ^    ^    ^    ^    ^    ^    ^    ^    ^    ^   
   | ^  | ^  | ^  | ^  | ^  | ^  | ^  | ^  | ^  | ^  | ^  | ^  | ^  | ^ 
   | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | | 
   | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | | 
 ~
-99 6 0 0 0 0
+99 bc 0
 D0
 ~
 ~
@@ -2216,4 +2235,4 @@ D4
 ~
 0 -1 9933
 S
-$~
+$
