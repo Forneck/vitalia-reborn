@@ -728,12 +728,12 @@ D8
 Torre leste.
 ~
 porta~
-0 4501 4530
+1 4501 4530
 D9
 Torre oeste.
 ~
 porta~
-0 4501 4531
+1 4501 4531
 E
 portao pedra~
 Um grande arco com uma única e enorme pedra de superfície escura polida.
@@ -757,7 +757,7 @@ D6
 O pátio.
 ~
 porta~
-0 4501 4529
+1 4501 4529
 S
 #4531
 De Baixo da Torre Oeste~
@@ -777,7 +777,7 @@ D7
 O pátio.
 ~
 porta~
-0 4501 4529
+1 4501 4529
 S
 #4532
 O Topo da Torre Leste~
@@ -1554,7 +1554,7 @@ D1
 A Torre do Rei.
 ~
 porta~
-0 -1 4565
+1 -1 4565
 D6
 A alameda.
 ~
@@ -1591,7 +1591,7 @@ D3
 O Arco de Entrada.
 ~
 porta~
-0 -1 4564
+1 -1 4564
 S
 #4566
 O Santuário de Telperion~
@@ -1698,12 +1698,12 @@ D2
 Alguns aposentos.
 ~
 porta~
-0 -1 4572
+1 -1 4572
 D3
 Alguns aposentos.
 ~
 porta~
-0 -1 4571
+1 -1 4571
 S
 #4571
 A Sala de Espera do Rei~
@@ -1717,7 +1717,7 @@ D1
 O salão de cristal.
 ~
 porta~
-0 -1 4570
+1 -1 4570
 S
 #4572
 Os Aposentos de Idril~
@@ -1732,12 +1732,12 @@ D0
 O salão de cristal.
 ~
 porta~
-0 -1 4570
+1 -1 4570
 D2
 Mais aposentos.
 ~
 porta~
-0 -1 4573
+1 -1 4573
 S
 #4573
 O Quarto de Eärendil~
