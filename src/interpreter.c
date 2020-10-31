@@ -748,14 +748,14 @@ void command_interpreter(struct char_data *ch, char *argument)
 		   cmd, arg = (baseado no comando) -- forneck */
 	{
 		output[0] = 1/(1+exp(-cmd));
-		output[1] = 1/(1+exp(-CMD_TYPE);
+		output[1] = 1/(1+exp(-CMD_TYPE));
 		if (CMD_TYPE == (CMD_NONE || CMD_COMM))
 		{
 			output[2] = output[3] = output[4] = output[5] = -1;
 		}
 		if (CMD_TYPE == (CMD_ZONE))
 		{
-			output[2] = 1/(1+exp(-atoi(arg1));
+			output[2] = 1/(1+exp(-atoi(arg1)));
 			output[3] = output[4] = output[5] = -1;
 		}
 		if (!str_cmp(arg2, "fora") || !str_cmp(arg2, "out"))
