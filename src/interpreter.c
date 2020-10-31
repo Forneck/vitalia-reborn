@@ -893,12 +893,17 @@ void command_interpreter(struct char_data *ch, char *argument)
 			fann_train(ann, input, output);
 
 		fann_save(ann, "etc/aventureiro.fann");
-		fann_destroy(ann);
+
 		if (GET_LEVEL(ch) == LVL_IMPL)
 		{
 			send_to_char(ch, "%f, %f, %f, %f, %f, %f, %d\r\n", output[0], output[1], output[2], output[3],
 						 output[4], output[5], cmd);
+			output = fann_run(ann,input,output);
+			send_to_char(ch, "%f, %f, %f, %f, %f, %f, %d\r\n", output[0], output[1], output[2], output[3],
+						 output[4], output[5], cmd);
 		}
+		fann_destroy(ann);
+		
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd,
 																	 complete_cmd_info[cmd].
 																	 subcmd));
