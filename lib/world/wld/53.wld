@@ -467,7 +467,7 @@ D4
 O buraco parece muito escorregadio para se escalar de volta.
 ~
 ~
-0 -1 -1
+0 -1 5318
 E
 ossos~
 Os ossos embranqueceram e racharam no ar seco.  Aparentemente foi o que
@@ -490,7 +490,7 @@ D4
 O buraco parece muito escorregadio para se escalar de volta.
 ~
 ~
-0 -1 -1
+0 -1 5318
 E
 ossos~
 Os ossos embranqueceram e racharam no ar seco, aparentemente foi o que
@@ -876,11 +876,6 @@ Você não pode ver nada através da escuridão.
 ~
 ~
 0 -1 5336
-D2
-Há um buraco ali.
-~
-~
-0 -1 -1
 D3
 Você não pode ver na escuridão do túnel.
 ~
