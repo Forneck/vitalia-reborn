@@ -538,8 +538,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 	}
 
    /*pega dados pro aventureiro */
-	input[0] = 1/(1+exp(-GET_HIT(ch));
-	input[1] = 1/(1+exp(-GET_MAX_HIT(ch));
+	input[0] = 1/(1+exp(-GET_HIT(ch)));
+	input[1] = 1/(1+exp(-GET_MAX_HIT(ch)));
 
 	input[2] = 1/(1+exp(-GET_MANA(ch));
 	input[3] = 1/(1+exp(-GET_MAX_MANA(ch));
