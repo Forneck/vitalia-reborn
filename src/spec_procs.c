@@ -28,6 +28,7 @@
 #include "modify.h"
 #include "spedit.h"
 #include "formula.h"
+#include "./include/floatfann.h"
 
 /* locally defined functions of local (file) scope */
 
@@ -134,10 +135,62 @@ SPECIAL(guild)
 	struct str_spells *spell = NULL;
 
 	int class, skill_num, percent, level, rts_code;
+	struct obj_data *object;
+   struct fann *ann;
+   int count_obj;
+   
+
+	fann_type input[29];
+	fann_type output[6];
 
 	if (IS_NPC(ch) || !CMD_IS("practice"))
 		return (FALSE);
-
+    
+    /*grupo e inventario */
+    if (GROUP(ch) != NULL)
+		grupo = 1;
+	else
+		grupo = 0;
+	
+	for (object= ch->carrying; object; object = object->next_content)
+	{
+			count_obj++;
+	}
+	 /*pega dados pro aventureiro */
+	input[0] = GET_HIT(ch);
+	input[1] = GET_MAX_HIT(ch);
+	input[2] = GET_MANA(ch);
+	input[3] = GET_MAX_MANA(ch);
+	input[4] = GET_MOVE(ch);
+	input[5] = GET_MAX_MOVE(ch);
+	input[6] = GET_EXP(ch);
+	input[7] = GET_ROOM_VNUM(IN_ROOM(ch));
+	input[8] = GET_CLASS(ch);
+	input[9] = GET_POS(ch);
+	input[10] = GET_ALIGNMENT(ch);
+	input[11] = compute_armor_class(ch);
+	input[12] = GET_STR(ch);
+	input[13] = GET_ADD(ch);
+	input[14] = GET_INT(ch);
+	input[15] = GET_WIS(ch);
+	input[16] = GET_CON(ch);
+	input[17] = GET_DEX(ch);
+	input[18] = GET_GOLD(ch);
+	input[19] = GET_BANK_GOLD(ch);
+	input[20] = GET_COND(ch, HUNGER);
+	input[21] = GET_COND(ch, THIRST);
+	input[22] = GET_PRACTICES(ch);
+	input[23] = grupo;
+	//input 24 eh o clan em vez de mudhora
+	input[24] = 0;
+	input[25] = GET_BREATH(ch);
+	input[26] = GET_HITROLL(ch);
+	input[27] = GET_DAMROLL(ch);
+	input[28] = count_obj;
+	
+	output[0] = 646;
+	output[1] = CMD_MISC;
+	output[2] = CMD_ARG_SKILL;
 	skip_spaces(&argument);
 
 	if (!*argument)
@@ -147,24 +200,26 @@ SPECIAL(guild)
 	}
 	if (GET_PRACTICES(ch) <= 0)
 	{
-		send_to_char(ch, "Voce nao pode praticar agora.\r\n");
+		send_to_char(ch, "Voce não pode praticar agora.\r\n");
 		return (TRUE);
 	}
 	spell = get_spell_by_name(argument, SPSK);
 	if (!spell)
 	{
 		log1("SYSERR: spell not found '%s' at the guild.", argument);
-		send_to_char(ch, "'%s' doesn't exists.\r\n", argument);
+		send_to_char(ch, "'%s não existe.\r\n", argument);
 		return (TRUE);
 	}
 
 	skill_num = spell->vnum;
 	level = get_spell_level(skill_num, GET_CLASS(ch));
-
+   output[3] = skill_num;
+   output[4] = output[5] = -1;
+   
 	if ((level == -1) || (GET_LEVEL(ch) < level))
 	{
-		send_to_char(ch, "You do not know of that %s.\r\n",
-					 spell->type == SPELL ? "spell" : "skill");
+		send_to_char(ch, "Você não conhece essa %s.\r\n",
+					 spell->type == SPELL ? "magia" : "habilidade");
 		return (TRUE);
 	}
 	if (GET_SKILL(ch, skill_num) >= LEARNED(ch))
@@ -190,6 +245,13 @@ SPECIAL(guild)
 	if (GET_SKILL(ch, skill_num) >= LEARNED(ch))
 		send_to_char(ch, "Voce agora conhece o suficiente!\r\n");
 
+ 	ann = fann_create_from_file("etc/aventureiro.fann");
+ 	
+  	if (GET_LEVEL(ch) < LVL_GOD)
+			fann_train(ann, input, output);
+
+		fann_save(ann, "etc/aventureiro.fann");
+		fann_destroy(ann);
 	return (TRUE);
 }
 
