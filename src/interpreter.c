@@ -538,36 +538,37 @@ void command_interpreter(struct char_data *ch, char *argument)
 	}
 
    /*pega dados pro aventureiro */
-	input[0] = GET_HIT(ch);
-	input[1] = GET_MAX_HIT(ch);
-	input[2] = GET_MANA(ch);
-	input[3] = GET_MAX_MANA(ch);
-	input[4] = GET_MOVE(ch);
-	input[5] = GET_MAX_MOVE(ch);
-	input[6] = GET_EXP(ch);
-	input[7] = GET_ROOM_VNUM(IN_ROOM(ch));
-	input[8] = GET_CLASS(ch);
-	input[9] = GET_POS(ch);
-	input[10] = GET_ALIGNMENT(ch);
-	input[11] = compute_armor_class(ch);
-	input[12] = GET_STR(ch);
-	input[13] = GET_ADD(ch);
-	input[14] = GET_INT(ch);
-	input[15] = GET_WIS(ch);
-	input[16] = GET_CON(ch);
-	input[17] = GET_DEX(ch);
-	input[18] = GET_GOLD(ch);
-	input[19] = GET_BANK_GOLD(ch);
-	input[20] = GET_COND(ch, HUNGER);
-	input[21] = GET_COND(ch, THIRST);
-	input[22] = GET_PRACTICES(ch);
-	input[23] = grupo;
+	input[0] = 1/(1+exp(-GET_HIT(ch));
+	input[1] = 1/(1+exp(-GET_MAX_HIT(ch));
+
+	input[2] = 1/(1+exp(-GET_MANA(ch));
+	input[3] = 1/(1+exp(-GET_MAX_MANA(ch));
+	input[4] = 1/(1+exp(-GET_MOVE(ch));
+	input[5] = 1/(1+exp(-GET_MAX_MOVE(ch));
+	input[6] = 1/(1+exp(-GET_EXP(ch));
+	input[7] = 1/(1+exp(-GET_ROOM_VNUM(IN_ROOM(ch)));
+	input[8] = 1/(1+exp(-GET_CLASS(ch));
+	input[9] = 1/(1+exp(-GET_POS(ch));
+	input[10] = 1/(1+exp(-GET_ALIGNMENT(ch));
+	input[11] = 1/(1+exp(-compute_armor_class(ch));
+	input[12] = 1/(1+exp(-GET_STR(ch));
+	input[13] = 1/(1+exp(-GET_ADD(ch));
+	input[14] = 1/(1+exp(-GET_INT(ch));
+	input[15] = 1/(1+exp(-GET_WIS(ch));
+	input[16] = 1/(1+exp(-GET_CON(ch));
+	input[17] = 1/(1+exp(-GET_DEX(ch));
+	input[18] = 1/(1+exp(-GET_GOLD(ch));
+	input[19] = 1/(1+exp(-GET_BANK_GOLD(ch));
+	input[20] = 1/(1+exp(-GET_COND(ch, HUNGER));
+	input[21] = 1/(1+exp(-GET_COND(ch, THIRST));
+	input[22] = 1/(1+exp(-GET_PRACTICES(ch));
+	input[23] = 1/(1+exp(-grupo);
 	//input 24 eh o clan em vez de mudhora
-	input[24] = 0;
-	input[25] = GET_BREATH(ch);
-	input[26] = GET_HITROLL(ch);
-	input[27] = GET_DAMROLL(ch);
-	input[28] = count_obj;
+	input[24] = 1/(1+exp(-0);
+	input[25] = 1/(1+exp(-GET_BREATH(ch));
+	input[26] = 1/(1+exp(-GET_HITROLL(ch));
+	input[27] = 1/(1+exp(-GET_DAMROLL(ch));
+	input[28] = 1/(1+exp(-count_obj);
 
 	REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
 
@@ -644,7 +645,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
 			{
 				type2 = 1;
-				mob = GET_MOB_VNUM(victim);
+				mob = 1/(1+exp(-GET_MOB_VNUM(victim)));
 			}
 			/* vitima eh player */
 			for (i = 0; i <= top_of_p_table; i++)
@@ -652,7 +653,6 @@ void command_interpreter(struct char_data *ch, char *argument)
 				if (*arg2 && !str_cmp(arg2, player_table[i].name))
 				{
 					type2 = 2;
-					id_player = player_table[i].id;
 					break;
 				}
 			}
@@ -660,23 +660,23 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if ((object = get_obj_vis(ch, arg2, NULL)) != NULL)
 			{
 				type2 = 3;
-				obj = GET_OBJ_VNUM(object);
+				obj = 1/(1+exp(-GET_OBJ_VNUM(object)));
 			}
 			/* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos 
 			   o = cmd, arg = vnum -- forneck */
-			output[0] = cmd;
-			output[1] = CMD_TYPE;
-			output[2] = skill->vnum;
-			output[3] = CMD_ARG_SKILL;
+			output[0] =1/(1+exp(-cmd);
+			output[1] = 1/(1+exp(-CMD_TYPE);
+			output[2] = 1/(1+exp(-skill->vnum);
+			output[3] = 1/(1+exp(- CMD_ARG_SKILL));
 			if (type2 == 1)		/* mob */
 			{
-				output[4] = CMD_ARG_MOB;
+				output[4] = 1/(1+exp(-CMD_ARG_MOB));
 				output[5] = mob;
 			}
 			else if (type2 == 2)	/* player */
 			{
-				output[4] = CMD_ARG_PLAYER;
-				output[5] = GET_IDNUM(victim);
+				output[4] =  1/(1+exp(-CMD_ARG_PLAYER));
+				output[5] = 1/(1+exp(-GET_IDNUM(victim)));
 			}
 			else
 			{
@@ -747,25 +747,25 @@ void command_interpreter(struct char_data *ch, char *argument)
 		/* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos o = 
 		   cmd, arg = (baseado no comando) -- forneck */
 	{
-		output[0] = cmd;
-		output[1] = CMD_TYPE;
+		output[0] = 1/(1+exp(-cmd));
+		output[1] = 1/(1+exp(-CMD_TYPE);
 		if (CMD_TYPE == (CMD_NONE || CMD_COMM))
 		{
 			output[2] = output[3] = output[4] = output[5] = -1;
 		}
 		if (CMD_TYPE == (CMD_ZONE))
 		{
-			output[2] = atoi(arg1);
+			output[2] = 1/(1+exp(-atoi(arg1));
 			output[3] = output[4] = output[5] = -1;
 		}
 		if (!str_cmp(arg2, "fora") || !str_cmp(arg2, "out"))
 		{
-			output[4] = CMD_ARG_OUT;
+			output[4] = 1/(1+exp(-CMD_ARG_OUT));
 			output[5] = -1;
 		}
 		if (!str_cmp("moedas", arg1) || !str_cmp("moeda", arg1))
 		{
-			output[2] = CMD_ARG_MONEY;
+			output[2] = 1/(1+exp(-CMD_ARG_MONEY));
 			output[3] = atoi(arg1);
 		}
 		if (!str_cmp("sky", arg1) || !str_cmp("ceu", arg1))
@@ -782,7 +782,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if ((victim = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
 		{
 			type1 = 1;
-			mob = GET_MOB_VNUM(victim);
+			mob = 1/(1+exp(-GET_MOB_VNUM(victim)));
 		}
 		/* vitima eh player */
 		for (i = 0; i <= top_of_p_table; i++)
@@ -790,7 +790,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if (*arg1 && !str_cmp(arg1, player_table[i].name))
 			{
 				type1 = 2;
-				id_player = player_table[i].id;
+				id_player = 1/(1+exp(-player_table[i].id));
 				break;
 			}
 		}
@@ -798,7 +798,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if ((object = get_obj_vis(ch, arg1, NULL)) != NULL)
 		{
 			type1 = 3;
-			obj = GET_OBJ_VNUM(object);
+			obj = 1/(1+exp(-GET_OBJ_VNUM(object)));
 		}
 
 		/* eh direcao */
@@ -816,6 +816,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 				if (!is_name(arg1, EXIT(ch, door)->keyword))
 					door = -1;
 			}
+			else
 		}
 		else
 		{
@@ -824,22 +825,22 @@ void command_interpreter(struct char_data *ch, char *argument)
 
 		if (type1 == 1)			/* mob */
 		{
-			output[2] = CMD_ARG_MOB;
+			output[2] = 1/(1+exp(-CMD_ARG_MOB));
 			output[3] = mob;
 		}
 		else if (type1 == 2)	/* player */
 		{
-			output[2] = CMD_ARG_PLAYER;
+			output[2] = 1/(1+exp(-CMD_ARG_PLAYER));
 			output[3] = id_player;
 		}
 		else if (type1 == 3)
 		{
-			output[2] = CMD_ARG_OBJ;
+			output[2] = 1/(1+exp(-CMD_ARG_OBJ));
 			output[3] = obj;
 		}
 		else
 		{
-			output[2] = CMD_ARG_DIR;
+			output[2] = 1/(1+exp(-CMD_ARG_DIR));
 			output[3] = door;
 		}
 
@@ -848,7 +849,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
 		{
 			type2 = 1;
-			mob = GET_MOB_VNUM(victim);
+			mob = 1/(1+exp(-GET_MOB_VNUM(victim)));
 		}
 		/* vitima eh player */
 		for (i = 0; i <= top_of_p_table; i++)
@@ -856,7 +857,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if (*arg2 && !str_cmp(arg2, player_table[i].name))
 			{
 				type2 = 2;
-				id_player = player_table[i].id;
+				id_player = 1/(1+exp(-player_table[i].id));
 				break;
 			}
 		}
@@ -864,7 +865,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if ((object = get_obj_vis(ch, arg2, NULL)) != NULL)
 		{
 			type2 = 3;
-			obj = GET_OBJ_VNUM(object);
+			obj = 1/(1+exp(-GET_OBJ_VNUM(object)));
 		}
 		if (!*arg2)
 		{
@@ -875,17 +876,17 @@ void command_interpreter(struct char_data *ch, char *argument)
 		{
 			if (type2 == 1)		/* mob */
 			{
-				output[4] = CMD_ARG_MOB;
+				output[4] = 1/(1+exp(-CMD_ARG_MOB));
 				output[5] = mob;
 			}
 			else if (type2 == 2)	/* player */
 			{
-				output[4] = CMD_ARG_PLAYER;
+				output[4] = 1/(1+exp(-CMD_ARG_PLAYER));
 				output[5] = id_player;
 			}
 			else if (type2 == 3)
 			{
-				output[4] = CMD_ARG_OBJ;
+				output[4] = 1/(1+exp(-CMD_ARG_OBJ));
 				output[5] = obj;
 			}
 		}
