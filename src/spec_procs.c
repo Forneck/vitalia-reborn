@@ -138,7 +138,7 @@ SPECIAL(guild)
 	struct obj_data *object;
    struct fann *ann;
    int count_obj;
-   
+   int grupo;
 
 	fann_type input[29];
 	fann_type output[6];
