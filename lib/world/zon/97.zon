@@ -1,7 +1,7 @@
 #97
 Vitalia~
 O Subterrâneo~
-9700 9799 300 1 bd 0 0 0 -1 -1
+9700 9799 300 1 bdj 0 0 0 -1 -1
 M 0 9704 1 9713 	(a serpente)
 G 1 9702 1 -1 	(uma armadura de couro de serpente)
 M 0 9706 1 9763 	(o Deus do Reino das Pedras)
@@ -27,7 +27,7 @@ M 0 9703 2 9714 	(o escaravelho)
 M 0 9703 2 9734 	(o escaravelho)
 G 1 9703 1 -1 	(um anel mágico)
 G 1 9704 2 -1 	(uma poção de cura)
-D 0 9760 0 2 	(A Grande C�mara)
+D 0 9760 0 2 	(A Grande Câmara)
 D 0 9761 2 2 	(Sala dos Ossos)
 S
 $

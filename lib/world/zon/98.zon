@@ -1,7 +1,7 @@
 #98
 Vitalia~
 O Abismo~
-9800 9899 300 0 bd 0 0 0 -1 -1
+9800 9899 300 0 bdj 0 0 0 -1 -1
 M 0 9801 1 9809 	(C√©rbero)
 M 0 9802 1 9814 	(o Ciclope gigante)
 G 1 9801 1 -1 	(uma chave de prata)
@@ -25,11 +25,11 @@ O 0 9802 1 9849 	(uma chave muito suja)
 R 0 9823 9808 -1 	(um pergaminho dourado)
 O 0 9808 2 9823 	(um pergaminho dourado)
 D 0 9822 1 2 	(A Ante-sala)
-D 0 9823 3 2 	(O CalabouÁo dos Anjos)
+D 0 9823 3 2 	(O Calabou√ßo dos Anjos)
 D 0 9830 3 1 	(Uma Longa Escada)
 D 0 9841 1 2 	(O Labirinto)
 D 0 9833 5 1 	(Fim do Corredor Lateral)
-D 0 9834 4 1 	(O AlÁap„o)
+D 0 9834 4 1 	(O Al√ßap√£o)
 D 0 9839 1 2 	(Entrada da Sala do Trono)
 S
 $

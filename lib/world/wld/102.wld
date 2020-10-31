@@ -4,15 +4,11 @@ Uma Larga Estrada Pelos Contrafortes~
 ter sido recentemente limpa e parece seguro seguir nesta direção.  A sudeste
 parece acabar a estrada.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
 0 -1 10263
-D9
-~
-~
-0 -1 5614
 D2
 ~
 ~
@@ -21,6 +17,10 @@ D3
 ~
 ~
 0 -1 10201
+D9
+~
+~
+0 -1 5614
 S
 #10201
 Uma Larga Estrada Pelos Contrafortes~
@@ -28,7 +28,7 @@ Uma Larga Estrada Pelos Contrafortes~
 lados da estrada as colinas se destacam dentre as árvores e arbustos.  Está
 é realmente a mais bela paisagem de Jareth.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -53,7 +53,7 @@ representando o Senhor e a Senhora deste lugar.  Olhando ao leste, você
 percebe por que este lugar é visitado pelos mais influentes membros da
 sociedade - as colinas e o luxuriante cenário, calmo e sereno.
 ~
-102 g 2
+102 64 0 0 0 2
 D0
 ~
 ~
@@ -69,7 +69,6 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10203
 S
 #10203
@@ -78,21 +77,18 @@ A Chapelaria~
 convidados do castelo.  Portas seguem para o interior do castelo ao norte,
 sul, e oeste.  A porta ao leste, claro, leva ao lado exterior. 
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 1 -1 10204
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10202
 D2
 ~
 porta~
-:n 2 a porta
 1 -1 10207
 D3
 ~
@@ -105,7 +101,7 @@ Um Curto Corredor~
 porta fica pela parede sul, e outra porta fica ao norte, em uma distância
 insignificante uma da outra.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -113,7 +109,6 @@ D0
 D2
 ~
 porta~
-:n 2 a porta
 1 -1 10203
 S
 #10205
@@ -122,11 +117,10 @@ Um Curto Corredor~
 porta fica pela parede sul, e outra porta fica ao norte, em uma distância
 insignificante uma da outra.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 1 -1 10206
 D2
 ~
@@ -141,16 +135,14 @@ aqui que ele se recolhe de sua Senhora e de seus convidados, e ele
 definitivamente precisa fazer isto.  O fato de haver uma pequena cama no
 canto não significa nada...  Não é?
 ~
-102 dg 0
+102 72 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
 1 -1 10205
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10214
 S
 #10207
@@ -159,11 +151,10 @@ Um Curto Corredor~
 porta fica pela parede sul, e outra porta fica ao norte, em uma distância
 insignificante uma da outra.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 1 -1 10203
 D2
 ~
@@ -176,7 +167,7 @@ Um Curto Corredor~
 porta fica pela parede sul, e outra porta fica ao norte, em uma distância
 insignificante uma da outra.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -184,7 +175,6 @@ D0
 D2
 ~
 porta~
-:n 2 a porta
 1 -1 10209
 S
 #10209
@@ -194,16 +184,14 @@ as cortinas que a adornam dão um toque romântico ao lugar.  Pelo jeito, o
 Senhor e a Senhora desfrutam da companhia um do outro, particularmente,
 tanto quanto em público.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 1 -1 10208
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10222
 S
 #10210
@@ -213,7 +201,7 @@ telhado está pelo menos a cem pés acima de sua cabeça.  Ao norte fica o
 salão de baile principal, uma sala usada em praticamente todas as noites.
 Ao sul há a cozinha.  Uma porta fica na parede oeste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -238,7 +226,7 @@ telhado está pelo menos a cem pés acima de sua cabeça.  Ao norte fica o
 salão de baile principal, uma sala usada em praticamente todas as noites.
 Ao sul fica a despensa onde todos os alimentos secos são mantidos.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -250,7 +238,6 @@ D1
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10226
 S
 #10212
@@ -260,7 +247,7 @@ festas.  Um criado está sempre disponível, assim como um músico para quem
 quer que deseje dançar - não importa se é dia ou noite.  A câmara principal
 fica ao sul.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 ~
@@ -277,7 +264,7 @@ festas.  Um criado está sempre disponível, assim como um músico para quem
 quer que deseje dançar - não importa se é dia ou noite.  A câmara principal
 fica ao sul.
 ~
-102 dg 0
+102 72 0 0 0 0
 D2
 ~
 ~
@@ -293,11 +280,10 @@ Um Corredor Esquecido~
 com o mesmo zelo pelos criados do castelo.  Possivelmente esta pequena e
 estreita passagem seja mantida pelo próprio Senhor do lugar.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10206
 D3
 ~
@@ -310,7 +296,7 @@ Um Corredor Esquecido~
 com o mesmo zelo pelos criados do castelo.  Possivelmente esta pequena e
 estreita passagem seja mantida pelo próprio Senhor do lugar.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 ~
@@ -328,7 +314,7 @@ estreita passagem seja mantida pelo próprio Senhor do lugar.  Ela termina
 aqui, pequenas portas podem ser vistas ao sul e ao norte, ambas parecem não
 terem sido abertas há anos.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -343,7 +329,7 @@ A Saída dos Fundos~
    Os criados utilizam-se desta saída, ela parece bem usada, com os batentes
 gastos, o que demonstra o grande número de criados que transitam por aqui.
 ~
-102 dg 0
+102 72 0 0 0 0
 D2
 ~
 ~
@@ -355,7 +341,7 @@ A Despensa~
 incluindo o grande montante de álcool que faz a festa do Senhor e da Senhora
 durar o ano todo.  Através da porta ao leste, há a cozinha.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 ~
@@ -366,7 +352,7 @@ A Cozinha~
    Os cozinheiros do castelo trabalham diariamente, correndo contra o
 relógio, para manter boa comida no salão de baile e na própria cozinha.  
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -374,7 +360,6 @@ D0
 D2
 ~
 porta~
-:n 2 a porta
 1 -1 10283
 D3
 ~
@@ -387,7 +372,7 @@ O Corredor Sul~
 à câmara principal - é usado pelos dois quando sentem-se cansados das festas
 e precisam de descanso e paz.  O corredor continua ao leste e oeste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 ~
@@ -403,7 +388,7 @@ O Corredor Sul~
 à câmara principal - é usado pelos dois quando sentem-se cansados das festas
 e precisam de descanso e paz.  O corredor continua ao leste e oeste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 ~
@@ -420,11 +405,10 @@ O Corredor Sul~
 e precisam de descanso e paz.  O corredor continua ao oeste, a porta para os
 aposentos do Senhor e da Senhora fica ao leste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10209
 D3
 ~
@@ -437,7 +421,7 @@ Uma Curva no Corredor~
 câmara principal e o caminho ao leste leva para os aposentos do Senhor e da
 Senhora.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -453,7 +437,7 @@ Corredor Oeste~
 para seus aposentos quanto a noite já está alta e eles precisam de descanso.
 O corredor leva ao norte e ao sul.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -469,11 +453,10 @@ Corredor Oeste~
 para seus aposentos quanto a noite já está alta e eles precisam de descanso.
 O corredor leva ao norte e ao sul.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 1 -1 10226
 D2
 ~
@@ -487,16 +470,14 @@ convidados estão situados.  Ao leste há a entrada para a câmara principal e
 através de uma porta ao sul, você tem um corredor levando para os aposentos
 do Senhor e da Senhora.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10211
 D2
 ~
 porta~
-:n 2 a porta
 1 -1 10225
 D4
 ~
@@ -509,11 +490,10 @@ O Quarto de Hóspedes~
 é destinado para descanso.  O castelo inteiro é mais uma atração do que o
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao sul.
 ~
-102 dg 0
+102 72 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
 1 -1 10230
 S
 #10228
@@ -523,11 +503,10 @@ O Quarto de Hóspedes~
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 oeste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10229
 S
 #10229
@@ -536,11 +515,10 @@ O Final Norte do Corredor~
 hóspedes que por sua vez, leva ao nível superior.  Há uma porta na parede
 leste, o corredor segue ao oeste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10228
 D3
 ~
@@ -554,11 +532,10 @@ hóspedes deste nível superior do castelo.  O corredor segue ao sul por uma
 boa distância, deixando muitas portas em ambos lados de suas paredes, todas
 levam para o quarto de hóspedes.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 1 -1 10227
 D1
 ~
@@ -576,7 +553,7 @@ de suas paredes, todas levam para o quarto de hóspedes.  Esta área superior
 é exclusivamente usada pelos hóspedes do Senhor e da Senhora, os quartos são
 luxuosos e bem asseados.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -584,7 +561,6 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10242
 D2
 ~
@@ -593,7 +569,6 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10243
 S
 #10232
@@ -604,7 +579,7 @@ de suas paredes, todas levam para o quarto de hóspedes.  Esta área superior
 luxuosos e bem asseados.  Escadas levam para baixo, até a câmara principal
 do castelo.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -612,7 +587,6 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10241
 D2
 ~
@@ -621,7 +595,6 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10244
 D5
 ~
@@ -635,7 +608,7 @@ de suas paredes, todas levam para o quarto de hóspedes.  Esta área superior
 é exclusivamente usada pelos hóspedes do Senhor e da Senhora, os quartos são
 luxuosos e bem asseados.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -643,7 +616,6 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10240
 D2
 ~
@@ -652,7 +624,6 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10245
 S
 #10234
@@ -662,7 +633,7 @@ de suas paredes, todas levam para o quarto de hóspedes.  Esta área superior
 é exclusivamente usada pelos hóspedes do Senhor e da Senhora, os quartos são
 luxuosos e bem asseados.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -670,7 +641,6 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10239
 D2
 ~
@@ -679,7 +649,6 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10246
 S
 #10235
@@ -689,7 +658,7 @@ hóspedes deste nível superior do castelo.  O corredor segue ao sul por uma
 boa distância, deixando muitas portas em ambos lados de suas paredes, todas
 levam para o quarto de hóspedes.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 ~
@@ -701,7 +670,6 @@ D1
 D2
 ~
 porta~
-:n 2 a porta
 1 -1 10238
 S
 #10236
@@ -710,11 +678,10 @@ O Final Sul do Corredor~
 hóspedes que por sua vez, leva ao nível superior.  Há uma porta na parede
 leste, o corredor segue ao oeste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10237
 D3
 ~
@@ -728,11 +695,10 @@ O Quarto de Hóspedes~
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 oeste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10236
 S
 #10238
@@ -742,11 +708,10 @@ O Quarto de Hóspedes~
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 norte.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 1 -1 10235
 S
 #10239
@@ -756,11 +721,10 @@ O Quarto de Hóspedes~
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 oeste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10234
 S
 #10240
@@ -770,11 +734,10 @@ O Quarto de Hóspedes~
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 oeste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10233
 S
 #10241
@@ -784,11 +747,10 @@ O Quarto de Hóspedes~
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 oeste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10232
 S
 #10242
@@ -798,11 +760,10 @@ O Quarto de Hóspedes~
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 oeste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
 1 -1 10231
 S
 #10243
@@ -812,11 +773,10 @@ O Quarto de Hóspedes~
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 leste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10231
 S
 #10244
@@ -826,11 +786,10 @@ O Quarto de Hóspedes~
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 leste.
 ~
-102 gd 0
+102 72 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10232
 S
 #10245
@@ -840,11 +799,10 @@ O Quarto de Hóspedes~
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 leste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10233
 S
 #10246
@@ -854,11 +812,10 @@ O Quarto de Hóspedes~
 local privado do Senhor e da Senhora.  A porta para o corredor fica ao
 leste.
 ~
-102 dg 0
+102 72 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
 1 -1 10234
 S
 #10247
@@ -867,7 +824,7 @@ Pela Parede do Castelo~
 pedra podem ser claramente vistos de perto.  Ao leste e sul ficam os
 contrafortes que terminam no castelo, formando uma vista maravilhosa.
 ~
-102 g 2
+102 64 0 0 0 2
 D0
 ~
 ~
@@ -887,7 +844,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -911,7 +868,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -935,7 +892,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -959,7 +916,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -975,7 +932,7 @@ Pela Parede do Castelo~
 pedra podem ser claramente vistos de perto.  Ao leste e sul ficam os
 contrafortes que terminam no castelo, formando uma vista maravilhosa.
 ~
-102 g 2
+102 64 0 0 0 2
 D0
 ~
 ~
@@ -995,7 +952,7 @@ Ao Longo da Parede do Castelo~
 norte e oeste.  A sua volta todo o esplendor dos contrafortes que cercam o
 castelo de Jareth, uma linda terra, cheia de verde.
 ~
-102 g 2
+102 64 0 0 0 2
 D0
 ~
 ~
@@ -1011,7 +968,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1035,7 +992,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1059,7 +1016,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1079,7 +1036,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1095,7 +1052,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1112,7 +1069,7 @@ estábulos, onde todos os hóspedes guardam suas montarias.  Ao sul, está a
 entrada para o castelo e em outras direções está o esplendor dos
 contrafortes que cercam Jareth.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1132,7 +1089,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1156,7 +1113,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1180,7 +1137,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1204,7 +1161,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D2
 ~
 ~
@@ -1220,7 +1177,7 @@ Um Caminho Lateral~
 celeiro.  Ao leste ficam os belos contrafortes desta maravilhosa terra, um
 lugar quase de surreal perfeição.
 ~
-102 g 2
+102 64 0 0 0 2
 D0
 ~
 ~
@@ -1240,7 +1197,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1264,7 +1221,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1288,7 +1245,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D2
 ~
 ~
@@ -1304,7 +1261,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1324,7 +1281,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1348,7 +1305,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1368,7 +1325,7 @@ Um Caminho Lateral~
 fica um celeiro, usado para guardar o feno e para alimentar os animais dos
 convidados.  Do lado oeste há o estábulo onde os animais são mantidos.
 ~
-102 g 2
+102 64 0 0 0 2
 D0
 ~
 ~
@@ -1393,7 +1350,7 @@ enquanto seus mestres mais influentes ficam no castelo.  Há um enorme monte
 de feno e grãos estocados por todo o lugar, alguns dos montes de feno se
 transformaram em confortáveis camas.
 ~
-102 gd 0
+102 72 0 0 0 0
 D2
 ~
 ~
@@ -1405,7 +1362,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D1
 ~
 ~
@@ -1416,7 +1373,7 @@ O Estábulo~
    Todas as montarias dos convidados são mantidas aqui nesta pequena mas bem
 organizada estrutura.  A saída do lugar fica a leste.
 ~
-102 gc 0
+102 68 0 0 0 0
 D1
 ~
 ~
@@ -1428,7 +1385,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1452,7 +1409,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1472,7 +1429,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1492,7 +1449,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1514,7 +1471,7 @@ a visão, mas tudo o que você consegue ver é simplesmente lindo. A única cois
 estranha fica a norte, onde o terreno se tornou plano, havendo alguma coisa
 muito grande em seu centro.
 ~
-102 g 5
+102 64 0 0 0 5
 D0
 ~
 ~
@@ -1538,7 +1495,7 @@ Os Contrafortes~
 muito longe em qualquer direção devido ao fato das muitas colinas obstruírem
 a visão, mas tudo o que você consegue ver é simplesmente lindo.
 ~
-102 g 5
+102 64 0 0 0 5
 D2
 ~
 ~
@@ -1556,7 +1513,7 @@ oeste, os galhardetes do castelo podem ser visto despontando sobre as
 colinas que bloqueiam sua visão.  Obviamente, alguém é dono destas terras
 pelas quais você está viajando, e mora a oeste daqui.
 ~
-102 g 2
+102 64 0 0 0 2
 D0
 ~
 ~
@@ -1579,7 +1536,7 @@ Uma Grande Estrada Através dos Contrafortes~
    Você estava em uma estrada cheia de altos e baixos e agora alcançou o
 primeiro caminho sólido que está a poucos palmos a sua frente.  
 ~
-102 g 2
+102 64 0 0 0 2
 D0
 ~
 ~
@@ -1605,11 +1562,10 @@ desta terra onde os minotauros reinam, e trás consigo enormes e sólidos
 blocos de gelo que são mantidos neste quarto selado onde todos os
 mantimentos perecíveis são congelados.
 ~
-102 dg 0
+102 72 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 1 -1 10219
 S
 $~

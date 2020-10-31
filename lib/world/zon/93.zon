@@ -1,7 +1,7 @@
 #93
 Vitalia~
 Paraíso dos Dragões~
-9300 9399 180 0 b 0 0 0 -1 -1
+9300 9399 180 0 bj 0 0 0 -1 -1
 M 0 9300 1 9342 	(o Ancião Dragão Dourado)
 E 1 9300 20 0 	(o coração do dragão)
 E 1 9353 30 19 	(as argolas douradas do ancião)
@@ -158,11 +158,11 @@ R 0 9373 9349 -1 	(a árvore de fogo)
 O 0 9349 10 9373 	(a árvore de fogo)
 D 0 9316 3 1 	(A Trilha Oeste na Densa Floresta)
 D 0 9317 1 1 	(A Casa de Madeira)
-D 0 9341 3 1 	(A Plan�cie Florida)
+D 0 9341 3 1 	(A Planície Florida)
 D 0 9342 1 1 	(A Casa Dourada)
-D 0 9347 3 1 	(O Port�o de Ossos)
-D 0 9348 1 1 	(O Cemit�rio dos Drag�es de Vit�lia)
-D 0 9337 0 2 	(A Entrada da Caverna da Pris�o)
-D 0 9383 2 2 	(Pestil�ncia, a Dimens�o do Terror)
+D 0 9347 3 1 	(O Portão de Ossos)
+D 0 9348 1 1 	(O Cemitério dos Dragões de Vitália)
+D 0 9337 0 2 	(A Entrada da Caverna da Prisão)
+D 0 9383 2 2 	(Pestilência, a Dimensão do Terror)
 S
 $

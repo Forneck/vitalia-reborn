@@ -5,7 +5,7 @@ de diâmetro.  Não há vegetação alguma dentro do círculo, realmente isto é
 muito estranho.  Um pequeno redemoinho de névoa o envolve dos joelhos aos 
 pés, fazendo-o parecer que foi parcialmente enterrado.
 ~
-99 ac 3
+99 5 0 0 0 3
 D2
 ~
 ~
@@ -13,7 +13,6 @@ D2
 D5
 ~
 colina~
-:n 2 a colina
 2 9903 9901
 S
 #9901
@@ -25,7 +24,7 @@ você encontra ruínas de diversos tipos, coisas bastante antigas e velhos
 ossos esbranquiçados das mais variadas espécies de criaturas. 
    As saídas conduzem a todas direções cardeais. 
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -50,7 +49,6 @@ D4
 Muito escuro para saber.
 ~
 plataforma~
-:n 2
 1 -1 9900
 S
 #9902
@@ -62,7 +60,7 @@ exalando uma aura de santidade, algo muito estranho para uma cidade tão
 maléfica.
    As saídas levam ao oeste, norte e sul.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -88,7 +86,7 @@ você consegue fazer é tentar prosseguir sem perder seu almoço.
    Os cadáveres estão empilhados muito alto ao leste, mas você pode passar 
 pelo norte, sul ou oeste.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -107,7 +105,6 @@ As ruas de Ghenna.
 D5
 ~
 coragem~
-:n 2
 1 -1 9912
 S
 #9904
@@ -116,12 +113,11 @@ Uma Pedra Circular~
 uma porta está situada ao norte, mais abaixo uma ampla taverna marcada com 
 um sinal descrevendo o que não se pode falar.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
 taverna~
-:n 2
 1 -1 9915
 D1
 Muito escuro para saber.
@@ -135,7 +131,7 @@ A Cerca Contorcida~
 dois metros de altura.  A trilha através da barreira conduz para todas as 
 direções cardeais.
 ~
-99 ac 1
+99 5 0 0 0 1
 D0
 A cerca contorcida.
 ~
@@ -163,7 +159,7 @@ A Cerca Contorcida~
 dois metros de altura.  A trilha através da barreira conduz para todas as 
 direções cardeais.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 A cerca contorcida.
 ~
@@ -187,7 +183,6 @@ A cerca contorcida.
 D5
 ~
 oculto~
-:n 1
 1 -1 9910
 S
 #9907
@@ -196,7 +191,7 @@ A Cerca Contorcida~
 dois metros de altura.  A trilha através da barreira conduz para todas as 
 direções cardeais.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 A cerca contorcida.
 ~
@@ -221,7 +216,6 @@ D5
 Os domínios da perdição.
 ~
 porta~
-:n 2
 1 -1 9910
 S
 #9908
@@ -230,7 +224,7 @@ A Cerca Contorcida~
 dois metros de altura.  A trilha através da barreira conduz para todas as 
 direções cardeais.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 A cerca contorcida.
 ~
@@ -258,7 +252,7 @@ A Cerca Contorcida~
 dois metros de altura.  A trilha através da barreira conduz para todas as 
 direções cardeais.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 A cerca contorcida.
 ~
@@ -288,7 +282,7 @@ teto são pegajosos, de uma cor vermelho sangue.  Uma brecha no teto sobre
 você deixa entrar uma fraca brisa que arrepia seus pelos.  Um portal mágico 
 está ao sul, conduzindo ao desconhecido.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -313,7 +307,7 @@ ritmicamente para cima e para baixo.  Você pode sentir a fonte de sua
 vitalidade sendo drenada para fora do seu corpo.  Se permanecer aqui durante 
 muito tempo certamente será o fim para você.
 ~
-99 aq 1
+99 65537 0 0 0 1
 D0
 O buraco abissal.
 ~
@@ -365,7 +359,7 @@ Você está
              ||           ||
              ||           ||
 ~
-99 acr 0
+99 131077 0 0 0 0
 D0
 ~
 ~
@@ -417,7 +411,7 @@ Você apenas continua
              ||           ||
              ||           ||
 ~
-99 acr 0
+99 131077 0 0 0 0
 D0
 ~
 ~
@@ -448,7 +442,7 @@ As Ruas de Ghenna~
    Você está nas indescritíveis ruas da cidade de Ghenna.  A estrada 
 continua ao leste e oeste, contornando suavemente em torno de um vale.
 ~
-99 a 1
+99 1 0 0 0 1
 D1
 Muito escuro para saber.
 ~
@@ -469,7 +463,7 @@ alguma forma.  Próximo a confraria uma escadaria desaparece no interior da
 escuridão que está lá em cima.  O teto é abobadado e ostenta três 
 candelabros, nos quais provavelmente são enforcadas as vítimas.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -478,7 +472,6 @@ Muito escuro para saber.
 D2
 ~
 porta~
-:n 2
 1 -1 9904
 D3
 Muito escuro para saber.
@@ -495,7 +488,7 @@ com os pelos das mais diversas criaturas.  Ainda que resistente, a confraria
 se isto estivesse VIVO!
    Uma escadaria está aqui, conduzindo para a escuridão.     
 ~
-99 a 1
+99 1 0 0 0 1
 D2
 Muito escuro para saber.
 ~
@@ -515,7 +508,7 @@ Você pergunta a si mesmo onde estará o resto dos corpos destes pobres
 coitados.  A entrada da taverna fica para o leste, enquanto que ao norte 
 está a confraria feita aparentemente de partes humanas.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -533,7 +526,7 @@ No Topo dos Degraus~
 prevalece ao longo do pequeno corredor que segue de leste para oeste.  
 Abaixo de você está a confraria de carne humana.
 ~
-99 ad 0
+99 9 0 0 0 0
 D1
 Muito escuro para saber.
 ~
@@ -556,12 +549,11 @@ O Corredor no Andar Superior~
 topo dos degraus enquanto que para o norte há uma porta, de trás desta você 
 pode escutar um fraco cântico... a sombria voz soa quase feminina.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
 porta~
-:n 2
 1 -1 9920
 D3
 Muito escuro para saber.
@@ -575,7 +567,7 @@ Um Quarto Desarrumado~
 cama MUITO manchada e uma simples mesa giratória.  Uma janela fica ao norte 
 dando uma vista panorâmica da escuridão além.
 ~
-99 ad 0
+99 9 0 0 0 0
 D2
 Muito escuro para saber.
 ~
@@ -587,7 +579,7 @@ O Corredor no Andar Superior~
    Você está num pequeno corredor no andar superior da Taverna Sangrenta.  
 Uma porta está ao sul, para o leste fica o topo dos degraus.
 ~
-99 ad 0
+99 9 0 0 0 0
 D1
 Muito escuro para saber.
 ~
@@ -597,7 +589,6 @@ D2
 Muito escuro para saber.
 ~
 porta~
-:n 2
 2 9916 9922
 S
 #9922
@@ -607,7 +598,7 @@ está encostado contra a parede, cheio de garrafas empoeiradas, enquanto que
 uma grande cama está posicionada ao lado.  Uma porta parcialmente aberta ao 
 oeste o leva até o banheiro.
 ~
-99 d 0
+99 8 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -626,12 +617,11 @@ usado como vaso sanitário - extremamente primitivo.  Uma bacia foi deixada
 no chão, cheia de água ensangüentada, e um imundo espelho reflete a sua 
 imagem.
 ~
-99 d 0
+99 8 0 0 0 0
 D0
 Muito escuro para saber.
 ~
 espelho~
-:n 1
 1 -1 9943
 D1
 Muito escuro para saber.
@@ -646,7 +636,7 @@ nauseante.  Você gira e gira, inseguro de onde irá parar.  Parece como se
 você pudesse terminar nos mais diferentes lugares apenas escolhendo uma 
 saída.
 ~
-99 ac 0
+99 5 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -685,7 +675,7 @@ empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão
 ainda aquecidos, e ocasionalmente um grito de desespero sai de certas partes 
 do aglomerado.
 ~
-99 ae 0
+99 17 0 0 0 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -714,7 +704,7 @@ empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão
 ainda aquecidos, e ocasionalmente um grito de desespero sai de certas partes 
 do aglomerado.
 ~
-99 ae 0
+99 17 0 0 0 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -742,7 +732,7 @@ empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão
 ainda aquecidos, ocasionalmente lamentos de desespero saem de certas partes 
 do aglomerado.
 ~
-99 ae 0
+99 17 0 0 0 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -771,7 +761,7 @@ empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão
 ainda aquecidos, e ocasionalmente gritos abafados saem de certas partes do 
 aglomerado.
 ~
-99 ae 0
+99 17 0 0 0 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -800,7 +790,7 @@ empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão
 ainda aquecidos, e ocasionalmente suplicas de ajuda saem de certas partes do 
 aglomerado.
 ~
-99 ae 0
+99 17 0 0 0 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -829,7 +819,7 @@ empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão
 ainda aquecidos, e ocasionalmente um grito de desespero sai de certas partes 
 do aglomerado.
 ~
-99 ae 0
+99 17 0 0 0 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -858,7 +848,7 @@ empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão
 ainda aquecidos, e ocasionalmente gritos de horror saem de certas partes do 
 aglomerado.
 ~
-99 ae 0
+99 17 0 0 0 0
 D0
 Um Labirinto de Corpos.
 ~
@@ -887,7 +877,7 @@ empilhados a 3 metros de altura.  Parece que de alguma forma os corpos estão
 ainda aquecidos, e ocasionalmente gritos de desespero saem de certas partes 
 do aglomerado.
 ~
-99 ae 0
+99 17 0 0 0 0
 D0
 Um Labirinto de Ossos.
 ~
@@ -915,7 +905,7 @@ A Boca da Grande Caverna~
 uma grande caverna de aproximadamente 30 metros de diâmetro.  Um córrego de 
 sangue corre pelos degraus de pedra que conduzem para cima - Ousas entrar?
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Um Labirinto de Corpos.
 ~
@@ -946,7 +936,6 @@ Um poço cheio de lanças (no qual será DEFINITIVAMENTE a morte para você se
 cair).
 ~
 poco~
-:n 1
 1 -1 9999
 S
 #9934
@@ -956,7 +945,7 @@ enxofre o faz vomitar.  Grandes degraus de pedra levam para baixo, onde fica
 o labirinto de corpos.  Um córrego de sangue parece escorrer de algum lugar 
 ao norte, um ruído parecido com um fole gigantesco pode ser ouvido. 
 ~
-99 ac 0
+99 5 0 0 0 0
 D0
 Devorado até a morte.
 ~
@@ -965,7 +954,6 @@ Devorado até a morte.
 D4
 ~
 gruta~
-:n 2
 1 -1 9938
 D5
 A boca da grande caverna.
@@ -981,7 +969,7 @@ corpos desfigurados deitados aqui.  Parece que a carne foi mastigada de seus
 corpos ainda vivos para que tivessem dores terríveis.  A correnteza de 
 sangue que você encontrou na entrada da caverna é muito maior aqui.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -1002,7 +990,7 @@ alternado com um ruído de um gole de bebida, revolta seu estomago.  Após
 escutar isto... uma encorajadora voz fala repetidamente "Sim, sim, é isto... 
 apenas mais alguns passos... você está quase lá".
 ~
-99 ad 0
+99 9 0 0 0 0
 D2
 Muito escuro para saber.
 ~
@@ -1025,11 +1013,10 @@ você repentinamente tem a sensação de que a sua vida está a ponto de
 terminar antes do tempo. 
 ---> HASTA LA VISTA!
 ~
-99 ad 0
+99 9 0 0 0 0
 D4
 ~
 oculto~
-:n 1
 1 -1 9953
 D5
 Muito escuro para saber.
@@ -1043,7 +1030,7 @@ Uma Caverna~
 você não for claustrofóbico este local pode seguramente o tornar um.  Há um 
 espaço para rastejar ao oeste.  Cuidado com a cabeça.
 ~
-99 ad 0
+99 9 0 0 0 0
 D3
 Muito escuro para saber.
 ~
@@ -1061,7 +1048,7 @@ O Túnel~
 você ficar de pé.  Estalagmites e estalactites formaram-se no chão e no 
 teto.  Há saídas ao leste, norte e oeste.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -1084,7 +1071,7 @@ Um Caminho Estreito~
 Há uma curva para a direita, mas não consegue descobrir aonde irá levar.  É 
 tão apertado aqui que não há como você retornar por este caminho pelo sul. 
 ~
-99 ad 0
+99 9 0 0 0 0
 D1
 Muito escuro para saber.
 ~
@@ -1099,7 +1086,7 @@ Almofadas, tapetes e candelabros estão por toda parte.  Este certamente é um
 dos locais mais luxuosos que você já viu.  Ao norte está a proibida sala do 
 tesouro, entrar lá é procurar a morte com certeza. 
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 A morte certa.
 ~
@@ -1129,7 +1116,7 @@ no tempo e o esmaga, como um inseto.
                                   .
                                       .  VOCÊ ESTÁ MORTO!!
 ~
-99 bc 0
+99 6 0 0 0 0
 D2
 ~
 ~
@@ -1144,7 +1131,7 @@ Um Local Mofado~
    Você está em uma mofada área escondida atrás da parede do banheiro.  Uma 
 estreita escadaria de granito conduz para baixo, na escuridão.
 ~
-99 ad 0
+99 9 0 0 0 0
 D2
 Muito escuro para saber.
 ~
@@ -1164,7 +1151,7 @@ sua volta pois lá de cima caiu uma grande montanha de fezes (que legal).
    Paredes ficam ao oeste, norte e sul - mas é possível passar pelo leste, em 
 volta da pilha de estrume.
 ~
-99 ad 0
+99 9 0 0 0 0
 D1
 Muito escuro para saber.
 ~
@@ -1181,7 +1168,7 @@ A Escadaria de Granito~
    Você está em uma estreita escadaria de granito que em espirais suavemente 
 conduz para baixo.  Você pode subir, ou descer de acordo com sua vontade. 
 ~
-99 ad 0
+99 9 0 0 0 0
 D4
 Muito escuro para saber.
 ~
@@ -1198,7 +1185,7 @@ Nos Degraus~
    Você está em uma estreita escadaria de granito que em espirais suavemente 
 conduz para baixo.  Você pode subir, ou descer de acordo com sua vontade.
 ~
-99 ad 0
+99 9 0 0 0 0
 D4
 Muito escuro para saber.
 ~
@@ -1218,12 +1205,11 @@ espalhadas no chão.  Um velho barril de vinho do porto está quebrado e
 jogado em um canto, uma relíquia dos tempos felizes.  A única saída visível 
 fica ao oeste.
 ~
-99 ad 0
+99 9 0 0 0 0
 D2
 ~
 porto barril~
-:n 1
-ad -1 9948
+1 -1 9948
 D3
 Muito escuro para saber.
 ~
@@ -1254,11 +1240,10 @@ Você começa a
                                           a um pequeno buraco no chão
                                         que cheira como algo cozinhando.
 ~
-99 ad 0
+99 9 0 0 0 0
 D5
 ~
 ar~
-:n 1
 1 -1 9949
 S
 #9949
@@ -1269,7 +1254,7 @@ a sua visão.  Você pode com certa dificuldade perceber um vulto ao norte.
 Não há como retornar pelo caminho que você usou para chegar até aqui.  Você 
 pode, entretanto, ir em direção ao leste, ao oeste e ao norte.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -1293,7 +1278,7 @@ do outro lado um pentagrama invertido foi desenhado com sangue e uma maleta
 de objetos pessoais em frente.  A única saída é voltando em direção ao 
 oeste.
 ~
-99 ad 0
+99 9 0 0 0 0
 D3
 Muito escuro para saber.
 ~
@@ -1307,7 +1292,7 @@ arredondadas e lisas, o caminho tornou-se escorregadio por causa do sangue
 de muitos e incautos aventureiros.  
 Cuidado com seus passos! 
 ~
-99 a 1
+99 1 0 0 0 1
 D1
 Muito escuro para saber.
 ~
@@ -1326,7 +1311,7 @@ centro das chamas apoiando uma negra cadeira de mármore a qual está vazia.
 Este parece ser algum tipo de trono.  As labaredas tornam todos os caminhos 
 intransitáveis exceto por aquele que chegou e a direção sacra.
 ~
-99 a 0
+99 1 0 0 0 0
 D2
 Muito escuro para saber.
 ~
@@ -1344,7 +1329,7 @@ Abaixo dos Ossos~
 o olhar de uma caveira humana sobre você.  Com um mínimo esforço para subir, 
 você pode libertar-se.
 ~
-99 ac 0
+99 5 0 0 0 0
 D4
 Muito escuro para saber.
 ~
@@ -1356,7 +1341,7 @@ As Ruas de Ghenna~
    Você está em uma das muitas ruas em Ghenna.  Uma grande muralha bloqueia 
 a passagem ocidental, mas pode-se seguir pelo norte, sul ou leste.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -1380,7 +1365,7 @@ machucam seus pés impiedosamente.  Ao oeste fica a muralha da cidade,
 enquanto uma construção incendiada está ao leste, é impossível permanecer 
 indiferente aos rumores do que houve por aqui.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -1404,7 +1389,7 @@ transversalmente sobre um esqueleto esbranquiçado.  Ao oeste você consegue
 enxergar as ruas de Ghenna.  Você provavelmente quer sair desta edificação o 
 mais rápido, afinal isto pode desmoronar a qualquer momento.
 ~
-99 a 1
+99 1 0 0 0 1
 D3
 As Ruas de Ghenna.
 ~
@@ -1417,11 +1402,10 @@ As Ruas de Ghenna~
 da cidade ao passo que ao norte há uma porta.  A rua continua ao sul, e ao 
 leste também.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 ~
 vermelha porta~
-:n 2
 1 -1 9958
 D1
 Muito escuro para saber.
@@ -1441,7 +1425,7 @@ Chicotes, correntes e algemas estão dispostos de forma destacada por toda
 parte.  Uma cadeira foi posicionada no meio da sala com o intuito de 
 satisfazer seus desejos.
 ~
-99 a 1
+99 1 0 0 0 1
 D2
 Muito escuro para saber.
 ~
@@ -1454,7 +1438,7 @@ As Ruas de Ghenna~
 oeste dirige-se para a entrada da cidade.  Os pedregulhos de construções 
 arruinadas tornaram qualquer outra saída impossível.
 ~
-99 a 1
+99 1 0 0 0 1
 D1
 Muito escuro para saber.
 ~
@@ -1474,7 +1458,7 @@ ficava ao sul.  A construção ao norte, porem, parece um pouco mais intacta.
 A rua termina indo-se em direção ao leste, numa montanha de entulhos.  Ao 
 oeste, a rua continua por alguma distância.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -1503,7 +1487,7 @@ mais ao norte do local com um estrado caído sobre ele.  Bancos de madeira
 estão dispostos por toda a extensão deste salão.  As ruas da cidade de 
 Ghenna ficam ao sul daqui.
 ~
-99 ad 0
+99 9 0 0 0 0
 D2
 Muito escuro para saber.
 ~
@@ -1517,7 +1501,7 @@ completamente estragado, recorda ao estilo da época vitoriana.  Uma frágil
 escadaria conduz para cima, ela parece bastante instável.  Melhor cuidar 
 onde pisa.
 ~
-99 a 0
+99 1 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -1536,7 +1520,7 @@ os lados, bloqueando as saídas leste e oeste.  Um cheiro asqueroso de mofo
 emana de todas as partes.  Uma porta range sua dobradiça em direção ao 
 norte.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -1555,7 +1539,7 @@ deles quebrados) estão espalhados por toda parte.  Um colchão apoiado contra
 a parede, completamente furado no meio, atrapalha a passagem.  Uma das 
 bonecas daqui tem a forma absolutamente real... Muito estranho!
 ~
-99 a 0
+99 1 0 0 0 0
 D2
 Muito escuro para saber.
 ~
@@ -1573,7 +1557,7 @@ Um Armário Destruído~
 de sapatos estão espalhados, fedendo a mofo.  Aparentemente só há uma saída 
 - leste.
 ~
-99 ad 0
+99 9 0 0 0 0
 D1
 Muito escuro para saber.
 ~
@@ -1582,7 +1566,6 @@ Muito escuro para saber.
 D5
 ~
 caixas~
-:n 2
 2 9965 9911
 S
 #9966
@@ -1591,7 +1574,7 @@ As Ruas de Ghenna~
 bloqueando sua saída.  Você pode seguir ao norte, sul e oeste.  Tome cuidado 
 para não tropeçar nos muitos corpos espalhados nestas ruas.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -1614,7 +1597,7 @@ Uma Estrada em Ghenna~
 Uma construção arruinada está ao oeste, e a muralha da cidade bloqueia a 
 saída norte.
 ~
-99 a 1
+99 1 0 0 0 1
 D1
 Muito escuro para saber.
 ~
@@ -1632,7 +1615,7 @@ As Ruas de Ghenna~
 sobre você ao leste, e uma porta fica ao oeste, uma luz vermelha brilha sob 
 ela.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -1654,7 +1637,7 @@ Uma Curva na Estrada~
    Você está em uma curva da estrada.  A muralha da cidade está ao norte, e 
 ao leste as saídas estão impedidas.  Uma via estreita segue para o oeste.
 ~
-99 a 1
+99 1 0 0 0 1
 D2
 Muito escuro para saber.
 ~
@@ -1673,7 +1656,7 @@ vários brinquedos de prazer estão jogados pelo chão, o qual é coberto com um
 agradável tapete de pelúcia roxo.  Ao sul fica a sala de espera aonde você 
 pode ver uma cama posta atrás de uma mesinha de vidro.
 ~
-99 ad 0
+99 9 0 0 0 0
 D1
 Muito escuro para saber.
 ~
@@ -1691,7 +1674,7 @@ A Sala de Espera~
 aguardam.  Uma bela cama florida foi posta em frente a uma mesinha de centro 
 de vidro cheia de revistas.  Ao oeste há uma escadaria.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -1709,7 +1692,7 @@ A Base dos Degraus~
 masculina, foram deixadas no parapeito.  Asqueroso!  Ao leste fica a sala de 
 espera.
 ~
-99 ad 0
+99 9 0 0 0 0
 D1
 A sala de espera.
 ~
@@ -1727,7 +1710,7 @@ O Topo dos Degraus~
 grande variedade de roupas espalhadas pelo chão - a maioria totalmente suja.  
 Um corredor fica ao oeste, clareado por uma luz vermelha.
 ~
-99 d 0
+99 8 0 0 0 0
 D3
 Um saguão.
 ~
@@ -1744,7 +1727,7 @@ Um Corredor no Andar Superior~
    O corredor segue para o leste e oeste, enquanto que ao norte uma porta 
 está entreaberta, um aviso foi pendurado na maçaneta: "Não Perturbe!".
 ~
-99 d 0
+99 8 0 0 0 0
 D0
 Impossível enxergar.
 ~
@@ -1769,7 +1752,7 @@ molhado bem no meio.  Manchas de gordura estão na parede perto da cabeceira
 da cama, aparentemente são de alguém que se encostou nela.  O piso é 
 pegajoso - você pode imaginar o porque.
 ~
-99 ad 0
+99 9 0 0 0 0
 D2
 Um corredor no andar superior.
 ~
@@ -1782,7 +1765,7 @@ O Final do Corredor~
 entreaberta, enquanto que o corredor continua ao leste, voltando por onde 
 você veio.
 ~
-99 a 0
+99 1 0 0 0 0
 D1
 Um corredor no andar superior.
 ~
@@ -1800,7 +1783,7 @@ O Quarto da Madame~
 estão localizados de cada lado da cama são envoltos com um pano vermelho 
 lançando assim um assustador brilho que ilumina o local.
 ~
-99 d 0
+99 8 0 0 0 0
 D0
 O final do corredor.
 ~
@@ -1813,7 +1796,7 @@ Um Caminho Encoberto~
 tão úmido por aqui que você consegue vê-lo.  Ao norte de onde está a 
 passagem está descoberta.
 ~
-99 a 0
+99 1 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -1832,7 +1815,7 @@ ectoplasma - é realmente nojento.  O caminho é tão escorregadio que torna
 impossível subir até aquele caminho encoberto.  A sua única opção é seguir 
 ao oeste.
 ~
-99 ac 1
+99 5 0 0 0 1
 D3
 Muito escuro para saber.
 ~
@@ -1845,7 +1828,7 @@ Uma Trilha Enlodada~
 muitos animais mortos que aparentemente atolaram aqui.  Existem saídas ao 
 norte e ao leste.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -1863,7 +1846,7 @@ Uma Trilha Enlodada~
 totalmente submerso neste lodo vermelho.  Talvez você acabe como ele...
 Você pode seguir ao oeste, ou também para o sul.
 ~
-99 a 1
+99 1 0 0 0 1
 D2
 Muito escuro para saber.
 ~
@@ -1880,7 +1863,7 @@ Uma Trilha Enlodada~
    O lodo parece diminuir um pouco aqui, de qualquer forma o caminho 
 continua bastante escorregadio.  Uma clareira pode ser vista ao sul.
 ~
-99 a 1
+99 1 0 0 0 1
 D1
 Muito escuro para saber.
 ~
@@ -1899,7 +1882,7 @@ clareira é constituída por um barro vermelho, com algumas rochas espalhadas
 ao seu redor.  Aparentemente este é algum tipo de caminho antigo, para o sul 
 você pode avistar o que parece ser a boca de uma caverna.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -1917,7 +1900,7 @@ A Boca de Uma Pequena Caverna~
 interior de uma alto promontório.  Uma rudimentar escadaria talhada na rocha 
 conduz para baixo, ao norte há uma pequena clareira.
 ~
-99 a 1
+99 1 0 0 0 1
 D0
 Uma pequena clareira.
 ~
@@ -1936,7 +1919,7 @@ esteve.  A umidade escorre pelas lisas paredes rochosas formando um pequeno
 riacho, além de pingos gotejarem do teto sobre a sua cabeça.  Uma passagem 
 conduz ao sul.
 ~
-99 ad 1
+99 9 0 0 0 1
 D2
 Muito escuro para saber.
 ~
@@ -1953,7 +1936,7 @@ Um Túnel Inclinado~
    Você está em um longo túnel em declive que leva lentamente em direção ao 
 sul.  As lisas paredes rochosas parecem suar - há MUITA umidade.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -1970,7 +1953,7 @@ Um Túnel Inclinado~
    Você está em um longo túnel em declive que leva lentamente em direção ao 
 sul.  As lisas paredes rochosas parecem suar - há MUITA umidade.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -1987,7 +1970,7 @@ Um Túnel Inclinado~
    Você está em um longo túnel em declive que leva lentamente em direção ao 
 sul.  As lisas paredes rochosas parecem suar - há MUITA umidade.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -2006,7 +1989,7 @@ obviamente ao norte, voltando pelo caminho no qual chegou aqui.  A caverna é
 abobadada, com uma altura de aproximadamente 8 metros... está realmente 
 muito escuro aqui.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -2029,7 +2012,7 @@ O Túnel Leste-Oeste~
 muito musgo pendurado no teto, roçando em seu rosto de vez em quando.  O 
 túnel continua de leste a oeste.
 ~
-99 ad 0
+99 9 0 0 0 0
 D1
 Muito escuro para saber.
 ~
@@ -2046,7 +2029,7 @@ O Túnel Leste-Oeste~
    Este pequeno e apertado túnel sem saída acaba numa gigantesca rocha.  A 
 única saída aparente é voltar por onde você veio.
 ~
-99 acd 0
+99 13 0 0 0 0
 D1
 Muito escuro para saber.
 ~
@@ -2055,7 +2038,6 @@ Muito escuro para saber.
 D3
 ~
 rocha~
-:n 2
 1 -1 9953
 S
 #9992
@@ -2064,7 +2046,7 @@ Um Amplo Túnel~
 No entanto você começou a ficar confuso... por qual caminho seguir?  Há um 
 buraco na parede ao norte, outro caminho segue ao sul.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -2088,7 +2070,7 @@ sendo triturados pelo seu peso - grotesco!  Você pode continuar em direção
 ao sul deste caminho, caso os insetos não lhe perturbem muito, ou você pode 
 voltar pelo túnel em direção ao norte.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -2107,7 +2089,7 @@ variadas espécies de insetos, a maioria deles são IMENSOS.  Esperamos que
 você não tenha aracnofobia, pois caso tenha este local certamente irá lhe 
 apavorar até a morte.  Há saídas para todas as direções.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -2136,7 +2118,7 @@ interior da barriga de um animal gigantesco.  As paredes de cor avermelhada,
 parecem estar cobertas por saliva e vibram com energia.  A única saída fica 
 ao norte.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 Muito escuro para saber.
 ~
@@ -2150,7 +2132,7 @@ A baba vermelha escorre das paredes e do teto causando-lhe enjôo de tão
 repugnante.  Uma mancha negra na parede oeste parece levar a única saída 
 possível.
 ~
-99 ad 0
+99 9 0 0 0 0
 D3
 Muito escuro para saber.
 ~
@@ -2165,7 +2147,7 @@ parecem ser ossos humanos.  Uma enorme pilha de tesouros está no centro
 deste local, coberto por uma baba vermelha que escorre pelas paredes.  
 Saídas levam a todas as direções.
 ~
-99 ad 0
+99 9 0 0 0 0
 D0
 A Cova Ilimitada.
 ~
@@ -2198,7 +2180,7 @@ Um Beco Sem Saída~
 cidade agiganta-se sobre você ao oeste.  Parece que a única saída é ao 
 norte.
 ~
-99 ad 1
+99 9 0 0 0 1
 D0
 Muito escuro para saber.
 ~
@@ -2207,7 +2189,6 @@ Muito escuro para saber.
 D2
 ~
 arbusto~
-:n 1
 1 -1 9905
 S
 #9999
@@ -2225,7 +2206,7 @@ Você
   | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | | 
   | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | |  | | 
 ~
-99 bc 0
+99 6 0 0 0 0
 D0
 ~
 ~
@@ -2235,4 +2216,4 @@ D4
 ~
 0 -1 9933
 S
-$
+$~

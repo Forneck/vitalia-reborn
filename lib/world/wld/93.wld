@@ -4,7 +4,7 @@ O Portal para o Deserto dos Dragões~
 paisagem deste lado do paraíso é totalmente diferente do outro lado, onde
 havia uma floresta exuberante e lagos refrescantes.
 ~
-93 gr 2
+93 131136 0 0 0 2
 D0
 Você observa o deserto causticante.
 ~
@@ -16,14 +16,14 @@ Você observa uma passagem dourada dentro da caverna.
 ~
 0 -1 9398
 E
-abutres~
-Você observa os abutres voando em círculos pelo deserto como num ritual macabro.
-~
-E
 portal~
 Você vê o imenso portal feito de blocos de pedra encaixados uns sobre os
 outros formando um arco romano.  As pedras são enormes e bastante pesadas o
 que lhe faz imaginar quem teria construído este portal tão magnífico.
+~
+E
+abutres~
+Você observa os abutres voando em círculos pelo deserto como num ritual macabro.
 ~
 S
 #9301
@@ -36,22 +36,22 @@ A sua frente, ao norte, a floresta continua.  Você percebe brilhos estranhos
 vindo do seus lados oeste e leste.  Ao sul você observa um caminho sombrio
 através da floresta densa.
 ~
-93 cgis 3
+93 262468 0 0 0 3
 D0
 Há uma interseção de trilhas põe entre as árvores.
 ~
 ~
 0 -1 9304
-D3
-Você consegue ver uma luz branca por entre as árvores.
-~
-~
-0 -1 9303
 D1
 Você detecta uma luz azulada por entre as árvores.
 ~
 ~
 0 -1 9302
+D3
+Você consegue ver uma luz branca por entre as árvores.
+~
+~
+0 -1 9303
 E
 arvores seculares~
 Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a
@@ -68,7 +68,7 @@ que a fonte de luz na verdade é um magnífico ser.  Ao lado dele há uma
 estranha tábua de madeira repleta de escrituras.  A oeste você percebe uma
 enorme rocha.
 ~
-93 ghs 3
+93 262336 0 0 0 3
 D3
 É possível ver por entre as árvores um enorme monólito.
 ~
@@ -90,7 +90,7 @@ atentamente, percebe-se ser nada mais nada menos uma magnífica criatura.  A
 seu lado há uma tábua de madeira repleta de escrituras.  Olhando na direção
 leste você vê uma enorme rocha.
 ~
-93 ghs 3
+93 262336 0 0 0 3
 D1
 Você consegue ver por entre as árvores um enorme monólito.
 ~
@@ -110,12 +110,17 @@ uma linda melodia vinda do alto das árvores, onde pássaros nunca antes
 vistos cantam com a plenos pulmões.  As trilhas partem nas direções norte,
 oeste e leste.  Ao sul você percebe uma enorme rocha.
 ~
-93 grs 3
+93 393280 0 0 0 3
 D0
 Há por entre as árvores uma trilha seguindo norte.
 ~
 ~
 0 -1 9325
+D1
+Há por entre as árvores uma trilha seguindo leste.
+~
+~
+0 -1 9305
 D2
 Você vê por ente as árvores um enorme monólito.
 ~
@@ -126,11 +131,6 @@ Há por entre as árvores uma trilha seguindo oeste.
 ~
 ~
 0 -1 9316
-D1
-Há por entre as árvores uma trilha seguindo leste.
-~
-~
-0 -1 9305
 E
 arvores seculares~
 Você nunca viu em toda sua vida árvores deste
@@ -145,7 +145,7 @@ das árvores.  Nessa região a floresta começa a ficar mais fechada e o ar
 começa a pesar.  Ao norte você consegue ver entre os galhos um desvio.  A
 leste a trilha continua.
 ~
-93 gir 3
+93 131392 0 0 0 3
 D0
 Você vê um desvio na trilha.
 ~
@@ -176,17 +176,17 @@ que há alguém lhe observando.  A leste é possível ver um lago por entre os
 galhos e troncos das árvores.  A oeste você avista uma trilha quase
 imperceptível.
 ~
-93 grs 3
-D3
-Você observa uma trilha bem escondida  por entre os galhos e troncos.
-~
-~
-0 -1 9305
+93 393280 0 0 0 3
 D1
 Naquela parte você vê um lago de águas claras.
 ~
 ~
 0 -1 9307
+D3
+Você observa uma trilha bem escondida  por entre os galhos e troncos.
+~
+~
+0 -1 9305
 E
 arvores seculares~
 Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a ter
@@ -203,7 +203,7 @@ norte: naquela direção fica a parte densa da floresta.  Desviando o olhar
 para oeste, você observa uma trilha que passa entre os galhos e troncos das
 magníficas árvores seculares.
 ~
-93 cgs 6
+93 262212 0 0 0 6
 D0
 Você fita a parte densa da floresta e ouve estranhos sons vindos de l .
 ~
@@ -235,17 +235,17 @@ vindo de uma gruta submersa.  Acima de você há a linda imagem das árvores
 seculares vistas através das águas do lago.  Nadando em direção ao sul você
 encontra a entrada da gruta submersa.
 ~
-93 grs 8
-D4
-Há uma estranha mancha esverdeada no fundo do lago.
-~
-~
-0 -1 9307
+93 393280 0 0 0 8
 D2
 Você observa um feixe de luz vindo de uma grande gruta submersa.
 ~
 ~
 0 -1 9309
+D4
+Há uma estranha mancha esverdeada no fundo do lago.
+~
+~
+0 -1 9307
 S
 #9309
 A Gruta Submersa~
@@ -256,7 +256,7 @@ gruta você observa um grande número de pinturas de cores quentes e fortes.No
 chão você encontra grandes escamas de bronze.  A barreira está exatamente ao
 norte.
 ~
-93 dgs 0
+93 262216 0 0 0 0
 D0
 Através da barreira d'água é possível ver os peixes nadando no lago.
 ~
@@ -279,7 +279,7 @@ pegadas enquanto escuta estranhos sons e gargalhadas vindas do alto das
 copas das árvores seculares.  A leste a trilha se finda; ao sul segue
 estreita.
 ~
-93 grs 3
+93 393280 0 0 0 3
 D1
 A trilha parece findar ali.
 ~
@@ -291,15 +291,15 @@ Você vê a trilha estreita seguindo nessa direção.
 ~
 0 -1 9305
 E
+alto copa~
+Você aperta a vista para enxergar melhor e vê o que julga ser dezenas de
+olhinhos e brilhantes rajadas de luz multicolorida.
+~
+E
 arvores seculares~
 Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a
 ter até 120 metros de altura e seus troncos 90 metros de diâmetro.  Você só
 tem uma palavra para descrevê-las: imponência.
-~
-E
-alto copa~
-Você aperta a vista para enxergar melhor e vê o que julga ser dezenas de
-olhinhos e brilhantes rajadas de luz multicolorida.
 ~
 S
 #9311
@@ -310,7 +310,7 @@ luz e pequenas explosões que brilham em diversas cores.  Vindas dessa mesma
 direção você escuta gargalhadas com uma alegre melodia de fundo.  Há a oeste
 um desvio na trilha.
 ~
-93 grs 3
+93 393280 0 0 0 3
 D1
 Há por ali estranhas explosões de luz multicolorida.
 ~
@@ -338,7 +338,7 @@ para leste você observa que outro grupo grande de Dragões está brincando.
 Para oeste pode-se ver o final da trilha por entre os galhos e troncos.  Ao
 sul há um lago de águas claras.
 ~
-93 grs 3
+93 393280 0 0 0 3
 D1
 Um grupo com vários Dragões-Fadas estão brincando.
 ~
@@ -355,9 +355,10 @@ Você vê por entre as árvores o final da trilha.
 ~
 0 -1 9311
 E
-troncos tocas~
-Você observa várias tocas nos troncos das árvores e de cada toca sai um
-feixe luminoso com cores diferentes formando uma verdadeira festa de cores.
+arvores seculares~
+Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a
+ter até 120 metros de altura e seus troncos 90 metros de diâmetro.  Você só
+tem uma palavra para descrevê-las: imponência.
 ~
 E
 rajadas rajada~
@@ -365,10 +366,9 @@ Você observa as rajadas coloridas dos Dragões-Fadas e nota que a cada rajada
 você se sente mais alegre e feliz.
 ~
 E
-arvores seculares~
-Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a
-ter até 120 metros de altura e seus troncos 90 metros de diâmetro.  Você só
-tem uma palavra para descrevê-las: imponência.
+troncos tocas~
+Você observa várias tocas nos troncos das árvores e de cada toca sai um
+feixe luminoso com cores diferentes formando uma verdadeira festa de cores.
 ~
 S
 #9313
@@ -377,7 +377,7 @@ Um Caminho Leste na Vila~
 as brincadeiras e as piadas dos habitantes da vila sobre você.  A leste
 pode-se ver uma grande árvore dourada e a oeste a festa dos Dragões-Fadas.
 ~
-93 grs 3
+93 393280 0 0 0 3
 D1
 Você vê uma grande árvore dourada.
 ~
@@ -402,28 +402,28 @@ A Grande árvore Dourada~
 caminho que segue para a vila e ao sul você nota vários ninhos de
 Dragões-Fadas.
 ~
-93 grs 3
-D3
-Você observa um caminho na vila.
-~
-~
-0 -1 9313
+93 393280 0 0 0 3
 D2
 Você vê por entre os galhos e troncos vários ninhos de Dragões-Fadas.
 ~
 ~
 0 -1 9315
-E
-pequeno trono dourado~
-Você observa um lindo trono todo em ouro e com várias pedras
-preciosas. Digno de uma rainha !
+D3
+Você observa um caminho na vila.
 ~
+~
+0 -1 9313
 E
 arvore dourada~
 Você vê uma imensa árvore dourada em cujo tronco existe uma toca com ares
 nobres a emitir um feixe de luz amarelo.  Suas folhas refletem um tom
 dourado ao serem tocadas pelos raios solares ; e suas flores brancas são
 verdadeiras jóias, semelhantes ao capitel coríntio.
+~
+E
+pequeno trono dourado~
+Você observa um lindo trono todo em ouro e com várias pedras
+preciosas. Digno de uma rainha !
 ~
 S
 #9315
@@ -433,7 +433,7 @@ centenas de ninhos e ovos de dragão.  Alguns ninhos estão sobre o solo,
 outros estão nos galhos e troncos de árvores.  Ao norte você observa uma
 grande árvore dourada.
 ~
-93 grs 3
+93 393280 0 0 0 3
 D0
 Você vê uma grande árvore dourada.
 ~
@@ -453,23 +453,22 @@ galhos de árvores.  A floresta vai ficando cada vez mais fechada.  Ao norte
 você consegue ver um desvio; seguindo para oeste, em meio às árvores, há uma
 casa de madeira.  Existe uma intersecção a leste.
 ~
-93 grs 3
+93 393280 0 0 0 3
 D0
 Você vê um desvio na trilha.
 ~
 ~
 0 -1 9318
-D3
-Você observa uma casa de madeira.
-~
-porta madeira~
-:n 2 a porta de madeira
-1 -1 9317
 D1
 Você vê uma intersecção de trilhas.
 ~
 ~
 0 -1 9304
+D3
+Você observa uma casa de madeira.
+~
+porta madeira~
+1 -1 9317
 E
 arvores seculares~
 Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a
@@ -485,16 +484,16 @@ com restos de brasas da sua última utilização.  À frente você vê uma mesa
 com alguns papéis escritos numa linguagem ignorada por você.  A leste você
 vê a porta da casa aberta e através dela a densa floresta.
 ~
-93 cdegrs 0
+93 393308 0 0 0 0
 D1
 Você observa a floresta através da porta.
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 9316
 E
-estante~
-Você vê uma estante de madeira muito antiga e cheia de livros empoeirados.
+dragonete capa~
+Você vê várias cabeças de dragões formando um círculo e no meio dele um
+dragão de olhos de fogo.
 ~
 E
 livros~
@@ -504,9 +503,8 @@ suas capas.  Você tenta abri-los mas não consegue; existe alguma magia
 nestes livros.
 ~
 E
-dragonete capa~
-Você vê várias cabeças de dragões formando um círculo e no meio dele um
-dragão de olhos de fogo.
+estante~
+Você vê uma estante de madeira muito antiga e cheia de livros empoeirados.
 ~
 S
 #9318
@@ -517,17 +515,23 @@ observa um grupo de pássaros nos galhos mais elevados das árvores cantando
 uma melodia que o lembra canções pastoris.  A oeste a trilha segue na
 floresta menos densa e ao sul a trilha segue na floresta espessa.
 ~
-93 g 3
-D3
-Você vê uma trilha na direção oeste.
-~
-~
-0 -1 9319
+93 64 0 0 0 3
 D2
 Você observa uma trilha estreitada por galhos e troncos.
 ~
 ~
 0 -1 9316
+D3
+Você vê uma trilha na direção oeste.
+~
+~
+0 -1 9319
+E
+arvores seculares~
+Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a
+ter até 120 metros de altura e seus troncos 90 metros de diâmetro.  Você só
+tem uma palavra para descrevê-las: imponência.
+~
 E
 passaros grupo~
 Você vê um grupo de pássaros nunca visto antes nas terras de Vitália.
@@ -535,29 +539,23 @@ Possuem um bico dourado, as penas do seu corpo são negras e as plumas da
 cauda brancas.  Os olhos emitem um brilho estranho e você sente um estranho
 temor.
 ~
-E
-arvores seculares~
-Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a
-ter até 120 metros de altura e seus troncos 90 metros de diâmetro.  Você só
-tem uma palavra para descrevê-las: imponência.
-~
 S
 #9319
 Um Trilha Oeste na Floresta~
    Você está numa trilha cercada por enormes árvores.  A oeste você observa
 a continuação da trilha e a leste há um desvio.
 ~
-93 cg 3
-D3
-Você observa uma trilha na direção oeste.
-~
-~
-0 -1 9320
+93 68 0 0 0 3
 D1
 Você vê um desvio na trilha.
 ~
 ~
 0 -1 9318
+D3
+Você observa uma trilha na direção oeste.
+~
+~
+0 -1 9320
 E
 arvores seculares~
 Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a
@@ -572,7 +570,7 @@ cercando ; em seus galhos esquilos pulam de um lado para o outro e pássaros
 fazem seus ninhos.  Ao norte você observa um terreno em declive; a leste há
 uma trilha e a oeste observa-se um campo aberto entre árvores.
 ~
-93 g 3
+93 64 0 0 0 3
 D0
 Você vê um terreno em declive.
 ~
@@ -605,12 +603,17 @@ gigantescas árvores, ao sul você percebe sons e gemidos.  Do oeste vem um
 odor terrível de algo em decomposição e a leste você observa uma trilha
 entre as árvores.
 ~
-93 g 2
+93 64 0 0 0 2
 D0
 Você observa uma enorme mancha verde-escuro por entre as árvores.
 ~
 ~
 0 -1 9322
+D1
+Você vê uma trilha na floresta.
+~
+~
+0 -1 9320
 D2
 Você escuta leves sons e gemidos.
 ~
@@ -622,11 +625,6 @@ decomposição.
 ~
 ~
 0 -1 9323
-D1
-Você vê uma trilha na floresta.
-~
-~
-0 -1 9320
 E
 arvores seculares~
 Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a
@@ -640,7 +638,7 @@ O Recinto do Ancião Verde~
 galhos e folhas.  Você observa várias pegadas enormes e algumas escamas pelo
 chão.  Ao sul vê um campo aberto.
 ~
-93 g 3
+93 64 0 0 0 3
 D2
 Você vê um campo aberto.
 ~
@@ -660,7 +658,7 @@ As Carcaças~
 ossos imaginando que ferocidade teria causado isso.  A leste vê um campo
 aberto por entre os troncos e galhos.
 ~
-93 g 3
+93 64 0 0 0 3
 D1
 Você observa um campo aberto por entre as árvores.
 ~
@@ -683,7 +681,7 @@ nada...A não ser seu sangue escorrendo para dentro da garganta do velho
 dragão verde.  Você está morto !  Com certeza os filhotes terão comida por
 vários dias.
 ~
-93 b 3
+93 2 0 0 0 3
 S
 #9325
 Um Trilha Norte~
@@ -691,7 +689,7 @@ Um Trilha Norte~
 alguns pássaros e esquilos curiosos o seguem.  Ao norte a trilha continua e
 ao sul você vê um entroncamento com trilhas partindo em todas as direções.
 ~
-93 gas 3
+93 262209 0 0 0 3
 D0
 Você vê uma trilha por entre as árvores.
 ~
@@ -718,22 +716,22 @@ círculo formado por grandes rochas; ao sul há a trilha entre as árvores onde
 os pássaros e esquilos lhe seguiam.  A leste percebe a base de uma grande
 montanha e a oeste uma planície bastante estranha.
 ~
-93 gs 3
+93 262208 0 0 0 3
 D0
 Você vê grandes rochas formando um círculo.
 ~
 ~
 0 -1 9335
-D2
-Você observa uma trilha entre as árvores.
-~
-~
-0 -1 9325
 D1
 Você percebe uma grande montanha por entre as árvores.
 ~
 ~
 0 -1 9327
+D2
+Você observa uma trilha entre as árvores.
+~
+~
+0 -1 9325
 D3
 Você observa uma planície muito estranha.
 ~
@@ -754,28 +752,28 @@ deuses de Vitália.  Você observa acima um caminho íngreme até o topo
 congelado da magnífica montanha negra.  A oeste vê uma trilha na densa
 floresta.
 ~
-93 g 4
-D4
-Você observa um caminho íngreme até o topo.
-~
-~
-0 -1 9328
+93 64 0 0 0 4
 D3
 Você vê uma trilha na densa floresta.
 ~
 ~
 0 -1 9326
+D4
+Você observa um caminho íngreme até o topo.
+~
+~
+0 -1 9328
+E
+rochas negras~
+Você observa as rochas negras percebendo que elas são maciças e altamente
+resistentes; de tão lisas e polidas é possível ver o próprio reflexo.
+~
 E
 montanha~
 Você nunca viu algo tão perfeito.  A Montanha da coroa de gelo parece ter
 sido uma obra das divindades de Vitália, uma verdadeira escultura gigante;
 seu corpo escuro formado por rochas negras é coroado em seu topo por uma
 geleira.
-~
-E
-rochas negras~
-Você observa as rochas negras percebendo que elas são maciças e altamente
-resistentes; de tão lisas e polidas é possível ver o próprio reflexo.
 ~
 S
 #9328
@@ -784,7 +782,7 @@ O Caminho Íngreme~
 árvores seculares.  O caminho íngreme continua acima e abaixo você
 observa a base da montanha.
 ~
-93 cgr 5
+93 131140 0 0 0 5
 D4
 Você vê um caminho íngreme até o topo.
 ~
@@ -796,11 +794,10 @@ Você observa a base da montanha.
 ~
 0 -1 9327
 E
-montanha~
-Você nunca viu algo tão perfeito.  A Montanha da coroa de gelo parece ter
-sido uma obra das divindades de Vitália, uma verdadeira escultura gigante;
-seu corpo escuro formado por rochas negras é coroado em seu topo por uma
-geleira.
+arvores seculares~
+Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a
+ter até 120 metros de altura e seus troncos 90 metros de diâmetro.  Você só
+tem uma palavra para descrevê-las: imponência.
 ~
 E
 rochas negras~
@@ -808,10 +805,11 @@ Você observa as rochas negras percebendo que elas são maciças e altamente
 resistentes; de tão lisas e polidas é possível ver o próprio reflexo.
 ~
 E
-arvores seculares~
-Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a
-ter até 120 metros de altura e seus troncos 90 metros de diâmetro.  Você só
-tem uma palavra para descrevê-las: imponência.
+montanha~
+Você nunca viu algo tão perfeito.  A Montanha da coroa de gelo parece ter
+sido uma obra das divindades de Vitália, uma verdadeira escultura gigante;
+seu corpo escuro formado por rochas negras é coroado em seu topo por uma
+geleira.
 ~
 S
 #9329
@@ -822,7 +820,7 @@ pelas árvores.  Você observa a floresta do paraíso e suas gigantescas
 árvores.  A leste você consegue identificar algumas rochas.  O caminho
 íngreme continua até o topo; para baixo você desce a montanha negra.
 ~
-93 gqr 5
+93 196672 0 0 0 5
 D4
 Você observa um caminho íngreme.
 ~
@@ -834,16 +832,16 @@ Você observa um caminho íngreme até a base da montanha.
 ~
 0 -1 9328
 E
+rochas negras~
+Você observa as rochas negras percebendo que elas são maciças e altamente
+resistentes; de tão lisas e polidas é possível ver o próprio reflexo.
+~
+E
 montanha~
 Você nunca viu algo tão perfeito.  A Montanha da coroa de gelo parece ter
 sido uma obra das divindades de Vitália, uma verdadeira escultura gigante;
 seu corpo escuro formado por rochas negras é coroado em seu topo por uma
 geleira.
-~
-E
-rochas negras~
-Você observa as rochas negras percebendo que elas são maciças e altamente
-resistentes; de tão lisas e polidas é possível ver o próprio reflexo.
 ~
 S
 #9330
@@ -854,7 +852,12 @@ montanha da coroa de gelo e já sente o frio do grande cume nevado.  As
 norte observa uma entrada na parede negra da montanha; para cima vê o topo
 congelado, para baixo um caminho íngreme.
 ~
-93 gqr 5
+93 196672 0 0 0 5
+D0
+Você observa uma toca na montanha.
+~
+~
+0 -1 9332
 D4
 Você vê o topo da montanha da coroa de gelo.
 ~
@@ -865,22 +868,17 @@ Você observa um caminho íngreme até a base da montanha.
 ~
 ~
 0 -1 9329
-D0
-Você observa uma toca na montanha.
+E
+rochas negras~
+Você observa as rochas negras percebendo que elas são maciças e altamente
+resistentes; de tão lisas e polidas é possível ver o próprio reflexo.
 ~
-~
-0 -1 9332
 E
 montanha~
 Você nunca viu algo tão perfeito.  A Montanha da coroa de gelo parece ter
 sido uma obra das divindades de Vitália, uma verdadeira escultura gigante;
 seu corpo escuro formado por rochas negras é coroado em seu topo por uma
 geleira.
-~
-E
-rochas negras~
-Você observa as rochas negras percebendo que elas são maciças e altamente
-resistentes; de tão lisas e polidas é possível ver o próprio reflexo.
 ~
 S
 #9331
@@ -891,23 +889,23 @@ seu cimo formando uma magnífica coroa; ventos frios sopram de todos os lados
 existem pegadas enormes; algo realmente grande passou por aqui.  Para baixo
 você observa um longo e perigoso caminho até a base da montanha.
 ~
-93 gqr 5
+93 196672 0 0 0 5
 D5
 Você vê um caminho até a base da montanha.
 ~
 ~
 0 -1 9330
 E
+rochas negras~
+Você observa as rochas negras percebendo que elas são maciças e altamente
+resistentes; de tão lisas e polidas é possível ver o próprio reflexo.
+~
+E
 montanha~
 Você nunca viu algo tão perfeito.  A montanha da coroa de gelo parece ter
 sido uma obra das divindades de Vitália, uma verdadeira escultura gigante;
 seu corpo escuro formado por rochas negras é coroado em seu topo por uma
 geleira.
-~
-E
-rochas negras~
-Você observa as rochas negras percebendo que elas são maciças e altamente
-resistentes; de tão lisas e polidas é possível ver o próprio reflexo.
 ~
 S
 #9332
@@ -917,27 +915,27 @@ as paredes.  Você observa alguns ossos de pequenos animais no chão e ao seu
 lado percebe o corpo congelado de um coelho; isto lhe faz pensar que essa
 gruta pode ser a despensa de alguém.  Ao sul vê um caminho íngreme.
 ~
-93 dgqr 5
+93 196680 0 0 0 5
 D2
 Você observa um caminho íngreme.
 ~
 ~
 0 -1 9330
 E
-pinturas~
-Você observa muitas pinturas espalhadas pelas paredes da gruta.  As pinturas
-parecem mostrar um ritual de caça onde uma enorme mancha branca envolve suas
-presas e as consome.As pinturas aparentam ser bem antigas.
+coelho corpo congelado~
+Você observa o corpo de um coelho congelado; seus olhos demonstram surpresa
+e medo.  Isto lhe faz pensar que ele deve ser a refeição de alguém muito
+assustador.
 ~
 E
 ossos pequenos animais~
 Você vê ossos de pequenos animais; alguns ainda tem marcas de sangue.
 ~
 E
-coelho corpo congelado~
-Você observa o corpo de um coelho congelado; seus olhos demonstram surpresa
-e medo.  Isto lhe faz pensar que ele deve ser a refeição de alguém muito
-assustador.
+pinturas~
+Você observa muitas pinturas espalhadas pelas paredes da gruta.  As pinturas
+parecem mostrar um ritual de caça onde uma enorme mancha branca envolve suas
+presas e as consome.As pinturas aparentam ser bem antigas.
 ~
 S
 #9333
@@ -949,7 +947,7 @@ estranho.Algumas nuvens negras se aproximam como se seguissem em sua
 direção.  A leste você observa a floresta e uma trilha entre as árvores; a
 oeste existe uma caverna sinistra.
 ~
-93 g 2
+93 64 0 0 0 2
 D1
 Você observa uma trilha por entre galhos e troncos.
 ~
@@ -961,15 +959,15 @@ Você vê uma caverna bastante funesta.
 ~
 0 -1 9334
 E
-nuvem nuvens negras~
-Você observa algumas nuvens negras vindas em suas direção.  As nuvens até
-parecem ter vida própria e interessadas em você.
-~
-E
 floresta arvores seculares~
 Você nunca viu em toda sua vida árvores deste tamanho, algumas chegando a
 ter até 120 metros de altura e seus troncos 90 metros de diâmetro.  Você só
 tem uma palavra para descrevê-las: imponência.
+~
+E
+nuvem nuvens negras~
+Você observa algumas nuvens negras vindas em suas direção.  As nuvens até
+parecem ter vida própria e interessadas em você.
 ~
 S
 #9334
@@ -980,17 +978,17 @@ sensação é de que a caverna vai desabar sobre você.  Quando você começa a 
 acalmar ouve barulhos estranhos vindo do corredor norte.  A leste você
 observa a planície enigmática, o lugar para onde os medrosos sempre vÃo.
 ~
-93 acdfgr 0
-D1
-Você observa o lugar para onde os medrosos sempre vão.
-~
-~
-0 -1 9333
+93 131181 0 0 0 0
 D0
 Você observa a continuação de uma passagem da caverna.
 ~
 ~
 0 -1 9384
+D1
+Você observa o lugar para onde os medrosos sempre vão.
+~
+~
+0 -1 9333
 E
 teia aranha~
 Você observa uma teia; seria uma das mais maravilhosas esculturas vista por
@@ -1008,7 +1006,7 @@ você vê uma majestosa figura de um dragão desenhada no solo.  Você percebe
 que nos monólitos existem escrituras sagradas.  Ao norte, leste e oeste você
 observa várias cavernas e ao sul você vê uma trilha na floresta.
 ~
-93 ceght 2
+93 524500 0 0 0 2
 D0
 Você observa a entrada de uma caverna.
 ~
@@ -1030,15 +1028,15 @@ Você observa a entrada de uma caverna.
 ~
 0 -1 9336
 E
+circulo dourado~
+Você observa um círculo dourado que demarca o santuário dos dragões.  Há uma
+imagem de dragão no centro do círculo.
+~
+E
 monolito~
 Você observa quatro grandes rochas; cada uma rocha possui escrituras e cores
 diferentes.  Existe um monólito azul ao norte do círculo, um verde ao sul,
 um branco a oeste e um preto a leste.
-~
-E
-circulo dourado~
-Você observa um círculo dourado que demarca o santuário dos dragões.  Há uma
-imagem de dragão no centro do círculo.
 ~
 S
 #9336
@@ -1048,7 +1046,7 @@ interior constantemente.  O calor aqui é infernal; isto lhe deixa curioso em
 saber a origem deste calor.  A leste você observa quatro enormes rochas e
 para baixo existe uma passagem em chamas.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D1
 Você vê grandes rochas.
 ~
@@ -1067,24 +1065,17 @@ piso, paredes e do teto já gastas pelo tempo.  Há uma pequena escritura no
 chão da caverna.  Ao norte você observa uma enorme porta negra e ao sul o
 santuário dos dragões.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D0
 Você observa uma enorme porta negra.
 ~
 porta negra~
-:n 2 a enorme porta negra
 2 9318 9383
 D2
 Você vê o santuário dos dragões.
 ~
 ~
 0 -1 9335
-E
-enorme porta negra~
-Você observa uma porta feita da mais resistente rocha de Vitália.  A Porta
-tem uma altura de uns 12 metros e uma largura de 6 metros, o que lhe faz
-pensar no tamanho da coisa que deve está do outro lado da porta.
-~
 E
 chao pequena escritura~
 Você observa o chão da caverna todo revestido de mármore branco.  Nele há a
@@ -1100,6 +1091,12 @@ seguinte inscrição esculpida :
 *                                                                   *
 *********************************************************************
 ~
+E
+enorme porta negra~
+Você observa uma porta feita da mais resistente rocha de Vitália.  A Porta
+tem uma altura de uns 12 metros e uma largura de 6 metros, o que lhe faz
+pensar no tamanho da coisa que deve está do outro lado da porta.
+~
 S
 #9338
 A Entrada da Caverna Dourada~
@@ -1107,7 +1104,7 @@ A Entrada da Caverna Dourada~
 da caverna dourada, de requinte e apuro majestosos.  Ao norte você observa
 uma câmara dourada e a oeste o santuário dos dragões.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D0
 Você observa uma passagem reluzente.
 ~
@@ -1131,7 +1128,7 @@ encerrar-se aqui pois o terreno em declive é uma barreira para sua extensão.
 Você sente um cheiro de flores vindo do topo e observa ao sul uma trilha na
 floresta.
 ~
-93 gr 4
+93 131136 0 0 0 4
 D2
 Você observa uma trilha por entre os troncos e galhos.
 ~
@@ -1157,7 +1154,7 @@ tamanhos, matizes e fragrâncias; borboletas fazem uma linda coreografia ,
 cheia de cores e brilhos.  Ao norte você observa a planície florida e a
 linda dança das borboletas e ao sul um caminho para a floresta.
 ~
-93 g 2
+93 64 0 0 0 2
 D0
 Você observa a planície colorida.
 ~
@@ -1169,16 +1166,16 @@ Você vê um caminho para a floresta.
 ~
 0 -1 9339
 E
-flores~
-Você observa a planície mais bela de Vitália; suas flores de várias cores e
-aromas se unem com as borboletas compondo uma verdadeira e legítima obra de
-arte.
-~
-E
 borboletas~
 Você observa miríades de borboletas multicoloridas, de todos os tamanhos e
 formas , voando sobre a planície e pousando suavemente nas pétalas das
 flores.
+~
+E
+flores~
+Você observa a planície mais bela de Vitália; suas flores de várias cores e
+aromas se unem com as borboletas compondo uma verdadeira e legítima obra de
+arte.
 ~
 S
 #9341
@@ -1188,7 +1185,7 @@ pousam em você, trazendo-lhe a sensação de que a vida é uma grande d diva
 dos Deuses e que merece ser respeitada e preservada.  Ao norte você vê a
 continuação da planície e a oeste você observa uma velha casa de madeira.
 ~
-93 g 2
+93 64 0 0 0 2
 D0
 Você observa a planície florida.
 ~
@@ -1198,12 +1195,12 @@ D3
 Você vê uma casa de madeira.
 ~
 porta madeira~
-:n 2 a velha porta de madeira
 1 -1 9342
 E
-casa madeira~
-Você observa uma velha casa de madeira, sem teto e com grandes dimensões.
-Parece não ser habitada há muito tempo.
+borboletas~
+Borboletas douradas, brancas, azuis, amarelas e multicoloridas, de
+todos os tamanhos e formas ,sobrevoam a planície pousando suavemente
+nas pétalas das flores.
 ~
 E
 flores~
@@ -1212,10 +1209,9 @@ aromas se unem com as borboletas compondo uma verdadeira e legítima obra de
 arte.
 ~
 E
-borboletas~
-Borboletas douradas, brancas, azuis, amarelas e multicoloridas, de
-todos os tamanhos e formas ,sobrevoam a planície pousando suavemente
-nas pétalas das flores.
+casa madeira~
+Você observa uma velha casa de madeira, sem teto e com grandes dimensões.
+Parece não ser habitada há muito tempo.
 ~
 S
 #9342
@@ -1226,12 +1222,11 @@ ao seu redor e não encontra objetos e nem vestígios de que alguém mora aqui.
 A casa não possui teto e tem dimensões que acomodariam um grande grupo de
 aventureiros.  A leste você observa um campo florido.
 ~
-93 g 0
+93 64 0 0 0 0
 D1
 Você observa um campo florido.
 ~
 porta madeira~
-:n 2 a velha porta de madeira
 1 -1 9341
 S
 #9343
@@ -1240,7 +1235,7 @@ A Planície Florida~
 maravilhosos.  A leste você observa um lago de águas estranhas, a oeste e ao
 sul você vê um campo florido.
 ~
-93 g 2
+93 64 0 0 0 2
 D1
 Você observa um lago de águas misteriosas.
 ~
@@ -1257,16 +1252,16 @@ Você vê um campo colorido.
 ~
 0 -1 9346
 E
-flores~
-Você observa a planície mais bela de Vitália; suas flores de várias cores e
-aromas se unem com as borboletas compondo uma verdadeira e legítima obra de
-arte.
-~
-E
 borboletas~
 Borboletas douradas, brancas, azuis, amarelas e multicoloridas, de
 todos os tamanhos e formas ,sobrevoam a planície pousando suavemente
 nas pétalas das flores.
+~
+E
+flores~
+Você observa a planície mais bela de Vitália; suas flores de várias cores e
+aromas se unem com as borboletas compondo uma verdadeira e legítima obra de
+arte.
 ~
 S
 #9344
@@ -1277,7 +1272,7 @@ observa seu próprio reflexo na superfície do lago e suas águas reluzem como
 se estivessem vivas.  A oeste observa a planície florida e para baixo
 enxerga seu reflexo.
 ~
-93 cegrst 6
+93 917588 0 0 0 6
 D3
 Você observa um campo florido.
 ~
@@ -1300,7 +1295,7 @@ de vida ali fora você.  À frente há uma grande estátua de ouro representando
 um magnífico dragão.  Ao olhar para cima você nota que, na superfície, como
 que por mágica, surgem cenas de uma batalha.
 ~
-93 defrst 8
+93 917560 0 0 0 8
 D4
 Você observa algumas imagens na superfície do lago.
 ~
@@ -1313,7 +1308,7 @@ A Planície Florida~
 ao norte uma grande muralha branca e um enorme portão branco.  A leste você
 vê a planície perfumada.
 ~
-93 g 2
+93 64 0 0 0 2
 D0
 Você observa uma muralha branca e um portão branco.
 ~
@@ -1325,16 +1320,16 @@ Você observa um campo florido.
 ~
 0 -1 9343
 E
-flores~
-Você observa a planície mais bela de Vitália; suas flores de várias cores e
-aromas se unem com as borboletas compondo uma verdadeira e legítima obra de
-arte.
-~
-E
 borboletas~
 Borboletas douradas, brancas, azuis, amarelas e multicoloridas, de
 todos os tamanhos e formas ,sobrevoam a planície pousando suavemente
 nas pétalas das flores.
+~
+E
+flores~
+Você observa a planície mais bela de Vitália; suas flores de várias cores e
+aromas se unem com as borboletas compondo uma verdadeira e legítima obra de
+arte.
 ~
 S
 #9347
@@ -1345,7 +1340,7 @@ de dúvidas a coisa mais sinistra que você já viu.  Em cima do portão existe
 algumas escrituras.  Ao sul você vê o campo florido e a oeste você observa
 um brilho azulado.
 ~
-93 cg 0
+93 68 0 0 0 0
 D2
 Você observa uma planície florida.
 ~
@@ -1355,17 +1350,16 @@ D3
 Você observa um brilho azul.
 ~
 portao ossos~
-:n 1 o portão de ossos
 1 -1 9348
-E
-ossos portao~
-Você observa um grande portão feito de ossos gigantes.  Em cima do portão
-existem algumas escrituras.
-~
 E
 muralha~
 Você observa uma imensa muralha feita de grandes ossos a delimitar algo
 muito estranho.
+~
+E
+ossos portao~
+Você observa um grande portão feito de ossos gigantes.  Em cima do portão
+existem algumas escrituras.
 ~
 S
 #9348
@@ -1379,7 +1373,7 @@ ao presenciar esta cena.Ao norte e ao sul você observa algumas sepulturas; a
 oeste você vê vários ossos empilhados e a leste você observa o portão do
 cemitério.
 ~
-93 g 0
+93 64 0 0 0 0
 D0
 Você observa algumas sepulturas.
 ~
@@ -1389,7 +1383,6 @@ D1
 Você vê o portão do cemitério.
 ~
 portao ossos~
-:n 1 o portão de ossos
 1 -1 9347
 D2
 Você observa algumas sepulturas.
@@ -1402,17 +1395,17 @@ Você vê muitos ossos empilhados.
 ~
 0 -1 9350
 E
-ossos carcacas~
-Você observa vários ossos e carcaças dos mais variados tamanhos e estados de
-decomposição.
-~
-E
 imensa rede azul~
 Você observa uma rede brilhante azulada; é possível percebe a presença de
 vários entes presos em suas cordas azuis.  Você está diante da rede de almas
 do cemitério dos dragões.  A rede tem o poder de julgar os dragões e mostrar
 o caminho que cada alma deve seguir, dependendo dos seus atos no reino dos
 mortais.
+~
+E
+ossos carcacas~
+Você observa vários ossos e carcaças dos mais variados tamanhos e estados de
+decomposição.
 ~
 S
 #9349
@@ -1422,22 +1415,22 @@ feitos em bronze.  Este local guarda os restos dos mais honrados e dignos
 dragões.Aqui o silêncio é absoluto, a paz parece ter tomado conta de todo o
 local.Ao norte você observa a rede das almas.
 ~
-93 ceg 0
+93 84 0 0 0 0
 D0
 Você vê a rede das almas.
 ~
 ~
 0 -1 9348
 E
+detalhes bronze~
+Você observa os detalhes em bronze e percebe que são pequenas escrituras que
+trazem consigo os nomes dos lendários dragões de Vitália.
+~
+E
 sepulturas marmore branco~
 Você observa as sepulturas feitas com o mais puro mármore branco do reino;
 nelas estão os restos mortais dos mais honrados, dignos e s bios dragões de
 Vitália.  Você percebe também alguns detalhes em bronze.
-~
-E
-detalhes bronze~
-Você observa os detalhes em bronze e percebe que são pequenas escrituras que
-trazem consigo os nomes dos lendários dragões de Vitália.
 ~
 S
 #9350
@@ -1447,7 +1440,7 @@ todos os lados e de todos os tamanhos.  Nesta parte do cemitério você sente
 algo sinistro; alguns ossos se movem por trás de você e é possível escutar
 sons e gritos estranhos.  A leste você vê uma rede de almas.
 ~
-93 g 0
+93 64 0 0 0 0
 D1
 Você observa um brilho azulado.
 ~
@@ -1467,22 +1460,22 @@ desonrados dragões.  Aqui o silêncio é absoluto e o abandono parece ter
 tomado conta de todo o local.  As sepulturas estão cobertas de poeira e
 sujeira.  Ao sul você observa a rede das almas.
 ~
-93 g 0
+93 64 0 0 0 0
 D2
 Você vê um brilho azul.
 ~
 ~
 0 -1 9348
 E
+detalhes bronze~
+Você observa os detalhes em bronze e percebe que são pequenas escrituras que
+com os nomes meio apagados dos maléficos dragões de Vitália.
+~
+E
 sepulturas marmore negro~
 Você observa as sepulturas feitas com o mais puro mármore negro do reino;
 nelas estão os restos mortais dos mais desonrados, tiranos e destrutivos
 dragões de Vitália.  Você percebe também alguns detalhes em bronze.
-~
-E
-detalhes bronze~
-Você observa os detalhes em bronze e percebe que são pequenas escrituras que
-com os nomes meio apagados dos maléficos dragões de Vitália.
 ~
 S
 #9352
@@ -1492,7 +1485,7 @@ região sul do paraíso, aqui a terra é estéril e abutres sobrevoam o deserto
 em busca de alguma carniça para devorarem.  Ao norte você observa o deserto
 e sua seca mortal.  Ao sul você vê um imenso portal.
 ~
-93 cg 2
+93 68 0 0 0 2
 D0
 Você observa a areia dourada do deserto causticante.
 ~
@@ -1504,15 +1497,15 @@ Você vê um imenso portal.
 ~
 0 -1 9300
 E
+abutres~
+Você observa os abutres voando em círculos sobre o deserto como num ritual
+macabro.
+~
+E
 deserto~
 Você se vê rodeado pela areia dourada e quente do deserto; esta parece
 esperar sua queda para drenar-lhe as últimas energias do corpo e
 transformá-lo num aviso eterno dos perigos do deserto.
-~
-E
-abutres~
-Você observa os abutres voando em círculos sobre o deserto como num ritual
-macabro.
 ~
 S
 #9353
@@ -1520,7 +1513,7 @@ O Deserto dos Dragões~
    Você continua andando pelo deserto.A paisagem aqui é desoladora.  Ao
 norte você observa alguns dromedários e ao sul o deserto continua.
 ~
-93 g 2
+93 64 0 0 0 2
 D0
 Você observa alguns dromedários.
 ~
@@ -1532,15 +1525,15 @@ Você observa o deserto e sua areia em brasas.
 ~
 0 -1 9352
 E
+abutres~
+Você observa os abutres voando em círculos sobre o deserto como num ritual
+macabro.
+~
+E
 deserto~
 Você se vê rodeado pela areia dourada e quente do deserto; esta parece
 esperar sua queda para drenar-lhe as últimas energias do corpo e
 transformá-lo num aviso eterno dos perigos do deserto.
-~
-E
-abutres~
-Você observa os abutres voando em círculos sobre o deserto como num ritual
-macabro.
 ~
 S
 #9354
@@ -1549,7 +1542,7 @@ O Deserto dos Dragões~
 meio a areia escaldante do deserto.  A leste você observa uma enorme duna de
 areia, a oeste e ao sul você vê a irradiação do calor brotando da areia.
 ~
-93 g 2
+93 64 0 0 0 2
 D1
 Você observa uma montanha de areia.
 ~
@@ -1566,10 +1559,9 @@ Você observa a paisagem morta do deserto.
 ~
 0 -1 9363
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
+camelos dromedarios~
+Você observa vários dromedários seguindo na direção da duna de areia.  Ser
+uma pista para achar água?
 ~
 E
 abutres~
@@ -1577,9 +1569,10 @@ Você observa os abutres voando em círculos sobre o deserto como num ritual
 macabro.
 ~
 E
-camelos dromedarios~
-Você observa vários dromedários seguindo na direção da duna de areia.  Ser
-uma pista para achar água?
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9355
@@ -1588,22 +1581,22 @@ A Magnífica Duna~
 duna de areia.  Para o alto e bem acima você observa o topo da duna de areia
 e a oeste você vê vários dromedários.
 ~
-93 cgr 4
-D4
-Você observa o topo escaldante da duna de areia.
-~
-~
-0 -1 9356
+93 131140 0 0 0 4
 D3
 Você vê vários dromedários.
 ~
 ~
 0 -1 9354
+D4
+Você observa o topo escaldante da duna de areia.
+~
+~
+0 -1 9356
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
+duna areia~
+Você observa uma grandiosa duna de areia, maravilhosa e majestosa.  Porém
+escaldante e mortal como um grande vulcão.  A qualquer momento você pode ser
+tragado por esta duna.
 ~
 E
 abutres~
@@ -1611,10 +1604,10 @@ Você observa os abutres voando em círculos sobre o deserto como num ritual
 macabro.
 ~
 E
-duna areia~
-Você observa uma grandiosa duna de areia, maravilhosa e majestosa.  Porém
-escaldante e mortal como um grande vulcão.  A qualquer momento você pode ser
-tragado por esta duna.
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9356
@@ -1624,7 +1617,7 @@ do deserto dos dragões.A leste você observa um pequeno oásis e mais ao fundo
 vários abutres sobrevoando o deserto.  Ao norte você vê a continuação do
 grande deserto e para baixo você observa a base da duna.
 ~
-93 g 2
+93 64 0 0 0 2
 D0
 Você vê o grande deserto.
 ~
@@ -1641,10 +1634,10 @@ Você observa a base da duna.
 ~
 0 -1 9355
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
+duna areia~
+Você observa uma grandiosa duna de areia, maravilhosa e majestosa.  Porém
+escaldante e mortal como um grande vulcão.  A qualquer momento você pode ser
+tragado por esta duna.
 ~
 E
 abutres~
@@ -1652,10 +1645,10 @@ Você observa os abutres voando em círculos sobre o deserto como num ritual
 macabro.
 ~
 E
-duna areia~
-Você observa uma grandiosa duna de areia, maravilhosa e majestosa.  Porém
-escaldante e mortal como um grande vulcão.  A qualquer momento você pode ser
-tragado por esta duna.
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9357
@@ -1666,22 +1659,22 @@ Você pode observar ao redor muita vegetação e um pouco de água nas pequenas
 poças ao longo das palmeiras que marcam e circundam o oásis.  A oeste você
 observa o topo da duna e ao sul você vê a continuação do deserto.
 ~
-93 g 2
-D3
-Você observa o topo da duna escaldante.
-~
-~
-0 -1 9356
+93 64 0 0 0 2
 D2
 Você vê o grande deserto dos dragões.
 ~
 ~
 0 -1 9358
+D3
+Você observa o topo da duna escaldante.
+~
+~
+0 -1 9356
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
+oasis~
+Você observa um pequeno oásis cercado por palmeiras e com algumas poças
+d'água.  A sensação aqui é deliciosa, muito diferente do desagradável calor
+do grande deserto.
 ~
 E
 abutres~
@@ -1689,10 +1682,10 @@ Você observa os abutres voando em círculos sobre o deserto como num ritual
 macabro.
 ~
 E
-oasis~
-Você observa um pequeno oásis cercado por palmeiras e com algumas poças
-d'água.  A sensação aqui é deliciosa, muito diferente do desagradável calor
-do grande deserto.
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9358
@@ -1701,7 +1694,7 @@ O Deserto dos Dragões~
 sinistros abutres sobrevoando o deserto.  A leste você observa o deserto
 escaldante e ao norte você percebe um pequeno oásis.
 ~
-93 cg 2
+93 68 0 0 0 2
 D0
 Você vê um pequeno oásis ou será uma miragem.
 ~
@@ -1713,15 +1706,15 @@ Você observa o deserto árido.
 ~
 0 -1 9359
 E
+abutres~
+Você observa os abutres voando em círculos sobre o deserto como num ritual
+macabro.
+~
+E
 deserto~
 Você se vê rodeado pela areia dourada e quente do deserto; esta parece
 esperar sua queda para drenar-lhe as últimas energias do corpo e
 transformá-lo num aviso eterno dos perigos do deserto.
-~
-E
-abutres~
-Você observa os abutres voando em círculos sobre o deserto como num ritual
-macabro.
 ~
 S
 #9359
@@ -1730,7 +1723,7 @@ O Deserto dos Dragões~
 vários abutres e sente um horrível odor vindo desta direção.A leste e a
 oeste você vê o deserto escaldante.
 ~
-93 g 2
+93 64 0 0 0 2
 D1
 Você observa o deserto dos dragões.
 ~
@@ -1747,15 +1740,15 @@ Você observa o deserto dos dragões.
 ~
 0 -1 9358
 E
+abutres~
+Você observa os abutres voando em círculos sobre o deserto como num ritual
+macabro.
+~
+E
 deserto~
 Você se vê rodeado pela areia dourada e quente do deserto; esta parece
 esperar sua queda para drenar-lhe as últimas energias do corpo e
 transformá-lo num aviso eterno dos perigos do deserto.
-~
-E
-abutres~
-Você observa os abutres voando em círculos sobre o deserto como num ritual
-macabro.
 ~
 S
 #9360
@@ -1765,17 +1758,17 @@ dromedários em decomposição.  O odor aqui é horrendo.  Em meio as ossadas e
 corpos você vê vários abutres e insetos.  Ao norte você observa o deserto
 dos dragões.
 ~
-93 g 2
+93 64 0 0 0 2
 D0
 Você observa o deserto.
 ~
 ~
 0 -1 9359
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
+corpos ossadas~
+Você observa várias ossadas e corpos de dromedários em decomposição.Ao
+aproximar-se conclui que estes animais foram atacados por algo muito grande
+e forte.
 ~
 E
 abutres~
@@ -1783,10 +1776,10 @@ Você observa os abutres voando em círculos sobre o deserto como num ritual
 macabro.
 ~
 E
-corpos ossadas~
-Você observa várias ossadas e corpos de dromedários em decomposição.Ao
-aproximar-se conclui que estes animais foram atacados por algo muito grande
-e forte.
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9361
@@ -1794,27 +1787,27 @@ O Deserto dos Dragões~
 Você está caminhando no deserto dos dragões.  A oeste você observa o deserto
 escaldante e a leste você observa uma enorme pedra.
 ~
-93 g 2
-D3
-Você observa o deserto dos dragões.
-~
-~
-0 -1 9359
+93 64 0 0 0 2
 D1
 Você observa um grande pedra no meio do deserto.
 ~
 ~
 0 -1 9362
+D3
+Você observa o deserto dos dragões.
+~
+~
+0 -1 9359
+E
+abutres~
+Você observa os abutres voando em círculos sobre o deserto como num ritual
+macabro.
+~
 E
 deserto~
 Você se vê rodeado pela areia dourada e quente do deserto; esta parece
 esperar sua queda para drenar-lhe as últimas energias do corpo e
 transformá-lo num aviso eterno dos perigos do deserto.
-~
-E
-abutres~
-Você observa os abutres voando em círculos sobre o deserto como num ritual
-macabro.
 ~
 S
 #9362
@@ -1824,29 +1817,17 @@ grande deserto e a frente uma pedra gigantesca.  Você a observa e nota
 algumas pinturas ladeadas por uma enorme pegada e algumas escamas
 azul-escuro.  A oeste você vê o deserto rido.
 ~
-93 g 2
+93 64 0 0 0 2
 D3
 Você observa o deserto.
 ~
 ~
 0 -1 9361
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
-~
-E
-abutres~
-Você observa os abutres voando em círculos sobre o deserto como num ritual
-macabro.
-~
-E
-pegadas escamas azul escuras~
-Você observa uma grande pegada e algumas escamas azul-escuro no chão.  Sua
-intuição lhe diz que algo muito grande e forte atacou aquele grupo de
-dromedários e que agora pode estar lhe observando, preparando o próximo
-ataque.
+pinturas~
+Você observa as pinturas e nota a figura de vários guerreiros, magos,
+clérigos e ladrões sendo envolvidos por uma mancha azul em meio a uma
+batalha sangrenta.
 ~
 E
 pedra gigante~
@@ -1856,10 +1837,22 @@ usada como uma mesa ou cama para algo realmente gigantesco.  Você percebe
 também algumas pinturas na parte inferior da pedra.
 ~
 E
-pinturas~
-Você observa as pinturas e nota a figura de vários guerreiros, magos,
-clérigos e ladrões sendo envolvidos por uma mancha azul em meio a uma
-batalha sangrenta.
+pegadas escamas azul escuras~
+Você observa uma grande pegada e algumas escamas azul-escuro no chão.  Sua
+intuição lhe diz que algo muito grande e forte atacou aquele grupo de
+dromedários e que agora pode estar lhe observando, preparando o próximo
+ataque.
+~
+E
+abutres~
+Você observa os abutres voando em círculos sobre o deserto como num ritual
+macabro.
+~
+E
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9363
@@ -1868,7 +1861,7 @@ O Deserto dos Dragões~
 norte você observa uma estranha nuvem e a leste você percebe um grupo de
 dromedários.
 ~
-93 g 2
+93 64 0 0 0 2
 D0
 Você observa uma enorme sombra.
 ~
@@ -1880,10 +1873,9 @@ Você observa um grupo de dromedários.
 ~
 0 -1 9354
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
+nuvem~
+Você observa uma nuvem bastante estranha; contudo você tem uma sensação de
+tranqüilidade.
 ~
 E
 abutres~
@@ -1891,9 +1883,10 @@ Você observa os abutres voando em círculos sobre o deserto como num ritual
 macabro.
 ~
 E
-nuvem~
-Você observa uma nuvem bastante estranha; contudo você tem uma sensação de
-tranqüilidade.
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9364
@@ -1902,7 +1895,7 @@ A Misteriosa Nuvem~
 deserto dos dragões.  Ao norte você observa um grande totem de pedra, ao sul
 você observa o deserto dos dragões de Vitália.
 ~
-93 cg 2
+93 68 0 0 0 2
 D0
 Você vê um totem de pedra.
 ~
@@ -1919,10 +1912,9 @@ Você observa uma imensa nuvem.
 ~
 0 -1 9365
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
+nuvem~
+Você observa uma nuvem bastante estranha; contudo sente uma sensação de
+tranqüilidade.
 ~
 E
 abutres~
@@ -1930,9 +1922,10 @@ Você observa os abutres voando em círculos sobre o deserto como num ritual
 macabro.
 ~
 E
-nuvem~
-Você observa uma nuvem bastante estranha; contudo sente uma sensação de
-tranqüilidade.
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9365
@@ -1942,7 +1935,7 @@ formas naturais da superfície da nuvem, suaves e brancas.   Daqui você é capa
 de ver todo o deserto dos dragões ; ao sul você observa o grande portal do
 deserto e ao norte um pântano sombrio.
 ~
-93 cgqr 9
+93 196676 0 0 0 9
 D4
 Você observa um brilho prateado.
 ~
@@ -1954,15 +1947,15 @@ Você observa o deserto dos dragões.
 ~
 0 -1 9364
 E
+nuvem~
+Você observa ao seu redor a magnificência deste local e suas formas naturais
+e suaves.
+~
+E
 deserto~
 Você se vê rodeado pela areia dourada e quente do deserto; esta parece
 esperar sua queda para drenar-lhe as últimas energias do corpo e
 transformá-lo num aviso eterno dos perigos do deserto.
-~
-E
-nuvem~
-Você observa ao seu redor a magnificência deste local e suas formas naturais
-e suaves.
 ~
 S
 #9366
@@ -1972,17 +1965,16 @@ tranqüilidade e seu coração parece está sendo envolvido por um sentimento de
 bondade e união.  Observa ao redor uma das paisagens mais bonitas já vistas
 por você em toda Vitália.
 ~
-93 gqr 9
+93 196672 0 0 0 9
 D5
 Você observa a suavidade da nuvem.
 ~
 ~
 0 -1 9365
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
+trono ouro branco prata~
+Você observa um majestoso trono feito de ouro branco e com alguns detalhes
+de prata.Este trono realmente deve pertencer a alguém muito especial.
 ~
 E
 nuvem~
@@ -1990,9 +1982,10 @@ Você observa ao redor a magnificência deste local e suas formas naturais e
 suaves.
 ~
 E
-trono ouro branco prata~
-Você observa um majestoso trono feito de ouro branco e com alguns detalhes
-de prata.Este trono realmente deve pertencer a alguém muito especial.
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9367
@@ -2001,7 +1994,7 @@ O Deserto dos Dragões~
 torno a paisagem é desoladora.  Ao norte você observa o deserto dos dragões
 e ao sul vê o topo da duna de areia.
 ~
-93 g 2
+93 64 0 0 0 2
 D0
 Você observa o deserto.
 ~
@@ -2013,15 +2006,15 @@ Você observa o topo da duna de areia.
 ~
 0 -1 9356
 E
+abutres~
+Você observa os abutres voando em círculos sobre o deserto como num ritual
+macabro.
+~
+E
 deserto~
 Você se vê rodeado pela areia dourada e quente do deserto; esta parece
 esperar sua queda para drenar-lhe as últimas energias do corpo e
 transformá-lo num aviso eterno dos perigos do deserto.
-~
-E
-abutres~
-Você observa os abutres voando em círculos sobre o deserto como num ritual
-macabro.
 ~
 S
 #9368
@@ -2031,7 +2024,7 @@ só quebrada pelos vôos dos abutres aguardando algum visitante do deserto
 sucumbir e transformar-se em alimento.Ao norte e ao sul você observa o
 solitário deserto.
 ~
-93 g 2
+93 64 0 0 0 2
 D0
 Você observa o deserto.
 ~
@@ -2043,15 +2036,15 @@ Você observa o deserto.
 ~
 0 -1 9367
 E
+abutres~
+Você observa os abutres voando em círculos sobre o deserto como num ritual
+macabro.
+~
+E
 deserto~
 Você se vê rodeado pela areia dourada e quente do deserto; esta parece
 esperar sua queda para drenar-lhe as últimas energias do corpo e
 transformá-lo num aviso eterno dos perigos do deserto.
-~
-E
-abutres~
-Você observa os abutres voando em círculos sobre o deserto como num ritual
-macabro.
 ~
 S
 #9369
@@ -2061,7 +2054,7 @@ nada de estranho em torno, somente o vôo dos abutres.  Você encontra enormes
 pegadas no chão seguindo na direção norte.   Ao sul você observa o solitário
 deserto.
 ~
-93 g 2
+93 64 0 0 0 2
 D0
 Você observa o deserto.
 ~
@@ -2073,10 +2066,9 @@ Você observa o deserto.
 ~
 0 -1 9368
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
+pegadas enormes~
+Você observa grandes pegadas na areia do deserto.  Você imagina o tamanho do
+dono dessas enormes pegadas.
 ~
 E
 abutres~
@@ -2084,9 +2076,10 @@ Você observa os abutres voando em círculos sobre o deserto como num ritual
 macabro.
 ~
 E
-pegadas enormes~
-Você observa grandes pegadas na areia do deserto.  Você imagina o tamanho do
-dono dessas enormes pegadas.
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9370
@@ -2095,7 +2088,7 @@ O Deserto dos Dragões~
 grandes pegadas no solo.  Ao norte vislumbra alguns galhos e folhas, ao sul
 e ao oeste o deserto.  A leste vê uma grande pedra.
 ~
-93 g 2
+93 64 0 0 0 2
 D0
 Você observa alguns galhos e folhas.
 ~
@@ -2117,10 +2110,9 @@ Você observa o deserto.
 ~
 0 -1 9373
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
+pegadas enormes~
+Você observa grandes pegadas na areia do deserto.  Você imagina o tamanho do
+dono dessas enormes pegadas.
 ~
 E
 abutres~
@@ -2128,9 +2120,10 @@ Você observa os abutres voando em círculos sobre o deserto como num ritual
 macabro.
 ~
 E
-pegadas enormes~
-Você observa grandes pegadas na areia do deserto.  Você imagina o tamanho do
-dono dessas enormes pegadas.
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9371
@@ -2143,7 +2136,7 @@ túmulo...   Você não sente seu pés no chão.....
 ........em direção à boca do grande dragão ancião amarelo.
    Você está morto!!!
 ~
-93 b 2
+93 2 0 0 0 2
 S
 #9372
 Uma Pedra Gigante~
@@ -2152,27 +2145,18 @@ do grande deserto.  Ao seu redor observa algumas escamas amarelas e marcas
 de sangue no chão.   À frente percebe uma pedra enorme.A oeste observa a
 desolação do deserto dos dragões.
 ~
-93 g 2
+93 64 0 0 0 2
 D3
 Você observa o deserto.
 ~
 ~
 0 -1 9370
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
-~
-E
-abutres~
-Você observa os abutres voando em círculos sobre o deserto como num ritual
-macabro.
-~
-E
-pegadas enormes~
-Você observa grandes pegadas na areia do deserto.  Você imagina o tamanho do
-dono dessas enormes pegadas.
+pinturas~
+Você observa as pinturas da pedra e percebe que são pinturas de uma batalha
+em que vários homens são envolvidos por uma grande mancha amarela; numa
+outra pintura enxerga um homem como que caindo em direção a outra mancha
+amarela.
 ~
 E
 pedra gigante enorme~
@@ -2180,11 +2164,20 @@ Você observa uma pedra gigante ornamentada com pinturas e que possui a forma
 de meio círculo ; a parte plana da pedra está voltada para o céu.
 ~
 E
-pinturas~
-Você observa as pinturas da pedra e percebe que são pinturas de uma batalha
-em que vários homens são envolvidos por uma grande mancha amarela; numa
-outra pintura enxerga um homem como que caindo em direção a outra mancha
-amarela.
+pegadas enormes~
+Você observa grandes pegadas na areia do deserto.  Você imagina o tamanho do
+dono dessas enormes pegadas.
+~
+E
+abutres~
+Você observa os abutres voando em círculos sobre o deserto como num ritual
+macabro.
+~
+E
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9373
@@ -2195,22 +2188,22 @@ paraíso dos dragões: a árvore do Fogo totalmente em chamas.  Seus galhos,
 tronco e folhas produzem um brilho amarelo intenso.  A leste você observa a
 desolação do deserto dos dragões.
 ~
-93 g 2
+93 64 0 0 0 2
 D1
 Você observa o deserto.
 ~
 ~
 0 -1 9370
 E
+abutres~
+Você observa os abutres voando em círculos sobre o deserto como num ritual
+macabro.
+~
+E
 deserto~
 Você se vê rodeado pela areia dourada e quente do deserto; esta parece
 esperar sua queda para drenar-lhe as últimas energias do corpo e
 transformá-lo num aviso eterno dos perigos do deserto.
-~
-E
-abutres~
-Você observa os abutres voando em círculos sobre o deserto como num ritual
-macabro.
 ~
 S
 #9374
@@ -2221,7 +2214,7 @@ misturadas à areia do deserto.  À frente percebe a presença de um grande
 totem de pedra.  Ao norte vislumbra a escuridÃo do pântano e ao sul o
 deserto dos dragões.
 ~
-93 cg 2
+93 68 0 0 0 2
 D0
 Você observa o pântano sombrio.
 ~
@@ -2233,20 +2226,12 @@ Você observa o deserto.
 ~
 0 -1 9364
 E
-deserto~
-Você se vê rodeado pela areia dourada e quente do deserto; esta parece
-esperar sua queda para drenar-lhe as últimas energias do corpo e
-transformá-lo num aviso eterno dos perigos do deserto.
-~
-E
-abutres~
-Você observa os abutres voando em círculos sobre o deserto como num ritual
-macabro.
-~
-E
-pantano~
-Você observa o pântano sombrio com suas águas a exalar um odor horrível e
-plantas que possuem galhos que mais parecem braços humanos pedindo socorro.
+escritura topo~
+Você observa a seguinte escritura no topo do totem de pedra :
+***********************************************************************
+*   Ela sai diretamente das águas mais escuras e profundas do pântano.*
+*   Se você conseguir vê-la, então será tarde demais.                 *
+***********************************************************************
 ~
 E
 totem pedra~
@@ -2254,12 +2239,20 @@ Você observa um totem de pedra com esculturas de dragões e uma escritura no
 topo.
 ~
 E
-escritura topo~
-Você observa a seguinte escritura no topo do totem de pedra :
-***********************************************************************
-*   Ela sai diretamente das águas mais escuras e profundas do pântano.*
-*   Se você conseguir vê-la, então será tarde demais.                 *
-***********************************************************************
+pantano~
+Você observa o pântano sombrio com suas águas a exalar um odor horrível e
+plantas que possuem galhos que mais parecem braços humanos pedindo socorro.
+~
+E
+abutres~
+Você observa os abutres voando em círculos sobre o deserto como num ritual
+macabro.
+~
+E
+deserto~
+Você se vê rodeado pela areia dourada e quente do deserto; esta parece
+esperar sua queda para drenar-lhe as últimas energias do corpo e
+transformá-lo num aviso eterno dos perigos do deserto.
 ~
 S
 #9375
@@ -2269,7 +2262,7 @@ dragões de Vitália.  Observa em torno os galhos e troncos retorcidos da
 vegetação do pântano.O odor é horrível.  A oeste vê o pântano e ao sul um
 totem de pedra.
 ~
-93 grs 6
+93 393280 0 0 0 6
 D2
 Você observa um totem de pedra.
 ~
@@ -2292,7 +2285,7 @@ O Pântano Sombrio~
 galhos e troncos retorcidos da vegetação tétrica.Percebe algo se mexendo nas
 águas escuras do pântano.  A leste e oeste vê o pântano escuro.
 ~
-93 grs 6
+93 393280 0 0 0 6
 D1
 Você observa o pântano.
 ~
@@ -2316,7 +2309,7 @@ troncos retorcidos, e percebe algo a observá-lo entre eles.  Seu coração
 dispara e o pânico toma conta do seu corpo.  Ao norte e a leste enxerga as
 águas escuras do pântano nefando.
 ~
-93 grs 6
+93 393280 0 0 0 6
 D0
 Você observa o pântano.
 ~
@@ -2339,7 +2332,7 @@ O Pântano Sombrio~
 vegetação retorcida e macabra.  Ao norte vê bolhas surgindo das águas do
 pântano.  Ao sul você observa a paisagem triste do pântano.
 ~
-93 grs 6
+93 393280 0 0 0 6
 D0
 Você observa bolhas surgindo das águas do pântano.
 ~
@@ -2365,7 +2358,7 @@ estranho.  Ao norte vê uma imagem muito estranha: a mão de uma jovem mulher
 surgindo das águas escuras do pântano.  A leste e ao sul mira a paisagem
 fúnebre deste lugar e a oeste uma névoa se aproxima.
 ~
-93 grs 3
+93 393280 0 0 0 3
 D0
 Você observa a mão de uma jovem mulher surgir das águas do pântano.
 ~
@@ -2387,16 +2380,16 @@ Você observa uma névoa aproximando-se.
 ~
 0 -1 9381
 E
-pantano~
-Você observa o pântano sombrio com suas águas a exalar um odor horrível e
-plantas que possuem galhos que mais parecem braços humanos pedindo socorro.
-~
-E
 bolhas gas verde~
 Você observa as bolhas surgindo misteriosamente das águas escuras do pântano
 sombrio; estas, ao tocarem os galhos e troncos das árvores retorcidas
 deste lugar, estouram exalando um gás verde escuro que lhe deixa sem ar.
 Você deve sair rapidamente deste lugar antes que seja tarde demais.
+~
+E
+pantano~
+Você observa o pântano sombrio com suas águas a exalar um odor horrível e
+plantas que possuem galhos que mais parecem braços humanos pedindo socorro.
 ~
 S
 #9380
@@ -2404,7 +2397,7 @@ O Pântano Sombrio~
    Você está entre os galhos e troncos retorcidos do pântano.   A oeste vê
 várias bolhas surgindo das águas escuras do pântano.
 ~
-93 gqrsu 6
+93 1507392 0 0 0 6
 D3
 Você observa bolhas surgindo das águas do pântano.
 ~
@@ -2424,19 +2417,19 @@ retorcidos visíveis em todo pântano.  Sente uma mudança brusca na
 temperatura da água, antes quase congelada.  A leste enxerga várias bolhas
 surgindo das águas do pântano.
 ~
-93 agrs 6
+93 393281 0 0 0 6
 D1
 Você observa bolhas surgindo das águas do pântano.
 ~
 ~
 0 -1 9379
 E
-pantano~
-Você não consegue ver um palmo à frente.
-~
-E
 neblina~
 Você não consegue ver nada a não ser esta misteriosa neblina.
+~
+E
+pantano~
+Você não consegue ver um palmo à frente.
 ~
 S
 #9382
@@ -2453,7 +2446,7 @@ estranho em seu corpo, como se não o comandasse mais.
    Você está morto ! E seu futuro ser  estar para sempre aprisionado neste
 local tenebroso ao lado da alma desgarrada.
 ~
-93 b 6
+93 2 0 0 0 6
 S
 #9383
 Pestilência, a Dimensão do Terror~
@@ -2463,12 +2456,11 @@ os males estão presentes nesta sala.  À frente enxerga pessoas sendo
 queimadas vivas, homens sendo desfigurados lentamente por doenças e crianças
 pedindo socorro.  Ao sul há uma enorme porta negra.
 ~
-93 afghru 2
+93 1179873 0 0 0 2
 D2
 Você observa uma grande porta negra.
 ~
 porta negra~
-:n 2 a enorme porta negra
 2 9318 9337
 E
 homens criancas pessoas~
@@ -2485,7 +2477,7 @@ aranhas aumentou bastante, atrapalhando muito a sua visão.  Ao sul você
 observa a entrada da caverna e a oeste por entre as teias de aranha vê uma
 passagem em direção ao interior da caverna.
 ~
-93 adfgr 0
+93 131177 0 0 0 0
 D2
 Você olha a entrada da caverna.
 ~
@@ -2513,7 +2505,7 @@ todas as aranhas fogem inexplicavelmente.  A leste observa o caminho de
 volta e ao sul você observa algo se movendo; você se arrepia todo ao notar
 um vulto lhe observando.
 ~
-93 adfgr 0
+93 131177 0 0 0 0
 D1
 Você observa algo uma passagem entre as teias de aranha.
 ~
@@ -2525,16 +2517,16 @@ Você observa algo se movendo.
 ~
 0 -1 9386
 E
+simbolos~
+Você observa os vários símbolos esculpidos nas paredes da caverna; contudo
+os símbolos são verdadeiras incógnitas para você.
+~
+E
 teia aranha~
 Você observa uma teia, seria uma das mais maravilhosas esculturas vista por
 você se a dona da obra não estivesse olhando para você com seus olhos
 brilhantes e com um tom sarcástico.  Você sente a sensação de que as aranhas
 na verdade são os olhos de um observador a sua espera.
-~
-E
-simbolos~
-Você observa os vários símbolos esculpidos nas paredes da caverna; contudo
-os símbolos são verdadeiras incógnitas para você.
 ~
 S
 #9386
@@ -2548,22 +2540,12 @@ daquelas imagens aterrorizantes e observa o chão da câmara se transformar
 num espelho a refletir-lo morto e sem os olhos.  No centro da câmara há uma
 fonte e ao norte enxerga uma passagem na caverna.
 ~
-93 adfghr 0
+93 131305 0 0 0 0
 D0
 Você vê uma passagem na caverna entre as teias de aranha.
 ~
 ~
 0 -1 9385
-E
-paredes~
-Você observa as paredes da caverna e nota a formação de figuras humanas numa
-das imagens mais assustadoras da sua vida.
-~
-E
-teto~
-Você observa o teto da câmara da caverna e nota a formação de figuras
-humanas  numa das cenas mais aterrorizantes da sua vida.
-~
 E
 figuras humanas~
 Você observa a coisa mais fantasmagórica da sua vida; o seu corpo é dominado
@@ -2573,6 +2555,16 @@ de dor e terror; algumas estendem o braço em sua direção como se quisessem
 que as libertasse.  Você com certeza jamais esquecer este dia; isso se
 escapar deste antro do terror.
 ~
+E
+teto~
+Você observa o teto da câmara da caverna e nota a formação de figuras
+humanas  numa das cenas mais aterrorizantes da sua vida.
+~
+E
+paredes~
+Você observa as paredes da caverna e nota a formação de figuras humanas numa
+das imagens mais assustadoras da sua vida.
+~
 S
 #9387
 Uma Passagem em Chamas~
@@ -2581,7 +2573,7 @@ até o teto distribuindo pela câmara toda sua energia em forma de calor.
 Para cima você observa a entrada da caverna e para baixo você vê uma
 passagem em chamas.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D4
 Você observa a entrada da caverna.
 ~
@@ -2607,7 +2599,7 @@ Você ouve um enorme som ensurdecedor vindo do interior da caverna.  Para
 cima observa uma câmara em chamas e para baixo vê uma passagem em direção ao
 interior da caverna.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D4
 Você observa uma câmara em chamas.
 ~
@@ -2633,7 +2625,7 @@ está muito próximo da origem de toda essa energia, pois o calor e as
 labaredas estão insuportáveis.  Para cima você observa uma câmara em chamas
 e para baixo você vê uma enorme esfera reluzente.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D4
 Você observa uma passagem em chamas.
 ~
@@ -2660,7 +2652,7 @@ labaredas e espalhando chamas para todos os lados.  Você olha ao seu redor e
 imagina quem guardaria tantas riquezas numa câmara tão grande como essa.
 Para cima você observa uma câmara em chamas.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D4
 Você observa uma passagem em chamas.
 ~
@@ -2678,7 +2670,7 @@ Uma Câmara Dourada~
 as suas paredes douradas.  Ao norte, a leste e oeste vê passagens douradas.
 Ao sul você observa a entrada da caverna.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D0
 Você observa uma câmara dourada.
 ~
@@ -2700,12 +2692,6 @@ Você observa uma câmara dourada.
 ~
 0 -1 9392
 E
-parede teto dourada~
-Você observa as maravilhosas paredes da caverna, ornadas com o ouro mais
-puro e resplandecente de Vitália; nelas existem algumas escrituras
-esculpidas.
-~
-E
 escrituras esculpidas~
 *************************************************************************
 *                               A Guerra                                *
@@ -2716,13 +2702,19 @@ escrituras esculpidas~
 *  só assim estaremos salvos de mais uma tragédia.                      *
 *************************************************************************
 ~
+E
+parede teto dourada~
+Você observa as maravilhosas paredes da caverna, ornadas com o ouro mais
+puro e resplandecente de Vitália; nelas existem algumas escrituras
+esculpidas.
+~
 S
 #9392
 Uma Câmara Dourada~
    Você está numa câmara da caverna; ao seu redor existem escrituras
 esculpidas pelas paredes.  Ao norte e a leste pode ver passagens douradas.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D0
 Você está observando uma câmara dourada.
 ~
@@ -2734,12 +2726,6 @@ Você está observando uma câmara dourada.
 ~
 0 -1 9391
 E
-parede teto dourada~
-Você observa as maravilhosas paredes da caverna, ornadas com o ouro mais
-puro e resplandecente de Vitália; nelas existem algumas escrituras
-esculpidas.
-~
-E
 escrituras esculpidas~
 ***********************************************************************
 *                                A Morte                              *
@@ -2749,13 +2735,19 @@ escrituras esculpidas~
 *  decomposição e as imagens de um mundo caótico.                     *
 ***********************************************************************
 ~
+E
+parede teto dourada~
+Você observa as maravilhosas paredes da caverna, ornadas com o ouro mais
+puro e resplandecente de Vitália; nelas existem algumas escrituras
+esculpidas.
+~
 S
 #9393
 Uma Câmara Dourada~
     Você está numa câmara da caverna; ao seu redor existem escrituras
 esculpidas pelas paredes.  Ao norte e a leste pode ver passagens douradas.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D0
 Você observa uma câmara dourada.
 ~
@@ -2772,12 +2764,6 @@ Você observa uma câmara dourada.
 ~
 0 -1 9391
 E
-parede teto dourada~
-Você observa as maravilhosas paredes da caverna, ornadas com o ouro mais
-puro e resplandecente de Vitália; nelas existem algumas escrituras
-esculpidas.
-~
-E
 escrituras esculpidas~
 ***************************************************************************
 *                   A Ressurreição                                        *
@@ -2787,13 +2773,19 @@ escrituras esculpidas~
 *  nunca se extinguir.                                                    *
 ***************************************************************************
 ~
+E
+parede teto dourada~
+Você observa as maravilhosas paredes da caverna, ornadas com o ouro mais
+puro e resplandecente de Vitália; nelas existem algumas escrituras
+esculpidas.
+~
 S
 #9394
 Uma Câmara Dourada~
    Você está numa câmara da caverna; ao seu redor existem escrituras
 esculpidas pelas paredes.  Ao norte e a leste pode ver passagens douradas.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D0
 Você observa uma câmara dourada.
 ~
@@ -2804,12 +2796,6 @@ Você observa uma câmara dourada.
 ~
 ~
 0 -1 9393
-E
-parede teto dourada~
-Você observa as maravilhosas paredes da caverna, ornadas com o ouro mais
-puro e resplandecente de Vitália; nelas existem algumas escrituras
-esculpidas.
-~
 E
 escrituras esculpidas~
 ***********************************************************************
@@ -2826,13 +2812,19 @@ escrituras esculpidas~
 *                                                                     *
 ***********************************************************************
 ~
+E
+parede teto dourada~
+Você observa as maravilhosas paredes da caverna, ornadas com o ouro mais
+puro e resplandecente de Vitália; nelas existem algumas escrituras
+esculpidas.
+~
 S
 #9395
 Uma Câmara Dourada~
    Você está numa câmara da caverna; ao seu redor existem escrituras
 esculpidas pelas paredes.  Ao norte e a leste pode ver passagens douradas.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D1
 Você observa uma câmara dourada.
 ~
@@ -2855,7 +2847,7 @@ Uma Câmara Dourada~
    Você está numa câmara da caverna; ao seu redor existem escrituras
 esculpidas pelas paredes.  Ao norte e a leste pode ver passagens douradas.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D1
 Você observa uma câmara dourada.
 ~
@@ -2883,7 +2875,7 @@ Uma Câmara Dourada~
    Você está numa câmara da caverna; ao seu redor existem escrituras
 esculpidas pelas paredes.  Ao norte e a leste pode ver passagens douradas.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D1
 Você observa uma câmara dourada.
 ~
@@ -2913,7 +2905,7 @@ corpo.  Você percebe uma pequena escritura esculpida no chão.  Ao sul e a
 oeste vê passagens douradas.  A leste observa um pequeno ponto de brilho
 intenso e vindo da direção norte vem um feixe de raios solares.
 ~
-93 dgr 0
+93 131144 0 0 0 0
 D0
 Você observa uma saída da caverna.
 ~
@@ -2935,16 +2927,16 @@ Você observa uma câmara dourada.
 ~
 0 -1 9397
 E
-parede teto dourada~
-Você observa as maravilhosas paredes da caverna, ornadas com o ouro mais
-puro e resplandecente de Vitália; nelas existem algumas escrituras
-esculpidas.
-~
-E
 pequena escritura chão~
 <>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>
 <>         Ás vezes, o menor dos incômodos pode causar a maior dor.        <>
 <>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>X<>
+~
+E
+parede teto dourada~
+Você observa as maravilhosas paredes da caverna, ornadas com o ouro mais
+puro e resplandecente de Vitália; nelas existem algumas escrituras
+esculpidas.
 ~
 S
 #9399
@@ -2961,6 +2953,6 @@ deserto...  O Veneno tomou conta de todo seu corpo.......
 .
 Você está morto!
 ~
-93 b 0
+93 2 0 0 0 0
 S
-$
+$~

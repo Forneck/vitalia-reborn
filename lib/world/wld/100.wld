@@ -17,11 +17,10 @@ no chão, que serve como sanitário e isto cheira tão mal que você se obriga a
 ficar longos períodos sem respirar e, toda vez que puxa o ar, você precisa 
 cobrir a boca com seu braço, para tentar minimizar a coisa.
 ~
-100 0 1
+100 0 0 0 0 1
 D1
 ~
 porta cela~
-:n 2 a porta da cela
 2 10014 10001
 S
 #10001
@@ -30,7 +29,7 @@ Um Caminho Sujo~
 Para o norte e para sul, você pode ver mais celas, para leste você vê
 algumas cabanas, tendas e construções.
 ~
-100 0 2
+100 0 0 0 0 2
 D0
 ~
 ~
@@ -46,7 +45,6 @@ D2
 D3
 ~
 porta cela~
-:n 2 a porta da cela
 2 -1 10000
 S
 #10002
@@ -56,7 +54,7 @@ prisioneiros, uma delas localizada à oeste de você, agora fechada. Para o
 sudoeste, perto da cela, há o que aparenta ser uma casa. Para o noroeste
 há outra cela.
 ~
-100 0 2
+100 0 0 0 0 2
 D0
 ~
 ~
@@ -68,7 +66,6 @@ D2
 D3
 ~
 porta cela~
-:n 2 a porta da cela
 2 -1 10005
 S
 #10003
@@ -77,7 +74,7 @@ Um Caminho Sujo~
 'ruas' da vila.  Uma rude cela de bambu está à oeste, com uma casa bem ao
 norte. Ao sul, mais celas.
 ~
-100 0 2
+100 0 0 0 0 2
 D0
 ~
 ~
@@ -89,7 +86,6 @@ D2
 D3
 ~
 porta cela~
-:n 2 a porta da cela
 2 -1 10004
 S
 #10004
@@ -102,11 +98,10 @@ você observa ser uma casa.  Outra pista da capacidade dessa pequena
 construção é uma trilha trépida, um pequeno córrego de urina que corre no
 meio dessa cela - EWWWWWW!
 ~
-100 0 1
+100 0 0 0 0 1
 D1
 ~
 porta cela~
-:n 2 a porta da cela
 2 -1 10003
 S
 #10005
@@ -115,11 +110,10 @@ Uma Cela~
 assemelhando-se a uma casa se encontra a sul, construída bem ao lado
 de uma cela.
 ~
-100 0 1
+100 0 0 0 0 1
 D1
 ~
 porta cela~
-:n 2 a porta da cela
 2 -1 10002
 S
 #10006
@@ -132,7 +126,7 @@ seus pés se molham no chão sujo e molhado, e enquanto você se considera
 uma pessoa relativamente forte para agüentar tudo isso, você apenas se
 surpreende com o fato de que esse local REALMENTE FEDE.
 ~
-100 0 0
+100 0 0 0 0 0
 D1
 ~
 ~
@@ -145,7 +139,7 @@ Uma Casa~
 esse É o banheiro público, e é relativamente conservado, e contra seu
 melhor julgamento, você se vê querendo tentar - apenas para ver como é.
 ~
-100 0 1
+100 0 0 0 0 1
 D1
 ~
 ~
@@ -156,7 +150,7 @@ Um Caminho Sujo~
    Esse caminho leva para norte, onde existe uma fileira de celas, ou
 para oeste dentro de uma construção que parece uma casa.
 ~
-100 0 1
+100 0 0 0 0 1
 D0
 ~
 ~
@@ -172,7 +166,7 @@ Um Caminho Sujo~
 para oeste dentro de uma construção que cheira MUITO mal, que DEVE
 ser uma casa.
 ~
-100 0 1
+100 0 0 0 0 1
 D2
 ~
 ~
@@ -193,7 +187,7 @@ leste você entrará na parte principal da vila, e para norte e sul você
 vê construções longas e pequenas que se assemelham a um quartel.
  
 ~
-100 0 1
+100 0 0 0 0 1
 D0
 ~
 ~
@@ -220,7 +214,7 @@ Um Caminho Sujo~
    Esse caminho leva a leste para a parte principal da vila ou oeste
 para uma fila de celas.
 ~
-100 0 1
+100 0 0 0 0 1
 D1
 ~
 ~
@@ -237,7 +231,7 @@ que escolheram lutar pela causa de Mordecai. Duas fileiras de camas
 ficam perto das paredes, ambas leste e oeste, todas com bagagens
 por perto.
 ~
-100 0 1
+100 0 0 0 0 1
 D2
 ~
 ~
@@ -249,7 +243,7 @@ Quartel~
 Mordecai como seu salvador e líder. Camas estão perfiladas nas paredes
 em ambos os lados, todas com um prendedor de pé por perto.
 ~
-100 0 0
+100 0 0 0 0 0
 D0
 ~
 ~
@@ -261,7 +255,7 @@ Um Caminho Sujo~
 (possivelmente o centro da vila) e para oeste onde existem pequenas
 construções e uma fileira de celas.
 ~
-100 0 1
+100 0 0 0 0 1
 D1
 ~
 ~
@@ -279,7 +273,7 @@ viagem difícil e desgastante. Você sente um terrível odor vindo do norte, e
 olhando para aquela direção você vê o por quê. Para o norte fica um 
 celeiro, enquanto para sul você vê uma grande tenda em uma colina.
 ~
-100 0 1
+100 0 0 0 0 1
 D0
 ~
 ~
@@ -303,7 +297,7 @@ A Trilha Lamacenta~
 Inferno e, para piorar, começa a cheirar um pouco. Para norte você vê
 um celeiro de feno e para nordeste e noroeste são os galinheiros.
 ~
-100 0 2
+100 0 0 0 0 2
 D0
 ~
 ~
@@ -320,7 +314,7 @@ Uma Trilha Lamacenta~
 algumas galinhas. Para o norte é o celeiro de feno, que parece estar bem
 estocado.
 ~
-100 0 2
+100 0 0 0 0 2
 D0
 ~
 ~
@@ -344,7 +338,7 @@ Galinheiro~
 ressentimentos) em fezes de galinha. Pequenas galinhas estão correndo
 ciscando aqui e ciscando ali, geralmente sendo um aborrecimento.
 ~
-100 0 1
+100 0 0 0 0 1
 D1
 ~
 ~
@@ -357,7 +351,7 @@ galinhas aborrecedoras que parecem pensar que você é homem que está
 trazendo a comida.
    A propósito, o que é isso no fundo do seu sapato?
 ~
-100 0 1
+100 0 0 0 0 1
 D3
 ~
 ~
@@ -369,7 +363,7 @@ Celeiro de Feno~
 de feno da vila. Montanhas sobre montanhas lotam essa construção, até as
 bordas.
 ~
-100 0 1
+100 0 0 0 0 1
 D0
 ~
 ~
@@ -386,7 +380,7 @@ em Jareth é comparável a isso. Os estábulos são enfileirados na parede
 leste, com uma vaca ruminando em cada um. O chão é coberto por substâncias
 fecais, obviamente das vacas nos estábulos. Cuidado onde pisa!
 ~
-100 0 1
+100 0 0 0 0 1
 D0
 ~
 ~
@@ -402,7 +396,7 @@ Pasto~
 as vacas que estão pastando aqui nesse momento. Fechado, a única saída
 desse pasto é para sul por entre o celeiro fedorento.
 ~
-100 0 1
+100 0 0 0 0 1
 D2
 ~
 ~
@@ -414,7 +408,7 @@ Uma Trilha Suja~
 colina. Para o sudeste você vê outra estrutura, um lugar mais firme. Para
 o norte a trilha começa a ficar lamacenta.
 ~
-100 0 1
+100 0 0 0 0 1
 D0
 ~
 ~
@@ -432,7 +426,7 @@ construção de madeira, não uma serraria, mas talvez alguma estrutura para
 estocagem. Ao oeste a trilha faz voltas e curvas. Se ela leva para algum
 lugar, você não consegue ver para onde.
 ~
-100 0 2
+100 0 0 0 0 2
 D0
 ~
 ~
@@ -457,7 +451,7 @@ Uma grande cadeira, na ponta da longa mesa e maior que todas as outras,
 obviamente é o assento de honra de Mordecai. Agora não há ninguém comendo
 aqui.
 ~
-100 0 2
+100 0 0 0 0 2
 D0
 ~
 ~
@@ -473,7 +467,7 @@ traseira do prédio aparenta ser a área de preparação, com uma bomba
 manual de água e muitos diferentes tipos de temperos e substâncias nas
 prateleiras.
 ~
-100 0 2
+100 0 0 0 0 2
 D3
 ~
 ~
@@ -484,7 +478,7 @@ Uma Trilha Enrolada~
    Essa trilha adentra algumas árvores para um destino desconhecido, mas
 geralmente para a direção leste.
 ~
-100 0 1
+100 0 0 0 0 1
 D1
 ~
 ~
@@ -501,7 +495,7 @@ para o prédio fica ao sul, mas não aparenta que você vai entrar lá tão
 cedo, já que as portas são feitas de ferro maciço e não há janelas
 para você observar.
 ~
-100 0 1
+100 0 0 0 0 1
 D1
 ~
 ~
@@ -509,7 +503,6 @@ D1
 D2
 ~
 porta~
-:n 2 a porta
 2 -1 10029
 S
 #10029
@@ -517,11 +510,10 @@ Estocagem de Armas~
    Vários instrumentos de destruição estão armazenados aqui, apenas
 esperando alguma alma sortuda chegar e abusar deles.
 ~
-100 9 0
+100 9 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
 2 -1 10028
 S
 #10030
@@ -530,7 +522,7 @@ Um Caminho Sujo~
 tendas e cabanas cada vez mais leste que você vai. Essas devem ser as
 residências permanentes da vila.
 ~
-100 0 2
+100 0 0 0 0 2
 D1
 ~
 ~
@@ -546,7 +538,7 @@ Um Caminho Sujo~
 e sul, onde você vê tendas grandes o suficiente para abrigar uma
 família ou algumas pessoas.
 ~
-100 0 2
+100 0 0 0 0 2
 D1
 ~
 ~
@@ -561,7 +553,7 @@ O Encontro de Duas Trilhas~
    Aqui duas trilhas principais da vila se encontram. Uma delas vai para o
 oeste e a outra vai para norte e sul.
 ~
-100 0 2
+100 0 0 0 0 2
 D0
 ~
 ~
@@ -582,7 +574,7 @@ famílias sob os 'cuidados' de Mordecai. Quatro camas se encontram
 enfileiradas em uma parede e um baú de couro fica no canto, com aquilo
 que você observa ser suas posses.
 ~
-100 0 0
+100 0 0 0 0 0
 D1
 ~
 ~
@@ -595,7 +587,7 @@ famílias sob os 'cuidados' de Mordecai. Quatro camas se encontram
 enfileiradas em uma parede e um baú de couro fica no canto, com aquilo
 que você observa ser suas posses.
 ~
-100 0 0
+100 0 0 0 0 0
 D3
 ~
 ~
@@ -608,7 +600,7 @@ famílias sob os 'cuidados' de Mordecai. Quatro camas se encontram
 enfileiradas em uma parede e um baú de couro fica no canto, com aquilo
 que você observa ser suas posses.
 ~
-100 0 0
+100 0 0 0 0 0
 D3
 ~
 ~
@@ -621,7 +613,7 @@ famílias sob os 'cuidados' de Mordecai. Quatro camas se encontram
 enfileiradas em uma parede e um baú de couro fica no canto, com aquilo
 que você observa ser suas posses.
 ~
-100 0 0
+100 0 0 0 0 0
 D1
 ~
 ~
@@ -633,7 +625,7 @@ Cabana~
 permanente para uma família de quatro. Nesse pequeno espaço 8x8, quatro
 camas e um grande baú ocupam toda a área habitável que ali existia.
 ~
-100 0 0
+100 0 0 0 0 0
 D3
 ~
 ~
@@ -645,7 +637,7 @@ Cabana~
 permanente para uma família de quatro. Nesse pequeno espaço 8x8, quatro
 camas e um grande baú ocupam toda a área habitável que ali existia.
 ~
-100 0 0
+100 0 0 0 0 0
 D3
 ~
 ~
@@ -657,7 +649,7 @@ Cabana~
 permanente para uma família de quatro. Nesse pequeno espaço 8x8, quatro
 camas e um grande baú ocupam toda a área habitável que ali existia.
 ~
-100 0 0
+100 0 0 0 0 0
 D1
 ~
 ~
@@ -669,7 +661,7 @@ Cabana~
 permanente para uma família de quatro. Nesse pequeno espaço 8x8, quatro
 camas e um grande baú ocupam toda a área habitável que ali existia.
 ~
-100 0 1
+100 0 0 0 0 1
 D1
 ~
 ~
@@ -680,7 +672,7 @@ A Trilha Fora da Cidade~
    Essa trilha leva para sul para uma área selvagem, deixando a vila para
 trás. Para o norte a trilha leva para a parte principal da vila.
 ~
-100 0 1
+100 0 0 0 0 1
 D0
 ~
 ~
@@ -703,7 +695,7 @@ A Trilha Fora da Cidade~
    A trilha leva para sul dentro de uma área selvagem, agora mais fechada
 pelas árvores. Para o norte você vê a parte principal da vila.
 ~
-100 0 1
+100 0 0 0 0 1
 D0
 ~
 ~
@@ -722,7 +714,7 @@ A Trilha Fora da Cidade~
    Você se encontra agora bem longe da vila. Você pode ir para sul ou
 voltar para a parte principal a norte.
 ~
-100 0 3
+100 0 0 0 0 3
 D0
 ~
 ~
@@ -739,7 +731,7 @@ dessa trilha com outra que vem do oeste. Para o norte existem algumas
 tendas e cabanas e mais ao norte, sobre uma colina, você vê algumas
 estruturas mais permanentes.
 ~
-100 0 1
+100 0 0 0 0 1
 D0
 ~
 ~
@@ -762,7 +754,7 @@ Uma Trilha Suja~
    A trilha leva para norte e sul, cabanas e tendas estão espalhadas ao
 longo dela.
 ~
-100 0 2
+100 0 0 0 0 2
 D0
 ~
 ~
@@ -783,7 +775,7 @@ ser as principais edificações da vila, possivelmente a residência de
 Mordecai. Ao sul você vê muitas cabanas e tendas que servem de lar para o
 povo de Mordecai.
 ~
-100 0 2
+100 0 0 0 0 2
 D0
 ~
 ~
@@ -808,7 +800,7 @@ leste. Aparentemente se um templo ou lugar de trabalho fosse erguido aqui,
 você entraria pelo leste. Para o norte você vê as principais edificações
 de Mordecai, e ao sul existem muitas cabanas e tendas do povo da vila.
 ~
-100 0 2
+100 0 0 0 0 2
 D0
 ~
 ~
@@ -830,7 +822,7 @@ já que a porta da sua casa permanece aberta. Para o leste você vê outra
 casa de pedra, um pouco menor do que a de Mordecai, e para o oeste você
 vê outra casa de pedra.
 ~
-100 0 2
+100 0 0 0 0 2
 D0
 ~
 ~
@@ -838,7 +830,6 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
 0 -1 10050
 D2
 ~
@@ -857,7 +848,7 @@ servindo como encosto foram colocados aqui, de um lado da colina. No
 interior pode se observar que um púlpito foi erguido, obviamente para
 Mordecai e seus sermões.
 ~
-100 0 3
+100 0 0 0 0 3
 D3
 ~
 ~
@@ -869,11 +860,10 @@ A Casa do Tenente Caspan~
 foi garantido esse lar em reconhecimento à sua lealdade e ele não parece
 estar satisfeito de ver você invadindo seu santuário.
 ~
-100 0 1
+100 0 0 0 0 1
 D3
 ~
 porta~
-:n 2 a porta
 0 -1 10048
 S
 #10051
@@ -885,7 +875,7 @@ improvisadas se encontram espalhadas pelo chão. Travesseiros, cobertas e,
 em alguns lugares, manchas de sangue, se encontram em diferentes cantos da
 sala.
 ~
-100 8 0
+100 8 0 0 0 0
 D1
 ~
 ~
@@ -898,7 +888,7 @@ aparentemente não usado há tempos), e um armário na parede leste é tudo que
 se pode ver aqui.  Qualquer um pensaria que alguém no status de Mordecai
 teria um pouco mais de luxo.
 ~
-100 0 0
+100 0 0 0 0 0
 D1
 ~
 armario~
@@ -913,7 +903,7 @@ A Cela de Penelope~
    Ah, a pobre Penelope, filha do Senhor de Jareth. Uma esplêndida visão,
 em toda sua beleza e delicadeza...E muito bem guardada!
 ~
-100 0 0
+100 0 0 0 0 0
 D2
 ~
 ~
@@ -925,7 +915,7 @@ O Tesouro de Mordecai~
 em sua casa. Está tudo aqui. Uma bonita e grande cadeira foi colocada
 no meio da sala, obviamente onde Mordecai aproveita a maior parte do tempo.
 ~
-100 0 0
+100 0 0 0 0 0
 D3
 ~
 armario~
@@ -936,7 +926,7 @@ Um Túnel Escuro e Sujo~
    Esse é o fim do túnel. Sobre você, uma pequena luz atravessa as falhas
 de um alçapão.
 ~
-100 0 1
+100 0 0 0 0 1
 D2
 ~
 ~
@@ -951,7 +941,7 @@ Um Túnel Escuro e Sujo~
    O túnel continua em seu caminho escuro e sujo levando para algum lugar
 que apenas aquele que construiu sabe.
 ~
-100 9 0
+100 9 0 0 0 0
 D0
 ~
 ~
@@ -965,7 +955,7 @@ S
 Um Túnel Escuro e Sujo~
    Continua escuro. Continua sujo. E desembocou num local bem desagradável.
 ~
-100 9 0
+100 9 0 0 0 0
 D0
 ~
 ~
@@ -982,7 +972,7 @@ estrada.  A escuridão cobre todo lugar, sendo difícil encontrar algum
 caminho a ser seguido.  Por sorte você vê uma estreita trilha seguindo
 bosque adentro.
 ~
-100 cga 3
+100 69 0 0 0 3
 D1
 Você vê a estrada.
 ~
@@ -1000,15 +990,15 @@ da estrada.  A escuridão cobre todo lugar, sendo difícil acompanhar o
 estreito caminho, que parece não ser usado a muito tempo.  Não se houve
 barulho algum além de seus passos e do ocasional farfalhar de folhas.
 ~
-100 cfga 3
-D1
-~
-~
-0 -1 10058
+100 101 0 0 0 3
 D0
 ~
 ~
 0 -1 10060
+D1
+~
+~
+0 -1 10058
 S
 #10060
 Um Denso Bosque~
@@ -1017,15 +1007,15 @@ da estrada.  A escuridão cobre todo lugar, sendo difícil acompanhar o
 estreito caminho, que parece não ser usado a muito tempo.  Não se houve
 barulho algum além de seus passos e do ocasional farfalhar de folhas.
 ~
-100 cfga 3
-D2
-~
-~
-0 -1 10059
+100 101 0 0 0 3
 D0
 ~
 ~
 0 -1 10061
+D2
+~
+~
+0 -1 10059
 S
 #10061
 Um Denso Bosque~
@@ -1034,7 +1024,7 @@ da estrada.  A escuridão cobre todo lugar, sendo difícil acompanhar o
 estreito caminho, que parece não ser usado a muito tempo.  Não se houve
 barulho algum além de seus passos e do ocasional farfalhar de folhas.
 ~
-100 cfga 3
+100 101 0 0 0 3
 D2
 ~
 ~
@@ -1051,7 +1041,7 @@ da estrada.  A escuridão cobre todo lugar, sendo difícil acompanhar o
 estreito caminho, que parece não ser usado a muito tempo.  Não se houve
 barulho algum além de seus passos e do ocasional farfalhar de folhas.
 ~
-100 cfga 3
+100 101 0 0 0 3
 D1
 ~
 ~
@@ -1068,15 +1058,15 @@ da estrada.  A escuridão cobre todo lugar, sendo difícil acompanhar o
 estreito caminho, que parece não ser usado a muito tempo.  Não se houve
 barulho algum além de seus passos e do ocasional farfalhar de folhas.
 ~
-100 cfga 3
-D1
-~
-~
-0 -1 10062
+100 101 0 0 0 3
 D0
 ~
 ~
 0 -1 10064
+D1
+~
+~
+0 -1 10062
 S
 #10064
 Um Denso Bosque~
@@ -1085,14 +1075,14 @@ da estrada.  A escuridão cobre todo lugar, sendo difícil acompanhar o
 estreito caminho, que parece não ser usado a muito tempo.  Não se houve
 barulho algum além de seus passos e do ocasional farfalhar de folhas.
 ~
-100 cfga 3
-D2
-~
-~
-0 -1 10063
+100 101 0 0 0 3
 D0
 ~
 ~
 0 -1 10000
+D2
+~
+~
+0 -1 10063
 S
 $~
