@@ -352,7 +352,7 @@ void create_spells_db()
  new_spell->mag_flags = MAG_SUMMONS;
  new_spell->effectiveness = strdup("50");
  new_spell->summon_mob = strdup("10");
- new_spell->summon_req = strdup("161");
+ new_spell->summon_req = strdup("10221");
  sprintf(buf, "(80 - (5 * self.level)) > 65 ? (80 - (5 * self.level)) : 65");
  new_spell->assign[0].class_num = CLASS_MAGIC_USER;
  new_spell->assign[0].level = 100;
@@ -969,10 +969,10 @@ void create_spells_db()
  new_spell->applies[0].duration = strdup("self.level");
  new_spell->applies[1].appl_num = AFF_POISON + NUM_APPLIES;
  new_spell->applies[1].duration = strdup("self.level");
- new_spell->messages.to_self = strdup("$b steams briefly.");
- new_spell->messages.to_vict = strdup("You feel very sick.");
- new_spell->messages.to_room = strdup("$N gets violently ill!");
- new_spell->messages.wear_off = strdup("You feel less sick.");
+ new_spell->messages.to_self = strdup("$b emite uma fumaça por alguns instantes.");
+ new_spell->messages.to_vict = strdup("Você se sente doente.");
+ new_spell->messages.to_room = strdup("$N fica muito doente!");
+ new_spell->messages.wear_off = strdup("Você se sente menos doente.");
 
  spedit_save_internally(new_spell);
 
@@ -994,8 +994,8 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->applies[0].appl_num = AFF_PROTECT_EVIL + NUM_APPLIES;
  new_spell->applies[0].duration = strdup("24");
- new_spell->messages.to_vict = strdup("You feel invulnerable!");
- new_spell->messages.wear_off = strdup("You feel less protected.");
+ new_spell->messages.to_vict = strdup("Você se sente protegid$r!");
+ new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
 
  spedit_save_internally(new_spell);
 
@@ -1016,8 +1016,8 @@ void create_spells_db()
  new_spell->assign[0].level = 34;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->dispel[0] = strdup("17"); // dispel curse
- new_spell->messages.to_self = strdup("$b briefly glows blue.");
- new_spell->messages.to_vict = strdup("You don't feel so unlucky.");
+ new_spell->messages.to_self = strdup("$b brilha azul por alguns instantes.");
+ new_spell->messages.to_vict = strdup("Você não se sente mais tão azarad$r.");
 
  spedit_save_internally(new_spell);
 
