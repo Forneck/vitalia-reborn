@@ -1,11 +1,11 @@
 #11300
-Sob as �guas~
-   Voc� est� nadando sob as �guas do Rio Ikshumati, exatamente num ponto em
-que o rio parece ser menos violento.  Uma agrad�vel luz violeta parece vir
-do fundo, parecendo tentar atra�-lo para si.  Voc� pode voltar � tona,
+Sob as Águas~
+   Você está nadando sob as águas do Rio Ikshumati, exatamente num ponto em
+que o rio parece ser menos violento.  Uma agradável luz violeta parece vir
+do fundo, parecendo tentar atraí-lo para si.  Você pode voltar à tona,
 subindo, ou descer ainda mais, para o fundo do rio.
 ~
-113 68 0 0 0 8
+113.1 cg 8
 D4
 ~
 ~
@@ -17,42 +17,42 @@ D5
 S
 #11301
 O Fundo do Rio~
-   Voc� est� nadando pr�ximo ao fundo do rio, muito aturdido pois ele �
-muito mais profundo do que voc� imaginaria: seriam necess�rios mais de vinte
-homens altos para cobrir toda sua profundidade.  O solo do fundo � coberto
-por milhares de cristais arredondados de cores que v�o do rosa mais claro ao
-azul mais profundo.  Voc� esperava encontrar plantas aqu�ticas comuns, mas
-se deparou com um lindo jardim colorido.  Mas o que mais chama sua aten��o �
-uma esp�cie das flores que cobrem o fundo: l�tus de p�talas viol�cea que
-cintilam intensamente.  Esses l�tus formam um c�rculo que parece demarcar a
-�rea mais branda do Ikshumati, emitindo o brilho suave que tanto o intrigara
-na superf�cie.  A partir do c�rculo voc� v� ainda que os l�tus,
-enfileirados, seguem oeste.  � poss�vel ainda nadar para norte ou para cima.
+   Você está nadando próximo ao fundo do rio, muito aturdido pois ele é
+muito mais profundo do que você imaginaria: seriam necessários mais de vinte
+homens altos para cobrir toda sua profundidade.  O solo do fundo é coberto
+por milhares de cristais arredondados de cores que vão do rosa mais claro ao
+azul mais profundo.  Você esperava encontrar plantas aquáticas comuns, mas
+se deparou com um lindo jardim colorido.  Mas o que mais chama sua atenção é
+uma espécie das flores que cobrem o fundo: lótus de pétalas violácea que
+cintilam intensamente.  Esses lótus formam um círculo que parece demarcar a
+área mais branda do Ikshumati, emitindo o brilho suave que tanto o intrigara
+na superfície.  A partir do círculo você vê ainda que os lótus,
+enfileirados, seguem oeste.  É possível ainda nadar para norte ou para cima.
 ~
-113 68 0 0 0 8
-D0
-~
-~
-0 -1 11307
-D3
-~
-~
-0 -1 11302
+113.1 cg 8
 D4
 ~
 ~
 0 -1 11300
+D3
+~
+~
+0 -1 11302
+D0
+~
+~
+0 -1 11307
 S
 #11302
-A Trilha Subaqu�tica~
-   Voc� est� nadando muito pr�ximo ao fundo do rio, seguindo de perto uma
-trilha de flores de l�tus cintilantes que crescem sob as �guas do Ikshumati.
-Cristais arredondados, de cores que v�o do rosa mais claro ao azul mais
-profundo, cobrem o solo formando estranhos mosaicos que brilham � luz das
-flores.  Mais � frente voc� repara que a trilha cintilante termina, levando
+A Trilha Subaquática~
+   Você está nadando muito próximo ao fundo do rio, seguindo de perto uma
+trilha de flores de lótus cintilantes que crescem sob as águas do Ikshumati.
+Cristais arredondados, de cores que vão do rosa mais claro ao azul mais
+profundo, cobrem o solo formando estranhos mosaicos que brilham à luz das
+flores.  Mais à frente você repara que a trilha cintilante termina, levando
 a um local extremamente escuro.
 ~
-113 68 0 0 0 8
+113.1 cg 8
 D1
 ~
 ~
@@ -63,434 +63,437 @@ D3
 0 -1 11303
 S
 #11303
-A Trilha Subaqu�tica~
-   Voc� est� nadando muito pr�ximo ao fundo do rio, seguindo de perto uma
-trilha de flores de l�tus cintilantes que crescem sob as �guas do Ikshumati.
-Cristais arredondados, de cores que v�o do rosa mais claro ao azul mais
-profundo, cobrem o solo formando estranhos mosaicos que brilham � luz das
-flores.  O cintilar dos l�tus para abruptamente abaixo de voc�, logo na
-borda do que parece ser um buraco no rio.  Ali voc� n�o enxergar luz alguma.
+A Trilha Subaquática~
+   Você está nadando muito próximo ao fundo do rio, seguindo de perto uma
+trilha de flores de lótus cintilantes que crescem sob as águas do Ikshumati.
+Cristais arredondados, de cores que vão do rosa mais claro ao azul mais
+profundo, cobrem o solo formando estranhos mosaicos que brilham à luz das
+flores.  O cintilar dos lótus para abruptamente abaixo de você, logo na
+borda do que parece ser um buraco no rio.  Ali você não enxergar luz alguma.
 ~
-113 68 0 0 0 8
+113.1 cg 8
 D1
 ~
 ~
 0 -1 11302
 D5
-O t�nel � realmente escuro.
+O túnel é realmente escuro.
 ~
 ~
 0 -1 11304
 S
 #11304
-O T�nel Sob o Rio~
-   Voc� est� num estreito t�nel que desce a partir do fundo do Rio
-Ikshumati.  A ilumina��o aqui � inexistente, sendo extremamente desagrad�vel
-a sensa��o de estranhos seres de corpo liso nadando � sua volta, tocando-o
-vez ou outra. O t�nel segue para baixo e para cima.
+O Túnel Sob o Rio~
+   Você está num estreito túnel que desce a partir do fundo do Rio
+Ikshumati.  A iluminação aqui é inexistente, sendo extremamente desagradável
+a sensação de estranhos seres de corpo liso nadando à sua volta, tocando-o
+vez ou outra. O túnel segue para baixo e para cima.
 ~
-113 325 0 0 0 8
+113.1 acgi 8
 D4
-Ali h� luz.
+Ali há luz.
 ~
 ~
 0 -1 11303
 D5
-O t�nel � realmente escuro.
+O túnel é realmente escuro.
 ~
 ~
 0 -1 11305
 S
 #11305
-O T�nel Sob o Rio~
-   Voc� est� num estreito t�nel que desce a partir do fundo do Rio
-Ikshumati.  A ilumina��o aqui � inexistente, sendo extremamente desagrad�vel
-a sensa��o de estranhos seres de corpo liso nadando � sua volta, tocando-o
-vez ou outra.  H� uma repentina curva no t�nel, seguindo oeste.  Para cima
-est� o leito do rio Ikshumati.
+O Túnel Sob o Rio~
+   Você está num estreito túnel que desce a partir do fundo do Rio
+Ikshumati.  A iluminação aqui é inexistente, sendo extremamente desagradável
+a sensação de estranhos seres de corpo liso nadando à sua volta, tocando-o
+vez ou outra.  Há uma repentina curva no túnel, seguindo oeste.  Para cima
+está o leito do rio Ikshumati.
 ~
-113 325 0 0 0 8
-D3
-Um forte brilho vem dessa dire��o.
-~
-~
-0 -1 11306
+113.1 acgi 8
 D4
-O t�nel � realmente escuro.
+O túnel é realmente escuro.
 ~
 ~
 0 -1 11304
+D3
+Um forte brilho vem dessa direção.
+~
+~
+0 -1 11306
 S
 #11306
 A Caverna dos Cristais~
-   Voc� est� em uma grande caverna sob o leito do rio Ikshumati, que �
-acess�vel apenas por um t�nel subaqu�tico.  As �guas n�o avan�am sobre o
-solo do lugar, que � completamente tomado por grandes cristais cujo brilho
-torna desnecess�rio o uso de qualquer outra luz.  Estalactites pontiagudas e
+   Você está em uma grande caverna sob o leito do rio Ikshumati, que é
+acessível apenas por um túnel subaquático.  As águas não avançam sobre o
+solo do lugar, que é completamente tomado por grandes cristais cujo brilho
+torna desnecessário o uso de qualquer outra luz.  Estalactites pontiagudas e
 de arestas afiadas pendem do teto como uma perigosa cortina multicolor,
-enquanto forma��es cristalinas de cores puras e radiantes parecem enormes
+enquanto formações cristalinas de cores puras e radiantes parecem enormes
 espadas prontas para matar.  No centro da caverna, mais luzente que os
-pr�prios cristais, est� uma enorme flor de l�tus, de di�metro pr�ximo � sua
-altura, fechada como bot�o prestes a se abrir.  Ela parece muito bem
+próprios cristais, está uma enorme flor de lótus, de diâmetro próximo à sua
+altura, fechada como botão prestes a se abrir.  Ela parece muito bem
 guardada.
 ~
-113 620 0 0 0 0
+113.2 cdgfj 0
 D1
-Voc� v� o escuro t�nel.
+Você vê o escuro túnel.
 ~
 ~
 0 -1 11305
 S
 #11307
-No Fundo do Rio, Sob as �guas~
- Voc� est� nadando pr�ximo ao fundo do rio, fora do c�rculo de l�tus
+No Fundo do Rio, Sob as Águas~
+ Você está nadando próximo ao fundo do rio, fora do círculo de lótus
 que demarcam a parte que parece ser mais segura do Ikshumati.
-O rio � muito profundo, sendo que voc� tem a impress�o que � melhor
-continuar a nadar e procurar uma sa�da do que arriscar-se em
-uma intermin�vel subida rumo � tona.  Nadar a norte ou sul parece
-ser sua �nica op��o.
+O rio é muito profundo, sendo que você tem a impressão que é melhor
+continuar a nadar e procurar uma saída do que arriscar-se em
+uma interminável subida rumo à tona.  Nadar a norte ou sul parece
+ser sua única opção.
 ~
-113 68 0 0 0 8
-D0
-~
-~
-0 -1 11308
+113.1 cg 8
 D2
 ~
 ~
 0 -1 11301
-S
-#11308
-No Fundo do Rio, Sob as �guas~
- Voc� est� nadando pr�ximo ao fundo do rio, fora do c�rculo de l�tus
-que demarcam a parte que parece ser mais segura do Ikshumati.
-O rio � muito profundo, sendo que voc� tem a impress�o que � melhor
-continuar a nadar e procurar uma sa�da do que arriscar-se em
-uma intermin�vel subida rumo � tona.  Nadar para norte ou sul parece
-ser sua �nica op��o.
-~
-113 68 0 0 0 8
 D0
-~
-~
-0 -1 11309
-D2
-~
-~
-0 -1 11307
-S
-#11309
-No Fundo do Rio, Sob as �guas~
-   Voc� est� nadando pr�ximo ao fundo do rio, fora do c�rculo de l�tus que
-demarcam a parte que parece ser mais segura do Ikshumati.  O rio est�
-ficando cada vez mais escuro e com o leito mais e mais estreito, dando a
-impress�o de que voc� est� pr�ximo do in�cio de um abismo coberto de �gua.
-Mais � frente voc� v� que o rio faz uma curva para oeste, parecendo entrar
-num gigantesco buraco, em uma rocha.  Mas por enquanto, nadar para norte ou
-sul s�o suas �nicas op��es aqui.
-~
-113 68 0 0 0 8
-D0
-~
-~
-0 -1 11310
-D2
 ~
 ~
 0 -1 11308
 S
-#11310
-Em Frente ao Buraco~
-   Voc� est� nadando sob as �guas do rio Ikshumati, sendo que afastou-se um
-pouco do fundo para poder ver melhor o gigantesco buraco � sua frente.  O
-rio, acima de voc�, parece ter sido coberto por uma parede de pedra, como se
-voc� tivesse nadado at� uma parte canalizada dele (e uma canaliza��o de
-propor��es monstruosas!).  O buraco, muito escuro, est� em uma parede
-rochosa que atinge at� o "teto" colocado sobre o rio, podendo at� ser mais
-alto, mas voc� n�o tem como saber...  A correnteza parece ser muito forte
-por ali, sendo que uma vez entrando l�, dif�cilmente voc� voltar�.  Vale a
-pena arriscar?  Se sim, continue a seguir norte.  Se n�o, nada para sul.
+#11308
+No Fundo do Rio, Sob as Águas~
+ Você está nadando próximo ao fundo do rio, fora do círculo de lótus
+que demarcam a parte que parece ser mais segura do Ikshumati.
+O rio é muito profundo, sendo que você tem a impressão que é melhor
+continuar a nadar e procurar uma saída do que arriscar-se em
+uma interminável subida rumo à tona.  Nadar para norte ou sul parece
+ser sua única opção.
 ~
-113 68 0 0 0 8
-D0
-~
-~
-0 -1 11311
+113.1 cg 8
 D2
+~
+~
+0 -1 11307
+D0
 ~
 ~
 0 -1 11309
 S
-#11311
-Atravessando o Buraco~
-   Voc� n�o v� quase nada, mas sente que est� na atravessando, na verdade,
-um t�nel.  Ainda � poss�vel nadar at� sul, pois a correnteza que segue norte
-n�o est� t�o forte.
+#11309
+No Fundo do Rio, Sob as Águas~
+   Você está nadando próximo ao fundo do rio, fora do círculo de lótus que
+demarcam a parte que parece ser mais segura do Ikshumati.  O rio está
+ficando cada vez mais escuro e com o leito mais e mais estreito, dando a
+impressão de que você está próximo do início de um abismo coberto de água.
+Mais à frente você vê que o rio faz uma curva para oeste, parecendo entrar
+num gigantesco buraco, em uma rocha.  Mas por enquanto, nadar para norte ou
+sul são suas únicas opções aqui.
 ~
-113 69 0 0 0 8
-D0
-~
-~
-0 -1 11312
+113.1 cg 8
 D2
+~
+~
+0 -1 11308
+D0
 ~
 ~
 0 -1 11310
 S
-#11312
-No T�nel~
-   Voc� n�o v� quase nada. A correnteza aqui tornou-se muito intensa, sendo imposs�vel
-nadar para sul. Voc� n�o v� sa�da alguma.
+#11310
+Em Frente ao Buraco~
+   Você está nadando sob as águas do rio Ikshumati, sendo que afastou-se um
+pouco do fundo para poder ver melhor o gigantesco buraco à sua frente.  O
+rio, acima de você, parece ter sido coberto por uma parede de pedra, como se
+você tivesse nadado até uma parte canalizada dele (e uma canalização de
+proporções monstruosas!).  O buraco, muito escuro, está em uma parede
+rochosa que atinge até o "teto" colocado sobre o rio, podendo até ser mais
+alto, mas você não tem como saber...  A correnteza parece ser muito forte
+por ali, sendo que uma vez entrando lá, difícilmente você voltará.  Vale a
+pena arriscar?  Se sim, continue a seguir norte.  Se não, nada para sul.
 ~
-113 69 0 0 0 8
+113.1 cg 8
+D2
+~
+~
+0 -1 11309
+D0
+~
+~
+0 -1 11311
+S
+#11311
+Atravessando o Buraco~
+   Você não vê quase nada, mas sente que está na atravessando, na verdade,
+um túnel.  Ainda é possível nadar até sul, pois a correnteza que segue norte
+não está tão forte.
+~
+113.1 acg 8
+D2
+~
+~
+0 -1 11310
+D0
+~
+~
+0 -1 11312
+S
+#11312
+No Túnel~
+   Você não vê quase nada. A correnteza aqui tornou-se muito intensa, sendo impossível
+nadar para sul. Você não vê saída alguma.
+~
+113.1 acg 8
 D4
 ~
 ~
-1 -1 11313
+d -1 11313
 S
 #11313
-No T�nel~
-   Voc� n�o v� quase nada. A forte correnteza o atrai cada vez mais para cima.
-L�, parece haver alguma coisa iluminando um dos lados do t�nel.
+No Túnel~
+   Você não vê quase nada. A forte correnteza o atrai cada vez mais para cima.
+Lá, parece haver alguma coisa iluminando um dos lados do túnel.
 ~
-113 69 0 0 0 8
+113.1 acg 8
 D4
 ~
 ~
-1 -1 11314
+d -1 11314
 S
 #11314
-No T�nel~
-   Voc� sente que perdeu o controle sobre seu corpo, de t�o forte se mostra
-a correnteza (levando-o sempre para cima), at� que seu corpo bate em uma grade
-que atravessa o t�nel, permitindo que voc� se segure.
-   Refeito da viagem um tanto "for�ada", voc� observa que h�, no lado
-norte no t�nel, rente � grade que o mant�m aqui, outra grade, mas dourada,
-que mais parece uma porta. Parece ser sua �nica sa�da.
+No Túnel~
+   Você sente que perdeu o controle sobre seu corpo, de tão forte se mostra
+a correnteza (levando-o sempre para cima), até que seu corpo bate em uma grade
+que atravessa o túnel, permitindo que você se segure.
+   Refeito da viagem um tanto "forçada", você observa que há, no lado
+norte no túnel, rente à grade que o mantém aqui, outra grade, mas dourada,
+que mais parece uma porta. Parece ser sua única saída.
 ~
-113 69 0 0 0 8
+113.1 acg 8
 D0
 ~
 grade dourada~
-1 -1 11315
+:n 2 a grade dourada
+a -1 11315
 S
 #11315
 O Centro do Templo a Sesha~
-   Voc� est� no centro do templo de Bhogavati, que � dedicado a Sesha, o
-Infinito.  O centro � ocupado por um grande lago circular, uma esp�cie de
-piscina, assentado em uma grande bacia dourada e cravejadas de j�ias.  No
-fundo do lago � poss�vel ver quatro grades, cada uma voltada para um ponto
-cardeal, enquanto quatro canaletas douradas, nessas mesmas dire��es, levam
-suas �guas atrav�s do templo.  O teto alto e abobodado possui belas pinturas
-enquanto os quatro pilares dourados que sustentam-no e delimitam a regi�o
-central s�o adornados com finos desenhos sulcados no metal.  A norte voc�
-v� um sal�o abarrotado de coisas, a leste v� uma sala repleta de livros e
-pergaminhos, a sul um local pouco iluminado, a oeste uma esp�cie de altar
-e p�tios a noroeste e sudeste, externos ao templo.
+   Você está no centro do templo de Bhogavati, que é dedicado a Sesha, o
+Infinito.  O centro é ocupado por um grande lago circular, uma espécie de
+piscina, assentado em uma grande bacia dourada e cravejadas de jóias.  No
+fundo do lago é possível ver quatro grades, cada uma voltada para um ponto
+cardeal, enquanto quatro canaletas douradas, nessas mesmas direções, levam
+suas águas através do templo.  O teto alto e abobodado possui belas pinturas
+enquanto os quatro pilares dourados que sustentam-no e delimitam a região
+central são adornados com finos desenhos sulcados no metal.  A norte você
+vê um salão abarrotado de coisas, a leste vê uma sala repleta de livros e
+pergaminhos, a sul um local pouco iluminado, a oeste uma espécie de altar
+e pátios a noroeste e sudeste, externos ao templo.
 ~
-113 152 0 0 0 0
+113.3 deh 0
+ON bhogavati
+D8
+Você vê um pátio.
+~
+~
+0 -1 11384
+D6
+Você vê um pátio.
+~
+~
+0 -1 11361
 D0
 Ali fica a Sala de oferendas.
 ~
 ~
 0 -1 11316
 D1
-Voc� v� a Sala dos S�bios.
+Você vê a Sala dos Sábios.
 ~
 ~
 0 -1 11317
 D2
-A Sala de Medita��o fica nessa dire��o.
+A Sala de Meditação fica nessa direção.
 ~
 ~
 0 -1 11318
 D3
-Ali est� o Sal�o da Vida.
+Ali está o Salão da Vida.
 ~
 ~
 0 -1 11319
 D5
-Voc� v�, na piscina dourada, a grade que leva at� o Ikshumati.
+Você vê, na piscina dourada, a grade que leva até o Ikshumati.
 ~
 grade dourada~
-1 -1 11314
-D6
-Voc� v� um p�tio.
+:n 2 a grade dourada
+a -1 11314
+E
+pinturas teto~
+Há diversas pinturas representando Sesha sustentando o mundo e sendo
+reverenciado pelos senhores de Patala.
 ~
-~
-0 -1 11361
-D8
-Voc� v� um p�tio.
-~
-~
-0 -1 11384
 E
 pilares~
 O que cobre os pilares parece ser ouro puro. Os desenhos que os adornam,
-feito por ourives de fant�stica habilidade, represetam quatro naginis
+feito por ourives de fantástica habilidade, represetam quatro naginis
 segurando as pedras dos senhores do norte, do sul, do leste e oeste.
-~
-E
-pinturas teto~
-H� diversas pinturas representando Sesha sustentando o mundo e sendo
-reverenciado pelos senhores de Patala.
 ~
 S
 #11316
 A Sala de Oferendas~
-   Voc� est� na sala de oferendas do templo.  A sala � separada do centro
-por grandes pilares dourados, que por sua vez tamb�m sustentam o alto teto
-de forma abobadada.  H� paredes apenas em dois lados, leste e oeste,
-enquanto o lado norte � aberto para um pequeno rio que atravessa a cidade e
-parece nascer da �gua que � derramada sobre as escadas do templo por uma das
-canaletas que o atravessam.  O ch�o, de negra pedra muito polida, foi
-coberto com finos tapetes, havendo sobre eles a mais variada cole��o de
-objetos: armas, vestimentas, alimentos, j�ias, livros, est�tuas.  No
-entanto, o que ocupa maior espa�o s�o os grandes ba�s de pedra que parecem
+   Você está na sala de oferendas do templo.  A sala é separada do centro
+por grandes pilares dourados, que por sua vez também sustentam o alto teto
+de forma abobadada.  Há paredes apenas em dois lados, leste e oeste,
+enquanto o lado norte é aberto para um pequeno rio que atravessa a cidade e
+parece nascer da água que é derramada sobre as escadas do templo por uma das
+canaletas que o atravessam.  O chão, de negra pedra muito polida, foi
+coberto com finos tapetes, havendo sobre eles a mais variada coleção de
+objetos: armas, vestimentas, alimentos, jóias, livros, estátuas.  No
+entanto, o que ocupa maior espaço são os grandes baús de pedra que parecem
 encerrar em si os maiores tesouros.
-  Na parede oeste h� uma abertura que leva a um p�tio.
+  Na parede oeste há uma abertura que leva a um pátio.
 ~
-113 152 0 0 0 0
-D0
-Voc� v� a Via Norte.
-~
-~
-0 -1 11320
+113.3 deh 0
 D2
-Voc� v� o Centro do Templo.
+Você vê o Centro do Templo.
 ~
 ~
 0 -1 11315
+D0
+Você vê a Via Norte.
+~
+~
+0 -1 11320
 D3
-Voc� v� um p�tio.
+Você vê um pátio.
 ~
 ~
 0 -1 11361
 S
 #11317
-A Sala dos S�bios~
-   Voc� est� na sala em que qualquer naga de Bhogavati procura quando
-precisa de inspira��o, conselhos ou apenas conversar e ter not�cias sobre o
-mundo.  Ela � delimitada por uma s�rie de pilares dourados, a oeste, havendo
-outros para a sustenta��o do teto e por paredes de m�rmore claro a norte e
-sul.  O lado leste � completamente aberto, voltando-se para um pequeno rio
-que atravessa a cidade e que parece nascer da �gua derramada nas escadas do
-templo por uma das canalestas que o atravessam.  H� altas estantes apoiadas
-nas paredes, enquanto grandes ba�s de pedra, abertos e espalhados pela sala,
+A Sala dos Sábios~
+   Você está na sala em que qualquer naga de Bhogavati procura quando
+precisa de inspiração, conselhos ou apenas conversar e ter notícias sobre o
+mundo.  Ela é delimitada por uma série de pilares dourados, a oeste, havendo
+outros para a sustentação do teto e por paredes de mármore claro a norte e
+sul.  O lado leste é completamente aberto, voltando-se para um pequeno rio
+que atravessa a cidade e que parece nascer da água derramada nas escadas do
+templo por uma das canalestas que o atravessam.  Há altas estantes apoiadas
+nas paredes, enquanto grandes baús de pedra, abertos e espalhados pela sala,
 guardam pergaminhos e mapas desconhecidos por aqueles que nunca visitaram
-esse lugar.  Uma interessante inscri��o em um pilar exatamente no centro da
-sala chama sua aten��o.
-   A parede sul possui uma abertura, esta levando a um p�tio.
+esse lugar.  Uma interessante inscrição em um pilar exatamente no centro da
+sala chama sua atenção.
+   A parede sul possui uma abertura, esta levando a um pátio.
 ~
-113 152 0 0 0 0
-D1
-Voc� v� a Via Leste.
-~
-~
-0 -1 11330
+113.3 deh 0
 D2
-Voc� v� um p�tio.
+Você vê um pátio.
 ~
 ~
 0 -1 11384
 D3
-Voc� v� o Centro do Templo.
-~
-~
-0 -1 11315
-E
-pilar centro inscri��o interessante~
-	wEst� escrito, na l�ngua antiga:	n
-
-    	w"	n 	YSwadeshe pujyathe raja	n 
-                 	YVidwan sarvatra pujyathe	n 	w"	n
-
-
-	wMais abaixo voc� v� a tradu��o para sua l�ngua:	n
-
-         	w"	n 	YO rei � venerado em suas pr�prias terras,	n
-         	Ymas o homem s�bio � venerado em qualquer lugar	n 	w"	n
-~
-S
-#11318
-A Sala de Medita��o~
-   Voc� est� em uma sala coberta por aconchegante penumbra.  Isso o deixa
-surpreso, uma vez que a sala � separada do centro por apenas uma fileira de
-grandes pilares e possui somente duas paredes, a leste e a oeste, o que
-deveria fazer com que ela fosse no m�nimo um pouco mais iluminada.  Apesar
-disso, ela parece encerrar em si o conforto da ilumina��o de suas velas
-arom�ticas cuja dan�a se reflete tanto no dourado dos pilares quanto das
-belas est�tuas dispostas na frente das paredes.  Voc� percebe que a sul,
-onde n�o h� parede, a vista � a de um pequeno rio de calmas �guas azuis que
-parece nascer da �gua derramada sobre os degraus do templo por uma das
-canaletas de ouro que o atravessam.  O ambiente parece ser ideal para
-medita��o ou simplesmente para o repouso de uma mente e corpo cansados.
-   H�, na parede leste, a passagem para um p�tio externo ao templo. 
-~
-113 153 0 0 0 0
-D0
-Voc� v� o Centro do Templo.
+Você vê o Centro do Templo.
 ~
 ~
 0 -1 11315
 D1
-Voc� v� um p�tio.
+Você vê a Via Leste.
+~
+~
+0 -1 11330
+E
+pilar centro inscricao interessante~
+@wEstá escrito, na língua antiga:@n
+
+               @w"@n @YSwadeshe pujyathe raja@n 
+                 @YVidwan sarvatra pujyathe@n @w"@n
+
+@wMais abaixo você vê a tradução para sua língua:@n
+
+         @w"@n @YO rei é venerado em suas próprias terras,@n
+         @Ymas o homem sábio é venerado em qualquer lugar@n @w"@n
+
+~
+S    
+#11318
+A Sala de Meditação~
+   Você está em uma sala coberta por aconchegante penumbra.  Isso o deixa
+surpreso, uma vez que a sala é separada do centro por apenas uma fileira de
+grandes pilares e possui somente duas paredes, a leste e a oeste, o que
+deveria fazer com que ela fosse no mínimo um pouco mais iluminada.  Apesar
+disso, ela parece encerrar em si o conforto da iluminação de suas velas
+aromáticas cuja dança se reflete tanto no dourado dos pilares quanto das
+belas estátuas dispostas na frente das paredes.  Você percebe que a sul,
+onde não há parede, a vista é a de um pequeno rio de calmas águas azuis que
+parece nascer da água derramada sobre os degraus do templo por uma das
+canaletas de ouro que o atravessam.  O ambiente parece ser ideal para
+meditação ou simplesmente para o repouso de uma mente e corpo cansados.
+   Há, na parede leste, a passagem para um pátio externo ao templo. 
+~
+113.3 adeh 0
+D1
+Você vê um pátio.
 ~
 ~
 0 -1 11384
+D0
+Você vê o Centro do Templo.
+~
+~
+0 -1 11315
 D2
-Voc� v� a Via Sul.
+Você vê a Via Sul.
 ~
 ~
 0 -1 11343
 S
 #11319
-O Sal�o da Vida~
-   Voc� est� num grande sal�o quase vazio.  Pilares dourados separam-no do
-centro do templo, al�m de sustentar o alto teto abobadado.  H� somente duas
+O Salão da Vida~
+   Você está num grande salão quase vazio.  Pilares dourados separam-no do
+centro do templo, além de sustentar o alto teto abobadado.  Há somente duas
 paredes separando o lugar do ambiente externo: uma a norte e outra sul,
-ambas de m�rmore muito claro com pequenas pedras prateadas em seu interior.
-O ch�o � como o de todo o templo: de pedra negra polida, com ricos veios
-dourados.  A oeste se v� um pequeno rio que parece nascer da �gua derramada
+ambas de mármore muito claro com pequenas pedras prateadas em seu interior.
+O chão é como o de todo o templo: de pedra negra polida, com ricos veios
+dourados.  A oeste se vê um pequeno rio que parece nascer da água derramada
 nas escadas do templo por uma das canaletas de ouro que o atravessam,
-formando uma curiosa estrada.  H�, no centro do sal�o, uma grande mesa
-redonda, de pedra, cercada por flores e ervas arom�ticas em quantidade
+formando uma curiosa estrada.  Há, no centro do salão, uma grande mesa
+redonda, de pedra, cercada por flores e ervas aromáticas em quantidade
 tamanha que formam um verdadeiro manto colorido em volta do estranho altar.
 Largos tapetes macios, de cores claras, foram dispostos por todos os lados,
-sem raz�o aparente. Diga-se de passagem, voc� at� agora n�o entendeu para
-que serve esse sal�o.
-   Uma passagem, na parede norte, leva a um p�tio externo ao templo.
+sem razão aparente. Diga-se de passagem, você até agora não entendeu para
+que serve esse salão.
+   Uma passagem, na parede norte, leva a um pátio externo ao templo.
 ~
-113 152 0 0 0 0
-D0
-Voc� v� um p�tio.
-~
-~
-0 -1 11361
+113.3 deh 0
 D1
-Voc� v� o Centro do Templo.
+Você vê o Centro do Templo.
 ~
 ~
 0 -1 11315
 D3
-Voc� v� a Via Oeste.
+Você vê a Via Oeste.
 ~
 ~
 0 -1 11350
+D0
+Você vê um pátio.
+~
+~
+0 -1 11361
 S
 #11320
 A Via Norte~
-   Voc� est� sobre as �guas do pequeno rio que corre a norte do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis.  Voc� pode seguir pela via por norte ou
+   Você está sobre as águas do pequeno rio que corre a norte do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis.  Você pode seguir pela via por norte ou
 nordeste, voltar para o templo, que fica a sul, ou entrar em uma discreta
 loja a oeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -510,16 +513,16 @@ D7
 S
 #11321
 A Via Norte~
-   Voc� est� sobre as �guas do pequeno rio que corre a norte do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis.  Voc� pode seguir pela via por norte, sul
+   Você está sobre as águas do pequeno rio que corre a norte do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis.  Você pode seguir pela via por norte, sul
 ou oeste ou entrar em uma grande loja a leste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -539,16 +542,16 @@ D3
 S
 #11322
 A Via Norte~
-   Voc� est� sobre as �guas do pequeno rio que corre a norte do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis.  Voc� pode seguir pela via por norte, sul,
+   Você está sobre as águas do pequeno rio que corre a norte do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis.  Você pode seguir pela via por norte, sul,
 entrar em uma grande loja a leste ou em uma barulhenta loja a oeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -568,15 +571,15 @@ D3
 S
 #11323
 A Via Norte~
-   Voc� est� sobre as �guas do pequeno rio que corre a norte do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis.  Voc� pode seguir pela via leste e oeste.
+   Você está sobre as águas do pequeno rio que corre a norte do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis.  Você pode seguir pela via leste e oeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D1
 ~
 ~
@@ -592,108 +595,109 @@ D3
 S
 #11324
 A Oficina de Twashtri~
-   Voc� est� na oficina em que alguns dos mais fant�sticos artefatos que
-esse mundo j� viu foram forjados.  Twashtri passa a maior parte de seus dias
-aqui, n�o s� idealizando maravilhas, mas realizando-as.  H� todo tipo de
-material aqui: couro, seda, ferro, a�o, bronze, tit�nio, prata, mithril,
-ouro, platina, pedras preciosas e coisas que voc� nunca viu e talvez nem ir�
-ver de novo.  O lugar � bastante arejado, com paredes claras j� enegrecidas
+   Você está na oficina em que alguns dos mais fantásticos artefatos que
+esse mundo já viu foram forjados.  Twashtri passa a maior parte de seus dias
+aqui, não só idealizando maravilhas, mas realizando-as.  Há todo tipo de
+material aqui: couro, seda, ferro, aço, bronze, titânio, prata, mithril,
+ouro, platina, pedras preciosas e coisas que você nunca viu e talvez nem irá
+ver de novo.  O lugar é bastante arejado, com paredes claras já enegrecidas
 pelas atividades da oficina, e teto alto de onde pendem dezenas de correntes
-em que projetos e objetos s�o pendurados.  As fornalhas ardem
-incessantemente, os martelos n�o param nunca de bater, o metal nunca para de
-bilhar aqui.  N�o � algo que costume ser bonito, mas a oficina do velho
-artes�o consegue ser.
+em que projetos e objetos são pendurados.  As fornalhas ardem
+incessantemente, os martelos não param nunca de bater, o metal nunca para de
+bilhar aqui.  Não é algo que costume ser bonito, mas a oficina do velho
+artesão consegue ser.
 ~
-113 204 0 0 0 0
-D6
-~
-~
-0 -1 11325
+113.3 dchg 0
+OL 101
 D9
 ~
 ~
 0 -1 11326
+D6
+~
+~
+0 -1 11325
 S
 #11325
 O Arsenal de Twashtri~
-   Voc� est� na loja de armas de Bhogavati.  Ela �, nada mais nada menos,
-abastecida pela oficina de Twashtri, um dos mais famosos artes�os que j�
-existiram.  A loja � bastante grande por fora, mas por dentro voc� a acha
-bastante pequena: a quantidade de armas espalhadas por ela � grande demais
-para seu tamanho.  H� espadas presas �s paredes, lan�as dos mais variados
-tipos fincadas em grandes suportes do ch�o, machados pendendo de correntes
+   Você está na loja de armas de Bhogavati.  Ela é, nada mais nada menos,
+abastecida pela oficina de Twashtri, um dos mais famosos artesãos que já
+existiram.  A loja é bastante grande por fora, mas por dentro você a acha
+bastante pequena: a quantidade de armas espalhadas por ela é grande demais
+para seu tamanho.  Há espadas presas às paredes, lanças dos mais variados
+tipos fincadas em grandes suportes do chão, machados pendendo de correntes
 no teto, adagas em grandes prateleiras, chicotes presos a postes de ferros,
-ma�as em grandes ba�s...  Infelizmente, pela qualidade dos itens ser
-excepcional, os pre�os tamb�m o s�o.  
+maças em grandes baús...  Infelizmente, pela qualidade dos itens ser
+excepcional, os preços também o são.  
    A sudeste parece ficar a oficina e a oeste a Via Norte.
 ~
-113 76 0 0 0 0
-D3
-~
-~
-0 -1 11322
+113.3 cdg 0
 D8
 ~
 ~
 0 -1 11324
-S
-#11326
-A Armoraria de Twashtri~
-   Voc� est� numa ampla loja repleta dos mais variados tipos de armaduras e
-vestimentas.  Abastecida pela oficina do grande artes�o Twashtri, essa loja
-oferece artigos de fant�stica qualidade e variedade surpreendente, por
-pre�os a altura.  H� armaduras completas montadas por todos os lados, cada
-uma visivelmente diferente da outra.  Escudos de tipos j� vistos por voc�, e
-outros de estilos que lhe s�o desconhecidos, foram pendurados nas paredes,
-enquanto grandes ba�s contendo partes avulsas de armaduras, como manoplas,
-gorjais e perneiras brilham � luz de tochas de fogo branco.  Em algumas
-estantes voc� v� artigos mais delicados como camisas de seda, luvas de
-algod�o leve e cal�as de tecido, provando a variedade dos artigos oferecidos
-pela armoraria.
-   A nordeste parece ficar a oficina e a oeste a Via Norte.
-~
-113 204 0 0 0 0
 D3
 ~
 ~
-0 -1 11321
+0 -1 11322
+S
+#11326
+A Armoraria de Twashtri~
+   Você está numa ampla loja repleta dos mais variados tipos de armaduras e
+vestimentas.  Abastecida pela oficina do grande artesão Twashtri, essa loja
+oferece artigos de fantástica qualidade e variedade surpreendente, por
+preços a altura.  Há armaduras completas montadas por todos os lados, cada
+uma visivelmente diferente da outra.  Escudos de tipos já vistos por você, e
+outros de estilos que lhe são desconhecidos, foram pendurados nas paredes,
+enquanto grandes baús contendo partes avulsas de armaduras, como manoplas,
+gorjais e perneiras brilham à luz de tochas de fogo branco.  Em algumas
+estantes você vê artigos mais delicados como camisas de seda, luvas de
+algodão leve e calças de tecido, provando a variedade dos artigos oferecidos
+pela armoraria.
+   A nordeste parece ficar a oficina e a oeste a Via Norte.
+~
+113.3 dhcg 0
 D7
 ~
 ~
 0 -1 11324
+D3
+~
+~
+0 -1 11321
 S
 #11327
 A Joalheria~
-   Voc� est� em uma loja de fachada bastante discreta, t�o discreta que nem
-apresenta um nome.  Por dentro ela parece ser um longo corredor que cont�m
-dois balc�es de madeira, ao lado das paredes mais compridas, que possuem um
-tampo de cristal reluzente, deixando � mostra as belas pe�as confeccionadas
-na Cidade das J�ias.  O teto, de madeira, � um pouco baixo, dando a
-impress�o de que a loja foi constru�da para parecer mais simples do que �.
+   Você está em uma loja de fachada bastante discreta, tão discreta que nem
+apresenta um nome.  Por dentro ela parece ser um longo corredor que contém
+dois balcões de madeira, ao lado das paredes mais compridas, que possuem um
+tampo de cristal reluzente, deixando à mostra as belas peças confeccionadas
+na Cidade das Jóias.  O teto, de madeira, é um pouco baixo, dando a
+impressão de que a loja foi construída para parecer mais simples do que é.
 Enormes candelabros de ferro negro, completamente sem adornos, iluminam
-apenas o local em que as j�ias se encontram: tudo aqui parece ser feito para
-que as j�ias pare�am ainda mais majestosa do que s�o, se isso for poss�vel.
+apenas o local em que as jóias se encontram: tudo aqui parece ser feito para
+que as jóias pareçam ainda mais majestosa do que são, se isso for possível.
 ~
-113 204 0 0 0 0
+113.3 dchg 0
 D1
 ~
 ~
 0 -1 11320
 S
 #11328
-O Caldeir�o Dourado~
-   Voc� est� na velha loja de artefatos m�gicos de Bhogavati.  Ela recebe
-seu nome pois, se reparar bem, a forma do estabelecimento imita � de um
-grande caldeir�o, tendo as paredes tanto de dentro quanto de fora pintadas
-de um amarelo escurecido que cintila levemente.  Dentro da loja h� um enorme
-balc�o que acompanha a forma arredondada da constru��o, tomando quase toda a
-circunfer�ncia ao lado das paredes.  No centro, sobre um grande tapete
-estampado, h� estantes que cont�m livros m�gicos, estojos com varinhas,
-bast�es m�gicos, al�m de pergaminhos, po��es e o que mais for
-poss�vel. 
+O Caldeirão Dourado~
+   Você está na velha loja de artefatos mágicos de Bhogavati.  Ela recebe
+seu nome pois, se reparar bem, a forma do estabelecimento imita à de um
+grande caldeirão, tendo as paredes tanto de dentro quanto de fora pintadas
+de um amarelo escurecido que cintila levemente.  Dentro da loja há um enorme
+balcão que acompanha a forma arredondada da construção, tomando quase toda a
+circunferência ao lado das paredes.  No centro, sobre um grande tapete
+estampado, há estantes que contém livros mágicos, estojos com varinhas,
+bastões mágicos, além de pergaminhos, poções e o que mais for
+possível. 
    A leste fica a Via Norte.
 ~
-113 204 0 0 0 0
+113.3 dchg 0
 D1
 ~
 ~
@@ -701,15 +705,15 @@ D1
 S
 #11329
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias. As l�mpidas �guas douradas
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias. As límpidas águas douradas
 encontram caminho para norte, sul e leste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -725,18 +729,18 @@ D2
 S
 #11330
 A Via Leste~
-   Voc� est� sobre as �guas do pequeno rio que corre a leste do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis.  Voc� pode seguir pela via indo leste,
-voltar para o templo a oeste, se aproximar da entrada para a Congrega��o de
-Cl�rigos de Bhogavati indo norte, ou seguir em dire��o a uma casa de ar
+   Você está sobre as águas do pequeno rio que corre a leste do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis.  Você pode seguir pela via indo leste,
+voltar para o templo a oeste, se aproximar da entrada para a Congregação de
+Clérigos de Bhogavati indo norte, ou seguir em direção a uma casa de ar
 furtivo, a sul.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -756,17 +760,17 @@ D3
 S
 #11331
 A Via Leste~
-   Voc� est� sobre as �guas do pequeno rio que corre a leste do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-   As belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis.  Voc� pode seguir pela via indo leste, oeste
-ou sul, ou ainda ir em dire��o ao norte, onde fica a Confraria de Druidas de
+   Você está sobre as águas do pequeno rio que corre a leste do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+   As belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis.  Você pode seguir pela via indo leste, oeste
+ou sul, ou ainda ir em direção ao norte, onde fica a Confraria de Druidas de
 Bhogavati.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -786,17 +790,17 @@ D3
 S
 #11332
 A Via Leste~
-   Voc� est� sobre as �guas do pequeno rio que corre a leste do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis.  A via segue leste oeste, sendo poss�vel
-chegar a norte � Associa��o de Guerreiros de Bhogavati e a sul para uma
+   Você está sobre as águas do pequeno rio que corre a leste do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis.  A via segue leste oeste, sendo possível
+chegar a norte à Associação de Guerreiros de Bhogavati e a sul para uma
 filial da Irmandade dos Magos.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -816,16 +820,16 @@ D3
 S
 #11333
 A Via Leste~
-   Voc� est� sobre as �guas do pequeno rio que corre a leste do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis.  A via segue nas dire��es norte, sul, leste
+   Você está sobre as águas do pequeno rio que corre a leste do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis.  A via segue nas direções norte, sul, leste
 e oeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -845,15 +849,15 @@ D3
 S
 #11334
 A Via Leste~
-   Voc� est� sobre as �guas do pequeno rio que corre a leste do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis. A via segue oeste, norte e sul.
+   Você está sobre as águas do pequeno rio que corre a leste do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis. A via segue oeste, norte e sul.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -868,105 +872,107 @@ D3
 0 -1 11333
 S
 #11335
-A Entrada da Congrega��o de Cl�rigos de Bhogavati~
-   Voc� est� em frente � uma simples casa de madeira pintada de branco
-impec�vel com portas e janelas de brilhante azul-escuro.  Um pequeno jardim
-floresce �s margens da via leste, que est� a sul.  A casa fica a norte.
+A Entrada da Congregação de Clérigos de Bhogavati~
+   Você está em frente à uma simples casa de madeira pintada de branco
+impecável com portas e janelas de brilhante azul-escuro.  Um pequeno jardim
+floresce às margens da via leste, que está a sul.  A casa fica a norte.
 ~
-113 76 0 0 0 1
+113.3 gcd 1
 D0
-A Congrega��o fica ali.
+A Congregação fica ali.
 ~
 porta~
-0 2 11336
+:n 2 a porta
+ag 2 11336
 D2
 ~
 ~
 0 -1 11330
 S
 #11336
-A Congrega��o de Cl�rigos de Bhogavati~
-   Voc� est� dentro da r�stica casinha branca que abriga a Congrega��o de
-Cl�rigos de Bhogavati.  Apesar da cidade ser famosa por suas riquezas, pouca
-coisa de valor h� na congrega��o: algumas belas pinturas religiosas nas
+A Congregação de Clérigos de Bhogavati~
+   Você está dentro da rústica casinha branca que abriga a Congregação de
+Clérigos de Bhogavati.  Apesar da cidade ser famosa por suas riquezas, pouca
+coisa de valor há na congregação: algumas belas pinturas religiosas nas
 paredes, uma grande estante de livros e um pequeno altar feito de ouro.  O
-ambiente � muito calmo, sendo poss�vel recuperar suas for�as e sua f� apenas
+ambiente é muito calmo, sendo possível recuperar suas forças e sua fé apenas
 estando aqui por alguns momentos.  A entrada fica a sul.
 ~
-113 76 0 0 0 0
+113.3 gcd 0
 D2
-A entrada da Congrega��o fica ali.
+A entrada da Congregação fica ali.
 ~
 porta~
-0 2 11335
+:n 2 a porta
+ag 2 11335
 S
 #11337
 A Entrada da Sociedade de Ladinos~
-   Voc� est� dentro de uma grande constru��o de apar�ncia suspeita.  N�o que
-voc� tenha algo contra ladinos, mas os quer bem longe de seu ouro e qualquer
-outro pertence!  Aqui � tudo bastante escuro, sendo que a �nica ilumina��o
-que h� vem do crepitante fogo de uma pequena lareira.  Sua entrada parece
-ter chamado mais aten��o do que voc� gostaria, pois agora indiv�duos
-encapuzados ou de face oculta pela escurid�o cochicham enquanto o examinam,
-apontando para voc�.  A sul fica o cora��o da Sociedade, enquanto a norte
+   Você está dentro de uma grande construção de aparência suspeita.  Não que
+você tenha algo contra ladinos, mas os quer bem longe de seu ouro e qualquer
+outro pertence!  Aqui é tudo bastante escuro, sendo que a única iluminação
+que há vem do crepitante fogo de uma pequena lareira.  Sua entrada parece
+ter chamado mais atenção do que você gostaria, pois agora indivíduos
+encapuzados ou de face oculta pela escuridão cochicham enquanto o examinam,
+apontando para você.  A sul fica o coração da Sociedade, enquanto a norte
 corre a via leste.
 ~
-113 77 0 0 0 0
-D0
-~
-~
-0 -1 11330
+113.3 agcd 0
 D2
 ~
 ~
 0 -1 11338
+D0
+~
+~
+0 -1 11330
 S
 #11338
 A Sociedade de Ladinos~
-   Voc� est� no centro do local onde os ladinos da regi�o (ou visitantes) se
-encontram.  A ilumina��o aqui consegue ser pior que a da entrada, deixando-o
-muito vulner�vel � a��o de um eficiente ladr�o (e aqui eles s�o muitos): s�o
+   Você está no centro do local onde os ladinos da região (ou visitantes) se
+encontram.  A iluminação aqui consegue ser pior que a da entrada, deixando-o
+muito vulnerável à ação de um eficiente ladrão (e aqui eles são muitos): são
 apenas quatro tochas, duas ao lado da passagem para o local, uma na parede
 leste e outra a oeste.  Alguns bancos de madeiras foram dispostos em volta
-do centro da sala, facilitando a conversa em uma eventual reuni�o.
+do centro da sala, facilitando a conversa em uma eventual reunião.
 ~
-113 77 0 0 0 0
+113.3 agcd 0
 D0
 ~
 ~
 0 -1 11337
 S
 #11339
-A Entrada para a Associa��o de Guerreiros de Bhogavati~
-   Esta � a entrada para a Associa��o de Guerreiros de Bhogavati, que se
-encontra em uma edifica��o ampla, de apenas um c�modo, maior que um sal�o de
-grande pal�cio.  As paredes e ch�o s�o de pedra, esta cinzenta enquanto
-aquela � brancas.  A ilumina��o se d� por tr�s lustres de ferro
+A Entrada para a Associação de Guerreiros de Bhogavati~
+   Esta é a entrada para a Associação de Guerreiros de Bhogavati, que se
+encontra em uma edificação ampla, de apenas um cômodo, maior que um salão de
+grande palácio.  As paredes e chão são de pedra, esta cinzenta enquanto
+aquela é brancas.  A iluminação se dá por três lustres de ferro
 trabalhado cobertos de centenas de velas, que pendem do alto teto, e por
-enormes candelabros fixados �s paredes.  Aqui os guerreiros parecem parar
-apenas para descansar ou conversar, sentados em poltronas confort�veis,
-enquanto a oeste eles reproduzem o que um guerreiro faz t�o bem.
+enormes candelabros fixados às paredes.  Aqui os guerreiros parecem parar
+apenas para descansar ou conversar, sentados em poltronas confortáveis,
+enquanto a oeste eles reproduzem o que um guerreiro faz tão bem.
 ~
-113 76 0 0 0 0
-D2
-~
-~
-0 -1 11332
+113.3 gcd 0
 D3
 ~
 ~
 0 -1 11340
+D2
+~
+~
+0 -1 11332
 S
 #11340
-O Centro da Associa��o de Guerreiros~
-   Voc� est� bem no centro da Associa��o, um espa�o amplo, quadrado, onde os
+O Centro da Associação de Guerreiros~
+   Você está bem no centro da Associação, um espaço amplo, quadrado, onde os
 guerreiros promovem pequenos duelos, como treinamento, praticam luta ou se
-divertem com jogos de guerra.  Baixos postes de ferro delimitam a regi�o do
-centro, havendo atr�s deles uma s�rie de cadeiras e bancos para aqueles que
-querem assistir o que ali ocorre ou para os que est�o se exercitando e
+divertem com jogos de guerra.  Baixos postes de ferro delimitam a região do
+centro, havendo atrás deles uma série de cadeiras e bancos para aqueles que
+querem assistir o que ali ocorre ou para os que estão se exercitando e
 querem descansar um pouco.
 ~
-113 76 0 0 0 0
+113.3 gcd 0
 D1
 ~
 ~
@@ -974,13 +980,13 @@ D1
 S
 #11341
 A Entrada da Irmandade de Magos em Bhogavati~
-   Voc� est� num grande terra�o fora da irmandade.  De pedra
-verde-acinzentada, ele ocupa toda a frente de uma constru��o, da mesma
+   Você está num grande terraço fora da irmandade.  De pedra
+verde-acinzentada, ele ocupa toda a frente de uma construção, da mesma
 pedra, cuja fachada imita a de uma torre de castelo com suas ameias.  A alta
-porta de madeira, de duas folhas, est� aberta, por�m n�o se v� o que h� no
-interior do lugar.  O terra�o desce at� a via leste por norte.
+porta de madeira, de duas folhas, está aberta, porém não se vê o que há no
+interior do lugar.  O terraço desce até a via leste por norte.
 ~
-113 76 0 0 0 1
+113.3 gcd 1
 D0
 ~
 ~
@@ -988,38 +994,40 @@ D0
 D1
 ~
 porta portas~
-0 2 11342
+:n 2 uma das portas
+ag 2 11342
 S
 #11342
 A Irmandade dos Magos em Bhogavati~
-   Voc� est� no interior da Irmandade dos Magos em Bhogavati.  Aqui s�o as
-paredes de pedra verde-acizentada, o ch�o, muito limpo, � de madeira negra,
-que tamb�m est� nas resistentes vigas qe atravessam o teto.  H� grandes
+   Você está no interior da Irmandade dos Magos em Bhogavati.  Aqui são as
+paredes de pedra verde-acizentada, o chão, muito limpo, é de madeira negra,
+que também está nas resistentes vigas qe atravessam o teto.  Há grandes
 tochas, ardendo em variadas cores, presos em pesados suportes de ferro ao
 lado das paredes e pilares, assim como candelabros sobre agumas mesas de
-carvalho espalhadas pelo lugar.  Em um canto h� uma grande estante
+carvalho espalhadas pelo lugar.  Em um canto há uma grande estante
 abarrotada de livros, enquanto em outro parecem estar expostas obras que
 retratam membros ilustres da Irmandade.
 ~
-113 76 0 0 0 0
+113.3 gcd 0
 D3
 ~
 porta portas~
-0 2 11341
+:n 2 uma das portas
+ag 2 11341
 S
 #11343
 A Via Sul~
-   Voc� est� sobre as �guas do pequeno rio que corre a sul do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis.  A via continua a sul, o templo fica a
-norte, havendo ainda a oeste um grande barco ancorado em uma ramifica��o do
+   Você está sobre as águas do pequeno rio que corre a sul do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis.  A via continua a sul, o templo fica a
+norte, havendo ainda a oeste um grande barco ancorado em uma ramificação do
 rio.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1035,16 +1043,16 @@ D3
 S
 #11344
 A Via Sul~
-   Voc� est� sobre as �guas do pequeno rio que corre a sul do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis. A via continua a norte, sul e leste,
-e a loja de m�sica Sublime M�sica fica a oeste.
+   Você está sobre as águas do pequeno rio que corre a sul do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis. A via continua a norte, sul e leste,
+e a loja de música Sublime Música fica a oeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1064,16 +1072,16 @@ D3
 S
 #11345
 A Via Sul~
-   Voc� est� sobre as �guas do pequeno rio que corre a sul do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis. A via segue norte, sul e oeste, havendo
-a leste uma pequena constru��o sobre um bra�o do rio.
+   Você está sobre as águas do pequeno rio que corre a sul do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis. A via segue norte, sul e oeste, havendo
+a leste uma pequena construção sobre um braço do rio.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1093,15 +1101,15 @@ D3
 S
 #11346
 A Via Sul~
-   Voc� est� sobre as �guas do pequeno rio que corre a sul do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis. A via segue norte, leste e oeste.
+   Você está sobre as águas do pequeno rio que corre a sul do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis. A via segue norte, leste e oeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1116,17 +1124,17 @@ D3
 0 -1 11363
 S
 #11347
-Servi�o Postal~
-   Voc� est� dentro de uma grande barco ancorado ao lado da via sul de
-Bhogavati.  Aqui funciona o Servi�o Postal, de onde partem velozes
+Serviço Postal~
+   Você está dentro de uma grande barco ancorado ao lado da via sul de
+Bhogavati.  Aqui funciona o Serviço Postal, de onde partem velozes
 mensageiros para entregar suas cartas e mensagens e onde chegam os mais
-diferentes agentes postais com uma infinidade de entregas e not�cias.  O
+diferentes agentes postais com uma infinidade de entregas e notícias.  O
 barco, de madeira marrom-dourada muito lisa, se assemelha a uma imensa canoa
 que possui uma grande cabine para armazenar coisas e alguns mastros sem
-velas.  Um aviso foi preso a um dos mastros (que parece in�til), havendo ao
-seu lado uma bonita mesa de madeira, tamb�m marrom-dourada.
+velas.  Um aviso foi preso a um dos mastros (que parece inútil), havendo ao
+seu lado uma bonita mesa de madeira, também marrom-dourada.
 ~
-113 204 0 0 0 0
+113.3 cdhg 0
 D1
 ~
 ~
@@ -1134,51 +1142,51 @@ D1
 E
 aviso~
 ,----------------------------------------------------------.
-| Instru��es do Correio:                                   |
+| Instruções do Correio:                                   |
 |                                                          |
-|      Para enviar uma nota a algu�m:                      |
+|      Para enviar uma nota a alguém:                      |
 |         MAIL <nome do jogador>                           |
 |                                                          |
-|      Para verificar se voc� recebeu correspond�cia:      |
+|      Para verificar se você recebeu correspondêcia:      |
 |         CHECK                                            |
 |                                                          |
 |      Para receber sua correspondencia:                   |
 |         RECEIVE                                          |
 |                                                          |
 |         Selos custam 150 moedas por carta                |
-|         Digite 'HELP MAIL' para mais informa��es         |
+|         Digite 'HELP MAIL' para mais informações         |
 `----------------------------------------------------------'
 ~
 S
 #11348
 A Loja de Barcos~
-   Voc� est� em frente a uma pequena constru��o feita sobre um dos bra�os da
+   Você está em frente a uma pequena construção feita sobre um dos braços da
 via sul.  Ela parece ser uma casa de paredes externas forradas de pedras
-arredondadas retirada de leitos de rios, tendo elas apar�ncia de grandes
-gemas douradas talhadas em caboch�o.  Uma larga porta de madeira vermelha
-abre-se de forma a formar um balc�o, com a folha de cima aberta e uma t�bua
-da mesma madeira apoiada sobre a de baixo.  Um grande n�mero de barcos foi
-deixado para fora, bioando no bra�o do rio, sendo presos por firmes cordas
+arredondadas retirada de leitos de rios, tendo elas aparência de grandes
+gemas douradas talhadas em cabochão.  Uma larga porta de madeira vermelha
+abre-se de forma a formar um balcão, com a folha de cima aberta e uma tábua
+da mesma madeira apoiada sobre a de baixo.  Um grande número de barcos foi
+deixado para fora, bioando no braço do rio, sendo presos por firmes cordas
 de fios de dourado bem escurecido
 ~
-113 204 0 0 0 0
+113.3 cdgh 0
 D3
 ~
 ~
 0 -1 11345
 S
 #11349
-Sublime M�sica~
-   Voc� est� em uma constru��o de pedra branca cuja entrada, em forma de
-arco, d� diretamente nas �guas da Via Sul.  O seu interior � bastante
+Sublime Música~
+   Você está em uma construção de pedra branca cuja entrada, em forma de
+arco, dá diretamente nas águas da Via Sul.  O seu interior é bastante
 arejado, havendo plantas por todos os lados, inclusive cobrindo as alvas
 paredes.  Sobre baixas estantes de madeira, estas pouco trabalhadas,
-conservando at� mesmo suas folhas, voc� v� belos instrumentos m�sicais
-colocados � venda, t�o bem feitos que s�o como j�ias.  De uma fonte,
-colocada no extremo oeste na loja, � emitida uma suave m�sica que fala sobre
-a beleza da uni�o da luz dos c�us e com as gotas de chuva, o arco-�ris.
+conservando até mesmo suas folhas, você vê belos instrumentos músicais
+colocados à venda, tão bem feitos que são como jóias.  De uma fonte,
+colocada no extremo oeste na loja, é emitida uma suave música que fala sobre
+a beleza da união da luz dos céus e com as gotas de chuva, o arco-íris.
 ~
-113 204 0 0 0 0
+113.3 cdgh 0
 D1
 ~
 ~
@@ -1186,16 +1194,16 @@ D1
 S
 #11350
 A Via Oeste~
-   Voc� est� sobre as �guas do pequeno rio que corre a oeste do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis. O templo fica a leste e a estalagem
+   Você está sobre as águas do pequeno rio que corre a oeste do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis. O templo fica a leste e a estalagem
 Pedra Preciosa a sul. A via, por sua vez, continua a oeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D1
 ~
 ~
@@ -1211,16 +1219,16 @@ D3
 S
 #11351
 A Via Oeste~
-   Voc� est� sobre as �guas do pequeno rio que corre a oeste do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis.  A via parece continuar a sul, leste e
+   Você está sobre as águas do pequeno rio que corre a oeste do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis.  A via parece continuar a sul, leste e
 oeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D1
 ~
 ~
@@ -1236,16 +1244,16 @@ D3
 S
 #11352
 A Via Oeste~
-   Voc� est� sobre as �guas do pequeno rio que corre a oeste do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis. A via segue norte, leste e oeste, estando
+   Você está sobre as águas do pequeno rio que corre a oeste do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis. A via segue norte, leste e oeste, estando
 a sul a taverna Cobra Voando.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1265,16 +1273,16 @@ D3
 S
 #11353
 A Via Oeste~
-   Voc� est� sobre as �guas do pequeno rio que corre a oeste do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis. A via continua a leste e oeste, enquanto a
+   Você está sobre as águas do pequeno rio que corre a oeste do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis. A via continua a leste e oeste, enquanto a
 norte fica a loja do senhor Kalidas.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1290,20 +1298,20 @@ D3
 S
 #11354
 A Pedra Preciosa~
-   Voc� est� em uma aconchegante (se � que alguma coisa naga pode ser
+   Você está em uma aconchegante (se é que alguma coisa naga pode ser
 aconchegante para forasteiros) estalagem que parece ter sida esculpida
 dentro de um gigantesco bloco de pedra avermelhada.  Ela se assemelha a uma
-caverna, muito bem iluminada por archotes dourados, de paredes e ch�o
+caverna, muito bem iluminada por archotes dourados, de paredes e chão
 polido, este muito limpo e cuidado.  Duas mesas de pedra, colocadas cada uma
 num lado da larga entrada arqueada, foram cobertas por finas toalhas brancas
 e enfeitadas com fruteiras cheias, e cercadas ainda por grandes cadeiras de
-pedra com almofadas fofas no assento e encosto.  No ch�o foram colocados
+pedra com almofadas fofas no assento e encosto.  No chão foram colocados
 tapetes redondos de pele muito felpuda, um verdadeiro convita para se andar
-descal�o.  Um largo balc�o de granito negro serve de recep��o para a
+descalço.  Um largo balcão de granito negro serve de recepção para a
 estalagem.
-   A Via Oeste fica a norte, enquanto que o sal�o fica a oeste.
+   A Via Oeste fica a norte, enquanto que o salão fica a oeste.
 ~
-113 140 0 0 0 0
+113.3 dch 0
 D0
 ~
 ~
@@ -1316,16 +1324,16 @@ S
 #11355
 A Cobra Voando~
    A taverna Cobra Voando, um grande estabelecimento cuja fachada lembra uma
-serpente dando o bote, � um lugar bastante movimentado.  Suas paredes de
-pedra verde-escura, que s�o encurvadas para imitar o corpo uma serpente, s�o
-repletas de inscri��es que representam can��es apropriadas para acompanhar
-canecas de uma boa cerveja e amigos dando boas risadas.  H� compridas mesas
+serpente dando o bote, é um lugar bastante movimentado.  Suas paredes de
+pedra verde-escura, que são encurvadas para imitar o corpo uma serpente, são
+repletas de inscrições que representam canções apropriadas para acompanhar
+canecas de uma boa cerveja e amigos dando boas risadas.  Há compridas mesas
 por todos os lados, estas acompanhadas de bancos e cadeiras de madeira.  Um
-grande balc�o, tamb�m de madeira, fica um pouco � frente da parede sul,
-oposta � entrada.  Sobre a entrada voc� v� uma enorme inscri��o.
-   A Via Oeste fica a norte, enquanto o sal�o fica a leste.
+grande balcão, também de madeira, fica um pouco à frente da parede sul,
+oposta à entrada.  Sobre a entrada você vê uma enorme inscrição.
+   A Via Oeste fica a norte, enquanto o salão fica a leste.
 ~
-113 140 0 0 0 0
+113.3 dhc 0
 D0
 ~
 ~
@@ -1335,28 +1343,28 @@ D1
 ~
 0 -1 11356
 E
-entrada enorme inscri��o~
-Est� escrito, sobre a soleira da grande porta:
-"Taverna Cobra Voando: bons clientes s� saem daqui depois de verem uma."
+entrada enorme inscricao~
+Está escrito, sobre a soleira da grande porta:
+"Taverna Cobra Voando: bons clientes só saem daqui depois de verem uma."
 ~
-S
+S 
 #11356
-O Sal�o~
-   Voc� est� num sal�o.  Isso: num sal�o.  Ele n�o tem um nome ou uma
-especifica��o, mas acabou sendo usado para quem quiser tirar uns cochilos e
-n�o quer pagar a estalagem e para aqueles que desejam jogar sossegadamente
-cartas ou dardos.  O sal�o em si � um amplo c�modo feito de pedras, sendo
-uma esp�cie de transi��o da forma de serpente da taverna e da estranha
-caverna que � a estalagem, tendo paredes de blocos de pedra verde com
-detalhes avermelhados.  Confort�veis poltronos reclin�veis e alguns sof�s
+O Salão~
+   Você está num salão.  Isso: num salão.  Ele não tem um nome ou uma
+especificação, mas acabou sendo usado para quem quiser tirar uns cochilos e
+não quer pagar a estalagem e para aqueles que desejam jogar sossegadamente
+cartas ou dardos.  O salão em si é um amplo cômodo feito de pedras, sendo
+uma espécie de transição da forma de serpente da taverna e da estranha
+caverna que é a estalagem, tendo paredes de blocos de pedra verde com
+detalhes avermelhados.  Confortáveis poltronos reclináveis e alguns sofás
 foram dispostos quase que aleatoreamente no lugar, tornando-o
-aconchegantemente bagun�ado.  Mesas quadradas e redondas, com toalhas de
-feltro, foram colocadas na maior parte da regi�o central da sala, enquanto
-quadros com alvos para dardos foram pindurados nas paredes.  Al�m deles, h�
+aconchegantemente bagunçado.  Mesas quadradas e redondas, com toalhas de
+feltro, foram colocadas na maior parte da região central da sala, enquanto
+quadros com alvos para dardos foram pindurados nas paredes.  Além deles, há
 quadros de baralhos de diferentes partes do mundo.  A leste fica a Pedra
 Preciosa, e a oeste a Cobra Voando.
 ~
-113 136 0 0 0 0
+113.3 dh 0
 D1
 ~
 ~
@@ -1368,15 +1376,15 @@ D3
 S
 #11357
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias.  As �guas encontram sa�da
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para sul, sudeste e oeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D2
 ~
 ~
@@ -1392,63 +1400,63 @@ D8
 S
 #11358
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias.  As �guas encontram sa�da
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para noroeste, sudeste e sudoeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D6
 ~
 ~
 0 -1 11357
-D8
-~
-~
-0 -1 11359
 D9
 ~
 ~
 0 -1 11376
+D8
+~
+~
+0 -1 11359
 S
 #11359
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias.  As �guas encontram sa�da
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para noroeste, sul e oeste.
 ~
-113 131136 0 0 0 7
-D2
-~
-~
-0 -1 11334
-D3
-~
-~
-0 -1 11375
+113.3 gr 7
 D6
 ~
 ~
 0 -1 11358
+D3
+~
+~
+0 -1 11375
+D2
+~
+~
+0 -1 11334
 S
 #11360
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias.  As �guas encontram sa�da
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para norte, oeste e sudoeste, passando por baixo uma grande ponte.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1458,48 +1466,48 @@ D3
 ~
 0 -1 11374
 D9
-Por ali voc� passa por baixo de uma ponte.
+Por ali você passa por baixo de uma ponte.
 ~
 ~
 0 -1 11362
 S
 #11361
-Um P�tio Fora do Templo~
-   Voc� est� em um pequeno p�tio gramado fora do templo.  A �gua das vias
+Um Pátio Fora do Templo~
+   Você está em um pequeno pátio gramado fora do templo.  A água das vias
 que passam por Bhogavati encostam em sua borda, mas uma longa ponte que liga
-esse p�tio at� a sa�da sudeste da cidade passa por cima dela, formando uma
-das �nicas vias por "terra" daqui.  Voc� pode entrar no templo seguindo
-sul, leste ou sudeste, al�m de seguir pela ponte noroeste.
+esse pátio até a saída sudeste da cidade passa por cima dela, formando uma
+das únicas vias por "terra" daqui.  Você pode entrar no templo seguindo
+sul, leste ou sudeste, além de seguir pela ponte noroeste.
 ~
-113 68 0 0 0 1
-D1
-~
-~
-0 -1 11316
+113.3 cg 1
 D2
 ~
 ~
 0 -1 11319
-D6
+D1
 ~
 ~
-0 -1 11364
+0 -1 11316
 D8
 ~
 ~
 0 -1 11315
+D6
+~
+~
+0 -1 11364
 S
 #11362
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias.  As �guas encontram sa�da
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para norte, oeste e nordeste, passando por baixo uma grande ponte.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1509,22 +1517,27 @@ D3
 ~
 0 -1 11346
 D7
-Por ali voc� passa por baixo de uma ponte.
+Por ali você passa por baixo de uma ponte.
 ~
 ~
 0 -1 11360
 S
 #11363
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias.  As �guas correm por norte,
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias.  As águas correm por norte,
 leste e passam debaixo de uma ponte a noroeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
+D6
+Por ali você passa por baixo de uma ponte.
+~
+~
+0 -1 11365
 D0
 ~
 ~
@@ -1533,26 +1546,21 @@ D1
 ~
 ~
 0 -1 11346
-D6
-Por ali voc� passa por baixo de uma ponte.
-~
-~
-0 -1 11365
 S
 #11364
 A Ponte Noroeste~
-   Voc� est� andando sobre a ponte noroeste de Bhogavati, uma bela constru��o
+   Você está andando sobre a ponte noroeste de Bhogavati, uma bela construção
 em lisa pedra branca, cuja forma lembra uma longa serpente estendida sobre
 um arco.  As laterais da ponte foram cobertas com placas de ouro trabalhado,
 tendo estas pedras de todos os tipos cravejadas, formando lindos e preciosos
-desenhos.  A vista aqui � muito bela, podendo-se ver as principais vias da
-cidade, com seus leitos prateados e multicolores flores, al�m de seus
-dourados afluentes.  As constru��es tamb�m chamam sua aten��o, sendo todas
+desenhos.  A vista aqui é muito bela, podendo-se ver as principais vias da
+cidade, com seus leitos prateados e multicolores flores, além de seus
+dourados afluentes.  As construções também chamam sua atenção, sendo todas
 elas muito diferentes entre si, mas sempre utilizando os metais e pedras
-preciosas t�o caracter�sticos do lugar.
+preciosas tão característicos do lugar.
    A ponte segue sudeste e noroeste.
 ~
-113 68 0 0 0 1
+113.3 cg 1
 D6
 ~
 ~
@@ -1564,16 +1572,16 @@ D8
 S
 #11365
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias.  As l�mpidas �guas douradas
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias.  As límpidas águas douradas
 encontram caminho livre para norte e leste, passando ainda por baixo de uma
 grande ponte, a sudeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1583,22 +1591,22 @@ D1
 ~
 0 -1 11368
 D8
-Por ali voc� passa por baixo de uma ponte.
+Por ali você passa por baixo de uma ponte.
 ~
 ~
 0 -1 11363
 S
 #11366
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias. As l�mpidas �guas douradas
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias. As límpidas águas douradas
 encontram caminho para sul, leste e oeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D1
 ~
 ~
@@ -1614,16 +1622,16 @@ D3
 S
 #11367
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias. As l�mpidas �guas douradas
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias. As límpidas águas douradas
 encontram caminho para norte, sul e oeste.
 ~
-113 131136 0 0 0 7
-D0
+113.3 gr 7
+D0 
 ~
 ~
 0 -1 11329
@@ -1638,15 +1646,15 @@ D3
 S
 #11368
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias. As l�mpidas �guas douradas
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias. As límpidas águas douradas
 encontram caminho para leste, oeste, norte e sul.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1666,15 +1674,15 @@ D3
 S
 #11369
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias. As l�mpidas �guas douradas
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias. As límpidas águas douradas
 encontram caminho para leste e oeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D1
 ~
 ~
@@ -1686,15 +1694,15 @@ D3
 S
 #11370
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias. As �guas do pequeno rio
-se derramam nas dire��es norte, sul e sudeste.
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias. As águas do pequeno rio
+se derramam nas direções norte, sul e sudeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1710,59 +1718,59 @@ D8
 S
 #11371
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias.  As �guas do pequeno rio
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias.  As águas do pequeno rio
 seguem por leste e noroeste.
 ~
-113 131136 0 0 0 7
-D1
-~
-~
-0 -1 11345
+113.3 gr 7
 D6
 ~
 ~
 0 -1 11370
+D1
+~
+~
+0 -1 11345
 S
 #11372
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias.  As �guas do afluente segue
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias.  As águas do afluente segue
 oeste, sul e norte.
 ~
-113 131136 0 0 0 7
-D0
-~
-~
-0 -1 11373
-D2
-~
-~
-0 -1 11362
+113.3 gr 7
 D3
 ~
 ~
 0 -1 11344
+D2
+~
+~
+0 -1 11362
+D0
+~
+~
+0 -1 11373 
 S
 #11373
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias.  As �guas do rio encontram
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias.  As águas do rio encontram
 caminho para norte, sul e leste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1778,15 +1786,15 @@ D2
 S
 #11374
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias. As �guas do rio se espalham
-entre a dire��o norte, sudeste e leste.
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias. As águas do rio se espalham
+entre a direção norte, sudeste e leste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1802,15 +1810,15 @@ D8
 S
 #11375
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias. As �guas do rio se espalham
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias. As águas do rio se espalham
 por oeste, leste e sul.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D1
 ~
 ~
@@ -1826,15 +1834,15 @@ D3
 S
 #11376
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias. As �guas encontram caminho
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias. As águas encontram caminho
 para norte, nordeste, leste e sudoeste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1854,15 +1862,15 @@ D9
 S
 #11377
 A Via Oeste~
-   Voc� est� sobre as �guas do pequeno rio que corre a oeste do templo a
-Sesha.  Ele �, na verdade, uma rua um tanto ex�tica com seu leito de prata e
-as belas ninf�ias coloridas que exalam delicioso perfume.  Ainda sobre
-perfumes, voc� repara que Bhogavati, ao contr�rio de outras cidades
-atravessadas por rios, n�o possui nenhum cheiro desagrad�vel (exceto o seu,
-� claro...), e sim � repleta de aromas que v�o do mais suave ao mais
-pungente, mas todos agrad�veis. A via segue norte, sul e leste.
+   Você está sobre as águas do pequeno rio que corre a oeste do templo a
+Sesha.  Ele é, na verdade, uma rua um tanto exótica com seu leito de prata e
+as belas ninféias coloridas que exalam delicioso perfume.  Ainda sobre
+perfumes, você repara que Bhogavati, ao contrário de outras cidades
+atravessadas por rios, não possui nenhum cheiro desagradável (exceto o seu,
+é claro...), e sim é repleta de aromas que vão do mais suave ao mais
+pungente, mas todos agradáveis. A via segue norte, sul e leste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
 D0
 ~
 ~
@@ -1878,35 +1886,35 @@ D2
 S
 #11378
 A Entrada da Confraria dos Druidas de Bhogavati~
-   �s margens da Via Leste, a entrada da confraria � um bem-cuidado jardim
-repleto de variedades com propriedades m�gicas e curativas de plantas.
+   Às margens da Via Leste, a entrada da confraria é um bem-cuidado jardim
+repleto de variedades com propriedades mágicas e curativas de plantas.
 Pequenos animais passam sossegadamente pelo jardim, entre eles esquilos,
-passarinhos, jovens cervos, al�m de alguns que foram trazidos aqui para se
-curarem de ferimentos ou doen�as.  Um grande c�rculo de pedras, mon�litos
-cinzentos com tra�os de musgos e liquens, se ergue, digno de rever�ncia, a
+passarinhos, jovens cervos, além de alguns que foram trazidos aqui para se
+curarem de ferimentos ou doenças.  Um grande círculo de pedras, monólitos
+cinzentos com traços de musgos e liquens, se ergue, digno de reverência, a
 norte.  A Via Leste corre passando por sul.
 ~
-113 76 0 0 0 1
-D0
-~
-~
-0 -1 11379
+113.3 gcd 1
 D2
 ~
 ~
 0 -1 11331
+D0
+~
+~
+0 -1 11379
 S
 #11379
 A Confraria dos Druidas~
-   Voc� est� dentro de um c�rculo de enormes e pesadas pedras cinzentas
+   Você está dentro de um círculo de enormes e pesadas pedras cinzentas
 encaixadas em fendas cavadas na terra coberta por gramado.  Uma grande mesa,
 da mesma pedra, ocupa o exato centro do monumento, parecendo um altar
-circular cujo uso n�o � muito claro.  H� quatro altos postes de a�o em volta
-do altar, cada um com cerca de vinte cent�metros de di�metro, voltados para
-os pontos cardeais, iluminando o local quando necess�rio.  H� sempre um
-experiente druida aqui, zelando pelo pequeno santu�rio.
+circular cujo uso não é muito claro.  Há quatro altos postes de aço em volta
+do altar, cada um com cerca de vinte centímetros de diâmetro, voltados para
+os pontos cardeais, iluminando o local quando necessário.  Há sempre um
+experiente druida aqui, zelando pelo pequeno santuário.
 ~
-113 76 0 0 0 2
+113.3 gcd 2
 D2
 ~
 ~
@@ -1914,18 +1922,18 @@ D2
 S
 #11380
 A Ponte Noroeste~
-   Voc� est� andando sobre a ponte noroeste de Bhogavati, uma bela constru��o
+   Você está andando sobre a ponte noroeste de Bhogavati, uma bela construção
 em lisa pedra branca, cuja forma lembra uma longa serpente estendida sobre
 um arco.  As laterais da ponte foram cobertas com placas de ouro trabalhado,
 tendo estas pedras de todos os tipos cravejadas, formando lindos e preciosos
-desenhos.  A vista aqui � muito bela, podendo-se ver as principais vias da
-cidade, com seus leitos prateados e multicolores flores, al�m de seus
-dourados afluentes.  As constru��es tamb�m chamam sua aten��o, sendo todas
+desenhos.  A vista aqui é muito bela, podendo-se ver as principais vias da
+cidade, com seus leitos prateados e multicolores flores, além de seus
+dourados afluentes.  As construções também chamam sua atenção, sendo todas
 elas muito diferentes entre si, mas sempre utilizando os metais e pedras
-preciosas t�o caracter�sticos do lugar.
+preciosas tão característicos do lugar.
    A ponte segue sudeste e noroeste.
 ~
-113 68 0 0 0 1
+113.3 cg 1
 D6
 ~
 ~
@@ -1937,15 +1945,19 @@ D8
 S
 #11381
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias.  As �guas encontram sa�da
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para nordeste, sob uma grande ponte, a leste e a sul.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
+D7
+~
+~
+0 -1 11382
 D1
 ~
 ~
@@ -1954,22 +1966,22 @@ D2
 ~
 ~
 0 -1 11377
-D7
-~
-~
-0 -1 11382
 S
 #11382
 Um Afluente das Vias~
-   Voc� est� navegando nas calmas �guas de um afluente das principais vias
-de Bhogavati.  Seu leito, ao contr�rio do delas, que � de prata , � dourado
-e, ao inv�s das belas ninf�ias que flutuam e perfumam os pequenos rios de
-prata, h� uma infinidade de folhas douradas boiando sobre as �guas do
-afluente.  Essas folhas t�m odor forte, uma mistura de menta e canela, e
-brilham lindamente �s luzes da Cidade das J�ias.  As �guas encontram sa�da
+   Você está navegando nas calmas águas de um afluente das principais vias
+de Bhogavati.  Seu leito, ao contrário do delas, que é de prata , é dourado
+e, ao invés das belas ninféias que flutuam e perfumam os pequenos rios de
+prata, há uma infinidade de folhas douradas boiando sobre as águas do
+afluente.  Essas folhas têm odor forte, uma mistura de menta e canela, e
+brilham lindamente às luzes da Cidade das Jóias.  As águas encontram saída
 para sudoeste, sob uma grande ponte, a sul e leste.
 ~
-113 131136 0 0 0 7
+113.3 gr 7
+D9
+~
+~
+0 -1 11381
 D1
 ~
 ~
@@ -1978,38 +1990,34 @@ D2
 ~
 ~
 0 -1 11329
-D9
-~
-~
-0 -1 11381
 S
 #11383
-As Antig�idades e Inutilidades do Senhor Kalidas~
-   Voc� est� dentro de uma pequena loja repleta das mais variadas
-mercadorias.  N�o � poss�vel ver as paredes pois elas est�o ocultas por
-quadros, m�veis e estranhos objetos pendurados.  O ch�o, por ser coberto com
-muitos tapetes, � fofo e deve ter pelo menos vinte cent�mentros a mais do
-que originalmente.  O lugar � muito iluminado, pois n�o s� h� diversos
+As Antigüidades e Inutilidades do Senhor Kalidas~
+   Você está dentro de uma pequena loja repleta das mais variadas
+mercadorias.  Não é possível ver as paredes pois elas estão ocultas por
+quadros, móveis e estranhos objetos pendurados.  O chão, por ser coberto com
+muitos tapetes, é fofo e deve ter pelo menos vinte centímentros a mais do
+que originalmente.  O lugar é muito iluminado, pois não só há diversos
 lustres pendendo dos tetos, como lanternas e archotes de diferentes modelos
-espalhados por sobre as estantes, cadeiras, ba�s, cabideiros e tantas e
-tantas caixas que obstruem sua passagem. H� um pequeno balc�o no fundo da loja,
-al�m de uma sa�da a sul, que leva � Via Oeste.
+espalhados por sobre as estantes, cadeiras, baús, cabideiros e tantas e
+tantas caixas que obstruem sua passagem. Há um pequeno balcão no fundo da loja,
+além de uma saída a sul, que leva à Via Oeste.
 ~
-113 76 0 0 0 0
+113.3 dcg 0
 D2
 ~
 ~
 0 -1 11353
 S
 #11384
-Um P�tio Fora do Templo~
-   Voc� est� em um pequeno p�tio gramado fora do templo.  A �gua das vias
+Um Pátio Fora do Templo~
+   Você está em um pequeno pátio gramado fora do templo.  A água das vias
 que passam por Bhogavati encostam em sua borda, mas uma longa ponte que liga
-esse p�tio at� a sa�da sudeste da cidade passa por cima dela, formando uma
-das �nicas vias por "terra" daqui.  Voc� pode entrar no templo seguindo
-norte, oeste ou noroeste, al�m de seguir pela ponte sudeste.
+esse pátio até a saída sudeste da cidade passa por cima dela, formando uma
+das únicas vias por "terra" daqui.  Você pode entrar no templo seguindo
+norte, oeste ou noroeste, além de seguir pela ponte sudeste.
 ~
-113 68 0 0 0 1
+113.3 cg 1
 D0
 ~
 ~
@@ -2029,18 +2037,18 @@ D8
 S
 #11385
 A Ponte Sudeste~
-   Voc� est� andando sobre a ponte sudeste de Bhogavati, uma bela constru��o
+   Você está andando sobre a ponte sudeste de Bhogavati, uma bela construção
 em lisa pedra branca, cuja forma lembra uma longa serpente estendida sobre
 um arco.  As laterais da ponte foram cobertas com placas de ouro trabalhado,
 tendo estas pedras de todos os tipos cravejadas, formando lindos e preciosos
-desenhos.  A vista aqui � muito bela, podendo-se ver as principais vias da
-cidade, com seus leitos prateados e multicolores flores, al�m de seus
-dourados afluentes.  As constru��es tamb�m chamam sua aten��o, sendo todas
+desenhos.  A vista aqui é muito bela, podendo-se ver as principais vias da
+cidade, com seus leitos prateados e multicolores flores, além de seus
+dourados afluentes.  As construções também chamam sua atenção, sendo todas
 elas muito diferentes entre si, mas sempre utilizando os metais e pedras
-preciosas t�o caracter�sticos do lugar.
+preciosas tão característicos do lugar.
    A ponte segue noroeste e sudeste.
 ~
-113 68 0 0 0 1
+113.3 cg 1
 D6
 ~
 ~
@@ -2052,18 +2060,18 @@ D8
 S
 #11386
 A Ponte Sudeste~
-   Voc� est� andando sobre a ponte sudeste de Bhogavati, uma bela constru��o
+   Você está andando sobre a ponte sudeste de Bhogavati, uma bela construção
 em lisa pedra branca, cuja forma lembra uma longa serpente estendida sobre
 um arco.  As laterais da ponte foram cobertas com placas de ouro trabalhado,
 tendo estas pedras de todos os tipos cravejadas, formando lindos e preciosos
-desenhos.  A vista aqui � muito bela, podendo-se ver as principais vias da
-cidade, com seus leitos prateados e multicolores flores, al�m de seus
-dourados afluentes.  As constru��es tamb�m chamam sua aten��o, sendo todas
+desenhos.  A vista aqui é muito bela, podendo-se ver as principais vias da
+cidade, com seus leitos prateados e multicolores flores, além de seus
+dourados afluentes.  As construções também chamam sua atenção, sendo todas
 elas muito diferentes entre si, mas sempre utilizando os metais e pedras
-preciosas t�o caracter�sticos do lugar.
+preciosas tão característicos do lugar.
    A ponte segue noroeste e sudeste.
 ~
-113 68 0 0 0 1
+113.3 cg 1
 D6
 ~
 ~
@@ -2074,21 +2082,22 @@ D8
 0 -1 11387
 S
 #11387
-O P�tio Sudeste~
-   Voc� est� na outra extremidade da ponte sudeste, que termina em um p�tio,
-gramado como os do templo, seguido este, a sul, de um alto port�o de
-cristal negro.  O port�o n�o est� amparado por parede alguma, havendo no
-lugar delas um longo canal de �guas negras (que cerca a cidade).  Apesar dos
-lados do port�o serem abertos, voc� pouca coisa v� al�m de �gua.
-Para seguir pela ponte, v� para noroeste; e para sair da cidade, siga sul,
-pelo port�o.
+O Pátio Sudeste~
+   Você está na outra extremidade da ponte sudeste, que termina em um pátio,
+gramado como os do templo, seguido este, a sul, de um alto portão de
+cristal negro.  O portão não está amparado por parede alguma, havendo no
+lugar delas um longo canal de águas negras (que cerca a cidade).  Apesar dos
+lados do portão serem abertos, você pouca coisa vê além de água.
+Para seguir pela ponte, vá para noroeste; e para sair da cidade, siga sul,
+pelo portão.
 ~
-113 68 0 0 0 1
+113.3 cg 1
 D2
-A sa�da de Bhogavati fica por ali.
+A saída de Bhogavati fica por ali.
 ~
-port�o cristal negro~
-1 -1 11388
+portao cristal negro~
+:n 1 o portão de cristal negro
+a -1 11388
 D6
 ~
 ~
@@ -2096,39 +2105,41 @@ D6
 S
 #11388
 Fora de Bhogavati~
-   Voc� est� do lado de fora da Cidade das J�ias, exatamente em frente a um
-alto port�o de cristal negro.  A partir dele, uma estreita estrada de pedra
-azulada segue sul quase em linha reta, cercada esta de �gua im�vel como
-vidro at� onde a vista alcan�a.  A cidade fica a norte.
+   Você está do lado de fora da Cidade das Jóias, exatamente em frente a um
+alto portão de cristal negro.  A partir dele, uma estreita estrada de pedra
+azulada segue sul quase em linha reta, cercada esta de água imóvel como
+vidro até onde a vista alcança.  A cidade fica a norte.
 ~
-113 68 0 0 0 1
+113.3 cg 1
 D0
-A Cidade das J�ias est� ali.
+A Cidade das Jóias está ali.
 ~
-port�o cristal negro~
-1 -1 11387
+portao cristal negro~
+:n 1 o portão de cristal negro
+a -1 11387
 D2
-A estrada segue nessa dire��o.
+A estrada segue nessa direção.
 ~
 ~
-0 -1 -1
+0 -1 11388
 S
 #11389
-O P�tio Noroeste~
-   Voc� est� na outra extremidade da ponte noroeste, que termina em um p�tio,
-gramado como os do templo, seguido este, a oeste, de um alto port�o de
-cristal negro.  O port�o n�o est� amparado por parede alguma, havendo no
-lugar delas um longo canal de �guas negras (que cerca a cidade).  Apesar dos
-lados do port�o serem abertos, voc� somente v� escurid�o al�m do canal.
-Indo sudeste voc� atravessa a ponte, enquanto a oeste est� o outro lado do
-port�o.
+O Pátio Noroeste~
+   Você está na outra extremidade da ponte noroeste, que termina em um pátio,
+gramado como os do templo, seguido este, a oeste, de um alto portão de
+cristal negro.  O portão não está amparado por parede alguma, havendo no
+lugar delas um longo canal de águas negras (que cerca a cidade).  Apesar dos
+lados do portão serem abertos, você somente vê escuridão além do canal.
+Indo sudeste você atravessa a ponte, enquanto a oeste está o outro lado do
+portão.
 ~
-113 68 0 0 0 1
+113.3 cg 1
 D3
-A sa�da de Bhogavati fica por ali.
+A saída de Bhogavati fica por ali.
 ~
-port�o cristal negro~
-1 -1 11390
+portao cristal negro~
+:n 1 o portão de cristal negro
+a -1 11390
 D8
 ~
 ~
@@ -2136,18 +2147,19 @@ D8
 S
 #11390
 Fora de Bhogavati~
-   Voc� est� do lado de fora da Cidade das J�ias, exatamente em frente a um
-alto port�o de cristal negro.  A partir dele, h� um pequeno terreno coberto
+   Você está do lado de fora da Cidade das Jóias, exatamente em frente a um
+alto portão de cristal negro.  A partir dele, há um pequeno terreno coberto
 de relva que entra em uma sombria floresta. Arrepios percorrem seu corpo
-ao observar as altas e escuras �rvores do lugar, tudo parecendo amea�ador
+ao observar as altas e escuras árvores do lugar, tudo parecendo ameaçador
 demais para ser seguro. A entrada da floresta fica a oeste, enquanto a leste
-est� a cidade.
+está a cidade.
 ~
-113 68 0 0 0 1
+113.3 cg 1
 D1
-A Cidade das J�ias est� ali.
+A Cidade das Jóias está ali.
 ~
-port�o cristal negro~
-1 -1 11389
+portao cristal negro~
+:n 1 o portão de cristal negro
+a -1 11389
 S
 $~
