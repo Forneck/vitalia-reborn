@@ -1292,7 +1292,7 @@ ACMD(do_suggestion)
 
 	calc_output = fann_run(ann, input);
    calc_output[0] = calc_output[0] * 780;
-   if (calc_output[0] == (0 || 780)
+   if (calc_output[0] == (0 || 780))
    {
       send_to_char(ch,"Nenhum comando sugerido para você.\r\n");
    }
