@@ -1,7 +1,7 @@
 #108
 Vitalia~
 A Cidade de Tróia~
-10800 10999 180 1 a 0 0 0 -1 -1
+10800 10999 180 1 j 0 0 0 -1 -1
 M 0 10800 1 10937 	(Poseidon)
 E 1 10840 10 16 	(o imponente tridente de Poseidon)
 M 0 10801 1 10934 	(Tritão)
@@ -519,12 +519,12 @@ R 0 10921 10921 -1 	(um pão troiano)
 O 0 10921 50 10921 	(um pão troiano)
 R 0 10921 10923 -1 	(um barril de vinho)
 O 0 10923 50 10921 	(um barril de vinho)
-D 0 10898 2 2 	(Uma Plan�cie no Cora��o de Tr�ia)
-D 0 10902 0 2 	(A Cidade de Tr�ia)
-D 0 10915 2 2 	(A Entrada do Pal�cio)
-D 0 10920 0 2 	(Os Jardins do Pal�cio)
-D 0 10925 8 2 	(O Grande Sal�o do Pal�cio)
-D 0 10928 6 2 	(O Sal�o Real)
+D 0 10898 2 2 	(Uma Planície no Coração de Tróia)
+D 0 10902 0 2 	(A Cidade de Tróia)
+D 0 10915 2 2 	(A Entrada do Palácio)
+D 0 10920 0 2 	(Os Jardins do Palácio)
+D 0 10925 8 2 	(O Grande Salão do Palácio)
+D 0 10928 6 2 	(O Salão Real)
 D 0 10930 0 2 	(Um Aposento Real)
 D 0 10998 2 2 	(Um Aposento Real)
 D 0 10998 7 2 	(Um Aposento Real)

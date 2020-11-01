@@ -1,40 +1,43 @@
 Name: Motharo
 Pass: ModL.5YHLP/kM
-Titl: the Fledgling
+Titl: the Tiger Cub
 Sex : 1
 Clas: 6
-Levl: 1
-Id  : 22
-Brth: 1603914365
-Plyd: 8360
-Last: 1604176698
-Lmot: 1604149290
-Lnew: 1604145461
+Levl: 7
+Id  : 25
+Brth: 1604182960
+Plyd: 8522
+Last: 1604199323
+Lmot: 1604188562
+Lnew: 1604198417
 Htwn: 1372
 Host: 187.66.23.112
-Hite: 184
-Wate: 176
-Alin: 95
-Act : hky 0 0 0
+Hite: 178
+Wate: 158
+Alin: 196
+Act : gh 0 0 0
 Aff : 0 0 0 0
-Pref: efghnoBCDEF abd 0 0
+Pref: efghnoBCDEF ad 0 0
 Room: 65535
-Lern: 1
-Hung: -1
-Thir: -1
-Hit : 1/18
-Mana : 1/100
-Move: 1/86
-Str : 14/0
-Int : 12
-Wis : 11
-Dex : 13
-Con : 13
+Lern: 4
+Hung: 6
+Thir: 6
+Hit : 93/93
+Mana : 121/121
+Move: 102/102
+Str : 16/0
+Int : 13
+Wis : 13
+Dex : 14
+Con : 15
 Cha : 11
 Ac  : 100
-Exp : 322
+Exp : 45881
 Olc : 0
 Skil:
+16 90
+42 90
+232 90
 0 0
 Alis: 1
  wak
