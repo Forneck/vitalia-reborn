@@ -784,7 +784,7 @@ do                                                              \
 #define PLURAL(num, ws, wp)	(num == 1 ? ws : wp)
 #define ELEA(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "ele":"ela") : "ele")
 #define ARTI(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "o"  :"a"  ) : "o")
-
+#define SEUSUA(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "seu":"sua") : "seu")
 /* Various macros building up to CAN_SEE */
 
 /** Defines if there is enough light for sub to see in. */
