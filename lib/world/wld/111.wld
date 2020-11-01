@@ -1079,7 +1079,7 @@ Tem uma velha porta de madeira que foi bloqueada.
 ~
 porta~
 :n 2
-1 2 1
+2 2 1
 D 3
 O templo fica a oeste.
 ~
@@ -1158,7 +1158,7 @@ D 0
 Você não vê mais nada do que escombros.
 ~
 escombros~
-1 2 1
+2 2 1
 D 2
 Você vê o caminho de volta a destruída Midgaard.
 ~
@@ -1168,7 +1168,7 @@ D 3
 Você vê um caminho construído com grandes pedras redondas.
 ~
 ~
-1 2 1
+2 2 1
 D 6
 Você vê uma pequena rachadura.
 ~
@@ -1459,7 +1459,7 @@ D 5
 Você não consegue ver o que existe porque está completamente tampado.
 ~
 pedra rocha~
-1 2 1
+2 2 1
 S
 #11170
 As Ruinas da Praça do Mercado~
@@ -1593,7 +1593,7 @@ D 2
 Você pode ver uma entrada bloqueada.
 ~
 ~
-1 2 1
+2 2 1
 D 3
 Você pode ver o portão da cidade.
 ~
@@ -1633,7 +1633,7 @@ Você vê a estrada ao longo do lado interno dos muros da cidade. Você repara
 que é agora não é mais possível passar por ela.
 ~
 estrada sul bloqueio~
-1 2 1
+2 2 1
 D 3
 O portão da cidade é a oeste.
 ~
@@ -1744,7 +1744,7 @@ D 2
 Você pode ver uma antiga associação porém é impossível de se entrar.
 ~
 ~
-1 2 1
+2 2 1
 D 3
 Você vê a Rua Principal, que leva à velha Praca do Mercado.
 ~
@@ -1867,7 +1867,7 @@ D 2
 Você vê a entrada de uma associação.
 ~
 ~
-1 2 1
+2 2 1
 D 3
 Você vê a praca comum.
 ~
@@ -2021,7 +2021,7 @@ D 3
 O beco levava antigamente a oeste, porem hoje é impossível de ir.
 ~
 ~
-1 2 1
+2 2 1
 S
 #11194
 Hospedaria Grubby~
@@ -2055,7 +2055,7 @@ D 5
 Você vê um pequeno buraco
 ~
 ~
-1 2 1
+2 2 1
 S
 #11198
 O Calabouço de Pedra~
