@@ -1078,8 +1078,14 @@ D1
 Tem uma velha porta de madeira que foi bloqueada.
 ~
 porta~
+<<<<<<< HEAD
 3 2 -1
 D3
+=======
+:n 2
+4 2 1
+D 3
+>>>>>>> ed4c9059b903c5d4a770a671fb80ad495ae3c357
 O templo fica a oeste.
 ~
 ~
@@ -1157,8 +1163,13 @@ D0
 Você não vê mais nada do que escombros.
 ~
 escombros~
+<<<<<<< HEAD
 3 2 -1
 D2
+=======
+4 2 1
+D 2
+>>>>>>> ed4c9059b903c5d4a770a671fb80ad495ae3c357
 Você vê o caminho de volta a destruída Midgaard.
 ~
 ~
@@ -1167,8 +1178,13 @@ D3
 Você vê um caminho construído com grandes pedras redondas.
 ~
 ~
+<<<<<<< HEAD
 3 2 -1
 D6
+=======
+4 2 1
+D 6
+>>>>>>> ed4c9059b903c5d4a770a671fb80ad495ae3c357
 Você vê uma pequena rachadura.
 ~
 ~
@@ -1458,7 +1474,11 @@ D5
 Você não consegue ver o que existe porque está completamente tampado.
 ~
 pedra rocha~
+<<<<<<< HEAD
 3 2 -1
+=======
+4 2 1
+>>>>>>> ed4c9059b903c5d4a770a671fb80ad495ae3c357
 S
 #11170
 As Ruinas da Praça do Mercado~
@@ -1592,8 +1612,13 @@ D2
 Você pode ver uma entrada bloqueada.
 ~
 ~
+<<<<<<< HEAD
 3 2 -1
 D3
+=======
+4 2 1
+D 3
+>>>>>>> ed4c9059b903c5d4a770a671fb80ad495ae3c357
 Você pode ver o portão da cidade.
 ~
 ~
@@ -1632,8 +1657,13 @@ Você vê a estrada ao longo do lado interno dos muros da cidade. Você repara
 que é agora não é mais possível passar por ela.
 ~
 estrada sul bloqueio~
+<<<<<<< HEAD
 3 2 -1
 D3
+=======
+4 2 1
+D 3
+>>>>>>> ed4c9059b903c5d4a770a671fb80ad495ae3c357
 O portão da cidade é a oeste.
 ~
 portao~
@@ -1742,8 +1772,13 @@ D2
 Você pode ver uma antiga associação porém é impossível de se entrar.
 ~
 ~
+<<<<<<< HEAD
 3 2 -1
 D3
+=======
+4 2 1
+D 3
+>>>>>>> ed4c9059b903c5d4a770a671fb80ad495ae3c357
 Você vê a Rua Principal, que leva à velha Praca do Mercado.
 ~
 ~
@@ -1864,8 +1899,13 @@ D2
 Você vê a entrada de uma associação.
 ~
 ~
+<<<<<<< HEAD
 3 2 -1
 D3
+=======
+4 2 1
+D 3
+>>>>>>> ed4c9059b903c5d4a770a671fb80ad495ae3c357
 Você vê a praca comum.
 ~
 ~
@@ -2018,7 +2058,11 @@ D3
 O beco levava antigamente a oeste, porem hoje é impossível de ir.
 ~
 ~
+<<<<<<< HEAD
 3 2 -1
+=======
+4 2 1
+>>>>>>> ed4c9059b903c5d4a770a671fb80ad495ae3c357
 S
 #11194
 Hospedaria Grubby~
@@ -2052,7 +2096,11 @@ D5
 Você vê um pequeno buraco
 ~
 ~
+<<<<<<< HEAD
 3 2 -1
+=======
+4 2 1
+>>>>>>> ed4c9059b903c5d4a770a671fb80ad495ae3c357
 S
 #11198
 O Calabouço de Pedra~
