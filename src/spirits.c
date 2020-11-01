@@ -147,19 +147,14 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 		}
 	}
 
-		/* If corpse has objects, save them to file */
-//	Crash_extract_norents(corpse);
+	if (corpse)
 	for (obj = corpse->contains; obj != NULL; obj = obj->next_content)
-	{
-	    if (GET_OBJ_TYPE(obj) == ITEM_MONEY) {
-      GET_GOLD(ch) += GET_OBJ_VAL(obj, 0);
-      extract_obj(obj);
-	    }
-      obj_from_obj(obj);
-      Crash_extract_objs(obj);
-	}
+		{
+			obj_from_obj(obj);
+			obj_to_char(obj, ch);
+			get_check_money(ch, obj);
+		}
 
-	/* Store player */
 	save_char(ch);
 	Crash_crashsave(ch);
 }
