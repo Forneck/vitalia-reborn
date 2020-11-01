@@ -1,573 +1,573 @@
 #11100
 O Pico da Montanha~
-   Você está no ponto mais alto desta montanha, é possível imaginar como
-seria terrivel escorregar ladeira abaixo.  Lá ao leste você pode ver
-outra enorme montanha, a única maneira de chegar até lá é voando.  E para
-baixo você desce a montanha.
+   VocÃª estÃ¡ no ponto mais alto desta montanha, Ã© possÃ­vel imaginar como
+seria terrivel escorregar ladeira abaixo.  LÃ¡ ao leste vocÃª pode ver
+outra enorme montanha, a Ãºnica maneira de chegar atÃ© lÃ¡ Ã© voando.  E para
+baixo vocÃª desce a montanha.
 ~
-111 64 0 0 0 5
-D1
-Você vê uma grande montanha.
-~
-~
-0 -1 11101
-D5
-Você pode ver... 
+111 g 5
+D 5
+VocÃª pode ver... 
 ~
 ~
 0 -1 3366
+D 1
+VocÃª vÃª uma grande montanha.
+~
+~
+0 -1 11101
 S
 #11101
-Na Beira do Precipício~
-   Um grande precipício nasce a sua frente, uma sensação de temor paira no
-ar.  A sua frente está uma grande montanha rochosa, a única maneira de 
-explora-la é ir voando até lá.  Talvez fosse melhor retorna ao lado oeste
+Na Beira do PrecipÃ­cio~
+   Um grande precipÃ­cio nasce a sua frente, uma sensaÃ§Ã£o de temor paira no
+ar.  A sua frente estÃ¡ uma grande montanha rochosa, a Ãºnica maneira de 
+explora-la Ã© ir voando atÃ© lÃ¡.  Talvez fosse melhor retorna ao lado oeste
 onde parece ser mais seguro.
 ~
-111 64 0 0 0 5
-D1
-Você vê um grande precipício.
-~
-~
-0 -1 11102
-D3
-Você pode ver o pico da montanha.
+111 g 5
+D 3
+VocÃª pode ver o pico da montanha.
 ~
 ~
 0 -1 11100
+D 1
+VocÃª vÃª um grande precipÃ­cio.
+~
+~
+0 -1 11102
 S
 #11102
-O Precipício~
-   Uauuuuuu!!!  Você levanta voo, mas um forte vento vindo do oeste lhe joga
-no meio de um enorme rodamoinho, que estranhamente surgiu do nada.  É 
-impossível retornar, reze aos Deuses de Vitalia para que seu poder de voo
-não acabe.  A única saída é proseguir a leste.
+O PrecipÃ­cio~
+   Uauuuuuu!!!  VocÃª levanta voo, mas um forte vento vindo do oeste lhe joga
+no meio de um enorme rodamoinho, que estranhamente surgiu do nada.  Ã‰ 
+impossÃ­vel retornar, reze aos Deuses de Vitalia para que seu poder de voo
+nÃ£o acabe.  A Ãºnica saÃ­da Ã© proseguir a leste.
 ~
-111 65604 0 0 0 9
-D1
-Você vê o precipício.
+111 cgq 9
+D 1
+VocÃª vÃª o precipÃ­cio.
 ~
 ~
 0 -1 11103
 S
 #11103
-O Precipício~
-   O vento é muito forte, você quase não consegue se controlar.  Ao norte e
-ao sul existem algumas formações rochosas, porém aparentemente seria muito
-perigoso tentar pousar nelas.  Não há outra maneira senão seguir a leste.
+O PrecipÃ­cio~
+   O vento Ã© muito forte, vocÃª quase nÃ£o consegue se controlar.  Ao norte e
+ao sul existem algumas formaÃ§Ãµes rochosas, porÃ©m aparentemente seria muito
+perigoso tentar pousar nelas.  NÃ£o hÃ¡ outra maneira senÃ£o seguir a leste.
 ~
-111 65604 0 0 0 9
-D0
-Você pode ver enormes rochas.
+111 cgq 9
+D 0
+VocÃª pode ver enormes rochas.
 ~
 ~
 0 -1 11104
-D1
-Você vê o precipício.
+D 1
+VocÃª vÃª o precipÃ­cio.
 ~
 ~
 0 -1 11105
-D2
-Você pode ver enormes rochas. 
+D 2
+VocÃª pode ver enormes rochas. 
 ~
 ~
 0 -1 11104
 S
 #11104
-O Precipício Fatal~
-   AAAaaaaaahhhhhhhhhhhhhh.......!!!  Você bateu violentamente contra uma
-rocha,  o sangue escorre como uma fonte, agonizando em dor, você sente a
-presença da morte.... que os Deuses tenham piedade e coloque sua alma em
-um bom lugar... você está morto.....
+O PrecipÃ­cio Fatal~
+   AAAaaaaaahhhhhhhhhhhhhh.......!!!  VocÃª bateu violentamente contra uma
+rocha,  o sangue escorre como uma fonte, agonizando em dor, vocÃª sente a
+presenÃ§a da morte.... que os Deuses tenham piedade e coloque sua alma em
+um bom lugar... vocÃª estÃ¡ morto.....
 ~
-111 6 0 0 0 4
+111 bc 4
 S
 #11105
-O Precipício~
-   Impossível de se controlar, cada vez esse forte vento te arrasta.  Ao
-lado sul e norte há muito perigo, montanhas perigosas parece aumentar 
-cada vez mais.  Lá a frente no lado leste é possível ver uma grande
+O PrecipÃ­cio~
+   ImpossÃ­vel de se controlar, cada vez esse forte vento te arrasta.  Ao
+lado sul e norte hÃ¡ muito perigo, montanhas perigosas parece aumentar 
+cada vez mais.  LÃ¡ a frente no lado leste Ã© possÃ­vel ver uma grande
 montanha, talvez a maior de todas. 
 ~
-111 65604 0 0 0 9
-D0
-Você pode ver enormes rochas. 
+111 cgq 9
+D 0
+VocÃª pode ver enormes rochas. 
 ~
 ~
 0 -1 11104
-D1
-Você vê um grande montanha.
+D 1
+VocÃª vÃª um grande montanha.
 ~
 ~
 0 -1 11106
-D2
-Você pode ver enormes rochas. 
+D 2
+VocÃª pode ver enormes rochas. 
 ~
 ~
 0 -1 11104
 S
 #11106
-O Precipício~
-   Nossaaa !!! uma grande montanha a sua frente, você vai bater 
-violentamente contra ela se não conseguir subir... A única maneira de 
+O PrecipÃ­cio~
+   Nossaaa !!! uma grande montanha a sua frente, vocÃª vai bater 
+violentamente contra ela se nÃ£o conseguir subir... A Ãºnica maneira de 
 escapar vivo talvez seja, subir ainda mais alto. 
 ~
-111 65604 0 0 0 9
-D0
-Você pode ver enormes rochas. 
+111 cgq 9
+D 0
+VocÃª pode ver enormes rochas. 
 ~
 ~
 0 -1 11104
-D1
-Você vê uma grande montanha.
+D 1
+VocÃª vÃª uma grande montanha.
 ~
 ~
 0 -1 11104
-D2
-Você pode ver enormes rochas. 
+D 2
+VocÃª pode ver enormes rochas. 
 ~
 ~
 0 -1 11104
-D4
-Você pode ver o topo da grande montanha.
+D 4
+VocÃª pode ver o topo da grande montanha.
 ~
 ~
 0 -1 11107
 S
 #11107
-O Precipício~
-   Ufa... essa foi por pouco, mais alguns centímetros e você sentiria como
-é gelado o vale da morte.  Felizmente você pode voar ainda mais alto, mas
-se cair daqui de cima...  O perigo parece ter ficado para trás.
+O PrecipÃ­cio~
+   Ufa... essa foi por pouco, mais alguns centÃ­metros e vocÃª sentiria como
+Ã© gelado o vale da morte.  Felizmente vocÃª pode voar ainda mais alto, mas
+se cair daqui de cima...  O perigo parece ter ficado para trÃ¡s.
 ~
-111 65604 0 0 0 9
-D1
-Você pode ver a grande montanha.
+111 cgq 9
+D 1
+VocÃª pode ver a grande montanha.
 ~
 ~
 0 -1 11108
 S
 #11108
-O Precipício~
-   Aqui no alto o frio e o vento são intensos, mas parece que a montanha a
-sua frente é mais segura.  Esta bela montanha tem muitas florestas e campos.
+O PrecipÃ­cio~
+   Aqui no alto o frio e o vento sÃ£o intensos, mas parece que a montanha a
+sua frente Ã© mais segura.  Esta bela montanha tem muitas florestas e campos.
 Continue a leste, alias qual a outra alternativa?  O vento intenso impede
-você de retornar.
+vocÃª de retornar.
 ~
-111 65604 0 0 0 9
-D1
-Você vê a grande montanha.
+111 cgq 9
+D 1
+VocÃª vÃª a grande montanha.
 ~
 ~
 0 -1 11109
 S
 #11109
-O Precipício~
-   A montanha a sua frente é magnifica, muito bonita e verdejante.  Com
-certeza os que aqui vivem não tem nada a reclamar da bela paisagem.  Muita
+O PrecipÃ­cio~
+   A montanha a sua frente Ã© magnifica, muito bonita e verdejante.  Com
+certeza os que aqui vivem nÃ£o tem nada a reclamar da bela paisagem.  Muita
 relva verde, diversos animais silvestres e um belo corrego, maravilham seus
-olhos aqui em cima. O vento é calmo, agora é possivel descer com certa
-tranquilidade, porem estranhamente é impossível de voltar.
+olhos aqui em cima. O vento Ã© calmo, agora Ã© possivel descer com certa
+tranquilidade, porem estranhamente Ã© impossÃ­vel de voltar.
 ~
-111 65604 0 0 0 9
-D5
-Você pode ver uma bonita paisagem.
+111 cgq 9
+D 5
+VocÃª pode ver uma bonita paisagem.
 ~
 ~
 0 -1 11110
 S
-#11110
+#11110 
 A Grande Montanha~
-   Maravilhados estão seus olhos com tanta beleza, para baixo há um pequeno
-caminho, essa terra é tão bonita que vale a pena ser explorada.  É impossível
+   Maravilhados estÃ£o seus olhos com tanta beleza, para baixo hÃ¡ um pequeno
+caminho, essa terra Ã© tÃ£o bonita que vale a pena ser explorada.  Ã‰ impossÃ­vel
 levantar voo para retornar...
 ~
-111 64 0 0 0 5
-D5
-Você pode ver uma bonita paisagem. 
+111 g 5
+D 5
+VocÃª pode ver uma bonita paisagem. 
 ~
 ~
 0 -1 11111
 S
 #11111
 O Caminho das Montanhas~
-   Este caminho é muito bonito e parece ter sido aberto a poucos dias por 
-algum mateiro, talvez tenha outros exploradores por aqui.  Para cima está
+   Este caminho Ã© muito bonito e parece ter sido aberto a poucos dias por 
+algum mateiro, talvez tenha outros exploradores por aqui.  Para cima estÃ¡
 o pico da grande monhanha e para leste o caminho continua.
 ~
-111 64 0 0 0 5
-D1
-Você pode ver uma bonita paisagem.
-~
-~
-0 -1 11112
-D4
-Você pode ver o topo da grande montanha.
+111 g 5
+D 4
+VocÃª pode ver o topo da grande montanha.
 ~
 ~
 0 -1 11110
+D 1
+VocÃª pode ver uma bonita paisagem.
+~
+~
+0 -1 11112
 S
 #11112
 O Caminho das Montanhas~
-   A cada passo você o ar puro dessas montanhas, tudo aqui é bonito e calmo.
+   A cada passo vocÃª o ar puro dessas montanhas, tudo aqui Ã© bonito e calmo.
 Para baixo o caminho se alonga descendo a montanha e para oeste o caminho
 segue rumo ao pico.
 ~
-111 64 0 0 0 5
-D3
-Você pode ver o topo da montanha.
+111 g 5
+D 3
+VocÃª pode ver o topo da montanha.
 ~
 ~
 0 -1 11111
-D5
-Você pode ver uma bonita paisagem.
+D 5
+VocÃª pode ver uma bonita paisagem.
 ~
 ~
 0 -1 11113
 S
 #11113
 O Caminho das Montanhas~
-   É possível sentir o cheiro de relva molhada, a sensação de paz é
-magnífica e seu corpo parece querer nunca mais sair dessa tranquilidade.
-Para cima está o grande pico da montanha e a oeste parece haver um enorme
+   Ã‰ possÃ­vel sentir o cheiro de relva molhada, a sensaÃ§Ã£o de paz Ã©
+magnÃ­fica e seu corpo parece querer nunca mais sair dessa tranquilidade.
+Para cima estÃ¡ o grande pico da montanha e a oeste parece haver um enorme
 ninho de passarinho.
 ~
-111 64 0 0 0 5
-D3
-Você pode ver um enorme ninho de passarinho.
-~
-~
-0 -1 11114
-D4
-Você pode ver uma bonita paisagem.
+111 g 5
+D 4
+VocÃª pode ver uma bonita paisagem.
 ~
 ~
 0 -1 11112
+D 3
+VocÃª pode ver um enorme ninho de passarinho.
+~
+~
+0 -1 11114
 S
 #11114
 O Caminho das Montanhas~
-   Essa é uma montanha é digna dos Deuses, a paz e a tranquilidade fazem
-você sentir vontade acampar por aqui.  Talvez fosse melhor passar essa 
-noite aqui e amanhã proseguir.  A leste você vê o caminho subinho a 
-montanha e para baixo há um grande ninho. 
+   Essa Ã© uma montanha Ã© digna dos Deuses, a paz e a tranquilidade fazem
+vocÃª sentir vontade acampar por aqui.  Talvez fosse melhor passar essa 
+noite aqui e amanhÃ£ proseguir.  A leste vocÃª vÃª o caminho subinho a 
+montanha e para baixo hÃ¡ um grande ninho. 
 ~
-111 64 0 0 0 5
-D1
-Você pode ver uma bonita paisagem.
+111 g 5
+D 1
+VocÃª pode ver uma bonita paisagem.
 ~
 ~
 0 -1 11113
-D5
-Você pode ver um grande ninho.
+D 5
+VocÃª pode ver um grande ninho.
 ~
 ~
 0 -1 11115
 S
 #11115
-O Ninho do Dragão~
-   Você está no que parece ser um ninho, mas pelo tamanho dele, não é de
-de passarinho... Um lugar tão belo como este abrigaria que animal tão
-grande?  Seria aqui a moradia de um dragão ?  Olhando para cima você pode
+O Ninho do DragÃ£o~
+   VocÃª estÃ¡ no que parece ser um ninho, mas pelo tamanho dele, nÃ£o Ã© de
+de passarinho... Um lugar tÃ£o belo como este abrigaria que animal tÃ£o
+grande?  Seria aqui a moradia de um dragÃ£o ?  Olhando para cima vocÃª pode
 ver uma longo caminho verdejante e para leste tem uma passagem na pedras
-que parecem dar ligação a um caminho para outra montanha. 
+que parecem dar ligaÃ§Ã£o a um caminho para outra montanha. 
 ~
-111 64 0 0 0 5
-D1
-Você pode ver uma bonita paisagem. 
-~
-~
-0 -1 11116
-D4
-Você pode ver uma bonita paisagem. 
+111 g 5
+D 4
+VocÃª pode ver uma bonita paisagem. 
 ~
 ~
 0 -1 11114
-S
-#11116
-A Passagem das Planícieis~
-   Uma bela passagem construida pelo tempo, pedras aparentam terem sido
-depositadas aqui cuidadosamente, tudo é muito belo.  A sua frente, a leste
-a passagem continua e para oeste você pode um grande ninho.
-~
-111 64 0 0 0 4
-D0
-Você vê a estrada do leste.
-~
-~
-0 -1 14500
-D1
-Você pode ver uma bonita paisagem.
-~
-~
-0 -1 11117
-D3
-Você pode ver o grande ninho.
-~
-~
-0 -1 11115
-S
-#11117
-A Passagem das Planícieis~
-   Daqui é possivel a vasta imensidão de terras verdejantes, talvez lá
-embaixo fosse o lugar ideal para fincar sua espada e construir um novo
-povoado.  Para cima está uma longa subida rumo a outra montanha, no lado
-oeste é possivel ver um bela passagem e ao norte a um infinito caminho
-para uma terra verdejante.
-~
-111 64 0 0 0 4
-D3
-Você pode ver uma bonita paisagem.
+D 1
+VocÃª pode ver uma bonita paisagem. 
 ~
 ~
 0 -1 11116
-D4
-Você pode ver uma bonita paisagem. 
+S
+#11116
+A Passagem das PlanÃ­cieis~
+   Uma bela passagem construida pelo tempo, pedras aparentam terem sido
+depositadas aqui cuidadosamente, tudo Ã© muito belo.  A sua frente, a leste
+a passagem continua e para oeste vocÃª pode um grande ninho.
+~
+111 g 4
+D 3
+VocÃª pode ver o grande ninho.
+~
+~
+0 -1 11115
+D 1
+VocÃª pode ver uma bonita paisagem.
+~
+~
+0 -1 11117
+D0
+VocÃª vÃª a estrada do leste.
+~
+~
+0 -1 14500
+S
+#11117
+A Passagem das PlanÃ­cieis~
+   Daqui Ã© possivel a vasta imensidÃ£o de terras verdejantes, talvez lÃ¡
+embaixo fosse o lugar ideal para fincar sua espada e construir um novo
+povoado.  Para cima estÃ¡ uma longa subida rumo a outra montanha, no lado
+oeste Ã© possivel ver um bela passagem e ao norte a um infinito caminho
+para uma terra verdejante.
+~
+111 g 4
+D 3
+VocÃª pode ver uma bonita paisagem.
+~
+~
+0 -1 11116
+D 4
+VocÃª pode ver uma bonita paisagem. 
 ~
 ~
 0 -1 11118
 S
 #11118
 A Trilha da Montanha~
-   Esta trilha é bem recente, com certeza alguem passou aqui a poucos dias.
-Abaixo está uma passagem que o levará a outra montanha e acima você inicia
+   Esta trilha Ã© bem recente, com certeza alguem passou aqui a poucos dias.
+Abaixo estÃ¡ uma passagem que o levarÃ¡ a outra montanha e acima vocÃª inicia
 sua escalada rumo ao topo de uma montanha um tanto sinistra.
 ~
-111 64 0 0 0 4
-D4
-Você pode ver uma bonita paisagem. 
-~
-~
-0 -1 11119
-D5
-Você pode ver uma bonita paisagem. 
+111 g 4
+D 5
+VocÃª pode ver uma bonita paisagem. 
 ~
 ~
 0 -1 11117
-S
-#11119
-A Trilha da Montanha~
-   Cada vez que você se aproxima do topo, percebe que a forma dessa montanha
-é um tanto estranha, ela se parece com um crânio... com certeza a natureza
-levou séculos para esculpir isso.  Para baixo e para leste sua trilha avança.
-~
-111 64 0 0 0 4
-D1
-Você pode ver uma bonita paisagem.
-~
-~
-0 -1 11120
-D5
-Você pode ver uma bonita paisagem.
-~
-~
-0 -1 11118
-S
-#11120
-A Trilha da Montanha~
-   Ufa !!!  A cada passo você pecebe que para essa paisagem se tornar
-perfeita falta um bom riacho.  Banhar-se seria realmenmte relaxante...
-Acima você pode ver a montanha em forna de crânio ou caveira... sei lá...
-o que é isso... oeste sua trilha é longa.
-~
-111 64 0 0 0 4
-D3
-Você pode ver uma bonita paisagem. 
+D 4
+VocÃª pode ver uma bonita paisagem. 
 ~
 ~
 0 -1 11119
-D4
-Você vê um estranha montanha.
+S
+#11119
+A Trilha da Montanha~
+   Cada vez que vocÃª se aproxima do topo, percebe que a forma dessa montanha
+Ã© um tanto estranha, ela se parece com um crÃ¢nio... com certeza a natureza
+levou sÃ©culos para esculpir isso.  Para baixo e para leste sua trilha avanÃ§a.
+~
+111 g 4
+D 5
+VocÃª pode ver uma bonita paisagem.
+~
+~
+0 -1 11118
+D 1
+VocÃª pode ver uma bonita paisagem.
+~
+~
+0 -1 11120
+S
+#11120
+A Trilha da Montanha~
+   Ufa !!!  A cada passo vocÃª pecebe que para essa paisagem se tornar
+perfeita falta um bom riacho.  Banhar-se seria realmenmte relaxante...
+Acima vocÃª pode ver a montanha em forna de crÃ¢nio ou caveira... sei lÃ¡...
+o que Ã© isso... oeste sua trilha Ã© longa.
+~
+111 g 4
+D 3
+VocÃª pode ver uma bonita paisagem. 
+~
+~
+0 -1 11119
+D 4
+VocÃª vÃª um estranha montanha.
 ~
 ~
 0 -1 11121
 S
 #11121
 A Trilha da Montanha~
-   Apesar da forma dessa montanha ser assustadora, o resto é muito belo.  O
-pastos são verdejantes, a vegetação é muito linda e com certeza esse lado de
-Vitlia é muito próspero para agricultura.  Para baixo a trilha segue rumo
-a outra montanha e para cima você vê que está cada vez mais próximo do cume.
+   Apesar da forma dessa montanha ser assustadora, o resto Ã© muito belo.  O
+pastos sÃ£o verdejantes, a vegetaÃ§Ã£o Ã© muito linda e com certeza esse lado de
+Vitlia Ã© muito prÃ³spero para agricultura.  Para baixo a trilha segue rumo
+a outra montanha e para cima vocÃª vÃª que estÃ¡ cada vez mais prÃ³ximo do cume.
 ~
-111 64 0 0 0 4
-D4
-Você vê o topo da montnha.
-~
-~
-0 -1 11122
-D5
-Você pode ver uma bonita paisagem.
+111 g 4
+D 5
+VocÃª pode ver uma bonita paisagem.
 ~
 ~
 0 -1 11120
-S
-#11122
-A Trilha da Montanha~
-   Ahhh ! Finalmente está quase no ponto mais alto dessa montanha, há dois 
-buracos enormes nas rochas que parecem ser os olhos desse grande crânio.  Lá
-embaixo é tudo muito verde...mais um passo acima e você está no topo, para
-baixo é uma longa caminhada.
-~
-111 64 0 0 0 4
-D4
-Você vê o topo da montanha.
-~
-~
-0 -1 11123
-D5
-Você pode ver uma bonita paisagem. 
-~
-~
-0 -1 11121
-S
-#11123
-A Montanha da Caveira~
-   Você está no ponto mais alto dessa montanha, é estranho pois aqui em
-cima é totalmente plano, como se esse chão tivesse sido trabalhado.  Há
-uma trilha aberta recentemente rumo a leste e para baixo você desce a 
-montanha.
-~
-111 64 0 0 0 5
-D1
-Você pode ver uma bonita paisagem.
-~
-~
-0 -1 11124
-D5
-Você pode ver uma bonita paisagem.
+D 4
+VocÃª vÃª o topo da montnha.
 ~
 ~
 0 -1 11122
 S
-#11124
-A Montanha da Caveira~
-   Aqui, indiferente do resto desse lugar, é muito verdejante e bonito.
-Você consegue ver o horizonte belo, incrível esse local não estar habitado,
-como certeza seria um otimo local para se viver e com certeza deve haver um
-rio bem próximo daqui.  Para leste e para oeste a trilha se alonga por esse 
-terreno plano e verdejante.
+#11122
+A Trilha da Montanha~
+   Ahhh ! Finalmente estÃ¡ quase no ponto mais alto dessa montanha, hÃ¡ dois 
+buracos enormes nas rochas que parecem ser os olhos desse grande crÃ¢nio.  LÃ¡
+embaixo Ã© tudo muito verde...mais um passo acima e vocÃª estÃ¡ no topo, para
+baixo Ã© uma longa caminhada.
 ~
-111 64 0 0 0 5
-D1
-Você pode ver uma bonita paisagem. 
+111 g 4
+D 5
+VocÃª pode ver uma bonita paisagem. 
 ~
 ~
-0 -1 11125
-D3
-Você pode ver uma bonita paisagem.
+0 -1 11121
+D 4
+VocÃª vÃª o topo da montanha.
 ~
 ~
 0 -1 11123
 S
-#11125
+#11123
 A Montanha da Caveira~
-   A cada passo, uma nova e bonita paisagem.  Parece que lá na frente do
-lado leste o cume dessa montanha chega ao fim.  Para oeste a trilha segue
-verdejante.
+   VocÃª estÃ¡ no ponto mais alto dessa montanha, Ã© estranho pois aqui em
+cima Ã© totalmente plano, como se esse chÃ£o tivesse sido trabalhado.  HÃ¡
+uma trilha aberta recentemente rumo a leste e para baixo vocÃª desce a 
+montanha.
 ~
-111 64 0 0 0 5
-D1
-Você vê pode ver o fim de grande cume.
+111 g 5
+D 5
+VocÃª pode ver uma bonita paisagem.
 ~
 ~
-0 -1 11126
-D3
-Você pode ver uma bonita paisagem.
+0 -1 11122
+D 1
+VocÃª pode ver uma bonita paisagem.
 ~
 ~
 0 -1 11124
 S
-#11126
+#11124
 A Montanha da Caveira~
-   Realmente parece que a trilha está acabando, aparentemente você está 
-se aproximando de uma ribanceira.  A leste e a oeste sua trilha segue
-muito verdejante.   
+   Aqui, indiferente do resto desse lugar, Ã© muito verdejante e bonito.
+VocÃª consegue ver o horizonte belo, incrÃ­vel esse local nÃ£o estar habitado,
+como certeza seria um otimo local para se viver e com certeza deve haver um
+rio bem prÃ³ximo daqui.  Para leste e para oeste a trilha se alonga por esse 
+terreno plano e verdejante.
 ~
-111 64 0 0 0 5
-D1
-Você pode ver o fim desse cume.
+111 g 5
+D 3
+VocÃª pode ver uma bonita paisagem.
 ~
 ~
-0 -1 11127
-D3
-Você pode ver uma bonita paisagem.
+0 -1 11123
+D 1
+VocÃª pode ver uma bonita paisagem. 
 ~
 ~
 0 -1 11125
 S
-#11127
+#11125
 A Montanha da Caveira~
-   Olhando para trás você vê a trilha verdejante e bela, mas para baixo...
-uma longa descida lhe aguarda e todo cuidado é pouco.  Este caminho parece
-ser um tanto escorregadio e pra piorar não dá pra ir voando pois existem
-alguns galhos lhe atrapalhando.
+   A cada passo, uma nova e bonita paisagem.  Parece que lÃ¡ na frente do
+lado leste o cume dessa montanha chega ao fim.  Para oeste a trilha segue
+verdejante.
 ~
-111 64 0 0 0 5
-D3
-Você pode ver uma bonita paisagem.
+111 g 5
+D 3
+VocÃª pode ver uma bonita paisagem.
+~
+~
+0 -1 11124
+D 1
+VocÃª vÃª pode ver o fim de grande cume.
 ~
 ~
 0 -1 11126
-D5
-Você vê uma longa descida.
+S
+#11126
+A Montanha da Caveira~
+   Realmente parece que a trilha estÃ¡ acabando, aparentemente vocÃª estÃ¡ 
+se aproximando de uma ribanceira.  A leste e a oeste sua trilha segue
+muito verdejante.   
+~
+111 g 5
+D 3
+VocÃª pode ver uma bonita paisagem.
+~
+~
+0 -1 11125
+D 1
+VocÃª pode ver o fim desse cume.
+~
+~
+0 -1 11127
+S
+#11127
+A Montanha da Caveira~
+   Olhando para trÃ¡s vocÃª vÃª a trilha verdejante e bela, mas para baixo...
+uma longa descida lhe aguarda e todo cuidado Ã© pouco.  Este caminho parece
+ser um tanto escorregadio e pra piorar nÃ£o dÃ¡ pra ir voando pois existem
+alguns galhos lhe atrapalhando.
+~
+111 g 5
+D 3
+VocÃª pode ver uma bonita paisagem.
+~
+~
+0 -1 11126
+D 5
+VocÃª vÃª uma longa descida.
 ~
 ~
 0 -1 11128
 S
 #11128
 A Descida da Montanha~
-   Ooppsss !!! Você escorregou e parece que agora as coisas ficaram ruins
-para você, é impossível de retornar...você não consegue alcançar um lugar
-seguro para poder subir.  Há um lugar para se apoiar a oeste.  
+   Ooppsss !!! VocÃª escorregou e parece que agora as coisas ficaram ruins
+para vocÃª, Ã© impossÃ­vel de retornar...vocÃª nÃ£o consegue alcanÃ§ar um lugar
+seguro para poder subir.  HÃ¡ um lugar para se apoiar a oeste.  
 ~
-111 262208 0 0 0 4
-D0
-Você pode ver muitas pedras. 
-~
-~
-0 -1 11160
-D1
-Você pode ver muitas pedras. 
+111 gs 4
+D 0
+VocÃª pode ver muitas pedras. 
 ~
 ~
 0 -1 11160
-D2
-Você pode ver muitas pedras.
+D 1
+VocÃª pode ver muitas pedras. 
 ~
 ~
 0 -1 11160
-D3
-Você pode ver um apoio.
+D 2
+VocÃª pode ver muitas pedras.
+~
+~
+0 -1 11160
+D 3
+VocÃª pode ver um apoio.
 ~
 ~
 0 -1 11129
 S
 #11129
 A Descida da Montanha~
-   Aqui aparentemente é seguro, mas voltar é impossível e qualquer descuido
-pode ser fatal...há outro apoio para baixo.
+   Aqui aparentemente Ã© seguro, mas voltar Ã© impossÃ­vel e qualquer descuido
+pode ser fatal...hÃ¡ outro apoio para baixo.
 ~
-111 262208 0 0 0 4
-D0
-Você pode ver muitas pedras. 
-~
-~
-0 -1 11160
-D1
-Você pode ver muitas pedras. 
+111 gs 4
+D 0
+VocÃª pode ver muitas pedras. 
 ~
 ~
 0 -1 11160
-D2
-Você pode ver muitas pedras. 
+D 1
+VocÃª pode ver muitas pedras. 
 ~
 ~
 0 -1 11160
-D3
-Você pode ver muitas pedras. 
+D 2
+VocÃª pode ver muitas pedras. 
 ~
 ~
 0 -1 11160
-D5
+D 3
+VocÃª pode ver muitas pedras. 
+~
+~
+0 -1 11160
+D 5
 Voce pode ver apoio. 
 ~
 ~
@@ -575,103 +575,103 @@ Voce pode ver apoio.
 S
 #11130
 A Descida da Montanha~
-   Até agora tudo bem... parece que a sorte está com você.  Há outro apoio
-seguro do lado oeste, tenha fé siga ...
+   AtÃ© agora tudo bem... parece que a sorte estÃ¡ com vocÃª.  HÃ¡ outro apoio
+seguro do lado oeste, tenha fÃ© siga ...
 ~
-111 262208 0 0 0 4
-D0
-Você pode ver muitas pedras. 
-~
-~
-0 -1 11160
-D1
-Você pode ver muitas pedras.
+111 gs 4
+D 0
+VocÃª pode ver muitas pedras. 
 ~
 ~
 0 -1 11160
-D2
-Você pode ver muitas pedras. 
+D 1
+VocÃª pode ver muitas pedras.
 ~
 ~
 0 -1 11160
-D3
-Você pode ver um apoio
+D 2
+VocÃª pode ver muitas pedras. 
+~
+~
+0 -1 11160
+D 3
+VocÃª pode ver um apoio
 ~
 ~
 0 -1 11131
-D4
-Você pode ver muitas pedras. 
+D 4
+VocÃª pode ver muitas pedras. 
 ~
 ~
 0 -1 11160
 S
 #11131
 A Descida da Montanha~
-   Está quase chegando ao fim, mais alguns passos e você estara em segurança,
+   EstÃ¡ quase chegando ao fim, mais alguns passos e vocÃª estara em seguranÃ§a,
 pelo menos aparentemente.  Para baixo existe um lugar firme, apoiando-se nele
-talvez seja possível chegar ao chão em segurança.
+talvez seja possÃ­vel chegar ao chÃ£o em seguranÃ§a.
 ~
-111 262208 0 0 0 4
-D0
-Você pode ver muitas pedras.  
-~
-~
-0 -1 11160
-D1
-Você pode ver muitas pedras. 
-~
-~
-0 -1 11160
-D2
-Você pode ver muitas pedras. 
-~
-~
-0 -1 11160
-D3
-Você pode ver muitas pedras. 
-~
-~
-0 -1 11160
-D5
-Você pode ver um apoio.
+111 gs 4
+D 5
+VocÃª pode ver um apoio.
 ~
 ~
 0 -1 11132
+D 1
+VocÃª pode ver muitas pedras. 
+~
+~
+0 -1 11160
+D 2
+VocÃª pode ver muitas pedras. 
+~
+~
+0 -1 11160
+D 3
+VocÃª pode ver muitas pedras. 
+~
+~
+0 -1 11160
+D 0
+VocÃª pode ver muitas pedras.  
+~
+~
+0 -1 11160
 S
 #11132
-O Pé da Montanha~
-   Uaauuuuu !!!! Ufa !!! Outro escorregão, mas finalmente terra firme.  Até
-que enfim é possivel caminhar...  Do lado leste parece haver uma caverna e 
-do lado oeste uma trilha por entre as árvores.
+O PÃ© da Montanha~
+   Uaauuuuu !!!! Ufa !!! Outro escorregÃ£o, mas finalmente terra firme.  AtÃ©
+que enfim Ã© possivel caminhar...  Do lado leste parece haver uma caverna e 
+do lado oeste uma trilha por entre as Ã¡rvores.
 ~
-111 64 0 0 0 2
-D1
-Você vê uma caverna.
-~
-~
-0 -1 11133
-D3
-Você pode ver um pequena trilha.
+111 g 2
+D 3
+VocÃª pode ver um pequena trilha.
 ~
 ~
 0 -1 11135
+D 1
+VocÃª vÃª uma caverna.
+~
+~
+0 -1 11133
 S
 #11133
 O Caminho da Caverna~
-   A leste há uma grande caverna, impossível de ver o que há lá dentro, pois
-a escuridão é intensa.  Do lado oeste está o pé da montanha.
+   A leste hÃ¡ uma grande caverna, impossÃ­vel de ver o que hÃ¡ lÃ¡ dentro, pois
+a escuridÃ£o Ã© intensa.  Do lado oeste estÃ¡ o pÃ© da montanha.
 ~
-111 64 0 0 0 2
-D1
-Você não pode ver nada. 
-~
-~
-0 -1 11134
-D3
-Você pode ver o pé da montanha.
+111 g 2
+D 3
+VocÃª pode ver o pÃ© da montanha.
 ~
 ~
 0 -1 11132
+D 1
+VocÃª nÃ£o pode ver nada. 
+~
+~
+0 -1 11134
 S
 #11134
 A Grande Caverna~
@@ -679,9 +679,9 @@ A Grande Caverna~
 algum animal predador vive aqui... seria... um urso ?  Talvez seja melhor
 tentar sair sem ser notado.
 ~
-111 262209 0 0 0 0
-D3
-Você vê a entrada da caverna.
+111 ags 0
+D 3
+VocÃª vÃª a entrada da caverna.
 ~
 ~
 0 -1 11133
@@ -689,111 +689,111 @@ S
 #11135
 A Trilha da Floresta~
    Essa trilha segue mato adentro, a floresta parece ser sombria, escura e
-fria, totalmente diferente do que você havia visto até agora.  Para leste
-esta o pé da montanha e para o sul a densa floresta.
+fria, totalmente diferente do que vocÃª havia visto atÃ© agora.  Para leste
+esta o pÃ© da montanha e para o sul a densa floresta.
 ~
-111 64 0 0 0 2
-D1
-Você pode ver o pé da montanha.
+111 g 2
+D 1
+VocÃª pode ver o pÃ© da montanha.
 ~
 ~
 0 -1 11132
-D2
-Você vê a floresta.
+D 2
+VocÃª vÃª a floresta.
 ~
 ~
 0 -1 11136
 S
 #11136
 A Trilha da Floresta~
-   Estranhamente você sente que está sendo observado, mas para todos os
-lados só há um imensa escuridão, arvores centenárias por todos os lados
-e essa trilha parece ter sido feita a pouco tempo.  Ao norte você pode 
+   Estranhamente vocÃª sente que estÃ¡ sendo observado, mas para todos os
+lados sÃ³ hÃ¡ um imensa escuridÃ£o, arvores centenÃ¡rias por todos os lados
+e essa trilha parece ter sido feita a pouco tempo.  Ao norte vocÃª pode 
 ver o inicio dessa trilha, ao sul a trilha some mato adentro e do lado
 oeste parece ser uma trilha aberta a poucas horas. 
 ~
-111 64 0 0 0 2
-D0
-Você pode ver uma pequena trilha.
+111 g 2
+D 0
+VocÃª pode ver uma pequena trilha.
 ~
 ~
 0 -1 11135
-D2
-Você pode ver uma pequena trilha. 
+D 2
+VocÃª pode ver uma pequena trilha. 
 ~
 ~
 0 -1 11140
-D3
-Você pode ver uma pequena trilha. 
+D 3
+VocÃª pode ver uma pequena trilha. 
 ~
 ~
 0 -1 11137
 S
 #11137
 A Trilha da Floresta~
-   Essa trilha realmente é bem mais recente que a outra, o mato cortado
+   Essa trilha realmente Ã© bem mais recente que a outra, o mato cortado
 ainda verdejante, alguem deve ter passado por aqui a pouco tempo.  A leste
-está a trilha principal e oeste essa trilha recente.
+estÃ¡ a trilha principal e oeste essa trilha recente.
 ~
-111 64 0 0 0 2
-D1
-Você pode ver uma pequena trilha.
+111 g 2
+D 1
+VocÃª pode ver uma pequena trilha.
 ~
 ~
 0 -1 11136
-D3
-Você pode ver uma pequena trilha. 
+D 3
+VocÃª pode ver uma pequena trilha. 
 ~
 ~
 0 -1 11138
 S
 #11138
 A Trilha da Floresta~
-   Esse lugar é muito umido e frio, por todos os lados árvores imensas não
-deixam os raios solares penetrarem.   A sensação de que há alguma coisa te 
-observado e intensa, seu coração bate freneticamente.  E leste a trilha é
+   Esse lugar Ã© muito umido e frio, por todos os lados Ã¡rvores imensas nÃ£o
+deixam os raios solares penetrarem.   A sensaÃ§Ã£o de que hÃ¡ alguma coisa te 
+observado e intensa, seu coraÃ§Ã£o bate freneticamente.  E leste a trilha Ã©
 longa e ao sul parece ser o fim da linha...
 ~
-111 64 0 0 0 2
-D1
-Você pode ver uma pequena trilha. 
+111 g 2
+D 1
+VocÃª pode ver uma pequena trilha. 
 ~
 ~
 0 -1 11137
-D2
-Você pode ver uma pequena trilha. 
+D 2
+VocÃª pode ver uma pequena trilha. 
 ~
 ~
 0 -1 11139
 S
 #11139
 O Final da Trilha Oeste~
-   Esse é o fim da linha, quem quer que veio até aqui, depois retornou.  É
-bem possivel que alguem veio até aqui somente para se esconder ou mesmo 
-esconder algo.  Ao norte é possível ver a longa trilha que segue mato adentro.
+   Esse Ã© o fim da linha, quem quer que veio atÃ© aqui, depois retornou.  Ã‰
+bem possivel que alguem veio atÃ© aqui somente para se esconder ou mesmo 
+esconder algo.  Ao norte Ã© possÃ­vel ver a longa trilha que segue mato adentro.
 ~
-111 64 0 0 0 2
-D0
-Você pode ver uma pequena trilha. 
+111 g 2
+D 0
+VocÃª pode ver uma pequena trilha. 
 ~
 ~
 0 -1 11138
 S
 #11140
 Fim da Trilha da Floresta~
-   Epaaa !! Parecia que a trilha era longa...mas parece que as árvores se 
-moveram... estranhamente o caminho se abriu.  Aqui é o final da trilha dessa
-densa floresta, agora o caminho é verdejante e claro ao sul, para o norte
-você vai mato adentro.
+   Epaaa !! Parecia que a trilha era longa...mas parece que as Ã¡rvores se 
+moveram... estranhamente o caminho se abriu.  Aqui Ã© o final da trilha dessa
+densa floresta, agora o caminho Ã© verdejante e claro ao sul, para o norte
+vocÃª vai mato adentro.
 ~
-111 64 0 0 0 2
-D0
-Você pode ver uma pequena trilha. 
+111 g 2
+D 0
+VocÃª pode ver uma pequena trilha. 
 ~
 ~
 0 -1 11136
-D2
-Você pode ver uma pequena trilha. 
+D 2
+VocÃª pode ver uma pequena trilha. 
 ~
 ~
 0 -1 11141
@@ -801,883 +801,900 @@ S
 #11141
 A Estrada de Pedra~
    Totalmente diferente da trilha, essa estrada parece ter sido construida
-à muito tempo.  Toda feita em pedra alias o que mais existe aqui são pedras.
-Para norte está o final da trilha e para oeste a longa estrada de pedra.
+Ã  muito tempo.  Toda feita em pedra alias o que mais existe aqui sÃ£o pedras.
+Para norte estÃ¡ o final da trilha e para oeste a longa estrada de pedra.
 ~
-111 64 0 0 0 2
-D0
-Você pode ver uma pequena trilha. 
+111 g 2
+D 0
+VocÃª pode ver uma pequena trilha. 
 ~
 ~
 0 -1 11140
-D3
-Você vê um estrada.
+D 3
+VocÃª vÃª um estrada.
 ~
 ~
 0 -1 11142
 S
 #11142
 A Estrada de Pedra~
-   Todo aquele verdejante caminho sumiu, tudo ao seu redor é composto de
-pedras, o terreno aqui é muito árido e seco.  Essa estrada segue tanto
+   Todo aquele verdejante caminho sumiu, tudo ao seu redor Ã© composto de
+pedras, o terreno aqui Ã© muito Ã¡rido e seco.  Essa estrada segue tanto
 para o lado leste como para o sul.
 ~
-111 64 0 0 0 2
-D1
-Você pode ver uma estrada.
+111 g 2
+D 1
+VocÃª pode ver uma estrada.
 ~
 ~
 0 -1 11141
-D2
-Você pode ver uma estrada.
+D 2
+VocÃª pode ver uma estrada.
 ~
 ~
 0 -1 11143
 S
 #11143
 A Estrada de Pedra~
-   Pedras e mais pedras... mas a sensação de que está sendo observado ainda
-continua.  É impossível imaginar como um lugar tão verdejante como no alto
-das montanhas, pode ficar tão próximo de uma pedreira assim... A estrada
+   Pedras e mais pedras... mas a sensaÃ§Ã£o de que estÃ¡ sendo observado ainda
+continua.  Ã‰ impossÃ­vel imaginar como um lugar tÃ£o verdejante como no alto
+das montanhas, pode ficar tÃ£o prÃ³ximo de uma pedreira assim... A estrada
 segue rumo a norte e a oeste. 
 ~
-111 64 0 0 0 2
-D0
-Você pode ver uma estrada.
+111 g 2
+D 0
+VocÃª pode ver uma estrada.
 ~
 ~
 0 -1 11142
-D3
-Você pode ver uma estrada.
+D 3
+VocÃª pode ver uma estrada.
 ~
 ~
 0 -1 11144
 S
 #11144
 A Estrada de Pedra~
-   Nada muda nesse lugar, a cada passo você se sente perdido, pois tudo é
-muito seco, pedras por todas as partes... Ao leste a estrada é longa, mas
-a oeste há um agrupamento de pedras que parece ser uma entrada.
+   Nada muda nesse lugar, a cada passo vocÃª se sente perdido, pois tudo Ã©
+muito seco, pedras por todas as partes... Ao leste a estrada Ã© longa, mas
+a oeste hÃ¡ um agrupamento de pedras que parece ser uma entrada.
 ~
-111 64 0 0 0 2
-D1
-Você pode ver uma estrada. 
+111 g 2
+D 1
+VocÃª pode ver uma estrada. 
 ~
 ~
 0 -1 11143
-D3
-Você vê algo parecido com uma entrada. 
+D 3
+VocÃª vÃª algo parecido com uma entrada. 
 ~
 ~
 0 -1 11145
 S
 #11145
 Entrada para o Reino das Pedras~
-   Esse é um agrupamente de pedras de diversos tamanhos, formando um anel,
-algumas vegetações crescem ao longo desse anel.  Há algumas inscrições
-incompreensíveis nas pedras e há também uma @RPLACA@n que aparentemente 
-está escrita no seu dialeto.  A leste e ao norte você vê a longa estrada de
+   Esse Ã© um agrupamente de pedras de diversos tamanhos, formando um anel,
+algumas vegetaÃ§Ãµes crescem ao longo desse anel.  HÃ¡ algumas inscriÃ§Ãµes
+incompreensÃ­veis nas pedras e hÃ¡ tambÃ©m uma @RPLACA@n que aparentemente 
+estÃ¡ escrita no seu dialeto.  A leste e ao norte vocÃª vÃª a longa estrada de
 pedras. 
 ~
-111 64 0 0 0 2
-D0
-Você pode ver uma estrada.
-~
-~
-0 -1 11146
-D1
-Você pode ver uma estrada. 
+111 g 2
+D 1
+VocÃª pode ver uma estrada. 
 ~
 ~
 0 -1 11144
+D 0
+VocÃª pode ver uma estrada.
+~
+~
+0 -1 11146
 S
 #11146
 A Estrada de Pedra~
    A estrada parece que esta fazendo um grande contorno.  Ao sul e ao norte 
-ela é aparentemente extensa.  Pedras por todos os lados parecem te
+ela Ã© aparentemente extensa.  Pedras por todos os lados parecem te
 observar...
 ~
-111 64 0 0 0 2
-D0
-Você pode ver uma estrada. 
-~
-~
-0 -1 11147
-D2
-Você pode ver uma estrada.
+111 g 2
+D 2
+VocÃª pode ver uma estrada.
 ~
 ~
 0 -1 11145
-S
-#11147
-A Estrada de Pedra~
-   Para onde você olha, nada vê alem de pedras e mais pedras, tudo aqui é
-sinistro, e a sensação que está sendo observado é cada vez mais intensa.
-Ao sul está toda a estrada, ao leste a estrada está rodeada de escombros.
-~
-111 64 0 0 0 2
-D1
-Você pode ver uma estrada. 
-~
-~
-0 -1 11148
-D2
-Você pode ver uma estrada. 
-~
-~
-0 -1 11146
-S
-#11148
-Uma Rua Antiga~
-   Você está onde parece ter sido uma longa rua, há destruição por todos os
-lados, esses escombros parece ser o que restou de varias casas... estranho
-você tem a sensação de conhecer essa rua que hoje está abandonada e coberta
-pela vegetação.  A rua segue a leste e a oeste.
-~
-111 64 0 0 0 1
-D1
-Você pode ver toda a rua.
-~
-~
-0 -1 11149
-D3
-Você pode ver toda a rua.
+D 0
+VocÃª pode ver uma estrada. 
 ~
 ~
 0 -1 11147
 S
-#11149
-Uma Rua Antiga~
-   A cada passo a sensação de lembrança desse lugar é mais intensa.  Tudo
-aqui parece de sido devastado, mas algo lhe diz que você já esteve aqui...
-Seu caminho continua a leste e a oeste.
+#11147
+A Estrada de Pedra~
+   Para onde vocÃª olha, nada vÃª alem de pedras e mais pedras, tudo aqui Ã©
+sinistro, e a sensaÃ§Ã£o que estÃ¡ sendo observado Ã© cada vez mais intensa.
+Ao sul estÃ¡ toda a estrada, ao leste a estrada estÃ¡ rodeada de escombros.
 ~
-111 64 0 0 0 1
-D1
-Você pode ver toda a rua.
+111 g 2
+D 2
+VocÃª pode ver uma estrada. 
 ~
 ~
-0 -1 11150
-D3
-Você pode ver toda a rua.
+0 -1 11146
+D 1
+VocÃª pode ver uma estrada. 
 ~
 ~
 0 -1 11148
 S
-#11150
-O Centro da Vila~
-   Uauuu !!! Agora você se lembra este é o antigo centro das residências de
-Midgaard, mas parece que tudo foi devastado a séculos.  A grande fonte que 
-aqui existia parece ter sido soterrada. A oeste há a velha Rua do Luar de
-Fogo e do lado leste a Estrada da Vila.
+#11148
+Uma Rua Antiga~
+   VocÃª estÃ¡ onde parece ter sido uma longa rua, hÃ¡ destruiÃ§Ã£o por todos os
+lados, esses escombros parece ser o que restou de varias casas... estranho
+vocÃª tem a sensaÃ§Ã£o de conhecer essa rua que hoje estÃ¡ abandonada e coberta
+pela vegetaÃ§Ã£o.  A rua segue a leste e a oeste.
 ~
-111 64 0 0 0 1
-D1
-Você vê a estrada.
+111 g 1
+D 3
+VocÃª pode ver toda a rua.
 ~
 ~
-0 -1 11151
-D3
-Você pode ver toda a rua.
+0 -1 11147
+D 1
+VocÃª pode ver toda a rua.
 ~
 ~
 0 -1 11149
 S
-#11151
-A Antiga Estrada da Vila~
-   Toda a estrada está coberta pela vegetação rasteira, entulhos e sinais
-de destruição estão por todas as partes.  Grandes e pesadas pedras estão
-espalhadas por todos os lados.  A leste parece ser a sala de leitura e 
-a oeste o destruído centro da vila.
+#11149
+Uma Rua Antiga~
+   A cada passo a sensaÃ§Ã£o de lembranÃ§a desse lugar Ã© mais intensa.  Tudo
+aqui parece de sido devastado, mas algo lhe diz que vocÃª jÃ¡ esteve aqui...
+Seu caminho continua a leste e a oeste.
 ~
-111 64 0 0 0 1
-D1
-Você vê a sala de leitura.
+111 g 1
+D 3
+VocÃª pode ver toda a rua.
 ~
 ~
-0 -1 11152
-D3
-Você pode ver o antigo centro da vila.
+0 -1 11148
+D 1
+VocÃª pode ver toda a rua.
 ~
 ~
 0 -1 11150
 S
+#11150
+O Centro da Vila~
+   Uauuu !!! Agora vocÃª se lembra este Ã© o antigo centro das residÃªncias de
+Midgaard, mas parece que tudo foi devastado a sÃ©culos.  A grande fonte que 
+aqui existia parece ter sido soterrada. A oeste hÃ¡ a velha Rua do Luar de
+Fogo e do lado leste a Estrada da Vila.
+~
+111 g 1
+D 3
+VocÃª pode ver toda a rua.
+~
+~
+0 -1 11149
+D 1
+VocÃª vÃª a estrada.
+~
+~
+0 -1 11151
+S
+#11151
+A Antiga Estrada da Vila~
+   Toda a estrada estÃ¡ coberta pela vegetaÃ§Ã£o rasteira, entulhos e sinais
+de destruiÃ§Ã£o estÃ£o por todas as partes.  Grandes e pesadas pedras estÃ£o
+espalhadas por todos os lados.  A leste parece ser a sala de leitura e 
+a oeste o destruÃ­do centro da vila.
+~
+111 g 1
+D 3
+VocÃª pode ver o antigo centro da vila.
+~
+~
+0 -1 11150
+D 1
+VocÃª vÃª a sala de leitura.
+~
+~
+0 -1 11152
+S
 #11152
 A Sala de Leitura~
-   Tudo aqui é destruição, o velho quadro já não existe mais, ratos vagam
-em busca de alimento.  Isso parece ter sido destruído a séculos... Sua
-mente está cada vez mais confusa.  A leste está o era o grande templo e
+   Tudo aqui Ã© destruiÃ§Ã£o, o velho quadro jÃ¡ nÃ£o existe mais, ratos vagam
+em busca de alimento.  Isso parece ter sido destruÃ­do a sÃ©culos... Sua
+mente estÃ¡ cada vez mais confusa.  A leste estÃ¡ o era o grande templo e
 a oeste a antiga estrada.
 ~
-111 64 0 0 0 0
-D1
-Você pode ver o restou do Templo de Midgaard.
-~
-~
-0 -1 11153
-D3
+111 g 0
+D 3
 Uma velha estrada.
 ~
 ~
 0 -1 11151
+D 1
+VocÃª pode ver o restou do Templo de Midgaard.
+~
+~
+0 -1 11153
 S
 #11153
-O Destruído Templo de Midgaard~
-   Você está a sul do hall do Templo de Midgaard. O templo está totalmente 
-destruído. Blocos gigantes de mármore, com aparência eterna, que outrora
-sustentavam as estruturas hoje estão rachados e muitas paredes estão 
-cobertas por velhas pinturas destruídas pelo tempo.  Uma grande devastação
+O DestruÃ­do Templo de Midgaard~
+   VocÃª estÃ¡ a sul do hall do Templo de Midgaard. O templo estÃ¡ totalmente 
+destruÃ­do. Blocos gigantes de mÃ¡rmore, com aparÃªncia eterna, que outrora
+sustentavam as estruturas hoje estÃ£o rachados e muitas paredes estÃ£o 
+cobertas por velhas pinturas destruÃ­das pelo tempo.  Uma grande devastaÃ§Ã£o
 parece ter assombrado esse lugar, o que antigamente era um templo sagrado 
 hoje parece ser um lugar abandonado servindo apenas de esconderijo para
-os mais diversos insetos.  As dores das lembranças de tempos maravilhosos
-corroem seu coração, onde foi todo aquele glamor do mais belo templo desta
+os mais diversos insetos.  As dores das lembranÃ§as de tempos maravilhosos
+corroem seu coraÃ§Ã£o, onde foi todo aquele glamor do mais belo templo desta
 terra ?
-   Grandes degraus descem logo após o portal do templo, descendo o enorme
-monte sobre o qual o templo está construído e termina na Praca do Templo
-logo abaixo. Para oeste você pode ver o que um dia foi a Sala de Leitura.
-A Sala de Doações era uma pequena sala para o leste.
+   Grandes degraus descem logo apÃ³s o portal do templo, descendo o enorme
+monte sobre o qual o templo estÃ¡ construÃ­do e termina na Praca do Templo
+logo abaixo. Para oeste vocÃª pode ver o que um dia foi a Sala de Leitura.
+A Sala de DoaÃ§Ãµes era uma pequena sala para o leste.
 ~
-111 64 0 0 0 0
-D0
-Ao norte do hall do Templo existe uma estátua destruida e um grande altar,
-tambem destruído.
+111 g 0
+D 0
+Ao norte do hall do Templo existe uma estÃ¡tua destruida e um grande altar,
+tambem destruÃ­do.
 ~
 ~
 0 -1 11155
-D1
-Para o leste Você vê uma pequena alcova com uma placa de madeira caída ao
-chão onde pode-se ler "Sala de Doações de Midgaard."
+D 1
+Para o leste VocÃª vÃª uma pequena alcova com uma placa de madeira caÃ­da ao
+chÃ£o onde pode-se ler "Sala de DoaÃ§Ãµes de Midgaard."
 ~
 ~
 0 -1 11154
-D2
-Você pode ver escadas que descem até a Praca do Templo.
+D 2
+VocÃª pode ver escadas que descem atÃ© a Praca do Templo.
 ~
 ~
 0 -1 11161
-D3
-Você pode ver o que um dia foi a Sala de Leitura.
+D 3
+VocÃª pode ver o que um dia foi a Sala de Leitura.
 ~
 ~
 0 -1 11152
-D5
-Você vê a Praca do Templo.
+D 5
+VocÃª vÃª a Praca do Templo.
 ~
 ~
 0 -1 11161
 S
 #11154
-A Sala de Doações de Midgaard ~
-   Você está num quarto pequeno e imundo. Há marcas de sangue por todos os 
-lados, um par de pequenos bancos de madeira estão jogados no canto. O templo
+A Sala de DoaÃ§Ãµes de Midgaard ~
+   VocÃª estÃ¡ num quarto pequeno e imundo. HÃ¡ marcas de sangue por todos os 
+lados, um par de pequenos bancos de madeira estÃ£o jogados no canto. O templo
 fica a oeste. Uma pequena e velha porta de madeira foi bloqueada com pedras
 nos fundos da sala.
 ~
-111 64 0 0 0 0
-D1
+111 g 0
+D 1
 Tem uma velha porta de madeira que foi bloqueada.
 ~
 porta~
-1 2 -1
-D3
+:n 2
+4 2 0
+D 3
 O templo fica a oeste.
 ~
 ~
 0 -1 11153
 E
-bancos madeira~
-Totalmente destruídos.
+porta~
+ImpossÃ­vel de atravessa-la.
 ~
 E
-porta~
-Impossível de atravessa-la.
+bancos madeira~
+Totalmente destruÃ­dos.
 ~
 S
 #11155
 O Altar do Templo em Ruinas~
-   Você está no que um dia foi o altar do templo, no extremo norte do
-Templo de Midgaard.  Hoje todo o altar está destruído e a grande estátua
-de Odin, o Rei dos Deuses, está caída ao chão em pedaços.
-   Ao norte, degraus levam aos fundos do templo, à um grande descampado.
+   VocÃª estÃ¡ no que um dia foi o altar do templo, no extremo norte do
+Templo de Midgaard.  Hoje todo o altar estÃ¡ destruÃ­do e a grande estÃ¡tua
+de Odin, o Rei dos Deuses, estÃ¡ caÃ­da ao chÃ£o em pedaÃ§os.
+   Ao norte, degraus levam aos fundos do templo, Ã  um grande descampado.
 ~
-111 64 0 0 0 0
-D0
-Você vê a um grande descampado.
+111 g 0
+D 0
+VocÃª vÃª a um grande descampado.
 ~
 ~
 0 -1 11156
-D2
-Você vê o extremo sul do templo.
+D 2
+VocÃª vÃª o extremo sul do templo.
 ~
 ~
 0 -1 11153
 E
-estatua odin rei deus~
-A estátua representava Odin sentado em seu trono tendo sobre seus ombros,
-seus dois abutres Hugin e Munine a seus pés seus lobos Gere e Freke.
-Porem hoje tudo está ao chão coberto pelas plantas rasteiras que crescem.
+altar~
+O gigantesco bloco de mÃ¡rmore, estÃ¡ reduzido a entulho.
 ~
 E
-altar~
-O gigantesco bloco de mármore, está reduzido a entulho.
+estatua odin rei deus~
+A estÃ¡tua representava Odin sentado em seu trono tendo sobre seus ombros,
+seus dois abutres Hugin e Munine a seus pÃ©s seus lobos Gere e Freke.
+Porem hoje tudo estÃ¡ ao chÃ£o coberto pelas plantas rasteiras que crescem.
 ~
 S
 #11156
-Atrás do Altar do Templo~
-   Você está num caminho sujo que deixa o templo do altar, a sul daqui.
-Ao norte, o caminho continua através de um grande descampado que outrora
+AtrÃ¡s do Altar do Templo~
+   VocÃª estÃ¡ num caminho sujo que deixa o templo do altar, a sul daqui.
+Ao norte, o caminho continua atravÃ©s de um grande descampado que outrora
 foi um verdejante pasto.
 ~
-111 64 0 0 0 0
-D0
-Você vê um descampado de solo seco.
+111 g 0
+D 0
+VocÃª vÃª um descampado de solo seco.
 ~
 ~
 0 -1 11157
-D2
-Você vê o Altar totalmente destruído.
+D 2
+VocÃª vÃª o Altar totalmente destruÃ­do.
 ~
 ~
 0 -1 11155
 S
 #11157
 O Grande Campo de Midgaard~
-   Você está andando no amplo caminho de terra através de solo muito seco,
-isso foi o restou do belo Campo de Midgaard. Você pode ver ao norte grandes
-escombros e rachaduras do chão, porem é impossívael de proseguir.  A velha
+   VocÃª estÃ¡ andando no amplo caminho de terra atravÃ©s de solo muito seco,
+isso foi o restou do belo Campo de Midgaard. VocÃª pode ver ao norte grandes
+escombros e rachaduras do chÃ£o, porem Ã© impossÃ­vael de proseguir.  A velha
 cidade de Midgaard fica ao sul.
-  Tudo a sua volta é destruição. O caminho em que você está segue para norte
-através dos escombros e ao sul, retorna a Midgaard, ou melhor o que sobrou
-dela. Há um caminho construído com grandes pedras redondas a oeste, algumas
-delas estão caídas ao chão e impedem que você passe, porem parece haver uma
+  Tudo a sua volta Ã© destruiÃ§Ã£o. O caminho em que vocÃª estÃ¡ segue para norte
+atravÃ©s dos escombros e ao sul, retorna a Midgaard, ou melhor o que sobrou
+dela. HÃ¡ um caminho construÃ­do com grandes pedras redondas a oeste, algumas
+delas estÃ£o caÃ­das ao chÃ£o e impedem que vocÃª passe, porem parece haver uma
 grande rachadura a noroeste, numa parede rochosa.
 ~
-111 64 0 0 0 1
-D0
-Você vê uma pequena rachadura.
+111 g 1
+D 0
+VocÃª nÃ£o vÃª mais nada do que escombros.
 ~
-~
-0 -1 11158
-D2
-Você vê o caminho de volta a destruída Midgaard.
+escombros~
+4 2 0
+D 2
+VocÃª vÃª o caminho de volta a destruÃ­da Midgaard.
 ~
 ~
 0 -1 11156
-D3
-Você vê um caminho construído com grandes pedras redondas.
+D 3
+VocÃª vÃª um caminho construÃ­do com grandes pedras redondas.
 ~
 ~
-1 2 -1
+
+D 6
+VocÃª vÃª uma pequena rachadura.
+~
+~
+0 -1 11158
 S
 #11158
 A Grande Rachadura~
    Essa grande rachadura, parece ter sido feita por um terremoto.  Ela
-é um tanto grande, o suficiente para que você caminhe dentro dela.  Para
-nordeste você retorna para a entrada e para noroeste você entra cada vez
+Ã© um tanto grande, o suficiente para que vocÃª caminhe dentro dela.  Para
+nordeste vocÃª retorna para a entrada e para noroeste vocÃª entra cada vez
 mais.
 ~
-111 64 0 0 0 1
-D0
-Você vê somente pedras por todos os lados.
+111 g 1
+D 7
+VocÃª vÃª a entrada da rachadura.
+~
+~
+0 -1 11157
+D 6
+VocÃª vÃª somente pedras por todos os lados.
 ~
 ~
 0 -1 11159
-S
+S   
 #11159
 A Grande Rachadura~
-   Totalmente escura, é possivel notar que no fundo dela existe muitos
-escombros, que com certeza estão tampando sua passagem... o que será que há do
-outro lado?  Do lado nordeste você pode retornar.
+   Totalmente escura, Ã© possivel notar que no fundo dela existe muitos
+escombros, que com certeza estÃ£o tampando sua passagem... o que serÃ¡ que hÃ¡ do
+outro lado?  Do lado nordeste vocÃª pode retornar.
 ~
-111 64 0 0 0 1
-D0
-Você vê uma rachadura meio soterrada, porém parece haver perigo ali !!!
+111 g 1
+D 7
+VocÃª vÃª somente pedras por todos os lados.
+~
+~
+0 -1 11158
+D 6
+VocÃª vÃª uma rachadura meio soterrada, porÃ©m parece haver perigo ali !!!
 ~
 ~
 0 -1 11160
 S
 #11160
-O Grande Precipício~
-   Você abusou da sorte...não imaginava que o tombo seria tão grande.
-Infelizmente você está sendo chamado para conhecer o desconhecido...
-   Que os deuses tenham compaixão de você, pois sua vida na terra
-está encerrada...
+O Grande PrecipÃ­cio~
+   VocÃª abusou da sorte...nÃ£o imaginava que o tombo seria tÃ£o grande.
+Infelizmente vocÃª estÃ¡ sendo chamado para conhecer o desconhecido...
+   Que os deuses tenham compaixÃ£o de vocÃª, pois sua vida na terra
+estÃ¡ encerrada...
 ~
-111 2 0 0 0 1
-S
+111 b 1
+S 
 #11161
-A Praça do Templo~
-   Você está parado na Praca do Templo. Uma enorme escada de mármore conduz 
-para o portão do templo. Para oeste você pode ver uma Associação em ruinas,
-e para leste uma velha hospedaria. Para o sul você pode ver outra praça
-que se parece muito com a velha praça do mercado, o antigo centro de Midgaard.
+A PraÃ§a do Templo~
+   VocÃª estÃ¡ parado na Praca do Templo. Uma enorme escada de mÃ¡rmore conduz 
+para o portÃ£o do templo. Para oeste vocÃª pode ver uma AssociaÃ§Ã£o em ruinas,
+e para leste uma velha hospedaria. Para o sul vocÃª pode ver outra praÃ§a
+que se parece muito com a velha praÃ§a do mercado, o antigo centro de Midgaard.
 ~
-111 64 0 0 0 1
-D0
-Você pode ver o Templo.
+111 g 1
+D 0
+VocÃª pode ver o Templo.
 ~
 ~
 0 -1 11153
-D1
-Você vê uma velha estalagem chamada Hospedaria Grunting Boar.
+D 1
+VocÃª vÃª uma velha estalagem chamada Hospedaria Grunting Boar.
 ~
 ~
 0 -1 11162
-D2
-Você pode ver uma outra praça.
+D 2
+VocÃª pode ver uma outra praÃ§a.
 ~
 ~
 0 -1 11170
-D3
-Você pode ver a entrada para a Associação dos Clerigos.
+D 3
+VocÃª pode ver a entrada para a AssociaÃ§Ã£o dos Clerigos.
 ~
 ~
 0 -1 11167
 S
 #11162
-O Salão de Entrada da Hospedaria Grunting Boar~
-   Você está na entrada da Hospedaria Grunting Boar Inn.  O salão está
-coberto por poeira e feses de ratos a mobília está em pedaços. O cheiro
-de poeira está por todo lado, Papeis velhos são trazidos pelo vento que
-sopra vindo do Serviço de Correios, ao norte. Uma pequena escadaria leva
-à recepcao e o bar é ao leste.
+O SalÃ£o de Entrada da Hospedaria Grunting Boar~
+   VocÃª estÃ¡ na entrada da Hospedaria Grunting Boar Inn.  O salÃ£o estÃ¡
+coberto por poeira e feses de ratos a mobÃ­lia estÃ¡ em pedaÃ§os. O cheiro
+de poeira estÃ¡ por todo lado, Papeis velhos sÃ£o trazidos pelo vento que
+sopra vindo do ServiÃ§o de Correios, ao norte. Uma pequena escadaria leva
+Ã  recepcao e o bar Ã© ao leste.
 ~
-111 64 0 0 0 0
-D0
-Você vê as ruinas do Serviço de Correios de Midgaard.
+111 g 0
+D 0
+VocÃª vÃª as ruinas do ServiÃ§o de Correios de Midgaard.
 ~
 ~
 0 -1 11164
-D1
-Você vê o que um dia foi um bar.
+D 1
+VocÃª vÃª o que um dia foi um bar.
 ~
 ~
 0 -1 11163
-D3
-Você pode ver a Praça do Templo.
+D 3
+VocÃª pode ver a PraÃ§a do Templo.
 ~
 ~
 0 -1 11161
-D4
-Você vê a recepção.
+D 4
+VocÃª vÃª a recepÃ§Ã£o.
 ~
 ~
 0 -1 11165
 S
 #11163
 O Grunting Boar~
-   Você está no antigo bar. Escrita antiga, gravações e símbolos cobrem
-toda a parede. Uma lareira repleta de pedras na parede oeste, e através
-dos buracos que um dia foram janelas ao sul você pode ver o a Praça
+   VocÃª estÃ¡ no antigo bar. Escrita antiga, gravaÃ§Ãµes e sÃ­mbolos cobrem
+toda a parede. Uma lareira repleta de pedras na parede oeste, e atravÃ©s
+dos buracos que um dia foram janelas ao sul vocÃª pode ver o a PraÃ§a
 do Templo. Este lugar lhe faz sentir-se desolado e triste. Um pequeno
-aviso com letras grandes está pendurado ao bar.
+aviso com letras grandes estÃ¡ pendurado ao bar.
 ~
-111 64 0 0 0 0
-D3
-Você vê a saída para o hall de entrada.
+111 g 0
+D 3
+VocÃª vÃª a saÃ­da para o hall de entrada.
 ~
 ~
 0 -1 11162
-E
-escritas gravacao gravacoes simbolos~
-Mesmo parecendo difícil de entender, você acha que parece muito com...
-sangue !!! Algo reealmente maléfico deve ter acontecido por aqui.
-~
 E
 aviso~
 O aviso diz:
-Instruções grátis fornecidas pela Hospedaria Grunting Boar.
+InstruÃ§Ãµes grÃ¡tis fornecidas pela Hospedaria Grunting Boar.
 
-      	RMALDITO SEJA, OS QUE AQUI TENTAREM FICAR
-       ANTES QUE IRA DA D 1VASTAÇÃO CAIA SOBRE VOCÊ
-                        FUJA!!!	n
+      @RMALDITO SEJA, OS QUE AQUI TENTAREM FICAR
+       ANTES QUE IRA DA DEVASTAÃ‡ÃƒO CAIA SOBRE VOCÃŠ
+                        FUJA!!!@n
+~
+E
+escritas gravacao gravacoes simbolos~
+Mesmo parecendo difÃ­cil de entender, vocÃª acha que parece muito com...
+sangue !!! Algo reealmente malÃ©fico deve ter acontecido por aqui.
 ~
 S
 #11164
-O Serviço de Correios~
-   Você esta no que restou da  central de correios de Midgaard. Pilhas de
-correspondência permanecem nos cantos, alimentando insetos. Vários engradados
-foram violados e estão agora espalhados por todos os lados.
-Há um pequeno aviso na parede.
+O ServiÃ§o de Correios~
+   VocÃª esta no que restou da  central de correios de Midgaard. Pilhas de
+correspondÃªncia permanecem nos cantos, alimentando insetos. VÃ¡rios engradados
+foram violados e estÃ£o agora espalhados por todos os lados.
+HÃ¡ um pequeno aviso na parede.
 ~
-111 64 0 0 0 0
-D2
-Você vê a entrada da Hospedaria Grunting Boar.
+111 g 0
+D 2
+VocÃª vÃª a entrada da Hospedaria Grunting Boar.
 ~
 ~
 0 -1 11162
 E
-engradados~
-Totalmente destruídos e espalhados por todos os lados, o que havia dentro
-deles parece ter sido saqueado a muito tempo.
-~
-E
-teias~
-Parecem cobrir tudo.
-~
-E
-envelopes correspondecia~
-Envelopes de todos os tamanhos estão espalhados por todos os lados.
-Muitos deles estão corroidos pelo tempo.
-~
-E
 aviso~
 ,----------------------------------------------------------.
-| Instruções do Correio:                                   |
+| InstruÃ§Ãµes do Correio:                                   |
 |                                                          |
-|      Para enviar uma nota a alguém:                      |
+|      Para enviar uma nota a alguÃ©m:                      |
 |         MAIL <nome do jogador>                           |
 |                                                          |
-|      Para verificar se você recebeu correspondêcia:      |
+|      Para verificar se vocÃª recebeu correspondÃªcia:      |
 |         CHECK                                            |
 |                                                          |
 |      Para receber sua correspondencia:                   |
 |         RECEIVE                                          |
 |                                                          |
 |         Selos custam 150 moedas por carta                |
-|         Digite 'HELP MAIL' para mais informações         |
+|         Digite 'HELP MAIL' para mais informaÃ§Ãµes         |
 `----------------------------------------------------------'
+~
+E
+envelopes correspondecia~
+Envelopes de todos os tamanhos estÃ£o espalhados por todos os lados.
+Muitos deles estÃ£o corroidos pelo tempo.
+~
+E
+teias~
+Parecem cobrir tudo.
+~
+E
+engradados~
+Totalmente destruÃ­dos e espalhados por todos os lados, o que havia dentro
+deles parece ter sido saqueado a muito tempo.
 ~
 S
 #11165
-A Recepção~
-   Você está na recepção. A escadaria desce para o salão de entrada.
-Uma saída ao norte leva ao Centro de Criogenia. Há um pequeno aviso no balcão.
+A RecepÃ§Ã£o~
+   VocÃª estÃ¡ na recepÃ§Ã£o. A escadaria desce para o salÃ£o de entrada.
+Uma saÃ­da ao norte leva ao Centro de Criogenia. HÃ¡ um pequeno aviso no balcÃ£o.
 ~
-111 64 0 0 0 0
-D0
-Você pode ver o Centro de Criogenia.
+111 g 0
+D 0
+VocÃª pode ver o Centro de Criogenia.
 ~
 ~
 0 -1 11166
-D5
-Você pode ver o hall de entrada.
+D 5
+VocÃª pode ver o hall de entrada.
 ~
 ~
 0 -1 11162
 E
 aviso~
-Os quartos são caros mas bons! Você pode:
+Os quartos sÃ£o caros mas bons! VocÃª pode:
 
-   OFFER - Pega a oferta de um quarto - tempo é em dias da vida real.
+   OFFER - Pega a oferta de um quarto - tempo Ã© em dias da vida real.
    RENT  - Alugar um quarto (salva seus objetos, e encerra o jogo),
            por um dia ao menos.
 
                         DO MEU JEITO OU CAI FORA!
                            PAGUE SEU ALUGUEL!
-        NÃO PENSAREMOS D 4AS VEZES ANTES D 1 LHE DAR UM PÉ NA BUNDA
+        NÃƒO PENSAREMOS DUAS VEZES ANTES DE LHE DAR UM PÃ‰ NA BUNDA
              
-              	R PAGUE PARA ENTRAR... REZE PARA SAIR....	n
+              @R PAGUE PARA ENTRAR... REZE PARA SAIR....@n
 ~
 S
 #11166
 O Centro de Criogenia~
-   Você está em um quarto branco, porem todo sujo pela poeira. Caixas
-cilíndricas, do tamanho de um corpo, estão quebradas e arrombadas, o
-que havia dentro delas parece ter sido arrancado. A recepção fica ao sul.
+   VocÃª estÃ¡ em um quarto branco, porem todo sujo pela poeira. Caixas
+cilÃ­ndricas, do tamanho de um corpo, estÃ£o quebradas e arrombadas, o
+que havia dentro delas parece ter sido arrancado. A recepÃ§Ã£o fica ao sul.
 ~
-111 64 0 0 0 0
-D2
-A recepção fica ao sul.
+111 g 0
+D 2
+A recepÃ§Ã£o fica ao sul.
 ~
 ~
 0 -1 11165
 S
 #11167
-A Entrada para a Associação dos Clérigos~
-   A entrada para a sala é um pequeno e modesto quarto, completamente
-arrasado pelo tempo. Existe uma saída para o leste que leva para a
-Praça do Templo. O bar está ao norte daqui.
+A Entrada para a AssociaÃ§Ã£o dos ClÃ©rigos~
+   A entrada para a sala Ã© um pequeno e modesto quarto, completamente
+arrasado pelo tempo. Existe uma saÃ­da para o leste que leva para a
+PraÃ§a do Templo. O bar estÃ¡ ao norte daqui.
 ~
-111 64 0 0 0 0
-D0
-Você vê o bar, em ruinas...
+111 g 0
+D 0
+VocÃª vÃª o bar, em ruinas...
 ~
 ~
 0 -1 11168
-D1
-Você pode ver a Praça do Templo.
+D 1
+VocÃª pode ver a PraÃ§a do Templo.
 ~
 ~
 0 -1 11161
 S
 #11168
 O Bar das Divindades~
-   Este bar foi um dos mais finos da terra, hoje está coberto de poeira e 
-ratos por todo lado. Finas peças de metais e pedras preciosas que
+   Este bar foi um dos mais finos da terra, hoje estÃ¡ coberto de poeira e 
+ratos por todo lado. Finas peÃ§as de metais e pedras preciosas que
 enfeitavam esta sala antigamente, parecem terem sido arrancados. Um pequeno
-aviso ainda está pendurado na parede.
+aviso ainda estÃ¡ pendurado na parede.
 ~
-111 64 0 0 0 0
-D2
-Você vê a entrada.
+111 g 0
+D 2
+VocÃª vÃª a entrada.
 ~
 ~
 0 -1 11167
-D3
-Você vê ruinas.
+D 3
+VocÃª vÃª ruinas.
 ~
 ~
 0 -1 11169
 E
 aviso~
 O aviso diz:
-Intruções grátis fornecidas pelo garçon:
-        	RVÁ EMBORA ENQUANTO AINDA LHE RESTA VIDA !!!	n
+IntruÃ§Ãµes grÃ¡tis fornecidas pelo garÃ§on:
+        @RVÃ EMBORA ENQUANTO AINDA LHE RESTA VIDA !!!@n
 ~
 S
 #11169
-O Santuário Interno dos Clérigos~
-   Este parece ter sido um santuário interno. Uma pintura do poderoso
-Thor está caída ao chão. Um fosso no meio da sala desce para a escuridão,
-porem está bloqueado com uma enome pedra. É impossível imaginar como esta
+O SantuÃ¡rio Interno dos ClÃ©rigos~
+   Este parece ter sido um santuÃ¡rio interno. Uma pintura do poderoso
+Thor estÃ¡ caÃ­da ao chÃ£o. Um fosso no meio da sala desce para a escuridÃ£o,
+porem estÃ¡ bloqueado com uma enome pedra. Ã‰ impossÃ­vel imaginar como esta
 grande rocha veio parar aqui. Um odor nojento emana das profundezas.
 ~
-111 64 0 0 0 0
-D1
-Você vê as ruinas do Bar das Divindades.
+111 g 0
+D 1
+VocÃª vÃª as ruinas do Bar das Divindades.
 ~
 ~
 0 -1 11168
-D5
-Você não consegue ver o que existe porque está completamente tampado.
+D 5
+VocÃª nÃ£o consegue ver o que existe porque estÃ¡ completamente tampado.
 ~
-~
-0 2 -1
+pedra rocha~
+4 2 0
 S
 #11170
-As Ruinas da Praça do Mercado~
-   Você está diante da antiga Praca do Mercado, a famosa Praça de
-Midgaard.  Hoje tudo a sua volta está destruído, no centro ainda resta
-uma grande e estranha estátua.  Ela é esculpida em bronze e pedra.
+As Ruinas da PraÃ§a do Mercado~
+   VocÃª estÃ¡ diante da antiga Praca do Mercado, a famosa PraÃ§a de
+Midgaard.  Hoje tudo a sua volta estÃ¡ destruÃ­do, no centro ainda resta
+uma grande e estranha estÃ¡tua.  Ela Ã© esculpida em bronze e pedra.
 Diziam as lendas que ela podia tomar vida para defender Midgaard de
-ataques malignos, mas deve ser só lenda, pois tudo aqui foi corrompido.
-   Ruas saem em todas as direções, para norte a praca do templo, para
+ataques malignos, mas deve ser sÃ³ lenda, pois tudo aqui foi corrompido.
+   Ruas saem em todas as direÃ§Ãµes, para norte a praca do templo, para
 sul a Praca Comum, leste e oeste saem na Rua Principal.
 ~
-111 64 0 0 0 1
-D0
-Você pode ver a Praca do Templo.
+111 g 1
+D 0
+VocÃª pode ver a Praca do Templo.
 ~
 ~
 0 -1 11161
-D1
-Você pode ver a Rua Principal.
+D 1
+VocÃª pode ver a Rua Principal.
 ~
 ~
 0 -1 11177
-D2
-Você pode ver a Praca Comum.
+D 2
+VocÃª pode ver a Praca Comum.
 ~
 ~
 0 -1 11184
-D3
-Você pode ver a Rua Principal.
+D 3
+VocÃª pode ver a Rua Principal.
 ~
 ~
 0 -1 11171
 E
 estatua~
-O que você vê é o Verme Midgaard, enrolado em volta do Palácio de Midgaard.
+O que vocÃª vÃª Ã© o Verme Midgaard, enrolado em volta do PalÃ¡cio de Midgaard.
 ~
 S
 #11171
 Rua Principal~
-   Você está na rua principal atravessando as ruinas da Cidade de
+   VocÃª estÃ¡ na rua principal atravessando as ruinas da Cidade de
 Midgaard.  Ao sul daqui ficava a entrada para uma loja, e a velha 
-padaria é ao norte.  A leste daqui fica a antiga praça do mercado.
+padaria Ã© ao norte.  A leste daqui fica a antiga praÃ§a do mercado.
 ~
-111 64 0 0 0 1
-D0
-Você pode ver a velha padaria.
+111 g 1
+D 0
+VocÃª pode ver a velha padaria.
 ~
 ~
 0 -1 11172
-D1
-Você pode ver a antiga Praca do Mercado.
+D 1
+VocÃª pode ver a antiga Praca do Mercado.
 ~
 ~
 0 -1 11170
-D2
-Você pode ver uma velha loja.
+D 2
+VocÃª pode ver uma velha loja.
 ~
 ~
 0 -1 11173
 D3
-Você pode ver a Rua Principal.
+VocÃª pode ver a Rua Principal.
 ~
 ~
 0 -1 11174
 S
 #11172
 A Padaria~
-   Você esta dentro de uma antiga padaria. O doce perfume dos pães da
+   VocÃª esta dentro de uma antiga padaria. O doce perfume dos pÃ£es da
 Dinamarca foram embora a muito tempo, somente ratos moram aqui.  Pedras
-estão arrumadas em perfeita ordem nas prateleiras, e parecem ser pedras
+estÃ£o arrumadas em perfeita ordem nas prateleiras, e parecem ser pedras
 muito antigas.  Pedras nas prateleiras ? Estranho....muito estranho...
-Há um pequeno aviso no balcao.
+HÃ¡ um pequeno aviso no balcao.
 ~
-111 64 0 0 0 0
-D2
-Você pode ver a Rua Principal.
+111 g 0
+D 2
+VocÃª pode ver a Rua Principal.
 ~
 ~
 0 -1 11171
 E
-aviso~
-Instruções grátis fornecidas pela loja:
-
-        	RAshege wrërtc aërhsaa, awjhüisg !	n
+pedras prateleiras~
+   VocÃª  vÃª que hÃ¡ dezenas de pedras realmente muito estranhas. Devem ser
+algum tipo de brincadeira feitas por algum forasteiro.
+   A visÃ£o desse lugar enchem teus olhos de tristeza, toda a alegria e os 
+deliciosos pÃ£es desse lugar, sumiram como se tivesse passado centenas de anos.
 ~
 E
-pedras prateleiras~
-   Você  vê que há dezenas de pedras realmente muito estranhas. Devem ser
-algum tipo de brincadeira feitas por algum forasteiro.
-   A visão desse lugar enchem teus olhos de tristeza, toda a alegria e os 
-deliciosos pães desse lugar, sumiram como se tivesse passado centenas de anos.
+aviso~
+InstruÃ§Ãµes grÃ¡tis fornecidas pela loja:
+
+        @RAshege wrÃ«rtc aÃ«rhsaa, awjhÃ¼isg !@n
 ~
 S
 #11173
 A Loja de Armaduras~
    Uma loja que tinha todos os tipos de armaduras sobre as paredes, mas 
-tudo foi removido. só restaram os escombros.
-Na parede se vê uma grande mancha em vermelho.
+tudo foi removido. sÃ³ restaram os escombros.
+Na parede se vÃª uma grande mancha em vermelho.
 ~
-111 64 0 0 0 0
-D0
-Você pode ver a Rua Principal.
+111 g 0
+D 0
+VocÃª pode ver a Rua Principal.
 ~
 ~
 0 -1 11171
 E
 mancha~
-  Você olha atentamente para a mancha, mas... é estranho parece ser sangue
-e essa mancha é muito recente....
+  VocÃª olha atentamente para a mancha, mas... Ã© estranho parece ser sangue
+e essa mancha Ã© muito recente....
 ~
 S
 #11174
 Rua Principal~
-   Você está no fim da rua principal de Midgaard.  Ao sul fica uma antiga
-entrada que está bloqueada por inúmeras pedras. A rua continua ao leste
-levando à antiga praça do mercado. A loja de mágica fica ao norte e para
-o oeste está um dos portões da cidade.
+   VocÃª estÃ¡ no fim da rua principal de Midgaard.  Ao sul fica uma antiga
+entrada que estÃ¡ bloqueada por inÃºmeras pedras. A rua continua ao leste
+levando Ã  antiga praÃ§a do mercado. A loja de mÃ¡gica fica ao norte e para
+o oeste estÃ¡ um dos portÃµes da cidade.
 ~
-111 64 0 0 0 1
-D0
-Você pode ver a Loja de Mágica.
+111 g 1
+D 0
+VocÃª pode ver a Loja de MÃ¡gica.
 ~
 ~
 0 -1 11175
-D1
-Você pode ver a Rua Principal.
+D 1
+VocÃª pode ver a Rua Principal.
 ~
 ~
 0 -1 11171
-D2
-Você pode ver uma entrada bloqueada.
+D 2
+VocÃª pode ver uma entrada bloqueada.
 ~
 ~
-1 2 -1
-D3
-Você pode ver o portão da cidade.
+4 2 0
+D 3
+VocÃª pode ver o portÃ£o da cidade.
 ~
 ~
 0 -1 11176
 S
 #11175
-A Loja de Mágica~
+A Loja de MÃ¡gica~
    Este era um lugar muito frequentado pelos moradores desta cidade,que 
-vinham em busca de poções e pergaminhos muito antigos, para os mais diversos
-fins.  Hoje não passa de um depósito de... pedras.
+vinham em busca de poÃ§Ãµes e pergaminhos muito antigos, para os mais diversos
+fins.  Hoje nÃ£o passa de um depÃ³sito de... pedras.
 ~
-111 204 0 0 0 0
-D2
-Você vê a rua principal.
+111 cdgh 0
+D 2
+VocÃª vÃª a rua principal.
 ~
 ~
 0 -1 11174
 S
 #11176
-Dentro do Portão Oeste de Midgaard~
-   Você esta entre o que sobrou das duas pequenas torres construídas nos
-muros da cidade, uma ainda está inteira porém a outra parece ter sido
+Dentro do PortÃ£o Oeste de Midgaard~
+   VocÃª esta entre o que sobrou das duas pequenas torres construÃ­das nos
+muros da cidade, uma ainda estÃ¡ inteira porÃ©m a outra parece ter sido
 atingida por um raio. A rua principal leva para leste e a estrada do muro
-que antigamente ia para o sul, agora está bloqueada. A oeste está o grande
-portão cuja entrada é guardada por um forte guardião.  Aparentemente o único
-ser vivo aqui além de você. 
+que antigamente ia para o sul, agora estÃ¡ bloqueada. A oeste estÃ¡ o grande
+portÃ£o cuja entrada Ã© guardada por um forte guardiÃ£o.  Aparentemente o Ãºnico
+ser vivo aqui alÃ©m de vocÃª. 
 ~
-111 64 0 0 0 1
-D1
-Você vê a Rua Principal.
+111 g 1
+D 1
+VocÃª vÃª a Rua Principal.
 ~
 ~
 0 -1 11174
-D2
-Você vê a estrada ao longo do lado interno dos muros da cidade. Você repara
-que é agora não é mais possível passar por ela.
+D 2
+VocÃª vÃª a estrada ao longo do lado interno dos muros da cidade. VocÃª repara
+que Ã© agora nÃ£o Ã© mais possÃ­vel passar por ela.
 ~
+estrada sul bloqueio~
+4 2 0
+D 3
+O portÃ£o da cidade Ã© a oeste.
 ~
-1 2 -1
-D3
-O portão da cidade é a oeste.
-~
-portão~
-2 11101 11198
+portao~
+:n 1 o portÃ£o da cidade de Midgaard
+2 11101 11198 
 E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
+portao~
+SÃ£o portas duplas feitas de madeira muito resistente. SÃ£o reforÃ§adas com
+grandes tiras de ferro para deixÃ¡-las ainda mais resistentes. Uma das portas
+possui uma fechadura enorme.
 ~
 E
 torre torres~
-Ambas as torres eram construídas com grandes rochas unidas entre si com
+Ambas as torres eram construÃ­das com grandes rochas unidas entre si com
 algum tipo de cimento, assim como o muro da cidade, mas somente uma ainda
-está intacta.
+estÃ¡ intacta.
 ~
 E
-portão~
-São portas duplas feitas de madeira muito resistente. São reforçadas com
-grandes tiras de ferro para deixá-las ainda mais resistentes. Uma das portas
-possui uma fechadura enorme.
+muro~
+Ã‰ construÃ­do de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. Ã‰ muito alto pra subir.
 ~
 S
 #11177
 Rua Principal~
-   Você está na rua principal, atravessando a cidade. Ao norte há o velho
-armazem, e a rua principal prolonga-se para leste. A oeste você vê a antiga
-praça do mercado, ao sul uma pequena porta leva à velha Loja de Animais.
+   VocÃª estÃ¡ na rua principal, atravessando a cidade. Ao norte hÃ¡ o velho
+armazem, e a rua principal prolonga-se para leste. A oeste vocÃª vÃª a antiga
+praÃ§a do mercado, ao sul uma pequena porta leva Ã  velha Loja de Animais.
 ~
-111 64 0 0 0 1
-D0
-Você pode ver o Armazém.
+111 g 1
+D 0
+VocÃª pode ver o ArmazÃ©m.
 ~
 ~
 0 -1 11178
-D1
-Você pode ver a Rua Principal.
+D 1
+VocÃª pode ver a Rua Principal.
 ~
 ~
 0 -1 11180
-D2
-Você pode ver a Loja de Animais.
+D 2
+VocÃª pode ver a Loja de Animais.
 ~
 ~
 0 -1 11179
-D3
-Você pode ver a Praca do Mercado.
+D 3
+VocÃª pode ver a Praca do Mercado.
 ~
 ~
 0 -1 11170
 S
 #11178
-O Armazém~
-   Você está dentro do antigo armazém desta cidade. Todo tipo de items que
-antigamente eram vendidos aqui, não mais existem.
-Uma pequena nota está pendurada na parede.
+O ArmazÃ©m~
+   VocÃª estÃ¡ dentro do antigo armazÃ©m desta cidade. Todo tipo de items que
+antigamente eram vendidos aqui, nÃ£o mais existem.
+Uma pequena nota estÃ¡ pendurada na parede.
 ~
-111 64 0 0 0 0
-D2
-Você pode ver a Rua Principal.
+111 g 0
+D 2
+VocÃª pode ver a Rua Principal.
 ~
 ~
 0 -1 11177
@@ -1685,198 +1702,199 @@ E
 nota~
 A nota diz:
 
-        	RFui embora, faça como eu antes que tudo termine para você !!!
-                                                Ass. Vendedor	n
+        @RFui embora, faÃ§a como eu antes que tudo termine para vocÃª !!!
+                                                Ass. Vendedor@n
 ~
 S
 #11179
 A Loja de Animais~
    A velha loja de animais parece ter sido abandonada as pressas, cheia de
-gaiolas e fósseis de animais.  Os únicos animais vivos aqui são os ratos.
-Há um aviso na parede.
+gaiolas e fÃ³sseis de animais.  Os Ãºnicos animais vivos aqui sÃ£o os ratos.
+HÃ¡ um aviso na parede.
 ~
-111 64 0 0 0 0
-D0
-Você vê a rua principal.
+111 g 0
+D 0
+VocÃª vÃª a rua principal.
 ~
 ~
 0 -1 11177
 E
 aviso~
-É impossível de se ler, os ratos comeram boa parte do aviso.
+Ã‰ impossÃ­vel de se ler, os ratos comeram boa parte do aviso.
 ~
 S
 #11180
 Rua Principal~
-   A rua principal. Ao norte você tem a loja de armas e ao sul uma
-outra associação com as portas soterradas. A leste você deixa a cidade
-e para oeste a rua leva à praca do mercado.
+   A rua principal. Ao norte vocÃª tem a loja de armas e ao sul uma
+outra associaÃ§Ã£o com as portas soterradas. A leste vocÃª deixa a cidade
+e para oeste a rua leva Ã  praca do mercado.
 ~
-111 64 0 0 0 1
-D0
-Você pode ver a Loja de Armas.
+111 g 1
+D 0
+VocÃª pode ver a Loja de Armas.
 ~
 ~
 0 -1 11181
-D1
-Você pode ver os portões da cidade.
+D 1
+VocÃª pode ver os portÃµes da cidade.
 ~
 ~
 0 -1 11182
-D2
-Você pode ver uma antiga associação porém é impossível de se entrar.
+D 2
+VocÃª pode ver uma antiga associaÃ§Ã£o porÃ©m Ã© impossÃ­vel de se entrar.
 ~
 ~
-1 2 -1
-D3
-Você vê a Rua Principal, que leva à velha Praca do Mercado.
+
+D 3
+VocÃª vÃª a Rua Principal, que leva Ã  velha Praca do Mercado.
 ~
 ~
 0 -1 11174
 S
 #11181
 A Loja de Armas~
-   Você esta dentro da loja de armas. Este local tambem não foi
-poupado, todas as armas foram levadas embora, e tudo está destruído.
+   VocÃª esta dentro da loja de armas. Este local tambem nÃ£o foi
+poupado, todas as armas foram levadas embora, e tudo estÃ¡ destruÃ­do.
 ~
-111 64 0 0 0 0
-D2
-Você pode ver a Rua Principal.
+111 g 0
+D 2
+VocÃª pode ver a Rua Principal.
 ~
 ~
 0 -1 11180
 S
 #11182
-Dentro do portão Leste de Midgaard~
-   Você esta entre o que sobrou das duas pequenas torres construídas nos
-muros da cidade e ligadas a uma pequena ponte.  A oeste está a rua
-principal e ao sul uma pequena loja. O grande portão é vigiado por um
-forte guardião.  Aparentemente o único ser vivo aqui além de você. 
+Dentro do portÃ£o Leste de Midgaard~
+   VocÃª esta entre o que sobrou das duas pequenas torres construÃ­das nos
+muros da cidade e ligadas a uma pequena ponte.  A oeste estÃ¡ a rua
+principal e ao sul uma pequena loja. O grande portÃ£o Ã© vigiado por um
+forte guardiÃ£o.  Aparentemente o Ãºnico ser vivo aqui alÃ©m de vocÃª. 
 ~
-111 64 0 0 0 1
-D1
-Você vê o portão da cidade.
+111 g 1
+D 1
+VocÃª vÃª o portÃ£o da cidade.
 ~
-portão~
+portao~
+:n 1 o portÃ£o da cidade de Midgaard
 2 11101 11199
-D2
-Você vê uma pequena loja.
+D 2
+VocÃª vÃª uma pequena loja.
 ~
 ~
 0 -1 11183
-D3
-Você vê a Rua Principal.
+D 3
+VocÃª vÃª a Rua Principal.
 ~
 ~
 0 -1 11180
 E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
+ponte~
+Ã‰ muito alta para alcanÃ§ar mas parece que alguem poderia facilmente passar
+de uma torre para outra.
 ~
 E
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
-~
-E
-portão~
-São portas duplas feitas de madeira muito resistente. São reforçadas com
+portao~
+SÃ£o portas duplas feitas de madeira muito resistente. SÃ£o reforÃ§adas com
 grandes tiras de ferro para deixa-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-ponte~
-É muito alta para alcançar mas parece que alguem poderia facilmente passar
-de uma torre para outra.
+torre torres~
+Ambas as torres sÃ£o construÃ­das com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
+~
+E
+muro~
+Ã‰ construÃ­do de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. Ã‰ muito alto pra subir.
 ~
 S
 #11183
-A Velha Loja de Água~
-   Você esta no centro do que restou de uma pequena loja cujas paredes
+A Velha Loja de Ãgua~
+   VocÃª esta no centro do que restou de uma pequena loja cujas paredes
 eram antigamente cobertas com prateleiras e mais prateleiras de cantaros
-d'água. Muitos barris com torneiras estão empilhados num canto e outros
-mais estão quebrados ou cheios de pedras.
+d'Ã¡gua. Muitos barris com torneiras estÃ£o empilhados num canto e outros
+mais estÃ£o quebrados ou cheios de pedras.
 ~
-111 64 0 0 0 0
-D0
-Você vê o Portão Leste.
+111 g 0
+D 0
+VocÃª vÃª o PortÃ£o Leste.
 ~
 ~
 0 -1 11182
 S
 #11184
-A Praça Comum~
-   A praça comum, aqui por muitas vezes você parou para conversar. A oeste
-o beco miserável parece o mesmo e a leste um beco escuro. Ao norte, esta praça
-está ligada à antiga praça do mercado. Ao sul você nota um cheiro desagradável.
+A PraÃ§a Comum~
+   A praÃ§a comum, aqui por muitas vezes vocÃª parou para conversar. A oeste
+o beco miserÃ¡vel parece o mesmo e a leste um beco escuro. Ao norte, esta praÃ§a
+estÃ¡ ligada Ã  antiga praÃ§a do mercado. Ao sul vocÃª nota um cheiro desagradÃ¡vel.
 ~
-111 64 0 0 0 1
-D0
-Você vê a praca do mercado.
+111 g 1
+D 0
+VocÃª vÃª a praca do mercado.
 ~
 ~
 0 -1 11170
-D1
-Você vê o beco escuro.
+D 1
+VocÃª vÃª o beco escuro.
 ~
 ~
 0 -1 11185
-D2
-Você vê o depósito de lixo.
+D 2
+VocÃª vÃª o depÃ³sito de lixo.
 ~
 ~
 0 -1 11195
-D3
-Você vê o beco miserável.
+D 3
+VocÃª vÃª o beco miserÃ¡vel.
 ~
 ~
 0 -1 11192
 S
 #11185
 O Beco Escuro~
-   O beco escuro, a oeste fica a praça comum e ao sul outra associação
-tambem com suas portas repletas de entulho tornando impossível de se entrar.
+   O beco escuro, a oeste fica a praÃ§a comum e ao sul outra associaÃ§Ã£o
+tambem com suas portas repletas de entulho tornando impossÃ­vel de se entrar.
 O beco continua a leste.
 ~
-111 64 0 0 0 1
-D1
+111 g 1
+D 1
 O beco continua a leste.
 ~
 ~
 0 -1 11186
-D2
-Você vê a entrada de uma associação.
+D 2
+VocÃª vÃª a entrada de uma associaÃ§Ã£o.
 ~
 ~
-1 2 -1
-D3
-Você vê a praca comum.
+4 2 0
+D 3
+VocÃª vÃª a praca comum.
 ~
 ~
 0 -1 11184
 E
-associação~
-Parece ser a velha associação dos Ladrões, mas tudo aqui foi destruído.
+associacao~
+Parece ser a velha associaÃ§Ã£o dos LadrÃµes, mas tudo aqui foi destruÃ­do.
 ~
 S
 #11186
 O Beco Escuro no Dique~
-   Você está em um beco que segue para leste e oeste. Ao sul
-daqui você vê o dique.
+   VocÃª estÃ¡ em um beco que segue para leste e oeste. Ao sul
+daqui vocÃª vÃª o dique.
 ~
-111 64 0 0 0 1
-D1
+111 g 1
+D 1
 O beco leva a leste.
 ~
 ~
 0 -1 11188
-D2
-Você vê o dique.
+D 2
+VocÃª vÃª o dique.
 ~
 ~
 0 -1 11187
-D3
+D 3
 O beco leva a oeste.
 ~
 ~
@@ -1884,197 +1902,197 @@ O beco leva a oeste.
 S
 #11187
 O Dique~
-   Você está no dique. Ao sul daqui você vê o rio, antigamente a água
-fluia calmamente, hoje não resta nada alem de terra seca e enormes pedras.
-Umas dessas pedras é tão enorme que é impossível seguir adiante.
+   VocÃª estÃ¡ no dique. Ao sul daqui vocÃª vÃª o rio, antigamente a Ã¡gua
+fluia calmamente, hoje nÃ£o resta nada alem de terra seca e enormes pedras.
+Umas dessas pedras Ã© tÃ£o enorme que Ã© impossÃ­vel seguir adiante.
 ~
-111 64 0 0 0 1
-D0
-Você vê o beco.
+111 g 1
+D 0
+VocÃª vÃª o beco.
 ~
 ~
 0 -1 11186
 S
 #11188
 O Final Leste do Beco~
-   Você está no final leste do beco, o muro da cidade está a leste
-bloqueando qualquer movimento. Um pequeno depósito está a sul daqui.
-Ao norte, uma pequena e velha loja... o que será que vende alí?
+   VocÃª estÃ¡ no final leste do beco, o muro da cidade estÃ¡ a leste
+bloqueando qualquer movimento. Um pequeno depÃ³sito estÃ¡ a sul daqui.
+Ao norte, uma pequena e velha loja... o que serÃ¡ que vende alÃ­?
 ~
-111 64 0 0 0 1
-D0
-Você vê a antiga loja de mapas.
+111 g 1
+D 0
+VocÃª vÃª a antiga loja de mapas.
 ~
 ~
 0 -1 11189
-D2
-Você vê o depósito e muitos escombros.
+D 2
+VocÃª vÃª o depÃ³sito e muitos escombros.
 ~
 ~
 0 -1 11190
-D3
-Você vê o beco.
+D 3
+VocÃª vÃª o beco.
 ~
 ~
 0 -1 11186
 S
 #11189
 A Loja de Mapas~
-   Você vê pedaços vários mapas espalhados pelo chão.  Parece que todos 
-foram destruídos e queimados.  Há muitas cinzas por todos os lados.
+   VocÃª vÃª pedaÃ§os vÃ¡rios mapas espalhados pelo chÃ£o.  Parece que todos 
+foram destruÃ­dos e queimados.  HÃ¡ muitas cinzas por todos os lados.
 ~
-111 64 0 0 0 0
-D2
-Você vê o final leste do beco.
+111 g 0
+D 2
+VocÃª vÃª o final leste do beco.
 ~
 ~
 0 -1 11188
 S
 #11190
 O Deposito Deserto~
-   Você está dentro do depósito. O lugar está decorado com várias pedras,
-antigamente aqui existiam varias peças de navios, hoje somente poeira.
+   VocÃª estÃ¡ dentro do depÃ³sito. O lugar estÃ¡ decorado com vÃ¡rias pedras,
+antigamente aqui existiam varias peÃ§as de navios, hoje somente poeira.
 ~
-111 64 0 0 0 1
-D0
-Você vê o beco.
+111 g 1
+D 0
+VocÃª vÃª o beco.
 ~
 ~
 0 -1 11188
 S
 #11191
 O Final Leste do Beco~
-   Você está no final leste do beco, o muro da cidade está a leste
-bloqueando qualquer movimento. Um pequeno depósito está a sul daqui.
-Ao norte, uma pequena e velha loja... também destruída.
+   VocÃª estÃ¡ no final leste do beco, o muro da cidade estÃ¡ a leste
+bloqueando qualquer movimento. Um pequeno depÃ³sito estÃ¡ a sul daqui.
+Ao norte, uma pequena e velha loja... tambÃ©m destruÃ­da.
 ~
-111 64 0 0 0 1
-D0
-Você vê a loja de mapas.
+111 g 1
+D 0
+VocÃª vÃª a loja de mapas.
 ~
 ~
 0 -1 11189
-D2
-Você vê o depósito.
+D 2
+VocÃª vÃª o depÃ³sito.
 ~
 ~
 0 -1 11190
-D3
-Você vê o beco.
+D 3
+VocÃª vÃª o beco.
 ~
 ~
 0 -1 11186
 S
 #11192
-O Final Leste do Beco Miserável.~
-   Você está no beco miserável. Ao sul fica uma velha e destruída hospedaria
-e a leste você vê a praça comum. O beco continua a oeste.
+O Final Leste do Beco MiserÃ¡vel.~
+   VocÃª estÃ¡ no beco miserÃ¡vel. Ao sul fica uma velha e destruÃ­da hospedaria
+e a leste vocÃª vÃª a praÃ§a comum. O beco continua a oeste.
 ~
-111 64 0 0 0 1
-D1
-Você vê a praça comum.
+111 g 1
+D 1
+VocÃª vÃª a praÃ§a comum.
 ~
 ~
 0 -1 11184
-D2
-Você vê a velha hospedaria.
+D 2
+VocÃª vÃª a velha hospedaria.
 ~
 ~
 0 -1 11194
-D3
-Você vê o beco miserável.
+D 3
+VocÃª vÃª o beco miserÃ¡vel.
 ~
 ~
 0 -1 11193
 S
 #11193
-Beco Miserável~
-   Você está no Beco Miserável, que continua a leste. Você vê
-o muro da cidade a oeste, mas é impossível de atravessar os
-escombros para pode ir até o muro.
+Beco MiserÃ¡vel~
+   VocÃª estÃ¡ no Beco MiserÃ¡vel, que continua a leste. VocÃª vÃª
+o muro da cidade a oeste, mas Ã© impossÃ­vel de atravessar os
+escombros para pode ir atÃ© o muro.
 ~
-111 64 0 0 0 1
-D1
+111 g 1
+D 1
 O beco leva a leste.
 ~
 ~
 0 -1 11192
-D3
-O beco levava antigamente a oeste, porem hoje é impossível de ir.
+D 3
+O beco levava antigamente a oeste, porem hoje Ã© impossÃ­vel de ir.
 ~
 ~
-1 2 -1
+4 2 0
 S
 #11194
 Hospedaria Grubby~
-   Você está dentro da velha Hospedaria Grubby. Este lugar já não era 
-limpo quando habitado, agora então há sujeira por todos os cantos. O
-o cheiro de podre desapareceu mas o pó dos escombros ainda perturbam
+   VocÃª estÃ¡ dentro da velha Hospedaria Grubby. Este lugar jÃ¡ nÃ£o era 
+limpo quando habitado, agora entÃ£o hÃ¡ sujeira por todos os cantos. O
+o cheiro de podre desapareceu mas o pÃ³ dos escombros ainda perturbam
 suas narinas.
 ~
-111 64 0 0 0 0
-D0
-Você vê o beco.
+111 g 0
+D 0
+VocÃª vÃª o beco.
 ~
 ~
 0 -1 11192
 S
 #11195
-O Depósito de Lixo~
-   O depósito de lixo, onde o povo da cidade deixava o seu lixo. Este é o unico 
-lugar que parece ter sido conservado, pois o cheiro insuportável continua o mesmo.
-Você vê uma grande conexão de canos totalmente soterrada, mas estranhamente foi 
-aberto outro buraco no chão, que parece não ter existido aqui em outras épocas. 
-  Ao norte você pode ver a praça comum.
+O DepÃ³sito de Lixo~
+   O depÃ³sito de lixo, onde o povo da cidade deixava o seu lixo. Este Ã© o unico 
+lugar que parece ter sido conservado, pois o cheiro insuportÃ¡vel continua o mesmo.
+VocÃª vÃª uma grande conexÃ£o de canos totalmente soterrada, mas estranhamente foi 
+aberto outro buraco no chÃ£o, que parece nÃ£o ter existido aqui em outras Ã©pocas. 
+  Ao norte vocÃª pode ver a praÃ§a comum.
 ~
-111 64 0 0 0 1
-D0
-Você pode ver a praça comum.
+111 g 1
+D 0
+VocÃª pode ver a praÃ§a comum.
 ~
 ~
 0 -1 11184
-D5
-Você vê um pequeno buraco
+D 5
+VocÃª vÃª um pequeno buraco
 ~
 ~
-0 -1 -1
+4 2 0
 S
 #11198
-O Calabouço de Pedra~
-   Este é o calabouço do Mundo das Pedras.  Aqui é gelado e sombrio, a escuridão é
-intensa, sua única luz é a que você carrega e alguns pequenos buracos nas frestas
+O CalabouÃ§o de Pedra~
+   Este Ã© o calabouÃ§o do Mundo das Pedras.  Aqui Ã© gelado e sombrio, a escuridÃ£o Ã©
+intensa, sua Ãºnica luz Ã© a que vocÃª carrega e alguns pequenos buracos nas frestas
 das pedras.  Talvez fosse melhor sentar e descansar, pois aparentemente sua estadia
-aqui será eterna ...
+aqui serÃ¡ eterna ...
 ~
-111 64 0 0 0 0
-D1
-Você pode ver uma forte porta
+111 g 0
+D 1
+VocÃª pode ver uma forte porta
 ~
 ~
 0 11101 11176
 E
-portão porta~
-São portas duplas feitas de madeira muito resistente. São reforçadas com
+portao porta~
+SÃ£o portas duplas feitas de madeira muito resistente. SÃ£o reforÃ§adas com
 grandes tiras de ferro para deixa-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
-S
+S       
 #11199
-O Calabouço de Pedra~
-   Este é o calabouço do Mundo das Pedras.  Aqui é gelado e sombrio, a escuridão é
-intensa, sua única luz é a que você carrega e alguns pequenos buracos nas frestas
+O CalabouÃ§o de Pedra~
+   Este Ã© o calabouÃ§o do Mundo das Pedras.  Aqui Ã© gelado e sombrio, a escuridÃ£o Ã©
+intensa, sua Ãºnica luz Ã© a que vocÃª carrega e alguns pequenos buracos nas frestas
 das pedras.  Talvez fosse melhor sentar e descansar, pois aparentemente sua estadia
-aqui será eterna ...
+aqui serÃ¡ eterna ...
 ~
-111 64 0 0 0 0
-D3
-Você pode ver uma forte porta
+111 g 0
+D 3
+VocÃª pode ver uma forte porta
 ~
 ~
 0 -1 11182
 E
-portão porta~
-São portas duplas feitas de madeira muito resistente. São reforçadas com
+portao porta~
+SÃ£o portas duplas feitas de madeira muito resistente. SÃ£o reforÃ§adas com
 grandes tiras de ferro para deixa-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
