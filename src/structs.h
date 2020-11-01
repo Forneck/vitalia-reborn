@@ -625,6 +625,7 @@
 #define CMD_ARG_OUT 6
 #define CMD_ARG_DIR 7
 
+#define MAX_COMMAND 780
 
 /* Rent codes */
 #define RENT_UNDEF      0 /**< Character inv save status = undefined */
