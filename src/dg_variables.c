@@ -757,12 +757,12 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig,
               snprintf(str, slen, "%d", trig_is_attached(SCRIPT(c), i));
             }
           }
-          else if (!str_cmp(field, "heshe"))
-            snprintf(str, slen, "%s", HSSH(c));
-          else if (!str_cmp(field, "himher"))
-            snprintf(str, slen, "%s", HMHR(c));
-          else if (!str_cmp(field, "hisher"))
-            snprintf(str, slen, "%s", HSHR(c));
+          else if (!str_cmp(field, "eleela"))
+            snprintf(str, slen, "%s", ELEA(c));
+          else if (!str_cmp(field, "oa"))
+            snprintf(str, slen, "%s", OA(c));
+          else if (!str_cmp(field, "seusua"))
+            snprintf(str, slen, "%s", SEUSUA(c));
           else if (!str_cmp(field, "hitp")) {
             if (subfield && *subfield) {
               int addition = atoi(subfield);
