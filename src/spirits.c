@@ -113,6 +113,15 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 			ch, 0, raiser, TO_CHAR);
 	}
 
+	if (corpse){
+	for (obj = corpse->contains; obj != NULL; obj = obj->next_content)
+		{
+			obj_from_obj(obj);
+			obj_to_char(obj, ch);
+			get_check_money(ch, obj);
+		}
+	}
+	
 	if (restore >= 2)
 	{
 		GET_HIT(ch) = GET_MAX_HIT(ch);
@@ -147,13 +156,6 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 		}
 	}
 
-	if (corpse)
-	for (obj = corpse->contains; obj != NULL; obj = obj->next_content)
-		{
-			obj_from_obj(obj);
-			obj_to_char(obj, ch);
-			get_check_money(ch, obj);
-		}
 
 	save_char(ch);
 	Crash_crashsave(ch);
