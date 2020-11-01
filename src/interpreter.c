@@ -902,8 +902,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		fann_destroy(ann);
 		
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd,
-																	 complete_cmd_info[cmd].
-																	 subcmd));
+				complete_cmd_info[cmd].subcmd));
 	}
 }
 
