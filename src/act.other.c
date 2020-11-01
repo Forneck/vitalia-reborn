@@ -1292,10 +1292,13 @@ ACMD(do_suggestion)
 
 	calc_output = fann_run(ann, input);
    calc_output[0] = calc_output[0] * 780;
-		if (calc_output[3] <= 0 )
-		send_to_char(ch, "Sugestão de comando: %s \r\n", cmd_info[(int)calc_output[0]].command);    else if (calc_output[5] > 0)
-	send_to_char(ch, "Comando Sugerido %s %f %f \r\n",
-			cmd_info[(int)calc_output[0]].command, calc_output[3], calc_output[5]);
-	else 
-		send_to_char(ch, "Comando Sugerido %s %f \r\n",cmd_info[(int)calc_output[0]].command, calc_output[3]);
+   if (calc_output[0] == (0 || 780)
+   {
+      send_to_char(ch,"Nenhum comando sugerido para você.\r\n");
+   }
+   else if (cmd_info[(int)calc_output[0]].minimum_level > GET_LEVEL(ch)){
+   send_to_char(ch,"Comando sugerido acima do teu nivel!\r\n");
+   }
+   else
+   send_to_char(ch,"Sugestão de comando: %s\r\n",cmd_info[(int)calc_output[0]].command);
 }
