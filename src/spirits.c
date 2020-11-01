@@ -148,7 +148,7 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 	}
 
 		/* If corpse has objects, save them to file */
-	Crash_extract_norents(corpse);
+//	Crash_extract_norents(corpse);
 	for (obj = corpse->contains; obj != NULL; obj = obj->next_content)
 	{
 	    if (GET_OBJ_TYPE(obj) == ITEM_MONEY) {
@@ -158,13 +158,6 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
       obj_from_obj(obj);
       Crash_extract_objs(obj);
 	}
-		
-	/* Show message */
-	if (corpse->carried_by)
-		act("$p é envolvido por uma forte luz branca e desaparece.", FALSE, corpse->carried_by,
-			corpse, 0, TO_CHAR);
-	else if (corpse->in_room)
-		act("$p é envolvido por uma forte luz branca e desaparece.", TRUE, NULL, corpse, 0, TO_ROOM);
 
 	/* Store player */
 	save_char(ch);
