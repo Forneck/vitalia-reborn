@@ -1291,8 +1291,8 @@ ACMD(do_suggestion)
 	input[28] = 1/(1+exp(-count_obj));
 
 	calc_output = fann_run(ann, input);
-   calc_output[0] = calc_output[0] * 780;
-   if (calc_output[0] == (0 || 780))
+   calc_output[0] = calc_output[0] * (float) MAX_COMMAND;
+   if ((calc_output[0] == MAX_COMMAND) || (calc_output[0] == 0))
    {
       send_to_char(ch,"Nenhum comando sugerido para você.\r\n");
    }
