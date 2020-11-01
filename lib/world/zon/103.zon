@@ -1,7 +1,7 @@
 #103
 Vitalia~
 A Selva de Makira~
-10300 10399 30 2
+10300 10399 30 2 j 0 0 0 -1 -1
 D 0 10308 0 2 	(A Sala do Chefe)
 M 0 10306 1 10308 	(o chefe canibal)
 E 1 10306 10 16 	(uma clava feita de osso)
@@ -31,7 +31,7 @@ O 0 10304 2 10306 	(uma grande fatia de carne)
 M 0 10304 1 10306 	(uma mulher)
 M 0 10301 4 10304 	(um guarda)
 E 1 10300 4 16 	(uma lança)
-D 0 10304 1 1 	(O Port�o de Entrada do Acampamento)
+D 0 10304 1 1 	(O Portão de Entrada do Acampamento)
 M 0 10300 4 10301 	(um leão realmente forte)
 M 0 10312 6 10318 	(um jacaré)
 M 1 10312 6 10320 	(um jacaré)

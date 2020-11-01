@@ -1,7 +1,7 @@
 #107
 Vitalia~
 Otávia~
-10700 10799 240 1 d 0 0 0 -1 -1
+10700 10799 240 1 dj 0 0 0 -1 -1
 M 0 10727 10 10700 	(um esquilo cinza)
 M 0 10720 7 10700 	(um gumbly)
 M 0 10701 8 10742 	(um cidadão otaviano)
@@ -280,18 +280,18 @@ P 1 10736 1 10732 	(o livro da terra)
 D 0 10705 5 2 	(As Terras Esquecidas de Diomira)
 D 0 10706 4 2 	(Diomira, a cidade do fogo)
 D 0 10706 6 1 	(Diomira, a cidade do fogo)
-D 0 10709 8 1 	(O Cemit�rio Diomiriano)
+D 0 10709 8 1 	(O Cemitério Diomiriano)
 D 0 10710 0 1 	(Uma Pequena Casa)
 D 0 10711 2 1 	(Um Pequeno Quarto)
-D 0 10775 0 1 	(Um Corredor do Pal�cio Real)
-D 0 10775 2 1 	(Um Corredor do Pal�cio Real)
-D 0 10775 7 1 	(Um Corredor do Pal�cio Real)
-D 0 10776 2 1 	(A Cozinha do Pal�cio)
+D 0 10775 0 1 	(Um Corredor do Palácio Real)
+D 0 10775 2 1 	(Um Corredor do Palácio Real)
+D 0 10775 7 1 	(Um Corredor do Palácio Real)
+D 0 10776 2 1 	(A Cozinha do Palácio)
 D 0 10779 0 1 	(O Quarto de Hospedes)
 D 0 10777 9 1 	(A Sala da Guarda Real)
 D 0 10778 5 1 	(Uma Escadaria de Marfim)
 D 0 10780 4 1 	(Os Aposentos Reais)
 D 0 10792 5 2 	(As Terras Esquecidas de Armila)
-D 0 10793 4 2 	(Armila, a Cidade da �gua)
+D 0 10793 4 2 	(Armila, a Cidade da Água)
 S
 $

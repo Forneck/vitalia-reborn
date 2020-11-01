@@ -1,29 +1,29 @@
 Name: Nirrab
 Pass: NihCO10HzAScc
-Titl: the Fledgling
+Titl: the Bear Cub
 Sex : 2
 Clas: 6
-Levl: 1
+Levl: 6
 Id  : 24
 Brth: 1604087691
-Plyd: 3585
-Last: 1604091317
+Plyd: 7601
+Last: 1604194092
 Htwn: 3001
 Host: 189.95.188.225
 Hite: 163
 Wate: 153
-Alin: 15
+Alin: 155
 Act : ghl 0 0 0
 Aff : 0 0 0 0
-Pref: efghno 0 0 0
+Pref: efghnoBCE 0 0 0
 Wimp: 10
 Room: 5518
-Lern: 1
-Hung: 6
-Thir: 15
-Hit : 21/21
-Mana : 100/100
-Move: 84/84
+Lern: 7
+Hung: 4
+Thir: 14
+Hit : 82/82
+Mana : 118/118
+Move: 97/97
 Str : 16/0
 Int : 12
 Wis : 11
@@ -31,7 +31,16 @@ Dex : 12
 Con : 16
 Cha : 8
 Ac  : 100
-Exp : 684
+Gold: 11512
+Exp : 43517
 Olc : 0
 Skil:
+232 90
 0 0
+Affs:
+36 11 0 33 256 0 0 0
+0 0 0 0 0 0 0 0
+Alis: 1
+ .
+ gossip $*
+1

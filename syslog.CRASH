@@ -1,30 +1,30 @@
-Oct 31 20:31:50 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Oct 31 20:31:50 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Oct 31 20:31:50 2020 :: Boot db -- DONE.
-Oct 31 20:31:50 2020 :: Signal trapping.
-Oct 31 20:31:50 2020 :: Entering game loop.
-Oct 31 20:31:50 2020 :: No connections.  Going to sleep.
-Oct 31 20:32:41 2020 :: New connection.  Waking up.
-Oct 31 20:32:49 2020 :: Bad PW: Cansian [127.0.0.1]
-Oct 31 20:32:52 2020 :: Cansian has connected.
-Oct 31 20:32:53 2020 :: Cansian had no variable file
-Oct 31 20:32:53 2020 :: Cansian retrieving crash-saved items and entering game.
-Oct 31 20:32:53 2020 :: Cansian (level 110) has 2 objects (max 100).
-Oct 31 20:33:08 2020 :: OLC: Cansian starts editing zone 102 allowed zone 0
-Oct 31 20:33:17 2020 :: GenOLC: add_room: Updated existing room #10204.
-Oct 31 20:33:17 2020 :: OLC: Cansian edits room 10204.
-Oct 31 20:33:17 2020 :: GenOLC: save_rooms: Saving rooms in zone #102 (10200-10299).
-Oct 31 20:33:17 2020 :: OLC: Cansian stops editing zone 102 allowed zone 0
-Oct 31 20:33:30 2020 :: OLC: Cansian starts editing zone 102 allowed zone 0
-Oct 31 20:33:36 2020 :: Warning: columns too narrow for correct output to Cansian in simple_column_list (utils.c)
-Oct 31 20:33:38 2020 :: Warning: columns too narrow for correct output to Cansian in simple_column_list (utils.c)
-Oct 31 20:33:39 2020 :: Warning: columns too narrow for correct output to Cansian in simple_column_list (utils.c)
-Oct 31 20:33:42 2020 :: OLC: Cansian edits zone info for room 10204.
-Oct 31 20:33:42 2020 :: OLC: Cansian stops editing zone 102 allowed zone 0
-Oct 31 20:37:41 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Oct 31 20:37:41 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 21592
-Oct 31 20:38:20 2020 :: Motharo has connected.
-Oct 31 20:38:22 2020 :: Motharo had no variable file
-Oct 31 20:38:22 2020 :: Motharo retrieving crash-saved items and entering game.
-Oct 31 20:38:22 2020 :: Motharo (level 1) has 0 objects (max 100).
+Nov 01 12:59:24 2020 :: Resetting #151: O Templo Samurai (rooms 15100-15199).
+Nov 01 12:59:24 2020 :: Resetting #155: O Moinho de Vento (rooms 15500-15599).
+Nov 01 12:59:24 2020 :: Resetting #157: O Castelo de Flyre (rooms 15700-15799).
+Nov 01 12:59:24 2020 :: Resetting #160: Os Estrategistas de Vitália (rooms 16000-16399).
+Nov 01 12:59:24 2020 :: Resetting #170: O Canyon dos Elementais (rooms 17000-17099).
+Nov 01 12:59:24 2020 :: Resetting #173: Camelot (rooms 17300-17399).
+Nov 01 12:59:24 2020 :: Resetting #176: O Império Chinês (rooms 17600-17999).
+Nov 01 12:59:24 2020 :: Resetting #181: Os Caminhos Iniciais (rooms 18100-18199).
+Nov 01 12:59:24 2020 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
+Nov 01 12:59:24 2020 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
+Nov 01 12:59:24 2020 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
+Nov 01 12:59:24 2020 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
+Nov 01 12:59:24 2020 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
+Nov 01 12:59:24 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
+Nov 01 12:59:24 2020 :: Resetting #220: Anexo (rooms 22000-22099).
+Nov 01 12:59:24 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
+Nov 01 12:59:24 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
+Nov 01 12:59:24 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
+Nov 01 12:59:24 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
+Nov 01 12:59:24 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
+Nov 01 12:59:24 2020 :: Boot db -- DONE.
+Nov 01 12:59:24 2020 :: Signal trapping.
+Nov 01 12:59:24 2020 :: Entering game loop.
+Nov 01 12:59:24 2020 :: No connections.  Going to sleep.
+Nov 01 12:59:44 2020 :: New connection.  Waking up.
+Nov 01 12:59:50 2020 :: Cansian has connected.
+Nov 01 12:59:51 2020 :: Cansian had no variable file
+Nov 01 12:59:51 2020 :: Cansian retrieving crash-saved items and entering game.
+Nov 01 12:59:51 2020 :: Cansian (level 110) has 8 objects (max 100).
 Segmentation fault (core dumped)

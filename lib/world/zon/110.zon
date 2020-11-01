@@ -1,7 +1,7 @@
 #110
 Vitalia~
 As Mesnadas de Vit√°lia~
-11000 11099 0 0 abcde 0 0 0 -1 -1
+11000 11099 0 0 bcdej 0 0 0 -1 -1
 R 0 11026 11099 -1 	(o portal da sa√≠da)
 R 0 11027 11099 -1 	(o portal da sa√≠da)
 R 0 11028 11099 -1 	(o portal da sa√≠da)
@@ -16,10 +16,10 @@ M 0 11011 1 11011 	(o pipoqueiro)
 M 0 11012 1 11008 	(o vendedor de souvenires)
 M 0 11012 1 11010 	(o vendedor de souvenires)
 M 0 11012 1 11014 	(o vendedor de souvenires)
-D 0 11005 1 2 	(O Santu·rio dos Campeıes)
+D 0 11005 1 2 	(O Santu√°rio dos Campe√µes)
 D 0 11006 3 2 	(O Centro da Grande Arena)
 D 0 11006 1 2 	(O Centro da Grande Arena)
-D 0 11030 3 2 	(O Santu·rio dos Campeıes)
+D 0 11030 3 2 	(O Santu√°rio dos Campe√µes)
 D 0 11007 0 2 	(As Arquibancadas da Grande Arena)
 D 0 11008 0 2 	(As Arquibancadas da Grande Arena)
 D 0 11009 1 2 	(As Arquibancadas da Grande Arena)
@@ -28,7 +28,7 @@ D 0 11011 2 2 	(As Arquibancadas da Grande Arena)
 D 0 11012 2 2 	(As Arquibancadas da Grande Arena)
 D 0 11013 3 2 	(As Arquibancadas da Grande Arena)
 D 0 11014 3 2 	(As Arquibancadas da Grande Arena)
-D 0 11005 2 1 	(O Santu·rio dos Campeıes)
+D 0 11005 2 1 	(O Santu√°rio dos Campe√µes)
 D 0 11016 0 1 	(As Arquibancadas da Grande Arena)
 S
 $

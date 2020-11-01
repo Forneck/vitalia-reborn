@@ -1,31 +1,29 @@
 Name: Anyte
 Pass: AnRCfBykX0mXk
-Titl: a Iniciada no Quinto C�rculo
+Titl: 
 Sex : 2
-Clas: 4
-Levl: 34
+Clas: 6
+Levl: 35
 Id  : 6
 Brth: 1603323580
-Plyd: 65691
-Last: 1604166807
+Plyd: 84132
+Last: 1604201498
 Lmot: 1603324480
 Lnew: 1604011239
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: -125
-Act : hl 0 0 0
+Alin: -226
+Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
-Wimp: 70
-Room: 3001
-Lern: 22
-Hung: 24
-Thir: 22
-Hit : 403/356
-Mana : 696/696
-Move: 6/149
+Room: 5518
+Hung: 9
+Thir: 9
+Hit : 420/368
+Mana : 751/751
+Move: 157/151
 Str : 17/0
 Int : 9
 Wis : 11
@@ -33,24 +31,33 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 632154
-Exp : 8572025
+Gold: 822131
+Exp : 9399395
 Olc : 0
 Skil:
 7 100
+28 90
+42 90
 44 95
+50 90
 88 95
 95 100
 222 80
 224 48
 231 80
+232 90
 243 95
 0 0
 Affs:
-44 10 0 31 64 0 0 0
-36 28 0 33 256 0 0 0
+19 21 0 29 16 0 0 0
 0 0 0 0 0 0 0 0
-Alis: 34
+Alis: 36
+ sleep
+ rem coura;sleep
+1
+ roma
+            s;s;s;s;e;e;s;s;e;e;e;e;e;e;e;e;e;e;s;s;w;w;w;w;w
+1
  dracos
           s;s;w;w;w;w;w;w;w;w;w;n;n;w;n;w;n;n;n
 1
