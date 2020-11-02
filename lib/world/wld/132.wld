@@ -5,10 +5,6 @@ acima de você, os degraus começam, enquanto para baixo, os degraus parecem
 continuar eternamente.
 ~
 132 4 0 0 0 5
-D4
-~
-~
-0 -1 -1
 D5
 ~
 ~
@@ -37,10 +33,6 @@ Parece que há uma abertura na rocha à leste.  Talvez seja apenas uma fenda
 simples, mas e depois, quem sabe?
 ~
 132 4 0 0 0 5
-D1
-~
-~
-0 -1 -1
 D4
 ~
 ~
@@ -124,10 +116,6 @@ D3
 ~
 ~
 0 -1 13211
-D5
-~
-madeira~
-1 -1 -1
 E
 madeira~
 Olhando mais de perto, você consegue notar algumas inscrições gravadas na 
@@ -622,10 +610,6 @@ ainda há o caminho da praia à oeste e leste daqui.  É estranho pensar que
 um caminho possa acabar assim, de repente, sem levar a lugar algum...
 ~
 132 8 0 0 0 0
-D0
-~
-rocha~
-0 -1 -1
 D2
 ~
 ~
