@@ -3,27 +3,29 @@ Pass: AnRCfBykX0mXk
 Titl: 
 Sex : 2
 Clas: 6
-Levl: 35
+Levl: 40
 Id  : 6
 Brth: 1603323580
-Plyd: 84132
-Last: 1604201498
+Plyd: 99198
+Last: 1604274766
 Lmot: 1603324480
 Lnew: 1604011239
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: -226
-Act : ghl 0 0 0
+Alin: -166
+Act : hl 0 0 0
 Aff : 0 0 0 0
-Pref: efghnoBCEF 0 0 0
-Room: 5518
-Hung: 9
-Thir: 9
-Hit : 420/368
-Mana : 751/751
-Move: 157/151
+Pref: efghnozBCEF 0 0 0
+Wimp: 100
+Room: 3001
+Lern: 10
+Hung: 4
+Thir: 4
+Hit : 473/423
+Mana : 780/776
+Move: 186/166
 Str : 17/0
 Int : 9
 Wis : 11
@@ -31,8 +33,8 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 822131
-Exp : 9399395
+Gold: 983658
+Exp : 12723020
 Olc : 0
 Skil:
 7 100
@@ -48,12 +50,18 @@ Skil:
 232 90
 243 95
 0 0
-Affs:
-19 21 0 29 16 0 0 0
-0 0 0 0 0 0 0 0
-Alis: 36
+Alis: 39
+ sle
+ rem coura;sleep
+1
+ slee
+ rem coura;sleep
+1
  sleep
  rem coura;sleep
+1
+ wake
+ wake;wear coura
 1
  roma
             s;s;s;s;e;e;s;s;e;e;e;e;e;e;e;e;e;e;s;s;w;w;w;w;w

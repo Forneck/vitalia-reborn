@@ -246,6 +246,7 @@ de magias ofensivas e defensivas, fazem dele um oponente mortal.
 2000 60000
 8 8 1
 E
+T 3000
 #3025
 cavaleiro templar~
 o cavaleiro templar~
@@ -261,6 +262,7 @@ um oponente mortal.
 2000 160000
 8 8 1
 E
+T 3001
 #3026
 assassino~
 o assassino~
@@ -277,6 +279,7 @@ oponente mortal.
 2000 160000
 8 8 1
 E
+T 3002
 #3027
 cavaleiro~
 o cavaleiro~
@@ -291,6 +294,7 @@ extrema combinada com sua experiência em guerras, faz dele um mortal oponente.
 2000 160000
 8 8 1
 E
+T 3003
 #3028
 mestre guia druidas~
 o mestre-guia dos druidas~
@@ -321,6 +325,7 @@ poderosa magia.
 2000 160000
 8 8 2
 E
+T 3005
 #3030
 mestre guia sapo caco ranger~
 o mestre-guia dos rangers~
@@ -330,7 +335,7 @@ De uma forma estranha quase faz sentido, já que um sapo é uma criatura da natu
 mestre-guia. Exceto que ele está cantando e tocando um banjo
 Ele está vestido de verde, de um tom um pouco mais escuro que a pele dele.
 ~
-59419 0 0 0 16 0 0 0 1000 E
+2156571 0 0 0 16 0 0 0 1000 E
 34 0 -10 6d10+640 1d8+24
 18794 100000
 8 8 1
@@ -346,11 +351,12 @@ de sozinha matar todos os monstros de nível alto doque hoje é uma área
 para iniciantes. O único motivo para ela não ser a mestra é porquê ela
 não sabe cantar.
 ~
-256010 0 0 0 80 0 0 0 900 E
+2353162 0 0 0 80 0 0 0 900 E
 33 0 -5 6d10+990 1d8+22
 2000 16000
 8 8 2
 E
+T 3006
 #3032
 garconete garota~
 a garçonete~
@@ -361,7 +367,7 @@ você sabe que ela é durona. Ela é muito amigável, um pouco paqueradora
 até, mas terrível para qualquer um que a tire do sério.
 Ela é especialista em egos feridos e membros arrancados.
 ~
-256010 0 0 0 80 0 0 0 900 E
+2353162 0 0 0 80 0 0 0 900 E
 23 1 2 6d1+390 1d8+12
 2000 80000
 8 8 2
@@ -503,6 +509,7 @@ na cabeça coberta, brilham observando tudo.
 2000 160000
 8 8 1
 E
+T 3004
 #3050
 atendente mulher~
 a atendente~

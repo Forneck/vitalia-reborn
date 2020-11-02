@@ -1,7 +1,7 @@
 #114
 Vitalia~
 A Fenda Entre Mundos~
-11400 11499 120 1 ade 0 0 0 -1 -1
+11400 11499 120 1 fj 0 0 0 -1 -1
 O 0 11400 1 11400 	(um vórtice de energia)
 O 0 11401 1 11417 	(a placa de indicações)
 M 0 11400 2 11402 	(um yaksha de névoa)
@@ -14,7 +14,7 @@ D 0 11427 3 2 	(A Entrada de Mahatala)
 D 0 11429 1 2 	(A Entrada de Raratala)
 D 0 11431 3 2 	(A Entrada de Atalaloka)
 D 0 11433 1 2 	(A Entrada de Patala)
-D 0 11434 3 2 	(O S�timo Submundo)
+D 0 11434 3 2 	(O Sétimo Submundo)
 M 0 11405 2 11417 	(um cão-demônio)
 E 1 11403 10 3 	(a coleira do cão-demônio)
 M 0 11405 2 11417 	(um cão-demônio)
