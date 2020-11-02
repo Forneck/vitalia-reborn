@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #5400
 Thief Guildguard - 5459~
 0 q 100
@@ -174,6 +175,21 @@ if %actor%
     nop %actor.gold(-%coins%)%
     nop %self.gold(%coins%)%
   end
+=======
+#5502
+Portal para Midgaard~
+1 c 7
+en~
+* By Cansian
+if %cmd.mudcommand% == enter && %arg% == estatua
+  %send% %actor% Voce passa atraves da estatua.
+  %echoaround% %actor% %actor.name% bravamente entra na estatua.
+  %teleport% %actor% 3001
+  %force% %actor% look
+  %echoaround% %actor% %actor.name% acabou de sair da parede.
+else
+  %send% %actor% %cmd% Oque?!
+>>>>>>> 5e7dcd72a2ebdf8da14f1a11c918eb552ea4107a
 end
 ~
 $~
