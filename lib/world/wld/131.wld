@@ -1,32 +1,34 @@
 #13101
 A Entrada~
-   Você entra em um quarto escuro. As paredes e o teto feitos de pedra o 
-fazem sentir uma sensação de estar descendo ao subterrâneo. Uma enorme 
-cova ocupa a maior parte deste lugar. Para descer através dela existe 
-umas escadas feitas de corda, que olhando melhor parece não ser muito 
-confiável e que irá se romper a qualquer momento. Existe um pequeno sinal 
-que parece ter sido colocado para advertir sobre algum mal. Você começa a 
-imaginar as criaturas que morderam este sinal e retiraram um enorme pedaço, 
-e com certeza jamais irá querer conhecer elas. Estranhos e terríveis sons 
-vêm da cova, enquanto isso você pensa novamente nestas furiosas criaturas. 
-Grandes portas de madeira conduzem ao Leste e Oeste. Você continua 
-caminhando em direção à cova e acaba notando que a lama em suas botas estão 
-aumentando e que estão ficando cada vez mais difíceis de retirar. Com o 
-tempo você se acalma e começa a ver uma aura azul clara vindo de dentro da 
+   VocÃª entra em um quarto escuro. As paredes e o teto feitos de pedra o 
+fazem sentir uma sensaÃ§Ã£o de estar descendo ao subterrÃ¢neo. Uma enorme 
+cova ocupa a maior parte deste lugar. Para descer atravÃ©s dela existe 
+umas escadas feitas de corda, que olhando melhor parece nÃ£o ser muito 
+confiÃ¡vel e que irÃ¡ se romper a qualquer momento. Existe um pequeno sinal 
+que parece ter sido colocado para advertir sobre algum mal. VocÃª comeÃ§a a 
+imaginar as criaturas que morderam este sinal e retiraram um enorme pedaÃ§o, 
+e com certeza jamais irÃ¡ querer conhecer elas. Estranhos e terrÃ­veis sons 
+vÃªm da cova, enquanto isso vocÃª pensa novamente nestas furiosas criaturas. 
+Grandes portas de madeira conduzem ao Leste e Oeste. VocÃª continua 
+caminhando em direÃ§Ã£o Ã  cova e acaba notando que a lama em suas botas estÃ£o 
+aumentando e que estÃ£o ficando cada vez mais difÃ­ceis de retirar. Com o 
+tempo vocÃª se acalma e comeÃ§a a ver uma aura azul clara vindo de dentro da 
 cova.
 ~
-131 72 0 0 0 1
+131 dg 1
 D1
-Uma porta conduz a um lugar sombrio que contém criaturas não muito 
+Uma porta conduz a um lugar sombrio que contÃ©m criaturas nÃ£o muito 
 hospitaleiras.
 ~
 porta grande madeira~
+:n 2 a porta grande de madeira
 1 -1 13111
 D3
-Uma porta conduz a um lugar sombrio que contém criaturas não muito 
+Uma porta conduz a um lugar sombrio que contÃ©m criaturas nÃ£o muito 
 hospitaleiras.
 ~
 porta grande madeira~
+:n 2 a porta grande de madeira
 1 -1 13102
 D4
 ~
@@ -36,12 +38,12 @@ S
 #13102
 O Caminho Oeste~
    As sombras que o cercam parecem estar em todos lugares. Imagens sombrias 
-aparecem e desaparecem em um piscar de olhos. Você consegue olhar muito 
-rapidamente um imenso tesouro atrás da escuridão. O caminho continua ao 
-norte. Existe também uma sala ao oeste, e você com certeza pode voltar pela 
+aparecem e desaparecem em um piscar de olhos. VocÃª consegue olhar muito 
+rapidamente um imenso tesouro atrÃ¡s da escuridÃ£o. O caminho continua ao 
+norte. Existe tambÃ©m uma sala ao oeste, e vocÃª com certeza pode voltar pela 
 entrada ao leste.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
 As sombras aumentam.
 ~
@@ -51,27 +53,28 @@ D1
 Uma porta leva a entrada.
 ~
 porta~
+:n 2 a porta
 1 -1 13101
 D3
-Você vê um estranho quarto escuro lá.
+VocÃª vÃª um estranho quarto escuro lÃ¡.
 ~
 ~
 0 -1 13103
 S
 #13103
 O Quarto Do Bohemoth~
-   Um enorme quarto se abre diante de você. Este quarto está repleto com 
-estas sombras estranhas. Imediatamente ao entrar você nota que existe algo 
-de errado com o seu tato. De repente, em um movimento muito rápido seus 
-olhos não conseguem acompanhar algo, uma das sombras que você adquiriu 
-anteriormente está usando a mudança que fez em você, mas que nunca o havia 
-perturbado. É completamente visível que seus olhos estão ardendo e muito 
-vermelho. Você pensa conseguir ver grotescos lábios sorrindo. O único modo 
-de sair daqui é por onde você entrou.
+   Um enorme quarto se abre diante de vocÃª. Este quarto estÃ¡ repleto com 
+estas sombras estranhas. Imediatamente ao entrar vocÃª nota que existe algo 
+de errado com o seu tato. De repente, em um movimento muito rÃ¡pido seus 
+olhos nÃ£o conseguem acompanhar algo, uma das sombras que vocÃª adquiriu 
+anteriormente estÃ¡ usando a mudanÃ§a que fez em vocÃª, mas que nunca o havia 
+perturbado. Ã‰ completamente visÃ­vel que seus olhos estÃ£o ardendo e muito 
+vermelho. VocÃª pensa conseguir ver grotescos lÃ¡bios sorrindo. O Ãºnico modo 
+de sair daqui Ã© por onde vocÃª entrou.
 ~
-131 73 0 0 0 1
+131 agd 1
 D1
-As sombras diminuem, pois você consegue ver uma luz.
+As sombras diminuem, pois vocÃª consegue ver uma luz.
 ~
 ~
 0 -1 13102
@@ -79,43 +82,43 @@ S
 #13104
 Ao Longo Do Caminho~
    O caminho fica obscuro aqui. As imagens criadas pelas sombras ficam cada 
-vez menos significativas. Porém, as sombras parecem estar ficando mais 
-fortes. Você começa a sentir como se estivesse sonhando, mas você ainda 
-está completamente acordado, que estranho. Deve ser a suavidade das imagens 
-que estão fazendo você pensar isso. O caminho continua ao leste e pelas 
+vez menos significativas. PorÃ©m, as sombras parecem estar ficando mais 
+fortes. VocÃª comeÃ§a a sentir como se estivesse sonhando, mas vocÃª ainda 
+estÃ¡ completamente acordado, que estranho. Deve ser a suavidade das imagens 
+que estÃ£o fazendo vocÃª pensar isso. O caminho continua ao leste e pelas 
 sombras ao sul.
 ~
-131 72 0 0 0 1
+131 dg 1
 D1
-Tudo o que você consegue ver é sombra.
+Tudo o que vocÃª consegue ver Ã© sombra.
 ~
 ~
 0 -1 13105
 D2
-As sombras diminuem, pois você consegue ver uma luz.
+As sombras diminuem, pois vocÃª consegue ver uma luz.
 ~
 ~
 0 -1 13102
 S
 #13105
 O Sonho~
-   Você tem agora certeza que está sonhando. No meio do caminho, cercado 
-pelas sombras, existe um banquete para uma refeição real. É um lugar 
-estranho para alguém estar esperando você... ou alguém estava fazendo uma 
-súplica a um deus. A mesa parece ser feita somente de sombra. Como pode 
-estar sustentando a refeição? As sombras parecem estar surgindo do norte, 
-como se alguém estivesse as empurrando de algum lugar. Você deve voltar 
-pelo oeste, novamente pelas sombras, ou pelo norte, onde elas estão 
-puxando você.
+   VocÃª tem agora certeza que estÃ¡ sonhando. No meio do caminho, cercado 
+pelas sombras, existe um banquete para uma refeiÃ§Ã£o real. Ã‰ um lugar 
+estranho para alguÃ©m estar esperando vocÃª... ou alguÃ©m estava fazendo uma 
+sÃºplica a um deus. A mesa parece ser feita somente de sombra. Como pode 
+estar sustentando a refeiÃ§Ã£o? As sombras parecem estar surgindo do norte, 
+como se alguÃ©m estivesse as empurrando de algum lugar. VocÃª deve voltar 
+pelo oeste, novamente pelas sombras, ou pelo norte, onde elas estÃ£o 
+puxando vocÃª.
 ~
-131 92 0 0 0 1
+131 cdeg 1
 D0
-À sua frente houve uma vez um espetáculo de armas, ou talvez uma emboscada.
+Ã€ sua frente houve uma vez um espetÃ¡culo de armas, ou talvez uma emboscada.
 ~
 ~
 0 -1 13106
 D3
-Mais sombras vem daquela direção.
+Mais sombras vem daquela direÃ§Ã£o.
 ~
 ~
 0 -1 13104
@@ -123,34 +126,34 @@ S
 #13106
 A Emboscada~
    Aparentemente havia uma emboscada aqui, entretanto deve ter sido a 
-muitos anos atrás. Existem somente esqueletos e armas extremamente 
-enferrujadas aqui agora. Uma procura rápida revela que as sombras se 
+muitos anos atrÃ¡s. Existem somente esqueletos e armas extremamente 
+enferrujadas aqui agora. Uma procura rÃ¡pida revela que as sombras se 
 tornaram mais significativas agora. Nada de valor significante pode ser 
-encontrado no meio dos restos. O caminho continua ao norte e você pode 
+encontrado no meio dos restos. O caminho continua ao norte e vocÃª pode 
 voltar ao sul.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
 As sombras diminuem a frente.
 ~
 ~
 0 -1 13107
 D2
-Você fica sonhando novamente no que acabara de passar.
+VocÃª fica sonhando novamente no que acabara de passar.
 ~
 ~
 0 -1 13105
 S
 #13107
-O Começo~
+O ComeÃ§o~
    O caminho fica mais iluminado com as sombras diminuindo. As sombras 
-estão se retirando, você já não consegue mais sentir o toque delas, mas 
-você sente outra presença agora. Esta segunda presença. . . Agradável. 
+estÃ£o se retirando, vocÃª jÃ¡ nÃ£o consegue mais sentir o toque delas, mas 
+vocÃª sente outra presenÃ§a agora. Esta segunda presenÃ§a. . . AgradÃ¡vel. 
 Fica mais forte ao leste, e as sombras ficam mais fortes para o sul.
 ~
-131 72 0 0 0 1
+131 dg 1
 D1
-Está bastante luminoso, e você não vê mais nenhuma sombra naquela direção.
+EstÃ¡ bastante luminoso, e vocÃª nÃ£o vÃª mais nenhuma sombra naquela direÃ§Ã£o.
 ~
 ~
 0 -1 13108
@@ -161,45 +164,46 @@ As sombras aumentam.
 0 -1 13106
 S
 #13108
-Antes Dos Portões~
-   Você sente uma forte presença ao norte. As sombras já não existem mais 
-aqui.  Elas parecem terem recuado desta imensa luz. Os enormes portões são 
-iguais a um aço de adamantium... Não, deve ser somente sua imaginação, 
-ninguém forjou isto em milênios. Para o sul e oeste as sombras ficam mais 
-intensas. Ao sul você consegue ouvir o que parece serem resmungos, nem 
-mesmo quem conhece o idioma consegue compreender o que eles estão dizendo, 
-e você gostaria?
+Antes Dos PortÃµes~
+   VocÃª sente uma forte presenÃ§a ao norte. As sombras jÃ¡ nÃ£o existem mais 
+aqui.  Elas parecem terem recuado desta imensa luz. Os enormes portÃµes sÃ£o 
+iguais a um aÃ§o de adamantium... NÃ£o, deve ser somente sua imaginaÃ§Ã£o, 
+ninguÃ©m forjou isto em milÃªnios. Para o sul e oeste as sombras ficam mais 
+intensas. Ao sul vocÃª consegue ouvir o que parece serem resmungos, nem 
+mesmo quem conhece o idioma consegue compreender o que eles estÃ£o dizendo, 
+e vocÃª gostaria?
 ~
-131 72 0 0 0 1
+131 dg 1
 D0
-Estranho e intenso as letras quem cobrem portões à frente.
+Estranho e intenso as letras quem cobrem portÃµes Ã  frente.
 ~
-portão brilhando letra~
+portao brilhando letra~
+:n 1 o portÃ£o brilhando
 1 -1 13123
 D2
-As sombras fazem você começar a pensar novamente...
+As sombras fazem vocÃª comeÃ§ar a pensar novamente...
 ~
 ~
 0 -1 13109
 D3
-As sombras, mesmo estarem diminuindo, ainda estão visíveis lá.
+As sombras, mesmo estarem diminuindo, ainda estÃ£o visÃ­veis lÃ¡.
 ~
 ~
 0 -1 13107
 S
 #13109
 Uma Sombra Nublada~
-   Com o tempo você nota que a movimentação das sombras aqui é bastante 
-intensa.  Você se sente como se estivesse se movendo por uma névoa pesada. 
+   Com o tempo vocÃª nota que a movimentaÃ§Ã£o das sombras aqui Ã© bastante 
+intensa.  VocÃª se sente como se estivesse se movendo por uma nÃ©voa pesada. 
 De alguma forma estas sombras exploram todas as partes externas de seu 
-corpo. Você se estremece todo involuntariamente conforme a proximidade 
-delas e também pelo fato de que existem olhos o observando da escuridão. 
-Para o norte você pode ver as sombras diminuírem, e felizmente também 
+corpo. VocÃª se estremece todo involuntariamente conforme a proximidade 
+delas e tambÃ©m pelo fato de que existem olhos o observando da escuridÃ£o. 
+Para o norte vocÃª pode ver as sombras diminuÃ­rem, e felizmente tambÃ©m 
 consegue ver o caminho ao sul.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
-As sombras diminuem, a você pensa conseguir ver uma fraca luz. 
+As sombras diminuem, a vocÃª pensa conseguir ver uma fraca luz. 
 ~
 ~
 0 -1 13108
@@ -210,30 +214,30 @@ As sombras diminuem bastante e restam muito pouco ainda.
 0 -1 13110
 S
 #13110
-Perdendo A Consciência~
-   As sombras aqui lhe passam um ar de cansaço e acaba se sentindo 
-hipnotizado. O caminho por onde você veio parece estar muito distante. 
-Para o norte as sombras aumentam bastante... Oh, você está com muito 
-sono... e quando você dá uma olhada ao seu redor, nota que as sombras 
-diminuem ao sul... Você sente os olhos começarem a se fechar. 
-AHHHHHHHhhhh! Você é acordado de repente por um intenso grito e é quando 
-você adquire um sentimento de que outro aventureiro esteve vagando por 
-aqui antes. Você agora está sentindo muito medo e começa a ouvir barulhos 
-não muito amigáveis vindo do leste.
+Perdendo A ConsciÃªncia~
+   As sombras aqui lhe passam um ar de cansaÃ§o e acaba se sentindo 
+hipnotizado. O caminho por onde vocÃª veio parece estar muito distante. 
+Para o norte as sombras aumentam bastante... Oh, vocÃª estÃ¡ com muito 
+sono... e quando vocÃª dÃ¡ uma olhada ao seu redor, nota que as sombras 
+diminuem ao sul... VocÃª sente os olhos comeÃ§arem a se fechar. 
+AHHHHHHHhhhh! VocÃª Ã© acordado de repente por um intenso grito e Ã© quando 
+vocÃª adquire um sentimento de que outro aventureiro esteve vagando por 
+aqui antes. VocÃª agora estÃ¡ sentindo muito medo e comeÃ§a a ouvir barulhos 
+nÃ£o muito amigÃ¡veis vindo do leste.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
-As sombras aumentam a um ponto além da imaginação.
+As sombras aumentam a um ponto alÃ©m da imaginaÃ§Ã£o.
 ~
 ~
 0 -1 13109
 D1
-Você vê mais sombras e outras criaturas.
+VocÃª vÃª mais sombras e outras criaturas.
 ~
 ~
 0 -1 13113
 D2
-As sombras diminuem e você consegue ver uma luz.
+As sombras diminuem e vocÃª consegue ver uma luz.
 ~
 ~
 0 -1 13111
@@ -241,59 +245,61 @@ S
 #13111
 O Caminho Leste~
    Estranhas imagens de um movimento bastante lento o fazem pensar que 
-está se movendo rápido demais. Imagens sombrias aparecem e desaparecem. 
-Você consegue ver somente os tesouros atrás da escuridão. Para o norte o 
-caminho continua, com monstros e sombras maiores e mais maléficas. Para 
-o leste você nota um pequeno posto de guarda que parece estar deserto e 
+estÃ¡ se movendo rÃ¡pido demais. Imagens sombrias aparecem e desaparecem. 
+VocÃª consegue ver somente os tesouros atrÃ¡s da escuridÃ£o. Para o norte o 
+caminho continua, com monstros e sombras maiores e mais malÃ©ficas. Para 
+o leste vocÃª nota um pequeno posto de guarda que parece estar deserto e 
 para o oeste existe uma entrada.
 ~
-131 72 0 0 0 1
+131 dg 1
 D0
 As sombras aumentam.
 ~
 ~
 0 -1 13110
 D1
-Você vê o que restou de um posto de guarda.
+VocÃª vÃª o que restou de um posto de guarda.
 ~
 ~
 0 -1 13112
 D3
-Uma velha, porta de madeira o leva novamente à entrada.
+Uma velha, porta de madeira o leva novamente Ã  entrada.
 ~
 porta~
+:n 2 a porta
 1 -1 13101
 S
 #13112
 O Posto De Guardas Abandonado~
-   Isto parece ter sido um posto de guarda, mas que está bastante 
-danificado. As paredes de pedra estão gastas, e quase se desmoronando, a 
-porta de madeira que uma vez foi uma entrada, está completamente 
-apodrecida. Você nota um pedaço antigo de papel no chão. A única forma de 
-sair deste lugar é pela entrada, ou seja, ao oeste.
+   Isto parece ter sido um posto de guarda, mas que estÃ¡ bastante 
+danificado. As paredes de pedra estÃ£o gastas, e quase se desmoronando, a 
+porta de madeira que uma vez foi uma entrada, estÃ¡ completamente 
+apodrecida. VocÃª nota um pedaÃ§o antigo de papel no chÃ£o. A Ãºnica forma de 
+sair deste lugar Ã© pela entrada, ou seja, ao oeste.
 ~
-131 72 0 0 0 1
+131 dg 1
 D3
-Você consegue ver sombras e um pouco de luz.
+VocÃª consegue ver sombras e um pouco de luz.
 ~
 ~
 0 -1 13111
 S
 #13113
 O Quarto Dos Guardas~
-   Você tem agora certeza que está sonhando. Aonde mais você irá encontrar 
-três pessoas que fiquem repetindo para você: "Nós temos que servir o 
-mestre". Estas três almas parecem terem sido o resultado de algum acidente 
+   VocÃª tem agora certeza que estÃ¡ sonhando. Aonde mais vocÃª irÃ¡ encontrar 
+trÃªs pessoas que fiquem repetindo para vocÃª: "NÃ³s temos que servir o 
+mestre". Estas trÃªs almas parecem terem sido o resultado de algum acidente 
 estranho, e nota que algumas partes do corpo deles se parecem com a de 
 humanos. Este quarto de guarda existe aparentemente para vigiar a entrada 
-do quarto ao norte. Não há nenhuma idéia do que possa haver lá. O caminho 
+do quarto ao norte. NÃ£o hÃ¡ nenhuma idÃ©ia do que possa haver lÃ¡. O caminho 
 continua ao leste e oeste.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
-Uma notável e bem preservada porta para um quarto desconhecido.
+Uma notÃ¡vel e bem preservada porta para um quarto desconhecido.
 ~
 porta preservada~
+:n 2 a porta preservada
 1 13101 13114
 D1
 As sombras aumentam.
@@ -308,72 +314,74 @@ As sombras diminuem um pouco.
 S
 #13114
 Deja-vu~
-   Hmmm... Você nota que não esteve aqui antes. E tenta expulsar este 
-sentimento mas você não consegue. Você quase consegue lembrar de algum 
-dia ter dormido aqui. Usado o guarda-roupa de carvalho na qual está 
+   Hmmm... VocÃª nota que nÃ£o esteve aqui antes. E tenta expulsar este 
+sentimento mas vocÃª nÃ£o consegue. VocÃª quase consegue lembrar de algum 
+dia ter dormido aqui. Usado o guarda-roupa de carvalho na qual estÃ¡ 
 apodrecido agora, ter visto a cama demolida com marcas de serragem em 
-sua cabeceira e segurado talvez... Um vestido? Você acaba se emocionando. 
-Isto é muito estranho. Talvez você devesse esquecer ou superar estas 
-recordações. Agora este quarto está habitado somente pelas sombras. Este 
-quarto também parece ter outras qualidades. Por exemplo, você não consegue 
-pensar, não por causa de qualquer barulho mas por causa da falta disto. A 
-única saída é a porta para o sul.
+sua cabeceira e segurado talvez... Um vestido? VocÃª acaba se emocionando. 
+Isto Ã© muito estranho. Talvez vocÃª devesse esquecer ou superar estas 
+recordaÃ§Ãµes. Agora este quarto estÃ¡ habitado somente pelas sombras. Este 
+quarto tambÃ©m parece ter outras qualidades. Por exemplo, vocÃª nÃ£o consegue 
+pensar, nÃ£o por causa de qualquer barulho mas por causa da falta disto. A 
+Ãºnica saÃ­da Ã© a porta para o sul.
 ~
-131 765 0 0 0 1
+131 jhgfedca 1
 D2
-Lá fora parece ser muito mais normal do que aqui.
+LÃ¡ fora parece ser muito mais normal do que aqui.
 ~
 porta~
+:n 2 a porta
 1 13101 13113
 S
 #13115
 O Quarto Abarrotado~
-   As sombras aqui estão ficando opressivas.  Elas estão tão intensas que 
-chegam a impedir o movimento. Você sente como se estivesse se movendo por 
-uma multidão.  Como as multidões que se aglomeram em um concerto... Espere, 
-o que é um concerto? Conforme você caminha por este lugar vai descobrindo 
-muitas recordações estranhas. Talvez exista algo errado com você, ou talvez 
-seja este lugar, ou até mesmo estas sombras estranhas. Você nota que será 
-difícil saber, mas se não fizer isto talvez não consigas sair daqui... Você 
-sente um forte puxão do leste, mas você ainda pode voltar pelo o oeste para 
+   As sombras aqui estÃ£o ficando opressivas.  Elas estÃ£o tÃ£o intensas que 
+chegam a impedir o movimento. VocÃª sente como se estivesse se movendo por 
+uma multidÃ£o.  Como as multidÃµes que se aglomeram em um concerto... Espere, 
+o que Ã© um concerto? Conforme vocÃª caminha por este lugar vai descobrindo 
+muitas recordaÃ§Ãµes estranhas. Talvez exista algo errado com vocÃª, ou talvez 
+seja este lugar, ou atÃ© mesmo estas sombras estranhas. VocÃª nota que serÃ¡ 
+difÃ­cil saber, mas se nÃ£o fizer isto talvez nÃ£o consigas sair daqui... VocÃª 
+sente um forte puxÃ£o do leste, mas vocÃª ainda pode voltar pelo o oeste para 
 escapar disto.
 ~
-131 105 0 0 0 1
+131 agfd 1
 D1
-Você vê uma grande praça repleta de estranhas sombras.
+VocÃª vÃª uma grande praÃ§a repleta de estranhas sombras.
 ~
 ~
 0 -1 13116
 D3
-Você vê mais sombras junto com outras criaturas.
+VocÃª vÃª mais sombras junto com outras criaturas.
 ~
 ~
 0 -1 13113
 S
 #13116
-A Praça~
-   Uma gigantesca praça se estende diante de você. No centro dela existe 
+A PraÃ§a~
+   Uma gigantesca praÃ§a se estende diante de vocÃª. No centro dela existe 
 uma monstruosa fonte... isso parece estar produzindo cada vez mais sombras. 
-Espere,... você pensa ter ouvido alguém chamando seu nome, e isso não é a 
-coisa mais estranha que está acontecendo, você pode ver a fonte se movendo 
-com harmonia. Para o lado leste uma loja, com uma porta que você poderia 
-ser capaz de fechar... Na parte superior desta porta você consegue ver uma 
+Espere,... vocÃª pensa ter ouvido alguÃ©m chamando seu nome, e isso nÃ£o Ã© a 
+coisa mais estranha que estÃ¡ acontecendo, vocÃª pode ver a fonte se movendo 
+com harmonia. Para o lado leste uma loja, com uma porta que vocÃª poderia 
+ser capaz de fechar... Na parte superior desta porta vocÃª consegue ver uma 
 mancha. Hmmm... Talvez seja uma mancha de suor provida do cansado dos 
-viajantes, ou talvez seja uma armadilha, bem, só existe um modo de 
+viajantes, ou talvez seja uma armadilha, bem, sÃ³ existe um modo de 
 descobrir. Para o norte existe um imenso corredor, e para o sul mais 
-sombras estranhas. Ainda existe a opção de voltar ao oeste, talvez você 
+sombras estranhas. Ainda existe a opÃ§Ã£o de voltar ao oeste, talvez vocÃª 
 devesse fazer isto enquanto ainda tiver uma chance de escapar.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
-Você vê um grande corredor. 
+VocÃª vÃª um grande corredor. 
 ~
 ~
 0 -1 13118
 D1
-Uma pequena porta dá acesso a uma loja.
+Uma pequena porta dÃ¡ acesso a uma loja.
 ~
 porta~
+:n 2 a porta
 1 -1 13117
 D2
 As sombras aumentam.
@@ -388,54 +396,55 @@ As sombras diminuem.
 S
 #13117
 A Loja Silenciosa~
-   Isto é agradável. Não há nenhuma sombra aqui. O lugar parece ser uma 
-loja abandonada. Ainda está tudo em ordem. No centro do quarto está uma 
-mesa que chama sua atenção. Um brilhante globo está sobre esta mesa. Uma 
-estranha roda parece acelerar sempre que você chega perto. Você não está 
-seguro de poder confiar nesta coisa. As paredes estão forradas de mármore. 
-Esta loja é a única que parece ter resistido a tudo nesta cidade. Você 
+   Isto Ã© agradÃ¡vel. NÃ£o hÃ¡ nenhuma sombra aqui. O lugar parece ser uma 
+loja abandonada. Ainda estÃ¡ tudo em ordem. No centro do quarto estÃ¡ uma 
+mesa que chama sua atenÃ§Ã£o. Um brilhante globo estÃ¡ sobre esta mesa. Uma 
+estranha roda parece acelerar sempre que vocÃª chega perto. VocÃª nÃ£o estÃ¡ 
+seguro de poder confiar nesta coisa. As paredes estÃ£o forradas de mÃ¡rmore. 
+Esta loja Ã© a Ãºnica que parece ter resistido a tudo nesta cidade. VocÃª 
 sente um estranho conforto nesta loja, e suspeita estar vindo do globo 
-azul que existe aqui. Você sente uma forte aura mágica vindo disto. Ao 
-oeste existe uma porta. Você entrou por lá.
+azul que existe aqui. VocÃª sente uma forte aura mÃ¡gica vindo disto. Ao 
+oeste existe uma porta. VocÃª entrou por lÃ¡.
 ~
-131 216 0 0 0 1
+131 dghe 1
 D3
-Uma pequena porta de madeira protege você do mundo exterior. 
+Uma pequena porta de madeira protege vocÃª do mundo exterior. 
 ~
 porta madeira pequena~
+:n 2 a porta pequena de madeira
 1 -1 13116
 S
 #13118
 O Corredor Sombrio~
    Estes corredores parecem terem sido invadidos pelas mesmas sombras. 
-Parece ter sido um largo corredor usado para comércio, os pequenos postos 
-de madeira existem já há bastante tempo. Para o lado sul existe uma praça, 
+Parece ter sido um largo corredor usado para comÃ©rcio, os pequenos postos 
+de madeira existem jÃ¡ hÃ¡ bastante tempo. Para o lado sul existe uma praÃ§a, 
 e ao norte as sombras esconderam tudo.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
 O grande corredor continua.
 ~
 ~
 0 -1 13119
 D2
-Você vê uma grande praça.
+VocÃª vÃª uma grande praÃ§a.
 ~
 ~
 0 -1 13116
 S
 #13119
 O Corredor Nublado~
-   A névoa sombria está diminuindo aqui. Você ganha um senso de que tudo 
-que está ao oeste amedronta estas sombras. Não há nenhuma sombra ao oeste, 
-mas elas continuam aumentando ao sul. Este corredor é largo o suficiente 
-para esconder um exército. Hmmm... Talvez, só que teria que ser um 
-exército como você jamais havia visto antes. Para o leste existe um portal 
-azul que conduz para um quarto bastante elegante. Você observa um pouco 
-mais adiante e parece conseguir ver uma pintura. Talvez você devesse 
+   A nÃ©voa sombria estÃ¡ diminuindo aqui. VocÃª ganha um senso de que tudo 
+que estÃ¡ ao oeste amedronta estas sombras. NÃ£o hÃ¡ nenhuma sombra ao oeste, 
+mas elas continuam aumentando ao sul. Este corredor Ã© largo o suficiente 
+para esconder um exÃ©rcito. Hmmm... Talvez, sÃ³ que teria que ser um 
+exÃ©rcito como vocÃª jamais havia visto antes. Para o leste existe um portal 
+azul que conduz para um quarto bastante elegante. VocÃª observa um pouco 
+mais adiante e parece conseguir ver uma pintura. Talvez vocÃª devesse 
 confirmar isto. 
 ~
-131 73 0 0 0 1
+131 adg 1
 D1
 Uma estranha pintura parecendo ser um portal que provavelmente de acesso 
 a um quarto.
@@ -448,324 +457,333 @@ O grande corredor continua.
 ~
 0 -1 13118
 D3
-As sombras diminuem e você já consegue ver uma luz.
+As sombras diminuem e vocÃª jÃ¡ consegue ver uma luz.
 ~
 ~
 0 -1 13120
 S
 #13120
-Antes Dos Portões~
-   Você está diante de um imenso portão brilhante. Este portão está 
-coberto com letras rúnicas e você, sim até mesmo você, pode sentir uma 
-incrível aura mágica vindo disto. Não há nenhuma sombra neste quarto. 
-Elas parecem ter medo deste portão. Uma única chave dourada está no chão, 
-e também brilha com uma estranha luz etérea. Para o lado leste mais 
-sombras. Para o norte existe um imenso portão.
+Antes Dos PortÃµes~
+   VocÃª estÃ¡ diante de um imenso portÃ£o brilhante. Este portÃ£o estÃ¡ 
+coberto com letras rÃºnicas e vocÃª, sim atÃ© mesmo vocÃª, pode sentir uma 
+incrÃ­vel aura mÃ¡gica vindo disto. NÃ£o hÃ¡ nenhuma sombra neste quarto. 
+Elas parecem ter medo deste portÃ£o. Uma Ãºnica chave dourada estÃ¡ no chÃ£o, 
+e tambÃ©m brilha com uma estranha luz etÃ©rea. Para o lado leste mais 
+sombras. Para o norte existe um imenso portÃ£o.
 ~
-131 76 0 0 0 1
+131 cdg 1
 D0
-Você está diante de um imenso portão brilhante que parece estar afastando 
+VocÃª estÃ¡ diante de um imenso portÃ£o brilhante que parece estar afastando 
 as sombras.
 ~
-portão brilhante~
+portao brilhante~
+:n 1 o portÃ£o brilhante
 1 13102 13121
 D1
-Algumas sombras se escondem além do alcance do portão.
+Algumas sombras se escondem alÃ©m do alcance do portÃ£o.
 ~
 ~
 0 -1 13119
 S
 #13121
-O Quarto Do Portão~
-   Ao entrar neste quarto você é dominado por um incrível senso de temor. 
-Aqui diante de você está um guarda bastante alto que aparentemente está 
+O Quarto Do PortÃ£o~
+   Ao entrar neste quarto vocÃª Ã© dominado por um incrÃ­vel senso de temor. 
+Aqui diante de vocÃª estÃ¡ um guarda bastante alto que aparentemente estÃ¡ 
 muito feliz com o trabalho. Este lugar o faz lembrar de outro quarto em 
-um palácio opulento. Com certeza esta foi a área mais rica de Torin. O 
-portão está ao sul e para o lado oeste outro quarto bastante iluminado e 
+um palÃ¡cio opulento. Com certeza esta foi a Ã¡rea mais rica de Torin. O 
+portÃ£o estÃ¡ ao sul e para o lado oeste outro quarto bastante iluminado e 
 elegante. Um sinal foi cuidadosamente fixado na parede.
 ~
-131 72 0 0 0 1
+131 dg 1
 D2
-Um grande portão brilhante está em seu caminho.
+Um grande portÃ£o brilhante estÃ¡ em seu caminho.
 ~
-portão brilhante~
+portao brilhante~
+:n 1 o portÃ£o brilhante
 1 13102 13120
 D3
-Um quarto escasso, porém bastante útil ainda.
+Um quarto escasso, porÃ©m bastante Ãºtil ainda.
 ~
 ~
-0 -1 13122
+0 -1 13122 0
 S
 #13122
 O Posto De Garin~
-   Quando você entra neste quarto primeiro nota a funcionalidade dele. 
-Tudo nisto tem um propósito. Até mesmo os cantos escuros que permitem 
-alguém permanecer escondido para observar quem quer que seja entrar no 
-quarto. Você nota olhos o observando de um destes cantos...?... Não, não 
-pode ser.  Você continua notando coisas ao redor do quarto. Uma pequena 
-mesa tombada lateralmente poderia perfeitamente servir como uma proteção. 
-Você de repente se movimenta e dá uma olhada como que sentisse alguém 
-batendo em seu ombro. Você dá uma olhada mas não consegue encontrar 
-ninguém, então de repente você consegue vê-lo. Ele está encostado contra 
-a parede. As roupas e as magníficas armas estão camufladas. Você observa 
-o quarto do portão ao leste e ao oeste.
+   Quando vocÃª entra neste quarto primeiro nota a funcionalidade dele. 
+Tudo nisto tem um propÃ³sito. AtÃ© mesmo os cantos escuros que permitem 
+alguÃ©m permanecer escondido para observar quem quer que seja entrar no 
+quarto. VocÃª nota olhos o observando de um destes cantos...?... NÃ£o, nÃ£o 
+pode ser.  VocÃª continua notando coisas ao redor do quarto. Uma pequena 
+mesa tombada lateralmente poderia perfeitamente servir como uma proteÃ§Ã£o. 
+VocÃª de repente se movimenta e dÃ¡ uma olhada como que sentisse alguÃ©m 
+batendo em seu ombro. VocÃª dÃ¡ uma olhada mas nÃ£o consegue encontrar 
+ninguÃ©m, entÃ£o de repente vocÃª consegue vÃª-lo. Ele estÃ¡ encostado contra 
+a parede. As roupas e as magnÃ­ficas armas estÃ£o camufladas. VocÃª observa 
+o quarto do portÃ£o ao leste e ao oeste.
 ~
-131 72 0 0 0 1
+131 dg 1
 D1
-Você vê um quarto do portão e um imenso portão brilhante.
+VocÃª vÃª um quarto do portÃ£o e um imenso portÃ£o brilhante.
 ~
 ~
 0 -1 13121
 D3
-Você vê um quarto do portão e um imenso portão brilhante.
+VocÃª vÃª um quarto do portÃ£o e um imenso portÃ£o brilhante.
 ~
 ~
 0 -1 13123
 S
 #13123
-O Quarto Do Portão~
-   A opulência deste quarto é incrível.  Você nota as belíssimas bordas 
-dos portões. Algumas cadeiras de mármore foram espalhadas ao redor do 
-quarto, e ironicamente, não existe sinal de um guarda. Embora, ao entrar 
-no quarto você comece a notar alguém o observando. Você também nota um 
+O Quarto Do PortÃ£o~
+   A opulÃªncia deste quarto Ã© incrÃ­vel.  VocÃª nota as belÃ­ssimas bordas 
+dos portÃµes. Algumas cadeiras de mÃ¡rmore foram espalhadas ao redor do 
+quarto, e ironicamente, nÃ£o existe sinal de um guarda. Embora, ao entrar 
+no quarto vocÃª comece a notar alguÃ©m o observando. VocÃª tambÃ©m nota um 
 estranho zumbido na qual parece estar vindo de todos os lados. Um quarto 
-bastante insípido, mas funcional está ao leste. Para o norte e oeste 
-existem estranhos globos brilhantes, e para o lado sul um majestoso portão 
-coberto com letras rúnicas.
+bastante insÃ­pido, mas funcional estÃ¡ ao leste. Para o norte e oeste 
+existem estranhos globos brilhantes, e para o lado sul um majestoso portÃ£o 
+coberto com letras rÃºnicas.
 ~
-131 72 0 0 0 1
+131 dg 1
 D0
-Lá está um estranho caminho.
+LÃ¡ estÃ¡ um estranho caminho.
 ~
 ~
 0 -1 13157
 D1
-Você vê um quarto iluminado que aparentemente parece ser útil, mas 
-insípido. 
+VocÃª vÃª um quarto iluminado que aparentemente parece ser Ãºtil, mas 
+insÃ­pido. 
 ~
 ~
 0 -1 13122
 D2
-Você vê um grande portão coberto com letras rúnicas que está protegendo 
+VocÃª vÃª um grande portÃ£o coberto com letras rÃºnicas que estÃ¡ protegendo 
 este lugar das sombras.
 ~
-portão brilhante~
+portao brilhante~
+:n 1 o portÃ£o brilhante
 1 -1 13108
 D3
-Você vê um estranho bulevar alinhado com um globo brilhante.
+VocÃª vÃª um estranho bulevar alinhado com um globo brilhante.
 ~
 ~
 0 -1 13124
 S
 #13124
 Ao Longo Da Avenida~
-   Uma estranha camada cobre todos os edifícios. Você parece não poder 
-adquirir isto. Age como um campo de força impedindo a entrada. Como é 
-hostil!  Você vê lojas ao norte, oeste e sul. Infelizmente esta cobertura 
-cobre as lojas ao sul e oeste. Para o leste está um quarto do portão.
+   Uma estranha camada cobre todos os edifÃ­cios. VocÃª parece nÃ£o poder 
+adquirir isto. Age como um campo de forÃ§a impedindo a entrada. Como Ã© 
+hostil!  VocÃª vÃª lojas ao norte, oeste e sul. Infelizmente esta cobertura 
+cobre as lojas ao sul e oeste. Para o leste estÃ¡ um quarto do portÃ£o.
 ~
-131 72 0 0 0 1
+131 dg 1
 D0
-Você vê uma pequena loja pitoresca que no passado tenha sido um 
+VocÃª vÃª uma pequena loja pitoresca que no passado tenha sido um 
 estabelecimento familiar.
 ~
 porta~
+:n 2 a porta
 1 13103 13125
 D1
-Você vê o quarto repleto de sombras. 
+VocÃª vÃª o quarto repleto de sombras. 
 ~
 ~
 0 -1 13123
 S
 #13125
 Uma Pequena Loja~
-   Uma loja pequena, porém indistinta está aqui. Embora isto pareça ser uma 
-loja muito pequena você nota que os contadores foram feitos em mármore, 
-assim como também o balcão. A mesa no centro está em forma de uma estranha 
-pirâmide, de cabeça para baixa colocada em um canto bastante estranho. Uma 
-olhada rápida não revela nada de importância, mas quando se levanta, seu 
-braço bate um armário no quarto, talvez devesse ter mais cuidado. Você 
-também nota ao oeste que existe um remendo na parede. Talvez... Sim, parece 
-ser a impressão de uma mão. Ao sul está a entrada da loja.
+   Uma loja pequena, porÃ©m indistinta estÃ¡ aqui. Embora isto pareÃ§a ser uma 
+loja muito pequena vocÃª nota que os contadores foram feitos em mÃ¡rmore, 
+assim como tambÃ©m o balcÃ£o. A mesa no centro estÃ¡ em forma de uma estranha 
+pirÃ¢mide, de cabeÃ§a para baixa colocada em um canto bastante estranho. Uma 
+olhada rÃ¡pida nÃ£o revela nada de importÃ¢ncia, mas quando se levanta, seu 
+braÃ§o bate um armÃ¡rio no quarto, talvez devesse ter mais cuidado. VocÃª 
+tambÃ©m nota ao oeste que existe um remendo na parede. Talvez... Sim, parece 
+ser a impressÃ£o de uma mÃ£o. Ao sul estÃ¡ a entrada da loja.
 ~
-131 73 0 0 0 1
+131 adg 1
 D2
-Lá existe um caminho bastante iluminado.
+LÃ¡ existe um caminho bastante iluminado.
 ~
 porta~
+:n 2 a porta
 1 13103 13124
 D3
 ~
 secreta passagem~
-1 -1 13126
+:n 2 a passagem secreta
+ad -1 13126
 E
-parede impressão mão~
-A pequena decoração na parede definitivamente é a impressão de uma mão. 
-Quando você emparelha sua mão à impressão da mão você nota que a parede 
+parede impressao mao~
+A pequena decoraÃ§Ã£o na parede definitivamente Ã© a impressÃ£o de uma mÃ£o. 
+Quando vocÃª emparelha sua mÃ£o Ã  impressÃ£o da mÃ£o vocÃª nota que a parede 
 desliza um pouco para dentro.
 ~
 S
 #13126
 A Grande Caverna~
-   Você sente estar em uma imensa caverna. Você somente consegue notar as 
+   VocÃª sente estar em uma imensa caverna. VocÃª somente consegue notar as 
 paredes quando os fungos nela contido brilham. A caverna continua ao oeste 
 e sul, para o lado norte uma parede e para o lado leste uma porta leva 
-até a loja.
+atÃ© a loja.
 ~
-131 73 0 0 0 1
+131 adg 1
 D1
-A escuridão, diante da porta feita de pedras atrás da pequena loja.
+A escuridÃ£o, diante da porta feita de pedras atrÃ¡s da pequena loja.
 ~
 secreta passagem pedra porta~
-1 -1 13125
+:n 2 a porta da passagem secreta 
+ad -1 13125
 D2
-A escuridão leva diretamente para dentro da caverna.
+A escuridÃ£o leva diretamente para dentro da caverna.
 ~
 ~
 0 -1 13127
 D3
-A escuridão leva diretamente para dentro da caverna.
+A escuridÃ£o leva diretamente para dentro da caverna.
 ~
 ~
 0 -1 13129
 S
 #13127
 A Grande Caverna~
-   Como esta imensa caverna continua você nota a suavidade das paredes, 
+   Como esta imensa caverna continua vocÃª nota a suavidade das paredes, 
 a luz esverdeada que a ilumina clareia os limites da caverna. Uma piscina 
-no chão da caverna ilumina incrivelmente bem este lugar, e você ouve o 
-gotejar das estalagmites sobre você. Espere um segundo, você olha ao 
+no chÃ£o da caverna ilumina incrivelmente bem este lugar, e vocÃª ouve o 
+gotejar das estalagmites sobre vocÃª. Espere um segundo, vocÃª olha ao 
 redor novamente, e poderia jurar ter visto olhos vermelhos o encararem 
-da escuridão. A caverna continua envolver você ao norte, e oeste.
+da escuridÃ£o. A caverna continua envolver vocÃª ao norte, e oeste.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
-A escuridão infinita continua. 
+A escuridÃ£o infinita continua. 
 ~
 ~
 0 -1 13126
 D2
-A escuridão infinita continua.
+A escuridÃ£o infinita continua.
 ~
 ~
 0 -1 13128
 D3
-A escuridão infinita continua.
+A escuridÃ£o infinita continua.
 ~
 ~
 0 -1 13128
 S
 #13128
 A Grande Caverna~
-   Você entra nesta parte da imensa caverna e mais uma vez nota os fungos 
-brilhando estranhamente e iluminando as paredes de pedra. Mas você também 
-nota a incrível suavidade dessas paredes, impossível para natureza ter 
-realizado isto sozinha. Uma piscina no chão da caverna ilumina 
-incrivelmente bem este lugar... e falando do chão, você vê grandes marcas 
-de raspado ao oeste. Para o norte, sul e leste a caverna envolve você.
+   VocÃª entra nesta parte da imensa caverna e mais uma vez nota os fungos 
+brilhando estranhamente e iluminando as paredes de pedra. Mas vocÃª tambÃ©m 
+nota a incrÃ­vel suavidade dessas paredes, impossÃ­vel para natureza ter 
+realizado isto sozinha. Uma piscina no chÃ£o da caverna ilumina 
+incrivelmente bem este lugar... e falando do chÃ£o, vocÃª vÃª grandes marcas 
+de raspado ao oeste. Para o norte, sul e leste a caverna envolve vocÃª.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
-A escuridão infinita continua.
+A escuridÃ£o infinita continua.
 ~
 ~
 0 -1 13129
 D1
-A escuridão infinita continua.
+A escuridÃ£o infinita continua.
 ~
 ~
 0 -1 13127
 D2
-A escuridão infinita continua, mas você nota algo familiar lá.
+A escuridÃ£o infinita continua, mas vocÃª nota algo familiar lÃ¡.
 ~
 ~
 0 -1 13127
 D3
 ~
 pedra pedras porta~
-1 -1 13130
+:n 2 a porta feita de pedras 
+ad -1 13130
 E
 marcas raspado~
 Um enorme posto feito de pedras bloqueia seu caminho, mas esses raspados 
-no chão...
+no chÃ£o...
 ~
 S
 #13129
 A Grande Caverna~
-   Aham, você achou outra parede para esta caverna. Quando você olha ao 
-seu redor acha muito estranho não conseguir ver nem ao menos a mão em 
-frente ao seus olhos, uma completa escuridão. A escuridão é tão intensa 
-que você não pôde nem mesmo pensar em procurar alguma coisa, a única 
-coisa que você espera é encontrar sem querer alguma porta. Um sentimento 
-ao seu redor diz que a parede permite passagem em uma direção, e você 
-adivinha ser ao sul e também ao leste. Para o norte existe uma estranha 
-depressão e um sentimento mais forte indica que ao longo daqui você pode 
-ver que é ou era um túnel, só existe um modo de descobrir.
+   Aham, vocÃª achou outra parede para esta caverna. Quando vocÃª olha ao 
+seu redor acha muito estranho nÃ£o conseguir ver nem ao menos a mÃ£o em 
+frente ao seus olhos, uma completa escuridÃ£o. A escuridÃ£o Ã© tÃ£o intensa 
+que vocÃª nÃ£o pÃ´de nem mesmo pensar em procurar alguma coisa, a Ãºnica 
+coisa que vocÃª espera Ã© encontrar sem querer alguma porta. Um sentimento 
+ao seu redor diz que a parede permite passagem em uma direÃ§Ã£o, e vocÃª 
+adivinha ser ao sul e tambÃ©m ao leste. Para o norte existe uma estranha 
+depressÃ£o e um sentimento mais forte indica que ao longo daqui vocÃª pode 
+ver que Ã© ou era um tÃºnel, sÃ³ existe um modo de descobrir.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
-Uma depressão escura leva ao desconhecido.
+Uma depressÃ£o escura leva ao desconhecido.
 ~
 ~
 0 -1 13166
 D1
-Toda escuridão que envolve você continua.
+Toda escuridÃ£o que envolve vocÃª continua.
 ~
 ~
 0 -1 13126
 D2
-Toda escuridão que envolve você continua.
+Toda escuridÃ£o que envolve vocÃª continua.
 ~
 ~
 0 -1 13128
 S
 #13130
 Os Corredores~
-   Você adquire um sentimento de timidez quando entra nestes corredores.
+   VocÃª adquire um sentimento de timidez quando entra nestes corredores.
 Olha ao redor e supera isto com um temor maior.  Este lugar parece ter sido
-no passado um monastério e parece que nada mudou aqui.  À sua direita e
-esquerda estão enfileirados estátuas de granito de gargantuan, com os olhos
-ardentes parecendo que estão lhe observando e seguindo seus movimentos.
-Elas parecem que querem adquirir vida própria a qualquer momento...  Olhando
-por sobre estas estátuas um teto muito enfeitado.  Quando você observa este
-teto percebe que o mural que existe nele está movendo.  É um quadro.  Você
-nota que o chão de granito abaixo está estrondeando, parecendo muito com o
-batimento do seu coração.  Você sussurra algo e parece que tudo o que é
-sussurrado é absorvido para dentro das paredes.  Você pisa fortemente no
-chão, bate nas paredes, mas nenhum barulho é ouvido.  Não há nada que você
+no passado um monastÃ©rio e parece que nada mudou aqui.  Ã€ sua direita e
+esquerda estÃ£o enfileirados estÃ¡tuas de granito de gargantuan, com os olhos
+ardentes parecendo que estÃ£o lhe observando e seguindo seus movimentos.
+Elas parecem que querem adquirir vida prÃ³pria a qualquer momento...  Olhando
+por sobre estas estÃ¡tuas um teto muito enfeitado.  Quando vocÃª observa este
+teto percebe que o mural que existe nele estÃ¡ movendo.  Ã‰ um quadro.  VocÃª
+nota que o chÃ£o de granito abaixo estÃ¡ estrondeando, parecendo muito com o
+batimento do seu coraÃ§Ã£o.  VocÃª sussurra algo e parece que tudo o que Ã©
+sussurrado Ã© absorvido para dentro das paredes.  VocÃª pisa fortemente no
+chÃ£o, bate nas paredes, mas nenhum barulho Ã© ouvido.  NÃ£o hÃ¡ nada que vocÃª
 possa fazer para criar qualquer tipo de som.
 ~
-131 105 0 0 0 1
+131 agfd 1
 D0
-Uma fila de estátuas feito de granito segue pelo resto do corredor.
+Uma fila de estÃ¡tuas feito de granito segue pelo resto do corredor.
 ~
 ~
 0 -1 13131
 D1
 ~
 pedra gigante secreta~
-1 13104 13128
+:n 2 a pedra gigante 
+ad 13104 13128
 E
 pedra gigante~
-É um grande bloco de pedra. Talvez você pudesse mover isto...
+Ã‰ um grande bloco de pedra. Talvez vocÃª pudesse mover isto...
 ~
 S
 #13131
-A Lembrança~
-   Parece que você já esteve aqui antes... Lembra-se? Destes corredores. 
-Você não está muito seguro mas lembra-se vagamente de já ter vindo aqui. 
-O silencio é o único mistério. Você não se lembra desta quietude. Parece 
-até que o lugar está morto, como se nada tivesse vivido aqui por muitos 
-milhares de anos. As estátuas terminam aqui em uma escuridão mais adiante 
-uma piscina parece bloquear toda a passagem ao norte. As águas brilhantes 
-refletem tudo ao redor, mas elas refletem também uma face que você não 
-reconhece. Você vê um pequeno sinal na última das estátuas. Pode-se 
-prosseguir ao oeste pelo começo dos corredores, e ao sul pelo caminho que 
-você veio.
+A LembranÃ§a~
+   Parece que vocÃª jÃ¡ esteve aqui antes... Lembra-se? Destes corredores. 
+VocÃª nÃ£o estÃ¡ muito seguro mas lembra-se vagamente de jÃ¡ ter vindo aqui. 
+O silencio Ã© o Ãºnico mistÃ©rio. VocÃª nÃ£o se lembra desta quietude. Parece 
+atÃ© que o lugar estÃ¡ morto, como se nada tivesse vivido aqui por muitos 
+milhares de anos. As estÃ¡tuas terminam aqui em uma escuridÃ£o mais adiante 
+uma piscina parece bloquear toda a passagem ao norte. As Ã¡guas brilhantes 
+refletem tudo ao redor, mas elas refletem tambÃ©m uma face que vocÃª nÃ£o 
+reconhece. VocÃª vÃª um pequeno sinal na Ãºltima das estÃ¡tuas. Pode-se 
+prosseguir ao oeste pelo comeÃ§o dos corredores, e ao sul pelo caminho que 
+vocÃª veio.
 ~
-131 105 0 0 0 1
+131 agfd 1
 D2
-A entrada para o corredor está lá, onde existe algo gigante bloqueando o 
+A entrada para o corredor estÃ¡ lÃ¡, onde existe algo gigante bloqueando o 
 caminho.
 ~
 ~
@@ -777,184 +795,192 @@ Um pequeno caminho na extremidade do lago.
 0 -1 13132
 S
 #13132
-A Antiga Interseção De Pedra~
-   Você fica imaginando os monges, quando caminhavam por esta interseção 
-há muito tempo atrás, em seus passeios sombrios. Quanto mais você fica 
-imaginando, mais coisas que você não gostaria de pensar aparece em sua 
-mente. Neste momento o fato de que elas poderiam ser recordações já não 
-o amedronta. Você começa a pensar que talvez pudesse ter vivido aqui, 
-muitos anos atrás. Para o leste e sul existem portas bem preservadas. O 
-carvalho parece ser novo e você consegue sentir o cheiro da seiva 
+A Antiga InterseÃ§Ã£o De Pedra~
+   VocÃª fica imaginando os monges, quando caminhavam por esta interseÃ§Ã£o 
+hÃ¡ muito tempo atrÃ¡s, em seus passeios sombrios. Quanto mais vocÃª fica 
+imaginando, mais coisas que vocÃª nÃ£o gostaria de pensar aparece em sua 
+mente. Neste momento o fato de que elas poderiam ser recordaÃ§Ãµes jÃ¡ nÃ£o 
+o amedronta. VocÃª comeÃ§a a pensar que talvez pudesse ter vivido aqui, 
+muitos anos atrÃ¡s. Para o leste e sul existem portas bem preservadas. O 
+carvalho parece ser novo e vocÃª consegue sentir o cheiro da seiva 
 recentemente cortada. Para o norte e oeste existem mais corredores.
 ~
-131 105 0 0 0 1
+131 agfd 1
 D0
 Ha Ha Ha.
 ~
 ~
 0 -1 13131
 D1
-Uma porta bem preservada está aqui.
+Uma porta bem preservada estÃ¡ aqui.
 ~
 porta madeira carvalho~
+:n 2 a porta de madeira
 0 -1 13131
 D2
-Uma porta bem preservada está aqui.
+Uma porta bem preservada estÃ¡ aqui.
 ~
 porta madeira carvalho~
+:n 2 a porta de madeira
 1 13104 13135
 D3
-Um quarto bastante grande está lá em cima, a entrada, o arco, isto tudo 
-pode ser descrito como... Planície.
+Um quarto bastante grande estÃ¡ lÃ¡ em cima, a entrada, o arco, isto tudo 
+pode ser descrito como... PlanÃ­cie.
 ~
 ~
 0 -1 13133
 E
 porta sul leste preservada~
-Você pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
-você toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
+VocÃª pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
+vocÃª toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
 onde ir.
 ~
 S
 #13133
 A Sala Do Tesouro~
-   Quando você pisa aqui mudanças acontecem neste quarto. Onde antes era 
+   Quando vocÃª pisa aqui mudanÃ§as acontecem neste quarto. Onde antes era 
 um quarto vazio e claro, existe agora um quarto ricamente decorado e 
-iluminado. Você pode sentir o cheiro da seiva recentemente cortada do 
-carvalho ao sul, e para o oeste existe uma interseção vazia.
+iluminado. VocÃª pode sentir o cheiro da seiva recentemente cortada do 
+carvalho ao sul, e para o oeste existe uma interseÃ§Ã£o vazia.
 ~
-131 105 0 0 0 1
+131 agfd 1
 D1
-Lá está um grande interseção porém vazia.
+LÃ¡ estÃ¡ um grande interseÃ§Ã£o porÃ©m vazia.
 ~
 ~
 0 -1 13132
 D2
-Uma porta bem preservada está aqui. 
+Uma porta bem preservada estÃ¡ aqui. 
 ~
 porta madeira carvalho~
+:n 2 a porta de madeira
 1 13104 13134
 E
 porta preservada leste~
-Você pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
-você toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
+VocÃª pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
+vocÃª toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
 onde ir.
 ~
 S
 #13134
-O Quarto Do Portão~
-   Uma estrutura impressionante está diante de você.  Todas as paredes, 
-tetos, e chão estão cobertos com espelhos. As únicas formas de sair são 
-pelas portas e pela arcada que conduz para fora. Os espelhos estão 
-posicionados de forma que você veja dez ou mais imagens fantasmagóricas 
-de você e de outros que estão no quarto. Estas imagens flutuam dentro 
-daqui e são como se fossem reais. As portas dianteiras bem preservadas 
-estão ao norte e sul, e os corredores continuam ao leste.
+O Quarto Do PortÃ£o~
+   Uma estrutura impressionante estÃ¡ diante de vocÃª.  Todas as paredes, 
+tetos, e chÃ£o estÃ£o cobertos com espelhos. As Ãºnicas formas de sair sÃ£o 
+pelas portas e pela arcada que conduz para fora. Os espelhos estÃ£o 
+posicionados de forma que vocÃª veja dez ou mais imagens fantasmagÃ³ricas 
+de vocÃª e de outros que estÃ£o no quarto. Estas imagens flutuam dentro 
+daqui e sÃ£o como se fossem reais. As portas dianteiras bem preservadas 
+estÃ£o ao norte e sul, e os corredores continuam ao leste.
 ~
-131 105 0 0 0 1
+131 agfd 1
 D0
-Uma porta bem preservada está aqui.
+Uma porta bem preservada estÃ¡ aqui.
 ~
 porta madeira carvalho~
+:n 2 a porta de madeira
 1 13104 13133
 D1
-Os corredores continuam até uma catedral.
+Os corredores continuam atÃ© uma catedral.
 ~
 ~
 0 -1 13135
 D2
-Uma porta bem preservada está aqui. 
+Uma porta bem preservada estÃ¡ aqui. 
 ~
 porta madeira carvalho~
+:n 2 a porta de madeira
 1 -1 13137
 E
 porta madeira sul preservada~
-Você pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
-você toca na porta ainda consegue retirar o verniz.  Esta porta parece ser
-mais um portão do que uma porta normal.
+VocÃª pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
+vocÃª toca na porta ainda consegue retirar o verniz.  Esta porta parece ser
+mais um portÃ£o do que uma porta normal.
 ~
 E
 porta madeira norte preservada~
-Você pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
-você toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
+VocÃª pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
+vocÃª toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
 onde ir.
 ~
 S
 #13135
 Os Corredores Vivos~
-   Estes corredores parecem estar vivos. Você consegue ver as paredes se 
-movimentando como se tivessem pulmões. Ao longo destes corredores está 
-uma fila de estátuas. Elas se referem a inumeráveis deuses. Você vê o 
-santuário de Júpiter a sua direita e o santuário de Brahman à esquerda. 
-Este lugar, entretanto parece ser um lugar santo, estar vivo. O chão que 
-você está pisando está se movimentando em um ritmo sempre igual. Hmmm... 
-Por quanto tempo será que a caverna já é assim? Pois você não havia 
-notado isto antes. Tudo parecia normal antes de você ter notado. Que 
-tipo de criatura pode ser esta?  Isto com certeza está dormindo por 
-bilhões de anos, e será que irá continuar por mais um?  Bem, sorte a 
-sua... Você detestaria despertar um ser deste tamanho. Para o leste estão 
-as filas de estátuas e a continuação da passagem viva. Para o lado norte 
-uma porta de madeira bem preservada e para o lado oeste está o quarto do 
-portão.
+   Estes corredores parecem estar vivos. VocÃª consegue ver as paredes se 
+movimentando como se tivessem pulmÃµes. Ao longo destes corredores estÃ¡ 
+uma fila de estÃ¡tuas. Elas se referem a inumerÃ¡veis deuses. VocÃª vÃª o 
+santuÃ¡rio de JÃºpiter a sua direita e o santuÃ¡rio de Brahman Ã  esquerda. 
+Este lugar, entretanto parece ser um lugar santo, estar vivo. O chÃ£o que 
+vocÃª estÃ¡ pisando estÃ¡ se movimentando em um ritmo sempre igual. Hmmm... 
+Por quanto tempo serÃ¡ que a caverna jÃ¡ Ã© assim? Pois vocÃª nÃ£o havia 
+notado isto antes. Tudo parecia normal antes de vocÃª ter notado. Que 
+tipo de criatura pode ser esta?  Isto com certeza estÃ¡ dormindo por 
+bilhÃµes de anos, e serÃ¡ que irÃ¡ continuar por mais um?  Bem, sorte a 
+sua... VocÃª detestaria despertar um ser deste tamanho. Para o leste estÃ£o 
+as filas de estÃ¡tuas e a continuaÃ§Ã£o da passagem viva. Para o lado norte 
+uma porta de madeira bem preservada e para o lado oeste estÃ¡ o quarto do 
+portÃ£o.
 ~
-131 105 0 0 0 1
+131 agfd 1
 D0
-Uma porta bem preservada está aqui.
+Uma porta bem preservada estÃ¡ aqui.
 ~
 porta madeira carvalho~
+:n 2 a porta de madeira
 1 13104 13132
 D1
-Esta fila de estátua continua, como se fossem paredes.
+Esta fila de estÃ¡tua continua, como se fossem paredes.
 ~
 ~
 0 -1 13136
 D3
-Um quarto de espelhos e ilusões está naquela direção.
+Um quarto de espelhos e ilusÃµes estÃ¡ naquela direÃ§Ã£o.
 ~
 ~
 0 -1 13134
 E
 porta preservada sul~
-Você pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
-você toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
+VocÃª pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
+vocÃª toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
 onde ir.
 ~
 S
 #13136
 O Fim Do Corredor~
-   Você alcançou um beco sem saída. As paredes ainda estão se movimentando, 
-parecendo vivas. As estátuas estão aqui, mas parecem terem chegado ao fim. 
-Você nota um assovio estranho.  Soa como que... Algo Respirando! Você está 
+   VocÃª alcanÃ§ou um beco sem saÃ­da. As paredes ainda estÃ£o se movimentando, 
+parecendo vivas. As estÃ¡tuas estÃ£o aqui, mas parecem terem chegado ao fim. 
+VocÃª nota um assovio estranho.  Soa como que... Algo Respirando! VocÃª estÃ¡ 
 seguro de que se trata de uma criatura. As paredes continuam se movendo, 
-você pode ouvir a respiração e os movimentos do chão. Os antigos pensavam 
-que isto fosse obra dos deuses e por este motivo foram construídos os 
-altares aqui para que fossem adorados. A única forma de sair é pela mesma 
-entrada que você veio... ou continuando através da criatura.
+vocÃª pode ouvir a respiraÃ§Ã£o e os movimentos do chÃ£o. Os antigos pensavam 
+que isto fosse obra dos deuses e por este motivo foram construÃ­dos os 
+altares aqui para que fossem adorados. A Ãºnica forma de sair Ã© pela mesma 
+entrada que vocÃª veio... ou continuando atravÃ©s da criatura.
 ~
-131 105 0 0 0 1
+131 agfd 1
 D1
 ~
 porta secreta~
-1 -1 13142
+:n 2 a porta secreta
+ad -1 13142
 D3
-Lá está o único caminho de saída e o único modo de fugir daqui.
+LÃ¡ estÃ¡ o Ãºnico caminho de saÃ­da e o Ãºnico modo de fugir daqui.
 ~
 ~
 0 -1 13135
 S
 #13137
-A Assombração~
-   Você gostaria de ter esquecido isto há muito tempo. Sombras estão em 
-todos os lugares.  Aqui você está novamente, no meio destas estranhas 
-sombras.  Estas sombras parecem mais amigáveis, de alguma forma.  Elas 
-também são menos intensas e menos opressivas. Elas continuam ao sul, e 
-uma porta bem conservada está ao norte.
+A AssombraÃ§Ã£o~
+   VocÃª gostaria de ter esquecido isto hÃ¡ muito tempo. Sombras estÃ£o em 
+todos os lugares.  Aqui vocÃª estÃ¡ novamente, no meio destas estranhas 
+sombras.  Estas sombras parecem mais amigÃ¡veis, de alguma forma.  Elas 
+tambÃ©m sÃ£o menos intensas e menos opressivas. Elas continuam ao sul, e 
+uma porta bem conservada estÃ¡ ao norte.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
-Uma porta bem preservada está aqui.
+Uma porta bem preservada estÃ¡ aqui.
 ~
 porta carvalho madeira~
+:n 2 a porta de madeira
 1 -1 13134
 D2
 Estas sombras recentes continuam abaixo na passagem.
@@ -963,49 +989,50 @@ Estas sombras recentes continuam abaixo na passagem.
 0 -1 13140
 E
 porta norte preservada~
-Você pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
-você toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
+VocÃª pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
+vocÃª toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
 onde ir.
 ~
 S
 #13138
 O Quarto De Pedra~
-   Quando você começa olhar ao seu redor consegue ver um pequeno quarto 
-feito de pedras, cadeiras de pedra, uma mesa de pedra, até mesmo xícaras 
-de pedra, pratos de pedra e facas de pedra. Quando você se encosta junto 
-às paredes, sente uma suavidade jamais sentida antes. Espere um segundo, 
-você já sentiu isto em um outro lugar... A forma de sair é pelas sombras 
-e também pelo lugar estranho que você sabe agora que se trata de uma casa 
-que está ao sul.
+   Quando vocÃª comeÃ§a olhar ao seu redor consegue ver um pequeno quarto 
+feito de pedras, cadeiras de pedra, uma mesa de pedra, atÃ© mesmo xÃ­caras 
+de pedra, pratos de pedra e facas de pedra. Quando vocÃª se encosta junto 
+Ã s paredes, sente uma suavidade jamais sentida antes. Espere um segundo, 
+vocÃª jÃ¡ sentiu isto em um outro lugar... A forma de sair Ã© pelas sombras 
+e tambÃ©m pelo lugar estranho que vocÃª sabe agora que se trata de uma casa 
+que estÃ¡ ao sul.
 ~
-131 73 0 0 0 1
+131 adg 1
 D2
-As sombras estão lá fora.
+As sombras estÃ£o lÃ¡ fora.
 ~
 ~
 0 -1 13141
 S
 #13139
 O Corredor Das Sombras~
-   O corredor das sombras, você se lembra vagamente dele. As paredes do 
-corredor são uma prova da incrível habilidade que os arquitetos e 
-construtores desta cidade possuem. As rígidas paredes de granito são 
-completamente lisas, com alguns ganchos de metais. Alguns deles estão 
-segurando algumas sombrias armaduras já enferrujadas das batalhas de 
-Torin, e alguns destes ganchos estão vazios. Você sente que já conhece 
-muito melhor a história desta importante cidade, ou melhor, deste Império 
-que se chama Torin. As recordações aparecem em pedaços, assim você não 
-consegue saber a história completa. Você observa o chão onde lá existe um 
-buraco. Infelizmente um estranho campo de força azul o impede de tentar 
-descer. Para o leste está uma velha porta, e para o lado sul mais corredor 
+   O corredor das sombras, vocÃª se lembra vagamente dele. As paredes do 
+corredor sÃ£o uma prova da incrÃ­vel habilidade que os arquitetos e 
+construtores desta cidade possuem. As rÃ­gidas paredes de granito sÃ£o 
+completamente lisas, com alguns ganchos de metais. Alguns deles estÃ£o 
+segurando algumas sombrias armaduras jÃ¡ enferrujadas das batalhas de 
+Torin, e alguns destes ganchos estÃ£o vazios. VocÃª sente que jÃ¡ conhece 
+muito melhor a histÃ³ria desta importante cidade, ou melhor, deste ImpÃ©rio 
+que se chama Torin. As recordaÃ§Ãµes aparecem em pedaÃ§os, assim vocÃª nÃ£o 
+consegue saber a histÃ³ria completa. VocÃª observa o chÃ£o onde lÃ¡ existe um 
+buraco. Infelizmente um estranho campo de forÃ§a azul o impede de tentar 
+descer. Para o leste estÃ¡ uma velha porta, e para o lado sul mais corredor 
 das sombras.
 ~
-131 72 0 0 0 1
+131 dg 1
 D1
 Uma grande porta velha bloqueia a passagem para um lugar desconhecido nos 
 corredores.
 ~
 velha porta desconhecido~
+:n 2 a porta desconhecida
 1 -1 13108
 D2
 O corredor das sombras continua.
@@ -1014,17 +1041,17 @@ O corredor das sombras continua.
 0 -1 13142
 S
 #13140
-A Assombração~
-   As sombras encobrem as paredes, o teto, o chão, na verdade você 
-consegue ver muito pouco a sua frente.  Você se sente sufocado, como se 
-a escuridão do túnel de pedra estivesse se movendo. Você está viajando 
-por estas sombras durante algum tempo, e nada lhe é familiar. Talvez 
-pelo motivo de ter vindo de um corredor que não emitisse som algum. Com 
-certeza você irá descobrir o que aconteceu neste lugar para fazer com que 
+A AssombraÃ§Ã£o~
+   As sombras encobrem as paredes, o teto, o chÃ£o, na verdade vocÃª 
+consegue ver muito pouco a sua frente.  VocÃª se sente sufocado, como se 
+a escuridÃ£o do tÃºnel de pedra estivesse se movendo. VocÃª estÃ¡ viajando 
+por estas sombras durante algum tempo, e nada lhe Ã© familiar. Talvez 
+pelo motivo de ter vindo de um corredor que nÃ£o emitisse som algum. Com 
+certeza vocÃª irÃ¡ descobrir o que aconteceu neste lugar para fazer com que 
 as sombras assumissem e os residentes se escondessem. O caminho continua, 
 nestas sombras, para o norte e leste.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
 As sombras continuam.
 ~
@@ -1037,20 +1064,20 @@ As sombras continuam.
 0 -1 13141
 S
 #13141
-A Assombração~
-   As sombras encobrem as paredes, o teto, o chão, na verdade você 
-consegue ver muito pouco a sua frente.  Você se sente sufocado, como se 
-a escuridão do túnel de pedra estivesse se movendo. Você está viajando 
-por estas sombras durante algum tempo, e nada lhe é familiar. Talvez 
-pelo motivo de ter vindo de um corredor que não emitisse som algum. Com 
-certeza você irá descobrir o que aconteceu neste lugar para fazer com 
+A AssombraÃ§Ã£o~
+   As sombras encobrem as paredes, o teto, o chÃ£o, na verdade vocÃª 
+consegue ver muito pouco a sua frente.  VocÃª se sente sufocado, como se 
+a escuridÃ£o do tÃºnel de pedra estivesse se movendo. VocÃª estÃ¡ viajando 
+por estas sombras durante algum tempo, e nada lhe Ã© familiar. Talvez 
+pelo motivo de ter vindo de um corredor que nÃ£o emitisse som algum. Com 
+certeza vocÃª irÃ¡ descobrir o que aconteceu neste lugar para fazer com 
 que as sombras assumissem e os residentes se escondessem. As sombras 
-continuam para o sul, leste e oeste. Para o norte você consegue ver um 
-sólido quarto de pedras.
+continuam para o sul, leste e oeste. Para o norte vocÃª consegue ver um 
+sÃ³lido quarto de pedras.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
-Você vê um quarto de pedra.
+VocÃª vÃª um quarto de pedra.
 ~
 ~
 0 -1 13138
@@ -1060,7 +1087,7 @@ As sombras continuam.
 ~
 0 -1 13142
 D2
-As sombras se condensaram e parecem ser cada vez mais as mesmas que você 
+As sombras se condensaram e parecem ser cada vez mais as mesmas que vocÃª 
 viu na entrada desta cidade arruinada.  
 ~
 ~
@@ -1073,20 +1100,20 @@ As sombras continuam.
 S
 #13142
 O Corredor Das Sombras~
-   O corredor das sombras, você se lembra vagamente dele. As paredes do 
-corredor são uma prova da incrível habilidade que os arquitetos e 
-construtores desta cidade possuem. As rígidas paredes de granito são 
-completamente lisas, com alguns ganchos de metais. Alguns deles estão 
-segurando algumas sombrias armaduras já enferrujadas das batalhas de 
-Torin, e alguns destes ganchos estão vazios. Você sente que já conhece 
-muito melhor a história desta importante cidade, ou melhor, deste Império 
-que se chama Torin. As recordações aparecem em pedaços, assim você não 
-consegue saber a história completa. O corredor continua para o norte e 
-sul, existe uma porta de pedra para o leste e as sombras estão ao oeste. 
+   O corredor das sombras, vocÃª se lembra vagamente dele. As paredes do 
+corredor sÃ£o uma prova da incrÃ­vel habilidade que os arquitetos e 
+construtores desta cidade possuem. As rÃ­gidas paredes de granito sÃ£o 
+completamente lisas, com alguns ganchos de metais. Alguns deles estÃ£o 
+segurando algumas sombrias armaduras jÃ¡ enferrujadas das batalhas de 
+Torin, e alguns destes ganchos estÃ£o vazios. VocÃª sente que jÃ¡ conhece 
+muito melhor a histÃ³ria desta importante cidade, ou melhor, deste ImpÃ©rio 
+que se chama Torin. As recordaÃ§Ãµes aparecem em pedaÃ§os, assim vocÃª nÃ£o 
+consegue saber a histÃ³ria completa. O corredor continua para o norte e 
+sul, existe uma porta de pedra para o leste e as sombras estÃ£o ao oeste. 
 ~
-131 72 0 0 0 1
+131 dg 1
 D0
-Você vê o corredor das sombras.
+VocÃª vÃª o corredor das sombras.
 ~
 ~
 0 -1 13139
@@ -1094,9 +1121,10 @@ D1
 Uma grande porta de pedra bloqueia a passagem.
 ~
 pedra porta grande~
+:n 2 a grande porta de pedra
 1 -1 13136
 D2
-Um som assustador vem de dentro da escuridão das sombras.
+Um som assustador vem de dentro da escuridÃ£o das sombras.
 ~
 ~
 0 -1 13144
@@ -1108,42 +1136,42 @@ As sombras continuam.
 S
 #13143
 O Trono Sombrio~
-   O que você vê diante de seus olhos lhe enche de medo.  Há centenas de 
-sombras aqui. E não parecem ser amigáveis. Você ouve seus assobios, 
-gemidos, e até mesmo o idioma estranho que elas falam. Todas elas parecem 
-estar olhando você, um intruso em seu território. O quarto é uma grande 
-caverna, e elas preenchem todo o espaço. Você vê um homem alto vestindo 
-roupões pretos se levantando de uma parede em cima do que parece ser um 
-altar. Os olhares deste homem estão direcionados diretamente para você. 
-Todas as sombras olham você com um ar de ansiedade... Não existe nenhuma 
-saída deste lugar, a não ser por onde você entrou, mas isso também foi 
+   O que vocÃª vÃª diante de seus olhos lhe enche de medo.  HÃ¡ centenas de 
+sombras aqui. E nÃ£o parecem ser amigÃ¡veis. VocÃª ouve seus assobios, 
+gemidos, e atÃ© mesmo o idioma estranho que elas falam. Todas elas parecem 
+estar olhando vocÃª, um intruso em seu territÃ³rio. O quarto Ã© uma grande 
+caverna, e elas preenchem todo o espaÃ§o. VocÃª vÃª um homem alto vestindo 
+roupÃµes pretos se levantando de uma parede em cima do que parece ser um 
+altar. Os olhares deste homem estÃ£o direcionados diretamente para vocÃª. 
+Todas as sombras olham vocÃª com um ar de ansiedade... NÃ£o existe nenhuma 
+saÃ­da deste lugar, a nÃ£o ser por onde vocÃª entrou, mas isso tambÃ©m foi 
 bloqueado pelas sombras.
 ~
-131 105 0 0 0 1
+131 agfd 1
 D0
-A única forma de sair daqui é pelo caminho que está diante de você, ou 
-você escolhe isto ou espera pelas sombras decidirem... ? 
+A Ãºnica forma de sair daqui Ã© pelo caminho que estÃ¡ diante de vocÃª, ou 
+vocÃª escolhe isto ou espera pelas sombras decidirem... ? 
 ~
 ~
 0 -1 13141
 S
 #13144
 Um Fim Estranho~
-   Este é um fim estranho para o Grande Corredor das Sombras. As sombras 
-são intensas aqui. Elas impedem seu movimento e sua respiração. O quarto 
+   Este Ã© um fim estranho para o Grande Corredor das Sombras. As sombras 
+sÃ£o intensas aqui. Elas impedem seu movimento e sua respiraÃ§Ã£o. O quarto 
 parece estranho. As paredes parece estarem derretendo, e os quadros e as 
-armaduras que adornam as paredes também estão. Algo parece estar se 
-escondendo dentro das sombras, entretanto você não sabe o que é e possui 
+armaduras que adornam as paredes tambÃ©m estÃ£o. Algo parece estar se 
+escondendo dentro das sombras, entretanto vocÃª nÃ£o sabe o que Ã© e possui 
 muito medo de tentar adivinhar.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
 O corredor das sombras continua.
 ~
 ~
 0 -1 13142
 D2
-Você vê um quarto de pedra.
+VocÃª vÃª um quarto de pedra.
 ~
 ~
 0 -1 13138
@@ -1155,17 +1183,17 @@ O corredor das sombras continua.
 S
 #13145
 A Sala De Lorgeth~
-   Você chega até as câmaras pessoais do grande Lorgeth. Este general do 
-exército de Torin é mesmo um legendário. Ele foi um bravo guerreiro. 
-Embora o quarto esteja podre ou destruído você ainda pode notar tudo isto 
-por aqui. A estante de livros na parede suporta os antigos pedaços de 
-pergaminhos que no passado já fez parte de um livro. A grande escrivaninha 
-no centro do quarto, que uma vez impressionara bastante está agora 
-completamente comida e apodrecida. O chão de madeira também parece 
-agüentar bem ao tempo, e você consegue ver toda a sujeira depositada. No 
+   VocÃª chega atÃ© as cÃ¢maras pessoais do grande Lorgeth. Este general do 
+exÃ©rcito de Torin Ã© mesmo um legendÃ¡rio. Ele foi um bravo guerreiro. 
+Embora o quarto esteja podre ou destruÃ­do vocÃª ainda pode notar tudo isto 
+por aqui. A estante de livros na parede suporta os antigos pedaÃ§os de 
+pergaminhos que no passado jÃ¡ fez parte de um livro. A grande escrivaninha 
+no centro do quarto, que uma vez impressionara bastante estÃ¡ agora 
+completamente comida e apodrecida. O chÃ£o de madeira tambÃ©m parece 
+agÃ¼entar bem ao tempo, e vocÃª consegue ver toda a sujeira depositada. No 
 passado aqui havia grandes tapetes cobrindo isto tudo. 
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
 As barracas continuam.
 ~
@@ -1174,26 +1202,26 @@ As barracas continuam.
 S
 #13146
 As Barracas~
-   Estes parece serem quartéis antigos do exército de Torin. Eles estão 
-agora habitados pelo exército das sombras. Há beliches enferrujados, 
-armas e couraças em todos os lugares. Você não pode arrumar qualquer 
-coisa daqui. O chão indica que faz muito tempo que ninguém pisa aqui. 
-Para o lado oeste mais quartéis, para o lado leste um estranho corredor 
-destituído de sombras, e para o norte esta uma praça.
+   Estes parece serem quartÃ©is antigos do exÃ©rcito de Torin. Eles estÃ£o 
+agora habitados pelo exÃ©rcito das sombras. HÃ¡ beliches enferrujados, 
+armas e couraÃ§as em todos os lugares. VocÃª nÃ£o pode arrumar qualquer 
+coisa daqui. O chÃ£o indica que faz muito tempo que ninguÃ©m pisa aqui. 
+Para o lado oeste mais quartÃ©is, para o lado leste um estranho corredor 
+destituÃ­do de sombras, e para o norte esta uma praÃ§a.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
-Você vê uma praça.
+VocÃª vÃª uma praÃ§a.
 ~
 ~
 0 -1 13116
 D1
-Um estranho corredor que foi recentemente polido fica naquela direção.
+Um estranho corredor que foi recentemente polido fica naquela direÃ§Ã£o.
 ~
 ~
 0 -1 13151
 D2
-Você vê a melhor parte das barracas, talvez o quarto do comandante.
+VocÃª vÃª a melhor parte das barracas, talvez o quarto do comandante.
 ~
 ~
 0 -1 13149
@@ -1205,12 +1233,12 @@ Existem muitas barracas.
 S
 #13147
 As Barracas~
-   Mais beliches, baús vazios e um chão pardo. No meio dos beliches está 
-um aventureiro menos afortunado que você; ele está com a roupa toda 
+   Mais beliches, baÃºs vazios e um chÃ£o pardo. No meio dos beliches estÃ¡ 
+um aventureiro menos afortunado que vocÃª; ele estÃ¡ com a roupa toda 
 rasgada e aparentemente foi machucado de alguma forma pelas sombras. O 
-único modo de sair daqui é indo mais ao fundo nos quartéis, pelo oeste.
+Ãºnico modo de sair daqui Ã© indo mais ao fundo nos quartÃ©is, pelo oeste.
 ~
-131 73 0 0 0 1
+131 adg 1
 D1
 As barracas continuam.
 ~
@@ -1219,127 +1247,127 @@ As barracas continuam.
 S
 #13148
 O Quarto Do Tenente~
-   Você pode ter certeza que alguém viveu aqui. Em vez do padrão beliche 
-verde existe um beliche com uma grande pele (Você acaba rasgando a pele 
+   VocÃª pode ter certeza que alguÃ©m viveu aqui. Em vez do padrÃ£o beliche 
+verde existe um beliche com uma grande pele (VocÃª acaba rasgando a pele 
 que cobre o beliche para verificar, pois algo havia se mexido dentro 
-disto). As paredes daqui possuem um padrão de qualidade melhor comparado 
-aos outros quartéis. Esta parede parece ter sido construída para uma 
-proteção maior contra o frio até mesmo porque esta cidade inteira é 
-subterrânea. Uma antiga nota prende sua atenção na pequena mesa de 
-escritura na qual está sentado.
+disto). As paredes daqui possuem um padrÃ£o de qualidade melhor comparado 
+aos outros quartÃ©is. Esta parede parece ter sido construÃ­da para uma 
+proteÃ§Ã£o maior contra o frio atÃ© mesmo porque esta cidade inteira Ã© 
+subterrÃ¢nea. Uma antiga nota prende sua atenÃ§Ã£o na pequena mesa de 
+escritura na qual estÃ¡ sentado.
 ~
-131 73 0 0 0 1
+131 adg 1
 D1
-Lá está um quarto de guerra.
+LÃ¡ estÃ¡ um quarto de guerra.
 ~
 ~
 0 -1 13149
 S
 #13149
 O Quarto De Guerra~
-   Uma enorme mesa de madeira esta no centro do quarto. Tudo aqui está 
-muito velho e apodrecido, até mesmo pedaços de pergaminhos que você supõe 
-ter sido uma vez mapas. Eles ainda estão postos na mesma maneira que 
-foram colocadas há muito tempo, como se os donos não tivessem tido tempo 
+   Uma enorme mesa de madeira esta no centro do quarto. Tudo aqui estÃ¡ 
+muito velho e apodrecido, atÃ© mesmo pedaÃ§os de pergaminhos que vocÃª supÃµe 
+ter sido uma vez mapas. Eles ainda estÃ£o postos na mesma maneira que 
+foram colocadas hÃ¡ muito tempo, como se os donos nÃ£o tivessem tido tempo 
 suficiente para levarem junto. Algo muito grave deve ter acontecido para 
-que os habitantes saíssem tão rápido. E com certeza você não faz nem idéia 
-do que possa ter acontecido. Em algumas cadeiras e no chão existem muitos 
-esqueletos... Eles parecem terem sido guardas de uma posição bastante alta 
+que os habitantes saÃ­ssem tÃ£o rÃ¡pido. E com certeza vocÃª nÃ£o faz nem idÃ©ia 
+do que possa ter acontecido. Em algumas cadeiras e no chÃ£o existem muitos 
+esqueletos... Eles parecem terem sido guardas de uma posiÃ§Ã£o bastante alta 
 da cidade. Quando olha melhor ao seu redor nota o quarto dos tenentes ao 
-oeste, mais quartéis ao norte e o quarto do Chefe ao leste.
+oeste, mais quartÃ©is ao norte e o quarto do Chefe ao leste.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
 As barracas continuam.
 ~
 ~
 0 -1 13146
 D1
-O quarto do comandante está naquela direção.
+O quarto do comandante estÃ¡ naquela direÃ§Ã£o.
 ~
 ~
 0 -1 13150
 D3
-Um dos tenentes da cidade está naquela direção.
+Um dos tenentes da cidade estÃ¡ naquela direÃ§Ã£o.
 ~
 ~
 0 -1 13148
 S
 #13150
 O Quarto Do Comandante~
-   Este impressionante e confortável quarto pertenceu ao chefe da Guarda 
-da cidade, infelizmente agora está em ruínas. Ele está completamente 
-destruído, e você não consegue nem imaginar como ele fora no passado. 
-Você pode ver os pratos de porcelana, alguns armamentos de aço e também 
-as sobras das belas tapeçarias nas paredes, embora agora estejam 
+   Este impressionante e confortÃ¡vel quarto pertenceu ao chefe da Guarda 
+da cidade, infelizmente agora estÃ¡ em ruÃ­nas. Ele estÃ¡ completamente 
+destruÃ­do, e vocÃª nÃ£o consegue nem imaginar como ele fora no passado. 
+VocÃª pode ver os pratos de porcelana, alguns armamentos de aÃ§o e tambÃ©m 
+as sobras das belas tapeÃ§arias nas paredes, embora agora estejam 
 apodrecidas. Por mais que ele tenha sido um homem corrupto e politicamente 
-poderoso, ninguém o protegeu. Ele morreu sentado em uma pequena cadeira 
-e a única coisa que você consegue ver são ossos. Você ainda consegue ver 
-as marcas da espada deixado em seus ossos. A forma de sair daqui é por 
-onde você entrou, pelo o oeste.
+poderoso, ninguÃ©m o protegeu. Ele morreu sentado em uma pequena cadeira 
+e a Ãºnica coisa que vocÃª consegue ver sÃ£o ossos. VocÃª ainda consegue ver 
+as marcas da espada deixado em seus ossos. A forma de sair daqui Ã© por 
+onde vocÃª entrou, pelo o oeste.
 ~
-131 73 0 0 0 1
+131 adg 1
 D3
-O quarto de guerra está lá fora.
+O quarto de guerra estÃ¡ lÃ¡ fora.
 ~
 ~
 0 -1 13149
 S
 #13151
 O Corredor~
-    Este pequeno corredor parece que já foi utilizado como quartel, mas 
-os beliches foram rasgados e infelizmente você não sabe o motivo. Isto 
-se assemelha a nada mais nada menos que um esconderijo de rebeldes. Você 
+    Este pequeno corredor parece que jÃ¡ foi utilizado como quartel, mas 
+os beliches foram rasgados e infelizmente vocÃª nÃ£o sabe o motivo. Isto 
+se assemelha a nada mais nada menos que um esconderijo de rebeldes. VocÃª 
 acredita ter ouvido falar algo referente a isto, ou seja, uns soldados 
-da cidade que estavam organizando algo contra rei, e agora você já sabe 
-onde realmente isso tudo começou. Você consegue ver os esqueletos de 
+da cidade que estavam organizando algo contra rei, e agora vocÃª jÃ¡ sabe 
+onde realmente isso tudo comeÃ§ou. VocÃª consegue ver os esqueletos de 
 alguns soldados menos afortunados que evidentemente foram mortos, pois 
-não conseguiram fugir. Você acredita conseguir ver algo à frente ao leste, 
-entretanto você pode voltar para a cidade pelo o oeste.
+nÃ£o conseguiram fugir. VocÃª acredita conseguir ver algo Ã  frente ao leste, 
+entretanto vocÃª pode voltar para a cidade pelo o oeste.
 ~
-131 73 0 0 0 1
+131 adg 1
 D1
-Você vê mais barracas dos guardas da cidade.
+VocÃª vÃª mais barracas dos guardas da cidade.
 ~
 ~
 0 -1 13152
 D3
-Você vê mais barracas dos guardas da cidade.
+VocÃª vÃª mais barracas dos guardas da cidade.
 ~
 ~
 0 -1 13146
 S
 #13152
 Uma Curva No Corredor~
-   Agora você pode comentar que as pessoas que construíram estes quartéis 
-utilizaram-se de pedras na construção, e que preferiram cavar ao redor. 
-Que coisa estranha você ter achado que este povo de Torin tenha sido 
+   Agora vocÃª pode comentar que as pessoas que construÃ­ram estes quartÃ©is 
+utilizaram-se de pedras na construÃ§Ã£o, e que preferiram cavar ao redor. 
+Que coisa estranha vocÃª ter achado que este povo de Torin tenha sido 
 tecnologicamente bem desenvolvido, pois utilizaram-se de magia para cavar 
-com grande facilidade esta cidade subterrânea. Das marcas nas paredes e 
-pelo fato de que os beliches parece que foram rasgados você acredita que 
-este povo não fora nada melhor do que qualquer grupo de bárbaros.
+com grande facilidade esta cidade subterrÃ¢nea. Das marcas nas paredes e 
+pelo fato de que os beliches parece que foram rasgados vocÃª acredita que 
+este povo nÃ£o fora nada melhor do que qualquer grupo de bÃ¡rbaros.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
-O corredor continua até onde se parecem barracas.
+O corredor continua atÃ© onde se parecem barracas.
 ~
 ~
 0 -1 13153
 D3
-Os quartéis dos guardas continuam naquela direção.
+Os quartÃ©is dos guardas continuam naquela direÃ§Ã£o.
 ~
 ~
 0 -1 13151
 S
 #13153
-Os Quartéis~
-   Aqui os quartéis se ramificam ao norte e ao leste.  Eles também 
-continuam para o sul.  Esta área está completamente vazia, mas parece que 
-uma vez este lugar já foi repleto de beliches do exército de Torin. Não 
-sobrou nada aqui, apesar de tanto tempo não ter sido usada você nota 
+Os QuartÃ©is~
+   Aqui os quartÃ©is se ramificam ao norte e ao leste.  Eles tambÃ©m 
+continuam para o sul.  Esta Ã¡rea estÃ¡ completamente vazia, mas parece que 
+uma vez este lugar jÃ¡ foi repleto de beliches do exÃ©rcito de Torin. NÃ£o 
+sobrou nada aqui, apesar de tanto tempo nÃ£o ter sido usada vocÃª nota 
 sinais recentes de uso. Poderia ser qualquer um que esteve aqui.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
 O fim das barracas.
 ~
@@ -1351,19 +1379,19 @@ As barracas continuam, mas parecem estar chegando ao fim.
 ~
 0 -1 13154
 D2
-A barracas continuam, mas está parecendo mais um corredor.
+A barracas continuam, mas estÃ¡ parecendo mais um corredor.
 ~
 ~
 0 -1 13152
 S
 #13154
 O Corredor~
-   Um quartel, um corredor, como você deseja chamar este lugar. Pois isto 
-se parece muito com as duas opções e continua conduzindo ao leste e oeste. 
-Os beliches parecem terem sido limpos recentemente, pelo menos é o que 
+   Um quartel, um corredor, como vocÃª deseja chamar este lugar. Pois isto 
+se parece muito com as duas opÃ§Ãµes e continua conduzindo ao leste e oeste. 
+Os beliches parecem terem sido limpos recentemente, pelo menos Ã© o que 
 parece, mas mesmo assim parece que nunca foram usados.
 ~
-131 73 0 0 0 1
+131 adg 1
 D1
 O quartel continua chegando adiante em um enforquilhamento.
 ~
@@ -1377,107 +1405,108 @@ O quartel continua mas parece seguir ao sul.
 S
 #13155
 O Fim Das Barracas~
-   Este beco sem saída parece ter sido cavado parcialmente, e nunca fora 
+   Este beco sem saÃ­da parece ter sido cavado parcialmente, e nunca fora 
 terminado. Talvez porque os habitantes daqui nunca tiveram uma chance de 
-cavar com segurança. Você consegue ver até mesmo onde eles deixaram suas 
-pás quando foram chamados para lutar pela cidade. Alguns beliches estão 
-aqui, provavelmente para que não precisassem ir até suas casa, ou seja, 
-para cavarem o mais rápido possível. Você consegue voltar somente pelo 
-caminho que você veio, ao sul.
+cavar com seguranÃ§a. VocÃª consegue ver atÃ© mesmo onde eles deixaram suas 
+pÃ¡s quando foram chamados para lutar pela cidade. Alguns beliches estÃ£o 
+aqui, provavelmente para que nÃ£o precisassem ir atÃ© suas casa, ou seja, 
+para cavarem o mais rÃ¡pido possÃ­vel. VocÃª consegue voltar somente pelo 
+caminho que vocÃª veio, ao sul.
 ~
-131 73 0 0 0 1
+131 adg 1
 D2
-As barracas continuam, porém aumentando.
+As barracas continuam, porÃ©m aumentando.
 ~
 ~
 0 -1 13153
 S
 #13156
 Uma Curva No Corredor~
-   Aqui você consegue ver pegadas sobre o grosso pó que cobre o chão. Será 
-que você já esteve aqui antes? As paredes ao contrário do chão não 
-demonstram qualquer sinal de passagem. Parece que esta área sempre possuiu 
-beliches e você imagina que isto foi e possivelmente ainda é algum tipo de 
-sede. Para o sul o corredor continua até um quarto grande e para o leste o 
-corredor segue até a parte principal da cidade.
+   Aqui vocÃª consegue ver pegadas sobre o grosso pÃ³ que cobre o chÃ£o. SerÃ¡ 
+que vocÃª jÃ¡ esteve aqui antes? As paredes ao contrÃ¡rio do chÃ£o nÃ£o 
+demonstram qualquer sinal de passagem. Parece que esta Ã¡rea sempre possuiu 
+beliches e vocÃª imagina que isto foi e possivelmente ainda Ã© algum tipo de 
+sede. Para o sul o corredor continua atÃ© um quarto grande e para o leste o 
+corredor segue atÃ© a parte principal da cidade.
 ~
-131 73 0 0 0 1
+131 adg 1
 D2
-Um grande quarto abriu-se diante de você.
+Um grande quarto abriu-se diante de vocÃª.
 ~
 ~
 0 -1 13145
 D3
-O corredor continua até a parte principal da cidade.
+O corredor continua atÃ© a parte principal da cidade.
 ~
 ~
 0 0 13154
 S
 #13157
-O Começo De Um Lugar Sagrado~
+O ComeÃ§o De Um Lugar Sagrado~
    Este lugar parece totalmente estranho comparado ao resto de Torin. 
-Instintivamente você percebe que este lugar é sagrado pelo menos para 
-algumas pessoas de Torin, e possivelmente também um lugar religioso. As 
-ruas, ao contrário de outras partes da cidade, é mantida imaculada. De 
-vez em quando você acredita conseguir ver um dos guardiões destas ruas, 
-mas você pisca e eles desaparecem como se virasse pó. Brilhantes globos 
-iluminam a rua, entretanto você nunca viu qualquer coisa parecida como 
-eles antes. Ao leste continua o bulevar e para o sul você pode ver a 
-Câmara dos Porteiros.
+Instintivamente vocÃª percebe que este lugar Ã© sagrado pelo menos para 
+algumas pessoas de Torin, e possivelmente tambÃ©m um lugar religioso. As 
+ruas, ao contrÃ¡rio de outras partes da cidade, Ã© mantida imaculada. De 
+vez em quando vocÃª acredita conseguir ver um dos guardiÃµes destas ruas, 
+mas vocÃª pisca e eles desaparecem como se virasse pÃ³. Brilhantes globos 
+iluminam a rua, entretanto vocÃª nunca viu qualquer coisa parecida como 
+eles antes. Ao leste continua o bulevar e para o sul vocÃª pode ver a 
+CÃ¢mara dos Porteiros.
 ~
-131 72 0 0 0 1
+131 dg 1
 D1
-O corredor passa em frente a uma estrutura que, agora que você olha mais 
+O corredor passa em frente a uma estrutura que, agora que vocÃª olha mais 
 atentamente a isto, definitivamente o faz lembrar de um templo, mas existe 
 um sentimento diferente sobre isto, como nada que tenha sentido antes.
 ~
 ~
 0 0 13158
 D2
-A Câmara do Porteiro está naquela direção, até mesmo daqui você pode ver 
-os portões.
+A CÃ¢mara do Porteiro estÃ¡ naquela direÃ§Ã£o, atÃ© mesmo daqui vocÃª pode ver 
+os portÃµes.
 ~
 ~
 0 -1 13123
 S
 #13158
 Na Estrada Diante Da Catedral~
-     Aqui a rua está bem limpa, e passou com certeza por uma monstruosa 
-limpeza. Uma estrutura bem mantida está ao norte. O estranho e brilhante 
-globo nos lados da rua iluminam uma parte da estrutura e você também 
-consegue notar uma bela porta dourada que está com certeza aberta ao 
-público. O resto da estrutura está impressionando e faz com que as ruas 
+     Aqui a rua estÃ¡ bem limpa, e passou com certeza por uma monstruosa 
+limpeza. Uma estrutura bem mantida estÃ¡ ao norte. O estranho e brilhante 
+globo nos lados da rua iluminam uma parte da estrutura e vocÃª tambÃ©m 
+consegue notar uma bela porta dourada que estÃ¡ com certeza aberta ao 
+pÃºblico. O resto da estrutura estÃ¡ impressionando e faz com que as ruas 
 pavimentadas fiquem com um aspecto muito melhor. A estrada continua ao 
 leste e oeste.
 ~
-131 72 0 0 0 1
+131 dg 1
 D0
-Uma catedral muito grande está adiante.
+Uma catedral muito grande estÃ¡ adiante.
 ~
 porta~
+:n 2 a porta
 1 -1 13165
 D1
-A estrada continua naquela direção.
+A estrada continua naquela direÃ§Ã£o.
 ~
 ~
 0 -1 13159
 D3
-A estrada continua naquela direção.
+A estrada continua naquela direÃ§Ã£o.
 ~
 ~
 0 -1 13157
 S
 #13159
 O Fim Da Estrada~
-   Aqui a rua termina. Uma grande parede está sustentando uma estrutura 
-ao oeste, e isto bloqueia seu caminho. Para o norte estão duas portas 
-douradas muito grandes que estão abertas ao público, como que estivessem 
+   Aqui a rua termina. Uma grande parede estÃ¡ sustentando uma estrutura 
+ao oeste, e isto bloqueia seu caminho. Para o norte estÃ£o duas portas 
+douradas muito grandes que estÃ£o abertas ao pÃºblico, como que estivessem 
 convidando a todos para entrar. A rua embora termine aqui, permanece 
 extremamente limpa e muito bem iluminada.
 ~
-131 72 0 0 0 1
+131 dg 1
 D0
-Duas grandes portas estão abertas ao público, desmentindo a riqueza e o 
+Duas grandes portas estÃ£o abertas ao pÃºblico, desmentindo a riqueza e o 
 poder.
 ~
 ~
@@ -1490,159 +1519,160 @@ A rua continua.
 S
 #13160
 A Grande Catedral~
-   Você entra na grande catedral de Torin e és imediatamente amedrontado 
-pela presença que você sente ao entrar. O chão aqui é feito de um tipo de 
-mármore branco com fugas de ouro. Você nota que este mármore reveste as 
+   VocÃª entra na grande catedral de Torin e Ã©s imediatamente amedrontado 
+pela presenÃ§a que vocÃª sente ao entrar. O chÃ£o aqui Ã© feito de um tipo de 
+mÃ¡rmore branco com fugas de ouro. VocÃª nota que este mÃ¡rmore reveste as 
 paredes ao leste e oeste. Estranhamente os bancos da frente parecem estar 
-em condição muito melhor do que os de trás, como se esses bancos fossem 
-especiais, mas infelizmente não existe ninguém por aqui disposto a lhe 
-ajudar. O altar está ao norte e para o lado sul as portas douradas que 
-estão supostamente sempre abertas por ordem do Mestre Templar Mendo 
+em condiÃ§Ã£o muito melhor do que os de trÃ¡s, como se esses bancos fossem 
+especiais, mas infelizmente nÃ£o existe ninguÃ©m por aqui disposto a lhe 
+ajudar. O altar estÃ¡ ao norte e para o lado sul as portas douradas que 
+estÃ£o supostamente sempre abertas por ordem do Mestre Templar Mendo 
 possuem um papel fixado.
 ~
-131 72 0 0 0 1
+131 dg 1
 D0
-O altar está adiante.
+O altar estÃ¡ adiante.
 ~
 ~
 0 -1 13161
 D2
-Duas grandes portas estão abertas e conduzem para a parte exterior.
+Duas grandes portas estÃ£o abertas e conduzem para a parte exterior.
 ~
 ~
+:n 2 a porta dourada
 0 -1 13159
 S
 #13161
 O Altar~
-   Um grande altar ocupa a grande parte deste templo. Você não consegue 
+   Um grande altar ocupa a grande parte deste templo. VocÃª nÃ£o consegue 
 reconhecer para qual deus este altar foi dedicado, entretanto o significado 
-dele com certeza é muito importante. O resto do altar não impressiona nada, 
-a não ser o ouro que ladrilha isso. Ao leste você nota uma pequena entrada 
-que conduz mais adiante no templo, talvez para uma câmara privada no templo.
+dele com certeza Ã© muito importante. O resto do altar nÃ£o impressiona nada, 
+a nÃ£o ser o ouro que ladrilha isso. Ao leste vocÃª nota uma pequena entrada 
+que conduz mais adiante no templo, talvez para uma cÃ¢mara privada no templo.
 ~
-131 104 0 0 0 1
+131 dfg 1
 D1
-Um pequeno aposento está ao leste.
+Um pequeno aposento estÃ¡ ao leste.
 ~
 ~
 0 -1 13162
 D2
-A maior parte do templo está naquela direção.
+A maior parte do templo estÃ¡ naquela direÃ§Ã£o.
 ~
 ~
 0 -1 13160
 S
 #13162
 O Aposento de Mendo~
-   Você entrou em um pequeno, porém temeroso lugar. O lugar é realmente 
-muito pouco decorado, possui somente um tapete enfeitando o chão e uma 
-pequena escrivaninha, praticamente é somente isto.  Uma mesa está ao do 
-norte e sobre isto existe a estátua de um deus. O Templar Mendo é um 
-homem grande. Já foi dito que ele era um gigante entre os homens e que 
-também fora uma criatura calma. Você pode ver uma tapeçaria na parte de 
-trás do quarto. Para o lado leste outro pequeno quarto e para o oeste o 
-próprio Templo de Mendo. Para o lado sul um quarto.
+   VocÃª entrou em um pequeno, porÃ©m temeroso lugar. O lugar Ã© realmente 
+muito pouco decorado, possui somente um tapete enfeitando o chÃ£o e uma 
+pequena escrivaninha, praticamente Ã© somente isto.  Uma mesa estÃ¡ ao do 
+norte e sobre isto existe a estÃ¡tua de um deus. O Templar Mendo Ã© um 
+homem grande. JÃ¡ foi dito que ele era um gigante entre os homens e que 
+tambÃ©m fora uma criatura calma. VocÃª pode ver uma tapeÃ§aria na parte de 
+trÃ¡s do quarto. Para o lado leste outro pequeno quarto e para o oeste o 
+prÃ³prio Templo de Mendo. Para o lado sul um quarto.
 ~
-131 104 0 0 0 1
+131 dfg 1
 D1
-Você vê um pequeno quarto.
+VocÃª vÃª um pequeno quarto.
 ~
 ~
 0 -1 13164
 D2
-Um quarto sem qualquer impressão está ao sul.
+Um quarto sem qualquer impressÃ£o estÃ¡ ao sul.
 ~
 ~
 0 -1 13163
 D3
-Lá está o altar do templo principal.
+LÃ¡ estÃ¡ o altar do templo principal.
 ~
 ~
 0 -1 13161
 S
 #13163
 O Quarto De Mendo~
-   Quando entra neste quarto nota que é realmente muito simples para uma 
-pessoa como ele foi. A primeira coisa que você olha ao entrar são as 
-paredes marrons de pedra. A única coisa para quebrar a monotonia daqui é 
-uma pequena cama onde Mendo quase não cabe. A única saída deste quarto é 
+   Quando entra neste quarto nota que Ã© realmente muito simples para uma 
+pessoa como ele foi. A primeira coisa que vocÃª olha ao entrar sÃ£o as 
+paredes marrons de pedra. A Ãºnica coisa para quebrar a monotonia daqui Ã© 
+uma pequena cama onde Mendo quase nÃ£o cabe. A Ãºnica saÃ­da deste quarto Ã© 
 ao norte.
 ~
-131 104 0 0 0 1
+131 dfg 1
 D0
-Você pode ver um quarto de meditação bastante claro.
+VocÃª pode ver um quarto de meditaÃ§Ã£o bastante claro.
 ~
 ~
 0 -1 13162
 S
 #13164
 Um Quarto Pequeno~
-   Antes você achava que isto fosse somente um outro quarto qualquer, mas 
-agora nota que existe um gabinete adornado com pequenas jóias. Por outro 
+   Antes vocÃª achava que isto fosse somente um outro quarto qualquer, mas 
+agora nota que existe um gabinete adornado com pequenas jÃ³ias. Por outro 
 lado o quarto possui somente paredes de madeira e uns pequenos azulejos de 
-pedra no chão. A única saída está ao oeste.
+pedra no chÃ£o. A Ãºnica saÃ­da estÃ¡ ao oeste.
 ~
-131 97 0 0 0 1
+131 gfa 1
 D3
-Um pequeno quarto de meditação está naquela direção.
+Um pequeno quarto de meditaÃ§Ã£o estÃ¡ naquela direÃ§Ã£o.
 ~
 ~
 0 -1 13162
 S
 #13165
 Um Quarto Pequeno~
-   Aqui está um pequeno quarto. Parece ser uma sala de reuniões, 
-entretanto você não consegue ter certeza para qual finalidade era 
-utilizado. Isto não parece com nada com que você tenha visto, mas nota 
-alguma semelhança. O chão pardo não parece ter sido tocado há muito tempo. 
-A única saída deste quarto está ao sul.
+   Aqui estÃ¡ um pequeno quarto. Parece ser uma sala de reuniÃµes, 
+entretanto vocÃª nÃ£o consegue ter certeza para qual finalidade era 
+utilizado. Isto nÃ£o parece com nada com que vocÃª tenha visto, mas nota 
+alguma semelhanÃ§a. O chÃ£o pardo nÃ£o parece ter sido tocado hÃ¡ muito tempo. 
+A Ãºnica saÃ­da deste quarto estÃ¡ ao sul.
 ~
-131 97 0 0 0 1
+131 gfa 1
 D2
-A estrada principal está lá fora. 
+A estrada principal estÃ¡ lÃ¡ fora. 
 ~
 ~
 0 -1 13158
 S
 #13166
-O Túnel~
-   Rastejando por este pequeno túnel você percebe que alguém de fato 
-cavou isto como um caminho temporário... não existe nenhum motivo de 
-alguém cavar um túnel como este para outra razão. Este túnel é grande o 
-suficiente para você conseguir rastejar, mas você não pode permanecer 
-aqui por muito tempo, pois sofre de claustrofobia. Ao norte você pode 
+O TÃºnel~
+   Rastejando por este pequeno tÃºnel vocÃª percebe que alguÃ©m de fato 
+cavou isto como um caminho temporÃ¡rio... nÃ£o existe nenhum motivo de 
+alguÃ©m cavar um tÃºnel como este para outra razÃ£o. Este tÃºnel Ã© grande o 
+suficiente para vocÃª conseguir rastejar, mas vocÃª nÃ£o pode permanecer 
+aqui por muito tempo, pois sofre de claustrofobia. Ao norte vocÃª pode 
 ver uma caverna e para o sul uma outra.
 ~
-131 333 0 0 0 1
+131 icdag 1
 D0
-Uma grande caverna escura que possui um estranho cheiro está adiante.
+Uma grande caverna escura que possui um estranho cheiro estÃ¡ adiante.
 ~
 ~
 0 -1 13167
 D2
-Uma grande caverna escura está naquela direção. Você pensa conseguir 
-ouvir o gotejar de água vindo de lá.
+Uma grande caverna escura estÃ¡ naquela direÃ§Ã£o. VocÃª pensa conseguir 
+ouvir o gotejar de Ã¡gua vindo de lÃ¡.
 ~
 ~
 0 -1 13129
 S
 #13167
 O Reino De Melki E Adorin~
-   Estas cavernas estão em um estado terrível e você não consegue 
+   Estas cavernas estÃ£o em um estado terrÃ­vel e vocÃª nÃ£o consegue 
 imaginar o tipo de criatura que poderia viver em um lugar como este. 
 Restos de comida e roupas rasgadas o fazem ter certeza que a criatura 
 pode um dia ter caminhado em duas pernas. Entretanto os sons de algo 
-raspando fazem você pensar que isto ocorreu há muito tempo. Você pode 
-continuar pela caverna ao leste, oeste e pelo túnel ao sul.
+raspando fazem vocÃª pensar que isto ocorreu hÃ¡ muito tempo. VocÃª pode 
+continuar pela caverna ao leste, oeste e pelo tÃºnel ao sul.
 ~
-131 73 0 0 0 1
+131 adg 1
 D1
 A caverna continua.
 ~
 ~
 0 -1 13169
 D2
-Um pequeno túnel conduz até a escuridão.
+Um pequeno tÃºnel conduz atÃ© a escuridÃ£o.
 ~
 ~
 0 -1 13166
@@ -1654,41 +1684,41 @@ A caverna continua.
 S
 #13168
 O Fim Da Caverna~
-   Aqui as paredes da caverna são volumosas e escuras. Vestimentas antigas 
-e outras relíquias semelhantes lhe mostram que algum tipo de civilização 
-viveu aqui. As únicas criaturas que você consegue ver são algumas 
-insignificantes. Você não consegue entender o motivo que poderia ter 
+   Aqui as paredes da caverna sÃ£o volumosas e escuras. Vestimentas antigas 
+e outras relÃ­quias semelhantes lhe mostram que algum tipo de civilizaÃ§Ã£o 
+viveu aqui. As Ãºnicas criaturas que vocÃª consegue ver sÃ£o algumas 
+insignificantes. VocÃª nÃ£o consegue entender o motivo que poderia ter 
 reduzido estes seres inteligentes em tais animais, certamente eles se 
-degeneraram. Para o leste está mais uma seção desta pequena caverna.
+degeneraram. Para o leste estÃ¡ mais uma seÃ§Ã£o desta pequena caverna.
 ~
-131 73 0 0 0 1
+131 adg 1
 D1
-O resto da caverna está lá fora, assim como também o caminho de saída.
+O resto da caverna estÃ¡ lÃ¡ fora, assim como tambÃ©m o caminho de saÃ­da.
 ~
 ~
 0 -1 13167
 S
 #13169
 A Caverna~
-   Aqui você vê mais uma daquelas cavernas que parecem terem sido habitas 
+   Aqui vocÃª vÃª mais uma daquelas cavernas que parecem terem sido habitas 
 por algum ser. Agora o que apenas vive aqui pode ser considerado de algo 
-não inteligente. As criaturas que vivem aqui parecem terem perdido todo 
+nÃ£o inteligente. As criaturas que vivem aqui parecem terem perdido todo 
 tipo de rastro que lhes tornam seres inteligentes. Eles agora se utilizam 
 somente de seus instintos. Eles retiraram o que foi uma vez sua roupa, 
-pois elas estão por toda parte, junto com o que parece ter sido um jantar. 
-Alguns pedaços da parede provavelmente foram utilizados como ferramentas 
-por estes seres. Um pequeno nicho está ao leste e uma pequena rotatória 
-está ao sul.
+pois elas estÃ£o por toda parte, junto com o que parece ter sido um jantar. 
+Alguns pedaÃ§os da parede provavelmente foram utilizados como ferramentas 
+por estes seres. Um pequeno nicho estÃ¡ ao leste e uma pequena rotatÃ³ria 
+estÃ¡ ao sul.
 ~
-131 73 0 0 0 1
+131 adg 1
 D1
-Você vê um pequeno nicho, entretanto você consegue ver além disto o que 
+VocÃª vÃª um pequeno nicho, entretanto vocÃª consegue ver alÃ©m disto o que 
 pode ser um pequeno quarto.
 ~
 ~
 0 -1 13170
 D2
-Uma pequena rotatória está naquela direção.
+Uma pequena rotatÃ³ria estÃ¡ naquela direÃ§Ã£o.
 ~
 ~
 0 -1 13171
@@ -1700,32 +1730,32 @@ A caverna continua...
 S
 #13170
 Um Grande Quarto~
-   Um grande quarto está aberto aqui e você não consegue imaginar como 
-isto durou por tanto tempo. Uma grande fonte está no centro do quarto e 
-um grande globo brilhante paira sobre isto. Você não está se sentindo 
-muito seguro por mais que este lugar lhe passe segurança. Filas de 
-azulejos brancos estão no chão deste quarto. O suave gotejar de água da 
-fonte quase faz você dormir. Você está tão à vontade que quase esquece 
-da saída ocidental, que é a única saída deste quarto.
+   Um grande quarto estÃ¡ aberto aqui e vocÃª nÃ£o consegue imaginar como 
+isto durou por tanto tempo. Uma grande fonte estÃ¡ no centro do quarto e 
+um grande globo brilhante paira sobre isto. VocÃª nÃ£o estÃ¡ se sentindo 
+muito seguro por mais que este lugar lhe passe seguranÃ§a. Filas de 
+azulejos brancos estÃ£o no chÃ£o deste quarto. O suave gotejar de Ã¡gua da 
+fonte quase faz vocÃª dormir. VocÃª estÃ¡ tÃ£o Ã  vontade que quase esquece 
+da saÃ­da ocidental, que Ã© a Ãºnica saÃ­da deste quarto.
 ~
-131 124 0 0 0 1
+131 gfedc 1
 D3
-Uma grande caverna está logo ali.
+Uma grande caverna estÃ¡ logo ali.
 ~
 ~
 0 -1 13169
 S
 #13171
 Um Nicho Pequeno~
-   O chão imundo neste pequeno nicho quase lhe asfixia. Você só consegue 
+   O chÃ£o imundo neste pequeno nicho quase lhe asfixia. VocÃª sÃ³ consegue 
 pensar no tipo de criatura que vive em um lugar como este. Talvez isto 
-daqui pudesse ter sido usado como algum tipo de banheiro. As lágrimas 
+daqui pudesse ter sido usado como algum tipo de banheiro. As lÃ¡grimas 
 que correm de seus olhos fazem com que a sujeira grude de alguma forma 
-neles, mas você ainda consegue ver o caminho para sair daqui ao norte.
+neles, mas vocÃª ainda consegue ver o caminho para sair daqui ao norte.
 ~
-131 73 0 0 0 1
+131 adg 1
 D0
-Fora da asquerosa sujeira que cobre esta área você pode ver uma área 
+Fora da asquerosa sujeira que cobre esta Ã¡rea vocÃª pode ver uma Ã¡rea 
 maior dentro de uma caverna que parece ser grande o bastante para que 
 o cheiro diminua. 
 ~
@@ -1733,39 +1763,43 @@ o cheiro diminua.
 0 -1 13169
 S
 #13172
-Uma Área Limpa Na Floresta~
-   Você chega até uma pequena justificação dentro das Arvores Negras. 
-Folhas estão espalhadas sobre o chão, depois de terem caído possivelmente 
-das árvores que aqui estão. A idade desta floresta se torna muito 
-evidente quando você nota o tamanho do buraco que as raízes fizeram. 
-Mas existe somente um buraco deste tamanho, porque será que somente UM? 
-Poderia ser uma caverna subterrânea?  Uma cidade anciã enterrada aqui? Um 
-tesouro acumulado de um pequeno dragão? É difícil conter a excitação que 
-isto lhe proporciona, pois ainda é um mistério.  Entre, se você for 
-ousado - caso contrário, volte pelo caminho das Árvores Negras ao oeste 
+Uma Ãrea Limpa Na Floresta~
+   VocÃª chega atÃ© uma pequena justificaÃ§Ã£o dentro das Arvores Negras. 
+Folhas estÃ£o espalhadas sobre o chÃ£o, depois de terem caÃ­do possivelmente 
+das Ã¡rvores que aqui estÃ£o. A idade desta floresta se torna muito 
+evidente quando vocÃª nota o tamanho do buraco que as raÃ­zes fizeram. 
+Mas existe somente um buraco deste tamanho, porque serÃ¡ que somente UM? 
+Poderia ser uma caverna subterrÃ¢nea?  Uma cidade anciÃ£ enterrada aqui? Um 
+tesouro acumulado de um pequeno dragÃ£o? Ã‰ difÃ­cil conter a excitaÃ§Ã£o que 
+isto lhe proporciona, pois ainda Ã© um mistÃ©rio.  Entre, se vocÃª for 
+ousado - caso contrÃ¡rio, volte pelo caminho das Ãrvores Negras ao oeste 
 e sul.  
 ~
-131 0 0 0 0 1
+131 0 1
 D2
 ~
 ~
 0 -1 13173
+D3
+~
+~
+0 -1 -1
 D5
 ~
 ~
 0 -1 13101
 S
 #13173
-As Árvores Negras~
-   Vagando por esta antiga floresta, você começa a se lembrar quando era 
-uma criança, de todos os contos que foram lhe contado sobre este lugar. 
-Esta floresta é considerada uma das que possuem os maiores mistérios já 
+As Ãrvores Negras~
+   Vagando por esta antiga floresta, vocÃª comeÃ§a a se lembrar quando era 
+uma crianÃ§a, de todos os contos que foram lhe contado sobre este lugar. 
+Esta floresta Ã© considerada uma das que possuem os maiores mistÃ©rios jÃ¡ 
 conhecidos, pois todos conhecem aquela de que possui uma antiga cidade 
-enterrada debaixo daqui. Muitas criaturas maléficas vagam livremente ao 
-longo das árvores. O caminho pela floresta segue ao oeste e ao norte 
-existe uma pequena justificação.
+enterrada debaixo daqui. Muitas criaturas malÃ©ficas vagam livremente ao 
+longo das Ã¡rvores. O caminho pela floresta segue ao oeste e ao norte 
+existe uma pequena justificaÃ§Ã£o.
 ~
-131 65 0 0 0 1
+131 ag 1
 D0
 ~
 ~
@@ -1776,98 +1810,98 @@ D3
 0 -1 13174
 S
 #13174
-A Floresta das Árvores Negras~
-   Você entra em uma floresta que parece ser completamente diferente da
-floresta de Thewster.  Aqui todas as árvores são completamente negras, mas
-não por terem sido carbonizadas ou algo do tipo, e sim por assim o serem.
-Além disso, elas são muito antigas, escondendo entre seus ramos e raízes
-muitos mistérios.  Há muita dificuldade em andar aqui, sendo possível
+A Floresta das Ãrvores Negras~
+   VocÃª entra em uma floresta que parece ser completamente diferente da
+floresta de Thewster.  Aqui todas as Ã¡rvores sÃ£o completamente negras, mas
+nÃ£o por terem sido carbonizadas ou algo do tipo, e sim por assim o serem.
+AlÃ©m disso, elas sÃ£o muito antigas, escondendo entre seus ramos e raÃ­zes
+muitos mistÃ©rios.  HÃ¡ muita dificuldade em andar aqui, sendo possÃ­vel
 caminhar apenas por uma estreita trilha quase desaparecida.
 ~
-131 65 0 0 0 1
-D1
-~
-~
-0 -1 13175
+131 ag 1
 D3
 ~
 ~
 0 -1 13581
-S
-#13175
-A Floresta das Árvores Negras~
-   Você está em uma floresta em que todas as árvores são completamente
-negras, mas não por terem sido carbonizadas ou algo do tipo, e sim por assim
-o serem.  São elas seres muito antigos, que escondem entre seus ramos e
-raízes muitos mistérios.  Há muita dificuldade em andar aqui, sendo possível
-caminhar apenas por uma estreita trilha quase desaparecida que segue leste-
-oeste.
-~
-131 65 0 0 0 1
 D1
-~
-~
-0 -1 13176
-D3
-~
-~
-0 -1 13174
-S
-#13176
-A Floresta das Árvores Negras~
-   Você está em uma floresta em que todas as árvores são completamente
-negras, mas não por terem sido carbonizadas ou algo do tipo, e sim por assim
-o serem.  São elas seres muito antigos, que escondem entre seus ramos e
-raízes muitos mistérios.  Há muita dificuldade em andar aqui, sendo possível
-caminhar apenas por uma estreita trilha quase desaparecida que segue leste-
-oeste.
-~
-131 65 0 0 0 1
-D1
-~
-~
-0 -1 13177
-D3
 ~
 ~
 0 -1 13175
 S
-#13177
-A Floresta das Árvores Negras~
-   Você está em uma floresta em que todas as árvores são completamente
-negras, mas não por terem sido carbonizadas ou algo do tipo, e sim por assim
-o serem.  São elas seres muito antigos, que escondem entre seus ramos e
-raízes muitos mistérios.  Há muita dificuldade em andar aqui, sendo possível
+#13175
+A Floresta das Ãrvores Negras~
+   VocÃª estÃ¡ em uma floresta em que todas as Ã¡rvores sÃ£o completamente
+negras, mas nÃ£o por terem sido carbonizadas ou algo do tipo, e sim por assim
+o serem.  SÃ£o elas seres muito antigos, que escondem entre seus ramos e
+raÃ­zes muitos mistÃ©rios.  HÃ¡ muita dificuldade em andar aqui, sendo possÃ­vel
 caminhar apenas por uma estreita trilha quase desaparecida que segue leste-
 oeste.
 ~
-131 65 0 0 0 1
-D1
-~
-~
-0 -1 13178
+131 ag 1
 D3
+~
+~
+0 -1 13174
+D1
 ~
 ~
 0 -1 13176
 S
-#13178
-A Floresta das Árvores Negras~
-   Você está em uma floresta em que todas as árvores são completamente
-negras, mas não por terem sido carbonizadas ou algo do tipo, e sim por assim
-o serem.  São elas seres muito antigos, que escondem entre seus ramos e
-raízes muitos mistérios.  Há muita dificuldade em andar aqui, sendo possível
+#13176
+A Floresta das Ãrvores Negras~
+   VocÃª estÃ¡ em uma floresta em que todas as Ã¡rvores sÃ£o completamente
+negras, mas nÃ£o por terem sido carbonizadas ou algo do tipo, e sim por assim
+o serem.  SÃ£o elas seres muito antigos, que escondem entre seus ramos e
+raÃ­zes muitos mistÃ©rios.  HÃ¡ muita dificuldade em andar aqui, sendo possÃ­vel
 caminhar apenas por uma estreita trilha quase desaparecida que segue leste-
 oeste.
 ~
-131 65 0 0 0 1
-D1
-~
-~
-0 -1 13173
+131 ag 1
 D3
+~
+~
+0 -1 13175
+D1
 ~
 ~
 0 -1 13177
 S
-$~
+#13177
+A Floresta das Ãrvores Negras~
+   VocÃª estÃ¡ em uma floresta em que todas as Ã¡rvores sÃ£o completamente
+negras, mas nÃ£o por terem sido carbonizadas ou algo do tipo, e sim por assim
+o serem.  SÃ£o elas seres muito antigos, que escondem entre seus ramos e
+raÃ­zes muitos mistÃ©rios.  HÃ¡ muita dificuldade em andar aqui, sendo possÃ­vel
+caminhar apenas por uma estreita trilha quase desaparecida que segue leste-
+oeste.
+~
+131 ag 1
+D3
+~
+~
+0 -1 13176
+D1
+~
+~
+0 -1 13178
+S
+#13178
+A Floresta das Ãrvores Negras~
+   VocÃª estÃ¡ em uma floresta em que todas as Ã¡rvores sÃ£o completamente
+negras, mas nÃ£o por terem sido carbonizadas ou algo do tipo, e sim por assim
+o serem.  SÃ£o elas seres muito antigos, que escondem entre seus ramos e
+raÃ­zes muitos mistÃ©rios.  HÃ¡ muita dificuldade em andar aqui, sendo possÃ­vel
+caminhar apenas por uma estreita trilha quase desaparecida que segue leste-
+oeste.
+~
+131 ag 1
+D3
+~
+~
+0 -1 13177
+D1
+~
+~
+0 -1 13173
+S
+$
