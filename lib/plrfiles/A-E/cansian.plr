@@ -7,7 +7,7 @@ Levl: 110
 Id  : 1
 Brth: 1601790482
 Plyd: 176559
-Last: 1604275278
+Last: 1604277165
 Lmot: 1604158998
 Lnew: 1604007974
 Htwn: 1372
@@ -17,7 +17,7 @@ Wate: 113
 Alin: -101
 Act : 0 0 0 0
 Aff : 0 0 0 0
-Pref: efghinoqrvxAB cd 0 0
+Pref: efghmnoqrvxAB cd 0 0
 Room: 65535
 Hit : 2000/2000
 Mana : 100/100
@@ -33,18 +33,18 @@ Gold: 5694
 Exp : 7000001
 Olc : 0
 Alis: 5
- ha
- history all
-0
- reset
- shutdown reboot
-0
- sa
- say @Y$*@n
+ of
+ order fol $*
 1
  goss
  goss @Y$*@n
 1
- of
- order fol $*
+ sa
+ say @Y$*@n
 1
+ reset
+ shutdown reboot
+0
+ ha
+ history all
+0

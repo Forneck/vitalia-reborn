@@ -1,30 +1,26 @@
-Nov 01 23:47:31 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 01 23:47:41 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 01 23:48:11 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 01 23:48:14 2020 :: OLC: Cansian starts editing zone 54 allowed zone 0
-Nov 01 23:49:22 2020 :: OLC: Cansian edits obj 5502
-Nov 01 23:49:22 2020 :: OLC: Cansian stops editing zone 54 allowed zone 0
-Nov 01 23:49:28 2020 :: OLC: Cansian starts editing zone 30 allowed zone 0
-Nov 01 23:50:01 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 01 23:50:01 2020 :: rusage: user time: 3 sec, system time: 0 sec, max res size: 22996
-Nov 01 23:50:04 2020 :: OLC: Cansian edits zone info for room 3001.
-Nov 01 23:50:04 2020 :: OLC: Cansian stops editing zone 30 allowed zone 0
-Nov 01 23:50:54 2020 :: OLC: Cansian starts editing zone 54 allowed zone 0
-Nov 01 23:51:19 2020 :: OLC: Cansian edits zone info for room 5505.
-Nov 01 23:51:19 2020 :: OLC: Cansian stops editing zone 54 allowed zone 0
-Nov 01 23:51:29 2020 :: (GC) Cansian forced Anyte to save
-Nov 01 23:51:35 2020 :: OLC: Cansian starts editing zone 30 [trigger](allowed zone 0)
-Nov 01 23:51:38 2020 :: OLC: Cansian stops editing zone 30 allowed zone 0
-Nov 01 23:51:57 2020 :: OLC: Cansian starts editing zone 30 [trigger](allowed zone 0)
-Nov 01 23:52:22 2020 :: OLC: Cansian edits trigger 3018
-Nov 01 23:52:22 2020 :: OLC: Cansian stops editing zone 30 allowed zone 0
-Nov 01 23:52:46 2020 :: (GC) Cansian forced Anyte to save
-Nov 01 23:53:03 2020 :: (GC) Reboot by Cansian.
-Nov 01 23:53:03 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 01 23:53:03 2020 :: Closing all sockets.
-Nov 01 23:53:03 2020 :: Closing link to: Anyte.
-Nov 01 23:53:03 2020 :: Closing link to: Cansian.
-Nov 01 23:53:03 2020 :: Saving current MUD time.
-Nov 01 23:53:03 2020 :: Rebooting.
+autorun starting game Mon Nov  2 00:24:37 UTC 2020
+running bin/circle -q 4000
+Nov 02 00:24:37 2020 :: Loading configuration.
+Nov 02 00:24:37 2020 :: Vitalia Reborn 2020 V0.2
+Nov 02 00:24:37 2020 :: Using lib as data directory.
+Nov 02 00:24:37 2020 :: Running game on port 4000.
+Nov 02 00:24:37 2020 :: SYSERR: lib/.killscript: No such file or directory
+Nov 02 00:24:37 2020 :: Finding player limit.
+Nov 02 00:24:37 2020 ::    Setting player limit to 200 using rlimit.
+Nov 02 00:24:37 2020 :: Opening mother connection.
+Nov 02 00:24:37 2020 :: Binding to all IP interfaces on this host.
+Nov 02 00:24:37 2020 :: Boot db -- BEGIN.
+Nov 02 00:24:37 2020 :: Resetting the game time:
+Nov 02 00:24:37 2020 ::    Current Gametime: 20H 25D 9M 1497Y.
+Nov 02 00:24:37 2020 :: Initialize Global Lists
+Nov 02 00:24:37 2020 :: Initializing Events
+Nov 02 00:24:37 2020 :: Reading news, credits, help, ihelp, bground, info & motds.
+Nov 02 00:24:37 2020 :: Reading menu, rebegin & clanpolicies
+Nov 02 00:24:37 2020 :: Loading zone table.
+Nov 02 00:24:37 2020 ::    121 zones, 10648 bytes.
+Nov 02 00:24:37 2020 :: Loading triggers and generating index.
+Nov 02 00:24:37 2020 :: SYSERR: File 'world/trg/<<<<<<<' listed in 'world/trg//index': No such file or directory
+Nov 02 00:24:37 2020 :: SYSERR: File 'world/trg/HEAD' listed in 'world/trg//index': No such file or directory
+Nov 02 00:24:37 2020 :: SYSERR: world/trg/<<<<<<<: No such file or directory
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.
