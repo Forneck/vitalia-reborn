@@ -506,22 +506,22 @@ static void perform_map( struct char_data *ch, char *argument, bool worldmap )
 
   count += sprintf(buf + count, "\tn\tn\tn%s Up\\\\", door_info[NUM_DOOR_TYPES + DOOR_UP].disp);
   count += sprintf(buf + count, "\tn\tn\tn%s Down\\\\", door_info[NUM_DOOR_TYPES + DOOR_DOWN].disp);
-  count += sprintf(buf + count, "\tn%s You\\\\", map_info[SECT_HERE].disp);
-  count += sprintf(buf + count, "\tn%s Inside\\\\", map_info[SECT_INSIDE].disp);
-  count += sprintf(buf + count, "\tn%s City\\\\", map_info[SECT_CITY].disp);
-  count += sprintf(buf + count, "\tn%s Field\\\\", map_info[SECT_FIELD].disp);
-  count += sprintf(buf + count, "\tn%s Forest\\\\", map_info[SECT_FOREST].disp);
-  count += sprintf(buf + count, "\tn%s Hills\\\\", map_info[SECT_HILLS].disp);
-  count += sprintf(buf + count, "\tn%s Mountain\\\\", map_info[SECT_MOUNTAIN].disp);
-  count += sprintf(buf + count, "\tn%s Swim\\\\", map_info[SECT_WATER_SWIM].disp);
-  count += sprintf(buf + count, "\tn%s Boat\\\\", map_info[SECT_WATER_NOSWIM].disp);
-  count += sprintf(buf + count, "\tn%s Flying\\\\", map_info[SECT_FLYING].disp);
-  sprintf(buf + count, "\tn%s Underwater\\\\", map_info[SECT_UNDERWATER].disp);
-   sprintf(buf + count, "\tn%s Climbing\\\\", map_info[SECT_CLIMBING].disp);
-    sprintf(buf + count, "\tn%s Air Flow\\\\", map_info[SECT_AIR_FLOW].disp);
-     sprintf(buf + count, "\tn%s Quicksand\\\\", map_info[SECT_QUICKSAND].disp);
+  count += sprintf(buf + count, "\tn%s Você\\\\", map_info[SECT_HERE].disp);
+  count += sprintf(buf + count, "\tn%s Interno\\\\", map_info[SECT_INSIDE].disp);
+  count += sprintf(buf + count, "\tn%s Cidade\\\\", map_info[SECT_CITY].disp);
+  count += sprintf(buf + count, "\tn%s Campo\\\\", map_info[SECT_FIELD].disp);
+  count += sprintf(buf + count, "\tn%s Floresta\\\\", map_info[SECT_FOREST].disp);
+  count += sprintf(buf + count, "\tn%s Colinas\\\\", map_info[SECT_HILLS].disp);
+  count += sprintf(buf + count, "\tn%s Montanha\\\\", map_info[SECT_MOUNTAIN].disp);
+  count += sprintf(buf + count, "\tn%s Água\\\\", map_info[SECT_WATER_SWIM].disp);
+  count += sprintf(buf + count, "\tn%s Barco\\\\", map_info[SECT_WATER_NOSWIM].disp);
+  count += sprintf(buf + count, "\tn%s Voando\\\\", map_info[SECT_FLYING].disp);
+  sprintf(buf + count, "\tn%s Mergulhando\\\\", map_info[SECT_UNDERWATER].disp);
+   sprintf(buf + count, "\tn%s Escalando\\\\", map_info[SECT_CLIMBING].disp);
+    sprintf(buf + count, "\tn%s Corrente Ar\\\\", map_info[SECT_AIR_FLOW].disp);
+     sprintf(buf + count, "\tn%s Areia\\\\", map_info[SECT_QUICKSAND].disp);
       sprintf(buf + count, "\tn%s Lava\\\\", map_info[SECT_LAVA].disp);
-       sprintf(buf + count, "\tn%s Ice\\\\", map_info[SECT_ICE].disp);
+       sprintf(buf + count, "\tn%s Gelo\\\\", map_info[SECT_ICE].disp);
 
   strcpy(buf, strfrmt(buf, LEGEND_WIDTH, CANVAS_HEIGHT + 2, FALSE, TRUE, TRUE));
 
