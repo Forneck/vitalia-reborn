@@ -1,85 +1,85 @@
 #15100
 Flutuando no Ar~
-   Você está flutuando. Olhando para baixo, é possível avistar o chão a
-uns 50 metros, e você gostaria que seus pés estivessem plantados sobre ele. 
+   VocÃª estÃ¡ flutuando. Olhando para baixo, Ã© possÃ­vel avistar o chÃ£o a
+uns 50 metros, e vocÃª gostaria que seus pÃ©s estivessem plantados sobre ele. 
 ~
-151 4 0 0 0 9
+151 c 9
 D4
-Acima, você não faz idéia do que seja uma grande estrutura que se estende
-em direção aos céus.
+Acima, vocÃª nÃ£o faz idÃ©ia do que seja uma grande estrutura que se estende
+em direÃ§Ã£o aos cÃ©us.
 ~
 ~
 0 -1 15101
 D5
-Abaixo, bem abaixo, você vê a Montanha. 
+Abaixo, bem abaixo, vocÃª vÃª a Montanha. 
 ~
 ~
 0 -1 4040
 S
 #15101
 Voando no Ar~
-   Você voa bem acima do chão.  Parece ser possível avistar sua casa na 
-extrema esquerda!  Algo muito grande está bem acima e ao sul de sua posição.
+   VocÃª voa bem acima do chÃ£o.  Parece ser possÃ­vel avistar sua casa na 
+extrema esquerda!  Algo muito grande estÃ¡ bem acima e ao sul de sua posiÃ§Ã£o.
 ~
-151 4 0 0 0 9
+151 c 9
 D4
-Acima de você está uma grande e macia nuvem.
+Acima de vocÃª estÃ¡ uma grande e macia nuvem.
 ~
 ~
 0 -1 15102
 D5
-Abaixo, você se aproximará do chão... parece ser mais seguro. 
+Abaixo, vocÃª se aproximarÃ¡ do chÃ£o... parece ser mais seguro. 
 ~
 ~
 0 -1 15100
 S
 #15102
 Uma Nuvem Macia~
-   Você está sobre uma nuvem macia, e se vê diante de uma grande estrutura.
-Pode-se notar que tal estrutura está coberta por ouro e que inscrições 
+   VocÃª estÃ¡ sobre uma nuvem macia, e se vÃª diante de uma grande estrutura.
+Pode-se notar que tal estrutura estÃ¡ coberta por ouro e que inscriÃ§Ãµes 
 misteriosas ornam o exterior das grandes portas. 
 ~
-151 4 0 0 0 9
+151 c 9
 D2
 Ao sul fica um Templo Brilhante.
 ~
 ~
 0 -1 15103
 D5
-Abaixo fica o caminho de volta ao chão... talvez você devesse seguir nesta
-direção. 
+Abaixo fica o caminho de volta ao chÃ£o... talvez vocÃª devesse seguir nesta
+direÃ§Ã£o. 
 ~
 ~
 0 -1 15101
 S
 #15103
 Entrada do Templo~
-   Você se vê às portas do Grande Templo dos Samurais.  Este templo
-resplandece em tons dourados e é um tributo a todos os grandes guerreiros
-do passado.  Você sente que está entrando em um local onde mortais nunca
-deveriam colocar os pés.
+   VocÃª se vÃª Ã s portas do Grande Templo dos Samurais.  Este templo
+resplandece em tons dourados e Ã© um tributo a todos os grandes guerreiros
+do passado.  VocÃª sente que estÃ¡ entrando em um local onde mortais nunca
+deveriam colocar os pÃ©s.
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-Ao seu norte fica a saída do Templo. 
+Ao seu norte fica a saÃ­da do Templo. 
 ~
 ~
 0 -1 15102
 D2
-Ao sul, você nota uma sala cheia de flores. 
+Ao sul, vocÃª nota uma sala cheia de flores. 
 ~
 ~
 0 -1 15104
 S
 #15104
 Jardins Cerimoniais~
-   Você está em uma sala muito iluminada.  Tudo ao seu redor são flores e
+   VocÃª estÃ¡ em uma sala muito iluminada.  Tudo ao seu redor sÃ£o flores e
 ervas selvagens.  Uma mensagem rabiscada na parede o informa de que aqui os
 guerreiros preparavam medicamentos para seus companheiros feridos.
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-Ao norte você vê o hall de entrada do Templo.
+Ao norte vocÃª vÃª o hall de entrada do Templo.
 ~
 ~
 0 -1 15103
@@ -91,30 +91,30 @@ Ao sul fica uma outra sala do Templo..
 S
 #15105
 Hospital~
-   Você está em uma sala cheia de camas vazias.  Elixires e ervas enchem as
-paredes.  Livros recobrem as estantes.  A sala possui um cheiro anti-séptico
-e faz com que você realmente se sinta num hospital.
+   VocÃª estÃ¡ em uma sala cheia de camas vazias.  Elixires e ervas enchem as
+paredes.  Livros recobrem as estantes.  A sala possui um cheiro anti-sÃ©ptico
+e faz com que vocÃª realmente se sinta num hospital.
 ~
-151 8 0 0 0 0
+151 d 0
 D0
 Ao norte fica a morada dos Shoguns. 
 ~
 ~
 0 -1 15106
 D3
-Você vê os jardins ao oeste. 
+VocÃª vÃª os jardins ao oeste. 
 ~
 ~
 0 -1 15104
 S
 #15106
 Shogum Jin~
-   Você está em uma morada pacífica.  Diante de você está o Shogum Jin.
-Muito embora você não saiba exatamente o que Jin signifique, você 
+   VocÃª estÃ¡ em uma morada pacÃ­fica.  Diante de vocÃª estÃ¡ o Shogum Jin.
+Muito embora vocÃª nÃ£o saiba exatamente o que Jin signifique, vocÃª 
 sente que este homem pode te ensinar muito sobre as pessoas.  Escadas
-podem levá-lo acima, ao próximo nível.
+podem levÃ¡-lo acima, ao prÃ³ximo nÃ­vel.
 ~
-151 8 0 0 0 0
+151 d 0
 D2
 Ao sul fica o hospital.
 ~
@@ -123,23 +123,24 @@ Ao sul fica o hospital.
 D4
 Uma escadaria dourada o leva ainda mais para cima.
 ~
-campo de força~
-0 15101 15107
+campo forca~
+:n 1 campo de forÃ§a
+abd 15101 15107
 S
 #15107
 O Corredor~
-   Você se vê em um corredor que parece ser parte de uma casa.  Tal corredor
-o lembra de sua infância, e traz de volta imagens de seus pais, te ensinando
+   VocÃª se vÃª em um corredor que parece ser parte de uma casa.  Tal corredor
+o lembra de sua infÃ¢ncia, e traz de volta imagens de seus pais, te ensinando
 o certo e o errado. 
 ~
-151 8 0 0 0 0
+151 d 0
 D2
-Ao sul há outra sala.
+Ao sul hÃ¡ outra sala.
 ~
 ~
 0 -1 15109
 D3
-Ao oeste há outra sala. 
+Ao oeste hÃ¡ outra sala. 
 ~
 ~
 0 -1 15108
@@ -151,127 +152,129 @@ Uma escadaria dourada o leva para baixo.
 S
 #15108
 Outra Sala~
-   Você está em uma outra sala, similar à anterior.  Aliás, você não
-consegue ver nenhuma diferença.
+   VocÃª estÃ¡ em uma outra sala, similar Ã  anterior.  AliÃ¡s, vocÃª nÃ£o
+consegue ver nenhuma diferenÃ§a.
 ~
-151 8 0 0 0 0
+151 d 0
 D1
-Ao leste, você volta de onde veio.
+Ao leste, vocÃª volta de onde veio.
 ~
 ~
 0 -1 15107
 S
 #15109
 Mais Uma Sala~
-   Você está em uma outra sala.  Sua mente vacila ao descobrir que
-esta sala é idêntica às anteriores!
+   VocÃª estÃ¡ em uma outra sala.  Sua mente vacila ao descobrir que
+esta sala Ã© idÃªntica Ã s anteriores!
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-Ao norte, você volta de onde veio.
+Ao norte, vocÃª volta de onde veio.
 ~
 ~
 0 -1 15107
 D1
-Ao leste você vê uma sala que PARECE diferente.
+Ao leste vocÃª vÃª uma sala que PARECE diferente.
 ~
 ~
 0 -1 15110
 S
 #15110
 Shogum Gi~
-   Finalmente, uma sala diferente!  Você vê o Shogum Gi à sua frente,
-apontando o dedo e te dando uma lição de moral, por você ter matado seus
-amigos Shoguns.  Agora você aprenderá sua lição! 
+   Finalmente, uma sala diferente!  VocÃª vÃª o Shogum Gi Ã  sua frente,
+apontando o dedo e te dando uma liÃ§Ã£o de moral, por vocÃª ter matado seus
+amigos Shoguns.  Agora vocÃª aprenderÃ¡ sua liÃ§Ã£o! 
 ~
-151 8 0 0 0 0
+151 d 0
 D1
-A leste você volta por onde veio. 
+A leste vocÃª volta por onde veio. 
 ~
 ~
 0 -1 15109
 D4
 Uma escadaria o leva para cima. 
 ~
-campo de força~
-0 15102 15111
+campo forca~
+:n 1 campo de forÃ§a
+abd 15102 15111
 S
 #15111
 Pouso no Terceiro Andar~
-   Você se vê pousando no terceiro andar do templo.  Suas pernas doem por
-Causa da escalada e você fica imaginando quantos andares este lugar deve ter.
+   VocÃª se vÃª pousando no terceiro andar do templo.  Suas pernas doem por
+Causa da escalada e vocÃª fica imaginando quantos andares este lugar deve ter.
 ~
-151 8 0 0 0 0
+151 d 0
 D1
-Ao leste, você vê um quarto de escravos. 
+Ao leste, vocÃª vÃª um quarto de escravos. 
 ~
 ~
 0 -1 15112
 S
 #15112
-Câmara dos Escravos~
-   Você está numa sala cheia de escravos.  Os escravos, contudo, não estão
-acorrentados, algemados ou presos por qualquer forma.  Estas pessoas são
-escravas voluntariamente(!).  Seu mestre é o Shogum Chu.  Eles não se sentem
-dignos de serem qualquer outra coisa.  E você? 
+CÃ¢mara dos Escravos~
+   VocÃª estÃ¡ numa sala cheia de escravos.  Os escravos, contudo, nÃ£o estÃ£o
+acorrentados, algemados ou presos por qualquer forma.  Estas pessoas sÃ£o
+escravas voluntariamente(!).  Seu mestre Ã© o Shogum Chu.  Eles nÃ£o se sentem
+dignos de serem qualquer outra coisa.  E vocÃª? 
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-Ao norte, você ouve os sons de metal.
+Ao norte, vocÃª ouve os sons de metal.
 ~
 ~
 0 -1 15113
 D3
-Ao oeste, você volta para onde estava um minuto atrás!
+Ao oeste, vocÃª volta para onde estava um minuto atrÃ¡s!
 ~
 ~
 0 -1 15111
 S
 #15113
 A Loja de Metais~
-   Você está em uma loja que vende artigos metálicos.  Os aprendizes aqui
+   VocÃª estÃ¡ em uma loja que vende artigos metÃ¡licos.  Os aprendizes aqui
 golpeiam suas espadas e outras armas contra instrumentos de defesa muito
-afiados.  Você os observa curioso, e pensa consigo mesmo, 'Hmm... será que
+afiados.  VocÃª os observa curioso, e pensa consigo mesmo, 'Hmm... serÃ¡ que
 eles poderiam temperar minha espada?'. 
 ~
-151 8 0 0 0 0
+151 d 0
 D2
-Ao sul, a câmara dos escravos.
+Ao sul, a cÃ¢mara dos escravos.
 ~
 ~
 0 -1 15112
 D3
-Você vê outra morada de Shogum ao oeste.
+VocÃª vÃª outra morada de Shogum ao oeste.
 ~
 ~
 0 -1 15114
 S
 #15114
 Shogum Chu~
-   Você está na morada do Shogum Chu.  Em torno dele, estão guerreiros 
-completamente leais ao seu mestre.  É melhor não mexer com ele...
+   VocÃª estÃ¡ na morada do Shogum Chu.  Em torno dele, estÃ£o guerreiros 
+completamente leais ao seu mestre.  Ã‰ melhor nÃ£o mexer com ele...
 ~
-151 8 0 0 0 0
+151 d 0
 D1
-Sons de metal vêm do leste. 
+Sons de metal vÃªm do leste. 
 ~
 ~
 0 -1 15113
 D4
 Escadas o levam para cima mais uma vez. 
 ~
-campo de força~
-0 15103 15115
+campo forca~
+:n 1 campo de forÃ§a
+abd 15103 15115
 S
 #15115
 Pouso no Quarto Andar~
-   Você está no quarto andar do Templo.  Mesmo tendo andado muito e ido
-muito longe, você sente que é necessário seguir adiante.  Algo neste andar 
+   VocÃª estÃ¡ no quarto andar do Templo.  Mesmo tendo andado muito e ido
+muito longe, vocÃª sente que Ã© necessÃ¡rio seguir adiante.  Algo neste andar 
 demanda respeito.
 ~
-151 8 0 0 0 0
+151 d 0
 D2
-Você ouve água ao sul. 
+VocÃª ouve Ã¡gua ao sul. 
 ~
 ~
 0 -1 15116
@@ -283,110 +286,111 @@ Escadas o levam para baixo daqui.
 S
 #15116
 O Banho~
-   Você está em um banho público.  Samurais andam por aqui em toalhas e
-parecem furiosos com sua intromissão.  Você tem a leve impressão de que
-ninguém deve interromper um samurai enquanto ele está se banhando...
+   VocÃª estÃ¡ em um banho pÃºblico.  Samurais andam por aqui em toalhas e
+parecem furiosos com sua intromissÃ£o.  VocÃª tem a leve impressÃ£o de que
+ninguÃ©m deve interromper um samurai enquanto ele estÃ¡ se banhando...
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-O local onde você aterrissou fica ao seu norte. 
+O local onde vocÃª aterrissou fica ao seu norte. 
 ~
 ~
 0 -1 15115
 D1
-A antecâmara fica ao leste. 
+A antecÃ¢mara fica ao leste. 
 ~
 ~
 0 -1 15117
 S
 #15117
-A Antecâmara de Ko~
-   Você se encontra na antecâmara do Shogum Ko.  A sala é muito colorida, e
-as paredes estão cheias de inscrições honrando pais e mães de samurais que
+A AntecÃ¢mara de Ko~
+   VocÃª se encontra na antecÃ¢mara do Shogum Ko.  A sala Ã© muito colorida, e
+as paredes estÃ£o cheias de inscriÃ§Ãµes honrando pais e mÃ£es de samurais que
 vivem aqui.
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-Ao norte fica a câmara do Shogum. 
+Ao norte fica a cÃ¢mara do Shogum. 
 ~
 ~
 0 -1 15118
 D3
-Você ouve água ao oeste.
+VocÃª ouve Ã¡gua ao oeste.
 ~
 ~
 0 -1 15116
 S
 #15118
 Shogum Ko~
-   Você está na câmara do Shogum Ko.  Este shogum se parece exatamente com
-o seu pai.  Na verdade, ele se parece com o pai de qualquer um.  Você espera
-que ele retire o cinto e te dê umas cintadas a qualquer momento...  mas aí 
-você repara na arma que ele usa. 
+   VocÃª estÃ¡ na cÃ¢mara do Shogum Ko.  Este shogum se parece exatamente com
+o seu pai.  Na verdade, ele se parece com o pai de qualquer um.  VocÃª espera
+que ele retire o cinto e te dÃª umas cintadas a qualquer momento...  mas aÃ­ 
+vocÃª repara na arma que ele usa. 
 ~
-151 8 0 0 0 0
+151 d 0
 D2
-A antecâmara fica ao sul. 
+A antecÃ¢mara fica ao sul. 
 ~
 ~
 0 -1 15117
 D4
 Uma escada o leva para cima. 
 ~
-campo de força~
-0 15104 15119
+campo forca~
+:n 1 campo de forÃ§a
+abd 15104 15119
 S
 #15119
 Pouso no Quinto Andar~
-   Você está no quinto andar deste templo gigantesco.  Contudo, você sente
-que ainda há muito caminho pela frente.  Você nota desenhos nas paredes,
+   VocÃª estÃ¡ no quinto andar deste templo gigantesco.  Contudo, vocÃª sente
+que ainda hÃ¡ muito caminho pela frente.  VocÃª nota desenhos nas paredes,
 contando um pouco mais dos respeitosos guerreiros de outrora. 
 ~
-151 8 0 0 0 0
+151 d 0
 D2
-Você ouve sons de coisas sendo afiadas ao sul.
+VocÃª ouve sons de coisas sendo afiadas ao sul.
 ~
 ~
 0 -1 15120
 D3
-A antecâmara fica ao oeste. 
+A antecÃ¢mara fica ao oeste. 
 ~
 ~
 0 -1 15121
 S
 #15120
 Sala das Armas~
-   Você entrou na sala das armas, e pode ver guerreiros afiando suas
+   VocÃª entrou na sala das armas, e pode ver guerreiros afiando suas
 espadas.  Muito embora eles usem equipamentos primitivos, conseguem
-ótimos resultados, e suas armas parecem mortais.
+Ã³timos resultados, e suas armas parecem mortais.
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-O pouso está ao norte.
+O pouso estÃ¡ ao norte.
 ~
 ~
 0 -1 15119
 S
 #15121
-A Antecâmara~
-   Você está numa antecâmara dos Shoguns.  Esta sala é cheia de pinturas de
-guerreiros, declarações escritas de respeito pelos Samurais, e o que parece
+A AntecÃ¢mara~
+   VocÃª estÃ¡ numa antecÃ¢mara dos Shoguns.  Esta sala Ã© cheia de pinturas de
+guerreiros, declaraÃ§Ãµes escritas de respeito pelos Samurais, e o que parece
 ser uma lista de compras. 
 ~
-151 8 0 0 0 0
+151 d 0
 D1
-O pouso está a leste. 
+O pouso estÃ¡ a leste. 
 ~
 ~
 0 -1 15119
 D2
-A câmara do Shogum está ao sul. 
+A cÃ¢mara do Shogum estÃ¡ ao sul. 
 ~
 ~
 0 -1 15122
 E
 lista~
-Você pode ver na lista:
+VocÃª pode ver na lista:
 		Ovos
 		Farinha
 		Xampu
@@ -394,36 +398,37 @@ Você pode ver na lista:
 S
 #15122
 Shogum Rei~
-   Você está na câmara do Shogum Rei.  Este Shogum sabe bem do valor de
-outras pessoas.  De fato, ele respeita até mesmo sua insignificante presença.
-Hmm... que estranho... ninguém mais faz isso. 
+   VocÃª estÃ¡ na cÃ¢mara do Shogum Rei.  Este Shogum sabe bem do valor de
+outras pessoas.  De fato, ele respeita atÃ© mesmo sua insignificante presenÃ§a.
+Hmm... que estranho... ninguÃ©m mais faz isso. 
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-A antecâmara fica ao norte. 
+A antecÃ¢mara fica ao norte. 
 ~
 ~
 0 -1 15121
 D4
 Uma escadaria o leva acima. 
 ~
-campo de força~
-0 15105 15123
+campo forca~
+:n 1 campo de forÃ§a
+abd 15105 15123
 S
 #15123
 Pouso no Sexto Andar~
-   Você acaba de chegar ao sexto andar.  Todos seus músculos doem, você está
-sedento, não come há algum tempo e agora seria uma boa hora para descansar
+   VocÃª acaba de chegar ao sexto andar.  Todos seus mÃºsculos doem, vocÃª estÃ¡
+sedento, nÃ£o come hÃ¡ algum tempo e agora seria uma boa hora para descansar
 um pouco.
 ~
-151 8 0 0 0 0
+151 d 0
 D0
 Um estranho zunido pode ser ouvido ao norte. 
 ~
 ~
 0 -1 15124
 D3
-Mais uma antecâmara ao oeste.
+Mais uma antecÃ¢mara ao oeste.
 ~
 ~
 0 -1 15125
@@ -435,198 +440,201 @@ Escadas o levam abaixo
 S
 #15124
 Sala das Escritas~
-   Você está numa grande sala, cheia de escrituras.  Nesta sala, os 
-samurais devem aprender as suas tão aclamadas habilidades com processamento
-de textos.  Legal, né?
+   VocÃª estÃ¡ numa grande sala, cheia de escrituras.  Nesta sala, os 
+samurais devem aprender as suas tÃ£o aclamadas habilidades com processamento
+de textos.  Legal, nÃ©?
 ~
-151 8 0 0 0 0
+151 d 0
 D2
-O pouso está ao sul. 
+O pouso estÃ¡ ao sul. 
 ~
 ~
 0 -1 15123
 S
 #15125
-A Antecâmara~
-   Você está na antecâmara de um outro Shogum.  Você se lembra vagamente de
-ter ouvido em algum lugar que existem oito princípios básicos dos samurais. 
-Agora, faltam só mais três.
+A AntecÃ¢mara~
+   VocÃª estÃ¡ na antecÃ¢mara de um outro Shogum.  VocÃª se lembra vagamente de
+ter ouvido em algum lugar que existem oito princÃ­pios bÃ¡sicos dos samurais. 
+Agora, faltam sÃ³ mais trÃªs.
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-A câmara do Shogum fica ao norte. 
+A cÃ¢mara do Shogum fica ao norte. 
 ~
 ~
 0 -1 15126
 D1
-O pouso é ao leste. 
+O pouso Ã© ao leste. 
 ~
 ~
 0 -1 15123
 S
 #15126
 Shogum Chi~
-   Você se encontra perante o Shogum Chi.  A aura que envolve o corpo dele
-te diz que não só ele é extremamente bodoso, mas também MUITO inteligente.
-Você pensa que este sábio indivíduo poderia te ensinar muitas coisas sobre
+   VocÃª se encontra perante o Shogum Chi.  A aura que envolve o corpo dele
+te diz que nÃ£o sÃ³ ele Ã© extremamente bodoso, mas tambÃ©m MUITO inteligente.
+VocÃª pensa que este sÃ¡bio indivÃ­duo poderia te ensinar muitas coisas sobre
 a vida.
 ~
-151 8 0 0 0 0
+151 d 0
 D2
-A antecâmara é ao sul. 
+A antecÃ¢mara Ã© ao sul. 
 ~
 ~
 0 -1 15125
 D4
 Uma escada o leva para cima. 
 ~
-campo de força~
-0 15106 15127
+campo forca~
+:n 1 campo de forÃ§a
+abd 15106 15127
 S
 #15127
-Pouso no Sétimo Andar~
-   Você chegou ao sétimo andar do Templo.  As paredes são muito limpas, e
-nelas são contadas histórias de cruzadas pela Verdade.  Você se impacienta
-com o grande número de salas deste Templo.
+Pouso no SÃ©timo Andar~
+   VocÃª chegou ao sÃ©timo andar do Templo.  As paredes sÃ£o muito limpas, e
+nelas sÃ£o contadas histÃ³rias de cruzadas pela Verdade.  VocÃª se impacienta
+com o grande nÃºmero de salas deste Templo.
 ~
-151 8 0 0 0 0
+151 d 0
 D2
-Ao sul você ouve o som de escribas. 
+Ao sul vocÃª ouve o som de escribas. 
 ~
 ~
 0 -1 15128
 S
 #15128
-Salão da Verdade~
-   Você olha para os escribas, que parecem desavisados de sua presença.  
-Mas, olhando com mais atenção, você vê que de fato não há nenhum escriba
-nesta sala!  Você nota que a verdade nem sempre pode ser contemplada pelos
-olhos.  Bela lição, não?
+SalÃ£o da Verdade~
+   VocÃª olha para os escribas, que parecem desavisados de sua presenÃ§a.  
+Mas, olhando com mais atenÃ§Ã£o, vocÃª vÃª que de fato nÃ£o hÃ¡ nenhum escriba
+nesta sala!  VocÃª nota que a verdade nem sempre pode ser contemplada pelos
+olhos.  Bela liÃ§Ã£o, nÃ£o?
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-O pouso está ao norte. 
+O pouso estÃ¡ ao norte. 
 ~
 ~
 0 -1 15127
 D1
-Você ouve uma torcida ao leste. 
+VocÃª ouve uma torcida ao leste. 
 ~
 ~
 0 -1 15129
 S
 #15129
-Pátio~
-   Você está no pátio do sétimo andar, e aqui parece ocorrer algum tipo de
-competição.  Guerreiros brigam entre si, enquanto jovens aprendizes os
+PÃ¡tio~
+   VocÃª estÃ¡ no pÃ¡tio do sÃ©timo andar, e aqui parece ocorrer algum tipo de
+competiÃ§Ã£o.  Guerreiros brigam entre si, enquanto jovens aprendizes os
 observam com medo.
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-Ao norte, uma câmara de um Shogum. 
+Ao norte, uma cÃ¢mara de um Shogum. 
 ~
 ~
 0 -1 15130
 D3
-Sons de escribas vêm do oeste. 
+Sons de escribas vÃªm do oeste. 
 ~
 ~
 0 -1 15128
 S
 #15130
 Shogum Shin~
-   Você se encontra na câmara dedicada ao Shogum Shin.  As roupas dele são
-brilhantes e poderosas.  Seu olhar é penetrante.  Ele olha furiosamente para
-você, franze as sobrancelhas, e desembainha a espada.  Ele sabe por que você
-está aqui.
+   VocÃª se encontra na cÃ¢mara dedicada ao Shogum Shin.  As roupas dele sÃ£o
+brilhantes e poderosas.  Seu olhar Ã© penetrante.  Ele olha furiosamente para
+vocÃª, franze as sobrancelhas, e desembainha a espada.  Ele sabe por que vocÃª
+estÃ¡ aqui.
 ~
-151 8 0 0 0 0
+151 d 0
 D2
-O pátio fica ao sul. 
+O pÃ¡tio fica ao sul. 
 ~
 ~
 0 -1 15129
 D4
 Escadas o levam para cima.
 ~
-campo de força~
-0 15107 15131
+campo forca~
+:n 1 campo de forÃ§a
+abd 15107 15131
 S
 #15131
 Pouso no Oitavo Andar~
-   Finalmente você chega ao oitavo andar, o último andar neste mundo
-deformado e bizarro, que espelha-se no Japão antigo.  Mas... espere um
-minuto... você espia por uma janela e descobre que ainda não está no topo!
-Você suspira, e continua adiante. 
+   Finalmente vocÃª chega ao oitavo andar, o Ãºltimo andar neste mundo
+deformado e bizarro, que espelha-se no JapÃ£o antigo.  Mas... espere um
+minuto... vocÃª espia por uma janela e descobre que ainda nÃ£o estÃ¡ no topo!
+VocÃª suspira, e continua adiante. 
 ~
-151 8 0 0 0 0
+151 d 0
 D2
-Há algo ao sul. 
+HÃ¡ algo ao sul. 
 ~
 ~
 0 -1 15132
 D3
-Há algo ao oeste. 
+HÃ¡ algo ao oeste. 
 ~
 ~
 0 -1 15133
 S
 #15132
 Shogum Tei~
-   À sua frente está o Shogum Tei.  Este Shogum é o homem que você sempre vê
-ajudando idosos e humildes em figuras antigas.  Você percebe que ele te olha
-carinhosamente, e quase demonstra dó antes de desembainhar a espada.
+   Ã€ sua frente estÃ¡ o Shogum Tei.  Este Shogum Ã© o homem que vocÃª sempre vÃª
+ajudando idosos e humildes em figuras antigas.  VocÃª percebe que ele te olha
+carinhosamente, e quase demonstra dÃ³ antes de desembainhar a espada.
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-O pouso está ao seu norte. 
+O pouso estÃ¡ ao seu norte. 
 ~
 ~
 0 -1 15131
 D4
 Escadas o levam acima. 
 ~
-campo de força~
-0 15108 15135
+campo forca~
+:n 1 campo de forÃ§a
+abd 15108 15135
 S
 #15133
 Uma Sala Vazia~
-   Você está em uma sala vazia.  Não há nada na sala.  Não há mobília, não
-há luz (todavia, as paredes BRILHAM).  Muito estranho. 
+   VocÃª estÃ¡ em uma sala vazia.  NÃ£o hÃ¡ nada na sala.  NÃ£o hÃ¡ mobÃ­lia, nÃ£o
+hÃ¡ luz (todavia, as paredes BRILHAM).  Muito estranho. 
 ~
-151 8 0 0 0 0
+151 d 0
 D1
-O pouso está a leste. 
+O pouso estÃ¡ a leste. 
 ~
 ~
 0 -1 15131
 D2
-Algo está ao sul. 
+Algo estÃ¡ ao sul. 
 ~
 ~
 0 -1 15134
 S
 #15134
 Sala Mofada~
-   Você está em uma sala cheia de mofo.  Alguns samurais velhos e
-experientes estão aqui, formando um semi-círculo ao redor de uma marca
-no chão.  Eles olham de relance para você e bradam ferozmente.  Você
+   VocÃª estÃ¡ em uma sala cheia de mofo.  Alguns samurais velhos e
+experientes estÃ£o aqui, formando um semi-cÃ­rculo ao redor de uma marca
+no chÃ£o.  Eles olham de relance para vocÃª e bradam ferozmente.  VocÃª
 invadiu a 'festa particular' deles...
 ~
-151 8 0 0 0 0
+151 d 0
 D0
-Ao norte há uma sala vazia. 
+Ao norte hÃ¡ uma sala vazia. 
 ~
 ~
 0 -1 15133
 S
 #15135
 O Topo~
-   Finalmente você chegou ao topo do Templo!  À sua frente, está o Último 
-Samurai.  Só a presença dele já é impressionante!  Muitas pessoas fizeram 
-suposições sobre a morte e o morrer, e parece que suas questões logo serão
+   Finalmente vocÃª chegou ao topo do Templo!  Ã€ sua frente, estÃ¡ o Ãšltimo 
+Samurai.  SÃ³ a presenÃ§a dele jÃ¡ Ã© impressionante!  Muitas pessoas fizeram 
+suposiÃ§Ãµes sobre a morte e o morrer, e parece que suas questÃµes logo serÃ£o
 respondidas.
 ~
-151 8 0 0 0 0
+151 d 0
 S
 $~
