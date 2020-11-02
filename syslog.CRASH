@@ -1,26 +1,30 @@
-autorun starting game Mon Nov  2 00:24:37 UTC 2020
-running bin/circle -q 4000
-Nov 02 00:24:37 2020 :: Loading configuration.
-Nov 02 00:24:37 2020 :: Vitalia Reborn 2020 V0.2
-Nov 02 00:24:37 2020 :: Using lib as data directory.
-Nov 02 00:24:37 2020 :: Running game on port 4000.
-Nov 02 00:24:37 2020 :: SYSERR: lib/.killscript: No such file or directory
-Nov 02 00:24:37 2020 :: Finding player limit.
-Nov 02 00:24:37 2020 ::    Setting player limit to 200 using rlimit.
-Nov 02 00:24:37 2020 :: Opening mother connection.
-Nov 02 00:24:37 2020 :: Binding to all IP interfaces on this host.
-Nov 02 00:24:37 2020 :: Boot db -- BEGIN.
-Nov 02 00:24:37 2020 :: Resetting the game time:
-Nov 02 00:24:37 2020 ::    Current Gametime: 20H 25D 9M 1497Y.
-Nov 02 00:24:37 2020 :: Initialize Global Lists
-Nov 02 00:24:37 2020 :: Initializing Events
-Nov 02 00:24:37 2020 :: Reading news, credits, help, ihelp, bground, info & motds.
-Nov 02 00:24:37 2020 :: Reading menu, rebegin & clanpolicies
-Nov 02 00:24:37 2020 :: Loading zone table.
-Nov 02 00:24:37 2020 ::    121 zones, 10648 bytes.
-Nov 02 00:24:37 2020 :: Loading triggers and generating index.
-Nov 02 00:24:37 2020 :: SYSERR: File 'world/trg/<<<<<<<' listed in 'world/trg//index': No such file or directory
-Nov 02 00:24:37 2020 :: SYSERR: File 'world/trg/HEAD' listed in 'world/trg//index': No such file or directory
-Nov 02 00:24:37 2020 :: SYSERR: world/trg/<<<<<<<: No such file or directory
+Nov 02 17:09:20 2020 :: Entering game loop.
+Nov 02 17:09:20 2020 :: No connections.  Going to sleep.
+Nov 02 17:09:47 2020 :: New connection.  Waking up.
+Nov 02 17:09:55 2020 :: Cansian has connected.
+Nov 02 17:09:58 2020 :: Cansian had no variable file
+Nov 02 17:09:58 2020 :: Cansian retrieving crash-saved items and entering game.
+Nov 02 17:09:58 2020 :: Cansian (level 110) has 2 objects (max 100).
+Nov 02 17:10:04 2020 :: OLC: Cansian starts editing zone 133 allowed zone 0
+Nov 02 17:10:06 2020 :: Warning: columns too narrow for correct output to Cansian in simple_column_list (utils.c)
+Nov 02 17:10:08 2020 :: Warning: columns too narrow for correct output to Cansian in simple_column_list (utils.c)
+Nov 02 17:10:13 2020 :: OLC: Cansian edits zone info for room 13301.
+Nov 02 17:10:13 2020 :: OLC: Cansian stops editing zone 133 allowed zone 0
+Nov 02 17:14:47 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 02 17:14:47 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 21584
+Nov 02 17:18:50 2020 :: Cansian has quit the game.
+Nov 02 17:18:51 2020 :: Losing player: Cansian.
+Nov 02 17:18:51 2020 :: No connections.  Going to sleep.
+Nov 02 17:19:01 2020 :: New connection.  Waking up.
+Nov 02 17:19:09 2020 :: Cansian has connected.
+Nov 02 17:19:10 2020 :: Cansian had no variable file
+Nov 02 17:19:10 2020 :: Cansian un-renting and entering game.
+Nov 02 17:19:10 2020 :: Cansian (level 110) has 2 objects (max 100).
+Nov 02 17:19:14 2020 :: (GC) Reboot by Cansian.
+Nov 02 17:19:14 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Nov 02 17:19:14 2020 :: Closing all sockets.
+Nov 02 17:19:14 2020 :: Closing link to: Cansian.
+Nov 02 17:19:14 2020 :: Saving current MUD time.
+Nov 02 17:19:14 2020 :: Rebooting.
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.

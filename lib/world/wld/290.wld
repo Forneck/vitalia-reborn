@@ -7,16 +7,15 @@ caminho certo a ser tomado ou para ter certeza de que o Barão está de fato
 em sua torre do que um posto militar de fiscalização - embora há guardas que
 façam isso.  Ao oeste o caminho leva para longe das terras de Cailveh.
 ~
-290 0 1
-D7
-~
-portao~
-:n 1 o portão de madeira
-abc -1 2689
+290 0 0 0 0 1
 D2
 ~
 ~
 0 -1 29001
+D7
+~
+portao~
+1 -1 2689
 S
 #29001
 A Estrada de Pedregulhos~
@@ -25,7 +24,7 @@ trigo e milho que parecem crescer sempre em toda a área.  Um pequeno povoado
 fica ao sudeste daqui, fumaça vem das muitas chaminés, todas as construções
 parecem ser muito bem cuidadas.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -41,7 +40,7 @@ A Estrada de Pedregulhos~
 vistas.  Elas são todas bem construídas, fortes e adornadas com grama fresca
 que cresce a seu redor.  A estrada continua a norte e ao sul.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -58,7 +57,7 @@ vistas.  Elas são todas bem construídas, fortes e adornadas com grama fresca
 que cresce a seu redor.  A estrada continua a norte e ao sul, sendo ao sul,
 a entrada para o povoado.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -74,7 +73,7 @@ Pelo Povoado~
 leste pelo povoado.  Ao sul, a estrada continua até virar ao leste, ao
 norte, ela segue até onde seus olhos alcançam.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -93,7 +92,7 @@ A Estrada de Pedregulhos~
    A estrada segue ao norte e ao sul, o povoado dos contribuintes do Barão
 fica logo ao leste e os belos campos de grãos ao oeste.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -109,7 +108,7 @@ A Estrada de Pedregulhos~
 ao leste e os belos campos de grãos ao oeste.  Ao sul, a estradas fazem uma
 curva para o sudeste.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -125,7 +124,7 @@ A Estrada Pedregulhos~
 curta distância.  Um pequeno caminho leva a um celeiro, a única construção
 entre o povoado e a torre.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -142,7 +141,7 @@ do que nunca, fica ao sudeste.  Ao norte, através de um caminho pelos campos
 de milho, uma pequeno povoado pode ser visto - o lugar onde todos que
 trabalham para o Barão vivem.
 ~
-290 0 1
+290 0 0 0 0 1
 D2
 ~
 ~
@@ -158,7 +157,7 @@ Uma Curva no Caminho de Pedregulhos~
 ou para longe dela - dependendo em qual caminho você vá seguir.  Um celeiro
 fica a sudeste daqui, a única estrutura visível entre aqui, e a torre.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -174,7 +173,7 @@ Uma Curva no Caminho de Pedregulhos~
 ou para longe dela - dependendo em qual caminho você vá seguir.  Uma pequena
 entrada para o celeiro fica ao sul.
 ~
-290 0 1
+290 0 0 0 0 1
 D2
 ~
 ~
@@ -192,7 +191,7 @@ guardas que controlam a entrada de sua propriedade...  Ao leste a estrada
 segue para a porta principal de Cailveh, ao norte a estrada segue para fora
 destas terras.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -212,7 +211,7 @@ A Oeste da Torre~
 você se aproxima.  A estrada leva em direção à torre ou a oeste, para fora
 destas terras.
 ~
-290 0 1
+290 0 0 0 0 1
 D1
 ~
 ~
@@ -229,7 +228,7 @@ emolduradas em ferro.  Colheitas abundantes ficam pelo norte e sul da
 estrada, de onde sobra uma calma brisa.  Este não é de forma alguma, um
 lugar a se sentir intimidado, ou indesejado.
 ~
-290 0 1
+290 0 0 0 0 1
 D1
 ~
 ~
@@ -245,12 +244,11 @@ Os Portais de Entrada da Torre~
 consideradas portais - elas são pelo menos dez metros altas.  Entre, se você
 quiser, ou volte ao oeste, pela estrada principal.
 ~
-290 0 1
+290 0 0 0 0 1
 D1
 ~
 porta portais~
-:n 1 um dos portais
-a -1 29056
+1 -1 29056
 D3
 ~
 ~
@@ -262,7 +260,7 @@ O Celeiro Minuciosamente Limpo~
 ferramentas são penduradas nas paredes, ordenadas cuidadosamente, o chão, é
 até varrido.  Através de uma porta ao sul ficam os pastos.
 ~
-290 d 0
+290 8 0 0 0 0
 D0
 ~
 ~
@@ -270,8 +268,7 @@ D0
 D2
 ~
 porta~
-:n 2 a porta
-a -1 29016
+1 -1 29016
 S
 #29016
 Os Pastos~
@@ -279,12 +276,11 @@ Os Pastos~
 Cailveh bem alimentadas e com grande suprimento de leite.  Cuidado onde você
 pisa...
 ~
-290 0 2
+290 0 0 0 0 2
 D0
 ~
 porta~
-:n 2 a porta
-a -1 29015
+1 -1 29015
 D1
 ~
 ~
@@ -300,7 +296,7 @@ Os Pastos~
 Cailveh bem alimentadas e com grande suprimento de leite.  Cuidado onde você
 pisa...  
 ~
-290 0 2
+290 0 0 0 0 2
 D3
 ~
 ~
@@ -312,7 +308,7 @@ Os Pastos~
 Cailveh bem alimentadas e com grande suprimento de leite.  Cuidado onde você
 pisa... 
 ~
-290 0 2
+290 0 0 0 0 2
 D1
 ~
 ~
@@ -326,7 +322,7 @@ regularmente.  A estrada principal fica ao oeste.
 
 Um pequeno aviso fica no lado sul da estrada.
 ~
-290 0 1
+290 0 0 0 0 1
 D1
 ~
 ~
@@ -350,7 +346,7 @@ aconchegantes.  Ao leste há o que parece ser o mercado, onde a maioria dos
 negócios do vilarejo são feitos.  A estrada principal para a torre fica a
 oeste.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -373,7 +369,7 @@ A Estrada do Povoado~
    Estradas ficam do lado leste e oeste da estrada, que segue a norte e sul
 passando por casas de todos os tamanhos e formas.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -381,8 +377,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 29037
+1 -1 29037
 D2
 ~
 ~
@@ -390,15 +385,14 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-a -1 29032
+1 -1 29032
 S
 #29022
 A Estrada do Povoado~
    Estradas ficam do lado leste e oeste da estrada, que segue a norte e sul
 passando por casas de todos os tamanhos e formas.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -406,8 +400,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 29036
+1 -1 29036
 D2
 ~
 ~
@@ -415,8 +408,7 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-a -1 29033
+1 -1 29033
 S
 #29023
 Um Beco Sem Saída~
@@ -424,17 +416,15 @@ Um Beco Sem Saída~
 moradores de Cailveh.  A única saída daqui é ao sul, ao menos que você
 de seja encontrar alguma pessoa que more nestas casas.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 porta~
-:n 2 a porta
-a -1 29024
+1 -1 29024
 D1
 ~
 porta~
-:n 2 a porta
-a -1 29035
+1 -1 29035
 D2
 ~
 ~
@@ -442,8 +432,7 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-a -1 29034
+1 -1 29034
 S
 #29024
 Uma Casa Simples~
@@ -451,12 +440,11 @@ Uma Casa Simples~
 apenas função.  Há apenas um adorno na parede, que é um grande quadro que
 ostenta uma pintura dos belos pastos dourados.
 ~
-290 8 0
+290 8 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-a -1 29023
+1 -1 29023
 S
 #29025
 A Estrada do Povoado~
@@ -464,7 +452,7 @@ A Estrada do Povoado~
 lados da rua.  Apenas a norte daqui há a interseção principal, ao sul, fica
 uma pequena praça.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -472,8 +460,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 29031
+1 -1 29031
 D2
 ~
 ~
@@ -489,7 +476,7 @@ A Praça do Colégio~
 colégio estar bem ao sul daqui, esta pequena praça faz uma curva contornada
 pelas casas do lado leste e oeste da escola.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -497,8 +484,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 29029
+1 -1 29029
 D2
 ~
 ~
@@ -506,8 +492,7 @@ D2
 D3
 ~
 porta~
-:n 2 a porta
-a -1 29028
+1 -1 29028
 S
 #29027
 O Velho Colégio~
@@ -516,7 +501,7 @@ frente para o lado sul da sala.  Pequenos detalhes mostram que esta pequena
 comunidade dá grande ênfase para a religião, como grandes livros religiosos
 em cima da mesa maior.
 ~
-290 d 0
+290 8 0 0 0 0
 D0
 ~
 ~
@@ -528,12 +513,11 @@ Uma Pequena Casa~
 solteiro.  Uma pequena cama fica pela parede sul, uma pequena mesa, fica no
 canto noroeste.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 29026
+1 -1 29026
 S
 #29029
 Uma Casa Limpa~
@@ -541,12 +525,11 @@ Uma Casa Limpa~
 lavadas.  Um quadro com a imagem de um austero homem fica na parede perto da
 porta, onde também parece ter um aviso.
 ~
-290 d 0
+290 8 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-a -1 29026
+1 -1 29026
 E
 aviso~
 Por favor, tire os sapatos!
@@ -558,7 +541,7 @@ Uma Casa Vazia~
 viver em algum outro lugar.  Com um pouco de limpeza, e alguns pequenos
 concertos, este poderia ser um bom lugar para se viver.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 ~
@@ -570,24 +553,22 @@ Uma Casa Recentemente Pintada~
 brilham com a tinta.  Todas as mobílias foram afastadas das paredes até que
 as mesmas sequem.
 ~
-290 d 0
+290 8 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-a -1 29025
+1 -1 29025
 S
 #29032
 Uma Casa Silenciosa~
    As brancas paredes desta casa juntamente com as sóbrias mobílias dão um
 ar bastante sério a esta casa.  
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 29021
+1 -1 29021
 S
 #29033
 Uma Casa Simples~
@@ -595,23 +576,22 @@ Uma Casa Simples~
 parece ter algum valor monetário.  Há uma mesa com cadeiras feitas de
 madeira crua e uma cama feita da mesma madeira.
 ~
-290 d 0 0
+290 0 0 0 0 0
 D1
 ~
 porta~
-1 0 29022 3
+1 0 29022
 S
 #29034
 Uma Pequena Casa~
    Os cômodos desta casa são apertados, de fato, permitindo movimento para
 apenas uma pessoa de casa vez.  A porta fica ao leste.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 29023
+1 -1 29023
 S
 #29035
 Uma Casa de Telhado de Sapé~
@@ -619,12 +599,11 @@ Uma Casa de Telhado de Sapé~
 água.  O telhado é feito de sapé, as paredes são de madeira áspera, e
 estranhamente, aqui parece ser um bom lugar para se ficar.
 ~
-290 d 0
+290 8 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-a -1 29023
+1 -1 29023
 S
 #29036
 Uma Pequena Casa Feita de Troncos~
@@ -634,11 +613,11 @@ orgulhar muito, pois o lugar ficou lindo.  A maioria da madeira das paredes
 internas foram esculpidas para maior conforto.  A mobília é feita da mesma
 madeira escura da qual fora feita a casa.
 ~
-290 d 0
+290 8 0 0 0 0
 D3
 ~
 ~
-0 -1 29022 2
+0 -1 29022
 S
 #29037
 Uma Casa Confortável~
@@ -646,12 +625,11 @@ Uma Casa Confortável~
 quente dá ao lugar um clima confortável e aconchegante.  Uma poltrona
 forrada com pele de animais e uma escrivaninha ficam na parede sul.
 ~
-290 d 0
+290 8 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-a -1 29021
+1 -1 29021
 S
 #29038
 Através do Povoado~
@@ -660,7 +638,7 @@ do povoado, ao norte fica um estabelecimento público.  O estabelecimento é
 na verdade um bom lugar para se comer, tem uma reputação de boa comida e
 bons freqüentadores.
 ~
-290 0 1
+290 0 0 0 0 1
 D1
 ~
 ~
@@ -680,7 +658,7 @@ Próximo à Praça do Vilarejo~
 pequena estrada segue a norte e sul através do centro de negócios e também
 ao oeste.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -704,7 +682,7 @@ A Estrada do Vilarejo~
 lado leste e um herborista do lado oeste da estrada.  Ao norte daqui fica
 uma pequena praça. 
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -729,7 +707,7 @@ oeste da estrada, um pequeno prédio fica a leste - onde reside o médico da
 cidade.  Ao norte, o alquimista diz ter as melhores poções de todos os
 tempos.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -753,7 +731,7 @@ A Farmácia~
 coloridos guardados em recipientes de vidro tomam a parede norte, atrás do
 balcão - o trabalho de horas de preparo, feitas pelo Mestre Alquimista.
 ~
-290 d 0
+290 8 0 0 0 0
 D2
 ~
 ~
@@ -764,7 +742,7 @@ O Médico da Cidade~
    Parece que o doutor não está no momento.  O prédio inteiro repousa em
 silêncio e vazio.  Sem vida.  Entediantemente estranho.
 ~
-290 d 0
+290 8 0 0 0 0
 D3
 ~
 ~
@@ -777,7 +755,7 @@ rústico e imundo que trabalha nos fundos deste lugar, não deve obviamente
 ligar para higiene ou pelo fato de estar trabalhando a uma temperatura
 absurda.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 ~
@@ -789,7 +767,7 @@ Salaylia~
 mesmo, ou levados para suas jornadas.  De qualquer modo, ela se sente
 satisfeita em poder alimentar os famintos.
 ~
-290 d 0
+290 8 0 0 0 0
 D3
 ~
 ~
@@ -801,7 +779,7 @@ A Herborista~
 lugar, o balcão fica ao oeste.  Dentro do balcão, há amostras de cataplasmas
 e remédios que o herbarista oferece.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 ~
@@ -813,7 +791,7 @@ O Parque Colorido~
 bem cuidado.  Pequenos bancos de pedra repousam ao longo do caminho,
 permitindo que você descanse o quanto desejar.
 ~
-290 e 2
+290 16 0 0 0 2
 D3
 ~
 ~
@@ -827,7 +805,7 @@ e conversar.  Todas as noites 'reuniões' são feitas ao redor dos pratos de
 legumes e carne, acompanhados de risadas e às vezes musica, trazida por
 trovadores errantes.
 ~
-290 d 0
+290 8 0 0 0 0
 D0
 ~
 ~
@@ -839,7 +817,7 @@ A Alfaiataria~
 pessoas humildes a serviços dos Deuses, que trabalham diariamente com
 orgulho.  Sendo assim, o alfaiate não parece ter muita freguesia.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 ~
@@ -851,7 +829,7 @@ A Estrada do Povoado~
 a um maravilhoso jardim, cheio de vida e cor.  Ao norte fica a Praça do
 Vilarejo.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -877,7 +855,7 @@ Cailveh.  Fileiras de bancos seguem pela parede leste onde um estranho
 símbolo está pendurado na parede - o que parece ser símbolo de sua adoração
 -, brilhando lindamente.
 ~
-290 d 0
+290 8 0 0 0 0
 D3
 ~
 ~
@@ -890,7 +868,7 @@ tenha, basta encomendar.  Pelo menos é esta a reputação.  Todo tipo de
 inutilidade e necessidades são expostas nas prateleiras e mostruários de
 madeira.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 ~
@@ -901,7 +879,7 @@ A Praça Sul~
    Um magnífico jardim fica a sul daqui, uma organizada loja fica ao oeste e
 algum tipo de moinho fica do lado leste.
 ~
-290 0 1
+290 0 0 0 0 1
 D0
 ~
 ~
@@ -926,7 +904,7 @@ destilaria para que a água que abastece os moradores esteja livre de
 doenças.  Barris, garrafas ou qualquer recipiente pode ser cheio ou comprado
 aqui.
 ~
-290 d 0
+290 8 0 0 0 0
 D3
 ~
 ~
@@ -938,7 +916,7 @@ Os Jardins~
 mantido como um paraíso para a alma e silenciosa contemplação.  Mantido
 imaculado por muito tempo, sem exceções, e assim continuará sendo.
 ~
-290 0 2
+290 0 0 0 0 2
 D0
 ~
 ~
@@ -949,7 +927,7 @@ Entrada Para a Câmara Principal~
    Este é na verdade uma parte da câmara principal, ao leste Cailveh mantêm
 sua corte.  A saída da torre fica ao oeste.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 ~
@@ -957,8 +935,7 @@ D1
 D3
 ~
 porta~
-:n 2 a porta
-a -1 29014
+1 -1 29014
 S
 #29057
 A Câmara Principal~
@@ -966,12 +943,11 @@ A Câmara Principal~
 desce do teto até o chão, cobrindo toda a câmara.  Na parede sul, há outra
 tapeçaria, dando à câmara um ar de majestosa santidade.
 ~
-290 d 0
+290 8 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 29061
+1 -1 29061
 D1
 ~
 ~
@@ -989,22 +965,19 @@ confortável almofada vermelha.  Uma fina cortina prateada segue atrás das
 cadeiras, completando a cena de força e calma, que Cailveh deseja proteger e
 perpetuar.  Portas ficam ao norte e ao sul.
 ~
-290 d 0
+290 8 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 29060
+1 -1 29060
 D1
 ~
 cortina cortinas fina~
-:n 2 a cortina
-a -1 29059
+1 -1 29059
 D2
 ~
 porta~
-:n 2 a porta
-a -1 29062
+1 -1 29062
 D3
 ~
 ~
@@ -1017,12 +990,11 @@ stress quando desejar.  Há uma escada de pedra levando para o alto da
 torre, se curvando, fazendo você perdê-la de vista.  Atrás da cortina fica a
 Câmara de Audiência.
 ~
-290 d 0
+290 8 0 0 0 0
 D3
 ~
 cortina cortinas fina~
-:n 2 a cortina
-a -1 29058
+1 -1 29058
 D4
 ~
 ~
@@ -1035,12 +1007,11 @@ entrada e saída de grandes quantidades de pessoas.  Uma grande mesa toma
 quase toda a extensão do salão, lindamente decorada, com uma bela toalha lhe
 cobrindo.
 ~
-290 d 0
+290 8 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-a -1 29058
+1 -1 29058
 D3
 ~
 ~
@@ -1053,7 +1024,7 @@ entrada e saída de grandes quantidades de pessoas.  Uma grande mesa toma
 quase toda a extensão do salão, lindamente decorada, com uma bela toalha lhe
 cobrindo.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 ~
@@ -1061,8 +1032,7 @@ D1
 D2
 ~
 porta~
-:n 2 a porta
-a -1 29057
+1 -1 29057
 S
 #29062
 A Sala Privada de Reuniões~
@@ -1070,12 +1040,11 @@ A Sala Privada de Reuniões~
 tratar de negócios, eles são trazidos para cá.  A sala é protegida com
 grossas paredes de modo que, o que se fala aqui, seja apenas ouvido aqui.
 ~
-290 if 0
+290 288 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 29058
+1 -1 29058
 S
 #29063
 A Escada Secreta~
@@ -1085,7 +1054,7 @@ silêncio para tratar de assuntos familiares.  A nenhum visitante é permitida
 o acesso às câmaras superiores, apenas a Cailveh, sua família e alguns
 serviçais.
 ~
-290 d 0
+290 8 0 0 0 0
 D4
 ~
 ~
@@ -1102,12 +1071,11 @@ são de pedra, bem assentadas e firmes.  Na parede sul há uma porta, os
 degraus seguem para baixo, no andar principal da torre, e o corredor segue a
 oeste, em direção a mais portas.
 ~
-290 d 0
+290 8 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-a -1 29070
+1 -1 29070
 D3
 ~
 ~
@@ -1122,12 +1090,11 @@ O Corredor de Pedra~
    Uma porta fica na parede norte, o corredor segue a leste e oeste, e para
 ambos os lados, não vai muito longe.
 ~
-290 d 0
+290 8 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 29067
+1 -1 29067
 D1
 ~
 ~
@@ -1142,7 +1109,7 @@ O Fim do Corredor~
    Uma larga porta fica na parede oeste, limitando o corredor.  Ao leste há
 mais portas, com uma escada seguindo para baixo, até o fim do corredor.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 ~
@@ -1150,8 +1117,7 @@ D1
 D3
 ~
 porta~
-:n 2 a porta
-ag 2 29071
+0 2 29071
 S
 #29067
 A Câmara Privada de Gilzaan~
@@ -1161,18 +1127,17 @@ Tudo o que é sagrado e valioso, educativo e contemplativo, repousa
 ordenadamente pelo quarto, que realmente parece abrigar um grande número de
 objetos e mobília.  Há uma porta na parede sul.
 ~
-290 d 0
+290 8 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-a -1 29065
+1 -1 29065
 D3
 ~
 ~
 0 -1 29068
 S
-#29068 
+#29068
 A Câmara Privada de Gilzaan~
    Gilzaan, sendo o filho mais velho de Cailveh, provavelmente será herdeiro
 de todas as terras de seu pai, e possui o maior quarto de toda a torre.
@@ -1180,7 +1145,7 @@ Tudo o que é sagrado e valioso, educativo e contemplativo, repousa
 ordenadamente pelo quarto, que realmente parece abrigar um grande número de
 objetos e mobília.  Há uma porta na parede sul, que fica a leste daqui.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 ~
@@ -1194,7 +1159,7 @@ torre, debruçado sobre os manuscritos antigos que Cailveh mantém em sua
 biblioteca.  Ele é o orgulho e alegria de Cailveh, e sua sabedoria o levará
 a correr à Baronia, assim como seu irmão corre, por direito.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 ~
@@ -1208,12 +1173,11 @@ torre, debruçado sobre os manuscritos antigos que Cailveh mantém em sua
 biblioteca.  Ele é o orgulho e alegria de Cailveh, e sua sabedoria o levará
 a correr à Baronia, assim como seu irmão corre, por direito.
 ~
-290 d 0
+290 8 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a -1 29064
+1 -1 29064
 D3
 ~
 ~
@@ -1227,7 +1191,7 @@ lugar.  Confortáveis poltronas e sofás aumentam este clima.  Aqui é onde
 Cailveh e sua família passam a maioria de suas tardes juntos, longe dos
 problemas da corte, que nunca parecem acabar lá embaixo.
 ~
-290 d 0
+290 8 0 0 0 0
 D0
 ~
 ~
@@ -1235,8 +1199,7 @@ D0
 D1
 ~
 porta~
-:n 2 a porta
-a -1 29066
+1 -1 29066
 D2
 ~
 ~
@@ -1244,17 +1207,16 @@ D2
 D4
 ~
 lareira~
-:n 2 a lareira
-ad -1 29075
-E
-pedra pedras~
-Elas parecem que não foram bem assentadas, como se você pudesse ser capaz de movê-las. 
-~
+1 -1 29075
 E
 lareira~
 É uma enorme peça de pedra, tomando toda a parede.  A maioria de suas
 pedras são regulares e cinzentas, mas há algumas mais escuras, parecem
 diferentes das outras.
+~
+E
+pedra pedras~
+Elas parecem que não foram bem assentadas, como se você pudesse ser capaz de movê-las. 
 ~
 S
 #29072
@@ -1263,7 +1225,7 @@ As Câmaras Privadas de Cailveh~
 qual ele divide com sua esposa.  A sala segue a curva da torre, abrindo a
 leste para as câmaras privadas e a norte para a sala de estar.
 ~
-290 d 0
+290 8 0 0 0 0
 D0
 ~
 ~
@@ -1280,7 +1242,7 @@ sua esposa, um recanto para os dois, para fugirem de tudo.  Há uma grande
 cama, um confortável divã diante da lareira - é uma organização muito
 atraente.
 ~
-290 d 0
+290 8 0 0 0 0
 D3
 ~
 ~
@@ -1293,7 +1255,7 @@ banho, em cima de um curioso pedestal de pedra, que segura as brasas
 ardentes de carvão e a banheira.  Uma mesa de madeira fica na parede oeste
 com um espelho sobre ela.
 ~
-290 d 0
+290 8 0 0 0 0
 D2
 ~
 ~
@@ -1306,7 +1268,7 @@ que quando um convidado não desejado subir por estas escadas Cailveh ficará
 furioso.  Siga para cima na direção de seus aposentos particulares, mas
 esteja precavido sobre sua fúria e a ira de seus Deuses.
 ~
-290 d 0
+290 8 0 0 0 0
 D4
 ~
 ~
@@ -1314,8 +1276,7 @@ D4
 D5
 ~
 segredo secreto~
-:n 2 o segredo
-a -1 29071
+1 -1 29071
 S
 #29076
 O Laboratório~
@@ -1325,7 +1286,7 @@ recipientes preenchidos com líquidos coloridos.  A madeira abaixo de seus
 pés range ao seu pisar, de fato é difícil manter-se despercebido por um
 longo tempo.
 ~
-290 d 0
+290 8 0 0 0 0
 D1
 ~
 ~
@@ -1347,12 +1308,11 @@ abaixo de seus pés range ao seu pisar, de fato é difícil manter-se
 despercebido por um longo tempo.  Há uma porta na parede sul, a qual não
 parece ser aberta com freqüência.
 ~
-290 d 0
+290 8 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-ab 29000 29081
+1 29000 29081
 D3
 ~
 ~
@@ -1365,7 +1325,7 @@ confortável cadeira fica na parede oeste, ela parece ser usada
 freqüentemente.  Estantes revestem a parede peste, a maioria dos livros são
 mais escolásticos do que para pesquisa.
 ~
-290 d 0
+290 8 0 0 0 0
 D0
 ~
 ~
@@ -1381,7 +1341,7 @@ A Biblioteca~
 imaginar.  Cada centímetro de espaço foi tomado por estantes e livros, todos
 organizados por conteúdo e tamanho.
 ~
-290 d 0
+290 8 0 0 0 0
 D0
 ~
 ~
@@ -1397,7 +1357,7 @@ O Observatório~
 para os céus.  Um estranho objeto fora posto perto da janela, se parece com
 um longo tubo com uma lente em ambas as pontas.
 ~
-290 d 0
+290 8 0 0 0 0
 D3
 ~
 ~
@@ -1408,11 +1368,10 @@ O Quarto de Artefatos~
    Aqui, se guarda todo tipo de objetos, desde de utensílios velhos, até
 todo tipo de inutilidade.  Aqui, mais se parece com um armazém de velharias.
 ~
-290 0 0
+290 0 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-ab 29000 29077
+1 29000 29077
 S
 $~

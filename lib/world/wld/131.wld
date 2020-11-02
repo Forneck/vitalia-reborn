@@ -15,20 +15,18 @@ aumentando e que estão ficando cada vez mais difíceis de retirar. Com o
 tempo você se acalma e começa a ver uma aura azul clara vindo de dentro da 
 cova.
 ~
-131 dg 1
+131 72 0 0 0 1
 D1
 Uma porta conduz a um lugar sombrio que contém criaturas não muito 
 hospitaleiras.
 ~
 porta grande madeira~
-:n 2 a porta grande de madeira
 1 -1 13111
 D3
 Uma porta conduz a um lugar sombrio que contém criaturas não muito 
 hospitaleiras.
 ~
 porta grande madeira~
-:n 2 a porta grande de madeira
 1 -1 13102
 D4
 ~
@@ -43,7 +41,7 @@ rapidamente um imenso tesouro atrás da escuridão. O caminho continua ao
 norte. Existe também uma sala ao oeste, e você com certeza pode voltar pela 
 entrada ao leste.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 As sombras aumentam.
 ~
@@ -53,7 +51,6 @@ D1
 Uma porta leva a entrada.
 ~
 porta~
-:n 2 a porta
 1 -1 13101
 D3
 Você vê um estranho quarto escuro lá.
@@ -72,7 +69,7 @@ perturbado. É completamente visível que seus olhos estão ardendo e muito
 vermelho. Você pensa conseguir ver grotescos lábios sorrindo. O único modo 
 de sair daqui é por onde você entrou.
 ~
-131 agd 1
+131 73 0 0 0 1
 D1
 As sombras diminuem, pois você consegue ver uma luz.
 ~
@@ -88,7 +85,7 @@ está completamente acordado, que estranho. Deve ser a suavidade das imagens
 que estão fazendo você pensar isso. O caminho continua ao leste e pelas 
 sombras ao sul.
 ~
-131 dg 1
+131 72 0 0 0 1
 D1
 Tudo o que você consegue ver é sombra.
 ~
@@ -111,7 +108,7 @@ como se alguém estivesse as empurrando de algum lugar. Você deve voltar
 pelo oeste, novamente pelas sombras, ou pelo norte, onde elas estão 
 puxando você.
 ~
-131 cdeg 1
+131 92 0 0 0 1
 D0
 À sua frente houve uma vez um espetáculo de armas, ou talvez uma emboscada.
 ~
@@ -132,7 +129,7 @@ tornaram mais significativas agora. Nada de valor significante pode ser
 encontrado no meio dos restos. O caminho continua ao norte e você pode 
 voltar ao sul.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 As sombras diminuem a frente.
 ~
@@ -151,7 +148,7 @@ estão se retirando, você já não consegue mais sentir o toque delas, mas
 você sente outra presença agora. Esta segunda presença. . . Agradável. 
 Fica mais forte ao leste, e as sombras ficam mais fortes para o sul.
 ~
-131 dg 1
+131 72 0 0 0 1
 D1
 Está bastante luminoso, e você não vê mais nenhuma sombra naquela direção.
 ~
@@ -173,12 +170,11 @@ intensas. Ao sul você consegue ouvir o que parece serem resmungos, nem
 mesmo quem conhece o idioma consegue compreender o que eles estão dizendo, 
 e você gostaria?
 ~
-131 dg 1
+131 72 0 0 0 1
 D0
 Estranho e intenso as letras quem cobrem portões à frente.
 ~
 portao brilhando letra~
-:n 1 o portão brilhando
 1 -1 13123
 D2
 As sombras fazem você começar a pensar novamente...
@@ -201,7 +197,7 @@ delas e também pelo fato de que existem olhos o observando da escuridão.
 Para o norte você pode ver as sombras diminuírem, e felizmente também 
 consegue ver o caminho ao sul.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 As sombras diminuem, a você pensa conseguir ver uma fraca luz. 
 ~
@@ -225,7 +221,7 @@ você adquire um sentimento de que outro aventureiro esteve vagando por
 aqui antes. Você agora está sentindo muito medo e começa a ouvir barulhos 
 não muito amigáveis vindo do leste.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 As sombras aumentam a um ponto além da imaginação.
 ~
@@ -251,7 +247,7 @@ caminho continua, com monstros e sombras maiores e mais maléficas. Para
 o leste você nota um pequeno posto de guarda que parece estar deserto e 
 para o oeste existe uma entrada.
 ~
-131 dg 1
+131 72 0 0 0 1
 D0
 As sombras aumentam.
 ~
@@ -266,7 +262,6 @@ D3
 Uma velha, porta de madeira o leva novamente à entrada.
 ~
 porta~
-:n 2 a porta
 1 -1 13101
 S
 #13112
@@ -277,7 +272,7 @@ porta de madeira que uma vez foi uma entrada, está completamente
 apodrecida. Você nota um pedaço antigo de papel no chão. A única forma de 
 sair deste lugar é pela entrada, ou seja, ao oeste.
 ~
-131 dg 1
+131 72 0 0 0 1
 D3
 Você consegue ver sombras e um pouco de luz.
 ~
@@ -294,12 +289,11 @@ humanos. Este quarto de guarda existe aparentemente para vigiar a entrada
 do quarto ao norte. Não há nenhuma idéia do que possa haver lá. O caminho 
 continua ao leste e oeste.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 Uma notável e bem preservada porta para um quarto desconhecido.
 ~
 porta preservada~
-:n 2 a porta preservada
 1 13101 13114
 D1
 As sombras aumentam.
@@ -325,12 +319,11 @@ quarto também parece ter outras qualidades. Por exemplo, você não consegue
 pensar, não por causa de qualquer barulho mas por causa da falta disto. A 
 única saída é a porta para o sul.
 ~
-131 jhgfedca 1
+131 765 0 0 0 1
 D2
 Lá fora parece ser muito mais normal do que aqui.
 ~
 porta~
-:n 2 a porta
 1 13101 13113
 S
 #13115
@@ -345,7 +338,7 @@ difícil saber, mas se não fizer isto talvez não consigas sair daqui... Você
 sente um forte puxão do leste, mas você ainda pode voltar pelo o oeste para 
 escapar disto.
 ~
-131 agfd 1
+131 105 0 0 0 1
 D1
 Você vê uma grande praça repleta de estranhas sombras.
 ~
@@ -371,7 +364,7 @@ descobrir. Para o norte existe um imenso corredor, e para o sul mais
 sombras estranhas. Ainda existe a opção de voltar ao oeste, talvez você 
 devesse fazer isto enquanto ainda tiver uma chance de escapar.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 Você vê um grande corredor. 
 ~
@@ -381,7 +374,6 @@ D1
 Uma pequena porta dá acesso a uma loja.
 ~
 porta~
-:n 2 a porta
 1 -1 13117
 D2
 As sombras aumentam.
@@ -406,12 +398,11 @@ sente um estranho conforto nesta loja, e suspeita estar vindo do globo
 azul que existe aqui. Você sente uma forte aura mágica vindo disto. Ao 
 oeste existe uma porta. Você entrou por lá.
 ~
-131 dghe 1
+131 216 0 0 0 1
 D3
 Uma pequena porta de madeira protege você do mundo exterior. 
 ~
 porta madeira pequena~
-:n 2 a porta pequena de madeira
 1 -1 13116
 S
 #13118
@@ -421,7 +412,7 @@ Parece ter sido um largo corredor usado para comércio, os pequenos postos
 de madeira existem já há bastante tempo. Para o lado sul existe uma praça, 
 e ao norte as sombras esconderam tudo.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 O grande corredor continua.
 ~
@@ -444,7 +435,7 @@ azul que conduz para um quarto bastante elegante. Você observa um pouco
 mais adiante e parece conseguir ver uma pintura. Talvez você devesse 
 confirmar isto. 
 ~
-131 adg 1
+131 73 0 0 0 1
 D1
 Uma estranha pintura parecendo ser um portal que provavelmente de acesso 
 a um quarto.
@@ -471,13 +462,12 @@ Elas parecem ter medo deste portão. Uma única chave dourada está no chão,
 e também brilha com uma estranha luz etérea. Para o lado leste mais 
 sombras. Para o norte existe um imenso portão.
 ~
-131 cdg 1
+131 76 0 0 0 1
 D0
 Você está diante de um imenso portão brilhante que parece estar afastando 
 as sombras.
 ~
 portao brilhante~
-:n 1 o portão brilhante
 1 13102 13121
 D1
 Algumas sombras se escondem além do alcance do portão.
@@ -494,18 +484,17 @@ um palácio opulento. Com certeza esta foi a área mais rica de Torin. O
 portão está ao sul e para o lado oeste outro quarto bastante iluminado e 
 elegante. Um sinal foi cuidadosamente fixado na parede.
 ~
-131 dg 1
+131 72 0 0 0 1
 D2
 Um grande portão brilhante está em seu caminho.
 ~
 portao brilhante~
-:n 1 o portão brilhante
 1 13102 13120
 D3
 Um quarto escasso, porém bastante útil ainda.
 ~
 ~
-0 -1 13122 0
+0 -1 13122
 S
 #13122
 O Posto De Garin~
@@ -521,7 +510,7 @@ ninguém, então de repente você consegue vê-lo. Ele está encostado contra
 a parede. As roupas e as magníficas armas estão camufladas. Você observa 
 o quarto do portão ao leste e ao oeste.
 ~
-131 dg 1
+131 72 0 0 0 1
 D1
 Você vê um quarto do portão e um imenso portão brilhante.
 ~
@@ -544,7 +533,7 @@ bastante insípido, mas funcional está ao leste. Para o norte e oeste
 existem estranhos globos brilhantes, e para o lado sul um majestoso portão 
 coberto com letras rúnicas.
 ~
-131 dg 1
+131 72 0 0 0 1
 D0
 Lá está um estranho caminho.
 ~
@@ -561,7 +550,6 @@ Você vê um grande portão coberto com letras rúnicas que está protegendo
 este lugar das sombras.
 ~
 portao brilhante~
-:n 1 o portão brilhante
 1 -1 13108
 D3
 Você vê um estranho bulevar alinhado com um globo brilhante.
@@ -576,13 +564,12 @@ adquirir isto. Age como um campo de força impedindo a entrada. Como é
 hostil!  Você vê lojas ao norte, oeste e sul. Infelizmente esta cobertura 
 cobre as lojas ao sul e oeste. Para o leste está um quarto do portão.
 ~
-131 dg 1
+131 72 0 0 0 1
 D0
 Você vê uma pequena loja pitoresca que no passado tenha sido um 
 estabelecimento familiar.
 ~
 porta~
-:n 2 a porta
 1 13103 13125
 D1
 Você vê o quarto repleto de sombras. 
@@ -601,18 +588,16 @@ braço bate um armário no quarto, talvez devesse ter mais cuidado. Você
 também nota ao oeste que existe um remendo na parede. Talvez... Sim, parece 
 ser a impressão de uma mão. Ao sul está a entrada da loja.
 ~
-131 adg 1
+131 73 0 0 0 1
 D2
 Lá existe um caminho bastante iluminado.
 ~
 porta~
-:n 2 a porta
 1 13103 13124
 D3
 ~
 secreta passagem~
-:n 2 a passagem secreta
-ad -1 13126
+1 -1 13126
 E
 parede impressao mao~
 A pequena decoração na parede definitivamente é a impressão de uma mão. 
@@ -627,13 +612,12 @@ paredes quando os fungos nela contido brilham. A caverna continua ao oeste
 e sul, para o lado norte uma parede e para o lado leste uma porta leva 
 até a loja.
 ~
-131 adg 1
+131 73 0 0 0 1
 D1
 A escuridão, diante da porta feita de pedras atrás da pequena loja.
 ~
 secreta passagem pedra porta~
-:n 2 a porta da passagem secreta 
-ad -1 13125
+1 -1 13125
 D2
 A escuridão leva diretamente para dentro da caverna.
 ~
@@ -654,7 +638,7 @@ gotejar das estalagmites sobre você. Espere um segundo, você olha ao
 redor novamente, e poderia jurar ter visto olhos vermelhos o encararem 
 da escuridão. A caverna continua envolver você ao norte, e oeste.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 A escuridão infinita continua. 
 ~
@@ -680,7 +664,7 @@ realizado isto sozinha. Uma piscina no chão da caverna ilumina
 incrivelmente bem este lugar... e falando do chão, você vê grandes marcas 
 de raspado ao oeste. Para o norte, sul e leste a caverna envolve você.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 A escuridão infinita continua.
 ~
@@ -699,8 +683,7 @@ A escuridão infinita continua, mas você nota algo familiar lá.
 D3
 ~
 pedra pedras porta~
-:n 2 a porta feita de pedras 
-ad -1 13130
+1 -1 13130
 E
 marcas raspado~
 Um enorme posto feito de pedras bloqueia seu caminho, mas esses raspados 
@@ -719,7 +702,7 @@ adivinha ser ao sul e também ao leste. Para o norte existe uma estranha
 depressão e um sentimento mais forte indica que ao longo daqui você pode 
 ver que é ou era um túnel, só existe um modo de descobrir.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 Uma depressão escura leva ao desconhecido.
 ~
@@ -752,7 +735,7 @@ sussurrado é absorvido para dentro das paredes.  Você pisa fortemente no
 chão, bate nas paredes, mas nenhum barulho é ouvido.  Não há nada que você
 possa fazer para criar qualquer tipo de som.
 ~
-131 agfd 1
+131 105 0 0 0 1
 D0
 Uma fila de estátuas feito de granito segue pelo resto do corredor.
 ~
@@ -761,8 +744,7 @@ Uma fila de estátuas feito de granito segue pelo resto do corredor.
 D1
 ~
 pedra gigante secreta~
-:n 2 a pedra gigante 
-ad 13104 13128
+1 13104 13128
 E
 pedra gigante~
 É um grande bloco de pedra. Talvez você pudesse mover isto...
@@ -781,7 +763,7 @@ reconhece. Você vê um pequeno sinal na última das estátuas. Pode-se
 prosseguir ao oeste pelo começo dos corredores, e ao sul pelo caminho que 
 você veio.
 ~
-131 agfd 1
+131 105 0 0 0 1
 D2
 A entrada para o corredor está lá, onde existe algo gigante bloqueando o 
 caminho.
@@ -805,7 +787,7 @@ muitos anos atrás. Para o leste e sul existem portas bem preservadas. O
 carvalho parece ser novo e você consegue sentir o cheiro da seiva 
 recentemente cortada. Para o norte e oeste existem mais corredores.
 ~
-131 agfd 1
+131 105 0 0 0 1
 D0
 Ha Ha Ha.
 ~
@@ -815,13 +797,11 @@ D1
 Uma porta bem preservada está aqui.
 ~
 porta madeira carvalho~
-:n 2 a porta de madeira
 0 -1 13131
 D2
 Uma porta bem preservada está aqui.
 ~
 porta madeira carvalho~
-:n 2 a porta de madeira
 1 13104 13135
 D3
 Um quarto bastante grande está lá em cima, a entrada, o arco, isto tudo 
@@ -843,7 +823,7 @@ um quarto vazio e claro, existe agora um quarto ricamente decorado e
 iluminado. Você pode sentir o cheiro da seiva recentemente cortada do 
 carvalho ao sul, e para o oeste existe uma interseção vazia.
 ~
-131 agfd 1
+131 105 0 0 0 1
 D1
 Lá está um grande interseção porém vazia.
 ~
@@ -853,7 +833,6 @@ D2
 Uma porta bem preservada está aqui. 
 ~
 porta madeira carvalho~
-:n 2 a porta de madeira
 1 13104 13134
 E
 porta preservada leste~
@@ -872,12 +851,11 @@ de você e de outros que estão no quarto. Estas imagens flutuam dentro
 daqui e são como se fossem reais. As portas dianteiras bem preservadas 
 estão ao norte e sul, e os corredores continuam ao leste.
 ~
-131 agfd 1
+131 105 0 0 0 1
 D0
 Uma porta bem preservada está aqui.
 ~
 porta madeira carvalho~
-:n 2 a porta de madeira
 1 13104 13133
 D1
 Os corredores continuam até uma catedral.
@@ -888,7 +866,6 @@ D2
 Uma porta bem preservada está aqui. 
 ~
 porta madeira carvalho~
-:n 2 a porta de madeira
 1 -1 13137
 E
 porta madeira sul preservada~
@@ -920,12 +897,11 @@ as filas de estátuas e a continuação da passagem viva. Para o lado norte
 uma porta de madeira bem preservada e para o lado oeste está o quarto do 
 portão.
 ~
-131 agfd 1
+131 105 0 0 0 1
 D0
 Uma porta bem preservada está aqui.
 ~
 porta madeira carvalho~
-:n 2 a porta de madeira
 1 13104 13132
 D1
 Esta fila de estátua continua, como se fossem paredes.
@@ -955,12 +931,11 @@ que isto fosse obra dos deuses e por este motivo foram construídos os
 altares aqui para que fossem adorados. A única forma de sair é pela mesma 
 entrada que você veio... ou continuando através da criatura.
 ~
-131 agfd 1
+131 105 0 0 0 1
 D1
 ~
 porta secreta~
-:n 2 a porta secreta
-ad -1 13142
+1 -1 13142
 D3
 Lá está o único caminho de saída e o único modo de fugir daqui.
 ~
@@ -975,12 +950,11 @@ sombras.  Estas sombras parecem mais amigáveis, de alguma forma.  Elas
 também são menos intensas e menos opressivas. Elas continuam ao sul, e 
 uma porta bem conservada está ao norte.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 Uma porta bem preservada está aqui.
 ~
 porta carvalho madeira~
-:n 2 a porta de madeira
 1 -1 13134
 D2
 Estas sombras recentes continuam abaixo na passagem.
@@ -1004,7 +978,7 @@ você já sentiu isto em um outro lugar... A forma de sair é pelas sombras
 e também pelo lugar estranho que você sabe agora que se trata de uma casa 
 que está ao sul.
 ~
-131 adg 1
+131 73 0 0 0 1
 D2
 As sombras estão lá fora.
 ~
@@ -1026,13 +1000,12 @@ buraco. Infelizmente um estranho campo de força azul o impede de tentar
 descer. Para o leste está uma velha porta, e para o lado sul mais corredor 
 das sombras.
 ~
-131 dg 1
+131 72 0 0 0 1
 D1
 Uma grande porta velha bloqueia a passagem para um lugar desconhecido nos 
 corredores.
 ~
 velha porta desconhecido~
-:n 2 a porta desconhecida
 1 -1 13108
 D2
 O corredor das sombras continua.
@@ -1051,7 +1024,7 @@ certeza você irá descobrir o que aconteceu neste lugar para fazer com que
 as sombras assumissem e os residentes se escondessem. O caminho continua, 
 nestas sombras, para o norte e leste.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 As sombras continuam.
 ~
@@ -1075,7 +1048,7 @@ que as sombras assumissem e os residentes se escondessem. As sombras
 continuam para o sul, leste e oeste. Para o norte você consegue ver um 
 sólido quarto de pedras.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 Você vê um quarto de pedra.
 ~
@@ -1111,7 +1084,7 @@ que se chama Torin. As recordações aparecem em pedaços, assim você não
 consegue saber a história completa. O corredor continua para o norte e 
 sul, existe uma porta de pedra para o leste e as sombras estão ao oeste. 
 ~
-131 dg 1
+131 72 0 0 0 1
 D0
 Você vê o corredor das sombras.
 ~
@@ -1121,7 +1094,6 @@ D1
 Uma grande porta de pedra bloqueia a passagem.
 ~
 pedra porta grande~
-:n 2 a grande porta de pedra
 1 -1 13136
 D2
 Um som assustador vem de dentro da escuridão das sombras.
@@ -1147,7 +1119,7 @@ Todas as sombras olham você com um ar de ansiedade... Não existe nenhuma
 saída deste lugar, a não ser por onde você entrou, mas isso também foi 
 bloqueado pelas sombras.
 ~
-131 agfd 1
+131 105 0 0 0 1
 D0
 A única forma de sair daqui é pelo caminho que está diante de você, ou 
 você escolhe isto ou espera pelas sombras decidirem... ? 
@@ -1164,7 +1136,7 @@ armaduras que adornam as paredes também estão. Algo parece estar se
 escondendo dentro das sombras, entretanto você não sabe o que é e possui 
 muito medo de tentar adivinhar.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 O corredor das sombras continua.
 ~
@@ -1193,7 +1165,7 @@ completamente comida e apodrecida. O chão de madeira também parece
 agüentar bem ao tempo, e você consegue ver toda a sujeira depositada. No 
 passado aqui havia grandes tapetes cobrindo isto tudo. 
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 As barracas continuam.
 ~
@@ -1209,7 +1181,7 @@ coisa daqui. O chão indica que faz muito tempo que ninguém pisa aqui.
 Para o lado oeste mais quartéis, para o lado leste um estranho corredor 
 destituído de sombras, e para o norte esta uma praça.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 Você vê uma praça.
 ~
@@ -1238,7 +1210,7 @@ um aventureiro menos afortunado que você; ele está com a roupa toda
 rasgada e aparentemente foi machucado de alguma forma pelas sombras. O 
 único modo de sair daqui é indo mais ao fundo nos quartéis, pelo oeste.
 ~
-131 adg 1
+131 73 0 0 0 1
 D1
 As barracas continuam.
 ~
@@ -1256,7 +1228,7 @@ proteção maior contra o frio até mesmo porque esta cidade inteira é
 subterrânea. Uma antiga nota prende sua atenção na pequena mesa de 
 escritura na qual está sentado.
 ~
-131 adg 1
+131 73 0 0 0 1
 D1
 Lá está um quarto de guerra.
 ~
@@ -1276,7 +1248,7 @@ esqueletos... Eles parecem terem sido guardas de uma posição bastante alta
 da cidade. Quando olha melhor ao seu redor nota o quarto dos tenentes ao 
 oeste, mais quartéis ao norte e o quarto do Chefe ao leste.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 As barracas continuam.
 ~
@@ -1306,7 +1278,7 @@ e a única coisa que você consegue ver são ossos. Você ainda consegue ver
 as marcas da espada deixado em seus ossos. A forma de sair daqui é por 
 onde você entrou, pelo o oeste.
 ~
-131 adg 1
+131 73 0 0 0 1
 D3
 O quarto de guerra está lá fora.
 ~
@@ -1325,7 +1297,7 @@ alguns soldados menos afortunados que evidentemente foram mortos, pois
 não conseguiram fugir. Você acredita conseguir ver algo à frente ao leste, 
 entretanto você pode voltar para a cidade pelo o oeste.
 ~
-131 adg 1
+131 73 0 0 0 1
 D1
 Você vê mais barracas dos guardas da cidade.
 ~
@@ -1347,7 +1319,7 @@ com grande facilidade esta cidade subterrânea. Das marcas nas paredes e
 pelo fato de que os beliches parece que foram rasgados você acredita que 
 este povo não fora nada melhor do que qualquer grupo de bárbaros.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 O corredor continua até onde se parecem barracas.
 ~
@@ -1367,7 +1339,7 @@ uma vez este lugar já foi repleto de beliches do exército de Torin. Não
 sobrou nada aqui, apesar de tanto tempo não ter sido usada você nota 
 sinais recentes de uso. Poderia ser qualquer um que esteve aqui.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 O fim das barracas.
 ~
@@ -1391,7 +1363,7 @@ se parece muito com as duas opções e continua conduzindo ao leste e oeste.
 Os beliches parecem terem sido limpos recentemente, pelo menos é o que 
 parece, mas mesmo assim parece que nunca foram usados.
 ~
-131 adg 1
+131 73 0 0 0 1
 D1
 O quartel continua chegando adiante em um enforquilhamento.
 ~
@@ -1413,7 +1385,7 @@ aqui, provavelmente para que não precisassem ir até suas casa, ou seja,
 para cavarem o mais rápido possível. Você consegue voltar somente pelo 
 caminho que você veio, ao sul.
 ~
-131 adg 1
+131 73 0 0 0 1
 D2
 As barracas continuam, porém aumentando.
 ~
@@ -1429,7 +1401,7 @@ beliches e você imagina que isto foi e possivelmente ainda é algum tipo de
 sede. Para o sul o corredor continua até um quarto grande e para o leste o 
 corredor segue até a parte principal da cidade.
 ~
-131 adg 1
+131 73 0 0 0 1
 D2
 Um grande quarto abriu-se diante de você.
 ~
@@ -1453,7 +1425,7 @@ iluminam a rua, entretanto você nunca viu qualquer coisa parecida como
 eles antes. Ao leste continua o bulevar e para o sul você pode ver a 
 Câmara dos Porteiros.
 ~
-131 dg 1
+131 72 0 0 0 1
 D1
 O corredor passa em frente a uma estrutura que, agora que você olha mais 
 atentamente a isto, definitivamente o faz lembrar de um templo, mas existe 
@@ -1478,12 +1450,11 @@ público. O resto da estrutura está impressionando e faz com que as ruas
 pavimentadas fiquem com um aspecto muito melhor. A estrada continua ao 
 leste e oeste.
 ~
-131 dg 1
+131 72 0 0 0 1
 D0
 Uma catedral muito grande está adiante.
 ~
 porta~
-:n 2 a porta
 1 -1 13165
 D1
 A estrada continua naquela direção.
@@ -1504,7 +1475,7 @@ douradas muito grandes que estão abertas ao público, como que estivessem
 convidando a todos para entrar. A rua embora termine aqui, permanece 
 extremamente limpa e muito bem iluminada.
 ~
-131 dg 1
+131 72 0 0 0 1
 D0
 Duas grandes portas estão abertas ao público, desmentindo a riqueza e o 
 poder.
@@ -1529,7 +1500,7 @@ ajudar. O altar está ao norte e para o lado sul as portas douradas que
 estão supostamente sempre abertas por ordem do Mestre Templar Mendo 
 possuem um papel fixado.
 ~
-131 dg 1
+131 72 0 0 0 1
 D0
 O altar está adiante.
 ~
@@ -1539,7 +1510,6 @@ D2
 Duas grandes portas estão abertas e conduzem para a parte exterior.
 ~
 ~
-:n 2 a porta dourada
 0 -1 13159
 S
 #13161
@@ -1550,7 +1520,7 @@ dele com certeza é muito importante. O resto do altar não impressiona nada,
 a não ser o ouro que ladrilha isso. Ao leste você nota uma pequena entrada 
 que conduz mais adiante no templo, talvez para uma câmara privada no templo.
 ~
-131 dfg 1
+131 104 0 0 0 1
 D1
 Um pequeno aposento está ao leste.
 ~
@@ -1573,7 +1543,7 @@ também fora uma criatura calma. Você pode ver uma tapeçaria na parte de
 trás do quarto. Para o lado leste outro pequeno quarto e para o oeste o 
 próprio Templo de Mendo. Para o lado sul um quarto.
 ~
-131 dfg 1
+131 104 0 0 0 1
 D1
 Você vê um pequeno quarto.
 ~
@@ -1598,7 +1568,7 @@ paredes marrons de pedra. A única coisa para quebrar a monotonia daqui é
 uma pequena cama onde Mendo quase não cabe. A única saída deste quarto é 
 ao norte.
 ~
-131 dfg 1
+131 104 0 0 0 1
 D0
 Você pode ver um quarto de meditação bastante claro.
 ~
@@ -1612,7 +1582,7 @@ agora nota que existe um gabinete adornado com pequenas jóias. Por outro
 lado o quarto possui somente paredes de madeira e uns pequenos azulejos de 
 pedra no chão. A única saída está ao oeste.
 ~
-131 gfa 1
+131 97 0 0 0 1
 D3
 Um pequeno quarto de meditação está naquela direção.
 ~
@@ -1627,7 +1597,7 @@ utilizado. Isto não parece com nada com que você tenha visto, mas nota
 alguma semelhança. O chão pardo não parece ter sido tocado há muito tempo. 
 A única saída deste quarto está ao sul.
 ~
-131 gfa 1
+131 97 0 0 0 1
 D2
 A estrada principal está lá fora. 
 ~
@@ -1643,7 +1613,7 @@ suficiente para você conseguir rastejar, mas você não pode permanecer
 aqui por muito tempo, pois sofre de claustrofobia. Ao norte você pode 
 ver uma caverna e para o sul uma outra.
 ~
-131 icdag 1
+131 333 0 0 0 1
 D0
 Uma grande caverna escura que possui um estranho cheiro está adiante.
 ~
@@ -1665,7 +1635,7 @@ pode um dia ter caminhado em duas pernas. Entretanto os sons de algo
 raspando fazem você pensar que isto ocorreu há muito tempo. Você pode 
 continuar pela caverna ao leste, oeste e pelo túnel ao sul.
 ~
-131 adg 1
+131 73 0 0 0 1
 D1
 A caverna continua.
 ~
@@ -1691,7 +1661,7 @@ insignificantes. Você não consegue entender o motivo que poderia ter
 reduzido estes seres inteligentes em tais animais, certamente eles se 
 degeneraram. Para o leste está mais uma seção desta pequena caverna.
 ~
-131 adg 1
+131 73 0 0 0 1
 D1
 O resto da caverna está lá fora, assim como também o caminho de saída.
 ~
@@ -1710,7 +1680,7 @@ Alguns pedaços da parede provavelmente foram utilizados como ferramentas
 por estes seres. Um pequeno nicho está ao leste e uma pequena rotatória 
 está ao sul.
 ~
-131 adg 1
+131 73 0 0 0 1
 D1
 Você vê um pequeno nicho, entretanto você consegue ver além disto o que 
 pode ser um pequeno quarto.
@@ -1738,7 +1708,7 @@ azulejos brancos estão no chão deste quarto. O suave gotejar de água da
 fonte quase faz você dormir. Você está tão à vontade que quase esquece 
 da saída ocidental, que é a única saída deste quarto.
 ~
-131 gfedc 1
+131 124 0 0 0 1
 D3
 Uma grande caverna está logo ali.
 ~
@@ -1753,7 +1723,7 @@ daqui pudesse ter sido usado como algum tipo de banheiro. As lágrimas
 que correm de seus olhos fazem com que a sujeira grude de alguma forma 
 neles, mas você ainda consegue ver o caminho para sair daqui ao norte.
 ~
-131 adg 1
+131 73 0 0 0 1
 D0
 Fora da asquerosa sujeira que cobre esta área você pode ver uma área 
 maior dentro de uma caverna que parece ser grande o bastante para que 
@@ -1775,15 +1745,11 @@ isto lhe proporciona, pois ainda é um mistério.  Entre, se você for
 ousado - caso contrário, volte pelo caminho das Árvores Negras ao oeste 
 e sul.  
 ~
-131 0 1
+131 0 0 0 0 1
 D2
 ~
 ~
 0 -1 13173
-D3
-~
-~
-0 -1 -1
 D5
 ~
 ~
@@ -1799,7 +1765,7 @@ enterrada debaixo daqui. Muitas criaturas maléficas vagam livremente ao
 longo das árvores. O caminho pela floresta segue ao oeste e ao norte 
 existe uma pequena justificação.
 ~
-131 ag 1
+131 65 0 0 0 1
 D0
 ~
 ~
@@ -1818,15 +1784,15 @@ Além disso, elas são muito antigas, escondendo entre seus ramos e raízes
 muitos mistérios.  Há muita dificuldade em andar aqui, sendo possível
 caminhar apenas por uma estreita trilha quase desaparecida.
 ~
-131 ag 1
-D3
-~
-~
-0 -1 13581
+131 65 0 0 0 1
 D1
 ~
 ~
 0 -1 13175
+D3
+~
+~
+0 -1 13581
 S
 #13175
 A Floresta das Árvores Negras~
@@ -1837,15 +1803,15 @@ raízes muitos mistérios.  Há muita dificuldade em andar aqui, sendo possível
 caminhar apenas por uma estreita trilha quase desaparecida que segue leste-
 oeste.
 ~
-131 ag 1
-D3
-~
-~
-0 -1 13174
+131 65 0 0 0 1
 D1
 ~
 ~
 0 -1 13176
+D3
+~
+~
+0 -1 13174
 S
 #13176
 A Floresta das Árvores Negras~
@@ -1856,15 +1822,15 @@ raízes muitos mistérios.  Há muita dificuldade em andar aqui, sendo possível
 caminhar apenas por uma estreita trilha quase desaparecida que segue leste-
 oeste.
 ~
-131 ag 1
-D3
-~
-~
-0 -1 13175
+131 65 0 0 0 1
 D1
 ~
 ~
 0 -1 13177
+D3
+~
+~
+0 -1 13175
 S
 #13177
 A Floresta das Árvores Negras~
@@ -1875,15 +1841,15 @@ raízes muitos mistérios.  Há muita dificuldade em andar aqui, sendo possível
 caminhar apenas por uma estreita trilha quase desaparecida que segue leste-
 oeste.
 ~
-131 ag 1
-D3
-~
-~
-0 -1 13176
+131 65 0 0 0 1
 D1
 ~
 ~
 0 -1 13178
+D3
+~
+~
+0 -1 13176
 S
 #13178
 A Floresta das Árvores Negras~
@@ -1894,14 +1860,14 @@ raízes muitos mistérios.  Há muita dificuldade em andar aqui, sendo possível
 caminhar apenas por uma estreita trilha quase desaparecida que segue leste-
 oeste.
 ~
-131 ag 1
-D3
-~
-~
-0 -1 13177
+131 65 0 0 0 1
 D1
 ~
 ~
 0 -1 13173
+D3
+~
+~
+0 -1 13177
 S
-$
+$~

@@ -8,7 +8,7 @@ magnífico Atlântico e de suas lendas, o faz um dos oceanos mais poéticos e
 temidos de Vitália.  Ao noroeste você observa as majestosas águas do oceano
 Atlântico.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D6
 Você observa as belas águas do Atlântico.
 ~
@@ -28,7 +28,7 @@ fazem seu corpo tremer.  Ao norte e sudeste você observa a imensidão das
 belas águas do Atlântico e ao noroeste você observa as frias águas do oceano
 Atlântico Norte.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D0
 Você observa as belas águas do Atlântico.
 ~
@@ -54,7 +54,7 @@ sul você as belas águas do Atlântico, ao leste você observa as frias águas
 do mar do Norte e ao noroeste você observa as temidas águas vikings do mar 
 da Noruega.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D1
 Você observa as frias águas do mar do Norte.
 ~
@@ -81,13 +81,13 @@ seu redor você observa grandes porções de terra banhadas pelo arrepiante mar
 do Norte.  Ao leste você observa as gélidas águas do mar do Norte e ao oeste
 você observa o lendário oceano Atlântico.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D1
 Você observa as frias águas do mar do Norte.
 ~
 ~
 0 -1 12604
-D3 
+D3
 Você observa as lendárias águas do oceano Atlântico.
 ~
 ~
@@ -101,7 +101,7 @@ você observa a península Escandinavia e ao sul você observa as lindas terras
 dinamarquesas.  Ao norte você percebe uma bela praia escandinava, ao leste e
 ao oeste você observa as frias águas do mar do Norte.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D0
 Você observa uma bela praia escandinava.
 ~
@@ -124,7 +124,7 @@ O Mar do Norte~
 península escandinava.  Ao leste e ao oeste você observa as gélidas águas
 do mar do Norte.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D1
 Você observa as frias águas do mar do Norte.
 ~
@@ -143,13 +143,13 @@ observa belos e imensos fiordes, que circundam toda a costa da península
 escandinava.  Ao oeste você observa as frias águas do mar do Norte e ao
 sudeste você observa o mar Báltico.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D3
 Você observa as frias águas do mar do Norte.
 ~
 ~
 0 -1 12605
-D8 
+D8
 Você observa o mar Báltico.
 ~
 ~
@@ -164,7 +164,7 @@ guerra.  Ao norte você observa magníficos fiordes, que formam a costa da
 península escandinava.  Ao leste você observa a continuação do mar Báltico
 e ao noroeste você observa as frias águas do mar do Norte.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D1
 Você observa as águas do mar Báltico.
 ~
@@ -183,7 +183,7 @@ Báltico.  Ao norte você observa uma bela praia escandinava entre dois
 grandes fiordes.  Ao nordeste e ao oeste você observa as frias águas do
 mar Báltico.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D0
 Você observa uma linda praia escandinava.
 ~
@@ -207,7 +207,7 @@ Vikings suecos.  Ao noroeste você observa monumentais fiordes que formam a
 costa da península escandinava.  Ao norte você observa o golfo de Bothnia e
 ao sudoeste você observa as frias águas do mar Báltico.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D0
 Você observa o golfo de Bothnia.
 ~
@@ -227,7 +227,7 @@ linha do horizonte e ao sudeste você observa as águas lendárias do oceano
 Atlântico.  Ao leste entre dois magníficos fiordes você observa uma bela
 praia escandinava.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D0
 Você observa as águas dominadas pelos Vikings noruegueses.
 ~
@@ -254,7 +254,7 @@ sons estranhos.  Ao norte você observa uma bela planície norueguesa, ao
 oeste você observa o temido mar da Noruega e ao sudeste você observa a
 extensão da linda praia escandinava.
 ~
-126 c 2
+126 4 0 0 0 2
 D0
 Você observa uma bela paisagem escandinava.
 ~
@@ -281,7 +281,7 @@ liberdade, de leveza e de deslumbramento.  Ao norte você observa uma vila
 viking e ao leste e noroeste você observa no horizonte toda a extensão da 
 praia escandinava.
 ~
-126 0 2
+126 0 0 0 0 2
 D0
 Você observa uma vila viking.
 ~
@@ -306,7 +306,7 @@ magnífica praia.  Ao norte você observa uma vila viking, ao sul você observa
 as frias águas do mar do Norte e ao oeste você observa a extensão da 
 maravilhosa praia escandinava.
 ~
-126 c 2
+126 4 0 0 0 2
 D0
 Você observa uma vila viking.
 ~
@@ -332,7 +332,7 @@ fazem sacrifícios.  Ao seu redor belíssimas runas e uma monumental estatua
 do supremo deus dos trovões.  Ao noroeste você observa o centro da vila
 viking.
 ~
-126 ht 1
+126 524416 0 0 0 1
 D6
 Você observa o centro da vila viking.
 ~
@@ -349,7 +349,7 @@ porém o clima desta região faz com que as criaturas que vivam aqui fiquem
 abrigadas.  Ao norte e ao leste você observa a fria e solitária floresta
 sueca.
 ~
-126 rs 5
+126 393216 0 0 0 5
 D0
 Você observa a floresta branca.
 ~
@@ -368,7 +368,7 @@ dificuldade de caminhar pelas trilhas é muito grande, por causa da enorme
 quantidade de neve acumulada aqui.  Ao oeste você observa uma trilha na
 floresta de gelo e ao leste você observa uma bela planície escandinava.
 ~
-126 rs 5
+126 393216 0 0 0 5
 D1
 Você observa uma linda planície escandinava.
 ~
@@ -389,7 +389,7 @@ norte você observa uma vila viking, ao sul você observa uma bela praia e ao
 fundo o mar Báltico, e ao oeste você percebe a presença de uma floresta
 coberta de gelo e neve.
 ~
-126 0 2
+126 0 0 0 0 2
 D0
 Você observa uma movimentada vila viking.
 ~
@@ -415,7 +415,7 @@ viking sueca, demonstrando desde já, quem é que manda nessas terras.  Ao
 norte você observa uma bela planície escandinava e ao sul você observa as
 gélidas águas do mar Báltico.
 ~
-126 c 2
+126 4 0 0 0 2
 D0
 Você observa uma linda planície escandinava.
 ~
@@ -436,7 +436,7 @@ formando assim as praias escandinavas.  Ao sul e noroeste você observa o mar
 da Noruega na linha do horizonte e ao leste você observa o delta do rio 
 Glama.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D1
 Você observa o delta do rio Glama.
 ~
@@ -463,7 +463,7 @@ marcada pela violência e seus deuses são impiedosos.  Ao norte você observa
 o belo delta do rio Glama, ao sul você observa uma magnífica praia 
 escandinava e ao sudeste você observa o centro da vila viking.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa as águas do rio Glama.
 ~
@@ -491,7 +491,7 @@ norte você observa uma cabana com várias armas ao seu redor, ao sul você
 observa uma bela praia escandinava e ao noroeste você observa uma tranqüila
 planície escandinava.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa a cabana do ferreiro viking.
 ~
@@ -523,7 +523,7 @@ observa uma bela planície escandinava, ao leste você observa uma grande
 cabana de madeira e turfa, ao sudeste você observa um santuário, ao sul você 
 observa uma bela praia escandinava e ao oeste você o centro da vila viking.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa uma cabana de madeira e turfa.
 ~
@@ -567,7 +567,7 @@ comprimento quase igual ao da cabana, várias cadeiras de madeira e uma
 grande fogueira no canto norte da cabana.  Ao oeste você observa o agitado
 centro da vila viking.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D3
 Você observa o centro da vila viking.
 ~
@@ -581,12 +581,11 @@ Eric.  Ao seu redor várias peças de ouro e prata, peças de vários lugares
 oriundas de ataques marítimos e invasões a outras cidades.  Ao norte você
 observa uma porta de madeira.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira 
 2 12722 12631
 S
 #12625
@@ -597,7 +596,7 @@ braços e pernas de antigos inimigos vencidos.  A sala dos troféus intimida
 qualquer aventureiro que chega a fortaleza viking.  Ao norte você observa
 um grande salão.
 ~
-126 dru 0
+126 1179656 0 0 0 0
 D0
 Você observa um grande salão.
 ~
@@ -610,7 +609,7 @@ Uma Cabana de Madeira~
 observa uma cama de turfa e alguns restos de comida.  Ao leste você observa
 uma bela planície escandinava.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D1
 Você observa a vila viking.
 ~
@@ -627,7 +626,7 @@ marcada pela violência e seus deuses são impiedosos.  Ao norte você observa
 o centro da vila viking, ao sul você observa uma bela praia escandinava e
 ao oeste você observa uma cabana de madeira e turfa.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa a agitação no centro da vila viking.
 ~
@@ -652,7 +651,7 @@ cabana.  Os ferreiros vikings são vitais para seus povos, pois saem das mãos
 deles as armas que farão seus inimigos se ajoelharem.  Ao sul você observa o
 centro da vila viking.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D2
 Você observa o centro movimentado da vila viking.
 ~
@@ -665,7 +664,7 @@ O Armazém da Vila~
 observa suprimentos que daria para alimentar a vila toda por um ano.  Ao sul
 você observa o centro da vila viking.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D2
 Você observa o centro da vila viking.
 ~
@@ -680,7 +679,7 @@ borboletas e os pássaros dão um colorido especial a planície.  Ao norte você
 observa as águas do rio Glama e ao sudoeste você observa uma agitada vila 
 viking.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa o rio Glama.
 ~
@@ -701,12 +700,11 @@ de ouro do rei Eric, ao seu lado dois cálices de prata a espera dos líderes
 vikings da península escandinava.  Ao norte e ao sul você observa uma porta
 de madeira.
 ~
-126 dg 0
+126 72 0 0 0 0
 D0
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 12639
 D1
 Você observa o grande salão da fortaleza.
@@ -717,7 +715,6 @@ D2
 Você observa uma porta de madeira.
 ~
 porta madeira~
-:n 2 a porta de madeira
 2 12722 12624
 S
 #12632
@@ -730,7 +727,7 @@ um santuário viking, ao sul você observa a sala de troféus do rei Eric e ao
 nordeste você observa a extensão de todo salão da fortaleza, vindo desde o
 grande portão até o trono do imponente Eric.
 ~
-126 dg 0
+126 72 0 0 0 0
 D0
 Você observa um belo santuário.
 ~
@@ -762,7 +759,7 @@ também que os guerreiros que morrem segurando armas em batalhas viveram
 para sempre no Valhala, em grandes batalhas de dia e a noite em majestosas
 festas.  Ao leste você observa o centro da vila viking.
 ~
-126 ht 1
+126 524416 0 0 0 1
 D1
 Você observa o centro da vila viking.
 ~
@@ -777,7 +774,7 @@ Ao norte você observa alguns homens se divertindo em jogos, ao leste você
 uma cabana de madeira e turfa, ao sul você observa uma planície escandinava
 e ao oeste você observa um belo santuário viking.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa o centro da vila viking.
 ~
@@ -792,7 +789,7 @@ D2
 Você observa uma tranqüila planície escandinava.
 ~
 ~
-0 -1 12627 
+0 -1 12627
 D3
 Você observa um sublime santuário ao deus Odin.
 ~
@@ -807,7 +804,7 @@ cabana.  Os ferreiros vikings são vitais para seus povos, pois saem das mãos
 deles as armas que farão seus inimigos se ajoelharem.  Ao oeste você observa 
 o centro da vila viking.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D3
 Você observa o centro da vila viking.
 ~
@@ -821,7 +818,7 @@ oeste você observa o encontro das águas do rio Glama com as águas do mar da
 Noruega, ao sul você observa uma vila viking, ao norte você observa uma
 floresta coberta de neve e ao oeste você observa as águas do rio Glama.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D0
 Você observa uma floresta coberta de neve.
 ~
@@ -851,7 +848,7 @@ medida que você segue para norte a quantidade de neve e gelo aumenta e o
 frio fica incontrolável.  Ao norte você observa uma floresta coberta de neve
 e gelo, ao leste e oeste você observa as águas cristalinas do rio Glama.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D0
 Você observa uma floresta coberta de gelo e neve.
 ~
@@ -874,7 +871,7 @@ O Rio Glama~
 observa uma floresta coberta de gelo e neve, ao sul você observa uma bela
 planície escandinava e ao oeste você observa as águas do rio Glama.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D0
 Você observa uma floresta coberta de gelo e neve.
 ~
@@ -900,12 +897,11 @@ Você percebe que a verdadeira riqueza deste povo está na sua força e coragem
 de derrubar e aniquilar qualquer inimigo que não se ajoelhe perante seu rei
 e seu povo.  Ao sul você observa o grande salão e o trono de ouro de Eric.
 ~
-126 dg 0
+126 72 0 0 0 0
 D2
 Você observa o grande salão da fortaleza viking.
 ~
 porta madeira~
-:n 2 a porta de madeira
 1 -1 12631
 S
 #12640
@@ -916,7 +912,7 @@ O rei Eric já sacrificou para Odin uma vez quatrocentos prisioneiros de
 guerra.  A sensação aqui é de tranqüilidade.  Ao sul você observa o grande
 salão da fortaleza viking.
 ~
-126 dght 0
+126 524488 0 0 0 0
 D2
 Você observa o grande salão da fortaleza.
 ~
@@ -930,7 +926,7 @@ observa toda a extensão do salão, feito para que o rei pudesse ver todas
 pessoas que entrassem na fortaleza.  Ao leste você observa alguns guardas
 vikings e ao sudoeste você observa o salão da fortaleza.
 ~
-126 dg 0
+126 72 0 0 0 0
 D1
 Você observa um ponto de guarda viking.
 ~
@@ -949,12 +945,11 @@ redor você observa várias armas e guardas vikings.  Para se chegar ao rei
 será preciso muita sorte.  Ao leste você observa um grande portão de madeira
 e ao oeste você observa o grande salão da fortaleza.
 ~
-126 dg 0
+126 72 0 0 0 0
 D1
 Você observa um grande portão de madeira.
 ~
 grande portao madeira~
-:n 1 um grande portão de madeira
 1 -1 12643
 D3
 Você observa o grande salão da fortaleza viking.
@@ -969,7 +964,7 @@ olham para você curiosamente.  A fortaleza é feita de madeira bastante
 resistente.  Ao leste você observa o centro movimentado da vila viking e ao
 oeste você observa um grande portão de madeira.
 ~
-126 0 1
+126 0 0 0 0 1
 D1
 Você observa o centro da vila viking.
 ~
@@ -979,7 +974,6 @@ D3
 Você observa um grande portão de madeira.
 ~
 grande portao madeira~
-:n 1 um grande portão de madeira
 1 -1 12642
 S
 #12644
@@ -991,7 +985,7 @@ e de turfa e pequenas crianças brincando.  Ao norte e ao sul você observa o
 centro da vila viking, ao leste você percebe uma bela planície escandinava
 e ao oeste você observa a entrada da fortaleza viking.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa a movimentação no centro da vila viking.
 ~
@@ -1022,7 +1016,7 @@ paisagem que se tem daqui.  Ao leste você observa uma linda praia formada
 por uma abertura entre dois monumentais fiordes e ao oeste você observa a
 agitação no centro da vila viking.
 ~
-126 0 2
+126 0 0 0 0 2
 D1
 Você observa uma linda praia escandinava.
 ~
@@ -1040,7 +1034,7 @@ Uma Praia Escandinava~
 abertura entre dois grandes fiordes.  Ao leste você observa as tranqüilas
 águas do golfo de Bothnia e ao oeste você observa uma vila viking.
 ~
-126 c 2
+126 4 0 0 0 2
 D1
 Você observa o golfo de Bothnia.
 ~
@@ -1060,7 +1054,7 @@ você observa as águas do golfo de Bothnia, ao sul você observa as gélidas
 uma praia rochosa escandinava.  Ao leste você observa a Suomi, a terra dos
 mil lagos.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D0
 Você observa as tranqüilas águas do golfo de Bothnia.
 ~
@@ -1085,7 +1079,7 @@ cheias de neve.  O silêncio na floresta é solene.  Ao norte e ao leste você
 observa trilhas na floresta de gelo e ao sul você observa as águas 
 cristalinas do rio Glama.
 ~
-126 rs 5
+126 393216 0 0 0 5
 D0
 Você observa uma trilha coberta de neve na floresta.
 ~
@@ -1109,7 +1103,7 @@ monumentais árvores cobertas de gelo e neve.  A medida que você segue para
 norte o clima fica mais arrepiante e frio.  Ao sul você observa o rio Glama,
 ao leste e ao oeste você observa trilhas na floresta de gelo.
 ~
-126 rs 5
+126 393216 0 0 0 5
 D1
 Você observa uma trilha coberta de neve na floresta.
 ~
@@ -1134,7 +1128,7 @@ Ao sul você observa as águas cristalinas do rio Glama, ao oeste você observa
 uma trilha na floresta de gelo e para cima você observa os monumentais Alpes
 escandinavos.
 ~
-126 rs 5
+126 393216 0 0 0 5
 D2
 Você observa o rio Glama.
 ~
@@ -1160,7 +1154,7 @@ observa a bela floresta de gelo, uma paisagem belíssima.  Para cima você
 observa uma trilha no topo dos Alpes escandinavos e para baixo você observa
 a floresta de gelo.
 ~
-126 cgir 5
+126 131396 0 0 0 5
 D4
 Você observa o topo dos Alpes escandinavos.
 ~
@@ -1181,7 +1175,7 @@ Bothnia.  Você observa também algumas vilas vikings nas terras aos pés dos
 Alpes.  Ao norte você observa uma trilha no topo dos Alpes escandinavos e
 para baixo você observa uma trilha íngreme em direção a floresta de gelo.
 ~
-126 gqr 5
+126 196672 0 0 0 5
 D0
 Você observa uma trilha rochosa no topo dos Alpes escandinavos.
 ~
@@ -1200,7 +1194,7 @@ dificuldade de caminhar pelas trilhas é muito grande, por causa da enorme
 quantidade de neve acumulada aqui.  Ao sul você observa uma trilha na 
 floresta de gelo e ao norte você observa o belo rio Angerman.
 ~
-126 rs 5
+126 393216 0 0 0 5
 D0
 Você observa o rio Angerman.
 ~
@@ -1225,7 +1219,7 @@ grande fogueira no canto norte da cabana.  Em cima da grande mesa você
 observa um enorme urso branco abatido pelos caçadores vikings.  Ao leste 
 você observa o agitado centro da vila viking.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D1
 Você observa o centro da vila viking.
 ~
@@ -1240,7 +1234,7 @@ de tabuleiro, chamado de hnefatafl.  Ao norte você observa uma bela planície
 escandinava, ao leste e ao oeste você observa cabanas vikings e ao sul você
 observa a movimentação no centro da vila viking.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa uma bela planície escandinava.
 ~
@@ -1268,7 +1262,7 @@ O Armazém da Vila~
 observa suprimentos que daria para alimentar a vila toda por um longo 
 período.  Ao oeste você observa o centro da vila viking.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D3
 Você observa o centro da vila viking.
 ~
@@ -1281,7 +1275,7 @@ O Golfo de Bothnia~
 noroeste você observa as águas do golfo de Bothnia.  Ao leste você observa a 
 Suomi, a terra dos mil lagos.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D2
 Você observa as águas tranqüilas do golfo de Bothnia.
 ~
@@ -1301,7 +1295,7 @@ e monumental, seus fiordes transformam a península escandinava numa
 verdadeira fortaleza natural.  Ao nordeste e ao sudeste você observa o mar 
 da Noruega na linha do horizonte.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D7
 Você observa o mar da Noruega.
 ~
@@ -1320,7 +1314,7 @@ monumentais árvores cobertas de gelo e neve.  A medida que você segue para
 norte o clima fica mais arrepiante e frio.  Ao norte e ao sul você observa 
 trilhas cobertas de neve na floresta de gelo.
 ~
-126 rs 5
+126 393216 0 0 0 5
 D0
 Você observa uma trilha coberta de neve.
 ~
@@ -1340,7 +1334,7 @@ liberdade explode em batidas fortes de emoção e fascinação.  Ao nordeste e
 ao sul você observa uma trilha no topo coberto de neve dos Alpes 
 escandinavos.
 ~
-126 gqr 5
+126 196672 0 0 0 5
 D2
 Você observa uma trilha no topo dos Alpes coberto de neve.
 ~
@@ -1358,7 +1352,7 @@ O Rio Angerman~
 nordeste você observa as belas águas do rio Angerman e ao sul você observa
 a bela floresta de gelo coberta de neve.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D2
 Você observa a floresta de gelo.
 ~
@@ -1377,7 +1371,7 @@ observa algumas cabanas de madeira e turfa, e alguns vikings curiosos com a
 sua presença.  Ao norte você observa as águas do rio Angerman e ao sul você
 observa o centro da vila viking.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa o rio Angerman.
 ~
@@ -1396,7 +1390,7 @@ e ao sudeste você observa as águas do golfo de Bothnia.  A paisagem da costa
 escandinava é monumental com seus fiordes magníficos.  Ao leste você 
 observa a Suomi, a terra dos mil lagos.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D0
 Você observa as águas frias do golfo de Bothnia.
 ~
@@ -1415,7 +1409,7 @@ neve.  Precisa-se de muito esforço e força para caminhar pelas trilhas
 cheias de neve.  O silêncio na floresta é solene.  Ao sul você observa uma
 trilha na floresta de gelo e ao norte você observa uma agitada vila viking.
 ~
-126 rs 5
+126 393216 0 0 0 5
 D0
 Você observa uma vila viking.
 ~
@@ -1433,7 +1427,7 @@ Uma Cabana de Madeira~
 observa uma cama de feno e alguns restos de comida.  Ao norte você observa
 o centro da vila viking.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D0
 Você observa o centro da vila viking.
 ~
@@ -1449,7 +1443,7 @@ Bothnia.  Você observa também algumas vilas vikings nas terras aos pés dos
 Alpes.  Ao norte e sudoeste você observa uma trilha no topo dos Alpes 
 escandinavos.
 ~
-126 gqr 5
+126 196672 0 0 0 5
 D0
 Você observa uma trilha no topo dos Alpes escandinavos.
 ~
@@ -1467,7 +1461,7 @@ O Rio Angerman~
 ventos vindos do norte causam arrepios em você.  Ao sudoeste e ao leste você 
 observa as belas águas do rio Angerman.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D1
 Você observa o rio Angerman.
 ~
@@ -1486,7 +1480,7 @@ você observa alguns vikings construindo embarcações nas margens do rio
 Angerman.  Ao norte você observa o temido deserto de gelo e ao sul você
 observa uma bela planície escandinava.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D0
 Você observa o arrepiante e solitário deserto de gelo.
 ~
@@ -1505,7 +1499,7 @@ e ao nordeste você observa as águas do golfo de Bothnia e ao oeste você
 observa as águas tranqüilas do bela rio Angerman.  Ao leste você observa a 
 Suomi, a terra dos mil lagos.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D2
 Você observa as águas do golfo de Bothnia.
 ~
@@ -1531,7 +1525,7 @@ formando assim as praias escandinavas.  Ao norte e ao sudoeste você observa
 o mar da Noruega na linha do horizonte e ao leste você observa uma bela 
 praia escandinava.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D0
 Você observa as frias águas do mar da Noruega.
 ~
@@ -1556,7 +1550,7 @@ rochas negras cobertas de neve.  Você observa a neve caindo por sobre sua
 armadura.  Ao oeste você observa o mar da Noruega e ao leste você observa 
 uma agitada vila viking norueguesa.
 ~
-126 c 2
+126 4 0 0 0 2
 D1
 Você observa uma vila viking norueguesa.
 ~
@@ -1580,7 +1574,7 @@ viking, ao norte você observa vários vikings jogando jogos de desafios,
 que chegam a valer as vezes a própria vida, e ao sul você observa você 
 observa uma floresta coberta de neve.
 ~
-126 0 2
+126 0 0 0 0 2
 D0
 Você observa uma planície escandinava.
 ~
@@ -1611,7 +1605,7 @@ viking.  Ao norte, leste e sul você observa algumas cabanas de pedras e
 turfa, ao sul você observa uma planície escandinava e ao oeste e nordeste 
 você observa belas planícies escandinavas.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa o armazém da vila viking.
 ~
@@ -1650,7 +1644,7 @@ comprimento quase igual ao da cabana, várias cadeiras de madeira e uma
 grande fogueira no canto norte da cabana.  Ao oeste você observa o agitado 
 centro da vila viking.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D3
 Você observa o centro da vila viking.
 ~
@@ -1666,7 +1660,7 @@ Bothnia.  Você observa também algumas vilas vikings nas terras aos pés dos
 Alpes.  Ao nordeste e ao sul você observa uma trilha no topo dos Alpes 
 escandinavos.
 ~
-126 gqr 5
+126 196672 0 0 0 5
 D2
 Você observa uma trilha no topo dos Alpes escandinavos.
 ~
@@ -1686,7 +1680,7 @@ gelo que cobre toda a península escandinava em sua extremidade norte.  Ao
 norte e ao sudoeste você observa uma trilha coberta de neve no topo dos 
 Alpes escandinavos.
 ~
-126 gqr 5
+126 196672 0 0 0 5
 D0
 Você observa uma trilha no topo dos Alpes escandinavos.
 ~
@@ -1706,7 +1700,7 @@ península escandinava.  Ao seu redor você observa na linha do horizonte o
 deserto de gelo e não encontra mais nada.  Ao nordeste e ao noroeste você
 observa o deserto de gelo da Suécia e ao sul você observa o rio Angerman.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 D2
 Você observa o rio Angerman.
 ~
@@ -1731,7 +1725,7 @@ pedras, ao lado vários homens e mulheres agitam a competição e aplaudem os
 mais fortes e corajosos.  Ao sul você observa uma belíssima planície 
 escandinava.
 ~
-126 0 1
+126 0 0 0 0 1
 D2
 Você observa uma planície coberta de neve.
 ~
@@ -1744,7 +1738,7 @@ O Armazém da Vila~
 observa suprimentos que daria para alimentar a vila toda por um longo 
 período de tempo.  Ao sul você observa o centro da vila viking.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D2
 Você observa o centro da vila.
 ~
@@ -1758,7 +1752,7 @@ você observa lindas flores azuis em meio a muita neve e gelo.  Ao norte você
 observa o belo rio Namse, ao leste você observa uma cabana cheia de armas e
 ao sudoeste você observa o centro da vila viking.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa o rio Namse.
 ~
@@ -1783,7 +1777,7 @@ cabana.  Os ferreiros vikings são vitais para seus povos, pois saem das mãos
 deles as armas que farão seus inimigos se ajoelharem.  Ao oeste você observa 
 uma bela planície escandinava coberta de neve.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D3
 Você observa uma planície coberta de neve.
 ~
@@ -1797,7 +1791,7 @@ para de cair, as águas do rio em algumas partes já estão completamente
 congeladas.  Ao noroeste você observa o temido mar da Noruega e ao leste
 você observa as frias águas do rio Namse.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D1
 Você observa as águas congeladas do rio Namse.
 ~
@@ -1817,7 +1811,7 @@ desértico deserto de gelo da Noruega, ao leste e oeste você observa as
 congeladas águas do rio Namse e ao sul você observa uma bela planície 
 escandinava coberta de neve.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D0
 Você observa o deserto de gelo da Noruega.
 ~
@@ -1845,7 +1839,7 @@ O Rio Namse~
 neblina surge vinda do leste e ventos frios vindos do norte lhe causam
 arrepios.  Ao oeste você observa as águas frias do rio Namse.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D3
 Você observa as frias e congelantes águas do rio Namse.
 ~
@@ -1859,7 +1853,7 @@ noruegueses do mar da Noruega.  Ao norte e ao sul você observa o mar da
 Noruega na linha do horizonte e ao sudeste você observa o delta do rio 
 Namse.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D0
 Você observa as temidas águas de dominação viking.
 ~
@@ -1884,7 +1878,7 @@ arrepios.  O clima bastante frio dificulta sua respiração.  Você observa no
 céu o sol brilhando como se as horas não passassem, porém o tempo aqui não 
 parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 S
 #12687
 A Terra do Sol da Meia-Noite~
@@ -1897,7 +1891,7 @@ diminuiu seu brilho.  A cada rajada de vento um horrível som domina toda a
 região, parecendo com o grito de um guerreiro no leito de sua morte.  Ao sul
 você observa as águas do rio Namse.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 D2
 Você observa o rio Namse.
 ~
@@ -1912,7 +1906,7 @@ arrepios.  O clima bastante frio dificulta sua respiração.  Você observa no
 céu o sol brilhando como se as horas não passassem, porém o tempo aqui não 
 parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 S
 #12689
 O Deserto Escandinavo de Gelo~
@@ -1922,7 +1916,7 @@ península escandinava.  Ao seu redor você observa na linha do horizonte o
 deserto de gelo e não encontra mais nada.  Ao nordeste, noroeste e sudeste 
 você observa o deserto de gelo da Suécia.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 D6
 Você observa o gélido deserto de gelo da Suécia.
 ~
@@ -1947,7 +1941,7 @@ península escandinava.  Ao seu redor você observa na linha do horizonte o
 deserto de gelo e não encontra mais nada.  Ao nordeste, noroeste e sudoeste 
 você observa o deserto de gelo da Suécia.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 D6
 Você observa o gélido deserto de gelo da Suécia.
 ~
@@ -1972,7 +1966,7 @@ e monumental, seus fiordes transformam a península escandinava numa
 verdadeira fortaleza natural.  Ao nordeste você observa o congelante mar
 glacial Ártico e ao sul você observa o temido mar da Noruega.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D2
 Você observa as frias águas do mar da Noruega.
 ~
@@ -1992,7 +1986,7 @@ arrepios.  O clima bastante frio dificulta sua respiração.  Você observa no
 céu o sol brilhando como se as horas não passassem, porém o tempo aqui não 
 parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 S
 #12693
 A Terra do Sol da Meia-Noite~
@@ -2002,7 +1996,7 @@ arrepios.  O clima bastante frio dificulta sua respiração.  Você observa no
 céu o sol brilhando como se as horas não passassem, porém o tempo aqui não 
 parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 S
 #12694
 A Terra do Sol da Meia-Noite~
@@ -2012,7 +2006,7 @@ arrepios.  O clima bastante frio dificulta sua respiração.  Você observa no
 céu o sol brilhando como se as horas não passassem, porém o tempo aqui não 
 parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 S
 #12695
 O Deserto Escandinavo de Gelo~
@@ -2023,22 +2017,22 @@ deserto de gelo e não encontra mais nada.  Ao leste e sudeste você observa o
 deserto de gelo da Suécia e para cima você observa os magníficos Alpes
 escandinavos.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 D1
 Você observa o gélido deserto de gelo da Suécia.
 ~
 ~
 0 -1 12696
-D8
-Você observa o gélido deserto de gelo da Suécia.
-~
-~
-0 -1 12689
 D4
 Você observa uma trilha íngreme em direção do topo dos Alpes.
 ~
 ~
 0 -1 12706
+D8
+Você observa o gélido deserto de gelo da Suécia.
+~
+~
+0 -1 12689
 S
 #12696
 O Deserto Escandinavo de Gelo~
@@ -2049,7 +2043,7 @@ deserto de gelo e não encontra mais nada.  Ao leste, oeste, sudeste e
 sudoeste você observa o deserto de gelo da Suécia e para cima você observa 
 os magníficos Alpes escandinavos.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 D1
 Você observa o gélido deserto de gelo da Suécia.
 ~
@@ -2080,7 +2074,7 @@ deserto de gelo e não encontra mais nada.  Ao oeste e sudoeste você observa
 o deserto de gelo da Suécia e ao leste você observa um gélida praia 
 escandinava.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 D1
 Você observa uma bela praia escandinava.
 ~
@@ -2104,7 +2098,7 @@ neve que cai intensamente, transformam este magnífico lugar num paraíso
 desértico.  Ao leste você observa o gélido golfo de Bothnia e ao oeste você
 observa o temido deserto de gelo da Suécia.
 ~
-126 c 2
+126 4 0 0 0 2
 D1
 Você observa o golfo de Bothnia.
 ~
@@ -2123,7 +2117,7 @@ sudoeste você observa as águas do golfo de Bothnia e ao oeste você observa
 uma bela praia escandinava.  Ao leste você observa a Suomi, a terra dos 
 mil lagos.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D3
 Você observa uma bela praia gélida escandinava.
 ~
@@ -2144,7 +2138,7 @@ você observa as águas gélidas do mar glacial Ártico, ao sudoeste você
 observa o mar temido da Noruega, ao sudeste você observa um monumental
 fiorde na costa da Noruega e ao oeste você observa o mar da Groenlândia.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D3
 Você observa o mar da Groenlândia.
 ~
@@ -2173,7 +2167,7 @@ Noruega.  A paisagem é simplesmente linda.  Você sente a suprema e magnífica
 liberdade pulsar em suas veias.  Ao noroeste você observa a imensidão do mar
 da Noruega e ao leste você observa um assustador deserto de gelo.
 ~
-126 cgr 5
+126 131140 0 0 0 5
 D1
 Você observa o temido deserto de gelo da Noruega.
 ~
@@ -2197,17 +2191,17 @@ região, parecendo com o grito de um guerreiro no leito de sua morte.  Ao
 leste você observa um monumental fiorde e ao norte você observa as águas do
 mar glacial Ártico.
 ~
-126 cfgqru 4
-D1
-Você observa um belo fiorde.
-~
-~
-0 -1 12701
+126 1245284 0 0 0 4
 D0
 Você observa o mar glacial Ártico.
 ~
 ~
 0 -1 12709
+D1
+Você observa um belo fiorde.
+~
+~
+0 -1 12701
 S
 #12703
 A Terra do Sol da Meia-Noite~
@@ -2217,7 +2211,7 @@ arrepios.  O clima bastante frio dificulta sua respiração.  Você observa no
 céu o sol brilhando como se as horas não passassem, porém o tempo aqui não
 parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 S
 #12704
 A Terra do Sol da Meia-Noite~
@@ -2227,7 +2221,7 @@ arrepios.  O clima bastante frio dificulta sua respiração.  Você observa no
 céu o sol brilhando como se as horas não passassem, porém o tempo aqui não
 parou.  Ao seu redor a neve e o gelo formam a realeza dessa terra.
 ~
-126 cfgqru 4
+126 1245284 0 0 0 4
 S
 #12705
 Os Monumentais Alpes Escandinavos~
@@ -2239,17 +2233,17 @@ Alpes.  Ao noroeste você observa uma trilha no topo dos Alpes escandinavos
 e para baixo você observa uma trilha íngreme em direção ao deserto de gelo
 da Suécia.
 ~
-126 gr 5
-D6
-Você observa a monumental vista do topo dos Alpes Escandinavos.
-~
-~
-0 -1 12706
+126 131136 0 0 0 5
 D5
 Você observa uma trilha íngreme em direção do deserto de gelo.
 ~
 ~
 0 -1 12695
+D6
+Você observa a monumental vista do topo dos Alpes Escandinavos.
+~
+~
+0 -1 12706
 S
 #12706
 Yggdrasill, o Elo entre os Mundos~
@@ -2263,7 +2257,7 @@ cima, outra para baixo e a terceira segue para norte.  Ao sudeste você
 observa uma trilha íngreme em direção ao deserto de gelo da Suécia e ao sul
 você observa uma trilha no topo dos Alpes escandinavos.
 ~
-126 gqr 5
+126 196672 0 0 0 5
 D0
 Você observa uma monumental raiz.
 ~
@@ -2297,7 +2291,7 @@ seu redor você observa uma paisagem desértica.  A neve invade toda a sua
 embarcação.  Os fortes ventos frios dificultam sua navegação.  Ao nordeste
 e sudoeste você observa as águas gélidas do mar glacial Ártico.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D7
 Você observa o congelante mar glacial Ártico.
 ~
@@ -2316,7 +2310,7 @@ seu redor você observa uma paisagem desértica.  A neve invade toda a sua
 embarcação.  Os fortes ventos frios dificultam sua navegação.  Ao leste e ao
 sudoeste você observa as águas gélidas do mar glacial Ártico.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D1
 Você observa o congelante mar glacial Ártico.
 ~
@@ -2336,7 +2330,7 @@ embarcação.  Os fortes ventos frios dificultam sua navegação.  Ao oeste voc�
 observa as águas gélidas do mar glacial Ártico e ao sul você observa o
 temido deserto de gelo da Noruega.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D2
 Você observa o deserto de gelo da Noruega.
 ~
@@ -2355,7 +2349,7 @@ observa algumas nuvens e uma sensação de tranqüilidade toma conta do seu
 corpo.  Em direção dos céus você observa a continuação da gigantesca raiz e
 descendo você observa os monumentais Alpes escandinavos.
 ~
-126 cgiqr 5
+126 196932 0 0 0 5
 D4
 Você observa uma imensa raiz rumo aos céus.
 ~
@@ -2374,7 +2368,7 @@ você observa algumas nuvens e uma sensação de tranqüilidade toma conta do
 seu corpo.  Na direção norte você observa a continuação da gigantesca raiz
 e ao sul você observa os monumentais Alpes escandinavos.
 ~
-126 cgiqr 5
+126 196932 0 0 0 5
 D0
 Você observa uma imensa raiz.
 ~
@@ -2393,7 +2387,7 @@ observa algumas nuvens e uma sensação de tranqüilidade toma conta do seu
 corpo.  Em direção de um escuro abismo você observa a continuação da
 gigantesca raiz e para cima você observa os monumentais Alpes escandinavos.
 ~
-126 cgir 5
+126 131396 0 0 0 5
 D4
 Você observa os monumentais Alpes escandinavos.
 ~
@@ -2412,7 +2406,7 @@ poderoso gigante de gelo.  Ao seu redor você percebe a existência de belas
 nuvens.  Em direção dos céus você observa uma majestoso arco-íris e para
 baixo você observa a imensa raiz em direção dos Alpes escandinavos.
 ~
-126 cgiqr 5
+126 196932 0 0 0 5
 D4
 Você observa um magnífico arco-íris.
 ~
@@ -2436,7 +2430,7 @@ lendárias terras.  Ao norte você observa um brilho intenso e celestial,
 para baixo em direção dos Alpes escandinavos você observa uma imensa raiz
 e para cima você observa um belo palácio dourado.
 ~
-126 cgfqr 1
+126 196708 0 0 0 1
 D0
 Você observa um brilho celestial.
 ~
@@ -2463,7 +2457,7 @@ escandinavas, porém aqui você se sente protegido.  Ao norte, nordeste e
 noroeste você observa curioso alguns pontos brilhantes e ao sul você observa
 um belo arco-íris.
 ~
-126 cgf 3
+126 100 0 0 0 3
 D0
 Você observa Asgard coberta de neve.
 ~
@@ -2493,7 +2487,7 @@ neve.  Ao norte você observa um belo bosque, ao sudeste você observa uma
 bela fonte, ao leste e ao noroeste você observa uma planície coberta de
 neve.
 ~
-126 gf 3
+126 96 0 0 0 3
 D0
 Você observa um belo bosque.
 ~
@@ -2523,7 +2517,7 @@ terras sagradas de Asgard.  Ao norte você observa uma majestosa cúpula de
 cristal, ao leste e oeste você observa uma tranqüila planície coberta de
 neve e ao sul você observa uma bela fonte.
 ~
-126 gf 3
+126 96 0 0 0 3
 D0
 Você observa uma magnífica cúpula de cristal.
 ~
@@ -2553,7 +2547,7 @@ você observa um belo bosque coberto de neve, ao nordeste e ao oeste você
 observa uma planície coberta de neve e ao sudoeste você observa uma sublime
 fonte.
 ~
-126 gf 3
+126 96 0 0 0 3
 D0
 Você observa um belo bosque.
 ~
@@ -2585,7 +2579,7 @@ e ao primeiro olhar da lua, todos se unem e se confraternizam no belíssimo
 palácio de Valhala.  Ao norte você observa uma cúpula monumental de prata e
 ao sudeste você observa uma planície coberta por um mar de neve.
 ~
-126 gf 3
+126 96 0 0 0 3
 D0
 Você observa uma celestial cúpula de prata.
 ~
@@ -2605,7 +2599,7 @@ grandes árvores cobertas de neve, ao sul você observa uma planície coberta
 de neve, ao leste você observa uma cúpula de cristal e ao noroeste você
 observa uma cúpula de prata.
 ~
-126 cgf 3
+126 100 0 0 0 3
 D0
 Você observa o belo bosque de Asgard.
 ~
@@ -2635,7 +2629,7 @@ uma magnífica cúpula de cristal.  O bosque de Asgard parece abraçar a bela
 obra pelo norte, leste e oeste e ao sul você observa uma paisagem magnífica,
 uma linda planície coberta de neve.
 ~
-126 dgfrst 0
+126 917608 0 0 0 0
 D0
 Você observa o belo bosque de Asgard.
 ~
@@ -2665,7 +2659,7 @@ grandes árvores cobertas de neve, ao sul você observa uma planície coberta
 de neve, ao oeste você observa uma cúpula de cristal e ao nordeste você
 observa uma cúpula de ouro.
 ~
-126 cgf 3
+126 100 0 0 0 3
 D0
 Você observa o belo bosque de Asgard.
 ~
@@ -2694,7 +2688,7 @@ frios lhe causam arrepios e a neve já cobriu completamente sua armadura.  Ao
 norte você observa uma magnífica cúpula de ouro e ao sudoeste você observa a
 linda planície coberta por um imenso mar de neve.
 ~
-126 gf 3
+126 96 0 0 0 3
 D0
 Você observa uma bela cúpula de ouro.
 ~
@@ -2714,7 +2708,7 @@ sente uma estranha sensação de apatia e nota que as marcas e feridas de suas
 últimas batalhas estão sendo curadas.  Ao norte e ao sudeste você observa o
 belo bosque de Asgard e ao sul você observa uma planície coberta de neve.
 ~
-126 dgfrst 0
+126 917608 0 0 0 0
 D0
 Você observa um belo bosque.
 ~
@@ -2738,7 +2732,7 @@ Asgard.  A sensação aqui é de tranqüilidade e paz.  Além das belas árvores
 ao seu redor você percebe ao norte um belo palácio.  Ao leste, sul e
 noroeste você observa grandes árvores cobertas de neve.
 ~
-126 cgf 3
+126 100 0 0 0 3
 D1
 Você observa o belo bosque de Asgard.
 ~
@@ -2764,7 +2758,7 @@ um mar de neve, mais além da planície você observa um maravilhoso palácio.
 Ao leste e oeste você observa as árvores do belo bosque de Asgard e ao sul
 você observa uma bela cúpula de cristal.
 ~
-126 cgf 3
+126 100 0 0 0 3
 D0
 Você observa uma bela planície coberta de neve.
 ~
@@ -2793,7 +2787,7 @@ Asgard.  A sensação aqui é de tranqüilidade e paz.  Além das belas árvores
 ao seu redor você percebe ao norte um belo palácio.  Ao leste, sul e
 nordeste você observa grandes árvores cobertas de neve.
 ~
-126 cgf 3
+126 100 0 0 0 3
 D2
 Você observa o belo bosque de Asgard.
 ~
@@ -2819,7 +2813,7 @@ apatia atinge todo seu corpo.  Ao olhar para as suas marcas e feridas da sua
 sudoeste você observa o majestoso bosque de Asgard e ao sul você observa uma
 planície coberta de neve.
 ~
-126 dgfrst 0
+126 917608 0 0 0 0
 D0
 Você observa o belo bosque de Asgard.
 ~
@@ -2844,7 +2838,7 @@ planície de Ida, ao sul você observa uma bela cúpula de prata, ao noroeste
 você observa um imenso mar de neve e ao sudeste você observa o belo bosque
 de Asgard.
 ~
-126 cgf 3
+126 100 0 0 0 3
 D2
 Você observa uma majestosa cúpula de prata.
 ~
@@ -2874,7 +2868,7 @@ armadura.  Ao leste você observa a planície de Vigrid, ao sul você observa
 uma maravilhosa cúpula de ouro, ao nordeste você observa um imenso mar de
 neve e ao sudoeste você observa o belo bosque de Asgard.
 ~
-126 cgf 3
+126 100 0 0 0 3
 D1
 Você observa bela planície de Vigrid.
 ~
@@ -2904,7 +2898,7 @@ surgi em seus olhos, o majestoso palácio Valhala, lugar dos sonhos de todos
 os corajosos guerreiros vikings.  Ao norte você observa um majestoso portão
 dourado e ao sul você observa o bosque de Asgard.
 ~
-126 gf 3
+126 96 0 0 0 3
 D0
 Você observa a entrada do palácio Valhala.
 ~
@@ -2924,7 +2918,7 @@ você observa uma região totalmente coberta de neve, ao sudeste você observa
 o bosque de Asgard com suas monumentais árvores cobertas de neve e ao leste
 você observa um rio de águas congeladas.
 ~
-126 gf 4
+126 96 0 0 0 4
 D0
 Você observa um imenso mar de neve.
 ~
@@ -2951,7 +2945,7 @@ peixes na camada ainda líquida do belo rio.  Ao norte e leste você observa
 as águas congeladas do rio de Asgard e ao oeste você observa um imenso mar
 de neve.
 ~
-126 fgr 2
+126 131168 0 0 0 2
 D0
 Você observa um rio de águas congeladas.
 ~
@@ -2983,7 +2977,7 @@ peixes na camada ainda líquida do belo rio.  Ao oeste você observa as águas
 congeladas do rio de Asgard e ao leste você observa a entrada do palácio
 Valhala.
 ~
-126 fgr 2
+126 131168 0 0 0 2
 D1
 Você observa a entrada do palácio Valhala.
 ~
@@ -3002,12 +2996,11 @@ redor você observa ao leste e oeste as águas congeladas do rio de Asgard, ao
 sul você observa uma bela planície coberta de neve e ao norte você observa
 o majestoso portão do palácio de Valhala.
 ~
-126 cgf 3
+126 100 0 0 0 3
 D0
 Você observa o portão dourado do Valhala.
 ~
 portao dourado~
-:n 1 o portão dourado
 2 12730 12739
 D1
 Você observa um rio de águas congeladas.
@@ -3035,7 +3028,7 @@ peixes na camada ainda líquida do belo rio.  Ao leste você observa as águas
 congeladas do rio de Asgard e ao oeste você observa a entrada do palácio
 Valhala.
 ~
-126 fgr 2
+126 131168 0 0 0 2
 D1
 Você observa um rio de águas congeladas.
 ~
@@ -3057,7 +3050,7 @@ peixes na camada ainda líquida do belo rio.  Ao norte e oeste você observa
 as águas congeladas do rio de Asgard e ao leste você observa um imenso mar
 de neve.
 ~
-126 fgr 2
+126 131168 0 0 0 2
 D0
 Você observa um rio de águas congeladas.
 ~
@@ -3082,7 +3075,7 @@ você observa uma região totalmente coberta de neve, ao sudoeste você
 observa o bosque de Asgard com suas monumentais árvores cobertas de neve e
 ao oeste você observa um rio de águas congeladas.
 ~
-126 gf 4
+126 96 0 0 0 4
 D0
 Você observa uma bela planície branca.
 ~
@@ -3111,7 +3104,7 @@ glorioso palácio.  Ao norte você observa uma bela ponte em direção de um
 grande salão do palácio e ao sul você observa o belo portão dourado do
 palácio.
 ~
-126 fg 1
+126 96 0 0 0 1
 D0
 Você observa uma bela ponte de ouro.
 ~
@@ -3121,7 +3114,6 @@ D2
 Você observa o belo portão do palácio.
 ~
 portao dourado~
-:n 1 o portão dourado
 2 12730 12735
 S
 #12740
@@ -3132,7 +3124,7 @@ amarelas e alguns esquilos brancos brincando nos arbustos.  Ao norte e ao
 leste você observa os belos jardins da magnífica morada dos deuses e ao
 nordeste você observa um grande salão dentro do palácio.
 ~
-126 fg 2
+126 96 0 0 0 2
 D0
 Você observa lindas flores.
 ~
@@ -3156,7 +3148,7 @@ de um grande salão dentro do palácio. Ao seu redor você observa os sublimes
 jardins do palácio Valhala.  Ao norte você observa um grande salão dentro do
 palácio e ao sul você observa a entrada do Valhala.
 ~
-126 fgi 1
+126 352 0 0 0 1
 D0
 Você observa um grande salão dentro do Valhala.
 ~
@@ -3176,7 +3168,7 @@ amarelas e alguns esquilos brancos brincando nos arbustos.  Ao norte e ao
 oeste você observa os belos jardins da magnífica morada dos deuses e ao
 noroeste você observa um grande salão dentro do palácio.
 ~
-126 fg 2
+126 96 0 0 0 2
 D0
 Você observa lindas flores.
 ~
@@ -3200,7 +3192,7 @@ do palácio Valhala.  Ao seu redor você observa perfumadas flores azuis e
 amarelas e alguns esquilos brancos brincando nos arbustos.  Ao norte e ao
 sul você observa os belos jardins da magnífica morada dos deuses.
 ~
-126 fg 2
+126 96 0 0 0 2
 D0
 Você observa lindas flores.
 ~
@@ -3224,7 +3216,7 @@ cozido todas as manhãs, ele fica inteiro novamente todas as noites.  Quando
 os heróis não estão lutando, eles são sempre encontrados aqui.  Ao norte e
 ao leste você observa o grande salão do Valhala.
 ~
-126 dfg 0
+126 104 0 0 0 0
 D0
 Você observa o grande salão do Valhala.
 ~
@@ -3250,7 +3242,7 @@ leste e ao oeste você observa o grande salão do palácio Valhala, ao sul você
 observa uma bela ponte de ouro e ao sudeste e sudoeste você observa os belos
 jardins do Valhala.
 ~
-126 dfg 0
+126 104 0 0 0 0
 D0
 Você observa o grande salão do palácio.
 ~
@@ -3292,7 +3284,7 @@ para passar o tempo, a espera do Ragnarok, o crepúsculo dos deuses.  Ao seu
 redor você observa lindas pinturas nas paredes do salão e algumas runas.  Ao
 norte e ao oeste você observa o grande salão do palácio.
 ~
-126 dfg 0
+126 104 0 0 0 0
 D0
 Você observa o grande salão do palácio.
 ~
@@ -3312,7 +3304,7 @@ pinturas dos deuses e no centro do salão você observa lindas mulheres
 guerreiras e algumas fadas.  Ao leste e ao sul você observa o grande salão
 do palácio Valhala.
 ~
-126 dfg 0
+126 104 0 0 0 0
 D1
 Você observa o grande salão do palácio.
 ~
@@ -3333,12 +3325,7 @@ grandes banquetes durante a noite, em troca eles deveriam defender o Valhala
 de qualquer perigo.  Ao sul, ao leste e ao oeste você observa o grande salão
 do Valhala e para cima você observa uma parte elevada do salão.
 ~
-126 dfg 0
-D4
-Você observa um belo trono.
-~
-~
-0 -1 12750
+126 104 0 0 0 0
 D1
 Você observa o grande salão do palácio.
 ~
@@ -3354,6 +3341,11 @@ Você observa o grande salão do palácio.
 ~
 ~
 0 -1 12747
+D4
+Você observa um belo trono.
+~
+~
+0 -1 12750
 S
 #12749
 O Salão dos Festins do Valhala~
@@ -3363,7 +3355,7 @@ pinturas dos deuses e no centro do salão você observa lindas mulheres
 guerreiras e algumas fadas.  Ao oeste e ao sul você observa o grande salão
 do palácio Valhala.
 ~
-126 dfg 0
+126 104 0 0 0 0
 D2
 Você observa o grande salão do palácio.
 ~
@@ -3382,7 +3374,7 @@ redor você observa uma belo trono e algumas runas.  Deste lugar você possui
 uma visão de todo o salão abaixo.  Para baixo você observa alguns degraus na
 direção do grande salão do palácio Valhala.
 ~
-126 dfg 0
+126 104 0 0 0 0
 D5
 Você observa o grande salão do palácio.
 ~
@@ -3397,7 +3389,7 @@ amarelas e alguns esquilos brancos brincando nos arbustos.  Ao leste e ao
 sul você observa os belos jardins da magnífica morada dos deuses e ao
 sudeste você observa um grande salão dentro do palácio.
 ~
-126 fg 2
+126 96 0 0 0 2
 D1
 Você observa lindas flores.
 ~
@@ -3422,17 +3414,17 @@ amarelas e alguns esquilos brancos brincando nos arbustos.  Ao oeste e ao
 sul você observa os belos jardins da magnífica morada dos deuses e ao
 sudoeste você observa um grande salão dentro do palácio.
 ~
-126 fg 2
-D3
-Você observa lindas flores.
-~
-~
-0 -1 12751
+126 96 0 0 0 2
 D2
 Você observa lindas flores.
 ~
 ~
 0 -1 12743
+D3
+Você observa lindas flores.
+~
+~
+0 -1 12751
 D9
 Você observa o grande salão do palácio.
 ~
@@ -3446,7 +3438,7 @@ redor você observa apenas o branco da neve na linha do horizonte.  Ao sul
 você observa uma região totalmente coberta de neve e ao leste você observa
 um rio de águas congeladas.
 ~
-126 gf 4
+126 96 0 0 0 4
 D1
 Você observa as águas congeladas do rio de Asgard.
 ~
@@ -3468,7 +3460,7 @@ peixes na camada ainda líquida do belo rio.  Ao sul e ao leste você observa
 as águas congeladas do rio de Asgard e ao oeste você observa um imenso mar
 de neve.
 ~
-126 fgr 2
+126 131168 0 0 0 2
 D1
 Você observa as águas congeladas do rio de Asgard.
 ~
@@ -3495,7 +3487,7 @@ peixes na camada ainda líquida do belo rio.  Ao sul e ao oeste você observa
 as águas congeladas do rio de Asgard e ao leste você observa um imenso mar
 de neve.
 ~
-126 fgr 2
+126 131168 0 0 0 2
 D1
 Você observa uma planície coberta de neve.
 ~
@@ -3519,7 +3511,7 @@ redor você observa apenas o branco da neve na linha do horizonte.  Ao sul
 você observa uma região totalmente coberta de neve, ao oeste você observa
 um rio de águas congeladas e ao nordeste você observa uma bela floresta.
 ~
-126 gf 4
+126 96 0 0 0 4
 D2
 Você observa uma planície coberta de neve.
 ~
@@ -3542,7 +3534,7 @@ Uma Raiz Monumental~
 observa algumas nuvens e na gigantesca raiz alguns galhos e folhas enormes.
 Ao norte e ao sul você observa a continuação da magnífica raiz.
 ~
-126 cgiqr 5
+126 196932 0 0 0 5
 D0
 Você observa uma gigantesca raiz.
 ~
@@ -3561,7 +3553,7 @@ observa algumas nuvens e na gigantesca raiz alguns galhos e folhas enormes.
 Ao sul você observa a continuação da magnífica raiz e ao norte você observa
 uma sublime poço em meio a uma planície de gelo.
 ~
-126 cgiqr 5
+126 196932 0 0 0 5
 D0
 Você observa o poço de Ymir.
 ~
@@ -3582,7 +3574,7 @@ observa uma perfumada planície florida.  Ao norte e ao nordeste você observa
 a floresta de Jotunheim, ao noroeste você observa uma clareira na bela
 floresta de Jotunheim e ao sul você observa uma monumental raiz.
 ~
-126 cfg 2
+126 100 0 0 0 2
 D0
 Você observa uma bela floresta.
 ~
@@ -3611,7 +3603,7 @@ Jotunheim.  Ao seu redor você observa pegadas enormes no chão coberto de
 neve.  Ao nordeste você observa a bela floresta de Jotunheim e ao sudeste
 você observa um belo poço.
 ~
-126 fg 2
+126 96 0 0 0 2
 D7
 Você observa a floresta de Jotunheim.
 ~
@@ -3633,7 +3625,7 @@ monumentais você não consegue observa seus topos.  Ao nordeste e ao noroeste
 você observa a magnífica floresta de Jotunheim e ao sul você observa o poço
 de Ymir.
 ~
-126 fg 3
+126 96 0 0 0 3
 D2
 Você observa o poço de Ymir.
 ~
@@ -3659,7 +3651,7 @@ imensas crateras.  Ao seu redor belas árvores grandiosas que de tão
 monumentais você não consegue observa seus topos.  Ao noroeste você observa
 a magnífica floresta de Jotunheim e ao sudoeste você observa o poço de Ymir.
 ~
-126 fg 3
+126 96 0 0 0 3
 D6
 Você observa a floresta de Jotunheim.
 ~
@@ -3681,7 +3673,7 @@ monumentais você não consegue observa seus topos.  Ao noroeste e ao sudeste
 você observa a magnífica floresta de Jotunheim e ao sudoeste você observa
 uma imensa clareira.
 ~
-126 fg 3
+126 96 0 0 0 3
 D6
 Você observa a floresta de Jotunheim.
 ~
@@ -3707,7 +3699,7 @@ imensas crateras.  Ao seu redor belas árvores grandiosas que de tão
 monumentais você não consegue observa seus topos.  Ao nordeste, sudeste e
 sudoeste você observa a magnífica floresta de Jotunheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D7
 Você observa a floresta de Jotunheim.
 ~
@@ -3733,7 +3725,7 @@ imensas crateras.  Ao seu redor belas árvores grandiosas que de tão
 monumentais você não consegue observa seus topos.  Ao norte, leste e sudeste
 você observa a magnífica floresta de Jotunheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D0
 Você observa a floresta de Jotunheim.
 ~
@@ -3759,7 +3751,7 @@ imensas crateras.  Ao seu redor belas árvores grandiosas que de tão
 monumentais você não consegue observa seus topos.  Ao norte, leste e oeste
 você observa a magnífica floresta de Jotunheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D0
 Você observa a floresta de Jotunheim.
 ~
@@ -3786,7 +3778,7 @@ monumentais você não consegue observa seus topos.  Ao oeste e ao sudoeste
 você observa a magnífica floresta de Jotunheim e ao norte você observa uma
 imensa clareira.
 ~
-126 fg 3
+126 96 0 0 0 3
 D0
 Você observa uma imensa clareira.
 ~
@@ -3812,7 +3804,7 @@ imensas crateras.  Ao seu redor belas árvores grandiosas que de tão
 monumentais você não consegue observa seus topos.  Ao norte, leste e sul
 você observa a magnífica floresta de Jotunheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D0
 Você observa a floresta de Jotunheim.
 ~
@@ -3839,7 +3831,7 @@ monumentais você não consegue observa seus topos.  Ao oeste e ao sul você
 observa a magnífica floresta de Jotunheim, ao leste você observa uma imensa
 clareira e ao norte você observa a cidade de Utgard.
 ~
-126 fg 3
+126 96 0 0 0 3
 D0
 Você observa a cidade de Utgard.
 ~
@@ -3869,7 +3861,7 @@ neve.  Sons estranhos de como estrondosas gargalhadas surgem vindos da
 direção noroeste.  Ao norte, sul e oeste você observa a bela floresta de
 Jotunheim.
 ~
-126 fg 2
+126 96 0 0 0 2
 D0
 Você observa a floresta de Jotunheim.
 ~
@@ -3895,7 +3887,7 @@ estas enormes criaturas dão ao caminhar.  A cidade é governada pelo rei
 Utgard-Loki, o rei das artimanhas.  Ao norte você observa a praça da cidade
 e ao sul você observa o belo bosque de Jotunheim.
 ~
-126 cfg 1
+126 100 0 0 0 1
 D0
 Você observa a praça da cidade.
 ~
@@ -3916,7 +3908,7 @@ ao olhar para as majestosas estatuas e gigantes que estão a sua volta.  Ao
 norte você observa uma imensa estatua de ouro e ao leste você observa a
 praça da cidade.
 ~
-126 fg 1
+126 96 0 0 0 1
 D0
 Você observa uma divina estatua de ouro.
 ~
@@ -3937,7 +3929,7 @@ norte você observa um palácio além da praça da cidade, ao leste você observ
 uma taverna, ao oeste você percebe monumentais estatuas e ao sul você
 observa a entrada da cidade de Utgard.
 ~
-126 fg 1
+126 96 0 0 0 1
 D0
 Você observa  praça de Utgard.
 ~
@@ -3968,7 +3960,7 @@ dessas monstruosas criaturas, a cada cálice seco um soco na mesa fazendo lhe
 perder o equilíbrio.  Ao oeste você observa enormes pés do lado de fora da
 taverna na praça da cidade.
 ~
-126 dfg 0
+126 104 0 0 0 0
 D3
 Você observa a praça da cidade.
 ~
@@ -3982,7 +3974,7 @@ lendários gigantes que já habitaram estas terras.  Ao seu redor você observa
 imensas estatuas, porém uma estatua de ouro lhe chama bastante atenção.  Ao
 sul você observa a continuação do pátio das estatuas.
 ~
-126 fg 1
+126 96 0 0 0 1
 D2
 Você observa magníficas estatuas.
 ~
@@ -3997,7 +3989,7 @@ sublime palácio, ao leste você observa um silencioso bosque e ao sul você
 observa alguns gigantes correndo na praça da cidade fazendo toda Jotunheim
 tremer.
 ~
-126 fg 1
+126 96 0 0 0 1
 D0
 Você observa o palácio de Utgard.
 ~
@@ -4021,7 +4013,7 @@ Ymir.  O silêncio é total, nem o vento que sopra frio e forte faz as árvores
 produzirem algum barulho.  A neve cobre toda a trilha do bosque e suas
 árvores.  Ao oeste você observa a praça de Utgard.
 ~
-126 fg 3
+126 96 0 0 0 3
 D3
 Você observa a praça da cidade.
 ~
@@ -4036,12 +4028,11 @@ em direção da porta, mas não observa nada.  Ao seu redor vários artefatos de
 ouro, coroas de diamantes e moedas de ouro e prata.  Ao leste você observa o
 trono de Utgard-Loki.
 ~
-126 cdfg 0
+126 108 0 0 0 0
 D1
 Você observa uma porta de ferro.
 ~
 porta ferro~
-:n 2 uma porta de ferro
 2 12737 12779
 S
 #12779
@@ -4053,7 +4044,7 @@ simples, porém de dimensões fenomenais.  Ao oeste você observa uma porta de
 ferro, ao leste você observa um grande quarto real e ao sul você observa a
 agitada praça de Utgard e alguns gigantes conversando.
 ~
-126 cdfg 0
+126 108 0 0 0 0
 D1
 Você observa uma cama enorme.
 ~
@@ -4068,7 +4059,6 @@ D3
 Você observa uma porta de ferro.
 ~
 porta ferro~
-:n 2 uma porta de ferro
 2 12737 12778
 S
 #12780
@@ -4078,7 +4068,7 @@ observa uma imensa cama de madeira e alguns bancos e baús de madeira.
 Algumas roupas fedorentas largadas pelo chão e uma enorme bota que mede a
 sua altura.  Ao oeste você observa o trono de Utgard-Loki.
 ~
-126 cdfg 0
+126 108 0 0 0 0
 D3
 Você observa o trono de Utgard-Loki.
 ~
@@ -4094,7 +4084,7 @@ imensas crateras.  Ao seu redor belas árvores grandiosas que de tão
 monumentais você não consegue observa seus topos.  Ao leste e ao sul você
 observa a magnífica floresta de Jotunheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D1
 Você observa a floresta de Jotunheim.
 ~
@@ -4115,7 +4105,7 @@ imensas crateras.  Ao seu redor belas árvores grandiosas que de tão
 monumentais você não consegue observa seus topos.  Ao oeste você observa a
 magnífica floresta de Jotunheim e ao sul você percebe uma imensa clareira.
 ~
-126 fg 3
+126 96 0 0 0 3
 D2
 Você observa uma imensa clareira.
 ~
@@ -4134,7 +4124,7 @@ observa as paredes negras e sombrias de um abismo.  Descendo em direção de
 um escuro abismo você observa a continuação da gigantesca raiz e para cima
 você observa também a continuação da imensa raiz.
 ~
-126 cgir 5
+126 131396 0 0 0 5
 D4
 Você observa uma imensa raiz.
 ~
@@ -4152,7 +4142,7 @@ Uma Raiz Monumental~
 observa as paredes negras e sombrias de um abismo.  Para cima você observa a
 continuação da gigantesca raiz e ao norte você observa uma sombria fonte.
 ~
-126 cgir 5
+126 131396 0 0 0 5
 D0
 Você observa uma fonte negra.
 ~
@@ -4174,7 +4164,7 @@ guerreiros mortos pacificamente.  Sua passagem por este solo infértil não
 será passageira.  Ao norte você observa uma terra sombria e ao sul você
 observa uma raiz monumental sendo corroída pela Anidhogge.
 ~
-126 cfg 2
+126 100 0 0 0 2
 D0
 Você observa a escuridão.
 ~
@@ -4193,7 +4183,7 @@ frios sopram na sua direção.  Ao seu redor imagens de guerreiros mortos e
 almas perdidas que trazem em seus rostos uma expressam de angústia e medo.
 Ao leste você observa as trevas e os seus moradores.
 ~
-126 fg 2
+126 96 0 0 0 2
 D1
 Você observa imagens terríveis e almas correndo em sua direção.
 ~
@@ -4209,12 +4199,11 @@ vindos do norte causando lhe arrepios.  Ao norte você observa o portão do
 palácio das trevas, ao leste e ao oeste você observa as terras de Niffleheim
 e ao sul você observa uma fonte escura.
 ~
-126 fg 2
+126 96 0 0 0 2
 D0
 Você observa um portão negro.
 ~
 portao negro~
-:n 1 o portão negro
 1 2 12789
 D1
 Você observa as trevas.
@@ -4240,7 +4229,7 @@ almas perdidas que trazem em seus rostos uma expressam de angústia e medo.
 Ao oeste você observa as trevas e os seus moradores e para baixo você
 observa a entrada de uma câmara subterrânea.
 ~
-126 fg 2
+126 96 0 0 0 2
 D3
 Você observa as trevas.
 ~
@@ -4265,7 +4254,7 @@ em decomposição e algumas almas perdidas, ao sul você observa as terras
 infértis de Niffleheim através do portão negro e ao noroeste e nordeste você
 observa a floresta de morta de Niffleheim.
 ~
-126 cdfg 0
+126 108 0 0 0 0
 D0
 Você observa um grande salão.
 ~
@@ -4275,7 +4264,6 @@ D2
 Você observa um portão negro.
 ~
 portao negro~
-:n 1 o portão negro
 1 2 12787
 D6
 Você observa a floresta de Niffleheim.
@@ -4296,7 +4284,7 @@ O silêncio mórbido da floresta só é quebrado pelos fortes ventos frios que
 sopram em sua direção.  Ao norte e ao leste você observa a floresta de
 Niffleheim e ao sudeste você observa a entrada do palácio Elvinder.
 ~
-126 fg 2
+126 96 0 0 0 2
 D0
 Você observa a floresta de Niffleheim.
 ~
@@ -4321,7 +4309,7 @@ do sul você observa guerreiros que foram mortos pacificamente recém chegados
 a Niffleheim.  Ao norte você observa um grande salão do palácio Elvinder e
 ao sul você observa a entrada do palácio.
 ~
-126 dfg 0
+126 104 0 0 0 0
 D0
 Você observa um grande salão do palácio Elvinder.
 ~
@@ -4341,7 +4329,7 @@ O silêncio mórbido da floresta só é quebrado pelos fortes ventos frios que
 sopram em sua direção.  Ao norte e ao oeste você observa a floresta de
 Niffleheim e ao sudoeste você observa a entrada do palácio Elvinder.
 ~
-126 fg 2
+126 96 0 0 0 2
 D0
 Você observa a floresta de Niffleheim.
 ~
@@ -4367,7 +4355,7 @@ medo.  Ao olhar para o teto você observa um redemoinho negro e cenas
 assustadoras do Ragnarok.  Ao leste você observa um grande salão do palácio
 Elvinder.
 ~
-126 dfg 0
+126 104 0 0 0 0
 D1
 Você observa um grande salão.
 ~
@@ -4384,7 +4372,7 @@ olham para você com uma expressão de angústia no rosto.  Ao norte você
 observa um trono, ao leste você observa uma cúpula negra, ao oeste você
 observa uma sala escura e ao sul você observa o salão dos mortos.
 ~
-126 dfg 0
+126 104 0 0 0 0
 D0
 Você observa um trono.
 ~
@@ -4414,7 +4402,7 @@ apenas uma enorme pedra em forma de mesa, ao chegar mais perto você observa
 um corpo em cima dela.  Ao oeste você observa uma grande salão do palácio
 Elvinder.
 ~
-126 dfg 0
+126 104 0 0 0 0
 D3
 Você observa um grande salão dentro do palácio.
 ~
@@ -4429,7 +4417,7 @@ O silêncio mórbido da floresta só é quebrado pelos fortes ventos frios que
 sopram em sua direção.  Ao sul e ao leste você observa a floresta de
 Niffleheim e ao nordeste você observa a cidadela de Hel.
 ~
-126 fg 2
+126 96 0 0 0 2
 D1
 Você observa a floresta de Niffleheim.
 ~
@@ -4454,7 +4442,7 @@ observa um sombrio trono feito de um amontoado de corpos e esqueletos.  Ao
 sul você observa o grande salão do palácio Elvinder e ao norte a cidadela de
 Hel.
 ~
-126 dfg 0
+126 104 0 0 0 0
 D0
 Você observa a macabra cidadela de Hel.
 ~
@@ -4474,7 +4462,7 @@ O silêncio mórbido da floresta só é quebrado pelos fortes ventos frios que
 sopram em sua direção.  Ao sul e ao oeste você observa a floresta de
 Niffleheim e ao noroeste você observa a cidadela de Hel.
 ~
-126 fg 2
+126 96 0 0 0 2
 D2
 Você observa a floresta de Niffleheim.
 ~
@@ -4500,7 +4488,7 @@ para sempre junto de almas em pânico e de corpos em decomposição.
 ...bem vindo a cidadela de Hel, sua estadia será eterna.
 ...Você está morto !
 ~
-126 bcfg 1
+126 102 0 0 0 1
 S
 #12800
 A Planície de Vigrid~
@@ -4511,7 +4499,7 @@ gelada.  Ao nordeste e ao sudeste você observa a planície de Vigrid, ao
 leste você observa as águas do grande lago Amsvartnir e ao oeste você
 observa o bosque de Asgard.
 ~
-126 cfgh 2
+126 228 0 0 0 2
 D1
 Você observa o grande lago Amsvartnir.
 ~
@@ -4541,7 +4529,7 @@ brilho estranho e você sente uma forte energia emanando dessa planície
 gelada.  Ao nordeste e ao noroeste você observa a planície de Vigrid e ao
 sul você observa as águas do grande lago Amsvartnir.
 ~
-126 cfgh 2
+126 228 0 0 0 2
 D2
 Você observa o lago Amsvartnir.
 ~
@@ -4568,7 +4556,7 @@ oeste você observa as águas do grande lago Amsvartnir, ao nordeste você
 observa um belo palácio de ouro e prata e ao sudeste você observa um palácio
 de cristal.
 ~
-126 cfgh 2
+126 228 0 0 0 2
 D3
 Você observa o lago Amsvartnir.
 ~
@@ -4603,7 +4591,7 @@ brilho estranho e você sente uma forte energia emanando dessa planície
 gelada.  Ao sudoeste e ao sudeste você observa a planície de Vigrid e ao sul
 você observa as águas do grande lago Amsvartnir.
 ~
-126 cfgh 2
+126 228 0 0 0 2
 D2
 Você observa o lago Amsvartnir.
 ~
@@ -4628,7 +4616,7 @@ você observa as majestosas terras de Asgard e pequenos flocos de neve, que
 não param de cair.  Ao norte, sul, leste e oeste você observa a belíssima
 planície de Vigrid e rumo ao centro do lago você observa uma pequena ilha.
 ~
-126 cfgst 6
+126 786532 0 0 0 6
 D0
 Você observa a bela planície de Vigrid.
 ~
@@ -4662,7 +4650,7 @@ redor você observa várias pegadas enormes de alguma criatura estranha.  A
 paisagem das terras de Asgard do local mais elevado da ilha é monumental.
 Para baixo você observa as águas do lago Amsvartnir.
 ~
-126 cfg 2
+126 100 0 0 0 2
 D5
 Você observa o lago Amsvartnir.
 ~
@@ -4677,7 +4665,7 @@ os homens.  Ao seu redor você observa móveis belíssimos feitos pelas mãos
 habilidosas dos anões que vivem nas câmaras subterrâneas de Niffelheim.  Ao
 sudoeste você observa a calma planície de Vigrid.
 ~
-126 cdfg 0
+126 108 0 0 0 0
 D9
 Você observa a bela planície de Vigrid.
 ~
@@ -4691,7 +4679,7 @@ o palácio pertence ao Deus Balder, o bom.  Ao seu redor você observa móveis
 belíssimos feitos de cristais de várias cores.  Ao nordeste você observa a
 planície de Vigrid.
 ~
-126 cdfg 0
+126 108 0 0 0 0
 D6
 Você observa a bela planície de Vigrid.
 ~
@@ -4706,7 +4694,7 @@ rostos de muita alegria.  Ao leste você observa o bosque de Asgard , ao
 noroeste e ao sudoeste você observa a magnífica planície de Ida e ao oeste
 você observa um belo santuário.
 ~
-126 cfg 2
+126 100 0 0 0 2
 D1
 Você observa o belo bosque de Asgard.
 ~
@@ -4735,7 +4723,7 @@ das sagradas terras de Asgard.  A neve continua caindo impiedosamente,
 cobrindo toda a sua armadura.  Ao norte você observa um imponente santuário
 e ao nordeste e noroeste você observa as terras da planície de Ida.
 ~
-126 fg 2
+126 96 0 0 0 2
 D0
 Você observa um monumental santuário.
 ~
@@ -4759,7 +4747,7 @@ redor você observa vários Einherjars sorrindo e com uma expressão nos seus
 rostos de muita alegria.  Ao nordeste e ao sudeste você observa a magnífica
 planície de Ida e ao leste você observa um belo santuário.
 ~
-126 fg 2
+126 96 0 0 0 2
 D1
 Você observa um belo santuário.
 ~
@@ -4784,7 +4772,7 @@ cobrindo toda a sua armadura.  Ao norte você observa um palácio de prata, ao
 sul você observa um magnífico santuário e ao sudeste e sudoeste você observa
 as terras da planície de Ida.
 ~
-126 fg 2
+126 96 0 0 0 2
 D0
 Você observa um belo palácio prateado.
 ~
@@ -4814,7 +4802,7 @@ seis imensas rochas que formam o santuário.  Você percebe vários heróis
 caminhando e conversando no santuário.  Ao norte, leste, oeste e sul você
 observa as terras feéricas da planície de Ida.
 ~
-126 cefgt 2
+126 524404 0 0 0 2
 D0
 Você observa as terras da planície de Ida.
 ~
@@ -4843,7 +4831,7 @@ de todas as cores e perfumes.  O palácio Sessrumir pertence a Fréia, deusa
 da fertilidade e da paz doméstica.  Ao sul você observa além das flores, as
 belíssimas terras cobertas de neve da planície de Ida.
 ~
-126 cdfg 0
+126 108 0 0 0 0
 D2
 Você observa as terras da planície de Ida.
 ~
@@ -4858,7 +4846,7 @@ famosas e habilidosas mãos dos anões que vivem nas câmaras subterrâneas de
 Niffelheim.  Do palácio é possível observar todo o arco-íris e como também
 seus visitantes.  Para baixo você observa um belo arco-íris.
 ~
-126 cdfg 0
+126 108 0 0 0 0
 D5
 Você observa um magnífico arco-íris.
 ~
@@ -4874,7 +4862,7 @@ floresta de Alfheim é a morada dos belos e benevolentes espíritos brancos.
 Ao leste você observa a misteriosa floresta de Aflheim e ao sudoeste você
 observa uma planície coberta de neve.
 ~
-126 cfg 3
+126 100 0 0 0 3
 D1
 Você observa a floresta dourada de Alfheim.
 ~
@@ -4893,7 +4881,7 @@ seu redor você observa que a neve não chegou aqui.  Ao olhar para o chão
 você percebe pegadas de alguma pequena criatura.  Ao nordeste, sudeste e ao
 oeste você observa as árvores da floresta dourada de Alfheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D3
 Você observa a floresta dourada de Alfheim.
 ~
@@ -4918,7 +4906,7 @@ redor a majestosa floresta emite das suas árvores um brilho intenso e
 celestial, que atinge seus olhos, deixando você cego por algum tempo.  Ao
 leste e ao sudoeste você observa trilhas na floresta de Alfheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D1
 Você observa a floresta dourada de Alfheim.
 ~
@@ -4937,7 +4925,7 @@ seu redor você observa que a neve não chegou aqui.  Ao olhar para o chão
 você percebe pegadas de alguma pequena criatura.  Ao oeste você observa as
 árvores da floresta dourada de Alfheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D3
 Você observa a floresta dourada de Alfheim.
 ~
@@ -4952,7 +4940,7 @@ você percebe algumas pequeninas pegadas de alguma criatura da floresta.  Ao
 nordeste, sudeste e noroeste você observa trilhas por entre as árvores da
 floresta dourada de Alfheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D6
 Você observa a floresta dourada de Alfheim.
 ~
@@ -4977,7 +4965,7 @@ redor a majestosa floresta emite das suas árvores um brilho intenso e
 celestial, que atinge seus olhos, deixando você cego por algum tempo.  Ao
 sul e ao sudoeste você observa trilhas na floresta de Alfheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D2
 Você observa a floresta dourada de Alfheim.
 ~
@@ -4999,7 +4987,7 @@ refletir sobre seus atos.  Uma enorme sensação de paz, fraternidade, união e
 harmonia tomam conta do seu corpo e da sua mente.  Ao norte você observa uma
 trilha na divina floresta de Alfheim.
 ~
-126 fg 1
+126 96 0 0 0 1
 D0
 Você observa a floresta dourada de Alfheim.
 ~
@@ -5013,7 +5001,7 @@ seu redor você observa que a neve não chegou aqui.  Ao olhar para o chão
 você percebe pegadas de alguma pequena criatura.  Ao sudoeste você observa
 as árvores da floresta dourada de Alfheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D9
 Você observa a floresta dourada de Alfheim.
 ~
@@ -5027,7 +5015,7 @@ seu redor você observa que a neve não chegou aqui.  Ao olhar para o chão
 você percebe pegadas de alguma pequena criatura.  Ao nordeste, sudeste e ao
 noroeste você observa as árvores da floresta dourada de Alfheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D6
 Você observa a floresta dourada de Alfheim.
 ~
@@ -5052,7 +5040,7 @@ redor a majestosa floresta emite das suas árvores um brilho intenso e
 celestial, que atinge seus olhos, deixando você cego por algum tempo.  Ao
 noroeste você observa trilhas na floresta de Alfheim.
 ~
-126 fg 3
+126 96 0 0 0 3
 D6
 Você observa a floresta dourada de Alfheim.
 ~
@@ -5067,7 +5055,7 @@ lisas como se alguém as tivesse polido.  O odor dentro da câmara é
 insuportável.  Para cima você observa a saída da câmara subterrânea e ao
 oeste você observa um corredor bastante escuro.
 ~
-126 acdfgirs 0
+126 393581 0 0 0 0
 D1
 Você observa um corredor escuro.
 ~
@@ -5087,7 +5075,7 @@ olhar para o chão observa muita lama e pequenas pegadas.  Ao leste você
 observa o corredor indo em direção do interior da câmara subterrânea e ao
 oeste você observa a saída.
 ~
-126 adfgirs 0
+126 393577 0 0 0 0
 D1
 Você observa um corredor bastante sujo.
 ~
@@ -5108,7 +5096,7 @@ observa o corredor indo em direção da saída da câmara subterrânea e descend
 pelo corredor você observa em meio a escuridão algumas tochas de fogo nas
 paredes.
 ~
-126 adfgirs 0
+126 393577 0 0 0 0
 D3
 Você observa um corredor bastante sujo.
 ~
@@ -5129,7 +5117,7 @@ para não escorregar nas poças de lama que existem aqui.  Você sente uma
 estranha sensação de que alguém está lhe observando.  Para cima, para baixo
 e ao leste você observa estreitos corredores.
 ~
-126 adfgirs 0
+126 393577 0 0 0 0
 D1
 Você observa um corredor bastante sujo.
 ~
@@ -5154,7 +5142,7 @@ olhar para o chão observa muita lama e pequenas pegadas. Ao oeste você
 observa em meio a escuridão algumas tochas de fogo nas paredes e ao leste
 você observa o final do corredor.
 ~
-126 adfgirs 0
+126 393577 0 0 0 0
 D1
 Você observa o final do corredor.
 ~
@@ -5173,7 +5161,7 @@ você observa algumas ferramentas de ferreiros sujas no chão e uma grande
 fogueira.  No chão muita lama e pegadas pequeninas de alguma criatura.  Ao
 oeste você observa um corredor escuro.
 ~
-126 adfgirs 0
+126 393577 0 0 0 0
 D3
 Você observa um corredor bastante sujo.
 ~
@@ -5188,7 +5176,7 @@ lisas como se tivessem sido polidas por alguém.  Ao olhar para o chão você
 percebe várias pequenas pegadas de alguma criatura.  Ao leste e para baixo
 você observa um corredor bastante escuro.
 ~
-126 adfgrs 0
+126 393321 0 0 0 0
 D1
 Você observa um corredor bastante sujo.
 ~
@@ -5208,7 +5196,7 @@ olhar para o chão observa muita lama e pequenas pegadas.  Ao leste você
 observa um corredor bastante escuro e ao oeste você observa um pátio amplo
 e bastante sujo.
 ~
-126 adfgirs 0
+126 393577 0 0 0 0
 D1
 Você observa um corredor bastante sujo.
 ~
@@ -5228,7 +5216,7 @@ olhar para o chão observa muita lama e pequenas pegadas.  Ao oeste você
 observa a continuação do corredor e para cima você observa um pátio sujo com
 algumas tochas nas paredes.
 ~
-126 adfgirs 0
+126 393577 0 0 0 0
 D3
 Você observa um corredor bastante sujo.
 ~
@@ -5247,7 +5235,7 @@ Niffleheim.  A iluminação neste lugar é mínima e se não fosse pelo seu
 equipamento, a escuridão seria absoluta.  Ao leste você observa um corredor
 assustador e para cima você observa um pátio bastante sujo.
 ~
-126 adfgirs 0
+126 393577 0 0 0 0
 D1
 Está muito escuro para você percebe algo.
 ~
@@ -5266,7 +5254,7 @@ escuro e sujo.  Ao seu redor você observa as lisas paredes da câmara e ao
 olhar para o chão observa muita lama e pequenas pegadas.  Ao leste e ao
 oeste você observa um corredor bastante escuro.
 ~
-126 adfgirs 0
+126 393577 0 0 0 0
 D1
 Está muito escuro para você percebe algo.
 ~
@@ -5286,7 +5274,7 @@ olhar para o chão observa muita lama e pequenas pegadas.  Ao oeste você
 observa um corredor bastante escuro e para baixo você observa um grande
 buraco.
 ~
-126 adfgirs 0
+126 393577 0 0 0 0
 D3
 Está muito escuro para você percebe algo.
 ~
@@ -5306,7 +5294,7 @@ suja e escura câmara e no canto norte da depressão você observa um trono de
 ferro e madeira.  O odor aqui é insuportável.  Você olha para todos os lados
 ,mas não encontra uma saída deste local.
 ~
-126 adfgrs 0
+126 393321 0 0 0 0
 S
 #12838
 As Frias Águas do Oceano Atlântico Norte~
@@ -5316,7 +5304,7 @@ imensidão do oceano esperando a qualquer momento encontrar novas terras
 desconhecidas.  Ao norte você observa as águas do oceano Atlântico Norte e
 ao sudeste você observa as águas do oceano Atlântico.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D0
 Você observa o oceano Atlântico Norte.
 ~
@@ -5335,7 +5323,7 @@ porto, em cada nova cidade que você chega as lendas sobre este imenso oceano
 fazem sua imaginação saltitar.  Ao nordeste, noroeste e ao sul você observa
 as águas do oceano Atlântico Norte.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D2
 Você observa o oceano Atlântico Norte.
 ~
@@ -5360,7 +5348,7 @@ a vela da sua embarcação tremulando por causa dos ventos frios, que lhe
 causam arrepios.  Ao noroeste e ao sudeste você observa as águas do oceano
 Atlântico Norte.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D6
 Você observa o oceano Atlântico Norte.
 ~
@@ -5380,7 +5368,7 @@ fortes ventos frios, você observa além da sua proa uma enorme ilha de gelo.
 Ao sudeste você observa as águas do oceano Atlântico Norte e ao norte você
 percebe a existência de uma magnífica ilha de gelo.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D0
 Você observa a monumental terra do gelo.
 ~
@@ -5404,7 +5392,7 @@ próxima erupção de águas ferventes ou de lava.  Ao sul você observa as fria
 águas do oceano Atlântico Norte e ao norte você observa uma desértica calota
 de gelo.
 ~
-126 cg 2
+126 68 0 0 0 2
 D0
 Você observa uma enorme calota de gelo.
 ~
@@ -5424,7 +5412,7 @@ monumental, uma grande calota branca de gelo.  Você observa também grandes
 vulcões ao noroeste e sente alguns tremores de terra.  Ao sul, noroeste e ao
 nordeste você observa uma grande calota de gelo.
 ~
-126 g 2
+126 64 0 0 0 2
 D2
 Você observa uma enorme calota de gelo.
 ~
@@ -5448,7 +5436,7 @@ gelo e a neve reinam como supremos, os ventos gélidos atingem você como
 flechas e os tremores de terra não cessam.  Ao oeste e ao sudeste você
 observa a extensa calota de gelo.
 ~
-126 g 2
+126 64 0 0 0 2
 D3
 Você observa uma enorme calota de gelo.
 ~
@@ -5468,7 +5456,7 @@ de gelo e ao olhar para o solo coberto de gelo e neve você percebe algumas
 pegadas semelhantes a de seres humanos.  Ao nordeste você observa um campo
 de vegetação rasteira e ao sudoeste você observa a extensa calota de gelo.
 ~
-126 g 2
+126 64 0 0 0 2
 D7
 Você observa um belo campo de vegetação rasteira.
 ~
@@ -5487,7 +5475,7 @@ terras da Islandesas.  Ao seu redor você observa uma grande calota de gelo
 e além da calota você percebe enormes vulcões.  Ao leste você observa a
 extensa calota de gelo e ao norte você observa um enorme vulcão.
 ~
-126 g 2
+126 64 0 0 0 2
 D0
 Você observa um grande vulcão.
 ~
@@ -5508,7 +5496,7 @@ lugar e' completamente oposta das calotas de gelo da ilha.  A cada passo que
 você dar os tremores de terra aumentam.  O perigo de uma nova erupção pode
 está em qualquer lugar.  Ao oeste você observa um grande vulcão.
 ~
-126 cg 2
+126 68 0 0 0 2
 D3
 Você observa um grande vulcão.
 ~
@@ -5524,7 +5512,7 @@ Para cima você observa uma trilha íngreme em direção do topo do vulcão, ao
 leste e oeste você observa o assustador deserto de lava e ao sul você
 observa uma monumental calota de gelo.
 ~
-126 cgr 4
+126 131140 0 0 0 4
 D1
 Você observa o deserto de lava vulcânica.
 ~
@@ -5554,7 +5542,7 @@ paisagens bem distintas:  O deserto de lava vulcânica e as calotas de gelo.
 Para cima você observa o topo do vulcão Askja e para baixo você observa uma
 trilha íngreme em direção a base do vulcão.
 ~
-126 gqr 5
+126 196672 0 0 0 5
 D4
 Você observa o perigoso topo do vulcão.
 ~
@@ -5577,7 +5565,7 @@ tremor abala todo o corpo do vulcão Askja...
 ...Sua inocência lhe custou muito caro você está morto e imortalizado para
 sempre, quando o mar de lava vulcânica que lhe cobriu secar.
 ~
-126 bcqr 5
+126 196614 0 0 0 5
 S
 #12851
 O Deserto de Lava Vulcânica~
@@ -5589,7 +5577,7 @@ você dá os tremores de terra aumentam.  O perigo de uma nova erupção pode
 estar em qualquer lugar.  Ao oeste e ao leste você observa a base de dois
 poderosos e magníficos vulcões.
 ~
-126 cg 2
+126 68 0 0 0 2
 D1
 Você observa um grande vulcão.
 ~
@@ -5609,7 +5597,7 @@ gelo.  Para cima você observa uma trilha íngreme em direção do topo do
 vulcão, ao leste você observa o assustador deserto de lava e para baixo você
 observa uma monumental calota de gelo.
 ~
-126 cgr 4
+126 131140 0 0 0 4
 D1
 Você observa o deserto de lava vulcânica.
 ~
@@ -5634,7 +5622,7 @@ paisagens bem distintas:  O deserto de lava vulcânica e as calotas de gelo.
 Para cima você observa o topo do vulcão Hekla e para baixo você observa uma
 trilha íngreme em direção a base do vulcão.
 ~
-126 gqr 5
+126 196672 0 0 0 5
 D4
 Você observa o perigoso topo do vulcão.
 ~
@@ -5657,7 +5645,7 @@ tremor abala todo o corpo do vulcão Hekla...
 ...Sua inocência lhe custou muito caro você está morto e imortalizado para
 sempre, quando o mar de lava vulcânica que lhe cobriu secar.
 ~
-126 bcqr 5
+126 196614 0 0 0 5
 S
 #12855
 Uma Monumental Calota de Gelo~
@@ -5668,7 +5656,7 @@ vulcões ao noroeste e sente alguns tremores de terra.  Para cima você
 observa a base de um grande vulcão e ao norte você observa um grande campo
 cheio de cavalos selvagens.
 ~
-126 g 2
+126 64 0 0 0 2
 D0
 Você observa um belo campo de vegetação rasteira.
 ~
@@ -5690,7 +5678,7 @@ pedras negras utilizado como um estábulo para alguns cavalos.  Ao sul você
 observa uma imensa calota de gelo e ao noroeste você observa um belo campo
 verde.
 ~
-126 0 2
+126 0 0 0 0 2
 D2
 Você observa uma bela calota de gelo.
 ~
@@ -5712,7 +5700,7 @@ observa uma calota de gelo, norte você observa uma cabana cheia de armas, ao
 sul você observa uma cabana de rochas e feno e ao sudeste você observa um
 cercado feito de rochas.
 ~
-126 c 1
+126 4 0 0 0 1
 D0
 Você observa uma cabana cheia de ferramentas.
 ~
@@ -5746,7 +5734,7 @@ feno.  Ao seu redor você observa uma cama de pedra coberta de feno, uma mesa
 feita de madeira bastante envelhecida e duas grandes pedras.  Ao norte você
 observa alguns vikings caminhando no belo campo verde.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D0
 Você observa um belo campo verde.
 ~
@@ -5761,7 +5749,7 @@ feita de madeira bastante envelhecida e duas grandes pedras.  Ao norte você
 observa alguns vikings caminhando no belo campo verde e observando a estatua
 do poderoso deus Thor.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D0
 Você observa a bela estatua do deus Thor.
 ~
@@ -5774,7 +5762,7 @@ O Armazém da Vila Viking~
 Ao seu redor pilhas de suprimentos estão guardados aqui.  Ao norte você
 observa alguns vikings conversando num belo campo verde.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D0
 Você observa um belo campo verde.
 ~
@@ -5791,7 +5779,7 @@ algumas pinturas que contam as viagens dos vikings noruegueses e suecos, que
 partiram da península escandinava e chegaram até aqui.  Ao leste você
 observa um belo campo verde.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D1
 Você observa um belo campo verde.
 ~
@@ -5807,7 +5795,7 @@ você observa uma majestosa estatua do deus Thor, o senhor dos trovões.  Ao
 leste e oeste você observa a extensão do campo verde e ao norte e ao sul
 você observa pequenas cabanas.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa uma pequena cabana.
 ~
@@ -5838,7 +5826,7 @@ observa uma pequena cabana viking, ao oeste você observa uma longa cabana
 viking, ao sul você observa o armazém da vila e ao oeste você observa uma
 bela estatua do deus Thor, o senhor dos trovões.
 ~
-126 0 1
+126 0 0 0 0 1
 D0
 Você observa uma pequena cabana viking.
 ~
@@ -5867,7 +5855,7 @@ várias ferramentas, armas e um pequena fogueira.  O calor dentro da cabana é
 insuportável.  Ao sul você observa alguns vikings caminhando num belo campo
 verde.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D2
 Você observa um belo campo verde.
 ~
@@ -5882,7 +5870,7 @@ feita de madeira bastante envelhecida e duas grandes pedras.  Ao sul você
 observa alguns vikings caminhando no belo campo verde e observando a estatua
 do poderoso deus Thor.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D2
 Você observa a bela estatua do deus Thor no centro do campo verde.
 ~
@@ -5896,7 +5884,7 @@ feno.  Ao seu redor você observa uma cama de pedra coberta de feno, uma mesa
 feita de madeira bastante envelhecida e duas grandes pedras.  Ao sul você
 observa um belo campo verde, situado na vila viking.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D2
 Você observa um belo campo verde.
 ~
@@ -5911,7 +5899,7 @@ de gelo e ao olhar para o solo coberto de gelo e neve você percebe algumas
 pegadas semelhantes a de seres humanos.  Ao oeste você observa um belo campo
 verde e ao leste você observa o majestoso rio Blanda.
 ~
-126 g 2
+126 64 0 0 0 2
 D1
 Você observa as gélidas águas do rio Blanda.
 ~
@@ -5930,7 +5918,7 @@ As Águas Gélidas do Rio Blanda~
 imensa calota de gelo que margeia todo o rio.  Ao nordeste você observa as
 águas do rio Blanda.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D7
 Você observa o rio Blanda.
 ~
@@ -5945,7 +5933,7 @@ imensa calota de gelo que margeia todo o rio.  Ao norte e ao sudoeste você
 observa as águas do rio Blanda e ao sudeste e oeste você observa uma bela
 calota de gelo.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D0
 Você observa o rio Blanda.
 ~
@@ -5974,7 +5962,7 @@ As Águas Gélidas do Rio Blanda~
 imensa calota de gelo que margeia todo o rio.  Ao sul e ao noroeste você
 observa as águas do rio Blanda.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D2
 Você observa o rio Blanda.
 ~
@@ -5993,7 +5981,7 @@ As Águas Gélidas do Rio Blanda~
 imensa calota de gelo que margeia todo o rio.  Ao sudeste e ao nordeste você
 observa as águas do rio Blanda.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D7
 Você observa o rio Blanda.
 ~
@@ -6012,7 +6000,7 @@ As Águas Gélidas do Rio Blanda~
 imensa calota de gelo que margeia todo o rio.  Ao sudoeste você observa as
 águas do rio Blanda e ao norte você observa o mar da Groenlândia.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D0
 Você observa o congelante mar da Groenlândia.
 ~
@@ -6033,7 +6021,7 @@ frias do mar da Groenlândia.  Os ventos fortes e congelantes lhe causam
 arrepios e dificultam a sua respiração.  Ao sul você observa o delta do rio
 Blanda e ao leste você observa a imensidão do mar da Groenlândia.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D1
 Você observa as águas congelantes do mar da Groenlândia.
 ~
@@ -6052,7 +6040,7 @@ Ao seu redor você observa a imensidão deste silencioso mar.  Os ventos frios
 fazem as velas da sua embarcação tremularem fortemente.  Ao sudeste e ao
 oeste você observa as águas do mar da Groenlândia.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D3
 Você observa as águas congelantes do mar da Groenlândia.
 ~
@@ -6072,7 +6060,7 @@ Groenlândia, os belíssimos fiordes existentes em toda a ilha da Islândia.
 Ao leste e ao noroeste você observa as congelantes águas do mar da
 Groenlândia.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D1
 Você observa as águas congelantes do mar da Groenlândia.
 ~
@@ -6091,7 +6079,7 @@ Ao seu redor você observa a imensidão deste silencioso mar.  Os ventos frios
 fazem as velas da sua embarcação tremularem fortemente.  Ao sudeste e ao
 oeste você observa as águas do mar da Groenlândia.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D3
 Você observa as águas congelantes do mar da Groenlândia.
 ~
@@ -6111,7 +6099,7 @@ Groenlândia, os belíssimos fiordes existentes em toda a ilha da Islândia.
 Ao sudeste e ao noroeste você observa as congelantes águas do mar da
 Groenlândia.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D6
 Você observa as águas congelantes do mar da Groenlândia.
 ~
@@ -6133,7 +6121,7 @@ arrepios e dificultam a sua respiração.  Ao noroeste e ao sudeste você
 observa a imensidão do mar da Groenlândia e ao leste você observa o mar
 Glacial Ártico.
 ~
-126 cgr 7
+126 131140 0 0 0 7
 D1
 Você observa o mar Glacial Ártico.
 ~
@@ -6158,7 +6146,7 @@ fazem as velas da sua embarcação tremularem fortemente.  Ao noroeste você
 observa as águas do mar da Groenlândia e ao sul você observa as águas do
 oceano Atlântico Norte.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D2
 Você observa as águas do oceano Atlântico Norte.
 ~
@@ -6178,7 +6166,7 @@ a vela da sua embarcação tremulando por causa dos ventos frios, que lhe
 causam arrepios.  Ao sudoeste você observa as águas do oceano Atlântico
 Norte e ao norte você observa as águas do mar da Groenlândia.
 ~
-126 gr 7
+126 131136 0 0 0 7
 D0
 Você observa o mar da Groenlândia.
 ~
@@ -6197,7 +6185,7 @@ feno.  Ao seu redor você observa uma cama de pedra coberta de feno, uma mesa
 feita de madeira bastante envelhecida e duas grandes pedras.  Ao norte você
 observa alguns vikings caminhando numa bela planície de vegetação rasteira.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D0
 Você observa uma bela planície verde.
 ~
@@ -6211,7 +6199,7 @@ várias ferramentas, armas e um pequena fogueira.  O calor dentro da cabana é
 insuportável.  Ao norte você observa alguns vikings caminhando numa majestosa
 planície de vegetação rasteira.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D0
 Você observa uma bela planície verde.
 ~
@@ -6226,7 +6214,7 @@ observa uma agitada vila viking e várias cabanas de rochas vulcânicas e
 feno.  Ao norte, nordeste e leste você observa o imenso campo de vegetação
 rasteira e ao sudoeste você observa uma bela calota de gelo.
 ~
-126 c 2
+126 4 0 0 0 2
 D0
 Você observa um belo campo verde.
 ~
@@ -6256,7 +6244,7 @@ alguns vikings conversando e brigando entre si.  Ao leste e oeste você
 observa o belo campo de vegetação rasteira, onde a neve e o gelo ainda não
 chegaram e ao sul você observa uma pequena cabana.
 ~
-126 0 2
+126 0 0 0 0 2
 D1
 Você observa um belo campo verde.
 ~
@@ -6281,7 +6269,7 @@ alguns vikings conversando e brigando entre si.  Ao oeste você observa o
 belo campo de vegetação rasteira, onde a neve e o gelo ainda não chegaram e
 ao sul você observa uma pequena cabana cheia de ferramentas.
 ~
-126 0 2
+126 0 0 0 0 2
 D2
 Você observa a cabana do ferreiro viking.
 ~
@@ -6300,7 +6288,7 @@ feno.  Ao seu redor você observa uma cama de pedra coberta de feno, uma mesa
 feita de madeira bastante envelhecida e duas grandes pedras.  Ao leste você
 observa alguns vikings caminhando numa bela planície de vegetação rasteira.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D1
 Você observa uma bela planície verde.
 ~
@@ -6315,7 +6303,7 @@ suas cabanas feitas de rochas vulcânicas e feno, e seus habitantes
 competindo entre si em jogos brutais.  Ao norte e ao sul você observa um
 belo campo de vegetação rasteira e ao oeste você observa uma pequena cabana.
 ~
-126 0 2
+126 0 0 0 0 2
 D0
 Você observa um campo verde.
 ~
@@ -6342,7 +6330,7 @@ trovões e filho de Odin, o senhor de Asgard.  Ao norte, leste e ao sudoeste
 você observa o belo campo de vegetação verde, onde a neve e o gelo ainda não
 conquistaram e ao nordeste você observa uma longa cabana viking.
 ~
-126 0 2
+126 0 0 0 0 2
 D0
 Você observa um belo campo verde.
 ~
@@ -6372,7 +6360,7 @@ vikings brigando e algumas crianças vikings brincando.  Ao leste você
 observa uma grande cabana viking e ao oeste você observa um belo campo de
 vegetação rasteira, onde a neve e o gelo ainda não chegaram.
 ~
-126 0 2
+126 0 0 0 0 2
 D1
 Você observa o armazém da vila viking.
 ~
@@ -6391,7 +6379,7 @@ Ao seu redor pilhas de suprimentos estão guardados aqui, aguardando o mais
 tenebroso inverno.  Ao oeste você observa alguns vikings conversando num
 belo campo verde.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D3
 Você observa um belo campo verde.
 ~
@@ -6405,7 +6393,7 @@ feno.  Ao seu redor você observa uma cama de pedra coberta de feno, uma mesa
 feita de madeira bastante envelhecida e duas grandes pedras.  Ao leste você
 observa alguns vikings caminhando numa bela planície de vegetação rasteira.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D1
 Você observa um belo campo verde.
 ~
@@ -6421,7 +6409,7 @@ calota de gelo, ao oeste você observa uma pequena cabana viking e ao sul
 você observa um belo campo de vegetação rasteira, onde a neve e o gelo ainda
 não conquistaram.
 ~
-126 0 2
+126 0 0 0 0 2
 D0
 Você observa uma monumental calota de gelo.
 ~
@@ -6446,7 +6434,7 @@ alguns vikings conversando e brigando entre si.  Ao sul você observa um belo
 campo de vegetação rasteira, onde a neve e o gelo ainda não chegaram e ao
 norte você observa uma pequena cabana viking.
 ~
-126 0 2
+126 0 0 0 0 2
 D0
 Você observa uma pequena cabana.
 ~
@@ -6469,7 +6457,7 @@ sudeste da cabana você observa uma escadaria, que para cima leva para o
 salão da alta cúpula do parlamento de Althing.  Ao sudoeste você observa um
 campo verde, onde a neve e o gelo ainda não conquistaram.
 ~
-126 d 0
+126 8 0 0 0 0
 D4
 Você observa uma escadaria.
 ~
@@ -6490,7 +6478,7 @@ campo verde, onde a neve e o gelo ainda não chegaram, ao noroeste você
 observa as águas congelantes do rio Blanda e ao nordeste você observa
 grandes erupções de água fervente, que surgem dos géiseres.
 ~
-126 g 2
+126 64 0 0 0 2
 D2
 Você observa um belo campo verde.
 ~
@@ -6514,7 +6502,7 @@ feno.  Ao seu redor você observa uma cama de pedra coberta de feno, uma mesa
 feita de madeira bastante envelhecida e duas grandes pedras.  Ao sul você
 observa alguns vikings caminhando numa bela planície de vegetação rasteira.
 ~
-126 dr 0
+126 131080 0 0 0 0
 D2
 Você observa um belo campo verde.
 ~
@@ -6532,7 +6520,7 @@ Nas paredes você observa as pinturas de algumas runas e algumas tochas de
 fogo.  No canto sudeste do salão você observa uma escadaria que segue para
 baixo na direção do grande salão social viking.
 ~
-126 cdr 0
+126 131084 0 0 0 0
 D5
 Você observa uma escadaria.
 ~
@@ -6549,7 +6537,7 @@ a neve reinam como supremos.  Pois são dessas fontes que é retirada a água
 para o abastecimento das vilas vikings.  Ao sudoeste você observa uma imensa
 calota de gelo e ao leste você observa um lago de águas estranhas.
 ~
-126 g 2
+126 64 0 0 0 2
 D1
 Você observa um lago de águas amarelas.
 ~
@@ -6569,11 +6557,11 @@ alguns géiseres e muito vapor.  A sensação dentro deste lago é insuportável
 Você respira com bastante dificuldade, inalando todos os gases maléficos,
 que estão neste espaço.  Ao oeste você observa algumas erupções de géiseres.
 ~
-126 cgq 6
+126 65604 0 0 0 6
 D3
 Você observa vários géiseres.
 ~
 ~
 0 -1 12898
 S
-$
+$~
