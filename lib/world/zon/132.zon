@@ -1,21 +1,21 @@
 #132
 Vitalia~
 O Farol da Praia~
-13200 13299 45 1
-D 0 13221 1 0 	(¡rea Principal do Farol)
-D 0 13221 3 0 	(¡rea Principal do Farol)
-D 0 13219 2 1 	(PrÛximo ao Farol)
-D 0 13227 2 2 	(Quarto de Divers„o do Guardi„o)
-D 0 13226 0 2 	(A Sala de OperaÁıes do Guardi„o do Farol)
+13200 13299 45 1 j 0 0 0 -1 -1
+D 0 13221 1 0 	(√Årea Principal do Farol)
+D 0 13221 3 0 	(√Årea Principal do Farol)
+D 0 13219 2 1 	(Pr√≥ximo ao Farol)
+D 0 13227 2 2 	(Quarto de Divers√£o do Guardi√£o)
+D 0 13226 0 2 	(A Sala de Opera√ß√µes do Guardi√£o do Farol)
 D 0 13229 0 2 	(A Cela)
-D 0 13226 2 2 	(A Sala de OperaÁıes do Guardi„o do Farol)
+D 0 13226 2 2 	(A Sala de Opera√ß√µes do Guardi√£o do Farol)
 D 0 13230 1 2 	(A Cela)
-D 0 13226 3 2 	(A Sala de OperaÁıes do Guardi„o do Farol)
+D 0 13226 3 2 	(A Sala de Opera√ß√µes do Guardi√£o do Farol)
 D 0 13228 3 2 	(A Cela)
-D 0 13226 1 2 	(A Sala de OperaÁıes do Guardi„o do Farol)
+D 0 13226 1 2 	(A Sala de Opera√ß√µes do Guardi√£o do Farol)
 O 0 13200 1 13222 	(uma escrivaninha de mogno)
 P 1 13201 1 13200 	(uma chave em forma de oito)
-D 0 13222 5 2 	(O Quarto do Guardi„o)
+D 0 13222 5 2 	(O Quarto do Guardi√£o)
 D 0 13225 4 2 	(Nas Escadas em Espiral)
 D 0 13220 0 1 	(Dentro do Farol)
 S

@@ -7,7 +7,7 @@ redor está viva, com a população vivendo suas vidas.  Acima, o caminho guia
 para  as  diversas  lojas  de  Thewster,  ao sul fica a Taverna da Baía das
 Folhas.  Para leste fica o caminho devolta à floresta.
 ~
-134 0 1
+134 0 0 0 0 1
 D1
 A Escadaria.
 ~
@@ -36,7 +36,7 @@ O Caminho no Galho~
 caminho.  A sul fica a praça central de Thewster e ao norte fica a praça do
 mercado.
 ~
-134 0 1
+134 0 0 0 0 1
 D0
 ~
 ~
@@ -56,7 +56,7 @@ A Escadaria~
 você  nota  que  os galhos crescem bem próximo uns dos outros, formando uma
 escadaria que conduz à superfície e para o topo da escadaria.
 ~
-134 4 0
+134 4 0 0 0 0
 D3
 oeste
 ~
@@ -78,7 +78,7 @@ A Taverna da Baía das Folhas~
 há  uma  grande mesa com uma placa de bronze. A leste você vê a recepção, a
 oeste você vê o Restaurante Baía das Folhas e a norte fica a praça.
 ~
-134 8 1
+134 8 0 0 0 1
 D0
 norte
 ~
@@ -98,7 +98,7 @@ Avenida Baía das Folhas~
   Essa  avenida  foi  cravada  em uma grande baía de folhas. A leste fica a
 praça central de Thewster, próximo daqui o caminho se torna uma interseção.
 ~
-134 0 0
+134 0 0 0 0 0
 D1
 leste
 ~
@@ -115,7 +115,7 @@ O Banco de Thewster~
 preenchidas  com  pequenas  árvores  de figo. A leste você nota uma entrada
 para um tipo de cofre.
 ~
-134 8 1
+134 8 0 0 0 1
 D5
 ~
 ~
@@ -134,7 +134,7 @@ você vê a entrada para a ferraria, a leste está a entrada para o arsenal de
 Dios.  A  praça  continua para oeste. Para o sul o caminho de galhos conduz
 para a praça central.
 ~
-134 0 0
+134 0 0 0 0 0
 D0
 ~
 ~
@@ -159,7 +159,7 @@ mercadorias.  Os  cidadãos  de  Thewster  andam  normalmente,  fazendo suas
 tarefas diárias. A praça conduz a outros caminhos em ambos os lados leste e
 oeste.
 ~
-134 0 0
+134 0 0 0 0 0
 D1
 ~
 ~
@@ -176,7 +176,7 @@ pequena escada ao lado do caminho conduz acima, e pelo som, há um bar.  Para
 leste  o caminho conduz para a praça do mercado.  A oeste você vê a entrada
 para as Guildas, que está atualmente fechada para detetização.
 ~
-134 0 0
+134 0 0 0 0 0
 D2
 ~
 ~
@@ -201,7 +201,7 @@ pouco  de  enjôo.  Você dá uma amedrontada olhada para baixo, esperando ver
 alguns  elfos  espatifados  no chão da floresta, lá embaixo, mas felizmente
 você não vê nenhum.
 ~
-134 0 0
+134 0 0 0 0 0
 D0
 ~
 ~
@@ -223,7 +223,7 @@ escada  de  cordas,  abaixo  está  a  Av. Baía de Folhas. Você vê a Loja de
 Mágica de Balston ao sul e uma pequena escada de cordas que conduzem abaixo
 até o armazém de equipamentos.
 ~
-134 0 0
+134 0 0 0 0 0
 D0
 ~
 ~
@@ -256,7 +256,7 @@ A Ferraria de Thewster~
 capacetes,  escudos  e  grandes  armaduras por todos os lados. A sul está a
 praça do mercado.
 ~
-134 8 1
+134 8 0 0 0 1
 D2
 ~
 ~
@@ -268,7 +268,7 @@ O Depósito de Armas do Dios~
 lâminas  de aço temperado das grandes espadas brilham por todos os lados. A
 oeste, através da porta, você vê a interseção.
 ~
-134 8 1
+134 8 0 0 0 1
 D3
 ~
 ~
@@ -282,7 +282,7 @@ O  chão  é  coberto  por  desenhos  gastos de pentagramas e outros símbolos
 estranhos, e há um quadro-negro em um canto que foi parcialmente limpo, com
 algumas letras que são pouco visíveis.
 ~
-134 8 1
+134 8 0 0 0 1
 D0
 ~
 ~
@@ -293,7 +293,7 @@ O Depósito de Equipamentos~
   Você está dentro do depósito de equipamentos, todas as espécies de coisas
 preenchem as organizadas estantes. Abaixo fica a interseção.
 ~
-134 8 1
+134 8 0 0 0 1
 D5
 ~
 ~
@@ -305,7 +305,7 @@ O Bar do Leeve~
 Ilusões  de  finas  mobílias  aparecem por todo lugar, talvez seja apenas a
 bebida..
 ~
-134 8 1
+134 8 0 0 0 1
 D5
 ~
 ~
@@ -317,7 +317,7 @@ A Entrada Para as Guildas~
 natureza  das  guildas.  A  sala  central  continua  para oeste enquanto as
 guildas ficam para norte e sul.
 ~
-134 8 1
+134 8 0 0 0 1
 D0
 ~
 ~
@@ -341,7 +341,7 @@ A Entrada Para as Guildas~
 natureza  das  guildas.  A  sala  central  continua  para oeste enquanto as
 guildas ficam para norte e sul.
 ~
-134 8 1
+134 8 0 0 0 1
 D0
 ~
 ~
@@ -365,7 +365,7 @@ A Guilda dos Ladinos~
 do teto ser bem alto, você pode ver alguns objetos pendurados nele. A única
 saída esta a sul.
 ~
-134 8 1
+134 8 0 0 0 1
 D2
 ~
 ~
@@ -376,7 +376,7 @@ A Guilda dos Magos~
   Você  está  em  uma pequena sala. Sombras cobrem totalmente as paredes. O
 chão é feito de rochas negras. A única saída está ao norte.
 ~
-134 8 1
+134 8 0 0 0 1
 D0
 ~
 ~
@@ -387,7 +387,7 @@ A Guilda dos Clérigos~
   Essa  sala  emana  uma sensação de paz, parece uma igreja em miniatura. A
 única saída fica ao norte.
 ~
-134 8 1
+134 8 0 0 0 1
 D0
 ~
 ~
@@ -398,7 +398,7 @@ A Guilda dos Guerreiros~
   A  entrada  para  a  Guilda  dos  Guerreiros. Um lugar onde se deve tomar
 cuidado para não dizer nada errado (ou certo). A única saída fica ao sul.
 ~
-134 8 1
+134 8 0 0 0 1
 D2
 ~
 ~
@@ -410,7 +410,7 @@ A Recepção~
 no  centro  da  sala  você vê uma longa sala com diversas portas. A porta a
 oeste conduz à entrada da taverna.
 ~
-134 8 1
+134 8 0 0 0 1
 D3
 ~
 ~
@@ -423,7 +423,7 @@ alegria  inunda  seus sentidos. Uma enorme lareira domina uma das paredes e
 um caloroso brilho emana de suas chamas. Pequenas mesas preenchem a sala. A
 porta a leste conduz à taverna.
 ~
-134 8 1
+134 8 0 0 0 1
 D1
 ~
 ~
@@ -439,7 +439,7 @@ A Guilda dos Paladinos~
 de  guerra  estão  penduradas  por todas as paredes, aguardando para que um
 novato treine com elas.
 ~
-134 8 0
+134 8 0 0 0 0
 D2
 ~
 ~
@@ -451,7 +451,7 @@ A Guilda dos Monges~
 em  um  semicírculo,  abrindo  uma  clareira  no centro, onde os estudantes
 praticam suas habilidades.
 ~
-134 8 0
+134 8 0 0 0 0
 D1
 ~
 ~
@@ -463,7 +463,7 @@ As Guildas~
 de todas as guildas. A sala principal é ao leste, enquanto as guildas ficam
 ao norte, sul e oeste.
 ~
-134 8 0
+134 8 0 0 0 0
 D0
 ~
 ~
@@ -488,7 +488,7 @@ boa  ilusão  feita  estratégicamente pelas árvores. Seus colegas estudantes
 praticam  em  busca  de  comida, e rastreando os outros. A única saída é ao
 norte.
 ~
-134 8 0
+134 8 0 0 0 0
 D0
 ~
 ~
@@ -499,7 +499,7 @@ A Cozinha do Restaurante Baía das Folhas~
   Potes  e  panelas  penduradas na parede. A cozinha é barulhenta e quente.
 Garçons correm de um lado para o outro carregando comida.
 ~
-134 12 0
+134 12 0 0 0 0
 D1
 ~
 ~
@@ -511,7 +511,7 @@ No Topo das Escadas~
 trilha. Olhando para baixo, você nota que os galhos formam degraus, de modo
 que você seria capaz de descer.
 ~
-134 0 0
+134 0 0 0 0 0
 D3
 ~
 ~
@@ -527,7 +527,7 @@ O Caminho Pela Àrvore~
 cercado  de  modestas  casas  e  ao  norte, você vê a entrada da Estação da
 Guarda de Thewster.
 ~
-134 0 0
+134 0 0 0 0 0
 D0
 ~
 ~
@@ -551,7 +551,7 @@ A Estação da Guarda de Thewster~
 janelas  em  parte  alguma.  A  única  fonte  de luz é uma pequena lanterna
 pendurada na parede. A porta fica ao sul, e alguns degraus levam para cima.
 ~
-134 8 0
+134 8 0 0 0 0
 D2
 ~
 ~
@@ -568,7 +568,7 @@ equipamentos  e  armas.  Olhando  mais de perto, você nota que estas coisas
 estão em melhor condição do que você pensava, porém é melhor ter certeza de
 que elas ainda funcionam.
 ~
-134 8 0
+134 8 0 0 0 0
 D2
 ~
 ~
@@ -580,7 +580,7 @@ O Escritório do Capitão~
 visão  de  Thewster. Há uma larga mesa no meio da sala, cheia de papéis. Há
 degraus levando para baixo.
 ~
-134 8 0
+134 8 0 0 0 0
 D5
 ~
 ~
@@ -593,7 +593,7 @@ que  eles  moram  por  aqui.  Os  galhos  que formam o caminho começam a se
 encontrar  aqui,  formando  uma interseção ao oeste. O caminho segue para o
 leste e ao norte você pode ver uma pequena loja. Há uma velha casa ao sul.
 ~
-134 0 1
+134 0 0 0 0 1
 D0
 ~
 ~
@@ -617,7 +617,7 @@ Uma Casa Velha~
 paredes  e  o  chão  não parece ser muito firme. Esta casa lhe da o péssimo
 sentimento de que você irá cair a qualquer momento.
 ~
-134 8 0
+134 8 0 0 0 0
 D0
 ~
 ~
@@ -629,7 +629,7 @@ O Restaurante Sion~
 sul,  uma enorme janela, de onde se pode ver a floresta enquanto se come. A
 porta fica ao norte.
 ~
-134 8 0
+134 8 0 0 0 0
 D0
 ~
 ~
@@ -639,7 +639,7 @@ S
 Uma Interseção Subterrânea~
    O túnel não continua por muito longe. Ele agora segue a leste e sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -655,7 +655,7 @@ Uma Caverna Escura~
 da  caverna  escura.  Há  uma pequena entrada ao leste, que parece bastante
 estreita.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -670,7 +670,7 @@ Uma Passagem Estreira~
  Você precisou se ajoelhar para conseguir passar através desta passagem, se
 espremendo entre as pedras.
 ~
-134 521 0
+134 521 0 0 0 0
 D1
 ~
 ~
@@ -685,7 +685,7 @@ A Entrada da Caverna~
  Mesmo com sua luz, você mal pode ver através do negrume que toma a entrada
 da caverna.
 ~
-134 13 0
+134 13 0 0 0 0
 D3
 ~
 ~
@@ -700,7 +700,7 @@ A Caverna Escura~
   A  caverna  se  alarga,  tornando mais fácil a passagem, embora ainda lhe
 cause claustrofobia. Você sente um cheiro horrível vindo do sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -715,7 +715,7 @@ Uma Interseção~
   A  caverna  faz uma pequena interseção aqui, saídas ficam ao norte, sul e
 leste. E o horrível cheiro, continua a vir do sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -733,7 +733,7 @@ S
 A Caverna Escura~
  A caverna continua a leste e oeste. Há musgo crescendo nas paredes daqui.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -752,7 +752,7 @@ S
 A Caverna Escura~
    A caverna continua a leste e oeste. Há musgo crescendo nas paredes daqui.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -767,7 +767,7 @@ A Caverna Escura~
   A  caverna  faz  uma curva aqui, e agora segue a sul e a oeste. Você pode
 sentir o cheiro de algo horrível ao sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D2
 ~
 ~
@@ -782,7 +782,7 @@ A Caverna Escura~
  A água pinga das paredes, formando pequenas poças. Você pode sentir outros
 passos pisando nas poças... O fedor está ficando pior.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -797,7 +797,7 @@ Uma Caverna Escura~
   A  caverna continua a norte e a sul. Este detestável cheiro parece vir do
 sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -811,7 +811,7 @@ S
 Um Buraco~
    O pequeno fluxo faz uma curva ao sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -830,7 +830,7 @@ Uma Caverna Escura~
   A caverna faz uma abrupta parada aqui. As poças formaram um pequeno fluxo
 subterrâneo que passa através de um pequeno buraco na parede oeste.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -845,7 +845,7 @@ Uma Caverna Escura~
   A  caverna continua a norte e a sul. Este detestável cheiro parece vir do
 sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -861,7 +861,7 @@ Uma Caverna Escura~
 fluxo  vindo de um buraco na parede da caverna. Você pode ver algum tipo de
 assobio vindo do leste, o cheiro detestável continua a vir do sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -881,7 +881,7 @@ O Covil da Cobra~
 fazendo  barulhos  de  esmagamento  enquanto  você pisa. A única saída é ao
 oeste.
 ~
-134 9 0
+134 9 0 0 0 0
 D3
 ~
 ~
@@ -892,7 +892,7 @@ A Caverna Escura~
  A caverna faz uma curva aqui, ela agora segue ao sul e ao leste. Você pode
 sentir o cheiro de algo horrível ao sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -907,7 +907,7 @@ A Caverna Escura~
   A  caverna  faz uma curva aqui, ela agora segue ao norte e ao oeste. Você
 pode sentir o cheiro de algo horrível ao sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -924,7 +924,7 @@ preenchido  com  pedras  como  se alguém quisesse impedir sua passagem, mas
 parece  que  você  ainda  consegue  se espremer e passar. O cheiro continua
 vindo do sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -942,7 +942,7 @@ S
 A Caverna Escura~
    A caverna continua a leste e oeste. Há musgo crescendo nas paredes aqui.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -956,7 +956,7 @@ S
 A Caverna Escura~
    A caverna continua a leste e oeste. Há musgo crescendo nas paredes aqui.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -971,7 +971,7 @@ A Caverna Escura~
   A  caverna  faz uma curva aqui, ela agora segue ao norte e ao oeste. Você
 pode sentir o cheiro de algo horrível ao sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -985,7 +985,7 @@ S
 Uma Sala Muito Estranha~
 Saia já Daqui!
 ~
-134 65536 0
+134 65536 0 0 0 0
 D0
 ~
 ~
@@ -1016,7 +1016,7 @@ A Caverna Escura~
  Há algumas estranhas marcas por toda a parede deste túnel. A única saoda é
 ao norte, se aprofundando pelos túneis.
 ~
-134 13 0
+134 13 0 0 0 0
 D0
 ~
 ~
@@ -1031,7 +1031,7 @@ Se Aprofundando Pela Caverna~
   O  ar  começa a ter um cheiro velho e almiscarado, um cheiro horrível que
 parece vir do sul. A únicas saídas ficam ao norte e ao sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D2
 ~
 ~
@@ -1045,7 +1045,7 @@ S
 Se Aprofundando Pela Caverna~
    A caverna faz uma curva aqui. Ela agora segue pelo norte e pelo oeste.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -1062,7 +1062,7 @@ olhos  podem  ver.  Centenas  e  centenas de estalagmites e estalactites se
 esticam  até  se  encontrarem,  formando uma espécie de barreira. As únicas
 saídas ficam ao leste, oeste e ao sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -1083,7 +1083,7 @@ olhos  podem  ver.  Centenas  e  centenas de estalagmites e estalactites se
 esticam  até  se  encontrarem,  formando uma espécie de barreira. As únicas
 saídas ficam ao leste e ao oeste.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -1100,7 +1100,7 @@ olhos  podem  ver.  Centenas  e  centenas de estalagmites e estalactites se
 esticam  até  se  encontrarem,  formando uma espécie de barreira. As únicas
 saídas ficam ao oeste e ao sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D2
 ~
 ~
@@ -1117,7 +1117,7 @@ olhos  podem  ver.  Centenas  e  centenas de estalagmites e estalactites se
 esticam  até  se  encontrarem,  formando uma espécie de barreira. As únicas
 saídas ficam ao leste, norte e ao sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -1138,7 +1138,7 @@ olhos  podem  ver.  Centenas  e  centenas de estalagmites e estalactites se
 esticam  até  se  encontrarem,  formando uma espécie de barreira. As únicas
 saídas ficam ao leste e ao oeste.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -1155,7 +1155,7 @@ olhos  podem  ver.  Centenas  e  centenas de estalagmites e estalactites se
 esticam  até  se  encontrarem,  formando uma espécie de barreira. As únicas
 saídas ficam ao norte, ao oeste e ao sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -1176,7 +1176,7 @@ olhos  podem  ver.  Centenas  e  centenas de estalagmites e estalactites se
 esticam  até  se  encontrarem,  formando uma espécie de barreira. As únicas
 saídas ficam ao leste, norte e ao sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -1198,7 +1198,7 @@ esticam   até   se  encontrarem,  formando  uma  espécie  de  barreira.  As
 estalagmites  aqui  formam  um  semicírculo  quase perfeito com uma pequena
 passagem em seu centro.
 ~
-134 9 0
+134 9 0 0 0 0
 D3
 ~
 ~
@@ -1215,7 +1215,7 @@ olhos  podem  ver.  Centenas  e  centenas de estalagmites e estalactites se
 esticam  até  se  encontrarem,  formando uma espécie de barreira. As únicas
 saídas ficam ao norte e ao sul.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -1232,7 +1232,7 @@ olhos  podem  ver.  Centenas  e  centenas de estalagmites e estalactites se
 esticam  até  se  encontrarem,  formando uma espécie de barreira. As únicas
 saídas ficam ao norte e a leste.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -1249,7 +1249,7 @@ olhos  podem  ver.  Centenas  e  centenas de estalagmites e estalactites se
 esticam  até  se  encontrarem,  formando uma espécie de barreira. As únicas
 saídas ficam ao leste e ao oeste.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -1266,7 +1266,7 @@ olhos  podem  ver.  Centenas  e  centenas de estalagmites e estalactites se
 esticam  até  se  encontrarem,  formando uma espécie de barreira. As únicas
 saídas ficam ao norte e ao oeste.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 ~
@@ -1282,7 +1282,7 @@ No Fundo Da Caverna~
 estar  em  todo  lugar. O chão da caverna tem algumas margas de pegadas, as
 quais seguem para o leste.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -1298,7 +1298,7 @@ No Fundo da Caverna~
 e  sul.  A saída a sul é bloqueada por uma porta, a qual parece ser a fonte
 deste horrendo fedor.
 ~
-134 9 0
+134 9 0 0 0 0
 D1
 ~
 ~
@@ -1317,7 +1317,7 @@ No Fundo da Caverna~
   Esta  sala é apenas um buraco na parede de estalagmites. A água pinga por
 todo o lugar, tornando-o ainda mais frio.
 ~
-134 9 0
+134 9 0 0 0 0
 D3
 ~
 ~
@@ -1330,18 +1330,18 @@ pedra e penduradas junto às paredes, há peles de animais de diversos tipos.
 O  "carpete"  é  feito de corpos em decomposição e provavelmente a fonte do
 cheiro pútrido. A única saída é ao norte.
 ~
-134 9 0
+134 9 0 0 0 0
 D0
 ~
 porta sul~
 1 13437 13479
 E
-peles pele animais paredes~
-As peles tem um estranho símbolo de um olho e um dente marcada nelas.
-~
-E
 carpete corpos~
 Coelhos, pássaros, elfos, guerreiros. Se você pode nomear, está aqui.
+~
+E
+peles pele animais paredes~
+As peles tem um estranho símbolo de um olho e um dente marcada nelas.
 ~
 S
 $~

@@ -1,12 +1,12 @@
 #121
 Vitalia~
 O Labirinto do Minotauro~
-12100 12199 345 1 ade 0 0 0 -1 -1
+12100 12199 345 1 j 0 0 0 -1 -1
+R 0 12101 12100 -1 	(uma grande placa de granito)
+O 0 12100 5 12101 	(uma grande placa de granito)
 M 0 12129 1 12152 	(O Grande Minotauro)
 G 1 12112 1 -1 	(a Cabeça do Minotauro)
 E 1 12113 1 17 	(a chave do tesouro)
-R 0 12101 12100 -1 	(uma grande placa de granito)
-O 0 12100 5 12101 	(uma grande placa de granito)
 R 0 12154 12110 -1 	(um grande baú)
 O 0 12110 1 12154 	(um grande baú)
 P 1 12111 1 12110 	(O tesouro do Minotauro)

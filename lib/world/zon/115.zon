@@ -1,7 +1,15 @@
 #115
 Vitalia~
 O Sétimo Mundo Oculto, Patala~
-11500 11599 160 1 a 0 0 0 -1 -1
+11500 11599 160 1 j 0 0 0 -1 -1
+M 0 11501 1 11500 	(Khanti, a nagini Guardiã)
+E 1 11502 20 19 	(um brinco de ouro)
+E 1 11503 15 5 	(um sari-armadura vermelho)
+E 1 11504 15 16 	(o khanda da guardiã)
+E 1 11507 1 17 	(a chave do portão externo)
+E 1 11501 15 21 	(um bindi de ouro)
+E 1 11508 15 22 	(um nath de ouro)
+D 0 11500 0 2 	(O Portão Externo Para Patala)
 M 0 11500 4 11505 	(um Guarda Naga)
 E 1 11500 30 16 	(uma barchi)
 E 1 11505 30 5 	(uma couraça da guarda naga)
@@ -18,13 +26,6 @@ M 0 11500 4 11525 	(um Guarda Naga)
 E 1 11500 30 16 	(uma barchi)
 E 1 11505 30 5 	(uma couraça da guarda naga)
 E 1 11506 30 11 	(um escudo da guarda naga)
-M 0 11501 1 11500 	(Khanti, a nagini Guardiã)
-E 1 11502 20 19 	(um brinco de ouro)
-E 1 11503 15 5 	(um sari-armadura vermelho)
-E 1 11504 15 16 	(o khanda da guardiã)
-E 1 11507 1 17 	(a chave do portão externo)
-E 1 11501 15 21 	(um bindi de ouro)
-E 1 11508 15 22 	(um nath de ouro)
 M 0 11502 3 11541 	(o espinhal agressivo)
 M 0 11502 3 11550 	(o espinhal agressivo)
 M 0 11502 3 11544 	(o espinhal agressivo)
@@ -85,7 +86,6 @@ P 1 11534 20 11529 	(uma caixinha de papel)
 P 1 11533 10 11534 	(uma amostra de corindo azul)
 M 0 11514 1 11552 	(Vijay, o naga do pântano)
 E 1 11535 10 16 	(a negra lança de Vijay)
-D 0 11500 0 2 	(O Port�o Externo Para Patala)
 D 0 11530 2 2 	(No Reino Oculto)
 D 0 11559 1 2 	(O Ataque de Khura)
 S
