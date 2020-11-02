@@ -1,32 +1,33 @@
 #12101
 Entrada Para o Labirinto~
-   Tudo cidade abruptamente termina aqui, nesse grande alçapão de madeira.
-O tamanho desse alçapão é comparavel a três carroças colocadas lado a lado.
-Uma enorme alça de ferro cravada nesse alçapão parece ser uma das maneiras
-de abri-lo.  Você percebe que seria mais prudente ler o aviso daqui, antes
+   Tudo cidade abruptamente termina aqui, nesse grande alÃ§apÃ£o de madeira.
+O tamanho desse alÃ§apÃ£o Ã© comparavel a trÃªs carroÃ§as colocadas lado a lado.
+Uma enorme alÃ§a de ferro cravada nesse alÃ§apÃ£o parece ser uma das maneiras
+de abri-lo.  VocÃª percebe que seria mais prudente ler o aviso daqui, antes
 de tentar abri-lo e entrar.
 ~
-121 68 0 0 0 1
+121 cg 1
 D2
 ~
 ~
 0 -1 10279
 D5
-Há uma frágil escada seguindo para baixo.
+HÃ¡ uma frÃ¡gil escada seguindo para baixo.
 ~
-alçapão~
-1 12133 12102
+alcapao~
+:n 1 o alÃ§apÃ£o
+a 12033 12102
 S
 #12102
 Dentro do Labirinto~
-   Mesmo sua luz parece não conseguir penetar a escuridão deste local.  As 
+   Mesmo sua luz parece nÃ£o conseguir penetar a escuridÃ£o deste local.  As 
 paredes, velhas e gastas, por criaturas que tentaram por muitos anos atingir 
-o mundo acima, são escuras e acizentadas, não lhe dando nenhuma sensação de 
-conforto.  Você pode ouvir sons, barulhos; sons de luta, e sons de que você 
-não tem ideia do que ser.  Tudo ecoa por sua volta, rebatendo de parede em 
-parede, tornando impossível saber o quão longe esses sons estão.
+o mundo acima, sÃ£o escuras e acizentadas, nÃ£o lhe dando nenhuma sensaÃ§Ã£o de 
+conforto.  VocÃª pode ouvir sons, barulhos; sons de luta, e sons de que vocÃª 
+nÃ£o tem ideia do que ser.  Tudo ecoa por sua volta, rebatendo de parede em 
+parede, tornando impossÃ­vel saber o quÃ£o longe esses sons estÃ£o.
 ~
-121 265 0 0 0 0
+121 265 0
 D3
 ~
 ~
@@ -34,12 +35,12 @@ D3
 S
 #12103
 Uma Sala Imunda~
-   Aqui deve ser onde o Labirinto mantêm seu estoque de comida, imaginando o 
-que  aquela comida nojenta deve ser.  Há uma pequena goteira de água da 
-entrada, a oeste, fazendo com que alguns fungos cresçam aqui, proporcionando 
+   Aqui deve ser onde o Labirinto mantÃªm seu estoque de comida, imaginando o 
+que  aquela comida nojenta deve ser.  HÃ¡ uma pequena goteira de Ã¡gua da 
+entrada, a oeste, fazendo com que alguns fungos cresÃ§am aqui, proporcionando 
 comida a estes indecentes animais.
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -51,16 +52,16 @@ D3
 S
 #12104
 Uma Sala Imunda~
-   O odor se torna cada vez mais desagradável, o terrível piso imundo, você 
+   O odor se torna cada vez mais desagradÃ¡vel, o terrÃ­vel piso imundo, vocÃª 
 sente a vontade de sair correndo desse local.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
 0 -1 12107
 D1
-Há um picante cheiro vindo dessa direção.
+HÃ¡ um picante cheiro vindo dessa direÃ§Ã£o.
 ~
 ~
 0 -1 12103
@@ -75,9 +76,9 @@ D3
 S
 #12105
 Uma Sala Imunda~
-   Maldição!!!  Mais sujeira!!!
+   MaldiÃ§Ã£o!!!  Mais sujeira!!!
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -90,11 +91,11 @@ S
 #12106
 Um Pouco de Ar Fresco~
    Finalmente uma chance de respirar por seu nariz novamente!  A camada de 
-sujeira diminuiu, deixando o ar ainda um pouco desagradável, mas não 
+sujeira diminuiu, deixando o ar ainda um pouco desagradÃ¡vel, mas nÃ£o 
 doentio e podre como era anteriormente.  A gruta se vira aqui, seguindo 
 para norte.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -105,11 +106,11 @@ D1
 0 -1 12105
 S
 #12107
-Recâmara~
+RecÃ¢mara~
    Este recanto se parece ser onde, as mais poderosas criaturas vem fazer 
-seus banquetes de pobres, estúpidos e desprezíveis seres.
+seus banquetes de pobres, estÃºpidos e desprezÃ­veis seres.
 ~
-121 265 0 0 0 0
+121 265 0
 D2
 ~
 ~
@@ -118,10 +119,10 @@ S
 #12108
 Um Recanto~
    Este escondido lugar parece ser onde seres tentaram se esconder dos 
-famintos monstros que passam por aqui atrás de comida.
+famintos monstros que passam por aqui atrÃ¡s de comida.
    Acha que funciona?
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -130,9 +131,9 @@ S
 #12109
 Sala do Lotus~
    A caverna continua para norte, escura e sombria como antes.  Pelo 
-menos ela não fede.
+menos ela nÃ£o fede.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -143,12 +144,12 @@ D2
 0 -1 12106
 S
 #12110
-Um Túnel~
-   O túnel segue de norte a sul daqui, ainda bruto e inacabado, quase 
-pré-histórico.  Parece que homens não vem aqui à muito tempo.  Se por 
-acaso vieram, não permaneceram por muito tempo.
+Um TÃºnel~
+   O tÃºnel segue de norte a sul daqui, ainda bruto e inacabado, quase 
+prÃ©-histÃ³rico.  Parece que homens nÃ£o vem aqui Ã  muito tempo.  Se por 
+acaso vieram, nÃ£o permaneceram por muito tempo.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -159,12 +160,12 @@ D2
 0 -1 12109
 S
 #12111
-Um Túnel~
-   Ainda sem luz, sem lugar para descansar, este sombrio lugar não 
-oferece nenhum conforto.  Você não tem nenhuma ajuda, a não ser 
+Um TÃºnel~
+   Ainda sem luz, sem lugar para descansar, este sombrio lugar nÃ£o 
+oferece nenhum conforto.  VocÃª nÃ£o tem nenhuma ajuda, a nÃ£o ser 
 manter a vigia.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -175,13 +176,13 @@ D2
 0 -1 12110
 S
 #12112
-Uma Parte Diferente no Túnel~
-   O túnel continua, ainda escuro e melancólico.  Entretanto, você
-começa a ver evidências de uma forma de vida mais adiantada.  As 
-paredes possuem várias marcas estranhas, que poderiam ser arranhões, todavia,
-elas parecem ser mais do que isso.  Elas estão muito tênues aqui.    
+Uma Parte Diferente no TÃºnel~
+   O tÃºnel continua, ainda escuro e melancÃ³lico.  Entretanto, vocÃª
+comeÃ§a a ver evidÃªncias de uma forma de vida mais adiantada.  As 
+paredes possuem vÃ¡rias marcas estranhas, que poderiam ser arranhÃµes, todavia,
+elas parecem ser mais do que isso.  Elas estÃ£o muito tÃªnues aqui.    
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -192,12 +193,12 @@ D2
 0 -1 12111
 S
 #12113
-Uma Parte Diferente no Túnel~
-   As marcas parecem ser mais salientes aqui e você pode perceber 
-que elas de fato são entalhes e não somente arranhões de lutas 
+Uma Parte Diferente no TÃºnel~
+   As marcas parecem ser mais salientes aqui e vocÃª pode perceber 
+que elas de fato sÃ£o entalhes e nÃ£o somente arranhÃµes de lutas 
 remotas.    
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -208,14 +209,14 @@ D2
 0 -1 12112
 S
 #12114
-Caverna dos Demônios~
-   Esta grande sala tem vários "buracos", permitindo a morada de 
-alguns desses seres.  A maioria desses buracos está provida com camas
+Caverna dos DemÃ´nios~
+   Esta grande sala tem vÃ¡rios "buracos", permitindo a morada de 
+alguns desses seres.  A maioria desses buracos estÃ¡ provida com camas
 e todo o material usado no dia a dia parecem ter sido esculpidos na pedra
-mas eles foram tão bem feitos que você não tem o menor problema para saber
-a função básica de cada coisa.
+mas eles foram tÃ£o bem feitos que vocÃª nÃ£o tem o menor problema para saber
+a funÃ§Ã£o bÃ¡sica de cada coisa.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -227,11 +228,11 @@ D2
 S
 #12115
 A Caverna~
-   A caverna aqui é menor do que para sul, mas larga o suficiente para não ser
-chamada de túnel.  Cada vez mais, você percebe que algumas das criaturas
+   A caverna aqui Ã© menor do que para sul, mas larga o suficiente para nÃ£o ser
+chamada de tÃºnel.  Cada vez mais, vocÃª percebe que algumas das criaturas
 presas aqui podem ser mais do que somente imundos animais.    
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -243,12 +244,12 @@ D2
 S
 #12116
 A Caverna~
-   Ainda maior do que um túnel na entrada, essa caverna tem a largura de cinco
-homens lado a lado e dez pés de altura.  Com certeza, este é um  lugar fora do
-comum e nessas paredes você pode ver antigas marcas de arranhões de batalhas
+   Ainda maior do que um tÃºnel na entrada, essa caverna tem a largura de cinco
+homens lado a lado e dez pÃ©s de altura.  Com certeza, este Ã© um  lugar fora do
+comum e nessas paredes vocÃª pode ver antigas marcas de arranhÃµes de batalhas
 passadas.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -260,12 +261,12 @@ D2
 S
 #12117
 Estranha Sala de Armas~
-   Esta caverna, maior do que qualquer outra em que você já esteve, parece 
-mais uma sala de guerra do que um lugar para morar.  Várias armas estão 
-penduradas pelas paredes, elmos de diferentes tipos e várias outras peças 
-de metal estão espalhadas pela sala.
+   Esta caverna, maior do que qualquer outra em que vocÃª jÃ¡ esteve, parece 
+mais uma sala de guerra do que um lugar para morar.  VÃ¡rias armas estÃ£o 
+penduradas pelas paredes, elmos de diferentes tipos e vÃ¡rias outras peÃ§as 
+de metal estÃ£o espalhadas pela sala.
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -280,24 +281,24 @@ A Caverna~
    A caverna segue de leste a oeste aqui, levando a lugares e a monstros 
 totalmente desconhecidos.
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
 0 -1 12119
 D3
-Um forte cheiro acre, parecido com remédio, vem dessa direção.
+Um forte cheiro acre, parecido com remÃ©dio, vem dessa direÃ§Ã£o.
 ~
 ~
 0 -1 12117
 S
 #12119
-Túnel Muito Limpo~
+TÃºnel Muito Limpo~
    De maneira estranha, as paredes e o piso dessa parte do Labirinto 
 parecem ter sido escovadas e muito limpas, surpreendentemente 
-limpas, que não há sinal de um simples foco de poeira neste local.
+limpas, que nÃ£o hÃ¡ sinal de um simples foco de poeira neste local.
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -309,10 +310,10 @@ D3
 S
 #12120
 Uma Caverna Muito Limpa~
-   Agora você entende porque essas salas estão tão limpas.  Nenhuma criatura 
-desejaria permanecer tão próximo a estas salas.
+   Agora vocÃª entende porque essas salas estÃ£o tÃ£o limpas.  Nenhuma criatura 
+desejaria permanecer tÃ£o prÃ³ximo a estas salas.
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -324,10 +325,10 @@ D3
 S
 #12121
 Uma Caverna Muito Limpa~
-   A caverna aqui continua muito limpa e polida, porém desagradáveis ondulações
-no chão dificultam seu caminho.
+   A caverna aqui continua muito limpa e polida, porÃ©m desagradÃ¡veis ondulaÃ§Ãµes
+no chÃ£o dificultam seu caminho.
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -339,11 +340,11 @@ D3
 S
 #12122
 Sala de Esqueletos~
-   Por todos os lados você pode ver ossos, alguns ainda conectados a seu
+   Por todos os lados vocÃª pode ver ossos, alguns ainda conectados a seu
 esqueleto original, outros espalhados pela sala.  Que tipo de criatura 
 colecionaria ossos?
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -355,10 +356,10 @@ D3
 S
 #12123
 Sala de Ossos~
-   Ainda coberta de ossos, esta sala cheira a morte e a podridão.  Melhor 
+   Ainda coberta de ossos, esta sala cheira a morte e a podridÃ£o.  Melhor 
 continuar a seguir seu caminho.
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -370,11 +371,11 @@ D3
 S
 #12124
 Algumas Plantas~
-   Finalmente você encontra vida vegetal.  Isso se parece mais com algum 
-tipo de fungo mas, pelo menos, é algo diferente daquilo que você estava vendo 
-pelas paredes até agora.
+   Finalmente vocÃª encontra vida vegetal.  Isso se parece mais com algum 
+tipo de fungo mas, pelo menos, Ã© algo diferente daquilo que vocÃª estava vendo 
+pelas paredes atÃ© agora.
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -386,13 +387,13 @@ D3
 S
 #12125
 Um Pequeno Ponto de Luz~
-   Neste horripilante e escuro Labirinto, este pequeno ponto é o único lugar 
-por onde uma ligeira luz consegue passar.  Por esse motivo, este é o único 
-local onde algum vegetal poderia viver além do musgo simples.  Por toda a 
-sua volta, nas fendas das paredes e do chão, crescem grandes e fortes plantas.
-Hei!!! O que foi isso??  O que você acabou de ouvir foi um rosnado?
+   Neste horripilante e escuro Labirinto, este pequeno ponto Ã© o Ãºnico lugar 
+por onde uma ligeira luz consegue passar.  Por esse motivo, este Ã© o Ãºnico 
+local onde algum vegetal poderia viver alÃ©m do musgo simples.  Por toda a 
+sua volta, nas fendas das paredes e do chÃ£o, crescem grandes e fortes plantas.
+Hei!!! O que foi isso??  O que vocÃª acabou de ouvir foi um rosnado?
 ~
-121 264 0 0 0 0
+121 264 0
 D1
 ~
 ~
@@ -403,11 +404,11 @@ D3
 0 -1 12124
 S
 #12126
-De Volta à Escuridão~
-   Escuro como a mais escura das noites, você pode ouvir claramente os pesados 
-passos de algo que parece ser imenso mas, infelizmente, não pode ver ninguém.
+De Volta Ã  EscuridÃ£o~
+   Escuro como a mais escura das noites, vocÃª pode ouvir claramente os pesados 
+passos de algo que parece ser imenso mas, infelizmente, nÃ£o pode ver ninguÃ©m.
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -419,10 +420,10 @@ D3
 S
 #12127
 Os Jors~
-   Rápidas como a luz, horríveis como o pecado, estas criaturas esperam 
-por um delicioso e suculento jantar: VOCÊ!    
+   RÃ¡pidas como a luz, horrÃ­veis como o pecado, estas criaturas esperam 
+por um delicioso e suculento jantar: VOCÃŠ!    
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -435,10 +436,10 @@ S
 #12128
 Os Jors~
    Carne crua por todo o lado e muito sangue pelas paredes. O mau cheiro de
-corpos destroçados e apodrecendo parece não incomodar estas criaturas 
-repugnantes e hostis, que devem ser as coisas mais nojentas de toda Vitália.
+corpos destroÃ§ados e apodrecendo parece nÃ£o incomodar estas criaturas 
+repugnantes e hostis, que devem ser as coisas mais nojentas de toda VitÃ¡lia.
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -450,10 +451,10 @@ D3
 S
 #12129
 Os Jors~
-   Algo lhe diz que esses Jors lhe darão trabalho.  Você se encontra rodeado 
-por eles. Não há opção: é lutar ou morrer!
+   Algo lhe diz que esses Jors lhe darÃ£o trabalho.  VocÃª se encontra rodeado 
+por eles. NÃ£o hÃ¡ opÃ§Ã£o: Ã© lutar ou morrer!
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -465,10 +466,10 @@ D3
 S
 #12130
 Uma Curva no Caminho~
-   O caminho agora segue para o sul, em direção a um lugar ainda mais escuro,
-nas profundezas do covil do demônio.
+   O caminho agora segue para o sul, em direÃ§Ã£o a um lugar ainda mais escuro,
+nas profundezas do covil do demÃ´nio.
 ~
-121 265 0 0 0 0
+121 265 0
 D2
 ~
 ~
@@ -480,10 +481,10 @@ D3
 S
 #12131
 Seguindo Para Sul~
-   As paredes aqui não possuem nenhum traço característico, nada a não ser
-arranhões de batalhas e manchas de sangue.
+   As paredes aqui nÃ£o possuem nenhum traÃ§o caracterÃ­stico, nada a nÃ£o ser
+arranhÃµes de batalhas e manchas de sangue.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -495,11 +496,11 @@ D2
 S
 #12132
 Seguindo Para Sul~
-   Aqui também não existem marcas diferentes nas paredes.  Você sente como se 
-estivesse nessa caverna há muito tempo.  Você adoraria saber que dia é hoje e 
-que horas são agora.
+   Aqui tambÃ©m nÃ£o existem marcas diferentes nas paredes.  VocÃª sente como se 
+estivesse nessa caverna hÃ¡ muito tempo.  VocÃª adoraria saber que dia Ã© hoje e 
+que horas sÃ£o agora.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -511,11 +512,11 @@ D2
 S
 #12133
 Seguindo Para Sul~
-   Você continua indo em direção sul, tremendo a cada passo que dá.  Agora, 
-junto com os sons de passadas pesadas e de vozes guturais, você ouve um som 
+   VocÃª continua indo em direÃ§Ã£o sul, tremendo a cada passo que dÃ¡.  Agora, 
+junto com os sons de passadas pesadas e de vozes guturais, vocÃª ouve um som 
 muito agudo, que lhe causa um enorme arrepio.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -527,11 +528,11 @@ D2
 S
 #12134
 Em Estado de Alerta~
-   Graças a Deus, seus instintos lhe disseram para olhar para cima, no mesmo
-instante que uma enorme figura negra se atirava rapidamente em sua direção,
+   GraÃ§as a Deus, seus instintos lhe disseram para olhar para cima, no mesmo
+instante que uma enorme figura negra se atirava rapidamente em sua direÃ§Ã£o,
 logo acima da entrada.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -542,13 +543,13 @@ D2
 0 -1 12135
 S
 #12135
-Uma Sala em Ruínas~
-   A sala aqui é coberta por entulho de toda a espécie e por todo o lado 
-existem verdadeiras montanhas de lixo. Ao olhar para as paredes, você tem a
-nítida impressão de que alguém atirou com uma catapulta nelas, tamanho 
+Uma Sala em RuÃ­nas~
+   A sala aqui Ã© coberta por entulho de toda a espÃ©cie e por todo o lado 
+existem verdadeiras montanhas de lixo. Ao olhar para as paredes, vocÃª tem a
+nÃ­tida impressÃ£o de que alguÃ©m atirou com uma catapulta nelas, tamanho 
 os estragos.
 ~
-121 0 0 0 0 1
+121 0 1
 D0
 ~
 ~
@@ -559,11 +560,11 @@ D2
 0 -1 12136
 S
 #12136
-Uma Sala em Ruínas~
-   A espessa camada de entulho no chão desta sala parece dizer que o Crixna
-na outra sala não era o único Crixna desse Labirinto.
+Uma Sala em RuÃ­nas~
+   A espessa camada de entulho no chÃ£o desta sala parece dizer que o Crixna
+na outra sala nÃ£o era o Ãºnico Crixna desse Labirinto.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -571,45 +572,45 @@ D0
 D2
 ~
 ~
-0 12135 12137
+0 -1 12137
 S
 #12137
 Um Piso Sujo~
-   O chão de pedra começa a dar espaço a uma fina e arenosa camada de 
-poeira.  Você quase tem a sensação de estar andando em uma praia.    
+   O chÃ£o de pedra comeÃ§a a dar espaÃ§o a uma fina e arenosa camada de 
+poeira.  VocÃª quase tem a sensaÃ§Ã£o de estar andando em uma praia.    
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
-0 12135 12136
+0 -1 12136
 D2
 ~
 ~
-0 12137 12138
+0 -1 12138
 S
 #12138
 Um Piso Lamacento~
-  O chão está completamente imundo, e muito lamacento.  Isso parece ser 
-areia movediça mas felizmente não é.    
+  O chÃ£o estÃ¡ completamente imundo, e muito lamacento.  Isso parece ser 
+areia movediÃ§a mas felizmente nÃ£o Ã©.    
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
-0 12137 12137
+0 -1 12137
 D3
 ~
 ~
 0 -1 12139
 S
 #12139
-De Volta às Pedras~
-   Esta grande sala parece ser a morada permanente de alguém que provou ser 
-capaz de manter tanta firmeza no poço do inferno.  Muito limpa e muito 
+De Volta Ã s Pedras~
+   Esta grande sala parece ser a morada permanente de alguÃ©m que provou ser 
+capaz de manter tanta firmeza no poÃ§o do inferno.  Muito limpa e muito 
 arrumada.
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -621,11 +622,11 @@ D3
 S
 #12140
 Morada do Basilisco~
-   Basilisco.  A terrível reputação desta criatura traz medo ao seu coração.  
-Você somente havia ouvido falar desta assustadora criatura nas histórias de 
-criança e se espanta ao perceber que elas de fato existem.    
+   Basilisco.  A terrÃ­vel reputaÃ§Ã£o desta criatura traz medo ao seu coraÃ§Ã£o.  
+VocÃª somente havia ouvido falar desta assustadora criatura nas histÃ³rias de 
+crianÃ§a e se espanta ao perceber que elas de fato existem.    
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -637,12 +638,12 @@ D3
 S
 #12141
 O Horror Oeste~
-   E sua longa caminhada continua, seguindo através dessa verdadeira trilha 
-de horrores e mais horrores.  Sua mente começa a divagar e você se pega 
-pensando que pode estar chovendo na superfície.  Talvez uma ducha fria fosse
+   E sua longa caminhada continua, seguindo atravÃ©s dessa verdadeira trilha 
+de horrores e mais horrores.  Sua mente comeÃ§a a divagar e vocÃª se pega 
+pensando que pode estar chovendo na superfÃ­cie.  Talvez uma ducha fria fosse
 lhe cair bem agora.    
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
@@ -654,15 +655,15 @@ D3
 S
 #12142
 Uma Caverna~
-   Avançando, você continua através de seu último objetivo: o de matar o 
-demôniaco e fabuloso Minotauro.  Para o oeste, apenas a escuridão.  
-Para o leste, mais escuridão.  Só há escuridão.
+   AvanÃ§ando, vocÃª continua atravÃ©s de seu Ãºltimo objetivo: o de matar o 
+demÃ´niaco e fabuloso Minotauro.  Para o oeste, apenas a escuridÃ£o.  
+Para o leste, mais escuridÃ£o.  SÃ³ hÃ¡ escuridÃ£o.
 ~
-121 265 0 0 0 0
+121 265 0
 D1
 ~
 ~
-0 12138 12141
+0 -1 12141
 D3
 ~
 ~
@@ -670,12 +671,12 @@ D3
 S
 #12143
 Mais uma Caverna~
-   Você começa a ver sinais de riqueza aqui, à medida que avança por esse
+   VocÃª comeÃ§a a ver sinais de riqueza aqui, Ã  medida que avanÃ§a por esse
 labirinto.  Parece que todos os objetos preciosos trazidos por aqueles que
 eram aprisionados aqui foram levados por uma criatura bem mais poderosa
-do que seu próprio dono.
+do que seu prÃ³prio dono.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -687,11 +688,11 @@ D1
 S
 #12144
 Outra Caverna~
-   As paredes daqui são mais primitivas do que as paredes na entrada 
+   As paredes daqui sÃ£o mais primitivas do que as paredes na entrada 
 deste local.  Parece que estas foram feitas bem mais recentemente.  Seria 
-possível essas criaturas estarem cavando novos túneis em direção à liberdade?
+possÃ­vel essas criaturas estarem cavando novos tÃºneis em direÃ§Ã£o Ã  liberdade?
 ~
-121 265 0 0 0 0
+121 265 0
 D2
 ~
 ~
@@ -699,16 +700,16 @@ D2
 D3
 ~
 ~
-0 12136 12145
+1 12136 12145
 S
 #12145
 Caverna Inacabada~
    A caverna aqui, definitivamente, foi feita antes das cavernas anteriores.  
 As paredes chegam a ser cortantes, com tantas pontas agudas e mal acabadas em
-alguns locais e elas não parecem, de modo algum, serem naturais, 
+alguns locais e elas nÃ£o parecem, de modo algum, serem naturais, 
 como as paredes anteriores.
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -716,17 +717,17 @@ D0
 D1
 ~
 ~
-0 12136 12144
+0 -1 12144
 S
 #12146
-Em Direção à Claridade~
-   Aqui ainda é bem escuro mas não tão escuro quanto nos outros locais e você
+Em DireÃ§Ã£o Ã  Claridade~
+   Aqui ainda Ã© bem escuro mas nÃ£o tÃ£o escuro quanto nos outros locais e vocÃª
 consegue ver uma pequena luz vinda de longe.  Pode-se ouvir grunhidos e roncos
-vindos de inúmeras criaturas.  E aos poucos, você percebe alguns ruídos de luta,
-e muitos gritos estridentes.  Esse é o tipo de som que você tem plena certeza
-de que o acompanhará até o fim de seus dias.    
+vindos de inÃºmeras criaturas.  E aos poucos, vocÃª percebe alguns ruÃ­dos de luta,
+e muitos gritos estridentes.  Esse Ã© o tipo de som que vocÃª tem plena certeza
+de que o acompanharÃ¡ atÃ© o fim de seus dias.    
 ~
-121 265 0 0 0 0
+121 265 0
 D0
 ~
 ~
@@ -738,13 +739,13 @@ D2
 S
 #12147
 Sala de Tortura~
-   Você sabe que agora deve estar perto do Covil do Minotauro.  Esta sala 
-parece ter sido feita com o único objetivo de torturar os habitantes do 
-local.  Há correntes presas nas paredes e antigas e rústicas armas por toda 
-a sala.  Criaturas de vários tamanhos e formas se movem pela sala, torturando e
-causando muita dor às pobres criaturas que foram aprisionadas aqui.
+   VocÃª sabe que agora deve estar perto do Covil do Minotauro.  Esta sala 
+parece ter sido feita com o Ãºnico objetivo de torturar os habitantes do 
+local.  HÃ¡ correntes presas nas paredes e antigas e rÃºsticas armas por toda 
+a sala.  Criaturas de vÃ¡rios tamanhos e formas se movem pela sala, torturando e
+causando muita dor Ã s pobres criaturas que foram aprisionadas aqui.
 ~
-121 264 0 0 0 0
+121 264 0
 D2
 ~
 ~
@@ -756,13 +757,13 @@ D3
 S
 #12148
 Sala de Tortura~
-   Mais do que óbvio, tortura parece ser um passatempo muito popular por aqui.  
-Mais cenas de dor e de terror vão enchendo a sua vista.  Um Ciclope se 
+   Mais do que Ã³bvio, tortura parece ser um passatempo muito popular por aqui.  
+Mais cenas de dor e de terror vÃ£o enchendo a sua vista.  Um Ciclope se 
 inclinando sobre um Caiveh, salivando, um Cavaleiro Khordovian testando uma 
-nova técnica de interrogatório em um Diurge, obtendo, como único resultado
-visível, um ensurdecedor grito de medo e dor.
+nova tÃ©cnica de interrogatÃ³rio em um Diurge, obtendo, como Ãºnico resultado
+visÃ­vel, um ensurdecedor grito de medo e dor.
 ~
-121 264 0 0 0 0
+121 264 0
 D1
 ~
 ~
@@ -773,13 +774,13 @@ D3
 0 -1 12149
 S
 #12149
-A Câmara do Minotauro~
-   Estas são as câmaras particulares do Minotauro.  Ele poderia estar em 
-qualquer uma dessas salas, portanto permanecer em guarda é provavelmente uma
-ótima ideia.  Você parece que pode ouvir um som baixo...um som divertido.  
-Um som que diz: "Este idiota está aqui para tentar pegar a MINHA cabeça?!?"
+A CÃ¢mara do Minotauro~
+   Estas sÃ£o as cÃ¢maras particulares do Minotauro.  Ele poderia estar em 
+qualquer uma dessas salas, portanto permanecer em guarda Ã© provavelmente uma
+Ã³tima ideia.  VocÃª parece que pode ouvir um som baixo...um som divertido.  
+Um som que diz: "Este idiota estÃ¡ aqui para tentar pegar a MINHA cabeÃ§a?!?"
 ~
-121 264 0 0 0 0
+121 264 0
 D0
 ~
 ~
@@ -790,13 +791,13 @@ D1
 0 -1 12148
 S
 #12150
-A Câmara do Mintauro~
-   Parece que a sua risada é eterna: um som interminável, que não ecoa somente
+A CÃ¢mara do Mintauro~
+   Parece que a sua risada Ã© eterna: um som interminÃ¡vel, que nÃ£o ecoa somente
 de sala em sala, parede em parede mas dentro do seu corpo, torturando-o.  Esta
-criatura, que vive há centenas de anos, sabe que você está aqui e acha isso 
-divertido.  Talvez você deva repensar sua estratégia...
+criatura, que vive hÃ¡ centenas de anos, sabe que vocÃª estÃ¡ aqui e acha isso 
+divertido.  Talvez vocÃª deva repensar sua estratÃ©gia...
 ~
-121 264 0 0 0 0
+121 264 0
 D0
 ~
 ~
@@ -807,13 +808,13 @@ D2
 0 -1 12149
 S
 #12151
-A Câmara do Minotauro~
-   Dizem que o Minotauro é o mestre do roubo.  Uma criatura que se move sem ser
-detectada, de um lugar para outro.  Até mesmo em uma câmara como esta parece ser
-possível para o Minotauro se enconder de tal forma nas sombras, que ninguém 
-consiga percebe-lo...até que seja tarde demais.
+A CÃ¢mara do Minotauro~
+   Dizem que o Minotauro Ã© o mestre do roubo.  Uma criatura que se move sem ser
+detectada, de um lugar para outro.  AtÃ© mesmo em uma cÃ¢mara como esta parece ser
+possÃ­vel para o Minotauro se enconder de tal forma nas sombras, que ninguÃ©m 
+consiga percebe-lo...atÃ© que seja tarde demais.
 ~
-121 264 0 0 0 0
+121 264 0
 D0
 ~
 ~
@@ -824,12 +825,12 @@ D2
 0 -1 12150
 S
 #12152
-A Câmara do Minotauro~
-   Ele nunca irá parar de rir???!!??  O riso constante, aliado ao fato de que,
-em todas as salas que você entra, encontra criaturas assustadoras, parece estar
-levando-o à insanidade.  Onde ele está?  Por que ele não aparece?
+A CÃ¢mara do Minotauro~
+   Ele nunca irÃ¡ parar de rir???!!??  O riso constante, aliado ao fato de que,
+em todas as salas que vocÃª entra, encontra criaturas assustadoras, parece estar
+levando-o Ã  insanidade.  Onde ele estÃ¡?  Por que ele nÃ£o aparece?
 ~
-121 264 0 0 0 0
+121 264 0
 D1
 ~
 ~
@@ -841,10 +842,10 @@ D2
 S
 #12154
 A Sala do Tesouro do Minotauro~
-   Uma sala simples, somente com esses poucos baús, guardados por criaturas
+   Uma sala simples, somente com esses poucos baÃºs, guardados por criaturas
 extremamente poderosas.
 ~
-121 264 0 0 0 0
+121 264 0
 D3
 ~
 ~
