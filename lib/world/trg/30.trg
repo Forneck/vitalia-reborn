@@ -366,7 +366,7 @@ en~
 if %cmd.mudcommand% == enter && %arg% == parede
   %send% %actor% Você passa através da parede.
   %echoaround% %actor% %actor.name% bravamente entra na parede.
-  %teleport% %actor% 5509
+  %teleport% %actor% 5505
   %force% %actor% look
   %echoaround% %actor% %actor.name% acabou de sair da estátua.
 else

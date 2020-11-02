@@ -1,30 +1,30 @@
-Nov 01 13:00:34 2020 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
-Nov 01 13:00:34 2020 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
-Nov 01 13:00:34 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
-Nov 01 13:00:34 2020 :: Resetting #220: Anexo (rooms 22000-22099).
-Nov 01 13:00:34 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
-Nov 01 13:00:34 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Nov 01 13:00:34 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Nov 01 13:00:34 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Nov 01 13:00:34 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Nov 01 13:00:34 2020 :: Boot db -- DONE.
-Nov 01 13:00:34 2020 :: Signal trapping.
-Nov 01 13:00:34 2020 :: Entering game loop.
-Nov 01 13:00:34 2020 :: No connections.  Going to sleep.
-Nov 01 13:00:36 2020 :: New connection.  Waking up.
-Nov 01 13:00:43 2020 :: Cansian has connected.
-Nov 01 13:00:44 2020 :: Cansian had no variable file
-Nov 01 13:00:44 2020 :: Cansian retrieving crash-saved items and entering game.
-Nov 01 13:00:44 2020 :: Cansian (level 110) has 8 objects (max 100).
-Nov 01 13:05:36 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 01 13:05:36 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 20984
-Nov 01 13:10:36 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 01 13:10:36 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 20984
-Nov 01 13:10:51 2020 :: (GC) Reboot by Cansian.
-Nov 01 13:10:51 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 01 13:10:51 2020 :: Closing all sockets.
-Nov 01 13:10:51 2020 :: Closing link to: Cansian.
-Nov 01 13:10:51 2020 :: Saving current MUD time.
-Nov 01 13:10:51 2020 :: Rebooting.
+Nov 01 23:47:31 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 01 23:47:41 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 01 23:48:11 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 01 23:48:14 2020 :: OLC: Cansian starts editing zone 54 allowed zone 0
+Nov 01 23:49:22 2020 :: OLC: Cansian edits obj 5502
+Nov 01 23:49:22 2020 :: OLC: Cansian stops editing zone 54 allowed zone 0
+Nov 01 23:49:28 2020 :: OLC: Cansian starts editing zone 30 allowed zone 0
+Nov 01 23:50:01 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 01 23:50:01 2020 :: rusage: user time: 3 sec, system time: 0 sec, max res size: 22996
+Nov 01 23:50:04 2020 :: OLC: Cansian edits zone info for room 3001.
+Nov 01 23:50:04 2020 :: OLC: Cansian stops editing zone 30 allowed zone 0
+Nov 01 23:50:54 2020 :: OLC: Cansian starts editing zone 54 allowed zone 0
+Nov 01 23:51:19 2020 :: OLC: Cansian edits zone info for room 5505.
+Nov 01 23:51:19 2020 :: OLC: Cansian stops editing zone 54 allowed zone 0
+Nov 01 23:51:29 2020 :: (GC) Cansian forced Anyte to save
+Nov 01 23:51:35 2020 :: OLC: Cansian starts editing zone 30 [trigger](allowed zone 0)
+Nov 01 23:51:38 2020 :: OLC: Cansian stops editing zone 30 allowed zone 0
+Nov 01 23:51:57 2020 :: OLC: Cansian starts editing zone 30 [trigger](allowed zone 0)
+Nov 01 23:52:22 2020 :: OLC: Cansian edits trigger 3018
+Nov 01 23:52:22 2020 :: OLC: Cansian stops editing zone 30 allowed zone 0
+Nov 01 23:52:46 2020 :: (GC) Cansian forced Anyte to save
+Nov 01 23:53:03 2020 :: (GC) Reboot by Cansian.
+Nov 01 23:53:03 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Nov 01 23:53:03 2020 :: Closing all sockets.
+Nov 01 23:53:03 2020 :: Closing link to: Anyte.
+Nov 01 23:53:03 2020 :: Closing link to: Cansian.
+Nov 01 23:53:03 2020 :: Saving current MUD time.
+Nov 01 23:53:03 2020 :: Rebooting.
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.
