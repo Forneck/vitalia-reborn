@@ -175,7 +175,6 @@ if %actor%
     nop %actor.gold(-%coins%)%
     nop %self.gold(%coins%)%
   end
-=======
 #5502
 Portal para Midgaard~
 1 c 7
