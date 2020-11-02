@@ -88,9 +88,9 @@ void list_skills(struct char_data *ch)
 
 	char buf[MAX_STRING_LENGTH];
 
-	len = snprintf(buf, sizeof(buf), "You have %d practice session%s remaining.\r\n"
-				   "You know the following:\r\n",
-				   GET_PRACTICES(ch), GET_PRACTICES(ch) == 1 ? "" : "s");
+	len = snprintf(buf, sizeof(buf), "Você possui %d %s para praticar.\r\n"
+				   "@WVocê conhece as seguintes:\r\n",
+				   GET_PRACTICES(ch), GET_PRACTICES(ch) == 1 ? "crédito" : "créditos");
 
 	spell = get_spell_by_vnum(vnum);
 	while (spell)
@@ -202,7 +202,7 @@ SPECIAL(guild)
 	}
 	if (GET_PRACTICES(ch) <= 0)
 	{
-		send_to_char(ch, "Voce não pode praticar agora.\r\n");
+		send_to_char(ch, "Você não possui créditos, e não pode mais praticar.\r\n");
 		return (TRUE);
 	}
 	spell = get_spell_by_name(argument, SPSK);
