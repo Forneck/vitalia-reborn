@@ -1,218 +1,221 @@
 #14000
 A Floresta Encantada~
-   Assim que se entra na floresta, qualquer um sente que o clima é
+   Assim que se entra na floresta, qualquer um sente que o clima Ã©
 completamente diferente do de fora.  A luz aqui parece muito mais intensa,
-os sons muito mais claros e os odores mais agrádaveis e marcantes.  As altas
-árvores não parecem hostis, e os pequenos animais passam sem medo por
-você.  Você pode continuar caminhando por uma estreita trilha que segue
-norte, ir para as planícies indo sul ou seguir uma larga trilha que
+os sons muito mais claros e os odores mais agrÃ¡daveis e marcantes.  As altas
+Ã¡rvores nÃ£o parecem hostis, e os pequenos animais passam sem medo por
+vocÃª.  VocÃª pode continuar caminhando por uma estreita trilha que segue
+norte, ir para as planÃ­cies indo sul ou seguir uma larga trilha que
 segue tanto para leste quanto para oeste.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
 D0
-Você vê a trilha dentro da floresta.
+VocÃª vÃª a trilha dentro da floresta.
 ~
 ~
 0 -1 14001
 D1
-Você vê a trilha dentro da floresta.
+VocÃª vÃª a trilha dentro da floresta.
 ~
 ~
 0 -1 14058
-D2
-Ali está o limite das florestas.
-~
-~
-0 -1 5683
 D3
+VocÃª vÃª a trilha dentro da floresta.
 ~
 ~
 0 -1 14059
+D2
+Ali estÃ¡ o limite das florestas.
+~
+~
+0 -1 5683
 S
 #14001
 A Floresta Encantada~
-   Você segue a estreita trilha em direção ao norte, notando que ela não é
-tão estreita quanto lhe parecia.  As altas árvores, cada uma mais diferente
+   VocÃª segue a estreita trilha em direÃ§Ã£o ao norte, notando que ela nÃ£o Ã©
+tÃ£o estreita quanto lhe parecia.  As altas Ã¡rvores, cada uma mais diferente
 que a outra, seguem ordenadamente ao lado do caminho, parecendo ter
-permissão de apenas deixar suas folhas caírem ali para tornar o andar mais
-macio. Pode parecer bobagem, mas você sente que nesse lugar nada de ruim pode
-acontecer. A menos que você tenha vindo com propósitos escusos, é claro...
-Como pode ver, o caminho segue nas direções norte e sul.
+permissÃ£o de apenas deixar suas folhas caÃ­rem ali para tornar o andar mais
+macio. Pode parecer bobagem, mas vocÃª sente que nesse lugar nada de ruim pode
+acontecer. A menos que vocÃª tenha vindo com propÃ³sitos escusos, Ã© claro...
+Como pode ver, o caminho segue nas direÃ§Ãµes norte e sul.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
 D0
-Você vê a trilha dentro da floresta.
+VocÃª vÃª a trilha dentro da floresta.
 ~
 ~
 0 -1 14002
 D2
-Você vê a trilha dentro da floresta.
+VocÃª vÃª a trilha dentro da floresta.
 ~
 ~
 0 -1 14057
 S
 #14002
 A Floresta Encantada~
-   Desconfiado, você segue pela trilha em direção ao norte, reparando que
-algo estranho parece estar acontecendo: as árvores daqui estão ficando cada
-vez maiores!  E não são só as árvores...  São as flores, folhas, aves,
-insetos.  Tudo está ficando desproporcionalmente grande, fazendo com que
-todos seus sentidos voltem a ficar em alerta total.  Ainda há tempo de
-voltar, seguindo sul.  Seguindo norte, talvez você descubra afinal o que
-está acontecendo.
+   Desconfiado, vocÃª segue pela trilha em direÃ§Ã£o ao norte, reparando que
+algo estranho parece estar acontecendo: as Ã¡rvores daqui estÃ£o ficando cada
+vez maiores!  E nÃ£o sÃ£o sÃ³ as Ã¡rvores...  SÃ£o as flores, folhas, aves,
+insetos.  Tudo estÃ¡ ficando desproporcionalmente grande, fazendo com que
+todos seus sentidos voltem a ficar em alerta total.  Ainda hÃ¡ tempo de
+voltar, seguindo sul.  Seguindo norte, talvez vocÃª descubra afinal o que
+estÃ¡ acontecendo.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
 D0
-Você vê a trilha dentro da floresta.
+VocÃª vÃª a trilha dentro da floresta.
 ~
 ~
 0 -1 14003
 D2
-Você vê a trilha dentro da floresta.
+VocÃª vÃª a trilha dentro da floresta.
 ~
 ~
 0 -1 14053
 S
 #14003
 A Floresta Encantada~
-   Tudo está enorme!  Menos você...  A copa das árvores agora parecem
-encostar nos céus, e o caminho, antes uma estreita trilha, parece mais uma
-planície forrada de folhas gigantescas.  Está muito difícil de caminhar
-aqui, e você se sente presa fácil para qualquer animal que o escolha como
-aperitivo.  Andando mais um pouco, você repara que uma enorme placa, vinda
-do nada, aparece na sua frente. Suas únicas saídas são pela trilha, que segue
+   Tudo estÃ¡ enorme!  Menos vocÃª...  A copa das Ã¡rvores agora parecem
+encostar nos cÃ©us, e o caminho, antes uma estreita trilha, parece mais uma
+planÃ­cie forrada de folhas gigantescas.  EstÃ¡ muito difÃ­cil de caminhar
+aqui, e vocÃª se sente presa fÃ¡cil para qualquer animal que o escolha como
+aperitivo.  Andando mais um pouco, vocÃª repara que uma enorme placa, vinda
+do nada, aparece na sua frente. Suas Ãºnicas saÃ­das sÃ£o pela trilha, que segue
 norte e sul.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
 D0
-Você vê a trilha dentro da floresta.
+VocÃª vÃª a trilha dentro da floresta.
 ~
 ~
 0 -1 14004
 D2
-Você vê a trilha dentro da floresta.
+VocÃª vÃª a trilha dentro da floresta.
 ~
 ~
 0 -1 14054
 E
 placa~
-	nA estranha placa, uma enorme tábua de madeira que flutua no ar à sua frente,
+@nA estranha placa, uma enorme tÃ¡bua de madeira que flutua no ar Ã  sua frente,
 parece ser algum tipo de aviso.
 
-Você lê:
+VocÃª lÃª:
 
-"	G  Espantado viajante:
+"@G  Espantado viajante:
    Estranhas tudo a teu redor
    Parece tudo estar mui grande
    Ou que ficastes mui menor...
 
-   Não te sintas intimidado
-   Alguém a ti virá ajudar
-   Só não empregue teu cajado
+   NÃ£o te sintas intimidado
+   AlguÃ©m a ti virÃ¡ ajudar
+   SÃ³ nÃ£o empregue teu cajado
    Ou arma que pensas usar.
 
-   Lindrel é o lugar
-   Que saúda o aventureiro.
-   Do povo pequeno é o lar
-   E teu, é recanto hospitaleiro.  	n "
+   Lindrel Ã© o lugar
+   Que saÃºda o aventureiro.
+   Do povo pequeno Ã© o lar
+   E teu, Ã© recanto hospitaleiro.  @n "
 
-Não há como saber se isso é algo bom ou ruim.  Mas pelo menos você descobriu
-o nome do lugar em que está, e que em breve alguém o procurará...
+NÃ£o hÃ¡ como saber se isso Ã© algo bom ou ruim.  Mas pelo menos vocÃª descobriu
+o nome do lugar em que estÃ¡, e que em breve alguÃ©m o procurarÃ¡...
 ~
 S
 #14004
 A Floresta Encantada~
-   Você segue a trilha com um pouco de dificuldade, mas já se habituando com
+   VocÃª segue a trilha com um pouco de dificuldade, mas jÃ¡ se habituando com
 o verdadeiro mar de folhas que o cerca.  Os versos do aviso ainda ecoam em
-sua cabeça, e você a qualquer momento espera a chegada de quem viria lhe
-ajudar.  Ainda há tempo de voltar, indo sul, ou ainda seguir norte, em busca
+sua cabeÃ§a, e vocÃª a qualquer momento espera a chegada de quem viria lhe
+ajudar.  Ainda hÃ¡ tempo de voltar, indo sul, ou ainda seguir norte, em busca
 de mais aventuras.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
 D0
-Você vê a trilha dentro da floresta.
+VocÃª vÃª a trilha dentro da floresta.
 ~
 ~
 0 -1 14005
 D2
-Você vê a trilha dentro da floresta.
+VocÃª vÃª a trilha dentro da floresta.
 ~
 ~
 0 -1 14055
 S
 #14005
-Um Portão na Floresta~
-   Da mesma forma que, aparentemente vinda do nada, a placa apareceu à sua
-frente, um grande portão surge bloqueando seu caminho.  É impossível ver o
-que há do outro lado, principalmente porque as gigantescas árvores da
-floresta formam uma espécie de muralha em torno de alguma coisa. O caminho
-norte termina no portão, mas você ainda pode voltar.
+Um PortÃ£o na Floresta~
+   Da mesma forma que, aparentemente vinda do nada, a placa apareceu Ã  sua
+frente, um grande portÃ£o surge bloqueando seu caminho.  Ã‰ impossÃ­vel ver o
+que hÃ¡ do outro lado, principalmente porque as gigantescas Ã¡rvores da
+floresta formam uma espÃ©cie de muralha em torno de alguma coisa. O caminho
+norte termina no portÃ£o, mas vocÃª ainda pode voltar.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
 D0
-Ali está... um estranho lugar.
+Ali estÃ¡... um estranho lugar.
 ~
-portão~
-1 2 14006
+portao~
+:n 1 o portÃ£o
+a 2 14006
 D2
-Você vê a trilha dentro da floresta.
+VocÃª vÃª a trilha dentro da floresta.
 ~
 ~
 0 -1 14055
 E
-portão~
-O grande portão é de exótica beleza.  Uma de suas folhas é totalmente feita
-de metal negro, havendo inúmeras pedras vermelho-sangue engastadas por toda
-sua superfície.  Simétrica à folha negra, uma de metal semelhante à prata
-possui incrustrações de pedras azuis, formando uma peça realmente esquisita.
+portao~
+O grande portÃ£o Ã© de exÃ³tica beleza.  Uma de suas folhas Ã© totalmente feita
+de metal negro, havendo inÃºmeras pedras vermelho-sangue engastadas por toda
+sua superfÃ­cie.  SimÃ©trica Ã  folha negra, uma de metal semelhante Ã  prata
+possui incrustraÃ§Ãµes de pedras azuis, formando uma peÃ§a realmente esquisita.
 Duas fechaduras, uma de cada metal, permanecem com suas respectivas chaves,
-o que parece mostrar que aqui não é necessária muita preocupação com segurança.
+o que parece mostrar que aqui nÃ£o Ã© necessÃ¡ria muita preocupaÃ§Ã£o com seguranÃ§a.
 ~
 S
 #14006
 A Entrada de Lindrel~
-   Você passou pelos portões e entrou em Lindrel.  No princípio você não
-entende muito o que mudou na paisagem mas, observando tudo com mais atenção,
-repara que acabou de entrar numa espécie de cidade bem no meio da floresta.
-Tudo aqui continua gigantesco: as árvores, que parecem proteger a cidadela;
+   VocÃª passou pelos portÃµes e entrou em Lindrel.  No princÃ­pio vocÃª nÃ£o
+entende muito o que mudou na paisagem mas, observando tudo com mais atenÃ§Ã£o,
+repara que acabou de entrar numa espÃ©cie de cidade bem no meio da floresta.
+Tudo aqui continua gigantesco: as Ã¡rvores, que parecem proteger a cidadela;
 as flores, que parecem luzeiros dispostos ao redor das ruas lotadas de
-folhas e até mesmo os cogumelos de chapéu, coloridos feito suas portas
+folhas e atÃ© mesmo os cogumelos de chapÃ©u, coloridos feito suas portas
 arredondadas que parecem ocultar aconchegantes casas.
-   As saídas que você vê ficam a norte, leste e oeste, seguindo pelas ruas
-de Lindrel, ou ainda a sul, por onde você pode sair da cidade.
+   As saÃ­das que vocÃª vÃª ficam a norte, leste e oeste, seguindo pelas ruas
+de Lindrel, ou ainda a sul, por onde vocÃª pode sair da cidade.
 ~
-140 64 0 0 0 1
+140.2 g 1
 D0
 Ali segue a Avenida Lima Madura.
 ~
 ~
 0 -1 14016
 D1
-Você vê a Rua das Amoreiras.
+VocÃª vÃª a Rua das Amoreiras.
 ~
 ~
 0 -1 14007
 D2
-Ali fica a saída de Lindrel.
+Ali fica a saÃ­da de Lindrel.
 ~
-portão~
-1 2 14056
+portao~
+:n 1 o portÃ£o
+a 2 14056
 D3
-Você vê a Rua ameixas.
+VocÃª vÃª a Rua ameixas.
 ~
 ~
 0 -1 14020
 S
 #14007
 A Rua das Amoreiras~
-   Você está em uma rua - calçada de pedras arredondadas cobertas de folhas
+   VocÃª estÃ¡ em uma rua - calÃ§ada de pedras arredondadas cobertas de folhas
 - ladeada por gigantescas amoreiras.  Vez ou outra uma enorme amora cai
-perto de você, fazendo com que você sinta coisas antagônicas dentro de si:
+perto de vocÃª, fazendo com que vocÃª sinta coisas antagÃ´nicas dentro de si:
 um enorme desejo de comer amoras misturado com o temor de morrer atingido
-por uma dessas frutas.  As árvores impedem que você siga para qualquer outra
-direção que não seja leste ou oeste.
+por uma dessas frutas.  As Ã¡rvores impedem que vocÃª siga para qualquer outra
+direÃ§Ã£o que nÃ£o seja leste ou oeste.
 ~
-140 64 0 0 0 1
+140.2 g 1
 D1
 ~
 ~
@@ -224,19 +227,20 @@ D3
 S
 #14008
 A Rua das Amoreiras~
-   Você está andando pela Rua das Amoreiras, tomando cuidado para não ser
-atingido por nenhuma fruta.  Por um momento você tem a impressão que elas
-estão sendo jogadas do alto das árvores, mas acaba afastando a idéia de
-sua cabeça. Continuando pelo caminho, você se depara com um portão de madeira
-a norte, que parece levar a um conjunto de grandes cogumelos-casa. Já a rua
+   VocÃª estÃ¡ andando pela Rua das Amoreiras, tomando cuidado para nÃ£o ser
+atingido por nenhuma fruta.  Por um momento vocÃª tem a impressÃ£o que elas
+estÃ£o sendo jogadas do alto das Ã¡rvores, mas acaba afastando a idÃ©ia de
+sua cabeÃ§a. Continuando pelo caminho, vocÃª se depara com um portÃ£o de madeira
+a norte, que parece levar a um conjunto de grandes cogumelos-casa. JÃ¡ a rua
 continua leste e oeste.
 ~
-140 64 0 0 0 1
+140.2 g 1
 D0
-Você vê um pequeno portão de madeira.
+VocÃª vÃª um pequeno portÃ£o de madeira.
 ~
-portão madeira~
-0 2 14026
+portao madeira~
+:n 1 o portÃ£o de madeira
+ag 2 14026
 D1
 ~
 ~
@@ -248,74 +252,76 @@ D3
 S
 #14009
 A Rua das Amoreiras~
-   Você caminha pela Rua das Amoreiras - sempre com muita cautela -
-procurando conhecer um pouco mais da cidade.  Não demora muito e você
+   VocÃª caminha pela Rua das Amoreiras - sempre com muita cautela -
+procurando conhecer um pouco mais da cidade.  NÃ£o demora muito e vocÃª
 consegue distinguir, entre os sons da cidadela, o belo cantar de uma voz de
-barítono.  Tentando descobrir de onde ela vem, você percebe, ao sul, um
-grande e velho carvalho de portas (!?) fechadas.  Há tabuleta, presa no alto
+barÃ­tono.  Tentando descobrir de onde ela vem, vocÃª percebe, ao sul, um
+grande e velho carvalho de portas (!?) fechadas.  HÃ¡ tabuleta, presa no alto
 do tronco.
-   Você pode ainda seguir oeste pela rua.
+   VocÃª pode ainda seguir oeste pela rua.
 ~
-140 64 0 0 0 1
+140.2 g 1
 D2
-Você vê um estranho carvalho gigante.
+VocÃª vÃª um estranho carvalho gigante.
 ~
 porta~
-0 2 14010
+:n 1 uma das portas
+ga 2 14010
 D3
 ~
 ~
 0 -1 14008
 E
 tabuleta~
-O carvalho é tão velho que seu tronco já está encurvado. A tabuleta,
+O carvalho Ã© tÃ£o velho que seu tronco jÃ¡ estÃ¡ encurvado. A tabuleta,
 bem acima da porta, diz:
             _________________________
            |                         |
            |         TAVERNA         |
            |    O VELHO CARVALHO     |
            |                         |
-           |   Fiado, só amanhã!     |
+           |   Fiado, sÃ³ amanhÃ£!     |
            |_________________________|
 ~
 S
 #14010
 O Velho Carvalho~
-   Você está dentro de uma aconchegante taverna que fica simplesmente dentro
-de uma árvore.  A iluminação do lugar é feita por pequenas esferas de
-cristal repletas de vaga-lumes presas às paredes da taverna, o que dá um
-efeito realmente bonito ao lugar.  As mesas, no momento, estão todas
-guardadas, pois o dono do lugar estava até agora limpando o estabelecimento.
-Para sua alegria, balcão de bebidas, a leste, parece estar funcionando.
-Há também um pequeno palco a sul.
-   A Rua Amoreira passa lá fora, ao norte.
+   VocÃª estÃ¡ dentro de uma aconchegante taverna que fica simplesmente dentro
+de uma Ã¡rvore.  A iluminaÃ§Ã£o do lugar Ã© feita por pequenas esferas de
+cristal repletas de vaga-lumes presas Ã s paredes da taverna, o que dÃ¡ um
+efeito realmente bonito ao lugar.  As mesas, no momento, estÃ£o todas
+guardadas, pois o dono do lugar estava atÃ© agora limpando o estabelecimento.
+Para sua alegria, balcÃ£o de bebidas, a leste, parece estar funcionando.
+HÃ¡ tambÃ©m um pequeno palco a sul.
+   A Rua Amoreira passa lÃ¡ fora, ao norte.
 ~
-140 262216 0 0 0 0
+140.2 dgs 0
 D0
-Essa é a saída da taverna.
+Essa Ã© a saÃ­da da taverna.
 ~
 porta~
-0 2 14009
+:n 1 uma das portas
+ag 2 14009
 D1
-Ali fica o balcão de bebidas.
+Ali fica o balcÃ£o de bebidas.
 ~
 ~
 0 -1 14011
 D2
-Você vê um pequeno palco.
+VocÃª vÃª um pequeno palco.
 ~
 ~
 0 -1 14012
 S
 #14011
-O Balcão de Bebidas~
-   Você está em frente ao balcão de bebidas da taverna "O Velho Carvalho".
-Atrás do balcão você vê, em diversas prateleiras, uma enorme quantidade de
-bebidas provenientes dos quatro cantos do mundo. Há algumas de lugares que
-você não sabia nem que existia!
-   Se não for beber nada, a entrada da taverna fica a oeste.
+O BalcÃ£o de Bebidas~
+   VocÃª estÃ¡ em frente ao balcÃ£o de bebidas da taverna "O Velho Carvalho".
+AtrÃ¡s do balcÃ£o vocÃª vÃª, em diversas prateleiras, uma enorme quantidade de
+bebidas provenientes dos quatro cantos do mundo. HÃ¡ algumas de lugares que
+vocÃª nÃ£o sabia nem que existia!
+   Se nÃ£o for beber nada, a entrada da taverna fica a oeste.
 ~
-140 262216 0 0 0 0
+140.2 dgs 0
 D3
 ~
 ~
@@ -323,14 +329,14 @@ D3
 S
 #14012
 O Pequeno Palco~
-   Você está em uma parte mais elevada da taverna por onde se chega através
+   VocÃª estÃ¡ em uma parte mais elevada da taverna por onde se chega atravÃ©s
 de alguns degraus.  Das laterais desse palco pendem flores de longos e
-enrolados caules que, além de perfumar o local, servem para criar um belo
-efeito de iluminação.  É aqui que ocorrem alguns dos concursos de canto e
-poesia, além de apresentações de qualquer ser que queira compartilhar seu
+enrolados caules que, alÃ©m de perfumar o local, servem para criar um belo
+efeito de iluminaÃ§Ã£o.  Ã‰ aqui que ocorrem alguns dos concursos de canto e
+poesia, alÃ©m de apresentaÃ§Ãµes de qualquer ser que queira compartilhar seu
 talento.
 ~
-140 262216 0 0 0 0
+140.2 dgs 0
 D0
 ~
 ~
@@ -338,15 +344,15 @@ D0
 S
 #14013
 A Rua dos Laranjais~
-   Você está na Rua dos Laranjais, sendo esta quase que totalmente ladeada
-por grandes laranjeiras.  A tranqüilidade do lugar é quase soberana,
+   VocÃª estÃ¡ na Rua dos Laranjais, sendo esta quase que totalmente ladeada
+por grandes laranjeiras.  A tranqÃ¼ilidade do lugar Ã© quase soberana,
 perdendo apenas sua vez para o barulho de grandes laranjas caindo por todas
-as partes.  É possível avistar, a sul, um estranho amontoado de grandes
-cogumelos de "telhado" colorido, sendo impossível, no entando, pular a alta
-cerca branca e chegar até eles sem ser pela entrada correta.  Sons de
-explosões ecoam no ar vindos do norte.
+as partes.  Ã‰ possÃ­vel avistar, a sul, um estranho amontoado de grandes
+cogumelos de "telhado" colorido, sendo impossÃ­vel, no entando, pular a alta
+cerca branca e chegar atÃ© eles sem ser pela entrada correta.  Sons de
+explosÃµes ecoam no ar vindos do norte.
 ~
-140 64 0 0 0 1
+140.2 g 1
 D3
 ~
 ~
@@ -354,19 +360,14 @@ D3
 S
 #14014
 A Rua dos Laranjais~
-   Você está em uma rua rodeada por grandes pés de laranjas, chamada Rua dos
-Laranjais.  Estranhos barulhos de explosões ecoam interrompendo a
-tranqüilidade do lugar vindos de uma esquisita construção a norte, o que
-aguça sua curiosidade.  Fora isso, apenas os gigantes cogumelos-casa, a sul,
-chamam sua atenção, além das perigosas laranjas suicidas que cismam em o
+   VocÃª estÃ¡ em uma rua rodeada por grandes pÃ©s de laranjas, chamada Rua dos
+Laranjais.  Estranhos barulhos de explosÃµes ecoam interrompendo a
+tranqÃ¼ilidade do lugar vindos de uma esquisita construÃ§Ã£o a norte, o que
+aguÃ§a sua curiosidade.  Fora isso, apenas os gigantes cogumelos-casa, a sul,
+chamam sua atenÃ§Ã£o, alÃ©m das perigosas laranjas suicidas que cismam em o
 atacar.
 ~
-140 64 0 0 0 1
-D0
-Há o som de explosões vindo de lá.
-~
-~
-0 -1 14046
+140.2 g 1
 D1
 ~
 ~
@@ -375,21 +376,26 @@ D3
 ~
 ~
 0 -1 14015
+D0
+HÃ¡ o som de explosÃµes vindo de lÃ¡.
+~
+~
+0 -1 14046
 S
 #14015
 O Cruzamento da Laranjais com a Av. Lima Madura~
-   Você está justamente no local onde a Rua dos Laranjais cruza com a
-Avenida Lima Madura.  Aqui, os grandes pés de laranjas parecem competir com
+   VocÃª estÃ¡ justamente no local onde a Rua dos Laranjais cruza com a
+Avenida Lima Madura.  Aqui, os grandes pÃ©s de laranjas parecem competir com
 as limeiras carregadas de perfumadas flores e frutos, estes parecendo ser
 menos agressivos que as laranjas (que caem a todo momento tentando o
-atingir).  O chão, revestido de pedras arredondadas, foi quase completamente
+atingir).  O chÃ£o, revestido de pedras arredondadas, foi quase completamente
 coberto por folhas secas, tornando o andar aqui macio.  Postes de madeira,
 com grandes esferas de vidro, acompanham a Avenida ao lado das limeiras,
-esperando a chegada da escuridão, quando acomodam os milhares de vaga-lumes
-para iluminação.  As direções que aqui podem ser seguidas é norte e sul, ao
+esperando a chegada da escuridÃ£o, quando acomodam os milhares de vaga-lumes
+para iluminaÃ§Ã£o.  As direÃ§Ãµes que aqui podem ser seguidas Ã© norte e sul, ao
 longo da Avenida, ou leste e oeste, pela Laranjais.
 ~
-140 64 0 0 0 1
+140.2 g 1
 D0
 ~
 ~
@@ -405,14 +411,14 @@ D2
 S
 #14016
 A Avenida Lima Madura~
-   Você está caminhando pela larga Avenida Lima Madura, cujas altas 
+   VocÃª estÃ¡ caminhando pela larga Avenida Lima Madura, cujas altas 
 limeiras acompanham o caminho ao lado de altos postes de madeira usados
-na iluminação.  À leste você percebe uma extensa área repleta de
-cogumelos-de-chapéu gigantes que possuem portas, janelas e chaminés e a
-oeste uma gigantesca flor com uma tabuleta presa ao seu caule.  Você pode
+na iluminaÃ§Ã£o.  Ã€ leste vocÃª percebe uma extensa Ã¡rea repleta de
+cogumelos-de-chapÃ©u gigantes que possuem portas, janelas e chaminÃ©s e a
+oeste uma gigantesca flor com uma tabuleta presa ao seu caule.  VocÃª pode
 seguir norte e sul pela Avenida.
 ~
-140 64 0 0 0 1
+140.2 g 1
 D0
 ~
 ~
@@ -420,50 +426,43 @@ D0
 D1
 Por ali se chega aos cogumelos-casa.
 ~
-portão~
-0 2 14025
+portao~
+:n o portÃ£o
+ag 2 14025
 D2
 ~
 ~
 0 -1 14006
 D3
-Você vê uma flor gigantesca.
+VocÃª vÃª uma flor gigantesca.
 ~
 ~
 0 -1 14037
 E
 tabuleta flor gigantesca~
-	nA tabuleta diz:
+@nA tabuleta diz:
 
-       	B"A Gota D'Água"	n
+       @B"A Gota D'Ãgua"@n
 
      Escola para pequenos.
-     Faça já sua matrícula!
+     FaÃ§a jÃ¡ sua matrÃ­cula!
 ~
 S
 #14017
 A Avenida Lima Madura~
-   Você está caminhando pela larga Avenida Lima Madura, cujas altas limeiras
+   VocÃª estÃ¡ caminhando pela larga Avenida Lima Madura, cujas altas limeiras
 acompanham o caminho ao lado de altos postes de madeira usados na
-iluminação.  Há, a leste, uma estranha construção de onde vêem estranhos
-barulhos, entre explosões e zunidos, enquanto a oeste parece haver um
+iluminaÃ§Ã£o.  HÃ¡, a leste, uma estranha construÃ§Ã£o de onde vÃªem estranhos
+barulhos, entre explosÃµes e zunidos, enquanto a oeste parece haver um
 extenso campo de grama colorida.  A Avenida continua a norte e sul, enquanto
-a Rua das Macieiras é indicada como sendo a nordeste, e a Rua Pessegueiros a
+a Rua das Macieiras Ã© indicada como sendo a nordeste, e a Rua Pessegueiros a
 noroeste.
 ~
-140 64 0 0 0 1
+140.2 g 1
 D0
 ~
 ~
 0 -1 14048
-D1
-~
-~
-0 -1 14046
-D2
-~
-~
-0 -1 14015
 D6
 ~
 ~
@@ -472,18 +471,30 @@ D7
 ~
 ~
 0 -1 14019
+D2
+~
+~
+0 -1 14015
+D1
+~
+~
+0 -1 14046
 S
 #14018
 A Rua das Macieiras~
-   Você está na pouco movimentada Rua das Macieiras.  As macieiras que dão
-nome à rua estão em flor, não havendo ainda fruto algum para tirar-lhe o
-sossego.  É possível ver, a sul, um extenso campo gramado de maneira muito
+   VocÃª estÃ¡ na pouco movimentada Rua das Macieiras.  As macieiras que dÃ£o
+nome Ã  rua estÃ£o em flor, nÃ£o havendo ainda fruto algum para tirar-lhe o
+sossego.  Ã‰ possÃ­vel ver, a sul, um extenso campo gramado de maneira muito
 estranha, onde parece estar havendo alguma coisa importante.  A Avenida Lima
 Madura fica a sudeste.
 ~
-140 64 0 0 0 1
+140.2 g 1
+D8
+~
+~
+0 -1 14017
 D2
-Você vê um campo gramado.
+VocÃª vÃª um campo gramado.
 ~
 ~
 0 -1 14044
@@ -491,43 +502,39 @@ D3
 ~
 ~
 0 -1 14021
-D8
-~
-~
-0 -1 14017
-S
+S 
 #14019
 A Rua Pessegueiros~
-   Você está caminhando em uma rua cercada por velhos pessegueiros
-carregados de frutos.  Pêssegos, vez por outra, caem a seu redor, quase o
-atingindo por diversas vezes.  A vizinhança aqui é muito tranqüila, sendo
-possível avistar, a sul, os fundos de uma casa tomada pelas plantas.
+   VocÃª estÃ¡ caminhando em uma rua cercada por velhos pessegueiros
+carregados de frutos.  PÃªssegos, vez por outra, caem a seu redor, quase o
+atingindo por diversas vezes.  A vizinhanÃ§a aqui Ã© muito tranqÃ¼ila, sendo
+possÃ­vel avistar, a sul, os fundos de uma casa tomada pelas plantas.
    A Pessegueiros segue leste, e a sudoeste fica a Avenida.
 ~
-140 64 0 0 0 1
-D1
-~
-~
-0 -1 14060
+140.2 g 1
 D9
 ~
 ~
 0 -1 14017
+D1
+~
+~
+0 -1 14060
 S
 #14020
 A Rua Ameixas~
-   Você está na Rua das Ameixas, andando tranqüilamente entre as altas
-árvores de frutos vermelho-arroxeados.  O chão, coberto de seixos coloridos,
-parece ter sido limpo há pouquíssimo tempo, já que as folhas caídas das
-árvores foram cuidadosamente dispostas em montes.  Você vê, a sul, o que
-parece ser uma grande plantação de flores.  Seria possível continuar a oeste
-e noroeste se não houvesse um enorme monte de folhas impedindo que você siga
-justamente naquelas direções.  A entrada de Lidrel fica a leste, enquanto
-ao norte está uma estranha e gigantesca flor.
+   VocÃª estÃ¡ na Rua das Ameixas, andando tranqÃ¼ilamente entre as altas
+Ã¡rvores de frutos vermelho-arroxeados.  O chÃ£o, coberto de seixos coloridos,
+parece ter sido limpo hÃ¡ pouquÃ­ssimo tempo, jÃ¡ que as folhas caÃ­das das
+Ã¡rvores foram cuidadosamente dispostas em montes.  VocÃª vÃª, a sul, o que
+parece ser uma grande plantaÃ§Ã£o de flores.  Seria possÃ­vel continuar a oeste
+e noroeste se nÃ£o houvesse um enorme monte de folhas impedindo que vocÃª siga
+justamente naquelas direÃ§Ãµes.  A entrada de Lidrel fica a leste, enquanto
+ao norte estÃ¡ uma estranha e gigantesca flor.
 ~
-140 64 0 0 0 1
+140.2 g 1
 D0
-Há ali uma flor gigante.
+HÃ¡ ali uma flor gigante.
 ~
 ~
 0 -1 14037
@@ -542,27 +549,22 @@ Ali parece haver o plantio de flores.
 0 -1 14022
 E
 tabuleta flor gigantesca~
-	nA tabuleta diz:
+@nA tabuleta diz:
 
-       	B"A Gota D'Água"	n
+       @B"A Gota D'Ãgua"@n
 
      Escola para pequenos.
-     Faça já sua matrícula!
+     FaÃ§a jÃ¡ sua matrÃ­cula!
 ~
 S
 #14021
 A Rua das Macieiras~
-   Você está na Rua das Macieiras, esta cercada de velhas árvores repletas
-   De flores.  A sul você vê um estranho gramado colorido, a norte uma bem
-cuidada barraca de flores, enquanto a sudeste há apenas a Avenida Lima
+   VocÃª estÃ¡ na Rua das Macieiras, esta cercada de velhas Ã¡rvores repletas
+   De flores.  A sul vocÃª vÃª um estranho gramado colorido, a norte uma bem
+cuidada barraca de flores, enquanto a sudeste hÃ¡ apenas a Avenida Lima
 Madura.
 ~
-140 64 0 0 0 1
-D0
-Você vê uma barraca de flores.
-~
-~
-0 -1 14062
+140.2 g 1
 D1
 ~
 ~
@@ -571,20 +573,25 @@ D2
 ~
 ~
 0 -1 14045
+D0
+VocÃª vÃª uma barraca de flores.
+~
+~
+0 -1 14062
 S
 #14022
 Os Campos de Cultivo~
-   Você está no que os habitantes aqui chamam de campos de cultivo.  O
-cultivo a que se referem é o de flores, que são aproveitadas tanto na
-produção de néctar quanto como ingredientes mágicos e até alimentos.  As
-flores, em sua maioria duas vezes mais altas que você, são variadas tanto em
-cores quanto cheiros e espécies, estando elas organizadas em pequenos blocos
-de flores-irmãs.  Você consegue caminhas pelos campos nas direções leste e
-oeste, podendo seguir até a Rua Ameixas por norte.
+   VocÃª estÃ¡ no que os habitantes aqui chamam de campos de cultivo.  O
+cultivo a que se referem Ã© o de flores, que sÃ£o aproveitadas tanto na
+produÃ§Ã£o de nÃ©ctar quanto como ingredientes mÃ¡gicos e atÃ© alimentos.  As
+flores, em sua maioria duas vezes mais altas que vocÃª, sÃ£o variadas tanto em
+cores quanto cheiros e espÃ©cies, estando elas organizadas em pequenos blocos
+de flores-irmÃ£s.  VocÃª consegue caminhas pelos campos nas direÃ§Ãµes leste e
+oeste, podendo seguir atÃ© a Rua Ameixas por norte.
 ~
-140 64 0 0 0 2
+140.2 g 2
 D0
-A Macieiras fica naquela direção.
+A Macieiras fica naquela direÃ§Ã£o.
 ~
 ~
 0 -1 14020
@@ -599,75 +606,78 @@ D3
 S
 #14023
 Os Campos de Cultivo~
-   Você está nos campos de cultivo de flores de Lindrel.  Desse lado, o que
-predomina são flores de cores frias, organizadas de maneira que os tons mais
-claros de uma mesma cor estejam próximos aos intermediários, que estão
-próximos aos mais escuros.  É um festival de cores extremamente agradável
-de se ver, porém muito difícil de se acreditar.  A pequena trilha que você
+   VocÃª estÃ¡ nos campos de cultivo de flores de Lindrel.  Desse lado, o que
+predomina sÃ£o flores de cores frias, organizadas de maneira que os tons mais
+claros de uma mesma cor estejam prÃ³ximos aos intermediÃ¡rios, que estÃ£o
+prÃ³ximos aos mais escuros.  Ã‰ um festival de cores extremamente agradÃ¡vel
+de se ver, porÃ©m muito difÃ­cil de se acreditar.  A pequena trilha que vocÃª
 segue dentro dos campos segue apenas a leste.
 ~
-140 64 0 0 0 2
+140.2 g 2
 D1
 ~
 ~
 0 -1 14022
-S
+S   
 #14024
 Os Campos de Cultivo~
-   Você está nos campos de cultivo de flores de Lindrel.  Desse lado, o que
-predomina são flores de cores quentes, organizadas de maneira que os tons
-mais claros de uma mesma cor estejam próximos aos intermediários, que estão
-próximos aos mais escuros.  É um festival de cores extremamente agradável
-de se ver, porém muito difícil de se acreditar.  A pequena trilha que o
-trouxe até aqui segue apenas de volta a oeste.
+   VocÃª estÃ¡ nos campos de cultivo de flores de Lindrel.  Desse lado, o que
+predomina sÃ£o flores de cores quentes, organizadas de maneira que os tons
+mais claros de uma mesma cor estejam prÃ³ximos aos intermediÃ¡rios, que estÃ£o
+prÃ³ximos aos mais escuros.  Ã‰ um festival de cores extremamente agradÃ¡vel
+de se ver, porÃ©m muito difÃ­cil de se acreditar.  A pequena trilha que o
+trouxe atÃ© aqui segue apenas de volta a oeste.
 ~
-140 64 0 0 0 2
+140.2 g 2
 D3
 ~
 ~
 0 -1 14022
-S
+S   
 #14025
 A Vila dos Cogumelos~
-   Você está em uma ruela na agradável Vila dos Cogumelos.  Gigantescos
-cogumelos coloridos, com portas e janelas arredondadas, estão espalhados por
-todos os lados.  Você ainda vê, interessado, que há, nos espaços
-"não-construídos", pequenas miniaturas das estranhas casas, parecendo que de
-alguma forma crescerão até atingirem o tamanho adequado para serem
-habitados.  À norte e sul há dois grandes cogumelos de telhado laranja.
+   VocÃª estÃ¡ em uma ruela na agradÃ¡vel Vila dos Cogumelos.  Gigantescos
+cogumelos coloridos, com portas e janelas arredondadas, estÃ£o espalhados por
+todos os lados.  VocÃª ainda vÃª, interessado, que hÃ¡, nos espaÃ§os
+"nÃ£o-construÃ­dos", pequenas miniaturas das estranhas casas, parecendo que de
+alguma forma crescerÃ£o atÃ© atingirem o tamanho adequado para serem
+habitados.  Ã€ norte e sul hÃ¡ dois grandes cogumelos de telhado laranja.
 A estreita rua segue leste e oeste.
 ~
-140 64 0 0 0 1
+140.3 g 1
 D0
-Você vê um grande cogumelo-casa.
+VocÃª vÃª um grande cogumelo-casa.
 ~
 porta~
-0 2 14029
+:n 2 a porta
+ag 2 14029
 D1
 ~
 ~
 0 -1 14026
 D2
-Você vê um grande cogumelo-casa.
+VocÃª vÃª um grande cogumelo-casa.
 ~
 porta~
-0 2 14030
+:n 2 a porta
+ag 2 14030
 D3
-A Avenida fica naquela direção.
+A Avenida fica naquela direÃ§Ã£o.
 ~
-portão~
-0 2 14016
+portao~
+:n 1 o portÃ£o
+ag 2 14016
 S
 #14026
 A Vila dos Cogumelos~
-  Você está em uma ruela na agradável Vila dos Cogumelos.  Gigantescos
-cogumelos coloridos, com portas e janelas arredondadas, estão espalhados por
-todos os lados.  Você ainda vê, interessado, que há, nos espaços
-"não-construídos", pequenas miniaturas das estranhas casas, parecendo que de
-alguma forma crescerão até atingirem o tamanho adequado para serem
+  VocÃª estÃ¡ em uma ruela na agradÃ¡vel Vila dos Cogumelos.  Gigantescos
+cogumelos coloridos, com portas e janelas arredondadas, estÃ£o espalhados por
+todos os lados.  VocÃª ainda vÃª, interessado, que hÃ¡, nos espaÃ§os
+"nÃ£o-construÃ­dos", pequenas miniaturas das estranhas casas, parecendo que de
+alguma forma crescerÃ£o atÃ© atingirem o tamanho adequado para serem
 habitados.   A estreita rua segue norte, sul, leste e oeste.
 ~
-140 64 0 0 0 1
+140.3 g 1
 D0
 ~
 ~
@@ -679,8 +689,9 @@ D1
 D2
 A Amoreiras fica ali.
 ~
-portão madeira~
-0 2 14008
+portao madeira~
+:n 1 o portÃ£o de madeira
+ag 2 14008
 D3
 ~
 ~
@@ -688,204 +699,218 @@ D3
 S
 #14027
 A Vila dos Cogumelos~
-  Você está em uma ruela na agradável Vila dos Cogumelos.  Gigantescos
-cogumelos coloridos, com portas e janelas arredondadas, estão espalhados por
-todos os lados.  Você ainda vê, interessado, que há, nos espaços
-"não-construídos", pequenas miniaturas das estranhas casas, parecendo que de
-alguma forma crescerão até atingirem o tamanho adequado para serem
-habitados. Há, nas direções norte, leste e oeste, três cogumelos de telhado
+  VocÃª estÃ¡ em uma ruela na agradÃ¡vel Vila dos Cogumelos.  Gigantescos
+cogumelos coloridos, com portas e janelas arredondadas, estÃ£o espalhados por
+todos os lados.  VocÃª ainda vÃª, interessado, que hÃ¡, nos espaÃ§os
+"nÃ£o-construÃ­dos", pequenas miniaturas das estranhas casas, parecendo que de
+alguma forma crescerÃ£o atÃ© atingirem o tamanho adequado para serem
+habitados. HÃ¡, nas direÃ§Ãµes norte, leste e oeste, trÃªs cogumelos de telhado
 azul-claro. A estreita rua segue sul.
 ~
-140 64 0 0 0 1
+140.3 g 1
 D0
-Você vê um grande cogumelo-casa.
+VocÃª vÃª um grande cogumelo-casa.
 ~
 porta~
-0 2 14032
+:n 2 a porta
+ag 2 14032
 D1
-Você vê um grande cogumelo-casa.
+VocÃª vÃª um grande cogumelo-casa.
 ~
 porta~
-0 2 14033
+:n 2 a porta
+ga 2 14033
 D2
 ~
 ~
 0 -1 14026
 D3
-Você vê um grande cogumelo-casa.
+VocÃª vÃª um grande cogumelo-casa.
 ~
 porta~
-0 2 14031
+:n 2 a porta
+ga 2 14031
 S
 #14028
 A Vila dos Cogumelos~
-  Você está em uma ruela na agradável Vila dos Cogumelos.  Gigantescos
-cogumelos coloridos, com portas e janelas arredondadas, estão espalhados por
-todos os lados.  Você ainda vê, interessado, que há, nos espaços
-"não-construídos", pequenas miniaturas das estranhas casas, parecendo que de
-alguma forma crescerão até atingirem o tamanho adequado para serem
-habitados. Há, nas direções leste, norte e sul, três cogumelos de telhado
+  VocÃª estÃ¡ em uma ruela na agradÃ¡vel Vila dos Cogumelos.  Gigantescos
+cogumelos coloridos, com portas e janelas arredondadas, estÃ£o espalhados por
+todos os lados.  VocÃª ainda vÃª, interessado, que hÃ¡, nos espaÃ§os
+"nÃ£o-construÃ­dos", pequenas miniaturas das estranhas casas, parecendo que de
+alguma forma crescerÃ£o atÃ© atingirem o tamanho adequado para serem
+habitados. HÃ¡, nas direÃ§Ãµes leste, norte e sul, trÃªs cogumelos de telhado
 amarelo. A estreita rua segue oeste.
 ~
-140 64 0 0 0 1
+140.3 g 1
 D0
-Você vê um grande cogumelo-casa.
+VocÃª vÃª um grande cogumelo-casa.
 ~
 porta~
-0 2 14034
+:n 2 a porta
+ga 2 14034
 D1
-Você vê um grande cogumelo-casa.
+VocÃª vÃª um grande cogumelo-casa.
 ~
 porta~
-0 2 14035
+:n 2 a porta
+ga 2 14035
 D2
-Você vê um grande cogumelo-casa.
+VocÃª vÃª um grande cogumelo-casa.
 ~
 porta~
-0 2 14036
+:n 2 a porta
+ga 2 14036
 D3
 ~
 ~
 0 -1 14026
 S
 #14029
-O Cogumelo Vermelho Número 1~
-   Você está dentro de um confortável cogumelo casa.  Há espaço para se
+O Cogumelo Vermelho NÃºmero 1~
+   VocÃª estÃ¡ dentro de um confortÃ¡vel cogumelo casa.  HÃ¡ espaÃ§o para se
 colocar bastante coisa aqui, o que o faz parecer um bom lugar para se morar.
-A única saída daqui é sul.
+A Ãºnica saÃ­da daqui Ã© sul.
 ~
-140 68 0 0 0 0
+140.3 cg 0
 D2
 ~
 porta~
-0 2 14025
-S
+:n 2 a porta
+ga 2 14025
+S   
 #14030
-O Cogumelo Vermelho Número 2~
-   Você está dentro de um confortável cogumelo casa.  Aqui o ambiente é
-quente e pouco iluminado, sendo o chão quase completamente coberto por
-folhas ainda verdes e flores recém-colhidas.  Ficar aqui lhe dá vontade de
+O Cogumelo Vermelho NÃºmero 2~
+   VocÃª estÃ¡ dentro de um confortÃ¡vel cogumelo casa.  Aqui o ambiente Ã©
+quente e pouco iluminado, sendo o chÃ£o quase completamente coberto por
+folhas ainda verdes e flores recÃ©m-colhidas.  Ficar aqui lhe dÃ¡ vontade de
 dormir...
-   A saída é a norte.
+   A saÃ­da Ã© a norte.
 ~
-140 68 0 0 0 0
+140.3 cg 0
 D0
 ~
 porta~
-0 2 14025
+:n 2 a porta
+ga 2 14025
 S
 #14031
-O Cogumelo Azul Número 1~
-   Você está dentro de um confortável cogumelo casa.  Há espaço para se
+O Cogumelo Azul NÃºmero 1~
+   VocÃª estÃ¡ dentro de um confortÃ¡vel cogumelo casa.  HÃ¡ espaÃ§o para se
 colocar bastante coisa aqui, o que o faz parecer um bom lugar para se morar.
-A única saída daqui é leste.
+A Ãºnica saÃ­da daqui Ã© leste.
 ~
-140 68 0 0 0 0
+140.3 cg 0
 D1
 ~
 porta~
-0 2 14027
+:n 2 a porta
+ga 2 14027
 S
 #14032
-O Cogumelo Azul Número 2~
-   Você está dentro de um confortável cogumelo casa.  Há muito espaço aqui,
-principalmente porque a maioria dos "móveis" estão presos ao teto.  Há
-balanços no alto por todos os lados, além de grandes flores repletas de
-néctar e orvalho.  Deve ser a casa de alguém.
-   A porta de saída fica a sul.
+O Cogumelo Azul NÃºmero 2~
+   VocÃª estÃ¡ dentro de um confortÃ¡vel cogumelo casa.  HÃ¡ muito espaÃ§o aqui,
+principalmente porque a maioria dos "mÃ³veis" estÃ£o presos ao teto.  HÃ¡
+balanÃ§os no alto por todos os lados, alÃ©m de grandes flores repletas de
+nÃ©ctar e orvalho.  Deve ser a casa de alguÃ©m.
+   A porta de saÃ­da fica a sul.
 ~
-140 68 0 0 0 0
+140.3 cg 0
 D2
 ~
 porta~
-0 2 14027
+:n 2 a porta
+ga 2 14027
 S
 #14033
-O Cogumelo Azul Número 3~
-  Você está dentro de um confortável cogumelo casa.  Há espaço para se
+O Cogumelo Azul NÃºmero 3~
+  VocÃª estÃ¡ dentro de um confortÃ¡vel cogumelo casa.  HÃ¡ espaÃ§o para se
 colocar bastante coisa aqui, o que o faz parecer um bom lugar para se morar.
-A única saída daqui é oeste.
+A Ãºnica saÃ­da daqui Ã© oeste.
 ~
-140 68 0 0 0 0
+140.3 cg 0
 D3
 ~
 porta~
-0 2 14027
+:n 2 a porta
+ag 2 14027
 S
 #14034
-O Cogumelo Amarelo Número 1~
-    Você está dentro da confortável casa de Arando.  Há esculturas de
-diferentes tamanhos por todos os lados, além de uma grande variedade de
-móveis feitos de folhas, flores e madeira.  Pelo que você percebeu, o dono
+O Cogumelo Amarelo NÃºmero 1~
+    VocÃª estÃ¡ dentro da confortÃ¡vel casa de Arando.  HÃ¡ esculturas de
+diferentes tamanhos por todos os lados, alÃ©m de uma grande variedade de
+mÃ³veis feitos de folhas, flores e madeira.  Pelo que vocÃª percebeu, o dono
 da casa aprecia muito trabalhos manuais, sendo um marceneiro-escultor de
-muito talento.  Talvez seja melhor não tocar em nada.
+muito talento.  Talvez seja melhor nÃ£o tocar em nada.
 ~
-140 68 0 0 0 0
+140.3 cg 0
 D2
 ~
 porta~
-0 2 14028
+:n 2 a porta
+ag 2 14028
 S
 #14035
-O Cogumelo Amarelo Número 2~
-   Você está dentro de um confortável cogumelo casa.  Há espaço para se
+O Cogumelo Amarelo NÃºmero 2~
+   VocÃª estÃ¡ dentro de um confortÃ¡vel cogumelo casa.  HÃ¡ espaÃ§o para se
 colocar bastante coisa aqui, o que o faz parecer um bom lugar para se morar.
-A única saída daqui é oeste.
+A Ãºnica saÃ­da daqui Ã© oeste.
 ~
-140 68 0 0 0 0
+140.3 cg 0
 D3
 ~
 porta~
-0 2 14028
+:n 2 a porta
+ag 2 14028
 S
 #14036
-O Cogumelo Amarelo Número 3~
-   Você está dentro de um confortável cogumelo casa.  Há espaço para se
+O Cogumelo Amarelo NÃºmero 3~
+   VocÃª estÃ¡ dentro de um confortÃ¡vel cogumelo casa.  HÃ¡ espaÃ§o para se
 colocar bastante coisa aqui, o que o faz parecer um bom lugar para se morar.
-A única saída daqui é norte.
+A Ãºnica saÃ­da daqui Ã© norte.
 ~
-140 68 0 0 0 0
+140.3 cg 0
 D0
 ~
 porta~
-0 2 14028
+:n 2 a porta
+ga 2 14028
 S
 #14037
-A Gota D'Água~
-   Você está em um pequeno gramado protegido por uma baixa cerca de madeira
+A Gota D'Ãgua~
+   VocÃª estÃ¡ em um pequeno gramado protegido por uma baixa cerca de madeira
 que, pintada de branco, foi quase completamente coberta por trepadeiras
-floridas.  No centro, você vê na entrada da escola dos pequenos de Lindrel,
-uma flor gigantesca.  Pelo que você observou, as salas de aula ficam ao
+floridas.  No centro, vocÃª vÃª na entrada da escola dos pequenos de Lindrel,
+uma flor gigantesca.  Pelo que vocÃª observou, as salas de aula ficam ao
 longo do caule da enorme planta, sobre suas folhas.  Provavelmente os alunos
-chegam à suas classes voando, mas é possível chegar nelas escalando a
-escola.  Ridículo, mas é verdade.
+chegam Ã  suas classes voando, mas Ã© possÃ­vel chegar nelas escalando a
+escola.  RidÃ­culo, mas Ã© verdade.
 ~
-140 68 0 0 0 1
+140.2 cg 1
+D4 
+As classes ficam nessa direÃ§Ã£o.
+~
+~
+0 -1 14038
 D1
 A Avenida passa ali.
 ~
 ~
 0 -1 14016
 D2
-A Ameixas é naquela direção.
+A Ameixas Ã© naquela direÃ§Ã£o.
 ~
 ~
 0 -1 14020
-D4
-As classes ficam nessa direção.
-~
-~
-0 -1 14038
 S
 #14038
-A Sala das Magias Básicas~
-   Você está sobre uma enorme folha que, mesmo que você se movimente muito,
-não parece se mover um centímetro qualquer.  Uma lousa de pedra negra, muito
-bem polida, mantém-se no ar como que por mágica, havendo nela o que parece
-ser a matéria da aula de hoje.  Vasos e mais vasos com pequenas flores foram
+A Sala das Magias BÃ¡sicas~
+   VocÃª estÃ¡ sobre uma enorme folha que, mesmo que vocÃª se movimente muito,
+nÃ£o parece se mover um centÃ­metro qualquer.  Uma lousa de pedra negra, muito
+bem polida, mantÃ©m-se no ar como que por mÃ¡gica, havendo nela o que parece
+ser a matÃ©ria da aula de hoje.  Vasos e mais vasos com pequenas flores foram
 dispostos sobre as carteiras dos alunos.
 ~
-140 76 0 0 0 0
+140.2 cgd 0
 D4
 ~
 ~
@@ -896,45 +921,45 @@ D5
 0 -1 14037
 E
 lousa~
-	nEstá escrito, em amarelo, com letra muito bonita:
-	Y
-                          AULA D 1 HOJE
+@nEstÃ¡ escrito, em amarelo, com letra muito bonita:
+@Y
+                          AULA DE HOJE
                   Alterando Tamanhos de Plantas
 
- * Ética na magia fádica
- * O livre-arbítrio dos vegetais: a importância de se pedir permissão
- * Introdução às magias de crescimento e encolhimento
- * Correção de tarefas	n
+ * Ã‰tica na magia fÃ¡dica
+ * O livre-arbÃ­trio dos vegetais: a importÃ¢ncia de se pedir permissÃ£o
+ * IntroduÃ§Ã£o Ã s magias de crescimento e encolhimento
+ * CorreÃ§Ã£o de tarefas@n
 ~
 S
 #14039
-A Sala de Culinária~
-   Você está em mais um "andar" na escola, entrando em uma sala completamente
-bagunçada.  Há pequenos pedaços de papel escrito no chão, pétalas de flor,
-sementes de frutas, poças de néctar, pós coloridos e outras coisas.
-Caldeirões de ferro flutuam no ar, assim como pergaminhos, fôrmas, talheres
-e tigelas.  Na lousa, você lê que aquela é a sala onde se aprende a
-cozinhar.  Provavelmente a última aula foi um desastre...
+A Sala de CulinÃ¡ria~
+   VocÃª estÃ¡ em mais um "andar" na escola, entrando em uma sala completamente
+bagunÃ§ada.  HÃ¡ pequenos pedaÃ§os de papel escrito no chÃ£o, pÃ©talas de flor,
+sementes de frutas, poÃ§as de nÃ©ctar, pÃ³s coloridos e outras coisas.
+CaldeirÃµes de ferro flutuam no ar, assim como pergaminhos, fÃ´rmas, talheres
+e tigelas.  Na lousa, vocÃª lÃª que aquela Ã© a sala onde se aprende a
+cozinhar.  Provavelmente a Ãºltima aula foi um desastre...
 ~
-140 76 0 0 0 0
-D4
-~
-~
-0 -1 14040
+140.2 cgd 0
 D5
 ~
 ~
 0 -1 14038
+D4
+~
+~
+0 -1 14040
 S
 #14040
 A Sala de Artes~
-   Você está no que parece ser a sala da aula de artes.  Há tintas e mais
-tintas por todos os lados, além de pínceis, pergaminhos em branco, telas,
-lápis coloridos e trabalhos de alunos.  Você ainda repara que um dos lados
-da classe é completamente rosa, justamente o lado onde está a lousa e a mesa
+   VocÃª estÃ¡ no que parece ser a sala da aula de artes.  HÃ¡ tintas e mais
+tintas por todos os lados, alÃ©m de pÃ­nceis, pergaminhos em branco, telas,
+lÃ¡pis coloridos e trabalhos de alunos.  VocÃª ainda repara que um dos lados
+da classe Ã© completamente rosa, justamente o lado onde estÃ¡ a lousa e a mesa
 da professora.  Coisa estranha...
 ~
-140 76 0 0 0 0
+140.2 cdg 0
 D4
 ~
 ~
@@ -945,14 +970,14 @@ D5
 0 -1 14039
 S
 #14041
-A Sala de Recreação~
-   Você está em uma grande sala onde os alunos mais jovens ficam para
-brincar com seus colegas e, na maioria das vezes, ouvir estórias de suas
-professoras.  A folha que sustenta a classe foi pintada pelos próprios
-alunos com as cores do arco-íris, que também enfeitaram as cortinas que
+A Sala de RecreaÃ§Ã£o~
+   VocÃª estÃ¡ em uma grande sala onde os alunos mais jovens ficam para
+brincar com seus colegas e, na maioria das vezes, ouvir estÃ³rias de suas
+professoras.  A folha que sustenta a classe foi pintada pelos prÃ³prios
+alunos com as cores do arco-Ã­ris, que tambÃ©m enfeitaram as cortinas que
 servem de parede.
 ~
-140 76 0 0 0 0
+140.2 cdg 0
 D4
 ~
 ~
@@ -963,20 +988,21 @@ D5
 0 -1 14040
 S
 #14042
-O Berçário~
-   Você está em uma sala de temperatura agrádavel, muito limpa, decorada com
-delicadas figuras de flores e animais.  O silêncio aqui é muito grande,
-parecendo que o berçário é coberto por uma espécie de magia de proteção.
-Berços de folhas flututam por todos os lados, havendo alguns vazios e
-outros, balançados por magia, com bebês gordinhos e saudáveis.  Não faça
+O BerÃ§Ã¡rio~
+   VocÃª estÃ¡ em uma sala de temperatura agrÃ¡davel, muito limpa, decorada com
+delicadas figuras de flores e animais.  O silÃªncio aqui Ã© muito grande,
+parecendo que o berÃ§Ã¡rio Ã© coberto por uma espÃ©cie de magia de proteÃ§Ã£o.
+BerÃ§os de folhas flututam por todos os lados, havendo alguns vazios e
+outros, balanÃ§ados por magia, com bebÃªs gordinhos e saudÃ¡veis.  NÃ£o faÃ§a
 barulho!
 ~
-140 125 0 0 0 0
+140.2 dacefg 0
 D4
 A sala parece estar trancada.
 ~
 porta~
-0 2 14043
+:n 2 a porta
+abcg 2 14043
 D5
 ~
 ~
@@ -984,24 +1010,25 @@ D5
 S
 #14043
 Uma Sala Fechada~
-   Você está numa das salas de aulas que, no momento, permanece fechada.
+   VocÃª estÃ¡ numa das salas de aulas que, no momento, permanece fechada.
 Volte outra hora.
 ~
-140 76 0 0 0 0
+140.2 cgd 0
 D5
 ~
 porta~
-0 2 14042
+:n 2 a porta
+abcg 2 14042
 S
 #14044
 Os Campos de Treinamento~
-   Você está num extenso campo forrado de grama colorida.  As cores da grama
+   VocÃª estÃ¡ num extenso campo forrado de grama colorida.  As cores da grama
 parecem ser usadas como indicadores durante os treinamentos que ocorrem
-aqui, havendo ainda sinalizações com pontuações e desenhos de alvos.  Hoje,
-o campo parece estar sendo usado para as lições de vôo da turma mais
-avançada da escola de Lindrel.
+aqui, havendo ainda sinalizaÃ§Ãµes com pontuaÃ§Ãµes e desenhos de alvos.  Hoje,
+o campo parece estar sendo usado para as liÃ§Ãµes de vÃ´o da turma mais
+avanÃ§ada da escola de Lindrel.
 ~
-140 68 0 0 0 2
+140.2 gc 2
 D0
 ~
 ~
@@ -1013,13 +1040,13 @@ D3
 S
 #14045
 Os Campos de Treinamento~
-   Você está num extenso campo forrado de grama colorida.  As cores da grama
+   VocÃª estÃ¡ num extenso campo forrado de grama colorida.  As cores da grama
 parecem ser usadas como indicadores durante os treinamentos que ocorrem
-aqui, havendo ainda sinalizações com pontuações e desenhos de alvos.  Hoje,
-o campo parece estar sendo usado para as lições de vôo da turma mais
-avançada da escola de Lindrel.
+aqui, havendo ainda sinalizaÃ§Ãµes com pontuaÃ§Ãµes e desenhos de alvos.  Hoje,
+o campo parece estar sendo usado para as liÃ§Ãµes de vÃ´o da turma mais
+avanÃ§ada da escola de Lindrel.
 ~
-140 68 0 0 0 2
+140.2 gc 2
 D0
 ~
 ~
@@ -1031,19 +1058,15 @@ D1
 S
 #14046
 Um Pequeno Jardim~
-   Você está no pequeno jardim que cerca uma enorme casa completamente
+   VocÃª estÃ¡ no pequeno jardim que cerca uma enorme casa completamente
 coberta por flores.  O jardim, muito bem cuidado, parece acomodar flores que
-você nunca viu antes, sendo que vez ou outra você percebe uma saindo do
+vocÃª nunca viu antes, sendo que vez ou outra vocÃª percebe uma saindo do
 jardim e se dirigindo ora para dentro da casa, ora para a rua, passando por
-você.  Apurando mais os ouvidos, você consegue ouvir a conversa das flores.
+vocÃª.  Apurando mais os ouvidos, vocÃª consegue ouvir a conversa das flores.
    A entrada da casa fica a norte, enquanto se pode sair de seu terreno indo
 oeste ou sul.
 ~
-140 68 0 0 0 1
-D0
-~
-porta~
-0 2 14047
+140.2 gc 1
 D2
 ~
 ~
@@ -1052,247 +1075,255 @@ D3
 ~
 ~
 0 -1 14017
+D0
+~
+porta~
+:n 2 a porta
+ag 2 14047
 S
 #14047
 O Estranho Interior da Casa~
-   Você está dentro de uma casa tomada pelas plantas.  São elas as cadeiras,
-mesas, abajures, poltronas.  O lustre nada mais é que uma enorme
-brinco-de-princesa cujas flores possuem luz própria, acendendo quando
-necessário.  Passado o primeiro impacto, você repara no que estava causando
-as explosões e fumaceiro fora da casa: aqui é uma espécie de laboratório de
+   VocÃª estÃ¡ dentro de uma casa tomada pelas plantas.  SÃ£o elas as cadeiras,
+mesas, abajures, poltronas.  O lustre nada mais Ã© que uma enorme
+brinco-de-princesa cujas flores possuem luz prÃ³pria, acendendo quando
+necessÃ¡rio.  Passado o primeiro impacto, vocÃª repara no que estava causando
+as explosÃµes e fumaceiro fora da casa: aqui Ã© uma espÃ©cie de laboratÃ³rio de
 uma fada, que no momento preparava algo em um tacho de cobre.
-   As portas, repletas de espinhos, estão fechadas, mas você ainda pode sair
+   As portas, repletas de espinhos, estÃ£o fechadas, mas vocÃª ainda pode sair
 daqui seguindo sul.
 ~
-140 108 0 0 0 0
+140.2 cdfg 0
 D2
 ~
 porta~
-0 2 14046
+:n 2 a porta
+ag 2 14046
 S
 #14048
 A Avenida Lima Madura~
-   Você está caminhando pela larga Avenida Lima Madura, cujas altas limeiras
+   VocÃª estÃ¡ caminhando pela larga Avenida Lima Madura, cujas altas limeiras
 acompanham o caminho ao lado de altos postes de madeira usados na
-iluminação. Há, ao norte, uma grande construção de pedra cercada por um pequeno
+iluminaÃ§Ã£o. HÃ¡, ao norte, uma grande construÃ§Ã£o de pedra cercada por um pequeno
 lago e coberta por muitas plantas. A Avenida segue sul.
 ~
-140 68 0 0 0 1
-D0
-~
-~
-0 -1 14049
+140.2 gc 1
 D2
 ~
 ~
 0 -1 14017
+D0
+~
+~
+0 -1 14049
 S
 #14049
-Além do Lago~
-   Você passa por uma pequena ponte de pedra sobre o lago.  Altas flores,
-que fazem as vezes e corrimão, impediram que você caísse na água coberta de
-nenúfares brancos e negros, podendo chegar bem em frente a uma grande
-construção de pedra.  A construção, com ares de templo, ergue-se no meio na
-vegetação com estranha aura de magia, parecendo possuir algo de muito
-importante em seu interior.  O grande pórtico, da mesma maneira que o portão
+AlÃ©m do Lago~
+   VocÃª passa por uma pequena ponte de pedra sobre o lago.  Altas flores,
+que fazem as vezes e corrimÃ£o, impediram que vocÃª caÃ­sse na Ã¡gua coberta de
+nenÃºfares brancos e negros, podendo chegar bem em frente a uma grande
+construÃ§Ã£o de pedra.  A construÃ§Ã£o, com ares de templo, ergue-se no meio na
+vegetaÃ§Ã£o com estranha aura de magia, parecendo possuir algo de muito
+importante em seu interior.  O grande pÃ³rtico, da mesma maneira que o portÃ£o
 de entrada de Lindrel, permanece fechado com as duas chaves, uma negra e
 outra branca, no lado de fora.  A Avenida Lima Madura fica a sul.
 ~
-140 68 0 0 0 2
+140.4 cg 2
 D0
-Parece haver algo além do grande pórtico.
+Parece haver algo alÃ©m do grande pÃ³rtico.
 ~
-pórtico grande~
-1 2 14050
+portico grande~
+:n 1 o grande pÃ³rtico
+a 2 14050
 D2
 ~
 ~
 0 -1 14048
 E
-pórtico~
+portico~
 Feito de duas partes, uma totalmente branca e outra totalmente negra, o
-pórtico possui diversas gemas incrustradas em sua superfície.  As pedras,
+pÃ³rtico possui diversas gemas incrustradas em sua superfÃ­cie.  As pedras,
 safiras e granadas lapidadas nas mais variadas formas, formam, em conjunto,
-palavras escritas com runas fádicas, essas desconhecidas a você.  As duas
-chaves, em suas devidas fechaduras, parecem não querer sair de seus lugares.
+palavras escritas com runas fÃ¡dicas, essas desconhecidas a vocÃª.  As duas
+chaves, em suas devidas fechaduras, parecem nÃ£o querer sair de seus lugares.
 ~
 S
 #14050
 A Sala de Espera~
-   Você está na entrada do lar das rainhas de Lindrel.  Nada aqui é como
-você esperava..  Pelo exterior, você imaginava que aqui seria um local muito
-fechado e abafado.  Contrariando suas expectativas, você se encontra num
+   VocÃª estÃ¡ na entrada do lar das rainhas de Lindrel.  Nada aqui Ã© como
+vocÃª esperava..  Pelo exterior, vocÃª imaginava que aqui seria um local muito
+fechado e abafado.  Contrariando suas expectativas, vocÃª se encontra num
 lugar muito iluminado e amplo, repleto de colunas brancas e negras com
-esferas de iluminação apoiadas.  Cortinas de tecido diáfano, negras e
-brancas, pendem do teto por todos os lados, dançando com o sopro de um vento
-que você não sabe de onde vem.  Grandes almofadas flutuam no ar, convidando
-os viajantes cansados para um breve descanso.  Há uma grande fonte no centro
+esferas de iluminaÃ§Ã£o apoiadas.  Cortinas de tecido diÃ¡fano, negras e
+brancas, pendem do teto por todos os lados, danÃ§ando com o sopro de um vento
+que vocÃª nÃ£o sabe de onde vem.  Grandes almofadas flutuam no ar, convidando
+os viajantes cansados para um breve descanso.  HÃ¡ uma grande fonte no centro
 do lugar.
    Uma segunda sala fica a norte, enquanto o lado de fora fica a sul.
 ~
-140 108 0 0 0 0
+140.4 cfgd 0
 D0
-Você vê uma sala de curiosa aparência.
+VocÃª vÃª uma sala de curiosa aparÃªncia.
 ~
 ~
 0 -1 14051
 D2
-O lado de fora fica do outro lado do pórtico.
+O lado de fora fica do outro lado do pÃ³rtico.
 ~
-pórtico grande~
-1 2 14049
+portico grande~
+:n 1 o grande pÃ³rtico
+a 2 14049
 S
 #14051
-O Coração de Lindrel~
-   Você está num local sagrado para todos os habitantes de Lindrel e para os
-que reconhecem sua importância.  Daqui, as duas rainhas mantém o pequeno
-reino protegido com sua magia, assim como mandam forças àqueles que pedem
-auxílio ao povo pequeno.  Não há nada aqui além de dois tronos ricamente
+O CoraÃ§Ã£o de Lindrel~
+   VocÃª estÃ¡ num local sagrado para todos os habitantes de Lindrel e para os
+que reconhecem sua importÃ¢ncia.  Daqui, as duas rainhas mantÃ©m o pequeno
+reino protegido com sua magia, assim como mandam forÃ§as Ã queles que pedem
+auxÃ­lio ao povo pequeno.  NÃ£o hÃ¡ nada aqui alÃ©m de dois tronos ricamente
 adornados: um num lado completamente escuro da sala, outro em um
-completamente claro.  Você não consegue olhar mais nada além das duas
-figuras sentadas sobre os sólios que, de olhos cerrados, sussuram docemente.
-   A única saída se encontra a sul.
+completamente claro.  VocÃª nÃ£o consegue olhar mais nada alÃ©m das duas
+figuras sentadas sobre os sÃ³lios que, de olhos cerrados, sussuram docemente.
+   A Ãºnica saÃ­da se encontra a sul.
 ~
-140 108 0 0 0 0
+140.4 cfgd 0
 D2
-Você vê a sala de espera.
+VocÃª vÃª a sala de espera.
 ~
 ~
 0 -1 14050
 S
 #14052
 A Floresta Encantada~
-Você segue a estreita trilha em direção ao sul, notando que a floresta está
-curiosamente quieta. Não há nada de especial: as árvores não parecem diferentes,
-nem os animais, nem qualquer outro tipo de coisa. A única direção a se seguir é
+VocÃª segue a estreita trilha em direÃ§Ã£o ao sul, notando que a floresta estÃ¡
+curiosamente quieta. NÃ£o hÃ¡ nada de especial: as Ã¡rvores nÃ£o parecem diferentes,
+nem os animais, nem qualquer outro tipo de coisa. A Ãºnica direÃ§Ã£o a se seguir Ã©
 sul.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
 D2
-Você vê uma trilha dentro da floresta.
+VocÃª vÃª uma trilha dentro da floresta.
 ~
 ~
 0 -1 14057
 S
 #14053
 A Floresta Encantada~
-Você caminha em direção ao sul reparando que não há nada de anormal com
-essa floresta. Tudo, desde as plantas até os animais está do tamanho que
-você pensa que deveriam ser, o que mostra que de encantada a floresta não
-tem mais nada. Sul é a única direção que você pode seguir.
+VocÃª caminha em direÃ§Ã£o ao sul reparando que nÃ£o hÃ¡ nada de anormal com
+essa floresta. Tudo, desde as plantas atÃ© os animais estÃ¡ do tamanho que
+vocÃª pensa que deveriam ser, o que mostra que de encantada a floresta nÃ£o
+tem mais nada. Sul Ã© a Ãºnica direÃ§Ã£o que vocÃª pode seguir.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
 D2
-Você vê uma trilha dentro da floresta.
+VocÃª vÃª uma trilha dentro da floresta.
 ~
 ~
 0 -1 14052
 S
 #14054
 A Floresta Encantada~
-   Tudo estava enorme, mas foi aos poucos parecendo menor. Você sente que tudo
-está voltando ao normal dentro dessa floresta, que perde seu encantamento
-a cada passo rumo sul que você dá. A enorme placa que você encontrou enquanto
+   Tudo estava enorme, mas foi aos poucos parecendo menor. VocÃª sente que tudo
+estÃ¡ voltando ao normal dentro dessa floresta, que perde seu encantamento
+a cada passo rumo sul que vocÃª dÃ¡. A enorme placa que vocÃª encontrou enquanto
 vinha desapareceu.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
 D2
-Você vê uma trilha dentro da floresta.
+VocÃª vÃª uma trilha dentro da floresta.
 ~
 ~
 0 -1 14053
 S
 #14055
 A Floresta Encantada~
-   Você, que ao trilhar por esse caminho sentiu dificuldades, percebe que
-elas diminuem à medida que segue mais e mais pra sul.  As árvores parecem
+   VocÃª, que ao trilhar por esse caminho sentiu dificuldades, percebe que
+elas diminuem Ã  medida que segue mais e mais pra sul.  As Ã¡rvores parecem
 diminuir de tamanho, assim como a trilha, as folhas.  Tudo parece estar
 normal.  Normal demais.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
 D2
-Você vê uma trilha dentro da floresta.
+VocÃª vÃª uma trilha dentro da floresta.
 ~
 ~
 0 -1 14054
 S
 #14056
-Um Portão na Floresta~
-   Você saiu de Lindrel, tendo atravessado o grande portão.  Tudo ao poucos
-parece perder sua magia, o que culmina com o sumiço da entrada que leva ao
-reino dos pequenos.  A única direção que você pode seguir é sul, por onde as
-árvores parecem se tornar menores e a passagem mais estreita.
+Um PortÃ£o na Floresta~
+   VocÃª saiu de Lindrel, tendo atravessado o grande portÃ£o.  Tudo ao poucos
+parece perder sua magia, o que culmina com o sumiÃ§o da entrada que leva ao
+reino dos pequenos.  A Ãºnica direÃ§Ã£o que vocÃª pode seguir Ã© sul, por onde as
+Ã¡rvores parecem se tornar menores e a passagem mais estreita.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
 D2
-Você vê uma trilha dentro da floresta.
+VocÃª vÃª uma trilha dentro da floresta.
 ~
 ~
 0 -1 14055
 S
 #14057
-A Saída da Floresta Encantada~
-   Você está saindo da floresta encantanda.  As árvores parecem ter,
-subitamente, se movido atrás de você, cobrindo a trilha que você usou tanto
-pra entrar nela quanto para sair.  A única direção que você pode seguir é
+A SaÃ­da da Floresta Encantada~
+   VocÃª estÃ¡ saindo da floresta encantanda.  As Ã¡rvores parecem ter,
+subitamente, se movido atrÃ¡s de vocÃª, cobrindo a trilha que vocÃª usou tanto
+pra entrar nela quanto para sair.  A Ãºnica direÃ§Ã£o que vocÃª pode seguir Ã©
 sul.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
 D2
-Ali está o limite das florestas.
+Ali estÃ¡ o limite das florestas.
 ~
 ~
 0 -1 5683
 S
 #14058
 A Floresta Encantada~
-   Você anda por uma trilha na floresta encantada, observando a infinita
-tranqüilidade em que o lugar parece estar mergulhado.  Não há empecilho
-algum para que você continue andando entre as árvores, seja para leste
+   VocÃª anda por uma trilha na floresta encantada, observando a infinita
+tranqÃ¼ilidade em que o lugar parece estar mergulhado.  NÃ£o hÃ¡ empecilho
+algum para que vocÃª continue andando entre as Ã¡rvores, seja para leste
 quanto para oeste.
 ~
-140 393284 0 0 0 3
+140.1 cgsr 3
+D3
+VocÃª vÃª uma trilha dentro da floresta.
+~
+~
+0 -1 14000
 D1
-Você vê uma trilha dentro da floresta.
+VocÃª vÃª uma trilha dentro da floresta.
 ~
 ~
 0 -1 14058
-D3
-Você vê uma trilha dentro da floresta.
-~
-~
-0 -1 14000
 S
 #14059
 A Floresta Encantada~
-   Você anda por uma trilha na floresta encantada, observando a infinita
-tranqüilidade em que o lugar parece estar mergulhado.  Não há empecilho
-algum para que você continue andando entre as árvores, seja para leste
+   VocÃª anda por uma trilha na floresta encantada, observando a infinita
+tranqÃ¼ilidade em que o lugar parece estar mergulhado.  NÃ£o hÃ¡ empecilho
+algum para que vocÃª continue andando entre as Ã¡rvores, seja para leste
 quanto para oeste.
 ~
-140 393284 0 0 0 3
-D1
-Você vê uma trilha dentro da floresta.
-~
-~
-0 -1 14000
+140.1 cgsr 3
 D3
-Você vê uma trilha dentro da floresta.
+VocÃª vÃª uma trilha dentro da floresta.
 ~
 ~
 0 -1 14059
+D1
+VocÃª vÃª uma trilha dentro da floresta.
+~
+~
+0 -1 14000
 S
 #14060
 A Rua Pessegueiros~
-   Você está caminhando em uma rua cercada por velhos pessegueiros
-carregados de frutos.  Pêssegos, vez por outra, caem a seu redor, quase o
+   VocÃª estÃ¡ caminhando em uma rua cercada por velhos pessegueiros
+carregados de frutos.  PÃªssegos, vez por outra, caem a seu redor, quase o
 atingindo por diversas vezes.  A rua pouco movimentada parece ter seus
-atrativos: o cheiro inconfundível de comida, vindo de um cogumelo a norte,
-parece chamá-lo insistentemente.  A Pessegueiros continua a oeste.
+atrativos: o cheiro inconfundÃ­vel de comida, vindo de um cogumelo a norte,
+parece chamÃ¡-lo insistentemente.  A Pessegueiros continua a oeste.
 ~
-140 64 0 0 0 1
+140.2 g 1
 D0
-Você um grande cogumelo rodeado por um pequeno jardim.
+VocÃª um grande cogumelo rodeado por um pequeno jardim.
 ~
 ~
 0 -1 14061
@@ -1302,17 +1333,17 @@ D3
 0 -1 14019
 S
 #14061
-As Delícias de Framboesa~
-   Você está dentro do grande cogumelo de teto vermelho com bolinhas
+As DelÃ­cias de Framboesa~
+   VocÃª estÃ¡ dentro do grande cogumelo de teto vermelho com bolinhas
 brancas.  As paredes circulares do cogumelo foram cobertas com papel de
 parede colorido, havendo ainda uma grande quantidade de pequenas janelas
-circulares com suas cortinas vermelhas.  Um grande balcão de madeira foi
+circulares com suas cortinas vermelhas.  Um grande balcÃ£o de madeira foi
 colocado bem no centro do lugar, havendo, sob seu tampo de vidro, uma enorme
-variedade de doces.  Tudo aqui é muito limpo e de aspecto novo, o que o
+variedade de doces.  Tudo aqui Ã© muito limpo e de aspecto novo, o que o
 deixa bastante seguro sobre a qualidade da comida.
    A Pessegueiros fica a sul.
 ~
-140 68 0 0 0 0
+140.2 cg 0
 D2
 ~
 ~
@@ -1320,17 +1351,17 @@ D2
 S
 #14062
 A Barraca de Flores~
-   Você está em uma simpática barraca de madeira branca repleta de vasos e
+   VocÃª estÃ¡ em uma simpÃ¡tica barraca de madeira branca repleta de vasos e
 arranjos de flores.  Aqui se vende todo tipo de flores, estando elas sempre
 muito bem cuidadas e arrumadas com bom gosto.  As prateleiras, que cobrem
-quase toda a partes das paredes que não está tomada por retratos de flores,
-estão cobertas por bonitas trepadeiras de profundo verde.  Tudo aqui é muito
+quase toda a partes das paredes que nÃ£o estÃ¡ tomada por retratos de flores,
+estÃ£o cobertas por bonitas trepadeiras de profundo verde.  Tudo aqui Ã© muito
 bem cuidado.  A Macieiras fica a sul.
 ~
-140 68 0 0 0 0
+140.2 cg 0
 D2
 ~
 ~
 0 -1 14021
 S
-$~
+$
