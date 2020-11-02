@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #5400
 Thief Guildguard - 5459~
 0 q 100
