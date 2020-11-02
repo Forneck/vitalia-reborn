@@ -189,7 +189,6 @@ if %cmd.mudcommand% == enter && %arg% == estatua
   %echoaround% %actor% %actor.name% acabou de sair da parede.
 else
   %send% %actor% %cmd% Oque?!
->>>>>>> 5e7dcd72a2ebdf8da14f1a11c918eb552ea4107a
 end
 ~
 $~
