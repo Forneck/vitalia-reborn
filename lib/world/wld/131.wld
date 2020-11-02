@@ -177,7 +177,7 @@ e você gostaria?
 D0
 Estranho e intenso as letras quem cobrem portões à frente.
 ~
-portao brilhando letra~
+portão brilhando letra~
 :n 1 o portão brilhando
 1 -1 13123
 D2
@@ -476,7 +476,7 @@ D0
 Você está diante de um imenso portão brilhante que parece estar afastando 
 as sombras.
 ~
-portao brilhante~
+portão brilhante~
 :n 1 o portão brilhante
 1 13102 13121
 D1
@@ -498,7 +498,7 @@ elegante. Um sinal foi cuidadosamente fixado na parede.
 D2
 Um grande portão brilhante está em seu caminho.
 ~
-portao brilhante~
+portão brilhante~
 :n 1 o portão brilhante
 1 13102 13120
 D3
@@ -560,7 +560,7 @@ D2
 Você vê um grande portão coberto com letras rúnicas que está protegendo 
 este lugar das sombras.
 ~
-portao brilhante~
+portão brilhante~
 :n 1 o portão brilhante
 1 -1 13108
 D3
@@ -614,7 +614,7 @@ secreta passagem~
 :n 2 a passagem secreta
 ad -1 13126
 E
-parede impressao mao~
+parede impressão mão~
 A pequena decoração na parede definitivamente é a impressão de uma mão. 
 Quando você emparelha sua mão à impressão da mão você nota que a parede 
 desliza um pouco para dentro.
@@ -1780,10 +1780,6 @@ D2
 ~
 ~
 0 -1 13173
-D3
-~
-~
-0 -1 -1
 D5
 ~
 ~
