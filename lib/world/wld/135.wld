@@ -1,11 +1,11 @@
 #13500
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da  floresta  podem  ser ouvidos a sua volta. O caminho faz uma curva
 aqui, seguindo ao norte e leste.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D1
 ~
 ~
@@ -17,12 +17,12 @@ D2
 S
 #13501
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da  floresta  podem  ser ouvidos a sua volta. O caminho faz uma curva
 aqui, seguindo ao oeste e ao sul.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D1
 ~
 ~
@@ -38,12 +38,12 @@ D3
 S
 #13502
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -63,12 +63,12 @@ D3
 S
 #13503
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D1
 ~
 ~
@@ -84,10 +84,10 @@ D3
 S
 #13504
 A Floresta~
-  Você  está  na  Floresta  de  Thewster  onde  grilos  e pequenos pássaros
+  VocÃª  estÃ¡  na  Floresta  de  Thewster  onde  grilos  e pequenos pÃ¡ssaros
 gorjeiam. Do sul vem o cheiro de algo morto.
 ~
-135 0 0 0 0 3
+135 0 3
 D2
 ~
 ~
@@ -99,12 +99,12 @@ D3
 S
 #13505
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -120,12 +120,12 @@ D2
 S
 #13506
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da  floresta  podem  ser ouvidos a sua volta. O caminho faz uma curva
 aqui, seguindo ao norte e leste.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -145,12 +145,12 @@ D3
 S
 #13507
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da  floresta  podem  ser ouvidos a sua volta. O caminho faz uma curva
 aqui, seguindo ao sul e ao oeste.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -170,10 +170,10 @@ D3
 S
 #13508
 A Floresta~
-  Você  está  na  Floresta  de  Thewster  onde  grilos  e pequenos pássaros
+  VocÃª  estÃ¡  na  Floresta  de  Thewster  onde  grilos  e pequenos pÃ¡ssaros
 gorjeiam. Do leste vem o cheiro de algo morto.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -193,12 +193,12 @@ D3
 S
 #13509
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -218,10 +218,10 @@ D3
 S
 #13510
 A Floresta~
-  Você  está  na  Floresta  de  Thewster  onde  grilos  e pequenos pássaros
+  VocÃª  estÃ¡  na  Floresta  de  Thewster  onde  grilos  e pequenos pÃ¡ssaros
 gorjeiam. Do oeste vem o cheiro de algo morto.
 ~
-135 0 0 0 0 3
+135 0 3
 D2
 ~
 ~
@@ -233,12 +233,12 @@ D3
 S
 #13511
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -254,12 +254,12 @@ D2
 S
 #13512
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -279,12 +279,12 @@ D3
 S
 #13513
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da  floresta  podem  ser ouvidos a sua volta. O caminho faz uma curva
 aqui, seguindo ao norte e ao sul.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -304,12 +304,12 @@ D3
 S
 #13514
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -329,10 +329,10 @@ D3
 S
 #13515
 A Floresta~
-  Você  está  na  Floresta  de  Thewster  onde  grilos  e pequenos pássaros
+  VocÃª  estÃ¡  na  Floresta  de  Thewster  onde  grilos  e pequenos pÃ¡ssaros
 gorjeiam. Do norte vem o cheiro de algo morto.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -352,12 +352,12 @@ D3
 S
 #13516
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -377,12 +377,12 @@ D3
 S
 #13517
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D1
 ~
 ~
@@ -398,12 +398,12 @@ D3
 S
 #13518
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D1
 ~
 ~
@@ -419,12 +419,12 @@ D3
 S
 #13519
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D1
 ~
 ~
@@ -440,12 +440,12 @@ D3
 S
 #13520
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D1
 ~
 ~
@@ -461,12 +461,12 @@ D3
 S
 #13521
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D2
 ~
 ~
@@ -478,12 +478,12 @@ D3
 S
 #13522
 Um Caminho Sujo e Empoeirado~
-  Você caminha ao longo de uma estrada empoeirada, que não parece ser usada
-com  freqüência. A poeira sobe do chão a medida que seus pés tocam o mesmo.
+  VocÃª caminha ao longo de uma estrada empoeirada, que nÃ£o parece ser usada
+com  freqÃ¼Ãªncia. A poeira sobe do chÃ£o a medida que seus pÃ©s tocam o mesmo.
 A  floresta  cerca  o  caminho  e pequenos olhos vermelhos podem ser vistos
-através das folhas, te observando.
+atravÃ©s das folhas, te observando.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -499,12 +499,12 @@ D3
 S
 #13523
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da  floresta  podem ser ouvidos a sua volta. Um sujo caminho segue ao
 oeste.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -520,12 +520,12 @@ D3
 S
 #13524
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da  floresta  podem  ser ouvidos a sua volta. O caminho faz uma curva
 aqui, seguindo ao norte e leste.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -545,12 +545,12 @@ D3
 S
 #13525
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da  floresta  podem  ser  ouvidos  a  sua  volta.  O  caminho faz uma
-interseção com um outro caminho, seguindo a leste, oeste e ao sul.
+interseÃ§Ã£o com um outro caminho, seguindo a leste, oeste e ao sul.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -570,12 +570,12 @@ D3
 S
 #13526
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons da floresta podem ser ouvidos a sua volta. Ao longe, pelo leste, podem
 ser vistas algumas montanhas.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -595,12 +595,12 @@ D3
 S
 #13527
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
 ao oeste.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -620,12 +620,12 @@ D3
 S
 #13528
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
 ao oeste.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -645,12 +645,12 @@ D3
 S
 #13529
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
 ao oeste.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -666,12 +666,12 @@ D3
 S
 #13530
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
 ao oeste.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -687,12 +687,12 @@ D3
 S
 #13531
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
 ao oeste.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -708,12 +708,12 @@ D3
 S
 #13532
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
 ao oeste.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -729,12 +729,12 @@ D3
 S
 #13533
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
 ao oeste.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D1
 ~
 ~
@@ -746,12 +746,12 @@ D3
 S
 #13534
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da  floresta  podem ser ouvidos a sua volta. Largos muros de um jovem
 vilarejo bloqueia sua passagem ao leste.
 ~
-135 0 0 0 0 4
+135 0 4
 D0
 ~
 ~
@@ -767,12 +767,12 @@ D8
 S
 #13535
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -788,12 +788,12 @@ D2
 S
 #13536
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
 ao sul.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -813,12 +813,12 @@ D3
 S
 #13537
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -838,12 +838,12 @@ D3
 S
 #13538
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -863,12 +863,12 @@ D3
 S
 #13539
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -880,12 +880,12 @@ D3
 S
 #13540
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -901,12 +901,12 @@ D2
 S
 #13541
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
 ao sul.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -926,12 +926,12 @@ D3
 S
 #13542
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -951,12 +951,12 @@ D3
 S
 #13543
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -972,12 +972,12 @@ D3
 S
 #13544
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -993,12 +993,12 @@ D2
 S
 #13545
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
 ao sul.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -1018,12 +1018,12 @@ D3
 S
 #13546
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1043,12 +1043,12 @@ D3
 S
 #13547
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1064,12 +1064,12 @@ D3
 S
 #13548
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1085,12 +1085,12 @@ D2
 S
 #13549
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
 ao sul.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -1110,12 +1110,12 @@ D3
 S
 #13550
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1135,12 +1135,12 @@ D3
 S
 #13551
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1156,11 +1156,11 @@ D3
 S
 #13552
 A Clareira~
- Você esta na entrada da uma pequena caverna, pequenos e brilhantes olhos o
-encaram  firmemente.  É  realmente  escuro  lá dentro, você irá precisar de
+ VocÃª esta na entrada da uma pequena caverna, pequenos e brilhantes olhos o
+encaram  firmemente.  Ã‰  realmente  escuro  lÃ¡ dentro, vocÃª irÃ¡ precisar de
 alguma fonte de luz.
 ~
-135 0 0 0 0 2
+135 0 2
 D1
 ~
 ~
@@ -1180,12 +1180,12 @@ D5
 S
 #13553
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D2
 ~
 ~
@@ -1197,12 +1197,12 @@ D3
 S
 #13554
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1218,12 +1218,12 @@ D2
 S
 #13555
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
 ao sul.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -1243,12 +1243,12 @@ D3
 S
 #13556
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1268,12 +1268,12 @@ D3
 S
 #13557
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1289,10 +1289,10 @@ D3
 S
 #13558
 A Clareira~
-  Você  está  em  uma  grande  clareira na floresta, ao norte você vê o que
+  VocÃª  estÃ¡  em  uma  grande  clareira na floresta, ao norte vocÃª vÃª o que
 parece ser a entrada de uma caverna.
 ~
-135 0 0 0 0 2
+135 0 2
 D0
 ~
 ~
@@ -1312,12 +1312,12 @@ D3
 S
 #13559
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1337,12 +1337,12 @@ pedra~
 S
 #13560
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1362,12 +1362,12 @@ D3
 S
 #13561
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
 ao sul.
 ~
-135 65536 0 0 0 2
+135 65536 2
 D0
 ~
 ~
@@ -1387,12 +1387,12 @@ D3
 S
 #13562
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1412,12 +1412,12 @@ D3
 S
 #13563
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1433,12 +1433,12 @@ D3
 S
 #13564
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1454,12 +1454,12 @@ D2
 S
 #13565
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1479,12 +1479,12 @@ D3
 S
 #13566
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1504,12 +1504,12 @@ D3
 S
 #13567
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao norte e
 ao sul.
 ~
-135 0 0 0 0 2
+135 0 2
 D0
 ~
 ~
@@ -1529,12 +1529,12 @@ D3
 S
 #13568
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1554,12 +1554,12 @@ D3
 S
 #13569
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1575,12 +1575,12 @@ D3
 S
 #13570
 O Caminho de Nirin~
- O caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+ O caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
 ao oeste.
 ~
-135 0 0 0 0 2
+135 0 2
 D0
 ~
 ~
@@ -1597,10 +1597,10 @@ S
 #13571
 Os Degraus~
  A estrada de Nirin se alarga aqui e parece ser bem cuidada. Os galhos aqui
-crescem  de  modo  a formar degraus que seguem para cima, ao sul você vê um
-estábulo. A oeste e leste, a estrada de Nirin continua.
+crescem  de  modo  a formar degraus que seguem para cima, ao sul vocÃª vÃª um
+estÃ¡bulo. A oeste e leste, a estrada de Nirin continua.
 ~
-135 0 0 0 0 1
+135 0 1
 D0
 ~
 ~
@@ -1624,12 +1624,12 @@ D4
 S
 #13572
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
 ao oeste.
 ~
-135 0 0 0 0 2
+135 0 2
 D0
 ~
 ~
@@ -1649,12 +1649,12 @@ D3
 S
 #13573
 O Caminho de Nirin~
-  O  caminho é feito de largas pedras no meio de uma trincheira. A floresta
-que  o  cerca se fecha até onde seus olhos podem ver, formando um túnel. Os
+  O  caminho Ã© feito de largas pedras no meio de uma trincheira. A floresta
+que  o  cerca se fecha atÃ© onde seus olhos podem ver, formando um tÃºnel. Os
 sons  da floresta podem ser ouvidos a sua volta. O caminho segue ao leste e
 ao oeste. O caminho faz uma volta aqui e agora vai de norte a oeste.
 ~
-135 0 0 0 0 2
+135 0 2
 D0
 ~
 ~
@@ -1674,12 +1674,12 @@ D3
 S
 #13574
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1699,12 +1699,12 @@ D3
 S
 #13575
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1719,18 +1719,18 @@ D3
 0 -1 13574
 S
 #13576
-Os Estábulos~
-   O que há para ser dito? É um tedioso estábulo.
+Os EstÃ¡bulos~
+   O que hÃ¡ para ser dito? Ã‰ um tedioso estÃ¡bulo.
 ~
-135 0 0 0 0 3
+135 0 3
 S
 #13577
-Os Estábulos~
-  Você  está nos fétidos e sujos estábulos. Selas repousam sobre cavalos de
-madeira  e  ferraduras  podem  ser  vistas, penduradas nas paredes. A única
-saída é ao norte para os degraus.
+Os EstÃ¡bulos~
+  VocÃª  estÃ¡ nos fÃ©tidos e sujos estÃ¡bulos. Selas repousam sobre cavalos de
+madeira  e  ferraduras  podem  ser  vistas, penduradas nas paredes. A Ãºnica
+saÃ­da Ã© ao norte para os degraus.
 ~
-135 8 0 0 0 0
+135 8 0
 D0
 ~
 ~
@@ -1738,12 +1738,12 @@ D0
 S
 #13578
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1755,12 +1755,12 @@ D1
 S
 #13579
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1776,12 +1776,12 @@ D3
 S
 #13580
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
@@ -1797,32 +1797,32 @@ D3
 S
 #13581
 A Floresta~
-  Assim que seus olhos se acostumam à obscuridade, você pode ver um pequeno
+  Assim que seus olhos se acostumam Ã  obscuridade, vocÃª pode ver um pequeno
 caminho  verde.  Ocasionalmente um fino raio de sol tem a sorte de deslizar
 por  alguma  abertura  entre  as folhas, e ainda mais sorte se passar pelos
-galhos emaranhados até chegar ao solo.
+galhos emaranhados atÃ© chegar ao solo.
 ~
-135 0 0 0 0 3
+135 0 3
 D0
 ~
 ~
 0 -1 13575
-D1
-A floresta ali já não é a mesma. É outra, muito sombria.
-~
-~
-0 -1 13174
 D3
 ~
 ~
 0 -1 13580
+D1
+A floresta ali jÃ¡ nÃ£o Ã© a mesma. Ã‰ outra, muito sombria.
+~
+~
+0 -1 13174
 S
 #13582
 Uma Cabana~
-  Você  está  em uma pequena cabana circular ao norte do caminho, parece um
+  VocÃª  estÃ¡  em uma pequena cabana circular ao norte do caminho, parece um
 bom lugar para descansar antes de viajar mais adiante.
 ~
-135 16777228 0 0 0 0
+135 16777228 0
 D2
 ~
 ~
@@ -1830,13 +1830,13 @@ D2
 S
 #13583
 Um Caminho Sujo e Empoeirado~
-  Os  volumosos  portões de Silverthorne fica ao oeste, formando uma grande
-sombra  sobre  você.  A  estrada  pela  qual  você  está andando é bastante
-estreita e nuvens de poeira sopram com a brisa. A floresta de altas árvores
+  Os  volumosos  portÃµes de Silverthorne fica ao oeste, formando uma grande
+sombra  sobre  vocÃª.  A  estrada  pela  qual  vocÃª  estÃ¡ andando Ã© bastante
+estreita e nuvens de poeira sopram com a brisa. A floresta de altas Ã¡rvores
 com  largas  folhas  verdes de todos os tipos cerca a estrada ao norte e ao
 sul. O caminho sujo e empoeirado segue pelo leste.
 ~
-135 4 0 0 0 2
+135 4 2
 D1
 ~
 ~
@@ -1848,12 +1848,12 @@ D3
 S
 #13584
 Um Caminho Sujo e Empoeirado~
-  A  estrada  pela  qual  você está andando é bastante estreita e nuvens de
+  A  estrada  pela  qual  vocÃª estÃ¡ andando Ã© bastante estreita e nuvens de
 poeira  sopram com a brisa. Ocasionalmente uma larga folha se desprende das
-árvores  e espirala até alcançar o chão. A estrada suja continua ao leste e
-ao oeste, de onde também pode-se ver os muros de uma cidade.
+Ã¡rvores  e espirala atÃ© alcanÃ§ar o chÃ£o. A estrada suja continua ao leste e
+ao oeste, de onde tambÃ©m pode-se ver os muros de uma cidade.
 ~
-135 0 0 0 0 2
+135 0 2
 D1
 ~
 ~
@@ -1865,12 +1865,12 @@ D3
 S
 #13585
 Um Caminho Sujo e Empoeirado~
-   A estrada  pela  qual  você está andando é bastante estreita e nuvens de
-poeira  sopram  com  a brisa. A floresta de altas árvores com largas folhas
+   A estrada  pela  qual  vocÃª estÃ¡ andando Ã© bastante estreita e nuvens de
+poeira  sopram  com  a brisa. A floresta de altas Ã¡rvores com largas folhas
 verdes  de  todos  os  tipos  cerca  a  estrada ao norte e ao sul. Pequenas
 criaturas podem ser ouvidas. O Caminho sujo continua a leste e oeste.
 ~
-135 0 0 0 0 2
+135 0 2
 D1
 ~
 ~
@@ -1882,12 +1882,12 @@ D3
 S
 #13586
 Um Caminho Sujo e Empoeirado~
-  A  estrada  pela  qual  você está andando é bastante estreita e nuvens de
+  A  estrada  pela  qual  vocÃª estÃ¡ andando Ã© bastante estreita e nuvens de
 poeira  sopram com a brisa. Ocasionalmente uma larga folha se desprende das
-árvores  e espirala até alcançar o chão. A estrada suja continua ao leste e
-ao oeste, de onde também pode-se ver os muros de uma cidade.
+Ã¡rvores  e espirala atÃ© alcanÃ§ar o chÃ£o. A estrada suja continua ao leste e
+ao oeste, de onde tambÃ©m pode-se ver os muros de uma cidade.
 ~
-135 0 0 0 0 2
+135 0 2
 D1
 ~
 ~
@@ -1899,9 +1899,9 @@ D3
 S
 #13587
 Uma Sala Muito Estranha~
-  Saia já daqui!
+  Saia jÃ¡ daqui!
 ~
-135 0 0 0 0 0
+135 0 0
 D0
 ~
 ~
@@ -1926,9 +1926,9 @@ D4
 S
 #13588
 Uma Sala Muito Estranha~
-  Saia já daqui!
+  Saia jÃ¡ daqui!
 ~
-135 0 0 0 0 0
+135 0 0
 D0
 ~
 ~
