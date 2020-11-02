@@ -1,14 +1,14 @@
-#15701
+#15701 
 O Campo Aberto~
-   Nossa, que diferença!  Depois de sair de uma floresta tão densa e escura,
-você chega num enorme campo.  A luz do sol quase lhe cega, tão desacostumado
-à luz você estava.  Bem ao longe, você avista uma pequena ponte, e além
+   Nossa, que diferenÃ§a!  Depois de sair de uma floresta tÃ£o densa e escura,
+vocÃª chega num enorme campo.  A luz do sol quase lhe cega, tÃ£o desacostumado
+Ã  luz vocÃª estava.  Bem ao longe, vocÃª avista uma pequena ponte, e alÃ©m
 dela, um castelo.
 ~
-157 4 0 0 0 2
+157 c 2
 D2
-Você vê uma ponte que aparenta ser bastante velha... Talvez não seja uma 
-boa idéia atravessá-la.
+VocÃª vÃª uma ponte que aparenta ser bastante velha... Talvez nÃ£o seja uma 
+boa idÃ©ia atravessÃ¡-la.
 ~
 ponte~
 0 -1 15702
@@ -20,272 +20,277 @@ floresta~
 S
 #15702
 A Ponte~
-   "Oh-oh... Essa ponte não parece ser muito segura..." - você pensou.  E 
-estava certo.  Mas mesmo assim tentou atravessá-la...  Tsc tsc...  Agora 
-você está aí, pendurado no que sobrou dela...  Seus dedos estão doendo pois 
-o sol é muito forte e a corda está quente.  Se gritar por socorro, ninguém 
-irá te ouvir...  Só lhe resta subir, antes que os crocodilos do fosso pouco 
-abaixo de você lhe comam vivo...
+   "Oh-oh... Essa ponte nÃ£o parece ser muito segura..." - vocÃª pensou.  E 
+estava certo.  Mas mesmo assim tentou atravessÃ¡-la...  Tsc tsc...  Agora 
+vocÃª estÃ¡ aÃ­, pendurado no que sobrou dela...  Seus dedos estÃ£o doendo pois 
+o sol Ã© muito forte e a corda estÃ¡ quente.  Se gritar por socorro, ninguÃ©m 
+irÃ¡ te ouvir...  SÃ³ lhe resta subir, antes que os crocodilos do fosso pouco 
+abaixo de vocÃª lhe comam vivo...
 ~
-157 131076 0 0 0 9
+157 cr 9
 D0
-Você pode ver um grande campo aberto.
+VocÃª pode ver um grande campo aberto.
 ~
 campo~
 0 -1 15701
+D2
+Uma praÃ§a pode ser vista a sul.
+~
+~
+0 -1 15704
 D1
-Você ouve várias sons que lembram um barulho de mordidas. Você vê algumas 
+VocÃª ouve vÃ¡rias sons que lembram um barulho de mordidas. VocÃª vÃª algumas 
 escamas negras se mexendo.
 ~
 ~
 0 -1 15703
-D2
-Uma praça pode ser vista a sul.
-~
-~
-0 -1 15704
 S
 #15703
 O Fosso dos Crocodilos~
-   Ooops...  Seus dedos não agüentaram e você escorregou.  Os crocodilos 
-estão lhe devorando brutalmente.  Lhe arrancam os braços, as pernas, a 
-cabeça, tudo.  Numa hora dessas você está morto, mas sua alma ainda continua 
-lá, vendo seu corpo ser estraçalhado.  É uma cena horrorosa, e é preciso ter 
-um estômago muito forte, para agüentar vê-la.
+   Ooops...  Seus dedos nÃ£o agÃ¼entaram e vocÃª escorregou.  Os crocodilos 
+estÃ£o lhe devorando brutalmente.  Lhe arrancam os braÃ§os, as pernas, a 
+cabeÃ§a, tudo.  Numa hora dessas vocÃª estÃ¡ morto, mas sua alma ainda continua 
+lÃ¡, vendo seu corpo ser estraÃ§alhado.  Ã‰ uma cena horrorosa, e Ã© preciso ter 
+um estÃ´mago muito forte, para agÃ¼entar vÃª-la.
 ~
-157 2 0 0 0 0
+157 b 0
 S
 #15704
-A Praça~
-   Ufa!  Depois de 4 longas e cansativas horas, você finalmente conseguiu, 
-digamos, escalar a ponte.  Parabéns!  Agora você se encontra numa pequena 
-praça, na frente de um imenso castelo.  Você vê o castelo através das águas 
+A PraÃ§a~
+   Ufa!  Depois de 4 longas e cansativas horas, vocÃª finalmente conseguiu, 
+digamos, escalar a ponte.  ParabÃ©ns!  Agora vocÃª se encontra numa pequena 
+praÃ§a, na frente de um imenso castelo.  VocÃª vÃª o castelo atravÃ©s das Ã¡guas 
 de um chafariz que se encontra na sua frente. 
 ~
-157 131136 0 0 0 1
+157 gr 1
 D0
-Você vê uma ponte que aparenta ser bastante velha... talvez não seja uma boa 
-idéia atravessá-la.
+VocÃª vÃª uma ponte que aparenta ser bastante velha... talvez nÃ£o seja uma boa 
+idÃ©ia atravessÃ¡-la.
 ~
 ~
 0 -1 15702
 D2
-Você vê um lindo chafariz jorrando água, talvez seja um bom lugar para matar 
+VocÃª vÃª um lindo chafariz jorrando Ã¡gua, talvez seja um bom lugar para matar 
 sua sede. 
 ~
 ~
 0 -1 15705
 S
 #15705
-O Centro da Praça~
-   Você se encontra no centro da praça e pode ver a sua frente um chafariz.
-  É lindo.  E jorra uma água tão cristalina que a imagem do castelo fica tão 
-nítida quanto se ele existisse dentro do Chafariz.  Ele é da forma de uma 
-linda ave de fogo, a qual você nunca viu.  O castelo está à sua frente e 
-para chegar até ele, você terá que subir uma escadaria.
+O Centro da PraÃ§a~
+   VocÃª se encontra no centro da praÃ§a e pode ver a sua frente um chafariz.
+  Ã‰ lindo.  E jorra uma Ã¡gua tÃ£o cristalina que a imagem do castelo fica tÃ£o 
+nÃ­tida quanto se ele existisse dentro do Chafariz.  Ele Ã© da forma de uma 
+linda ave de fogo, a qual vocÃª nunca viu.  O castelo estÃ¡ Ã  sua frente e 
+para chegar atÃ© ele, vocÃª terÃ¡ que subir uma escadaria.
 ~
-157 131136 0 0 0 1
+157 gr 1
 D0
-Você consegue ver uma praça a norte.
+VocÃª consegue ver uma praÃ§a a norte.
 ~
-~
+~ 
 0 -1 15704
 D1
-Você vê uma longa escadaria. 
+VocÃª vÃª uma longa escadaria. 
 ~
 ~
 0 -1 15706
 D3
-Você vê uma longa escadaria
+VocÃª vÃª uma longa escadaria
 ~
 ~
 0 -1 15707
 S
 #15706
 A Escadaria~
-   São feitas de pedra, e aparentam ter mais de 100 anos.  Possuem cerca de 
+   SÃ£o feitas de pedra, e aparentam ter mais de 100 anos.  Possuem cerca de 
 100 degraus, o que lhe faz ficar extremamente cansado.  Mas, enquanto para 
-para descansar, você percebe que em certos locais dessa escadaria também 
-existe um desenho da mesma ave de fogo do chafariz...  "Que ave será 
-essa?" - você se pergunta...
+para descansar, vocÃª percebe que em certos locais dessa escadaria tambÃ©m 
+existe um desenho da mesma ave de fogo do chafariz...  "Que ave serÃ¡ 
+essa?" - vocÃª se pergunta...
 ~
-157 131136 0 0 0 1
+157 gr 1
 D1
-Você vê uma chafariz jorrando água para todos os lados.
+VocÃª vÃª uma chafariz jorrando Ã¡gua para todos os lados.
 ~
 ~
 0 -1 15705
 D8
-Você vê uma grande porta de madeira, parece ser a entrada do Castelo.
+VocÃª vÃª uma grande porta de madeira, parece ser a entrada do Castelo.
 ~
 ~
 0 -1 15708
 S
-#15707
+#15707 
 A Escadaria~
-   São feitas de pedra, e aparentam ter mais de 100 anos.  Possuem cerca de 
-100 degraus, o que lhe faz ficar extremamente cansado.  Mas, enquanto pára 
-para descansar, você percebe que em certos locais dessa escadaria também 
-existe um desenho da mesma ave de fogo do chafariz...  Que ave será 
-essa? - você se pergunta...
-~
-157 131136 0 0 0 1
+   SÃ£o feitas de pedra, e aparentam ter mais de 100 anos.  Possuem cerca de 
+100 degraus, o que lhe faz ficar extremamente cansado.  Mas, enquanto pÃ¡ra 
+para descansar, vocÃª percebe que em certos locais dessa escadaria tambÃ©m 
+existe um desenho da mesma ave de fogo do chafariz...  Que ave serÃ¡ 
+essa? - vocÃª se pergunta...
+~ 
+157 gr 1
 D3
-Um chafariz jorra água para todos os lados. 
+Um chafariz jorra Ã¡gua para todos os lados. 
 ~
 ~
 0 -1 15705
-D9
-Você vê uma grande porta, guardando a entrada do Castelo.
+D9 
+VocÃª vÃª uma grande porta, guardando a entrada do Castelo.
 ~
 ~
 0 -1 15708
 S
-#15708
+#15708 
 A Porta~
-   Você chegou na entrada principal do castelo.  Na grande porta que se     
-encontra à sua frente, está escrito: "Bem Vindo Ao Castelo de Flyre!"  Ah..
-  Finalmente você descobriu nome do castelo.  Os guardas barram caminho 
-para a entrada do castelo.  Você tenta conversar, mas nem lhe olhar nos 
+   VocÃª chegou na entrada principal do castelo.  Na grande porta que se     
+encontra Ã  sua frente, estÃ¡ escrito: "Bem Vindo Ao Castelo de Flyre!"  Ah..
+  Finalmente vocÃª descobriu nome do castelo.  Os guardas barram caminho 
+para a entrada do castelo.  VocÃª tenta conversar, mas nem lhe olhar nos 
 olhos eles olham...
 ~
-157 131141 0 0 0 1
-D2
-Um Imenso Salão te aguarda a sul.
-~
-porta~
-1 -1 15709
-D6
-Você vê uma escadaria.
-~
-~
-0 -1 15706
+157 acgr 1
 D7
-Você vê uma escadaria.
+VocÃª vÃª uma escadaria.
 ~
 ~
 0 -1 15707
-S
-#15709
-O Imenso Salão~
-   Depois de uma luta e tanto você consegue entrar no castelo!  Se encontra 
-agora num grande salão.  Aqui o que não falta é luxo...  E silêncio.  
-Nenhuma palavra, nenhum ruído (a não ser os seus) são ouvidos.  O mais 
-estranho é que existem mais duas pessoas aqui: O Rei e a Rainha, que não te 
-olharam nem mesmo por um instante.  Parece que não te viram. Mas você está 
-na frente deles!  Como é possível?...
+D6
+VocÃª vÃª uma escadaria.
 ~
-157 131145 0 0 0 0
+~
+0 -1 15706 
+D2
+Um Imenso SalÃ£o te aguarda a sul.
+~
+porta~
+:n 2 a porta de entrada
+a -1 15709
+S
+#15709 
+O Imenso SalÃ£o~
+   Depois de uma luta e tanto vocÃª consegue entrar no castelo!  Se encontra 
+agora num grande salÃ£o.  Aqui o que nÃ£o falta Ã© luxo...  E silÃªncio.  
+Nenhuma palavra, nenhum ruÃ­do (a nÃ£o ser os seus) sÃ£o ouvidos.  O mais 
+estranho Ã© que existem mais duas pessoas aqui: O Rei e a Rainha, que nÃ£o te 
+olharam nem mesmo por um instante.  Parece que nÃ£o te viram. Mas vocÃª estÃ¡ 
+na frente deles!  Como Ã© possÃ­vel?...
+~
+157 adgr 0
 D0
 A porta do castelo se encontra a norte daqui.
 ~
 porta~
-1 -1 15708
-D1
-~
-~
-0 -1 15739
+:n 2 a porta do castelo
+a -1 15708
 D2
 ~
 ~
 0 -1 15711
+D1 
+~
+~
+0 -1 15739
 D3
 ~
 ~
 0 -1 15710
 D4
-Você vê uma imensa escada, talvez a maior que você já tenha visto.
+VocÃª vÃª uma imensa escada, talvez a maior que vocÃª jÃ¡ tenha visto.
 ~
 ~
 0 -1 15714
 S
-#15710
+#15710 
 Um Corredor~
-   É um corredor como outro qualquer.  A não ser pelo silêncio...  Não é um 
-silêncio comum...  É um silêncio assustador, que lhe faz tremer até os pés.  
-No final do corredor se encontra uma sala.  Quem sabe você não encontre 
-alguém lá.  E que não seja cego, de preferência.
+   Ã‰ um corredor como outro qualquer.  A nÃ£o ser pelo silÃªncio...  NÃ£o Ã© um 
+silÃªncio comum...  Ã‰ um silÃªncio assustador, que lhe faz tremer atÃ© os pÃ©s.  
+No final do corredor se encontra uma sala.  Quem sabe vocÃª nÃ£o encontre 
+alguÃ©m lÃ¡.  E que nÃ£o seja cego, de preferÃªncia.
 ~
-157 393545 0 0 0 0
+157 adgirs 0
 D1
 ~
 ~
 0 -1 15709
 D3
 ~
-porta escritório~
-1 -1 15712
+porta escritorio~
+:n 2 a porta do escritÃ³rio
+ab -1 15712
 S
 #15711
 Um Corredor~
-   É um corredor como outro qualquer.  A não ser pelo silêncio...  Não é um 
-silêncio comum...  É um silêncio assustador, que lhe faz tremer até os pés.  
-No final do corredor se encontra uma sala.  Quem save você não encontre 
-alguém lá, e que não seja cego, de preferência.
+   Ã‰ um corredor como outro qualquer.  A nÃ£o ser pelo silÃªncio...  NÃ£o Ã© um 
+silÃªncio comum...  Ã‰ um silÃªncio assustador, que lhe faz tremer atÃ© os pÃ©s.  
+No final do corredor se encontra uma sala.  Quem save vocÃª nÃ£o encontre 
+alguÃ©m lÃ¡, e que nÃ£o seja cego, de preferÃªncia.
 ~
-157 393545 0 0 0 0
+157 adgirs 0
 D0
 ~
 ~
 0 -1 15709
 D2
-Algo impede que sua visão fique nítida. Estranho...
+Algo impede que sua visÃ£o fique nÃ­tida. Estranho...
 ~
 ~
 0 -1 15713
 D3
 ~
 passagem secreta~
-0 15715 15719
+:n 2 passagem secreta 
+abd 15715 15719
 S
-#15712
-O Escritório~
-   Papéis, papéis e mais papéis.  Todos espalhados pela pequena sala.  No 
-meio da papelada, você encontra uma linda mulher, de cabelos loiros e olhos 
-da cor do mel.  Você vai chegando cada ver mais perto da moça e...  Ahh! Ela 
-também não lhe vê! Não lhe ouve!  Não percebe sua presença!  O que será isso?  
-O que está acontecendo com esse lugar?  Será que seu destino será igual ao 
-dos monarcas ou dessa moça?  Você tem duas opções: pode fugir daqui, ou 
+#15712 
+O EscritÃ³rio~
+   PapÃ©is, papÃ©is e mais papÃ©is.  Todos espalhados pela pequena sala.  No 
+meio da papelada, vocÃª encontra uma linda mulher, de cabelos loiros e olhos 
+da cor do mel.  VocÃª vai chegando cada ver mais perto da moÃ§a e...  Ahh! Ela 
+tambÃ©m nÃ£o lhe vÃª! NÃ£o lhe ouve!  NÃ£o percebe sua presenÃ§a!  O que serÃ¡ isso?  
+O que estÃ¡ acontecendo com esse lugar?  SerÃ¡ que seu destino serÃ¡ igual ao 
+dos monarcas ou dessa moÃ§a?  VocÃª tem duas opÃ§Ãµes: pode fugir daqui, ou 
 continuar explorando o lugar.
 ~
-157 393321 0 0 0 0
+157 adfgrs 0
 D1
 ~
 porta~
-1 -1 15711
+:n 2 a porta
+ab -1 15711
 S
 #15713
 A Cozinha~
-   É uma cozinha muito bem limpa.  Não se vê nada sujo e a comida cheira
-bem.  Nham nham...  O Chefe da Cozinha é bem competente.  Está tudo no seu
+   Ã‰ uma cozinha muito bem limpa.  NÃ£o se vÃª nada sujo e a comida cheira
+bem.  Nham nham...  O Chefe da Cozinha Ã© bem competente.  EstÃ¡ tudo no seu
 devido lugar.  Estranhamente, ele esta como os outros habitantes desse
-castelo: imóvel!  Mas, se não foi ele, quem fez toda essa comida?  Você
+castelo: imÃ³vel!  Mas, se nÃ£o foi ele, quem fez toda essa comida?  VocÃª
 avista uma porta aberta nos fundos. 
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D0
 ~
 ~
 0 -1 15711
-D1
-Por mais que se esforçe, você não consegue distinguir a forma desse lugar.
-~
-~
-0 -1 15718
 D2
 ~
 ~
 0 -1 15726
+D1
+Por mais que se esforÃ§e, vocÃª nÃ£o consegue distinguir a forma desse lugar.
+~
+~
+0 -1 15718
 S
 #15714
 A Escada Principal~
-   É uma escada das mais luxuosas.  Existem alguns desenhos nela...  É o 
-mesmo desenho que aparece no chafariz e na porta!  Que ave será essa?  E sua 
-curiosidade aumenta a cada passo que você dá.
+   Ã‰ uma escada das mais luxuosas.  Existem alguns desenhos nela...  Ã‰ o 
+mesmo desenho que aparece no chafariz e na porta!  Que ave serÃ¡ essa?  E sua 
+curiosidade aumenta a cada passo que vocÃª dÃ¡.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D5
-Você pode ver parte do Imenso Salão.
+VocÃª pode ver parte do Imenso SalÃ£o.
 ~
 ~
 0 -1 15709
@@ -300,199 +305,207 @@ D8
 S
 #15715
 Um Corredor Escuro~
-   Finalmente você encontra com o chão, aqui é escuro, assustador e cheira 
-mal.  A saída foi misteriosamente bloqueada, e só resta seguir em frente.
+   Finalmente vocÃª encontra com o chÃ£o, aqui Ã© escuro, assustador e cheira 
+mal.  A saÃ­da foi misteriosamente bloqueada, e sÃ³ resta seguir em frente.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D3
-Você não vê nada, apenas a escuridão.
+VocÃª nÃ£o vÃª nada, apenas a escuridÃ£o.
 ~
 ~
 0 -1 15716
 S
 #15716
 Um Corredor Escuro~
-   Você não consegue enxergar nada, algo parece ter bloqueado a passagem de 
-onde você veio, e só resta seguir em frente nessa escuridão.
+   VocÃª nÃ£o consegue enxergar nada, algo parece ter bloqueado a passagem de 
+onde vocÃª veio, e sÃ³ resta seguir em frente nessa escuridÃ£o.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D3
-Você não vê nada, apenas a escuridão.
+VocÃª nÃ£o vÃª nada, apenas a escuridÃ£o.
 ~
 ~
 0 -1 15717
 S
-#15717
+#15717 
 Um Corredor Escuro~
-   Você não consegue enxergar nada, algo parece ter bloqueado a passagem de 
-onde você veio, e só lhe resta seguir em frente nessa escuridão.
+   VocÃª nÃ£o consegue enxergar nada, algo parece ter bloqueado a passagem de 
+onde vocÃª veio, e sÃ³ lhe resta seguir em frente nessa escuridÃ£o.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D2
-Finalmente você encontrou um foco de luz depois de tanta escuridão.
+Finalmente vocÃª encontrou um foco de luz depois de tanta escuridÃ£o.
 ~
 ~
-0 -1 15720
+0 -1 15720 
 S
 #15718
-O Porão~
-   É tudo muito sujo por aqui e aparentemente do nada, um grande livro
-começa a produzir uma fraca luz, talvez com suas últimas forças.
+O PorÃ£o~
+   Ã‰ tudo muito sujo por aqui e aparentemente do nada, um grande livro
+comeÃ§a a produzir uma fraca luz, talvez com suas Ãºltimas forÃ§as.
 ~
-157 217 0 0 0 0
+157 adegh 0
 D3
-Ahh sim! Você lembra que para essa direção fica a Cozinha, pela qual você 
+Ahh sim! VocÃª lembra que para essa direÃ§Ã£o fica a Cozinha, pela qual vocÃª 
 acabou de passar.
 ~
 ~
 0 -1 15713
 S
-#15719
+#15719 
 A Passagem Secreta~
-   Ahá!  Você sabia que deveria ter alguma passagem secreta naquele 
+   AhÃ¡!  VocÃª sabia que deveria ter alguma passagem secreta naquele 
 corredor.
-   Depois de alguma procura você finalmente achou.  E está caindo, caindo...  
-Não vê nem sente nada, mas você sabe de uma coisa: uma hora você vai 
-encontrar o chão.  E nesse hora, você espera encontrar a resposta para todo
-o mistério que invadiu seus pensamentos.
+   Depois de alguma procura vocÃª finalmente achou.  E estÃ¡ caindo, caindo...  
+NÃ£o vÃª nem sente nada, mas vocÃª sabe de uma coisa: uma hora vocÃª vai 
+encontrar o chÃ£o.  E nesse hora, vocÃª espera encontrar a resposta para todo
+o mistÃ©rio que invadiu seus pensamentos.
 ~
-157 131145 0 0 0 0
-D3
+157 adgr 0
+D3 
 ~
 ~
 0 -1 15715
 S
 #15720
-A Prisão~
-   Argh!  Quanto mais você anda, mais nojo você sente.  Agora a cena é de 
-várias celas, com muitos ossos dentro delas.  Na parte de cima do castelo, as 
-pessoas estavam imóveis, mas pareciam estar "meio vivas"...  Essas não.  As 
-pessoas (?) estão mortas!  Parece que esse lugar foi esquecido de sua 
-existência.  É um lugar horrendo, que você faz questão de não voltar nunca 
+A PrisÃ£o~
+   Argh!  Quanto mais vocÃª anda, mais nojo vocÃª sente.  Agora a cena Ã© de 
+vÃ¡rias celas, com muitos ossos dentro delas.  Na parte de cima do castelo, as 
+pessoas estavam imÃ³veis, mas pareciam estar "meio vivas"...  Essas nÃ£o.  As 
+pessoas (?) estÃ£o mortas!  Parece que esse lugar foi esquecido de sua 
+existÃªncia.  Ã‰ um lugar horrendo, que vocÃª faz questÃ£o de nÃ£o voltar nunca 
 mais.
 ~
-157 131145 0 0 0 0
-D0
-Apenas a escuridão.
+157 adgr 0
+D0 
+Apenas a escuridÃ£o.
 ~
 ~
 0 -1 15717
 D2
-Você tenta, mas não consegue ver.
+VocÃª tenta, mas nÃ£o consegue ver.
 ~
-~
+~ 
 0 -1 15721
 D3
-Você não consegue enxergar nada.
+VocÃª nÃ£o consegue enxergar nada.
 ~
 ~
-1 15703 15722
+:n 2 A grade da Cela
+ab 15703 15722
 S
 #15721
-A Prisão~
-   Argh! Quanto mais você anda, mais nojo você sente.  Agora a cena é de 
-várias celas, com muitos ossos dentro delas.  Na parte de cima do castelo, 
-as pessoas estavam imóveis, mas pareciam estar meio vivas...  Essas não.  As 
-pessoas (?) estão mortas!  Parece que esse lugar foi esquecido de sua 
-existência.  É um lugar horrendo, que você faz questão de não voltar nunca 
+A PrisÃ£o~
+   Argh! Quanto mais vocÃª anda, mais nojo vocÃª sente.  Agora a cena Ã© de 
+vÃ¡rias celas, com muitos ossos dentro delas.  Na parte de cima do castelo, 
+as pessoas estavam imÃ³veis, mas pareciam estar meio vivas...  Essas nÃ£o.  As 
+pessoas (?) estÃ£o mortas!  Parece que esse lugar foi esquecido de sua 
+existÃªncia.  Ã‰ um lugar horrendo, que vocÃª faz questÃ£o de nÃ£o voltar nunca 
 mais.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D0
-Você não consegue ver nada. Talvez seja a distância.
+VocÃª nÃ£o consegue ver nada. Talvez seja a distÃ¢ncia.
 ~
 ~
 0 -1 15720
 D1
-Uma espécie de Cela... Sim, é isso que você vê.
+Uma espÃ©cie de Cela... Sim, Ã© isso que vocÃª vÃª.
 ~
 ~
-1 15703 15723
+:n 2 A grade da Cela 
+ab 15703 15723
 D3
-Uma espécie de Cela... Sim, é isso que você vê.
+Uma espÃ©cie de Cela... Sim, Ã© isso que vocÃª vÃª.
 ~
 ~
-1 15703 15724
+:n 2 A grade da Cela
+ab 15703 15724
 S
 #15722
 A Cela~
-   Ossos, ossos e mais ossos.  Pela posição, você julga que eles estavam se 
-rastejando e gritando, provavelmente por água e comida.
+   Ossos, ossos e mais ossos.  Pela posiÃ§Ã£o, vocÃª julga que eles estavam se 
+rastejando e gritando, provavelmente por Ã¡gua e comida.
 ~
-157 393289 0 0 0 0
+157 adgrs 0
 D1
-Você não consegue enxergar nada.
+VocÃª nÃ£o consegue enxergar nada.
 ~
 grade cela~
-1 15703 15720
+:n 2 a grade da cela
+ab 15703 15720
 S
-#15723
+#15723 
 A Cela~
-   Ossos, ossos e mais ossos.  Pela posição, você julga que eles estavam se 
-rastejando e gritando, provavelmente por água e comida.
+   Ossos, ossos e mais ossos.  Pela posiÃ§Ã£o, vocÃª julga que eles estavam se 
+rastejando e gritando, provavelmente por Ã¡gua e comida.
 ~
-157 393289 0 0 0 0
+157 adgrs 0
 D3
-Você não consegue enxergar nada. 
+VocÃª nÃ£o consegue enxergar nada. 
 ~
 grade cela~
-1 15703 15721
+:n 2 a grade da cela
+ab 15703 15721
 S
 #15724
 A Cela~
-   Ossos, ossos e mais ossos.  Pela posição, você julga que eles estavam se 
-rastejando e gritando, provavelmente por água e comida.
+   Ossos, ossos e mais ossos.  Pela posiÃ§Ã£o, vocÃª julga que eles estavam se 
+rastejando e gritando, provavelmente por Ã¡gua e comida.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D1
 ~
 grade cela~
-1 15703 15721
+:n 2 a grade da cela
+ab 15703 15721
 D9
 ~
 grade cela~
-0 15707 15725
+:n 2 a grade de uma estranha Cela
+abd 15707 15725
 S
-#15725
+#15725  
 A Cela Isolada~
-   Finalmente você encontra Flyre, a Ave do Fogo.  Ela é totalmente feita de 
-fogo, e você não tem nem coragem de chegar perto.  Infelizmente a cela é 
-pequena, e ficar longe dela é quase impossível.  Você faz de tudo para que 
-ela não te perceba, e quando se dá conta, uma sensação de tristeza e de 
-desânimo lhe invade o corpo, e vem à você a imagem de um quadro com seu 
+   Finalmente vocÃª encontra Flyre, a Ave do Fogo.  Ela Ã© totalmente feita de 
+fogo, e vocÃª nÃ£o tem nem coragem de chegar perto.  Infelizmente a cela Ã© 
+pequena, e ficar longe dela Ã© quase impossÃ­vel.  VocÃª faz de tudo para que 
+ela nÃ£o te perceba, e quando se dÃ¡ conta, uma sensaÃ§Ã£o de tristeza e de 
+desÃ¢nimo lhe invade o corpo, e vem Ã  vocÃª a imagem de um quadro com seu 
 nome, desenhando sua suposta imagem daquele momento.  Parece que o olhar de 
-Flyre lhe hipnotizou, e ela está se aproximando de você, e está cada vez 
-mais perto...  Mas a coragem para a luta não existe, e você só tem à suas 
-mãos o medo que tomou seu corpo.  Ainda há tempo de fugir...
-~
-157 109 0 0 0 9
+Flyre lhe hipnotizou, e ela estÃ¡ se aproximando de vocÃª, e estÃ¡ cada vez 
+mais perto...  Mas a coragem para a luta nÃ£o existe, e vocÃª sÃ³ tem Ã  suas 
+mÃ£os o medo que tomou seu corpo.  Ainda hÃ¡ tempo de fugir...
+~ 
+157 acdgf 9
 D4
 ~
 grande porta~
-0 15705 15756
+:n 2 uma grande porta 
+abd 15705 15756
 S
 #15726
 O Quintal~
-   É um simples quintal, mas o silêncio continua.  Você não ouve o canto de 
-nenhum pássaro, nem mesmo do vento batendo nas várias plantações ali 
-existentes...Nada.  Como isso é possível?  O que tão grave aconteceu, para 
-que esse castelo fosse enfeitiçado dessa forma, e perdesse toda a vida e 
-alegria que um dia, alí deverá ter existido?  São perguntas que, talvez, você 
-nunca terá as respostas...
+   Ã‰ um simples quintal, mas o silÃªncio continua.  VocÃª nÃ£o ouve o canto de 
+nenhum pÃ¡ssaro, nem mesmo do vento batendo nas vÃ¡rias plantaÃ§Ãµes ali 
+existentes...Nada.  Como isso Ã© possÃ­vel?  O que tÃ£o grave aconteceu, para 
+que esse castelo fosse enfeitiÃ§ado dessa forma, e perdesse toda a vida e 
+alegria que um dia, alÃ­ deverÃ¡ ter existido?  SÃ£o perguntas que, talvez, vocÃª 
+nunca terÃ¡ as respostas...
 ~
-157 65 0 0 0 0
+157 ag 0
 D0
 ~
 ~
 0 -1 15713
-D1
-~
-~
-0 -1 15746
 D2
 ~
 ~
 0 -1 15751
+D1
+~
+~
+0 -1 15746
 D3
 ~
 ~
@@ -506,21 +519,17 @@ D9
 ~
 0 -1 15749
 S
-#15727
+#15727 
 Um Grande Corredor~
-   É um longo corredor, e possui em suas paredes quadros de vários jovens.  
-Ao olhar mais detalhadamente para eles, você percebe uma expressão de 
-tristeza e desânimo.
-~
-157 73 0 0 0 0
+   Ã‰ um longo corredor, e possui em suas paredes quadros de vÃ¡rios jovens.  
+Ao olhar mais detalhadamente para eles, vocÃª percebe uma expressÃ£o de 
+tristeza e desÃ¢nimo.
+~ 
+157 adg 0
 D0
 ~
 ~
 0 -1 15732
-D1
-~
-~
-0 -1 15728
 D2
 ~
 ~
@@ -529,25 +538,29 @@ D9
 ~
 ~
 0 -1 15714
+D1 
+~
+~
+0 -1 15728
 S
 #15728
 Um Grande Corredor~
-   O corredor continua, e parece não ter fim.  E ambas paredes existem
-quadros de jovens, olhando-lhe tristemente.  Você se sente observado. 
+   O corredor continua, e parece nÃ£o ter fim.  E ambas paredes existem
+quadros de jovens, olhando-lhe tristemente.  VocÃª se sente observado. 
 ~
-157 73 0 0 0 0
-D0
+157 adg 0
+D0 
 ~
 ~
 0 -1 15733
-D1
-~
-~
-0 -1 15740
 D2
 ~
 ~
 0 -1 15736
+D1 
+~
+~
+0 -1 15740
 D3
 ~
 ~
@@ -559,13 +572,13 @@ D4
 S
 #15729
 Um Grande Corredor~
-   O corredor continua, e possui em suas paredes quadros de vários jovens. 
-   Ao olhar mais detalhadamente para eles você percebe uma expressão de 
-tristeza e desânimo.    Ao final de tantos quadros existe um em 
-branco...Com seu nome escrito!  Um indescritível medo lhe faz pensar 
+   O corredor continua, e possui em suas paredes quadros de vÃ¡rios jovens. 
+   Ao olhar mais detalhadamente para eles vocÃª percebe uma expressÃ£o de 
+tristeza e desÃ¢nimo.    Ao final de tantos quadros existe um em 
+branco...Com seu nome escrito!  Um indescritÃ­vel medo lhe faz pensar 
 seriamente em sair do castelo...Imediatamente.
 ~
-157 73 0 0 0 0
+157 adg 0
 D1
 ~
 ~
@@ -573,45 +586,41 @@ D1
 S
 #15730
 Um Grande Corredor~
-   O corredor continua, e parece não ter fim.  E ambas paredes existem
-quadros de jovens, olhando-lhe tristemente.  Você se sente observado. 
+   O corredor continua, e parece nÃ£o ter fim.  E ambas paredes existem
+quadros de jovens, olhando-lhe tristemente.  VocÃª se sente observado. 
 ~
-157 73 0 0 0 0
-D0
-~
-~
-0 -1 15734
-D1
-~
-~
-0 -1 15731
-D2
-~
-~
-0 -1 15737
-D3
-~
-~
-0 -1 15729
+157 adg 0
 D6
 ~
 ~
 0 -1 15714
-S
-#15731
-Um Grande Corredor~
-   O corredor continua, e parece não ter fim.  E ambas paredes existem
-quadros de jovens, olhando-lhe tristemente.  Você se sente observado. 
-~
-157 73 0 0 0 0
 D0
 ~
 ~
 0 -1 15734
+D2
+~
+~
+0 -1 15737
 D1
 ~
 ~
-0 -1 15746
+0 -1 15731
+D3
+~
+~
+0 -1 15729
+S
+#15731
+Um Grande Corredor~
+   O corredor continua, e parece nÃ£o ter fim.  E ambas paredes existem
+quadros de jovens, olhando-lhe tristemente.  VocÃª se sente observado. 
+~
+157 adg 0
+D0 
+~
+~
+0 -1 15734
 D3
 ~
 ~
@@ -619,80 +628,85 @@ D3
 D4
 ~
 porta madeira~
-0 -1 15741
+:n 2 a porta de madeira
+a -1 15741
+D1 
+~
+~
+0 -1 15746
 S
 #15732
-O Quarto de Hóspedes~
-   É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não 
-existe nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
+O Quarto de HÃ³spedes~
+   Ã‰ um quarto de hÃ³spedes, mas parece nÃ£o ser usado hÃ¡ muito tempo.  NÃ£o 
+existe nada de mais aqui, e ele sÃ³ lhe serviu para aumentar o pavor.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D2
 ~
 ~
 0 -1 15727
 S
 #15733
-O Quarto de Hóspedes~
-   É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não 
-existe nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
+O Quarto de HÃ³spedes~
+   Ã‰ um quarto de hÃ³spedes, mas parece nÃ£o ser usado hÃ¡ muito tempo.  NÃ£o 
+existe nada de mais aqui, e ele sÃ³ lhe serviu para aumentar o pavor.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D2
 ~
 ~
-0 -1 15728
+0 -1 15728 
 S
 #15734
-O Quarto de Hóspedes~
-   É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não 
-existe nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
+O Quarto de HÃ³spedes~
+   Ã‰ um quarto de hÃ³spedes, mas parece nÃ£o ser usado hÃ¡ muito tempo.  NÃ£o 
+existe nada de mais aqui, e ele sÃ³ lhe serviu para aumentar o pavor.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D2
 ~
 ~
 0 -1 15731
 S
 #15735
-O Quarto de Hóspedes~
-   É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não 
-existe nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
+O Quarto de HÃ³spedes~
+   Ã‰ um quarto de hÃ³spedes, mas parece nÃ£o ser usado hÃ¡ muito tempo.  NÃ£o 
+existe nada de mais aqui, e ele sÃ³ lhe serviu para aumentar o pavor.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D2
 ~
 ~
 0 -1 15729
 S
 #15736
-O Quarto de Hóspedes~
-   É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não 
-existe nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
+O Quarto de HÃ³spedes~
+   Ã‰ um quarto de hÃ³spedes, mas parece nÃ£o ser usado hÃ¡ muito tempo.  NÃ£o 
+existe nada de mais aqui, e ele sÃ³ lhe serviu para aumentar o pavor.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D0
 ~
 ~
 0 -1 15727
 S
 #15737
-O Quarto de Hóspedes~
-   É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não e
-xiste nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
+O Quarto de HÃ³spedes~
+   Ã‰ um quarto de hÃ³spedes, mas parece nÃ£o ser usado hÃ¡ muito tempo.  NÃ£o e
+xiste nada de mais aqui, e ele sÃ³ lhe serviu para aumentar o pavor.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D0
 ~
 ~
 0 -1 15728
 S
 #15738
-O Quarto de Hóspedes~
-   É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não 
-existe nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
+O Quarto de HÃ³spedes~
+   Ã‰ um quarto de hÃ³spedes, mas parece nÃ£o ser usado hÃ¡ muito tempo.  NÃ£o 
+existe nada de mais aqui, e ele sÃ³ lhe serviu para aumentar o pavor.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D0
 ~
 ~
@@ -700,11 +714,11 @@ D0
 S
 #15739
 O Trono~
-   Agora não tem desculpa.  Você está a dois passos deles!  Mas eles não 
-reagem.  Parecem estar mortos...  Eles devem estar enfeitiçados.  Mas quem 
+   Agora nÃ£o tem desculpa.  VocÃª estÃ¡ a dois passos deles!  Mas eles nÃ£o 
+reagem.  Parecem estar mortos...  Eles devem estar enfeitiÃ§ados.  Mas quem 
 fez isso? 
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D3
 ~
 ~
@@ -713,10 +727,10 @@ S
 #15740
 O Aposento Real~
    O Aposento real...  Bem aconchegante, por sinal.  Uma imensa cama, 
-janelas enormes...  Você percebe uma pequena caixinha num dos criados-mudos. 
+janelas enormes...  VocÃª percebe uma pequena caixinha num dos criados-mudos. 
    Parece ter algo bem interessante dentro dela.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D3
 ~
 ~
@@ -724,40 +738,40 @@ D3
 S
 #15741
 Subindo para as Torres~
-   É escuro.  A luz do sol não consegue penetrar nesse local.  Até agora, 
-todos os locais onde você explorou, ou possuía a luz do sol ou um castiçal 
-como fonte de luz.  Aqui não tem nada disso. É escuridão total, e sua fonte 
-de luz é muito bem vinda.  Quanto mais você sobe, mais a escuridão e o frio 
-aumentam.  Você tem a impressão de que o que te espera lá em cima não é coisa 
-boa.  Você chega num local onde existem 4 saídas: voltar, ir para leste, para 
-oeste, ou continuar subindo...  Agora é com você.
+   Ã‰ escuro.  A luz do sol nÃ£o consegue penetrar nesse local.  AtÃ© agora, 
+todos os locais onde vocÃª explorou, ou possuÃ­a a luz do sol ou um castiÃ§al 
+como fonte de luz.  Aqui nÃ£o tem nada disso. Ã‰ escuridÃ£o total, e sua fonte 
+de luz Ã© muito bem vinda.  Quanto mais vocÃª sobe, mais a escuridÃ£o e o frio 
+aumentam.  VocÃª tem a impressÃ£o de que o que te espera lÃ¡ em cima nÃ£o Ã© coisa 
+boa.  VocÃª chega num local onde existem 4 saÃ­das: voltar, ir para leste, para 
+oeste, ou continuar subindo...  Agora Ã© com vocÃª.
 ~
-157 73 0 0 0 0
-D1
-~
-~
-0 -1 15745
-D3
-~
-~
-0 -1 15744
-D4
-~
-~
-0 -1 15742
+157 adg 0
 D5
 ~
 ~
 0 -1 15731
+D4
+~
+~
+0 -1 15742
+D3
+~
+~
+0 -1 15744
+D1 
+~
+~
+0 -1 15745
 S
 #15742
 A Torre Principal~
    Finalmente, algum movimento!  No alto da mais alta torre desse Castelo 
-uma criatura se mexe...  Ele está na sua frente, e você vê claramente um 
-velho prisioneiro, quase morto.  Um zumbi, podemos chamá-lo assim, ele está 
-vindo na sua direção.
+uma criatura se mexe...  Ele estÃ¡ na sua frente, e vocÃª vÃª claramente um 
+velho prisioneiro, quase morto.  Um zumbi, podemos chamÃ¡-lo assim, ele estÃ¡ 
+vindo na sua direÃ§Ã£o.
 ~
-157 131145 0 0 0 0
+157 adgr 0
 D5
 ~
 ~
@@ -765,64 +779,64 @@ D5
 S
 #15743
 Descendo Mais Depressa~
-   Você literalmente desce muito mais depressa que se fosse pela escada.  
-Você cai do alto da torre, e o impacto com o chão não foi nada agradável.  
+   VocÃª literalmente desce muito mais depressa que se fosse pela escada.  
+VocÃª cai do alto da torre, e o impacto com o chÃ£o nÃ£o foi nada agradÃ¡vel.  
 Doeu.
 ~
-157 6 0 0 0 0
+157 bc 0
 S
-#15744
+#15744 
 A Torre de Apoio~
-   Nossa!  Que medo!  Você pensou que existiria alguma criatura de 7 cabeças 
-aqui, mas tudo o que encontrou foi um velho esqueleto.  Agora, você sabe que 
-veio para o caminho errado...  Voltar é a única saída.
-~
-157 131145 0 0 0 0
+   Nossa!  Que medo!  VocÃª pensou que existiria alguma criatura de 7 cabeÃ§as 
+aqui, mas tudo o que encontrou foi um velho esqueleto.  Agora, vocÃª sabe que 
+veio para o caminho errado...  Voltar Ã© a Ãºnica saÃ­da.
+~ 
+157 adgr 0
 D1
 ~
 ~
 0 -1 15741
 S
-#15745
+#15745 
 A Torre de Apoio~
-   Nossa!  Que medo!  Você pensou que existiria alguma criatura de 7 cabeças 
-aqui, mas tudo o que encontrou foi um velho esqueleto.  Agora, você sabe que 
-veio para o caminho errado...  Voltar é a única saída.
+   Nossa!  Que medo!  VocÃª pensou que existiria alguma criatura de 7 cabeÃ§as 
+aqui, mas tudo o que encontrou foi um velho esqueleto.  Agora, vocÃª sabe que 
+veio para o caminho errado...  Voltar Ã© a Ãºnica saÃ­da.
 ~
-157 131145 0 0 0 0
+157 adgr 0
+D3
+VocÃª tenta, mas nÃ£o consegue ver nada. 
+~
+~
+0 -1 15741
 D1
-Você tenta, mas não consegue ver nada. 
+VocÃª tenta, mas nÃ£o consegue ver nada. 
 ~
 ~
 0 -1 15743
-D3
-Você tenta, mas não consegue ver nada. 
-~
-~
-0 -1 15741
 S
 #15746
 Um Pequeno Aposento~
-   Um quarto quase igual ao Quarto real.  Ao ver bonecas, e vários outros 
-tipos de brinquedos espalhados, você julga que este deve ser o aposento de 
-uma criança, provavelmente da princesa.  Mesmo no quarto de uma criança, o 
-clima sinistro não deixa de existir...  Isso já está te dando alguns cabelos 
+   Um quarto quase igual ao Quarto real.  Ao ver bonecas, e vÃ¡rios outros 
+tipos de brinquedos espalhados, vocÃª julga que este deve ser o aposento de 
+uma crianÃ§a, provavelmente da princesa.  Mesmo no quarto de uma crianÃ§a, o 
+clima sinistro nÃ£o deixa de existir...  Isso jÃ¡ estÃ¡ te dando alguns cabelos 
 brancos...
 ~
-157 131145 0 0 0 0
-D3
+157 adgr 0
+D3 
 ~
 ~
 0 -1 15731
 S
-#15747
+#15747 
 O Celeiro~
-   Argh, que cheiro horrível!  Os cavalos aqui presentes infestaram o local 
-com um cheiro insuportável, que lhe faz sair dali agora, antes que desmaie.  
-Mesmo com o cheiro, você não pôde deixar de perceber que os cavalos também 
-estavam imóveis...
+   Argh, que cheiro horrÃ­vel!  Os cavalos aqui presentes infestaram o local 
+com um cheiro insuportÃ¡vel, que lhe faz sair dali agora, antes que desmaie.  
+Mesmo com o cheiro, vocÃª nÃ£o pÃ´de deixar de perceber que os cavalos tambÃ©m 
+estavam imÃ³veis...
 ~
-157 65 0 0 0 0
+157 ag 0
 D3
 ~
 ~
@@ -830,12 +844,12 @@ D3
 S
 #15748
 O Curral~
-   Argh, que cheiro horrível!  As vacas aqui presentes infestaram o local 
-com um cheiro insuportável, que lhe faz sair dali agora, antes que desmaie. 
-   Mesmo com o cheiro, você não pôde deixar de perceber que as vacas também 
-tinham algo de estranho...  Estavam imóveis.
+   Argh, que cheiro horrÃ­vel!  As vacas aqui presentes infestaram o local 
+com um cheiro insuportÃ¡vel, que lhe faz sair dali agora, antes que desmaie. 
+   Mesmo com o cheiro, vocÃª nÃ£o pÃ´de deixar de perceber que as vacas tambÃ©m 
+tinham algo de estranho...  Estavam imÃ³veis.
 ~
-157 65 0 0 0 0
+157 ag 0
 D1
 ~
 ~
@@ -843,12 +857,12 @@ D1
 S
 #15749
 O Chiqueiro~
-   Foi a gota d'água!  Aqui você não fica nem por 10 segundos.  O cheiro é 5 
-vezes pior que o cheiro do curral ou do celeiro.  O silêncio incomoda, mas o 
-cheiro é insuportável!  Sair daqui e nunca mais voltar parece ser uma ótima 
-idéia.
+   Foi a gota d'Ã¡gua!  Aqui vocÃª nÃ£o fica nem por 10 segundos.  O cheiro Ã© 5 
+vezes pior que o cheiro do curral ou do celeiro.  O silÃªncio incomoda, mas o 
+cheiro Ã© insuportÃ¡vel!  Sair daqui e nunca mais voltar parece ser uma Ã³tima 
+idÃ©ia.
 ~
-157 65 0 0 0 0
+157 ag 0
 D7
 ~
 ~
@@ -856,27 +870,27 @@ D7
 S
 #15750
 O Galinheiro~
-   É...  O cheiro daqui não é tão ruim assim, dá para agüentar.  E você 
-começa a pensar: até os animais estão imóveis...  Mas as vacas continuam 
+   Ã‰...  O cheiro daqui nÃ£o Ã© tÃ£o ruim assim, dÃ¡ para agÃ¼entar.  E vocÃª 
+comeÃ§a a pensar: atÃ© os animais estÃ£o imÃ³veis...  Mas as vacas continuam 
 dando leite, e as galinhas continuam botando ovos.  Mesmo quase mortos, o 
-animais não param de fazer o que devem...  Muito estranho.
+animais nÃ£o param de fazer o que devem...  Muito estranho.
 ~
-157 65 0 0 0 0
+157 ag 0
 D6
 ~
 ~
 0 -1 15726
 S
 #15751
-A Plantação de Cenoura~
-   "Que fome!  As cenouras parecem estar boas!"  Você pensa... e estão, de 
-fato.  Uma plantação de cenoura!  Há quanto tempo você não via uma!  Há 
-quanto tempo você não comia uma!  É uma das plantações mais bem cuidadas que 
-você já viu. 
-   Ao longe, você avista uma simples mulher, que colhe as cenouras e as 
-coloca num cesto, não é preciso dizer o que essa mulher tem de estranho...
+A PlantaÃ§Ã£o de Cenoura~
+   "Que fome!  As cenouras parecem estar boas!"  VocÃª pensa... e estÃ£o, de 
+fato.  Uma plantaÃ§Ã£o de cenoura!  HÃ¡ quanto tempo vocÃª nÃ£o via uma!  HÃ¡ 
+quanto tempo vocÃª nÃ£o comia uma!  Ã‰ uma das plantaÃ§Ãµes mais bem cuidadas que 
+vocÃª jÃ¡ viu. 
+   Ao longe, vocÃª avista uma simples mulher, que colhe as cenouras e as 
+coloca num cesto, nÃ£o Ã© preciso dizer o que essa mulher tem de estranho...
 ~
-157 65 0 0 0 0
+157 ag 0
 D0
 ~
 ~
@@ -892,72 +906,76 @@ D3
 S
 #15752
 Milharal~
-   Tá aí um vegetal que você não sabe para que serve.  Ele é muito duro, e 
-machuca os dentes.  Mas se existe, é porque alguma utilidade ele deve ter.  
-E não lhe cabe descobrir qual é.  Seu dever agora é desvendar todo o mistério 
+   TÃ¡ aÃ­ um vegetal que vocÃª nÃ£o sabe para que serve.  Ele Ã© muito duro, e 
+machuca os dentes.  Mas se existe, Ã© porque alguma utilidade ele deve ter.  
+E nÃ£o lhe cabe descobrir qual Ã©.  Seu dever agora Ã© desvendar todo o mistÃ©rio 
 que ronda esse local...  Ou sair dele imediatamente.
 ~
-157 65 0 0 0 0
-D2
-~
-~
-0 -1 15755
+157 ag 0
 D3
 ~
 ~
 0 -1 15751
-S
-#15753
-A Plantação de Morangos~
-   "Morangos!  Que delícia!"  Estão vermelhinhos e se demorar mais um dia 
-para serem degustados, irão apodrecer.  E é querendo evitar esse desperdício 
-que uma simples mulher os está(va) colhendo.
+D2
 ~
-157 65 0 0 0 0
+~
+0 -1 15755
+S
+#15753 
+A PlantaÃ§Ã£o de Morangos~
+   "Morangos!  Que delÃ­cia!"  EstÃ£o vermelhinhos e se demorar mais um dia 
+para serem degustados, irÃ£o apodrecer.  E Ã© querendo evitar esse desperdÃ­cio 
+que uma simples mulher os estÃ¡(va) colhendo.
+~
+157 ag 0
 D1
 ~
 ~
 0 -1 15751
 D2
 ~
-porta depósito~
-1 15702 15754
+porta deposito~
+:n 2 a porta do depÃ³sito
+ab 15702 15754
 S
 #15754
-O Depósito~
-   Milho, morango, leite, ovos, trigo...  Uma infinidade de coisas está 
-depositada aqui.  E estão separadas, cada tipo em uma cesta.  Morangos em 
-uma, milhos em outra...  Cada cesta está destinada a uma pessoa.
+O DepÃ³sito~
+   Milho, morango, leite, ovos, trigo...  Uma infinidade de coisas estÃ¡ 
+depositada aqui.  E estÃ£o separadas, cada tipo em uma cesta.  Morangos em 
+uma, milhos em outra...  Cada cesta estÃ¡ destinada a uma pessoa.
 ~
-157 73 0 0 0 0
+157 adg 0
 D0
 ~
 porta~
-1 15702 15753
+:n 2 a porta
+a 15702 15753
 S
-#15755
-A Plantação de Trigo~
-   Aqui não existe nada de especial...  É apenas uma plantação de trigo.  O 
-mais incrível, é que você sente o vento, mas não vê a plantação se mexendo, 
-nem um pouquinho...  Ela permanece imóvel.
+#15755 
+A PlantaÃ§Ã£o de Trigo~
+   Aqui nÃ£o existe nada de especial...  Ã‰ apenas uma plantaÃ§Ã£o de trigo.  O 
+mais incrÃ­vel, Ã© que vocÃª sente o vento, mas nÃ£o vÃª a plantaÃ§Ã£o se mexendo, 
+nem um pouquinho...  Ela permanece imÃ³vel.
 ~
-157 65 0 0 0 0
+157 ag 0
 D0
 ~
 ~
 0 -1 15752
 S
 #15756
-A Ascensão~
-   Essa é a sala onde a Ave de Fogo depositava seus pertences mais 
-preciosos.  Será que, após tantos séculos fechada, essa sala ainda
+A AscensÃ£o~
+   Essa Ã© a sala onde a Ave de Fogo depositava seus pertences mais 
+preciosos.  SerÃ¡ que, apÃ³s tantos sÃ©culos fechada, essa sala ainda
 guarda algo de valioso?
 ~
-157 137 0 0 0 0
+157 adh 0
+OO 1
 D4
 Um lugar conhecido por todos.
 ~
 porta grande~
-1 15705 5025
+:n 2 a grande porta
+ab 15705 5025
 S
 $~
