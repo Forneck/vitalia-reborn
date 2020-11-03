@@ -1572,7 +1572,8 @@ new_spell->assign[0].level = 109;
  new_spell->messages.wear_off = strdup("A aura de fogo ao redor de seu corpo desaparece.");
  spedit_save_internally(new_spell);
 
- CREATE(new_spell, struct str_spells, 1);
+  //spell portal 65
+  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
  new_spell->vnum = SPELL_PORTAL;
@@ -1584,7 +1585,7 @@ new_spell->assign[0].level = 109;
  new_spell->targ_flags = TAR_CHAR_WORLD | TAR_NOT_SELF;
  new_spell->mag_flags = MAG_MANUAL;
  new_spell->effectiveness = strdup("100");
- sprintf(buf, "(30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5");
+ sprintf(buf, "(160 - (5 * self.level)) > 90 ? (160 - (5 * self.level)) : 90");
  new_spell->assign[0].class_num = CLASS_MAGIC_USER;
  new_spell->assign[0].level = 90;
  new_spell->assign[0].num_mana = strdup(buf);
@@ -1713,8 +1714,8 @@ new_spell->vnum = SPELL_DISINTEGRATE;
  new_spell->messages.wear_off = strdup("Você pode andar novamente.");
  spedit_save_internally(new_spell);
  
- /* SPELL_aid #65
- CREATE(new_spell, struct str_spells, 1);
+ // SPELL_aid #65
+CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
  new_spell->vnum = SPELL_AID;
@@ -1723,15 +1724,20 @@ new_spell->vnum = SPELL_DISINTEGRATE;
  new_spell->type = SPELL;
  new_spell->min_pos = POS_STANDING;
  new_spell->targ_flags = TAR_CHAR_ROOM | TAR_SELF_ONLY;
- new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR |  MAG_POINTS | MAG_UNAFFECTS;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR |  MAG_POINTS;
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(180 - (5 * self.level)) > 120 ? (180 - (5 * self.level)) : 120");
+  new_spell->assign[0].class_num = CLASS_CLERIC;
+ new_spell->assign[0].level = 45;
+ new_spell->assign[0].num_mana = strdup(buf);
  new_spell->applies[0].duration = strdup("self.level/5");
+ new_spell->applies[0].appl_num = APPLY_HIT;
+ new_spell->applies[0].modifier = strdup("victim.maxhit/6<120?victim.maxhit/6 : 120");
   new_spell->messages.wear_off = strdup("Você sente seu corpo menos resistente.");
  new_spell->messages.to_vict = strdup("Você sente seu corpo mais resistente.");
   spedit_save_internally(new_spell);
- */
  
+
  
  // SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
