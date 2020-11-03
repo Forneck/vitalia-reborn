@@ -206,7 +206,7 @@ void create_spells_db()
  new_spell->applies[1].modifier = strdup(buf);
  new_spell->applies[1].duration = strdup("6");
  new_spell->messages.to_self = strdup("$p brilha por alguns instantes.");
- new_spell->messages.to_vict = strdup("Você se sente $x(virtuoso,virtuosa).");
+ new_spell->messages.to_vict = strdup("Você se sente virtuos$r.");
  new_spell->messages.wear_off = strdup("Você se sente menos abençoad$r.");
 
  spedit_save_internally(new_spell);
@@ -1825,7 +1825,45 @@ new_spell->vnum = SPELL_SKIN_LIKE_DIAMOND;
  new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
  spedit_save_internally(new_spell);
  
- // SKILL_BACKSTAB # 131 
+    //spell_BURST_OF_FLAME 71
+CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+new_spell->vnum = SPELL_BURST_OF_FLAME;
+ new_spell->status = available;
+ new_spell->name = strdup("burst of flame");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_FIGHT_VICT;
+ new_spell->mag_flags = MAG_DAMAGE | MAG_VIOLENT;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(20 - (3 * self.level)) > 10 ? (20 - (3 * self.level)) : 20");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 1;
+ new_spell->assign[0].num_mana = strdup(buf);
+  new_spell->damages = strdup ("dice(3, self.class == 4 ? 5 : 3) + self.class == 4 ? 6 : 4");
+ new_spell->max_dam = 100;
+ spedit_save_internally(new_spell);
+ 
+     //spell_BURST_OF_FLAME 71
+CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+new_spell->vnum = SPELL_BURST_OF_FIRE;
+ new_spell->status = available;
+ new_spell->name = strdup("burst of fire");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_FIGHT_VICT;
+ new_spell->mag_flags = MAG_DAMAGE | MAG_VIOLENT;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(25 - (3 * self.level)) > 15 ? (25 - (3 * self.level)) : 25");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 5;
+ new_spell->assign[0].num_mana = strdup(buf);
+  new_spell->damages = strdup ("dice(3, self.class == 4 ? 7 : 5) + self.class == 4 ? 9 : 6");
+ new_spell->max_dam = 100;
+ spedit_save_internally(new_spell);
+ 
+// SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
