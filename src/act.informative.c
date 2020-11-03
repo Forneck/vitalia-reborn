@@ -382,7 +382,7 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
 		if (AFF_FLAGGED(i, AFF_FIREFLIES))
 			act("\tG...$l está rodead$r por vaga-lumes!\tn", FALSE, i, 0, ch, TO_VICT);
 		if (AFF_FLAGGED(i, AFF_THISTLECOAT))
-			act("\ty...$l está protegid$r por uma barreira espinhos!\tn", FALSE, i, 0, ch,TO_VICT);
+			act("\ty...$l está protegid$r por uma barreira de espinhos!\tn", FALSE, i, 0, ch,TO_VICT);
 		if (AFF_FLAGGED(i, AFF_SOUNDBARRIER))
 			act("\tc...$l está envolt$r por uma protetora barreira de som!\tn", FALSE, i, 0, ch,TO_VICT);
 		return;
