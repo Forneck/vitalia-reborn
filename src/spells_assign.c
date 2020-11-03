@@ -1025,7 +1025,6 @@ void create_spells_db()
  // SPELL_SANCTUARY # 36
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
-
  new_spell->vnum = SPELL_SANCTUARY;
  new_spell->status = available;
  new_spell->name = strdup("sanctuary");
@@ -1902,8 +1901,29 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->assign[1].num_mana = strdup(buf);
  new_spell->messages.to_vict = strdup("Você se sente mais dispost$r.");
  new_spell->points.move = strdup("dice(1, 8) + 1 + (param / 4)");
+ spedit_save_internally(new_spell);
  
-  spedit_save_internally(new_spell);
+  // SPELL_MINOR_HEALING	     75
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SPELL_MINOR_HEALING;
+ new_spell->status = available;
+ new_spell->name = strdup("minor healing");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_CHAR_ROOM;
+ new_spell->mag_flags = MAG_POINTS;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 15;
+ new_spell->assign[0].num_mana = strdup(buf);
+  new_spell->assign[0].class_num = CLASS_RANGER;
+ new_spell->assign[0].level = 18;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->messages.to_vict = strdup("Uma onda de calor atravessa seu corpo, fazendo você se sentir melhor.\r\n");
+ new_spell->points.hp = strdup("dice(2, 8) + 2 + (param / 4)");
+ spedit_save_internally(new_spell);
  
 // SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
