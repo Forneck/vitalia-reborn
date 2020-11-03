@@ -373,10 +373,9 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
 		if (AFF_FLAGGED(i, AFF_SANCTUARY))
 			act("\tW...$l brilha com uma luz branca!", FALSE, i, 0, ch, TO_VICT);
 		else if (AFF_FLAGGED(i, AFF_GLOOMSHIELD))
-			act("\tL...$l é resguardad$r por um espesso escudo de trevas!", FALSE, i, 0, ch,
-				TO_VICT);
-		if (AFF_FLAGGED(i, AFF_FIRESHIELD))
-			act("\tR...$l está envolvid$r por uma aura de fogo!\tn", FALSE, i, 0, ch, TO_VICT);
+			act("\tL...$l é resguardad$r por um espesso escudo de trevas!", FALSE, i, 0, ch,TO_VICT);
+		if (AFF_FLAGGED(i,AFF_FIRESHIELD))
+			act("\tR...$l está envolvid$r por uma aura de fogo!!!\tn", FALSE, i, 0, ch, TO_VICT);
 		if (AFF_FLAGGED(i, AFF_BLIND))
 			act("\tw...$l está tateando ao redor, ceg$r!\tn", FALSE, i, 0, ch, TO_VICT);
 		if (AFF_FLAGGED(i, AFF_FIREFLIES))
@@ -410,8 +409,6 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
 		send_to_char(ch, "%s (construindo)", CBRED(ch, C_NRM));
 	if (!IS_NPC(i) && PRF_FLAGGED(i, PRF_AFK))
 		send_to_char(ch, "%s (%saway%s)", CCGRN(ch, C_NRM), CCCYN(ch, C_CMP), CCGRN(ch, C_CMP));
-
-    send_to_char(ch,"%s",CCGRN(ch, C_NRM));
 
 	if (GET_POS(i) != POS_FIGHTING)
 	{
@@ -546,9 +543,8 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
 	send_to_char(ch, "\ty\r\n");
 	if (AFF_FLAGGED(i, AFF_SANCTUARY))
 		act("\tW...$l brilha com uma luz branca!\tn", FALSE, i, 0, ch, TO_VICT);
-	else if (AFF_FLAGGED(i, AFF_GLOOMSHIELD))
-		act("\tL...$l é resguardad$r por um espesso escudo de trevas!\tn", FALSE, i, 0, ch,
-			TO_VICT);
+	else if (AFF_FLAGGED(i, AFF_GLOOMSHIELD)){
+		act("\tL...$l é resguardad$r por um espesso escudo de trevas!\tn", FALSE, i, 0, ch, TO_VICT);}
 	if (AFF_FLAGGED(i, AFF_FIRESHIELD))
 		act("\tR...$l está envolvid$r por uma aura de fogo!\tn", FALSE, i, 0, ch, TO_VICT);
 	if (AFF_FLAGGED(i, AFF_BLIND))
@@ -560,7 +556,6 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
 	if (AFF_FLAGGED(i, AFF_SOUNDBARRIER))
 		act("\tc...$l está envolt$r por uma protetora barreira de som!\tn", FALSE, i, 0, ch,
 			TO_VICT);
-
 }
 
 static void list_char_to_char(struct char_data *list, struct char_data *ch)
