@@ -409,7 +409,9 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
 	if (!IS_NPC(i) && PRF_FLAGGED(i, PRF_BUILDWALK))
 		send_to_char(ch, "%s (construindo)", CBRED(ch, C_NRM));
 	if (!IS_NPC(i) && PRF_FLAGGED(i, PRF_AFK))
-		send_to_char(ch, "%s (%saway%s)%s", CCGRN(ch, C_NRM), CCCYN(ch, C_CMP), CCGRN(ch, C_CMP),CCGRN(ch, C_NRM));
+		send_to_char(ch, "%s (%saway%s)", CCGRN(ch, C_NRM), CCCYN(ch, C_CMP), CCGRN(ch, C_CMP));
+
+    send_to_char(ch,"%s",CCGRN(ch, C_NRM));
 
 	if (GET_POS(i) != POS_FIGHTING)
 	{
