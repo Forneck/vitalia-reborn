@@ -6071,7 +6071,7 @@ ACMD(do_ressucite)
 		send_to_char(ch, "Não vejo tal jogador.\r\n");
 		return; 
 	}
-	else if (ch == vict)
+	else if ((ch == vict) && (GET_LEVEL(ch)<LVL_IMMORT))
 		send_to_char(ch, "Engraçado, não?...\r\n");
 	else if (IS_NPC(vict))
 		send_to_char(ch, "Somente jogadores podem ser ressucitados.\r\n");
