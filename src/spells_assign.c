@@ -1901,7 +1901,7 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->assign[1].level = 15;
  new_spell->assign[1].num_mana = strdup(buf);
  new_spell->messages.to_vict = strdup("Você se sente mais dispost$r.");
- new_spell->points.mov = strdup("dice(1, 8) + 1 + (param / 4)");
+ new_spell->points.move = strdup("dice(1, 8) + 1 + (param / 4)");
  
   spedit_save_internally(new_spell);
  
