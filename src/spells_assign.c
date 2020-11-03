@@ -1107,7 +1107,7 @@ void create_spells_db()
  new_spell->assign[0].level = 8;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->applies[0].appl_num = APPLY_STR;
- new_spell->applies[0].modifier = strdup("1 + (param > 50)");
+ new_spell->applies[0].modifier = strdup("1 + (param > 18)");
  new_spell->applies[0].duration = strdup("(self.level / 2) + 4");
  new_spell->messages.to_vict = strdup("Você se sente mais forte!");
  new_spell->messages.wear_off = strdup("Você se sente mais frac$r.");
@@ -1423,7 +1423,7 @@ new_spell->assign[0].level = 109;
 
  spedit_save_internally(new_spell);
 
- // SPELL_FLY # 
+ // SPELL_FLY #63
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
@@ -1435,18 +1435,30 @@ new_spell->assign[0].level = 109;
  new_spell->targ_flags = TAR_CHAR_ROOM;
  new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
  new_spell->effectiveness = strdup("100");
- sprintf(buf, "(40 - (2 * self.level)) > 20 ? (40 - (2 * self.level)) : 20");
+ sprintf(buf, "(80 - (3 * self.level)) > 40 ? (80 - (3 * self.level)) : 40");
  new_spell->assign[0].class_num = CLASS_MAGIC_USER;
- new_spell->assign[0].level = 22;
+ new_spell->assign[0].level = 18;
  new_spell->assign[0].num_mana = strdup(buf);
- new_spell->applies[0].appl_num = AFF_FLYING + NUM_APPLIES;
- new_spell->applies[0].duration = strdup("24");
- new_spell->messages.to_vict = strdup("You float above the ground.");
- new_spell->messages.wear_off = strdup("You drift slowly to the ground.");
+  new_spell->assign[1].class_num = CLASS_CLERIC;
+ new_spell->assign[1].level = 65;
+ new_spell->assign[1].num_mana = strdup(buf);
+ new_spell->assign[2].class_num = CLASS_DRUID;
+ new_spell->assign[2].level = 75;
+ new_spell->assign[2].num_mana = strdup(buf);
+ new_spell->assign[3].class_num = CLASS_RANGER;
+ new_spell->assign[3].level = 42;
+ new_spell->assign[3].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = AFF_LIGHT + NUM_APPLIES;
+ new_spell->applies[0].duration = strdup("4");
+ new_spell->applies[1].appl_num = APPLY_DEX;
+ new_spell->applies[1].modifier = strdup("1 + (param > 18)");
+  new_spell->applies[1].duration = strdup("1");
+ new_spell->messages.to_vict = strdup("Você se sente muito leve...");
+ new_spell->messages.wear_off = strdup("Você se sente pesad$r novamente.");
 
  spedit_save_internally(new_spell);
 
- // SPELL_DARKNESS # 54
+ // SPELL_DARKNESS # 92
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
@@ -1521,7 +1533,7 @@ new_spell->assign[0].level = 109;
  new_spell->name = strdup("stoneskin");
  new_spell->type = SPELL;
  new_spell->min_pos = POS_STANDING;
- new_spell->targ_flags = TAR_CHAR_ROOM | TAR_SELF_ONLY;
+ new_spell->targ_flags = TAR_CHAR_ROOM;
  new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(200 - (10 * self.level)) > 100 ? (200 - (10 * self.level)) : 100");
@@ -1556,7 +1568,7 @@ new_spell->assign[0].level = 109;
  new_spell->applies[0].modifier = strdup("-5");
  new_spell->applies[0].duration = strdup("self.level");
  new_spell->messages.to_vict = strdup("Uma ardente aura vermelha envolve você.");
-  new_spell->messages.to_room = strdup("Uma ardente aura vermelha envolve $n.");
+  new_spell->messages.to_room = strdup("Uma ardente aura vermelha envolve $N.");
  new_spell->messages.wear_off = strdup("A aura de fogo ao redor de seu corpo desaparece.");
  spedit_save_internally(new_spell);
 
@@ -1673,6 +1685,33 @@ new_spell->vnum = SPELL_DISINTEGRATE;
  new_spell->assign[3].num_mana = strdup(buf);
  new_spell->messages.to_vict = strdup("Você sente que não precisa mais respirar.\r\n");
  new_spell->messages.wear_off = strdup("Você sente necessidade de respirar novamente.");
+ spedit_save_internally(new_spell);
+ 
+  // SPELL_Paralyze #64
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_PARALYSE;
+ new_spell->status = available;
+ new_spell->name = strdup("paralyze");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(50 - (3 * self.level)) > 20 ? (50 - (3 * self.level)) : 20");
+ new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+ new_spell->assign[0].level = 22;
+ new_spell->assign[0].num_mana = strdup(buf);
+  new_spell->assign[1].class_num = CLASS_CLERIC;
+ new_spell->assign[1].level = 26;
+ new_spell->assign[1].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = AFF_PARALYSE;
+ new_spell->applies[0].duration = strdup("1");
+ new_spell->messages.to_vict = strdup("Você foi paralisad$r!");
+  new_spell->messages.to_room = strdup("$N foi paralisad$r!");
+ new_spell->messages.wear_off = strdup("Você pode andar novamente.");
+
  spedit_save_internally(new_spell);
  
  // SKILL_BACKSTAB # 131 
