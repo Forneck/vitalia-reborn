@@ -356,10 +356,10 @@ void create_spells_db()
  new_spell->mag_flags = MAG_SUMMONS;
  new_spell->effectiveness = strdup("50");
  new_spell->summon_mob = strdup("10");
- new_spell->summon_req = strdup("10221");
+// new_spell->summon_req = strdup("10221");
  sprintf(buf, "(80 - (5 * self.level)) > 65 ? (80 - (5 * self.level)) : 65");
  new_spell->assign[0].class_num = CLASS_MAGIC_USER;
- new_spell->assign[0].level = 100;
+ new_spell->assign[0].level = 10;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->messages.to_room = strdup("$N magicamente se divide!");
 
@@ -1255,10 +1255,10 @@ new_spell->assign[0].level = 109;
  new_spell->min_pos = POS_STANDING;
  new_spell->targ_flags = TAR_OBJ_ROOM;
  new_spell->mag_flags = MAG_SUMMONS;
- new_spell->effectiveness = strdup("100");
+ new_spell->effectiveness = strdup("50");
  new_spell->summon_mob = strdup("11");
  sprintf(buf, "(35 - (3 * self.level)) > 10 ? (35 - (3 * self.level)) : 10");
-   new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+   new_spell->assign[0].class_num = CLASS_CLERIC;
  new_spell->assign[0].level = 24;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->messages.to_room = strdup("$N anima um corpo!!");
@@ -1482,6 +1482,8 @@ new_spell->assign[0].level = 109;
 
  spedit_save_internally(new_spell);
  
+ 
+ //SPELL_TRANSPORT_VIA_PLANTS
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
@@ -1636,6 +1638,27 @@ new_spell->vnum = SPELL_DISINTEGRATE;
  new_spell->assign[0].level = 85;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->damages = strdup ("dice(3, self.class == 0 ? 8 : 6) + self.class == 0 ? 195 : 180");
+ spedit_save_internally(new_spell);
+ 
+  // SPELL_EVOKE_AIR_SERVANT # 57
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_EVOKE_AIR_SERVANT;
+ new_spell->status = available;
+ new_spell->name = strdup("evoke air servant");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_OBJ_ROOM;
+ new_spell->mag_flags = MAG_SUMMONS;
+ new_spell->effectiveness = strdup("50");
+ new_spell->summon_mob = strdup("19");
+ sprintf(buf, "(35 - (3 * self.level)) > 10 ? (35 - (3 * self.level)) : 10");
+   new_spell->assign[0].class_num = CLASS_RANGER;
+ new_spell->assign[0].level = 24;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->messages.to_room = strdup("$N invoca um servo aéreo!!");
+
  spedit_save_internally(new_spell);
  
  // spell_talkdead #58
