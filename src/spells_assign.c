@@ -1475,9 +1475,7 @@ new_spell->assign[0].level = 109;
  new_spell->mag_flags = MAG_ROOMS;
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5");
- new_spell->assign[0].class_num = CLASS_CLERIC;
- new_spell->assign[0].level = 12;
- new_spell->assign[0].num_mana = strdup(buf);
+
  new_spell->messages.to_self = strdup("You cast a shroud of darkness upon the area.");
  new_spell->messages.to_room = strdup("$N casts a shroud of darkness upon this area.");
 
