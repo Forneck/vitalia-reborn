@@ -327,14 +327,13 @@
 #define AFF_PROTECT_GOOD   14   /**< Char protected from good */
 #define AFF_SLEEP          15   /**< (R) Char magically asleep */
 #define AFF_NOTRACK        16   /**< Char can't be tracked */
-#define AFF_FLYING         17   /**< Char is flying */
 #define AFF_STONESKIN        18
 #define AFF_FIRESHIELD        19
 #define AFF_SNEAK          20   /**< Char can move quietly */
 #define AFF_HIDE           21   /**< Char is hidden */
 #define AFF_TALKDEAD        22
 #define AFF_CHARM          23 /**< Char is charmed */
-#define AFF_FLY 24
+#define AFF_FLYING 24 /**< Char is Flying" **/
 #define AFF_BREATH         25   /**< Char  can breathe underwater */
 #define AFF_PARALIZE 26
 #define AFF_LIGHT        27
@@ -346,7 +345,6 @@
 #define AFF_ALLEGRO       33
 #define AFF_GLOOMSHIELD        34
 #define AFF_PROTECT        35   /**< Char protected from spell */
-
 /** Total number of affect flags */
 #define NUM_AFF_FLAGS   35
 
