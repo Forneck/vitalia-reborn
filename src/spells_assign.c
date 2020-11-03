@@ -1755,7 +1755,7 @@ new_spell->vnum = SPELL_SKIN_LIKE_WOOD;
  new_spell->applies[0].appl_num = APPLY_AC;
  new_spell->applies[0].modifier = strdup("-15");
  new_spell->applies[0].duration = strdup("24");
- new_spell->messages.to_vict = strdup("Você se sente $x(protegido,protegida) pelo GRANDE CARVALHO.");
+ new_spell->messages.to_vict = strdup("Você se sente protegid$r pelo GRANDE CARVALHO.");
  new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
  spedit_save_internally(new_spell);
  
@@ -1777,7 +1777,7 @@ new_spell->vnum = SPELL_SKIN_LIKE_ROCK;
  new_spell->applies[0].appl_num = APPLY_AC;
  new_spell->applies[0].modifier = strdup("-35");
  new_spell->applies[0].duration = strdup("24");
- new_spell->messages.to_vict = strdup("Você se sente $x(protegido,protegida) pelas MONTANHAS DRAGONHELM.");
+ new_spell->messages.to_vict = strdup("Você se sente protegid$ pelas MONTANHAS DRAGONHELM.");
  new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
  spedit_save_internally(new_spell);
  
@@ -1799,7 +1799,7 @@ new_spell->vnum = SPELL_SKIN_LIKE_STEEL;
  new_spell->applies[0].appl_num = APPLY_AC;
  new_spell->applies[0].modifier = strdup("-60");
  new_spell->applies[0].duration = strdup("24");
- new_spell->messages.to_vict = strdup("Você se sente $x(protegido,protegida) pelo aço.");
+ new_spell->messages.to_vict = strdup("Você se sente protegid$r pelo aço.");
  new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
  spedit_save_internally(new_spell);
  
@@ -1821,7 +1821,7 @@ new_spell->vnum = SPELL_SKIN_LIKE_DIAMOND;
  new_spell->applies[0].appl_num = APPLY_AC;
  new_spell->applies[0].modifier = strdup("-90");
  new_spell->applies[0].duration = strdup("24");
- new_spell->messages.to_vict = strdup("Você se sente $x(protegido,protegida)  como uma pedra preciosa.");
+ new_spell->messages.to_vict = strdup("Você se sente protegid$r como uma pedra preciosa.");
  new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
  spedit_save_internally(new_spell);
  
