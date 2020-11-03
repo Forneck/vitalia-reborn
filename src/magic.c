@@ -612,8 +612,7 @@ int mag_summons(int level, struct char_data *ch, struct obj_data *obj, int spell
 
 	if (spellnum == SPELL_ANIMATE_DEAD)
 	{
-//		if (obj == NULL || !IS_CORPSE(obj))
-     	if (!IS_CORPSE(obj))
+		if (obj == NULL || !IS_CORPSE(obj))
 		{
 			act(mag_summon_fail_msgs[7], FALSE, ch, 0, 0, TO_CHAR);
 			return MAGIC_FAILED;
