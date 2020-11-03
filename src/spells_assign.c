@@ -1150,9 +1150,10 @@ void create_spells_db()
  new_spell->type = SPELL;
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15");
- new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+/*new_spell->assign[0].class_num = CLASS_MAGIC_USER;
 new_spell->assign[0].level = 109;
  new_spell->assign[0].num_mana = strdup(buf);
+ */
  spedit_save_internally(new_spell) ;
 
  // SPELL_WORD_OF_RECALL # 42
@@ -1451,11 +1452,11 @@ new_spell->assign[0].level = 109;
  new_spell->assign[3].class_num = CLASS_RANGER;
  new_spell->assign[3].level = 42;
  new_spell->assign[3].num_mana = strdup(buf);
- new_spell->applies[0].appl_num = AFF_LIGHT + NUM_APPLIES;
- new_spell->applies[0].duration = strdup("4");
- new_spell->applies[1].appl_num = APPLY_DEX;
- new_spell->applies[1].modifier = strdup("1 + (param > 18)");
-  new_spell->applies[1].duration = strdup("1");
+ new_spell->applies[0].appl_num = APPLY_DEX;
+ new_spell->applies[0].modifier = strdup("1 + (param > 18)");
+  new_spell->applies[0].duration = strdup("1");
+   new_spell->applies[1].appl_num = AFF_LIGHT + NUM_APPLIES;
+ new_spell->applies[1].duration = strdup("4");
  new_spell->messages.to_vict = strdup("Você se sente muito leve...");
  new_spell->messages.wear_off = strdup("Você se sente pesad$r novamente.");
 
@@ -1572,7 +1573,7 @@ new_spell->assign[0].level = 109;
  new_spell->applies[0].appl_num = APPLY_AC;
  new_spell->applies[0].modifier = strdup("-5");
  new_spell->applies[0].duration = strdup("self.level");
-new_spell->applies[1].appl_num = AFF_FIRESHIELD;
+new_spell->applies[1].appl_num = AFF_FIRESHIELD + NUM_APPLIES;
  new_spell->applies[1].duration = strdup("self.level"); 
  new_spell->messages.to_vict = strdup("Uma ardente aura vermelha envolve você.");
   new_spell->messages.to_room = strdup("Uma ardente aura vermelha envolve $N.");
@@ -1735,7 +1736,7 @@ sprintf(buf, "(130 - (3 * self.level)) > 120 ? (130 - (3 * self.level)) : 120 ")
   new_spell->assign[1].class_num = CLASS_CLERIC;
  new_spell->assign[1].level = 26;
  new_spell->assign[1].num_mana = strdup(buf);
- new_spell->applies[0].appl_num = AFF_PARALIZE;
+ new_spell->applies[0].appl_num = AFF_PARALIZE + NUM_APPLIES;
  new_spell->applies[0].duration = strdup("1");
  new_spell->messages.to_vict = strdup("Você foi paralisad$r!");
   new_spell->messages.to_room = strdup("$N foi paralisad$r!");
@@ -2013,7 +2014,7 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->applies[0].appl_num = APPLY_AC;
  new_spell->applies[0].modifier = strdup("-3");
  new_spell->applies[0].duration = strdup("13");
- new_spell->applies[1].appl_num = AFF_THISTLECOAT;
+ new_spell->applies[1].appl_num = AFF_THISTLECOAT + NUM_APPLIES;
   new_spell->applies[1].duration = strdup("13");
  new_spell->messages.to_vict = strdup("Você é recobert$r por um casaco de espinhos!");
   new_spell->messages.to_room = strdup("Um casaco de espinhos recobre $N.");
