@@ -6,7 +6,8 @@ greetings
 @W       << @wSe voce nao possui um personagem neste jogo, digite "@RNOVO@w".@W >>@n
 
 autoress/limits
-spells mage_iden,raise,ress,vamp (manual)
+spela feitos ate invigor
+falta spells mage_iden,raise,ress,vamp,..
 reroll
 clans
 
