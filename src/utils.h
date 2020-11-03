@@ -754,7 +754,7 @@ do                                                              \
 
 /** Defines if an obj is a corpse. */
 #define IS_CORPSE(obj)		(GET_OBJ_TYPE(obj) == ITEM_CONTAINER && \
-					GET_OBJ_VAL((obj), 3) == 1)
+					GET_OBJ_VAL((obj), 3) == 1) || (GET_OBJ_TYPE(obj) == ITEM_CORPSE)
 
 /** Can the obj be worn on body part? */
 #define CAN_WEAR(obj, part)	OBJWEAR_FLAGGED((obj), (part))
