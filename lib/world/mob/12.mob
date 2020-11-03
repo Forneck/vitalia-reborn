@@ -5,10 +5,11 @@ A Carteira Imortal está trabalhando pesado aqui.
 ~
 Espantoso... uma carteira trabalhadora... trabalhando?
 ~
-bnopv p 0 S
+2154498 0 0 0 65536 0 0 0 0 E
 105 0 -10 5d20+8000 15d15+5
 0 0
 8 8 2
+E
 #1202
 ser amorfo espirito vagueante~
 o espírito vagueante~
@@ -19,13 +20,14 @@ agora paga seus pecados fazendo trabalhos domésticos neste purgatório
 de almas.  Neste caso, estes trabalhos parecem ser a limpeza deste
 local para os Imortais.
 ~
-cgoqv dkps 0 S
+2179140 0 0 0 591888 0 0 0 0 E
 101 0 -10 5d20+8000 15d15+5
 0 0
-8 8 0
+9 9 0
+E
 #1290
 besta apocalipse~
-A Primeira Besta do Apocalipse~
+a Primeira Besta do Apocalipse~
 A Besta solta fumaca e ruidos para tormentar os homens.
 ~
 Saida do poco do abismo, soltando fumaca como uma fornalha, com
@@ -39,21 +41,21 @@ escorpiao, com ferroes e o poder de aflingir os homens...
 Cumpre a ordem de nao matar aos homens, mas de tormenta-los
 a ponto de buscarem a morte...
 ~
-cefglm hk -1000 E
+2103412 0 0 0 2304 0 0 0 -1000 E
 101 0 -8 1d1+4500 6d12+36
 0 200000
 8 8 0
 Str: 25
 StrAdd: 100
+Dex: 25
 Int: 16
 Wis: 16
-Dex: 25
 Con: 7
 Cha: 7
 E
 #1291
 fera apocalipse~
-A Primeira Fera do Apocalipse~
+a Primeira Fera do Apocalipse~
 A Primeira Fera reina sobre o mundo dos mortais.
 ~
 Essa fera tem 7 cabecas e 10 chifres, com diademas sobre os chifres...
@@ -63,21 +65,21 @@ Ela possui a grande autoridade do trono do Dragao...
 Uma de suas cabecas tem uma grande cicatriz, e por causa dessa cicatriz todos
 seguem a Fera para prostarem-se diante do Dragao
 ~
-cefglm hk -1000 E
+2103412 0 0 0 2304 0 0 0 -1000 E
 102 0 -10 1d1+6000 9d12+44
 0 300000
 8 8 0
 Str: 25
 StrAdd: 100
+Dex: 25
 Int: 16
 Wis: 16
-Dex: 25
 Con: 7
 Cha: 7
 E
 #1292
 fera apocalipse~
-A Segunda Fera do Apocalipse~
+a Segunda Fera do Apocalipse~
 A Segunda Fera faz cumprir a vontade da Primeira Fera.
 ~
 Essa fera tem dois chifres como um cordeiro, mas fala como um dragao...
@@ -90,15 +92,15 @@ Essa mesma Fera fez com que todos os homens fossem marcados com
 o nome da Fera, na mao direita e na fronte, com o numero da Fera,
 e esse numero e' seiscentos e sessenta e seis.
 ~
-cefglm hk -1000 E
+2103412 0 0 0 2304 0 0 0 -1000 E
 104 0 -11 1d1+7500 12d12+46
 0 400000
 8 8 0
 Str: 25
 StrAdd: 100
+Dex: 25
 Int: 16
 Wis: 16
-Dex: 25
 Con: 7
 Cha: 7
 E
@@ -113,15 +115,15 @@ Agua, a segunda Ar e a terceira Terra, exalando Fogo pelas
 narinas e com o poder de acabar com a vida daqueles que
 o desafiarem...
 ~
-cefglm hk -1000 E
+2103412 0 0 0 2304 0 0 0 -1000 E
 105 0 -12 1d1+10000 13d13+50
 0 500000
 8 8 0
 Str: 25
 StrAdd: 100
+Dex: 25
 Int: 16
 Wis: 16
-Dex: 25
 Con: 7
 Cha: 7
 E

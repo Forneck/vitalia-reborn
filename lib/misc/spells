@@ -352,8 +352,6 @@
  4 100
  1 P 41 1 0 0 0 0
  2 ventriloquate
-90 0 109 
-99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
  4 100
  1 P 42 1 2 1024 7 0
  2 word of recall
@@ -475,7 +473,7 @@
 13 Uma ardente aura vermelha envolve $N.
 80 17 -5
 99 self.level
-81 19 
+81 44 
 99 self.level
 90 0 31 
 99 (150 - (10 * self.level)) > 100 ? (150 - (10 * self.level)) : 100
@@ -534,10 +532,10 @@
  2 fly
 10 Você se sente pesad$r novamente.
 12 Você se sente muito leve...
-80 52 
-99 4
-81 2 1 + (param > 18)
+80 2 1 + (param > 18)
 99 1
+81 52 
+99 4
 90 0 18 
 99 (80 - (3 * self.level)) > 40 ? (80 - (3 * self.level)) : 40
 91 1 65 
@@ -552,7 +550,7 @@
 10 Você pode andar novamente.
 12 Você foi paralisad$r!
 13 $N foi paralisad$r!
-80 26 
+80 51 
 99 1
 90 0 22 
 99 (50 - (3 * self.level)) > 20 ? (50 - (3 * self.level)) : 20
@@ -668,7 +666,7 @@
 13 Um casaco de espinhos recobre $N.
 80 17 -3
 99 13
-81 30 
+81 55 
 99 13
 90 4 8 
 99 (30 - (3 * self.level)) > 20 ? (30 - (3* self.level)) : 20
@@ -682,8 +680,6 @@
  2 darkness
 11 You cast a shroud of darkness upon the area.
 13 $N casts a shroud of darkness upon this area.
-90 1 12 
-99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
  4 100
  1 P 93 1 256 1024 8 0
  2 transport via plants
