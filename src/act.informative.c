@@ -375,7 +375,7 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
 		else if (AFF_FLAGGED(i, AFF_GLOOMSHIELD))
 			act("\tL...$l é resguardad$r por um espesso escudo de trevas!", FALSE, i, 0, ch,TO_VICT);
 		if (AFF_FLAGGED(i,AFF_FIRESHIELD))
-			act("\tR...$l está envolvid$r por uma aura de fogo!!!\tn", FALSE, i, 0, ch, TO_VICT);
+			act("\tR...$l está envolvid$r por uma aura de fogo!\tn", FALSE, i, 0, ch, TO_VICT);
 		if (AFF_FLAGGED(i, AFF_BLIND))
 			act("\tw...$l está tateando ao redor, ceg$r!\tn", FALSE, i, 0, ch, TO_VICT);
 		if (AFF_FLAGGED(i, AFF_FIREFLIES))
