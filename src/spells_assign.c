@@ -1525,7 +1525,7 @@ new_spell->assign[0].level = 109;
  new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(200 - (10 * self.level)) > 100 ? (200 - (10 * self.level)) : 100");
- new_spell->assign[0].class_num = CLASS_CLASS_CLERIC;
+ new_spell->assign[0].class_num = CLASS_CLERIC;
  new_spell->assign[0].level = 90
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->applies[0].appl_num = AFF_STONESKIN + NUM_APPLIES;
