@@ -1,7 +1,7 @@
 #186
 Vitalia~
 Zona dos Iniciantes~
-18600 18699 10 2 j 0 0 0 -1 -1
+18600 18699 10 2 jk 0 0 0 -1 -1
 M 0 18602 3 18600 	(o monstro novato)
 E 1 18602 99 5 	(uma camisa verde nova)
 M 0 18601 1 18605 	(o demônio da sepultura)
@@ -44,17 +44,17 @@ M 0 18609 1 18629 	(o Poderoso Minotauro)
 E 1 18610 50 6 	(os chifres do Minotauro)
 E 1 18611 50 5 	(o fedorendo disfarce do Minotauro)
 M 0 18610 1 18639 	(o espectro escuro)
-D 0 18602 2 1 	(A Antec�mara Suja)
+D 0 18602 2 1 	(A Antecâmara Suja)
 D 0 18606 0 1 	(Um Pequeno Quarto)
 D 0 18603 0 1 	(Um Nexus)
-D 0 18644 2 1 	(Uma Antec�mara Iluminada)
+D 0 18644 2 1 	(Uma Antecâmara Iluminada)
 D 0 18603 1 1 	(Um Nexus)
-D 0 18646 3 1 	(Uma Antec�mara Iluminada)
+D 0 18646 3 1 	(Uma Antecâmara Iluminada)
 D 0 18604 2 1 	(Uma Passagem Estreita)
 D 0 18612 0 1 	(A Sala do Alquimista)
 D 0 18606 5 2 	(Um Pequeno Quarto)
 D 0 18605 4 2 	(O Fosso Escuro)
-D 0 18607 3 1 	(Mais da Antec�mara)
+D 0 18607 3 1 	(Mais da Antecâmara)
 D 0 18606 1 1 	(Um Pequeno Quarto)
 D 0 18611 1 1 	(Outro Canto)
 D 0 18612 3 1 	(A Sala do Alquimista)

@@ -207,9 +207,9 @@ Kind Soul Gives Newbie Equipment~
 0 g 100
 ~
 * By Rumble of The Builder Academy    tbamud.com 9091
-* If a player is < level 5 and naked it fully equips them. If < 5 and missing
+* If a player is < level 5 and naked it fully equips them. If < 10 and missing
 * some equipment it will equip one spot.
-if %actor.is_pc% && %actor.level% < 5
+if %actor.is_pc% && %actor.level% < 10
   wait 2 sec
   if !%actor.eq(*)%
     say get some clothes on! Here, I will help.
@@ -237,14 +237,14 @@ if %actor.is_pc% && %actor.level% < 5
     say you really shouldn't be wandering these parts without a light source %actor.name%.
     shake
     %load% obj 3037
-    give candle %actor.name%
+    give vela %actor.name%
     halt
   end
   if !%actor.eq(rfinger)% || !%actor.eq(lfinger)%
     say did you lose one of your rings?
     sigh
     %load% obj 3083
-    give ring %actor.name%
+    give anel %actor.name%
     halt
   end
   if !%actor.eq(neck1)% || !%actor.eq(neck2)%

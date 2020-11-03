@@ -1697,8 +1697,8 @@ cadeira marmore branco~
 uma cadeira de mármore~
 Uma bela cadeira de mármore branco foi colocada aqui.~
 ~
-12 eq 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0
+6 eq 0 0 0 0 0 0 0 0 0 0 0
+1 0 0 0
 20 10000 1000 0 0
 E
 cadeira marmore branco~
@@ -1878,16 +1878,16 @@ Uma bela maçã de ouro foi jogada aqui.~
 0 0 0 0
 5 2000000 200000 0 0
 E
+inscricoes~
+                              <=-À Mais Bela -=>
+~
+E
 maca ouro pomo discordia~
 Você observa o fruto que deu origem a guerra de Tróia.  O pomo da discórdia,
 incorporada por uma bela maçã de ouro, que foi jogada por Éris, a deusa da
 discórdia, entre as deusas Atena, Hera e Afrodite.  E que gerou uma disputa
 entre as três para se saber quem era "à mais bela".  Você observa a bela
 maçã de ouro e percebe algumas inscrições esculpidas no ouro.
-~
-E
-inscricoes~
-                              <=-À Mais Bela -=>
 ~
 #10917
 portal magico pegaso~

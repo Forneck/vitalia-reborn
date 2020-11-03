@@ -1,30 +1,29 @@
 Name: Motharo
 Pass: ModL.5YHLP/kM
-Titl: the Tiger Cub
+Titl: the Lion Cub
 Sex : 1
 Clas: 6
-Levl: 7
+Levl: 8
 Id  : 25
 Brth: 1604182960
-Plyd: 11634
-Last: 1604245469
+Plyd: 18198
+Last: 1604426675
 Lmot: 1604188562
-Lnew: 1604198417
+Lnew: 1604414640
 Htwn: 1372
 Host: 187.66.23.112
 Hite: 178
 Wate: 158
-Alin: 190
-Act : hy 0 0 0
+Alin: 131
+Act : h 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDEF ad 0 0
-Room: 65535
-Lern: 4
+Room: 3001
 Hung: -1
 Thir: -1
-Hit : 1/93
-Mana : 1/121
-Move: 1/102
+Hit : 105/105
+Mana : 126/126
+Move: 106/106
 Str : 16/0
 Int : 13
 Wis : 13
@@ -32,12 +31,15 @@ Dex : 14
 Con : 15
 Cha : 11
 Ac  : 100
-Exp : 25142
+Gold: 17108
+Exp : 44775
 Olc : 0
 Skil:
 16 90
 42 90
+93 50
 232 90
+243 90
 0 0
 Alis: 1
  wak

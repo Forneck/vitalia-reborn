@@ -82,8 +82,8 @@ cadeira madeira~
 uma cadeira de madeira~
 Uma cadeira de madeira foi deixada aqui.~
 ~
-12 e 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0
+6 e 0 0 0 0 0 0 0 0 0 0 0
+1 0 0 0
 12 20000 2000 1 0
 E
 cadeira madeira~
@@ -169,14 +169,14 @@ Um majestoso diadema dourado foi deixado aqui, reluzindo como o sol.~
 0 0 0 0
 6 60000 6000 3 0
 E
+runas~
+Impossível de compreender!
+~
+E
 diadema ouro dourado~
 Você observa um belíssimo diadema dourado feito do mais puro ouro encontrado
 por estas terras.  Sobre a sua superfície na parte frontal, você observa
 algumas runas estranhas.
-~
-E
-runas~
-Impossível de compreender!
 ~
 A
 4 2
@@ -241,9 +241,10 @@ Uma antiga coleira de couro foi esquecida aqui.~
 0 0 0 0
 3 500 50 1 0
 E
-antiga coleira couro~
-Você observa uma antiga e desgastada coleira de couro com uma belíssima
-pedra verde presa em sua superfície.
+inscricoes~
+                          	g***********	n
+  =======================§	g*	YBOLO-FOFO	g*	n§=======================
+                          	g***********	n
 ~
 E
 pedra verde~
@@ -251,10 +252,9 @@ Você observa uma linda pedra verde com algumas inscrições esculpidas sobre a
 sua superfície.
 ~
 E
-inscricoes~
-                          	g***********	n
-  =======================§	g*	YBOLO-FOFO	g*	n§=======================
-                          	g***********	n
+antiga coleira couro~
+Você observa uma antiga e desgastada coleira de couro com uma belíssima
+pedra verde presa em sua superfície.
 ~
 A
 13 8
@@ -286,14 +286,14 @@ Um maravilhoso anel de prata foi esquecido aqui.~
 0 0 0 0
 3 120000 1200 3 0
 E
+runas estranhas~
+                   Você não consegue decifrá-las!
+~
+E
 anel prata~
 Você observa um lindo anel feito com a mais pura e brilhante prata das
 terras próximas à isolada aldeia de Bri.  Sobre a sua superfície você
 observa algumas estranhas runas esculpidas.
-~
-E
-runas estranhas~
-                   Você não consegue decifrá-las!
 ~
 A
 1 1

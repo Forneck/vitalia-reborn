@@ -1,7 +1,7 @@
 #157
 Vitalia~
 O Castelo de Flyre~
-15700 15799 75 1 abe 0 0 0 -1 -1
+15700 15799 75 1 jk 0 0 0 -1 -1
 M 0 15701 10 15704 	(um pacato cidadao)
 M 0 15701 10 15704 	(um pacato cidadao)
 M 0 15701 10 15705 	(um pacato cidadao)
@@ -72,20 +72,20 @@ P 1 15712 1 15711 	(um anel de brilhantes)
 P 1 15713 1 15711 	(um colar de brilhantes)
 P 1 15714 1 15711 	(um brinco de brilhantes)
 D 0 15708 2 1 	(A Porta)
-D 0 15709 0 1 	(O Imenso Sal„o)
+D 0 15709 0 1 	(O Imenso Sal√£o)
 D 0 15710 3 1 	(Um Corredor)
-D 0 15712 1 1 	(O EscritÛrio)
+D 0 15712 1 1 	(O Escrit√≥rio)
 D 0 15711 3 2 	(Um Corredor)
-D 0 15720 3 2 	(A Pris„o)
-D 0 15721 1 2 	(A Pris„o)
-D 0 15721 3 2 	(A Pris„o)
+D 0 15720 3 2 	(A Pris√£o)
+D 0 15721 1 2 	(A Pris√£o)
+D 0 15721 3 2 	(A Pris√£o)
 D 0 15722 1 2 	(A Cela)
 D 0 15723 3 2 	(A Cela)
 D 0 15724 1 2 	(A Cela)
 D 0 15724 9 2 	(A Cela)
 D 0 15725 4 2 	(A Cela Isolada)
 D 0 15731 4 1 	(Um Grande Corredor)
-D 0 15753 2 1 	(A PlantaÁ„o de Morangos)
-D 0 15754 0 1 	(O DepÛsito)
+D 0 15753 2 1 	(A Planta√ß√£o de Morangos)
+D 0 15754 0 1 	(O Dep√≥sito)
 S
 $

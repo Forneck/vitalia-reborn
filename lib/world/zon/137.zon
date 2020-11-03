@@ -1,7 +1,7 @@
 #137
 Vitalia~
 Lothlórien~
-13700 13799 180 1 ab 0 0 0 -1 -1
+13700 13799 180 1 jk 0 0 0 -1 -1
 M 0 13702 1 13797 	(Haldir de Lórien)
 E 1 13717 5 0 	(um impetuoso pássaro dourado)
 E 1 13713 17 16 	(um belo arco dos Galadhrim)
@@ -173,7 +173,7 @@ R 0 13775 13729 -1 	(uma perfumada fumellar)
 O 0 13729 4 13775 	(uma perfumada fumellar)
 R 0 13776 13729 -1 	(uma perfumada fumellar)
 O 0 13729 4 13776 	(uma perfumada fumellar)
-D 0 13760 0 2 	(O Monumental Port�o de Madeira)
+D 0 13760 0 2 	(O Monumental Portão de Madeira)
 D 0 13774 2 2 	(Caras Galadhon, a Cidade dos Galadhrim)
 S
 $

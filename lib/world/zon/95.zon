@@ -1,7 +1,7 @@
 #95
 Vitalia~
 Galáxia~
-9500 9599 350 1 bdj 0 0 0 -1 -1
+9500 9599 350 1 bdjk 0 0 0 -1 -1
 M 0 9501 3 9513 	(um aventureiro perdido)
 M 0 9501 3 9522 	(um aventureiro perdido)
 M 0 9501 3 9523 	(um aventureiro perdido)
@@ -53,7 +53,7 @@ M 0 9514 2 9558 	(um bebê draco)
 M 0 9514 2 9560 	(um bebê draco)
 M 0 9515 1 9542 	(Áries)
 G 1 9524 3 -1 	(o broto da primavera)
-D 1 9539 4 2 	(Nas Correntes M�sticas)
+D 1 9539 4 2 	(Nas Correntes Místicas)
 D 1 9554 5 2 	(O Fim das Correntes Misteriosas)
 E 1 9506 15 12 	(o velocino de Áries)
 M 0 9516 1 9543 	(Touro)
@@ -83,7 +83,7 @@ E 1 9515 3 17 	(a Flecha de Sagitário)
 E 1 9516 3 16 	(o Arco de Sagitário)
 M 0 9525 1 9551 	(Capricórnio)
 G 1 9527 3 -1 	(o galho do inverno)
-D 1 9563 2 2 	(Se Aproximando da Cabe�a de Draco)
+D 1 9563 2 2 	(Se Aproximando da Cabeça de Draco)
 D 1 9564 0 2 	(No Caminho da Ursa Menor)
 E 1 9517 15 9 	(os chifres de Capricórnio)
 M 0 9526 1 9552 	(Aquário)

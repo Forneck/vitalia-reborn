@@ -3,7 +3,7 @@ A Floresta~
   Você  está  caminhando  através  das  barulhentas  folhas  da Floresta de
 Thewster, ao oeste seu caminho é bloqueado por um alto precipício.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -19,7 +19,7 @@ A Floresta~
 Thewster,  pequenas  gotas  de luz alcançam você. Ao oeste você pode ver um
 alto precipício. 
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -35,7 +35,7 @@ A Floresta~
 Thewster,  pequenas  gotas  de luz alcançam você. Ao oeste você pode ver um
 alto precipício.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -50,7 +50,7 @@ A Floresta~
   Você  está  caminhando  através  das  barulhentas  folhas  da Floresta de
 Thewster, pequenas gotas de luz alcançam você.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -65,7 +65,7 @@ A Floresta~
   Você  está  caminhando  através  das  barulhentas  folhas  da Floresta de
 Thewster, pequenas gotas de luz alcançam você.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -80,7 +80,7 @@ A Floresta~
   Você  está  caminhando  através  das  barulhentas  folhas  da Floresta de
 Thewster, pequenas gotas de luz alcançam você.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -99,7 +99,7 @@ A Floresta~
   Você  está  caminhando  através  das  barulhentas  folhas  da Floresta de
 Thewster, pequenas gotas de luz alcançam você.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -115,7 +115,7 @@ A Floresta~
 Thewster,  pequenas  gotas  de  luz  alcançam você. Você quase pode ver uma
 clareira ao leste.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -131,7 +131,7 @@ A Floresta~
 Thewster,  pequenas  gotas  de  luz  alcançam você. Você quase pode ver uma
 clareira ao leste.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -151,7 +151,7 @@ A Floresta~
 Thewster,  pequenas  gotas  de  luz  alcançam você. Você quase pode ver uma
 clareira ao leste.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 .
 ~
@@ -167,7 +167,7 @@ A Floresta~
   As  folhas  e galhos se partem e estalam debaixo de seus pés. Ao oeste um
 precipício impede sua passagem.
 ~
-136 0 3
+136 0 0 0 0 3
 D0
 ~
 ~
@@ -187,7 +187,7 @@ A Floresta~
 Thewster, pequenas gotas de luz alcançam você. Você pode ver uma estrada ao
 sul.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -207,7 +207,7 @@ A Floresta~
 Thewster, pequenas gotas de luz alcançam você. Você pode ver uma estrada ao
 sul.
 ~
-136 0 3
+136 0 0 0 0 3
 D2
 ~
 ~
@@ -223,7 +223,7 @@ A Floresta~
 Thewster, pequenas gotas de luz alcançam você. Você pode ver uma estrada ao
 sul.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -239,7 +239,7 @@ A Floresta~
 Thewster, pequenas gotas de luz alcançam você. Você pode ver uma estrada ao
 sul.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -259,7 +259,7 @@ A Floresta~
 Thewster, pequenas gotas de luz alcançam você. Você pode ver uma estrada ao
 sul.
 ~
-136 0 3
+136 0 0 0 0 3
 D0
 ~
 ~
@@ -283,7 +283,7 @@ A Floresta~
 Thewster, pequenas gotas de luz alcançam você. Você pode ver uma estrada ao
 sul.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -303,7 +303,7 @@ A Floresta~
 Thewster, pequenas gotas de luz alcançam você. Você pode ver uma estrada ao
 sul.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -323,7 +323,7 @@ A Floresta~
 Thewster, pequenas gotas de luz alcançam você. Você pode ver uma estrada ao
 sul.
 ~
-136 0 3
+136 0 0 0 0 3
 D0
 ~
 ~
@@ -342,7 +342,7 @@ A Floresta~
   Você  está  caminhando  através  das  barulhentas  folhas  da Floresta de
 Thewster, um precipício impede sua passagem ao oeste.
 ~
-136 0 3
+136 0 0 0 0 3
 D0
 ~
 ~
@@ -361,7 +361,7 @@ A Estrada~
   A  estrada  começa  a  ficar  barrenta  aqui,  ao  oeste você pode ver um
 precipício por entre as árvores. A estrada segue a leste e ao sul.
 ~
-136 0 2
+136 0 0 0 0 2
 D0
 ~
 ~
@@ -385,7 +385,7 @@ A Estrada~
 A floresta limita a estrada por todos os lados, deixando apenas finos raios
 de sol chegarem até você. A estrada segue a leste e a oeste.
 ~
-136 0 2
+136 0 0 0 0 2
 D0
 ~
 ~
@@ -409,7 +409,7 @@ A Estrada~
 A floresta limita a estrada por todos os lados, deixando apenas finos raios
 de sol chegarem até você. A estrada segue a leste e a oeste.
 ~
-136 0 2
+136 0 0 0 0 2
 D0
 ~
 ~
@@ -433,7 +433,7 @@ A Estrada~
 A floresta limita a estrada por todos os lados, deixando apenas finos raios
 de sol chegarem até você. A estrada segue a leste e a oeste.
 ~
-136 0 2
+136 0 0 0 0 2
 D0
 ~
 ~
@@ -457,7 +457,7 @@ A Estrada~
 A floresta limita a estrada por todos os lados, deixando apenas finos raios
 de sol chegarem até você. A estrada segue a leste e a oeste.
 ~
-136 0 2
+136 0 0 0 0 2
 D0
 ~
 ~
@@ -481,7 +481,7 @@ A Estrada~
 floresta  limita  a estrada por todos os lados, deixando apenas finos raios
 de sol chegarem até você. A estrada segue a leste e a oeste.
 ~
-136 0 2
+136 0 0 0 0 2
 D0
 ~
 ~
@@ -500,7 +500,7 @@ A Estrada~
   Você  caminha  ao  longo da estrada pelo tempo que parece ser infinito. A
 estrada segue a leste e ao oeste.
 ~
-136 0 2
+136 0 0 0 0 2
 D0
 ~
 ~
@@ -519,7 +519,7 @@ A Estrada~
   Você  caminha  ao  longo da estrada pelo tempo que parece ser infinito. A
 estrada segue a leste e ao oeste.
 ~
-136 0 2
+136 0 0 0 0 2
 D0
 ~
 ~
@@ -538,7 +538,7 @@ A Estrada~
   Você  caminha  ao  longo da estrada pelo tempo que parece ser infinito. A
 estrada segue a leste e ao oeste.
 ~
-136 0 2
+136 0 0 0 0 2
 D1
 ~
 ~
@@ -557,7 +557,7 @@ A Estrada~
   Um  grande  precipício de granito impede a estrada de continuar ao oeste,
 assim, a estrada faz uma curva aqui, seguindo para o leste e para o sul.
 ~
-136 0 2
+136 0 0 0 0 2
 D0
 ~
 ~
@@ -576,7 +576,7 @@ A Estrada~
   Você  caminha  ao  longo da estrada pelo tempo que parece ser infinito. A
 estrada segue a norte e oeste.
 ~
-136 0 2
+136 0 0 0 0 2
 D0
 ~
 ~
@@ -598,7 +598,7 @@ S
 A Floresta~
    A floresta se estreita aqui, você pode ver a estrada ao norte e ao oeste.
 ~
-136 0 3
+136 0 0 0 0 3
 D0
 ~
 ~
@@ -621,7 +621,7 @@ A Floresta~
   Você caminha através de uma densa floresta. Não há sinais de civilização.
 Você pode ver a estrada ao norte.
 ~
-136 0 3
+136 0 0 0 0 3
 D0
 ~
 ~
@@ -644,7 +644,7 @@ A Floresta~
   Você caminha através de uma densa floresta. Não há sinais de civilização.
 Você pode ver a estrada ao norte.
 ~
-136 0 3
+136 0 0 0 0 3
 D0
 ~
 ~
@@ -664,7 +664,7 @@ A Floresta~
 no chão à sua frente.  Não há sinais de civilização.  Você pode ver a
 estrada ao norte.
 ~
-136 4 3
+136 4 0 0 0 3
 D0
 ~
 ~
@@ -688,7 +688,7 @@ A Floresta~
 A  floresta se torna realmente densa aqui, e as únicas saídas são a leste e
 a oeste.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -704,7 +704,7 @@ A Floresta~
 A  floresta se torna realmente densa aqui, e as únicas saídas são a leste e
 a oeste.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -720,7 +720,7 @@ A Floresta~
 A  floresta se torna realmente densa aqui, e as únicas saídas são a leste e
 a oeste.
 ~
-136 0 3
+136 0 0 0 0 3
 D1
 ~
 ~
@@ -735,7 +735,7 @@ A Floresta~
  Todas as árvores daqui vieram ao chão por algum misterioso motivo, a única
 saída é a estrada ao norte e a floresta que continua ao oeste.
 ~
-136 0 3
+136 0 0 0 0 3
 D0
 ~
 ~
@@ -751,7 +751,7 @@ A Estrada~
 continuar adiante. A única coisa que resta é uma trilha lamacenta que segue
 ao sul.
 ~
-136 0 2
+136 0 0 0 0 2
 D0
 ~
 ~
@@ -770,7 +770,7 @@ A Floresta~
   A  floresta  se  estreita  aqui  e forma uma pequena clareira. A clareira
 continua ao leste, e ao norte e oeste, você pode ver a estrada.
 ~
-136 0 3
+136 0 0 0 0 3
 D0
 ~
 ~
@@ -789,7 +789,7 @@ A Clareira~
   A  floresta  se estreita aqui e forma uma pequena clareira. Parece um bom
 lugar para descansar.
 ~
-136 0 3
+136 0 0 0 0 3
 D0
 ~
 ~
@@ -808,7 +808,7 @@ A Clareira~
   A  floresta  se estreita aqui e forma uma pequena clareira. Parece um bom
 lugar para descansar.
 ~
-136 0 3
+136 0 0 0 0 3
 D0
 ~
 ~
@@ -826,7 +826,7 @@ S
 Uma Sala Muito Estranha~
    Saia já daqui!
 ~
-136 0 0
+136 0 0 0 0 0
 D0
 ~
 ~
@@ -850,7 +850,7 @@ Um Agradável Caminho~
 e  mesmo  daqui,  você  pode sentir a emanação de paz e bondade. Não restam
 dúvidas de que adiante repousa a glória e a magia.
 ~
-136 4 0
+136 4 0 0 0 0
 D2
 ~
 ~
@@ -867,7 +867,7 @@ sagrado.  Você  sente uma estranha sensação de contemplação e alívio em su
 alma,  como  se  enormes  fardos  fossem  tirados  de  seus  ombros. Daqui,
 agradáveis caminhos seguem a leste e ao sul.
 ~
-136 0 0
+136 0 0 0 0 0
 D0
 ~
 ~
@@ -890,7 +890,7 @@ sagrado.  Você  sente uma estranha sensação de contemplação e alívio em su
 alma,  como  se  enormes  fardos  fossem  tirados  de  seus  ombros. Daqui,
 agradáveis caminhos seguem a leste, oeste e ao sul.
 ~
-136 0 0
+136 0 0 0 0 0
 D1
 O  caminho  segue através de altas árvores, na direção de uma clareira, que
 mal pode ser vista.
@@ -915,7 +915,7 @@ Uma Clareira no Bosque~
 parece poderosamente DIFERENTE do resto da floresta. Como se algo estivesse
 alterando a realidade aqui. Há uma pequena tábua em uma das árvores.
 ~
-136 4 0
+136 4 0 0 0 0
 D2
 Há  um  caminho seguindo através dos altos álamos, desaparecendo de vista a
 100 jardas adiante.
@@ -935,7 +935,7 @@ sagrado. Você se sente calmo e relaxado aqui, como se grandes fardos fossem
 tirados de seus ombros. Daqui, um agradável caminho segue ao leste, norte e
 sul.
 ~
-136 4 0
+136 4 0 0 0 0
 D0
 O caminho segue através de altas árvores, desaparecendo de vista.
 ~
@@ -962,7 +962,7 @@ preocupações  embora,  deixando-o  calmo  e revigorado, pronto para a luta.
 Caminhos seguem pelo leste, norte e oeste, enquanto ao sul, um aberto campo
 ensolarado leva a um brilhante lago.
 ~
-136 0 0
+136 0 0 0 0 0
 D0
 O caminho segue ao norte, desaparecendo através das altas árvores.
 ~
@@ -991,7 +991,7 @@ sagrado. Você se sente calmo e relaxado aqui, como se grandes fardos fossem
 tirados  de seus ombros. Ao sul, você contempla uma área aberta através das
 árvores, enquanto caminhos seguem a norte e a oeste.
 ~
-136 0 0
+136 0 0 0 0 0
 D0
 O caminho segue pelas altas árvores, desaparecendo de vista.
 ~
@@ -1023,7 +1023,7 @@ tirados  de  seus ombros. De alguma forma, aqui você sente uma inexplicável
 felicidade  como  se  os  problemas  do mundo realmente não te incomodassem
 mais.
 ~
-136 0 0
+136 0 0 0 0 0
 D0
 O  caminho  segue a norte perdendo-se de vista através dos antigos álamos e
 carvalhos.
@@ -1054,7 +1054,7 @@ vislumbrando  as  cores  do  arco-íris. Você sente como se pudesse passar o
 resto  da  vida aqui, deitando na grama e olhando as nuvens, que suavemente
 deslizam pelo céu.
 ~
-136 8 0
+136 8 0 0 0 0
 D0
 Há um caminho seguindo ao norte para o caminho sagrado.
 ~
@@ -1092,7 +1092,7 @@ caminho  de  pedra  levando  para  os  limites da floresta ao norte, para a
 brilhante  mansão cor de arco-íris ao sul. Este lugar desfruta de perpétuas
 frescas e ensolaradas tardes de verão.
 ~
-136 4 0
+136 4 0 0 0 0
 D0
 Ao norte, o caminho de pedra leva para o caminho sagrado.
 ~
@@ -1117,7 +1117,7 @@ o  jardim  fica  ao  norte,  flanqueada por grandes janelas. As pareces são
 revestidas  de  carvalho,  onde estão penduradas estranhas pinturas. Há uma
 porta na parede sul.
 ~
-136 12 0
+136 12 0 0 0 0
 D0
 Através  das janelas perto da porta você pode ver o jardim, ensolarado como
 uma tarde de verão.
@@ -1145,7 +1145,7 @@ bom  gosto  com  painéis  de  carvalho  e  casacos de vários nobres famosos
 pendurados  nas  paredes.  O corredor segue a sul, onde há uma porta para a
 parede leste.
 ~
-136 8 0
+136 8 0 0 0 0
 D0
 ~
 porta~
@@ -1167,7 +1167,7 @@ similares, formando um efeito bastante interessante. Há uma larga cama e um
 jogo  de sofás, cadeiras e uma mesa de café. Através das cortinas da janela
 ao leste você pode ver os limites do caminho sagrado.
 ~
-136 520 0
+136 520 0 0 0 0
 D3
 ~
 porta~
@@ -1178,7 +1178,7 @@ O Corredor~
   Você está no limite sul do corredor. Há portas pelas elegantes paredes de
 carvalho ao sul, leste e oeste.
 ~
-136 8 0
+136 8 0 0 0 0
 D0
 ~
 ~
@@ -1205,7 +1205,7 @@ sofá  esculpido  em  madeira escura, forrado em couro e uma mesa para café.
 Pesadas  cortinas marrons afastadas das janelas, revelam uma linda vista do
 caminho sagrado.
 ~
-136 520 0
+136 520 0 0 0 0
 D3
 ~
 porta~
@@ -1221,7 +1221,7 @@ jarros  contendo  especiarias  ao longo das prateleiras. Um grande fogão de
 lenha está ardendo no canto. Há mais uma prova de que o Dragão é meticuloso
 e cuidadoso com sua casa... Há portas ao norte e ao oeste.
 ~
-136 8 0
+136 8 0 0 0 0
 D0
 ~
 porta~
@@ -1239,7 +1239,7 @@ revestidas  em tecido espalhadas pela sala demonstram que isso não acontece
 freqüentemente. Há portas pelas paredes norte e oeste, enquanto ao leste há
 um pequeno corredor.
 ~
-136 8 0
+136 8 0 0 0 0
 D1
 ~
 porta~
@@ -1262,7 +1262,7 @@ verdade enormes janelas, exceto uma ao leste que liga a estufa à construção
 principal.  Há  um  jogo  de cadeiras e uma mesa de café feita de vidro. Ao
 sul, há uma grande porta dupla, levando para um ensolarado terraço.
 ~
-136 520 0
+136 520 0 0 0 0
 D1
 ~
 ~
@@ -1279,7 +1279,7 @@ com  pelo  menos  vinte e quatro pesados assentos de madeira. Os painéis de
 carvalho  das  paredes  fora  decorado  com  pinturas. Há portas ao norte e
 leste, e ao oeste há uma grande porta para o ensolarado terraço.
 ~
-136 8 0
+136 8 0 0 0 0
 D0
 ~
 porta~
@@ -1316,7 +1316,7 @@ estufa,  cujas largas janelas brilham em estranhas e lindas cores, enquanto
 uma  porta  dupla  segue para o interior da casa ao leste. É aconchegante e
 calmo aqui. Há uma mesa pintada de branco cercada por algumas cadeiras.
 ~
-136 12 0
+136 12 0 0 0 0
 D0
 ~
 porta~
@@ -1337,7 +1337,7 @@ que o cercam permitam passagem por todos os lados. Na verdade, elas parecem
 ser  as  guardiãs  de  todas as boas coisas da floresta, alertas sentinelas
 para ter certeza de que esta área permaneça luxuosa, virgem e desbravada.
 ~
-136 0 0
+136 0 0 0 0 0
 D1
 ~
 ~
@@ -1353,6 +1353,6 @@ A Névoa~
 percebe  que  esta  sendo  tragado  para  o nada, átomo por átomo, caindo e
 caindo e caindo...
 ~
-136 4 0
+136 4 0 0 0 0
 S
 $~

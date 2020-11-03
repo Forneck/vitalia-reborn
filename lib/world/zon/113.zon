@@ -1,7 +1,7 @@
 #113
 Vitalia~
 Bhogavati, A Cidade das Jóias~
-11300 11399 120 1 j 0 0 0 -1 -1
+11300 11399 120 1 jk 0 0 0 -1 -1
 M 0 11505 1 11306 	(Kurma, a tartaruga)
 E 1 11520 1 17 	(a milésima pétala)
 M 0 11302 1 11315 	(Nihar, o Sumo-Sacerdote)
@@ -144,13 +144,13 @@ E 1 11382 12 16 	(um khanda da divisão Ouro e Esmeralda)
 R 0 11306 11510 -1 	(o Lótus das Mil Pétalas)
 O 0 11510 1 11306 	(o Lótus das Mil Pétalas)
 P 1 11511 5 11510 	(um pequeno frasco de amritá)
-D 0 11335 0 1 	(A Entrada da Congrega��o de Cl�rigos de Bhogavati)
-D 0 11336 2 1 	(A Congrega��o de Cl�rigos de Bhogavati)
-D 0 11314 0 1 	(No T�nel)
+D 0 11335 0 1 	(A Entrada da Congregação de Clérigos de Bhogavati)
+D 0 11336 2 1 	(A Congregação de Clérigos de Bhogavati)
+D 0 11314 0 1 	(No Túnel)
 D 0 11315 5 1 	(O Centro do Templo a Sesha)
-D 0 11387 2 2 	(O P�tio Sudeste)
+D 0 11387 2 2 	(O Pátio Sudeste)
 D 0 11388 0 2 	(Fora de Bhogavati)
-D 0 11389 3 2 	(O P�tio Noroeste)
+D 0 11389 3 2 	(O Pátio Noroeste)
 D 0 11390 1 2 	(Fora de Bhogavati)
 S
 $

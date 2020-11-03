@@ -1,7 +1,7 @@
 #280
 Vitalia~
 As Plan√≠cies de Callyus~
-28000 28099 75 2
+28000 28099 75 2 jk 0 0 0 -1 -1
 M 0 28004 3 28033 	(a grotesca sanguessuga gigante)
 M 0 28004 3 28033 	(a grotesca sanguessuga gigante)
 M 0 28004 3 28034 	(a grotesca sanguessuga gigante)
@@ -123,17 +123,17 @@ P 1 28010 1 28084 	(um b√°lsamo de vida)
 P 1 28011 1 28084 	(um b√°lsamo cristalino)
 D 0 28007 0 1 	(Sob a Cachoeira)
 D 0 28011 5 1 	(Uma Estranha Piscina)
-D 0 28015 1 1 	(Fora do Pequeno PrÈdio da Margem do Rio)
-D 0 28016 2 2 	(Dentro do PrÈdio da Bomba D'¡gua)
-D 0 28016 3 1 	(Dentro do PrÈdio da Bomba D'¡gua)
-D 0 28016 4 1 	(Dentro do PrÈdio da Bomba D'¡gua)
-D 0 28017 0 2 	(O DepÛsito do PrÈdio da Bomba D'¡gua)
-D 0 28018 5 1 	(A Torre de Vigia do PrÈdio)
-D 0 28067 1 1 	(O EscritÛrio Central das Docas de Calyus)
-D 0 28070 1 2 	(O EscritÛrio do Mestre do Estaleiro)
-D 0 28070 3 1 	(O EscritÛrio do Mestre do Estaleiro)
+D 0 28015 1 1 	(Fora do Pequeno Pr√©dio da Margem do Rio)
+D 0 28016 2 2 	(Dentro do Pr√©dio da Bomba D'√Ågua)
+D 0 28016 3 1 	(Dentro do Pr√©dio da Bomba D'√Ågua)
+D 0 28016 4 1 	(Dentro do Pr√©dio da Bomba D'√Ågua)
+D 0 28017 0 2 	(O Dep√≥sito do Pr√©dio da Bomba D'√Ågua)
+D 0 28018 5 1 	(A Torre de Vigia do Pr√©dio)
+D 0 28067 1 1 	(O Escrit√≥rio Central das Docas de Calyus)
+D 0 28070 1 2 	(O Escrit√≥rio do Mestre do Estaleiro)
+D 0 28070 3 1 	(O Escrit√≥rio do Mestre do Estaleiro)
 D 0 28071 3 2 	(O Quarto do Mestre do Estaleiro)
-D 0 28075 1 2 	(A Antec‚mara dos Aposentos do Almirante)
+D 0 28075 1 2 	(A Antec√¢mara dos Aposentos do Almirante)
 D 0 28076 3 2 	(Os Aposentos do Almirante)
 S
 $

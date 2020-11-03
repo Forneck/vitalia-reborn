@@ -99,12 +99,42 @@ Level     110
 Room      3375
 Flags     0 0 0 0
 End
-Text       autoequip~
+Text      autoequip~
 Body      brincos, rosto e asas
 ~
 Name      Cansian~
 IdNum     1
 Dated     1604159805
+Level     110
+Room      3001
+Flags     0 0 0 0
+End
+Text      aid ~
+Body      aid nao aumentou maxhit
+~
+Name      Cansian~
+IdNum     1
+Dated     1604403156
+Level     110
+Room      3054
+Flags     0 0 0 0
+End
+Text      stoneskin~
+Body      remover carga de stoneskin no dano
+~
+Name      Cansian~
+IdNum     1
+Dated     1604403203
+Level     110
+Room      3054
+Flags     0 0 0 0
+End
+Text       'animate dead'~
+Body      No aceita corpo. talvez deixar como tar ignore?
+~
+Name      Cansian~
+IdNum     1
+Dated     1604421180
 Level     110
 Room      3001
 Flags     0 0 0 0

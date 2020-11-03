@@ -8,7 +8,7 @@ você.  Você pode continuar caminhando por uma estreita trilha que segue
 norte, ir para as planícies indo sul ou seguir uma larga trilha que
 segue tanto para leste quanto para oeste.
 ~
-140.1 cgsr 3
+140 393284 0 0 0 3
 D0
 Você vê a trilha dentro da floresta.
 ~
@@ -19,16 +19,16 @@ Você vê a trilha dentro da floresta.
 ~
 ~
 0 -1 14058
-D3
-Você vê a trilha dentro da floresta.
-~
-~
-0 -1 14059
 D2
 Ali está o limite das florestas.
 ~
 ~
 0 -1 5683
+D3
+Você vê a trilha dentro da floresta.
+~
+~
+0 -1 14059
 S
 #14001
 A Floresta Encantada~
@@ -40,7 +40,7 @@ macio. Pode parecer bobagem, mas você sente que nesse lugar nada de ruim pode
 acontecer. A menos que você tenha vindo com propósitos escusos, é claro...
 Como pode ver, o caminho segue nas direções norte e sul.
 ~
-140.1 cgsr 3
+140 393284 0 0 0 3
 D0
 Você vê a trilha dentro da floresta.
 ~
@@ -62,7 +62,7 @@ todos seus sentidos voltem a ficar em alerta total.  Ainda há tempo de
 voltar, seguindo sul.  Seguindo norte, talvez você descubra afinal o que
 está acontecendo.
 ~
-140.1 cgsr 3
+140 393284 0 0 0 3
 D0
 Você vê a trilha dentro da floresta.
 ~
@@ -84,7 +84,7 @@ aperitivo.  Andando mais um pouco, você repara que uma enorme placa, vinda
 do nada, aparece na sua frente. Suas únicas saídas são pela trilha, que segue
 norte e sul.
 ~
-140.1 cgsr 3
+140 393284 0 0 0 3
 D0
 Você vê a trilha dentro da floresta.
 ~
@@ -97,12 +97,12 @@ Você vê a trilha dentro da floresta.
 0 -1 14054
 E
 placa~
-@nA estranha placa, uma enorme tábua de madeira que flutua no ar à sua frente,
+	nA estranha placa, uma enorme tábua de madeira que flutua no ar à sua frente,
 parece ser algum tipo de aviso.
 
 Você lê:
 
-"@G  Espantado viajante:
+"	G  Espantado viajante:
    Estranhas tudo a teu redor
    Parece tudo estar mui grande
    Ou que ficastes mui menor...
@@ -115,7 +115,7 @@ Você lê:
    Lindrel é o lugar
    Que saúda o aventureiro.
    Do povo pequeno é o lar
-   E teu, é recanto hospitaleiro.  @n "
+   E teu, é recanto hospitaleiro.  	n "
 
 Não há como saber se isso é algo bom ou ruim.  Mas pelo menos você descobriu
 o nome do lugar em que está, e que em breve alguém o procurará...
@@ -129,7 +129,7 @@ sua cabeça, e você a qualquer momento espera a chegada de quem viria lhe
 ajudar.  Ainda há tempo de voltar, indo sul, ou ainda seguir norte, em busca
 de mais aventuras.
 ~
-140.1 cgsr 3
+140 393284 0 0 0 3
 D0
 Você vê a trilha dentro da floresta.
 ~
@@ -149,13 +149,12 @@ que há do outro lado, principalmente porque as gigantescas árvores da
 floresta formam uma espécie de muralha em torno de alguma coisa. O caminho
 norte termina no portão, mas você ainda pode voltar.
 ~
-140.1 cgsr 3
+140 393284 0 0 0 3
 D0
 Ali está... um estranho lugar.
 ~
 portao~
-:n 1 o portão
-a 2 14006
+1 2 14006
 D2
 Você vê a trilha dentro da floresta.
 ~
@@ -183,7 +182,7 @@ arredondadas que parecem ocultar aconchegantes casas.
    As saídas que você vê ficam a norte, leste e oeste, seguindo pelas ruas
 de Lindrel, ou ainda a sul, por onde você pode sair da cidade.
 ~
-140.2 g 1
+140 64 0 0 0 1
 D0
 Ali segue a Avenida Lima Madura.
 ~
@@ -198,8 +197,7 @@ D2
 Ali fica a saída de Lindrel.
 ~
 portao~
-:n 1 o portão
-a 2 14056
+1 2 14056
 D3
 Você vê a Rua ameixas.
 ~
@@ -215,7 +213,7 @@ um enorme desejo de comer amoras misturado com o temor de morrer atingido
 por uma dessas frutas.  As árvores impedem que você siga para qualquer outra
 direção que não seja leste ou oeste.
 ~
-140.2 g 1
+140 64 0 0 0 1
 D1
 ~
 ~
@@ -234,13 +232,12 @@ sua cabeça. Continuando pelo caminho, você se depara com um portão de madeira
 a norte, que parece levar a um conjunto de grandes cogumelos-casa. Já a rua
 continua leste e oeste.
 ~
-140.2 g 1
+140 64 0 0 0 1
 D0
 Você vê um pequeno portão de madeira.
 ~
 portao madeira~
-:n 1 o portão de madeira
-ag 2 14026
+0 2 14026
 D1
 ~
 ~
@@ -260,13 +257,12 @@ grande e velho carvalho de portas (!?) fechadas.  Há tabuleta, presa no alto
 do tronco.
    Você pode ainda seguir oeste pela rua.
 ~
-140.2 g 1
+140 64 0 0 0 1
 D2
 Você vê um estranho carvalho gigante.
 ~
 porta~
-:n 1 uma das portas
-ga 2 14010
+0 2 14010
 D3
 ~
 ~
@@ -295,13 +291,12 @@ Para sua alegria, balcão de bebidas, a leste, parece estar funcionando.
 Há também um pequeno palco a sul.
    A Rua Amoreira passa lá fora, ao norte.
 ~
-140.2 dgs 0
+140 262216 0 0 0 0
 D0
 Essa é a saída da taverna.
 ~
 porta~
-:n 1 uma das portas
-ag 2 14009
+0 2 14009
 D1
 Ali fica o balcão de bebidas.
 ~
@@ -321,7 +316,7 @@ bebidas provenientes dos quatro cantos do mundo. Há algumas de lugares que
 você não sabia nem que existia!
    Se não for beber nada, a entrada da taverna fica a oeste.
 ~
-140.2 dgs 0
+140 262216 0 0 0 0
 D3
 ~
 ~
@@ -336,7 +331,7 @@ efeito de iluminação.  É aqui que ocorrem alguns dos concursos de canto e
 poesia, além de apresentações de qualquer ser que queira compartilhar seu
 talento.
 ~
-140.2 dgs 0
+140 262216 0 0 0 0
 D0
 ~
 ~
@@ -352,7 +347,7 @@ cogumelos de "telhado" colorido, sendo impossível, no entando, pular a alta
 cerca branca e chegar até eles sem ser pela entrada correta.  Sons de
 explosões ecoam no ar vindos do norte.
 ~
-140.2 g 1
+140 64 0 0 0 1
 D3
 ~
 ~
@@ -367,7 +362,12 @@ aguça sua curiosidade.  Fora isso, apenas os gigantes cogumelos-casa, a sul,
 chamam sua atenção, além das perigosas laranjas suicidas que cismam em o
 atacar.
 ~
-140.2 g 1
+140 64 0 0 0 1
+D0
+Há o som de explosões vindo de lá.
+~
+~
+0 -1 14046
 D1
 ~
 ~
@@ -376,11 +376,6 @@ D3
 ~
 ~
 0 -1 14015
-D0
-Há o som de explosões vindo de lá.
-~
-~
-0 -1 14046
 S
 #14015
 O Cruzamento da Laranjais com a Av. Lima Madura~
@@ -395,7 +390,7 @@ esperando a chegada da escuridão, quando acomodam os milhares de vaga-lumes
 para iluminação.  As direções que aqui podem ser seguidas é norte e sul, ao
 longo da Avenida, ou leste e oeste, pela Laranjais.
 ~
-140.2 g 1
+140 64 0 0 0 1
 D0
 ~
 ~
@@ -418,7 +413,7 @@ cogumelos-de-chapéu gigantes que possuem portas, janelas e chaminés e a
 oeste uma gigantesca flor com uma tabuleta presa ao seu caule.  Você pode
 seguir norte e sul pela Avenida.
 ~
-140.2 g 1
+140 64 0 0 0 1
 D0
 ~
 ~
@@ -427,8 +422,7 @@ D1
 Por ali se chega aos cogumelos-casa.
 ~
 portao~
-:n o portão
-ag 2 14025
+0 2 14025
 D2
 ~
 ~
@@ -440,9 +434,9 @@ Você vê uma flor gigantesca.
 0 -1 14037
 E
 tabuleta flor gigantesca~
-@nA tabuleta diz:
+	nA tabuleta diz:
 
-       @B"A Gota D'Água"@n
+       	B"A Gota D'Água"	n
 
      Escola para pequenos.
      Faça já sua matrícula!
@@ -458,11 +452,19 @@ extenso campo de grama colorida.  A Avenida continua a norte e sul, enquanto
 a Rua das Macieiras é indicada como sendo a nordeste, e a Rua Pessegueiros a
 noroeste.
 ~
-140.2 g 1
+140 64 0 0 0 1
 D0
 ~
 ~
 0 -1 14048
+D1
+~
+~
+0 -1 14046
+D2
+~
+~
+0 -1 14015
 D6
 ~
 ~
@@ -471,14 +473,6 @@ D7
 ~
 ~
 0 -1 14019
-D2
-~
-~
-0 -1 14015
-D1
-~
-~
-0 -1 14046
 S
 #14018
 A Rua das Macieiras~
@@ -488,11 +482,7 @@ sossego.  É possível ver, a sul, um extenso campo gramado de maneira muito
 estranha, onde parece estar havendo alguma coisa importante.  A Avenida Lima
 Madura fica a sudeste.
 ~
-140.2 g 1
-D8
-~
-~
-0 -1 14017
+140 64 0 0 0 1
 D2
 Você vê um campo gramado.
 ~
@@ -502,7 +492,11 @@ D3
 ~
 ~
 0 -1 14021
-S 
+D8
+~
+~
+0 -1 14017
+S
 #14019
 A Rua Pessegueiros~
    Você está caminhando em uma rua cercada por velhos pessegueiros
@@ -511,15 +505,15 @@ atingindo por diversas vezes.  A vizinhança aqui é muito tranqüila, sendo
 possível avistar, a sul, os fundos de uma casa tomada pelas plantas.
    A Pessegueiros segue leste, e a sudoeste fica a Avenida.
 ~
-140.2 g 1
-D9
-~
-~
-0 -1 14017
+140 64 0 0 0 1
 D1
 ~
 ~
 0 -1 14060
+D9
+~
+~
+0 -1 14017
 S
 #14020
 A Rua Ameixas~
@@ -532,7 +526,7 @@ e noroeste se não houvesse um enorme monte de folhas impedindo que você siga
 justamente naquelas direções.  A entrada de Lidrel fica a leste, enquanto
 ao norte está uma estranha e gigantesca flor.
 ~
-140.2 g 1
+140 64 0 0 0 1
 D0
 Há ali uma flor gigante.
 ~
@@ -549,9 +543,9 @@ Ali parece haver o plantio de flores.
 0 -1 14022
 E
 tabuleta flor gigantesca~
-@nA tabuleta diz:
+	nA tabuleta diz:
 
-       @B"A Gota D'Água"@n
+       	B"A Gota D'Água"	n
 
      Escola para pequenos.
      Faça já sua matrícula!
@@ -564,7 +558,12 @@ A Rua das Macieiras~
 cuidada barraca de flores, enquanto a sudeste há apenas a Avenida Lima
 Madura.
 ~
-140.2 g 1
+140 64 0 0 0 1
+D0
+Você vê uma barraca de flores.
+~
+~
+0 -1 14062
 D1
 ~
 ~
@@ -573,11 +572,6 @@ D2
 ~
 ~
 0 -1 14045
-D0
-Você vê uma barraca de flores.
-~
-~
-0 -1 14062
 S
 #14022
 Os Campos de Cultivo~
@@ -589,7 +583,7 @@ cores quanto cheiros e espécies, estando elas organizadas em pequenos blocos
 de flores-irmãs.  Você consegue caminhas pelos campos nas direções leste e
 oeste, podendo seguir até a Rua Ameixas por norte.
 ~
-140.2 g 2
+140 64 0 0 0 2
 D0
 A Macieiras fica naquela direção.
 ~
@@ -613,12 +607,12 @@ próximos aos mais escuros.  É um festival de cores extremamente agradável
 de se ver, porém muito difícil de se acreditar.  A pequena trilha que você
 segue dentro dos campos segue apenas a leste.
 ~
-140.2 g 2
+140 64 0 0 0 2
 D1
 ~
 ~
 0 -1 14022
-S   
+S
 #14024
 Os Campos de Cultivo~
    Você está nos campos de cultivo de flores de Lindrel.  Desse lado, o que
@@ -628,12 +622,12 @@ próximos aos mais escuros.  É um festival de cores extremamente agradável
 de se ver, porém muito difícil de se acreditar.  A pequena trilha que o
 trouxe até aqui segue apenas de volta a oeste.
 ~
-140.2 g 2
+140 64 0 0 0 2
 D3
 ~
 ~
 0 -1 14022
-S   
+S
 #14025
 A Vila dos Cogumelos~
    Você está em uma ruela na agradável Vila dos Cogumelos.  Gigantescos
@@ -644,13 +638,12 @@ alguma forma crescerão até atingirem o tamanho adequado para serem
 habitados.  À norte e sul há dois grandes cogumelos de telhado laranja.
 A estreita rua segue leste e oeste.
 ~
-140.3 g 1
+140 64 0 0 0 1
 D0
 Você vê um grande cogumelo-casa.
 ~
 porta~
-:n 2 a porta
-ag 2 14029
+0 2 14029
 D1
 ~
 ~
@@ -659,14 +652,12 @@ D2
 Você vê um grande cogumelo-casa.
 ~
 porta~
-:n 2 a porta
-ag 2 14030
+0 2 14030
 D3
 A Avenida fica naquela direção.
 ~
 portao~
-:n 1 o portão
-ag 2 14016
+0 2 14016
 S
 #14026
 A Vila dos Cogumelos~
@@ -677,7 +668,7 @@ todos os lados.  Você ainda vê, interessado, que há, nos espaços
 alguma forma crescerão até atingirem o tamanho adequado para serem
 habitados.   A estreita rua segue norte, sul, leste e oeste.
 ~
-140.3 g 1
+140 64 0 0 0 1
 D0
 ~
 ~
@@ -690,8 +681,7 @@ D2
 A Amoreiras fica ali.
 ~
 portao madeira~
-:n 1 o portão de madeira
-ag 2 14008
+0 2 14008
 D3
 ~
 ~
@@ -707,19 +697,17 @@ alguma forma crescerão até atingirem o tamanho adequado para serem
 habitados. Há, nas direções norte, leste e oeste, três cogumelos de telhado
 azul-claro. A estreita rua segue sul.
 ~
-140.3 g 1
+140 64 0 0 0 1
 D0
 Você vê um grande cogumelo-casa.
 ~
 porta~
-:n 2 a porta
-ag 2 14032
+0 2 14032
 D1
 Você vê um grande cogumelo-casa.
 ~
 porta~
-:n 2 a porta
-ga 2 14033
+0 2 14033
 D2
 ~
 ~
@@ -728,8 +716,7 @@ D3
 Você vê um grande cogumelo-casa.
 ~
 porta~
-:n 2 a porta
-ga 2 14031
+0 2 14031
 S
 #14028
 A Vila dos Cogumelos~
@@ -741,25 +728,22 @@ alguma forma crescerão até atingirem o tamanho adequado para serem
 habitados. Há, nas direções leste, norte e sul, três cogumelos de telhado
 amarelo. A estreita rua segue oeste.
 ~
-140.3 g 1
+140 64 0 0 0 1
 D0
 Você vê um grande cogumelo-casa.
 ~
 porta~
-:n 2 a porta
-ga 2 14034
+0 2 14034
 D1
 Você vê um grande cogumelo-casa.
 ~
 porta~
-:n 2 a porta
-ga 2 14035
+0 2 14035
 D2
 Você vê um grande cogumelo-casa.
 ~
 porta~
-:n 2 a porta
-ga 2 14036
+0 2 14036
 D3
 ~
 ~
@@ -771,13 +755,12 @@ O Cogumelo Vermelho Número 1~
 colocar bastante coisa aqui, o que o faz parecer um bom lugar para se morar.
 A única saída daqui é sul.
 ~
-140.3 cg 0
+140 68 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-ga 2 14025
-S   
+0 2 14025
+S
 #14030
 O Cogumelo Vermelho Número 2~
    Você está dentro de um confortável cogumelo casa.  Aqui o ambiente é
@@ -786,12 +769,11 @@ folhas ainda verdes e flores recém-colhidas.  Ficar aqui lhe dá vontade de
 dormir...
    A saída é a norte.
 ~
-140.3 cg 0
+140 68 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-ga 2 14025
+0 2 14025
 S
 #14031
 O Cogumelo Azul Número 1~
@@ -799,12 +781,11 @@ O Cogumelo Azul Número 1~
 colocar bastante coisa aqui, o que o faz parecer um bom lugar para se morar.
 A única saída daqui é leste.
 ~
-140.3 cg 0
+140 68 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-ga 2 14027
+0 2 14027
 S
 #14032
 O Cogumelo Azul Número 2~
@@ -814,12 +795,11 @@ balanços no alto por todos os lados, além de grandes flores repletas de
 néctar e orvalho.  Deve ser a casa de alguém.
    A porta de saída fica a sul.
 ~
-140.3 cg 0
+140 68 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-ga 2 14027
+0 2 14027
 S
 #14033
 O Cogumelo Azul Número 3~
@@ -827,12 +807,11 @@ O Cogumelo Azul Número 3~
 colocar bastante coisa aqui, o que o faz parecer um bom lugar para se morar.
 A única saída daqui é oeste.
 ~
-140.3 cg 0
+140 68 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-ag 2 14027
+0 2 14027
 S
 #14034
 O Cogumelo Amarelo Número 1~
@@ -842,12 +821,11 @@ móveis feitos de folhas, flores e madeira.  Pelo que você percebeu, o dono
 da casa aprecia muito trabalhos manuais, sendo um marceneiro-escultor de
 muito talento.  Talvez seja melhor não tocar em nada.
 ~
-140.3 cg 0
+140 68 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-ag 2 14028
+0 2 14028
 S
 #14035
 O Cogumelo Amarelo Número 2~
@@ -855,12 +833,11 @@ O Cogumelo Amarelo Número 2~
 colocar bastante coisa aqui, o que o faz parecer um bom lugar para se morar.
 A única saída daqui é oeste.
 ~
-140.3 cg 0
+140 68 0 0 0 0
 D3
 ~
 porta~
-:n 2 a porta
-ag 2 14028
+0 2 14028
 S
 #14036
 O Cogumelo Amarelo Número 3~
@@ -868,12 +845,11 @@ O Cogumelo Amarelo Número 3~
 colocar bastante coisa aqui, o que o faz parecer um bom lugar para se morar.
 A única saída daqui é norte.
 ~
-140.3 cg 0
+140 68 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-ga 2 14028
+0 2 14028
 S
 #14037
 A Gota D'Água~
@@ -885,12 +861,7 @@ longo do caule da enorme planta, sobre suas folhas.  Provavelmente os alunos
 chegam à suas classes voando, mas é possível chegar nelas escalando a
 escola.  Ridículo, mas é verdade.
 ~
-140.2 cg 1
-D4 
-As classes ficam nessa direção.
-~
-~
-0 -1 14038
+140 68 0 0 0 1
 D1
 A Avenida passa ali.
 ~
@@ -901,6 +872,11 @@ A Ameixas é naquela direção.
 ~
 ~
 0 -1 14020
+D4
+As classes ficam nessa direção.
+~
+~
+0 -1 14038
 S
 #14038
 A Sala das Magias Básicas~
@@ -910,7 +886,7 @@ bem polida, mantém-se no ar como que por mágica, havendo nela o que parece
 ser a matéria da aula de hoje.  Vasos e mais vasos com pequenas flores foram
 dispostos sobre as carteiras dos alunos.
 ~
-140.2 cgd 0
+140 76 0 0 0 0
 D4
 ~
 ~
@@ -921,15 +897,15 @@ D5
 0 -1 14037
 E
 lousa~
-@nEstá escrito, em amarelo, com letra muito bonita:
-@Y
+	nEstá escrito, em amarelo, com letra muito bonita:
+	Y
                           AULA DE HOJE
                   Alterando Tamanhos de Plantas
 
  * Ética na magia fádica
  * O livre-arbítrio dos vegetais: a importância de se pedir permissão
  * Introdução às magias de crescimento e encolhimento
- * Correção de tarefas@n
+ * Correção de tarefas	n
 ~
 S
 #14039
@@ -941,15 +917,15 @@ Caldeirões de ferro flutuam no ar, assim como pergaminhos, fôrmas, talheres
 e tigelas.  Na lousa, você lê que aquela é a sala onde se aprende a
 cozinhar.  Provavelmente a última aula foi um desastre...
 ~
-140.2 cgd 0
-D5
-~
-~
-0 -1 14038
+140 76 0 0 0 0
 D4
 ~
 ~
 0 -1 14040
+D5
+~
+~
+0 -1 14038
 S
 #14040
 A Sala de Artes~
@@ -959,7 +935,7 @@ lápis coloridos e trabalhos de alunos.  Você ainda repara que um dos lados
 da classe é completamente rosa, justamente o lado onde está a lousa e a mesa
 da professora.  Coisa estranha...
 ~
-140.2 cdg 0
+140 76 0 0 0 0
 D4
 ~
 ~
@@ -977,7 +953,7 @@ professoras.  A folha que sustenta a classe foi pintada pelos próprios
 alunos com as cores do arco-íris, que também enfeitaram as cortinas que
 servem de parede.
 ~
-140.2 cdg 0
+140 76 0 0 0 0
 D4
 ~
 ~
@@ -996,13 +972,12 @@ Berços de folhas flututam por todos os lados, havendo alguns vazios e
 outros, balançados por magia, com bebês gordinhos e saudáveis.  Não faça
 barulho!
 ~
-140.2 dacefg 0
+140 125 0 0 0 0
 D4
 A sala parece estar trancada.
 ~
 porta~
-:n 2 a porta
-abcg 2 14043
+0 2 14043
 D5
 ~
 ~
@@ -1013,12 +988,11 @@ Uma Sala Fechada~
    Você está numa das salas de aulas que, no momento, permanece fechada.
 Volte outra hora.
 ~
-140.2 cgd 0
+140 76 0 0 0 0
 D5
 ~
 porta~
-:n 2 a porta
-abcg 2 14042
+0 2 14042
 S
 #14044
 Os Campos de Treinamento~
@@ -1028,7 +1002,7 @@ aqui, havendo ainda sinalizações com pontuações e desenhos de alvos.  Hoje,
 o campo parece estar sendo usado para as lições de vôo da turma mais
 avançada da escola de Lindrel.
 ~
-140.2 gc 2
+140 68 0 0 0 2
 D0
 ~
 ~
@@ -1046,7 +1020,7 @@ aqui, havendo ainda sinalizações com pontuações e desenhos de alvos.  Hoje,
 o campo parece estar sendo usado para as lições de vôo da turma mais
 avançada da escola de Lindrel.
 ~
-140.2 gc 2
+140 68 0 0 0 2
 D0
 ~
 ~
@@ -1066,7 +1040,11 @@ você.  Apurando mais os ouvidos, você consegue ouvir a conversa das flores.
    A entrada da casa fica a norte, enquanto se pode sair de seu terreno indo
 oeste ou sul.
 ~
-140.2 gc 1
+140 68 0 0 0 1
+D0
+~
+porta~
+0 2 14047
 D2
 ~
 ~
@@ -1075,11 +1053,6 @@ D3
 ~
 ~
 0 -1 14017
-D0
-~
-porta~
-:n 2 a porta
-ag 2 14047
 S
 #14047
 O Estranho Interior da Casa~
@@ -1092,12 +1065,11 @@ uma fada, que no momento preparava algo em um tacho de cobre.
    As portas, repletas de espinhos, estão fechadas, mas você ainda pode sair
 daqui seguindo sul.
 ~
-140.2 cdfg 0
+140 108 0 0 0 0
 D2
 ~
 porta~
-:n 2 a porta
-ag 2 14046
+0 2 14046
 S
 #14048
 A Avenida Lima Madura~
@@ -1106,15 +1078,15 @@ acompanham o caminho ao lado de altos postes de madeira usados na
 iluminação. Há, ao norte, uma grande construção de pedra cercada por um pequeno
 lago e coberta por muitas plantas. A Avenida segue sul.
 ~
-140.2 gc 1
-D2
-~
-~
-0 -1 14017
+140 68 0 0 0 1
 D0
 ~
 ~
 0 -1 14049
+D2
+~
+~
+0 -1 14017
 S
 #14049
 Além do Lago~
@@ -1127,13 +1099,12 @@ importante em seu interior.  O grande pórtico, da mesma maneira que o portão
 de entrada de Lindrel, permanece fechado com as duas chaves, uma negra e
 outra branca, no lado de fora.  A Avenida Lima Madura fica a sul.
 ~
-140.4 cg 2
+140 68 0 0 0 2
 D0
 Parece haver algo além do grande pórtico.
 ~
 portico grande~
-:n 1 o grande pórtico
-a 2 14050
+1 2 14050
 D2
 ~
 ~
@@ -1160,7 +1131,7 @@ os viajantes cansados para um breve descanso.  Há uma grande fonte no centro
 do lugar.
    Uma segunda sala fica a norte, enquanto o lado de fora fica a sul.
 ~
-140.4 cfgd 0
+140 108 0 0 0 0
 D0
 Você vê uma sala de curiosa aparência.
 ~
@@ -1170,8 +1141,7 @@ D2
 O lado de fora fica do outro lado do pórtico.
 ~
 portico grande~
-:n 1 o grande pórtico
-a 2 14049
+1 2 14049
 S
 #14051
 O Coração de Lindrel~
@@ -1184,7 +1154,7 @@ completamente claro.  Você não consegue olhar mais nada além das duas
 figuras sentadas sobre os sólios que, de olhos cerrados, sussuram docemente.
    A única saída se encontra a sul.
 ~
-140.4 cfgd 0
+140 108 0 0 0 0
 D2
 Você vê a sala de espera.
 ~
@@ -1198,7 +1168,7 @@ curiosamente quieta. Não há nada de especial: as árvores não parecem diferen
 nem os animais, nem qualquer outro tipo de coisa. A única direção a se seguir é
 sul.
 ~
-140.1 cgsr 3
+140 393284 0 0 0 3
 D2
 Você vê uma trilha dentro da floresta.
 ~
@@ -1212,7 +1182,7 @@ essa floresta. Tudo, desde as plantas até os animais está do tamanho que
 você pensa que deveriam ser, o que mostra que de encantada a floresta não
 tem mais nada. Sul é a única direção que você pode seguir.
 ~
-140.1 cgsr 3
+140 393284 0 0 0 3
 D2
 Você vê uma trilha dentro da floresta.
 ~
@@ -1226,7 +1196,7 @@ está voltando ao normal dentro dessa floresta, que perde seu encantamento
 a cada passo rumo sul que você dá. A enorme placa que você encontrou enquanto
 vinha desapareceu.
 ~
-140.1 cgsr 3
+140 393284 0 0 0 3
 D2
 Você vê uma trilha dentro da floresta.
 ~
@@ -1240,7 +1210,7 @@ elas diminuem à medida que segue mais e mais pra sul.  As árvores parecem
 diminuir de tamanho, assim como a trilha, as folhas.  Tudo parece estar
 normal.  Normal demais.
 ~
-140.1 cgsr 3
+140 393284 0 0 0 3
 D2
 Você vê uma trilha dentro da floresta.
 ~
@@ -1254,7 +1224,7 @@ parece perder sua magia, o que culmina com o sumiço da entrada que leva ao
 reino dos pequenos.  A única direção que você pode seguir é sul, por onde as
 árvores parecem se tornar menores e a passagem mais estreita.
 ~
-140.1 cgsr 3
+140 393284 0 0 0 3
 D2
 Você vê uma trilha dentro da floresta.
 ~
@@ -1268,7 +1238,7 @@ subitamente, se movido atrás de você, cobrindo a trilha que você usou tanto
 pra entrar nela quanto para sair.  A única direção que você pode seguir é
 sul.
 ~
-140.1 cgsr 3
+140 393284 0 0 0 3
 D2
 Ali está o limite das florestas.
 ~
@@ -1282,17 +1252,17 @@ tranqüilidade em que o lugar parece estar mergulhado.  Não há empecilho
 algum para que você continue andando entre as árvores, seja para leste
 quanto para oeste.
 ~
-140.1 cgsr 3
-D3
-Você vê uma trilha dentro da floresta.
-~
-~
-0 -1 14000
+140 393284 0 0 0 3
 D1
 Você vê uma trilha dentro da floresta.
 ~
 ~
 0 -1 14058
+D3
+Você vê uma trilha dentro da floresta.
+~
+~
+0 -1 14000
 S
 #14059
 A Floresta Encantada~
@@ -1301,17 +1271,17 @@ tranqüilidade em que o lugar parece estar mergulhado.  Não há empecilho
 algum para que você continue andando entre as árvores, seja para leste
 quanto para oeste.
 ~
-140.1 cgsr 3
-D3
-Você vê uma trilha dentro da floresta.
-~
-~
-0 -1 14059
+140 393284 0 0 0 3
 D1
 Você vê uma trilha dentro da floresta.
 ~
 ~
 0 -1 14000
+D3
+Você vê uma trilha dentro da floresta.
+~
+~
+0 -1 14059
 S
 #14060
 A Rua Pessegueiros~
@@ -1321,7 +1291,7 @@ atingindo por diversas vezes.  A rua pouco movimentada parece ter seus
 atrativos: o cheiro inconfundível de comida, vindo de um cogumelo a norte,
 parece chamá-lo insistentemente.  A Pessegueiros continua a oeste.
 ~
-140.2 g 1
+140 64 0 0 0 1
 D0
 Você um grande cogumelo rodeado por um pequeno jardim.
 ~
@@ -1343,7 +1313,7 @@ variedade de doces.  Tudo aqui é muito limpo e de aspecto novo, o que o
 deixa bastante seguro sobre a qualidade da comida.
    A Pessegueiros fica a sul.
 ~
-140.2 cg 0
+140 68 0 0 0 0
 D2
 ~
 ~
@@ -1358,10 +1328,10 @@ quase toda a partes das paredes que não está tomada por retratos de flores,
 estão cobertas por bonitas trepadeiras de profundo verde.  Tudo aqui é muito
 bem cuidado.  A Macieiras fica a sul.
 ~
-140.2 cg 0
+140 68 0 0 0 0
 D2
 ~
 ~
 0 -1 14021
 S
-$
+$~

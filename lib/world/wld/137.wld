@@ -8,16 +8,16 @@ Caradharas.  Ao seu redor você observa liquens e musgos verdes sobre as
 inóspitas rochas do vale.  Ao sudeste você observa o vale do riacho escuro e
 suas rochas cinzentas coroadas com liquens.
 ~
-137 0 2
+137 0 0 0 0 2
+D6
+~
+~
+0 -1 4077
 D8
 Você observa o vale do riacho escuro.
 ~
 ~
 0 -1 13703
-D6
-~
-~
-0 -1 4077
 S
 #13701
 O Vale do Riacho Escuro~
@@ -27,7 +27,7 @@ vale, talvez estás pequeninas manchas verdes são as únicas coisas vivas
 deste local inóspito.  Ao sul você observa no vale algumas rochas de
 superfície mais suave.
 ~
-137 0 2
+137 0 0 0 0 2
 D2
 Você observa o vale do riacho escuro.
 ~
@@ -42,7 +42,7 @@ vale, talvez estás pequeninas manchas verdes são as únicas coisas vivas
 deste local inóspito.  Ao leste você observa no vale algumas rochas de
 superfície mais suave.
 ~
-137 0 2
+137 0 0 0 0 2
 D1
 Você observa o vale do riacho escuro.
 ~
@@ -58,7 +58,7 @@ montanhas sombrias e seus picos coroados pela neve.  Ao norte, oeste,
 noroeste e ao sudeste você observa o vale do riacho escuro e as silhuetas das
 cinzentas das rochas que formam este lugar.
 ~
-137 0 2
+137 0 0 0 0 2
 D0
 Você observa o vale do riacho escuro.
 ~
@@ -90,7 +90,7 @@ um belo e sossegado lago de águas azuis.  Ao sudeste você observa um
 agradável campo verde e ao sudoeste você observa a nascente do Veio de
 Prata.
 ~
-137 0 2
+137 0 0 0 0 2
 D6
 Você observa o vale do riacho escuro.
 ~
@@ -123,7 +123,7 @@ do riacho escuro.  Ao noroeste você observa uma grande pedra erguida sobre
 as rochas do vale.  Ao sudoeste você observa as rochas do vale do riacho
 escuro.
 ~
-137 crst 6
+137 917508 0 0 0 6
 D6
 Você observa uma enorme pedra.
 ~
@@ -144,7 +144,7 @@ pedra foi erguida por Durin, o imortal, no ponto exato em que ele observou
 Kheled-Zâram, o lago-espelho pela primeira vez.  Ao sudeste você observa o
 lago-espelho e suas águas azuis e plácidas.
 ~
-137 0 2
+137 0 0 0 0 2
 D8
 Você observa o lago-espelho.
 ~
@@ -175,7 +175,7 @@ a nascente do belo Celebrant, o Veio de Prata.  À sua frente você observa a
 até encontrar o Anduin, o grande rio, passando antes por Lothlórien.  Ao
 nordeste você observa as rochas inóspitas do vale do riacho escuro.
 ~
-137 0 2
+137 0 0 0 0 2
 D7
 Você observa o vale do riacho escuro.
 ~
@@ -190,7 +190,7 @@ você observa o belo tapete verde formado pela vegetação deste lindo campo.
 Ao noroeste você observa as rochas cinzentas do vale do riacho escuro e ao
 sudeste você observa uma magnífica floresta.
 ~
-137 0 2
+137 0 0 0 0 2
 D1
 Você observa um belo campo verde.
 ~
@@ -215,7 +215,7 @@ pássaros sobrevoando o campo, como reis observando o reinado de outros reis.
 Ao leste e ao oeste você observa o maravilhoso tapete verde deste belo
 campo.  Ao sul você observa uma magnífica floresta.
 ~
-137 0 2
+137 0 0 0 0 2
 D1
 Você observa um belo campo verde.
 ~
@@ -240,7 +240,7 @@ verde deste campo.  Ao seu redor você observa uma imensidão de verde e um
 perfume de lírios do campo.  Ao oeste você observa o maravilhoso tapete
 verde e ao sudoeste você observa uma magnífica floresta.
 ~
-137 0 2
+137 0 0 0 0 2
 D3
 Você observa um belo campo verde.
 ~
@@ -264,7 +264,7 @@ algum homem.  Ao norte, noroeste e nordeste você observa um maravilhoso
 campo verde e ao sul você observa belíssimas árvores no interior da bela
 floresta de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D0
 Você observa um belo campo verde.
 ~
@@ -298,7 +298,7 @@ e união que você sente nesta floresta, o faz lembra das antigas histórias
 contadas em sua terra natal, sobre a gloriosa terra dos imortais.  Ao
 sudeste você observa belíssimas árvores da floresta de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D8
 Você observa a magnífica floresta de Lothlórien.
 ~
@@ -315,7 +315,7 @@ percebe um confortável tapete formado pelas belas folhas que caíram das
 árvores de Lothlórien.  Ao norte, ao sul, ao sudeste e ao sudoeste você
 observa as majestosas árvores da floresta de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D0
 Você observa a magnífica floresta de Lothlórien.
 ~
@@ -348,7 +348,7 @@ povos costumam contar sobre a floresta de Lothlórien e não consegue imagina
 como poderiam existir aqui neste belo lugar feiticeiros maléficos.  Ao
 sudoeste você observa algumas belíssimas árvores da floresta de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D9
 Você observa a magnífica floresta de Lothlórien.
 ~
@@ -367,7 +367,7 @@ para os pés de visitantes desgastados.  Ao leste, noroeste, nordeste e ao
 sudoeste você observa a majestosa floresta de Lothlórien e suas belas
 árvores.
 ~
-137 s 3
+137 262144 0 0 0 3
 D1
 Você observa a magnífica floresta de Lothlórien.
 ~
@@ -398,7 +398,7 @@ da floresta.  Aos seus pés você sente a presença confortável do belo tapete
 formado pelas folhas que caíram das árvores.  Ao norte, ao leste e ao oeste
 você observa a imensidão da floresta de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D0
 Você observa a magnífica floresta de Lothlórien.
 ~
@@ -424,7 +424,7 @@ emitidas pelos impetuosos pássaros que sobrevoam a floresta e saltam de
 galho em galho no topo das árvores.  Ao oeste, noroeste, nordeste e ao
 sudeste você observa a sublime floresta de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D3
 Você observa a magnífica floresta de Lothlórien.
 ~
@@ -457,7 +457,7 @@ seguindo você pela floresta.  Vindos do sul, você percebe a chegada de sons
 semelhantes aos sons dos movimentos das águas nos cursos de rios.  Ao leste
 e ao nordeste você observa a bela floresta de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D1
 Você observa a magnífica floresta de Lothlórien.
 ~
@@ -480,7 +480,7 @@ pequenos riachos e rios.  Ao leste e ao oeste você observa a bela e
 tranqüila floresta dourada de Lothlórien.  Ao sul você observa um pequeno
 riacho.
 ~
-137 s 3
+137 262144 0 0 0 3
 D1
 Você observa a magnífica floresta de Lothlórien.
 ~
@@ -507,17 +507,17 @@ sons emitidos pelos cursos d'água em movimento, vindos do sul.  Ao noroeste
 e ao oeste você observa a bela floresta dourada dos Galadhrim.  Ao você
 observa um pequeno riacho.
 ~
-137 s 3
-D3
-Você observa a magnífica floresta de Lothlórien.
-~
-~
-0 -1 13719
+137 262144 0 0 0 3
 D2
 Você observa um pequeno riacho.
 ~
 ~
 0 -1 13721
+D3
+Você observa a magnífica floresta de Lothlórien.
+~
+~
+0 -1 13719
 D6
 Você observa a magnífica floresta de Lothlórien.
 ~
@@ -535,7 +535,7 @@ do Nimrodel, apenas algumas rochas em ruínas.  Ao norte e ao sul você
 observa a magnífica floresta dos Galadhrim.  Ao oeste você observa as águas
 escuras do riacho de Nimrodel.
 ~
-137 cst 6
+137 786436 0 0 0 6
 D0
 Você observa a magnífica floresta de Lothlórien.
 ~
@@ -564,7 +564,7 @@ observa a celestial floresta dos Galadhrim.  Ao leste você observa as
 escuras águas do Nimrodel e ao oeste você observa majestosas cascatas
 escondidas nas sombras das imponentes árvores de Lothlórien.
 ~
-137 cst 6
+137 786436 0 0 0 6
 D0
 Você observa a magnífica floresta de Lothlórien.
 ~
@@ -590,7 +590,7 @@ sobre seu corpo aliviam seu cansaço e curam seus ferimentos.  Ao seu redor
 você observa belas rochas de onde surgem velozmente as águas do Nimrodel.
 Ao leste você observa as escuras águas do riacho de Nimrodel.
 ~
-137 cst 6
+137 786436 0 0 0 6
 D1
 Você observa as águas escuras do Nimrodel.
 ~
@@ -612,7 +612,7 @@ elas sejam, nunca poderão ter sua beleza comparada a imponência das
 Mallorns.  Ao leste, oeste, sudeste e sudoeste você observa a grandiosa
 floresta dourada de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D0
 Você observa as águas escuras do Nimrodel.
 ~
@@ -649,7 +649,7 @@ tapete dourado formado pelas folhas douradas que caíram durante o último
 verão.  Ao sul, oeste, sudeste e sudoeste você observa a gigantesca floresta
 dourada de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D2
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -688,7 +688,7 @@ você ouvi palavras estranhas e sons de cursos d'água em movimento.  Ao
 leste, sul, sudeste e sudoeste você observa a imponente floresta dourada de
 Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D1
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -727,7 +727,7 @@ prateados e pequenos pássaros saltando sobre eles.  Na direção do solo da
 floresta você observa o belo tapete dourado formado pelas folhas das
 mallorns que caíram.
 ~
-137 cr 3
+137 131076 0 0 0 3
 D4
 Você observa belos galhos prateados carregados de folhas douradas.
 ~
@@ -754,7 +754,7 @@ grande plataforma de madeira,  Na direção do solo da floresta de Lothlórien
 você observa o magnífico tapete dourado formado pelas folhas das mallorns
 que caíram no último verão.
 ~
-137 cgrs 3
+137 393284 0 0 0 3
 D4
 Você observa uma enorme plataforma de madeira.
 ~
@@ -778,7 +778,7 @@ ao norte um pequeno riacho.  Olhando para o solo da floresta dos Galadhrim
 pelo furo no piso da plataforma de madeira você observa vários galhos e
 belas folhas douradas.
 ~
-137 cgr 2
+137 131140 0 0 0 2
 D5
 Você observa vários galhos carregados de folhas douradas.
 ~
@@ -797,7 +797,7 @@ prateados e pequenos pássaros saltando sobre eles.  Na direção do solo da
 floresta você observa o belo tapete dourado formado pelas folhas das
 mallorns que caíram.
 ~
-137 cr 3
+137 131076 0 0 0 3
 D4
 Você observa belos galhos prateados carregados de folhas douradas.
 ~
@@ -824,7 +824,7 @@ grande plataforma de madeira,  Na direção do solo da floresta de Lothlórien
 você observa o magnífico tapete dourado formado pelas folhas das mallorns
 que caíram no último verão.
 ~
-137 cgrs 3
+137 393284 0 0 0 3
 D4
 Você observa uma enorme plataforma de madeira.
 ~
@@ -848,7 +848,7 @@ ao norte um pequeno riacho.  Olhando para o solo da floresta dos Galadhrim
 pelo furo no piso da plataforma de madeira você observa vários galhos e
 belas folhas douradas.
 ~
-137 cgr 2
+137 131140 0 0 0 2
 D5
 Você observa vários galhos carregados de folhas douradas.
 ~
@@ -866,7 +866,7 @@ flores douradas que exalam um agradável perfume.  Aos seus pés você observa
 um belo tapete dourado formado pelas folhas que caíram no último verão.  Ao
 nordeste e ao sudeste você observa a majestosa floresta de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D7
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -888,7 +888,7 @@ lugar tomando conta da sua mente.  Ao leste, noroeste, nordeste, sudeste e
 ao sudoeste você observa a imensidão da monumental floresta dourada dos
 Galadhrim.
 ~
-137 s 3
+137 262144 0 0 0 3
 D1
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -926,7 +926,7 @@ pendurados nos altos galhos prateados das mallorns conquista toda a
 floresta.  Ao oeste, noroeste, nordeste, sudeste e ao sudoeste você observa
 a monumental floresta dourada de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D3
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -963,7 +963,7 @@ caíram durante o último verão.  A floresta dos Galadhrim é realmente
 magnífica, um verdadeiro paraíso aos olhos dos forasteiros.  Ao noroeste e
 ao sudoeste você observa a linda floresta dourada de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D6
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -984,7 +984,7 @@ mar dourado formado pelas folhas douradas que caíram das árvores durante o
 último verão.  Ao norte, leste, noroeste, nordeste e sudoeste você observa a
 imensidão da magnífica floresta dourada de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D0
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1023,7 +1023,7 @@ lindo tronco prateado e magníficas flores e folhas douradas.  No topo das
 ao nordeste você observa a monumental floresta de Lothlórien e ao sul você
 observa a base de uma colina verde.
 ~
-137 s 3
+137 262144 0 0 0 3
 D1
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1060,7 +1060,7 @@ durante o último verão e formam um belíssimo tapete dourado.  Ao norte,
 oeste, noroeste, nordeste e ao sudeste você observa a imensidão da magnífica
 floresta dourada de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D0
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1096,7 +1096,7 @@ prateados, suas folhas e cachos de flores douradas e seu agradável perfume.
 Ao nordeste e ao sudeste você observa a imponente floresta dourada de
 Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D7
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1118,7 +1118,7 @@ os visitantes da bela floresta de Lothlórien.  Ao sul, noroeste e ao
 nordeste você observa as belas formas e cores da gloriosa floresta dourada
 de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D2
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1150,7 +1150,7 @@ galho em galho à procura de um lugar confortável para construírem seus
 ninhos.  Ao noroeste e ao sudoeste você observa a imensidão da grandiosa
 floresta dourada de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D6
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1172,7 +1172,7 @@ flores douradas.  Ao sul você observa um grande portão e uma enorme muralha.
 Ao norte, sudeste e ao sudoeste você observa a majestosa floresta dourada de
 Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D0
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1199,7 +1199,7 @@ maravilhoso mar dourado formado por inúmeras folhas douradas que caíram
 durante o verão das monumentais árvores da floresta.  Ao nordeste e ao
 sudeste você observa a imensidão da linda floresta dourada de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D7
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1222,7 +1222,7 @@ Ao norte você observa uma linda ponte branca que segue em direção de um
 gigantesco portão de madeira ladeado por uma monumental muralha.  Ao leste,
 noroeste e ao nordeste você observa a linda floresta de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D0
 Você observa um grandioso portão de madeira.
 ~
@@ -1254,7 +1254,7 @@ douradas que caíram durante o último verão das monumentais árvores da
 floresta dourada de Lothlórien.  Ao noroeste e ao sudoeste você observa a
 imponência da floresta dos Galadhrim.
 ~
-137 s 3
+137 262144 0 0 0 3
 D6
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1285,7 +1285,7 @@ plataforma branca.  Ao norte você observa as belíssimas árvores da floresta
 dourada de Lothlórien e para cima você observa na colina de Amroth, uma bela
 coroa de árvores brancas e sem folhas.
 ~
-137 0 2
+137 0 0 0 0 2
 D0
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1310,7 +1310,7 @@ colina de Amroth a bela floresta dourada de Lothlórien.  Ao sudeste e
 sudoeste você observa a primeira coroa da colina de Amroth e ao sul você
 observa a segunda e monumental coroa da colina de Amroth.
 ~
-137 0 2
+137 0 0 0 0 2
 D2
 Você observa monumentais mallorns reluzindo como ouro.
 ~
@@ -1343,7 +1343,7 @@ observa a majestosa coroa branca da colina de Amroth.  Ao leste você observa
 a segunda coroa da colina de Amroth, formada por monumentais mallorns de
 maravilhosas folhas douradas.
 ~
-137 0 2
+137 0 0 0 0 2
 D1
 Você observa monumentais mallorns reluzindo como ouro.
 ~
@@ -1373,7 +1373,7 @@ observa a magnífica coroa branca formada por magníficas árvores da colina de
 Amroth.  Ao norte você observa a segunda coroa da colina de Amroth formada
 por gigantescos mallorns de maravilhosas folhas douradas.
 ~
-137 0 2
+137 0 0 0 0 2
 D0
 Você observa monumentais mallorns reluzindo como ouro.
 ~
@@ -1403,7 +1403,7 @@ bastante claro.  Ao noroeste e ao sudoeste você observa a primeira coroa da
 colina de Amroth, a coroa branca.  Ao oeste você observa a segunda coroa da
 colina de Amroth, a coroa dourada de mallorns.
 ~
-137 0 2
+137 0 0 0 0 2
 D3
 Você observa monumentais mallorns reluzindo como ouro.
 ~
@@ -1433,7 +1433,7 @@ aparência de abandono.  Ao norte você observa belíssimas árvores de troncos
 brancos sem folhas que formam a primeira coroa da colina de Amroth, a coroa
 branca.  Ao sul você observa o centro da colina de Amroth.
 ~
-137 0 2
+137 0 0 0 0 2
 D0
 Você observa belas árvores brancas sem folhas.
 ~
@@ -1459,7 +1459,7 @@ claro.  Ao oeste você observa as belas árvores de troncos brancos sem folhas
 que formam a primeira coroa da colina de Amroth, a coroa branca.  Ao leste
 você observa o centro da colina de Amroth.
 ~
-137 0 2
+137 0 0 0 0 2
 D1
 Você observa o centro da colina de Amroth.
 ~
@@ -1484,7 +1484,7 @@ observa as magníficas árvores de troncos brancos sem folhas que formam a
 primeira coroa da colina de Amroth, a coroa branca.  Ao norte você observa o
 centro da sagrada colina de Amroth.
 ~
-137 0 2
+137 0 0 0 0 2
 D0
 Você observa o centro da colina de Amroth.
 ~
@@ -1509,7 +1509,7 @@ douradas.  Ao leste você observa maravilhosas árvores de troncos brancos sem
 folhas que formam a primeira coroa da colina de Amroth, a coroa branca.  Ao
 oeste você observa o centro da agradável colina de Amroth.
 ~
-137 0 2
+137 0 0 0 0 2
 D1
 Você observa belas árvores brancas sem folhas.
 ~
@@ -1535,7 +1535,7 @@ estrela brilhando como os olhos de uma deusa.  Ao norte, leste, sul e ao
 oeste você observa belas e monumentais mallorns, que formam a segunda coroa
 da colina de Amroth, a coroa dourada.
 ~
-137 t 2
+137 524288 0 0 0 2
 D0
 Você observa monumentais mallorns reluzindo como ouro.
 ~
@@ -1569,7 +1569,7 @@ prateados e pequenos pássaros saltando sobre eles.  Na direção do solo da
 floresta você observa o belo tapete dourado formado pelas folhas das
 mallorns que caíram.
 ~
-137 cr 3
+137 131076 0 0 0 3
 D4
 Você observa belos galhos prateados carregados de folhas douradas.
 ~
@@ -1596,7 +1596,7 @@ grande plataforma de madeira,  Na direção do solo da floresta de Lothlórien
 você observa o magnífico tapete dourado formado pelas folhas das mallorns
 que caíram no último verão.
 ~
-137 cgrs 3
+137 393284 0 0 0 3
 D4
 Você observa uma enorme plataforma de madeira.
 ~
@@ -1619,7 +1619,7 @@ suas folhas douradas refletindo os feixes de luz.  Olhando para o solo da
 floresta dos Galadhrim pelo furo no piso da plataforma de madeira você
 observa vários galhos e belas folhas douradas.
 ~
-137 cgr 2
+137 131140 0 0 0 2
 D5
 Você observa vários galhos carregados de folhas douradas.
 ~
@@ -1639,13 +1639,12 @@ formado pelas folhas douradas das árvores que caíram durante o último verão.
 Ao norte você observa o grande portão da cidade dos Galadhrim e ao sul você
 observa a perfumada floresta dourada de Lothlórien.
 ~
-137 g 2
+137 64 0 0 0 2
 D0
 Você observa um grande portão de madeira.
 ~
 portao madeira~
-:n 1 o portão de madeira
-abhi 2 13774
+2 2 13774
 D2
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1662,7 +1661,7 @@ um lindo tapete dourado formado pelas folhas douradas que caíram das árvores
 durante o último verão.  Ao oeste e ao sudeste você observa a celestial
 floresta dourada de Lothlórien.
 ~
-137 s 3
+137 262144 0 0 0 3
 D3
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1687,7 +1686,7 @@ para se exibir.  Ao noroeste você observa a gloriosa floresta dourada dos
 Galadhrim.  Ao sul você observa as belas águas do Veio de Prata e ao leste
 você observa as velozes águas do Anduin, o grande rio.
 ~
-137 s 3
+137 262144 0 0 0 3
 D1
 Você observa as velozes águas do rio Anduin, o grande rio.
 ~
@@ -1712,7 +1711,7 @@ suas margens você observa uma formidável floresta dourada.  Ao oeste você
 observa uma majestosa floresta, a floresta dourada dos Galadhrim.  Ao sul
 você observa as velozes águas do Anduin, o grande rio.
 ~
-137 cr 7
+137 131076 0 0 0 7
 D2
 Você observa as velozes águas do rio Anduin, o grande rio.
 ~
@@ -1731,7 +1730,7 @@ observa na margem norte a monumental floresta dourada de Lothlórien e na
 margem sul você observa terras descampadas.  Ao leste você observa as águas
 do veio de Prata seguindo seu curso ao encontro do Anduin, o grande rio.
 ~
-137 cr 7
+137 131076 0 0 0 7
 D1
 Você observa as belas águas do Veio de Prata.
 ~
@@ -1748,7 +1747,7 @@ o encontro das águas do veio de Prata com as águas do Anduin, o grande rio,
 e ao norte você observa monumentais pés de mallorn da floresta dourada de
 Lothlórien.
 ~
-137 cr 7
+137 131076 0 0 0 7
 D0
 Você observa a floresta dourada de Lothlórien.
 ~
@@ -1774,7 +1773,7 @@ uma bela floresta de brilho dourado.  Ao norte e ao sul você observa as
 velozes águas do Anduin, o grande rio.  Ao oeste você observa as belas águas
 do Veio de Prata.
 ~
-137 cr 7
+137 131076 0 0 0 7
 D0
 Você observa as velozes águas do rio Anduin, o grande rio.
 ~
@@ -1799,7 +1798,7 @@ margens você observa terras que à medida que você segue na direção sul, ela
 vão apresentando cada vez menos vegetação.  Ao norte você observa as águas
 do magnífico Anduin, o grande rio.
 ~
-137 cr 7
+137 131076 0 0 0 7
 D0
 Você observa as velozes águas do rio Anduin, o grande rio.
 ~
@@ -1822,7 +1821,7 @@ solo, você observa no alto das árvores maravilhosas plataformas de madeira
 suspensas sobre os galhos das árvores.  Ao nordeste você observa sublimes
 estatuas de pedra.
 ~
-137 t 1
+137 524288 0 0 0 1
 D4
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -1849,7 +1848,7 @@ observa também divinas escadas semelhantes a monumentais serpentes escalando
 os troncos prateados dos magníficos pés de mallorn.  Ao noroeste você
 observa sublimes estatuas de pedra.
 ~
-137 t 1
+137 524288 0 0 0 1
 D4
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -1876,7 +1875,7 @@ os degraus da escada.  Na direção do topo das árvores você observa uma
 grande plataforma de madeira e na direção do solo você observa um belíssimo
 gramado verde.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D4
 Você observa uma grande plataforma de madeira.
 ~
@@ -1903,7 +1902,7 @@ várias plataformas de madeira e belas escadas que escalam as monumentais
 furo que existe no centro da plataforma de madeira, você observa uma linda
 escada de madeira iluminada por várias lamparinas prateadas.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D5
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -1925,7 +1924,7 @@ os degraus da escada.  Na direção do topo das árvores você observa uma
 grande plataforma de madeira e na direção do solo você observa um belíssimo
 gramado verde.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D4
 Você observa uma grande plataforma de madeira.
 ~
@@ -1952,7 +1951,7 @@ várias plataformas de madeira e belas escadas que escalam as monumentais
 furo que existe no centro da plataforma de madeira, você observa uma linda
 escada de madeira iluminada por várias lamparinas prateadas.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D5
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -1977,7 +1976,7 @@ Ao noroeste, nordeste, sudeste e ao sudoeste você observa os magníficos
 jardins da cidade de Caras Galadhon.  Ao sul você observa o gigantesco
 portão de madeira da cidade.
 ~
-137 t 1
+137 524288 0 0 0 1
 D0
 Você observa um lindo passeio revestido com pedra brancas.
 ~
@@ -1987,8 +1986,7 @@ D2
 Você observa um grande portão de madeira.
 ~
 portao madeira~
-:n 1 o portão de madeira
-abhi 2 13760
+2 2 13760
 D6
 Você observa os belos jardins de Caras Galadhon.
 ~
@@ -2025,7 +2023,7 @@ observa também divinas escadas semelhantes a monumentais serpentes escalando
 os troncos prateados dos magníficos pés de mallorn.  Ao sudeste você observa
 sublimes estatuas de pedra.
 ~
-137 t 1
+137 524288 0 0 0 1
 D4
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -2053,7 +2051,7 @@ solo, você observa no alto das árvores maravilhosas plataformas de madeira
 suspensas sobre os galhos das árvores.  Ao sudoeste você observa sublimes
 estatuas de pedra.
 ~
-137 t 1
+137 524288 0 0 0 1
 D4
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -2080,7 +2078,7 @@ os degraus da escada.  Na direção do topo das árvores você observa uma
 grande plataforma de madeira e na direção do solo você observa um belíssimo
 gramado verde.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D4
 Você observa uma grande plataforma de madeira.
 ~
@@ -2107,7 +2105,7 @@ várias plataformas de madeira e belas escadas que escalam as monumentais
 furo que existe no centro da plataforma de madeira, você observa uma linda
 escada de madeira iluminada por várias lamparinas prateadas.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D5
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -2129,7 +2127,7 @@ os degraus da escada.  Na direção do topo das árvores você observa uma
 grande plataforma de madeira e na direção do solo você observa um belíssimo
 gramado verde.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D4
 Você observa uma grande plataforma de madeira.
 ~
@@ -2156,7 +2154,7 @@ várias plataformas de madeira e belas escadas que escalam as monumentais
 furo que existe no centro da plataforma de madeira, você observa uma linda
 escada de madeira iluminada por várias lamparinas prateadas.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D5
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -2176,7 +2174,7 @@ recanto é iluminado por várias lamparinas prateadas fixadas nos arcos de
 madeira que apóiam a coberta.  Ao leste você observa um lindo caminho
 revestido com pedras brancas.
 ~
-137 dt 1
+137 524296 0 0 0 1
 D1
 Você observa um lindo passeio revestido com pedra brancas.
 ~
@@ -2201,7 +2199,7 @@ observa uma magnífica fonte de pedra cinza.  Ao sul você observa os belos
 jardins de Caras Galadhon.  Ao oeste você observa um maravilhoso e agradável
 recanto e ao leste e nordeste você observa gigantescos pés de mallorn.
 ~
-137 t 1
+137 524288 0 0 0 1
 D0
 Você observa uma bela fonte de pedra.
 ~
@@ -2226,7 +2224,7 @@ D6
 Você observa um lindo passeio revestido com pedra brancas.
 ~
 ~
-0 -1 13794 
+0 -1 13794
 D7
 Você observa monumentais pés de mallorn.
 ~
@@ -2244,7 +2242,7 @@ do topo como se fossem enormes serpentes prateadas.  Aos seus pés, você
 observa um belo gramado verde recheado de lindas flores perfumadas.  Ao
 oeste você observa um lindo passeio revestido com pedras brancas.
 ~
-137 t 1
+137 524288 0 0 0 1
 D3
 Você observa um lindo passeio revestido com pedra brancas.
 ~
@@ -2271,7 +2269,7 @@ os degraus da escada.  Na direção do topo das árvores você observa uma
 grande plataforma de madeira e na direção do solo você observa uma belíssima
 coberta feita de pedras de um brilho intenso.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D4
 Você observa uma grande plataforma de madeira.
 ~
@@ -2298,7 +2296,7 @@ várias plataformas de madeira e belas escadas que escalam as monumentais
 furo que existe no centro da plataforma de madeira, você observa uma linda
 escada de madeira iluminada por várias lamparinas prateadas.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D5
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -2320,7 +2318,7 @@ os degraus da escada.  Na direção do topo das árvores você observa uma
 grande plataforma de madeira e na direção do solo você observa um belíssimo
 gramado verde.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D4
 Você observa uma grande plataforma de madeira.
 ~
@@ -2347,7 +2345,7 @@ várias plataformas de madeira e belas escadas que escalam as monumentais
 furo que existe no centro da plataforma de madeira, você observa uma linda
 escada de madeira iluminada por várias lamparinas prateadas.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D5
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -2369,7 +2367,7 @@ prateado.  Belíssimas lamparinas prateadas brilham intensamente do alto das
 árvores em grandes plataformas de madeira.  Ao sul você observa um lindo
 passeio revestido de pedras brancas de um brilho intenso.
 ~
-137 t 1
+137 524288 0 0 0 1
 D2
 Você observa um lindo passeio revestido com pedra brancas.
 ~
@@ -2391,7 +2389,7 @@ os degraus da escada.  Na direção do topo das árvores você observa uma
 grande plataforma de madeira e na direção do solo você observa uma belíssima
 fonte construída com pedras de um lindo tom de cinza.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D4
 Você observa uma grande plataforma de madeira.
 ~
@@ -2418,7 +2416,7 @@ várias plataformas de madeira e belas escadas que escalam as monumentais
 furo que existe no centro da plataforma de madeira, você observa uma linda
 escada de madeira iluminada por várias lamparinas prateadas.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D5
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -2439,7 +2437,7 @@ quando observam sua chegada.  Você sente dentro do seu coração o espírito
 deste sagrado lugar, onde não paira nenhuma sombra.  Ao sudoeste você
 observa um lindo passeio revestido com pedras de um belo tom de cinza.
 ~
-137 t 1
+137 524288 0 0 0 1
 D4
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -2466,7 +2464,7 @@ os degraus da escada.  Na direção do topo das árvores você observa uma
 grande plataforma de madeira e na direção do solo você observa um belíssimo
 gramado verde.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D4
 Você observa uma grande plataforma de madeira.
 ~
@@ -2493,7 +2491,7 @@ várias plataformas de madeira e belas escadas que escalam as monumentais
 furo que existe no centro da plataforma de madeira, você observa uma linda
 escada de madeira iluminada por várias lamparinas prateadas.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D5
 Você observa uma bela escada serpenteando uma gigantesca árvore.
 ~
@@ -2512,7 +2510,7 @@ galhos dos pés de mallorn, você observa grandes plataformas de madeira e
 alguns belos pássaros.  Ao norte e ao sudeste você observa um lindo passeio
 revestido de pedras brancas.
 ~
-137 t 1
+137 524288 0 0 0 1
 D0
 Você observa um lindo passeio revestido com pedra brancas.
 ~
@@ -2546,7 +2544,7 @@ você observa a continuação do belo passeio revestido com pedras brancas e
 descendo uma pequena escada de pedra você observa um belo jardim cercado por
 uma compacta cerca viva.
 ~
-137 t 1
+137 524288 0 0 0 1
 D2
 Você observa um lindo passeio revestido com pedra brancas.
 ~
@@ -2573,7 +2571,7 @@ os degraus da escada.  Na direção do topo das árvores você observa uma
 grande plataforma de madeira e na direção do solo você observa um belíssimo
 passeio revestido com pedras lisas e brancas.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D4
 Você observa uma grande plataforma de madeira.
 ~
@@ -2603,7 +2601,7 @@ prateadas iluminando toda a talan.  Descendo pelo grande furo que existe no
 centro da plataforma, você observa uma bela escada de madeira fixada no
 tronco da linda e forte mallorn.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D3
 Você observa a imensa plataforma de madeira.
 ~
@@ -2629,7 +2627,7 @@ grande rio.  Você observa também várias plataformas de madeira e belas
 escadas que escalam as monumentais árvores serpenteando seus troncos lisos e
 prateados.  Ao leste você observa a imensa plataforma de madeira.
 ~
-137 rt 0
+137 655360 0 0 0 0
 D1
 Você observa a imensa plataforma de madeira.
 ~
@@ -2652,7 +2650,7 @@ flores perfumadas.  Subindo a pequenina escada entre as duas estatuas das
 celestiais donzelas élficas, você observa um lindo passeio revestido de
 pedras lisas e brancas.
 ~
-137 t 0
+137 524288 0 0 0 0
 D4
 Você observa um lindo passeio revestido com pedra brancas.
 ~

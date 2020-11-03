@@ -3,7 +3,7 @@ Entrada para a Floresta dos Elfos~
    Enormes árvores verdes estão por toda parte.  Um gigantesco portão
 de madeira pode ser visto ao norte.
 ~
-190 0 3
+190 0 0 0 0 3
 D0
 ~
 ~
@@ -15,7 +15,6 @@ D1
 D3
 ~
 portao ferro~
-:n 1 O portão de ferro
 1 -1 19033
 E
 portao madeira~
@@ -29,43 +28,42 @@ O Caminho Vigiado pela Floresta~
 se sente observado por alguém.  A leste você pode ver uma porta de madeira
 em uma grande árvore e de cima, você vê uma corda pendendo da árvore.
 ~
-190 0 3
-D2
-~
-~
-0 -1 19001
-D1
-~
-~
-0 -1 19003
-D4
-~
-~
-0 -1 19006
+190 0 0 0 0 3
 D0
 ~
 ~
 0 -1 19007
+D1
+~
+~
+0 -1 19003
+D2
+~
+~
+0 -1 19001
+D4
+~
+~
+0 -1 19006
 S
 #19003
 A Sala da Guarda~
 No canto nordeste deste pequenino aposento iluminado encontra-se uma grande
 mesa redonda de pedra.  A leste e oeste você vê portas.
 ~
-190 d 3
-D3
-~
-~
-0 -1 19002
+190 8 0 0 0 3
 D1
 ~
 ~
 0 -1 19004
+D3
+~
+~
+0 -1 19002
 D5
 O tapete é feito de lã.
 ~
 tapete secreto la~
-:n 1 o tapete de lã
 1 -1 19005
 S
 #19004
@@ -73,7 +71,7 @@ O Dormitório do chefe da Guarda~
    Este quarto aparentemente pertence ao chefe da guarda élfica.  Num canto
 está uma cama grande e há uma porta a oeste.
 ~
-190 d 3
+190 8 0 0 0 3
 D3
 ~
 ~
@@ -83,11 +81,10 @@ S
 Porão~
    Neste porão úmido há alguma comida e outras coisas estocadas.
 ~
-190 ad 3
+190 9 0 0 0 3
 D4
 ~
 tapete secreto la~
-:n 1 o tapete de lã
 1 -1 19003
 S
 #19006
@@ -95,7 +92,7 @@ Na Plataforma~
    Você está parado em uma plataforma de madeira acima da entrada para a 
 floresta dos Elfos.  Daqui você pode avistar, ao longe, Midgaard.
 ~
-190 c 5
+190 4 0 0 0 5
 D5
 ~
 ~
@@ -105,15 +102,15 @@ S
 O Caminho Vigiado pela Floresta~
    O caminho segue pela floresta de sul para norte.
 ~
-190 0 3
-D2
-~
-~
-0 -1 19002
+190 0 0 0 0 3
 D0
 ~
 ~
 0 -1 19008
+D2
+~
+~
+0 -1 19002
 S
 #19008
 Cruzamento de Caminhos~
@@ -121,15 +118,15 @@ Cruzamento de Caminhos~
 meio dessa encruzilhada está um gigantesco obelisco de pedra com algumas
 runas nele.
 ~
-190 0 3
-D2
-~
-~
-0 -1 19007
+190 0 0 0 0 3
 D0
 ~
 ~
 0 -1 19009
+D2
+~
+~
+0 -1 19007
 E
 runas obelisco pedra~
 Se você fosse um velho sábio elfo você saberia o que estas runas dizem,
@@ -142,29 +139,29 @@ Um Belo Caminho pela Floresta Élfica~
 um sinal lhe avisando que esta deve ser uma loja de armas, e sobre a porta
 leste há um sinal familiar indicando uma loja de armaduras.
 ~
-190 0 3
-D2
-~
-~
-0 -1 19008
-D1
-~
-~
-0 -1 19010
-D3
-~
-~
-0 -1 19011
+190 0 0 0 0 3
 D0
 ~
 ~
 0 -1 19012
+D1
+~
+~
+0 -1 19010
+D2
+~
+~
+0 -1 19008
+D3
+~
+~
+0 -1 19011
 S
 #19010
 A Loja de Armaduras Élficas~
    Nas paredes desse grande aposento estão belas armaduras élficas expostas.
 ~
-190 d 0
+190 8 0 0 0 0
 D3
 ~
 ~
@@ -175,7 +172,7 @@ A Loja de Armas Élficas~
    Sobre o Balcão e penduradas nas paredes, estão lindas armas de qualidade
 élfica.
 ~
-190 d 0
+190 8 0 0 0 0
 D1
 ~
 ~
@@ -188,7 +185,15 @@ tabuleta informando que esta deve ser uma loja de Magias, e sobre a porta oeste
 uma tabuleta informando que se trata do armazém do Quintor.  O caminho segue 
 para o norte.
 ~
-190 0 3
+190 0 0 0 0 3
+D0
+~
+~
+0 -1 19015
+D1
+~
+~
+0 -1 19014
 D2
 ~
 ~
@@ -197,21 +202,13 @@ D3
 ~
 ~
 0 -1 19013
-D1
-~
-~
-0 -1 19014
-D0
-~
-~
-0 -1 19015
 S
 #19013
 Armazém do Quintor~
    Neste belo aposento você pode ver coisas de todos os tipos.  Tudo, 
 desde sacos até tochas pode ser visto nas prateleiras.
 ~
-190 d 0
+190 8 0 0 0 0
 D1
 ~
 ~
@@ -223,7 +220,7 @@ A loja de Magias~
 coisa de errado aqui, ou será somente o poder de toda esta mágica encontrada
 aqui?  Você se encontra cercado por objetos de todos os tamanhos e formas.
 ~
-190 d 0
+190 8 0 0 0 0
 D3
 ~
 ~
@@ -235,19 +232,19 @@ O Final do Belo Caminho~
 uma placa indicando se tratar da estalagem da vila, e para o norte você vê uma
 grande casa de dois andares.
 ~
-190 0 3
-D2
-~
-~
-0 -1 19012
-D1
-~
-~
-0 -1 19016
+190 0 0 0 0 3
 D0
 ~
 ~
 0 -1 19017
+D1
+~
+~
+0 -1 19016
+D2
+~
+~
+0 -1 19012
 D3
 ~
 ~
@@ -261,7 +258,7 @@ cobrem.  Uma lareira foi construída na parede leste e pela porta da parede
 oeste você vê o caminho por onde você veio.  Este lugar lhe faz sentir
 realmente em casa.
 ~
-190 d 0
+190 8 0 0 0 0
 D3
 ~
 ~
@@ -276,7 +273,11 @@ Dentro da Bela Casa~
 Você está em uma grande ala com uma enorme escada para cima e portas para
 leste e oeste.
 ~
-190 d 0
+190 8 0 0 0 0
+D1
+~
+~
+0 -1 19019
 D2
 ~
 ~
@@ -285,10 +286,6 @@ D3
 ~
 ~
 0 -1 19018
-D1
-~
-~
-0 -1 19019
 D4
 ~
 ~
@@ -299,7 +296,7 @@ Sala da Guarda~
 Este quarto parece mais ser a sala da guarda e deve ser mesmo pois você pode
 ver:
 ~
-190 d 0
+190 8 0 0 0 0
 D1
 ~
 ~
@@ -310,7 +307,7 @@ A Sala de Troféus do Rei Elfo~
    Você está na sala de troféus do Rei.  Nas paredes você pode ver troféus
 de caça e presentes de todos os tipos pendurados.
 ~
-190 d 0
+190 8 0 0 0 0
 D3
 ~
 ~
@@ -321,61 +318,61 @@ A Grande Escadaria~
    Você está subindo a escadaria principal da casa.  A escadaria continua
 para cima e para baixo.
 ~
-190 d 0
-D5
-~
-~
-0 -1 19017
+190 8 0 0 0 0
 D4
 ~
 ~
 0 -1 19021
+D5
+~
+~
+0 -1 19017
 S
 #19021
 O Andar de Cima da Casa~
 Você está em um corredor que leva para leste. Nas paredes norte e sul há 
 portas.
 ~
-190 d 0
-D5
-~
-~
-0 -1 19020
-D1
-~
-~
-0 -1 19022
+190 8 0 0 0 0
 D0
 ~
 ~
 0 -1 19023
+D1
+~
+~
+0 -1 19022
 D2
 ~
 ~
 0 -1 19024
+D5
+~
+~
+0 -1 19020
 S
 #19022
 O Corredor~
 Você está parado em um corredor com piso e teto de madeira.  Para o norte e
 sul há portas e há ainda uma janela para leste.
 ~
-190 d 0
-D3
-~
-~
-0 -1 19021
-D1
-~
-~
-0 -1 19025
+190 8 0 0 0 0
 D0
 ~
 ~
 0 -1 19026
+D1
+~
+~
+0 -1 19025
 D2
 ~
 ~
 0 -1 19027
+D3
+~
+~
+0 -1 19021
 S
 #19023
 A Biblioteca~
@@ -383,7 +380,7 @@ Prateleiras de livros enfileiradas nas paredes dessa sala.  No centro você
 vê uma pequena mesa com algumas  cadeiras.  As prateleiras estão cheias de
 livros e pergaminhos.
 ~
-190 d 0
+190 8 0 0 0 0
 D2
 ~
 ~
@@ -395,7 +392,7 @@ A Sala de Estar~
 confortáveis cadeiras estão dispostas em frente a ela.  Você se sente bem
 relaxado.  Porque não descansar por alguns instantes?
 ~
-190 d 0
+190 8 0 0 0 0
 D0
 ~
 ~
@@ -406,28 +403,28 @@ Caindo no Chão~
    NADA BOM!!! VOCÊ NÃO É UM PÁSSARO, VOCÊ AGORA VAI MORRER ESBORRACHADO
 NO CHÃO. REZE AOS DEUSES POR UMA ESPÁTULA!
 ~
-190 bcj 0
+190 518 0 0 0 0
 S
 #19026
 Dormitório dos Guardas~
    Parece um dormitório de quartel com cerca de vinte camas.  Não há outra
 saída a não ser para o sul.
 ~
-190 d 0
-D2
-~
-~
-0 -1 19022
+190 8 0 0 0 0
 D0
 ~
 ~
 0 -1 19027
+D2
+~
+~
+0 -1 19022
 S
 #19027
 A Sala de Treinamento~
    No meio dessa sala estão alguns equipamentos para treinamento e eles são:
 ~
-190 d 0
+190 8 0 0 0 0
 D0
 ~
 ~
@@ -444,11 +441,16 @@ com grandes pedras azul-chumbo e rodeado por fileiras de altas árvores.
    Mais adiante, você percebe que o caminho segue bifurcando-se em volta de
 um jardim central e novamente se une em frente a um imponente portão.
 ~
-190 ecr 1
+190 131092 0 0 0 1
 D2
 ~
 ~
 0 -1 2130
+D3
+Você vê a Rua Olmo seguindo nessa direção.
+~
+~
+0 -1 3124
 D7
 A Alameda continua nessa direção.
 ~
@@ -459,11 +461,6 @@ A Alameda continua nessa direção.
 ~
 ~
 0 -1 19030
-D3
-Você vê a Rua Olmo seguindo nessa direção.
-~
-~
-0 -1 3124
 E
 pedras azul-chumbo chumbo azul~
 As pedras se encaixam com tamanha perfeição que parecem formarem um único e
@@ -478,28 +475,28 @@ encaixadas perfeitamente umas nas outras.  Há um grande pilar de pedra entre
 as árvores que ladeiam o caminho e um banco para repousar. 
    Mais a frente você avista um portão.
 ~
-190 ecr 1
-D9
-~
-~
-0 -1 19028
+190 131092 0 0 0 1
 D1
 ~
 ~
 0 -1 19031
+D9
+~
+~
+0 -1 19028
 E
-pilar~
-Parece que este pilar serve como suporte para tochas.  Além de ninho para
-muitos pássaros, é claro...
+pedras azul-chumbo chumbo azul~
+As pedras encaixadas com perfeição parecem formar um único e maciço bloco.
+Talvez o nome da alameda venha de sua cor: azul-chumbo.
 ~
 E
 banco~
 Não parece ser muito confortável...
 ~
 E
-pedras azul-chumbo chumbo azul~
-As pedras encaixadas com perfeição parecem formar um único e maciço bloco.
-Talvez o nome da alameda venha de sua cor: azul-chumbo.
+pilar~
+Parece que este pilar serve como suporte para tochas.  Além de ninho para
+muitos pássaros, é claro...
 ~
 S
 #19030
@@ -510,28 +507,28 @@ Encaixadas perfeitamente umas nas outras.  Há um grande pilar de pedra
 entre.As árvores que ladeiam o caminho e um banco para repousar.  
    Mais a frente você avista um portão.
 ~
-190 ecr 1
-D6
-~
-~
-0 -1 19028
+190 131092 0 0 0 1
 D1
 ~
 ~
 0 -1 19032
+D6
+~
+~
+0 -1 19028
 E
-pilar~
-Parece que este pilar serve como suporte para tochas.  Além de ninho para
-muitos pássaros, é claro...
+pedras azul-chumbo chumbo azul~
+As pedras encaixadas com perfeição parecem formar um único e maciço bloco.
+Talvez o nome da alameda venha de sua cor: azul-chumbo.
 ~
 E
 banco~
 Não parece ser muito confortável...
 ~
 E
-pedras azul-chumbo chumbo azul~
-As pedras encaixadas com perfeição parecem formar um único e maciço bloco.
-Talvez o nome da alameda venha de sua cor: azul-chumbo.
+pilar~
+Parece que este pilar serve como suporte para tochas.  Além de ninho para
+muitos pássaros, é claro...
 ~
 S
 #19031
@@ -541,7 +538,7 @@ a Alameda Azul.  Um grande número de altas árvores rodeia o caminho
 dando-lhe a impressão de estar no meio de uma floresta.  Mais à frente você
 vê uma espécie de pátio que leva a um grande portão.
 ~
-190 ecr 1
+190 131092 0 0 0 1
 D3
 ~
 ~
@@ -558,7 +555,7 @@ a Alameda Azul.  Um grande número de altas árvores rodeia o caminho
 dando-lhe a impressão de estar no meio de uma floresta.  Mais à frente você
 vê uma espécie de pátio que leva a um grande portão.
 ~
-190 ecr 1
+190 131092 0 0 0 1
 D3
 ~
 ~
@@ -577,7 +574,12 @@ resto do caminho, mas subitamente interrompe exatamente abaixo de um grande
 portão de ferro.  Além desse portão, à leste, você avista ainda outro
 portão, só que parece ser de madeira.
 ~
-190 ecr 1
+190 131092 0 0 0 1
+D1
+O lugar parece muito bem guardado....
+~
+portao~
+1 -1 19001
 D6
 ~
 ~
@@ -586,12 +588,6 @@ D9
 ~
 ~
 0 -1 19032
-D1
-O lugar parece muito bem guardado....
-~
-portao~
-:n 1 O portão de ferro
-1 -1 19001
 E
 portao~
 O portão é de ferro maciço, com grandes e pontiagudas setas nas
@@ -607,16 +603,16 @@ Talvez seja de propósito, talvez não, mas dificilmente alguém desatento
 repararia nesse caminho.  A oeste você pode seguir por ele e descobrir o que
 há além dessa barreira verde, ou voltar ao Final do Belo Caminho pelo leste.
 ~
-190 g 2
+190 64 0 0 0 2
+D1
+~
+~
+0 -1 19015
 D3
 Você vê uma rua muito diferente do que já vira.
 ~
 ~
 0 -1 19047
-D1
-~
-~
-0 -1 19015
 S
 #19035
 O Jardim de um Templo~
@@ -626,7 +622,7 @@ espalham-se harmoniosamente entre seu ouro, escarlate, anil e as outras
 diversas cores.  Hábeis mãos élficas devem tratar com muito cuidado e
 carinho desse pequeno paraíso.
 ~
-190 gr 2
+190 131136 0 0 0 2
 D0
 Você vê as imponentes escadarias do Templo da Lua de Prata.
 ~
@@ -650,16 +646,16 @@ altíssimas, com uma rua de pedras irregulares passando bem ao centro.  A sul
 você vê um caminho levando a duas altas árvores muito juntas, que
 estranhamente parecem ser gêmeas.  A ruela continua a leste e oeste.
 ~
-190 g 2
+190 64 0 0 0 2
+D1
+~
+~
+0 -1 19047
 D2
 Você duas grandes árvores muito próximas.
 ~
 ~
 0 -1 19040
-D1
-~
-~
-0 -1 19047
 D3
 ~
 ~
@@ -671,17 +667,16 @@ Na Escada~
 árvore.  A menos que você esteja vendo coisas, a Prefeitura realmente está
 acima de sua cabeça.  Já o chão seguro está lá embaixo...
 ~
-190 igce 5
-D5
-~
-~
-0 -1 19086
+190 340 0 0 0 5
 D4
 Ah! Ali está a Prefeitura...
 ~
 porta~
-:n 2 a porta da Prefeitura
 1 -1 19048
+D5
+~
+~
+0 -1 19086
 E
 prefeitura~
 Casas em árvores... Nada mau!
@@ -693,15 +688,15 @@ Uma Calma Ruela~
 espécie de rua de pedras irregulares passando bem ao centro.  Você pode
 caminhar para leste ou norte pela ruela.
 ~
-190 g 2
-D3
-~
-~
-0 -1 19085
+190 64 0 0 0 2
 D1
 ~
 ~
 0 -1 19036
+D3
+~
+~
+0 -1 19085
 S
 #19039
 As Escadarias do Templo~
@@ -710,7 +705,7 @@ de Prata.  Os degraus são de pedra dura, de um branco gelado com veios
 cinza-prateado.  Você pode continuar subindo as escadarias ou voltar para o
 jardim do Templo, a sul.
 ~
-190 gr 5
+190 131136 0 0 0 5
 D2
 Você vê o belo jardim do Templo.
 ~
@@ -735,7 +730,7 @@ com as altas árvores da região leva-o a crer que no tronco dela você
 encontrará algum tipo de escada para subir.  O que você encontrará lá em
 cima?
 ~
-190 g 3
+190 64 0 0 0 3
 D0
 ~
 ~
@@ -758,7 +753,7 @@ com as altas árvores da região leva-o a crer que no tronco dela você
 encontrará algum tipo de escada para subir.  O que você encontrará lá em
 cima?
 ~
-190 g 3
+190 64 0 0 0 3
 D1
 Ali está a outra árvore.
 ~
@@ -775,7 +770,7 @@ Sobre a Ponte~
    Você está andando sobre a ponte de madeira que liga as duas margens do
 Riacho de Prata.  
 ~
-190 ce 2
+190 20 0 0 0 2
 D1
 ~
 ~
@@ -793,15 +788,15 @@ com a natureza possível.  Isso inclui, é claro, borrachudos e pernilongos,
 mas mesmo isso não interfere na beleza do lugar.  O caminho segue sul e
 leste.
 ~
-190 g 2
-D2
-~
-~
-0 -1 19085
+190 64 0 0 0 2
 D1
 ~
 ~
 0 -1 19044
+D2
+~
+~
+0 -1 19085
 E
 borrachudos pernilongos~
 Os elfos devem ser mestres na síntese de repelentes...
@@ -813,15 +808,15 @@ Uma Calma Ruela~
 espécie de rua de pedras irregulares passando bem ao centro.  A norte você
 estará em frente à ponte e a oeste você volta pela ruela.
 ~
-190 g 2
-D3
-~
-~
-0 -1 19043
+190 64 0 0 0 2
 D0
 ~
 ~
 0 -1 19045
+D3
+~
+~
+0 -1 19043
 S
 #19045
 Em Frente à Ponte~
@@ -830,7 +825,12 @@ atravessa um límpido riacho.  Uma pequena placa em frente à ponte parece
 indicar algo.  Você pode voltar, seguindo sul, subir na ponte, a oeste ou ir
 a norte, em direção a uma grande árvore.
 ~
-190 g 2
+190 64 0 0 0 2
+D0
+Ali está uma árvore bem grande...!
+~
+~
+0 -1 19051
 D2
 ~
 ~
@@ -840,11 +840,6 @@ Você vê uma bela ponte arqueada feita de madeira pintada de branco.
 ~
 ~
 0 -1 19042
-D0
-Ali está uma árvore bem grande...!
-~
-~
-0 -1 19051
 E
 placa~
 Na placa branca você lê escrito com a bela caligrafia dos elfos:
@@ -873,7 +868,7 @@ ser arranhado ou atacado por algum animal, invadir a casa de algum elfo
 mal-humorado ou ainda cair de cabeça no chão, mas talvez
 valha a pena... Se não, você pode descer e pisar no chão seguro.
 ~
-190 ir 5
+190 131328 0 0 0 5
 D4
 A escada vai até o alto da copa da árvore...
 ~
@@ -898,16 +893,16 @@ repara que abaixo na maior árvore, a sul, foi pregada uma grande placa.
 Você pode seguir a sul, em direção à árvore, continuar na ruela indo a norte
 ou oeste ou ainda voltar para o começo do caminho, a leste.
 ~
-190 g 2
-D1
-~
-~
-0 -1 19034
+190 64 0 0 0 2
 D0
 Você vê o belo jardim do Templo da Lua de Prata.
 ~
 ~
 0 -1 19035
+D1
+~
+~
+0 -1 19034
 D2
 Você vê uma enorme árvore... Mas e a prefeitura?
 ~
@@ -928,11 +923,10 @@ grande escrivaninha de carvalho, pilhas e mais pilhas de papéis foram
 deixadas quase caindo umas sobre as outras, ocultando qualquer coisa que
 esteja atrás delas.  A única saída segura daqui é descendo pela escada.
 ~
-190 d 0
+190 8 0 0 0 0
 D5
 ~
 porta~
-:n 2 a porta da Prefeitura
 1 -1 19037
 S
 #19050
@@ -941,7 +935,7 @@ Do Outro Lado da Ponte~
 escuro, mas você tem a impressão de se encontrar em uma sombria e abafada
 floresta.  A única saída é para oeste.
 ~
-190 afgs 3
+190 262241 0 0 0 3
 D1
 A ponte parece lhe chamar...
 ~
@@ -961,7 +955,7 @@ sabedoria está acumulada por baixo daquela grossa casca marrom-acinzentada e
 que poderia aprender muito nesse lugar.  Você pode subir por uma escada ou
 voltar em frente à ponte pelo sul.
 ~
-190 ir 3
+190 131328 0 0 0 3
 D2
 ~
 ~
@@ -980,22 +974,21 @@ região gostam de morar.  Por todos os lados você vê potes, tubos e todo tipo
 de recipientes de vidro com as mais diversas substâncias.  Ao lado de uma
 pesada estante, você vê um grande mapa.
 ~
-190 d 0
+190 8 0 0 0 0
 D5
 ~
 porta~
-:n 2 a porta da casa
 1 -1 19078
-E
-estante~
-A estante de madeira é levemente curva para encaixar-se com perfeição nas
-paredes circulares da casa
-~
 E
 mapa~
 O mapa parece indicar a localização dos templos das Quatro Luas de Vitália.
 Um deles, o da Lua de Prata, está circulado na região que parece ser aqui,
 nos Bosques dos Elfos.
+~
+E
+estante~
+A estante de madeira é levemente curva para encaixar-se com perfeição nas
+paredes circulares da casa
 ~
 S
 #19053
@@ -1005,28 +998,28 @@ de Prata.  Os degraus são de pedra dura, de um branco gelado com veios
 cinza-prateado.  Daqui você já avista a majestosa fachada do templo, que se
 encontra mais acima.  Você pode voltar descendo os degraus.
 ~
-190 gr 5
-D5
-~
-~
-0 -1 19039
+190 131136 0 0 0 5
 D4
 Você o majestoso Templo da Lua de Prata.
 ~
 ~
 0 -1 19054
+D5
+~
+~
+0 -1 19039
+E
+fachada templo~
+Tudo remete à beleza da Lua de Prata e seu ar gélido.
+~
 E
 pedras veios degraus~
 Que estranho!  Se você olha muito tempo para os degraus, você tem a
 impressão de estar vendo, na realidade, grandes blocos de gelo envoltos por
 fios de prata.  Talvez você deva descansar um pouco....
 ~
-E
-fachada templo~
-Tudo remete à beleza da Lua de Prata e seu ar gélido.
-~
 S
-#19054~
+#19054
 O Templo da Lua de Prata~
    Finalmente você chegou ao Templo propriamente dito.  Grandes colunas
 brancas sustentam o teto abobadado, onde na parte central encontra-se uma
@@ -1035,7 +1028,7 @@ e, rodeando-o, grandes castiçais de prata.  O Templo parece ser enorme e
 muito interessante de se visitar, mas você sente que não avançará mais do
 que até aqui.
 ~
-190 hdec 0
+190 156 0 0 0 0
 D5
 Você vê as escadarias do Templo.
 ~
@@ -1056,7 +1049,7 @@ ser arranhado ou atacado por algum animal, invadir a casa de algum elfo
 mau-humorado ou ainda cair de cabeça no chão, mas talvez valha a pena...  Se
 não, você pode descer e pisar no chão seguro.
 ~
-190 ir 5
+190 131328 0 0 0 5
 D4
 A escada vai até o alto da copa da árvore...
 ~
@@ -1081,7 +1074,7 @@ suas mãos...  Talvez seja apenas a árvore tentando expulsar um estranho.
 Acima de você já é possível ver uma construção, mas se você não quiser
 arriscar pode descer pela escada.
 ~
-190 ir 5
+190 131328 0 0 0 5
 D4
 Você vê uma casa de madeira bem no alto da copa.
 ~
@@ -1101,7 +1094,7 @@ suas mãos...  Talvez seja apenas a árvore tentando expulsar um estranho.
 Acima de você já é possível ver uma construção, mas se você não quiser
 arriscar pode descer pela escada.
 ~
-190 ir 5
+190 131328 0 0 0 5
 D4
 Você vê uma casa de madeira bem no alto da copa.
 ~
@@ -1122,17 +1115,16 @@ Quase colada a casa você vê outra idêntica, mas na árvore ao lado.  Você
 pode ir a oeste, na outra árvore, descer pela corda ou seguir sul, entrando
 na casa.
 ~
-190 r 2
+190 131072 0 0 0 2
+D2
+~
+porta~
+1 -1 19060
 D3
 Você vê a varanda da casa ao lado, na outra árvore.
 ~
 ~
 0 -1 19059
-D2
-~
-porta~
-:n 2 A porta da casa
-1 -1 19060
 D5
 Como aqui é alto!
 ~
@@ -1148,7 +1140,7 @@ Quase colada a casa você vê outra idêntica, mas na árvore ao lado.  Você
 pode ir a leste, na outra árvore, descer pela corda ou seguir sul, entrando
 na casa.
 ~
-190 r 2
+190 131072 0 0 0 2
 D1
 Você vê a varanda da casa ao lado, na outra árvore.
 ~
@@ -1157,7 +1149,6 @@ Você vê a varanda da casa ao lado, na outra árvore.
 D2
 ~
 porta~
-:n 2 A porta da casa
 1 -1 19061
 D5
 Como aqui é alto!
@@ -1174,11 +1165,10 @@ aposentos.  Os móveis são rústicos, mas muito bem talhados em madeira clara.
 O que mais lhe chama a atenção é o enorme número de prateleiras abarrotadas
 de livros que estão por todos os lados.  Indo a norte, você deixa a casa.
 ~
-190 dr 0
+190 131080 0 0 0 0
 D0
 ~
 porta~
-:n 2 A porta da casa
 1 -1 19058
 S
 #19061
@@ -1190,11 +1180,10 @@ aposentos.  Os móveis são rústicos, mas muito bem talhados em madeira
 escura.  O que mais lhe chama a atenção é o enorme número de pergaminhos
 espalhados por todos os lados.  Indo a norte, você deixa a casa.
 ~
-190 dr 0
+190 131080 0 0 0 0
 D0
 ~
 porta~
-:n 2 A porta da casa
 1 -1 19059
 S
 #19062
@@ -1203,42 +1192,42 @@ A Floresta dos Perdidos~
 Dificilmente você enxerga algum feixe de luz, mas ainda é possível enxergar
 a trilha a sua frente.
 ~
-190 afgs 3
-D7
-Você não consegue ver nada...
-~
-~
-0 -1 19066
+190 262241 0 0 0 3
 D0
 Você não consegue ver nada...
 ~
 ~
 0 -1 19063
-D3
-Você vê menos ainda...
-~
-~
-0 -1 19064
-D9
-Você vê menos ainda...
-~
-~
-0 -1 19067
 D2
 Só há escuridão...
 ~
 ~
 0 -1 19065
+D3
+Você vê menos ainda...
+~
+~
+0 -1 19064
 D6
 Só há escuridão...
 ~
 ~
 0 -1 19082
+D7
+Você não consegue ver nada...
+~
+~
+0 -1 19066
 D8
 Só há escuridão...
 ~
 ~
 0 -1 19084
+D9
+Você vê menos ainda...
+~
+~
+0 -1 19067
 S
 #19063
 A Floresta dos Perdidos~
@@ -1246,7 +1235,7 @@ A Floresta dos Perdidos~
 floresta.  O ar aqui é pesado e úmido demais.  Você se sente constantemente
 vigiado.  Há apenas duas saídas aqui: norte e leste.
 ~
-190 afgs 3
+190 262241 0 0 0 3
 D0
 Só há escuridão...
 ~
@@ -1264,17 +1253,17 @@ A Floresta dos Perdidos~
 floresta.  O ar pesado e úmido demais parece transmitir, além de tudo, uma
 hostilidade vinda de não se sabe onde.
 ~
-190 afgs 3
-D1
-Tudo o que você vê são sombras...
-~
-~
-0 -1 19062
+190 262241 0 0 0 3
 D0
 Sá há escuridão e silêncio...
 ~
 ~
 0 -1 19070
+D1
+Tudo o que você vê são sombras...
+~
+~
+0 -1 19062
 D2
 Só há escuridão e silênlpcio...
 ~
@@ -1288,7 +1277,7 @@ floresta.  O ar pesado e úmido demais parece transmitir, além de tudo, uma
 hostilidade vinda de não se sabe onde.  Há apenas duas saídas aqui: norte e
 sul.
 ~
-190 afgs 3
+190 262241 0 0 0 3
 D0
 Você não consegue ver nada...
 ~
@@ -1306,17 +1295,17 @@ A Floresta dos Perdidos~
 mais distante e você se arrepende por não ter prestado atenção ao aviso na
 ponte.  Não há ruídos aqui, só o som de seus passos...
 ~
-190 afgs 3
-D9
-Você não vê nada... Tudo está muito escuro e silencioso...
-~
-~
-0 -1 19062
+190 262241 0 0 0 3
 D7
 Você não vê nada... Tudo está muito escuro e silencioso...
 ~
 ~
 0 -1 19069
+D9
+Você não vê nada... Tudo está muito escuro e silencioso...
+~
+~
+0 -1 19062
 S
 #19067
 A Floresta dos Perdidos~
@@ -1325,7 +1314,7 @@ floresta.  O ar pesado e úmido demais parece transmitir, além de tudo, uma
 hostilidade vinda de não se sabe onde.  A escuridão parece esconder alguma
 coisa tenebrosa...
 ~
-190 afgs 3
+190 262241 0 0 0 3
 D7
 Você não consegue ver nada...
 ~
@@ -1343,12 +1332,17 @@ A Floresta dos Perdidos~
 demais para lhe deixar menos apreensivo do que antes...  Você não vê quase
 nada, mas sente muita coisa, e definitivamente, não é bem-vindo aqui...
 ~
-190 afgs 3
+190 262241 0 0 0 3
 D0
 Tudo o que você vê são sombras...
 ~
 ~
 0 -1 19065
+D1
+Tudo o que você vê são sombras...
+~
+~
+0 -1 19069
 D2
 Tudo o que você vê são sombras...
 ~
@@ -1359,11 +1353,6 @@ Tudo o que você vê são sombras...
 ~
 ~
 0 -1 19083
-D1
-Tudo o que você vê são sombras...
-~
-~
-0 -1 19069
 S
 #19069
 A Floresta dos Perdidos~
@@ -1371,17 +1360,7 @@ A Floresta dos Perdidos~
 demais para lhe deixar menos apreensivo do que antes...  Você não vê quase
 nada, mas sente muita coisa, e definitivamente, não é bem-vindo aqui...
 ~
-190 afgs 3
-D7
-Só há escuridão...
-~
-~
-0 -1 19067
-D9
-Só há escuridão...
-~
-~
-0 -1 19066
+190 262241 0 0 0 3
 D1
 Só há escuridão...
 ~
@@ -1392,6 +1371,16 @@ Só há escuridão...
 ~
 ~
 0 -1 19068
+D7
+Só há escuridão...
+~
+~
+0 -1 19067
+D9
+Só há escuridão...
+~
+~
+0 -1 19066
 S
 #19070
 A Floresta dos Perdidos~
@@ -1400,17 +1389,17 @@ floresta.  As coisas parecem melhorar, pois alguns feixes de luz conseguem
 ultrapassar a cobertura de árvores e iluminar um pouco o caminho.  Você pode
 ir a oeste ou sul.
 ~
-190 afgs 3
-D3
-Os feixes de luz são fracos demais para permitir que se veja algo...
-~
-~
-0 -1 19072
+190 262241 0 0 0 3
 D2
 Só há escuridão e silêncio...
 ~
 ~
 0 -1 19064
+D3
+Os feixes de luz são fracos demais para permitir que se veja algo...
+~
+~
+0 -1 19072
 S
 #19071
 A Floresta dos Perdidos~
@@ -1419,17 +1408,17 @@ trecho está um pouco menos difícil agora que alguns feixes de luz atravessam
 a espessa cobertura de árvores e você consegue enxergar parte do caminho.
 As saídas são oeste e norte.
 ~
-190 afgs 3
-D3
-Os feixes de luz são fracos demais para permitir que se veja algo...
-~
-~
-0 -1 19073
+190 262241 0 0 0 3
 D0
 Só há escuridão e silêncio...
 ~
 ~
 0 -1 19064
+D3
+Os feixes de luz são fracos demais para permitir que se veja algo...
+~
+~
+0 -1 19073
 S
 #19072
 A Floresta dos Perdidos~
@@ -1437,7 +1426,7 @@ A Floresta dos Perdidos~
 Aqui, a luz consegue chegar mais intensamente e as árvores parecem menos
 hostis.  Você pode seguir sul ou leste.
 ~
-190 afgs 3
+190 262241 0 0 0 3
 D1
 Tudo o que você vê são sombras e mais nada...
 ~
@@ -1455,17 +1444,17 @@ A Floresta dos Perdidos~
 ar é mais quente e menos opressivo, quase reconfortador.  As saídas são
 norte e leste.
 ~
-190 afgs 3
-D1
-Tudo o que você vê são sombras...
-~
-~
-0 -1 19071
+190 262241 0 0 0 3
 D0
 A luz é pouca ainda...
 ~
 ~
 0 -1 19074
+D1
+Tudo o que você vê são sombras...
+~
+~
+0 -1 19071
 S
 #19074
 A Floresta dos Perdidos~
@@ -1474,20 +1463,20 @@ seus olhos ficam marejados de lágrimas!  Você percebe que as árvores são
 cinzentas, de galhos afiados e muito, muito velhas.  Talvez sejam elas que
 sejam contra sua visita aqui...
 ~
-190 afgs 3
+190 262241 0 0 0 3
 D0
 ~
 ~
 0 -1 19072
-D2
-~
-~
-0 -1 19073
 D1
 Uma clareira!!
 ~
 ~
 0 -1 19075
+D2
+~
+~
+0 -1 19073
 S
 #19075
 A Clareira na Floresta~
@@ -1497,17 +1486,17 @@ neblina cobre tudo, permitindo que você veja apenas coisas muito próximas
 como as ameaçadoras árvores do lugar.  Bem no centro, a leste, você vê um
 grande vulto de onde se desprende alguma luminosidade.
 ~
-190 afgs 3
-D3
-Você vê a parte densa da floresta...
-~
-~
-0 -1 19074
+190 262241 0 0 0 3
 D1
 A luz parece lhe chamar...
 ~
 ~
 0 -1 19076
+D3
+Você vê a parte densa da floresta...
+~
+~
+0 -1 19074
 E
 arvores~
 Elas parecem estar furiosas...  Exalam um ar de maldade, de hostilidade.
@@ -1522,7 +1511,7 @@ clareira.  A neblina parece hesitar em cobri-la, por isso sua visão daqui
 parece muito mais clara.  Uma escada de pedra leva até o alto disso que
 parece um altar, mas talvez você não queira subir...
 ~
-190 afgs 3
+190 262241 0 0 0 3
 D3
 ~
 ~
@@ -1541,13 +1530,8 @@ sussurros mandando-o embora daqui.  Um estranho clarão parece chamá-lo vindo
 de mais além.  Cuidado, talvez algum ser sinistro esteja pensando que você é
 uma espécie de animal a ser sacrificado nesse lugar...
 ~
-190 afgs 3
+190 262241 0 0 0 3
 D0
-A luz parece lhe chamar...
-~
-~
-0 -1 19076
-D5
 A luz parece lhe chamar...
 ~
 ~
@@ -1567,6 +1551,11 @@ A luz parece lhe chamar...
 ~
 ~
 0 -1 19079
+D5
+A luz parece lhe chamar...
+~
+~
+0 -1 19076
 S
 #19078
 Subindo na Árvore~
@@ -1575,24 +1564,23 @@ cabeça, dificultando sua subida.  Nos galhos mais afastados você vê vários
 ninhos e, no tronco, um buraco onde se pode enfiar um braço inteiro.  Se
 você continuar a subir, chegará em uma casa.
 ~
-190 jrc 5
+190 131588 0 0 0 5
 D4
 ~
 porta~
-:n 2 a porta da casa
 1 -1 19052
 D5
 ~
 ~
 0 -1 19051
 E
-buraco~
-Ah! Isso é uma toca de esquilos..!
-~
-E
 ninho~
 Ninhos de todos os tipos de pássaros se abrigam aqui...  Isso deve parecer
 um coral nas manhãs de primavera...
+~
+E
+buraco~
+Ah! Isso é uma toca de esquilos..!
 ~
 S
 #19079
@@ -1606,7 +1594,7 @@ até que tudo o que resta sejam pequenas fagulhas, que logo se extinguirão...
 
                     ... @Rque pena, mas acho que você morreu@n....
 ~
-190 bcj 0
+190 518 0 0 0 0
 S
 #19080
 A Floresta dos Perdidos~
@@ -1614,22 +1602,22 @@ A Floresta dos Perdidos~
 Dificilmente você enxerga algum feixe de luz, mas ainda é possível enxergar
 a trilha a sua frente.
 ~
-190 afgs 3
+190 262241 0 0 0 3
 D0
 Você não consegue ver nada...
 ~
 ~
 0 -1 19073
-D2
-Você não consegue ver nada...
-~
-~
-0 -1 19072
 D1
 Você vê menos ainda...
 ~
 ~
 0 -1 19081
+D2
+Você não consegue ver nada...
+~
+~
+0 -1 19072
 S
 #19081
 A Floresta dos Perdidos~
@@ -1637,12 +1625,7 @@ A Floresta dos Perdidos~
 floresta.  O ar aqui é pesado e úmido demais.  Você se sente constantemente
 vigiado.  Há apenas duas saídas aqui: norte e sul.
 ~
-190 afgs 3
-D3
-Só há escuridão...
-~
-~
-0 -1 19080
+190 262241 0 0 0 3
 D0
 Só há escuridão...
 ~
@@ -1653,6 +1636,11 @@ Só há escuridão...
 ~
 ~
 0 -1 19070
+D3
+Só há escuridão...
+~
+~
+0 -1 19080
 S
 #19082
 A Floresta dos Perdidos~
@@ -1660,7 +1648,7 @@ A Floresta dos Perdidos~
 floresta.  O ar aqui é pesado e úmido demais.  Você se sente constantemente
 vigiado.  Há apenas duas saídas aqui: noroeste e sudeste.
 ~
-190 afgs 3
+190 262241 0 0 0 3
 D6
 Só há escuridão...
 ~
@@ -1678,7 +1666,22 @@ A Floresta dos Perdidos~
 floresta.  O ar pesado e úmido demais parece transmitir, além de tudo, uma
 hostilidade vinda de não se sabe onde. 
 ~
-190 afgs 3
+190 262241 0 0 0 3
+D0
+Você não consegue ver nada... Mas há mais luz ali.
+~
+~
+0 -1 10700
+D1
+Você não consegue ver nada...
+~
+~
+0 -1 19068
+D3
+Você não consegue ver nada...
+~
+~
+0 -1 19069
 D6
 Você não consegue ver nada...
 ~
@@ -1689,21 +1692,6 @@ Você não consegue ver nada...
 ~
 ~
 0 -1 19082
-D3
-Você não consegue ver nada...
-~
-~
-0 -1 19069
-D1
-Você não consegue ver nada...
-~
-~
-0 -1 19068
-D0
-Você não consegue ver nada... Mas há mais luz ali.
-~
-~
-0 -1 10700
 S
 #19084
 A Floresta dos Perdidos~
@@ -1711,7 +1699,7 @@ A Floresta dos Perdidos~
 mais distante e você se arrepende por não ter prestado atenção ao aviso na
 ponte.  Não há ruídos aqui, só o som de seus passos...
 ~
-190 afgs 3
+190 262241 0 0 0 3
 D6
 Você não vê nada... Tudo está muito escuro e silencioso...
 ~
@@ -1728,7 +1716,7 @@ Uma Calma Ruela~
    Você caminha sossegadamente pela ruela entre árvores, sentindo-se no
 coração de uma floresta.  O caminho parece seguir norte e leste.
 ~
-190 g 2
+190 64 0 0 0 2
 D0
 ~
 ~
@@ -1744,7 +1732,7 @@ Embaixo da Grande Árvore~
 mais imponente a medida que você a examina.  Uma grande placa de aviso foi
 afixada no chão...  E parece ser bem importante.
 ~
-190 g 2
+190 64 0 0 0 2
 D0
 Você vê a ruela por onde veio.
 ~
@@ -1775,7 +1763,7 @@ A Recepção da Estalagem da Esperança~
    Você está na recepção.  Uma rampa o conduz à entrada.  Você vê uma placa
 no balcão.
 ~
-190 dc 0
+190 12 0 0 0 0
 D5
 Você ve a Estalagem da Esperança.
 ~
@@ -1794,7 +1782,7 @@ Os Quartos são caros mas bons!  Você pode:
                           ACEITE AS CONDIÇÕES
                                   OU
                         ESTÃO ABERTOS OS PORTÕES
-                           @RPAGUE SEU ALUGUEL!@n
+                           	RPAGUE SEU ALUGUEL!	n
               NÃO PENSAMOS DUAS VEZES ANTES DE CHUTÁ-LO PARA FORA DAQUI.
               
 ~

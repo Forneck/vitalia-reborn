@@ -3,29 +3,29 @@ Pass: AnRCfBykX0mXk
 Titl: the Wanderer
 Sex : 2
 Clas: 6
-Levl: 42
+Levl: 56
 Id  : 6
 Brth: 1603323580
-Plyd: 108814
-Last: 1604292860
+Plyd: 124161
+Last: 1604379922
 Lmot: 1603324480
 Lnew: 1604011239
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: -168
-Act : hl 0 0 0
+Alin: 505
+Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
 Wimp: 100
-Room: 3001
-Lern: 14
-Hung: 9
+Room: 5518
+Lern: 28
+Hung: 8
 Thir: 16
-Hit : 500/450
-Mana : 786/786
-Move: 178/173
+Hit : 463/613
+Mana : 40/856
+Move: 226/215
 Str : 17/0
 Int : 9
 Wis : 11
@@ -33,16 +33,18 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 1044559
-Exp : 13905227
+Gold: 1609518
+Exp : 26412587
 Olc : 0
 Skil:
 7 100
+19 55
 28 90
 42 90
 44 95
 50 90
 88 95
+93 90
 95 100
 222 80
 224 48
@@ -50,124 +52,137 @@ Skil:
 232 90
 243 95
 0 0
-Alis: 40
- labirinto
- s;s;w;w;w;s;s;s;s;s;s;w;s;s;s;s;s;s;w;w;s;s;s;w;w;w;w;n
+Affs:
+19 63 0 29 16 0 0 0
+44 51 0 31 64 0 0 0
+0 0 0 0 0 0 0 0
+Alis: 43
+ valik2
+          e;e;s;e;e;e;e;e;e;n;n;n;d;d;e;e;e;s;s;w;n;u;s;e;e;e;e;e;d;w;d;e;e;e
 1
- camelot2
-        n;e;n;n;e;d;e;u;e
+ valik1
+          s;s;s;s;e;e;s;s;e;e;e;e;n;d;n;d;d;d;n;n;n
 1
- camelot
-         s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;s;s;w;s;w;w;w;n;w;n;n;n;e;e;n;n;n;n;w
+ nirin
+           s;s;s;s;e;e;s;s;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;s;w;n;n;n;w;d
 1
- jareth
-        s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;n;n;n;w;w;w;w;w
+ rand
+            s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;e;e;e;u;e;d;e;e;e;e;e;e;e;ope alc;d
 1
- arachnos
-        s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;u
-1
- yevaud
-          n;s;n
-1
- kirin
-           n;n;n;e;u;s;e;w;s;w;s;d;n;e;u;n;s;e;s;e;w;w;s
-1
- jareth:
-         s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;n;n;n;w;w;w;w;w
-1
- minos
-           s;s;s;s;e;e;s;s;w;w;w;w;w;w;s;w;n;n;w;s;s
-1
- kubalai3acampamento
- n;n;n;e;e;s;s;e;s;s
-1
- kubapiramide2
-   w;s;w;s;s;s;e;w;w;s;s;n;w;n;w;n;w;e;e;e;n;n;w;s
-1
- kubapiramide1
-   n;n;n;e;e;e;n;n;w;w;s;e;s;e;s;s
-1
- bandar2
-         e;e;e;open port;e;e;e;e;e;e;e;n;n;n;e;s;d;d;d;d;d
-1
- bandar
-          s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open grade;e
-1
- kubalai2
-        e;e;n;n;w;n;n;n;n;n;n;n;n;n;n
-1
- kubalai
-         s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open eas;e;e;e;e;open eas;e;e;e;e;e
-1
- <<<<<<< HEAD
- isharet
-0
- isha
-            s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;u;w;w
-1
- redfern
-         s;s;w;w;w;s;s;s;s;s;s;e;e;e;n;w;s;s;s;w;s;u;u;u;u;u
-1
- pocao_volta
-     s;s;s;w;w;w;w;n;n;n;n;n;e
-1
- pocao_ida
-       sw;s;s;s;s;e;e;e;e;n;n;n
-1
- elfos
-           s;s;w;w;w;s;s;s;s;s;s;e;e;n;n;e;e;e;ne;e;se;e
-1
- otavia
-          n;n;n;n;n;n;w;w;w;w;w;n;e;n;w;w;w;nw;nw;n;n;n;w;w;nw;w;nw;nw
-1
- duwick
-          s;s;e;e;e;e;e;e;n;n;e;e;d;e;e;e;e;s;s;s;w;s;w;s;e;e;n;e;e;s;e;s;e;n;n;w;n
-1
- cailvehpath
-     s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;w;n;n;n;n;n;w;w;w;nw;w;n;open por sw
-1
- drows
-           s;s;s;s;e;e;s;s;e;e;e;e;n;d;n;d
-1
- labirinto:
-      s;s;w;w;w;s;s;s;s;s;s;w;s;s;s;s;s;s;w;w;s;s;s;w;w;w;w;n
-1
- newthalos
-       s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open grad;e;e;e;u
-1
- bash
- bash $*;st
-0
- 1
- say
-0
- say
- say @g$*@n
-1
- sanc
-            ord fol gra caja,bispo;ord fol use cajado;ord fol use cajado;ord fol use cajado;ord fol rem cajado;ord fol junk cajado
-1
- sanc2
- order carto hold cajado;ord carto use cajado;ord carto use cajado;ord carto use cajado;ord carto rem cajado;ord carto junk cajado
-1
- dracos
-          s;s;w;w;w;w;w;w;w;w;w;n;n;w;n;w;n;n;n
-1
- roma
-            s;s;s;s;e;e;s;s;e;e;e;e;e;e;e;e;e;e;s;s;w;w;w;w;w
-1
- wake
- wake;wear coura
-1
- sleep
+ sle
  rem coura;sleep
 1
  slee
  rem coura;sleep
 1
- sle
+ sleep
  rem coura;sleep
 1
- rand
-            s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;e;e;e;u;e;d;e;e;e;e;e;e;e;ope alc;d
+ wake
+ wake;wear coura
+1
+ roma
+            s;s;s;s;e;e;s;s;e;e;e;e;e;e;e;e;e;e;s;s;w;w;w;w;w
+1
+ dracos
+          s;s;w;w;w;w;w;w;w;w;w;n;n;w;n;w;n;n;n
+1
+ sanc2
+ order carto hold cajado;ord carto use cajado;ord carto use cajado;ord carto use cajado;ord carto rem cajado;ord carto junk cajado
+1
+ sanc
+            ord fol gra caja,bispo;ord fol use cajado;ord fol use cajado;ord fol use cajado;ord fol rem cajado;ord fol junk cajado
+1
+ say
+ say @g$*@n
+1
+ 1
+ say
+0
+ bash
+ bash $*;st
+0
+ newthalos
+       s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open grad;e;e;e;u
+1
+ labirinto:
+      s;s;w;w;w;s;s;s;s;s;s;w;s;s;s;s;s;s;w;w;s;s;s;w;w;w;w;n
+1
+ drows
+           s;s;s;s;e;e;s;s;e;e;e;e;n;d;n;d
+1
+ cailvehpath
+     s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;w;n;n;n;n;n;w;w;w;nw;w;n;open por sw
+1
+ duwick
+          s;s;e;e;e;e;e;e;n;n;e;e;d;e;e;e;e;s;s;s;w;s;w;s;e;e;n;e;e;s;e;s;e;n;n;w;n
+1
+ otavia
+          n;n;n;n;n;n;w;w;w;w;w;n;e;n;w;w;w;nw;nw;n;n;n;w;w;nw;w;nw;nw
+1
+ elfos
+           s;s;w;w;w;s;s;s;s;s;s;e;e;n;n;e;e;e;ne;e;se;e
+1
+ pocao_ida
+       sw;s;s;s;s;e;e;e;e;n;n;n
+1
+ pocao_volta
+     s;s;s;w;w;w;w;n;n;n;n;n;e
+1
+ redfern
+         s;s;w;w;w;s;s;s;s;s;s;e;e;e;n;w;s;s;s;w;s;u;u;u;u;u
+1
+ isha
+            s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;u;w;w
+1
+ <<<<<<< HEAD
+ isharet
+0
+ kubalai
+         s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open eas;e;e;e;e;open eas;e;e;e;e;e
+1
+ kubalai2
+        e;e;n;n;w;n;n;n;n;n;n;n;n;n;n
+1
+ bandar
+          s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open grade;e
+1
+ bandar2
+         e;e;e;open port;e;e;e;e;e;e;e;n;n;n;e;s;d;d;d;d;d
+1
+ kubapiramide1
+   n;n;n;e;e;e;n;n;w;w;s;e;s;e;s;s
+1
+ kubapiramide2
+   w;s;w;s;s;s;e;w;w;s;s;n;w;n;w;n;w;e;e;e;n;n;w;s
+1
+ kubalai3acampamento
+ n;n;n;e;e;s;s;e;s;s
+1
+ minos
+           s;s;s;s;e;e;s;s;w;w;w;w;w;w;s;w;n;n;w;s;s
+1
+ jareth:
+         s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;n;n;n;w;w;w;w;w
+1
+ kirin
+           n;n;n;e;u;s;e;w;s;w;s;d;n;e;u;n;s;e;s;e;w;w;s
+1
+ yevaud
+          n;s;n
+1
+ arachnos
+        s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;u
+1
+ jareth
+        s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;n;n;n;w;w;w;w;w
+1
+ camelot
+         s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;s;s;w;s;w;w;w;n;w;n;n;n;e;e;n;n;n;n;w
+1
+ camelot2
+        n;e;n;n;e;d;e;u;e
+1
+ labirinto
+ s;s;w;w;w;s;s;s;s;s;s;w;s;s;s;s;s;s;w;w;s;s;s;w;w;w;w;n
 1

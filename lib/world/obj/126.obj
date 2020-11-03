@@ -2323,8 +2323,8 @@ cadeira madeira~
 uma cadeira de madeira~
 Uma rudimentar cadeira de madeira foi colocada aqui.~
 ~
-12 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0
+6 0 0 0 0 0 0 0 0 0 0 0 0
+1 0 0 0
 45 500 50 0 0
 E
 cadeira madeira~
@@ -2372,8 +2372,8 @@ trono ouro~
 o trono de ouro do rei Eric~
 Um magnífico trono de ouro foi colocado aqui.~
 ~
-12 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0
+6 0 0 0 0 0 0 0 0 0 0 0 0
+1 0 0 0
 70 200000 20000 0 0
 E
 trono ouro~
@@ -2492,10 +2492,6 @@ Uma tábua dourada foi deixada aqui, para lembrar a todos o dia do Ragnarok.~
 0 0 0 0
 30 3000 300 0 0
 E
-tabua ragnarok~
-Você observa uma magnífica tábua dourada com algumas runas e inscrições.
-~
-E
 inscricoes~
 O celestial e poderoso exercito de Odin deverá está sempre pronto para o
 pavoroso dia do Ragnarök.  Lembrem-se que este dia não virá inesperadamente.
@@ -2519,13 +2515,17 @@ deus caluniador dos deuses e impostor com todos os seguidores de Hela e os
 gigantes do gelo.  Heindall levantar-se-ia e soaria a trombeta Gjall, para
 chamar à luta todos os deuses e heróis.
 ~
+E
+tabua ragnarok~
+Você observa uma magnífica tábua dourada com algumas runas e inscrições.
+~
 #12733
 pedra trono Odin~
 o magnífico trono de Odin~
 Um majestoso trono de pedra foi colocado aqui.~
 ~
-12 aegi 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0
+6 aegi 0 0 0 0 0 0 0 0 0 0 0
+1 0 0 0
 180 2000000 200000 0 0
 E
 pedra trono Odin~
@@ -2617,8 +2617,8 @@ trono Hela corpos esqueletos~
 o trono de Hela~
 Um macabro trono de esqueletos e corpos foi colocado aqui.~
 ~
-12 be 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0
+6 be 0 0 0 0 0 0 0 0 0 0 0
+1 0 0 0
 150 1000000 100000 0 0
 E
 trono Hela corpos esqueletos~

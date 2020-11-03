@@ -1,11 +1,11 @@
-#15701 
+#15701
 O Campo Aberto~
    Nossa, que diferença!  Depois de sair de uma floresta tão densa e escura,
 você chega num enorme campo.  A luz do sol quase lhe cega, tão desacostumado
 à luz você estava.  Bem ao longe, você avista uma pequena ponte, e além
 dela, um castelo.
 ~
-157 c 2
+157 4 0 0 0 2
 D2
 Você vê uma ponte que aparenta ser bastante velha... Talvez não seja uma 
 boa idéia atravessá-la.
@@ -27,23 +27,23 @@ o sol é muito forte e a corda está quente.  Se gritar por socorro, ninguém
 irá te ouvir...  Só lhe resta subir, antes que os crocodilos do fosso pouco 
 abaixo de você lhe comam vivo...
 ~
-157 cr 9
+157 131076 0 0 0 9
 D0
 Você pode ver um grande campo aberto.
 ~
 campo~
 0 -1 15701
-D2
-Uma praça pode ser vista a sul.
-~
-~
-0 -1 15704
 D1
 Você ouve várias sons que lembram um barulho de mordidas. Você vê algumas 
 escamas negras se mexendo.
 ~
 ~
 0 -1 15703
+D2
+Uma praça pode ser vista a sul.
+~
+~
+0 -1 15704
 S
 #15703
 O Fosso dos Crocodilos~
@@ -53,7 +53,7 @@ cabeça, tudo.  Numa hora dessas você está morto, mas sua alma ainda continua
 lá, vendo seu corpo ser estraçalhado.  É uma cena horrorosa, e é preciso ter 
 um estômago muito forte, para agüentar vê-la.
 ~
-157 b 0
+157 2 0 0 0 0
 S
 #15704
 A Praça~
@@ -62,7 +62,7 @@ digamos, escalar a ponte.  Parabéns!  Agora você se encontra numa pequena
 praça, na frente de um imenso castelo.  Você vê o castelo através das águas 
 de um chafariz que se encontra na sua frente. 
 ~
-157 gr 1
+157 131136 0 0 0 1
 D0
 Você vê uma ponte que aparenta ser bastante velha... talvez não seja uma boa 
 idéia atravessá-la.
@@ -84,7 +84,7 @@ nítida quanto se ele existisse dentro do Chafariz.  Ele é da forma de uma
 linda ave de fogo, a qual você nunca viu.  O castelo está à sua frente e 
 para chegar até ele, você terá que subir uma escadaria.
 ~
-157 gr 1
+157 131136 0 0 0 1
 D0
 Você consegue ver uma praça a norte.
 ~
@@ -109,7 +109,7 @@ para descansar, você percebe que em certos locais dessa escadaria também
 existe um desenho da mesma ave de fogo do chafariz...  "Que ave será 
 essa?" - você se pergunta...
 ~
-157 gr 1
+157 131136 0 0 0 1
 D1
 Você vê uma chafariz jorrando água para todos os lados.
 ~
@@ -121,7 +121,7 @@ Você vê uma grande porta de madeira, parece ser a entrada do Castelo.
 ~
 0 -1 15708
 S
-#15707 
+#15707
 A Escadaria~
    São feitas de pedra, e aparentam ter mais de 100 anos.  Possuem cerca de 
 100 degraus, o que lhe faz ficar extremamente cansado.  Mas, enquanto pára 
@@ -129,19 +129,19 @@ para descansar, você percebe que em certos locais dessa escadaria também
 existe um desenho da mesma ave de fogo do chafariz...  Que ave será 
 essa? - você se pergunta...
 ~
-157 gr 1
+157 131136 0 0 0 1
 D3
 Um chafariz jorra água para todos os lados. 
 ~
 ~
 0 -1 15705
-D9 
+D9
 Você vê uma grande porta, guardando a entrada do Castelo.
 ~
 ~
 0 -1 15708
 S
-#15708 
+#15708
 A Porta~
    Você chegou na entrada principal do castelo.  Na grande porta que se     
 encontra à sua frente, está escrito: "Bem Vindo Ao Castelo de Flyre!"  Ah..
@@ -149,25 +149,24 @@ encontra à sua frente, está escrito: "Bem Vindo Ao Castelo de Flyre!"  Ah..
 para a entrada do castelo.  Você tenta conversar, mas nem lhe olhar nos 
 olhos eles olham...
 ~
-157 acgr 1
+157 131141 0 0 0 1
+D2
+Um Imenso Salão te aguarda a sul.
+~
+porta~
+1 -1 15709
+D6
+Você vê uma escadaria.
+~
+~
+0 -1 15706
 D7
 Você vê uma escadaria.
 ~
 ~
 0 -1 15707
-D6
-Você vê uma escadaria.
-~
-~
-0 -1 15706 
-D2
-Um Imenso Salão te aguarda a sul.
-~
-porta~
-:n 2 a porta de entrada
-a -1 15709
 S
-#15709 
+#15709
 O Imenso Salão~
    Depois de uma luta e tanto você consegue entrar no castelo!  Se encontra 
 agora num grande salão.  Aqui o que não falta é luxo...  E silêncio.  
@@ -176,21 +175,20 @@ estranho é que existem mais duas pessoas aqui: O Rei e a Rainha, que não te
 olharam nem mesmo por um instante.  Parece que não te viram. Mas você está 
 na frente deles!  Como é possível?...
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D0
 A porta do castelo se encontra a norte daqui.
 ~
 porta~
-:n 2 a porta do castelo
-a -1 15708
+1 -1 15708
+D1
+~
+~
+0 -1 15739
 D2
 ~
 ~
 0 -1 15711
-D1 
-~
-~
-0 -1 15739
 D3
 ~
 ~
@@ -201,14 +199,14 @@ Você vê uma imensa escada, talvez a maior que você já tenha visto.
 ~
 0 -1 15714
 S
-#15710 
+#15710
 Um Corredor~
    É um corredor como outro qualquer.  A não ser pelo silêncio...  Não é um 
 silêncio comum...  É um silêncio assustador, que lhe faz tremer até os pés.  
 No final do corredor se encontra uma sala.  Quem sabe você não encontre 
 alguém lá.  E que não seja cego, de preferência.
 ~
-157 adgirs 0
+157 393545 0 0 0 0
 D1
 ~
 ~
@@ -216,8 +214,7 @@ D1
 D3
 ~
 porta escritorio~
-:n 2 a porta do escritório
-ab -1 15712
+1 -1 15712
 S
 #15711
 Um Corredor~
@@ -226,7 +223,7 @@ silêncio comum...  É um silêncio assustador, que lhe faz tremer até os pés.
 No final do corredor se encontra uma sala.  Quem save você não encontre 
 alguém lá, e que não seja cego, de preferência.
 ~
-157 adgirs 0
+157 393545 0 0 0 0
 D0
 ~
 ~
@@ -239,10 +236,9 @@ Algo impede que sua visão fique nítida. Estranho...
 D3
 ~
 passagem secreta~
-:n 2 passagem secreta 
-abd 15715 15719
+0 15715 15719
 S
-#15712 
+#15712
 O Escritório~
    Papéis, papéis e mais papéis.  Todos espalhados pela pequena sala.  No 
 meio da papelada, você encontra uma linda mulher, de cabelos loiros e olhos 
@@ -252,12 +248,11 @@ O que está acontecendo com esse lugar?  Será que seu destino será igual ao
 dos monarcas ou dessa moça?  Você tem duas opções: pode fugir daqui, ou 
 continuar explorando o lugar.
 ~
-157 adfgrs 0
+157 393321 0 0 0 0
 D1
 ~
 porta~
-:n 2 a porta
-ab -1 15711
+1 -1 15711
 S
 #15713
 A Cozinha~
@@ -267,20 +262,20 @@ devido lugar.  Estranhamente, ele esta como os outros habitantes desse
 castelo: imóvel!  Mas, se não foi ele, quem fez toda essa comida?  Você
 avista uma porta aberta nos fundos. 
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D0
 ~
 ~
 0 -1 15711
-D2
-~
-~
-0 -1 15726
 D1
 Por mais que se esforçe, você não consegue distinguir a forma desse lugar.
 ~
 ~
 0 -1 15718
+D2
+~
+~
+0 -1 15726
 S
 #15714
 A Escada Principal~
@@ -288,7 +283,7 @@ A Escada Principal~
 mesmo desenho que aparece no chafariz e na porta!  Que ave será essa?  E sua 
 curiosidade aumenta a cada passo que você dá.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D5
 Você pode ver parte do Imenso Salão.
 ~
@@ -308,7 +303,7 @@ Um Corredor Escuro~
    Finalmente você encontra com o chão, aqui é escuro, assustador e cheira 
 mal.  A saída foi misteriosamente bloqueada, e só resta seguir em frente.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D3
 Você não vê nada, apenas a escuridão.
 ~
@@ -320,31 +315,31 @@ Um Corredor Escuro~
    Você não consegue enxergar nada, algo parece ter bloqueado a passagem de 
 onde você veio, e só resta seguir em frente nessa escuridão.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D3
 Você não vê nada, apenas a escuridão.
 ~
 ~
 0 -1 15717
 S
-#15717 
+#15717
 Um Corredor Escuro~
    Você não consegue enxergar nada, algo parece ter bloqueado a passagem de 
 onde você veio, e só lhe resta seguir em frente nessa escuridão.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D2
 Finalmente você encontrou um foco de luz depois de tanta escuridão.
 ~
 ~
-0 -1 15720 
+0 -1 15720
 S
 #15718
 O Porão~
    É tudo muito sujo por aqui e aparentemente do nada, um grande livro
 começa a produzir uma fraca luz, talvez com suas últimas forças.
 ~
-157 adegh 0
+157 217 0 0 0 0
 D3
 Ahh sim! Você lembra que para essa direção fica a Cozinha, pela qual você 
 acabou de passar.
@@ -352,7 +347,7 @@ acabou de passar.
 ~
 0 -1 15713
 S
-#15719 
+#15719
 A Passagem Secreta~
    Ahá!  Você sabia que deveria ter alguma passagem secreta naquele 
 corredor.
@@ -361,8 +356,8 @@ Não vê nem sente nada, mas você sabe de uma coisa: uma hora você vai
 encontrar o chão.  E nesse hora, você espera encontrar a resposta para todo
 o mistério que invadiu seus pensamentos.
 ~
-157 adgr 0
-D3 
+157 131145 0 0 0 0
+D3
 ~
 ~
 0 -1 15715
@@ -376,8 +371,8 @@ pessoas (?) estão mortas!  Parece que esse lugar foi esquecido de sua
 existência.  É um lugar horrendo, que você faz questão de não voltar nunca 
 mais.
 ~
-157 adgr 0
-D0 
+157 131145 0 0 0 0
+D0
 Apenas a escuridão.
 ~
 ~
@@ -391,8 +386,7 @@ D3
 Você não consegue enxergar nada.
 ~
 ~
-:n 2 A grade da Cela
-ab 15703 15722
+1 15703 15722
 S
 #15721
 A Prisão~
@@ -403,7 +397,7 @@ pessoas (?) estão mortas!  Parece que esse lugar foi esquecido de sua
 existência.  É um lugar horrendo, que você faz questão de não voltar nunca 
 mais.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D0
 Você não consegue ver nada. Talvez seja a distância.
 ~
@@ -413,59 +407,53 @@ D1
 Uma espécie de Cela... Sim, é isso que você vê.
 ~
 ~
-:n 2 A grade da Cela 
-ab 15703 15723
+1 15703 15723
 D3
 Uma espécie de Cela... Sim, é isso que você vê.
 ~
 ~
-:n 2 A grade da Cela
-ab 15703 15724
+1 15703 15724
 S
 #15722
 A Cela~
    Ossos, ossos e mais ossos.  Pela posição, você julga que eles estavam se 
 rastejando e gritando, provavelmente por água e comida.
 ~
-157 adgrs 0
+157 393289 0 0 0 0
 D1
 Você não consegue enxergar nada.
 ~
 grade cela~
-:n 2 a grade da cela
-ab 15703 15720
+1 15703 15720
 S
-#15723 
+#15723
 A Cela~
    Ossos, ossos e mais ossos.  Pela posição, você julga que eles estavam se 
 rastejando e gritando, provavelmente por água e comida.
 ~
-157 adgrs 0
+157 393289 0 0 0 0
 D3
 Você não consegue enxergar nada. 
 ~
 grade cela~
-:n 2 a grade da cela
-ab 15703 15721
+1 15703 15721
 S
 #15724
 A Cela~
    Ossos, ossos e mais ossos.  Pela posição, você julga que eles estavam se 
 rastejando e gritando, provavelmente por água e comida.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D1
 ~
 grade cela~
-:n 2 a grade da cela
-ab 15703 15721
+1 15703 15721
 D9
 ~
 grade cela~
-:n 2 a grade de uma estranha Cela
-abd 15707 15725
+0 15707 15725
 S
-#15725  
+#15725
 A Cela Isolada~
    Finalmente você encontra Flyre, a Ave do Fogo.  Ela é totalmente feita de 
 fogo, e você não tem nem coragem de chegar perto.  Infelizmente a cela é 
@@ -477,12 +465,11 @@ Flyre lhe hipnotizou, e ela está se aproximando de você, e está cada vez
 mais perto...  Mas a coragem para a luta não existe, e você só tem à suas 
 mãos o medo que tomou seu corpo.  Ainda há tempo de fugir...
 ~
-157 acdgf 9
+157 109 0 0 0 9
 D4
 ~
 grande porta~
-:n 2 uma grande porta 
-abd 15705 15756
+0 15705 15756
 S
 #15726
 O Quintal~
@@ -493,19 +480,19 @@ que esse castelo fosse enfeitiçado dessa forma, e perdesse toda a vida e
 alegria que um dia, alí deverá ter existido?  São perguntas que, talvez, você 
 nunca terá as respostas...
 ~
-157 ag 0
+157 65 0 0 0 0
 D0
 ~
 ~
 0 -1 15713
-D2
-~
-~
-0 -1 15751
 D1
 ~
 ~
 0 -1 15746
+D2
+~
+~
+0 -1 15751
 D3
 ~
 ~
@@ -519,17 +506,21 @@ D9
 ~
 0 -1 15749
 S
-#15727 
+#15727
 Um Grande Corredor~
    É um longo corredor, e possui em suas paredes quadros de vários jovens.  
 Ao olhar mais detalhadamente para eles, você percebe uma expressão de 
 tristeza e desânimo.
 ~
-157 adg 0
+157 73 0 0 0 0
 D0
 ~
 ~
 0 -1 15732
+D1
+~
+~
+0 -1 15728
 D2
 ~
 ~
@@ -538,29 +529,25 @@ D9
 ~
 ~
 0 -1 15714
-D1 
-~
-~
-0 -1 15728
 S
 #15728
 Um Grande Corredor~
    O corredor continua, e parece não ter fim.  E ambas paredes existem
 quadros de jovens, olhando-lhe tristemente.  Você se sente observado. 
 ~
-157 adg 0
-D0 
+157 73 0 0 0 0
+D0
 ~
 ~
 0 -1 15733
+D1
+~
+~
+0 -1 15740
 D2
 ~
 ~
 0 -1 15736
-D1 
-~
-~
-0 -1 15740
 D3
 ~
 ~
@@ -578,7 +565,7 @@ tristeza e desânimo.    Ao final de tantos quadros existe um em
 branco...Com seu nome escrito!  Um indescritível medo lhe faz pensar 
 seriamente em sair do castelo...Imediatamente.
 ~
-157 adg 0
+157 73 0 0 0 0
 D1
 ~
 ~
@@ -589,38 +576,42 @@ Um Grande Corredor~
    O corredor continua, e parece não ter fim.  E ambas paredes existem
 quadros de jovens, olhando-lhe tristemente.  Você se sente observado. 
 ~
-157 adg 0
-D6
-~
-~
-0 -1 15714
+157 73 0 0 0 0
 D0
 ~
 ~
 0 -1 15734
-D2
-~
-~
-0 -1 15737
 D1
 ~
 ~
 0 -1 15731
+D2
+~
+~
+0 -1 15737
 D3
 ~
 ~
 0 -1 15729
+D6
+~
+~
+0 -1 15714
 S
 #15731
 Um Grande Corredor~
    O corredor continua, e parece não ter fim.  E ambas paredes existem
 quadros de jovens, olhando-lhe tristemente.  Você se sente observado. 
 ~
-157 adg 0
-D0 
+157 73 0 0 0 0
+D0
 ~
 ~
 0 -1 15734
+D1
+~
+~
+0 -1 15746
 D3
 ~
 ~
@@ -628,19 +619,14 @@ D3
 D4
 ~
 porta madeira~
-:n 2 a porta de madeira
-a -1 15741
-D1 
-~
-~
-0 -1 15746
+1 -1 15741
 S
 #15732
 O Quarto de Hóspedes~
    É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não 
 existe nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D2
 ~
 ~
@@ -651,18 +637,18 @@ O Quarto de Hóspedes~
    É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não 
 existe nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D2
 ~
 ~
-0 -1 15728 
+0 -1 15728
 S
 #15734
 O Quarto de Hóspedes~
    É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não 
 existe nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D2
 ~
 ~
@@ -673,7 +659,7 @@ O Quarto de Hóspedes~
    É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não 
 existe nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D2
 ~
 ~
@@ -684,7 +670,7 @@ O Quarto de Hóspedes~
    É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não 
 existe nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D0
 ~
 ~
@@ -695,7 +681,7 @@ O Quarto de Hóspedes~
    É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não e
 xiste nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D0
 ~
 ~
@@ -706,7 +692,7 @@ O Quarto de Hóspedes~
    É um quarto de hóspedes, mas parece não ser usado há muito tempo.  Não 
 existe nada de mais aqui, e ele só lhe serviu para aumentar o pavor.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D0
 ~
 ~
@@ -718,7 +704,7 @@ O Trono~
 reagem.  Parecem estar mortos...  Eles devem estar enfeitiçados.  Mas quem 
 fez isso? 
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D3
 ~
 ~
@@ -730,7 +716,7 @@ O Aposento Real~
 janelas enormes...  Você percebe uma pequena caixinha num dos criados-mudos. 
    Parece ter algo bem interessante dentro dela.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D3
 ~
 ~
@@ -746,23 +732,23 @@ aumentam.  Você tem a impressão de que o que te espera lá em cima não é coi
 boa.  Você chega num local onde existem 4 saídas: voltar, ir para leste, para 
 oeste, ou continuar subindo...  Agora é com você.
 ~
-157 adg 0
-D5
+157 73 0 0 0 0
+D1
 ~
 ~
-0 -1 15731
-D4
-~
-~
-0 -1 15742
+0 -1 15745
 D3
 ~
 ~
 0 -1 15744
-D1 
+D4
 ~
 ~
-0 -1 15745
+0 -1 15742
+D5
+~
+~
+0 -1 15731
 S
 #15742
 A Torre Principal~
@@ -771,7 +757,7 @@ uma criatura se mexe...  Ele está na sua frente, e você vê claramente um
 velho prisioneiro, quase morto.  Um zumbi, podemos chamá-lo assim, ele está 
 vindo na sua direção.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D5
 ~
 ~
@@ -783,37 +769,37 @@ Descendo Mais Depressa~
 Você cai do alto da torre, e o impacto com o chão não foi nada agradável.  
 Doeu.
 ~
-157 bc 0
+157 6 0 0 0 0
 S
-#15744 
+#15744
 A Torre de Apoio~
    Nossa!  Que medo!  Você pensou que existiria alguma criatura de 7 cabeças 
 aqui, mas tudo o que encontrou foi um velho esqueleto.  Agora, você sabe que 
 veio para o caminho errado...  Voltar é a única saída.
 ~
-157 adgr 0
+157 131145 0 0 0 0
 D1
 ~
 ~
 0 -1 15741
 S
-#15745 
+#15745
 A Torre de Apoio~
    Nossa!  Que medo!  Você pensou que existiria alguma criatura de 7 cabeças 
 aqui, mas tudo o que encontrou foi um velho esqueleto.  Agora, você sabe que 
 veio para o caminho errado...  Voltar é a única saída.
 ~
-157 adgr 0
-D3
-Você tenta, mas não consegue ver nada. 
-~
-~
-0 -1 15741
+157 131145 0 0 0 0
 D1
 Você tenta, mas não consegue ver nada. 
 ~
 ~
 0 -1 15743
+D3
+Você tenta, mas não consegue ver nada. 
+~
+~
+0 -1 15741
 S
 #15746
 Um Pequeno Aposento~
@@ -823,20 +809,20 @@ uma criança, provavelmente da princesa.  Mesmo no quarto de uma criança, o
 clima sinistro não deixa de existir...  Isso já está te dando alguns cabelos 
 brancos...
 ~
-157 adgr 0
-D3 
+157 131145 0 0 0 0
+D3
 ~
 ~
 0 -1 15731
 S
-#15747 
+#15747
 O Celeiro~
    Argh, que cheiro horrível!  Os cavalos aqui presentes infestaram o local 
 com um cheiro insuportável, que lhe faz sair dali agora, antes que desmaie.  
 Mesmo com o cheiro, você não pôde deixar de perceber que os cavalos também 
 estavam imóveis...
 ~
-157 ag 0
+157 65 0 0 0 0
 D3
 ~
 ~
@@ -849,7 +835,7 @@ com um cheiro insuportável, que lhe faz sair dali agora, antes que desmaie.
    Mesmo com o cheiro, você não pôde deixar de perceber que as vacas também 
 tinham algo de estranho...  Estavam imóveis.
 ~
-157 ag 0
+157 65 0 0 0 0
 D1
 ~
 ~
@@ -862,7 +848,7 @@ vezes pior que o cheiro do curral ou do celeiro.  O silêncio incomoda, mas o
 cheiro é insuportável!  Sair daqui e nunca mais voltar parece ser uma ótima 
 idéia.
 ~
-157 ag 0
+157 65 0 0 0 0
 D7
 ~
 ~
@@ -875,7 +861,7 @@ começa a pensar: até os animais estão imóveis...  Mas as vacas continuam
 dando leite, e as galinhas continuam botando ovos.  Mesmo quase mortos, o 
 animais não param de fazer o que devem...  Muito estranho.
 ~
-157 ag 0
+157 65 0 0 0 0
 D6
 ~
 ~
@@ -890,7 +876,7 @@ você já viu.
    Ao longe, você avista uma simples mulher, que colhe as cenouras e as 
 coloca num cesto, não é preciso dizer o que essa mulher tem de estranho...
 ~
-157 ag 0
+157 65 0 0 0 0
 D0
 ~
 ~
@@ -911,23 +897,23 @@ machuca os dentes.  Mas se existe, é porque alguma utilidade ele deve ter.
 E não lhe cabe descobrir qual é.  Seu dever agora é desvendar todo o mistério 
 que ronda esse local...  Ou sair dele imediatamente.
 ~
-157 ag 0
-D3
-~
-~
-0 -1 15751
+157 65 0 0 0 0
 D2
 ~
 ~
 0 -1 15755
+D3
+~
+~
+0 -1 15751
 S
-#15753 
+#15753
 A Plantação de Morangos~
    "Morangos!  Que delícia!"  Estão vermelhinhos e se demorar mais um dia 
 para serem degustados, irão apodrecer.  E é querendo evitar esse desperdício 
 que uma simples mulher os está(va) colhendo.
 ~
-157 ag 0
+157 65 0 0 0 0
 D1
 ~
 ~
@@ -935,8 +921,7 @@ D1
 D2
 ~
 porta deposito~
-:n 2 a porta do depósito
-ab 15702 15754
+1 15702 15754
 S
 #15754
 O Depósito~
@@ -944,20 +929,19 @@ O Depósito~
 depositada aqui.  E estão separadas, cada tipo em uma cesta.  Morangos em 
 uma, milhos em outra...  Cada cesta está destinada a uma pessoa.
 ~
-157 adg 0
+157 73 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-a 15702 15753
+1 15702 15753
 S
-#15755 
+#15755
 A Plantação de Trigo~
    Aqui não existe nada de especial...  É apenas uma plantação de trigo.  O 
 mais incrível, é que você sente o vento, mas não vê a plantação se mexendo, 
 nem um pouquinho...  Ela permanece imóvel.
 ~
-157 ag 0
+157 65 0 0 0 0
 D0
 ~
 ~
@@ -969,13 +953,11 @@ A Ascensão~
 preciosos.  Será que, após tantos séculos fechada, essa sala ainda
 guarda algo de valioso?
 ~
-157 adh 0
-OO 1
+157 137 0 0 0 0
 D4
 Um lugar conhecido por todos.
 ~
 porta grande~
-:n 2 a grande porta
-ab 15705 5025
+1 15705 5025
 S
 $~

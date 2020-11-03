@@ -5,7 +5,7 @@ não ser uma boa idéia para um aventureiro inexperiente.  Você ainda pode
 voltar a salvo para o sul ou seguir para o leste ou norte.  Sabe-se lá o que
 o aguarda...
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -30,7 +30,7 @@ O Labirinto~
 acontecendo...  Siga seus instintos e fique de olho aberto.  Um corredor
 parece continuar para o leste e você ainda pode voltar para o oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -44,7 +44,7 @@ S
 Um Corredor~
    Este longo corredor do labirinto segue no sentido leste-oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -58,7 +58,7 @@ S
 Um Corredor~
    Este longo corredor do labirinto segue no sentido leste-oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -72,7 +72,7 @@ S
 Um Corredor~
    Este longo corredor do labirinto segue no sentido leste-oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -86,7 +86,7 @@ S
 Um Corredor~
    Este longo corredor do labirinto segue no sentido leste-oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -100,7 +100,7 @@ S
 Um Corredor~
    Este longo corredor do labirinto segue no sentido leste-oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -114,7 +114,7 @@ S
 Um Corredor~
    Este longo corredor do labirinto segue no sentido leste-oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -130,7 +130,7 @@ Uma Curva no Corredor~
 o caminho daqui pra frente não seja tão fácil como tem sido até agora.  Você
 pode voltar pelo corredor para o oeste ou seguir para o norte.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -145,7 +145,7 @@ Um Corredor~
    Somente mais um corredor como todos os outros desse labirinto...  Este
 segue para norte ou sul..  Escolha seu caminho com sabedoria.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -160,7 +160,7 @@ Uma Interseção~
    Você chega a uma intersecção de corredores.  Suas escolhas não são
 muitas...  Você pode ir para norte, sul ou oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -178,7 +178,7 @@ S
 Um Corredor~
    Este longo corredor do labirinto segue no sentido leste-oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -192,7 +192,7 @@ S
 Um Corredor~
    Este longo corredor do labirinto segue no sentido leste-oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -206,7 +206,7 @@ S
 Um Corredor~
    Este longo corredor do labirinto segue no sentido leste-oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -221,7 +221,7 @@ Outra Curva~
    Uma outra curva..  Tudo é muito parecido e você não faz idéia se está ou
 não no caminho certo.  Você pode voltar para o leste ou seguir para o norte.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -237,7 +237,7 @@ Outro Corredor~
 são muito definidas e você começa a sentir que este é um labirinto do qual
 será difícil sair...  Norte ou sul ...  Faça sua escolha.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -253,12 +253,11 @@ Outro Corredor~
 são muito definidas e você começa a sentir que este é um labirinto do qual
 será difícil sair...  Norte ou sul ...  Faça sua escolha.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 Você vê uma porta de madeira escura.
 ~
 porta escura madeira~
-:n 2
 2 19800 19817
 D2
 ~
@@ -272,27 +271,24 @@ uma porta ali?  Você nem se lembra se realmente existia uma saída para essa
 direção mas, em todo caso, se existia, ela está fechada.  Para o oeste há
 uma porta...
 ~
-198 0 1
+198 0 0 0 0 1
 D3
 ~
 porta~
-:n 2
 1 -1 19818
 S
 #19818
 Um Corredor~
    Uma porta para o leste e uma para oeste .. é tudo que você pode ver ...
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 porta~
-:n 2
 1 -1 19817
 D3
 ~
 porta~
-:n 2
 1 -1 19819
 S
 #19819
@@ -301,22 +297,19 @@ Difícil Escolha~
 uma para oeste e uma outra para o norte.  O Melhor caminho?  ..quem sabe?
 Siga seus instintos.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 uma porta
 ~
 porta~
-:n 2
 1 -1 19834
 D1
 ~
 porta~
-:n 2
 1 -1 19818
 D3
 ~
 porta~
-:n 2
 1 -1 19820
 S
 #19820
@@ -324,11 +317,10 @@ Uma Curva~
    Você está no labirinto... um corredor segue para o sul e você pode
 ir para o leste...
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 porta~
-:n 2
 1 -1 19819
 D2
 ~
@@ -339,7 +331,7 @@ S
 Um Longo Corredor~
    Um longo corredor no sentido norte-sul segue por aqui.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -353,7 +345,7 @@ S
 Um longo Corredor~
    Um longo corredor no sentido norte-sul segue por aqui.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -367,7 +359,7 @@ S
 Um longo Corredor~
    Um longo corredor no sentido norte-sul segue por aqui.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -383,7 +375,7 @@ Seguindo seus Instintos~
 Várias direções podem ser escolhidas agora...  Norte, sul, leste ou oeste...
 Você está mesmo perdido.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -409,7 +401,7 @@ segue para o norte e você se sente realmente tentado a saber para onde este
 lugar o está levando.  Ao sul, quase imperceptível, uma "passagem" - se é
 que podemos chamar isso de passagem visto que mal cabe seu corpo nela.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -429,7 +421,7 @@ Fim do Corredor Norte-Sul~
 para o sul ficam um tanto escondidas passam desapercebidas por seus olhos
 atentos .  Olhando mais uma vez você as enxerga.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -449,7 +441,7 @@ Um Mal Começo...~
 falha ...  Você entrou em uma sala sem saída alguma a não ser ao sul, por
 onde você veio.
 ~
-198 0 1
+198 0 0 0 0 1
 D2
 ~
 ~
@@ -460,7 +452,7 @@ Um Corredor Escuro~
    Você se encontra no início de um corredor escuro.  Ele segue no sentido
 norte-sul voltar para o leste ainda é uma opção ...
 ~
-198 a 1
+198 1 0 0 0 1
 D0
 ~
 ~
@@ -475,7 +467,7 @@ Um Corredor Escuro~
    O corredor escuro segue no sentido norte-sul.  Uma passagem para o leste
 está escondida por uma rocha.
 ~
-198 ag 1
+198 65 0 0 0 1
 D0
 ~
 ~
@@ -493,7 +485,7 @@ S
 Um Corredor Escuro~
    O corredor escuro  segue no sentido norte-sul.
 ~
-198 ag 1
+198 65 0 0 0 1
 D0
 ~
 ~
@@ -507,7 +499,7 @@ S
 Um Corredor Escuro~
    O corredor escuro segue no sentido norte-sul.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -522,7 +514,7 @@ Uma Junção em "T"~
    Nesta sala você se vê novamente obrigado a fazer uma escolha.  Norte, sul
 ou leste.  Quando este pesadelo terá fim?
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -541,11 +533,10 @@ Um Corredor~
    Outro corredor aparece a sua frente.  Há uma porta para o leste e a saída
 está desobstruída para o oeste.  Nenhuma outra saída aparente.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 porta~
-:n 2
 1 -1 19834
 D3
 ~
@@ -558,26 +549,22 @@ Muitas Portas~
 oeste, sul e norte - existem portas.  Escolha uma delas e siga seu destino em
 paz.  Ficar muito tempo por aqui pode não ser muito sadio...
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 porta~
-:n 2
 1 -1 19835
 D1
 ~
 porta~
-:n 2
 1 -1 19829
 D2
 ~
 porta~
-:n 2
 1 -1 19819
 D3
 ~
 porta~
-:n 2
 1 -1 19833
 S
 #19835
@@ -588,7 +575,7 @@ Que tipo de criatura poderia viver sob essa luz constantemente?  Que tipo de
 criatura CRIARIA um lugar tão assustador?  Você pode seguir para o leste ou
 voltar para o sul ...
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -596,7 +583,6 @@ D1
 D2
 ~
 porta~
-:n 2
 1 -1 19834
 S
 #19836
@@ -605,7 +591,7 @@ Um Corredor Iluminado~
 demora um pouco para se acostumar...Logo você vê que este corredor segue
 nos dois sentidos : leste e oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -622,7 +608,7 @@ forte.  Você vê, agora claramente, que este corredor continua seguindo no
 sentido leste-oeste.  O final do corredor foge do alcance de sua vista mas a
 luz continua...
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -638,7 +624,7 @@ Um Corredor Iluminado~
 vista, no entanto a intensidade da luz assusta...  Para leste o corredor
 segue e você ainda pode voltar para oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -652,7 +638,7 @@ S
 O Corredor Iluminado~
    O Corredor segue iluminado para o leste e para oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -668,11 +654,10 @@ O Final do Corredor~
 dessa porta para o leste?  É impossível saber...  Para oeste o corredor segue
 iluminado.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 porta~
-:n 2
 1 -1 19841
 D3
 ~
@@ -687,16 +672,14 @@ sala.  Algumas inscrições na parede contam uma lenda antiga de um nobre
 aventureiro que adentrou este labirinto e conseguiu sair ileso, ou quase,
 daqui...  Para o sul há uma porta.
 ~
-198 0 1
+198 0 0 0 0 1
 D2
 ~
 porta~
-:n 2
 1 -1 19842
 D3
 ~
 porta~
-:n 2
 1 -1 19840
 E
 inscricoes inscricao lenda~
@@ -727,11 +710,10 @@ Perto do Centro do Labirinto~
 perto do centro do Labirinto.  Saídas para leste e oeste, uma porta ao norte
 e uma passagem para o sul.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 porta~
-:n 2
 1 -1 19841
 D1
 ~
@@ -752,7 +734,7 @@ Uma Passagem~
 levar.  Uma saída para o leste e uma para oeste.  Você pode ainda seguir
 para o norte.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -771,7 +753,7 @@ Uma Curva na Passagem~
    A passagem curva-se para o sul.  Para o leste você vê o início da
 passagem.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -787,7 +769,7 @@ A Passagem~
 que não está tão perto do final como havia pensado...Para o sul a passagem
 inclina-se subindo levemente.  Há ainda a opção de ir para o norte.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -803,7 +785,7 @@ O Final da Passagem~
 saber se isso é bom ou ruim..  No fim da leve subida, você vê escondida uma
 descida mas não consegue saber onde ela o levará..
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -818,7 +800,7 @@ Um Canto~
    Você fez uma escolha que não parece levar a lugar algum ... a única saída é
 para o sul.
 ~
-198 0 1
+198 0 0 0 0 1
 D2
 ~
 ~
@@ -830,7 +812,7 @@ O Subterrâneo do Labirinto~
 complicado imagine agora que ele desce ... Você ainda pode voltar para cima ou
 descer mais um pouco e ver o que o aguarda ...
 ~
-198 afgi 0
+198 353 0 0 0 0
 D4
 ~
 ~
@@ -847,7 +829,7 @@ Um caminho misterioso segue em diversas direções mas você não consegue ver
 muito bem por onde seguir.  Você pode tentar voltar para cima, seguir para o
 norte, sul, leste ou descer esse alçapão em baixo de seus pés.
 ~
-198 0 0
+198 0 0 0 0 0
 D0
 ~
 ~
@@ -875,7 +857,7 @@ Caminho Misterioso do Labirinto~
 ver muito bem por onde seguir.  Você pode seguir para o norte, sul, leste ou
 descer esse alçapão em baixo de seus pés.
 ~
-198 0 0
+198 0 0 0 0 0
 D0
 ~
 ~
@@ -899,7 +881,7 @@ Caminho Misterioso do Labirinto~
 ver muito bem por onde seguir.  Você pode seguir para o norte, sul, leste ou
 descer esse alçapão em baixo de seus pés.
 ~
-198 0 0
+198 0 0 0 0 0
 D0
 ~
 ~
@@ -923,7 +905,7 @@ Caminho Misterioso do Labirinto~
 ver muito bem por onde seguir.  Você pode seguir para o norte, sul, leste,
 oeste ou descer esse alçapão em baixo de seus pés.
 ~
-198 0 0
+198 0 0 0 0 0
 D0
 ~
 ~
@@ -951,7 +933,7 @@ Caminho Misterioso do Labirinto~
 ver muito bem por onde seguir.  Você pode seguir para o norte, sul, oeste ou
 descer esse alçapão em baixo de seus pés.
 ~
-198 0 0
+198 0 0 0 0 0
 D0
 ~
 ~
@@ -975,7 +957,7 @@ Caminho Misterioso do Labirinto~
 ver muito bem por onde seguir.  Você pode seguir para o norte, sul, leste ou
 descer esse alçapão em baixo de seus pés.
 ~
-198 0 0
+198 0 0 0 0 0
 D0
 ~
 ~
@@ -999,7 +981,7 @@ Caminho Misterioso do Labirinto~
 ver muito bem por onde seguir.  Você pode seguir para o norte, sul, oeste ou
 descer esse alçapão em baixo de seus pés.
 ~
-198 0 0
+198 0 0 0 0 0
 D0
 ~
 ~
@@ -1023,7 +1005,7 @@ Caminho Misterioso do Labirinto~
 ver muito bem por onde seguir.  Você pode seguir para o norte, sul, leste,
 oeste ou descer esse alçapão em baixo de seus pés.
 ~
-198 0 0
+198 0 0 0 0 0
 D0
 ~
 ~
@@ -1053,7 +1035,7 @@ não revela muito, mas você percebe que seu destino está selado de uma vez
 por todas.  Você pode seguir para o leste ou retornar para aquele estranho
 lugar para oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -1074,7 +1056,7 @@ Um Buraco~
 caíram nessa armadilha mortal.   No fundo há vários espinhos. Que armadilha o
 destino preparou para você ... Sinto muito: Você está Morto!  R. I. P.
 ~
-198 b 0
+198 2 0 0 0 0
 S
 #19859
 Sem Saída~
@@ -1082,13 +1064,13 @@ Sem Saída~
 Ainda bem que você é um aventureiro prevenido e trouxe seu PERGAMINHO DE
 RETORNO.  Acho que é hora de usá-lo.
 ~
-198 adgi 0
+198 329 0 0 0 0
 S
 #19860
 Um Corredor~
    O corredor segue no sentido Leste-Oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -1102,7 +1084,7 @@ S
 Um Corredor~
    O corredor segue no sentido Leste-Oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -1116,7 +1098,7 @@ S
 Um Corredor~
    O corredor segue no sentido Leste-Oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -1131,7 +1113,7 @@ Uma Junção em "T"~
    Você chega a uma junção em forma de T mas o corredor segue no sentido
 Leste-Oeste.  Você pode virar para o sul
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -1149,7 +1131,7 @@ S
 Um Corredor~
    O corredor segue na direção norte-sul.
 ~
-198 adi 1
+198 265 0 0 0 1
 D0
 ~
 ~
@@ -1163,7 +1145,7 @@ S
 Um Corredor~
    O corredor segue na direção norte-sul.
 ~
-198 adi 1
+198 265 0 0 0 1
 D0
 ~
 ~
@@ -1177,7 +1159,7 @@ S
 Um Corredor~
    O corredor segue na direção norte-sul.
 ~
-198 adgi 1
+198 329 0 0 0 1
 D0
 ~
 ~
@@ -1191,7 +1173,7 @@ S
 Um Corredor~
    O corredor segue na direção norte-sul.
 ~
-198 adgi 1
+198 329 0 0 0 1
 D0
 ~
 ~
@@ -1206,7 +1188,7 @@ Outra Interseção~
    Você chega a uma interseção em forma de T.  O corredor segue no sentido
 Norte-Sul e você pode virar para oeste.
 ~
-198 i 1
+198 256 0 0 0 1
 D0
 ~
 ~
@@ -1224,7 +1206,7 @@ S
 Um Corredor~
    O corredor segue no sentido Leste-Oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -1238,7 +1220,7 @@ S
 Um Corredor~
    O corredor segue no sentido Leste-Oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -1252,7 +1234,7 @@ S
 Um Corredor~
    O corredor segue no sentido Leste-Oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -1266,7 +1248,7 @@ S
 Um Corredor~
    O corredor segue no sentido Leste-Oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -1280,7 +1262,7 @@ S
 Um Corredor~
    O corredor segue no sentido Leste-Oeste.
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -1295,7 +1277,7 @@ Uma Junção Em T~
    Você chega a uma junção em forma de T mas o corredor segue no sentido
 Leste-Oeste.  Você pode virar para o sul
 ~
-198 0 1
+198 0 0 0 0 1
 D1
 ~
 ~
@@ -1313,7 +1295,7 @@ S
 Um Corredor~
    O corredor segue na direção norte-sul.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -1327,7 +1309,7 @@ S
 Um Corredor~
    O corredor segue na direção norte-sul.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -1341,7 +1323,7 @@ S
 Um Corredor~
    O corredor segue na direção norte-sul.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -1355,7 +1337,7 @@ S
 Um Corredor~
    O corredor segue na direção norte-sul.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -1369,7 +1351,7 @@ S
 Um Corredor~
    O corredor segue na direção norte-sul.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -1384,7 +1366,7 @@ Um Corredor~
    O corredor segue na direção norte-sul.  Uma pequena passagem está
 escondida por uma pedra que bloqueia o caminho para baixo.
 ~
-198 0 1
+198 0 0 0 0 1
 D0
 ~
 ~
@@ -1406,16 +1388,14 @@ resposta) se você está pronto para ele.  Sua Consciência lhe diz que você
 nasceu pronto para ele e você não veio até aqui para desistir!  Você pode
 ainda subir pela pequena passagem ou seguir para o sul.
 ~
-198 0 0
+198 0 0 0 0 0
 D2
 ~
 porta~
-:n 2
 1 -1 19882
 D4
 ~
 rocha pedra~
-:n 2
 1 -1 19880
 S
 #19882
@@ -1425,16 +1405,14 @@ vez para uma luta contra as forças Malignas de Vitália.  Que a força e a
 coragem dos Deuses esteja com você.  Boa sorte - Você vê uma passagem para o
 sul.
 ~
-198 0 0
+198 0 0 0 0 0
 D0
 ~
 porta~
-:n 2
 1 -1 19881
 D2
 ~
 porta~
-:n 2
 1 -1 19883
 S
 #19883
@@ -1442,16 +1420,14 @@ Rumando para o Perigo~
    Tudo está muito confuso e sua visão distorcida pouco revela do que há
 nessa sala.  Você vê uma porta verde para o leste.
 ~
-198 adi 0
+198 265 0 0 0 0
 D0
 ~
 porta~
-:n 2
 1 -1 19882
 D1
 ~
 porta~
-:n 2
 2 19801 19884
 S
 #19884
@@ -1460,16 +1436,14 @@ Uma Sala Verde~
 narina.  Você pressente um mal enorme.  É hora de enfrentar seus medos e
 VENCER!  Você vê uma porta para o leste e outra para oeste.
 ~
-198 adi 0
+198 265 0 0 0 0
 D1
 ~
 porta~
-:n 2
 2 19802 19885
 D3
 ~
 porta~
-:n 2
 2 19801 19883
 S
 #19885
@@ -1478,16 +1452,14 @@ A Sala da Preparação~
 enfrentar o próximo.  Você vê uma porta amarela para o norte e uma porta
 para o oeste.
 ~
-198 adi 0
+198 265 0 0 0 0
 D0
 ~
 porta~
-:n 2
 2 19803 19886
 D3
 ~
 porta~
-:n 2
 2 19802 19884
 S
 #19886
@@ -1497,16 +1469,14 @@ Não o suficiente para distraí-lo para o mal que o assola nesta sala.  É
 hora de provar sua coragem e determinação.  Duas saídas: uma porta para o
 leste e outra para o sul.  Você está pronto?  Então ATAQUE!!!
 ~
-198 adi 0
+198 265 0 0 0 0
 D1
 ~
 porta~
-:n 2
 2 19804 19887
 D2
 ~
 porta~
-:n 2
 2 19803 19885
 S
 #19887
@@ -1515,11 +1485,10 @@ A Sala da Preparação~
 Nesta sala você pode se preparar e recobrar suas energias para o duelo
 final.  Uma porta vermelha segue para o leste e há uma porta para oeste.
 ~
-198 0 0
+198 0 0 0 0 0
 D1
 ~
 porta~
-:n 2
 2 19805 19888
 D3
 ~
@@ -1533,16 +1502,14 @@ Não há realmente uma luz ...  Mas é possível ver cada detalhe da sala.
 Alguns esqueletos jogados no chão mostram que muitos tentaram sem sucesso
 sair daqui.  Uma porta segue para o leste e outra para sul.
 ~
-198 0 0
+198 0 0 0 0 0
 D2
 ~
 porta~
-:n 2
 2 19806 19889
 D3
 ~
 porta~
-:n 2
 2 19805 19887
 E
 esqueletos~
@@ -1560,7 +1527,7 @@ foram colocados aqui especialmente para você.  Para o sul você vê um campo
 se abrindo.  Seria a saída do labirinto?  Talvez exista apenas uma maneira de
 descobrir...
 ~
-198 0 1
+198 0 0 0 0 1
 D2
 ~
 ~
@@ -1572,7 +1539,7 @@ O Difícil Retorno~
 é um tanto inútil pois uma forte neblina embaraça sua visão.  É mesmo um
 caminho difícil.
 ~
-198 a 2
+198 1 0 0 0 2
 D0
 ~
 ~
@@ -1596,7 +1563,7 @@ O Difícil Retorno~
 é um tanto inútil pois uma forte neblina embaraça sua visão.  É mesmo um
 caminho difícil
 ~
-198 a 2
+198 1 0 0 0 2
 D0
 ~
 ~
@@ -1620,7 +1587,7 @@ O Difícil Retorno~
 é um tanto inútil pois uma forte neblina embaraça sua visão.  É mesmo um
 caminho difícil.  Um caminho iluminado segue para o sul.
 ~
-198 0 2
+198 0 0 0 0 2
 D0
 ~
 ~
@@ -1643,7 +1610,7 @@ O Retorno do Campeão~
    Você venceu.  Você pode voltar para o norte para o caminho de volta ao
 labirinto ou qualquer outra direção que você tome estará em casa.
 ~
-198 0 2
+198 0 0 0 0 2
 D0
 ~
 ~
@@ -1661,4 +1628,4 @@ D3
 ~
 0 -1 50
 S
-$
+$~

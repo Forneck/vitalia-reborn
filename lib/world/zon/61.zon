@@ -1,7 +1,7 @@
 #61
 Vitalia~
 Haon-Dor, Floresta Escura~
-6100 6199 30 2 j 0 0 0 -1 -1
+6100 6199 30 2 jk 0 0 0 -1 -1
 M 0 6100 2 6116 	(o lobo mau)
 M 0 6100 2 6116 	(o lobo mau)
 M 0 6101 2 6127 	(o lobo feroz)
@@ -53,8 +53,8 @@ R 0 6122 6106 -1 	(um cogumelo venenoso)
 O 0 6106 4 6122 	(um cogumelo venenoso)
 R 0 6119 6107 -1 	(um cogumelo venenoso)
 O 0 6107 4 6119 	(um cogumelo venenoso)
-D 1 6152 1 1 	(O CÌrculo de ¡rvores)
-D 1 6153 3 1 	(Dentro da Grande ¡rvore)
+D 1 6152 1 1 	(O C√≠rculo de √Årvores)
+D 1 6153 3 1 	(Dentro da Grande √Årvore)
 D 0 6150 1 1 	(O Caminho Estreito)
 S
 $

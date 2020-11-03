@@ -7,12 +7,12 @@ pouco o seu caminhar.  Olhando para o horizonte você consegue ver uma
 grande tempestade de areia.  Seria inteligente se aventurar por este 
 local?
 ~
-176.1 cg 3
-D 1
+176 68 0 0 0 3
+D1
 ~
 ~
 0 -1 17607
-D 2
+D2
 ~
 ~
 0 -1 17601
@@ -32,20 +32,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17600
-D 1
+D1
 ~
 ~
 0 -1 17608
-D 2
+D2
 ~
 ~
 0 -1 17602
-D 3
+D3
 ~
 ~
 0 -1 17601
@@ -61,20 +61,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17601
-D 1
+D1
 ~
 ~
 0 -1 17609
-D 2
+D2
 ~
 ~
 0 -1 17603
-D 3
+D3
 ~
 ~
 0 -1 17602
@@ -90,20 +90,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17602
-D 1
+D1
 ~
 ~
 0 -1 17610
-D 2
+D2
 ~
 ~
 0 -1 17604
-D 3
+D3
 ~
 ~
 0 -1 17603
@@ -119,20 +119,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17603
-D 1
+D1
 ~
 ~
 0 -1 17611
-D 2
+D2
 ~
 ~
 0 -1 17605
-D 3
+D3
 ~
 ~
 0 -1 17604
@@ -148,20 +148,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17604
-D 1
+D1
 ~
 ~
 0 -1 17612
-D 2
+D2
 ~
 ~
 0 -1 17606
-D 3
+D3
 ~
 ~
 0 -1 17605
@@ -177,20 +177,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17605
-D 1
+D1
 ~
 ~
 0 -1 17613
-D 2
+D2
 ~
 ~
 0 -1 17607
-D 3
+D3
 ~
 ~
 0 -1 17606
@@ -206,20 +206,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17607
-D 1
+D1
 ~
 ~
 0 -1 17614
-D 2
+D2
 ~
 ~
 0 -1 17608
-D 3
+D3
 ~
 ~
 0 -1 17600
@@ -235,20 +235,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17607
-D 1
+D1
 ~
 ~
 0 -1 17615
-D 2
+D2
 ~
 ~
 0 -1 17609
-D 3
+D3
 ~
 ~
 0 -1 17601
@@ -264,20 +264,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17608
-D 1
+D1
 ~
 ~
 0 -1 17616
-D 2
+D2
 ~
 ~
 0 -1 17610
-D 3
+D3
 ~
 ~
 0 -1 17602
@@ -293,20 +293,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17609
-D 1
+D1
 ~
 ~
 0 -1 17617
-D 2
+D2
 ~
 ~
 0 -1 17611
-D 3
+D3
 ~
 ~
 0 -1 17603
@@ -322,20 +322,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17610
-D 1
+D1
 ~
 ~
 0 -1 17618
-D 2
+D2
 ~
 ~
 0 -1 17612
-D 3
+D3
 ~
 ~
 0 -1 17604
@@ -351,20 +351,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17611
-D 1
+D1
 ~
 ~
 0 -1 17619
-D 2
+D2
 ~
 ~
 0 -1 17613
-D 3
+D3
 ~
 ~
 0 -1 17605
@@ -380,20 +380,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17612
-D 1
+D1
 ~
 ~
 0 -1 17620
-D 2
+D2
 ~
 ~
 0 -1 17613
-D 3
+D3
 ~
 ~
 0 -1 17606
@@ -409,20 +409,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17614
-D 1
+D1
 ~
 ~
 0 -1 17621
-D 2
+D2
 ~
 ~
 0 -1 17615
-D 3
+D3
 ~
 ~
 0 -1 17607
@@ -438,20 +438,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17614
-D 1
+D1
 ~
 ~
 0 -1 17622
-D 2
+D2
 ~
 ~
 0 -1 17616
-D 3
+D3
 ~
 ~
 0 -1 17608
@@ -467,20 +467,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17615
-D 1
+D1
 ~
 ~
 0 -1 17623
-D 2
+D2
 ~
 ~
 0 -1 17617
-D 3
+D3
 ~
 ~
 0 -1 17609
@@ -496,20 +496,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17616
-D 1
+D1
 ~
 ~
 0 -1 17624
-D 2
+D2
 ~
 ~
 0 -1 17618
-D 3
+D3
 ~
 ~
 0 -1 17610
@@ -525,20 +525,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17617
-D 1
+D1
 ~
 ~
 0 -1 17625
-D 2
+D2
 ~
 ~
 0 -1 17619
-D 3
+D3
 ~
 ~
 0 -1 17611
@@ -554,20 +554,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17618
-D 1
+D1
 ~
 ~
 0 -1 17626
-D 2
+D2
 ~
 ~
 0 -1 17620
-D 3
+D3
 ~
 ~
 0 -1 17612
@@ -583,23 +583,23 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17619
-D 1
+D1
 ~
 ~
 0 -1 17627
-D 2
+D2
 ~
 ~
 0 -1 17642
-D 3
+D3
 ~
 ~
-O -1 17613
+0 -1 17613
 S
 #17621
 O Deserto de Gobi~
@@ -612,20 +612,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17621
-D 1
+D1
 ~
 ~
 0 -1 17628
-D 2
+D2
 ~
 ~
 0 -1 17622
-D 3
+D3
 ~
 ~
 0 -1 17614
@@ -641,20 +641,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17621
-D 1
+D1
 ~
 ~
 0 -1 17629
-D 2
+D2
 ~
 ~
 0 -1 17623
-D 3
+D3
 ~
 ~
 0 -1 17615
@@ -670,20 +670,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17622
-D 1
+D1
 ~
 ~
 0 -1 17630
-D 2
+D2
 ~
 ~
 0 -1 17624
-D 3
+D3
 ~
 ~
 0 -1 17616
@@ -699,20 +699,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17623
-D 1
+D1
 ~
 ~
 0 -1 17631
-D 2
+D2
 ~
 ~
 0 -1 17625
-D 3
+D3
 ~
 ~
 0 -1 17617
@@ -728,20 +728,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17624
-D 1
+D1
 ~
 ~
 0 -1 17632
-D 2
+D2
 ~
 ~
 0 -1 17626
-D 3
+D3
 ~
 ~
 0 -1 17618
@@ -757,20 +757,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17625
-D 1
+D1
 ~
 ~
 0 -1 17633
-D 2
+D2
 ~
 ~
 0 -1 17627
-D 3
+D3
 ~
 ~
 0 -1 17619
@@ -786,20 +786,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17626
-D 1
+D1
 ~
 ~
 0 -1 17634
-D 2
+D2
 ~
 ~
 0 -1 17627
-D 3
+D3
 ~
 ~
 0 -1 17620
@@ -815,20 +815,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17628
-D 1
+D1
 ~
 ~
 0 -1 17635
-D 2
+D2
 ~
 ~
 0 -1 17629
-D 3
+D3
 ~
 ~
 0 -1 17621
@@ -844,20 +844,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17628
-D 1
+D1
 ~
 ~
 0 -1 17636
-D 2
+D2
 ~
 ~
 0 -1 17630
-D 3
+D3
 ~
 ~
 0 -1 17622
@@ -873,20 +873,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17629
-D 1
+D1
 ~
 ~
 0 -1 17637
-D 2
+D2
 ~
 ~
 0 -1 17631
-D 3
+D3
 ~
 ~
 0 -1 17623
@@ -902,20 +902,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17630
-D 1
+D1
 ~
 ~
 0 -1 17638
-D 2
+D2
 ~
 ~
 0 -1 17632
-D 3
+D3
 ~
 ~
 0 -1 17624
@@ -931,20 +931,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17631
-D 1
+D1
 ~
 ~
 0 -1 17639
-D 2
+D2
 ~
 ~
 0 -1 17633
-D 3
+D3
 ~
 ~
 0 -1 17625
@@ -960,20 +960,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17632
-D 1
+D1
 ~
 ~
 0 -1 17640
-D 2
+D2
 ~
 ~
 0 -1 17634
-D 3
+D3
 ~
 ~
 0 -1 17626
@@ -989,20 +989,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17633
-D 1
+D1
 ~
 ~
 0 -1 17641
-D 2
+D2
 ~
 ~
 0 -1 17634
-D 3
+D3
 ~
 ~
 0 -1 17627
@@ -1018,20 +1018,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17635
-D 1
+D1
 ~
 ~
 0 -1 17601
-D 2
+D2
 ~
 ~
 0 -1 17636
-D 3
+D3
 ~
 ~
 0 -1 17628
@@ -1047,20 +1047,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17635
-D 1
+D1
 ~
 ~
 0 -1 17636
-D 2
+D2
 ~
 ~
 0 -1 17637
-D 3
+D3
 ~
 ~
 0 -1 17629
@@ -1076,20 +1076,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17636
-D 1
+D1
 ~
 ~
 0 -1 17637
-D 2
+D2
 ~
 ~
 0 -1 17638
-D 3
+D3
 ~
 ~
 0 -1 17630
@@ -1105,20 +1105,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17637
-D 1
+D1
 ~
 ~
 0 -1 17644
-D 2
+D2
 ~
 ~
 0 -1 17639
-D 3
+D3
 ~
 ~
 0 -1 17631
@@ -1134,20 +1134,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17638
-D 1
+D1
 ~
 ~
 0 -1 17639
-D 2
+D2
 ~
 ~
 0 -1 17640
-D 3
+D3
 ~
 ~
 0 -1 17632
@@ -1163,20 +1163,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17639
-D 1
+D1
 ~
 ~
 0 -1 17640
-D 2
+D2
 ~
 ~
 0 -1 17641
-D 3
+D3
 ~
 ~
 0 -1 17633
@@ -1192,20 +1192,20 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17640
-D 1
+D1
 ~
 ~
 0 -1 17641
-D 2
+D2
 ~
 ~
 0 -1 17641
-D 3
+D3
 ~
 ~
 0 -1 17634
@@ -1221,16 +1221,16 @@ pode-se ver alguns pequenos animais que se esgueiram por entre as dunas, à
 procura de alimento.  É melhor você se apressar, ou poderá ser a próxima 
 refeição de algum animal.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17620
-D 1
+D1
 ~
 ~
 0 -1 17643
-D 2
+D2
 ~
 ~
 0 -1 17642
@@ -1243,12 +1243,12 @@ já se recompôs parcialmente, podendo ver pequenos arbustos ao longo deste
 caminho que segue adiante.  Você pode seguir pelo caminho de terra para o 
 sul, ou voltar para o deserto indo a oeste.
 ~
-176.1 c 2
-D 2
+176 4 0 0 0 2
+D2
 ~
 ~
 0 -1 17665
-D 3
+D3
 ~
 ~
 0 -1 17642
@@ -1264,12 +1264,12 @@ Seria a entrada de um templo misterioso, ou alguma civilização desconhecida
 até então?  Você pode seguir para leste pela estrada, ou voltar para o 
 deserto à oeste.
 ~
-176.1 c 2
-D 1
+176 4 0 0 0 2
+D1
 ~
 ~
 0 -1 17645
-D 3
+D3
 ~
 ~
 0 -1 17638
@@ -1286,16 +1286,16 @@ trabalhadores, você percebe onde está; na China.  Você pode continuar pela
 estrada a nordeste, passando pelas plantações, seguir para o outro lado da 
 estrada ao sul, ou voltar para oeste.
 ~
-176.1 c 2
-D 2
+176 4 0 0 0 2
+D2
 ~
 ~
 0 -1 17646
-D 3
+D3
 ~
 ~
 0 -1 17644
-D 7
+D7
 ~
 ~
 0 -1 17651
@@ -1311,12 +1311,12 @@ sentir uma breve brisa que vem do sul, trazendo consigo um delicioso aroma
 de flores na primavera.  Você pode continuar pelo sul, ou voltar para o 
 norte.
 ~
-176.1 c 2
-D 0
+176 4 0 0 0 2
+D0
 ~
 ~
 0 -1 17645
-D 2
+D2
 ~
 ~
 0 -1 17647
@@ -1330,12 +1330,12 @@ habitante ou animal, o que lhe parece estranho, já que é um lugar tão
 belo.  Ao redor da estrada podem ser vistos algumas bandeiras chinesas 
 presas à estacas de madeira no chão.
 ~
-176.1 c 2
-D 0
+176 4 0 0 0 2
+D0
 ~
 ~
 0 -1 17646
-D 1
+D1
 ~
 ~
 0 -1 17648
@@ -1349,12 +1349,12 @@ habitante ou animal, o que lhe parece estranho, já que é um lugar tão
 belo.  Ao redor da estrada podem ser vistos algumas bandeiras chinesas 
 presas à estacas de madeira no chão.
 ~
-176.1 c 2
-D 1
+176 4 0 0 0 2
+D1
 ~
 ~
 0 -1 17649
-D 3
+D3
 ~
 ~
 0 -1 17647
@@ -1368,12 +1368,12 @@ habitante ou animal, o que lhe parece estranho, já que é um lugar tão
 belo.  Ao redor da estrada podem ser vistos algumas bandeiras chinesas 
 presas à estacas de madeira no chão.
 ~
-176.1 c 2
-D 2
+176 4 0 0 0 2
+D2
 ~
 ~
 0 -1 17650
-D 3
+D3
 ~
 ~
 0 -1 17648
@@ -1388,8 +1388,8 @@ belo.  Ao redor da estrada podem ser vistos algumas bandeiras chinesas
 presas à estacas de madeira no chão.  Um enorme portão de ferro impede 
 a sua passagem para o sul.
 ~
-176.1 c 2
-D 0
+176 4 0 0 0 2
+D0
 ~
 ~
 0 -1 17649
@@ -1403,12 +1403,12 @@ percebe que os habitantes locais o observam com intriga, tentando imaginar
 o que alguém como você está fazendo aqui, em meio à diversas plantações.  
 A estrada segue para leste, e você pode voltar para o sudoeste.
 ~
-176.1 g 3
-D 1
+176 64 0 0 0 3
+D1
 ~
 ~
 0 -1 17652
-D 9
+D9
 ~
 ~
 0 -1 17645
@@ -1422,12 +1422,12 @@ percebe que os habitantes locais o observam com intriga, tentando imaginar
 o que alguém como você está fazendo aqui, em meio à diversas plantações.  
 Você pode seguir pela estrada a sul, ou voltar a oeste.
 ~
-176.1 g 3
-D 2
+176 64 0 0 0 3
+D2
 ~
 ~
 0 -1 17653
-D 3
+D3
 ~
 ~
 0 -1 17651
@@ -1441,12 +1441,12 @@ percebe que os habitantes locais o observam com intriga, tentando imaginar
 o que alguém como você está fazendo aqui, em meio à diversas plantações.  
 Você pode seguir pela estrada a leste, ou voltar ao norte.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17652
-D 1
+D1
 ~
 ~
 0 -1 17654
@@ -1460,12 +1460,12 @@ percebe que os habitantes locais o observam com intriga, tentando imaginar
 o que alguém como você está fazendo aqui, em meio à diversas plantações.  
 A estrada segue para leste, ou você pode voltar para oeste.
 ~
-176.1 g 3
-D 1
+176 64 0 0 0 3
+D1
 ~
 ~
 0 -1 17655
-D 3
+D3
 ~
 ~
 0 -1 17653
@@ -1479,12 +1479,12 @@ percebe que os habitantes locais o observam com intriga, tentando imaginar
 o que alguém como você está fazendo aqui, em meio à diversas plantações.  
 Você pode continuar ao norte, ou voltar para oeste.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17656
-D 3
+D3
 ~
 ~
 0 -1 17654
@@ -1498,12 +1498,12 @@ percebe que os habitantes locais o observam com intriga, tentando imaginar
 o que alguém como você está fazendo aqui, em meio à diversas plantações.  
 A estrada continua para o norte, ou você pode voltar para o sul.
 ~
-176.1 g 3
-D 0
+176 64 0 0 0 3
+D0
 ~
 ~
 0 -1 17657
-D 2
+D2
 ~
 ~
 0 -1 17655
@@ -1517,12 +1517,12 @@ segue para oeste até onde você pode ver, se perdendo em meio às colinas.
    Você pode seguir para norte no que se parece ser uma cidade, ou 
 continuar por um pequeno caminho de terra ao leste. 
 ~
-176.1 c 2
-D 0
+176 4 0 0 0 2
+D0
 ~
 ~
 0 -1 17743
-D 1
+D1
 ~
 ~
 0 -1 17658
@@ -1535,12 +1535,12 @@ pelo caminhar de diversas pessoas da região.  Ao redor você não consegue
 ver nada além de uma rasteira vegetação, e uma grande e cansativa subida 
 à frente.
 ~
-176.1 g 4
-D 1
+176 64 0 0 0 4
+D1
 ~
 ~
 0 -1 17659
-D 3
+D3
 ~
 ~
 0 -1 17657
@@ -1553,12 +1553,12 @@ pelo caminhar de diversas pessoas da região.  Ao redor você não consegue
 ver nada além de uma rasteira vegetação, e uma grande e cansativa subida 
 à frente.
 ~
-176.1 g 4
-D 1
+176 64 0 0 0 4
+D1
 ~
 ~
 0 -1 17660
-D 3
+D3
 ~
 ~
 0 -1 17658
@@ -1571,15 +1571,15 @@ pelo caminhar de diversas pessoas da região.  Ao redor você não consegue
 ver nada além de uma rasteira vegetação, e uma grande e cansativa subida 
 à frente.
 ~
-176.1 g 4
-D 8
-~
-~
-0 -1 17661
-D 3
+176 64 0 0 0 4
+D3
 ~
 ~
 0 -1 17659
+D8
+~
+~
+0 -1 17661
 S
 #17661
 Um Caminho de Terra~
@@ -1589,12 +1589,12 @@ pelo caminhar de diversas pessoas da região.  Ao redor você não consegue
 ver nada além de uma rasteira vegetação, e uma grande e cansativa subida 
 à frente.
 ~
-176.1 g 4
-D 1
+176 64 0 0 0 4
+D1
 ~
 ~
 0 -1 17662
-D 6
+D6
 ~
 ~
 0 -1 17660
@@ -1607,12 +1607,12 @@ pelo caminhar de diversas pessoas da região.  Ao redor você não consegue
 ver nada além de uma rasteira vegetação, e uma grande e cansativa subida 
 à frente.
 ~
-176.1 g 4
-D 0
+176 64 0 0 0 4
+D0
 ~
 ~
 0 -1 17663
-D 3
+D3
 ~
 ~
 0 -1 17661
@@ -1625,12 +1625,12 @@ pelo caminhar de diversas pessoas da região.  Ao redor você não consegue
 ver nada além de uma rasteira vegetação, e uma grande e cansativa subida 
 à frente.
 ~
-176.1 g 4
-D 2
+176 64 0 0 0 4
+D2
 ~
 ~
 0 -1 17662
-D 7
+D7
 ~
 ~
 0 -1 17664
@@ -1644,12 +1644,12 @@ pela Grande Muralha que separa estas colinas, seguindo pelo topo dos montes
 até onde seus olhos podem ver.  Você pode continuar, entrando na Grande 
 Muralha ao norte, ou voltar, descendo pela colina à sudoeste.
 ~
-176.1 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17681
-D 9
+D9
 ~
 ~
 0 -1 17663
@@ -1663,12 +1663,12 @@ interior da China.  Além de suas plantações, Xi'an possui um enorme
 exercito temido por muitos povos.  Você pode continuar ao sul, entrando na 
 vila, ou voltar para o norte.
 ~
-176.1 c 2
-D 0
+176 4 0 0 0 2
+D0
 ~
 ~
 0 -1 17643
-D 2
+D2
 ~
 ~
 0 -1 17666
@@ -1683,16 +1683,16 @@ uma concentração de pequenas e simples casas de bambu, e algumas
 plantações.  Você pode continuar pela estrada ao sul, voltar ao norte, ou 
 seguir para as casas à leste.
 ~
-176.1 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17665
-D 1
+D1
 ~
 ~
 0 -1 17669
-D 2
+D2
 ~
 ~
 0 -1 17667
@@ -1706,12 +1706,12 @@ vegetação rasteira.  Mais à frente pode ser vista uma pequena trilha
 passando no meio de um bambual.  Você pode continuar ao sul, ou voltar 
 indo para o norte.
 ~
-176.1 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17666
-D 2
+D2
 ~
 ~
 0 -1 17668
@@ -1725,16 +1725,16 @@ que ao lado da entrada da trilha que entra no bambual, há um pequena placa
 de madeira com alguns caracteres chineses em vermelho nela.  Você pode 
 seguir para leste, sudoeste ou voltar para o norte.
 ~
-176.1 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17667
-D 1
+D1
 ~
 ~
 0 -1 17673
-D 9
+D9
 ~
 ~
 0 -1 17674
@@ -1748,16 +1748,16 @@ ornamentos em vermelho e amarelo, e ao fundo da casa um senhor de estatura
 média parece o chamar.  Você pode continuar pela rua entre as casas à 
 leste, ou voltar para o oeste.
 ~
-176.1 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17680
-D 1
+D1
 ~
 ~
 0 -1 17670
-D 3
+D3
 ~
 ~
 0 -1 17666
@@ -1770,12 +1770,12 @@ muitas pessoas trabalhando na colheita de suas plantações, e ao longe uma
 grande colina com neve no topo.  A rua continua para sul, e você pode 
 voltar para oeste.
 ~
-176.1 g 2
-D 2
+176 64 0 0 0 2
+D2
 ~
 ~
 0 -1 17671
-D 3
+D3
 ~
 ~
 0 -1 17669
@@ -1786,16 +1786,16 @@ Uma Rua em Xi'an~
 pode observar mais casas, e uma grande casa a leste na qual um delicioso 
 aroma de comida pode ser sentido.
 ~
-176.1 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17670
-D 1
+D1
 ~
 ~
 0 -1 17678
-D 2
+D2
 ~
 ~
 0 -1 17672
@@ -1809,16 +1809,16 @@ tecidos de seda pendurados à frente, que por algum motivo chamam a sua
 atenção.  Você pode seguir para a casa ao sul, ou continuar pela rua à 
 norte e oeste.
 ~
-176.1 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17671
-D 2
+D2
 ~
 ~
 0 -1 17679
-D 3
+D3
 ~
 ~
 0 -1 17673
@@ -1829,12 +1829,12 @@ Uma Rua em Xi'an~
 em ambos os lados da rua, e alguns cercados com animais encontram-se ao 
 sul.  Você pode continuar pela rua indo à leste ou oeste.
 ~
-176.1 g 2
-D 1
+176 64 0 0 0 2
+D1
 ~
 ~
 0 -1 17672
-D 3
+D3
 ~
 ~
 0 -1 17668
@@ -1846,12 +1846,12 @@ terra batida, talvez pelo intenso trânsito no local.  Olhando ao redor você
 não vê nada além de grandes bambus, cercando todo o caminho.  Você pode 
 voltar para nordeste, ou seguir pelo caminho à sudoeste.
 ~
-176.1 cgi 3
-D 7
+176 324 0 0 0 3
+D7
 ~
 ~
 0 -1 17668
-D 9
+D9
 ~
 ~
 0 -1 17675
@@ -1863,12 +1863,12 @@ terra batida, talvez pelo intenso trânsito no local.  Olhando ao redor você
 não vê nada além de grandes bambus, cercando todo o caminho.  Você pode 
 voltar para nordeste, ou continuar pelo caminho à sudoeste.
 ~
-176.1 gi 3
-D 7
+176 320 0 0 0 3
+D7
 ~
 ~
 0 -1 17674
-D 9
+D9
 ~
 ~
 0 -1 17676
@@ -1881,15 +1881,15 @@ uma pequena clareira, onde parece haver muita movimentação, e de onde
 muitos sons podem ser ouvidos.  Você pode voltar à nordeste, ou seguir 
 para sul.
 ~
-176.1 gi 3
-D 7
-~
-~
-0 -1 17675
-D 2
+176 320 0 0 0 3
+D2
 ~
 ~
 0 -1 17677
+D7
+~
+~
+0 -1 17675
 S
 #17677
 Um Acampamento Militar~
@@ -1902,8 +1902,8 @@ com espadas e outras armas.  Ao perceberem a sua presença, muitos dos
 soldados o observa com intriga, temendo ser algum ataque surpresa.  Seria 
 inteligente você sair daqui o quanto antes.
 ~
-176.1 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17676
@@ -1918,8 +1918,8 @@ potes que liberam um delicioso aroma.  No canto sul da casa você vê uma
 fogueira com uma panela suspensa em cima, e na parte norte da casa, alguns 
 sacos do que lhe parece ser arroz.
 ~
-176.1 cdeh 1
-D 3
+176 156 0 0 0 1
+D3
 ~
 ~
 0 -1 17671
@@ -1933,8 +1933,8 @@ que percebe a sua presença.  Apesar do cheiro de mofo, você observa que
 aqui há lindos e coloridos tecidos de seda, muitos bordados com diversos 
 símbolos chineses, todos à venda.
 ~
-176.1 cdeh 1
-D 0
+176 156 0 0 0 1
+D0
 ~
 ~
 0 -1 17672
@@ -1947,8 +1947,8 @@ iluminação ao local.  No fundo da sala encontra-se um senhor trabalhando
 com fios de palha, que o cumprimenta com um grande sorriso e uma saudação 
 assim que você entra no armazém.
 ~
-176.1 cdeh 1
-D 2
+176 156 0 0 0 1
+D2
 ~
 ~
 0 -1 17669
@@ -1962,16 +1962,15 @@ encontram-se algumas tochas, dando uma fraca iluminação ao local.  No canto
 norte da sala você pode observar uma pequena escada de madeira que segue 
 para cima, em direção à um alçapão, dando acesso à Grande Muralha.
 ~
-176.1 cdfjr 1
-D 2
+176 131628 0 0 0 1
+D2
 ~
 ~
 0 -1 17664
-D 4
+D4
 ~
 alcapao~
-:n 1 o alçapão
-abc 17600 17682
+1 17600 17682
 S
 #17682
 O Forte Principal da Grande Muralha~
@@ -1982,20 +1981,19 @@ Grande Muralha, seguindo pelo topo dos montes.  Olhando para os lados, você
 percebe que está bem no centro da Grande Muralha, podendo continuar 
 seguindo à leste ou oeste, ou pode voltar pelo alçapão abaixo.
 ~
-176.1 cdf 1
-D 1
+176 44 0 0 0 1
+D1
 ~
 ~
 0 -1 17683
-D 3
+D3
 ~
 ~
 0 -1 17721
-D 5
+D5
 ~
 alcapao~
-:n 1 0 alçapão
-abc 17600 17681
+1 17600 17681
 S
 #17683
 A Grande Muralha~
@@ -2010,12 +2008,12 @@ pequena proteção de pedra lateral, delimitando a muralha, e dando proteção
 no chão pela extensão do percurso, devido à alta altitude onde se encontra 
 a muralha.  Você pode continuar à leste, ou voltar ao forte para oeste.
 ~
-176.1 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17684
-D 3
+D3
 ~
 ~
 0 -1 17682
@@ -2031,15 +2029,15 @@ muralha.  Vestígios de neve ainda podem ser vistos na extensão do percurso,
 e você observa um estranho tipo de vegetação que brota em meio aos grandes 
 blocos de pedra do piso.
 ~
-176.1 g 1
-D 4
-~
-~
-0 -1 17685
-D 3
+176 64 0 0 0 1
+D3
 ~
 ~
 0 -1 17683
+D4
+~
+~
+0 -1 17685
 S
 #17685
 A Grande Muralha~
@@ -2052,12 +2050,12 @@ muralha.  Vestígios de neve ainda podem ser vistos na extensão do percurso,
 e você observa um estranho tipo de vegetação que brota em meio aos grandes 
 blocos de pedra do piso.
 ~
-176.1 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17686
-D 5
+D5
 ~
 ~
 0 -1 17684
@@ -2073,15 +2071,15 @@ muralha.  Vestígios de neve ainda podem ser vistos na extensão do percurso,
 e você observa um estranho tipo de vegetação que brota em meio aos grandes 
 blocos de pedra do piso.
 ~
-176.1 g 1
-D 3
-~
-~
-0 -1 17685
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17687
+D3
+~
+~
+0 -1 17685
 S
 #17687
 A Grande Muralha~
@@ -2094,12 +2092,12 @@ muralha.  Vestígios de neve ainda podem ser vistos na extensão do percurso,
 e você observa um estranho tipo de vegetação que brota em meio aos grandes 
 blocos de pedra do piso.
 ~
-176.1 g 1
-D 3
+176 64 0 0 0 1
+D3
 ~
 ~
 0 -1 17686
-D 7
+D7
 ~
 ~
 0 -1 17688
@@ -2115,15 +2113,15 @@ muralha.  Vestígios de neve ainda podem ser vistos na extensão do percurso,
 e você observa um estranho tipo de vegetação que brota em meio aos grandes 
 blocos de pedra do piso.
 ~
-176.1 g 1
-D 9
-~
-~
-0 -1 17687
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17689
+D9
+~
+~
+0 -1 17687
 S
 #17689
 A Grande Muralha~
@@ -2136,12 +2134,12 @@ muralha.  Vestígios de neve ainda podem ser vistos na extensão do percurso,
 e você observa um estranho tipo de vegetação que brota em meio aos grandes 
 blocos de pedra do piso.
 ~
-176.1 g 1
-D 3
+176 64 0 0 0 1
+D3
 ~
 ~
 0 -1 17688
-D 8
+D8
 ~
 ~
 0 -1 17690
@@ -2157,15 +2155,15 @@ muralha.  Vestígios de neve ainda podem ser vistos na extensão do percurso,
 e você observa um estranho tipo de vegetação que brota em meio aos grandes 
 blocos de pedra do piso.
 ~
-176.1 g 1
-D 6
-~
-~
-0 -1 17689
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17691
+D6
+~
+~
+0 -1 17689
 S
 #17691
 A Grande Muralha~
@@ -2178,12 +2176,12 @@ muralha.  Vestígios de neve ainda podem ser vistos na extensão do percurso,
 e você observa um estranho tipo de vegetação que brota em meio aos grandes 
 blocos de pedra do piso.
 ~
-176.1 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17692
-D 3
+D3
 ~
 ~
 0 -1 17690
@@ -2196,12 +2194,12 @@ Vestígios de neve ainda podem ser vistos na extensão do percurso, e você
 observa um estranho tipo de vegetação que brota em meio aos grandes blocos 
 de pedra do piso.
 ~
-176.1 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17693
-D 3
+D3
 ~
 ~
 0 -1 17691
@@ -2215,16 +2213,16 @@ muralha continua com seu percurso sinuoso.  Na parede leste, uma escada
 segue para baixo em direção ao piso inferior.  Você pode voltar à oeste, 
 continuar pela muralha à norte, ou descer para o piso inferior do forte.
 ~
-176.1 cdf 1
-D 0
+176 44 0 0 0 1
+D0
 ~
 ~
 0 -1 17697
-D 3
+D3
 ~
 ~
 0 -1 17692
-D 5
+D5
 ~
 ~
 0 -1 17694
@@ -2236,19 +2234,19 @@ oeste.  Duas tochas, nas paredes norte e sul, iluminam a sala, muito escura
 e cheirando à mofo.  Você pode voltar, pela escada ao piso superior do 
 forte, ou pode seguir para as salas à leste e oeste.
 ~
-176.1 df 1
-D 4
-~
-~
-0 -1 17693
-D 1
+176 40 0 0 0 1
+D1
 ~
 ~
 0 -1 17695
-D 3
+D3
 ~
 ~
 0 -1 17696
+D4
+~
+~
+0 -1 17693
 S
 #17695
 Uma Despensa~
@@ -2258,8 +2256,8 @@ nas quais encontram-se vários potes de madeiras, e diversos sacos stocados.
 A conservação destes alimentos deve ser péssima, ja que o cheiro desta sala 
 é insuportável.  A única saída é voltar para o nexo à oeste.
 ~
-176.1 df 1
-D 3
+176 40 0 0 0 1
+D3
 ~
 ~
 0 -1 17694
@@ -2271,16 +2269,15 @@ entre outros muitos artefatos de batalha.  Nas paredes da sala, tochas
 iluminam o local, dando um brilho especial aos artefatos aqui presentes.  
 Uma enorme porta de madeira encontra-se ao sul.
 ~
-176.1 df 1
-D 1
+176 40 0 0 0 1
+D1
 ~
 ~
 0 -1 17694
-D 2
+D2
 ~
 porta~
-:n 2 a grande porta de madeira
-a -1 5029
+1 -1 5029
 S
 #17697
 A Grande Muralha~
@@ -2290,15 +2287,15 @@ o piso, próximo ao grande parapeito de pedra, você pode ver alguns
 vestígios de neve.  Adiante, você pode ver que a muralha segue sinuosa por 
 muitas curvas e subidas, realmente um árduo percurso.
 ~
-176.1 dgf 1
-D 2
-~
-~
-0 -1 17693
-D 0
+176 104 0 0 0 1
+D0
 ~
 ~
 0 -1 17698
+D2
+~
+~
+0 -1 17693
 S
 #17698
 A Grande Muralha~
@@ -2309,15 +2306,15 @@ Olhando para o piso, próximo ao grande parapeito de pedra, você pode ver
 alguns vestígios de neve.  Adiante, você pode ver que a muralha segue 
 sinuosa por muitas curvas e subidas, realmente um árduo percurso.
 ~
-176.1 g 1
-D 2
-~
-~
-0 -1 17697
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17699
+D2
+~
+~
+0 -1 17697
 S
 #17699
 A Grande Muralha~
@@ -2328,12 +2325,12 @@ Olhando para o piso, próximo ao grande parapeito de pedra, você pode ver
 alguns vestígios de neve.  Adiante, você pode ver que a muralha segue 
 sinuosa por muitas curvas e subidas, realmente um árduo percurso.
 ~
-176.1 g 1
-D 2
+176 64 0 0 0 1
+D2
 ~
 ~
 0 -1 17698
-D 7
+D7
 ~
 ~
 0 -1 17700
@@ -2347,15 +2344,15 @@ Olhando para o piso, próximo ao grande parapeito de pedra, você pode ver
 alguns vestígios de neve.  Adiante, você pode ver que a muralha segue 
 sinuosa por muitas curvas e subidas, realmente um árduo percurso.
 ~
-176.2 g 1
-D 9
-~
-~
-0 -1 17699
-D 4
+176 64 0 0 0 1
+D4
 ~
 ~
 0 -1 17701
+D9
+~
+~
+0 -1 17699
 S
 #17701
 A Grande Muralha~
@@ -2366,15 +2363,15 @@ Olhando para o piso, próximo ao grande parapeito de pedra, você pode ver
 alguns vestígios de neve.  Adiante, você pode ver que a muralha segue 
 sinuosa por muitas curvas e subidas, realmente um árduo percurso.
 ~
-176.2 g 1
-D 5
-~
-~
-0 -1 17700
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17702
+D5
+~
+~
+0 -1 17700
 S
 #17702
 A Grande Muralha~
@@ -2385,12 +2382,12 @@ Olhando para o piso, próximo ao grande parapeito de pedra, você pode ver
 alguns vestígios de neve.  Adiante, você pode ver que a muralha segue 
 sinuosa por muitas curvas e subidas, realmente um árduo percurso.
 ~
-176.2 g 1
-D 2
+176 64 0 0 0 1
+D2
 ~
 ~
 0 -1 17701
-D 6
+D6
 ~
 ~
 0 -1 17703
@@ -2404,15 +2401,15 @@ Olhando para o piso, próximo ao grande parapeito de pedra, você pode ver
 alguns vestígios de neve.  Adiante, você pode ver que a muralha segue 
 sinuosa por muitas curvas e subidas, realmente um árduo percurso.
 ~
-176.2 g 1
-D 8
-~
-~
-0 -1 17702
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17704
+D8
+~
+~
+0 -1 17702
 S
 #17704
 A Grande Muralha~
@@ -2423,15 +2420,15 @@ Olhando para o piso, próximo ao grande parapeito de pedra, você pode ver
 alguns vestígios de neve.  Adiante, você pode ver que a muralha segue 
 sinuosa por muitas curvas e subidas, realmente um árduo percurso.
 ~
-176.2 g 1
-D 2
-~
-~
-0 -1 17703
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17705
+D2
+~
+~
+0 -1 17703
 S
 #17705
 A Grande Muralha~
@@ -2441,15 +2438,15 @@ vilarejos espalhados por toda a extensão do território.  Olhando para o
 piso, próximo ao grande parapeito de pedra, você pode ver alguns vestígios 
 de neve.
 ~
-176.2 g 1
-D 2
-~
-~
-0 -1 17704
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17706
+D2
+~
+~
+0 -1 17704
 S
 #17706
 O Pequeno Forte da Grande Muralha~
@@ -2459,23 +2456,23 @@ várias janelas à sua volta e com uma aparência impenetrável.  Ao contrário
 do outros, este forte tem mais um andar acima.  Olhando para a parede oeste 
 você pode ver a escada que da acesso ao piso superior e inferior.
 ~
-176.2 cdf 1
-D 2
-~
-~
-0 -1 17705
-D 4
-~
-~
-0 -1 17707
-D 5
-~
-~
-0 -1 17708
-D 1
+176 44 0 0 0 1
+D1
 ~
 ~
 0 -1 17709
+D2
+~
+~
+0 -1 17705
+D4
+~
+~
+0 -1 17707
+D5
+~
+~
+0 -1 17708
 S
 #17707
 O Andar Superior do Forte~
@@ -2487,8 +2484,8 @@ Um pequeno parapeito de pedra limita os extremos desta verdadeira torre de
 observação.  A única saída é voltar pela escada, em direção ao piso 
 inferior.
 ~
-176.2 g 1
-D 5
+176 64 0 0 0 1
+D5
 ~
 ~
 0 -1 17706
@@ -2501,16 +2498,15 @@ espalhados pela sala guardam o alimento necessário para alimentar aqueles
 que aqui residem, protegendo a muralha.  Uma porta de madeira encontra-se 
 a nordeste.  Você pode voltar para o andar superior, subindo pela escada.
 ~
-176.2 df 1
-D 4
+176 40 0 0 0 1
+D4
 ~
 ~
 0 -1 17706
-D 7
+D7
 ~
 porta~
-:n 2 uma porta
-abc -1 6007
+1 -1 6007
 S
 #17709
 A Grande Muralha~
@@ -2521,15 +2517,15 @@ está um pouco mais desgastada, talvez devido à sua idade, ja que foi uma
 das primeiras partes da muralha a ser contruída.  Ainda há um pouco de 
 neve pelo caminho, mesmo porque a temperatura aqui é baixíssima.
 ~
-176.2 g 1
-D 3
-~
-~
-0 -1 17706
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17710
+D3
+~
+~
+0 -1 17706
 S
 #17710
 A Grande Muralha~
@@ -2540,12 +2536,12 @@ está um pouco mais desgastada, talvez devido à sua idade, ja que foi uma
 das primeiras partes da muralha a ser contruída.  Ainda há um pouco de 
 neve pelo caminho, mesmo porque a temperatura aqui é baixíssima.
 ~
-176.2 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17711
-D 3
+D3
 ~
 ~
 0 -1 17709
@@ -2559,12 +2555,12 @@ está um pouco mais desgastada, talvez devido à sua idade, ja que foi uma
 das primeiras partes da muralha a ser contruída.  Ainda há um pouco de 
 neve pelo caminho, mesmo porque a temperatura aqui é baixíssima.
 ~
-176.2 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17712
-D 3
+D3
 ~
 ~
 0 -1 17710
@@ -2578,12 +2574,12 @@ está um pouco mais desgastada, talvez devido à sua idade, ja que foi uma
 das primeiras partes da muralha a ser contruída.  Ainda há um pouco de 
 neve pelo caminho, mesmo porque a temperatura aqui é baixíssima.
 ~
-176.2 g 1
-D 3
+176 64 0 0 0 1
+D3
 ~
 ~
 0 -1 17711
-D 8
+D8
 ~
 ~
 0 -1 17713
@@ -2597,12 +2593,12 @@ está um pouco mais desgastada, talvez devido à sua idade, ja que foi uma
 das primeiras partes da muralha a ser contruída.  Ainda há um pouco de 
 neve pelo caminho, mesmo porque a temperatura aqui é baixíssima.
 ~
-176.2 g 1
-D 6
+176 64 0 0 0 1
+D6
 ~
 ~
 0 -1 17712
-D 8
+D8
 ~
 ~
 0 -1 17714
@@ -2616,12 +2612,12 @@ está um pouco mais desgastada, talvez devido à sua idade, ja que foi uma
 das primeiras partes da muralha a ser contruída.  Ainda há um pouco de 
 neve pelo caminho, mesmo porque a temperatura aqui é baixíssima.
 ~
-176.2 g 1
-D 6
+176 64 0 0 0 1
+D6
 ~
 ~
 0 -1 17713
-D 8
+D8
 ~
 ~
 0 -1 17715
@@ -2635,12 +2631,12 @@ está um pouco mais desgastada, talvez devido à sua idade, ja que foi uma
 das primeiras partes da muralha a ser contruída.  Ainda há um pouco de 
 neve pelo caminho, mesmo porque a temperatura aqui é baixíssima.
 ~
-176.2 g 1
-D 6
+176 64 0 0 0 1
+D6
 ~
 ~
 0 -1 17714
-D 8
+D8
 ~
 ~
 0 -1 17716
@@ -2654,12 +2650,12 @@ está um pouco mais desgastada, talvez devido à sua idade, ja que foi uma
 das primeiras partes da muralha a ser contruída.  Ainda há um pouco de 
 neve pelo caminho, mesmo porque a temperatura aqui é baixíssima.
 ~
-176.2 g 1
-D 6
+176 64 0 0 0 1
+D6
 ~
 ~
 0 -1 17715
-D 8
+D8
 ~
 ~
 0 -1 17717
@@ -2673,15 +2669,15 @@ está um pouco mais desgastada, talvez devido à sua idade, ja que foi uma
 das primeiras partes da muralha a ser contruída.  Ainda há um pouco de 
 neve pelo caminho, mesmo porque a temperatura aqui é baixíssima.
 ~
-176.2 g 1
-D 6
-~
-~
-0 -1 17716
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17718
+D6
+~
+~
+0 -1 17716
 S
 #17718
 A Grande Muralha~
@@ -2691,15 +2687,15 @@ nitidamente que este forte é um pouco maior que os demais, e um pouco mais
 ornado também.  Você pode seguir para o forte, ou voltar para o caminho 
 na muralha.
 ~
-176.2 g 1
-D 3
-~
-~
-0 -1 17717
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17719
+D3
+~
+~
+0 -1 17717
 S
 #17719
 O Forte Oriental da Grande Muralha~
@@ -2710,12 +2706,12 @@ adornos como estátuas de bronze e alguns grandes paineis pretos, com
 caracteres vermelhos que você não tem ideia do significado.  Uma bela 
 escada dourada, no formato de um dragão segue para o andar superior.
 ~
-176.2 cdf 1
-D 3
+176 44 0 0 0 1
+D3
 ~
 ~
 0 -1 17718
-D 4
+D4
 ~
 ~
 0 -1 17720
@@ -2731,8 +2727,8 @@ plantas da região e de muitos dragões, o que você ja percebeu ser algo
 muito comum por aqui.  Cuidado, talvez aquele que reside aqui não goste de 
 sua presença, em seus aposentos.
 ~
-176.2 dfg 1
-D 5
+176 104 0 0 0 1
+D5
 ~
 ~
 0 -1 17719
@@ -2750,12 +2746,12 @@ pequena proteção de pedra lateral, delimitando a muralha, e dando proteção
 no chão pela extensão do percurso, devido à alta altitude onde se encontra 
 a muralha.  Você pode continuar à oeste, ou voltar ao forte para leste.
 ~
-176.2 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17682
-D 3
+D3
 ~
 ~
 0 -1 17722
@@ -2771,12 +2767,12 @@ delimitando a muralha, e dando proteção àqueles que aqui permanecem.
 Alguns vestígios de neve podem ser vistos no chão pela extensão do 
 percurso, devido à alta altitude onde se encontra a muralha.
 ~
-176.2 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17721
-D 3
+D3
 ~
 ~
 0 -1 17723
@@ -2792,12 +2788,12 @@ delimitando a muralha, e dando proteção àqueles que aqui permanecem.
 Alguns vestígios de neve podem ser vistos no chão pela extensão do 
 percurso, devido à alta altitude onde se encontra a muralha.
 ~
-176.2 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17722
-D 3
+D3
 ~
 ~
 0 -1 17724
@@ -2813,12 +2809,12 @@ delimitando a muralha, e dando proteção àqueles que aqui permanecem.
 Alguns vestígios de neve podem ser vistos no chão pela extensão do 
 percurso, devido à alta altitude onde se encontra a muralha.
 ~
-176.2 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17723
-D 6
+D6
 ~
 ~
 0 -1 17725
@@ -2834,15 +2830,15 @@ delimitando a muralha, e dando proteção àqueles que aqui permanecem.
 Alguns vestígios de neve podem ser vistos no chão pela extensão do 
 percurso, devido à alta altitude onde se encontra a muralha.
 ~
-176.2 g 1
-D 8
-~
-~
-0 -1 17724
-D 4
+176 64 0 0 0 1
+D4
 ~
 ~
 0 -1 17726
+D8
+~
+~
+0 -1 17724
 S
 #17726
 A Grande Muralha~
@@ -2852,15 +2848,15 @@ de pedra lateral, delimitando a muralha, e dando proteção àqueles que aqui
 permanecem.  Alguns vestígios de neve podem ser vistos no chão pela extensão 
 do percurso, devido à alta altitude onde se encontra a muralha.
 ~
-176.2 g 1
-D 5
-~
-~
-0 -1 17725
-D 3
+176 64 0 0 0 1
+D3
 ~
 ~
 0 -1 17727
+D5
+~
+~
+0 -1 17725
 S
 #17727
 Um Forte da Grande Muralha~
@@ -2873,19 +2869,19 @@ proteção especial para o forte.  Você pode ver que a muralha continua com
 seu percurso sinuoso pelos montes à norte, e que há uma pequena escada 
 dirigindo ao piso inferior.
 ~
-176.2 cdfg 1
-D 1
-~
-~
-0 -1 17726
-D 5
-~
-~
-0 -1 17728
-D 0
+176 108 0 0 0 1
+D0
 ~
 ~
 0 -1 17729
+D1
+~
+~
+0 -1 17726
+D5
+~
+~
+0 -1 17728
 S
 #17728
 O Piso Inferior do Forte~
@@ -2896,16 +2892,15 @@ ao local.  Observando as duas colunas no centro da sala, você pode ver que
 elas possuem uma cuidadosa pintura, retratando muitos dragões por sua 
 extenção até o teto.  À sul encontra-se uma porta fechada.
 ~
-176.2 df 1
-D 4
+176 40 0 0 0 1
+D2
+~
+porta~
+1 -1 13174
+D4
 ~
 ~
 0 -1 17727
-D 2
-~
-porta~
-:n 2 uma porta de madeira
-abc -1 13174
 S
 #17729
 A Grande Muralha~
@@ -2916,15 +2911,15 @@ de neve pelo percurso, e um estranho tipo de vegetação, que brota no meio
 dos grandes blocos de pedra.  Olhando ao redor, você ainda consegue ver 
 grande parte da extenção da muralha e do território chinês.
 ~
-176.2 g 1
-D 2
-~
-~
-0 -1 17727
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17730
+D2
+~
+~
+0 -1 17727
 S
 #17730
 A Grande Muralha~
@@ -2935,15 +2930,15 @@ de neve pelo percurso, e um estranho tipo de vegetação, que brota no meio
 dos grandes blocos de pedra.  Olhando ao redor, você ainda consegue ver 
 grande parte da extenção da muralha e do território chinês.
 ~
-176.2 g 1
-D 4
-~
-~
-0 -1 17731
-D 2
+176 64 0 0 0 1
+D2
 ~
 ~
 0 -1 17729
+D4
+~
+~
+0 -1 17731
 S
 #17731
 A Grande Muralha~
@@ -2954,15 +2949,15 @@ de neve pelo percurso, e um estranho tipo de vegetação, que brota no meio
 dos grandes blocos de pedra.  Olhando ao redor, você ainda consegue ver 
 grande parte da extenção da muralha e do território chinês.
 ~
-176.2 g 1
-D 5
-~
-~
-0 -1 17730
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17732
+D5
+~
+~
+0 -1 17730
 S
 #17732
 A Grande Muralha~
@@ -2973,15 +2968,15 @@ de neve pelo percurso, e um estranho tipo de vegetação, que brota no meio
 dos grandes blocos de pedra.  Olhando ao redor, você ainda consegue ver 
 grande parte da extenção da muralha e do território chinês.
 ~
-176.2 g 1
-D 2
-~
-~
-0 -1 17731
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17733
+D2
+~
+~
+0 -1 17731
 S
 #17733
 A Grande Muralha~
@@ -2993,15 +2988,15 @@ dos grandes blocos de pedra.  Olhando ao redor, você ainda consegue ver
 grande parte da extenção da muralha e do território chinês.  À frente você 
 pode ver mais um forte da Grande Muralha.
 ~
-176.2 g 1
-D 2
-~
-~
-0 -1 17732
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17734
+D2
+~
+~
+0 -1 17732
 S
 #17734
 Um Forte da Grande Muralha~
@@ -3011,22 +3006,20 @@ Olhando para o teto, você pode observar que algumas partes ja cederam,
 assim como as paredes, com algumas partes ruidas.  A muralha continua para 
 oeste, e aqui há duas portas, uma para leste e outra para norte.
 ~
-176.2 cdg 1
-D 2
+176 76 0 0 0 1
+D0
+~
+porta~
+1 -1 17735
+D1
+~
+porta~
+1 -1 10800
+D2
 ~
 ~
 0 -1 17733
-D 0
-~
-porta~
-:n 2 uma pequena porta
-abc -1 17735
-D 1
-~
-porta~
-:n 2 uma pequena porta
-abc -1 10800
-D 3
+D3
 ~
 ~
 0 -1 17736
@@ -3040,7 +3033,7 @@ você cai
                  CAI
                      CAI, até atingir a base da montanha, morto @R+.+@n
 ~
-176.2 bc 1
+176 6 0 0 0 1
 S
 #17736
 A Grande Muralha~
@@ -3051,12 +3044,12 @@ que limitam seu percurso, não parecem tão grandes como anteriormente.
 Ainda pode ser visto vestígios de neve, e alguns tipos de vegetação 
 rasteira que brotam por entre as pedras.
 ~
-176.2 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17734
-D 3
+D3
 ~
 ~
 0 -1 17737
@@ -3070,12 +3063,12 @@ que limitam seu percurso, não parecem tão grandes como anteriormente.
 Ainda pode ser visto vestígios de neve, e alguns tipos de vegetação 
 rasteira que brotam por entre as pedras.
 ~
-176.2 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17736
-D 9
+D9
 ~
 ~
 0 -1 17738
@@ -3089,12 +3082,12 @@ que limitam seu percurso, não parecem tão grandes como anteriormente.
 Ainda pode ser visto vestígios de neve, e alguns tipos de vegetação 
 rasteira que brotam por entre as pedras.
 ~
-176.2 g 1
-D 7
+176 64 0 0 0 1
+D7
 ~
 ~
 0 -1 17737
-D 9
+D9
 ~
 ~
 0 -1 17739
@@ -3108,15 +3101,15 @@ que limitam seu percurso, não parecem tão grandes como anteriormente.
 Ainda pode ser visto vestígios de neve, e alguns tipos de vegetação 
 rasteira que brotam por entre as pedras.
 ~
-176.2 g 1
-D 7
-~
-~
-0 -1 17738
-D 3
+176 64 0 0 0 1
+D3
 ~
 ~
 0 -1 17740
+D7
+~
+~
+0 -1 17738
 S
 #17740
 A Grande Muralha~
@@ -3126,12 +3119,12 @@ um palacete, possuindo um belo telhado triangular, e várias pinturas por
 todas as paredes, apesar de não ser muito grande.  Você pode seguir para o 
 forte à oeste, ou voltar pela muralha à leste.
 ~
-176.2 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17739
-D 3
+D3
 ~
 ~
 0 -1 17741
@@ -3146,16 +3139,15 @@ Um grande buda de bronze encontra-se próximo à parede norte, e outros
 muitos adereços encontram-se espalhados pela sala.  Você pode voltar para a 
 muralha à leste, ou seguir pela porta à sul.
 ~
-176.2 cdf 1
-D 1
+176 44 0 0 0 1
+D1
 ~
 ~
 0 -1 17740
-D 2
+D2
 ~
 porta~
-:n 2 uma porta
-abc 17601 17742
+1 17601 17742
 S
 #17742
 Os Aposentos do Guardião~
@@ -3167,12 +3159,11 @@ cama onde ele deve repousar, e algumas armas estão dispostas em uma grande
 estante à leste.  Se decidir permanecer aqui, prepare-se pois o guardião 
 não parece ser nem um pouco misericordioso.
 ~
-176.2 cdf 1
-D 0
+176 44 0 0 0 1
+D0
 ~
 porta~
-:n 2 uma porta
-abc 17601 17741
+1 17601 17741
 S
 #17743
 Uma Ponte~
@@ -3187,12 +3178,12 @@ após o foço, há um enorme muro vermelho, seguindo até onde seus olhos
 conseguem ver.  Você pode seguir em direção à cidade indo para norte, ou 
 voltar para o sul.
 ~
-176.3 cg 1
-D 0
+176 68 0 0 0 1
+D0
 ~
 ~
 0 -1 17744
-D 2
+D2
 ~
 ~
 0 -1 17657
@@ -3208,16 +3199,15 @@ construção à sua frente, na qual os portões estão acoplados, tem pelo menos
 podem ser vistos dois guardas prontos para defender à qualquer custo a 
 Cidade Proibida, onde vive o seu imperador.
 ~
-176.3 g 1
-D 2
+176 64 0 0 0 1
+D0
+~
+portao~
+1 17615 17745
+D2
 ~
 ~
 0 -1 17743
-D 0
-~
-portao~
-:n 1 os grandes portões de entrada
-abc 17615 17745
 S
 #17745
 A Grande Entrada Meridional da Cidade Proibida~
@@ -3230,16 +3220,15 @@ paredes.  À frente não encontram-se mais portas, seguindo o caminho em
 direção à um grande pátio.  A partir daqui, somente aqueles que trabalham 
 para o imperador, os eunucos, são permitidos para seguirem.
 ~
-176.3 defh 1
-D 0
+176 184 0 0 0 1
+D0
 ~
 ~
 0 -1 17746
-D 2
+D2
 ~
 portao~
-:n 1 os grandes portões de entrada
-abc 17615 17744
+1 17615 17744
 S
 #17746
 O Pátio de Cerimônias~
@@ -3251,31 +3240,31 @@ apresentados ou quando o calendário é publicado.  Você pode seguir pelo
 amplo pátio à nordeste, norte ou noroeste, ou seguir em direção à grande 
 muralha que envolve a cidade, à leste ou oeste.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17747
-D 1
+D1
 ~
 ~
 0 -1 17768
-D 2
+D2
 ~
 ~
 0 -1 17745
-D 3
+D3
 ~
 ~
 0 -1 17780
-D 7
-~
-~
-0 -1 17748
-D 6
+D6
 ~
 ~
 0 -1 17749
+D7
+~
+~
+0 -1 17748
 S
 #17747
 O Pátio de Cerimônias~
@@ -3287,20 +3276,20 @@ frente encontram-se as cinco pontes que atravessam o rio dourado.  Você
 pode continuar à norte, indo para uma das pontes, ou seguir pelo pátio a 
 leste ou oeste.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17752
-D 1
+D1
 ~
 ~
 0 -1 17748
-D 2
+D2
 ~
 ~
 0 -1 17746
-D 3
+D3
 ~
 ~
 0 -1 17749
@@ -3315,20 +3304,20 @@ frente encontram-se as cinco pontes que atravessam o rio dourado.  Você
 pode continuar à nordeste ou noroeste, indo para uma das pontes, seguir 
 pelo pátio a oeste, ou voltar à sudoeste.
 ~
-176.3 g 1
-D 7
-~
-~
-0 -1 17754
-D 6
-~
-~
-0 -1 17753
-D 3
+176 64 0 0 0 1
+D3
 ~
 ~
 0 -1 17747
-D 9
+D6
+~
+~
+0 -1 17753
+D7
+~
+~
+0 -1 17754
+D9
 ~
 ~
 0 -1 17746
@@ -3343,20 +3332,20 @@ frente encontram-se as cinco pontes que atravessam o rio dourado.  Você
 pode continuar à nordeste ou noroeste, indo para uma das pontes, seguir 
 pelo pátio à leste, ou voltar à sudeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17747
-D 6
+D6
 ~
 ~
 0 -1 17750
-D 7
+D7
 ~
 ~
 0 -1 17751
-D 8
+D8
 ~
 ~
 0 -1 17746
@@ -3370,12 +3359,12 @@ suas bordas.  À frente o pátio continua, encontrando, em seu fim, uma
 grande construção.  Você pode seguir em frente, indo à nordeste, ou voltar 
 à sudeste.
 ~
-176.3 g 1
-D 7
+176 64 0 0 0 1
+D7
 ~
 ~
 0 -1 17755
-D 8
+D8
 ~
 ~
 0 -1 17749
@@ -3389,12 +3378,12 @@ suas bordas.  À frente o pátio continua, encontrando, em seu fim, uma
 grande construção.  Você pode seguir em frente, indo à noroeste, ou voltar 
 à sudoeste.
 ~
-176.3 g 1
-D 6
+176 64 0 0 0 1
+D6
 ~
 ~
 0 -1 17755
-D 9
+D9
 ~
 ~
 0 -1 17749
@@ -3408,12 +3397,12 @@ suas bordas.  À frente o pátio continua, encontrando, em seu fim, uma
 grande construção.  Você pode seguir em frente, indo à norte, ou voltar 
 indo para o sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17756
-D 2
+D2
 ~
 ~
 0 -1 17747
@@ -3427,12 +3416,12 @@ suas bordas.  À frente o pátio continua, encontrando, em seu fim, uma
 grande construção.  Você pode seguir em frente, indo à nordeste, ou voltar 
 à sudeste.
 ~
-176.3 g 1
-D 7
+176 64 0 0 0 1
+D7
 ~
 ~
 0 -1 17757
-D 8
+D8
 ~
 ~
 0 -1 17748
@@ -3446,12 +3435,12 @@ suas bordas.  À frente o pátio continua, encontrando, em seu fim, uma
 grande construção.  Você pode seguir em frente, indo à noroeste, ou voltar 
 à sudoeste.
 ~
-176.3 g 1
-D 6
+176 64 0 0 0 1
+D6
 ~
 ~
 0 -1 17757
-D 9
+D9
 ~
 ~
 0 -1 17748
@@ -3465,20 +3454,20 @@ pequena e muito bem entalhada cerca de pedra limitando seu espaço.  Você
 pode seguir para nordeste ou leste, seguindo pelo pátio, ou voltar à 
 sudeste ou sudoeste, para as pontes.
 ~
-176.3 g 1
-D 7
-~
-~
-0 -1 17758
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17756
-D 8
+D7
+~
+~
+0 -1 17758
+D8
 ~
 ~
 0 -1 17751
-D 9
+D9
 ~
 ~
 0 -1 17750
@@ -3492,20 +3481,20 @@ pequena e muito bem entalhada cerca de pedra limitando seu espaço.  Você
 pode seguir para norte, leste ou oeste, seguindo pelo pátio, ou voltar à 
 sul, para as pontes.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17758
-D 1
+D1
 ~
 ~
 0 -1 17757
-D 2
+D2
 ~
 ~
 0 -1 17752
-D 3
+D3
 ~
 ~
 0 -1 17755
@@ -3519,20 +3508,20 @@ pequena e muito bem entalhada cerca de pedra limitando seu espaço.  Você
 pode seguir para noroeste ou oeste, seguindo pelo pátio, ou voltar à 
 sudeste ou sudoeste, para as pontes.
 ~
-176.3 g 1
-D 3
+176 64 0 0 0 1
+D3
 ~
 ~
 0 -1 17756
-D 6
+D6
 ~
 ~
 0 -1 17758
-D 8
+D8
 ~
 ~
 0 -1 17754
-D 9
+D9
 ~
 ~
 0 -1 17753
@@ -3546,20 +3535,20 @@ encontra-se uma pequena e muito bem entalhada cerca de pedra limitando
 seu espaço.  Você pode seguir para norte, seguindo pelo pátio, ou voltar à 
 sudeste, sudoeste ou sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17759
-D 2
+D2
 ~
 ~
 0 -1 17756
-D 8
+D8
 ~
 ~
 0 -1 17757
-D 9
+D9
 ~
 ~
 0 -1 17755
@@ -3573,12 +3562,12 @@ pelos habitantes locais.  Dois leões de bronze encontram-se um à leste e
 outro à oeste da entrada do portal, com a finalidade de proteger contra a 
 entrada de estranhos.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17760
-D 2
+D2
 ~
 ~
 0 -1 17758
@@ -3594,12 +3583,12 @@ todo o portal é muito harmonico, lhe trazendo muita paz e tranqüilidade.
 Você pode seguir para norte em direção ao pátio central, ou voltar para sul, 
 em direção ao pátio de cerimônias.
 ~
-176.3 cdefh 1
-D 0
+176 188 0 0 0 1
+D0
 ~
 ~
 0 -1 17761
-D 2
+D2
 ~
 ~
 0 -1 17759
@@ -3613,12 +3602,12 @@ você pode ver três grandes salões, todos vermelhos, e com o telhado bem
 triangular.  Ao redor você pode ver o grande muro central, que limita o 
 pátio.  Você pode continuar à norte, ou voltar pelo sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17762
-D 2
+D2
 ~
 ~
 0 -1 17760
@@ -3632,12 +3621,12 @@ você pode ver três grandes salões, todos vermelhos, e com o telhado bem
 triangular.  Ao redor você pode ver o grande muro central, que limita o 
 pátio.  Você pode continuar à norte, ou voltar pelo sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17763
-D 2
+D2
 ~
 ~
 0 -1 17761
@@ -3651,12 +3640,12 @@ você pode ver três grandes salões, todos vermelhos, e com o telhado bem
 triangular.  Ao redor você pode ver o grande muro central, que limita o 
 pátio.  Você pode continuar à norte, ou voltar pelo sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17764
-D 2
+D2
 ~
 ~
 0 -1 17762
@@ -3671,12 +3660,12 @@ subindo três andares de bases de pedra, onde os três grandes salões
 encontram-se.  Ao redor você pode ver o grande muro central, que limita o 
 pátio.  Você pode continuar à norte, ou voltar pelo sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17765
-D 2
+D2
 ~
 ~
 0 -1 17763
@@ -3691,12 +3680,12 @@ meio, subindo três andares de bases de pedra, onde os três grandes salões
 encontram-se.  Ao redor você pode ver o grande muro central, que limita o 
 pátio.  Você pode continuar à norte, ou voltar pelo sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17766
-D 2
+D2
 ~
 ~
 0 -1 17764
@@ -3711,12 +3700,12 @@ meio, subindo três andares de bases de pedra, onde os três grandes salões
 encontram-se.  Ao redor você pode ver o grande muro central, que limita o 
 pátio.  Você pode continuar à norte, ou voltar pelo sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17767
-D 2
+D2
 ~
 ~
 0 -1 17765
@@ -3731,13 +3720,12 @@ sua frente encontra-se o Salão da Suprema Harmonia, ou Palácio Taihe, como
 limita o pátio.  Você pode continuar à norte, passando por uma porta 
 dupla, ou voltar pelo sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 porta dupla madeira~
-:n 2 uma porta dupla de madeira
-abc -1 17845
-D 2
+1 -1 17845
+D2
 ~
 ~
 0 -1 17766
@@ -3752,12 +3740,12 @@ norte encontram-se as cinco pontes que atravessam o rio dourado.  Você
 pode continuar à leste, indo para os muros da cidade, ou seguir 
 pelo pátio à oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17769
-D 3
+D3
 ~
 ~
 0 -1 17746
@@ -3772,12 +3760,12 @@ norte encontram-se as cinco pontes que atravessam o rio dourado.  Você
 pode continuar à sul, subindo as escadas que levam ao muro da cidade, ou 
 seguir para o pátio, indo à oeste.
 ~
-176.3 g 1
-D 2
+176 64 0 0 0 1
+D2
 ~
 ~
 0 -1 17782
-D 3
+D3
 ~
 ~
 0 -1 17768
@@ -3792,12 +3780,12 @@ norte encontram-se as cinco pontes que atravessam o rio dourado.  Você
 pode continuar à oeste, seguindo para os muros da cidade, ou seguir para o 
 pátio, voltando à leste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17746
-D 3
+D3
 ~
 ~
 0 -1 17781
@@ -3812,12 +3800,12 @@ norte encontram-se as cinco pontes que atravessam o rio dourado.  Você
 pode continuar à sul, subindo as escadas que levam ao muro da cidade, ou 
 seguir para o pátio, indo à leste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17780
-D 2
+D2
 ~
 ~
 0 -1 17844
@@ -3834,12 +3822,12 @@ muro, você pode dar a volta pela cidade, passando pelas quatro torres de
 proteção em seus extremos.  Você pode continuar pelo muro à leste, ou 
 voltar, descendo as escadas à norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17769
-D 1
+D1
 ~
 ~
 0 -1 17783
@@ -3854,12 +3842,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado, e as
 quatro torres, uma em cada extremo dos muros da cidade.  Você pode seguir 
 pelo muro indo para leste, ou voltar à oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17784
-D 3
+D3
 ~
 ~
 0 -1 17782
@@ -3874,12 +3862,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado, e as
 quatro torres, uma em cada extremo dos muros da cidade.  Você pode seguir 
 pelo muro indo para leste, ou voltar à oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17785
-D 3
+D3
 ~
 ~
 0 -1 17783
@@ -3894,12 +3882,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado, e as
 quatro torres, uma em cada extremo dos muros da cidade.  Você pode seguir 
 pelo muro indo para leste, ou voltar à oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17786
-D 3
+D3
 ~
 ~
 0 -1 17784
@@ -3914,12 +3902,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado, e as
 quatro torres, uma em cada extremo dos muros da cidade.  Você pode seguir 
 pelo muro indo para leste, ou voltar à oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17787
-D 3
+D3
 ~
 ~
 0 -1 17785
@@ -3934,12 +3922,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado, e as
 quatro torres, uma em cada extremo dos muros da cidade.  Você pode seguir 
 pelo muro indo para leste, ou voltar à oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17788
-D 3
+D3
 ~
 ~
 0 -1 17786
@@ -3954,13 +3942,12 @@ avistar algumas grandes áreas de vegetação e uma parte do rio dourado.  Ao
 norte encontra-se uma das quatro grandes torres de proteção.  Você pode 
 seguir para norte, entrando na torre, ou voltar à oeste.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 porta~
-:n 2 uma porta
-abc -1 17789
-D 3
+1 -1 17789
+D3
 ~
 ~
 0 -1 17787
@@ -3979,21 +3966,19 @@ de armas estão espalhadas pela sala.  Você pode subir pela escada em
 direção ao andar superior, pode voltar à sul, ou avançar para o muro indo 
 à leste.
 ~
-176.3 cdfgr 1
-D 2
+176 131180 0 0 0 1
+D1
 ~
 porta~
-:n 2 uma porta
-abc -1 17788
-D 4
+1 -1 17791
+D2
+~
+porta~
+1 -1 17788
+D4
 ~
 ~
 0 -1 17790
-D 1
-~
-porta~
-:n 2 uma porta
-abc -1 17791
 S
 #17790
 O Andar Superior da Torre de Guarda~
@@ -4008,8 +3993,8 @@ o uso de arcos, muitos arcos encontram-se presos às paredes.  Muitos
 quadros com caracteres chineses podem ser vistos por toda a sala.  A única 
 saída é voltar pela escada para o andar inferior.
 ~
-176.3 dfr 1
-D 5
+176 131112 0 0 0 1
+D5
 ~
 ~
 0 -1 17789
@@ -4024,16 +4009,15 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 algumas torres de guarda, como a que você acabou de sair à oeste.  Você 
 pode seguir para norte, pelo muro, ou voltar à torre indo para oeste.
 ~
-176.3 g 1
-D 3
-~
-porta~
-:n 2 uma porta
-abc -1 17789
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17792
+D3
+~
+porta~
+1 -1 17789
 S
 #17792
 O Grande Muro da Cidade Proibida~
@@ -4045,12 +4029,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à sul, ou seguir adiante para norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17793
-D 2
+D2
 ~
 ~
 0 -1 17791
@@ -4065,12 +4049,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à sul, ou seguir adiante para norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17794
-D 2
+D2
 ~
 ~
 0 -1 17792
@@ -4085,12 +4069,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à sul, ou seguir adiante para norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17795
-D 2
+D2
 ~
 ~
 0 -1 17793
@@ -4105,12 +4089,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à sul, ou seguir adiante para norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17796
-D 2
+D2
 ~
 ~
 0 -1 17794
@@ -4125,12 +4109,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à sul, ou seguir adiante para norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17797
-D 2
+D2
 ~
 ~
 0 -1 17795
@@ -4145,12 +4129,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à sul, ou seguir adiante para norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17798
-D 2
+D2
 ~
 ~
 0 -1 17796
@@ -4165,12 +4149,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à sul, ou seguir adiante para norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17799
-D 2
+D2
 ~
 ~
 0 -1 17797
@@ -4185,12 +4169,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à sul, ou seguir adiante para norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17800
-D 2
+D2
 ~
 ~
 0 -1 17798
@@ -4205,12 +4189,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à sul, ou seguir adiante para norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17801
-D 2
+D2
 ~
 ~
 0 -1 17799
@@ -4225,12 +4209,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à sul, ou seguir adiante para norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17802
-D 2
+D2
 ~
 ~
 0 -1 17800
@@ -4245,12 +4229,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à sul, ou seguir adiante para norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17803
-D 2
+D2
 ~
 ~
 0 -1 17801
@@ -4265,16 +4249,15 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 uma grande torre de guarda logo à oeste.  Você pode voltar à sul, ou seguir 
 para a torre à oeste.
 ~
-176.3 g 1
-D 3
-~
-porta~
-:n 2 uma porta
-abc -1 17804
-D 2
+176 64 0 0 0 1
+D2
 ~
 ~
 0 -1 17802
+D3
+~
+porta~
+1 -1 17804
 S
 #17804
 A Torre de Guarda~
@@ -4290,21 +4273,19 @@ de armas estão espalhadas pela sala.  Você pode subir pela escada em
 direção ao andar superior, pode voltar à leste, ou avançar para o muro indo 
 à norte.
 ~
-176.2 cdfgr 1
-D 0
+176 131180 0 0 0 1
+D0
 ~
 porta~
-:n 2 uma porta
-abc -1 17806
-D 4
+1 -1 17806
+D1
+~
+porta~
+1 -1 17803
+D4
 ~
 ~
 0 -1 17805
-D 1
-~
-porta~
-:n 2 uma porta
-abc -1 17803
 S
 #17805
 O Andar Superior da Torre de Guarda~
@@ -4319,8 +4300,8 @@ janelas, o que facilita o uso de arcos, muitos arcos encontram-se presos
 às paredes.  Muitos quadros com caracteres chineses podem ser vistos por 
 toda a sala.  A única saída é voltar pela escada para o andar inferior.
 ~
-176.2 dfr 1
-D 5
+176 131112 0 0 0 1
+D5
 ~
 ~
 0 -1 17804
@@ -4335,16 +4316,15 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 algumas torres de guarda, como a que você acabou de sair.  Você pode voltar 
 à sul, ou seguir pelo muro à oeste.
 ~
-176.3 g 1
-D 3
+176 64 0 0 0 1
+D2
+~
+porta~
+1 -1 17804
+D3
 ~
 ~
 0 -1 17807
-D 2
-~
-porta~
-:n 2 uma porta
-abc -1 17804
 S
 #17807
 O Grande Muro da Cidade Proibida~
@@ -4356,12 +4336,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à leste, ou seguir adiante para oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17806
-D 3
+D3
 ~
 ~
 0 -1 17808
@@ -4376,12 +4356,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à leste, ou seguir adiante para oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17807
-D 3
+D3
 ~
 ~
 0 -1 17809
@@ -4396,12 +4376,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à leste, ou seguir adiante para oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17808
-D 3
+D3
 ~
 ~
 0 -1 17810
@@ -4416,12 +4396,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à leste, ou seguir adiante para oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17809
-D 3
+D3
 ~
 ~
 0 -1 17811
@@ -4436,12 +4416,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à leste, ou seguir adiante para oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17810
-D 3
+D3
 ~
 ~
 0 -1 17812
@@ -4457,16 +4437,15 @@ as quatro torres, uma em cada extremo dos muros da cidade.  À oeste
 encontra-se o grande Portão de Shengwu.  Você pode voltar à leste, ou 
 seguir adiante para oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17811
-D 3
+D3
 ~
 porta~
-:n 2 uma porta
-abc -1 17813
+1 -1 17813
 S
 #17813
 O Andar Superior do Portão de Shengwu~
@@ -4481,17 +4460,15 @@ não entende nada.  Olhando pela janela, para a parte norte da Cidade
 Proibida, você consegue ver muitos palácios, e o grande Jardim Imperial.  
 As únicas saídas daqui são continuar pelo muro da cidade à leste ou oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 porta~
-:n 2 uma porta
-abc -1 17812
-D 3
+1 -1 17812
+D3
 ~
 porta~
-:n 2 uma porta
-abc -1 17814
+1 -1 17814
 S
 #17814
 O Grande Muro da Cidade Proibida~
@@ -4504,13 +4481,12 @@ as quatro torres, uma em cada extremo dos muros da cidade.  À leste
 encontra-se o grande Portão de Shengwu.  Você pode voltar à leste, ou 
 seguir adiante para oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 porta~
-:n 2 uma porta
-abc -1 17813
-D 3
+1 -1 17813
+D3
 ~
 ~
 0 -1 17815
@@ -4525,12 +4501,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à leste, ou seguir adiante para oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17814
-D 3
+D3
 ~
 ~
 0 -1 17816
@@ -4545,12 +4521,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à leste, ou seguir adiante para oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17815
-D 3
+D3
 ~
 ~
 0 -1 17817
@@ -4565,12 +4541,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à leste, ou seguir adiante para oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17816
-D 3
+D3
 ~
 ~
 0 -1 17818
@@ -4585,12 +4561,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à leste, ou seguir adiante para oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17817
-D 3
+D3
 ~
 ~
 0 -1 17819
@@ -4605,12 +4581,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à leste, ou seguir adiante para oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17818
-D 3
+D3
 ~
 ~
 0 -1 17820
@@ -4625,16 +4601,15 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 uma grande torre de guarda logo à sul.  Você pode voltar à leste, ou seguir 
 para a torre à sul.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17819
-D 2
+D2
 ~
 porta~
-:n 2 uma porta
-abc -1 17821
+1 -1 17821
 S
 #17821
 A Torre de Guarda~
@@ -4650,18 +4625,16 @@ de armas estão espalhadas pela sala.  Você pode subir pela escada em
 direção ao andar superior, pode voltar à norte, ou avançar para o muro indo 
 à oeste.
 ~
-176.2 cdfgr 1
-D 0
+176 131180 0 0 0 1
+D0
 ~
 porta~
-:n 2 uma porta
-abc -1 17820
-D 3
+1 -1 17820
+D3
 ~
 porta~
-:n 2 uma porta
-abc -1 17823
-D 4
+1 -1 17823
+D4
 ~
 ~
 0 -1 17822
@@ -4679,8 +4652,8 @@ janelas, o que facilita o uso de arcos, muitos arcos encontram-se presos
 às paredes.  Muitos quadros com caracteres chineses podem ser vistos por 
 toda a sala.  A única saída é voltar pela escada para o andar inferior.
 ~
-176.2 dfr 1
-D 5
+176 131112 0 0 0 1
+D5
 ~
 ~
 0 -1 17821
@@ -4695,13 +4668,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 algumas torres de guarda, como a que você acabou de sair.  Você pode voltar 
 à leste, ou seguir pelo muro à sul.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 porta~
-:n 2 uma porta
-abc -1 17821
-D 2
+1 -1 17821
+D2
 ~
 ~
 0 -1 17824
@@ -4716,12 +4688,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à norte, ou seguir adiante para sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17823
-D 2
+D2
 ~
 ~
 0 -1 17825
@@ -4736,12 +4708,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à norte, ou seguir adiante para sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17824
-D 2
+D2
 ~
 ~
 0 -1 17826
@@ -4756,12 +4728,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à norte, ou seguir adiante para sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17825
-D 2
+D2
 ~
 ~
 0 -1 17827
@@ -4776,12 +4748,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à norte, ou seguir adiante para sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17826
-D 2
+D2
 ~
 ~
 0 -1 17828
@@ -4796,12 +4768,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à norte, ou seguir adiante para sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17827
-D 2
+D2
 ~
 ~
 0 -1 17829
@@ -4816,12 +4788,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à norte, ou seguir adiante para sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17828
-D 2
+D2
 ~
 ~
 0 -1 17830
@@ -4836,12 +4808,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à norte, ou seguir adiante para sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17829
-D 2
+D2
 ~
 ~
 0 -1 17831
@@ -4856,12 +4828,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à norte, ou seguir adiante para sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17830
-D 2
+D2
 ~
 ~
 0 -1 17832
@@ -4876,12 +4848,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à norte, ou seguir adiante para sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17831
-D 2
+D2
 ~
 ~
 0 -1 17833
@@ -4896,12 +4868,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à norte, ou seguir adiante para sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17832
-D 2
+D2
 ~
 ~
 0 -1 17834
@@ -4916,12 +4888,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à norte, ou seguir adiante para sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17833
-D 2
+D2
 ~
 ~
 0 -1 17835
@@ -4936,16 +4908,15 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 uma grande torre de guarda logo à leste.  Você pode voltar à norte, ou 
 seguir para a torre à leste.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17834
-D 1
+D1
 ~
 porta~
-:n 2 uma porta
-abc -1 17836
+1 -1 17836
 S
 #17836
 A Torre de Guarda~
@@ -4961,18 +4932,16 @@ de armas estão espalhadas pela sala.  Você pode subir pela escada em
 direção ao andar superior, pode voltar à oeste, ou avançar para o muro indo 
 à sul.
 ~
-176.2 cdfgr 1
-D 3
+176 131180 0 0 0 1
+D2
 ~
 porta~
-:n 2 uma porta
-abc -1 17835
-D 2
+1 -1 17838
+D3
 ~
 porta~
-:n 2 uma porta
-abc -1 17838
-D 4
+1 -1 17835
+D4
 ~
 ~
 0 -1 17837
@@ -4990,8 +4959,8 @@ janelas, o que facilita o uso de arcos, muitos arcos encontram-se presos
 às paredes.  Muitos quadros com caracteres chineses podem ser vistos por 
 toda a sala.  A única saída é voltar pela escada para o andar inferior.
 ~
-176.2 dfr 1
-D 5
+176 131112 0 0 0 1
+D5
 ~
 ~
 0 -1 17836
@@ -5006,13 +4975,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 algumas torres de guarda, como a que você acabou de sair.  Você pode voltar 
 à norte, ou seguir pelo muro à leste.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 porta~
-:n 2 uma porta
-abc -1 17836
-D 1
+1 -1 17836
+D1
 ~
 ~
 0 -1 17839
@@ -5027,12 +4995,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à oeste, ou seguir adiante para leste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17840
-D 3
+D3
 ~
 ~
 0 -1 17838
@@ -5047,12 +5015,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à oeste, ou seguir adiante para leste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17841
-D 3
+D3
 ~
 ~
 0 -1 17839
@@ -5067,12 +5035,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à oeste, ou seguir adiante para leste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17842
-D 3
+D3
 ~
 ~
 0 -1 17840
@@ -5087,12 +5055,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à oeste, ou seguir adiante para leste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17843
-D 3
+D3
 ~
 ~
 0 -1 17841
@@ -5107,12 +5075,12 @@ avistar algumas grandes áreas de vegetação, uma parte do rio dourado e
 as quatro torres, uma em cada extremo dos muros da cidade.  Você pode 
 voltar à oeste, ou seguir adiante para leste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17844
-D 3
+D3
 ~
 ~
 0 -1 17842
@@ -5129,15 +5097,15 @@ muro, você pode dar a volta pela cidade, passando pelas quatro torres de
 proteção em seus extremos.  Você pode continuar pelo muro à oeste, ou 
 voltar, descendo as escadas à norte.
 ~
-176.3 g 1
-D 3
-~
-~
-0 -1 17843
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17781
+D3
+~
+~
+0 -1 17843
 S
 #17845
 O Palácio da Harmonia Suprema~
@@ -5153,24 +5121,23 @@ cerimônias.  Você pode seguir para o norte, em direção ao trono, pode ir
 para nordeste ou noroeste, continuando pelo Palácio, ou voltar para o pátio 
 à sul.
 ~
-176.3 cdf 1
-D 0
+176 44 0 0 0 1
+D0
 ~
 ~
 0 -1 17846
-D 7
+D2
 ~
-~
-0 -1 17847
-D 6
+porta dupla madeira~
+1 -1 17767
+D6
 ~
 ~
 0 -1 17848
-D 2
+D7
 ~
-porta dupla madeira~
-:n 2 uma porta dupla de madeira
-abc -1 17767
+~
+0 -1 17847
 S
 #17846
 O Palácio da Harmonia Suprema~
@@ -5185,19 +5152,19 @@ dragões.  A adoração por dragões deste povo é tamanha, que por todos os
 lados que você olha, podem ser vistos retratos de dragões.  Você pode 
 seguir para leste, oeste, ou sul, pelo Palácio.
 ~
-176.3 cdf 1
-D 1
+176 44 0 0 0 1
+D1
 ~
 ~
 0 -1 17847
-D 3
-~
-~
-0 -1 17848
-D 2
+D2
 ~
 ~
 0 -1 17845
+D3
+~
+~
+0 -1 17848
 S
 #17847
 O Palácio da Harmonia Suprema~
@@ -5212,16 +5179,16 @@ entronizado, para ele promulgar os seus decretos ou para realizar
 cerimônias.  Você pode seguir para o noroeste ou sudoeste, pelo Palácio, ou 
 seguir para oeste em direção ao grande trono de ouro do imperador.
 ~
-176.3 cdf 1
-D 3
+176 44 0 0 0 1
+D3
 ~
 ~
 0 -1 17846
-D 6
+D6
 ~
 ~
 0 -1 17849
-D 9
+D9
 ~
 ~
 0 -1 17845
@@ -5239,16 +5206,16 @@ entronizado, para ele promulgar os seus decretos ou para realizar
 cerimônias.  Você pode seguir para o nordeste ou sudeste, pelo Palácio, ou 
 seguir para leste em direção ao grande trono de ouro do imperador.
 ~
-176.3 cdf 1
-D 1
+176 44 0 0 0 1
+D1
 ~
 ~
 0 -1 17846
-D 7
+D7
 ~
 ~
 0 -1 17849
-D 8
+D8
 ~
 ~
 0 -1 17845
@@ -5263,17 +5230,16 @@ local é usado para quando o imperador é entronizado, para ele promulgar os
 seus decretos ou para realizar cerimônias.  Você pode seguir para o 
 norte, saindo do Palácio, ou voltar para sudeste ou sudoeste.
 ~
-176.3 cdfr 1
-D 0
+176 131116 0 0 0 1
+D0
 ~
 porta dupla madeira~
-:n 2 uma porta dupla de madeira
-abc -1 17850
-D 8
+1 -1 17850
+D8
 ~
 ~
 0 -1 17847
-D 9
+D9
 ~
 ~
 0 -1 17848
@@ -5285,17 +5251,15 @@ Palácio da Harmonia Suprema, ou Palácio Taihe à sul, ao Palácio central, da
 Harmonia Média, ou Palácio Zhonghe, como é chamado pelos chineses; ao 
 norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 porta madeira~
-:n 2 uma porta de madeira
-abc -1 17851
-D 2
+1 -1 17851
+D2
 ~
 porta dupla madeira~
-:n 2 uma porta dupla de madeira
-abc -1 17849
+1 -1 17849
 S
 #17851
 O Palácio da Harmonia Média~
@@ -5308,17 +5272,15 @@ Palácio é todo envolto por grandes pilares vermelhos que sustentam o grande
 telhado.  O teto é todo trabalhado em verde e dourado, e muitos quadros com 
 dizeres em chinês encontram-se pela sala.
 ~
-176.3 cdfr 1
-D 0
+176 131116 0 0 0 1
+D0
 ~
 porta madeira~
-:n 2 uma porta de madeira
-abc -1 17852
-D 2
+1 -1 17852
+D2
 ~
 porta madeira~
-:n uma porta de madeira
-abc -1 17850
+1 -1 17850
 S
 #17852
 O Pátio Central~
@@ -5327,17 +5289,15 @@ Palácio da Harmonia Média, ou Palácio Zhonghe, à sul, ao Palácio da
 Preservação da Harmonia, ou Palácio Baohe, como é chamado pelos chineses; 
 ao norte.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 porta madeira vermelha~
-:n 2 uma porta vermelha de madeira
-abc -1 17853
-D 2
+1 -1 17853
+D2
 ~
 porta madeira~
-:n 2 uma porta de madeira
-abc -1 17851
+1 -1 17851
 S
 #17853
 O Palácio da Preservação da Harmonia~
@@ -5352,22 +5312,19 @@ encontra-se junto à parede leste, com um grande sorriso no rosto, parecendo
 lhe chamar.  Você pode seguir para norte, saindo do Palácio da Preservação 
 da Harmonia, ou pode ir para sul.
 ~
-176.3 cdfr 1
-D 1
+176 131116 0 0 0 1
+D0
+~
+porta vermelha madeira~
+1 -1 17855
+D1
 ~
 buda~
-:n 1 um enorme buda de ouro
-abcdhi -1 17854
-D 0
+0 -1 17854
+D2
 ~
 porta vermelha madeira~
-:n 2 uma porta vermelha de madeira
-abc -1 17855
-D 2
-~
-porta vermelha madeira~
-:n 2 uma porta vermelha de madeira
-abc -1 17852
+1 -1 17852
 S
 #17854
 A Sala Vazia~
@@ -5379,12 +5336,11 @@ sala.  Apesar de ser muito bonita e colorida, esta sala parece mais um
 esconderijo do que uma simples sala.  A única saída é voltando por uma 
 pequena porta de madeira à oeste.
 ~
-176.3 cdfhr 1
-D 3
+176 131244 0 0 0 1
+D3
 ~
 porta madeira~
-:n 2 uma pequena porta de madeira
-abc -1 17853
+1 -1 17853
 S
 #17855
 A Praça da Pureza Celestial~
@@ -5398,21 +5354,20 @@ pela praça à leste ou oeste, voltar à sul para o Palácio da Preservação da
 Harmonia, ou seguir para norte, passando pela grande escada de pedras, em 
 direção ao Portal da Pureza Celestial.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17882
-D 1
+D1
 ~
 ~
 0 -1 17856
-D 2
+D2
 ~
 porta vermelha madeira~
-:n 2 uma porta vermelha de madeira
-abc -1 17853
-D 3
+1 -1 17853
+D3
 ~
 ~
 0 -1 17866
@@ -5427,12 +5382,12 @@ de água, que são usadas caso precise apagar algum incêndio.  Em toda a
 Cidade Proibida há mais de trezentas tinas como estas.  Você pode continuar 
 pela praça à leste ou oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17857
-D 3
+D3
 ~
 ~
 0 -1 17855
@@ -5448,12 +5403,12 @@ Cidade Proibida há mais de trezentas tinas como estas.  Você pode continuar
 pela praça à oeste, ou sair dos muros centrais, indo à leste para a parte 
 oriental da cidade.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17858
-D 3
+D3
 ~
 ~
 0 -1 17856
@@ -5467,15 +5422,15 @@ Olhando ao norte, você percebe uma concentração maior de salões, mas não
 tem ideia de como chegar até eles.  Você pode voltar a praça à oeste, ou 
 seguir pelo caminho à sul.
 ~
-176.3 g 2
-D 3
-~
-~
-0 -1 17857
-D 2
+176 64 0 0 0 2
+D2
 ~
 ~
 0 -1 17859
+D3
+~
+~
+0 -1 17857
 S
 #17859
 O Caminho Oriental da Cidade Proibida~
@@ -5485,12 +5440,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte, ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17858
-D 2
+D2
 ~
 ~
 0 -1 17860
@@ -5503,12 +5458,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte, ou leste, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17859
-D 1
+D1
 ~
 ~
 0 -1 17861
@@ -5521,12 +5476,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para oeste, ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 2
+176 64 0 0 0 2
+D2
 ~
 ~
 0 -1 17862
-D 3
+D3
 ~
 ~
 0 -1 17860
@@ -5539,16 +5494,16 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte, leste, ou sudoeste, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17861
-D 1
+D1
 ~
 ~
 0 -1 17863
-D 9
+D9
 ~
 ~
 0 -1 17900
@@ -5561,19 +5516,19 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para leste, oeste, ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 1
+176 64 0 0 0 2
+D1
 ~
 ~
 0 -1 17864
-D 3
-~
-~
-0 -1 17862
-D 2
+D2
 ~
 ~
 0 -1 17875
+D3
+~
+~
+0 -1 17862
 S
 #17864
 O Caminho Oriental da Cidade Proibida~
@@ -5584,20 +5539,19 @@ você pode ver uma pequena cerca de pedra, formando desenhos de dragões.
 À norte você pode ver alguns arbustos, que impedem que você continue seu 
 caminho.  Você pode seguir para oeste, ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 arbusto~
-:n 1 alguns arbustos
-abcd -1 17865
-D 3
-~
-~
-0 -1 17863
-D 2
+0 -1 17865
+D2
 ~
 ~
 0 -1 17898
+D3
+~
+~
+0 -1 17863
 S
 #17865
 O Mural dos Nove Dragões~
@@ -5611,8 +5565,8 @@ você ficaria aqui para descobrir.  Olhando ao redor do mural você não vê
 nada além de grandes árvores, e uma intensa vegetação, por onde o caminho 
 adentra.  A única saída é voltar pelo caminho ao sul.
 ~
-176.3 cg 2
-D 2
+176 68 0 0 0 2
+D2
 ~
 ~
 0 -1 17864
@@ -5627,12 +5581,12 @@ de água, que são usadas caso precise apagar algum incêndio.  Em toda a
 Cidade Proibida há mais de trezentas tinas como estas.  Você pode continuar 
 pela praça à leste ou oeste.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17855
-D 3
+D3
 ~
 ~
 0 -1 17867
@@ -5648,12 +5602,12 @@ Cidade Proibida há mais de trezentas tinas como estas.  Você pode continuar
 pela praça à leste, ou sair dos muros centrais, indo à oeste para a parte 
 ociental da cidade.
 ~
-176.3 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17866
-D 3
+D3
 ~
 ~
 0 -1 17868
@@ -5667,12 +5621,12 @@ Olhando ao norte, você percebe uma concentração maior de salões, mas não
 tem ideia de como chegar até eles.  Você pode voltar a praça à leste, ou 
 seguir pelo caminho à sul.
 ~
-176.3 g 2
-D 1
+176 64 0 0 0 2
+D1
 ~
 ~
 0 -1 17867
-D 2
+D2
 ~
 ~
 0 -1 17869
@@ -5685,12 +5639,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte, ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17868
-D 2
+D2
 ~
 ~
 0 -1 17870
@@ -5703,12 +5657,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte, ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17869
-D 2
+D2
 ~
 ~
 0 -1 17871
@@ -5721,16 +5675,16 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte, sul, ou sudoeste, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17870
-D 2
+D2
 ~
 ~
 0 -1 17872
-D 9
+D9
 ~
 ~
 0 -1 17899
@@ -5743,16 +5697,16 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte, sul, ou noroeste, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17871
-D 2
+D2
 ~
 ~
 0 -1 17873
-D 6
+D6
 ~
 ~
 0 -1 17899
@@ -5767,16 +5721,15 @@ Logo à sudoeste, encontra-se uma pequena contrução, mas mesmo assim muito
 detalhada e enfeitada.  Você pode seguir para norte, pelo caminho, ou em 
 direção à pequena construção à sudoeste. 
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17872
-D 9
+D9
 ~
 porta madeira~
-:n 2 uma porta de madeira
-abc -1 17874
+1 -1 17874
 S
 #17874
 O Pavilhão Yuhua~
@@ -5790,12 +5743,11 @@ sacada a rodeia.  A sala é admiravelmente bela, e a sensação ao entrar aqui
 realizando as suas funções, orando pelo imperador.  A única saída é voltar 
 à nordeste para a trilha.
 ~
-176.3 cdfhrt 1
-D 7
+176 655532 0 0 0 1
+D7
 ~
 porta madeira~
-:n 2 uma porta de madeira
-abc -1 17873
+1 -1 17873
 S
 #17875
 O Caminho Oriental da Cidade Proibida~
@@ -5805,16 +5757,16 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para leste, norte, ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17863
-D 1
+D1
 ~
 ~
 0 -1 17898
-D 2
+D2
 ~
 ~
 0 -1 17876
@@ -5828,16 +5780,16 @@ você pode ver uma pequena cerca de pedra, formando desenhos de dragões.
 Você pode seguir para norte, sudeste, ou sudoeste, continuando pelo 
 caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17875
-D 8
+D8
 ~
 ~
 0 -1 17897
-D 9
+D9
 ~
 ~
 0 -1 17877
@@ -5850,12 +5802,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para nordeste, ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 2
+176 64 0 0 0 2
+D2
 ~
 ~
 0 -1 17878
-D 7
+D7
 ~
 ~
 0 -1 17876
@@ -5869,16 +5821,16 @@ você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  À
 frente você pode avistar uma pequena ponte, que atravessa o rio dourado.  
 Você pode seguir para norte, nordeste, ou para a ponte, à sudeste.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17877
-D 7
+D7
 ~
 ~
 0 -1 17897
-D 8
+D8
 ~
 ~
 0 -1 17879
@@ -5892,20 +5844,19 @@ um pouco no rio, e seguir pelo seu curso.  O caminho oriental continua
 para noroeste.  À sua frente, uma grande porta o separa de uma grande e 
 enfeitada construção.
 ~
-176.3 c 1
-D 6
-~
-~
-0 -1 17878
-D 2
+176 4 0 0 0 1
+D2
 ~
 porta~
-:n 2 uma grande porta de metal
-abc -1 17880
-D 5
+1 -1 17880
+D5
 ~
 ~
 0 -1 17917
+D6
+~
+~
+0 -1 17878
 S
 #17880
 O Teatro Changying~
@@ -5919,13 +5870,12 @@ você pode ver algumas chinesas ensaiando uma ópera.  Você pode seguir por
 uma pequena ecada à leste, para o andar superior, ou sair do teatro indo 
 para norte.
 ~
-176.3 cdfr 1
-D 0
+176 131116 0 0 0 1
+D0
 ~
 porta~
-:n 2 uma grande porta de metal
-abc -1 17879
-D 4
+1 -1 17879
+D4
 ~
 ~
 0 -1 17881
@@ -5940,8 +5890,8 @@ quatro colunas sustentam o grande telhado, e uma pequena sacada circula
 este andar superior.  Muitas pessoas passam apressados por você, parecendo 
 se prepararem para a próxima apresentação.
 ~
-176.3 cdfr 1
-D 5
+176 131116 0 0 0 1
+D5
 ~
 ~
 0 -1 17880
@@ -5959,12 +5909,12 @@ negras, e o teto todo trabalhado com desenhos de dragões em verde e
 dourado.  Você pode seguir para norte, em direção aos palácios do norte, 
 ou seguir para sul, em direção à praça da Pureza Celestial.
 ~
-176.3 cdg 1
-D 0
+176 76 0 0 0 1
+D0
 ~
 ~
 0 -1 17883
-D 2
+D2
 ~
 ~
 0 -1 17855
@@ -5979,12 +5929,12 @@ carca de pedra.  A praça se parece muito com as outras, anteriores à esta.
 é visto.  Você pode continuar pela praça, à norte, ou voltar ao Portal da 
 Pureza Celestial à sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17884
-D 2
+D2
 ~
 ~
 0 -1 17882
@@ -5998,12 +5948,12 @@ carca de pedra.  A praça se parece muito com as outras, anteriores à esta.
 É estranho pensar que, tão perto dos aposentos do imperador, nenhum guarda 
 é visto.  Você pode continuar pela seguindo pela praça à norte ou sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17886
-D 2
+D2
 ~
 ~
 0 -1 17883
@@ -6018,13 +5968,12 @@ anteriores à esta.  É estranho pensar que, tão perto dos aposentos do
 imperador, nenhum guarda é visto.  Você pode seguir para o palácio, 
 atravessando a porta ao norte, ou voltar pela praça à sul.
 ~
-176.3 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 porta~
-:n 2 uma grande porta
-abc -1 17886
-D 2
+1 -1 17886
+D2
 ~
 ~
 0 -1 17884
@@ -6041,17 +5990,15 @@ dourado, e o piso negro, coberto por várias tapeçarias.  Quatro gorssas
 colunas sutentam o vigoroso teto do maior palácio da Cidade Proibida.  À 
 sua frente, ao norte, pode-se ver uma enorme e impenetrável porta de ferro.
 ~
-176.3 cdghr 1
-D 2
-~
-porta~
-:n 2 uma grande porta
-abc -1 17885
-D 0
+176 131276 0 0 0 1
+D0
 ~
 porta ferro~
-:n 2 uma enorme porta de ferro
-abc 17619 17887
+1 17619 17887
+D2
+~
+porta~
+1 -1 17885
 S
 #17887
 O Palácio da Pureza Celestial~
@@ -6064,22 +6011,19 @@ artigos de ouro e porcelana.  Alguns ruidos podem ser ouvidos vindos da
 sala à leste.  Você pode sair do palácio, indo para o norte, pode voltar 
 à sul, ou seguir para sala à leste.
 ~
-176.3 cdfg 1
-D 0
+176 108 0 0 0 1
+D0
 ~
 porta~
-:n 2 uma grande porta
-abc -1 17889
-D 1
+1 -1 17889
+D1
 ~
 porta~
-:n 2 uma pequena porta de madeira
-abc -1 17888
-D 2
+1 -1 17888
+D2
 ~
 porta ferro~
-:n 2 uma enorme porta de ferro
-abc 17619 17886
+1 17619 17886
 S
 #17888
 O Salão Taiji~
@@ -6092,12 +6036,11 @@ do imperador e dos eunucos, e se você não é um deles, é melhor pensar em
 sair o quanto antes dessa sala, antes que um dos guardas percebam.  A 
 única saída é voltar à oeste.
 ~
-176.3 cdf 1
-D 3
+176 44 0 0 0 1
+D3
 ~
 porta~
-:n 2 uma pequena porta de madeira
-abc -1 17887
+1 -1 17887
 S
 #17889
 Uma Passarela~
@@ -6105,17 +6048,15 @@ Uma Passarela~
 Pureza Celestial, ou Palácio Qianqing, à sul, ao Palácio da Grande União, 
 ou Palácio Jiao-tai, à norte.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 porta~
-:n 2 uma grande porta dourada
-abc -1 17890
-D 2
+1 -1 17890
+D2
 ~
 porta~
-:n 2 uma grande porta
-abc -1 17887
+1 -1 17887
 S
 #17890
 O Palácio da Grande União~
@@ -6130,17 +6071,15 @@ celebrações para a imperatriz ocorrem, como as comemorações de seus
 aniversários.  Você pode seguir pela porta à norte, atrás do grande mural, 
 ou pode voltar à sul.
 ~
-176.3 cdfg 1
-D 0
+176 108 0 0 0 1
+D0
 ~
 porta~
-:n 2 uma grande porta dourada
-abc -1 17891
-D 2
+1 -1 17891
+D2
 ~
 porta~
-:n 2 uma grande porta dourada
-abc -1 17889
+1 -1 17889
 S
 #17891
 Uma Passarela~
@@ -6151,17 +6090,15 @@ Kuengning, à norte.  Olhano para o Palácio Imperial, você percebe que ele
 Logo à sua frente, uma grande porta em formato de dragões barra sua 
 entrada ao palácio.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 porta dragao~
-:n 2 uma enorme porta em forma de dragão
-abc -1 17892
-D 2
+1 -1 17892
+D2
 ~
 porta~
-:n 2 uma grande porta dourada
-abc -1 17890
+1 -1 17890
 S
 #17892
 O Palácio Imperial~
@@ -6180,16 +6117,15 @@ uma enorme mesa de jade na frente.  Este é o local onde o imperador realiza
 as suas funções diárias, como se alimentar, resolver assuntos particulares, 
 e até mesmo dormir.  O grande Palácio Imperial continua para o norte.
 ~
-176.3 cdfh 1
-D 0
+176 172 0 0 0 1
+D0
 ~
 ~
 0 -1 17893
-D 2
+D2
 ~
 porta~
-:n 2 uma enorme porta em forma de dragão
-abc -1 17891
+1 -1 17891
 S
 #17893
 O Palácio Imperial~
@@ -6204,13 +6140,12 @@ encontra-se um grande baú, talvez ambos com os pertences do imperador.
 Você pode continuar pelo palácio à sul, ou sair, indo para norte, 
 passando pela enorme porta em forma de dragão.
 ~
-176.3 cdf 1
-D 0
+176 44 0 0 0 1
+D0
 ~
 porta~
-:n 2 uma enorme porta em forma de dragão
-abc -1 17894
-D 2
+1 -1 17894
+D2
 ~
 ~
 0 -1 17892
@@ -6223,16 +6158,15 @@ ao Portal de Qenan, que é a entrada ao Jardim Imperial.  Olhando ao redor
 você pode ver os enormes muros internos da Cidade Proibida, limitando o 
 seu caminho pela praça, à norte, ou voltando ao Palácio Imperial à sul.
 ~
-176.3 g 2
-D 2
-~
-porta~
-:n 2 uma enorme porta em forma de dragão
-abc -1 17893
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17895
+D2
+~
+porta~
+1 -1 17893
 S
 #17895
 O Portal Qenan~
@@ -6245,16 +6179,15 @@ Proibida, e a única maneira de atravessa-lo é através do enorme portão de
 ferro à frente.  Você pode voltar à sul, ou tentar atravessar o portão à 
 norte.
 ~
-176.3 cdf 1
-D 2
+176 44 0 0 0 1
+D0
+~
+portao ferro~
+1 17620 17896
+D2
 ~
 ~
 0 -1 17894
-D 0
-~
-portao ferro~
-:n 1 um enorme portão de ferro
-abc 17620 17896
 S
 #17896
 O Jardim Imperial~
@@ -6269,24 +6202,23 @@ brancas, com uma pequena cerca dourada ao redor.  O caminho segue para o
 norte, leste e oeste, e você pode voltar à sul, atravessando o grande 
 portão de ferro.
 ~
-176.4 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17909
-D 1
+D1
 ~
 ~
 0 -1 17904
-D 3
+D2
+~
+portao ferro~
+1 17620 17895
+D3
 ~
 ~
 0 -1 17906
-D 2
-~
-portao ferro~
-:n 1 um grande portão de ferro
-abc 17620 17895
 S
 #17897
 O Caminho Oriental da Cidade Proibida~
@@ -6296,12 +6228,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para noroeste ou sudoeste, continuando pelo caminho.
 ~
-176.3 g 2
-D 6
+176 64 0 0 0 2
+D6
 ~
 ~
 0 -1 17876
-D 9
+D9
 ~
 ~
 0 -1 17878
@@ -6314,12 +6246,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte ou oeste, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17864
-D 3
+D3
 ~
 ~
 0 -1 17875
@@ -6332,19 +6264,19 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para nordeste, sudeste ou oeste, continuando pelo caminho.
 ~
-176.3 g 2
-D 7
-~
-~
-0 -1 17871
-D 8
-~
-~
-0 -1 17872
-D 3
+176 64 0 0 0 2
+D3
 ~
 ~
 0 -1 17916
+D7
+~
+~
+0 -1 17871
+D8
+~
+~
+0 -1 17872
 S
 #17900
 O Caminho Oriental da Cidade Proibida~
@@ -6354,12 +6286,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para nordeste ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 2
+176 64 0 0 0 2
+D2
 ~
 ~
 0 -1 17901
-D 7
+D7
 ~
 ~
 0 -1 17862
@@ -6372,12 +6304,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17900
-D 2
+D2
 ~
 ~
 0 -1 17902
@@ -6390,12 +6322,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17901
-D 2
+D2
 ~
 ~
 0 -1 17903
@@ -6410,8 +6342,8 @@ Neste local você pode ver que o caminho forma um grande círculo no chão, e
 é rodeado por grandes árvores.  A única maneira de sair daqui, é voltando 
 para norte.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17902
@@ -6428,12 +6360,12 @@ caminho pelo jardim segue delimitado por uma bela estrada de pedras
 brancas, com uma pequena cerca dourada ao redor.  Você pode continuar pelo 
 caminho à leste, e oeste.
 ~
-176.4 g 1
-D 1
+176 64 0 0 0 1
+D1
 ~
 ~
 0 -1 17905
-D 3
+D3
 ~
 ~
 0 -1 17896
@@ -6450,12 +6382,12 @@ caminho pelo jardim segue delimitado por uma bela estrada de pedras
 brancas, com uma pequena cerca dourada ao redor.  Você pode continuar pelo 
 caminho à norte, e oeste.
 ~
-176.4 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17910
-D 3
+D3
 ~
 ~
 0 -1 17904
@@ -6472,15 +6404,15 @@ caminho pelo jardim segue delimitado por uma bela estrada de pedras
 brancas, com uma pequena cerca dourada ao redor.  Você pode continuar pelo 
 caminho à norte, e leste.
 ~
-176.4 g 1
-D 1
-~
-~
-0 -1 17896
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17907
+D1
+~
+~
+0 -1 17896
 S
 #17907
 O Jardim Imperial~
@@ -6494,12 +6426,12 @@ caminho pelo jardim segue delimitado por uma bela estrada de pedras
 brancas, com uma pequena cerca dourada ao redor.  Você pode continuar pelo 
 caminho à sul, e oeste.
 ~
-176.4 g 1
-D 2
+176 64 0 0 0 1
+D2
 ~
 ~
 0 -1 17906
-D 3
+D3
 ~
 ~
 0 -1 17908
@@ -6517,12 +6449,12 @@ brancas, com uma pequena cerca dourada ao redor.  Você pode continuar pelo
 caminho à norte, onde pode-se ver uma pequena construção, ou seguir para 
 leste.
 ~
-176.4 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17912
-D 1
+D1
 ~
 ~
 0 -1 17907
@@ -6539,16 +6471,16 @@ caminho pelo jardim segue delimitado por uma bela estrada de pedras
 brancas, com uma pequena cerca dourada ao redor.  Você pode continuar pelo 
 caminho à norte, leste, ou sul.
 ~
-176.4 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17913
-D 1
+D1
 ~
 ~
 0 -1 17910
-D 2
+D2
 ~
 ~
 0 -1 17896
@@ -6566,19 +6498,19 @@ brancas, com uma pequena cerca dourada ao redor.  Você pode continuar pelo
 caminho à oeste, e sul, ou subir por uma pequena colina, em direção à 
 uma construção acima.
 ~
-176.4 g 1
-D 4
-~
-~
-0 -1 17911
-D 2
+176 64 0 0 0 1
+D2
 ~
 ~
 0 -1 17905
-D 3
+D3
 ~
 ~
 0 -1 17909
+D4
+~
+~
+0 -1 17911
 S
 #17911
 O Salão Yujing~
@@ -6590,8 +6522,8 @@ o local, oferecendo uma belíssima vista de toda a Cidade Proibida.  Aqui é
 como um mirante, onde o imperador e a imperatriz vem para admirar a bela 
 paisagem da cidade.  A única saída é voltar, descendo pela pequena colina.
 ~
-176.4 cdfg 1
-D 5
+176 108 0 0 0 1
+D5
 ~
 ~
 0 -1 17910
@@ -6606,8 +6538,8 @@ quatro cantos da sala encontram-se grandes potes de porcelana, com incenso,
 produzindo um delicioso aroma.  Este salão é usado para o agradecimento aos 
 Deuses, à cada passagem do ano.  A única saída é voltar ao sul.
 ~
-176.4 cdfg 1
-D 2
+176 108 0 0 0 1
+D2
 ~
 ~
 0 -1 17908
@@ -6624,12 +6556,12 @@ caminho pelo jardim segue delimitado por uma bela estrada de pedras
 brancas, com uma pequena cerca dourada ao redor.  Você pode continuar pelo 
 caminho à norte, e sul.
 ~
-176.4 g 1
-D 0
+176 64 0 0 0 1
+D0
 ~
 ~
 0 -1 17914
-D 2
+D2
 ~
 ~
 0 -1 17909
@@ -6648,16 +6580,15 @@ enorme portão Shengwu, delimitando o final da Cidade Proibida.  Você pode
 continuar pelo caminho à sul, ou seguir para o norte, atravessando as 
 pequenas portas, em direção ao grande portão.
 ~
-176.4 g 1
-D 2
+176 64 0 0 0 1
+D0
+~
+porta~
+1 -1 17915
+D2
 ~
 ~
 0 -1 17913
-D 0
-~
-porta~
-:n 2 uma pequena porta dupla de madeira
-abc -1 17915
 S
 #17915
 O Grande Portão Shengwu~
@@ -6673,18 +6604,16 @@ frente, uma massiva porta de ferro, com o triplo do seu tamanho, impede a
 entrada e saída de qualquer um à Cidade Proibida.  Você pode voltar à sul, 
 ou tentar inutilmente passar pelos enormes portões à norte.
 ~
-176.4 cdfg 1
-D 0
+176 108 0 0 0 1
+D0
 ~
 portao~
-:n 1 o enormes portões de Shengwu
-abc 17620 17936
-D 2
+1 17620 17936
+D2
 ~
 porta~
-:n 2 uma pequena porta dupla de madeira
-abc -1 17914
-D 4
+1 -1 17914
+D4
 ~
 ~
 0 -1 17813
@@ -6697,12 +6626,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para leste ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 1
+176 64 0 0 0 2
+D1
 ~
 ~
 0 -1 17899
-D 2
+D2
 ~
 ~
 0 -1 17928
@@ -6717,15 +6646,15 @@ muitos peixes de diversas cores e tamanhos podem ser vistos, nadando atrás
 de alimento.  Você pode continuar pelo rio à sudoeste, ou voltar para a 
 ponte acima.  Alguns galhos impedem que você continue pelo rio à leste.
 ~
-176.7 cr 7
-D 9
-~
-~
-0 -1 17918
-D 4
+176 131076 0 0 0 7
+D4
 ~
 ~
 0 -1 17879
+D9
+~
+~
+0 -1 17918
 S
 #17918
 O Rio Dourado~
@@ -6736,12 +6665,12 @@ perdendo até onde seus olhos podem ver.  Olhando por entre as suas águas,
 muitos peixes de diversas cores e tamanhos podem ser vistos, nadando atrás 
 de alimento.  Você pode continuar pelo rio à sudoeste ou nordeste.
 ~
-176.7 r 7
-D 7
+176 131072 0 0 0 7
+D7
 ~
 ~
 0 -1 17917
-D 9
+D9
 ~
 ~
 0 -1 17919
@@ -6755,12 +6684,12 @@ perdendo até onde seus olhos podem ver.  Olhando por entre as suas águas,
 muitos peixes de diversas cores e tamanhos podem ser vistos, nadando atrás 
 de alimento.  Você pode continuar pelo rio à sudoeste ou nordeste.
 ~
-176.7 r 7
-D 7
+176 131072 0 0 0 7
+D7
 ~
 ~
 0 -1 17918
-D 9
+D9
 ~
 ~
 0 -1 17920
@@ -6774,15 +6703,15 @@ atravessa.  Olhando por entre as suas águas, muitos peixes de diversas
 cores e tamanhos podem ser vistos, nadando atrás de alimento.  Você pode 
 continuar pelo rio à oeste ou nordeste.
 ~
-176.7 r 7
-D 7
-~
-~
-0 -1 17919
-D 3
+176 131072 0 0 0 7
+D3
 ~
 ~
 0 -1 17921
+D7
+~
+~
+0 -1 17919
 S
 #17921
 O Rio Dourado~
@@ -6793,12 +6722,12 @@ pontes que passam por cima do rio dourado.  Olhando por entre as suas
 águas, muitos peixes de diversas cores e tamanhos podem ser vistos, nadando 
 atrás de alimento.  Você pode continuar pelo rio à oeste ou leste.
 ~
-176.7 r 7
-D 1
+176 131072 0 0 0 7
+D1
 ~
 ~
 0 -1 17920
-D 3
+D3
 ~
 ~
 0 -1 17922
@@ -6813,12 +6742,12 @@ entre as suas águas, muitos peixes de diversas cores e tamanhos podem ser
 vistos, nadando atrás de alimento.  Você pode continuar pelo rio à oeste 
 ou leste.
 ~
-176.7 r 7
-D 1
+176 131072 0 0 0 7
+D1
 ~
 ~
 0 -1 17921
-D 3
+D3
 ~
 ~
 0 -1 17923
@@ -6832,12 +6761,12 @@ pontes que passam por cima do rio dourado.  Olhando por entre as suas
 águas, muitos peixes de diversas cores e tamanhos podem ser vistos, nadando 
 atrás de alimento.  Você pode continuar pelo rio à oeste ou leste.
 ~
-176.7 r 7
-D 1
+176 131072 0 0 0 7
+D1
 ~
 ~
 0 -1 17922
-D 3
+D3
 ~
 ~
 0 -1 17924
@@ -6851,12 +6780,12 @@ atravessa.  Olhando por entre as suas águas, muitos peixes de diversas
 cores e tamanhos podem ser vistos, nadando atrás de alimento.  Você pode 
 continuar pelo rio à oeste ou leste.
 ~
-176.7 r 7
-D 1
+176 131072 0 0 0 7
+D1
 ~
 ~
 0 -1 17923
-D 3
+D3
 ~
 ~
 0 -1 17925
@@ -6870,12 +6799,12 @@ perdendo até onde seus olhos podem ver.  Olhando por entre as suas águas,
 muitos peixes de diversas cores e tamanhos podem ser vistos, nadando atrás 
 de alimento.  Você pode continuar pelo rio à noroeste ou leste.
 ~
-176.7 r 7
-D 1
+176 131072 0 0 0 7
+D1
 ~
 ~
 0 -1 17924
-D 6
+D6
 ~
 ~
 0 -1 17926
@@ -6889,12 +6818,12 @@ perdendo até onde seus olhos podem ver.  Olhando por entre as suas águas,
 muitos peixes de diversas cores e tamanhos podem ser vistos, nadando atrás 
 de alimento.  Você pode continuar pelo rio à sudeste ou sudoeste.
 ~
-176.7 r 7
-D 8
+176 131072 0 0 0 7
+D8
 ~
 ~
 0 -1 17925
-D 9
+D9
 ~
 ~
 0 -1 17927
@@ -6910,15 +6839,15 @@ de alimento.  Alguns galhos no rio impedem que você siga para oeste.  Você
 pode seguir para cima, em direção à ponte, ou para nordeste, seguindo pelo 
 rio.
 ~
-176.7 r 7
-D 7
-~
-~
-0 -1 17926
-D 4
+176 131072 0 0 0 7
+D4
 ~
 ~
 0 -1 17933
+D7
+~
+~
+0 -1 17926
 S
 #17928
 O Caminho Ocidental da Cidade Proibida~
@@ -6928,12 +6857,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17916
-D 2
+D2
 ~
 ~
 0 -1 17929
@@ -6946,12 +6875,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17928
-D 2
+D2
 ~
 ~
 0 -1 17930
@@ -6964,12 +6893,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17929
-D 2
+D2
 ~
 ~
 0 -1 17931
@@ -6982,12 +6911,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17930
-D 2
+D2
 ~
 ~
 0 -1 17932
@@ -7000,12 +6929,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte ou sul, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17931
-D 2
+D2
 ~
 ~
 0 -1 17933
@@ -7018,12 +6947,12 @@ leste-oeste, adentrando na intensa vegetação.  Talvez você pudesse entrar
 um pouco no rio, e seguir pelo seu curso.  O caminho ociental continua 
 para norte e sul.
 ~
-176.3 c 1
-D 0
+176 4 0 0 0 1
+D0
 ~
 ~
 0 -1 17932
-D 2
+D2
 ~
 ~
 0 -1 17934
@@ -7040,12 +6969,12 @@ cidade.  Olhando ao redor, você percebe uma bela vegetação, com muitas
 você pode ver uma pequena cerca de pedra, formando desenhos de dragões.  
 Você pode seguir para norte ou oeste, continuando pelo caminho.
 ~
-176.3 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17933
-D 3
+D3
 ~
 ~
 0 -1 17935
@@ -7060,8 +6989,8 @@ Neste local você percebe que o caminho para abruptamente em um círculo de
 grandes árvores.  No piso, encontra-se um desenho em vermelho de um grande 
 símbolo chinês.  A única saída é voltar para leste.
 ~
-176.3 cgt 2
-D 1
+176 524356 0 0 0 2
+D1
 ~
 ~
 0 -1 17934
@@ -7074,10 +7003,10 @@ você teve sorte, os guardas da Cidade Proibida são impiedosos; pense melhor
 antes de tentar voltar para o reino chinês.  Um caminho de terra segue para 
 norte até um local bem amplo.
 ~
-176.6 g 2
-D 0
+176 64 0 0 0 2
+D0
 ~
 ~
 0 -1 17613
 S
-$
+$~

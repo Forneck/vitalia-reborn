@@ -9,15 +9,13 @@ coloridos que formam uma imagem distinta.
    Para norte há uma pesada porta de pedra que leva ao cofre do banco.  Ao
 sul você vê um portão.  Há um pequeno aviso aqui.
 ~
-220.1 cdrs 0
-ON banco
-D 0
+220 393228 0 0 0 0
+D0
 Para norte há uma pesada porta de pedra que leva ao cofre do banco.
 ~
 porta pedra cofre~
-:n 2 a porta do cofre
-ab -1 22011
-D 2
+1 -1 22011
+D2
 ~
 ~
 0 -1 3076
@@ -42,13 +40,12 @@ temperatura amena.  Algumas esferas emitem uma boa iluminação.  Há algumas
 estantes com gavetas numeradas.
    Para sul há o Banco de Vitália.
 ~
-220.1 cdfrs 0
-D 2
+220 393260 0 0 0 0
+D2
 Para sul está o Banco de Vitália.
 ~
 porta pedra cofre~
-:n 2 a porta do cofre
-ab -1 22010
+1 -1 22010
 S
 #22015
 A Confraria da Família Daguerreo~
@@ -65,13 +62,12 @@ Ipsen, berço do primeiro Daguerreo, e de fatos importantes ocorridos durante
 toda a história dessa grande família.  Há uma porta no final do salão,
 aproximando-se dela você pode ouvir barulhos de poucas pessoas conversando.
 ~
-220.2 dr 0
-ON confraria
-D 0
+220 131080 0 0 0 0
+D0
 ~
 ~
 0 -1 22016
-D 2
+D2
 ~
 ~
 0 -1 3079
@@ -87,8 +83,8 @@ são de cores claras e alegres, e as paredes azuis e brancas.  Se olhar bem,
 parece que um arco-íris passa pela sala, deixando um rastro de paz e
 harmonia em sua extensão.
 ~
-220.2 dfr 0
-D 2
+220 131112 0 0 0 0
+D2
 ~
 ~
 0 -1 22015
@@ -100,16 +96,15 @@ sua frente, com várias janelas mostrando toda a cidade de Midgaard.  No
 centro há um balcão com um bela recepcionista e um garoto vendendo jornais.
 Na sala acima, subindo uma grande escadaria, você ouve um barulho infernal.
 ~
-220.3 dehr 0
-ON jornal
-D 4
-~
-~
-0 -1 22021
-D 0
+220 131224 0 0 0 0
+D0
 ~
 ~
 0 -1 3080
+D4
+~
+~
+0 -1 22021
 E
 janela janelas vidro~
 Olhando pela janela, você pode observar toda Midgaard - fidos, comerciantes,
@@ -124,12 +119,12 @@ percebe que há uma grande máquina no centro, sendo manipulada por um
 simpático homem.  Subindo as escadas pode-se ouvir várias vozes, e
 descendo-as se retorna ao salão da Torre.
 ~
-220.3 defr 0
-D 4
+220 131128 0 0 0 0
+D4
 ~
 ~
 0 -1 22022
-D 5
+D5
 ~
 ~
 0 -1 22020
@@ -141,14 +136,13 @@ forram o chão, enquanto mesas de madeira desorganizadas estão espalhadas
 pela sala.  Ao leste, há uma porta de carvalho, com algo escrito arranhado.
 Descendo o lance de escadas, você volta para a Sala da Imprensa.
 ~
-220.3 der 0
-D 1
+220 131096 0 0 0 0
+D1
 A porta de carvalho está riscada com os dizeres "O editor-chefe fede".
 ~
 porta carvalho~
-:n 2 a porta de carvalho
-ab -1 22023
-D 5
+1 -1 22023
+D5
 ~
 ~
 0 -1 22021
@@ -161,12 +155,11 @@ amarela, em contraste com a verde mesa e várias plantas.  Pinturas estão
 espalhadas pelas paredes, junto com uma tabela de dardos.  A organização da
 sala é incrível.  Ao oeste, se retorna à sala da Redação.
 ~
-220.3 der 0
-D 3
+220 131096 0 0 0 0
+D3
 ~
 porta carvalho~
-:n 2 a porta de carvalho
-ab -1 22022
+1 -1 22022
 S
 #22025
 Os Jardins de Videl~
@@ -178,7 +171,7 @@ pensando na vida e usufruindo de toda essa beleza.  Há uma pequena trilha
 que segue em direção sul, que serpenteia todo o jardim e você decide
 segui-la, para ver onde esse caminho vai dar.
 ~
-220.4 ce 2
+220 20 0 0 0 2
 D1
 Você vê o Grande Campo de Midgaard.
 ~
@@ -200,7 +193,7 @@ No fundo do jardim, há uma pequena cerquinha branca e parece que alguém
 muito caprichoso, colocou uma delicada @Wplaquinha@n, feita de madeira e toda
 enfeitada por flores entalhadas na própria madeira.
 ~
-220.4 ec 2
+220 20 0 0 0 2
 D0
 Que belíssimo jardim! Tão bem cuidado que você acredita que ali deve ser o lar
 de alguém muito especial.
@@ -212,23 +205,18 @@ Além da cerquinha branca, parece haver um lugar extraordináriamente bonito.
 O que será aquele lugar? Quem será o proprietário deste oasis?
 ~
 cerquinha~
-:n 2 a cerquinha
-a -1 22027
-E
-cerquinha cerca~
-Uma linda cerquinha branca, feita de madeira.
-~
+1 -1 22027
 E
 placa plaquinha~
   
-    @C"Este é o meu jardim. É aqui que eu trago os meus amigos queridos, os 
+    	C"Este é o meu jardim. É aqui que eu trago os meus amigos queridos, os 
 amigos que acima de tudo, amam a Natureza com a mesma força que eu.  Se você
 chegou até aqui e não consegue passar, não se sinta magoado e aguarde pelo meu
 convite. Se conseguiu entrar, seja Bem-Vindo, eu o recebo com o coração aberto
 e um imenso sorriso nos lábios. Lembre-se porém de seguir as minhas regras, que
 por sinal são bem simples:
  
- @W1- Não apanhe nenhuma das flores do meu jardim.
+ 	W1- Não apanhe nenhuma das flores do meu jardim.
 
  2- Não dê nenhuma comida aos pássaros que não seja adequada.
 
@@ -242,7 +230,11 @@ por sinal são bem simples:
     poderes mágicos.  Elfos, fadas e duendes; sílfides e ondinas; dríades e
     náiades são os moradores desse lugar mágico. 
  
-    @MVidel Pendragon Daguereo  * @CA Sereia Amiga da Princesa das Aguas *@n
+    	MVidel Pendragon Daguereo  * 	CA Sereia Amiga da Princesa das Aguas *	n
+~
+E
+cerquinha cerca~
+Uma linda cerquinha branca, feita de madeira.
 ~
 S
 #22027
@@ -260,14 +252,13 @@ lugar, em verdadeiro oasis.  Uma jovem se aproxima de você e o convida para
 fazer parte dessa imensa mesa, repleta da melhor comida que você jamais
 provou.  Aproveite!
 ~
-220.4 ecgl 2
+220 2132 0 0 0 2
 D0
 Que belíssimo jardim! Tão bem cuidado que você acredita que ali deve ser o lar
 de alguém muito especial.
 ~
 cerquinha~
-:n 2 a cerquinha
-a -1 22026
+1 -1 22026
 E
 cerquinha cerca~
 Uma linda cerquinha branca, feita de madeira.
@@ -283,18 +274,17 @@ de cima, contudo, você não consegue dizer com precisão exatamente de onde.
 Uma doce melodia envolve o ambiente e aos poucos, você sente que seu
 espírito vai se preenchendo com sentimento de amor e carinho.
 ~
-220.5 cdefgrsu 1
-ON paz
-D9
-Você vê uma Praça.
-~
-~
-0 -1 3005
+220 1441916 0 0 0 1
 D4
 Você vê pequenina sala.
 ~
 ~
 0 -1 22031
+D9
+Você vê uma Praça.
+~
+~
+0 -1 3005
 S
 #22031
 A Sala dos Conselhos Dados~
@@ -308,24 +298,22 @@ para compartilhar.  Este é um @Rlugar sagrado@n...não se esqueça disso.  Suav
 claridade vinda tanto do norte, quanto do sul, desperta a sua atenção e uma
 onda de energia positiva o envolve, despertando em você fraternidade e amor.
 ~
-220.5 cdefgrsu 1
+220 1441916 0 0 0 1
+D0
+Suave luz azulada atrai a sua atenção.
+~
+porta~
+1 -1 22033
+D2
+Suave luz em tom róseo atrai a sua atenção.
+~
+porta~
+1 -1 22032
 D5
 Você vê uma linda sala.
 ~
 ~
 0 -1 22030
-D2
-Suave luz em tom róseo atrai a sua atenção.
-~
-porta~
-:n 2
-a -1 22032
-D0
-Suave luz azulada atrai a sua atenção.
-~
-porta~
-:n 2
-a -1 22033
 S
 #22032
 A Sala dos Sentimentos Puros~
@@ -337,25 +325,22 @@ amor.  É como se todas as suas palavras pudessem se transformar em brilho e
 estivessem iluminando este lugar e a você também.  E você então tem a
 certeza plena de que não está só neste mundo e que pode enfim sorrir.
 ~
-220.5 cdefgrsu 1
+220 1441916 0 0 0 1
 D0
 Você pode ver uma sala aconchegante e quase etérea.
 ~
 porta~
-:n 2
-a -1 22031
-D4
-O doce ruído de água corrente parece vir daquela direção.
-~
-porta~
-:n 2
-a -1 22034
+1 -1 22031
 D1
 Um pequeno e sóbrio aposento pode ser visto.
 ~
 porta~
-:n 2
-a -1 22035
+1 -1 22035
+D4
+O doce ruído de água corrente parece vir daquela direção.
+~
+porta~
+1 -1 22034
 S
 #22033
 A Sala dos Sentimentos Nobres~
@@ -367,25 +352,22 @@ amor.  É como se todas as suas palavras pudessem se transformar em brilho e
 estivessem iluminando este lugar e a você também.  E você então tem a
 certeza plena de que não está só neste mundo e que pode enfim sorrir.
 ~
-220.5 cdefgrsu 1
+220 1441916 0 0 0 1
 D2
 Você pode ver uma sala aconchegante e quase etérea.
 ~
 porta~
-:n 2
-a -1 22031
-D4
-O doce ruído de água corrente parece vir daquela direção.
-~
-porta~
-:n 2
-a -1 22034
+1 -1 22031
 D3
 Um pequeno e sóbrio aposento pode ser visto.
 ~
 porta~
-:n 2
-a -1 22035
+1 -1 22035
+D4
+O doce ruído de água corrente parece vir daquela direção.
+~
+porta~
+1 -1 22034
 S
 #22034
 Ouvindo as Palavras da Vida~
@@ -400,7 +382,7 @@ majestosas, produzem sombra fresca e parecem convidar você à meditação.
 Ouça o som do vento, ouça o som da água...ouça seu coração...e encontre o
 caminho para a felicidade.
 ~
-220.5 cdefgrsu 1
+220 1441916 0 0 0 1
 D5
 Você pode ver uma sala aconchegante e quase etérea.
 ~
@@ -418,18 +400,16 @@ Também se pode ouvir daqui, o som suave de água corrente.  A vida parece
 tomar conta desta sala.  Um pequeno mural está fixado na parede e este
 parece ser um importante meio de comunicação.
 ~
-220.5 cdefgrsu 1
-D3
-Você pode ver daqui uma luz suavemente rosada.
-~
-porta~
-:n 2
-a -1 22032
+220 1441916 0 0 0 1
 D1
 Você pode ver daqui uma luz suavemente azulada.
 ~
 porta~
-:n 2
-a -1 22033
+1 -1 22033
+D3
+Você pode ver daqui uma luz suavemente rosada.
+~
+porta~
+1 -1 22032
 S
-$
+$~

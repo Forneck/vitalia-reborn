@@ -1,7 +1,7 @@
 #83
 Vitalia~
 A Aldeia Maldita~
-8300 8399 300 0 dj 0 0 0 -1 -1
+8300 8399 300 0 djk 0 0 0 -1 -1
 M 0 8301 1 8325 	(o Loctus)
 E 1 8309 1 3 	(o colar de Loctus)
 G 1 8305 1 -1 	(a Chave para Liberdade)
@@ -25,11 +25,11 @@ M 0 8308 1 8326 	(o ClÃ©rigo)
 M 0 8309 1 8326 	(o LadrÃ£o)
 M 0 8310 1 8326 	(o Guerreiro)
 M 0 8321 1 8326 	(o Druida)
-D 0 8315 2 2 	(O Túnel Leste)
-D 0 8317 0 2 	(O Final do Túnel)
-D 0 8319 3 2 	(O Túnel Oeste)
-D 0 8320 1 2 	(O Final do Túnel)
-D 0 8323 2 2 	(A Entrada da Câmara)
+D 0 8315 2 2 	(O TÃºnel Leste)
+D 0 8317 0 2 	(O Final do TÃºnel)
+D 0 8319 3 2 	(O TÃºnel Oeste)
+D 0 8320 1 2 	(O Final do TÃºnel)
+D 0 8323 2 2 	(A Entrada da CÃ¢mara)
 D 0 8325 3 2 	(O Cativeiro)
 D 0 8310 2 2 	(Muitos Caminhos)
 M 0 8314 12 8336 	(a nativa sentinela)

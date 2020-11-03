@@ -6,20 +6,20 @@ Clas: 1
 Levl: 107
 Id  : 17
 Brth: 1603498701
-Plyd: 822
-Last: 1603500279
-Lnew: 1603499271
+Plyd: 2840
+Last: 1604407606
+Lnew: 1604407209
 Htwn: 1372
 Host: 186.223.167.122
 Hite: 166
 Wate: 151
-Act : h 0 0 0
+Act : gh 0 0 0
 Aff : 0 0 0 0
-Pref: efghimnorv 0 0 0
+Pref: efghimnorvx 0 0 0
 Room: 3001
 Lern: 321
-Hit : 222/864
-Mana : 273/7180
+Hit : 864/864
+Mana : 7180/7180
 Move: 216/216
 Str : 14/0
 Int : 15
@@ -29,3 +29,4 @@ Con : 13
 Cha : 12
 Ac  : 100
 Exp : 850000000
+ScrW: 40

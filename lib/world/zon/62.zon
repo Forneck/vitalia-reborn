@@ -1,7 +1,7 @@
 #62
 Vitalia~
 A PlanÃ­cie dos Orcs~
-6200 6299 20 2 j 0 0 0 -1 -1
+6200 6299 20 2 jk 0 0 0 -1 -1
 M 0 6200 3 6219 	(o veado)
 M 0 6200 3 6224 	(o veado)
 M 0 6200 3 6218 	(o veado)
@@ -57,15 +57,15 @@ M 0 6212 4 6261 	(a coisa mutante)
 M 0 6213 1 6265 	(a coisa mutante)
 E 1 6201 1 9 	(um par de algemas)
 E 1 6202 1 8 	(um par de grilhÃµes)
-D 0 6255 3 2 	(Um Túnel)
-D 0 6256 1 2 	(Um Túnel)
-D 0 6256 3 1 	(Um Túnel)
+D 0 6255 3 2 	(Um TÃºnel)
+D 0 6256 1 2 	(Um TÃºnel)
+D 0 6256 3 1 	(Um TÃºnel)
 D 0 6257 1 1 	(Um Quarto)
-D 0 6266 1 1 	(O Laboratório)
+D 0 6266 1 1 	(O LaboratÃ³rio)
 D 0 6267 3 1 	(Uma Gaiola)
-D 0 6263 1 1 	(O Laboratório)
+D 0 6263 1 1 	(O LaboratÃ³rio)
 D 0 6264 3 1 	(Uma Gaiola)
-D 0 6260 1 1 	(O Laboratório)
+D 0 6260 1 1 	(O LaboratÃ³rio)
 D 0 6261 3 1 	(Uma Gaiola)
 S
 $
