@@ -1,202 +1,191 @@
-#22000
-Organiza��o desta �rea~
-
-  00 - 09@-> (reservado)
-  10 - 14@-> O Banco de Vit�lia (Sethik)
-  15 - 19@-> A Confraria da Fam�lia Daguerreo (Gex)
-  20 - 24@-> O Jornal de Vit�lia
-  25 - 29@-> Os Jardins de Videl (Videl)
-  30 - 59@-> A Caminho da Paz (Pandora e Endelion)
-
-  -- jr -
-
-********************************************************************************
-* O Banco de Vit�lia
-********************************************************************************
-~
-220 0 0 0 0 0
-S
 #22010
-O Banco de Vit�lia~
-   Voc� est� em uma sala constru�da com grandes blocos de pedra
+O Banco de Vitália~
+   Você está em uma sala construída com grandes blocos de pedra
 cuidadosamente esculpidos com relevos que formam imagens.  Apesar da
 simplicidade da sala sua amplitude lhe impressiona; talvez por ser bem
-desprovida e com poucos m�veis, exceto por uma escrivaninha longa e in�meras
-estantes com escrituras.  H� um grande mosaico feito com peda�os de vidros
+desprovida e com poucos móveis, exceto por uma escrivaninha longa e inúmeras
+estantes com escrituras.  Há um grande mosaico feito com pedaços de vidros
 coloridos que formam uma imagem distinta.
-   Para norte h� uma pesada porta de pedra que leva ao cofre do banco.  Ao
-sul voc� v� um port�o.  H� um pequeno aviso aqui.
+   Para norte há uma pesada porta de pedra que leva ao cofre do banco.  Ao
+sul você vê um portão.  Há um pequeno aviso aqui.
 ~
-220 393228 0 0 0 0
-D0
-Para norte h� uma pesada porta de pedra que leva ao cofre do banco.
+220.1 cdrs 0
+ON banco
+D 0
+Para norte há uma pesada porta de pedra que leva ao cofre do banco.
 ~
 porta pedra cofre~
-1 -1 22011
-D2
+:n 2 a porta do cofre
+ab -1 22011
+D 2
 ~
 ~
 0 -1 3076
 E
 aviso~
------------------------------------------------[Banco de Vit�lia]------
+-----------------------------------------------[Banco de Vitália]------
 Aviso:
 
-Para saber mais sobre nossos servi�os, inclusive empr�stimos, entrar em
+Para saber mais sobre nossos serviços, inclusive empréstimos, entrar em
 contato com um dos presidentes do banco, Srs. Sethik, Panoramix ou
 Ghede.
 
 Atenciosamente.
------------------------------------------------[Banco de Vit�lia]------
+-----------------------------------------------[Banco de Vitália]------
 ~
 S
 #22011
 O Cofre~
-   Voc� est� em uma sala n�o muito grande, constru�da com blocos de pedra de
-bom tamanho.  O local n�o tem janelas nem ventila��o mas se encontra numa
-temperatura amena.  Algumas esferas emitem uma boa ilumina��o.  H� algumas
+   Você está em uma sala não muito grande, construída com blocos de pedra de
+bom tamanho.  O local não tem janelas nem ventilação mas se encontra numa
+temperatura amena.  Algumas esferas emitem uma boa iluminação.  Há algumas
 estantes com gavetas numeradas.
-   Para sul h� o Banco de Vit�lia.
+   Para sul há o Banco de Vitália.
 ~
-220 393260 0 0 0 0
-D2
-Para sul est� o Banco de Vit�lia.
+220.1 cdfrs 0
+D 2
+Para sul está o Banco de Vitália.
 ~
 porta pedra cofre~
-1 -1 22010
+:n 2 a porta do cofre
+ab -1 22010
 S
 #22015
-A Confraria da Fam�lia Daguerreo~
-   Voc� est� em um amplo sal�o onde v�rias mesas e cadeiras est�o postas ao
-redor.  Nada � feito com demasiada opul�ncia; as mesas e cadeiras s�o de
+A Confraria da Família Daguerreo~
+   Você está em um amplo salão onde várias mesas e cadeiras estão postas ao
+redor.  Nada é feito com demasiada opulência; as mesas e cadeiras são de
 madeira, com diferentes ornamentos e belos formatos.  A sua cor branca
 encanta todo o local.
-   Uma mesa de m�rmore negro pode ser visto ao fundo, e nela aventureiros
-conversam sobre aventuras e miss�es, discutindo sobre mapas e pergaminhos.
-Po��es podem ser vistas em algumas mesas, mas as bebidas comuns como �gua e
-cerveja s�o as preferidas.
-   As paredes s�o decoradas com imagens em tape�aria da bela cidade de
-Ipsen, ber�o do primeiro Daguerreo, e de fatos importantes ocorridos durante
-toda a hist�ria dessa grande fam�lia.  H� uma porta no final do sal�o,
-aproximando-se dela voc� pode ouvir barulhos de poucas pessoas conversando.
+   Uma mesa de mármore negro pode ser visto ao fundo, e nela aventureiros
+conversam sobre aventuras e missões, discutindo sobre mapas e pergaminhos.
+Poções podem ser vistas em algumas mesas, mas as bebidas comuns como água e
+cerveja são as preferidas.
+   As paredes são decoradas com imagens em tapeçaria da bela cidade de
+Ipsen, berço do primeiro Daguerreo, e de fatos importantes ocorridos durante
+toda a história dessa grande família.  Há uma porta no final do salão,
+aproximando-se dela você pode ouvir barulhos de poucas pessoas conversando.
 ~
-220 131080 0 0 0 0
-D0
+220.2 dr 0
+ON confraria
+D 0
 ~
 ~
 0 -1 22016
-D2
+D 2
 ~
 ~
 0 -1 3079
 S
 #22016
 A Sala Especial~
-   Essa sala � freq�entemente usada em reuni�es fechadas.  Assim, ter� que
-retirar-se caso lhe seja solicitado.  H� tamb�m momentos em que provas,
-aventuras, miss�es e at� salvamentos ser�o feitos a partir dessa sala.
-   Esse local � diferente de outros, pois aqui n�o se consegue definir o
-formato das paredes e nem mesmo o pr�prio limite de espa�o.  Tetos e pisos
-s�o de cores claras e alegres, e as paredes azuis e brancas.  Se olhar bem,
-parece que um arco-�ris passa pela sala, deixando um rastro de paz e
-harmonia em sua extens�o.
+   Essa sala é freqüentemente usada em reuniões fechadas.  Assim, terá que
+retirar-se caso lhe seja solicitado.  Há também momentos em que provas,
+aventuras, missões e até salvamentos serão feitos a partir dessa sala.
+   Esse local é diferente de outros, pois aqui não se consegue definir o
+formato das paredes e nem mesmo o próprio limite de espaço.  Tetos e pisos
+são de cores claras e alegres, e as paredes azuis e brancas.  Se olhar bem,
+parece que um arco-íris passa pela sala, deixando um rastro de paz e
+harmonia em sua extensão.
 ~
-220 131112 0 0 0 0
-D2
+220.2 dfr 0
+D 2
 ~
 ~
 0 -1 22015
 S
 #22020
-A Torre do Jornal de Vit�lia~
-   Voc� est� na Sede do Jornal de Vit�lia.  Um grande sal�o se apresenta �
-sua frente, com v�rias janelas mostrando toda a cidade de Midgaard.  No
-centro h� um balc�o com um bela recepcionista e um garoto vendendo jornais.
-Na sala acima, subindo uma grande escadaria, voc� ouve um barulho infernal.
+A Torre do Jornal de Vitália~
+   Você está na Sede do Jornal de Vitália.  Um grande salão se apresenta à
+sua frente, com várias janelas mostrando toda a cidade de Midgaard.  No
+centro há um balcão com um bela recepcionista e um garoto vendendo jornais.
+Na sala acima, subindo uma grande escadaria, você ouve um barulho infernal.
 ~
-220 131224 0 0 0 0
-D0
-~
-~
-0 -1 3080
-D4
+220.3 dehr 0
+ON jornal
+D 4
 ~
 ~
 0 -1 22021
+D 0
+~
+~
+0 -1 3080
 E
 janela janelas vidro~
-Olhando pela janela, voc� pode observar toda Midgaard - fidos, comerciantes,
-sentinelas, toda a confus�o da cidade grande.  As casas aparentam ser mais
-belas olhando-as de cima.  Voc� pode ver um pouco da floresta de Haon-dor.
+Olhando pela janela, você pode observar toda Midgaard - fidos, comerciantes,
+sentinelas, toda a confusão da cidade grande.  As casas aparentam ser mais
+belas olhando-as de cima.  Você pode ver um pouco da floresta de Haon-dor.
 ~
 S
 #22021
 A Sala da Imprensa~
-   Mas que barulho infernal!  Tapando os ouvidos para n�o ficar tonto, voc�
-percebe que h� uma grande m�quina no centro, sendo manipulada por um
-simp�tico homem.  Subindo as escadas pode-se ouvir v�rias vozes, e
-descendo-as se retorna ao sal�o da Torre.
+   Mas que barulho infernal!  Tapando os ouvidos para não ficar tonto, você
+percebe que há uma grande máquina no centro, sendo manipulada por um
+simpático homem.  Subindo as escadas pode-se ouvir várias vozes, e
+descendo-as se retorna ao salão da Torre.
 ~
-220 131128 0 0 0 0
-D4
+220.3 defr 0
+D 4
 ~
 ~
 0 -1 22022
-D5
+D 5
 ~
 ~
 0 -1 22020
 S
 #22022
-A Sala da Reda��o~
-   A Sala da Reda��o � bem diferente do que voc� poderia imaginar.  Pap�is
-forram o ch�o, enquanto mesas de madeira desorganizadas est�o espalhadas
-pela sala.  Ao leste, h� uma porta de carvalho, com algo escrito arranhado.
-Descendo o lance de escadas, voc� volta para a Sala da Imprensa.
+A Sala da Redação~
+   A Sala da Redação é bem diferente do que você poderia imaginar.  Papéis
+forram o chão, enquanto mesas de madeira desorganizadas estão espalhadas
+pela sala.  Ao leste, há uma porta de carvalho, com algo escrito arranhado.
+Descendo o lance de escadas, você volta para a Sala da Imprensa.
 ~
-220 131096 0 0 0 0
-D1
-A porta de carvalho est� riscada com os dizeres "O editor-chefe fede".
+220.3 der 0
+D 1
+A porta de carvalho está riscada com os dizeres "O editor-chefe fede".
 ~
 porta carvalho~
-1 -1 22023
-D5
+:n 2 a porta de carvalho
+ab -1 22023
+D 5
 ~
 ~
 0 -1 22021
 S
 #22023
 A Sala do Editor-Chefe~
-   Esta � a sala mais bela da Torre.  Daqui se pode avistar toda Midgaard,
-al�m de outras cidades al�m.  As paredes s�o preenchidas com uma bela cor
-amarela, em contraste com a verde mesa e v�rias plantas.  Pinturas est�o
-espalhadas pelas paredes, junto com uma tabela de dardos.  A organiza��o da
-sala � incr�vel.  Ao oeste, se retorna � sala da Reda��o.
+   Esta é a sala mais bela da Torre.  Daqui se pode avistar toda Midgaard,
+além de outras cidades além.  As paredes são preenchidas com uma bela cor
+amarela, em contraste com a verde mesa e várias plantas.  Pinturas estão
+espalhadas pelas paredes, junto com uma tabela de dardos.  A organização da
+sala é incrível.  Ao oeste, se retorna à sala da Redação.
 ~
-220 131096 0 0 0 0
-D3
+220.3 der 0
+D 3
 ~
 porta carvalho~
-1 -1 22022
+:n 2 a porta de carvalho
+ab -1 22022
 S
 #22025
 Os Jardins de Videl~
-   Voc� acabou de entrar em um jardim absolutamente maravilhoso.  S�o tantas
-as flores plantadas aqui, que voc� tem certeza de que as m�os que as
-plantaram devem ser m�os de fada.  Em todas as cores e exalando perfumes
-inesquec�veis, sua vontade � permanecer aqui, por um longo tempo, apenas
-pensando na vida e usufruindo de toda essa beleza.  H� uma pequena trilha
-que segue em dire��o sul, que serpenteia todo o jardim e voc� decide
+   Você acabou de entrar em um jardim absolutamente maravilhoso.  São tantas
+as flores plantadas aqui, que você tem certeza de que as mãos que as
+plantaram devem ser mãos de fada.  Em todas as cores e exalando perfumes
+inesquecíveis, sua vontade é permanecer aqui, por um longo tempo, apenas
+pensando na vida e usufruindo de toda essa beleza.  Há uma pequena trilha
+que segue em direção sul, que serpenteia todo o jardim e você decide
 segui-la, para ver onde esse caminho vai dar.
 ~
-220 20 0 0 0 2
+220.4 ce 2
 D1
-Voc� v� o Grande Campo de Midgaard.
+Você vê o Grande Campo de Midgaard.
 ~
 ~
 0 -1 3065
 D2
-Voc� v� uma pequena trilha que segue serpenteando um lindo jardim.
+Você vê uma pequena trilha que segue serpenteando um lindo jardim.
 ~
 ~
 0 -1 22026
@@ -204,79 +193,81 @@ S
 #22026
 Os Jardins de Videl~
    O imenso jardim de flores parece ser o habitat natural de dezenas de
-criaturas m�gicas e ador�veis, pois, embora voc� n�o as veja, consegue
-sentir suas presen�as suaves e, aparentemente, curiosas.  Um pequenino
-riacho mata a sede de todos os p�ssaros que aqui v�m, em busca de abrigo.
-No fundo do jardim, h� uma pequena cerquinha branca e parece que algu�m
+criaturas mágicas e adoráveis, pois, embora você não as veja, consegue
+sentir suas presenças suaves e, aparentemente, curiosas.  Um pequenino
+riacho mata a sede de todos os pássaros que aqui vêm, em busca de abrigo.
+No fundo do jardim, há uma pequena cerquinha branca e parece que alguém
 muito caprichoso, colocou uma delicada @Wplaquinha@n, feita de madeira e toda
-enfeitada por flores entalhadas na pr�pria madeira.
+enfeitada por flores entalhadas na própria madeira.
 ~
-220 20 0 0 0 2
+220.4 ec 2
 D0
-Que bel�ssimo jardim! T�o bem cuidado que voc� acredita que ali deve ser o lar
-de algu�m muito especial.
+Que belíssimo jardim! Tão bem cuidado que você acredita que ali deve ser o lar
+de alguém muito especial.
 ~
 ~
 0 -1 22025
 D2
-Al�m da cerquinha branca, parece haver um lugar extraordin�riamente bonito. 
-O que ser� aquele lugar? Quem ser� o propriet�rio deste oasis?
+Além da cerquinha branca, parece haver um lugar extraordináriamente bonito. 
+O que será aquele lugar? Quem será o proprietário deste oasis?
 ~
 cerquinha~
-1 -1 22027
-E
-placa plaquinha~
-  
-    	C"Este � o meu jardim. � aqui que eu trago os meus amigos queridos, os 
-amigos que acima de tudo, amam a Natureza com a mesma for�a que eu.  Se voc�
-chegou at� aqui e n�o consegue passar, n�o se sinta magoado e aguarde pelo meu
-convite. Se conseguiu entrar, seja Bem-Vindo, eu o recebo com o cora��o aberto
-e um imenso sorriso nos l�bios. Lembre-se por�m de seguir as minhas regras, que
-por sinal s�o bem simples:
- 
- 	W1- N�o apanhe nenhuma das flores do meu jardim.
-
- 2- N�o d� nenhuma comida aos p�ssaros que n�o seja adequada.
-
- 3- N�o jogue lixo dentro do riacho. Lembre-se que ali vivem in�meras
-    criaturas m�gicas, que podem n�o gostar desse tipo de atitude.
-
- 4- N�o jogue NUNCA, nenhum tipo de lixo no ch�o.  Use as lixeiras espalhadas
-    por todos os cantos do meu jardim.
-
- 5- E por �ltimo: jamais ofenda meus companheiros, desacreditando dos seus
-    poderes m�gicos.  Elfos, fadas e duendes; s�lfides e ondinas; dr�ades e
-    n�iades s�o os moradores desse lugar m�gico. 
- 
-    	MVidel Pendragon Daguereo  * 	CA Sereia Amiga da Princesa das Aguas *	n
-~
+:n 2 a cerquinha
+a -1 22027
 E
 cerquinha cerca~
 Uma linda cerquinha branca, feita de madeira.
 ~
+E
+placa plaquinha~
+  
+    @C"Este é o meu jardim. É aqui que eu trago os meus amigos queridos, os 
+amigos que acima de tudo, amam a Natureza com a mesma força que eu.  Se você
+chegou até aqui e não consegue passar, não se sinta magoado e aguarde pelo meu
+convite. Se conseguiu entrar, seja Bem-Vindo, eu o recebo com o coração aberto
+e um imenso sorriso nos lábios. Lembre-se porém de seguir as minhas regras, que
+por sinal são bem simples:
+ 
+ @W1- Não apanhe nenhuma das flores do meu jardim.
+
+ 2- Não dê nenhuma comida aos pássaros que não seja adequada.
+
+ 3- Não jogue lixo dentro do riacho. Lembre-se que ali vivem inúmeras
+    criaturas mágicas, que podem não gostar desse tipo de atitude.
+
+ 4- Não jogue NUNCA, nenhum tipo de lixo no chão.  Use as lixeiras espalhadas
+    por todos os cantos do meu jardim.
+
+ 5- E por último: jamais ofenda meus companheiros, desacreditando dos seus
+    poderes mágicos.  Elfos, fadas e duendes; sílfides e ondinas; dríades e
+    náiades são os moradores desse lugar mágico. 
+ 
+    @MVidel Pendragon Daguereo  * @CA Sereia Amiga da Princesa das Aguas *@n
+~
 S
 #22027
 Seja Bem-Vindo aos Pic-Nics de Videl~
-   Voc� acabou de entrar num dos lugares mais bonitos que j� esteve em sua
-vida.  S�o tantas as cores, � tanta beleza e tudo � t�o impecavelmente
-arrumado, que voc� subitamente se sente transportado para o verdadeiro
-para�so.  Tudo aqui parece ter sido criado pensando no bem estar e na
-tranquilidade daqueles que aqui estiverem.  H� um lindo gramado,
-perfeitamente aparado, que parece convidar as pessoas a andarem descal�as.
-As imensas �rvores fornecem sombra fresca e existem v�rias redes, colocadas
-em v�rias delas, que voc� adoraria poder usar, para um breve cochilo.  O
-pequeno riacho completa o cen�rio parasid�aco, transformando o aconchegante
-lugar, em verdadeiro oasis.  Uma jovem se aproxima de voc� e o convida para
-fazer parte dessa imensa mesa, repleta da melhor comida que voc� jamais
+   Você acabou de entrar num dos lugares mais bonitos que já esteve em sua
+vida.  São tantas as cores, é tanta beleza e tudo é tão impecavelmente
+arrumado, que você subitamente se sente transportado para o verdadeiro
+paraíso.  Tudo aqui parece ter sido criado pensando no bem estar e na
+tranquilidade daqueles que aqui estiverem.  Há um lindo gramado,
+perfeitamente aparado, que parece convidar as pessoas a andarem descalças.
+As imensas árvores fornecem sombra fresca e existem várias redes, colocadas
+em várias delas, que você adoraria poder usar, para um breve cochilo.  O
+pequeno riacho completa o cenário parasidíaco, transformando o aconchegante
+lugar, em verdadeiro oasis.  Uma jovem se aproxima de você e o convida para
+fazer parte dessa imensa mesa, repleta da melhor comida que você jamais
 provou.  Aproveite!
 ~
-220 2132 0 0 0 2
+220.4 ecgl 2
 D0
-Que bel�ssimo jardim! T�o bem cuidado que voc� acredita que ali deve ser o lar
-de algu�m muito especial.
+Que belíssimo jardim! Tão bem cuidado que você acredita que ali deve ser o lar
+de alguém muito especial.
 ~
 cerquinha~
-1 -1 22026
+:n 2 a cerquinha
+a -1 22026
 E
 cerquinha cerca~
 Uma linda cerquinha branca, feita de madeira.
@@ -284,150 +275,161 @@ Uma linda cerquinha branca, feita de madeira.
 S
 #22030
 A Sala da Amizade~
-   Voc� entra neste ambiente e sabe que est� entre amigos que gostam e acima
-de tudo, se preocupam com voc�.  Um sentimento de paz o envolve e finalmente
-voc� se sente � vontade.  As paredes parecem ser feitas de algod�o e voc�
+   Você entra neste ambiente e sabe que está entre amigos que gostam e acima
+de tudo, se preocupam com você.  Um sentimento de paz o envolve e finalmente
+você se sente à vontade.  As paredes parecem ser feitas de algodão e você
 sente vontade de se aproximar para testar sua maciez.  Suave luz parece vir
-de cima, contudo, voc� n�o consegue dizer com precis�o exatamente de onde.
-Uma doce melodia envolve o ambiente e aos poucos, voc� sente que seu
-esp�rito vai se preenchendo com sentimento de amor e carinho.
+de cima, contudo, você não consegue dizer com precisão exatamente de onde.
+Uma doce melodia envolve o ambiente e aos poucos, você sente que seu
+espírito vai se preenchendo com sentimento de amor e carinho.
 ~
-220 1441916 0 0 0 1
-D4
-Voc� v� pequenina sala.
-~
-~
-0 -1 22031
+220.5 cdefgrsu 1
+ON paz
 D9
-Voc� v� uma Pra�a.
+Você vê uma Praça.
 ~
 ~
 0 -1 3005
+D4
+Você vê pequenina sala.
+~
+~
+0 -1 22031
 S
 #22031
 A Sala dos Conselhos Dados~
    Esta sala simples e despojada de qualquer bem material, lembra-o a todos
-os momentos que o importante na vida, n�o � aquilo que temos mas sim, aquilo
+os momentos que o importante na vida, não é aquilo que temos mas sim, aquilo
 que somos.  Por aqui passaram todos aqueles que procuraram ajuda e
-encontraram.  Lembran�as boas e amargas foram aqui compartilhadas e por
-isso, ela se tornou um verdadeiro santu�rio.  H� apenas um imenso mural
+encontraram.  Lembranças boas e amargas foram aqui compartilhadas e por
+isso, ela se tornou um verdadeiro santuário.  Há apenas um imenso mural
 neste lugar, onde se pode ler a palavra dos que possuem algo dentro de si
-para compartilhar.  Este � um @Rlugar sagrado@n...n�o se esque�a disso.  Suave
-claridade vinda tanto do norte, quanto do sul, desperta a sua aten��o e uma
-onda de energia positiva o envolve, despertando em voc� fraternidade e amor.
+para compartilhar.  Este é um @Rlugar sagrado@n...não se esqueça disso.  Suave
+claridade vinda tanto do norte, quanto do sul, desperta a sua atenção e uma
+onda de energia positiva o envolve, despertando em você fraternidade e amor.
 ~
-220 1441916 0 0 0 1
-D0
-Suave luz azulada atrai a sua aten��o.
-~
-porta~
-1 -1 22033
-D2
-Suave luz em tom r�seo atrai a sua aten��o.
-~
-porta~
-1 -1 22032
+220.5 cdefgrsu 1
 D5
-Voc� v� uma linda sala.
+Você vê uma linda sala.
 ~
 ~
 0 -1 22030
+D2
+Suave luz em tom róseo atrai a sua atenção.
+~
+porta~
+:n 2
+a -1 22032
+D0
+Suave luz azulada atrai a sua atenção.
+~
+porta~
+:n 2
+a -1 22033
 S
 #22032
 A Sala dos Sentimentos Puros~
-   � t�o calmo este lugar que voc� sente que poderia chorar livremente aqui,
-sem sentir o menor constrangimento.  � como se todas as suas emo��es se
+   É tão calmo este lugar que você sente que poderia chorar livremente aqui,
+sem sentir o menor constrangimento.  É como se todas as suas emoções se
 transformassem em pequeninas gotas de chuva e suavemente deslizassem por
 sobre as paredes rosadas e fossem absorvidas bem devagar, com respeito, com
-amor.  � como se todas as suas palavras pudessem se transformar em brilho e
-estivessem iluminando este lugar e a voc� tamb�m.  E voc� ent�o tem a
-certeza plena de que n�o est� s� neste mundo e que pode enfim sorrir.
+amor.  É como se todas as suas palavras pudessem se transformar em brilho e
+estivessem iluminando este lugar e a você também.  E você então tem a
+certeza plena de que não está só neste mundo e que pode enfim sorrir.
 ~
-220 1441916 0 0 0 1
+220.5 cdefgrsu 1
 D0
-Voc� pode ver uma sala aconchegante e quase et�rea.
+Você pode ver uma sala aconchegante e quase etérea.
 ~
 porta~
-1 -1 22031
-D1
-Um pequeno e s�brio aposento pode ser visto.
-~
-porta~
-1 -1 22035
+:n 2
+a -1 22031
 D4
-O doce ru�do de �gua corrente parece vir daquela dire��o.
+O doce ruído de água corrente parece vir daquela direção.
 ~
 porta~
-1 -1 22034
+:n 2
+a -1 22034
+D1
+Um pequeno e sóbrio aposento pode ser visto.
+~
+porta~
+:n 2
+a -1 22035
 S
 #22033
 A Sala dos Sentimentos Nobres~
-   � t�o calmo este lugar que voc� sente que poderia chorar livremente aqui,
-sem sentir o menor constrangimento.  � como se todas as suas emo��es se
+   É tão calmo este lugar que você sente que poderia chorar livremente aqui,
+sem sentir o menor constrangimento.  É como se todas as suas emoções se
 transformassem em pequeninas gotas de chuva e suavemente deslizassem por
 sobre as paredes azuladas e fossem absorvidas bem devagar, com respeito, com
-amor.  � como se todas as suas palavras pudessem se transformar em brilho e
-estivessem iluminando este lugar e a voc� tamb�m.  E voc� ent�o tem a
-certeza plena de que n�o est� s� neste mundo e que pode enfim sorrir.
+amor.  É como se todas as suas palavras pudessem se transformar em brilho e
+estivessem iluminando este lugar e a você também.  E você então tem a
+certeza plena de que não está só neste mundo e que pode enfim sorrir.
 ~
-220 1441916 0 0 0 1
+220.5 cdefgrsu 1
 D2
-Voc� pode ver uma sala aconchegante e quase et�rea.
+Você pode ver uma sala aconchegante e quase etérea.
 ~
 porta~
-1 -1 22031
-D3
-Um pequeno e s�brio aposento pode ser visto.
-~
-porta~
-1 -1 22035
+:n 2
+a -1 22031
 D4
-O doce ru�do de �gua corrente parece vir daquela dire��o.
+O doce ruído de água corrente parece vir daquela direção.
 ~
 porta~
-1 -1 22034
+:n 2
+a -1 22034
+D3
+Um pequeno e sóbrio aposento pode ser visto.
+~
+porta~
+:n 2
+a -1 22035
 S
 #22034
 Ouvindo as Palavras da Vida~
-   Ao entrar neste lugar, a sua primeira impress�o � que voc� acabou de
-encontrar o Para�so.  O lugar � absolutamente perfeito.  A Natureza parece
-ter concentrado todas as suas for�as para transformar este pequeno o�sis em
-sua obra-prima.  S�o flores t�o delicadas e com perfumes t�o sutis que seria
-dif�cil descrever.  Uma pequenina fonte jorra sua �gua pura e cristalina e
-voc� se sente enlevado com a suave melodia que os delicados p�ssaros azuis
-entoam, sem parar, como se estivessem saudadando a sua presen�a.  �rvores
-majestosas, produzem sombra fresca e parecem convidar voc� � medita��o.
-Ou�a o som do vento, ou�a o som da �gua...ou�a seu cora��o...e encontre o
+   Ao entrar neste lugar, a sua primeira impressão é que você acabou de
+encontrar o Paraíso.  O lugar é absolutamente perfeito.  A Natureza parece
+ter concentrado todas as suas forças para transformar este pequeno oásis em
+sua obra-prima.  São flores tão delicadas e com perfumes tão sutis que seria
+difícil descrever.  Uma pequenina fonte jorra sua água pura e cristalina e
+você se sente enlevado com a suave melodia que os delicados pássaros azuis
+entoam, sem parar, como se estivessem saudadando a sua presença.  Árvores
+majestosas, produzem sombra fresca e parecem convidar você à meditação.
+Ouça o som do vento, ouça o som da água...ouça seu coração...e encontre o
 caminho para a felicidade.
 ~
-220 1441916 0 0 0 1
+220.5 cdefgrsu 1
 D5
-Voc� pode ver uma sala aconchegante e quase et�rea.
+Você pode ver uma sala aconchegante e quase etérea.
 ~
 ~
 0 -1 22031
 S
 #22035
-O Encontro da Uni�o e da For�a~
+O Encontro da União e da Força~
    O aposento pequenino e muito claro mostra instantaneamente, que as
-pessoas que cuidam deste local s�o s�rias e totalmente despojadas de
-qualquer tipo de apego material.  Embora simples, o local � t�o sereno que
-d� vontade de aqui ficar.  As pequenas aberturas nas paredes, deixam filtrar
-a luz clara e de tons azulados e r�seos, vindas das salas anexas a essa.
-Tamb�m se pode ouvir daqui, o som suave de �gua corrente.  A vida parece
-tomar conta desta sala.  Um pequeno mural est� fixado na parede e este
-parece ser um importante meio de comunica��o.
+pessoas que cuidam deste local são sérias e totalmente despojadas de
+qualquer tipo de apego material.  Embora simples, o local é tão sereno que
+dá vontade de aqui ficar.  As pequenas aberturas nas paredes, deixam filtrar
+a luz clara e de tons azulados e róseos, vindas das salas anexas a essa.
+Também se pode ouvir daqui, o som suave de água corrente.  A vida parece
+tomar conta desta sala.  Um pequeno mural está fixado na parede e este
+parece ser um importante meio de comunicação.
 ~
-220 1441916 0 0 0 1
-D1
-Voc� pode ver daqui uma luz suavemente azulada.
-~
-porta~
-1 -1 22033
+220.5 cdefgrsu 1
 D3
-Voc� pode ver daqui uma luz suavemente rosada.
+Você pode ver daqui uma luz suavemente rosada.
 ~
 porta~
-1 -1 22032
+:n 2
+a -1 22032
+D1
+Você pode ver daqui uma luz suavemente azulada.
+~
+porta~
+:n 2
+a -1 22033
 S
-$~
+$
