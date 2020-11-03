@@ -6,7 +6,7 @@ greetings
 @W       << @wSe voce nao possui um personagem neste jogo, digite "@RNOVO@w".@W >>@n
 
 autoress/limits
-spells a partir de poison
+spells mage_iden,raise,ress,vamp (manual)
 reroll
 clans
 
