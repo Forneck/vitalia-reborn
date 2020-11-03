@@ -357,9 +357,9 @@ void create_spells_db()
  new_spell->effectiveness = strdup("50");
  new_spell->summon_mob = strdup("10");
 // new_spell->summon_req = strdup("10221");
- sprintf(buf, "(80 - (5 * self.level)) > 65 ? (80 - (5 * self.level)) : 65");
+ sprintf(buf, "(130 - (3 * self.level)) > 120 ? (130 - (3 * self.level)) : 120 ");
  new_spell->assign[0].class_num = CLASS_MAGIC_USER;
- new_spell->assign[0].level = 10;
+ new_spell->assign[0].level = 14;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->messages.to_room = strdup("$N magicamente se divide!");
 
@@ -478,7 +478,7 @@ void create_spells_db()
  spedit_save_internally(new_spell);
 
 
- // SPELL_CREATE_WATER #13
+ // SPELL_CREATE_NECTAR #88
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
@@ -1257,9 +1257,9 @@ new_spell->assign[0].level = 109;
  new_spell->mag_flags = MAG_SUMMONS;
  new_spell->effectiveness = strdup("50");
  new_spell->summon_mob = strdup("11");
- sprintf(buf, "(35 - (3 * self.level)) > 10 ? (35 - (3 * self.level)) : 10");
+ sprintf(buf, "(130 - (3 * self.level)) > 120 ? (130 - (3 * self.level)) : 120 ");
    new_spell->assign[0].class_num = CLASS_CLERIC;
- new_spell->assign[0].level = 24;
+ new_spell->assign[0].level = 14;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->messages.to_room = strdup("$N anima um corpo!!");
 
@@ -1572,6 +1572,8 @@ new_spell->assign[0].level = 109;
  new_spell->applies[0].appl_num = APPLY_AC;
  new_spell->applies[0].modifier = strdup("-5");
  new_spell->applies[0].duration = strdup("self.level");
+new_spell->applies[1].appl_num = AFF_FIRESHIELD;
+ new_spell->applies[1].duration = strdup("self.level"); 
  new_spell->messages.to_vict = strdup("Uma ardente aura vermelha envolve você.");
   new_spell->messages.to_room = strdup("Uma ardente aura vermelha envolve $N.");
  new_spell->messages.wear_off = strdup("A aura de fogo ao redor de seu corpo desaparece.");
@@ -1653,9 +1655,9 @@ new_spell->vnum = SPELL_DISINTEGRATE;
  new_spell->mag_flags = MAG_SUMMONS;
  new_spell->effectiveness = strdup("50");
  new_spell->summon_mob = strdup("19");
- sprintf(buf, "(35 - (3 * self.level)) > 10 ? (35 - (3 * self.level)) : 10");
+sprintf(buf, "(130 - (3 * self.level)) > 120 ? (130 - (3 * self.level)) : 120 ");
    new_spell->assign[0].class_num = CLASS_RANGER;
- new_spell->assign[0].level = 24;
+ new_spell->assign[0].level = 14;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->messages.to_room = strdup("$N invoca um servo aéreo!!");
 
@@ -1944,11 +1946,78 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->assign[0].class_num = CLASS_DRUID;
  new_spell->assign[0].level = 15;
  new_spell->assign[0].num_mana = strdup(buf);
-  new_spell->assign[0].class_num = CLASS_RANGER;
- new_spell->assign[0].level = 18;
- new_spell->assign[0].num_mana = strdup(buf);
+  new_spell->assign[1].class_num = CLASS_RANGER;
+ new_spell->assign[1].level = 18;
+ new_spell->assign[1].num_mana = strdup(buf);
  new_spell->messages.to_vict = strdup("Uma onda de calor atravessa seu corpo, fazendo você se sentir melhor.\r\n");
  new_spell->points.hp = strdup("dice(2, 8) + 2 + (param / 4)");
+ spedit_save_internally(new_spell);
+ 
+  //SPELL_LIGHTNING_BLAST	     76 
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_LIGHTNING_BLAST;
+ new_spell->status = available;
+ new_spell->name = strdup("lightning blast");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_FIGHT_VICT;
+ new_spell->mag_flags = MAG_DAMAGE | MAG_VIOLENT;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(150 - (40 * self.level)) > 75 ? (150 - (40 * self.level)) : 75");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 80;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->damages = strdup("self.class == 4 ? dice(4, 7) + 195 : dice(4,4) + 180");
+ new_spell->max_dam = 300;
+
+ spedit_save_internally(new_spell);
+ 
+   // SPELL_REGENERATION	     77
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SPELL_REGENERATION;
+ new_spell->status = available;
+ new_spell->name = strdup("regeneration");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_CHAR_ROOM;
+ new_spell->mag_flags = MAG_POINTS;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(60 - (3 * self.level)) > 15 ? (60 - (3 * self.level)) : 15");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 40;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->messages.to_vict = strdup("Você sente o poder da natureza curando seu corpo.\r\n");
+ new_spell->points.hp = strdup("dice(6, 8)");
+  new_spell->points.move = strdup("10 + dice(2, 6)");
+ spedit_save_internally(new_spell);
+ 
+ // SPELL_THISTLECOAT #78
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_THISTLECOAT;
+ new_spell->status = available;
+ new_spell->name = strdup("thistlecoat");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_CHAR_ROOM;
+ new_spell->mag_flags = MAG_AFFECTS;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(30 - (3 * self.level)) > 20 ? (30 - (3* self.level)) : 20");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 8;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = APPLY_AC;
+ new_spell->applies[0].modifier = strdup("-3");
+ new_spell->applies[0].duration = strdup("13");
+ new_spell->applies[1].appl_num = AFF_THISTLECOAT;
+  new_spell->applies[1].duration = strdup("13");
+ new_spell->messages.to_vict = strdup("Você é recobert$r por um casaco de espinhos!");
+  new_spell->messages.to_room = strdup("Um casaco de espinhos recobre $N.");
+ new_spell->messages.wear_off = strdup("Você percebe que seu casaco de espinhos se desfez.");
  spedit_save_internally(new_spell);
  
 // SKILL_BACKSTAB # 131 
