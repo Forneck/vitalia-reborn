@@ -104,7 +104,7 @@
 #define SPELL_FIRESHIELD	     54 /* -- vp -			 */
 #define SPELL_IMPROVED_ARMOR	     55 /* -- vp -			 */
 #define SPELL_DISINTEGRATE	     56 /* -- vp -			 */
-#define SPELL_MAGE_IDENTIFY	     57 /* -- vp -			 */
+#define SPELL_EVOKE_AIR_SERVANT    57 /* -- vp -			 */
 #define SPELL_TALKDEAD		     58 /* -- vp -			 */
 #define SPELL_RAISE_DEAD	     59 /* -- vp -			 */
 #define SPELL_RESSURECT		     60 /* -- vp -			 */
