@@ -70,6 +70,9 @@ void set_spells_function()
  if ((spell = get_spell_by_vnum(SPELL_IDENTIFY)))
    spell->function = spell_identify;
 
+ if ((spell = get_spell_by_vnum(SPELL_SCROLL_IDENTIFY)))
+   spell->function = spell_identify;
+
  if ((spell = get_spell_by_vnum(SPELL_TRANSPORT_VIA_PLANTS)))
    spell->function = spell_transport_via_plants;
 
@@ -1937,8 +1940,6 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->effectiveness = strdup("100");
  new_spell->assign[0].class_num = CLASS_THIEF;
  new_spell->assign[0].level = 3;
-
-
  spedit_save_internally(new_spell);
 
  // SKILL_BASH # 132 
