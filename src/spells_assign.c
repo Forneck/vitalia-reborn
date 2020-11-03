@@ -1501,7 +1501,7 @@ new_spell->assign[0].level = 109;
 
  spedit_save_internally(new_spell);
  
- // SPELL_PROTECTION_FROM_EVIL # 56
+ // SPELL_PROTECTION_FROM_GOOD # 94
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
@@ -1543,7 +1543,7 @@ new_spell->assign[0].level = 109;
  new_spell->applies[0].appl_num = AFF_STONESKIN + NUM_APPLIES;
  new_spell->applies[0].duration = strdup("24");
  new_spell->messages.to_vict = strdup("Você sente sua pele se tornando dura como rocha.");
- new_spell->messages.to_room = strdup("A pele de $n se torna mais dura.");
+ new_spell->messages.to_room = strdup("A pele de $N se torna mais dura.");
  new_spell->messages.wear_off = strdup("Sua pele perde a dureza.");
 
  spedit_save_internally(new_spell);
@@ -1711,8 +1711,27 @@ new_spell->vnum = SPELL_DISINTEGRATE;
  new_spell->messages.to_vict = strdup("Você foi paralisad$r!");
   new_spell->messages.to_room = strdup("$N foi paralisad$r!");
  new_spell->messages.wear_off = strdup("Você pode andar novamente.");
-
  spedit_save_internally(new_spell);
+ 
+ /* SPELL_aid #65
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_AID;
+  new_spell->status = available;
+ new_spell->name = strdup("aid");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_SELF_ONLY;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR |  MAG_POINTS | MAG_UNAFFECTS;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(180 - (5 * self.level)) > 120 ? (180 - (5 * self.level)) : 120");
+ new_spell->applies[0].duration = strdup("self.level/5");
+  new_spell->messages.wear_off = strdup("Você sente seu corpo menos resistente.");
+ new_spell->messages.to_vict = strdup("Você sente seu corpo mais resistente.");
+  spedit_save_internally(new_spell);
+ */
+ 
  
  // SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
