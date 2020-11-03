@@ -344,16 +344,15 @@ const char *affected_bits[] =
   "PROT-GOOD",
   "SLEEP",
   "NO_TRACK",
-  "FLY",
-  "SCUBA",
+   "STONESKIN",
+   "FIRESHIELD",
   "SNEAK",
   "HIDE",
-  "PARALYZE",
-  "CHARM",
-   "PROT-SPELL",
-   "STONESKIN",
-   "FIRESHIELD"
    "TALKDEAD",
+  "CHARM",
+  "FLYING",
+  "BREATH",
+  "PARALYZE",
    "LIGHT",
    "FIREFLIES",
    "STINGING",
@@ -362,6 +361,7 @@ const char *affected_bits[] =
    "ADAGIO",
    "ALLEGRO",
    "GLOOMSHIELD",
+   "PROT-SPELL",
   "\n"
 };
 
