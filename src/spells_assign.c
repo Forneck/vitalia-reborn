@@ -178,7 +178,8 @@ void create_spells_db()
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(75 - (3 * self.level)) > 50 ? (75 - (3 * self.level)) : 50");
  new_spell->assign[0].num_mana = strdup(buf);
-
+ new_spell->assign[0].class_num = CLASS_RANGER;
+ new_spell->assign[0].level = 100;
  spedit_save_internally(new_spell);
 
  // SPELL_BLESS #3
@@ -1881,6 +1882,28 @@ new_spell->vnum = SPELL_IGNITE;
   new_spell->damages = strdup ("dice(3, self.class == 4 ? 9 : 3) + self.class == 4 ? 13 : 9");
  new_spell->max_dam = 100;
  spedit_save_internally(new_spell);
+ 
+      //spell_INVIGOR 74
+CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+new_spell->vnum = SPELL_INVIGOR;
+ new_spell->status = available;
+ new_spell->name = strdup("invigor");
+ new_spell->type = SPELL;
+ TAR_CHAR_ROOM;
+ new_spell->mag_flags = MAG_POINTS;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(40 - (3 * self.level)) > 15 ? (40 - (3 * self.level)) : 15");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 13;
+ new_spell->assign[0].num_mana = strdup(buf);
+   new_spell->assign[1].class_num = CLASS_RANGER;
+ new_spell->assign[1].level = 15;
+ new_spell->assign[1].num_mana = strdup(buf);
+ new_spell->messages.to_vict = strdup("Você se sente mais dispost$r.");
+ new_spell->points.mov = strdup("dice(1, 8) + 1 + (param / 4)");
+ 
+  spedit_save_internally(new_spell);
  
 // SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
