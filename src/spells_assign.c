@@ -1737,7 +1737,93 @@ CREATE(new_spell, struct str_spells, 1);
  new_spell->messages.to_vict = strdup("Você sente seu corpo mais resistente.");
   spedit_save_internally(new_spell);
  
-
+ //spell_skin_like_wood 67
+CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+new_spell->vnum = SPELL_SKIN_LIKE_WOOD;
+ new_spell->status = available;
+ new_spell->name = strdup("skin like wood");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_SELF_ONLY;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(30 - (5 * self.level)) > 10 ? (30 - (5 * self.level)) : 10");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 3;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = APPLY_AC;
+ new_spell->applies[0].modifier = strdup("-15");
+ new_spell->applies[0].duration = strdup("24");
+ new_spell->messages.to_vict = strdup("Você se sente $x(protegido,protegida) pelo GRANDE CARVALHO.");
+ new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
+ spedit_save_internally(new_spell);
+ 
+  //spell_skin_like_rock 68
+CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+new_spell->vnum = SPELL_SKIN_LIKE_ROCK;
+ new_spell->status = available;
+ new_spell->name = strdup("skin like rock");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_SELF_ONLY;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(70 - (5 * self.level)) > 15 ? (70 - (5 * self.level)) : 15");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 35;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = APPLY_AC;
+ new_spell->applies[0].modifier = strdup("-35");
+ new_spell->applies[0].duration = strdup("24");
+ new_spell->messages.to_vict = strdup("Você se sente $x(protegido,protegida) pelas MONTANHAS DRAGONHELM.");
+ new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
+ spedit_save_internally(new_spell);
+ 
+   //spell_skin_like_steel 69
+CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+new_spell->vnum = SPELL_SKIN_LIKE_STEEL;
+ new_spell->status = available;
+ new_spell->name = strdup("skin like steel");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_SELF_ONLY;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 65;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = APPLY_AC;
+ new_spell->applies[0].modifier = strdup("-60");
+ new_spell->applies[0].duration = strdup("24");
+ new_spell->messages.to_vict = strdup("Você se sente $x(protegido,protegida) pelo aço.");
+ new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
+ spedit_save_internally(new_spell);
+ 
+   //spell_skin_like_diamond 70
+CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+new_spell->vnum = SPELL_SKIN_LIKE_DIAMOND;
+ new_spell->status = available;
+ new_spell->name = strdup("skin like diamond");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_SELF_ONLY;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(110 - (5 * self.level)) > 35 ? (110 - (5 * self.level)) : 35");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 90;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = APPLY_AC;
+ new_spell->applies[0].modifier = strdup("-90");
+ new_spell->applies[0].duration = strdup("24");
+ new_spell->messages.to_vict = strdup("Você se sente $x(protegido,protegida)  como uma pedra preciosa.");
+ new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
+ spedit_save_internally(new_spell);
  
  // SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
