@@ -85,6 +85,9 @@ void set_spells_function()
    if ((spell = get_spell_by_vnum(SPELL_VAMP_TOUCH)))
    spell->function = spell_vamp_touch;
 
+   if ((spell = get_spell_by_vnum(SPELL_FURY_OF_AIR)))
+   spell->function = spell_fury_air;
+
  if ((spell = get_spell_by_vnum(SKILL_BACKSTAB)))
    spell->function = do_backstab;
 
@@ -1620,6 +1623,26 @@ new_spell->applies[1].appl_num = AFF_FIRESHIELD + NUM_APPLIES;
  sprintf(buf, "(30 - (1 * self.level)) > 15 ? (30 - (1 * self.level)) : 30");
  new_spell->assign[0].class_num = CLASS_MAGIC_USER;
  new_spell->assign[0].level = 15;
+ new_spell->assign[0].num_mana = strdup(buf);
+
+ spedit_save_internally(new_spell);
+ 
+    //spell FURY_OF_AIR
+  CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_FURY_OF_AIR;
+ new_spell->status = available;
+ new_spell->name = strdup("fury of air");
+ new_spell->function = spell_fury_air;
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_FIGHT_VICT ;
+ new_spell->mag_flags = MAG_MANUAL | MAG_VIOLENT;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(200 - (10 * self.level)) > 100 ? (200 - (10 * self.level)) : 100");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 50;
  new_spell->assign[0].num_mana = strdup(buf);
 
  spedit_save_internally(new_spell);
