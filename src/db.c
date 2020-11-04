@@ -1334,7 +1334,7 @@ void discrete_load(FILE * fl, int mode, char *filename)
 				}
 		}
 		else
-		{
+ 		{
 			log1("SYSERR: Format error in %s file %s near %s #%d", modes[mode],
 				filename, modes[mode], nr);
 			log1("SYSERR: ... offending line: '%s'", line);
@@ -2091,8 +2091,9 @@ void parse_mobile(FILE * mob_f, int nr)
 	mob_proto[i].player.name = fread_string(mob_f, buf2);
 	tmpptr = mob_proto[i].player.short_descr = fread_string(mob_f, buf2);
 	if (tmpptr && *tmpptr)
-		if (!str_cmp(fname(tmpptr), "a") || !str_cmp(fname(tmpptr), "an") ||
-			!str_cmp(fname(tmpptr), "the"))
+		if (!str_cmp(fname(tmpptr), "um") || !str_cmp(fname(tmpptr), "uma") ||
+			!str_cmp(fname(tmpptr), "o")  ||
+			!str_cmp(fname(tmpptr), "a"))
 			*tmpptr = LOWER(*tmpptr);
 	mob_proto[i].player.long_descr = fread_string(mob_f, buf2);
 	mob_proto[i].player.description = fread_string(mob_f, buf2);
@@ -2170,7 +2171,7 @@ void parse_mobile(FILE * mob_f, int nr)
 		MOB_FLAGS(mob_proto + i)[1] = asciiflag_conv(f2);
 		MOB_FLAGS(mob_proto + i)[2] = asciiflag_conv(f3);
 		MOB_FLAGS(mob_proto + i)[3] = asciiflag_conv(f4);
-		for (taeller = 0; taeller < AF_ARRAY_MAX; taeller++)
+	for (taeller = 0; taeller < AF_ARRAY_MAX; taeller++)
 			check_bitvector_names(MOB_FLAGS(mob_proto + i)[taeller], action_bits_count, buf2,
 								  "mobile");
 
@@ -2181,7 +2182,7 @@ void parse_mobile(FILE * mob_f, int nr)
 
 		GET_ALIGNMENT(mob_proto + i) = t[2];
 
-		for (taeller = 0; taeller < AF_ARRAY_MAX; taeller++)
+			for (taeller = 0; taeller < AF_ARRAY_MAX; taeller++)
 			check_bitvector_names(AFF_FLAGS(mob_proto + i)[taeller], affected_bits_count, buf2,
 								  "mobile affect");
 	}
@@ -2262,8 +2263,9 @@ char *parse_object(FILE * obj_f, int nr)
 	}
 	tmpptr = obj_proto[i].short_description = fread_string(obj_f, buf2);
 	if (tmpptr && *tmpptr)
-		if (!str_cmp(fname(tmpptr), "a") || !str_cmp(fname(tmpptr), "an") ||
-			!str_cmp(fname(tmpptr), "the"))
+		if (!str_cmp(fname(tmpptr), "a") || !str_cmp(fname(tmpptr), "o") ||
+			!str_cmp(fname(tmpptr), "um") ||
+			!str_cmp(fname(tmpptr), "uma")
 			*tmpptr = LOWER(*tmpptr);
 
 	tmpptr = obj_proto[i].description = fread_string(obj_f, buf2);
