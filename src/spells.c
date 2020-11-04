@@ -715,7 +715,7 @@ ASPELL(spell_vamp_touch)
   if (ch == NULL || victim == NULL)
     return;
 
-  calc_thaco = compute_thaco(ch);
+  calc_thaco = compute_thaco(ch,victim);
   victim_ac = compute_armor_class(victim) / 10;
   diceroll = rand_number(1, 20);
 
