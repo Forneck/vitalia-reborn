@@ -2265,7 +2265,7 @@ char *parse_object(FILE * obj_f, int nr)
 	if (tmpptr && *tmpptr)
 		if (!str_cmp(fname(tmpptr), "a") || !str_cmp(fname(tmpptr), "o") ||
 			!str_cmp(fname(tmpptr), "um") ||
-			!str_cmp(fname(tmpptr), "uma")
+			!str_cmp(fname(tmpptr), "uma"))
 			*tmpptr = LOWER(*tmpptr);
 
 	tmpptr = obj_proto[i].description = fread_string(obj_f, buf2);
