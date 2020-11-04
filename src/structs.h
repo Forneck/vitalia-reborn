@@ -346,7 +346,7 @@
 #define AFF_GLOOMSHIELD        34
 #define AFF_PROTECT        35   /**< Char protected from spell */
 /** Total number of affect flags */
-#define NUM_AFF_FLAGS   36
+#define NUM_AFF_FLAGS   37
 
 /* Modes of connectedness: used by descriptor_data.state 		*/
 #define CON_PLAYING       0 /**< Playing - Nominal state 		*/
