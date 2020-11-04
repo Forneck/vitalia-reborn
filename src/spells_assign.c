@@ -78,6 +78,9 @@ void set_spells_function()
 
  if ((spell = get_spell_by_vnum(SPELL_PORTAL)))
    spell->function = spell_portal;
+   
+    if ((spell = get_spell_by_vnum(SPELL_YOUTH)))
+   spell->function = spell_youth;
 
  if ((spell = get_spell_by_vnum(SKILL_BACKSTAB)))
    spell->function = do_backstab;
@@ -2172,6 +2175,87 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->messages.to_room = strdup("$N invoca um leão para ajudar!");
  spedit_save_internally(new_spell);
  
+ // SPELL_SPELL_VOICE_EXPLOSION # 89
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_VOICE_EXPLOSION;
+ new_spell->status = available;
+ new_spell->name = strdup("voice explosion");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_IGNORE;
+ new_spell->mag_flags = MAG_AREAS | MAG_VIOLENT;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(70 - (3 * self.level)) > 20 ? (70 - (3 * self.level)) : 20");
+ new_spell->assign[0].class_num = CLASS_BARD;
+ new_spell->assign[0].level = 23;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->damages = strdup("dice(3,6) + param");
+ new_spell->max_dam = 100;
+ new_spell->messages.to_self = strdup("Com sua voz você emite um som de extrema violência, ferindo tudo que $r cerca!");
+ new_spell->messages.to_room = strdup("$n emite com sua voz um som de violência extrema, ferindo a todos!");
+
+ spedit_save_internally(new_spell);
+  // SPELL_SOUNDBARRIER #90
+   CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SPELL_SOUNDBARRIER;
+ new_spell->status = available;
+ new_spell->name = strdup("soundbarrier");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_CHAR_ROOM;
+ new_spell->mag_flags = MAG_AFFECTS;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20");
+ new_spell->assign[0].class_num = CLASS_BARD;
+ new_spell->assign[0].level = 15;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = APPLY_SAVING_SPELL;
+  new_spell->applies[0].modifier = strdup("-(1 + (param / 40))");
+ new_spell->applies[0].duration = strdup("24");
+  new_spell->applies[1].appl_num = APPLY_SAVING_BREATH;
+ new_spell->applies[1].modifier = strdup("-(2 + (param / 40))");
+ new_spell->applies[1].duration = strdup("24");
+ new_spell->applies[2].appl_num = APPLY_SAVING_ROD;
+ new_spell->applies[2].modifier = strdup("-(1+ (param / 40))");
+ new_spell->applies[2].duration = strdup("24");
+ new_spell->applies[3].appl_num = APPLY_AC;
+ new_spell->applies[3].modifier = strdup("self. level > (vict.level +10) ? -70 : -(vict.level -10)");
+ new_spell->applies[3].duration = strdup("24");
+ new_spell->applies[4].appl_num = AFF_SOUNDBARRIER + NUM_APPLIES;
+ new_spell->applies[4].duration = strdup("24");
+ new_spell->messages.to_vict = strdup("Você é envolvid$r por uma protetora barreira de som.");
+ new_spell->messages.to_room = strdup("$N é envolvid$r por uma protetora barreira de som.");
+ new_spell->messages.wear_off = strdup("Você percebe a barreira de som se dissipar.");
+ spedit_save_internally(new_spell);
+  
+  // SPELL_GLOOMSHIELD # 91
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = SPELL_GLOOMSHIELD;
+ new_spell->status = available;
+ new_spell->name = strdup("gloomshield");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_CHAR_ROOM;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(110 - (5 * self.level)) > 85 ? (110 - (5 * self.level)) : 85");
+ new_spell->assign[0].class_num = CLASS_CLERIC;
+ new_spell->assign[0].level = 21;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = AFF_GLOOMSHIELD + NUM_APPLIES;
+ new_spell->applies[0].duration = strdup("4");
+  new_spell->applies[1].appl_num = APPLY_AC;
+ new_spell->applies[1].modifier = strdup("-15");
+ new_spell->applies[1].duration = strdup("4");
+ new_spell->messages.to_vict = strdup("Um escudo de trevas resguarda o seu corpo.");
+ new_spell->messages.to_room = strdup("Um escudo de trevas resguarda o corpo de $N.");
+ new_spell->messages.wear_off = strdup("O escudo de trevas que $r resguardava se desvanece lentamente.");
+ spedit_save_internally(new_spell);
+ 
 // SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
@@ -2522,6 +2606,36 @@ new_spell->assign[2].class_num = CLASS_BARD;
   new_spell->assign[0].class_num = CLASS_THIEF;
  new_spell->assign[0].level = 50;
 
+ spedit_save_internally(new_spell);
+
+ // SPELL_SCROLL_IDENTIFY # 52
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_SCROLL_IDENTIFY;
+ new_spell->status = available;
+ new_spell->name = strdup("scroll identify");
+ new_spell->function = spell_identify;
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM;
+ new_spell->mag_flags = MAG_MANUAL;
+ new_spell->effectiveness = strdup("100");
+ spedit_save_internally(new_spell);
+
+  //SPELL_YOUTH
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_YOUTH;
+ new_spell->status = available;
+ new_spell->name = strdup("youth");
+ new_spell->function = youth;
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_OBJ_ROOM;
+ new_spell->mag_flags = MAG_MANUAL;
+ new_spell->effectiveness = strdup("100");
  spedit_save_internally(new_spell);
 
  // SPELL_DG_AFFECT # 298 
