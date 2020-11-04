@@ -1,7 +1,7 @@
 #61
 Vitalia~
 Haon-Dor, Floresta Escura~
-6100 6199 30 2 jk 0 0 0 -1 -1
+6100 6199 30 2 j 0 0 0 -1 -1
 M 0 6100 2 6116 	(o lobo mau)
 M 0 6100 2 6116 	(o lobo mau)
 M 0 6101 2 6127 	(o lobo feroz)
@@ -22,7 +22,7 @@ M 0 6112 1 6143 	(o dragão verde)
 G 1 6108 10 -1 	(um punhado de moedas de ouro)
 G 1 6110 10 -1 	(uma poção amarelo-almiscarada)
 G 1 6112 1 -1 	(uma coroa de ferro)
-O 1 6111 10 6143 	(Um grande escudo redondo)
+O 1 6111 10 6143 	(um grande escudo redondo)
 M 0 6113 3 6133 	(a enorme aranha venenosa)
 M 0 6113 3 6133 	(a enorme aranha venenosa)
 M 0 6113 3 6133 	(a enorme aranha venenosa)

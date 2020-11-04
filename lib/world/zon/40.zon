@@ -1,7 +1,7 @@
 #40
 Vitalia~
 Moria~
-4000 4199 20 2 jk 0 0 0 -1 -1
+4000 4199 20 2 j 0 0 0 -1 -1
 M 0 4000 1 4030 	(a serpente)
 G 1 4001 1 -1 	(um corpo de goblin)
 P 1 4002 1 4001 	(algumas moedas)
@@ -55,17 +55,17 @@ G 1 4102 2 -1 	(um pergaminho onde se lê 'ysafg')
 M 0 4101 1 4122 	(o troll)
 G 1 4100 2 -1 	(uma lâmina do demônio negro)
 M 0 4102 3 4111 	(a serpente)
-G 1 4103 10 -1 	(Um limo verde e mofado)
+G 1 4103 10 -1 	(um limo verde e mofado)
 M 0 4102 3 4111 	(a serpente)
-G 1 4104 3 -1 	(Um limo verde e mofado)
+G 1 4104 3 -1 	(um limo verde e mofado)
 M 0 4103 6 4103 	(o ladrão)
 M 0 4103 2 4124 	(o ladrão)
 E 1 4053 3 16 	(um punhal de ladrão)
 M 0 4105 3 4108 	(a centopéia)
 M 0 4106 2 4113 	(o guerreiro)
-G 1 4101 1 -1 	(Um par de luvas de espadachim)
+G 1 4101 1 -1 	(um par de luvas de espadachim)
 M 0 4107 1 4119 	(o kobold)
-G 1 4104 10 -1 	(Um limo verde e mofado)
+G 1 4104 10 -1 	(um limo verde e mofado)
 D 0 4119 3 1 	(A Caverna)
 D 0 4121 1 1 	(O Túnel Secreto)
 M 0 4057 2 4038 	(o leão da montanha)

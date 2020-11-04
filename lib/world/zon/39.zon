@@ -1,7 +1,7 @@
 #39
 Vitalia~
 O Abismo Profundo~
-3900 3999 120 2 bjk 0 0 0 -1 -1
+3900 3999 120 2 bj 0 0 0 -1 -1
 O 0 3935 1 3998 	(um baú de gelo)
 P 1 3952 1 3935 	(um amontoado de moedas de ouro)
 M 0 3906 1 3950 	(a praga negra)
@@ -79,8 +79,8 @@ M 0 3914 1 3964 	(um pequeno escravo da caverna)
 M 0 3912 1 3946 	(o Magistrado)
 E 1 3909 1 16 	(o martelo do Juiz)
 E 1 3910 1 12 	(as vestes de um juiz)
-M 0 3915 2 3920 	(Um zumbi guerreiro do Abismo)
-M 0 3915 2 3920 	(Um zumbi guerreiro do Abismo)
+M 0 3915 2 3920 	(um zumbi guerreiro do Abismo)
+M 0 3915 2 3920 	(um zumbi guerreiro do Abismo)
 M 0 3911 1 3957 	(o mímico)
 M 0 3921 1 3939 	(o mímico)
 M 0 3903 1 3960 	(a Venus Armadilha de Mosca)

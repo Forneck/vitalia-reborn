@@ -1,7 +1,7 @@
 #280
 Vitalia~
 As Planícies de Callyus~
-28000 28099 75 2 jk 0 0 0 -1 -1
+28000 28099 75 2 j 0 0 0 -1 -1
 M 0 28004 3 28033 	(a grotesca sanguessuga gigante)
 M 0 28004 3 28033 	(a grotesca sanguessuga gigante)
 M 0 28004 3 28034 	(a grotesca sanguessuga gigante)
@@ -42,11 +42,11 @@ G 1 28082 6 -1 	(um grande pedaço de carne)
 M 0 28011 3 28055 	(o cavalo)
 G 1 28082 6 -1 	(um grande pedaço de carne)
 M 0 28012 2 28078 	(a jovem vendedora)
-M 0 28013 1 28030 	(O Guardião das Águas)
+M 0 28013 1 28030 	(o Guardião das Águas)
 E 1 28054 5 10 	(uma braçadeira feita de água-marinha)
-M 0 28014 1 28004 	(O Guardião das Florestas)
+M 0 28014 1 28004 	(o Guardião das Florestas)
 E 1 28056 1 3 	(um colar de fibra de madeira)
-M 0 28015 1 28009 	(O Guardião da Escuridão)
+M 0 28015 1 28009 	(o Guardião da Escuridão)
 E 1 28055 1 1 	(um anel-duplo negro)
 M 0 28002 10 28042 	(o trabalhador)
 E 1 28004 19 16 	(uma pequena foice)
@@ -83,7 +83,7 @@ M 0 28002 10 28037 	(o trabalhador)
 E 1 28004 19 16 	(uma pequena foice)
 M 0 28003 9 28036 	(a trabalhadora)
 E 1 28004 19 16 	(uma pequena foice)
-M 0 28018 1 28076 	(O Almirante Dasher)
+M 0 28018 1 28076 	(o Almirante Dasher)
 G 1 28096 1 -1 	(uma chave de titânio ornamentada)
 E 1 28052 1 9 	(um par de luvas de titânio azulado)
 E 1 28053 1 8 	(um par de botas de titânio azulado)

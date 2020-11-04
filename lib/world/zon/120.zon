@@ -1,7 +1,7 @@
 #120
 Vitalia~
 Roma~
-12000 12099 45 2 jk 0 0 0 -1 -1
+12000 12099 45 2 j 0 0 0 -1 -1
 M 0 12000 3 12001 	(o juiz)
 E 1 3022 99 16 	(uma espada longa)
 E 1 3042 99 11 	(um escudo)
@@ -138,7 +138,7 @@ E 1 3021 99 16 	(um espadim)
 E 1 12008 99 8 	(um par de sandálias de couro curtido)
 M 0 12019 3 12042 	(o soldado)
 E 1 3021 99 16 	(um espadim)
-E 1 12019 10 8 	(Um par de botas Romanas de combate)
+E 1 12019 10 8 	(um par de botas Romanas de combate)
 M 0 12019 3 12045 	(o soldado)
 E 1 3021 99 16 	(um espadim)
 E 1 12008 99 8 	(um par de sandálias de couro curtido)

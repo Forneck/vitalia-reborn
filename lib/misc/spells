@@ -671,10 +671,104 @@
 90 4 8 
 99 (30 - (3 * self.level)) > 20 ? (30 - (3* self.level)) : 20
  4 100
+ 1 P 79 1 1 4224 7 100
+ 2 cascade of hail
+ 3 12+rand(8)
+90 4 17 
+99 (62 - (4 * self.level)) > 57 ? (62 - (4 * self.level)) : 57
+ 4 100
+ 1 P 80 1 2 2 8 0
+ 2 dance of fireflies
+10 Você observa os vaga-lumes indo embora, um a um.
+12 Você percebe que pequenos vaga-lumes surgem e iluminam seu caminho!
+13 Você se surpreende com a nuvem de pequenos vaga-lumes que apareceram para iluminar $n
+80 53 
+99 15 + (self.level / 2)
+81 36 
+99 15 + (self.level / 2)
+90 4 19 
+99 (70 - (4 * self.level)) > 65 ? (70 - (4 * self.level)) : 65
+ 4 100
+ 1 P 81 1 66 2 8 0
+ 2 stinging swarm
+10 Você nota que o enxame já não é tão grande e que está se desfazendo.
+12 Um enxame de abelhas rodeia sua cabeça, cuidado!
+13 Um enxame de abelhas rodeia a cabeça de $n!
+80 54 
+99 rand(3) + 3 + (self.level / 4);
+90 4 25 
+99 (60 - (4 * self.level)) > 60? (65 - (4 * self.level)) : 60
+ 4 100
+ 1 P 83 1 1 256 8 0
+ 2 evoke crow
+13 $N invoca um corvo para ajudar!
+ 8 12
+90 4 14 
+99 (130 - (3 * self.level)) > 120 ? (130 - (3 * self.level)) : 120 
+ 4 50
+ 1 P 84 1 1 256 8 0
+ 2 evoke wolf
+13 $N invoca um lobo para ajudar!
+ 8 13
+90 4 30 
+99 (190 - (3 * self.level)) > 150 ? (190 - (3 * self.level)) : 150 
+ 4 50
+ 1 P 85 1 1 256 8 0
+ 2 evoke bear
+13 $N invoca um urso para ajudar!
+ 8 14
+90 4 60 
+99 (220 - (3 * self.level)) > 170 ? (220 - (3 * self.level)) : 170 
+ 4 50
+ 1 P 87 1 1 256 8 0
+ 2 evoke lion
+13 $N invoca um leão para ajudar!
+ 8 15
+90 4 85 
+99 (280 - (3 * self.level)) > 200 ? (280 - (3 * self.level)) : 200 
+ 4 50
  1 P 88 1 1152 1024 8 0
  2 create nectar
 90 4 7 
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
+ 4 100
+ 1 P 89 1 1 4224 7 100
+ 2 voice explosion
+ 3 dice(3,6) + param
+11 Com sua voz você emite um som de extrema violência, ferindo tudo que $r cerca!
+13 $n emite com sua voz um som de violência extrema, ferindo a todos!
+90 5 23 
+99 (70 - (3 * self.level)) > 20 ? (70 - (3 * self.level)) : 20
+ 4 100
+ 1 P 90 1 2 2 8 0
+ 2 soundbarrier
+10 Você percebe a barreira de som se dissipar.
+12 Você é envolvid$r por uma protetora barreira de som.
+13 $N é envolvid$r por uma protetora barreira de som.
+80 24 -(1 + (param / 40))
+99 24
+81 23 -(2 + (param / 40))
+99 24
+82 21 -(1+ (param / 40))
+99 24
+83 17 self. level > (vict.level +10) ? -70 : -(vict.level -10)
+99 24
+84 56 
+99 24
+90 5 15 
+99 (100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20
+ 4 100
+ 1 P 91 1 2 8194 8 0
+ 2 gloomshield
+10 O escudo de trevas que $r resguardava se desvanece lentamente.
+12 Um escudo de trevas resguarda o seu corpo.
+13 Um escudo de trevas resguarda o corpo de $N.
+80 59 
+99 4
+81 17 -15
+99 4
+90 1 21 
+99 (110 - (5 * self.level)) > 85 ? (110 - (5 * self.level)) : 85
  4 100
  1 P 92 1 1 2048 8 0
  2 darkness
@@ -850,5 +944,11 @@
 99 
 91 2 7 
 99 
+ 4 100
+ 1 P 301 1 386 1024 8 0
+ 2 scroll identify
+ 4 100
+ 1 P 307 1 256 1024 8 0
+ 2 youth
  4 100
  7

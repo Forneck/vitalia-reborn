@@ -1,7 +1,7 @@
 #204
 Vitalia~
 O Labirinto do Templo dos Ladrões~
-20400 20599 220 1 jk 0 0 0 -1 -1
+20400 20599 220 1 j 0 0 0 -1 -1
 M 0 20459 2 20401 	(o guarda bêbado)
 G 1 20420 2 -1 	(um punhal de pomo redondo)
 M 0 20459 2 20401 	(o guarda bêbado)
@@ -22,7 +22,7 @@ M 0 20416 5 20481 	(o ladrão jardineiro)
 M 0 20416 5 20480 	(o ladrão jardineiro)
 M 0 20414 1 20486 	(a enviada de Dimas)
 M 0 20412 1 20479 	(o Grande Clérigo)
-M 0 20410 1 20489 	(O vendedor de armas)
+M 0 20410 1 20489 	(o vendedor de armas)
 M 0 20411 1 20491 	(o lojista)
 M 0 20406 6 20477 	(um ladrão vestido)
 E 1 20422 6 12 	(um robe de ladrão)
