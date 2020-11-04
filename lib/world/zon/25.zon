@@ -1,7 +1,7 @@
 #25
 Vitalia~
 A Grande Torre de Magia~
-2500 2699 20 2 jk 0 0 0 -1 -1
+2500 2699 20 2 j 0 0 0 -1 -1
 M 0 2500 6 2502 	(o guardião das sombras)
 M 0 2500 6 2504 	(o guardião das sombras)
 M 0 2500 6 2506 	(o guardião das sombras)
@@ -25,7 +25,7 @@ E 1 2547 2 16 	(um cutelo de açougueiro)
 M 0 2508 1 2520 	(o assistente da cozinheira)
 M 0 2509 1 2527 	(o prisioneiro)
 E 1 2548 1 13 	(alguns grilhões e correntes)
-M 0 2510 1 2528 	(O Carcereiro)
+M 0 2510 1 2528 	(o Carcereiro)
 E 1 2522 2 17 	(uma chave velha)
 M 0 2511 2 2533 	(a vassoura)
 M 0 2511 2 2533 	(a vassoura)
@@ -166,7 +166,7 @@ M 0 2564 1 2677 	(a Grande Soberana)
 G 1 2538 2 -1 	(uma chave intrincadamente entalhada)
 E 1 2587 8 3 	(um manto cintilante de muitas cores)
 E 1 2592 10 5 	(uma camisa justa de escamas de dragão verde)
-E 1 2588 8 1 	(Um pequeno anel de esmeralda)
+E 1 2588 8 1 	(um pequeno anel de esmeralda)
 E 1 2589 8 14 	(um bracelete de esmeralda)
 E 1 2590 8 17 	(um cubo de proteção maior)
 E 1 2591 8 16 	(a adaga ondulada de ébano)

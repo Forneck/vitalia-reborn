@@ -1,7 +1,7 @@
 #150
 Vitalia~
 O Castelo do Rei Welmar~
-15000 15099 120 2 jk 0 0 0 -1 -1
+15000 15099 120 2 j 0 0 0 -1 -1
 M 0 15001 1 15017 	(Rei Welmar)
 E 1 15002 1 17 	(um cetro dourado)
 E 1 15003 1 6 	(uma coroa dourada)
@@ -37,7 +37,7 @@ E 1 15015 50 5 	(uma armadura de escamas)
 M 0 15012 1 15023 	(Peter, o Capitão da Guarda Real)
 E 1 15015 50 5 	(uma armadura de escamas)
 E 1 15016 10 16 	(uma espada larga)
-M 0 15013 1 15023 	(O Mestre Treinador)
+M 0 15013 1 15023 	(o Mestre Treinador)
 E 1 3022 100 16 	(uma espada longa)
 M 0 15014 1 15017 	(o Mensageiro Real)
 M 0 15016 1 15027 	(James o Mordomo)

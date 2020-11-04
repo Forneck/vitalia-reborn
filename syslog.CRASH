@@ -1,30 +1,30 @@
-Nov 03 22:35:47 2020 :: OLC: Cansian stops editing zone 12 allowed zone 0
-Nov 03 22:35:56 2020 :: (GC) Cansian purged zone 12 (O Reino dos Imortais)
-Nov 03 22:36:00 2020 :: (GC) Cansian reset zone 22 (O Safári no Covil dos Lagartos)
-Nov 03 22:36:06 2020 :: (GC) Cansian reset zone 12 (O Reino dos Imortais)
-Nov 03 22:36:09 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 03 22:36:09 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 21652
-Nov 03 22:36:41 2020 :: (GC) Cansian Switched into: o espírito vagueante
-Nov 03 22:37:15 2020 :: OLC: Cansian starts editing zone 12 allowed zone 0
-Nov 03 22:37:19 2020 :: Warning: columns too narrow for correct output to Cansian in simple_column_list (utils.c)
-Nov 03 22:37:36 2020 :: Warning: columns too narrow for correct output to Cansian in simple_column_list (utils.c)
-Nov 03 22:37:40 2020 :: GenOLC: add_mobile: Updated existing mobile #1202.
-Nov 03 22:37:40 2020 :: OLC: Cansian edits mob 1202
-Nov 03 22:37:40 2020 :: GenOLC: 'world/mob/12.mob' saved, 3336 bytes written.
-Nov 03 22:37:40 2020 :: OLC: Cansian stops editing zone 12 allowed zone 0
-Nov 03 22:37:51 2020 :: SYSERR: Char is already equipped: um soldado fantasmagórico de Torin, um pedaço da sombra
-Nov 03 22:37:51 2020 :: (GC) Cansian reset entire world.
-Nov 03 22:38:03 2020 :: (GC) Cansian reset zone 12 (O Reino dos Imortais)
-Nov 03 22:41:09 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 03 22:41:09 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 22172
-Nov 03 22:46:09 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 03 22:46:09 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 22172
-Nov 03 22:46:59 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 03 22:49:14 2020 :: (GC) Reboot by Cansian.
-Nov 03 22:49:14 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 03 22:49:14 2020 :: Closing all sockets.
-Nov 03 22:49:14 2020 :: Closing link to: Cansian.
-Nov 03 22:49:14 2020 :: Saving current MUD time.
-Nov 03 22:49:14 2020 :: Rebooting.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 16:14:53 2020 :: (GC) Reboot by Cansian.
+Nov 04 16:14:53 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Nov 04 16:14:53 2020 :: Closing all sockets.
+Nov 04 16:14:53 2020 :: Closing link to: Cansian.
+Nov 04 16:14:53 2020 :: Saving current MUD time.
+Nov 04 16:14:53 2020 :: Rebooting.
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.
+Improper shutdown of autorun detected, rotating syslogs before startup.
+Improper shutdown of autorun detected, rotating syslogs before startup.
