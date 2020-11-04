@@ -235,7 +235,7 @@ $n is stupid...
 
 * FireShield
 M
- 53
+ 54
 $N morre ao tentar atravessar sua barreira de fogo.
 A barreira de fogo de $n queima você até a morte...
 A barreira de fogo de $n queima $N até a morte.
@@ -251,7 +251,7 @@ $N atravessa a barreira de fogo de $n sem se machucar.
 
 * Disintegrate
 M
- 55
+ 56
 $N foi desintegrad$R!
 $n DESINTEGROU você! Bye, bye...
 $n DESINTEGROU $N!!
@@ -267,7 +267,7 @@ $n tentou desintegrar $R grande $N... e falhou. $L é imortal.
 
 * Vampiric Touch
 M
- 60
+61
 $N foi sugad$R até a MORTE!
 $n suga você até a MORTE! ...mundo cruel...
 $n suga $N até a MORTE.
@@ -283,7 +283,7 @@ $n tenta sugar o sangue divino de $N, mas mal consegue se aproximar. Nenhuma sur
 
 * Burst of Flame
 M
- 70
+71
 $N foi queimado até a morte pela sua explosão!
 $n está tentando queimar você com as labaredas de uma explosão!
 $n queima $N com as labaredas de uma explosão.
@@ -299,7 +299,7 @@ $n tenta lançar sua explosão contra o divino poder de $N. Não conseguiu. Toli
 
 * Burst of Fire
 M
- 71
+72
 $N foi queimado até a morte pela sua explosão!
 $n está tentando queimar você com o fogo de uma explosão!
 $n queima $N com o fogo de sua explosão.
@@ -315,7 +315,7 @@ $n tenta lançar sua explosão contra o divino poder de $N. Não conseguiu. Toli
 
 * Ignite
 M
- 72
+73
 Todo o corpo de $N foi incendiado por sua magia!
 $n tenta incendiar seu corpo inteiro utilizando magia!
 $n incendeia o corpo de $N por meio de sua magia.
@@ -331,7 +331,7 @@ $n tenta incendiar o etéreo corpo de $N.... Não conseguiu. Alguêm está em ap
 
 * Lightning Blast
 M
- 75
+76
 $N foi eletrocutado até a morte por sua descarga de raios!
 Cuidado! $n está tentando $R eletrocutar com uma descarga de raios!
 $n eletrocuta $N com uma descarga de raios.
@@ -347,7 +347,7 @@ $n tenta eletrocutar a divina pessoa de $N. Pobrezinh$r... Pagará caro por isso
 
 * Thistlecoat
 M
- 77
+78
 $N morre ao tentar atravessar seus espinhos.
 A barreira de espinhos de $n arranha você até a morte...
 A barreira de espinhos de $n arranha $N até a morte.
@@ -363,7 +363,7 @@ $N atravessa a barreira de espinhos de $n sem nenhum arranhão.
 
 * Cascade of Hail
 M
- 78
+79
 $N congela e se quebra em pedaços como resultado de sua magia.
 Você congela por causa da magia de $n e estilhaça.
 $n congela e quebra $N em vários pedaços.
