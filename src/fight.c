@@ -65,7 +65,6 @@ static void solo_gain(struct char_data *ch, struct char_data *victim);
 /** @todo refactor this function name */
 static char *replace_string(const char *str, const char *weapon_singular,
 							const char *weapon_plural);
-static int compute_thaco(struct char_data *ch, struct char_data *vict);
 int get_weapon_prof(struct char_data *ch, struct obj_data *wield);
 int get_nighthammer(struct char_data *ch, bool real);
 int attacks_per_round(struct char_data *ch);
@@ -854,7 +853,7 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 	/* Calculate the THAC0 of the attacker. 'victim' currently isn't used but
 	   you could use it for special cases like weapons that hit evil creatures 
 	   easier or a weapon that always misses attacking an animal. */
-static int compute_thaco(struct char_data *ch, struct char_data *victim)
+int compute_thaco(struct char_data *ch, struct char_data *victim)
 {
 	int calc_thaco;
 	int wpnprof = 0;
