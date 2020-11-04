@@ -2175,10 +2175,10 @@ void parse_mobile(FILE * mob_f, int nr)
 			check_bitvector_names(MOB_FLAGS(mob_proto + i)[taeller], action_bits_count, buf2,
 								  "mobile");
 
-		AFF_FLAGS(mob_proto + i)[0] = asciiflag_conv_aff(f5)+1;
-		AFF_FLAGS(mob_proto + i)[1] = asciiflag_conv_aff(f6)+1;
-		AFF_FLAGS(mob_proto + i)[2] = asciiflag_conv_aff(f7)+1;
-		AFF_FLAGS(mob_proto + i)[3] = asciiflag_conv_aff(f8)+1;
+		AFF_FLAGS(mob_proto + i)[0] = 1<<asciiflag_conv_aff(f5);
+		AFF_FLAGS(mob_proto + i)[1] = asciiflag_conv_aff(f6);
+		AFF_FLAGS(mob_proto + i)[2] = asciiflag_conv_aff(f7);
+		AFF_FLAGS(mob_proto + i)[3] = asciiflag_conv_aff(f8);
 
 		GET_ALIGNMENT(mob_proto + i) = t[2];
 
