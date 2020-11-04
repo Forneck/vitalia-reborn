@@ -693,3 +693,17 @@ if (IN_ROOM(victim) == IN_ROOM(ch)) {
 	act("$p aparece do nada!", TRUE, victim, portal_obj, 0, TO_ROOM);
 	act("$p aparece diante de você!", TRUE, victim, portal_obj, 0, TO_CHAR);
 }
+
+ASPELL(spell_youth)
+{
+  if (victim == NULL)
+    return;
+
+  if (IS_NPC(victim) || GET_AGE(victim) < 25)
+    send_to_char("Você não sente nada especial...\r\n", ch);
+  else {
+    victim->time.birth += 5 * SECS_PER_MUD_YEAR;
+    send_to_char("Você se sente mais jovem!\r\n", victim);
+    act("$n parece mais jovem agora.", TRUE, victim, 0, 0, TO_ROOM);
+  }
+}
