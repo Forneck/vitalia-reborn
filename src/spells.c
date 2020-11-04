@@ -707,3 +707,33 @@ ASPELL(spell_youth)
     act("$n parece mais jovem agora.", TRUE, victim, 0, 0, TO_ROOM);
   }
 }
+
+ASPELL(spell_vamp_touch)
+{
+  int victim_ac, calc_thaco, diceroll, dam, rdam;
+
+  if (ch == NULL || victim == NULL)
+    return;
+
+  calc_thaco = compute_thaco(ch);
+  victim_ac = compute_armor_class(victim) / 10;
+  diceroll = rand_number(1, 20);
+
+  /* decide whether this is a hit or a miss */
+  if ((((diceroll < 20) && AWAKE(victim)) &&
+       ((diceroll == 1) || ((calc_thaco - diceroll) > victim_ac)))) {
+    damage(ch, victim, 0, SPELL_VAMP_TOUCH);
+    return;
+  }
+
+  /* okay, we know the guy has been hit.  now calculate damage. */
+  dam = dice(8, 8) + ((GET_LEVEL(ch) - 22) / 4);
+  rdam = damage(ch, victim, dam, SPELL_VAMP_TOUCH);
+
+  if (rdam > 0)
+    GET_HIT(ch) += rdam;
+  else if (rdam < 0)
+    GET_HIT(ch) += (dam / 2);
+
+  GET_HIT(ch) = MIN(GET_HIT(ch), GET_MAX_HIT(ch));
+}
