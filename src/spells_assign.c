@@ -2019,6 +2019,26 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->messages.wear_off = strdup("Você percebe que seu casaco de espinhos se desfez.");
  spedit_save_internally(new_spell);
  
+ // SPELL_CASCADE_HAIL	     79
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_CASCADE_HAIL;
+ new_spell->status = available;
+ new_spell->name = strdup("cascade of hail");
+ new_spell->type = SPELL;
+  new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_IGNORE;
+ new_spell->mag_flags = MAG_AREAS | MAG_VIOLENT;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(62 - (4 * self.level)) > 57 ? (62 - (4 * self.level)) : 57");
+  new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 17;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->damages = strdup("12+rand(8)");
+ new_spell->max_dam = 100;
+ spedit_save_internally(new_spell);
+ 
 // SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
