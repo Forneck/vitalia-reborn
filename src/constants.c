@@ -270,7 +270,6 @@ const char *action_bits[] = {
   "NO_BLIND",
   "MOUNTABLE",
   "CAN_FLY",
-  "INTELLIG",
   "NO_KILL",
   "ISNPC",
   "DEAD",    /* You should never see this. */
