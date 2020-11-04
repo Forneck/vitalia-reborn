@@ -737,3 +737,36 @@ ASPELL(spell_vamp_touch)
 
   GET_HIT(ch) = MIN(GET_HIT(ch), GET_MAX_HIT(ch));
 }
+
+/* -- mp - Oct 30, 2001 */
+ASPELL(spell_fury_air)
+{
+  if (ch == NULL || victim == NULL)
+    return;
+
+  if (MOB_FLAGGED(victim, MOB_NOBASH)) {
+    act("O forte vento parece não abalar $N.", FALSE, ch, NULL, victim, TO_CHAR);
+    return;
+  }
+
+  if (GET_POS(victim) < POS_SITTING) {
+    act("A magia parece ser inútil nessas condições.", FALSE, ch, NULL, victim, TO_CHAR);
+    return;
+  }
+
+  if (GET_POS(victim) == POS_SITTING) {
+    act("Um vento forte levanta $N.", FALSE, ch, NULL, victim, TO_CHAR);
+    GET_POS(victim) = POS_STANDING;
+    return;
+  }
+
+  if (damage(ch, victim, 2, SPELL_FURY_OF_AIR) > 0) {
+    if (GET_LEVEL(victim) < LVL_GOD)
+      GET_WAIT_STATE(victim) += 2 * PULSE_VIOLENCE;
+    if (IN_ROOM(ch) == IN_ROOM(victim))
+      GET_POS(victim) = POS_SITTING;
+  }
+
+  if (GET_LEVEL(ch) < LVL_GOD)
+    GET_WAIT_STATE(ch) += 2 * PULSE_VIOLENCE;
+}
