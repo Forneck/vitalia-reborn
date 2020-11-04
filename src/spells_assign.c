@@ -2155,7 +2155,7 @@ new_spell->vnum = SPELL_INVIGOR;
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
- new_spell->vnum = SPELL_EVOKE_LION
+ new_spell->vnum = SPELL_EVOKE_LION;
  new_spell->status = available;
  new_spell->name = strdup("evoke lion");
  new_spell->type = SPELL;
