@@ -2040,6 +2040,137 @@ new_spell->vnum = SPELL_INVIGOR;
  
  spedit_save_internally(new_spell);
  
+ //SPELL_DANCE_FIREFLIES	     80
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_DANCE_FIREFLIES;
+ new_spell->status = available;
+ new_spell->name = strdup("dance of fireflies");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_CHAR_ROOM;
+ new_spell->mag_flags = MAG_AFFECTS;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(70 - (4 * self.level)) > 65 ? (70 - (4 * self.level)) : 65");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 19;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = AFF_FIREFLIES + NUM_APPLIES;
+ new_spell->applies[0].duration = strdup("15 + (self.level / 2)");
+ new_spell->applies[1].appl_num = AFF_INFRAVISION + NUM_APPLIES;
+  new_spell->applies[1].duration = strdup("15 + (self.level / 2)");
+ new_spell->messages.to_vict = strdup("Você percebe que pequenos vaga-lumes surgem e iluminam seu caminho!");
+  new_spell->messages.to_room = strdup("Você se surpreende com a nuvem de pequenos vaga-lumes que apareceram para iluminar $n");
+ new_spell->messages.wear_off = strdup("Você observa os vaga-lumes indo embora, um a um.");
+ spedit_save_internally(new_spell);
+ 
+ //SPELL_STINGING_SWARM	     80
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_STINGING_SWARM;
+ new_spell->status = available;
+ new_spell->name = strdup("stinging swarm");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
+ new_spell->mag_flags = MAG_AFFECTS;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(60 - (4 * self.level)) > 60? (65 - (4 * self.level)) : 60");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 25;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = AFF_STINGING + NUM_APPLIES;
+ new_spell->applies[0].duration = strdup("rand(3) + 3 + (self.level / 4);");
+ new_spell->messages.to_vict = strdup("Um enxame de abelhas rodeia sua cabeça, cuidado!");
+  new_spell->messages.to_room = strdup("Um enxame de abelhas rodeia a cabeça de $n!");
+ new_spell->messages.wear_off = strdup("Você nota que o enxame já não é tão grande e que está se desfazendo.");
+ spedit_save_internally(new_spell);
+ 
+  // SPELL_EVOKE_CROW
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_EVOKE_CROW;
+ new_spell->status = available;
+ new_spell->name = strdup("evoke crow");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_IGNORE;
+ new_spell->mag_flags = MAG_SUMMONS;
+ new_spell->effectiveness = strdup("50");
+ new_spell->summon_mob = strdup("12");
+// new_spell->summon_req = strdup("10221");
+ sprintf(buf, "(130 - (3 * self.level)) > 120 ? (130 - (3 * self.level)) : 120 ");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 14;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->messages.to_room = strdup("$N invoca um corvo para ajudar!");
+ spedit_save_internally(new_spell);
+ 
+ // SPELL_EVOKE_WOLF
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_EVOKE_WOLF;
+ new_spell->status = available;
+ new_spell->name = strdup("evoke wolf");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_IGNORE;
+ new_spell->mag_flags = MAG_SUMMONS;
+ new_spell->effectiveness = strdup("50");
+ new_spell->summon_mob = strdup("13");
+// new_spell->summon_req = strdup("10221");
+ sprintf(buf, "(190 - (3 * self.level)) > 150 ? (190 - (3 * self.level)) : 150 ");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 30;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->messages.to_room = strdup("$N invoca um lobo para ajudar!");
+ spedit_save_internally(new_spell);
+ 
+ // SPELL_EVOKE_BEAR
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_EVOKE_BEAR;
+ new_spell->status = available;
+ new_spell->name = strdup("evoke bear");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_IGNORE;
+ new_spell->mag_flags = MAG_SUMMONS;
+ new_spell->effectiveness = strdup("50");
+ new_spell->summon_mob = strdup("14");
+// new_spell->summon_req = strdup("10221");
+ sprintf(buf, "(220 - (3 * self.level)) > 170 ? (220 - (3 * self.level)) : 170 ");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 60;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->messages.to_room = strdup("$N invoca um urso para ajudar!");
+ spedit_save_internally(new_spell);
+ 
+  // SPELL_EVOKE_LION
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_EVOKE_LION
+ new_spell->status = available;
+ new_spell->name = strdup("evoke lion");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_IGNORE;
+ new_spell->mag_flags = MAG_SUMMONS;
+ new_spell->effectiveness = strdup("50");
+ new_spell->summon_mob = strdup("15");
+// new_spell->summon_req = strdup("10221");
+ sprintf(buf, "(280 - (3 * self.level)) > 200 ? (280 - (3 * self.level)) : 200 ");
+ new_spell->assign[0].class_num = CLASS_DRUID;
+ new_spell->assign[0].level = 85;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->messages.to_room = strdup("$N invoca um leão para ajudar!");
+ spedit_save_internally(new_spell);
  
 // SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
