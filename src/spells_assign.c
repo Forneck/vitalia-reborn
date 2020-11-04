@@ -2037,7 +2037,9 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->damages = strdup("12+rand(8)");
  new_spell->max_dam = 100;
+ 
  spedit_save_internally(new_spell);
+ 
  
 // SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
@@ -2303,7 +2305,6 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->effectiveness = strdup("100");
   new_spell->assign[0].class_num = CLASS_WARRIOR;
  new_spell->assign[0].level = 3;
-
  spedit_save_internally(new_spell);
  
  /*Daggers*/
