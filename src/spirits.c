@@ -61,6 +61,12 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 
 	if (corpse)
 	{
+	   	for (obj = corpse->contains; obj != NULL; obj = obj->next_content)
+		{
+			obj_from_obj(obj);
+			obj_to_char(obj, ch);
+			get_check_money(ch, obj);
+		}
 		if (corpse->in_room)
 			obj_from_room(corpse);
 		else if (corpse->carried_by)
@@ -112,15 +118,6 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 		act("\tWVocê foi trazid$r devolta à vida pela força divina dos Deuses de $N!\tn", FALSE,
 			ch, 0, raiser, TO_CHAR);
 	}
-
-	if (corpse){
-	for (obj = corpse->contains; obj != NULL; obj = obj->next_content)
-		{
-			obj_from_obj(obj);
-			obj_to_char(obj, ch);
-			get_check_money(ch, obj);
-		}
-	}
 	
 	if (restore >= 2)
 	{
@@ -155,8 +152,7 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 			GET_COND(ch, THIRST) = 2;
 		}
 	}
-
-
+	
 	save_char(ch);
 	Crash_crashsave(ch);
 }
