@@ -207,156 +207,73 @@ Kind Soul Gives Newbie Equipment~
 0 g 100
 ~
 * By Rumble of The Builder Academy    tbamud.com 9091
-* If a player is < level 5 and naked it fully equips them. If < 10 and missing
+* If a player is < level 10 and naked it fully equips them. If < 10 and missing
 * some equipment it will equip one spot.
 if %actor.is_pc% && %actor.level% < 10
   wait 2 sec
   if !%actor.eq(*)%
-    say get some clothes on! Here, I will help.
+    say Ei, pegue algumas roupas! Aqui, deixa eu te ajudar.
     %load% obj 3037 %actor% light
-    %load% obj 3083 %actor% rfinger
-    %load% obj 3083 %actor% lfinger
-    %load% obj 3082 %actor% neck1
-    %load% obj 3082 %actor% neck2
     %load% obj 3040 %actor% body
     %load% obj 3076 %actor% head
-    %load% obj 3080 %actor% legs
-    %load% obj 3084 %actor% feet
+    %load% obj 3081 %actor% legs
     %load% obj 3071 %actor% hands
     %load% obj 3086 %actor% arms
     %load% obj 3042 %actor% shield
-    %load% obj 3087 %actor% about
-    %load% obj 3088 %actor% waist
-    %load% obj 3089 %actor% rwrist
-    %load% obj 3089 %actor% lwrist
     %load% obj 3021 %actor% wield
     %load% obj 3055 %actor% hold
     halt
   end
   if !%actor.eq(light)%
-    say you really shouldn't be wandering these parts without a light source %actor.name%.
+    say Voce nao devia andar aqui sem uma luz, %actor.name%.
     shake
     %load% obj 3037
     give vela %actor.name%
     halt
   end
-  if !%actor.eq(rfinger)% || !%actor.eq(lfinger)%
-    say did you lose one of your rings?
-    sigh
-    %load% obj 3083
-    give anel %actor.name%
-    halt
-  end
-  if !%actor.eq(neck1)% || !%actor.eq(neck2)%
-    say you lose everything don't you?
-    roll
-    %load% obj 3082
-    give neck %actor.name%
-    halt
-  end
   if !%actor.eq(body)%
-    say you won't get far without some body armor %actor.name%.
+    say Voce nao vai longe sem armadura %actor.name%.
     %load% obj 3040
-    give plate %actor.name%
+    give peitoral %actor.name%
     halt
   end
   if !%actor.eq(head)%
-    say protect that noggin of yours, %actor.name%.
+    say Proteja essas tuas orelhas, %actor.name%.
     %load% obj 3076
-    give cap %actor.name%
+    give gorro %actor.name%
     halt
   end
   if !%actor.eq(legs)%
-    say why do you always lose your pants %actor.name%?
-    %load% obj 3080
-    give leggings %actor.name%
-    halt
-  end
-  if !%actor.eq(feet)%
-    say you can't go around barefoot %actor.name%.
-    %load% obj 3084
-    give boots %actor.name%
+    say Por que voce sempre perde as suas calcas, %actor.name%?
+    %load% obj 3081
+    give calca %actor.name%
     halt
   end
   if !%actor.eq(hands)%
-    say need some gloves %actor.name%?
+    say Precisa de luvas, %actor.name%?
     %load% obj 3071
-    give gloves %actor.name%
+    give luvas %actor.name%
     halt
   end
   if !%actor.eq(arms)%
-    say you must be freezing %actor.name%.
+    say Voce deve estar com frio, %actor.name%.
     %load% obj 3086
-    give sleeve %actor.name%
+    give braca %actor.name%
     halt
   end
   if !%actor.eq(shield)%
-    say you need one of these to protect yourself %actor.name%.
+    say Voce precisa de um deste para se proteger, %actor.name%.
     %load% obj 3042
-    give shield %actor.name%
-    halt
-  end
-  if !%actor.eq(about)%
-    say you are going to catch a cold %actor.name%.
-    %load% obj 3087
-    give cape %actor.name%
-    halt
-  end
-  if !%actor.eq(waist)%
-    say better use this to hold your pants up %actor.name%.
-    %load% obj 3088
-    give belt %actor.name%
-    halt
-  end
-  if !%actor.eq(rwrist)% || !%actor.eq(lwrist)%
-    say misplace something?
-    smile
-    %load% obj 3089
-    give wristguard %actor.name%
+    give escudo %actor.name%
     halt
   end
   if !%actor.eq(wield)%
-    say without a weapon you will be Fido food %actor.name%.
+    say Sem uma arma vai virar comida de Fido, %actor.name%.
     %load% obj 3021
-    give sword %actor.name%
+    give espad %actor.name%
     halt
   end
 end
-~
-#3013
-Mortal Greet~
-2 s 100
-~
-* By Rumble of The Builder Academy    tbamud.com 9091
-* TBA mortal greet and equip. New players start at level 0.
-wait 1 sec
-if %actor.level% == 0
-  if !%actor.eq(*)%
-    %load% obj 3037 %actor% light
-    %load% obj 3083 %actor% rfinger
-    %load% obj 3083 %actor% lfinger
-    %load% obj 3082 %actor% neck1
-    %load% obj 3082 %actor% neck2
-    %load% obj 3040 %actor% body
-    %load% obj 3076 %actor% head
-    %load% obj 3080 %actor% legs
-    %load% obj 3084 %actor% feet
-    %load% obj 3071 %actor% hands
-    %load% obj 3086 %actor% arms
-    %load% obj 3042 %actor% shield
-    %load% obj 3087 %actor% about
-    %load% obj 3088 %actor% waist
-    %load% obj 3089 %actor% rwrist
-    %load% obj 3089 %actor% lwrist
-    %load% obj 3021 %actor% wield
-    %load% obj 3055 %actor% hold
-  end
-  if !%actor.has_item(3006)%
-    %load% obj 3006 %actor% inv
-  end
-end
-wait 3 sec
-%zoneecho% 3001 A booming voice announces, 'Ola, %actor.name%. Que bom que entrou neste Mundo!'
 ~
 #3018
 portal to NT~
