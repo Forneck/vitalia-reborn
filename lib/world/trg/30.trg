@@ -194,7 +194,7 @@ set stunned %actor.hitp%
 #3011
 Newbie Tour Guide Loader~
 0 e 0
-se conectou.~
+entrou no jogo.~
 * By Rumble of The Builder Academy    tbamud.com 9091
 * Num Arg 0 means the argument has to match exactly. So trig will only fire off:
 * "has entered game." and not "has" or "entered" etc. (that would be num arg 1).
