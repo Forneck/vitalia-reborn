@@ -948,10 +948,10 @@ ACMD(do_alias)
 			send_to_char(ch, "Não há atalhos definidos.\r\n");
 		else
 		{
-			send_to_char(ch, "&WAtalhos definidos:\r\n");
+			send_to_char(ch, "\tWAtalhos definidos:\r\n");
 			while (a != NULL)
 			{
-				send_to_char(ch, "@c%-15s@n %s@+n\r\n", a->alias, a->replacement);
+				send_to_char(ch, "\tc%-15s\tn %s\t+n\r\n", a->alias, a->replacement);
 				a = a->next;
 			}
 		}
