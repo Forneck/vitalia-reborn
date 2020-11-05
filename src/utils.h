@@ -357,7 +357,7 @@ do                                                              \
  * it for every other single mob in the game.  If we didn't specifically check
  * for it, 'wimpy' would be an extremely bad thing for a mob to do, as an
  * example.  If you really couldn't care less, change this to a '#if 0'. */
-#if 1
+#if 0
 /** Warn if accessing player_specials on a mob.
  * @todo Subtle bug in the var reporting, but works well for now. */
 #define CHECK_PLAYER_SPECIAL(ch, var) \
