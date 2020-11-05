@@ -1070,7 +1070,60 @@ SPECIAL(shop_keeper)
 {
 	struct char_data *keeper = (struct char_data *)me;
 	int shop_nr;
+   struct fann *ann;
+   int count_obj;
+   int grupo;
 
+	fann_type input[29];
+	fann_type output[6];
+		if (GROUP(ch) != NULL)
+		grupo = 1;
+	else
+		grupo = 0;
+			for (object= ch->carrying; object; object = object->next_content)
+	{
+			count_obj++;
+	}
+
+	input[0] = 1/(1+exp(-GET_HIT(ch)));
+	input[1] = 1/(1+exp(-GET_MAX_HIT(ch)));
+
+	input[2] = 1/(1+exp(-GET_MANA(ch)));
+	input[3] = 1/(1+exp(-GET_MAX_MANA(ch)));
+	input[4] = 1/(1+exp(-GET_MOVE(ch)));
+	input[5] = 1/(1+exp(-GET_MAX_MOVE(ch)));
+	input[6] = 1/(1+exp(-GET_EXP(ch)));
+	input[7] = 1/(1+exp(-GET_ROOM_VNUM(IN_ROOM(ch))));
+	input[8] = 1/(1+exp(-GET_CLASS(ch)));
+	input[9] = 1/(1+exp(-GET_POS(ch)));
+	input[10] = 1/(1+exp(-GET_ALIGNMENT(ch)));
+	input[11] = 1/(1+exp(-compute_armor_class(ch)));
+	input[12] = 1/(1+exp(-GET_STR(ch)));
+	input[13] = 1/(1+exp(-GET_ADD(ch)));
+	input[14] = 1/(1+exp(-GET_INT(ch)));
+	input[15] = 1/(1+exp(-GET_WIS(ch)));
+	input[16] = 1/(1+exp(-GET_CON(ch)));
+	input[17] = 1/(1+exp(-GET_DEX(ch)));
+	input[18] = 1/(1+exp(-GET_GOLD(ch)));
+	input[19] = 1/(1+exp(-GET_BANK_GOLD(ch)));
+	input[20] = 1/(1+exp(-GET_COND(ch, HUNGER)));
+	input[21] = 1/(1+exp(-GET_COND(ch, THIRST)));
+	input[22] = 1/(1+exp(-GET_PRACTICES(ch)));
+	input[23] = 1/(1+exp(-grupo));
+	//input 24 eh o clan em vez de mudhora
+	input[24] = 1/(1+exp(-0));
+	input[25] = 1/(1+exp(-GET_BREATH(ch)));
+	input[26] = 1/(1+exp(-GET_HITROLL(ch)));
+	input[27] = 1/(1+exp(-GET_DAMROLL(ch)));
+	input[28] = 1/(1+exp(-count_obj));
+	
+	output[0] = (float) cmd/780;
+	output[1] = 1/(1+exp(-CMD_OBJ));
+	output[2] = 1/(1+exp(-CMD_ARG_OBJ));
+	output[3] = GET_VNUM(argument);
+		fann_train(ann, input, output);
+	fann_save(ann, "etc/aventureiro.fann");
+		fann_destroy(ann);
 	for (shop_nr = 0; shop_nr <= top_shop; shop_nr++)
 		if (SHOP_KEEPER(shop_nr) == keeper->nr)
 			break;
