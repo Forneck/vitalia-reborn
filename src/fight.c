@@ -254,14 +254,22 @@ static void make_corpse(struct char_data *ch)
 	if (!IS_NPC(ch))
 	{
 		GET_OBJ_VAL(corpse, 0) = GET_IDNUM(ch);
-		if (GET_HOMETOWN(ch) == r_hometown_1)
+		if (GET_HOMETOWN(ch) == r_hometown_1){  
 			obj_to_room(corpse, r_ress_room_1);
+			log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(victim),
+			 GET_ROOM_VNUM(IN_ROOM(victim)),GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0),GET_OBJ_VAL(corpse, 3));
+		}
 		else if (GET_HOMETOWN(ch) == r_hometown_2)
+	{
 			obj_to_room(corpse, r_ress_room_2);
+				log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(victim),
+			 GET_ROOM_VNUM(IN_ROOM(victim)),GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0),GET_OBJ_VAL(corpse, 3));
+	}
 		else
 			/* sem cidade natal */
 			obj_to_room(corpse, IN_ROOM(ch));
-
+	log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(victim),
+			 GET_ROOM_VNUM(IN_ROOM(victim)),GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0),GET_OBJ_VAL(corpse, 3));
 		act("Uma enorme mão aparece e pega o corpo de $n em segurança.", TRUE, ch, 0, 0,
 			TO_ROOM);
 		act("Uma enorme mão aparece e delicadamente deixa $p no chão.", FALSE, 0, corpse, 0,
@@ -269,6 +277,9 @@ static void make_corpse(struct char_data *ch)
 	}
 	else
 		obj_to_room(corpse, IN_ROOM(ch));
+			log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(victim),
+			 GET_ROOM_VNUM(IN_ROOM(victim)),GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0),GET_OBJ_VAL(corpse, 3));
+		
 }
 
 			 /* When ch kills victim */
