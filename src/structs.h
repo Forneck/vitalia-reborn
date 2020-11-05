@@ -203,12 +203,13 @@
 #define POS_MORTALLYW  1	/**< Position = mortally wounded */
 #define POS_INCAP      2	/**< Position = incapacitated */
 #define POS_STUNNED    3	/**< Position = stunned	*/
-#define POS_SLEEPING   4	/**< Position = sleeping */
-#define POS_RESTING    5	/**< Position = resting	*/
-#define POS_SITTING    6	/**< Position = sitting	*/
-#define POS_FIGHTING   7	/**< Position = fighting */
-#define POS_STANDING   8	/**< Position = standing */
-#define POS_MEDITING   9	/**< Position = stunned	*/
+#define POS_MEDITING   4	/**< Position = stunned	*/
+#define POS_SLEEPING   5	/**< Position = sleeping */
+#define POS_RESTING    6	/**< Position = resting	*/
+#define POS_SITTING    7	/**< Position = sitting	*/
+#define POS_FIGHTING   8	/**< Position = fighting */
+#define POS_STANDING   9	/**< Position = standing */
+
 /** Total number of positions. */
 #define NUM_POSITIONS   10
 
