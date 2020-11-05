@@ -1296,7 +1296,7 @@ ACMD(do_suggestion)
    {
       send_to_char(ch,"output: %f %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],calc_output[2],calc_output[3],calc_output[4],calc_output[5],calc_output[6]);
    }
-   if ((calc_output[0] == MAX_COMMAND) || (calc_output[0] == 0))
+   if (calc_output[0] == MAX_COMMAND)
    {
       send_to_char(ch,"Nenhum comando sugerido para você.\r\n");
    }
@@ -1305,5 +1305,5 @@ ACMD(do_suggestion)
    }
    else
    send_to_char(ch,"Sugestão de comando: %s\r\n",cmd_info[(int)calc_output[0]].command);
- }
+ 
 }
