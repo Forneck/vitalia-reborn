@@ -152,7 +152,6 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 			GET_COND(ch, THIRST) = 2;
 		}
 	}
-	
 	save_char(ch);
 	Crash_crashsave(ch);
 }
