@@ -1074,7 +1074,7 @@ SPECIAL(shop_keeper)
    struct fann *ann;
    int count_obj;
    int grupo;
-
+  struct obj_data *object;
 	fann_type input[29];
 	fann_type output[6];
 		if (GROUP(ch) != NULL)
