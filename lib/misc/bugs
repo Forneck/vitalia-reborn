@@ -129,7 +129,7 @@ Level     110
 Room      3054
 Flags     0 0 0 0
 End
-Text       'animate dead'~
+Text      'animate dead'~
 Body      No aceita corpo. talvez deixar como tar ignore?
 ~
 Name      Cansian~
@@ -137,5 +137,36 @@ IdNum     1
 Dated     1604421180
 Level     110
 Room      3001
+Flags     0 0 0 0
+End
+Text      meditate~
+Body      gos cansian, Ao meditar e acordar depois do meditar fica bugado o buneco como se nao estivesse acordado mandando vc acordar estando acordado
+/s
+~
+Name      Motharo~
+IdNum     25
+Dated     1604588685
+Level     10
+Room      1665
+Flags     1 0 0 0
+End
+Text      tentar abrir portas com direes~
+Body      No caso ao tentar abrir uma porta dando direo aparece que no h south north etc na direo, exemplo open south ou open port south aparece: No h south nesta direo. Se tiver mais portas numa mesma sala no tem como abrir
+~
+Name      Motharo~
+IdNum     25
+Dated     1604589609
+Level     10
+Room      18602
+Flags     0 0 0 0
+End
+Text       fly~
+Body      Ao tentar usar o comando fly o mesmo no levanta voo.
+~
+Name      Motharo~
+IdNum     25
+Dated     1604590442
+Level     12
+Room      3045
 Flags     0 0 0 0
 End

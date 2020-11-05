@@ -3,27 +3,29 @@ Pass: AnRCfBykX0mXk
 Titl: the Wanderer
 Sex : 2
 Clas: 6
-Levl: 63
+Levl: 70
 Id  : 6
 Brth: 1603323580
-Plyd: 147189
-Last: 1604538561
+Plyd: 170038
+Last: 1604611422
 Lmot: 1603324480
-Lnew: 1604459843
+Lnew: 1604604579
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: -331
+Alin: 245
 Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
-Room: 3012
-Hung: 23
-Thir: 23
-Hit : 750/710
-Mana : 916/891
-Move: 337/237
+Wimp: 100
+Room: 5518
+Lern: 14
+Hung: 12
+Thir: 8
+Hit : 560/808
+Mana : 154/926
+Move: 356/256
 Str : 17/0
 Int : 9
 Wis : 11
@@ -31,9 +33,9 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 592167
+Gold: 1244641
 Bank: 1500000
-Exp : 33679293
+Exp : 48533604
 Olc : 0
 Skil:
 7 100
@@ -58,9 +60,14 @@ Skil:
 243 95
 0 0
 Affs:
-19 13 0 29 16 0 0 0
+50 25 0 36 2048 0 0 0
+1 11 -20 17 0 0 0 0
+19 26 0 29 16 0 0 0
 0 0 0 0 0 0 0 0
-Alis: 52
+Alis: 54
+ fibra
+           s;s;w;w;w;w;w;w;w;w;w;w;s;e;n;n;e
+1
  valik2
           e;e;s;e;e;e;e;e;e;n;n;n;d;d;e;e;e;s;s;w;n;u;s;e;e;e;e;e;d;w;d;e;e;e
 1
@@ -216,4 +223,7 @@ Alis: 52
 1
  elladan4
         open por s;s;s;e;e;e;se;se;s;e;e;e;n;se;ne;e;e;s;s;s;ne;ne;ne;ne;s
+1
+ torredm
+         s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;w;n;n;n;n;n;n;n
 1

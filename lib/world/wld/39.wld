@@ -6,7 +6,7 @@ do portal você sente que almas atormentadas existem em qualquer lugar que
 ele vá levar.  Um ocasional estouro de calor irradia de lá...  Quase
 chamuscando seu cabelo.
 ~
-39 4 0 0 0 0
+39 12 0 0 0 0
 D0
 ~
 ~
@@ -42,7 +42,7 @@ volumoso se movimenta.  Uma baforada de fogo ilumina a caverna por um
 instante.  No segundo seguinte você vê diante de si, o maior dragão que
 jamais fora desperto.
 ~
-39 1 0 0 0 0
+39 9 0 0 0 0
 D3
 ~
 ~
@@ -78,7 +78,7 @@ carbonizadas e pulsam com o calor.  A medida que você começa a suar, você se
 pergunta o que na terra poderia causar tamanho calor.  Ruídos e chamas vêm
 do leste.
 ~
-39 1 0 0 0 0
+39 9 0 0 0 0
 D1
 ~
 ~
@@ -156,7 +156,7 @@ frio ao toque e mortalmente silencioso.  Olhando adiante abaixo o corredor
 não revela nada, exceto escuridão.  Você pode continuar ou voltar aos
 Portais.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D0
 ~
 ~
@@ -173,7 +173,7 @@ frio ao toque e mortalmente silencioso.  Olhando adiante abaixo o corredor
 não revela nada, exceto escuridão.  Você pode continuar ou voltar aos
 Portais.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D0
 ~
 ~
@@ -190,7 +190,7 @@ luminosidade vinda do leste.  A atmosfera se torna duramente quente a medida
 que o declínio se acentua.  As sombras no corredor bruxuleiam como se fossem
 feitas pela luz de chamas ardentes.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D1
 ~
 ~
@@ -206,7 +206,7 @@ Se Aproximando do Fim do Corredor~
 leste.  A luz é tão brilhante, que você é forçado a proteger os olhos.  Logo
 você poderá ver a fonte deste calor e luz.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D1
 ~
 ~
@@ -223,7 +223,7 @@ portão forjado em ferro magicalmente engolfado em chamas, impede que você
 siga adiante.  Tudo a sua vista é chamuscado e enegrecido.  Algum alívio
 pode ser encontrado ao oeste e talvez ao sul...
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D0
 ~
 portao~
@@ -325,7 +325,7 @@ inutilizadas.  O teto desabou há muito, deixando um enorme buraco acima de
 as cabeça.  Amassadas tapeçarias estão penduradas em uma das paredes.  Não
 há outras saídas óbvias, a não ser pela qual você veio.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D2
 ~
 ~
@@ -337,7 +337,7 @@ A Ponte Levadiça~
 portícula fora elevada como se alguém fosse esperado.  Olhando para baixo,
 nos limites da ponte, você não ve nada, apenas a mais negra escuridão.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D1
 ~
 ~
@@ -358,7 +358,7 @@ melhores tempos que o Castelo viveu.  Um pedestal suporta um grande e
 empoeirado tomo.  Examinando este livro, você percebe que o último visitante
 a assina-lo o fez há séculos atrás.
 ~
-39 0 0 0 0 2
+39 8 0 0 0 2
 D1
 ~
 ~
@@ -374,7 +374,7 @@ O Grande Corredor~
 veludo estão penduradas nas vigas.  Macios sofás e almofadas se alinham
 pelos lados do corredor.  Nunca você viu um corredor tão esplendoroso.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D1
 ~
 ~
@@ -392,7 +392,7 @@ Esplendor.  Quando o sol da tarde se põe, os últimos raios de claridade
 brilham através do cristal formando um arco-íris.  Havia uma grande bola
 pendurada aqui, mas não há mais.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D0
 ~
 ~
@@ -432,7 +432,7 @@ A Asa Norte~
 estranhamente amortecidos aqui.  Portas em cada lado do lugar levam a um,
 dos muitos quartos do castelo.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D0
 ~
 ~
@@ -456,7 +456,7 @@ A Asa Norte~
 estranhamente amortecidos aqui.  Portas em cada lado do lugar levam a um,
 dos muitos quartos do castelo.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D0
 ~
 ~
@@ -482,7 +482,7 @@ no meio da torre, você se esforça, e pode ver seu topo, ele parece estar
 longe de sua vista, lhe surpreendendo pela altura da torre.  Um lânguido
 esboço de um alçapão pode ser visto.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D2
 ~
 ~
@@ -733,14 +733,14 @@ O altar.
 altar tampo~
 1 -1 11400
 E
+altar~
+Parece haver algo embaixo desse altar. Talvez você consiga movê-lo.
+~
+E
 fresta luz algo~
 Você aproxima seus olhos da fresta, deparando-se com uma espécie de passagem
 cercada de luz.  Talvez seja possível alcançá-la, se abrir um pouco mais a
 fresta, movendo o tampo do altar.
-~
-E
-altar~
-Parece haver algo embaixo desse altar. Talvez você consiga movê-lo.
 ~
 S
 #3940
@@ -749,7 +749,7 @@ A Torre Norte~
 torre.
    Ela parece continuar para sempre, sem que seu fim possa ser avistado.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D4
 ~
 ~
@@ -765,7 +765,7 @@ Torre Norte~
 torre.  Ela parece continuar para sempre, sem que seu fim possa ser
 avistado.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D4
 ~
 ~
@@ -798,7 +798,7 @@ fica nos fundos do quarto.  Um sofá adornado com rubis o convida a se sentar
 e descansar.  Quando você resolve descansar no sofá, você percebe que as
 paredes começam a sangrar...
 ~
-39 4 0 0 0 0
+39 12 0 0 0 0
 D1
 ~
 ~
@@ -811,7 +811,7 @@ sala.  A atmosfera pesada, lhe da um sentimento de muita disciplina.  Há
 apenas uma porta neste lugar, pela qual os guardas se espremem para passar
 em caso de emergência.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D1
 ~
 ~
@@ -825,7 +825,7 @@ tecido caprichoso apodreceu há muito tempo.  O pó cobriu tudo, mostrando que
 ninguém esteve aqui durante anos, desde que o local fora saqueado e
 destruído.
 ~
-39 0 0 0 0 0
+39 8 0 0 0 0
 D3
 ~
 ~
@@ -839,7 +839,7 @@ assistir aos julgamentos.  Na parte de trás da sala, sobre um degrau, há uma
 grande mesa de carvalho.  Em cima da mesa há marcas antigas das marteladas
 do juíz.  Ela também está coberta de sangue seco.
 ~
-39 4 0 0 0 0
+39 12 0 0 0 0
 D3
 ~
 ~
@@ -1060,7 +1060,7 @@ A Sala Secreta Embaixo da Torre Norte~
 do castelo se este estivesse sob ameaça.  Acima, leva para a base da torre,
 e o caminho abaixo segue para os túneis de fuga.
 ~
-39 4 0 0 0 0
+39 12 0 0 0 0
 D4
 ~
 alcapao~
@@ -1076,7 +1076,7 @@ A Entrada Para os Túneis de Fuga~
 anos.  Sarrafos de madeira e vigas sustentam o teto e as paredes.  Os túneis
 de fuga seguem a leste pela escuridão.
 ~
-39 4 0 0 0 0
+39 12 0 0 0 0
 D1
 ~
 ~
@@ -1091,7 +1091,7 @@ Os Túneis de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 777 0 0 0 0
 D1
 ~
 ~
@@ -1102,7 +1102,7 @@ Os Túneis de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 777 0 0 0 0
 D1
 ~
 ~
@@ -1117,7 +1117,7 @@ Uma Curva no Túnel de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 773 0 0 0 0
+39 781 0 0 0 0
 D0
 ~
 ~
@@ -1136,7 +1136,7 @@ Os Túneis de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 777 0 0 0 0
 D0
 ~
 ~
@@ -1151,7 +1151,7 @@ Uma Curva no Túnel de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 773 0 0 0 0
+39 781 0 0 0 0
 D0
 ~
 ~
@@ -1166,7 +1166,7 @@ Uma Curva no Túnel de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 773 0 0 0 0
+39 781 0 0 0 0
 D0
 ~
 ~
@@ -1186,7 +1186,7 @@ Um Aclive nos Túneis de Fuga~
 escuridão.  Velhas e apodrecidas cordas se penduram da escuridão.  Se você
 deseja tentar, você pode escalar a rampa, ou pode seguir ao oeste.
 ~
-39 773 0 0 0 0
+39 781 0 0 0 0
 D2
 ~
 ~
@@ -1205,7 +1205,7 @@ Os Túneis de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 777 0 0 0 0
 D2
 ~
 ~
@@ -1220,7 +1220,7 @@ Uma Curva no Túnel de Fuga~
    Os túneis são grandes o suficiente para que duas pessoas o atravessem ao
 mesmo tempo.
 ~
-39 769 0 0 0 0
+39 777 0 0 0 0
 D0
 ~
 ~
@@ -1237,7 +1237,7 @@ você está indeciso por onde seguir, já que a brisa vem de duas direções
 diferentes.  Você deve escolher o caminho correto até a saída, então,
 escolha sabiamente.
 ~
-39 773 0 0 0 0
+39 781 0 0 0 0
 D1
 ~
 ~

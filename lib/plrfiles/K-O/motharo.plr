@@ -1,30 +1,30 @@
 Name: Motharo
 Pass: ModL.5YHLP/kM
-Titl: the Fledgling Hawk
+Titl: the Wanderer
 Sex : 1
 Clas: 6
-Levl: 9
+Levl: 32
 Id  : 25
 Brth: 1604182960
-Plyd: 23118
-Last: 1604536401
+Plyd: 33289
+Last: 1604611299
 Lmot: 1604188562
-Lnew: 1604513526
+Lnew: 1604587927
 Htwn: 1372
 Host: 187.66.23.112
 Hite: 178
 Wate: 158
-Alin: -5
-Act : gh 0 0 0
+Alin: 206
+Act : h 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDEF ad 0 0
-Room: 3001
-Lern: 2
+Wimp: 20
+Lern: 22
 Hung: -1
 Thir: -1
-Hit : 91/118
-Mana : 64/130
-Move: 35/110
+Hit : 402/381
+Mana : 63/245
+Move: 160/183
 Str : 16/0
 Int : 13
 Wis : 13
@@ -32,18 +32,28 @@ Dex : 14
 Con : 15
 Cha : 11
 Ac  : 100
-Gold: 32503
-Exp : 355948
+Gold: 325956
+Exp : 7901129
 Olc : 0
 Skil:
 16 90
+19 90
+28 90
 42 90
-93 50
+44 90
+50 90
+57 90
+62 90
+63 90
+75 90
+93 90
 232 90
 243 90
 0 0
 Affs:
-39 296 12 1 0 0 0 0
+19 40 0 29 16 0 0 0
+39 153 12 1 0 0 0 0
+63 6 0 52 134217728 0 0 0
 0 0 0 0 0 0 0 0
 Alis: 1
  wak
