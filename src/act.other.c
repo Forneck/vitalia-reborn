@@ -1237,7 +1237,6 @@ ACMD(do_suggestion)
 	fann_type *calc_output;
 	ann = fann_create_from_file("etc/aventureiro.fann");
 	fann_type input[29];
-	fann_type output[6];
 	int grupo;
 	int count_obj = 0;
     
