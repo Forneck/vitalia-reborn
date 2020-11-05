@@ -1291,8 +1291,8 @@ ACMD(do_suggestion)
 	input[28] = 1/(1+exp(-count_obj));
 
 	calc_output = fann_run(ann, input);
-   calc_output[1] = calc_output[1] * (float) MAX_COMMAND;
-   comando = fabs(calc_output[1]);
+   calc_output[0] = calc_output[0] * (float) MAX_COMMAND;
+   comando = fabs(calc_output[0]);
    if (GET_IDNUM(ch) == 20)
    {
       send_to_char(ch,"output: %f %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],calc_output[2],calc_output[3],calc_output[4],calc_output[5],calc_output[6]);
