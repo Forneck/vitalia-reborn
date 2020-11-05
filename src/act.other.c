@@ -1303,6 +1303,6 @@ ACMD(do_suggestion)
    send_to_char(ch,"Comando sugerido acima do teu nivel!\r\n");
    }
    else
-   send_to_char(ch,"Sugestão de comando: %s\r\n",cmd_info[(int)calc_output[1]].command);
+   send_to_char(ch,"Sugestão de comando: %s\r\n",&cmd_info[(int)calc_output[1]].command);
  
 }
