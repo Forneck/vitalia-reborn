@@ -1,30 +1,30 @@
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:50 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
-Nov 04 16:14:53 2020 :: (GC) Reboot by Cansian.
-Nov 04 16:14:53 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 04 16:14:53 2020 :: Closing all sockets.
-Nov 04 16:14:53 2020 :: Closing link to: Cansian.
-Nov 04 16:14:53 2020 :: Saving current MUD time.
-Nov 04 16:14:53 2020 :: Rebooting.
-Quick boot mode -- rent check supressed.
-Using file descriptor for logging.
-Improper shutdown of autorun detected, rotating syslogs before startup.
-Improper shutdown of autorun detected, rotating syslogs before startup.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Nov 04 22:04:03 2020 :: SYSERR: Mob using '((vict)->player_specials->saved.pref)' at mobact.c:97.
+Segmentation fault (core dumped)

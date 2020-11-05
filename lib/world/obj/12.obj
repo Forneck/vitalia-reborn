@@ -11,7 +11,7 @@ faca prateada romena~
 Uma maravilhosa faca feita de prata por velhos ciganos. Há vários símbolos
 rúnicos em sua lâmina; Lendas dizem que esta arma foi feita para caçar
 homens-lobos!
-@WEste item é muito especial! Cuide dele com a sua vida!@n
+	WEste item é muito especial! Cuide dele com a sua vida!	n
 ~
 #1202
 bastao~
@@ -22,10 +22,11 @@ Um pequeno bastão de madeira foi deixado aquí.~
 0 0 0 0
 2 0 0 106 0
 E
-cristal losango~
-Está encravado na madeira.  Possui um brilho azul muito intenso.  Você nota
-algo estranho no cristal, e olhando-o de perto, você percebe que é como se
-houvesse uma pequena luz brilhando dentro da pedra, como uma chama ardendo!
+bastao~
+É um pequeno bastão, cilíndrico, medindo aproximadamente 30 centímetros,
+feito de uma madeira escura.  Em uma das suas extremidades há um pequeno
+cristal azul encravado na madeira, com o formato de um losango.  Na outra
+extremidade há alguns traços e símbolos incompreensíveis.
 ~
 E
 traços símbolos~
@@ -36,11 +37,10 @@ Em uma das extremidades do bastão, você pode ver os seguintes símbolos:
        *                            / | \    \/
 ~
 E
-bastao~
-É um pequeno bastão, cilíndrico, medindo aproximadamente 30 centímetros,
-feito de uma madeira escura.  Em uma das suas extremidades há um pequeno
-cristal azul encravado na madeira, com o formato de um losango.  Na outra
-extremidade há alguns traços e símbolos incompreensíveis.
+cristal losango~
+Está encravado na madeira.  Possui um brilho azul muito intenso.  Você nota
+algo estranho no cristal, e olhando-o de perto, você percebe que é como se
+houvesse uma pequena luz brilhando dentro da pedra, como uma chama ardendo!
 ~
 #1203
 baculo~
@@ -50,47 +50,6 @@ O Báculo Mágico de Blug foi deixado aquí.~
 12 abcdegklopq 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 12 0 0 75 0
-E
-anel negro rubi~
-   O anel está suspenso e fixo por alguma forma mágica a alguns poucos
-centímetros acima da extremidade superior do báculo.  No interior deste anel
-está um grande rubi vermelho, com formato bi-piramidal.  Provavelmente é
-por este rubi que a magia do báculo se manifesta.
-~
-E
-olho verde~
-   Próximo à extremidade superior do báculo, dividindo a parte cilíndrica da
-alça, está o desenho de um olho, com uma esfera verde em seu centro.  Ao
-olhar fixamente para esta esfera verde e brilhante, você sente a magia
-entrando em seu ser, e todos os seus sentidos se afloram, permitindo que
-você sinta muito mais do que há a sua volta.
-~
-E
-cabeca alca foice~
-   A alça começa no olho verde, próximo à parte superior do báculo, e segue
-com um formato diferente do báculo até a extremidade, onde retorna em
-direção ao centro do báculo, terminando sobre o mesmo olho onde ela começa.
-Esta alça não é cilíndrica como o báculo, possui um formato curvo e deforme,
-com algumas bordas.
-   Na extremidade superior, há uma curva que acompanha o desenho do anel
-negro que flutua a alguns poucos centímetros sobre o bastão.
-   Esta provavelmente seria a cabeça do báculo, onde toda a sua inteligência
-e sua magia reside.
-~
-E
-losango azul~
-   O cristal em formato de um losango é o responsável pela transformação do
-bastão neste báculo.  Ele brilhará e manterá o báculo desperto enquanto um
-ser de puro coração, e com grandes poderes mágicos o segurar.
-   Você percebe também que ele serve de um canal para que a sua magia
-mantenha o báculo desperto.
-~
-E
-cristal vermelho~
-   O cristal vermelho na base do báculo tem a mesma coloração do grande
-cristal envolvido pelo anel na extremidade superior do báculo.  Ambos parecem
-trabalharem juntos, pois seus brilhos pulsam simultaneamente.
-~
 E
 baculo~
    É uma verdadeira obra de arte!  O báculo possui quase dois metros de
@@ -112,12 +71,61 @@ mantém preso sobre a extremidade superior do báculo.
    Esta é uma arma poderosa, e caindo em mãos erradas, pode significar a
 destruição da paz deste mundo.
 ~
+E
+cristal vermelho~
+   O cristal vermelho na base do báculo tem a mesma coloração do grande
+cristal envolvido pelo anel na extremidade superior do báculo.  Ambos parecem
+trabalharem juntos, pois seus brilhos pulsam simultaneamente.
+~
+E
+losango azul~
+   O cristal em formato de um losango é o responsável pela transformação do
+bastão neste báculo.  Ele brilhará e manterá o báculo desperto enquanto um
+ser de puro coração, e com grandes poderes mágicos o segurar.
+   Você percebe também que ele serve de um canal para que a sua magia
+mantenha o báculo desperto.
+~
+E
+cabeca alca foice~
+   A alça começa no olho verde, próximo à parte superior do báculo, e segue
+com um formato diferente do báculo até a extremidade, onde retorna em
+direção ao centro do báculo, terminando sobre o mesmo olho onde ela começa.
+Esta alça não é cilíndrica como o báculo, possui um formato curvo e deforme,
+com algumas bordas.
+   Na extremidade superior, há uma curva que acompanha o desenho do anel
+negro que flutua a alguns poucos centímetros sobre o bastão.
+   Esta provavelmente seria a cabeça do báculo, onde toda a sua inteligência
+e sua magia reside.
+~
+E
+olho verde~
+   Próximo à extremidade superior do báculo, dividindo a parte cilíndrica da
+alça, está o desenho de um olho, com uma esfera verde em seu centro.  Ao
+olhar fixamente para esta esfera verde e brilhante, você sente a magia
+entrando em seu ser, e todos os seus sentidos se afloram, permitindo que
+você sinta muito mais do que há a sua volta.
+~
+E
+anel negro rubi~
+   O anel está suspenso e fixo por alguma forma mágica a alguns poucos
+centímetros acima da extremidade superior do báculo.  No interior deste anel
+está um grande rubi vermelho, com formato bi-piramidal.  Provavelmente é
+por este rubi que a magia do báculo se manifesta.
+~
 A
 5 2
 A
 18 -2
 A
 24 -6
+#1204
+pergaminho teste~
+um pergaminho de teste~
+Um pergaminho de teste de novas magias foi deixado aqui.~
+~
+2 g 0 0 0 a 0 0 0 0 0 0 0
+110 308 -1 -1
+0 100000 100 0 0
 #1210
 quadro~
 o quadro azul~

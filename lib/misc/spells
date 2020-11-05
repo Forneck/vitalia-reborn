@@ -233,7 +233,6 @@
  1 P 28 1 2 12 7 0
  2 heal
 12 Uma calorosa sensação percorre o seu corpo.
-
 25 4
 50 100 + dice(3, 8)
 90 1 24 
@@ -327,7 +326,6 @@
  2 sleep
 10 Você se sente menos cansad$r.
 12 Você sente muito sono...  Zzzz......
-
 13 $N dorme.
 80 40 
 99 self.level / 4 + 4
@@ -506,17 +504,20 @@
  2 talk with dead
 10 Você não consegue mais sentir o mundo dos mortos.
 12 Agora você pode sentir o reino dos mortos.
-
 80 47 
 99 self.level
 90 1 10 
 99 (50 - (5 * self.level)) > 20 ? (50 - (5 * self.level)) : 20
  4 100
+ 1 P 61 1 18 5120 7 0
+ 2 vampiric touch
+90 0 15 
+99 (30 - (1 * self.level)) > 15 ? (30 - (1 * self.level)) : 30
+ 4 100
  1 P 62 1 2 8194 8 0
  2 breath
 10 Você sente necessidade de respirar novamente.
 12 Você sente que não precisa mais respirar.
-
 80 50 
 99 2
 90 0 7 
@@ -637,7 +638,6 @@
  1 P 75 1 2 8 7 0
  2 minor healing
 12 Uma onda de calor atravessa seu corpo, fazendo você se sentir melhor.
-
 50 dice(2, 8) + 2 + (param / 4)
 90 4 15 
 99 (30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10
@@ -653,7 +653,6 @@
  1 P 77 1 2 8 7 0
  2 regeneration
 12 Você sente o poder da natureza curando seu corpo.
-
 50 dice(6, 8)
 52 10 + dice(2, 6)
 90 4 40 
@@ -698,6 +697,11 @@
 99 rand(3) + 3 + (self.level / 4);
 90 4 25 
 99 (60 - (4 * self.level)) > 60? (65 - (4 * self.level)) : 60
+ 4 100
+ 1 P 82 1 18 5120 7 0
+ 2 fury of air
+90 4 50 
+99 (200 - (10 * self.level)) > 100 ? (200 - (10 * self.level)) : 100
  4 100
  1 P 83 1 1 256 8 0
  2 evoke crow
@@ -950,5 +954,12 @@
  4 100
  1 P 307 1 256 1024 8 0
  2 youth
+ 4 100
+ 1 P 308 1 18 4097 8 20000
+ 2 Firestorm
+ 3 20000
+11 Voce atinge $N com uma tempestade de fogo.
+12 Uma tempestade de fogo queima intensamente.
+13 $n violentamente atinge $N com uma violenta tempestade de fogo.
  4 100
  7

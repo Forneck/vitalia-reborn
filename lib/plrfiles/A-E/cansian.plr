@@ -6,15 +6,15 @@ Clas: 4
 Levl: 110
 Id  : 1
 Brth: 1601790482
-Plyd: 231196
-Last: 1604511306
-Lmot: 1604428249
+Plyd: 234298
+Last: 1604528061
+Lmot: 1604518665
 Lnew: 1604428948
 Htwn: 1372
-Host: 127.0.0.1
+Host: 138.204.26.78
 Hite: 151
 Wate: 113
-Alin: -213
+Alin: -163
 Act : 0 0 0 0
 Aff : 0 0 0 0
 Pref: efghimnoqrvxAB cd 0 0
@@ -29,27 +29,22 @@ Dex : 25
 Con : 25
 Cha : 25
 Ac  : 100
-Gold: 3000
+Gold: 4000
 Exp : 7000001
 Olc : 0
-Affs:
-80 11 0 53 268435456 0 0 0
-80 11 0 36 2048 0 0 0
-62 1 0 50 33554432 0 0 0
-0 0 0 0 0 0 0 0
 Alis: 5
- of
- order fol $*
+ ha
+ history all
+0
+ reset
+ shutdown reboot
+0
+ sa
+ say @Y$*@n
 1
  goss
  goss @Y$*@n
 1
- sa
- say @Y$*@n
+ of
+ order fol $*
 1
- reset
- shutdown reboot
-0
- ha
- history all
-0

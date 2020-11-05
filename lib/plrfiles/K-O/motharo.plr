@@ -1,29 +1,30 @@
 Name: Motharo
 Pass: ModL.5YHLP/kM
-Titl: the Lion Cub
+Titl: the Fledgling Hawk
 Sex : 1
 Clas: 6
-Levl: 8
+Levl: 9
 Id  : 25
 Brth: 1604182960
-Plyd: 18198
-Last: 1604426675
+Plyd: 23118
+Last: 1604536401
 Lmot: 1604188562
-Lnew: 1604414640
+Lnew: 1604513526
 Htwn: 1372
 Host: 187.66.23.112
 Hite: 178
 Wate: 158
-Alin: 131
-Act : h 0 0 0
+Alin: -5
+Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDEF ad 0 0
 Room: 3001
+Lern: 2
 Hung: -1
 Thir: -1
-Hit : 105/105
-Mana : 126/126
-Move: 106/106
+Hit : 91/118
+Mana : 64/130
+Move: 35/110
 Str : 16/0
 Int : 13
 Wis : 13
@@ -31,8 +32,8 @@ Dex : 14
 Con : 15
 Cha : 11
 Ac  : 100
-Gold: 17108
-Exp : 44775
+Gold: 32503
+Exp : 355948
 Olc : 0
 Skil:
 16 90
@@ -41,6 +42,9 @@ Skil:
 232 90
 243 90
 0 0
+Affs:
+39 296 12 1 0 0 0 0
+0 0 0 0 0 0 0 0
 Alis: 1
  wak
  wak;sta
