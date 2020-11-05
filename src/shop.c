@@ -26,6 +26,7 @@
 #include "spells.h"				/* for skill_name() */
 #include "screen.h"
 #include "./include/floatfann.h"
+#include "fight.h" /* for ac in ai */
 
 /* Global variables definitions used externally */
 /* Constant list for printing out who we sell to */
@@ -1122,7 +1123,8 @@ SPECIAL(shop_keeper)
 	output[0] = (float) cmd/780;
 	output[1] = 1/(1+exp(-CMD_OBJ));
 	output[2] = 1/(1+exp(-CMD_ARG_OBJ));
-	output[3] = GET_OBJ_VNUM(argument);
+//	output[3] = GET_OBJ_VNUM(argument);
+	
 		fann_train(ann, input, output);
 	fann_save(ann, "etc/aventureiro.fann");
 		fann_destroy(ann);
