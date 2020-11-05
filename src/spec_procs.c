@@ -821,45 +821,54 @@ SPECIAL(bank)
 	if (CMD_IS("balance"))
 	{
 		if (GET_BANK_GOLD(ch) > 0)
-			send_to_char(ch, "Your current balance is %d coins.\r\n", GET_BANK_GOLD(ch));
+			send_to_char(ch, "Seu saldo atual é de %'lu moedas.\r\n", GET_BANK_GOLD(ch));
 		else
-			send_to_char(ch, "You currently have no money deposited.\r\n");
+			send_to_char(ch, "Você não possui dinheiro depositado.\r\n");
 		return (TRUE);
 	}
 	else if (CMD_IS("deposit"))
 	{
+	   if (IS_DEAD(ch) || PLR_FLAGGED(ch, PLR_TRNS)) {
+      send_to_char(ch, "Como você pretende depositar algo?\r\n");
+      return (TRUE);
+    }
 		if ((amount = atoi(argument)) <= 0)
 		{
-			send_to_char(ch, "How much do you want to deposit?\r\n");
+			send_to_char(ch, "Quanto você deseja depositar?\r\n");
 			return (TRUE);
 		}
 		if (GET_GOLD(ch) < amount)
 		{
-			send_to_char(ch, "You don't have that many coins!\r\n");
+			send_to_char(ch, "Você não tem tantas moedas!\r\n");
 			return (TRUE);
 		}
 		decrease_gold(ch, amount);
 		increase_bank(ch, amount);
-		send_to_char(ch, "You deposit %d coins.\r\n", amount);
-		act("$n makes a bank transaction.", TRUE, ch, 0, FALSE, TO_ROOM);
+		send_to_char(ch, "Você deposita %'lu moedas.\r\n", amount);
+		act("$n faz uma transação bancária.", TRUE, ch, 0, FALSE, TO_ROOM);
 		return (TRUE);
 	}
 	else if (CMD_IS("withdraw"))
 	{
+	   
+    if (IS_DEAD(ch) || PLR_FLAGGED(ch, PLR_TRNS)) {
+      send_to_char(ch, "Como você pretende sacar algo?\r\n");
+      return (TRUE);
+    }
 		if ((amount = atoi(argument)) <= 0)
 		{
-			send_to_char(ch, "How much do you want to withdraw?\r\n");
+			send_to_char(ch, "Quanto você deseja sacar?\r\n");
 			return (TRUE);
 		}
 		if (GET_BANK_GOLD(ch) < amount)
 		{
-			send_to_char(ch, "You don't have that many coins deposited!\r\n");
+			send_to_char(ch, "Você não possui tantas moedas depositadas!\r\n");
 			return (TRUE);
 		}
 		increase_gold(ch, amount);
 		decrease_bank(ch, amount);
-		send_to_char(ch, "You withdraw %d coins.\r\n", amount);
-		act("$n makes a bank transaction.", TRUE, ch, 0, FALSE, TO_ROOM);
+		send_to_char(ch, "Você saca %'lu moedas.\r\n", amount);
+		act("$n faz uma transação bancária.", TRUE, ch, 0, FALSE, TO_ROOM);
 		return (TRUE);
 	}
 	else
