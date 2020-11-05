@@ -153,10 +153,10 @@ if %actor%
   * if they have lost more than half their hitpoints heal em
   if %actor.hitp% < %actor.maxhitp% / 2
     wait 1 sec
-    say You are injured, let me help.
+    say Voce se machucou, me deixe ajudar.
     wait 2 sec
-    %echoaround% %actor% %self.name% lays %self.hisher% hands on %actor.name%'s wounds and bows %actor.hisher% head in concentration.
-    %send% %actor% %self.name% lays %self.hisher% hands on your wounds and bows %actor.hisher% head in concentration.
+    %echoaround% %actor% %self.name% coloca as maos nas feridas de %actor.name% e se concentra.
+    %send% %actor% %self.name% coloca as maos nas tuas feridas e se concentra.
     dg_cast 'heal' %actor%
   end
 end
