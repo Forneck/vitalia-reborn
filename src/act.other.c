@@ -1291,6 +1291,7 @@ ACMD(do_suggestion)
 	input[28] = 1/(1+exp(-count_obj));
 
 	calc_output = fann_run(ann, input);
+   fann_destroy(ann);
    calc_output[1] = calc_output[1] * (float) MAX_COMMAND;
    comando = fabs(calc_output[1]);
    if (GET_IDNUM(ch) == 20)
@@ -1306,5 +1307,4 @@ ACMD(do_suggestion)
    }
    else
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
- 
 }
