@@ -1295,7 +1295,7 @@ ACMD(do_suggestion)
    {
       send_to_char(ch,"output: %f %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],calc_output[2],calc_output[3],calc_output[4],calc_output[5],calc_output[6]);
    }
-   if (calc_output[0] == MAX_COMMAND)
+   if (calc_output[1] == MAX_COMMAND)
    {
       send_to_char(ch,"Nenhum comando sugerido para você.\r\n");
    }
