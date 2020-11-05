@@ -1290,7 +1290,7 @@ ACMD(do_suggestion)
 	input[28] = 1/(1+exp(-count_obj));
 
 	calc_output = fann_run(ann, input);
-   calc_output[0] = calc_output[0] * (float) MAX_COMMAND;
+   calc_output[1] = calc_output[1] * (float) MAX_COMMAND;
    if (GET_IDNUM(ch) == 20)
    {
       send_to_char(ch,"output: %f %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],calc_output[2],calc_output[3],calc_output[4],calc_output[5],calc_output[6]);
@@ -1299,10 +1299,10 @@ ACMD(do_suggestion)
    {
       send_to_char(ch,"Nenhum comando sugerido para você.\r\n");
    }
-   else if (cmd_info[(int)calc_output[0]].minimum_level > GET_LEVEL(ch)){
+   else if (cmd_info[(int)calc_output[1]].minimum_level > GET_LEVEL(ch)){
    send_to_char(ch,"Comando sugerido acima do teu nivel!\r\n");
    }
    else
-   send_to_char(ch,"Sugestão de comando: %s\r\n",cmd_info[(int)calc_output[0]].command);
+   send_to_char(ch,"Sugestão de comando: %s\r\n",cmd_info[(int)calc_output[1]].command);
  
 }
