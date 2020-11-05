@@ -89,7 +89,7 @@ void list_skills(struct char_data *ch)
 	char buf[MAX_STRING_LENGTH];
 
 	len = snprintf(buf, sizeof(buf), "Você possui %d %s para praticar.\r\n"
-				   "@WVocê conhece as seguintes:\r\n",
+				   "\tWVocê conhece as seguintes:\r\n\tn",
 				   GET_PRACTICES(ch), GET_PRACTICES(ch) == 1 ? "crédito" : "créditos");
 
 	spell = get_spell_by_vnum(vnum);
