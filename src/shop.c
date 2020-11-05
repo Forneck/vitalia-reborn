@@ -1077,6 +1077,7 @@ SPECIAL(shop_keeper)
   struct obj_data *object;
 	fann_type input[29];
 	fann_type output[6];
+		ann = fann_create_from_file("etc/aventureiro.fann");
 		if (GROUP(ch) != NULL)
 		grupo = 1;
 	else
