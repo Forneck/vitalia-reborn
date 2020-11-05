@@ -25,6 +25,7 @@
 #include "modify.h"
 #include "spells.h"				/* for skill_name() */
 #include "screen.h"
+#include "./include/floatfann.h"
 
 /* Global variables definitions used externally */
 /* Constant list for printing out who we sell to */
