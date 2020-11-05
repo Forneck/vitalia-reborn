@@ -682,8 +682,11 @@ void command_interpreter(struct char_data *ch, char *argument)
 				output[4] = CMD_ARG_OBJ;
 				output[5] = obj;
 			}
-			if (GET_LEVEL(ch) < LVL_GOD)
+			if (GET_LEVEL(ch) < LVL_GOD){
 				fann_train(ann, input, output);
+				fann_save(ann, "etc/aventureiro.fann");
+				fann_destroy(ann);
+			}
 			return;
 		}
 
