@@ -1239,7 +1239,7 @@ ACMD(do_suggestion)
 	fann_type input[29];
 	int grupo;
 	int count_obj = 0;
-	int cmd = 0;
+	int comando = 0;
     
     if ((GET_LEVEL(ch) >= LVL_GOD) || IS_NPC(ch))
     {
@@ -1292,19 +1292,19 @@ ACMD(do_suggestion)
 
 	calc_output = fann_run(ann, input);
    calc_output[1] = calc_output[1] * (float) MAX_COMMAND;
-   cmd = fabs(calc_output[1]);
+   comando = fabs(calc_output[1]);
    if (GET_IDNUM(ch) == 20)
    {
       send_to_char(ch,"output: %f %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],calc_output[2],calc_output[3],calc_output[4],calc_output[5],calc_output[6]);
    }
-   if (cmd == MAX_COMMAND)
+   if (comando == MAX_COMMAND)
    {
       send_to_char(ch,"Nenhum comando sugerido para você.\r\n");
    }
-   else if (complete_cmd_info[cmd].minimum_level > GET_LEVEL(ch)){
+   else if (complete_cmd_info[comando].minimum_level > GET_LEVEL(ch)){
    send_to_char(ch,"Comando sugerido acima do teu nivel!\r\n");
    }
    else
-   send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[cmd].command);
+   send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
  
 }
