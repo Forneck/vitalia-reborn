@@ -18,6 +18,9 @@
 struct attack_hit_type {
    const char *singular;
    const char *plural;
+   const char *sua;
+   const char *artigo;
+   const char *tipo;
 };
 
 /* Functions available in fight.c */
