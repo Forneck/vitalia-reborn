@@ -7,10 +7,10 @@ O feiticeiro parece velho e senil mas mesmo assim ele parece ser um feiticeiro
 muito poderoso. Ele está vestido com roupas finas, e está usando muitos anéis
 e braceletes da melhor qualidade.
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 2 2 1d1+30000 2d8+18
 30000 160000
-8 8 1
+9 9 1
 E
 #3001
 padeiro~
@@ -20,10 +20,10 @@ O padeiro olha você calmamente, limpando a farinha em seu rosto com a mão.
 Um gordo e bem apessoado padeiro. Mas você pode ver que ele possui muitas
 cicatrizes em seu corpo.
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+18
 100 160000
-8 8 1
+9 9 1
 E
 #3002
 merceeiro~
@@ -33,10 +33,10 @@ Um merceeiro está atrás do balcão, com um olhar ligeiramente impaciente.
 Um merceeiro alto, que consegue carregar dois sacos de trigo, pesando 200
 libras cada um, em seus ombros.
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+18
 30000 160000
-8 8 1
+9 9 1
 E
 #3003
 vendedor~
@@ -47,10 +47,10 @@ Ele é um jovem vendedor de armas, que ainda tem muita coisa para aprender,
 mas que está ansioso para lhe vender os seus mais novos instrumentos de
 carnificina e destruição.
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+18
 30000 160000
-8 8 1
+9 9 1
 E
 #3004
 armeiro~
@@ -60,10 +60,10 @@ Um armeiro está aqui, mostrando a sua nova (e previamente usada) armadura.
 Um armeiro velho mas muito forte. Ele já fêz mais armaduras em sua vida do
 que você poderia imaginar.
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+18
 28500 160000
-8 8 1
+9 9 1
 E
 #3006
 capitao stolar~
@@ -72,10 +72,10 @@ Um capitão aposentado está parado aqui, vendendo embarcações.
 ~
 Este capitão comeu mais tubarões em sua vida do que você matou insetos.
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 2 2 1d1+30000 2d8+12
 2000 160000
-8 8 1
+9 9 1
 E
 #3007
 marinheiro~
@@ -87,7 +87,7 @@ Ele parece ser forte como um lobo-do-mar.
 2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+12
 2000 160000
-8 8 1
+9 9 1
 E
 #3008
 tio juan~
@@ -99,7 +99,7 @@ Olhando para ele não se sabe ao certo se ele é um clandestino ou não.
 2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+18
 2000 160000
-8 8 1
+9 9 1
 E
 #3009
 wally vendedor~
@@ -111,10 +111,10 @@ Wally é um pouco distraído mas parece ser muito forte.  Ele tem um copo de
 ele exibe a sua excelente coleção de águas minerais, das quais ele muito se
 orgulha.
 ~
-2156546 0 0 0 16 0 0 0 800 E
+2156546 0 0 0 0 0 0 0 800 E
 108 0 -10 1d1+30000 1d8+18
 1000 160000
-8 8 1
+9 9 1
 E
 #3010
 carteiro agente postal~
@@ -127,10 +127,10 @@ porquê muitas pessoas parecem achar que este serviço está lento.  Talvez se
 ele escovasse as teias de aranha do seu uniforme, passaria uma impressão
 melhor.
 ~
-2287618 0 0 0 65552 0 0 0 1000 E
+2287618 0 0 0 0 0 0 0 1000 E
 108 0 -10 1d1+30000 1d8+18
 2000 0
-8 8 1
+9 9 1
 E
 #3011
 moe cartografo cartógrafo~
@@ -141,7 +141,7 @@ Moe é um homem idoso, que viajou muito no passado. Agora, ele escreve mapas
 para ajudar aos novos aventureiros a atingirem suas conquistas pelo mundo
 afora.
 ~
-2156548 0 0 0 2064 0 0 0 300 E
+2156548 0 0 0 0 0 0 0 300 E
 108 0 -10 1d1+30000 1d8+18
 1200 200000
 6 6 1
@@ -155,10 +155,10 @@ O caçador de aventuras é um homem bem alto e forte, muito bem treinado nas
 artes de caçar e matar. Se eu fosse você, eu não o aborreceria. Pode ser
 extremamente perigoso para sua saúde.
 ~
-2271378 0 0 0 591872 0 0 0 -100 E
+2271378 0 0 0 0 0 0 0 -100 E
 15 10 0 100d5+50 2d6+6
 5000 42000
-8 8 1
+9 9 1
 E
 #3016
 vendedor jornaleiro garoto~
@@ -170,10 +170,10 @@ pescoço, está pendurada uma placa, que diz "Jornal de Vitália,
 Imparcialidade e Preço Baixo".  Quando ele o vê, corre em sua direção,
 oferecendo o jornal.  Ele carrega um fardo de jornais embaixo do braço.
 ~
-2285632 0 0 0 16 0 0 0 150 E
+2285632 0 0 0 0 0 0 0 150 E
 108 0 -10 1d1+30000 2d8+18
 0 160000
-8 8 1
+9 9 1
 E
 #3020
 mestre-guia mago~
@@ -185,10 +185,10 @@ imensa sabedoria que ela possui.  Ela está usando uma delicada roupa mágica
 e você nota que ela está inteira envolvida por uma suave aura de tonalidade
 azul.
 ~
-2156562 0 0 0 272 0 0 0 1000 E
+2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 2
+9 9 2
 E
 #3021
 mestre-guia sacerdote~
@@ -199,10 +199,10 @@ Você não tem nenhuma dúvida de que este mestre-guia verdadeiramente está
 perto de seu Deus; ele tem um olhar calmo, amoroso.  Você nota que ele é
 rodeado por uma aura branca.
 ~
-2156562 0 0 0 272 0 0 0 1000 E
+2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 1
+9 9 1
 E
 #3022
 mestre-guia mendiga ladra~
@@ -213,10 +213,10 @@ Você nota que quando a sua mestre-guia se move, você não consegue perceber.
 Este é o jeito do verdadeiro ladrão. Ela está vestida com roupas pobres, e
 possui a aparência de uma mendiga.
 ~
-2156562 0 0 0 272 0 0 0 1000 E
+2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 2
+9 9 2
 E
 #3023
 mestre-guia~
@@ -230,7 +230,7 @@ antes de você nascer. Ele tem um olhar tranqüilo em sua face.
 2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 1
+9 9 1
 E
 #3024
 feiticeiro~
@@ -241,10 +241,10 @@ Ele é um mago experiente que se especializou na área da Magia de Combate.
 Ele está aqui para tomar conta da Guilda dos Magos. Seu conhecimento profundo
 de magias ofensivas e defensivas, fazem dele um oponente mortal.
 ~
-2156546 0 0 0 272 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 -20 -8 6d10+1500 8d8+80
 2000 60000
-8 8 1
+9 9 1
 E
 T 3000
 #3025
@@ -257,10 +257,10 @@ Fé.  O dever dele é proteger os crentes de perseguições e ataques traiçoeir
 Sua devoção religiosa combinada é sua habilidade superior fazem dele
 um oponente mortal.
 ~
-2156546 0 0 0 272 0 0 0 1000 E
+2156546 0 0 0 0 0 0 0 1000 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
-8 8 1
+9 9 1
 E
 T 3001
 #3026
@@ -274,10 +274,10 @@ armas. O conhecimento superior que ele possui, o faz saber como, quando e
 onde usar de forma combinada e cautelosa estas armas. Isso faz dele um
 oponente mortal.
 ~
-2156546 0 0 0 1573200 0 0 0 400 E
+2156546 0 0 0 0 0 0 0 400 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
-8 8 1
+9 9 1
 E
 T 3002
 #3027
@@ -289,10 +289,10 @@ Ele é um guerreiro especialista que foi condecorado por incontáveis atos
 heróicos. O dever dele é proteger a Guilda dos Espadachins. Sua habilidade
 extrema combinada com sua experiência em guerras, faz dele um mortal oponente.
 ~
-2156546 0 0 0 272 0 0 0 800 E
+2156546 0 0 0 0 0 0 0 800 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
-8 8 1
+9 9 1
 E
 T 3003
 #3028
@@ -305,10 +305,10 @@ muita segurança, acalmando o coração mais agitado e despertando a mente mais
 preguiçosa.  Ele poderá passar-lhe todos os ensinamentos druídicos, mas
 exigirá de você a conduta daquele que acredita em um ideal.
 ~
-2156562 0 0 0 272 0 0 0 1000 E
+2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 1
+9 9 1
 E
 #3029
 guardia confraria druidisa~
@@ -320,10 +320,10 @@ antigos da Confraria.  Responsável pela segurança do refúgio dos sacerdotes
 em Midgaard, ela pacientemente guarda sua entrada, bloquando-a com sua
 poderosa magia.
 ~
-2156546 0 0 0 272 0 0 0 1000 E
+2156546 0 0 0 0 0 0 0 1000 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
-8 8 2
+9 9 2
 E
 T 3005
 #3030
@@ -335,10 +335,10 @@ De uma forma estranha quase faz sentido, já que um sapo é uma criatura da natu
 mestre-guia. Exceto que ele está cantando e tocando um banjo
 Ele está vestido de verde, de um tom um pouco mais escuro que a pele dele.
 ~
-2156571 0 0 0 16 0 0 0 1000 E
+2156571 0 0 0 0 0 0 0 1000 E
 34 0 -10 6d10+640 1d8+24
 18794 100000
-8 8 1
+9 9 1
 E
 #3031
 guarda cacadora~
@@ -351,10 +351,10 @@ de sozinha matar todos os monstros de nível alto doque hoje é uma área
 para iniciantes. O único motivo para ela não ser a mestra é porquê ela
 não sabe cantar.
 ~
-2353162 0 0 0 80 0 0 0 900 E
+2353162 0 0 0 0 0 0 0 900 E
 33 0 -5 6d10+990 1d8+22
 2000 16000
-8 8 2
+9 9 2
 E
 T 3006
 #3032
@@ -367,10 +367,10 @@ você sabe que ela é durona. Ela é muito amigável, um pouco paqueradora
 até, mas terrível para qualquer um que a tire do sério.
 Ela é especialista em egos feridos e membros arrancados.
 ~
-2353162 0 0 0 80 0 0 0 900 E
+2353162 0 0 0 0 0 0 0 900 E
 23 1 2 6d1+390 1d8+12
 2000 80000
-8 8 2
+9 9 2
 E
 #3040
 barman~
@@ -382,7 +382,7 @@ Um barman com aspecto cansado que odeia desordens em seu bar.
 2154498 0 0 0 0 0 0 0 900 E
 108 2 2 6d10+390 1d8+12
 2000 80000
-8 8 1
+9 9 1
 E
 #3041
 garcom garçom~
@@ -394,7 +394,7 @@ Um garçom com aspecto cansado.
 2154498 0 0 0 0 0 0 0 900 E
 108 2 2 6d10+390 1d8+12
 2000 80000
-8 8 1
+9 9 1
 E
 #3042
 garcom garçom~
@@ -407,7 +407,7 @@ Você instantaneamente reconhece aquele rosto, assim que olha para ele.
 2154498 0 0 0 0 0 0 0 600 E
 108 1 2 6d10+390 1d8+12
 2000 80000
-8 8 1
+9 9 1
 E
 #3043
 garcom garçom~
@@ -420,7 +420,7 @@ e começar a adorar Deus. Naaah.
 2154498 0 0 0 0 0 0 0 600 E
 108 1 2 6d10+390 1d8+12
 2000 80000
-8 8 1
+9 9 1
 E
 #3044
 garcom garçom~
@@ -432,7 +432,7 @@ Hmmm... gostaria de saber onde ele arrumou aquela moeda que ele est� brincando
 2154498 0 0 0 0 0 0 0 600 E
 108 1 2 6d10+390 1d8+12
 2000 80000
-8 8 1
+9 9 1
 E
 #3045
 garcom garçom~
@@ -445,7 +445,7 @@ das garrafas de bebida que ele carrega
 2154498 0 0 0 0 0 0 0 600 E
 108 1 2 6d10+390 1d8+12
 2000 80000
-8 8 1
+9 9 1
 E
 #3046
 encardido~
@@ -456,10 +456,10 @@ Encardido parece realmente... hmm... imundo. Ele gosta de manter os seus
 fregueses felizes, mas não mexa com ele ou ele poderá ficar realmente MUITO
 bravo.
 ~
-2156562 0 0 0 16 0 0 0 600 E
+2156562 0 0 0 0 0 0 0 600 E
 108 1 -10 1d1+30000 1d8+22
 2000 80000
-8 8 1
+9 9 1
 E
 #3047
 garcom garçom~
@@ -474,7 +474,7 @@ a ficar branca.
 2154498 0 0 0 0 0 0 0 600 E
 108 1 2 6d10+390 1d8+12
 2000 80000
-8 8 1
+9 9 1
 E
 #3048
 mestra trovadora~
@@ -489,10 +489,10 @@ um quadro em que tudo tem vida, movimento.  Suas lições devem ser ouvidas
 atentamente e assimiladas pois o conhecimento dos bardos permite enxergar-se
 o mundo por trás do mundo...
 ~
-2156562 0 0 0 272 0 0 0 1000 E
+2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 2
+9 9 2
 E
 #3049
 bardo sentinela~
@@ -504,10 +504,10 @@ protege a entrada que leva ao Clube de Bardos. Sua aparência despreocupada
 oculta a esperteza e agilidade de um homem de mil talentos e cujos olhos,
 na cabeça coberta, brilham observando tudo.
 ~
-2156546 0 0 0 272 0 0 0 800 E
+2156546 0 0 0 0 0 0 0 800 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
-8 8 1
+9 9 1
 E
 T 3004
 #3050
@@ -523,7 +523,7 @@ No momento ela inventou uma canção a respeito das bebidas do bar.  O refrão
 2154498 0 0 0 0 0 0 0 600 E
 108 1 2 6d10+390 1d8+12
 2000 80000
-8 8 2
+9 9 2
 E
 #3051
 mestre bardo~
@@ -536,10 +536,10 @@ Ele o ensinará que cantar, tocar e criar é só mais uma forma de tornar
 a vida mais cheia de belezas e que uma de suas mais sérias missões
 é afugentar o mal e sua teia de tristezas.
 ~
-2156562 0 0 0 272 0 0 0 1000 E
+2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 1
+9 9 1
 E
 #3052
 gambrinus senhor~
@@ -553,10 +553,10 @@ poucos fios da careca e das espessas e rebeldes sobrancelhas.  Toda vez que
 ele vende algo, experimenta uma pequena porção do mesmo produto. Diz que é
 só para experimentar, mas tente imaginá-lo após um dia de trabalho...
 ~
-2156546 0 0 0 272 0 0 0 800 E
+2156546 0 0 0 0 0 0 0 800 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
-8 8 1
+9 9 1
 E
 #3053
 bardo bernardo~
@@ -570,10 +570,10 @@ despenteadas.  O sorriso amistoso consegue suavizar sua ameaçadora figura
 que, apesar de parecer desajeitada, é ágil e hábil, produzindo finos
 instrumentos e tocando-os com maestria e emoção.
 ~
-2156546 0 0 0 272 0 0 0 800 E
+2156546 0 0 0 0 0 0 0 800 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
-8 8 1
+9 9 1
 E
 #3059
 pacificador~
@@ -582,10 +582,10 @@ Um Pacificador está aqui, pronto para agir ao primeiro sinal de problema.
 ~
 Ele parece muito forte e sábio. Parece que ele não fala com QUALQUER um.
 ~
-2103376 0 0 0 16 0 0 0 1000 E
+2103376 0 0 0 0 0 0 0 1000 E
 40 0 -4 10d10+750 8d8+18
 4000 50500
-8 8 1
+9 9 1
 BareHandAttack: 10
 E
 #3060
@@ -595,10 +595,10 @@ Um sentinela está parado aqui.
 ~
 Um grande, forte, solidário e confiável sentinela.
 ~
-2103360 0 0 0 16 0 0 0 1000 E
+2103360 0 0 0 0 0 0 0 1000 E
 10 10 1 1d12+123 1d8+5
 500 9000
-8 8 1
+9 9 1
 E
 #3061
 zelador~
@@ -610,7 +610,7 @@ Que trabalho pesado ele tem.
 2099264 0 0 0 0 0 0 0 800 E
 1 20 9 2d6+10 1d5+0
 34 100
-8 8 1
+9 9 1
 E
 #3062
 cachorro fido~
@@ -620,10 +620,10 @@ Um fido bestial está aqui, fuçando no lixo, a procura de comida.
 O fido é um cachorro pequeno que tem um cheiro muito ruim e seus dentes estão
 cheios de pedaços de carne apodrecida grudadas.
 ~
-2162912 0 0 0 65536 0 0 0 -200 E
+2162912 0 0 0 0 0 0 0 -200 E
 0 20 10 1d6+4 1d4+0
 0 25
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
 #3063
@@ -637,7 +637,7 @@ coisa por dinheiro.
 2099202 0 0 0 0 0 0 0 -330 E
 5 15 5 2d6+60 1d6+1
 87 900
-8 8 1
+9 9 1
 E
 #3064
 bebado bêbado~
@@ -649,7 +649,7 @@ Um bêbado que parece estar muito feliz, e que carrega muito dinheiro.
 2097154 0 0 0 0 0 0 0 400 E
 2 19 8 2d6+22 1d6+0
 53 200
-8 8 1
+9 9 1
 E
 #3065
 mendiga~
@@ -661,7 +661,7 @@ A mendiga parece que está farta da vida.
 2097154 0 0 0 0 0 0 0 400 E
 1 20 9 2d6+10 1d5+0
 0 100
-8 8 2
+9 9 2
 E
 #3066
 odif laitseb~
@@ -670,10 +670,10 @@ Um odif laitseb está aqui, andando de trás prá frente.
 ~
 O odif é um deus pequeno que foi transformado por algum cachorro.
 ~
-2162912 0 0 0 65536 0 0 0 -200 E
+2162912 0 0 0 0 0 0 0 -200 E
 0 20 10 1d6+4 1d4+0
 0 25
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
 #3067
@@ -686,7 +686,7 @@ Um grande, forte, solidário e confiável sentinela.
 2103362 0 0 0 0 0 0 0 1000 E
 10 10 1 1d12+123 1d8+5
 500 9000
-8 8 1
+9 9 1
 E
 #3068
 bolha gelatinosa verde~
@@ -695,10 +695,10 @@ Uma bolha gelatinosa verde e gosmenta está aqui, chupando restos de escombros.
 ~
 Uma coisa medonha de se olhar; é enorme, esverdeado e se parece com uma bolha.
 ~
-2353360 0 0 0 16 0 0 0 0 E
+2353360 0 0 0 0 0 0 0 0 E
 20 0 0 1d11+325 3d6+5
 1000 40000
-8 8 2
+9 9 2
 BareHandAttack: 6
 E
 #3089
@@ -711,7 +711,7 @@ Assim que você olha para ele, ele abre suas mãos e mostra um rato!
 2156546 0 0 0 0 0 0 0 1000 E
 108 10 1 1d1+30000 20d4+10
 500 9000
-8 8 1
+9 9 1
 E
 #3090
 gatinho~
@@ -723,7 +723,7 @@ O gatinho parece ser um gracioso, pequenino e destemido lutador.
 2113542 0 0 0 0 0 0 0 0 E
 1 20 9 1d6+11 1d4+0
 0 100
-8 8 0
+9 9 0
 BareHandAttack: 8
 E
 #3091
@@ -736,7 +736,7 @@ O cachorrinho parece ser um gracioso, pequenino e destemido lutador.
 2113542 0 0 0 0 0 0 0 0 E
 1 20 9 1d6+13 1d4+0
 0 125
-8 8 0
+9 9 0
 BareHandAttack: 8
 E
 #3092
@@ -749,7 +749,7 @@ O cão-de-caça parece ser um lutador destemido.
 2113542 0 0 0 0 0 0 0 0 E
 2 19 8 1d12+22 1d6+0
 0 200
-8 8 0
+9 9 0
 BareHandAttack: 4
 E
 #3093
@@ -762,7 +762,7 @@ O rottweiler parece ser um forte e destemido lutador.
 2113542 0 0 0 0 0 0 0 0 E
 3 18 7 1d12+35 1d7+0
 0 800
-8 8 0
+9 9 0
 BareHandAttack: 4
 E
 #3094
@@ -775,7 +775,7 @@ O lobo parece ser forte e um lutador que desconhece o medo.
 2113542 0 0 0 0 0 0 0 0 E
 4 17 6 1d12+47 1d8+0
 0 1600
-8 8 0
+9 9 0
 BareHandAttack: 4
 E
 #3095
@@ -787,10 +787,10 @@ Belchior é um senhor interessante, irriquieto e parece estar bastante
 preocupado com alguma coisa.   Suas roupas estão tão empoeiradas!
 Pelo jeito dele, as vendas não andam muito boas.
 ~
-2156550 0 0 0 2064 0 0 0 300 E
+2156550 0 0 0 0 0 0 0 300 E
 108 0 -10 1d1+30000 1d8+18
 1200 200000
-8 8 1
+9 9 1
 E
 #3096
 Maria novata instrutora~
@@ -803,11 +803,13 @@ Apesar de possuir apenas um olho, ela esta atenta a tudo oque seus alunos fazem.
 2097154 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
 100 10000
-8 8 2
+9 9 2
 SavingPara: 2
 SavingRod: 2
 SavingPetri: 2
 SavingBreath: 2
 SavingSpell: 2
 E
+T 3011
+T 3012
 $

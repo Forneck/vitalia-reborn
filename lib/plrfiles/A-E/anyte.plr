@@ -3,29 +3,29 @@ Pass: AnRCfBykX0mXk
 Titl: the Wanderer
 Sex : 2
 Clas: 6
-Levl: 70
+Levl: 71
 Id  : 6
 Brth: 1603323580
-Plyd: 170038
-Last: 1604611422
+Plyd: 175702
+Last: 1604620860
 Lmot: 1603324480
-Lnew: 1604604579
+Lnew: 1604611446
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: 245
+Alin: 120
 Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
 Wimp: 100
-Room: 5518
-Lern: 14
-Hung: 12
-Thir: 8
-Hit : 560/808
-Mana : 154/926
-Move: 356/256
+Room: 3001
+Lern: 16
+Hung: 2
+Thir: 2
+Hit : 854/824
+Mana : 931/931
+Move: 358/258
 Str : 17/0
 Int : 9
 Wis : 11
@@ -33,9 +33,9 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 1244641
+Gold: 1246940
 Bank: 1500000
-Exp : 48533604
+Exp : 49044882
 Olc : 0
 Skil:
 7 100
@@ -59,12 +59,13 @@ Skil:
 232 90
 243 95
 0 0
-Affs:
-50 25 0 36 2048 0 0 0
-1 11 -20 17 0 0 0 0
-19 26 0 29 16 0 0 0
-0 0 0 0 0 0 0 0
-Alis: 54
+Alis: 56
+ medi
+ rem coura;medit
+1
+ medit
+ rem coura;medit
+1
  fibra
            s;s;w;w;w;w;w;w;w;w;w;w;s;e;n;n;e
 1

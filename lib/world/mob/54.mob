@@ -5,10 +5,10 @@ Seu mestre está aqui.
 ~
 Um velho homem está aqui a perscrutar antigos livros.
 ~
-2123778 0 0 0 2320 0 0 0 1000 E
+2123778 0 0 0 0 0 0 0 1000 E
 16 -10 -10 1d1+10000 5d5+5
 1 0
-8 8 1
+9 9 1
 E
 #5401
 clerigo mestre guilda~
@@ -18,10 +18,10 @@ Seu mestre está aqui.
 Um velho homem vestido em um longo robe violeta está aqui, tentando se
 concentrar.
 ~
-2123778 0 0 0 2320 0 0 0 1000 E
+2123778 0 0 0 0 0 0 0 1000 E
 16 -10 -10 1d1+10000 5d5+5
 1 0
-8 8 1
+9 9 1
 E
 #5402
 guerreiro mestre guilda~
@@ -31,10 +31,10 @@ Seu mestre está aqui.
 Um pequeno homem vestido em um robe negro está aqui, esperando para
 treiná-lo.
 ~
-2123778 0 0 0 2320 0 0 0 1000 E
+2123778 0 0 0 0 0 0 0 1000 E
 16 -10 -10 1d1+10000 5d5+5
 1 0
-8 8 1
+9 9 1
 E
 #5403
 ladrao mestre guilda~
@@ -45,10 +45,10 @@ Um homem vestido com restos de pano negro.  Assim que você entra, ele segura
 sua faca e a atira contra você.  A faca finca na parede, próxima a sua
 orelha esquerda.  'Nós começaremos agora', é tudo o que ele diz.
 ~
-2123778 0 0 0 2320 0 0 0 1000 E
+2123778 0 0 0 0 0 0 0 1000 E
 16 -10 -10 1d1+10000 5d5+5
 1 0
-8 8 1
+9 9 1
 E
 #5404
 mulher recepcionista~
@@ -59,22 +59,22 @@ Esta beleza árabe é certamente a filha de algum alto oficial.  Quando você
 discretamente levanta seu véu, você pode notar uma pequena marca de nascença
 em sua bochecha esquerda em forma de meia-lua.
 ~
-2123778 0 0 0 16 0 0 0 800 E
+2123778 0 0 0 0 0 0 0 800 E
 10 -10 -10 1d1+1871 10d20+10
 1 5000
 6 6 2
 E
 #5405
 mago garcom velho homem~
-O velho caquético~
+o velho caquético~
 O velho caquético se apoia contra a barra.
 ~
 Ele parece distraído enquanto coloca cinco bebidas de uma vez sem errar.
 ~
-2156546 0 0 0 16 0 0 0 0 E
+2156546 0 0 0 0 0 0 0 0 E
 108 9 -1 1d1+12000 1d5+3
 1 1000
-8 8 1
+9 9 1
 E
 #5406
 john irmao cantor vocalista~
@@ -86,7 +86,7 @@ Você vê o vocalista dos Lokettes cantando muito alto uma melodia.
 2097218 0 0 0 0 0 0 0 0 E
 15 4 0 3d5+150 2d5+3
 21 1350
-8 8 1
+9 9 1
 E
 #5407
 crente~
@@ -123,7 +123,7 @@ tostão?
 2097348 0 0 0 0 0 0 0 -20 E
 1 19 10 10d1+1 1d2+2
 1 0
-8 8 1
+9 9 1
 E
 #5410
 padeiro~
@@ -132,10 +132,10 @@ O padeiro está aqui jogando paciência.
 ~
 Você vê um grande homem de avental branco coberto de farinha.
 ~
-2156546 0 0 0 16 0 0 0 100 E
+2156546 0 0 0 0 0 0 0 100 E
 108 0 0 1d1+30000 2d10+2
 1 2000
-8 8 1
+9 9 1
 E
 #5411
 lojista~
@@ -145,10 +145,10 @@ O lojista está aqui.
 Você vê um meio-elfo sentado em um tamborete, atrás de sua caixa
 registradora.
 ~
-2156546 0 0 0 16 0 0 0 100 E
+2156546 0 0 0 0 0 0 0 100 E
 108 0 0 1d1+30000 2d10+2
 1 2000
-8 8 1
+9 9 1
 E
 #5412
 banqueiro~
@@ -157,10 +157,10 @@ Um banqueiro está aqui esperando para lhe ajudar.
 ~
 Este pequeno homem parece estar apto para contar dinheiro.
 ~
-2156546 0 0 0 16 0 0 0 0 E
+2156546 0 0 0 0 0 0 0 0 E
 10 1 0 1d1+30000 3d6+2
 1 0
-8 8 1
+9 9 1
 E
 #5413
 ahkeem alfaiate~
@@ -170,10 +170,10 @@ Ahkeem o alfaiate lhe dá boas-vindas
 Este homem de meia idade olha para você com desdenho e rapidamente lhe
 sugere um novo guarda-roupa.
 ~
-2156546 0 0 0 16 0 0 0 0 E
+2156546 0 0 0 0 0 0 0 0 E
 108 10 5 1d1+30000 1d5+5
 1 200
-8 8 1
+9 9 1
 E
 #5414
 vera verdureira~
@@ -182,10 +182,10 @@ Vera, a verdureira olha para você enquanto você aprecia seu estoque.
 ~
 Uma esbelta e alta mulher que sorri francamente para você.
 ~
-2156546 0 0 0 16 0 0 0 0 E
+2156546 0 0 0 0 0 0 0 0 E
 108 10 5 1d1+30000 1d5+5
 1 2000
-8 8 2
+9 9 2
 E
 #5415
 butch~
@@ -194,10 +194,10 @@ Butch o açougueiro está aqui com um avental ensangüentado.
 ~
 Este anão atarracado tem um brilho maldoso em seu olhar.
 ~
-2156546 0 0 0 16 0 0 0 0 E
+2156546 0 0 0 0 0 0 0 0 E
 108 10 5 1d1+30000 1d5+5
 1 2000
-8 8 1
+9 9 1
 E
 #5416
 abdul vendedor~
@@ -207,10 +207,10 @@ Abdul está aqui, esperando para ajuda-lo.
 Abdul retribui seu olhar com um olhar fixo.  Você rapidamente se desvia de
 seu frio olhar e faz seu pedido.
 ~
-2156546 0 0 0 16 0 0 0 0 E
+2156546 0 0 0 0 0 0 0 0 E
 108 10 5 1d1+30000 1d5+5
 1 2000
-8 8 1
+9 9 1
 E
 #5417
 igor armeiro~
@@ -219,10 +219,10 @@ Igor está aqui fazendo... algo.
 ~
 Você vê um pequeno anão com um grande corcunda em seu ombro esquerdo.
 ~
-2156546 0 0 0 16 0 0 0 0 E
+2156546 0 0 0 0 0 0 0 0 E
 108 10 5 1d1+30000 1d5+5
 1 2000
-8 8 1
+9 9 1
 E
 #5418
 cassandra~
@@ -233,10 +233,10 @@ Você vê uma face alegre, cujas linhas sugerem muitos anos de mar aberto.  É
 apenas por causa de tantos anos de pesca que ela consegue suportar este
 cheiro que está no ar.
 ~
-2156546 0 0 0 16 0 0 0 0 E
+2156546 0 0 0 0 0 0 0 0 E
 108 0 0 1d1+30000 1d5+5
 1 2000
-8 8 2
+9 9 2
 E
 #5419
 capataz homem~
@@ -249,7 +249,7 @@ tomando conta dos trabalhadores.
 2097218 0 0 0 0 0 0 0 0 E
 15 6 -2 3d10+40 1d8+2
 1 100
-8 8 1
+9 9 1
 E
 #5420
 trabalhador~
@@ -261,7 +261,7 @@ Um grande homem muito suado nem ao menos retorna seu olhar.
 2097218 0 0 0 0 0 0 0 10 E
 10 12 0 3d8+35 2d5+2
 1 50
-8 8 1
+9 9 1
 E
 #5421
 estatua brahman~
@@ -271,10 +271,10 @@ A estátua de Brahman está aqui.
 A estátua feita de sólido mármore descreve o poderoso Deus que derrota Siva
 em um combate mágico.
 ~
-2353170 0 0 0 2320 0 0 0 1000 E
+2353170 0 0 0 0 0 0 0 1000 E
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
-8 8 0
+9 9 0
 E
 #5422
 estatua siva~
@@ -284,10 +284,10 @@ A estátua de Siva está aqui.
 A estátua do Grande Lorde da Destruição está aqui, sendo atacada por Brahman
 em um combate mágico.
 ~
-2353170 0 0 0 2320 0 0 0 -1000 E
+2353170 0 0 0 0 0 0 0 -1000 E
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
-8 8 0
+9 9 0
 E
 #5423
 estatua indra~
@@ -296,10 +296,10 @@ A estátua de Indra está aqui.
 ~
 Está estátua se parece com um enorme elefante.
 ~
-2353170 0 0 0 2320 0 0 0 1000 E
+2353170 0 0 0 0 0 0 0 1000 E
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
-8 8 0
+9 9 0
 E
 #5424
 estatua yama~
@@ -308,10 +308,10 @@ A estátua de Yama está aqui.
 ~
 Esta é a estátua do Deus da Morte.  Ela está coberta com estranhas runas.
 ~
-2353170 0 0 0 2320 0 0 0 0 E
+2353170 0 0 0 0 0 0 0 0 E
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
-8 8 0
+9 9 0
 E
 #5425
 estatua surya~
@@ -321,10 +321,10 @@ A estátua de Surya está aqui.
 A estátua de Surya, o Deus que comanda o sol, quase brilha com uma aura de
 fogo.
 ~
-2353170 0 0 0 2320 0 0 0 1000 E
+2353170 0 0 0 0 0 0 0 1000 E
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
-8 8 0
+9 9 0
 E
 #5426
 estatua kali~
@@ -334,10 +334,10 @@ A estátua de Kali está aqui.
 A estátua da Mãe Negra, Kali, é feita em mármore negro e coberta com runas
 prateadas.
 ~
-2353170 0 0 0 2320 0 0 0 -1000 E
+2353170 0 0 0 0 0 0 0 -1000 E
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
-8 8 0
+9 9 0
 E
 #5427
 estatua brihaspati~
@@ -347,10 +347,10 @@ A estátua de Brihaspati está aqui.
 A estátua de Brihaspati, o Deus das Estudantes e do Conhecimento é feita com
 mármore resistente.
 ~
-2353170 0 0 0 2320 0 0 0 0 E
+2353170 0 0 0 0 0 0 0 0 E
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
-8 8 0
+9 9 0
 E
 #5428
 estatua puchan~
@@ -360,10 +360,10 @@ A estátua de Puchan está aqui.
 A estátua de Puchan, Deus dos Viajantes, é coberta de poeira e esculpida
 como se ela tivesse atravessado um longo caminho pelas estradas.
 ~
-2353170 0 0 0 2320 0 0 0 1000 E
+2353170 0 0 0 0 0 0 0 1000 E
 15 -10 -10 1d1+1200 6d10+10
 1200 12000
-8 8 0
+9 9 0
 E
 #5429
 aziz humano canon~
@@ -372,10 +372,10 @@ Aziz, o Cânon Humano está aqui.
 ~
 An undefined string.
 ~
-2097344 0 0 0 16 0 0 0 0 E
+2097344 0 0 0 0 0 0 0 0 E
 11 14 0 2d11+40 2d5+2
 1 384
-8 8 1
+9 9 1
 E
 #5430
 mustafah humano ladrao~
@@ -384,10 +384,10 @@ Mustafah, o Ladrão Humano está aqui.
 ~
 An undefined string.
 ~
-2097344 0 0 0 16 0 0 0 0 E
+2097344 0 0 0 0 0 0 0 0 E
 7 17 10 3d8+41 2d4+1
 1 99
-8 8 1
+9 9 1
 E
 #5431
 fatima elfa elfica invocadora~
@@ -396,10 +396,10 @@ Fátima, a Invocadora Élfica está aqui.
 ~
 An undefined string.
 ~
-2097344 0 0 0 16 0 0 0 0 E
+2097344 0 0 0 0 0 0 0 0 E
 9 18 10 2d6+25 3d3+0
 1 93
-8 8 1
+9 9 1
 E
 #5432
 kareem anao mercenario~
@@ -408,10 +408,10 @@ Kareem, o anão Mercenário está aqui.
 ~
 An undefined string.
 ~
-2097344 0 0 0 16 0 0 0 0 E
+2097344 0 0 0 0 0 0 0 0 E
 12 9 0 4d4+50 2d6+5
 1 939
-8 8 1
+9 9 1
 E
 #5433
 nomade mercador~
@@ -424,23 +424,23 @@ para não confiar muito nele.
 2160836 0 0 0 0 0 0 0 -100 E
 108 11 -10 1d1+1500 1d8+2
 15000 800
-8 8 1
+9 9 1
 E
 #5434
 guarda costa guarda-costa~
-O guarda-costa do Sultão~
+o guarda-costa do Sultão~
 Um guarda-costa está a medir-lhe com o olhar.
 ~
 O grande meio-orc rapidamente mede você e volta para seu dever.
 ~
-2103346 0 0 0 2064 0 0 0 0 E
+2103346 0 0 0 0 0 0 0 0 E
 12 10 3 3d10+100 1d6+3
 1 400
-8 8 1
+9 9 1
 E
 #5435
 crianca ladrao~
-Uma criança magra~
+uma criança magra~
 Uma criança magra vaga ao redor.
 ~
 Esta pequena criança nota você olhando para ela e rapidamente desvia seu
@@ -449,7 +449,7 @@ olhar.
 2097284 0 0 0 0 0 0 0 100 E
 7 12 1 14d1+1 2d5+1
 1 100
-8 8 1
+9 9 1
 E
 #5436
 trabalhador doca~
@@ -462,7 +462,7 @@ caixa para os barcos como se esta fosse uma caixa de lírios.
 2097216 0 0 0 0 0 0 0 0 E
 12 9 2 3d5+65 1d8+5
 1 550
-8 8 1
+9 9 1
 E
 #5437
 homem cobrador de impostos~
@@ -475,7 +475,7 @@ Sultão, por viverem nesta grande cidade.
 2097344 0 0 0 0 0 0 0 0 E
 5 16 5 10d2+45 2d3+1
 15 431
-8 8 1
+9 9 1
 E
 #5438
 gord~
@@ -484,10 +484,10 @@ Gord O Velhaco está aqui.
 ~
 An undefined string.
 ~
-2097284 0 0 0 2320 0 0 0 1000 E
+2097284 0 0 0 0 0 0 0 1000 E
 15 0 -3 5d3+105 2d6+4
 1 1000
-8 8 1
+9 9 1
 E
 #5439
 chulainn cavaleiro~
@@ -497,10 +497,10 @@ Chulainn O Cavaleiro está aqui.
 Este grande homem não parece surpreso com seu aproximar e olha para você
 ironicamente.
 ~
-2103428 0 0 0 2064 0 0 0 800 E
+2103428 0 0 0 0 0 0 0 800 E
 15 0 -10 4d1+231 2d8+5
 650 8700
-8 8 1
+9 9 1
 E
 #5440
 daghdha~
@@ -509,10 +509,10 @@ Daghdha, O Arque-Mágico está aqui.
 ~
 Este homem está vestido em longos robes marrons e tem um olhar penetrante.
 ~
-2097216 0 0 0 2320 0 0 0 200 E
+2097216 0 0 0 0 0 0 0 200 E
 15 5 3 5d2+180 1d6+2
 0 8700
-8 8 1
+9 9 1
 E
 #5441
 curley folhaverde folha verde~
@@ -521,10 +521,10 @@ Curley Folhaverde está aqui.
 ~
 An undefined string.
 ~
-2097284 0 0 0 8 0 0 0 0 E
+2097284 0 0 0 0 0 0 0 0 E
 15 0 0 3d5+120 3d4+1
 1 1000
-8 8 1
+9 9 1
 E
 #5442
 homem profeta vagante~
@@ -538,7 +538,7 @@ final.
 2097280 0 0 0 0 0 0 0 0 E
 7 16 5 1d1+1 1d5+1
 1 10
-8 8 1
+9 9 1
 E
 #5443
 gato rua~
@@ -550,7 +550,7 @@ Você vê um pequeno gatinho faminto.
 2097280 0 0 0 0 0 0 0 -10 E
 2 18 7 1d2+5 2d2+1
 1 0
-8 8 1
+9 9 1
 E
 #5444
 urubu~
@@ -563,7 +563,7 @@ deseja é um corpo.
 2097344 0 0 0 0 0 0 0 -200 E
 2 18 7 1d3+1 1d6+1
 1 10
-8 8 1
+9 9 1
 E
 #5445
 velho homem~
@@ -599,7 +599,7 @@ O que você vê diante de si é realmente um bebê de um elemental do ar.
 2097188 0 0 0 0 0 0 0 -1000 E
 1 19 9 2d2+1 2d3+1
 1 10
-8 8 1
+9 9 1
 E
 #5448
 lamia~
@@ -613,7 +613,7 @@ ambiciosamente.
 2097700 0 0 0 0 0 0 0 -500 E
 12 12 3 1d10+120 2d5+1
 1500 10500
-8 8 2
+9 9 2
 E
 #5449
 dervixe~
@@ -625,16 +625,16 @@ Este homem parece poder usar montes e montes de restos.
 2097248 0 0 0 0 0 0 0 -750 E
 8 12 3 4d4+20 2d6+1
 1 105
-8 8 1
+9 9 1
 E
 #5450
 sultao~
-O Sultão~
+o Sultão~
 O Sultão descansa em seu trono.
 ~
 Você vê um grande e saudável homem em robes vermelhos sorrindo para você.
 ~
-2124082 0 0 0 2320 0 0 0 200 E
+2124082 0 0 0 0 0 0 0 200 E
 10 5 -4 6d6+830 1d6+0
 1200 25000
 5 5 1
@@ -650,7 +650,7 @@ azul.   Sua lealdade para com o Sultão é eterna.
 2097154 0 0 0 0 0 0 0 0 E
 3 17 7 1d1+15 1d6+1
 0 40
-8 8 2
+9 9 2
 E
 #5452
 carcereiro~
@@ -673,10 +673,10 @@ Um eunuco está aqui tomando conta das garotas.
 Você vê um grande homem cuja única função é proteger o harém.  Ele foi
 castrado para a segurança das garotas.
 ~
-2097186 0 0 0 2064 0 0 0 0 E
+2097186 0 0 0 0 0 0 0 0 E
 12 8 0 5d1+130 2d4+4
 0 1300
-8 8 0
+9 9 0
 E
 #5454
 garota preferida nichole~
@@ -686,7 +686,7 @@ Nichole, a preferida do Sultão descansa sobre algumas almofadas.
 Você vê a mais bela garota árabe que você jamais viu.  Pena que ela está
 quase a ponto de te matar.
 ~
-2097186 0 0 0 2064 0 0 0 100 E
+2097186 0 0 0 0 0 0 0 100 E
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
@@ -698,7 +698,7 @@ Alá está aqui.
 ~
 Você vê o todo poderoso Alá.
 ~
-2354482 0 0 0 526608 0 0 0 1000 E
+2354482 0 0 0 0 0 0 0 1000 E
 11 0 0 2d3+2300 2d20+20
 0 45000
 5 5 0
@@ -710,10 +710,10 @@ O Guardião da Guilda dos Magos está aqui.
 ~
 Este homem parece um Mago-Guerreiro e eu não me atreveria a mexer com ele.
 ~
-2123778 0 0 0 2320 0 0 0 0 E
+2123778 0 0 0 0 0 0 0 0 E
 8 -1 -10 2d5+500 3d8+10
 0 500
-8 8 1
+9 9 1
 E
 #5457
 clerigo guardiao~
@@ -723,10 +723,10 @@ O Guardião da Guilda dos Clérigos está aqui.
 Este homem parece um Clérigo-Guerreiro e eu não me atreveria a mexer com
 ele.
 ~
-2123778 0 0 0 2320 0 0 0 0 E
+2123778 0 0 0 0 0 0 0 0 E
 8 -1 -10 2d5+500 3d8+10
 0 500
-8 8 1
+9 9 1
 E
 #5458
 guerreiro guardiao~
@@ -735,10 +735,10 @@ O Guardião da Guilda dos Guerreiros está aqui.
 ~
 Este homem parece o primo do Conan e eu não me atreveria a desafiá-lo.
 ~
-2123778 0 0 0 2320 0 0 0 0 E
+2123778 0 0 0 0 0 0 0 0 E
 8 -1 -10 2d5+500 3d8+10
 0 500
-8 8 1
+9 9 1
 E
 #5459
 ladrao guardiao~
@@ -748,10 +748,10 @@ O Guardião da Guilda dos ladrões está aqui.
 Você vê um homem vestido de negro.  Ele rapidamente se levanta assim que
 você caminha em direção a onde ele está.
 ~
-2123778 0 0 0 2320 0 0 0 -100 E
+2123778 0 0 0 0 0 0 0 -100 E
 8 -1 -10 2d5+500 3d8+10
 0 500
-8 8 1
+9 9 1
 E
 #5460
 criado garoto~
@@ -763,7 +763,7 @@ Você vê um pequeno garoto correndo em volta das paredes do palácio.
 2097216 0 0 0 0 0 0 0 0 E
 2 19 9 10d1+1 1d4+1
 1 10
-8 8 1
+9 9 1
 E
 #5461
 guarda sultao~
@@ -776,7 +776,7 @@ necessidade.
 2097344 0 0 0 0 0 0 0 1000 E
 10 10 9 2d4+120 1d8+0
 150 2500
-8 8 1
+9 9 1
 E
 #5462
 guarda sultao~
@@ -788,7 +788,7 @@ Você vê um lutador treinado, pronto para defender a cidade.
 2097218 0 0 0 0 0 0 0 1000 E
 10 10 8 2d4+120 1d8+1
 150 2500
-8 8 1
+9 9 1
 E
 #5463
 chefe guarda sultao~
@@ -797,10 +797,10 @@ O Chefe da Guarda do Sultão está aqui.
 ~
 Você vê um grande homem treinado para caçar e matar.
 ~
-2097216 0 0 0 16 0 0 0 1000 E
+2097216 0 0 0 0 0 0 0 1000 E
 15 0 0 4d5+251 2d8+1
 435 5000
-8 8 1
+9 9 1
 E
 #5464
 mercenario~
@@ -812,7 +812,7 @@ Você vê um assassino procurando por um trabalho qualquer.
 2097216 0 0 0 0 0 0 0 0 E
 5 15 9 1d8+14 1d4+2
 1 50
-8 8 1
+9 9 1
 E
 #5465
 capitao porto~
@@ -826,7 +826,7 @@ direção.
 2156546 0 0 0 0 0 0 0 0 E
 108 0 0 1d1+30000 5d5+5
 1 2000
-8 8 1
+9 9 1
 E
 #5466
 ferreiro~
@@ -839,7 +839,7 @@ dar as boas-vindas.
 2156546 0 0 0 0 0 0 0 0 E
 108 0 0 1d1+30000 4d4+4
 1 2000
-8 8 1
+9 9 1
 E
 #5467
 cavalo~
@@ -851,7 +851,7 @@ Você vê um dos belos animais árabes conhecidos por sua força e beleza.
 2359490 0 0 0 0 0 0 0 0 E
 4 20 5 10d1+1 2d4+2
 0 10
-8 8 1
+9 9 1
 E
 #5468
 turista~
@@ -865,7 +865,7 @@ baixo.
 2097348 0 0 0 0 0 0 0 0 E
 5 18 8 2d10+15 1d8+2
 500 650
-8 8 1
+9 9 1
 E
 #5469
 ixitxachitl arraia~
@@ -874,10 +874,10 @@ Você vê uma grande arraia com um perigoso rabo nadando aqui.
 ~
 Você vê uma grande arraia com dentes afiados e um rabo cheio espinhento.
 ~
-2328610 0 0 0 2192 0 0 0 -500 E
+2328610 0 0 0 0 0 0 0 -500 E
 10 0 -5 3d3+120 3d4+1
 0 2000
-8 8 0
+9 9 0
 E
 #5470
 cryohydra~
@@ -886,10 +886,10 @@ A cryohydra está aqui.
 ~
 Um réptil acinzentado com olhos cor de âmbar está bem à sua frente.
 ~
-2197600 0 0 0 2048 0 0 0 0 E
+2197600 0 0 0 0 0 0 0 0 E
 8 9 5 10d1+1 1d10+0
 0 100
-8 8 1
+9 9 1
 E
 #5471
 lagarto minotauro~
@@ -898,10 +898,10 @@ o lagarto minotauro está aqui.
 ~
 Um grande lagarto com chifres de minotauro.
 ~
-2097248 0 0 0 2048 0 0 0 0 E
+2097248 0 0 0 0 0 0 0 0 E
 8 8 5 1d10+55 3d5+0
 0 100
-8 8 1
+9 9 1
 E
 #5472
 cao morte~
@@ -910,10 +910,10 @@ O cão da morte está aqui.
 ~
 Um grande cão com duas cabeças está aqui latindo para você.
 ~
-2099296 0 0 0 2048 0 0 0 0 E
+2099296 0 0 0 0 0 0 0 0 E
 4 19 7 1d15+76 1d10+1
 0 900
-8 8 0
+9 9 0
 E
 #5473
 leao manchado~
@@ -922,10 +922,10 @@ O leão manchado está aqui.
 ~
 Um grande e feroz leão com pelagem manchada o encara.
 ~
-2097248 0 0 0 2048 0 0 0 0 E
+2097248 0 0 0 0 0 0 0 0 E
 5 17 6 5d5+45 1d8+1
 0 1500
-8 8 1
+9 9 1
 E
 #5474
 behir~
@@ -934,10 +934,10 @@ Uma behir desliza pelo chão.
 ~
 Você vê algo parecido com uma grande cobra e com mais de doze pernas.
 ~
-2197600 0 0 0 67584 0 0 0 -300 E
+2197600 0 0 0 0 0 0 0 -300 E
 12 9 4 4d3+146 2d8+4
 0 1000
-8 8 0
+9 9 0
 E
 #5475
 quimera criatura leao bode dragao~
@@ -946,10 +946,10 @@ Uma criatura com três cabeças: leão, bode e dragão está aqui.
 ~
 A quimera é ainda um mistério.
 ~
-2164770 0 0 0 67728 0 0 0 -500 E
+2164770 0 0 0 0 0 0 0 -500 E
 9 5 0 5d5+261 3d4+4
 0 3500
-8 8 0
+9 9 0
 E
 #5476
 couatl~
@@ -958,10 +958,10 @@ Um couatl paira aqui.
 ~
 Uma linda criatura com o corpo de serpente e lindas asas da cor do arco-íris.
 ~
-2189330 0 0 0 67984 0 0 0 300 E
+2189330 0 0 0 0 0 0 0 300 E
 15 10 1 10d5+130 2d4+2
 0 2400
-8 8 0
+9 9 0
 E
 #5477
 gigante chifrudo~
@@ -970,10 +970,10 @@ O gigante chifrudo está aqui.
 ~
 Ele é chifrudo, o que mais podemos dizer??
 ~
-2293776 0 0 0 2192 0 0 0 300 E
+2293776 0 0 0 0 0 0 0 300 E
 5 15 4 1d1+5 1d4+0
 0 45
-8 8 0
+9 9 0
 E
 #5478
 pegasus~
@@ -983,10 +983,10 @@ O pégasus está aqui, abrindo suas asas.
 Um magnífico cavalo alado, ele se parece muito com os puro sangues que você
 viu no estábulo.
 ~
-3004482 0 0 0 2192 0 0 0 1000 E
+3004482 0 0 0 0 0 0 0 1000 E
 10 4 0 1d5+700 2d10+5
 0 6500
-8 8 0
+9 9 0
 E
 #5479
 elriva~
@@ -998,7 +998,7 @@ Você vê uma mulher vestida em negro, com longos cabelos negros para combinar.
 2156546 0 0 0 0 0 0 0 0 E
 108 10 0 1d1+30000 1d10+10
 1 2000
-8 8 2
+9 9 2
 Cha: 18
 E
 #5480
@@ -1011,7 +1011,7 @@ Você vê um mago poderoso porém insano.
 2156546 0 0 0 0 0 0 0 0 E
 108 -10 -10 1d1+30000 10d10+40
 1 2000
-8 8 1
+9 9 1
 E
 #5481
 alto sacerdote~
@@ -1020,11 +1020,12 @@ O alto sacerdote descansa em meditação, bem pelo menos ele ESTAVA meditando.
 ~
 Ele não parece feliz por você o ter perturbado.
 ~
-2097346 0 0 0 2320 0 0 0 1000 E
+2097346 0 0 0 0 0 0 0 1000 E
 8 2 0 10d5+1200 2d8+5
 15000 35000
-8 8 1
+9 9 1
 E
+T 5406
 #5482
 guarda real elite~
 o Guarda Real~
@@ -1033,10 +1034,10 @@ Um Guarda da Elite Real está aqui sorrindo alegremente.
 Você vê um Guarda Real de Nova Thalos que parece ter sofrido muito em seu
 treinamento.
 ~
-2127890 0 0 0 2320 0 0 0 1000 E
+2127890 0 0 0 0 0 0 0 1000 E
 15 0 -6 5d20+900 1d10+6
 1500 25000
-8 8 1
+9 9 1
 E
 #5483
 garcom~
@@ -1045,10 +1046,10 @@ Um grande meio-orc com uma venda sobre um olho serve cerveja atrás do balcão.
 ~
 Você vê um homem realmente grande que parece ter perdido um olho.
 ~
-2156546 0 0 0 16 0 0 0 -500 E
+2156546 0 0 0 0 0 0 0 -500 E
 108 0 -10 1d1+30000 3d8+10
 1 2000
-8 8 1
+9 9 1
 E
 #5484
 stitch~
@@ -1058,10 +1059,10 @@ Stitch, o camarada do couro reclina sua cadeira.
 Você vê uma pequena criatura com seus pés em cima de sua mesa esperando por
 algum otário, uhm.., cliente.
 ~
-2156546 0 0 0 16 0 0 0 -500 E
+2156546 0 0 0 0 0 0 0 -500 E
 108 -10 -5 1d1+30000 3d6+6
 1 2000
-8 8 1
+9 9 1
 E
 #5485
 elfo jardineiro~
@@ -1074,7 +1075,7 @@ jardim.
 2097154 0 0 0 0 0 0 0 0 E
 10 10 6 5d5+100 2d8+2
 56 1500
-8 8 1
+9 9 1
 E
 #5486
 pesadelo demonio cavalo~
@@ -1084,10 +1085,10 @@ Um grande cavalo, negro como a noite, está aqui.
 Você vê o maior cavalo que você jamais viu.  Mais alto que você, de suas
 narinas emanam chamas e ele está pronto para atacar você.
 ~
-2910210 0 0 0 592336 0 0 0 1000 E
+2910210 0 0 0 0 0 0 0 1000 E
 10 0 -5 3d9+300 3d5+7
 0 5500
-8 8 0
+9 9 0
 E
 #5487
 wolverine lobo~
@@ -1097,10 +1098,10 @@ Um grande lobo salta da escuridão.
 Você vê um meio lobo, meio humano vestindo uma luva com uma longa e afiada
 lâmina.
 ~
-2097186 0 0 0 591872 0 0 0 -351 E
+2097186 0 0 0 0 0 0 0 -351 E
 15 0 0 10d2+230 2d10+10
 0 5000
-8 8 0
+9 9 0
 E
 #5488
 mimico pintura~
@@ -1112,7 +1113,7 @@ Como ela é feia!
 2097154 0 0 0 0 0 0 0 0 E
 10 10 0 5d8+321 2d8+4
 0 6000
-8 8 1
+9 9 1
 E
 #5489
 prefeito~
@@ -1124,7 +1125,7 @@ Você vê um roliço coelho vestido em seu melhor terno.
 2097216 0 0 0 0 0 0 0 1000 E
 10 0 0 2d8+600 3d6+6
 1200 15675
-8 8 1
+9 9 1
 E
 #5490
 chefe~
@@ -1136,7 +1137,7 @@ Você vê um homem realmente grande, que parece provar tudo o que faz.
 2097154 0 0 0 0 0 0 0 400 E
 14 6 6 10d2+5 2d10+5
 16 40
-8 8 1
+9 9 1
 E
 #5491
 druida mestre guilda~
@@ -1148,10 +1149,10 @@ muita segurança, acalmando o coração mais agitado e despertando a mente mais
 preguiçosa.  Ele poderá passar-lhe todos os ensinamentos druídicos, mas
 exigirá de você a conduta daquele que acredita em um ideal.
 ~
-2123778 0 0 0 2320 0 0 0 1000 E
+2123778 0 0 0 0 0 0 0 1000 E
 16 -10 -10 1d1+10000 5d5+5
 1 0
-8 8 1
+9 9 1
 E
 #5492
 druida guardia~
@@ -1161,10 +1162,10 @@ A Guardiã da Guilda dos Druidas está aqui.
 A guardiã da Guilda irradia juventude, mesmo sendo um dos membros mais
 antigos da Confraria.
 ~
-2123778 0 0 0 2320 0 0 0 0 E
+2123778 0 0 0 0 0 0 0 0 E
 8 -1 -10 2d5+500 3d8+10
 0 500
-8 8 1
+9 9 1
 E
 #5493
 vendedor jornaleiro garoto~
@@ -1176,10 +1177,10 @@ pescoço, está pendurada uma placa, que diz "Jornal de Vitália,
 Imparcialidade e Preço Baixo".  Quando ele o vê, corre em sua direção,
 oferecendo o jornal.  Ele carrega um fardo de jornais embaixo do braço.
 ~
-2285632 0 0 0 16 0 0 0 150 E
+2285632 0 0 0 0 0 0 0 150 E
 108 0 -10 1d1+30000 2d8+18
 0 160000
-8 8 1
+9 9 1
 E
 #5494
 agente postal velho senhor~
@@ -1192,10 +1193,10 @@ porquê muitas pessoas parecem achar que este serviço está lento.  Talvez se
 ele escovasse as teias de aranha do seu uniforme, passaria uma impressão
 melhor.
 ~
-2287618 0 0 0 65552 0 0 0 1000 E
+2287618 0 0 0 0 0 0 0 1000 E
 108 0 -10 1d1+30000 1d8+18
 2000 0
-8 8 1
+9 9 1
 E
 #5495
 trovadora guardia mulher~
@@ -1209,10 +1210,10 @@ o carinho que os bardos têm por seu recanto e como eles se esforçam para mant�
 belo e feliz. Você se sente tentado a ver como é esse lugar, mas já foi alertado
 que a guardiã não permitirá arruaças por aqui.
 ~
-2156546 0 0 0 272 0 0 0 1000 E
+2156546 0 0 0 0 0 0 0 1000 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
-8 8 2
+9 9 2
 E
 #5496
 jovem garcom~
@@ -1228,7 +1229,7 @@ nada que esteja segurando. Está aí um garçom de talento!
 2154498 0 0 0 0 0 0 0 600 E
 108 1 2 6d10+390 1d8+12
 2000 80000
-8 8 1
+9 9 1
 E
 #5497
 mestra trova senhora~
@@ -1241,9 +1242,9 @@ observa, a mesma jovem artista que há tanto tempo fora.  A mestra vê a nova
 geração com carinho e seriedade, pois nela percebe a garantia de que certas
 coisas nunca serão esquecidas.  E você se encaixa nisso.
 ~
-2156562 0 0 0 272 0 0 0 1000 E
+2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 2
+9 9 2
 E
 $
