@@ -82,9 +82,11 @@ ASPELL(spell_create_nectar)
 ASPELL(spell_recall)
 {
    room_vnum recall_room;
+   recall_room = 50;
+   
   if (victim == NULL || IS_NPC(victim))
     return;
-
+  
   if (ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(victim)), ZONE_NOASTRAL)) {
     send_to_char(ch, "Uma luz brilhante impede a sua magia de funcionar!");
     return;
