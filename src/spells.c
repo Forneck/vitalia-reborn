@@ -80,10 +80,7 @@ ASPELL(spell_create_nectar)
 }
 
 ASPELL(spell_recall)
-{
-   room_vnum recall_room;
-   recall_room = 50;
-   
+{  
   if (victim == NULL || IS_NPC(victim))
     return;
   
@@ -94,7 +91,7 @@ ASPELL(spell_recall)
 
   act("$n desaparece.", TRUE, victim, 0, 0, TO_ROOM);
   char_from_room(victim);
-  char_to_room(victim, recall_room);
+  char_to_room(victim, GET_HOMETOWN(ch));
   act("$n aparece no meio da sala.", TRUE, victim, 0, 0, TO_ROOM);
   look_at_room(victim, 0);
   entry_memory_mtrigger(victim);
