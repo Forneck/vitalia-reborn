@@ -7,11 +7,11 @@ Levl: 110
 Id  : 1
 Brth: 1601790482
 Plyd: 314622
-Last: 1604678220
+Last: 1604679987
 Lmot: 1604518665
 Lnew: 1604428948
 Htwn: 1372
-Host: 138.204.26.78
+Host: 127.0.0.1
 Hite: 151
 Wate: 113
 Alin: -163
@@ -33,21 +33,21 @@ Gold: 4400
 Exp : 7000001
 Olc : 0
 Alis: 6
- ha
- history all
-0
- reset
- shutdown reboot
-0
- sa
- say @Y$*@n
-1
- goss
- goss @Y$*@n
+ indoor
+ redit;3;4;0;q;y
 1
  of
  order fol $*
 1
- indoor
- redit;3;4;0;q;y
+ goss
+ goss @Y$*@n
 1
+ sa
+ say @Y$*@n
+1
+ reset
+ shutdown reboot
+0
+ ha
+ history all
+0

@@ -1,30 +1,30 @@
-Nov 06 15:38:28 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Nov 06 15:38:28 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Nov 06 15:38:28 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Nov 06 15:38:28 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Nov 06 15:38:28 2020 :: Boot db -- DONE.
-Nov 06 15:38:28 2020 :: Signal trapping.
-Nov 06 15:38:28 2020 :: Entering game loop.
-Nov 06 15:38:28 2020 :: No connections.  Going to sleep.
-Nov 06 15:38:29 2020 :: New connection.  Waking up.
-Nov 06 15:38:33 2020 :: Cansian has connected.
-Nov 06 15:38:36 2020 :: Cansian had no variable file
-Nov 06 15:38:36 2020 :: Cansian retrieving crash-saved items and entering game.
-Nov 06 15:38:36 2020 :: Cansian (level 110) has 2 objects (max 100).
-Nov 06 15:41:12 2020 :: WARNING: EOF on socket read (connection broken by peer)
-Nov 06 15:41:12 2020 :: Closing link to: Cansian.
-Nov 06 15:41:12 2020 :: No connections.  Going to sleep.
-Nov 06 15:46:42 2020 :: New connection.  Waking up.
-Nov 06 15:46:46 2020 :: Cansian [138.204.26.78] has reconnected.
-Nov 06 15:49:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 06 15:49:00 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 21240
-Nov 06 15:54:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 06 15:54:00 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 21240
-Nov 06 15:56:31 2020 :: (GC) Reboot by Cansian.
-Nov 06 15:56:31 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 06 15:56:31 2020 :: Closing all sockets.
-Nov 06 15:56:31 2020 :: Closing link to: Cansian.
-Nov 06 15:56:31 2020 :: Saving current MUD time.
-Nov 06 15:56:31 2020 :: Rebooting.
+Nov 06 16:19:29 2020 :: Losing descriptor without char.
+Nov 06 16:19:59 2020 :: Losing descriptor without char.
+Nov 06 16:20:11 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Nov 06 16:20:11 2020 :: Closing link to: Cansian.
+Nov 06 16:20:29 2020 :: Losing descriptor without char.
+Nov 06 16:20:29 2020 :: No connections.  Going to sleep.
+Nov 06 16:20:29 2020 :: New connection.  Waking up.
+Nov 06 16:20:59 2020 :: Losing descriptor without char.
+Nov 06 16:20:59 2020 :: No connections.  Going to sleep.
+Nov 06 16:20:59 2020 :: New connection.  Waking up.
+Nov 06 16:21:29 2020 :: nusage: 1   sockets connected, 0   sockets playing
+Nov 06 16:21:29 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 21256
+Nov 06 16:21:29 2020 :: Losing descriptor without char.
+Nov 06 16:21:29 2020 :: No connections.  Going to sleep.
+Nov 06 16:21:31 2020 :: New connection.  Waking up.
+Nov 06 16:22:01 2020 :: Losing descriptor without char.
+Nov 06 16:22:01 2020 :: No connections.  Going to sleep.
+Nov 06 16:22:01 2020 :: New connection.  Waking up.
+Nov 06 16:22:14 2020 :: Motharo [187.66.23.112] has reconnected.
+Nov 06 16:22:30 2020 :: Motharo has quit the game.
+Nov 06 16:22:31 2020 :: Losing player: Motharo.
+Nov 06 16:22:31 2020 :: Cansian [138.204.26.78] has reconnected.
+Nov 06 16:24:35 2020 :: (GC) Reboot by Cansian.
+Nov 06 16:24:35 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Nov 06 16:24:35 2020 :: Closing all sockets.
+Nov 06 16:24:35 2020 :: Closing link to: Cansian.
+Nov 06 16:24:35 2020 :: Saving current MUD time.
+Nov 06 16:24:35 2020 :: Rebooting.
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.
