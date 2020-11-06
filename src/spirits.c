@@ -39,8 +39,8 @@
 
 void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_data *corpse, room_rnum targ_room, int restore)
 {
-	struct obj_data *obj = NULL;
-
+	struct obj_data *obj = NULL,*next_obj = NULL;
+   
 	if (targ_room && targ_room != IN_ROOM(ch))
 	{
 		act("O espírito de $n começa a brilhar e é violentamente puxado para longe.", TRUE, ch, 0, 0, TO_ROOM);
@@ -62,21 +62,6 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 		act("Você perde a noção de espaço e antes que você possa gritar por socorro,\r\n"
 			"você percebe que está sendo puxad$r para dentro de seu corpo!@n",
 			FALSE, ch, 0, 0, TO_CHAR);
-	if (corpse)
-	{
-	   	for (obj = corpse->contains; obj != NULL; obj = obj->next_content)
-		{
-			obj_from_obj(obj);
-			obj_to_char(obj, ch);
-			get_check_money(ch, obj);
-		}
-		if (corpse->in_room)
-			obj_from_room(corpse);
-		else if (corpse->carried_by)
-			obj_from_char(corpse);
-		else if (corpse->in_obj)
-			obj_from_obj(corpse);
-	}
 	else
 	{
 		send_to_char(ch,
@@ -150,6 +135,22 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 			GET_COND(ch, HUNGER) = 2;
 			GET_COND(ch, THIRST) = 2;
 		}
+	}
+		if (corpse)
+	{
+	   	for (obj = corpse->contains; obj != NULL; obj = obj->next_obj)
+		{
+		  next_obj = obj->next_content;
+			obj_from_obj(obj);
+			obj_to_char(obj, ch);
+			get_check_money(ch, obj);
+		}
+		if (corpse->in_room)
+			obj_from_room(corpse);
+		else if (corpse->carried_by)
+			obj_from_char(corpse);
+		else if (corpse->in_obj)
+			obj_from_obj(corpse);
 	}
 	save_char(ch);
 }
