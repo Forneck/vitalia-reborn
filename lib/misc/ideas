@@ -1,4 +1,4 @@
-Text       autoexaminar~
+Text      autoexaminar~
 Body      Verificar possibilidade de incluir no preferencias o comando auto examinar, pra mob ao morrer examinar automaticamente o corpo
 ~
 Name      Motharo~
@@ -6,5 +6,15 @@ IdNum     25
 Dated     1604608344
 Level     15
 Room      1663
+Flags     0 0 0 0
+End
+Text       Afetamento~
+Body      Poderia inserir o comando AFFECT/Afetamento, monstrando as magias afetadas e a duracao das mesmas em horas mud.
+~
+Name      Motharo~
+IdNum     25
+Dated     1604668323
+Level     34
+Room      3001
 Flags     0 0 0 0
 End

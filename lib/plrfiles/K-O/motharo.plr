@@ -6,23 +6,23 @@ Clas: 6
 Levl: 34
 Id  : 25
 Brth: 1604182960
-Plyd: 36847
-Last: 1604615124
+Plyd: 44249
+Last: 1604676912
 Lmot: 1604188562
-Lnew: 1604587927
+Lnew: 1604668265
 Htwn: 1372
 Host: 187.66.23.112
 Hite: 178
 Wate: 158
-Alin: -11
-Act : h 0 0 0
+Alin: -6
+Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDEF ad 0 0
 Wimp: 20
 Room: 3001
-Lern: 21
-Hung: 20
-Thir: 20
+Lern: 18
+Hung: 21
+Thir: 21
 Hit : 407/407
 Mana : 255/255
 Move: 189/189
@@ -33,8 +33,9 @@ Dex : 14
 Con : 15
 Cha : 11
 Ac  : 100
-Gold: 318973
-Exp : 8900000
+Gold: 129525
+Bank: 200000
+Exp : 8461106
 Olc : 0
 Skil:
 16 90
@@ -49,13 +50,14 @@ Skil:
 74 90
 75 90
 93 90
+95 90
 232 90
 243 90
 0 0
 Alis: 2
- wak
- wak;sta
-1
  sanc
  order empr hold caja;order empre use cajado;order empre use cajado;order empre use cajado;order empreg rem cajado;order empre junk cajado
+1
+ wak
+ wak;sta
 1
