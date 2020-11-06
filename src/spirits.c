@@ -58,10 +58,11 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 	REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
 	if (AFF_FLAGGED(ch, AFF_FLYING))
 		REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
-
+   if (corpse) {
 		act("Você perde a noção de espaço e antes que você possa gritar por socorro,\r\n"
 			"você percebe que está sendo puxad$r para dentro de seu corpo!@n",
 			FALSE, ch, 0, 0, TO_CHAR);
+   }
 	else
 	{
 		send_to_char(ch,
@@ -96,7 +97,7 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 	}
 	else
 	{
-		act("Você sente a força de seu Deus trazendo $N devolta à vida!@n", FALSE, raiser, 0,
+		act("\tWVocê sente a força de seu Deus trazendo $N devolta à vida!\tn", FALSE, raiser, 0,
 			ch, TO_CHAR);
 		act("$n foi trazid$r devolta à vida pelo Deus de $N!", FALSE, ch, 0, raiser, TO_NOTVICT);
 		act("\tWVocê foi trazid$r devolta à vida pela força divina dos Deuses de $N!\tn", FALSE,
@@ -138,9 +139,9 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 	}
 		if (corpse)
 	{
-	   	for (obj = corpse->contains; obj != NULL; obj = obj->next_obj)
+	   	for (obj = corpse->contains; obj != NULL; obj = next_obj)
 		{
-		  next_obj = obj->next_content;
+		   next_obj = obj->next_content;
 			obj_from_obj(obj);
 			obj_to_char(obj, ch);
 			get_check_money(ch, obj);
@@ -151,7 +152,8 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 			obj_from_char(corpse);
 		else if (corpse->in_obj)
 			obj_from_obj(corpse);
-	}
+	}else
+		act("Não tendo corpo para voltar a vida, você volta \tRpelad$r\tn!", FALSE, raiser, 0, ch, TO_CHAR);
 	save_char(ch);
 }
 
