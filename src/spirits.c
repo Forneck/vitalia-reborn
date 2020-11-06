@@ -59,6 +59,9 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 	if (AFF_FLAGGED(ch, AFF_FLYING))
 		REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
 
+		act("Você perde a noção de espaço e antes que você possa gritar por socorro,\r\n"
+			"você percebe que está sendo puxad$r para dentro de seu corpo!@n",
+			FALSE, ch, 0, 0, TO_CHAR);
 	if (corpse)
 	{
 	   	for (obj = corpse->contains; obj != NULL; obj = obj->next_content)
@@ -73,10 +76,6 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 			obj_from_char(corpse);
 		else if (corpse->in_obj)
 			obj_from_obj(corpse);
-
-		act("Você perde a noção de espaço e antes que você possa gritar por socorro,\r\n"
-			"você percebe que está sendo puxad$r para dentro de seu corpo!@n",
-			FALSE, ch, 0, 0, TO_CHAR);
 	}
 	else
 	{
