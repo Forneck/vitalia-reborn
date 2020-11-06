@@ -153,7 +153,6 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 		}
 	}
 	save_char(ch);
-	Crash_crashsave(ch);
 }
 
 void raise_offline(struct char_data *ch, struct obj_data *corpse)
