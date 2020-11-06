@@ -3,29 +3,29 @@ Pass: AnRCfBykX0mXk
 Titl: the Wanderer
 Sex : 2
 Clas: 6
-Levl: 71
+Levl: 72
 Id  : 6
 Brth: 1603323580
-Plyd: 183434
-Last: 1604628877
+Plyd: 188942
+Last: 1604696590
 Lmot: 1603324480
 Lnew: 1604611446
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: 367
-Act : ghl 0 0 0
+Alin: 258
+Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
-Wimp: 100
+Wimp: 250
 Room: 5518
-Lern: 16
-Hung: 24
-Thir: 24
-Hit : 840/824
-Mana : 624/931
-Move: 357/258
+Lern: 18
+Hung: 6
+Thir: 17
+Hit : 845/836
+Mana : 282/936
+Move: 360/260
 Str : 17/0
 Int : 9
 Wis : 11
@@ -33,9 +33,9 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 1291168
+Gold: 1483911
 Bank: 1500000
-Exp : 50743651
+Exp : 53534796
 Olc : 0
 Skil:
 7 100
@@ -60,13 +60,13 @@ Skil:
 243 95
 0 0
 Affs:
-50 11 0 36 2048 0 0 0
-1 392 -20 17 0 0 0 0
-3 32 4 18 0 0 0 0
-3 32 -3 24 0 0 0 0
-19 44 0 29 16 0 0 0
+19 60 0 29 16 0 0 0
+50 44 0 36 2048 0 0 0
+1 320 -20 17 0 0 0 0
+54 22 -5 17 0 0 0 0
+54 22 0 44 524288 0 0 0
 0 0 0 0 0 0 0 0
-Alis: 56
+Alis: 57
  bohemot
          s;s;s;s;e;e;s;s;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;e;e;e;e;e;e;e;e;e;n;d;w;w
 1
@@ -234,4 +234,7 @@ Alis: 56
 1
  medi
  rem coura;medit
+1
+ samurais
+        s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;e;e;e;u;u;u;u;s
 1

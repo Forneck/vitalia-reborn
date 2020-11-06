@@ -7,7 +7,7 @@ Levl: 15
 Id  : 8
 Brth: 1603329205
 Plyd: 3799
-Last: 1604193717
+Last: 1604692613
 Lmot: 1603329319
 Lnew: 1604054785
 Htwn: 1372
@@ -19,7 +19,7 @@ Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoABCDEF abd 0 0
 Room: 65535
-Hit : 134/165
+Hit : 165/165
 Mana : 157/157
 Move: 131/131
 Str : 16/0
@@ -38,6 +38,3 @@ Skil:
 93 90
 251 90
 0 0
-Affs:
-36 4 0 33 256 0 0 0
-0 0 0 0 0 0 0 0

@@ -124,7 +124,7 @@ D4
 Uma escadaria dourada o leva ainda mais para cima.
 ~
 campo forca~
-0 15101 15107
+1 15101 15107
 S
 #15107
 O Corredor~
@@ -194,7 +194,7 @@ D4
 Uma escadaria o leva para cima. 
 ~
 campo forca~
-0 15102 15111
+1 15102 15111
 S
 #15111
 Pouso no Terceiro Andar~
@@ -261,7 +261,7 @@ D4
 Escadas o levam para cima mais uma vez. 
 ~
 campo forca~
-0 15103 15115
+1 15103 15115
 S
 #15115
 Pouso no Quarto Andar~
@@ -334,7 +334,7 @@ D4
 Uma escada o leva para cima. 
 ~
 campo forca~
-0 15104 15119
+1 15104 15119
 S
 #15119
 Pouso no Quinto Andar~
@@ -408,7 +408,7 @@ D4
 Uma escadaria o leva acima. 
 ~
 campo forca~
-0 15105 15123
+1 15105 15123
 S
 #15123
 Pouso no Sexto Andar~
@@ -481,7 +481,7 @@ D4
 Uma escada o leva para cima. 
 ~
 campo forca~
-0 15106 15127
+1 15106 15127
 S
 #15127
 Pouso no Sétimo Andar~
