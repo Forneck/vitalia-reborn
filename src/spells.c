@@ -769,3 +769,46 @@ ASPELL(spell_fury_air)
   if (GET_LEVEL(ch) < LVL_GOD)
     GET_WAIT_STATE(ch) += 2 * PULSE_VIOLENCE;
 }
+
+ASPELL(spell_raise_dead)
+{
+  int loglevel = LVL_GRIMM;
+
+  if (ch == NULL)
+    return;
+
+  if (obj && (GET_OBJ_TYPE(obj) == ITEM_CORPSE)) {
+    if (GET_OBJ_VAL(obj, 0) == 0) {			/* -- jr - 26/06/99 */
+      send_to_char(ch,"Não é uma boa idéia trazer monstros devolta à vida.\r\n", ch);
+      return;
+    } else if (GET_OBJ_VAL(obj, 0) < 0) {		/* -- jr - 15/12/99 */
+      send_to_char(ch,"Infelizmente, esta pessoa não pode mais ser ressucitada.\r\n");
+      return;
+    }
+        if (!victim)
+      send_to_char(ch,"Você sente que esta pessoa não está mais entre nós...\r\n", ch);
+      else if ALIVE(victim) {
+      send_to_char(ch,"Você sente que esta pessoa já está viva em algum lugar...\r\n", ch);
+      act("$p foi destruído pela magia!", TRUE, NULL, obj, NULL, TO_ROOM);
+      extract_obj(obj);
+    }
+    else if (GET_CON(victim) < 4)
+      send_to_char(ch,"Você sente que esta pessoa não pode mais ser ressucitada.\r\n");
+      else if (!IS_NPC(victim) && (GET_IDNUM(victim) == GET_OBJ_VAL(obj, 0))) {
+      raise_online(victim, ch, obj, obj->in_room, 1);
+      extract_obj(obj);
+
+      /*
+       * We need this because the spell can be cast by an NPC.
+       */
+      if (!IS_NPC(ch))
+	loglevel = MAX(loglevel, GET_INVIS_LEV(ch));
+
+      log1(logNrm | logFile, loglevel,
+	  "%s has taken back to live by %s (raise dead spell).",
+	  GET_NAME(victim), GET_NAME(ch));
+    }
+  }
+  else
+    send_to_char(ch,"Esta magia deve ser lançada em um corpo.\r\n");
+}
