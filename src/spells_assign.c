@@ -79,6 +79,9 @@ void set_spells_function()
  if ((spell = get_spell_by_vnum(SPELL_PORTAL)))
    spell->function = spell_portal;
    
+    if ((spell = get_spell_by_vnum(SPELL_RAISE_DEAD)))
+   spell->function = spell_raise_dead;
+   
     if ((spell = get_spell_by_vnum(SPELL_YOUTH)))
    spell->function = spell_youth;
    
@@ -2302,6 +2305,26 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->messages.wear_off = strdup("O escudo de trevas que $r resguardava se desvanece lentamente.");
  spedit_save_internally(new_spell);
  
+  //spell raise_dead
+  CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_RAISE_DEAD;
+ new_spell->status = available;
+ new_spell->name = strdup("raise dead");
+ new_spell->function = spell_raise_dead;
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_OBJ_ROOM;
+ new_spell->mag_flags = MAG_MANUAL;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(100 - (8 * self.level)) > 60 ? (100 - (8 * self.level)) : 60");
+ new_spell->assign[0].class_num = CLASS_CLERIC;
+ new_spell->assign[0].level = 16;
+ new_spell->assign[0].num_mana = strdup(buf);
+
+ spedit_save_internally(new_spell);
+
 // SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
