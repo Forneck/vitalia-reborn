@@ -14,7 +14,7 @@ SOFTWARE. */
 /* all by castillo */
 #define unavailable             0
 #define available               1
-#define NUM_CHAR_POSITION       9
+#define NUM_CHAR_POSITION       10
 #define NUM_SPELL_FLAGS         13
 #define MAX_SPELL_DELAY         50   /* this equal to 5 sec */
 #define SPELL                   'P'
