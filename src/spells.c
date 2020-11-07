@@ -699,10 +699,10 @@ ASPELL(spell_youth)
     return;
 
   if (IS_NPC(victim) || GET_AGE(victim) < 25)
-    send_to_char("Você não sente nada especial...\r\n", ch);
+    send_to_char(ch,"Você não sente nada especial...\r\n");
   else {
     victim->player.time.birth += 5 * SECS_PER_MUD_YEAR;
-    send_to_char("Você se sente mais jovem!\r\n", victim);
+    send_to_char(victim,"Você se sente mais jovem!\r\n");
     act("$n parece mais jovem agora.", TRUE, victim, 0, 0, TO_ROOM);
   }
 }
