@@ -82,6 +82,9 @@ void set_spells_function()
     if ((spell = get_spell_by_vnum(SPELL_RAISE_DEAD)))
    spell->function = spell_raise_dead;
    
+     if ((spell = get_spell_by_vnum(SPELL_RESSURECT)))
+   spell->function = spell_ressurect;
+   
     if ((spell = get_spell_by_vnum(SPELL_YOUTH)))
    spell->function = spell_youth;
    
@@ -2324,6 +2327,27 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->assign[0].num_mana = strdup(buf);
 
  spedit_save_internally(new_spell);
+ 
+  //spell ressurect
+  CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_RESSURECT;
+ new_spell->status = available;
+ new_spell->name = strdup("ressurect");
+ new_spell->function = spell_ressurect;
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_OBJ_ROOM | TAR_CHAR_WORLD | TAR_NOT_SELF;
+ new_spell->mag_flags = MAG_MANUAL;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(180 - (10 * self.level)) > 80 ? (180 - (10 * self.level)) : 80");
+ new_spell->assign[0].class_num = CLASS_CLERIC;
+ new_spell->assign[0].level = 32;
+ new_spell->assign[0].num_mana = strdup(buf);
+
+ spedit_save_internally(new_spell);
+ 
 
 // SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
