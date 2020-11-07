@@ -777,7 +777,7 @@ ASPELL(spell_raise_dead)
 
   if (obj && (GET_OBJ_TYPE(obj) == ITEM_CORPSE)) {
     if (GET_OBJ_VAL(obj, 0) == 0) {			/* -- jr - 26/06/99 */
-      send_to_char(ch,"Não é uma boa idéia trazer monstros devolta à vida.\r\n", ch);
+      send_to_char(ch,"Não é uma boa idéia trazer monstros devolta à vida.\r\n");
       return;
     } else if (GET_OBJ_VAL(obj, 0) < 0) {		/* -- jr - 15/12/99 */
       send_to_char(ch,"Infelizmente, esta pessoa não pode mais ser ressucitada.\r\n");
@@ -852,11 +852,16 @@ ASPELL(spell_ressurect)
       send_to_char(ch,"Você sente que esta pessoa já está viva...\r\n");
     } else {
       	for (corpse = object_list; corpse; corpse = corpse->next)
-			if (GET_OBJ_TYPE(corpse) == ITEM_CORPSE && GET_OBJ_VAL(corpse, 0) == GET_IDNUM(vict))
+			if (GET_OBJ_TYPE(corpse) == ITEM_CORPSE && GET_OBJ_VAL(corpse, 0) == GET_IDNUM(victim))
 				break;
 
-      raise_online(victim, ch, corpse, GET_HOME(victim)->ressurect, 1);
-
+ 	if (GET_HOMETOWN(ch) == r_hometown_1){  
+      raise_online(victim, ch, corpse, r_ress_room_1, 1);
+  else if (GET_HOMETOWN(ch) == r_hometown_2){  
+      raise_online(victim, ch, corpse, r_ress_room_2, 1);
+      else
+   raise_online(victim, ch, corpse,IN_ROOM(victim), 1);
+   
       if (corpse)
 	extract_obj(corpse);
       else {
