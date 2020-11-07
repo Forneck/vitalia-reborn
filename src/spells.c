@@ -490,7 +490,7 @@ ASPELL(spell_control_weather)
 {
    int change = -1; 
    char arg[MAX_INPUT_LENGTH] = {'\0'};
-   zone_rnum i;
+   //zone_rnum i;
 
   if (IS_NPC(ch) || !ch->desc)
     return;
@@ -785,9 +785,9 @@ ASPELL(spell_raise_dead)
       return;
     }
         if (!victim)
-      send_to_char(ch,"Você sente que esta pessoa não está mais entre nós...\r\n", ch);
+      send_to_char(ch,"Você sente que esta pessoa não está mais entre nós...\r\n");
       else if ALIVE(victim) {
-      send_to_char(ch,"Você sente que esta pessoa já está viva em algum lugar...\r\n", ch);
+      send_to_char(ch,"Você sente que esta pessoa já está viva em algum lugar...\r\n");
       act("$p foi destruído pela magia!", TRUE, NULL, obj, NULL, TO_ROOM);
       extract_obj(obj);
     }
@@ -825,9 +825,7 @@ ASPELL(spell_ressurect)
       send_to_char(ch,"Infelizmente, esta pessoa não pode mais ser ressucitada.\r\n");
       return;
     }
-      if (!IS_NPC(victim) && (GET_IDNUM(victim) == GET_OBJ_VAL(obj, 0)))
-        break;
-
+    
     if (!dead)
       send_to_char(ch,"Você sente que esta pessoa não está mais entre nós...\r\n");
     else if ALIVE(dead) {
@@ -836,8 +834,10 @@ ASPELL(spell_ressurect)
       extract_obj(obj);
     }
     else {
+         if (!IS_NPC(victim) && (GET_IDNUM(victim) == GET_OBJ_VAL(obj, 0))){
       raise_online(dead, ch, obj, obj->in_room, 1);
       extract_obj(obj);
+         }
 
       /*
        * We need this because the spell can be cast by an NPC.
