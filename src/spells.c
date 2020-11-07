@@ -772,8 +772,6 @@ ASPELL(spell_fury_air)
 
 ASPELL(spell_raise_dead)
 {
-  int loglevel = LVL_GRIMM;
-
   if (ch == NULL)
     return;
 
@@ -802,10 +800,7 @@ ASPELL(spell_raise_dead)
        * We need this because the spell can be cast by an NPC.
        */
       if (!IS_NPC(ch))
-	loglevel = MAX(loglevel, GET_INVIS_LEV(ch));
-
-      log1(logNrm | logFile, loglevel,
-	  "%s has taken back to live by %s (raise dead spell).",
+      log1("%s has taken back to live by %s (raise dead spell).",
 	  GET_NAME(victim), GET_NAME(ch));
     }
   }
