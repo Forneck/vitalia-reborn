@@ -807,3 +807,67 @@ ASPELL(spell_raise_dead)
   else
     send_to_char(ch,"Esta magia deve ser lançada em um corpo.\r\n");
 }
+
+ASPELL(spell_ressurect)
+{
+  struct char_data *dead;
+  struct obj_data *corpse;
+
+  if (ch == NULL)
+    return;
+
+  if (obj && (GET_OBJ_TYPE(obj) == ITEM_CORPSE)) {
+    if (GET_OBJ_VAL(obj, 0) == 0) {			/* -- jr - 26/06/99 */
+      send_to_char(ch,"Não é uma boa idéia trazer monstros devolta a vida.\r\n");
+      return;
+    } else if (GET_OBJ_VAL(obj, 0) < 0) {		/* -- jr - 15/12/99 */
+      send_to_char(ch,"Infelizmente, esta pessoa não pode mais ser ressucitada.\r\n");
+      return;
+    }
+      if (!IS_!NPC(victim) && (GET_IDNUM(victim) == GET_OBJ_VAL(obj, 0)))
+        break;
+
+    if (!dead)
+      send_to_char(ch,"Você sente que esta pessoa não está mais entre nós...\r\n");
+    else if ALIVE(dead) {
+      send_to_char(ch,"Você sente que esta pessoa já está viva em algum lugar...\r\n");
+      act("$p foi destruído pela magia!", TRUE, NULL, obj, NULL, TO_ROOM);
+      extract_obj(obj);
+    }
+    else {
+      raise_online(dead, ch, obj, obj->in_room, 1);
+      extract_obj(obj);
+
+      /*
+       * We need this because the spell can be cast by an NPC.
+       */
+      if (!IS_NPC(ch))
+      log1("%s has taken back to live by %s (ressurect spell).", GET_NAME(dead), GET_NAME(ch));
+    }
+  }
+  else if (victim) {
+    if (IS_NPC(victim))
+      send_to_char(ch"Somente jogadores podem ser ressucitados.\r\n");
+    else if (ALIVE(victim)) {
+      send_to_char(ch,"Você sente que esta pessoa já está viva...\r\n");
+    } else {
+      	for (corpse = object_list; corpse; corpse = corpse->next)
+			if (GET_OBJ_TYPE(corpse) == ITEM_CORPSE && GET_OBJ_VAL(corpse, 0) == GET_IDNUM(vict))
+				break;
+
+      raise_online(victim, ch, corpse, GET_HOME(victim)->ressurect, 1);
+
+      if (corpse)
+	extract_obj(corpse);
+      else {
+	log1("%s used ressurect on %s, but I couldn't find the corpse.",
+	    GET_NAME(ch), GET_NAME(victim));
+      }
+
+      if (!IS_NPC(ch))
+      log1("%s has taken back to live by %s (ressurect spell).",GET_NAME(victim), GET_NAME(ch));
+    }
+  }
+  else
+    send_to_char(ch,"Esta magia deve ser lançada em um espírito ou em um corpo.\r\n");
+}
