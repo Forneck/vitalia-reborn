@@ -858,7 +858,7 @@ void create_spells_db()
  new_spell->assign[0].level = 24;
  new_spell->assign[0].num_mana = strdup(buf);
    new_spell->assign[1].class_num = CLASS_RANGER;
- new_spell->assign[1].level = 16;
+ new_spell->assign[1].level = 90;
  new_spell->assign[1].num_mana = strdup(buf);
  new_spell->dispel[0] = strdup("4");
  new_spell->messages.to_vict = strdup("Uma calorosa sensação percorre o seu corpo.\r\n");
@@ -1192,7 +1192,7 @@ new_spell->assign[0].level = 109;
  new_spell->assign[2].level = 37;
  new_spell->assign[2].num_mana = strdup(buf);
   new_spell->assign[3].class_num = CLASS_RANGER;
- new_spell->assign[3].level = 17;
+ new_spell->assign[3].level = 50;
  new_spell->assign[3].num_mana = strdup(buf);
  spedit_save_internally(new_spell);
 
