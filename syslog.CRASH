@@ -1,30 +1,30 @@
-Nov 06 20:46:02 2020 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
-Nov 06 20:46:02 2020 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
-Nov 06 20:46:02 2020 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
-Nov 06 20:46:02 2020 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
-Nov 06 20:46:02 2020 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
-Nov 06 20:46:02 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
-Nov 06 20:46:02 2020 :: Resetting #220: Anexo (rooms 22000-22099).
-Nov 06 20:46:02 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
-Nov 06 20:46:02 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Nov 06 20:46:02 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Nov 06 20:46:02 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Nov 06 20:46:02 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Nov 06 20:46:02 2020 :: Boot db -- DONE.
-Nov 06 20:46:02 2020 :: Signal trapping.
-Nov 06 20:46:02 2020 :: Entering game loop.
-Nov 06 20:46:02 2020 :: No connections.  Going to sleep.
-Nov 06 20:46:02 2020 :: New connection.  Waking up.
-Nov 06 20:46:06 2020 :: Motharo has connected.
-Nov 06 20:46:07 2020 :: Motharo had no variable file
-Nov 06 20:46:07 2020 :: Motharo retrieving crash-saved items and entering game.
-Nov 06 20:46:07 2020 :: Motharo (level 35) has 35 objects (max 100).
-Nov 06 20:48:10 2020 :: Anyte has connected.
-Nov 06 20:48:11 2020 :: Anyte had no variable file
-Nov 06 20:48:11 2020 :: Anyte retrieving crash-saved items and entering game.
-Nov 06 20:48:11 2020 :: Anyte (level 72) has 38 objects (max 100).
-Nov 06 20:48:21 2020 :: Cansian has connected.
-Nov 06 20:48:22 2020 :: Cansian had no variable file
-Nov 06 20:48:22 2020 :: Cansian retrieving crash-saved items and entering game.
-Nov 06 20:48:22 2020 :: Cansian (level 110) has 2 objects (max 100).
+Nov 07 19:00:41 2020 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
+Nov 07 19:00:41 2020 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
+Nov 07 19:00:41 2020 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
+Nov 07 19:00:41 2020 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
+Nov 07 19:00:41 2020 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
+Nov 07 19:00:41 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
+Nov 07 19:00:41 2020 :: Resetting #220: Anexo (rooms 22000-22099).
+Nov 07 19:00:41 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
+Nov 07 19:00:41 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
+Nov 07 19:00:41 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
+Nov 07 19:00:41 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
+Nov 07 19:00:41 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
+Nov 07 19:00:41 2020 :: Boot db -- DONE.
+Nov 07 19:00:41 2020 :: Signal trapping.
+Nov 07 19:00:41 2020 :: Entering game loop.
+Nov 07 19:00:41 2020 :: No connections.  Going to sleep.
+Nov 07 19:00:42 2020 :: New connection.  Waking up.
+Nov 07 19:00:48 2020 :: Cansian has connected.
+Nov 07 19:00:49 2020 :: Cansian had no variable file
+Nov 07 19:00:49 2020 :: Cansian retrieving crash-saved items and entering game.
+Nov 07 19:00:49 2020 :: Cansian (level 110) has 2 objects (max 100).
+Nov 07 19:01:06 2020 :: OLC: Cansian stops editing spell files.
+Nov 07 19:01:19 2020 :: OLC: Cansian stops editing spell files.
+Nov 07 19:01:28 2020 :: OLC: Cansian starts editing zone 12 allowed zone 0
+Nov 07 19:02:20 2020 :: OLC: Cansian edits obj 1204
+Nov 07 19:02:20 2020 :: OLC: Cansian stops editing zone 12 allowed zone 0
+Nov 07 19:02:24 2020 :: OLC: Cansian starts editing zone 12 allowed zone 0
+Nov 07 19:02:39 2020 :: OLC: Cansian edits obj 1204
+Nov 07 19:02:39 2020 :: OLC: Cansian stops editing zone 12 allowed zone 0
 Segmentation fault (core dumped)

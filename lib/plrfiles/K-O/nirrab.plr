@@ -6,21 +6,21 @@ Clas: 6
 Levl: 6
 Id  : 24
 Brth: 1604087691
-Plyd: 13941
-Last: 1604695834
+Plyd: 16089
+Last: 1604702250
 Htwn: 3001
 Host: 189.127.219.60
 Hite: 163
 Wate: 153
 Alin: 137
-Act : hl 0 0 0
+Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCE 0 0 0
 Wimp: 10
 Room: 5518
 Lern: 7
-Hung: 9
-Thir: 12
+Hung: 17
+Thir: 17
 Hit : 82/82
 Mana : 118/118
 Move: 97/97
@@ -37,7 +37,10 @@ Olc : 0
 Skil:
 232 90
 0 0
-Alis: 1
+Alis: 2
  .
  gossip $*
 1
+ dr
+ drink cant
+0

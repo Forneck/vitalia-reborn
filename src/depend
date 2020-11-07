@@ -241,7 +241,10 @@ sedit.o: sedit.c conf.h sysdep.h structs.h protocol.h lists.h utils.h \
  constants.h
 shop.o: shop.c conf.h sysdep.h structs.h protocol.h lists.h utils.h \
  comm.h handler.h db.h interpreter.h shop.h genshp.h constants.h act.h \
- modify.h spells.h screen.h
+ modify.h spells.h screen.h include/floatfann.h include/fann.h \
+ include/fann_error.h include/fann_activation.h include/fann_data.h \
+ include/fann_internal.h include/fann_train.h include/fann_cascade.h \
+ include/fann_io.h fight.h
 spec_assign.o: spec_assign.c conf.h sysdep.h structs.h protocol.h lists.h \
  utils.h db.h interpreter.h spec_procs.h ban.h boards.h mail.h
 spec_procs.o: spec_procs.c conf.h sysdep.h structs.h protocol.h lists.h \
