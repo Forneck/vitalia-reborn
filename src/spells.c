@@ -824,7 +824,7 @@ ASPELL(spell_ressurect)
       send_to_char(ch,"Infelizmente, esta pessoa não pode mais ser ressucitada.\r\n");
       return;
     }
-      if (!IS_!NPC(victim) && (GET_IDNUM(victim) == GET_OBJ_VAL(obj, 0)))
+      if (!IS_NPC(victim) && (GET_IDNUM(victim) == GET_OBJ_VAL(obj, 0)))
         break;
 
     if (!dead)
@@ -847,7 +847,7 @@ ASPELL(spell_ressurect)
   }
   else if (victim) {
     if (IS_NPC(victim))
-      send_to_char(ch"Somente jogadores podem ser ressucitados.\r\n");
+      send_to_char(ch,"Somente jogadores podem ser ressucitados.\r\n");
     else if (ALIVE(victim)) {
       send_to_char(ch,"Você sente que esta pessoa já está viva...\r\n");
     } else {
