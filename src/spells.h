@@ -337,8 +337,8 @@ ASPELL(spell_enchant_weapon);
 ASPELL(spell_detect_poison);
 ASPELL(spell_control_weather);
 ASPELL(spell_transport_via_plants);
-//ASPELL(spell_raise_dead); /* NEW */
-//ASPELL(spell_ressurect); /* NEW */
+ASPELL(spell_raise_dead); /* NEW */
+ASPELL(spell_ressurect); /* NEW */
 ASPELL(spell_vamp_touch); /* NEW */
 ASPELL(spell_youth); /* NEW */
 ASPELL(spell_portal);		/* -- jr - 24/09/99 */
