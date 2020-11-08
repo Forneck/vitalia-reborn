@@ -200,7 +200,7 @@ entrou no jogo.~
 * "has entered game." and not "has" or "entered" etc. (that would be num arg 1).
 * Figure out what vnum the mob is in so we can use zoneecho.
 eval inroom %self.room%
-%zoneecho% %inroom.vnum% %self.name% grita, 'Ola, %actor.name%!'
+%zoneecho% %inroom.vnum% %self.name% grita, 'Ola!'
 ~
 #3012
 Kind Soul Gives Newbie Equipment~

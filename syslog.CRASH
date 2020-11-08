@@ -1,30 +1,30 @@
-Nov 08 00:36:21 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 21320
-Nov 08 00:37:31 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 08 00:37:51 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 08 00:41:21 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 08 00:41:21 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 21984
-Nov 08 00:46:21 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 08 00:46:21 2020 :: rusage: user time: 2 sec, system time: 0 sec, max res size: 22072
-Nov 08 00:50:56 2020 :: Losing descriptor without char.
-Nov 08 00:50:56 2020 :: WARNING: Attempting to get content from iterator with NULL list.
-Nov 08 00:50:56 2020 :: WARNING: Attempting to remove iterator from NULL list.
-Nov 08 00:51:21 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 08 00:51:21 2020 :: rusage: user time: 2 sec, system time: 0 sec, max res size: 22072
-Nov 08 00:52:51 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 08 00:53:11 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 08 00:53:31 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 08 00:54:11 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 08 00:55:11 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 08 00:55:41 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 08 00:56:21 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 08 00:56:21 2020 :: rusage: user time: 4 sec, system time: 0 sec, max res size: 22472
-Nov 08 00:56:41 2020 :: Althair has quit the game.
-Nov 08 00:56:42 2020 :: Losing player: Althair.
-Nov 08 00:57:08 2020 :: (GC) Reboot by Cansian.
-Nov 08 00:57:08 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 08 00:57:08 2020 :: Closing all sockets.
-Nov 08 00:57:08 2020 :: Closing link to: Cansian.
-Nov 08 00:57:08 2020 :: Saving current MUD time.
-Nov 08 00:57:08 2020 :: Rebooting.
+Nov 08 05:34:16 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 08 05:35:06 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 08 05:37:36 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 08 05:37:36 2020 :: rusage: user time: 9 sec, system time: 0 sec, max res size: 22200
+Nov 08 05:42:36 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 08 05:42:36 2020 :: rusage: user time: 10 sec, system time: 0 sec, max res size: 22200
+Nov 08 05:44:46 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 08 05:47:36 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 08 05:47:36 2020 :: rusage: user time: 11 sec, system time: 0 sec, max res size: 22200
+Nov 08 05:47:46 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 08 05:49:26 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 08 05:52:36 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 08 05:52:36 2020 :: rusage: user time: 11 sec, system time: 0 sec, max res size: 22200
+Nov 08 05:57:36 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 08 05:57:36 2020 :: rusage: user time: 12 sec, system time: 0 sec, max res size: 22200
+Nov 08 05:58:46 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 08 06:01:05 2020 :: Althair has connected.
+Nov 08 06:01:08 2020 :: Althair had no variable file
+Nov 08 06:01:08 2020 :: Althair un-renting and entering game.
+Nov 08 06:01:08 2020 :: Althair (level 11) has 25 objects (max 100).
+Nov 08 06:01:14 2020 :: Althair has quit the game.
+Nov 08 06:01:16 2020 :: Losing player: Althair.
+Nov 08 06:01:30 2020 :: (GC) Reboot by Cansian.
+Nov 08 06:01:30 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Nov 08 06:01:30 2020 :: Closing all sockets.
+Nov 08 06:01:30 2020 :: Closing link to: Cansian.
+Nov 08 06:01:30 2020 :: Saving current MUD time.
+Nov 08 06:01:30 2020 :: Rebooting.
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.

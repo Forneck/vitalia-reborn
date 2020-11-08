@@ -6,26 +6,26 @@ Clas: 6
 Levl: 11
 Id  : 20
 Brth: 1603768097
-Plyd: 84054
-Last: 1604796999
+Plyd: 91915
+Last: 1604815265
 Lmot: 1604605810
 Lnew: 1604431136
 Htwn: 1372
 Host: 138.204.26.92
 Hite: 195
 Wate: 172
-Alin: 367
+Alin: 356
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDE abde 0 0
 Wimp: 30
 Room: 3001
 Lern: 2
-Hung: 10
-Thir: 19
-Hit : 54/136
-Mana : 19/135
-Move: 128/116
+Hung: 23
+Thir: 21
+Hit : 126/136
+Mana : 67/135
+Move: 136/116
 Str : 16/0
 Int : 14
 Wis : 12
@@ -33,8 +33,9 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Bank: 75561
-Exp : 197586
+Gold: 2854
+Bank: 77046
+Exp : 226306
 Olc : 0
 ScrW: 44
 Skil:
