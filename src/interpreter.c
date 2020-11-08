@@ -751,10 +751,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	{
 		output[0] = ((float) cmd / 780);
 		output[1] = 1/(1+exp(-CMD_TYPE));
-		if (CMD_TYPE == (CMD_NOARG))
-		{
-			output[2] = output[3] = output[4] = output[5] = 0;
-		}
+	
 		if (CMD_TYPE == (CMD_ONEARG))
 		{
 			output[3] = 1/(1+exp(-atoi(arg1)));
@@ -784,7 +781,16 @@ void command_interpreter(struct char_data *ch, char *argument)
 			output[4] = 0;
 			output[5] = 0;
 		}
-		
+		/* vitima eh player */
+		for (i = 0; i <= top_of_p_table; i++)
+		{
+			if (*arg1 && !str_cmp(arg1, player_table[i].name))
+			{
+				type1 = 2;
+				id_player = 1/(1+exp(-player_table[i].id));
+				break;
+			}
+		}
 		/* vitima eh mob */
 		if ((victim = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
 		{
@@ -817,16 +823,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		 }
   	}
 	}
-/* vitima eh player */
-		for (i = 0; i <= top_of_p_table; i++)
-		{
-			if (*arg1 && !str_cmp(arg1, player_table[i].name))
-			{
-				type1 = 2;
-				id_player = 1/(1+exp(-player_table[i].id));
-				break;
-			}
-		}
+
 		if (type1 == 1)			/* mob */
 		{
 			output[2] = 1/(1+exp(-CMD_ARG_MOB));
@@ -849,6 +846,16 @@ void command_interpreter(struct char_data *ch, char *argument)
 		}
 
 		/* arg 2 */
+				/* vitima eh player */
+		for (i = 0; i <= top_of_p_table; i++)
+		{
+			if (*arg2 && !str_cmp(arg2, player_table[i].name))
+			{
+				type2 = 2;
+				id_player = 1/(1+exp(-player_table[i].id));
+				break;
+			}
+		}
 		/* vitima eh mob */
 		if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
 		{
@@ -881,16 +888,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	    	}
 		  }
 		}
-			/* vitima eh player */
-		for (i = 0; i <= top_of_p_table; i++)
-		{
-			if (*arg2 && !str_cmp(arg2, player_table[i].name))
-			{
-				type2 = 2;
-				id_player = 1/(1+exp(-player_table[i].id));
-				break;
-			}
-		}
+	
 		if (!*arg2)
 		{
 			output[4] = 0;
@@ -919,8 +917,11 @@ void command_interpreter(struct char_data *ch, char *argument)
 			output[5] =1/(1+exp(-door));
 		}
 		}
-
-		if (GET_LEVEL(ch) < LVL_GOD)
+	if (CMD_TYPE == (CMD_NOARG))
+		{
+			output[2] = output[3] = output[4] = output[5] = 0;
+		}
+		if ((GET_LEVEL(ch) < LVL_GOD)||!CMD_IS("suggestion"))
 			fann_train(ann, input, output);
 
 		fann_save(ann, "etc/aventureiro.fann");
