@@ -919,7 +919,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 
 		fann_save(ann, "etc/aventureiro.fann");
 
-		if (GET_IDNUM(ch) == (1 || 20))
+		if ((GET_IDNUM(ch) == 1) || (GET_IDNUM(ch) == 20))
 		{
 			send_to_char(ch, "%f, %f, %f, %f, %f, %f, %d\r\n", output[0], output[1], output[2], output[3],
 						 output[4], output[5], cmd);
