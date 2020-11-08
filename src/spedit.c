@@ -1458,7 +1458,7 @@ void spedit_parse (struct descriptor_data *d, char *arg) {
                      break;
         }
         return;
-    case SPEDIT_GET_TYPE : OLC_SPELL(d)->type = (atoi(arg) == 1) ? SKILL :OLC_SPELL(d)->type = (atoi(arg) == 2)  SPELL : CHANSON;
+    case SPEDIT_GET_TYPE : OLC_SPELL(d)->type = (atoi(arg) == 1) ? SKILL : (atoi(arg) == 2) ?SPELL : CHANSON;
                            // SKILL don't use mana
                            if (OLC_SPELL(d)->type == SKILL) {
                              SAFE_FREE(OLC_SPELL(d)->assign[0].num_mana);
