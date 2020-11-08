@@ -921,7 +921,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		{
 			output[2] = output[3] = output[4] = output[5] = 0;
 		}
-		if ((GET_LEVEL(ch) < LVL_GOD)||!CMD_IS("suggestion"))
+		if ((GET_LEVEL(ch) < LVL_GOD)||!CMD_IS("suggestion")||!CMD_IS("quit"))
 			fann_train(ann, input, output);
 
 		fann_save(ann, "etc/aventureiro.fann");
