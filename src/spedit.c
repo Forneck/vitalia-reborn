@@ -587,7 +587,7 @@ void spedit_main_menu (struct descriptor_data *d) {
                 "%sQ%s) Quit\r\n\r\n"
                 "%sEnter choice : ",
                  nrm, (Q->type == SPELL) ? "Spell" : "Skill", cyn, OLC_NUM(d), nrm, yel, Q->function ? "Special" : "", nrm,
-                 prog ? red : grn, nrm, cyn, (Q->type == SPELL) ? "SPELL" : "SKILL", nrm,
+                 prog ? red : grn, nrm, cyn, (Q->type == SPELL) ? "SPELL" : (Q->type == SKILL) ? "SKILL" : "CHANSON", nrm,
                  grn, nrm, (Q->status == available) ? nrm : YEL, yel, (Q->status == available) ? "Available" : "Unavailable",
                  prog ? red : grn, nrm, yel, Q->name ? Q->name : UNDEF_SPELL, 
                  prog ? red : grn, nrm, cyn, ((Q->min_pos >= 0) && (Q->min_pos < NUM_CHAR_POSITION)) ? 
@@ -1458,7 +1458,7 @@ void spedit_parse (struct descriptor_data *d, char *arg) {
                      break;
         }
         return;
-    case SPEDIT_GET_TYPE : OLC_SPELL(d)->type = (atoi(arg) == 1) ? SKILL : SPELL;
+    case SPEDIT_GET_TYPE : OLC_SPELL(d)->type = (atoi(arg) == 1) ? SKILL :OLC_SPELL(d)->type = (atoi(arg) == 2)  SPELL : CHANSON;
                            // SKILL don't use mana
                            if (OLC_SPELL(d)->type == SKILL) {
                              SAFE_FREE(OLC_SPELL(d)->assign[0].num_mana);
@@ -2093,7 +2093,7 @@ ACMD(do_splist) {
 
    tmp_len = snprintf(buf+len, sizeof(buf)-len, "%s%4d%s) [%s%5d%s]%s %-20s%s %-5s    %s%-3s          %s%-3s         %s%s%s\r\n",
              QGRN, ++cpt, QNRM, QGRN, ptr->vnum, QNRM, 
-             QCYN, ptr->name, QYEL, ptr->type == SPELL ? "SPELL" : "SKILL", 
+             QCYN, ptr->name, QYEL, ptr->type == SPELL ? "SPELL" : ptr->type == SKILL ?  "SKILL" : "CHANSON", 
              QNRM, ptr->function ? "Yes" : "No", 
              ptr->status == available ? QGRN : QRED, ptr->status == available ? "Yes" : "No", 
              QCYN, classes, QNRM); 
