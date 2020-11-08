@@ -521,8 +521,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 	int id_player = 0;
 	int door;
 	int grupo;
-	mob_vnum mob = 0;
-	obj_vnum obj = 0;
+	float mob = 0;
+	float obj = 0;
     int count_obj = 0;
     
     /* verifica grupo e inventario */
@@ -644,7 +644,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
 			{
 				type2 = 1;
-				mob = 1/(1+exp(-GET_MOB_VNUM(victim)));
+				mob = (float)  GET_MOB_VNUM(victim)/100000;
 			}
 			/* vitima eh player */
 			for (i = 0; i <= top_of_p_table; i++)
@@ -659,7 +659,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if ((object = get_obj_vis(ch, arg2, NULL)) != NULL)
 			{
 				type2 = 3;
-				obj = 1/(1+exp(-GET_OBJ_VNUM(object)));
+				obj = (float)  GET_OBJ_VNUM(object)/100000;
 			}
 			/* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos 
 			   o = cmd, arg = vnum -- forneck */
@@ -677,10 +677,13 @@ void command_interpreter(struct char_data *ch, char *argument)
 				output[4] =  1/(1+exp(-CMD_ARG_PLAYER));
 				output[5] = 1/(1+exp(-GET_IDNUM(victim)));
 			}
-			else
+			else if (type2 == 3)
 			{
-				output[4] = CMD_ARG_OBJ;
+				output[4] = 1/(1+exp(-CMD_ARG_OBJ));
 				output[5] = obj;
+			}
+			else {
+			   output[4] = output[5] = 0;
 			}
 			if (GET_LEVEL(ch) < LVL_GOD){
 				fann_train(ann, input, output);
@@ -795,13 +798,13 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if ((victim = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
 		{
 			type1 = 1;
-			mob = 1/(1+exp(-GET_MOB_VNUM(victim)));
+			mob = (float) GET_MOB_VNUM(victim)/100000;
 		}
 		/* eh objeto */
 		else if ((object = get_obj_vis(ch, arg1, NULL)) != NULL)
 		{
 			type1 = 3;
-			obj = 1/(1+exp(-GET_OBJ_VNUM(object)));
+			obj = (float) GET_OBJ_VNUM(object)/100000;
 		}
 			/* eh direcao */
      else if ((door = search_block(arg1, dirs, FALSE)) == -1)
@@ -860,13 +863,13 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
 		{
 			type2 = 1;
-			mob = 1/(1+exp(-GET_MOB_VNUM(victim)));
+			mob = (float) GET_MOB_VNUM(victim)/100000;
 		}
 		/* eh objeto */
 		else if ((object = get_obj_vis(ch, arg2, NULL)) != NULL)
 		{
 			type2 = 3;
-			obj = 1/(1+exp(-GET_OBJ_VNUM(object)));
+			obj = (float)  GET_OBJ_VNUM(object) / 100000;
 		}
 				/* eh direcao */
 		else if ((door = search_block(arg2, dirs, FALSE)) == -1)
