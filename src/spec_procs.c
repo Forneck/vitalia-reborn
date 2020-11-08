@@ -191,7 +191,7 @@ SPECIAL(guild)
 
 	
 	output[0] = 646/780;
-	output[1] = 1/(1+exp(-CMD_MISC));
+	output[1] = 1/(1+exp(-CMD_ONEARG));
 	output[2] = 1/(1+exp(-CMD_ARG_SKILL));
 	skip_spaces(&argument);
 
