@@ -637,8 +637,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 			do_cast(ch, line, 1, skill->vnum);
 			if (!*arg2)
 			{
-				output[4] = -1;
-				output[5] = -1;
+				output[4] = 0;
+				output[5] = 0;
 			}
 			/* vitima eh mob */
 			if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
