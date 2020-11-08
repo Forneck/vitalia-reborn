@@ -1121,7 +1121,7 @@ SPECIAL(shop_keeper)
 	input[28] = 1/(1+exp(-count_obj));
 	
 	output[0] = (float) cmd/780;
-	output[1] = 1/(1+exp(-CMD_OBJ));
+	output[1] = 1/(1+exp(-CMD_TWOARG));
 	output[2] = 1/(1+exp(-CMD_ARG_OBJ));
 //	output[3] = GET_OBJ_VNUM(argument);
 	
