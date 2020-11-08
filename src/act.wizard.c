@@ -4222,7 +4222,7 @@ static struct zcheck_affs
 	/* room limits */
 	/* Off limit zones are any zones a player should NOT be able to walk to
 	   (ex. Limbo) */
-static const int offlimit_zones[] = { 0, 12, 13, 14, -1 };	/* what zones can
+static const int offlimit_zones[] = { 0,5, 12, 14, -1 };	/* what zones can
 															   no room connect 
 															   to (virtual
 															   num) */
