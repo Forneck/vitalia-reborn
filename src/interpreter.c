@@ -751,13 +751,13 @@ void command_interpreter(struct char_data *ch, char *argument)
 	{
 		output[0] = ((float) cmd / 780);
 		output[1] = 1/(1+exp(-CMD_TYPE));
-		if (CMD_TYPE == (CMD_NOARG)
+		if (CMD_TYPE == (CMD_NOARG))
 		{
 			output[2] = output[3] = output[4] = output[5] = 0;
 		}
 		if (CMD_TYPE == (CMD_ONEARG))
 		{
-			output[2] = 1/(1+exp(-atoi(arg1)));
+			output[3] = 1/(1+exp(-atoi(arg1)));
 			output[4] = output[5] = 0;
 		}
 		if (!str_cmp(arg2, "fora") || !str_cmp(arg2, "out"))
@@ -768,7 +768,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if (!str_cmp("moedas", arg1) || !str_cmp("moeda", arg1))
 		{
 			output[2] = 1/(1+exp(-CMD_ARG_MONEY));
-			output[3] = atoi(arg1);
+			output[3] = 1/(1+exp(-atoi(arg1)));
 		}
 		if (!str_cmp("sky", arg1) || !str_cmp("ceu", arg1))
 		{
@@ -839,7 +839,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		else
 		{
 			output[2] = 1/(1+exp(-CMD_ARG_DIR));
-			output[3] = door;
+			output[3] =1/(1+exp(-door));
 		}
 
 		/* arg 2 */
@@ -865,6 +865,26 @@ void command_interpreter(struct char_data *ch, char *argument)
 			type2 = 3;
 			obj = 1/(1+exp(-GET_OBJ_VNUM(object)));
 		}
+				/* eh direcao */
+		if ((door = search_block(arg2, dirs, FALSE)) == -1)
+		{						/* Partial Match */
+			if ((door = search_block(arg2, autoexits, FALSE)) == -1)
+			{					/* Check 'short' dirs too */
+				door = -1;
+			}
+		}
+		if (EXIT(ch, door))
+		{						/* Braces added according to indent. -gg */
+			if (EXIT(ch, door)->keyword)
+			{
+				if (!is_name(arg2, EXIT(ch, door)->keyword))
+					door = -1;
+			}
+		}
+		else
+		{
+			door = -1;
+		}
 		if (!*arg2)
 		{
 			output[4] = 0;
@@ -887,6 +907,11 @@ void command_interpreter(struct char_data *ch, char *argument)
 				output[4] = 1/(1+exp(-CMD_ARG_OBJ));
 				output[5] = obj;
 			}
+			else 
+		{
+			output[4] = 1/(1+exp(-CMD_ARG_DIR));
+			output[5] =1/(1+exp(-door));
+		}
 		}
 
 		if (GET_LEVEL(ch) < LVL_GOD)
