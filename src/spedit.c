@@ -1935,7 +1935,7 @@ void spedit_parse (struct descriptor_data *d, char *arg) {
           case 'M' : spedit_show_messages (d);
                      return;
           case 't' : 
-          case 'T' : send_to_char (d->character, "\r\n0-Spell     1-Skill\r\n");
+          case 'T' : send_to_char (d->character, "\r\n0-Spell     1-Skill     2-Chanson\r\n");
                      send_to_char (d->character, "Enter choice : ");
                      OLC_MODE(d) = SPEDIT_GET_TYPE;
                      return;
