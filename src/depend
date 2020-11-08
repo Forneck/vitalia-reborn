@@ -261,7 +261,7 @@ spell_parser.o: spell_parser.c conf.h sysdep.h structs.h protocol.h \
  dg_scripts.h fight.h spedit.h spells_script.h formula.h constants.h
 spells.o: spells.c conf.h sysdep.h structs.h protocol.h lists.h utils.h \
  comm.h spells.h handler.h db.h constants.h interpreter.h dg_scripts.h \
- act.h fight.h
+ act.h fight.h spirits.h
 spells_assign.o: spells_assign.c conf.h sysdep.h structs.h protocol.h \
  lists.h utils.h spells.h spedit.h
 spells_script.o: spells_script.c conf.h sysdep.h structs.h protocol.h \
