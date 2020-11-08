@@ -19,6 +19,7 @@ SOFTWARE. */
 #define MAX_SPELL_DELAY         50   /* this equal to 5 sec */
 #define SPELL                   'P'
 #define SKILL                   'K'
+#define CHANSON          'C'
 #define SPSK                    'Z'
 #define MAX_SPELL_AFFECTS       6    /* modifying thos MAX_SPELL would require a FULL spells database upgrade. */
 #define MAX_SPELL_PROTECTIONS   6    /* for e.g: spedit_save_to_disk */
