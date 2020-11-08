@@ -777,13 +777,47 @@ void command_interpreter(struct char_data *ch, char *argument)
 			output[4] = 0;
 			output[5] = 0;
 		}
+			if (!str_cmp("all", arg1) || !str_cmp("tudo", arg1))
+		{
+			output[2] = 1/(1+exp(-CMD_ARG_ALL));
+			output[3] = 0;
+			output[4] = 0;
+			output[5] = 0;
+		}
+		
 		/* vitima eh mob */
 		if ((victim = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
 		{
 			type1 = 1;
 			mob = 1/(1+exp(-GET_MOB_VNUM(victim)));
 		}
-		/* vitima eh player */
+		/* eh objeto */
+		else if ((object = get_obj_vis(ch, arg1, NULL)) != NULL)
+		{
+			type1 = 3;
+			obj = 1/(1+exp(-GET_OBJ_VNUM(object)));
+		}
+			/* eh direcao */
+     else if ((door = search_block(arg1, dirs, FALSE)) == -1)
+		{						/* Partial Match */
+			if ((door = search_block(arg1, autoexits, FALSE)) == -1)
+			{					/* Check 'short' dirs too */
+				door = -1;
+			}
+		if (EXIT(ch, door))
+		{						/* Braces added according to indent. -gg */
+			if (EXIT(ch, door)->keyword)
+			{
+				if (!is_name(arg1, EXIT(ch, door)->keyword))
+					door = -1;
+		}
+		else
+		{
+			door = -1;
+		 }
+  	}
+	}
+/* vitima eh player */
 		for (i = 0; i <= top_of_p_table; i++)
 		{
 			if (*arg1 && !str_cmp(arg1, player_table[i].name))
@@ -793,34 +827,6 @@ void command_interpreter(struct char_data *ch, char *argument)
 				break;
 			}
 		}
-		/* eh objeto */
-		if ((object = get_obj_vis(ch, arg1, NULL)) != NULL)
-		{
-			type1 = 3;
-			obj = 1/(1+exp(-GET_OBJ_VNUM(object)));
-		}
-
-		/* eh direcao */
-		if ((door = search_block(arg1, dirs, FALSE)) == -1)
-		{						/* Partial Match */
-			if ((door = search_block(arg1, autoexits, FALSE)) == -1)
-			{					/* Check 'short' dirs too */
-				door = -1;
-			}
-		}
-		if (EXIT(ch, door))
-		{						/* Braces added according to indent. -gg */
-			if (EXIT(ch, door)->keyword)
-			{
-				if (!is_name(arg1, EXIT(ch, door)->keyword))
-					door = -1;
-			}
-		}
-		else
-		{
-			door = -1;
-		}
-
 		if (type1 == 1)			/* mob */
 		{
 			output[2] = 1/(1+exp(-CMD_ARG_MOB));
@@ -849,7 +855,33 @@ void command_interpreter(struct char_data *ch, char *argument)
 			type2 = 1;
 			mob = 1/(1+exp(-GET_MOB_VNUM(victim)));
 		}
-		/* vitima eh player */
+		/* eh objeto */
+		else if ((object = get_obj_vis(ch, arg2, NULL)) != NULL)
+		{
+			type2 = 3;
+			obj = 1/(1+exp(-GET_OBJ_VNUM(object)));
+		}
+				/* eh direcao */
+		else if ((door = search_block(arg2, dirs, FALSE)) == -1)
+		{						/* Partial Match */
+			if ((door = search_block(arg2, autoexits, FALSE)) == -1)
+			{					/* Check 'short' dirs too */
+				door = -1;
+			}
+		if (EXIT(ch, door))
+		{						/* Braces added according to indent. -gg */
+			if (EXIT(ch, door)->keyword)
+			{
+				if (!is_name(arg2, EXIT(ch, door)->keyword))
+					door = -1;
+			}
+		   else
+		   {
+		      	door = -1;
+	    	}
+		  }
+		}
+			/* vitima eh player */
 		for (i = 0; i <= top_of_p_table; i++)
 		{
 			if (*arg2 && !str_cmp(arg2, player_table[i].name))
@@ -858,32 +890,6 @@ void command_interpreter(struct char_data *ch, char *argument)
 				id_player = 1/(1+exp(-player_table[i].id));
 				break;
 			}
-		}
-		/* eh objeto */
-		if ((object = get_obj_vis(ch, arg2, NULL)) != NULL)
-		{
-			type2 = 3;
-			obj = 1/(1+exp(-GET_OBJ_VNUM(object)));
-		}
-				/* eh direcao */
-		if ((door = search_block(arg2, dirs, FALSE)) == -1)
-		{						/* Partial Match */
-			if ((door = search_block(arg2, autoexits, FALSE)) == -1)
-			{					/* Check 'short' dirs too */
-				door = -1;
-			}
-		}
-		if (EXIT(ch, door))
-		{						/* Braces added according to indent. -gg */
-			if (EXIT(ch, door)->keyword)
-			{
-				if (!is_name(arg2, EXIT(ch, door)->keyword))
-					door = -1;
-			}
-		}
-		else
-		{
-			door = -1;
 		}
 		if (!*arg2)
 		{
