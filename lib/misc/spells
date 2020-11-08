@@ -541,7 +541,7 @@
  4 100
  1 P 63 1 2 8194 8 0
  2 fly
-10 Você se sente pesad$r novamente.
+10 Você se sente pesad$R novamente.
 12 Você se sente muito leve...
 80 2 1 + (param > 18)
 99 1
@@ -968,8 +968,8 @@
  1 P 308 1 1 4224 8 200000
  2 firestorm
  3 200000
-11 As suas palavras causam uma @RTempestade de Fogo@n.
-12 Uma @RTempestade de Fogo@n te atingiu violentamente.
-13 As palavras de $n causam uma @RTempestade de Fogo@n por todo o lugar.
+11 As suas palavras causam uma Tempestade de Fogo.
+12 Uma Tempestade de Fogo te atingiu violentamente.
+13 As palavras de $n causam uma Tempestade de Fogo por todo o lugar.
  4 100
  7
