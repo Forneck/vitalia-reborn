@@ -1295,9 +1295,9 @@ ACMD(do_suggestion)
    comando = fabs(calc_output[0]);
    if (GET_IDNUM(ch) == 20)
    {
-      send_to_char(ch,"output: %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],log(calc_output[2]),log(calc_output[3]),log(calc_output[4]),log(calc_output[5]));
+      send_to_char(ch,"output: %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],log(calc_output[2]),calc_output[3],log(calc_output[4]),calc_output[5]);
    }
-   if (comando == MAX_COMMAND)
+   if ((comando == MAX_COMMAND) || (comando == 0))
    {
       send_to_char(ch,"Nenhum comando sugerido para você.\r\n");
    }
@@ -1305,9 +1305,9 @@ ACMD(do_suggestion)
    send_to_char(ch,"Comando sugerido acima do teu nivel!\r\n");
    }
    else
-   if (log(calc_output[3]) > 0 && log(calc_output[5]) > 0)
+   if (calc_output[3] > 0 && calc_output[5] > 0)
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
-   else  if (log(calc_output[3]) > 0){
+   else  if (calc_output[3] > 0){
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
  }
    else
