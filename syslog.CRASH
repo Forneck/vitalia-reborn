@@ -1,30 +1,14 @@
-Nov 07 19:00:41 2020 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
-Nov 07 19:00:41 2020 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
-Nov 07 19:00:41 2020 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
-Nov 07 19:00:41 2020 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
-Nov 07 19:00:41 2020 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
-Nov 07 19:00:41 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
-Nov 07 19:00:41 2020 :: Resetting #220: Anexo (rooms 22000-22099).
-Nov 07 19:00:41 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
-Nov 07 19:00:41 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Nov 07 19:00:41 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Nov 07 19:00:41 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Nov 07 19:00:41 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Nov 07 19:00:41 2020 :: Boot db -- DONE.
-Nov 07 19:00:41 2020 :: Signal trapping.
-Nov 07 19:00:41 2020 :: Entering game loop.
-Nov 07 19:00:41 2020 :: No connections.  Going to sleep.
-Nov 07 19:00:42 2020 :: New connection.  Waking up.
-Nov 07 19:00:48 2020 :: Cansian has connected.
-Nov 07 19:00:49 2020 :: Cansian had no variable file
-Nov 07 19:00:49 2020 :: Cansian retrieving crash-saved items and entering game.
-Nov 07 19:00:49 2020 :: Cansian (level 110) has 2 objects (max 100).
-Nov 07 19:01:06 2020 :: OLC: Cansian stops editing spell files.
-Nov 07 19:01:19 2020 :: OLC: Cansian stops editing spell files.
-Nov 07 19:01:28 2020 :: OLC: Cansian starts editing zone 12 allowed zone 0
-Nov 07 19:02:20 2020 :: OLC: Cansian edits obj 1204
-Nov 07 19:02:20 2020 :: OLC: Cansian stops editing zone 12 allowed zone 0
-Nov 07 19:02:24 2020 :: OLC: Cansian starts editing zone 12 allowed zone 0
-Nov 07 19:02:39 2020 :: OLC: Cansian edits obj 1204
-Nov 07 19:02:39 2020 :: OLC: Cansian stops editing zone 12 allowed zone 0
-Segmentation fault (core dumped)
+autorun starting game Sun Nov  8 00:22:09 UTC 2020
+running bin/circle -q 4000
+Nov 08 00:22:09 2020 :: Loading configuration.
+Nov 08 00:22:09 2020 :: Vitalia Reborn 2020 V0.2
+Nov 08 00:22:09 2020 :: Using lib as data directory.
+Nov 08 00:22:09 2020 :: Running game on port 4000.
+Nov 08 00:22:09 2020 :: SYSERR: lib/.killscript: No such file or directory
+Nov 08 00:22:09 2020 :: Finding player limit.
+Nov 08 00:22:09 2020 ::    Setting player limit to 200 using rlimit.
+Nov 08 00:22:09 2020 :: Opening mother connection.
+Nov 08 00:22:09 2020 :: Binding to all IP interfaces on this host.
+SYSERR: bind: Address already in use
+Quick boot mode -- rent check supressed.
+Using file descriptor for logging.
