@@ -1140,3 +1140,80 @@ ACMD(do_trip)
 			GET_WAIT_STATE(ch) += 4 * PULSE_VIOLENCE;
 	}
 }
+
+/* -- jr - Sep 15, 2000
+ * SEIZE skill.
+ */
+ACMD(do_seize)
+{
+ struct char_data *vict;
+  int percent, prob;
+
+  one_argument(argument, arg);
+
+  if (IS_NPC(ch)
+      || !GET_SKILL_PRAC(ch, SKILL_SEIZE)
+      || PLR_FLAGGED(ch, PLR_TRNS)) {
+    send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
+    return;
+  }
+  if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL)) {
+    send_to_char(ch,"Este lugar é muito calmo, sem violências...\r\n");
+    return;
+  }
+
+  if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL) {
+    if (FIGHTING(ch) && IN_ROOM(ch) == IN_ROOM(FIGHTING(ch)))
+      vict = FIGHTING(ch);
+    else {
+      send_to_char(ch, "Imobilizar quem?\r\n");
+      return;
+    }
+  }
+  if (vict == ch) {
+    send_to_char(ch, "Ta... entendi... faz muito sentido...\r\n");
+    return;
+  }
+
+  if (IS_DEAD(ch)) {
+    act("Você não pode imobilizar $N, você está mort$r!", FALSE, ch, NULL, vict, TO_CHAR);
+    return;
+  } else if (IS_DEAD(vict)) {
+    act("Como você pretende imobilizar $N? $E está mort$R!", FALSE, ch, NULL, vict, TO_CHAR);
+    return;
+  } else if (AFF_FLAGGED(vict, AFF_PARALIZE) {
+    act("$E já está paralizad$R. Como você pretende imobilizar alguém assim?", FALSE, ch, NULL, NULL, TO_CHAR);
+    return;
+  } else if (IS_MOUNTING(ch)) {
+    act("Você está montando, não há como imobilizar alguém!", FALSE, ch, NULL, NULL, TO_CHAR);
+    return;
+  } else if (IS_MOUNTED(vict)) {
+    act("$N está montad$R. Não há como agarrá-l$R!", FALSE, ch, NULL, vict, TO_CHAR);
+    return;
+
+  percent = number(1, 101) - dex_app_skill[GET_DEX(ch)].seize;
+  prob = GET_SKILL_PRAC(ch, SKILL_SEIZE);
+
+  if (GET_STR(vict) > GET_STR(ch))	// vict is stronger than ch
+    percent += (GET_STR(vict) - GET_STR(ch)) * 10;
+
+  if (MOB_FLAGGED(vict, MOB_NOBASH))
+    percent = 101;
+
+  if (percent > prob) {
+    act("Você tenta imobilizar $N, mas acaba sendo arremessad$r longe.", FALSE, ch, NULL, vict, TO_CHAR);
+    act("$n tenta imobilizar $N, mas é arremessad$r longe.", FALSE, ch, NULL, vict, TO_NOTVICT);
+    act("$n tenta imobilizar você, mas você facimente $r arremessa longe.", FALSE, ch, NULL, vict, TO_VICT);
+    GET_POS(ch) = POS_SITTING;
+    GET_WAIT_STATE(ch) += 2 * PULSE_VIOLENCE;
+  } else {
+    int immovable = rand_number(2, 4);
+   
+      act("Você conseguiu imobilizar $N!", FALSE, ch, NULL, vict, TO_CHAR);
+      act("$n segura $N por trás, imobilizando-$R!", FALSE, ch, NULL, vict, TO_NOTVICT);
+      act("$n segura você por trás, lhe deixando imóvel!", FALSE, ch, NULL, vict, TO_VICT);
+      GET_WAIT_STATE(ch) += immovable * PULSE_VIOLENCE;
+      GET_WAIT_STATE(vict) += immovable * PULSE_VIOLENCE;
+    } 
+  }
+}
