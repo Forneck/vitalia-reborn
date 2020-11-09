@@ -30,6 +30,7 @@ ACMD(do_meditate);
 ACMD(do_trip);
 ACMD(do_backflip);
 ACMD(do_combo);
+ACMD(do_seize);
 
 void set_spells_function()
 {
@@ -138,6 +139,10 @@ void set_spells_function()
     
        if ((spell = get_spell_by_vnum(SKILL_MEDITATE)))
    spell->function = do_meditate;
+   
+    if ((spell = get_spell_by_vnum(SKILL_SEIZE)))
+   spell->function = do_seize;
+   
 }
 
 // This function create the database of all the spells and skills,
@@ -2625,6 +2630,21 @@ new_spell->applies[1].appl_num = AFF_WINDWALL + NUM_APPLIES;
  new_spell->effectiveness = strdup("100");
   new_spell->assign[0].class_num = CLASS_WARRIOR;
  new_spell->assign[0].level = 30;
+
+ spedit_save_internally(new_spell);
+
+ // SKILL_SEIZE # 239
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SKILL_SEIZE;
+ new_spell->status = available;
+ new_spell->name = strdup("seize");
+ new_spell->function = do_bash;
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+ new_spell->assign[0].class_num = CLASS_THIEF;
+ new_spell->assign[0].level = 20;
 
  spedit_save_internally(new_spell);
 
