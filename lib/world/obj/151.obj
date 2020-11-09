@@ -1,6 +1,6 @@
 #15101
 Jin Amuleto~
-O Amuleto de Jin~
+o Amuleto de Jin~
 Um Amuleto branco, em forma de círculo está aqui no chão.~
 ~
 18 cdeq 0 0 0 ac 0 0 0 0 0 0 0
@@ -12,7 +12,7 @@ O Amuleto tem um formato único e estranho.
 ~
 #15102
 Gi Amuleto~
-O Amuleto de Gi~
+o Amuleto de Gi~
 Um Amuleto com aparência singular foi deixado aqui.~
 ~
 18 cdeq 0 0 0 ac 0 0 0 0 0 0 0
@@ -24,7 +24,7 @@ Que aparência esquisita possui este Amuleto!
 ~
 #15103
 Chu Amuleto~
-O Amuleto de Chu~
+o Amuleto de Chu~
 Um Amuleto com aparência estranha, cheio de marcas singulares, está aqui.~
 ~
 18 cdeq 0 0 0 ac 0 0 0 0 0 0 0
@@ -36,7 +36,7 @@ O Amuleto possui muitas marcas estranhas.
 ~
 #15104
 Ko Amuleto~
-O Amuleto de Ko~
+o Amuleto de Ko~
 Um amuleto amarelo foi deixado aqui.~
 ~
 18 cdeq 0 0 0 ac 0 0 0 0 0 0 0
@@ -48,7 +48,7 @@ O Amuleto possui muitas marcas estranhas.
 ~
 #15105
 Rei Amuleto~
-O Amuleto de Rei~
+o Amuleto de Rei~
 Um singular amuleto azul, com uma pequena corrente de ouro foi jogado aqui.~
 ~
 18 cdeq 0 0 0 ac 0 0 0 0 0 0 0
@@ -60,7 +60,7 @@ O Amuleto possui muitas marcas estranhas.
 ~
 #15106
 Chi Amuleto~
-O Amuleto de Chi~
+o Amuleto de Chi~
 Um amuleto lilás, com uma pequena corrente negra foi deixado aqui.~
 ~
 18 cdeq 0 0 0 ac 0 0 0 0 0 0 0
@@ -72,7 +72,7 @@ O amuleto Chi possui muitas marcas estranhas.
 ~
 #15107
 Shin Amuleto~
-O Amuleto de Shin~
+o Amuleto de Shin~
 Um pequeno amuleto verde, com algumas marcas, foi deixado aqui.~
 ~
 18 cdeq 0 0 0 ac 0 0 0 0 0 0 0
@@ -84,7 +84,7 @@ O Amuleto possui muitas marcas estranhas.
 ~
 #15108
 Tei Amuleto~
-O Amuleto de Tei~
+o Amuleto de Tei~
 Um amuleto azul foi deixado aqui.~
 ~
 18 cdeq 0 0 0 ac 0 0 0 0 0 0 0
@@ -96,7 +96,7 @@ O Amuleto possui muitas marcas estranhas.
 ~
 #15109
 Fugu lamina~
-Uma Lâmina Fugu~
+uma Lâmina Fugu~
 Uma lâmina com aparência poderosa foi deixada aqui.~
 ~
 5 bg 0 0 0 an 0 0 0 0 0 0 0
@@ -128,7 +128,7 @@ A
 4 1
 #15111
 Amuleto~
-O Amuleto de Sun Lu~
+o Amuleto de Sun Lu~
 Um amuleto com aparência esquisita foi deixado aqui no chão.~
 ~
 9 ae 0 0 0 ac 0 0 0 0 0 0 0
@@ -144,7 +144,7 @@ A
 5 3
 #15112
 laroche sabre~
-O Sabre Laroche~
+o Sabre Laroche~
 Um estranho sabre está jogado aqui no chão, refletindo a luz.~
 ~
 5 bk 0 0 0 an 0 0 0 0 0 0 0
@@ -187,7 +187,7 @@ A
 A
 19 2
 #15115
-eapada azami~
+espada azami~
 a espada Azami~
 Uma espada com um formato meio ridículo foi deixada aqui.~
 ~
@@ -268,7 +268,7 @@ A
 17 -12
 #15120
 arma instrumento kora artefato~
-O Kora~
+o Kora~
 Outro estranho artefato de luta foi deixado aqui.~
 ~
 5 b 0 0 0 an 0 0 0 0 0 0 0
@@ -306,7 +306,7 @@ A
 19 2
 #15122
 espada mandarim dau~
-O Mandarim Dau~
+o Mandarim Dau~
 Uma perigosa espada de aspecto maligno foi deixada aqui.~
 ~
 5 bg 0 0 0 an 0 0 0 0 0 0 0
@@ -322,7 +322,7 @@ A
 19 3
 #15150
 espada samurai~
-Uma espada samurai~
+uma espada samurai~
 Uma espada samurai foi deixada aqui.~
 ~
 5 bg 0 0 0 an 0 0 0 0 0 0 0
@@ -341,7 +341,7 @@ A
 19 3
 #15151
 adaga samurai~
-Uma adaga samurai~
+uma adaga samurai~
 Uma belíssima adaga samurai foi esquecida aqui.~
 ~
 5 bg 0 0 0 an 0 0 0 0 0 0 0
@@ -360,7 +360,7 @@ A
 19 2
 #15152
 bastao samurai~
-Um bastão samurai~
+um bastão samurai~
 Um bastão samurai foi jogado aqui.~
 ~
 5 bg 0 0 0 an 0 0 0 0 0 0 0
@@ -379,7 +379,7 @@ A
 19 3
 #15153
 vestimenta tunica samurai~
-Uma túnica samurai~
+uma túnica samurai~
 Uma túnica samurai foi deixada aqui no chão, acumulando poeira.~
 ~
 9 k 0 0 0 ad 0 0 0 0 0 0 0
@@ -411,7 +411,7 @@ A
 18 1
 #15155
 manto samurai~
-Um manto samurai~
+um manto samurai~
 Um velho manto bastante usado foi jogado aqui.~
 ~
 9 b 0 0 0 ak 0 0 0 0 0 0 0
@@ -428,7 +428,7 @@ A
 2 2
 #15156
 capacete samurai~
-Um capacete samurai~
+um capacete samurai~
 Um pesado e imenso capacete para samurais foi jogado aqui no chão.~
 ~
 9 b 0 0 0 ae 0 0 0 0 0 0 0
@@ -445,7 +445,7 @@ A
 18 1
 #15157
 perneiras samurai~
-Um par de perneiras samurai~
+um par de perneiras samurai~
 Um par de perneiras samurai está jogado aqui no chão.~
 ~
 9 b 0 0 0 af 0 0 0 0 0 0 0
@@ -464,7 +464,7 @@ A
 1 1
 #15158
 botas samurai~
-Um par de botas samurai~
+um par de botas samurai~
 Um par de botas samurai foi deixado aqui por seu antigo dono.~
 ~
 9 b 0 0 0 ag 0 0 0 0 0 0 0
@@ -481,7 +481,7 @@ A
 17 -2
 #15159
 luvas samurai~
-Um par de luvas samurai~
+um par de luvas samurai~
 Um par de grossas luvas samurai foi deixado aqui.~
 ~
 9 b 0 0 0 ah 0 0 0 0 0 0 0
@@ -498,7 +498,7 @@ A
 13 20
 #15160
 cotoveleiras samurai~
-Um par de cotoveleiras samurai~
+um par de cotoveleiras samurai~
 Um estranho par de cotoveleiras foi deixado aqui.~
 ~
 9 b 0 0 0 ai 0 0 0 0 0 0 0
@@ -515,7 +515,7 @@ A
 17 -3
 #15161
 capa samurai~
-Uma capa samurai~
+uma capa samurai~
 Uma capa negra como a noite, cheia de estranhas marcas, foi esquecida aqui.~
 ~
 9 b 0 0 0 ak 0 0 0 0 0 0 0
@@ -532,7 +532,7 @@ A
 17 -5
 #15162
 cinto samurai~
-Um cinto samurai~
+um cinto samurai~
 Um grosso cinto de couro está a espera de um novo dono.~
 ~
 9 b 0 0 0 al 0 0 0 0 0 0 0
@@ -549,7 +549,7 @@ A
 1 2
 #15163
 bracadeira samurai~
-Uma braçadeira samurai~
+uma braçadeira samurai~
 Braçadeiras estranhas estão aqui no chão.~
 ~
 9 ak 0 0 0 ai 0 0 0 0 0 0 0

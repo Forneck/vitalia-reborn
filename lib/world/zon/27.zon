@@ -2,6 +2,12 @@
 Vitalia~
 Os Mistérios de Midantra~
 2700 2799 30 2 j 0 0 0 -1 -1
+M 0 2744 1 2703 	(Rizzo, o supervisor geral da loja)
+G 1 2707 99 -1 	(uma bandeja de segurar)
+G 1 2731 99 -1 	(uma balsa inflável)
+G 1 2732 99 -1 	(um estranho cajado feito de pedra)
+G 1 2733 99 -1 	(um pouco de lama brilhante)
+M 0 2706 2 2703 	(um nobre)
 M 0 2727 2 2728 	(um escudeiro)
 M 0 2738 1 2728 	(o Cavaleiro da Rosa Branca)
 E 1 2748 100 6 	(um elmo com uma insígnia)
@@ -72,8 +78,6 @@ M 0 2740 6 2734 	(um cavaleiro distraído)
 M 0 2740 6 2724 	(um cavaleiro distraído)
 M 0 2740 6 2730 	(um cavaleiro distraído)
 M 0 2740 6 2730 	(um cavaleiro distraído)
-M 0 2744 1 2703 	(Rizzo, o supervisor geral da loja)
-M 0 2706 2 2703 	(um nobre)
 M 0 2707 13 2714 	(o guarda real)
 M 0 2707 13 2750 	(o guarda real)
 M 0 2707 13 2718 	(o guarda real)

@@ -6,26 +6,26 @@ Clas: 6
 Levl: 36
 Id  : 25
 Brth: 1604182960
-Plyd: 51549
-Last: 1604697834
+Plyd: 53672
+Last: 1604936057
 Lmot: 1604188562
 Lnew: 1604668265
 Htwn: 1372
-Host: 127.0.0.1
+Host: 187.66.23.112
 Hite: 178
 Wate: 158
-Alin: 311
+Alin: 84
 Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDEF abd 0 0
 Wimp: 20
 Room: 3001
 Lern: 22
-Hung: 10
-Thir: 10
-Hit : 439/439
-Mana : 265/265
-Move: 203/194
+Hung: 16
+Thir: 16
+Hit : 181/439
+Mana : 212/265
+Move: 204/194
 Str : 16/0
 Int : 13
 Wis : 13
@@ -33,9 +33,9 @@ Dex : 14
 Con : 15
 Cha : 11
 Ac  : 100
-Gold: 381990
+Gold: 429633
 Bank: 200000
-Exp : 9733013
+Exp : 10228840
 Olc : 0
 Skil:
 16 90
@@ -54,28 +54,34 @@ Skil:
 232 90
 243 90
 0 0
-Alis: 8
- sanc
- order empr hold caja;order empre use cajado;order empre use cajado;order empre use cajado;order empreg rem cajado;order empre junk cajado
+Affs:
+36 46 0 33 256 0 0 0
+0 0 0 0 0 0 0 0
+Alis: 9
+ fome
+ drin barr;drin barri;fill barril font;cast 'create be';eat mor
 1
- sle
- rem couraca;sle
-1
- med
- rem couraca;med
-1
- wak
- wak;stan;wear cour
-1
- escudonegro
- e;open porta e;close porta w;e;e;e;s;e;s;d;d;d;d;d;d;d;d;d;d;e;u;e;e;s
-1
- escudonegro2
-    d;e;e;d;d;s;e;s;e;n;e;n;s;w;w;s;w;s;w;w;e;w;e;e;s;e;e
+ escudonegro4
+    d;d;d;d;d;e;e;e;s;s;e;e;e;e;e;d;e;e;e;open alcapao;d;d;d;d;d;e
 1
  escudonegro3
     s;s;e;n;n;e;e;e;n;e;n;e;e;n;e;e;w;w;n;n;u;u
 1
- escudonegro4
-    d;d;d;d;d;e;e;e;s;s;e;e;e;e;e;d;e;e;e;open alcapao;d;d;d;d;d;e
+ escudonegro2
+    d;e;e;d;d;s;e;s;e;n;e;n;s;w;w;s;w;s;w;w;e;w;e;e;s;e;e
+1
+ escudonegro
+ e;open porta e;close porta w;e;e;e;s;e;s;d;d;d;d;d;d;d;d;d;d;e;u;e;e;s
+1
+ wak
+ wak;stan;wear cour
+1
+ med
+ rem couraca;med
+1
+ sle
+ rem couraca;sle
+1
+ sanc
+ order empr hold caja;order empre use cajado;order empre use cajado;order empre use cajado;order empreg rem cajado;order empre junk cajado
 1

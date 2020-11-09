@@ -6,18 +6,18 @@ Clas: 4
 Levl: 110
 Id  : 1
 Brth: 1601790482
-Plyd: 327467
-Last: 1604815355
+Plyd: 385725
+Last: 1604934145
 Lmot: 1604518665
 Lnew: 1604428948
 Htwn: 1372
-Host: 127.0.0.1
+Host: 177.220.172.185
 Hite: 151
 Wate: 113
 Alin: 322
 Act : 0 0 0 0
 Aff : 0 0 0 0
-Pref: efghimnoqrvxzAB cd 0 0
+Pref: efghimnoqrvxAB cd 0 0
 Room: 65535
 Hit : 2000/2000
 Mana : 100/100
@@ -33,21 +33,21 @@ Gold: 1205600
 Exp : 7000001
 Olc : 0
 Alis: 6
- indoor
- redit;3;4;0;q;y
-1
- of
- order fol $*
+ ha
+ history all
+0
+ reset
+ shutdown reboot
+0
+ sa
+ say @Y$*@n
 1
  goss
  goss @Y$*@n
 1
- sa
- say @Y$*@n
+ of
+ order fol $*
 1
- reset
- shutdown reboot
-0
- ha
- history all
-0
+ indoor
+ redit;3;4;0;q;y
+1

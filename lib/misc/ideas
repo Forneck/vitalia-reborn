@@ -8,7 +8,7 @@ Level     15
 Room      1663
 Flags     0 0 0 0
 End
-Text       Afetamento~
+Text      Afetamento~
 Body      Poderia inserir o comando AFFECT/Afetamento, monstrando as magias afetadas e a duracao das mesmas em horas mud.
 ~
 Name      Motharo~
@@ -16,5 +16,16 @@ IdNum     25
 Dated     1604668323
 Level     34
 Room      3001
+Flags     0 0 0 0
+End
+Text       skill aware of danger/sentir perigo~
+Body      O treinamento intensivo e a vivncia no campo de batalha desenvolveram uma espcie de sexto sentido contra o perigo em voc. Enquanto dorme,  voc tambm no recebe a penalidade de armadura.
+Ou seja, ao andar ele mostra que lado fica a dt leste/norte etc e se tem trap
+~
+Name      Motharo~
+IdNum     25
+Dated     1604934779
+Level     36
+Room      12051
 Flags     0 0 0 0
 End

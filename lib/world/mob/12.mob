@@ -5,10 +5,10 @@ A Carteira Imortal está trabalhando pesado aqui.
 ~
 Espantoso... uma carteira trabalhadora... trabalhando?
 ~
-2154498 0 0 0 65536 0 0 0 0 E
+2154498 0 0 0 0 0 0 0 0 E
 105 0 -10 5d20+8000 15d15+5
 0 0
-8 8 2
+9 9 2
 E
 #1202
 ser amorfo espirito vagueante~
@@ -23,7 +23,7 @@ local para os Imortais.
 2179140 0 0 0 589840 0 0 0 0 E
 101 0 -10 5d20+8000 15d15+5
 0 0
-8 8 0
+9 9 0
 E
 #1290
 besta apocalipse~
@@ -41,10 +41,10 @@ escorpiao, com ferroes e o poder de aflingir os homens...
 Cumpre a ordem de nao matar aos homens, mas de tormenta-los
 a ponto de buscarem a morte...
 ~
-2103412 0 0 0 1 0 0 0 -1000 E
+2103412 0 0 0 0 0 0 0 -1000 E
 101 0 -8 1d1+4500 6d12+36
 0 200000
-8 8 0
+9 9 0
 Str: 25
 StrAdd: 100
 Dex: 25
@@ -65,10 +65,10 @@ Ela possui a grande autoridade do trono do Dragao...
 Uma de suas cabecas tem uma grande cicatriz, e por causa dessa cicatriz todos
 seguem a Fera para prostarem-se diante do Dragao
 ~
-2103412 0 0 0 1 0 0 0 -1000 E
+2103412 0 0 0 0 0 0 0 -1000 E
 102 0 -10 1d1+6000 9d12+44
 0 300000
-8 8 0
+9 9 0
 Str: 25
 StrAdd: 100
 Dex: 25
@@ -92,10 +92,10 @@ Essa mesma Fera fez com que todos os homens fossem marcados com
 o nome da Fera, na mao direita e na fronte, com o numero da Fera,
 e esse numero e' seiscentos e sessenta e seis.
 ~
-2103412 0 0 0 1 0 0 0 -1000 E
+2103412 0 0 0 0 0 0 0 -1000 E
 104 0 -11 1d1+7500 12d12+46
 0 400000
-8 8 0
+9 9 0
 Str: 25
 StrAdd: 100
 Dex: 25
@@ -115,10 +115,10 @@ Agua, a segunda Ar e a terceira Terra, exalando Fogo pelas
 narinas e com o poder de acabar com a vida daqueles que
 o desafiarem...
 ~
-2103412 0 0 0 1 0 0 0 -1000 E
+2103412 0 0 0 0 0 0 0 -1000 E
 105 0 -12 1d1+10000 13d13+50
 0 500000
-8 8 0
+9 9 0
 Str: 25
 StrAdd: 100
 Dex: 25

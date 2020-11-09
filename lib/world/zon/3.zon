@@ -3,6 +3,9 @@ Vitalia~
 Bandar, A Cidade Maldita~
 300 399 45 2 j 0 0 0 -1 -1
 M 0 304 1 308 	(Guerrand)
+G 1 302 99 -1 	(uma poção marrom)
+G 1 304 99 -1 	(uma poção ônix)
+G 1 305 99 -1 	(uma poção castanha)
 M 0 311 1 330 	(o Oráculo)
 E 1 301 10 16 	(a Espada do Oráculo)
 E 1 303 10 5 	(a Armadura do Oráculo)

@@ -2,6 +2,10 @@
 Vitalia~
 O Safári no Covil dos Lagartos~
 2200 2299 45 1 j 0 0 0 -1 -1
+M 0 2206 1 2218 	(Senhor Hooper)
+G 1 2209 99 -1 	(o barril)
+G 1 2211 99 -1 	(um copo)
+G 1 2212 99 -1 	(um pequeno pedaço biscoito de chocolate)
 M 0 2200 8 2202 	(a serpente marinha)
 M 0 2200 8 2202 	(a serpente marinha)
 M 0 2200 8 2202 	(a serpente marinha)
@@ -63,7 +67,6 @@ M 0 2205 1 2213 	(o principe)
 G 1 2205 1 -1 	(uma chave verde para a saída)
 E 1 2200 20 6 	(uma coroa de ouro)
 E 1 2201 100 16 	(uma espada medieval)
-M 0 2206 1 2218 	(Senhor Hooper)
 O 0 2208 1 2216 	(um SORTUDO)
 O 0 2203 1 2208 	(uma chave inútil)
 O 0 2204 1 2213 	(um grande altar)
