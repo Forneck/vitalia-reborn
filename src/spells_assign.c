@@ -2348,6 +2348,31 @@ new_spell->vnum = SPELL_INVIGOR;
 
  spedit_save_internally(new_spell);
  
+// SPELL_WINDWALL #96
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SPELL_WINDWALL;
+ new_spell->status = available;
+ new_spell->name = strdup("windwall");
+ new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_CHAR_ROOM;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+ new_spell->effectiveness = strdup("100");
+sprintf(buf, "(80 - (4* self.level)) > 40 ? (80 - ( 4 * self.level)) : 40");
+ new_spell->assign[0].class_num = CLASS_RANGER;
+ new_spell->assign[0].level = 20;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = APPLY_AC;
+ new_spell->applies[0].modifier = strdup("-4");
+ new_spell->applies[0].duration = strdup("self.level");
+new_spell->applies[1].appl_num = AFF_WINDWALL + NUM_APPLIES;
+ new_spell->applies[1].duration = strdup("self.level"); 
+ new_spell->messages.to_vict = strdup("Uma parede de vento envolve você.");
+  new_spell->messages.to_room = strdup("Uma parede de vento envolve $N.");
+ new_spell->messages.wear_off = strdup("A parede de vento ao redor de seu corpo desaparece.");
+ spedit_save_internally(new_spell);
 
 // SKILL_BACKSTAB # 131 
  CREATE(new_spell, struct str_spells, 1);
