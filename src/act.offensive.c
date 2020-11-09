@@ -1218,5 +1218,5 @@ ACMD(do_seize)
       GET_WAIT_STATE(ch) += immovable * PULSE_VIOLENCE;
       GET_WAIT_STATE(vict) += immovable * PULSE_VIOLENCE;
     } 
-  }
+  
 }
