@@ -2176,7 +2176,7 @@ void parse_mobile(FILE * mob_f, int nr)
 								  "mobile");
 
 //		AFF_FLAGS(mob_proto + i)[0] = asciiflag_conv(f5);
-	AFF_FLAGS(mob_proto + i)[0] = (asciiflag_conv(f5)-2);
+	AFF_FLAGS(mob_proto + i)[0] = (asciiflag_conv(f5)&2);
 		AFF_FLAGS(mob_proto + i)[1] = asciiflag_conv(f6);
 		AFF_FLAGS(mob_proto + i)[2] = asciiflag_conv(f7);
 		AFF_FLAGS(mob_proto + i)[3] = asciiflag_conv(f8);
