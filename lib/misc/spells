@@ -813,7 +813,19 @@
 91 6 12 
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
  4 100
- 1 P 96 1 1 0 7 0
+ 1 P 96 1 2 8194 9 0
+ 2 windwall
+10 A parede de vento ao redor de seu corpo desaparece.
+12 Uma parede de vento envolve você.
+13 Uma parede de vento envolve $N.
+80 17 -4
+99 self.level
+81 61 
+99 self.level
+90 6 15 
+99 (80 - (4 * self.level)) > 40 ? (80 - (4 * self.level)) : 40
+ 4 100
+ 1 P 97 1 1 0 7 0
  2 script-inflicted
  4 100
  1 K 221 1 0 0 0 0
