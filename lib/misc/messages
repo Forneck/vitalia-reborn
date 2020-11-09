@@ -393,6 +393,22 @@ Você tenta controlar a força do vento mas acaba sendo controlado por ela e cai
 $n tenta sem sucesso controlar a força do vento e acaba caindo.
 $n tenta atingir $N com a fúria do vento mas é mandad$r para o chão.
 
+* Windwall
+M
+ 96
+$N morre ao tentar atravessar sua parede de vento.
+A parede de vento de $n corta você até a morte...
+A parede de vento de $n corta $N até a morte.
+$N não é afetado por sua parede de vento.
+A parede de vento de $n tenta lhe cortar, mas erra.
+$N escapa da parede de vento de $n.
+$N se corta em sua parede de vento.
+A parede de vento de $n despedaça você!! ARRGH!
+$N é despedaçad$R pela parede de vento de $n.
+Sua parede de vento desaparece diante de $N.
+A parede de vento de $n desaparece para que você passe.
+$N atravessa a parede de vento de $n sem se machucar.
+
 * Grito da Morte
 M
  167
