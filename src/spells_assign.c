@@ -2362,7 +2362,7 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->effectiveness = strdup("100");
 sprintf(buf, "(80 - (4* self.level)) > 40 ? (80 - ( 4 * self.level)) : 40");
  new_spell->assign[0].class_num = CLASS_RANGER;
- new_spell->assign[0].level = 20;
+ new_spell->assign[0].level = 15;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->applies[0].appl_num = APPLY_AC;
  new_spell->applies[0].modifier = strdup("-4");
