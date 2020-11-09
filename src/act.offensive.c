@@ -1152,7 +1152,7 @@ ACMD(do_seize)
   one_argument(argument, arg);
 
   if (IS_NPC(ch)
-      || !GET_SKILL_PRAC(ch, SKILL_SEIZE)
+      || !GET_SKILL(ch, SKILL_SEIZE)
       || PLR_FLAGGED(ch, PLR_TRNS)) {
     send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
     return;
@@ -1181,7 +1181,7 @@ ACMD(do_seize)
   } else if (IS_DEAD(vict)) {
     act("Como você pretende imobilizar $N? $E está mort$R!", FALSE, ch, NULL, vict, TO_CHAR);
     return;
-  } else if (AFF_FLAGGED(vict, AFF_PARALIZE) {
+  } else if (AFF_FLAGGED(vict, AFF_PARALIZE)) {
     act("$E já está paralizad$R. Como você pretende imobilizar alguém assim?", FALSE, ch, NULL, NULL, TO_CHAR);
     return;
   } else if (IS_MOUNTING(ch)) {
@@ -1192,7 +1192,7 @@ ACMD(do_seize)
     return;
 
   percent = number(1, 101) - dex_app_skill[GET_DEX(ch)].seize;
-  prob = GET_SKILL_PRAC(ch, SKILL_SEIZE);
+  prob = GET_SKILL(ch, SKILL_SEIZE);
 
   if (GET_STR(vict) > GET_STR(ch))	// vict is stronger than ch
     percent += (GET_STR(vict) - GET_STR(ch)) * 10;
