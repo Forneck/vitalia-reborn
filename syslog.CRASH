@@ -1,30 +1,30 @@
-Nov 09 14:58:15 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
-Nov 09 14:58:15 2020 :: Resetting #220: Anexo (rooms 22000-22099).
-Nov 09 14:58:15 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
-Nov 09 14:58:15 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Nov 09 14:58:15 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Nov 09 14:58:15 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Nov 09 14:58:15 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Nov 09 14:58:15 2020 :: Boot db -- DONE.
-Nov 09 14:58:15 2020 :: Signal trapping.
-Nov 09 14:58:15 2020 :: Entering game loop.
-Nov 09 14:58:15 2020 :: No connections.  Going to sleep.
-Nov 09 14:58:15 2020 :: New connection.  Waking up.
-Nov 09 14:58:19 2020 :: Motharo has connected.
-Nov 09 14:58:20 2020 :: Motharo had no variable file
-Nov 09 14:58:20 2020 :: Motharo retrieving crash-saved items and entering game.
-Nov 09 14:58:20 2020 :: Motharo (level 36) has 31 objects (max 100).
-Nov 09 14:58:25 2020 :: Cansian has connected.
-Nov 09 14:58:27 2020 :: Cansian had no variable file
-Nov 09 14:58:27 2020 :: Cansian retrieving crash-saved items and entering game.
-Nov 09 14:58:27 2020 :: Cansian (level 110) has 2 objects (max 100).
-Nov 09 14:58:32 2020 :: Anyte has connected.
-Nov 09 14:58:33 2020 :: Anyte had no variable file
-Nov 09 14:58:33 2020 :: Anyte retrieving crash-saved items and entering game.
-Nov 09 14:58:33 2020 :: Anyte (level 73) has 28 objects (max 100).
-Nov 09 15:01:07 2020 :: OLC: Cansian starts editing zone 120 allowed zone 0
-Nov 09 15:01:44 2020 :: GenOLC: add_room: Updated existing room #12033.
-Nov 09 15:01:44 2020 :: OLC: Cansian edits room 12033.
-Nov 09 15:01:44 2020 :: GenOLC: save_rooms: Saving rooms in zone #120 (12000-12099).
-Nov 09 15:01:44 2020 :: OLC: Cansian stops editing zone 120 allowed zone 0
-Segmentation fault (core dumped)
+Nov 09 15:22:17 2020 :: rusage: user time: 5 sec, system time: 0 sec, max res size: 22560
+Nov 09 15:27:07 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 09 15:27:17 2020 :: nusage: 3   sockets connected, 3   sockets playing
+Nov 09 15:27:17 2020 :: rusage: user time: 6 sec, system time: 0 sec, max res size: 22804
+Nov 09 15:32:17 2020 :: nusage: 3   sockets connected, 3   sockets playing
+Nov 09 15:32:17 2020 :: rusage: user time: 7 sec, system time: 0 sec, max res size: 22804
+Nov 09 15:32:47 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 09 15:33:27 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 09 15:37:17 2020 :: nusage: 3   sockets connected, 3   sockets playing
+Nov 09 15:37:17 2020 :: rusage: user time: 8 sec, system time: 0 sec, max res size: 22896
+Nov 09 15:37:53 2020 :: Motharo has quit the game.
+Nov 09 15:37:54 2020 :: Losing player: Motharo.
+Nov 09 15:38:47 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 09 15:41:07 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 09 15:41:17 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 09 15:42:17 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 09 15:42:17 2020 :: rusage: user time: 9 sec, system time: 0 sec, max res size: 22896
+Nov 09 15:47:17 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 09 15:47:17 2020 :: rusage: user time: 9 sec, system time: 0 sec, max res size: 22896
+Nov 09 15:47:27 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 09 15:48:22 2020 :: (GC) Cansian forced Anyte to save
+Nov 09 15:48:33 2020 :: (GC) Reboot by Cansian.
+Nov 09 15:48:33 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Nov 09 15:48:33 2020 :: Closing all sockets.
+Nov 09 15:48:33 2020 :: Closing link to: Anyte.
+Nov 09 15:48:33 2020 :: Closing link to: Cansian.
+Nov 09 15:48:33 2020 :: Saving current MUD time.
+Nov 09 15:48:33 2020 :: Rebooting.
+Quick boot mode -- rent check supressed.
+Using file descriptor for logging.
