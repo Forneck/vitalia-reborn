@@ -143,11 +143,12 @@
 #define SPELL_TRANSPORT_VIA_PLANTS      93
 #define SPELL_PROT_FROM_GOOD         94
 #define SPELL_CREATE_BERRIES 95
+#define SPELL_WINDWALL 96
 /* To make an affect induced by dg_affect look correct on 'stat' we need to define it with a 'spellname'. */
-#define SPELL_DG_AFFECT              96
+#define SPELL_DG_AFFECT              97
 
 /** Total Number of defined spells */
-#define NUM_SPELLS                   96
+#define NUM_SPELLS                   97
 
 /* Insert new spells here, up to MAX_SPELLS */
 #define MAX_SPELLS		    160
