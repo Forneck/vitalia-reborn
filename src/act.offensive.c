@@ -1148,6 +1148,7 @@ ACMD(do_seize)
 {
  struct char_data *vict;
   int percent, prob;
+	char arg[MAX_INPUT_LENGTH];
 
   one_argument(argument, arg);
 
@@ -1184,14 +1185,16 @@ ACMD(do_seize)
   } else if (AFF_FLAGGED(vict, AFF_PARALIZE)) {
     act("$E já está paralizad$R. Como você pretende imobilizar alguém assim?", FALSE, ch, NULL, NULL, TO_CHAR);
     return;
-  } else if (IS_MOUNTING(ch)) {
+  } 
+  /*
+  else if (IS_MOUNTING(ch)) {
     act("Você está montando, não há como imobilizar alguém!", FALSE, ch, NULL, NULL, TO_CHAR);
     return;
   } else if (IS_MOUNTED(vict)) {
     act("$N está montad$R. Não há como agarrá-l$R!", FALSE, ch, NULL, vict, TO_CHAR);
     return;
-
-  percent = number(1, 101) - dex_app_skill[GET_DEX(ch)].seize;
+ */
+  percent = rand_number(1, 101) - dex_app_skill[GET_DEX(ch)].seize;
   prob = GET_SKILL(ch, SKILL_SEIZE);
 
   if (GET_STR(vict) > GET_STR(ch))	// vict is stronger than ch
