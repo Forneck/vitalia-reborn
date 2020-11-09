@@ -1107,6 +1107,14 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 			else
 				damage(victim, ch, dam, SPELL_THISTLECOAT);
 		}
+			/* -- Forneck - Nov 09, 2020 */
+		else if (AFF_FLAGGED(victim, AFF_WINDWALL))
+		{
+			if (mag_savingthrow(ch, SAVING_SPELL, GET_LEVEL(ch)))
+				damage(victim, ch, dam / 2.5, SPELL_WINDWALL);
+			else
+				damage(victim, ch, dam, SPELL_WINDWALL);
+		}
 	}
 	/* check if the victim has a hitprcnt trigger */
 	hitprcnt_mtrigger(victim);
