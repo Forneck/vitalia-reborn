@@ -376,6 +376,8 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
 			act("\tL...$l é resguardad$r por um espesso escudo de trevas!", FALSE, i, 0, ch,TO_VICT);
 		if (AFF_FLAGGED(i,AFF_FIRESHIELD))
 			act("\tR...$l está envolvid$r por uma aura de fogo!\tn", FALSE, i, 0, ch, TO_VICT);
+				if (AFF_FLAGGED(i,AFF_WINDWALL))
+			act("\tw...$l está envolvid$r por uma parede de vento!\tn", FALSE, i, 0, ch, TO_VICT);
 		if (AFF_FLAGGED(i, AFF_BLIND))
 			act("\tw...$l está tateando ao redor, ceg$r!\tn", FALSE, i, 0, ch, TO_VICT);
 		if (AFF_FLAGGED(i, AFF_FIREFLIES))
@@ -547,6 +549,8 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
 		act("\tL...$l é resguardad$r por um espesso escudo de trevas!\tn", FALSE, i, 0, ch, TO_VICT);}
 	if (AFF_FLAGGED(i, AFF_FIRESHIELD))
 		act("\tR...$l está envolvid$r por uma aura de fogo!\tn", FALSE, i, 0, ch, TO_VICT);
+			if (AFF_FLAGGED(i, AFF_WINDWALL))
+		act("\tw...$l está envolvid$r por uma parede de vento!\tn", FALSE, i, 0, ch, TO_VICT);
 	if (AFF_FLAGGED(i, AFF_BLIND))
 		act("\tw...$l está tateando ao redor, ceg$r!\tn", FALSE, i, 0, ch, TO_VICT);
 	if (AFF_FLAGGED(i, AFF_FIREFLIES))
@@ -1172,7 +1176,9 @@ ACMD(do_score)
 	else if (AFF_FLAGGED(ch, AFF_GLOOMSHIELD))
 		send_to_char(ch, "Você está protegid%s por um espesso escudo de trevas!.\r\n", OA(ch));
 	if (AFF_FLAGGED(ch, AFF_FIRESHIELD))
-		send_to_char(ch, "Você está protegid%s por uma aura de fogo!.\r\n", OA(ch));
+		send_to_char(ch, "Você está protegid%s por uma aura de fogo!\r\n", OA(ch));
+	if (AFF_FLAGGED(ch, AFF_WINDWALL))
+		send_to_char(ch, "Você está protegid%s por uma parede de vento!\r\n", OA(ch));
 
 	if (AFF_FLAGGED(ch, AFF_PROTECT_GOOD))
 		send_to_char(ch, "Você se sente protegid%s contra seres bons.\r\n", OA(ch));
