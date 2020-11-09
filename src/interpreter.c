@@ -287,6 +287,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"save", "sav", POS_SLEEPING, do_save, 0, 0, CMD_NOARG},
 	{"saveall", "saveall", POS_DEAD, do_saveall, LVL_BUILDER, 0, CMD_NOARG},
 	{"sell", "sell", POS_STANDING, do_not_here, 0, 0, CMD_TWOARG},
+	{"seize", "sei", POS_FIGHTING, do_cast, 1, SKILL_SEIZE, CMD_ONEARG},
 	{"sedit", "sedit", POS_DEAD, do_oasis_sedit, LVL_BUILDER, 0, CMD_NOARG},
 	{"send", "send", POS_SLEEPING, do_send, LVL_GOD, 0, CMD_NOARG},
 	{"set", "set", POS_DEAD, do_set, LVL_IMMORT, 0, CMD_NOARG},
