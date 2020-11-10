@@ -440,7 +440,8 @@ const char *wear_where[] = {
   "Na orelha:         ",
   "No rosto:          ",
   "No nariz:          ",
-  "Como insígnia:     "
+  "Como insígnia:     ",
+  "Na aljava:         "
 };
 
 /* Describes where an item can be worn.
@@ -471,6 +472,7 @@ const char *equipment_types[] = {
   "Usado no rosto",
   "Usado no nariz",
   "Usado como insígnia",
+  "Usado na aljava",
   "\n"
 };
 
@@ -534,6 +536,7 @@ const char *wear_bits[] = {
   "FACE",
   "NOSE",
   "INSIGNE",
+  "QUIVER",
   "\n"
 };
 
