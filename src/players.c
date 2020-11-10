@@ -307,6 +307,10 @@ int load_char(const char *name, struct char_data *ch)
       PRF_FLAGS(ch)[i] = PFDEF_PREFFLAGS;
 GET_BREATH(ch) = PFDEF_BREATH;
    GET_MAX_BREATH(ch) = PFDEF_MAX_BREATH;
+   GET_DEATH(ch) = PFDEF_DEATH(ch);
+   GET_DTS(ch) = PFDEF_DTS(ch);
+   GET_REMORT(ch) = PFDEF_REMORT(ch);
+   GET_KARMA(ch) = PFDEF_KARMA(ch);
    
     while (get_line(fl, line)) {
       tag_argument(line, tag);
@@ -355,6 +359,8 @@ GET_BREATH(ch) = PFDEF_BREATH;
 	else if (!strcmp(tag, "Dex "))	ch->real_abils.dex	= atoi(line);
 	else if (!strcmp(tag, "Drnk"))	GET_COND(ch, DRUNK)	= atoi(line);
 	else if (!strcmp(tag, "Drol"))	GET_DAMROLL(ch)		= atoi(line);
+	else if (!strcmp(tag, "Dth"))	GET_DEATH(ch)		= atoi(line);
+	else if (!strcmp(tag, "Dts"))	GET_DTS(ch)		= atoi(line);
 	break;
 
       case 'E':
@@ -387,6 +393,10 @@ GET_BREATH(ch) = PFDEF_BREATH;
 	else if (!strcmp(tag, "Int "))	ch->real_abils.intel	= atoi(line);
 	else if (!strcmp(tag, "Invs"))	GET_INVIS_LEV(ch)	= atoi(line);
 	break;
+
+   case 'K':
+	     if (!strcmp(tag, "Karm"))	GET_KARMA(ch)		= atol(line);
+	     break;
 
       case 'L':
 	     if (!strcmp(tag, "Last"))	ch->player.time.logon	= atol(line);
@@ -436,6 +446,7 @@ GET_BREATH(ch) = PFDEF_BREATH;
 
       case 'R':
 	     if (!strcmp(tag, "Room"))	GET_LOADROOM(ch)	= atoi(line);
+	      if (!strcmp(tag, "Remo"))	GET_REMORT(ch)	= atoi(line);
 	break;
 
       case 'S':
@@ -669,6 +680,11 @@ void save_char(struct char_data * ch)
     fprintf(fl, "%d\n", NOTHING);
   }
   if (GET_QUEST(ch)        != PFDEF_CURRQUEST)  fprintf(fl, "Qcur: %d\n", GET_QUEST(ch));
+  
+  if (GET_DEATH(ch)        != PFDEF_DEATH)  fprintf(fl, "Dth: %d\n", GET_DEATH(ch));
+ if (GET_DTS(ch)        != PFDEF_DTS)  fprintf(fl, "Dts: %d\n", GET_DTS(ch));
+ if (GET_REMORT(ch)        != PFDEF_REMORT)  fprintf(fl, "Remo: %d\n", GET_REMORT(ch));
+  if (GET_KARMA(ch)        != PFDEF_KARMA)  fprintf(fl, "Karm: %d\n", GET_KARMA(ch));
 
  if (SCRIPT(ch)) {
    for (t = TRIGGERS(SCRIPT(ch)); t; t = t->next)
