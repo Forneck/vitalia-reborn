@@ -1961,7 +1961,7 @@ ACMD(do_envenom)
     return;
   }
 
-  if ((weapon = get_object_in_equip_vis(ch, name, &num, ch->equipment, &dummy)) == NULL)
+  if ((weapon = get_obj_in_equip_vis(ch, name, &num, ch->equipment, &dummy)) == NULL)
     if ((weapon = get_obj_in_list_vis(ch, name, &num, ch->carrying)) == NULL) {
       send_to_char(ch, "Você não parece ter %s.\r\n", name);
       return;
@@ -1972,7 +1972,7 @@ ACMD(do_envenom)
     return;
   }
 
-  if (weapon->worn_on != INVENTORY && weapon->worn_on != WEAR_WIELD) {
+  if (weapon->worn_on != WEAR_WIELD) {
     send_to_char(ch, "Você só pode envenenar armas empunhadas ou que esteja carregando.\r\n");
     return;
   }
