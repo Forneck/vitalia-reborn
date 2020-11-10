@@ -129,7 +129,7 @@ ACMD(do_put)
 	else
 	{
 		generic_find(thecont, FIND_OBJ_INV | FIND_OBJ_ROOM, ch, &tmp_char, &cont);
-		if (!strcmp(thecont, "quiver")&& GET_OBJ_TYPE(theobj) != ITEM_AMMO)
+		if (!strcmp(arg2, "quiver")&& GET_OBJ_TYPE(theobj) != ITEM_AMMO)
 		send_to_char(ch, "Você não pode colocar isso ai.\r\n");
 		else if (!cont)
 			send_to_char(ch, "Você não vê um(a) %s aqui.\r\n", thecont);
