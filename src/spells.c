@@ -371,6 +371,7 @@ ASPELL(spell_identify)
 		GET_OBJ_VAL(obj, 1), GET_OBJ_VAL(obj, 1) == 1 ? "" : "s", GET_OBJ_VAL(obj, 2));
       break;
     case ITEM_WEAPON:
+    case ITEM_AMMO:
       send_to_char(ch, "Dado de Dano e' '%dD%d' com uma media de %.1f por rodada.\r\n",
 		GET_OBJ_VAL(obj, 1), GET_OBJ_VAL(obj, 2), ((GET_OBJ_VAL(obj, 2) + 1) / 2.0) * GET_OBJ_VAL(obj, 1));
       break;
