@@ -64,4 +64,8 @@
 #define PFDEF_BREATH		0
 #define PFDEF_MAX_BREATH		0
 #define PFDEF_HOMETOWN		0
+#define PFDEF_DEATH 0
+#define PFDEF_DTS 0
+#define PFDEF_REMORT 0
+#define PFDEF_KARMA 0
 #endif /* _PFDEFAULTS_H_ */
