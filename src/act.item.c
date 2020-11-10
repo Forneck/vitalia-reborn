@@ -1962,7 +1962,7 @@ ACMD(do_envenom)
   }
 
   if ((weapon = get_object_in_equip_vis(ch, name, &num, ch->equipment, &dummy)) == NULL)
-    if ((weapon = get_obj_in_list_vis(ch, name, &num, &ch->carrying)) == NULL) {
+    if ((weapon = get_obj_in_list_vis(ch, name, &num, ch->carrying)) == NULL) {
       send_to_char(ch, "Você não parece ter %s.\r\n", name);
       return;
     }
@@ -1992,8 +1992,8 @@ ACMD(do_envenom)
     return;
   }
 
-  if ((liqcon = get_obj_in_list_vis(ch, name, &num, &ch->carrying)) == NULL)
-    if ((liqcon = get_obj_in_list_vis(ch, name, &num, &IN_ROOM(ch)->contents)) == NULL) {
+  if ((liqcon = get_obj_in_list_vis(ch, name, &num, ch->carrying)) == NULL)
+    if ((liqcon = get_obj_in_list_vis(ch, name, &num, world[IN_ROOM(ch)].contents)) == NULL) {
       send_to_char(ch, "Você não parece ter %s.\r\n", name);
       return;
     }
