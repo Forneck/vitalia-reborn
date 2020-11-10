@@ -1335,9 +1335,8 @@ ACMD(do_spy)
 
   one_argument(argument, arg);
 
-  if (((dir = search_block(arg, dirs, FALSE)) < 0 &&
-      (dir = search_block(arg, autoexits, FALSE)) < 0) || ((dir = search_block(arg, dirs_pt, FALSE)) < 0 &&
-      (dir = search_block(arg, autoexits_pt, FALSE)) < 0) ){
+  if (((dir = search_block(arg, dirs, FALSE)) < 0) &&
+      ((dir = search_block(arg, autoexits, FALSE)) < 0)){
     send_to_char(ch,"Espiar aonde?\r\n");
     return;
   }
