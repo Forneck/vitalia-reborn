@@ -32,6 +32,7 @@ ACMD(do_backflip);
 ACMD(do_combo);
 ACMD(do_seize);
 ACMD(do_spy);
+ACMD(do_envenom);
 
 void set_spells_function()
 {
@@ -143,6 +144,9 @@ void set_spells_function()
    
     if ((spell = get_spell_by_vnum(SKILL_SEIZE)))
    spell->function = do_seize;
+   
+   if ((spell = get_spell_by_vnum(SKILL_ENVENOM)))
+   spell->function = do_envenom;
    
     if ((spell = get_spell_by_vnum(SKILL_SPY)))
    spell->function = do_spy;
@@ -2659,13 +2663,29 @@ new_spell->applies[1].appl_num = AFF_WINDWALL + NUM_APPLIES;
  new_spell->vnum = SKILL_SPY;
  new_spell->status = available;
  new_spell->name = strdup("spy");
- new_spell->function = do_spy,
+ new_spell->function = do_spy;
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+ new_spell->assign[0].class_num = CLASS_THIEF;
+ new_spell->assign[0].level = 15;
+
+ spedit_save_internally(new_spell);
+
+ // SKILL_ENVENOM # 241
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SKILL_ENVENOM;
+ new_spell->status = available;
+ new_spell->name = strdup("envenom");
+ new_spell->function = do_envenom;
  new_spell->type = SKILL;
  new_spell->effectiveness = strdup("100");
  new_spell->assign[0].class_num = CLASS_THIEF;
  new_spell->assign[0].level = 8;
 
  spedit_save_internally(new_spell);
+
 
 /*SWORDS*/
  CREATE(new_spell, struct str_spells, 1);
