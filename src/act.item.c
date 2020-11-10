@@ -133,7 +133,7 @@ ACMD(do_put)
 		send_to_char(ch, "Você não pode colocar isso ai.\r\n");
 		else if (!cont)
 			send_to_char(ch, "Você não vê um(a) %s aqui.\r\n", thecont);
-		else if ((GET_OBJ_T YPE(cont) != ITEM_CONTAINER) && (GET_OBJ_TYPE(cont) != ITEM_CORPSE))
+		else if ((GET_OBJ_TYPE(cont) != ITEM_CONTAINER) && (GET_OBJ_TYPE(cont) != ITEM_CORPSE))
 			act("$p não é um recipiente.", FALSE, ch, cont, 0, TO_CHAR);
 		else if (OBJVAL_FLAGGED(cont, CONT_CLOSED)
 				 && (GET_LEVEL(ch) < LVL_IMMORT || !PRF_FLAGGED(ch, PRF_NOHASSLE)))
@@ -153,7 +153,7 @@ ACMD(do_put)
 						next_obj = obj->next_content;
 						
 						if (GET_OBJ_TYPE(obj) == ITEM_AMMO && !strcmp(thecont, "quiver")) {
-						 if (quiver = GET_EQ(ch, WEAR_QUIVER) != NULL){
+						 if ((quiver = GET_EQ(ch, WEAR_QUIVER)) != NULL){
 						   if (GET_OBJ_VNUM(obj) == GET_OBJ_VNUM(quiver)) {
 						   GET_OBJ_VAL(quiver,0) += GET_OBJ_VAL(obj,0);
 						   GET_OBJ_WEIGHT(quiver) += GET_OBJ_WEIGHT(obj);
@@ -184,7 +184,7 @@ ACMD(do_put)
 				{
 					next_obj = obj->next_content;
 					if (GET_OBJ_TYPE(obj) == ITEM_AMMO && !strcmp(thecont, "quiver")) {
-						 if (quiver = GET_EQ(ch, WEAR_QUIVER) != NULL){
+						 if ((quiver = GET_EQ(ch, WEAR_QUIVER)) != NULL){
 						   if (GET_OBJ_VNUM(obj) == GET_OBJ_VNUM(quiver)) {
 						   GET_OBJ_VAL(quiver,0) += GET_OBJ_VAL(obj,0);
 						   GET_OBJ_WEIGHT(quiver) += GET_OBJ_WEIGHT(obj);
