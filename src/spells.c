@@ -379,6 +379,9 @@ ASPELL(spell_identify)
       send_to_char(ch, "AC-aplicado e' %d\r\n", GET_OBJ_VAL(obj, 0));
       break;
     }
+    if (GET_OBJ_TYPE(obj) == ITEM_AMMO)
+     send_to_char(ch, "Restam ainda %d unidades.\r\n", GET_OBJ_VAL(obj, 0));
+     
     found = FALSE;
     for (i = 0; i < MAX_OBJ_AFFECT; i++) {
       if ((obj->affected[i].location != APPLY_NONE) &&
