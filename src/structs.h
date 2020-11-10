@@ -427,8 +427,9 @@
 #define  WEAR_FACE 21
 #define  WEAR_NOSE 22
 #define  WEAR_INSIGNE 23
+#define  WEAR_QUIVER 24
 /** Total number of available equipment lcoations */
-#define NUM_WEARS     24
+#define NUM_WEARS     25
 
 /* object-related defines */
 /* Item types: used by obj_data.obj_flags.type_flag */
@@ -484,8 +485,9 @@
 #define ITEM_WEAR_FACE 17
 #define ITEM_WEAR_NOSE 18
 #define ITEM_WEAR_INSIGNE 19
+#define ITEM_WEAR_QUIVER 20
 /** Total number of item wears */
-#define NUM_ITEM_WEARS    20
+#define NUM_ITEM_WEARS    21
 
 /* Extra object flags: used by obj_data.obj_flags.extra_flags */
 #define ITEM_GLOW              0   /**< Item is glowing */
