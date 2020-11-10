@@ -307,10 +307,10 @@ int load_char(const char *name, struct char_data *ch)
       PRF_FLAGS(ch)[i] = PFDEF_PREFFLAGS;
 GET_BREATH(ch) = PFDEF_BREATH;
    GET_MAX_BREATH(ch) = PFDEF_MAX_BREATH;
-   GET_DEATH(ch) = PFDEF_DEATH(ch);
-   GET_DTS(ch) = PFDEF_DTS(ch);
-   GET_REMORT(ch) = PFDEF_REMORT(ch);
-   GET_KARMA(ch) = PFDEF_KARMA(ch);
+   GET_DEATH(ch) = PFDEF_DEATH;
+   GET_DTS(ch) = PFDEF_DTS;
+   GET_REMORT(ch) = PFDEF_REMORT;
+   GET_KARMA(ch) = PFDEF_KARMA;
    
     while (get_line(fl, line)) {
       tag_argument(line, tag);
