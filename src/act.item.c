@@ -1473,7 +1473,10 @@ static void wear_message(struct char_data *ch, struct obj_data *obj, int where)
       "Você coloca $p em seu nariz." },
 
     { "$n começa a usar $p.",
-      "Você começa a usar $p." }
+      "Você começa a usar $p." },
+      
+     { "$n coloca $p em sua bolsa de munições.",
+      "Você coloca $p em sua bolsa de munições." },
 	};
 
 	act(wear_messages[where][0], TRUE, ch, obj, 0, TO_ROOM);
@@ -1500,7 +1503,8 @@ static void perform_wear(struct char_data *ch, struct obj_data *obj, int where)
   ITEM_WEAR_EAR,
   ITEM_WEAR_FACE,
   ITEM_WEAR_NOSE,
-  ITEM_WEAR_INSIGNE
+  ITEM_WEAR_INSIGNE,
+  ITEM_WEAR_QUIVER
 	};
 
 	const char *already_wearing[] = {
@@ -1527,7 +1531,8 @@ static void perform_wear(struct char_data *ch, struct obj_data *obj, int where)
     "Você já está usando algo em ambas as orelhas.\r\n",
     "Você já está usando algo em seu rosto.\r\n",
     "Você já está usando algo em seu nariz.\r\n",
-    "Você já está usando uma insígnia.\r\n"
+    "Você já está usando uma insígnia.\r\n",
+     "Você já está usando algo na bolsa de munições.\r\n"
 	};
 
 	/* first, make sure that the wear position is valid. */
@@ -1595,7 +1600,8 @@ int find_eq_pos(struct char_data *ch, struct obj_data *obj, char *arg)
     "*RESERVED*",
     "rosto",
     "nariz",
-    "insígnia",
+    "insignia",
+    "municao",
 		"\n"
 	};
 
@@ -1635,6 +1641,8 @@ int find_eq_pos(struct char_data *ch, struct obj_data *obj, char *arg)
          where = WEAR_NOSE;
     if (CAN_WEAR(obj, ITEM_WEAR_INSIGNE)) 
         where = WEAR_INSIGNE;
+        if (CAN_WEAR(obj, ITEM_WEAR_QUIVER)) 
+        where = WEAR_QUIVER;
 	}
 	else if ((where = search_block(arg, keywords, FALSE)) < 0)
 		send_to_char(ch, "'%s'? Que parte do corpo é esta?\r\n", arg);
@@ -1761,6 +1769,8 @@ ACMD(do_grab)
 	{
 		if (GET_OBJ_TYPE(obj) == ITEM_LIGHT)
 			perform_wear(ch, obj, WEAR_LIGHT);
+		else if (GET_OBJ_TYPE(obj) == ITEM_AMMO)
+			perform_wear(ch, obj, WEAR_QUIVER);
 		else
 		{
 			if (!CAN_WEAR(obj, ITEM_WEAR_HOLD) && GET_OBJ_TYPE(obj) != ITEM_WAND &&
@@ -1972,8 +1982,8 @@ ACMD(do_envenom)
     return;
   }
 
-  if (weapon->worn_on != WEAR_WIELD) {
-    send_to_char(ch, "Você só pode envenenar armas empunhadas ou que esteja carregando.\r\n");
+  if (weapon->worn_on != WEAR_WIELD && weapon->worn_on != WEAR_QUIVER) {
+    send_to_char(ch, "Você só pode envenenar armas empunhadas ou na aljava.\r\n");
     return;
   }
 
