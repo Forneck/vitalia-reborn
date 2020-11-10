@@ -129,11 +129,8 @@ ACMD(do_put)
 	else
 	{
 		generic_find(theobj, FIND_OBJ_INV, ch, &tmp_char, &obj);
-		if (!strcmp(arg2, "quiver") && GET_OBJ_TYPE(obj) != ITEM_AMMO)
-		send_to_char(ch, "Você não pode colocar isso ai.\r\n");
-		else{
 			generic_find(thecont, FIND_OBJ_INV | FIND_OBJ_ROOM, ch, &tmp_char, &cont);
-	   if (!cont)
+	   if (!cont && (!strcmp(arg2, "quiver") && GET_OBJ_TYPE(obj) != ITEM_AMMO))
 			send_to_char(ch, "Você não vê um(a) %s aqui.\r\n", thecont);
 		else if ((GET_OBJ_TYPE(cont) != ITEM_CONTAINER) && (GET_OBJ_TYPE(cont) != ITEM_CORPSE))
 			act("$p não é um recipiente.", FALSE, ch, cont, 0, TO_CHAR);
