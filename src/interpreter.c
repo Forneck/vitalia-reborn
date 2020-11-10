@@ -147,6 +147,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"emote", "em", POS_RESTING, do_echo, 0, SCMD_EMOTE, CMD_NOARG},
 	{":", ":", POS_RESTING, do_echo, 1, SCMD_EMOTE, CMD_NOARG},
 	{"enter", "ent", POS_STANDING, do_enter, 0, 0, CMD_ONEARG},
+	{"envenom", "env", POS_FIGHTING, do_cast, 1, SKILL_ENVENOM, CMD_TWOARG},
 	{"equipment", "eq", POS_SLEEPING, do_equipment, 0, 0, CMD_NOARG},
 	{"exits", "ex", POS_RESTING, do_exits, 0, 0, CMD_NOARG},
 	{"examine", "exa", POS_SITTING, do_examine, 0, 0, CMD_ONEARG},
