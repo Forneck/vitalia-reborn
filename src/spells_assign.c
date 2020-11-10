@@ -31,6 +31,7 @@ ACMD(do_trip);
 ACMD(do_backflip);
 ACMD(do_combo);
 ACMD(do_seize);
+ACMD(do_spy);
 
 void set_spells_function()
 {
@@ -142,6 +143,9 @@ void set_spells_function()
    
     if ((spell = get_spell_by_vnum(SKILL_SEIZE)))
    spell->function = do_seize;
+   
+    if ((spell = get_spell_by_vnum(SKILL_SPY)))
+   spell->function = do_spy;
    
 }
 
@@ -2633,18 +2637,33 @@ new_spell->applies[1].appl_num = AFF_WINDWALL + NUM_APPLIES;
 
  spedit_save_internally(new_spell);
 
- // SKILL_SEIZE # 239
+ // SKILL_SEIZE # 238
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
  new_spell->vnum = SKILL_SEIZE;
  new_spell->status = available;
  new_spell->name = strdup("seize");
- new_spell->function = do_bash;
+ new_spell->function = do_seize;
  new_spell->type = SKILL;
  new_spell->effectiveness = strdup("100");
  new_spell->assign[0].class_num = CLASS_THIEF;
  new_spell->assign[0].level = 20;
+
+ spedit_save_internally(new_spell);
+
+ // SKILL_SPY # 237
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SKILL_SPY;
+ new_spell->status = available;
+ new_spell->name = strdup("spy");
+ new_spell->function = do_spy,
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+ new_spell->assign[0].class_num = CLASS_THIEF;
+ new_spell->assign[0].level = 8;
 
  spedit_save_internally(new_spell);
 
