@@ -170,6 +170,7 @@ ACMD(do_stand);
 ACMD(do_unfollow);
 ACMD(do_wake);
 ACMD(do_meditate);
+ACMD(do_spy);
 
 int start_flying(struct char_data *ch);
 int stop_flying(struct char_data *ch);
