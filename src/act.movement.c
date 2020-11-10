@@ -1323,7 +1323,7 @@ ACMD(do_fly)
 ACMD(do_spy)
 {
   char arg[MAX_INPUT_LENGTH];
-  char buf[MAX_STRING_LENGHT];
+  char buf[MAX_STRING_LENGTH];
   int dir, need_movement;
   room_rnum was_in = IN_ROOM(ch);
 	/* ... and the room the character will move into. */
