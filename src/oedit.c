@@ -443,6 +443,9 @@ static void oedit_disp_val1_menu(struct descriptor_data *d)
   case ITEM_FURNITURE:
     write_to_output(d, "Number of people it can hold : ");
     break;
+  case ITEM_AMMO:
+    write_to_output(d, "Ammount : ");
+    break;
   case ITEM_NOTE:  // These object types have no 'values' so go back to menu
   case ITEM_OTHER:
   case ITEM_WORN:
@@ -452,7 +455,6 @@ static void oedit_disp_val1_menu(struct descriptor_data *d)
   case ITEM_PEN:
   case ITEM_BOAT:
   case ITEM_PLANT:
-  case ITEM_FREE:   /* Not implemented, but should be handled here */
     oedit_disp_menu(d);
     break;
   default:
@@ -475,6 +477,7 @@ static void oedit_disp_val2_menu(struct descriptor_data *d)
     write_to_output(d, "Max number of charges : ");
     break;
   case ITEM_WEAPON:
+  case ITEM_AMMO:
     write_to_output(d, "Number of damage dice : ");
     break;
   case ITEM_FOOD:
@@ -511,6 +514,7 @@ static void oedit_disp_val3_menu(struct descriptor_data *d)
     write_to_output(d, "Number of charges remaining : ");
     break;
   case ITEM_WEAPON:
+  case ITEM_AMMO:
     write_to_output(d, "Size of damage dice : ");
     break;
   case ITEM_CONTAINER:
@@ -537,6 +541,7 @@ static void oedit_disp_val4_menu(struct descriptor_data *d)
     oedit_disp_spells_menu(d);
     break;
   case ITEM_WEAPON:
+  case ITEM_AMMO:
     oedit_disp_weapon_menu(d);
     break;
   case ITEM_DRINKCON:
@@ -963,6 +968,9 @@ void oedit_parse(struct descriptor_data *d, char *arg)
     case ITEM_WEAPON:
       GET_OBJ_VAL(OLC_OBJ(d), 0) = MIN(MAX(atoi(arg), -50), 50);
       break;
+    case ITEM_AMMO:
+    GET_OBJ_VAL(OLC_OBJ(d), 0) = LIMIT(atoi(arg), -1, 50);
+    break;
     case ITEM_CONTAINER:
       GET_OBJ_VAL(OLC_OBJ(d), 0) = LIMIT(atoi(arg), -1, MAX_CONTAINER_SIZE);
       break;
@@ -996,6 +1004,7 @@ void oedit_parse(struct descriptor_data *d, char *arg)
 	oedit_disp_val3_menu(d);
       break;
     case ITEM_WEAPON:
+    case ITEM_AMMO:
       GET_OBJ_VAL(OLC_OBJ(d), 1) = LIMIT(number, 1, MAX_WEAPON_NDICE);
       oedit_disp_val3_menu(d);
       break;
@@ -1019,6 +1028,7 @@ void oedit_parse(struct descriptor_data *d, char *arg)
       oedit_disp_val4_menu(d);
       return; 
     case ITEM_WEAPON:
+    case ITEM_AMMO:
       min_val = 1;
       max_val = MAX_WEAPON_SDICE;
       break;
@@ -1059,6 +1069,7 @@ void oedit_parse(struct descriptor_data *d, char *arg)
       oedit_disp_menu(d);
       return;
     case ITEM_WEAPON:
+    case ITEM_AMMO:
       min_val = 0;
       max_val = NUM_ATTACK_TYPES - 1;
       break;
