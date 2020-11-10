@@ -1931,3 +1931,115 @@ ACMD(do_sac)
 	}
 	extract_obj(j);
 }
+
+
+ACMD(do_envenom)
+{
+  const char *usage =
+    "Uso: envenom <arma> <recipiente>\r\n";
+
+  struct obj_data *weapon, *liqcon;
+  int prob, percent, num, dummy, liqneeded, weight;
+  char *name;
+  char arg[MAX_INPUT_LENGTH];
+
+  if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_ENVENOM)) {
+    send_to_char(ch, "Você não faz idéia de como fazer isso.\r\n");
+    return;
+  }
+
+  argument = one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(ch, usage);
+    return;
+  }
+
+  name = arg;
+  if (!(num = get_number(&name))) {
+    send_to_char(ch, "Envenenar o quê??\r\n");
+    return;
+  }
+
+  if ((weapon = get_object_in_equip_vis(ch, name, &num, ch->equipment, &dummy)) == NULL)
+    if ((weapon = get_obj_in_list_vis(ch, name, &num, &ch->carrying)) == NULL) {
+      send_to_char(ch, "Você não parece ter %s.\r\n", name);
+      return;
+    }
+
+  if (GET_OBJ_TYPE(weapon) != ITEM_WEAPON) {
+    send_to_char(ch, "Somente armas podem ser envenenadas!\r\n");
+    return;
+  }
+
+  if (weapon->worn_on != INVENTORY && weapon->worn_on != WEAR_WIELD) {
+    send_to_char(ch, "Você só pode envenenar armas empunhadas ou que esteja carregando.\r\n");
+    return;
+  }
+
+  /* We have the weapon at this point. Let's find the poison. */
+
+  one_argument(argument, arg);
+
+  if (!*arg) {
+    send_to_char(ch, usage);
+    return;
+  }
+
+  name = arg;
+  if (!(num = get_number(&name))) {
+    send_to_char(ch, "Como? Daonde você pretende extrair o veneno?\r\n");
+    return;
+  }
+
+  if ((liqcon = get_obj_in_list_vis(ch, name, &num, &ch->carrying)) == NULL)
+    if ((liqcon = get_obj_in_list_vis(ch, name, &num, &IN_ROOM(ch)->contents)) == NULL) {
+      send_to_char(ch, "Você não parece ter %s.\r\n", name);
+      return;
+    }
+
+  if (GET_OBJ_TYPE(liqcon) != ITEM_DRINKCON &&
+      GET_OBJ_TYPE(liqcon) != ITEM_FOUNTAIN) {
+    send_to_char(ch, "Isso faz sentido para você?\r\n");
+    return;
+  }
+
+  if (GET_OBJ_VAL(liqcon, 1) <= 0) {
+    act("Mas não há nada em $p!", FALSE, ch, liqcon, NULL, TO_CHAR);
+    return;
+  }
+
+  /*
+   * It's OK to try to poison a weapon with a non-poisoned liquid, but,
+   * the player will not be aware if it was really poisoned.
+   *
+   * It shouldn't also know if it's skills had been successfully poisoned
+   * the weapon (much like sneak and hide skills).
+   */
+
+  percent = number(1, 101);	/* 101% is a complete failure */
+  prob = GET_SKILL(ch, SKILL_ENVENOM);
+  liqneeded = rand_number(5, 10);
+
+  liqneeded = MIN(liqneeded, GET_OBJ_VAL(liqcon, 1));
+  weight = MIN(liqneeded, GET_OBJ_WEIGHT(liqcon));
+
+  weight_change_object(liqcon, -weight);
+  GET_OBJ_VAL(liqcon, 1) -= liqneeded;
+
+  if (liqneeded < 5) {
+    act("Não havia líquido suficiente em $p para envenenar $P.", FALSE, ch, liqcon, weapon, TO_CHAR);
+    return;
+  }
+
+  act("Você tenta envenenar $p com o conteúdo de $P.", FALSE, ch, weapon, liqcon, TO_CHAR);
+  act("$n parece se divertir com $p e $P.", TRUE, ch, weapon, liqcon, TO_ROOM);
+
+  /*
+   * The effective poison will only occour if his/her skills matched, and
+   * if the liquid on liqcon was poisoned.
+   */
+
+  if (percent < prob && GET_OBJ_VAL(liqcon, 3))
+    SET_BIT(OBJ_FLAGS(weapon), ITEM_POISONED);
+}
