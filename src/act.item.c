@@ -1939,7 +1939,7 @@ ACMD(do_envenom)
     "Uso: envenom <arma> <recipiente>\r\n";
 
   struct obj_data *weapon, *liqcon;
-  int prob, percent, num, dummy, liqneeded, weight;
+  int prob, percent, num, liqneeded, weight;
   char *name;
   char arg[MAX_INPUT_LENGTH];
 
@@ -1961,13 +1961,13 @@ ACMD(do_envenom)
     return;
   }
 
-  if ((weapon = get_obj_in_equip_vis(ch, name, &num, ch->equipment, &dummy)) == NULL)
+  if ((weapon = get_obj_in_equip_vis(ch, name, &num, ch->equipment)) == NULL)
     if ((weapon = get_obj_in_list_vis(ch, name, &num, ch->carrying)) == NULL) {
       send_to_char(ch, "Você não parece ter %s.\r\n", name);
       return;
     }
 
-  if (GET_OBJ_TYPE(weapon) != ITEM_WEAPON) {
+  if (GET_OBJ_TYPE(weapon) != ITEM_WEAPON && GET_OBJ_TYPE(weapon) != ITEM_AMMO) {
     send_to_char(ch, "Somente armas podem ser envenenadas!\r\n");
     return;
   }
