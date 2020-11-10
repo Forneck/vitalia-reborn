@@ -1074,8 +1074,7 @@ ACMD(do_meditate)				/* IMPLEMENTED */
 		send_to_char(ch, "Você sonha estar meditando.\r\n");
 		break;
 	case POS_FIGHTING:
-		send_to_char(ch, "O que?! Isso só funciona em filmes!", FALSE, ch, 0, 0,
-					 TO_CHAR | TO_SLEEP);
+		send_to_char(ch, "O que?! Isso só funciona em filmes!");
 		break;
 	default:
 		if (percent > prob)
@@ -1343,7 +1342,7 @@ ACMD(do_spy)
     return;
   }
 
-  if (!EXIT(ch, dir) || !(dest = EXIT(ch, dir)->room)) {
+  if (!EXIT(ch, dir) || !(dest = EXIT(ch, dir)->to_room)) {
     send_to_char(ch,"Espiar aonde?\r\n");
     return;
   }
