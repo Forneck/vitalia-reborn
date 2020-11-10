@@ -96,7 +96,7 @@ ACMD(do_put)
 	char arg1[MAX_INPUT_LENGTH];
 	char arg2[MAX_INPUT_LENGTH];
 	char arg3[MAX_INPUT_LENGTH];
-	struct obj_data *obj, *next_obj, *cont;
+	struct obj_data *obj, *next_obj, *cont, *quiver;
 	struct char_data *tmp_char;
 	int obj_dotmode, cont_dotmode, found = 0, howmany = 1;
 	char *theobj, *thecont;
@@ -129,9 +129,11 @@ ACMD(do_put)
 	else
 	{
 		generic_find(thecont, FIND_OBJ_INV | FIND_OBJ_ROOM, ch, &tmp_char, &cont);
-		if (!cont)
+		if (!strcmp(thecont, "quiver")&&GET_OBJ_TYPE(obj) != ITEM_AMMO)
+		send_to_char(ch, "Você não pode colocar isso ai.\r\n");
+		else if (!cont)
 			send_to_char(ch, "Você não vê um(a) %s aqui.\r\n", thecont);
-		else if ((GET_OBJ_TYPE(cont) != ITEM_CONTAINER) && (GET_OBJ_TYPE(cont) != ITEM_CORPSE))
+		else if ((GET_OBJ_T YPE(cont) != ITEM_CONTAINER) && (GET_OBJ_TYPE(cont) != ITEM_CORPSE))
 			act("$p não é um recipiente.", FALSE, ch, cont, 0, TO_CHAR);
 		else if (OBJVAL_FLAGGED(cont, CONT_CLOSED)
 				 && (GET_LEVEL(ch) < LVL_IMMORT || !PRF_FLAGGED(ch, PRF_NOHASSLE)))
@@ -149,6 +151,24 @@ ACMD(do_put)
 					while (obj && howmany)
 					{
 						next_obj = obj->next_content;
+						
+						if (GET_OBJ_TYPE(obj) == ITEM_AMMO && !strcmp(thecont, "quiver")) {
+						 if (quiver = GET_EQ(ch, WEAR_QUIVER) != NULL){
+						   if (GET_OBJ_VNUM(obj) == GET_OBJ_VNUM(quiver)) {
+						   GET_OBJ_VAL(quiver,0) += GET_OBJ_VAL(obj,0);
+						   GET_OBJ_WEIGHT(quiver) += GET_OBJ_WEIGHT(obj);
+						   extract_obj(obj);
+						   howmany--;
+						 } else {
+						 send_to_char(ch,"Você já tem um tipo de munição ai.\r\n");
+						 break;
+						     }
+						 }
+						 else {
+		perform_wear(ch,obj,WEAR_QUIVER);
+						 howmany--;
+						 }
+						}
 						if (obj != cont)
 						{
 							howmany--;
@@ -163,6 +183,21 @@ ACMD(do_put)
 				for (obj = ch->carrying; obj; obj = next_obj)
 				{
 					next_obj = obj->next_content;
+					if (GET_OBJ_TYPE(obj) == ITEM_AMMO && !strcmp(thecont, "quiver")) {
+						 if (quiver = GET_EQ(ch, WEAR_QUIVER) != NULL){
+						   if (GET_OBJ_VNUM(obj) == GET_OBJ_VNUM(quiver)) {
+						   GET_OBJ_VAL(quiver,0) += GET_OBJ_VAL(obj,0);
+						   GET_OBJ_WEIGHT(quiver) += GET_OBJ_WEIGHT(obj);
+						   extract_obj(obj);
+						 } else {
+						 send_to_char(ch,"Você já tem um tipo de munição ai.\r\n");
+						 continue;
+						     }
+						 }
+						 else {
+	 perform_wear(ch,obj,WEAR_QUIVER);
+						 }
+						}
 					if (obj != cont && CAN_SEE_OBJ(ch, obj) &&
 						(obj_dotmode == FIND_ALL || isname(theobj, obj->name)))
 					{
@@ -1983,7 +2018,7 @@ ACMD(do_envenom)
   }
 
   if (weapon->worn_on != WEAR_WIELD && weapon->worn_on != WEAR_QUIVER) {
-    send_to_char(ch, "Você só pode envenenar armas empunhadas ou na aljava.\r\n");
+    send_to_char(ch, "Você só pode envenenar armas empunhadas ou na bolsa de munições.\r\n");
     return;
   }
 
