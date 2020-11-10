@@ -142,7 +142,7 @@ ACMD(do_remove);
 ACMD(do_sac);
 ACMD(do_wear);
 ACMD(do_wield);
-
+ACMD(do_envenom);
 
 /*****************************************************************************
  * Begin Functions and defines for act.movement.c
