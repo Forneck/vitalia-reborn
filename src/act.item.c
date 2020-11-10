@@ -214,7 +214,7 @@ ACMD(do_put)
 			}
 		}
 	}
-	}
+	
 }
 
 static int can_take_obj(struct char_data *ch, struct obj_data *obj)
