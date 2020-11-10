@@ -305,6 +305,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"splist", "splist", POS_DEAD, do_splist, LVL_BUILDER, 0, CMD_NOARG},
 	{"socials", "socials", POS_DEAD, do_commands, 0, SCMD_SOCIALS, CMD_NOARG},
 	{"split", "split", POS_SITTING, do_split, 1, 0, CMD_ONEARG},
+	{"spy", "spy", POS_RESTING, do_cast, 1, SKILL_SPY, CMD_ONEARG},
 	{"stand", "st", POS_RESTING, do_stand, 0, 0, CMD_NOARG},
 	{"stat", "stat", POS_DEAD, do_stat, LVL_IMMORT, 0, CMD_ONEARG},
 	{"steal", "ste", POS_STANDING, do_cast, 1, SKILL_STEAL, CMD_TWOARG},
