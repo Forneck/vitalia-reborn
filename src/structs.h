@@ -461,8 +461,9 @@
 #define ITEM_PORTAL 26
 #define ITEM_BOOK 27
 #define ITEM_PLANT 28 /**< Item is a plant       */
+#define ITEM_FIREWEAPON 29
 /** Total number of item types.*/
-#define NUM_ITEM_TYPES    29
+#define NUM_ITEM_TYPES    30
 
 /* Take/Wear flags: used by obj_data.obj_flags.wear_flags */
 #define ITEM_WEAR_TAKE      0   /**< Item can be taken */
