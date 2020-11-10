@@ -380,7 +380,7 @@ ASPELL(spell_identify)
       break;
     }
     if (GET_OBJ_TYPE(obj) == ITEM_AMMO)
-     send_to_char(ch, "Restam ainda %d unidades.\r\n", GET_OBJ_VAL(obj, 0));
+     send_to_char(ch, "Restam ainda %d %s.\r\n", GET_OBJ_VAL(obj, 0),GET_OBJ_VAL(obj, 0) == 1 ? "unidade" : "unidades");
      
     found = FALSE;
     for (i = 0; i < MAX_OBJ_AFFECT; i++) {
