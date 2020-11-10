@@ -2041,5 +2041,5 @@ ACMD(do_envenom)
    */
 
   if (percent < prob && GET_OBJ_VAL(liqcon, 3))
-    SET_BIT_AR(OBJ_FLAGS(weapon), ITEM_POISONED);
+    SET_BIT_AR(GET_OBJ_EXTRA(weapon), ITEM_POISONED);
 }
