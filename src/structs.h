@@ -438,7 +438,7 @@
 #define ITEM_STAFF      4		/**< Item is a staff		*/
 #define ITEM_WEAPON     5		/**< Item is a weapon		*/
 #define ITEM_FURNITURE  6   /**< Sittable Furniture		*/
-#define ITEM_FREE       7   /**< Unimplemented		*/
+#define ITEM_AMMO       7   /**< Unimplemented		*/
 #define ITEM_TREASURE   8   /**< Item is a treasure, not gold	*/
 #define ITEM_ARMOR      9   /**< Item is armor		*/
 #define ITEM_POTION    10   /**< Item is a potion		*/
