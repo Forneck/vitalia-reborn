@@ -2017,7 +2017,7 @@ ACMD(do_envenom)
    * the weapon (much like sneak and hide skills).
    */
 
-  percent = number(1, 101);	/* 101% is a complete failure */
+  percent = rand_number(1, 101);	/* 101% is a complete failure */
   prob = GET_SKILL(ch, SKILL_ENVENOM);
   liqneeded = rand_number(5, 10);
 
