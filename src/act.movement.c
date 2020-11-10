@@ -245,9 +245,10 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
 	}
 
 	if ((ROOM_FLAGGED(going_to, ROOM_NO_FLY) || SECT(going_to) == SECT_UNDERWATER)
-		&& AFF_FLAGGED(ch, AFF_FLYING))
+		&& AFF_FLAGGED(ch, AFF_FLYING)) {
 		send_to_char(ch, "Você não pode ir nesta sala voando.\r\n");
-
+		return (0);
+		} 
 	/* Underwater Room: Does lack of underwater breathing prevent movement? */
 	if ((SECT(was_in) == SECT_UNDERWATER) || (SECT(going_to) == SECT_UNDERWATER))
 	{
@@ -1313,4 +1314,72 @@ ACMD(do_fly)
 			stop_flying(ch);
 		}
 	}
+}
+
+
+/* -- jr - May 15, 2000
+ * SPY skill.
+ */
+ACMD(do_spy)
+{
+  char arg[MAX_INPUT_LENGTH];
+  int dir, need_movement;
+  room_rnum was_in = IN_ROOM(ch);
+	/* ... and the room the character will move into. */
+	room_rnum dest;
+
+  if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_SPY)) {
+    send_to_char(ch,"Você não tem idéia de como fazer isso.\r\n");
+    return;
+  }
+
+  one_argument(argument, arg);
+
+  if (((dir = search_block(arg, dirs, FALSE)) < 0 &&
+      (dir = search_block(arg, autoexits, FALSE)) < 0) || ((dir = search_block(arg, dirs_pt, FALSE)) < 0 &&
+      (dir = search_block(arg, autoexits_pt, FALSE)) < 0) ){
+    send_to_char(ch,"Espiar aonde?\r\n");
+    return;
+  }
+
+  if (!EXIT(ch, dir) || !(dest = EXIT(ch, dir)->room)) {
+    send_to_char(ch,"Espiar aonde?\r\n");
+    return;
+  }
+
+  if (EXIT_FLAGGED(EXIT(ch, dir), EX_CLOSED)) {
+    if (door_name(EXIT(ch, dir))) {
+      sprintf(buf, "%s parece estar fechada.\r\n", door_name(EXIT(ch, dir));
+      CAP(buf);
+      send_to_char(ch,buf);
+    } else
+      send_to_char(ch,"Este caminho parece estar fechado.\r\n");
+
+    return;
+  }
+
+  if (GET_LEVEL(ch) < LVL_IMMORT) {
+  	need_movement = (movement_loss[SECT(was_in)] + movement_loss[SECT(dest)]) / 2;
+
+    if (GET_MOVE(ch) < need_movement) {
+      act("Você está muito cansad$r para isso.", FALSE, ch, NULL, NULL, TO_CHAR);
+      return;
+    }
+
+    GET_MOVE(ch) -= need_movement;
+  }
+
+  if (rand_number(1, 101) > GET_SKILL(ch, SKILL_SPY)) {
+    send_to_char(ch,"Você tenta espiar na sala ao lado mas não consegue.\r\n");
+    return;
+  }
+
+  was_in = IN_ROOM(ch);
+  char_from_room(ch);
+  char_to_room(ch, dest);
+  send_to_char(ch,"Você espia a outra sala e vê: \r\n\r\n");
+  look_at_room(ch, 1);
+  char_from_room(ch);
+  char_to_room(ch, was_in);
+  act("$n dá uma espiada na sala ao lado.", TRUE, ch, NULL, NULL, TO_ROOM);
 }
