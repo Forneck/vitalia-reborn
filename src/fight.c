@@ -1080,13 +1080,12 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 		}
 		SET_BIT_AR(af.bitvector, AFF_POISON);
 		affect_join(ch, &af, FALSE, FALSE, FALSE, FALSE);
-		// remover veneno da arma
-		// if (rand_number(0, 3) == 0) //REMOVE_BIT_AR(OBJ_FLAGS(wielded),
-		// ITEM_POISONED);
+		//remover veneno da arma
+		if (rand_number(0, 3) == 0) REMOVE_BIT_AR(GET_OBJ_EXTRA(wielded),ITEM_POISONED);
 	}
 
 	/* Counter-attack spells */
-	if (dam > 0 && !AFF_FLAGGED(ch, AFF_FIRESHIELD) && !AFF_FLAGGED(ch, AFF_THISTLECOAT))
+	if (dam > 0 && !AFF_FLAGGED(ch, AFF_FIRESHIELD) && !AFF_FLAGGED(ch, AFF_THISTLECOAT)  && !AFF_FLAGGED(ch, AFF_WINDWALL))
 	{
 
 		/* -- jr - Mar 16, 2000 */
