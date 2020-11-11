@@ -1232,7 +1232,7 @@ ACMD(do_shoot){
 	bool found = FALSE;
 	
 	room_rnum vict_room = IN_ROOM(ch);
-   
+   room_rnum was_room = IN_ROOM(ch);
   	two_arguments(argument, arg1, arg2);
   
     if (!*arg1){
@@ -1309,8 +1309,11 @@ ACMD(do_shoot){
 					{
 						if (world[vict_room].people)
 						{
-		if (vict= get_char_vis(ch, arg2,NULL,FIND_CHAR_WORLD) != NULL){
-		if (IN_ROOM(vict) == world[vict_room]){
+		char_from_room(ch);
+		char_to_room(ch,vict_room);
+		if ((vict= get_char_vis(ch, arg2,NULL,FIND_CHAR_ROOM)) != NULL){
+		char_from_room(ch);
+		char_to_room(ch,was_room);
 		dam += GET_DAMROLL(ch);
 	   dam += dice(GET_OBJ_VAL(ammo, 1), GET_OBJ_VAL(ammo, 2));
 	   	if (GET_POS(vict) < POS_FIGHTING)
@@ -1344,10 +1347,8 @@ ACMD(do_shoot){
 		send_to_char(ch,"Você sente que acertou em algo ou alguém.\r\n");
       found = TRUE;
 						}
-						else {
-						send_to_char(ch,"Você tenta mas não consegue acertar ninguém.\r\n");
-						return;
-						}
+		char_from_room(ch);
+		char_to_room(ch,was_room);
 					}
 					else 
 					{
