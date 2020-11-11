@@ -204,7 +204,7 @@ ACMD(do_whirlwind);
 ACMD(do_bandage);
 ACMD(do_trip);
 ACMD(do_seize);
-
+ACMD(do_shoot);
 /*****************************************************************************
  * Begin Functions and defines for act.other.c
  ****************************************************************************/
