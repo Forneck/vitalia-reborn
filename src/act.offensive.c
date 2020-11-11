@@ -1227,6 +1227,7 @@ ACMD(do_shoot){
    int percent, prob;
 	char arg1[MAX_INPUT_LENGTH];
    char arg2[MAX_INPUT_LENGTH];
+   struct affected_type af;
    int dam;
    int door;
 	bool found = FALSE;
@@ -1286,7 +1287,7 @@ ACMD(do_shoot){
 			if ((door = search_block(arg1, autoexits, FALSE)) == -1)
 			{					/* Check 'short' dirs too */
 				send_to_char(ch, "Isso não é uma direção.\r\n");
-				return (-1);
+				return;
 			}
 		}
 		if (world[IN_ROOM(ch)].dir_option[door]
