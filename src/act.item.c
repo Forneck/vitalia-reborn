@@ -201,6 +201,7 @@ ACMD(do_put)
 	   } else
 	   send_to_char(ch, "Você só pode colocar munições ai.\r\n");
 	}
+ }
 }
 
 static int can_take_obj(struct char_data *ch, struct obj_data *obj)
