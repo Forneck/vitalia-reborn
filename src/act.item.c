@@ -184,7 +184,7 @@ ACMD(do_put)
 	else {
 	   generic_find(theobj, FIND_OBJ_INV, ch, &tmp_char, &obj);
 	   if (!obj)
-	   send_to_char(ch, "Você não tem %s para colocar ai.\r\n");
+	   send_to_char(ch, "Você não tem %s para colocar ai.\r\n",theobj);
 	   else if (GET_OBJ_TYPE(obj) == ITEM_AMMO) {
 						 if ((quiver = GET_EQ(ch, WEAR_QUIVER)) != NULL){
 						   if (GET_OBJ_VNUM(obj) == GET_OBJ_VNUM(quiver)) {
