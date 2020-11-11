@@ -22,6 +22,7 @@
 #include "mud_event.h"
 #include "screen.h"
 #include "constants.h"
+#include "dg_scripts.h"
 
 ACMD(do_assist)
 {
