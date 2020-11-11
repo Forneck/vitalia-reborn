@@ -446,6 +446,9 @@ static void oedit_disp_val1_menu(struct descriptor_data *d)
   case ITEM_AMMO:
     write_to_output(d, "Ammount : ");
     break;
+    case ITEM_FIREWEAPON:
+    write_to_output(d, "Bonus to hit: ");
+    break;
   case ITEM_NOTE:  // These object types have no 'values' so go back to menu
   case ITEM_OTHER:
   case ITEM_WORN:
@@ -971,6 +974,8 @@ void oedit_parse(struct descriptor_data *d, char *arg)
     case ITEM_AMMO:
     GET_OBJ_VAL(OLC_OBJ(d), 0) = LIMIT(atoi(arg), -1, 50);
     break;
+    case ITEM_FIREWEAPON:
+    GET_OBJ_VAL(OLC_OBJ(d), 0) = LIMIT(atoi(arg), 0, 20);
     case ITEM_CONTAINER:
       GET_OBJ_VAL(OLC_OBJ(d), 0) = LIMIT(atoi(arg), -1, MAX_CONTAINER_SIZE);
       break;
