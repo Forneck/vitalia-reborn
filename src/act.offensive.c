@@ -1295,7 +1295,7 @@ ACMD(do_shoot){
 					&& !IS_SET(world[IN_ROOM(ch)].dir_option[door]->exit_info, EX_HIDDEN))
 				{
 					vict_room = world[IN_ROOM(ch)].dir_option[door]->to_room;
-						if (IS_DARK(scanned_room) && !CAN_SEE_IN_DARK(ch))
+						if (IS_DARK(vict_room) && !CAN_SEE_IN_DARK(ch))
 					{
 						if (world[vict_room].people)
 							send_to_char(ch,
@@ -1341,6 +1341,7 @@ ACMD(do_shoot){
 		hitprcnt_mtrigger(vict);
 		GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo)/GET_OBJ_VAL(ammo, 0));
 		GET_OBJ_VAL(ammo, 0)--;
+		send_to_char(ch,"Você sente que acertou em algo ou alguém.\r\n");
       found = TRUE;
 						}
 						else {
