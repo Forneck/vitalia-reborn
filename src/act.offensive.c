@@ -1350,6 +1350,7 @@ ACMD(do_shoot){
 	}
 		damage(ch, vict, dam, GET_OBJ_VAL(ammo, 3) + TYPE_HIT);
 		remember(ch,vict);
+		hunt_victim(ch);
 		hitprcnt_mtrigger(vict);
 		if (GET_OBJ_VAL(ammo, 0) > 1) {
 		GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo)/GET_OBJ_VAL(ammo, 0));
