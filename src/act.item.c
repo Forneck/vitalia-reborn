@@ -191,8 +191,9 @@ ACMD(do_put)
 						   GET_OBJ_VAL(quiver,0) += GET_OBJ_VAL(obj,0);
 						   GET_OBJ_WEIGHT(quiver) += GET_OBJ_WEIGHT(obj);
 						   extract_obj(obj);
+						    send_to_char(ch,"Você colocou mais %s em sua bolsa de munições.\r\n",theobj);
 						 } else {
-						 send_to_char(ch,"Você já tem um tipo de munição ai.\r\n");
+						 send_to_char(ch,"Você já tem um outro tipo de munição ai.\r\n");
 						     }
 						 }
 						 else {
