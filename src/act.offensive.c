@@ -1220,3 +1220,144 @@ ACMD(do_seize)
     } 
   
 }
+
+ACMD(do_shoot){
+   struct char_data *vict;
+   struct obj_data *ammo, *fireweapon;
+   int percent, prob;
+	char arg1[MAX_INPUT_LENGTH];
+   char arg2[MAX_INPUT_LENGTH];
+   int dam;
+   int door;
+	bool found = FALSE;
+	
+	room_rnum vict_room = IN_ROOM(ch);
+   
+  	two_arguments(argument, arg1, arg2);
+  
+    if (!*arg1){
+        send_to_char(ch,"Atirar em qual direção?\r\n");
+        return;
+     }
+       if (!*arg2){
+        send_to_char(ch,"Atirar em quem?\r\n");
+        return;
+     }
+  	if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_BOWS))
+	{
+		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
+		return;
+	}
+	else if (IS_AFFECTED(ch, AFF_BLIND))
+	{
+		send_to_char(ch, "Você não pode ver nada! Você está ceg%s!\r\n", OA(ch));
+		return;
+	}
+	else if ((ammo= GET_EQ(ch, WEAR_QUIVER)) == NULL){
+			send_to_char(ch, "Você está com a bolsa de munições vazia.\r\n");
+		return;
+	}
+	
+	bow= GET_EQ(ch, WEAR_WIELD);
+	if (!bow){
+	send_to_char(ch, "Você precisa de uma arma!\r\n");
+	return;
+	}
+	else if (GET_OBJ_TYPE(bow) != ITEM_FIREWEAPON){
+	send_to_char(ch,"Este tipo de arma não permite atirar.\r\n");
+	return;
+	}
+	
+		percent = rand_number(1, 101);	/* 101% is a complete failure */
+	if (!IS_NPC(ch))
+		prob = GET_SKILL(ch, SKILL_BOWS);
+	else
+		prob = GET_LEVEL(ch);
+		
+		prob += GET_OBJ_VAL(bow,0);
+		
+		if (percent>prob) {
+		send_to_char(ch, "Você tenta atirsr mas se atrapalha.\r\n");
+		return;
+	 }
+		
+		if ((door = search_block(arg1, dirs, FALSE)) == -1)
+		{						/* Partial Match */
+			if ((door = search_block(arg1, autoexits, FALSE)) == -1)
+			{					/* Check 'short' dirs too */
+				send_to_char(ch, "Isso não é uma direção.\r\n");
+				return (-1);
+			}
+		}
+		if (world[IN_ROOM(ch)].dir_option[door]
+					&& world[IN_ROOM(ch)].dir_option[door]->to_room != NOWHERE
+					&& !IS_SET(world[IN_ROOM(ch)].dir_option[door]->exit_info, EX_CLOSED)
+					&& !IS_SET(world[IN_ROOM(ch)].dir_option[door]->exit_info, EX_HIDDEN))
+				{
+					vict_room = world[IN_ROOM(ch)].dir_option[door]->to_room;
+						if (IS_DARK(scanned_room) && !CAN_SEE_IN_DARK(ch))
+					{
+						if (world[vict_room].people)
+							send_to_char(ch,
+										 "%s: Está tudo escuro... Mas você escuta ruídos\r\n",
+										 dirs_pt[door]);
+						else
+							send_to_char(ch, "%s: Está tudo escuro...\r\n", dirs_pt[door]);
+						found = TRUE;
+					}
+					else
+					{
+						if (world[vict_room].people)
+						{
+		if (vict= get_char_vis(ch, arg2,NULL,FIND_CHAR_WORLD) != NULL){
+		if (IN_ROOM(vict) == world[vict_room]){
+		dam += GET_DAMROLL(ch);
+	   dam += dice(GET_OBJ_VAL(ammo, 1), GET_OBJ_VAL(ammo, 2));
+	   	if (GET_POS(vict) < POS_FIGHTING)
+			dam *= 1 + (POS_FIGHTING - GET_POS(vict)) / 3;
+		/* at least 1 hp damage min per hit */
+		dam = MAX(1, dam);
+			if (OBJ_FLAGGED(ammo, ITEM_POISONED)
+		&& !MOB_FLAGGED(vict, MOB_NO_POISON))
+	{
+		new_affect(&af);
+		af.spell = SPELL_POISON;
+		af.modifier = -2;
+		af.location = APPLY_STR;
+
+		if (AFF_FLAGGED(vict, AFF_POISON))
+			af.duration = 1;
+		else
+		{
+			af.duration = rand_number(2, 5);
+			act("Você se sente doente.", FALSE, vict, 0, ch, TO_CHAR);
+			act("$n fica muito doente!", TRUE, vict, 0, ch, TO_ROOM);
+		}
+		SET_BIT_AR(af.bitvector, AFF_POISON);
+		affect_join(ch, &af, FALSE, FALSE, FALSE, FALSE);
+	}
+		damage(ch, vict, dam, GET_OBJ_VAL(ammo, 3) + TYPE_HIT);
+		remember(ch,vict);
+		hitprcnt_mtrigger(vict);
+		GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo)/GET_OBJ_VAL(ammo, 0));
+		GET_OBJ_VAL(ammo, 0)--;
+      found = TRUE;
+						}
+						else {
+						send_to_char(ch,"Você tenta mas não consegue acertar ninguém.\r\n");
+						return;
+						}
+					}
+					else 
+					{
+						send_to_char(ch,"Você tenta mas não consegue acertar ninguém.\r\n");
+						return;
+						}
+					}
+				}				// end of if
+  
+	if (!found)
+		{
+			send_to_char(ch, "Você não vê nada próximo.\r\n");
+		}
+}
