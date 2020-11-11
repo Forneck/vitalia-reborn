@@ -706,7 +706,7 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 	/* -- jr - Mar 16, 2000 * Fireshield protection */
 	/* -- mp - Nov 05, 2001 * Added Thistlecoat protection */
 	if ((attacktype == SPELL_FIRESHIELD ||
-		 attacktype == SPELL_THISTLECOAT) && (dam > GET_HIT(victim)))
+		 attacktype == SPELL_THISTLECOAT || attacktype == SPELL_WINDWALL) && (dam > GET_HIT(victim)))
 		dam = MAX(GET_HIT(victim), 0);
 	GET_HIT(victim) -= dam;
 	/* Gain exp for the hit */
