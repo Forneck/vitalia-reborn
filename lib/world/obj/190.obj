@@ -7,15 +7,15 @@ Uma longa e afiada espada está cravada até a metade numa pedra.~
 0 6 5 3
 15 106384 10638 0 0
 E
-escrituras~
-Você não consegue decifrá-las, lamento.  Talvez você devesse pedir ajuda a
-algum sábio ou mago...
-~
-E
 diamante afiada corte longa~
 É uma longa e fina espada com o fio de diamante sobre a lâmina de prata.
 Na lâmina há algumas inscrições em uma língua antiga, agora quase esquecida.
 O corte da espada é afiado como uma navalha e duro como diamante.
+~
+E
+escrituras~
+Você não consegue decifrá-las, lamento.  Talvez você devesse pedir ajuda a
+algum sábio ou mago...
 ~
 A
 18 2
@@ -63,7 +63,7 @@ A
 19 2
 #19005
 telescopio grande~
-Um grande telescópio~
+um grande telescópio~
 Um grande telescópio está preso em uma árvore.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
@@ -71,11 +71,11 @@ Um grande telescópio está preso em uma árvore.~
 600 30000 3000 0 0
 #19006
 arco caca elfico~
-Um arco élfico de caça~
+um arco élfico de caça~
 Um arco de madeira foi deixado aqui, jogado no chão.~
 ~
-5 k 0 0 0 an 0 0 0 0 0 0 0
-0 2 6 12
+29 k 0 0 0 an 0 0 0 0 0 0 0
+0 0 0 0
 12 10000 1000 0 0
 A
 18 2
@@ -179,13 +179,13 @@ Um pequeno cântaro de vidro foi deixado no chão.~
 0 0 100 0
 2 8000 800 0 0
 E
-verme radiante luz~
-O verme parece amigável...:)
-~
-E
 pequeno cantaro vidro~
 Você vê um pequeno cântaro perfeitamente feito de vidro.  Nele você vê um
 pequeno verme irradiando uma brilhante luz clara.
+~
+E
+verme radiante luz~
+O verme parece amigável...:)
 ~
 A
 18 2
@@ -249,18 +249,18 @@ Um alvo e reluzente brinco foi esquecido aqui.~
 0 0 0 0
 4 1000 100 0 0
 E
-inscricao minuscula~
-Você consegue ler:
-
-"Cópia autorizada do original"
-
-~
-E
 brinco mithril~
 Você observa esse brinco e percebe tratar-se de um delicado trabalho dos
 ferreiros elfos: uma resistente esfera reluzente, sem nenhum traço de
 imperfeição sobre sua superfície.  Uma minúscula inscrição lhe chama
 atenção.
+~
+E
+inscricao minuscula~
+Você consegue ler:
+
+"Cópia autorizada do original"
+
 ~
 A
 17 -2
@@ -461,7 +461,7 @@ A
 6 1
 #19039
 gladio prata prateado belissimo~
-O gládio prateado~
+o gládio prateado~
 Um belíssimo gládio de prata foi deixado aqui, juntando poeira.~
 ~
 5 ab 0 0 0 ano 0 0 0 0 0 0 0
@@ -622,4 +622,12 @@ A
 2 1
 A
 5 1
+#19050
+flecha elfica~
+algumas flechas elficas~
+Algumas flechas elficas foram esquecidas aqui.~
+~
+7 dkmn 0 0 0 au 0 0 0 0 0 0 0
+10 4 3 11
+10 1000 0 30 0
 $~

@@ -6,19 +6,19 @@ Clas: 4
 Levl: 110
 Id  : 1
 Brth: 1601790482
-Plyd: 387220
-Last: 1604938419
-Lmot: 1604518665
-Lnew: 1604428948
+Plyd: 443324
+Last: 1605122869
+Lmot: 1604953234
+Lnew: 1605117107
 Htwn: 1372
-Host: 177.220.172.185
+Host: 127.0.0.1
 Hite: 151
 Wate: 113
-Alin: 322
+Alin: 343
 Act : 0 0 0 0
 Aff : 0 0 0 0
-Pref: efghimnoqrvxAB cd 0 0
-Room: 3001
+Pref: efghmnoqrvxAB cd 0 0
+Room: 65535
 Hit : 2000/2000
 Mana : 100/100
 Move: 82/82
@@ -29,25 +29,28 @@ Dex : 25
 Con : 25
 Cha : 25
 Ac  : 100
-Gold: 1205600
+Gold: 1205603
 Exp : 7000001
 Olc : 0
-Alis: 6
- indoor
- redit;3;4;0;q;y
-1
- of
- order fol $*
+Alis: 7
+ ha
+ history all
+0
+ reset
+ shutdown reboot
+0
+ sa
+ say @Y$*@n
 1
  goss
  goss @Y$*@n
 1
- sa
- say @Y$*@n
+ of
+ order fol $*
 1
- reset
- shutdown reboot
-0
- ha
- history all
-0
+ indoor
+ redit;3;4;0;q;y
+1
+ tiro
+ load o 11325;put tir quiver;shoot $1 $2
+1

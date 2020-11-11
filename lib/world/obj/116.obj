@@ -467,29 +467,26 @@ Um grande e empoeirado livro foi esquecido aqui.~
 0 0 0 0
 5 10000 0 0 0
 E
-gatka danca espada livro grande empoeirado~
-Você cuidadosamente limpa a capa do livro com as pontas de seus dedos e descobre
-que, por debaixo da sujeira, um belo sinal dourado dá mais pistas à respeito
-do conteúdo de suas páginas. Após uma breve análise, você o abre e, aliviado,
-constata que tudo escrito está em sua língua. Uma pequena introdução e o índice
-chamam sua atenção.
+shastra armas~
+Você tenta ler essa parte do livro, mas seu conteúdo não parece ser para
+seus olhos.
 ~
 E
-sinal dourado~
-O sinal, uma espécie de selo de ouro, representa um chackram sobre o qual se
-cruzam dois kirpans e, no centro do conjunto, apoia-se uma khanda.  
+tareek historia~
+Você tenta ler essa parte do livro, mas seu conteúdo não parece ser para
+seus olhos.
 ~
 E
-introducao~
-   Esse livro trata sobre a antiqüíssima técnica de luta chamada Gatka, a
-Dança da Espada.  Aqui serão tratadas questões filosóficas, científicas e,
-como não poderia deixar de ser, práticas.
-   Também foram cuidadosamente selecionadas ilustrações de movimentos e das
-Shastra, as armas sagradas (nem todas foram aqui enumeradas, apenas as
-principais).
-   Espera-se que, com a ajuda desse humilde livro, o guerreiro se torne mais
-sábio e mais hábil.
-   Fiquem em paz.
+vidyaa ciencia~
+Você começa a, rapidamente, olhar algumas partes do livro, parando nessa
+passagem da Vidyaa, a Ciência:
+"Poucos lugares desse mundo ainda conhecem a Gatka em sua forma original.
+Ela é conhecida como vinda da Shastra Vidyaa, a Ciência da Espada, tão
+antiga quanto os textos védicos.  Nela, todo gesto é um ato de criação.
+Toda ação se desdobra em um Kriya, um ciclo completo e equilibrado, todo
+movimento é uma postura que expressa uma energia particular, uma Mudra, todo
+pensamento exige meditação, pois é o guerreiro um criador, e um criador está
+intimamente ligado à sua obra."
 ~
 E
 indice~
@@ -512,26 +509,29 @@ indice~
     XIV  - Tir
 ~
 E
-vidyaa ciencia~
-Você começa a, rapidamente, olhar algumas partes do livro, parando nessa
-passagem da Vidyaa, a Ciência:
-"Poucos lugares desse mundo ainda conhecem a Gatka em sua forma original.
-Ela é conhecida como vinda da Shastra Vidyaa, a Ciência da Espada, tão
-antiga quanto os textos védicos.  Nela, todo gesto é um ato de criação.
-Toda ação se desdobra em um Kriya, um ciclo completo e equilibrado, todo
-movimento é uma postura que expressa uma energia particular, uma Mudra, todo
-pensamento exige meditação, pois é o guerreiro um criador, e um criador está
-intimamente ligado à sua obra."
+introducao~
+   Esse livro trata sobre a antiqüíssima técnica de luta chamada Gatka, a
+Dança da Espada.  Aqui serão tratadas questões filosóficas, científicas e,
+como não poderia deixar de ser, práticas.
+   Também foram cuidadosamente selecionadas ilustrações de movimentos e das
+Shastra, as armas sagradas (nem todas foram aqui enumeradas, apenas as
+principais).
+   Espera-se que, com a ajuda desse humilde livro, o guerreiro se torne mais
+sábio e mais hábil.
+   Fiquem em paz.
 ~
 E
-tareek historia~
-Você tenta ler essa parte do livro, mas seu conteúdo não parece ser para
-seus olhos.
+sinal dourado~
+O sinal, uma espécie de selo de ouro, representa um chackram sobre o qual se
+cruzam dois kirpans e, no centro do conjunto, apoia-se uma khanda.  
 ~
 E
-shastra armas~
-Você tenta ler essa parte do livro, mas seu conteúdo não parece ser para
-seus olhos.
+gatka danca espada livro grande empoeirado~
+Você cuidadosamente limpa a capa do livro com as pontas de seus dedos e descobre
+que, por debaixo da sujeira, um belo sinal dourado dá mais pistas à respeito
+do conteúdo de suas páginas. Após uma breve análise, você o abre e, aliviado,
+constata que tudo escrito está em sua língua. Uma pequena introdução e o índice
+chamam sua atenção.
 ~
 #11632
 punhal bonito curvo kadaras~
@@ -558,15 +558,15 @@ Uma estranha armadura azul foi perdida aqui.~
 8 0 0 0
 3 12345 0 0 0
 E
+borda sinal~
+Você lê:
+"Armoraria e Arsenal de Twashtri: agora em Bhogavati"
+~
+E
 armadura azul~
 Feita por milhares de pequenos elos, essa armadura apresenta uma bela
 coloração azul nunca antes vista por você em qualquer metal conhecido.
 Um pequeno sinal em uma das bordas da peça chama sua atenção.
-~
-E
-borda sinal~
-Você lê:
-"Armoraria e Arsenal de Twashtri: agora em Bhogavati"
 ~
 #11635
 faixa branca~
@@ -1041,8 +1041,8 @@ arco gandiva dourado~
 Gandiva~
 Arjuna perdeu seu magnífico arco dourado exatamente aqui.~
 ~
-5 agmnoqtu 0 0 0 an 0 0 0 0 0 0 0
-0 5 5 12
+29 agmnoqtu 0 0 0 an 0 0 0 0 0 0 0
+50 0 0 0
 10 100000 0 50 0
 E
 arco gandiva dourado~

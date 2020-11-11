@@ -159,3 +159,14 @@ Level     12
 Room      3045
 Flags     0 0 0 0
 End
+Text       spy~
+Body      spy east
+Espiar aonde?
+~
+Name      Cansian~
+IdNum     1
+Dated     1604972560
+Level     110
+Room      3001
+Flags     0 0 0 0
+End

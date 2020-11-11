@@ -317,8 +317,8 @@ arco sabedoria madeira~
 o arco da sabedoria~
 Um velho arco de madeira foi deixado aqui.~
 ~
-5 gikqr 0 0 0 an 0 0 0 c 0 0 0
-0 5 5 12
+29 gikqr 0 0 0 an 0 0 0 c 0 0 0
+35 0 0 0
 10 1200000 120000 35 0
 E
 arco sabedoria madeira~
@@ -755,8 +755,8 @@ arco belo madeira amazonas~
 o arco das amazonas~
 Um belo arco de madeira foi deixado aqui, misterioso como as suas donas.~
 ~
-5 ginqr 0 0 0 ano 0 0 0 c 0 0 0
-0 2 8 12
+29 ginqr 0 0 0 ano 0 0 0 c 0 0 0
+25 0 0 0
 7 250000 25000 25 0
 E
 arco belo madeira amazonas~
@@ -789,8 +789,8 @@ arco magnifico pentensileia~
 o arco de Pentensiléia~
 Um magnífico arco de batalha foi esquecido aqui.~
 ~
-5 aeiknqr 0 0 0 ano 0 0 0 c 0 0 0
-0 3 7 12
+29 aeiknqr 0 0 0 ano 0 0 0 c 0 0 0
+40 0 0 0
 10 350000 35000 40 0
 E
 arco magnifico pentensileia~
@@ -1878,16 +1878,16 @@ Uma bela maçã de ouro foi jogada aqui.~
 0 0 0 0
 5 2000000 200000 0 0
 E
-inscricoes~
-                              <=-À Mais Bela -=>
-~
-E
 maca ouro pomo discordia~
 Você observa o fruto que deu origem a guerra de Tróia.  O pomo da discórdia,
 incorporada por uma bela maçã de ouro, que foi jogada por Éris, a deusa da
 discórdia, entre as deusas Atena, Hera e Afrodite.  E que gerou uma disputa
 entre as três para se saber quem era "à mais bela".  Você observa a bela
 maçã de ouro e percebe algumas inscrições esculpidas no ouro.
+~
+E
+inscricoes~
+                              <=-À Mais Bela -=>
 ~
 #10917
 portal magico pegaso~

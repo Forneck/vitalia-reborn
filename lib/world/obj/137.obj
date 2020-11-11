@@ -89,25 +89,6 @@ Uma sublime bacia prateada foi colocada aqui, sobre um altar de pedras.~
 0 0 0 0
 6 1000000 100000 101 0
 E
-espelho bacia prateada~
-Você observa uma simples bacia prateada contendo um pouco de água
-cristalina.  O espelho de Galadriel pode revelar muitas coisas e para
-algumas pessoas pode mostrar o que elas desejam ver.  O espelho revelará
-algumas coisas já passadas, coisas que estão acontecendo e as que ainda
-podem acontecer.  Após algum tempo você observa algumas imagens surgindo na
-superfície da fina camada d'água contida no espelho.
-~
-E
-passado~
-Você observa sua bela cidade natal e seus amigos.  Um imenso sentimento de
-saudade toma conta do seu corpo e da sua mente!
-~
-E
-presente~
-Você observa magníficas batalhas sendo travadas por impetuosos cavaleiros e
-bestas enfurecidas e cegas pelo ódio.
-~
-E
 futuro~
 Você observa um nobre e digno cavaleiro forte, porém com várias marcas de
 batalhas travadas durante sua vida.  Você percebe que este cavaleiro está
@@ -121,6 +102,25 @@ Ao chegarem nesta gloriosa terra você observa poderosos e celestiais deuses
 e imortais.  E de repente o surpreso cavaleiro que foi levado para está
 terra sagrada e divina, se ajoelha e olha para o céu.  Neste momento você
 observa o belo rosto desse surpreso cavaleiro e percebe que ele é você.
+~
+E
+presente~
+Você observa magníficas batalhas sendo travadas por impetuosos cavaleiros e
+bestas enfurecidas e cegas pelo ódio.
+~
+E
+passado~
+Você observa sua bela cidade natal e seus amigos.  Um imenso sentimento de
+saudade toma conta do seu corpo e da sua mente!
+~
+E
+espelho bacia prateada~
+Você observa uma simples bacia prateada contendo um pouco de água
+cristalina.  O espelho de Galadriel pode revelar muitas coisas e para
+algumas pessoas pode mostrar o que elas desejam ver.  O espelho revelará
+algumas coisas já passadas, coisas que estão acontecendo e as que ainda
+podem acontecer.  Após algum tempo você observa algumas imagens surgindo na
+superfície da fina camada d'água contida no espelho.
 ~
 #13705
 altar pedras~
@@ -260,8 +260,8 @@ arco galadhrim~
 um belo arco dos Galadhrim~
 Um grande arco foi deixado aqui.~
 ~
-5 r 0 0 0 an 0 0 0 0 0 0 0
-0 4 4 1
+29 r 0 0 0 an 0 0 0 0 0 0 0
+20 0 0 0
 10 150000 15000 20 0
 E
 arco galadhrim~

@@ -151,7 +151,7 @@ A
 4 -2
 #9916
 esqueleto brinco chave~
-Um brinco de esqueleto~
+um brinco de esqueleto~
 Um pequeno brinco de um esqueleto humano está aqui.~
 ~
 18 cdq 0 0 0 aoq 0 0 0 0 0 0 0
@@ -201,7 +201,7 @@ Parece ser um típico tapete...
 ~
 #9920
 cobra coroa~
-Uma coroa de cobras entrelaçadas~
+uma coroa de cobras entrelaçadas~
 Um circulo de cobras retorcidas está aqui.~
 ~
 9 bgj 0 0 0 ae 0 0 0 0 0 0 0
@@ -373,7 +373,7 @@ Uma maleta de couro negro está encostada na parede.~
 100 0 0 0 0
 #9932
 wyrm livro~
-O livro de Wyrm~
+o livro de Wyrm~
 Um livro feito de pele humana está aqui.~
 ~
 3 fgj 0 0 0 ao 0 0 0 0 0 0 0
@@ -447,7 +447,7 @@ Um par de calçados de criança está aqui, mas são pequenos de mais para usar.
 1 1 1 0 0
 #9966
 falso vodu totem~
-Um totem vodu~
+um totem vodu~
 Um totem vodu está aqui, zombando de você.~
 ~
 9 abegjln 0 0 0 ao 0 0 0 0 0 0 0
@@ -510,8 +510,8 @@ ghenna leve arco mogno~
 um arco leve de mogno~
 Um fino arco talhado em mogno está aqui.~
 ~
-5 b 0 0 0 an 0 0 0 0 0 0 0
-0 3 5 11
+29 b 0 0 0 an 0 0 0 0 0 0 0
+10 0 0 0
 3 5000 2500 10 0
 A
 2 1

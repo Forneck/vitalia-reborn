@@ -1,18 +1,18 @@
 #12
 Vitalia~
 O Reino dos Imortais~
-1200 1299 10 2 bd 0 0 0 -1 -1
+1200 1299 10 2 bd 0 0 0 100 -1
+M 0 1202 2 1201 	(o espirito vagueante)
+R 0 1201 3098 -1 	(um quadro sagrado de mensagens)
+O 0 3098 1 1201 	(um quadro sagrado de mensagens)
 M 0 1201 1 1205 	(a Carteira Imortal)
-M 0 1202 2 1201 	(o espírito vagueante)
-M 0 1202 2 1204 	(o espírito vagueante)
+M 0 1202 2 1204 	(o espirito vagueante)
 R 0 1203 3099 -1 	(um quadro de mensagens)
 O 0 3099 10 1203 	(um quadro de mensagens)
 R 0 1206 3096 -1 	(um quadro de mensagens sociais)
 O 0 3096 10 1206 	(um quadro de mensagens sociais)
 R 0 1202 3097 -1 	(um quadro de mensagens congelado)
 O 0 3097 1 1202 	(um quadro de mensagens congelado)
-R 0 1201 3098 -1 	(um quadro sagrado de mensagens)
-O 0 3098 1 1201 	(um quadro sagrado de mensagens)
 R 0 1207 1299 -1 	(o quadro dos Deuses)
 O 0 1299 1 1207 	(o quadro dos Deuses)
 R 0 1213 1298 -1 	(o quadro dos Deuses)

@@ -58,8 +58,8 @@ arco aventureiro~
 o arco do aventureiro~
 O Arco do aventureiro foi esquecido aqui.~
 ~
-5 adegimnqt 0 0 0 an 0 0 0 0 0 0 0
-0 8 3 12
+29 adegimnqt 0 0 0 an 0 0 0 0 0 0 0
+60 0 0 0
 19 500000 50000 60 0
 E
 arco aventureiro~
@@ -315,8 +315,8 @@ arco alegria~
 o arco da alegria~
 O Arco da alegria foi esquecido aqui.~
 ~
-5 aegikq 0 0 0 an 0 0 0 d 0 0 0
-0 3 6 12
+29 aegikq 0 0 0 an 0 0 0 d 0 0 0
+0 0 0 0
 7 350000 35000 0 0
 E
 arco alegria~
@@ -446,17 +446,17 @@ Um enorme monólito de pedra foi fixado aqui.~
 0 0 0 0
 80 0 0 1 0
 E
+monolito pedra rocha~
+Você observa as estranhas escrituras, feitas numa linguagem nunca vista
+antes por você em todo Mundo de Vitália.  No topo do monólito você observa
+uma escultura rudimentar de um Dragão.
+~
+E
 escultura rudimentar dragao~
 Você observa a escultura do Dragão, feita da rocha mais resistente do reino.
 Ao olhar para os olhos da figura, você sente uma estranha sensação de medo,
 ao mesmo tempo que observa que eles, antes petrificados, se acenderam como
 chamas de fogo.
-~
-E
-monolito pedra rocha~
-Você observa as estranhas escrituras, feitas numa linguagem nunca vista
-antes por você em todo Mundo de Vitália.  No topo do monólito você observa
-uma escultura rudimentar de um Dragão.
 ~
 #9323
 algas azuis~
@@ -838,6 +838,11 @@ A Estátua do dragão de ouro foi fixada aqui.~
 0 0 0 0
 100 6000000 600000 1 0
 E
+estatua ouro dragao~
+Você observa uma grande estátua de um dragão feita de ouro e percebe algumas
+escrituras em sua base.
+~
+E
 escrituras base~
 Você observa as escrituras que trazem as seguintes mensagens:
 ****************************************************************************
@@ -851,11 +856,6 @@ vida à maldade e se reproduzem em sofrimento"
                                              O Ancião de Ouro.
  
 ****************************************************************************
-~
-E
-estatua ouro dragao~
-Você observa uma grande estátua de um dragão feita de ouro e percebe algumas
-escrituras em sua base.
 ~
 #9344
 ossos dragoes~
@@ -892,6 +892,11 @@ Um totem de pedra foi fixado aqui.~
 0 0 0 0
 65 0 0 1 0
 E
+totem pedra~
+Você observa um totem de pedra formado por esculturas de dragões. Em seu
+topo você percebe a existência de uma escritura.
+~
+E
 escritura topo~
 Você observa a escritura no topo do totem de pedra, que diz:
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -900,11 +905,6 @@ Você observa a escritura no topo do totem de pedra, que diz:
 você conseguir vê-la, então será tarde demais.
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-~
-E
-totem pedra~
-Você observa um totem de pedra formado por esculturas de dragões. Em seu
-topo você percebe a existência de uma escritura.
 ~
 #9347
 trono ouro branco prata~

@@ -148,8 +148,8 @@ arco longo dourado~
 um arco longo dourado~
 Um maravilhoso arco dourado foi deixado no chão.~
 ~
-5 amnopu 0 0 0 ano 0 0 0 0 0 0 0
-0 4 6 11
+29 amnopu 0 0 0 ano 0 0 0 0 0 0 0
+45 0 0 0
 10 30000 3000 45 0
 A
 6 1
@@ -164,8 +164,8 @@ flecha ouro~
 uma flecha de ouro~
 Uma flecha dourada está largada no chão.~
 ~
-8 abmnopu 0 0 0 ao 0 0 0 0 0 0 0
-0 0 0 0
+7 abmnopu 0 0 0 aou 0 0 0 0 0 0 0
+1 4 4 12
 5 30000 3000 45 0
 A
 18 1
