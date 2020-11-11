@@ -33,6 +33,7 @@ ACMD(do_combo);
 ACMD(do_seize);
 ACMD(do_spy);
 ACMD(do_envenom);
+ACMD(do_shoot);
 
 void set_spells_function()
 {
@@ -151,6 +152,8 @@ void set_spells_function()
     if ((spell = get_spell_by_vnum(SKILL_SPY)))
    spell->function = do_spy;
    
+   if ((spell = get_spell_by_vnum(SKILL_BOWS)))
+   spell->function = do_shoot;
 }
 
 // This function create the database of all the spells and skills,
@@ -2771,6 +2774,23 @@ new_spell->assign[2].class_num = CLASS_BARD;
  new_spell->assign[1].level = 10;
 
  spedit_save_internally(new_spell);
+ 
+  // SKILL_BOWS # 252
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+
+ new_spell->vnum = SKILL_BOWS;
+ new_spell->status = available;
+ new_spell->name = strdup("bows");
+ new_spell->function = do_shoot;
+ new_spell->type = SKILL;
+ new_spell->effectiveness = strdup("100");
+ new_spell->assign[0].class_num = CLASS_RANGER;
+ new_spell->assign[0].level = 30;
+
+ spedit_save_internally(new_spell);
+
+ 
  
  /*NIGHTHAMMER*/
  CREATE(new_spell, struct str_spells, 1);
