@@ -209,6 +209,7 @@
 #define SKILL_TRIP		    249	/* -- AC - JUNE, 2003		 */
 #define SKILL_WHIRLWIND             250
 #define SKILL_SCAN 251
+#define SKILL_BOWS 252
 
 /* New skills may be added here up to MAX_SKILLS (297) */
 
