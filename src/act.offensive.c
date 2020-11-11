@@ -1312,6 +1312,7 @@ ACMD(do_shoot){
 						if (world[vict_room].people)
 						{
 		send_to_char(ch,"Você se concentra e atira.\r\n");
+		act("$n se concentra e atira.", FALSE, ch, 0, 0, TO_ROOM);
 		char_from_room(ch);
 		char_to_room(ch,vict_room);
 		if ((vict= get_char_vis(ch, arg2,NULL,FIND_CHAR_ROOM)) != NULL){
