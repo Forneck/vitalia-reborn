@@ -1258,12 +1258,12 @@ ACMD(do_shoot){
 		return;
 	}
 	
-	bow= GET_EQ(ch, WEAR_WIELD);
-	if (!bow){
+	fireweapon= GET_EQ(ch, WEAR_WIELD);
+	if (!fireweapon){
 	send_to_char(ch, "Você precisa de uma arma!\r\n");
 	return;
 	}
-	else if (GET_OBJ_TYPE(bow) != ITEM_FIREWEAPON){
+	else if (GET_OBJ_TYPE(fireweapon) != ITEM_FIREWEAPON){
 	send_to_char(ch,"Este tipo de arma não permite atirar.\r\n");
 	return;
 	}
@@ -1274,10 +1274,10 @@ ACMD(do_shoot){
 	else
 		prob = GET_LEVEL(ch);
 		
-		prob += GET_OBJ_VAL(bow,0);
+		prob += GET_OBJ_VAL(fireweapon,0);
 		
 		if (percent>prob) {
-		send_to_char(ch, "Você tenta atirsr mas se atrapalha.\r\n");
+		send_to_char(ch, "Você tenta atirar mas se atrapalha.\r\n");
 		return;
 	 }
 		
