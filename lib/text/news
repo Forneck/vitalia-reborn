@@ -13,7 +13,7 @@
    @YCreate Food@n para @RDruidas@n e @RRangers@n renomeado para @YCreate Berries@n.
    Atualização do sistema interno do mundo para a versão mais recente.
    O Mundo de Vitália agora conta com uma nova classe de personagem, @RRanger@n.
-  Novos tipos de item (@GPlanta@n, @GMobilia@n, @GMunição@n e @gArcos@n).
+  Novos tipos de item (@GPlanta@n, @GMobilia@n, @GMunição@n e @GArcos@n).
    Os jogadores podem sentar, descansar e deitar nas mobilias.
    É possivel beber direto em algumas salas.
    Mais opções no toggle/prefedit.
