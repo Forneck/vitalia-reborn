@@ -1311,13 +1311,18 @@ ACMD(do_shoot){
 					{
 						if (world[vict_room].people)
 						{
-		send_to_char(ch,"Você se concentra e atira.\r\n");
-		act("$n se concentra e atira.", FALSE, ch, 0, 0, TO_ROOM);
+
 		char_from_room(ch);
 		char_to_room(ch,vict_room);
 		if ((vict= get_char_vis(ch, arg2,NULL,FIND_CHAR_ROOM)) != NULL){
+		   if (vict == ch) {
+		      send_to_char(ch,"Melhor não tentar isso...\r\n");
+		      return;
+		   }
 		char_from_room(ch);
 		char_to_room(ch,was_room);
+		send_to_char(ch,"Você se concentra e atira.\r\n");
+		act("$n se concentra e atira.", FALSE, ch, 0, 0, TO_ROOM);
 		dam += GET_DAMROLL(ch);
 	   dam += dice(GET_OBJ_VAL(ammo, 1), GET_OBJ_VAL(ammo, 2));
 	   	if (GET_POS(vict) < POS_FIGHTING)
