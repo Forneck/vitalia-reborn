@@ -1,4 +1,7 @@
 TODO:
+
+continuar do_shoot: skill e cmd no interpreter
+
 FIX: Mobs que sumiram ex 13101-13109
 character.c /rebegin etc...
 
@@ -88,6 +91,8 @@ completar objs 65 *STRANGELOVE ORIG*
 mob sem load:
 750,2399
 
+
+loja feita 3,22,25,27,28,30,31,33,54
 
 
 typo: obj 11303 alias medraperola -> madreperola
