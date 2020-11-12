@@ -1,30 +1,30 @@
-Nov 11 17:24:30 2020 :: Cansian has connected.
-Nov 11 17:24:32 2020 :: Cansian had no variable file
-Nov 11 17:24:32 2020 :: Cansian retrieving crash-saved items and entering game.
-Nov 11 17:24:32 2020 :: Cansian (level 110) has 25 objects (max 100).
-Nov 11 17:29:23 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 11 17:29:23 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 21940
-Nov 11 17:34:23 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 11 17:34:23 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 22016
-Nov 11 17:36:53 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 11 17:39:23 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 11 17:39:23 2020 :: rusage: user time: 2 sec, system time: 0 sec, max res size: 22016
-Nov 11 17:40:53 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 11 17:42:33 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 11 17:42:53 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 11 17:44:23 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 11 17:44:23 2020 :: rusage: user time: 2 sec, system time: 0 sec, max res size: 22216
-Nov 11 17:49:23 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 11 17:49:23 2020 :: rusage: user time: 3 sec, system time: 0 sec, max res size: 22304
-Nov 11 17:54:23 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 11 17:54:23 2020 :: rusage: user time: 4 sec, system time: 0 sec, max res size: 22304
-Nov 11 17:59:23 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 11 17:59:23 2020 :: rusage: user time: 4 sec, system time: 0 sec, max res size: 22512
-Nov 11 18:01:43 2020 :: (GC) Reboot by Cansian.
-Nov 11 18:01:43 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 11 18:01:43 2020 :: Closing all sockets.
-Nov 11 18:01:43 2020 :: Closing link to: Cansian.
-Nov 11 18:01:43 2020 :: Saving current MUD time.
-Nov 11 18:01:43 2020 :: Rebooting.
-Quick boot mode -- rent check supressed.
-Using file descriptor for logging.
+Nov 12 02:26:49 2020 :: rusage: user time: 109 sec, system time: 8 sec, max res size: 33084
+Nov 12 02:28:59 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 02:30:09 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 02:30:59 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 02:31:49 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 12 02:31:49 2020 :: rusage: user time: 110 sec, system time: 8 sec, max res size: 33084
+Nov 12 02:31:59 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 02:32:09 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 02:32:09 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 02:36:39 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 02:36:49 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 12 02:36:49 2020 :: rusage: user time: 111 sec, system time: 8 sec, max res size: 33084
+Nov 12 02:37:29 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 02:41:49 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 12 02:41:49 2020 :: rusage: user time: 112 sec, system time: 8 sec, max res size: 33084
+Nov 12 02:46:49 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 12 02:46:49 2020 :: rusage: user time: 113 sec, system time: 8 sec, max res size: 33084
+Nov 12 02:51:49 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 12 02:51:49 2020 :: rusage: user time: 113 sec, system time: 9 sec, max res size: 33084
+Nov 12 02:56:49 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 12 02:56:49 2020 :: rusage: user time: 114 sec, system time: 9 sec, max res size: 33084
+Nov 12 03:01:49 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 12 03:01:49 2020 :: rusage: user time: 115 sec, system time: 9 sec, max res size: 33084
+Nov 12 03:06:19 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 03:06:39 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 03:06:49 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 12 03:06:49 2020 :: rusage: user time: 115 sec, system time: 9 sec, max res size: 33084
+Nov 12 03:11:49 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 12 03:11:49 2020 :: rusage: user time: 117 sec, system time: 9 sec, max res size: 33320
+Segmentation fault (core dumped)

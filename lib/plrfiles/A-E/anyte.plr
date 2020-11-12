@@ -6,8 +6,8 @@ Clas: 6
 Levl: 76
 Id  : 6
 Brth: 1603323580
-Plyd: 237944
-Last: 1605125029
+Plyd: 240299
+Last: 1605127384
 Lmot: 1604961942
 Lnew: 1605118209
 Htwn: 3001
@@ -15,16 +15,16 @@ Host: 189.120.73.49
 Hite: 161
 Wate: 139
 Alin: 65
-Act : hl 0 0 0
+Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
 Wimp: 100
 Room: 5518
 Lern: 2
-Hung: 4
-Thir: 18
-Hit : 752/883
-Mana : 467/956
+Hung: 10
+Thir: 15
+Hit : 913/883
+Mana : 956/956
 Move: 371/271
 Str : 17/0
 Int : 9
@@ -64,9 +64,8 @@ Skil:
 252 90
 0 0
 Affs:
-96 146 0 61 0 16 0 0
-96 146 -4 17 0 0 0 0
-50 31 0 36 2048 0 0 0
+96 98 -4 17 0 0 0 0
+96 98 0 61 0 16 0 0
 0 0 0 0 0 0 0 0
 Alis: 60
  wake;wear

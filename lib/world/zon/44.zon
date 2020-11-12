@@ -2,6 +2,10 @@
 Vitalia~
 Qui'Lur~
 4400 4499 45 1 j 0 0 0 -1 -1
+M 0 4413 1 4462 	(um elfo)
+G 1 4402 99 -1 	(um peixe grande)
+R 0 4462 4403 -1 	(uma estranha noz)
+O 1 4403 20 4462 	(uma estranha noz)
 M 0 4401 5 4437 	(um estranho arbusto)
 M 0 4401 5 4437 	(um estranho arbusto)
 M 0 4401 5 4437 	(um estranho arbusto)
@@ -54,9 +58,6 @@ O 1 4403 20 4454 	(uma estranha noz)
 M 0 4412 1 4460 	(um elfo)
 R 0 4460 4403 -1 	(uma estranha noz)
 O 1 4403 20 4460 	(uma estranha noz)
-M 0 4413 1 4462 	(um elfo)
-R 0 4462 4403 -1 	(uma estranha noz)
-O 1 4403 20 4462 	(uma estranha noz)
 M 0 4403 1 4467 	(o Sentinela do portão)
 D 0 4456 3 1 	(Em Frente ao Portão de Madeira)
 O 0 4457 1 4456 	(uma placa de madeira)

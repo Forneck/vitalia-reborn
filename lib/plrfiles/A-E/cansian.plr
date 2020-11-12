@@ -6,10 +6,10 @@ Clas: 4
 Levl: 110
 Id  : 1
 Brth: 1601790482
-Plyd: 443324
-Last: 1605122869
+Plyd: 495460
+Last: 1605175030
 Lmot: 1604953234
-Lnew: 1605117107
+Lnew: 1605123013
 Htwn: 1372
 Host: 127.0.0.1
 Hite: 151
@@ -29,28 +29,31 @@ Dex : 25
 Con : 25
 Cha : 25
 Ac  : 100
-Gold: 1205603
+Gold: 1207003
 Exp : 7000001
 Olc : 0
-Alis: 7
- ha
- history all
-0
- reset
- shutdown reboot
-0
- sa
- say @Y$*@n
-1
- goss
- goss @Y$*@n
-1
- of
- order fol $*
+Alis: 8
+ tiro
+ load o 11325;put tir quiver;shoot $1 $2
 1
  indoor
  redit;3;4;0;q;y
 1
- tiro
- load o 11325;put tir quiver;shoot $1 $2
+ of
+ order fol $*
+1
+ goss
+ goss @Y$*@n
+1
+ sa
+ say @Y$*@n
+1
+ reset
+ shutdown reboot
+0
+ ha
+ history all
+0
+ bispo
+ hold bispo;use bispo;use bispo;use bispo;rem bispo;junk bispo
 1
