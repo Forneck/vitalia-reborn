@@ -6,8 +6,8 @@ Clas: 6
 Levl: 76
 Id  : 6
 Brth: 1603323580
-Plyd: 240299
-Last: 1605127384
+Plyd: 241809
+Last: 1605208218
 Lmot: 1604961942
 Lnew: 1605118209
 Htwn: 3001
@@ -15,13 +15,13 @@ Host: 189.120.73.49
 Hite: 161
 Wate: 139
 Alin: 65
-Act : ghl 0 0 0
+Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
 Wimp: 100
 Room: 5518
 Lern: 2
-Hung: 10
+Hung: 15
 Thir: 15
 Hit : 913/883
 Mana : 956/956
@@ -33,7 +33,7 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 2911991
+Gold: 2870451
 Bank: 1500000
 Exp : 65225092
 Olc : 0
@@ -64,187 +64,190 @@ Skil:
 252 90
 0 0
 Affs:
-96 98 -4 17 0 0 0 0
-96 98 0 61 0 16 0 0
+3 135 -3 24 0 0 0 0
+3 135 4 18 0 0 0 0
+1 585 -20 17 0 0 0 0
+96 224 0 61 0 16 0 0
+96 224 -4 17 0 0 0 0
 0 0 0 0 0 0 0 0
 Alis: 60
- wake;wear
- all
-0
- wak
- wake;wear all
+ samurais
+        s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;e;e;e;u;u;u;u;s
 1
- minor
- cast 'minor healing' $*
+ medi
+ rem coura;medit
 1
- bohemot
-         s;s;s;s;e;e;s;s;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;e;e;e;e;e;e;e;e;e;n;d;w;w
+ medit
+ rem coura;medit
 1
- torredm
-         s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;w;n;n;n;n;n;n;n
+ fibra
+           s;s;w;w;w;w;w;w;w;w;w;w;s;e;n;n;e
 1
- torredm
-         s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;w;n;n;n;n;n;n;n
+ valik2
+          e;e;s;e;e;e;e;e;e;n;n;n;d;d;e;e;e;s;s;w;n;u;s;e;e;e;e;e;d;w;d;e;e;e
 1
- elladan4
-        open por s;s;s;e;e;e;se;se;s;e;e;e;n;se;ne;e;e;s;s;s;ne;ne;ne;ne;s
+ valik1
+          s;s;s;s;e;e;s;s;e;e;e;e;n;d;n;d;d;d;n;n;n
 1
- elladan3
-        land;e;e;e;e;e;open port;e;e;e;se;se;se;se;sw;s;e;s
+ nirin
+           s;s;s;s;e;e;s;s;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;s;w;n;n;n;w;d
 1
- elladan2
-        w;w;w;u;e;e;e;e;e;u;e;e;d;d;e;d;w;d;e;n
+ rand
+            s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;e;e;e;u;e;d;e;e;e;e;e;e;e;ope alc;d
 1
- elladan1
-        s;s;e;e;e;e;e;e;n;n;e;e;d;e;e;e;e;s;s;w;w;u;fly
-1
- gondolin
-        s;s;s;s;e;e;s;s;e;e;e;e;e;e;e;n;e;e;e;e;e;n;n;e;e;e;e;e;e;n;e;nw;n;e;n;w;open down;d
-1
- tauruspath
-      s;s;w;w;w;s;s;s;s;s;s;w;s;w;s;s;s;s;s;w;w;w;s;w;n;n;n
-1
- callyus
-         s;s;w;w;w;w;w;w;w;w;w;w;s;e;n;n;e;e;n;n;open grade n;n;w;w;n;open d;d;n;n;n;n;w;w;s;s;s;s;s;s;s
-1
- heal
- cast 'heal' $*
-1
- emp
- order emp hold caja;order emp use caja;order emp use caja;order emp use caja;order emp rem caja;order emp junk caja
-1
- labirinto
- s;s;w;w;w;s;s;s;s;s;s;w;s;s;s;s;s;s;w;w;s;s;s;w;w;w;w;n
-1
- camelot2
-        n;e;n;n;e;d;e;u;e
-1
- camelot
-         s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;s;s;w;s;w;w;w;n;w;n;n;n;e;e;n;n;n;n;w
-1
- jareth
-        s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;n;n;n;w;w;w;w;w
-1
- arachnos
-        s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;u
-1
- yevaud
-          n;s;n
-1
- kirin
-           n;n;n;e;u;s;e;w;s;w;s;d;n;e;u;n;s;e;s;e;w;w;s
-1
- jareth:
-         s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;n;n;n;w;w;w;w;w
-1
- minos
-           s;s;s;s;e;e;s;s;w;w;w;w;w;w;s;w;n;n;w;s;s
-1
- kubalai3acampamento
- n;n;n;e;e;s;s;e;s;s
-1
- kubapiramide2
-   w;s;w;s;s;s;e;w;w;s;s;n;w;n;w;n;w;e;e;e;n;n;w;s
-1
- kubapiramide1
-   n;n;n;e;e;e;n;n;w;w;s;e;s;e;s;s
-1
- bandar2
-         e;e;e;open port;e;e;e;e;e;e;e;n;n;n;e;s;d;d;d;d;d
-1
- bandar
-          s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open grade;e
-1
- kubalai2
-        e;e;n;n;w;n;n;n;n;n;n;n;n;n;n
-1
- kubalai
-         s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open eas;e;e;e;e;open eas;e;e;e;e;e
-1
- isha
-            s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;u;w;w
-0
- redfern
-         s;s;w;w;w;s;s;s;s;s;s;e;e;e;n;w;s;s;s;w;s;u;u;u;u;u
-1
- pocao_volta
-     s;s;s;w;w;w;w;n;n;n;n;n;e
-1
- pocao_ida
-       sw;s;s;s;s;e;e;e;e;n;n;n
-1
- elfos
-           s;s;w;w;w;s;s;s;s;s;s;e;e;n;n;e;e;e;ne;e;se;e
-1
- otavia
-          n;n;n;n;n;n;w;w;w;w;w;n;e;n;w;w;w;nw;nw;n;n;n;w;w;nw;w;nw;nw
-1
- duwick
-          s;s;e;e;e;e;e;e;n;n;e;e;d;e;e;e;e;s;s;s;w;s;w;s;e;e;n;e;e;s;e;s;e;n;n;w;n
-1
- cailvehpath
-     s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;w;n;n;n;n;n;w;w;w;nw;w;n;open por sw
-1
- drows
-           s;s;s;s;e;e;s;s;e;e;e;e;n;d;n;d
-1
- labirinto:
-      s;s;w;w;w;s;s;s;s;s;s;w;s;s;s;s;s;s;w;w;s;s;s;w;w;w;w;n
-1
- newthalos
-       s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open grad;e;e;e;u
-1
- bash
- bash $*;st
-0
- say
- say @g$*@n
-1
- sanc
-            ord fol gra caja,bispo;ord fol use cajado;ord fol use cajado;ord fol use cajado;ord fol rem cajado;ord fol junk cajado
-1
- sanc2
- order carto hold cajado;ord carto use cajado;ord carto use cajado;ord carto use cajado;ord carto rem cajado;ord carto junk cajado
-1
- dracos
-          s;s;w;w;w;w;w;w;w;w;w;n;n;w;n;w;n;n;n
-1
- roma
-            s;s;s;s;e;e;s;s;e;e;e;e;e;e;e;e;e;e;s;s;w;w;w;w;w
-1
- wake
- wake;wear coura
-1
- sleep
+ sle
  rem coura;sleep
 1
  slee
  rem coura;sleep
 1
- sle
+ sleep
  rem coura;sleep
 1
- rand
-            s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;e;e;e;u;e;d;e;e;e;e;e;e;e;ope alc;d
+ wake
+ wake;wear coura
 1
- nirin
-           s;s;s;s;e;e;s;s;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;s;w;n;n;n;w;d
+ roma
+            s;s;s;s;e;e;s;s;e;e;e;e;e;e;e;e;e;e;s;s;w;w;w;w;w
 1
- valik1
-          s;s;s;s;e;e;s;s;e;e;e;e;n;d;n;d;d;d;n;n;n
+ dracos
+          s;s;w;w;w;w;w;w;w;w;w;n;n;w;n;w;n;n;n
 1
- valik2
-          e;e;s;e;e;e;e;e;e;n;n;n;d;d;e;e;e;s;s;w;n;u;s;e;e;e;e;e;d;w;d;e;e;e
+ sanc2
+ order carto hold cajado;ord carto use cajado;ord carto use cajado;ord carto use cajado;ord carto rem cajado;ord carto junk cajado
 1
- fibra
-           s;s;w;w;w;w;w;w;w;w;w;w;s;e;n;n;e
+ sanc
+            ord fol gra caja,bispo;ord fol use cajado;ord fol use cajado;ord fol use cajado;ord fol rem cajado;ord fol junk cajado
 1
- medit
- rem coura;medit
+ say
+ say @g$*@n
 1
- medi
- rem coura;medit
+ bash
+ bash $*;st
+0
+ newthalos
+       s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open grad;e;e;e;u
 1
- samurais
-        s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;e;e;e;u;u;u;u;s
+ labirinto:
+      s;s;w;w;w;s;s;s;s;s;s;w;s;s;s;s;s;s;w;w;s;s;s;w;w;w;w;n
 1
+ drows
+           s;s;s;s;e;e;s;s;e;e;e;e;n;d;n;d
+1
+ cailvehpath
+     s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;w;n;n;n;n;n;w;w;w;nw;w;n;open por sw
+1
+ duwick
+          s;s;e;e;e;e;e;e;n;n;e;e;d;e;e;e;e;s;s;s;w;s;w;s;e;e;n;e;e;s;e;s;e;n;n;w;n
+1
+ otavia
+          n;n;n;n;n;n;w;w;w;w;w;n;e;n;w;w;w;nw;nw;n;n;n;w;w;nw;w;nw;nw
+1
+ elfos
+           s;s;w;w;w;s;s;s;s;s;s;e;e;n;n;e;e;e;ne;e;se;e
+1
+ pocao_ida
+       sw;s;s;s;s;e;e;e;e;n;n;n
+1
+ pocao_volta
+     s;s;s;w;w;w;w;n;n;n;n;n;e
+1
+ redfern
+         s;s;w;w;w;s;s;s;s;s;s;e;e;e;n;w;s;s;s;w;s;u;u;u;u;u
+1
+ isha
+            s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;u;w;w
+0
+ kubalai
+         s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open eas;e;e;e;e;open eas;e;e;e;e;e
+1
+ kubalai2
+        e;e;n;n;w;n;n;n;n;n;n;n;n;n;n
+1
+ bandar
+          s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;e;open grade;e
+1
+ bandar2
+         e;e;e;open port;e;e;e;e;e;e;e;n;n;n;e;s;d;d;d;d;d
+1
+ kubapiramide1
+   n;n;n;e;e;e;n;n;w;w;s;e;s;e;s;s
+1
+ kubapiramide2
+   w;s;w;s;s;s;e;w;w;s;s;n;w;n;w;n;w;e;e;e;n;n;w;s
+1
+ kubalai3acampamento
+ n;n;n;e;e;s;s;e;s;s
+1
+ minos
+           s;s;s;s;e;e;s;s;w;w;w;w;w;w;s;w;n;n;w;s;s
+1
+ jareth:
+         s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;n;n;n;w;w;w;w;w
+1
+ kirin
+           n;n;n;e;u;s;e;w;s;w;s;d;n;e;u;n;s;e;s;e;w;w;s
+1
+ yevaud
+          n;s;n
+1
+ arachnos
+        s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;u
+1
+ jareth
+        s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;n;n;n;w;w;w;w;w
+1
+ camelot
+         s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;s;s;w;s;w;w;w;n;w;n;n;n;e;e;n;n;n;n;w
+1
+ camelot2
+        n;e;n;n;e;d;e;u;e
+1
+ labirinto
+ s;s;w;w;w;s;s;s;s;s;s;w;s;s;s;s;s;s;w;w;s;s;s;w;w;w;w;n
+1
+ emp
+ order emp hold caja;order emp use caja;order emp use caja;order emp use caja;order emp rem caja;order emp junk caja
+1
+ heal
+ cast 'heal' $*
+1
+ callyus
+         s;s;w;w;w;w;w;w;w;w;w;w;s;e;n;n;e;e;n;n;open grade n;n;w;w;n;open d;d;n;n;n;n;w;w;s;s;s;s;s;s;s
+1
+ tauruspath
+      s;s;w;w;w;s;s;s;s;s;s;w;s;w;s;s;s;s;s;w;w;w;s;w;n;n;n
+1
+ gondolin
+        s;s;s;s;e;e;s;s;e;e;e;e;e;e;e;n;e;e;e;e;e;n;n;e;e;e;e;e;e;n;e;nw;n;e;n;w;open down;d
+1
+ elladan1
+        s;s;e;e;e;e;e;e;n;n;e;e;d;e;e;e;e;s;s;w;w;u;fly
+1
+ elladan2
+        w;w;w;u;e;e;e;e;e;u;e;e;d;d;e;d;w;d;e;n
+1
+ elladan3
+        land;e;e;e;e;e;open port;e;e;e;se;se;se;se;sw;s;e;s
+1
+ elladan4
+        open por s;s;s;e;e;e;se;se;s;e;e;e;n;se;ne;e;e;s;s;s;ne;ne;ne;ne;s
+1
+ torredm
+         s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;w;n;n;n;n;n;n;n
+1
+ torredm
+         s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;w;n;n;n;n;n;n;n
+1
+ bohemot
+         s;s;s;s;e;e;s;s;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;e;e;e;e;e;e;e;e;e;n;d;w;w
+1
+ minor
+ cast 'minor healing' $*
+1
+ wak
+ wake;wear all
+1
+ wake;wear
+ all
+0

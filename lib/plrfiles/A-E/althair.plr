@@ -6,8 +6,8 @@ Clas: 6
 Levl: 11
 Id  : 20
 Brth: 1603768097
-Plyd: 111016
-Last: 1605144689
+Plyd: 112077
+Last: 1605188469
 Lmot: 1604953247
 Lnew: 1605129579
 Htwn: 1372
@@ -21,11 +21,9 @@ Pref: efghnoBCDE abde 0 0
 Wimp: 30
 Room: 3001
 Lern: 2
-Hung: 15
-Thir: 14
-Hit : 2/136
-Mana : 4/135
-Move: 93/116
+Hit : 181/136
+Mana : 135/135
+Move: 136/116
 Str : 16/0
 Int : 14
 Wis : 12
@@ -33,7 +31,7 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Gold: 92286
+Gold: 92285
 Exp : 547826
 Olc : 0
 ScrW: 44
@@ -48,18 +46,18 @@ Skil:
 251 90
 0 0
 Alis: 5
- ha
- history all
-0
- recall
- cast 'word of recall' $*
-1
- gd
- get $1;don $1
+ s;s;w;n
+ s;s;w;n
 1
  fonte
  w;w;w;drink fonte
 1
- s;s;w;n
- s;s;w;n
+ gd
+ get $1;don $1
 1
+ recall
+ cast 'word of recall' $*
+1
+ ha
+ history all
+0
