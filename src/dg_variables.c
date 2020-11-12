@@ -710,6 +710,8 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig,
             else
               snprintf(str, slen, "%c%ld",UID_CHAR, obj_script_id(GET_EQ(c, pos)));
           }
+          else if (!str_cmp(field, "eleela"))
+            snprintf(str, slen, "%s", ELEA(c));
           else if (!str_cmp(field, "exp")) {
             if (subfield && *subfield) {
               int addition = MIN(atoi(subfield), 1000);
@@ -757,12 +759,6 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig,
               snprintf(str, slen, "%d", trig_is_attached(SCRIPT(c), i));
             }
           }
-          else if (!str_cmp(field, "eleela"))
-            snprintf(str, slen, "%s", ELEA(c));
-          else if (!str_cmp(field, "oa"))
-            snprintf(str, slen, "%s", OA(c));
-          else if (!str_cmp(field, "seusua"))
-            snprintf(str, slen, "%s", SEUSUA(c));
           else if (!str_cmp(field, "hitp")) {
             if (subfield && *subfield) {
               int addition = atoi(subfield);
@@ -1001,6 +997,7 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig,
           }
           break;
         case 's':
+        
           if (!str_cmp(field, "saving_breath")) {
             if (subfield && *subfield) {
               int addition = atoi(subfield);
@@ -1078,6 +1075,8 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig,
               snprintf(str, slen, "%d", GET_ADD(c));
             }
           }
+        else if (!str_cmp(field, "seusua"))
+            snprintf(str, slen, "%s", SEUSUA(c));
           break;
         case 't':
           if (!str_cmp(field, "thirst")) {
@@ -1289,6 +1288,8 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig,
                 strcpy(str, "0");
             }
           }
+          else if (!str_cmp(field, "oa"))
+            snprintf(str, slen, "%s", OA(c));
           break;
         case 'r':
           if (!str_cmp(field, "room")) {
