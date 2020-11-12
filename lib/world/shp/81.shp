@@ -1,0 +1,84 @@
+CircleMUD v3.0 Shop File~
+#8111~
+8147
+8148
+8149
+8151
+-1
+2.00
+0.50
+10
+2
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+8111
+224
+8126
+-1
+6
+20
+0
+0
+#8149~
+8108
+8109
+8110
+8153
+-1
+2.00
+0.50
+19
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+8149
+224
+8211
+-1
+6
+20
+0
+0
+#8150~
+8138
+8155
+8156
+-1
+2.00
+0.50
+9
+11
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+8150
+24
+8210
+-1
+6
+20
+0
+0
+$~
