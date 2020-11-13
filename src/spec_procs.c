@@ -157,37 +157,37 @@ SPECIAL(guild)
 			count_obj++;
 	}
 	 /*pega dados pro aventureiro */
-	input[0] = 1/(1+exp(-GET_HIT(ch)));
-	input[1] = 1/(1+exp(-GET_MAX_HIT(ch)));
+		input[0] = (float)GET_HIT(ch) / 5000;
+	input[1] = (float) GET_MAX_HIT(ch) / 5000;
 
-	input[2] = 1/(1+exp(-GET_MANA(ch)));
-	input[3] = 1/(1+exp(-GET_MAX_MANA(ch)));
-	input[4] = 1/(1+exp(-GET_MOVE(ch)));
-	input[5] = 1/(1+exp(-GET_MAX_MOVE(ch)));
-	input[6] = 1/(1+exp(-GET_EXP(ch)));
+	input[2] = (float)GET_MANA(ch) / 5000;
+	input[3] = (float) GET_MAX_MANA(ch) / 5000;
+	input[4] = (float)GET_MOVE(ch) / 5000;
+	input[5] = (float) GET_MAX_MOVE(ch) / 5000;
+	input[6] = (float) GET_EXP(ch) / 500000000;
 	input[7] = (float)  GET_ROOM_VNUM(IN_ROOM(ch)) / 100000;
 	input[8] = 1/(1+exp(-GET_CLASS(ch)));
 	input[9] = 1/(1+exp(-GET_POS(ch)));
-	input[10] = 1/(1+exp(-GET_ALIGNMENT(ch)));
-	input[11] = 1/(1+exp(-compute_armor_class(ch)));
-	input[12] = 1/(1+exp(-GET_STR(ch)));
-	input[13] = 1/(1+exp(-GET_ADD(ch)));
-	input[14] = 1/(1+exp(-GET_INT(ch)));
-	input[15] = 1/(1+exp(-GET_WIS(ch)));
-	input[16] = 1/(1+exp(-GET_CON(ch)));
-	input[17] = 1/(1+exp(-GET_DEX(ch)));
-	input[18] = 1/(1+exp(-GET_GOLD(ch)));
-	input[19] = 1/(1+exp(-GET_BANK_GOLD(ch)));
+	input[10] = (float) GET_ALIGNMENT(ch) / 1000;
+	input[11] = (float) compute_armor_class(ch) / 200;
+	input[12] = (float) GET_STR(ch) / 25;
+	input[13] = (float) GET_ADD(ch) / 25;
+	input[14] = (float) GET_INT(ch) / 25;
+	input[15] = (float) GET_WIS(ch) / 25;
+	input[16] = (float) GET_CON(ch) / 25;
+	input[17] = (float) GET_DEX(ch) / 25;
+	input[18] = (float) GET_GOLD(ch) / 100000000;
+	input[19] = (float) GET_BANK_GOLD(ch) / 100000000;
 	input[20] = 1/(1+exp(-GET_COND(ch, HUNGER)));
 	input[21] = 1/(1+exp(-GET_COND(ch, THIRST)));
-	input[22] = 1/(1+exp(-GET_PRACTICES(ch)));
-	input[23] = 1/(1+exp(-grupo));
+	input[22] = (float) GET_PRACTICES(ch) / 100;
+	input[23] = grupo;
 	//input 24 eh o clan em vez de mudhora
 	input[24] = 1/(1+exp(-0));
-	input[25] = 1/(1+exp(-GET_BREATH(ch)));
-	input[26] = 1/(1+exp(-GET_HITROLL(ch)));
-	input[27] = 1/(1+exp(-GET_DAMROLL(ch)));
-	input[28] = 1/(1+exp(-count_obj));
+	input[25] = (float) GET_BREATH(ch) / 15;
+	input[26] = (float) GET_HITROLL(ch) / 100;
+	input[27] = (float) GET_DAMROLL(ch) / 100;
+	input[28] = (float) count_obj / 100;
 
 	
 	output[0] = 580/784;
