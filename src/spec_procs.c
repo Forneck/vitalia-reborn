@@ -190,7 +190,7 @@ SPECIAL(guild)
 	input[28] = 1/(1+exp(-count_obj));
 
 	
-	output[0] = 646/780;
+	output[0] = 580/784;
 	output[1] = 1/(1+exp(-CMD_ONEARG));
 	output[2] = 1/(1+exp(-CMD_ARG_SKILL));
 	skip_spaces(&argument);
