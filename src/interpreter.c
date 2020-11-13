@@ -549,7 +549,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	input[4] = 1/(1+exp(-GET_MOVE(ch)));
 	input[5] = 1/(1+exp(-GET_MAX_MOVE(ch)));
 	input[6] = 1/(1+exp(-GET_EXP(ch)));
-	input[7] = GET_ROOM_VNUM(IN_ROOM(ch)) / 100000;
+	input[7] = (float)  GET_ROOM_VNUM(IN_ROOM(ch)) / 100000;
 	input[8] = 1/(1+exp(-GET_CLASS(ch)));
 	input[9] = 1/(1+exp(-GET_POS(ch)));
 	input[10] = 1/(1+exp(-GET_ALIGNMENT(ch)));
