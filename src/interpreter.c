@@ -293,7 +293,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"send", "send", POS_SLEEPING, do_send, LVL_GOD, 0, CMD_NOARG},
 	{"set", "set", POS_DEAD, do_set, LVL_IMMORT, 0, CMD_NOARG},
 	{"shout", "sho", POS_RESTING, do_gen_comm, 0, SCMD_SHOUT, CMD_NOARG},
-	{"shoot", "shoo", POS_RESTING, do_cast, 30, SKILL_BOWS, CMD_TWOARG},
+	{"shoot", "shoo", POS_RESTING, do_cast, 0, SKILL_BOWS, CMD_TWOARG},
 	{"show", "show", POS_DEAD, do_show, LVL_IMMORT, 0, CMD_NOARG},
 	{"shutdow", "shutdow", POS_DEAD, do_shutdown, LVL_IMPL, 0, CMD_NOARG},
 	{"shutdown", "shutdown", POS_DEAD, do_shutdown, LVL_IMPL, SCMD_SHUTDOWN, CMD_NOARG},
@@ -767,7 +767,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		if (!str_cmp(arg2, "fora") || !str_cmp(arg2, "out"))
 		{
 			output[4] = 1/(1+exp(-CMD_ARG_OUT));
-			output[5] = -1;
+			output[5] = 0;
 		}
 		if (!str_cmp("moedas", arg1) || !str_cmp("moeda", arg1))
 		{
