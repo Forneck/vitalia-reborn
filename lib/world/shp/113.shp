@@ -131,4 +131,37 @@ CircleMUD v3.0 Shop File~
 12
 14
 20
+#11323~
+11335
+11336
+11337
+11338
+11339
+11340
+11341
+11342
+11343
+11346
+-1
+1.20
+0.10
+12
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+11323
+0
+11349
+-1
+8
+12
+14
+20
 $~
