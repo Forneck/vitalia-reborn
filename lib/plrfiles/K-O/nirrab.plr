@@ -1,26 +1,25 @@
 Name: Nirrab
 Pass: NihCO10HzAScc
-Titl: the Bear Cub
+Titl: Chronusdaath, a Feiticeira das Nove Luas
 Sex : 2
 Clas: 6
 Levl: 6
 Id  : 24
 Brth: 1604087691
-Plyd: 16089
-Last: 1604702250
+Plyd: 19408
+Last: 1605289864
 Htwn: 3001
-Host: 189.127.219.60
+Host: 179.246.210.255
 Hite: 163
 Wate: 153
-Alin: 137
+Alin: 123
 Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCE 0 0 0
-Wimp: 10
 Room: 5518
 Lern: 7
-Hung: 17
-Thir: 17
+Hung: 9
+Thir: 9
 Hit : 82/82
 Mana : 118/118
 Move: 97/97
@@ -32,7 +31,7 @@ Con : 16
 Cha : 8
 Ac  : 100
 Gold: 11870
-Exp : 43919
+Exp : 23317
 Olc : 0
 Skil:
 232 90
