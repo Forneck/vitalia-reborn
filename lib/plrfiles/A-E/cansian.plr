@@ -6,8 +6,8 @@ Clas: 4
 Levl: 110
 Id  : 1
 Brth: 1601790482
-Plyd: 515842
-Last: 1605233782
+Plyd: 517636
+Last: 1605236427
 Lmot: 1604953234
 Lnew: 1605123013
 Htwn: 1372
@@ -33,27 +33,27 @@ Gold: 1207103
 Exp : 7000001
 Olc : 0
 Alis: 8
- bispo
- hold bispo;use bispo;use bispo;use bispo;rem bispo;junk bispo
-1
- ha
- history all
-0
- reset
- shutdown reboot
-0
- sa
- say @Y$*@n
-1
- goss
- goss @Y$*@n
-1
- of
- order fol $*
+ tiro
+ load o 11325;put tir quiver;shoot $1 $2
 1
  indoor
  redit;3;4;0;q;y
 1
- tiro
- load o 11325;put tir quiver;shoot $1 $2
+ of
+ order fol $*
+1
+ goss
+ goss @Y$*@n
+1
+ sa
+ say @Y$*@n
+1
+ reset
+ shutdown reboot
+0
+ ha
+ history all
+0
+ bispo
+ hold bispo;use bispo;use bispo;use bispo;rem bispo;junk bispo
 1
