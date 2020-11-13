@@ -1,4 +1,87 @@
 CircleMUD v3.0 Shop File~
+#12011~
+3020
+3021
+3022
+3023
+3024
+3025
+12008
+-1
+2.25
+0.60
+4
+9
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+3
+12011
+2
+12006
+-1
+0
+28
+0
+0
+#12012~
+12006
+12007
+-1
+1.20
+0.60
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+3
+12012
+2
+12032
+-1
+7
+13
+14
+19
+#12016~
+12010
+-1
+1.60
+0.30
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+3
+12016
+2
+12003
+12004
+12008
+12015
+12022
+12023
+-1
+9
+17
+18
+22
 #12025~
 1204
 -1
@@ -23,6 +106,93 @@ CircleMUD v3.0 Shop File~
 -1
 7
 18
+0
+0
+#12034~
+3050
+3051
+3052
+3053
+3054
+12030
+-1
+1.85
+0.50
+2
+3
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+3
+12034
+2
+12042
+-1
+8
+18
+0
+0
+#12036~
+3000
+3001
+3009
+3010
+3011
+12006
+12007
+-1
+1.10
+0.80
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+3
+12036
+2
+12062
+-1
+0
+28
+0
+0
+#12037~
+3030
+3031
+3032
+3033
+3036
+12003
+-1
+1.75
+0.60
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+3
+12037
+2
+12063
+-1
+6
+20
 0
 0
 $~
