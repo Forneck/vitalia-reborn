@@ -1,30 +1,30 @@
-Nov 12 16:19:19 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 12 16:19:19 2020 :: rusage: user time: 11 sec, system time: 0 sec, max res size: 22336
-Nov 12 16:24:19 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 12 16:24:19 2020 :: rusage: user time: 12 sec, system time: 0 sec, max res size: 22336
-Nov 12 16:27:19 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 12 16:27:39 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 12 16:29:19 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 12 16:29:19 2020 :: rusage: user time: 12 sec, system time: 0 sec, max res size: 22336
-Nov 12 16:32:49 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 12 16:34:19 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 12 16:34:19 2020 :: rusage: user time: 13 sec, system time: 0 sec, max res size: 22336
-Nov 12 16:36:19 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 12 16:38:59 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 12 16:39:19 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 12 16:39:19 2020 :: rusage: user time: 14 sec, system time: 0 sec, max res size: 22336
-Nov 12 16:40:39 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 12 16:41:48 2020 :: Anyte has connected.
-Nov 12 16:41:49 2020 :: Anyte had no variable file
-Nov 12 16:41:49 2020 :: Anyte un-renting and entering game.
-Nov 12 16:41:49 2020 :: Anyte (level 76) has 27 objects (max 100).
-Nov 12 16:42:19 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 12 16:44:19 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 12 16:44:19 2020 :: rusage: user time: 15 sec, system time: 1 sec, max res size: 22704
-Nov 12 16:44:49 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Nov 12 16:49:19 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 12 16:49:19 2020 :: rusage: user time: 16 sec, system time: 1 sec, max res size: 22704
-Nov 12 16:54:19 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 12 16:54:19 2020 :: rusage: user time: 17 sec, system time: 1 sec, max res size: 22704
-Nov 12 16:55:19 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
-Segmentation fault (core dumped)
+Nov 12 19:05:18 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 12 19:05:18 2020 :: rusage: user time: 4 sec, system time: 0 sec, max res size: 22576
+Nov 12 19:08:29 2020 :: OLC: Cansian starts editing the game configuration.
+Nov 12 19:08:50 2020 :: OLC: Cansian modifies the game configuration.
+Nov 12 19:08:50 2020 :: OLC: Cansian stops editing the game configuration
+Nov 12 19:09:18 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 19:09:58 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 19:10:08 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 19:10:08 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 19:10:18 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 12 19:10:18 2020 :: rusage: user time: 5 sec, system time: 0 sec, max res size: 22752
+Nov 12 19:11:08 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 19:11:21 2020 :: SYSERR: Error opening file syslog.CRASH using 'file' command.
+Nov 12 19:11:48 2020 :: SCRIPT ERROR: Trigger: Bard Guildguard, VNum 3004. unknown char field: 'eleela'
+Nov 12 19:15:18 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 12 19:15:18 2020 :: rusage: user time: 6 sec, system time: 0 sec, max res size: 22836
+Nov 12 19:20:18 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 12 19:20:18 2020 :: rusage: user time: 7 sec, system time: 0 sec, max res size: 22836
+Nov 12 19:25:18 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 12 19:25:18 2020 :: rusage: user time: 8 sec, system time: 0 sec, max res size: 23000
+Nov 12 19:26:26 2020 :: (GC) Cansian forced Anyte to save
+Nov 12 19:26:35 2020 :: (GC) Reboot by Cansian.
+Nov 12 19:26:35 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Nov 12 19:26:35 2020 :: Closing all sockets.
+Nov 12 19:26:35 2020 :: Closing link to: Anyte.
+Nov 12 19:26:35 2020 :: Closing link to: Cansian.
+Nov 12 19:26:35 2020 :: Saving current MUD time.
+Nov 12 19:26:35 2020 :: Rebooting.
+Quick boot mode -- rent check supressed.
+Using file descriptor for logging.
