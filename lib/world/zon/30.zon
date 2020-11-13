@@ -1,7 +1,10 @@
 #30
 Vitalia~
 Norte da Cidade de Midgaard~
-3000 3099 15 2 j 0 0 0 -1 -1
+3099 3099 15 2 j 0 0 0 -1 -1
+M 0 3006 1 3049 	(Capitão Stolar)
+G 1 3060 99 -1 	(uma balsa)
+G 1 3061 99 -1 	(uma canoa)
 M 0 3004 1 3020 	(o armeiro)
 E 1 3022 100 16 	(uma espada longa)
 G 1 3040 99 -1 	(um peitoral metálico)
@@ -68,7 +71,6 @@ M 0 3010 1 3062 	(o agente postal)
 M 0 3015 5 3062 	(o caçador de aventuras)
 M 0 3011 1 3034 	(Moe o Cartógrafo)
 E 1 3020 100 16 	(uma adaga)
-M 0 3006 1 3049 	(Capitão Stolar)
 M 0 3007 1 3050 	(o marinheiro)
 M 0 3009 1 3058 	(Wally o vendedor de água)
 G 1 6013 100 -1 	(um barril)
