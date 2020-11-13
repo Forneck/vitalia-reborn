@@ -13,14 +13,14 @@ Há uma escada de mão, minúscula, que conduz abaixo.
 alcapao~
 1 12033 12002
 E
-cartoes marcacao~
-Todos os cartões dos combatentes de hoje foram preenchidos, pelos juízes,
-com as suas avaliações. Parece que aquele Spartacus está tendo um dia bom.
-~
-E
 lapis~
 Um lápis preto comum, nº2. A se julgar pelas marcas de dentes na madeira,
 o dono deste lápis deveria consultar um dentista urgentemente!
+~
+E
+cartoes marcacao~
+Todos os cartões dos combatentes de hoje foram preenchidos, pelos juízes,
+com as suas avaliações. Parece que aquele Spartacus está tendo um dia bom.
 ~
 S
 #12002
@@ -221,14 +221,8 @@ ensurdecedor de tambores, lembrando o som de trovões.
 ~
 0 -1 12010
 E
-gladiador~
-Ele é um homem musculoso muito grande, usando muita armadura.  Ele mede você e
-e conclui que não vale a pena perder o tempo dele com você.
-~
-E
-condutor~
-O condutor está muito ocupado trocando uma roda de seu cocê para notar a sua
-presença.
+treinador~
+O treinador diz a você: "Pare de incomodar os meus atletas e desapareça!"
 ~
 E
 coche~
@@ -238,8 +232,14 @@ pintado em suas laterais identifica este cochê como pertencente a Drucilis
 "Chicote-Luminoso" Octavious, o condutor favorito das massas.
 ~
 E
-treinador~
-O treinador diz a você: "Pare de incomodar os meus atletas e desapareça!"
+condutor~
+O condutor está muito ocupado trocando uma roda de seu cocê para notar a sua
+presença.
+~
+E
+gladiador~
+Ele é um homem musculoso muito grande, usando muita armadura.  Ele mede você e
+e conclui que não vale a pena perder o tempo dele com você.
 ~
 S
 #12010
@@ -507,6 +507,11 @@ furtivamente por aí e segue naquela direção??!!  Por favor?
 ~
 0 -1 12013
 E
+rolo papel~
+Ei!!  Este material é de primeira classe!! - da marca Neve, e com loção
+refrescante.  O rolo está quase pela metade.
+~
+E
 banheiro buraco~
 Você se aproxima do buraco e vê que dentro há uma massa mole flutuando ali,
 naquela espécie de piscina de água preta, que se encontra a aproximadamente
@@ -515,11 +520,6 @@ olhar melhor, seu nariz recebe o impacto de uma dose concentrada do odor
 que aquela massa flutuante exala.  Seu estômago então decide que já teve o
 bastante deste tratamento nojento e você vomita até que esteja totalmente
 vazio.
-~
-E
-rolo papel~
-Ei!!  Este material é de primeira classe!! - da marca Neve, e com loção
-refrescante.  O rolo está quase pela metade.
 ~
 S
 #12021
@@ -694,14 +694,11 @@ Além das árvores, você vê uma pequena cabana bem simples.
 ~
 0 -1 12021
 E
-Venus~
-Venus, a Deusa Romana da beleza e sabedoria está representada com todos seu
-encanto e esplendor.
-~
-E
-Jupiter~
-Uma estátua feita de ouro puro retrata Jupiter sentado em seu trono.  O trono
-parece ser de prata.
+arvores arbustos plantas~
+Todos as plantas, árvores e arbustos, estão perfeitamente aparados, sem que
+uma única folha seca caída no chão, pudesse ser vista.  Você recebe de bom
+grado a gostosa sombra fornecida pelas árvores, que protege você dos rigores
+do sol quente.
 ~
 E
 Netuno~
@@ -710,11 +707,14 @@ tridente de cristal.  Ele está sentado no centro de um lago em cujo interior
 estão centenas de lindos peixes nadando.
 ~
 E
-arvores arbustos plantas~
-Todos as plantas, árvores e arbustos, estão perfeitamente aparados, sem que
-uma única folha seca caída no chão, pudesse ser vista.  Você recebe de bom
-grado a gostosa sombra fornecida pelas árvores, que protege você dos rigores
-do sol quente.
+Jupiter~
+Uma estátua feita de ouro puro retrata Jupiter sentado em seu trono.  O trono
+parece ser de prata.
+~
+E
+Venus~
+Venus, a Deusa Romana da beleza e sabedoria está representada com todos seu
+encanto e esplendor.
 ~
 S
 #12028
@@ -734,9 +734,9 @@ Você vê um caminho bem cuidado que corta a propriedade.
 ~
 0 -1 12027
 E
-chao azulejo~
-Muito caro! Muitos mestres artesãos trabalharam duro por um longo tempo
-para produzir tal uma obra de arte.
+moveis~
+Você espera que um dia possa ter condições de possuir uma peça de mobília
+igual a estas. Estes são apenas sonhos, é claro.
 ~
 E
 janelas~
@@ -744,9 +744,9 @@ Os vitrais são complexos e delicados e as cenas que eles descrevem honram
 a figura de vários os deuses.
 ~
 E
-moveis~
-Você espera que um dia possa ter condições de possuir uma peça de mobília
-igual a estas. Estes são apenas sonhos, é claro.
+chao azulejo~
+Muito caro! Muitos mestres artesãos trabalharam duro por um longo tempo
+para produzir tal uma obra de arte.
 ~
 S
 #12029
@@ -769,12 +769,12 @@ A Alameda Nero segue naquela direção.
 ~
 0 -1 12030
 E
-portao~
-O portão foi feito com ferro sólido e tem sido bem cuidado.
-~
-E
 estrada~
 A estrada é larga e muito lamacenta.
+~
+E
+portao~
+O portão foi feito com ferro sólido e tem sido bem cuidado.
 ~
 S
 #12030
@@ -856,15 +856,15 @@ aqueduto e dos edifícios do governo romano.
 ~
 0 -1 12033
 E
+aqueduto~
+Para o sudeste, bem distante, se encontra uma grande estrutura de pedra que 
+é usado para canalizar água para a cidade.
+~
+E
 vendedor vendores~
 Aqui existem muitos vendedores na calçada, vendendo frutas e legumes frescos,
 assados caseiros, jóias finas e muitos outros artigos. A maioria dos itens
 são de excelente qualidade.
-~
-E
-aqueduto~
-Para o sudeste, bem distante, se encontra uma grande estrutura de pedra que 
-é usado para canalizar água para a cidade.
 ~
 S
 #12033
@@ -950,7 +950,7 @@ D2
 O portão parece estar fechado e trancado para intrusos.
 ~
 portao~
-2 -1 -1
+2 -1 50
 E
 portao~
 O portão parece estar fechado e trancado para intrusos.
@@ -981,15 +981,8 @@ A porta do sul leva diretamente para a câmara do senado.
 porta madeira~
 2 12035 12037
 E
-escrivaninha~
-A escrivaninha foi feita com o mais sólido carvalho e com detalhes em ouro.
-Perfeitamente esculpida por hábil artesão, foi feita para pessoas com gosto
-apurado. Muito provavelmente foi trazida da Gália até Roma.
-~
-E
-documentos decretos papelada trabalho papeis~
-Todos os documentos foram escritos em pergaminhos egípcios e foram selados
-com o lacre real.
+flores plantas flor planta~
+As plantas contribuem para que a atmosfera seja extremamente relaxante.
 ~
 E
 estante livros~
@@ -997,8 +990,15 @@ Os livros são muito antigos e contém toda o conhecimento dos homens sábios ao
 longo de todo o império Romano.  Os livros parecem estar colecionando poeira.
 ~
 E
-flores plantas flor planta~
-As plantas contribuem para que a atmosfera seja extremamente relaxante.
+documentos decretos papelada trabalho papeis~
+Todos os documentos foram escritos em pergaminhos egípcios e foram selados
+com o lacre real.
+~
+E
+escrivaninha~
+A escrivaninha foi feita com o mais sólido carvalho e com detalhes em ouro.
+Perfeitamente esculpida por hábil artesão, foi feita para pessoas com gosto
+apurado. Muito provavelmente foi trazida da Gália até Roma.
 ~
 S
 #12037
@@ -1084,19 +1084,6 @@ Você pode ver uma rua movimentada naquela direção.
 ~
 0 -1 12033
 E
-telescopio~
-Se estivesse funcionando, o telescópio iria oferecer uma vista espetacular
-do Monte dos Deuses.  Desafortunadamente, parece que vândalos estiveram
-agindo por aqui.
-~
-E
-aqueduto~
-O aqueduto é uma estrutura de pedra maciça que é usado como canal
-distribuidor de água do Monte dos Deuses para Roma.  Durante a estação das
-chuvas, ele fica completamente cheio de água.  Todavida, devido a uma seca
-recente, o nível da água parece estar bem baixo.
-~
-E
 sinal~
 
          *********************************************
@@ -1109,6 +1096,19 @@ sinal~
          *                                           *
          *********************************************
 
+~
+E
+aqueduto~
+O aqueduto é uma estrutura de pedra maciça que é usado como canal
+distribuidor de água do Monte dos Deuses para Roma.  Durante a estação das
+chuvas, ele fica completamente cheio de água.  Todavida, devido a uma seca
+recente, o nível da água parece estar bem baixo.
+~
+E
+telescopio~
+Se estivesse funcionando, o telescópio iria oferecer uma vista espetacular
+do Monte dos Deuses.  Desafortunadamente, parece que vândalos estiveram
+agindo por aqui.
 ~
 S
 #12041
@@ -1256,12 +1256,12 @@ Os degraus terminam na Avenida Clay.
 ~
 0 -1 12046
 E
-escadas degraus~
-As escadas são cuidadosamente polidas e feitas do mais puro mármore branco.
-~
-E
 estatua estatuas~
 Não existe nada realmente notável sobre elas.
+~
+E
+escadas degraus~
+As escadas são cuidadosamente polidas e feitas do mais puro mármore branco.
 ~
 S
 #12046
@@ -1294,15 +1294,15 @@ Ali estão alguns degraus de mármore branco que seguem para cima.
 ~
 0 -1 12045
 E
-pedra estrutura aqueduto~
-Você vê uma maciça estrutura de pedra, construída há alguns séculos atrás,
-que é usada para conduzir água para a cidade.
-~
-E
 montanha~
 Longe, ao sudoeste, você pode ver uma imensa montanha que está parcialmente
 encoberta por algumas nuvens.  Existem rumores de que deuses residem ali
 e protegem a cidade.
+~
+E
+pedra estrutura aqueduto~
+Você vê uma maciça estrutura de pedra, construída há alguns séculos atrás,
+que é usada para conduzir água para a cidade.
 ~
 S
 #12047
@@ -1387,14 +1387,14 @@ Naquela direção, há uma porta reforçada com aço.
 porta~
 2 12038 12042
 E
-bancada trabalho tubos pratos provetas~
-Estas são todas ferramentas de grande poder.  Você nem mesmo pode começar a
-entender o que nada disso faz.
-~
-E
 cinzas carvao pilha~
 As cinzas são um pó, de um branco acinzentado muito fino, que parece ser as
 únicas coisas que sobraram das cobaias de teste de Froboz.
+~
+E
+bancada trabalho tubos pratos provetas~
+Estas são todas ferramentas de grande poder.  Você nem mesmo pode começar a
+entender o que nada disso faz.
 ~
 S
 #12050
@@ -1424,14 +1424,14 @@ A sala de espera fica naquela direção.
 ~
 0 -1 12043
 E
+insignias~
+As insígnias do Imperador estão expostas acima do posto do juíz.
+~
+E
 banco posto caixa juri~
 Você vê grandes estruturas de madeira que foram projetadas para separar o
 juiz, júri, e testemunhas do resto da sala de tribunal.  Eles são feitos de
 carvalho polido e são estritamente funcionais.
-~
-E
-insignias~
-As insígnias do Imperador estão expostas acima do posto do juíz.
 ~
 S
 #12051
@@ -1456,15 +1456,15 @@ A rua de terra segue na direção da cidade.
 ~
 0 -1 12046
 E
+portao~
+O portão foi feito com o mais forte ferro e foi projetado para manter os
+instrusos fora da cidade.
+~
+E
 pinaculos torres~
 Existem duas torres bem altas nas laterais do portão que são permanentemente
 usadas como torres de vigia, pelos guardas da cidade.  Elas são feitas de
 pedra e tem aproximadamente 40 pés de altura.
-~
-E
-portao~
-O portão foi feito com o mais forte ferro e foi projetado para manter os
-instrusos fora da cidade.
 ~
 S
 #12052
@@ -1540,14 +1540,14 @@ A corte se encontra naquela direção.
 porta~
 1 12039 12050
 E
-processos livros~
-Os livros são muito grandes e versam sobre direito Romano.
-~
-E
 papeis documentos~
 Sobre a escrivaninha se encontram centenas de páginas de petições,
 projetos de lei e ordens judiciais.  Um caso particularmente interessante
 envolve um homem da nobreza, um escravo e um rolo de papel higiênico.
+~
+E
+processos livros~
+Os livros são muito grandes e versam sobre direito Romano.
 ~
 S
 #12056
@@ -1569,14 +1569,14 @@ Você vê uma pequenina trilha, que segue para baixo.
 ~
 0 -1 12059
 E
-arvores vegetacao~
-Toda a vegetação é abundante, verde e totalmente florida.  Você desejaria
-ter mais tempo para parar por aqui e aproveitar o local mais adequadamente.
-~
-E
 trilha caminho~
 O caminho é ligeiramente barrento, provavelmente por causa de uma recente
 tempestade.
+~
+E
+arvores vegetacao~
+Toda a vegetação é abundante, verde e totalmente florida.  Você desejaria
+ter mais tempo para parar por aqui e aproveitar o local mais adequadamente.
 ~
 S
 #12057
@@ -1639,19 +1639,19 @@ Você vê um caminho que segue montanha acima.
 ~
 0 -1 12059
 E
-fluxo riacho~
-Um fluxo da mais clara e limpa água que você já viu em sua vida, vai abrindo
-caminho através do vale.
+arvores frutas~
+As árvores frutíferas, nutridas pelo solo fértil do vale e regadas pela suave
+correnteza do pequeno córrego, são acariadas pelos raios de sol brilhante,
+e estão carregadas de fruta.
 ~
 E
 peixe~
 Uma grande variedade de espécimes nada calmamente na água pura e cristalina.
 ~
 E
-arvores frutas~
-As árvores frutíferas, nutridas pelo solo fértil do vale e regadas pela suave
-correnteza do pequeno córrego, são acariadas pelos raios de sol brilhante,
-e estão carregadas de fruta.
+fluxo riacho~
+Um fluxo da mais clara e limpa água que você já viu em sua vida, vai abrindo
+caminho através do vale.
 ~
 S
 #12059
