@@ -667,7 +667,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			}
 			/* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos 
 			   o = cmd, arg = vnum -- forneck */
-			output[0] = ((float) cmd / 780);
+			output[0] = ((float) cmd / 784);
 			output[1] = 1/(1+exp(-CMD_TYPE));
 			output[2] = 1/(1+exp(-skill->vnum));
 			output[3] = 1/(1+exp(- CMD_ARG_SKILL));
@@ -756,7 +756,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		/* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos o = 
 		   cmd, arg = (baseado no comando) -- forneck */
 	{
-		output[0] = ((float) cmd / 780);
+		output[0] = ((float) cmd / 784);
 		output[1] = 1/(1+exp(-CMD_TYPE));
 	
 		if (CMD_TYPE == (CMD_ONEARG))
