@@ -935,7 +935,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 
 		if ((GET_IDNUM(ch) == 1) || (GET_IDNUM(ch) == 20))
 		{
-			send_to_char(ch, "%f, %f, %f, %f, %f, %f, %d\r\n", output[0], output[1], output[2], output[3],
+		   send_to_char(ch, "INPUTS Sala %f\r\n", input[7]);
+			send_to_char(ch, "OUTPUT: %f, %f, %f, %f, %f, %f, %d\r\n", output[0], output[1], output[2], output[3],
 						 output[4], output[5], cmd);
 		}
 		fann_destroy(ann);
