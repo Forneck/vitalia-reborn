@@ -1,30 +1,30 @@
-Nov 13 02:47:17 2020 :: Cansian (level 110) has 40 objects (max 100).
-Nov 13 02:48:41 2020 :: OLC: Cansian starts editing zone 113 allowed zone 0
-Nov 13 02:49:59 2020 :: OLC: Cansian edits zone info for room 11348.
-Nov 13 02:49:59 2020 :: OLC: Cansian stops editing zone 113 allowed zone 0
-Nov 13 02:50:34 2020 :: OLC: Cansian starts editing zone 113 allowed zone 0
-Nov 13 02:51:31 2020 :: OLC: Cansian stops editing zone 113 allowed zone 0
-Nov 13 02:52:10 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 13 02:52:10 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 22176
-Nov 13 02:53:15 2020 :: OLC: Cansian starts editing zone 113 allowed zone 0
-Nov 13 02:54:32 2020 :: WARNING: EOF on socket read (connection broken by peer)
-Nov 13 02:54:32 2020 :: Closing link to: Cansian.
-Nov 13 02:54:32 2020 :: OLC: Cansian stops editing zone 113 allowed zone 0
-Nov 13 02:54:32 2020 :: No connections.  Going to sleep.
-Nov 13 02:56:23 2020 :: New connection.  Waking up.
-Nov 13 02:56:26 2020 :: Cansian [177.220.172.173] has reconnected.
-Nov 13 02:56:40 2020 :: OLC: Cansian starts editing zone 113 allowed zone 0
-Nov 13 02:56:52 2020 :: OLC: Cansian stops editing zone 113 allowed zone 0
-Nov 13 02:56:56 2020 :: OLC: Cansian starts editing zone 113 allowed zone 0
-Nov 13 02:59:01 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 13 02:59:01 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 22316
-Nov 13 03:00:06 2020 :: OLC: Cansian edits zone info for room 11355.
-Nov 13 03:00:06 2020 :: OLC: Cansian stops editing zone 113 allowed zone 0
-Nov 13 03:00:13 2020 :: (GC) Reboot by Cansian.
-Nov 13 03:00:13 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 13 03:00:13 2020 :: Closing all sockets.
-Nov 13 03:00:13 2020 :: Closing link to: Cansian.
-Nov 13 03:00:13 2020 :: Saving current MUD time.
-Nov 13 03:00:13 2020 :: Rebooting.
-Quick boot mode -- rent check supressed.
-Using file descriptor for logging.
+Nov 13 03:50:48 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 21948
+Nov 13 03:50:50 2020 :: OLC: Cansian edits zone info for room 12006.
+Nov 13 03:50:50 2020 :: OLC: Cansian stops editing zone 120 allowed zone 0
+Nov 13 03:51:02 2020 :: (GC) Cansian reset zone 120 (Roma)
+Nov 13 03:51:50 2020 :: Andrus has connected.
+Nov 13 03:51:54 2020 :: Andrus had no variable file
+Nov 13 03:51:54 2020 :: Andrus un-renting and entering game.
+Nov 13 03:51:54 2020 :: Andrus (level 1) has 1 object (max 100).
+Nov 13 03:51:55 2020 :: OLC: Cansian starts editing zone 120 allowed zone 0
+Nov 13 03:52:12 2020 :: OLC: Cansian edits shop 12011
+Nov 13 03:52:12 2020 :: OLC: Cansian stops editing zone 120 allowed zone 0
+Nov 13 03:52:23 2020 :: (GC) Cansian reset zone 120 (Roma)
+Nov 13 03:53:00 2020 :: (GC) Cansian reset zone 120 (Roma)
+Nov 13 03:53:19 2020 :: Andrus has quit the game.
+Nov 13 03:53:46 2020 :: OLC: Cansian starts editing zone 120 allowed zone 0
+Nov 13 03:55:08 2020 :: OLC: Cansian edits shop 12011
+Nov 13 03:55:08 2020 :: OLC: Cansian stops editing zone 120 allowed zone 0
+Nov 13 03:55:48 2020 :: nusage: 2   sockets connected, 1   sockets playing
+Nov 13 03:55:48 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 22200
+Nov 13 03:55:58 2020 :: OLC: Cansian starts editing zone 120 allowed zone 0
+Nov 13 03:57:02 2020 :: OLC: Cansian edits zone info for room 12032.
+Nov 13 03:57:02 2020 :: OLC: Cansian stops editing zone 120 allowed zone 0
+Nov 13 03:57:05 2020 :: (GC) Cansian purged zone 120 (Roma)
+Nov 13 03:57:08 2020 :: (GC) Cansian reset zone 120 (Roma)
+Nov 13 03:58:00 2020 :: OLC: Cansian starts editing zone 120 allowed zone 0
+Nov 13 03:59:05 2020 :: OLC: Cansian edits zone info for room 12006.
+Nov 13 03:59:05 2020 :: OLC: Cansian stops editing zone 120 allowed zone 0
+Nov 13 03:59:09 2020 :: (GC) Cansian purged zone 120 (Roma)
+Nov 13 03:59:13 2020 :: (GC) Cansian reset zone 120 (Roma)
+Segmentation fault (core dumped)

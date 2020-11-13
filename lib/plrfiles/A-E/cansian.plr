@@ -7,7 +7,7 @@ Levl: 110
 Id  : 1
 Brth: 1601790482
 Plyd: 517636
-Last: 1605236427
+Last: 1605240091
 Lmot: 1604953234
 Lnew: 1605123013
 Htwn: 1372
@@ -32,7 +32,7 @@ Ac  : 100
 Gold: 1207103
 Exp : 7000001
 Olc : 0
-Alis: 8
+Alis: 7
  tiro
  load o 11325;put tir quiver;shoot $1 $2
 1
@@ -48,9 +48,6 @@ Alis: 8
  sa
  say @Y$*@n
 1
- reset
- shutdown reboot
-0
  ha
  history all
 0

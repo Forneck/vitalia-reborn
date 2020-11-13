@@ -7,10 +7,10 @@ O juiz é um gladiador aposentado e todas as partes expostas de seu corpo
 estão cobertas por feias cicatrizes. Apesar dos anos que já pesam sobre ele,
 permanece sadio e em boa forma.
 ~
-2099202 0 0 0 256 0 0 0 100 E
+2099202 0 0 0 0 0 0 0 100 E
 12 9 2 3d7+140 1d7+4
 2000 13000
-8 8 1
+9 9 1
 E
 #12001
 marcador~
@@ -23,7 +23,7 @@ seu bloco de anotações.
 2156546 0 0 0 0 0 0 0 100 E
 7 14 4 3d5+80 1d4+3
 500 2250
-8 8 1
+9 9 1
 E
 #12003
 espectador~
@@ -47,10 +47,10 @@ sendo muito esnobe, por causa de suas atitudes. Apesar de estar envelhecendo
 e seu cabelo e barba estarem ficando grisalhos, ele continua sendo uma pessoa
 não muito fácil de se domar.
 ~
-2099330 0 0 0 16 0 0 0 500 E
+2099330 0 0 0 0 0 0 0 500 E
 12 9 2 4d6+140 1d7+5
 3500 13000
-8 8 1
+9 9 1
 E
 #12005
 escrava~
@@ -63,7 +63,7 @@ legiões Romanas invadiram e dominaram a sua terra.
 2097154 0 0 0 0 0 0 0 0 E
 3 18 7 3d6+30 1d7+0
 10 350
-8 8 2
+9 9 2
 E
 #12006
 gladiador~
@@ -76,7 +76,7 @@ até os dentes. Ele vive para combater.
 2097154 0 0 0 0 0 0 0 -250 E
 14 5 0 4d7+150 1d8+6
 700 12500
-8 8 1
+9 9 1
 E
 #12007
 condutor~
@@ -89,7 +89,7 @@ seu trabalho com a velocidade e os cavalos.
 2097154 0 0 0 0 0 0 0 100 E
 10 11 2 3d7+120 2d6+1
 1200 9000
-8 8 1
+9 9 1
 E
 #12008
 treinador~
@@ -103,7 +103,7 @@ todos os seus ossos congelarem.
 2099202 0 0 0 0 0 0 0 0 E
 11 10 2 4d5+130 2d6+1
 500 10000
-8 8 1
+9 9 1
 E
 #12009
 curandeiro~
@@ -113,10 +113,10 @@ Um curandeiro está parando aqui.
 Você vê um homem jovem, ainda aprendendo sobre curas mágicas, vestindo um
 casaco branco e usando um estetoscópio.
 ~
-2099218 0 0 0 16 0 0 0 900 E
+2099218 0 0 0 0 0 0 0 900 E
 14 7 1 2d7+170 1d7+6
 1500 12000
-8 8 1
+9 9 1
 E
 #12010
 herborista jovem~
@@ -128,10 +128,10 @@ Ela tem olhos marrons profundos e seus cabelos castanhos batem em seus ombros.
 O corpo dela é perfeitamente proporcional e ela tem aproximadamente 1 metro e
 65 centímetros de altura.
 ~
-2099330 0 0 0 16 0 0 0 1000 E
+2099330 0 0 0 0 0 0 0 1000 E
 10 11 2 3d4+110 1d7+4
 500 8000
-8 8 2
+9 9 2
 E
 #12011
 lojista~
@@ -143,10 +143,10 @@ que parece gostar de sua vida pacata. Há uma longa cicatriz que percorre
 seu rosto desde o canto de sua boca até a orelha direita, dando a ele a
 falsa impressão de que ele está sempre sorrindo.
 ~
-2156546 0 0 0 272 0 0 0 750 E
+2156546 0 0 0 0 0 0 0 750 E
 108 0 -2 4d10+400 3d8+12
 5000 80000
-8 8 1
+9 9 1
 E
 #12012
 pedinte~
@@ -158,7 +158,7 @@ Você vê um homem pequeno e sujo, que não parece muito saudável.
 2154688 0 0 0 0 0 0 0 250 E
 4 17 6 3d4+40 1d8+0
 100 600
-8 8 1
+9 9 1
 E
 #12013
 pajem~
@@ -171,7 +171,7 @@ aparência de um estudante.
 2097154 0 0 0 0 0 0 0 0 E
 6 15 4 3d6+75 2d4+1
 0 1600
-8 8 1
+9 9 1
 E
 #12014
 queixoso~
@@ -183,7 +183,7 @@ Seu estado é lamentável. Absolutamente lamentável.
 2097154 0 0 0 0 0 0 0 0 E
 11 10 2 3d6+140 2d6+3
 1000 12000
-8 8 1
+9 9 1
 E
 #12015
 cambista~
@@ -197,7 +197,7 @@ que realmente querem compra-los.
 2099202 0 0 0 0 0 0 0 100 E
 17 4 1 4d8+210 1d6+11
 4000 28000
-8 8 1
+9 9 1
 E
 #12016
 vendedor~
@@ -211,7 +211,7 @@ espectadores bons de discussão.
 2154560 0 0 0 0 0 0 0 -150 E
 8 13 3 2d4+13000 2d5+15
 500 3700
-8 8 1
+9 9 1
 E
 #12017
 cidadao~
@@ -223,7 +223,7 @@ Parece ser mais um cidadão comum, se dirigindo para o seu trabalho.
 2099264 0 0 0 0 0 0 0 900 E
 5 16 5 1d4+85 1d8+1
 100 1000
-8 8 1
+9 9 1
 E
 #12018
 sentinela guarda~
@@ -235,7 +235,7 @@ Você vê um defensor público forte e leal.
 2099222 0 0 0 0 0 0 0 1000 E
 11 10 2 3d6+130 1d6+5
 500 11000
-8 8 1
+9 9 1
 E
 #12019
 soldado~
@@ -249,7 +249,7 @@ vai ser uma atividade saudável.
 2099264 0 0 0 0 0 0 0 300 E
 17 4 -1 3d5+220 1d6+9
 1281 28000
-8 8 1
+9 9 1
 E
 #12020
 imperador julius caesar~
@@ -259,10 +259,10 @@ Julius Caesar, o Imperador de Roma, está sentado aqui.
 Você vê um homem que está vestido com as melhores roupas, que comeu a melhor
 das comidas e morou no palácio mais opulento que Roma jamais conheceu.
 ~
-2123778 0 0 0 65808 0 0 0 990 E
+2123778 0 0 0 0 0 0 0 990 E
 27 0 -7 10d5+650 3d7+15
 24763 150000
-8 8 1
+9 9 1
 E
 #12021
 guarda-costas~
@@ -275,10 +275,10 @@ briga com ele seria um inferno.  Ele foi treinado para suspeitar de tudo e
 de todos, menos das visitas inocentes, e está pronto para atacar aqueles que
 tiverem as menores das intenções.
 ~
-2100514 0 0 0 16 0 0 0 990 E
+2100514 0 0 0 0 0 0 0 990 E
 18 2 0 3d6+220 1d6+6
 5000 35000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 18
 StrAdd: 90
@@ -308,7 +308,7 @@ pergunta, 'Você gostaria de marcar um?'
 2099202 0 0 0 0 0 0 0 900 E
 17 3 0 4d4+210 1d6+9
 3000 28000
-8 8 1
+9 9 1
 E
 #12024
 bola visguenta verde~
@@ -317,10 +317,10 @@ Uma bola de limbo verde está pendurada sobre você, escorrendo para baixo.
 ~
 Uma bola verde de lodo escorrendo atraves das paredes.
 ~
-2293798 0 0 0 2128 0 0 0 -500 E
+2293798 0 0 0 0 0 0 0 -500 E
 12 9 2 3d4+145 2d6+2
 0 13000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Int: 3
 E
@@ -332,10 +332,10 @@ Froboz o mago se encontra aqui, praticando em uma nova magia.
 Você vê um homem de meia idade, cujo conhecimento de magia, tanto ofensiva
 quanto defensiva, é lendário. Ele literalmente brilha com uma aura rosada.
 ~
-2123794 0 0 0 272 0 0 0 300 E
+2123794 0 0 0 0 0 0 0 300 E
 23 0 -3 5d10+425 1d8+14
 32000 95000
-8 8 1
+9 9 1
 E
 #12026
 titus andronicus~
@@ -345,10 +345,10 @@ Titus Andronicus se encontra aqui, polindo suas novas espadas.
 Quando você olha para ele, ele de repente desembainha uma de suas espadas,
 recentemente afiadas e fita você com um olhar furioso!! Caia fora!
 ~
-2123826 0 0 0 272 0 0 0 500 E
+2123826 0 0 0 0 0 0 0 500 E
 24 0 -5 1d5+450 1d8+14
 31000 85000
-8 8 1
+9 9 1
 BareHandAttack: 3
 E
 #12027
@@ -362,7 +362,7 @@ toga.
 2099202 0 0 0 0 0 0 0 350 E
 10 11 2 3d5+120 2d6+1
 500 9000
-8 8 1
+9 9 1
 E
 #12028
 beleguim~
@@ -373,10 +373,10 @@ Ele é um homem muito severo e insiste que o mais absoluto silêncio seja feito
 na sala do tribunal em que ele trabalha. Podem falar apenas os que o juiz
 der permissão.
 ~
-2099202 0 0 0 16 0 0 0 900 E
+2099202 0 0 0 0 0 0 0 900 E
 16 5 1 1d5+200 2d7+4
 1000 24000
-8 8 1
+9 9 1
 E
 #12029
 defensora~
@@ -388,7 +388,7 @@ Ela parece ser bem organizada e cheia de confiança em si mesma.
 2099202 0 0 0 0 0 0 0 200 E
 11 9 1 3d6+130 2d7+1
 500 11000
-8 8 2
+9 9 2
 E
 #12030
 jupiter rei deus~
@@ -399,10 +399,10 @@ Ele é o mais forte dos Deuses, e certamente nem um pouco fácil!  Os poderes
 dele transcendem o plano físico, e ele poderia facilmente matar um mortal
 despreparado.
 ~
-2353458 0 0 0 330000 0 0 0 1000 E
+2353458 0 0 0 0 0 0 0 1000 E
 107 -60 -60 10d100+19000 15d12+80
 150000 13000000
-8 8 1
+9 9 1
 BareHandAttack: 10
 Str: 25
 Dex: 25
@@ -420,7 +420,7 @@ Venus é provalemente uma das mulheres mais lindas que você já viu, senão
 A MAIS maravilhosa. Apesar de toda esta aparência de pura beleza e perfeição,
 seus poderes são inimagináveis.
 ~
-2353170 0 0 0 330000 0 0 0 1000 E
+2353170 0 0 0 0 0 0 0 1000 E
 105 -40 -45 7d100+16500 12d12+60
 80000 8000000
 5 5 2
@@ -440,7 +440,7 @@ Marte, o Deus da Guerra e do Estado, está sentado aqui.
 Marte é um Deus alto, com olhos ardentes e perigosos. O cenho franzido
 dá a ele um ar aterrorizante.
 ~
-2353170 0 0 0 67856 0 0 0 1000 E
+2353170 0 0 0 0 0 0 0 1000 E
 103 -40 -40 10d100+14800 15d10+52
 60000 6000000
 6 6 1
@@ -459,10 +459,10 @@ Mercúrio, o mensageiro dos Deuses, se encontra aqui.
 ~
 Mercúrio é um Deus bonito e jovem e possui um ar malicioso em seu rosto.
 ~
-2353170 0 0 0 67600 0 0 0 1000 E
+2353170 0 0 0 0 0 0 0 1000 E
 101 -25 -30 8d20+12300 11d11+45
 40000 3000000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 20
 Dex: 25
@@ -481,10 +481,10 @@ que parece gostar de sua vida pacata. Há uma longa cicatriz que percorre seu
 rosto desde o canto de sua boca até a orelha direita, dando a ele a falsa
 impressão de que ele está sempre sorrindo.
 ~
-2123778 0 0 0 272 0 0 0 650 E
+2123778 0 0 0 0 0 0 0 650 E
 60 0 -2 4d10+400 1d8+14
 5000 80000
-8 8 1
+9 9 1
 E
 #12035
 carrasco~
@@ -494,10 +494,10 @@ O carrasco se encontra aqui, esperando para torturar alguma pobre alma.
 Você vê um homem forte que está usando um capuz preto que encobre sua face.
 Suas atitudes são muito sádicas e ele claramente adora aquilo que faz.
 ~
-2121766 0 0 0 16 0 0 0 -1000 E
+2121766 0 0 0 0 0 0 0 -1000 E
 20 1 0 2d6+260 2d2+14
 1000 40000
-8 8 1
+9 9 1
 E
 #12036
 padeiro~
@@ -507,10 +507,10 @@ O padeiro olha você calmamente, limpando a farinha em seu rosto, com a mão.
 Um gordo e bem apessoado padeiro. Mas você pode ver que ele possui muitas
 cicatrizes em seu corpo.
 ~
-2156546 0 0 0 16400 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 6d10+30000 2d8+22
 2000 80000
-8 8 1
+9 9 1
 E
 #12037
 merceeiro~
@@ -520,9 +520,9 @@ Um merceeiro está atrás do balcão, com um olhar ligeiramente impaciente.
 Um merceeiro alto, que consegue carregar dois sacos de trigo, pesando 200
 libras cada um, em seus ombros.
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+22
 20000 80000
-8 8 1
+9 9 1
 E
 $
