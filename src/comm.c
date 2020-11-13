@@ -1239,15 +1239,16 @@ static char *make_prompt(struct descriptor_data *d)
 		*prompt = '\0';
 
 	      if (PRF_FLAGGED(d->character, PRF_HITBAR) && FIGHTING(d->character) &&
-      GET_POS(FIGHTING(d->character)) > POS_STUNNED)
-    sprintf(prompt, "%s: %s\r\n",
-        PERS(FIGHTING(d->character), d->character),
-        gauge(0, 0, MAX(GET_HIT(FIGHTING(d->character)), 0), GET_MAX_HIT(FIGHTING(d->character))));
-      else
-    sprintf(prompt, "%s", CCNRM(d->character, C_NRM));
-    
-    
-    
+      GET_POS(FIGHTING(d->character)) > POS_STUNNED) {
+     count =  snprintf(prompt + len, sizeof(prompt) - len, "%s: %s\r\n", PERS(FIGHTING(d->character), d->character), gauge(0, 0, MAX(GET_HIT(FIGHTING(d->character)), 0), GET_MAX_HIT(FIGHTING(d->character)))); 
+     	if (count >= 0)
+					len += count;
+     }
+      else {
+    count = snprintf(prompt + len, sizeof(prompt) - len, "%s", CCNRM(d->character, C_NRM));
+    	if (count >= 0)
+					len += count;
+      }
 		if (GET_INVIS_LEV(d->character) && len < sizeof(prompt))
 		{
 			count =
