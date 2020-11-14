@@ -1,0 +1,34 @@
+CircleMUD v3.0 Shop File~
+#22100~
+22100
+22101
+22102
+22103
+22104
+22105
+22106
+22107
+22108
+22109
+-1
+1.00
+1.00
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+22100
+0
+22102
+-1
+0
+28
+0
+0
+$~

@@ -1,0 +1,119 @@
+CircleMUD v3.0 Shop File~
+#20405~
+3000
+3001
+3002
+3003
+3004
+-1
+1.10
+1.00
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+20405
+984
+20476
+-1
+0
+28
+0
+0
+#20410~
+5497
+20426
+20427
+20428
+20429
+-1
+1.00
+0.50
+5
+29
+7
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+20410
+984
+20489
+-1
+0
+28
+0
+0
+#20411~
+3030
+3031
+3032
+3033
+-1
+1.00
+0.50
+1
+8
+12
+15
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+20411
+984
+20491
+-1
+0
+28
+0
+0
+#20413~
+20430
+20431
+20432
+20433
+20434
+20435
+20436
+-1
+1.00
+0.50
+9
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+20413
+984
+20490
+-1
+0
+28
+0
+0
+$~
