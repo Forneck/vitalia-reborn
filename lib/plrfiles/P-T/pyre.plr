@@ -6,25 +6,25 @@ Clas: 6
 Levl: 29
 Id  : 33
 Brth: 1604948074
-Plyd: 12597
-Last: 1605296635
+Plyd: 14937
+Last: 1605322838
 Lmot: 1604969004
 Lnew: 1605292472
 Htwn: 1372
 Host: 177.35.231.240
 Hite: 174
 Wate: 123
-Alin: -90
-Act : gh 0 0 0
+Alin: 50
+Act : hy 0 0 0
 Aff : 0 0 0 0
 Pref: efghkno d 0 0
 Wimp: 5
 Room: 3001
-Hung: 16
-Thir: 16
-Hit : 327/312
-Mana : 228/228
-Move: 158/158
+Hung: -1
+Thir: -1
+Hit : 1/312
+Mana : 1/228
+Move: 1/158
 Str : 17/0
 Int : 12
 Wis : 10
@@ -32,11 +32,11 @@ Dex : 13
 Con : 13
 Cha : 10
 Ac  : 100
-Gold: 3242
-Exp : 6526688
+Exp : 6123336
 Olc : 0
 Page: 30
 ScrW: 100
+Dth: 1
 Skil:
 16 66
 57 90
@@ -46,14 +46,10 @@ Skil:
 232 90
 251 90
 0 0
-Affs:
-96 2 -4 17 0 0 0 0
-96 2 0 61 0 16 0 0
-0 0 0 0 0 0 0 0
 Alis: 2
- cure
- c 'cure light'
-0
  minor
  c 'minor healing' $*
 1
+ cure
+ c 'cure light'
+0

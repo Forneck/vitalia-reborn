@@ -62,7 +62,7 @@ Uma grande tocha foi perdida aqui.~
 ~
 1 a 0 0 0 ao 0 0 0 0 0 0 0
 0 0 36 0
-2 0 0 0 0
+2 100 0 0 0
 #13416
 perneiras~
 um par de perneiras~
@@ -128,7 +128,7 @@ papel~
 um pedaço de papel~
 Um pedaço de papel amassado está jogado aqui.~
 ~
-12 f 0 0 0 ao 0 0 0 0 0 0 0
+16 f 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300 0 0 0
 #13424
@@ -136,7 +136,7 @@ pedaco giz~
 um pedaço de giz~
 Um pedaço de giz branco foi deixado no chão.~
 ~
-12 c 0 0 0 ao 0 0 0 0 0 0 0
+21 c 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300 0 0 0
 #13425
@@ -209,7 +209,7 @@ Uma bengala foi perdida aqui.~
 #13436
 manto azul~
 um manto azul~
-undefined~
+Undefined~
 ~
 9 0 0 0 0 ak 0 0 0 0 0 0 0
 4 0 0 0
@@ -221,7 +221,7 @@ Uma chave de madeira está jogada aqui.~
 ~
 18 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 0 0 0 0
+1 100 0 0 0
 #13438
 pocao elfica~
 uma poção élfica~

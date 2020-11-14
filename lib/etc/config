@@ -249,5 +249,5 @@ protocol_negotiation = 1
 special_in_comm = 1
 
 * If 0 then off, otherwise 1: Brief, 2: Normal, 3: Complete.
-debug_mode = 3
+debug_mode = 0
 

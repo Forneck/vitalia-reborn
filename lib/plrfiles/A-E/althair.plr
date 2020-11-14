@@ -6,26 +6,26 @@ Clas: 6
 Levl: 11
 Id  : 20
 Brth: 1603768097
-Plyd: 114330
-Last: 1605309669
+Plyd: 115548
+Last: 1605311159
 Lmot: 1604953247
 Lnew: 1605129579
 Htwn: 1372
-Host: 127.0.0.1
+Host: 177.220.172.173
 Hite: 195
 Wate: 172
-Alin: 165
+Alin: 269
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDE abde 0 0
 Wimp: 30
 Room: 3001
 Lern: 2
-Hung: 9
-Thir: 20
-Hit : 181/136
-Mana : 135/135
-Move: 114/116
+Hung: 23
+Thir: 9
+Hit : 160/136
+Mana : 24/135
+Move: 124/116
 Str : 16/0
 Int : 14
 Wis : 12
@@ -33,8 +33,8 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Gold: 101342
-Exp : 602649
+Gold: 104302
+Exp : 653386
 Olc : 0
 ScrW: 44
 Skil:
@@ -48,21 +48,21 @@ Skil:
 251 90
 0 0
 Affs:
-36 21 0 33 256 0 0 0
+36 5 0 33 256 0 0 0
 0 0 0 0 0 0 0 0
 Alis: 5
- ha
- history all
-0
- recall
- cast 'word of recall' $*
-1
- gd
- get $1;don $1
+ s;s;w;n
+ s;s;w;n
 1
  fonte
  w;w;w;drink fonte
 1
- s;s;w;n
- s;s;w;n
+ gd
+ get $1;don $1
 1
+ recall
+ cast 'word of recall' $*
+1
+ ha
+ history all
+0
