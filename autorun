@@ -93,7 +93,7 @@ proc_syslog () {
   IFS='
 '
   for rec in $LOGFILES; do
-    name=log/`echo $rec|cut -f 1 -d:`
+    name=lib/log/`echo $rec|cut -f 1 -d:`
     len=`echo $rec|cut -f 2 -d:`
     pattern=`echo $rec|cut -f 3- -d:`
 
@@ -107,21 +107,21 @@ proc_syslog () {
   IFS=$OLD_IFS
 
   # Find the # to set the new log file to.
-  if [ -s log/syslog.$BACKLOGS ]; then
+  if [ -s lib/log/syslog.$BACKLOGS ]; then
     newlog=$(expr $BACKLOGS + 1)
   else
     newlog=1 
-    while [ -s log/syslog.$newlog ]; do newlog=$(expr $newlog + 1); done 
+    while [ -s lib/log/syslog.$newlog ]; do newlog=$(expr $newlog + 1); done 
   fi
 
   # Rotate the logs.
   y=2
   while [ $y -lt $newlog ]; do
     x=$(expr $y - 1)
-    mv -f log/syslog.$y log/syslog.$x
+    mv -f log/syslog.$y lib/log/syslog.$x
     y=$(expr $y + 1)
   done
-  mv -f syslog log/syslog.$newlog
+  mv -f syslog lib/log/syslog.$newlog
 }
 
 ########
