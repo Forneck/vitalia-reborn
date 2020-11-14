@@ -1,0 +1,84 @@
+CircleMUD v3.0 Shop File~
+#14023~
+14016
+14067
+14068
+14069
+14070
+-1
+1.50
+0.30
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+14023
+0
+14011
+-1
+0
+28
+0
+0
+#14031~
+14080
+14081
+14082
+14083
+-1
+1.50
+0.30
+28
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+14031
+0
+14062
+-1
+0
+28
+0
+0
+#14033~
+14074
+14075
+14076
+14077
+14078
+14079
+-1
+1.50
+0.30
+-1
+%s Sorry, I don't stock that item.~
+%s You don't seem to have that.~
+%s I don't trade in such items.~
+%s I can't afford that!~
+%s You are too poor!~
+%s That'll be %d coins, thanks.~
+%s I'll give you %d coins for that.~
+0
+2
+14033
+0
+14061
+-1
+0
+28
+0
+0
+$~

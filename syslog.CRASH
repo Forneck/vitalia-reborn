@@ -1,30 +1,30 @@
-Nov 13 23:16:34 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
-Nov 13 23:16:34 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Nov 13 23:16:34 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Nov 13 23:16:34 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Nov 13 23:16:34 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Nov 13 23:16:34 2020 :: Boot db -- DONE.
-Nov 13 23:16:34 2020 :: Signal trapping.
-Nov 13 23:16:34 2020 :: Entering game loop.
-Nov 13 23:16:34 2020 :: No connections.  Going to sleep.
-Nov 13 23:16:34 2020 :: New connection.  Waking up.
-Nov 13 23:16:41 2020 :: Cansian has connected.
-Nov 13 23:16:42 2020 :: Cansian had no variable file
-Nov 13 23:16:42 2020 :: Cansian un-renting and entering game.
-Nov 13 23:16:42 2020 :: Cansian (level 110) has 41 objects (max 100).
-Nov 13 23:16:59 2020 :: Cansian has quit the game.
-Nov 13 23:17:05 2020 :: Losing player: Cansian.
-Nov 13 23:17:05 2020 :: No connections.  Going to sleep.
-Nov 13 23:20:14 2020 :: New connection.  Waking up.
-Nov 13 23:20:21 2020 :: Cansian has connected.
-Nov 13 23:20:22 2020 :: Cansian had no variable file
-Nov 13 23:20:22 2020 :: Cansian un-renting and entering game.
-Nov 13 23:20:22 2020 :: Cansian (level 110) has 41 objects (max 100).
-Nov 13 23:20:32 2020 :: (GC) Reboot by Cansian.
-Nov 13 23:20:32 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 13 23:20:32 2020 :: Closing all sockets.
-Nov 13 23:20:32 2020 :: Closing link to: Cansian.
-Nov 13 23:20:32 2020 :: Saving current MUD time.
-Nov 13 23:20:32 2020 :: Rebooting.
-Quick boot mode -- rent check supressed.
-Using file descriptor for logging.
+Nov 14 17:14:02 2020 :: OLC: Cansian starts editing zone 134 allowed zone 0
+Nov 14 17:15:01 2020 :: OLC: Cansian edits zone info for room 13432.
+Nov 14 17:15:01 2020 :: OLC: Cansian stops editing zone 134 allowed zone 0
+Nov 14 17:15:10 2020 :: (GC) Cansian reset zone 134 (A Cidade de Thewster e A Caverna Escura)
+Nov 14 17:16:10 2020 :: OLC: Cansian starts editing zone 134 allowed zone 0
+Nov 14 17:16:11 2020 :: OLC: Cansian stops editing zone 134 allowed zone 0
+Nov 14 17:16:17 2020 :: OLC: Cansian starts editing zone 134 allowed zone 0
+Nov 14 17:17:23 2020 :: OLC: Cansian edits shop 13425
+Nov 14 17:17:23 2020 :: OLC: Cansian stops editing zone 134 allowed zone 0
+Nov 14 17:17:25 2020 :: OLC: Cansian starts editing zone 134 allowed zone 0
+Nov 14 17:17:51 2020 :: OLC: Cansian edits zone info for room 13436.
+Nov 14 17:17:51 2020 :: OLC: Cansian stops editing zone 134 allowed zone 0
+Nov 14 17:17:57 2020 :: (GC) Cansian reset zone 134 (A Cidade de Thewster e A Caverna Escura)
+Nov 14 17:18:23 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 14 17:18:23 2020 :: rusage: user time: 50 sec, system time: 3 sec, max res size: 25936
+Nov 14 17:22:19 2020 :: OLC: Cansian starts editing zone 34 allowed zone 0
+Nov 14 17:22:23 2020 :: OLC: Cansian stops editing zone 34 allowed zone 0
+Nov 14 17:23:22 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Nov 14 17:23:22 2020 :: Closing link to: Cansian.
+Nov 14 17:23:22 2020 :: No connections.  Going to sleep.
+Nov 14 17:23:43 2020 :: New connection.  Waking up.
+Nov 14 17:23:44 2020 :: nusage: 1   sockets connected, 0   sockets playing
+Nov 14 17:23:44 2020 :: rusage: user time: 51 sec, system time: 3 sec, max res size: 26172
+Nov 14 17:23:47 2020 :: Cansian [177.220.172.173] has reconnected.
+Nov 14 17:27:14 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Nov 14 17:27:14 2020 :: Closing link to: Cansian.
+Nov 14 17:27:14 2020 :: No connections.  Going to sleep.
+Nov 14 17:30:30 2020 :: New connection.  Waking up.
+Nov 14 17:30:33 2020 :: Cansian [177.220.172.173] has reconnected.
+Segmentation fault (core dumped)
