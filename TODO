@@ -1,7 +1,8 @@
 TODO:
 
-continuar do_shoot: skill e cmd no interpreter
+continuar do_shoot (mob_hunting)
 
+FIX: obj 13018 (vender no carrapicho, 14404)
 FIX: Mobs que sumiram ex 13101-13109
 character.c /rebegin etc...
 
@@ -9,8 +10,7 @@ greetings
 @W       << @wSe voce nao possui um personagem neste jogo, digite "@RNOVO@w".@W >>@n
 
 autoress/limits
-spela feitos ate invigor
-falta spells mage_iden,raise,ress,vamp,..
+
 reroll
 clans
 
@@ -92,8 +92,8 @@ mob sem load:
 750,2399
 
 
-loja feita 3,22,25,27,28,30,31,33,54
-
+loja feita 3,22,25,27,28,30,31,33,43,44,54,65,81,113,120,134,140,144,150,173,290
+falta loja catedral de cristal,mercador nomade de nt (54)
 
 typo: obj 11303 alias medraperola -> madreperola
 typo obj 11403 alias 
