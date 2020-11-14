@@ -84,8 +84,10 @@ struct shop_data {
 #define TRADE_NOTHIEF      (1 << 5)
 #define TRADE_NOWARRIOR    (1 << 6)
 #define TRADE_NORANGER    (1 << 7)
+#define TRADE_NODRUID (1 << 8)
+#define TRADE_NOBARD (1 << 9)
 /** Total number of trade types */
-#define NUM_TRADERS     8
+#define NUM_TRADERS     10
 
 struct stack_data {
    int data[100];
@@ -130,6 +132,8 @@ struct stack_data {
 #define NOTRADE_THIEF(i)	(IS_SET(SHOP_TRADE_WITH((i)), TRADE_NOTHIEF))
 #define NOTRADE_WARRIOR(i)	(IS_SET(SHOP_TRADE_WITH((i)), TRADE_NOWARRIOR))
 #define NOTRADE_RANGER(i)	(IS_SET(SHOP_TRADE_WITH((i)), TRADE_NORANGER))
+#define NOTRADE_DRUID(i)	(IS_SET(SHOP_TRADE_WITH((i)), TRADE_NODRUID))
+#define NOTRADE_BARD(i)	(IS_SET(SHOP_TRADE_WITH((i)), TRADE_NOBARD))
 
 /* Shop flags */
 #define WILL_START_FIGHT    (1 << 0)
