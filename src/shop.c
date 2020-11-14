@@ -39,6 +39,8 @@ const char *trade_letters[] = {
 	"Thief",
 	"Warrior",
 	"Ranger",
+	"Druid",
+	"Bard",
 	"\n"
 };
 
@@ -139,7 +141,9 @@ static int is_ok_char(struct char_data *keeper, struct char_data *ch, int shop_n
 	if ((IS_MAGIC_USER(ch) && NOTRADE_MAGIC_USER(shop_nr)) ||
 		(IS_CLERIC(ch) && NOTRADE_CLERIC(shop_nr)) ||
 		(IS_THIEF(ch) && NOTRADE_THIEF(shop_nr)) ||
-		(IS_WARRIOR(ch) && NOTRADE_WARRIOR(shop_nr)) || (IS_RANGER(ch) && NOTRADE_RANGER(shop_nr)))
+		(IS_WARRIOR(ch) && NOTRADE_WARRIOR(shop_nr)) || (IS_RANGER(ch) && NOTRADE_RANGER(shop_nr)) ||
+		(IS_DRUID(ch) && NOTRADE_DRUID(shop_nr)) ||
+		(IS_BARD(ch) && NOTRADE_BARD(shop_nr)))
 	{
 		snprintf(buf, sizeof(buf), "%s %s", GET_NAME(ch), MSG_NO_SELL_CLASS);
 		do_tell(keeper, buf, cmd_tell, 0);
