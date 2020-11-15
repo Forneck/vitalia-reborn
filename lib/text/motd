@@ -6,6 +6,12 @@
 
    Como esta é uma @Rversão de teste@n muitos @rbugs@n e @rfeatures incompletas@n são esperados.
    
+   BUG conhecido: Se você trocar de janela ao voltar pro cliente, podem aparecer caracteres estranhos no lugar dos acentos.
+   Isto é um erro do cliente, para arrumar desative e reative o UTF-8 nas opções do cliente.
+   O cliente GMUD não possui suporte a acentos! Se você utiliza, recomendamos trocar de cliente para uma melhor experiência.
+   Clientes mais recentes oferecem suporte a MXP e MSDP que são protocolos de extensão. Podem ser ativados ou desativados no prefedit.
+   MXP torna alguns comandos clicaveis! e o MSDP envia variaveis para o cliente para personalização da aparência, como hitbar customizaveis entre outras coisas.
+   
    Estamos tendo atualizações diariamente, então se algo estiver estranho
 pode ganhar implementação ou ser arrumado nos próximos dias.
      
