@@ -3,7 +3,7 @@ Mage Guildguard - 3024~
 0 q 100
 ~
 * Check the direction the player must go to enter the guild.
-if %direction% == south
+if %direction% == east
   * Stop them if they are not the appropriate class.
   if %actor.class% != Mago
     return 0
@@ -31,7 +31,7 @@ Thief Guildguard - 3026~
 0 q 100
 ~
 * Check the direction the player must go to enter the guild.
-if %direction% == east
+if %direction% == south
   * Stop them if they are not the appropriate class.
   if %actor.class% != Ladrao
     return 0
@@ -45,7 +45,7 @@ Warrior Guildguard - 3027~
 0 q 100
 ~
 * Check the direction the player must go to enter the guild.
-if %direction% == east
+if %direction% == west
   * Stop them if they are not the appropriate class.
   if %actor.class% != Guerreiro
     return 0
@@ -73,7 +73,7 @@ Druid Guildguard~
 0 q 100
 ~
 * Check the direction the player must go to enter the guild.
-if %direction% == west
+if %direction% == north
   * Stop them if they are not the appropriate class.
   if %actor.class% != Druida
     return 0
