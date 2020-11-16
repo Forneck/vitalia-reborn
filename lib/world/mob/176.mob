@@ -10,7 +10,6 @@ ghlmo 0 -100 S
 10 17 5 4d6+200 1d8+2
 0 500
 8 8 1
-S
 #17601
 lagarto~
 um lagarto~
@@ -23,7 +22,6 @@ fglm 0 -150 S
 13 15 2 4d6+280 1d8+2
 0 700
 8 8 1
-S
 #17602
 cidadao xi'an~
 um cidadão de Xi'an~
@@ -38,7 +36,6 @@ glmjno 0 0 S
 20 6 -1 2d6+350 1d9+2
 1000 2500
 8 8 1
-S
 #17603
 cidada xi'an~
 uma cidadã de Xi'an~
@@ -52,7 +49,6 @@ glmjno 0 0 S
 20 6 -1 2d6+350 1d8+1
 1000 2000
 8 8 2
-S
 #17604
 cidadao xi'an~
 um cidadão de Xi'an~
@@ -67,7 +63,6 @@ glmjno 0 0 S
 20 6 -1 2d6+350 1d9+2
 1000 2500
 8 8 1
-S
 #17605
 chaoyang~
 Chaoyang~
@@ -82,7 +77,6 @@ bnopqrv :2:3 0 S
 108 6 5 5d6+600 2d7+1
 1000 2000
 8 8 1
-S
 #17606
 tse-ling~
 Tse-Ling~
@@ -96,7 +90,6 @@ bnopqrv :2:3 0 S
 108 6 5 5d6+600 2d7+1
 1000 2000
 8 8 2
-S
 #17607
 guanghua~
 Guanghua~
@@ -111,7 +104,6 @@ bnopqrv :2:3 0 S
 108 6 5 5d6+600 2d7+1
 1000 2000
 8 8 1
-S
 #17608
 exercito xi'an~
 O exército de Xi'an~
@@ -142,7 +134,6 @@ fglm 0 -150 S
 15 15 2 4d6+300 1d8+4
 1000 850
 8 8 2
-S
 #17610
 guarda muralha oriental~
 O Guarda oriental da Grande Muralha~
@@ -172,7 +163,6 @@ gilmo :2 0 S
 30 5 -3 2d2+500 4d4+14
 300 30000
 8 8 1
-S
 #17612
 guardiao~
 O Guardião da muralha~
@@ -246,7 +236,6 @@ bcno :3 0 S
 20 3 -1 6d6+550 3d2+5
 10000 20000
 5 5 2
-S
 #17616
 guardiao~
 o guardião da entrada~
@@ -262,7 +251,6 @@ blmnopqr :3:5:7 10 S
 80 -5 -23 5d5+1100 5d9+20
 5000 175000
 8 8 1
-S
 #17617
 leao leoes~
 os leões de bronze~
@@ -355,7 +343,6 @@ beflmnoq :3 -30 S
 80 2 -20 5d5+2300 8d10+27
 15000 100899
 8 8 1
-S
 #17623
 sacerdote budista~
 um sacerdote budista~
@@ -369,7 +356,6 @@ belmnoq :3:7 600 S
 75 3 -15 6d3+1700 7d6+20
 0 150000
 8 3 1
-S
 #17624
 sacerdote budista~
 um sacerdote budista~
@@ -383,7 +369,6 @@ belmnoq :3:7 600 S
 75 3 -15 6d3+1700 7d6+20
 0 150000
 3 3 1
-S
 #17625
 guarda imperial~
 o guarda imperial~
@@ -417,7 +402,6 @@ blmno 0 0 S
 25 7 3 4d6+705 3d8+5
 3000 60000
 8 8 2
-S
 #17627
 chinesa~
 uma chinesa~
@@ -432,7 +416,6 @@ blmno 0 0 S
 25 7 3 4d6+705 3d8+5
 3000 60000
 8 8 2
-S
 #17628
 xiezhi~
 Xiezhi~
@@ -484,7 +467,6 @@ bflmno 0 400 S
 70 4 -20 3d3+1300 4d6+16
 5000 99344
 8 8 1
-S
 #17631
 fenix ave~
 Fênix~
@@ -516,7 +498,6 @@ bhnopq :3:7:17 500 S
 60 -20 -16 3d3+2300 8d8+30
 50000 150000
 8 8 2
-S
 #17633
 dragao bronze~
 o Dragão de bronze~
