@@ -83,6 +83,8 @@ void assign_mobiles(void)
   ASSIGNMOB(3023, guild);
   ASSIGNMOB(3028, guild);
   ASSIGNMOB(3030, guild);
+  ASSIGNMOB(3048, guild);
+  ASSIGNMOB(3051, guild);
   ASSIGNMOB(5400, guild);
   ASSIGNMOB(5401, guild);
   ASSIGNMOB(5402, guild);
