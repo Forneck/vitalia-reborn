@@ -1,60 +1,102 @@
 #5400
-Thief Guildguard - 5459~
-0 q 100
-~
-* Check the direction the player must go to enter the guild.
-if %direction% == south
-  * Stop them if they are not the appropriate class.
-  if %actor.class% != thief
-    return 0
-    %send% %actor% The guard humiliates you, and blocks your way.
-    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.
-  end
-end
-~
-#5401
-Mage Guildguard - 5456~
+Mage Guildguard - 3024~
 0 q 100
 ~
 * Check the direction the player must go to enter the guild.
 if %direction% == north
   * Stop them if they are not the appropriate class.
-  if %actor.class% != magic user
+  if %actor.class% != Mago
     return 0
-    %send% %actor% The guard humiliates you, and blocks your way.
-    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.
+    %send% %actor% O guarda humilha você, e bloqueia o seu caminho.
+    %echoaround% %actor% O guarda humilha %actor.name%, e bloqueia o caminho d%actor.eleela%.
+  end
+end
+~
+#5401
+Cleric Guildguard - 3025~
+0 q 100
+~
+* Check the direction the player must go to enter the guild.
+if %direction% == south
+  * Stop them if they are not the appropriate class.
+  if %actor.class% != Clerigo
+    return 0
+  %send% %actor% O guarda humilha você, e bloqueia o seu caminho.
+    %echoaround% %actor% O guarda humilha %actor.name%, e bloqueia o caminho d%actor.eleela%.
   end
 end
 ~
 #5402
-Cleric Guildguard - 5457~
+Thief Guildguard - 3026~
 0 q 100
 ~
 * Check the direction the player must go to enter the guild.
 if %direction% == south
   * Stop them if they are not the appropriate class.
-  if %actor.class% != cleric
+  if %actor.class% != Ladrao
     return 0
-    %send% %actor% The guard humiliates you, and blocks your way.
-    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.
+%send% %actor% O guarda humilha você, e bloqueia o seu caminho.
+    %echoaround% %actor% O guarda humilha %actor.name%, e bloqueia o caminho d%actor.eleela%.
   end
 end
 ~
 #5403
-Warrior Guildguard - 5458~
+Warrior Guildguard - 3027~
 0 q 100
 ~
 * Check the direction the player must go to enter the guild.
 if %direction% == south
   * Stop them if they are not the appropriate class.
-  if %actor.class% != warrior
+  if %actor.class% != Guerreiro
     return 0
-    %send% %actor% The guard humiliates you, and blocks your way.
-    %echoaround% %actor% The guard humiliates %actor.name%, and blocks %actor.hisher% way.
+%send% %actor% O guarda humilha você, e bloqueia o seu caminho.
+    %echoaround% %actor% O guarda humilha %actor.name%, e bloqueia o caminho d%actor.eleela%.
   end
 end
 ~
 #5404
+Bard Guildguard~
+0 q 100
+~
+* Check the direction the player must go to enter the guild.
+if %direction% == south
+  * Stop them if they are not the appropriate class.
+  if %actor.class% != Bardo
+    return 0
+%send% %actor% O guarda humilha você, e bloqueia o seu caminho.
+    %echoaround% %actor% O guarda humilha %actor.name%, e bloqueia o caminho d%actor.eleela%.
+  end
+end
+~
+#5405
+Druid Guildguard~
+0 q 100
+~
+* Check the direction the player must go to enter the guild.
+if %direction% == down
+  * Stop them if they are not the appropriate class.
+  if %actor.class% != Druida
+    return 0
+%send% %actor% O guarda humilha você, e bloqueia o seu caminho.
+    %echoaround% %actor% O guarda humilha %actor.name%, e bloqueia o caminho d%actor.eleela%.
+  end
+end
+~
+#5406
+Ranger Guildguard~
+0 q 100
+~
+* Check the direction the player must go to enter the guild.
+if %direction% == west
+  * Stop them if they are not the appropriate class.
+  if %actor.class% != Ranger
+    return 0
+%send% %actor% O guarda humilha você, e bloqueia o seu caminho.
+    %echoaround% %actor% O guarda humilha %actor.name%, e bloqueia o caminho d%actor.eleela%.
+  end
+end
+~
+#5407
 Magic User - 5421-5428, 5440, 5455~
 0 k 10
 ~
@@ -115,7 +157,7 @@ switch %actor.level%
   break
 done
 ~
-#5405
+#5408
 Cityguard - 5434, 61-63, 82~
 0 b 50
 ~
@@ -142,7 +184,7 @@ if !%self.fighting%
   end
 end
 ~
-#5406
+#5409
 Healer - 5481~
 0 b 10
 ~
@@ -161,7 +203,7 @@ if %actor%
   end
 end
 ~
-#5407
+#5410
 Thief - 5435~
 0 b 10
 ~
@@ -176,7 +218,7 @@ if %actor%
   end
  end
  ~
-#5502
+#5511
 Portal para Midgaard~
 1 c 7
 en~
