@@ -715,6 +715,7 @@ Este homem parece um Mago-Guerreiro e eu não me atreveria a mexer com ele.
 0 500
 9 9 1
 E
+T 5400
 #5457
 clerigo guardiao~
 o guardião da Guilda~
@@ -728,6 +729,7 @@ ele.
 0 500
 9 9 1
 E
+T 5401
 #5458
 guerreiro guardiao~
 o guardião da Guilda~
@@ -740,6 +742,7 @@ Este homem parece o primo do Conan e eu não me atreveria a desafiá-lo.
 0 500
 9 9 1
 E
+T 5403
 #5459
 ladrao guardiao~
 o guardião da Guilda~
@@ -753,6 +756,7 @@ você caminha em direção a onde ele está.
 0 500
 9 9 1
 E
+T 5402
 #5460
 criado garoto~
 o criado~
@@ -1167,6 +1171,7 @@ antigos da Confraria.
 0 500
 9 9 1
 E
+T 5405
 #5493
 vendedor jornaleiro garoto~
 o vendedor de jornais~
@@ -1215,6 +1220,7 @@ que a guardiã não permitirá arruaças por aqui.
 2000 160000
 9 9 2
 E
+T 5404
 #5496
 jovem garcom~
 o garçom~

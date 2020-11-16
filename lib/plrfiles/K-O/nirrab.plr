@@ -1,28 +1,28 @@
 Name: Nirrab
 Pass: NihCO10HzAScc
-Titl: Chronusdaath, a Feiticeira das Nove Luas
+Titl: a Ovate
 Sex : 2
-Clas: 6
-Levl: 6
+Clas: 4
+Levl: 9
 Id  : 24
 Brth: 1604087691
-Plyd: 19593
-Last: 1605357722
+Plyd: 21652
+Last: 1605405526
 Htwn: 3001
-Host: 189.95.188.225
+Host: 189.127.219.60
 Hite: 163
 Wate: 153
-Alin: 145
-Act : hl 0 0 0
+Alin: -169
+Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCE d 0 0
 Room: 5518
-Lern: 7
-Hung: 22
-Thir: 22
-Hit : 82/82
-Mana : 118/118
-Move: 97/97
+Lern: 10
+Hung: 21
+Thir: 21
+Hit : 111/111
+Mana : 147/147
+Move: 101/101
 Str : 16/0
 Int : 12
 Wis : 11
@@ -30,16 +30,17 @@ Dex : 12
 Con : 16
 Cha : 8
 Ac  : 100
-Gold: 100
-Exp : 12364
+Gold: 90135
+Exp : 185939
 Olc : 0
+Dth: 1
 Skil:
 232 90
 0 0
 Alis: 2
- .
- gossip $*
-1
  dr
  drink cant
 0
+ .
+ gossip $*
+1

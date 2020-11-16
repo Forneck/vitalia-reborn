@@ -7,10 +7,10 @@ Esses peixes, de uns 30 centímentros de comprimento, nadam em um grupo de
 meio milhar de seres brilhantes e translúcidos como cristal puro.  Não
 parecem perigosos, apesar das afiadas nadadeiras.
 ~
-2099264 0 0 0 2048 0 0 0 0 E
+2099264 0 0 0 0 0 0 0 0 E
 19 2 0 4d20+300 4d3+8
 2000 45000
-8 8 1
+9 9 1
 E
 #11301
 serpente dourada~
@@ -25,10 +25,10 @@ acompanham seus movimentos enquanto seu corpo faz voltas em torno de você,
 da mesma forma que a língua bifurcada se move de um lado para outro junto a
 um par de compridos bigodes.
 ~
-2099202 0 0 0 2048 0 0 0 0 E
+2099202 0 0 0 0 0 0 0 0 E
 19 1 0 50d4+370 4d4+6
 1800 45000
-8 8 2
+9 9 2
 E
 #11302
 naga sacerdote sumo-sacerdote nihar~
@@ -42,10 +42,10 @@ de ser um dos mais próximos conselheiros do rei.  Ele se veste com
 simplicidade, cobrindo seu corpo com um alvo tecido de bom algodão,
 carregando como item de valor apenas o sinal do templo.
 ~
-2287618 0 0 0 67856 0 0 0 0 E
+2287618 0 0 0 0 0 0 0 0 E
 44 0 -5 1d50+450 15d3+14
 30000 150000
-8 8 1
+9 9 1
 E
 #11303
 anjali nagini graciosa sacerdotisa~
@@ -59,10 +59,10 @@ na ponta de sua cauda. Seus grandes olhos, negros, percorrem toda a sala
 de oferendas como se procurassem algo fora do lugar. Caso achassem, ela
 iria correndo arrumar, esquecendo-se do intruso no templo.
 ~
-2287618 0 0 0 67920 0 0 0 0 E
+2287618 0 0 0 0 0 0 0 0 E
 33 0 -6 25d2+450 15d2+30
 6000 80000
-8 8 2
+9 9 2
 E
 #11304
 shashwat naga enorme sacerdote~
@@ -76,10 +76,10 @@ serpente, de escamas cor-de-mogno, se enrola a seu redor, totalmente imóvel.
 O sacerdote está, no momento, utilizando-se de um antigo cântico naga para
 curar as feridas de alguém que pediu que lhe enviasse suas preces.
 ~
-2287618 0 0 0 67920 0 0 0 0 E
+2287618 0 0 0 0 0 0 0 0 E
 33 0 -6 25d2+450 15d2+30
 6000 80000
-8 8 1
+9 9 1
 E
 #11305
 Sapni sacerdotisa nagini~
@@ -92,10 +92,10 @@ se destaca na fraca iluminação.  Você não enxerga detalhes sobre ela,
 percebendo apenas que as escamas de sua cauda têm uma aparência metálica, já
 que refletem um pouco da luz do lugar.
 ~
-2287618 0 0 0 67920 0 0 0 0 E
+2287618 0 0 0 0 0 0 0 0 E
 33 0 -6 25d2+450 15d2+30
 6000 80000
-8 8 2
+9 9 2
 E
 #11306
 pramsu naga sacerdote~
@@ -108,10 +108,10 @@ fenda oblíqua muito fechada, movem-se de um texto para o outro, sem prestar
 atenção em você, sendo acompanhados por mãos jovens de dedos magros e unhas
 aparadas.  A barba alva, curta e bem-cuidada, envelhece o rosto jovial.
 ~
-2287618 0 0 0 67920 0 0 0 0 E
+2287618 0 0 0 0 0 0 0 0 E
 33 0 -6 25d2+450 15d2+30
 6000 80000
-8 8 1
+9 9 1
 E
 #11307
 nagini sorridente mira atendente~
@@ -126,7 +126,7 @@ dentes brancos.  Ela parece disposta a mostrar a bela coleção de sua loja.
 2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+12
 2000 160000
-8 8 2
+9 9 2
 E
 #11308
 dhiraj atendente naga~
@@ -140,7 +140,7 @@ atendendo na armoraria.
 2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+12
 2000 160000
-8 8 1
+9 9 1
 E
 #11309
 atendente naga balraj~
@@ -156,7 +156,7 @@ vendas.
 2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+12
 2000 160000
-8 8 1
+9 9 1
 E
 #11310
 twashtri mestre artesao~
@@ -177,10 +177,10 @@ também brancos, já são ralos, e os poucos fios são aparados muito rentes à
 cabeça, fazendo-o parecer completamente calvo.  Ele parece concentrado
 demais para prestar atenção em você.
 ~
-2353170 0 0 0 65792 0 0 0 700 E
+2353170 0 0 0 0 0 0 0 700 E
 101 -24 -26 10d5+6800 10d7+33
 42000 1099999
-8 8 1
+9 9 1
 E
 #11311
 hemadri nagini~
@@ -195,7 +195,7 @@ balcão e começa a escorrer, tendo já molhando todo o chão do Caldeirão.
 2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+12
 2000 160000
-8 8 2
+9 9 2
 E
 #11312
 nagini recepcionista mishti~
@@ -210,7 +210,7 @@ tirar uma boa soneca sem que ninguém a interrompesse.
 2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+12
 2000 160000
-8 8 2
+9 9 2
 E
 #11313
 kshiraj barman naga~
@@ -225,7 +225,7 @@ aproxime.  Talvez até com você...
 2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+12
 2000 160000
-8 8 1
+9 9 1
 E
 #11314
 grupo yakshas bebados~
@@ -242,10 +242,10 @@ partindo das laterais do crânio, sendo elas repletas de argolas douradas.  A
 boca larga, cheia de dentes, está sempre sorrindo. Eles cantam uma alegre
 melodia conhecida por você. Coisas de bêbado...
 ~
-2285570 0 0 0 2128 0 0 0 -900 E
+2285570 0 0 0 0 0 0 0 -900 E
 25 4 -6 9d7+500 4d5+25
 4708 85000
-8 8 1
+9 9 1
 E
 #11315
 garcom naga~
@@ -256,10 +256,10 @@ O pobre naga anda de um lado para o outro anotando pedidos e entregando
 bebidas.  Ele segura uma bandeja com uma mão e outra com a cauda.  Com a
 outra mão segura um pano para limpar as mesas.
 ~
-2104322 0 0 0 2048 0 0 0 0 E
+2104322 0 0 0 0 0 0 0 0 E
 4 17 6 1d1+55 1d8+0
 50 600
-8 8 1
+9 9 1
 E
 #11316
 naga entediado~
@@ -273,7 +273,7 @@ Irá satisfazê-lo.
 2097154 0 0 0 0 0 0 0 0 E
 19 1 -1 3d6+240 3d6+8
 1000 35000
-8 8 1
+9 9 1
 E
 #11317
 pisacha metal ferro demonio~
@@ -288,7 +288,7 @@ para o alvo de dardos: ele logo irá jogar.
 2097154 0 0 0 0 0 0 0 -500 E
 21 9 0 3d6+130 2d8+11
 400 21000
-8 8 1
+9 9 1
 E
 #11318
 naga~
@@ -299,10 +299,10 @@ O naga, de rosto e cauda marcados por cicatrizes, ensaia amplos movimentos
 antes de lançar um pequeno dardo de ponta aguda na direção de um velho alvo
 a alguns metros de distância.  Ele parece bem concentrado.
 ~
-2103298 0 0 0 67600 0 0 0 -780 E
+2103298 0 0 0 0 0 0 0 -780 E
 31 1 -1 6d3+550 4d6+12
 750 30500
-8 8 1
+9 9 1
 E
 #11319
 naga rastreador belo~
@@ -319,7 +319,7 @@ realmente raro.
 2285586 0 0 0 0 0 0 0 0 E
 50 -8 -9 7d7+1100 7d5+20
 6000 95000
-4 8 1
+4 9 1
 E
 #11320
 demonio rakshasi habilidosa~
@@ -332,10 +332,10 @@ procurar irregularidades em tudo o que estiver ligado a jogos de azar,
 evitando ações de má-fé por parte dos jogadores.  Ela já teve seus dias de
 criminosa, mas agora trabalha pela lei.
 ~
-2193410 0 0 0 67920 0 0 0 -100 E
+2193410 0 0 0 0 0 0 0 -100 E
 26 0 -2 12d8+590 4d6+10
 0 50000
-8 8 1
+9 9 1
 E
 #11321
 kalidas naga senhor~
@@ -352,7 +352,7 @@ o recebe bem, pois já conhece viajantes como você.
 2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+12
 2000 160000
-8 8 1
+9 9 1
 E
 #11322
 darshani nagini mensageira chefe~
@@ -367,7 +367,7 @@ pode ser fatal.
 2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+12
 2000 160000
-8 8 2
+9 9 2
 E
 #11323
 distraido gaurang naga~
@@ -385,7 +385,7 @@ novas melodias.
 2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+12
 2000 160000
-8 8 1
+9 9 1
 E
 #11324
 nadish naga vendedor barcos~
@@ -401,7 +401,7 @@ que ele se permite admitir.
 2156546 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+12
 2000 160000
-8 8 1
+9 9 1
 E
 #11325
 mestre-guia naga sacerdote~
@@ -412,10 +412,10 @@ Os olhos cerrados escondem o brilho que a iluminação divina traz, permitindo
 que esse homem, de aspecto calmo e bondoso, caminhe por entre seus irmãos
 sem mostrar totalmente a imponente luz de sua alma.
 ~
-2156562 0 0 0 272 0 0 0 1000 E
+2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 1
+9 9 1
 E
 #11326
 mestre-guia mulher encapuzada ladina~
@@ -427,10 +427,10 @@ Seus movimentos são graciosos, rápidos, sua fala macia e cuidadosa.
 Ela está totalmente coberta por um capuz e capa negra, sendo possível
 perceber, de relance, muitas armas brilhando à luz das poucas tochas.
 ~
-2156562 0 0 0 272 0 0 0 1000 E
+2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 2
+9 9 2
 E
 #11328
 druidesa gentil mestre guia druidas~
@@ -442,10 +442,10 @@ com a alegria de uma velha professora que recebe um aluno querido.  Ela
 parece ficar mais radiante quando começa a falar dos ensinamentos que pode
 lhe passar.
 ~
-2156562 0 0 0 272 0 0 0 1000 E
+2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 2
+9 9 2
 E
 #11329
 guerreiro mestre-guia~
@@ -461,7 +461,7 @@ extensão de seu próprio corpo.  Ele pode lhe ensinar muito.
 2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 1
+9 9 1
 E
 #11330
 mestre-guia magos~
@@ -478,7 +478,7 @@ Ele considera sua vida já plena.
 2156562 0 0 0 0 0 0 0 1000 E
 108 0 -10 10d100+2000 5d10+100
 18794 100000
-8 8 1
+9 9 1
 E
 #11331
 naga feiticeiro~
@@ -489,11 +489,12 @@ Membro da Irmandade de Magos, esse feiticeiro de olhos e escamas cor-de-vinho
 é um feiticeiro cuja experiência e habilidade em magias de defesa e ataque
 lhe rendeu o posto de guardião. Ele sabe ser fatal.
 ~
-2156546 0 0 0 272 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 -20 -8 6d10+1500 8d8+80
 2000 60000
-8 8 1
+9 9 1
 E
+T 11300
 #11332
 nagini templar~
 a nagini templar~
@@ -504,11 +505,12 @@ Treinada para proteger os membros da Congregação, essa nagini
 habilidades guerreiras, mas você dificilmente a imagina rezando e abençoando
 alguém.
 ~
-2156546 0 0 0 272 0 0 0 1000 E
+2156546 0 0 0 0 0 0 0 1000 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
-8 8 2
+9 9 2
 E
+T 11301
 #11333
 assassina nagini~
 a nagini assassina~
@@ -519,11 +521,12 @@ como se fosse uma perigosa parte delas. Sua cauda, marrom-escuro, possui
 em sua extremidade alguns espinhos afiados, vermelhos como sangue, usados
 como arma. Será muito difícil sobreviver a ela.
 ~
-2156546 0 0 0 1573200 0 0 0 400 E
+2156546 0 0 0 0 0 0 0 400 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
-8 8 2
+9 9 2
 E
+T 11302
 #11334
 nagini guerreira~
 a nagini guerreira~
@@ -535,11 +538,12 @@ de sua grande capacidade de guerra, acha muito monótona a tarefa
 de guardar a entrada da Associação. Ou seja: adoraria comprar uma briga
 aqui, e agora.
 ~
-2156546 0 0 0 272 0 0 0 800 E
+2156546 0 0 0 0 0 0 0 800 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
-8 8 2
+9 9 2
 E
+T 11303
 #11335
 druida naga paciente~
 o druida naga~
@@ -549,11 +553,12 @@ Ele olha para além do horizonte, perdido em pensamentos.  Mas uma parte de
 sua mente está alerta e pronta para defender a Confraria utilizando-se de
 todo seu grande poder druídico, custe o que custar.
 ~
-2156546 0 0 0 272 0 0 0 800 E
+2156546 0 0 0 0 0 0 0 800 E
 108 -20 -8 6d10+1500 8d8+80
 2000 160000
-8 8 1
+9 9 1
 E
+T 11305
 #11336
 serpente pequena rubi~
 uma pequena serpente de rubi~
@@ -562,10 +567,10 @@ Uma pequena serpente de rubi mergulha e salta das águas.
 A pequena serpente, de corpo feito de rubi, faz todo tipo de piruetas que
 consegue fazer na água.  Ela não parece se intimidar com sua presença.
 ~
-2097220 0 0 0 1048576 0 0 0 -300 E
+2097220 0 0 0 0 0 0 0 -300 E
 5 16 5 50d1+10 3d3+2
 0 2000
-8 8 2
+9 9 2
 E
 #11337
 serpente esmeralda~
@@ -575,10 +580,10 @@ Uma serpente de esmeralda mergulha e salta das águas.
 Verde pela esmeralda que constitui seu corpo, essa serpente mágica sente-se
 à vontade para brincar nas límpidas águas.
 ~
-2097220 0 0 0 1048576 0 0 0 -300 E
+2097220 0 0 0 0 0 0 0 -300 E
 7 15 4 50d1+20 3d3+3
 0 2000
-8 8 2
+9 9 2
 E
 #11338
 tartaruga opala azul~
@@ -590,10 +595,10 @@ tonalidades à medida que a luz é refletida e seus olhos se aproximam ou
 afastam dele.  Sua grossa pele é feita de um translúcido cristal
 azul-escuro.
 ~
-2097220 0 0 0 1048576 0 0 0 -300 E
+2097220 0 0 0 0 0 0 0 -300 E
 8 15 2 50d1+30 3d3+3
 0 3000
-8 8 2
+9 9 2
 E
 #11339
 lagarto ônix negro pequeno~
@@ -604,10 +609,10 @@ Pequeno, de grandes olhos vermelhos e saltados, esse lagarto cintila com
 suas escamas de ônix polida.  Ele parece muito tranqüilo, como um pequeno
 marinheiro navegando em sua folha-navio.
 ~
-2097220 0 0 0 1048576 0 0 0 -300 E
+2097220 0 0 0 0 0 0 0 -300 E
 6 15 4 50d1+20 3d3+3
 0 2600
-8 8 1
+9 9 1
 E
 #11340
 serpente marfim~
@@ -619,10 +624,10 @@ com as pontas douradas de suas escamas e olhos.  Sua língua bifurcada, que é
 exposta vez o outra, parece feita de rubi.  Provavelmente é uma criatura
 mágica.
 ~
-2097220 0 0 0 1048576 0 0 0 -300 E
+2097220 0 0 0 0 0 0 0 -300 E
 9 11 2 50d1+40 3d3+4
 0 5000
-8 8 2
+9 9 2
 E
 #11341
 membro guarda naga joias safira~
@@ -635,10 +640,10 @@ robustos, de escamas azuis, ocres ou verdes, cabelos da cor da cauda
 cortados acima das orelhas, barba raspada e com uma característica
 pintura negra nas maçãs do rosto.
 ~
-2127952 0 0 0 16 0 0 0 0 E
+2127952 0 0 0 0 0 0 0 0 E
 15 -2 -6 5d20+900 1d10+10
 1500 25000
-8 8 1
+9 9 1
 E
 #11342
 soldado guarda naga joias rubi~
@@ -651,10 +656,10 @@ que possuem a pedra de sua divisão. Os soldados são, por padrão, altos
 e esbeltos, de escamas vermelhas, vinho ou arroxeadas, cabelos longos,
 avermelhados, presos com fios dourados, rosto limpo e unhas negras.
 ~
-2127952 0 0 0 16 0 0 0 0 E
+2127952 0 0 0 0 0 0 0 0 E
 15 0 -6 5d20+900 1d10+12
 1500 25000
-8 8 1
+9 9 1
 E
 #11343
 guardiao guarda naga joias prata~
@@ -668,10 +673,10 @@ reluzentes, cebeças completamente raspadas, um discreto cavanhaque e
 espessas sobrancelhas prateadas, além de duas fileiras de pontudos espinhos
 que vão da ponta de sua cauda até a nuca. São muito perigosos.
 ~
-2291730 0 0 0 2320 0 0 0 0 E
+2291730 0 0 0 0 0 0 0 0 E
 30 0 -10 10d10+950 8d8+18
 4000 90500
-8 8 1
+9 9 1
 BareHandAttack: 10
 E
 #11344
@@ -689,10 +694,10 @@ brilhantes olhos cor de avelã e alva pele, que eles cobrem com pinturas em
 henna.  São os primeiros a perceberem ataques à cidade, protegendo os
 portões e controlando o canal a seu redor.
 ~
-2291730 0 0 0 2320 0 0 0 0 E
+2291730 0 0 0 0 0 0 0 0 E
 50 -1 -11 10d10+1050 8d8+19
 4000 110500
-8 8 1
+9 9 1
 BareHandAttack: 10
 E
 $

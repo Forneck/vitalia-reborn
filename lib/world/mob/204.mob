@@ -10,7 +10,7 @@ e ele volta a caminhar.
 2123840 0 0 0 0 0 0 0 1000 E
 35 11 -4 4d10+2400 5d8+19
 500 97654
-8 8 1
+9 9 1
 E
 #20401
 clerigo desapontado~
@@ -23,7 +23,7 @@ quase pudesse matar a sangue frio! Atípico para um religioso...
 2123840 0 0 0 0 0 0 0 1000 E
 35 12 -3 5d60+2400 5d8+18
 500 92756
-8 8 1
+9 9 1
 E
 #20402
 guerreiro furioso~
@@ -37,7 +37,7 @@ aspecto.
 2123840 0 0 0 0 0 0 0 1000 E
 35 10 -3 5d76+2400 5d10+19
 500 106452
-8 8 1
+9 9 1
 E
 #20403
 ladrao furioso~
@@ -50,7 +50,7 @@ Ele simplesmente o olha e resmunga, nada mais.
 2123840 0 0 0 0 0 0 0 0 E
 35 10 -5 3d56+2400 5d9+19
 500 113241
-8 8 1
+9 9 1
 E
 #20404
 druidesa desatenta~
@@ -63,7 +63,7 @@ Ela continua sem ao menos olhar em sua direção.
 2123840 0 0 0 0 0 0 0 0 E
 35 11 -5 30d5+2400 5d7+19
 500 94023
-8 8 2
+9 9 2
 E
 #20405
 garcom de bar ladrao~
@@ -74,10 +74,10 @@ ele.
 Ele parece distrair os outros à medida que ele serve cinco bebidas de uma vez
 só sem errar.
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 2 2 1d1+30000 2d8+18
 30000 160000
-8 8 1
+9 9 1
 E
 #20406
 ladrao vestido~
@@ -91,7 +91,7 @@ forma de andar graciosa, sinuosa, não deixa dúvida que ele é um ladrão.
 2121808 0 0 0 0 0 0 0 0 E
 15 0 -5 3d5+3000 10d5+15
 27 112000
-8 8 1
+9 9 1
 E
 #20407
 menino cerveja~
@@ -103,7 +103,7 @@ Provavelmente é filho de um grande ladrão, pois todos o respeitam.
 2121874 0 0 0 0 0 0 0 0 E
 10 15 -1 10d1+700 4d4+15
 45 40000
-8 8 1
+9 9 1
 E
 #20408
 clerigo altar~
@@ -117,7 +117,7 @@ virtude.
 2121746 0 0 0 0 0 0 0 0 E
 30 0 -5 10d1+1230 5d8+10
 90 80000
-8 8 1
+9 9 1
 E
 #20409
 clerigo~
@@ -134,16 +134,16 @@ tempo passar.
 E
 #20410
 vendedor armas~
-O vendedor de armas~
+o vendedor de armas~
 O vendedor de armas está em pé aqui, vendendo suas armas.
 ~
 Estranho um vendedor de armas vestindo roupas de mendigo.  Ele realmente tem que
 saber como usar suas armas.
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 2 2 1d1+30000 2d8+18
 30000 160000
-8 8 1
+9 9 1
 E
 #20411
 lojista~
@@ -152,10 +152,10 @@ O lojista está em pé aqui.
 ~
 Este homem sabe usar todos os artigos que vende aqui - e mais.
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 2 2 1d1+30000 2d8+18
 30000 160000
-8 8 1
+9 9 1
 E
 #20412
 grande clerigo ladrao~
@@ -169,7 +169,7 @@ Homem, este cara parece ter bebido muito.
 2123864 0 0 0 0 0 0 0 0 E
 10 0 -7 1d1+3000 6d6+18
 100 120000
-8 8 1
+9 9 1
 E
 #20413
 vendedor de armadura ladrao~
@@ -178,10 +178,10 @@ O ladrão vendedor de armaduras convida você a entrar e olhar suas mercadorias.
 ~
 Ele está usando uma armadura enfeitada, a mais estranha que você já viu!
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 2 2 1d1+30000 2d8+18
 30000 160000
-8 8 1
+9 9 1
 E
 #20414
 ladra enviada~
@@ -190,10 +190,10 @@ A enviada de Dimas está aqui, pronta para espalhar os ensinamentos do herói.
 ~
 Uma mulher esbelta se levanta antes de você entrar, sorrindo.
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 2 2 1d1+30000 2d8+18
 30000 160000
-8 8 2
+9 9 2
 E
 #20415
 arrumadeira~
@@ -205,7 +205,7 @@ Escolhida pelo próprio Grande Clérigo, esta pequena ladra veio de Midgaard.
 2099408 0 0 0 0 0 0 0 0 E
 35 0 0 1d1+1000 5d5+5
 100 80000
-8 8 2
+9 9 2
 E
 #20416
 ladrao jardineiro~
@@ -217,7 +217,7 @@ Ele faz muito bem o seu trabalho, pois o jardim floresce exuberante.
 2099280 0 0 0 0 0 0 0 0 E
 35 0 -3 1d1+1200 6d5+5
 100 82000
-8 8 1
+9 9 1
 E
 #20417
 balconista da hospedaria ladrao~
@@ -226,10 +226,10 @@ O balconista do Descanso para Ladrões espera mostrar um quarto para você.
 ~
 Este homem tem um olhar notável, notavelmente notável.
 ~
-2156546 0 0 0 16 0 0 0 900 E
+2156546 0 0 0 0 0 0 0 900 E
 108 2 2 1d1+30000 2d8+18
 30000 160000
-8 8 1
+9 9 1
 E
 #20459
 guarda ladrao bebado~
@@ -244,6 +244,7 @@ sua mão.
 2291730 0 0 0 0 0 0 0 0 E
 40 -1 -10 2d5+2800 5d9+12
 100 112000
-8 8 1
+9 9 1
 E
+T 3002
 $

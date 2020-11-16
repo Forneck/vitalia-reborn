@@ -1,29 +1,29 @@
 Name: Andrus
 Pass: AnzM0gkXzSL3w
-Titl: o Aprendiz de Malabarista
+Titl: o Ovate
 Sex : 1
-Clas: 5
-Levl: 1
+Clas: 4
+Levl: 10
 Id  : 26
 Brth: 1604518655
-Plyd: 2293
-Last: 1605239508
-Lmot: 1605239533
+Plyd: 7071
+Last: 1605526086
+Lmot: 1605526095
 Lnew: 1605239570
 Htwn: 1372
 Host: 186.221.227.119
 Hite: 178
 Wate: 151
+Alin: 220
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: abhnoBCE a 0 0
 Room: 3001
-Lern: 1
-Hung: 21
-Thir: 15
-Hit : 19/19
-Mana : 100/100
-Move: 84/84
+Hung: 16
+Thir: 4
+Hit : 142/114
+Mana : 123/175
+Move: 128/98
 Str : 11/0
 Int : 13
 Wis : 11
@@ -31,7 +31,26 @@ Dex : 14
 Con : 12
 Cha : 10
 Ac  : 100
-Exp : 1
+Gold: 215636
+Exp : 483954
 Olc : 0
 Skil:
+67 95
+72 95
+73 25
+88 25
 0 0
+Affs:
+19 5 0 29 16 0 0 0
+39 101 4 1 0 0 0 0
+0 0 0 0 0 0 0 0
+Alis: 3
+ z
+ drin font
+0
+ 2
+ cast 'burst of fire
+0
+ 1
+ cast 'igni
+0

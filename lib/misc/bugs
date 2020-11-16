@@ -159,3 +159,13 @@ Level     12
 Room      3045
 Flags     0 0 0 0
 End
+Text       pick~
+Body      pick lock so deveria funcionar com lad
+~
+Name      Cansian~
+IdNum     1
+Dated     1605402159
+Level     110
+Room      3469
+Flags     0 0 0 0
+End

@@ -6,10 +6,11 @@ Um pequeno escorpião passa rapidamente por você.
 Este é um típico escorpião amarelado do deserto de Gobi.  Mesmo sendo 
 pequeno, seu veneno pode ser letal.
 ~
-ghlmo 0 -100 S
+2119872 0 0 0 0 0 0 0 -100 E
 10 17 5 4d6+200 1d8+2
 0 500
-8 8 1
+9 9 1
+E
 #17601
 lagarto~
 um lagarto~
@@ -18,10 +19,11 @@ Um grande lagarto o encara ferozmente.
 Este lagarto possui o corpo todo coberto escamas verdes e muito rígidas.  
 Ao observar sua presença, ele abre sua boca mostrando suas enormes presas.
 ~
-fglm 0 -150 S
+2103392 0 0 0 0 0 0 0 -150 E
 13 15 2 4d6+280 1d8+2
 0 700
-8 8 1
+9 9 1
+E
 #17602
 cidadao xi'an~
 um cidadão de Xi'an~
@@ -32,10 +34,11 @@ triangular e pontudo, característico dos chineses.  Ao olhar em sua face,
 você observa que ele tem os olhos puxados, e uma longa barba e bigodes 
 negros.
 ~
-glmjno 0 0 S
+2128448 0 0 0 0 0 0 0 0 E
 20 6 -1 2d6+350 1d9+2
 1000 2500
-8 8 1
+9 9 1
+E
 #17603
 cidada xi'an~
 uma cidadã de Xi'an~
@@ -45,10 +48,11 @@ Você percebe que ela usa um simples traje cinza claro, e um chapéu de palha
 triangular e pontudo, característico dos chineses.  Ao olhar em sua face, 
 você observa que ele tem os olhos puxados e uma aparência inocente.
 ~
-glmjno 0 0 S
+2128448 0 0 0 0 0 0 0 0 E
 20 6 -1 2d6+350 1d8+1
 1000 2000
-8 8 2
+9 9 2
+E
 #17604
 cidadao xi'an~
 um cidadão de Xi'an~
@@ -59,10 +63,11 @@ triangular e pontudo, característico dos chineses.  Ao olhar em sua face,
 você observa que ele tem os olhos puxados, e uma longa barba e bigodes 
 negros.
 ~
-glmjno 0 0 S
+2128448 0 0 0 0 0 0 0 0 E
 20 6 -1 2d6+350 1d9+2
 1000 2500
-8 8 1
+9 9 1
+E
 #17605
 chaoyang~
 Chaoyang~
@@ -73,10 +78,11 @@ avançada, apresentando muita fraqueza e simplicidade, mas mesmo assim
 produz produtos de ótima qualidade.  Chaoyang está usando o traje cinza 
 claro típico da região, e possui os cabelos e a barba muito branca e longa.
 ~
-bnopqrv :2:3 0 S
+2351106 0 0 0 0 0 0 0 0 E
 108 6 5 5d6+600 2d7+1
 1000 2000
-8 8 1
+9 9 1
+E
 #17606
 tse-ling~
 Tse-Ling~
@@ -86,10 +92,11 @@ Tse-Ling é uma senhora muito baixa e já muito velha.  Ela usa na cabeça um
 chapéu de palha típico chinês, e veste alguns trajes de seda.  Apesar de 
 seu aspecto simples e caseiro, Tse-Ling parece fazer deliciosos alimentos.
 ~
-bnopqrv :2:3 0 S
+2351106 0 0 0 0 0 0 0 0 E
 108 6 5 5d6+600 2d7+1
 1000 2000
-8 8 2
+9 9 2
+E
 #17607
 guanghua~
 Guanghua~
@@ -100,13 +107,14 @@ ele produz maravilhosos tecidos de seda, coloridos e de ótima qualidade.
 Ele veste uma de suas peças de seda preta, e usa na cabeça um chapéu de 
 palha característico chinês.
 ~
-bnopqrv :2:3 0 S
+2351106 0 0 0 0 0 0 0 0 E
 108 6 5 5d6+600 2d7+1
 1000 2000
-8 8 1
+9 9 1
+E
 #17608
 exercito xi'an~
-O exército de Xi'an~
+o exército de Xi'an~
 O exército de Xi'an está aqui, treinando para a próxima batalha. 
 ~
 Este exército é enorme.  Nele você pode ver cavalaria, infantaria, 
@@ -115,10 +123,10 @@ do exército usam o mesmo tipo de traje, sendo uma túnica colorida,
 dependendo a cor em sua função, e uma armadura por cima.  Além de armas, 
 eles carregam com benevolência alguns brasões chineses.
 ~
-belnopqr :3:5:7 -150 E
+2353170 0 0 0 0 0 0 0 -150 E
 102 -53 -45 5d5+16200 10d15+62
 100000 6699999
-8 8 1
+9 9 1
 BareHandAttack: 10
 E
 #17609
@@ -130,13 +138,14 @@ A serpente do deserto tem um tamanho médio e uma coloração marrom.  Se
 ergueira rapidamente pelas areias do deserto atrás de alimento, que 
 normalmente são presas fáceis à ela.
 ~
-fglm 0 -150 S
+2103392 0 0 0 0 0 0 0 -150 E
 15 15 2 4d6+300 1d8+4
 1000 850
-8 8 2
+9 9 2
+E
 #17610
 guarda muralha oriental~
-O Guarda oriental da Grande Muralha~
+o Guarda oriental da Grande Muralha~
 O Guarda oriental da Grande Muralha está aqui, pronto para defende-la a qualquer custo.
 ~
 Ele aparenta um aspecto muito forte e valente.  Ele é responsável pela 
@@ -144,28 +153,28 @@ guarda do forte oriental da Grande Muralha.  Possuindo longos cabelos
 negros, e uma bela túnica de seda negra, coberto por uma grande armadura, 
 este guarda não parece ser um alvo fácil.
 ~
-bilmnopqr :2:3 0 E
+2357506 0 0 0 0 0 0 0 0 E
 80 -5 -24 5d5+1900 5d10+25
 10000 200000
-8 8 1
-BareHandAttack: 0
+9 9 1
 E
 #17611
 soldado chines~
-Um soldado chinês~
+um soldado chinês~
 Um soldado chinês está aqui, protegendo a Grande Muralha.
 ~
 Ele veste uma armadura simples, e carrega sempre preparado sua arma em 
 mãos.  Pronto para defender a muralha, ele faria qualquer coisa para matar 
 qualquer invasor que por acaso se aproxime.
 ~
-gilmo :2 0 S
+2120000 0 0 0 0 0 0 0 0 E
 30 5 -3 2d2+500 4d4+14
 300 30000
-8 8 1
+9 9 1
+E
 #17612
 guardiao~
-O Guardião da muralha~
+o Guardião da muralha~
 O Guardião da muralha empunha suas armas assim que percebe sua presença.
 ~
 Apesar do povo chinês ser muito baixo, este guardião é o contrario, sendo 
@@ -175,24 +184,24 @@ armadura negra.  E suas mãos você pode ver que ele empunha dois grandes
 bastões de madeira, com uma enorme e afiadíssima lâmina, pronta para 
 dilacerar aquele que invadir sua morada.
 ~
-beflmnopqr :3:7:17 -300 E
+2357298 0 0 0 0 0 0 0 -300 E
 101 -13 -37 5d5+6000 8d10+30
 60000 2354330
-8 8 1
+9 9 1
 BareHandAttack: 14
 E
 #17613
 guarda entrada~
-O guarda da entrada~
+o guarda da entrada~
 O guarda da Grande Muralha está aqui, defendento a entrada.
 ~
 Este guarda empunha uma enorme lança, pronto para usa-la contra aqueles 
 que tentarem invadir a morada de seu imperador.
 ~
-blmno :3:5:7 0 E
+2127874 0 0 0 0 0 0 0 0 E
 90 5 -20 5d5+2800 8d7+30
 7000 505009
-8 8 1
+9 9 1
 BareHandAttack: 11
 E
 #17614
@@ -209,16 +218,16 @@ aspecto de cobra, mas muito maior.  Todos tem enormes garras em cada uma
 das quatro patas, e na boca, afiadissimos dentes, capazes de dilacerar a 
 carne com facilidade.
 ~
-bdflmnopqr :3:5:7:15:17 0 E
+2357290 0 0 0 0 0 0 0 0 E
 105 -69 -80 5d7+22500 10d17+67
 150000 7312100
-8 8 1
+9 9 1
 BareHandAttack: 1
 Str: 18
 StrAdd: 7
+Dex: 25
 Int: 25
 Wis: 25
-Dex: 25
 Con: 25
 Cha: 25
 E
@@ -232,10 +241,11 @@ cabelo muito escuro, e longo até os ombros, e os olhos muito esticados.  A
 sua pele é muito clara como a neve, e ela vesta uma longa e fina túnica 
 vermelha de seda.
 ~
-bcno :3 0 S
+2121734 0 0 0 0 0 0 0 0 E
 20 3 -1 6d6+550 3d2+5
 10000 20000
 5 5 2
+E
 #17616
 guardiao~
 o guardião da entrada~
@@ -247,10 +257,11 @@ triângular na cabeça.  Você também percebe que ele possui os cabelos e
 bigode muito negros e longos.  O guardião está disposto a dar a sua vida 
 para proteger a cidade imperial.
 ~
-blmnopqr :3:5:7 10 S
+2357250 0 0 0 0 0 0 0 10 E
 80 -5 -23 5d5+1100 5d9+20
 5000 175000
-8 8 1
+9 9 1
+E
 #17617
 leao leoes~
 os leões de bronze~
@@ -262,11 +273,10 @@ a pata direita, e no lado esquerdo o macho, segurando uma esfera de bronze
 semelhante com a pata esquerda.  Ambos se portam mostrando suas enormes 
 presas, para amedontrar os intrusos da Cidade Proibida.
 ~
-belnopqr :3:7 500 E
+2353170 0 0 0 0 0 0 0 500 E
 101 -19 -42 5d5+6000 10d9+37
 75000 3000000
-8 8 1
-BareHandAttack: 0
+9 9 1
 E
 #17618
 guardiao~
@@ -278,10 +288,10 @@ trinta anos de idade.  Ele veste uma bela armadura vermelha, e empunha uma
 enorme lança pontiaguda.  Você pode perceber o olhar penetrante do 
 guardião, atento a cada movimento seu.
 ~
-belmoq :3 10 E
+2185234 0 0 0 0 0 0 0 10 E
 80 -2 -17 6d6+2700 9d10+25
 0 165505
-8 8 1
+9 9 1
 BareHandAttack: 11
 E
 #17619
@@ -294,10 +304,10 @@ trinta anos de idade.  Ele veste uma bela armadura verde, e empunha uma
 enorme lança.  Você pode perceber o olhar penetrante do guardião, atento 
 a cada movimento seu, pronto para ataca-lo.
 ~
-beflmoq :3 10 E
+2185266 0 0 0 0 0 0 0 10 E
 80 -2 -17 6d6+2700 9d10+27
 0 165505
-8 8 1
+9 9 1
 BareHandAttack: 14
 E
 #17620
@@ -310,10 +320,10 @@ trinta anos de idade.  Ele veste uma bela armadura amarela, e empunha uma
 enorme lança.  Apesar de muito forte e bem armado, ele aparentar estar 
 muito cansado, devido ao intenso trabalho de cuidar da torre.
 ~
-belmoq :3:14 10 E
+2185234 0 0 0 0 0 0 0 10 E
 80 -2 -17 6d6+2750 9d10+25
 0 165505
-8 8 1
+9 9 1
 BareHandAttack: 14
 E
 #17621
@@ -326,10 +336,10 @@ trinta anos de idade.  Ele veste uma bela armadura branca, e empunha uma
 enorme lança.  Você pode perceber o olhar penetrante do guardião, atento 
 a cada movimento seu.
 ~
-belmoq :3 10 E
+2185234 0 0 0 0 0 0 0 10 E
 80 -2 -17 6d6+2700 9d10+25
 0 165505
-8 8 1
+9 9 1
 BareHandAttack: 2
 E
 #17622
@@ -339,10 +349,11 @@ Um eunuco está aqui, empunhando uma enorme lança.
 ~
 Este enorme eunuco é o guardião das conubinas do imperador chinês.
 ~
-beflmnoq :3 -30 S
+2193458 0 0 0 0 0 0 0 -30 E
 80 2 -20 5d5+2300 8d10+27
 15000 100899
-8 8 1
+9 9 1
+E
 #17623
 sacerdote budista~
 um sacerdote budista~
@@ -352,10 +363,11 @@ Você pode ver que ele já é muito velho.  Olhando para o sacerdote, você
 percebe que ele é totalmente careca, e veste-se com alguns panos enrolados 
 ao corpo, e uma sandália de couro.
 ~
-belmnoq :3:7 600 S
+2193426 0 0 0 0 0 0 0 600 E
 75 3 -15 6d3+1700 7d6+20
 0 150000
-8 3 1
+9 3 1
+E
 #17624
 sacerdote budista~
 um sacerdote budista~
@@ -365,10 +377,11 @@ Você pode ver que ele já é muito velho.  Olhando para o sacerdote, você
 percebe que ele é totalmente careca, e veste-se com alguns panos enrolados 
 ao corpo, e uma sandália de couro.
 ~
-belmnoq :3:7 600 S
+2193426 0 0 0 0 0 0 0 600 E
 75 3 -15 6d3+1700 7d6+20
 0 150000
 3 3 1
+E
 #17625
 guarda imperial~
 o guarda imperial~
@@ -382,10 +395,10 @@ doa característicos chapéus triangulares chineses.  Assim que o guarda
 percebe a sua presença, você pode ver que ele avança até você, tentando 
 proteger com a própria vida o seu imperador.
 ~
-bdeflmnopqr :3:7:17 0 E
+2357306 0 0 0 0 0 0 0 0 E
 105 -39 -47 5d5+6500 9d9+45
 50000 3400000
-8 8 1
+9 9 1
 BareHandAttack: 11
 E
 #17626
@@ -398,10 +411,11 @@ enrolados em na nuca, pronta para a próxima ópera.  Ela veste um longo
 vestido de seda azul, com bordados de flores rosa, e junto ao rosto, ela 
 veste uma estranha, mas muito enfeitada, máscara.
 ~
-blmno 0 0 S
+2127874 0 0 0 0 0 0 0 0 E
 25 7 3 4d6+705 3d8+5
 3000 60000
-8 8 2
+9 9 2
+E
 #17627
 chinesa~
 uma chinesa~
@@ -412,10 +426,11 @@ enrolados em na nuca, pronta para a próxima ópera.  Ela veste um longo
 vestido de ceda azul, com bordados de flores rosa, e junto ao rosto, ela 
 veste uma estranha, mas muito enfeitada, máscara.
 ~
-blmno 0 0 S
+2127874 0 0 0 0 0 0 0 0 E
 25 7 3 4d6+705 3d8+5
 3000 60000
-8 8 2
+9 9 2
+E
 #17628
 xiezhi~
 Xiezhi~
@@ -425,7 +440,7 @@ Xiezhi é o símbolo da justiça para os chineses.  Ele é um unicórnio
 lendário, tendo a cabeça e as garras de um dragão dragão, e o rabo de 
 leão.  Em seu nariz você pode ver uma pequenina argola vermelha.
 ~
-beilmnopqr :2:3:7:17 0 E
+2357522 0 0 0 0 0 0 0 0 E
 105 -40 -60 5d6+5700 10d10+45
 70000 4204500
 5 5 1
@@ -442,16 +457,16 @@ seda amarela, com bordados de dragões em dourado.  Na cabeça do imperador
 você pode ver uma enorme e bela coroa.  Você pode ver também que o 
 imperador empunha a enorme alabarda imperial chinesa.
 ~
-bdelmnopqr :3:5:7:17 700 E
+2357274 0 0 0 0 0 0 0 700 E
 108 -70 -85 5d5+22100 10d18+70
 900000 7500000
 6 6 1
 BareHandAttack: 11
 Str: 18
 StrAdd: 7
+Dex: 25
 Int: 25
 Wis: 25
-Dex: 25
 Con: 25
 Cha: 25
 E
@@ -463,10 +478,11 @@ Um guarda está aqui, vigiando o local.
 Olhando para o guarda, você pode ver que ele veste uma armadura simples no 
 corpo, sobre uma túnica de seda, e empunha pequena espada de ferro.
 ~
-bflmno 0 400 S
+2127906 0 0 0 0 0 0 0 400 E
 70 4 -20 3d3+1300 4d6+16
 5000 99344
-8 8 1
+9 9 1
+E
 #17631
 fenix ave~
 Fênix~
@@ -478,7 +494,7 @@ renasce das próprias cinzas, sendo assim uma ave imortal.  A Fênix é a
 representação de todos os elementos da natureza, e dizem os chineses, que 
 quando ela aparece, é porque um bom imperador está no poder.
 ~
-bdelmnopqrt :1:3:5:7:15:17:19 900 E
+2881562 0 0 0 0 0 0 0 900 E
 105 -47 -75 6d6+7500 10d11+55
 0 6035570
 5 5 2
@@ -494,10 +510,11 @@ que ela possui longos cabelos negros e uma estatura não muito alta.  Ela
 também veste uma bela túnica chinesa azul, bordada em dourado com vários 
 dragões.
 ~
-bhnopq :3:7:17 500 S
+2220162 0 0 0 0 0 0 0 500 E
 60 -20 -16 3d3+2300 8d8+30
 50000 150000
-8 8 2
+9 9 2
+E
 #17633
 dragao bronze~
 o Dragão de bronze~
@@ -509,10 +526,9 @@ afiadíssimas garras; assim como em sua boca, na qual encontram-se muitos
 dentes afiados.  Uma particularidade deste dragão é que ele possui o corpo 
 todo em chamas, e de uma forma estranha, este fogo não parece queima-lo.
 ~
-bdlmnopqr :3:10:12:17 400 E
+2357258 0 0 0 0 0 0 0 400 E
 101 -50 -37 7d7+9756 5d10+51
 1000 3600000
-8 8 1
-BareHandAttack: 0
+9 9 1
 E
 $

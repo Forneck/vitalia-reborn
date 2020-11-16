@@ -3,29 +3,29 @@ Pass: AnRCfBykX0mXk
 Titl: the Wanderer
 Sex : 2
 Clas: 6
-Levl: 76
+Levl: 79
 Id  : 6
 Brth: 1603323580
-Plyd: 243586
-Last: 1605318224
-Lmot: 1604961942
+Plyd: 254570
+Last: 1605548670
+Lmot: 1605459147
 Lnew: 1605118209
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: 65
+Alin: 348
 Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
 Wimp: 100
 Room: 5518
-Lern: 2
-Hung: 13
-Thir: 8
-Hit : 913/883
-Mana : 956/956
-Move: 371/271
+Lern: 8
+Hung: 23
+Thir: 3
+Hit : 439/927
+Mana : 107/971
+Move: 371/280
 Str : 17/0
 Int : 9
 Wis : 11
@@ -33,9 +33,9 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 2870451
+Gold: 3453002
 Bank: 1500000
-Exp : 65225092
+Exp : 75446645
 Olc : 0
 Skil:
 7 100
@@ -64,13 +64,12 @@ Skil:
 252 90
 0 0
 Affs:
-3 93 -3 24 0 0 0 0
-3 93 4 18 0 0 0 0
-1 543 -20 17 0 0 0 0
-96 258 -4 17 0 0 0 0
-96 258 0 61 0 16 0 0
+19 89 0 29 16 0 0 0
+1 374 -20 17 0 0 0 0
+96 399 -4 17 0 0 0 0
+96 399 0 61 0 16 0 0
 0 0 0 0 0 0 0 0
-Alis: 60
+Alis: 61
  wake;wear
  all
 0
@@ -250,4 +249,7 @@ Alis: 60
 1
  samurais
         s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;e;e;e;u;u;u;u;s
+1
+ villspah
+        s;s;e;e;e;e;e;e;n;n;n;e
 1
