@@ -91,6 +91,11 @@ void assign_mobiles(void)
   ASSIGNMOB(5403, guild);
   ASSIGNMOB(5491, guild);
   ASSIGNMOB(5497, guild);
+  ASSIGNMOB(11325, guild);
+  ASSIGNMOB(11326, guild);
+  ASSIGNMOB(11328, guild);
+  ASSIGNMOB(11329, guild);
+  ASSIGNMOB(11330, guild);
   /*
   ASSIGNMOB(11518, guild);
   ASSIGNMOB(25720, guild);
