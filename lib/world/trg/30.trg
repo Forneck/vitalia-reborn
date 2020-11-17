@@ -275,6 +275,52 @@ if %actor.is_pc% && %actor.level% < 10
   end
 end
 ~
+#3013
+Cityguard Stock~
+0 b 50
+~
+if !%self.fighting%
+  set actor %random.char%
+  if %actor%
+    if %actor.is_killer%
+      emote grita 'EI!!!  Você é um FORA-DA-LEI!!!'
+      kill %actor.name%
+    elseif %actor.is_thief%
+      emote grita 'EI!!!  Você é um FORA-DA-LEI!!!'
+      kill %actor.name%
+    elseif %actor.cha% < 6
+      %send% %actor% %self.name% cospe no seu rosto.
+      %echoaround% %actor% %self.name% cospe no rosto de %actor.name%.
+    end
+    if %actor.fighting%
+      eval victim %actor.fighting%
+      if %actor.align% < %victim.align% && %victim.align% >= 0
+        emote  grita 'PROTEJAM OS INOCENTES!  BANZAI!  ARARARAGGGHH!'
+        kill %actor.name%
+      end
+    end
+  end
+end
+~
+#3014
+Stock Fido~
+0 b 100
+~
+set inroom %self.room%
+set item %inroom.contents%
+while %item%
+  * Target the next item in room. In case it is devoured.
+  set next_item %item.next_in_list%
+  * Check for a corpse. Corpse on TBA is vnum 65535. Stock is -1.
+  if %item.vnum(65535)%
+    emote brutalmente devora $p.
+    %purge% %item%
+    halt
+  end
+  set item %next_item%
+  * Loop back
+done
+~
 #3018
 portal to NT~
 1 c 7
