@@ -1,10 +1,8 @@
 TODO:
 
-Refazer mobs da china
-continuar do_shoot (mob_hunting)
-FIX: obj 13018 (vender no carrapicho, 14404)
 FIX: Mobs que sumiram ex 13101-13109
-character.c /rebegin etc...
+ver hp mob 2322
+character.c /rebegin e elevate...
 
 greetings
 @W       << @wSe voce nao possui um personagem neste jogo, digite "@RNOVO@w".@W >>@n
@@ -14,7 +12,7 @@ autoress/limits
 reroll
 clans
 
-guildas em 113,134
+guildas em 134
 
 classes monge e paladinos
 
@@ -25,7 +23,6 @@ verificar modificadores nos objs no inventario (2 maos)
 remover veneno da arma
 weather
 talk_dead no move
-
 
 diminuir carga de stoneskin no dano
 modificar o consider
@@ -90,7 +87,6 @@ completar objs 65 *STRANGELOVE ORIG*
 
 mob sem load:
 750,2399
-
 
 loja feita 3,22,25,27,28,30,31,33,43,44,54,65,81,113,120,134,140,144,150,173,176,190,204,220,221,280,290
 falta loja catedral de cristal,mercador nomade de nt (54)
