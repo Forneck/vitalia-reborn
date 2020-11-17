@@ -3911,3 +3911,21 @@ Nov 17 08:07:18 2020 :: OLC: Cansian stops editing the game configuration
 Nov 17 08:07:56 2020 :: OLC: Cansian starts editing the game configuration.
 Nov 17 08:08:16 2020 :: OLC: Cansian modifies the game configuration.
 Nov 17 08:08:16 2020 :: OLC: Cansian stops editing the game configuration
+Nov 17 14:54:35 2020 :: OLC: Cansian starts editing zone 0 allowed zone 0
+Nov 17 14:56:23 2020 :: OLC: Cansian edits obj 60
+Nov 17 14:56:23 2020 :: OLC: Cansian stops editing zone 0 allowed zone 0
+Nov 17 15:04:28 2020 :: OLC: Cansian starts editing zone 23 allowed zone 0
+Nov 17 15:11:41 2020 :: GenOLC: add_mobile: Added mobile 2322 at index #219.
+Nov 17 15:11:41 2020 :: OLC: Cansian edits mob 2322
+Nov 17 15:11:41 2020 :: GenOLC: 'world/mob/23.mob' saved, 24163 bytes written.
+Nov 17 15:11:41 2020 :: OLC: Cansian stops editing zone 23 allowed zone 0
+Nov 17 15:18:30 2020 :: OLC: Cansian starts editing zone 23 allowed zone 0
+Nov 17 15:20:28 2020 :: GenOLC: add_mobile: Updated existing mobile #2322.
+Nov 17 15:20:28 2020 :: OLC: Cansian edits mob 2322
+Nov 17 15:20:28 2020 :: GenOLC: 'world/mob/23.mob' saved, 24151 bytes written.
+Nov 17 15:20:28 2020 :: OLC: Cansian stops editing zone 23 allowed zone 0
+Nov 17 16:20:33 2020 :: GenOLC: 'world/mob/131.mob' saved, 13843 bytes written.
+Nov 17 16:30:29 2020 :: OLC: Cansian starts editing zone 131 allowed zone 0
+Nov 17 16:30:39 2020 :: OLC: Cansian stops editing zone 131 allowed zone 0
+Nov 17 16:30:50 2020 :: OLC: Cansian starts editing zone 131 allowed zone 0
+Nov 17 16:31:07 2020 :: OLC: Cansian stops editing zone 131 allowed zone 0

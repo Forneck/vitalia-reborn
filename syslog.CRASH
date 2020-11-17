@@ -1,30 +1,30 @@
-Nov 17 14:45:56 2020 :: Motharo has connected.
-Nov 17 14:45:57 2020 :: Motharo had no variable file
-Nov 17 14:45:57 2020 :: Motharo un-renting and entering game.
-Nov 17 14:45:57 2020 :: Motharo (level 37) has 32 objects (max 100).
-Nov 17 14:46:16 2020 :: Motharo has quit the game.
-Nov 17 14:46:17 2020 :: Losing player: Motharo.
-Nov 17 14:46:20 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 17 14:46:20 2020 :: rusage: user time: 5 sec, system time: 0 sec, max res size: 22860
-Nov 17 14:51:06 2020 :: WARNING: EOF on socket read (connection broken by peer)
-Nov 17 14:51:06 2020 :: Losing descriptor without char.
-Nov 17 14:51:06 2020 :: WARNING: EOF on socket read (connection broken by peer)
-Nov 17 14:51:06 2020 :: Closing link to: Cansian.
-Nov 17 14:51:06 2020 :: No connections.  Going to sleep.
-Nov 17 14:51:09 2020 :: New connection.  Waking up.
-Nov 17 14:51:11 2020 :: Cansian [138.204.26.79] has reconnected.
-Nov 17 14:51:21 2020 :: WARNING: EOF on socket read (connection broken by peer)
-Nov 17 14:51:21 2020 :: Closing link to: Cansian.
-Nov 17 14:51:21 2020 :: No connections.  Going to sleep.
-Nov 17 14:51:27 2020 :: New connection.  Waking up.
-Nov 17 14:51:27 2020 :: nusage: 1   sockets connected, 0   sockets playing
-Nov 17 14:51:27 2020 :: rusage: user time: 6 sec, system time: 0 sec, max res size: 22860
-Nov 17 14:51:29 2020 :: Cansian [138.204.26.79] has reconnected.
-Nov 17 14:51:37 2020 :: (GC) Reboot by Cansian.
-Nov 17 14:51:37 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 17 14:51:37 2020 :: Closing all sockets.
-Nov 17 14:51:37 2020 :: Closing link to: Cansian.
-Nov 17 14:51:37 2020 :: Saving current MUD time.
-Nov 17 14:51:37 2020 :: Rebooting.
+Nov 17 16:43:37 2020 :: SYSERR: object #20102 has unknown room flag, bit 61 (0 through 24 known).
+Nov 17 16:43:37 2020 :: Loading spells.
+Nov 17 16:43:37 2020 :: Assigning spells's function.
+Nov 17 16:43:37 2020 :: Renumbering rooms.
+Nov 17 16:43:37 2020 :: Checking start rooms.
+Nov 17 16:43:37 2020 :: Loading mobs and generating index.
+Nov 17 16:43:37 2020 ::    2588 mobs, 82816 bytes in index, 1697728 bytes in prototypes.
+Nov 17 16:43:37 2020 :: Converting mobile #13200 to 128bits..
+Nov 17 16:43:37 2020 ::    done.
+Nov 17 16:43:37 2020 :: Converting mobile #13201 to 128bits..
+Nov 17 16:43:37 2020 ::    done.
+Nov 17 16:43:37 2020 :: Converting mobile #13202 to 128bits..
+Nov 17 16:43:37 2020 ::    done.
+Nov 17 16:43:37 2020 :: Converting mobile #13203 to 128bits..
+Nov 17 16:43:37 2020 ::    done.
+Nov 17 16:43:37 2020 :: Converting mobile #13204 to 128bits..
+Nov 17 16:43:37 2020 ::    done.
+Nov 17 16:43:37 2020 :: Converting mobile #13205 to 128bits..
+Nov 17 16:43:37 2020 ::    done.
+Nov 17 16:43:37 2020 :: Converting mobile #13206 to 128bits..
+Nov 17 16:43:37 2020 ::    done.
+Nov 17 16:43:37 2020 :: Converting mobile #13207 to 128bits..
+Nov 17 16:43:37 2020 ::    done.
+Nov 17 16:43:37 2020 :: Converting mobile #13208 to 128bits..
+Nov 17 16:43:37 2020 ::    done.
+Nov 17 16:43:37 2020 :: Converting mobile #13209 to 128bits..
+Nov 17 16:43:37 2020 ::    done.
+Nov 17 16:43:37 2020 :: SYSERR: Unterminated E section in mob #13209
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.
