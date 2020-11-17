@@ -2531,28 +2531,28 @@ Puff - Random Advice~
 ~
 * By Rumble of The Builder Academy    tbamud.com 9091
 set max %random.197%
-set  text[1]   My god!  It's full of stars!
-set  text[2]   How'd all those fish get up here?
-set  text[3]   Some people are like Slinkies. Not really good for anything, but still bring a smile to your face when you push them down a flight of stairs.
-set  text[4]   I've got a peaceful, easy feeling.
-set  text[5]   Ahhh, spring is in the air.
-set  text[6]   I'm one of those bad things that happen to good people.
-set  text[7]   Bring out your dead, bring out your dead!
-set  text[8]   If there is no God, who pops up the next kleenex in the box?
-set  text[9]   Have you ever imagined a world with no hypothetical situations?
-set  text[10]  Pardon me, but do you have any Grey Poupon?
-set  text[11]  If nothing sticks to Teflon, how do they stick Teflon to the pan?
-set  text[12]  Better be nice or I will use fireball on you!
-set  text[13]  Do you think I'm going bald?
-set  text[14]  This is your brain, this is MUD, this is your brain on MUD, Any questions?
-set  text[15]  I'm Puff the Magic Dragon, who the hell are you?
-set  text[16]  Quick!  Reverse the polarity of the neutron flow!
-set  text[17]  Shh...  I'm beta testing.  I need complete silence!
-set  text[18]  I'm the real implementor, you know.
-set  text[19]  If love is blind, why is lingerie so popular?
-set  text[20]  Despite the cost of living, have you noticed how popular it remains?
-set  text[21]  Are you crazy, is that your problem?
-set  text[22]  A bus station is where a bus stops. A train station is where a train stops. On my desk I have a work station. GO FIGURE!
+set  text[1]   Meu Deus!  Aqui está cheio de estrelas!
+set  text[2]   Como todos estes peixes vieram parar aqui?
+set  text[3]   Eu sou um dragão muito feminino.
+set  text[4]   Aqui está muito tranqüilo."
+set  text[5]   Hoje parece um dia perfeito para compras!
+set  text[6]   Eu sou uma das coisas ruins que acontecem às pessoas boas.
+set  text[7]   Tragam os seus mortos, tragam os seus mortos!
+set  text[8]   Sou uma garota tão ocupada...
+set  text[9]   Você já imaginou um mundo sem situações hipoteticas?
+set  text[10]  Adoro as cores do arco-íris!
+set  text[11]  Se nada gruda no Teflon, comoneles grudam o Teflon na panela?
+set  text[12]  Melhor ser legal ou eu vou usar uma fireball em você!
+set  text[13]  Você acha que eu vou ficar careca?
+set  text[14]  Este é o seu cerebro, este é o MUD, este é o seu cerebro no MUD. Alguma pergunta?
+set  text[15]  As vozes em minha cabeça querem que eu domine o mundo...
+set  text[16]  Rapido! Reverta a polaridade do fluxonde neutrons!
+set  text[17]  Shh...  Estou testando o beta. Preciso de completo silencio!
+set  text[18]  Eu sou a verdadeira implementadora, você sabia?
+set  text[19]  Se o amor é cego, por quê lingerie é tão popular?
+set  text[20]  Vou escrever um poema... Sim! Falarei de flores. De flores perfumadas!
+set  text[21]  Vou viajar de cometa!
+set  text[22]  Prefiro comida sem conservantes!
 set  text[23]  If you can't beat them, arrange to have them beaten.
 set  text[24]  It takes a big man to cry, but it takes a bigger man to laugh at him.
 set  text[25]  Friends come and go, but enemies accumulate.
