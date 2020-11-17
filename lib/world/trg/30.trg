@@ -97,14 +97,14 @@ if %direction% == west
 end
 ~
 #3007
-Stock Thief~
+Ladrão Stock~
 0 b 10
 ~
 set actor %random.char%
 if %actor%
   if %actor.is_pc% && %actor.gold%
-    %send% %actor% You discover that %self.name% has %self.hisher% hands in your wallet.
-    %echoaround% %actor% %self.name% tries to steal gold from %actor.name%.
+    %send% %actor% Você descobre que %self.name% está com as suas mãos em seu bolso.
+    %echoaround% %actor% %self.name% tebta roubar dinheiro de %actor.name%.
     eval coins %actor.gold% * %random.10% / 100
     nop %actor.gold(-%coins%)%
     nop %self.gold(%coins%)%
@@ -112,7 +112,7 @@ if %actor%
 end
 ~
 #3008
-Snake~
+Cobra Stock~
 0 k 10
 ~
 %send% %actor% %self.name% te mordeu!
