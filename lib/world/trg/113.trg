@@ -96,4 +96,11 @@ if %direction% == west
   end
 end
 ~
+#11307
+Profundezas~
+2 h 100
+~
+%echo% %object.shortdesc% some nas profundezas das águas.
+%purge% %object%
+~
 $~
