@@ -3872,3 +3872,42 @@ Nov 17 05:07:17 2020 :: OLC: Cansian stops editing zone 115 allowed zone 0
 Nov 17 05:08:03 2020 :: OLC: Cansian starts editing zone 115 [trigger](allowed zone 0)
 Nov 17 05:08:38 2020 :: OLC: Cansian edits trigger 11500
 Nov 17 05:08:38 2020 :: OLC: Cansian stops editing zone 115 allowed zone 0
+Nov 17 07:38:13 2020 :: OLC: Cansian starts editing zone 45 allowed zone 0
+Nov 17 07:38:47 2020 :: GenOLC: add_room: Updated existing room #4553.
+Nov 17 07:38:47 2020 :: OLC: Cansian edits room 4553.
+Nov 17 07:38:47 2020 :: GenOLC: save_rooms: Saving rooms in zone #45 (4500-4599).
+Nov 17 07:38:47 2020 :: OLC: Cansian stops editing zone 45 allowed zone 0
+Nov 17 07:39:37 2020 :: OLC: Cansian starts editing zone 45 [trigger](allowed zone 0)
+Nov 17 07:39:54 2020 :: OLC: Cansian edits trigger 4500
+Nov 17 07:39:54 2020 :: OLC: Cansian stops editing zone 45 allowed zone 0
+Nov 17 07:52:15 2020 :: OLC: Cansian starts editing zone 45 allowed zone 0
+Nov 17 07:52:51 2020 :: GenOLC: add_room: Updated existing room #4553.
+Nov 17 07:52:51 2020 :: OLC: Cansian edits room 4553.
+Nov 17 07:52:51 2020 :: GenOLC: save_rooms: Saving rooms in zone #45 (4500-4599).
+Nov 17 07:52:51 2020 :: OLC: Cansian stops editing zone 45 allowed zone 0
+Nov 17 07:53:37 2020 :: OLC: Cansian starts editing zone 45 [trigger](allowed zone 0)
+Nov 17 07:54:10 2020 :: OLC: Cansian edits trigger 4500
+Nov 17 07:54:10 2020 :: OLC: Cansian stops editing zone 45 allowed zone 0
+Nov 17 07:55:06 2020 :: OLC: Cansian starts editing zone 45 [trigger](allowed zone 0)
+Nov 17 07:55:45 2020 :: OLC: Cansian edits trigger 4500
+Nov 17 07:55:45 2020 :: OLC: Cansian stops editing zone 45 allowed zone 0
+Nov 17 07:56:08 2020 :: OLC: Cansian starts editing zone 45 [trigger](allowed zone 0)
+Nov 17 07:56:43 2020 :: OLC: Cansian edits trigger 4500
+Nov 17 07:56:43 2020 :: OLC: Cansian stops editing zone 45 allowed zone 0
+Nov 17 07:57:03 2020 :: OLC: Cansian starts editing zone 45 [trigger](allowed zone 0)
+Nov 17 07:57:39 2020 :: OLC: Cansian edits trigger 4500
+Nov 17 07:57:39 2020 :: OLC: Cansian stops editing zone 45 allowed zone 0
+Nov 17 07:57:56 2020 :: OLC: Cansian starts editing zone 45 [trigger](allowed zone 0)
+Nov 17 07:58:01 2020 :: OLC: Cansian stops editing zone 45 allowed zone 0
+Nov 17 07:58:08 2020 :: OLC: Cansian starts editing zone 45 [trigger](allowed zone 0)
+Nov 17 07:58:43 2020 :: OLC: Cansian edits trigger 4500
+Nov 17 07:58:43 2020 :: OLC: Cansian stops editing zone 45 allowed zone 0
+Nov 17 07:58:55 2020 :: OLC: Cansian starts editing zone 45 [trigger](allowed zone 0)
+Nov 17 07:59:45 2020 :: OLC: Cansian edits trigger 4501
+Nov 17 07:59:45 2020 :: OLC: Cansian stops editing zone 45 allowed zone 0
+Nov 17 08:07:02 2020 :: OLC: Cansian starts editing the game configuration.
+Nov 17 08:07:18 2020 :: OLC: Cansian modifies the game configuration.
+Nov 17 08:07:18 2020 :: OLC: Cansian stops editing the game configuration
+Nov 17 08:07:56 2020 :: OLC: Cansian starts editing the game configuration.
+Nov 17 08:08:16 2020 :: OLC: Cansian modifies the game configuration.
+Nov 17 08:08:16 2020 :: OLC: Cansian stops editing the game configuration

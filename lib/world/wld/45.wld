@@ -368,15 +368,15 @@ Um caminho oculto.
 caminho baixo oculto~
 1 -1 4513
 E
-águas escavado~
-Um caminho nas profundezas, por baixo das montanhas, escavado nas trevas do
-mundo, por águas que ali fluíam.
-~
-E
 aves enormes~
 São enormes águias circulando o pico destas montanhas, você poderia
 facilmente ser carregado por uma delas.  Reze para que elas não o
 considerem uma ameaça a este local.
+~
+E
+águas escavado~
+Um caminho nas profundezas, por baixo das montanhas, escavado nas trevas do
+mundo, por águas que ali fluíam.
 ~
 S
 #4513
@@ -792,13 +792,13 @@ D5
 ~
 0 -1 4530
 E
+sudeste~
+Um longo e íngreme caminho nas montanhas.
+~
+E
 norte~
 Um grande pátio onde há muitos soldados élficos de vestes cinza,
 fortemente armados.
-~
-E
-sudeste~
-Um longo e íngreme caminho nas montanhas.
 ~
 S
 #4533
@@ -814,13 +814,13 @@ D5
 ~
 0 -1 4531
 E
+sudeste~
+Um longo e íngreme caminho nas montanhas.
+~
+E
 norte~
 Um grande pátio onde há muitos soldados élficos de vestes cinza,
 fortemente armados.
-~
-E
-sudeste~
-Um longo e íngreme caminho nas montanhas.
 ~
 S
 #4534
@@ -889,9 +889,9 @@ D3
 ~
 0 -1 4535
 E
-figuras sinais~
-Você não consegue decifras o significado destas figuras, talvez por não ser
-do povo de Gondolin...
+portao bronze~
+Uma grande porta dupla adornada com escudos e placas de bronze, nos quais
+estão gravados muitas figuras e sinais estranhos.
 ~
 E
 escudos placas~
@@ -899,9 +899,9 @@ Escudos e placas de bronze, nos quais estão gravados muitas figuras e sinais
 estranhos.
 ~
 E
-portao bronze~
-Uma grande porta dupla adornada com escudos e placas de bronze, nos quais
-estão gravados muitas figuras e sinais estranhos.
+figuras sinais~
+Você não consegue decifras o significado destas figuras, talvez por não ser
+do povo de Gondolin...
 ~
 S
 #4537
@@ -1308,6 +1308,10 @@ A Estrada.
 ~
 0 -1 4552
 S
+T 4500
+T 4501
+T 4503
+T 4502
 #4554
 O Alto Gramado~
    Você passa pelo portão então e, chega a um alto gramado de onde se divisa

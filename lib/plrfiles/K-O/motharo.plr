@@ -6,26 +6,26 @@ Clas: 6
 Levl: 37
 Id  : 25
 Brth: 1604182960
-Plyd: 56639
-Last: 1605382856
-Lmot: 1605119480
+Plyd: 58146
+Last: 1605624355
+Lmot: 1605614458
 Lnew: 1605382525
 Htwn: 1372
 Host: 187.66.23.112
 Hite: 178
 Wate: 158
-Alin: 144
+Alin: -9
 Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDEF abd 0 0
 Wimp: 20
 Room: 3001
 Lern: 16
-Hung: 9
-Thir: 9
-Hit : 270/453
-Mana : 270/270
-Move: 206/196
+Hung: 5
+Thir: 5
+Hit : 453/453
+Mana : 258/270
+Move: 190/196
 Str : 16/0
 Int : 13
 Wis : 13
@@ -33,9 +33,9 @@ Dex : 14
 Con : 15
 Cha : 11
 Ac  : 100
-Gold: 485852
+Gold: 521056
 Bank: 200000
-Exp : 10086299
+Exp : 10474958
 Olc : 0
 Skil:
 16 90
@@ -56,6 +56,11 @@ Skil:
 243 90
 252 90
 0 0
+Affs:
+36 30 0 33 256 0 0 0
+96 19 -4 17 0 0 0 0
+96 19 0 61 0 16 0 0
+0 0 0 0 0 0 0 0
 Alis: 9
  fome
  drin barr;drin barri;fill barril font;cast 'create be';eat mor
