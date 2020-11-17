@@ -4507,7 +4507,7 @@ void advance_level(struct char_data *ch)
 
 	case CLASS_RANGER:
 		add_hp += rand_number(7, 13);
-		add_mana = rand_number((int)(0.5 * GET_LEVEL(ch)), GET_LEVEL(ch));
+		add_mana = rand_number((int)(0.5 * GET_LEVEL(ch)), (int)GET_LEVEL(ch));
 		add_mana = MIN(add_mana, 5);
 		add_move = rand_number(2, 4);
 		break;
@@ -4720,12 +4720,12 @@ const char *title_male(int chclass, int level)
         case  81: return "o Habil das Magicas";
         case  82: return "o Habil das Magicas";
         case  83: return "o Habil das Magicas";
-        case  84: return "o Xam�";
-        case  85: return "o Xam�";
-        case  86: return "o Xam�";
-        case  87: return "o Guardiao de Talism�s";
-        case  88: return "o Guardiao de Talism�s";
-        case  89: return "o Guardiao de Talism�s";
+        case  84: return "o Xamã";
+        case  85: return "o Xamã";
+        case  86: return "o Xamã";
+        case  87: return "o Guardiao de Talismãs";
+        case  88: return "o Guardiao de Talismãs";
+        case  89: return "o Guardiao de Talismãs";
         case  90: return "o Arque-magico";
         case  91: return "o Arque-magico";
         case  92: return "o Arque-magico";
@@ -4768,11 +4768,11 @@ const char *title_male(int chclass, int level)
         case  16: return "o Assistente";
         case  17: return "o Assistente";
         case  18: return "o Assistente";
-        case  19: return "o Novi�o";
-        case  20: return "o Novi�o";
-        case  21: return "o Novi�o";
-        case  22: return "o Novi�o";
-        case  23: return "o Novi�o";
+        case  19: return "o Noviço";
+        case  20: return "o Noviço";
+        case  21: return "o Noviço";
+        case  22: return "o Noviço";
+        case  23: return "o Noviço";
         case  24: return "o Missionario";
         case  25: return "o Missionario";
         case  26: return "o Missionario";
@@ -4969,7 +4969,7 @@ const char *title_male(int chclass, int level)
         case LVL_ANCIENT: return "o Assassino Imortal";
         case LVL_GRIMM  : return "o Assassino Imortal";
         case LVL_DEMIGOD: return "o Deus dos Ladroes";
-        case LVL_GOD    : return "o Guardi�o dos Ladroes";
+        case LVL_GOD    : return "o Guardião dos Ladroes";
         case LVL_GRGOD  : return "o Legislador dos Ladroes";
       }
       break;
@@ -5099,51 +5099,51 @@ const char *title_male(int chclass, int level)
         case   8: return "o Ovate";
         case   9: return "o Ovate";
         case  10: return "o Ovate";
-        case  11: return "o Iniciado no Primeiro C�rculo";
-        case  12: return "o Iniciado no Primeiro C�rculo";
-        case  13: return "o Iniciado no Primeiro C�rculo";
-        case  14: return "o Iniciado no Primeiro C�rculo";
-        case  15: return "o Iniciado no Primeiro C�rculo";
-        case  16: return "o Iniciado no Segundo C�rculo";
-        case  17: return "o Iniciado no Segundo C�rculo";
-        case  18: return "o Iniciado no Segundo C�rculo";
-        case  19: return "o Iniciado no Segundo C�rculo";
-        case  20: return "o Iniciado no Segundo C�rculo";
-        case  21: return "o Iniciado no Terceiro C�rculo";
-        case  22: return "o Iniciado no Terceiro C�rculo";
-        case  23: return "o Iniciado no Terceiro C�rculo";
-        case  24: return "o Iniciado no Terceiro C�rculo";
-        case  25: return "o Iniciado no Terceiro C�rculo";
-        case  26: return "o Iniciado no Quarto C�rculo";
-        case  27: return "o Iniciado no Quarto C�rculo";
-        case  28: return "o Iniciado no Quarto C�rculo";
-        case  29: return "o Iniciado no Quarto C�rculo";
-        case  30: return "o Iniciado no Quarto C�rculo";
-        case  31: return "o Iniciado no Quinto C�rculo";
-        case  32: return "o Iniciado no Quinto C�rculo";
-        case  33: return "o Iniciado no Quinto C�rculo";
-        case  34: return "o Iniciado no Quinto C�rculo";
-        case  35: return "o Iniciado no Quinto C�rculo";
-        case  36: return "o Iniciado no Sexto C�rculo";
-        case  37: return "o Iniciado no Sexto C�rculo";
-        case  38: return "o Iniciado no Sexto C�rculo";
-        case  39: return "o Iniciado no Sexto C�rculo";
-        case  40: return "o Iniciado no Sexto C�rculo";
-        case  41: return "o Iniciado no S�timo C�rculo";
-        case  42: return "o Iniciado no S�timo C�rculo";
-        case  43: return "o Iniciado no S�timo C�rculo";
-        case  44: return "o Iniciado no S�timo C�rculo";
-        case  45: return "o Iniciado no S�timo C�rculo";
-        case  46: return "o Iniciado no Oitavo C�rculo";
-        case  47: return "o Iniciado no Oitavo C�rculo";
-        case  48: return "o Iniciado no Oitavo C�rculo";
-        case  49: return "o Iniciado no Oitavo C�rculo";
-        case  50: return "o Iniciado no Oitavo C�rculo";
-        case  51: return "o Iniciado no Nono C�rculo";
-        case  52: return "o Iniciado no Nono C�rculo";
-        case  53: return "o Iniciado no Nono C�rculo";
-        case  54: return "o Iniciado no Nono C�rculo";
-        case  55: return "o Iniciado no Nono C�rculo";
+        case  11: return "o Iniciado no Primeiro Círculo";
+        case  12: return "o Iniciado no Primeiro Círculo";
+        case  13: return "o Iniciado no Primeiro Círculo";
+        case  14: return "o Iniciado no Primeiro Círculo";
+        case  15: return "o Iniciado no Primeiro Círculo";
+        case  16: return "o Iniciado no Segundo Círculo";
+        case  17: return "o Iniciado no Segundo Círculo";
+        case  18: return "o Iniciado no Segundo Círculo";
+        case  19: return "o Iniciado no Segundo Círculo";
+        case  20: return "o Iniciado no Segundo Círculo";
+        case  21: return "o Iniciado no Terceiro Círculo";
+        case  22: return "o Iniciado no Terceiro Círculo";
+        case  23: return "o Iniciado no Terceiro Círculo";
+        case  24: return "o Iniciado no Terceiro Círculo";
+        case  25: return "o Iniciado no Terceiro Círculo";
+        case  26: return "o Iniciado no Quarto Círculo";
+        case  27: return "o Iniciado no Quarto Círculo";
+        case  28: return "o Iniciado no Quarto Círculo";
+        case  29: return "o Iniciado no Quarto Círculo";
+        case  30: return "o Iniciado no Quarto Círculo";
+        case  31: return "o Iniciado no Quinto Círculo";
+        case  32: return "o Iniciado no Quinto Círculo";
+        case  33: return "o Iniciado no Quinto Círculo";
+        case  34: return "o Iniciado no Quinto Círculo";
+        case  35: return "o Iniciado no Quinto Círculo";
+        case  36: return "o Iniciado no Sexto Círculo";
+        case  37: return "o Iniciado no Sexto Círculo";
+        case  38: return "o Iniciado no Sexto Círculo";
+        case  39: return "o Iniciado no Sexto Círculo";
+        case  40: return "o Iniciado no Sexto Círculo";
+        case  41: return "o Iniciado no Sétimo Círculo";
+        case  42: return "o Iniciado no Sétimo Círculo";
+        case  43: return "o Iniciado no Sétimo Círculo";
+        case  44: return "o Iniciado no Sétimo Círculo";
+        case  45: return "o Iniciado no Sétimo Círculo";
+        case  46: return "o Iniciado no Oitavo Círculo";
+        case  47: return "o Iniciado no Oitavo Círculo";
+        case  48: return "o Iniciado no Oitavo Círculo";
+        case  49: return "o Iniciado no Oitavo Círculo";
+        case  50: return "o Iniciado no Oitavo Círculo";
+        case  51: return "o Iniciado no Nono Círculo";
+        case  52: return "o Iniciado no Nono Círculo";
+        case  53: return "o Iniciado no Nono Círculo";
+        case  54: return "o Iniciado no Nono Círculo";
+        case  55: return "o Iniciado no Nono Círculo";
         case  56: return "o Druida";
         case  57: return "o Druida";
         case  58: return "o Druida";
@@ -5154,11 +5154,11 @@ const char *title_male(int chclass, int level)
         case  63: return "o Arque-Druida";
         case  64: return "o Arque-Druida";
         case  65: return "o Arque-Druida";
-        case  66: return "o Gr�o-Druida";
-        case  67: return "o Gr�o-Druida";
-        case  68: return "o Gr�o-Druida";
-        case  69: return "o Gr�o-Druida";
-        case  70: return "o Gr�o-Druida";
+        case  66: return "o Grão-Druida";
+        case  67: return "o Grão-Druida";
+        case  68: return "o Grão-Druida";
+        case  69: return "o Grão-Druida";
+        case  70: return "o Grão-Druida";
         case  71: return "o Magno Druida";
         case  72: return "o Magno Druida";
         case  73: return "o Magno Druida";
@@ -5189,11 +5189,11 @@ const char *title_male(int chclass, int level)
         case  98: return "o Sublime Hierofante";
         case  99: return "o Sublime Hierofante";
         case 100: return "o Sublime Hierofante";
-        case LVL_IMMORT : return "o M�stico Hierofante";
-        case LVL_IMM2   : return "o M�stico Hierofante";
-        case LVL_IMM3   : return "o M�stico Hierofante";
-        case LVL_ANCIENT: return "o M�stico Hierofante";
-        case LVL_GRIMM  : return "o M�stico Hierofante";
+        case LVL_IMMORT : return "o Místico Hierofante";
+        case LVL_IMM2   : return "o Místico Hierofante";
+        case LVL_IMM3   : return "o Místico Hierofante";
+        case LVL_ANCIENT: return "o Místico Hierofante";
+        case LVL_GRIMM  : return "o Místico Hierofante";
         case LVL_DEMIGOD: return "o Hierofante Arcano";
         case LVL_GOD    : return "o Hierofante Arcano";
         case LVL_GRGOD  : return "Hierofante da Cabala";
@@ -5207,21 +5207,21 @@ const char *title_male(int chclass, int level)
         case   3: return "o Aprendiz de Malabarista";
         case   4: return "o Aprendiz de Malabarista";
         case   5: return "o Aprendiz de Malabarista";
-        case   6: return "o Histri�o";
-        case   7: return "o Histri�o";
-        case   8: return "o Histri�o";
-        case   9: return "o Histri�o";
-        case  10: return "o Histri�o";
-        case  11: return "o Tru�o";
-        case  12: return "o Tru�o";
-        case  13: return "o Tru�o";
-        case  14: return "o Tru�o";
-        case  15: return "o Tru�o";
-        case  16: return "o Estudante de M�sica";
-        case  17: return "o Estudante de M�sica";
-        case  18: return "o Estudante de M�sica";
-        case  19: return "o Estudante de M�sica";
-        case  20: return "o Estudante de M�sica";
+        case   6: return "o Histrião";
+        case   7: return "o Histrião";
+        case   8: return "o Histrião";
+        case   9: return "o Histrião";
+        case  10: return "o Histrião";
+        case  11: return "o Truão";
+        case  12: return "o Truão";
+        case  13: return "o Truão";
+        case  14: return "o Truão";
+        case  15: return "o Truão";
+        case  16: return "o Estudante de Música";
+        case  17: return "o Estudante de Música";
+        case  18: return "o Estudante de Música";
+        case  19: return "o Estudante de Música";
+        case  20: return "o Estudante de Música";
         case  21: return "o Cantor";
         case  22: return "o Cantor";
         case  23: return "o Cantor";
@@ -5247,11 +5247,11 @@ const char *title_male(int chclass, int level)
         case  43: return "o Poeta";
         case  44: return "o Poeta";
         case  45: return "o Poeta";
-        case  46: return "o Contador de Hist�rias";
-        case  47: return "o Contador de Hist�rias";
-        case  48: return "o Contador de Hist�rias";
-        case  49: return "o Contador de Hist�rias";
-        case  50: return "o Contador de Hist�rias";
+        case  46: return "o Contador de Histórias";
+        case  47: return "o Contador de Histórias";
+        case  48: return "o Contador de Histórias";
+        case  49: return "o Contador de Histórias";
+        case  50: return "o Contador de Histórias";
         case  51: return "o Instrumentista";
         case  52: return "o Instrumentista";
         case  53: return "o Instrumentista";
@@ -5287,11 +5287,11 @@ const char *title_male(int chclass, int level)
         case  83: return "o Bardo Nobre";
         case  84: return "o Bardo Nobre";
         case  85: return "o Bardo Nobre";
-        case  86: return "o Mestre na M�sica";
-        case  87: return "o Mestre na M�sica";
-        case  88: return "o Mestre na M�sica";
-        case  89: return "o Mestre na M�sica";
-        case  90: return "o Mestre na M�sica";
+        case  86: return "o Mestre na Música";
+        case  87: return "o Mestre na Música";
+        case  88: return "o Mestre na Música";
+        case  89: return "o Mestre na Música";
+        case  90: return "o Mestre na Música";
         case  91: return "o Trovador";
         case  92: return "o Trovador";
         case  93: return "o Trovador";
@@ -5307,9 +5307,9 @@ const char *title_male(int chclass, int level)
         case LVL_IMM3   : return "o Trovador Celestial";
         case LVL_ANCIENT: return "o Trovador Celestial";
         case LVL_GRIMM  : return "o Trovador Celestial";
-        case LVL_DEMIGOD: return "o Deus da M�sica e da Poesia";
+        case LVL_DEMIGOD: return "o Deus da Música e da Poesia";
         case LVL_GOD    : return "a Harmonia Divina";
-        case LVL_GRGOD  : return "o Regente da Vibra��o Universal";
+        case LVL_GRGOD  : return "o Regente da Vibração Universal";
       }
       break;
   
@@ -5317,73 +5317,73 @@ const char *title_male(int chclass, int level)
 		switch (level)
 		{
 		case 1:
-			return "the Fledgling";
+			return "o Pintinho";
 		case 2:
-			return "the Tenderfoot";
+			return "o Patatenra";
 		case 3:
-			return "the Cub";
+			return "o Filhote";
 		case 4:
-			return "the Foxpup";
+			return "o Raposinha";
 		case 5:
-			return "the Wolf Cub";
+			return "o Lobinho";
 		case 6:
-			return "the Bear Cub";
+			return "o Ursinho";
 		case 7:
-			return "the Tiger Cub";
+			return "o Tigrinho";
 		case 8:
-			return "the Lion Cub";
+			return "o Leãozinho";
 		case 9:
-			return "the Fledgling Hawk";
+			return "o Filhote de Falcão";
 		case 10:
-			return "the Fledgling Eagle";
+			return "o Filhote de Águia";
 		case 11:
-			return "the Ferret";
+			return "o Furão";
 		case 12:
-			return "the Fox";
+			return "o Raposa";
 		case 13:
-			return "the Bobcat";
+			return "o Lince";
 		case 14:
-			return "the Wolf";
+			return "o Lobo";
 		case 15:
-			return "the Bear";
+			return "o Urso";
 		case 16:
-			return "the Tiger";
+			return "o Tigre";
 		case 17:
-			return "the Lion";
+			return "o Leão";
 		case 18:
-			return "the Falcon";
+			return "o Falcão";
 		case 19:
-			return "the Hawk";
+			return "o Gavião";
 		case 20:
-			return "the Eagle";
+			return "o Águia";
 		case 21:
-			return "the Scout";
+			return "o Escoteiro";
 		case 22:
-			return "the Woodsman";
+			return "o Lenhador";
 		case 23:
-			return "the Pathfinder";
+			return "o Encontrador de Trilhas";
 		case 24:
-			return "the Trailblazer";
+			return "o Fazedor de Trilhas";
 		case 25:
-			return "the Mountaineer";
+			return "o Montanhês";
 		case 26:
-			return "the Ranger";
+			return "o Ranger";
 		case 27:
-			return "the Hunter";
+			return "o Caçador";
 		case 28:
-			return "the High Ranger";
+			return "o Alto Ranger";
 		case 29:
-			return "the Great Lord Ranger";
+			return "o Grande Senhor Ranger";
 		case 30:
-			return "the Great Lord Hunter";
+			return "o Grande Senhor Caçador";
 		case LVL_IMMORT:
-			return "the Immortal Lord Hunter";
+			return "o Caçador Imortal ";
 		case LVL_GOD:
-			return "the Patron of Hunt";
+			return "o Patrono da Caça";
 		case LVL_GRGOD:
-			return "the God of Forests";
+			return "O Deus das Florestas";
 		default:
-			return "the Wanderer";
+			return "o Viajante";
 		}
 	}
 
@@ -5489,12 +5489,12 @@ const char *title_female(int chclass, int level)
         case  81: return "a Habil das Magias";
         case  82: return "a Habil das Magias";
         case  83: return "a Habil das Magias";
-        case  84: return "a Xam�";
-        case  85: return "a Xam�";
-        case  86: return "a Xam�";
-        case  87: return "a Guardi� de Talism�s";
-        case  88: return "a Guardi� de Talism�s";
-        case  89: return "a Guardi� de Talism�s";
+        case  84: return "a Xamã";
+        case  85: return "a Xamã";
+        case  86: return "a Xamã";
+        case  87: return "a Guardiã de Talismãs";
+        case  88: return "a Guardiã de Talismãs";
+        case  89: return "a Guardiã de Talismãs";
         case  90: return "a Arque-magica";
         case  91: return "a Arque-magica";
         case  92: return "a Arque-magica";
@@ -5537,11 +5537,11 @@ const char *title_female(int chclass, int level)
         case  16: return "a Assistente";
         case  17: return "a Assistente";
         case  18: return "a Assistente";
-        case  19: return "a Novi�a";
-        case  20: return "a Novi�a";
-        case  21: return "a Novi�a";
-        case  22: return "a Novi�a";
-        case  23: return "a Novi�a";
+        case  19: return "a Noviça";
+        case  20: return "a Noviça";
+        case  21: return "a Noviça";
+        case  22: return "a Noviça";
+        case  23: return "a Noviça";
         case  24: return "a Missionaria";
         case  25: return "a Missionaria";
         case  26: return "a Missionaria";
@@ -5738,7 +5738,7 @@ const char *title_female(int chclass, int level)
         case LVL_ANCIENT: return "a Assassina Imortal";
         case LVL_GRIMM  : return "a Assassina Imortal";
         case LVL_DEMIGOD: return "a Deusa dos Ladroes";
-        case LVL_GOD    : return "a Guardi� dos Ladroes";
+        case LVL_GOD    : return "a Guardiã dos Ladroes";
         case LVL_GRGOD  : return "a Legisladora dos Ladroes";
       }
       break;
@@ -5868,51 +5868,51 @@ const char *title_female(int chclass, int level)
         case   8: return "a Ovate";
         case   9: return "a Ovate";
         case  10: return "a Ovate";
-        case  11: return "a Iniciada no Primeiro C�rculo";
-        case  12: return "a Iniciada no Primeiro C�rculo";
-        case  13: return "a Iniciada no Primeiro C�rculo";
-        case  14: return "a Iniciada no Primeiro C�rculo";
-        case  15: return "a Iniciada no Primeiro C�rculo";
-        case  16: return "a Iniciada no Segundo C�rculo";
-        case  17: return "a Iniciada no Segundo C�rculo";
-        case  18: return "a Iniciada no Segundo C�rculo";
-        case  19: return "a Iniciada no Segundo C�rculo";
-        case  20: return "a Iniciada no Segundo C�rculo";
-        case  21: return "a Iniciada no Terceiro C�rculo";
-        case  22: return "a Iniciada no Terceiro C�rculo";
-        case  23: return "a Iniciada no Terceiro C�rculo";
-        case  24: return "a Iniciada no Terceiro C�rculo";
-        case  25: return "a Iniciada no Terceiro C�rculo";
-        case  26: return "a Iniciada no Quarto C�rculo";
-        case  27: return "a Iniciada no Quarto C�rculo";
-        case  28: return "a Iniciada no Quarto C�rculo";
-        case  29: return "a Iniciada no Quarto C�rculo";
-        case  30: return "a Iniciada no Quarto C�rculo";
-        case  31: return "a Iniciada no Quinto C�rculo";
-        case  32: return "a Iniciada no Quinto C�rculo";
-        case  33: return "a Iniciada no Quinto C�rculo";
-        case  34: return "a Iniciada no Quinto C�rculo";
-        case  35: return "a Iniciada no Quinto C�rculo";
-        case  36: return "a Iniciada no Sexto C�rculo";
-        case  37: return "a Iniciada no Sexto C�rculo";
-        case  38: return "a Iniciada no Sexto C�rculo";
-        case  39: return "a Iniciada no Sexto C�rculo";
-        case  40: return "a Iniciada no Sexto C�rculo";
-        case  41: return "a Iniciada no S�timo C�rculo";
-        case  42: return "a Iniciada no S�timo C�rculo";
-        case  43: return "a Iniciada no S�timo C�rculo";
-        case  44: return "a Iniciada no S�timo C�rculo";
-        case  45: return "a Iniciada no S�timo C�rculo";
-        case  46: return "a Iniciada no Oitavo C�rculo";
-        case  47: return "a Iniciada no Oitavo C�rculo";
-        case  48: return "a Iniciada no Oitavo C�rculo";
-        case  49: return "a Iniciada no Oitavo C�rculo";
-        case  50: return "a Iniciada no Oitavo C�rculo";
-        case  51: return "a Iniciada no Nono C�rculo";
-        case  52: return "a Iniciada no Nono C�rculo";
-        case  53: return "a Iniciada no Nono C�rculo";
-        case  54: return "a Iniciada no Nono C�rculo";
-        case  55: return "a Iniciada no Nono C�rculo";
+        case  11: return "a Iniciada no Primeiro Círculo";
+        case  12: return "a Iniciada no Primeiro Círculo";
+        case  13: return "a Iniciada no Primeiro Círculo";
+        case  14: return "a Iniciada no Primeiro Círculo";
+        case  15: return "a Iniciada no Primeiro Círculo";
+        case  16: return "a Iniciada no Segundo Círculo";
+        case  17: return "a Iniciada no Segundo Círculo";
+        case  18: return "a Iniciada no Segundo Círculo";
+        case  19: return "a Iniciada no Segundo Círculo";
+        case  20: return "a Iniciada no Segundo Círculo";
+        case  21: return "a Iniciada no Terceiro Círculo";
+        case  22: return "a Iniciada no Terceiro Círculo";
+        case  23: return "a Iniciada no Terceiro Círculo";
+        case  24: return "a Iniciada no Terceiro Círculo";
+        case  25: return "a Iniciada no Terceiro Círculo";
+        case  26: return "a Iniciada no Quarto Círculo";
+        case  27: return "a Iniciada no Quarto Círculo";
+        case  28: return "a Iniciada no Quarto Círculo";
+        case  29: return "a Iniciada no Quarto Círculo";
+        case  30: return "a Iniciada no Quarto Círculo";
+        case  31: return "a Iniciada no Quinto Círculo";
+        case  32: return "a Iniciada no Quinto Círculo";
+        case  33: return "a Iniciada no Quinto Círculo";
+        case  34: return "a Iniciada no Quinto Círculo";
+        case  35: return "a Iniciada no Quinto Círculo";
+        case  36: return "a Iniciada no Sexto Círculo";
+        case  37: return "a Iniciada no Sexto Círculo";
+        case  38: return "a Iniciada no Sexto Círculo";
+        case  39: return "a Iniciada no Sexto Círculo";
+        case  40: return "a Iniciada no Sexto Círculo";
+        case  41: return "a Iniciada no Sétimo Círculo";
+        case  42: return "a Iniciada no Sétimo Círculo";
+        case  43: return "a Iniciada no Sétimo Círculo";
+        case  44: return "a Iniciada no Sétimo Círculo";
+        case  45: return "a Iniciada no Sétimo Círculo";
+        case  46: return "a Iniciada no Oitavo Círculo";
+        case  47: return "a Iniciada no Oitavo Círculo";
+        case  48: return "a Iniciada no Oitavo Círculo";
+        case  49: return "a Iniciada no Oitavo Círculo";
+        case  50: return "a Iniciada no Oitavo Círculo";
+        case  51: return "a Iniciada no Nono Círculo";
+        case  52: return "a Iniciada no Nono Círculo";
+        case  53: return "a Iniciada no Nono Círculo";
+        case  54: return "a Iniciada no Nono Círculo";
+        case  55: return "a Iniciada no Nono Círculo";
         case  56: return "a Druidesa";
         case  57: return "a Druidesa";
         case  58: return "a Druidesa";
@@ -5923,11 +5923,11 @@ const char *title_female(int chclass, int level)
         case  63: return "a Arque-Druidesa";
         case  64: return "a Arque-Druidesa";
         case  65: return "a Arque-Druidesa";
-        case  66: return "a Gr�-Druidesa";
-        case  67: return "a Gr�-Druidesa";
-        case  68: return "a Gr�-Druidesa";
-        case  69: return "a Gr�-Druidesa";
-        case  70: return "a Gr�-Druidesa";
+        case  66: return "a Grã-Druidesa";
+        case  67: return "a Grã-Druidesa";
+        case  68: return "a Grã-Druidesa";
+        case  69: return "a Grã-Druidesa";
+        case  70: return "a Grã-Druidesa";
         case  71: return "a Magna Druidesa";
         case  72: return "a Magna Druidesa";
         case  73: return "a Magna Druidesa";
@@ -5958,11 +5958,11 @@ const char *title_female(int chclass, int level)
         case  98: return "a Sublime Hierofante";
         case  99: return "a Sublime Hierofante";
         case 100: return "a Sublime Hierofante";
-        case LVL_IMMORT : return "a M�stica Hierofante";
-        case LVL_IMM2   : return "a M�stica Hierofante";
-        case LVL_IMM3   : return "a M�stica Hierofante";
-        case LVL_ANCIENT: return "a M�stica Hierofante";
-        case LVL_GRIMM  : return "a M�stica Hierofante";
+        case LVL_IMMORT : return "a Mística Hierofante";
+        case LVL_IMM2   : return "a Mística Hierofante";
+        case LVL_IMM3   : return "a Mística Hierofante";
+        case LVL_ANCIENT: return "a Mística Hierofante";
+        case LVL_GRIMM  : return "a Mística Hierofante";
         case LVL_DEMIGOD: return "a Hierofante Arcana";
         case LVL_GOD    : return "a Hierofante Arcana";
         case LVL_GRGOD  : return "a Hierofante da Cabala";
@@ -5976,21 +5976,21 @@ const char *title_female(int chclass, int level)
         case   3: return "a Aprendiz de Malabarista";
         case   4: return "a Aprendiz de Malabarista";
         case   5: return "a Aprendiz de Malabarista";
-        case   6: return "a Histri�";
-        case   7: return "a Histri�";
-        case   8: return "a Histri�";
-        case   9: return "a Histri�";
-        case  10: return "a Histri�";
+        case   6: return "a Histriã";
+        case   7: return "a Histriã";
+        case   8: return "a Histriã";
+        case   9: return "a Histriã";
+        case  10: return "a Histriã";
         case  11: return "a Truona";
         case  12: return "a Truona";
         case  13: return "a Truona";
         case  14: return "a Truona";
         case  15: return "a Truona";
-        case  16: return "a Estudante de M�sica";
-        case  17: return "a Estudante de M�sica";
-        case  18: return "a Estudante de M�sica";
-        case  19: return "a Estudante de M�sica";
-        case  20: return "a Estudante de M�sica";
+        case  16: return "a Estudante de Música";
+        case  17: return "a Estudante de Música";
+        case  18: return "a Estudante de Música";
+        case  19: return "a Estudante de Música";
+        case  20: return "a Estudante de Música";
         case  21: return "a Cantora";
         case  22: return "a Cantora";
         case  23: return "a Cantora";
@@ -6016,11 +6016,11 @@ const char *title_female(int chclass, int level)
         case  43: return "a Poeta";
         case  44: return "a Poeta";
         case  45: return "a Poeta";
-        case  46: return "a Contadora de Hist�rias";
-        case  47: return "a Contadora de Hist�rias";
-        case  48: return "a Contadora de Hist�rias";
-        case  49: return "a Contadora de Hist�rias";
-        case  50: return "a Contadora de Hist�rias";
+        case  46: return "a Contadora de Histórias";
+        case  47: return "a Contadora de Histórias";
+        case  48: return "a Contadora de Histórias";
+        case  49: return "a Contadora de Histórias";
+        case  50: return "a Contadora de Histórias";
         case  51: return "a Instrumentista";
         case  52: return "a Instrumentista";
         case  53: return "a Instrumentista";
@@ -6056,11 +6056,11 @@ const char *title_female(int chclass, int level)
         case  83: return "a Barda Nobre";
         case  84: return "a Barda Nobre";
         case  85: return "a Barda Nobre";
-        case  86: return "a Mestra na M�sica";
-        case  87: return "a Mestra na M�sica";
-        case  88: return "a Mestra na M�sica";
-        case  89: return "a Mestra na M�sica";
-        case  90: return "a Mestra na M�sica";
+        case  86: return "a Mestra na Música";
+        case  87: return "a Mestra na Música";
+        case  88: return "a Mestra na Música";
+        case  89: return "a Mestra na Música";
+        case  90: return "a Mestra na Música";
         case  91: return "a Trovadora";
         case  92: return "a Trovadora";
         case  93: return "a Trovadora";
@@ -6076,9 +6076,9 @@ const char *title_female(int chclass, int level)
         case LVL_IMM3   : return "a Trovadora Celestial";
         case LVL_ANCIENT: return "a Trovadora Celestial";
         case LVL_GRIMM  : return "a Trovadora Celestial";
-        case LVL_DEMIGOD: return "a Deusa da M�sica e da Poesia";
+        case LVL_DEMIGOD: return "a Deusa da Música e da Poesia";
         case LVL_GOD    : return "a Harmonia Divina";
-        case LVL_GRGOD  : return "a Regente da Vibra��o Universal";
+        case LVL_GRGOD  : return "a Regente da Vibração Universal";
       }
       break;
 
@@ -6086,73 +6086,73 @@ const char *title_female(int chclass, int level)
 		switch (level)
 		{
 		case 1:
-			return "the Fledgling";
+			return "a Pintinho";
 		case 2:
-			return "the Tenderfoot";
+			return "a Patatenra";
 		case 3:
-			return "the Kitten";
+			return "a Gatinha";
 		case 4:
-			return "the Foxpup";
+			return "a Raposinha";
 		case 5:
-			return "the Wolf Cub";
+			return "a Lobinha";
 		case 6:
-			return "the Bear Cub";
+			return "a Ursinha";
 		case 7:
-			return "the Tiger Kitten";
+			return "a Tigresinha";
 		case 8:
-			return "the Lion Kitten";
+			return "a Leoazinha";
 		case 9:
-			return "the Fledgling Hawk";
+			return "a Filhote de Falcão";
 		case 10:
-			return "the Fledgling Eagle";
+			return "a Filhote de Águia";
 		case 11:
-			return "the Ferret";
+			return "a Furão";
 		case 12:
-			return "the Vixen";
+			return "a Raposa";
 		case 13:
-			return "the Bobcat";
+			return "a Lince";
 		case 14:
-			return "the Wolf";
+			return "a Loba";
 		case 15:
-			return "the Bear";
+			return "a Ursa";
 		case 16:
-			return "the Tigress";
+			return "a Tigresa";
 		case 17:
-			return "the Lionesd";
+			return "a Leoa";
 		case 18:
-			return "the Peregrine";
+			return "a Peregrina";
 		case 19:
-			return "the Lady Hawk";
+			return "a Dama Falcão";
 		case 20:
-			return "the Lady Eagle";
+			return "a Dama Águia";
 		case 21:
-			return "the Lady Scout";
+			return "a Escoteira";
 		case 22:
-			return "the Woodswoman";
+			return "a Lenhadora";
 		case 23:
-			return "the Pathfinder";
+			return "a Encontradora de Trilhas";
 		case 24:
-			return "the Trailblazer";
+			return "a Fazedora de Trilhas";
 		case 25:
-			return "the Mountainere";
+			return "a Montanhesa";
 		case 26:
-			return "the Lady Ranger";
+			return "a Dama Ranger";
 		case 27:
-			return "the Huntress";
+			return "a Caçadora";
 		case 28:
-			return "the High Ranger";
+			return "a Alta Ranger";
 		case 29:
-			return "the Great Lady Ranger";
+			return "a Grande Dama Ranger";
 		case 30:
-			return "the Great Lady Huntress";
+			return "a Grande Dama Caçadora";
 		case LVL_IMMORT:
-			return "the Immortal Lady Huntress";
+			return "a Caçadora Imortal";
 		case LVL_GOD:
-			return "the Matron of Hunt";
+			return "a Matrona da Caça";
 		case LVL_GRGOD:
-			return "the Goddess of the Forests";
+			return "a Deusa das Florestas";
 		default:
-			return "the Wanderer";
+			return "a Viajante";
 		}
 	}
 
