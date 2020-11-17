@@ -50,7 +50,7 @@ int pk_allowed = NO;
 int pt_allowed = YES;
 
 /* Minimum level a player must be to shout/holler/gossip/auction. */
-int level_can_shout = 1;
+int level_can_shout = 3;
 
 /* Number of movement points it costs to holler. */
 int holler_move_cost = 20;
