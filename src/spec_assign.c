@@ -122,9 +122,12 @@ void assign_mobiles(void)
 */
   ASSIGNMOB(3105, mayor);
 
- // ASSIGNMOB(110, postmaster);
+ ASSIGNMOB(5494, postmaster);
   ASSIGNMOB(1201, postmaster);
   ASSIGNMOB(3010, postmaster);
+  ASSIGNMOB(11322, postmaster);
+   ASSIGNMOB(20414, postmaster);
+  
 /*  ASSIGNMOB(10412, postmaster);
   ASSIGNMOB(10719, postmaster);
   ASSIGNMOB(25710, postmaster);
@@ -166,7 +169,12 @@ void assign_rooms(void)
 {
   room_rnum i;
 
+   ASSIGNROOM(500, dump);
+   ASSIGNROOM(1209, dump);
+   ASSIGNROOM(3030, dump);
+     ASSIGNROOM(5547, dump);
   ASSIGNROOM(3031, pet_shops);
+   ASSIGNROOM(17398, pet_shops);
  /* ASSIGNROOM(10738, pet_shops);
   ASSIGNROOM(23281, pet_shops);
   ASSIGNROOM(25722, pet_shops);
