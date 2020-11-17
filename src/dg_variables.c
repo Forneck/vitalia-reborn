@@ -671,7 +671,15 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig,
               GET_DAMROLL(c) = MAX(1, GET_DAMROLL(c) + addition);
             }
             snprintf(str, slen, "%d", GET_DAMROLL(c));
-            } else if (!str_cmp(field, "dex")) {
+            } 
+            else if (!str_cmp(field, "death")) {
+            if (subfield && *subfield) {
+              int addition = atoi(subfield);
+              GET_DEATH(c) = MAX(1, GET_DEATH(c) + addition);
+            }
+            snprintf(str, slen, "%d", GET_DEATH(c));
+            }
+            else if (!str_cmp(field, "dex")) {
               if (subfield && *subfield) {
                 int addition = atoi(subfield);
                 int max = (IS_NPC(c) || GET_LEVEL(c) >= LVL_GRGOD) ? 25 : 18;
