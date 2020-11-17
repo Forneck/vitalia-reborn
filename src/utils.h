@@ -140,7 +140,7 @@ int increase_gold(struct char_data *ch, int amt);
 int decrease_gold(struct char_data *ch, int amt);
 int increase_bank(struct char_data *ch, int amt);
 int decrease_bank(struct char_data *ch, int amt);
-
+void transcend(struct char_data *ch);
 /* in class.c */
 void    advance_level(struct char_data *ch);
 
