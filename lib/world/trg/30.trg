@@ -356,7 +356,7 @@ if %actor.is_pc%
     wait 2 sec
     wink garcom
     wait 2 sec
-    up
+    south
   else
     emote resmunga infeliz.
   end
