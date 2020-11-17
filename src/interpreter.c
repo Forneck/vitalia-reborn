@@ -516,10 +516,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 	/* ann teste - forneck */
 	int i, type1, type2;
 	struct fann *ann;
-   struct fann *ann2;
 	fann_type input[29];
 	fann_type output[6];
-	fann_type *revisado;
 	struct char_data *victim;
 	struct obj_data *object;
 	int id_player = 0;
@@ -529,7 +527,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	float obj = 0;
     int count_obj = 0;
     	ann = fann_create_from_file("etc/aventureiro.fann");
-	ann2 = fann_create_from_file("etc/revisora.fann");
+    	
     /* verifica grupo e inventario */
 	if (GROUP(ch) != NULL)
 		grupo = 1;
@@ -693,12 +691,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			if (GET_LEVEL(ch) < LVL_GOD){
 				fann_train(ann, input, output);
 				fann_save(ann, "etc/aventureiro.fann");
-				revisado = output;
-				output = fann_run(ann,input);
-				fann_train(ann2,output,revisado);
-				fann_save(ann2,"etc/revisora.fann");
 				fann_destroy(ann);
-				fann_destroy(ann2);
 			}
 			return;
 		}
@@ -936,13 +929,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 		}
 		if ((GET_LEVEL(ch) < LVL_GOD)||!CMD_IS("suggestion")||!CMD_IS("quit")){
 			fann_train(ann, input, output);
-
+		}
 		fann_save(ann, "etc/aventureiro.fann");
-
-	revisado = output;
-				output = fann_run(ann,input);
-				fann_train(ann2,output,revisado);
-				fann_save(ann2,"etc/revisora.fann");
 			
 		if ((GET_IDNUM(ch) == 1) || (GET_IDNUM(ch) == 20))
 		{
@@ -951,8 +939,6 @@ void command_interpreter(struct char_data *ch, char *argument)
 						 output[4], output[5], cmd);
 		}
 			fann_destroy(ann);
-			fann_destroy(ann2);
-		}
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd,
 				complete_cmd_info[cmd].subcmd));
 	}
