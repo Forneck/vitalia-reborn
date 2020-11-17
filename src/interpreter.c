@@ -519,7 +519,7 @@ void command_interpreter(struct char_data *ch, char *argument)
    struct fann *ann2;
 	fann_type input[29];
 	fann_type output[6];
-	fann_type revisado[6];
+	fann_type *revisado;
 	struct char_data *victim;
 	struct obj_data *object;
 	int id_player = 0;
