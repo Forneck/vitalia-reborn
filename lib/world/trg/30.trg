@@ -321,6 +321,47 @@ while %item%
   * Loop back
 done
 ~
+#3015
+Thief Master Idle Steal~
+0 b 5
+~
+* By Rumble of The Builder Academy    tbamud.com 9091
+* Idea taken from cheesymud.com
+* Thief guildmaster steals from players who idle in his guild. Then pawns the
+* item in the shop downstairs so player has to buy their equipment back :-P
+* Random trigs have no actors so pick one and make sure it is a player.
+set actor %random.char%
+if %actor.is_pc%
+  * Pick the first item in the actors inventory.
+  eval item %actor.inventory%
+  * I'll be nice and not steal containers or mail.
+  if %item.type% == CONTAINER || %item.vnum% <= 1
+    halt
+  end
+  * If they have an item let the master thief steal it.
+  eval item_to_steal %%actor.inventory(%item.vnum%)%%
+  if %item_to_steal%
+    * Give some hints that the guildmaster is not to be trusted.
+    %echo% %self.name% examina %item.shortdesc%.
+    wait 2 sec
+    * Purge the actors object and load it to the master thief.
+    eval stolen %item_to_steal.vnum%
+    eval name %item_to_steal.name%
+    %load% obj %stolen%
+    %purge% %item_to_steal%
+    wait 2 sec
+    * Lets go sell it to Morgan using its first keyword.
+    north
+    sell %name.car%
+    wait 2 sec
+    wink garcom
+    wait 2 sec
+    up
+  else
+    emote resmunga infeliz.
+  end
+end
+~
 #3018
 portal to NT~
 1 c 7
