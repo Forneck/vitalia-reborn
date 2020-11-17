@@ -1,3 +1,117 @@
+#13101
+guarda preguiçoso soldado~
+um guarda preguiçoso~
+Uma solitária sentinela está aqui vigiando a entrada.
+~
+Esta sentinela parece ter muito tempo livre, pois não possui serviço algum. 
+Ele é grisalho e parece ser bastante idoso...
+~
+43098 0 100 S
+20 8 2 20d30+950 2d3+10
+550 13385
+8 8 0
+#13102
+sombra monstro~
+uma sombra~
+Sombras se movem ao seu redor, parcialmente substanciais porém vivas.
+~
+Esta criatura da sombra está temporariamente aqui nesta dimensão e está 
+olhando você com bastante medo. Você gostaria de bater intensamente nela, 
+pois ela está lhe tocando...  
+~
+237640 524288 -100 S
+20 8 2 5d20+943 2d3+10
+0 13385
+8 8 0
+#13103
+homem serpente cobra lagarto~
+um homem-serpente~
+Um homem-serpente está aqui bastante confuso observando ao redor. 
+~
+Um homem-serpente está aqui dizendo: "eu devo servir ao mestre". Você 
+gostaria de saber o motivo...?
+~
+202 0 0 S
+23 9 1 30d30+1546 2d4+11
+700 19117
+8 8 0
+#13104
+lorgeth homem sombra rei~
+Lorgeth~
+Um homem está aqui mexendo os braços e dando ordens às sombras.
+~
+Um gigante de mais ou menos 3 metros de altura está aqui. Ele possui um 
+olhar como se quisesse impor algo. Todas as sombras estão fazendo o que 
+ele pede, igual um fanatismo religioso. As sombras ao seu redor pedem que 
+você se curve perante Lorgeth. Quem é Lorgeth?  Oh, este homem aqui deve 
+ser Lorgeth.
+~
+10314 0 -50 S
+50 29 -3 1d1+5000 4d5+25
+2333 138481
+8 8 0
+#13105
+fonte animada movendo~
+uma fonte animada~
+Uma fonte cheia de um líquido verde está aqui.
+~
+Esta fonte está cheia de um líquido verde. Quando você observa mais de 
+perto consegue ver seu movimento! De fato, ela está movendo-se na sua 
+direção... 
+~
+6154 0 -30 S
+20 8 2 8d20+952 2d3+10
+0 13385
+8 8 0
+#13106
+sharel sombra~
+Sharel~
+O chefe do exército das sombras, Sharel, se levanta aqui no meio de suas tropas.
+~
+Esta sombra parece ser muito importante. Você imagina ser o comandante. 
+Seu nome é Sharel, pois foi sussurrado pelas sombras ao seu redor.
+~
+2138 0 -30 S
+23 9 1 10d23+1537 2d4+11
+700 19117
+8 8 0
+#13107
+monstro escuridão olhos~
+o monstro da escuridão~
+Olhos vermelhos e brilhantes estão fixados em você do meio da escuridão.
+~
+Esta criatura deve possuir um tamanho incrível, pois você consegue ver 
+somente algumas pequenas partes dele enquanto se aproxima.
+~
+198666 0 -300 S
+22 9 1 22d12+1400 2d3+11
+0 17068
+8 8 0
+#13108
+garin homem camuflado~
+Garin~
+Um homem está aqui encostado contra a parede tentando se camuflar.
+~
+Olhando melhor você nota que Garin é um veterano de guerra. Aprendeu a se 
+esconder com grande facilidade e você não tem certeza de estar vendo ele, 
+pois poderia ser somente uma sombra deste grande guerreiro. 
+~
+174170 524288 0 S
+25 11 0 25d12+1934 2d4+12
+800 23646
+8 8 0
+#13109
+criado humilde templo~
+o criado~
+Um humilde criado está aqui limpando o templo.
+~
+Este empregado viveu uma vida privada e solitária. Viveu toda sua vida nos 
+templos.
+~
+204 0 50 S
+18 7 3 18d12+715 1d6+9
+450 10232
+8 8 0
 #13110
 mendo cavaleiro templar~
 o cavaleiro Mendo~
