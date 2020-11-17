@@ -5317,64 +5317,134 @@ const char *title_male(int chclass, int level)
 		switch (level)
 		{
 		case 1:
-			return "o Pintinho";
 		case 2:
-			return "o Patatenra";
 		case 3:
-			return "o Filhote";
 		case 4:
-			return "o Raposinha";
 		case 5:
-			return "o Lobinho";
+			return "o Pintinho";
 		case 6:
-			return "o Ursinho";
 		case 7:
-			return "o Tigrinho";
 		case 8:
-			return "o Leãozinho";
+			return "o Patatenra";
 		case 9:
-			return "o Filhote de Falcão";
 		case 10:
-			return "o Filhote de Águia";
 		case 11:
-			return "o Furão";
+			return "o Filhote";
 		case 12:
-			return "o Raposa";
 		case 13:
-			return "o Lince";
 		case 14:
-			return "o Lobo";
+			return "o Raposinha";
 		case 15:
-			return "o Urso";
 		case 16:
-			return "o Tigre";
 		case 17:
-			return "o Leão";
+			return "o Lobinho";
 		case 18:
-			return "o Falcão";
 		case 19:
-			return "o Gavião";
 		case 20:
-			return "o Águia";
+			return "o Ursinho";
 		case 21:
-			return "o Escoteiro";
 		case 22:
-			return "o Lenhador";
 		case 23:
-			return "o Encontrador de Trilhas";
+			return "o Tigrinho";
 		case 24:
-			return "o Fazedor de Trilhas";
 		case 25:
-			return "o Montanhês";
 		case 26:
-			return "o Ranger";
+			return "o Leãozinho";
 		case 27:
-			return "o Caçador";
 		case 28:
-			return "o Alto Ranger";
 		case 29:
-			return "o Grande Senhor Ranger";
+			return "o Filhote de Falcão";
 		case 30:
+		case 31:
+		case 32:
+			return "o Filhote de Águia";
+		case 33:
+		case 34:
+		case 35:
+			return "o Furão";
+		case 36:
+		case 37:
+		case 38:
+			return "o Raposa";
+		case 39:
+		case 40:
+		case 41:
+			return "o Lince";
+		case 42:
+		case 43:
+		case 44:
+			return "o Lobo";
+		case 45:
+		case 46:
+		case 47:
+			return "o Urso";
+		case 48:
+		case 49:
+		case 50:
+			return "o Tigre";
+		case 51:
+		case 52:
+		case 53:
+			return "o Leão";
+		case 54:
+		case 55:
+		case 56:
+			return "o Falcão";
+		case 57;
+		case 58:
+		case 59:
+			return "o Gavião";
+		case 60:
+		case 61:
+		case 62:
+			return "o Águia";
+		case 63:
+		case 64:
+		case 65:
+			return "o Escoteiro";
+		case 66:
+		case 67:
+		case 68:
+			return "o Lenhador";
+		case 69:
+		case 70:
+		case 71:
+			return "o Encontrador de Trilhas";
+		case 72:
+		case 73:
+		case 74:
+			return "o Fazedor de Trilhas";
+		case 75:
+		case 76:
+		case 77:
+			return "o Montanhês";
+		case 78:
+		case 79:
+		case 80:
+			return "o Ranger";
+		case 81:
+		case 82:
+		case 83:
+			return "o Caçador";
+		case 84:
+		case 85:
+		case 86:
+			return "o Alto Ranger";
+		case 87:
+		case 88:
+		case 89:
+			return "o Grande Senhor Ranger";
+		case 90:
+		case 91:
+		case 92:
+		case 93:
+		case 94:
+		case 95:
+		case 96:
+		case 97:
+		case 98:
+		case 99:
+		case 100:
 			return "o Grande Senhor Caçador";
 		case LVL_IMMORT:
 			return "o Caçador Imortal ";
@@ -6086,64 +6156,134 @@ const char *title_female(int chclass, int level)
 		switch (level)
 		{
 		case 1:
-			return "a Pintinho";
 		case 2:
-			return "a Patatenra";
 		case 3:
-			return "a Gatinha";
 		case 4:
-			return "a Raposinha";
 		case 5:
-			return "a Lobinha";
+			return "a Pintinho";
 		case 6:
-			return "a Ursinha";
 		case 7:
-			return "a Tigresinha";
 		case 8:
-			return "a Leoazinha";
+			return "a Patatenra";
 		case 9:
-			return "a Filhote de Falcão";
 		case 10:
-			return "a Filhote de Águia";
 		case 11:
-			return "a Furão";
+			return "a Gatinha";
 		case 12:
-			return "a Raposa";
 		case 13:
-			return "a Lince";
 		case 14:
-			return "a Loba";
+			return "a Raposinha";
 		case 15:
-			return "a Ursa";
 		case 16:
-			return "a Tigresa";
 		case 17:
-			return "a Leoa";
+			return "a Lobinha";
 		case 18:
-			return "a Peregrina";
 		case 19:
-			return "a Dama Falcão";
 		case 20:
-			return "a Dama Águia";
+			return "a Ursinha";
 		case 21:
-			return "a Escoteira";
 		case 22:
-			return "a Lenhadora";
 		case 23:
-			return "a Encontradora de Trilhas";
+			return "a Tigresinha";
 		case 24:
-			return "a Fazedora de Trilhas";
 		case 25:
-			return "a Montanhesa";
 		case 26:
-			return "a Dama Ranger";
+			return "a Leoazinha";
 		case 27:
-			return "a Caçadora";
 		case 28:
-			return "a Alta Ranger";
 		case 29:
-			return "a Grande Dama Ranger";
+			return "a Filhote de Falcão";
 		case 30:
+		case 31:
+		case 32:
+			return "a Filhote de Águia";
+		case 33:
+		case 34:
+		case 35:
+			return "a Furão";
+		case 36:
+		case 37:
+		case 38:
+			return "a Raposa";
+		case 39:
+		case 40:
+		case 41:
+			return "a Lince";
+		case 42:
+		case 43:
+		case 44:
+			return "a Loba";
+		case 45:
+		case 46:
+		case 47:
+			return "a Ursa";
+		case 48:
+		case 49:
+		case 50:
+			return "a Tigresa";
+		case 51:
+		case 52:
+		case 53:
+			return "a Leoa";
+		case 54:
+		case 55:
+		case 56:
+			return "a Peregrina";
+		case 57:
+		case 58:
+		case 59:
+			return "a Dama Falcão";
+		case 60:
+		case 61:
+		case 62:
+			return "a Dama Águia";
+		case 63:
+		case 64:
+		case 65:
+			return "a Escoteira";
+		case 66:
+		case 67:
+		case 68:
+			return "a Lenhadora";
+		case 69:
+		case 70:
+		case 71:
+			return "a Encontradora de Trilhas";
+		case 72:
+		case 73:
+		case 74:
+			return "a Fazedora de Trilhas";
+		case 75:
+		case 76:
+		case 77:
+			return "a Montanhesa";
+		case 78:
+		case 79:
+		case 80:
+			return "a Dama Ranger";
+		case 81:
+		case 82:
+		case 83:
+			return "a Caçadora";
+		case 84:
+		case 85:
+		case 86:
+			return "a Alta Ranger";
+		case 87:
+		case 88:
+		case 89:
+			return "a Grande Dama Ranger";
+		case 90:
+		case 91:
+		case 92:
+		case 93:
+		case 94:
+		case 95:
+		case 96:
+		case 97:
+		case 98:
+		case 99:
+		case 100:
 			return "a Grande Dama Caçadora";
 		case LVL_IMMORT:
 			return "a Caçadora Imortal";
