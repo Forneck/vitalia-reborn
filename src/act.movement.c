@@ -672,12 +672,11 @@ static void do_doorcmd(struct char_data *ch, struct obj_data *obj, int door, int
 		break;
 
 	case SCMD_PICK:
-	if (ok_pick(ch,obj,DOOR_IS_PICKPROOF(ch,obj,door),SCMD_PICK)){
 		TOGGLE_LOCK(IN_ROOM(ch), obj, door);
 		if (back)
 			TOGGLE_LOCK(other_room, obj, rev_dir[door]);
 		send_to_char(ch, "A fechadura facilmente rende-se às suas habilidades.\r\n");
-		len = strlcpy(buf, "$n habilmente arromba a fechadura ", sizeof(buf));}
+		len = strlcpy(buf, "$n habilmente arromba a fechadura ", sizeof(buf));
 		break;
 	}
 
