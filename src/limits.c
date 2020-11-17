@@ -27,6 +27,7 @@
 static int graf(int grafage, int p0, int p1, int p2, int p3, int p4, int p5, int p6);
 static void check_idling(struct char_data *ch);
 
+static struct char_data *next_combat_list = NULL;
 
 /* When age < 15 return the value p0 When age is 15..29 calculate the line
    between p1 & p2 When age is 30..44 calculate the line between p2 & p3 When
@@ -331,7 +332,7 @@ void gain_exp(struct char_data *ch, int gain)
 		
 		   if (GET_LEVEL(ch) == top_level && GET_LEVEL(ch) != LVL_GRIMM &&
 		   GET_EXP(ch) >= level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1))
-		   transcend(ch); */
+		   transcend(ch); 
 
 		if (is_altered)
 		{
@@ -728,7 +729,7 @@ int decrease_bank(struct char_data *ch, int deduction)
 }
 
 void transcend(struct char_data *ch) {
-  struct char_data *k, *temp;
+  struct char_data *k;
 
   /* Set the experience */
   GET_EXP(ch) = level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - 1;
@@ -746,7 +747,7 @@ void transcend(struct char_data *ch) {
 	}
 
   /* Set the transcendent flag */
-  SET_BIT(PLR_FLAGS(ch), PLR_TRNS);
+  SET_BIT_AR(PLR_FLAGS(ch), PLR_TRNS);
   
   /* Restore character points */
   GET_HIT(ch) = GET_MAX_HIT(ch);
