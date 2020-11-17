@@ -27,8 +27,6 @@
 static int graf(int grafage, int p0, int p1, int p2, int p3, int p4, int p5, int p6);
 static void check_idling(struct char_data *ch);
 
-static struct char_data *next_combat_list = NULL;
-
 /* When age < 15 return the value p0 When age is 15..29 calculate the line
    between p1 & p2 When age is 30..44 calculate the line between p2 & p3 When
    age is 45..59 calculate the line between p3 & p4 When age is 60..79
@@ -728,45 +726,3 @@ int decrease_bank(struct char_data *ch, int deduction)
 	return (GET_BANK_GOLD(ch));
 }
 
-void transcend(struct char_data *ch) {
-  struct char_data *k;
-
-  /* Set the experience */
-  GET_EXP(ch) = level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - 1;
-
-  /* Stop fighting, seizing, mounting, etc */
-  if (FIGHTING(ch))
-    stop_fighting(ch);
-
-
-  	for (k = combat_list; k; k = next_combat_list)
-	{
-		next_combat_list = k->next_fighting;
-	    if (FIGHTING(k) == ch)
-      stop_fighting(k);
-	}
-
-  /* Set the transcendent flag */
-  SET_BIT_AR(PLR_FLAGS(ch), PLR_TRNS);
-  
-  /* Restore character points */
-  GET_HIT(ch) = GET_MAX_HIT(ch);
-  GET_MANA(ch) = GET_MAX_MANA(ch);
-  GET_MOVE(ch) = GET_MAX_MOVE(ch);
-
-  /* Reset other variables */
-  GET_PRACTICES(ch) = 0;
-
-  /* Explain what happened */
-  send_to_char(ch,
-	    "\n@+cAo lutar, uma estranha sensaçãoo vem sobre você, e você\r\n"
-	    "sente como se você não pudesse mais aprender, como se o seu\r\n"
-	    "conhecimento houvesse chegado ao limite...\r\n\n"
-	    "\a\a@+WVocê transcendeu!!@+n\r\n\n");
-
-  /* Log */
-  log1("(Lvl) %s (level %d) trancended.", GET_NAME(ch), GET_LEVEL(ch));
-
-  /* Save */
-  save_char(ch);
-}
