@@ -238,6 +238,7 @@ Você vê um defensor público forte e leal.
 500 11000
 9 9 1
 E
+T 3013
 #12019
 soldado~
 o soldado~
@@ -285,6 +286,7 @@ BareHandAttack: 6
 Str: 18
 StrAdd: 90
 E
+T 3013
 #12022
 juiz justica~
 o juiz~

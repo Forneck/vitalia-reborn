@@ -13,6 +13,7 @@ escudeiro.
 5000 99344
 9 9 1
 E
+T 3013
 #17302
 escudeiro~
 o escudeiro~
@@ -39,6 +40,7 @@ carrega uma grande lança.
 10000 65030
 9 9 1
 E
+T 3013
 #17304
 arthur rei~
 Rei Arthur~
@@ -94,6 +96,7 @@ Wis: 18
 Con: 18
 Cha: 18
 E
+T 3013
 #17307
 negro cavaleiro~
 o cavaleiro negro~
@@ -176,6 +179,7 @@ Sua viseira está levantada, e sua lança erguida em saudação a você.
 1000 135000
 9 9 1
 E
+T 3013
 #17313
 merlin mago~
 Merlin~

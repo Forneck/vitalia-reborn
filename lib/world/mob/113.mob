@@ -648,6 +648,7 @@ pintura negra nas maçãs do rosto.
 1500 25000
 9 9 1
 E
+T 3013
 #11342
 soldado guarda naga joias rubi~
 um soldado da Guarda das Jóias~
@@ -664,6 +665,7 @@ avermelhados, presos com fios dourados, rosto limpo e unhas negras.
 1500 25000
 9 9 1
 E
+T 3013
 #11343
 guardiao guarda naga joias prata~
 um guardião da Guarda das Jóias~
@@ -682,6 +684,7 @@ que vão da ponta de sua cauda até a nuca. São muito perigosos.
 9 9 1
 BareHandAttack: 10
 E
+T 3013
 T 3008
 #11344
 kshatryia guerreiro vigia ouro esmeralda guarda naga jóias~
@@ -704,4 +707,5 @@ portões e controlando o canal a seu redor.
 9 9 1
 BareHandAttack: 10
 E
+T 3013
 $

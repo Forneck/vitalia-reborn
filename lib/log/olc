@@ -3862,3 +3862,13 @@ Nov 17 04:44:06 2020 :: GenOLC: 'world/mob/173.mob' saved, 21506 bytes written.
 Nov 17 04:44:06 2020 :: OLC: Cansian stops editing zone 173 allowed zone 0
 Nov 17 04:47:52 2020 :: OLC: Cansian starts editing zone 30 allowed zone 0
 Nov 17 04:48:36 2020 :: OLC: Cansian stops editing zone 30 allowed zone 0
+Nov 17 05:06:20 2020 :: OLC: Cansian starts editing zone 115 allowed zone 0
+Nov 17 05:06:57 2020 :: GenOLC: add_mobile: Updated existing mobile #11501.
+Nov 17 05:06:57 2020 :: OLC: Cansian edits mob 11501
+Nov 17 05:06:57 2020 :: GenOLC: 'world/mob/115.mob' saved, 8025 bytes written.
+Nov 17 05:06:57 2020 :: OLC: Cansian stops editing zone 115 allowed zone 0
+Nov 17 05:07:03 2020 :: OLC: Cansian starts editing zone 115 [trigger](allowed zone 0)
+Nov 17 05:07:17 2020 :: OLC: Cansian stops editing zone 115 allowed zone 0
+Nov 17 05:08:03 2020 :: OLC: Cansian starts editing zone 115 [trigger](allowed zone 0)
+Nov 17 05:08:38 2020 :: OLC: Cansian edits trigger 11500
+Nov 17 05:08:38 2020 :: OLC: Cansian stops editing zone 115 allowed zone 0

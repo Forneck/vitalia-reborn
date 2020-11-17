@@ -1,30 +1,30 @@
-Nov 17 04:47:21 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Nov 17 04:47:21 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Nov 17 04:47:21 2020 :: Boot db -- DONE.
-Nov 17 04:47:21 2020 :: Signal trapping.
-Nov 17 04:47:21 2020 :: Entering game loop.
-Nov 17 04:47:21 2020 :: No connections.  Going to sleep.
-Nov 17 04:47:22 2020 :: New connection.  Waking up.
-Nov 17 04:47:29 2020 :: Cansian has connected.
-Nov 17 04:47:30 2020 :: Cansian had no variable file
-Nov 17 04:47:30 2020 :: Cansian retrieving crash-saved items and entering game.
-Nov 17 04:47:30 2020 :: Cansian (level 110) has 10 objects (max 100).
-Nov 17 04:47:52 2020 :: OLC: Cansian starts editing zone 30 allowed zone 0
-Nov 17 04:47:59 2020 :: Warning: columns too narrow for correct output to Cansian in simple_column_list (utils.c)
-Nov 17 04:48:36 2020 :: OLC: Cansian stops editing zone 30 allowed zone 0
-Nov 17 04:52:22 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 17 04:52:22 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 22176
-Nov 17 04:57:22 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 17 04:57:22 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 22176
-Nov 17 05:02:22 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 17 05:02:22 2020 :: rusage: user time: 2 sec, system time: 0 sec, max res size: 22332
-Nov 17 05:04:50 2020 :: Cansian has re-logged in ... disconnecting old socket.
-Nov 17 05:04:50 2020 :: Losing descriptor without char.
-Nov 17 05:05:05 2020 :: (GC) Reboot by Cansian.
-Nov 17 05:05:05 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 17 05:05:05 2020 :: Closing all sockets.
-Nov 17 05:05:05 2020 :: Closing link to: Cansian.
-Nov 17 05:05:05 2020 :: Saving current MUD time.
-Nov 17 05:05:05 2020 :: Rebooting.
+Nov 17 05:05:20 2020 :: Cansian had no variable file
+Nov 17 05:05:20 2020 :: Cansian retrieving crash-saved items and entering game.
+Nov 17 05:05:20 2020 :: Cansian (level 110) has 10 objects (max 100).
+Nov 17 05:06:20 2020 :: OLC: Cansian starts editing zone 115 allowed zone 0
+Nov 17 05:06:57 2020 :: GenOLC: add_mobile: Updated existing mobile #11501.
+Nov 17 05:06:57 2020 :: OLC: Cansian edits mob 11501
+Nov 17 05:06:57 2020 :: GenOLC: 'world/mob/115.mob' saved, 8025 bytes written.
+Nov 17 05:06:57 2020 :: OLC: Cansian stops editing zone 115 allowed zone 0
+Nov 17 05:07:03 2020 :: OLC: Cansian starts editing zone 115 [trigger](allowed zone 0)
+Nov 17 05:07:17 2020 :: OLC: Cansian stops editing zone 115 allowed zone 0
+Nov 17 05:07:34 2020 :: (GC) Cansian forced Khanti, a nagini Guardiã to unlock porrtao
+Nov 17 05:07:49 2020 :: (GC) Cansian forced Khanti, a nagini Guardiã to unlock portao n
+Nov 17 05:08:03 2020 :: OLC: Cansian starts editing zone 115 [trigger](allowed zone 0)
+Nov 17 05:08:38 2020 :: OLC: Cansian edits trigger 11500
+Nov 17 05:08:38 2020 :: OLC: Cansian stops editing zone 115 allowed zone 0
+Nov 17 05:08:58 2020 :: (GC) Cansian forced Khanti, a nagini Guardiã to open portao north
+Nov 17 05:10:11 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 17 05:10:11 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 22444
+Nov 17 05:15:11 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 17 05:15:11 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 22444
+Nov 17 05:20:11 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 17 05:20:11 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 22444
+Nov 17 05:22:41 2020 :: (GC) Reboot by Cansian.
+Nov 17 05:22:41 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Nov 17 05:22:41 2020 :: Closing all sockets.
+Nov 17 05:22:41 2020 :: Closing link to: Cansian.
+Nov 17 05:22:41 2020 :: Saving current MUD time.
+Nov 17 05:22:41 2020 :: Rebooting.
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.

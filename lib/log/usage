@@ -1,9 +1,3 @@
-Nov 01 20:29:46 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 01 20:29:46 2020 :: rusage: user time: 6 sec, system time: 0 sec, max res size: 22584
-Nov 01 20:34:46 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 01 20:34:46 2020 :: rusage: user time: 6 sec, system time: 0 sec, max res size: 22584
-Nov 01 20:39:46 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 01 20:39:46 2020 :: rusage: user time: 7 sec, system time: 0 sec, max res size: 22584
 Nov 01 20:44:46 2020 :: nusage: 2   sockets connected, 2   sockets playing
 Nov 01 20:44:46 2020 :: rusage: user time: 8 sec, system time: 0 sec, max res size: 23044
 Nov 01 20:49:46 2020 :: nusage: 2   sockets connected, 2   sockets playing
@@ -4998,3 +4992,9 @@ Nov 17 04:57:22 2020 :: nusage: 1   sockets connected, 1   sockets playing
 Nov 17 04:57:22 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 22176
 Nov 17 05:02:22 2020 :: nusage: 1   sockets connected, 1   sockets playing
 Nov 17 05:02:22 2020 :: rusage: user time: 2 sec, system time: 0 sec, max res size: 22332
+Nov 17 05:10:11 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 17 05:10:11 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 22444
+Nov 17 05:15:11 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 17 05:15:11 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 22444
+Nov 17 05:20:11 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 17 05:20:11 2020 :: rusage: user time: 1 sec, system time: 0 sec, max res size: 22444
