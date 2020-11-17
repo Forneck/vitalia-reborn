@@ -1443,3 +1443,46 @@ int attacks_per_round(struct char_data *ch)
 
 	return (n);
 }
+
+void transcend(struct char_data *ch) {
+  struct char_data *k;
+
+  /* Set the experience */
+  GET_EXP(ch) = level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - 1;
+
+  /* Stop fighting, seizing, mounting, etc */
+  if (FIGHTING(ch))
+    stop_fighting(ch);
+
+
+  	for (k = combat_list; k; k = next_combat_list)
+	{
+		next_combat_list = k->next_fighting;
+	    if (FIGHTING(k) == ch)
+      stop_fighting(k);
+	}
+
+  /* Set the transcendent flag */
+  SET_BIT_AR(PLR_FLAGS(ch), PLR_TRNS);
+  
+  /* Restore character points */
+  GET_HIT(ch) = GET_MAX_HIT(ch);
+  GET_MANA(ch) = GET_MAX_MANA(ch);
+  GET_MOVE(ch) = GET_MAX_MOVE(ch);
+
+  /* Reset other variables */
+  GET_PRACTICES(ch) = 0;
+
+  /* Explain what happened */
+  send_to_char(ch,
+	    "\n@+cAo lutar, uma estranha sensaçãoo vem sobre você, e você\r\n"
+	    "sente como se você não pudesse mais aprender, como se o seu\r\n"
+	    "conhecimento houvesse chegado ao limite...\r\n\n"
+	    "\a\a@+WVocê transcendeu!!@+n\r\n\n");
+
+  /* Log */
+  log1("(Lvl) %s (level %d) trancended.", GET_NAME(ch), GET_LEVEL(ch));
+
+  /* Save */
+  save_char(ch);
+}
