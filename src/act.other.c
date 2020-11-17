@@ -1240,7 +1240,7 @@ ACMD(do_suggestion)
 	int grupo;
 	int count_obj = 0;
 	int comando = 0;
-    
+   int tries = 0;
     if ((GET_LEVEL(ch) >= LVL_GOD) || IS_NPC(ch))
     {
        send_to_char(ch,"Você já deveria ter experiência suficiente para dar as  sugestões.\r\n");
@@ -1302,10 +1302,18 @@ ACMD(do_suggestion)
    {
       send_to_char(ch,"Nenhum comando sugerido para você.\r\n");
    }
-   else if (complete_cmd_info[comando].minimum_level > GET_LEVEL(ch)){
-   send_to_char(ch,"Comando sugerido acima do teu nivel!\r\n");
-   }
-   else
+ 
+    for (tries = 0; tries < 3; tries++)
+    {
+     calc_output = fann_run(ann, input);
+   calc_output[0] = calc_output[0] * (float) MAX_COMMAND;
+   comando = fabs(calc_output[0]);
+    if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch))
+      continue;
+    }
+      if (complete_cmd_info[comando].minimum_level  > GET_LEVEL(ch))
+  send_to_char(ch, "Comando sugerido acima do teu nível.\r\n");
+  
    if (calc_output[3] > 0 && calc_output[5] > 0)
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
    else  if (calc_output[3] > 0){
