@@ -1327,7 +1327,7 @@ ACMD(do_suggestion)
           extract_char(mob);
          }
       }
-      else
+      else 
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
  }
    else
