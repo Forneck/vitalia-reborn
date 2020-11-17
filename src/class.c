@@ -5390,7 +5390,7 @@ const char *title_male(int chclass, int level)
 		case 55:
 		case 56:
 			return "o Falcão";
-		case 57;
+		case 57:
 		case 58:
 		case 59:
 			return "o Gavião";
