@@ -6,10 +6,10 @@ Um homem corre e salta, torcendo o corpo e dando um salto mortal triplo no ar.
 O único momento em que ele para de dar saltos e se contorcer é quando ele corre
 de forma majestosa e firme.  Ele olha para você e pisca.
 ~
-2140186 0 0 0 65536 0 0 0 100 E
+2140186 0 0 0 0 0 0 0 100 E
 20 12 2 5d7+600 2d3+10
 550 13385
-8 8 1
+9 9 1
 E
 #2301
 malabarista mulher~
@@ -21,10 +21,10 @@ tempo em que manuseia as bolas com perfeição, sem deixar que nenhuma delas cai
 no chão.   Todos ficam extasiados com sua destreza e as crianças estão
 extremamente entusiasmadas.
 ~
-2127890 0 0 0 67664 0 0 0 600 E
+2127890 0 0 0 0 0 0 0 600 E
 8 13 2 2d10+100 2d4+5
 400 4500
-8 8 2
+9 9 2
 E
 #2302
 bardo musico músico rua~
@@ -35,10 +35,10 @@ Sua límpida voz de tenor mistura-se com precisão ao som perfeito do seu
 bandolim, criando uma melodia maravilhosa, que desperta profundos sentimentos
 nos espíritos de quem a ouve, tornando o dia mais bonito e mais ensolarado. 
 ~
-2128018 0 0 0 65544 0 0 0 500 E
+2128018 0 0 0 0 0 0 0 500 E
 17 13 0 5d8+600 2d5+9
 63 28000
-8 8 1
+9 9 1
 E
 #2303
 menestrel errante~
@@ -48,10 +48,10 @@ Uma menestrel errante passa meio sem rumo, elevando sua voz em bonita canção.
 Ela parece estar hipnotizada por sua própria música - ela canta com os olhos
 fechados, envolvida por profunda emoção e sensibilidade.
 ~
-2111684 0 0 0 65600 0 0 0 500 E
+2111684 0 0 0 0 0 0 0 500 E
 15 14 -1 4d9+500 2d5+8
 498 16000
-8 8 2
+9 9 2
 E
 #2304
 vendedor tonico homem viajante uniforme~
@@ -63,10 +63,10 @@ E então ele murmurando, conta para você sobre as qualidades impressionantes do
 tônicos que transformam um homem burro em um quase gênio e no outro, que faz
 com que a mulher dos seus sonhos se apaixone perdidamente por você. 
 ~
-2127956 0 0 0 65648 0 0 0 600 E
+2127956 0 0 0 0 0 0 0 600 E
 21 11 1 7d9+1200 4d6+11
 3 40000
-8 8 1
+9 9 1
 E
 #2305
 Milissin historia história contadora~
@@ -78,10 +78,10 @@ quer.   Ela faz sua voz soar como se fosse a voz de alguém muito mal ou muito
 triste; assustado ou sonolento; feliz ou bondoso, tornando-a uma maravilhosa 
 contadora de histórias...talvez A MELHOR DE TODAS!
 ~
-2127890 0 0 0 67888 0 0 0 800 E
+2127890 0 0 0 0 0 0 0 800 E
 22 11 -5 7d10+1400 5d6+12
 45000 43000
-8 8 2
+9 9 2
 E
 #2306
 macaco pequeno~
@@ -91,10 +91,10 @@ Um pequeno macaco dança acompanhando a melodia do bardo.
 Ele está preso ao bardo por uma fina corda que está amarrada a uma coleira
 que o macado está usando.
 ~
-2100610 0 0 0 75792 0 0 0 200 E
+2100610 0 0 0 0 0 0 0 200 E
 6 15 3 4d6+69 2d4+2
 50 1500
-8 8 1
+9 9 1
 E
 #2307
 garoto menino criança pequeno~
@@ -105,10 +105,10 @@ Ele parece estar em todos os lugares ao mesmo tempo.   Ele está realmente muito
 feliz e parece uma avalanche cheia de barulhos e movimentos, que ninguém parece
 conseguir deter!!
 ~
-2154496 0 0 0 65616 0 0 0 780 E
+2154496 0 0 0 0 0 0 0 780 E
 11 10 1 6d3+130 2d6+2
 200 5200
-8 8 1
+9 9 1
 E
 #2308
 senhora idosa zayla madame~
@@ -119,10 +119,10 @@ Ela está com suas mãos cruzadas sobre a mesa.   Ela não está nem olhando par
 você nem desviando o olhar de você. Olhando mais de perto, você começa a 
 pensar que talvez ela seja completamente cega.
 ~
-2128146 0 0 0 2384 0 0 0 500 E
+2128146 0 0 0 0 0 0 0 500 E
 24 9 0 8d10+1400 2d3+14
 150 55000
-8 8 2
+9 9 2
 E
 #2309
 mulher quiromante tarot~
@@ -132,7 +132,7 @@ Uma mulher sentada no chão com um estranho baralho aberto em sua frente.
 Ela está concentrada nas cartas que estão diante dela, como se estivesse lendo
 alguma coisa importante ali, pelo modo como estão arrumadas no chão.
 ~
-2128146 0 0 0 2384 0 0 0 500 E
+2128146 0 0 0 0 0 0 0 500 E
 24 9 0 8d10+1400 2d3+14
 150 55000
 6 6 2
@@ -146,10 +146,10 @@ Uma dançarina cigana move-se com a batida da música.
 corado.  Porém, também é claro que sempre é evidente que o que ela faz é a 
 arte milenar de um povo e deve ser encarada de forma séria.
 ~
-2126022 0 0 0 8 0 0 0 600 E
+2126022 0 0 0 0 0 0 0 600 E
 26 9 4 7d10+670 3d8+2
 3000 50000
-8 8 2
+9 9 2
 E
 #2311
 dançarino dancarino cigano~
@@ -162,7 +162,7 @@ mais interessante de ser assistida do que ele.
 2125894 0 0 0 0 0 0 0 500 E
 34 2 -2 2d5+1150 5d8+2
 8000 70000
-8 8 1
+9 9 1
 E
 #2312
 vendedor comida cigano homem~
@@ -172,10 +172,10 @@ Um homem coberto por tatuagens e piercings está servindo comida aqui.
 O homem canta e fala jovialmente com todos os seus fregueses, como se não
 houvesse outro lugar em Vitália que ele gostaria de estar.
 ~
-2125894 0 0 0 65536 0 0 0 800 E
+2125894 0 0 0 0 0 0 0 800 E
 22 10 1 4d10+1400 3d6+12
 35 43000
-8 8 1
+9 9 1
 E
 #2313
 Joaozinho garoto garotinho batedor carteira mao leve~
@@ -186,10 +186,10 @@ Hmmm....não ficou parecendo que o pequeno batedor de carteiras estava tentando
 aliviar a SUA carteira?  É melhor tentar perguntar para ele quais eram suas
 intenções.
 ~
-2158788 0 0 0 65544 0 0 0 600 E
+2158788 0 0 0 0 0 0 0 600 E
 12 15 7 3d6+445 3d4+3
 150 40000
-8 8 1
+9 9 1
 E
 #2314
 mulher~
@@ -199,10 +199,10 @@ Uma mulher está sentada na grama, assistindo a performance dos artistas.
 Ela parece estar totalmente absorvida pela performance, embora esta não seja
 exatamente muito boa - os atores, definitivamente, não são profissionais.
 ~
-2126050 0 0 0 65648 0 0 0 600 E
+2126050 0 0 0 0 0 0 0 600 E
 29 3 -4 5d10+822 4d8+0
 1000 35000
-8 8 2
+9 9 2
 E
 #2315
 vendedora mulher cigana~
@@ -212,10 +212,10 @@ Uma vendedora anda pela feira, carregando consigo um cesto repleto de comida.
 Ela grita em plenos pulmões para todos que a escutem possam  vir e comprar
 suas delícias enquanto os estoques ainda duram.
 ~
-2355392 0 0 0 65792 0 0 0 1000 E
+2355392 0 0 0 0 0 0 0 1000 E
 35 2 -5 6d12+1050 5d8+4
 5000 60000
-8 8 2
+9 9 2
 E
 #2316
 mendigo andarilho vagabundo~
@@ -226,10 +226,10 @@ Ela anda com suas mãos dentro dos bolsos, com uma capa de viagem jogada sobre
 seu ombro esquerdo.   Ele não olha e nem evita ninguém, simplesmente segue
 com sua aparentemente inofensiva rotina de caminhar.
 ~
-2125970 0 0 0 65536 0 0 0 600 E
+2125970 0 0 0 0 0 0 0 600 E
 25 9 8 8d11+2000 4d4+15
 566 52000
-8 8 1
+9 9 1
 E
 #2317
 poeta tronco bardo desafinado~
@@ -240,7 +240,7 @@ Ele suavemente balança seu corpo sobre o toco de madeira, com os olhos fechados
 e murmurando a letra da música que ele toca em seu alaúde.  Deve ser muito bom
 estar tão concentrado em sua própria música.
 ~
-2125970 0 0 0 65536 0 0 0 600 E
+2125970 0 0 0 0 0 0 0 600 E
 19 12 2 6d9+900 1d6+9
 176 34000
 6 6 1
@@ -271,7 +271,7 @@ seu papel.
 2126016 0 0 0 0 0 0 0 500 E
 35 2 -5 5d12+1050 5d8+9
 5000 60000
-8 8 2
+9 9 2
 E
 #2320
 ator homem cogumelo~
@@ -285,7 +285,7 @@ e firmeza.
 2126016 0 0 0 0 0 0 0 500 E
 35 2 -5 5d12+1050 5d8+7
 5000 60000
-8 8 1
+9 9 1
 E
 #2321
 cigana mulher~
@@ -301,6 +301,23 @@ suas roupas no rio.
 5000 60000
 6 6 2
 E
+#2322
+homem carroca forte~
+Um cigano muito forte esta' consertando auma roda quebrada da carroca.~
+Ele parece ser um homem muito forte.
+~
+It looks unfinished.
+~
+2126016 0 0 0 0 0 0 0 300 E
+36 2 -3 10d12+36 5d10+6
+7500 50000
+9 9 1
+SavingPara: 9
+SavingRod: 9
+SavingPetri: 9
+SavingBreath: 9
+SavingSpell: 9
+E
 #2323
 cigano ferreiro~
 um cigano ferreiro~
@@ -312,7 +329,7 @@ Os bra�os dele s�o muito musculosos bronzeados.
 2158614 0 0 0 0 0 0 0 600 E
 29 3 -4 5d10+822 4d8+8
 1000 35000
-8 8 1
+9 9 1
 E
 #2324
 m�mico~
@@ -327,7 +344,7 @@ sofrimento deste aqui.
 2097222 0 0 0 0 0 0 0 -200 E
 18 9 3 3d5+400 2d6+5
 5000 12000
-8 8 1
+9 9 1
 E
 #2325
 mulher cigana maquiadora~
@@ -341,7 +358,7 @@ e saltam da cadeira dela, rindo em total felicidade.
 2140186 0 0 0 0 0 0 0 100 E
 26 8 0 9d10+2050 2d4+16
 550 43385
-8 8 2
+9 9 2
 E
 #2326
 homem artista~
@@ -367,7 +384,7 @@ pensamentos.
 2140186 0 0 0 0 0 0 0 100 E
 20 12 2 5d7+600 2d3+10
 550 43385
-8 8 2
+9 9 2
 E
 #2328
 homem cidadao~
@@ -378,10 +395,10 @@ Ele caminha a ermo, tentando mostrar que não está impressionado com as
 artimanhas do ciganos, porêm seus olhos estão bem abertos dele e seus ouvidos 
 bem atentos.      
 ~
-2128080 0 0 0 256 0 0 0 700 E
+2128080 0 0 0 0 0 0 0 700 E
 29 7 -3 10d10+2200 2d4+19
 376 74000
-8 8 1
+9 9 1
 E
 #2329
 homem camponês~
@@ -393,7 +410,7 @@ Este homem rústico não faz nenhuma tentativa para esconder o fato que ele só 
 2123984 0 0 0 0 0 0 0 700 E
 17 13 7 5d8+700 6d5+9
 107 68000
-8 8 1
+9 9 1
 E
 #2330
 mulher camponesa~
@@ -407,7 +424,7 @@ deles não estão nem aí para ela.
 2123984 0 0 0 0 0 0 0 700 E
 25 2 -3 4d10+950 5d6+4
 5000 60000
-8 8 2
+9 9 2
 E
 #2331
 elfo errante~
@@ -420,7 +437,7 @@ surpresa.
 2128084 0 0 0 0 0 0 0 400 E
 20 9 3 3d10+450 3d7+4
 700 40000
-8 8 1
+9 9 1
 E
 #2332
 robusta camponesa esposa~
@@ -433,7 +450,7 @@ Pobrezinha, com certeza ela não deve passear muito.
 2123984 0 0 0 0 0 0 0 700 E
 35 2 -5 5d12+1050 5d8+2
 5000 60000
-8 8 2
+9 9 2
 E
 #2333
 homem fazendeiro~
@@ -446,7 +463,7 @@ conheceu muito da boa vida.  Tudo isto parece ser demais para o coitado.
 2123984 0 0 0 0 0 0 0 600 E
 29 3 -4 5d10+822 4d8+4
 1000 38000
-8 8 1
+9 9 1
 E
 #2334
 esposa fazendeiro mulher~
@@ -458,7 +475,7 @@ Ela olha em todas as direções, tentando ver tudo ao mesmo tempo.
 2123984 0 0 0 0 0 0 0 600 E
 29 3 -4 5d10+822 4d8+2
 1000 35000
-8 8 2
+9 9 2
 E
 #2335
 anão anao saltitante~
@@ -469,10 +486,10 @@ Ele faz todos seus truques dando um pequeno grito e sempre sorrindo. Algumas
 vezes ele inclui as pessoas em seus números, saltando no ar e mergulhando no
 chão e passando entre as pernas dos expectadores admirados.      
 ~
-2126016 0 0 0 65544 0 0 0 600 E
+2126016 0 0 0 0 0 0 0 600 E
 18 12 2 6d7+800 1d5+9
 450 31000
-8 8 1
+9 9 1
 E
 #2336
 homem perna-de-pau~
@@ -482,10 +499,10 @@ Um homem caminha pelo festival sobre imensas pernas-de-pau.
 As pernas-de-pau parecem ser uma extensão das próprias pernas dele.  Ele nunca
 hesita ou dá tropeções.      
 ~
-2126016 0 0 0 65544 0 0 0 600 E
+2126016 0 0 0 0 0 0 0 600 E
 17 13 3 5d8+700 2d5+9
 400 28000
-8 8 1
+9 9 1
 E
 #2337
 vadio cigano~
@@ -511,10 +528,10 @@ Ele pega as facas, fazendo-as girar tão rápido quanto possível e as atira par
 seu companheiro vestido em vermelho, que as atira de volta, num número que 
 arranca aplaudos da platéia encantada.      
 ~
-2125922 0 0 0 1048832 0 0 0 700 E
+2125922 0 0 0 0 0 0 0 700 E
 35 2 -5 5d12+1050 5d8+8
 5000 60000
-8 8 1
+9 9 1
 E
 #2339
 atirador facas vermelho~
@@ -525,10 +542,10 @@ Enquanto seu companheiro pega e atira as facas girantes para ele, este homem
 fala animadamente com a multidão, incentivando-os a atirarem moedas de ouro
 para os dois.      
 ~
-2125922 0 0 0 1048832 0 0 0 0 E
+2125922 0 0 0 0 0 0 0 0 E
 35 2 -5 5d12+1050 5d8+8
 5000 60000
-8 8 1
+9 9 1
 E
 #2340
 tratadora~
@@ -538,10 +555,10 @@ Uma mulher cuida dos animais, mantendo um rígido controle sobre eles.
 A função principal dela é estar segura que estes animais não irão prejudicar as  
 crianças que as acariciam.  E isso é exatamente isso que ela faz.      
 ~
-2128146 0 0 0 368 0 0 0 1000 E
+2128146 0 0 0 0 0 0 0 1000 E
 24 9 10 8d11+1800 2d3+14
 787 69000
-8 8 2
+9 9 2
 E
 #2341
 crianca pintura leao~
@@ -551,10 +568,10 @@ Uma criança passa correndo, com seu rosto pintado como um leão.
 Ele olha para você.  
 Ele sorri maliciosamente e faz: ' Roarrrrr. '  
 ~
-2126020 0 0 0 65544 0 0 0 600 E
+2126020 0 0 0 0 0 0 0 600 E
 10 15 6 3d7+200 1d4+7
 56 4400
-8 8 1
+9 9 1
 E
 #2342
 homem ator~
@@ -564,10 +581,10 @@ Um homem fita o vazio, enquanto murmura bem baixinho suas falas.
 Ele balança sua cabeça a cada palavra sussurrada, como se estivesse concordando
 com tudo aquilo que ele está dizendo, preparando-se assim, psicologicamente.
 ~
-2125954 0 0 0 65544 0 0 0 600 E
+2125954 0 0 0 0 0 0 0 600 E
 17 13 7 5d8+700 3d5+9
 460 28000
-8 8 1
+9 9 1
 E
 #2343
 atriz concentrada~
@@ -577,10 +594,10 @@ Uma mulher um tanto nervosa, anda de um lado para outro, no palco.
 Enquanto caminha sem parar, ela murmura para si mesma o quão talentosa ela é 
 na arte de cantar e dançar, munindo-se assim de auto-confian�a.      
 ~
-2125954 0 0 0 65792 0 0 0 500 E
+2125954 0 0 0 0 0 0 0 500 E
 34 2 -2 2d5+1150 5d9+1
 8000 90000
-8 8 2
+9 9 2
 E
 #2344
 crianca pintura gatinho gato~
@@ -590,10 +607,10 @@ Uma criança passa correndo, com seu rosto pintado como um gatinho.
 Ela grita de prazer e corre sem parar de tão feliz, enquanto mia e ronrona ao  
 mesmo tempo.
 ~
-2126020 0 0 0 65544 0 0 0 600 E
+2126020 0 0 0 0 0 0 0 600 E
 26 9 4 7d10+670 3d8+2
 3000 60000
-8 8 2
+9 9 2
 E
 #2345
 crianca pintura caveira~
@@ -603,10 +620,10 @@ Uma criança com uma face pintada igual a uma caveira olha para você.
 É só pintura de face, mas ele parece estar levando o papel dele totalmente  
 a sério.      
 ~
-2097348 0 0 0 65544 0 0 0 600 E
+2097348 0 0 0 0 0 0 0 600 E
 26 9 4 7d10+670 3d8+2
 3000 60000
-8 8 2
+9 9 2
 E
 #2346
 vendedor cigano~
@@ -616,10 +633,10 @@ Um homem dentro de uma carroça, acena para que você veja suas mercadorias.
 Ele é gordo e ruivo, cheio de sardas, e usa um turbante sujo em sua cabeça.
 Ele veste uma encardida túnica que perdeu a cor, de tanto uso.      
 ~
-2158722 0 0 0 65904 0 0 0 700 E
+2158722 0 0 0 0 0 0 0 700 E
 22 10 5 7d10+1400 5d6+12
 167 44000
-8 8 1
+9 9 1
 E
 #2347
 vendedora cigana mulher~
@@ -629,10 +646,10 @@ Uma orgulhosa mulher com roupas multi-coloridas está sentada em sua carroça.
 Ela oferece 'a melhor mercadoria do mundo', coisas tão exóticas que somente 
 podem ser encontradas do outro lado do mundo.  Serão falsificações apenas? 
 ~
-2158722 0 0 0 65904 0 0 0 700 E
+2158722 0 0 0 0 0 0 0 700 E
 22 10 5 7d10+1400 4d6+12
 230 43000
-8 8 2
+9 9 2
 E
 #2348
 bijouterias vendedora mulher~
@@ -643,10 +660,10 @@ Ela o incita a dar uma boa olhada em suas bonitas mercadorias, tudo a um preço
 que não pode ser desprezado e muito especial para você - mas é só hoje, 
 aproveite agora mesmo!      
 ~
-2158722 0 0 0 368 0 0 0 700 E
+2158722 0 0 0 0 0 0 0 700 E
 22 10 5 7d10+1400 4d6+12
 657 43000
-8 8 2
+9 9 2
 E
 #2349
 mestre marionete boneco~
@@ -657,10 +674,10 @@ Ele olha para a platéia, de tempos em tempos, para ter certeza de que seu
 público está desfrutando o espetáculo, mas a maior parte do tempo, este
 homem com nariz de rato parece concentrado no próprio trabalho.      
 ~
-2128146 0 0 0 2384 0 0 0 0 E
+2128146 0 0 0 0 0 0 0 0 E
 24 9 0 8d10+1400 2d3+14
 150 25000
-8 8 1
+9 9 1
 E
 #2350
 cavalo robusto~
@@ -670,10 +687,10 @@ Um cavalo robusto pacientemente espera por suas ferraduras.
 De vez em quando, pode-se ouvir um relincho amortecido e nota-se um elegante
 rabo que não para de balançar, como se estivesse profundamente entediado, ali.
 ~
-2158594 0 0 0 524560 0 0 0 1000 E
+2158594 0 0 0 0 0 0 0 1000 E
 19 2 -1 3d6+200 3d3+6
 1000 35000
-8 8 1
+9 9 1
 E
 #2351
 cigano malicioso~
@@ -686,7 +703,7 @@ um tanto cínico demais. Ele parece ter tomado uns copos a mais...
 2121862 0 0 0 0 0 0 0 700 E
 6 18 10 2d4+300 3d2+4
 200 18000
-8 8 1
+9 9 1
 E
 #2352
 bebedor cerveja~
@@ -695,10 +712,10 @@ Um bebedor está aqui, tomando várias cervejas inglesas.
 ~
 Ele é um homem alto, que parece levar seu hábito de beber muito a sério.
 ~
-2121734 0 0 0 65616 0 0 0 1000 E
+2121734 0 0 0 0 0 0 0 1000 E
 20 16 0 4d3+600 4d3+8
 7000 44000
-8 8 1
+9 9 1
 E
 #2353
 fazendeiro cerveja~
@@ -709,10 +726,10 @@ não parece que ele seja um grande bebedor de cervejas, porém, ele segura
 firmemente sua caneca de cerveja. Talvez ele esteja com medo que o garçom
 a leve embora...
 ~
-2121734 0 0 0 65616 0 0 0 1000 E
+2121734 0 0 0 0 0 0 0 1000 E
 20 16 0 4d3+600 4d3+8
 7000 45000
-8 8 1
+9 9 1
 E
 #2354
 cerveja inglesa bebado~
@@ -722,10 +739,10 @@ Um dos habitantes da cidade está perto do barril, enchendo seu copo toda hora.
 Ele tenta conversar com qualquer um que o escute - e ele tem uma história para
 quase tudo. Você vai arriscar ficar ouvindo conversa mole? 
 ~
-2103360 0 0 0 80 0 0 0 700 E
+2103360 0 0 0 0 0 0 0 700 E
 10 10 0 2d2+400 3d3+8
 6000 24600
-8 8 1
+9 9 1
 E
 #2355
 colono expectador~
@@ -734,10 +751,10 @@ Um colono assiste admirado, os movimentos de quadril da dançarina cigana.
 ~
 Ele não deve ter mais que quinze ou dezesseis, e tem sardas e tudo.  
 ~
-2160642 0 0 0 2096 0 0 0 500 E
+2160642 0 0 0 0 0 0 0 500 E
 14 14 4 4d8+400 2d4+8
 83 31000
-8 8 1
+9 9 1
 E
 #2356
 expectador rapaz cidade~
@@ -747,10 +764,10 @@ Um jovem da cidade cora enquanto assiste os movimentos da dançarina cigana.
 Ele pode estar se ruborizando, mas continua firme ali, assistindo ao show, sem 
 sequer piscar.  
 ~
-2160642 0 0 0 2100 0 0 0 1000 E
+2160642 0 0 0 0 0 0 0 1000 E
 15 14 4 4d9+500 4d5+8
 56 26000
-8 8 1
+9 9 1
 E
 #2357
 mulher balzaquiana~
@@ -762,10 +779,10 @@ mas não dá um pio, quando os ciganos entram em cena e permanece no recinto há
 mais de uma hora e meia, assistindo ao show, entusiasmada com a beleza dos
 jovens rapazes que se exibem no palco.
 ~
-2160642 0 0 0 2100 0 0 0 1000 E
+2160642 0 0 0 0 0 0 0 1000 E
 16 13 3 5d7+600 2d5+8
 68 33000
-8 8 2
+9 9 2
 E
 #2358
 expectador cigano~
@@ -774,10 +791,10 @@ Um cigano assiste seus companheiros dançarem.
 ~
 Ele parece estar descansando no intervalo entre dois espetáculos.  
 ~
-2158722 0 0 0 272 0 0 0 1000 E
+2158722 0 0 0 0 0 0 0 1000 E
 26 0 -4 1d50+500 4d6+10
 789 175000
-8 8 1
+9 9 1
 E
 #2359
 jovem camponesa~
@@ -786,10 +803,10 @@ Uma jovem camponesa assiste em êxtase aos exóticos dançarinos ciganos.
 ~
 Esta pobre criaturinha certamente é uma forte candidata aos amores proibidos. Ela parece estar se apaixonando por um dos dançarinos ciganos.
 ~
-2160642 0 0 0 67636 0 0 0 1000 E
+2160642 0 0 0 0 0 0 0 1000 E
 15 14 4 4d9+500 2d4+8
 672 36000
-8 8 2
+9 9 2
 E
 #2360
 cozinheira cigana~
@@ -799,10 +816,10 @@ Uma mulher cigana prepara comida para a faminta multidão que está no festival.
 Ela está toda respingada por manchas de óleo mas isso não parece estar
 tirando nem um pouco o seu prazer por estar ali.
 ~
-2160642 0 0 0 67632 0 0 0 1000 E
+2160642 0 0 0 0 0 0 0 1000 E
 22 10 0 7d12+1023 2d8+12
 654 43000
-8 8 2
+9 9 2
 E
 #2361
 crianca pintura ansiosa inquieta~
@@ -813,10 +830,10 @@ Ele tenta não parecer muito entusiasmado e ansiosa mas não consegue ficar
 parada um segundo e por isso salta de um pé para o outro e seus olhos brilham
 ante a expectativa.      
 ~
-2158738 0 0 0 67632 0 0 0 1000 E
+2158738 0 0 0 0 0 0 0 1000 E
 15 10 -1 3d6+240 3d5+8
 2100 29000
-8 8 1
+9 9 1
 E
 #2362
 crianca olhos arregalados~
@@ -827,10 +844,10 @@ Uma fina linha de saliva escorre pelo canto de sua boca, mas ele não parece
 perceber. Ele olha para cima, com medo do contador de histórias, como se 
 se achasse que o mesmo faz parte da história que está sendo contada.
 ~
-2158722 0 0 0 65544 0 0 0 600 E
+2158722 0 0 0 0 0 0 0 600 E
 12 15 7 3d6+145 3d4+7
 150 40000
-8 8 1
+9 9 1
 E
 #2363
 pequena menina~
@@ -841,10 +858,10 @@ O rabo-de-cavalo dela se move de um lado para o outro, conforme ela acompanha
 os movimentos das mãos do contador de história e seu rosto está impassível,
 como se fosse quebrar a qualquer minuto, por causa da tensão nervosa.
 ~
-2158630 0 0 0 65544 0 0 0 900 E
+2158630 0 0 0 0 0 0 0 900 E
 10 15 7 3d9+305 2d5+8
 800 20000
-8 8 2
+9 9 2
 E
 #2364
 rapaz jovem~
@@ -854,10 +871,10 @@ Um jovem rapaz está ouvindo a história com curiosidade em seu olhar.
 Ele está com o olhar fixo, como se estivesse em um transe, tão perdido nos 
 devaneios do enredo da história, que perdeu o contato com o real mundo.      
 ~
-2125938 0 0 0 65536 0 0 0 600 E
+2125938 0 0 0 0 0 0 0 600 E
 29 3 -4 5d10+822 4d8+7
 1000 35000
-8 8 1
+9 9 1
 E
 #2398
 monstro inacabado criatura~
@@ -867,10 +884,10 @@ Uma pobre criatura terrívelmente feia está aqui.
 Ao olhar para ele, você sente seu coração se encher de misericórdia por ver
 algo que, de tão feio, parece não ter sido acabado.  
 ~
-2226388 0 0 0 327936 0 0 0 1000 E
+2226388 0 0 0 0 0 0 0 1000 E
 50 -15 1 10d12+1800 5d6+9
 0 5000
-8 8 1
+9 9 1
 E
 #2399
 duvois mordomo~
@@ -885,6 +902,6 @@ retilínea demonstra toda a classe que um mordomo inglês precisa ter.
 2353178 0 0 0 0 0 0 0 0 E
 99 -30 -10 30d100+3000 30d100+50
 1 120000
-8 8 1
+9 9 1
 E
 $

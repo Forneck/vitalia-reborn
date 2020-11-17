@@ -135,7 +135,7 @@ dead_start_room = 1891
 * donate. Use -1 for 'no such room'.
 donation_room_1 = 3063
 donation_room_2 = 5510
-donation_room_3 = 235
+donation_room_3 = 278
 
 * The virtual numbers of the hometowns rooms. Use -1 for 'no such room'.
 hometown_1= 3001
