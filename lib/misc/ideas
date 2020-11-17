@@ -29,7 +29,7 @@ Level     36
 Room      12051
 Flags     0 0 0 0
 End
-Text       Mostrar dano!~
+Text      Mostrar dano!~
 Body      Seria legal mostrar o dano que tomamos e batemos nos ataques efetuados.
 ~
 Name      Motharo~
@@ -37,5 +37,15 @@ IdNum     25
 Dated     1605382952
 Level     37
 Room      3605
+Flags     0 0 0 0
+End
+Text       skill cooking~
+Body      Misturar alimentos tipo comida e aumentar a saciedade.
+~
+Name      Cansian~
+IdNum     1
+Dated     1605561181
+Level     110
+Room      11687
 Flags     0 0 0 0
 End

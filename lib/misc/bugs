@@ -159,7 +159,7 @@ Level     12
 Room      3045
 Flags     0 0 0 0
 End
-Text       pick~
+Text      pick~
 Body      pick lock so deveria funcionar com lad
 ~
 Name      Cansian~
@@ -167,5 +167,135 @@ IdNum     1
 Dated     1605402159
 Level     110
 Room      3469
+Flags     0 0 0 0
+End
+Text       falta de vortice~
+Body      nao tem vortice aqui
+~
+Name      Anyte~
+IdNum     6
+Dated     1605557681
+Level     79
+Room      11400
+Flags     1 0 0 0
+End
+Text       vortice~
+Body      vortice inexistente
+~
+Name      Cansian~
+IdNum     1
+Dated     1605557864
+Level     110
+Room      11400
+Flags     1 0 0 0
+End
+Text       bribe khanti~
+Body      fazer trigger de bribe pra khanti
+~
+Name      Cansian~
+IdNum     1
+Dated     1605559038
+Level     110
+Room      11500
+Flags     0 0 0 0
+End
+Text       sala escondida~
+Body      leste daqui eh escondido
+~
+Name      Anyte~
+IdNum     6
+Dated     1605559919
+Level     79
+Room      11559
+Flags     1 0 0 0
+End
+Text       porta nao abre~
+Body      porta pra leste daqui nao abre "Voc no pode unlock  isso!!"
+~
+Name      Anyte~
+IdNum     6
+Dated     1605560000
+Level     79
+Room      11559
+Flags     1 0 0 0
+End
+Text       cor vazando~
+Body      cor ta vazando dos status tipo "Cansian  (escrevendo) est em p aqui." tudo depois de escrevendo ta azul
+~
+Name      Anyte~
+IdNum     6
+Dated     1605560060
+Level     79
+Room      11559
+Flags     0 0 0 0
+End
+Text       sala escondida~
+Body      up daqui do rio ikshumati devia ser escondido
+~
+Name      Anyte~
+IdNum     6
+Dated     1605560213
+Level     79
+Room      11588
+Flags     1 0 0 0
+End
+Text       porta nao abre~
+Body      nao pode open isso!!!
+~
+Name      Anyte~
+IdNum     6
+Dated     1605560934
+Level     79
+Room      11686
+Flags     1 0 0 0
+End
+Text       kanakajja~
+Body      Fazer o trigger do especial dela
+~
+Name      Cansian~
+IdNum     1
+Dated     1605561611
+Level     110
+Room      11642
+Flags     0 0 0 0
+End
+Text       item trap~
+Body      fazer trap
+~
+Name      Cansian~
+IdNum     1
+Dated     1605561908
+Level     110
+Room      11581
+Flags     0 0 0 0
+End
+Text       saida escondida~
+Body      aqui nao era pra mostrar nenhuma saida
+~
+Name      Anyte~
+IdNum     6
+Dated     1605562193
+Level     79
+Room      11312
+Flags     0 0 0 0
+End
+Text       saida escondida~
+Body      aqui tb nenhuma
+~
+Name      Anyte~
+IdNum     6
+Dated     1605562229
+Level     79
+Room      11313
+Flags     0 0 0 0
+End
+Text       hometown 3~
+Body      centro do templo deve ser a hometown 3
+~
+Name      Cansian~
+IdNum     1
+Dated     1605562346
+Level     110
+Room      11315
 Flags     0 0 0 0
 End

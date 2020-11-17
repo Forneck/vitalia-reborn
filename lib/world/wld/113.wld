@@ -246,7 +246,7 @@ nadar para sul. Você não vê saída alguma.
 D4
 ~
 ~
-1 -1 11313
+3 -1 11313
 S
 #11313
 No Túnel~
@@ -257,7 +257,7 @@ Lá, parece haver alguma coisa iluminando um dos lados do túnel.
 D4
 ~
 ~
-1 -1 11314
+3 -1 11314
 S
 #11314
 No Túnel~
@@ -325,15 +325,15 @@ Você vê um pátio.
 ~
 0 -1 11384
 E
+pinturas teto~
+Há diversas pinturas representando Sesha sustentando o mundo e sendo
+reverenciado pelos senhores de Patala.
+~
+E
 pilares~
 O que cobre os pilares parece ser ouro puro. Os desenhos que os adornam,
 feito por ourives de fantástica habilidade, represetam quatro naginis
 segurando as pedras dos senhores do norte, do sul, do leste e oeste.
-~
-E
-pinturas teto~
-Há diversas pinturas representando Sesha sustentando o mundo e sendo
-reverenciado pelos senhores de Patala.
 ~
 S
 #11316

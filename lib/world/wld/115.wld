@@ -28,21 +28,6 @@ Os altos muros seguem até além de onde sua vista alcança...
 ~
 0 -1 11511
 E
-muros altos~
-Gigantescas pedras negras, perfeitamente encaixadas umas às outras, formam
-um muro que segue até...  Hum...  Você não consegue ver se há fim...  Mas,
-pelas suas contas, ele tem cerca de doze metros de altura e, olhando pelo
-portão, dois metros de largura.  Você sente calafrios ao tentar imaginar
-quem construiu isso...
-~
-E
-portao ferro~
-De ferro negro, esse portão parece extremamente pesado.  As grades foram
-feitas sob a forma de enormes cobras com a cabeça voltada para o alto, de
-línguas bifurcadas afiadas como pequenas lanças.  Você não se atreveria a
-tentar escalá-lo... 
-~
-E
 aviso parede esquerda pergaminho~
 Está escrito:
 	R* 	B======================================================================== 	R*	n
@@ -67,6 +52,21 @@ Está escrito:
 	B|                                                                          	B|
 	B|                               	YVasuki IV	L, Soberano do Sétimo Submundo     	B|
 	R* 	B======================================================================== 	R*   
+~
+E
+portao ferro~
+De ferro negro, esse portão parece extremamente pesado.  As grades foram
+feitas sob a forma de enormes cobras com a cabeça voltada para o alto, de
+línguas bifurcadas afiadas como pequenas lanças.  Você não se atreveria a
+tentar escalá-lo... 
+~
+E
+muros altos~
+Gigantescas pedras negras, perfeitamente encaixadas umas às outras, formam
+um muro que segue até...  Hum...  Você não consegue ver se há fim...  Mas,
+pelas suas contas, ele tem cerca de doze metros de altura e, olhando pelo
+portão, dois metros de largura.  Você sente calafrios ao tentar imaginar
+quem construiu isso...
 ~
 S
 #11501
@@ -202,17 +202,17 @@ Os altos muros seguem até além de onde sua vista alcança...
 ~
 0 -1 11504
 E
-mapa grande~
-Esse mapa representa essa região de Vitália e assinala suas principais
-cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
-segundo está escrito, uma cidade chamada Bhogavati.
-~
-E
 estandarte brasonado armas casa real patala porta~
 O vento parece querer impedir você de examinar o estandarte...  Só é
 possível ver que, num fundo negro como breu, uma enorme serpente de
 ... uma... duas... três... quatro... VÁRIAS cabeças enrola-se em torno de
 uma esfera celeste e... melhor desistir, está difícil demais de ver...
+~
+E
+mapa grande~
+Esse mapa representa essa região de Vitália e assinala suas principais
+cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo está escrito, uma cidade chamada Bhogavati.
 ~
 S
 #11506
@@ -348,17 +348,17 @@ Os altos muros seguem até além de onde sua vista alcança...
 ~
 0 -1 11509
 E
-mapa grande~
-Esse mapa representa essa região de Vitália e assinala suas principais
-cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
-segundo está escrito, uma cidade chamada Bhogavati.
-~
-E
 estandarte brasonado armas casa real patala porta~
 O vento parece querer impedir você de examinar o estandarte...  Só é
 possível ver que, num fundo negro como breu, uma enorme serpente de
 ... uma... duas... três... quatro... VÁRIAS cabeças enrola-se em torno de
 uma esfera celeste e... melhor desistir, está difícil demais de ver...
+~
+E
+mapa grande~
+Esse mapa representa essa região de Vitália e assinala suas principais
+cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo está escrito, uma cidade chamada Bhogavati.
 ~
 S
 #11511
@@ -494,17 +494,17 @@ Os altos muros seguem até além de onde sua vista alcança...
 ~
 0 -1 11516
 E
-mapa grande~
-Esse mapa representa essa região de Vitália e assinala suas principais
-cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
-segundo está escrito, uma cidade chamada Bhogavati.
-~
-E
 estandarte brasonado armas casa real patala porta~
 O vento parece querer impedir você de examinar o estandarte...  Só é
 possível ver que, num fundo negro como breu, uma enorme serpente de
 ... uma... duas... três... quatro... VÁRIAS cabeças enrola-se em torno de
 uma esfera celeste e... melhor desistir, está difícil demais de ver...
+~
+E
+mapa grande~
+Esse mapa representa essa região de Vitália e assinala suas principais
+cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo está escrito, uma cidade chamada Bhogavati.
 ~
 S
 #11516
@@ -640,17 +640,17 @@ Os altos muros seguem até além de onde sua vista alcança...
 ~
 0 -1 11521
 E
-mapa grande~
-Esse mapa representa essa região de Vitália e assinala suas principais
-cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
-segundo está escrito, uma cidade chamada Bhogavati.
-~
-E
 estandarte brasonado armas casa real patala porta~
 O vento parece querer impedir você de examinar o estandarte...  Só é
 possível ver que, num fundo negro como breu, uma enorme serpente de
 ... uma... duas... três... quatro... VÁRIAS cabeças enrola-se em torno de
 uma esfera celeste e... melhor desistir, está difícil demais de ver...
+~
+E
+mapa grande~
+Esse mapa representa essa região de Vitália e assinala suas principais
+cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo está escrito, uma cidade chamada Bhogavati.
 ~
 S
 #11521
@@ -786,17 +786,17 @@ Os altos muros seguem até além de onde sua vista alcança...
 ~
 0 -1 11526
 E
-mapa grande~
-Esse mapa representa essa região de Vitália e assinala suas principais
-cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
-segundo está escrito, uma cidade chamada Bhogavati.
-~
-E
 estandarte brasonado armas casa real patala porta~
 O vento parece querer impedir você de examinar o estandarte...  Só é
 possível ver que, num fundo negro como breu, uma enorme serpente de
 ... uma... duas... três... quatro... VÁRIAS cabeças enrola-se em torno de
 uma esfera celeste e... melhor desistir, está difícil demais de ver...
+~
+E
+mapa grande~
+Esse mapa representa essa região de Vitália e assinala suas principais
+cidades.  Você consegue identificar Midgaard, Nova Thalos, Thewster, Roma e,
+segundo está escrito, uma cidade chamada Bhogavati.
 ~
 S
 #11526
@@ -1555,17 +1555,17 @@ D1
 Você vê apenas um enorme muro de espinhos...
 ~
 orificio fechadura~
-0 11509 11563
-E
-orificio fechadura~
-Está tudo claro do outro lado!  Você consegue avistar um belíssimo campo e,
-bem mais a frente... Algo grande, mas muito distante.
-~
+3 11509 11563
 E
 muro~
 O muro, enorme e repleto de espinhos afiadíssimos, possui um orifício, na
 altura de sua cabeça, do tamanho de um pulso.  Uma estranha luz passa por
 ele.
+~
+E
+orificio fechadura~
+Está tudo claro do outro lado!  Você consegue avistar um belíssimo campo e,
+bem mais a frente... Algo grande, mas muito distante.
 ~
 S
 #11560
@@ -2364,7 +2364,7 @@ Você vê Ikshumati... e mais nada...
 D4
 ~
 ~
-1 -1 11600
+3 -1 11600
 S
 #11589
 O Rio Ikshumati~

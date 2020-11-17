@@ -2,7 +2,8 @@
 Vitalia~
 A Fenda Entre Mundos~
 11400 11499 120 1 fj 0 0 0 -1 -1
-O 0 11400 1 11400 	(um vórtice de energia)
+R 0 11400 11400 -1 	(um vórtice de energia)
+O 1 11400 99 11400 	(um vórtice de energia)
 O 0 11401 1 11417 	(a placa de indicações)
 M 0 11400 2 11402 	(um yaksha de névoa)
 M 0 11400 2 11404 	(um yaksha de névoa)

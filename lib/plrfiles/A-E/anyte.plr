@@ -6,26 +6,26 @@ Clas: 6
 Levl: 79
 Id  : 6
 Brth: 1603323580
-Plyd: 254570
-Last: 1605548670
+Plyd: 260107
+Last: 1605562485
 Lmot: 1605459147
 Lnew: 1605118209
 Htwn: 3001
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: 348
+Alin: 175
 Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCEF 0 0 0
 Wimp: 100
 Room: 5518
 Lern: 8
-Hung: 23
-Thir: 3
-Hit : 439/927
-Mana : 107/971
-Move: 371/280
+Hung: 5
+Thir: 5
+Hit : 637/927
+Mana : 802/971
+Move: 380/280
 Str : 17/0
 Int : 9
 Wis : 11
@@ -33,9 +33,9 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 3453002
+Gold: 3468505
 Bank: 1500000
-Exp : 75446645
+Exp : 76350260
 Olc : 0
 Skil:
 7 100
@@ -64,12 +64,19 @@ Skil:
 252 90
 0 0
 Affs:
-19 89 0 29 16 0 0 0
-1 374 -20 17 0 0 0 0
-96 399 -4 17 0 0 0 0
-96 399 0 61 0 16 0 0
+50 54 0 36 2048 0 0 0
+19 13 0 29 16 0 0 0
+1 298 -20 17 0 0 0 0
+96 323 -4 17 0 0 0 0
+96 323 0 61 0 16 0 0
 0 0 0 0 0 0 0 0
-Alis: 61
+Alis: 63
+ labfenda
+        s;w;e;s;e;n;e;n;s;w;s;w;w;s;w;w;s;w;s;e;s;w;s;e;n;e;e;n;n;e;e
+1
+ fendaentremundos
+ s;s;s;s;e;e;s;s;e;e;e;e;n;d;n;d;d;d;n;n;n;e;e;s;e;e;e;e;e;e;s;s;s;d;d;w;w;w;d;enter vor
+1
  wake;wear
  all
 0

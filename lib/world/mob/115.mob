@@ -11,10 +11,10 @@ enquanto todo o seu corpo se movimenta com graça, como numa dança de guerra.
 E mesmo com essa aparência um tanto o quanto monstruosa, ele é muito belo.
 Cuidado ao encarar seus brilhantes olhos vermelhos: dizem que é fatal.
 ~
-2351106 0 0 0 524660 0 0 0 -360 E
+2351106 0 0 0 0 0 0 0 -360 E
 40 -4 -17 10d10+750 8d8+18
 4000 90500
-8 8 1
+9 9 1
 E
 #11501
 khanti nagini guardia~
@@ -29,10 +29,10 @@ pequenas pedras inscrustradas.  Na testa, um pouco acima do centro de seus
 olhos, um belo bindi enfeita a região de seu ajna.  Uma estranha mistura de
 sari e armadura protege seu corpo metade humano, metade cobra.
 ~
-2357786 0 0 0 852288 0 0 0 -800 E
+2357786 0 0 0 0 0 0 0 -800 E
 95 -16 -25 14d14+8341 12d10+40
 50000 790456
-8 8 2
+9 9 2
 BareHandAttack: 3
 Str: 18
 Dex: 18
@@ -41,6 +41,7 @@ Wis: 18
 Con: 18
 Cha: 18
 E
+T 11500
 #11502
 espinhal espinhos~
 o espinhal agressivo~
@@ -48,10 +49,10 @@ Um gigansteco espinhal tenta ferí-lo com seus espinhos.
 ~
 Esse... esse... esse arbusto está tentando atacar você!!
 ~
-2121766 0 0 0 537935952 0 0 0 -300 E
+2121766 0 0 0 0 0 0 0 -300 E
 10 14 1 2d4+250 4d6+6
 0 10000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Dex: 13
 E
@@ -65,10 +66,10 @@ e dois pequenos buracos servindo de olhos.  Falando em seus olhos, uma fraca
 luz amarelada sai dos dois orifícios, dando ao monstro uma aparência ainda
 mais assustadora.
 ~
-2187298 0 0 0 1065040 0 0 0 -300 E
+2187298 0 0 0 0 0 0 0 -300 E
 15 13 3 15d15+250 2d10+5
 0 11000
-8 8 1
+9 9 1
 E
 #11504
 coluna espinhais espinhos braco khura~
@@ -83,7 +84,7 @@ Cuidado com os espinhos.  Podem ser venenosos!!
 2170930 0 0 0 0 0 0 0 -400 E
 30 0 1 15d15+900 5d5+20
 0 45000
-8 8 1
+9 9 1
 E
 #11505
 tartaruga kurma~
@@ -97,7 +98,7 @@ apuros se tentar passar pela guarda do enorme réptil..
 2351122 0 0 0 0 0 0 0 1000 E
 100 -26 -30 15d15+6000 10d10+39
 0 1000000
-8 8 2
+9 9 2
 BareHandAttack: 6
 Str: 18
 Dex: 18
@@ -119,7 +120,7 @@ parece pequena demais para ocultar suas presas...  E que presas!!!
 2097344 0 0 0 0 0 0 0 -350 E
 10 14 1 6d6+300 3d3+8
 1000 9000
-8 8 1
+9 9 1
 E
 #11507
 rakshasa resmungao grande demonio~
@@ -134,7 +135,7 @@ maiores partes de seu corpo: as afiadas presas...
 2097344 0 0 0 0 0 0 0 -450 E
 19 9 -8 7d7+600 4d4+12
 4000 20000
-8 8 1
+9 9 1
 E
 #11508
 naga cacador violeta~
@@ -150,7 +151,7 @@ que o faz pensar ser esse uma habilidade de caçador.
 2351216 0 0 0 0 0 0 0 0 E
 56 0 -8 7d7+1200 7d5+24
 6000 100000
-8 8 1
+9 9 1
 E
 #11509
 nagini silenciosa rastreadora~
@@ -164,7 +165,7 @@ encontrá-los.  O que acontece depois não se sabe ao certo...
 2285648 0 0 0 0 0 0 0 0 E
 50 -8 -9 7d7+1100 7d5+20
 6000 95000
-8 8 2
+9 9 2
 E
 #11510
 gigansteca coluna agua~
@@ -177,7 +178,7 @@ que sua presença aqui não é bem-vista.  Cuidado com sua fúria.
 2351216 0 0 0 0 0 0 0 0 E
 45 -3 -6 6d6+1300 5d5+26
 0 81000
-8 8 2
+9 9 2
 E
 #11511
 nagini cacadora~
@@ -191,7 +192,7 @@ que há um intruso no reino... E ela o está caçando!
 2351216 0 0 0 0 0 0 0 0 E
 56 -7 -18 7d7+1200 7d5+29
 6000 100000
-8 8 2
+9 9 2
 E
 #11512
 curioso geologo naga~
@@ -210,7 +211,7 @@ falando sozinho.
 2154502 0 0 0 0 0 0 0 0 E
 36 4 -3 12d5+600 4d3+14
 270 48333
-8 8 1
+9 9 1
 E
 #11513
 nagini mineralogista~
@@ -228,7 +229,7 @@ seu caminho antes que ela tenha tempo de pensar a respeito de você.
 2154502 0 0 0 0 0 0 0 0 E
 39 2 -4 12d5+600 4d3+16
 459 60333
-8 8 2
+9 9 2
 E
 #11514
 furtiva vijay figura negra naga pantano~
@@ -246,6 +247,6 @@ nada sobre sua pessoa. Você só consegue advinhar que está encrencado.
 2351216 0 0 0 0 0 0 0 -500 E
 41 -4 -12 12d6+1100 5d5+25
 0 102009
-8 8 1
+9 9 1
 E
 $

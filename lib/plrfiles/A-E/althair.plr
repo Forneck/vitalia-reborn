@@ -3,29 +3,29 @@ Pass: Al0/4XKfoKti2
 Titl: the Wolf Cub
 Sex : 1
 Clas: 6
-Levl: 11
+Levl: 12
 Id  : 20
 Brth: 1603768097
-Plyd: 121167
-Last: 1605401298
-Lmot: 1604953247
+Plyd: 123131
+Last: 1605578099
+Lmot: 1605577494
 Lnew: 1605129579
 Htwn: 1372
-Host: 177.220.172.173
+Host: 138.204.26.79
 Hite: 195
 Wate: 172
-Alin: 47
+Alin: 142
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDE abde 0 0
 Wimp: 30
 Room: 3001
-Lern: 2
-Hung: 2
-Thir: 10
-Hit : 181/136
-Mana : 135/135
-Move: 136/116
+Lern: 4
+Hung: 16
+Thir: 5
+Hit : 33/146
+Mana : 6/140
+Move: 117/118
 Str : 16/0
 Int : 14
 Wis : 12
@@ -33,9 +33,9 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Gold: 20160
-Bank: 111538
-Exp : 875902
+Gold: 12665
+Bank: 121479
+Exp : 1019596
 Olc : 0
 ScrW: 44
 Skil:
@@ -49,23 +49,26 @@ Skil:
 251 90
 0 0
 Affs:
-36 34 0 33 256 0 0 0
-54 73 0 44 524288 0 0 0
-54 73 -5 17 0 0 0 0
+54 48 -5 17 0 0 0 0
+54 48 0 44 524288 0 0 0
+36 9 0 33 256 0 0 0
 0 0 0 0 0 0 0 0
-Alis: 5
- s;s;w;n
- s;s;w;n
-1
- fonte
- w;w;w;drink fonte
+Alis: 6
+ as
+ east
+0
+ ha
+ history all
+0
+ recall
+ cast 'word of recall' $*
 1
  gd
  get $1;don $1
 1
- recall
- cast 'word of recall' $*
+ fonte
+ w;w;w;drink fonte
 1
- ha
- history all
-0
+ s;s;w;n
+ s;s;w;n
+1

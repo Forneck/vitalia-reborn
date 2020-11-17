@@ -5,7 +5,7 @@ Um imenso vórtice de energia brilha intensamente, atraindo-o para si.~
 ~
 26 ab 0 0 0 0 0 0 0 0 0 0 0
 11401 0 0 0
-100 1000000 0 0 0
+100 1000000 0 0 999
 E
 portal energia vortice~
 Você observa esse imenso vórtice de energia cujo diâmetro deve ter duas
@@ -23,9 +23,17 @@ Há uma enorme placa brilhante bem à sua frente que parece bem importante.~
 0 0 0 0
 100 100000 0 0 0
 E
+placa enorme brilhante importante~
+Quando você pensou enorme, você pensou pequeno.  Sim, porque essa placa é
+mais que enorme: você parece uma formiga perto dela...  Ela é basicamente um
+gigantesco poste de ferro negro com uma placa de superfície lisa brilhante
+repleta de indicações (que parecem inscrustradas no metal).  Talvez seja
+melhor olhá-las com mais atenção.
+~
+E
 indicacoes~
 A placa indica, com flechas, direções para cima e para baixo. Há sete em cada
-uma delas, num total de catorze "lugares":@n
+uma delas, num total de catorze "lugares":	n
                                         
                                        Satyaloka
                                            .
@@ -42,16 +50,16 @@ uma delas, num total de catorze "lugares":@n
                                            |
 
                                        Maharloka
-@B        P@n                                  .
-@B        R@n                                 /_\
-@B        A@n                                  |
-@B        R@n
-@B        .@n                              Svarloka
-@B        .@n                                  .
-@B        .@n                                 /_\
-@B        .@n                                  |
-@B        .@n
-@B        .@n                             Bhuvarloka
+	B        P	n                                  .
+	B        R	n                                 /_\
+	B        A	n                                  |
+	B        R	n
+	B        .	n                              Svarloka
+	B        .	n                                  .
+	B        .	n                                 /_\
+	B        .	n                                  |
+	B        .	n
+	B        .	n                             Bhuvarloka
                                            .
                                           /_\
                                            |
@@ -65,15 +73,15 @@ uma delas, num total de catorze "lugares":@n
 
                                          Sutala
                                            |
-@R        A@n                                 \¨/
-@R        V@n                                  '
-@R        A@n                              Vitalaloka
-@R        R@n                                  |
-@R        O@n                                 \¨/
-@R        H@n                                  '
-@R        A@n                               Talatala
-@R        N@n                                  |
-@R        A@n                                 \¨/
+	R        A	n                                 \¨/
+	R        V	n                                  '
+	R        A	n                              Vitalaloka
+	R        R	n                                  |
+	R        O	n                                 \¨/
+	R        H	n                                  '
+	R        A	n                               Talatala
+	R        N	n                                  |
+	R        A	n                                 \¨/
                                            '
                                         Mahatala
                                            |
@@ -92,14 +100,6 @@ uma delas, num total de catorze "lugares":@n
 
 Você não entende nada que está escrito, mas sente que há alguma importante
 informação no que está escrito na placa.
-~
-E
-placa enorme brilhante importante~
-Quando você pensou enorme, você pensou pequeno.  Sim, porque essa placa é
-mais que enorme: você parece uma formiga perto dela...  Ela é basicamente um
-gigantesco poste de ferro negro com uma placa de superfície lisa brilhante
-repleta de indicações (que parecem inscrustradas no metal).  Talvez seja
-melhor olhá-las com mais atenção.
 ~
 #11402
 sombra~
@@ -251,7 +251,7 @@ A
 #11410
 seixo verde-musgo verde musgo vidro pequeno~
 um pequeno seixo verde~
-undefined~
+.Um pequeno seixo verde foi esquecido aqui.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
@@ -264,19 +264,19 @@ língua.  Está escrito: Patala.
 #11411
 seixo verde-musgo verde musgo vidro pequeno~
 um pequeno seixo verde~
-undefined~
+.Um pequeno seixo verde foi deixado aqui.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 1 110 0 0 0
 E
-incrustracoes incrustrado dizeres~
-Há os seguintes dizeres: "Glória a Sesha".
-~
-E
 seixo pequeno verde-musgo verde musgo vidro~
 Esse seixo parece especial pois o que está escrito nele não foi inscrito,
 mas sim incrustrado.
+~
+E
+incrustracoes incrustrado dizeres~
+Há os seguintes dizeres: "Glória a Sesha".
 ~
 #11412
 tunica branca gasta~

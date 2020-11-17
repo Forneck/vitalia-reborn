@@ -541,7 +541,7 @@ D1
 Você vê apenas a escuridão do desfiladeiro.
 ~
 escuridao~
-0 -1 11418
+3 -1 11418
 D2
 Só se vê névoa nessa direção.
 ~
@@ -883,11 +883,6 @@ As escadas seguem por ali.
 ~
 0 -1 11431
 E
-seixos~
-Em cada um dos seixos você percebe haver uma pequena inscrição.  Algumas
-você entende, outras não. Talvez você consiga pegar alguns deles.
-~
-E
 porta jade verde~
 Você fica encantado com essa porta que parece ser feita por algum artista.
 A pedra de que foi feita provavelmente é jade, o que faria com que você
@@ -895,6 +890,11 @@ esteja olhando para um dos maiores blocos da pedra que deva já ter existido.
 Os entalhes sobre sua superfície formam uma enorme cobra de milhares de
 cabeças que parece envolver uma grande esfera com seu corpo.  Uma sensação
 de muito respeito por esta figura invade seu ser.
+~
+E
+seixos~
+Em cada um dos seixos você percebe haver uma pequena inscrição.  Algumas
+você entende, outras não. Talvez você consiga pegar alguns deles.
 ~
 S
 #11434

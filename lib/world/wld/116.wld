@@ -1433,14 +1433,6 @@ D3
 ~
 0 -1 11679
 E
-portico entrada~
-Você se sente muito pequeno perante o enorme pórtico da entrada do palácio.
-Ele é feito de dois pesados metais, um dourado e outro prateado, que cobrem
-cada um uma das folhas dos grandes portas.  Estas foram cuidadosamente
-polidas e ornamentadas com finas escavações no metal que formam o brasão do
-senhor de Svarga.
-~
-E
 palácio blocos pedra andar primeiro~
 Pelo que você viu até agora, você sabe que o palácio é basicamente um vimana,
 construção quase piramidal formada por diversos andares cercados de terraços.
@@ -1465,6 +1457,14 @@ Uma rudimentar representação lhe vem à cabeça:
               |                 | o | o |                 |
               |_________________|___|___|_________________|
                                '         '
+~
+E
+portico entrada~
+Você se sente muito pequeno perante o enorme pórtico da entrada do palácio.
+Ele é feito de dois pesados metais, um dourado e outro prateado, que cobrem
+cada um uma das folhas dos grandes portas.  Estas foram cuidadosamente
+polidas e ornamentadas com finas escavações no metal que formam o brasão do
+senhor de Svarga.
 ~
 S
 #11681
@@ -1587,7 +1587,7 @@ D0
 Há ali uma porta de madeira.
 ~
 porta madeira~
-0 2 11687
+1 2 11687
 D2
 Você vê o átrio em frente ao pórtico.
 ~
@@ -1606,12 +1606,12 @@ D1
 Ali parece ficar a despensa.
 ~
 porta despensa~
-0 2 11688
+1 2 11688
 D2
 A porta de madeira leva ao corredor.
 ~
 porta madeira~
-0 2 11686
+1 2 11686
 S
 #11688
 A Despensa~
@@ -1625,7 +1625,7 @@ D3
 A cozinha fica por ali.
 ~
 porta despensa~
-0 2 11687
+1 2 11687
 S
 #11689
 Um Cruzamento de Corredores~
