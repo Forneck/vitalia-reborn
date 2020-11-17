@@ -1175,7 +1175,7 @@ static int can_elevate(struct char_data *ch)
 {
 	if (!PLR_FLAGGED(ch, PLR_TRNS))
 		return (0);
-	if (GET_INCARNATIONS(ch) < 4)
+	if (GET_REMORT(ch) < 4)
 		return (0);
 
 	return (1);
@@ -1232,6 +1232,8 @@ ACMD(do_recall)
 
 ACMD(do_suggestion)
 {
+   struct char_data *mob;
+   int vnum_mob;
    struct obj_data *object;
    struct fann *ann;
 	fann_type *calc_output;
@@ -1317,6 +1319,15 @@ ACMD(do_suggestion)
   else if (calc_output[3] > 0 && calc_output[5] > 0)
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
    else  if (calc_output[3] > 0){
+      if (calc_output[3] == 0.5) {
+         if  (vnum_mob = real_mobile(calc_output[4] * 10000) != NOBODY){
+         mob = read_mobile(vnum_mob, REAL);
+         char_to_room(mob, 0);
+          send_to_char(ch,"Sugestão de comando: %s %s\r\n",complete_cmd_info[comando].command, mob->player.name);
+          extract_char(mob);
+         }
+      }
+      else
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
  }
    else
