@@ -2258,10 +2258,10 @@ int parse_hometown(char arg)
 	switch (arg)
 	{
 	case 'a':
-		return r_hometown_1;
+		return CONFIG_HOMETOWN_1;
 	case 'b':
-		return r_hometown_2;
+		return CONFIG_HOMETOWN_2;
 	default:
-		return 0;
+		return CONFIG_HOMETOWN_1;
 	}
 }
