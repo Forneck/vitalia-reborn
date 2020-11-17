@@ -12,7 +12,7 @@ sua expressão assustada.
 2105488 0 0 0 0 0 0 0 -100 E
 31 3 -8 6d7+600 4d4+17
 0 33000
-8 8 1
+9 9 1
 E
 #11401
 pisacha pedra demonio grande~
@@ -29,7 +29,7 @@ quanto sua própria sua pele, assustados.
 2105488 0 0 0 0 0 0 0 -100 E
 29 2 -7 6d6+700 5d3+18
 0 36000
-8 8 1
+9 9 1
 E
 #11402
 pisacha demonio grama monte~
@@ -45,7 +45,7 @@ horas, dificilmente perceberá seus movimentos.
 2105488 0 0 0 0 0 0 0 -100 E
 33 0 -8 5d6+741 5d3+16
 0 39000
-8 8 1
+9 9 1
 E
 #11403
 morcego enorme~
@@ -57,7 +57,7 @@ Esse morcego deve ter mais de um metro de envergadura. Enorme mesmo.
 2170898 0 0 0 0 0 0 0 -80 E
 20 4 -6 6d6+600 4d3+16
 0 32000
-8 8 1
+9 9 1
 E
 #11404
 pisachi sombra ser demonio~
@@ -73,7 +73,7 @@ seja muito grande: isso a mata.
 2105488 0 0 0 0 0 0 0 -200 E
 36 0 -9 5d6+899 5d4+18
 0 59000
-8 8 2
+9 9 2
 E
 #11405
 cao demonio monstruoso~
@@ -89,9 +89,10 @@ chicote, o ameaça estalando no ar.
 2357266 0 0 0 0 0 0 0 -400 E
 50 -4 -12 7d7+1200 6d7+23
 0 90000
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
+T 3008
 #11406
 chitragupta senhor guardiao cansado registros~
 Chitragupta~
@@ -108,7 +109,7 @@ não existe, parar só atrapalharia seu trabalho.
 2109458 0 0 0 0 0 0 0 0 E
 78 -10 -19 8d8+2000 7d7+30
 10000 178000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 16
 Dex: 16
@@ -117,6 +118,7 @@ Wis: 16
 Con: 16
 Cha: 16
 E
+T 3009
 #11407
 Yama deus morte homem sombrio~
 Yama, o Deus da Morte~
@@ -135,7 +137,7 @@ facho de luz: ele chegou a um veredicto.
 2353170 0 0 0 0 0 0 0 0 E
 101 -29 -40 9d9+12900 14d12+49
 50000 2345678
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 18
 Dex: 18
@@ -144,6 +146,7 @@ Wis: 18
 Con: 18
 Cha: 18
 E
+T 3009
 #11408
 multidao almas fila enfileiradas~
 a multidão de almas~
@@ -158,7 +161,7 @@ aqui parece temer seu destino.
 2170898 0 0 0 0 0 0 0 0 E
 90 -15 -39 7d7+10000 9d9+29
 1111 400000
-8 8 2
+9 9 2
 E
 #11409
 narada homem simples andarilho divino~
@@ -176,8 +179,9 @@ importante missão.
 2105362 0 0 0 0 0 0 0 600 E
 60 -5 -19 7d7+2000 8d8+27
 6390 160000
-8 8 1
+9 9 1
 E
+T 3009
 #11410
 estatua naga guarda~
 a estátua de um guarda naga~
@@ -192,7 +196,7 @@ da rigidez da pedra, parece ter a mobilidade da carne e músculos vivos.
 2351122 0 0 0 0 0 0 0 0 E
 60 -7 -19 7d7+2100 6d6+22
 0 200000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 18
 Dex: 15
@@ -201,4 +205,5 @@ Wis: 15
 Con: 15
 Cha: 15
 E
+T 3009
 $

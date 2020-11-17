@@ -6,12 +6,13 @@ Um morcego está aqui, pronto pra sugar seu sangue.
 Este terrível animal possui dentes afiados e tem um aspecto horripilante.
 Sedento por sangue, ele olha faminto para você.
 ~
-2717792 0 0 0 592064 0 0 0 -500 E
+2717792 0 0 0 0 0 0 0 -500 E
 20 0 -5 20d20+200 3d6+5
 0 40000
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
+T 3008
 #9702
 dragão negro~
 o Dragão Negro~
@@ -21,10 +22,10 @@ Você vê um enorme dragão de pele negra e com uma imensa cauda.  Possuidor de
 uma inacreditável força e com a habilidade de soltar imensas laberadas de
 fogo, ele demonstra ser terrivelmente forte e hábil.
 ~
-2717730 0 0 0 329984 0 0 0 -500 E
+2717730 0 0 0 0 0 0 0 -500 E
 40 0 -8 10d20+900 6d7+8
 2000 150000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Dex: 25
 Wis: 25
@@ -37,10 +38,10 @@ O escaravelho está aqui, faminto por carne....
 Você pode ver um gigantesco triturador de carne, com suas mandíbulas afiadas
 ele pode facilmente devorar um boi em minutos.
 ~
-2193504 0 0 0 67584 0 0 0 -500 E
+2193504 0 0 0 0 0 0 0 -500 E
 15 0 -3 3d6+150 2d6+1
 0 18500
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
 #9704
@@ -51,14 +52,15 @@ A Serpente está aqui.
 Essa gigantesca serpente possui o corpo coberta por escamas e em sua face
 há enormes ferrões, capazes de perfurar até a mais forte das armaduras.
 ~
-2129794 0 0 0 1114498 0 0 0 -700 E
+2129794 0 0 0 0 0 0 0 -700 E
 30 0 -20 6d15+1740 4d6+26
 0 100000
-8 8 2
+9 9 2
 BareHandAttack: 1
 Dex: 25
 Wis: 25
 E
+T 3008
 #9705
 aranha caranguejeira~
 a aranha caranguejeira~
@@ -67,12 +69,13 @@ Uma aranha caranguejeira está aqui.
 Possuidora de enormes tentáculos, corpo totalmente negro e coberto com
 enormes pelos.  Seu veneno pode ser mortal.
 ~
-2193636 0 0 0 67584 0 0 0 -500 E
+2193636 0 0 0 0 0 0 0 -500 E
 15 0 -4 3d6+150 3d5+3
 0 17500
 4 4 2
 BareHandAttack: 1
 E
+T 3008
 #9706
 deus monstro pedra~
 o Deus do Reino das Pedras~
@@ -81,7 +84,7 @@ O Deus do Reino das Pedras está dormindo aqui.
 Feito todo em pedra esse terrivel monstro é praticamente imortal.  Sua pele
 feita em rocha é impenetrável.
 ~
-2353170 0 0 0 67920 0 0 0 -700 E
+2353170 0 0 0 0 0 0 0 -700 E
 100 -20 -50 10d20+4400 12d6+45
 40000 2000000
 4 4 1

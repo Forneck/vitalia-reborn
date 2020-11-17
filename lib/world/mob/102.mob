@@ -5,11 +5,12 @@ O Senhor lhe acena com a cabeça e sorri.
 ~
 Sua bondade e soberania podem ser vistas em seus olhos. Seus cabelos negros assim como seu cavanhaque lhe dão um ar sóbrio, porêm o sorriso inocente que brilha em seus lábios demonstra a alegria de desposar a mais bela jovem de suas terras.
 ~
-2107394 0 0 0 272 0 0 0 1000 E
+2107394 0 0 0 0 0 0 0 1000 E
 52 0 -14 3d60+1480 4d8+26
 35000 120000
-8 8 1
+9 9 1
 E
+T 3009
 #10201
 senhora jovem Jareth~
 a Senhora das Terras de Jareth~
@@ -20,10 +21,10 @@ noite sem estrelas, seu sorriso ilumina ainda mais sua bela face jovem.  Ela
 parece ter gostado de você, pois vem em sua direção com a intenção de
 cumprimentá-lo.
 ~
-2105346 0 0 0 272 0 0 0 600 E
+2105346 0 0 0 0 0 0 0 600 E
 25 4 -10 9d7+890 3d4+17
 1000 73646
-8 8 2
+9 9 2
 E
 #10202
 dama companhia~
@@ -38,7 +39,7 @@ para nunca ultrapassar seus limites.
 2105346 0 0 0 0 0 0 0 380 E
 24 6 -8 7d7+780 3d4+15
 750 51308
-8 8 2
+9 9 2
 E
 #10203
 criado particular~
@@ -50,7 +51,7 @@ Ele o cumprimenta claramente, seus olhos demonstram total adoração ao que faz 
 2105346 0 0 0 0 0 0 0 400 E
 28 5 -9 7d8+900 4d4+16
 750 61308
-8 8 1
+9 9 1
 E
 #10204
 irmão bêbado~
@@ -64,7 +65,7 @@ somado ao fato dele poder ter toda a bebida grátis.
 2097158 0 0 0 0 0 0 0 100 E
 32 5 -8 7d7+1000 4d3+17
 650 57068
-8 8 1
+9 9 1
 E
 #10205
 irmão cavaleiro~
@@ -76,7 +77,7 @@ Ele não está, obviamente, acostumado com as formalidades da vida na corte e ga
 2099202 0 0 0 0 0 0 0 700 E
 33 3 -11 5d8+1255 5d3+19
 850 76133
-8 8 1
+9 9 1
 E
 #10206
 soldado membro menor~
@@ -90,7 +91,7 @@ barulho e festa.
 2099202 0 0 0 0 0 0 0 500 E
 22 6 -6 3d4+760 4d3+19
 650 37068
-8 8 1
+9 9 1
 E
 #10207
 impaciente soldado~
@@ -102,7 +103,7 @@ Alguns homens parecem confortáveis parados mas este aqui está pronto para aç�
 2099202 0 0 0 0 0 0 0 800 E
 27 6 -5 7d7+876 4d4+19
 750 41308
-8 8 1
+9 9 1
 E
 #10208
 soldado entediado~
@@ -115,7 +116,7 @@ Ele fita o vazio a sua frente, pegando feno a sua volta e jogando ao ar.
 2099202 0 0 0 0 0 0 0 300 E
 23 7 -8 6d6+840 3d4+17
 700 35117
-8 8 1
+9 9 1
 E
 #10209
 ama~
@@ -128,7 +129,7 @@ alguma poeira em algum lugar.
 2097286 0 0 0 0 0 0 0 600 E
 22 9 -2 6d6+560 3d3+14
 650 17068
-8 8 2
+9 9 2
 E
 #10210
 dama espera~
@@ -140,7 +141,7 @@ Afinal, o que pode fazer uma dama que espera, senão esperar?
 2097282 0 0 0 0 0 0 0 500 E
 21 11 0 6d6+500 3d3+12
 600 15159
-8 8 2
+9 9 2
 E
 #10211
 sábio~
@@ -153,7 +154,7 @@ preocupado com o sentido da mesma.
 2105346 0 0 0 0 0 0 0 700 E
 25 5 -8 6d6+1000 4d4+17
 700 19117
-8 8 1
+9 9 1
 E
 #10212
 dama~
@@ -167,7 +168,7 @@ parte do jantar no chão do castelo, neste exato momento.
 2097282 0 0 0 0 0 0 0 300 E
 22 10 -2 6d6+450 2d3+11
 650 17068
-8 8 2
+9 9 2
 E
 #10213
 artista homem~
@@ -180,7 +181,7 @@ vez que dá uma nota mais alta.
 2097282 0 0 0 0 0 0 0 500 E
 23 8 -2 6d6+450 3d3+14
 600 17159
-8 8 1
+9 9 1
 E
 #10214
 cozinheiro~
@@ -193,7 +194,7 @@ fazendo pelo Senhor e pela Senhora.
 2097158 0 0 0 0 0 0 0 500 E
 22 9 2 6d6+560 2d3+11
 650 23068
-8 8 1
+9 9 1
 E
 #10215
 garoto estábulo~
@@ -205,7 +206,7 @@ Ele não diz nada, apenas o olha com curiosidade, procurando por sua montaria.
 2097286 0 0 0 0 0 0 0 900 E
 16 8 0 6d6+390 2d3+12
 600 15159
-8 8 1
+9 9 1
 E
 #10216
 vendendor cerveja~
@@ -218,7 +219,7 @@ dorme como uma pedra.
 2097286 0 0 0 0 0 0 0 500 E
 22 9 0 6d6+450 2d3+15
 650 17068
-8 8 1
+9 9 1
 E
 #10217
 fortuna necromante~
@@ -231,8 +232,9 @@ serviços desta bela jovem que apesar da idade, aparenta grandes poderes.
 2097286 0 0 0 0 0 0 0 0 E
 24 7 -4 6d6+780 3d4+18
 750 54308
-8 8 2
+9 9 2
 E
+T 3009
 #10218
 dominum curandeiro~
 Dominum, o curandeiro~
@@ -244,6 +246,7 @@ Ele sorri para vocé quando você entra, o convidando a entrar e se sentar.
 2097154 0 0 0 0 0 0 0 900 E
 27 3 -5 6d6+1000 3d4+19
 750 68308
-8 8 1
+9 9 1
 E
+T 3009
 $

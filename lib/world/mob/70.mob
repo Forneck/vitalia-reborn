@@ -8,10 +8,10 @@ extaordinária figura feita de lama e ele parece ter comido uma alma humana
 no café da manhã e está com a intenção de comer o mesmo no jantar.
 - Que tal você?
 ~
-2293824 0 0 0 526336 0 0 0 -250 E
+2293824 0 0 0 0 0 0 0 -250 E
 12 9 2 4d6+140 2d5+3
 100 13000
-8 8 0
+9 9 0
 E
 #7001
 morcego pequeno ameacador~
@@ -23,10 +23,10 @@ Você nunca tinha visto, durante toda sua vida um morcego tão pequeno.   Você
 prefere que ele continue assim, pacífico, pendurado lá, dormindo.  Seus
 ossos gelam só de você pensar em acordar essa cruel criatura.
 ~
-2228320 0 0 0 526336 0 0 0 -500 E
+2228320 0 0 0 0 0 0 0 -500 E
 1 20 5 5d2+6 1d5+0
 0 150
-4 8 0
+4 9 0
 E
 #7002
 rato esgoto~
@@ -35,10 +35,10 @@ Um enorme rato de esgoto, raivoso, está aqui.
 ~
 An undefined string.
 ~
-2097184 0 0 0 2048 0 0 0 -1000 E
+2097184 0 0 0 0 0 0 0 -1000 E
 5 16 5 1d12+48 2d4+0
 30 1000
-8 8 1
+9 9 1
 E
 #7003
 aranha pequena peluda~
@@ -47,10 +47,10 @@ A pequena Aranha peluda, está aqui, ocupada com sua teia.
 ~
 An undefined string.
 ~
-2097184 0 0 0 526336 0 0 0 -700 E
+2097184 0 0 0 0 0 0 0 -700 E
 1 20 3 1d12+8 1d4+0
 1 100
-8 8 1
+9 9 1
 E
 #7004
 besouro gigante terra~
@@ -59,10 +59,10 @@ O gigante, besouro da terra está aqui.
 ~
 An undefined string.
 ~
-2097152 0 0 0 2048 0 0 0 -300 E
+2097152 0 0 0 0 0 0 0 -300 E
 8 13 3 2d10+98 2d4+2
 1000 3750
-4 8 1
+4 9 1
 E
 #7005
 larva gigante~
@@ -71,10 +71,10 @@ A larva gigante está aqui, em sua simples existência.
 ~
 An undefined string.
 ~
-2293760 0 0 0 2048 0 0 0 300 E
+2293760 0 0 0 0 0 0 0 300 E
 3 17 9 2d5+35 1d7+0
 2 350
-8 8 2
+9 9 2
 E
 #7006
 cobra~
@@ -83,11 +83,12 @@ A cobra rasteja perto de você. Ela parece bastante medíocre.
 ~
 An undefined string.
 ~
-2097184 0 0 0 2048 0 0 0 -500 E
+2097184 0 0 0 0 0 0 0 -500 E
 4 16 7 2d5+40 1d9+0
 1 1000
-8 8 2
+9 9 2
 E
+T 3008
 #7007
 andarilho demonio~
 o demônio andarilho~
@@ -96,10 +97,10 @@ O demônio andarilho olha fixamente para você com uma admiração comovente.
 O demônio andarilho é muito magro.  Ele está vestido com um manto cinza.
 Ele não parece querer companhia em sua viagem.
 ~
-2097284 0 0 0 64 0 0 0 -1000 E
+2097284 0 0 0 0 0 0 0 -1000 E
 10 11 2 4d10+100 2d6+1
 300 9500
-8 8 1
+9 9 1
 E
 #7008
 homuncula criatura~
@@ -110,10 +111,10 @@ O homúnculo aparenta ter uma forma humana, uns 5 metros de altura, tem uma
 pele de réptil esverdeada, asas rígidas e uma boca de morcego, com dentes
 que parecem ser venenosos.
 ~
-2154496 0 0 0 80 0 0 0 -780 E
+2154496 0 0 0 0 0 0 0 -780 E
 11 10 1 6d3+130 2d6+2
 500 11500
-8 8 2
+9 9 2
 E
 #7009
 morkot sombrio~
@@ -123,11 +124,12 @@ O morkot está aqui, esperando por alguém para MATAR!
 Ele é um monstro de cinco pés de altura, meio homem meio rato.  Ele respira
 fortemente enquanto aproxima-se de você.
 ~
-2097312 0 0 0 64 0 0 0 -900 E
+2097312 0 0 0 0 0 0 0 -900 E
 10 12 3 1d20+120 2d6+0
 1 9000
-8 8 0
+9 9 0
 E
+T 3009
 #7010
 chr-eff'n chreffn~
 o demônio chr-eff'n~
@@ -136,10 +138,10 @@ O chr-eff'n está rastejando aqui, procurando algo com seus olhos amarelos.
 A cabeça e o dorso do chr-eff'n é coberto de cobre, e tem olhos amarelos
 brilhantes.  A parte de baixo tem uma cor alaranjada.
 ~
-2097284 0 0 0 526352 0 0 0 -830 E
+2097284 0 0 0 0 0 0 0 -830 E
 12 9 2 2d26+148 2d7+1
 1500 13000
-8 8 0
+9 9 0
 E
 #7040
 dragao vermelho~
@@ -150,10 +152,10 @@ O dragão vermelho encara você, raivosamente, como se estivesse aguardando a
 sua chegada.  Ele diz 'Oh humano, VOCÊ me acordou...Hssss', enquanto move-
 se para perto de você, 'Eu NUNCA posso dormir em paz...Hssss...'
 ~
-2187314 0 0 0 67856 0 0 0 -1000 E
+2187314 0 0 0 0 0 0 0 -1000 E
 19 2 0 5d4+230 3d6+3
 16842 40000
-8 8 0
+9 9 0
 E
 #7041
 bruxa mar~
@@ -165,10 +167,10 @@ olhos amarelos e dentes afiados.  Suas orelhas são muito grandes, e ela tem
 pequenos chifres afiados.  Esse tipo de monstro é um dos grandes inimigos
 da beleza.
 ~
-2097184 0 0 0 2048 0 0 0 -800 E
+2097184 0 0 0 0 0 0 0 -800 E
 14 7 1 1d8+172 2d8+1
 0 18000
-8 8 2
+9 9 2
 E
 #7042
 naga guardiao~
@@ -180,10 +182,10 @@ verde-ouro e com triângulos prateados em suas costas.  Seus olhos são
 dourados.  Ela nota que você está olhando fixamente para ela, então ela diz
 'Saia daqui.  Este caminho leva a criaturas malignas.'
 ~
-2097154 0 0 0 2048 0 0 0 700 E
+2097154 0 0 0 0 0 0 0 700 E
 12 9 2 1d18+148 2d7+1
 100 13500
-8 8 2
+9 9 2
 E
 #7043
 basilisco escamoso~
@@ -194,10 +196,10 @@ O basilisco é um monstro reptiliano.  Ele tem oito patas, e fortes
 mandíbulas.  Ele é amarronzado com umas pintas amarelas.  Seus olhos são
 verde pálido.
 ~
-2097156 0 0 0 2128 0 0 0 -250 E
+2097156 0 0 0 0 0 0 0 -250 E
 13 11 0 1d12+160 2d7+2
 350 16000
-8 8 0
+9 9 0
 E
 #7044
 bolha lemure~
@@ -208,10 +210,10 @@ Ela parece, vagamente, uma bolha humana.  Grandes olhos negros, e uma boca
 com um pedaço que escapa do rosto.  A lêmure não parece interessada em você
 mas ela ataca de qualquer jeito.  Parece que a mente dela foi queimada.
 ~
-2170912 0 0 0 2048 0 0 0 -500 E
+2170912 0 0 0 0 0 0 0 -500 E
 5 16 6 3d5+57 2d4+0
 0 1000
-8 8 2
+9 9 2
 E
 #7045
 jones esmagador ettin~
@@ -222,7 +224,7 @@ Numa primeira olhada você pensa que Jones é um Orc, mas quando ele chega
 mais perto você vê sua segunda cabeça.  Ele veste uma pele de animal como
 roupa, imunda e comida pelas traças.  Jones realmente fede...
 ~
-2097156 0 0 0 2048 0 0 0 -480 E
+2097156 0 0 0 0 0 0 0 -480 E
 10 11 2 1d5+130 2d6+2
 60 11000
 5 5 1
@@ -236,7 +238,7 @@ Quando você olha para Herald, você sente pena.  Suas roupas são realmente
 pobres, e uma de suas cabeças está pendurada.  Na corda que circunda sua
 cintura estão vários ratos e camundongos mortos.  Ele não cheira bem.
 ~
-2097156 0 0 0 2048 0 0 0 200 E
+2097156 0 0 0 0 0 0 0 200 E
 6 14 4 3d5+70 1d8+0
 40 1500
 5 5 1

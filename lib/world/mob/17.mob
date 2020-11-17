@@ -9,7 +9,7 @@ com um tom amarelado,  garras sujas e afiadas.
 2097154 0 0 0 0 0 0 0 0 E
 13 8 1 4d6+565 2d7+11
 0 16000
-8 8 1
+9 9 1
 E
 #1701
 vibora víbora~
@@ -21,9 +21,10 @@ Esta pequena cobra parece muito perigosa,  melhor desviar de seu caminho.
 2097248 0 0 0 0 0 0 0 0 E
 12 9 2 2d6+350 3d6+10
 0 14000
-8 8 2
+9 9 2
 BareHandAttack: 4
 E
+T 3008
 #1702
 morticia guilda lider~
 Mortícia~
@@ -36,10 +37,10 @@ Como essa coisa meiga tornou-se a líder dessa seita?  Um poeta escreveu:
             por suas mãos manchadas de sangue.'
 
 ~
-2097158 0 0 0 272 0 0 0 -1000 E
+2097158 0 0 0 0 0 0 0 -1000 E
 23 0 -5 4d6+825 3d8+17
 14786 60000
-8 8 2
+9 9 2
 E
 #1703
 lazarus medico assassino~
@@ -50,10 +51,10 @@ Este mestre herbalista é muito valioso para a guilda, como um preparador
 tanto de venenos, quanto de bálsamos sedativos.  Sempre que a morte lhe
 da a libertação... os necromantes o reanimam.  
 ~
-2097154 0 0 0 256 0 0 0 -900 E
+2097154 0 0 0 0 0 0 0 -900 E
 19 2 0 3d8+622 2d10+16
 13238 35900
-8 8 1
+9 9 1
 E
 #1704
 besouro morto vivo~
@@ -67,7 +68,7 @@ econômica...e também divertida!
 2097154 0 0 0 0 0 0 0 -300 E
 11 10 2 1d6+150 2d6+11
 0 11000
-8 8 1
+9 9 1
 E
 #1705
 cavaleiro fantasma~
@@ -81,7 +82,7 @@ um guarda espiritual.
 2097186 0 0 0 0 0 0 0 -800 E
 15 6 1 1d8+185 2d8+12
 1555 35000
-8 8 1
+9 9 1
 E
 #1706
 guardiao guardião cripta~
@@ -93,10 +94,10 @@ de seu antigo corpo ainda presas a si. A cavidade que acomodava os olhos
 agora possui apenas dois pequenos pontos luminosos que acompanham
 todos os seus movimentos. Cuidado com ele.
 ~
-2097186 0 0 0 16 0 0 0 -1000 E
+2097186 0 0 0 0 0 0 0 -1000 E
 25 0 -7 5d6+910 3d6+24
 20225 70000
-8 8 1
+9 9 1
 E
 #1707
 eremita~
@@ -128,7 +129,7 @@ Você não pode conseguir mais nada com ele.
 2097154 0 0 0 0 0 0 0 500 E
 10 11 4 2d8+325 2d6+11
 23 9000
-8 8 1
+9 9 1
 E
 #1708
 bolha lama~
@@ -141,7 +142,7 @@ tudo aquilo que toca.
 2097186 0 0 0 0 0 0 0 0 E
 6 15 4 1d10+105 1d8+3
 0 1500
-8 8 2
+9 9 2
 E
 #1709
 habitante chama~
@@ -168,7 +169,7 @@ dá uma luz verde.  Ela bate suas mandíbulas cristalizadas para irritá-lo.
 2097280 0 0 0 0 0 0 0 -400 E
 8 13 3 2d6+296 2d5+11
 0 13750
-8 8 2
+9 9 2
 E
 #1711
 aranha amarela~
@@ -181,7 +182,7 @@ feita de uma substância cristalina viva que brilha amarelo.
 2097312 0 0 0 0 0 0 0 -350 E
 7 14 4 1d8+285 2d4+11
 351 12250
-8 8 2
+9 9 2
 E
 #1712
 guarda petrificado~
@@ -193,7 +194,7 @@ Ele exibe o olhar de desprezo de um frio controle sob sua face pedregosa.
 2097154 0 0 0 0 0 0 0 -700 E
 12 10 2 2d4+355 2d7+13
 1009 13000
-8 8 1
+9 9 1
 E
 #1713
 batelao batelão avermelhado~
@@ -206,7 +207,7 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 2097184 0 0 0 0 0 0 0 -750 E
 18 3 0 3d6+625 3d6+21
 0 30000
-8 8 1
+9 9 1
 E
 #1714
 gelatina ocre~
@@ -220,7 +221,7 @@ passado infeliz, você presume.
 2097184 0 0 0 0 0 0 0 -700 E
 16 5 1 2d6+496 2d8+12
 1576 25000
-8 8 2
+9 9 2
 E
 #1715
 necromante~
@@ -233,6 +234,6 @@ unhas que são manchadas com pomadas malignas e líquidos embalsamadores.
 2097314 0 0 0 0 0 0 0 -900 E
 17 2 -3 1d6+666 2d8+17
 666 28000
-8 8 1
+9 9 1
 E
 $

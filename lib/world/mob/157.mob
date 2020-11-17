@@ -9,7 +9,7 @@ se irritar facilmente.
 2126016 0 0 0 0 0 0 0 350 E
 40 10 -2 3d10+700 4d5+10
 2000 6000
-8 8 1
+9 9 1
 E
 #15702
 guarda~
@@ -23,7 +23,7 @@ mas ele parece não se importar.
 2193410 0 0 0 0 0 0 0 40 E
 60 5 -24 6d6+800 3d6+25
 2500 90000
-8 8 1
+9 9 1
 BareHandAttack: 9
 E
 #15703
@@ -37,7 +37,7 @@ muito o que fazer.
 2121730 0 0 0 0 0 0 0 350 E
 50 10 -9 3d10+700 4d5+10
 6000 50000
-8 6 2
+9 6 2
 E
 #15704
 chefe cozinheiro~
@@ -49,7 +49,7 @@ Um chefe de cozinha está aqui, cuidando do jantar.
 2211842 0 0 0 0 0 0 0 400 E
 70 3 -28 5d7+1500 3d8+20
 10000 100000
-8 8 1
+9 9 1
 BareHandAttack: 7
 E
 #15705
@@ -64,7 +64,7 @@ simples sopro, de tão frágil que é.
 2156594 0 0 0 0 0 0 0 -700 E
 70 -4 -30 4d8+2800 5d5+20
 23000 200000
-8 8 1
+9 9 1
 E
 #15706
 rato asqueroso~
@@ -76,7 +76,7 @@ Um enorme rato está aqui.
 2097154 0 0 0 0 0 0 0 10 E
 50 10 -9 3d10+600 4d5+10
 100 26000
-8 8 1
+9 9 1
 E
 #15707
 vigia guarda~
@@ -90,7 +90,7 @@ transmite.
 2121730 0 0 0 0 0 0 0 50 E
 55 0 -18 4d6+1900 5d6+25
 13000 100000
-8 8 1
+9 9 1
 E
 #15708
 neegre dragao~
@@ -103,7 +103,7 @@ ser diferente.
 2222134 0 0 0 0 0 0 0 -500 E
 80 -20 -39 20d10+9500 6d8+45
 10000 700000
-8 6 1
+9 6 1
 BareHandAttack: 8
 E
 #15709
@@ -118,7 +118,7 @@ pensamento de enfrentá-la não seja realmente uma boa idéia.
 2877490 0 0 0 0 0 0 0 -900 E
 101 -32 -50 20d10+12000 9d9+65
 50000 3500000
-8 8 2
+9 9 2
 BareHandAttack: 12
 Dex: 25
 Int: 25
@@ -126,6 +126,7 @@ Wis: 25
 Con: 25
 Cha: 25
 E
+T 3009
 #15710
 criada camareira~
 a criada~
@@ -137,7 +138,7 @@ fazer seus afazeres da melhor maneira possível.
 2126020 0 0 0 0 0 0 0 350 E
 50 10 -16 3d10+800 4d5+10
 200 40000
-8 8 2
+9 9 2
 E
 #15711
 rainha senhora altiva~
@@ -150,13 +151,14 @@ encontrada em nenhum outro lugar do mundo.
 2358290 0 0 0 0 0 0 0 200 E
 95 -8 -29 7d10+4800 8d8+40
 60000 430000
-8 6 2
+9 6 2
 Dex: 25
 Int: 25
 Wis: 25
 Con: 25
 Cha: 25
 E
+T 3009
 #15712
 rei senhor altivo~
 o portentoso e altivo rei~
@@ -168,13 +170,14 @@ ele uma pessoa muito fina e inteligente. Não aparenta ter mais de 30 anos.
 2358290 0 0 0 0 0 0 0 200 E
 95 -10 -30 7d10+5600 8d8+46
 80000 500000
-8 6 1
+9 6 1
 Dex: 25
 Int: 25
 Wis: 25
 Con: 25
 Cha: 25
 E
+T 3009
 #15713
 governanta mulher~
 a governanta~
@@ -186,7 +189,7 @@ Ela aparenta ter uns 50 anos, mas ainda sonha em ser rainha.
 2121796 0 0 0 0 0 0 0 -360 E
 40 6 -20 3d10+800 6d5+10
 2000 50000
-8 8 2
+9 9 2
 E
 #15714
 morcego~
@@ -201,7 +204,7 @@ criatura não lhe parece uma boa idéia.
 2121924 0 0 0 0 0 0 0 -360 E
 40 10 -10 3d10+550 6d5+10
 2 30000
-8 8 1
+9 9 1
 E
 #15715
 prisioneiro~
@@ -215,7 +218,7 @@ prisão.
 2122246 0 0 0 0 0 0 0 -500 E
 80 0 -29 6d9+2800 6d7+18
 3000 70000
-8 6 1
+9 6 1
 E
 #15716
 teleques esqueleto~
@@ -227,7 +230,7 @@ Um esqueleto está aqui.
 2122246 0 0 0 0 0 0 0 -360 E
 50 10 -9 4d9+1600 5d6+30
 10000 60000
-8 8 1
+9 9 1
 E
 #15717
 ponei cavalo~
@@ -239,7 +242,7 @@ Um pequeno pônei está aqui, imóvel.
 2285570 0 0 0 0 0 0 0 100 E
 25 7 -8 5d7+600 3d9+15
 20 20000
-8 5 1
+9 5 1
 E
 #15718
 vaca~
@@ -251,7 +254,7 @@ Uma vaca está aqui, produzindo seu leite.
 2285570 0 0 0 0 0 0 0 100 E
 25 7 -8 5d7+600 3d9+15
 20 20000
-8 5 2
+9 5 2
 E
 #15719
 porco~
@@ -263,7 +266,7 @@ Um porco está aqui, contribuindo para o mal cheiro.
 2285570 0 0 0 0 0 0 0 100 E
 25 7 -8 5d7+600 3d9+15
 20 20000
-8 5 1
+9 5 1
 E
 #15720
 galinha~
@@ -275,7 +278,7 @@ Uma galinha está aqui botando seus ovos.
 2285570 0 0 0 0 0 0 0 100 E
 25 7 -8 5d7+600 3d9+15
 20 20000
-8 8 2
+9 9 2
 E
 #15721
 criada mulher~
@@ -287,7 +290,7 @@ Uma criada está aqui, colhendo algo.
 2289728 0 0 0 0 0 0 0 200 E
 40 7 -7 6d8+700 4d9+25
 200 31000
-8 8 2
+9 9 2
 E
 #15722
 criado jovem raman~
@@ -299,6 +302,6 @@ Ele é jovem, tem uns 16 anos. E tenta(va) separar os alimentos.
 2289666 0 0 0 0 0 0 0 200 E
 40 13 -7 6d8+310 4d3+15
 5000 21000
-8 8 1
+9 9 1
 E
 $

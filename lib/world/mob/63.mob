@@ -5,10 +5,10 @@ Uma aranha jovem está aqui, crescendo.
 ~
 Ela parece recém-saída do ovo e esperta.  Suas presas ainda estão crescendo.
 ~
-2097220 0 0 0 2064 0 0 0 0 E
+2097220 0 0 0 0 0 0 0 0 E
 3 18 7 1d12+40 1d7+0
 80 350
-8 8 1
+9 9 1
 E
 #6302
 yevaud dragao usurpador~
@@ -17,11 +17,12 @@ Yevaud, o Usurpador de Midgaard está aqui, sorrindo maldosamente para você.
 ~
 Velho, escamoso, mas ainda assim com muita amargura em si.
 ~
-2100774 0 0 0 2064 0 0 0 -1000 E
+2100774 0 0 0 0 0 0 0 -1000 E
 24 0 -3 5d4+450 4d7+7
 20000 120000
-8 8 1
+9 9 1
 E
+T 3009
 #6303
 aranha lobo~
 a aranha-lobo~
@@ -32,7 +33,7 @@ A aranha-lobo é peluda, muito peluda.
 2097186 0 0 0 0 0 0 0 -300 E
 6 12 6 3d8+70 2d5+3
 1250 6000
-8 8 2
+9 9 2
 E
 #6304
 orc~
@@ -58,7 +59,7 @@ Você nota um olhar vidrado nos olhos dela.
 2097186 0 0 0 0 0 0 0 -800 E
 14 7 1 1d12+172 2d8+1
 2000 18000
-8 8 2
+9 9 2
 E
 #6306
 aranha zangao~
@@ -70,7 +71,7 @@ Um zangão comum.
 2097220 0 0 0 0 0 0 0 -200 E
 6 14 4 3d8+70 2d4+1
 200 1600
-8 8 0
+9 9 0
 E
 #6307
 aranha eterea~
@@ -80,10 +81,10 @@ Uma aranha etérea anda por aqui, viajando por mundos diferentes.
 Ela vai e vem num piscar de olhos.  Parece ser realmente difícil acertá-la 
 sem uma arma mágica.
 ~
-2097220 0 0 0 524492 0 0 0 300 E
+2097220 0 0 0 0 0 0 0 300 E
 13 9 -2 1d12+163 2d4+4
 1250 16000
-8 8 2
+9 9 2
 E
 #6308
 escravo humano~
@@ -97,7 +98,7 @@ própria ou se foi seduzido você não poderá ter certeza.
 2099268 0 0 0 0 0 0 0 -50 E
 11 8 4 1d12+130 2d7+1
 1000 13500
-8 8 1
+9 9 1
 E
 #6309
 quasit~
@@ -107,11 +108,12 @@ Um quasit aparece e desaparece, rindo de você.
 Demoníaco em sua natureza, e muito travesso.  Ele estala seus dedos e
 cria um tesouro mágico!
 ~
-2097348 0 0 0 524372 0 0 0 -300 E
+2097348 0 0 0 0 0 0 0 -300 E
 10 1 -10 1d12+47 1d8+0
 1500 11000
-8 8 1
+9 9 1
 E
+T 3009
 #6310
 aranha passaro~
 a aranha-pássaro~
@@ -119,10 +121,10 @@ A aranha-pássaro estala suas poderosas mandíbulas.
 ~
 A aranha-pássaro estala suas poderosas mandíbulas.
 ~
-2097186 0 0 0 2064 0 0 0 -800 E
+2097186 0 0 0 0 0 0 0 -800 E
 14 7 1 1d8+100 2d9+2
 1750 18000
-8 8 2
+9 9 2
 E
 #6311
 eremita~
@@ -131,10 +133,10 @@ O eremita senta aqui e lhe adverte: 'Vá embora antes que seja tarde demais!'
 ~
 Um antigo guerreiro disfarçado é o que ele é na verdade, mas ele não é mau.
 ~
-2099206 0 0 0 2064 0 0 0 750 E
+2099206 0 0 0 0 0 0 0 750 E
 7 13 4 3d10+90 2d5+2
 750 2500
-8 8 1
+9 9 1
 E
 #6312
 guardiao torre~
@@ -144,11 +146,12 @@ O Guardião da Torre olha para você e imagina o quanto sua alma é pura.
 Assim que olha para ele, você sente aqueles olhos penetrantes que 
 mergulham nos seus.   Somente os imaculados podem ficar aqui com segurança.
 ~
-2099494 0 0 0 2064 0 0 0 1000 E
+2099494 0 0 0 0 0 0 0 1000 E
 25 0 -1 1d12+600 2d8+8
 16000 125000
-8 8 1
+9 9 1
 E
+T 3009
 #6313
 guardiao~
 o guardião~
@@ -156,7 +159,7 @@ O guardião obviamente não está fazendo seu trabalho.
 ~
 Ele parece ser um vagabundo, que dorme metade do tempo.
 ~
-2097248 0 0 0 526352 0 0 0 250 E
+2097248 0 0 0 0 0 0 0 250 E
 17 4 1 1d12+200 2d8+8
 1000 24000
 4 4 1
@@ -171,11 +174,12 @@ lhe transformar em um de seus muitos escravos.  Ela não possui as presas
 venenosas das aranhas normais mas, como você pode observar, e ela não
 precisa disso, em absoluto.
 ~
-2189862 0 0 0 67920 0 0 0 -1000 E
+2189862 0 0 0 0 0 0 0 -1000 E
 26 0 -2 6d10+650 1d8+25
 30000 155000
-8 8 2
+9 9 2
 E
+T 3009
 #6315
 ki-rin~
 a Ki-Rin~
@@ -187,11 +191,12 @@ eternidade, o poder maligno de Arachnos se alimenta da energia mágica
 dela.  Todavia, ela nunca se renderá em sua luta contra o mal e continuará 
 seu trabalho de qualquer maneira que este se apresente.
 ~
-2124070 0 0 0 2064 0 0 0 1000 E
+2124070 0 0 0 0 0 0 0 1000 E
 26 0 -4 10d8+2500 4d4+22
 15000 170000
-8 8 2
+9 9 2
 E
+T 3009
 #6316
 dragao wormkin pequeno~
 o pequeno wormkin~
@@ -199,10 +204,10 @@ Um wormkin sem dentes brinca aqui.
 ~
 É um pequeno dragão, e você quase se entristece ao pensar em matá-lo.
 ~
-2097154 0 0 0 2064 0 0 0 50 E
+2097154 0 0 0 0 0 0 0 50 E
 9 12 3 5d4+110 2d5+2
 1000 6500
-8 8 1
+9 9 1
 E
 #6317
 dragao wormkin velho~
@@ -212,9 +217,9 @@ Um wormkin que cresceu um pouco demais olha para você com curiosidade.
 Um dragão de tamanho médio -- parece que ele ainda não matou nada por 
 si só, mas há uma primeira vez para tudo...
 ~
-2097154 0 0 0 2064 0 0 0 -300 E
+2097154 0 0 0 0 0 0 0 -300 E
 16 5 1 5d4+210 2d6+4
 5000 24000
-8 8 1
+9 9 1
 E
 $

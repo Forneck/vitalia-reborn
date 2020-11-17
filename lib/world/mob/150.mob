@@ -10,7 +10,7 @@ como um lutador experiente.
 2097218 0 0 0 0 0 0 0 800 E
 11 9 2 3d6+130 1d8+4
 400 11000
-8 8 1
+9 9 1
 E
 #15001
 rei welmar~
@@ -22,10 +22,10 @@ o Rei Welmar ainda está muito bem fisicamente, e não seria gentil se atacado.
 Apesar disso, você sabe que ele é muito louvado por toda a nação, e
 tem uma reputação tanto como sábio, como soberano.
 ~
-2105346 0 0 0 272 0 0 0 1000 E
+2105346 0 0 0 0 0 0 0 1000 E
 52 0 -10 3d60+1480 4d8+16
 35000 1000000
-6 8 1
+6 9 1
 E
 #15002
 fantasma horrivel~
@@ -34,10 +34,10 @@ Você ouve um gemido assustador e avista um horrível fantasma se aproximando.
 ~
 O fantasma é quase transparente e parece muito ASSUSTADOR!
 ~
-2351158 0 0 0 526352 0 0 0 -700 E
+2351158 0 0 0 0 0 0 0 -700 E
 15 6 -6 9d6+150 2d8+2
 3000 22000
-8 8 0
+9 9 0
 E
 #15003
 jim guarda real~
@@ -51,7 +51,7 @@ como um lutador experiente.
 2097216 0 0 0 0 0 0 0 800 E
 11 9 2 3d6+130 1d8+4
 400 11000
-8 8 1
+9 9 1
 E
 #15004
 brian guarda real~
@@ -65,7 +65,7 @@ como um lutador experiente.
 2097218 0 0 0 0 0 0 0 800 E
 11 9 2 3d6+130 1d8+4
 400 11000
-8 8 1
+9 9 1
 E
 #15005
 mick guarda real~
@@ -79,7 +79,7 @@ como um lutador experiente.
 2097218 0 0 0 0 0 0 0 800 E
 11 9 2 3d6+130 1d8+4
 400 11000
-8 8 1
+9 9 1
 E
 #15006
 matt guarda real~
@@ -93,7 +93,7 @@ como um lutador experiente.
 2097216 0 0 0 0 0 0 0 800 E
 11 9 2 3d6+130 1d8+4
 400 11000
-8 8 1
+9 9 1
 E
 #15007
 jochem guarda real~
@@ -123,7 +123,7 @@ pela próxima!
 2097216 0 0 0 0 0 0 0 900 E
 13 7 2 3d6+150 1d8+5
 400 16000
-8 8 2
+9 9 2
 E
 #15009
 andrew guarda real~
@@ -138,7 +138,7 @@ pela próxima!
 2097216 0 0 0 0 0 0 0 900 E
 13 7 2 3d6+150 1d8+5
 400 16000
-8 8 1
+9 9 1
 E
 #15010
 bertram bert guarda real~
@@ -152,7 +152,7 @@ suas cicatrizes com orgulho. Este cara parece duro...
 2097216 0 0 0 0 0 0 0 900 E
 15 5 1 3d6+175 1d8+7
 400 21000
-8 8 1
+9 9 1
 E
 #15011
 jeanette guarda real~
@@ -166,7 +166,7 @@ suas cicatrizes com orgulho. Esta garota poderia desagradável se quisesse...
 2097216 0 0 0 0 0 0 0 900 E
 15 5 1 3d6+175 1d8+7
 400 21000
-8 8 2
+9 9 2
 E
 #15012
 peter capitao guarda real~
@@ -184,11 +184,11 @@ voltar a si ao ver ele.
 2097216 0 0 0 0 0 0 0 900 E
 19 1 -1 3d6+240 2d6+8
 1000 35000
-8 8 1
+9 9 1
 E
 #15013
 mestre treinador~
-O Mestre Treinador~
+o Mestre Treinador~
 O Mestre Treinador está aqui, supervisionando.
 ~
 Velho, mas experiente, o Mestre Treinador é habilidoso no uso
@@ -197,7 +197,7 @@ de praticamente qualquer tipo de arma inventada pelo homem.
 2097218 0 0 0 0 0 0 0 950 E
 18 1 1 2d6+220 1d8+8
 1000 30000
-8 8 1
+9 9 1
 E
 #15014
 mensageiro real~
@@ -210,7 +210,7 @@ Este é um jovem de constituição poderosa, e sua função principal
 2097152 0 0 0 0 0 0 0 800 E
 18 1 -1 3d6+220 1d8+9
 500 30000
-8 8 1
+9 9 1
 E
 #15015
 ergan assassino~
@@ -223,11 +223,12 @@ vila de Townsbridge. Ele foi preso e aqui está ele - uma sombra do
 indiscutível grande guerreiro que ele uma vez fora, mas ainda considerado
 como se o fosse.
 ~
-2121908 0 0 0 589824 0 0 0 -1000 E
+2121908 0 0 0 0 0 0 0 -1000 E
 13 8 2 3d6+155 2d8+2
 0 18000
 6 6 1
 E
+T 3007
 #15016
 mordomo james~
 James o Mordomo~
@@ -239,7 +240,7 @@ uma respeitável barriga.
 2097216 0 0 0 0 0 0 0 500 E
 8 13 3 1d6+100 1d9+2
 200 3750
-8 8 1
+9 9 1
 E
 #15017
 mulher limpeza~
@@ -251,7 +252,7 @@ Apesar dela ter um trabalho servil, ela parece gostar dele.
 2097216 0 0 0 0 0 0 0 800 E
 1 20 9 4d6+1 1d5+0
 10 100
-8 8 2
+9 9 2
 E
 #15018
 barata~
@@ -263,7 +264,7 @@ Muito larga mesmo, e eles dizem que baratas são difíceis de matar...
 2293776 0 0 0 0 0 0 0 -250 E
 4 20 3 2d6+120 1d3+0
 5 750
-8 8 0
+9 9 0
 E
 #15019
 astrologo~
@@ -288,10 +289,10 @@ Este rapaz parece como seu irmão gêmeo, Tom. Parece não haver
 dúvidas que ele é completamente preparado para dar sua vida
 pelo Rei, se necessário.
 ~
-2097154 0 0 0 16 0 0 0 900 E
+2097154 0 0 0 0 0 0 0 900 E
 17 4 1 3d6+205 1d8+8
 1000 28000
-8 8 1
+9 9 1
 E
 #15021
 tom guarda guarda-costas~
@@ -302,10 +303,10 @@ Este rapaz parece como seu irmão gêmeo, Tim. Parece não haver
 dúvidas que ele é completamente preparado para dar sua vida
 pelo Rei, se necessário.
 ~
-2097154 0 0 0 16 0 0 0 900 E
+2097154 0 0 0 0 0 0 0 900 E
 17 4 1 3d6+205 1d8+8
 1000 28000
-8 8 1
+9 9 1
 E
 #15022
 chefe cozinheiro~
@@ -318,7 +319,7 @@ Ele é, em outras palavras, um tanto gordo.
 2156690 0 0 0 0 0 0 0 500 E
 108 4 -1 2d6+1283 4d4+14
 1000 40000
-8 8 1
+9 9 1
 E
 #15023
 cozinheiro~
@@ -330,7 +331,7 @@ Um jovem cozinheiro, ansioso em fazer o que o Cozinheiro-chefe ordena.
 2097282 0 0 0 0 0 0 0 300 E
 4 17 6 2d7+46 1d8+0
 50 600
-8 8 1
+9 9 1
 E
 #15024
 david homem guarda~
@@ -340,10 +341,10 @@ David, um grande e mal-cuidado homem, encontra-se aqui, vigiando a porta.
 Ele é realmente grande e você tem a sensação de que ele não seria
 gentil com quem tentasse de passar por ele.
 ~
-2097154 0 0 0 16 0 0 0 250 E
+2097154 0 0 0 0 0 0 0 250 E
 19 2 0 2d6+235 1d7+10
 2000 35000
-8 8 1
+9 9 1
 E
 #15025
 dick homem guarda~
@@ -353,10 +354,10 @@ Dick, um grande e mal-cuidado homem, encontra-se aqui, vigiando a porta.
 Ele é realmente grande e você tem a sensação de que ele não seria
 gentil com quem tentasse de passar por ele.
 ~
-2097154 0 0 0 16 0 0 0 250 E
+2097154 0 0 0 0 0 0 0 250 E
 19 2 0 2d6+235 1d7+10
 2000 35000
-8 8 1
+9 9 1
 E
 #15026
 jerry guarda real~
@@ -399,7 +400,7 @@ pela próxima!
 2097216 0 0 0 0 0 0 0 900 E
 13 7 2 3d6+150 1d8+5
 400 16000
-8 8 1
+9 9 1
 E
 #15029
 boris guarda real~
@@ -413,7 +414,7 @@ suas cicatrizes com orgulho. Este cara parece duro...
 2097216 0 0 0 0 0 0 0 900 E
 15 5 1 3d6+175 1d8+7
 400 21000
-8 8 1
+9 9 1
 E
 #15030
 zumbi aldeao~
@@ -425,10 +426,10 @@ silenciosamente.
 de Townsbridge, que foi trazido para a vida novamente tomado por um
 desejo de vingança.
 ~
-2269234 0 0 0 526416 0 0 0 0 E
+2269234 0 0 0 0 0 0 0 0 E
 11 6 3 4d4+95 2d4+8
 0 10000
-8 8 0
+9 9 0
 E
 #15031
 esqueleto aldeao~
@@ -440,10 +441,10 @@ corpoes.
 de Townsbridge, que foi trazido para a vida novamente tomado por um
 desejo de vingança.
 ~
-2269234 0 0 0 2128 0 0 0 0 E
+2269234 0 0 0 0 0 0 0 0 E
 10 8 3 4d4+80 2d3+6
 0 8000
-8 8 0
+9 9 0
 E
 #15032
 poço demonio~
@@ -454,9 +455,10 @@ Um enorme demônio cercado por chamas levanta-se para fora do lago negro.
 Abismo. Ele olha enfurecido para você com olhos vermelhos de sangue, deixa
 à mostra suas enormes presas brancas e sua garras cortantes tipo navalha.
 ~
-2353202 0 0 0 2384 0 0 0 -1000 E
+2353202 0 0 0 0 0 0 0 -1000 E
 33 0 -10 3d60+1480 4d8+16
 35000 1000000
-6 8 1
+6 9 1
 E
+T 3009
 $

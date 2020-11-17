@@ -10,8 +10,9 @@ conhecimentos.
 2105410 0 0 0 0 0 0 0 -1000 E
 49 -8 -13 6d6+2900 8d8+29
 1750 82936
-8 8 1
+9 9 1
 E
+T 3009
 #4401
 estranho arbusto~
 um estranho arbusto~
@@ -24,7 +25,7 @@ praticamente se parecem com dois olhos...
 2105412 0 0 0 0 0 0 0 0 E
 40 0 -6 4d4+2525 6d6+20
 875 42840
-8 8 1
+9 9 1
 E
 #4402
 espinhos árvore~
@@ -36,11 +37,11 @@ An undefined string.
 2105412 0 0 0 0 0 0 0 0 E
 41 -1 -6 4d4+2550 6d6+21
 900 45552
-8 8 1
+9 9 1
 E
 #4403
 guarda elfo sentinela~
-O Sentinela do portão~
+o Sentinela do portão~
 O Sentinela do portão está aqui, parecendo bêbado.
 ~
 Assim que você o olha, percebe que ele é grande demais para um elfo e 
@@ -49,7 +50,7 @@ suas orelhas bastante pontudas.
 2105350 0 0 0 0 0 0 0 0 E
 42 -7 -7 6d6+2575 7d7+24
 950 58551
-4 8 1
+4 9 1
 E
 #4404
 elfa jovem~
@@ -64,7 +65,7 @@ como uma cabana."
 2105350 0 0 0 0 0 0 0 0 E
 43 -3 -7 6d6+2600 7d7+23
 1000 57260
-8 8 2
+9 9 2
 E
 #4405
 elfo pescador~
@@ -78,7 +79,7 @@ orelhas são bastante pontudas.
 2105346 0 0 0 0 0 0 0 0 E
 43 -3 -7 6d6+2600 7d7+26
 1000 59260
-8 8 1
+9 9 1
 E
 #4406
 peixe garoupa~
@@ -90,7 +91,7 @@ Uma grande garoupa nada aqui.
 2105346 0 0 0 0 0 0 0 0 E
 43 -3 -7 6d6+2100 6d6+18
 1000 51260
-8 8 1
+9 9 1
 E
 #4407
 elfa ancia~
@@ -107,8 +108,9 @@ está guardado no Templo da Água e que é isto que nos torna mais fortes."
 2121734 0 0 0 0 0 0 0 0 E
 50 -10 -13 6d6+5000 8d8+29
 2500 75962
-8 8 2
+9 9 2
 E
+T 3009
 #4408
 dourado peixe~
 um grande peixe dourado~
@@ -119,7 +121,7 @@ An undefined string.
 2105346 0 0 0 0 0 0 0 0 E
 42 -2 -6 6d6+2575 22d1+21
 950 48551
-8 8 1
+9 9 1
 E
 #4409
 elfo~
@@ -131,7 +133,7 @@ Ele é bastante alto e nada com fortes braçadas.
 2105346 0 0 0 0 0 0 0 0 E
 43 -3 -7 6d6+2600 7d7+26
 1000 54260
-8 8 1
+9 9 1
 Str: 15
 E
 #4410
@@ -144,7 +146,7 @@ Como todos os elfos daqui, ele é realmente grande para sua espécie.
 2105346 0 0 0 0 0 0 0 0 E
 44 -4 -7 6d6+2625 7d7+24
 1050 57731
-8 8 1
+9 9 1
 Str: 15
 E
 #4411
@@ -159,8 +161,9 @@ consegui encontrar a chave."
 2105346 0 0 0 0 0 0 0 0 E
 44 -4 -7 6d6+2625 7d7+24
 1050 57731
-8 8 2
+9 9 2
 E
+T 3009
 #4412
 elfo~
 um elfo~
@@ -171,12 +174,12 @@ Ele é um tanto alto e suas orelhas parecem afiadas.
 2105346 0 0 0 0 0 0 0 0 E
 44 -6 -7 6d6+2625 7d7+24
 1050 57731
-8 8 1
+9 9 1
 Str: 15
 E
 #4413
 elfo vendedor~
-Um elfo~
+um elfo~
 Um elfo está em pé atrás do balcão.
 ~
 An undefined string.
@@ -184,7 +187,7 @@ An undefined string.
 2156546 0 0 0 0 0 0 0 0 E
 108 10 0 1d1+30000 1d10+10
 1 2000
-8 8 1
+9 9 1
 Str: 15
 E
 #4414
@@ -197,7 +200,7 @@ An undefined string.
 2105346 0 0 0 0 0 0 0 0 E
 42 -3 -6 6d6+2575 7d7+22
 950 48551
-8 8 1
+9 9 1
 Str: 15
 E
 $

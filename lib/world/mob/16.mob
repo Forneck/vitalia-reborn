@@ -7,10 +7,10 @@ O pequenino jovem rústico possui uma aparência tão inocente brincando com o
 seu bumerangue que a única coisa que você sente vontade de fazer é carrega-lo
 no colo e abraça-lo.
 ~
-2097348 0 0 0 8 0 0 0 600 E
+2097348 0 0 0 0 0 0 0 600 E
 12 15 7 3d6+145 3d4+0
 150 40000
-8 8 1
+9 9 1
 E
 #1601
 mulher gnomo~
@@ -20,24 +20,24 @@ Uma mulher gnomo está parada aqui, tentando parecer maravilhosa.
 A mulher é baixinha, pele áspera, mas ela age como se fosse uma mulher mil
 vezes mais bonita. Ela começa a parecer atraente para você...
 ~
-2097348 0 0 0 8 0 0 0 600 E
+2097348 0 0 0 0 0 0 0 600 E
 26 9 4 7d10+670 3d8+2
 3000 60000
-8 8 2
+9 9 2
 E
 #1602
 homem gnomo~
-Um homem gnomo~
+um homem gnomo~
 Um homem gnomo está andando por aqui, a caminho do seu trabalho.
 ~
 Este é o clássico exemplo de um gnomo. Ele aparenta ser pequeno e frágil e
 ao mesmo tempo, uma criatura extremamente inteligente que poderia surpreender
 você.
 ~
-2097220 0 0 0 24 0 0 0 500 E
+2097220 0 0 0 0 0 0 0 500 E
 36 2 -3 6d12+1200 5d10+3
 7500 105000
-8 8 1
+9 9 1
 E
 #1603
 gnomo cientista~
@@ -51,8 +51,9 @@ forte.
 2097222 0 0 0 0 0 0 0 500 E
 34 2 -2 2d5+1150 5d9+1
 8000 90000
-8 8 1
+9 9 1
 E
+T 3009
 #1604
 guarda gnomo~
 um guarda gnomo~
@@ -64,7 +65,7 @@ ele compensa esta falha através de suas habilidades com armas.
 2097218 0 0 0 0 0 0 0 400 E
 36 2 -3 6d12+1200 5d10+3
 7500 100000
-8 8 1
+9 9 1
 E
 #1605
 chefe gnomo~
@@ -78,8 +79,9 @@ ele.
 2097218 0 0 0 0 0 0 0 550 E
 40 0 -5 6d12+1650 6d8+3
 8000 120000
-8 8 1
+9 9 1
 E
+T 3009
 #1607
 pequeno troll~
 um pequeno troll~
@@ -91,7 +93,7 @@ seus olhos e seus dentes caninos parecem os de uma besta selvagem.
 2097254 0 0 0 0 0 0 0 -900 E
 10 15 7 2d4+105 2d5+3
 800 20000
-8 8 1
+9 9 1
 E
 #1608
 rato campo~
@@ -103,7 +105,7 @@ O Rato é uma criatura bonitinha.
 2097222 0 0 0 0 0 0 0 100 E
 1 18 9 2d4+10 1d4+0
 1 100
-8 8 1
+9 9 1
 E
 #1609
 rato~
@@ -115,8 +117,9 @@ O rato é uma criaturinha diabólica que merece a morte.
 2097216 0 0 0 0 0 0 0 -200 E
 2 17 9 2d4+24 1d5+1
 5 200
-8 8 1
+9 9 1
 E
+T 3008
 #1610
 rato grande~
 um rato grande~
@@ -127,8 +130,9 @@ Você tem o desejo de matar esta vil criatura.
 2097216 0 0 0 0 0 0 0 -200 E
 4 15 8 3d4+48 1d8+0
 10 550
-8 8 1
+9 9 1
 E
+T 3008
 #1611
 rato gigante~
 um rato gigante~
@@ -139,8 +143,9 @@ Este rato tem o tamanho de um cachorro de tamanho médio.
 2097376 0 0 0 0 0 0 0 -200 E
 6 13 6 1d12+72 1d8+3
 20 800
-8 8 1
+9 9 1
 E
+T 3008
 #1612
 troll~
 o troll~
@@ -152,7 +157,7 @@ Você treme de medo quando ele ergue seu poderoso braço para lhe bater.
 2097186 0 0 0 0 0 0 0 -800 E
 38 0 -5 6d12+1550 6d9+2
 9000 115000
-8 8 1
+9 9 1
 E
 #1613
 morcego negro~
@@ -165,7 +170,7 @@ dentes caninos.
 2097216 0 0 0 0 0 0 0 -500 E
 5 10 7 3d4+70 1d8+1
 1 600
-8 8 0
+9 9 0
 E
 #1614
 gnomo zumbi~
@@ -178,7 +183,7 @@ sepultura por alguma força demoníalca.
 2097216 0 0 0 0 0 0 0 -700 E
 8 9 5 3d4+90 3d4+0
 690 2000
-8 8 0
+9 9 0
 E
 #1615
 morcego fogo~
@@ -188,10 +193,10 @@ O morcego de fogo arde luminosamente e se prepara para atacar.
 Você vê uma chama imensa que se assemelha ao formato de um morcego.
 A criatura está pendurada no teto e morde você.
 ~
-2097252 0 0 0 16 0 0 0 -900 E
+2097252 0 0 0 0 0 0 0 -900 E
 12 5 0 3d4+250 3d5+2
 2000 10000
-8 8 1
+9 9 1
 E
 #1616
 guarda hobgoblin~
@@ -204,7 +209,7 @@ feia. Ele sorri sinistramente, enquanto tenta estourar a sua cabeça.
 2097250 0 0 0 0 0 0 0 -700 E
 35 2 -5 5d12+1050 5d8+2
 5000 60000
-8 8 1
+9 9 1
 E
 #1617
 soldado hobgoblin~
@@ -217,7 +222,7 @@ guarda de elite. Ele parece bravo.
 2097250 0 0 0 0 0 0 0 -600 E
 29 3 -4 5d10+822 4d8+0
 1000 35000
-8 8 1
+9 9 1
 E
 #1618
 guarda-costas hobgoblin~
@@ -231,7 +236,7 @@ pontudos enquanto se prepara para atacar.
 2097218 0 0 0 0 0 0 0 -500 E
 35 2 -5 5d12+1050 5d8+2
 5000 60000
-8 8 1
+9 9 1
 E
 #1619
 rei hobgoblin~
@@ -245,8 +250,9 @@ estava tentando criar.
 2097154 0 0 0 0 0 0 0 -500 E
 45 0 -7 6d12+1700 6d9+4
 30000 150000
-8 8 1
+9 9 1
 E
+T 3009
 #1620
 mineiro hobgoblin~
 um hobgoblin mineiro~
@@ -257,7 +263,7 @@ O mineiro está totalmente coberto por poeira.
 2097222 0 0 0 0 0 0 0 -400 E
 20 9 3 3d10+450 3d7+1
 700 40000
-8 8 1
+9 9 1
 E
 #1621
 tesoureiro hobgoblin~
@@ -270,7 +276,7 @@ consegue enxergar um palmo em frente de seu nariz.
 2097222 0 0 0 0 0 0 0 -200 E
 18 9 3 3d5+400 2d6+1
 5000 12000
-8 8 1
+9 9 1
 E
 #1622
 prisioneiro gnomo~
@@ -282,7 +288,7 @@ O prisioneiro está quase morto.
 2097222 0 0 0 0 0 0 0 100 E
 3 12 10 3d5+10 2d3+1
 1 300
-8 8 1
+9 9 1
 E
 #1623
 prisoneiro humano~
@@ -294,7 +300,7 @@ O prisioneiro está quase morto.
 2097222 0 0 0 0 0 0 0 100 E
 3 12 10 3d5+10 2d3+1
 1 300
-8 8 1
+9 9 1
 E
 #1624
 caranguejo eremita~
@@ -307,7 +313,7 @@ você por sua ousadia em acorda-lo.
 2097254 0 0 0 0 0 0 0 -10 E
 5 12 6 1d11+61 1d8+0
 200 600
-8 8 1
+9 9 1
 E
 #1626
 cozinheiro hobgoblin~
@@ -320,6 +326,6 @@ coisa na panela.
 2097222 0 0 0 0 0 0 0 -300 E
 29 3 -4 5d10+822 4d8+0
 1100 3500
-8 8 1
+9 9 1
 E
 $

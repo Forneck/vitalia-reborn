@@ -8,11 +8,12 @@ tentáculos com olhos sobre o corpo arredondado, os quais podem fazer tudo
 desde enfeitiçá-lo até lhe desintegrar. Contempladores não são conhecidos por
 sua personalidade.
 ~
-2189346 0 0 0 67856 0 0 0 -870 E
+2189346 0 0 0 0 0 0 0 -870 E
 25 6 0 1d14+450 6d9+5
 28560 134000
-8 8 0
+9 9 0
 E
+T 3009
 #5201
 lamia besta~
 a lâmia~
@@ -25,8 +26,9 @@ para você, ambiciosamente.
 2097764 0 0 0 0 0 0 0 -1000 E
 12 12 3 1d10+120 2d5+1
 1500 10500
-8 8 2
+9 9 2
 E
+T 3009
 #5202
 mímico bau~
 o mímico~
@@ -38,7 +40,7 @@ na frente.
 2293762 0 0 0 0 0 0 0 10 E
 11 10 1 1d20+130 2d7+0
 0 13000
-8 8 0
+9 9 0
 E
 #5203
 mímico pedra esqueletos~
@@ -52,7 +54,7 @@ isso, ossos... nenhum farrapo ou nada mais parece estar preso a eles.
 2293762 0 0 0 0 0 0 0 -10 E
 14 7 1 3d15+150 3d5+1
 0 20000
-8 8 0
+9 9 0
 E
 #5204
 mimico piso~
@@ -65,7 +67,7 @@ destruição.
 2293762 0 0 0 0 0 0 0 -140 E
 11 11 3 2d6+110 2d6+0
 0 10500
-8 8 0
+9 9 0
 E
 #5205
 mimico potes pedacos~
@@ -78,7 +80,7 @@ provavelmente antes da cidade tombar.
 2293762 0 0 0 0 0 0 0 200 E
 11 14 0 1d8+100 2d5+3
 0 9800
-8 8 0
+9 9 0
 E
 #5206
 mimico tábuas madeira~
@@ -91,7 +93,7 @@ que alguém esteve aqui antes de você...
 2293762 0 0 0 0 0 0 0 0 E
 11 9 0 1d12+110 4d3+1
 0 12000
-8 8 0
+9 9 0
 E
 #5207
 lagarto chifres~
@@ -103,7 +105,7 @@ Um pequeno e lindo lagarto -- bem, isso se você gostar de répteis!
 2097280 0 0 0 0 0 0 0 300 E
 3 17 4 1d14+30 2d4+0
 0 500
-8 8 0
+9 9 0
 E
 #5208
 golem pedra~
@@ -113,10 +115,10 @@ Em um canto você vê um grande golem de pedra, mantendo a guarda.
 É um grande pedaço de rocha que foi mágicamente moldado em uma enorme 
 criatura de pedra. Ele encontra-se aqui ainda guardando a cidade.
 ~
-2353442 0 0 0 2128 0 0 0 800 E
+2353442 0 0 0 0 0 0 0 800 E
 25 0 -5 6d6+500 4d7+3
 4250 145000
-8 8 0
+9 9 0
 E
 #5209
 lamia besta~
@@ -127,9 +129,10 @@ Esta é uma criatura com a parte superior do corpo de uma linda mulher mas
 com a parte inferior de uma fera quadrúpede.  Ela lambe os lábios ao olhar
 para você, ambiciosamente.
 ~
-2097250 0 0 0 64 0 0 0 -500 E
+2097250 0 0 0 0 0 0 0 -500 E
 9 10 3 1d12+120 1d4+5
 1500 7000
-8 8 2
+9 9 2
 E
+T 3009
 $

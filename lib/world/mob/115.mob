@@ -42,6 +42,7 @@ Con: 18
 Cha: 18
 E
 T 11500
+T 3009
 #11502
 espinhal espinhos~
 o espinhal agressivo~
@@ -86,6 +87,8 @@ Cuidado com os espinhos.  Podem ser venenosos!!
 0 45000
 9 9 1
 E
+T 3008
+T 3009
 #11505
 tartaruga kurma~
 Kurma, a tartaruga~
@@ -107,6 +110,7 @@ Wis: 18
 Con: 18
 Cha: 18
 E
+T 3009
 #11506
 demonio rakshasa pequeno~
 o pequeno rakshasa~
@@ -122,6 +126,7 @@ parece pequena demais para ocultar suas presas...  E que presas!!!
 1000 9000
 9 9 1
 E
+T 3008
 #11507
 rakshasa resmungao grande demonio~
 o rakshasa resmungão~
@@ -249,4 +254,5 @@ nada sobre sua pessoa. Você só consegue advinhar que está encrencado.
 0 102009
 9 9 1
 E
+T 3009
 $

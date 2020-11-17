@@ -31,6 +31,7 @@ Wis: 25
 Con: 25
 Cha: 25
 E
+T 3009
 #13801
 dragao negro platina filho metalico~
 o magnífico dragão negro de platina~
@@ -46,7 +47,7 @@ criatura que carrega um fardo tão pesado em seu coração.
 2877458 0 0 0 0 0 0 0 0 E
 105 -45 -75 10d5+22000 10d9+65
 300000 7000000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -70,7 +71,7 @@ seu rosto.
 2877458 0 0 0 0 0 0 0 360 E
 101 -25 -55 10d5+13000 10d8+45
 100000 3300000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -93,7 +94,7 @@ respeitável.
 2877458 0 0 0 0 0 0 0 360 E
 101 -23 -50 10d5+10000 10d8+40
 80000 3000000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -115,7 +116,7 @@ pedra ametista são uma variedade dos maravilhosos dragões de gemas.
 2877458 0 0 0 0 0 0 0 360 E
 101 -21 -45 10d5+5000 11d11+38
 50000 1500000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -140,7 +141,7 @@ dragões de gemas.
 2877458 0 0 0 0 0 0 0 360 E
 101 -22 -46 10d5+5150 11d11+39
 52500 1550000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -164,7 +165,7 @@ dos magníficos dragões de gemas.
 2877458 0 0 0 0 0 0 0 360 E
 101 -23 -47 10d5+5200 11d11+40
 55000 2000000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -189,7 +190,7 @@ da desidratação.
 2877458 0 0 0 0 0 0 0 360 E
 101 -24 -48 10d5+5300 11d11+41
 57500 2150000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -213,7 +214,7 @@ cacos de cristais brilhantes.
 2877458 0 0 0 0 0 0 0 700 E
 101 -26 -50 10d5+5500 11d11+43
 60000 2300000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -239,7 +240,7 @@ que tivessem pegado o ermitão para comer, para a infelicidade deles.
 2881554 0 0 0 0 0 0 0 1000 E
 105 -30 -50 10d5+20000 10d10+50
 150000 5500000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -302,7 +303,7 @@ Você observa um pequenino filhote de dragão com dois pequenos chifres e
 pequeninas garras afiadas, olhando atentamente os passos da mãe e brincando
 com os outros alegres filhotes.
 ~
-2187266 0 0 0 65792 0 0 0 650 E
+2187266 0 0 0 0 0 0 0 650 E
 12 10 0 5d3+220 3d4+11
 0 25000
 4 4 1
@@ -336,6 +337,7 @@ Wis: 25
 Con: 25
 Cha: 25
 E
+T 3009
 #13814
 Aasterinian dragao~
 Aasterinian~
@@ -357,6 +359,7 @@ Wis: 25
 Con: 25
 Cha: 25
 E
+T 3009
 #13815
 faluzure dragao~
 Faluzure~
@@ -382,6 +385,7 @@ Wis: 25
 Con: 25
 Cha: 25
 E
+T 3009
 #13816
 dragao vermelho diamante~
 um magnífico dragão de diamante vermelho~
@@ -400,7 +404,7 @@ mágicos, quer dizer "eutanásia":  Eles retiram seu próprio chifre.
 2877458 0 0 0 0 0 0 0 700 E
 101 -35 -50 10d5+6500 11d11+50
 70000 3100000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -421,7 +425,7 @@ vermelhos.
 2877458 0 0 0 0 0 0 0 -1000 E
 101 -25 -40 10d5+4800 9d8+45
 50000 2000000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -442,7 +446,7 @@ a grandes pedras ônix, de brilho opaco, e um negro misterioso.
 2877458 0 0 0 0 0 0 0 -1000 E
 101 -20 -30 10d5+3500 9d8+35
 20000 1000000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -474,6 +478,7 @@ Wis: 25
 Con: 25
 Cha: 25
 E
+T 3009
 #13820
 horda dracoliches~
 uma assustadora horda de dracoliches~
@@ -488,7 +493,7 @@ pelos mais poderosos dragonslayers.
 2353170 0 0 0 0 0 0 0 -1000 E
 103 -45 -50 10d5+15000 10d15+65
 150000 7000000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 Dex: 25
@@ -508,7 +513,7 @@ intenso e magnífico.
 2162768 0 0 0 0 0 0 0 500 E
 1 20 0 2d2+10 1d2+4
 0 300
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 6
 Int: 10

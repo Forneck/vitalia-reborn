@@ -7,10 +7,10 @@ Você se surpreende quando um sapo gigante ergue-se contra você.
 Sua pele é verde e seus enormes olhos, vermelhos. Anura parece faminto...
 e dá a entender de que você será sua próxima refeição!
 ~
-2353170 0 0 0 67600 0 0 0 -1000 E
+2353170 0 0 0 0 0 0 0 -1000 E
 101 -25 -30 8d20+6300 11d11+45
 40000 1000000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -21,16 +21,16 @@ Cha: 18
 E
 #6901
 templo guarda sapo~
-Um guarda do templo~
+um guarda do templo~
 Um guarda está aqui, protegendo o templo.
 ~
 Ele é um sapo de poderosos músculos e grandes olhos.  Cuidado, pois ele pode
 acabar com você facilmente
 ~
-2103314 0 0 0 16 0 0 0 -1000 E
+2103314 0 0 0 0 0 0 0 -1000 E
 40 0 -4 10d10+750 8d8+18
 4000 50500
-8 8 1
+9 9 1
 E
 #6902
 perereca cinzenta~
@@ -39,14 +39,15 @@ Uma perereca cinzenta está subindo em uma planta.
 ~
 A pequena perereca cinzenta olha para você com curiosidade.
 ~
-2103298 0 0 0 16 0 0 0 -1000 E
+2103298 0 0 0 0 0 0 0 -1000 E
 10 10 1 2d12+123 2d8+5
 500 9000
-8 8 12
+9 9 12
 E
+T 3008
 #6903
 girino~
-Um girino~
+um girino~
 Um girino está nadando aqui.
 ~
 O pequeno girino preto tenta se esconder assim que vê você.
@@ -54,56 +55,56 @@ O pequeno girino preto tenta se esconder assim que vê você.
 2097282 0 0 0 0 0 0 0 0 E
 1 2 9 2d6+10 1d5+2
 34 100
-8 8 1
+9 9 1
 E
 #6904
 grande templo guarda sapo~
-Um guarda do grande templo~
+um guarda do grande templo~
 Um guarda do grande templo está aqui, pronto para atacar.
 ~
 Esse sapo gigante parece imensamente insatisfeito com sua presença aqui.
 ~
-2103298 0 0 0 2064 0 0 0 -1000 E
+2103298 0 0 0 0 0 0 0 -1000 E
 12 9 0 1d5+160 14d1+7
 1000 15000
-8 8 1
+9 9 1
 E
 #6905
 sapo~
-Um sapo~
+um sapo~
 Um sapo está saltando por aqui.
 ~
 Saltitante, esse enrugado sapo de pele esverdeada parece absorto em seus
 próprios pensamentos...
 ~
-2099202 0 0 0 67856 0 0 0 -1000 E
+2099202 0 0 0 0 0 0 0 -1000 E
 24 0 -3 1d50+450 15d2+4
 300 30000
-8 8 1
+9 9 1
 E
 #6906
 guarda sapo~
-Um guarda sapo~
+um guarda sapo~
 Uma guarda sapo está aqui para proteger Anura.
 ~
 Esse feroz sapo está pronto para atacar qualquer um que se aproxime de Anura!
 ~
-2099202 0 0 0 67856 0 0 0 -1000 E
+2099202 0 0 0 0 0 0 0 -1000 E
 25 0 -4 5d10+350 12d2+24
 400 50000
-8 8 1
+9 9 1
 E
 #6907
 estatua heqit~
-Uma estátua de Heqit~
+uma estátua de Heqit~
 Uma estátua de Heqit está aqui.
 ~
 Essa estranha estátua representa a deusa egípcia da fertilidade, Heqit.
 Hum... Ela tem cabeça de sapo... Mas é bem simpática, não acha?
 ~
-2320402 0 0 0 67920 0 0 0 -1000 E
+2320402 0 0 0 0 0 0 0 -1000 E
 23 0 -16 25d2+450 15d4+30
 60 80000
-8 8 2
+9 9 2
 E
 $

@@ -10,7 +10,7 @@ terrível a sua aparência.
 2353682 0 0 0 0 0 0 0 -700 E
 45 -10 -7 5d10+1800 3d5+25
 10000 90000
-8 8 2
+9 9 2
 Str: 15
 Dex: 18
 Int: 15
@@ -30,7 +30,7 @@ totalmente retalhada.
 2343426 0 0 0 0 0 0 0 -500 E
 20 -5 -2 5d10+850 4d4+15
 0 40000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Con: 8
 Cha: 3
@@ -46,7 +46,7 @@ simpático Bolo-fofo pertence ao senhor Tom Bombadillo.
 2375872 0 0 0 0 0 0 0 400 E
 25 -5 0 5d3+450 5d6+15
 0 30000
-8 8 1
+9 9 1
 E
 #14403
 porteiro larry~
@@ -61,7 +61,7 @@ o velho Larry caminha na sua direção e lhe pergunta de forma grosseira:
 2156546 0 0 0 0 0 0 0 600 E
 45 -10 -6 5d10+1200 6d4+25
 8000 80000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -83,7 +83,7 @@ um lado para o outro tentando atender todos os seus clientes.
 2156546 0 0 0 0 0 0 0 800 E
 45 -12 -6 5d10+1300 8d3+25
 15000 90000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -102,7 +102,7 @@ Você observa um pequenino hobbit de aparência alegre e pés bem peludos.  Nob
 2154502 0 0 0 0 0 0 0 700 E
 40 -5 -3 5d10+950 6d4+20
 5000 70000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -123,7 +123,7 @@ estalagem do senhor Cevado Carrapicho.
 2113666 0 0 0 0 0 0 0 400 E
 6 10 0 5d8+200 5d5+8
 0 9000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Dex: 18
 Int: 15
@@ -143,7 +143,7 @@ fregueses da Pônei Saltitante.
 2154502 0 0 0 0 0 0 0 700 E
 40 -5 -4 5d10+980 6d4+22
 5000 70000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -166,7 +166,7 @@ eram descendentes dos primeiros homens que ocuparam o Oeste do mundo-médio.
 2160646 0 0 0 0 0 0 0 750 E
 45 -12 -5 5d10+1350 9d3+25
 9500 70000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -186,7 +186,7 @@ bastante expressivo.
 2160646 0 0 0 0 0 0 0 750 E
 45 -10 -4 5d10+1000 9d3+18
 5000 60000
-8 8 2
+9 9 2
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -206,7 +206,7 @@ Você observa um troncudo anão de barba e cabelos longos.  Sua aparência não
 2287618 0 0 0 0 0 0 0 500 E
 45 -15 -6 5d10+1250 9d3+25
 1500 80000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -238,6 +238,7 @@ Wis: 18
 Con: 18
 Cha: 18
 E
+T 3007
 #14412
 bill samambaia~
 Bill Samambaia~
@@ -251,7 +252,7 @@ estranhas pessoas do sul.
 2123844 0 0 0 0 0 0 0 -360 E
 45 -10 -4 5d10+1100 4d4+20
 10000 80000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -272,7 +273,7 @@ são como os seus parentes do Condado imaginam.
 2126036 0 0 0 0 0 0 0 700 E
 35 -5 -5 5d5+1300 3d8+15
 6000 60000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Dex: 18
 E
@@ -290,7 +291,7 @@ são como os seus parentes do Condado imaginam.
 2126036 0 0 0 0 0 0 0 700 E
 35 -2 -4 5d5+1100 3d8+15
 5000 58000
-8 8 2
+9 9 2
 BareHandAttack: 13
 Dex: 18
 E
@@ -306,7 +307,7 @@ cuidadosamente todas as pessoas do bar e seus pertences.
 2121862 0 0 0 0 0 0 0 -400 E
 35 -5 -6 5d5+1200 3d8+25
 10000 65000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 15
 Dex: 18
@@ -327,7 +328,7 @@ mercadorias.
 2226182 0 0 0 0 0 0 0 400 E
 50 -12 -8 5d10+2500 6d6+25
 20000 100000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -349,7 +350,7 @@ na estalagem para recuperar as forças e cantar um pouco é sempre bem vinda.
 2226178 0 0 0 0 0 0 0 450 E
 50 -14 -8 5d10+2100 7d5+25
 25000 125000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -370,7 +371,7 @@ Saltitante.  O barulho perto deles é ensurdecedor e desagradável.
 2220034 0 0 0 0 0 0 0 450 E
 50 -12 -8 5d10+2300 6d5+25
 8000 100000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -391,7 +392,7 @@ conversam e cantam canções antigas.
 2125954 0 0 0 0 0 0 0 500 E
 50 -8 -9 5d10+2100 7d5+25
 12000 110000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -413,7 +414,7 @@ aldeia.
 2156546 0 0 0 0 0 0 0 600 E
 45 -5 -4 5d10+1200 7d4+25
 8000 65000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -432,7 +433,7 @@ Você observa um lindo e simpático pônei de pelo suave e brilhante.
 2441218 0 0 0 0 0 0 0 400 E
 18 10 0 5d3+350 3d4+8
 0 28000
-8 8 1
+9 9 1
 Str: 18
 Dex: 18
 Int: 15
@@ -451,7 +452,7 @@ Seus cascos brilham refletindo os raios luminosos que surgem da sua luz.
 2441218 0 0 0 0 0 0 0 400 E
 18 -3 0 5d3+450 5d4+10
 0 30000
-8 8 1
+9 9 1
 Str: 18
 Dex: 18
 Int: 15
@@ -470,7 +471,7 @@ intenso e magnífico.
 2162768 0 0 0 0 0 0 0 500 E
 2 20 0 2d2+30 2d2+4
 0 600
-8 8 1
+9 9 1
 Str: 6
 Int: 10
 Wis: 8

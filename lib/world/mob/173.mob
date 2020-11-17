@@ -8,10 +8,10 @@ uma lança, e você pode ver seu brasão estampado sobre o manto que cobre sua
 montaria.  As cores de sua flâmula tremulam ao vento, carregada por seu fiel
 escudeiro.
 ~
-2128224 0 0 0 8 0 0 0 500 E
+2128224 0 0 0 0 0 0 0 500 E
 70 2 -20 10d20+1200 4d6+16
 5000 99344
-8 8 1
+9 9 1
 E
 #17302
 escudeiro~
@@ -21,10 +21,10 @@ Um escudeiro está aqui, trazendo um recado de seu senhor.
 O escudeiro está aqui em uma missão para seu senhor.  Vestindo trapos mal
 cheirosos, seu olhar e gestos aparentam pressa.
 ~
-2117828 0 0 0 524288 0 0 0 250 E
+2117828 0 0 0 0 0 0 0 250 E
 30 0 -10 5d15+400 6d12+8
 500 15246
-8 8 1
+9 9 1
 E
 #17303
 cavaleiro nobre~
@@ -34,10 +34,10 @@ Um cavaleiro nobre olha para você de cima a baixo de sua montaria.
 O cavaleiro nobre veste uma armadura completa.  Montado em seu cavalo,
 carrega uma grande lança.
 ~
-2127936 0 0 0 272 0 0 0 750 E
+2127936 0 0 0 0 0 0 0 750 E
 70 2 -19 12d12+1200 14d14+15
 10000 65030
-8 8 1
+9 9 1
 E
 #17304
 arthur rei~
@@ -48,7 +48,7 @@ O Rei Arthur é um homem truculento de barbas negras.  Sua armadura possui um
 brasão com o sinal de um dragão dourado.  Em sua estranha bainha, carrega
 Excalibur.
 ~
-2357338 0 0 0 330000 0 0 0 1000 E
+2357338 0 0 0 0 0 0 0 1000 E
 105 -92 -77 10d100+22200 13d13+93
 150000 7500000
 5 5 1
@@ -69,10 +69,10 @@ Sir Benlad veste sua famosa armadura verde, conhecida principalmente por ser
 impenetrável a armas comuns.  Como arma, carrega um imenso machado de
 guerra.
 ~
-2312304 0 0 0 264 0 0 0 250 E
+2312304 0 0 0 0 0 0 0 250 E
 80 0 -13 2d12+1400 3d8+18
 8000 100444
-8 8 1
+9 9 1
 E
 #17306
 galahad cavaleiro~
@@ -82,10 +82,10 @@ Sir Galahad, campeão da cavalaria, filho de Lancelot e Elaine, está aqui.
 Sir Galahad veste sua armadura alva e, como arma, usa uma espada de duas
 mãos (foi Sir Galahad quem completou a busca ao Graal na saga Arturiana).
 ~
-2177394 0 0 0 344 0 0 0 1000 E
+2177394 0 0 0 0 0 0 0 1000 E
 90 0 -22 6d12+2300 5d10+27
 10000 150000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -103,10 +103,10 @@ O Cavaleiro Negro veste uma armadura da cor do mais nobre ébano e usa um
 elmo com viseira em sua cabeça.  Ele permanece descansando sobre sua espada
 de duas mãos.
 ~
-2134114 0 0 0 65616 0 0 0 0 E
+2134114 0 0 0 0 0 0 0 0 E
 50 2 -10 5d7+800 3d7+16
 1000 32000
-8 8 1
+9 9 1
 E
 #17308
 gareth cavaleiro beumains~
@@ -117,10 +117,10 @@ Sir Gareth, irmão mais novo de Gawaine e de Gaheris, e também conhecido como
 Beaumains, veste com orgulho sua armadura e seu escudo de várias cores.  Ele
 espera ansiosamente pela oportunidade de salvar uma donzela em apuros.
 ~
-2111554 0 0 0 56 0 0 0 750 E
+2111554 0 0 0 0 0 0 0 750 E
 78 3 -15 5d6+1300 5d8+16
 8000 70888
-8 8 1
+9 9 1
 E
 #17309
 garlon cavaleiro~
@@ -131,10 +131,10 @@ Sir Garlon (o vilão desprezível) está escondido aqui.  Seu poder de
 invisibilidade lhe foi concedido pela bruxa dos pântanos, no intuito de
 favorecer o progresso do mal.
 ~
-2105574 0 0 0 524372 0 0 0 -1000 E
+2105574 0 0 0 0 0 0 0 -1000 E
 88 0 -20 7d9+1600 8d9+20
 9000 105000
-8 8 1
+9 9 1
 E
 #17310
 gawaine cavaleiro~
@@ -147,7 +147,7 @@ e carregando sua grande espada Galantine.
 2113606 0 0 0 0 0 0 0 0 E
 82 2 -10 4d8+1000 5d8+17
 8000 74998
-8 8 1
+9 9 1
 E
 #17311
 lamorak cavaleiro~
@@ -161,7 +161,7 @@ equipado.
 2097222 0 0 0 0 0 0 0 0 E
 76 2 0 2d7+1456 4d10+17
 0 92103
-8 8 1
+9 9 1
 E
 #17312
 lancelot cavaleiro~
@@ -171,10 +171,10 @@ Sir Lancelot, campeão da Távola Redonda, sorri para você.
 Sir Lancelot, montando seu corcel branco, usa uma lustrosa armadura de aço.
 Sua viseira está levantada, e sua lança erguida em saudação a você.
 ~
-2168914 0 0 0 65872 0 0 0 1000 E
+2168914 0 0 0 0 0 0 0 1000 E
 95 0 -21 6d8+1903 6d8+26
 1000 135000
-8 8 1
+9 9 1
 E
 #17313
 merlin mago~
@@ -186,11 +186,12 @@ vestido em um chambre cor de terra e carrega um bastão retorcido.  Sua longa
 e macia barba branca não oculta as bochechas rosadas e seus brilhantes olhos
 azuis.
 ~
-2097366 0 0 0 67640 0 0 0 750 E
+2097366 0 0 0 0 0 0 0 750 E
 83 2 -16 3d6+1222 4d5+19
 1000 83076
-8 8 1
+9 9 1
 E
+T 3009
 #17314
 morgana mulher~
 Morgana das Fadas~
@@ -200,11 +201,12 @@ Morgana das Fadas, feiticeira maligna, algoz de Camelot, esbravejou ao
 perceber que você espiou através de seu disfarce.  Ela está vestindo roupões
 de seda, que escondem um pouco seu feio e detestável corpo retorcido.
 ~
-2113780 0 0 0 524288 0 0 0 -1000 E
+2113780 0 0 0 0 0 0 0 -1000 E
 69 3 -14 4d6+803 5d7+17
 800 45000
-8 8 2
+9 9 2
 E
+T 3009
 #17315
 pellinore rei~
 Rei Pellinore~
@@ -214,10 +216,10 @@ O Rei Pellinore conta a você que sua família tem procurado pela Besta da
 Busca já há várias gerações, e pergunta se você a viu.  Pellinore já passou
 da meia idade, mas ainda é um vigoroso combatente.
 ~
-2097216 0 0 0 64 0 0 0 250 E
+2097216 0 0 0 0 0 0 0 250 E
 60 4 -7 2d8+678 12d6+18
 10000 62000
-8 8 1
+9 9 1
 E
 #17316
 besta busca criatura~
@@ -227,10 +229,10 @@ distraindo-se com um fêmur.
 ~
 An undefined string.
 ~
-2162930 0 0 0 1572944 0 0 0 -1000 E
+2162930 0 0 0 0 0 0 0 -1000 E
 68 2 -8 6d5+1009 4d7+17
 0 34004
-8 8 0
+9 9 0
 E
 #17317
 tristao~
@@ -244,7 +246,7 @@ uma armadura e carrega uma espada de duas mãos.
 2166866 0 0 0 0 0 0 0 350 E
 79 2 -16 6d8+1100 6d7+17
 0 163405
-8 8 1
+9 9 1
 E
 #17318
 mordred garoto~
@@ -255,11 +257,12 @@ golpeia com sua pequena lança!
 Mordred, filho bastardo de Arthur e Morgana, veste sua encantada armadura
 dourada e sua lança profana.
 ~
-2162912 0 0 0 524608 0 0 0 -1000 E
+2162912 0 0 0 0 0 0 0 -1000 E
 79 2 -10 4d5+1108 6d6+16
 9500 97044
-8 8 1
+9 9 1
 E
+T 3007
 #17319
 encantado cavaleiro renomado~
 o Cavaleiro encantado de renome~
@@ -269,10 +272,10 @@ O cavaleiro usa armadura enferrujada e carrega uma espada torta.  Tem um
 aspecto um tanto desalinhado para alguém como ele, e seus olhos se fixam
 vagamente em você!
 ~
-2097376 0 0 0 8 0 0 0 -500 E
+2097376 0 0 0 0 0 0 0 -500 E
 60 3 -3 20d20+550 4d4+14
 500 46088
-8 8 1
+9 9 1
 E
 #17320
 encantado cavaleiro graduado~
@@ -285,7 +288,7 @@ olhos são vazios, sua espada quebrada e ele está muito desalinhado.
 2162928 0 0 0 0 0 0 0 -750 E
 63 3 -7 13d13+765 9d7+15
 5800 46890
-8 8 1
+9 9 1
 E
 #17321
 dama espera~
@@ -296,10 +299,10 @@ A dama em espera aconchega-se mais a você, pressionando-lhe a contar os
 detalhes de sua última campanha de guerra.  Ela está vestindo um longo
 vestido e tem uma coroa de flores enfeitando seus cabelos.
 ~
-2097220 0 0 0 64 0 0 0 500 E
+2097220 0 0 0 0 0 0 0 500 E
 30 5 -2 10d10+360 4d6+8
 3000 10030
-8 8 2
+9 9 2
 E
 #17322
 rainha guinevere~
@@ -310,10 +313,10 @@ de seu leque.
 Guinevere conta a você a triste história sobre seu proibido amor com
 Lancelot.
 ~
-2097350 0 0 0 2048 0 0 0 0 E
+2097350 0 0 0 0 0 0 0 0 E
 50 4 -1 7d9+409 2d12+10
 10000 34000
-8 8 2
+9 9 2
 E
 #17323
 escudeiro encantado~
@@ -323,10 +326,10 @@ Um escudeiro encantado encontra-se imóvel aqui.
 O escudeiro encantado veste várias peças de roupa de couro, em um total
 estado de desordem.
 ~
-2101444 0 0 0 524288 0 0 0 -250 E
+2101444 0 0 0 0 0 0 0 -250 E
 67 3 0 6d12+900 5d8+15
 0 56090
-8 8 1
+9 9 1
 E
 #17324
 barant rei apres cavaleiro~
@@ -337,10 +340,10 @@ Barant Les Apres, o Rei dos Cem Cavaleiros está aqui.  Barant usa um capa
 branca e carrega uma maça presa a uma corrente.  Enquanto balança sua arma,
 sorri maliciosamente para você.
 ~
-2097508 0 0 0 524288 0 0 0 750 E
+2097508 0 0 0 0 0 0 0 750 E
 73 2 -13 4d8+1200 6d6+15
 0 103765
-8 8 1
+9 9 1
 E
 #17325
 bufao dagonet bobo~
@@ -351,10 +354,10 @@ Dagonet, o bobo da corte de Arthur, é mestre em sua arte.  Ele dança sobre
 suas mãos enquanto faz malabarismo com um jogo de facas.  Você tem a
 impressão de que ele poderia se sair bem em uma briga.
 ~
-2097362 0 0 0 524288 0 0 0 1000 E
+2097362 0 0 0 0 0 0 0 1000 E
 78 2 -13 7d7+1200 8d6+17
 3400 86008
-8 8 1
+9 9 1
 E
 #17326
 cavaleiro turquine~
@@ -365,10 +368,10 @@ Turquine veste uma pesada armadura de elos de metal e um elmo de lobo.  Sua
 voz é cortante como um chicote, e seus olhos dardejantes rapidamente olham
 para a esquerda e direita.
 ~
-2097350 0 0 0 524288 0 0 0 -500 E
+2097350 0 0 0 0 0 0 0 -500 E
 78 3 -9 8d8+978 7d7+16
 6789 78900
-8 8 1
+9 9 1
 E
 #17327
 perimones cavaleiro~
@@ -379,10 +382,10 @@ Perimones, o cavaleiro vermelho, tem barba e bigode ruivos.  Ele é um
 pequeno homem atarracado.  Sua armadura de rubi resplandece na luz solar, e
 ele usa o lenço vermelho de seda de Galenvine em sua manga.
 ~
-2097218 0 0 0 264192 0 0 0 500 E
+2097218 0 0 0 0 0 0 0 500 E
 69 3 -11 6d6+965 7d7+15
 4566 78900
-8 8 1
+9 9 1
 E
 #17328
 donzela dama mulher angustiada~
@@ -396,7 +399,7 @@ esfarrapados.
 2097350 0 0 0 0 0 0 0 200 E
 35 5 -1 23d23+400 3d6+9
 8900 29000
-8 8 2
+9 9 2
 E
 #17329
 nobre~
@@ -410,7 +413,7 @@ lugar.
 2113728 0 0 0 0 0 0 0 0 E
 56 4 0 5d20+500 4d7+12
 10000 45678
-8 8 1
+9 9 1
 E
 #17330
 serviçal~
@@ -423,7 +426,7 @@ nele.
 2101444 0 0 0 0 0 0 0 0 E
 25 5 0 5d3+400 6d7+7
 1200 21000
-8 8 1
+9 9 1
 E
 #17331
 mercador~
@@ -436,7 +439,7 @@ mercadorias.
 2113732 0 0 0 0 0 0 0 0 E
 25 5 -1 7d12+600 5d6+12
 10000 39004
-8 8 1
+9 9 1
 E
 #17332
 monge~
@@ -450,7 +453,7 @@ maneira dos fransciscanos.
 2097348 0 0 0 0 0 0 0 250 E
 23 6 0 2d10+307 7d9+8
 1200 19078
-8 8 1
+9 9 1
 E
 #17333
 trovador~
@@ -462,7 +465,7 @@ O trovador, vestido com roupas de cores festivas, está tocando um bandolim.
 2097350 0 0 0 0 0 0 0 150 E
 15 6 0 7d8+250 4d8+8
 1090 16098
-8 8 1
+9 9 1
 E
 #17334
 bardo~
@@ -475,7 +478,7 @@ camisa laranja.
 2097350 0 0 0 0 0 0 0 150 E
 14 7 0 3d9+209 7d7+7
 1245 16980
-8 8 1
+9 9 1
 E
 #17335
 artista~
@@ -488,7 +491,7 @@ vertiginosas acrobacias.
 2097350 0 0 0 0 0 0 0 150 E
 15 6 0 6d7+290 5d9+8
 1100 19080
-8 8 1
+9 9 1
 E
 #17336
 criado~
@@ -497,10 +500,10 @@ Um criado passa apressado.
 ~
 O criado segura uma travessa de comida quente, que parece estar deliciosa.
 ~
-2097348 0 0 0 524288 0 0 0 0 E
+2097348 0 0 0 0 0 0 0 0 E
 10 7 0 3d7+198 3d12+6
 1000 7900
-8 8 1
+9 9 1
 E
 #17337
 demonio~
@@ -517,10 +520,10 @@ demônio aqui para usar seu poder na fabricação de itens mágicos, mas ele
 escapou algumas vezes, permitindo que distribuisse alguns dos artefatos que
 contribuiram na queda de Camelot (Morgan, lider dos Pict).
 ~
-2343026 0 0 0 2424 0 0 0 -1000 E
+2343026 0 0 0 0 0 0 0 -1000 E
 104 0 -30 10d100+3900 14d13+40
 100000 4500020
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 18
 Dex: 18
@@ -540,7 +543,7 @@ músculos dos braços bem definidos.
 2123842 0 0 0 0 0 0 0 500 E
 101 0 -18 1d1+3000 7d7+15
 10000 80000
-8 8 1
+9 9 1
 E
 #17339
 stirrup mestre~
@@ -553,7 +556,7 @@ estábulos.
 2123842 0 0 0 0 0 0 0 400 E
 101 0 0 6d9+2000 8d8+14
 10000 80000
-8 8 1
+9 9 1
 E
 #17340
 cavalo montaria~
@@ -563,10 +566,10 @@ Um cavalo de montaria está aqui.
 O cavalo de montaria foi selado com arreios brilhantes.  Seus membros bem
 desenvolvidos parecem capazes de alcançar altas velocidades.
 ~
-2218066 0 0 0 2064 0 0 0 0 E
+2218066 0 0 0 0 0 0 0 0 E
 60 10 -1 5d5+600 5d5+10
 100 30002
-8 8 1
+9 9 1
 E
 #17341
 cavalo mediano~
@@ -578,7 +581,7 @@ O mediano cavalo de guerra possui rédeas pesadas e estribos de couro.
 2218066 0 0 0 0 0 0 0 0 E
 42 12 0 5d5+500 5d5+8
 30 24006
-8 8 2
+9 9 2
 E
 #17342
 cavalo pesado~
@@ -588,10 +591,10 @@ preparação para batalha!
 ~
 O pesado cavalo de guerra possui arreios de correntes e mede 17 palmos.
 ~
-2480210 0 0 0 64 0 0 0 0 E
+2480210 0 0 0 0 0 0 0 0 E
 62 9 -1 2d12+620 5d5+11
 30 30009
-8 8 1
+9 9 1
 E
 #17343
 invasor saxao~
@@ -601,10 +604,10 @@ Um invasor saxão está aqui, pronto para usar sua cabeca como trofeu!
 O invasor saxão carrega seu sax, *sim, realmente é um novo nome para uma
 arma*, e está vestido com várias peles.
 ~
-2105446 0 0 0 1048640 0 0 0 -250 E
+2105446 0 0 0 0 0 0 0 -250 E
 59 4 -3 3d13+765 4d4+15
 3900 65090
-8 8 1
+9 9 1
 E
 #17344
 escrava~
@@ -614,10 +617,10 @@ Uma escrava se encontra aqui, chorando pelas batalhas.
 A escrava está suja e desmazelada, mas os vestígios de seu passado a fazem
 resistir.
 ~
-2097348 0 0 0 1048576 0 0 0 0 E
+2097348 0 0 0 0 0 0 0 0 E
 17 6 0 5d4+402 5d6+7
 1000 8870
-8 8 2
+9 9 2
 E
 #17345
 chefe saxao render~
@@ -628,10 +631,10 @@ Render, o chefe saxão (você sabe seu nome por causa do alarido geral), está
 envolto em despojos de guerra.  Tudo aquilo que você imaginar nele está
 coberto por piolhos.
 ~
-2162806 0 0 0 1048656 0 0 0 -500 E
+2162806 0 0 0 0 0 0 0 -500 E
 73 2 -13 5d13+1200 6d6+17
 10000 60994
-8 8 1
+9 9 1
 E
 #17346
 guarda fronteira norte~
@@ -642,10 +645,10 @@ fronteira contra intrusos.
 O guarda da fronteira norte veste uma armadura de elos metálicos e está
 armado com uma espada comum.
 ~
-2101318 0 0 0 64 0 0 0 300 E
+2101318 0 0 0 0 0 0 0 300 E
 59 3 -2 6d10+709 8d7+14
 1200 59003
-8 8 1
+9 9 1
 E
 #17347
 comandante avancado norte~
@@ -656,10 +659,10 @@ respeito de seus homens.
 O comandante superior é um endurecido, grisalho veterano possuidor da
 astúcia de quem passou a vida conduzindo homens em batalhas sem fim.
 ~
-2109522 0 0 0 80 0 0 0 500 E
+2109522 0 0 0 0 0 0 0 500 E
 69 2 -4 5d10+1218 7d7+15
 12000 67002
-8 8 1
+9 9 1
 E
 #17348
 membro escoces~
@@ -674,7 +677,7 @@ escocês de aproximadamente 4' de tamanho.
 2097222 0 0 0 0 0 0 0 0 E
 62 3 -3 9d5+1000 8d8+14
 5890 45768
-8 8 1
+9 9 1
 E
 #17349
 chefe cla escoces~
@@ -693,7 +696,7 @@ seu uísque.  Ele tem a aparência de quem...
 2166870 0 0 0 0 0 0 0 -100 E
 72 2 -5 6d12+1500 4d8+16
 10000 92001
-8 8 1
+9 9 1
 E
 #17350
 servo atarefado~
@@ -705,7 +708,7 @@ O servo segura um instrumento de fazenda e usa trapos para se cobrir.
 2101446 0 0 0 0 0 0 0 0 E
 10 7 1 4d12+250 6d6+5
 1240 4769
-8 8 1
+9 9 1
 E
 #17351
 invasor anglo~
@@ -719,7 +722,7 @@ Sua armadura é parcialmente de couro.
 2162934 0 0 0 0 0 0 0 -200 E
 67 3 -4 7d9+1007 6d9+14
 3422 86040
-8 8 1
+9 9 1
 E
 #17352
 chefe anglo~
@@ -729,10 +732,10 @@ O chefe Anglo se encontra aqui, liderando o massacre!
 O chefe Anglo é um homem gigantesco, coberto de sangue, que ri
 estrondosamente a cada morte.
 ~
-2162930 0 0 0 64 0 0 0 -700 E
+2162930 0 0 0 0 0 0 0 -700 E
 75 2 -10 6d13+1500 7d9+16
 12002 91022
-8 8 1
+9 9 1
 E
 #17353
 cavalaria unidade~
@@ -742,10 +745,10 @@ Uma unidade de cavalaria está aqui, flanqueando as linhas inimigas.
 A unidade de cavalaria consiste em cerca de 30 cavaleiros montados em
 medianos cavalos de guerra.
 ~
-2189394 0 0 0 65792 0 0 0 200 E
+2189394 0 0 0 0 0 0 0 200 E
 102 -19 -42 12d12+6980 12d10+32
 89000 4204500
-8 8 2
+9 9 2
 BareHandAttack: 10
 Str: 17
 Dex: 17
@@ -762,10 +765,10 @@ Uma unidade de infantaria está aqui, lutando as hordas de Picts.
 A unidade de infantaria tem aproximadamente 50 escudeiros e servos armados
 com lanças.
 ~
-2189394 0 0 0 65536 0 0 0 0 E
+2189394 0 0 0 0 0 0 0 0 E
 101 -17 -40 9d9+5507 10d9+30
 75900 2999997
-8 8 2
+9 9 2
 BareHandAttack: 10
 Str: 16
 Dex: 16
@@ -785,7 +788,7 @@ protegidos.
 2189398 0 0 0 0 0 0 0 -100 E
 103 -21 -50 10d12+7809 9d10+31
 91214 4900000
-8 8 2
+9 9 2
 BareHandAttack: 10
 Str: 17
 Dex: 17
@@ -805,7 +808,7 @@ demoníaco, e é intensificado por seu elmo de chifres de rena.
 2187346 0 0 0 0 0 0 0 -400 E
 84 1 -20 12d12+1769 8d10+28
 8000 120566
-8 8 1
+9 9 1
 E
 #17357
 persante cavaleiro~
@@ -816,10 +819,10 @@ Persante é chamado de "o cavaleiro azul" devido a sua armadura de um azul
 brilhante.  Ele monta seu belo corcel, e está tremulando seu galhardete
 azul.
 ~
-2164820 0 0 0 256 0 0 0 400 E
+2164820 0 0 0 0 0 0 0 400 E
 87 1 -19 12d12+1890 13d9+18
 40000 150000
-8 8 1
+9 9 1
 E
 #17358
 dodinas cavaleiro~
@@ -832,7 +835,7 @@ aproxima.  Ele está montado sobre seu famoso corcel Rue.
 2162768 0 0 0 0 0 0 0 100 E
 80 1 -20 15d12+1688 8d10+27
 20000 100899
-8 8 1
+9 9 1
 E
 #17359
 lionel cavaleiro~
@@ -845,7 +848,7 @@ cair.
 2162768 0 0 0 0 0 0 0 300 E
 70 2 -17 12d12+1369 13d9+16
 8900 74099
-8 8 1
+9 9 1
 E
 #17360
 gaheris cavaleiro~
@@ -856,10 +859,10 @@ Gaheris tem longos cabelos ruivos, e monta um garanhão cinzento.  Ele está
 extremamente furioso com os anglos e procura um caminho para chegar ao
 chefe.
 ~
-2191426 0 0 0 64 0 0 0 500 E
+2191426 0 0 0 0 0 0 0 500 E
 82 1 -18 10d10+1490 8d10+17
 10000 100000
-8 8 1
+9 9 1
 E
 #17361
 comandante avancado sul~
@@ -870,10 +873,10 @@ seus homens.
 O comandante superior é um endurecido, grisalho veterano possuidor da
 astúcia de quem passou a vida conduzindo homens em batalhas sem fim.
 ~
-2109522 0 0 0 80 0 0 0 500 E
+2109522 0 0 0 0 0 0 0 500 E
 69 2 -4 5d10+1218 7d7+15
 12000 67002
-8 8 1
+9 9 1
 E
 #17362
 guarda fronteira sul~
@@ -884,10 +887,10 @@ fronteira contra intrusos.
 O guarda da fronteira do sul usa uma armadura de elos metálicos e está
 armado com uma espada comum.
 ~
-2101318 0 0 0 64 0 0 0 300 E
+2101318 0 0 0 0 0 0 0 300 E
 59 3 -2 6d10+709 8d7+14
 1200 59003
-8 8 1
+9 9 1
 E
 #17363
 escrava~
@@ -897,9 +900,9 @@ Uma escrava se encontra aqui, chorando pelas batalhas.
 A escrava está suja e desmazelada, mas os vestígios de seu passado a fazem
 resistir.
 ~
-2097348 0 0 0 1048576 0 0 0 0 E
+2097348 0 0 0 0 0 0 0 0 E
 17 6 0 5d4+402 5d6+7
 1000 8870
-8 8 2
+9 9 2
 E
 $

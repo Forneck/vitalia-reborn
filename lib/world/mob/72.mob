@@ -9,11 +9,12 @@ balançando uma haste preta e roxa acima da sua cabeça, como se estivesse
 prestes a atacar você a qualquer momento.  No meio de sua cabeça estão
 quatro tentáculos com pontas afiadas.
 ~
-2103348 0 0 0 2128 0 0 0 -800 E
+2103348 0 0 0 0 0 0 0 -800 E
 14 7 0 1d10+170 3d4+4
 0 20000
-8 8 0
+9 9 0
 E
+T 3009
 #7201
 esfolador veterano mente~
 o esfolador veterano~
@@ -23,11 +24,12 @@ Este é um monstro horripilante, 6'6'' de altura.  Vestido de roxo e negro,
 e carregando um grande maça em sua mão.  No centro de sua cabeça estão
 quatro grandes tentáculos com pontas muito afiadas.
 ~
-2104884 0 0 0 2128 0 0 0 -600 E
+2104884 0 0 0 0 0 0 0 -600 E
 8 13 2 1d10+100 2d4+3
 400 4500
-8 8 0
+9 9 0
 E
+T 3009
 #7202
 esfolador junior mente~
 o esfolador junior~
@@ -38,11 +40,12 @@ O esfolador de mentes junior tem seis pés de altura.  Ele guarda uma
 pequena maça em seu cinto, e está vestido com uma roupa negra e roxa.  Ele
 tem quatro pequenos tentáculos no centro de sua cabeça.
 ~
-2103444 0 0 0 2128 0 0 0 -350 E
+2103444 0 0 0 0 0 0 0 -350 E
 6 15 4 1d10+75 1d4+2
 200 1500
-8 8 0
+9 9 0
 E
+T 3009
 #7203
 homem rato~
 o horripilante homem rato~
@@ -52,10 +55,10 @@ brilho em seus olhos.
 O homem-rato tem quatro pés de altura.  Ele parece-se muito com um rato,
 exceto por estar em pé.
 ~
-2100836 0 0 0 2048 0 0 0 -700 E
+2100836 0 0 0 0 0 0 0 -700 E
 6 15 3 4d6+69 2d4+2
 50 1500
-8 8 0
+9 9 0
 E
 #7204
 rato gigantesco~
@@ -65,9 +68,9 @@ Há um gigantesco rato aqui, olhando para você furiosamente.
 O rato gigantesco tem uns dez pés, da sua cabeça até seu rabo e tem garras
 do tamanho da sua cabeça, ele está muito sujo.
 ~
-2097186 0 0 0 2048 0 0 0 -800 E
+2097186 0 0 0 0 0 0 0 -800 E
 12 9 2 1d10+150 2d6+2
 2513 13000
-8 8 1
+9 9 1
 E
 $

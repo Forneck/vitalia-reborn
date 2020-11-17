@@ -64,6 +64,7 @@ em sua bochecha esquerda em forma de meia-lua.
 1 5000
 6 6 2
 E
+T 3009
 #5405
 mago garcom velho homem~
 o velho caquético~
@@ -276,6 +277,7 @@ em um combate mágico.
 1200 12000
 9 9 0
 E
+T 3009
 #5422
 estatua siva~
 a estátua de Siva~
@@ -289,6 +291,7 @@ em um combate mágico.
 1200 12000
 9 9 0
 E
+T 3009
 #5423
 estatua indra~
 a estátua de Indra~
@@ -301,6 +304,7 @@ Está estátua se parece com um enorme elefante.
 1200 12000
 9 9 0
 E
+T 3009
 #5424
 estatua yama~
 a estátua de Yama~
@@ -313,6 +317,7 @@ Esta é a estátua do Deus da Morte.  Ela está coberta com estranhas runas.
 1200 12000
 9 9 0
 E
+T 3009
 #5425
 estatua surya~
 a estátua de Surya~
@@ -326,6 +331,7 @@ fogo.
 1200 12000
 9 9 0
 E
+T 3009
 #5426
 estatua kali~
 a estátua de Kali~
@@ -339,6 +345,7 @@ prateadas.
 1200 12000
 9 9 0
 E
+T 3009
 #5427
 estatua brihaspati~
 a estátua de Brihaspati~
@@ -352,6 +359,7 @@ mármore resistente.
 1200 12000
 9 9 0
 E
+T 3009
 #5428
 estatua puchan~
 a estátua de Puchan~
@@ -365,6 +373,7 @@ como se ela tivesse atravessado um longo caminho pelas estradas.
 1200 12000
 9 9 0
 E
+T 3009
 #5429
 aziz humano canon~
 Aziz~
@@ -514,6 +523,7 @@ Este homem está vestido em longos robes marrons e tem um olhar penetrante.
 0 8700
 9 9 1
 E
+T 3009
 #5441
 curley folhaverde folha verde~
 Curley Folhaverde~
@@ -703,6 +713,7 @@ Você vê o todo poderoso Alá.
 0 45000
 5 5 0
 E
+T 3009
 #5456
 mago guardiao~
 o guardião da Guilda~
@@ -1029,7 +1040,7 @@ Ele não parece feliz por você o ter perturbado.
 15000 35000
 9 9 1
 E
-T 5406
+T 5409
 #5482
 guarda real elite~
 o Guarda Real~

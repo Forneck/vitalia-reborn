@@ -572,6 +572,7 @@ consegue fazer na água.  Ela não parece se intimidar com sua presença.
 0 2000
 9 9 2
 E
+T 3008
 #11337
 serpente esmeralda~
 uma serpente de esmeralda~
@@ -585,6 +586,7 @@ Verde pela esmeralda que constitui seu corpo, essa serpente mágica sente-se
 0 2000
 9 9 2
 E
+T 3008
 #11338
 tartaruga opala azul~
 uma tartaruga de opala azul~
@@ -629,6 +631,7 @@ mágica.
 0 5000
 9 9 2
 E
+T 3008
 #11341
 membro guarda naga joias safira~
 um sentinela da Guarda das Jóias~
@@ -679,6 +682,7 @@ que vão da ponta de sua cauda até a nuca. São muito perigosos.
 9 9 1
 BareHandAttack: 10
 E
+T 3008
 #11344
 kshatryia guerreiro vigia ouro esmeralda guarda naga jóias~
 um kshatryia-vigia da Guarda das Jóias~

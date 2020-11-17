@@ -5,12 +5,13 @@ Puff, a Dragão Fractal está aqui, contemplando outra realidade.
 ~
 Há algum idéia da coisa estranha e desconhecida da qual ela é feita?
 ~
-2351104 0 0 0 67600 0 0 0 1000 E
+2351104 0 0 0 0 0 0 0 1000 E
 80 1 -1 5d10+4950 15d15+3
 10000 155000
-8 8 2
+9 9 2
 BareHandAttack: 12
 E
+T 95
 #10
 clone~
 o clone~
@@ -21,7 +22,7 @@ Este clone não parece significar nada.  Não, na verdade, ele é um tanto quant
 2097154 0 0 0 0 0 0 0 0 E
 1 0 0 1d10+48 1d1+1
 0 0
-8 8 0
+9 9 0
 E
 #11
 zumbi humanoide~
@@ -33,7 +34,7 @@ Este estranho humanóide move-se lentamente, e parece ser um corpo, um corpo and
 2097154 0 0 0 0 0 0 0 0 E
 1 0 0 1d1+1 1d1+1
 0 0
-8 8 0
+9 9 0
 BareHandAttack: 7
 E
 #12
@@ -43,10 +44,10 @@ Um corvo negro está voando baixo por aqui
 ~
 An undefined string.
 ~
-2162690 0 0 0 2192 0 0 0 0 E
+2162690 0 0 0 0 0 0 0 0 E
 3 10 1 2d8+30 2d4+3
 0 0
-8 8 0
+9 9 0
 E
 #13
 lobo~
@@ -55,10 +56,10 @@ Um grande lobo ronda por aqui.
 ~
 An undefined string.
 ~
-2097154 0 0 0 67600 0 0 0 0 E
+2097154 0 0 0 0 0 0 0 0 E
 10 5 -1 2d8+100 2d4+10
 0 0
-8 8 1
+9 9 1
 E
 #14
 urso~
@@ -67,10 +68,10 @@ Um enorme urso caminha lentamente.
 ~
 An undefined string.
 ~
-2162690 0 0 0 2384 0 0 0 0 E
+2162690 0 0 0 0 0 0 0 0 E
 20 0 -4 2d8+200 2d6+15
 0 0
-8 8 1
+9 9 1
 E
 #15
 leão leao~
@@ -79,10 +80,10 @@ um leão está parado aqui.
 ~
 An undefined string.
 ~
-2162690 0 0 0 2320 0 0 0 0 E
+2162690 0 0 0 0 0 0 0 0 E
 40 0 -4 2d8+250 2d6+15
 0 0
-8 8 1
+9 9 1
 E
 #19
 aéreo aereo empregado figura~
@@ -95,7 +96,7 @@ um humanóide em forma de núvem.
 2097154 0 0 0 0 0 0 0 0 E
 1 0 0 1d1+1 1d1+1
 0 0
-8 8 0
+9 9 0
 E
 #20
 elementar~
@@ -108,6 +109,6 @@ pacientemente que algo ocorra.
 2097154 0 0 0 0 0 0 0 0 E
 1 0 0 1d1+1 1d1+1
 0 0
-8 8 0
+9 9 0
 E
 $

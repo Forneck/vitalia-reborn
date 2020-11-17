@@ -6,10 +6,10 @@ Um guarda anão está aqui.
 O guarda parece muito forte e malvado.  Ele tem uma barba longa e cheira
 como se não tivesse tomado banho por um mês.
 ~
-2103298 0 0 0 2320 0 0 0 1000 E
+2103298 0 0 0 0 0 0 0 1000 E
 21 0 -1 4d20+336 2d8+9
 10000 60000
-8 8 1
+9 9 1
 E
 #6501
 trabalhador anao~
@@ -21,7 +21,7 @@ Ele é muito sujo e parece extremamente exausto pelo excesso de trabalho.
 2103360 0 0 0 0 0 0 0 900 E
 13 7 2 25d5+170 2d4+6
 3500 16000
-8 8 1
+9 9 1
 E
 #6502
 fantasma~
@@ -30,11 +30,12 @@ Um fantasma está aguardando seu primeiro movimento aqui.
 ~
 Um fantasma negro e quase transparente.
 ~
-2285602 0 0 0 2128 0 0 0 -900 E
+2285602 0 0 0 0 0 0 0 -900 E
 25 4 -6 9d7+500 4d5+25
 45708 125000
-8 8 1
+9 9 1
 E
+T 3009
 #6503
 lojista~
 o lojista da Loja Couro e Dente~
@@ -42,10 +43,10 @@ O lojista da Loja Couro e Dente está aqui, aguardando pacientemente.
 ~
 O lojista é muito arredondado, mas parece em excelente condição.
 ~
-2160642 0 0 0 16 0 0 0 1000 E
+2160642 0 0 0 0 0 0 0 1000 E
 108 0 -10 1d1+30000 2d8+32
 33500 800000
-8 8 1
+9 9 1
 E
 #6504
 padeiro granito cabeca~
@@ -54,10 +55,10 @@ Cabeça de Granito, o padeiro, está aguardando por um cliente aqui.
 ~
 Cabeça de Granito está coberto de farinha e cereais.
 ~
-2160642 0 0 0 16400 0 0 0 900 E
+2160642 0 0 0 0 0 0 0 900 E
 108 0 -10 1d1+30000 2d8+22
 55000 800000
-8 8 1
+9 9 1
 E
 #6505
 lagarto gigante~
@@ -67,10 +68,10 @@ Um lagarto gigante está aqui procurando por comida pelo chão da caverna.
 Esta criatura escamosa parece estar bem adaptada a este habitat subterrâneo.
 Ele aparenta ser muito poderoso.
 ~
-2097216 0 0 0 2064 0 0 0 100 E
+2097216 0 0 0 0 0 0 0 100 E
 21 0 1 4d20+340 3d7+4
 200 55000
-8 8 1
+9 9 1
 E
 #6506
 gigante~
@@ -80,10 +81,10 @@ Um gigante está caminhando do lado da montanha até aqui.
 O gigante tem quase 5 metros e meio de altura, braços de aço e parece
 estar em excelentes condições físicas.
 ~
-2099264 0 0 0 2048 0 0 0 600 E
+2099264 0 0 0 0 0 0 0 600 E
 19 2 0 4d20+300 3d3+8
 2000 45000
-8 8 1
+9 9 1
 E
 #6507
 mineiro anao~
@@ -92,10 +93,10 @@ Um mineiro anão está aqui.
 ~
 O mineiro está muito cansado e muito sujo, e ele tem os músculos inchados.
 ~
-2099202 0 0 0 2048 0 0 0 500 E
+2099202 0 0 0 0 0 0 0 500 E
 4 16 7 3d13+40 1d3+2
 600 700
-8 8 1
+9 9 1
 E
 #6508
 chefe mina anao~
@@ -105,10 +106,10 @@ Um anão chefe da mina encontra-se aqui, supervisionando o trabalho.
 O chefe da mina é muito grande e muito forte, não obstante, ele deve ser
 razoavelmente inteligente também para ter conseguido este posto.
 ~
-2099202 0 0 0 2048 0 0 0 700 E
+2099202 0 0 0 0 0 0 0 700 E
 19 1 0 50d2+270 3d4+6
 18000 35000
-8 8 1
+9 9 1
 E
 #6509
 medico anao curandeiro~
@@ -117,11 +118,12 @@ O médico anão encontra-se aqui, ajudando os doentes de seu povo.
 ~
 Ele é um curandeiro muito habilidoso e extremamente leal ao seu deus.
 ~
-2099202 0 0 0 2320 0 0 0 999 E
+2099202 0 0 0 0 0 0 0 999 E
 22 0 -1 9d4+375 3d8+4
 20000 60000
-8 8 1
+9 9 1
 E
+T 3009
 #6510
 peao anao~
 o peão anão~
@@ -129,10 +131,10 @@ Um peão anão está aguardando ajuda aqui.
 ~
 An undefined string.
 ~
-2101250 0 0 0 2048 0 0 0 500 E
+2101250 0 0 0 0 0 0 0 500 E
 3 18 7 10d3+35 2d3+2
 75 350
-8 8 1
+9 9 1
 E
 #6511
 anao~
@@ -141,10 +143,10 @@ Um anão está aqui.
 ~
 An undefined string.
 ~
-2097154 0 0 0 2048 0 0 0 500 E
+2097154 0 0 0 0 0 0 0 500 E
 6 15 4 1d15+70 3d3+1
 625 1500
-8 8 1
+9 9 1
 E
 #6514
 guarda quartel~
@@ -154,10 +156,10 @@ do serviço.
 ~
 An undefined string.
 ~
-2101250 0 0 0 2048 0 0 0 100 E
+2101250 0 0 0 0 0 0 0 100 E
 14 6 1 5d10+170 2d5+4
 1300 20000
-8 8 1
+9 9 1
 E
 #6516
 labirinto guardiao~
@@ -166,11 +168,12 @@ O guardião do labirinto está aqui.
 ~
 Ele parece MUITO forte.
 ~
-2099234 0 0 0 2320 0 0 0 -1000 E
+2099234 0 0 0 0 0 0 0 -1000 E
 29 0 -7 250d4+2000 4d3+5
 2000 1700000
-8 8 1
+9 9 1
 E
+T 3009
 #6517
 cobra gigante~
 a cobra gigante~
@@ -178,9 +181,9 @@ Existe uma cobra gigante aqui.
 ~
 An undefined string.
 ~
-2097186 0 0 0 2048 0 0 0 -1000 E
+2097186 0 0 0 0 0 0 0 -1000 E
 33 0 -10 300d6+600 4d4+22
 3000 800000
-8 8 2
+9 9 2
 E
 $
