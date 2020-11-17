@@ -360,6 +360,8 @@ if %actor.is_pc%
   else
     emote resmunga infeliz.
   end
+else
+    emote resmunga infeliz.
 end
 ~
 #3018
