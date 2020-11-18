@@ -6,26 +6,26 @@ Clas: 6
 Levl: 12
 Id  : 20
 Brth: 1603768097
-Plyd: 123131
-Last: 1605578099
-Lmot: 1605577494
+Plyd: 149289
+Last: 1605724211
+Lmot: 1605721915
 Lnew: 1605129579
 Htwn: 1372
-Host: 138.204.26.79
+Host: 138.204.26.63
 Hite: 195
 Wate: 172
-Alin: 142
+Alin: 68
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDE abde 0 0
 Wimp: 30
 Room: 3001
 Lern: 4
-Hung: 16
-Thir: 5
-Hit : 33/146
-Mana : 6/140
-Move: 117/118
+Hung: 12
+Thir: 12
+Hit : 88/146
+Mana : 19/140
+Move: 134/118
 Str : 16/0
 Int : 14
 Wis : 12
@@ -33,9 +33,9 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Gold: 12665
-Bank: 121479
-Exp : 1019596
+Gold: 11522
+Bank: 131558
+Exp : 558252
 Olc : 0
 ScrW: 44
 Skil:
@@ -48,27 +48,25 @@ Skil:
 224 90
 251 90
 0 0
-Affs:
-54 48 -5 17 0 0 0 0
-54 48 0 44 524288 0 0 0
-36 9 0 33 256 0 0 0
-0 0 0 0 0 0 0 0
-Alis: 6
- as
- east
-0
- ha
- history all
-0
- recall
- cast 'word of recall' $*
-1
- gd
- get $1;don $1
+Alis: 7
+ s;s;w;n
+ s;s;w;n
 1
  fonte
  w;w;w;drink fonte
 1
- s;s;w;n
- s;s;w;n
+ gd
+ get $1;don $1
+1
+ recall
+ cast 'word of recall' $*
+1
+ ha
+ history all
+0
+ dp
+ cast 'detect poison' $*
+1
+ sg
+ save;sug
 1

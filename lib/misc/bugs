@@ -38,16 +38,6 @@ Level     110
 Room      1204
 Flags     0 0 0 0
 End
-Text      loja~
-Body      loja ta crashando
-~
-Name      Cansian~
-IdNum     1
-Dated     1603259862
-Level     110
-Room      1204
-Flags     0 0 0 0
-End
 Text      guilda ranger~
 Body      fazer guilda de ranger em mid e nt
 ~
@@ -139,16 +129,6 @@ Level     110
 Room      3001
 Flags     0 0 0 0
 End
-Text      tentar abrir portas com direes~
-Body      No caso ao tentar abrir uma porta dando direo aparece que no h south north etc na direo, exemplo open south ou open port south aparece: No h south nesta direo. Se tiver mais portas numa mesma sala no tem como abrir
-~
-Name      Motharo~
-IdNum     25
-Dated     1604589609
-Level     10
-Room      18602
-Flags     0 0 0 0
-End
 Text      fly~
 Body      Ao tentar usar o comando fly o mesmo no levanta voo.
 ~
@@ -169,57 +149,7 @@ Level     110
 Room      3469
 Flags     0 0 0 0
 End
-Text       falta de vortice~
-Body      nao tem vortice aqui
-~
-Name      Anyte~
-IdNum     6
-Dated     1605557681
-Level     79
-Room      11400
-Flags     1 0 0 0
-End
-Text       vortice~
-Body      vortice inexistente
-~
-Name      Cansian~
-IdNum     1
-Dated     1605557864
-Level     110
-Room      11400
-Flags     1 0 0 0
-End
-Text       bribe khanti~
-Body      fazer trigger de bribe pra khanti
-~
-Name      Cansian~
-IdNum     1
-Dated     1605559038
-Level     110
-Room      11500
-Flags     0 0 0 0
-End
-Text       sala escondida~
-Body      leste daqui eh escondido
-~
-Name      Anyte~
-IdNum     6
-Dated     1605559919
-Level     79
-Room      11559
-Flags     1 0 0 0
-End
-Text       porta nao abre~
-Body      porta pra leste daqui nao abre "Voc no pode unlock  isso!!"
-~
-Name      Anyte~
-IdNum     6
-Dated     1605560000
-Level     79
-Room      11559
-Flags     1 0 0 0
-End
-Text       cor vazando~
+Text      cor vazando~
 Body      cor ta vazando dos status tipo "Cansian  (escrevendo) est em p aqui." tudo depois de escrevendo ta azul
 ~
 Name      Anyte~
@@ -229,27 +159,7 @@ Level     79
 Room      11559
 Flags     0 0 0 0
 End
-Text       sala escondida~
-Body      up daqui do rio ikshumati devia ser escondido
-~
-Name      Anyte~
-IdNum     6
-Dated     1605560213
-Level     79
-Room      11588
-Flags     1 0 0 0
-End
-Text       porta nao abre~
-Body      nao pode open isso!!!
-~
-Name      Anyte~
-IdNum     6
-Dated     1605560934
-Level     79
-Room      11686
-Flags     1 0 0 0
-End
-Text       kanakajja~
+Text      kanakajja~
 Body      Fazer o trigger do especial dela
 ~
 Name      Cansian~
@@ -259,7 +169,7 @@ Level     110
 Room      11642
 Flags     0 0 0 0
 End
-Text       item trap~
+Text      item trap~
 Body      fazer trap
 ~
 Name      Cansian~
@@ -269,27 +179,7 @@ Level     110
 Room      11581
 Flags     0 0 0 0
 End
-Text       saida escondida~
-Body      aqui nao era pra mostrar nenhuma saida
-~
-Name      Anyte~
-IdNum     6
-Dated     1605562193
-Level     79
-Room      11312
-Flags     0 0 0 0
-End
-Text       saida escondida~
-Body      aqui tb nenhuma
-~
-Name      Anyte~
-IdNum     6
-Dated     1605562229
-Level     79
-Room      11313
-Flags     0 0 0 0
-End
-Text       hometown 3~
+Text      hometown 3~
 Body      centro do templo deve ser a hometown 3
 ~
 Name      Cansian~
@@ -297,5 +187,26 @@ IdNum     1
 Dated     1605562346
 Level     110
 Room      11315
+Flags     0 0 0 0
+End
+Text       sala das palavras~
+Body      nao era aqui a sala das palavras? que abria o buda? no devia ser pra leste?
+e era pra saida aparecer no look depois de aberta
+~
+Name      Anyte~
+IdNum     6
+Dated     1605661964
+Level     79
+Room      17853
+Flags     0 0 0 0
+End
+Text       sense life~
+Body      mobs que precisa de sense life pra ver tem como ver sem sense life
+~
+Name      Anyte~
+IdNum     6
+Dated     1605662531
+Level     79
+Room      17854
 Flags     0 0 0 0
 End

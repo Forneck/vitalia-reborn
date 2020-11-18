@@ -5121,7 +5121,7 @@ cerimônias.  Você pode seguir para o norte, em direção ao trono, pode ir
 para nordeste ou noroeste, continuando pelo Palácio, ou voltar para o pátio 
 à sul.
 ~
-176 44 0 0 0 1
+176 32812 0 0 0 1
 D0
 ~
 ~
@@ -5152,7 +5152,7 @@ dragões.  A adoração por dragões deste povo é tamanha, que por todos os
 lados que você olha, podem ser vistos retratos de dragões.  Você pode 
 seguir para leste, oeste, ou sul, pelo Palácio.
 ~
-176 44 0 0 0 1
+176 32812 0 0 0 1
 D1
 ~
 ~
@@ -5179,7 +5179,7 @@ entronizado, para ele promulgar os seus decretos ou para realizar
 cerimônias.  Você pode seguir para o noroeste ou sudoeste, pelo Palácio, ou 
 seguir para oeste em direção ao grande trono de ouro do imperador.
 ~
-176 44 0 0 0 1
+176 32812 0 0 0 1
 D3
 ~
 ~
@@ -5206,7 +5206,7 @@ entronizado, para ele promulgar os seus decretos ou para realizar
 cerimônias.  Você pode seguir para o nordeste ou sudeste, pelo Palácio, ou 
 seguir para leste em direção ao grande trono de ouro do imperador.
 ~
-176 44 0 0 0 1
+176 32812 0 0 0 1
 D1
 ~
 ~
@@ -5230,7 +5230,7 @@ local é usado para quando o imperador é entronizado, para ele promulgar os
 seus decretos ou para realizar cerimônias.  Você pode seguir para o 
 norte, saindo do Palácio, ou voltar para sudeste ou sudoeste.
 ~
-176 131116 0 0 0 1
+176 163884 0 0 0 1
 D0
 ~
 porta dupla madeira~
@@ -5320,7 +5320,7 @@ porta vermelha madeira~
 D1
 ~
 buda~
-0 -1 17854
+4 -1 17854
 D2
 ~
 porta vermelha madeira~
@@ -5543,7 +5543,7 @@ caminho.  Você pode seguir para oeste, ou sul, continuando pelo caminho.
 D0
 ~
 arbusto~
-0 -1 17865
+1 -1 17865
 D2
 ~
 ~

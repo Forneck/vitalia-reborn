@@ -3929,3 +3929,23 @@ Nov 17 16:30:29 2020 :: OLC: Cansian starts editing zone 131 allowed zone 0
 Nov 17 16:30:39 2020 :: OLC: Cansian stops editing zone 131 allowed zone 0
 Nov 17 16:30:50 2020 :: OLC: Cansian starts editing zone 131 allowed zone 0
 Nov 17 16:31:07 2020 :: OLC: Cansian stops editing zone 131 allowed zone 0
+Nov 17 18:41:34 2020 :: GenOLC: 'world/mob/132.mob' saved, 4070 bytes written.
+Nov 17 18:46:28 2020 :: OLC: Cansian starts editing zone 132 allowed zone 0
+Nov 17 18:46:46 2020 :: OLC: Cansian edits zone info for room 13217.
+Nov 17 18:46:46 2020 :: OLC: Cansian stops editing zone 132 allowed zone 0
+Nov 17 18:51:22 2020 :: OLC: Cansian starts editing zone 0 allowed zone 0
+Nov 17 18:51:29 2020 :: OLC: Cansian edits obj 40
+Nov 17 18:51:29 2020 :: OLC: Cansian stops editing zone 0 allowed zone 0
+Nov 17 18:52:05 2020 :: OLC: Cansian starts editing zone 0 allowed zone 0
+Nov 17 18:52:12 2020 :: OLC: Cansian edits obj 2
+Nov 17 18:52:12 2020 :: OLC: Cansian stops editing zone 0 allowed zone 0
+Nov 17 23:46:08 2020 :: OLC: Cansian starts editing zone 176 allowed zone 0
+Nov 17 23:46:26 2020 :: GenOLC: add_room: Updated existing room #17853.
+Nov 17 23:46:26 2020 :: OLC: Cansian edits room 17853.
+Nov 17 23:46:26 2020 :: GenOLC: save_rooms: Saving rooms in zone #176 (17600-17999).
+Nov 17 23:46:26 2020 :: OLC: Cansian stops editing zone 176 allowed zone 0
+Nov 18 13:54:36 2020 :: OLC: Cansian starts editing zone 176 allowed zone 0
+Nov 18 13:54:50 2020 :: GenOLC: add_room: Updated existing room #17864.
+Nov 18 13:54:50 2020 :: OLC: Cansian edits room 17864.
+Nov 18 13:54:50 2020 :: GenOLC: save_rooms: Saving rooms in zone #176 (17600-17999).
+Nov 18 13:54:50 2020 :: OLC: Cansian stops editing zone 176 allowed zone 0
