@@ -1326,6 +1326,7 @@ ACMD(do_suggestion)
           send_to_char(ch,"Sugestão de comando: %s %s\r\n",complete_cmd_info[comando].command, mob->player.name);
           extract_char(mob);
          }
+           send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
       }
           else if (calc_output[3] == 0.880797) {
          	if ((num = real_object(calc_output[4] * 10000) != NOTHING) {
@@ -1333,6 +1334,7 @@ ACMD(do_suggestion)
            send_to_char(ch,"Sugestão de comando: %s %s\r\n",complete_cmd_info[comando].command, object->name);
          extract_obj(object);
          	}
+         	  send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
       }
       else 
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
