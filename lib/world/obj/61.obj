@@ -23,19 +23,19 @@ arvore abertura~
 uma árvore colossal~
 Uma árvore colossal bloqueia o caminho para o oeste.~
 ~
-13 0 0 0 0 0 0 0 0 0 0 0 0
-1000 0 0 0
+28 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
 0 0 0 0 0
-E
-abertura~
-A abertura é muito apertada para que você possa passar por ela e parece
-que a árvore é oca por dentro.
-~
 E
 arvore~
 Esta árvore gigantesca deve ter pelo menos uns mil anos.   Seu tronco áspero,
 de um cinza pálido, está cheio de arranhões e marcas de garras.   Em seu lado oeste,
 há uma pequenina abertura, um pouco acima do solo.
+~
+E
+abertura~
+A abertura é muito apertada para que você possa passar por ela e parece
+que a árvore é oca por dentro.
 ~
 #6103
 galho longo cinzento~
@@ -145,7 +145,7 @@ Ela tem um tom profundo de amarelo e um forte perfume adocicado.
 ~
 #6111
 escudo redondo grande~
-Um grande escudo redondo~
+um grande escudo redondo~
 Um grande escudo redondo foi deixado aqui.~
 ~
 9 0 0 0 0 aj 0 0 0 0 0 0 0
