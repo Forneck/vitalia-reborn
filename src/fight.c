@@ -483,27 +483,27 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
 			"$n faz cócegas em $N quando $e #W $M.",	/* 1: 1..2 */
 		"Você faz cócegas em $N quando você #w $M.", "$n faz cócegas em você quando $e #W você."},
 		{
-			"$n barely #W $N.",	/* 2: 3..4 */
-		"You barely #w $N.", "$n barely #W you."},
+			"$n fracamente #W $N.",	/* 2: 3..4 */
+		"Você fracamente #w $N.", "$n fracamente #W você."},
 		{
 			"$n #W $N.",		/* 3: 5..6 */
-		"You #w $N.", "$n #W you."},
+		"Você #w $N.", "$n #W você."},
 		{
-			"$n #W $N hard.",	/* 4: 7..10 */
-		"You #w $N hard.", "$n #W you hard."},
+			"$n #W $N forte.",	/* 4: 7..10 */
+		"Você #w $N forte.", "$n #W você forte."},
 		{
-			"$n #W $N very hard.",	/* 5: 11..14 */
-		"You #w $N very hard.", "$n #W you very hard."},
+			"$n #W $N muito forte.",	/* 5: 11..14 */
+		"Você #w $N muito forte.", "$n #W você muito forte."},
 		{
-			"$n #W $N extremely hard.",	/* 6: 15..19 */
-		"You #w $N extremely hard.", "$n #W you extremely hard."},
+			"$n #W $N extremamente forte.",	/* 6: 15..19 */
+		"Você #w $N extremamente forte.", "$n #W você extremamente forte."},
 		{
-			"$n massacres $N to small fragments with $s #w.",	/* 7: 19..23 */
-		"You massacre $N to small fragments with your #w.",
-				"$n massacres you to small fragments with $s #w."},
+			"$n massacra $N em pequenos fragmentos com a #w $s.",	/* 7: 19..23 */
+		"Você massacra $N em pequenos fragmentos com a sua #w.",
+				"$n massacra você em pequenos fragmentos com a #w $s."},
 		{
-			"$n OBLITERATES $N with $s deadly #w!!",	/* 8: > 23 */
-		"You OBLITERATE $N with your deadly #w!!", "$n OBLITERATES you with $s deadly #w!!"}
+			"$n OBLITERA $N com a #w mortal $s!!",	/* 8: > 23 */
+		"Você OBLITERA $N com a sua #w mortal!!", "$n OBLITERA você com a #w mortal $s!!"}
 	};
 	w_type -= TYPE_HIT;			/* Change to base of table with text */
 	if (dam == 0)
