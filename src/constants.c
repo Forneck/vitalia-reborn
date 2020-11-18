@@ -243,6 +243,7 @@ const char *player_bits[] = {
   "TRNS",
   "HERETIC",
   "GHOST",
+  "AUTOPILOT",
   "\n"
 };
 
