@@ -1233,7 +1233,7 @@ ACMD(do_recall)
 ACMD(do_suggestion)
 {
    struct char_data *mob;
-   int vnum_mob;
+   int num;
    struct obj_data *object;
    struct fann *ann;
 	fann_type *calc_output;
@@ -1320,12 +1320,19 @@ ACMD(do_suggestion)
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
    else  if (calc_output[3] > 0){
       if (calc_output[3] == 0.5) {
-         if  (vnum_mob = real_mobile(calc_output[4] * 10000) != NOBODY){
-         mob = read_mobile(vnum_mob, REAL);
+         if  (num = real_mobile(calc_output[4] * 10000) != NOBODY){
+         mob = read_mobile(num, REAL);
          char_to_room(mob, 0);
           send_to_char(ch,"Sugestão de comando: %s %s\r\n",complete_cmd_info[comando].command, mob->player.name);
           extract_char(mob);
          }
+      }
+          else if (calc_output[3] == 0.880797) {
+         	if ((num = real_object(calc_output[4] * 10000) != NOTHING) {
+         	object = read_object(num, REAL);
+           send_to_char(ch,"Sugestão de comando: %s %s\r\n",complete_cmd_info[comando].command, object->name);
+         extract_obj(object);
+         	}
       }
       else 
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
