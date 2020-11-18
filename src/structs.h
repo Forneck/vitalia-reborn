@@ -239,6 +239,7 @@
 #define PLR_TRNS 22 /**< Player transcended */
 #define PLR_HERETIC 23 /* Player can't pray */
 #define PLR_GHOST 24 /* Player is a ghost */
+#define PLR_AUTO 25 /* Player is in a autopilot mode */
 
 /* Mobile flags: used by char_data.char_specials.act */
 #define MOB_SPEC            0   /**< Mob has a callable spec-proc */
@@ -306,6 +307,7 @@
 #define PRF_HITBAR 35
 #define PRF_AUTOTITLE 36
 #define PRF_NOCLAN      37   /**< Can't hear gossip channel */
+
 /** Total number of available PRF flags */
 #define NUM_PRF_FLAGS    38
 
