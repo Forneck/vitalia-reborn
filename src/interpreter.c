@@ -927,7 +927,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		{
 			output[2] = output[3] = output[4] = output[5] = 0;
 		}
-		if ((GET_LEVEL(ch) < LVL_GOD)||!CMD_IS("suggestion")||!CMD_IS("quit")){
+		if ((GET_LEVEL(ch) < LVL_GOD)&&!CMD_IS("suggestion")&&!CMD_IS("quit")){
 			fann_train(ann, input, output);
 		}
 		fann_save(ann, "etc/aventureiro.fann");
@@ -2353,7 +2353,7 @@ void autopilot_char(struct char_data *ch){
    }
    /*passar line para funcao */
    
-  if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
+  if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch) &&!CMD_IS("suggestion")&&!CMD_IS("quit") ) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
 				complete_cmd_info[comando].subcmd));
    fann_destroy(ann);
 }
