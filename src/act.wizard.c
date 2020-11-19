@@ -3365,7 +3365,7 @@ static struct set_struct
 	{
 	"trns", LVL_GOD, PC, BINARY},
 	{
-	   "dead", LVL_GOD, PC, BINARY},
+	   "ghost", LVL_GOD, PC, BINARY},
 	 {
 	    "auto", LVL_GOD, PC, BINARY},
 	{
