@@ -2334,7 +2334,7 @@ void autopilot_char(struct char_data *ch){
    calc_output[0] = calc_output[0] * (float) MAX_COMMAND;
    comando = fabs(calc_output[0]);
   
-     snprintf(line,sizeof(line),"  ");
+     snprintf(line,sizeof(line),"");
    /* copiar mob, obj ou player name para line */
    if (calc_output[2] != 0.5) {
       if (calc_output[3] == 0.5) {
@@ -2355,7 +2355,7 @@ void autopilot_char(struct char_data *ch){
    }
    /*passar line para funcao */
    
-  if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)&&strcmp("quit", complete_cmd_info[comando].command)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
+  if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
 				complete_cmd_info[comando].subcmd));
    fann_destroy(ann);
 }
