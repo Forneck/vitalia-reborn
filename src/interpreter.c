@@ -2355,7 +2355,7 @@ void autopilot_char(struct char_data *ch){
    }
    /*passar line para funcao */
    
-  if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)&&strcmp("quit", complete_cmd_info[cmd].command)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
+  if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)&&strcmp("quit", complete_cmd_info[comando].command)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
 				complete_cmd_info[comando].subcmd));
    fann_destroy(ann);
 }
