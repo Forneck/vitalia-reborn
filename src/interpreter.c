@@ -938,7 +938,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			send_to_char(ch, "OUTPUT: %f, %f, %f, %f, %f, %f, %d\r\n", output[0], output[1], output[2], output[3],
 						 output[4], output[5], cmd);
 			if (!CMD_IS("suggestion")&&!CMD_IS("quit"))
-			send_to_char(ch"Aprendido\r\n");
+			send_to_char(ch,"Aprendido\r\n");
 		}
 			fann_destroy(ann);
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd,
@@ -2273,7 +2273,7 @@ void autopilot_char(struct char_data *ch){
    int num;
    struct obj_data *object;
    struct char_data *mob;
-   char *line;
+   char *line[MAX_INPUT_LENGTH];
    struct fann *ann;
 	fann_type *calc_output;
 	ann = fann_create_from_file("etc/aventureiro.fann");
@@ -2355,7 +2355,7 @@ void autopilot_char(struct char_data *ch){
    }
    /*passar line para funcao */
    
-  if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
+  if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)&&strcmp("quit", complete_cmd_info[comando].command)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
 				complete_cmd_info[comando].subcmd));
    fann_destroy(ann);
 }
