@@ -2343,7 +2343,7 @@ void autopilot_char(struct char_data *ch){
          }
       }
       else if (calc_output[3] == 0.880797) {
-         	if ((num = real_object(calc_output[4] * 10000) != NOTHING) {
+         	if ((num = real_object(calc_output[4] * 10000) != NOTHING)) {
          	object = read_object(num, REAL);
          snprintf(line,sizeof(line),"%s",object->name);
          extract_obj(object);
