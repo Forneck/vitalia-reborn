@@ -1,7 +1,7 @@
 #23
 Vitalia~
 O Grande Festival~
-2300 2399 120 1 j 0 0 0 -1 -1
+2300 2399 120 1 jk 0 0 0 -1 -1
 M 0 2307 1 2317 	(o pequeno garoto)
 M 0 2315 1 2317 	(a vendedora)
 G 1 2327 20 -1 	(alguns brotos de alfafa)
@@ -63,7 +63,7 @@ E 1 2344 20 21 	(maquiagem para teatro)
 M 0 2350 1 2330 	(um cavalo robusto)
 M 0 2323 1 2330 	(um cigano ferreiro)
 E 1 2343 20 16 	(um martelo com cabo forrado de madre-pérolas)
-M 0 2322 1 2332 (um cigano)
+M 0 2322 1 2332 	(um cigano)
 E 1 2341 20 16 	(um taco de madeira)
 E 1 2342 20 7 	(um par de calças bufantes)
 M 0 2321 1 2375 	(uma cigana)

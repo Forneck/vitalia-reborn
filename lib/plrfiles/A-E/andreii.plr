@@ -6,26 +6,25 @@ Clas: 3
 Levl: 1
 Id  : 34
 Brth: 1605791470
-Plyd: 389
-Last: 1605791859
+Plyd: 3978
+Last: 1605795900
 Lmot: 1605791480
-Lnew: 1605791476
+Lnew: 1605793451
 Htwn: 1372
-Host: 138.204.26.63
+Host: 127.0.0.1
 Hite: 176
 Wate: 155
-Act : gh 0 0 0
+Act : hz 0 0 0
 Aff : 0 0 0 0
-Pref: efghnoBCDE abd 0 0
+Pref: bdefghklnopvABCDE abd 0 0
 Wimp: 7
 Room: 3001
-Lern: 1
-Hung: 19
-Thir: 19
+Badp: 1
+Hung: -1
+Thir: -1
 Hit : 24/24
 Mana : 100/100
-Move: 84/85
-Breath : 15/15
+Move: 85/85
 Str : 15/0
 Int : 7
 Wis : 11
@@ -37,4 +36,5 @@ Gold: 250
 Exp : 227
 Olc : 0
 Skil:
+224 12
 0 0

@@ -15,7 +15,7 @@ Host: 177.35.231.240
 Hite: 174
 Wate: 123
 Alin: 50
-Act : hy 0 0 0
+Act : h 0 0 0
 Aff : 0 0 0 0
 Pref: efghkno d 0 0
 Wimp: 5
@@ -46,9 +46,9 @@ Skil:
 251 90
 0 0
 Alis: 2
- minor
- c 'minor healing' $*
-1
  cure
  c 'cure light'
 0
+ minor
+ c 'minor healing' $*
+1

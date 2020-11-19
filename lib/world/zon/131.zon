@@ -1,16 +1,16 @@
 #131
 Vitalia~
 Torin~
-13100 13199 200 1 j 0 0 0 -1 -1
-M 0 13101 3 13101
-E 1 13100 99 16
-E 1 13118 100 11
+13100 13199 200 1 jk 0 0 0 -1 -1
+M 0 13101 3 13101 	(um guarda preguiçoso)
+E 1 13100 99 16 	(uma antiga espada enferrujada)
+E 1 13118 100 11 	(um escudo enferrujado)
 D 0 13101 1 1 	(A Entrada)
 D 0 13101 3 1 	(A Entrada)
-M 0 13102 10 13104
-E 1 13113 99 17
-M 0 13107 1 13103
-E 1 13105 10 20
+M 0 13102 10 13104 	(uma sombra)
+E 1 13113 99 17 	(um pedaço da sombra)
+M 0 13107 1 13103 	(o monstro da escuridão)
+E 1 13105 10 20 	(o dente de Bohemoth)
 M 0 13122 1 13143 	(o Rei das Sombras)
 E 1 13139 99 1 	(o anel do Rei)
 E 1 13138 99 12 	(o manto do Rei)
@@ -65,13 +65,13 @@ E 1 13129 99 11 	(uma chapa universal fantasmagórica)
 M 0 13133 5 13152 	(um soldado fantasmagórico de Torin)
 E 1 13126 99 5 	(uma armadura fantasmagórica)
 E 1 13127 99 7 	(uma perneira fantasmagórica)
-M 0 13106 1 13149
+M 0 13106 1 13149 	(Sharel)
 E 1 13130 99 16 	(a espada longa adornada de Sharel)
 M 0 13132 5 13147 	(um soldado fantasmagórico de Torin)
 E 1 13119 99 11 	(um escudo fantasmagórico com o Símbolo de Torin)
-M 0 13102 10 13106
+M 0 13102 10 13106 	(uma sombra)
 E 1 13113 99 17 	(um pedaço da sombra)
-M 0 13102 10 13108
+M 0 13102 10 13108 	(uma sombra)
 E 1 13113 99 17 	(um pedaço da sombra)
 D 0 13108 0 1 	(Antes Dos Portões)
 M 0 13129 4 13115 	(o cidadão fantasmagórico de Torin)
@@ -80,7 +80,7 @@ E 1 13112 99 8 	(uma sandália gasta)
 M 0 13130 4 13115 	(o cidadão fantasmagórico de Torin)
 E 1 13106 99 5 	(o roupão de um cidadão)
 E 1 13112 99 8 	(uma sandália gasta)
-M 0 13102 10 13110
+M 0 13102 10 13110 	(uma sombra)
 E 1 13113 99 17 	(um pedaço da sombra)
 M 0 13126 1 13112 	(o guarda sombrio)
 E 1 13113 99 17 	(um pedaço da sombra)
@@ -98,7 +98,7 @@ D 0 13130 1 1 	(Os Corredores)
 M 0 13136 9 13169 	(o bajulador que antecede a corte do rei)
 D 0 13125 3 1 	(Uma Pequena Loja)
 M 0 13134 5 13118 	(a névoa)
-M 0 13108 1 13122
+M 0 13108 1 13122 	(Garin)
 E 1 13125 1 10 	(um par de luvas de camaleão )
 E 1 13124 1 7 	(um par de calças de camaleão)
 E 1 13123 1 5 	(uma camisa de camaleão)
@@ -109,15 +109,15 @@ M 0 13131 1 13117 	(a bola azul brilhante)
 D 0 13114 2 1 	(Deja-vu)
 M 0 13128 1 13114 	(o fantasma de uma jovem senhora)
 D 0 13113 0 1 	(O Quarto Dos Guardas)
-M 0 13103 3 13113
+M 0 13103 3 13113 	(um homem-serpente)
 G 1 13101 1 -1 	(uma pequena chave marrom)
-M 0 13103 3 13113
-M 0 13103 3 13113
-M 0 13105 1 13116
+M 0 13103 3 13113 	(um homem-serpente)
+M 0 13103 3 13113 	(um homem-serpente)
+M 0 13105 1 13116 	(uma fonte animada)
 D 0 13116 1 1 	(A Praça)
 D 0 13102 1 1 	(O Caminho Oeste)
 D 0 13111 3 1 	(O Caminho Leste)
-M 0 13102 10 13119
+M 0 13102 10 13119 	(uma sombra)
 D 0 13120 0 2 	(Antes Dos Portões)
 S
 $
