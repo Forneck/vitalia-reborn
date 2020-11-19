@@ -1074,6 +1074,11 @@ void heartbeat(int heart_pulse)
 		msdp_update();
 		next_tick--;
 	}
+	
+		if (!(heart_pulse % PASSES_PER_SEC / 5))
+	{							/* EVERY 200ms reaction time */
+		autopilot_process();
+	}
 
 	if (!(heart_pulse % PULSE_ZONE))
 		zone_update();
