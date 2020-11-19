@@ -1075,8 +1075,8 @@ void heartbeat(int heart_pulse)
 		next_tick--;
 	}
 	
-		if (!(heart_pulse % PASSES_PER_SEC / 5))
-	{							/* EVERY 200ms reaction time */
+		if (!(heart_pulse % PASSES_PER_SEC))
+	{							/* EVERY sec - later change to sec / 5 = 200ms reaction time */
 		autopilot_process();
 	}
 
