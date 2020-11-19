@@ -2270,6 +2270,7 @@ void autopilot_char(struct char_data *ch){
  
    int num;
    struct obj_data *object;
+   struct char_data *mob;
    char *line[MAX_INPUT_LENGHT];
    struct fann *ann;
 	fann_type *calc_output;
@@ -2351,8 +2352,6 @@ void autopilot_char(struct char_data *ch){
    /*passar line para funcao */
    ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
 				complete_cmd_info[comando].subcmd));
-		
-		
    fann_destroy(ann);
 }
 
