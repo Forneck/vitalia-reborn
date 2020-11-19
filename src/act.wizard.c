@@ -3874,10 +3874,10 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 	case 61:
 		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_TRNS);
 		break;
-			case 61:
+			case 62:
 		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_GHOST);
 		break;
-			case 61:
+			case 63:
 		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_AUTO);
 		break;
 	default:
