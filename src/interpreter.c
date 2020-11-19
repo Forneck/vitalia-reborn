@@ -2273,7 +2273,7 @@ void autopilot_char(struct char_data *ch){
    int num;
    struct obj_data *object;
    struct char_data *mob;
-   char *line[MAX_INPUT_LENGTH];
+   char line[MAX_INPUT_LENGTH];
    struct fann *ann;
 	fann_type *calc_output;
 	ann = fann_create_from_file("etc/aventureiro.fann");
