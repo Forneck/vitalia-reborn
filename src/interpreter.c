@@ -2334,6 +2334,7 @@ void autopilot_char(struct char_data *ch){
   
      snprintf(line,sizeof(line),"  ");
    /* copiar mob, obj ou player name para line */
+   if (calc_output[2] != 0.5) {
       if (calc_output[3] == 0.5) {
          if  (num = real_mobile(calc_output[4] * 10000) != NOBODY){
          mob = read_mobile(num, REAL);
@@ -2349,8 +2350,10 @@ void autopilot_char(struct char_data *ch){
          extract_obj(object);
          	}
       }
+   }
    /*passar line para funcao */
-   ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
+   
+  if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
 				complete_cmd_info[comando].subcmd));
    fann_destroy(ann);
 }
