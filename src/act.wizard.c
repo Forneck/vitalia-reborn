@@ -3365,6 +3365,10 @@ static struct set_struct
 	{
 	"trns", LVL_GOD, PC, BINARY},
 	{
+	   "dead", LVL_GOD, PC, BINARY},
+	 {
+	    "auto", LVL_GOD, PC, BINARY},
+	{
 	"\n", 0, BOTH, MISC}
 };
 
@@ -3869,6 +3873,12 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 		break;
 	case 61:
 		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_TRNS);
+		break;
+			case 61:
+		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_GHOST);
+		break;
+			case 61:
+		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_AUTO);
 		break;
 	default:
 		send_to_char(ch, "Can't set that!\r\n");
