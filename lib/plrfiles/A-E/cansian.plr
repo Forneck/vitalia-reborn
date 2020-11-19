@@ -6,8 +6,8 @@ Clas: 4
 Levl: 110
 Id  : 1
 Brth: 1601790482
-Plyd: 716575
-Last: 1605795918
+Plyd: 719360
+Last: 1605802215
 Lmot: 1605455027
 Lnew: 1605123013
 Htwn: 1372
@@ -18,7 +18,7 @@ Alin: 322
 Act : 0 0 0 0
 Aff : 0 0 0 0
 Pref: efghimnoqrvxzAB d 0 0
-Room: 3001
+Room: 65535
 Lern: 1
 Hit : 2000/2000
 Mana : 100/100

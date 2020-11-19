@@ -4031,3 +4031,12 @@ Nov 19 13:12:19 2020 :: OLC: Andreii stops editing zone 0 allowed zone 0
 Nov 19 13:42:49 2020 :: OLC: Andreii tried to edit zone 30 (allowed zone 0).
 Nov 19 14:19:28 2020 :: OLC: Andreii tried to edit zone 30 (allowed zone 0).
 Nov 19 14:19:32 2020 :: OLC: Andreii tried to edit zone 30 (allowed zone 0).
+Nov 19 14:34:00 2020 :: OLC: Cansian tried to edit zone 30 (allowed zone 0).
+Nov 19 14:34:10 2020 :: OLC: Cansian starts editing zone 30 allowed zone 0
+Nov 19 14:34:29 2020 :: OLC: Cansian edits zone info for room 3033.
+Nov 19 14:34:29 2020 :: OLC: Cansian stops editing zone 30 allowed zone 0
+Nov 19 14:34:42 2020 :: OLC: Cansian starts editing zone 30 allowed zone 0
+Nov 19 14:34:55 2020 :: OLC: Cansian edits shop 3000
+Nov 19 14:34:55 2020 :: OLC: Cansian stops editing zone 30 allowed zone 0
+Nov 19 15:32:31 2020 :: OLC: Andreii stops editing zone 0 allowed zone 0
+Nov 19 15:37:04 2020 :: OLC: Andreii stops editing zone 0 allowed zone 0
