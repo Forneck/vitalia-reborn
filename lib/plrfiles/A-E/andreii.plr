@@ -6,19 +6,19 @@ Clas: 3
 Levl: 11
 Id  : 34
 Brth: 1605791470
-Plyd: 7780
-Last: 1605802795
+Plyd: 9922
+Last: 1605816010
 Lmot: 1605791480
 Lnew: 1605799951
 Htwn: 1372
-Host: 127.0.0.1
+Host: 138.204.26.63
 Hite: 176
 Wate: 155
-Act : hz 0 0 0
+Act : gh 0 0 0
 Aff : 0 0 0 0
-Pref: bdefgklnopvBCEF abd 0 0
+Pref: bdefgklnopvBE abd 0 0
 Wimp: 7
-Room: 65535
+Room: 3001
 Lern: 19
 Hung: -1
 Thir: -1

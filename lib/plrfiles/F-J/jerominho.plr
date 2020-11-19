@@ -6,10 +6,10 @@ Clas: 6
 Levl: 15
 Id  : 8
 Brth: 1603329205
-Plyd: 3799
-Last: 1604692613
-Lmot: 1603329319
-Lnew: 1604054785
+Plyd: 4954
+Last: 1605805116
+Lmot: 1605804035
+Lnew: 1605803996
 Htwn: 1372
 Host: 200.217.174.249
 Hite: 181
@@ -18,11 +18,11 @@ Alin: 111
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoABCDEF abd 0 0
-Room: 65535
-Hit : 165/165
+Room: 3001
+Thir: 9
+Hit : 31/165
 Mana : 157/157
 Move: 131/131
-Breath : 0/15
 Str : 16/0
 Int : 13
 Wis : 10

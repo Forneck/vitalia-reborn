@@ -210,7 +210,7 @@ Level     79
 Room      17854
 Flags     0 0 0 0
 End
-Text       fly~
+Text      fly~
 Body      Comandos fly e land nao implementados. Nao ta tendo que usar o comando fly pra entrar em salas que precisa estar voando.
 "< 801Hp 1214Mn 209Mv > 
 land
@@ -225,5 +225,15 @@ IdNum     6
 Dated     1605756277
 Level     80
 Room      10812
+Flags     0 0 0 0
+End
+Text       quadro sem cores~
+Body      Quadro de Mid nao ta aceitando utilizacao de cores aparentemente
+~
+Name      Anyte~
+IdNum     6
+Dated     1605805052
+Level     80
+Room      3000
 Flags     0 0 0 0
 End
