@@ -7,7 +7,7 @@ Levl: 10
 Id  : 26
 Brth: 1604518655
 Plyd: 7071
-Last: 1605552274
+Last: 1605742880
 Lmot: 1605526095
 Lnew: 1605239570
 Htwn: 1372
@@ -19,11 +19,12 @@ Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: abhnoBCE a 0 0
 Room: 3001
-Hung: 15
-Thir: 3
+Hung: 14
+Thir: 2
 Hit : 144/114
-Mana : 143/175
-Move: 117/98
+Mana : 163/175
+Move: 128/98
+Breath : 0/15
 Str : 11/0
 Int : 13
 Wis : 11
@@ -41,8 +42,8 @@ Skil:
 88 25
 0 0
 Affs:
-39 100 4 1 0 0 0 0
-19 4 0 29 16 0 0 0
+19 3 0 29 16 0 0 0
+39 99 4 1 0 0 0 0
 0 0 0 0 0 0 0 0
 Alis: 3
  1

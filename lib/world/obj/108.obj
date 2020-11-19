@@ -1878,16 +1878,16 @@ Uma bela maçã de ouro foi jogada aqui.~
 0 0 0 0
 5 2000000 200000 0 0
 E
+inscricoes~
+                              <=-À Mais Bela -=>
+~
+E
 maca ouro pomo discordia~
 Você observa o fruto que deu origem a guerra de Tróia.  O pomo da discórdia,
 incorporada por uma bela maçã de ouro, que foi jogada por Éris, a deusa da
 discórdia, entre as deusas Atena, Hera e Afrodite.  E que gerou uma disputa
 entre as três para se saber quem era "à mais bela".  Você observa a bela
 maçã de ouro e percebe algumas inscrições esculpidas no ouro.
-~
-E
-inscricoes~
-                              <=-À Mais Bela -=>
 ~
 #10917
 portal magico pegaso~
@@ -1896,7 +1896,7 @@ Um belo portal mágico foi aberto aqui, através dele você observa a paz.~
 ~
 26 aegiq 0 0 0 0 0 0 0 0 0 0 0
 10941 0 0 0
-100 5000000 500000 0 0
+100 5000000 500000 0 999
 E
 portal magico pegaso~
 Você observa um magnífico portal mágico.  Através dele você observa uma

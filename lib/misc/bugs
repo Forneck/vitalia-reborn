@@ -189,7 +189,7 @@ Level     110
 Room      11315
 Flags     0 0 0 0
 End
-Text       sala das palavras~
+Text      sala das palavras~
 Body      nao era aqui a sala das palavras? que abria o buda? no devia ser pra leste?
 e era pra saida aparecer no look depois de aberta
 ~
@@ -200,7 +200,7 @@ Level     79
 Room      17853
 Flags     0 0 0 0
 End
-Text       sense life~
+Text      sense life~
 Body      mobs que precisa de sense life pra ver tem como ver sem sense life
 ~
 Name      Anyte~
@@ -208,5 +208,22 @@ IdNum     6
 Dated     1605662531
 Level     79
 Room      17854
+Flags     0 0 0 0
+End
+Text       fly~
+Body      Comandos fly e land nao implementados. Nao ta tendo que usar o comando fly pra entrar em salas que precisa estar voando.
+"< 801Hp 1214Mn 209Mv > 
+land
+Voc aterrissa.
+< 801Hp 1214Mn 209Mv > 
+fly
+Voc levanta vo.
+< 801Hp 1214Mn 209Mv > "
+~
+Name      Anyte~
+IdNum     6
+Dated     1605756277
+Level     80
+Room      10812
 Flags     0 0 0 0
 End

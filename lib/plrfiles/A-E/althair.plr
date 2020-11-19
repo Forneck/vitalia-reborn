@@ -1,31 +1,31 @@
 Name: Althair
 Pass: Al0/4XKfoKti2
-Titl: the Wolf Cub
+Titl: o Raposinha
 Sex : 1
 Clas: 6
-Levl: 12
+Levl: 13
 Id  : 20
 Brth: 1603768097
-Plyd: 155981
-Last: 1605731386
+Plyd: 164727
+Last: 1605791431
 Lmot: 1605721915
 Lnew: 1605129579
 Htwn: 1372
 Host: 138.204.26.63
 Hite: 195
 Wate: 172
-Alin: 24
+Alin: 224
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDE abde 0 0
 Wimp: 30
 Room: 3001
-Lern: 4
-Hung: 18
-Thir: 4
-Hit : 193/146
-Mana : 147/140
-Move: 138/118
+Lern: 2
+Hung: 2
+Thir: 2
+Hit : 205/155
+Mana : 152/145
+Move: 141/121
 Str : 16/0
 Int : 14
 Wis : 12
@@ -33,21 +33,23 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Gold: 32171
-Exp : 760065
+Gold: 27124
+Exp : 1148951
 Olc : 0
 ScrW: 44
 Skil:
+13 30
 16 90
 21 30
 42 90
 44 90
 63 90
 93 30
+95 90
 224 90
 251 90
 0 0
-Alis: 8
+Alis: 10
  5reinos
  n;n;n;n;n;n;n;n;n;n;n;n
 1
@@ -71,4 +73,10 @@ Alis: 8
 1
  sg
  save;sug
+1
+ food
+ cast 'create berries';eat mor
+1
+ nectar
+ cast 'create Water' cant;drink cantil;pour cantil fora
 1

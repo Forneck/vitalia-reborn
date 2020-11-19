@@ -731,16 +731,16 @@ D5
 O altar.
 ~
 altar tampo~
-1 -1 11400
-E
-altar~
-Parece haver algo embaixo desse altar. Talvez você consiga movê-lo.
-~
+3 -1 11400
 E
 fresta luz algo~
 Você aproxima seus olhos da fresta, deparando-se com uma espécie de passagem
 cercada de luz.  Talvez seja possível alcançá-la, se abrir um pouco mais a
 fresta, movendo o tampo do altar.
+~
+E
+altar~
+Parece haver algo embaixo desse altar. Talvez você consiga movê-lo.
 ~
 S
 #3940

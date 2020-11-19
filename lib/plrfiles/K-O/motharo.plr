@@ -1,31 +1,30 @@
 Name: Motharo
 Pass: ModL.5YHLP/kM
-Titl: the Wanderer
+Titl: o Raposa
 Sex : 1
 Clas: 6
-Levl: 37
+Levl: 38
 Id  : 25
 Brth: 1604182960
-Plyd: 58507
-Last: 1605731871
+Plyd: 60675
+Last: 1605791690
 Lmot: 1605614458
 Lnew: 1605382525
 Htwn: 1372
 Host: 187.66.23.112
 Hite: 178
 Wate: 158
-Alin: -9
+Alin: 9
 Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDEF abd 0 0
 Wimp: 20
-Room: 3001
-Lern: 16
-Hung: 24
-Thir: 24
-Hit : 438/453
-Mana : 270/270
-Move: 206/196
+Room: 1627
+Lern: 18
+Hung: 12
+Hit : 457/462
+Mana : 275/275
+Move: 210/200
 Str : 16/0
 Int : 13
 Wis : 13
@@ -33,9 +32,9 @@ Dex : 14
 Con : 15
 Cha : 11
 Ac  : 100
-Gold: 521056
+Gold: 577154
 Bank: 200000
-Exp : 10474958
+Exp : 11183807
 Olc : 0
 Skil:
 16 90
@@ -57,9 +56,7 @@ Skil:
 252 90
 0 0
 Affs:
-96 14 0 61 0 16 0 0
-96 14 -4 17 0 0 0 0
-36 25 0 33 256 0 0 0
+36 42 0 33 256 0 0 0
 0 0 0 0 0 0 0 0
 Alis: 9
  sanc
