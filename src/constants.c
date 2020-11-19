@@ -240,6 +240,7 @@ const char *player_bits[] = {
   "IBT_IDEA",
   "IBT_TYPO",
   "HTHIEF",
+  "JAIL",
   "TRNS",
   "HERETIC",
   "GHOST",
