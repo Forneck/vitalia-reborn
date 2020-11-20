@@ -1305,6 +1305,7 @@ ACMD(do_suggestion)
    if (comando < 432){
    move_output = fann_run(ann_move, input);
    calc_output[0] = move_output[0] * (float) MAX_COMMAND;
+   comando = fabs(calc_output[0]);
    fann_destroy(ann_move);
    }
    
