@@ -1236,8 +1236,13 @@ ACMD(do_suggestion)
    int num;
    struct obj_data *object;
    struct fann *ann;
+   struct fann *ann_move;
 	fann_type *calc_output;
+	fann_type *move_output;
+	
 	ann = fann_create_from_file("etc/aventureiro.fann");
+	ann_move = fann_create_from_file("etc/move.fann");
+	
 	fann_type input[29];
 	int grupo;
 	int count_obj = 0;
@@ -1296,6 +1301,13 @@ ACMD(do_suggestion)
 	calc_output = fann_run(ann, input);
    calc_output[0] = calc_output[0] * (float) MAX_COMMAND;
    comando = fabs(calc_output[0]);
+   
+   if (comando < 432){
+   move_output = fann_run(ann_move, input);
+   calc_output[0] = move_output[0] * (float) MAX_COMMAND;
+   fann_destroy(ann_move);
+   }
+   
    if (GET_IDNUM(ch) == 20)
    {
       send_to_char(ch,"output: %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],calc_output[2],calc_output[3],calc_output[4],calc_output[5]);
