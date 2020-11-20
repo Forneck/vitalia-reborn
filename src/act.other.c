@@ -1303,13 +1303,14 @@ ACMD(do_suggestion)
    calc_output[0] = calc_output[0] * (float) MAX_COMMAND;
    comando = fabs(calc_output[0]);
    
+   
    if (comando < 432){
     run_move = 1;
    move_output = fann_run(ann_move, input);
    move_output[0] = move_output[0] * (float) NUM_OF_DIRS;
    calc_output[0] = move_output[0];
    comando = fabs(move_output[0]);
-   fann_destroy(ann_move);
+   
    }
    
    if (GET_IDNUM(ch) == 20)
@@ -1326,6 +1327,7 @@ ACMD(do_suggestion)
       send_to_char(ch,"Nenhum comando sugerido para você.\r\n");
    }
  
+    if (!run_move) {
     for (tries = 0; tries < 10; tries++)
     {
      calc_output = fann_run(ann, input);
@@ -1333,6 +1335,7 @@ ACMD(do_suggestion)
    comando = fabs(calc_output[0]);
     if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch))
       continue;
+    }
     }
       if (complete_cmd_info[comando].minimum_level  > GET_LEVEL(ch))
   send_to_char(ch, "Comando sugerido acima do teu nível.\r\n");
@@ -1362,5 +1365,7 @@ ACMD(do_suggestion)
  }
    else
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
+   
    fann_destroy(ann);
+   fann_destroy(ann_move);
 }
