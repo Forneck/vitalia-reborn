@@ -615,7 +615,7 @@ ACMD(do_gen_comm)
 		add_history(ch, msg, hist_type[subcmd]);
 	}
 	if (!emoting)
-		snprintf(buf1, sizeof(buf1), "$n %ss, '%s'", com_msgs[subcmd][1], argument);
+		snprintf(buf1, sizeof(buf1), "$n %s, '%s'", com_msgs[subcmd][1], argument);
 
 	/* Now send all the strings out. */
 	for (i = descriptor_list; i; i = i->next)
