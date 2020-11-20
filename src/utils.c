@@ -529,7 +529,7 @@ void stop_follower(struct char_data *ch)
 
   if (AFF_FLAGGED(ch, AFF_CHARM)) {
     act("Você percebe que $N é $X(um,uma) estúpid$R!", FALSE, ch, 0, ch->master, TO_CHAR);
-    act("$n percebe que $N é $X(um,uma) estépid$R!", FALSE, ch, 0, ch->master, TO_NOTVICT);
+    act("$n percebe que $N é $X(um,uma) estúpid$R!", FALSE, ch, 0, ch->master, TO_NOTVICT);
     act("$n não gosta de você!", FALSE, ch, 0, ch->master, TO_VICT);
     if (affected_by_spell(ch, SPELL_CHARM))
       affect_from_char(ch, SPELL_CHARM);
