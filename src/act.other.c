@@ -1314,17 +1314,19 @@ ACMD(do_suggestion)
    
    if (GET_IDNUM(ch) == 20)
    {
-      if (run_move)
+      if (run_move) {
       send_to_char(ch,"move output: %f %f %d\r\n",move_output[0],move_output[1],comando);
-      else
+      }
+      else {
       send_to_char(ch,"output: %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],calc_output[2],calc_output[3],calc_output[4],calc_output[5]);
+      }
    }
    if ((comando == MAX_COMMAND) || (comando == 0))
    {
       send_to_char(ch,"Nenhum comando sugerido para você.\r\n");
    }
  
-    for (tries = 0; tries < 5; tries++)
+    for (tries = 0; tries < 10; tries++)
     {
      calc_output = fann_run(ann, input);
    calc_output[0] = calc_output[0] * (float) MAX_COMMAND;
