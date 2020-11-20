@@ -11,6 +11,5 @@
 * Made by Cansian
 
 */
-#include "floatfann.h"
 
-void ann_move_train(struct char_data *ch,	room_rnum was_in, room_rnum going_to);
+void ann_move_train(struct char_data *ch, int dir, room_rnum going_to);
