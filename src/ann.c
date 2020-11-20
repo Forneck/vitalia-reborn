@@ -1,4 +1,6 @@
 
+#include "conf.h"
+#include "sysdep.h"
 #include "structs.h"
 #include "utils.h"
 #include "./include/floatfann.h"
@@ -6,20 +8,15 @@
 
 void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
      struct fann *ann;
-	
-	ann = fann_create_from_file("etc/move.fann");
 	fann_type input[29];
 	fann_type output[2];
+	struct obj_data *object;
    int grupo;
 	int count_obj = 0;
-	int comando = 0;
    int tries;
-    if ((GET_LEVEL(ch) >= LVL_GOD) || IS_NPC(ch))
-    {
-       send_to_char(ch,"Você já deveria ter experiência suficiente para dar as  sugestões.\r\n");
-       return;
-    }
-    
+   
+   ann = fann_create_from_file("etc/move.fann");
+   
     /* verifica grupo e inventario */
 	if (GROUP(ch) != NULL)
 		grupo = 1;
