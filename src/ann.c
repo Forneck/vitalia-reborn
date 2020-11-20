@@ -77,7 +77,7 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
 	input[27] = (float) GET_DAMROLL(ch) / 100;
 	input[28] = (float) count_obj / 100;
    
-   output[0] = (float) ((dir + 1) / NUM_OF_DIRS);
+   output[0] = (float) ( dir/ NUM_OF_DIRS);
    output[1] = (float)  GET_ROOM_VNUM(going_to) / 100000;
    
 		fann_train(ann, input, output);
