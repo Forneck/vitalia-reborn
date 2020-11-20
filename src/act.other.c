@@ -1307,9 +1307,9 @@ ACMD(do_suggestion)
    if (comando < 432){
     run_move = 1;
    move_output = fann_run(ann_move, input);
-   move_output[0] = (move_output[0] * (float) NUM_OF_DIRS) + 1;
-   calc_output[0] = move_output[0];
-   comando = fabs(move_output[0]);
+   calc_output[0] = (move_output[0] * (float) NUM_OF_DIRS);
+   calc_output[0] = move_output[0] + 1;
+   comando = fabs(calc_output[0]);
    
    }
    
