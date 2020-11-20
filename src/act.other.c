@@ -1247,6 +1247,7 @@ ACMD(do_suggestion)
 	int grupo;
 	int count_obj = 0;
 	int comando = 0;
+	int run_move = 0;
    int tries;
     if ((GET_LEVEL(ch) >= LVL_GOD) || IS_NPC(ch))
     {
@@ -1313,6 +1314,9 @@ ACMD(do_suggestion)
    
    if (GET_IDNUM(ch) == 20)
    {
+      if (run_move)
+      send_to_char(ch,"move output: %f %f %d\r\n",move_output[0],move_output[1],comando);
+      else
       send_to_char(ch,"output: %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],calc_output[2],calc_output[3],calc_output[4],calc_output[5]);
    }
    if ((comando == MAX_COMMAND) || (comando == 0))
