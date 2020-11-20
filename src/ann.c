@@ -3,6 +3,23 @@
 #include "sysdep.h"
 #include "structs.h"
 #include "utils.h"
+#include "comm.h"
+#include "interpreter.h"
+#include "handler.h"
+#include "db.h"
+#include "spells.h"
+#include "screen.h"
+#include "house.h"
+#include "constants.h"
+#include "dg_scripts.h"
+#include "act.h"
+#include "spec_procs.h"
+#include "class.h"
+#include "fight.h"
+#include "mail.h"				/* for has_mail() */
+#include "shop.h"
+#include "quest.h"
+#include "modify.h"
 #include "./include/floatfann.h"
 #include "ann.h"
 
@@ -13,7 +30,6 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
 	struct obj_data *object;
    int grupo;
 	int count_obj = 0;
-   int tries;
    
    ann = fann_create_from_file("etc/move.fann");
    
