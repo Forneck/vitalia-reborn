@@ -668,7 +668,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			   o = cmd, arg = vnum -- forneck */
 			output[0] = ((float) cmd / 784);
 			output[1] = 1/(1+exp(-CMD_TYPE));
-			output[2] = 1/(1+exp(-skill->vnum));
+			output[2] = (float) skill->vnum/MAX_SKILLS;
 			output[3] = 1/(1+exp(- CMD_ARG_SKILL));
 			if (type2 == 1)		/* mob */
 			{
