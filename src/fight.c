@@ -477,33 +477,33 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
 		   "slashes") */
 
 		{
-			"$n tenta #w $N, mas erra.",	/* 0: 0 */
-		"Você tenta #w $N, mas erra.", "$n tenta #w você, mas erra."},
+			"$n tenta #W $N, mas erra.",	/* 0: 0 */
+		"Você tenta #W $N, mas erra.", "$n tenta #W você, mas erra."},
 		{
-			"$n faz cócegas em $N quando $e #W $M.",	/* 1: 1..2 */
-		"Você faz cócegas em $N quando você #w $M.", "$n faz cócegas em você quando $e #W você."},
+			"$n faz cócegas em $N quando $e #w $M.",	/* 1: 1..2 */
+		"Você faz cócegas em $N quando você #w $M.", "$n faz cócegas em você quando $e #w você."},
 		{
-			"$n fracamente #W $N.",	/* 2: 3..4 */
-		"Você fracamente #w $N.", "$n fracamente #W você."},
+			"$n fracamente #w $N.",	/* 2: 3..4 */
+		"Você fracamente #w $N.", "$n fracamente #w você."},
 		{
-			"$n #W $N.",		/* 3: 5..6 */
-		"Você #w $N.", "$n #W você."},
+			"$n #w $N.",		/* 3: 5..6 */
+		"Você #w $N.", "$n #w você."},
 		{
-			"$n #W $N forte.",	/* 4: 7..10 */
-		"Você #w $N forte.", "$n #W você forte."},
+			"$n #w $N forte.",	/* 4: 7..10 */
+		"Você #w $N forte.", "$n #w você forte."},
 		{
-			"$n #W $N muito forte.",	/* 5: 11..14 */
-		"Você #w $N muito forte.", "$n #W você muito forte."},
+			"$n #w $N muito forte.",	/* 5: 11..14 */
+		"Você #w $N muito forte.", "$n #w você muito forte."},
 		{
-			"$n #W $N extremamente forte.",	/* 6: 15..19 */
-		"Você #w $N extremamente forte.", "$n #W você extremamente forte."},
+			"$n #w $N extremamente forte.",	/* 6: 15..19 */
+		"Você #w $N extremamente forte.", "$n #w você extremamente forte."},
 		{
-			"$n massacra $N em pequenos fragmentos com a #w $s.",	/* 7: 19..23 */
+			"$n massacra $N em pequenos fragmentos com a #w $l.",	/* 7: 19..23 */
 		"Você massacra $N em pequenos fragmentos com a sua #w.",
-				"$n massacra você em pequenos fragmentos com a #w $s."},
+				"$n massacra você em pequenos fragmentos com a #w $l."},
 		{
-			"$n OBLITERA $N com a #w mortal $s!!",	/* 8: > 23 */
-		"Você OBLITERA $N com a sua #w mortal!!", "$n OBLITERA você com a #w mortal $s!!"}
+			"$n OBLITERA $N com a #w mortal $l!!",	/* 8: > 23 */
+		"Você OBLITERA $N com a sua #w mortal!!", "$n OBLITERA você com a #w mortal $l!!"}
 	};
 	w_type -= TYPE_HIT;			/* Change to base of table with text */
 	if (dam == 0)
