@@ -1301,15 +1301,14 @@ ACMD(do_suggestion)
 
  
    move_output = fann_run(ann_move, input);
-   calc_output[0] = (move_output[0] * (float) NUM_OF_DIRS);
-   calc_output[0] = move_output[0] + 1;
-   comando = fabs(calc_output[0]);
    
-   
+   move_output[0] = (move_output[0] * (float) NUM_OF_DIRS);
+   move_output[0] = move_output[0] + 1;
+   comando = fabs(move_output[0]);
+ 
    if (GET_IDNUM(ch) == 20)
    {
-      send_to_char(ch,"move output: %f %f %d\r\n",move_output[0],move_output[1],comando);
-      send_to_char(ch,"output: %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],calc_output[2],calc_output[3],calc_output[4],calc_output[5]);
+      send_to_char(ch,"move output: %f %f %d\r\n",move_output[0],move_output[1],comando);   
    }
    
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
@@ -1337,6 +1336,11 @@ ACMD(do_suggestion)
      return;
   }
   
+   if (GET_IDNUM(ch) == 20)
+   {
+     send_to_char(ch,"output: %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],calc_output[2],calc_output[3],calc_output[4],calc_output[5]);
+   }
+   
   if (calc_output[3] > 0 && calc_output[5] > 0)
    send_to_char(ch,"%s\r\n",complete_cmd_info[comando].command);
    else  if (calc_output[3] > 0){
