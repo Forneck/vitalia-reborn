@@ -2269,12 +2269,16 @@ int parse_hometown(char arg)
 void autopilot_char(struct char_data *ch){
  
    int num;
+   int random;
    struct obj_data *object;
    struct char_data *mob;
    char line[MAX_INPUT_LENGTH];
    struct fann *ann;
+   struct fann *ann_move;
 	fann_type *calc_output;
 	ann = fann_create_from_file("etc/aventureiro.fann");
+		ann_move = fann_create_from_file("etc/move.fann");
+	
 	fann_type input[29];
 	int grupo;
 	int count_obj = 0;
@@ -2327,7 +2331,18 @@ void autopilot_char(struct char_data *ch){
 	input[26] = (float) GET_HITROLL(ch) / 100;
 	input[27] = (float) GET_DAMROLL(ch) / 100;
 	input[28] = (float) count_obj / 100;
-
+   
+   calc_output = fann_run(ann_move,input);
+   calc_output[0] = (calc_output[0] * (float) NUM_OF_DIRS);
+   calc_output[0] = calc_output[0] + 1;
+   comando = fabs(calc_output[0]);
+   fann_destroy(ann_move);
+    ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
+				complete_cmd_info[comando].subcmd));
+	random = rand_number(0,5);
+   
+   while (random > 0) {
+   
 	calc_output = fann_run(ann, input);
    calc_output[0] = calc_output[0] * (float) MAX_COMMAND;
    comando = fabs(calc_output[0]);
@@ -2350,11 +2365,16 @@ void autopilot_char(struct char_data *ch){
          extract_obj(object);
          	}
       }
+      	else if (calc_output[3] == 0.731059) { 
+      	snprintf(line,sizeof(line),"all");
+         	}
    }
    /*passar line para funcao */
    
   if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)&&strcmp("quit", complete_cmd_info[comando].command)&&strcmp("prefedit", complete_cmd_info[comando].command)&&strcmp("news", complete_cmd_info[comando].command)&&strcmp("motd", complete_cmd_info[comando].command)&&strcmp("policy", complete_cmd_info[comando].command)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
 				complete_cmd_info[comando].subcmd));
+	random--;
+   }
    fann_destroy(ann);
 }
 
