@@ -1,6 +1,6 @@
 FANN_FLO_2.1
 num_layers=4
-learning_rate=0.700000
+learning_rate=0.800000
 connection_rate=1.000000
 network_type=0
 learning_momentum=0.000000
