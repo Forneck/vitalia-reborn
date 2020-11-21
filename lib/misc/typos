@@ -8,18 +8,7 @@ Level     80
 Room      3001
 Flags     0 0 0 0
 End
-Text       tagarelas~
-Body      
-Althair tagarelas, '1 tick do reset'
-~
-Name      Anyte~
-IdNum     6
-Dated     1605804950
-Level     80
-Room      3001
-Flags     0 0 0 0
-End
-Text       espaco a mais~
+Text      espaco a mais~
 Body      Althair  o Raposinha est em p aqui.
 espaco a mais antes do title
 ~
