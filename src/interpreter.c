@@ -927,7 +927,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		{
 			output[2] = output[3] = output[4] = output[5] = 0;
 		}
-		if ((GET_LEVEL(ch) < LVL_GOD)&&!CMD_IS("suggestion")&&!CMD_IS("quit")){
+		if ((GET_LEVEL(ch) < LVL_GOD)&&!CMD_IS("suggestion")&&!CMD_IS("quit")&&!IS_MOVE(cmd)){
 			fann_train(ann, input, output);
 		}
 		fann_save(ann, "etc/aventureiro.fann");
@@ -937,8 +937,6 @@ void command_interpreter(struct char_data *ch, char *argument)
 		   send_to_char(ch, "INPUTS Sala %f\r\n", input[7]);
 			send_to_char(ch, "OUTPUT: %f, %f, %f, %f, %f, %f, %d\r\n", output[0], output[1], output[2], output[3],
 						 output[4], output[5], cmd);
-			if (!CMD_IS("suggestion")&&!CMD_IS("quit"))
-			send_to_char(ch,"Aprendido\r\n");
 		}
 			fann_destroy(ann);
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd,
