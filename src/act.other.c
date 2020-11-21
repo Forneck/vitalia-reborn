@@ -1299,35 +1299,27 @@ ACMD(do_suggestion)
 	input[27] = (float) GET_DAMROLL(ch) / 100;
 	input[28] = (float) count_obj / 100;
 
-	calc_output = fann_run(ann, input);
-   calc_output[0] = calc_output[0] * (float) MAX_COMMAND;
-   comando = fabs(calc_output[0]);
-   
-   
-   if (comando < 432){
-    run_move = 1;
+ 
    move_output = fann_run(ann_move, input);
    calc_output[0] = (move_output[0] * (float) NUM_OF_DIRS);
    calc_output[0] = move_output[0] + 1;
    comando = fabs(calc_output[0]);
    
-   }
    
    if (GET_IDNUM(ch) == 20)
    {
-      if (run_move) {
       send_to_char(ch,"move output: %f %f %d\r\n",move_output[0],move_output[1],comando);
-      }
-      else {
       send_to_char(ch,"output: %f %f %f %f %f %f\r\n",calc_output[0],calc_output[1],calc_output[2],calc_output[3],calc_output[4],calc_output[5]);
-      }
    }
+   
+   send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
+   
    if ((comando == MAX_COMMAND) || (comando == 0))
    {
       send_to_char(ch,"Nenhum comando sugerido para você.\r\n");
    }
  
-    if (!run_move) {
+ 
     for (tries = 0; tries < 10; tries++)
     {
      calc_output = fann_run(ann, input);
@@ -1335,38 +1327,43 @@ ACMD(do_suggestion)
    comando = fabs(calc_output[0]);
     if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch))
       continue;
+   
     }
-    }
-      if (complete_cmd_info[comando].minimum_level  > GET_LEVEL(ch))
-  send_to_char(ch, "Comando sugerido acima do teu nível.\r\n");
+      if (complete_cmd_info[comando].minimum_level  <=  GET_LEVEL(ch))
+  send_to_char(ch, "ou ");
+  else {
+      fann_destroy(ann);
+   fann_destroy(ann_move);
+     return;
+  }
   
-  else if (calc_output[3] > 0 && calc_output[5] > 0)
-   send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
+  if (calc_output[3] > 0 && calc_output[5] > 0)
+   send_to_char(ch,"%s\r\n",complete_cmd_info[comando].command);
    else  if (calc_output[3] > 0){
       if (calc_output[3] == 0.5) {
          if  ((num = real_mobile(calc_output[4] * 10000)) != NOBODY){
          mob = read_mobile(num, REAL);
          char_to_room(mob, 0);
-          send_to_char(ch,"Sugestão de comando: %s %s\r\n",complete_cmd_info[comando].command, mob->player.name);
+          send_to_char(ch,"%s %s\r\n",complete_cmd_info[comando].command, mob->player.name);
           extract_char(mob);
          }
-           send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
+           send_to_char(ch,"%s\r\n",complete_cmd_info[comando].command);
       }
           else if (calc_output[3] == 0.880797) {
          	if ((num = real_object(calc_output[4] * 10000)) != NOTHING) {
          	object = read_object(num, REAL);
-           send_to_char(ch,"Sugestão de comando: %s %s\r\n",complete_cmd_info[comando].command, object->name);
+           send_to_char(ch,"%s %s\r\n",complete_cmd_info[comando].command, object->name);
          extract_obj(object);
          	}
-         	  send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
+         	  send_to_char(ch,"%s\r\n",complete_cmd_info[comando].command);
       }
       else if (calc_output[3] == 0.731059)
-         send_to_char(ch,"Sugestão de comando: %s all\r\n",complete_cmd_info[comando].command);
+         send_to_char(ch,"%s all\r\n",complete_cmd_info[comando].command);
       else 
-   send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
+   send_to_char(ch,"%s\r\n",complete_cmd_info[comando].command);
  }
    else
-   send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
+   send_to_char(ch,"%s\r\n",complete_cmd_info[comando].command);
    
    fann_destroy(ann);
    fann_destroy(ann_move);
