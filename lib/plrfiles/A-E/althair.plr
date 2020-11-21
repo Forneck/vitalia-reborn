@@ -6,25 +6,25 @@ Clas: 6
 Levl: 15
 Id  : 20
 Brth: 1603768097
-Plyd: 200177
-Last: 1605936029
+Plyd: 201144
+Last: 1605936996
 Lmot: 1605925461
 Lnew: 1605129579
 Htwn: 1372
 Host: 177.220.172.132
 Hite: 195
 Wate: 172
-Alin: 57
+Alin: -16
 Act : h 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDE abde 0 0
 Wimp: 30
-Room: 3001
-Hung: 20
-Thir: 13
-Hit : 150/175
-Mana : 46/155
-Move: 143/128
+Room: 3012
+Hung: 19
+Thir: 9
+Hit : 93/175
+Mana : 5/155
+Move: 148/128
 Str : 16/0
 Int : 14
 Wis : 12
@@ -32,9 +32,9 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Gold: 16233
+Gold: 18315
 Bank: 77484
-Exp : 1980263
+Exp : 2012724
 Olc : 0
 ScrW: 44
 Skil:
@@ -51,6 +51,11 @@ Skil:
 224 90
 251 90
 0 0
+Affs:
+19 21 0 29 16 0 0 0
+96 9 -4 17 0 0 0 0
+96 9 0 61 0 16 0 0
+0 0 0 0 0 0 0 0
 Alis: 16
  agua
  cast 'create water' cantil;pour cantil fonte
