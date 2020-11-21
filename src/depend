@@ -10,7 +10,7 @@ act.item.o: act.item.c conf.h sysdep.h structs.h protocol.h lists.h \
  dg_scripts.h oasis.h act.h quest.h
 act.movement.o: act.movement.c conf.h sysdep.h structs.h protocol.h \
  lists.h utils.h comm.h interpreter.h handler.h db.h spells.h house.h \
- constants.h dg_scripts.h act.h fight.h oasis.h
+ constants.h dg_scripts.h act.h fight.h oasis.h ann.h
 act.offensive.o: act.offensive.c conf.h sysdep.h structs.h protocol.h \
  lists.h utils.h comm.h interpreter.h handler.h db.h spells.h act.h \
  fight.h mud_event.h dg_event.h screen.h constants.h dg_scripts.h
@@ -30,6 +30,12 @@ act.wizard.o: act.wizard.c conf.h sysdep.h structs.h protocol.h lists.h \
 aedit.o: aedit.c conf.h sysdep.h structs.h protocol.h lists.h utils.h \
  interpreter.h handler.h comm.h db.h oasis.h screen.h constants.h \
  genolc.h act.h
+ann.o: ann.c conf.h sysdep.h structs.h protocol.h lists.h utils.h comm.h \
+ interpreter.h handler.h db.h spells.h screen.h house.h constants.h \
+ dg_scripts.h act.h spec_procs.h class.h fight.h mail.h shop.h quest.h \
+ modify.h include/floatfann.h include/fann.h include/fann_error.h \
+ include/fann_activation.h include/fann_data.h include/fann_internal.h \
+ include/fann_train.h include/fann_cascade.h include/fann_io.h ann.h
 asciimap.o: asciimap.c conf.h sysdep.h structs.h protocol.h lists.h \
  utils.h comm.h interpreter.h handler.h db.h spells.h house.h constants.h \
  dg_scripts.h asciimap.h

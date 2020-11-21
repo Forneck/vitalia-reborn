@@ -3,29 +3,28 @@ Pass: Al0/4XKfoKti2
 Titl: o Raposinha
 Sex : 1
 Clas: 6
-Levl: 14
+Levl: 15
 Id  : 20
 Brth: 1603768097
-Plyd: 182342
-Last: 1605818293
-Lmot: 1605721915
+Plyd: 199215
+Last: 1605934980
+Lmot: 1605925461
 Lnew: 1605129579
 Htwn: 1372
-Host: 138.204.26.63
+Host: 177.220.172.132
 Hite: 195
 Wate: 172
-Alin: 41
-Act : gh 0 0 0
+Alin: 314
+Act : h 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDE abde 0 0
 Wimp: 30
 Room: 3001
-Hung: 24
-Thir: 24
-Hit : 204/164
-Mana : 157/150
-Move: 130/124
-Breath : 15/15
+Hung: 8
+Thir: 11
+Hit : 110/175
+Mana : 30/155
+Move: 148/128
 Str : 16/0
 Int : 14
 Wis : 12
@@ -33,9 +32,9 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Gold: 4831
-Bank: 25237
-Exp : 1536055
+Gold: 12726
+Bank: 77484
+Exp : 1961930
 Olc : 0
 ScrW: 44
 Skil:
@@ -48,10 +47,16 @@ Skil:
 63 90
 93 30
 95 90
+96 60
 224 90
 251 90
 0 0
-Alis: 15
+Affs:
+19 8 0 29 16 0 0 0
+96 2 -4 17 0 0 0 0
+96 2 0 61 0 16 0 0
+0 0 0 0 0 0 0 0
+Alis: 16
  agua
  cast 'create water' cantil;pour cantil fonte
 1
@@ -96,4 +101,7 @@ Alis: 15
 0
  of
  order fol $*
+1
+ ww
+ cast 'windwall' $*
 1

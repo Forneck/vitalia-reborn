@@ -6,12 +6,12 @@ Clas: 4
 Levl: 110
 Id  : 1
 Brth: 1601790482
-Plyd: 720653
-Last: 1605815110
+Plyd: 832660
+Last: 1605933576
 Lmot: 1605455027
 Lnew: 1605123013
 Htwn: 1372
-Host: 138.204.26.63
+Host: 127.0.0.1
 Hite: 151
 Wate: 113
 Alin: 322
@@ -30,7 +30,7 @@ Dex : 25
 Con : 25
 Cha : 25
 Ac  : 100
-Gold: 1209211
+Gold: 1210411
 Exp : 7000001
 Olc : 0
 Alis: 12

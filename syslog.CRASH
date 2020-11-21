@@ -1,30 +1,30 @@
-Nov 19 16:15:13 2020 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
-Nov 19 16:15:13 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
-Nov 19 16:15:13 2020 :: Resetting #220: Anexo (rooms 22000-22099).
-Nov 19 16:15:13 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
-Nov 19 16:15:13 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Nov 19 16:15:13 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Nov 19 16:15:13 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Nov 19 16:15:13 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Nov 19 16:15:13 2020 :: Boot db -- DONE.
-Nov 19 16:15:13 2020 :: Signal trapping.
-Nov 19 16:15:13 2020 :: Entering game loop.
-Nov 19 16:15:13 2020 :: No connections.  Going to sleep.
-Nov 19 16:18:09 2020 :: New connection.  Waking up.
-Nov 19 16:18:16 2020 :: Andreii has connected.
-Nov 19 16:18:18 2020 :: Andreii had no variable file
-Nov 19 16:18:18 2020 :: Andreii retrieving crash-saved items and entering game.
-Nov 19 16:18:18 2020 :: Andreii (level 11) has 15 objects (max 100).
-Nov 19 16:19:32 2020 :: Cansian has connected.
-Nov 19 16:19:32 2020 :: Cansian had no variable file
-Nov 19 16:19:32 2020 :: Cansian retrieving crash-saved items and entering game.
-Nov 19 16:19:32 2020 :: Cansian (level 110) has 91 objects (max 100).
-Nov 19 16:19:44 2020 :: (GC) Reboot by Cansian.
-Nov 19 16:19:44 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 19 16:19:44 2020 :: Closing all sockets.
-Nov 19 16:19:44 2020 :: Closing link to: Cansian.
-Nov 19 16:19:44 2020 :: Closing link to: Andreii.
-Nov 19 16:19:44 2020 :: Saving current MUD time.
-Nov 19 16:19:44 2020 :: Rebooting.
+Nov 21 04:32:54 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
+Nov 21 04:32:54 2020 :: Resetting #220: Anexo (rooms 22000-22099).
+Nov 21 04:32:54 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
+Nov 21 04:32:54 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
+Nov 21 04:32:54 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
+Nov 21 04:32:54 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
+Nov 21 04:32:54 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
+Nov 21 04:32:54 2020 :: Boot db -- DONE.
+Nov 21 04:32:54 2020 :: Signal trapping.
+Nov 21 04:32:54 2020 :: Entering game loop.
+Nov 21 04:32:54 2020 :: No connections.  Going to sleep.
+Nov 21 04:34:49 2020 :: New connection.  Waking up.
+Nov 21 04:34:50 2020 :: Losing descriptor without char.
+Nov 21 04:34:50 2020 :: WARNING: Attempting to get content from iterator with NULL list.
+Nov 21 04:34:50 2020 :: WARNING: Attempting to remove iterator from NULL list.
+Nov 21 04:34:50 2020 :: No connections.  Going to sleep.
+Nov 21 04:37:01 2020 :: New connection.  Waking up.
+Nov 21 04:37:08 2020 :: Bad PW: Cansian [127.0.0.1]
+Nov 21 04:37:11 2020 :: Cansian has connected.
+Nov 21 04:37:12 2020 :: Cansian had no variable file
+Nov 21 04:37:12 2020 :: Cansian retrieving crash-saved items and entering game.
+Nov 21 04:37:12 2020 :: Cansian (level 110) has 149 objects (max 100).
+Nov 21 04:37:28 2020 :: (GC) Reboot by Cansian.
+Nov 21 04:37:28 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Nov 21 04:37:28 2020 :: Closing all sockets.
+Nov 21 04:37:28 2020 :: Closing link to: Cansian.
+Nov 21 04:37:28 2020 :: Saving current MUD time.
+Nov 21 04:37:28 2020 :: Rebooting.
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.

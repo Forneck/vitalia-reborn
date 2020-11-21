@@ -595,6 +595,7 @@ S
 #3625
 Uma Casa Negra~
    Você se encontra numa casa de mármore negro.
+Ao oeste, voce pode ver um grande portao enferrujado.
 ~
 36 0 0 0 0 1
 D0
@@ -612,6 +613,10 @@ Uma casa branca fica ao sul.
 ~
 ~
 0 -1 3633
+D3
+~
+portao~
+1 0 200
 S
 #3626
 Uma Casa Branca~

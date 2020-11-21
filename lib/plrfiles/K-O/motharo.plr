@@ -1,31 +1,31 @@
 Name: Motharo
 Pass: ModL.5YHLP/kM
-Titl: o Raposa
+Titl: o Lince
 Sex : 1
 Clas: 6
-Levl: 38
+Levl: 39
 Id  : 25
 Brth: 1604182960
-Plyd: 60947
-Last: 1605792991
+Plyd: 62747
+Last: 1605912922
 Lmot: 1605614458
-Lnew: 1605382525
+Lnew: 1605912308
 Htwn: 1372
 Host: 187.66.23.112
 Hite: 178
 Wate: 158
-Alin: 142
+Alin: 72
 Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDEF abd 0 0
 Wimp: 20
 Room: 3001
-Lern: 18
-Hung: 21
-Thir: 21
-Hit : 281/462
-Mana : 267/275
-Move: 210/200
+Lern: 20
+Hung: 20
+Thir: 20
+Hit : 419/472
+Mana : 56/280
+Move: 158/203
 Str : 16/0
 Int : 13
 Wis : 13
@@ -33,9 +33,9 @@ Dex : 14
 Con : 15
 Cha : 11
 Ac  : 100
-Gold: 602090
+Gold: 669801
 Bank: 200000
-Exp : 11484381
+Exp : 12222045
 Olc : 0
 Skil:
 16 90
@@ -57,7 +57,9 @@ Skil:
 252 90
 0 0
 Affs:
-36 32 0 33 256 0 0 0
+36 48 0 33 256 0 0 0
+96 23 -4 17 0 0 0 0
+96 23 0 61 0 16 0 0
 0 0 0 0 0 0 0 0
 Alis: 9
  fome
