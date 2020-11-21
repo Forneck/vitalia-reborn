@@ -6,8 +6,8 @@ Clas: 6
 Levl: 15
 Id  : 20
 Brth: 1603768097
-Plyd: 221550
-Last: 1605958943
+Plyd: 223935
+Last: 1605961675
 Lmot: 1605925461
 Lnew: 1605129579
 Htwn: 1372
@@ -52,48 +52,48 @@ Skil:
 251 90
 0 0
 Alis: 15
- 5reinos
- n;n;n;n;n;n;n;n;n;n;n;n
+ ww
+ cast 'windwall' $*
 1
- s;s;w;n
- s;s;w;n
-1
- fonte
- w;w;w;drink fonte
-1
- gd
- get $1;don $1
-1
- recall
- cast 'word of recall' $*
-1
- ha
- history all
-0
- dp
- cast 'detect poison' $*
-1
- sg
- save;sug
-1
- food
- cast 'create berries';eat mor
-1
- nectar
- cast 'create Water' cant;drink cantil;pour cantil fora
-1
- zne
- n;e;e;s;s;w;w;w;n
-1
- zn
- n;n;n;n;e
+ of
+ order fol $*
 1
  servo
  cast 'evoke air'
 0
- of
- order fol $*
+ zn
+ n;n;n;n;e
 1
- ww
- cast 'windwall' $*
+ zne
+ n;e;e;s;s;w;w;w;n
+1
+ nectar
+ cast 'create Water' cant;drink cantil;pour cantil fora
+1
+ food
+ cast 'create berries';eat mor
+1
+ sg
+ save;sug
+1
+ dp
+ cast 'detect poison' $*
+1
+ ha
+ history all
+0
+ recall
+ cast 'word of recall' $*
+1
+ gd
+ get $1;don $1
+1
+ fonte
+ w;w;w;drink fonte
+1
+ s;s;w;n
+ s;s;w;n
+1
+ 5reinos
+ n;n;n;n;n;n;n;n;n;n;n;n
 1
