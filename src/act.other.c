@@ -1360,6 +1360,8 @@ ACMD(do_suggestion)
          	}
          	  send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
       }
+      else if (calc_output[3] == 0.731059)
+         send_to_char(ch,"Sugestão de comando: %s all\r\n",complete_cmd_info[comando].command);
       else 
    send_to_char(ch,"Sugestão de comando: %s\r\n",complete_cmd_info[comando].command);
  }
