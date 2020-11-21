@@ -27,6 +27,7 @@
 #define LOAD_MANA	1
 #define LOAD_MOVE	2
 #define LOAD_STRENGTH	3
+#define LOAD_BREATH 4
 
 #define PT_PNAME(i) (player_table[(i)].name)
 #define PT_IDNUM(i) (player_table[(i)].id)
@@ -345,7 +346,7 @@ GET_BREATH(ch) = PFDEF_BREATH;
 	else if (!strcmp(tag, "Bank"))	GET_BANK_GOLD(ch)	= atoi(line);
 	else if (!strcmp(tag, "Brth"))	ch->player.time.birth	= atol(line);
      else if(!strcmp(tag, "Breath"))
-         GET_BREATH(ch) = atoi(line);
+         load_HMVS(ch, line, LOAD_BREATH);
 	break;
 
       case 'C':
@@ -934,6 +935,11 @@ static void load_HMVS(struct char_data *ch, const char *line, int mode)
   case LOAD_STRENGTH:
     ch->real_abils.str = num;
     ch->real_abils.str_add = num2;
+    break;
+    
+    case LOAD_BREATH:
+    GET_BREATH(ch) = num;
+    GET_MAX_BREATH(ch) = num2;
     break;
   }
 }
