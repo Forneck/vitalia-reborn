@@ -27,7 +27,7 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
      struct fann *ann;
      struct fann *map;
      fann_type mapin[2];
-     fann_type mapout[2];
+     fann_type mapout[1];
      
 	fann_type input[29];
 	fann_type output[2];
@@ -36,7 +36,7 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
 	int count_obj = 0;
    
    ann = fann_create_from_file("etc/move.fann");
-   map = fann_create_from_file("etc/map  .fann");
+   map = fann_create_from_file("etc/map.fann");
    
     /* verifica grupo e inventario */
 	if (GROUP(ch) != NULL)
@@ -91,7 +91,6 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
 		mapin[0] = (float)  GET_ROOM_VNUM(IN_ROOM(ch)) / 100000;
     mapin[1] = (float) ( dir/ NUM_OF_DIRS);
    mapout[0] = (float)  GET_ROOM_VNUM(going_to) / 100000;
-   mapout[1] = 1;
    
 		fann_train(map,mapin,mapout);
 	
