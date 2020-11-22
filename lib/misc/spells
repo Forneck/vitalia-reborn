@@ -541,7 +541,7 @@
  4 100
  1 P 63 1 2 8194 8 0
  2 fly
-10 Você se sente pesad$R novamente.
+10 Você se sente pesad$r novamente.
 12 Você se sente muito leve...
 80 2 1 + (param > 18)
 99 1
