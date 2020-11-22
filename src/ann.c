@@ -93,5 +93,5 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
 		fann_save(ann, "etc/move.fann");
 		fann_save(map, "etc/map.fann");
 	   fann_destroy(ann);
-      fann_festroy(map);
+      fann_destroy(map);
 }
