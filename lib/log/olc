@@ -4072,3 +4072,14 @@ Nov 21 03:01:46 2020 :: GenOLC: add_room: Updated existing room #600.
 Nov 21 03:01:46 2020 :: OLC: Cansian edits room 600.
 Nov 21 03:01:46 2020 :: GenOLC: save_rooms: Saving rooms in zone #6 (600-699).
 Nov 21 03:01:46 2020 :: OLC: Cansian stops editing zone 6 allowed zone 0
+Nov 21 10:57:41 2020 :: OLC: Cansian starts editing zone 49 allowed zone 0
+Nov 21 10:58:17 2020 :: OLC: Cansian edits obj 4903
+Nov 21 10:58:17 2020 :: OLC: Cansian stops editing zone 49 allowed zone 0
+Nov 21 10:59:06 2020 :: OLC: Cansian starts editing zone 49 allowed zone 0
+Nov 21 10:59:23 2020 :: OLC: Cansian edits obj 4903
+Nov 21 10:59:23 2020 :: OLC: Cansian stops editing zone 49 allowed zone 0
+Nov 21 14:08:05 2020 :: OLC: Cansian starts editing zone 49 allowed zone 0
+Nov 21 14:08:30 2020 :: OLC: Cansian edits obj 4903
+Nov 21 14:08:30 2020 :: OLC: Cansian stops editing zone 49 allowed zone 0
+Nov 21 18:38:02 2020 :: OLC: Cansian starts editing zone 49 allowed zone 0
+Nov 21 18:38:08 2020 :: OLC: Cansian stops editing zone 49 allowed zone 0

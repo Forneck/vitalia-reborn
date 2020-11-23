@@ -19,3 +19,14 @@ Level     80
 Room      3001
 Flags     0 0 0 0
 End
+Text       create berries~
+Body      You create um punhado de morangos silvestres.
+"you create" falta traduzir
+~
+Name      Anyte~
+IdNum     6
+Dated     1606089786
+Level     80
+Room      3054
+Flags     0 0 0 0
+End

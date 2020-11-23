@@ -6,8 +6,8 @@ Clas: 6
 Levl: 39
 Id  : 25
 Brth: 1604182960
-Plyd: 62747
-Last: 1605912922
+Plyd: 62782
+Last: 1605980424
 Lmot: 1605614458
 Lnew: 1605912308
 Htwn: 1372
@@ -21,11 +21,11 @@ Pref: efghnoBCDEF abd 0 0
 Wimp: 20
 Room: 3001
 Lern: 20
-Hung: 20
-Thir: 20
-Hit : 419/472
-Mana : 56/280
-Move: 158/203
+Hung: 17
+Thir: 17
+Hit : 502/472
+Mana : 128/280
+Move: 183/203
 Str : 16/0
 Int : 13
 Wis : 13
@@ -57,35 +57,35 @@ Skil:
 252 90
 0 0
 Affs:
-36 48 0 33 256 0 0 0
-96 23 -4 17 0 0 0 0
-96 23 0 61 0 16 0 0
+96 20 0 61 0 16 0 0
+96 20 -4 17 0 0 0 0
+36 45 0 33 256 0 0 0
 0 0 0 0 0 0 0 0
 Alis: 9
- fome
- drin barr;drin barri;fill barril font;cast 'create be';eat mor
-1
- escudonegro4
-    d;d;d;d;d;e;e;e;s;s;e;e;e;e;e;d;e;e;e;open alcapao;d;d;d;d;d;e
-1
- escudonegro3
-    s;s;e;n;n;e;e;e;n;e;n;e;e;n;e;e;w;w;n;n;u;u
-1
- escudonegro2
-    d;e;e;d;d;s;e;s;e;n;e;n;s;w;w;s;w;s;w;w;e;w;e;e;s;e;e
-1
- escudonegro
- e;open porta e;close porta w;e;e;e;s;e;s;d;d;d;d;d;d;d;d;d;d;e;u;e;e;s
-1
- wak
- wak;stan;wear cour
-1
- med
- rem couraca;med
+ sanc
+ order empr hold caja;order empre use cajado;order empre use cajado;order empre use cajado;order empreg rem cajado;order empre junk cajado
 1
  sle
  rem couraca;sle
 1
- sanc
- order empr hold caja;order empre use cajado;order empre use cajado;order empre use cajado;order empreg rem cajado;order empre junk cajado
+ med
+ rem couraca;med
+1
+ wak
+ wak;stan;wear cour
+1
+ escudonegro
+ e;open porta e;close porta w;e;e;e;s;e;s;d;d;d;d;d;d;d;d;d;d;e;u;e;e;s
+1
+ escudonegro2
+    d;e;e;d;d;s;e;s;e;n;e;n;s;w;w;s;w;s;w;w;e;w;e;e;s;e;e
+1
+ escudonegro3
+    s;s;e;n;n;e;e;e;n;e;n;e;e;n;e;e;w;w;n;n;u;u
+1
+ escudonegro4
+    d;d;d;d;d;e;e;e;s;s;e;e;e;e;e;d;e;e;e;open alcapao;d;d;d;d;d;e
+1
+ fome
+ drin barr;drin barri;fill barril font;cast 'create be';eat mor
 1

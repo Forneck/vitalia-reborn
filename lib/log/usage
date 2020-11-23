@@ -1,131 +1,3 @@
-Nov 04 03:49:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 03:49:00 2020 :: rusage: user time: 2 sec, system time: 4 sec, max res size: 22332
-Nov 04 03:54:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 03:54:00 2020 :: rusage: user time: 3 sec, system time: 5 sec, max res size: 22332
-Nov 04 03:59:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 03:59:00 2020 :: rusage: user time: 3 sec, system time: 6 sec, max res size: 22460
-Nov 04 04:04:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 04:04:00 2020 :: rusage: user time: 4 sec, system time: 7 sec, max res size: 22460
-Nov 04 04:09:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 04:09:00 2020 :: rusage: user time: 5 sec, system time: 8 sec, max res size: 22560
-Nov 04 04:14:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 04:14:00 2020 :: rusage: user time: 5 sec, system time: 9 sec, max res size: 22560
-Nov 04 04:19:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 04:19:00 2020 :: rusage: user time: 6 sec, system time: 10 sec, max res size: 22560
-Nov 04 04:24:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 04:24:00 2020 :: rusage: user time: 7 sec, system time: 12 sec, max res size: 22560
-Nov 04 04:29:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 04:29:00 2020 :: rusage: user time: 7 sec, system time: 13 sec, max res size: 22560
-Nov 04 04:34:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 04:34:00 2020 :: rusage: user time: 8 sec, system time: 14 sec, max res size: 22560
-Nov 04 04:39:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 04:39:00 2020 :: rusage: user time: 9 sec, system time: 15 sec, max res size: 22560
-Nov 04 04:44:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 04:44:00 2020 :: rusage: user time: 9 sec, system time: 16 sec, max res size: 22560
-Nov 04 04:49:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 04:49:00 2020 :: rusage: user time: 10 sec, system time: 18 sec, max res size: 22560
-Nov 04 04:54:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 04:54:00 2020 :: rusage: user time: 11 sec, system time: 19 sec, max res size: 22560
-Nov 04 04:59:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 04:59:00 2020 :: rusage: user time: 11 sec, system time: 20 sec, max res size: 22560
-Nov 04 05:04:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 05:04:00 2020 :: rusage: user time: 12 sec, system time: 21 sec, max res size: 22560
-Nov 04 05:09:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 05:09:00 2020 :: rusage: user time: 13 sec, system time: 22 sec, max res size: 22560
-Nov 04 05:14:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 05:14:00 2020 :: rusage: user time: 13 sec, system time: 23 sec, max res size: 22560
-Nov 04 05:19:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 05:19:00 2020 :: rusage: user time: 14 sec, system time: 25 sec, max res size: 22820
-Nov 04 05:24:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 05:24:00 2020 :: rusage: user time: 15 sec, system time: 26 sec, max res size: 22820
-Nov 04 05:29:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 05:29:00 2020 :: rusage: user time: 16 sec, system time: 27 sec, max res size: 22820
-Nov 04 05:34:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 05:34:00 2020 :: rusage: user time: 16 sec, system time: 29 sec, max res size: 22820
-Nov 04 05:39:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 05:39:00 2020 :: rusage: user time: 17 sec, system time: 30 sec, max res size: 22820
-Nov 04 05:44:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 05:44:00 2020 :: rusage: user time: 18 sec, system time: 31 sec, max res size: 22820
-Nov 04 05:49:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 05:49:00 2020 :: rusage: user time: 19 sec, system time: 32 sec, max res size: 22820
-Nov 04 05:54:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 05:54:00 2020 :: rusage: user time: 19 sec, system time: 34 sec, max res size: 22820
-Nov 04 05:59:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 05:59:00 2020 :: rusage: user time: 20 sec, system time: 35 sec, max res size: 22820
-Nov 04 06:04:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 06:04:00 2020 :: rusage: user time: 21 sec, system time: 36 sec, max res size: 22820
-Nov 04 06:09:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 06:09:00 2020 :: rusage: user time: 22 sec, system time: 38 sec, max res size: 22820
-Nov 04 06:14:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 06:14:00 2020 :: rusage: user time: 22 sec, system time: 39 sec, max res size: 22820
-Nov 04 06:19:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 06:19:00 2020 :: rusage: user time: 23 sec, system time: 40 sec, max res size: 22820
-Nov 04 06:24:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 06:24:00 2020 :: rusage: user time: 24 sec, system time: 42 sec, max res size: 22820
-Nov 04 06:29:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 06:29:00 2020 :: rusage: user time: 24 sec, system time: 43 sec, max res size: 22820
-Nov 04 06:34:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 06:34:00 2020 :: rusage: user time: 25 sec, system time: 44 sec, max res size: 22820
-Nov 04 06:39:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 06:39:00 2020 :: rusage: user time: 26 sec, system time: 46 sec, max res size: 22820
-Nov 04 06:44:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 06:44:00 2020 :: rusage: user time: 27 sec, system time: 47 sec, max res size: 22820
-Nov 04 06:49:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 06:49:00 2020 :: rusage: user time: 27 sec, system time: 48 sec, max res size: 22820
-Nov 04 06:54:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 06:54:00 2020 :: rusage: user time: 28 sec, system time: 50 sec, max res size: 22820
-Nov 04 06:59:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 06:59:00 2020 :: rusage: user time: 29 sec, system time: 51 sec, max res size: 22820
-Nov 04 07:04:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 07:04:00 2020 :: rusage: user time: 30 sec, system time: 52 sec, max res size: 22820
-Nov 04 07:09:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 07:09:00 2020 :: rusage: user time: 30 sec, system time: 54 sec, max res size: 22820
-Nov 04 07:14:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 07:14:00 2020 :: rusage: user time: 31 sec, system time: 55 sec, max res size: 22820
-Nov 04 07:19:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 07:19:00 2020 :: rusage: user time: 32 sec, system time: 56 sec, max res size: 22820
-Nov 04 07:24:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 07:24:00 2020 :: rusage: user time: 33 sec, system time: 58 sec, max res size: 22820
-Nov 04 07:29:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 07:29:00 2020 :: rusage: user time: 34 sec, system time: 59 sec, max res size: 22820
-Nov 04 07:34:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 07:34:00 2020 :: rusage: user time: 34 sec, system time: 61 sec, max res size: 23064
-Nov 04 07:39:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 07:39:00 2020 :: rusage: user time: 35 sec, system time: 62 sec, max res size: 23064
-Nov 04 07:44:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 07:44:00 2020 :: rusage: user time: 36 sec, system time: 63 sec, max res size: 23064
-Nov 04 07:49:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 07:49:00 2020 :: rusage: user time: 37 sec, system time: 65 sec, max res size: 23064
-Nov 04 07:54:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 07:54:00 2020 :: rusage: user time: 38 sec, system time: 66 sec, max res size: 23064
-Nov 04 07:59:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 07:59:00 2020 :: rusage: user time: 39 sec, system time: 68 sec, max res size: 23064
-Nov 04 08:04:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 08:04:00 2020 :: rusage: user time: 39 sec, system time: 69 sec, max res size: 23064
-Nov 04 08:09:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 08:09:00 2020 :: rusage: user time: 40 sec, system time: 71 sec, max res size: 23064
-Nov 04 08:14:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 08:14:00 2020 :: rusage: user time: 41 sec, system time: 72 sec, max res size: 23064
-Nov 04 08:19:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 08:19:00 2020 :: rusage: user time: 41 sec, system time: 74 sec, max res size: 23064
-Nov 04 08:24:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 08:24:00 2020 :: rusage: user time: 42 sec, system time: 75 sec, max res size: 23064
-Nov 04 08:29:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 08:29:00 2020 :: rusage: user time: 43 sec, system time: 77 sec, max res size: 23064
-Nov 04 08:34:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 08:34:00 2020 :: rusage: user time: 44 sec, system time: 78 sec, max res size: 23064
-Nov 04 08:39:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 08:39:00 2020 :: rusage: user time: 45 sec, system time: 80 sec, max res size: 23064
-Nov 04 08:44:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 08:44:00 2020 :: rusage: user time: 46 sec, system time: 81 sec, max res size: 23064
-Nov 04 08:49:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 08:49:00 2020 :: rusage: user time: 46 sec, system time: 83 sec, max res size: 23064
-Nov 04 08:54:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 08:54:00 2020 :: rusage: user time: 47 sec, system time: 84 sec, max res size: 23064
-Nov 04 08:59:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 08:59:00 2020 :: rusage: user time: 48 sec, system time: 86 sec, max res size: 23064
-Nov 04 09:04:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 09:04:00 2020 :: rusage: user time: 49 sec, system time: 87 sec, max res size: 23064
 Nov 04 09:09:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
 Nov 04 09:09:00 2020 :: rusage: user time: 50 sec, system time: 88 sec, max res size: 23064
 Nov 04 09:14:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
@@ -4998,3 +4870,131 @@ Nov 21 10:47:44 2020 :: nusage: 2   sockets connected, 1   sockets playing
 Nov 21 10:47:44 2020 :: rusage: user time: 1034 sec, system time: 71 sec, max res size: 69852
 Nov 21 10:52:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
 Nov 21 10:52:44 2020 :: rusage: user time: 1052 sec, system time: 72 sec, max res size: 70084
+Nov 21 11:01:06 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 11:01:06 2020 :: rusage: user time: 10 sec, system time: 0 sec, max res size: 22300
+Nov 21 11:06:06 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 11:06:06 2020 :: rusage: user time: 27 sec, system time: 2 sec, max res size: 25332
+Nov 21 11:11:06 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 11:11:06 2020 :: rusage: user time: 46 sec, system time: 3 sec, max res size: 28616
+Nov 21 11:16:06 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 11:16:06 2020 :: rusage: user time: 63 sec, system time: 5 sec, max res size: 31388
+Nov 21 11:21:06 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 11:21:06 2020 :: rusage: user time: 80 sec, system time: 6 sec, max res size: 33916
+Nov 21 11:26:06 2020 :: nusage: 2   sockets connected, 1   sockets playing
+Nov 21 11:26:06 2020 :: rusage: user time: 98 sec, system time: 7 sec, max res size: 34092
+Nov 21 11:31:06 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 11:31:06 2020 :: rusage: user time: 116 sec, system time: 9 sec, max res size: 34184
+Nov 21 11:36:06 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 11:36:06 2020 :: rusage: user time: 134 sec, system time: 10 sec, max res size: 34184
+Nov 21 11:41:06 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 11:41:06 2020 :: rusage: user time: 152 sec, system time: 11 sec, max res size: 34184
+Nov 21 11:51:45 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 11:51:45 2020 :: rusage: user time: 169 sec, system time: 12 sec, max res size: 34244
+Nov 21 11:56:45 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 11:56:45 2020 :: rusage: user time: 187 sec, system time: 14 sec, max res size: 34244
+Nov 21 12:01:45 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 12:01:45 2020 :: rusage: user time: 203 sec, system time: 15 sec, max res size: 34244
+Nov 21 12:06:45 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 12:06:45 2020 :: rusage: user time: 217 sec, system time: 16 sec, max res size: 34316
+Nov 21 12:11:45 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 12:11:45 2020 :: rusage: user time: 231 sec, system time: 17 sec, max res size: 34316
+Nov 21 12:16:45 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 12:16:45 2020 :: rusage: user time: 245 sec, system time: 18 sec, max res size: 34316
+Nov 21 12:21:45 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 12:21:45 2020 :: rusage: user time: 259 sec, system time: 19 sec, max res size: 34388
+Nov 21 12:26:45 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 12:26:45 2020 :: rusage: user time: 273 sec, system time: 20 sec, max res size: 34388
+Nov 21 12:36:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 12:36:46 2020 :: rusage: user time: 287 sec, system time: 21 sec, max res size: 34388
+Nov 21 12:41:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 12:41:46 2020 :: rusage: user time: 301 sec, system time: 22 sec, max res size: 34388
+Nov 21 12:46:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 12:46:46 2020 :: rusage: user time: 314 sec, system time: 23 sec, max res size: 34388
+Nov 21 12:51:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 12:51:46 2020 :: rusage: user time: 329 sec, system time: 25 sec, max res size: 34440
+Nov 21 12:56:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 12:56:46 2020 :: rusage: user time: 345 sec, system time: 26 sec, max res size: 34440
+Nov 21 13:01:46 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 13:01:46 2020 :: rusage: user time: 361 sec, system time: 28 sec, max res size: 35388
+Nov 21 13:06:46 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 13:06:46 2020 :: rusage: user time: 374 sec, system time: 29 sec, max res size: 35588
+Nov 21 13:11:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 13:11:46 2020 :: rusage: user time: 388 sec, system time: 30 sec, max res size: 35588
+Nov 21 13:16:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 13:16:46 2020 :: rusage: user time: 404 sec, system time: 32 sec, max res size: 35956
+Nov 21 13:21:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 13:21:46 2020 :: rusage: user time: 418 sec, system time: 33 sec, max res size: 35956
+Nov 21 13:26:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 13:26:46 2020 :: rusage: user time: 432 sec, system time: 34 sec, max res size: 35956
+Nov 21 13:31:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 13:31:46 2020 :: rusage: user time: 446 sec, system time: 35 sec, max res size: 35956
+Nov 21 13:36:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 13:36:46 2020 :: rusage: user time: 461 sec, system time: 37 sec, max res size: 36068
+Nov 21 13:41:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 13:41:46 2020 :: rusage: user time: 475 sec, system time: 38 sec, max res size: 36068
+Nov 21 13:46:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 13:46:46 2020 :: rusage: user time: 490 sec, system time: 40 sec, max res size: 36068
+Nov 21 13:51:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 13:51:46 2020 :: rusage: user time: 504 sec, system time: 41 sec, max res size: 36140
+Nov 21 13:56:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 13:56:46 2020 :: rusage: user time: 518 sec, system time: 42 sec, max res size: 36140
+Nov 21 14:01:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 14:01:46 2020 :: rusage: user time: 531 sec, system time: 43 sec, max res size: 36440
+Nov 21 14:06:46 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 14:06:46 2020 :: rusage: user time: 544 sec, system time: 44 sec, max res size: 36640
+Nov 21 14:27:19 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 14:27:19 2020 :: rusage: user time: 556 sec, system time: 46 sec, max res size: 36732
+Nov 21 14:32:19 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 14:32:19 2020 :: rusage: user time: 569 sec, system time: 47 sec, max res size: 36732
+Nov 21 14:37:19 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 14:37:19 2020 :: rusage: user time: 581 sec, system time: 48 sec, max res size: 36828
+Nov 21 14:42:19 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 14:42:19 2020 :: rusage: user time: 594 sec, system time: 49 sec, max res size: 37020
+Nov 21 17:40:24 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 17:40:24 2020 :: rusage: user time: 607 sec, system time: 50 sec, max res size: 37020
+Nov 21 18:29:44 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 18:29:44 2020 :: rusage: user time: 621 sec, system time: 51 sec, max res size: 37020
+Nov 21 18:34:44 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 18:34:44 2020 :: rusage: user time: 636 sec, system time: 52 sec, max res size: 37212
+Nov 21 18:39:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 18:39:44 2020 :: rusage: user time: 650 sec, system time: 53 sec, max res size: 37584
+Nov 21 18:44:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 18:44:44 2020 :: rusage: user time: 664 sec, system time: 54 sec, max res size: 37668
+Nov 21 18:49:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 18:49:44 2020 :: rusage: user time: 680 sec, system time: 56 sec, max res size: 37668
+Nov 21 18:54:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 18:54:44 2020 :: rusage: user time: 695 sec, system time: 57 sec, max res size: 37668
+Nov 21 18:59:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 18:59:44 2020 :: rusage: user time: 711 sec, system time: 59 sec, max res size: 37668
+Nov 21 19:04:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 19:04:44 2020 :: rusage: user time: 726 sec, system time: 60 sec, max res size: 37760
+Nov 21 19:09:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 19:09:44 2020 :: rusage: user time: 741 sec, system time: 62 sec, max res size: 37760
+Nov 21 19:14:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 19:14:44 2020 :: rusage: user time: 756 sec, system time: 63 sec, max res size: 37760
+Nov 21 19:19:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 19:19:44 2020 :: rusage: user time: 770 sec, system time: 64 sec, max res size: 37760
+Nov 21 19:24:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 19:24:44 2020 :: rusage: user time: 783 sec, system time: 65 sec, max res size: 37760
+Nov 21 19:29:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 21 19:29:44 2020 :: rusage: user time: 796 sec, system time: 66 sec, max res size: 37760
+Nov 21 19:34:44 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 19:34:44 2020 :: rusage: user time: 809 sec, system time: 67 sec, max res size: 37760
+Nov 21 19:39:44 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 19:39:44 2020 :: rusage: user time: 823 sec, system time: 68 sec, max res size: 37988
+Nov 21 23:42:40 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 23:42:40 2020 :: rusage: user time: 836 sec, system time: 69 sec, max res size: 38100
+Nov 21 23:47:40 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 23:47:40 2020 :: rusage: user time: 851 sec, system time: 69 sec, max res size: 38100
+Nov 21 23:52:40 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 23:52:40 2020 :: rusage: user time: 865 sec, system time: 70 sec, max res size: 38100
+Nov 21 23:57:40 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 21 23:57:40 2020 :: rusage: user time: 880 sec, system time: 71 sec, max res size: 38100
+Nov 22 00:02:40 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 22 00:02:40 2020 :: rusage: user time: 894 sec, system time: 72 sec, max res size: 38100
+Nov 22 00:07:40 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 22 00:07:40 2020 :: rusage: user time: 910 sec, system time: 73 sec, max res size: 38180
+Nov 22 16:40:27 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 22 16:40:27 2020 :: rusage: user time: 925 sec, system time: 74 sec, max res size: 38180
+Nov 22 16:45:28 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 22 16:45:28 2020 :: rusage: user time: 942 sec, system time: 76 sec, max res size: 38248

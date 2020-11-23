@@ -1,30 +1,30 @@
-Nov 21 10:07:44 2020 :: rusage: user time: 915 sec, system time: 63 sec, max res size: 57536
-Nov 21 10:10:21 2020 :: SYSERR: Can't remove liquid 'agua' from 'cantil' (769) item.
-Nov 21 10:12:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 21 10:12:44 2020 :: rusage: user time: 931 sec, system time: 64 sec, max res size: 57536
-Nov 21 10:17:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 21 10:17:44 2020 :: rusage: user time: 947 sec, system time: 65 sec, max res size: 57536
-Nov 21 10:22:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 21 10:22:44 2020 :: rusage: user time: 962 sec, system time: 66 sec, max res size: 57536
-Nov 21 10:27:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 21 10:27:44 2020 :: rusage: user time: 978 sec, system time: 67 sec, max res size: 57632
-Nov 21 10:32:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 21 10:32:44 2020 :: rusage: user time: 994 sec, system time: 68 sec, max res size: 57632
-Nov 21 10:36:29 2020 :: Althair killed by Althair at A Escolha
-Nov 21 10:36:29 2020 :: Corpo de 'Althair' na sala #9202 tipo 25 val0 '20' val3 '1'
-Nov 21 10:36:29 2020 :: Corpo de 'Althair' na sala #9202 tipo 25 val0 '20' val3 '1'
-Nov 21 10:37:44 2020 :: nusage: 2   sockets connected, 1   sockets playing
-Nov 21 10:37:44 2020 :: rusage: user time: 1008 sec, system time: 69 sec, max res size: 69852
-Nov 21 10:42:44 2020 :: nusage: 2   sockets connected, 1   sockets playing
-Nov 21 10:42:44 2020 :: rusage: user time: 1021 sec, system time: 70 sec, max res size: 69852
-Nov 21 10:47:44 2020 :: nusage: 2   sockets connected, 1   sockets playing
-Nov 21 10:47:44 2020 :: rusage: user time: 1034 sec, system time: 71 sec, max res size: 69852
-Nov 21 10:50:11 2020 :: add_to_lookup updating existing value for uid=20 (0x556b38d57000 -> 0x556b38d57000)
-Nov 21 10:50:11 2020 :: Althair entering game with no equipment.
-Nov 21 10:51:06 2020 :: Cansian has re-logged in ... disconnecting old socket.
-Nov 21 10:51:06 2020 :: Losing descriptor without char.
-Nov 21 10:52:44 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 21 10:52:44 2020 :: rusage: user time: 1052 sec, system time: 72 sec, max res size: 70084
-Nov 21 10:53:25 2020 :: (GC) Cansian restored Althair
-Nov 21 10:54:37 2020 :: (GC) Cansian restored Althair
-Segmentation fault (core dumped)
+Nov 22 22:30:11 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
+Nov 22 22:30:11 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
+Nov 22 22:30:11 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
+Nov 22 22:30:11 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
+Nov 22 22:30:11 2020 :: Boot db -- DONE.
+Nov 22 22:30:11 2020 :: Signal trapping.
+Nov 22 22:30:11 2020 :: Entering game loop.
+Nov 22 22:30:11 2020 :: No connections.  Going to sleep.
+Nov 22 22:30:17 2020 :: New connection.  Waking up.
+Nov 22 22:30:23 2020 :: Losing player: Cansian.
+Nov 22 22:30:23 2020 :: No connections.  Going to sleep.
+Nov 22 22:30:28 2020 :: New connection.  Waking up.
+Nov 22 22:30:37 2020 :: Cansian has connected.
+Nov 22 22:30:38 2020 :: Cansian had no variable file
+Nov 22 22:30:38 2020 :: Cansian retrieving crash-saved items and entering game.
+Nov 22 22:30:38 2020 :: Cansian (level 110) has 16 objects (max 100).
+Nov 22 22:31:54 2020 :: Althair has connected.
+Nov 22 22:31:57 2020 :: Althair had no variable file
+Nov 22 22:31:57 2020 :: Althair un-renting and entering game.
+Nov 22 22:31:57 2020 :: Althair (level 15) has 42 objects (max 100).
+Nov 22 22:34:48 2020 :: Althair has quit the game.
+Nov 22 22:34:49 2020 :: Losing player: Althair.
+Nov 22 22:34:57 2020 :: (GC) Reboot by Cansian.
+Nov 22 22:34:57 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Nov 22 22:34:57 2020 :: Closing all sockets.
+Nov 22 22:34:57 2020 :: Closing link to: Cansian.
+Nov 22 22:34:57 2020 :: Saving current MUD time.
+Nov 22 22:34:57 2020 :: Rebooting.
+Quick boot mode -- rent check supressed.
+Using file descriptor for logging.
