@@ -20,11 +20,11 @@ FANN Error 19: The number of input neurons in the ann (29) and data (2) don't ma
 FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
 FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
 FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-Nov 23 17:36:48 2020 :: (GC) Reboot by Cansian.
-Nov 23 17:36:48 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 23 17:36:48 2020 :: Closing all sockets.
-Nov 23 17:36:48 2020 :: Closing link to: Cansian.
-Nov 23 17:36:48 2020 :: Saving current MUD time.
-Nov 23 17:36:48 2020 :: Rebooting.
+Nov 23 17:45:38 2020 :: (GC) Reboot by Cansian.
+Nov 23 17:45:38 2020 :: SYSERR: lib/.fastboot: No such file or directory
+Nov 23 17:45:38 2020 :: Closing all sockets.
+Nov 23 17:45:38 2020 :: Closing link to: Cansian.
+Nov 23 17:45:38 2020 :: Saving current MUD time.
+Nov 23 17:45:38 2020 :: Rebooting.
 Quick boot mode -- rent check supressed.
 Using file descriptor for logging.
