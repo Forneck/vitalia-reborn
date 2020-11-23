@@ -23,8 +23,8 @@
 #include <string.h>
 #include <math.h>
 
-#include "config.h"
-#include "fann.h"
+#include "./include/fannconfig.h"
+#include "./include/fann.h"
 
 /*#define DEBUGTRAIN*/
 
