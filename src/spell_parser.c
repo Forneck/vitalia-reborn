@@ -527,7 +527,7 @@ int cast_spell(struct char_data *ch, struct char_data *tch,
     return (0);
   }
   if ((tch != ch) && (spell->targ_flags & TAR_SELF_ONLY)) {
-    send_to_char(ch, "Você só pode $s em voc mesm$r!\r\n", 
+    send_to_char(ch, "Você só pode $s em você mesm$r!\r\n", 
                       spell->type == SPELL ? "lançar essa magia" : "fazer isto");
     return (0);
   }
@@ -684,7 +684,7 @@ ACMD(do_cast)
     return;
   }
   if (!target) {
-    send_to_char(ch, "Não foi possível encontrar o alvo de sua %s!\r\n", (spell->tpype == SPELL) ? "magia" : "habilidade");
+    send_to_char(ch, "Não foi possível encontrar o alvo de sua %s!\r\n", (spell->type == SPELL) ? "magia" : "habilidade");
     return;
   }
   
