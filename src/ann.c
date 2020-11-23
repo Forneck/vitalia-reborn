@@ -86,7 +86,7 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
    output[1] = (float)  GET_ROOM_VNUM(going_to) / 100000;
 
       move_train =  fann_create_train_array(1,29,input,2,output);
-		fann_train_on_data(ann,move_train,1000,1000,0);
+		fann_train_on_data(ann,move_train,500,500,0);
 		fann_save(ann, "etc/move.fann");
 	   fann_destroy_train(move_train);
 	   
