@@ -20,7 +20,7 @@
 #include "shop.h"
 #include "quest.h"
 #include "modify.h"
-#include "./include/fann.h"
+#include "./include/floatfann.h"
 #include "ann.h"
 
 void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
