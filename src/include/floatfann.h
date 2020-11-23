@@ -28,6 +28,6 @@ typedef float fann_type;
 #define FANNSCANF "%f"
 
 #define FANN_INCLUDE
-/*#include "fann.h"*/
+#include "fann.h"
 
 #endif
