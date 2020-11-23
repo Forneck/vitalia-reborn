@@ -674,7 +674,7 @@ ACMD(do_cast)
     }
     if (!target) {
       send_to_char(ch, "Sobre %s essa %s deve ser lançada?\r\n",
-                (spell->targ_flags & (TAR_OBJ_ROOM | TAR_OBJ_INV | TAR_OBJ_WORLD | TAR_OBJ_EQUIP)) ? "o que" : "quem",  (spell->type == SPELL) ? "magia" : (spell->type == CHANSON) ? : "canção", "habilidade");
+                (spell->targ_flags & (TAR_OBJ_ROOM | TAR_OBJ_INV | TAR_OBJ_WORLD | TAR_OBJ_EQUIP)) ? "o que" : "quem",  (spell->type == SPELL) ? "magia" : (spell->type == CHANSON) ?  "canção", "habilidade");
       return;
     }
   }
@@ -693,7 +693,7 @@ ACMD(do_cast)
     mana = mag_manacost(ch, tch, spell->vnum);
     if (GET_MANA(ch) < mana) {
       send_to_char(ch, "Você não tem energia para %s!\r\n",
-	      (spell->type == SPELL) ? "lançar essa magia" : (spell->type == CHANSON) ? : "cantar essa canção", "usar esta habilidade");
+	      (spell->type == SPELL) ? "lançar essa magia" : (spell->type == CHANSON) ? "cantar essa canção", "usar esta habilidade");
       return;
     }
  }
