@@ -23,7 +23,7 @@
 #include <string.h>
 
 #include "./include/fannconfig.h"
-#include "./include/fann.h"
+#include "./include/floatfann.h"
 
 /*
  * Reads training data from a file. 
