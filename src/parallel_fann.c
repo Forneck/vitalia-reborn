@@ -6,7 +6,7 @@
 #include <omp.h>
 #include "./include/parallel_fann.h"
 #include "./include/fannconfig.h"
-#include "./include/fann.h"
+#include "./include/floatfann.h"
 
 FANN_EXTERNAL float FANN_API fann_train_epoch_batch_parallel(struct fann *ann, struct fann_train_data *data, const unsigned int threadnumb)
 {
