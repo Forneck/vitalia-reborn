@@ -27,6 +27,7 @@
 #include "./include/fannconfig.h"
 #include "./include/floatfann.h"
 
+#define DISABLE_PARALLEL_FANN
 /* #define FANN_NO_SEED */
 
 FANN_EXTERNAL struct fann *FANN_API fann_create_standard(unsigned int num_layers, ...)
