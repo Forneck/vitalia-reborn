@@ -24,8 +24,8 @@
 #include <time.h>
 #include <math.h>
 
-#include "./config.h"
-#include "./fann.h"
+#include "./include/config.h"
+#include "./include/fann.h"
 
 /* #define FANN_NO_SEED */
 
