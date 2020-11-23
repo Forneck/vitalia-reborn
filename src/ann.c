@@ -92,6 +92,7 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
       merged = fann_merge_train_data(move_train,merger);
 		fann_train_epoch(ann,merged);
 		fann_save(ann, "etc/move.fann");
+		fann_save_train(merged,"etc/move.train");
 	   fann_destroy_train(move_train);
 	   fann_destroy_train(merger);
 	   fann_destroy_train(merged);
@@ -105,6 +106,7 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
       merged = fann_merge_train_data(map_train,merger);
 		fann_train_epoch(map,merged);
 		fann_save(ann, "etc/map.fann");
+		fann_save_train(merged,"etc/map.train");
 	   fann_destroy_train(map_train);
       fann_destroy_train(merger);
       fann_destroy_train(merged);
