@@ -49,7 +49,7 @@ $%.o: %.c
 	$(CC) $< $(CFLAGS) -c -o $@ 
 
 $(BINDIR)/anncheck: anncheck.c
-	$(CC) $(CFLAGS) -o $(BINDIR)/anncheck anncheck.c
+   $(CC) $(CFLAGS) -o $(BINDIR)/anncheck anncheck.c
 
 clean:
 	rm -f *.o depend
