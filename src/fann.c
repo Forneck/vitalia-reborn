@@ -25,7 +25,7 @@
 #include <math.h>
 
 #include "./include/fannconfig.h"
-#include "./include/fann.h"
+#include "./include/floatfann.h"
 
 /* #define FANN_NO_SEED */
 
