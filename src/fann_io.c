@@ -24,7 +24,7 @@
 #include <limits.h>
 
 #include "./include/fannconfig.h"
-#include "./include/fann.h"
+#include "./include/floatfann.h"
 #include "./include/fann_data.h"
 
 /* Create a network from a configuration file.
