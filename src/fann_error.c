@@ -24,7 +24,7 @@
 #include <limits.h>
 
 #include "./include/fannconfig.h"
-#include "./include/fann.h"
+#include "./include/floatfann.h"
 
 #ifdef _MSC_VER
 #define vsnprintf _vsnprintf
