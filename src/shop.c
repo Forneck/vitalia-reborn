@@ -25,7 +25,7 @@
 #include "modify.h"
 #include "spells.h"				/* for skill_name() */
 #include "screen.h"
-#include "./include/floatfann.h"
+#include "./include/fann.h"
 #include "fight.h" /* for ac in ai */
 
 /* Global variables definitions used externally */
