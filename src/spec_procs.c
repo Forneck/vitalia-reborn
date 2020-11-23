@@ -142,6 +142,7 @@ SPECIAL(guild)
 
 	fann_type input[29];
 	fann_type output[6];
+	struct fann_train_data *ann_train;
 
 	if (IS_NPC(ch) || !CMD_IS("practice"))
 		return (FALSE);
@@ -216,7 +217,7 @@ SPECIAL(guild)
 	skill_num = spell->vnum;
 	level = get_spell_level(skill_num, GET_CLASS(ch));
    output[3] = 1/(1+exp(-skill_num));
-   output[4] = output[5] = -1;
+   output[4] = output[5] = 0;
    
 	if ((level == -1) || (GET_LEVEL(ch) < level))
 	{
@@ -249,9 +250,11 @@ SPECIAL(guild)
 
  	ann = fann_create_from_file("etc/aventureiro.fann");
  	
-  	if (GET_LEVEL(ch) < LVL_GOD)
-			fann_train(ann, input, output);
-
+  	if (GET_LEVEL(ch) < LVL_GOD) {
+   ann_train =  fann_create_train_array(1,29,input,6,output);
+		fann_train_on_data(ann,ann_train,500,500,0);
+				fann_destroy_train(ann_train);
+  	}
 		fann_save(ann, "etc/aventureiro.fann");
 		fann_destroy(ann);
 	return (TRUE);
