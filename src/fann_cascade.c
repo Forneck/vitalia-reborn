@@ -18,7 +18,7 @@
 */
 
 #include "./include/fannconfig.h"
-#include "./include/fann.h"
+#include "./include/floatfann.h"
 #include "string.h"
 
 #ifndef FIXEDFANN
