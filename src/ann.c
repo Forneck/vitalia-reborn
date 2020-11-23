@@ -82,7 +82,7 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
 	input[27] = (float) GET_DAMROLL(ch) / 100;
 	input[28] = (float) count_obj / 100;
    
-   output[0] = (float) ( dir/ NUM_OF_DIRS);
+   output[0] = (float) ( (float) dir/ NUM_OF_DIRS);
    output[1] = (float)  GET_ROOM_VNUM(going_to) / 100000;
    
 	//	fann_train(ann, input, output);
@@ -98,7 +98,7 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
 	   fann_destroy_train(merged);
 	   
 		mapin[0] = (float)  GET_ROOM_VNUM(IN_ROOM(ch)) / 100000;
-    mapin[1] = (float) ( dir/ NUM_OF_DIRS);
+    mapin[1] =(float) ( (float) dir/ NUM_OF_DIRS);
    mapout[0] = (float)  GET_ROOM_VNUM(going_to) / 100000;
    
     map_train = fann_read_train_from_file("etc/map.train");
