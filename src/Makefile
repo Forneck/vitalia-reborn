@@ -6,7 +6,7 @@
 CC = gcc
 
 # Any special flags you want to pass to the compiler
-MYFLAGS = -Wall -Wno-char-subscripts -Wno-unused-but-set-variable
+MYFLAGS = -Wall -Wno-char-subscripts -Wno-unused-but-set-variable -fopenmp
 
 #flags for profiling (see hacker.doc for more information)
 PROFILE = 
@@ -17,7 +17,7 @@ PROFILE =
 
 BINDIR = ../bin
 
-CFLAGS = -g -O2 $(MYFLAGS) $(PROFILE)
+CFLAGS = -g -O2 $(MYFLAGS) $(PROFILE) 
 
 LIBS =  -lcrypt -lm
 
