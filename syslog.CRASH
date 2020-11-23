@@ -1,30 +1,30 @@
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0200024080. Bit fail 0.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs     1000. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.3200000226. Bit fail 1.
-Epochs          500. Current error: 0.0000000001. Bit fail 0.
-Max epochs     1000. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0200008862. Bit fail 0.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs     1000. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.3200403452. Bit fail 1.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs     1000. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000955. Bit fail 0.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs     1000. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0050101266. Bit fail 0.
-Epochs          500. Current error: 0.0000019451. Bit fail 0.
-Max epochs     1000. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000000. Bit fail 0.
+Nov 23 22:30:40 2020 :: Resetting #138: O Arquipélago de Yo (rooms 13800-13999).
+Nov 23 22:30:40 2020 :: Resetting #140: Lindrel (rooms 14000-14099).
+Nov 23 22:30:40 2020 :: Resetting #144: A Aldeia de Bri (rooms 14400-14499).
+Nov 23 22:30:40 2020 :: Resetting #145: O Condado (rooms 14500-14699).
+Nov 23 22:30:40 2020 :: Resetting #150: O Castelo do Rei Welmar (rooms 15000-15099).
+Nov 23 22:30:40 2020 :: Resetting #151: O Templo Samurai (rooms 15100-15199).
+Nov 23 22:30:40 2020 :: Resetting #155: O Moinho de Vento (rooms 15500-15599).
+Nov 23 22:30:40 2020 :: Resetting #157: O Castelo de Flyre (rooms 15700-15799).
+Nov 23 22:30:40 2020 :: Resetting #160: Os Estrategistas de Vitália (rooms 16000-16399).
+Nov 23 22:30:40 2020 :: Resetting #170: O Canyon dos Elementais (rooms 17000-17099).
+Nov 23 22:30:40 2020 :: Resetting #173: Camelot (rooms 17300-17399).
+Nov 23 22:30:40 2020 :: Resetting #176: O Império Chinês (rooms 17600-17999).
+Nov 23 22:30:40 2020 :: Resetting #181: Os Caminhos Iniciais (rooms 18100-18199).
+Nov 23 22:30:40 2020 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
+Nov 23 22:30:40 2020 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
+Nov 23 22:30:40 2020 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
+Nov 23 22:30:40 2020 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
+Nov 23 22:30:40 2020 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
+Nov 23 22:30:40 2020 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
+Nov 23 22:30:40 2020 :: Resetting #220: Anexo (rooms 22000-22099).
+Nov 23 22:30:40 2020 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
+Nov 23 22:30:40 2020 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
+Nov 23 22:30:40 2020 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
+Nov 23 22:30:40 2020 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
+Nov 23 22:30:40 2020 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
+Nov 23 22:30:40 2020 :: Boot db -- DONE.
+Nov 23 22:30:40 2020 :: Signal trapping.
+Nov 23 22:30:40 2020 :: Entering game loop.
+Nov 23 22:30:40 2020 :: No connections.  Going to sleep.
+Improper shutdown of autorun detected, rotating syslogs before startup.

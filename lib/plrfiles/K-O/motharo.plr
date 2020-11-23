@@ -6,25 +6,25 @@ Clas: 6
 Levl: 39
 Id  : 25
 Brth: 1604182960
-Plyd: 62782
-Last: 1605980424
+Plyd: 63773
+Last: 1606169475
 Lmot: 1605614458
-Lnew: 1605912308
+Lnew: 1606161834
 Htwn: 1372
 Host: 187.66.23.112
 Hite: 178
 Wate: 158
 Alin: 72
-Act : ghl 0 0 0
+Act : hl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDEF abd 0 0
 Wimp: 20
 Room: 3001
 Lern: 20
-Hung: 17
-Thir: 17
+Hung: -1
+Thir: -1
 Hit : 502/472
-Mana : 128/280
+Mana : 280/280
 Move: 183/203
 Str : 16/0
 Int : 13
@@ -57,35 +57,35 @@ Skil:
 252 90
 0 0
 Affs:
-96 20 0 61 0 16 0 0
-96 20 -4 17 0 0 0 0
-36 45 0 33 256 0 0 0
+36 32 0 33 256 0 0 0
+96 7 -4 17 0 0 0 0
+96 7 0 61 0 16 0 0
 0 0 0 0 0 0 0 0
 Alis: 9
- sanc
- order empr hold caja;order empre use cajado;order empre use cajado;order empre use cajado;order empreg rem cajado;order empre junk cajado
-1
- sle
- rem couraca;sle
-1
- med
- rem couraca;med
-1
- wak
- wak;stan;wear cour
-1
- escudonegro
- e;open porta e;close porta w;e;e;e;s;e;s;d;d;d;d;d;d;d;d;d;d;e;u;e;e;s
-1
- escudonegro2
-    d;e;e;d;d;s;e;s;e;n;e;n;s;w;w;s;w;s;w;w;e;w;e;e;s;e;e
-1
- escudonegro3
-    s;s;e;n;n;e;e;e;n;e;n;e;e;n;e;e;w;w;n;n;u;u
+ fome
+ drin barr;drin barri;fill barril font;cast 'create be';eat mor
 1
  escudonegro4
     d;d;d;d;d;e;e;e;s;s;e;e;e;e;e;d;e;e;e;open alcapao;d;d;d;d;d;e
 1
- fome
- drin barr;drin barri;fill barril font;cast 'create be';eat mor
+ escudonegro3
+    s;s;e;n;n;e;e;e;n;e;n;e;e;n;e;e;w;w;n;n;u;u
+1
+ escudonegro2
+    d;e;e;d;d;s;e;s;e;n;e;n;s;w;w;s;w;s;w;w;e;w;e;e;s;e;e
+1
+ escudonegro
+ e;open porta e;close porta w;e;e;e;s;e;s;d;d;d;d;d;d;d;d;d;d;e;u;e;e;s
+1
+ wak
+ wak;stan;wear cour
+1
+ med
+ rem couraca;med
+1
+ sle
+ rem couraca;sle
+1
+ sanc
+ order empr hold caja;order empre use cajado;order empre use cajado;order empre use cajado;order empreg rem cajado;order empre junk cajado
 1
