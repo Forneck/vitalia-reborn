@@ -29,7 +29,7 @@
 #include "shop.h"
 #include "quest.h"
 #include "modify.h"
-#include "./include/floatfann.h"
+#include "./include/fann.h"
 
 /* Local defined utility functions */
 /* do_group utility functions */
