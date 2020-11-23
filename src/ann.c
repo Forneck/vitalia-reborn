@@ -34,7 +34,7 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
 	struct obj_data *object;
    int grupo;
 	int count_obj = 0;
- 
+   struct fann_train_data *map_train, *move_train, *merger;
    ann = fann_create_from_file("etc/move.fann");
    map = fann_create_from_file("etc/map.fann");
    
@@ -85,17 +85,31 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
    output[0] = (float) ( dir/ NUM_OF_DIRS);
    output[1] = (float)  GET_ROOM_VNUM(going_to) / 100000;
    
-		fann_train(ann, input, output);
+	//	fann_train(ann, input, output);
+	
+      move_train = fann_read_train_from_file("etc/move.train");
+      merger = fann_create_train_array(1,29,input,2,output);
+      move_train = fann_merge_train_data(move_train,merger);
+		fann_train_epoch(ann,move_train);
 		fann_save(ann, "etc/move.fann");
-
-		
+	   fann_destroy_train(move_train);
+	   
 		mapin[0] = (float)  GET_ROOM_VNUM(IN_ROOM(ch)) / 100000;
     mapin[1] = (float) ( dir/ NUM_OF_DIRS);
    mapout[0] = (float)  GET_ROOM_VNUM(going_to) / 100000;
    
-		fann_train(map,mapin,mapout);
+    map_train = fann_read_train_from_file("etc/map.train");
+      merger = fann_create_train_array(1,2,mapin,1,mapout);
+      map_train = fann_merge_train_data(map_train,merger);
+		fann_train_epoch(map,map_train);
+		fann_save(ann, "etc/map.fann");
+	   fann_destroy_train(map_train);
+      fann_destroy_train(merger);
+   
+	/*	fann_train(map,mapin,mapout);
 		fann_save(map, "etc/map.fann");
 
+*/
 	   fann_destroy(ann);
       fann_destroy(map);
 }
