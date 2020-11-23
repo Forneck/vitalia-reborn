@@ -25,10 +25,13 @@ CFLAGS = -g -O2 $(MYFLAGS) $(PROFILE) -I$(INCDIR)
 default: all
 
 all: $(BINDIR)/asciipasswd $(BINDIR)/autowiz $(BINDIR)/plrtoascii $(BINDIR)/rebuildIndex $(BINDIR)/rebuildMailIndex $(BINDIR)/shopconv $(BINDIR)/sign $(BINDIR)/split $(BINDIR)/wld2html $(BINDIR)/webster
+$(BINDIR)/anncheck
 
 asciipasswd: $(BINDIR)/asciipasswd
 
 autowiz: $(BINDIR)/autowiz
+
+anncheck: $(BINDIR)/anncheck
 
 plrtoascii: $(BINDIR)/plrtoascii
 
@@ -51,6 +54,9 @@ $(BINDIR)/asciipasswd: asciipasswd.c
 
 $(BINDIR)/autowiz: autowiz.c
 	$(CC) $(CFLAGS) -o $(BINDIR)/autowiz autowiz.c
+
+$(BINDIR)/anncheck: anncheck.c
+	$(CC) $(CFLAGS) -o $(BINDIR)/anncheck anncheck.c
 
 $(BINDIR)/plrtoascii: plrtoascii.c
 	$(CC) $(CFLAGS) -o $(BINDIR)/plrtoascii plrtoascii.c
