@@ -1303,8 +1303,8 @@ ACMD(do_suggestion)
    move_output = fann_run(ann_move, input);
    
    move_output[0] = (move_output[0] * (float) NUM_OF_DIRS);
-   move_output[0] = move_output[0] + 1;
-   comando = fabs(move_output[0]);
+   move_output[0] = move_output[0];
+   comando = fabs(move_output[0] + 1);
  
    if (GET_IDNUM(ch) == 20)
    {
