@@ -23,8 +23,8 @@
 #include <string.h>
 #include <limits.h>
 
-#include "config.h"
-#include "fann.h"
+#include "./include/fannconfig.h"
+#include "./include/fann.h"
 
 #ifdef _MSC_VER
 #define vsnprintf _vsnprintf
