@@ -142,13 +142,13 @@ static int mag_materials(struct char_data *ch, IDXTYPE item0,
 			switch (rand_number(0, 2))
 			{
 			case 0:
-				send_to_char(ch, "A wart sprouts on your nose.\r\n");
+				send_to_char(ch, "Uma verruga nasce no seu nariz.\r\n");
 				break;
 			case 1:
-				send_to_char(ch, "Your hair falls out in clumps.\r\n");
+				send_to_char(ch, "Seus cabelos caem.\r\n");
 				break;
 			case 2:
-				send_to_char(ch, "A huge corn develops on your big toe.\r\n");
+				send_to_char(ch, "Um enorme caroço nasce no seu dedão.\r\n");
 				break;
 			}
 		}
@@ -175,16 +175,16 @@ static int mag_materials(struct char_data *ch, IDXTYPE item0,
 		/* Generic success messages that signals extracted objects. */
 		if (verbose)
 		{
-			send_to_char(ch, "A puff of smoke rises from your pack.\r\n");
-			act("A puff of smoke rises from $n's pack.", TRUE, ch, NULL, NULL, TO_ROOM);
+			send_to_char(ch, "Uma nuvem de fumaça sai do pacote.\r\n");
+			act("Uma nuvem de fumaça sai do pacote de $n.", TRUE, ch, NULL, NULL, TO_ROOM);
 		}
 	}
 
 	/* Don't extract the objects, but signal materials successfully found. */
 	if (!extract && verbose)
 	{
-		send_to_char(ch, "Your pack rumbles.\r\n");
-		act("Something rumbles in $n's pack.", TRUE, ch, NULL, NULL, TO_ROOM);
+		send_to_char(ch, "O seu pacote começa a tremer.\r\n");
+		act("Algo começa a tremer no pacote de $n.", TRUE, ch, NULL, NULL, TO_ROOM);
 	}
   /*------------------------------------------------------------------------*/
 	/* End Material Processing. */
@@ -240,7 +240,7 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim,
 		}
 		else if (IS_GOOD(victim))
 		{
-			act("The gods protect $N.", FALSE, ch, 0, victim, TO_CHAR);
+			act("Os deuses protegem $N.", FALSE, ch, 0, victim, TO_CHAR);
 			return (0);
 		}
 		break;
@@ -252,7 +252,7 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim,
 		}
 		else if (IS_EVIL(victim))
 		{
-			act("The gods protect $N.", FALSE, ch, 0, victim, TO_CHAR);
+			act("Os deuses protegem $N.", FALSE, ch, 0, victim, TO_CHAR);
 			return (0);
 		}
 		break;
@@ -347,6 +347,18 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim,
 			}
 			break;
 		case SPELL_INVISIBLE:
+			if (!victim)
+				victim = ch;
+			break;
+			case SPELL_FIRESHIELD:
+			if (!victim)
+				victim = ch;
+			break;
+			case SPELL_THISTLECOAT:
+			if (!victim)
+				victim = ch;
+			break;
+			case SPELL_WINDWALL:
 			if (!victim)
 				victim = ch;
 			break;
@@ -580,13 +592,13 @@ int mag_areas(int level, struct char_data *ch, int spellnum, int savetype)
 /* Keep the \r\n because these use send_to_char. */
 static const char *mag_summon_fail_msgs[] = {
 	"\r\n",
-	"There are no such creatures.\r\n",
-	"Uh oh...\r\n",
-	"Oh dear.\r\n",
-	"Gosh durnit!\r\n",
-	"The elements resist!\r\n",
-	"You failed.\r\n",
-	"There is no corpse!\r\n"
+ "Não existe tais criaturas.\r\n",
+  "Oh ou...\r\n",
+  "Nada feito...\r\n",
+  "Oh Deus!\r\n",
+  "Os elementos se opõe!\r\n",
+  "Você falhou.\r\n",
+  "Não há corpo!\r\n"
 };
 
 int mag_summons(int level, struct char_data *ch, struct obj_data *obj, int spellnum, int savetype)
@@ -663,7 +675,7 @@ int mag_summons(int level, struct char_data *ch, struct obj_data *obj, int spell
 
 	if (AFF_FLAGGED(ch, AFF_CHARM))
 	{
-		send_to_char(ch, "You are too giddy to have any followers!\r\n");
+		send_to_char(ch, "Você é muito levian$R para ter qualquer seguidor!\r\n");
 		return MAGIC_NOEFFECT;
 	}
 
@@ -676,7 +688,7 @@ int mag_summons(int level, struct char_data *ch, struct obj_data *obj, int spell
 
 	if (!(mob = read_mobile(mob_num, VIRTUAL)))
 	{
-		send_to_char(ch, "You don't quite remember how to make that creature.\r\n");
+		send_to_char(ch, "Você não se lembra muito bem como criar tal criatura.\r\n");
 		return MAGIC_NOEFFECT;
 	}
 	char_to_room(mob, IN_ROOM(ch));
@@ -790,8 +802,8 @@ int mag_unaffects(int level, struct char_data *ch, struct char_data *victim,
 	// complementary messages for the spell HEAL.
 	if ((spellnum == SPELL_HEAL) && (affected_by_spell(victim, SPELL_BLINDNESS)))
 	{
-		act("Your vision returns!", FALSE, victim, 0, ch, TO_CHAR);
-		act("There's a momentary gleam in $n's eyes.", TRUE, victim, 0, ch, TO_ROOM);
+		act("Sua visão retorna!", FALSE, victim, 0, ch, TO_CHAR);
+		act("Os olhos de $n brilham momentaneamente.", TRUE, victim, 0, ch, TO_ROOM);
 	}
 
 	for (i = 0; i < MAX_SPELL_DISPEL; i++)
@@ -918,8 +930,8 @@ int mag_creations(int level, struct char_data *ch, int spellnum)
 				else
 				{
 					obj_to_char(tobj, ch);
-					act("$n creates $p.", FALSE, ch, tobj, 0, TO_ROOM);
-					act("You create $p.", FALSE, ch, tobj, 0, TO_CHAR);
+					act("$n criou $p.", FALSE, ch, tobj, 0, TO_ROOM);
+					act("Você criou $p.", FALSE, ch, tobj, 0, TO_CHAR);
 					load_otrigger(tobj);
 					effect++;
 				}
@@ -931,7 +943,7 @@ int mag_creations(int level, struct char_data *ch, int spellnum)
 
 	// special message, if object(s) creation failed.
 	if (goofed)
-		send_to_char(ch, "I seem to have %sgoofed.\r\n", effect ? "a little " : "");
+		send_to_char(ch, "Eu pareço ter me atrapalhado%s\r\n", effect ? " um pouco." : ".");
 
 	if (effect)
 		return MAGIC_SUCCESS;
@@ -961,7 +973,6 @@ int mag_rooms(int level, struct char_data *ch, int spellnum)
 
 		duration = 5;
 		SET_BIT_AR(ROOM_FLAGS(rnum), ROOM_DARK);
-
 		break;
 
 	}
