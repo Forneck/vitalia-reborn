@@ -22,8 +22,8 @@
 #include <stdarg.h>
 #include <string.h>
 
-#include "config.h"
-#include "fann.h"
+#include "./include/fannconfig.h"
+#include "./include/fann.h"
 
 /*
  * Reads training data from a file. 
