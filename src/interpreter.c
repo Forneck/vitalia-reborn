@@ -930,7 +930,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		{
 			output[2] = output[3] = output[4] = output[5] = 0;
 		}
-		if ((GET_LEVEL(ch) < LVL_GOD)&&!CMD_IS("suggestion")&&!CMD_IS("quit")&&!IS_MOVE(cmd)){
+		if ((GET_LEVEL(ch) < LVL_GOD)&&!CMD_IS("suggestion")&&!CMD_IS("quit")&&!IS_MOVE(cmd)&&!PLR_FLAGGED(ch, PLR_AUTO) ){
 		    ann_train =  fann_create_train_array(1,29,input,6,output);
 		fann_train_on_data(ann,ann_train,500,500,0);
 				fann_destroy_train(ann_train);
