@@ -6,26 +6,25 @@ Clas: 6
 Levl: 16
 Id  : 20
 Brth: 1603768097
-Plyd: 249747
-Last: 1606156263
+Plyd: 253686
+Last: 1606160270
 Lmot: 1605925461
 Lnew: 1605129579
 Htwn: 1372
 Host: 177.220.172.134
 Hite: 195
 Wate: 172
-Alin: 236
-Act : h 0 0 0
+Alin: 305
+Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDE abde 0 0
 Wimp: 50
 Room: 3001
-Lern: 2
-Hung: 20
-Thir: 20
-Hit : 203/190
-Mana : 108/160
-Move: 152/132
+Hung: 24
+Thir: 24
+Hit : 102/190
+Mana : 18/160
+Move: 138/132
 Str : 16/0
 Int : 14
 Wis : 12
@@ -33,9 +32,9 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Gold: 7878
-Bank: 144596
-Exp : 2251352
+Gold: 1288
+Bank: 187596
+Exp : 2382325
 Olc : 0
 ScrW: 44
 Skil:
@@ -50,55 +49,58 @@ Skil:
 95 90
 96 60
 224 90
+232 30
+236 30
 251 90
 0 0
 Affs:
-96 24 0 61 0 16 0 0
-96 24 -4 17 0 0 0 0
+96 12 0 61 0 16 0 0
+96 12 -4 17 0 0 0 0
+19 13 0 29 16 0 0 0
 0 0 0 0 0 0 0 0
 Alis: 15
- ww
- cast 'windwall' $*
+ 5reinos
+ n;n;n;n;n;n;n;n;n;n;n;n
 1
- of
- order fol $*
-1
- servo
- cast 'evoke air'
-0
- zn
- n;n;n;n;e
-1
- zne
- n;e;e;s;s;w;w;w;n
-1
- nectar
- cast 'create Water' cant;drink cantil;pour cantil fora
-1
- food
- cast 'create berries';eat mor
-1
- sg
- save;sug
-1
- dp
- cast 'detect poison' $*
-1
- ha
- history all
-0
- recall
- cast 'word of recall' $*
-1
- gd
- get $1;don $1
+ s;s;w;n
+ s;s;w;n
 1
  fonte
  w;w;w;drink fonte
 1
- s;s;w;n
- s;s;w;n
+ gd
+ get $1;don $1
 1
- 5reinos
- n;n;n;n;n;n;n;n;n;n;n;n
+ recall
+ cast 'word of recall' $*
+1
+ ha
+ history all
+0
+ dp
+ cast 'detect poison' $*
+1
+ sg
+ save;sug
+1
+ food
+ cast 'create berries';eat mor
+1
+ nectar
+ cast 'create Water' cant;drink cantil;pour cantil fora
+1
+ zne
+ n;e;e;s;s;w;w;w;n
+1
+ zn
+ n;n;n;n;e
+1
+ servo
+ cast 'evoke air'
+0
+ of
+ order fol $*
+1
+ ww
+ cast 'windwall' $*
 1

@@ -1,30 +1,30 @@
-Max epochs     1000. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000000. Bit fail 0.
 Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0450004824. Bit fail 0.
+Epochs            1. Current error: 0.0200024080. Bit fail 0.
 Epochs          500. Current error: 0.0000000000. Bit fail 0.
 Max epochs     1000. Desired error: 0.0000000000.
 Epochs            1. Current error: 0.0000000000. Bit fail 0.
 Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0450152531. Bit fail 0.
-Epochs          500. Current error: 0.5000000000. Bit fail 1.
-Max epochs     1000. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0050006728. Bit fail 0.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs     1000. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0050011156. Bit fail 0.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs     1000. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0050013829. Bit fail 0.
+Epochs            1. Current error: 0.3200000226. Bit fail 1.
 Epochs          500. Current error: 0.0000000001. Bit fail 0.
 Max epochs     1000. Desired error: 0.0000000000.
 Epochs            1. Current error: 0.0000000000. Bit fail 0.
 Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.5235249400. Bit fail 4.
-Epochs          500. Current error: 0.3453882933. Bit fail 2.
+Epochs            1. Current error: 0.0200008862. Bit fail 0.
+Epochs          500. Current error: 0.0000000000. Bit fail 0.
+Max epochs     1000. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000000. Bit fail 0.
+Max epochs      500. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.3200403452. Bit fail 1.
+Epochs          500. Current error: 0.0000000000. Bit fail 0.
+Max epochs     1000. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000000. Bit fail 0.
+Max epochs      500. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000955. Bit fail 0.
+Epochs          500. Current error: 0.0000000000. Bit fail 0.
+Max epochs     1000. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000000. Bit fail 0.
+Max epochs      500. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0050101266. Bit fail 0.
+Epochs          500. Current error: 0.0000019451. Bit fail 0.
+Max epochs     1000. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000000. Bit fail 0.
