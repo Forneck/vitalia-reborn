@@ -19,7 +19,7 @@ BINDIR = ../bin
 
 CFLAGS = -g -O2 $(MYFLAGS) $(PROFILE) 
 
-LIBS =  -lcrypt -lm
+LIBS =  -lcrypt -lm lgomp
 
 SRCFILES := act.comm.c act.informative.c act.item.c act.movement.c act.offensive.c act.other.c act.social.c act.wizard.c aedit.c asciimap.c ban.c boards.c bsd-snprintf.c castle.c cedit.c class.c comm.c config.c constants.c db.c dg_comm.c dg_db_scripts.c dg_event.c dg_handler.c dg_misc.c dg_mobcmd.c dg_objcmd.c dg_olc.c dg_scripts.c dg_triggers.c dg_variables.c dg_wldcmd.c fight.c genmob.c genobj.c genolc.c genqst.c genshp.c genwld.c genzon.c graph.c handler.c hedit.c house.c ibt.c improved-edit.c interpreter.c limits.c lists.c magic.c mail.c medit.c mobact.c modify.c msgedit.c mud_event.c oasis.c oasis_copy.c oasis_delete.c oasis_list.c objsave.c oedit.c players.c prefedit.c protocol.c qedit.c quest.c random.c redit.c sedit.c shop.c spec_assign.c spec_procs.c spell_parser.c spells.c tedit.c utils.c weather.c zedit.c zmalloc.c formula.c starmap.c spedit.c spells_assign.c spells_script.c spirits.c fann.c floatfann.c fann_io.c fann_train.c fann_train_data.c fann_error.c fann_cascade.c parallel_fann.c ann.c
 
