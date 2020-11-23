@@ -1,6 +1,6 @@
 #include "stdio.h"
 
-#include "../include/floatfann.h"
+#include "./include/floatfann.h"
 
 int main(){
 struct fann *avent, *map, *move;
