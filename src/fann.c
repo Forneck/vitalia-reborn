@@ -24,8 +24,8 @@
 #include <time.h>
 #include <math.h>
 
-#include "config.h"
-#include "fann.h"
+#include "./config.h"
+#include "./fann.h"
 
 /* #define FANN_NO_SEED */
 
@@ -1865,4 +1865,3 @@ void fann_seed_rand()
     }
 #endif
 }
-
