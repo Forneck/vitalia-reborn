@@ -151,14 +151,14 @@ static void say_spell(struct char_data *ch, int spellnum, struct char_data *tch,
 
   if (tch != NULL && IN_ROOM(tch) == IN_ROOM(ch)) {
     if (tch == ch)
-      format = "$n fecha os olhos $s e pede para '%s'.";
+      format = "$n fecha os olhos $s e expressa as palavras, '%s'.";
     else
-      format = "$n olha para $N e pede para, '%s'.";
+      format = "$n olha para $N e expressa as palavras, '%s'.";
   } else if (tobj != NULL &&
 	     ((IN_ROOM(tobj) == IN_ROOM(ch)) || (tobj->carried_by == ch)))
-    format = "$n olha para $p e pede, '%s'.";
+    format = "$n olha para $p e expressa as palavras, '%s'.";
   else
-    format = "$n murmura as palavras, '%s'.";
+    format = "$n expressa as palavras, '%s'.";
 
   snprintf(buf1, sizeof(buf1), format, skill_name(spellnum));
   snprintf(buf2, sizeof(buf2), format, buf);
@@ -173,7 +173,7 @@ static void say_spell(struct char_data *ch, int spellnum, struct char_data *tch,
   }
 
   if (tch != NULL && tch != ch && IN_ROOM(tch) == IN_ROOM(ch)) {
-    snprintf(buf1, sizeof(buf1), "$n olha para você e murmura as palavras, '%s'.",
+    snprintf(buf1, sizeof(buf1), "$n olha para você e expressa as palavras, '%s'.",
 	    GET_CLASS(ch) == GET_CLASS(tch) ? skill_name(spellnum) : buf);
     act(buf1, FALSE, ch, NULL, tch, TO_VICT);
   }
@@ -231,8 +231,8 @@ int call_magic(struct char_data *caster, struct char_data *cvict,
 
   if (ROOM_FLAGGED(IN_ROOM(caster), ROOM_PEACEFUL) &&
      ((spell->mag_flags & MAG_DAMAGE) || (spell->mag_flags & MAG_VIOLENT))) {
-    send_to_char(caster, "A flash of white light fills the room, dispelling your violent magic!\r\n");
-    act("White light from no particular source suddenly fills the room, then vanishes.", FALSE, caster, 0, 0, TO_ROOM);
+    send_to_char(caster, "Um flash de luzes brancas preenchem a sala, consumindo sua magia violenta!\r\n");
+    act("Luzes brancas repentinamente preenchem a sala e somem logo em seguida.", FALSE, caster, 0, 0, TO_ROOM);
     return (0);
   }
 
@@ -361,15 +361,15 @@ void mag_objectmagic(struct char_data *ch, struct obj_data *obj,
 
   switch (GET_OBJ_TYPE(obj)) {
   case ITEM_STAFF:
-    act("You tap $p three times on the ground.", FALSE, ch, obj, 0, TO_CHAR);
+    act("Você bate $p três vezes no chão.", FALSE, ch, obj, 0, TO_CHAR);
     if (obj->action_description)
       act(obj->action_description, FALSE, ch, obj, 0, TO_ROOM);
     else
-      act("$n taps $p three times on the ground.", FALSE, ch, obj, 0, TO_ROOM);
+      act("$n bate $p três vezes no chão.", FALSE, ch, obj, 0, TO_ROOM);
 
     if (GET_OBJ_VAL(obj, 2) <= 0) {
-      send_to_char(ch, "It seems powerless.\r\n");
-      act("Nothing seems to happen.", FALSE, ch, obj, 0, TO_ROOM);
+      send_to_char(ch, "Parece estar sem poderes.\r\n");
+      act("Aparentemente, nada aconteceu.", FALSE, ch, obj, 0, TO_ROOM);
     } else {
       GET_OBJ_VAL(obj, 2)--;
       WAIT_STATE(ch, PULSE_VIOLENCE);
@@ -395,33 +395,33 @@ void mag_objectmagic(struct char_data *ch, struct obj_data *obj,
   case ITEM_WAND:
     if (k == FIND_CHAR_ROOM) {
       if (tch == ch) {
-	act("You point $p at yourself.", FALSE, ch, obj, 0, TO_CHAR);
-	act("$n points $p at $mself.", FALSE, ch, obj, 0, TO_ROOM);
+	act("Você aponta $p para sí mesm$r.", FALSE, ch, obj, 0, TO_CHAR);
+	act("$n aponta $p para sí mesm$r.", FALSE, ch, obj, 0, TO_ROOM);
       } else {
-	act("You point $p at $N.", FALSE, ch, obj, tch, TO_CHAR);
+	act("Você aponta $p para $N.", FALSE, ch, obj, tch, TO_CHAR);
 	if (obj->action_description)
 	  act(obj->action_description, FALSE, ch, obj, tch, TO_ROOM);
 	else
-	  act("$n points $p at $N.", TRUE, ch, obj, tch, TO_ROOM);
+	  act("$n aponta $p para $N.", TRUE, ch, obj, tch, TO_ROOM);
       }
     } else if (tobj != NULL) {
-      act("You point $p at $P.", FALSE, ch, obj, tobj, TO_CHAR);
+      act("Você aponta $p para $P.", FALSE, ch, obj, tobj, TO_CHAR);
       if (obj->action_description)
 	act(obj->action_description, FALSE, ch, obj, tobj, TO_ROOM);
       else
-	act("$n points $p at $P.", TRUE, ch, obj, tobj, TO_ROOM);
+	act("$n aponta $p para $P.", TRUE, ch, obj, tobj, TO_ROOM);
     } else if (IS_SET(get_spell_mag_flags(GET_OBJ_VAL(obj, 3)), MAG_AREAS | MAG_MASSES)) {
       /* Wands with area spells don't need to be pointed. */
-      act("You point $p outward.", FALSE, ch, obj, NULL, TO_CHAR);
-      act("$n points $p outward.", TRUE, ch, obj, NULL, TO_ROOM);
+      act("Você aponta $p ao redor.", FALSE, ch, obj, NULL, TO_CHAR);
+      act("$n aponta $p ao redor.", TRUE, ch, obj, NULL, TO_ROOM);
     } else {
-      act("At what should $p be pointed?", FALSE, ch, obj, NULL, TO_CHAR);
+      act("Para onde $p deve ser apontado?", FALSE, ch, obj, NULL, TO_CHAR);
       return;
     }
 
     if (GET_OBJ_VAL(obj, 2) <= 0) {
-      send_to_char(ch, "It seems powerless.\r\n");
-      act("Nothing seems to happen.", FALSE, ch, obj, 0, TO_ROOM);
+      send_to_char(ch, "Parece estar sem poderes.\r\n");
+      act("Aparentemente, nada aconteceu.", FALSE, ch, obj, 0, TO_ROOM);
       return;
     }
     GET_OBJ_VAL(obj, 2)--;
@@ -436,18 +436,18 @@ void mag_objectmagic(struct char_data *ch, struct obj_data *obj,
   case ITEM_SCROLL:
     if (*arg) {
       if (!k) {
-	act("There is nothing to here to affect with $p.", FALSE,
+	act("Não há nada aqui que possa ser afetado por $p.", FALSE,
 	    ch, obj, NULL, TO_CHAR);
 	return;
       }
     } else
       tch = ch;
 
-    act("You recite $p which dissolves.", TRUE, ch, obj, 0, TO_CHAR);
+    act("Você recita $p, que dissolve.", TRUE, ch, obj, 0, TO_CHAR);
     if (obj->action_description)
       act(obj->action_description, FALSE, ch, obj, tch, TO_ROOM);
     else
-      act("$n recites $p.", FALSE, ch, obj, NULL, TO_ROOM);
+      act("$n recita $p.", FALSE, ch, obj, NULL, TO_ROOM);
 
     WAIT_STATE(ch, PULSE_VIOLENCE);
     for (i = 1; i <= 3; i++)
@@ -464,11 +464,11 @@ void mag_objectmagic(struct char_data *ch, struct obj_data *obj,
     if (!consume_otrigger(obj, ch, OCMD_QUAFF))  /* check trigger */
       return;
 
-    act("You quaff $p.", FALSE, ch, obj, NULL, TO_CHAR);
+    act("Você toma $p.", FALSE, ch, obj, NULL, TO_CHAR);
     if (obj->action_description)
       act(obj->action_description, FALSE, ch, obj, NULL, TO_ROOM);
     else
-      act("$n quaffs $p.", TRUE, ch, obj, NULL, TO_ROOM);
+      act("$n toma $p.", TRUE, ch, obj, NULL, TO_ROOM);
 
     WAIT_STATE(ch, PULSE_VIOLENCE);
     for (i = 1; i <= 3; i++)
@@ -505,40 +505,40 @@ int cast_spell(struct char_data *ch, struct char_data *tch,
   if (GET_POS(ch) < spell->min_pos) {
     switch (GET_POS(ch)) {
       case POS_SLEEPING:
-      send_to_char(ch, "You dream about great magical powers.\r\n");
+      send_to_char(ch, "Você sonha com grandes poderes mágicos.\r\n");
       break;
     case POS_RESTING:
-      send_to_char(ch, "You cannot concentrate while resting.\r\n");
+      send_to_char(ch, "Você não pode se concentrar enquanto descansa.\r\n"");
       break;
     case POS_SITTING:
-      send_to_char(ch, "You can't do this sitting!\r\n");
+      send_to_char(ch, "Você não pode fazer isso sentado!\r\n");
       break;
     case POS_FIGHTING:
-      send_to_char(ch, "Impossible!  You can't concentrate enough!\r\n");
+      send_to_char(ch, "Impossível!  Você não pode se concentrar o suficiente!\r\n");
       break;
     default:
-      send_to_char(ch, "You can't do much of anything like this!\r\n");
+      send_to_char(ch, "Você não pode fazer muito disso!\r\n");
       break;
     }
     return (0);
   }
   if (AFF_FLAGGED(ch, AFF_CHARM) && (ch->master == tch)) {
-    send_to_char(ch, "You are afraid you might hurt your master!\r\n");
+    send_to_char(ch, "Você tem medo de machucar $X(seu mestre,sua mestra)!\r\n");
     return (0);
   }
   if ((tch != ch) && (spell->targ_flags & TAR_SELF_ONLY)) {
-    send_to_char(ch, "You can only %s yourself!\r\n", 
-                      spell->type == SPELL ? "cast this spell upon" : "do this to");
+    send_to_char(ch, "Você só pode $s em voc mesm$r!\r\n", 
+                      spell->type == SPELL ? "lançar essa magia" : "fazer isto");
     return (0);
   }
   if ((tch == ch) && (spell->targ_flags & TAR_NOT_SELF)) {
-    send_to_char(ch, "You cannot %s yourself!\r\n",
-                      spell->type == SPELL ? "cast this spell upon" : "do this to");
+    send_to_char(ch, "Você não pode %s em você mesm$r!\r\n",
+                      spell->type == SPELL ? "lançar esta magia" : "fazer isto");
     return (0);
   }
   if ((spell->mag_flags & MAG_GROUPS) && !GROUP(ch)) {
-    send_to_char(ch, "You can't %s if you're not in a group!\r\n",
-                      spell->type == SPELL ? "cast this spell" : "do this");
+    send_to_char(ch, "Você não pode %s se não estiver em um grupo!\r\n",
+                      spell->type == SPELL ? "lançar esta magia" : "fazer isto");
     return (0);
   }
   send_to_char(ch, "%s", CONFIG_OK);
@@ -568,11 +568,11 @@ ACMD(do_cast)
  if (subcmd == SCMD_SPELL) {
    s = strtok(argument, "'");
    if (s == NULL) {
-     send_to_char (ch, "Cast what where?\r\n");
+     send_to_char (ch, "O que e aonde?\r\n");
      return;
    }
    if (!(s = strtok(NULL, "'"))) {
-     send_to_char (ch, "Spell names must be enclosed in the Holy Magic Symbols: '\r\n");
+     send_to_char (ch, "Os nomes de magias devem estar entre os Sagrados Símbolos Mágicos: '\r\n");
      return;
    }
    targ = strtok (NULL, "\0");
@@ -587,7 +587,7 @@ ACMD(do_cast)
 
  if (!spell || (spell->status != available)) {
    if (subcmd == SCMD_SPELL)
-     send_to_char(ch, "Cast what?!?\r\n");
+     send_to_char(ch, "Forneça o nome da magia!\r\n");
    else
      send_to_char(ch, "%s", HUH);  
    return;
@@ -603,11 +603,11 @@ ACMD(do_cast)
  if (GET_LEVEL(ch) < LVL_IMMORT) {
    level = get_spell_level(spell->vnum, GET_CLASS(ch));
    if ((level == -1) || (GET_LEVEL(ch) < level)) {
-     send_to_char(ch, "You do not know that %s!\r\n", (spell->type == SPELL) ? "spell" : "skill");
+     send_to_char(ch, "Você não conhece essa %s!\r\n", (spell->type == SPELL) ? "magia" :(spell->type == CHANSON) ? : "canção", "habilidade");
      return;
    }
    if (GET_SKILL(ch, spell->vnum) == 0) {
-     send_to_char (ch, "You are unfamilliar with that %s.\r\n", (spell->type == SPELL) ? "spell" : "skill");
+     send_to_char (ch, "Você não está familiarizad%s com esta %s.\r\n", OA(ch), (spell->type == SPELL) ? "magia" : (spell->type == CHANSON) ? : "canção", "habilidade");
      return;
    }
  }
@@ -673,18 +673,18 @@ ACMD(do_cast)
       target = TRUE;
     }
     if (!target) {
-      send_to_char(ch, "Upon %s should the spell be cast?\r\n",
-                (spell->targ_flags & (TAR_OBJ_ROOM | TAR_OBJ_INV | TAR_OBJ_WORLD | TAR_OBJ_EQUIP)) ? "what" : "who");
+      send_to_char(ch, "Sobre %s essa %s deve ser lançada?\r\n",
+                (spell->targ_flags & (TAR_OBJ_ROOM | TAR_OBJ_INV | TAR_OBJ_WORLD | TAR_OBJ_EQUIP)) ? "o que" : "quem",  (spell->type == SPELL) ? "magia" : (spell->type == CHANSON) ? : "canção", "habilidade");
       return;
     }
   }
 
   if (target && (tch == ch) && (spell->damages) && (spell->mag_flags & MAG_VIOLENT)) {
-    send_to_char(ch, "You shouldn't cast that on yourself -- could be bad for your health!\r\n");
+    send_to_char(ch, "Você não pode lançar em você mesm$r -- pode ser ruim para sua saúde!");
     return;
   }
   if (!target) {
-    send_to_char(ch, "Cannot find the target of your %s!\r\n", (spell->type == SPELL) ? "spell" : "skill");
+    send_to_char(ch, "Não foi possível encontrar o alvo de sua %s!\r\n", (spell->tpype == SPELL) ? "magia" : "habilidade");
     return;
   }
   
@@ -692,7 +692,8 @@ ACMD(do_cast)
   if ((spell->type == SPELL) && (GET_LEVEL(ch) < LVL_IMMORT)) {
     mana = mag_manacost(ch, tch, spell->vnum);
     if (GET_MANA(ch) < mana) {
-      send_to_char(ch, "You haven't the energy to cast that spell!\r\n");
+      send_to_char(ch, "Você não tem energia para %s!\r\n",
+	      (spell->type == SPELL) ? "lançar essa magia" : (spell->type == CHANSON) ? : "cantar essa canção", "usar esta habilidade");
       return;
     }
  }
@@ -704,7 +705,7 @@ ACMD(do_cast)
  if (rand_number (0, 101) > effectiveness) {
    WAIT_STATE(ch, PULSE_VIOLENCE);
    if (!tch || !skill_message(0, ch, tch, spell->vnum))
-     send_to_char (ch, "You lost your concentration!\r\n");
+     send_to_char (ch, "Você perde a concentração!\r\n");
 
    if ((spell->type == SPELL) && (mana > 0))
      GET_MANA(ch) = MAX(0, MIN(GET_MAX_MANA(ch), GET_MANA(ch) - (mana / 2)));
