@@ -1,6 +1,6 @@
 /*
 Fast Artificial Neural Network Library (fann)
-Copyright (C) 2003-2012 Steffen Nissen (sn@leenissen.dk)
+Copyright (C) 2003-2016 Steffen Nissen (steffen.fann@gmail.com)
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -62,6 +62,7 @@ struct fann_error;
 	FANN_E_SCALE_NOT_PRESENT - Scaling parameters not present
     FANN_E_INPUT_NO_MATCH - The number of input neurons in the ann and data don't match
     FANN_E_OUTPUT_NO_MATCH - The number of output neurons in the ann and data don't match
+	FANN_E_WRONG_PARAMETERS_FOR_CREATE - The parameters for create_standard are wrong, either too few parameters provided or a negative/very high value provided
 */
 enum fann_errno_enum
 {
@@ -85,7 +86,8 @@ enum fann_errno_enum
 	FANN_E_INDEX_OUT_OF_BOUND,
 	FANN_E_SCALE_NOT_PRESENT,
 	FANN_E_INPUT_NO_MATCH,
-	FANN_E_OUTPUT_NO_MATCH
+	FANN_E_OUTPUT_NO_MATCH,
+	FANN_E_WRONG_PARAMETERS_FOR_CREATE
 };
 
 /* Group: Error Handling */
@@ -97,7 +99,7 @@ enum fann_errno_enum
    
    If log_file is NULL, no errors will be printed.
    
-   If errdata is NULL, the default log will be set. The default log is the log used when creating 
+   If errdat is NULL, the default log will be set. The default log is the log used when creating 
    <struct fann> and <struct fann_data>. This default log will also be the default for all new structs
    that are created.
    
@@ -160,6 +162,6 @@ FANN_EXTERNAL char *FANN_API fann_get_errstr(struct fann_error *errdat);
  */ 
 FANN_EXTERNAL void FANN_API fann_print_error(struct fann_error *errdat);
 
-extern FILE * fann_default_error_log;
+FANN_EXTERNAL extern FILE * fann_default_error_log;
 
 #endif

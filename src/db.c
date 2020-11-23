@@ -1734,7 +1734,7 @@ static void check_start_rooms(void)
 		if ((r_ress_room_2 = real_room(CONFIG_RESS_ROOM_2)) == NOWHERE)
 	{
 		log1("SYSERR:  RessRoom 2 does not exist.  Change in config.c.");
-		r_ress_room_2 = CONFIG_RESS_ROOM_2;
+		r_ress_room_2 = CONFIG_NEWBIE_START;
 	}
 }
 

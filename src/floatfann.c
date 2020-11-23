@@ -1,6 +1,6 @@
 /*
 Fast Artificial Neural Network Library (fann)
-Copyright (C) 2003-2012 Steffen Nissen (sn@leenissen.dk)
+Copyright (C) 2003-2016 Steffen Nissen (steffen.fann@gmail.com)
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -19,6 +19,13 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 /* Easy way to allow for build of multiple binaries */
 
-#include "./include/fannconfig.h"
-#include "./include/floatfann.h"
-#include "math.h"
+#include "config.h"
+#include "floatfann.h"
+
+#include "fann.c"
+#include "fann_io.c"
+#include "fann_train.c"
+#include "fann_train_data.c"
+#include "fann_error.c"
+#include "fann_cascade.c"
+#include "parallel_fann.c"
