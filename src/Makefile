@@ -40,11 +40,16 @@ utils: .accepted
 circle:
 	$(MAKE) $(BINDIR)/circle
 
+anncheck: $(BINDIR)/anncheck
+   
 $(BINDIR)/circle : $(OBJFILES)
 	$(CC) -o $(BINDIR)/circle $(PROFILE) $(OBJFILES) $(LIBS)
 
 $%.o: %.c
 	$(CC) $< $(CFLAGS) -c -o $@ 
+
+$(BINDIR)/anncheck: anncheck.c
+	$(CC) $(CFLAGS) -o $(BINDIR)/anncheck anncheck.c
 
 clean:
 	rm -f *.o depend
