@@ -39,7 +39,7 @@
 #include "mud_event.h"
 #include "spedit.h"
 #include "fight.h"
-#include "./include/floatfann.h"
+#include "./include/fann.h"
 
 ACMD(do_formula);
 
