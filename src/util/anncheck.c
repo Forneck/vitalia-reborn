@@ -3,7 +3,7 @@
 #include "../include/floatfann.h"
 
 int main(){
-struct fann *avent, *map, move;
+struct fann *avent, *map, *move;
    avent = fann_create_from_file("../lib/etc/aventureiro.fann");
    move = fann_create_from_file("../lib/etc/move.fann");
    map = fann_create_from_file("../lib/etc/map.fann");
