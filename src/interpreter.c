@@ -2288,11 +2288,7 @@ void autopilot_char(struct char_data *ch){
 	int grupo;
 	int count_obj = 0;
 	int comando = 0;
-	
-	/* ver todos os chars com plr_auto
-	
 	/*para cada char executar: */
-	
    /* verifica grupo e inventario */
 	if (GROUP(ch) != NULL)
 		grupo = 1;
@@ -2339,8 +2335,8 @@ void autopilot_char(struct char_data *ch){
    
    calc_output = fann_run(ann_move,input);
    calc_output[0] = (calc_output[0] * (float) NUM_OF_DIRS);
-   calc_output[0] = calc_output[0] + 1;
-   comando = fabs(calc_output[0]);
+   calc_output[0] = calc_output[0];
+   comando = fabs(calc_output[0]+1);
    fann_destroy(ann_move);
     ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
 				complete_cmd_info[comando].subcmd));
