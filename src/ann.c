@@ -96,7 +96,7 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
    
     map_train =  fann_create_train_array(1,2,mapin,1,mapout);
   
-	fann_train_on_data(map,map_train,1000,1000,0);
+	fann_train_on_data(map,map_train,500,500,0);
 		fann_save(map, "etc/map.fann");
 	   fann_destroy_train(map_train);
 
