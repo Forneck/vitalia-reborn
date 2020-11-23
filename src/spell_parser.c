@@ -508,7 +508,7 @@ int cast_spell(struct char_data *ch, struct char_data *tch,
       send_to_char(ch, "Você sonha com grandes poderes mágicos.\r\n");
       break;
     case POS_RESTING:
-      send_to_char(ch, "Você não pode se concentrar enquanto descansa.\r\n"");
+      send_to_char(ch, "Você não pode se concentrar enquanto descansa.\r\n");
       break;
     case POS_SITTING:
       send_to_char(ch, "Você não pode fazer isso sentado!\r\n");
@@ -603,11 +603,11 @@ ACMD(do_cast)
  if (GET_LEVEL(ch) < LVL_IMMORT) {
    level = get_spell_level(spell->vnum, GET_CLASS(ch));
    if ((level == -1) || (GET_LEVEL(ch) < level)) {
-     send_to_char(ch, "Você não conhece essa %s!\r\n", (spell->type == SPELL) ? "magia" :(spell->type == CHANSON) ? : "canção", "habilidade");
+     send_to_char(ch, "Você não conhece essa %s!\r\n", (spell->type == SPELL) ? "magia" :(spell->type == CHANSON) ?  "canção", "habilidade");
      return;
    }
    if (GET_SKILL(ch, spell->vnum) == 0) {
-     send_to_char (ch, "Você não está familiarizad%s com esta %s.\r\n", OA(ch), (spell->type == SPELL) ? "magia" : (spell->type == CHANSON) ? : "canção", "habilidade");
+     send_to_char (ch, "Você não está familiarizad%s com esta %s.\r\n", OA(ch), (spell->type == SPELL) ? "magia" : (spell->type == CHANSON) ?  "canção", "habilidade");
      return;
    }
  }
