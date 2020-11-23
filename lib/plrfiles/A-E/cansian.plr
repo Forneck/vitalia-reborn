@@ -6,19 +6,19 @@ Clas: 4
 Levl: 110
 Id  : 1
 Brth: 1601790482
-Plyd: 955095
-Last: 1606090376
+Plyd: 960802
+Last: 1606096119
 Lmot: 1605455027
 Lnew: 1605123013
 Htwn: 1372
-Host: 177.220.172.167
+Host: 127.0.0.1
 Hite: 151
 Wate: 113
 Alin: 322
 Act : 0 0 0 0
 Aff : 0 0 0 0
 Pref: efghimnoqrvxAB d 0 0
-Room: 3001
+Room: 65535
 Lern: 1
 Hit : 2000/2000
 Mana : 100/100
