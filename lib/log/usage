@@ -1,5 +1,3 @@
-Nov 04 14:04:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
-Nov 04 14:04:00 2020 :: rusage: user time: 96 sec, system time: 172 sec, max res size: 23196
 Nov 04 14:09:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
 Nov 04 14:09:00 2020 :: rusage: user time: 97 sec, system time: 174 sec, max res size: 23196
 Nov 04 14:14:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
@@ -4998,3 +4996,5 @@ Nov 23 04:20:49 2020 :: nusage: 1   sockets connected, 1   sockets playing
 Nov 23 04:20:49 2020 :: rusage: user time: 300 sec, system time: 30 sec, max res size: 25332
 Nov 23 16:54:49 2020 :: nusage: 1   sockets connected, 1   sockets playing
 Nov 23 16:54:49 2020 :: rusage: user time: 10 sec, system time: 1 sec, max res size: 22236
+Nov 23 18:16:10 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 23 18:16:10 2020 :: rusage: user time: 56 sec, system time: 2 sec, max res size: 22736

@@ -1,30 +1,30 @@
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-FANN Error 19: The number of input neurons in the ann (29) and data (2) don't match
-Nov 23 17:49:15 2020 :: (GC) Reboot by Cansian.
-Nov 23 17:49:15 2020 :: SYSERR: lib/.fastboot: No such file or directory
-Nov 23 17:49:15 2020 :: Closing all sockets.
-Nov 23 17:49:15 2020 :: Closing link to: Cansian.
-Nov 23 17:49:15 2020 :: Saving current MUD time.
-Nov 23 17:49:15 2020 :: Rebooting.
-Quick boot mode -- rent check supressed.
-Using file descriptor for logging.
+Max epochs     1000. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000000. Bit fail 0.
+Max epochs      500. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0450004824. Bit fail 0.
+Epochs          500. Current error: 0.0000000000. Bit fail 0.
+Max epochs     1000. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000000. Bit fail 0.
+Max epochs      500. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0450152531. Bit fail 0.
+Epochs          500. Current error: 0.5000000000. Bit fail 1.
+Max epochs     1000. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000000. Bit fail 0.
+Max epochs      500. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0050006728. Bit fail 0.
+Epochs          500. Current error: 0.0000000000. Bit fail 0.
+Max epochs     1000. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000000. Bit fail 0.
+Max epochs      500. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0050011156. Bit fail 0.
+Epochs          500. Current error: 0.0000000000. Bit fail 0.
+Max epochs     1000. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000000. Bit fail 0.
+Max epochs      500. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0050013829. Bit fail 0.
+Epochs          500. Current error: 0.0000000001. Bit fail 0.
+Max epochs     1000. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000000. Bit fail 0.
+Max epochs      500. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.5235249400. Bit fail 4.
+Epochs          500. Current error: 0.3453882933. Bit fail 2.
