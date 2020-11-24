@@ -1,70 +1,38 @@
 #4500
 Ulmo north~
-2 d 1
-*~
-* evaluate the first word.
-eval word %speech.car%
-* evaluate the rest of the speech string.
-eval rest %speech.cdr%
-* keep looping until there are no more words.
-while %word%
-  if %word% == ulmo
+2 c 100
+s~
+if %cmd.mudcommand% == say && ulmo /= %arg%
   unlock portao north
-  end
-  eval word %rest.car%
-  eval rest %rest.cdr%
-done
+else
+end
 ~
 #4501
 Turgon north~
-2 d 1
-*~
-* evaluate the first word.
-eval word %speech.car%
-* evaluate the rest of the speech string.
-eval rest %speech.cdr%
-* keep looping until there are no more words.
-while %word%
-  if %word% == turgon
+2 c 100
+s~
+if %cmd.mudcommand% == say && turgon /= %arg%
   open portao north
-  end
-  eval word %rest.car%
-  eval rest %rest.cdr%
-done
+else
+end
 ~
 #4502
 fecha north~
-2 d 1
-*~
-* evaluate the first word.
-eval word %speech.car%
-* evaluate the rest of the speech string.
-eval rest %speech.cdr%
-* keep looping until there are no more words.
-while %word%
-  if %word% == fecha
+2 c 100
+s~
+if %cmd.mudcommand% == say && fecha /= %arg%
   close portao north
-  end
-  eval word %rest.car%
-  eval rest %rest.cdr%
-done
+else
+end
 ~
 #4503
 tranca north~
-2 d 1
-*~
-* evaluate the first word.
-eval word %speech.car%
-* evaluate the rest of the speech string.
-eval rest %speech.cdr%
-* keep looping until there are no more words.
-while %word%
-  if %word% == tranca
+2 c 100
+s~
+if %cmd.mudcommand% == say && tranca /= %arg%
   lock portao north
-  end
-  eval word %rest.car%
-  eval rest %rest.cdr%
-done
+else
+end
 ~
 #4504
 Ulmo south~
