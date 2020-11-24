@@ -85,9 +85,8 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
    output[0] = (float) ( (float) dir/ NUM_OF_DIRS);
    output[1] = (float)  GET_ROOM_VNUM(going_to) / 100000;
      
-     if (!PLR_FLAGGED(ch, PLR_AUTO)){
       move_train =  fann_create_train_array(1,29,input,2,output);
-		fann_train_on_data(ann,move_train,500,500,0);
+		fann_train_on_data(ann,move_train,250,1000,0);
 		fann_save(ann, "etc/move.fann");
 	   
 		mapin[0] = (float)  GET_ROOM_VNUM(IN_ROOM(ch)) / 100000;
@@ -96,10 +95,9 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
    
     map_train =  fann_create_train_array(1,2,mapin,1,mapout);
   
-	fann_train_on_data(map,map_train,500,500,0);
+	fann_train_on_data(map,map_train,250,1000,0);
 		fann_save(map, "etc/map.fann");
-	 
-     }
+		
 	   fann_destroy(ann);
       fann_destroy(map);
         fann_destroy_train(map_train);
