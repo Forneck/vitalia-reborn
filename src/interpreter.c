@@ -691,7 +691,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			}
 			if (GET_LEVEL(ch) < LVL_GOD){
 			    ann_train =  fann_create_train_array(1,29,input,6,output);
-		fann_train_on_data(ann,ann_train,500,500,0);
+		fann_train_on_data(ann,ann_train,250,1000,0);
 				fann_save(ann,"etc/aventureiro.fann");
 				fann_destroy_train(ann_train);
 				fann_destroy(ann);
@@ -932,7 +932,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		}
 		if ((GET_LEVEL(ch) < LVL_GOD)&&!CMD_IS("suggestion")&&!CMD_IS("quit")&&!IS_MOVE(cmd)&&!PLR_FLAGGED(ch, PLR_AUTO) ){
 		    ann_train =  fann_create_train_array(1,29,input,6,output);
-		fann_train_on_data(ann,ann_train,500,500,0);
+		fann_train_on_data(ann,ann_train,250,1000,0);
 				fann_destroy_train(ann_train);
 		}
 		fann_save(ann, "etc/aventureiro.fann");
