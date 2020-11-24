@@ -9,7 +9,7 @@ eval rest %speech.cdr%
 * keep looping until there are no more words.
 while %word%
   if %word% == ulmo
-  %unlock% %portao% %north%
+  unlock portao north
   end
   eval word %rest.car%
   eval rest %rest.cdr%
@@ -26,7 +26,7 @@ eval rest %speech.cdr%
 * keep looping until there are no more words.
 while %word%
   if %word% == turgon
-  %open% %portao% %north%
+  open portao north
   end
   eval word %rest.car%
   eval rest %rest.cdr%
