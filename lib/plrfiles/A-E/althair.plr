@@ -6,23 +6,23 @@ Clas: 6
 Levl: 17
 Id  : 20
 Brth: 1603768097
-Plyd: 255428
-Last: 1606169475
+Plyd: 260039
+Last: 1606246942
 Lmot: 1605925461
 Lnew: 1605129579
 Htwn: 1372
 Host: 177.220.172.134
 Hite: 195
 Wate: 172
-Alin: 199
-Act : h 0 0 0
+Alin: 39
+Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDE abde 0 0
 Wimp: 50
 Room: 3001
-Hung: 18
-Thir: 18
-Hit : 224/199
+Hung: 20
+Thir: 20
+Hit : 234/199
 Mana : 172/165
 Move: 155/135
 Str : 16/0
@@ -32,9 +32,8 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Gold: 8111
-Bank: 187596
-Exp : 2411675
+Gold: 227974
+Exp : 2532265
 Olc : 0
 ScrW: 44
 Skil:
@@ -54,7 +53,7 @@ Skil:
 251 90
 0 0
 Affs:
-19 38 0 29 16 0 0 0
+19 24 0 29 16 0 0 0
 0 0 0 0 0 0 0 0
 Alis: 15
  5reinos

@@ -2,6 +2,11 @@
 Vitalia~
 A Vila de Mordecai~
 10000 10099 65 1 j 0 0 0 -1 -1
+M 0 10010 1 10052 	(Mordecai)
+E 1 10012 1 17 	(o manto de Mordecai)
+G 1 10015 1 -1 	(a chave em formato de caveira)
+D 0 10052 1 2 	(A Casa de Mordecai)
+D 0 10052 0 2 	(A Casa de Mordecai)
 D 0 10000 1 2 	(Entrando na Vila)
 R 0 10000 10018 -1 	(um buraco)
 O 0 10018 1 10000 	(um buraco)
@@ -83,9 +88,6 @@ M 0 10008 5 10044 	(o cachorro com três patas)
 M 0 10009 3 10051 	(a bruxa sem dente)
 M 0 10009 3 10051 	(a bruxa sem dente)
 M 0 10009 3 10051 	(a bruxa sem dente)
-M 0 10010 1 10052 	(Mordecai)
-E 1 10012 1 17 	(o manto de Mordecai)
-G 1 10015 1 -1 	(a chave em formato de caveira)
 M 0 10011 6 10018 	(a galinha)
 E 1 10013 1 17 	(uma coxinha de galinha)
 G 1 10015 1 -1 	(a chave em formato de caveira)
@@ -101,7 +103,6 @@ D 0 10001 3 2 	(Um Caminho Sujo)
 D 0 10005 1 2 	(Uma Cela)
 D 0 10002 3 2 	(Um Caminho Sujo)
 D 0 10029 0 2 	(Estocagem de Armas)
-D 0 10052 1 2 	(A Casa de Mordecai)
 D 0 10054 3 2 	(O Tesouro de Mordecai)
 S
 $

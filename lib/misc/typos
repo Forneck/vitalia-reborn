@@ -19,7 +19,7 @@ Level     80
 Room      3001
 Flags     0 0 0 0
 End
-Text       create berries~
+Text      create berries~
 Body      You create um punhado de morangos silvestres.
 "you create" falta traduzir
 ~
@@ -28,5 +28,37 @@ IdNum     6
 Dated     1606089786
 Level     80
 Room      3054
+Flags     0 0 0 0
+End
+Text       port~
+Body      port parece estar fechado.
+](direcao norte)
+~
+Name      Anyte~
+IdNum     6
+Dated     1606173312
+Level     80
+Room      13108
+Flags     0 0 0 0
+End
+Text       passagem secreta~
+Body      "secreta parece estar fechado." deveria ser "A passagem secreta parece estar fechada."
+~
+Name      Anyte~
+IdNum     6
+Dated     1606173552
+Level     80
+Room      13125
+Flags     0 0 0 0
+End
+Text       passagem~
+Body      
+"pedra parece estar fechado." deveria ser "A porta feita de pedras parece estar fechada."
+~
+Name      Anyte~
+IdNum     6
+Dated     1606173636
+Level     80
+Room      13128
 Flags     0 0 0 0
 End

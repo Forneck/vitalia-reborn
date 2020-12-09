@@ -3,29 +3,28 @@ Pass: ScmvusuY4JXpo
 Titl: o Crente
 Sex : 1
 Clas: 1
-Levl: 2
+Levl: 4
 Id  : 38
 Brth: 1606089903
-Plyd: 1037
-Last: 1606090940
+Plyd: 1443
+Last: 1606566364
 Lmot: 1606089910
 Lnew: 1606089908
 Htwn: 1372
-Host: 179.162.73.87
+Host: 177.40.133.159
 Hite: 186
 Wate: 179
-Alin: 61
+Alin: -105
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghknoBD ad 0 0
 Room: 3001
 Lern: 3
-Hung: 7
-Thir: 7
-Hit : 28/28
-Mana : 103/103
-Move: 85/85
-Breath : 15/15
+Hung: 23
+Thir: 21
+Hit : 33/44
+Mana : 80/111
+Move: 82/89
 Str : 14/0
 Int : 15
 Wis : 15
@@ -33,19 +32,19 @@ Dex : 13
 Con : 7
 Cha : 4
 Ac  : 100
-Gold: 502
-Exp : 2301
+Gold: 1956
+Exp : 6537
 Olc : 0
 Page: 10
 Skil:
-1 70
-16 35
+1 95
+12 95
+16 95
 0 0
 Affs:
-36 23 0 33 256 0 0 0
-19 18 0 29 16 0 0 0
-1 13 -20 17 0 0 0 0
-96 236 -4 17 0 0 0 0
-96 236 0 61 0 16 0 0
-63 4 0 52 134217728 0 0 0
+96 231 0 61 0 16 0 0
+96 231 -4 17 0 0 0 0
+1 8 -20 17 0 0 0 0
+19 13 0 29 16 0 0 0
+36 18 0 33 256 0 0 0
 0 0 0 0 0 0 0 0

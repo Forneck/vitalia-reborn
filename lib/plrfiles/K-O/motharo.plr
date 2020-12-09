@@ -6,8 +6,8 @@ Clas: 6
 Levl: 39
 Id  : 25
 Brth: 1604182960
-Plyd: 63773
-Last: 1606169475
+Plyd: 64426
+Last: 1607254384
 Lmot: 1605614458
 Lnew: 1606161834
 Htwn: 1372
@@ -15,7 +15,7 @@ Host: 187.66.23.112
 Hite: 178
 Wate: 158
 Alin: 72
-Act : hl 0 0 0
+Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDEF abd 0 0
 Wimp: 20
@@ -57,9 +57,7 @@ Skil:
 252 90
 0 0
 Affs:
-36 32 0 33 256 0 0 0
-96 7 -4 17 0 0 0 0
-96 7 0 61 0 16 0 0
+36 5 0 33 256 0 0 0
 0 0 0 0 0 0 0 0
 Alis: 9
  fome

@@ -4087,3 +4087,56 @@ Nov 23 00:09:52 2020 :: OLC: Schalken edits toggles for Schalken
 Nov 23 00:09:52 2020 :: OLC: Schalken stops editing zone 0 allowed zone 0
 Nov 23 00:10:36 2020 :: OLC: Schalken edits toggles for Schalken
 Nov 23 00:10:36 2020 :: OLC: Schalken stops editing zone 0 allowed zone 0
+Max Nov 23 23:29:47 2020 :: OLC: Cansian starts editing zone 131 allowed zone 0
+Max epochs      500. DNov 23 23:29:59 2020 :: GenOLC: add_room: Updated existing room #13125.
+Nov 23 23:29:59 2020 :: OLC: Cansian edits room 13125.
+Nov 23 23:29:59 2020 :: GenOLC: save_rooms: Saving rooms in zone #131 (13100-13199).
+Nov 23 23:29:59 2020 :: OLC: Cansian stops editing zone 131 allowed zone 0
+Epochs          500. Current error: 0.0000000000. Bit failNov 23 23:30:20 2020 :: OLC: Cansian starts editing zone 131 allowed zone 0
+Max epochs      500. DesiredNov 23 23:30:32 2020 :: GenOLC: add_room: Updated existing room #13128.
+Nov 23 23:30:32 2020 :: OLC: Cansian edits room 13128.
+Nov 23 23:30:32 2020 :: GenOLC: save_rooms: Saving rooms in zone #131 (13100-13199).
+Nov 23 23:30:32 2020 :: OLC: Cansian stops editing zone 131 allowed zone 0
+MaNov 23 23:31:58 2020 :: OLC: Cansian starts editing zone 100 allowed zone 0
+Max epochs      500.Nov 23 23:32:08 2020 :: OLC: Cansian stops editing zone 100 allowed zone 0
+Epochs          500. Current error: 0.0000000002. Bit failNov 23 23:33:08 2020 :: OLC: Cansian starts editing zone 100 allowed zone 0
+Epochs        Nov 23 23:33:27 2020 :: GenOLC: add_room: Updated existing room #10003.
+Nov 23 23:33:27 2020 :: OLC: Cansian edits room 10003.
+Nov 23 23:33:27 2020 :: GenOLC: save_rooms: Saving rooms in zone #100 (10000-10099).
+Nov 23 23:33:27 2020 :: OLC: Cansian stops editing zone 100 allowed zone 0
+Epochs  Nov 23 23:35:23 2020 :: OLC: Cansian starts editing zone 100 allowed zone 0
+Epochs          500. Current error: 0.00Nov 23 23:35:37 2020 :: GenOLC: add_room: Updated existing room #10002.
+Nov 23 23:35:37 2020 :: OLC: Cansian edits room 10002.
+Nov 23 23:35:37 2020 :: GenOLC: save_rooms: Saving rooms in zone #100 (10000-10099).
+Nov 23 23:35:37 2020 :: OLC: Cansian stops editing zone 100 allowed zone 0
+Epochs            1. Current error: 0.0199979022. Bit Nov 23 23:35:45 2020 :: OLC: Cansian starts editing zone 100 allowed zone 0
+Epochs          500. CurNov 23 23:35:57 2020 :: GenOLC: add_room: Updated existing room #10002.
+Nov 23 23:35:57 2020 :: OLC: Cansian edits room 10002.
+Nov 23 23:35:57 2020 :: GenOLC: save_rooms: Saving rooms in zone #100 (10000-10099).
+Nov 23 23:35:57 2020 :: OLC: Cansian stops editing zone 100 allowed zone 0
+Nov 23 23:39:12 2020 :: OLC: Cansian starts editing zone 100 allowed zone 0
+Nov 23 23:39:24 2020 :: GenOLC: add_room: Updated existing room #10028.
+Nov 23 23:39:24 2020 :: OLC: Cansian edits room 10028.
+Nov 23 23:39:24 2020 :: GenOLC: save_rooms: Saving rooms in zone #100 (10000-10099).
+Nov 23 23:39:24 2020 :: OLC: Cansian stops editing zone 100 allowed zone 0
+Max epochs      500. Desired errNov 23 23:40:15 2020 :: OLC: Cansian starts editing zone 100 allowed zone 0
+Epochs          500. Current error: 0.00000000Nov 23 23:40:26 2020 :: GenOLC: add_room: Updated existing room #10052.
+Nov 23 23:40:26 2020 :: OLC: Cansian edits room 10052.
+Nov 23 23:40:26 2020 :: GenOLC: save_rooms: Saving rooms in zone #100 (10000-10099).
+Nov 23 23:40:26 2020 :: OLC: Cansian stops editing zone 100 allowed zone 0
+Epochs            1. Current error: 0.12502519Nov 23 23:40:34 2020 :: OLC: Cansian starts editing zone 100 allowed zone 0
+Epochs          500. Current eNov 23 23:40:47 2020 :: GenOLC: add_room: Updated existing room #10054.
+Nov 23 23:40:47 2020 :: OLC: Cansian edits room 10054.
+Nov 23 23:40:47 2020 :: GenOLC: save_rooms: Saving rooms in zone #100 (10000-10099).
+Nov 23 23:40:47 2020 :: OLC: Cansian stops editing zone 100 allowed zone 0
+Max epochs      500. Desired eNov 23 23:45:51 2020 :: OLC: Cansian starts editing zone 100 allowed zone 0
+Epochs            1. CurNov 23 23:46:27 2020 :: GenOLC: add_room: Updated existing room #10052.
+Nov 23 23:46:27 2020 :: OLC: Cansian edits room 10052.
+Nov 23 23:46:27 2020 :: GenOLC: save_rooms: Saving rooms in zone #100 (10000-10099).
+Nov 23 23:46:27 2020 :: OLC: Cansian stops editing zone 100 allowed zone 0
+Epochs            1. Current error: 0.0000Nov 23 23:46:32 2020 :: OLC: Cansian starts editing zone 100 allowed zone 0
+Epochs          500. Current error: 0.000000Nov 23 23:46:58 2020 :: OLC: Cansian edits zone info for room 10052.
+Nov 23 23:46:58 2020 :: OLC: Cansian stops editing zone 100 allowed zone 0
+Epochs            1. Current error: 0.0800147802Nov 23 23:47:55 2020 :: OLC: Cansian starts editing the game configuration.
+EpocNov 23 23:48:58 2020 :: OLC: Cansian modifies the game configuration.
+Nov 23 23:48:58 2020 :: OLC: Cansian stops editing the game configuration

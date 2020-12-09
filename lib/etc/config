@@ -26,7 +26,7 @@ holler_move_cost = 20
 tunnel_size = 2
 
 * Maximum experience gainable per kill?
-max_exp_gain = 100000
+max_exp_gain = 50000
 
 * Maximum experience loseable per death?
 max_exp_loss = 500000
@@ -156,6 +156,9 @@ DFLT_PORT = 4000
 
 * default directory to use as data directory.
 DFLT_DIR = lib
+
+* What file to log messages to (ex: 'log/syslog').
+LOGNAME = syslog.txt
 
 * Maximum number of players allowed before game starts to turn people away.
 max_playing = 200

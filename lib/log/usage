@@ -1,23 +1,3 @@
-Nov 04 18:40:10 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 18:40:10 2020 :: rusage: user time: 5 sec, system time: 6 sec, max res size: 22604
-Nov 04 18:45:10 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 18:45:10 2020 :: rusage: user time: 6 sec, system time: 7 sec, max res size: 22692
-Nov 04 19:07:43 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 19:07:43 2020 :: rusage: user time: 0 sec, system time: 0 sec, max res size: 21900
-Nov 04 19:12:43 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 19:12:43 2020 :: rusage: user time: 2 sec, system time: 1 sec, max res size: 22052
-Nov 04 19:17:43 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 19:17:43 2020 :: rusage: user time: 4 sec, system time: 2 sec, max res size: 22368
-Nov 04 19:22:43 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 19:22:43 2020 :: rusage: user time: 5 sec, system time: 3 sec, max res size: 22572
-Nov 04 19:27:43 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 19:27:43 2020 :: rusage: user time: 5 sec, system time: 4 sec, max res size: 22796
-Nov 04 19:32:43 2020 :: nusage: 2   sockets connected, 2   sockets playing
-Nov 04 19:32:43 2020 :: rusage: user time: 6 sec, system time: 5 sec, max res size: 22796
-Nov 04 19:37:43 2020 :: nusage: 3   sockets connected, 2   sockets playing
-Nov 04 19:37:43 2020 :: rusage: user time: 7 sec, system time: 6 sec, max res size: 22828
-Nov 04 19:42:43 2020 :: nusage: 4   sockets connected, 4   sockets playing
-Nov 04 19:42:43 2020 :: rusage: user time: 8 sec, system time: 8 sec, max res size: 22828
 Nov 04 19:47:43 2020 :: nusage: 4   sockets connected, 4   sockets playing
 Nov 04 19:47:43 2020 :: rusage: user time: 10 sec, system time: 9 sec, max res size: 23080
 Nov 04 19:52:43 2020 :: nusage: 4   sockets connected, 4   sockets playing
@@ -4998,3 +4978,23 @@ Nov 23 22:28:23 2020 :: nusage: 1   sockets connected, 1   sockets playing
 Nov 23 22:28:23 2020 :: rusage: user time: 171 sec, system time: 6 sec, max res size: 22880
 Epochs          500.Nov 23 22:41:36 2020 :: nusage: 1   sockets connected, 0   sockets playing
 Nov 23 22:41:36 2020 :: rusage: user time: 55 sec, system time: 2 sec, max res size: 22744
+Epochs            1. Current error: 0.0000000000. BiNov 23 22:47:34 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 23 22:47:34 2020 :: rusage: user time: 37 sec, system time: 4 sec, max res size: 22952
+Epochs            Nov 23 22:52:34 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 23 22:52:34 2020 :: rusage: user time: 74 sec, system time: 9 sec, max res size: 22952
+Max epochs      Nov 23 23:19:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 23 23:19:00 2020 :: rusage: user time: 41 sec, system time: 1 sec, max res size: 22884
+Max epochs      500. DesNov 23 23:24:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 23 23:24:00 2020 :: rusage: user time: 81 sec, system time: 2 sec, max res size: 22884
+Epochs          500. Current error: 0.00000000Nov 23 23:29:00 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Nov 23 23:29:00 2020 :: rusage: user time: 123 sec, system time: 4 sec, max res size: 23044
+EpNov 23 23:34:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 23 23:34:00 2020 :: rusage: user time: 165 sec, system time: 5 sec, max res size: 23120
+Max epochs      500. Desired error: 0.0000000000Nov 23 23:39:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 23 23:39:00 2020 :: rusage: user time: 210 sec, system time: 7 sec, max res size: 23288
+Epochs          500. Current error: Nov 23 23:44:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 23 23:44:00 2020 :: rusage: user time: 255 sec, system time: 8 sec, max res size: 23368
+EpNov 23 23:49:00 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 23 23:49:00 2020 :: rusage: user time: 302 sec, system time: 10 sec, max res size: 23772
+Epochs            1. Current error: 0.00000048Nov 23 23:54:01 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Nov 23 23:54:01 2020 :: rusage: user time: 353 sec, system time: 11 sec, max res size: 23992

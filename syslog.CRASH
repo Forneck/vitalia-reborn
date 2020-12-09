@@ -1,30 +1,3 @@
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000075. Bit fail 0.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0050001168. Bit fail 0.
-Epochs          500. Current error: 0.5000000000. Bit fail 1.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000006222. Bit fail 0.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0200000014. Bit fail 0.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000012. Bit fail 0.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0200002659. Bit fail 0.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000012150. Bit fail 0.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0800055265. Bit fail 1.
-Epochs          500. Current error: 0.0000000000. Bit fail 0.
-Max epochs      500. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.00001111Nov 23 22:42:22 2020 :: Andreii has connected.
-Nov 23 22:42:23 2020 :: Andreii had no variable file
-Nov 23 22:42:23 2020 :: Andreii retrieving crash-saved items and entering game.
-Nov 23 22:42:23 2020 :: Andreii (level 11) has 15 objects (max 100).
-Segmentation fault (core dumped)
+autorun starting game Thu Dec  3 20:57:20 UTC 2020
+running bin/circle -q 4000
+Aborted (core dumped)

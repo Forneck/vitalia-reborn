@@ -66,7 +66,7 @@ D2
 D3
 ~
 porta cela~
-2 -1 10005
+2 10014 10005
 S
 #10003
 Um Caminho Sujo~
@@ -86,7 +86,7 @@ D2
 D3
 ~
 porta cela~
-2 -1 10004
+2 10014 10004
 S
 #10004
 Uma Cela~
@@ -503,7 +503,7 @@ D1
 D2
 ~
 porta~
-2 -1 10029
+2 10015 10029
 S
 #10029
 Estocagem de Armas~
@@ -889,10 +889,14 @@ se pode ver aqui.  Qualquer um pensaria que alguém no status de Mordecai
 teria um pouco mais de luxo.
 ~
 100 0 0 0 0 0
+D0
+~
+porta cela~
+4 10015 10053
 D1
 ~
 armario~
-2 -1 10054
+2 10015 10054
 D2
 ~
 ~
@@ -919,7 +923,7 @@ no meio da sala, obviamente onde Mordecai aproveita a maior parte do tempo.
 D3
 ~
 armario~
-2 -1 10052
+2 10015 10052
 S
 #10055
 Um Túnel Escuro e Sujo~

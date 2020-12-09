@@ -7,7 +7,7 @@ Levl: 10
 Id  : 26
 Brth: 1604518655
 Plyd: 7278
-Last: 1606152657
+Last: 1607220336
 Lmot: 1605526095
 Lnew: 1605239570
 Htwn: 1372
@@ -19,11 +19,11 @@ Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: abhnoBCE a 0 0
 Room: 3001
-Hung: 23
-Thir: 23
-Hit : 116/114
-Mana : 40/175
-Move: 121/98
+Hung: 17
+Thir: 17
+Hit : 144/114
+Mana : 162/175
+Move: 125/98
 Str : 11/0
 Int : 13
 Wis : 11
@@ -41,17 +41,16 @@ Skil:
 88 25
 0 0
 Affs:
-39 96 4 1 0 0 0 0
-19 0 0 29 16 0 0 0
-67 22 -15 17 0 0 0 0
+39 90 4 1 0 0 0 0
+67 16 -15 17 0 0 0 0
 0 0 0 0 0 0 0 0
 Alis: 3
- z
- drin font
+ 1
+ cast 'igni
 0
  2
  cast 'burst of fire
 0
- 1
- cast 'igni
+ z
+ drin font
 0

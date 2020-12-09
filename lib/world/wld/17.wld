@@ -483,7 +483,7 @@ D1
 Você vê uma enorme quantidade de portas feitas de ossos.
 ~
 porta portas caveira~
-0 1718 1756
+3 1718 1756
 D3
 Você vê uma ponte de madeira.
 ~
@@ -507,7 +507,7 @@ D0
 Você vê uma fissura na parede do orgão.
 ~
 fissura~
-0 -1 1756
+1 -1 1756
 D1
 ~
 ~
@@ -825,7 +825,7 @@ D3
 Do lado de fora é a câmara do anfiteatro.
 ~
 porta caixao~
-0 -1 1747
+1 -1 1747
 S
 #1747
 O Anfiteatro Macabro~
@@ -840,7 +840,7 @@ D1
 Você vê uma porta feita de tampa de caixão.
 ~
 porta caixao~
-0 -1 1746
+1 -1 1746
 D3
 ~
 ~
@@ -935,7 +935,7 @@ D0
 D3
 ~
 porta portas caixao~
-0 -1 1753
+1 -1 1753
 D4
 ~
 ~
@@ -955,12 +955,12 @@ glorificada em sacrifício.
 D1
 ~
 porta portas caixao~
-0 -1 1752
+1 -1 1752
 D5
 Você não pode ver muita coisa, mas você não gosta do pouco que vê.
 ~
 grade~
-0 1705 1754
+1 1705 1754
 S
 #1754
 O Poço Escuro~
@@ -973,7 +973,7 @@ D4
 Você vê uma grade de ferro preta sobre você.
 ~
 grade ferro~
-0 1705 1753
+1 1705 1753
 S
 #1755
 Um Túnel de Pedra~
@@ -1007,12 +1007,12 @@ D2
 Você parece ser capaz de espiar na fissura aberta.
 ~
 fissura~
-0 -1 1727
+1 -1 1727
 D3
 Você vê uma porta feita de osso conduzir até a caverna do estômago.
 ~
 porta portas osso~
-0 1718 1726
+1 1718 1726
 E
 muro~
 Uma pequena fissura surge de um muro ao sul.

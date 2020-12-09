@@ -597,7 +597,7 @@ porta~
 D3
 ~
 secreta passagem~
-1 -1 13126
+3 -1 13126
 E
 parede impressão mão~
 A pequena decoração na parede definitivamente é a impressão de uma mão. 
@@ -683,7 +683,7 @@ A escuridão infinita continua, mas você nota algo familiar lá.
 D3
 ~
 pedra pedras porta~
-1 -1 13130
+3 -1 13130
 E
 marcas raspado~
 Um enorme posto feito de pedras bloqueia seu caminho, mas esses raspados 
@@ -868,16 +868,16 @@ Uma porta bem preservada está aqui.
 porta madeira carvalho~
 1 -1 13137
 E
-porta madeira norte preservada~
-Você pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
-você toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
-onde ir.
-~
-E
 porta madeira sul preservada~
 Você pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
 você toca na porta ainda consegue retirar o verniz.  Esta porta parece ser
 mais um portão do que uma porta normal.
+~
+E
+porta madeira norte preservada~
+Você pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
+você toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
+onde ir.
 ~
 S
 #13135
