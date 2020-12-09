@@ -240,6 +240,7 @@
 #define PLR_HERETIC 23 /* Player can't pray */
 #define PLR_GHOST 24 /* Player is a ghost */
 #define PLR_AUTO 25 /* Player is in a autopilot mode */
+#define PLR_RIVAL 26 /* Rival ann */
 
 /* Mobile flags: used by char_data.char_specials.act */
 #define MOB_SPEC            0   /**< Mob has a callable spec-proc */
