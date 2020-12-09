@@ -2388,14 +2388,11 @@ void autopilot_process(){
 	  if (IN_ROOM(ch) != NOWHERE) {
    if (IS_PLAYING(d) && PLR_FLAGGED(ch, PLR_AUTO))
    autopilot_char(ch);
-	}
-	else {
-	    if (IS_PLAYING(d) && PLR_FLAGGED(ch, PLR_RIVAL))
+	else if (IS_PLAYING(d) && PLR_FLAGGED(ch, PLR_RIVAL))
    autopilot_rival(ch);
 	}
 	}
 }
-
 
 void autopilot_rival(struct char_data *ch){
  
