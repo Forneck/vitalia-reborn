@@ -503,6 +503,8 @@ do                                                              \
 #define GET_WEIGHT(ch)	((ch)->player.weight)
 /** Sex of ch. */
 #define GET_SEX(ch)	((ch)->player.sex)
+/** Fitness of ch. */
+#define GET_FIT(ch)	((ch)->player.fit)
 
 /** Current strength of ch. */
 #define GET_STR(ch)     ((ch)->aff_abils.str)
