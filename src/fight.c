@@ -341,6 +341,8 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 	  GET_HIT(ch) = GET_MAX_HIT(ch);
 	  GET_MANA(ch) = GET_MAX_MANA(ch);
 	  GET_MOVE(ch) = GET_MAX_MOVE(ch);
+	  GET_COND(ch, HUNGER) = 24;
+			GET_COND(ch, THIRST) = 24;
 	  update_pos(ch);
 	}
 	else {
