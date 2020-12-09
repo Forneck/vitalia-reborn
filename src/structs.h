@@ -1015,6 +1015,7 @@ struct char_player_data
   struct time_data time;         /**< PC AGE in days */
   ubyte weight;                  /**< PC / NPC weight */
   ubyte height;                  /**< PC / NPC height */
+  int fit;
 };
 
 /** Character abilities. Different instances of this structure are used for
