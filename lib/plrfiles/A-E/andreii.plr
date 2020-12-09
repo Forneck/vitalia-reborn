@@ -6,26 +6,25 @@ Clas: 6
 Levl: 1
 Id  : 34
 Brth: 1605791470
-Plyd: 15724
-Last: 1606184751
+Plyd: 23122
+Last: 1607534646
 Lmot: 1605791480
 Lnew: 1605799951
 Htwn: 1372
-Host: 177.220.172.134
+Host: 138.204.26.89
 Hite: 176
 Wate: 155
-Act : ghz 0 0 0
+Act : hz 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCDE abde 0 0
 Wimp: 7
-Room: 3001
+Room: 65535
 Lern: 47
-Hung: 13
-Thir: 13
+Hung: -1
+Thir: -1
 Hit : 18/18
 Mana : 100/100
-Move: 73/85
-Breath : 15/15
+Move: 85/85
 Str : 16/0
 Int : 13
 Wis : 13

@@ -1,3 +1,30 @@
-autorun starting game Thu Dec  3 20:57:20 UTC 2020
-running bin/circle -q 4000
-Aborted (core dumped)
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0200015195. Bit fail 0.
+Epochs          250. Current error: 0.0000000000. Bit fail 0.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000150. Bit fail 0.
+Epochs          250. Current error: 0.0000000000. Bit fail 0.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.2450000346. Bit fail 1.
+Epochs          250. Current error: 0.0000000003. Bit fail 0.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000931. Bit fail 0.
+Epochs          250. Current error: 0.0000000000. Bit fail 0.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0199982673. Bit fail 0.
+Epochs          250. Current error: 0.0000000001. Bit fail 0.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000190. Bit fail 0.
+Epochs          250. Current error: 0.0000000000. Bit fail 0.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000116. Bit fail 0.
+Epochs          250. Current error: 0.0000000000. Bit fail 0.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000000212. Bit fail 0.
+Epochs          250. Current error: 0.0000000000. Bit fail 0.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000068724. Bit fail 0.
+Epochs          250. Current error: 0.0000080802. Bit fail 0.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.0000137716. Bit fail 0.
+Epochs          250. Current error: 0.0000009612. Bit fail 0.
