@@ -2340,7 +2340,7 @@ void autopilot_char(struct char_data *ch){
    fann_destroy(ann_move);
     ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
 				complete_cmd_info[comando].subcmd));
-	random = rand_number(0,5);
+	random = rand_number(0,2);
    
    while (random > 0) {
    
@@ -2372,7 +2372,7 @@ void autopilot_char(struct char_data *ch){
    }
    /*passar line para funcao */
    
-  if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)&&strcmp("quit", complete_cmd_info[comando].command)&&strcmp("prefedit", complete_cmd_info[comando].command)&&strcmp("news", complete_cmd_info[comando].command)&&strcmp("motd", complete_cmd_info[comando].command)&&strcmp("policy", complete_cmd_info[comando].command)&&strcmp("info", complete_cmd_info[comando].command)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
+  if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)&&strcmp("quit", complete_cmd_info[comando].command)&&strcmp("prefedit", complete_cmd_info[comando].command)&&strcmp("news", complete_cmd_info[comando].command)&&strcmp("motd", complete_cmd_info[comando].command)&&strcmp("policy", complete_cmd_info[comando].command)&&strcmp("info", complete_cmd_info[comando].command)&&strcmp("levels", complete_cmd_info[comando].command)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
 				complete_cmd_info[comando].subcmd));
 	random--;
    }
