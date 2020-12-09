@@ -245,6 +245,7 @@ const char *player_bits[] = {
   "HERETIC",
   "GHOST",
   "AUTOPILOT",
+  "RIVAL",
   "\n"
 };
 
