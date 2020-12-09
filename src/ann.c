@@ -103,3 +103,34 @@ void ann_move_train(struct char_data *ch, int dir, room_rnum going_to){
         fann_destroy_train(map_train);
         fann_destroy_train(move_train);
 }
+
+void avalia_fitness(){
+   struct descriptor_data *d;
+   struct char_data *ch;
+   int fit[2];
+   struct fann *ann;
+   
+   for (d = descriptor_list; d; d = d->next)
+	{
+	  if ((ch = d->character) != NULL)
+	  if (IN_ROOM(ch) != NOWHERE) {
+   if (IS_PLAYING(d) && PLR_FLAGGED(ch, PLR_AUTO))
+   fit[0] = GET_FIT(ch);
+	else if (IS_PLAYING(d) && PLR_FLAGGED(ch, PLR_RIVAL))
+   fit[1] = GET_FIT(ch);
+	}
+	}
+  if (fit[0] > fit[1]) {
+     	ann = fann_create_from_file("etc/aventureiro2.fann");
+fann_randomize_weights(ann,-0.77,0.77);
+   fann_save(ann,"etc/aventureiro2.fann");
+     	fann_destroy(ann);
+  }
+  else {
+     	ann = fann_create_from_file("etc/aventureiro.fann");
+fann_randomize_weights(ann,-0.77,0.77);
+   fann_save(ann,"etc/aventureiro.fann");
+     	fann_destroy(ann);
+  }
+
+}
