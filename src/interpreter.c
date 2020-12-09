@@ -2394,7 +2394,6 @@ void autopilot_process(){
    autopilot_rival(ch);
 	}
 	}
-	}
 }
 
 
