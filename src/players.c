@@ -299,6 +299,13 @@ int load_char(const char *name, struct char_data *ch)
     GET_NUM_QUESTS(ch) = PFDEF_COMPQUESTS;
     GET_LAST_MOTD(ch) = PFDEF_LASTMOTD;
     GET_LAST_NEWS(ch) = PFDEF_LASTNEWS;
+GET_BREATH(ch) = PFDEF_BREATH;
+   GET_MAX_BREATH(ch) = PFDEF_MAX_BREATH;
+   GET_DEATH(ch) = PFDEF_DEATH;
+   GET_DTS(ch) = PFDEF_DTS;
+   GET_REMORT(ch) = PFDEF_REMORT;
+   GET_KARMA(ch) = PFDEF_KARMA;
+   GET_FIT(ch) = PFDEF_FIT;
 
     for (i = 0; i < AF_ARRAY_MAX; i++)
       AFF_FLAGS(ch)[i] = PFDEF_AFFFLAGS;
@@ -306,12 +313,7 @@ int load_char(const char *name, struct char_data *ch)
       PLR_FLAGS(ch)[i] = PFDEF_PLRFLAGS;
     for (i = 0; i < PR_ARRAY_MAX; i++)
       PRF_FLAGS(ch)[i] = PFDEF_PREFFLAGS;
-GET_BREATH(ch) = PFDEF_BREATH;
-   GET_MAX_BREATH(ch) = PFDEF_MAX_BREATH;
-   GET_DEATH(ch) = PFDEF_DEATH;
-   GET_DTS(ch) = PFDEF_DTS;
-   GET_REMORT(ch) = PFDEF_REMORT;
-   GET_KARMA(ch) = PFDEF_KARMA;
+
    
     while (get_line(fl, line)) {
       tag_argument(line, tag);
@@ -370,6 +372,7 @@ GET_BREATH(ch) = PFDEF_BREATH;
 
       case 'F':
 	     if (!strcmp(tag, "Frez"))	GET_FREEZE_LEV(ch)	= atoi(line);
+	    else if (!strcmp(tag, "Fit"))	GET_FIT(ch)		= atoi(line);
 	break;
 
       case 'G':
@@ -686,6 +689,7 @@ void save_char(struct char_data * ch)
  if (GET_DTS(ch)        != PFDEF_DTS)  fprintf(fl, "Dts: %d\n", GET_DTS(ch));
  if (GET_REMORT(ch)        != PFDEF_REMORT)  fprintf(fl, "Remo: %d\n", GET_REMORT(ch));
   if (GET_KARMA(ch)        != PFDEF_KARMA)  fprintf(fl, "Karm: %d\n", GET_KARMA(ch));
+    if (GET_FIT(ch)        != PFDEF_FIT)  fprintf(fl, "Fit: %d\n", GET_FIT(ch));
 
  if (SCRIPT(ch)) {
    for (t = TRIGGERS(SCRIPT(ch)); t; t = t->next)
