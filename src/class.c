@@ -4455,6 +4455,7 @@ void do_start(struct char_data *ch)
 	if (CONFIG_SITEOK_ALL)
 		SET_BIT_AR(PLR_FLAGS(ch), PLR_SITEOK);
 	
+	GET_FIT(ch) = 0;
 }
 
 /* This function controls the change to maxmove, maxmana, and maxhp for each
