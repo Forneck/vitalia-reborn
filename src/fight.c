@@ -330,8 +330,23 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 	/* Alert Group if Applicable */
 	if (GROUP(ch))
 		send_to_group(ch, GROUP(ch), "%s morreu.\r\n", GET_NAME(ch));
+   if (PLR_FLAGGED(killer,PLR_AUTO))
+   GET_FIT(killer)++;
+   
+	if (PLR_FLAGGED(ch, PLR_AUTO))
+	{
+	  GET_FIT(ch)--;
+	  char_from_room(ch);
+	  char_to_room(ch,GET_HOMETOWN(ch));
+	  GET_HIT(ch) = GET_MAX_HIT(ch);
+	  GET_MANA(ch) = GET_MAX_MANA(ch);
+	  GET_MOVE(ch) = GET_MAX_MOVE(ch);
+	  update_pos(ch);
+	}
+	else {
 	update_pos(ch);
 	make_corpse(ch);
+	}
 	// -- jr - Mar 17, 2000 * Enhancement of player death
 	if (!IS_NPC(ch))
 	{
