@@ -2385,9 +2385,123 @@ void autopilot_process(){
    	for (d = descriptor_list; d; d = d->next)
 	{
 	  if ((ch = d->character) != NULL)
-	  if (IN_ROOM(ch) != NOWHERE)
+	  if (IN_ROOM(ch) != NOWHERE) {
    if (IS_PLAYING(d) && PLR_FLAGGED(ch, PLR_AUTO))
    autopilot_char(ch);
 	}
+	else {
+	    if (IS_PLAYING(d) && PLR_FLAGGED(ch, PLR_RIVAL))
+   autopilot_rival(ch);
+	}
+	}
+	}
+}
 
+
+void autopilot_rival(struct char_data *ch){
+ 
+   int num;
+   int random;
+   struct obj_data *object;
+   struct char_data *mob;
+   char line[MAX_INPUT_LENGTH];
+   struct fann *ann;
+   struct fann *ann_move;
+	fann_type *calc_output;
+	ann = fann_create_from_file("etc/aventureiro2.fann");
+		ann_move = fann_create_from_file("etc/move.fann");
+	
+	fann_type input[29];
+	int grupo;
+	int count_obj = 0;
+	int comando = 0;
+	/*para cada char executar: */
+   /* verifica grupo e inventario */
+	if (GROUP(ch) != NULL)
+		grupo = 1;
+	else
+		grupo = 0;
+
+	for (object= ch->carrying; object; object = object->next_content)
+	{
+			count_obj++;
+	}
+
+	   /*pega dados pro aventureiro */
+	input[0] = (float)GET_HIT(ch) / 5000;
+	input[1] = (float) GET_MAX_HIT(ch) / 5000;
+
+	input[2] = (float)GET_MANA(ch) / 5000;
+	input[3] = (float) GET_MAX_MANA(ch) / 5000;
+	input[4] = (float)GET_MOVE(ch) / 5000;
+	input[5] = (float) GET_MAX_MOVE(ch) / 5000;
+	input[6] = (float) GET_EXP(ch) / 500000000;
+	input[7] = (float)  GET_ROOM_VNUM(IN_ROOM(ch)) / 100000;
+	input[8] = 1/(1+exp(-GET_CLASS(ch)));
+	input[9] = 1/(1+exp(-GET_POS(ch)));
+	input[10] = (float) GET_ALIGNMENT(ch) / 1000;
+	input[11] = (float) compute_armor_class(ch) / 200;
+	input[12] = (float) GET_STR(ch) / 25;
+	input[13] = (float) GET_ADD(ch) / 25;
+	input[14] = (float) GET_INT(ch) / 25;
+	input[15] = (float) GET_WIS(ch) / 25;
+	input[16] = (float) GET_CON(ch) / 25;
+	input[17] = (float) GET_DEX(ch) / 25;
+	input[18] = (float) GET_GOLD(ch) / 100000000;
+	input[19] = (float) GET_BANK_GOLD(ch) / 100000000;
+	input[20] = 1/(1+exp(-GET_COND(ch, HUNGER)));
+	input[21] = 1/(1+exp(-GET_COND(ch, THIRST)));
+	input[22] = (float) GET_PRACTICES(ch) / 100;
+	input[23] = grupo;
+	//input 24 eh o clan em vez de mudhora
+	input[24] = 1/(1+exp(-0));
+	input[25] = (float) GET_BREATH(ch) / 15;
+	input[26] = (float) GET_HITROLL(ch) / 100;
+	input[27] = (float) GET_DAMROLL(ch) / 100;
+	input[28] = (float) count_obj / 100;
+   
+   	random = rand_number(0,1);
+   	if (!random) {
+   	
+   calc_output = fann_run(ann_move,input);
+   calc_output[0] = (calc_output[0] * (float) NUM_OF_DIRS);
+   calc_output[0] = calc_output[0];
+   comando = fabs(calc_output[0]+1);
+   fann_destroy(ann_move);
+    ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
+				complete_cmd_info[comando].subcmd));
+   	}
+   	else {
+	calc_output = fann_run(ann, input);
+   calc_output[0] = calc_output[0] * (float) MAX_COMMAND;
+   comando = fabs(calc_output[0]);
+  
+     snprintf(line,sizeof(line),"");
+   /* copiar mob, obj ou player name para line */
+   if (calc_output[2] != 0.5) {
+      if (calc_output[3] == 0.5) {
+         if  (num = real_mobile(calc_output[4] * 10000) != NOBODY){
+         mob = read_mobile(num, REAL);
+         char_to_room(mob, 0);
+          snprintf(line,sizeof(line),"%s",mob->player.name);
+          extract_char(mob);
+         }
+      }
+      else if (calc_output[3] == 0.880797) {
+         	if ((num = real_object(calc_output[4] * 10000) != NOTHING)) {
+         	object = read_object(num, REAL);
+         snprintf(line,sizeof(line),"%s",object->name);
+         extract_obj(object);
+         	}
+      }
+      	else if (calc_output[3] == 0.731059) { 
+      	snprintf(line,sizeof(line),"all");
+         	}
+   }
+   /*passar line para funcao */
+   
+  if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)&&strcmp("quit", complete_cmd_info[comando].command)&&strcmp("prefedit", complete_cmd_info[comando].command)&&strcmp("news", complete_cmd_info[comando].command)&&strcmp("motd", complete_cmd_info[comando].command)&&strcmp("policy", complete_cmd_info[comando].command)&&strcmp("info", complete_cmd_info[comando].command)&&strcmp("levels", complete_cmd_info[comando].command)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
+				complete_cmd_info[comando].subcmd));
+   }
+   fann_destroy(ann);
 }
