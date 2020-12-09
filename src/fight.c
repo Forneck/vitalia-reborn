@@ -333,7 +333,7 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
   
    GET_FIT(killer)++;
    GET_FIT(ch)--;
-   a
+   
 	if (PLR_FLAGGED(ch, PLR_AUTO))
 	{
 	  
