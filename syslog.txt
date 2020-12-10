@@ -926,3 +926,242 @@ Dec 10 08:30:10 2020 :: nusage: 2   sockets connected, 2   sockets playing
 Dec 10 08:30:10 2020 :: rusage: user time: 455 sec, system time: 18 sec, max res size: 140248
 Dec 10 08:35:10 2020 :: nusage: 2   sockets connected, 2   sockets playing
 Dec 10 08:35:10 2020 :: rusage: user time: 487 sec, system time: 19 sec, max res size: 148364
+Dec 10 08:40:10 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Dec 10 08:40:10 2020 :: rusage: user time: 520 sec, system time: 20 sec, max res size: 156052
+Dec 10 08:45:10 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Dec 10 08:45:10 2020 :: rusage: user time: 552 sec, system time: 22 sec, max res size: 164164
+Dec 10 08:50:10 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Dec 10 08:50:10 2020 :: rusage: user time: 583 sec, system time: 23 sec, max res size: 171684
+Dec 10 08:55:10 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Dec 10 08:55:10 2020 :: rusage: user time: 615 sec, system time: 24 sec, max res size: 179860
+Dec 10 09:00:10 2020 :: nusage: 2   sockets connected, 2   sockets playing
+Dec 10 09:00:10 2020 :: rusage: user time: 648 sec, system time: 25 sec, max res size: 187640
+Dec 10 09:02:40 2020 :: Althair force-rented and extracted (idle).
+Dec 10 09:02:40 2020 :: Losing descriptor without char.
+Dec 10 09:05:10 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Dec 10 09:05:10 2020 :: rusage: user time: 681 sec, system time: 27 sec, max res size: 193688
+Dec 10 09:10:10 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Dec 10 09:10:10 2020 :: rusage: user time: 713 sec, system time: 28 sec, max res size: 197700
+Dec 10 09:11:24 2020 :: Andreii force-rented and extracted (idle).
+Dec 10 09:11:24 2020 :: Losing descriptor without char.
+Dec 10 09:11:24 2020 :: No connections.  Going to sleep.
+Dec 10 12:34:37 2020 :: New connection.  Waking up.
+Dec 10 12:34:38 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Dec 10 12:34:38 2020 :: Losing descriptor without char.
+Dec 10 12:34:38 2020 :: WARNING: Attempting to get content from iterator with NULL list.
+Dec 10 12:34:38 2020 :: WARNING: Attempting to remove iterator from NULL list.
+Dec 10 12:34:41 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Dec 10 12:34:41 2020 :: Losing descriptor without char.
+Dec 10 12:34:41 2020 :: No connections.  Going to sleep.
+Dec 10 12:36:39 2020 :: New connection.  Waking up.
+Dec 10 12:36:39 2020 :: Losing descriptor without char.
+Dec 10 12:36:39 2020 :: WARNING: Attempting to get content from iterator with NULL list.
+Dec 10 12:36:39 2020 :: WARNING: Attempting to remove iterator from NULL list.
+Dec 10 12:36:39 2020 :: No connections.  Going to sleep.
+Dec 10 12:45:19 2020 :: New connection.  Waking up.
+Dec 10 12:45:19 2020 :: Losing descriptor without char.
+Dec 10 12:45:19 2020 :: WARNING: Attempting to get content from iterator with NULL list.
+Dec 10 12:45:19 2020 :: WARNING: Attempting to remove iterator from NULL list.
+Dec 10 12:45:19 2020 :: No connections.  Going to sleep.
+Dec 10 13:12:59 2020 :: New connection.  Waking up.
+Dec 10 13:13:01 2020 :: Losing descriptor without char.
+Dec 10 13:13:01 2020 :: WARNING: Attempting to get content from iterator with NULL list.
+Dec 10 13:13:01 2020 :: WARNING: Attempting to remove iterator from NULL list.
+Dec 10 13:13:01 2020 :: No connections.  Going to sleep.
+Dec 10 13:24:16 2020 :: New connection.  Waking up.
+Dec 10 13:24:20 2020 :: Motharo has connected.
+Dec 10 13:24:21 2020 :: Motharo had no variable file
+Dec 10 13:24:21 2020 :: Motharo un-renting and entering game.
+Dec 10 13:24:21 2020 :: Motharo (level 39) has 32 objects (max 100).
+Dec 10 13:27:56 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Dec 10 13:27:56 2020 :: rusage: user time: 745 sec, system time: 29 sec, max res size: 199044
+Dec 10 13:31:26 2020 :: Losing descriptor without char.
+Dec 10 13:31:56 2020 :: Losing descriptor without char.
+Dec 10 13:32:26 2020 :: Losing descriptor without char.
+Dec 10 13:32:56 2020 :: nusage: 2   sockets connected, 1   sockets playing
+Dec 10 13:32:56 2020 :: rusage: user time: 777 sec, system time: 30 sec, max res size: 199044
+Dec 10 13:32:56 2020 :: Losing descriptor without char.
+Dec 10 13:33:26 2020 :: Losing descriptor without char.
+Dec 10 13:33:56 2020 :: Losing descriptor without char.
+Dec 10 13:34:26 2020 :: Losing descriptor without char.
+Dec 10 13:34:56 2020 :: Losing descriptor without char.
+Dec 10 13:35:26 2020 :: Losing descriptor without char.
+Dec 10 13:35:56 2020 :: Losing descriptor without char.
+Dec 10 13:36:26 2020 :: Losing descriptor without char.
+Dec 10 13:36:56 2020 :: Losing descriptor without char.
+Dec 10 13:37:26 2020 :: Losing descriptor without char.
+Dec 10 13:37:56 2020 :: nusage: 2   sockets connected, 1   sockets playing
+Dec 10 13:37:56 2020 :: rusage: user time: 809 sec, system time: 31 sec, max res size: 199044
+Dec 10 13:37:56 2020 :: Losing descriptor without char.
+Dec 10 13:38:26 2020 :: Losing descriptor without char.
+Dec 10 13:38:56 2020 :: Losing descriptor without char.
+Dec 10 13:39:26 2020 :: Losing descriptor without char.
+Dec 10 13:39:56 2020 :: Losing descriptor without char.
+Dec 10 13:40:26 2020 :: Losing descriptor without char.
+Dec 10 13:40:56 2020 :: Losing descriptor without char.
+Dec 10 13:41:26 2020 :: Losing descriptor without char.
+Dec 10 13:41:56 2020 :: Losing descriptor without char.
+Dec 10 13:42:26 2020 :: Losing descriptor without char.
+Dec 10 13:42:56 2020 :: nusage: 2   sockets connected, 1   sockets playing
+Dec 10 13:42:56 2020 :: rusage: user time: 841 sec, system time: 33 sec, max res size: 199044
+Dec 10 13:42:56 2020 :: Losing descriptor without char.
+Dec 10 13:43:26 2020 :: Losing descriptor without char.
+Dec 10 13:43:56 2020 :: Losing descriptor without char.
+Dec 10 13:44:26 2020 :: Losing descriptor without char.
+Dec 10 13:44:56 2020 :: Losing descriptor without char.
+Dec 10 13:45:26 2020 :: Losing descriptor without char.
+Dec 10 13:45:56 2020 :: Losing descriptor without char.
+Dec 10 13:46:26 2020 :: Losing descriptor without char.
+Dec 10 13:46:56 2020 :: Losing descriptor without char.
+Dec 10 13:47:26 2020 :: Losing descriptor without char.
+Dec 10 13:47:56 2020 :: nusage: 2   sockets connected, 1   sockets playing
+Dec 10 13:47:56 2020 :: rusage: user time: 873 sec, system time: 34 sec, max res size: 199044
+Dec 10 13:47:56 2020 :: Losing descriptor without char.
+SYSERR: perform_socket_read: about to lose connection: Connection timed out
+Dec 10 13:48:22 2020 :: Closing link to: Motharo.
+Dec 10 13:48:26 2020 :: Losing descriptor without char.
+Dec 10 13:48:26 2020 :: No connections.  Going to sleep.
+Dec 10 13:48:26 2020 :: New connection.  Waking up.
+Dec 10 13:48:56 2020 :: Losing descriptor without char.
+Dec 10 13:48:56 2020 :: No connections.  Going to sleep.
+Dec 10 13:48:57 2020 :: New connection.  Waking up.
+Dec 10 13:49:27 2020 :: Losing descriptor without char.
+Dec 10 13:49:27 2020 :: No connections.  Going to sleep.
+Dec 10 13:49:27 2020 :: New connection.  Waking up.
+Dec 10 13:49:57 2020 :: Losing descriptor without char.
+Dec 10 13:49:57 2020 :: No connections.  Going to sleep.
+Dec 10 13:49:58 2020 :: New connection.  Waking up.
+Dec 10 13:50:28 2020 :: Losing descriptor without char.
+Dec 10 13:50:28 2020 :: No connections.  Going to sleep.
+Dec 10 13:50:28 2020 :: New connection.  Waking up.
+Dec 10 13:50:58 2020 :: Losing descriptor without char.
+Dec 10 13:50:58 2020 :: No connections.  Going to sleep.
+Dec 10 13:50:59 2020 :: New connection.  Waking up.
+Dec 10 13:51:29 2020 :: Losing descriptor without char.
+Dec 10 13:51:29 2020 :: No connections.  Going to sleep.
+Dec 10 13:51:29 2020 :: New connection.  Waking up.
+Dec 10 13:51:59 2020 :: Losing descriptor without char.
+Dec 10 13:51:59 2020 :: No connections.  Going to sleep.
+Dec 10 13:51:59 2020 :: New connection.  Waking up.
+Dec 10 13:52:29 2020 :: Losing descriptor without char.
+Dec 10 13:52:29 2020 :: No connections.  Going to sleep.
+Dec 10 13:52:30 2020 :: New connection.  Waking up.
+Dec 10 13:53:00 2020 :: nusage: 1   sockets connected, 0   sockets playing
+Dec 10 13:53:00 2020 :: rusage: user time: 907 sec, system time: 35 sec, max res size: 199044
+Dec 10 13:53:00 2020 :: Losing descriptor without char.
+Dec 10 13:53:00 2020 :: No connections.  Going to sleep.
+Dec 10 13:53:00 2020 :: New connection.  Waking up.
+Dec 10 13:53:30 2020 :: Losing descriptor without char.
+Dec 10 13:53:30 2020 :: No connections.  Going to sleep.
+Dec 10 13:53:31 2020 :: New connection.  Waking up.
+Dec 10 13:54:00 2020 :: Losing descriptor without char.
+Dec 10 13:54:00 2020 :: No connections.  Going to sleep.
+Dec 10 13:54:01 2020 :: New connection.  Waking up.
+Dec 10 13:54:31 2020 :: Losing descriptor without char.
+Dec 10 13:54:31 2020 :: No connections.  Going to sleep.
+Dec 10 13:54:31 2020 :: New connection.  Waking up.
+Dec 10 13:55:02 2020 :: Losing descriptor without char.
+Dec 10 13:55:02 2020 :: No connections.  Going to sleep.
+Dec 10 13:55:02 2020 :: New connection.  Waking up.
+Dec 10 13:55:32 2020 :: Motharo force-rented and extracted (idle).
+Dec 10 13:55:32 2020 :: Losing descriptor without char.
+Dec 10 13:55:32 2020 :: No connections.  Going to sleep.
+Dec 10 13:55:32 2020 :: New connection.  Waking up.
+Dec 10 13:56:02 2020 :: Losing descriptor without char.
+Dec 10 13:56:02 2020 :: No connections.  Going to sleep.
+Dec 10 13:56:03 2020 :: New connection.  Waking up.
+Dec 10 13:56:33 2020 :: Losing descriptor without char.
+Dec 10 13:56:33 2020 :: No connections.  Going to sleep.
+Dec 10 13:56:33 2020 :: New connection.  Waking up.
+Dec 10 13:57:03 2020 :: Losing descriptor without char.
+Dec 10 13:57:03 2020 :: No connections.  Going to sleep.
+Dec 10 13:57:03 2020 :: New connection.  Waking up.
+Dec 10 13:57:33 2020 :: Losing descriptor without char.
+Dec 10 13:57:33 2020 :: No connections.  Going to sleep.
+Dec 10 13:57:34 2020 :: New connection.  Waking up.
+Dec 10 13:58:04 2020 :: nusage: 1   sockets connected, 0   sockets playing
+Dec 10 13:58:04 2020 :: rusage: user time: 940 sec, system time: 36 sec, max res size: 199044
+Dec 10 13:58:04 2020 :: Losing descriptor without char.
+Dec 10 13:58:04 2020 :: No connections.  Going to sleep.
+Dec 10 13:58:04 2020 :: New connection.  Waking up.
+Dec 10 13:58:34 2020 :: Losing descriptor without char.
+Dec 10 13:58:34 2020 :: No connections.  Going to sleep.
+Dec 10 13:58:35 2020 :: New connection.  Waking up.
+Dec 10 13:59:05 2020 :: Losing descriptor without char.
+Dec 10 13:59:05 2020 :: No connections.  Going to sleep.
+Dec 10 13:59:05 2020 :: New connection.  Waking up.
+Dec 10 13:59:35 2020 :: Losing descriptor without char.
+Dec 10 13:59:35 2020 :: No connections.  Going to sleep.
+Dec 10 13:59:35 2020 :: New connection.  Waking up.
+Dec 10 14:00:06 2020 :: Losing descriptor without char.
+Dec 10 14:00:06 2020 :: No connections.  Going to sleep.
+Dec 10 14:00:06 2020 :: New connection.  Waking up.
+Dec 10 14:00:36 2020 :: Losing descriptor without char.
+Dec 10 14:00:36 2020 :: No connections.  Going to sleep.
+Dec 10 14:00:36 2020 :: New connection.  Waking up.
+Dec 10 14:01:06 2020 :: Losing descriptor without char.
+Dec 10 14:01:06 2020 :: No connections.  Going to sleep.
+Dec 10 14:01:07 2020 :: New connection.  Waking up.
+Dec 10 14:01:37 2020 :: Losing descriptor without char.
+Dec 10 14:01:37 2020 :: No connections.  Going to sleep.
+Dec 10 14:01:37 2020 :: New connection.  Waking up.
+Dec 10 14:02:07 2020 :: Losing descriptor without char.
+Dec 10 14:02:07 2020 :: No connections.  Going to sleep.
+Dec 10 14:02:08 2020 :: New connection.  Waking up.
+Dec 10 14:02:38 2020 :: Losing descriptor without char.
+Dec 10 14:02:38 2020 :: No connections.  Going to sleep.
+Dec 10 14:02:38 2020 :: New connection.  Waking up.
+Dec 10 14:03:08 2020 :: nusage: 1   sockets connected, 0   sockets playing
+Dec 10 14:03:08 2020 :: rusage: user time: 971 sec, system time: 38 sec, max res size: 199044
+Dec 10 14:03:08 2020 :: Losing descriptor without char.
+Dec 10 14:03:08 2020 :: No connections.  Going to sleep.
+Dec 10 14:03:08 2020 :: New connection.  Waking up.
+Dec 10 14:03:39 2020 :: Losing descriptor without char.
+Dec 10 14:03:39 2020 :: No connections.  Going to sleep.
+Dec 10 14:03:39 2020 :: New connection.  Waking up.
+Dec 10 14:03:47 2020 :: Motharo has connected.
+Dec 10 14:03:49 2020 :: Motharo had no variable file
+Dec 10 14:03:49 2020 :: Motharo un-renting and entering game.
+Dec 10 14:03:49 2020 :: Motharo (level 39) has 32 objects (max 100).
+Dec 10 14:03:55 2020 :: Motharo has quit the game.
+Dec 10 14:03:56 2020 :: Losing player: Motharo.
+Dec 10 14:03:56 2020 :: No connections.  Going to sleep.
+Dec 10 15:20:47 2020 :: New connection.  Waking up.
+Dec 10 15:20:47 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Dec 10 15:20:47 2020 :: Losing descriptor without char.
+Dec 10 15:20:47 2020 :: WARNING: Attempting to get content from iterator with NULL list.
+Dec 10 15:20:47 2020 :: WARNING: Attempting to remove iterator from NULL list.
+Dec 10 15:20:47 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Dec 10 15:20:47 2020 :: Losing descriptor without char.
+Dec 10 15:20:47 2020 :: WARNING: Attempting to get content from iterator with NULL list.
+Dec 10 15:20:47 2020 :: WARNING: Attempting to remove iterator from NULL list.
+Dec 10 15:20:48 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Dec 10 15:20:48 2020 :: Losing descriptor without char.
+Dec 10 15:20:48 2020 :: WARNING: Attempting to get content from iterator with NULL list.
+Dec 10 15:20:48 2020 :: WARNING: Attempting to remove iterator from NULL list.
+Dec 10 15:20:50 2020 :: Losing descriptor without char.
+Dec 10 15:20:50 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Dec 10 15:20:50 2020 :: Losing descriptor without char.
+Dec 10 15:20:50 2020 :: WARNING: Attempting to get content from iterator with NULL list.
+Dec 10 15:20:50 2020 :: WARNING: Attempting to remove iterator from NULL list.
+Dec 10 15:20:50 2020 :: No connections.  Going to sleep.
+Dec 10 15:20:50 2020 :: New connection.  Waking up.
+Dec 10 15:20:51 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Dec 10 15:20:51 2020 :: Losing descriptor without char.
+Dec 10 15:20:51 2020 :: WARNING: Attempting to get content from iterator with NULL list.
+Dec 10 15:20:51 2020 :: WARNING: Attempting to remove iterator from NULL list.
+Dec 10 15:20:51 2020 :: No connections.  Going to sleep.
+Dec 10 16:08:26 2020 :: New connection.  Waking up.
+Dec 10 16:08:31 2020 :: Cansian [138.204.26.89] has reconnected.
+Dec 10 16:12:36 2020 :: nusage: 1   sockets connected, 1   sockets playing
+Dec 10 16:12:36 2020 :: rusage: user time: 1003 sec, system time: 39 sec, max res size: 199152
+Dec 10 16:15:23 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Dec 10 16:15:23 2020 :: Losing descriptor without char.
+Dec 10 16:15:23 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Dec 10 16:15:23 2020 :: Closing link to: Cansian.
+Dec 10 16:15:23 2020 :: No connections.  Going to sleep.
+Dec 10 16:15:28 2020 :: New connection.  Waking up.
+Dec 10 16:15:32 2020 :: Cansian [138.204.26.89] has reconnected.
+Dec 10 16:16:11 2020 :: WARNING: EOF on socket read (connection broken by peer)
+Dec 10 16:16:11 2020 :: Closing link to: Cansian.
+Dec 10 16:16:11 2020 :: No connections.  Going to sleep.

@@ -6,8 +6,8 @@ Clas: 6
 Levl: 39
 Id  : 25
 Brth: 1604182960
-Plyd: 64426
-Last: 1607254384
+Plyd: 65093
+Last: 1607609026
 Lmot: 1605614458
 Lnew: 1606161834
 Htwn: 1372
@@ -56,9 +56,6 @@ Skil:
 243 90
 252 90
 0 0
-Affs:
-36 5 0 33 256 0 0 0
-0 0 0 0 0 0 0 0
 Alis: 9
  fome
  drin barr;drin barri;fill barril font;cast 'create be';eat mor

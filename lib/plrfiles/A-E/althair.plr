@@ -6,8 +6,8 @@ Clas: 6
 Levl: 17
 Id  : 20
 Brth: 1603768097
-Plyd: 263423
-Last: 1607589110
+Plyd: 264073
+Last: 1607589760
 Lmot: 1605925461
 Lnew: 1605129579
 Htwn: 1372
@@ -15,11 +15,11 @@ Host: 138.204.26.89
 Hite: 195
 Wate: 172
 Alin: 47
-Act : hz 0 0 0
+Act : ghz 0 0 0
 Aff : 0 0 0 0
 Pref: efghknoBCDE abde 0 0
 Wimp: 50
-Room: 65535
+Room: 3010
 Hung: -1
 Thir: -1
 Hit : 234/199
