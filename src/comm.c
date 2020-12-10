@@ -1097,7 +1097,7 @@ void heartbeat(int heart_pulse)
 		beware_lightning();
 	}
 
-	if (!(heart_pulse % (SECS_PER_MUD_HOUR * PASSES_PER_SEC)))
+	if (!(heart_pulse % (SECS_PER_MUD_HOUR * PASSES_PER_SEC3tdw)))
 	{							/* Tick ! */
 		next_tick = SECS_PER_MUD_HOUR;	/* Reset tick coundown */
 		weather_and_time(1);
@@ -1105,6 +1105,11 @@ void heartbeat(int heart_pulse)
 		affect_update();
 		point_update();
 		check_timed_quests();
+	}
+	
+	if (CONFIG_FIT_EVOLVE &&  (!(heart_pulse % (SECS_PER_MUD_HOUR * PASSES_PER_SEC * 5)))
+	{
+	   avalia_fitness();
 	}
 
 	if (CONFIG_AUTO_SAVE && !(heart_pulse % PULSE_AUTOSAVE))
@@ -1130,7 +1135,7 @@ void heartbeat(int heart_pulse)
 /* new code to calculate time differences, which works on systems for which
    tv_usec is unsigned (and thus comparisons for something being < 0 fail).
    Based on code submitted by ss@sirocco.cup.hp.com. Code to return the time
-   difference between a and b (a-b). Always returns a nonnegative value
+   difference between a and b (a-b). Always returns a nonnegjoative value
    (floors at 0). */
 static void timediff(struct timeval *rslt, struct timeval *a, struct timeval *b)
 {
