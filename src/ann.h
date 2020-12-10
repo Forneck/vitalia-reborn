@@ -12,5 +12,5 @@
 
 */
 
-void ann_move_train(struct char_data *ch, int dir, room_rnum going_to)d;
+void ann_move_train(struct char_data *ch, int dir, room_rnum going_to);
 void avalia_fitness();
