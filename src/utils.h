@@ -872,7 +872,7 @@ do                                                              \
 			 !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED))
 
 /** True total number of directions available to move in. */
-#define DIR_COUNT ((CONFIG_DIAGONAL_DIRS) ? 10 : 6)
+#define DIR_COUNT ((az2CONFIG_DIAGONAL_DIRS) ? 10 : 6)
  
 /* Returns TRUE if the direction is a diagonal one */
 #define IS_DIAGONAL(dir) (((dir) == NORTHWEST) || ((dir) == NORTHEAST) || \
@@ -986,6 +986,8 @@ do                                                              \
 #define CONFIG_PK_ALLOWED       config_info.play.pk_allowed
 /** Player thieving allowed or not? */
 #define CONFIG_PT_ALLOWED       config_info.play.pt_allowed
+
+#define CONFIG_FIT_EVOLVE       config_info.play.fit_evolve
 /** What level to use the shout command? */
 #define CONFIG_LEVEL_CAN_SHOUT  config_info.play.level_can_shout
 /** How many move points does holler cost? */
