@@ -872,7 +872,7 @@ do                                                              \
 			 !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED))
 
 /** True total number of directions available to move in. */
-#define DIR_COUNT ((az2CONFIG_DIAGONAL_DIRS) ? 10 : 6)
+#define DIR_COUNT ((CONFIG_DIAGONAL_DIRS) ? 10 : 6)
  
 /* Returns TRUE if the direction is a diagonal one */
 #define IS_DIAGONAL(dir) (((dir) == NORTHWEST) || ((dir) == NORTHEAST) || \
