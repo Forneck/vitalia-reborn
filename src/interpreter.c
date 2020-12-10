@@ -2456,18 +2456,6 @@ void autopilot_rival(struct char_data *ch){
 	input[27] = (float) GET_DAMROLL(ch) / 100;
 	input[28] = (float) count_obj / 100;
    
-   	random = rand_number(0,1);
-   	if (!random) {
-   	
-   calc_output = fann_run(ann_move,input);
-   calc_output[0] = (calc_output[0] * (float) NUM_OF_DIRS);
-   calc_output[0] = calc_output[0];
-   comando = fabs(calc_output[0]+1);
-   fann_destroy(ann_move);
-    ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
-				complete_cmd_info[comando].subcmd));
-   	}
-   	else {
 	calc_output = fann_run(ann, input);
    calc_output[0] = calc_output[0] * (float) MAX_COMMAND;
    comando = fabs(calc_output[0]);
@@ -2493,7 +2481,7 @@ void autopilot_rival(struct char_data *ch){
       	else if (calc_output[3] == 0.731059) { 
       	snprintf(line,sizeof(line),"all");
          	}
-   }
+   
    /*passar line para funcao */
    
   if (complete_cmd_info[comando].minimum_level  <= GET_LEVEL(ch)&&strcmp("quit", complete_cmd_info[comando].command)&&strcmp("prefedit", complete_cmd_info[comando].command)&&strcmp("news", complete_cmd_info[comando].command)&&strcmp("motd", complete_cmd_info[comando].command)&&strcmp("policy", complete_cmd_info[comando].command)&&strcmp("info", complete_cmd_info[comando].command)&&strcmp("levels", complete_cmd_info[comando].command)) ((*complete_cmd_info[comando].command_pointer) (ch, line, comando,
