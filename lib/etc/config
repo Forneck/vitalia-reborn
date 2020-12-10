@@ -17,6 +17,7 @@ pk_allowed = 1
 pt_allowed = 1
 
 fit_evolve = 1
+
 * What is the minimum level a player can shout/gossip/etc?
 level_can_shout = 1
 
