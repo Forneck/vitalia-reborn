@@ -114,10 +114,14 @@ void avalia_fitness(){
 	{
 	  if ((ch = d->character) != NULL)
 	  if (IN_ROOM(ch) != NOWHERE) {
-   if (IS_PLAYING(d) && PLR_FLAGGED(ch, PLR_AUTO))
+   if (IS_PLAYING(d) && PLR_FLAGGED(ch, PLR_AUTO)) {
    fit[0] = GET_FIT(ch);
-	else if (IS_PLAYING(d) && PLR_FLAGGED(ch, PLR_RIVAL))
+   GET_FIT(ch) = 0;
+   }
+	else if (IS_PLAYING(d) && PLR_FLAGGED(ch, PLR_RIVAL)) {
    fit[1] = GET_FIT(ch);
+      GET_FIT(ch) = 0;
+   }
 	}
 	}
   if (fit[0] > fit[1]) {
@@ -126,7 +130,7 @@ fann_randomize_weights(ann,-0.77,0.77);
    fann_save(ann,"etc/aventureiro2.fann");
      	fann_destroy(ann);
   }
-  else {
+  else if (fit[0] < fit[1]) {
      	ann = fann_create_from_file("etc/aventureiro.fann");
 fann_randomize_weights(ann,-0.77,0.77);
    fann_save(ann,"etc/aventureiro.fann");
