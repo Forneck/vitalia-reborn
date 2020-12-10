@@ -85,7 +85,7 @@ static void cedit_setup(struct descriptor_data *d)
 	   copy the game play options from the configuration info struct. */
 	OLC_CONFIG(d)->play.pk_allowed = CONFIG_PK_ALLOWED;
 	OLC_CONFIG(d)->play.pt_allowed = CONFIG_PT_ALLOWED;
-	OLC_CONFIG(d)->play.fit_evole = CONFIG_FIT_EVOLVE;
+	OLC_CONFIG(d)->play.fit_evolve = CONFIG_FIT_EVOLVE;
 	OLC_CONFIG(d)->play.level_can_shout = CONFIG_LEVEL_CAN_SHOUT;
 	OLC_CONFIG(d)->play.holler_move_cost = CONFIG_HOLLER_MOVE_COST;
 	OLC_CONFIG(d)->play.tunnel_size = CONFIG_TUNNEL_SIZE;
@@ -684,7 +684,7 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
 					nrm, cyn, OLC_CONFIG(d)->play.map_size, grn, nrm, cyn,
 					OLC_CONFIG(d)->play.minimap_size, grn, nrm, cyn,
 					CHECK_VAR(OLC_CONFIG(d)->play.script_players), grn, nrm),
-				grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.fit_evolve)	;
+				grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.fit_evolve);
 
 	OLC_MODE(d) = CEDIT_GAME_OPTIONS_MENU;
 }
