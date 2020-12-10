@@ -2397,15 +2397,13 @@ void autopilot_process(){
 void autopilot_rival(struct char_data *ch){
  
    int num;
-   int random;
    struct obj_data *object;
    struct char_data *mob;
    char line[MAX_INPUT_LENGTH];
    struct fann *ann;
-   struct fann *ann_move;
+
 	fann_type *calc_output;
 	ann = fann_create_from_file("etc/aventureiro2.fann");
-		ann_move = fann_create_from_file("etc/move.fann");
 	
 	fann_type input[29];
 	int grupo;
