@@ -6,8 +6,8 @@ Clas: 4
 Levl: 110
 Id  : 1
 Brth: 1601790482
-Plyd: 1135942
-Last: 1607545326
+Plyd: 1136154
+Last: 1607584272
 Lmot: 1605455027
 Lnew: 1605123013
 Htwn: 1372
@@ -18,7 +18,7 @@ Alin: 322
 Act : 0 0 0 0
 Aff : 0 0 0 0
 Pref: efghmnoqrvxAB d 0 0
-Room: 5702
+Room: 3001
 Lern: 1
 Hit : 2000/2000
 Mana : 100/100
@@ -34,39 +34,39 @@ Gold: 1210411
 Exp : 7000001
 Olc : 0
 Alis: 12
- sede
- set althair thirs $1
-1
- tiro
- load o 11325;put tir quiver;shoot $1 $2
-1
- indoor
- redit;3;4;0;q;y
-1
- of
- order fol $*
-1
- goss
- goss @Y$*@n
-1
- sa
- say @Y$*@n
-1
- ha
- history all
-0
- bispo
- hold bispo;use bispo;use bispo;use bispo;rem bispo;junk bispo
-1
- snake
- medit $1;s;n;1,3008;q;q;y
-1
- mu
- medit $1;s;n;1,3009;q;q;y
+ guarda
+ medit $1;s;n;1,3013;q;q;y
 1
  thief
  medit $1;s;n;1,3007;q;q;y
 1
- guarda
- medit $1;s;n;1,3013;q;q;y
+ mu
+ medit $1;s;n;1,3009;q;q;y
+1
+ snake
+ medit $1;s;n;1,3008;q;q;y
+1
+ bispo
+ hold bispo;use bispo;use bispo;use bispo;rem bispo;junk bispo
+1
+ ha
+ history all
+0
+ sa
+ say @Y$*@n
+1
+ goss
+ goss @Y$*@n
+1
+ of
+ order fol $*
+1
+ indoor
+ redit;3;4;0;q;y
+1
+ tiro
+ load o 11325;put tir quiver;shoot $1 $2
+1
+ sede
+ set althair thirs $1
 1
