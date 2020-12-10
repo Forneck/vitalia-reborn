@@ -652,8 +652,8 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
 					"%s5%s) Map/Automap Option      : %s%s\r\n"
 					"%s6%s) Default map size        : %s%d\r\n"
 					"%s7%s) Default minimap size    : %s%d\r\n"
-					"%s8%s) Scripts on PC's         : %s%s\r\n""
-			   	"%s9%s) Fitness evolve ann   : %s%s\r\n""
+					"%s8%s) Scripts on PC's         : %s%s\r\n"
+			   	"%s9%s) Fitness evolve ann   : %s%s\r\n"
 					"%sQ%s) Exit To The Main Menu\r\n"
 					"Enter your choice : ",
 					grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.pk_allowed),
