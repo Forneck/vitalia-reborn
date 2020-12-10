@@ -1097,7 +1097,7 @@ void heartbeat(int heart_pulse)
 		beware_lightning();
 	}
 
-	if (!(heart_pulse % (SECS_PER_MUD_HOUR * PASSES_PER_SEC)))2
+	if (!(heart_pulse % (SECS_PER_MUD_HOUR * PASSES_PER_SEC)))
 	{							/* Tick ! */
 		next_tick = SECS_PER_MUD_HOUR;	/* Reset tick coundown */
 		weather_and_time(1);
