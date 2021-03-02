@@ -701,8 +701,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 				dataset = fopen("dataset.txt", "a");
 				for (contador=0;contador<=28;contador++)
 					fprintf(dataset,"%f ",input[contador]);
-		
-				fprintf(dataset,"%f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
+				fprintf(dataset,"%f %f %f %f %f",output[0],output[1],output[2],output[3],output[4],output[5]);
 				fclose(dataset);
 			}
 			return;
@@ -949,8 +948,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		dataset = fopen("dataset.txt", "a");
 		for (contador=0;contador<=28;contador++)
 			fprintf(dataset,"%f ",input[contador]);
-		
-		fprintf(dataset,"%f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
+		fprintf(dataset,"%f %f %f %f %f",output[0],output[1],output[2],output[3],output[4],output[5]);
 		fclose(dataset);
 		
 		if ((GET_IDNUM(ch) == 1) || (GET_IDNUM(ch) == 20))
