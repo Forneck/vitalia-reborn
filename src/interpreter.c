@@ -694,14 +694,14 @@ void command_interpreter(struct char_data *ch, char *argument)
 			}
 			if (GET_LEVEL(ch) < LVL_GOD){
 			    ann_train =  fann_create_train_array(1,29,input,6,output);
-		fann_train_on_data(ann,ann_train,250,1000,0);
+		fann_train_on_data(ann,ann_train,250,500,0);
 				fann_save(ann,"etc/aventureiro.fann");
 				fann_destroy_train(ann_train);
 				fann_destroy(ann);
 				dataset = fopen("dataset.txt", "a");
 				for (contador=0;contador<=28;contador++)
 					fprintf(dataset,"%f ",input[contador]);
-				fprintf(dataset,"%f %f %f %f %f",output[0],output[1],output[2],output[3],output[4],output[5]);
+				fprintf(dataset,"%f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
 				fclose(dataset);
 			}
 			return;
@@ -948,7 +948,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		dataset = fopen("dataset.txt", "a");
 		for (contador=0;contador<=28;contador++)
 			fprintf(dataset,"%f ",input[contador]);
-		fprintf(dataset,"%f %f %f %f %f",output[0],output[1],output[2],output[3],output[4],output[5]);
+		fprintf(dataset,"%f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
 		fclose(dataset);
 		
 		if ((GET_IDNUM(ch) == 1) || (GET_IDNUM(ch) == 20))
