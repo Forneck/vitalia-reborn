@@ -514,6 +514,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 
 	char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
 	/* ann teste - forneck */
+	FILE *dataset;
+	int contador;
 	int i, type1, type2;
 	struct fann *ann;
 	fann_type input[29];
@@ -527,7 +529,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 	float mob = 0;
 	float obj = 0;
     int count_obj = 0;
-    	ann = fann_create_from_file("etc/aventureiro.fann");
+    
+    ann = fann_create_from_file("etc/aventureiro.fann");
     	
     /* verifica grupo e inventario */
 	if (GROUP(ch) != NULL)
@@ -695,6 +698,12 @@ void command_interpreter(struct char_data *ch, char *argument)
 				fann_save(ann,"etc/aventureiro.fann");
 				fann_destroy_train(ann_train);
 				fann_destroy(ann);
+				dataset = fopen("dataset.txt", "a");
+				for (contador=0;contador<=28;contador++)
+					fprintf(dataset,"%f ",input[contador]);
+		
+				fprintf(dataset,"%f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
+				fclose(dataset);
 			}
 			return;
 		}
@@ -936,7 +945,14 @@ void command_interpreter(struct char_data *ch, char *argument)
 				fann_destroy_train(ann_train);
 		}
 		fann_save(ann, "etc/aventureiro.fann");
-			
+		
+		dataset = fopen("dataset.txt", "a");
+		for (contador=0;contador<=28;contador++)
+			fprintf(dataset,"%f ",input[contador]);
+		
+		fprintf(dataset,"%f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
+		fclose(dataset);
+		
 		if ((GET_IDNUM(ch) == 1) || (GET_IDNUM(ch) == 20))
 		{
 		   send_to_char(ch, "INPUTS Sala %f\r\n", input[7]);
