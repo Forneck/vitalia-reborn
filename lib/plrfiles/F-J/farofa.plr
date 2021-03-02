@@ -6,21 +6,22 @@ Clas: 6
 Levl: 1
 Id  : 40
 Brth: 1614714930
-Plyd: 465
-Last: 1614719333
+Plyd: 1196
+Last: 1614725627
 Lmot: 1614718702
 Lnew: 1614718697
 Htwn: 1372
 Host: 138.204.26.78
 Hite: 162
 Wate: 146
+Alin: 41
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghno 0 0 0
 Wimp: 10
 Room: 3001
-Hung: 18
-Thir: 22
+Hung: 9
+Thir: 15
 Hit : 22/22
 Mana : 100/100
 Move: 84/84
@@ -31,10 +32,10 @@ Dex : 14
 Con : 15
 Cha : 9
 Ac  : 100
-Gold: 501
-Exp : 421
+Bank: 1003
+Exp : 1028
 Olc : 0
-Fit: 1
+Fit: 5
 Skil:
 224 44
 0 0
