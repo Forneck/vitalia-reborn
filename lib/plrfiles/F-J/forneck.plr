@@ -1,42 +1,37 @@
 Name: Forneck
 Pass: Fok1D9gXuJVIg
-Titl: the Fledgling
+Titl: o Pintinho
 Sex : 1
 Clas: 6
 Levl: 1
-Id  : 0
-Brth: 1603946823
-Plyd: 1837
-Last: 1603948660
-Lmot: 1603946833
-Lnew: 1603946829
-Htwn: 1372
-Host: 177.220.172.133
-Hite: 191
-Wate: 137
-Alin: 95
-Act : gh 0 0 0
+Id  : 39
+Brth: 1614706877
+Plyd: 295
+Last: 1614708870
+Lmot: 1614706890
+Lnew: 1614706885
+Htwn: 3001
+Host: 189.40.71.151
+Hite: 182
+Wate: 152
+Act : hl 0 0 0
 Aff : 0 0 0 0
-Pref: efghnoBCDE ad 0 0
-Wimp: 5
-Room: 3001
-Hung: 24
-Thir: 16
-Hit : 11/18
+Pref: efghno 0 0 0
+Room: 5518
+Lern: 1
+Hung: 20
+Thir: 24
+Hit : 20/20
 Mana : 100/100
-Move: 84/84
-Breath : 15/15
-Str : 16/0
-Int : 10
-Wis : 10
-Dex : 14
+Move: 83/86
+Str : 18/0
+Int : 14
+Wis : 6
+Dex : 15
 Con : 15
-Cha : 8
+Cha : 6
 Ac  : 100
-Gold: 256
-Exp : 679
+Exp : 234
 Olc : 0
-ScrW: 44
 Skil:
-224 17
 0 0

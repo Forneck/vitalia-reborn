@@ -6,12 +6,12 @@ Clas: 6
 Levl: 29
 Id  : 33
 Brth: 1604948074
-Plyd: 16728
-Last: 1606860904
-Lmot: 1606563630
-Lnew: 1606680878
+Plyd: 16869
+Last: 1613263826
+Lmot: 1613263843
+Lnew: 1613263834
 Htwn: 1372
-Host: 177.35.231.240
+Host: 177.35.231.58
 Hite: 174
 Wate: 123
 Alin: 97
@@ -23,8 +23,8 @@ Room: 3001
 Hung: -1
 Thir: -1
 Hit : 312/312
-Mana : 205/228
-Move: 0/158
+Mana : 228/228
+Move: 107/158
 Str : 17/0
 Int : 12
 Wis : 10
@@ -47,9 +47,9 @@ Skil:
 251 90
 0 0
 Alis: 2
- minor
- c 'minor healing' $*
-1
  cure
  c 'cure light'
 0
+ minor
+ c 'minor healing' $*
+1

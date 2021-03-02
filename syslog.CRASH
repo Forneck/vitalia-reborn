@@ -1,30 +1,4 @@
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000002756. Bit fail 0.
-Epochs          250. Current error: 0.0000000000. Bit fail 0.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000005412. Bit fail 0.
-Epochs          250. Current error: 0.0000000000. Bit fail 0.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0199940372. Bit fail 0.
-Epochs          250. Current error: 0.0000000001. Bit fail 0.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000002668. Bit fail 0.
-Epochs          250. Current error: 0.0000000000. Bit fail 0.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000000. Bit fail 0.
-Epochs          250. Current error: 0.0000000000. Bit fail 0.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000000000. Bit fail 0.
-Epochs          250. Current error: 0.0000000000. Bit fail 0.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000001501. Bit fail 0.
-Epochs          250. Current error: 0.0000000001. Bit fail 0.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000003044. Bit fail 0.
-Epochs          250. Current error: 0.0000000000. Bit fail 0.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0200093072. Bit fail 0.
-Epochs          250. Current error: 0.0000045001. Bit fail 0.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.0000172773. Bit fail 0.
-Epochs Segmentation fault (core dumped)
+autorun starting game Tue Mar  2 18:10:15 UTC 2021
+running bin/circle -q 4000
+Quick boot mode -- rent check supressed.
+Using log file 'syslog.txt' with redirection.
