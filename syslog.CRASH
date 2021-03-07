@@ -1,30 +1,30 @@
-Epochs            1. Current error: 0.5693376660. Bit fail 5.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.5428137779. Bit fail 4.
+Epochs          250. Current error: 0.3453882635. Bit fail 2.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.3508604765. Bit fail 2.
+Epochs          250. Current error: 0.3453882635. Bit fail 2.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.7519657016. Bit fail 6.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6192463040. Bit fail 5.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6209228039. Bit fail 5.
 Epochs          250. Current error: 0.5000000000. Bit fail 3.
 Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.5119038224. Bit fail 5.
-Epochs          250. Current error: 0.4425996542. Bit fail 3.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.4606918395. Bit fail 3.
-Epochs          250. Current error: 0.4425996840. Bit fail 3.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.6882068515. Bit fail 5.
+Epochs            1. Current error: 0.7814943194. Bit fail 6.
 Epochs          250. Current error: 0.6666666865. Bit fail 4.
 Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.6637970805. Bit fail 5.
-Epochs          250. Current error: 0.4451159537. Bit fail 3.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.4481989443. Bit fail 3.
-Epochs          250. Current error: 0.4437605441. Bit fail 3.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.6414427757. Bit fail 4.
+Epochs            1. Current error: 0.6162129045. Bit fail 5.
 Epochs          250. Current error: 0.6666666865. Bit fail 4.
 Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.6238453984. Bit fail 5.
-Epochs          250. Current error: 0.4451159537. Bit fail 3.
+Epochs            1. Current error: 0.6210336089. Bit fail 5.
+Epochs          250. Current error: 0.5000000000. Bit fail 3.
 Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.7334947586. Bit fail 6.
+Epochs            1. Current error: 0.7839683890. Bit fail 6.
 Epochs          250. Current error: 0.6666666865. Bit fail 4.
 Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.5001423359. Bit fail 3.
-Epochs          250. Current error: 0.6666666865. Bit fail 4.
-Improper shutdown of autorun detected, rotating syslogs before startup.
+Epochs            1. Current error: 0.619Aborted (core dumped)
