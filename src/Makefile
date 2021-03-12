@@ -40,6 +40,9 @@ utils: .accepted
 circle:
 	$(MAKE) $(BINDIR)/circle
 
+cascade:
+	$(MAKE) $(BINDIR)/cascade
+
 anncheck: $(BINDIR)/anncheck
    
 $(BINDIR)/circle : $(OBJFILES)
@@ -50,6 +53,9 @@ $%.o: %.c
 
 $(BINDIR)/anncheck: anncheck.c
 	$(CC) $(CFLAGS) -o $(BINDIR)/anncheck anncheck.c
+
+$(BINDIR)/cascade: cascade.c
+	$(CC) $(CFLAGS) -o $(BINDIR)/cascade cascade.c
 
 clean:
 	rm -f *.o depend
