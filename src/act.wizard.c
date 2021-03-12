@@ -3851,7 +3851,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 			if (real_room(rvnum) != NOWHERE)
 			{
 				GET_HOMETOWN(vict) = rvnum;
-				send_to_char(ch, "%s will enter at room #%d.\r\n", GET_NAME(vict),
+				send_to_char(ch, "%s new hometown is #%d.\r\n", GET_NAME(vict),
 							 GET_HOMETOWN(vict));
 			}
 			else
