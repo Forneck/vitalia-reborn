@@ -1,7 +1,5 @@
-autorun starting game Sun Mar  7 14:20:52 UTC 2021
+autorun starting game Fri Mar 12 18:43:15 UTC 2021
 running bin/circle -q 4000
 Quick boot mode -- rent check supressed.
 Using log file 'syslog.txt' with redirection.
-Max epochs      250. Desired error: 0.0000000000.
-Epochs            1. Current error: 0.7835612893. Bit fail 6.
-Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Improper shutdown of autorun detected, rotating syslogs before startup.
