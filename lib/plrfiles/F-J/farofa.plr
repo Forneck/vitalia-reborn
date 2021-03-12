@@ -7,19 +7,19 @@ Levl: 1
 Id  : 40
 Brth: 1614714930
 Plyd: 2314
-Last: 1614747990
+Last: 1615577230
 Lmot: 1614718702
 Lnew: 1614718697
 Htwn: 1372
-Host: 189.40.68.30
+Host: 177.220.172.187
 Hite: 162
 Wate: 146
 Alin: 51
-Act : gh 0 0 0
+Act : h 0 0 0
 Aff : 0 0 0 0
 Pref: efghno 0 0 0
 Wimp: 10
-Room: 3001
+Room: 65535
 Hung: 23
 Thir: 23
 Hit : 22/22
@@ -36,15 +36,13 @@ Gold: 250
 Bank: 1003
 Exp : 674
 Olc : 0
-Dth: 1
-Fit: 2
 Skil:
 224 44
 0 0
 Alis: 2
- sede
- w;w;w;drink fonte;drink fonte;drink fonte;e;e;e
-1
  zn
  n;n;n;n;e
+1
+ sede
+ w;w;w;drink fonte;drink fonte;drink fonte;e;e;e
 1
