@@ -1,6 +1,6 @@
 
 #include "stdio.h"
-#include "../include/fann.h"
+#include "./include/fann.h"
 
 int main(){
 	struct fann *ann;
