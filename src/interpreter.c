@@ -2267,8 +2267,8 @@ void on_player_linkless(struct char_data *ch)
 
 void hometown_menu(struct descriptor_data *d)
 {
-	write_to_output(d, "\r\nA) Midgaard\r\n");
-	write_to_output(d, "B) Nova Thalos\r\n");
+	write_to_output(d, "\r\n1) Midgaard\r\n");
+	write_to_output(d, "2) Nova Thalos\r\n");
 }
 
 int parse_hometown(char arg)
@@ -2276,12 +2276,12 @@ int parse_hometown(char arg)
 	arg = LOWER(arg);
 	switch (arg)
 	{
-	case 'a':
+	case '1':
 		return CONFIG_HOMETOWN_1;
-	case 'b':
+	case '2':
 		return CONFIG_HOMETOWN_2;
 	default:
-		return CONFIG_HOMETOWN_1;
+		return 0;
 	}
 }
 
