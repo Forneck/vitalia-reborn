@@ -1,2 +1,74 @@
 autorun starting game Fri Mar 12 19:23:04 UTC 2021
 running bin/circle -q 4000
+Quick boot mode -- rent check supressed.
+Using log file 'syslog.txt' with redirection.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.4102933705. Bit fail 3.
+Epochs          250. Current error: 0.3453882635. Bit fail 2.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6911457181. Bit fail 6.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6666898131. Bit fail 5.
+Epochs          250. Current error: 0.5000000000. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.5488824248. Bit fail 4.
+Epochs          250. Current error: 0.4901209176. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.7393813729. Bit fail 6.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6322987676. Bit fail 5.
+Epochs          250. Current error: 0.5000000000. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.5996096134. Bit fail 4.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.7042567730. Bit fail 5.
+Epochs          250. Current error: 0.4451268613. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.4451268613. Bit fail 3.
+Epochs          250. Current error: 0.4451268613. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.5069122910. Bit fail 3.
+Epochs          250. Current error: 0.4901209176. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.7432230115. Bit fail 6.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6147823334. Bit fail 5.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6213539243. Bit fail 5.
+Epochs          250. Current error: 0.5000000000. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.7858516574. Bit fail 6.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6151030660. Bit fail 5.
+Epochs          250. Current error: 0.5000000000. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.7868816257. Bit fail 6.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6206361055. Bit fail 5.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6169149876. Bit fail 5.
+Epochs          250. Current error: 0.5000000000. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.7763641477. Bit fail 6.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6195451617. Bit fail 5.
+Epochs          250. Current error: 0.5000000000. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.7874748707. Bit fail 6.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6172699332. Bit fail 5.
+Epochs          250. Current error: 0.5000000000. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.8354284167. Bit fail 6.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epo

@@ -4,30 +4,31 @@ Titl: o Crente
 Sex : 1
 Clas: 1
 Levl: 1
-Id  : 42
-Brth: 1615574699
-Plyd: 4
-Last: 1615577412
-Htwn: 3001
-Host: 127.0.0.1
-Hite: 195
-Wate: 126
+Id  : 43
+Brth: 1615577948
+Plyd: 63
+Last: 1615578011
+Htwn: 5509
+Host: 177.220.172.187
+Hite: 181
+Wate: 146
 Act : h 0 0 0
 Aff : 0 0 0 0
 Pref: efghno 0 0 0
-Room: 5518
+Room: 10987
 Lern: 3
-Hung: 24
-Thir: 24
-Hit : 17/17
+Hung: 23
+Thir: 23
+Hit : 19/19
 Mana : 100/100
-Move: 84/84
-Str : 14/0
-Int : 14
-Wis : 16
-Dex : 11
-Con : 8
-Cha : 6
+Move: 82/84
+Breath : 15/15
+Str : 12/0
+Int : 12
+Wis : 14
+Dex : 12
+Con : 11
+Cha : 10
 Ac  : 100
 Exp : 1
 Olc : 0
