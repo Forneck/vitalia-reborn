@@ -83,7 +83,7 @@ sprintf(buf, "Tenha um%s! :-)\r\n\r\n",
 		if (CONFIG_FREE_RENT)
 			Crash_rentsave(ch, 0);
 
-		GET_LOADROOM(ch) = GET_ROOM_VNUM(GET_HOMETOWN(ch));
+		GET_LOADROOM(ch) = real_room(GET_HOMETOWN(ch));
 
 		/* Stop snooping so you can't see passwords during deletion or change. 
 		 */
