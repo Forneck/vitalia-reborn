@@ -507,7 +507,7 @@ D0
 Você vê uma fissura na parede do orgão.
 ~
 fissura~
-1 -1 1756
+3 -1 1756
 D1
 ~
 ~
@@ -776,13 +776,6 @@ Há um estranho buraco na parede de pedra, com um lado circular.
 ~
 0 -1 1743
 E
-porcao terra estrategica~
-Esta grande e estranha criação é, meramente, uma estratégia muito usado por 
-escritores para desviar pessoas para longe de algo que ele ou ela não queria
-que eles vissem até o presente momento.  Falando nisso, você viu o pátio
-que leva ao sul, não viu?
-~
-E
 sinal poste indicador~
 No poste indicador lê-se uma antiga escrita rúnica:
 
@@ -792,6 +785,13 @@ nenhum voltou para contar a verdade...
                             
                                  ---Mercutio, o Poeta do Reino
 
+~
+E
+porcao terra estrategica~
+Esta grande e estranha criação é, meramente, uma estratégia muito usado por 
+escritores para desviar pessoas para longe de algo que ele ou ela não queria
+que eles vissem até o presente momento.  Falando nisso, você viu o pátio
+que leva ao sul, não viu?
 ~
 S
 #1745
@@ -1001,13 +1001,13 @@ rachadas.  O túnel continua para leste e oeste.
 D1
 Você vê o começo de um novo e tranquilo túnel.
 ~
-~
+tunel~
 0 -1 1728
 D2
 Você parece ser capaz de espiar na fissura aberta.
 ~
 fissura~
-1 -1 1727
+3 -1 1727
 D3
 Você vê uma porta feita de osso conduzir até a caverna do estômago.
 ~

@@ -174,7 +174,7 @@ e você gostaria?
 D0
 Estranho e intenso as letras quem cobrem portões à frente.
 ~
-portão brilhando letra~
+portao brilhando letra~
 1 -1 13123
 D2
 As sombras fazem você começar a pensar novamente...
@@ -868,16 +868,16 @@ Uma porta bem preservada está aqui.
 porta madeira carvalho~
 1 -1 13137
 E
-porta madeira sul preservada~
-Você pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
-você toca na porta ainda consegue retirar o verniz.  Esta porta parece ser
-mais um portão do que uma porta normal.
-~
-E
 porta madeira norte preservada~
 Você pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
 você toca na porta ainda consegue retirar o verniz.  Nada lhe ajuda para
 onde ir.
+~
+E
+porta madeira sul preservada~
+Você pode sentir o cheiro da seiva recentemente cortada do carvalho e quando
+você toca na porta ainda consegue retirar o verniz.  Esta porta parece ser
+mais um portão do que uma porta normal.
 ~
 S
 #13135

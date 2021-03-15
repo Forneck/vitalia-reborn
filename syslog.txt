@@ -920,3 +920,128 @@ Mar 15 17:23:31 2021 :: Althair has quit the game.
 Mar 15 17:23:31 2021 :: Crash_is_unrentable: removing object a chave do Reino Coringa
 Mar 15 17:23:32 2021 :: Losing player: Althair.
 Mar 15 17:23:32 2021 :: No connections.  Going to sleep.
+Mar 15 18:55:27 2021 :: New connection.  Waking up.
+Mar 15 18:55:35 2021 :: Cansian has connected.
+Mar 15 18:55:37 2021 :: Cansian had no variable file
+Mar 15 18:55:37 2021 :: Cansian un-renting and entering game.
+Mar 15 18:55:37 2021 :: Cansian (level 110) has 0 objects (max 100).
+Mar 15 18:56:28 2021 :: OLC: Cansian starts editing zone 157 allowed zone 0
+Mar 15 18:56:50 2021 :: GenOLC: add_room: Updated existing room #15725.
+Mar 15 18:56:50 2021 :: OLC: Cansian edits room 15725.
+Mar 15 18:56:50 2021 :: GenOLC: save_rooms: Saving rooms in zone #157 (15700-15799).
+Mar 15 18:56:50 2021 :: OLC: Cansian stops editing zone 157 allowed zone 0
+Mar 15 18:57:08 2021 :: nusage: 1   sockets connected, 1   sockets playing
+Mar 15 18:57:08 2021 :: rusage: user time: 9 sec, system time: 0 sec, max res size: 22996
+Mar 15 18:58:03 2021 :: OLC: Cansian starts editing zone 131 allowed zone 0
+Mar 15 18:58:59 2021 :: GenOLC: add_room: Updated existing room #13125.
+Mar 15 18:58:59 2021 :: OLC: Cansian edits room 13125.
+Mar 15 18:58:59 2021 :: GenOLC: save_rooms: Saving rooms in zone #131 (13100-13199).
+Mar 15 18:58:59 2021 :: OLC: Cansian stops editing zone 131 allowed zone 0
+Mar 15 18:59:46 2021 :: OLC: Cansian starts editing zone 131 allowed zone 0
+Mar 15 19:00:28 2021 :: GenOLC: add_room: Updated existing room #13128.
+Mar 15 19:00:28 2021 :: OLC: Cansian edits room 13128.
+Mar 15 19:00:28 2021 :: GenOLC: save_rooms: Saving rooms in zone #131 (13100-13199).
+Mar 15 19:00:28 2021 :: OLC: Cansian stops editing zone 131 allowed zone 0
+Mar 15 19:01:12 2021 :: OLC: Cansian starts editing zone 100 allowed zone 0
+Mar 15 19:01:25 2021 :: OLC: Cansian stops editing zone 100 allowed zone 0
+Mar 15 19:02:02 2021 :: OLC: Cansian starts editing zone 100 allowed zone 0
+Mar 15 19:02:08 2021 :: nusage: 1   sockets connected, 1   sockets playing
+Mar 15 19:02:08 2021 :: rusage: user time: 10 sec, system time: 0 sec, max res size: 22996
+Mar 15 19:02:29 2021 :: GenOLC: add_room: Updated existing room #10003.
+Mar 15 19:02:29 2021 :: OLC: Cansian edits room 10003.
+Mar 15 19:02:29 2021 :: GenOLC: save_rooms: Saving rooms in zone #100 (10000-10099).
+Mar 15 19:02:29 2021 :: OLC: Cansian stops editing zone 100 allowed zone 0
+Mar 15 19:02:51 2021 :: OLC: Cansian starts editing zone 132 allowed zone 0
+Mar 15 19:04:02 2021 :: GenOLC: add_room: Updated existing room #13222.
+Mar 15 19:04:02 2021 :: OLC: Cansian edits room 13222.
+Mar 15 19:04:02 2021 :: GenOLC: save_rooms: Saving rooms in zone #132 (13200-13299).
+Mar 15 19:04:02 2021 :: OLC: Cansian stops editing zone 132 allowed zone 0
+Mar 15 19:05:13 2021 :: OLC: Cansian starts editing zone 132 allowed zone 0
+Mar 15 19:05:30 2021 :: GenOLC: add_room: Updated existing room #13225.
+Mar 15 19:05:30 2021 :: OLC: Cansian edits room 13225.
+Mar 15 19:05:30 2021 :: GenOLC: save_rooms: Saving rooms in zone #132 (13200-13299).
+Mar 15 19:05:30 2021 :: OLC: Cansian stops editing zone 132 allowed zone 0
+Mar 15 19:06:52 2021 :: OLC: Cansian starts editing zone 157 allowed zone 0
+Mar 15 19:07:08 2021 :: nusage: 1   sockets connected, 1   sockets playing
+Mar 15 19:07:08 2021 :: rusage: user time: 10 sec, system time: 0 sec, max res size: 22996
+Mar 15 19:07:14 2021 :: OLC: Cansian stops editing zone 157 allowed zone 0
+Mar 15 19:08:46 2021 :: OLC: Cansian starts editing zone 157 allowed zone 0
+Mar 15 19:09:02 2021 :: GenOLC: add_room: Updated existing room #15724.
+Mar 15 19:09:02 2021 :: OLC: Cansian edits room 15724.
+Mar 15 19:09:02 2021 :: GenOLC: save_rooms: Saving rooms in zone #157 (15700-15799).
+Mar 15 19:09:02 2021 :: OLC: Cansian stops editing zone 157 allowed zone 0
+Mar 15 19:09:37 2021 :: OLC: Cansian starts editing zone 157 allowed zone 0
+Mar 15 19:09:51 2021 :: GenOLC: add_room: Updated existing room #15711.
+Mar 15 19:09:51 2021 :: OLC: Cansian edits room 15711.
+Mar 15 19:09:51 2021 :: GenOLC: save_rooms: Saving rooms in zone #157 (15700-15799).
+Mar 15 19:09:51 2021 :: OLC: Cansian stops editing zone 157 allowed zone 0
+Mar 15 19:10:22 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:10:37 2021 :: GenOLC: add_room: Updated existing room #1726.
+Mar 15 19:10:37 2021 :: OLC: Cansian edits room 1726.
+Mar 15 19:10:37 2021 :: GenOLC: save_rooms: Saving rooms in zone #17 (1700-1799).
+Mar 15 19:10:37 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:12:05 2021 :: Thunderstorm killed uma perereca cinzenta
+Mar 15 19:12:08 2021 :: nusage: 1   sockets connected, 1   sockets playing
+Mar 15 19:12:08 2021 :: rusage: user time: 11 sec, system time: 0 sec, max res size: 22996
+Mar 15 19:15:32 2021 :: OLC: Cansian starts editing zone 59 allowed zone 0
+Mar 15 19:15:45 2021 :: GenOLC: add_room: Updated existing room #5999.
+Mar 15 19:15:45 2021 :: OLC: Cansian edits room 5999.
+Mar 15 19:15:45 2021 :: GenOLC: save_rooms: Saving rooms in zone #59 (5900-5999).
+Mar 15 19:15:45 2021 :: OLC: Cansian stops editing zone 59 allowed zone 0
+Mar 15 19:16:37 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:16:46 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:17:08 2021 :: nusage: 1   sockets connected, 1   sockets playing
+Mar 15 19:17:08 2021 :: rusage: user time: 12 sec, system time: 0 sec, max res size: 23116
+Mar 15 19:17:29 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:17:51 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:18:28 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:18:37 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:19:30 2021 :: OLC: Cansian starts editing zone 59 allowed zone 0
+Mar 15 19:19:45 2021 :: OLC: Cansian stops editing zone 59 allowed zone 0
+Mar 15 19:21:26 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:21:35 2021 :: GenOLC: add_room: Updated existing room #1726.
+Mar 15 19:21:35 2021 :: OLC: Cansian edits room 1726.
+Mar 15 19:21:35 2021 :: GenOLC: save_rooms: Saving rooms in zone #17 (1700-1799).
+Mar 15 19:21:35 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:21:58 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:22:08 2021 :: nusage: 1   sockets connected, 1   sockets playing
+Mar 15 19:22:08 2021 :: rusage: user time: 12 sec, system time: 0 sec, max res size: 23116
+Mar 15 19:22:55 2021 :: GenOLC: add_room: Updated existing room #1756.
+Mar 15 19:22:55 2021 :: OLC: Cansian edits room 1756.
+Mar 15 19:22:55 2021 :: GenOLC: save_rooms: Saving rooms in zone #17 (1700-1799).
+Mar 15 19:22:55 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:22:58 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:23:10 2021 :: GenOLC: add_room: Updated existing room #1756.
+Mar 15 19:23:10 2021 :: OLC: Cansian edits room 1756.
+Mar 15 19:23:10 2021 :: GenOLC: save_rooms: Saving rooms in zone #17 (1700-1799).
+Mar 15 19:23:10 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:24:29 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:25:02 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:25:07 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:25:33 2021 :: GenOLC: add_room: Updated existing room #1756.
+Mar 15 19:25:33 2021 :: OLC: Cansian edits room 1756.
+Mar 15 19:25:33 2021 :: GenOLC: save_rooms: Saving rooms in zone #17 (1700-1799).
+Mar 15 19:25:33 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:25:41 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:26:04 2021 :: GenOLC: add_room: Updated existing room #1756.
+Mar 15 19:26:04 2021 :: OLC: Cansian edits room 1756.
+Mar 15 19:26:04 2021 :: GenOLC: save_rooms: Saving rooms in zone #17 (1700-1799).
+Mar 15 19:26:04 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:27:07 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:27:08 2021 :: nusage: 1   sockets connected, 1   sockets playing
+Mar 15 19:27:08 2021 :: rusage: user time: 13 sec, system time: 0 sec, max res size: 23116
+Mar 15 19:27:33 2021 :: GenOLC: add_room: Updated existing room #1727.
+Mar 15 19:27:33 2021 :: OLC: Cansian edits room 1727.
+Mar 15 19:27:33 2021 :: GenOLC: save_rooms: Saving rooms in zone #17 (1700-1799).
+Mar 15 19:27:33 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:28:04 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:28:14 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:28:32 2021 :: OLC: Cansian starts editing zone 17 allowed zone 0
+Mar 15 19:28:43 2021 :: OLC: Cansian stops editing zone 17 allowed zone 0
+Mar 15 19:32:08 2021 :: nusage: 1   sockets connected, 1   sockets playing
+Mar 15 19:32:08 2021 :: rusage: user time: 14 sec, system time: 0 sec, max res size: 23116
+Mar 15 19:33:30 2021 :: OLC: Cansian starts editing zone 131 allowed zone 0
+Mar 15 19:33:50 2021 :: GenOLC: add_room: Updated existing room #13108.
+Mar 15 19:33:50 2021 :: OLC: Cansian edits room 13108.
+Mar 15 19:33:50 2021 :: GenOLC: save_rooms: Saving rooms in zone #131 (13100-13199).
+Mar 15 19:33:50 2021 :: OLC: Cansian stops editing zone 131 allowed zone 0

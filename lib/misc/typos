@@ -30,18 +30,7 @@ Level     80
 Room      3054
 Flags     0 0 0 0
 End
-Text       port~
-Body      port parece estar fechado.
-](direcao norte)
-~
-Name      Anyte~
-IdNum     6
-Dated     1606173312
-Level     80
-Room      13108
-Flags     0 0 0 0
-End
-Text       passagem secreta~
+Text      passagem secreta~
 Body      "secreta parece estar fechado." deveria ser "A passagem secreta parece estar fechada."
 ~
 Name      Anyte~
@@ -51,9 +40,8 @@ Level     80
 Room      13125
 Flags     0 0 0 0
 End
-Text       passagem~
-Body      
-"pedra parece estar fechado." deveria ser "A porta feita de pedras parece estar fechada."
+Text      passagem~
+Body      "pedra parece estar fechado." deveria ser "A porta feita de pedras parece estar fechada."
 ~
 Name      Anyte~
 IdNum     6
