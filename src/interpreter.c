@@ -517,10 +517,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 	FILE *dataset;
 	int contador;
 	int i, type1, type2;
-	struct fann *ann;
 	fann_type input[29];
 	fann_type output[6];
-	struct fann_train_data *ann_train;
 	struct char_data *victim;
 	struct obj_data *object;
 	int id_player = 0;
@@ -529,8 +527,6 @@ void command_interpreter(struct char_data *ch, char *argument)
 	float mob = 0;
 	float obj = 0;
     int count_obj = 0;
-    
-    ann = fann_create_from_file("etc/aventureiro.fann");
     	
     /* verifica grupo e inventario */
 	if (GROUP(ch) != NULL)
@@ -693,15 +689,10 @@ void command_interpreter(struct char_data *ch, char *argument)
 			   output[4] = output[5] = 0;
 			}
 			if (GET_LEVEL(ch) < LVL_GOD){
-			    ann_train =  fann_create_train_array(1,29,input,6,output);
-		fann_train_on_data(ann,ann_train,250,500,0);
-				fann_save(ann,"etc/aventureiro.fann");
-				fann_destroy_train(ann_train);
-				fann_destroy(ann);
 				dataset = fopen("dataset.txt", "a");
 				for (contador=0;contador<=28;contador++)
 					fprintf(dataset,"%f ",input[contador]);
-				fprintf(dataset,"%f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
+				fprintf(dataset,"%f %f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
 				fclose(dataset);
 			}
 			return;
@@ -939,25 +930,13 @@ void command_interpreter(struct char_data *ch, char *argument)
 			output[2] = output[3] = output[4] = output[5] = 0;
 		}
 		if ((GET_LEVEL(ch) < LVL_GOD)&&!CMD_IS("suggestion")&&!CMD_IS("quit")&&!IS_MOVE(cmd)&&!PLR_FLAGGED(ch, PLR_AUTO) ){
-		    ann_train =  fann_create_train_array(1,29,input,6,output);
-		fann_train_on_data(ann,ann_train,250,1000,0);
-				fann_destroy_train(ann_train);
-		}
-		fann_save(ann, "etc/aventureiro.fann");
-		
-		dataset = fopen("dataset.txt", "a");
+		  	dataset = fopen("dataset.txt", "a");
 		for (contador=0;contador<=28;contador++)
 			fprintf(dataset,"%f ",input[contador]);
-		fprintf(dataset,"%f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
+		fprintf(dataset,"%f %f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
 		fclose(dataset);
-		
-		if ((GET_IDNUM(ch) == 1) || (GET_IDNUM(ch) == 20))
-		{
-		   send_to_char(ch, "INPUTS Sala %f\r\n", input[7]);
-			send_to_char(ch, "OUTPUT: %f, %f, %f, %f, %f, %f, %d\r\n", output[0], output[1], output[2], output[3],
-						 output[4], output[5], cmd);
 		}
-			fann_destroy(ann);
+		
 		((*complete_cmd_info[cmd].command_pointer) (ch, line, cmd,
 				complete_cmd_info[cmd].subcmd));
 	}
