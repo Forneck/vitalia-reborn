@@ -1,5 +1,30 @@
-autorun starting game Fri Mar 12 18:43:15 UTC 2021
-running bin/circle -q 4000
-Quick boot mode -- rent check supressed.
-Using log file 'syslog.txt' with redirection.
-Improper shutdown of autorun detected, rotating syslogs before startup.
+Epochs            1. Current error: 0.6212478876. Bit fail 5.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6234987378. Bit fail 5.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6170313954. Bit fail 5.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6160534620. Bit fail 5.
+Epochs          250. Current error: 0.5000000596. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.7844570279. Bit fail 6.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6228180528. Bit fail 5.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6139211059. Bit fail 5.
+Epochs          250. Current error: 0.5000000000. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.7841215134. Bit fail 6.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.6144313216. Bit fail 5.
+Epochs          250. Current error: 0.5000000000. Bit fail 3.
+Max epochs      250. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.7817701697. Bit fail 6.
+Epochs          250. Current error: 0.6666666865. Bit fail 4.
+Max epoAborted (core dumped)
