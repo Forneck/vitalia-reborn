@@ -690,7 +690,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 			}
 			if (GET_LEVEL(ch) < LVL_GOD){
 				dataset = fopen("dataset.txt", "a");
-				for (contador=0;contador<=28;contador++)
+				for (contador=0;contador<29;contador++)
 					fprintf(dataset,"%f ",input[contador]);
 				fprintf(dataset,"%f %f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
 				fclose(dataset);
@@ -931,7 +931,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 		}
 		if ((GET_LEVEL(ch) < LVL_GOD)&&!CMD_IS("suggestion")&&!CMD_IS("quit")&&!IS_MOVE(cmd)&&!PLR_FLAGGED(ch, PLR_AUTO) ){
 		  	dataset = fopen("dataset.txt", "a");
-		for (contador=0;contador<=28;contador++)
+		for (contador=0;contador<29;contador++)
 			fprintf(dataset,"%f ",input[contador]);
 		fprintf(dataset,"%f %f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
 		fclose(dataset);
