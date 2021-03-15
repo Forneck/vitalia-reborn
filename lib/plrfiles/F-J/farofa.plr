@@ -6,12 +6,12 @@ Clas: 6
 Levl: 2
 Id  : 40
 Brth: 1614714930
-Plyd: 3895
-Last: 1615821373
+Plyd: 3905
+Last: 1615824196
 Lmot: 1614718702
 Lnew: 1614718697
 Htwn: 1372
-Host: 177.220.172.152
+Host: 127.0.0.1
 Hite: 162
 Wate: 146
 Alin: 87
@@ -36,14 +36,13 @@ Gold: 752
 Bank: 1003
 Exp : 1626
 Olc : 0
-Fit: 8
 Skil:
 224 88
 0 0
 Alis: 2
- zn
- n;n;n;n;e
-1
  sede
  w;w;w;drink fonte;drink fonte;drink fonte;e;e;e
+1
+ zn
+ n;n;n;n;e
 1
