@@ -3,28 +3,28 @@ Pass: Fac9C4UQK5AM6
 Titl: a Pintinho
 Sex : 2
 Clas: 6
-Levl: 2
+Levl: 3
 Id  : 40
 Brth: 1614714930
-Plyd: 3905
-Last: 1615824196
+Plyd: 4750
+Last: 1615825306
 Lmot: 1614718702
 Lnew: 1614718697
 Htwn: 1372
-Host: 127.0.0.1
+Host: 177.220.172.152
 Hite: 162
 Wate: 146
-Alin: 87
+Alin: 91
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghno 0 0 0
 Wimp: 10
 Room: 3001
-Hung: 23
-Thir: 23
-Hit : 16/32
-Mana : 100/102
-Move: 74/87
+Hung: 12
+Thir: 17
+Hit : 41/46
+Mana : 104/104
+Move: 77/89
 Str : 16/0
 Int : 12
 Wis : 12
@@ -32,17 +32,21 @@ Dex : 14
 Con : 15
 Cha : 9
 Ac  : 100
-Gold: 752
-Bank: 1003
-Exp : 1626
+Gold: 2791
+Exp : 3152
 Olc : 0
+Fit: 7
 Skil:
+16 44
 224 88
 0 0
+Affs:
+19 22 0 29 16 0 0 0
+0 0 0 0 0 0 0 0
 Alis: 2
- sede
- w;w;w;drink fonte;drink fonte;drink fonte;e;e;e
-1
  zn
  n;n;n;n;e
+1
+ sede
+ w;w;w;drink fonte;drink fonte;drink fonte;e;e;e
 1
