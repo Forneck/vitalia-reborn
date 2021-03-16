@@ -365,7 +365,8 @@ const char *affected_bits[] =
    "GLOOMSHIELD",
    "PROT-SPELL",
    "WINDWALL",
-  "\n"
+   "RESERVED BIT",
+  "\n",
 };
 
 /** Connection type descriptions.
