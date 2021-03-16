@@ -1,0 +1,177 @@
+1.52
+C/C++
+/root/vitalia-reborn/src/db.h	1601774718	0	/root/vitalia-reborn/src/db.h
+/root/vitalia-reborn/src/protocol.c	1601774718	0	/root/vitalia-reborn/src/protocol.c
+/root/vitalia-reborn/src/handler.h	1601774718	0	/root/vitalia-reborn/src/handler.h
+/root/vitalia-reborn/src/dg_olc.c	1601774718	1	dg_olc.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/improved-edit.h	1601774718	0	/root/vitalia-reborn/src/improved-edit.h
+/root/vitalia-reborn/src/lists.c	1601774718	1	lists.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/starmap.c	1601774718	0	/root/vitalia-reborn/src/starmap.c
+/root/vitalia-reborn/src/include/floatfann.h	1606146064	0	/root/vitalia-reborn/src/include/floatfann.h
+/root/vitalia-reborn/src/prefedit.c	1603726484	1	prefedit.c                                        Part of tbaMUD
+/root/vitalia-reborn/src/class.c	1607498122	1	class.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/dg_mobcmd.c	1601774718	1	dg_mobcmd.c                                       Part of tbaMUD
+/root/vitalia-reborn/src/include/fann_data.h	1606106450	1	FANN Datatypes
+/root/vitalia-reborn/src/util/wld2html.c	1601774718	1	wld2html.c                                        Part of tbaMUD
+/root/vitalia-reborn/src/util/webster.c	1601774718	1	webster.c                                         Part of tbaMUD
+/root/vitalia-reborn/src/objsave.c	1601774718	1	objsave.c                                         Part of tbaMUD
+/root/vitalia-reborn/src/spells_script.c	1601774718	0	/root/vitalia-reborn/src/spells_script.c
+/root/vitalia-reborn/src/magic.c	1606095967	1	magic.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/spedit.c	1604797414	0	/root/vitalia-reborn/src/spedit.c
+/root/vitalia-reborn/src/sysdep.h	1601774718	0	/root/vitalia-reborn/src/sysdep.h
+/root/vitalia-reborn/src/util/plrtoascii.c	1601774718	1	plrtoascii.c                                     Part of tbaMUD
+/root/vitalia-reborn/src/output.txt	1601774718	0	/root/vitalia-reborn/src/output.txt
+/root/vitalia-reborn/src/util/asciipasswd.c	1601774718	1	asciipasswd.c (derived from mudpasswd.c)         Part of tbaMUD
+/root/vitalia-reborn/src/spedit.h	1604796693	0	/root/vitalia-reborn/src/spedit.h
+/root/vitalia-reborn/src/genshp.c	1601774718	1	genshp.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/ibt.h	1601774718	1	ibt.h                                             Part of tbaMUD
+/root/vitalia-reborn/src/mobact.c	1603256696	1	mobact.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/genzon.h	1601774718	0	/root/vitalia-reborn/src/genzon.h
+/root/vitalia-reborn/src/limits.c	1605932860	1	limits.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/util/shopconv.c	1601774718	1	shopconv.c                                       Part of tbaMUD
+/root/vitalia-reborn/src/dg_comm.c	1601774718	1	dg_comm.c                                         Part of tbaMUD
+/root/vitalia-reborn/src/oasis.c	1601774718	1	oasis.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/mud_event.c	1601774718	1	mud_event.c                                       Part of tbaMUD
+/root/vitalia-reborn/src/clan.c	1601774718	0	/root/vitalia-reborn/src/clan.c
+/root/vitalia-reborn/src/include/fann.h	1606106450	1	FANN Creation/Execution
+/root/vitalia-reborn/src/telnet.h	1601774718	0	/root/vitalia-reborn/src/telnet.h
+/root/vitalia-reborn/src/spell_parser.c	1606094160	1	spell_parser.c                                    Part of tbaMUD
+/root/vitalia-reborn/src/genqst.c	1601774718	1	genqst.c                                 Part of CircleMUD
+/root/vitalia-reborn/src/include/fann_cascade.h	1606106450	1	FANN Cascade Training
+/root/vitalia-reborn/src/spells_script.h	1601774718	0	/root/vitalia-reborn/src/spells_script.h
+/root/vitalia-reborn/src/mail.h	1601774718	0	/root/vitalia-reborn/src/mail.h
+/root/vitalia-reborn/src/cedit.c	1607583441	1	cedit.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/oasis_delete.c	1601774718	1	oasis_delete.c                                    Part of tbaMUD
+/root/vitalia-reborn/src/genobj.c	1601774718	1	genobj.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/interpreter.c	1615823622	1	interpreter.c                                     Part of tbaMUD
+/root/vitalia-reborn/src/include/parallel_fann.h	1606107073	0	/root/vitalia-reborn/src/include/parallel_fann.h
+/root/vitalia-reborn/src/mail.c	1601774718	1	mail.c                                            Part of tbaMUD
+/root/vitalia-reborn/src/interpreter.h	1607547603	0	/root/vitalia-reborn/src/interpreter.h
+/root/vitalia-reborn/src/dg_event.c	1601774718	0	/root/vitalia-reborn/src/dg_event.c
+/root/vitalia-reborn/src/fann_io.c	1606145179	0	/root/vitalia-reborn/src/fann_io.c
+/root/vitalia-reborn/src/dg_misc.c	1601774718	1	dg_misc.c                                         Part of tbaMUD
+/root/vitalia-reborn/src/house.c	1601774718	1	house.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/act.movement.c	1613160647	1	act.movement.c                                    Part of tbaMUD
+/root/vitalia-reborn/src/mud_event.h	1601774718	0	/root/vitalia-reborn/src/mud_event.h
+/root/vitalia-reborn/src/ban.h	1601774718	0	/root/vitalia-reborn/src/ban.h
+/root/vitalia-reborn/src/dg_triggers.c	1601774718	1	dg_triggers.c                                     part of tbaMUD
+/root/vitalia-reborn/src/handler.c	1601774718	1	handler.c                                         Part of tbaMUD
+/root/vitalia-reborn/src/parallel_fann.c	1606145379	0	/root/vitalia-reborn/src/parallel_fann.c
+/root/vitalia-reborn/src/genobj.h	1601774718	0	/root/vitalia-reborn/src/genobj.h
+/root/vitalia-reborn/src/shop.c	1606147140	1	shop.c                                            Part of tbaMUD
+/root/vitalia-reborn/src/comm.c	1607583603	1	comm.c                                            Part of tbaMUD
+/root/vitalia-reborn/src/pfdefaults.h	1607498122	0	/root/vitalia-reborn/src/pfdefaults.h
+/root/vitalia-reborn/src/spirits.h	1604110267	0	/root/vitalia-reborn/src/spirits.h
+/root/vitalia-reborn/src/spirits.c	1604697633	0	/root/vitalia-reborn/src/spirits.c
+/root/vitalia-reborn/src/structs.h	1607575189	0	/root/vitalia-reborn/src/structs.h
+/root/vitalia-reborn/src/fight.c	1607545269	1	fight.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/db.c	1606106450	1	db.c                                              Part of tbaMUD
+/root/vitalia-reborn/src/modify.c	1601774718	1	modify.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/medit.c	1601774718	1	medit.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/include/fann_cpp.h	1606106450	1	FANN C++ Wrapper
+/root/vitalia-reborn/src/include/fann_activation.h	1606106450	0	/root/vitalia-reborn/src/include/fann_activation.h
+/root/vitalia-reborn/src/fann_train.c	1606106842	0	/root/vitalia-reborn/src/fann_train.c
+/root/vitalia-reborn/src/fann_train_data.c	1606145379	0	/root/vitalia-reborn/src/fann_train_data.c
+/root/vitalia-reborn/src/zmalloc.c	1601774718	1	zmalloc.c                                         Part of tbaMUD
+/root/vitalia-reborn/src/players.c	1607498122	1	players.c                                         Part of tbaMUD
+/root/vitalia-reborn/src/util/rebuildMailIndex.c	1601774718	1	rebuildMailIndex.c                               Part of tbaMUD
+/root/vitalia-reborn/src/include/CMakeLists.txt	1603751082	0	/root/vitalia-reborn/src/include/CMakeLists.txt
+/root/vitalia-reborn/src/msgedit.h	1601774718	0	/root/vitalia-reborn/src/msgedit.h
+/root/vitalia-reborn/src/qedit.c	1601774718	1	qedit.c                                  Part of CircleMUD
+/root/vitalia-reborn/src/genmob.h	1601774718	0	/root/vitalia-reborn/src/genmob.h
+/root/vitalia-reborn/src/act.other.c	1615576916	1	act.other.c                                       Part of tbaMUD
+/root/vitalia-reborn/src/act.comm.c	1605917321	1	act.comm.c                                        Part of tbaMUD
+/root/vitalia-reborn/src/include/doublefann.h	1606147359	0	/root/vitalia-reborn/src/include/doublefann.h
+/root/vitalia-reborn/src/anncheck.c	1606100917	0	/root/vitalia-reborn/src/anncheck.c
+/root/vitalia-reborn/src/house.h	1601774718	0	/root/vitalia-reborn/src/house.h
+/root/vitalia-reborn/src/dg_wldcmd.c	1601774718	1	dg_wldcmd.c                                       Part of tbaMUD
+/root/vitalia-reborn/src/bsd-snprintf.c	1601774718	1	bsd-snprintf.c                                    Part of tbaMUD
+/root/vitalia-reborn/src/ban.c	1601774718	1	ban.c                                             Part of tbaMUD
+/root/vitalia-reborn/src/dg_db_scripts.c	1601774718	1	dg_db_scripts.c                                   Part of tbaMUD
+/root/vitalia-reborn/src/include/fixedfann.h	1606147437	0	/root/vitalia-reborn/src/include/fixedfann.h
+/root/vitalia-reborn/src/modify.h	1601774718	0	/root/vitalia-reborn/src/modify.h
+/root/vitalia-reborn/src/act.social.c	1601774718	1	act.social.c                                      Part of tbaMUD
+/root/vitalia-reborn/src/act.h	1605065826	0	/root/vitalia-reborn/src/act.h
+/root/vitalia-reborn/src/act.item.c	1605054533	1	act.item.c                                        Part of tbaMUD
+/root/vitalia-reborn/src/tedit.c	1601774718	1	tedit.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/redit.c	1601774718	1	redit.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/include/fann_internal.h	1606106450	0	/root/vitalia-reborn/src/include/fann_internal.h
+/root/vitalia-reborn/src/zedit.c	1601774718	1	zedit.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/spells_assign.c	1605114361	0	/root/vitalia-reborn/src/spells_assign.c
+/root/vitalia-reborn/src/conf.h	1601775806	0	/root/vitalia-reborn/src/conf.h
+/root/vitalia-reborn/src/boards.c	1603222505	1	boards.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/utils.c	1605917321	0	/root/vitalia-reborn/src/utils.c
+/root/vitalia-reborn/src/lists.h	1601774718	0	/root/vitalia-reborn/src/lists.h
+/root/vitalia-reborn/src/oasis_copy.c	1601774718	1	oasis_copy.c                                      Part of tbaMUD
+/root/vitalia-reborn/src/genolc.h	1601774718	0	/root/vitalia-reborn/src/genolc.h
+/root/vitalia-reborn/src/spec_assign.c	1605591511	1	spec_assign.c                                     Part of tbaMUD
+/root/vitalia-reborn/src/castle.c	1601774718	1	castle.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/genolc.c	1601774718	1	genolc.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/dg_variables.c	1605593325	1	dg_variables.c                                    Part of tbaMUD
+/root/vitalia-reborn/src/ann.c	1615782829	0	/root/vitalia-reborn/src/ann.c
+/root/vitalia-reborn/src/random.c	1601774718	1	random.c                                         Part of tbaMUD
+/root/vitalia-reborn/src/hedit.h	1601774718	0	/root/vitalia-reborn/src/hedit.h
+/root/vitalia-reborn/src/genzon.c	1601774718	1	genzon.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/protocol.h	1601774718	1	/root/vitalia-reborn/src/protocol.h
+/root/vitalia-reborn/src/zmalloc.h	1601774718	0	/root/vitalia-reborn/src/zmalloc.h
+/root/vitalia-reborn/src/bsd-snprintf.h	1601774718	0	/root/vitalia-reborn/src/bsd-snprintf.h
+/root/vitalia-reborn/src/include/fann_train.h	1606106450	1	FANN Training
+/root/vitalia-reborn/src/ann.h	1607575277	0	/root/vitalia-reborn/src/ann.h
+/root/vitalia-reborn/src/constants.c	1607547603	0	/root/vitalia-reborn/src/constants.c
+/root/vitalia-reborn/src/prefedit.h	1601774718	1	prefedit.c                                        Part of tbaMUD
+/root/vitalia-reborn/src/formula.c	1601774718	0	/root/vitalia-reborn/src/formula.c
+/root/vitalia-reborn/src/dg_handler.c	1601774718	1	dg_handler.c                                      Part of tbaMUD
+/root/vitalia-reborn/src/util/autowiz.c	1603252469	1	autowiz.c                                        Part of tbaMUD
+/root/vitalia-reborn/src/fann_cascade.c	1606145179	0	/root/vitalia-reborn/src/fann_cascade.c
+/root/vitalia-reborn/src/oedit.c	1605064908	1	oedit.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/include/compat_time.h	1603751082	0	/root/vitalia-reborn/src/include/compat_time.h
+/root/vitalia-reborn/src/util/split.c	1601774718	1	split.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/oasis_list.c	1601774718	1	oasis_list.c                                      Part of tbaMUD
+/root/vitalia-reborn/src/config.c	1607575189	1	config.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/screen.h	1601774718	0	/root/vitalia-reborn/src/screen.h
+/root/vitalia-reborn/src/dg_event.h	1601774718	0	/root/vitalia-reborn/src/dg_event.h
+/root/vitalia-reborn/src/utils.h	1607583379	0	/root/vitalia-reborn/src/utils.h
+/root/vitalia-reborn/src/oasis.h	1607575189	0	/root/vitalia-reborn/src/oasis.h
+/root/vitalia-reborn/src/ibt.c	1601774718	1	ibt.c                                             Part of tbaMUD
+/root/vitalia-reborn/src/genmob.c	1604440144	1	genmob.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/constants.h	1601774718	0	/root/vitalia-reborn/src/constants.h
+/root/vitalia-reborn/src/formula.h	1601774718	0	/root/vitalia-reborn/src/formula.h
+/root/vitalia-reborn/src/sedit.c	1601774718	1	sedit.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/spec_procs.h	1601774718	0	/root/vitalia-reborn/src/spec_procs.h
+/root/vitalia-reborn/src/genwld.h	1601774718	0	/root/vitalia-reborn/src/genwld.h
+/root/vitalia-reborn/src/genshp.h	1601774718	0	/root/vitalia-reborn/src/genshp.h
+/root/vitalia-reborn/src/aedit.c	1601774718	1	aedit.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/weather.c	1601774718	0	/root/vitalia-reborn/src/weather.c
+/root/vitalia-reborn/src/graph.c	1601774718	1	graph.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/quest.h	1601774718	1	quest.h                                  Part of CircleMUD
+/root/vitalia-reborn/src/config.h	1607575189	0	/root/vitalia-reborn/src/config.h
+/root/vitalia-reborn/src/dg_scripts.c	1601774718	0	/root/vitalia-reborn/src/dg_scripts.c
+/root/vitalia-reborn/src/dg_olc.h	1601774718	0	/root/vitalia-reborn/src/dg_olc.h
+/root/vitalia-reborn/src/genwld.c	1601774718	1	genwld.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/quest.c	1601774718	1	quest.c                                  Part of CircleMUD
+/root/vitalia-reborn/src/dg_scripts.h	1601774718	0	/root/vitalia-reborn/src/dg_scripts.h
+/root/vitalia-reborn/src/spells.c	1605041047	1	spells.c                                          Part of tbaMUD
+/root/vitalia-reborn/src/shop.h	1605384975	0	/root/vitalia-reborn/src/shop.h
+/root/vitalia-reborn/src/asciimap.c	1604280846	1	asciimap.c                                        Part of tbaMUD
+/root/vitalia-reborn/src/spells.h	1605064908	0	/root/vitalia-reborn/src/spells.h
+/root/vitalia-reborn/src/act.informative.c	1604936569	1	act.informative.c                                 Part of tbaMUD
+/root/vitalia-reborn/src/fight.h	1604700078	0	/root/vitalia-reborn/src/fight.h
+/root/vitalia-reborn/src/fann_error.c	1606145179	0	/root/vitalia-reborn/src/fann_error.c
+/root/vitalia-reborn/src/util/rebuildAsciiIndex.c	1601774718	1	rebuildAsciiIndex.c                              Part of tbaMUD
+/root/vitalia-reborn/src/include/fann_io.h	1606106450	1	FANN File Input/Output
+/root/vitalia-reborn/src/graph.h	1601774718	0	/root/vitalia-reborn/src/graph.h
+/root/vitalia-reborn/src/msgedit.c	1601774718	1	msgedit.c                                       Part of tbaMUD
+/root/vitalia-reborn/src/spec_procs.c	1606155505	1	spec_procs.c                                      Part of tbaMUD
+/root/vitalia-reborn/src/boards.h	1601774718	0	/root/vitalia-reborn/src/boards.h
+/root/vitalia-reborn/src/comm.h	1601774718	0	/root/vitalia-reborn/src/comm.h
+/root/vitalia-reborn/src/include/fann_error.h	1606106450	1	FANN Error Handling
+/root/vitalia-reborn/src/class.h	1601774718	0	/root/vitalia-reborn/src/class.h
+/root/vitalia-reborn/src/asciimap.h	1601774718	1	asciimap.h                                        Part of tbaMUD
+/root/vitalia-reborn/src/fann.c	1606146987	0	/root/vitalia-reborn/src/fann.c
+/root/vitalia-reborn/src/act.offensive.c	1605117690	1	act.offensive.c                                   Part of tbaMUD
+/root/vitalia-reborn/src/act.wizard.c	1615579357	1	act.wizard.c                                      Part of tbaMUD
+/root/vitalia-reborn/src/improved-edit.c	1601774718	1	improved-edit.c                                   Part of tbaMUD
+/root/vitalia-reborn/src/include/fannconfig.h	1603751082	0	/root/vitalia-reborn/src/include/fannconfig.h
+/root/vitalia-reborn/src/dg_objcmd.c	1601774718	1	dg_objcmd.c                                       Part of tbaMUD
+/root/vitalia-reborn/src/hedit.c	1601774718	1	hedit.c                                           Part of tbaMUD
+/root/vitalia-reborn/src/util/sign.c	1601774718	1	sign.c                                            Part of tbaMUD

@@ -1,0 +1,165 @@
+Format: 1.52
+
+
+# You can add a title and sub-title to your menu like this:
+# Title: [project name]
+# SubTitle: [subtitle]
+
+# You can add a footer to your documentation like this:
+# Footer: [text]
+# If you want to add a copyright notice, this would be the place to do it.
+
+# You can add a timestamp to your documentation like one of these:
+# Timestamp: Generated on month day, year
+# Timestamp: Updated mm/dd/yyyy
+# Timestamp: Last updated mon day
+#
+#   m     - One or two digit month.  January is "1"
+#   mm    - Always two digit month.  January is "01"
+#   mon   - Short month word.  January is "Jan"
+#   month - Long month word.  January is "January"
+#   d     - One or two digit day.  1 is "1"
+#   dd    - Always two digit day.  1 is "01"
+#   day   - Day with letter extension.  1 is "1st"
+#   yy    - Two digit year.  2006 is "06"
+#   yyyy  - Four digit year.  2006 is "2006"
+#   year  - Four digit year.  2006 is "2006"
+
+
+# --------------------------------------------------------------------------
+# 
+# Cut and paste the lines below to change the order in which your files
+# appear on the menu.  Don't worry about adding or removing files, Natural
+# Docs will take care of that.
+# 
+# You can further organize the menu by grouping the entries.  Add a
+# "Group: [name] {" line to start a group, and add a "}" to end it.
+# 
+# You can add text and web links to the menu by adding "Text: [text]" and
+# "Link: [name] ([URL])" lines, respectively.
+# 
+# The formatting and comments are auto-generated, so don't worry about
+# neatness when editing the file.  Natural Docs will clean it up the next
+# time it is run.  When working with groups, just deal with the braces and
+# forget about the indentation and comments.
+# 
+# --------------------------------------------------------------------------
+
+
+File: act.comm.c                                        Part of tbaMUD  (act.comm.c)
+File: act.informative.c                                 Part of tbaMUD  (act.informative.c)
+File: act.item.c                                        Part of tbaMUD  (act.item.c)
+File: act.movement.c                                    Part of tbaMUD  (act.movement.c)
+File: act.offensive.c                                   Part of tbaMUD  (act.offensive.c)
+File: act.other.c                                       Part of tbaMUD  (act.other.c)
+File: act.social.c                                      Part of tbaMUD  (act.social.c)
+File: act.wizard.c                                      Part of tbaMUD  (act.wizard.c)
+File: aedit.c                                           Part of tbaMUD  (aedit.c)
+File: asciimap.c                                        Part of tbaMUD  (asciimap.c)
+File: asciimap.h                                        Part of tbaMUD  (asciimap.h)
+File: ban.c                                             Part of tbaMUD  (ban.c)
+File: boards.c                                          Part of tbaMUD  (boards.c)
+File: bsd-snprintf.c                                    Part of tbaMUD  (bsd-snprintf.c)
+File: castle.c                                          Part of tbaMUD  (castle.c)
+File: cedit.c                                           Part of tbaMUD  (cedit.c)
+File: class.c                                           Part of tbaMUD  (class.c)
+File: comm.c                                            Part of tbaMUD  (comm.c)
+File: config.c                                          Part of tbaMUD  (config.c)
+File: db.c                                              Part of tbaMUD  (db.c)
+File: dg_comm.c                                         Part of tbaMUD  (dg_comm.c)
+File: dg_db_scripts.c                                   Part of tbaMUD  (dg_db_scripts.c)
+File: dg_handler.c                                      Part of tbaMUD  (dg_handler.c)
+File: dg_misc.c                                         Part of tbaMUD  (dg_misc.c)
+File: dg_mobcmd.c                                       Part of tbaMUD  (dg_mobcmd.c)
+File: dg_objcmd.c                                       Part of tbaMUD  (dg_objcmd.c)
+File: dg_olc.c                                          Part of tbaMUD  (dg_olc.c)
+File: dg_triggers.c                                     part of tbaMUD  (dg_triggers.c)
+File: dg_variables.c                                    Part of tbaMUD  (dg_variables.c)
+File: dg_wldcmd.c                                       Part of tbaMUD  (dg_wldcmd.c)
+File: fight.c                                           Part of tbaMUD  (fight.c)
+File: genmob.c                                          Part of tbaMUD  (genmob.c)
+File: genobj.c                                          Part of tbaMUD  (genobj.c)
+File: genolc.c                                          Part of tbaMUD  (genolc.c)
+File: genqst.c                                 Part of CircleMUD  (genqst.c)
+File: genshp.c                                          Part of tbaMUD  (genshp.c)
+File: genwld.c                                          Part of tbaMUD  (genwld.c)
+File: genzon.c                                          Part of tbaMUD  (genzon.c)
+File: graph.c                                           Part of tbaMUD  (graph.c)
+File: handler.c                                         Part of tbaMUD  (handler.c)
+File: hedit.c                                           Part of tbaMUD  (hedit.c)
+File: house.c                                           Part of tbaMUD  (house.c)
+File: ibt.c                                             Part of tbaMUD  (ibt.c)
+File: ibt.h                                             Part of tbaMUD  (ibt.h)
+File: improved-edit.c                                   Part of tbaMUD  (improved-edit.c)
+
+Group: Include  {
+
+   File: FANN C++ Wrapper  (include/fann_cpp.h)
+   File: FANN Cascade Training  (include/fann_cascade.h)
+   File: FANN Creation/Execution  (include/fann.h)
+   File: FANN Datatypes  (include/fann_data.h)
+   File: FANN Error Handling  (include/fann_error.h)
+   File: FANN File Input/Output  (include/fann_io.h)
+   File: FANN Training  (include/fann_train.h)
+   }  # Group: Include
+
+File: interpreter.c                                     Part of tbaMUD  (interpreter.c)
+File: limits.c                                          Part of tbaMUD  (limits.c)
+File: lists.c                                           Part of tbaMUD  (lists.c)
+File: magic.c                                           Part of tbaMUD  (magic.c)
+File: mail.c                                            Part of tbaMUD  (mail.c)
+File: medit.c                                           Part of tbaMUD  (medit.c)
+File: mobact.c                                          Part of tbaMUD  (mobact.c)
+File: modify.c                                          Part of tbaMUD  (modify.c)
+File: msgedit.c                                       Part of tbaMUD  (msgedit.c)
+File: mud_event.c                                       Part of tbaMUD  (mud_event.c)
+File: oasis.c                                           Part of tbaMUD  (oasis.c)
+File: oasis_copy.c                                      Part of tbaMUD  (oasis_copy.c)
+File: oasis_delete.c                                    Part of tbaMUD  (oasis_delete.c)
+File: oasis_list.c                                      Part of tbaMUD  (oasis_list.c)
+File: objsave.c                                         Part of tbaMUD  (objsave.c)
+File: oedit.c                                           Part of tbaMUD  (oedit.c)
+File: players.c                                         Part of tbaMUD  (players.c)
+File: prefedit.c                                        Part of tbaMUD  (prefedit.c)
+File: prefedit.c                                        Part of tbaMUD  (prefedit.h)
+File: protocol.h  (protocol.h)
+File: qedit.c                                  Part of CircleMUD  (qedit.c)
+File: quest.c                                  Part of CircleMUD  (quest.c)
+File: quest.h                                  Part of CircleMUD  (quest.h)
+File: random.c                                         Part of tbaMUD  (random.c)
+File: redit.c                                           Part of tbaMUD  (redit.c)
+File: sedit.c                                           Part of tbaMUD  (sedit.c)
+File: shop.c                                            Part of tbaMUD  (shop.c)
+File: spec_assign.c                                     Part of tbaMUD  (spec_assign.c)
+File: spec_procs.c                                      Part of tbaMUD  (spec_procs.c)
+File: spell_parser.c                                    Part of tbaMUD  (spell_parser.c)
+File: spells.c                                          Part of tbaMUD  (spells.c)
+File: tedit.c                                           Part of tbaMUD  (tedit.c)
+
+Group: Util  {
+
+   File: asciipasswd.c &lparen;derived from mudpasswd.c&rparen;         Part of tbaMUD  (util/asciipasswd.c)
+   File: autowiz.c                                        Part of tbaMUD  (util/autowiz.c)
+   File: plrtoascii.c                                     Part of tbaMUD  (util/plrtoascii.c)
+   File: rebuildAsciiIndex.c                              Part of tbaMUD  (util/rebuildAsciiIndex.c)
+   File: rebuildMailIndex.c                               Part of tbaMUD  (util/rebuildMailIndex.c)
+   File: shopconv.c                                       Part of tbaMUD  (util/shopconv.c)
+   File: sign.c                                            Part of tbaMUD  (util/sign.c)
+   File: split.c                                          Part of tbaMUD  (util/split.c)
+   File: webster.c                                         Part of tbaMUD  (util/webster.c)
+   File: wld2html.c                                        Part of tbaMUD  (util/wld2html.c)
+   }  # Group: Util
+
+File: zedit.c                                           Part of tbaMUD  (zedit.c)
+File: zmalloc.c                                         Part of tbaMUD  (zmalloc.c)
+
+Group: Index  {
+
+   Class Index: Classes
+   Constant Index: Constants
+   Index: Everything
+   File Index: Files
+   Function Index: Functions
+   Type Index: Types
+   }  # Group: Index
+
