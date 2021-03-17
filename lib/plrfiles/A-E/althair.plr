@@ -6,15 +6,15 @@ Clas: 6
 Levl: 17
 Id  : 20
 Brth: 1603768097
-Plyd: 265903
-Last: 1615829009
+Plyd: 267418
+Last: 1615860633
 Lmot: 1605925461
 Lnew: 1605129579
 Htwn: 1372
-Host: 177.220.172.152
+Host: 138.204.26.68
 Hite: 195
 Wate: 172
-Alin: 276
+Alin: 325
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghknoBCDE abde 0 0
@@ -22,9 +22,9 @@ Wimp: 50
 Room: 3001
 Hung: -1
 Thir: -1
-Hit : 174/199
-Mana : 26/165
-Move: 149/135
+Hit : 234/199
+Mana : 172/165
+Move: 155/135
 Str : 16/0
 Int : 14
 Wis : 12
@@ -32,11 +32,10 @@ Dex : 14
 Con : 15
 Cha : 4
 Ac  : 100
-Gold: 248136
-Exp : 2628674
+Gold: 252739
+Exp : 2658771
 Olc : 0
 ScrW: 44
-Fit: 23
 Skil:
 13 90
 16 90
@@ -53,10 +52,6 @@ Skil:
 236 30
 251 90
 0 0
-Affs:
-96 14 -4 17 0 0 0 0
-96 14 0 61 0 16 0 0
-0 0 0 0 0 0 0 0
 Alis: 16
  chess
  n;n;n;n;w;w;w;w
