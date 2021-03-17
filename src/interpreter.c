@@ -2039,7 +2039,7 @@ void nanny(struct descriptor_data *d, char *arg)
 			return;
 		}
 		else
-			GET_HOMETOWN(d->character) = load_result;
+			GET_HOMETOWN(d->character) = GET_ROOM_VNUM(load_result);
 		if (d->olc)
 		{
 			free(d->olc);
@@ -2256,9 +2256,9 @@ int parse_hometown(char arg)
 	switch (arg)
 	{
 	case '1':
-		return (GET_ROOM_VNUM(CONFIG_HOMETOWN_1));
+		return CONFIG_HOMETOWN_1;
 	case '2':
-		return (GET_ROOM_VNUM(CONFIG_HOMETOWN_2));
+		return CONFIG_HOMETOWN_2;
 	default:
 		return 0;
 	}
