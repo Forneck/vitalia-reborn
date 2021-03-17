@@ -6,8 +6,8 @@ Clas: 6
 Levl: 3
 Id  : 40
 Brth: 1614714930
-Plyd: 5436
-Last: 1616003898
+Plyd: 5445
+Last: 1616010247
 Lmot: 1614718702
 Lnew: 1614718697
 Htwn: 1
@@ -19,7 +19,7 @@ Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghno d 0 0
 Wimp: 10
-Room: 3001
+Room: 1
 Hung: 17
 Thir: 24
 Hit : 46/46
@@ -35,7 +35,6 @@ Ac  : 100
 Gold: 2792
 Exp : 3773
 Olc : 0
-Fit: 4
 Skil:
 16 44
 224 88
@@ -44,9 +43,9 @@ Affs:
 19 13 0 29 16 0 0 0
 0 0 0 0 0 0 0 0
 Alis: 2
- zn
- n;n;n;n;e
-1
  sede
  w;w;w;drink fonte;drink fonte;drink fonte;e;e;e
+1
+ zn
+ n;n;n;n;e
 1
