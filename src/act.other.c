@@ -83,7 +83,7 @@ sprintf(buf, "Tenha um%s! :-)\r\n\r\n",
 		if (CONFIG_FREE_RENT)
 			Crash_rentsave(ch, 0);
 
-//		GET_LOADROOM(ch) = GET_ROOM_VNUM(GET_HOMETOWN(ch));
+	GET_LOADROOM(ch) = GET_HOMETOWN(ch);
 
 		/* Stop snooping so you can't see passwords during deletion or change. 
 		 */
@@ -112,7 +112,7 @@ ACMD(do_save)
 	send_to_char(ch, "Salvando casa.\r\n");	House_crashsave(GET_ROOM_VNUM(IN_ROOM(ch)));
 		
 }
-	GET_LOADROOM(ch) =  GET_ROOM_VNUM(GET_HOMETOWN(ch));
+	GET_LOADROOM(ch) = GET_HOMETOWN(ch);
 }
 
 /* Generic function for commands which are normally overridden by special
