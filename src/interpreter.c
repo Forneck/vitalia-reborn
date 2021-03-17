@@ -1609,8 +1609,14 @@ int enter_player_game(struct descriptor_data *d)
 	{
 		if (GET_LEVEL(d->character) >= LVL_IMMORT)
 			load_room = r_immort_start_room;
-		else
+		else if (GET_LEVEL(d->character) < 2 LVL_IMMORT)
 			load_room = r_newbie_start_room;
+		else if (GET_HOMETOWN(ch) == 1)
+		    load_room = r_hometown_1;
+		    else if (GET_HOMETOWN(ch) == 2)
+		     load_room = r_hometown_2;
+		     else
+		     load_room = r_hometown_1;
 	}
 	if (PLR_FLAGGED(d->character, PLR_FROZEN))
 		load_room = r_frozen_start_room;
@@ -2039,7 +2045,7 @@ void nanny(struct descriptor_data *d, char *arg)
 			return;
 		}
 		else
-			GET_HOMETOWN(d->character) = GET_ROOM_VNUM(load_result);
+			GET_HOMETOWN(d->character) = (load_result);
 		if (d->olc)
 		{
 			free(d->olc);
@@ -2256,9 +2262,9 @@ int parse_hometown(char arg)
 	switch (arg)
 	{
 	case '1':
-		return CONFIG_HOMETOWN_1;
+		return 1;
 	case '2':
-		return CONFIG_HOMETOWN_2;
+		return 2;
 	default:
 		return 0;
 	}
