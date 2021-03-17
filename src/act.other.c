@@ -83,7 +83,7 @@ sprintf(buf, "Tenha um%s! :-)\r\n\r\n",
 		if (CONFIG_FREE_RENT)
 			Crash_rentsave(ch, 0);
 
-	GET_LOADROOM(ch) = GET_HOMETOWN(ch);
+    GET_LOADROOM(ch) = GET_ROOM_VNUM(IN_ROOM(ch));
 
 		/* Stop snooping so you can't see passwords during deletion or change. 
 		 */
@@ -108,11 +108,9 @@ ACMD(do_save)
 	save_char(ch);
 	 send_to_char(ch, "Salvando objetos.\r\n");
 	Crash_crashsave(ch);
-	if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE_CRASH)){
+	if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE_CRASH))
 	send_to_char(ch, "Salvando casa.\r\n");	House_crashsave(GET_ROOM_VNUM(IN_ROOM(ch)));
-		
-}
-	GET_LOADROOM(ch) = GET_HOMETOWN(ch);
+		  GET_LOADROOM(ch) = GET_ROOM_VNUM(IN_ROOM(ch));    
 }
 
 /* Generic function for commands which are normally overridden by special
@@ -1224,7 +1222,17 @@ ACMD(do_recall)
 
 	act("$n desaparece.", TRUE, ch, 0, 0, TO_ROOM);
 	char_from_room(ch);
-	char_to_room(ch, GET_HOMETOWN(ch));
+	switch (GET_HOMETOWN(ch)) {
+	case 1:
+		char_to_room(ch, r_hometown_1);
+    	break;
+		case 2:
+		char_to_room(ch, r_hometown_2);
+    	break;
+    	default:
+    	char_to_room(ch, r_hometown_1);
+    	break;
+	}
 	act("$n aparece no meio da sala.", TRUE, ch, 0, 0, TO_ROOM);
 	look_at_room(ch, 0);
 }
