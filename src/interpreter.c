@@ -2256,9 +2256,9 @@ int parse_hometown(char arg)
 	switch (arg)
 	{
 	case '1':
-		return CONFIG_HOMETOWN_1;
+		return (GET_ROOM_VNUM(CONFIG_HOMETOWN_1));
 	case '2':
-		return CONFIG_HOMETOWN_2;
+		return (GET_ROOM_VNUM(CONFIG_HOMETOWN_2));
 	default:
 		return 0;
 	}
