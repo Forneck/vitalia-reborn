@@ -399,7 +399,17 @@ void char_to_room(struct char_data *ch, room_rnum room)
   else {
      if (room == real_room(ROOM_START))
      {
-        room = real_room(GET_HOMETOWN(ch));
+         	switch (GET_HOMETOWN(ch)) {
+	case 1:
+		room = r_hometown_1;
+    	break;
+		case 2:
+		room = r_hometown_2;
+    	break;
+    	default:
+    	room = r_hometown_1;
+    	break;
+	}
      }
     ch->next_in_room = world[room].people;
     world[room].people = ch;
