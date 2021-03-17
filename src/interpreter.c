@@ -1609,11 +1609,11 @@ int enter_player_game(struct descriptor_data *d)
 	{
 		if (GET_LEVEL(d->character) >= LVL_IMMORT)
 			load_room = r_immort_start_room;
-		else if (GET_LEVEL(d->character) < 2 LVL_IMMORT)
+		else if (GET_LEVEL(d->character) < 2)
 			load_room = r_newbie_start_room;
-		else if (GET_HOMETOWN(ch) == 1)
+		else if (GET_HOMETOWN(d->character) == 1)
 		    load_room = r_hometown_1;
-		    else if (GET_HOMETOWN(ch) == 2)
+		    else if (GET_HOMETOWN(d->character) == 2)
 		     load_room = r_hometown_2;
 		     else
 		     load_room = r_hometown_1;
