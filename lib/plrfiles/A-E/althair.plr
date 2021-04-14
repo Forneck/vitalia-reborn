@@ -6,8 +6,8 @@ Clas: 4
 Levl: 1
 Id  : 45
 Brth: 1616010481
-Plyd: 88
-Last: 1616010569
+Plyd: 106
+Last: 1616017422
 Lmot: 1616010555
 Lnew: 1616010551
 Htwn: 5509
@@ -17,14 +17,13 @@ Wate: 157
 Act : gh 0 0 0
 Aff : 0 0 0 0
 Pref: efghno 0 0 0
-Room: 10996
+Room: 65535
 Lern: 2
-Hung: 23
-Thir: 23
+Hung: 22
+Thir: 22
 Hit : 22/-13
 Mana : 100/93
-Move: 74/64
-Breath : 15/15
+Move: 84/64
 Str : 9/0
 Int : 9
 Wis : 16
@@ -34,6 +33,5 @@ Cha : 4
 Ac  : 100
 Exp : 232
 Olc : 0
-Fit: 1
 Skil:
 0 0

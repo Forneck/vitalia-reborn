@@ -1,31 +1,31 @@
 Name: Anyte
 Pass: AnRCfBykX0mXk
-Titl: a Barda testadora
+Titl: a Caçadora
 Sex : 2
 Clas: 6
-Levl: 80
+Levl: 81
 Id  : 6
 Brth: 1603323580
-Plyd: 284909
-Last: 1614887050
+Plyd: 289854
+Last: 1616804234
 Lmot: 1605459147
 Lnew: 1605118209
 Htwn: 1
 Host: 189.120.73.49
 Hite: 161
 Wate: 139
-Alin: 330
+Alin: 39
 Act : ghl 0 0 0
 Aff : 0 0 0 0
 Pref: efghnoBCE 0 0 0
 Wimp: 100
 Room: 3001
-Lern: 10
-Hung: 17
-Thir: 17
-Hit : 970/940
-Mana : 1001/976
-Move: 345/283
+Lern: 12
+Hung: 9
+Thir: 9
+Hit : 979/955
+Mana : 361/981
+Move: 273/287
 Str : 17/0
 Int : 9
 Wis : 11
@@ -33,9 +33,9 @@ Dex : 15
 Con : 12
 Cha : 8
 Ac  : 100
-Gold: 3731670
+Gold: 3877899
 Bank: 1500000
-Exp : 79226728
+Exp : 82843595
 Olc : 0
 Skil:
 7 100
@@ -64,10 +64,14 @@ Skil:
 252 90
 0 0
 Affs:
-19 89 0 29 16 0 0 0
-50 89 0 36 2048 0 0 0
+1 59 -20 17 0 0 0 0
+96 349 0 61 0 16 0 0
+96 349 -4 17 0 0 0 0
+50 22 0 36 2048 0 0 0
+19 22 0 29 16 0 0 0
+44 49 0 31 64 0 0 0
 0 0 0 0 0 0 0 0
-Alis: 69
+Alis: 72
  flyre
            s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;s;s;w;s;w;w;w;n;e;e;fly;s;s;s
 1
@@ -274,4 +278,13 @@ Alis: 69
 1
  mordecai
         s;s;s;s;e;e;s;s;e;e;e;e;e;e;n;n;n;n;n;e;e;e;e;e;e;e;e;e;n;n;w;w;n;n;w;w;n;n;get chave mancha;un por e
+1
+ ghenna
+ s;s;e;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;e;n
+1
+ ghenna2
+ d;n;n;e;s;s;s;d;w;n;w;s;s;d;s;s;s;s;e;s;s;w;n;w;s;e;s
+1
+ labirintopes
+    e;s;s;e;n;w;s;s;w;n;e;s
 1
