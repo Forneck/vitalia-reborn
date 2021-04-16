@@ -51,7 +51,7 @@ $(BINDIR)/asciipasswd: asciipasswd.c
 
 $(BINDIR)/autowiz: autowiz.c
 	$(CC) $(CFLAGS) -o $(BINDIR)/autowiz autowiz.c
-	
+
 $(BINDIR)/plrtoascii: plrtoascii.c
 	$(CC) $(CFLAGS) -o $(BINDIR)/plrtoascii plrtoascii.c
 
