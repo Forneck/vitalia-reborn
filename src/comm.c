@@ -207,6 +207,11 @@ int main(int argc, char **argv)
 	int pos = 1;
 	const char *dir;
 
+   printf("Default System Locale  %s \n",setlocale(LC_ALL,""));
+    setlocale(LC_ALL,"pt_BR_utf8");
+    printf("Locale alterado");
+
+
 #ifdef MEMORY_DEBUG
 	zmalloc_init();
 #endif
