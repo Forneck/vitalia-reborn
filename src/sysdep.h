@@ -70,6 +70,7 @@
 #include <ctype.h>
 #include <stdarg.h>
 #include <zlib.h>
+#include <locale.h>
 
 #ifdef HAVE_STRING_H
 #include <string.h>
