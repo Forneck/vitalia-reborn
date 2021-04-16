@@ -1,10 +1,10 @@
-Apr 16 06:49:18 2021 :: Loading configuration.
-Apr 16 06:49:18 2021 :: Vitalia Reborn 2020 V0.2
-Apr 16 06:49:18 2021 :: Using lib as data directory.
-Apr 16 06:49:18 2021 :: Running game on port 4000.
-Apr 16 06:49:18 2021 :: SYSERR: lib/.killscript: No such file or directory
-Apr 16 06:49:18 2021 :: Finding player limit.
-Apr 16 06:49:18 2021 ::    Setting player limit to 200 using rlimit.
-Apr 16 06:49:18 2021 :: Opening mother connection.
-Apr 16 06:49:18 2021 :: Binding to all IP interfaces on this host.
+Apr 16 08:23:13 2021 :: Loading configuration.
+Apr 16 08:23:13 2021 :: Vitalia Reborn 2020 V0.2
+Apr 16 08:23:13 2021 :: Using lib as data directory.
+Apr 16 08:23:13 2021 :: Running game on port 4000.
+Apr 16 08:23:13 2021 :: SYSERR: lib/.killscript: No such file or directory
+Apr 16 08:23:13 2021 :: Finding player limit.
+Apr 16 08:23:13 2021 ::    Setting player limit to 200 using rlimit.
+Apr 16 08:23:13 2021 :: Opening mother connection.
+Apr 16 08:23:13 2021 :: Binding to all IP interfaces on this host.
 SYSERR: bind: Address already in use
