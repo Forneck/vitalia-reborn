@@ -365,7 +365,6 @@ const char *affected_bits[] =
    "GLOOMSHIELD",
    "PROT-SPELL",
    "WINDWALL",
-   "RESERVED BIT",
   "\n",
 };
 
