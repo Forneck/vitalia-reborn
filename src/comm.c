@@ -209,7 +209,7 @@ int main(int argc, char **argv)
 
    printf("Default System Locale  %s \n",setlocale(LC_ALL,""));
     setlocale(LC_ALL,"pt_BR_utf8");
-    printf("Locale alterado");
+    printf("Locale alterado\r\n");
 
 
 #ifdef MEMORY_DEBUG
