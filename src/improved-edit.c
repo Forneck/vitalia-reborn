@@ -17,9 +17,9 @@
 void send_editor_help(struct descriptor_data *d)
 {
   if (using_improved_editor)
-    write_to_output(d, "Instructions: .s to save, .h for more options.\r\n");
+    write_to_output(d, "Utilize .s para salvar e .h para ajuda.\r\n");
   else
-    write_to_output(d, "Instructions: Type @ on a line by itself to end.\r\n");
+    write_to_output(d, "Digite @ em uma linha em branco para sair.\r\n");
 }
 
 #if CONFIG_IMPROVED_EDITOR
@@ -42,9 +42,9 @@ int improved_editor_execute(struct descriptor_data *d, char *str)
     if (*(d->str)) {
       free(*d->str);
       *(d->str) = NULL;
-      write_to_output(d, "Current buffer cleared.\r\n");
+      write_to_output(d, "Todo o texto foi apagado.\r\n");
     } else
-      write_to_output(d, "Current buffer empty.\r\n");
+      write_to_output(d, "Não há nada escrito.\r\n");
     break;
   case 'd':
     parse_edit_action(PARSE_DELETE, actions, d);
@@ -56,13 +56,13 @@ int improved_editor_execute(struct descriptor_data *d, char *str)
     if (*(d->str))
       parse_edit_action(PARSE_FORMAT, actions, d);
     else
-      write_to_output(d, "Current buffer empty.\r\n");
+      write_to_output(d, "Não há nada escrito.\r\n");
     break;
   case 'i':
     if (*(d->str))
       parse_edit_action(PARSE_INSERT, actions, d);
     else
-      write_to_output(d, "Current buffer empty.\r\n");
+      write_to_output(d, "Não há nada escrito.\r\n");
     break;
   case 'h':
     parse_edit_action(PARSE_HELP, actions, d);
@@ -71,13 +71,13 @@ int improved_editor_execute(struct descriptor_data *d, char *str)
     if (*d->str)
       parse_edit_action(PARSE_LIST_NORM, actions, d);
     else
-      write_to_output(d, "Current buffer empty.\r\n");
+      write_to_output(d, "Não há nada escrito.\r\n");
     break;
   case 'n':
     if (*d->str)
       parse_edit_action(PARSE_LIST_NUM, actions, d);
     else
-      write_to_output(d, "Current buffer empty.\r\n");
+      write_to_output(d, "Não há nada escrito.\r\n");
     break;
   case 'r':
     parse_edit_action(PARSE_REPLACE, actions, d);
@@ -88,7 +88,7 @@ int improved_editor_execute(struct descriptor_data *d, char *str)
     parse_edit_action(PARSE_TOGGLE, actions, d);
     break;
   default:
-    write_to_output(d, "Invalid option.\r\n");
+    write_to_output(d, "Comando desconhecido.\r\n");
     break;
   }
   return STRINGADD_ACTION;
@@ -106,26 +106,27 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
   switch (command) {
   case PARSE_HELP:
     write_to_output(d,
-            "Editor command formats: .<letter>\r\n\r\n"
-            ".a         -  aborts editor\r\n"
-            ".c         -  clears buffer\r\n"
-            ".d#        -  deletes a line #\r\n"
-            ".e# <text> -  changes the line at # with <text>\r\n"
-            ".f         -  formats text\r\n"
-            ".fi        -  indented formatting of text\r\n"
-            ".h         -  list text editor commands\r\n"
-            ".i# <text> -  inserts <text> before line #\r\n"
-            ".l         -  lists buffer\r\n"
-            ".n         -  lists buffer with line numbers\r\n"
-            ".r 'a' 'b' -  replace 1st occurence of text <a> in buffer with text <b>\r\n"
-            ".ra 'a' 'b'-  replace all occurences of text <a> within buffer with text <b>\r\n"
-            "              usage: .r[a] 'pattern' 'replacement'\r\n"
-            ".t         -  toggles '@' and tabs\r\n"
-            ".s         -  saves text\r\n");
+            "@WComandos de edição de texto:@n\r\n: .<letra>\r\n\r\n""
+            "@b~~~~~~~~~~~~~~~~~~~~~~~~~~~~@n\r\n"
+            ".a         -  Abandona o texto e cancela a edição\r\n"
+            ".c         -  Apaga todo o texto escrito\r\n"
+            ".d#        -  Apaga a linha selecionada #\r\n"
+            ".e# <texto> -  Altera o texto da linha selecionada # por <texto>\r\n"
+            ".f         -  Formata todo o texto escrito\r\n"
+            ".fi        -  Formata todo o texto escrito com indentação\r\n"
+            ".h         -  Mostra a ajuda do editor\r\n"
+            ".i# <texto> -  Insere o <texto> antes da linha selecionsda #\r\n"
+            ".l         -  Mostra o texto escrito\r\n"
+            ".n         -  Mostra o texto escrito com os números de linhas\r\n"
+            ".r 'a' 'b' -  Substitui a primeira palavra <a> no texto por <b>\r\n"
+            ".ra 'a' 'b'-  Substitui todas aspalavra <a> no texto por <b>\r\n"
+            "              uso: .r[a] 'palavra' 'substituição'\r\n"
+            ".t         -  transforma os '@' em cores\r\n"
+            ".s         -  Salva o texto e encerra a edição\r\n");
     break;
   case PARSE_TOGGLE:
     if (!*d->str) {
-      write_to_output(d, "No string.\r\n");        
+      write_to_output(d, "Não há nada escrito.\r\n");        
       break;
     }
     bool has_at = FALSE;
@@ -139,15 +140,15 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
     }
     if (has_at) {
       parse_at(*d->str);
-      write_to_output(d, "Toggling (at) into (tab) Characters...\r\n");  
+      write_to_output(d, "Transformando (arrobas) em (cores)...\r\n");  
     } else {
       parse_tab(*d->str);
-      write_to_output(d, "Toggling (tab) into (at) Characters...\r\n"); 
+      write_to_output(d, "Transformando (cores) em (arrobas)...\r\n"); 
     }
   break;
   case PARSE_FORMAT:
     if (STATE(d) == CON_TRIGEDIT) {
-      write_to_output(d, "Script %sformatted.\r\n", format_script(d) ? "": "not ");
+      write_to_output(d, "O texto %sfoi formatado\r\n", format_script(d) ? "": "não ");
       return;
     }
     while (isalpha(string[j]) && j < 2) {
@@ -168,7 +169,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
       break;
     case 2:
       if (line_high < line_low) {
-        write_to_output(d, "That range is invalid.\\r\\n");
+        write_to_output(d, "Intervalo inválido.\\r\\n");
         return;
       }
     break;
@@ -177,7 +178,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
     line_low = MAX(1, line_low);
 
     format_text(d->str, flags, d, d->max_str, line_low, line_high);
-    write_to_output(d, "Text formatted with%s indent.\r\n", (indent ? "" : "out"));
+    write_to_output(d, "O texto foi formatado %s indentação.\r\n", (indent ? "com" : "sem"));
     break;
   case PARSE_REPLACE:
     while (isalpha(string[j]) && j < 2)
@@ -185,41 +186,41 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
         rep_all = 1;
 
     if ((s = strtok(string, "'")) == NULL) {
-      write_to_output(d, "Invalid format.\r\n");
+      write_to_output(d, "Formato inválido.\r\n");
       return;
     } else if ((s = strtok(NULL, "'")) == NULL) {
-      write_to_output(d, "Target string must be enclosed in single quotes.\r\n");
+      write_to_output(d, "O texto deve estar entre aspas simples: '\r\n");
       return;
     } else if ((t = strtok(NULL, "'")) == NULL) {
-      write_to_output(d, "No replacement string.\r\n");
+      write_to_output(d, "Substituir pelo quê?\r\n");
       return;
     } else if ((t = strtok(NULL, "'")) == NULL) {
-      write_to_output(d, "Replacement string must be enclosed in single quotes.\r\n");
+      write_to_output(d, "O texto deve estar entre aspas simples: '\r\n");
       return;
       /*wb's fix for empty buffer replacement crashing */
     } else if ((!*d->str)) {
       return;
     } else if ((total_len = ((strlen(t) - strlen(s)) + strlen(*d->str))) <= d->max_str) {
       if ((replaced = replace_str(d->str, s, t, rep_all, d->max_str)) > 0) {
-        write_to_output(d, "Replaced %d occurence%sof '%s' with '%s'.\r\n", replaced, ((replaced != 1) ? "s " : " "), s, t);
+        write_to_output(d, "%d ocorrencia%s de '%s' trocada%spor '%s'.\r\n", replaced, ((replaced != 1) ? "s " : " "),((replaced != 1) ? "s " : " "), s, t);
       } else if (replaced == 0) {
-        write_to_output(d, "String '%s' not found.\r\n", s);
+        write_to_output(d, "O texto '%s' não foi encontrado.\r\n", s);
       } else
-        write_to_output(d, "ERROR: Replacement string causes buffer overflow, aborted replace.\r\n");
+        write_to_output(d, "ERRO: A substituição é extensa demais. Abortando substituição.\r\n");
     } else
-      write_to_output(d, "Not enough space left in buffer.\r\n");
+      write_to_output(d, "Não foi possível substituir o texto: Não há espaço suficiente.\r\n");
     break;
   case PARSE_DELETE:
     switch (sscanf(string, " %d - %d ", &line_low, &line_high)) {
     case 0:
-      write_to_output(d, "You must specify a line number or range to delete.\r\n");
+      write_to_output(d, "Selecione uma linha ou forneca o número.\r\n");
       return;
     case 1:
       line_high = line_low;
       break;
     case 2:
       if (line_high < line_low) {
-        write_to_output(d, "That range is invalid.\r\n");
+        write_to_output(d, "Intervalo inválido.\r\n");
         return;
       }
       break;
@@ -228,7 +229,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
     i = 1;
     total_len = 1;
     if ((s = *d->str) == NULL) {
-      write_to_output(d, "Buffer is empty.\r\n");
+      write_to_output(d, "Não há texto escrito\r\n");
       return;
     } else if (line_low > 0) {
       while (s && i < line_low)
@@ -237,7 +238,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
           s++;
         }
       if (s == NULL || i < line_low) {
-        write_to_output(d, "Line(s) out of range; not deleting.\r\n");
+        write_to_output(d, "O intervalo fornecido vai além do número de linhas do texto.\r\n");
         return;
       }
       t = s;
@@ -255,9 +256,9 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
       *t = '\0';
       RECREATE(*d->str, char, strlen(*d->str) + 3);
 
-      write_to_output(d, "%d line%sdeleted.\r\n", total_len, (total_len != 1 ? "s " : " "));
+      write_to_output(d, "@R***@&n %d linhs%sapagada%s\r\n", total_len, (total_len != 1 ? "s " : " "),(total_len != 1 ? "s." : "."));
     } else {
-      write_to_output(d, "Invalid, line numbers to delete must be higher than 0.\r\n");
+      write_to_output(d, "Intervalo inválido.\r\n");
       return;
     }
     break;
@@ -280,15 +281,15 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
     }
 
     if (line_low < 1) {
-      write_to_output(d, "Line numbers must be greater than 0.\r\n");
+      write_to_output(d, "Intervalo inválido.\r\n");
       return;
     } else if (line_high < line_low) {
-      write_to_output(d, "That range is invalid.\r\n");
+      write_to_output(d, "Intervalo inválido.\r\n");
       return;
     }
     *buf = '\0';
     if (line_high < 999999 || line_low > 1)
-      snprintf(buf, sizeof(buf), "Current buffer range [%d - %d]:\r\n", line_low, line_high);
+      snprintf(buf, sizeof(buf), "Texto atual entre as linhas [%d - %d]:\r\n", line_low, line_high);
     i = 1;
     total_len = 0;
     s = *d->str;
@@ -298,7 +299,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
         s++;
       }
     if (i < line_low || s == NULL) {
-      write_to_output(d, "Line(s) out of range; no buffer listing.\r\n");
+      write_to_output(d, "O intervalo fornecido vai além do número de linhas do texto.\r\n");
       return;
     }
     t = s;
@@ -316,7 +317,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
     } else
       strncat(buf, t, sizeof(buf) - strlen(buf) - 1);
     /* This is kind of annoying...but some people like it. */
-    snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf), "\r\n%d line%sshown.\r\n", total_len, (total_len != 1) ? "s " : " ");
+    snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf), "\r\n%d linha%s listada%s\r\n", total_len, (total_len != 1) ? "s " : " ",(total_len != 1) ? "s." : ".");
     page_string(d, buf, TRUE);
     break;
   case PARSE_LIST_NUM:
@@ -338,11 +339,11 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
     }
 
     if (line_low < 1) {
-      write_to_output(d, "Line numbers must be greater than 0.\r\n");
+      write_to_output(d, "Intervalo inválido.\r\n");
       return;
     }
     if (line_high < line_low) {
-      write_to_output(d, "That range is invalid.\r\n");
+      write_to_output(d, "Intervalo inválido.\r\n");
       return;
     }
     *buf = '\0';
@@ -355,7 +356,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
         s++;
       }
     if (i < line_low || s == NULL) {
-      write_to_output(d, "Line(s) out of range; no buffer listing.\r\n");
+      write_to_output(d, "O intervalo fornecido vai além do número de linhas do texto.\r\n");
       return;
     }
     t = s;
@@ -387,7 +388,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
   case PARSE_INSERT:
     half_chop(string, buf, buf2);
     if (*buf == '\0') {
-      write_to_output(d, "You must specify a line number before which to insert text.\r\n");
+      write_to_output(d, "Intervalo inválido.\r\n");
       return;
     }
     line_low = atoi(buf);
@@ -396,7 +397,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
     i = 1;
     *buf = '\0';
     if ((s = *d->str) == NULL) {
-      write_to_output(d, "Buffer is empty, nowhere to insert.\r\n");
+      write_to_output(d, "Não há texto escrito.\r\n");
       return;
     }
     if (line_low > 0) {
@@ -406,14 +407,14 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
         s++;
       }
       if (i < line_low || s == NULL) {
-        write_to_output(d, "Line number out of range; insert aborted.\r\n");
+        write_to_output(d, "O intervalo fornecido vai além do número de linhas do texto.\r\n");
         return;
       }
       temp = *s;
       *s = '\0';
       if ((strlen(*d->str) + strlen(buf2) + strlen(s + 1) + 3) > d->max_str) {
         *s = temp;
-        write_to_output(d, "Insert text pushes buffer over maximum size, insert aborted.\r\n");
+        write_to_output(d, "ERRO: O texto a ser inserido é extenso demais. Abortando inserção.\r\n");
         return;
       }
       if (*d->str && **d->str)
@@ -425,9 +426,9 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
       RECREATE(*d->str, char, strlen(buf) + 3);
 
       strcpy(*d->str, buf);
-      write_to_output(d, "Line inserted.\r\n");
+      write_to_output(d, "Linha inserida.\r\n");
     } else {
-      write_to_output(d, "Line number must be higher than 0.\r\n");
+      write_to_output(d, "Intervalo inválido.\r\n");
       return;
     }
     break;
@@ -435,7 +436,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
   case PARSE_EDIT:
     half_chop(string, buf, buf2);
     if (*buf == '\0') {
-      write_to_output(d, "You must specify a line number at which to change text.\r\n");
+      write_to_output(d, "Intervalo inválido.\r\n");
       return;
     }
     line_low = atoi(buf);
@@ -444,7 +445,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
     i = 1;
     *buf = '\0';
     if ((s = *d->str) == NULL) {
-      write_to_output(d, "Buffer is empty, nothing to change.\r\n");
+      write_to_output(d, "Não há nada escrito.\r\n");
       return;
     }
     if (line_low > 0) {
@@ -456,7 +457,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
         }
       /* Make sure that there was a THAT line in the text. */
       if (s == NULL || i < line_low) {
-        write_to_output(d, "Line number out of range; change aborted.\r\n");
+        write_to_output(d, "O intervalo fornecido vai além do número de linhas do texto.\r\n");
         return;
       }
       /* If s is the same as *d->str that means I'm at the beginning of the
@@ -481,20 +482,20 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
       }
       /* Check for buffer overflow. */
       if (strlen(buf) > d->max_str) {
-        write_to_output(d, "Change causes new length to exceed buffer maximum size, aborted.\r\n");
+        write_to_output(d, "A edição ultrapassa o espaço máximo permitido. Abortando edição.\r\n");
         return;
       }
       /* Change the size of the REAL buffer to fit the new text. */
       RECREATE(*d->str, char, strlen(buf) + 3);
       strcpy(*d->str, buf);
-      write_to_output(d, "Line changed.\r\n");
+      write_to_output(d, "Linha alterada.\r\n");
     } else {
-      write_to_output(d, "Line number must be higher than 0.\r\n");
+      write_to_output(d, "Imtervalo inválido.\r\n");
       return;
     }
     break;
   default:
-    write_to_output(d, "Invalid option.\r\n");
+    write_to_output(d, "Comando desconhecido.\r\n");
     mudlog(BRF, LVL_IMPL, TRUE, "SYSERR: invalid command passed to parse_edit_action");
     return;
   }
@@ -524,7 +525,7 @@ int format_text(char **ptr_string, int mode, struct descriptor_data *d, unsigned
   for (i = 0; i < low - 1; i++) {
     start = strtok(str, "\n");
     if (!start) {
-      write_to_output(d, "There aren't that many lines!\r\n");
+      write_to_output(d, "Não há texto!\r\n");
       return 0;
     }
     strncat(formatted, strcat(start, "\n"), sizeof(formatted) - strlen(formatted) - 1);
