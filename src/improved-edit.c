@@ -106,7 +106,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
   switch (command) {
   case PARSE_HELP:
     write_to_output(d,
-            "@WComandos de edição de texto:@n\r\n: .<letra>\r\n\r\n""
+            "@WComandos de edição de texto:@n\r\n: .<letra>\r\n\r\n"
             "@b~~~~~~~~~~~~~~~~~~~~~~~~~~~~@n\r\n"
             ".a         -  Abandona o texto e cancela a edição\r\n"
             ".c         -  Apaga todo o texto escrito\r\n"
