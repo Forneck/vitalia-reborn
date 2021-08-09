@@ -273,7 +273,7 @@ Level     80
 Room      3001
 Flags     0 0 0 0
 End
-Text       word of recall~
+Text      word of recall~
 Body      word of recall ta levando pra sala da Puff
 ~
 Name      Anyte~
@@ -281,15 +281,5 @@ IdNum     6
 Dated     1616703689
 Level     80
 Room      1
-Flags     0 0 0 0
-End
-Text       nao pode unlock isso~
-Body      campo up nao abre
-~
-Name      Anyte~
-IdNum     6
-Dated     1616706074
-Level     81
-Room      15130
 Flags     0 0 0 0
 End

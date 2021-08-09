@@ -1,833 +1,825 @@
-Apr 28 19:49:44 2021 :: Loading configuration.
-Apr 28 19:49:44 2021 :: Vitalia Reborn 2020 V0.2
-Apr 28 19:49:44 2021 :: Using lib as data directory.
-Apr 28 19:49:44 2021 :: Running game on port 4000.
-Apr 28 19:49:44 2021 :: SYSERR: lib/.killscript: No such file or directory
-Apr 28 19:49:44 2021 :: Finding player limit.
-Apr 28 19:49:44 2021 ::    Setting player limit to 200 using rlimit.
-Apr 28 19:49:44 2021 :: Opening mother connection.
-Apr 28 19:49:44 2021 :: Binding to all IP interfaces on this host.
-Apr 28 19:49:44 2021 :: Boot db -- BEGIN.
-Apr 28 19:49:44 2021 :: Resetting the game time:
-Apr 28 19:49:44 2021 ::    Current Gametime: 17H 5D 2M 1507Y.
-Apr 28 19:49:44 2021 :: Initialize Global Lists
-Apr 28 19:49:44 2021 :: Initializing Events
-Apr 28 19:49:44 2021 :: Reading news, credits, help, ihelp, bground, info & motds.
-Apr 28 19:49:44 2021 :: Reading menu, rebegin & clanpolicies
-Apr 28 19:49:44 2021 :: Loading zone table.
-Apr 28 19:49:44 2021 ::    121 zones, 10648 bytes.
-Apr 28 19:49:44 2021 :: Loading triggers and generating index.
-Apr 28 19:49:44 2021 :: Loading rooms.
-Apr 28 19:49:44 2021 ::    9482 rooms, 1744688 bytes.
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 25 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 26 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 27 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 28 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 29 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 30 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 31 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 32 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 33 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 34 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 35 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 36 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 37 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 38 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 39 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 40 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 41 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 42 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 43 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 44 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 45 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 46 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 47 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 48 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 49 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 50 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 51 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 52 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 53 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 54 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 55 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 56 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 57 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 58 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 59 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 60 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 61 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 62 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20100 has unknown room flag, bit 63 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20102 has unknown room flag, bit 29 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20102 has unknown room flag, bit 34 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20102 has unknown room flag, bit 35 (0 through 24 known).
-Apr 28 19:49:45 2021 :: SYSERR: object #20102 has unknown room flag, bit 61 (0 through 24 known).
-Apr 28 19:49:45 2021 :: Loading spells.
-Apr 28 19:49:45 2021 :: Assigning spells's function.
-Apr 28 19:49:45 2021 :: Renumbering rooms.
-Apr 28 19:49:45 2021 :: Checking start rooms.
-Apr 28 19:49:45 2021 :: Loading mobs and generating index.
-Apr 28 19:49:45 2021 ::    2588 mobs, 82816 bytes in index, 1697728 bytes in prototypes.
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13127 has unknown mobile flag, bit 25 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13127 has unknown mobile flag, bit 33 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13127 has unknown mobile flag, bit 35 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13127 has unknown mobile flag, bit 53 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13127 has unknown mobile flag, bit 57 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 29 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 33 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 35 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 38 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 45 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 47 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 48 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 49 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 53 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 61 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 29 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 35 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 38 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 45 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 47 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 49 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 53 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 61 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 29 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 35 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 38 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 45 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 47 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 49 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 53 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 61 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 29 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 35 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 36 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 38 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 45 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 47 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 49 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 53 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 61 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 29 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 35 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 36 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 38 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 45 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 47 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 49 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 53 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 61 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 29 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 34 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 35 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 38 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 43 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 45 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 46 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 47 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 48 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 49 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 51 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 53 (0 through 22 known).
-Apr 28 19:49:45 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 61 (0 through 22 known).
-Apr 28 19:49:45 2021 :: Loading objs and generating index.
-Apr 28 19:49:45 2021 ::    3702 objs, 118464 bytes in index, 888480 bytes in prototypes.
-Apr 28 19:49:45 2021 :: SYSERR: Object #603 (um copo) doesn't have drink type as last keyword. (copo)
-Apr 28 19:49:45 2021 :: SYSERR: Object #604 (um copo) doesn't have drink type as last keyword. (copo)
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 21 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 22 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 23 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 24 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 25 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 26 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 27 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 28 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 29 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 30 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 31 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 32 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 33 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 34 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 35 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 36 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 37 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 38 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 39 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 40 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 41 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 42 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 43 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 44 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 45 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 46 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 47 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 48 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 49 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 50 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 51 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 52 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 53 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 54 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 55 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 56 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 57 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 58 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 59 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 60 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 61 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 62 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 63 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #1026 (um bule de chá) doesn't have drink type as last keyword. (bule porcelana)
-Apr 28 19:49:45 2021 :: SYSERR: Object #1028 (uma xícara de porcelana) doesn't have drink type as last keyword. (xicara porcelana chinesa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #1701 (um cálice) doesn't have drink type as last keyword. (calice)
-Apr 28 19:49:45 2021 :: SYSERR: Object #1707 (a piscina) doesn't have drink type as last keyword. (piscina)
-Apr 28 19:49:45 2021 :: SYSERR: Object #2209 (o barril) doesn't have drink type as last keyword. (barril)
-Apr 28 19:49:45 2021 :: SYSERR: Object #2211 (um copo) doesn't have drink type as last keyword. (copo)
-Apr 28 19:49:45 2021 :: SYSERR: Object #2309 (um barrilzinho de madeira) doesn't have drink type as last keyword. (barrilzinho madeira)
-Apr 28 19:49:45 2021 :: SYSERR: Object #2370 (uma caneca) doesn't have drink type as last keyword. (caneca bebida)
-Apr 28 19:49:45 2021 :: SYSERR: Object #2545 (uma infusão de ervas) doesn't have drink type as last keyword. (xicara infusao herbacia)
-Apr 28 19:49:45 2021 :: SYSERR: Object #2721 (um balde) doesn't have drink type as last keyword. (balde)
-Apr 28 19:49:45 2021 :: SYSERR: Object #2812 (uma taça) doesn't have drink type as last keyword. (taca)
-Apr 28 19:49:45 2021 :: SYSERR: Object #2822 (uma inebriante taça de ponche) doesn't have drink type as last keyword. (ponche taca cristal)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3000 (um barril) doesn't have drink type as last keyword. (barril)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3001 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3002 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3003 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3004 (um frasco) doesn't have drink type as last keyword. (frasco)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3016 (um barril) doesn't have drink type as last keyword. (barril)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3017 (um barril) doesn't have drink type as last keyword. (barril)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3018 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3019 (um cartaz de 'Procurado') is type NOTE and has extra description with same name. (procurado cartaz)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3019 (um cartaz de 'Procurado') is type NOTE and has extra description with same name. (procurado cartaz)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3026 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3066 (um copo) doesn't have drink type as last keyword. (copo)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3067 (um copo) doesn't have drink type as last keyword. (copo)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3100 (uma xícara) doesn't have drink type as last keyword. (xicara)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3101 (uma xícara) doesn't have drink type as last keyword. (xicara)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3102 (uma xícara) doesn't have drink type as last keyword. (xicara)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3103 (uma garrafa de água Evian) doesn't have drink type as last keyword. (garrafa francesa Evian)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3104 (um cantil) doesn't have drink type as last keyword. (cantil)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3319 (um copo) doesn't have drink type as last keyword. (copo)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3320 (um copo) doesn't have drink type as last keyword. (copo)
-Apr 28 19:49:45 2021 :: SYSERR: Object #3321 (uma dose) doesn't have drink type as last keyword. (dose)
-Apr 28 19:49:45 2021 :: SYSERR: Object #4305 (um vaso de madeira) doesn't have drink type as last keyword. (vaso)
-Apr 28 19:49:45 2021 :: SYSERR: Object #4307 (um frasco prateado) doesn't have drink type as last keyword. (frasco prata)
-Apr 28 19:49:45 2021 :: SYSERR: Object #4515 (um cálice de vinho) doesn't have drink type as last keyword. (calice)
-Apr 28 19:49:45 2021 :: SYSERR: Object #5006 (uma pequena xícara de cacto) doesn't have drink type as last keyword. (xicara cacto)
-Apr 28 19:49:45 2021 :: SYSERR: Object #5467 (uma taça) doesn't have drink type as last keyword. (taca licor azul)
-Apr 28 19:49:45 2021 :: SYSERR: Object #5468 (uma taça) doesn't have drink type as last keyword. (taca)
-Apr 28 19:49:45 2021 :: SYSERR: Object #5469 (uma garrafa de grogue de rum) doesn't have drink type as last keyword. (garrafa grogue)
-Apr 28 19:49:45 2021 :: SYSERR: Object #5475 (um escorpião flamejante) doesn't have drink type as last keyword. (garrafa escorpiao flamejante)
-Apr 28 19:49:45 2021 :: SYSERR: Object #5476 (um barril) doesn't have drink type as last keyword. (barril)
-Apr 28 19:49:45 2021 :: SYSERR: Object #5477 (uma dose) doesn't have drink type as last keyword. (dose)
-Apr 28 19:49:45 2021 :: SYSERR: Object #5901 (uma taça despedaçada) doesn't have drink type as last keyword. (taca vidro despedacada)
-Apr 28 19:49:45 2021 :: SYSERR: Object #6013 (um barril) doesn't have drink type as last keyword. (barril)
-Apr 28 19:49:45 2021 :: SYSERR: Object #7921 (um barril) doesn't have drink type as last keyword. (barril)
-Apr 28 19:49:45 2021 :: SYSERR: Object #8126 (a canópica de Qebehsenuef) doesn't have drink type as last keyword. (qebehsenuef canopica bela)
-Apr 28 19:49:45 2021 :: SYSERR: Object #8127 (a canópica de Hapi) doesn't have drink type as last keyword. (hapi canopica ornamentada)
-Apr 28 19:49:45 2021 :: SYSERR: Object #8131 (um frasco de veneno) doesn't have drink type as last keyword. (frasco veneno negro)
-Apr 28 19:49:45 2021 :: SYSERR: Object #8431 (um belo cálice de prata) doesn't have drink type as last keyword. (calice prata)
-Apr 28 19:49:45 2021 :: SYSERR: Object #9345 (uma garrafa antiga) doesn't have drink type as last keyword. (garrafa antiga)
-Apr 28 19:49:45 2021 :: SYSERR: Object #9351 (o diário sagrado) is type NOTE and has extra description with same name. (diario sagrado)
-Apr 28 19:49:45 2021 :: SYSERR: Object #9351 (o diário sagrado) is type NOTE and has extra description with same name. (diario sagrado)
-Apr 28 19:49:45 2021 :: SYSERR: Object #10207 (uma garrafa de uísque) doesn't have drink type as last keyword. (garrafa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #10728 (uma escultura otaviana) doesn't have drink type as last keyword. (escultura)
-Apr 28 19:49:45 2021 :: SYSERR: Object #10729 (uma pintura otaviana) doesn't have drink type as last keyword. (pintura)
-Apr 28 19:49:45 2021 :: SYSERR: Object #10894 (uma ânfora de Micenos) doesn't have drink type as last keyword. (vaso ceramica anfora micenos)
-Apr 28 19:49:45 2021 :: SYSERR: Object #10898 (um jarro de porcelana) doesn't have drink type as last keyword. (jarro porcelana)
-Apr 28 19:49:45 2021 :: SYSERR: Object #10919 (garrafa de leite de ovelha) doesn't have drink type as last keyword. (garrafa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #10923 (um barril de vinho) doesn't have drink type as last keyword. (barril)
-Apr 28 19:49:45 2021 :: SYSERR: Object #10924 (uma garrafa de vinho) doesn't have drink type as last keyword. (garrafa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11030 (uma garrafa) doesn't have drink type as last keyword. (garrafa mineral)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11031 (uma garrafa) doesn't have drink type as last keyword. (garrafa pinot noir)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11108 (um barril) doesn't have drink type as last keyword. (barril)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11376 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11377 (uma caneca) doesn't have drink type as last keyword. (caneca)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11378 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11379 (uma dose) doesn't have drink type as last keyword. (dose corpo pequeno)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11528 (um caderno de anotações) is type NOTE and has extra description with same name. (anotacoes caderno)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11528 (um caderno de anotações) is type NOTE and has extra description with same name. (anotacoes caderno)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11604 (uma taça) doesn't have drink type as last keyword. (taca cristal)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11651 (uma bacia) doesn't have drink type as last keyword. (bacia)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11672 (a ameaça de Vritra) is type NOTE and has extra description with same name. (carta mensagem negra ameaca vritra)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11672 (a ameaça de Vritra) is type NOTE and has extra description with same name. (carta mensagem negra ameaca vritra)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11672 (a ameaça de Vritra) is type NOTE and has extra description with same name. (carta mensagem negra ameaca vritra)
-Apr 28 19:49:45 2021 :: SYSERR: Object #11672 (a ameaça de Vritra) is type NOTE and has extra description with same name. (carta mensagem negra ameaca vritra)
-Apr 28 19:49:45 2021 :: SYSERR: Object #12032 (uma caneca) doesn't have drink type as last keyword. (caneca)
-Apr 28 19:49:45 2021 :: SYSERR: Object #13433 (um pedaço de papel) is type NOTE and has extra description with same name. (pedaco papel)
-Apr 28 19:49:45 2021 :: SYSERR: Object #13433 (um pedaço de papel) is type NOTE and has extra description with same name. (pedaco papel)
-Apr 28 19:49:45 2021 :: SYSERR: Object #13434 (uma garrafa) doesn't have drink type as last keyword. (garrafa madeira)
-Apr 28 19:49:45 2021 :: SYSERR: Object #14010 (um balde de néctar) doesn't have drink type as last keyword. (balde pequeno madeira)
-Apr 28 19:49:45 2021 :: SYSERR: Object #14016 (uma enorme garrafa) doesn't have drink type as last keyword. (garrafa enorme)
-Apr 28 19:49:45 2021 :: SYSERR: Object #14025 (uma garrafa de leite) doesn't have drink type as last keyword. (garrafa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #14052 (uma mamadeira) doesn't have drink type as last keyword. (mamadeira)
-Apr 28 19:49:45 2021 :: SYSERR: Object #14067 (uma garrafa) doesn't have drink type as last keyword. (garrafa vidro verde)
-Apr 28 19:49:45 2021 :: SYSERR: Object #14068 (um copo) doesn't have drink type as last keyword. (copo)
-Apr 28 19:49:45 2021 :: SYSERR: Object #14069 (uma dose) doesn't have drink type as last keyword. (dose copo)
-Apr 28 19:49:45 2021 :: SYSERR: Object #14070 (uma caneca) doesn't have drink type as last keyword. (caneca)
-Apr 28 19:49:45 2021 :: SYSERR: Object #14408 (um enorme barril) doesn't have drink type as last keyword. (barril)
-Apr 28 19:49:45 2021 :: SYSERR: Object #17024 (um jarro de água) doesn't have drink type as last keyword. (jarro)
-Apr 28 19:49:45 2021 :: SYSERR: Object #17323 (uma garrafa de delicioso vinho tinto) doesn't have drink type as last keyword. (garrafa pinot noir)
-Apr 28 19:49:45 2021 :: SYSERR: Object #17342 (um odre cheirando a uísque) doesn't have drink type as last keyword. (odre)
-Apr 28 19:49:45 2021 :: SYSERR: Object #18107 (uma porunga de couro) doesn't have drink type as last keyword. (porunga couro)
-Apr 28 19:49:45 2021 :: SYSERR: Object #19018 (um odre) doesn't have drink type as last keyword. (odre)
-Apr 28 19:49:45 2021 :: SYSERR: Object #19037 (um copo) doesn't have drink type as last keyword. (copo)
-Apr 28 19:49:45 2021 :: SYSERR: Object #20106 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 21 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 22 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 23 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 24 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 25 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 26 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 27 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 28 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 29 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 30 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 31 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 32 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 33 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 34 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 35 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 36 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 37 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 38 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 39 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 40 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 41 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 42 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 43 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 44 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 45 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 46 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 47 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 48 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 49 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 50 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 51 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 52 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 53 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 54 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 55 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 56 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 57 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 58 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 59 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 60 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 61 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 62 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 63 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 21 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 22 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 23 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 24 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 25 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 26 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 27 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 28 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 29 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 30 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 31 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 32 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 33 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 34 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 35 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 36 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 37 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 38 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 39 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 40 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 41 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 42 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 43 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 44 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 45 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 46 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 47 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 48 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 49 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 50 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 51 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 52 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 53 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 54 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 55 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 56 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 57 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 58 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 59 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 60 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 61 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 62 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 63 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 21 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 22 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 23 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 24 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 25 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 26 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 27 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 28 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 29 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 30 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 31 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 32 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 33 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 34 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 35 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 36 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 37 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 38 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 39 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 40 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 41 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 42 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 43 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 44 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 45 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 46 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 47 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 48 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 49 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 50 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 51 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 52 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 53 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 54 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 55 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 56 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 57 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 58 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 59 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 60 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 61 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 62 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 63 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 21 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 22 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 23 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 24 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 25 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 26 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 27 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 28 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 29 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 30 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 31 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 32 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 33 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 34 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 35 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 36 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 37 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 38 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 39 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 40 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 41 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 42 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 43 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 44 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 45 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 46 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 47 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 48 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 49 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 50 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 51 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 52 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 53 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 54 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 55 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 56 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 57 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 58 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 59 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 60 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 61 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 62 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 63 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 21 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 22 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 23 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 24 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 25 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 26 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 27 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 28 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 29 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 30 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 31 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 32 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 33 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 34 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 35 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 36 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 37 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 38 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 39 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 40 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 41 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 42 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 43 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 44 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 45 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 46 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 47 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 48 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 49 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 50 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 51 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 52 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 53 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 54 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 55 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 56 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 57 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 58 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 59 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 60 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 61 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 62 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 63 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 21 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 22 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 23 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 24 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 25 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 26 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 27 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 28 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 29 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 30 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 31 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 32 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 33 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 34 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 35 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 36 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 37 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 38 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 39 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 40 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 41 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 42 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 43 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 44 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 45 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 46 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 47 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 48 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 49 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 50 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 51 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 52 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 53 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 54 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 55 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 56 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 57 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 58 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 59 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 60 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 61 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 62 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 63 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 21 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 22 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 23 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 24 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 25 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 26 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 27 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 28 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 29 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 30 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 31 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 32 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 33 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 34 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 35 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 36 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 37 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 38 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 39 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 40 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 41 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 42 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 43 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 44 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 45 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 46 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 47 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 48 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 49 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 50 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 51 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 52 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 53 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 54 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 55 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 56 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 57 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 58 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 59 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 60 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 61 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 62 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 63 (0 through 20 known).
-Apr 28 19:49:45 2021 :: SYSERR: Object #29020 (um pequeno barril de água) doesn't have drink type as last keyword. (barril pequeno)
-Apr 28 19:49:45 2021 :: SYSERR: Object #29021 (um grande barril de água) doesn't have drink type as last keyword. (barril grande)
-Apr 28 19:49:45 2021 :: Renumbering zone table.
-Apr 28 19:49:45 2021 :: Loading shops.
-Apr 28 19:49:45 2021 :: Loading quests.
-Apr 28 19:49:45 2021 ::    1 entries, 128 bytes.
-Apr 28 19:49:45 2021 :: Loading help entries.
-Apr 28 19:49:45 2021 ::    1 entries, 32 bytes.
-Apr 28 19:49:45 2021 :: Generating player index.
-Apr 28 19:49:45 2021 :: Loading fight messages.
-Apr 28 19:49:45 2021 :: Loaded 63 Combat Messages...
-Apr 28 19:49:45 2021 :: Loading social messages.
-Apr 28 19:49:45 2021 :: Social table contains 490 socials.
-Apr 28 19:49:45 2021 :: Building command list.
-Apr 28 19:49:45 2021 :: Command info rebuilt, 783 total commands.
-Apr 28 19:49:45 2021 :: Assigning function pointers:
-Apr 28 19:49:45 2021 ::    Mobiles.
-Apr 28 19:49:45 2021 :: SYSERR: Attempt to assign spec to non-existant mob #3005
-Apr 28 19:49:45 2021 ::    Shopkeepers.
-Apr 28 19:49:45 2021 ::    Objects.
-Apr 28 19:49:45 2021 ::    Rooms.
-Apr 28 19:49:45 2021 ::    Questmasters.
-Apr 28 19:49:45 2021 :: SYSERR: Quest #100 has no questmaster specified.
-Apr 28 19:49:45 2021 :: Sorting command list.
-Apr 28 19:49:45 2021 :: Booting mail system.
-Apr 28 19:49:45 2021 ::    Mail file read -- 0 messages.
-Apr 28 19:49:45 2021 :: Reading banned site and invalid-name list.
-Apr 28 19:49:45 2021 :: Loading Ideas.
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/ideas): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/ideas): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/ideas): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/ideas): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/ideas): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: Loading Bugs.
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: Loading Typos.
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/typos): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/typos): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/typos): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/typos): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
-Apr 28 19:49:45 2021 :: read_ibt (misc/typos): no match: Flags - aborting line!
-Apr 28 19:49:45 2021 :: Booting houses.
-Apr 28 19:49:45 2021 ::    No houses to load. File 'etc/hcontrol' does not exist.
-Apr 28 19:49:45 2021 :: Cleaning up last log.
-Apr 28 19:49:45 2021 :: Resetting #0: Limbo - Interno (rooms 0-99).
-Apr 28 19:49:45 2021 :: Resetting #1: Entre Dimensões (rooms 100-199).
-Apr 28 19:49:45 2021 :: Resetting #2: O Castelo da Rainha Gelada (rooms 200-299).
-Apr 28 19:49:45 2021 :: Resetting #3: Bandar, A Cidade Maldita (rooms 300-399).
-Apr 28 19:49:45 2021 :: Resetting #4: A Embaixada dos Clãs de Vitália (rooms 400-499).
-Apr 28 19:49:45 2021 :: Resetting #5: Templos Imortais (rooms 500-599).
-Apr 28 19:49:45 2021 :: Resetting #6: A Prisão (rooms 600-699).
-Apr 28 19:49:45 2021 :: Resetting #7: A Floresta Sombria (rooms 700-799).
-Apr 28 19:49:45 2021 :: Resetting #8: O Castelo dos Vampiros (rooms 800-899).
-Apr 28 19:49:45 2021 :: Resetting #9: Ilha do Rio de Minos (rooms 900-999).
-Apr 28 19:49:45 2021 :: Resetting #10: Vila de Midgaard (rooms 1000-1099).
-Apr 28 19:49:45 2021 :: Resetting #11: Os Campos Secretos (rooms 1100-1199).
-Apr 28 19:49:45 2021 :: Resetting #12: O Reino dos Imortais (rooms 1200-1299).
-Apr 28 19:49:45 2021 :: Resetting #13: Residencial Midgaard (rooms 1300-1399).
-Apr 28 19:49:45 2021 :: Resetting #14: Quest (rooms 1400-1499).
-Apr 28 19:49:45 2021 :: Resetting #15: O Caminho da Virtude (rooms 1500-1599).
-Apr 28 19:49:45 2021 :: Resetting #16: A Vila dos Gnomos (rooms 1600-1699).
-Apr 28 19:49:45 2021 :: Resetting #17: Ancalador e A Guilda de Necromantes (rooms 1700-1799).
-Apr 28 19:49:45 2021 :: Resetting #18: Os Campos de Midgaard (rooms 1800-1899).
-Apr 28 19:49:45 2021 :: Resetting #20: Clãs (rooms 2000-2199).
-Apr 28 19:49:45 2021 :: SYSERR: zone file: door does not exist in room 2146 - dir 5, command disabled
-Apr 28 19:49:45 2021 :: SYSERR: ...offending cmd: 'D' cmd in zone #20, line 222
-Apr 28 19:49:45 2021 :: Resetting #22: O Safári no Covil dos Lagartos (rooms 2200-2299).
-Apr 28 19:49:45 2021 :: Resetting #23: O Grande Festival (rooms 2300-2399).
-Apr 28 19:49:45 2021 :: Resetting #24: O Navio Fantasma (rooms 2400-2499).
-Apr 28 19:49:45 2021 :: Resetting #25: A Grande Torre de Magia (rooms 2500-2699).
-Apr 28 19:49:45 2021 :: Resetting #27: Os Mistérios de Midantra (rooms 2700-2799).
-Apr 28 19:49:45 2021 :: Resetting #28: A Grande Catedral de Cristal (rooms 2800-2899).
-Apr 28 19:49:45 2021 :: Resetting #30: Norte da Cidade de Midgaard (rooms 3000-3099).
-Apr 28 19:49:45 2021 :: Resetting #31: Sul da Cidade de Midgaard (rooms 3100-3299).
-Apr 28 19:49:45 2021 :: Resetting #33: O Três de Espadas (rooms 3300-3399).
-Apr 28 19:49:45 2021 :: Resetting #34: A Vila de Villspah (rooms 3400-3499).
-Apr 28 19:49:45 2021 :: Resetting #35: Miden'Nir (rooms 3500-3599).
-Apr 28 19:49:45 2021 :: Resetting #36: O Tabuleiro de Xadrez (rooms 3600-3699).
-Apr 28 19:49:45 2021 :: Resetting #37: O Reino dos Mortos-Vivos (rooms 3700-3799).
-Apr 28 19:49:45 2021 :: Resetting #38: O Museu do Colecionador (rooms 3800-3899).
-Apr 28 19:49:45 2021 :: Resetting #39: O Abismo Profundo (rooms 3900-3999).
-Apr 28 19:49:45 2021 :: Resetting #40: Moria (rooms 4000-4199).
-Apr 28 19:49:45 2021 :: Resetting #42: O Escaldante Deserto de Kubalai (rooms 4200-4299).
-Apr 28 19:49:45 2021 :: Resetting #43: Uma Noite em Notre Dame (rooms 4300-4399).
-Apr 28 19:49:45 2021 :: Resetting #44: Qui'Lur (rooms 4400-4499).
-Apr 28 19:49:45 2021 :: Resetting #45: Gondolin, o Reino Oculto (rooms 4500-4599).
-Apr 28 19:49:45 2021 :: Resetting #48: As Cavernas dos Homens Brancos (rooms 4800-4899).
-Apr 28 19:49:45 2021 :: Resetting #49: A Grande Árvore dos Inciantes (rooms 4900-4999).
-Apr 28 19:49:45 2021 :: Resetting #50: O Grande Deserto Oriental (rooms 5000-5099).
-Apr 28 19:49:45 2021 :: Resetting #51: Cidade Drow (rooms 5100-5199).
-Apr 28 19:49:45 2021 :: Resetting #52: A Cidade de Thalos (rooms 5200-5299).
-Apr 28 19:49:45 2021 :: Resetting #53: A Grande Pirâmide (rooms 5300-5399).
-Apr 28 19:49:45 2021 :: Resetting #54: Nova Thalos (rooms 5400-5699).
-Apr 28 19:49:45 2021 :: Resetting #57: Graye (rooms 5700-5799).
-Apr 28 19:49:45 2021 :: Resetting #59: O Altar de Sacrifícios de Raantra (rooms 5900-5999).
-Apr 28 19:49:45 2021 :: Resetting #60: Haon-Dor, Floresta Clara (rooms 6000-6099).
-Apr 28 19:49:45 2021 :: Resetting #61: Haon-Dor, Floresta Escura (rooms 6100-6199).
-Apr 28 19:49:45 2021 :: Resetting #62: A Planície dos Orcs (rooms 6200-6299).
-Apr 28 19:49:45 2021 :: Resetting #63: Arachnos (rooms 6300-6399).
-Apr 28 19:49:45 2021 :: Resetting #64: A Torre de Rand (rooms 6400-6499).
-Apr 28 19:49:45 2021 :: Resetting #65: O Reino dos Anoes (rooms 6500-6599).
-Apr 28 19:49:45 2021 :: Resetting #66: Vila de Nova Thalos (rooms 6600-6799).
-Apr 28 19:49:45 2021 :: Resetting #69: Os Templos de Anura (rooms 6900-6999).
-Apr 28 19:49:45 2021 :: Resetting #70: O Esgoto, Primeiro Nível (rooms 7000-7099).
-Apr 28 19:49:45 2021 :: Resetting #71: O Segundo Esgoto (rooms 7100-7199).
-Apr 28 19:49:45 2021 :: Resetting #72: O Esgoto Labirinto (rooms 7200-7299).
-Apr 28 19:49:45 2021 :: Resetting #73: Os Túneis nos Esgotos (rooms 7300-7399).
-Apr 28 19:49:45 2021 :: Resetting #75: Nos Domínios do Barão Darwin (rooms 7500-7599).
-Apr 28 19:49:45 2021 :: Resetting #79: A Residência de Redferne (rooms 7900-7999).
-Apr 28 19:49:45 2021 :: Resetting #81: Egito (rooms 8100-8299).
-Apr 28 19:49:45 2021 :: Resetting #83: A Aldeia Maldita (rooms 8300-8399).
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
-Apr 28 19:49:45 2021 :: Resetting #84: Valfenda (rooms 8400-8499).
-Apr 28 19:49:45 2021 :: Resetting #91: O Labirinto do Milharal (rooms 9100-9199).
-Apr 28 19:49:45 2021 :: Resetting #92: Os Cinco Reinos (rooms 9200-9299).
-Apr 28 19:49:45 2021 :: Resetting #93: Paraíso dos Dragões (rooms 9300-9399).
-Apr 28 19:49:45 2021 :: Resetting #94: Trilha do Destino (rooms 9400-9499).
-Apr 28 19:49:45 2021 :: Resetting #95: Galáxia (rooms 9500-9599).
-Apr 28 19:49:45 2021 :: Resetting #97: O Subterrâneo (rooms 9700-9799).
-Apr 28 19:49:45 2021 :: Resetting #98: O Abismo (rooms 9800-9899).
-Apr 28 19:49:45 2021 :: Resetting #99: Ghenna (rooms 9900-9999).
-Apr 28 19:49:45 2021 :: Resetting #100: A Vila de Mordecai (rooms 10000-10099).
-Apr 28 19:49:45 2021 :: Resetting #102: O Castelo de Jareth (rooms 10200-10299).
-Apr 28 19:49:45 2021 :: Resetting #103: A Selva de Makira (rooms 10300-10399).
-Apr 28 19:49:45 2021 :: Resetting #107: Otávia (rooms 10700-10799).
-Apr 28 19:49:45 2021 :: Resetting #108: A Cidade de Tróia (rooms 10800-10999).
-Apr 28 19:49:45 2021 :: Resetting #110: As Mesnadas de Vitália (rooms 11000-11099).
-Apr 28 19:49:45 2021 :: Resetting #111: O Reino das Pedras (rooms 11100-11199).
-Apr 28 19:49:45 2021 :: Resetting #113: Bhogavati, A Cidade das Jóias (rooms 11300-11399).
-Apr 28 19:49:45 2021 :: Resetting #114: A Fenda Entre Mundos (rooms 11400-11499).
-Apr 28 19:49:45 2021 :: Resetting #115: O Sétimo Mundo Oculto, Patala (rooms 11500-11599).
-Apr 28 19:49:45 2021 :: Resetting #116: Svarga, O Reino Celestial (rooms 11600-11799).
-Apr 28 19:49:45 2021 :: Resetting #120: Roma (rooms 12000-12099).
-Apr 28 19:49:45 2021 :: Resetting #121: O Labirinto do Minotauro (rooms 12100-12199).
-Apr 28 19:49:45 2021 :: Resetting #124: Vila de Nova Thalos (rooms 12400-12599).
-Apr 28 19:49:45 2021 :: Resetting #126: Escandinavia, a Terra do Gelo (rooms 12600-12899).
-Apr 28 19:49:45 2021 :: Resetting #131: Torin (rooms 13100-13199).
-Apr 28 19:49:45 2021 :: SYSERR: Char is already equipped: o guarda sagrado, a espada de Lorgeth
-Apr 28 19:49:45 2021 :: Resetting #132: O Farol da Praia (rooms 13200-13299).
-Apr 28 19:49:45 2021 :: Resetting #133: O Templo do Grande Búfalo (rooms 13300-13399).
-Apr 28 19:49:45 2021 :: Resetting #134: A Cidade de Thewster e A Caverna Escura (rooms 13400-13499).
-Apr 28 19:49:45 2021 :: Resetting #135: A Floresta Tropical de Thewster (rooms 13500-13599).
-Apr 28 19:49:45 2021 :: Resetting #136: A Floresta Leste de Thewster (rooms 13600-13699).
-Apr 28 19:49:45 2021 :: Resetting #137: Lothlórien (rooms 13700-13799).
-Apr 28 19:49:45 2021 :: Resetting #138: O Arquipélago de Yo (rooms 13800-13999).
-Apr 28 19:49:45 2021 :: Resetting #140: Lindrel (rooms 14000-14099).
-Apr 28 19:49:45 2021 :: Resetting #144: A Aldeia de Bri (rooms 14400-14499).
-Apr 28 19:49:45 2021 :: Resetting #145: O Condado (rooms 14500-14699).
-Apr 28 19:49:45 2021 :: Resetting #150: O Castelo do Rei Welmar (rooms 15000-15099).
-Apr 28 19:49:45 2021 :: Resetting #151: O Templo Samurai (rooms 15100-15199).
-Apr 28 19:49:45 2021 :: Resetting #155: O Moinho de Vento (rooms 15500-15599).
-Apr 28 19:49:45 2021 :: Resetting #157: O Castelo de Flyre (rooms 15700-15799).
-Apr 28 19:49:45 2021 :: Resetting #160: Os Estrategistas de Vitália (rooms 16000-16399).
-Apr 28 19:49:45 2021 :: Resetting #170: O Canyon dos Elementais (rooms 17000-17099).
-Apr 28 19:49:45 2021 :: Resetting #173: Camelot (rooms 17300-17399).
-Apr 28 19:49:45 2021 :: Resetting #176: O Império Chinês (rooms 17600-17999).
-Apr 28 19:49:45 2021 :: Resetting #181: Os Caminhos Iniciais (rooms 18100-18199).
-Apr 28 19:49:45 2021 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
-Apr 28 19:49:45 2021 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
-Apr 28 19:49:45 2021 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
-Apr 28 19:49:45 2021 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
-Apr 28 19:49:45 2021 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
-Apr 28 19:49:45 2021 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
-Apr 28 19:49:45 2021 :: Resetting #220: Anexo (rooms 22000-22099).
-Apr 28 19:49:45 2021 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
-Apr 28 19:49:45 2021 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Apr 28 19:49:45 2021 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Apr 28 19:49:45 2021 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Apr 28 19:49:45 2021 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Apr 28 19:49:45 2021 :: Boot db -- DONE.
-Apr 28 19:49:45 2021 :: Signal trapping.
-Apr 28 19:49:45 2021 :: Entering game loop.
-Apr 28 19:49:45 2021 :: No connections.  Going to sleep.
-Apr 28 19:50:01 2021 :: New connection.  Waking up.
-Apr 28 19:50:32 2021 :: Losing descriptor without char.
-Apr 28 19:50:32 2021 :: No connections.  Going to sleep.
-Apr 28 19:52:54 2021 :: New connection.  Waking up.
-Apr 28 19:53:24 2021 :: Losing descriptor without char.
-Apr 28 19:53:24 2021 :: No connections.  Going to sleep.
+Aug 09 18:51:22 2021 :: Loading configuration.
+Aug 09 18:51:22 2021 :: Vitalia Reborn 2020 V0.2
+Aug 09 18:51:22 2021 :: Using lib as data directory.
+Aug 09 18:51:22 2021 :: Running game on port 4000.
+Aug 09 18:51:22 2021 :: SYSERR: lib/.killscript: No such file or directory
+Aug 09 18:51:22 2021 :: Finding player limit.
+Aug 09 18:51:22 2021 ::    Setting player limit to 200 using rlimit.
+Aug 09 18:51:22 2021 :: Opening mother connection.
+Aug 09 18:51:22 2021 :: Binding to all IP interfaces on this host.
+Aug 09 18:51:22 2021 :: Boot db -- BEGIN.
+Aug 09 18:51:22 2021 :: Resetting the game time:
+Aug 09 18:51:22 2021 ::    Current Gametime: 22H 28D 12M 1514Y.
+Aug 09 18:51:22 2021 :: Initialize Global Lists
+Aug 09 18:51:22 2021 :: Initializing Events
+Aug 09 18:51:22 2021 :: Reading news, credits, help, ihelp, bground, info & motds.
+Aug 09 18:51:22 2021 :: Reading menu, rebegin & clanpolicies
+Aug 09 18:51:22 2021 :: Loading zone table.
+Aug 09 18:51:22 2021 ::    121 zones, 10648 bytes.
+Aug 09 18:51:22 2021 :: Loading triggers and generating index.
+Aug 09 18:51:22 2021 :: Loading rooms.
+Aug 09 18:51:22 2021 ::    9482 rooms, 1744688 bytes.
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 25 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 26 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 27 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 28 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 29 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 30 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 31 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 32 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 33 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 34 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 35 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 36 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 37 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 38 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 39 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 40 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 41 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 42 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 43 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 44 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 45 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 46 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 47 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 48 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 49 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 50 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 51 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 52 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 53 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 54 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 55 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 56 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 57 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 58 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 59 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 60 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 61 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 62 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20100 has unknown room flag, bit 63 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20102 has unknown room flag, bit 29 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20102 has unknown room flag, bit 34 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20102 has unknown room flag, bit 35 (0 through 24 known).
+Aug 09 18:51:22 2021 :: SYSERR: object #20102 has unknown room flag, bit 61 (0 through 24 known).
+Aug 09 18:51:22 2021 :: Loading spells.
+Aug 09 18:51:22 2021 :: Assigning spells's function.
+Aug 09 18:51:22 2021 :: Renumbering rooms.
+Aug 09 18:51:22 2021 :: Checking start rooms.
+Aug 09 18:51:22 2021 :: Loading mobs and generating index.
+Aug 09 18:51:22 2021 ::    2588 mobs, 82816 bytes in index, 1697728 bytes in prototypes.
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13127 has unknown mobile flag, bit 25 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13127 has unknown mobile flag, bit 33 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13127 has unknown mobile flag, bit 35 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13127 has unknown mobile flag, bit 53 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13127 has unknown mobile flag, bit 57 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 29 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 33 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 35 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 38 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 45 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 47 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 48 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 49 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 53 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13128 has unknown mobile flag, bit 61 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 29 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 35 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 38 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 45 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 47 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 49 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 53 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13129 has unknown mobile flag, bit 61 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 29 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 35 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 38 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 45 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 47 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 49 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 53 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13130 has unknown mobile flag, bit 61 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 29 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 35 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 36 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 38 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 45 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 47 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 49 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 53 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13132 has unknown mobile flag, bit 61 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 29 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 35 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 36 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 38 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 45 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 47 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 49 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 53 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13133 has unknown mobile flag, bit 61 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 29 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 34 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 35 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 38 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 43 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 45 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 46 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 47 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 48 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 49 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 51 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 53 (0 through 22 known).
+Aug 09 18:51:22 2021 :: SYSERR: mob vnum 13134 has unknown mobile flag, bit 61 (0 through 22 known).
+Aug 09 18:51:22 2021 :: Loading objs and generating index.
+Aug 09 18:51:22 2021 ::    3702 objs, 118464 bytes in index, 888480 bytes in prototypes.
+Aug 09 18:51:22 2021 :: SYSERR: Object #603 (um copo) doesn't have drink type as last keyword. (copo)
+Aug 09 18:51:22 2021 :: SYSERR: Object #604 (um copo) doesn't have drink type as last keyword. (copo)
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 21 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 22 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 23 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 24 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 25 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 26 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 27 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 28 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 29 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 30 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 31 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 32 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 33 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 34 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 35 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 36 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 37 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 38 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 39 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 40 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 41 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 42 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 43 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 44 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 45 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 46 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 47 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 48 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 49 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 50 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 51 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 52 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 53 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 54 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 55 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 56 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 57 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 58 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 59 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 60 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 61 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 62 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1007 (um baú branco) has unknown object wear flag, bit 63 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #1026 (um bule de chá) doesn't have drink type as last keyword. (bule porcelana)
+Aug 09 18:51:22 2021 :: SYSERR: Object #1028 (uma xícara de porcelana) doesn't have drink type as last keyword. (xicara porcelana chinesa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #1701 (um cálice) doesn't have drink type as last keyword. (calice)
+Aug 09 18:51:22 2021 :: SYSERR: Object #1707 (a piscina) doesn't have drink type as last keyword. (piscina)
+Aug 09 18:51:22 2021 :: SYSERR: Object #2209 (o barril) doesn't have drink type as last keyword. (barril)
+Aug 09 18:51:22 2021 :: SYSERR: Object #2211 (um copo) doesn't have drink type as last keyword. (copo)
+Aug 09 18:51:22 2021 :: SYSERR: Object #2309 (um barrilzinho de madeira) doesn't have drink type as last keyword. (barrilzinho madeira)
+Aug 09 18:51:22 2021 :: SYSERR: Object #2370 (uma caneca) doesn't have drink type as last keyword. (caneca bebida)
+Aug 09 18:51:22 2021 :: SYSERR: Object #2545 (uma infusão de ervas) doesn't have drink type as last keyword. (xicara infusao herbacia)
+Aug 09 18:51:22 2021 :: SYSERR: Object #2721 (um balde) doesn't have drink type as last keyword. (balde)
+Aug 09 18:51:22 2021 :: SYSERR: Object #2812 (uma taça) doesn't have drink type as last keyword. (taca)
+Aug 09 18:51:22 2021 :: SYSERR: Object #2822 (uma inebriante taça de ponche) doesn't have drink type as last keyword. (ponche taca cristal)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3000 (um barril) doesn't have drink type as last keyword. (barril)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3001 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3002 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3003 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3004 (um frasco) doesn't have drink type as last keyword. (frasco)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3016 (um barril) doesn't have drink type as last keyword. (barril)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3017 (um barril) doesn't have drink type as last keyword. (barril)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3018 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3019 (um cartaz de 'Procurado') is type NOTE and has extra description with same name. (procurado cartaz)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3019 (um cartaz de 'Procurado') is type NOTE and has extra description with same name. (procurado cartaz)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3026 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3066 (um copo) doesn't have drink type as last keyword. (copo)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3067 (um copo) doesn't have drink type as last keyword. (copo)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3100 (uma xícara) doesn't have drink type as last keyword. (xicara)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3101 (uma xícara) doesn't have drink type as last keyword. (xicara)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3102 (uma xícara) doesn't have drink type as last keyword. (xicara)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3103 (uma garrafa de água Evian) doesn't have drink type as last keyword. (garrafa francesa Evian)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3104 (um cantil) doesn't have drink type as last keyword. (cantil)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3319 (um copo) doesn't have drink type as last keyword. (copo)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3320 (um copo) doesn't have drink type as last keyword. (copo)
+Aug 09 18:51:22 2021 :: SYSERR: Object #3321 (uma dose) doesn't have drink type as last keyword. (dose)
+Aug 09 18:51:22 2021 :: SYSERR: Object #4305 (um vaso de madeira) doesn't have drink type as last keyword. (vaso)
+Aug 09 18:51:22 2021 :: SYSERR: Object #4307 (um frasco prateado) doesn't have drink type as last keyword. (frasco prata)
+Aug 09 18:51:22 2021 :: SYSERR: Object #4515 (um cálice de vinho) doesn't have drink type as last keyword. (calice)
+Aug 09 18:51:22 2021 :: SYSERR: Object #5006 (uma pequena xícara de cacto) doesn't have drink type as last keyword. (xicara cacto)
+Aug 09 18:51:22 2021 :: SYSERR: Object #5467 (uma taça) doesn't have drink type as last keyword. (taca licor azul)
+Aug 09 18:51:22 2021 :: SYSERR: Object #5468 (uma taça) doesn't have drink type as last keyword. (taca)
+Aug 09 18:51:22 2021 :: SYSERR: Object #5469 (uma garrafa de grogue de rum) doesn't have drink type as last keyword. (garrafa grogue)
+Aug 09 18:51:22 2021 :: SYSERR: Object #5475 (um escorpião flamejante) doesn't have drink type as last keyword. (garrafa escorpiao flamejante)
+Aug 09 18:51:22 2021 :: SYSERR: Object #5476 (um barril) doesn't have drink type as last keyword. (barril)
+Aug 09 18:51:22 2021 :: SYSERR: Object #5477 (uma dose) doesn't have drink type as last keyword. (dose)
+Aug 09 18:51:22 2021 :: SYSERR: Object #5901 (uma taça despedaçada) doesn't have drink type as last keyword. (taca vidro despedacada)
+Aug 09 18:51:22 2021 :: SYSERR: Object #6013 (um barril) doesn't have drink type as last keyword. (barril)
+Aug 09 18:51:22 2021 :: SYSERR: Object #7921 (um barril) doesn't have drink type as last keyword. (barril)
+Aug 09 18:51:22 2021 :: SYSERR: Object #8126 (a canópica de Qebehsenuef) doesn't have drink type as last keyword. (qebehsenuef canopica bela)
+Aug 09 18:51:22 2021 :: SYSERR: Object #8127 (a canópica de Hapi) doesn't have drink type as last keyword. (hapi canopica ornamentada)
+Aug 09 18:51:22 2021 :: SYSERR: Object #8131 (um frasco de veneno) doesn't have drink type as last keyword. (frasco veneno negro)
+Aug 09 18:51:22 2021 :: SYSERR: Object #8431 (um belo cálice de prata) doesn't have drink type as last keyword. (calice prata)
+Aug 09 18:51:22 2021 :: SYSERR: Object #9345 (uma garrafa antiga) doesn't have drink type as last keyword. (garrafa antiga)
+Aug 09 18:51:22 2021 :: SYSERR: Object #9351 (o diário sagrado) is type NOTE and has extra description with same name. (diario sagrado)
+Aug 09 18:51:22 2021 :: SYSERR: Object #9351 (o diário sagrado) is type NOTE and has extra description with same name. (diario sagrado)
+Aug 09 18:51:22 2021 :: SYSERR: Object #10207 (uma garrafa de uísque) doesn't have drink type as last keyword. (garrafa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #10728 (uma escultura otaviana) doesn't have drink type as last keyword. (escultura)
+Aug 09 18:51:22 2021 :: SYSERR: Object #10729 (uma pintura otaviana) doesn't have drink type as last keyword. (pintura)
+Aug 09 18:51:22 2021 :: SYSERR: Object #10894 (uma ânfora de Micenos) doesn't have drink type as last keyword. (vaso ceramica anfora micenos)
+Aug 09 18:51:22 2021 :: SYSERR: Object #10898 (um jarro de porcelana) doesn't have drink type as last keyword. (jarro porcelana)
+Aug 09 18:51:22 2021 :: SYSERR: Object #10919 (garrafa de leite de ovelha) doesn't have drink type as last keyword. (garrafa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #10923 (um barril de vinho) doesn't have drink type as last keyword. (barril)
+Aug 09 18:51:22 2021 :: SYSERR: Object #10924 (uma garrafa de vinho) doesn't have drink type as last keyword. (garrafa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11030 (uma garrafa) doesn't have drink type as last keyword. (garrafa mineral)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11031 (uma garrafa) doesn't have drink type as last keyword. (garrafa pinot noir)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11108 (um barril) doesn't have drink type as last keyword. (barril)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11376 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11377 (uma caneca) doesn't have drink type as last keyword. (caneca)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11378 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11379 (uma dose) doesn't have drink type as last keyword. (dose corpo pequeno)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11528 (um caderno de anotações) is type NOTE and has extra description with same name. (anotacoes caderno)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11528 (um caderno de anotações) is type NOTE and has extra description with same name. (anotacoes caderno)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11604 (uma taça) doesn't have drink type as last keyword. (taca cristal)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11651 (uma bacia) doesn't have drink type as last keyword. (bacia)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11672 (a ameaça de Vritra) is type NOTE and has extra description with same name. (carta mensagem negra ameaca vritra)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11672 (a ameaça de Vritra) is type NOTE and has extra description with same name. (carta mensagem negra ameaca vritra)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11672 (a ameaça de Vritra) is type NOTE and has extra description with same name. (carta mensagem negra ameaca vritra)
+Aug 09 18:51:22 2021 :: SYSERR: Object #11672 (a ameaça de Vritra) is type NOTE and has extra description with same name. (carta mensagem negra ameaca vritra)
+Aug 09 18:51:22 2021 :: SYSERR: Object #12032 (uma caneca) doesn't have drink type as last keyword. (caneca)
+Aug 09 18:51:22 2021 :: SYSERR: Object #13433 (um pedaço de papel) is type NOTE and has extra description with same name. (pedaco papel)
+Aug 09 18:51:22 2021 :: SYSERR: Object #13433 (um pedaço de papel) is type NOTE and has extra description with same name. (pedaco papel)
+Aug 09 18:51:22 2021 :: SYSERR: Object #13434 (uma garrafa) doesn't have drink type as last keyword. (garrafa madeira)
+Aug 09 18:51:22 2021 :: SYSERR: Object #14010 (um balde de néctar) doesn't have drink type as last keyword. (balde pequeno madeira)
+Aug 09 18:51:22 2021 :: SYSERR: Object #14016 (uma enorme garrafa) doesn't have drink type as last keyword. (garrafa enorme)
+Aug 09 18:51:22 2021 :: SYSERR: Object #14025 (uma garrafa de leite) doesn't have drink type as last keyword. (garrafa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #14052 (uma mamadeira) doesn't have drink type as last keyword. (mamadeira)
+Aug 09 18:51:22 2021 :: SYSERR: Object #14067 (uma garrafa) doesn't have drink type as last keyword. (garrafa vidro verde)
+Aug 09 18:51:22 2021 :: SYSERR: Object #14068 (um copo) doesn't have drink type as last keyword. (copo)
+Aug 09 18:51:22 2021 :: SYSERR: Object #14069 (uma dose) doesn't have drink type as last keyword. (dose copo)
+Aug 09 18:51:22 2021 :: SYSERR: Object #14070 (uma caneca) doesn't have drink type as last keyword. (caneca)
+Aug 09 18:51:22 2021 :: SYSERR: Object #14408 (um enorme barril) doesn't have drink type as last keyword. (barril)
+Aug 09 18:51:22 2021 :: SYSERR: Object #17024 (um jarro de água) doesn't have drink type as last keyword. (jarro)
+Aug 09 18:51:22 2021 :: SYSERR: Object #17323 (uma garrafa de delicioso vinho tinto) doesn't have drink type as last keyword. (garrafa pinot noir)
+Aug 09 18:51:22 2021 :: SYSERR: Object #17342 (um odre cheirando a uísque) doesn't have drink type as last keyword. (odre)
+Aug 09 18:51:22 2021 :: SYSERR: Object #18107 (uma porunga de couro) doesn't have drink type as last keyword. (porunga couro)
+Aug 09 18:51:22 2021 :: SYSERR: Object #19018 (um odre) doesn't have drink type as last keyword. (odre)
+Aug 09 18:51:22 2021 :: SYSERR: Object #19037 (um copo) doesn't have drink type as last keyword. (copo)
+Aug 09 18:51:22 2021 :: SYSERR: Object #20106 (uma garrafa) doesn't have drink type as last keyword. (garrafa)
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 21 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 22 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 23 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 24 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 25 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 26 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 27 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 28 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 29 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 30 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 31 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 32 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 33 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 34 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 35 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 36 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 37 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 38 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 39 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 40 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 41 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 42 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 43 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 44 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 45 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 46 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 47 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 48 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 49 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 50 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 51 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 52 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 53 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 54 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 55 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 56 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 57 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 58 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 59 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 60 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 61 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 62 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22203 (a estátua de Ken) has unknown object wear flag, bit 63 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 21 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 22 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 23 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 24 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 25 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 26 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 27 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 28 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 29 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 30 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 31 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 32 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 33 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 34 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 35 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 36 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 37 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 38 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 39 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 40 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 41 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 42 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 43 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 44 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 45 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 46 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 47 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 48 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 49 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 50 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 51 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 52 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 53 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 54 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 55 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 56 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 57 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 58 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 59 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 60 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 61 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 62 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22204 (a estátua de Kidaf) has unknown object wear flag, bit 63 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 21 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 22 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 23 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 24 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 25 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 26 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 27 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 28 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 29 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 30 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 31 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 32 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 33 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 34 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 35 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 36 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 37 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 38 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 39 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 40 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 41 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 42 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 43 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 44 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 45 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 46 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 47 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 48 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 49 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 50 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 51 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 52 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 53 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 54 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 55 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 56 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 57 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 58 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 59 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 60 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 61 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 62 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22205 (a estátua de Nanoc) has unknown object wear flag, bit 63 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 21 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 22 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 23 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 24 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 25 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 26 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 27 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 28 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 29 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 30 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 31 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 32 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 33 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 34 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 35 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 36 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 37 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 38 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 39 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 40 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 41 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 42 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 43 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 44 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 45 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 46 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 47 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 48 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 49 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 50 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 51 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 52 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 53 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 54 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 55 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 56 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 57 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 58 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 59 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 60 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 61 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 62 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22206 (a estátua de Nimue) has unknown object wear flag, bit 63 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 21 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 22 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 23 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 24 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 25 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 26 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 27 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 28 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 29 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 30 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 31 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 32 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 33 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 34 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 35 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 36 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 37 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 38 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 39 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 40 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 41 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 42 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 43 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 44 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 45 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 46 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 47 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 48 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 49 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 50 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 51 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 52 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 53 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 54 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 55 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 56 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 57 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 58 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 59 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 60 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 61 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 62 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22207 (a estátua de Aqua) has unknown object wear flag, bit 63 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 21 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 22 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 23 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 24 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 25 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 26 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 27 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 28 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 29 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 30 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 31 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 32 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 33 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 34 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 35 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 36 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 37 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 38 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 39 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 40 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 41 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 42 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 43 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 44 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 45 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 46 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 47 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 48 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 49 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 50 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 51 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 52 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 53 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 54 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 55 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 56 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 57 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 58 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 59 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 60 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 61 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 62 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22208 (a estátua de Torvante) has unknown object wear flag, bit 63 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 21 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 22 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 23 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 24 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 25 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 26 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 27 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 28 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 29 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 30 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 31 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 32 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 33 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 34 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 35 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 36 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 37 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 38 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 39 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 40 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 41 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 42 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 43 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 44 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 45 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 46 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 47 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 48 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 49 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 50 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 51 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 52 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 53 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 54 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 55 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 56 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 57 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 58 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 59 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 60 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 61 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 62 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #22209 (a estátua de Lupulis) has unknown object wear flag, bit 63 (0 through 20 known).
+Aug 09 18:51:22 2021 :: SYSERR: Object #29020 (um pequeno barril de água) doesn't have drink type as last keyword. (barril pequeno)
+Aug 09 18:51:22 2021 :: SYSERR: Object #29021 (um grande barril de água) doesn't have drink type as last keyword. (barril grande)
+Aug 09 18:51:22 2021 :: Renumbering zone table.
+Aug 09 18:51:22 2021 :: Loading shops.
+Aug 09 18:51:22 2021 :: Loading quests.
+Aug 09 18:51:22 2021 ::    1 entries, 128 bytes.
+Aug 09 18:51:22 2021 :: Loading help entries.
+Aug 09 18:51:22 2021 ::    1 entries, 32 bytes.
+Aug 09 18:51:22 2021 :: Generating player index.
+Aug 09 18:51:22 2021 :: Loading fight messages.
+Aug 09 18:51:22 2021 :: Loaded 63 Combat Messages...
+Aug 09 18:51:22 2021 :: Loading social messages.
+Aug 09 18:51:22 2021 :: Social table contains 490 socials.
+Aug 09 18:51:22 2021 :: Building command list.
+Aug 09 18:51:22 2021 :: Command info rebuilt, 783 total commands.
+Aug 09 18:51:22 2021 :: Assigning function pointers:
+Aug 09 18:51:22 2021 ::    Mobiles.
+Aug 09 18:51:22 2021 :: SYSERR: Attempt to assign spec to non-existant mob #3005
+Aug 09 18:51:22 2021 ::    Shopkeepers.
+Aug 09 18:51:22 2021 ::    Objects.
+Aug 09 18:51:22 2021 ::    Rooms.
+Aug 09 18:51:22 2021 ::    Questmasters.
+Aug 09 18:51:22 2021 :: SYSERR: Quest #100 has no questmaster specified.
+Aug 09 18:51:22 2021 :: Sorting command list.
+Aug 09 18:51:22 2021 :: Booting mail system.
+Aug 09 18:51:22 2021 ::    Mail file read -- 0 messages.
+Aug 09 18:51:22 2021 :: Reading banned site and invalid-name list.
+Aug 09 18:51:22 2021 :: Loading Ideas.
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/ideas): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/ideas): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/ideas): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/ideas): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/ideas): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: Loading Bugs.
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/bugs): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: Loading Typos.
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/typos): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/typos): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/typos): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/typos): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: SYSERR: Invalid keyword (Flags) in IBT file
+Aug 09 18:51:22 2021 :: read_ibt (misc/typos): no match: Flags - aborting line!
+Aug 09 18:51:22 2021 :: Booting houses.
+Aug 09 18:51:22 2021 ::    No houses to load. File 'etc/hcontrol' does not exist.
+Aug 09 18:51:22 2021 :: Cleaning up last log.
+Aug 09 18:51:22 2021 :: Resetting #0: Limbo - Interno (rooms 0-99).
+Aug 09 18:51:22 2021 :: Resetting #1: Entre Dimensões (rooms 100-199).
+Aug 09 18:51:22 2021 :: Resetting #2: O Castelo da Rainha Gelada (rooms 200-299).
+Aug 09 18:51:22 2021 :: Resetting #3: Bandar, A Cidade Maldita (rooms 300-399).
+Aug 09 18:51:22 2021 :: Resetting #4: A Embaixada dos Clãs de Vitália (rooms 400-499).
+Aug 09 18:51:22 2021 :: Resetting #5: Templos Imortais (rooms 500-599).
+Aug 09 18:51:22 2021 :: Resetting #6: A Prisão (rooms 600-699).
+Aug 09 18:51:22 2021 :: Resetting #7: A Floresta Sombria (rooms 700-799).
+Aug 09 18:51:22 2021 :: Resetting #8: O Castelo dos Vampiros (rooms 800-899).
+Aug 09 18:51:22 2021 :: Resetting #9: Ilha do Rio de Minos (rooms 900-999).
+Aug 09 18:51:22 2021 :: Resetting #10: Vila de Midgaard (rooms 1000-1099).
+Aug 09 18:51:22 2021 :: Resetting #11: Os Campos Secretos (rooms 1100-1199).
+Aug 09 18:51:22 2021 :: Resetting #12: O Reino dos Imortais (rooms 1200-1299).
+Aug 09 18:51:22 2021 :: Resetting #13: Residencial Midgaard (rooms 1300-1399).
+Aug 09 18:51:22 2021 :: Resetting #14: Quest (rooms 1400-1499).
+Aug 09 18:51:22 2021 :: Resetting #15: O Caminho da Virtude (rooms 1500-1599).
+Aug 09 18:51:22 2021 :: Resetting #16: A Vila dos Gnomos (rooms 1600-1699).
+Aug 09 18:51:22 2021 :: Resetting #17: Ancalador e A Guilda de Necromantes (rooms 1700-1799).
+Aug 09 18:51:22 2021 :: Resetting #18: Os Campos de Midgaard (rooms 1800-1899).
+Aug 09 18:51:22 2021 :: Resetting #20: Clãs (rooms 2000-2199).
+Aug 09 18:51:22 2021 :: SYSERR: zone file: door does not exist in room 2146 - dir 5, command disabled
+Aug 09 18:51:22 2021 :: SYSERR: ...offending cmd: 'D' cmd in zone #20, line 222
+Aug 09 18:51:22 2021 :: Resetting #22: O Safári no Covil dos Lagartos (rooms 2200-2299).
+Aug 09 18:51:22 2021 :: Resetting #23: O Grande Festival (rooms 2300-2399).
+Aug 09 18:51:22 2021 :: Resetting #24: O Navio Fantasma (rooms 2400-2499).
+Aug 09 18:51:22 2021 :: Resetting #25: A Grande Torre de Magia (rooms 2500-2699).
+Aug 09 18:51:22 2021 :: Resetting #27: Os Mistérios de Midantra (rooms 2700-2799).
+Aug 09 18:51:22 2021 :: Resetting #28: A Grande Catedral de Cristal (rooms 2800-2899).
+Aug 09 18:51:22 2021 :: Resetting #30: Norte da Cidade de Midgaard (rooms 3000-3099).
+Aug 09 18:51:22 2021 :: Resetting #31: Sul da Cidade de Midgaard (rooms 3100-3299).
+Aug 09 18:51:22 2021 :: Resetting #33: O Três de Espadas (rooms 3300-3399).
+Aug 09 18:51:22 2021 :: Resetting #34: A Vila de Villspah (rooms 3400-3499).
+Aug 09 18:51:22 2021 :: Resetting #35: Miden'Nir (rooms 3500-3599).
+Aug 09 18:51:22 2021 :: Resetting #36: O Tabuleiro de Xadrez (rooms 3600-3699).
+Aug 09 18:51:22 2021 :: Resetting #37: O Reino dos Mortos-Vivos (rooms 3700-3799).
+Aug 09 18:51:22 2021 :: Resetting #38: O Museu do Colecionador (rooms 3800-3899).
+Aug 09 18:51:22 2021 :: Resetting #39: O Abismo Profundo (rooms 3900-3999).
+Aug 09 18:51:22 2021 :: Resetting #40: Moria (rooms 4000-4199).
+Aug 09 18:51:22 2021 :: Resetting #42: O Escaldante Deserto de Kubalai (rooms 4200-4299).
+Aug 09 18:51:22 2021 :: Resetting #43: Uma Noite em Notre Dame (rooms 4300-4399).
+Aug 09 18:51:22 2021 :: Resetting #44: Qui'Lur (rooms 4400-4499).
+Aug 09 18:51:22 2021 :: Resetting #45: Gondolin, o Reino Oculto (rooms 4500-4599).
+Aug 09 18:51:22 2021 :: Resetting #48: As Cavernas dos Homens Brancos (rooms 4800-4899).
+Aug 09 18:51:22 2021 :: Resetting #49: A Grande Árvore dos Inciantes (rooms 4900-4999).
+Aug 09 18:51:22 2021 :: Resetting #50: O Grande Deserto Oriental (rooms 5000-5099).
+Aug 09 18:51:22 2021 :: Resetting #51: Cidade Drow (rooms 5100-5199).
+Aug 09 18:51:22 2021 :: Resetting #52: A Cidade de Thalos (rooms 5200-5299).
+Aug 09 18:51:22 2021 :: Resetting #53: A Grande Pirâmide (rooms 5300-5399).
+Aug 09 18:51:22 2021 :: Resetting #54: Nova Thalos (rooms 5400-5699).
+Aug 09 18:51:22 2021 :: Resetting #57: Graye (rooms 5700-5799).
+Aug 09 18:51:22 2021 :: Resetting #59: O Altar de Sacrifícios de Raantra (rooms 5900-5999).
+Aug 09 18:51:22 2021 :: Resetting #60: Haon-Dor, Floresta Clara (rooms 6000-6099).
+Aug 09 18:51:22 2021 :: Resetting #61: Haon-Dor, Floresta Escura (rooms 6100-6199).
+Aug 09 18:51:22 2021 :: Resetting #62: A Planície dos Orcs (rooms 6200-6299).
+Aug 09 18:51:22 2021 :: Resetting #63: Arachnos (rooms 6300-6399).
+Aug 09 18:51:22 2021 :: Resetting #64: A Torre de Rand (rooms 6400-6499).
+Aug 09 18:51:22 2021 :: Resetting #65: O Reino dos Anoes (rooms 6500-6599).
+Aug 09 18:51:22 2021 :: Resetting #66: Vila de Nova Thalos (rooms 6600-6799).
+Aug 09 18:51:22 2021 :: Resetting #69: Os Templos de Anura (rooms 6900-6999).
+Aug 09 18:51:22 2021 :: Resetting #70: O Esgoto, Primeiro Nível (rooms 7000-7099).
+Aug 09 18:51:22 2021 :: Resetting #71: O Segundo Esgoto (rooms 7100-7199).
+Aug 09 18:51:22 2021 :: Resetting #72: O Esgoto Labirinto (rooms 7200-7299).
+Aug 09 18:51:22 2021 :: Resetting #73: Os Túneis nos Esgotos (rooms 7300-7399).
+Aug 09 18:51:22 2021 :: Resetting #75: Nos Domínios do Barão Darwin (rooms 7500-7599).
+Aug 09 18:51:22 2021 :: Resetting #79: A Residência de Redferne (rooms 7900-7999).
+Aug 09 18:51:22 2021 :: Resetting #81: Egito (rooms 8100-8299).
+Aug 09 18:51:22 2021 :: Resetting #83: A Aldeia Maldita (rooms 8300-8399).
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, um ardelune metálico
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: a nativa sentinela, uma draenan
+Aug 09 18:51:22 2021 :: Resetting #84: Valfenda (rooms 8400-8499).
+Aug 09 18:51:22 2021 :: Resetting #91: O Labirinto do Milharal (rooms 9100-9199).
+Aug 09 18:51:22 2021 :: Resetting #92: Os Cinco Reinos (rooms 9200-9299).
+Aug 09 18:51:22 2021 :: Resetting #93: Paraíso dos Dragões (rooms 9300-9399).
+Aug 09 18:51:22 2021 :: Resetting #94: Trilha do Destino (rooms 9400-9499).
+Aug 09 18:51:22 2021 :: Resetting #95: Galáxia (rooms 9500-9599).
+Aug 09 18:51:22 2021 :: Resetting #97: O Subterrâneo (rooms 9700-9799).
+Aug 09 18:51:22 2021 :: Resetting #98: O Abismo (rooms 9800-9899).
+Aug 09 18:51:22 2021 :: Resetting #99: Ghenna (rooms 9900-9999).
+Aug 09 18:51:22 2021 :: Resetting #100: A Vila de Mordecai (rooms 10000-10099).
+Aug 09 18:51:22 2021 :: Resetting #102: O Castelo de Jareth (rooms 10200-10299).
+Aug 09 18:51:22 2021 :: Resetting #103: A Selva de Makira (rooms 10300-10399).
+Aug 09 18:51:22 2021 :: Resetting #107: Otávia (rooms 10700-10799).
+Aug 09 18:51:22 2021 :: Resetting #108: A Cidade de Tróia (rooms 10800-10999).
+Aug 09 18:51:22 2021 :: Resetting #110: As Mesnadas de Vitália (rooms 11000-11099).
+Aug 09 18:51:22 2021 :: Resetting #111: O Reino das Pedras (rooms 11100-11199).
+Aug 09 18:51:22 2021 :: Resetting #113: Bhogavati, A Cidade das Jóias (rooms 11300-11399).
+Aug 09 18:51:22 2021 :: Resetting #114: A Fenda Entre Mundos (rooms 11400-11499).
+Aug 09 18:51:22 2021 :: Resetting #115: O Sétimo Mundo Oculto, Patala (rooms 11500-11599).
+Aug 09 18:51:22 2021 :: Resetting #116: Svarga, O Reino Celestial (rooms 11600-11799).
+Aug 09 18:51:22 2021 :: Resetting #120: Roma (rooms 12000-12099).
+Aug 09 18:51:22 2021 :: Resetting #121: O Labirinto do Minotauro (rooms 12100-12199).
+Aug 09 18:51:22 2021 :: Resetting #124: Vila de Nova Thalos (rooms 12400-12599).
+Aug 09 18:51:22 2021 :: Resetting #126: Escandinavia, a Terra do Gelo (rooms 12600-12899).
+Aug 09 18:51:22 2021 :: Resetting #131: Torin (rooms 13100-13199).
+Aug 09 18:51:22 2021 :: SYSERR: Char is already equipped: o guarda sagrado, a espada de Lorgeth
+Aug 09 18:51:22 2021 :: Resetting #132: O Farol da Praia (rooms 13200-13299).
+Aug 09 18:51:22 2021 :: Resetting #133: O Templo do Grande Búfalo (rooms 13300-13399).
+Aug 09 18:51:22 2021 :: Resetting #134: A Cidade de Thewster e A Caverna Escura (rooms 13400-13499).
+Aug 09 18:51:22 2021 :: Resetting #135: A Floresta Tropical de Thewster (rooms 13500-13599).
+Aug 09 18:51:22 2021 :: Resetting #136: A Floresta Leste de Thewster (rooms 13600-13699).
+Aug 09 18:51:22 2021 :: Resetting #137: Lothlórien (rooms 13700-13799).
+Aug 09 18:51:22 2021 :: Resetting #138: O Arquipélago de Yo (rooms 13800-13999).
+Aug 09 18:51:22 2021 :: Resetting #140: Lindrel (rooms 14000-14099).
+Aug 09 18:51:22 2021 :: Resetting #144: A Aldeia de Bri (rooms 14400-14499).
+Aug 09 18:51:22 2021 :: Resetting #145: O Condado (rooms 14500-14699).
+Aug 09 18:51:22 2021 :: Resetting #150: O Castelo do Rei Welmar (rooms 15000-15099).
+Aug 09 18:51:22 2021 :: Resetting #151: O Templo Samurai (rooms 15100-15199).
+Aug 09 18:51:22 2021 :: Resetting #155: O Moinho de Vento (rooms 15500-15599).
+Aug 09 18:51:22 2021 :: Resetting #157: O Castelo de Flyre (rooms 15700-15799).
+Aug 09 18:51:22 2021 :: Resetting #160: Os Estrategistas de Vitália (rooms 16000-16399).
+Aug 09 18:51:22 2021 :: Resetting #170: O Canyon dos Elementais (rooms 17000-17099).
+Aug 09 18:51:22 2021 :: Resetting #173: Camelot (rooms 17300-17399).
+Aug 09 18:51:22 2021 :: Resetting #176: O Império Chinês (rooms 17600-17999).
+Aug 09 18:51:22 2021 :: Resetting #181: Os Caminhos Iniciais (rooms 18100-18199).
+Aug 09 18:51:22 2021 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
+Aug 09 18:51:22 2021 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
+Aug 09 18:51:22 2021 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
+Aug 09 18:51:22 2021 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
+Aug 09 18:51:22 2021 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
+Aug 09 18:51:22 2021 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
+Aug 09 18:51:22 2021 :: Resetting #220: Anexo (rooms 22000-22099).
+Aug 09 18:51:22 2021 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
+Aug 09 18:51:22 2021 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
+Aug 09 18:51:22 2021 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
+Aug 09 18:51:22 2021 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
+Aug 09 18:51:22 2021 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
+Aug 09 18:51:22 2021 :: Boot db -- DONE.
+Aug 09 18:51:22 2021 :: Signal trapping.
+Aug 09 18:51:22 2021 :: Entering game loop.
+Aug 09 18:51:22 2021 :: No connections.  Going to sleep.
