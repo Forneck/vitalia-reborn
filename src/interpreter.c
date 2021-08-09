@@ -640,8 +640,8 @@ void command_interpreter(struct char_data *ch, char *argument)
 			do_cast(ch, line, 1, skill->vnum);
 			if (!*arg2)
 			{
-				output[4] = 0;
 				output[5] = 0;
+				output[6] = 0;
 			}
 			/* vitima eh mob */
 			if ((victim = get_char_vis(ch, arg2, NULL, FIND_CHAR_WORLD)) && IS_NPC(victim))
@@ -665,34 +665,36 @@ void command_interpreter(struct char_data *ch, char *argument)
 				obj = (float)  GET_OBJ_VNUM(object)/100000;
 			}
 			/* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos 
-			   o = cmd, arg = vnum -- forneck */
-			output[0] = ((float) cmd / 784);
-			output[1] = 1/(1+exp(-CMD_TYPE));
-			output[2] = (float) skill->vnum/MAX_SKILLS;
-			output[3] = 1/(1+exp(- CMD_ARG_SKILL));
+			   o = 0 é estado (xp-ac)cmd, arg = vnum -- forneck */
+           
+            output[0] = input[6]-input[11];
+			output[1] = ((float) cmd / 784);
+			output[2] = 1/(1+exp(-CMD_TYPE));
+			output[3] = (float) skill->vnum/MAX_SKILLS;
+			output[4] = 1/(1+exp(- CMD_ARG_SKILL));
 			if (type2 == 1)		/* mob */
 			{
-				output[4] = 1/(1+exp(-CMD_ARG_MOB));
-				output[5] = mob;
+				output[5] = 1/(1+exp(-CMD_ARG_MOB));
+				output[6] = mob;
 			}
 			else if (type2 == 2)	/* player */
 			{
-				output[4] =  1/(1+exp(-CMD_ARG_PLAYER));
-				output[5] = 1/(1+exp(-GET_IDNUM(victim)));
+				output[5] =  1/(1+exp(-CMD_ARG_PLAYER));
+				output[6] = 1/(1+exp(-GET_IDNUM(victim)));
 			}
 			else if (type2 == 3)
 			{
-				output[4] = 1/(1+exp(-CMD_ARG_OBJ));
-				output[5] = obj;
+				output[5] = 1/(1+exp(-CMD_ARG_OBJ));
+				output[6] = obj;
 			}
 			else {
-			   output[4] = output[5] = 0;
+			   output[5] = output[6] = 0;
 			}
 			if (GET_LEVEL(ch) < LVL_GOD){
 				dataset = fopen("dataset.txt", "a");
 				for (contador=0;contador<29;contador++)
 					fprintf(dataset,"%f ",input[contador]);
-				fprintf(dataset,"%f %f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
+				fprintf(dataset,"%f %f %f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5],output[6]);
 				fclose(dataset);
 			}
 			return;
@@ -757,37 +759,38 @@ void command_interpreter(struct char_data *ch, char *argument)
 		/* TODO: i= hp, maxhp, mana,maxmana,mov,maxmov,room vnum,class,pos o = 
 		   cmd, arg = (baseado no comando) -- forneck */
 	{
-		output[0] = ((float) cmd / 784);
-		output[1] = 1/(1+exp(-CMD_TYPE));
-	
+        output[0] = input[6]-input[11];
+		output[1] = ((float) cmd / 784);
+		output[2] = 1/(1+exp(-CMD_TYPE));
 		if (CMD_TYPE == (CMD_ONEARG))
 		{
 			output[3] = 1/(1+exp(-atoi(arg1)));
-			output[4] = output[5] = 0;
+			output[4] = output[5] = output[6] = 0;
 		}
 		if (!str_cmp(arg2, "fora") || !str_cmp(arg2, "out"))
 		{
-			output[4] = 1/(1+exp(-CMD_ARG_OUT));
-			output[5] = 0;
+			output[5] = 1/(1+exp(-CMD_ARG_OUT));
+			output[6] = 0;
 		}
 		if (!str_cmp("moedas", arg1) || !str_cmp("moeda", arg1))
 		{
-			output[2] = 1/(1+exp(-CMD_ARG_MONEY));
-			output[3] = 1/(1+exp(-atoi(arg1)));
+			output[3] = 1/(1+exp(-CMD_ARG_MONEY));
+			output[4] = 1/(1+exp(-atoi(arg1)));
+            output[5] = output[6] = 0;
 		}
 		if (!str_cmp("sky", arg1) || !str_cmp("ceu", arg1))
 		{
-			output[2] = 1/(1+exp(-CMD_ARG_SKY));
-			output[3] = 0;
+			output[3] = 1/(1+exp(-CMD_ARG_SKY));
 			output[4] = 0;
 			output[5] = 0;
+			output[6] = 0;
 		}
 			if (!str_cmp("all", arg1) || !str_cmp("tudo", arg1))
 		{
-			output[2] = 1/(1+exp(-CMD_ARG_ALL));
-			output[3] = 0;
+			output[3] = 1/(1+exp(-CMD_ARG_ALL));
 			output[4] = 0;
 			output[5] = 0;
+			output[6] = 0;
 		}
 		/* vitima eh player */
 		for (i = 0; i <= top_of_p_table; i++)
@@ -834,23 +837,23 @@ void command_interpreter(struct char_data *ch, char *argument)
 
 		if (type1 == 1)			/* mob */
 		{
-			output[2] = 1/(1+exp(-CMD_ARG_MOB));
-			output[3] = mob;
+			output[3] = 1/(1+exp(-CMD_ARG_MOB));
+			output[4] = mob;
 		}
 		else if (type1 == 2)	/* player */
 		{
-			output[2] = 1/(1+exp(-CMD_ARG_PLAYER));
-			output[3] = id_player;
+			output[3] = 1/(1+exp(-CMD_ARG_PLAYER));
+			output[4] = id_player;
 		}
 		else if (type1 == 3)
 		{
-			output[2] = 1/(1+exp(-CMD_ARG_OBJ));
-			output[3] = obj;
+			output[3] = 1/(1+exp(-CMD_ARG_OBJ));
+			output[4] = obj;
 		}
 		else
 		{
-			output[2] = 1/(1+exp(-CMD_ARG_DIR));
-			output[3] =1/(1+exp(-door));
+			output[3] = 1/(1+exp(-CMD_ARG_DIR));
+			output[4] =1/(1+exp(-door));
 		}
 
 		/* arg 2 */
@@ -899,41 +902,41 @@ void command_interpreter(struct char_data *ch, char *argument)
 	
 		if (!*arg2)
 		{
-			output[4] = 0;
 			output[5] = 0;
+			output[6] = 0;
 		}
 		else
 		{
 			if (type2 == 1)		/* mob */
 			{
-				output[4] = 1/(1+exp(-CMD_ARG_MOB));
-				output[5] = mob;
+				output[5] = 1/(1+exp(-CMD_ARG_MOB));
+				output[6] = mob;
 			}
 			else if (type2 == 2)	/* player */
 			{
-				output[4] = 1/(1+exp(-CMD_ARG_PLAYER));
-				output[5] = id_player;
+				output[5] = 1/(1+exp(-CMD_ARG_PLAYER));
+				output[6] = id_player;
 			}
 			else if (type2 == 3)
 			{
-				output[4] = 1/(1+exp(-CMD_ARG_OBJ));
-				output[5] = obj;
+				output[5] = 1/(1+exp(-CMD_ARG_OBJ));
+				output[6] = obj;
 			}
 			else 
 		{
-			output[4] = 1/(1+exp(-CMD_ARG_DIR));
-			output[5] =1/(1+exp(-door));
+			output[5] = 1/(1+exp(-CMD_ARG_DIR));
+			output[6] =1/(1+exp(-door));
 		}
 		}
 	if (CMD_TYPE == (CMD_NOARG))
 		{
-			output[2] = output[3] = output[4] = output[5] = 0;
+			output[3] = output[4] = output[5] = output[6] = 0;
 		}
 		if ((GET_LEVEL(ch) < LVL_GOD)&&!CMD_IS("suggestion")&&!CMD_IS("quit")&&!IS_MOVE(cmd)&&!PLR_FLAGGED(ch, PLR_AUTO) ){
 		  	dataset = fopen("dataset.txt", "a");
 		for (contador=0;contador<29;contador++)
 			fprintf(dataset,"%f ",input[contador]);
-		fprintf(dataset,"%f %f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5]);
+		fprintf(dataset,"%f %f %f %f %f %f %f\r\n",output[0],output[1],output[2],output[3],output[4],output[5],output[6]);
 		fclose(dataset);
 		}
 		
