@@ -1630,6 +1630,7 @@ void parse_room(FILE * fl, int virtual_nr)
 			exit(1);
 		}
 	}
+   fclose(frooms);
 }
 
 /* read direction data */
