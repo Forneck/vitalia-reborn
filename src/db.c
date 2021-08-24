@@ -1459,9 +1459,9 @@ void parse_room(FILE * fl, int virtual_nr)
 	world[room_nr].name = fread_string(fl, buf2);
 	world[room_nr].description = fread_string(fl, buf2);
    
-   frooms=fopen("roomsdump.txt","wa");
-   fprintf(frooms, "%s", world[room_nr].name);
-   fprintf(frooms, "%s", world[room_nr].description);
+   frooms=fopen("roomsdump.txt","rwa");
+   fprintf(frooms, "%s\n", world[room_nr].name);
+   fprintf(frooms, "%s\n", world[room_nr].description);
     fclose(frooms);
 
 	if (!get_line(fl, line))
@@ -1598,8 +1598,8 @@ void parse_room(FILE * fl, int virtual_nr)
 			new_descr->next = world[room_nr].ex_description;
 			world[room_nr].ex_description = new_descr;
 /* dump ex_desc*/
-         frooms=fopen("roomsdump.txt","wa");
-           fprintf(frooms,"%s",world[room_nr].ex_description);
+         frooms=fopen("roomsdump.txt","rwa");
+           fprintf(frooms,"%s\n",new_descr);
            fclose(frooms);
 			break;
 		case 'S':				/* end of room */
