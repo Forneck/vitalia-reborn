@@ -1438,10 +1438,7 @@ void parse_room(FILE * fl, int virtual_nr)
 	int subzone;
 	/* This really had better fit or there are other problems. */
 	snprintf(buf2, sizeof(buf2), "room #%d", virtual_nr);
-    /*temp dump of rooms text*/
-   FILE *frooms;
    
-
 	if (virtual_nr < zone_table[zone].bot)
 	{
 		log1("SYSERR: Room #%d is below zone %d (bot=%d, top=%d).", virtual_nr,
@@ -1458,11 +1455,6 @@ void parse_room(FILE * fl, int virtual_nr)
 	world[room_nr].number = virtual_nr;
 	world[room_nr].name = fread_string(fl, buf2);
 	world[room_nr].description = fread_string(fl, buf2);
-   
-   frooms=fopen("../roomsdump.txt","a");
-   fprintf(frooms, "%s\n", world[room_nr].name);
-   fprintf(frooms, "%s\n", world[room_nr].description);
-    fclose(frooms);
 
 	if (!get_line(fl, line))
 	{
