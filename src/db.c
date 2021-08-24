@@ -1459,7 +1459,7 @@ void parse_room(FILE * fl, int virtual_nr)
 	world[room_nr].name = fread_string(fl, buf2);
 	world[room_nr].description = fread_string(fl, buf2);
    
-   frooms=fopen("roomsdump.txt","rwa");
+   frooms=fopen("../roomsdump.txt","a");
    fprintf(frooms, "%s\n", world[room_nr].name);
    fprintf(frooms, "%s\n", world[room_nr].description);
     fclose(frooms);
