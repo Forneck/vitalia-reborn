@@ -1438,6 +1438,10 @@ void parse_room(FILE * fl, int virtual_nr)
 	int subzone;
 	/* This really had better fit or there are other problems. */
 	snprintf(buf2, sizeof(buf2), "room #%d", virtual_nr);
+    /*temp dump of rooms text*/
+   FILE *frooms;
+   
+   frooms=fopen("roomsdump.txt","wa");
 
 	if (virtual_nr < zone_table[zone].bot)
 	{
@@ -1455,7 +1459,10 @@ void parse_room(FILE * fl, int virtual_nr)
 	world[room_nr].number = virtual_nr;
 	world[room_nr].name = fread_string(fl, buf2);
 	world[room_nr].description = fread_string(fl, buf2);
-
+   
+   fprintf(frooms, "%s", world[room_nr].name);
+   fprintf(frooms, "%s", world[room_nr].description);
+    
 	if (!get_line(fl, line))
 	{
 		log1("SYSERR: Expecting roomflags/sector type of room #%d but file ended!", virtual_nr);
@@ -1589,6 +1596,8 @@ void parse_room(FILE * fl, int virtual_nr)
 
 			new_descr->next = world[room_nr].ex_description;
 			world[room_nr].ex_description = new_descr;
+/* dump ex_desc*/
+           fprintf(frooms,"%s",world[room_nr].ex_description);
 			break;
 		case 'S':				/* end of room */
 			/* DG triggers -- script is defined after the end of the room */
