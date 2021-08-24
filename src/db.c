@@ -1597,10 +1597,6 @@ void parse_room(FILE * fl, int virtual_nr)
 
 			new_descr->next = world[room_nr].ex_description;
 			world[room_nr].ex_description = new_descr;
-/* dump ex_desc*/
-         frooms=fopen("roomsdump.txt","rwa");
-           fprintf(frooms,"%s\n",fread_string(fl, buf2));
-           fclose(frooms);
 			break;
 		case 'S':				/* end of room */
 			/* DG triggers -- script is defined after the end of the room */
