@@ -5,20 +5,20 @@ configure:540: checking for less
 configure:573: checking for gcc
 configure:686: checking whether the C compiler (gcc  ) works
 configure:702: gcc -o conftest    conftest.c  1>&5
-configure:699:1: warning: return type defaults to 'int' [-Wimplicit-int]
- main(){return(0);}
- ^~~~
+configure:699:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main(){return(0);}
+^
+1 warning generated.
 configure:728: checking whether the C compiler (gcc  ) is a cross-compiler
 configure:733: checking whether we are using GNU C
 configure:742: gcc -E conftest.c
 configure:761: checking whether gcc accepts -g
 configure:796: checking whether gcc -Wall also needs -Wno-char-subscripts
 configure:815: gcc -c -g -O2 -Wall -Werror  conftest.c 1>&5
-configure: In function 'main':
-configure:807:6: error: variable 'i' set but not used [-Werror=unused-but-set-variable]
-  int i; char c = '0';
-      ^
-cc1: all warnings being treated as errors
+configure:807:6: error: variable 'i' set but not used [-Werror,-Wunused-but-set-variable]
+ int i; char c = '0';
+     ^
+1 error generated.
 configure: failed program was:
 #line 804 "configure"
 #include "confdefs.h"
@@ -40,14 +40,17 @@ configure:1001: checking for socket
 configure:1029: gcc -o conftest -g -O2   conftest.c  1>&5
 configure:1090: checking for malloc
 configure:1118: gcc -o conftest -g -O2   conftest.c  1>&5
-configure:1102:6: warning: conflicting types for built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
- char malloc();
-      ^~~~~~
+configure:1102:6: warning: incompatible redeclaration of library function 'malloc' [-Wincompatible-library-redeclaration]
+char malloc();
+     ^
+configure:1102:6: note: 'malloc' is a builtin with type 'void *(unsigned long)'
+1 warning generated.
 configure:1186: checking for crypt
 configure:1214: gcc -o conftest -g -O2   conftest.c  1>&5
-/tmp/ccSBGdgr.o: In function `main':
-/root/vitalia-reborn/configure:1208: undefined reference to `crypt'
-collect2: error: ld returned 1 exit status
+ld.lld: error: undefined symbol: crypt
+>>> referenced by configure:1208
+>>>               /data/data/com.termux/files/usr/tmp/conftest-5a1966.o:(main)
+clang-13: error: linker command failed with exit code 1 (use -v to see invocation)
 configure: failed program was:
 #line 1191 "configure"
 #include "confdefs.h"
@@ -78,16 +81,11 @@ configure:1303: gcc -E  conftest.c >/dev/null 2>conftest.out
 configure:1362: checking for ANSI C header files
 configure:1375: gcc -E  conftest.c >/dev/null 2>conftest.out
 configure:1442: gcc -o conftest -g -O2   conftest.c  1>&5
-configure: In function 'main':
-configure:1437:67: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]
- if (XOR (islower (i), ISLOWER (i)) || toupper (i) != TOUPPER (i)) exit(2);
-                                                                   ^~~~
-configure:1437:67: warning: incompatible implicit declaration of built-in function 'exit'
-configure:1437:67: note: include '<stdlib.h>' or provide a declaration of 'exit'
-configure:1438:1: warning: incompatible implicit declaration of built-in function 'exit'
- exit (0); }
- ^~~~
-configure:1438:1: note: include '<stdlib.h>' or provide a declaration of 'exit'
+configure:1437:67: warning: implicitly declaring library function 'exit' with type 'void (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+if (XOR (islower (i), ISLOWER (i)) || toupper (i) != TOUPPER (i)) exit(2);
+                                                                  ^
+configure:1437:67: note: include the header <stdlib.h> or explicitly provide a declaration for 'exit'
+1 warning generated.
 configure:1466: checking for sys/wait.h that is POSIX.1 compatible
 configure:1487: gcc -c -g -O2  conftest.c 1>&5
 configure:1511: checking for fcntl.h
@@ -98,10 +96,10 @@ configure:1511: checking for errno.h
 configure:1521: gcc -E  conftest.c >/dev/null 2>conftest.out
 configure:1511: checking for net/errno.h
 configure:1521: gcc -E  conftest.c >/dev/null 2>conftest.out
-configure:1517:10: fatal error: net/errno.h: No such file or directory
- #include <$ac_hdr>
-          ^~~~~~~~~    
-compilation terminated.
+configure:1517:10: fatal error: 'net/errno.h' file not found
+#include <net/errno.h>
+         ^~~~~~~~~~~~~
+1 error generated.
 configure: failed program was:
 #line 1516 "configure"
 #include "confdefs.h"
@@ -146,18 +144,21 @@ configure:1671: checking for sys/uio.h
 configure:1681: gcc -E  conftest.c >/dev/null 2>conftest.out
 configure:1671: checking for mcheck.h
 configure:1681: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1677:10: fatal error: 'mcheck.h' file not found
+#include <mcheck.h>
+         ^~~~~~~~~~
+1 error generated.
+configure: failed program was:
+#line 1676 "configure"
+#include "confdefs.h"
+#include <mcheck.h>
 configure:1710: checking whether crypt needs over 10 characters
 configure:1749: gcc -o conftest -g -O2   conftest.c -lcrypt  1>&5
-configure: In function 'main':
-configure:1742:5: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]
-     exit(0);
-     ^~~~
-configure:1742:5: warning: incompatible implicit declaration of built-in function 'exit'
-configure:1742:5: note: include '<stdlib.h>' or provide a declaration of 'exit'
-configure:1743:3: warning: incompatible implicit declaration of built-in function 'exit'
-   exit(1);
-   ^~~~
-configure:1743:3: note: include '<stdlib.h>' or provide a declaration of 'exit'
+configure:1742:5: warning: implicitly declaring library function 'exit' with type 'void (int) __attribute__((noreturn))' [-Wimplicit-function-declaration]
+    exit(0);
+    ^
+configure:1742:5: note: include the header <stdlib.h> or explicitly provide a declaration for 'exit'
+1 warning generated.
 configure: failed program was:
 #line 1726 "configure"
 #include "confdefs.h"
@@ -190,41 +191,61 @@ configure:1950: checking whether time.h and sys/time.h may both be included
 configure:1964: gcc -c -g -O2  conftest.c 1>&5
 configure:1999: checking for struct in_addr
 configure:2011: gcc -c -g -O2  conftest.c 1>&5
+configure:2008:23: warning: expression result unused [-Wunused-value]
+struct in_addr tp; tp.s_addr;
+                   ~~ ^~~~~~
+1 warning generated.
 configure:2038: checking for typedef socklen_t
 configure:2050: gcc -c -g -O2  conftest.c 1>&5
 configure:2074: checking return type of signal handlers
 configure:2096: gcc -c -g -O2  conftest.c 1>&5
 configure:2115: checking for vprintf
 configure:2143: gcc -o conftest -g -O2   conftest.c  1>&5
-configure:2127:6: warning: conflicting types for built-in function 'vprintf' [-Wbuiltin-declaration-mismatch]
- char vprintf();
-      ^~~~~~~
+configure:2127:6: warning: incompatible redeclaration of library function 'vprintf' [-Wincompatible-library-redeclaration]
+char vprintf();
+     ^
+configure:2127:6: note: 'vprintf' is a builtin with type 'int (const char *, __builtin_va_list)'
+1 warning generated.
 configure:2222: checking for gettimeofday
 configure:2250: gcc -o conftest -g -O2   conftest.c  1>&5
 configure:2222: checking for select
 configure:2250: gcc -o conftest -g -O2   conftest.c  1>&5
 configure:2222: checking for snprintf
 configure:2250: gcc -o conftest -g -O2   conftest.c  1>&5
-configure:2234:6: warning: conflicting types for built-in function 'snprintf' [-Wbuiltin-declaration-mismatch]
- char $ac_func();
-      ^~~~~~~~
+configure:2234:6: warning: incompatible redeclaration of library function 'snprintf' [-Wincompatible-library-redeclaration]
+char snprintf();
+     ^
+configure:2234:6: note: 'snprintf' is a builtin with type 'int (char *, unsigned long, const char *, ...)'
+1 warning generated.
 configure:2222: checking for strcasecmp
 configure:2250: gcc -o conftest -g -O2   conftest.c  1>&5
-configure:2234:6: warning: conflicting types for built-in function 'strcasecmp' [-Wbuiltin-declaration-mismatch]
- char $ac_func();
-      ^~~~~~~~~~
+configure:2234:6: warning: incompatible redeclaration of library function 'strcasecmp' [-Wincompatible-library-redeclaration]
+char strcasecmp();
+     ^
+configure:2234:6: note: 'strcasecmp' is a builtin with type 'int (const char *, const char *)'
+1 warning generated.
 configure:2222: checking for strdup
 configure:2250: gcc -o conftest -g -O2   conftest.c  1>&5
-configure:2234:6: warning: conflicting types for built-in function 'strdup' [-Wbuiltin-declaration-mismatch]
- char $ac_func();
-      ^~~~~~
+configure:2234:6: warning: incompatible redeclaration of library function 'strdup' [-Wincompatible-library-redeclaration]
+char strdup();
+     ^
+configure:2234:6: note: 'strdup' is a builtin with type 'char *(const char *)'
+1 warning generated.
 configure:2222: checking for strerror
 configure:2250: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:2234:6: warning: incompatible redeclaration of library function 'strerror' [-Wincompatible-library-redeclaration]
+char strerror();
+     ^
+configure:2234:6: note: 'strerror' is a builtin with type 'char *(int)'
+1 warning generated.
 configure:2222: checking for stricmp
 configure:2250: gcc -o conftest -g -O2   conftest.c  1>&5
-/tmp/ccE9OuYY.o: In function `main':
-/root/vitalia-reborn/configure:2244: undefined reference to `stricmp'
-collect2: error: ld returned 1 exit status
+ld.lld: error: undefined symbol: stricmp
+>>> referenced by configure:2244
+>>>               /data/data/com.termux/files/usr/tmp/conftest-c1de79.o:(main)
+>>> did you mean: strncmp
+>>> defined in: /system/lib64/libc.so
+clang-13: error: linker command failed with exit code 1 (use -v to see invocation)
 configure: failed program was:
 #line 2227 "configure"
 #include "confdefs.h"
@@ -250,42 +271,26 @@ stricmp();
 ; return 0; }
 configure:2222: checking for strlcpy
 configure:2250: gcc -o conftest -g -O2   conftest.c  1>&5
-/tmp/ccfHpz53.o: In function `main':
-/root/vitalia-reborn/configure:2244: undefined reference to `strlcpy'
-collect2: error: ld returned 1 exit status
-configure: failed program was:
-#line 2227 "configure"
-#include "confdefs.h"
-/* System header to define __stub macros and hopefully few prototypes,
-    which can conflict with char strlcpy(); below.  */
-#include <assert.h>
-/* Override any gcc2 internal prototype to avoid an error.  */
-/* We use char because int might match the return type of a gcc2
-    builtin and then its argument prototype would still apply.  */
+configure:2234:6: warning: incompatible redeclaration of library function 'strlcpy' [-Wincompatible-library-redeclaration]
 char strlcpy();
-
-int main() {
-
-/* The GNU C library defines this for functions which it implements
-    to always fail with ENOSYS.  Some functions are actually named
-    something starting with __ and the normal name is an alias.  */
-#if defined (__stub_strlcpy) || defined (__stub___strlcpy)
-choke me
-#else
-strlcpy();
-#endif
-
-; return 0; }
+     ^
+configure:2234:6: note: 'strlcpy' is a builtin with type 'unsigned long (char *, const char *, unsigned long)'
+1 warning generated.
 configure:2222: checking for strncasecmp
 configure:2250: gcc -o conftest -g -O2   conftest.c  1>&5
-configure:2234:6: warning: conflicting types for built-in function 'strncasecmp' [-Wbuiltin-declaration-mismatch]
- char $ac_func();
-      ^~~~~~~~~~~
+configure:2234:6: warning: incompatible redeclaration of library function 'strncasecmp' [-Wincompatible-library-redeclaration]
+char strncasecmp();
+     ^
+configure:2234:6: note: 'strncasecmp' is a builtin with type 'int (const char *, const char *, unsigned long)'
+1 warning generated.
 configure:2222: checking for strnicmp
 configure:2250: gcc -o conftest -g -O2   conftest.c  1>&5
-/tmp/ccgElqQb.o: In function `main':
-/root/vitalia-reborn/configure:2244: undefined reference to `strnicmp'
-collect2: error: ld returned 1 exit status
+ld.lld: error: undefined symbol: strnicmp
+>>> referenced by configure:2244
+>>>               /data/data/com.termux/files/usr/tmp/conftest-f34179.o:(main)
+>>> did you mean: strncmp
+>>> defined in: /system/lib64/libc.so
+clang-13: error: linker command failed with exit code 1 (use -v to see invocation)
 configure: failed program was:
 #line 2227 "configure"
 #include "confdefs.h"
@@ -311,14 +316,18 @@ strnicmp();
 ; return 0; }
 configure:2222: checking for strstr
 configure:2250: gcc -o conftest -g -O2   conftest.c  1>&5
-configure:2234:6: warning: conflicting types for built-in function 'strstr' [-Wbuiltin-declaration-mismatch]
- char $ac_func();
-      ^~~~~~
+configure:2234:6: warning: incompatible redeclaration of library function 'strstr' [-Wincompatible-library-redeclaration]
+char strstr();
+     ^
+configure:2234:6: note: 'strstr' is a builtin with type 'char *(const char *, const char *)'
+1 warning generated.
 configure:2222: checking for vsnprintf
 configure:2250: gcc -o conftest -g -O2   conftest.c  1>&5
-configure:2234:6: warning: conflicting types for built-in function 'vsnprintf' [-Wbuiltin-declaration-mismatch]
- char $ac_func();
-      ^~~~~~~~~
+configure:2234:6: warning: incompatible redeclaration of library function 'vsnprintf' [-Wincompatible-library-redeclaration]
+char vsnprintf();
+     ^
+configure:2234:6: note: 'vsnprintf' is a builtin with type 'int (char *, unsigned long, const char *, __builtin_va_list)'
+1 warning generated.
 configure:2280: checking for inet_addr
 configure:2308: gcc -o conftest -g -O2   conftest.c   1>&5
 configure:2280: checking for inet_aton
@@ -326,13 +335,12 @@ configure:2308: gcc -o conftest -g -O2   conftest.c   1>&5
 configure:2338: checking if accept is prototyped
 configure:2364: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:2357:6: error: conflicting types for 'accept'
- void accept(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from src/sysdep.h:195:0,
-                 from configure:2353:
-/usr/include/x86_64-linux-gnu/sys/socket.h:232:12: note: previous declaration of 'accept' was here
- extern int accept (int __fd, __SOCKADDR_ARG __addr,
-            ^~~~~~
+void accept(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/sys/socket.h:305:18: note: previous declaration is here
+__socketcall int accept(int __fd, struct sockaddr* __addr, socklen_t* __addr_length);
+                 ^
+1 error generated.
 configure: failed program was:
 #line 2348 "configure"
 #include "confdefs.h"
@@ -352,16 +360,12 @@ int main() {
 configure:2395: checking if atoi is prototyped
 configure:2421: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:2414:6: error: conflicting types for 'atoi'
- void atoi(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~
-In file included from /usr/include/features.h:424:0,
-                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
-                 from /usr/include/stdio.h:27,
-                 from src/sysdep.h:69,
-                 from configure:2410:
-/usr/include/stdlib.h:361:1: note: previous definition of 'atoi' was here
- __NTH (atoi (const char *__nptr))
- ^
+void atoi(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdlib.h:118:5: note: previous declaration is here
+int atoi(const char* __s) __attribute_pure__;
+    ^
+1 error generated.
 configure: failed program was:
 #line 2405 "configure"
 #include "confdefs.h"
@@ -381,16 +385,12 @@ int main() {
 configure:2452: checking if atol is prototyped
 configure:2478: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:2471:6: error: conflicting types for 'atol'
- void atol(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~
-In file included from /usr/include/features.h:424:0,
-                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
-                 from /usr/include/stdio.h:27,
-                 from src/sysdep.h:69,
-                 from configure:2467:
-/usr/include/stdlib.h:366:1: note: previous definition of 'atol' was here
- __NTH (atol (const char *__nptr))
- ^
+void atol(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdlib.h:119:6: note: previous declaration is here
+long atol(const char* __s) __attribute_pure__;
+     ^
+1 error generated.
 configure: failed program was:
 #line 2462 "configure"
 #include "confdefs.h"
@@ -410,13 +410,12 @@ int main() {
 configure:2509: checking if bind is prototyped
 configure:2535: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:2528:6: error: conflicting types for 'bind'
- void bind(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~
-In file included from src/sysdep.h:195:0,
-                 from configure:2524:
-/usr/include/x86_64-linux-gnu/sys/socket.h:112:12: note: previous declaration of 'bind' was here
- extern int bind (int __fd, __CONST_SOCKADDR_ARG __addr, socklen_t __len)
-            ^~~~
+void bind(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/sys/socket.h:311:18: note: previous declaration is here
+__socketcall int bind(int __fd, const struct sockaddr* __addr, socklen_t __addr_length);
+                 ^
+1 error generated.
 configure: failed program was:
 #line 2519 "configure"
 #include "confdefs.h"
@@ -435,17 +434,19 @@ int main() {
 ; return 0; }
 configure:2566: checking if bzero is prototyped
 configure:2592: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
-configure:2585:6: error: conflicting types for 'bzero'
- void bzero(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~
-In file included from /usr/include/features.h:424:0,
-                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
-                 from /usr/include/stdio.h:27,
-                 from src/sysdep.h:69,
-                 from configure:2581:
-/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:29:1: note: previous definition of 'bzero' was here
- __NTH (bzero (void *__dest, size_t __len))
- ^
+configure:2583:3: error: unknown type name 'error'
+  error - already defined!
+  ^
+configure:2583:9: error: expected identifier or '('
+  error - already defined!
+        ^
+configure:2585:27: error: too many arguments provided to function-like macro invocation
+void bzero(int a, char b, int c, char d, int e, char f, int g, char h);
+                          ^
+/data/data/com.termux/files/usr/include/strings.h:69:9: note: macro 'bzero' defined here
+#define bzero(b, len) __bionic_bzero((b), (len))
+        ^
+3 errors generated.
 configure: failed program was:
 #line 2576 "configure"
 #include "confdefs.h"
@@ -465,15 +466,12 @@ int main() {
 configure:2623: checking if chdir is prototyped
 configure:2649: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:2642:6: error: conflicting types for 'chdir'
- void chdir(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~
-In file included from /usr/include/zconf.h:475:0,
-                 from /usr/include/zlib.h:34,
-                 from src/sysdep.h:72,
-                 from configure:2638:
-/usr/include/unistd.h:500:12: note: previous declaration of 'chdir' was here
- extern int chdir (const char *__path) __THROW __nonnull ((1)) __wur;
-            ^~~~~
+void chdir(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/unistd.h:232:5: note: previous declaration is here
+int chdir(const char* __path);
+    ^
+1 error generated.
 configure: failed program was:
 #line 2633 "configure"
 #include "confdefs.h"
@@ -493,15 +491,12 @@ int main() {
 configure:2680: checking if close is prototyped
 configure:2706: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:2699:6: error: conflicting types for 'close'
- void close(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~
-In file included from /usr/include/zconf.h:475:0,
-                 from /usr/include/zlib.h:34,
-                 from src/sysdep.h:72,
-                 from configure:2695:
-/usr/include/unistd.h:356:12: note: previous declaration of 'close' was here
- extern int close (int __fd);
-            ^~~~~
+void close(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/unistd.h:268:5: note: previous declaration is here
+int close(int __fd);
+    ^
+1 error generated.
 configure: failed program was:
 #line 2690 "configure"
 #include "confdefs.h"
@@ -521,13 +516,12 @@ int main() {
 configure:2737: checking if crypt is prototyped
 configure:2763: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:2756:6: error: conflicting types for 'crypt'
- void crypt(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~
-In file included from src/sysdep.h:156:0,
-                 from configure:2752:
-/usr/include/crypt.h:32:14: note: previous declaration of 'crypt' was here
- extern char *crypt (const char *__key, const char *__salt)
-              ^~~~~
+void crypt(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/crypt.h:8:7: note: previous declaration is here
+char* crypt(const char* key, const char* salt);
+      ^
+1 error generated.
 configure: failed program was:
 #line 2747 "configure"
 #include "confdefs.h"
@@ -547,13 +541,12 @@ int main() {
 configure:2794: checking if fclose is prototyped
 configure:2820: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:2813:6: error: conflicting types for 'fclose'
- void fclose(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from src/sysdep.h:69:0,
-                 from configure:2809:
-/usr/include/stdio.h:199:12: note: previous declaration of 'fclose' was here
- extern int fclose (FILE *__stream);
-            ^~~~~~
+void fclose(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:110:5: note: previous declaration is here
+int fclose(FILE* __fp);
+    ^
+1 error generated.
 configure: failed program was:
 #line 2804 "configure"
 #include "confdefs.h"
@@ -573,13 +566,12 @@ int main() {
 configure:2851: checking if fcntl is prototyped
 configure:2877: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:2870:6: error: conflicting types for 'fcntl'
- void fcntl(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~
-In file included from src/sysdep.h:187:0,
-                 from configure:2866:
-/usr/include/fcntl.h:147:12: note: previous declaration of 'fcntl' was here
- extern int fcntl (int __fd, int __cmd, ...);
-            ^~~~~
+void fcntl(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/bits/fcntl.h:46:5: note: previous declaration is here
+int fcntl(int __fd, int __cmd, ...);
+    ^
+1 error generated.
 configure: failed program was:
 #line 2861 "configure"
 #include "confdefs.h"
@@ -599,13 +591,12 @@ int main() {
 configure:2908: checking if fflush is prototyped
 configure:2934: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:2927:6: error: conflicting types for 'fflush'
- void fflush(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from src/sysdep.h:69:0,
-                 from configure:2923:
-/usr/include/stdio.h:204:12: note: previous declaration of 'fflush' was here
- extern int fflush (FILE *__stream);
-            ^~~~~~
+void fflush(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:113:5: note: previous declaration is here
+int fflush(FILE* __fp);
+    ^
+1 error generated.
 configure: failed program was:
 #line 2918 "configure"
 #include "confdefs.h"
@@ -625,14 +616,12 @@ int main() {
 configure:2965: checking if fprintf is prototyped
 configure:2991: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:2984:6: error: conflicting types for 'fprintf'
- void fprintf(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~
-In file included from /usr/include/stdio.h:862:0,
-                 from src/sysdep.h:69,
-                 from configure:2980:
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:95:1: note: previous definition of 'fprintf' was here
- fprintf (FILE *__restrict __stream, const char *__restrict __fmt, ...)
- ^~~~~~~
+void fprintf(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:116:5: note: previous declaration is here
+int fprintf(FILE* __fp , const char* __fmt, ...) __printflike(2, 3);
+    ^
+1 error generated.
 configure: failed program was:
 #line 2975 "configure"
 #include "confdefs.h"
@@ -652,13 +641,12 @@ int main() {
 configure:3022: checking if fputc is prototyped
 configure:3048: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3041:6: error: conflicting types for 'fputc'
- void fputc(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~
-In file included from src/sysdep.h:69:0,
-                 from configure:3037:
-/usr/include/stdio.h:517:12: note: previous declaration of 'fputc' was here
- extern int fputc (int __c, FILE *__stream);
-            ^~~~~
+void fputc(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:117:5: note: previous declaration is here
+int fputc(int __ch, FILE* __fp);
+    ^
+1 error generated.
 configure: failed program was:
 #line 3032 "configure"
 #include "confdefs.h"
@@ -678,13 +666,12 @@ int main() {
 configure:3079: checking if fputs is prototyped
 configure:3105: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3098:6: error: conflicting types for 'fputs'
- void fputs(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~
-In file included from src/sysdep.h:69:0,
-                 from configure:3094:
-/usr/include/stdio.h:626:12: note: previous declaration of 'fputs' was here
- extern int fputs (const char *__restrict __s, FILE *__restrict __stream);
-            ^~~~~
+void fputs(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:118:5: note: previous declaration is here
+int fputs(const char* __s, FILE* __fp);
+    ^
+1 error generated.
 configure: failed program was:
 #line 3089 "configure"
 #include "confdefs.h"
@@ -704,14 +691,12 @@ int main() {
 configure:3136: checking if fread is prototyped
 configure:3162: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3155:6: error: conflicting types for 'fread'
- void fread(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~
-In file included from /usr/include/stdio.h:862:0,
-                 from src/sysdep.h:69,
-                 from configure:3151:
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:281:1: note: previous definition of 'fread' was here
- fread (void *__restrict __ptr, size_t __size, size_t __n,
- ^~~~~
+void fread(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:119:8: note: previous declaration is here
+size_t fread(void* __buf, size_t __size, size_t __count, FILE* __fp);
+       ^
+1 error generated.
 configure: failed program was:
 #line 3146 "configure"
 #include "confdefs.h"
@@ -731,16 +716,12 @@ int main() {
 configure:3193: checking if fscanf is prototyped
 configure:3219: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3212:6: error: conflicting types for 'fscanf'
- void fscanf(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from /usr/include/features.h:424:0,
-                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
-                 from /usr/include/stdio.h:27,
-                 from src/sysdep.h:69,
-                 from configure:3208:
-/usr/include/stdio.h:395:12: note: previous declaration of 'fscanf' was here
- extern int __REDIRECT (fscanf, (FILE *__restrict __stream,
-            ^
+void fscanf(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:120:5: note: previous declaration is here
+int fscanf(FILE* __fp, const char* __fmt, ...) __scanflike(2, 3);
+    ^
+1 error generated.
 configure: failed program was:
 #line 3203 "configure"
 #include "confdefs.h"
@@ -760,13 +741,12 @@ int main() {
 configure:3250: checking if fseek is prototyped
 configure:3276: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3269:6: error: conflicting types for 'fseek'
- void fseek(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~
-In file included from src/sysdep.h:69:0,
-                 from configure:3265:
-/usr/include/stdio.h:684:12: note: previous declaration of 'fseek' was here
- extern int fseek (FILE *__stream, long int __off, int __whence);
-            ^~~~~
+void fseek(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:226:5: note: previous declaration is here
+int fseek(FILE* __fp, long __offset, int __whence);
+    ^
+1 error generated.
 configure: failed program was:
 #line 3260 "configure"
 #include "confdefs.h"
@@ -786,13 +766,12 @@ int main() {
 configure:3307: checking if fwrite is prototyped
 configure:3333: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3326:6: error: conflicting types for 'fwrite'
- void fwrite(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from src/sysdep.h:69:0,
-                 from configure:3322:
-/usr/include/stdio.h:652:15: note: previous declaration of 'fwrite' was here
- extern size_t fwrite (const void *__restrict __ptr, size_t __size,
-               ^~~~~~
+void fwrite(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:121:8: note: previous declaration is here
+size_t fwrite(const void* __buf, size_t __size, size_t __count, FILE* __fp);
+       ^
+1 error generated.
 configure: failed program was:
 #line 3317 "configure"
 #include "confdefs.h"
@@ -812,13 +791,12 @@ int main() {
 configure:3364: checking if getpeername is prototyped
 configure:3390: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3383:6: error: conflicting types for 'getpeername'
- void getpeername(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~~~
-In file included from src/sysdep.h:195:0,
-                 from configure:3379:
-/usr/include/x86_64-linux-gnu/sys/socket.h:130:12: note: previous declaration of 'getpeername' was here
- extern int getpeername (int __fd, __SOCKADDR_ARG __addr,
-            ^~~~~~~~~~~
+void getpeername(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/sys/socket.h:313:18: note: previous declaration is here
+__socketcall int getpeername(int __fd, struct sockaddr* __addr, socklen_t* __addr_length);
+                 ^
+1 error generated.
 configure: failed program was:
 #line 3374 "configure"
 #include "confdefs.h"
@@ -838,15 +816,12 @@ int main() {
 configure:3421: checking if getpid is prototyped
 configure:3447: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3440:6: error: conflicting types for 'getpid'
- void getpid(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from /usr/include/zconf.h:475:0,
-                 from /usr/include/zlib.h:34,
-                 from src/sysdep.h:72,
-                 from configure:3436:
-/usr/include/unistd.h:631:16: note: previous declaration of 'getpid' was here
- extern __pid_t getpid (void) __THROW;
-                ^~~~~~
+void getpid(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/unistd.h:82:8: note: previous declaration is here
+pid_t  getpid(void);
+       ^
+1 error generated.
 configure: failed program was:
 #line 3431 "configure"
 #include "confdefs.h"
@@ -866,13 +841,12 @@ int main() {
 configure:3478: checking if getrlimit is prototyped
 configure:3504: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3497:6: error: conflicting types for 'getrlimit'
- void getrlimit(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~
-In file included from src/sysdep.h:199:0,
-                 from configure:3493:
-/usr/include/x86_64-linux-gnu/sys/resource.h:50:12: note: previous declaration of 'getrlimit' was here
- extern int getrlimit (__rlimit_resource_t __resource,
-            ^~~~~~~~~
+void getrlimit(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/sys/resource.h:45:5: note: previous declaration is here
+int getrlimit(int __resource, struct rlimit* __limit);
+    ^
+1 error generated.
 configure: failed program was:
 #line 3488 "configure"
 #include "confdefs.h"
@@ -892,13 +866,12 @@ int main() {
 configure:3535: checking if getsockname is prototyped
 configure:3561: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3554:6: error: conflicting types for 'getsockname'
- void getsockname(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~~~
-In file included from src/sysdep.h:195:0,
-                 from configure:3550:
-/usr/include/x86_64-linux-gnu/sys/socket.h:116:12: note: previous declaration of 'getsockname' was here
- extern int getsockname (int __fd, __SOCKADDR_ARG __addr,
-            ^~~~~~~~~~~
+void getsockname(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/sys/socket.h:314:18: note: previous declaration is here
+__socketcall int getsockname(int __fd, struct sockaddr* __addr, socklen_t* __addr_length);
+                 ^
+1 error generated.
 configure: failed program was:
 #line 3545 "configure"
 #include "confdefs.h"
@@ -918,13 +891,12 @@ int main() {
 configure:3592: checking if gettimeofday is prototyped
 configure:3618: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3611:6: error: conflicting types for 'gettimeofday'
- void gettimeofday(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~~~~
-In file included from src/sysdep.h:160:0,
-                 from configure:3607:
-/usr/include/x86_64-linux-gnu/sys/time.h:68:12: note: previous declaration of 'gettimeofday' was here
- extern int gettimeofday (struct timeval *__restrict __tv,
-            ^~~~~~~~~~~~
+void gettimeofday(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/sys/time.h:41:5: note: previous declaration is here
+int gettimeofday(struct timeval* __tv, struct timezone* __tz);
+    ^
+1 error generated.
 configure: failed program was:
 #line 3602 "configure"
 #include "confdefs.h"
@@ -943,12 +915,19 @@ int main() {
 ; return 0; }
 configure:3649: checking if htonl is prototyped
 configure:3675: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
-configure:3666:9: error: expected '=', ',', ';', 'asm' or '__attribute__' before '-' token
-   error - already defined!
-         ^
-configure:3668:70: error: macro "htonl" passed 8 arguments, but takes just 1
- void htonl(int a, char b, int c, char d, int e, char f, int g, char h);
-                                                                      ^
+configure:3666:3: error: unknown type name 'error'
+  error - already defined!
+  ^
+configure:3666:9: error: expected identifier or '('
+  error - already defined!
+        ^
+configure:3668:19: error: too many arguments provided to function-like macro invocation
+void htonl(int a, char b, int c, char d, int e, char f, int g, char h);
+                  ^
+/data/data/com.termux/files/usr/include/sys/endian.h:62:9: note: macro 'htonl' defined here
+#define htonl(x) __swap32(x)
+        ^
+3 errors generated.
 configure: failed program was:
 #line 3659 "configure"
 #include "confdefs.h"
@@ -967,12 +946,19 @@ int main() {
 ; return 0; }
 configure:3706: checking if htons is prototyped
 configure:3732: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
-configure:3723:9: error: expected '=', ',', ';', 'asm' or '__attribute__' before '-' token
-   error - already defined!
-         ^
-configure:3725:70: error: macro "htons" passed 8 arguments, but takes just 1
- void htons(int a, char b, int c, char d, int e, char f, int g, char h);
-                                                                      ^
+configure:3723:3: error: unknown type name 'error'
+  error - already defined!
+  ^
+configure:3723:9: error: expected identifier or '('
+  error - already defined!
+        ^
+configure:3725:19: error: too many arguments provided to function-like macro invocation
+void htons(int a, char b, int c, char d, int e, char f, int g, char h);
+                  ^
+/data/data/com.termux/files/usr/include/sys/endian.h:63:9: note: macro 'htons' defined here
+#define htons(x) __swap16(x)
+        ^
+3 errors generated.
 configure: failed program was:
 #line 3716 "configure"
 #include "confdefs.h"
@@ -992,13 +978,12 @@ int main() {
 configure:3763: checking if inet_addr is prototyped
 configure:3789: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3782:6: error: conflicting types for 'inet_addr'
- void inet_addr(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~
-In file included from src/sysdep.h:211:0,
-                 from configure:3778:
-/usr/include/arpa/inet.h:34:18: note: previous declaration of 'inet_addr' was here
- extern in_addr_t inet_addr (const char *__cp) __THROW;
-                  ^~~~~~~~~
+void inet_addr(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/arpa/inet.h:39:11: note: previous declaration is here
+in_addr_t inet_addr(const char* __s);
+          ^
+1 error generated.
 configure: failed program was:
 #line 3773 "configure"
 #include "confdefs.h"
@@ -1018,13 +1003,12 @@ int main() {
 configure:3820: checking if inet_aton is prototyped
 configure:3846: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3839:6: error: conflicting types for 'inet_aton'
- void inet_aton(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~
-In file included from src/sysdep.h:211:0,
-                 from configure:3835:
-/usr/include/arpa/inet.h:73:12: note: previous declaration of 'inet_aton' was here
- extern int inet_aton (const char *__cp, struct in_addr *__inp) __THROW;
-            ^~~~~~~~~
+void inet_aton(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/arpa/inet.h:40:5: note: previous declaration is here
+int inet_aton(const char* __s, struct in_addr* __addr);
+    ^
+1 error generated.
 configure: failed program was:
 #line 3830 "configure"
 #include "confdefs.h"
@@ -1044,13 +1028,12 @@ int main() {
 configure:3877: checking if inet_ntoa is prototyped
 configure:3903: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3896:6: error: conflicting types for 'inet_ntoa'
- void inet_ntoa(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~
-In file included from src/sysdep.h:211:0,
-                 from configure:3892:
-/usr/include/arpa/inet.h:53:14: note: previous declaration of 'inet_ntoa' was here
- extern char *inet_ntoa (struct in_addr __in) __THROW;
-              ^~~~~~~~~
+void inet_ntoa(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/arpa/inet.h:49:7: note: previous declaration is here
+char* inet_ntoa(struct in_addr __addr);
+      ^
+1 error generated.
 configure: failed program was:
 #line 3887 "configure"
 #include "confdefs.h"
@@ -1070,13 +1053,12 @@ int main() {
 configure:3934: checking if listen is prototyped
 configure:3960: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:3953:6: error: conflicting types for 'listen'
- void listen(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from src/sysdep.h:195:0,
-                 from configure:3949:
-/usr/include/x86_64-linux-gnu/sys/socket.h:222:12: note: previous declaration of 'listen' was here
- extern int listen (int __fd, int __n) __THROW;
-            ^~~~~~
+void listen(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/sys/socket.h:316:18: note: previous declaration is here
+__socketcall int listen(int __fd, int __backlog);
+                 ^
+1 error generated.
 configure: failed program was:
 #line 3944 "configure"
 #include "confdefs.h"
@@ -1095,12 +1077,19 @@ int main() {
 ; return 0; }
 configure:3991: checking if ntohl is prototyped
 configure:4017: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
-configure:4008:9: error: expected '=', ',', ';', 'asm' or '__attribute__' before '-' token
-   error - already defined!
-         ^
-configure:4010:70: error: macro "ntohl" passed 8 arguments, but takes just 1
- void ntohl(int a, char b, int c, char d, int e, char f, int g, char h);
-                                                                      ^
+configure:4008:3: error: unknown type name 'error'
+  error - already defined!
+  ^
+configure:4008:9: error: expected identifier or '('
+  error - already defined!
+        ^
+configure:4010:19: error: too many arguments provided to function-like macro invocation
+void ntohl(int a, char b, int c, char d, int e, char f, int g, char h);
+                  ^
+/data/data/com.termux/files/usr/include/sys/endian.h:64:9: note: macro 'ntohl' defined here
+#define ntohl(x) __swap32(x)
+        ^
+3 errors generated.
 configure: failed program was:
 #line 4001 "configure"
 #include "confdefs.h"
@@ -1120,13 +1109,12 @@ int main() {
 configure:4048: checking if perror is prototyped
 configure:4074: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4067:6: error: conflicting types for 'perror'
- void perror(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from src/sysdep.h:69:0,
-                 from configure:4063:
-/usr/include/stdio.h:775:13: note: previous declaration of 'perror' was here
- extern void perror (const char *__s);
-             ^~~~~~
+void perror(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:131:6: note: previous declaration is here
+void perror(const char* __msg);
+     ^
+1 error generated.
 configure: failed program was:
 #line 4058 "configure"
 #include "confdefs.h"
@@ -1146,14 +1134,12 @@ int main() {
 configure:4105: checking if printf is prototyped
 configure:4131: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4124:6: error: conflicting types for 'printf'
- void printf(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from /usr/include/stdio.h:862:0,
-                 from src/sysdep.h:69,
-                 from configure:4120:
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:102:1: note: previous definition of 'printf' was here
- printf (const char *__restrict __fmt, ...)
- ^~~~~~
+void printf(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:132:5: note: previous declaration is here
+int printf(const char* __fmt, ...) __printflike(1, 2);
+    ^
+1 error generated.
 configure: failed program was:
 #line 4115 "configure"
 #include "confdefs.h"
@@ -1173,13 +1159,12 @@ int main() {
 configure:4162: checking if qsort is prototyped
 configure:4188: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4181:6: error: conflicting types for 'qsort'
- void qsort(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~
-In file included from src/sysdep.h:84:0,
-                 from configure:4177:
-/usr/include/stdlib.h:827:13: note: previous declaration of 'qsort' was here
- extern void qsort (void *__base, size_t __nmemb, size_t __size,
-             ^~~~~
+void qsort(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdlib.h:127:6: note: previous declaration is here
+void qsort(void* __base, size_t __nmemb, size_t __size, int (*__comparator)(const void* __lhs, const void* __rhs));
+     ^
+1 error generated.
 configure: failed program was:
 #line 4172 "configure"
 #include "confdefs.h"
@@ -1199,16 +1184,12 @@ int main() {
 configure:4219: checking if read is prototyped
 configure:4245: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4238:6: error: conflicting types for 'read'
- void read(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~
-In file included from /usr/include/unistd.h:1172:0,
-                 from /usr/include/zconf.h:475,
-                 from /usr/include/zlib.h:34,
-                 from src/sysdep.h:72,
-                 from configure:4234:
-/usr/include/x86_64-linux-gnu/bits/unistd.h:34:1: note: previous definition of 'read' was here
- read (int __fd, void *__buf, size_t __nbytes)
- ^~~~
+void read(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/unistd.h:270:9: note: previous declaration is here
+ssize_t read(int __fd, void* __buf, size_t __count);
+        ^
+1 error generated.
 configure: failed program was:
 #line 4229 "configure"
 #include "confdefs.h"
@@ -1228,13 +1209,12 @@ int main() {
 configure:4276: checking if remove is prototyped
 configure:4302: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4295:6: error: conflicting types for 'remove'
- void remove(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from src/sysdep.h:69:0,
-                 from configure:4291:
-/usr/include/stdio.h:144:12: note: previous declaration of 'remove' was here
- extern int remove (const char *__filename) __THROW;
-            ^~~~~~
+void remove(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:136:5: note: previous declaration is here
+int remove(const char* __path);
+    ^
+1 error generated.
 configure: failed program was:
 #line 4286 "configure"
 #include "confdefs.h"
@@ -1254,13 +1234,12 @@ int main() {
 configure:4333: checking if rewind is prototyped
 configure:4359: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4352:6: error: conflicting types for 'rewind'
- void rewind(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from src/sysdep.h:69:0,
-                 from configure:4348:
-/usr/include/stdio.h:694:13: note: previous declaration of 'rewind' was here
- extern void rewind (FILE *__stream);
-             ^~~~~~
+void rewind(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:137:6: note: previous declaration is here
+void rewind(FILE* __fp);
+     ^
+1 error generated.
 configure: failed program was:
 #line 4343 "configure"
 #include "confdefs.h"
@@ -1280,16 +1259,12 @@ int main() {
 configure:4390: checking if select is prototyped
 configure:4416: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4409:6: error: conflicting types for 'select'
- void select(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from /usr/include/x86_64-linux-gnu/sys/types.h:197:0,
-                 from /usr/include/zconf.h:444,
-                 from /usr/include/zlib.h:34,
-                 from src/sysdep.h:72,
-                 from configure:4405:
-/usr/include/x86_64-linux-gnu/sys/select.h:101:12: note: previous declaration of 'select' was here
- extern int select (int __nfds, fd_set *__restrict __readfds,
-            ^~~~~~
+void select(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/sys/select.h:115:5: note: previous declaration is here
+int select(int __max_fd_plus_one, fd_set* __read_fds, fd_set* __write_fds, fd_set* __exception_fds, struct timeval* __timeout);
+    ^
+1 error generated.
 configure: failed program was:
 #line 4400 "configure"
 #include "confdefs.h"
@@ -1309,13 +1284,12 @@ int main() {
 configure:4447: checking if setitimer is prototyped
 configure:4473: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4466:6: error: conflicting types for 'setitimer'
- void setitimer(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~
-In file included from src/sysdep.h:160:0,
-                 from configure:4462:
-/usr/include/x86_64-linux-gnu/sys/time.h:128:12: note: previous declaration of 'setitimer' was here
- extern int setitimer (__itimer_which_t __which,
-            ^~~~~~~~~
+void setitimer(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/sys/time.h:45:5: note: previous declaration is here
+int setitimer(int __which, const struct itimerval* __new_value, struct itimerval* __old_value);
+    ^
+1 error generated.
 configure: failed program was:
 #line 4457 "configure"
 #include "confdefs.h"
@@ -1335,13 +1309,12 @@ int main() {
 configure:4504: checking if setrlimit is prototyped
 configure:4530: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4523:6: error: conflicting types for 'setrlimit'
- void setrlimit(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~
-In file included from src/sysdep.h:199:0,
-                 from configure:4519:
-/usr/include/x86_64-linux-gnu/sys/resource.h:69:12: note: previous declaration of 'setrlimit' was here
- extern int setrlimit (__rlimit_resource_t __resource,
-            ^~~~~~~~~
+void setrlimit(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/sys/resource.h:46:5: note: previous declaration is here
+int setrlimit(int __resource, const struct rlimit* __limit);
+    ^
+1 error generated.
 configure: failed program was:
 #line 4514 "configure"
 #include "confdefs.h"
@@ -1361,13 +1334,12 @@ int main() {
 configure:4561: checking if setsockopt is prototyped
 configure:4587: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4580:6: error: conflicting types for 'setsockopt'
- void setsockopt(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~~
-In file included from src/sysdep.h:195:0,
-                 from configure:4576:
-/usr/include/x86_64-linux-gnu/sys/socket.h:215:12: note: previous declaration of 'setsockopt' was here
- extern int setsockopt (int __fd, int __level, int __optname,
-            ^~~~~~~~~~
+void setsockopt(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/sys/socket.h:330:18: note: previous declaration is here
+__socketcall int setsockopt(int __fd, int __level, int __option, const void* __value, socklen_t __value_length);
+                 ^
+1 error generated.
 configure: failed program was:
 #line 4571 "configure"
 #include "confdefs.h"
@@ -1387,16 +1359,12 @@ int main() {
 configure:4618: checking if snprintf is prototyped
 configure:4644: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4637:6: error: conflicting types for 'snprintf'
- void snprintf(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~
-In file included from /usr/include/features.h:424:0,
-                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
-                 from /usr/include/stdio.h:27,
-                 from src/sysdep.h:69,
-                 from configure:4633:
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:61:1: note: previous definition of 'snprintf' was here
- __NTH (snprintf (char *__restrict __s, size_t __n,
- ^
+void snprintf(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:300:5: note: previous declaration is here
+int snprintf(char* __buf, size_t __size, const char* __fmt, ...) __printflike(3, 4);
+    ^
+1 error generated.
 configure: failed program was:
 #line 4628 "configure"
 #include "confdefs.h"
@@ -1416,13 +1384,12 @@ int main() {
 configure:4675: checking if socket is prototyped
 configure:4701: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4694:6: error: conflicting types for 'socket'
- void socket(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from src/sysdep.h:195:0,
-                 from configure:4690:
-/usr/include/x86_64-linux-gnu/sys/socket.h:102:12: note: previous declaration of 'socket' was here
- extern int socket (int __domain, int __type, int __protocol) __THROW;
-            ^~~~~~
+void socket(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/sys/socket.h:332:18: note: previous declaration is here
+__socketcall int socket(int __af, int __type, int __protocol);
+                 ^
+1 error generated.
 configure: failed program was:
 #line 4685 "configure"
 #include "confdefs.h"
@@ -1442,16 +1409,12 @@ int main() {
 configure:4732: checking if sprintf is prototyped
 configure:4758: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4751:6: error: conflicting types for 'sprintf'
- void sprintf(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~
-In file included from /usr/include/features.h:424:0,
-                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
-                 from /usr/include/stdio.h:27,
-                 from src/sysdep.h:69,
-                 from configure:4747:
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:31:1: note: previous definition of 'sprintf' was here
- __NTH (sprintf (char *__restrict __s, const char *__restrict __fmt, ...))
- ^
+void sprintf(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:165:5: note: previous declaration is here
+int sprintf(char* __s, const char* __fmt, ...)
+    ^
+1 error generated.
 configure: failed program was:
 #line 4742 "configure"
 #include "confdefs.h"
@@ -1471,16 +1434,12 @@ int main() {
 configure:4789: checking if sscanf is prototyped
 configure:4815: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4808:6: error: conflicting types for 'sscanf'
- void sscanf(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from /usr/include/features.h:424:0,
-                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
-                 from /usr/include/stdio.h:27,
-                 from src/sysdep.h:69,
-                 from configure:4804:
-/usr/include/stdio.h:400:12: note: previous declaration of 'sscanf' was here
- extern int __REDIRECT_NTH (sscanf, (const char *__restrict __s,
-            ^
+void sscanf(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:141:5: note: previous declaration is here
+int sscanf(const char* __s, const char* __fmt, ...) __scanflike(2, 3);
+    ^
+1 error generated.
 configure: failed program was:
 #line 4799 "configure"
 #include "confdefs.h"
@@ -1500,14 +1459,12 @@ int main() {
 configure:4846: checking if strcasecmp is prototyped
 configure:4872: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4865:6: error: conflicting types for 'strcasecmp'
- void strcasecmp(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~~
-In file included from /usr/include/string.h:431:0,
-                 from src/sysdep.h:76,
-                 from configure:4861:
-/usr/include/strings.h:116:12: note: previous declaration of 'strcasecmp' was here
- extern int strcasecmp (const char *__s1, const char *__s2)
-            ^~~~~~~~~~
+void strcasecmp(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/bits/strcasecmp.h:49:5: note: previous declaration is here
+int strcasecmp(const char* __s1, const char* __s2) __attribute_pure__;
+    ^
+1 error generated.
 configure: failed program was:
 #line 4856 "configure"
 #include "confdefs.h"
@@ -1527,13 +1484,12 @@ int main() {
 configure:4903: checking if strdup is prototyped
 configure:4929: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4922:6: error: conflicting types for 'strdup'
- void strdup(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from src/sysdep.h:76:0,
-                 from configure:4918:
-/usr/include/string.h:166:14: note: previous declaration of 'strdup' was here
- extern char *strdup (const char *__s)
-              ^~~~~~
+void strdup(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/string.h:110:7: note: previous declaration is here
+char* strdup(const char* __s);
+      ^
+1 error generated.
 configure: failed program was:
 #line 4913 "configure"
 #include "confdefs.h"
@@ -1553,13 +1509,12 @@ int main() {
 configure:4960: checking if strerror is prototyped
 configure:4986: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:4979:6: error: conflicting types for 'strerror'
- void strerror(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~
-In file included from src/sysdep.h:76:0,
-                 from configure:4975:
-/usr/include/string.h:396:14: note: previous declaration of 'strerror' was here
- extern char *strerror (int __errnum) __THROW;
-              ^~~~~~~~
+void strerror(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/string.h:122:7: note: previous declaration is here
+char* strerror(int __errno_value);
+      ^
+1 error generated.
 configure: failed program was:
 #line 4970 "configure"
 #include "confdefs.h"
@@ -1580,17 +1535,38 @@ configure:5017: checking if stricmp is prototyped
 configure:5043: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:5074: checking if strlcpy is prototyped
 configure:5100: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
+configure:5093:6: error: conflicting types for 'strlcpy'
+void strlcpy(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/string.h:146:8: note: previous declaration is here
+size_t strlcpy(char* __dst, const char* __src, size_t __n);
+       ^
+1 error generated.
+configure: failed program was:
+#line 5084 "configure"
+#include "confdefs.h"
+
+#define NO_LIBRARY_PROTOTYPES
+#define __COMM_C__
+#define __ACT_OTHER_C__
+#include "src/sysdep.h"
+#ifdef strlcpy
+  error - already defined!
+#endif
+void strlcpy(int a, char b, int c, char d, int e, char f, int g, char h);
+
+int main() {
+
+; return 0; }
 configure:5131: checking if strncasecmp is prototyped
 configure:5157: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:5150:6: error: conflicting types for 'strncasecmp'
- void strncasecmp(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~~~
-In file included from /usr/include/string.h:431:0,
-                 from src/sysdep.h:76,
-                 from configure:5146:
-/usr/include/strings.h:120:12: note: previous declaration of 'strncasecmp' was here
- extern int strncasecmp (const char *__s1, const char *__s2, size_t __n)
-            ^~~~~~~~~~~
+void strncasecmp(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/bits/strcasecmp.h:68:5: note: previous declaration is here
+int strncasecmp(const char* __s1, const char* __s2, size_t __n) __attribute_pure__;
+    ^
+1 error generated.
 configure: failed program was:
 #line 5141 "configure"
 #include "confdefs.h"
@@ -1612,13 +1588,12 @@ configure:5214: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:5245: checking if system is prototyped
 configure:5271: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:5264:6: error: conflicting types for 'system'
- void system(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from src/sysdep.h:84:0,
-                 from configure:5260:
-/usr/include/stdlib.h:781:12: note: previous declaration of 'system' was here
- extern int system (const char *__command) __wur;
-            ^~~~~~
+void system(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdlib.h:123:5: note: previous declaration is here
+int system(const char* __command);
+    ^
+1 error generated.
 configure: failed program was:
 #line 5255 "configure"
 #include "confdefs.h"
@@ -1638,13 +1613,12 @@ int main() {
 configure:5302: checking if time is prototyped
 configure:5328: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:5321:6: error: conflicting types for 'time'
- void time(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~
-In file included from src/sysdep.h:161:0,
-                 from configure:5317:
-/usr/include/time.h:75:15: note: previous declaration of 'time' was here
- extern time_t time (time_t *__timer) __THROW;
-               ^~~~
+void time(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/time.h:62:8: note: previous declaration is here
+time_t time(time_t* __t);
+       ^
+1 error generated.
 configure: failed program was:
 #line 5312 "configure"
 #include "confdefs.h"
@@ -1664,15 +1638,12 @@ int main() {
 configure:5359: checking if unlink is prototyped
 configure:5385: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:5378:6: error: conflicting types for 'unlink'
- void unlink(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~
-In file included from /usr/include/zconf.h:475:0,
-                 from /usr/include/zlib.h:34,
-                 from src/sysdep.h:72,
-                 from configure:5374:
-/usr/include/unistd.h:828:12: note: previous declaration of 'unlink' was here
- extern int unlink (const char *__name) __THROW __nonnull ((1));
-            ^~~~~~
+void unlink(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/unistd.h:230:5: note: previous declaration is here
+int unlink(const char* __path);
+    ^
+1 error generated.
 configure: failed program was:
 #line 5369 "configure"
 #include "confdefs.h"
@@ -1692,16 +1663,12 @@ int main() {
 configure:5416: checking if vsnprintf is prototyped
 configure:5442: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:5435:6: error: conflicting types for 'vsnprintf'
- void vsnprintf(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~~~~~
-In file included from /usr/include/features.h:424:0,
-                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
-                 from /usr/include/stdio.h:27,
-                 from src/sysdep.h:69,
-                 from configure:5431:
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:74:1: note: previous definition of 'vsnprintf' was here
- __NTH (vsnprintf (char *__restrict __s, size_t __n,
- ^
+void vsnprintf(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/stdio.h:303:5: note: previous declaration is here
+int vsnprintf(char* __buf, size_t __size, const char* __fmt, va_list __args) __printflike(3, 0);
+    ^
+1 error generated.
 configure: failed program was:
 #line 5426 "configure"
 #include "confdefs.h"
@@ -1721,15 +1688,12 @@ int main() {
 configure:5473: checking if write is prototyped
 configure:5499: gcc -c -g -O2 -fno-builtin  conftest.c 1>&5
 configure:5492:6: error: conflicting types for 'write'
- void write(int a, char b, int c, char d, int e, char f, int g, char h);
-      ^~~~~
-In file included from /usr/include/zconf.h:475:0,
-                 from /usr/include/zlib.h:34,
-                 from src/sysdep.h:72,
-                 from configure:5488:
-/usr/include/unistd.h:369:16: note: previous declaration of 'write' was here
- extern ssize_t write (int __fd, const void *__buf, size_t __n) __wur;
-                ^~~~~
+void write(int a, char b, int c, char d, int e, char f, int g, char h);
+     ^
+/data/data/com.termux/files/usr/include/unistd.h:271:9: note: previous declaration is here
+ssize_t write(int __fd, const void* __buf, size_t __count);
+        ^
+1 error generated.
 configure: failed program was:
 #line 5483 "configure"
 #include "confdefs.h"

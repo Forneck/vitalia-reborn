@@ -33,5 +33,5 @@ extern const char *pc_class_types[];
 extern const char *class_menu;
 extern int prac_params[][NUM_CLASSES];
 extern struct guild_info_type guild_info[];
-const long exp_table[LVL_GRIMM+1][NUM_CLASSES];
+extern const long exp_table[LVL_GRIMM+1][NUM_CLASSES];
 #endif /* _CLASS_H_*/
