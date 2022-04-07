@@ -142,6 +142,11 @@
 #define HCONTROL_FILE	LIB_ETC"hcontrol"  /* for the house system	*/
 #define TIME_FILE	LIB_ETC"time"	   /* for calendar system	*/
 #define CHANGE_LOG_FILE "../changelog"     /* for the changelog         */
+#define ROOMSDUMP_FILE	LIB_ETC"roomsdump.txt"
+#define SDESCDUMP_FILE	LIB_ETC"sdesc.txt"
+#define LDESCDUMP_FILE	LIB_ETC"ldesc.txt"
+
+
 /* new bitvector data for use in player_index_element */
 #define PINDEX_DELETED		(1 << 0)	/* deleted player	*/
 #define PINDEX_NODELETE		(1 << 1)	/* protected player	*/
