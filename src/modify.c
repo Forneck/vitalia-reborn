@@ -310,11 +310,11 @@ static void exdesc_string_cleanup(struct descriptor_data *d, int action)
 ACMD(do_skillset)
 {
   struct char_data *vict;
-  struct str_spells *spell;
+  struct str_spells *spell = NULL;
   char name[MAX_INPUT_LENGTH];
   char buf[MAX_INPUT_LENGTH], helpbuf[MAX_STRING_LENGTH];
- char *sname;
-  int value, i, qend, pc, pl;
+  char *sname;
+  int value, i = 0, qend, pc, pl;
 
   argument = one_argument(argument, name);
 
@@ -322,12 +322,12 @@ ACMD(do_skillset)
     send_to_char(ch, "Syntax: skillset <name> '<skill>' <value>\r\n"
 		"Skill being one of the following:\r\n");
     for (qend = 0, i = 0; i <= TOP_SPELL_DEFINE; i++) {
-   sname = get_spell_name(i);
+      sname = get_spell_name(i);
       if (sname == UNDEF_SPELL)	/* This is valid. */
-	continue;
+	       continue;
       send_to_char(ch, "%18s", sname);
       if (qend++ % 4 == 3)
-	send_to_char(ch, "\r\n");
+	       send_to_char(ch, "\r\n");
     }
     if (qend % 4 != 0)
       send_to_char(ch, "\r\n");

@@ -518,7 +518,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	int contador;
 	int i, type1, type2;
 	fann_type input[29];
-	fann_type output[6];
+	fann_type output[7];
 	struct char_data *victim;
 	struct obj_data *object;
 	int id_player = 0;
@@ -2355,23 +2355,25 @@ void autopilot_char(struct char_data *ch){
    /* copiar mob, obj ou player name para line */
    if (calc_output[2] != 0.5) {
       if (calc_output[3] == 0.5) {
-         if  (num = real_mobile(calc_output[4] * 10000) != NOBODY){
-         mob = read_mobile(num, REAL);
-         char_to_room(mob, 0);
-          snprintf(line,sizeof(line),"%s",mob->player.name);
-          extract_char(mob);
+         if ((num = real_mobile(calc_output[4] * 10000) != NOBODY)) {
+         	mob = read_mobile(num, REAL);
+         	char_to_room(mob, 0);
+          	snprintf(line,sizeof(line),"%s",mob->player.name);
+          	extract_char(mob);
          }
       }
+      /*
       else if (calc_output[3] == 0.880797) {
-         	if ((num = real_object(calc_output[4] * 10000) != NOTHING)) {
+         if ((num = real_object(calc_output[4] * 10000) != NOTHING)) {
          	object = read_object(num, REAL);
-         snprintf(line,sizeof(line),"%s",object->name);
-         extract_obj(object);
-         	}
+         	snprintf(line,sizeof(line),"%s",object->name);
+         	extract_obj(object);
+         }
       }
-      	else if (calc_output[3] == 0.731059) { 
+      else if (calc_output[3] == 0.731059) { 
       	snprintf(line,sizeof(line),"all");
-         	}
+      }
+      */
    }
    /*passar line para funcao */
    
@@ -2464,23 +2466,25 @@ void autopilot_rival(struct char_data *ch){
    /* copiar mob, obj ou player name para line */
    if (calc_output[2] != 0.5) {
       if (calc_output[3] == 0.5) {
-         if  (num = real_mobile(calc_output[4] * 10000) != NOBODY){
-         mob = read_mobile(num, REAL);
-         char_to_room(mob, 0);
-          snprintf(line,sizeof(line),"%s",mob->player.name);
-          extract_char(mob);
+         if ((num = real_mobile(calc_output[4] * 10000) != NOBODY)) {
+         	mob = read_mobile(num, REAL);
+         	char_to_room(mob, 0);
+          	snprintf(line,sizeof(line),"%s",mob->player.name);
+          	extract_char(mob);
          }
       }
+      /*
       else if (calc_output[3] == 0.880797) {
-         	if ((num = real_object(calc_output[4] * 10000) != NOTHING)) {
+         if ((num = real_object(calc_output[4] * 10000) != NOTHING)) {
          	object = read_object(num, REAL);
-         snprintf(line,sizeof(line),"%s",object->name);
-         extract_obj(object);
-         	}
+         	snprintf(line,sizeof(line),"%s",object->name);
+         	extract_obj(object);
+         }
       }
-      	else if (calc_output[3] == 0.731059) { 
+      else if (calc_output[3] == 0.731059) { 
       	snprintf(line,sizeof(line),"all");
-         	}
+      }
+      */
    
    /*passar line para funcao */
    

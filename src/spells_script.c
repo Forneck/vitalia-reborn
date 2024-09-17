@@ -21,14 +21,16 @@ SOFTWARE. */
 #include "spells.h"
 #include "string.h"
 
-int call_ASCRIPT (int (*function)(), char *str, struct char_data *self,
-                                                struct char_data *vict,
-                                                struct obj_data  *ovict,
-                                                int    from, 
-                                                int    param) 
+typedef int (*ASCRIPT_Function)(char *str, struct char_data *self, struct char_data *vict, 
+                                struct obj_data *ovict, int from, int param);
+
+// A função call_ASCRIPT agora recebe um ponteiro para função com o protótipo correto
+int call_ASCRIPT (ASCRIPT_Function function, char *str, struct char_data *self,
+                  struct char_data *vict, struct obj_data *ovict,
+                  int from, int param) 
 {
- return ((*function) (str, self, vict, ovict, from, param));
-}  
+    return function(str, self, vict, ovict, from, param);
+}
 
 /* let's declare our scripts functions */
 ASCRIPT (scr_act_to);

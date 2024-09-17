@@ -726,7 +726,7 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig,
 
               gain_exp(c, addition);
             }
-            snprintf(str, slen, "%d", GET_EXP(c));
+            snprintf(str, slen, "%ld", GET_EXP(c));
           }
           break;
         case 'f':

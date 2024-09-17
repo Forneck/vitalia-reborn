@@ -1331,7 +1331,7 @@ void spedit_save_to_disk (void)
      p = strtok (buf1, "\n");
      snprintf (buf, BUFSIZE, "%2d %s\n", DB_CODE_SCRIPT, p);
      fprintf(fp, "%s", buf);
-     while ((p=strtok('\0', "\n"))) {
+     while ((p=strtok(NULL, "\n"))) {
        snprintf (buf, BUFSIZE, "%2d %s\n", DB_CODE_SCRIPT, p);
        fprintf(fp, "%s", buf);
      }

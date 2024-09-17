@@ -923,10 +923,9 @@ struct rent_info
 struct room_direction_data
 {
   char *general_description; /**< Show to char looking in this direction. */
-
   char *keyword; /**< for interacting (open/close) this direction */
 
-  sh_int /*bitvector_t*/ exit_info; /**< Door, and what type? */
+  int /*bitvector_t*/ exit_info; /**< Door, and what type? */
   obj_vnum key;      /**< Key's vnum (-1 for no key) */
   room_rnum to_room; /**< Where direction leads, or NOWHERE if not defined */
 };

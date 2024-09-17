@@ -1984,7 +1984,7 @@ ACMD(do_envenom)
   argument = one_argument(argument, arg);
 
   if (!*arg) {
-    send_to_char(ch, usage);
+    send_to_char(ch, "%s", usage);
     return;
   }
 
@@ -2015,7 +2015,7 @@ ACMD(do_envenom)
   one_argument(argument, arg);
 
   if (!*arg) {
-    send_to_char(ch, usage);
+    send_to_char(ch, "%s", usage);
     return;
   }
 

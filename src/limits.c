@@ -632,14 +632,14 @@ void point_update(void)
 		}
 		/* If the timer is set, count it down and at 0, try the trigger note
 		   to .rej hand-patchers: make this last in your point-update() */
-		else if (GET_OBJ_TIMER(j) > 0)
-		{
+		else if (GET_OBJ_TIMER(j) > 0) {
 			GET_OBJ_TIMER(j)--;
-			if (!GET_OBJ_TIMER(j))
+			if (!GET_OBJ_TIMER(j)) {
 				if (j->carried_by)
 					act("$p misteriosamente desaparece.", FALSE, j->carried_by, j, 0, TO_CHAR);
 				else if (j->in_room)
 					act("$p misteriosamente desaparece.", TRUE, 0, j, 0, TO_ROOM);
+			}
 			timer_otrigger(j);
 		}
 	}

@@ -394,7 +394,8 @@ int write_mobile_record(mob_vnum mvnum, struct char_data *mob, FILE *fd)
         GET_MANA(mob), GET_MOVE(mob), GET_NDD(mob), GET_SDD(mob),
         GET_DAMROLL(mob));
   
-    fprintf(fd, 	"%d %d\n"
+    fprintf(fd, 	
+      "%d %ld\n"
       "%d %d %d\n",
       GET_GOLD(mob), GET_EXP(mob),
       GET_POS(mob), GET_DEFAULT_POS(mob), GET_SEX(mob)

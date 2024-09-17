@@ -36,8 +36,6 @@
 static void print_group(struct char_data *ch);
 static void display_group_list(struct char_data *ch);
 
-static int can_elevate(struct char_data *ch);
-static int can_rebegin(struct char_data *ch);
 void check_thief(struct char_data *ch, struct char_data *vict);
 
 
@@ -342,14 +340,10 @@ void check_thief(struct char_data *ch, struct char_data *vict)
       !PLR_FLAGGED(vict, PLR_KILLER) && !PLR_FLAGGED(vict, PLR_THIEF)) {
     if (!PLR_FLAGGED(ch, PLR_THIEF)) {
       SET_BIT_AR(PLR_FLAGS(ch), PLR_THIEF);
-      log1( MAX(LVL_IMMORT, GET_INVIS_LEV(ch)),
-	  "PC Thief bit set on %s while trying to steal %s.",
-	  GET_NAME(ch), GET_NAME(vict));
+      log1("PC Thief bit set on %s while trying to steal %s.", GET_NAME(ch), GET_NAME(vict));
       send_to_char(ch,"Agora você é um JOGADOR LADRÃO, que pena...\r\n");
     } else {
-      log1( MAX(LVL_IMMORT, GET_INVIS_LEV(ch)),
-	  "PC Thief %s trying to steal %s.",
-	  GET_NAME(ch), GET_NAME(vict));
+      log1("PC Thief %s trying to steal %s.", GET_NAME(ch), GET_NAME(vict));
     }
   }
 }
@@ -1160,6 +1154,7 @@ ACMD(do_happyhour)
 	}
 }
 
+/*
 static int can_rebegin(struct char_data *ch)
 {
 	if (!PLR_FLAGGED(ch, PLR_TRNS))
@@ -1178,6 +1173,7 @@ static int can_elevate(struct char_data *ch)
 
 	return (1);
 }
+*/
 
 ACMD(do_recall)
 {
@@ -1255,8 +1251,8 @@ ACMD(do_suggestion)
 	int grupo;
 	int count_obj = 0;
 	int comando = 0;
-	int run_move = 0;
-   int tries;
+  int tries;
+
     if ((GET_LEVEL(ch) >= LVL_GOD) || IS_NPC(ch))
     {
        send_to_char(ch,"Você já deveria ter experiência suficiente para dar as  sugestões.\r\n");
@@ -1361,6 +1357,7 @@ ACMD(do_suggestion)
          }
            send_to_char(ch,"%s\r\n",complete_cmd_info[comando].command);
       }
+      /*
           else if (calc_output[3] == 0.880797) {
          	if ((num = real_object(calc_output[4] * 10000)) != NOTHING) {
          	object = read_object(num, REAL);
@@ -1370,7 +1367,8 @@ ACMD(do_suggestion)
          	  send_to_char(ch,"%s\r\n",complete_cmd_info[comando].command);
       }
       else if (calc_output[3] == 0.731059)
-         send_to_char(ch,"%s all\r\n",complete_cmd_info[comando].command);
+         send_to_char(ch,"%s all\r\n",complete_cmd_info[comando].command); 
+       */
       else 
    send_to_char(ch,"%s\r\n",complete_cmd_info[comando].command);
  }

@@ -385,17 +385,17 @@ void die(struct char_data *ch, struct char_data *killer)
 
 static void perform_group_gain(struct char_data *ch, int base, struct char_data *victim)
 {
-	int share, hap_share;
+	long share, hap_share;
+
 	share = MIN(CONFIG_MAX_EXP_GAIN, MAX(1, base));
-	if ((IS_HAPPYHOUR) && (IS_HAPPYEXP))
-	{
-		/* This only reports the correct amount - the calc is done in gain_exp 
-		 */
+	
+	if ((IS_HAPPYHOUR) && (IS_HAPPYEXP)) {
+		/* This only reports the correct amount - the calc is done in gain_exp */
 		hap_share = share + (int)((float)share * ((float)HAPPY_EXP / (float)(100)));
 		share = MIN(CONFIG_MAX_EXP_GAIN, MAX(1, hap_share));
 	}
 	if (share > 1)
-		send_to_char(ch, "Você recebe sua parte da experiência -- %lu pontos.\r\n", share);
+		send_to_char(ch, "Você recebe sua parte da experiência -- %ld pontos.\r\n", share);
 	else
 		send_to_char(ch, "Você recebe sua parte da experiência -- um mísero ponto!\r\n");
 	gain_exp(ch, share);
@@ -425,24 +425,27 @@ static void group_gain(struct char_data *ch, struct char_data *victim)
 
 static void solo_gain(struct char_data *ch, struct char_data *victim)
 {
-	int exp, happy_exp;
+	long exp, happy_exp;
 	exp = MIN(CONFIG_MAX_EXP_GAIN, GET_EXP(victim) / 3);
+
 	/* Calculate level-difference bonus */
 	if (IS_NPC(ch))
 		exp += MAX(0, (exp * MIN(4, (GET_LEVEL(victim) - GET_LEVEL(ch)))) / 8);
 	else
 		exp += MAX(0, (exp * MIN(8, (GET_LEVEL(victim) - GET_LEVEL(ch)))) / 8);
+
 	exp = MAX(exp, 1);
-	if (IS_HAPPYHOUR && IS_HAPPYEXP)
-	{
+
+	if (IS_HAPPYHOUR && IS_HAPPYEXP) {
 		happy_exp = exp + (int)((float)exp * ((float)HAPPY_EXP / (float)(100)));
 		exp = MAX(happy_exp, 1);
 	}
 
-	if (exp > 1)
-		send_to_char(ch, "Você recebeu %lu pontos de experiência.\r\n", exp);
+	if (exp > 1) 
+		send_to_char(ch, "Você recebeu %ld pontos de experiência.\r\n", exp);
 	else
 		send_to_char(ch, "Você recebeu um mísero ponto de experiência.\r\n");
+
 	gain_exp(ch, exp);
 	change_alignment(ch, victim);
 }
@@ -910,16 +913,17 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 	struct obj_data *wielded = GET_EQ(ch, WEAR_WIELD);
 	int w_type, victim_ac, calc_thaco, dam, diceroll;
 	struct affected_type af;
-	int percent;
 	int wpnprof = 0, nham = 0;
+
 	/* Check that the attacker and victim exist */
 	if (!ch || !victim)
 		return;
+
 	/* check if the character has a fight trigger */
 	fight_mtrigger(ch);
+
 	/* Do some sanity checking, in case someone flees, etc. */
-	if (IN_ROOM(ch) != IN_ROOM(victim))
-	{
+	if (IN_ROOM(ch) != IN_ROOM(victim)) {
 		if (FIGHTING(ch) && FIGHTING(ch) == victim)
 			stop_fighting(ch);
 		return;
@@ -1211,7 +1215,7 @@ void perform_violence(void)
 
 	/* ported from Eltanin by AxL, 2feb97 */
 	/* added by Miikka M. Kangas 8-14-91 (note this is called with own
-	   pulses!) * / /* I was getting bored so I wanted to add some edge to
+	   pulses!) I was getting bored so I wanted to add some edge to
 	   weather.  */
 void beware_lightning()
 {
@@ -1291,7 +1295,7 @@ void beware_lightning()
 				if (GET_POS(victim) == POS_DEAD)
 				{
 					sprintf(buf, "Thunderstorm killed %s", GET_NAME(victim));
-					log1(buf);
+					log1("%s", buf);
 					gain_exp(victim, -(GET_EXP(victim) / 2));
 					if (!IS_NPC(victim))
 					{

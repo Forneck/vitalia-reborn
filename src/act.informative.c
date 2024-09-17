@@ -401,7 +401,7 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
 	if (AFF_FLAGGED(i, AFF_INVISIBLE))
 		send_to_char(ch, "%s (invisível)", CCWHT(ch, C_NRM));
 	if (AFF_FLAGGED(i, AFF_HIDE))
-		send_to_char(ch, "%s (escondid%s)", CCWHT(ch, C_NRM), art);
+		send_to_char(ch, "%s (escondid%c)", CCWHT(ch, C_NRM), art);
 	if (!IS_NPC(i) && !i->desc)
 		send_to_char(ch, " %s(%slinkless%s)", CCGRN(ch, C_NRM), CBWHT(ch, C_CMP),
 					 CCGRN(ch, C_CMP));
@@ -1051,7 +1051,7 @@ ACMD(do_score)
 	send_to_char(ch, "Você está jogando por %d dia%s e %d hora%s \r\n ",
 				 playing_time.day, playing_time.day == 1 ? " " : "s", playing_time.hours,
 				 playing_time.hours == 1 ? "." : "s.");
-	send_to_char(ch, underline);
+	send_to_char(ch, "%s", underline);
 	send_to_char(ch, " Str: %d(%d)| Hit:  %d(%d)--->Ganho: %d %s\r\n ", GET_STR(ch), GET_ADD(ch),
 				 GET_HIT(ch), GET_MAX_HIT(ch), hit_gain(ch), gauge(0, 0, GET_HIT(ch),
 																   GET_MAX_HIT(ch)));
@@ -1066,10 +1066,10 @@ ACMD(do_score)
 				 GET_QUESTPOINTS(ch));
 	send_to_char(ch, " Fol: %d(%d) %s \r\n ", GET_BREATH(ch), GET_MAX_BREATH(ch),
 				 gauge(0, 0, GET_BREATH(ch), GET_MAX_BREATH(ch)));
-	send_to_char(ch, underline);
-	send_to_char(ch, " EXP Ganha % d \r\n ", GET_EXP(ch));
+	send_to_char(ch, "%s", underline);
+	send_to_char(ch, " EXP Ganha %ld \r\n ", GET_EXP(ch));
 	if (GET_LEVEL(ch) < LVL_IMMORT)
-		send_to_char(ch, " EXP Faltando % d \r\n ",
+		send_to_char(ch, " EXP Faltando %ld \r\n ",
 					 level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - GET_EXP(ch));
 	send_to_char(ch, "%s\r\n",
 				 gauge(0, 3, GET_EXP(ch),
@@ -1397,7 +1397,7 @@ ACMD(do_help)
 	{
 		send_to_char(ch, " Não encontrei ajuda para %s. \r\n", argument);
 		mudlog(NRM, MIN(LVL_IMPL, GET_INVIS_LEV(ch)), TRUE,
-			   " % s tried to get help on % s ", GET_NAME(ch), argument);
+			   " %s tried to get help on %s ", GET_NAME(ch), argument);
 		for (i = 0; i < top_of_helpt; i++)
 		{
 			if (help_table[i].min_level > GET_LEVEL(ch))
@@ -1655,16 +1655,18 @@ ACMD(do_who)
 					send_to_char(ch, " (notell)");
 				if (PRF_FLAGGED(tch, PRF_QUEST))
 					send_to_char(ch, " (aventura)");
-				if (PLR_FLAGGED(tch, PLR_THIEF))
+				if (PLR_FLAGGED(tch, PLR_THIEF)) {
 					if (IS_FEMALE(tch))
 						send_to_char(ch, " (LADRA)");
 					else
 						send_to_char(ch, " (LADRÃO)");
-				if (PLR_FLAGGED(tch, PLR_KILLER))
+				}
+				if (PLR_FLAGGED(tch, PLR_KILLER)) {
 					if (IS_FEMALE(tch))
 						send_to_char(ch, "(ASSASSINA)");
 					else
 						send_to_char(ch, " (ASSASSINO)");
+				}
 				send_to_char(ch, "\r\n");
 			}
 		}

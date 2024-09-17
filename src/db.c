@@ -1435,7 +1435,7 @@ void parse_room(FILE * fl, int virtual_nr)
 	char flags4[128], buf2[MAX_STRING_LENGTH], buf[128];
 	struct extra_descr_data *new_descr;
 	char letter;
-	int subzone;
+
 	/* This really had better fit or there are other problems. */
 	snprintf(buf2, sizeof(buf2), "room #%d", virtual_nr);
    
@@ -1682,7 +1682,7 @@ void setup_dir(FILE * fl, int room, int dir)
 			else if (t[0] == 7)
 		world[room].dir_option[dir]->exit_info = EX_ISDOOR | EX_KNOCK;
 			else if (t[0] == 8)
-		world[room].dir_option[dir]->exit_info = EX_ISDOOR | EX_DNOPEN |    EX_CLOSED |    EX_LOCKED;
+		world[room].dir_option[dir]->exit_info = EX_ISDOOR | EX_DNOPEN | EX_CLOSED | EX_LOCKED;
 			else if (t[0] == 9)
 		world[room].dir_option[dir]->exit_info = EX_ISDOOR | EX_DNCLOSE; 
 	else
@@ -2625,11 +2625,12 @@ static void load_zones(FILE * fl, char *zonename)
 		}
 		else
 		{
-			if (sscanf(ptr, " %d %d %d %d ", &tmp, &ZCMD.arg1, &ZCMD.arg2, &ZCMD.arg3) != 4)
-			if (ZCMD.command == 'G')
-			   ZCMD.arg3 = -1;
-			else
-			error = 1;
+			if (sscanf(ptr, " %d %d %d %d ", &tmp, &ZCMD.arg1, &ZCMD.arg2, &ZCMD.arg3) != 4) {
+				if (ZCMD.command == 'G')
+			   	ZCMD.arg3 = -1;
+				else
+					error = 1;
+			}
 		}
 
 		ZCMD.if_flag = tmp;
@@ -4643,16 +4644,18 @@ void load_config(void)
 				snprintf(tmp, sizeof(tmp), "%s\r\n", line);
 				CONFIG_HUH = strdup(tmp);
 			}
-			else if (!str_cmp(tag, "hometown_1"))
+			else if (!str_cmp(tag, "hometown_1")) {
 				if (num == -1)
 					CONFIG_HOMETOWN_1= NOWHERE;
 				else
-				CONFIG_HOMETOWN_1 = num;
-					else if (!str_cmp(tag, "hometown_2"))
+					CONFIG_HOMETOWN_1 = num;
+			}
+			else if (!str_cmp(tag, "hometown_2")) {
 				if (num == -1)
-				CONFIG_HOMETOWN_2 = NOWHERE;
+					CONFIG_HOMETOWN_2 = NOWHERE;
 				else
 					CONFIG_HOMETOWN_2 = num;
+			}
 			break;
 
 		case 'i':
@@ -4768,16 +4771,18 @@ void load_config(void)
 		case 'r':
 			if (!str_cmp(tag, "rent_file_timeout"))
 				CONFIG_RENT_TIMEOUT = num;
-					else if (!str_cmp(tag, "ress_room_1"))
+			else if (!str_cmp(tag, "ress_room_1")) {
 				if (num == -1)
-				CONFIG_RESS_ROOM_1 = NOWHERE;
+					CONFIG_RESS_ROOM_1 = NOWHERE;
 				else
 					CONFIG_RESS_ROOM_1 = num;
-	else if (!str_cmp(tag, "ress_room_2"))
+			}
+			else if (!str_cmp(tag, "ress_room_2")) {
 				if (num == -1)
-				CONFIG_RESS_ROOM_2 = NOWHERE;
+					CONFIG_RESS_ROOM_2 = NOWHERE;
 				else
 					CONFIG_RESS_ROOM_2 = num;
+			}
 			break;
 
 		case 's':

@@ -137,7 +137,7 @@ SPECIAL(guild)
 	int class, skill_num, percent, level, rts_code;
 	struct obj_data *object;
    struct fann *ann;
-   int count_obj;
+   int count_obj = 0;
    int grupo;
 
 	fann_type input[29];
@@ -824,7 +824,7 @@ SPECIAL(bank)
 	if (CMD_IS("balance"))
 	{
 		if (GET_BANK_GOLD(ch) > 0)
-			send_to_char(ch, "Seu saldo atual é de %'lu moedas.\r\n", GET_BANK_GOLD(ch));
+			send_to_char(ch, "Seu saldo atual é de %d moedas.\r\n", GET_BANK_GOLD(ch));
 		else
 			send_to_char(ch, "Você não possui dinheiro depositado.\r\n");
 		return (TRUE);
@@ -847,7 +847,7 @@ SPECIAL(bank)
 		}
 		decrease_gold(ch, amount);
 		increase_bank(ch, amount);
-		send_to_char(ch, "Você deposita %'lu moedas.\r\n", amount);
+		send_to_char(ch, "Você deposita %d moedas.\r\n", amount);
 		act("$n faz uma transação bancária.", TRUE, ch, 0, FALSE, TO_ROOM);
 		return (TRUE);
 	}
@@ -870,7 +870,7 @@ SPECIAL(bank)
 		}
 		increase_gold(ch, amount);
 		decrease_bank(ch, amount);
-		send_to_char(ch, "Você saca %'lu moedas.\r\n", amount);
+		send_to_char(ch, "Você saca %c moedas.\r\n", amount);
 		act("$n faz uma transação bancária.", TRUE, ch, 0, FALSE, TO_ROOM);
 		return (TRUE);
 	}
