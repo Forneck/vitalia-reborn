@@ -815,7 +815,7 @@ ASPELL(spell_raise_dead)
 
 ASPELL(spell_ressurect)
 {
-  struct char_data *dead;
+  struct char_data *dead = NULL;
   struct obj_data *corpse;
 
   if (ch == NULL)

@@ -849,7 +849,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
 	send_to_char(ch, "D-Des: %s", k->player.description ? k->player.description : "<None>\r\n");
 
 	sprinttype(k->player.chclass, pc_class_types, buf, sizeof(buf));
-	send_to_char(ch, "%s%s, Lev: [%s%2d%s], XP: [%s%7d%s], Align: [%4d]\r\n",
+	send_to_char(ch, "%s%s, Lev: [%s%2d%s], XP: [%s%ld%s], Align: [%4d]\r\n",
 				 IS_NPC(k) ? "Mobile" : "Class: ", IS_NPC(k) ? "" : buf, CCYEL(ch, C_NRM),
 				 GET_LEVEL(k), CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), GET_EXP(k), CCNRM(ch, C_NRM),
 				 GET_ALIGNMENT(k));
@@ -999,12 +999,13 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
 			send_to_char(ch, "SPL: (%3dhr) %s%-21s%s ", aff->duration + 1, CCCYN(ch, C_NRM),
 						 get_spell_name(aff->spell), CCNRM(ch, C_NRM));
 
-			if (aff->modifier)
+			if (aff->modifier) {
 				if (!IS_SET_AR(AFF_FLAGS(k), AFF_PROTECT))
 					send_to_char(ch, "%+d to %s", aff->modifier, apply_types[(int)aff->location]);
 				else
 					send_to_char(ch, "%%%d resist spell (%d): '%s'", aff->modifier, aff->location,
 								 get_spell_name(aff->location));
+			}
 		}
 
 		if (aff->bitvector[0] || aff->bitvector[1] || aff->bitvector[2] || aff->bitvector[3])
@@ -2993,7 +2994,7 @@ ACMD(do_show)
 			send_to_char(ch, "Player: %-12s (%s) [%2d %s]\r\n", GET_NAME(vict),
 						 genders[(int)GET_SEX(vict)], GET_LEVEL(vict),
 						 class_abbrevs[(int)GET_CLASS(vict)]);
-			send_to_char(ch, "Gold: %-8d  Bal: %-8d Exp: %-8d  Align: %-5d  Lessons: %-3d\r\n",
+			send_to_char(ch, "Gold: %-8d  Bal: %-8d Exp: %-ld  Align: %-5d  Lessons: %-3d\r\n",
 						 GET_GOLD(vict), GET_BANK_GOLD(vict), GET_EXP(vict), GET_ALIGNMENT(vict),
 						 GET_PRACTICES(vict));
 			send_to_char(ch, "Started: %-25.25s  Last: %-25.25s\r\n", buf1, buf2);
@@ -4352,7 +4353,7 @@ ACMD(do_zcheck)
 
 			if (GET_EXP(mob) > MAX_EXP_ALLOWED && (found = 1))
 				len += snprintf(buf + len, sizeof(buf) - len,
-								"- Has %d experience (limit: %d)\r\n",
+								"- Has %ld experience (limit: %d)\r\n",
 								GET_EXP(mob), MAX_EXP_ALLOWED);
 			if ((AFF_FLAGGED(mob, AFF_CHARM) || AFF_FLAGGED(mob, AFF_POISON)) && (found = 1))
 				len +=
@@ -5979,7 +5980,7 @@ ACMD(do_oset)
 	argument = one_argument(argument, arg);
 
 	if (!*arg)
-		send_to_char(ch, usage);
+		send_to_char(ch, "%s", usage);
 	else if (!(obj = get_obj_in_list_vis(ch, arg, NULL, ch->carrying)) &&
 			 !(obj = get_obj_in_list_vis(ch, arg, NULL, world[IN_ROOM(ch)].contents)))
 		send_to_char(ch, "You don't seem to have %s %s.\r\n", AN(arg), arg);
@@ -5988,7 +5989,7 @@ ACMD(do_oset)
 		argument = one_argument(argument, arg2);
 
 		if (!*arg2)
-			send_to_char(ch, usage);
+			send_to_char(ch, "%s", usage);
 		else
 		{
 			if (is_abbrev(arg2, "alias") && (success = oset_alias(obj, argument)))
@@ -6006,7 +6007,7 @@ ACMD(do_oset)
 				if (!success)
 					send_to_char(ch, "%s was unsuccessful.\r\n", arg2);
 				else
-					send_to_char(ch, usage);
+					send_to_char(ch, "%s", usage);
 				return;
 			}
 		}
@@ -6016,7 +6017,6 @@ ACMD(do_oset)
 ACMD(do_plrload)
 {
 	char arg[MAX_INPUT_LENGTH];
-	char buf[MAX_INPUT_LENGTH];
 	struct char_data *victim = NULL;
 
 	one_argument(argument, arg);

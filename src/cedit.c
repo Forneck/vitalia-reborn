@@ -653,7 +653,7 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
 					"%s6%s) Default map size        : %s%d\r\n"
 					"%s7%s) Default minimap size    : %s%d\r\n"
 					"%s8%s) Scripts on PC's         : %s%s\r\n"
-			   	"%s9%s) Fitness evolve ann   : %s%s\r\n"
+			   		"%s9%s) Fitness evolve ann      : %s%s\r\n"
 					"%sQ%s) Exit To The Main Menu\r\n"
 					"Enter your choice : ",
 					grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.pk_allowed),
@@ -681,10 +681,11 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
 					grn, nrm, cyn,
 					m_opt == 0 ? "Off" : (m_opt ==
 										  1 ? "On" : (m_opt == 2 ? "Imm-Only" : "Invalid!")), grn,
-					nrm, cyn, OLC_CONFIG(d)->play.map_size, grn, nrm, cyn,
-					OLC_CONFIG(d)->play.minimap_size, grn, nrm, cyn,
-					CHECK_VAR(OLC_CONFIG(d)->play.script_players), grn, nrm),
-				grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.fit_evolve);
+					nrm, cyn, OLC_CONFIG(d)->play.map_size, 
+					grn, nrm, cyn, OLC_CONFIG(d)->play.minimap_size, 
+					grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.script_players), 
+					grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.fit_evolve),
+					grn, nrm);
 
 	OLC_MODE(d) = CEDIT_GAME_OPTIONS_MENU;
 }

@@ -1349,9 +1349,9 @@ ACMD(do_spy)
 
   if (EXIT_FLAGGED(EXIT(ch, dir), EX_CLOSED)) {
     if (is_name(arg, EXIT(ch, dir)->keyword)) {
-      sprintf(buf, "%s parece estar fechada.\r\n", is_name(arg, EXIT(ch, dir)->keyword));
+      sprintf(buf, "%s parece estar fechada.\r\n", EXIT(ch, dir)->keyword);
       CAP(buf);
-      send_to_char(ch,buf);
+      send_to_char(ch, "%s", buf);
     } else
       send_to_char(ch,"Este caminho parece estar fechado.\r\n");
 

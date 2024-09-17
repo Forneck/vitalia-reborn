@@ -1,11 +1,12 @@
+# Generated automatically from Makefile.in by configure.
 # tbaMUD Makefile.in - Makefile template used by 'configure'
 # Clean-up provided by seqwith.
 
 # C compiler to use
-CC = @CC@
+CC = gcc
 
 # Any special flags you want to pass to the compiler
-MYFLAGS = @MYFLAGS@
+MYFLAGS = -Wall -Wno-char-subscripts -Wno-unused-but-set-variable
 
 #flags for profiling (see hacker.doc for more information)
 PROFILE = 
@@ -16,9 +17,9 @@ PROFILE =
 
 BINDIR = ../bin
 
-CFLAGS = @CFLAGS@ $(MYFLAGS) $(PROFILE)
+CFLAGS = -g -O2 $(MYFLAGS) $(PROFILE)
 
-LIBS = @LIBS@ @CRYPTLIB@ @NETLIB@
+LIBS =
 
 SRCFILES := $(shell ls *.c | sort)
 OBJFILES := $(patsubst %.c,%.o,$(SRCFILES))
@@ -30,7 +31,7 @@ all: .accepted
 	$(MAKE) utils
 
 .accepted:
-	@./licheck @MORE@
+	@./licheck less
 
 utils: .accepted
 	(cd util; $(MAKE) all)

@@ -425,11 +425,7 @@ struct fann_neuron
 	fann_type activation_steepness;
 	/* Used to choose which activation function to use */
 	enum fann_activationfunc_enum activation_function;
-#ifdef __GNUC__
-} __attribute__ ((packed));
-#else
 };
-#endif
 
 /* A single layer in the neural network.
  */

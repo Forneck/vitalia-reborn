@@ -1077,18 +1077,20 @@ SPECIAL(shop_keeper)
 	struct char_data *keeper = (struct char_data *)me;
 	int shop_nr;
    struct fann *ann;
-   int count_obj;
+   int count_obj = 0;
    int grupo;
-  struct obj_data *object;
+  	struct obj_data *object;
+
 	fann_type input[29];
 	fann_type output[6];
-		ann = fann_create_from_file("etc/aventureiro.fann");
-		if (GROUP(ch) != NULL)
+	ann = fann_create_from_file("etc/aventureiro.fann");
+	
+	if (GROUP(ch) != NULL)
 		grupo = 1;
 	else
 		grupo = 0;
-			for (object= ch->carrying; object; object = object->next_content)
-	{
+	
+	for (object= ch->carrying; object; object = object->next_content) {
 			count_obj++;
 	}
 
@@ -1962,12 +1964,12 @@ void save_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
 	struct obj_data *obj, *next_obj;
 	char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 
-	sprintf(buf, "shop_item/%ld", shop_num);
+	sprintf(buf, "shop_item/%d", shop_num);
 
 	if ((cfile = fopen(buf, "w")) == NULL)
 	{
 		/* Create the File Then */
-		sprintf(buf2, "shop_item/%ld", shop_num);
+		sprintf(buf2, "shop_item/%d", shop_num);
 		if (!(cfile = fopen(buf2, "w")))
 		{
 			mudlog(BRF, LVL_IMPL, TRUE, "SYSERR: SHP: Can't write new shop_item file.");
@@ -1979,16 +1981,16 @@ void save_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
 	   isnt, it writes the item's VNUM to the file */
 	*buf = '\0';
 	*buf2 = '\0';
-	sprintf(buf2, "#%ld\n%s\n", shop_num, GET_NAME(keeper));
+	sprintf(buf2, "#%d\n%s\n", shop_num, GET_NAME(keeper));
 	for (obj = keeper->carrying; obj; obj = next_obj)
 	{
 		next_obj = obj->next_content;
 		if (!shop_producing(obj, shop_num))
-			sprintf(buf2 + strlen(buf2), "%ld\n", GET_OBJ_VNUM(obj));
+			sprintf(buf2 + strlen(buf2), "%d\n", GET_OBJ_VNUM(obj));
 		if (!next_obj)
 			break;
 	}
-	fprintf(cfile, buf2);
+	fprintf(cfile, "%s", buf2);
 	fprintf(cfile, "$\n");
 	fclose(cfile);
 	return;
@@ -2002,7 +2004,7 @@ void load_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
 	obj_vnum v_this;
 	char buf[MAX_STRING_LENGTH];
 
-	sprintf(buf, "shop_item/%ld", shop_num);
+	sprintf(buf, "shop_item/%d", shop_num);
 
 	/* Check to see if we have a file for this shop number */
 	if ((cfile = fopen(buf, "r")) == NULL)
@@ -2012,7 +2014,7 @@ void load_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
 	line_num += get_line(cfile, buf);
 	if (sscanf(buf, "#%d", &placer) != 1)
 	{
-		fprintf(stderr, "Format error in shop_item %ld, line %d.\n", shop_num, line_num);
+		fprintf(stderr, "Format error in shop_item %d, line %d.\n", shop_num, line_num);
 		exit(0);
 	}
 
@@ -2020,14 +2022,14 @@ void load_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
 	line_num += get_line(cfile, buf);
 
 	// Item list
-	while (buf && *buf != '$')
+	while (*buf != '$')
 	{
 		line_num += get_line(cfile, buf);
-		if (!buf || !*buf || *buf == '$')
+		if (!*buf || *buf == '$')
 			break;
 		if (sscanf(buf, "%d", &placer) != 1)
 		{
-			fprintf(stderr, "Format error in shop_item %ld, line %d.\n", shop_num, line_num);
+			fprintf(stderr, "Format error in shop_item %d, line %d.\n", shop_num, line_num);
 			exit(0);
 		}
 		v_this = placer;

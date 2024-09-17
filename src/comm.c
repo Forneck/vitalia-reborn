@@ -11,6 +11,8 @@
 #include "conf.h"
 #include "sysdep.h"
 
+#include <locale.h>
+
 /* Begin conf.h dependent includes */
 
 #if CIRCLE_GNU_LIBC_MEMORY_TRACK
@@ -2563,7 +2565,7 @@ static RETSIGTYPE hupsig(int sig)
    the old signal.  If your system doesn't have sigaction either, you can use
    the same fix. SunOS Release 4.0.2 (sun386) needs this too, according to Tim 
    Aldric. */
-#undef my_signal(signo, func)
+#undef my_signal
 
 #ifndef POSIX
 #define my_signal(signo, func) signal(signo, func)
@@ -2791,7 +2793,7 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj,
 
 	/* para o $X */
 	const char *origback = orig;
-	char *s;
+	char *s = NULL;
 
 	buf = lbuf;
 

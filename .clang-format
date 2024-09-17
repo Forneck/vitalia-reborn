@@ -1,0 +1,27 @@
+# We'll use defaults from the LLVM style, but with 4 columns indentation.
+BasedOnStyle: LLVM
+
+IndentWidth: 4
+ColumnLimit: 120
+
+AlignAfterOpenBracket: true
+#AlignConsecutiveMacros: true
+AlignTrailingComments: true
+AlwaysBreakBeforeMultilineStrings: true
+IncludeBlocks: Preserve
+IndentCaseLabels: true
+IndentPPDirectives: AfterHash
+PointerAlignment: Right
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpacesBeforeTrailingComments: 3
+SortIncludes: false
+
+# Braces config
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterEnum: true
+  AfterStruct: false
+  SplitEmptyFunction: false
+  AfterControlStatement: false
+  AfterFunction: true

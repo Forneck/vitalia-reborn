@@ -80,19 +80,22 @@ static struct syllable syls[] = {
   {"v", "z"}, {"w", "x"}, {"x", "n"}, {"y", "l"}, {"z", "k"}, {"", ""}
 };
 
+typedef void (*ASPELL_Function)(int level, struct char_data *ch, struct char_data *vict, struct obj_data *obj);
+typedef void (*ACMD_Function)(struct char_data *ch, char *argument, int cmd, int subcmd);
 
-void call_ASPELL (void (*function) (), int level, struct char_data *ch,
+// Função call_ASPELL recebe um ponteiro para função com o protótipo correto
+void call_ASPELL (ASPELL_Function function, int level, struct char_data *ch, 
                   struct char_data *vict, struct obj_data *obj)
 {
- (*function)(level, ch, vict, obj);
+    function(level, ch, vict, obj);
 }
 
-void call_ACMD (void (*function) (), struct char_data *ch, 
+// Função call_ACMD recebe um ponteiro para função com o protótipo correto
+void call_ACMD (ACMD_Function function, struct char_data *ch, 
                 char *argument, int cmd, int subcmd)
 {
- (*function)(ch, argument, cmd, subcmd);
+    function(ch, argument, cmd, subcmd);
 }
-
 int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
 {
   struct str_spells *spell;

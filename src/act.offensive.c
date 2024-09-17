@@ -23,23 +23,19 @@
 #include "screen.h"
 #include "constants.h"
 #include "dg_scripts.h"
+#include "graph.h"
 
 ACMD(do_assist)
 {
 	char arg[MAX_INPUT_LENGTH];
 	struct char_data *helpee, *opponent;
 
-	if (FIGHTING(ch))
-	{
-		send_to_char(ch,
-					 "Você já está lutando!  Como você pretende dar assistência a mais alguém?\r\n");
+	if (FIGHTING(ch)) {
+		send_to_char(ch, "Você já está lutando!  Como você pretende dar assistência a mais alguém?\r\n");
 		return;
 	}
-	if IS_DEAD
-		(ch)
-	{
-		send_to_char(ch, "Você não pode dar assistência a ninguém, você está mort%c!",
-					 OA(ch));
+	if IS_DEAD(ch) {
+		send_to_char(ch, "Você não pode dar assistência a ninguém, você está mort%s!", OA(ch));
 		return;
 	}
 	one_argument(argument, arg);
@@ -49,7 +45,7 @@ ACMD(do_assist)
 	else if (!(helpee = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)))
 		send_to_char(ch, "%s", CONFIG_NOPERSON);
 	else if (helpee == ch)
-		send_to_char(ch, "Você não pode ajudar a si mesm%c!\r\n", OA(ch));
+		send_to_char(ch, "Você não pode ajudar a si mesm%s!\r\n", OA(ch));
 	else
 	{
 		/* 
@@ -83,27 +79,21 @@ ACMD(do_assist)
    2020 * Atualizado para nova estrutura de grupo. */
 ACMD(do_gassist)
 {
-	struct char_data *k, *helpee, *opponent;
+	struct char_data *k, *helpee = NULL, *opponent;
 	struct group_data *group;
 
-	if ((group = GROUP(ch)) == NULL)
-	{
+	if ((group = GROUP(ch)) == NULL) {
 		send_to_char(ch, "Mas você não é membro de um grupo!\r\n");
 		return;
 	}
 
-	if (FIGHTING(ch))
-	{
-		send_to_char(ch,
-					 "Você já está lutando!  Como você pretente dar assistência a alguém?\r\n");
+	if (FIGHTING(ch)) {
+		send_to_char(ch, "Você já está lutando!  Como você pretente dar assistência a alguém?\r\n");
 		return;
 	}
 
-	if IS_DEAD
-		(ch)
-	{
-		send_to_char(ch, "Você não pode dar assistência a ninguém, você está mort%c!",
-					 OA(ch));
+	if IS_DEAD(ch) {
+		send_to_char(ch, "Você não pode dar assistência a ninguém, você está mort%s!", OA(ch));
 		return;
 	}
 	if (GROUP(ch))
@@ -171,18 +161,15 @@ ACMD(do_hit)
 			return;				/* you can't order a charmed pet to attack a
 								   player */
 
-		if (!CONFIG_PK_ALLOWED && !IS_NPC(vict) && !IS_NPC(ch))
-			if (!SCMD_MURDER)
-				send_to_char(ch,
-							 "Use 'murder' se você realmente deseja atacar outro jogador.\r\n");
+		if (!CONFIG_PK_ALLOWED && !IS_NPC(vict) && !IS_NPC(ch)) {
+			if (!SCMD_MURDER) 
+				send_to_char(ch, "Use 'murder' se você realmente deseja atacar outro jogador.\r\n");
 			else
 				check_killer(ch, vict);
+		}
 
-		if ((GET_POS(ch) == POS_STANDING) && (vict != FIGHTING(ch)))
-		{
-			if (GET_DEX(ch) > GET_DEX(vict) || (GET_DEX(ch) == GET_DEX(vict) && rand_number(1, 2) == 1))	/* if 
-																											   faster 
-																											 */
+		if ((GET_POS(ch) == POS_STANDING) && (vict != FIGHTING(ch))) {
+			if (GET_DEX(ch) > GET_DEX(vict) || (GET_DEX(ch) == GET_DEX(vict) && rand_number(1, 2) == 1))
 				hit(ch, vict, TYPE_UNDEFINED);	/* first */
 			else
 				hit(vict, ch, TYPE_UNDEFINED);	/* or the victim is first */
@@ -393,7 +380,6 @@ EVENTFUNC(event_backflip)
 	struct char_data *ch, *tch;
 	struct mud_event_data *pMudEvent;
 	struct list_data *room_list;
-	int count;
 
 	/* This is just a dummy check, but we'll do it anyway */
 	if (event_obj == NULL)
@@ -669,7 +655,6 @@ ACMD(do_combo)
 	struct char_data *vict;
 	struct obj_data *weapon;
 	int perc, prob, hits, basedam, dam, i;
-	int can_improve = true;
 
 	one_argument(argument, arg);
 
@@ -778,34 +763,28 @@ ACMD(do_rescue)
 	struct char_data *vict, *tmp_ch;
 	int percent, prob;
 
-	if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_RESCUE) || PLR_FLAGGED(ch, PLR_TRNS))
-	{
+	if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_RESCUE) || PLR_FLAGGED(ch, PLR_TRNS)) {
 		send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
 		return;
 	}
 
-	if (IS_DEAD(ch))
-	{
-		act("Você não pode ajudar $N, você está mort$r!", FALSE, ch, 0, vict, TO_CHAR);
+	if (IS_DEAD(ch)) {
+		act("Você não pode ajudar $N, você está mort$r!", FALSE, ch, 0, ch, TO_CHAR);
 		return;
 	}
 
 	one_argument(argument, arg);
 
-	if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)))
-	{
+	if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM))) {
 		send_to_char(ch, "Quem você deseja resgatar?\r\n");
 		return;
 	}
-	if (vict == ch)
-	{
+	if (vict == ch) {
 		send_to_char(ch, "Fugir não seria melhor?\r\n");
 		return;
 	}
-	if (FIGHTING(ch) == vict)
-	{
-		send_to_char(ch,
-					 "Como você pretende resgatar alguém que você está tentando matar?\r\n");
+	if (FIGHTING(ch) == vict) {
+		send_to_char(ch, "Como você pretende resgatar alguém que você está tentando matar?\r\n");
 		return;
 	}
 	for (tmp_ch = world[IN_ROOM(ch)].people; tmp_ch &&
@@ -1222,14 +1201,15 @@ ACMD(do_seize)
   
 }
 
-ACMD(do_shoot){
+ACMD(do_shoot)
+{
    struct char_data *vict;
    struct obj_data *ammo, *fireweapon;
    int percent, prob;
 	char arg1[MAX_INPUT_LENGTH];
    char arg2[MAX_INPUT_LENGTH];
    struct affected_type af;
-   int dam;
+   int dam = 0;
    int door;
 	bool found = FALSE;
 	
