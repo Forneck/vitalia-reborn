@@ -359,8 +359,6 @@ int save_config(IDXTYPE nowhere)
 			"pk_allowed = %d\n\n", CONFIG_PK_ALLOWED);
 	fprintf(fl, "* Is player thieving allowed on the mud?\n"
 			"pt_allowed = %d\n\n", CONFIG_PT_ALLOWED);
-			fprintf(fl, "* Ann fit should evolve?\n"
-			"fit_evolve = %d\n\n", CONFIG_FIT_EVOLVE);
 	fprintf(fl, "* What is the minimum level a player can shout/gossip/etc?\n"
 			"level_can_shout = %d\n\n", CONFIG_LEVEL_CAN_SHOUT);
 	fprintf(fl, "* How many movement points does shouting cost the player?\n"
@@ -653,7 +651,6 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
 					"%s6%s) Default map size        : %s%d\r\n"
 					"%s7%s) Default minimap size    : %s%d\r\n"
 					"%s8%s) Scripts on PC's         : %s%s\r\n"
-			   	"%s9%s) Fitness evolve ann   : %s%s\r\n"
 					"%sQ%s) Exit To The Main Menu\r\n"
 					"Enter your choice : ",
 					grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.pk_allowed),
@@ -684,7 +681,6 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
 					nrm, cyn, OLC_CONFIG(d)->play.map_size, grn, nrm, cyn,
 					OLC_CONFIG(d)->play.minimap_size, grn, nrm, cyn,
 					CHECK_VAR(OLC_CONFIG(d)->play.script_players), grn, nrm),
-				grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.fit_evolve);
 
 	OLC_MODE(d) = CEDIT_GAME_OPTIONS_MENU;
 }

@@ -331,28 +331,28 @@
 #define AFF_PROTECT_GOOD   14   /**< Char protected from good */
 #define AFF_SLEEP          15   /**< (R) Char magically asleep */
 #define AFF_NOTRACK        16   /**< Char can't be tracked */
-#define AFF_STONESKIN        18
-#define AFF_FIRESHIELD        19
-#define AFF_SNEAK          20   /**< Char can move quietly */
-#define AFF_HIDE           21   /**< Char is hidden */
-#define AFF_TALKDEAD        22
-#define AFF_CHARM          23 /**< Char is charmed */
-#define AFF_FLYING 24 /**< Char is Flying" **/
-#define AFF_BREATH         25   /**< Char  can breathe underwater */
-#define AFF_PARALIZE 26
-#define AFF_LIGHT        27
-#define AFF_FIREFLIES        28
-#define AFF_STINGING        29
-#define AFF_THISTLECOAT      30
-#define AFF_SOUNDBARRIER      31
-#define AFF_ADAGIO        32
-#define AFF_ALLEGRO       33
-#define AFF_GLOOMSHIELD        34
-#define AFF_PROTECT        35   /**< Char protected from spell */
-#define AFF_WINDWALL 36
+#define AFF_STONESKIN        17
+#define AFF_FIRESHIELD        18
+#define AFF_SNEAK          19   /**< Char can move quietly */
+#define AFF_HIDE           20   /**< Char is hidden */
+#define AFF_TALKDEAD        21
+#define AFF_CHARM          22 /**< Char is charmed */
+#define AFF_FLYING 23 /**< Char is Flying" **/
+#define AFF_BREATH         24   /**< Char  can breathe underwater */
+#define AFF_PARALIZE 25
+#define AFF_LIGHT        26
+#define AFF_FIREFLIES        27
+#define AFF_STINGING        28
+#define AFF_THISTLECOAT      29
+#define AFF_SOUNDBARRIER      30
+#define AFF_ADAGIO        31
+#define AFF_ALLEGRO       32
+#define AFF_GLOOMSHIELD        33
+#define AFF_PROTECT        34   /**< Char protected from spell */
+#define AFF_WINDWALL 35
 
 /** Total number of affect flags */
-#define NUM_AFF_FLAGS   37
+#define NUM_AFF_FLAGS   36
 
 /* Modes of connectedness: used by descriptor_data.state 		*/
 #define CON_PLAYING       0 /**< Playing - Nominal state 		*/
