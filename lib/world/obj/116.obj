@@ -49,7 +49,7 @@ Uma grande bandeja de prata foi deixada no chão.~
 20 0 0 0
 2 1000 0 0 0
 #11604
-taca cristal~
+taca cristal vinho~
 uma taça~
 Uma bela taça de cristal foi deixada no chão.~
 ~
@@ -762,7 +762,7 @@ Você lê no rótulo:
              *SENDHA NAMAK*
 ~
 #11651
-bacia~
+bacia agua~
 uma bacia~
 Uma grande bacia foi cheia de água e aqui deixada.~
 ~
@@ -1016,12 +1016,12 @@ A
 carta mensagem negra ameaca vritra~
 a ameaça de Vritra~
 Uma estranha carta negra foi jogada aqui.~
-~
+Escrita em vermelho-vivo sobre papel negro, esta carta parece uma ameaça.~
 16 q 0 0 0 ao 0 0 0 0 0 0 0
 1 -1 0 0
 1 0 0 0 0
 E
-carta mensagem negra ameaca~
+escrita papel negro~
 Você lê a mensagem escrita em vermelho-vivo sobre o papel negro:
 "
 Meu velho adversário, a Seca voltou. E está mais poderosa que antes.
