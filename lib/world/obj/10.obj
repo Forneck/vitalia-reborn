@@ -59,8 +59,8 @@ baú branco~
 um baú branco~
 Um baú branco foi deixado aqui no chão.~
 ~
-15 deq 0 0 0 abcdefghijklmnopqrstuvwxyzABCDEF 0 0 0 0 0 0 0
-1500 7 0 0
+15 deq 0 0 0 0 0 0 0 0 0 0 0
+1500 7 -1 0
 8 50000 25000 0 0
 #1008
 janela norte~
@@ -340,7 +340,7 @@ vermelho-pálido... Uma benéfica magia parece ter encantado essas flores, que
 nunca murcham...
 ~
 #1026
-bule porcelana~
+bule porcelana cha~
 um bule de chá~
 Um precioso bule de porcelana chinesa foi colocado em cima da mesa.~
 ~
@@ -368,7 +368,7 @@ de chocolate e morangos inteiros, esse bolo é uma tentação para mortal
 nenhum botar defeito...  Coma logo, ou alguém fará isso por você!
 ~
 #1028
-xicara porcelana chinesa~
+xicara porcelana chinesa cha~
 uma xícara de porcelana~
 Uma preciosa xícara de porcelana chinesa foi coloca em cima da mesa.~
 ~

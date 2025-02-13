@@ -51,17 +51,17 @@ Uma chave completamente inútil foi deixada aqui.~
 0 0 0 0
 1 0 0 0 0
 E
+chave inutil~
+Esta chave é completamente inútil desde que não possa ser apanhada e
+adquirida.  A porta que destranca deve ser destrancada.... hmmmmm, eu tenho
+certeza que há alguma razão obscura entretanto para isto...
+~
+E
 razao~
 Não há nenhuma razão absoluta para esta chave, exceto por ser um artigo
 inútil, que ninguém pode adquirir.   As gratificações são para o caso de 
 alguém encontrá-la ou seja, deveria ser ignorada pois é um artigo não
 pode ser usado em nenhuma forma.   Confuso?
-~
-E
-chave inutil~
-Esta chave é completamente inútil desde que não possa ser apanhada e
-adquirida.  A porta que destranca deve ser destrancada.... hmmmmm, eu tenho
-certeza que há alguma razão obscura entretanto para isto...
 ~
 A
 1 4
@@ -74,18 +74,18 @@ Um enorme e astronômico altar está no meio do quarto.~
 15 0 0 0
 400 1 1 0 0
 E
-escrita~
-Não foi com o intuito de insultar sua inteligência ou coisa parecida mas esta
-escrita é completamente incompreensível. Outro ridículo...
+altar~
+Este altar é realmente GRANDE.  Tem uma pequena e incompreensível escrita
+por toda parte.
 ~
 E
 ridiculo~
 Pode ser usado em sua cabeça, seu ridículo!
 ~
 E
-altar~
-Este altar é realmente GRANDE.  Tem uma pequena e incompreensível escrita
-por toda parte.
+escrita~
+Não foi com o intuito de insultar sua inteligência ou coisa parecida mas esta
+escrita é completamente incompreensível. Outro ridículo...
 ~
 A
 14 -30
@@ -112,13 +112,13 @@ Um pergaminho mágico está aqui.~
 17 36 3 -1
 5 20000 3672 0 0
 E
+pergaminho mágico~
+Este pergaminho mágico tem a palavra 'EEFRTFG' escrita nele.
+~
+E
 eefrtfg~
 De fato, eu estava esperando que você soubesse o que isto significa...até
 porque eu não tenho a menor idéia do que seja.
-~
-E
-pergaminho mágico~
-Este pergaminho mágico tem a palavra 'EEFRTFG' escrita nele.
 ~
 A
 14 10
@@ -151,7 +151,7 @@ Garoto, você é muito sortudo!  Você achou isto... e isto abre a porta dos
 túneis.
 ~
 #2209
-barril~
+barril leite~
 o barril~
 Um barril de leite foi deixado aqui.~
 ~
@@ -164,7 +164,7 @@ Iste é um barril de leite padrão da Rua Gergelim, normalmente encontrado na
 loja do Senhor Hooper.
 ~
 #2211
-copo~
+copo leite~
 um copo~
 Um copo de leite está aqui esperando por um bebedor ansioso.~
 ~
