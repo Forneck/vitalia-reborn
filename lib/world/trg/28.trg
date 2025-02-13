@@ -1,6 +1,6 @@
 #2800
 Horacio~
-0 ab 12
+0 abg 30
 ~
 * By Forneck
 set max %random.8%

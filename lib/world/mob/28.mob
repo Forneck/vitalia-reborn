@@ -18,7 +18,7 @@ Vitália e algumas palavras indecifráveis aos olhos dos leigos:
 2285570 0 0 0 0 0 0 0 1000 E
 108 -70 -70 8d9+8000 8d8+20
 1000000 1000000
-8 8 1
+9 9 1
 Str: 18
 StrAdd: 100
 Dex: 25
@@ -40,7 +40,8 @@ e sólido de alguém, que mesmo estando em serviço, continua sereno e feliz.
 2156608 0 0 0 0 0 0 0 0 E
 108 10 0 1d1+30000 1d10+10
 1 2000
-8 8 1
+9 9 1
 Cha: 18
 E
+T 2800
 $

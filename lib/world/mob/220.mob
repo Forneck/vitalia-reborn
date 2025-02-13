@@ -10,7 +10,7 @@ uma informação.
 2285570 0 0 0 16 0 0 0 150 E
 108 0 -10 1d1+30000 2d8+18
 0 160000
-8 8 2
+9 9 2
 E
 #22021
 vendedor jornaleiro garoto~
@@ -25,7 +25,7 @@ oferecendo o jornal.  Ele carrega um fardo de jornais embaixo do braço.
 2285634 0 0 0 16 0 0 0 150 E
 108 0 -10 1d1+30000 2d8+18
 0 160000
-8 8 1
+9 9 1
 E
 #22022
 mensageiro garoto~
@@ -39,7 +39,7 @@ preocupar.
 2285632 0 0 0 16 0 0 0 150 E
 108 0 -10 1d1+30000 2d8+18
 0 160000
-8 8 1
+9 9 1
 E
 #22023
 operador~
@@ -55,7 +55,7 @@ melhor não atrapalhá-lo em seu serviço.
 2285570 0 0 0 16 0 0 0 150 E
 108 0 -10 1d1+30000 2d8+18
 0 160000
-8 8 1
+9 9 1
 E
 #22030
 Honireves ser amigo luz iluminado~
@@ -71,6 +71,7 @@ atenção.
 2156550 0 0 0 2320 0 0 0 300 E
 108 0 -10 1d1+30000 1d8+18
 1200 200000
-8 8 1
+9 9 1
 E
+T 22000
 $

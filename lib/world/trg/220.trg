@@ -1,6 +1,6 @@
 #22000
 Honireves~
-0 ab 12
+0 ab 30
 ~
 * By Forneck
 set max %random.3%
