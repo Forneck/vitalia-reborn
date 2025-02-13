@@ -2,6 +2,10 @@
 Vitalia~
 Torin~
 13100 13199 200 1 j 0 0 0 -1 -1
+M 0 13113 2 13121 	(o guarda sagrado)
+G 1 13102 1 -1 	(uma chave prateada)
+E 1 13140 99 11 	(um escudo largo)
+E 1 13122 99 16 	(a espada de Lorgeth)
 M 0 13101 3 13101 	(um guarda preguiçoso)
 E 1 13100 99 16 	(uma antiga espada enferrujada)
 E 1 13118 100 11 	(um escudo enferrujado)
@@ -53,11 +57,6 @@ M 0 13113 2 13123 	(o guarda sagrado)
 E 1 13140 99 11 	(um escudo largo)
 E 1 13141 99 16 	(uma clava brilhante)
 D 0 13123 2 1 	(O Quarto Do Portão)
-M 0 13113 2 13121 	(o guarda sagrado)
-G 1 13102 1 -1 	(uma chave prateada)
-E 1 13140 99 11 	(um escudo largo)
-E 1 13141 99 16 	(uma clava brilhante)
-E 1 13122 99 16 	(a espada de Lorgeth)
 M 0 13133 4 13154 	(um soldado fantasmagórico de Torin)
 E 1 13128 99 10 	(um par de braçadeiras fantasmagórica)
 M 0 13132 5 13155 	(um soldado fantasmagórico de Torin)

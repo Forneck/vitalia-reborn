@@ -1,7 +1,9 @@
 #12
 Vitalia~
 O Reino dos Imortais~
-1200 1299 10 2 bd 0 0 0 100 -1
+1200 1299 10 2 bdf 0 0 0 100 -1
+D 0 1200 0 1 	(A Sala de Reunião dos Deuses)
+D 0 1200 3 2 	(A Sala de Reunião dos Deuses)
 M 0 1202 2 1201 	(o espirito vagueante)
 R 0 1201 3098 -1 	(um quadro sagrado de mensagens)
 O 0 3098 1 1201 	(um quadro sagrado de mensagens)
@@ -32,8 +34,6 @@ O 0 1291 1 1222 	(uma grande tábua)
 R 0 1222 1290 -1 	(uma grande tábua)
 O 0 1290 1 1222 	(uma grande tábua)
 D 0 1204 2 1 	(O Pátio do Reino dos Imortais)
-D 0 1200 0 1 	(A Sala de Reunião dos Deuses)
-D 0 1200 3 2 	(A Sala de Reunião dos Deuses)
 D 0 1208 1 2 	(O Armário dos Deuses)
 D 0 1206 3 2 	(A Sala de Encontros Sociais)
 D 0 1205 1 2 	(O Escritório Postal dos Imortais)

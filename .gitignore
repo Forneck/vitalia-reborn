@@ -13,7 +13,9 @@ src/util/depend
 build/* 
 !build/create_solution.bat 
 !build/README.md 
-  
+syslog
+syslog.txt
+
 # Do not commit files from players 
 # lib/plrfiles/A-E/* 
 # lib/plrfiles/F-J/* 

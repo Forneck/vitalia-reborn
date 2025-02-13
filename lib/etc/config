@@ -158,7 +158,7 @@ DFLT_PORT = 4000
 DFLT_DIR = lib
 
 * What file to log messages to (ex: 'log/syslog').
-LOGNAME = log/syslog.txt
+LOGNAME = syslog.txt
 
 * Maximum number of players allowed before game starts to turn people away.
 max_playing = 200
