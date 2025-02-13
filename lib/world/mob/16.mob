@@ -7,7 +7,7 @@ O pequenino jovem rústico possui uma aparência tão inocente brincando com o
 seu bumerangue que a única coisa que você sente vontade de fazer é carrega-lo
 no colo e abraça-lo.
 ~
-2097348 0 0 0 0 0 0 0 600 E
+2097348 0 0 0 8 0 0 0 600 E
 12 15 7 3d6+145 3d4+0
 150 40000
 9 9 1
@@ -20,7 +20,7 @@ Uma mulher gnomo está parada aqui, tentando parecer maravilhosa.
 A mulher é baixinha, pele áspera, mas ela age como se fosse uma mulher mil
 vezes mais bonita. Ela começa a parecer atraente para você...
 ~
-2097348 0 0 0 0 0 0 0 600 E
+2097348 0 0 0 8 0 0 0 600 E
 26 9 4 7d10+670 3d8+2
 3000 60000
 9 9 2
@@ -34,7 +34,7 @@ Este é o clássico exemplo de um gnomo. Ele aparenta ser pequeno e frágil e
 ao mesmo tempo, uma criatura extremamente inteligente que poderia surpreender
 você.
 ~
-2097220 0 0 0 0 0 0 0 500 E
+2097220 0 0 0 24 0 0 0 500 E
 36 2 -3 6d12+1200 5d10+3
 7500 105000
 9 9 1
@@ -193,7 +193,7 @@ O morcego de fogo arde luminosamente e se prepara para atacar.
 Você vê uma chama imensa que se assemelha ao formato de um morcego.
 A criatura está pendurada no teto e morde você.
 ~
-2097252 0 0 0 0 0 0 0 -900 E
+2097252 0 0 0 16 0 0 0 -900 E
 12 5 0 3d4+250 3d5+2
 2000 10000
 9 9 1

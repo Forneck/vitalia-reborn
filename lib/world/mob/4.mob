@@ -1,6 +1,6 @@
 #400
 grifo guardiao estatua guardião estátua~
-O Grifo Guardião~
+o Grifo Guardião~
 A Estátua do Guardião dos Clans está aqui, parecendo ser realmente viva.
 ~
 O enorme Grifo é recoberto por escamas amarelo-almiscarado e seus
@@ -11,10 +11,10 @@ atentamente seus passos.  Sua cauda longa balança, como se estivesse
 impaciente.  Ei! Espere ai! Sua cauda está balançando?? O Grifo é real,
 está vivo e não parece disposto a conversar muito!
 ~
-2285578 0 0 0 0 0 0 0 100 E
+2285578 0 0 0 67109120 0 0 0 100 E
 100 0 -35 10d80+2500 10d5+50
 100000 200000
-8 8 1
+9 9 1
 Str: 20
 Dex: 19
 Int: 20
@@ -39,7 +39,7 @@ estando em serviço, continua sereno e feliz.
 2156608 0 0 0 0 0 0 0 0 E
 108 10 0 1d1+30000 1d10+10
 1 2000
-8 8 1
+9 9 1
 Cha: 18
 E
 $

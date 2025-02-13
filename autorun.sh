@@ -51,18 +51,18 @@ while ( : ) do
 
   tail -30 syslog > syslog.CRASH
 
-  fgrep "self-delete" syslog >> log/delete
-  fgrep "PCLEAN" syslog >> log/delete
-  fgrep "death trap" syslog >> log/dts
-  fgrep "killed" syslog >> log/rip
-  fgrep "Running" syslog >> log/restarts
-  fgrep "advanced" syslog >> log/levels
-  fgrep "equipment lost" syslog >> log/rentgone
-  fgrep "usage" syslog >> log/usage
-  fgrep "new player" syslog >> log/newplayers
-  fgrep "SYSERR" syslog >> log/errors
-  fgrep "(GC)" syslog >> log/godcmds
-  fgrep "Bad PW" syslog >> log/badpws
+  grep -f "self-delete" syslog >> log/delete
+  grep -f "PCLEAN" syslog >> log/delete
+  grep -f "death trap" syslog >> log/dts
+  grep -f "killed" syslog >> log/rip
+  grep -f "Running" syslog >> log/restarts
+  grep -f "advanced" syslog >> log/levels
+  grep -f "equipment lost" syslog >> log/rentgone
+  grep -f "usage" syslog >> log/usage
+  grep -f "new player" syslog >> log/newplayers
+  grep -f "SYSERR" syslog >> log/errors
+  grep -f "(GC)" syslog >> log/godcmds
+  grep -f "Bad PW" syslog >> log/badpws
 
   rm log/syslog.1
   mv log/syslog.2 log/syslog.1

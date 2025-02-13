@@ -11,7 +11,7 @@ irreconhecível.
 2099202 0 0 0 256 0 0 0 -50 E
 15 5 -4 3d15+500 4d5+7
 325 16427
-8 8 1
+9 9 1
 BareHandAttack: 9
 Dex: 12
 Int: 13
@@ -28,7 +28,7 @@ tortura.
 2099264 0 0 0 0 0 0 0 -50 E
 12 15 1 1d12+300 1d4+6
 250 3638
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -43,7 +43,7 @@ Você apenas consegue ver um par de argutos olhos negros...
 2099202 0 0 0 0 0 0 0 -50 E
 23 9 -2 1d23+1600 2d4+11
 700 29117
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -59,7 +59,7 @@ tudo o que resta dela é um cadáver.
 2099264 0 0 0 0 0 0 0 -50 E
 15 14 3 1d15+500 1d5+7
 325 6427
-8 8 2
+9 9 2
 Dex: 12
 Int: 13
 Wis: 13
@@ -75,7 +75,7 @@ barata.
 2156546 0 0 0 0 0 0 0 0 E
 108 10 0 1d1+30000 1d10+10
 1 2000
-8 8 1
+9 9 1
 E
 #305
 monstro gigante peludo~
@@ -87,7 +87,7 @@ Ele é gigantesco. E muuuuuuito peludo.
 2099234 0 0 0 0 0 0 0 -50 E
 30 2 -2 1d30+2250 3d4+15
 1050 37642
-8 8 1
+9 9 1
 E
 #306
 papai~
@@ -96,10 +96,10 @@ Papai está aqui.
 ~
 Quem é o papai??  ELE é!!!
 ~
-2099206 0 0 0 64 0 0 0 -50 E
+2099206 0 0 0 128 0 0 0 -50 E
 25 4 0 1d25+2000 2d4+12
 800 23646
-8 8 1
+9 9 1
 BareHandAttack: 12
 Dex: 12
 Int: 13
@@ -112,10 +112,10 @@ Mamãe está aqui.
 ~
 Mamãe? MAMÃAAE!
 ~
-2099206 0 0 0 64 0 0 0 -50 E
+2099206 0 0 0 128 0 0 0 -50 E
 25 4 0 1d25+2000 2d4+12
 800 23646
-8 8 2
+9 9 2
 BareHandAttack: 1
 Dex: 12
 Int: 13
@@ -128,10 +128,10 @@ Um irmão está aqui.
 ~
 UM IRMÃO!!!
 ~
-2099206 0 0 0 64 0 0 0 -50 E
+2099206 0 0 0 128 0 0 0 -50 E
 20 8 -12 1d20+1000 2d3+10
 550 13385
-8 8 1
+9 9 1
 BareHandAttack: 13
 Dex: 12
 Int: 13
@@ -144,10 +144,10 @@ Uma irmã está aqui.
 ~
 Como ela cresceu!
 ~
-2099206 0 0 0 64 0 0 0 -50 E
+2099206 0 0 0 128 0 0 0 -50 E
 20 8 -12 1d20+1000 2d3+10
 550 13385
-8 8 2
+9 9 2
 BareHandAttack: 13
 Dex: 12
 Int: 13
@@ -163,7 +163,7 @@ Ele parece ser mais do que um simples feiticeiro...
 2099234 0 0 0 260 0 0 0 -50 E
 30 6 -12 1d30+2250 3d4+15
 1050 37642
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -179,7 +179,7 @@ levemente seu corpo...  Isso não parece estar morto...
 2097154 0 0 0 256 0 0 0 -50 E
 35 3 -20 1d35+2400 3d6+17
 1300 55768
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13

@@ -581,9 +581,8 @@ grande e nem se cansou ao subi-la.
 ~
 0 -1 2025
 E
-salao~
-As mesas se agrupam de uma tal maneira que uma pista de dança.  é formada.
-O que está esperando?  Vá e tire alguém para dançar!
+mesa~
+Você vê uma mesa feita de carvalho, cheia das mais variadas especiarias.
 ~
 E
 palco~
@@ -591,8 +590,9 @@ O Palco está todo arrumado e as cortinas estão se fechando.
 Oba! Hoje tem show!
 ~
 E
-mesa~
-Você vê uma mesa feita de carvalho, cheia das mais variadas especiarias.
+salao~
+As mesas se agrupam de uma tal maneira que uma pista de dança.  é formada.
+O que está esperando?  Vá e tire alguém para dançar!
 ~
 S
 #2028

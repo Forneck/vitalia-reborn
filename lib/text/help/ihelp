@@ -1,41 +1,19 @@
-&B                 __   __   _    ________   ___ o�  __       _     ___
-&W       O MUNDO  &B|  |.' .'.'_| .'_    _.' .' _ `.  |  |    .'_|  .' _ `.
-&W            DE  &B|  ' .'  |  |    |  |   |  ' |  | |  |    |  | |  ' |  |
-&B                |  .'    |  |    |  |   |  .-.  | |  |___ |  | |  .-.  |
-&B                |.'      |_.'    |_.'   |_.' |_.' |____.' |_.' |_.' |_.'&n
-&B ______________________________________________________________[&W Ajuda &B]_______&n
+For a list of commands available to you, type:     @RCOMMANDS@n
+For a list of immortal commands type:              @RWIZHELP@n
 
-   Para ler ajuda para um t�pico, digite HELP (t�pico).
+To learn more about the above, type:         @RHELP <COMMAND>@n
 
-   &gMOVIMENTA��O&n:
-   Comandos para movimentar o seu personagem, olhar em volta, se localizar,
-sentar, dormir, abrir portas, etc...
+  New to the game ?                          @RHANDBOOK@n
+                                             @RPOLICY@n
 
-   &gCOMUNICA��O&n:
-   Comandos para conversar com outros jogadores do Mundo de Vit�lia.
+  Help with redit ?      @RHELP REDIT@n    | @RHELP REDIT-MENU@n
+  Help with oedit ?      @RHELP OEDIT@n    | @RHELP OEDIT-MENU@n
+  Help with medit ?      @RHELP MEDIT@n    | @RHELP MEDIT-MENU@n
+  Help with zedit ?      @RHELP ZEDIT@n    | @RHELP ZEDIT-MENU@n
+  Help with sedit ?      @RHELP SEDIT@n    | @RHELP SEDIT-MENU@n
+  Help with trigedit ?   @RHELP TRIGEDIT@n | @RHELP TRIGEDIT-MENU@n
+  Help with qedit ?      @RHELP QEDIT@n    | @RHELP QEDIT-MENU@n
 
-   &gOBJETOS&n:
-   Comandos para recolher e descartar objetos, para us�-los, vest�-los ou
-empunh�-los.  Tamb�m explica comandos para beber e comer.
+  Have other unanswered questions ?      @RHELP BUILDING@n
 
-   &gINFORMA��ES&n:
-   Comandos para exibir informacoes sobre o seu personagem, sobre o MUD e
-tamb�m outras informa��es �teis para o jogo.
-
-   &gCOMBATE&n:
-   Comandos para atacar oponentes ou para serem usados durante as lutas.
-
-   &gGRUPOS&n:
-   Comandos para forma��o e intera��o de grupos de jogadores.
-
-   &gUTILIT�RIOS&n:
-   Outros comandos de utilidade geral.
-
-   &gMAGIAS&n:
-   Ajuda para as magias do MUD.
-
-   &gHABILIDADES&n:
-   Ajuda para as habilidades do MUD.
-
-   &gCAN��ES&n:
-   Ajuda para as can��es do MUD.
+Any capital letters in red should be typed for further information.

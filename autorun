@@ -97,7 +97,7 @@ proc_syslog () {
     len=`echo $rec|cut -f 2 -d:`
     pattern=`echo $rec|cut -f 3- -d:`
 
-    fgrep $pattern syslog >> $name
+    grep -f $pattern syslog >> $name
     if [ $len -gt 0 ]; then
       temp=`mktemp $name.XXXXXX`
       tail -n $len $name > $temp

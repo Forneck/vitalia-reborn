@@ -173,7 +173,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"grats", "grat", POS_SLEEPING, do_gen_comm, 0, SCMD_GRATZ, CMD_NOARG},
 	{"gsay", "gsay", POS_SLEEPING, do_gsay, 0, 0, CMD_NOARG},
 	{"gtell", "gt", POS_SLEEPING, do_gsay, 0, 0, CMD_NOARG},
-//	{"help", "h", POS_DEAD, do_help, 0, 0, CMD_NOARG},
+	{"help", "h", POS_DEAD, do_help, 0, 0, CMD_NOARG},
 	{"happyhour", "ha", POS_DEAD, do_happyhour, 0, 0, CMD_NOARG},
 	{"hedit", "hedit", POS_DEAD, do_oasis_hedit, LVL_GOD, 0, CMD_NOARG},
 	{"helpcheck", "helpch", POS_DEAD, do_helpcheck, LVL_GOD, 0, CMD_NOARG},
@@ -571,6 +571,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 	input[26] = (float) GET_HITROLL(ch) / 100;
 	input[27] = (float) GET_DAMROLL(ch) / 100;
 	input[28] = (float) count_obj / 100;
+	/* Fim da coleta */
 
 	REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
 

@@ -16,9 +16,6 @@ pk_allowed = 1
 * Is player thieving allowed on the mud?
 pt_allowed = 1
 
-* Ann fit should evolve?
-fit_evolve = 0
-
 * What is the minimum level a player can shout/gossip/etc?
 level_can_shout = 1
 
@@ -161,7 +158,7 @@ DFLT_PORT = 4000
 DFLT_DIR = lib
 
 * What file to log messages to (ex: 'log/syslog').
-LOGNAME = syslog.txt
+LOGNAME = log/syslog.txt
 
 * Maximum number of players allowed before game starts to turn people away.
 max_playing = 200
@@ -210,7 +207,7 @@ O MUNDO DE VITALIA
          |:|
          |:|
          |:|
-        \:/
+         \:/
           ^
 
 
@@ -255,5 +252,5 @@ protocol_negotiation = 1
 special_in_comm = 1
 
 * If 0 then off, otherwise 1: Brief, 2: Normal, 3: Complete.
-debug_mode = 0
+debug_mode = 3
 
