@@ -214,7 +214,7 @@ void look_at_sky(struct char_data *ch)
       }
     }
     strcat(buf, "\r\n");
-    send_to_char(ch, buf);
+    send_to_char(ch,"%s", buf);
   }
 
   send_to_char(ch, "%s\r\n", CCNRM(ch, C_SPR));
