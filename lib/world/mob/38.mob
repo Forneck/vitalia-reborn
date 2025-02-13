@@ -13,7 +13,7 @@ belíssimos olhos cor de jade e lhe estende uma entrada.
 2285578 0 0 0 0 0 0 0 500 E
 108 2 2 1d1+30000 2d8+18
 30000 160000
-8 8 2
+9 9 2
 E
 #3801
 golem mithril~
@@ -29,8 +29,9 @@ pequena placa foi pendurada em seu pescoço, com os dizeres:
 2285578 0 0 0 0 0 0 0 0 E
 108 2 2 1d1+30000 2d8+18
 30000 160000
-8 8 1
+9 9 1
 E
+T 3801
 #3802
 pilgoras~
 Pilgoras~
@@ -46,7 +47,7 @@ CARD's, talvez a procura de mais uma raridade.
 2285578 0 0 0 0 0 0 0 400 E
 50 0 -15 1d10+800 1d15+5
 500000 100000
-8 8 1
+9 9 1
 E
 #3803
 garoto~
@@ -60,6 +61,7 @@ dentro houvesse um precioso tesouro.
 2285640 0 0 0 0 0 0 0 0 E
 30 10 -5 1d10+400 1d15+1
 2000 40000
-8 8 1
+9 9 1
 E
+T 3800
 $

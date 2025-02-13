@@ -10,7 +10,7 @@ está aqui imóvel a muito tempo.
 2291862 0 0 0 327936 0 0 0 -1000 E
 105 -42 -80 10d6+10300 10d10+50
 0 5100000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 25
 StrAdd: 25
@@ -31,7 +31,7 @@ feita em rocha é impenetrável.
 2128032 0 0 0 1116496 0 0 0 -700 E
 102 -20 -80 10d6+10000 10d10+40
 0 1300000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 25
 StrAdd: 25
@@ -53,13 +53,16 @@ como você em questão de minutos.
 2189442 0 0 0 65536 0 0 0 -100 E
 100 -16 -15 10d6+10000 10d10+33
 0 300000
-4 8 1
+9 9 1
 BareHandAttack: 8
 Str: 25
 StrAdd: 25
 Dex: 25
 Con: 25
 E
+T 11100
+T 11101
+T 11102
 #11104
 horrivel gargula~
 o Gárgula~
@@ -72,7 +75,7 @@ sobrenatural sobrevoa em volta de seu único mestre.
 2678790 0 0 0 67963256 0 0 0 -1000 E
 104 -32 -80 10d6+10000 10d10+50
 100000 450000
-8 8 1
+9 9 1
 BareHandAttack: 4
 Str: 25
 StrAdd: 25

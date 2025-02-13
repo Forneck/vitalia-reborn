@@ -273,3 +273,13 @@ Level     80
 Room      1
 Flags     0 0 0 0
 End
+Text       Bilhete do Museu~
+Body      Bilhete nao some. (Golem nao pega ao liberar, arrumar o trigger)
+~
+Name      Cansian~
+IdNum     1
+Dated     1739486150
+Level     110
+Room      3801
+Flags     0 0 0 0
+End

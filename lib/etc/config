@@ -128,7 +128,7 @@ immort_start_room = 1204
 frozen_start_room = 1202
 
 * The virtual number of the room that dead people should enter at.
-dead_start_room = 1891
+dead_start_room = 1890
 
 * The virtual numbers of the donation rooms.  Note: Add donation rooms
 * sequentially (1 & 2 before 3). If you don't, you might not be able to
