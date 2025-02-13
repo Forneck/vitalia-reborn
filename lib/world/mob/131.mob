@@ -357,7 +357,7 @@ O tenente Dorin do exército de Torin está aqui.
 Este é o forte tenente de Torin. Embora, ele tenha se tornado uma das 
 sombras que atacou esta cidade.
 ~
-35651594 0 0 0 0 0 0 0 0 E
+2097162 0 0 0 0 0 0 0 0 E
 28 13 -12 1d1+2150 2d6+14
 950 31569
 9 9 1
@@ -372,7 +372,7 @@ não possui pista alguma do porque deste quarto estar fora dos corredores
 principais de Torin. Ela parece ser um fantasma, pois esta transparente e 
 realmente não parece notar que você está aqui.
 ~
-539205706 0 0 0 0 0 0 0 0 E
+3383370 0 0 0 0 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
 600 15159
 9 9 2
@@ -385,7 +385,7 @@ Um cidadão de Torin, ou pelo menos já foi um cidadão de Torin.
 Uma vez esta coisa foi um cidadão de, e há pouco tempo era uma pessoa 
 normal.  Mas de alguma maneira sua alma foi retirada.
 ~
-539140168 0 0 0 0 0 0 0 0 E
+2269256 0 0 0 1048576 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
 600 15159
 9 9 1
@@ -401,7 +401,7 @@ depois da transformação que ocorreu, a pobre alma desta mulher foi
 apanhada. E agora ela caminha por estar ruas simplesmente esperando que 
 alguém possa a livrar deste mal.
 ~
-539140168 0 0 0 0 0 0 0 0 E
+2269256 0 0 0 0 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
 600 15159
 9 9 2
@@ -414,7 +414,7 @@ Uma bola azul brilhante paira aqui, mas você não tem certeza como ela emitindo
 Este estranho objeto parece estar vivo. Esta coisa brilha e de fato emite 
 bastante de luz.
 ~
-2230298 0 0 0 0 0 0 0 -10 E
+2230298 0 0 0 1048576 0 0 0 -10 E
 32 15 -20 1d1+2325 3d5+16
 0 44376
 9 9 0
@@ -427,7 +427,7 @@ Este soldado caminha pelos quartéis do batalhão, enquanto procura algo..
 Este soldado tem vagado por estes quartéis durante séculos, desde a última 
 batalha de Torin. Ele parece ter perdido algo e está procurando.
 ~
-539140184 0 0 0 0 0 0 0 0 E
+3317848 0 0 0 0 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
 600 15159
 9 9 1
@@ -440,7 +440,7 @@ Este soldado caminha pelos quartéis do batalhão, enquanto procura algo..
 Este soldado tem vagado por estes quartéis durante séculos, desde a última 
 batalha de Torin. Ele parece ter perdido algo e está procurando.
 ~
-539140184 0 0 0 0 0 0 0 0 E
+3317848 0 0 0 1048576 0 0 0 0 E
 21 8 1 1d1+900 2d3+10
 600 15159
 9 9 2
@@ -454,7 +454,7 @@ Muita névoa aqui. Parece ser quase uma criatura viva, mas você não tem
 certeza.  Tudo o que você está vendo não parece ser sólido, pois se fosse 
 e se tiver vida esta criatura teria uma mobilidade incrível. 
 ~
-539748428 0 0 0 0 0 0 0 0 E
+3926092 0 0 0 16777256 0 0 0 0 E
 32 15 -20 1d1+2325 3d5+16
 0 44376
 9 9 0
