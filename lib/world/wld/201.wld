@@ -5,7 +5,7 @@ melancolia e depressão. Foi o lar dos insanos habitantes de Vitália por
 séculos. Apesar do fato de que os tempos mudaram, as táticas e tratamentos
 dos pacientes continuam sendo primitivos e cruéis.    
 ~
-201 4 0 0 -1 201
+201 4 0 0 0 0
 D0
 ~
 ~
@@ -24,12 +24,11 @@ apenas na ENTRADA do lugar você já começa a sentir enjôo, você imagina que
 ficará pior lá dentro. Para o leste é o cadastro e para oeste é o
 vestíbulo. Há uma porta para o norte.    
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D0
 ~
 porta~
-:n 2 a porta
-ab 20100 20105
+1 20100 20105
 D1
 ~
 ~
@@ -46,7 +45,7 @@ escritório de enfermeira se encontra a oeste e a entrada principal para o
 leste. Empoeiradas, porém confortáveis cadeiras foram espalhadas pela sala.
 Talvez você queira descansar um pouco?    
 ~
-201 536870924 0 0 0 0
+201 12 0 0 0 0
 D1
 ~
 ~
@@ -63,7 +62,7 @@ sala nesse lugar, as paredes estão imundas e podres, o chão parece que não
 é lavado há meses, possivelmente anos! Talvez você queira fazer um
 exame de saúde...?   
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D1
 ~
 porta~
@@ -75,7 +74,7 @@ Sala de Identificação~
 entrar.   As insígnias deixadas aqui diferenciam visitantes de pacientes, então
 seria uma boa idéia pegar uma (só para o caso de eles cometerem um erro).    
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D3
 ~
 ~
@@ -93,7 +92,7 @@ pequeno lugar. As paredes são sujas e cheias de líquens. Odores horríveis
 penetram no ar e pairam como doenças. O corredor continua a leste e a oeste.
 Uma porta levando para fora do prédio pode ser vista ao sul.    
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D1
 ~
 ~
@@ -108,7 +107,7 @@ D3
 0 -1 20106
 E
 parede~
-Há algo escrito na parede: @R"QUE CHEIRO É ESSE?!?"@n
+Há algo escrito na parede: 	R"QUE CHEIRO É ESSE?!?"	n
 ~
 S
 #20106
@@ -117,7 +116,7 @@ O Primeiro Andar do Asilo~
 pequeno lugar. As paredes são sujas e cheias de líquens. Odores horríveis
 penetram no ar e pairam como doenças. O corredor continua a leste e a oeste.    
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D1
 ~
 ~
@@ -133,7 +132,7 @@ O Salão do Primeiro Andar~
 vagarem. É provavelmente melhor deixá-los aqui fazendo apenas isso - você
 realmente não quer mexer com a cabeça deles ou coisa assim...quer?   
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D1
 ~
 ~
@@ -151,7 +150,7 @@ oeste e daqui você pode ver um grande número de novatos loucos. Talvez você
 devesse matá-los...Há um pequeno corredor levando para fora dessa
 sala ao leste.    
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D1
 ~
 ~
@@ -169,7 +168,7 @@ penetram no ar e pairam como doenças. Há um uma espécie de sinal gravado na
 parede....talvez fosse bom ler com cuidado. 
 O corredor continua a leste e a oeste.
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D1
 ~
 porta~
@@ -180,7 +179,7 @@ D3
 0 -1 20114
 E
 sinal~
-@R***CUIDADO!***
+	R***CUIDADO!***
 
 Não faça as seguintes coisas com os pacientes:
 Falar.
@@ -189,7 +188,7 @@ Fazer contato com os olhos.
 Alimentar.
 Divertir.
 
-Ou sofra as consequências.@n
+Ou sofra as consequências.	n
 ~
 S
 #20110
@@ -199,7 +198,7 @@ pequeno lugar. As paredes são sujas e cheias de líquens. Odores horríveis
 penetram no ar e pairam como doenças. O corredor termina aqui em uma
 escada. Você pode ver as celas aqui, ir para cima ou voltar para o oeste.    
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D0
 ~
 porta~
@@ -228,7 +227,7 @@ que um residente do Asilo pode chamar por ele mesmo.  Há uma pequena cama
 no canto e um pequeno armário onde eles podem deixar seus pertences. A
 saída é para o sul.    
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D2
 ~
 porta~
@@ -241,7 +240,7 @@ que um residente do Asilo pode chamar por ele mesmo.  Há uma pequena cama
 no canto e um pequeno armário onde eles podem deixar seus pertences. A
 saída é para o norte.    
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D0
 ~
 porta~
@@ -254,7 +253,7 @@ que um residente do Asilo pode chamar por ele mesmo.  Há uma pequena cama
 no canto e um pequeno armário onde eles podem deixar seus pertences. A
 saída é para o oeste.    
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D3
 ~
 ~
@@ -266,7 +265,7 @@ O Corredor Oeste~
 todo o Asilo que é limpo. O corredor termina aqui, em uma escada que leva
 para baixo. Você pode ver as celas aqui, ir para baixo ou voltar para leste.
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D0
 ~
 porta~
@@ -295,7 +294,7 @@ que um residente do Asilo pode chamar por ele mesmo.  Há uma pequena cama
 no canto e um pequeno armário onde eles podem deixar seus pertences. A
 saída é para o sul.    
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D2
 ~
 porta~
@@ -308,7 +307,7 @@ que um residente do Asilo pode chamar por ele mesmo.  Há uma pequena cama
 no canto e um pequeno armário onde eles podem deixar seus pertences. A
 saída é para o leste.    
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D1
 ~
 porta~
@@ -321,7 +320,7 @@ que um residente do Asilo pode chamar por ele mesmo.  Há uma pequena cama
 no canto e um pequeno armário onde eles podem deixar seus pertences. A
 saída é para o norte.    
 ~
-201 dfg 0 0 0 0
+201 104 0 0 0 0
 D0
 ~
 porta~
@@ -952,8 +951,7 @@ D2
 D3
 ~
 campo forca~
-:n 1 o campo de força
-ab 20100 20151
+1 20100 20151
 S
 #20151
 O Grande Laboratório~
@@ -968,18 +966,15 @@ sala, cercado por grandes tamboretes usados para observação.
 D0
 ~
 campo forca~
-:n 1 o campo de força
-a -1 20153
+1 -1 20153
 D1
 ~
 campo forca~
-:n 1 o campo de força
-a -1 20150
+1 -1 20150
 D2
 ~
 campo forca~
-:n 1 o campo de força
-a -1 20154
+1 -1 20154
 S
 #20152
 O Grande Laboratório~
@@ -993,7 +988,7 @@ não deveria estar aqui.
 D2
 ~
 ~
-0 -1 20150 0
+0 -1 20150
 D3
 ~
 ~
@@ -1015,8 +1010,7 @@ D1
 D2
 ~
 campo forca~
-:n 1 o campo de força
-ab 20100 20151
+1 20100 20151
 S
 #20154
 O Grande Laboratório~
@@ -1030,8 +1024,7 @@ não deveria estar aqui.  Um campo de força fica a norte.
 D0
 ~
 campo forca~
-:n 1 o campo de força
-ab 20100 20151
+1 20100 20151
 D1
 ~
 ~
@@ -1049,7 +1042,7 @@ não deveria estar aqui.
 D0
 ~
 ~
-0 -1 20150 0
+0 -1 20150
 D3
 ~
 ~
@@ -1162,7 +1155,7 @@ D1
 D4
 ~
 ~
-0 -1 20165 0
+0 -1 20165
 S
 #20167
 O Intestino Delgado~
