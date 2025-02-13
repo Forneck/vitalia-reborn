@@ -523,7 +523,7 @@ Há um músculo no chão.~
 4 0 0 0
 1 4 10 0 0
 #5467
-taca licor azul~
+taca licor azul vinho~
 uma taça~
 Uma taça de licor azulado foi esquecido aqui.~
 ~
@@ -531,7 +531,7 @@ Uma taça de licor azulado foi esquecido aqui.~
 5 5 5 0
 10 1800 10 0 0
 #5468
-taca~
+taca uisque~
 uma taça~
 Uma taça foi deixada aqui.~
 ~
@@ -539,7 +539,7 @@ Uma taça foi deixada aqui.~
 1 1 2 0
 1 3800 10 0 0
 #5469
-garrafa grogue~
+garrafa grogue rum~
 uma garrafa de grogue de rum~
 Há uma garrafa no chão.~
 ~
@@ -608,7 +608,7 @@ pocao azul escura~
 Essa poção azul escura possui um pequeno rótulo onde se lê: 'Restauração'
 ~
 #5475
-garrafa escorpiao flamejante~
+garrafa escorpiao flamejant cerveja~
 um escorpião flamejante~
 Uma garrafa de cerveja forte foi deixada aqui.~
 ~
@@ -616,7 +616,7 @@ Uma garrafa de cerveja forte foi deixada aqui.~
 5 5 1 0
 10 500 10 0 0
 #5476
-barril~
+barril cerveja~
 um barril~
 Um barril de cerveja foi abandonado aqui.~
 ~
@@ -624,7 +624,7 @@ Um barril de cerveja foi abandonado aqui.~
 10 10 1 0
 15 900 50 0 0
 #5477
-dose~
+dose uisque~
 uma dose~
 Há uma dose de licor no chão.~
 ~
