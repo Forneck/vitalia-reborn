@@ -202,7 +202,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
       return;
     } else if ((total_len = ((strlen(t) - strlen(s)) + strlen(*d->str))) <= d->max_str) {
       if ((replaced = replace_str(d->str, s, t, rep_all, d->max_str)) > 0) {
-        write_to_output(d, "%d ocorrencia%s de '%s' trocada%spor '%s'.\r\n", replaced, ((replaced != 1) ? "s " : " "),((replaced != 1) ? "s " : " "), s, t);
+        write_to_output(d, "%d ocorrencia%sde '%s' trocada%spor '%s'.\r\n", replaced, ((replaced != 1) ? "s " : " "),s,((replaced != 1) ? "s " : " "), t);
       } else if (replaced == 0) {
         write_to_output(d, "O texto '%s' não foi encontrado.\r\n", s);
       } else

@@ -601,11 +601,11 @@ ACMD(do_cast)
  }
 
  if (GET_LEVEL(ch) < LVL_IMMORT) {
-   level = get_spell_level(spell->vnum, GET_CLASS(ch));
-   if ((level == -1) || (GET_LEVEL(ch) < level)) {
-     send_to_char(ch, "Você não conhece essa %s!\r\n", (spell->type == SPELL) ? "magia" :(spell->type == CHANSON) ?  "canção": "habilidade");
-     return;
-   }
+   //level = get_spell_level(spell->vnum, GET_CLASS(ch));
+   //if ((level == -1) || (GET_LEVEL(ch) < level)) {
+   // send_to_char(ch, "Você não conhece essa %s!\r\n", (spell->type == SPELL) ? "magia" :(spell->type == CHANSON) ?  "canção": "habilidade");
+   //  return;
+   //}
    if (GET_SKILL(ch, spell->vnum) == 0) {
      send_to_char (ch, "Você não está familiarizad%s com esta %s.\r\n", OA(ch), (spell->type == SPELL) ? "magia" : (spell->type == CHANSON) ?  "canção": "habilidade");
      return;
