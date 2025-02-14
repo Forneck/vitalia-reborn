@@ -1,7 +1,7 @@
 #400
 Secretaria~
-0 b 30
-~
+0 b 100
+*~
 if %self.fighting%  
   halt
 end
@@ -36,8 +36,8 @@ switch %i%
 ~
 #401
 Saudacao~
-0 i 100
-~
+0 gi 100
+*~
 if %time.hour% < 6 || %time.hour% >= 18
   say Boa noite.
 else

@@ -5,14 +5,13 @@
 @B                |.'      |_.'    |_.'   |_.' |_.' |____.' |_.' |_.' |_.'@n
 @B ________________________________________[@W Livro de Leis para Imortais @B]_______@n
 
-{#101 index}
    Neste livro são descritas as políticas que devem ser seguidas e respeitadas
 pelos imortais do Mundo de Vitália.  Todas as regras contidas no @gPOLICY@n
 também são válidas para os imortais, contudo, as regras contidas neste livro
 prevalecem sobre o POLICY.
 
-@+B[@+WPolíticas Básicas@+B]@+n
-@+G1. Interferência.@+n
+@B[@WPolíticas Básicas@B]@n
+@G1. Interferência.@n
    Você agora está em um plano de evolução mais elevado do que o dos mortais,
 e por este motivo, não é permitido interferir no mundo dos mortais.  É
 considerado como interferência: lutar, matar ou roubar de mortais; ajudar
@@ -24,40 +23,37 @@ experiência), pois estes devem ser mortos pelos mortais, que receberão
 experiência ao matá-los.  Ao matar monstros, não deixe seu cadáver na sala,
 ou pelo menos retire e descarte (@gJUNK@n) tudo que sobrar dentro.
 
-@+G2. Visibilidade.@+n
+@G2. Visibilidade.@n
    Nenhum imortal ou semi-deus pode aparecer para os mortais sem a permissão
 de um Deus Guardião ou superior.  Para alternar sua invisibilidade, use o
 comando @gINVIS@n.
 
-{#106 index}
    Os Deuses (nível 106) e superiores podem ficar visíveis nos momentos
 apropriados, porém, deve-se evitar interferências desnecessárias.
 
-{#107 index}
    Os Deuses Guardiões (nível 107) e superiores podem utilizar o comando
 @gAPPEAR@n como recurso para ficar visível apenas para um grupo de jogadores.
 
-{#101 index}
-@+G3. Senhas.@+n
+@G3. Senhas.@n
    É de fundamental importância que a senha do seu personagem seja apenas de
 seu conhecimento, e que ninguêm mais a saiba.  Evite senhas fáceis.  Para
 ter uma boa senha, use letras e números misturados.  Tambêm evite manter
 senhas iguais para seu personagem imortal e seus avatares (quando for o
 caso).
 
-@+G4. Informações Pessoais@+n
+@G4. Informações Pessoais@n
    Ao se tornar imortal, você deve deixar uma mensagem no quadro dos
 imortais, dizendo seu nome real e seu e-mail.  Essas informações são apenas
 para controle e segurança do MUD.  O quadro de mensagens dos imortais fica
 ao norte do Pátio do Reino dos Imortais.  Para chegar até ele, use o comando
 @gGOTO IMM@n, seguido de @gN@n (norte).
 
-@+B[@+WInfringências@+B]@+n
+@B[@WInfringências@B]@n
    Qualquer desacordo com essas políticas será tratado pelos Deuses
 Legisladores e superiores.  Qualquer problema que não foi abordado aqui,
 será tratado por um Deus Criador ou Supremo.
 
-@+B[@+WOutros Capítulos@+B]@+n
+@B[@WOutros Capítulos@B]@n
    Há vários outros capítulos neste livro.  Você pode ler cada um dos outros
 capítulos através dos comandos indicados abaixo:
 
@@ -65,12 +61,9 @@ capítulos através dos comandos indicados abaixo:
    @gHANDBOOK DIREITOS   @n Direitos dos imortais.
    @gHANDBOOK AVATARES   @n Políticas e restrições sobre o uso de avatares.
    @gHANDBOOK DESAFIOS   @n Políticas e restrições para a criação de desafios.
-{#106 index}
    @gHANDBOOK DEUSES     @n Regras aplicáveis apenas para Deuses.
-{#107 index}
    @gHANDBOOK GUARD      @n Regras aplicáveis apenas para Deuses Guardiões.
-{#101 intro}
-@+B[@+WInformações Para Novos Imortais@+B]@+n
+@B[@WInformações Para Novos Imortais@B]@n
 
    Ao se tornar um imortal, você passa a pertencer a um plano de evolução
 mais elevado, ganhando assim, novos poderes.  Seu personagem se torna imune
@@ -98,7 +91,7 @@ diante, suas promoções a níveis superiores são decididas pelos Deuses
 Legisladores e superiores, levando em consideração sua dedicação pelo MUD, e
 seu interesse nas implementações do Mundo de Vitália.
 {#101 direitos}
-@+B[@+WDireitos@+B]@+n
+@B[@WDireitos@B]@n
 
    Enquanto você for um imortal menor (do nível 101 até 104), vocã não terá
 nenhum direito especial, pois deve continuar matando monstros e recebendo
@@ -108,8 +101,7 @@ experiência, até se tornar um Semi-Deus (nível 105).
 chamado de "Avatar".  Com um avatar, você poderá continuar jogando no MUD
 como um mortal, sem ter que excluir seu personagem imortal.  Digite @gHANDBOOK
 AVATAR@n para conhecer as políticas e restrições para o uso de avatares.
-{#101 avatares}
-@+B[@+WAvatares@+B]@+n
+@B[@WAvatares@B]@n
 
    Apenas os Semi-Deuses (nível 105) e superiores podem ter um avatar.
 
@@ -128,21 +120,17 @@ forem desejadas, mas não podem se tornar imortais.
    Fora isso, o avatar deve jogar como um jogador qualquer, e não é permitida
 a divulgação de sua verdadeira identidade aos outros mortais.
 
-{#106 avatares}
    Deuses (nível 106) e superiores poderão ter mais de um avatar, mas nunca
 se deve manter mais avatares que o necessário.  É uma boa idéia usar avatares
 para ajudar ensinar os primeiros passos para os jogadores novos.
 
-{#107 avatares}
    Os avatares dos Deuses Guardiões e superiores podem ser modificados e
 receber ajuda de seus próprios donos.
 
-{#101 avatares}
    Se você não tiver uma boa conduta, seja com seu próprio personagem, ou
 com o seu avatar, você perderá o direito de uso do avatar, e não será aceita
 a criação de novos avatares.
-{#101 desafios}
-@+B[@+WAventuras e Desafios@+B]@+n
+@B[@WAventuras e Desafios@B]@n
 
    Aventuras ou desafios (quests) só podem ser realizadas pelos membros
 cadastrados e aceitos pelo clã GAIVI do Mundo de Vitália.  Todos os desafios
@@ -150,10 +138,9 @@ devem ser realizadas de acordo com as regras definidas pelo clã.
 
    Para fazer parte do clã GAIVI, você precisa ser um Semi-Deus (nível 105)
 e ser convidado.
-{#106 deuses}
-@+B[@+WRegras para Deuses@+B]@+n
+@B[@WRegras para Deuses@B]@n
 
-@+G1. Freqüência@+n
+@G1. Freqüência@n
    Atingindo o nível de Deus, você começa a ter responsabilidades no MUD, e
 deve estar sempre presente, cumprindo as tarefas que lhe forem designadas.
 Não há a necessidade de permanecer presente o tempo todo, mas você deve
@@ -164,22 +151,22 @@ puder comparecer ao jogo por um tempo, avise os superiores.
    Se você se afastar do MUD por muito tempo sem dar nenhuma explicação,
 esteja preparado para se encontrar em um nível inferior quando retornar.
 
-@+B[@+WClassificação dos Deuses@+B]@+n
+@B[@WClassificação dos Deuses@B]@n
 
    Os Deuses (nível 106) são divididos em três classes, de acordo com a tarefa
 atribuída a cada um.  As três classes existentes são explicadas logo a seguir:
 
-@+G1. Deus dos Iniciantes@+n
+@G1. Deus dos Iniciantes@n
    Tem a tarefa principal de ajudar os novos jogadores a darem seus
 primeiros passos no jogo, ensinar-lhes os principais comandos, como se
 vestem, se alimentam e como lutam.  Essa ajuda pode ser usando seu próprio
 personagem Deus, ou de maneira mais discreta: usando um avatar.
 
-@+G2. Deus dos Desafios@+n
+@G2. Deus dos Desafios@n
    Tem a tarefa de planejar, criar, organizar e executar desafios (quests) para
 os jogadores mortais.  Os Deuses dos Desafios são os braços do clã GAIVI.
 
-@+G3. Deus dos Renascidos@+n
+@G3. Deus dos Renascidos@n
    Tem a tarefa de guiar os jogadores durante a transcendência e a
 reencarnação.  São os responsáveis por guardar e devolver os equipamentos do
 jogador que forem autorizados a serem mantidos para a próxima encarnação.
@@ -188,8 +175,7 @@ jogador que forem autorizados a serem mantidos para a próxima encarnação.
 estiver livre no momento.  Por exemplo, um Deus dos Iniciantes pode ajudar a
 executar uma quest apenas se não houverem jogadores novatos necessitando de
 ajuda.
-{#107 guard}
-@+B[@+WDeuses Guardiões@+B]@+n
+@B[@WDeuses Guardiões@B]@n
 
    Sendo um Deus Guardião ou superior, você possui grandes poderes no MUD, e
 deve estar sempre atento às seguintes políticas:

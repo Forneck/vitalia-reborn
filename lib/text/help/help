@@ -1,21 +1,41 @@
--------------------------------------------------------------------------------
-Movement:                          | Communication:
-NORTH SOUTH EAST WEST UP DOWN      | SAY GSAY SHOUT HOLLER TELL ASK WHISPER
-LOOK EXITS ENTER LEAVE             | MAIL RECEIVE CHECK GOSSIP GRATS AUCTION
-SLEEP WAKE REST SIT STAND          | NOTELL NOSHOUT NOGOSSIP NOGRATS NOAUCTION
-(LOCK UNLOCK OPEN CLOSE)           |
--------------------------------------------------------------------------------
-Objects:                           | Information: 
-GET DROP JUNK DONATE PUT GIVE WEAR | SCORE HELP INFO WHO NEWS TIME WEATHER
-GRAB INVENTORY EQUIPMENT REMOVE    | WHERE CONSIDER LEVELS WIZLIST IMMLIST
-EXAMINE EAT DRINK TASTE SIP POUR   | CREDITS TOGGLE FLAGS WIZHELP
--------------------------------------------------------------------------------
-Combat:                            | Utility:
-KILL WIELD FLEE ASSIST TRACK       | ! BUG IDEA TYPO QUIT SAVE BRIEF COMPACT
-(KICK BASH RESCUE BACKSTAB CAST)   | TITLE NOSUMMON COMMANDS SOCIALS DISPLAY
--------------------------------------------------------------------------------
-Further information available by HELP <keyword>, keyword being a command or 
-(for example) one of the following:
+@B                 __   __   _    ________   ___ o°  __       _     ___
+@W       O MUNDO  @B|  |.' .'.'_| .'_    _.' .' _ `.  |  |    .'_|  .' _ `.
+@W            DE  @B|  ' .'  |  |    |  |   |  ' |  | |  |    |  | |  ' |  |
+@B                |  .'    |  |    |  |   |  .-.  | |  |___ |  | |  .-.  |
+@B                |.'      |_.'    |_.'   |_.' |_.' |____.' |_.' |_.' |_.'@n
+@B ______________________________________________________________[@W Ajuda @B]_______@n
 
-   SOCIAL SHOPS INNS CLERIC WARRIOR THIEF MAGIC SPELLS LINK
--------------------------------------------------------------------------------
+   Para ler ajuda para um tópico, digite HELP (topico).
+
+   @gMOVIMENTACAO@n:
+   Comandos para movimentar o seu personagem, olhar em volta, se localizar,
+sentar, dormir, abrir portas, etc...
+
+   @gCOMUNICACAO@n:
+   Comandos para conversar com outros jogadores do Mundo de Vitalia.
+
+   @gOBJETOS@n:
+   Comandos para recolher e descartar objetos, para usa-los, vesti-los ou
+empunha-los.  Também explica comandos para beber e comer.
+
+   @gINFORMACOES@n:
+   Comandos para exibir informacoes sobre o seu personagem, sobre o MUD e
+também outras informacoes uteis para o jogo.
+
+   @gCOMBATE@n:
+   Comandos para atacar oponentes ou para serem usados durante as lutas.
+
+   @gGRUPOS@n:
+   Comandos para formação e interacao de grupos de jogadores.
+
+   @gUTILITARIOS@n:
+   Outros comandos de utilidade geral.
+
+   @gMAGIAS@n:
+   Ajuda para as magias do MUD.
+
+   @gHABILIDADES@n:
+   Ajuda para as habilidades do MUD.
+
+   @gCANCOES@n:
+   Ajuda para as cancoes do MUD.

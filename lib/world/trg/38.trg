@@ -1,43 +1,40 @@
 #3800
 garoto~
-0 b 30
+0 g 100
 ~
-if %self.fighting%  
+if !%self.canbeseen(%actor%)%
   halt
 end
-if %random.4%
-  halt
-end
-if %random.1%
-  say Ol, tem cards pra trocar comigo?
-else
-  emote confere sua coleo, pra ver que cartas ainda esto faltando.
+if %actor.is_pc%
+  if %random.5% == 0
+    say Ol, tem cards pra trocar comigo?
+  else
+    emote confere sua coleo, pra ver que cartas ainda esto faltando.
+  end
 end
 ~
 #3801
 Golem pede Bilhete~
 0 q 100
 ~
+if !%self.canbeseen(%actor%)%
+  halt
+end
 if !%actor.is_pc%
   halt
 end
 if %direction% != north
+  return 0
+end
+if !%actor.has_item(3803)% && !%actor.eq().vnum(3803)%
+  emote barra a sua passagem.
+  say Para entrar aqui, voc ter que comprar o bilhete.
+  return 0
   halt
 end
-set has_ticket 0
-set obj_list %actor.inventory%
-while %obj_list%
-  if %obj_list.vnum% == 3803
-    set has_ticket 1
-  break
-end
-if !%has_ticket%
-  emote barra a sua passagem.
-  emote barra a passagem de %actor.name%.
-  say Para entrar aqui, você terá que comprar o bilhete.
-  return 0
-else
-  say Pode passar %actor.name%
+emote toma um bilhete do Museu da sua mo e lhe concede passagem.
+if %actor.has_item(3803)%
+  %purge% %actor.inventory(3803)%
 end
 ~
 $~
