@@ -362,14 +362,14 @@ ACMD(do_skillset)
   }
   strcpy(helpbuf, (argument + 1));	/* strcpy: OK (MAX_INPUT_LENGTH <= MAX_STRING_LENGTH) */
   helpbuf[qend - 1] = '\0';
-  
-   sname = get_spell_name(i);
-     if (sname == UNDEF_SPELL){	/* This is valid. */
+
+    spell = get_spell_by_name(helpbuf, SPSK);
+  if (!spell) {
     send_to_char(ch, "Unrecognized skill.\r\n");
     return;
   } else
-    sname = spell->name;
-
+      sname = spell->name;
+  
   argument += qend + 1;		/* skip to next parameter */
   argument = one_argument(argument, buf);
 
@@ -395,16 +395,16 @@ ACMD(do_skillset)
 
   // -1 means not found. not assigned to this class.
   if (minlevel == -1) {
-    send_to_char(ch, "%s cannot be learned in class %s.\r\n", sname, pc_class_types[pc]);
-    return;
+    send_to_char(ch, "%s usually cannot be learned in class %s.\r\n", sname, pc_class_types[pc]);
+    //return;
   }
  if ((minlevel >= LVL_IMMORT) && (pl < LVL_IMMORT)) {
     send_to_char(ch, "%s cannot be learned by mortals.\r\n", sname);
     return;
 } else if (minlevel > pl) {
     send_to_char(ch, "%s is a level %d %s.\r\n", GET_NAME(vict), pl, pc_class_types[pc]);
-    send_to_char(ch, "The minimum level for %s is %d for %ss.\r\n", sname, minlevel, pc_class_types[pc]);
-    return;
+    send_to_char(ch, "The minimum level for %s usually is %d for %ss.\r\n", sname, minlevel, pc_class_types[pc]);
+    //return;
   }
 
 SET_SKILL(vict, spell->vnum, value);
