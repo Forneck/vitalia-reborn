@@ -3231,141 +3231,71 @@ ACMD(do_show)
 
 #define RANGE(low, high) (value = MAX((low), MIN((high), (value))))
 
-/* The set options available */
-static struct set_struct
-{
-	const char *cmd;
-	const char level;
-	const char pcnpc;
-	const char type;
-} set_fields[] =
-{
-	{
-	"ac", LVL_BUILDER, BOTH, NUMBER},	/* 0 */
-	{
-	"afk", LVL_BUILDER, PC, BINARY},	/* 1 */
-	{
-	"age", LVL_GOD, BOTH, NUMBER},
-	{
-	"align", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"bank", LVL_BUILDER, PC, NUMBER},
-	{
-	"brief", LVL_GOD, PC, BINARY},	/* 5 */
-	{
-	"cha", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"class", LVL_BUILDER, BOTH, MISC},
-	{
-	"color", LVL_GOD, PC, BINARY},
-	{
-	"con", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"damroll", LVL_BUILDER, BOTH, NUMBER},	/* 10 */
-	{
-	"deleted", LVL_IMPL, PC, BINARY},
-	{
-	"dex", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"drunk", LVL_BUILDER, BOTH, MISC},
-	{
-	"exp", LVL_GOD, BOTH, NUMBER},
-	{
-	"frozen", LVL_GRGOD, PC, BINARY},	/* 15 */
-	{
-	"gold", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"height", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"hitpoints", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"hitroll", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"hunger", LVL_BUILDER, BOTH, MISC},	/* 20 */
-	{
-	"int", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"invis", LVL_GOD, PC, NUMBER},
-	{
-	"invstart", LVL_BUILDER, PC, BINARY},
-	{
-	"killer", LVL_GOD, PC, BINARY},
-	{
-	"level", LVL_GRGOD, BOTH, NUMBER},	/* 25 */
-	{
-	"loadroom", LVL_BUILDER, PC, MISC},
-	{
-	"mana", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"maxhit", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"maxmana", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"maxmove", LVL_BUILDER, BOTH, NUMBER},	/* 30 */
-	{
-	"move", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"name", LVL_IMMORT, PC, MISC},
-	{
-	"nodelete", LVL_GOD, PC, BINARY},
-	{
-	"nohassle", LVL_GOD, PC, BINARY},
-	{
-	"nosummon", LVL_BUILDER, PC, BINARY},	/* 35 */
-	{
-	"nowizlist", LVL_GRGOD, PC, BINARY},
-	{
-	"olc", LVL_GRGOD, PC, MISC},
-	{
-	"password", LVL_GRGOD, PC, MISC},
-	{
-	"poofin", LVL_IMMORT, PC, MISC},
-	{
-	"poofout", LVL_IMMORT, PC, MISC},	/* 40 */
-	{
-	"practices", LVL_GOD, PC, NUMBER},
-	{
-	"quest", LVL_GOD, PC, BINARY},
-	{
-	"room", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"screenwidth", LVL_GOD, PC, NUMBER},
-	{
-	"sex", LVL_GOD, BOTH, MISC},	/* 45 */
-	{
-	"showvnums", LVL_BUILDER, PC, BINARY},
-	{
-	"siteok", LVL_GOD, PC, BINARY},
-	{
-	"str", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"stradd", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"thief", LVL_GOD, PC, BINARY},	/* 50 */
-	{
-	"thirst", LVL_BUILDER, BOTH, MISC},
-	{
-	"title", LVL_GOD, PC, MISC},
-	{
-	"variable", LVL_GRGOD, PC, MISC},
-	{
-	"weight", LVL_BUILDER, BOTH, NUMBER},
-	{
-	"wis", LVL_BUILDER, BOTH, NUMBER},	/* 55 */
-	{
-	"questpoints", LVL_GOD, PC, NUMBER},
-	{
-	"questhistory", LVL_GOD, PC, NUMBER},
-	{
-	"hometown", LVL_GRGOD, PC, NUMBER},
-	{
-	"breath", LVL_GOD, PC, NUMBER},
-	{
-	"maxbreath", LVL_GOD, PC, NUMBER},
-	//{"trns", LVL_GOD, PC, BINARY},
-	//{"ghost", LVL_GOD, PC, BINARY},
-	{"\n", 0, BOTH, MISC}
-};
+static struct set_struct {
+    const char *cmd;                                                                  const char level;                                                                 const char pcnpc;                                                                 const char type;
+  } set_fields[] = {                                                                 { "ac",              LVL_BUILDER,    BOTH,   NUMBER },  /* 0  */
+   { "afk",             LVL_BUILDER,    PC,     BINARY },  /* 1  */
+   { "age",             LVL_GOD,        BOTH,   NUMBER },
+   { "align",           LVL_BUILDER,    BOTH,   NUMBER },          
+   { "bank",            LVL_BUILDER,    PC,     NUMBER },   
+   { "brief",           LVL_GOD,        PC,     BINARY },  /* 5  */    
+   { "cha",             LVL_BUILDER,    BOTH,   NUMBER },     
+   { "class",           LVL_BUILDER,    BOTH,   MISC },   
+   { "color",           LVL_GOD,        PC,     BINARY },
+   { "con",             LVL_BUILDER,    BOTH,   NUMBER }, 
+   { "damroll",         LVL_BUILDER,    BOTH,   NUMBER },  /* 10 */
+   { "deleted",         LVL_IMPL,       PC,     BINARY },           
+   { "dex",             LVL_BUILDER,    BOTH,   NUMBER },     
+   { "drunk",           LVL_BUILDER,    BOTH,   MISC },
+   { "exp",             LVL_GOD,        BOTH,   NUMBER },
+   { "frozen",          LVL_GRGOD,      PC,     BINARY },  /* 15 */
+   { "gold",            LVL_BUILDER,    BOTH,   NUMBER },          
+   { "height",          LVL_BUILDER,    BOTH,   NUMBER },   
+   { "hitpoints",       LVL_BUILDER,    BOTH,   NUMBER },
+   { "hitroll",         LVL_BUILDER,    BOTH,   NUMBER },
+   { "hunger",          LVL_BUILDER,    BOTH,   MISC },    /* 20 */   
+   { "int",             LVL_BUILDER,    BOTH,   NUMBER },
+   { "invis",           LVL_GOD,        PC,     NUMBER },                            { "invstart",        LVL_BUILDER,    PC,     BINARY },  
+   { "killer",          LVL_GOD,        PC,     BINARY },  
+   { "level",           LVL_GRGOD,      BOTH,   NUMBER },  /* 25 */    
+   { "loadroom",        LVL_BUILDER,    PC,     MISC },
+   { "mana",            LVL_BUILDER,    BOTH,   NUMBER },  
+   { "maxhit",          LVL_BUILDER,    BOTH,   NUMBER },   
+   { "maxmana",         LVL_BUILDER,    BOTH,   NUMBER },
+   { "maxmove",         LVL_BUILDER,    BOTH,   NUMBER },  /* 30 */
+   { "move",            LVL_BUILDER,    BOTH,   NUMBER },
+   { "name",    LVL_IMMORT,     PC,     MISC },
+   { "nodelete",        LVL_GOD,        PC,     BINARY },
+   { "nohassle",        LVL_GOD,        PC,     BINARY },
+   { "nosummon",        LVL_BUILDER,    PC,     BINARY },  /* 35 */
+   { "nowizlist",       LVL_GRGOD,      PC,     BINARY },
+   { "olc",             LVL_GRGOD,      PC,     MISC },
+   { "password",        LVL_GRGOD,      PC,     MISC },
+   { "poofin",          LVL_IMMORT,     PC,     MISC },
+   { "poofout",         LVL_IMMORT,     PC,     MISC },   /* 40 */
+   { "practices",       LVL_GOD,        PC,     NUMBER },
+   { "quest",           LVL_GOD,        PC,     BINARY },
+   { "room",            LVL_BUILDER,    BOTH,   NUMBER },
+   { "screenwidth", LVL_GOD,  PC,   NUMBER },
+   { "sex",             LVL_GOD,        BOTH,   MISC },  /* 45 */
+   { "showvnums",  LVL_BUILDER,  PC, BINARY },
+   { "siteok",   LVL_GOD,  PC,   BINARY },
+   { "str",             LVL_BUILDER,    BOTH,   NUMBER },
+   { "stradd",          LVL_BUILDER,    BOTH,   NUMBER },
+   { "thief",           LVL_GOD,        PC,     BINARY }, /* 50 */
+   { "thirst",          LVL_BUILDER,    BOTH,   MISC },
+   { "title",           LVL_GOD,        PC,     MISC   },
+   { "variable",        LVL_GRGOD,      PC,     MISC },
+   { "weight",          LVL_BUILDER,    BOTH,   NUMBER },
+   { "wis",             LVL_BUILDER,    BOTH,   NUMBER }, /* 55 */
+   { "questpoints",     LVL_GOD,        PC,     NUMBER },
+   { "questhistory",    LVL_GOD,        PC,   NUMBER },
+	{"hometown", LVL_GRGOD, PC, NUMBER},
+	{"breath", LVL_GOD, PC, NUMBER},
+	{"maxbreath", LVL_GOD, PC, NUMBER},
+	{"transcendeu", LVL_GOD, PC, BINARY},
+	{"espirito", LVL_GOD, PC, BINARY},
+   { "\n", 0, BOTH, MISC }                                                          };
 
 static int perform_set(struct char_data *ch, struct char_data *vict, int mode, char *val_arg)
 {
@@ -3858,11 +3788,11 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 		}
 		return (0);
 		break;
-	case 59:					/* breath */
+	case 59:					
 		vict->points.breath = RANGE(0, vict->points.max_breath);
 		affect_total(vict);
 		break;
-	case 60:					/* maxbreath */
+	case 60:					
 		vict->points.max_breath = RANGE(1, 5000);
 		affect_total(vict);
 		break;
@@ -3893,7 +3823,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 
 static void show_set_help(struct char_data *ch)
 {
-  const char *set_levels[] = {"Imm", "God", "GrGod", "IMP"};                        const char *set_targets[] = {"PC", "NPC", "BOTH"};
+  const char *set_targets[] = {"PC", "NPC", "BOTH"};
   const char *set_types[] = {"MISC", "BINARY", "NUMBER"};
   char buf[MAX_STRING_LENGTH];
   int i, len=0, add_len=0;
@@ -3901,8 +3831,10 @@ static void show_set_help(struct char_data *ch)
   len = snprintf(buf, sizeof(buf), "%sCommand             Lvl    Who?  Type%s\r\n", CCCYN(ch, C_NRM), CCNRM(ch, C_NRM));
   for (i = 0; *(set_fields[i].cmd) != '\n'; i++) {
         if (set_fields[i].level <= GET_LEVEL(ch)) {
-      add_len = snprintf(buf+len, sizeof(buf)-len, "%-20s%-5s  %-4s  %-6s\r\n", set_fields[i].cmd,                                                                                                          set_levels[((int)(set_fields[i].level) - LVL_IMMORT)],
-                                        set_targets[(int)(set_fields[i].pcnpc)-1],                                        set_types[(int)(set_fields[i].type)]);
+      add_len = snprintf(buf+len, sizeof(buf)-len, "%-20s%i  %-4s  %-6s\r\n", set_fields[i].cmd,
+		      ((int)(set_fields[i].level)),
+                      set_targets[(int)(set_fields[i].pcnpc)-1],
+		      set_types[(int)(set_fields[i].type)]);
       len += add_len;                                                                 }
   }
   page_string(ch->desc, buf, TRUE);                                               }
