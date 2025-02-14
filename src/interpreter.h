@@ -44,9 +44,6 @@ int enter_player_game (struct descriptor_data *d);
 
 void on_player_linkless(struct char_data *ch);
 
-void autopilot_process();
-void autopilot_char(struct char_data *ch);
-void autopilot_rival(struct char_data *ch);
 /* ACMDs available through interpreter.c */
 ACMD(do_alias);
 

@@ -28,7 +28,6 @@
 #include "modify.h"
 #include "spedit.h"
 #include "formula.h"
-#include "./include/fann.h"
 
 /* locally defined functions of local (file) scope */
 

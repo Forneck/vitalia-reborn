@@ -334,21 +334,8 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
    GET_FIT(killer)++;
    GET_FIT(ch)--;
    
-	if (PLR_FLAGGED(ch, PLR_AUTO))
-	{
-	  
-	  char_from_room(ch); char_to_room(ch,GET_HOMETOWN(ch));
-	  GET_HIT(ch) = GET_MAX_HIT(ch);
-	  GET_MANA(ch) = GET_MAX_MANA(ch);
-	  GET_MOVE(ch) = GET_MAX_MOVE(ch);
-	  GET_COND(ch, HUNGER) = 24;
-			GET_COND(ch, THIRST) = 24;
-	  update_pos(ch);
-	}
-	else {
 	update_pos(ch);
 	make_corpse(ch);
-	}
 	// -- jr - Mar 17, 2000 * Enhancement of player death
 	if (!IS_NPC(ch))
 	{

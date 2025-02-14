@@ -1,26 +1,24 @@
 Name: Cansian
 Pass: CaDaOszjqTplA
-Titl: 
-Sex : 2
-Clas: 4
+Titl: o Deus Supremo
+Sex : 1
+Clas: 6
 Levl: 110
 Id  : 1
-Brth: 1601790482
-Plyd: 2078644
-Last: 1739422577
-Lmot: 1739404625
-Lnew: 1739404621
-Htwn: 1372
+Brth: 1739554530
+Plyd: 5
+Last: 1739554727
+Lmot: 1739554701
+Lnew: 1739554697
+Htwn: 1
 Host: 127.0.0.1
-Hite: 151
-Wate: 113
-Alin: 322
-Act : 0 0 0 0
+Hite: 198
+Wate: 137
+Act : g 0 0 0
 Aff : 0 0 0 0
-Pref: himnoqrvzAB d 0 0
-Room: 65535
-Lern: 1
-Hit : 2000/2000
+Pref: himnoqrvz cd 0 0
+Room: 1204
+Hit : 500/500
 Mana : 100/100
 Move: 82/82
 Str : 25/100
@@ -30,46 +28,5 @@ Dex : 25
 Con : 25
 Cha : 25
 Ac  : 100
-Exp : 7000001
+Exp : 7000000
 Olc : 0
-Page: 60
-Alis: 13
- guarda
- medit $1;s;n;1,3013;q;q;y
-1
- thief
- medit $1;s;n;1,3007;q;q;y
-1
- mu
- medit $1;s;n;1,3009;q;q;y
-1
- snake
- medit $1;s;n;1,3008;q;q;y
-1
- bispo
- hold bispo;use bispo;use bispo;use bispo;rem bispo;junk bispo
-1
- ha
- history all
-0
- sa
- say @Y$*@n
-1
- goss
- goss @Y$*@n
-1
- of
- order fol $*
-1
- indoor
- redit;3;4;0;q;y
-1
- tiro
- load o 11325;put tir quiver;shoot $1 $2
-1
- sede
- set althair thirs $1
-1
- vm
- vstat m $1
-1

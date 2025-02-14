@@ -3362,16 +3362,9 @@ static struct set_struct
 	"breath", LVL_GOD, PC, NUMBER},
 	{
 	"maxbreath", LVL_GOD, PC, NUMBER},
-	{
-	"trns", LVL_GOD, PC, BINARY},
-	{
-	   "ghost", LVL_GOD, PC, BINARY},
-	 {
-	    "auto", LVL_GOD, PC, BINARY},
-	    {
-	    "rival", LVL_GOD, PC, BINARY},
-	{
-	"\n", 0, BOTH, MISC}
+	//{"trns", LVL_GOD, PC, BINARY},
+	//{"ghost", LVL_GOD, PC, BINARY},
+	{"\n", 0, BOTH, MISC}
 };
 
 static int perform_set(struct char_data *ch, struct char_data *vict, int mode, char *val_arg)
@@ -3873,17 +3866,11 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 		vict->points.max_breath = RANGE(1, 5000);
 		affect_total(vict);
 		break;
-	case 61:
+        case 61:
 		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_TRNS);
 		break;
-			case 62:
+	case 62:
 		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_GHOST);
-		break;
-			case 63:
-		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_AUTO);
-		break;
-			case 64:
-		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_RIVAL);
 		break;
 	default:
 		send_to_char(ch, "Can't set that!\r\n");
@@ -3906,30 +3893,19 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 
 static void show_set_help(struct char_data *ch)
 {
-	const char *set_levels[] = { "Imm", "God", "GrGod", "IMP" };
-	const char *set_targets[] = { "PC", "NPC", "BOTH" };
-	const char *set_types[] = { "MISC", "BINARY", "NUMBER" };
-	char buf[MAX_STRING_LENGTH];
-	int i, len = 0, add_len = 0;
+  const char *set_levels[] = {"Imm", "God", "GrGod", "IMP"};                        const char *set_targets[] = {"PC", "NPC", "BOTH"};
+  const char *set_types[] = {"MISC", "BINARY", "NUMBER"};
+  char buf[MAX_STRING_LENGTH];
+  int i, len=0, add_len=0;
 
-	len =
-		snprintf(buf, sizeof(buf), "%sCommand             Lvl    Who?  Type%s\r\n",
-				 CCCYN(ch, C_NRM), CCNRM(ch, C_NRM));
-	for (i = 0; *(set_fields[i].cmd) != '\n'; i++)
-	{
-		if (set_fields[i].level <= GET_LEVEL(ch))
-		{
-			add_len =
-				snprintf(buf + len, sizeof(buf) - len, "%-20s%-5s  %-4s  %-6s\r\n",
-						 set_fields[i].cmd,
-						 set_levels[((int)(set_fields[i].level) - LVL_IMMORT)],
-						 set_targets[(int)(set_fields[i].pcnpc) - 1],
-						 set_types[(int)(set_fields[i].type)]);
-			len += add_len;
-		}
-	}
-	page_string(ch->desc, buf, TRUE);
-}
+  len = snprintf(buf, sizeof(buf), "%sCommand             Lvl    Who?  Type%s\r\n", CCCYN(ch, C_NRM), CCNRM(ch, C_NRM));
+  for (i = 0; *(set_fields[i].cmd) != '\n'; i++) {
+        if (set_fields[i].level <= GET_LEVEL(ch)) {
+      add_len = snprintf(buf+len, sizeof(buf)-len, "%-20s%-5s  %-4s  %-6s\r\n", set_fields[i].cmd,                                                                                                          set_levels[((int)(set_fields[i].level) - LVL_IMMORT)],
+                                        set_targets[(int)(set_fields[i].pcnpc)-1],                                        set_types[(int)(set_fields[i].type)]);
+      len += add_len;                                                                 }
+  }
+  page_string(ch->desc, buf, TRUE);                                               }
 
 ACMD(do_set)
 {

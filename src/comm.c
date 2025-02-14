@@ -1080,11 +1080,6 @@ void heartbeat(int heart_pulse)
 		next_tick--;
 	}
 	
-		if (!(heart_pulse % PASSES_PER_SEC))
-	{							/* EVERY sec - later change to sec / 5 = 200ms reaction time */
-		autopilot_process();
-	}
-
 	if (!(heart_pulse % PULSE_ZONE))
 		zone_update();
 
@@ -1112,10 +1107,6 @@ void heartbeat(int heart_pulse)
 		check_timed_quests();
 	}
 	
-	if (CONFIG_FIT_EVOLVE &&  (!(heart_pulse % (SECS_PER_MUD_HOUR * PASSES_PER_SEC * 2))))
-	{
-	   avalia_fitness();
-	}
 
 	if (CONFIG_AUTO_SAVE && !(heart_pulse % PULSE_AUTOSAVE))
 	{							/* 1 minute */

@@ -363,7 +363,6 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
 		act(leave_message, TRUE, ch, 0, 0, TO_ROOM);
 	}
 
-   	//ann_move_train(ch,dir,going_to);
 	char_from_room(ch);
 	char_to_room(ch, going_to);
   /*---------------------------------------------------------------------*/
