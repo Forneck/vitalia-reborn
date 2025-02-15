@@ -26,7 +26,7 @@ atacando o jogador.
 Exemplo:
    > assist Doctor
 
-Veja tambem: FLEE, KILL, RESCUE, GASSIST
+Veja tambem: AUTOASSIST, FLEE, KILL, RESCUE
 #1
 CONSIDER
 
@@ -55,7 +55,7 @@ Exemplos:
    > diagnose
    > diagnose rasmussen
 
-Veja tambem: CONSIDER
+Veja tambem: CONSIDER, HIT, KILL
 #1
 FLEE
 
@@ -65,6 +65,7 @@ Uso: flee
 de fugir desta batalha.  Para fugir, basta digitar 'flee'.  O comando nao e
 totalmente eficaz, pois para poder fugir, a sala em que voce esta precisa
 ter uma saida adequada.  Mas tambem, quem quer viver para sempre?
+   Aparentemente existe uma habilidade que permite fugir perdendo menos experiencia, mas nao foi totalmente confirmada pelos aventureiros.
 
 Veja tambem: WIMPY
 #1
@@ -77,7 +78,7 @@ mostra, logo acima do prompt, a saude do seu oponente.
 
 Veja tambem: DIAGNOSE
 #1
-KILL HIT
+KILL HIT FIGHT ATTACK SLAY BATTLES SMITE STRIKE CHOP VIOLENCE
 
 Uso: kill <vitima>
      hit <vitima>
@@ -103,17 +104,17 @@ Veja tambem: FLAGS
 #1
 WIMPY
 
-Uso: wimpy [hp]
+Uso: toggle wimpy [hp]
 
-   Use o comando WIMPY para fugir automaticamente quando seus pontos de vida
+   Use o comando TOOGLE com WIMPY para fugir automaticamente quando seus pontos de vida
 estiverem abaixos de um certo nivel.
 
 Exemplos:
 
-   > wimpy 35    Fara o seu personagem fugir automaticamente quando tiver
-                 menos de 35 pontos de vida.
-   > wimpy 0     Desligara o comando 'wimpy'.
-   > wimpy       Mostrara o status do seu 'wimpy' atual.
+   > toggle wimpy 35    Fara o seu personagem fugir automaticamente quando
+                        tiver menos de 35 pontos de vida.
+   > togglewimpy 0      Desligara o comando 'wimpy'.
+   > toggle wimpy       Mostrara o status do seu 'wimpy' atual.
 
 Veja tambem: FLEE, TOGGLE
 #1

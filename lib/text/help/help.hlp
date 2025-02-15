@@ -697,18 +697,6 @@ http://www.degraeve.com/img2txt.php
 
 Veja tambem: COLOR, AUTOMAP, TBAMAP, CARTOGRAPHY
 #101
-ASSIST
-
-Uso: assist <player>
-
-   If <player> needs assistance in battle and you feel brave enough to help, 
-use this command to join the battle. The monster attacking <player> will keep 
-hitting them, unless it decides to switch.
-
-> assist tink
-
-Veja tambem: AUTOASSIST, FLEE, KILL, RESCUE
-#0
 ASTAT
 
 Usage : astat <social>
@@ -741,26 +729,6 @@ attach obj 1480 sword   - Attaches obj trigger 1480 to a sword.
 
 Veja tambem: DETACH, TRIG-ATTACH, TRIG-DETACH, OLC, TRIGEDIT, TSTAT, STAT, ROOMFLAGS
 #101
-AUCTION GOSSIP GRATS CONGRATULATIONS CONGRATS
-Uso: auction <message>
-       gossip <message>
-       grats <message>
-
-These are channels reserved for specific purposes.  Messages on these
-channels reach everyone who is monitoring them.  You must be at least level
-three to use these channels.
-
-These channels should be used accordingly.
- 
-Examples:
-
-  > auction short sword -- minimum bid 100k
-  > gossip Hey, is that a short sword on your belt or are you happy to see me?
-  > grats GRATS Detta!!!!!!!!
-
-Veja tambem: TOGGLE, EMOTE, GSAY, HOLLER, NOREPEAT, SAY, SHOUT
-
-#0
 AUTOASSIST
 
 Uso: toggle autoassist
@@ -1970,24 +1938,6 @@ trigger text try \*.
 
 Veja tambem: REDIT-ROOM-FLAGS
 #101
-COMMUNICATION
-
-   The following commands deal with communication - for more info, @RHELP KEYWORD@n 
-
-SAY ASK WHISPER                    - Talk to people in the room
-GSAY GTELL REPORT                  - Talk to a person in the group.
-TELL QSAY REPLY                    - Talk to a person in the game / the quest.
-SHOUT HOLLER GOSSIP GRATS AUCTION  - Send a message on a public channel
-MAIL RECEIVE CHECK                 - Used to communicate with a postman.
-WRITE READ REMOVE                  - Used to communicate via boards.
-DEPOSIT WITHDRAW BALANCE           - Used to communicate in banks.
-BUY SELL LIST VALUE                - Used to communicate in shops.
-PRACTICE                           - Used to communicate with guilds.
-EMOTE                              - Send a message to the room.
-NOTELL NOSHOUT NOGOSSIP QUEST
-NOGRATS NOAUCTION                  - Turn off the corresponding channels.
-ORDER                              - Make charmed followers do things.
-#0
 COMPACT
 
 Uso: compact
@@ -1996,20 +1946,6 @@ This command toggles the extra blank line output to your screen after each
 command.  Useful if you have a small display.
 
 Veja tambem: BRIEF
-#0
-CONSIDER
-
-Uso: consider [target]
-
-This command will compare your Level with the <monsters> level.  You will then
-receive a rough estimate, which is by no means exact.  Consider does not take
-hitpoints/special attacks/damage into account.
-
-Example:
-
-  > consider chuck norris
-
-Veja tambem: HIT, KILL
 #0
 CONTAINERS BAGS CHESTS LOCKERS
 
@@ -2468,18 +2404,6 @@ dg_cast 'poison' %actor%
 Example: @RTSTAT 132, 61@n
 Veja tambem: SPELLS
 #101
-DIAGNOSE
-
-Uso: diagnose [target]
-
-This command will allow you to check the health of a player or mob.
-
-Example:
-
-  > diagnose doctor
-
-Veja tambem: CONSIDER, HIT, KILL
-#0
 DICTIONARY DICTIONARIES THESAURUS M-W.COM DEFINITION MERRIAM-WEBSTER M-W-DEFINITION WEBSTER MW TELL-M-W BREATHER SPELLING WORDS
 
 Uso: tell m-w <word>
@@ -2749,27 +2673,7 @@ Heiach     heiach@*tbamud.com
 Random     random@*tbamud.com
 Relsqui    relsqui@*tbamud.com
 Rhade      rhade@*tbamud.com
-#0
-EMOTES : EMOTIONS
-
-Uso: emote <message>
-       : <message>
-
-Show people what you're feeling.  The shorthand for emote is ":".
-"emote <string>" will display your name, then the string.
-
-Example:
-If your name is "Rhade",
-  > emote is feeling very sad today.
-will display:
-Rhade is feeling very sad today.
-
-Veja tambem: SOCIALS, GEMOTE
-#0
-Empty
-#101
-Empty
-#0
+#110
 ENCHANT-WEAPON ENCHANT-ARMOR 
 
 Usage       : cast 'enchant weapon' <weapon>
@@ -3284,21 +3188,6 @@ This spell is the most powerful spell a magic user can cast.
 
 Veja tambem: COLOR-SPRAY
 #0
-FIZBAN
-
-Unlike Rumble, Fizban actually doesn't want your help. He is already well
-on his way to world domination. Sometimes he pretends to lack powers he
-mastered long ago so to seem feeble, but in actuality he is one of the
-most powerful beings in existence and seeks to destroy the world. He only
-pretends to be the Avatar of Paladine because then no one suspects him.
-The Avatar of Fizban that is here on The Builder Academy is one of his
-feeble essences, where he pretends to not be overly competent and actually
-humble and helpful, but whatever you do...don't be fooled! It should be obvious
-from the fact he's built 4 rooms in that many years that he is spending most
-of his time elsewhere...on much darker motives than building happy zones
-for tbaMUD players.
-
-#0
 FLAGS
 
 Players sometimes have FLAGS after their names in the WHO list.  These
@@ -3320,20 +3209,6 @@ flags are always in parentheses, not brackets or braces.
   (OLC)       Immortals only - The player is currently building online.
   
 Veja tambem: NOSHOUT, NOTELL, QUEST, STEAL, VISIBLE
-#0
-FLEE
-
-Uso: flee
-
-If you are in a fight and things are beginning to get a little uncomfortable
-(maybe you are dying), just type 'flee', and presto!  You are out of harms way
-- that is, IF there is a suitable exit nearby, and IF that exit doesn't simply
-bring you from the ashes to the fire... but then, who wants to live forever?
-
-If you are proficient in the retreat skill you might be able to make a more 
-controlled exit, and lose less of your experience points.
-
-Veja tambem: WIMPY
 #0
 FLY
 
@@ -3851,19 +3726,6 @@ file.
 
 Veja tambem: HEDIT, HINDEX
 #101
-HELP
-
-Uso: help [comando]
-   O comando 'Help' procura por um palavra nos arquivos de ajuda do
-VitaliaMUD.  Digitando apenas HELP, você verá uma lista dos tópicos               disponíveis.
-Exemplos:
-   > help magia magic mis                                                            Ira encontrar o texto de ajuda para a magia "magic missile"
-
-   > help
-   Uma lista dos topicos da ajuda, e sobre os comandos mais comuns.
-
-Veja também: COMMANDS, SOCIALS
-#0
 HIDDEN-DOORS . HIDDEN-EXITS HIDDEN-ROOMS HIDDEN-OBJECTS HIDDEN-MOBS SECRETS UNSEEN
 
    Hidden objects and mobs are not listed in the room descriptions but are still 
@@ -4070,14 +3932,6 @@ Examples: @RTSTAT 22, 93@n
 
 Veja tambem: EXPRESSIONS, NESTED-IFS
 #101
-IMMLIST WIZLIST
-
-Uso: wizlist
-     immlist
-
-   Lista os seres mais poderosos do MUD.  Estes sao os responsáveis por
-administrar o jogo.
-#1
 IMOTD
 
 Uso: imotd
@@ -4093,66 +3947,6 @@ IMPLEMENTORS IMPS CODERS ADMINISTRATORS
 Imp's- The friendly folks who run the mud. 
 Coders - The people that modify the ANSI C code. 
 Administrators - The staff that does the day to day management.
-
-#0
-INFORMACOES
-
-   Os seguintes comandos lhe dão informações sobre o seu personagem, ajuda,
-os outros jogadores conectados, novidades, hora e tempo, etc.  Para obter
-ajuda para um comando, digite HELP <comando>.
-                                                                                     @gAUTOEXIT             @nAtivar ou desativar a exibição das saídas da sala.
-   @gCREDITS              @nQuem ajudou a construir o MUD.
-   @gHELP                 @nQuer mesmo que eu diga?
-   @gIMMLIST              @nLista dos Imortais atuais do MUD.
-   @gINFO                 @nInformações básicas para novatos.
-   @gLEVELS               @nMostra os níveis e títulos da sua classe.
-   @gLOOK                 @nDescrever a sala, itens ou pessoas.
-   @gMOTD                 @nMostra a "mensagem do dia".
-   @gNEWS                 @nAs últimas novidades sobre o MUD.
-   @gPOLICY               @nRegras de comportamento para os jogadores.
-   @gSCORE                @nEstatísticas e informações sobre seu personagem.
-   @gSKILL SPELL CHANSON  @nMosta as habilidades, magias e canções.
-   @gTIME                 @nData e hora atuais, no calendário do MUD.
-   @gTOGGLE               @nMostrar as várias opções do seu personagem.
-   @gVERSION              @nMostra a versão atual do VitaliaMUD.
-   @gWEATHER              @nComo está o tempo (clima) no momento.
-   @gWHERE                @nOs jogadores que estão na sua área.
-   @gWHO                  @nMostrar quem está conectado e jogando no momento.
-   @gWIZLIST              @nLista dos Deuses atuais do MUD.
-
-Informações úteis (não são comandos):
-Para consultar estas informações, digite HELP <tópico>.
-
-   @gVITALIAMUD           @nBreve histórico do Mundo de Vitália.
-   @gAC                   @nExplicação sobre nível de armadura.
-   @gALINHAMENTO          @nExplicação sobre alinhamento.
-   @gAREAS                @nResumo das áreas disponíveis para exploração no MUD.
-   @gASSOCIAÇÕES          @nExplicação sobre as associações (guildas).
-   @gCASAS                @nExplicação sobre o uso das casas.
-   @gCHA CARISMA          @nSimpatia do personagem.
-   @gCLASSES              @nAs classes disponíveis no MUD.
-   @gCON CONSTITUIÇÃO     @nConstituição do personagem.
-   @gCONEXÃO              @nExplicação sobre problemas de conexão.
-   @gCORES                @nComo usar cores em suas mensagens no MUD.
-   @gDAMROLL              @nPotência de golpes.
-   @gDEUSES               @nExplicação sobre os poderes dos Deuses.
-   @gDEX DESTREZA         @nDestreza do personagem.
-   @gEXPERIÊNCIA          @nExplicação sobre experiência.
-   @gFLAGS                @nDescrição das varias "flags" de personagens.
-   @gHERÓIS               @nOs heróis do Mundo de Vitália.
-   @gHIT POINTS           @nExplicação sobre pontos de vida.
-   @gHITROLL              @nCapacidade de acerto de golpes.
-   @gIDADE                @nExplicação sobre idade.
-   @gIMORTAIS             @nJogadores que atigem a imortailidade.
-   @gINT INTELIGÊNCIA     @nInteligência do personagem.
-   @gLOJAS                @nComo funcionam as lojas.
-   @gMANA                 @nExplicação sobre pontos de magia.
-   @gMESNADAS             @nMesnadas de Vitália.
-   @gMOVIMENTOS           @nExplicação sobre pontos de movimento.
-   @gQUADROS              @nComo utilizar os quadros de mensagens.
-   @gQUESTS               @nDesafios e aventuras de Vitália.
-   @gSTR FORÇA            @nForça do personagem.
-   @gWIS SABEDORIA        @nSabedoria do personagem.
 
 #0
 INFRAVISION
@@ -4316,20 +4110,6 @@ rounds of 'Violence' -- so be sure that you do not need to flee!
 
 Veja tambem: BASH, RESCUE
 #0
-KILL HIT FIGHT ATTACK SLAY BATTLES SMITE STRIKE CHOP VIOLENCE
-
-Uso: kill [target]
-       hit [target]
-
-A good way to start a fight.  Not a good idea to hit other players.
-
-If you are an immortal there is no point in killing anything. You can simply
-purge them. Since you start with no equipment or weapon you will not be able 
-to inflict much damage. Learn to use the SET command to change your stats. You
-can take damage and die.
- 
-Veja tambem: FLEE, WIMPY
-#0
 KILLERS PLAYERKILLING PLAYERKILLERS PKILLERS PKILLING
 
    The act of slaughtering another player. Not a nice thing to do. If you do
@@ -4345,18 +4125,6 @@ between your computer and our server. Use http://www.pingtest.net/ to test
 your connection.
 
 #0
-LANCE
-
-   When building, there are some things that separate a great builder from a
-weak builder.  Items such as not using "you" in any descriptions, using 
-Capitals in title (except for prepositions). For example, "Dracula's Room of
-Horrors" instead of "dracula's room of horrors." Some other common problems are:
-Not putting in Room Extra Descriptions (Command B) and not using /fi to format 
-and indent after descriptions (in any of the edits and also in messages). To 
-know the commands while writing a description, type /h. It will tell you what
-all the / commands do).
-
-#101
 LAST LASTLISTS
 
 Uso: last [player_name | all] [#]
@@ -4403,22 +4171,6 @@ Uso: leave
 If you feel claustrophobic, typing 'leave' will make you use the nearest
 obvious exit to the outside.
 
-#0
-LEVELS ATTAINING-LEVELS LEVEL-REQUIREMENTS
-@n
-Uso: @ylevels [<min>-<max> | <range>]@n
-@n
-The levels command displays the experience points required to attain all levels
-in the game.  When followed by a number, it shows the required experience for
-the specified number of levels either side of your current level.  You can also
-specify a level range.
-@n
-Examples:
-@clevels       @n- shows all levels (1-30)
-@clevels 5     @n- shows 5 levels either side of your current level
-@clevels 10-20 @n- shows level 10 to level 20
-@n
-See Also: EXP TNL
 #0
 LICENSES
 
@@ -5439,15 +5191,6 @@ Glad to see someone is willing to help others. Mortals are the player
 characters within the game.
 
 #0
-MOTD
-
-Uso: motd
-
-   Mostra as mensagens do dia.  Contém importantes informações relativas ao
-status do MUD.  Você deveria ter certeza de que a leu quando conectou ao
-jogo.  Se você não leu quando conectou, use este comando.
-
-#0
 MOVEMENT
 
    The following commands deal with movement - for more info, @RHELP KEYWORD@n 
@@ -5537,15 +5280,6 @@ See @RHELP TEXT-VAR@n
 MULTIPLAYING MULTIPLAYERS MULTIPLE MULTI-PLAYERS MULTI-PLAYING
 
    Multiplaying is allowed. 
-
-#0
-MURDER
-
-Uso: murder [target]
-
-Kill command to hit another player.  To avoid accidental flagging (i.e.
-trying to type kiss Nia but accidentally typing kill Nia).
-Veja tambem: FLAGS
 
 #0
 MUTE SQUELCH
@@ -5672,16 +5406,6 @@ Examples: @RTSTAT 1399, 20997@n
 
 Veja tambem: MEDIT-POSITIONS
 #101
-NOREPEAT REPEAT
-
-Uso: norepeat
-
-This command toggles whether or not you see your communication echoed
-back to you (i.e., from commands such as SAY, SHOUT, HOLLER, GOSSIP, etc.)
-Useful if you have a slow connection or if it just annoys you.
-
-Veja tambem: TOGGLE
-#0
 NORTH SOUTH EAST WEST UP DOWN MOVES MOVEMENT DIRECTIONS WALK
  
 Uso: north
@@ -6765,12 +6489,6 @@ gain fewer points than usual.
 
 Veja tambem: REMOVE-POISON, DETECT-POISON
 #0
-POLICIES INFO NEWS POLICY VERSION UPDATES RULES
-Estes comandos mostram informacoes importantes sobre o MUD.  E' uma boa        ideia os ler com muita calma e atencao.
-CREDITS              Creditos, quem ajudou a construir o MUD.
-INFO                 Informacoes sobre o jogo para iniciantes.                    NEWS                 As ultimas novidades sobre o MUD.
-POLICY               Regras de comportamento para os jogadores.                   VERSION              Mostra a versao atual do VitaliaMUD.
-#0
 POOFINS POOFOUTS POOFS POOFINGS SET-POOFS BAMFIN BAMFOUT
 
 Uso: set self poofin <message>
@@ -6783,30 +6501,6 @@ smoke." Your current poofs can be viewed under the score command.
 
 Veja tambem: GOTO
 #101
-POSTOFFICE POST-OFFICE CHECK PMAIL MAILROOM RECEIVE MUDMAIL POSTMASTER AT-POSTMASTER-MAIL-RUMBLE POSTAL POSTMAN MMS MAILROOM CHECKMAIL CHECK-MAIL
-
-Uso: check
-       mail <person> (immortals: at postmaster mail <person>)
-       receive (immortals: at postmaster receive)
-
-The commands used by the tbaMUD Mail System are MAIL, CHECK, and
-RECEIVE.  These commands can only be used while in a Post Office.
-There are numerous postmasters throughout the game and in each
-major city. You must be at least second level in order to use 
-these commands.
-
-Examples:
-
-  To check and see if you have any mail waiting:
-  > check
-
-  To write mail to Rumble:
-  > mail rumble
-
-  To ask the Postmaster to give you your mail, if you have any waiting:
-  > receive
-
-#0
 POUR
 
 Uso: pour <from container> <to container>
@@ -7578,22 +7272,6 @@ rdelete quest_object %actor.id%
 
 Veja tambem: VDELETE, REMOTE
 #101
-READ
-
-Uso: read <object>
-       read <board message number>
-
-When you want to read something.
-
-READ is also used to read messages on bulletin boards; type HELP BOARDS
-for more information.
-
-Example:
-
-  > read note
-
-Veja tambem: BOARDS
-#0
 REBOOT RESTART STARTUP BOOT STARTING
 
 A reboot is a scheduled clean-up of the Realms. A reboot can only be done by 
@@ -7989,27 +7667,6 @@ Will remove the affects of poison from a victim or an object.
 
 Veja tambem: POISON
 #0
-REPLY
-
-Uso: reply <message>
-
-This command will send a reply to the last person to send you a message
-using TELL.  It works just as if you had typed 'tell <player> <message>'
-but makes it a bit easier.  It can also be very useful in case someone
-invisible sends you a message.
-
-Example:
-
-Ras tells you, 'Hi!'
-> reply hey
-You tell Ras, 'hey'
->
-Someone tells you, 'I am your secret admirer.'
-> reply Who are you?
-You tell someone, 'Who are you?'
-
-Veja tambem: TELL, NOTELL
-#0
 REPORT GROUP-REPORT GROUPREPORT
 
 Uso: report
@@ -8201,44 +7858,22 @@ saying "yes" to save internally.
 
 Veja tambem: OLC, BUILDWALK, DIG, ROOMDELETE
 #101
-SAYS TELLS ASKS WHISPERS SHOUTS YELLS HOLLERS ' CHATS TALKS CHANNELS VOICES COMMON SPEAK SPEECH
-
-Uso: say | shout | holler <string>
-       tell | whisper | ask <player> <string>
-
-   If you consider communicating with other beings, you might be understood
-better if you start your sentences with either say, tell, whisper or shout.
-
-Examples:
-
-  > say Hey, does anyone know how to get to Oz?
-  > tell catje hi, how are you?
-
-You can use ' as a shorthand for say, as in:
-
-  > ' hello there.
-
-Shout broadcasts your message to everyone is your geographic zone.  Holler
-broadcasts to everyone in the game but costs 20 movement points.  You must
-be level 3 before you can use shout and yell.
-
-Veja tambem: AUCTION, GOSSIP, GSAY, WIZNET, NOREPEAT, QSAY, REPLY
-#0
 SCAN
 
 Uso: scan
 
 This command looks into adjacent rooms to see what mobs or players are close by.
 
-See Also: LOOK
+See Also: LOOK, SPY
 #0
 SCORE PONTUACAO                                                                   
-Uso: score [+|++]
-                                                                                     Fornece informações úteis sobre o seu personagem, como idade, saúde,
+Uso: score
+                                                                        
+      Fornece informações úteis sobre o seu personagem, como idade, saúde,
 magia, pontos de movimento, classe de armadura, alinhamento, experiência,
-etc.  Você pode digitar um ou dois sinais de positivo (+) na frente do            comando para aumentar o número de informações fornecidas pelo comando.
+etc. 
 
-Veja também: AC, EXPERIÊNCIA
+Veja também: AC, EXPERIENCIA
 #0
 SCREENWIDTHS SCREEN_WIDTHS
 
@@ -8675,20 +8310,6 @@ ALL:   666
 
 See Also: SET, ZEDIT-CREATE, AEDIT, HEDIT
 #101
-SHAMRA
-
-   First and foremost, repeat after me "Shamra is God".  Think it, know it,
-drink it into your soul and make it a part of your very being.  My two favorite
-hobbies are swords and killing, and it is even better when I am killing people
-with swords.  From the time I was a lowly immortal I have always defied the
-supposed bounds of my power and I will never be satisfied until it is absolute!
-Now all that aside, I'm happy to help anyone who is willing to help themselves.
-I am currently working on zones 89 and 327, both works in progress but 89 is a
-bit further along.  I am oftentimes in another window or near my computer so
-page me if you really need something, if I don't respond I'm probably sleeping
-or in class or just don't want to be bothered :-)
-
-#0
 SHOCKING-GRASP
 
 Usage       : cast 'shocking grasp' <victim>
@@ -8826,18 +8447,6 @@ Object Example: @RLOAD OBJ 10403@n, @RLOOK SIGN@n.
 Room Example: @RGOTO 7318@n, @RLOOK SIGN@n.
 
 #101
-SKILL SPELL CHANSON
-
-Uso: skill   [classe]
-     spell   [classe]
-     chanson [classe]
-                                                                                     Use este comando para exibir as habilidades, magias ou canções de uma
-determinada classe.  Digite SKILL, SPELL ou CHANSON sem nenhum argumento
-para mostrar as suas habilidades, magias ou canções.
-
-Veja também: INFO, MAGIAS, HABILIDADES, CANÇÕES
-
-#0
 SKILLSET SETSKILL
 
 Uso: skillset <name> '<skill>' <value>
@@ -9777,7 +9386,7 @@ be an object a mobile or a player. Usually used in conjunction with another
 command.
 
 #101
-TBA TBAMUD PROJECT BACKGROUND STORY HISTORY INTRODUCTION ACADEMY COMMUNITY OVERVIEW VISION TBA-VISION
+TBA TBAMUD PROJECT TBA-BACKGROUND STORY HISTORY INTRODUCTION ACADEMY COMMUNITY OVERVIEW VISION TBA-VISION
 
 TBA stands for The Builder Academy. 
 @RGOTO 3@n to enter the Builder Academy tutorial.
@@ -9966,24 +9575,6 @@ tbamud.com 9091
 http://tbamud.com
 rumble@*tbamud.com
 #0
-TBAMAPS TBA-MAPS
-
-        |                                      |
-    3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 11 - 12 - 13 - 14 - 15 - 98
-
-
-       3 - TBA Beginning              10 - How to Use Medit
-       4 - Immortal Basics            11 - How to Use Zedit
-       5 - TBA Implementation         12 - How to Use Sedit
-       6 - Building Basics            13 - How to Use Trigedit
-       7 - Writing Descriptions       14 - Planning
-       8 - How to Use Redit           15 - Lessons Learned
-       9 - How to Use Oedit
-
-@RGOTO #@n to teleport to any of the room numbers above.
-
-Veja tambem: CARTOGRAPHY, ASCII
-#101
 TEDITOR
 
 Uso: tedit [file]
@@ -10158,7 +9749,7 @@ develop our newly released tbaMUD codebase (the codebase formerly
 known as CircleMUD).
 
 Veja tambem: REVIEWS
-#0
+#101
 THEMES
 
    The theme for an area is its reason to be.  A theme can be simple. Like, a
@@ -10280,19 +9871,6 @@ TNL
    An acronym for to next level. The amount of experience required before you 
 can attain the next level.
 
-#0
-TOGGLES CONFIGURE SETTINGS
-
-TOGGLE
-
-Uso: toggle
-
-   O comando 'TOGGLE' lhe mostra os atuais valores das suas configurações no
-MUD.  Este comando NÃO pode ser usado para mudar estes valores (veja o
-'help' de cada comando).  Todos estes valores se mantém os mesmos até que
-você os mude; i.e.  Eles são salvos quando você sai do jogo (QUIT).
-
-Veja também: BRIEF, COMPACT, DISPLAY, NOSUMMON, QUEST, NOREPEAT, WIMP
 #0
 TRACK TRAIL 
 
@@ -12425,26 +12003,6 @@ Examples:
 
 Veja tambem: EQUIPMENT, REMOVE
 #0
-WEATHER
-
-Uso: weather                                                                      
-   Se você não tem certeza se o sol está brilhando ou se está chovendo.
-Você terá que estar em locais abertos para poder usar este comando.
-
-Veja também: "MAGIA CONTROL WEATHER"
-#0
-WHERE
-Uso: where <monstro | jogador>
-                                                                                     Lhe diz a localização de um monstro ou jogador.                                
-   Mortais podem usar o comando "where" para encontrar monstros ou
-jogadores, e somente dentro da área em que está.
-
-Exemplo:
-
-   > where
-   > where Rassmusen
-   > where dragão
-#1
 WHILE DONE %NEXT% NEXT LOOPS TRIG-LOOPS TRIG-WHILE TRIG-DONE FOR-LOOP COUNT
 
 Uso: while expression
@@ -12463,38 +12021,6 @@ Whirlwind is a warrior skill available at level 16. It is a melee multi-target
 damage attack.
 
 Veja tambem: KICK, RESCUE, BASH
-#0
-WHO WHOINVIS
-
-Uso: who [minlev[-maxlev]] [-n name] [-c classlist] [-k] [-l] [-n] [-q] [-r] [-s] [-z]
-
-Lists the people currently in the game.  Some people may be invisible.
-Command-line options can be used to limit the listing.  The parameters
-can be specified on the command-line in any order.
-
--c : List names of people of the following classes: Cleric, Warrior, Mage, Thief.
--g : List names of people who are grouped.
--k : List names of people who are flagged as killers or thieves.
--l : List names of group leaders.
--n : List only people whose names or titles contain this word.
--q : List only people who are on the Quest.
--r : List only people who are in your room.
--s : List names in the short form (4 columns of names, without titles or flags).
--z : List only people in your zone.
-
-Examples:
-  > who -c Wa     List all Warriors in game.
-  > who -s        List, in short form, all characters connected.
-  > who -k -z     List all outlaws who are in your zone.
-  > who 4-10      Lists all players level 4-10.
-#0
-WHOAMI
-
-Uso: whoami
-
-Displays your character's name, if you want to be sure you are who you think
-you are.
-
 #0
 WHOIS
 
@@ -12517,22 +12043,6 @@ Examples:
   > wield 3.sword    (Wields the third sword in your inventory)
 
 Veja tambem: EQUIPMENT, REMOVE, WEAR
-#0
-WIMPY
-
-Uso: toggle wimpy [#hp]
-
-Use the WIMPY command to automatically flee once your health drops below
-a certain level.
-
-Examples:
-
-  > toggle wimpy 35    will make your character automatically flee a fight
-                       if you have less than 35 hit points.
-  > toggle wimpy 0     will turn off wimpy mode.
-  > toggle wimpy       will show you your current wimp status.
-
-Veja tambem: FLEE, TOGGLE
 #0
 WIZAT AT
 
@@ -12663,19 +12173,6 @@ http://www.circlemud.org/cdp/building/building-3.html#ss3.1
 
 Veja tambem: MOB-FORMAT, OBJ-FORMAT, SHP-FORMAT, ZON-FORMAT, TRG-FORMAT, Redit
 #101
-WRITE WRITING POSTING MESSAGES 
-
-Uso: write <object>
-       write <title of board note>
-
-   In order to write a note, you need a piece of blank paper (or similar), and
-a pen of some sort.  You can then type something like "write on the paper with
-the pen", whereupon you'll be asked to type in your note at the keyboard.
-   WRITE is also used to post messages to bulletin boards.  Type HELP BOARDS
-for more information.
-
-Veja tambem: BOARDS, MAIL
-#0
 XCOPY RCOPY RCLONE OCOPY MCOPY SCOPY TCOPY COPYROOM ROOMCOPY TCLONE OCLONE MCLONE XCLONES OCOPY MCOPY ZCOPY
 
 Uso: <r | o | m | s | t>copy <target vnum> <new vnum>
@@ -13171,7 +12668,7 @@ completed. Trust us when we tell you a 300-room area will never be finished
 without Herculean effort of which most of us are not capable.    
 
 #101
-ZONES
+ZONES-TBAMUD
 
 These zones are maintained in the latest tbaMUD format with DG Scripts on 
 The Builder Academy (TBA) telnet://tbamud.com:9091/ 
@@ -13387,7 +12884,7 @@ by TBA or see the help files on OBJ-LIMITS, MOB-LIMITS.
 Thanks to everyone who has donated their time and effort.
 
 Veja tambem: AREAS, STOCK, TELEPORTER
-#0
+#106
 ZPURGES
 
 Uso: zpurge <zone #>
