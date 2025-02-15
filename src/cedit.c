@@ -475,16 +475,16 @@ int save_config(IDXTYPE nowhere)
 			CONFIG_DON_ROOM_3 != NOWHERE ? CONFIG_DON_ROOM_3 : -1);
 			
 				fprintf(fl, "* The virtual numbers of the hometowns rooms. Use -1 for 'no such room'.\n"
-			"hometown_1= %d\n"
-			"hometown_2= %d\n"
+			"hometown_1 = %d\n"
+			"hometown_2 = %d\n"
 			"hometown_3 = %d\n",
 			CONFIG_HOMETOWN_1 != NOWHERE ? CONFIG_HOMETOWN_1 : -1,
 			CONFIG_HOMETOWN_2 != NOWHERE ? CONFIG_HOMETOWN_2 : -1,
 			CONFIG_HOMETOWN_3 != NOWHERE ? CONFIG_HOMETOWN_3 : -1);
 
 	fprintf(fl, "* The virtual numbers of the corpses rooms. Use -1 for 'no such room'.\n"
-			"ress_room_1= %d\n"
-			"ress_room_2= %d\n"
+			"ress_room_1 = %d\n"
+			"ress_room_2 = %d\n"
 			"ress_room_3 = %d\n",
 			CONFIG_RESS_ROOM_1 != NOWHERE ? CONFIG_RESS_ROOM_1 : -1,
 			CONFIG_RESS_ROOM_2 != NOWHERE ? CONFIG_RESS_ROOM_2 : -1,

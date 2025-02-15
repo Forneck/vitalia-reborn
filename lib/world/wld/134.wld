@@ -7,7 +7,7 @@ redor está viva, com a população vivendo suas vidas.  Acima, o caminho guia
 para  as  diversas  lojas  de  Thewster,  ao sul fica a Taverna da Baía das
 Folhas.  Para leste fica o caminho devolta à floresta.
 ~
-134 0 0 0 0 1
+134 16 0 0 0 1
 D1
 A Escadaria.
 ~
@@ -439,7 +439,7 @@ A Guilda dos Paladinos~
 de  guerra  estão  penduradas  por todas as paredes, aguardando para que um
 novato treine com elas.
 ~
-134 8 0 0 0 0
+134 16777224 0 0 0 0
 D2
 ~
 ~
@@ -451,7 +451,7 @@ A Guilda dos Monges~
 em  um  semicírculo,  abrindo  uma  clareira  no centro, onde os estudantes
 praticam suas habilidades.
 ~
-134 8 0 0 0 0
+134 16777224 0 0 0 0
 D1
 ~
 ~
@@ -617,7 +617,7 @@ Uma Casa Velha~
 paredes  e  o  chão  não parece ser muito firme. Esta casa lhe da o péssimo
 sentimento de que você irá cair a qualquer momento.
 ~
-134 8 0 0 0 0
+134 60 0 0 0 0
 D0
 ~
 ~
@@ -1336,12 +1336,12 @@ D0
 porta sul~
 1 13437 13479
 E
-carpete corpos~
-Coelhos, pássaros, elfos, guerreiros. Se você pode nomear, está aqui.
-~
-E
 peles pele animais paredes~
 As peles tem um estranho símbolo de um olho e um dente marcada nelas.
+~
+E
+carpete corpos~
+Coelhos, pássaros, elfos, guerreiros. Se você pode nomear, está aqui.
 ~
 S
 $~

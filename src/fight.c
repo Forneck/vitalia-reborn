@@ -254,24 +254,25 @@ static void make_corpse(struct char_data *ch)
 	if (!IS_NPC(ch))
 	{
 		GET_OBJ_VAL(corpse, 0) = GET_IDNUM(ch);
-		if (GET_HOMETOWN(ch) == r_hometown_1){  
+		if (GET_HOMETOWN(ch) == 1)
+		{  
 			obj_to_room(corpse, r_ress_room_1);
 			log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(ch),
 			 GET_ROOM_VNUM(IN_ROOM(ch)),GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0),GET_OBJ_VAL(corpse, 3));
 		}
-		else if (GET_HOMETOWN(ch) == r_hometown_2)
+		else if (GET_HOMETOWN(ch) == 2)
 	{
 			obj_to_room(corpse, r_ress_room_2);
 				log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(ch),
 			 GET_ROOM_VNUM(IN_ROOM(ch)),GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0),GET_OBJ_VAL(corpse, 3));
 	}
-		else if (GET_HOMETOWN(ch) == r_hometown_3)
+		else if (GET_HOMETOWN(ch) == 3)
         {
 		obj_to_room(corpse, r_ress_room_3);
                 log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(ch),
                 GET_ROOM_VNUM(IN_ROOM(ch)),GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0),GET_OBJ_VAL(corpse, 3));
 	}
-		else
+		else {
 			/* sem cidade natal */
 			obj_to_room(corpse, IN_ROOM(ch));
 	log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(ch),
@@ -280,6 +281,7 @@ static void make_corpse(struct char_data *ch)
 			TO_ROOM);
 		act("Uma enorme mão aparece e delicadamente deixa $p no chão.", FALSE, 0, corpse, 0,
 			TO_ROOM);
+	          }
 	}
 	else
 		obj_to_room(corpse, IN_ROOM(ch));

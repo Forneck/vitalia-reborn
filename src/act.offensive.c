@@ -23,6 +23,7 @@
 #include "screen.h"
 #include "constants.h"
 #include "dg_scripts.h"
+#include "graph.h"
 
 ACMD(do_assist)
 {
@@ -83,7 +84,7 @@ ACMD(do_assist)
    2020 * Atualizado para nova estrutura de grupo. */
 ACMD(do_gassist)
 {
-	struct char_data *k, *helpee, *opponent;
+	struct char_data *k, *helpee = NULL, *opponent;
 	struct group_data *group;
 
 	if ((group = GROUP(ch)) == NULL)
