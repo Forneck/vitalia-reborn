@@ -5981,6 +5981,7 @@ ACMD(do_ressucite)
 	struct char_data *vict;
 	struct obj_data *corpse;
 	char arg[MAX_INPUT_LENGTH];
+	int cabana = 0;
 
 	one_argument(argument, arg);
 
@@ -6006,14 +6007,23 @@ ACMD(do_ressucite)
 			if (GET_OBJ_TYPE(corpse) == ITEM_CORPSE && GET_OBJ_VAL(corpse, 0) == GET_IDNUM(vict))
 				break;
      
-		if (GET_HOMETOWN(ch) == 1)
+		cabana = GET_HOMETOWN(vict);
+
+                switch (cabana)
+		{
+		   case 1:
 			raise_online(vict, ch, corpse, r_ress_room_1, 2);
-		else if (GET_HOMETOWN(ch) == 2)
+			break;
+		   case  2:
 			raise_online(vict, ch, corpse, r_ress_room_2, 2);
-		else if (GET_HOMETOWN(ch) == 3)
+			break;
+		   case  3:
 			raise_online(vict, ch, corpse, r_ress_room_3, 2);
-		else 
+			break;
+		   default:
 			raise_online(vict, ch, corpse, r_ress_room_1, 2);
+			break;
+		}
 
 		if (corpse)
 			extract_obj(corpse);
