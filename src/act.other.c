@@ -1225,9 +1225,12 @@ ACMD(do_recall)
 	case 1:
 		char_to_room(ch, r_hometown_1);
     	break;
-		case 2:
+	case 2:
 		char_to_room(ch, r_hometown_2);
     	break;
+	case 3:
+                char_to_room(ch, r_hometown_3);
+	break;
     	default:
     	char_to_room(ch, r_hometown_1);
     	break;

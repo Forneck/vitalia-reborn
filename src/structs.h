@@ -1520,8 +1520,10 @@ struct room_numbers
   room_vnum dead_start_room;
 room_vnum hometown_1;
 room_vnum hometown_2;
+room_vnum hometown_3;
 room_vnum ress_room_1;
 room_vnum ress_room_2;
+room_vnum ress_room_3;
 };
 
 /** Operational game variables. */

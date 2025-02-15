@@ -864,7 +864,9 @@ ASPELL(spell_ressurect)
       raise_online(victim, ch, corpse, r_ress_room_1, 1);
   else if (GET_HOMETOWN(ch) == r_hometown_2)
       raise_online(victim, ch, corpse, r_ress_room_2, 1);
-      else
+  else if (GET_HOMETOWN(ch) == r_hometown_3)
+      raise_online(victim, ch, corpse, r_ress_room_3, 1);
+  else
    raise_online(victim, ch, corpse,IN_ROOM(victim), 1);
    
       if (corpse)

@@ -127,8 +127,10 @@ static void cedit_setup(struct descriptor_data *d)
 	OLC_CONFIG(d)->room_nums.dead_start_room = CONFIG_DEAD_START;
 	OLC_CONFIG(d)->room_nums.hometown_1 = CONFIG_HOMETOWN_1;
 	OLC_CONFIG(d)->room_nums.hometown_2 = CONFIG_HOMETOWN_2;
+	OLC_CONFIG(d)->room_nums.hometown_3 = CONFIG_HOMETOWN_3;
 	OLC_CONFIG(d)->room_nums.ress_room_1 = CONFIG_RESS_ROOM_1;
 	OLC_CONFIG(d)->room_nums.ress_room_2 = CONFIG_RESS_ROOM_2;
+	OLC_CONFIG(d)->room_nums.ress_room_3 = CONFIG_RESS_ROOM_3;
 
 	/* Game Operation */
 	OLC_CONFIG(d)->operation.DFLT_PORT = CONFIG_DFLT_PORT;
@@ -237,8 +239,10 @@ static void cedit_save_internally(struct descriptor_data *d)
 	CONFIG_DEAD_START = OLC_CONFIG(d)->room_nums.dead_start_room;
 	CONFIG_HOMETOWN_1 = OLC_CONFIG(d)->room_nums.hometown_1;
 	CONFIG_HOMETOWN_2 = OLC_CONFIG(d)->room_nums.hometown_2;
+	CONFIG_HOMETOWN_3 = OLC_CONFIG(d)->room_nums.hometown_3;
 	CONFIG_RESS_ROOM_1 = OLC_CONFIG(d)->room_nums.ress_room_1;
 	CONFIG_RESS_ROOM_2 = OLC_CONFIG(d)->room_nums.ress_room_2;
+	CONFIG_RESS_ROOM_3 = OLC_CONFIG(d)->room_nums.ress_room_3;
 
 	/* Game Operation */
 	CONFIG_DFLT_PORT = OLC_CONFIG(d)->operation.DFLT_PORT;
@@ -472,15 +476,19 @@ int save_config(IDXTYPE nowhere)
 			
 				fprintf(fl, "* The virtual numbers of the hometowns rooms. Use -1 for 'no such room'.\n"
 			"hometown_1= %d\n"
-			"hometown_2 = %d\n",
+			"hometown_2= %d\n"
+			"hometown_3 = %d\n",
 			CONFIG_HOMETOWN_1 != NOWHERE ? CONFIG_HOMETOWN_1 : -1,
-			CONFIG_HOMETOWN_2 != NOWHERE ? CONFIG_HOMETOWN_2 : -1);
+			CONFIG_HOMETOWN_2 != NOWHERE ? CONFIG_HOMETOWN_2 : -1,
+			CONFIG_HOMETOWN_3 != NOWHERE ? CONFIG_HOMETOWN_3 : -1);
 
 	fprintf(fl, "* The virtual numbers of the corpses rooms. Use -1 for 'no such room'.\n"
 			"ress_room_1= %d\n"
-			"ress_room_2 = %d\n",
+			"ress_room_2= %d\n"
+			"ress_room_3 = %d\n",
 			CONFIG_RESS_ROOM_1 != NOWHERE ? CONFIG_RESS_ROOM_1 : -1,
-			CONFIG_RESS_ROOM_2 != NOWHERE ? CONFIG_RESS_ROOM_2 : -1);
+			CONFIG_RESS_ROOM_2 != NOWHERE ? CONFIG_RESS_ROOM_2 : -1,
+			CONFIG_RESS_ROOM_3 != NOWHERE ? CONFIG_RESS_ROOM_3 : -1);
 
 	fprintf(fl, "\n\n\n* [ Game Operation Options ]\n");
 
@@ -723,24 +731,28 @@ static void cedit_disp_room_numbers(struct descriptor_data *d)
 					"%sD%s) Dead Start Room   : %s%d\r\n"
 					"%sE%s) Hometown #1   : %s%d\r\n"
 					"%sF%s) Hometown #2   : %s%d\r\n"
+					"%sG%s) Hometown #3   : %s%d\r\n"
 					"%s1%s) Donation Room #1    : %s%d\r\n"
 					"%s2%s) Donation Room #2    : %s%d\r\n"
 					"%s3%s) Donation Room #3    : %s%d\r\n"
-						"%s4%s) Ress Room #1    : %s%d\r\n"
+					"%s4%s) Ress Room #1    : %s%d\r\n"
 					"%s5%s) Ress Room #2    : %s%d\r\n"
+					"%s6%s) Ress Room #3    : %s%d\r\n"
 					"%sQ%s) Exit To The Main Menu\r\n"
 					"Enter your choice : ",
 					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.newbie_start_room,
 					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.immort_start_room,
 					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.frozen_start_room,
-						grn, nrm, cyn, OLC_CONFIG(d)->room_nums.dead_start_room,
-							grn, nrm, cyn, OLC_CONFIG(d)->room_nums.hometown_1,
-								grn, nrm, cyn, OLC_CONFIG(d)->room_nums.hometown_2,
+					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.dead_start_room,
+					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.hometown_1,
+					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.hometown_2,
+					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.hometown_3,
 					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.donation_room_1,
 					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.donation_room_2,
 					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.donation_room_3, 
-						grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_1,
+					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_1,
 					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_2,
+					grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_3,
 					grn, nrm);
 
 	OLC_MODE(d) = CEDIT_ROOM_NUMBERS_MENU;
@@ -1160,6 +1172,11 @@ TOGGLE_VAR(OLC_CONFIG(d)->play.fit_evolve);
 			write_to_output(d, "Enter the room's vnum for hometown 2 : ");
 			OLC_MODE(d) = CEDIT_HOMETOWN_2;
 			return;
+		case 'g':
+		case 'G':
+			write_to_output(d, "Enter the room's vnum for hometown 3 : ");
+			OLC_MODE(d) = CEDIT_HOMETOWN_3;
+			return;
 
 		case '1':
 			write_to_output(d, "Enter the vnum for donation room #1 : ");
@@ -1184,6 +1201,10 @@ TOGGLE_VAR(OLC_CONFIG(d)->play.fit_evolve);
 		case '5':
 			write_to_output(d, "Enter the vnum for ress room #2 : ");
 			OLC_MODE(d) = CEDIT_RESS_ROOM_2;
+			return;
+		case '6':
+			write_to_output(d, "Enter the vnum for ress room #3 : ");
+			OLC_MODE(d) = CEDIT_RESS_ROOM_3;
 			return;
 
 		case 'q':
@@ -1797,6 +1818,22 @@ TOGGLE_VAR(OLC_CONFIG(d)->play.fit_evolve);
 			cedit_disp_room_numbers(d);
 		}
 		break;
+	case CEDIT_RESS_ROOM_3:
+		if (!*arg)
+		{
+			write_to_output(d,
+					"That is an invalid choice!\r\n" "Enter the vnum for ress room #3 : ");
+		}
+		else if (real_room(atoi(arg)) == NOWHERE)
+		{
+			write_to_output(d,                                                                                                "That room doesn't exist!\r\n" "Enter the vnum for ress room #3 : ");
+		}
+		else
+		{
+			OLC_CONFIG(d)->room_nums.ress_room_3 = atoi(arg);
+			cedit_disp_room_numbers(d);
+		}
+		break;
 
 	case CEDIT_HOMETOWN_1:
 		if (!*arg)
@@ -1828,6 +1865,19 @@ TOGGLE_VAR(OLC_CONFIG(d)->play.fit_evolve);
 		else
 		{
 			OLC_CONFIG(d)->room_nums.hometown_2 = atoi(arg);
+			cedit_disp_room_numbers(d);
+		}
+		break;
+	case CEDIT_HOMETOWN_3:
+		if (!*arg)
+		{                                                                                         write_to_output(d,                                                                                                "That is an invalid choice!\r\n" "Enter the vnum for hometown #3 : ");
+		}                                                                                 else if (real_room(atoi(arg)) == NOWHERE)  
+		{
+			write_to_output(d, "That room doesn't exist!\r\n" "Enter the vnum for hometown #3 : ");
+		}
+		else
+		{
+			OLC_CONFIG(d)->room_nums.hometown_3 = atoi(arg);
 			cedit_disp_room_numbers(d);
 		}
 		break;

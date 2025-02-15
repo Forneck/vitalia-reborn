@@ -140,9 +140,12 @@ donation_room_3 = 278
 * The virtual numbers of the hometowns rooms. Use -1 for 'no such room'.
 hometown_1= 3001
 hometown_2 = 5509
+hometown_3 = 13400
+
 * The virtual numbers of the corpses rooms. Use -1 for 'no such room'.
 ress_room_1= 1803
 ress_room_2 = 5505
+ress_room_3 = 13435
 
 
 

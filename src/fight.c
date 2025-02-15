@@ -265,6 +265,12 @@ static void make_corpse(struct char_data *ch)
 				log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(ch),
 			 GET_ROOM_VNUM(IN_ROOM(ch)),GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0),GET_OBJ_VAL(corpse, 3));
 	}
+		else if (GET_HOMETOWN(ch) == r_hometown_3)
+        {
+		obj_to_room(corpse, r_ress_room_3);
+                log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(ch),
+                GET_ROOM_VNUM(IN_ROOM(ch)),GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0),GET_OBJ_VAL(corpse, 3));
+	}
 		else
 			/* sem cidade natal */
 			obj_to_room(corpse, IN_ROOM(ch));

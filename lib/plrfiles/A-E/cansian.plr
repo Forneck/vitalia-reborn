@@ -6,18 +6,18 @@ Clas: 6
 Levl: 110
 Id  : 1
 Brth: 1739554530
-Plyd: 5
-Last: 1739554727
+Plyd: 17783
+Last: 1739587997
 Lmot: 1739554701
 Lnew: 1739554697
 Htwn: 1
 Host: 127.0.0.1
 Hite: 198
 Wate: 137
-Act : g 0 0 0
+Act : 0 0 0 0
 Aff : 0 0 0 0
-Pref: himnoqrvz cd 0 0
-Room: 1204
+Pref: himnoqrv d 0 0
+Room: 65535
 Hit : 500/500
 Mana : 100/100
 Move: 82/82
@@ -30,3 +30,10 @@ Cha : 25
 Ac  : 100
 Exp : 7000000
 Olc : 0
+Alis: 2
+ lv1
+ set cansian level 1
+0
+ cheat
+ return
+0
