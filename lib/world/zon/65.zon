@@ -1,7 +1,8 @@
 #65
 Vitalia~
 O Reino dos Anoes~
-6500 6599 80 2
+6500 6599 80 2 j 0 0 0 4 33
+M 0 6501 9 6501 	(o anão trabalhador)
 M 0 6504 1 6535 	(o padeiro Cabeça de Granito)
 E 1 6504 100 16 	(um martelo de anão)
 G 1 3000 99 -1 	(um barril)
@@ -47,7 +48,6 @@ E 1 6510 20 6 	(um elmo de anão)
 E 1 6511 20 1 	(um anel de anão feito de ouro)
 M 0 6501 9 6503 	(o anão trabalhador)
 M 0 6501 9 6502 	(o anão trabalhador)
-M 0 6501 9 6501 	(o anão trabalhador)
 M 0 6502 1 6527 	(o fantasma)
 E 1 6503 4 17 	(uma chave de ouro brilhante)
 M 0 6505 2 6515 	(o lagarto gigante)

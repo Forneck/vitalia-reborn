@@ -1,7 +1,16 @@
 #33
 Vitalia~
 O Três de Espadas~
-3300 3399 30 2 j 0 0 0 -1 -1
+3300 3399 30 2 j 0 0 0 5 -1
+M 0 3305 1 3375 	(Aglandiir)
+E 1 3854 7 17 	(o Card Aglandiir)
+G 1 3313 1 -1 	(uma espada curta)
+O 1 3302 5 3375 	(uma grande cítara)
+O 1 3303 5 3375 	(um barril de perfume)
+O 1 3304 5 3375 	(uma estátua)
+O 1 3305 25 3375 	(uma alabarda)
+O 1 3306 25 3375 	(uma poção de proteção)
+O 1 3307 1 3375 	(uma coroa de dragão)
 M 0 3311 2 3349 	(o caçador)
 E 1 3317 1000 16 	(um arco de caça)
 G 1 3322 99 -1 	(uma flecha de caca)
@@ -38,15 +47,6 @@ M 0 3303 4 3347 	(o cavalo)
 M 0 3303 4 3347 	(o cavalo)
 M 0 3303 4 3347 	(o cavalo)
 M 0 3303 4 3347 	(o cavalo)
-M 0 3305 1 3375 	(Aglandiir)
-E 1 3854 7 17 	(o Card Aglandiir)
-G 1 3313 1 -1 	(uma espada curta)
-O 1 3302 5 3375 	(uma grande cítara)
-O 1 3303 5 3375 	(um barril de perfume)
-O 1 3304 5 3375 	(uma estátua)
-O 1 3305 25 3375 	(uma alabarda)
-O 1 3306 25 3375 	(uma poção de proteção)
-O 1 3307 1 3375 	(uma coroa de dragão)
 M 0 3306 3 3368 	(o cíclope)
 M 0 3306 3 3368 	(o cíclope)
 M 0 3306 3 3368 	(o cíclope)

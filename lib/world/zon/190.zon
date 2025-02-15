@@ -1,7 +1,14 @@
 #190
 Vitalia~
 Os Bosques dos Elfos~
-19000 19099 60 2 j 0 0 0 -1 -1
+19000 19099 60 2 j 0 0 0 -1 50
+D 0 19001 3 1 	(Entrada para a Floresta dos Elfos)
+M 0 19001 2 19001 	(o Guardião Elfo)
+E 1 19003 10 5 	(uma cota de malha de Mithril)
+E 1 19004 10 16 	(uma espada de duas mãos de Mithril)
+M 0 19001 2 19001 	(o Guardião Elfo)
+E 1 19003 10 5 	(uma cota de malha de Mithril)
+E 1 19004 10 16 	(uma espada de duas mãos de Mithril)
 M 0 19008 1 19016 	(o Barman Elfo)
 G 1 19018 99 -1 	(um odre)
 G 1 19019 99 -1 	(um belo assado de carne de coelho)
@@ -49,13 +56,6 @@ G 1 19029 99 -1 	(um punhal curvo)
 G 1 19034 99 -1 	(um gládio prateado)
 G 1 19050 99 -1 	(algumas flechas elficas)
 E 1 19004 20 16 	(uma espada de duas mãos de Mithril)
-D 0 19001 3 1 	(Entrada para a Floresta dos Elfos)
-M 0 19001 2 19001 	(o Guardião Elfo)
-E 1 19003 10 5 	(uma cota de malha de Mithril)
-E 1 19004 10 16 	(uma espada de duas mãos de Mithril)
-M 0 19001 2 19001 	(o Guardião Elfo)
-E 1 19003 10 5 	(uma cota de malha de Mithril)
-E 1 19004 10 16 	(uma espada de duas mãos de Mithril)
 D 0 19078 4 1 	(Subindo na Árvore)
 D 0 19052 5 1 	(A Casa na Árvore)
 D 0 19061 0 1 	(Dentro da Casa)

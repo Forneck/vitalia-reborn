@@ -1,7 +1,9 @@
 #93
 Vitalia~
 Paraíso dos Dragões~
-9300 9399 180 0 j 0 0 0 -1 -1
+9300 9399 180 0 j 0 0 0 10 -1
+R 0 9301 9322 -1 	(um monolito de pedra)
+O 0 9322 5 9301 	(um monolito de pedra)
 M 0 9300 1 9342 	(o Ancião Dragão Dourado)
 E 1 9300 20 0 	(o coração do dragão)
 E 1 9353 30 19 	(as argolas douradas do ancião)
@@ -129,8 +131,6 @@ O 0 9329 10 9317 	(uma estante de madeira)
 P 1 9330 80 9329 	(o livro da virtude)
 R 0 9308 9323 -1 	(as algas azuis)
 O 0 9323 20 9308 	(as algas azuis)
-R 0 9301 9322 -1 	(um monolito de pedra)
-O 0 9322 5 9301 	(um monolito de pedra)
 R 0 9315 9326 -1 	(um ninho de dragões fadas)
 O 0 9326 5 9315 	(um ninho de dragões fadas)
 P 1 9327 20 9326 	(um ovo de dragão fada)

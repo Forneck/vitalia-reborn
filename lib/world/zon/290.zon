@@ -1,7 +1,8 @@
 #290
 Vitalia~
 A Torre do Barão de Cailveh~
-29000 29099 190 1 j 0 0 0 -1 -1
+29000 29099 190 1 j 0 0 0 41 -1
+D 0 29000 7 1 	(O Portão de Madeira)
 M 0 29032 1 29054 	(Mochaaska)
 G 1 29020 99 -1 	(um pequeno barril de água)
 G 1 29021 99 -1 	(um grande barril de água)
@@ -116,6 +117,5 @@ D 0 29025 1 1 	(A Estrada do Povoado)
 D 0 29029 3 1 	(Uma Casa Limpa)
 D 0 29026 1 1 	(A Praça do Colégio)
 D 0 29026 3 1 	(A Praça do Colégio)
-D 0 29000 7 1 	(O Portão de Madeira)
 S
 $

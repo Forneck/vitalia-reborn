@@ -1,7 +1,10 @@
 #79
 Vitalia~
 A Residência de Redferne~
-7900 7999 50 2 j 0 0 0 -1 -1
+7900 7999 50 2 j 0 0 0 12 26
+D 0 7901 2 2 	(A Parte Meridional do Grande Salão)
+D 0 7901 1 1 	(A Parte Meridional do Grande Salão)
+D 0 7901 3 1 	(A Parte Meridional do Grande Salão)
 M 0 7900 1 7900 	(o Grande Cavaleiro dos Paladinos)
 E 1 7901 4 17 	(uma chave de bronze)
 E 1 7910 2 16 	(uma enorme espada bastarda)
@@ -34,10 +37,7 @@ O 0 7905 1 7913 	(uma caixa)
 P 1 7906 5 7905 	(uma adaga simples)
 P 1 7912 3 7905 	(um elmo caótico)
 P 1 7913 2 7905 	(uma espada para duas-mãos)
-D 0 7901 2 2 	(A Parte Meridional do Grande Salão)
-D 0 7901 1 1 	(A Parte Meridional do Grande Salão)
 D 0 7910 3 1 	(A Sala do Tesouro)
-D 0 7901 3 1 	(A Parte Meridional do Grande Salão)
 D 0 7902 1 1 	(A Biblioteca de Redferne)
 D 0 7910 1 2 	(A Sala do Tesouro)
 D 0 7903 3 2 	(A Sala dos Artefatos de Naris)

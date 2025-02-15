@@ -1,7 +1,8 @@
 #204
 Vitalia~
 O Labirinto do Templo dos Ladrões~
-20400 20599 220 1 j 0 0 0 -1 -1
+20400 20599 220 1 j 0 0 0 10 40
+O 0 20402 10 20400 	(um pedaço de papel)
 M 0 20411 1 20491 	(o lojista)
 G 1 3030 99 -1 	(uma tocha)
 G 1 3031 99 -1 	(uma lanterna)
@@ -98,7 +99,6 @@ M 0 20400 10 20409 	(um mago desapontado)
 O 0 20410 6 20403 	(um pedaço de papel)
 O 0 20414 8 20565 	(um pedaço de papel)
 M 0 20400 10 20403 	(um mago desapontado)
-O 0 20402 10 20400 	(um pedaço de papel)
 O 0 20407 10 20402 	(um pedaço de papel)
 O 0 20400 4 20404 	(um pedaço de papel)
 O 0 20414 8 20405 	(um pedaço de papel)

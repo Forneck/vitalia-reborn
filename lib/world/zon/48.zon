@@ -1,7 +1,10 @@
 #48
 Vitalia~
 As Cavernas dos Homens Brancos~
-4800 4899 180 1 j 0 0 0 -1 -1
+4800 4899 180 1 j 0 0 0 26 60
+R 0 4801 4808 -1 	(um pouco de guano)
+O 0 4808 5 4801 	(um pouco de guano)
+M 0 4805 3 4801 	(um escravo imundo)
 R 0 4883 4841 -1 	(um castiçal negro com vela)
 O 0 4841 4 4883 	(um castiçal negro com vela)
 R 0 4880 4841 -1 	(um castiçal negro com vela)
@@ -110,9 +113,6 @@ R 0 4814 4808 -1 	(um pouco de guano)
 O 0 4808 5 4814 	(um pouco de guano)
 R 0 4809 4808 -1 	(um pouco de guano)
 O 0 4808 5 4809 	(um pouco de guano)
-R 0 4801 4808 -1 	(um pouco de guano)
-O 0 4808 5 4801 	(um pouco de guano)
-M 0 4805 3 4801 	(um escravo imundo)
 O 0 4807 1 4899 	(o tesouro aboleth)
 M 0 4803 3 4899 	(um bebê aboleth)
 M 0 4803 3 4899 	(um bebê aboleth)

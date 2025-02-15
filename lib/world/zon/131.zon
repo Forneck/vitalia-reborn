@@ -1,16 +1,16 @@
 #131
 Vitalia~
 Torin~
-13100 13199 200 1 j 0 0 0 -1 -1
-M 0 13113 2 13121 	(o guarda sagrado)
-G 1 13102 1 -1 	(uma chave prateada)
-E 1 13140 99 11 	(um escudo largo)
-E 1 13122 99 16 	(a espada de Lorgeth)
+13100 13199 200 1 j 0 0 0 7 50
 M 0 13101 3 13101 	(um guarda preguiçoso)
 E 1 13100 99 16 	(uma antiga espada enferrujada)
 E 1 13118 100 11 	(um escudo enferrujado)
 D 0 13101 1 1 	(A Entrada)
 D 0 13101 3 1 	(A Entrada)
+M 0 13113 2 13121 	(o guarda sagrado)
+G 1 13102 1 -1 	(uma chave prateada)
+E 1 13140 99 11 	(um escudo largo)
+E 1 13122 99 16 	(a espada de Lorgeth)
 M 0 13102 10 13104 	(uma sombra)
 E 1 13113 99 17 	(um pedaço da sombra)
 M 0 13107 1 13103 	(o monstro da escuridão)

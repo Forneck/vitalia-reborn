@@ -1,7 +1,10 @@
 #144
 Vitalia~
 A Aldeia de Bri~
-14400 14499 60 1 j 0 0 0 -1 -1
+14400 14499 60 1 j 0 0 0 2 50
+M 0 14423 2 14401 	(um lindo pássaro colorido)
+R 0 14401 14402 -1 	(alguns arbustos verdes)
+O 0 14402 5 14401 	(alguns arbustos verdes)
 M 0 14404 1 14479 	(Cevado Carrapicho)
 E 1 14417 1 12 	(um avental branco bastante sujo)
 G 1 3000 99 -1 	(um barril)
@@ -179,14 +182,11 @@ M 0 14421 4 14476 	(um belo pônei)
 M 0 14421 4 14476 	(um belo pônei)
 M 0 14422 2 14435 	(um imponente cavalo)
 M 0 14422 2 14476 	(um imponente cavalo)
-M 0 14423 2 14401 	(um lindo pássaro colorido)
 M 0 14423 2 14497 	(um lindo pássaro colorido)
 R 0 14406 14400 -1 	(o portão das Colinas dos Túmulos)
 O 0 14400 1 14406 	(o portão das Colinas dos Túmulos)
 R 0 14408 14401 -1 	(o portal para o mundo espectral)
 O 0 14401 1 14408 	(o portal para o mundo espectral)
-R 0 14401 14402 -1 	(alguns arbustos verdes)
-O 0 14402 5 14401 	(alguns arbustos verdes)
 R 0 14402 14402 -1 	(alguns arbustos verdes)
 O 0 14402 5 14402 	(alguns arbustos verdes)
 R 0 14403 14402 -1 	(alguns arbustos verdes)

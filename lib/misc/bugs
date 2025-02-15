@@ -171,6 +171,7 @@ Flags     0 0 0 0
 End
 Text      hometown 3~
 Body      centro do templo deve ser a hometown 3
+thewster 13400 como hometown 4
 ~
 Name      Cansian~
 IdNum     1
@@ -273,7 +274,7 @@ Level     80
 Room      1
 Flags     0 0 0 0
 End
-Text       Bilhete do Museu~
+Text      Bilhete do Museu~
 Body      Bilhete nao some. (Golem nao pega ao liberar, arrumar o trigger)
 ~
 Name      Cansian~

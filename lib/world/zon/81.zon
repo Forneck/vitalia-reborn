@@ -1,7 +1,10 @@
 #81
 Vitalia~
 Egito~
-8100 8299 180 1 j 0 0 0 -1 -1
+8100 8299 180 1 j 0 0 0 5 -1
+R 0 8101 8163 -1 	(um pássaro alma)
+R 0 8101 8163 -1 	(um pássaro alma)
+R 0 8101 8163 -1 	(um pássaro alma)
 M 0 8150 1 8210 	(Musedic)
 E 1 8138 99 6 	(um turbante egípcio)
 E 1 8155 99 15 	(um bracelete de bronze)
@@ -19,9 +22,6 @@ G 1 8147 99 -1 	(um papiro que lê 'smmrmb')
 G 1 8148 99 -1 	(um papiro que lê 'momr')
 G 1 8149 99 -1 	(um papiro que lê 'aamb')
 G 1 8151 99 -1 	(a poção do Íbis)
-R 0 8101 8163 -1 	(um pássaro alma)
-R 0 8101 8163 -1 	(um pássaro alma)
-R 0 8101 8163 -1 	(um pássaro alma)
 M 0 8101 4 8159 	(um sacerdote)
 E 1 8140 20 12 	(o manto do sacerdote)
 M 0 8101 4 8164 	(um sacerdote)

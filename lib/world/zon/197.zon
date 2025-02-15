@@ -1,17 +1,17 @@
 #197
 Vitalia~
 O Vale dos Orcs Negros~
-19700 19799 50 1 j 0 0 0 -1 -1
-M 0 19704 1 19701 	(uma cobra negra)
+19700 19799 50 1 j 0 0 0 11 90
 D 0 19700 3 1 	(Uma Estrada Escondida)
+M 0 19700 3 19700 	(o batedor orc)
+G 1 19700 1 -1 	(uma chave enferrujada)
+M 0 19704 1 19701 	(uma cobra negra)
 D 0 19709 2 2 	(Um Longo Corredor)
 D 0 19710 0 2 	(Um Quarto de Pedra)
 D 0 19750 5 2 	(O Quartel General Central)
 D 0 19751 4 2 	(O Calabouço)
 M 0 19700 3 19706 	(o batedor orc)
 E 1 3848 16 17 	(o Card Orcs)
-M 0 19700 3 19700 	(o batedor orc)
-G 1 19700 1 -1 	(uma chave enferrujada)
 M 0 19700 3 19714 	(o batedor orc)
 E 1 19718 10 12 	(uma grande mochila)
 M 0 19701 3 19714 	(o guarda orc)

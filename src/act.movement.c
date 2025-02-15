@@ -273,7 +273,7 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
 	if ((ZONE_MINLVL(GET_ROOM_ZONE(going_to)) != -1)
 		&& ZONE_MINLVL(GET_ROOM_ZONE(going_to)) > GET_LEVEL(ch))
 	{
-		send_to_char(ch, "Esta área está acima do seu nível recomendado.\r\n");
+		send_to_char(ch, "Você está entrando em uma área está acima do seu nível recomendado.\r\n");
 	}
 
 	/* Check zone flag restrictions */

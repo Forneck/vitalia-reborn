@@ -1,7 +1,8 @@
 #38
 Vitalia~
 O Museu do Colecionador~
-3800 3899 60 2 bdj 0 0 0 -1 -1
+3800 3899 60 2 bd 0 0 0 -1 -1
+M 0 3802 1 3811 	(Pilgoras)
 O 0 3800 1 3800 	(um chafariz)
 O 0 3801 1 3800 	(os arbustos)
 P 1 3802 1 3801 	(a pasta do colecionador)
@@ -14,7 +15,6 @@ O 0 3806 1 3804 	(uma lista)
 O 0 3807 1 3805 	(lista)
 O 0 3808 1 3806 	(uma estátua de forma abstrata)
 O 0 3809 1 3806 	(lista)
-M 0 3802 1 3811 	(Pilgoras)
 D 0 3806 5 1 	(A Sala da Fama)
 S
 $
