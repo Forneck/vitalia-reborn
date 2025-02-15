@@ -1,6 +1,6 @@
 #19001
 elfo guardiao~
-O Guardião Elfo~
+o Guardião Elfo~
 Um guardião elfo está aqui guardando o portão.
 ~
 Este é um elfo robusto na melhor fase de sua vida, até onde você pode ver.
@@ -8,11 +8,11 @@ Este é um elfo robusto na melhor fase de sua vida, até onde você pode ver.
 2101266 0 0 0 20 0 0 0 1000 E
 19 8 -1 3d6+240 3d5+8
 2100 29000
-8 8 1
+9 9 1
 E
 #19002
 elfo soldado guarda~
-O Soldado Elfo~
+o Soldado Elfo~
 Um soldado elfo está parado aqui, guardando o caminho.
 ~
 Este é um elfo em plena juventude, mandado pelo chefe dos guardas da vila
@@ -21,7 +21,7 @@ para proteger o caminho dos intrusos indesejados aqui.
 2101250 0 0 0 20 0 0 0 1000 E
 17 10 0 1d12+123 1d8+5
 654 18000
-8 8 1
+9 9 1
 E
 #19003
 elfa soldada guarda~
@@ -34,11 +34,11 @@ para protegê-la dos intrusos.
 2101250 0 0 0 20 0 0 0 1000 E
 12 10 2 1d12+123 1d8+4
 654 14500
-8 8 2
+9 9 2
 E
 #19004
 elfo vendedor armas~
-O Elfo Vendedor de Armas~
+o Elfo Vendedor de Armas~
 Um grande elfo vendedor de armas está andando atrás do balcão
 ~
 Você nota uma expressão cansada em seu belo rosto.
@@ -46,11 +46,11 @@ Você nota uma expressão cansada em seu belo rosto.
 2113538 0 0 0 16 0 0 0 900 E
 107 2 2 6d10+390 1d8+12
 10000 80000
-8 8 1
+9 9 1
 E
 #19005
 elfo armeiro lojista~
-O Elfo Armeiro~
+o Elfo Armeiro~
 Um grande elfo armeiro está andando atrás do balcão.
 ~
 Você nota um expressão cansada em seu belo rosto.
@@ -58,11 +58,11 @@ Você nota um expressão cansada em seu belo rosto.
 2113538 0 0 0 16 0 0 0 900 E
 107 2 2 6d10+390 1d8+12
 30000 80000
-8 8 1
+9 9 1
 E
 #19006
 elfo mago~
-O Mago Elfo~
+o Mago Elfo~
 Um franzino mago elfo flutua atrás do balcão
 ~
 Você nota um expressão cansada em seu belo rosto.
@@ -70,11 +70,11 @@ Você nota um expressão cansada em seu belo rosto.
 2113538 0 0 0 0 0 0 0 900 E
 107 2 2 6d10+390 1d8+12
 30000 80000
-8 8 1
+9 9 1
 E
 #19007
 elfo Quintor lojista~
-O Elfo de Nome Quintor~
+o Elfo de Nome Quintor~
 Um elfo de nome Quintor está contando dinheiro atrás do balcão.
 ~
 Você nota um expressão cansada em seu belo rosto.
@@ -82,11 +82,11 @@ Você nota um expressão cansada em seu belo rosto.
 2113538 0 0 0 0 0 0 0 900 E
 107 2 2 6d10+390 1d8+12
 30000 80000
-8 8 1
+9 9 1
 E
 #19008
 elfo barman atendente gordo~
-O Barman Elfo~
+o Barman Elfo~
 Um elfo gordo está parado atrás do balcão anotando os pedidos.
 ~
 Você nota um expressão cansada em seu belo rosto.
@@ -94,7 +94,7 @@ Você nota um expressão cansada em seu belo rosto.
 2113538 0 0 0 0 0 0 0 900 E
 107 2 2 6d10+390 1d8+12
 2000 80000
-8 8 1
+9 9 1
 E
 #19009
 elfa recepcionista~
@@ -106,11 +106,11 @@ Você nota um expressão cansada em seu belo rosto.
 2113538 0 0 0 0 0 0 0 900 E
 23 2 2 6d10+390 1d8+12
 2000 80000
-8 8 2
+9 9 2
 E
 #19010
 elfo chefe guarda~
-O Chefe da Guarda Élfica~
+o Chefe da Guarda Élfica~
 Um elfo com aparência de preguiçoso está deitado na cama, roncando alto.
 ~
 Este elfo parece de alguma maneira mais experiente do que qualquer guarda
@@ -125,7 +125,7 @@ obviamente participou de muitas batalhas nos seus dias de glória.
 E
 #19011
 elfo guarda soldado~
-O Guarda Elfo~
+o Guarda Elfo~
 Um guarda elfo está aqui, jogando baralho na mesa.
 ~
 Este é um elfo em plena juventude, mandado pelo chefe dos guardas da vila
@@ -138,7 +138,7 @@ para proteger o caminho dos intrusos indesejados aqui.
 E
 #19012
 elfo jardineiro~
-O elfo jardineiro~
+o elfo jardineiro~
 Um elfo está aqui, alegremente cuidando das flores do jardim.
 ~
 O jardineiro é um elfo sorridente, que parece exercer seu trabalho com muito
@@ -148,11 +148,13 @@ conversa.
 2117638 0 0 0 120 0 0 0 700 E
 10 9 0 2d5+260 14d2+7
 4500 16900
-8 8 1
+9 9 1
 E
+T 19000
+T 19001
 #19013
 elfo cidadao~
-O cidadão elfo~
+o cidadão elfo~
 Um simpático cidadão elfo caminha por aqui, cumprimentando a todos que passam.
 ~
 O elfo aparenta ser bastante jovem e cheio de vitalidade.  Como todos os que
@@ -162,7 +164,7 @@ presença.
 2103360 0 0 0 80 0 0 0 700 E
 10 10 0 2d2+400 4d3+8
 6000 14600
-8 8 1
+9 9 1
 E
 #19014
 elfa cidada~
@@ -176,7 +178,7 @@ presença.
 2103360 0 0 0 80 0 0 0 700 E
 10 10 0 2d2+400 4d3+8
 6000 14600
-8 8 2
+9 9 2
 E
 #19015
 prefeito nador bherlion~
@@ -191,11 +193,11 @@ cochilo...
 2121734 0 0 0 65872 0 0 0 1000 E
 20 16 -6 4d4+600 4d4+10
 7000 34000
-6 8 1
+6 9 1
 E
 #19016
 sacerdote elfo~
-O elfo sacerdote~
+o elfo sacerdote~
 Um elfo sacerdote do Templo está aqui, observando o movimento da cidade.
 ~
 Esse elfo passa-lhe a imagem de grande honra e responsabilidade.  Muito
@@ -206,7 +208,7 @@ para você.
 2158610 0 0 0 368 0 0 0 1000 E
 16 10 -5 3d3+560 3d3+9
 6000 32000
-8 8 1
+9 9 1
 E
 #19017
 elfa sacerdotisa~
@@ -222,11 +224,11 @@ insignificante presença...
 2158610 0 0 0 368 0 0 0 1000 E
 17 9 -6 3d3+580 3d3+10
 7000 34500
-8 8 2
+9 9 2
 E
 #19018
 sacerdote elfo~
-O elfo sacerdote~
+o elfo sacerdote~
 Um elfo sacerdote do Templo está aqui, observando o movimento da cidade.
 ~
 Esse elfo passa-lhe a imagem de grande honra e responsabilidade.  Muito
@@ -237,7 +239,7 @@ para você.
 2158672 0 0 0 368 0 0 0 1000 E
 12 10 0 3d3+420 3d3+7
 5000 23000
-8 8 1
+9 9 1
 E
 #19019
 elfa sacerdotisa~
@@ -253,7 +255,7 @@ insignificante presença...
 2158672 0 0 0 368 0 0 0 1000 E
 13 11 -1 3d3+450 3d3+8
 5000 24500
-8 8 2
+9 9 2
 E
 #19020
 elfa dona dona-de-casa senhora elfica~
@@ -267,7 +269,7 @@ Quanta disposição!
 2101378 0 0 0 80 0 0 0 700 E
 10 13 2 4d4+280 3d3+5
 4000 13400
-8 8 2
+9 9 2
 E
 #19021
 elfa crianca~
@@ -279,11 +281,11 @@ Ela parece estar bem feliz brincando sem você se intrometer...
 2097154 0 0 0 0 0 0 0 700 E
 6 18 4 2d2+100 2d2+4
 200 8000
-8 8 2
+9 9 2
 E
 #19022
 elfo apressado~
-O elfo apressado~
+o elfo apressado~
 Um elfo que parece estar muito apressado está aqui, tentando passar o mais rápido possível.
 ~
 Ele parece estar atrasado para algum compromisso.  Talvez esteja saindo do
@@ -293,8 +295,9 @@ muito apressado para isso..
 2130112 0 0 0 80 0 0 0 600 E
 11 12 0 4d4+367 4d3+7
 6000 21000
-8 8 1
+9 9 1
 E
+T 19003
 #19023
 sabia vermelho passarinho passaro~
 o sabiá vermelho~
@@ -306,7 +309,7 @@ antiga canção que você já não se lembra mais...  Estranho...
 2097154 0 0 0 0 0 0 0 600 E
 2 18 7 2d2+100 2d2+3
 0 2000
-8 8 1
+9 9 1
 E
 #19024
 rouxinou azul passarinho passaro~
@@ -319,7 +322,7 @@ os ouvidos...  Você se sente até mais leve ao ouvi-lo.
 2097154 0 0 0 0 0 0 0 600 E
 2 18 7 2d2+100 2d2+3
 0 2000
-8 8 1
+9 9 1
 E
 #19025
 esquilo engracado~
@@ -332,11 +335,11 @@ desaprovar sua presença aqui!  Talvez seja melhor o deixar em paz.
 2097154 0 0 0 0 0 0 0 600 E
 2 18 7 2d2+100 2d2+3
 0 2000
-8 8 1
+9 9 1
 E
 #19026
 elfo bardo~
-O Bardo Elfo~
+o Bardo Elfo~
 Um bardo elfo está sentado tocando seu alaúde e cantando.
 ~
 Este elfo está vestido de verde, com calças marrons.  Ele está tocando um
@@ -349,7 +352,7 @@ alaúde feito com a mais fina madeira e com cordas prateadas.
 E
 #19027
 velho homem humano druida~
-O Velho Druida~
+o Velho Druida~
 Um velho druida está parado aqui salmodiando magias ancestrais.
 ~
 Este é um humano em seus velhos dias.  Ele está vestindo um manto grosso e
@@ -358,11 +361,11 @@ segurando um cajado de carvalho nas mãos.
 2097220 0 0 0 327696 0 0 0 1 E
 50 0 -13 3d12+1033 1d8+19
 18000 180000
-8 8 1
+9 9 1
 E
 #19028
 elemental fogo enorme~
-O Enorme Elemental do Fogo~
+o Enorme Elemental do Fogo~
 Um enorme elemental do fogo está parado aqui queimando tudo.
 ~
 Você só vê as chamas em formato humanóide.
@@ -370,11 +373,11 @@ Você só vê as chamas em formato humanóide.
 2154562 0 0 0 589840 0 0 0 1 E
 33 -4 -10 2d12+700 4d8+16
 9000 160000
-8 8 1
+9 9 1
 E
 #19029
 grande crescido urso animal~
-O urso crescido~
+o urso crescido~
 Um urso crescido está rondando a clareira.
 ~
 É grande, marrom e está furioso.
@@ -382,11 +385,11 @@ Um urso crescido está rondando a clareira.
 2097312 0 0 0 0 0 0 0 0 E
 29 2 1 2d10+190 1d6+6
 0 27000
-8 8 0
+9 9 0
 E
 #19030
 grnde tigre animal~
-O enorme tigre~
+o enorme tigre~
 O tigre enorme está rondando a clareira.
 ~
 Você vê que é grande, listrado e está furioso.
@@ -394,11 +397,11 @@ Você vê que é grande, listrado e está furioso.
 2097312 0 0 0 0 0 0 0 0 E
 30 2 1 2d10+160 1d8+8
 0 29000
-8 8 0
+9 9 0
 E
 #19031
 elfo campeao~
-O Campeão~
+o Campeão~
 Um elfo campeão está parado apreciando os troféus.
 ~
 O elfo a sua frente é bem bonito e robusto (para um elfo).  Até onde você
@@ -407,7 +410,7 @@ pode ver.
 2248770 0 0 0 82192 0 0 0 1000 E
 37 -14 -20 21d40+428 7d6+37
 90000 800000
-8 8 1
+9 9 1
 E
 #19032
 enorme corvo negro~
@@ -421,6 +424,6 @@ as garras parecem afiados como navalhas...  Talvez seja melhor se afastar...
 2097248 0 0 0 0 0 0 0 0 E
 22 10 1 2d5+110 2d4+7
 0 17450
-8 8 1
+9 9 1
 E
 $

@@ -2553,181 +2553,181 @@ set  text[19]  Se o amor é cego, por quê lingerie é tão popular?
 set  text[20]  Vou escrever um poema... Sim! Falarei de flores. De flores perfumadas!
 set  text[21]  Vou viajar de cometa!
 set  text[22]  Prefiro comida sem conservantes!
-set  text[23]  If you can't beat them, arrange to have them beaten.
-set  text[24]  It takes a big man to cry, but it takes a bigger man to laugh at him.
-set  text[25]  Friends come and go, but enemies accumulate.
-set  text[26]  A lie has speed but truth has endurance.
-set  text[27]  Do not blame the sword for the hand that wields it.
-set  text[28]  The intention is not to see through each other but to see each other through.
-set  text[29]  You can build a throne of bayonets, but you cannot sit on it for long.
-set  text[30]  True friendship comes when silence between two people is comforting.
-set  text[31]  I can picture in my mind a world without hate or anger and I can picture us attacking that world because they would never expect it.
-set  text[32]  Life is like a dog sled team. If you are not the lead dog, the scenery never changes.
-set  text[33]  The only man completely at peace is a man without a navel.
-set  text[34]  Losers talk about how hard they tried while the winner goes home with the prom queen.
-set  text[35]  Give a man a fish and he will eat for a day. Teach him how to fish, and he will sit in a boat and drink beer all day.
-set  text[36]  Keep your friends close but keep your enemies closer.
-set  text[37]  No, my powers can only be used for good.
-set  text[38]  Who was the first person to look at a cow and say, "I think I'll squeeze these dangly things here, and drink whatever comes out"?
-set  text[39]  Why do toasters always have a setting that burns the toast to a horrible crisp such that no decent human being would eat?
-set  text[40]  Why is there a light in the fridge and not in the freezer?
-set  text[41]  Why is it that some people appear bright until you hear them speak?
-set  text[42]  Can a hearse carrying a corpse drive in the carpool lane?
-set  text[43]  Why do people point to their wrist when asking for the time, but don't point to their crotch when they ask where the bathroom is?
-set  text[44]  Why ARE Trix only for kids?
-set  text[45]  Why is a person that handles your money called a 'Broker'?
-set  text[46]  Whose cruel idea was it for the word "lisp" to have an "s" in it?
-set  text[47]  If corn oil is made from corn, and vegetable oil is made from vegetables, then what is baby oil made from?
-set  text[48]  If electricity comes from electrons, does morality come from morons?
-set  text[49]  Is Disney World the only people trap operated by a mouse?
-set  text[50]  "I am" is reportedly the shortest sentence in the English language. Could it be that "I do" is the longest sentence?
-set  text[51]  Do illiterate people get the full effect of Alphabet Soup?
-set  text[52]  Did you ever notice that when you blow in a dog's face, he gets mad at you, but when you take him on a car ride, he sticks his head out the window?
-set  text[53]  My mind works like lightning one brilliant flash and it is gone.
-set  text[54]  100,000 sperm and you were the fastest?
-set  text[55]  A closed mouth gathers no foot.
-set  text[56]  Someday, we'll all look back on this, laugh nervously and change the subject.
-set  text[57]  A diplomat is someone who can tell you to go to hell in such a way that you will look forward to the trip.
-set  text[58]  All generalizations are false, including this one.
-set  text[59]  We are born naked, wet and hungry. Then things get worse.
-set  text[60]  What was the best thing BEFORE sliced bread?
-set  text[61]  All stressed out and no one to choke.
-set  text[62]  Before you criticize someone, you should walk a mile in their shoes. That way, when you criticize them, you're a mile away and you have their shoes.
-set  text[63]  Better to understand a little than to misunderstand a lot.
-set  text[64]  Bills travel through the mail at twice the speed of checks.
-set  text[65]  Do NOT start with me. You will NOT win.
-set  text[66]  Don't be irreplaceable; if you can't be replaced, you can't be promoted.
-set  text[67]  Don't piss me off! I'm running out of places to hide the bodies.
-set  text[68]  Don't take life too seriously, you won't get out alive.
-set  text[69]  Duct tape is like the force, it has a light side and a dark side and it holds the universe together.
-set  text[70]  Eagles may soar, but weasels don't get sucked into jet engines.
-set  text[71]  Ever stop to think, and forget to start again?
-set  text[72]  Forget world peace. Visualize using your turn signal.
-set  text[73]  Give me ambiguity or give me something else.
-set  text[74]  Why do people with closed minds always open their mouths?
-set  text[75]  He who laughs last thinks slowest.
-set  text[76]  I didn't say it was your fault, Relsqui. I said I was going to blame you.
-set  text[77]  I don't suffer from insanity. I enjoy every minute of it.
-set  text[78]  I feel like I'm diagonally parked in a parallel universe.
-set  text[79]  I just got lost in thought. It was unfamiliar territory.
-set  text[80]  I need someone really bad. Are you really bad?
-set  text[81]  I poured Spot remover on my dog. Now he's gone.
-set  text[82]  I used to be indecisive. Now I'm not sure.
-set  text[83]  I used to have a handle on life, and then it broke.
-set  text[84]  If ignorance is bliss, you must be orgasmic.
-set  text[85]  Some people are alive only because it's illegal to kill them.
-set  text[86]  It is far more impressive when others discover your good qualities without your help.
-set  text[87]  It may be that your sole purpose in life is simply to serve as a warning to others.
-set  text[88]  Never mess up an apology with an excuse.
-set  text[89]  Okay, who put a stop payment on my reality check?
-set  text[90]  Of course I don't look busy... I did it right the first time.
-set  text[91]  Quantum mechanics: The dreams stuff is made of.
-set  text[92]  Save your breath. You'll need it to blow up your date!
-set  text[93]  Smith & Wesson: The original point and click interface.
-set  text[94]  Some days you are the bug, some days you are the windshield.
-set  text[95]  Some drink at the fountain of knowledge. Others just gargle.
-set  text[96]  The early bird may get the worm, but the second mouse gets the cheese.
-set  text[97]  The only substitute for good manners is fast reflexes.
-set  text[98]  The problem with the gene pool is that there is no lifeguard.
-set  text[99]  Remember my name - you'll be screaming it later.
-set  text[100] The severity of the itch is inversely proportional to the ability to reach it.
-set  text[101] Very funny Scotty, now beam down my clothes.
-set  text[102] Why is abbreviation such a long word?
-set  text[103] Why isn't phonetic spelled the way it sounds?
-set  text[104] You're just jealous because the voices are talking to me and not you!
-set  text[105] The proctologist called, they found your head.
-set  text[106] Everyone has a photographic memory; some just don't have film.
-set  text[107] Try not to let your mind wander. It is too small to be out by itself.
-set  text[108] You need only two tools. WD-40 and duct tape. If it doesn't move and it should, use WD-40. If it moves and shouldn't, use the tape.
-set  text[109] If you woke up breathing, congratulations! You have another chance!
-set  text[110] I don't believe in miracles. I rely on them.
-set  text[111] When I'm feeling down, I like to whistle. It makes the neighbor's dog that barks all the time run to the end of his chain and gag himself.
-set  text[112] Why did kamikaze pilots wear helmets?
-set  text[113] I'm not tense, just terribly, terribly alert.
-set  text[114] How do I set a laser printer to stun?
-set  text[115] Everything I need to know about life I learned by killing smart people and eating their brains.
-set  text[116] I thought I wanted a career, turns out I just wanted paychecks.
-set  text[117] Is it time for your medication or mine?
-set  text[118] Too many freaks, not enough circuses.
-set  text[119] How many times do I have to flush before you go away?
-set  text[120] No word in the English language rhymes with month, orange, silver, and purple.
-set  text[121] If lawyers are disbarred and clergymen defrocked, doesn't it follow that electricians can be delighted, musicians denoted, cowboys deranged, models deposed, tree surgeons debarked and dry cleaners depressed?
-set  text[122] Sarcasm: just one more service we offer here.
-set  text[123] This is a mean and cruel world. I want my nappy and medication right now!
-set  text[124] Back off! You're standing in my aura.
-set  text[125] More people are killed annually by donkeys than die in air crashes.
-set  text[126] A 'jiffy' is an actual unit of time for 1/100th of a second.
-set  text[127] Does your train of thought have a caboose?
-set  text[128] Money isn't made out of paper, it's made out of cotton.
-set  text[129] I got out of bed for this?
-set  text[130] You, you and you: panic.  The rest of you, come with me.
-set  text[131] Stress is when you wake up screaming and you realize you haven't fallen asleep yet.
-set  text[132] I'm not your type. I'm not inflatable.
-set  text[133] If it's stupid but works, it isn't stupid.
-set  text[134] If only you'd use your powers for good instead of evil...
-set  text[135] The more you sweat in peace, the less you bleed in war.
-set  text[136] Tracers work both ways.
-set  text[137] Who cares if a laser guided 500 lb bomb is accurate to within 3 feet?
-set  text[138] Ever wonder about those people who spend 2.00 dollars a piece on those little bottles of Evian water? Try spelling Evian backwards.
-set  text[139] Isn't making a smoking section in a restaurant like making a peeing section in a swimming pool?
-set  text[140] Why do croutons come in airtight packages? Aren't they just stale bread to begin with?
-set  text[141] Why is it that rain drops but snow falls?
-set  text[142] If it's true that we are here to help others, then what exactly are the others here for?
-set  text[143] The light at the end of the tunnel has been turned off due to budget cuts.
-set  text[144] %random.4% days without a human rights violation!
-set  text[145] At least you're not being rectally probed by aliens.
-set  text[146] The most powerful force in the universe is gossip.
-set  text[147] You should not confuse your career with your life.
-set  text[148] No matter what happens, somebody will find a way to take it too seriously.
-set  text[149] When trouble arises and things look bad, there is always one individual who perceives a solution and is willing to take command. Very often, that individual is crazy.
-set  text[150] There is a very fine line between "hobby" and "mental illness."
-set  text[151] Accept that some days you're the pigeon, and some days you're the statue.
-set  text[152] Never under any circumstances take a sleeping pill and a laxative on the same night.
-set  text[153] You should never say anything to a woman that even remotely suggests you think she's pregnant unless you can see an actual baby emerging from her at that moment.
-set  text[154] A person who is nice to you, but rude to the waiter, is not a nice person.
-set  text[155] When everything's coming your way, you're in the wrong lane.
-set  text[156] I live in my own little world, but it's ok they know me here.
-set  text[157] Show me a man with both feet firmly on the ground, and I'll show you a man who can't get his pants off.
-set  text[158] I don't approve of political jokes...I've seen too many of them get elected.
-set  text[159] I love being married. It's so great to find that one special person you want to annoy for the rest of your life.
-set  text[160] I am a nobody, nobody is perfect, therefore I am perfect.
-set  text[161] Everyday I beat my own previous record for number of consecutive days I've stayed alive.
-set  text[162] If carrots are so good for the eyes, how come I see so many dead rabbits on the highway?
-set  text[163] Welcome To Shit Creek - Sorry, We're Out of Paddles!
-set  text[164] How come we choose from just two people to run for president and 50 for Miss America?
-set  text[165] Ever notice that people who spend money on beer, cigarettes, and lottery tickets are always complaining about being broke and not feeling well?
-set  text[166] The next time you feel like complaining remember: Your garbage disposal probably eats better than thirty percent of the people in this world.
-set  text[167] Snowmen fall from Heaven unassembled.
-set  text[168] Every time I walk into a singles bar I can hear Mom's wise words: "Don't pick that up, you don't know where it's been."
-set  text[169] Out of my mind...Back in five minutes.
-set  text[170] I want to die peacefully in my sleep like my grandfather...Not screaming and yelling, like the passengers in his car.
-set  text[171] Man who run in front of car get tired.
-set  text[172] Man who run behind car get exhausted.
-set  text[173] Man who scratches backside should not bite fingernails.
-set  text[174] Man who passes wind in church sits in own pew.
-set  text[175] Some days, I just don't feel like slaying dragons.
-set  text[176] Thank you for not being perky.
-set  text[177] Don't annoy the crazy person.
-set  text[178] Which trailer park did you grow up in?
-set  text[179] When the only tool you own is a hammer, every problem begins to look like a nail.
-set  text[180] And your crybaby whiny ass opinion would be?
-set  text[181] The longest one-syllable word in the English language is "screeched."
-set  text[182] On a Canadian two dollar bill, the flag flying over the Parliament building is an American flag.
-set  text[183] I didn't fight my way to the top of the food chain to be a vegetarian.
-set  text[184] What am I? Flypaper for freaks?
-set  text[185] Would you like fries with that?
-set  text[186] Why do they lock gas station bathrooms? Are they worried someone will clean them?
-set  text[187] I may not be the best looking gal here, but I'm the only one talking to you.
-set  text[188] Where do forest rangers go to get away from it all?
-set  text[189] Who are these kids and why are they calling me Mom?
-set  text[190] Not the brightest crayon in the box now, are we?
-set  text[191] Don't bother me. I'm living happily ever after.
-set  text[192] I started out with nothing and still have most of it left.
-set  text[193] You! Off my planet!
-set  text[194] Therapy is expensive, poppin' bubble wrap is cheap! You choose.
-set  text[195] Did the aliens forget to remove your anal probe?
-set  text[196] It is as bad as you think and they are out to get you.
-set  text[197] Isn't it scary that doctors call what they do "practice"?
+set  text[23]   Se você não pode vencê-los, arranje para que eles sejam espancados.
+set  text[24]   É preciso um homem grande para chorar, mas um homem maior para rir dele.
+set  text[25]   Amigos vêm e vão, mas inimigos se acumulam.
+set  text[26]   Uma mentira é rápida, mas a verdade tem resistência.
+set  text[27]   Não culpe a espada pela mão que a empunha.
+set  text[28]   A intenção não é enxergar através dos outros, mas sim ajudar uns aos outros a superar as dificuldades.
+set  text[29]   Você pode construir um trono de baionetas, mas não poderá se sentar nele por muito tempo.
+set  text[30]   A verdadeira amizade surge quando o silêncio entre duas pessoas é reconfortante.
+set  text[31]   Eu consigo imaginar um mundo sem ódio ou raiva, e consigo imaginar nós atacando esse mundo, porque eles nunca esperariam isso.
+set  text[32]   A vida é como uma equipe de trenó puxado por cães. Se você não for o cão líder, a paisagem nunca muda.
+set  text[33]   O único homem completamente em paz é aquele sem umbigo.
+set  text[34]   Os perdedores falam sobre o quanto se esforçaram, enquanto o vencedor vai para casa com a rainha do baile.
+set  text[35]   Dê um peixe a um homem e ele comerá por um dia. Ensine-o a pescar, e ele ficará em um barco bebendo cerveja o dia todo.
+set  text[36]   Mantenha seus amigos por perto, mas seus inimigos ainda mais perto.
+set  text[37]   Não, meus poderes só podem ser usados para o bem.
+set  text[38]   Quem foi a primeira pessoa a olhar para uma vaca e dizer, "acho que vou apertar essas coisas penduradas aqui e beber o que sair"?
+set  text[39]   Por que as torradeiras sempre têm uma configuração que queima a torrada até ficar horrivelmente crocante, de modo que nenhum ser humano decente comeria?
+set  text[40]   Por que há uma luz na geladeira e não no freezer?
+set  text[41]   Por que é que algumas pessoas parecem inteligentes até que você as ouça falar?
+set  text[42]   Um carro funerário carregando um cadáver pode circular na faixa compartilhada?
+set  text[43]   Por que as pessoas apontam para o pulso quando perguntam as horas, mas não apontam para a virilha quando perguntam onde fica o banheiro?
+set  text[44]   Por que os Trix são apenas para crianças?
+set  text[45]   Por que uma pessoa que lida com seu dinheiro é chamada de "corretor"?
+set  text[46]   De quem foi a ideia cruel de a palavra "lisp" ter um "s" nela?
+set  text[47]   Se o óleo de milho é feito de milho e o óleo vegetal de vegetais, então de que é feito o óleo para bebês?
+set  text[48]   Se a eletricidade vem dos elétrons, a moralidade vem dos idiotas?
+set  text[49]   Disney World é a única armadilha para pessoas operada por um rato?
+set  text[50]   "I am" é supostamente a frase mais curta na língua inglesa. Será que "I do" é a frase mais longa?
+set  text[51]   Pessoas analfabetas sentem o efeito completo da sopa de letrinhas?
+set  text[52]   Você já notou que, quando você sopra no rosto de um cachorro, ele fica bravo, mas quando o leva para um passeio de carro, ele coloca a cabeça para fora da janela?
+set  text[53]   Minha mente funciona como um relâmpago: num brilhante instante, ela se vai.
+set  text[54]   100.000 espermatozoides e você foi o mais rápido?
+set  text[55]   Boca fechada não leva o pé.
+set  text[56]   Algum dia, todos nós olharemos para isso, riremos nervosamente e mudaremos de assunto.
+set  text[57]   Um diplomata é alguém que pode te mandar para o inferno de um jeito que você até espera ansiosamente pela viagem.
+set  text[58]   Todas as generalizações são falsas, inclusive esta.
+set  text[59]   Nascemos nus, molhados e famintos. Depois, as coisas pioram.
+set  text[60]   Qual foi a melhor coisa ANTES do pão fatiado?
+set  text[61]   Estressados e sem ninguém para sufocar.
+set  text[62]   Antes de criticar alguém, você deveria andar uma milha com os sapatos dessa pessoa. Assim, quando os criticar, estará a uma milha de distância e com os sapatos dela.
+set  text[63]   É melhor entender um pouco do que interpretar mal muito.
+set  text[64]   As contas viajam pelo correio duas vezes mais rápido do que os cheques.
+set  text[65]   NÃO comece comigo. Você NÃO vai ganhar.
+set  text[66]   Não seja insubstituível; se você não pode ser substituído, não pode ser promovido.
+set  text[67]   Não me irrite! Estou ficando sem lugares para esconder os corpos.
+set  text[68]   Não leve a vida tão a sério; você não sairá dela vivo.
+set  text[69]   Fita adesiva é como a Força: tem um lado luminoso e um lado sombrio, e mantém o universo unido.
+set  text[70]   Águias podem voar alto, mas doninhas não são sugadas por motores a jato.
+set  text[71]   Já parou para pensar e esqueceu de recomeçar?
+set  text[72]   Esqueça a paz mundial. Use o seu pisca.
+set  text[73]   Dê-me ambiguidade ou me dê outra coisa.
+set  text[74]   Por que pessoas de mente fechada sempre abrem a boca?
+set  text[75]   Quem ri por último pensa mais devagar.
+set  text[76]   Eu não disse que era sua culpa, Relsqui. Disse que iria te culpar.
+set  text[77]   Eu não sofro de insanidade. Eu desfruto cada minuto dela.
+set  text[78]   Sinto como se estivesse estacionado diagonalmente em um universo paralelo.
+set  text[79]   Acabei de me perder em pensamentos. Era território desconhecido.
+set  text[80]   Preciso muito de alguém. Você é realmente irresistível?
+set  text[81]   Eu derramei removedor de manchas no meu cachorro. Agora ele sumiu.
+set  text[82]   Eu costumava ser indeciso. Agora, não tenho certeza.
+set  text[83]   Eu tinha o controle da minha vida, mas então ele se quebrou.
+set  text[84]   Se a ignorância é felicidade, você deve ser orgásmico.
+set  text[85]   Algumas pessoas só estão vivas porque é ilegal matá-las.
+set  text[86]   É muito mais impressionante quando os outros descobrem suas qualidades sem a sua ajuda.
+set  text[87]   Pode ser que seu único propósito na vida seja servir de aviso para os outros.
+set  text[88]   Nunca misture um pedido de desculpas com uma desculpa.
+set  text[89]   Ok, quem bloqueou o pagamento do meu cheque de realidade?
+set  text[90]   Claro que não pareço ocupado... Eu fiz tudo certo de primeira.
+set  text[91]   Mecânica quântica: é disso que os sonhos são feitos.
+set  text[92]   Guarde seu fôlego. Você vai precisar dele para explodir seu encontro!
+set  text[93]   Smith & Wesson: A interface original de apontar e clicar.
+set  text[94]   Alguns dias você é o inseto, outros dias você é o para-brisa.
+set  text[95]   Uns bebem na fonte do conhecimento. Outros apenas gargarejam.
+set  text[96]   O pássaro madrugador pode apanhar o verme, mas o segundo rato consegue o queijo.
+set  text[97]   O único substituto para bons modos são reflexos rápidos.
+set  text[98]   O problema com o conjunto genético é que não há salva-vidas.
+set  text[99]   Lembre-se do meu nome – você vai gritá-lo mais tarde.
+set  text[100]  A severidade da coceira é inversamente proporcional à capacidade de alcançá-la.
+set  text[101]  Muito engraçado, Scotty, agora desça com minhas roupas.
+set  text[102]  Por que a palavra "abreviação" é tão longa?
+set  text[103]  Por que "fonético" não é escrito da forma que se pronuncia?
+set  text[104]  Você está com ciúmes porque as vozes estão falando comigo e não com você!
+set  text[105]  O proctologista ligou; eles encontraram sua cabeça.
+set  text[106]  Todo mundo tem memória fotográfica; alguns simplesmente não têm filme.
+set  text[107]  Tente não deixar sua mente divagar. Ela é pequena demais para ficar sozinha.
+set  text[108]  Você só precisa de duas ferramentas: WD-40 e fita adesiva. Se algo não se move e deveria, use WD-40. Se se move e não deveria, use a fita.
+set  text[109]  Se você acordou respirando, parabéns! Você tem mais uma chance!
+set  text[110]  Eu não acredito em milagres. Eu conto com eles.
+set  text[111]  Quando estou para baixo, gosto de assobiar. Isso faz o cachorro do vizinho, que late o tempo todo, correr até o fim de sua corrente e se engasgar.
+set  text[112]  Por que os pilotos kamikaze usavam capacetes?
+set  text[113]  Eu não estou tenso, apenas terrivelmente, terrivelmente alerta.
+set  text[114]  Como configuro uma impressora a laser para atordoar?
+set  text[115]  Tudo o que preciso saber sobre a vida, aprendi matando pessoas inteligentes e comendo seus cérebros.
+set  text[116]  Eu achava que queria uma carreira; na verdade, eu só queria contracheques.
+set  text[117]  Já é hora da sua medicação ou da minha?
+set  text[118]  Muitos esquisitos, poucos circos.
+set  text[119]  Quantas vezes tenho que dar descarga antes que você vá embora?
+set  text[120]  Nenhuma palavra na língua inglesa rima com month, orange, silver e purple.
+set  text[121]  Se advogados são cassados e clérigos despojados, não significa que eletricistas fiquem encantados, músicos se destaquem, cowboys enlouqueçam, modelos sejam depostos, cirurgiões de árvores percam a compostura e as lavanderias fiquem deprimidas?
+set  text[122]  Sarcasmo: apenas mais um serviço que oferecemos aqui.
+set  text[123]  Este é um mundo mau e cruel. Eu quero minha fralda e medicação agora mesmo!
+set  text[124]  Afaste-se! Você está pisando na minha aura.
+set  text[125]  Mais pessoas são mortas anualmente por burros do que morrem em acidentes aéreos.
+set  text[126]  Um "jiffy" é uma unidade de tempo real de 1/100 de segundo.
+set  text[127]  Seu trem de pensamentos tem um vagão traseiro?
+set  text[128]  O dinheiro não é feito de papel, é feito de algodão.
+set  text[129]  Eu levantei da cama por isso?
+set  text[130]  Você, você e você: entrem em pânico. Os demais, venham comigo.
+set  text[131]  Estresse é quando você acorda gritando e percebe que ainda não adormeceu.
+set  text[132]  Eu não sou o seu tipo. Eu não sou inflável.
+set  text[133]  Se é estúpido mas funciona, então não é estúpido.
+set  text[134]  Se ao menos você usasse seus poderes para o bem em vez do mal...
+set  text[135]  Quanto mais você sua em paz, menos sangra na guerra.
+set  text[136]  Os traçadores funcionam nos dois sentidos.
+set  text[137]  Quem se importa se uma bomba de 500 libras guiada a laser tem precisão de 1 metro?
+set  text[138]  Já se perguntou sobre aquelas pessoas que gastam 2,00 dólares em pequenas garrafinhas de água Evian? Tente soletrar "Evian" de trás para frente.
+set  text[139]  Não é como criar uma área para fumantes em um restaurante ser igual a criar uma área para urinar em uma piscina?
+set  text[140]  Por que os croutons vêm em embalagens herméticas? Eles não são apenas pão velho, afinal?
+set  text[141]  Por que a chuva cai e a neve desce?
+set  text[142]  Se é verdade que estamos aqui para ajudar os outros, então para que exatamente os outros estão aqui?
+set  text[143]  A luz no fim do túnel foi apagada por causa dos cortes no orçamento.
+set  text[144]  %random.4% dias sem uma violação dos direitos humanos!
+set  text[145]  Pelo menos você não está sendo sondado retalmente por alienígenas.
+set  text[146]  A força mais poderosa do universo é a fofoca.
+set  text[147]  Você não deve confundir sua carreira com sua vida.
+set  text[148]  Não importa o que aconteça, alguém sempre encontrará uma maneira de levar isso muito a sério.
+set  text[149]  Quando os problemas surgem e as coisas parecem ruins, sempre há alguém que percebe uma solução e está disposto a tomar as rédeas. Muito frequentemente, esse alguém é louco.
+set  text[150]  Há uma linha muito tênue entre "hobby" e "doença mental."
+set  text[151]  Aceite que alguns dias você é o pombo, e outros dias você é a estátua.
+set  text[152]  Nunca, sob nenhuma circunstância, tome um comprimido para dormir e um laxante na mesma noite.
+set  text[153]  Você nunca deve dizer nada a uma mulher que, mesmo que remotamente, sugira que você acha que ela está grávida, a menos que veja um bebê realmente surgindo dela naquele momento.
+set  text[154]  Uma pessoa que é gentil com você, mas rude com o garçom, não é uma pessoa legal.
+set  text[155]  Quando tudo está a seu favor, você está na faixa errada.
+set  text[156]  Eu vivo no meu próprio mundinho, mas tudo bem, eles me conhecem aqui.
+set  text[157]  Mostre-me um homem com os dois pés bem no chão, e eu te mostrarei um homem que não consegue tirar as calças.
+set  text[158]  Eu não aprovo piadas políticas... Já vi muitos políticos sendo eleitos.
+set  text[159]  Eu adoro ser casado. É maravilhoso encontrar aquela pessoa especial que você quer irritar pelo resto da vida.
+set  text[160]  Eu sou um ninguém; ninguém é perfeito, portanto eu sou perfeito.
+set  text[161]  Todos os dias eu supero meu próprio recorde de quantos dias consecutivos eu fiquei vivo.
+set  text[162]  Se as cenouras são tão boas para os olhos, por que vejo tantos coelhos mortos na estrada?
+set  text[163]  Bem-vindo ao Shit Creek – Desculpe, estamos sem remos!
+set  text[164]  Por que escolhemos apenas duas pessoas para concorrer à presidência e 50 para o Miss America?
+set  text[165]  Já notou que as pessoas que gastam dinheiro com cerveja, cigarros e bilhetes de loteria estão sempre reclamando de estar quebradas e de não se sentirem bem?
+set  text[166]  Da próxima vez que sentir vontade de reclamar, lembre-se: seu triturador de lixo provavelmente come melhor do que 30% das pessoas deste mundo.
+set  text[167]  Bonecos de neve caem do céu sem estarem montados.
+set  text[168]  Toda vez que entro em um bar de solteiros, posso ouvir as sábias palavras da minha mãe: "Não pegue isso, você não sabe de onde veio."
+set  text[169]  Sem juízo... De volta em cinco minutos.
+set  text[170]  Eu quero morrer pacificamente em meu sono, como meu avô... Não gritando e berrando, como os passageiros em seu carro.
+set  text[171]  Homem que corre na frente do carro se cansa.
+set  text[172]  Homem que corre atrás do carro fica exausto.
+set  text[173]  Homem que coça as costas não deve roer as unhas.
+set  text[174]  Homem que solta pum na igreja senta no próprio banco.
+set  text[175]  Alguns dias, simplesmente não estou a fim de matar dragões.
+set  text[176]  Obrigado por não ser tão animado.
+set  text[177]  Não incomode o louco.
+set  text[178]  Em qual parque de trailers você cresceu?
+set  text[179]  Quando a única ferramenta que você possui é um martelo, todo problema começa a parecer um prego.
+set  text[180]  E qual é a sua opinião choramingona?
+set  text[181]  A palavra de uma sílaba mais longa na língua inglesa é "screeched."
+set  text[182]  Em uma nota canadense de dois dólares, a bandeira que tremula sobre o Parlamento é americana.
+set  text[183]  Eu não lutei até o topo da cadeia alimentar para ser vegetariana.
+set  text[184]  O que sou eu? Papel pega-moscas para esquisitos?
+set  text[185]  Você gostaria de batatas fritas com isso?
+set  text[186]  Por que trancam os banheiros dos postos de gasolina? Será que têm medo que alguém os limpe?
+set  text[187]  Eu posso não ser a garota mais bonita aqui, mas sou a única que está conversando com você.
+set  text[188]  Onde os guardas florestais vão para se afastar de tudo?
+set  text[189]  Quem são essas crianças e por que estão me chamando de mamãe?
+set  text[190]  Você não é o giz de cera mais brilhante da caixa, não é?
+set  text[191]  Não me incomode. Estou vivendo feliz para sempre.
+set  text[192]  Eu comecei com nada e ainda tenho a maior parte dele.
+set  text[193]  Você! Saia do meu planeta!
+set  text[194]  A terapia é cara, estourar plástico bolha é barato! Você escolhe.
+set  text[195]  Será que os alienígenas esqueceram de remover sua sonda anal?
+set  text[196]  É tão ruim quanto você imagina e eles estão atrás de você.
+set  text[197]  Não é assustador que os médicos chamem o que fazem de "prática"?
 eval speech %%text[%max%]%%
 say %speech%
 ~
