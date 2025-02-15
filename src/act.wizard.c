@@ -6006,11 +6006,11 @@ ACMD(do_ressucite)
 			if (GET_OBJ_TYPE(corpse) == ITEM_CORPSE && GET_OBJ_VAL(corpse, 0) == GET_IDNUM(vict))
 				break;
      
-		if (GET_HOMETOWN(ch) == r_hometown_1)
+		if (GET_HOMETOWN(ch) == 1)
 			raise_online(vict, ch, corpse, r_ress_room_1, 2);
-		else if (GET_HOMETOWN(ch) == r_hometown_2)
+		else if (GET_HOMETOWN(ch) == 2)
 			raise_online(vict, ch, corpse, r_ress_room_2, 2);
-		else if (GET_HOMETOWN(ch) == r_hometown_3)
+		else if (GET_HOMETOWN(ch) == 3)
 			raise_online(vict, ch, corpse, r_ress_room_3, 2);
 		else 
 			raise_online(vict, ch, corpse, r_ress_room_1, 2);
