@@ -1070,11 +1070,12 @@ do                                                              \
 
 #define CONFIG_DEAD_START config_info.room_nums.dead_start_room
 #define CONFIG_HOMETOWN_1       config_info.room_nums.hometown_1
-/** Get the second donation room. */
 #define CONFIG_HOMETOWN_2       config_info.room_nums.hometown_2
+#define CONFIG_HOMETOWN_3       config_info.room_nums.hometown_3
+
 #define CONFIG_RESS_ROOM_1       config_info.room_nums.ress_room_1
-/** Get the second donation room. */
 #define CONFIG_RESS_ROOM_2       config_info.room_nums.ress_room_2
+#define CONFIG_RESS_ROOM_3       config_info.room_nums.ress_room_3
 
 /* Game Operation */
 /** Get the default mud connection port. */

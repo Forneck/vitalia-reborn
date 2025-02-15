@@ -386,9 +386,11 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_DEAD_START_ROOM		58
 #define CEDIT_HOMETOWN_1		59
 #define CEDIT_HOMETOWN_2		60
-#define CEDIT_RESS_ROOM_1		61
-#define CEDIT_RESS_ROOM_2		62
-#define CEDIT_FIT_EVOLVE		63
+#define CEDIT_HOMETOWN_3		61
+#define CEDIT_RESS_ROOM_1		62
+#define CEDIT_RESS_ROOM_2		63
+#define CEDIT_RESS_ROOM_3		64
+
 
 /* Hedit Submodes of connectedness. */
 #define HEDIT_CONFIRM_SAVESTRING        0

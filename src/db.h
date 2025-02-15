@@ -373,9 +373,10 @@ extern room_rnum r_frozen_start_room;
 extern room_rnum r_dead_start_room;
 extern room_rnum r_hometown_1;
 extern room_rnum r_hometown_2;
+extern room_rnum r_hometown_3;
 extern room_rnum r_ress_room_1;
 extern room_rnum r_ress_room_2;
-
+extern room_rnum r_ress_room_3;
 
 extern struct config_data config_info;
 

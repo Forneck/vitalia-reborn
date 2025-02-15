@@ -3775,7 +3775,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 			{
 				GET_HOMETOWN(vict) = rvnum;
 				send_to_char(ch, "%s new hometown is #%d.\r\n", GET_NAME(vict),
-							 GET_HOMETOWN(vict));
+				GET_HOMETOWN(vict));
 			}
 			else
 			{
@@ -6010,6 +6010,10 @@ ACMD(do_ressucite)
 			raise_online(vict, ch, corpse, r_ress_room_1, 2);
 		else if (GET_HOMETOWN(ch) == r_hometown_2)
 			raise_online(vict, ch, corpse, r_ress_room_2, 2);
+		else if (GET_HOMETOWN(ch) == r_hometown_3)
+			raise_online(vict, ch, corpse, r_ress_room_3, 2);
+		else 
+			raise_online(vict, ch, corpse, r_ress_room_1, 2);
 
 		if (corpse)
 			extract_obj(corpse);

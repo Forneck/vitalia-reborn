@@ -106,8 +106,10 @@ room_rnum add_room(struct room_data *room)
   r_frozen_start_room += (r_frozen_start_room >= found);
   r_hometown_1 += (r_hometown_1 >= found);
   r_hometown_2 += (r_hometown_2 >= found);
+  r_hometown_3 += (r_hometown_3 >= found);
   r_ress_room_1  += (r_ress_room_1 >= found);
   r_ress_room_2 += (r_ress_room_2 >= found);
+  r_ress_room_3 += (r_ress_room_3 >= found);
 
 
   /* Update world exits. */
@@ -163,13 +165,21 @@ int delete_room(room_rnum rnum)
     log1("WARNING: GenOLC: delete_room: Deleting hometown 2!");
     r_hometown_2 = 0;	/* The Void */
   }
+  if (r_hometown_3== rnum) {
+    log1("WARNING: GenOLC: delete_room: Deleting hometown 3!");
+    r_hometown_3 = 0;   /* The Void */
+  }
   if (r_ress_room_1 == rnum) {
     log1("WARNING: GenOLC: delete_room: Deleting ress room 1!");
     r_ress_room_1 = 0;	/* The Void */
   }
-    if (r_ress_room_2 == rnum) {
+  if (r_ress_room_2 == rnum) {
     log1("WARNING: GenOLC: delete_room: Deleting ress room 2!");
     r_ress_room_2 = 0;	/* The Void */
+  }
+  if (r_ress_room_3== rnum) {
+    log1("WARNING: GenOLC: delete_room: Deleting ress room 3!");
+    r_ress_room_3 = 0;   /* The Void */
   }
 
   /* Dump the contents of this room into the Void.  We could also just extract 

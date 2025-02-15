@@ -105,8 +105,10 @@ room_rnum r_frozen_start_room;	/* rnum of frozen start room */
 room_rnum r_dead_start_room;
 room_rnum r_hometown_1;
 room_rnum r_hometown_2;
+room_rnum r_hometown_3;
 room_rnum r_ress_room_1;
 room_rnum r_ress_room_2;
+room_rnum r_ress_room_3;
 
 char *credits = NULL;			/* game credits */
 char *news = NULL;				/* mud news */
@@ -1727,6 +1729,9 @@ static void check_start_rooms(void)
 		log1("SYSERR:  Hometown 2 does not exist.  Change in config.c.");
 		r_hometown_2 = CONFIG_NEWBIE_START;
 	}
+		if ((r_hometown_3 = real_room(CONFIG_HOMETOWN_3)) == NOWHERE)             {
+                log1("SYSERR:  Hometown 3 does not exist.  Change in config.c.");
+                r_hometown_3 = CONFIG_NEWBIE_START;                                       }
 		if ((r_ress_room_1 = real_room(CONFIG_RESS_ROOM_1)) == NOWHERE)
 	{
 		log1("SYSERR:  RessRoom 1 does not exist.  Change in config.c.");
@@ -1737,6 +1742,10 @@ static void check_start_rooms(void)
 		log1("SYSERR:  RessRoom 2 does not exist.  Change in config.c.");
 		r_ress_room_2 = CONFIG_NEWBIE_START;
 	}
+		if ((r_ress_room_3 = real_room(CONFIG_RESS_ROOM_3)) == NOWHERE)
+        {
+                log1("SYSERR:  RessRoom 3 does not exist.  Change in config.c.");
+                r_ress_room_3 = CONFIG_NEWBIE_START;                                      }
 }
 
 
@@ -4493,9 +4502,11 @@ static void load_default_config(void)
 	CONFIG_DON_ROOM_3 = donation_room_3;
 	CONFIG_DEAD_START = dead_start_room;
 	CONFIG_HOMETOWN_1 = hometown_1;
-		CONFIG_HOMETOWN_2 = hometown_2;
-CONFIG_RESS_ROOM_1 = ress_room_1;
-CONFIG_RESS_ROOM_2 = ress_room_2;
+	CONFIG_HOMETOWN_2 = hometown_2;
+	CONFIG_HOMETOWN_3 = hometown_3;
+        CONFIG_RESS_ROOM_1 = ress_room_1;
+        CONFIG_RESS_ROOM_2 = ress_room_2;
+        CONFIG_RESS_ROOM_3 = ress_room_3;
 
 	/* Game operation options. */
 	CONFIG_DFLT_PORT = DFLT_PORT;
@@ -4648,11 +4659,16 @@ void load_config(void)
 					CONFIG_HOMETOWN_1= NOWHERE;
 				else
 				CONFIG_HOMETOWN_1 = num;
-					else if (!str_cmp(tag, "hometown_2"))
+			else if (!str_cmp(tag, "hometown_2"))
 				if (num == -1)
-				CONFIG_HOMETOWN_2 = NOWHERE;
+				    CONFIG_HOMETOWN_2 = NOWHERE;
 				else
 					CONFIG_HOMETOWN_2 = num;
+			else if (!str_cmp(tag, "hometown_3"))
+				if (num == -1)
+					CONFIG_HOMETOWN_3 = NOWHERE;
+                                else
+                                        CONFIG_HOMETOWN_3 = num;
 			break;
 
 		case 'i':
@@ -4768,16 +4784,21 @@ void load_config(void)
 		case 'r':
 			if (!str_cmp(tag, "rent_file_timeout"))
 				CONFIG_RENT_TIMEOUT = num;
-					else if (!str_cmp(tag, "ress_room_1"))
+			else if (!str_cmp(tag, "ress_room_1"))
 				if (num == -1)
-				CONFIG_RESS_ROOM_1 = NOWHERE;
+				   CONFIG_RESS_ROOM_1 = NOWHERE;
 				else
-					CONFIG_RESS_ROOM_1 = num;
-	else if (!str_cmp(tag, "ress_room_2"))
+				   CONFIG_RESS_ROOM_1 = num;
+	                else if (!str_cmp(tag, "ress_room_2"))
 				if (num == -1)
-				CONFIG_RESS_ROOM_2 = NOWHERE;
+			           CONFIG_RESS_ROOM_2 = NOWHERE;
 				else
-					CONFIG_RESS_ROOM_2 = num;
+				   CONFIG_RESS_ROOM_2 = num;
+			else if (!str_cmp(tag, "ress_room_3"))
+                                if (num == -1)
+                                   CONFIG_RESS_ROOM_3 = NOWHERE;
+                                else
+                                   CONFIG_RESS_ROOM_3 = num;
 			break;
 
 		case 's':

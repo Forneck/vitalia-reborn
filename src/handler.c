@@ -403,11 +403,14 @@ void char_to_room(struct char_data *ch, room_rnum room)
 	case 1:
 		room = r_hometown_1;
     	break;
-		case 2:
+	case 2:
 		room = r_hometown_2;
     	break;
+	case 3:
+                room = r_hometown_3;
+	break;
     	default:
-    	room = r_hometown_1;
+    	        room = r_hometown_1;
     	break;
 	}
      }
