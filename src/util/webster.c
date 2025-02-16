@@ -7,8 +7,8 @@
 
 #define log(msg) fprintf(stderr, "%s\n", msg)
 
-#include "../conf.h"
-#include "../sysdep.h"
+#include "conf.h"
+#include "sysdep.h"
 
 
 #define MEM_USE 10000

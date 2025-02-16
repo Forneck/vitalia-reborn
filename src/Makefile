@@ -19,10 +19,9 @@ BINDIR = ../bin
 
 CFLAGS = -g -O2 $(MYFLAGS) $(PROFILE)
 
-LIBS =  -lcrypt -lm
+LIBS =  -lcrypt -lm 
 
-SRCFILES := $(shell ls *.c | sort)
-
+SRCFILES := $(shell ls *.c | sort) 
 OBJFILES := $(patsubst %.c,%.o,$(SRCFILES))
 
 default: all

@@ -75,6 +75,7 @@ Exemplos:
   > look anjo
   > look em sacola
   > look south (lhe da alguma informacao do que pode conter ao sul)
+  > look sky (para ver o ceu de Vitalia com suas estrelas ou o sol)
 
    Note que se voce digitar 'LOOK CORPO', voce nao vera o seu inventorio.
 Para ver o que ha dentro de um recipiente (i.e.  Um corpo) use 'LOOK EM
@@ -107,7 +108,7 @@ Exemplos:
   > unlock porta south
   > close portao
 
-Veja tambem: ENTER, LEAVE
+Veja tambem: ENTER, LEAVE, AUTODOOR, AUTOKEY
 #1
 RECALL
 

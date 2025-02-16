@@ -240,6 +240,13 @@ int find_eq_pos_script(char *arg)
     {"waist",    WEAR_WAIST},
     {"rwrist",   WEAR_WRIST_R},
     {"lwrist",   WEAR_WRIST_L},
+    {"wings",    WEAR_WINGS},
+    {"rear",     WEAR_EAR_R},
+    {"lear",     WEAR_EAR_L},
+    {"face",     WEAR_FACE},
+    {"nose",     WEAR_NOSE},
+    {"insigne",  WEAR_INSIGNE},
+    {"quiver",   WEAR_QUIVER},
     {"none", -1}
   };
 
@@ -279,6 +286,13 @@ int can_wear_on_pos(struct obj_data *obj, int pos)
     case WEAR_WAIST:    return CAN_WEAR(obj, ITEM_WEAR_WAIST);
     case WEAR_WRIST_R:
     case WEAR_WRIST_L:  return CAN_WEAR(obj, ITEM_WEAR_WRIST);
+    case WEAR_WINGS:    return CAN_WEAR(obj, ITEM_WEAR_WINGS);
+    case WEAR_EAR_R:
+    case WEAR_EAR_L:    return CAN_WEAR(obj, ITEM_WEAR_EAR);
+    case WEAR_FACE:     return CAN_WEAR(obj, ITEM_WEAR_FACE);
+    case WEAR_NOSE:     return CAN_WEAR(obj, ITEM_WEAR_NOSE);
+    case WEAR_INSIGNE:  return CAN_WEAR(obj, ITEM_WEAR_INSIGNE);
+    case WEAR_QUIVER:   return CAN_WEAR(obj, ITEM_WEAR_QUIVER);
     default: return FALSE;
   }
 }
@@ -2486,7 +2500,6 @@ int script_driver(void *go_adress, trig_data *trig, int type, int mode)
   char cmd[MAX_INPUT_LENGTH], *p;
   struct script_data *sc = 0;
   struct cmdlist_element *temp;
-  unsigned long loops = 0;
   void *go = NULL;
 
   void obj_command_interpreter(obj_data *obj, char *argument);
@@ -2578,8 +2591,8 @@ int script_driver(void *go_adress, trig_data *trig, int type, int mode)
       if (process_if(p + 6, go, sc, trig, type)) {
          temp->original = cl;
       } else {
+	 cl->loops = 0;
          cl = temp;
-         loops = 0;
       }
     } else if (!strn_cmp("switch ", p, 7)) {
       cl = find_case(trig, cl, go, sc, type, p + 7);
@@ -2599,9 +2612,10 @@ int script_driver(void *go_adress, trig_data *trig, int type, int mode)
       if (cl->original && process_if(orig_cmd + 6, go, sc, trig,
           type)) {
         cl = cl->original;
-        loops++;
+        cl->loops++;
         GET_TRIG_LOOPS(trig)++;
-        if (loops == 30) {
+        if (cl->loops == 30) {
+	  cl->loops = 0;
           process_wait(go, trig, type, "wait 1", cl);
            depth--;
           return ret_val;

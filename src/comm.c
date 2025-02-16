@@ -10,6 +10,7 @@
 
 #include "conf.h"
 #include "sysdep.h"
+#include <locale.h>
 
 /* Begin conf.h dependent includes */
 
@@ -83,6 +84,7 @@
 #include "ibt.h"				/* for free_ibt_lists */
 #include "mud_event.h"
 #include "ann.h"
+
 
 #ifndef INVALID_SOCKET
 #define INVALID_SOCKET (-1)
@@ -1790,7 +1792,7 @@ static int process_output(struct descriptor_data *t)
 
 	if (result < 0)
 	{							/* Oops, fatal error. Bye! */
-		close_socket(t);
+	//	close_socket(t); // close_socket is called after return of negative result
 		return (-1);
 	}
 	else if (result == 0)		/* Socket buffer full. Try later. */

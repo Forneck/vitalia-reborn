@@ -6,12 +6,12 @@
 *  Copyright (C) 1993 The Trustees of The Johns Hopkins University        *
 ************************************************************************* */
 
-#include "../conf.h"
-#include "../sysdep.h"
+#include "conf.h"
+#include "sysdep.h"
 #include <signal.h>
-#include "../structs.h"
-#include "../utils.h"
-#include "../db.h"
+#include "structs.h"
+#include "utils.h"
+#include "db.h"
 
 #define IMM_LMARG "   "
 #define IMM_NSIZE  16
@@ -39,16 +39,10 @@ struct level_rec {
 
 struct control_rec level_params[] =
 {
- { LVL_IMPL	, "Deuses Supremos"	},
-  { LVL_CREATOR	, "Deuses Criadores"	},
-  { LVL_GRGOD	, "Deuses Legisladores"	},
-  { LVL_GOD	, "Deuses Guardiões"	},
-  { LVL_DEMIGOD	, "Deuses"		},
-  { LVL_GRIMM	, "Semi-Deuses"		},
-  { LVL_ANCIENT	, "Imortais Sábios"	},
-  { LVL_IMM3	, "Imortais (Nível 3)"	},
-  { LVL_IMM2	, "Imortais (Nível 2)"	},
-  { LVL_IMMORT	, "Imortais (Nível 1)"	},
+  {LVL_IMMORT, "Immortals"},
+  {LVL_GOD, "Gods"},
+  {LVL_GRGOD, "Greater Gods"},
+  {LVL_IMPL, "Implementors"},
   {0, ""}
 };
 
@@ -157,10 +151,10 @@ void write_wizlist(FILE * out, int minlev, int maxlev)
   struct name_rec *curr_name;
   int i, j;
 
-  fprintf(out,"@+W %-76.76s @+n\r\n\n",
-              "OS IMORTAIS DO MUNDO DE VITÁLIA"
-  "   Estes jogadores se tornaram imortais do Mundo de Vitália.  Eles devem ser\r\n"
-  "tratados com bastante respeito, pois possuem muita experiência no jogo.\r\n");
+  fprintf(out,
+"*******************************************************************************\n"
+"*          The following people have reached immortality on tbaMUD.           *\n"
+"*******************************************************************************\n\n");
 
   for (curr_level = levels; curr_level; curr_level = curr_level->next) {
     if (curr_level->params->level < minlev ||
