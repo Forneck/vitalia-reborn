@@ -1,7 +1,3 @@
-! ^ !
-
-Use ! to repeat the last command typed
-#0
 %ASOUND% OASOUND MASOUND WASOUND ASOUND
 
 %asound% <message>
@@ -471,67 +467,6 @@ How old your character is. Your age begins at creation and continues whether
 you are logged in the MUD or not.
 
 #0
-ALIASES
-
-Uso: alias [alias name] [command]
-
-An alias is a single command used to represent one or more other commands.
-The ALIAS command can be used to manipulate your character's aliases.  Type
-ALIAS alone to see a list of your currently defined aliases.
-
-  > alias
-
-Type ALIAS <alias name> <command> to create a new alias.  The alias name must
-be one word.  The command can be any string.  Aliases may not be nested or
-used recursively.  Any command may be overridden by an alias (other than the
-ALIAS command itself, of course).
-
-  > alias gbb get bread bag
-  > alias gac get all corpse
-
-Type ALIAS <alias-name> to delete an alias that has already been defined.
-
-  > alias gbb
-
-A semicolon (";") can be used to define multiple actions to be taken with
-a single alias.
-
-  > alias eat get bread bag; eat bread
-
-Note that the 'eat' contained within the eat alias is interpreted as the MUD's
-internal eat command; aliases may not be nested or used recursively.  The
-variables $1, $2, ... $9 may be used to represent arguments given with
-an alias.
-
-Examples:
-
-  > alias killem cast 'fireball' $1; cast 'harm' $2
-  > killem fido mage
-
-Would cast fireball on fido, followed by casting harm on mage.  Variables
-may be used repeatedly and in any order:
-
-  > alias helpem cast 'heal' $1; cast 'bless' $1; cast 'armor' $1
-
-The special variable $* represents the entire input line after an alias:
-
-  > alias tr tell Rumble $*
-  > tr hi there, how are you today?
-  You tell Rumble, 'hi there, how are you today?'
-
-A quick note on some possible problems with aliases:
-Several MUD client capture semi-colons for their own new-line so they are not 
-sent to the MUD.  For Zmud click on the computer on the bottom right of the 
-screen to disable text-parsing.  Here is one of my many aliases.  They are a 
-life-saver.  Everyone should learn how to use them well.
-  
-all              tlist $1;slist $1;olist $1;mlist $1;rlist $1;
-
-I would type "all 13" to list everything in zone 13. I use this to check what
-people have done with their zone.
-
-Veja tambem: ^, RUMBLE-ALIASES
-#0
 ALIGNMENT GOOD NEUTRAL EVIL %ACTOR.ALIGN% %ALIGN% %ALIGNMENT% 
 
    Different characters and mobs have different alignments depending upon their
@@ -617,19 +552,6 @@ as in "women's hemlines."
 
 We rest our case. Now do whatever you want...after all, it is your area.
 #101
-APPLICATION APPLY BUILDING LEARNING LESSONS 
-
-To apply for a building position go to:
-                   
-                   @Chttp://tbamud.com/@n 
-
-and fill out the application.
-
-@RGOTO 3@n to enter The Builder Academy.
-
-Veja tambem: OLC, REDIT, MEDIT, OEDIT, ZEDIT, SEDIT, TRIGEDIT, AEDIT
-
-#0
 AREAS 
 
 Uso: areas [level-range] 
@@ -674,7 +596,7 @@ By Zierk
 
 Artes assim sao altamente recimendadas e adicionam um efeito as areas. Especificamente  mapas sempre ajudam os jogadores.
 
-Geradores: ASCII 
+Geradores ASCII 
 http://www.network-science.de/ascii/
 http://www.degraeve.com/img2txt.php
 
@@ -862,17 +784,6 @@ AUTOWIZ
 to update the wizlist and immlist unless they have NO_WIZ set.
 
 #101
-AWAY
-Uso: away [ -l ]
-Permite que voce coloque sua conexao em estado de AWAY, indicando que voce
-nao esta' prestando atencao `a sua conexao atual ao MUD.                          
-Utilizando o parametro `-l', pode-se fazer com que a conexao tambem fique      travada.  Desta forma, para sair do estado AWAY e retornar ao jogo, sera'
-necessario fornecer a senha de acesso ao seu personagem.                          
-Se um personagem lhe atacar durante o estado de AWAY, voce tentara' fugir      automaticamente.  Nao conseguindo, uma forca divina o resgatara' ate' o
-momento que voce retornar.  Tambem nao sera' possivel receber mensagens           telepaticas.  Ao digitar qualquer comando no estado de AWAY, voce retorna
-ao jogo normal, a menos que tenha usado o parametro `-l', neste caso o mud        ira' verificar se voce digitou a senha corretamente antes de lhe devolver o
-jogo.
-#0
 BACKDOOR HACKING 
 
    Not a good thing to be searching for help on. Your IP address has been logged
@@ -953,39 +864,6 @@ Examples:
 
 Veja tambem: WIZLOCK
 #101
-BANDAGE
-
-Uso: BANDAGE <alvo>
-
-Se o alvo esta' machucado ou pior (nao morto), este comando pode salvar
-sua vida.  O alvo tera' o ferimento atado: curado para 1 ponto de vida e          recobrara' a consciencia.
-#0
-BANKS WITHDRAWING DEPOSITING BALANCES ATM-MACHINES
-
-Commands to take money out of the bank, put money in the bank, or see how
-much money you have in the bank.  Can be used at any Bank of Ilniyr.
-
-Examples:
-
-  > deposit 400 gold       
-
-Deposits 400 gold on your account.
-
-  > withdraw 1000 copper
-
-Withdraws 1000 copper pieces from your account.
-  
-  > balance
-
-Shows your balance.
-  
-  > deposit all
-  > withdraw all
-
-Moves all of your money in/out of the bank.
-
-Veja tambem: GOLD, SCORE
-#0
 BASH
 
 Fighters only.
@@ -1087,22 +965,6 @@ walk through the rooms and enjoy what you have created for them. There is never
 a rush. Relax, enjoy, learn, and do not forget to breathe.
 
 #101
-BRIEF
-
-Uso: brief
-
-Toggle "brief mode".  When in brief mode, you don't see the descriptions of
-the room you are in; only the name of the room and the people and objects
-there.  Unless you're very familiar with the area in which you're traveling,
-however, it is not advisable to use this command.  Frequently, you will find
-small but vital hints in the descriptions of the rooms: An extra peek at your
-surroundings could mean the difference between life and death!
-
-If you explicitly type 'look', you will always see the full room description,
-even in BRIEF mode.
-
-Veja tambem: TOGGLE, COMPACT, LOOK
-#0
 BUFFERS DEFINES MAXSIZE MAX_SIZE MAXBUFFERS MAX_BUFFERS 
 
 define MAX_SOCK_BUF       (24 * 1024)   /* Size of kernel's sock buf   */
@@ -1274,28 +1136,6 @@ Save        : Versus spell for half damage.
 This spell is more powerful than the chill touch spell.
 
 Veja tambem: CHILL-TOUCH
-#0
-BUY
-
-Uso: buy <item name>
-       buy #<item number>
-       buy n.<item name>
-       buy n <item name>
-       buy n #<item number>
-
-If you'd like to purchase an item from a shop and have the money, you can buy
-it.  Items can be bought by name, or by their number in the shop listing,
-and can be bought in quantity.
- 
-Examples:
- 
-  > buy sword        (buy the first sword on the list)
-  > buy #3           (buy the third item on the list)
-  > buy 4.sword      (buy the fourth sword on the list)
-  > buy 10 bread     (buy 10 pieces of bread)
-  > buy 10 #2        (buy 10 of the second item on the list)
- 
-Veja tambem: LIST, SELL, SHOPS, VALUE
 #0
 CADAVER UNDEAD CORPSE
 
@@ -1807,13 +1647,6 @@ CLERIC
 THIEF
 
 #0
-CLEAR CLS
-
-Uso: cls
-
-Clears the screen.
-
-#0
 CLERIC
 
 Clerics have an ancient belief in not carrying sharp weapons.  Hence, they can
@@ -1913,16 +1746,6 @@ CONSIDER                         - Take a quick look at your opponent.
 KICK BASH BACKSTAB               - Battle skills.
 CAST                             - Used for spellcasting.
 #0
-COMMANDS MUDCOMMANDS MUD-COMMANDS
-
-Uso: commands
-
-The COMMANDS command gives a canonical list of all the known verbs.
-
-Each command listed should have help available by typing "HELP <command>".
-
-Veja tambem: SOCIAL, SOCIALS
-#0
 COMMENT * 
 
 * This is an example of a comment in trigedit. Because of the *'s the lines 
@@ -1938,15 +1761,6 @@ trigger text try \*.
 
 Veja tambem: REDIT-ROOM-FLAGS
 #101
-COMPACT
-
-Uso: compact
-
-This command toggles the extra blank line output to your screen after each
-command.  Useful if you have a small display.
-
-Veja tambem: BRIEF
-#0
 CONTAINERS BAGS CHESTS LOCKERS
 
    To create a container you must selected object type container and then
@@ -2025,7 +1839,7 @@ Example:
 
   > cast 'control wea' worse
 Veja tambem: %WEATHER%, WEATHER
-#101
+#1
 COPYOVERS
 
 Uso: copyover
@@ -2515,50 +2329,6 @@ If the victim is higher level than caster, the spell will inflict
 
 Veja tambem: DISPEL-EVIL
 #0
-DISPLAYS PROMPTS HIT-PNT-DISPLAY
-
-Uso: prompt < H | M | V | all | auto | off >
-
-Modify your prompt to show your hit points, mana, and/or movement points.
-
-  > prompt hv       Display hit points and movement points.
-  > prompt off      Return to no prompt.
-  > prompt all      Display hit, mana, and movement points.
-
-  > prompt auto     A separate toggle that will only display your selected 
-                    prompt if the values drop below 30% of max.
-Veja tambem: TOGGLE
-#0
-DONATE
-
-Uso: donate <object>
-       donate <number> coins
-
-This command takes an object that you no longer want and deposits it in one of
-the MUDs donation rooms.
-
-  > donate shield
-  > donate all.bread
-  > donate 500 coins
-
-Veja tambem: JUNK, GET
-#0
-DROP THROWN
-
-Uso: drop <item>
-       drop all.<item>
-       drop all
-       drop <number> coins
-
-If you lose interest in a carried item, you can drop it on the ground.
-  
-  > drop bottle
-  > drop all.bread
-  > drop all
-  > drop 1000 coins
-
-Veja tambem: DONATE, GET, JUNK
-#0
 DRUNK WINE LIQUID-CONTAINERS BEER SPIRITS DRINK-TYPES LIQUOR WHISKEY WHISKY LIQUIDS LIQ-CONTAINERS
 
    When selecting object type FOUNTAIN or DRINK CONTAINER you will need to 
@@ -2602,27 +2372,6 @@ Save        : -
 
 This spell will damage everybody except the caster by
 1d8+level_of_caster hitpoints.
-#0
-EATING DRINKING SIP TASTE HUNGRY HUNGER THIRSTY FOOD NIBBLE
-
-Uso: eat <item>
-       taste [from] <item>
-       drink [from] <item>
-       sip [from] <item>
-
-If you're hungry or thirsty, these commands are for you!
-
-  > eat bread
-  > taste bread
-  > drink from cup
-  > sip fountain
-  
-If you taste or sip, you don't consume large portions and won't be hurt badly 
-by poison. But, you also will not quench your thirst or satisfy your hunger.
-
-Thirst and Hunger are modified by objects in units of hours. So an object with 
-24 drink units will quench thirst for 24 hours. Same for food. Immortals never 
-become hungry, thirsty or full.
 #0
 ECHO GECHO QECHO
 
@@ -2847,14 +2596,6 @@ with.
 
 Veja tambem: NEWBIE
 #101
-EXAMINE
-
-Uso: examine <thing to examine>
-
-May give you some valuable information about an item or monster.
-
-Veja tambem: LOOK
-#0
 EXAMPLE-PROPOSAL PROGRESS-REPORT REPORT-EXAMPLE EXAMPLE-REPORT 
 
 As a builder on a mud it is important that you are accountable to someone.
@@ -2887,7 +2628,7 @@ of the Zone Description Room required for all zones. By writing the report you
 can include the same information in the zone description room.
 
 Veja tambem: REPORT-EXAMPLE, ZONE-DESC
-#0
+#101
 EXITS
 
 Uso: exits
@@ -3147,19 +2888,6 @@ crash          ../syslog.CRASH
 help           ../log/help
 
 #101
-FILL REFILL REPLENISH
-
-Uso: fill <liquid container> <object to fill from>
-
-If you want to fill a container you're holding with liquid from a fountain
-in the same room as you.
-
-Example:
-
-  > fill canteen fountain
-
-Veja tambem: POUR
-#0
 FINDOBJ FINDMOB TRIG-FINDOBJ TRIG-FINDMOB %FINDOBJ% %FINDMOB%
 
 Uso: findobj.<room vnum>(<obj vnum/id/name>)
@@ -3362,34 +3090,12 @@ Gossip: Manivo sporks Shamra ruthlessly.
 
 Veja tambem: SOCIALS, EMOTE
 #0
-GET TAKE-ALL-CORPSE LOOT
-
-"Get" and "take" are exactly the same and can be used interchangeably.
-
-Uso: get | take <object>
-       get | take all [object]
-       get | take all all.<object>
-       get | take all.<object> all.<object>
-
-If you find something interesting on the ground, you may use 'get' to pick
-it up.  'get' can also be used to extract items from containers.
-
-Examples:
-
-  > get sword corpse
-  > take all corpse
-  > get all all.bag
-  > take all.bread all.bag
-  > get all 2.corpse (to retrieve items from the second corpse in a room)
-
-Veja tambem: DROP, PUT, AUTOLOOT, AUTOGOLD
-#0
 GITHUB SVN SUBVERSION
 
 Get started: https://help.github.com/articles/set-up-git
 
 tbamud repository: https://github.com/tbamud/tbamud
-#0
+#106
 GIVE PAY BRIBE
 
 Uso: give <object> [target]
@@ -3426,14 +3132,6 @@ Examples: @RTSTAT 23612, 23613, 23614@n
 
 Veja tambem: REMOTE, VARIABLES, CONTEXT
 #101
-GOLD PURSE MONEY PLATINUM SILVER COPPER CASH COINS WEALTH CURRENCY MULTI-CURRENCY ECONOMY TREASURE
-
-Uso: gold
-   
-Displays how many gold coins you are carrying.
-
-Veja tambem: BALANCE, DEPOSIT, WITHDRAW, MINIMIZE
-#0
 GOTO TRANSFER TRANSPORT TELEPORT
 
 Uso: goto <location>
@@ -3454,20 +3152,6 @@ Examples:
 
 Veja tambem: POOFIN, POOFOUT, WIZAT, %TELEPORT%
 #101
-GRAB HOLD
-
-Uso: grab <object>
-       hold <object>
-
-For getting a good grip on something; a torch, for example.
-
-Examples:
-
-  > hold torch
-  > grab stone
-
-Veja tambem: EQUIPMENT, REMOVE, WEAR, WIELD
-#0
 GRAMMAR GRAMMER TIPS 
 
    Love thy dictionary. Be sure to check the spelling of your work. Medieval 
@@ -3554,7 +3238,16 @@ To edit the options in a group, use the GROUP option <option> commands.
 To kick someone from the group, use GROUP kick <player name>
   > group kick rumble
 
-Veja tambem: FOLLOW, EXPERIENCE, UNGROUP, GSAY, ASSIST, GROUPS, REPORT
+Veja tambem: FOLLOW, EXPERIENCE, UNGROUP, GSAY, ASSIST, GASSIST,  GROUPS, REPORT
+#0
+GASSIST
+
+Uso: gassist
+
+   Parecido com o 'assist', mas ajuda qualquer jogador do grupo que está
+lutando.
+
+Veja também: ASSIST
 #0
 GROUP-ARMOR
 
@@ -3665,12 +3358,12 @@ character, i.e. non-mobile). Returns 0 if not attached and 1 if attached.
 
 See Also: VARIABLES, CHAR-VAR		 
 #101
-HCONTROL
+HCONTROL CONTROLE-CASAS CRIAR-CASAS
 
    Some major misconceptions about houses. You do not set any flags for a
 house. Just use hcontrol to build the house, that is it. All the flags House,
 House_control and Atrium are for internal use only. When the house is created
-they will be set. Currently we do not use houses here.
+they will be set.
 
 Uso: hcontrol build <house vnum> <exit dir> <player name>
        hcontrol destroy <house vnum>
@@ -3795,8 +3488,6 @@ See Also: TOGGLE
 #101
 HOMEPAGES WEBPAGES WEBSITES ADDRESSES PORT PORTS URLS ADDYS IP-ADDRESSES SITES INTERNET-PROTOCOLS WEBLINKS MUDS ACCOUNTS CONNECTIONS CONNECTING HOSTS WWW PLAYERPORT PLAYER-PORT
 
-Builder Academy Homepage:
-   @C http://www.tbamud.com@n
 
 The address (or IP and port) to TBA:
 TBA         : tbamud.com 9091 IP: 206.41.252.202
@@ -3806,32 +3497,20 @@ Internet protocol (IP) is what identifies each computer individually on the inte
 Gods can see your IP and report abuse to your provider so behave. 
  
 #0
-HOMETOWNS
+HOMETOWNS CIDADE-NATAL BASES
 
-   Some large MUDs have hometowns to choose from. tbaMUD only has a single mortal
-start room.
+   Atualmente nos temos algumas cidades que servem cidades natais dos 
+Aventureiros. Cada uma delas possui suas particularidades, com vantagens
+e desvantagens. Tambem possuem cabanas de ressurreicao que protegem os
+corpos dos Aventureiros mortos enquanto seu espirito nao volta para o
+proprio corpo.
+   As cidades-natais sao escolhidas na criacao do personagem, porem e'
+possivel solicitar a mudanca.
+   Elas sao:
+   1) @BMidgaard@n, a capital e centro do mundo. (@YRecomendada para Iniciantes@n)
+   2) @RNova Thalos@n, uma cidade no meio do deserto.
+   3) @GThewster@n, no meio de uma floresta, parece ser um lugar tranquilo.
 
-#0
-HOUSE
-
-The HOUSE command is used to add or remove guests from your house's guest
-list.  You must be standing in your house to use this command.  Only the
-primary owner of a house (not guests) may change the guest list using the
-HOUSE command.
-
-Uso: house [<player name>]
-
-Typing 'house' with no arguments gives a list of the people currently on
-your house's guest list.  Typing 'house' with the name of a player will add
-that player to your guest list if the player is not on the list, or will
-remove the player from the guest list if the player is already on the list.
-The player specified must be in the player database for the MUD, although
-he or she does not necessarily have to be logged on at the time.
-
-Guests of your house will be able to enter your house until you remove them
-from the guest list.
-
-Veja tambem: HOUSES
 #0
 HOUSES
 
@@ -3967,22 +3646,13 @@ Inns are only required if renting is enabled.
 
 Veja tambem: OFFER, RENT
 #0
-INVENTORY
-
-Uso: inventory
-
-If you're uncertain about what you're carrying, or simply want to check
-that no thieves have got to your backpack.
-
-Veja tambem: EQUIPMENT, GRAB, HOLD, REMOVE, WEAR
-#0
 INVIS SPOOFS
 
 Uso: invis [level]
 
    INVIS sets your invisibility level.  With no argument, invis toggles between
 making you fully visible and fully invisible.  If you specify a level, only
-people at and above the level you specify will be able to see you. TBA has been
+people at and above the level you specify will be able to see you. Vitalia has been
 modified so this can not be abused, any action or communication you take will
 show your name. 
 
@@ -4029,8 +3699,8 @@ See Also: CHAR-VARS
 #101
 ITEMS
 
-   Equipment, objects, scenery, furniture. These can be almost anything and 
-everything that you can interact with.
+   Equipamentos, objetos, cenario, mobilias. Podem ser quase qualquer
+coisa que voce possa ingteragir.
 
 Veja tambem: OBJECTS
 #0
@@ -4040,23 +3710,6 @@ Jewels: http://www.allaboutjewels.com/jewel/glossary/
 Gems and Minerals: http://www.minerals.net/index.htm
 
 #101
-JUNK
-
-Uso: junk <object>
-       junk <number> coins
-
-Use JUNK instead of DROP if you want to keep the world a little cleaner.  If
-you JUNK something, it will disappear and you'll get a few coins or experience
-points, just as if you had dropped it in the dump.
-
-Examples:
-
-  > junk cup
-  > junk all.bronze
-  > junk 500 coins
-
-Veja tambem: DONATE, DROP
-#0
 KEY-BASICS KEYS-BASICS OEDIT-KEYS
 
 If you want to make a room accessible only by a key you must first make an 
@@ -4459,23 +4112,6 @@ Usage : links <zone number>
 
 Veja tambem: RESOURCES, LINK
 #101
-LIST
-
-Uso:  list [item type]
-
-If you'd like to see what items a shop has for sale, take a look at the
-list.  The list contains all of the items currently for sale and in
-what quantity.  The price for each item is also listed.  If you are
-interested in a particular type of item, you can specify which items to
-list.
- 
-Examples:
- 
-  > list             (list all items for sale)
-  > list sword       (list all swords for sale)
- 
-Veja tambem: BUY, SELL, SHOPS, VALUE
-#0
 LITTERING
 
 Do not load mobiles or objects in other people's zones. Especially in TBA zone
@@ -5185,10 +4821,10 @@ MOBILE-FORMATS MOB-FORMATS MOB-FILES
 
 Veja tambem: MEDIT
 #101
-MORTALS
+MORTAIS MORTALS
 
-Glad to see someone is willing to help others. Mortals are the player
-characters within the game.
+Que bom ver alguem querendo ajudar os outros. Mortais sao os Aventureiros
+controlados pelos jogadores no jogo.
 
 #0
 MOVEMENT
@@ -5272,16 +4908,9 @@ any abbreviations.
 if %cmd.mudcommand% == sit && chair /= %arg% && %arg%
 
 Examples: @RTSTAT 81, 52, 62
-#101
-MUDCOMMAND %MUDCOMMAND%
 
 See @RHELP TEXT-VAR@n
 #101
-MULTIPLAYING MULTIPLAYERS MULTIPLE MULTI-PLAYERS MULTI-PLAYING
-
-   Multiplaying is allowed. 
-
-#0
 MUTE SQUELCH
 
 Uso: mute <player>
@@ -5406,18 +5035,6 @@ Examples: @RTSTAT 1399, 20997@n
 
 Veja tambem: MEDIT-POSITIONS
 #101
-NORTH SOUTH EAST WEST UP DOWN MOVES MOVEMENT DIRECTIONS WALK
- 
-Uso: north
-       south
-       east
-       west
-       up
-       down
-
-   To travel in a given direction.
-
-#0
 NOTELL NOAUCTION NOGOSSIP NOGRATS NOSHOUT
 
 Uso: notell
@@ -5554,22 +5171,6 @@ OBJ-TRIGGERS OBJECT-TRIGGERS TRIGEDIT-OBJ-TYPES
 14) Load      @RHELP TRIGEDIT-OBJ-LOAD@n              
 17) Leave     @RHELP TRIGEDIT-OBJ-LEAVE@n              
 #101
-OBJECTS
-
-   The following commands deal with objects - for more info, @RHELP KEYWORD@n 
-
-GET DROP TAKE STEAL               - For getting/dropping objects.
-PUT GIVE                          - For manipulating objects.
-INVENTORY EQUIPMENT               - Inventory is carried, equipment is worn.
-GRAB HOLD WIELD WEAR REMOVE       - Different ways of using equipment.
-EXAMINE LOOK                      - More or less like a 'look in object'
-EAT TASTE DRINK SIP POUR FILL     - All living creatures must eat and drink.
-JUNK DONATE                       - Get rid of an object.
-USE RECITE QUAFF                  - For wands, scrolls and potions.
-SPLIT                             - For dividing gold between party members.
-DEPOSIT WITHDRAW BALANCE          - Used to communicate in banks.
-BUY SELL LIST VALUE               - Used to communicate in shops.
-#0
 OEDIT OBJECT-CREATION OCREATE OEDIT-CREATE CREATE-OBJECT 
 
 Uso: oedit <obj vnum>
@@ -6148,7 +5749,7 @@ Examples:
 
 Veja tambem: CHARM
 #0
-ORDINAL-DIRECTIONS NORTHWEST NORTHEAST SOUTHWEST SOUTHEAST NW SW SE NE STATLIST GEDIT TRUST ZDELETE MOUNTS RIDE TAME PARALYZE PARALYSE HASTE BLOCKING IGNORE COOK CAMPFIRES HORSES ZONE-DELETE IMC LINKLOAD INTERMUD
+STATLIST GEDIT TRUST ZDELETE MOUNTS RIDE TAME PARALYZE PARALYSE HASTE BLOCKING IGNORE COOK CAMPFIRES HORSES ZONE-DELETE IMC LINKLOAD INTERMUD
 
    Not implemented.
 
@@ -6501,22 +6102,6 @@ smoke." Your current poofs can be viewed under the score command.
 
 Veja tambem: GOTO
 #101
-POUR
-
-Uso: pour <from container> <to container>
-       pour <from container> out
-
-   If you want to pour some liquid from one container to another, use this 
-command. Pouring out the liquid simply empties the contents of the container 
-onto the ground and destroys it.
-
-Examples:
-
-  > pour canteen cup
-  > pour cup out
-
-Veja tambem: FILL
-#0
 POWER GOD-EQUIPMENT GODEQUIPMENT IMMWEAPON ULTIMATE UBER
 
    The majority of new builders begin by creating themselves the ultimate
@@ -6780,15 +6365,15 @@ full mud set up that does nothing but develop the code and teach people to
 use the OLC and scripting with excellent tutorials. The people are friendly, 
 helpful, and knowledgeable.
 
-#0
+#106
 PREFEDIT PREFERENCE-EDITOR
 
 Uso: prefedit
 
-An addition to OasisOLC for players! The menu-driven interface allows players 
-to change all of their preferences and toggles.
+Uma melhoria  OasisOLC para os jogadores! A interface com menu permite
+aos jogadores alterar todas as suas preferencias e opcoes.
 
-See Also: TOGGLE
+Veja tambem: TOGGLE
 #0
 PREREQUISITES CONSTRUCTIVE-CRITICISM
 
@@ -6873,7 +6458,7 @@ proficient builders that offer their time to teach others.  If you are willing
 to give back to the tbaMUD community and have the requisite skills, you will be
 advanced and given further tools to teach others via your level.  Generally, if
 you ask for a promotion, you will be less likely to receive it.
-#0
+#101
 PROPOSALS GUIDELINES ZONE-PROPOSALS PROPOSITIONS PROPOSE REQUESTS CRITERIA
 
 Congratulations, you must have completed your first trial of building one
@@ -6925,22 +6510,6 @@ Corpses decompose after 5 minutes.
 
 Veja tambem: %PURGE%, DC, LOAD, ZRESET, ZPURGE 
 #101
-PUT
-
-Uso: put <item> <container>
-       put all.<item> <container>
-       put all <container>
-
-For putting items into containers.
-
-Examples:
-
-  > put bread bag
-  > put all.bread bag
-  > put all chest
-
-Veja tambem: GET
-#0
 QEDIT QUESTEDITOR QUEST-EDITOR AUTOQUEST-EDITOR QEDIT-NUMBER
 
    Quests are created using the qedit command.  Ideally, the quests should be 
@@ -7176,14 +6745,6 @@ To tell something to everyone on the current Quest.
 
 Veja tambem: QUEST
 #0
-QUAFF POTIONS
-
-Uso: quaff <potion>
-
-Quaff is used to drink a (magical) potion.  The magic will take effect
-immediately, for better or for worse...
-
-#0
 QUESTIONS
 
    Feel free to mudmail any of the staff under the WIZLIST for assistance.  
@@ -7218,31 +6779,6 @@ Just to prevent accidental quits and/or shutdowns. This command does not do,
 it simply is.
 
 Veja tambem: QUIT, SHUTDOWN
-#0
-QUIT LOGOUT
-
-When you get tired of playing, you can leave the game by typing 'quit'.
-You can quit anywhere, and you will not lose your EQ when you decide to do so.
-
-Veja tambem: INN, OFFER, RENT
-#0
-RADIAX
-
-  He appreciates it, really. But, he can take care of himself.
-
-#0
-RANDOM-THOUGHTS BIGGEST EGO
-
-Random Thoughts came to us a while back wanting to learn scripts and with
-his unique attitude and years of mudding experience, as well as his limited
-ability to understand the code, he is an asset and a welcome member of the
-TBA community.  He is also a part of the CWG community and enjoys spending
-time helping those in need, or just helping to lift the mood of frustrated
-builders with random misquotes.
-He is most known though for the size of his Ego and for his ability to refer
-builders to the helpfiles.
-
-@RTSTAT 41095@n
 #0
 RANDOM-TIMING TIMING TRIGEDIT-RANDOM-TIMING TRIG-RANDOM-TIMING TRIG-TIMING TRIGEDIT-TIMING TRIGGER-TIMING 
 
@@ -7296,15 +6832,6 @@ reboot.
 
 SEE ALSO: LAST, PFILE
 #101
-RECITE SCROLLS
-
-Uso: recite <scroll> [Target]
-
-   This command is used to read a magical scroll.  The target can be an object 
-or character.  If the target is not specified it will be used upon yourself.
-
-Veja tambem: SPELLS
-#0
 RECRUITING ADVERTISING ADVERTISEMENTS ADVERTIZING ADVERTIZEMENTS
 
    For those wishing to help spread the word about TBA, thank you! The
@@ -7336,7 +6863,7 @@ eventually. Make sure whatever MUD you build for does regular backups and ask
 if they will provide you a copy of your finished work.
 
 Veja tambem: TMC, TBA-ADVERTISING
-#0
+#101
 REDIT CREATE RCREATE ROOMS REDIT-NEW ROOM-EDIT REDIT-CREATE ROOMEDIT CREATE-ROOM ROOM-CREATE REDIT-COMMAND BUILD-ROOM BUILDROOM MAKING MAKE-ROOM
 
 Uso: redit <room vnum>
@@ -7591,17 +7118,6 @@ Valid files are:
   xhelp      (/mud_dir/lib/text/help/*)
 
 #101
-RELSQUI
-
-   How do you pronounce your MUD name?  It doesn't come up very much, being a
-(usually) silent medium and all, but every once in a while I find myself
-wondering.  The only thing people usually mistake about mine is the 'u,' which
-is not silent.  Relskwee.  ^_^
-
-http://members.aol.com/relsqui/me
-http://members.aol.com/elsabett/squoose.gif
-
-#0
 REMOTES VSET RSET 
 
 Uso: remote <variable> <id>
@@ -7629,24 +7145,6 @@ Examples: @RTSTAT 199, 190-192, 23612-23614@n
 
 Veja tambem: RDELETE, VDELETE, TRIG-SET, CONTEXT
 #101
-REMOVE
-
-Uso: remove <item>
-       remove all
-       remove all.<keyword>
-
-   If you want to remove an item that you are wearing, use this command to 
-remove it and place it into your inventory.
-
-Examples:
-
-  > remove boots
-  > remove sword
-  > remove all
-  > remove all.bronze
-
-Veja tambem: GRAB, HOLD, WEAR, WIELD, ZEDIT-REMOVE
-#0
 REMOVE-CURSE
 
 Usage       : cast 'remove curse' <victim | object>
@@ -7792,7 +7290,8 @@ Veja tambem: REDIT, OLC, DIG
 #101
 ROLEPLAYING RP
 
-   Is highly encouraged.
+   E' algo altamente encorajado, embora nem sempre possivel. Lembre-se que
+aqui nao e' o mundo real.
 
 #0
 ROOM-TRIGGERS TRIGEDIT-ROOM-TYPES
@@ -7816,7 +7315,7 @@ Rumble created The Builder Academy back in 2000 and appreciates any assistance
 in improving the tbaMUD codebase for the community to enjoy: tbamud.com 9091
  
 See Also: TBA-ADVERTISING, TBA-STAFF
-#0
+#101
 RUMBLE-ALIASES
  
    Some examples of aliases I use:
@@ -8144,23 +7643,6 @@ Currently will not trade with: @cNOBITS@n
 Enter choice (-1 for none):
 
 #101
-SELL
-
-Uso: sell [#] <item>
-       sell <#>.<item>
-
-If you'd like to sell an item to a shopkeeper, trying selling it to them.
-Most shops specialize in what they will buy, so you may have to look around
-to find a buyer for your items.
- 
-Examples:
- 
-  > sell sword       (sell the first sword in your inventory)
-  > sell 3 sword     (sell the first three swords in your inventory)
-  > sell 3.sword     (sell the third sword in your inventory)
- 
-Veja tambem: BUY, LIST, SHOPS, VALUE
-#0
 SEND
 
 Uso: send [target] <message>
@@ -8201,7 +7683,7 @@ https://www.funcity.org/ - hosted by Jason "Opie" Babo
 If you have any additions or deletions please mudmail rumble.
 
 See Also: CODING
-#0
+#106
 SET DO_SET INVSTART NOWIZLIST
   
 Uso: set [ file | player ] <character> <field> <value>
@@ -8638,8 +8120,9 @@ Veja tambem: POSTMASTER, PETSHOPS, BANKS, GUILDMASTER, BOARDS
 #101
 SPEDIT
 
-Este comando permite criae novas magias e habilidades para o mud. Somente os Deuses Superiores podem usar este comando.
-#108
+Este comando permite criar novas magias e habilidades para o mud. Somente os Deuses Superiores podem usar este comando.
+
+#106
 SPLITTING
 
 Uso: split <amount to split>
@@ -8750,7 +8233,7 @@ and they will advance you to begin your training.
 zone. Your third task as a builder is explained under @RHELP TRIAL@n. 
 
 Veja tambem: BACKGROUND
-#0
+#101
 STAT STAT-SELF
 
 Uso: stat [player | object | mobile | file] <name>
@@ -9805,13 +9288,6 @@ editors on older versions of CircleMUD could make the MUD unbootable.
 
 Veja tambem: WORLD-FILE
 #101
-Uso: time
-
-   Mostra-lhe o tempo atual.  Sua reação inicial a este comando pode ser de
-surpresa, mas você terá de se acostumar.  Você terá que se acostumar, pois
-algumas coisas no jogo dependem desta particular noção do tempo; o horário
-da abertura de lojas, por exemplo.
-#1
 TICKS
 
 Uso: time
@@ -9840,18 +9316,6 @@ takes about 12 days.
 
 Veja tambem: DATE, %TIME%
 #101
-TITLES
-
-Uso: title <new title>
-
-Sets the title people see on the WHO list and when you're in the room with
-them.  You can't use parentheses (the ( and ) characters) because those
-are reserved for flags.
-
-Do not create offensive titles or your title will be set for you.
-
-Veja tambem: FLAGS, WHO, NOTITLE
-#0
 TLIST TRIGLIST TRIG-LIST TRIGEDIT-LIST TRIGGERLIST TRIGGER-LIST
 
 Uso: tlist <range of vnums or zone number>
@@ -11714,23 +11178,6 @@ Players
 
 16 characters displayed.
 #0
-USE WAND STAFF STAFFS WANDS OBJ-WANDS STAVES
-
-Uso: use <staff>
-       use <wand> <Target>
-
-   Using a staff will automatically target everybody (or everything) in a room,
-except yourself. Therefore, staves are naturally very powerful and may be very
-dangerous to use around other players so use them with caution.
-
-Using wands requires that you point it at a target, which can be either a 
-character (player) or an object.
-
-   Please note: Both staffs and wands must be held in the hand prior to use! 
-You must still supply the name of the staff or wand to avoid confusion.
-
-Veja tambem: RECITE
-#0
 USERS STATUS
 
 Uso: users [switches]
@@ -11773,19 +11220,6 @@ VALENTINES
 OBJ: 1342, 1304
 
 #101
-VALUE
-
-Uso: value <item>
-
-Before selling an item to a shop, you can ask the shopkeeper how much
-he or she is willing to pay for it.
- 
-Example:
- 
-  > value bread
- 
-Veja tambem: BUY, LIST, SELL, SHOPS
-#0
 VAREXISTS %VAREXISTS% %EXISTS% EXISTS
 
 Uso: if %actor.varexists(on_quest_zone_1)%
@@ -11982,27 +11416,6 @@ game will be unbalanced.
 
 Veja tambem: SWORDS, DAMAGE
 #101
-WEAR
-
-Uso: wear <item> [location]
-
-If you want to wear some clothes, armor or the likes.
-
-Also, to wear everything in your inventory (or at least try to, as wearing 
-things like loaves of bread is not a good way to win friends and influence
-people) you can type "wear all".
-
-Optionally, you can specify what part of your body to wear the equipment on.
-
-Examples:
-
-  > wear boots
-  > wear all.bronze
-  > wear all
-  > wear ring finger
-
-Veja tambem: EQUIPMENT, REMOVE
-#0
 WHILE DONE %NEXT% NEXT LOOPS TRIG-LOOPS TRIG-WHILE TRIG-DONE FOR-LOOP COUNT
 
 Uso: while expression
@@ -12029,20 +11442,6 @@ Uso: whois <player name>
 Lists basic information about the player specified.
 
 See Also: WHO
-#0
-WIELD
-
-Uso: wield <weapon>
-
-When you get tired of bashing monsters with your fists, you might consider
-wielding a weapon.
-
-Examples:
-
-  > wield sword
-  > wield 3.sword    (Wields the third sword in your inventory)
-
-Veja tambem: EQUIPMENT, REMOVE, WEAR
 #0
 WIZAT AT
 
