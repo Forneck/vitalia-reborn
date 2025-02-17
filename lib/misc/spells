@@ -188,7 +188,7 @@
 99 (15 - (1 * self.level)) > 5 ? (15 - (1 * self.level)) : 5
 92 4 4 
 99 (15 - (1 * self.level)) > 5 ? (15 - (1 * self.level)) : 5
-93 6 12 
+93 6 0 
 99 (15 - (1 * self.level)) > 5 ? (15 - (1 * self.level)) : 5
  4 100
  1 P 22 1 18 4097 8 100
@@ -233,6 +233,7 @@
  1 P 28 1 2 12 8 0
  2 heal
 12 Uma calorosa sensação percorre o seu corpo.
+
 25 4
 50 100 + dice(3, 8)
 90 1 24 
@@ -326,6 +327,7 @@
  2 sleep
 10 Você se sente menos cansad$r.
 12 Você sente muito sono...  Zzzz......
+
 13 $N dorme.
 80 40 
 99 self.level / 4 + 4
@@ -359,7 +361,7 @@
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
 92 4 37 
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
-93 6 50 
+93 6 0 
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
  4 100
  1 P 43 1 386 20 9 0
@@ -387,7 +389,7 @@
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
 92 4 29 
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
-93 6 20 
+93 6 0 
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
  4 100
  1 P 45 1 256 256 9 0
@@ -444,7 +446,7 @@
 99 (80 - (5 * self.level)) > 40 ? (80 - (5 * self.level)) : 40
 92 4 43 
 99 (80 - (5 * self.level)) > 40 ? (80 - (5 * self.level)) : 40
-93 6 32 
+93 6 0 
 99 (80 - (5 * self.level)) > 40 ? (80 - (5 * self.level)) : 40
  4 100
  1 P 52 1 386 1024 9 0
@@ -459,7 +461,7 @@
 10 Sua pele perde a dureza.
 12 Você sente sua pele se tornando dura como rocha.
 13 A pele de $N se torna mais dura.
-80 43 
+80 42 
 99 24
 90 1 90 
 99 (200 - (10 * self.level)) > 100 ? (200 - (10 * self.level)) : 100
@@ -471,7 +473,7 @@
 13 Uma ardente aura vermelha envolve $N.
 80 17 -5
 99 self.level
-81 44 
+81 43 
 99 self.level
 90 0 31 
 99 (150 - (10 * self.level)) > 100 ? (150 - (10 * self.level)) : 100
@@ -504,7 +506,8 @@
  2 talk with dead
 10 Você não consegue mais sentir o mundo dos mortos.
 12 Agora você pode sentir o reino dos mortos.
-80 47 
+
+80 46 
 99 self.level
 90 1 10 
 99 (50 - (5 * self.level)) > 20 ? (50 - (5 * self.level)) : 20
@@ -528,7 +531,8 @@
  2 breath
 10 Você sente necessidade de respirar novamente.
 12 Você sente que não precisa mais respirar.
-80 50 
+
+80 49 
 99 2
 90 0 7 
 99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
@@ -536,7 +540,7 @@
 99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
 92 4 6 
 99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
-93 6 5 
+93 6 0 
 99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
  4 100
  1 P 63 1 2 8194 8 0
@@ -545,7 +549,7 @@
 12 Você se sente muito leve...
 80 2 1 + (param > 18)
 99 1
-81 52 
+81 51 
 99 4
 90 0 18 
 99 (80 - (3 * self.level)) > 40 ? (80 - (3 * self.level)) : 40
@@ -553,7 +557,7 @@
 99 (80 - (3 * self.level)) > 40 ? (80 - (3 * self.level)) : 40
 92 4 75 
 99 (80 - (3 * self.level)) > 40 ? (80 - (3 * self.level)) : 40
-93 6 42 
+93 6 0 
 99 (80 - (3 * self.level)) > 40 ? (80 - (3 * self.level)) : 40
  4 100
  1 P 64 1 66 8194 8 0
@@ -561,7 +565,7 @@
 10 Você pode andar novamente.
 12 Você foi paralisad$r!
 13 $N foi paralisad$r!
-80 51 
+80 50 
 99 1
 90 0 22 
 99 (50 - (3 * self.level)) > 20 ? (50 - (3 * self.level)) : 20
@@ -648,6 +652,7 @@
  1 P 75 1 2 8 8 0
  2 minor healing
 12 Uma onda de calor atravessa seu corpo, fazendo você se sentir melhor.
+
 50 dice(2, 8) + 2 + (param / 4)
 90 4 15 
 99 (30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10
@@ -663,6 +668,7 @@
  1 P 77 1 2 8 8 0
  2 regeneration
 12 Você sente o poder da natureza curando seu corpo.
+
 50 dice(6, 8)
 52 10 + dice(2, 6)
 90 4 40 
@@ -675,7 +681,7 @@
 13 Um casaco de espinhos recobre $N.
 80 17 -3
 99 13
-81 55 
+81 54 
 99 13
 90 4 8 
 99 (30 - (3 * self.level)) > 20 ? (30 - (3* self.level)) : 20
@@ -691,7 +697,7 @@
 10 Você observa os vaga-lumes indo embora, um a um.
 12 Você percebe que pequenos vaga-lumes surgem e iluminam seu caminho!
 13 Você se surpreende com a nuvem de pequenos vaga-lumes que apareceram para iluminar $n
-80 53 
+80 52 
 99 15 + (self.level / 2)
 81 36 
 99 15 + (self.level / 2)
@@ -703,7 +709,7 @@
 10 Você nota que o enxame já não é tão grande e que está se desfazendo.
 12 Um enxame de abelhas rodeia sua cabeça, cuidado!
 13 Um enxame de abelhas rodeia a cabeça de $n!
-80 54 
+80 53 
 99 rand(3) + 3 + (self.level / 4);
 90 4 25 
 99 (60 - (4 * self.level)) > 60? (65 - (4 * self.level)) : 60
@@ -767,7 +773,7 @@
 99 24
 83 17 self. level > (vict.level +10) ? -70 : -(vict.level -10)
 99 24
-84 56 
+84 55 
 99 24
 90 5 15 
 99 (100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20
@@ -777,7 +783,7 @@
 10 O escudo de trevas que $r resguardava se desvanece lentamente.
 12 Um escudo de trevas resguarda o seu corpo.
 13 Um escudo de trevas resguarda o corpo de $N.
-80 59 
+80 58 
 99 4
 81 17 -15
 99 4
@@ -820,10 +826,10 @@
 13 Uma parede de vento envolve $N.
 80 17 -4
 99 self.level
-81 61 
+81 60 
 99 self.level
 90 6 15 
-99 (80 - (4 * self.level)) > 40 ? (80 - (4 * self.level)) : 40
+99 (80 - (4* self.level)) > 40 ? (80 - ( 4 * self.level)) : 40
  4 100
  1 P 97 1 1 0 7 0
  2 script-inflicted
@@ -896,7 +902,7 @@
 99 
 92 5 4 
 99 
-93 6 8 
+93 6 0 
 99 
  4 100
  1 K 233 1 0 0 0 0
@@ -923,7 +929,7 @@
  4 100
  1 K 237 1 0 0 0 0
  2 spy
-90 2 8 
+90 2 15 
 99 
  4 100
  1 K 238 1 0 0 0 0
@@ -941,12 +947,10 @@
 90 3 7 
 99 
  4 100
-  1 K 241 1 0 0 0 0
+ 1 K 241 1 0 0 0 0
  2 envenom
-90 2 15 
+90 2 8 
 99 
-91 6 50 
-99
  4 100
  1 K 242 1 0 0 0 0
  2 nighthammer
@@ -998,12 +1002,5 @@
  4 100
  1 P 307 1 256 1024 9 0
  2 youth
- 4 100
- 1 P 308 1 1 4224 8 200000
- 2 firestorm
- 3 200000
-11 As suas palavras causam uma Tempestade de Fogo.
-12 Uma Tempestade de Fogo te atingiu violentamente.
-13 As palavras de $n causam uma Tempestade de Fogo por todo o lugar.
  4 100
  7

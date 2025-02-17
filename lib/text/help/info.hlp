@@ -1,0 +1,1050 @@
+VITALIAMUD ABBAMUD
+
+   O Mundo de Vitalia (originalmente como AbbaMUD) foi criado em agosto de
+1995, na Universidade de Campinas (UNICAMP), por Vitor de Paula.  Em 1996, o
+MUD foi temporariamente fechado, para depois, em dezembro do mesmo ano, ser
+reaberto de forma definitiva no provedor onde ficou por alguns anos.
+
+   Em outubro de 2000, devido a mudancas na estrutura e na equipe de
+trabalho, mudou de nome para "O Mundo de Vitalia" (VitaliaMUD).
+   
+   O servico e disponibilizado de forma gratuita a todos os jogadores
+brasileiros, ou que falem a lingua portuguesa.  Ele e mantido como um hobby
+pelos seus atuais mantenedores, e nunca se espera que o Mundo de Vitalia se
+torne uma fonte de lucro ou prejuizo.
+#1
+AC
+
+   "AC" (armor class) e seu nivel de armadura.  E representado por um numero
+que varia entre 10 e -20, definido assim:
+
+     AC:          Equivalente a:
+   -----------------------------------------------------------------
+     10 ( 100/10) Pessoa nua
+      0 (   0/10) Pessoa bem protegida (armadura, escudo, elmo)
+    -10 (-100/10) Pessoa muito bem protegida (armadura completa)
+    -20 (-200/10) Tanque de Guerra
+
+   O comando SCORE mostra sua armadura como um numero parecido com 78/10.
+Isso indica 78 em uma escala de -200 a 100 (ou 7.8 na escala de -20 a 10).
+
+Veja tambem: SCORE
+#1
+ALINHAMENTO
+
+   O alinhamento indica se um personagem e bom ou mau.  E um numero que pode
+variar de -1000 ate +1000.  Quanto mais positivo for seu alinhamento, maior
+sera sua bondade, e quanto mais negativo, maior sera sua maldade.
+
+   Em regra geral, usa-se a seguinte escala:
+
+   -1000                 -350          0          350                  +1000
+   @R|-----------------------|@g-----------@W|@g-----------@B|-----------------------|@n
+        @RPersonagem Mau         @gPersonagem Neutro         @BPersonagem Bom@n
+
+   O alinhamento de um personagem se altera ao se matar outros personagens.
+Ao matar outro personagem, o alinhamento do agressor tende a se tornar o
+inverso do alinhamento da vitima.  Assim, por exemplo, matando-se varios
+personagens de alinhamento -800, seu alinhamento tende a se aproximar de
++800.
+
+   Ha objetos que so podem ser usados por personagens de determinado
+alinhamento, como por exemplo, o elmo prateado, que so pode ser usado por
+personagens bons.  Ha tambem, monstros que atacam personagens de determinado
+alinhamento, como por exemplo, as lamias, que so atacam personagens bons.
+
+Veja tambem: SCORE
+#1
+AREAS
+
+   Aqui estao listadas todas as areas do Mundo de Vitalia.
+
+   @WNOVAS AREAS EXCLUSIVAS DO MUNDO DE VITALIA:@n
+
+@R   Nome da Area                           Criacao@n
+
+ @R*@g Gondolin, o Reino Oculto               @WEomer
+ @R*@g Valfenda                               @WSilverbolt
+ @R*@g O Imperio Chines                       @WTantalus
+
+ @R*@g Embaixada dos Clas de Vitalia          @WEomer, Tantalus
+       @gArea desenvolvida e construida
+       @ga partir de ideias e conceitos
+       @genviados por:                      @WKen, Kidaf, Aqua e Azlan.
+
+ @R*@g O Museu do Colecionador                @WEomer
+       @gArea desenvolvida e construida
+       @ga partir de ideias e conceitos
+       @genviados por:                      @WKestor e Phillipe
+
+   @WAREA EXCLUSIVA PARA IMORTAIS DO MUNDO DE VITALIA:@n
+
+@R   Nome da Area                           Criacao@n
+ @R*@g O Arquipelago de Yo                    @WSilverbolt
+
+    @WNOVAS AREAS TRADUZIDAS DO MUNDO DE VITALIA:@n
+
+@R   Nome da Area                           Traducao@n
+
+ @R*@g Templo dos Ladroes                     @WAlexander
+ @R*@g Ghenna                                 @WEomer
+ @R*@g O Moinho de Vento                      @WTantalus
+ @R*@g As Cavernas dos Homens Brancos         @WPorter e Tantalus
+ @R*@g O Asilo dos Novos                      @WJarkeld
+ @R*@g O Farol da Praia                       @WPorter e Tantalus
+ 
+   @WAREAS EXCLUSIVAS DO MUNDO DE VITALIA:@n
+
+@R   Nome da Area                           Construcao@n
+ 
+ @R*@g Os Estrategistas de Vitalia            @WEomer
+ @R*@g Aldeia Maldita                         @WHarry e Tantalus
+ @R*@g O Condado                              @WSilverbolt
+ @R*@g A Aldeia de Bri                        @WSilverbolt
+ @R*@g Lothlorien                             @WSilverbolt
+ @R*@g A Fenda Entre Mundos                   @WNemesis
+ @R*@g Svarga, O Reino Celestial              @WNemesis
+ @R*@g O Setimo Mundo Oculto, Patala          @WNemesis
+ @R*@g Bhogavati, A Cidade das Joias          @WNemesis
+ @R*@g O Palacio Ancestral de Sesha           @WNemesis@n
+ @R*@g O Castelo de Flyre                     @WHarry
+ @R*@g Os Campos de Midgaard                  @WBlug
+ @R*@g A Trilha do Destino                    @WInfernal
+ @R*@g Os Cinco Reinos                        @WBoromir
+ @R*@g Templos Imortais                       @WBoromir
+ @R*@g O Abismo                               @WInfernal
+ @R*@g O Subterraneo                          @WInfernal
+ @R*@g O Paraiso dos Dragoes                  @WSilverbolt
+ @R*@g O Egito                                @WMelchiah
+ @R*@g Os Caminhos Iniciais                   @WMaegali
+ @R*@g As Mesnadas de Vitalia                 @WMaegali
+ @R*@g O Labirinto das Almas Perdidas         @WBoromir
+ @R*@g O Vale dos Orcs Negros                 @WBoromir
+ @R*@g Lindrel                                @WNemesis
+ @R*@g Escandinavia, a Terra do Gelo          @WSilverbolt
+ @R*@g O Reino das Pedras                     @WInfernal
+ @R*@g A Cidade de Troia                      @WSilverbolt
+ @R*@g Otavia                                 @WSilverbolt
+ @R*@g Os Desafios de Vitalia                 @WBoromir
+ @R*@g O Santuario das Glorias                @WMaegali
+ @R*@g O Banco de Vitalia                     @WBlug
+ @R*@g A Confraria de Vitalia                 @WBlug
+ @R*@g O Jornal de Vitalia                    @WBlug
+ @R*@g A Biblioteca de Vitalia                @WMaegali
+
+   @WAREAS TRADUZIDAS E ADAPTADAS PARA O MUNDO DE VITALIA:@N
+
+@R   Nome da Area                           Traducao@n
+ 
+ @R*@g Os Misterios de Midantra               @wEdin
+ @R*@g Notre Dame                             @wTantalus
+ @R*@g O Canyon dos Elementais                @wEomer
+ @R*@g Torin                                  @wLork
+ @R*@g O Castelo dos Vampiros                 @wTantalus
+ @R*@g A Selva de Makira                      @wZibaus
+ @R*@g Mordecai                               @wKafei
+ @R*@g O Navio Fantasma                       @wTantalus
+ @R*@g O Reino dos Mortos Vivos               @wTantalus
+ @R*@g O Labirinto do Minotauro               @wTantalus
+ @R*@g A Vila de Villspah                     @wTantalus
+ @R*@g Templo Samurai                         @wGalaaz
+ @R*@g O Grande Festival                      @wMaegali
+ @R*@g A Vila dos Gnomos                      @wMaegali
+ @R*@g Camelot                                @wNemesis
+ @R*@g Os Bosques Elfos                       @wBoromir
+ @R*@g Graye                                  @wBoromir
+ @R*@g O Templo do Grande Bufalo              @wBoromir
+ @R*@g As Planicies de Callyus                @wMaegali
+ @R*@g A Torre do Barao de Cailveh            @wMaegali/Melchiah
+ @R*@g Bandar, A Cidade Maldita               @wMaegali/Melchiah
+ @R*@g O Safari no Covil dos Lagartos         @wLork
+ @R*@g O Escaldante Deserto de Kubalai        @wMaegali/Melchiah
+ @R*@g Galaxia                                @wNemesis
+ @R*@g O Altar de Sacrificios de Raantra      @wMaegali/Melchiah
+ @R*@g A Floresta Sombria                     @wBoromir/Melchiah
+ @R*@g O Abismo Profundo                      @wBoromir/Melchiah
+ @R*@g A Cidade de Thewster                   @wBoromir/Melchiah
+ @R*@g A Floresta Tropical de Thewster        @wBoromir/Melchiah
+ @R*@g A Floresta Leste de Thewster           @wBoromir/Melchiah
+ @R*@g O Labirinto do Milharal                @wWery
+ @R*@g A Grande Arvore dos Iniciantes         @wMaegali
+ @R*@g Ancalador e a Guilda dos Necromantes   @wMaegali
+ @R*@g Nos Dominios do Barao Darwin           @wLork
+ @R*@g O Castelo de Jareth                    @wMaegali
+ @R*@g Os Templos de Anura                    @wKafei
+ @R*@g Qui'Lur                                @wEomer
+
+   @WAREAS HERDADAS DO CIRCLEMUD@n
+
+@R   Nome da Area                           Traducao@n
+ @R*@g Midgaard                               @wBlug/Maegali/Nemesis
+ @R*@g Zona dos Iniciantes                    @wMaegali
+ @R*@g Roma                                   @wMaegali
+ @R*@g O Tabuleiro de Xadrez                  @wMaegali
+ @R*@g Moria                                  @wBoromir
+ @R*@g O Grande Deserto Oriental              @wMelchiah
+ @R*@g O Caminho da Virtude                   @wMaegali/Melchiah
+ @R*@g A Cidade Drow                          @wJunior
+ @R*@g O Castelo do Rei Welmar                @wJunior
+ @R*@g O Tres de Espadas                      @wJunior
+ @R*@g O Reino dos Anoes                      @wJunior
+ @R*@g A Torre de Rand                        @wHellraiser
+ @R*@g A Cidade de Thalos                     @wZarathus
+ @R*@g Ilha do Rio de Minos                   @wAvispom
+ @R*@g Miden'Nir                              @wAzmodan
+ @R*@g A Residencia de Redferne               @wAzmodan
+ @R*@g Arachnos                               @wGalaaz
+ @R*@g A Alta Torre da Magia                  @wAvispom
+ @R*@g A Grande Piramide                      @wMaegali/Melchiah
+ @R*@g A Planicie dos Orcs                    @wMaegali/Morpheus
+ @R*@g Os Esgotos                             @wMaegali/Morpheus
+ @R*@g Nova Thalos                            @wMelchiah
+ @R*@g A Floresta Haon-Dor                    @wMaegali@n
+#1
+ASSOCIACOES GUILDAS
+
+As associacoes sao os lugares onde os mortais podem ir para escapar dos
+problemas e perigos do mundo cruel.  Cada associacao e fortemente protegida,
+para que apenas seus membros possam entrar.  As associacoes sao tambem os
+lugares onde as pessoas vao para aprender e praticar as habilidades de sua
+classe.
+
+Veja tambem: PRACTICE
+#1
+BARDO BARD
+
+Cantor nato, mestre nos instrumentos, quem pertence a essa classe tem o
+talento de preencher os sons com magia e controla-los.  E associado a
+alegre figura que frequenta as tavernas, onde se mostra habil lutador, ou a
+voz saudosa que canta, em volta das fogueiras, as historias de outrora.
+
+Voce pode melhorar suas cancoes, magias e habilidades usando o comando
+PRACTICE.
+
+Veja tambem: PRACTICE
+#1
+CARDS CARTAS
+
+   Ha muito tempo atras, existiu em Vitalia um grande aventureiro.  Este
+aventureiro ao contrario da maioria, queria mais conhecer e ver todos os
+lugares e seres de Vitalia do que ser um grande heroi.
+
+   Durante anos e anos ele caminhou por Vitalia e conheceu varias culturas,
+cidades e palacios.  Lugares tao belos que pareciam lares de Deuses, e
+outros tao sombrios que fariam estes Deuses se assustarem.
+
+   Nestas viagens ele foi colecionando itens e pintando tudo o que ele via.
+Afinal, seus hobies favoritos eram justamente a pintura e montar colecoes.
+Quando ele finalmente achou ter conhecido todos os seres e lugares de
+Vitalia, resolveu se aposentar para ver tudo o que ele coletara em sua longa
+jornada.
+
+   Foi ao rever suas pinturas e memorias que ele percebeu nao so o quanto
+Vitalia era bela, mas que todos as pessoas tambem deveriam ter o direito de
+ver seus tesouros.  Entao, com o dinheiro que ele juntou em suas viagens,
+ele montou um grande museu, o Museu do Colecionador, e colocou la todas os
+seus tesouros.  Com suas pinturas, ele criou varios tipos de Card's
+ilustrados, mostrando tudo o que ele havia visto nas viagens.  E para que os
+outros pudessem pertilhar de sua jornada, ele pediu para uma fada que havia
+conhecido em suas andancas que espalhasse os Card's por todos os cantos de
+Vitalia.
+
+   Esta e a historia dos card's de Vitalia e do Museu do Colecionador.
+
+
+   @WInformacoes Gerais@n
+
+   As Cartas Colecionaveis de Vitalia ou apenas Card's de Vitalia, sao mais
+uma opcao de diversao e buscas para os aventureiros de Vitalia.
+
+   Os Card's estao espalhados por toda Vitalia, alguns em MoB's e outros em
+lugares inusitados.  Por isso olhe novamente as areas que voce ja conhece e
+procure atentamente.
+
+   Os Card's sao separados em quatro series distintas sendo elas:
+
+
+   @WPersonalidades@n
+
+   Serie dedicada aos Deuses, Clans e Herois de Vitalia.  Esta sera uma
+serie muito especial, pois aqui teremos as pessoas que sao (ou foram)
+exemplos para todos nos.
+
+
+   @WMOB's@n
+
+   Serie dedicada aos MOB's de Vitalia, aqui se encontrara series sobres
+tipos especificos de MOB's, racas, bons, maus, enfim todo o tipo de criatura
+que habite Vitalia podera ser encontrado nesta serie.
+
+
+   @WItens@n
+
+   Serie dedicada aos equipamentos de Vitalia, sera compostas por series de
+grupos de equipamentos que tenham, de certa forma, algum tipo de
+relacionamento.
+
+
+   @WAreas@n
+
+   Serie dedicada as areas de Vitalia, sera composta por cartas que mostram
+as belezas e os horrores de Vitalia, contendo cartas dos quatro cantos de
+Vitalia.
+
+
+   Todas as cartas sao classificas em 5 tipos:
+
+   (E)  Especial
+   (R)  Rara
+   (I)  Incomum
+   (C)  Comum
+   (Co) Coringa
+
+   Ao completar qualquer uma das series de cartas voce podera troca-las por
+UM dos itens referente a esta serie.
+
+   Para realizar a troca, voce precisara estar com TODAS as cartas da mesma
+serie em maos e solicitar via pray que um Deus faca a troca.
+
+   Deve-se observar que cada serie de cartas possui regras proprias para as
+trocas, estas regras se encontram nas listas de card's fixadas no museu.
+
+
+   @WRegras Gerais para as cartas@n
+
+   1- E @Rproibido@n o uso de mais de um Coringa na mesma serie;
+
+   2- E @Rproibido@n VENDER ou LEILOAR qualquer tipo de Carta.  As vendas
+deverao ser feitas APENAS no MUSEU DO COLECIONADOR ou poderao ser livremente
+trocadas pelos jogadores que as estejam colecionando.  Se for observado que
+estao tentando desvirtuar o objetivo dessa funcao, os envolvidos terao TODAS
+as suas Cartas confiscados, incondicionalmente.
+
+   3- Deve-se respeitar as regras de trocas de cada serie.
+
+   4- O verdadeiro colecionador entende o objetivo desse sistema de Cartas e
+o valoriza.
+#1
+CASAMENTO CASAMENTOS
+
+               @B*@C @uInformacoes sobre casamentos @B*@n
+
+   @c*@n Os jogadores que desejam se casar, devem com pelo menos uma semana de 
+antecedencia, avisar os Deuses do Mundo de Vitalia, e marcar o casamento.
+
+   @c*@n A cerimonia de casamento e oferecida a todos os jogadores de Vitalia gratuitamente.
+#1
+CASAS
+
+   Casas sao lugares especiais, lares de nobres aventureiros, capazes de
+sustentar seu proprio lugar para morar.  Uma casa pode lhe oferecer varios
+beneficios, como: um lugar tranquilo e protegido para se descansar, proximo
+de sua cidade, e pode ser usado para guardar objetos de valor, ou que nao se
+deseja carregar durante suas exploracoes.
+
+   Cada casa pode ter ate dois hospedes, que podem ser escolhidos pelo
+proprietario da casa.  Estes hospedes poderao entrar na casa, e poderao
+colocar ou tirar objetos de dentro da casa.  Qualquer outro jogador, alem do
+proprietario e dos hospedes, nao tera permissao para entrar na casa.
+
+   Para definir os hospedes, que poderao entrar em sua casa, voce deve usar
+o comando HOUSE enquanto estiver dentro dela.  Para maiores informacoes,
+consulte a ajuda para o comando HOUSE.
+
+   Ha um limite para o numero de objetos que podem ser guardados em sua
+casa.
+
+   Certamente, ha um preco a ser pago para se obter todos os beneficios de
+uma casa, como segue:
+
+   --------------------------------------------------------------------------
+                    @gConstrucao: @n        2.000.000 moedas
+                    @gImposto...: @n        1.000.000 moedas
+   --------------------------------------------------------------------------
+
+   O imposto e cobrado pela prefeitura de sua cidade, e o valor e debitado
+automaticamente todos os meses (na vida real) da conta bancaria do
+proprietario da casa.  O proprietario da casa devera ter saldo suficiente em
+sua conta bancaria no dia do pagamento, ou caso contrario correra o risco de
+perder sua propriedade (onde ela sera aberta ao publico, ou disponibilizada
+ao proximo na fila de espera)
+
+   Se voce deseja ter a sua casa, envie um @gmudmail@n para um dos Deuses. A
+solicitacao sera processada, e eles entrarao em contato para dar o retorno.
+   
+   Caso a cidade esteja sem casas disponiveis, sera' ofertado uma possivel
+transferencia de cidadania para onde existirem vagas. E no caso extremo
+onde nao existam vagas, e' possivel ficar lista de espera ate' existirem
+casas vagas em alguma cidade, dando preferencia para a cidade escolhida
+pelo personagem.
+
+Veja tambem: HOUSE, LOJAS-PROPRIAS
+#1
+QUADROS
+
+   Quadros sao o forum de comunicacao entre os jogadores do Mundo de
+Vitalia.  Existem diferentes quadros para diferentes propositos, por
+exemplo, um quadro para mortais, um quadro para imortais, um quadro para
+recreacoes sociais, etc.  Naturalmente, nem todos os jogadores tem permissao
+para ler todos os tipos de quadros existentes.
+
+   Para ver quais as mensagens que foram escritas no quadro, use o comando
+"LOOK QUADRO" na sala onde o quadro que voce deseja ler esta.  Para ler uma
+determinada mensagem, digite "READ <num>", e para escrever, digite "WRITE
+QUADRO <assunto>".  Termine sua mensagem com ou '/s' em uma linha em branco.
+
+   Voce pode remover uma mensagem que foi escrita incorretamente no quadro,
+usando "REMOVE <num>".  Voce precisa ser Deus ou ter um posto alto (para
+quadros de clas) para poder remover mensagens de outras pessoas.
+
+   E possivel escrever mensagens especiais, tratadas como "avisos
+importantes", prefixando o assunto da mensagem com a palavra "{aviso}".
+Naturalmente, apenas Deuses podem escrever avisos importantes em quadros
+publicos, e apenas os postos mais altos em quadros de clas.
+
+Exemplos:
+
+  > look quadro
+  > write quadro Alguem pode me emprestar 2 milhoes de moedas?
+  [escreva a mensagem, termine com '/s']
+  > look quadro
+  > read 6
+  > remove 6
+
+Veja tambem: EDITOR, READ, WRITE, MAIL
+#1
+CLASSES
+
+   No VitaliaMUD, existem atualmente 6 classes: Clerigos, Guerreiros, Magos,
+Ladroes, Druidas e Bardos.  Cada classe possui habilidades ou magias
+exclusivas.  Para obter mais ajuda sobre sua classe, consulte o HELP seguido
+para sua classe.
+
+Veja tambem: CLERIGO, GUERREIRO, MAGO, LADRAO, DRUIDA, BARDO
+#1
+CLERIGO CLERIC
+
+Clerigos tem uma velha crenca em nao carregar armas afiadas.  Portanto, eles
+podem apenas empunhar armas que batam no oponente.  Esta classe lhe da' a
+sabedoria da paz, da bencao e da cura, apesar de ser possivel aprender algumas
+magias mais violentas.
+
+Voce pode melhorar suas magias usando o comando PRACTICE.
+
+Utilize o comando SPELL para uma lista das magias disponiveis.
+
+Veja tambem: PRACTICE, SPELL
+#1
+CONEXAO LINK
+
+Varios jogadores tem problemas com suas conexoes com o jogo.  Isto pode ser
+muito perigoso para sua saude durante uma batalha, e' claro.
+
+ I. Se voce estiver sem conexao, voce vai automaticamente tentar fugir cada
+    vez que alguem tentar acertar voce.  Se voce nao conseguir escapar, entao
+    voce sera' salvo por forcas divinas, e colocado em um lugar seguro ate'
+    voce se reconectar ao jogo.
+
+II. Se a sua conexao parar (congelar), voce tem um problema.  A unica solucao
+    que nos oferecemos e' que voce corte sua conexao o mais rapido o possivel.
+    Quebrando a conexao, voce deve esperar que o procedimento acima se inicie.
+
+    Nao tente escapar de uma luta cortando a conexao.  Voce vai receber nenhuma
+    experiencia ou equipamento se voce propositalmente cortar sua conexao.
+#1
+CORES ANSI
+
+   No VitaliaMUD, voce pode escrever mensagens utilizando cores. Em quase todos os lugares e' possivel o uso das cores,
+exceto no titulo e na linha de assunto em uma mensagem no quadro.
+
+   Para adicionar cores as suas mensagens, utilize os seguintes codigos em
+suas mensagens:
+
+  @vCores de letra:                       @n   @vCores de fundo:@n   @vOutros:        @n
+  @n@@l = @lPreto      @n   @@L = @LCinza escuro  @n   @@0 = @w@0Preto     @n   @@n = Normal
+  @n@@r = @rVermelho   @n   @@R = @RVermelho claro@n   @@1 = @w@1Vermelho  @n   @@v = @vReverso   @n
+  @n@@m = @mMagenta    @n   @@M = @MMagenta claro @n   @@2 = @w@2Magenta   @n   @@u = @uSublinhado@n
+  @n@@b = @bAzul       @n   @@B = @BAzul claro    @n   @@3 = @w@3Azul      @n   @@f = @fPiscante  @n
+  @n@@c = @cCiano      @n   @@C = @CCiano claro   @n   @@4 = @l@4Ciano     @n
+  @n@@g = @gVerde      @n   @@G = @GVerde claro   @n   @@5 = @l@5Verde     @n
+  @n@@y = @yMarrom     @n   @@Y = @YAmarelo       @n   @@6 = @l@6Marrom    @n
+  @n@@w = @wCinza claro@n   @@W = @WBranco        @n   @@7 = @l@7Cinza     @n
+
+   Termine sempre as mensagens com o codigo '@@n', que desativa todas as
+cores.  Tenha em mente tambem que nem todos os terminais sao capazes de exibir cores.
+
+   Nao abuse das cores.  Elas geralmente nao sao necessarias, e algumas
+(especialmente as piscantes) sao incomodas.
+
+Veja tambem: COLOR
+#1
+DEUSES GODS
+
+Deuses sao jogadores de muita experiencia no mud, portanto nao e' recomendavel
+ofende-los ou desrespeita'-los. Eles observam a atitude dos jogadores e os
+punem ou ajudam quando necessario. Por serem seres superiores, eles nao
+costumam ficar visiveis para os jogadores.
+
+Os Deuses tambem contribuem com as implementacoes do mud.
+
+Veja tambem: IMORTAIS
+#1
+DRUIDA
+
+Essa e a classe dos aliados da Natureza, o que os torna seus protetores e
+protegidos.  Sua tradicao e conhecimentos os torna uma respeitada classe,
+possuidora de poderosas magias que agem sobre os elementos, animais e
+plantas.
+
+Voce pode melhorar suas magias usando o comando PRACTICE.
+
+Utilize o comando SPELL para uma lista das magias disponiveis.
+
+Veja tambem: PRACTICE, SPELL
+#1
+EXPERIENCIA XP
+
+Quando voce mata um monstro, voce recebe pontos de experiencia. Quando voce
+ganhar um numero suficiente de experiencia, voce e' promovido a um nivel mais
+alto.
+Coisa que voce deve saber sobre pontos de experiencia:
+
+  * Quando voce machuca um monstro, voce ganha pontos de experiencia.
+
+  * Se voce matar um monstro de um nivel acima do seu, voce ganhara' um bonus
+    de pontos de experiencia.  Se matar um monstro de nivel menor, voce ira'
+    ganhar menos pontos de experiencia.
+
+Veja tambem: GROUP, SCORE
+#1
+FAMILIAS
+
+   @R*@n @u@YSaudacoes a todas as Ilustres Familias de Vitalia!@n @R*@n
+
+   Dado o grande numero de Familias existentes em nosso mundo, e, visando
+dar a elas um mecanismo que lhes facilite a devida organizacao, foi criado
+um dispositivo especial, cujo uso possibilitara aos membros adicionarem um
+segundo nome, ou seja, o sobrenome de sua familia.
+
+   Cada grupo familiar devera estipular um Patriarca ou Matriarca, sendo que
+este sera o responsavel pelo grupo (a familia).  Para formar nova familia sao
+necessarios 3 membros iniciais alem de o responsavel ter chego ao nivel 50
+da primeira encarnacao, no minimo.  A criacao da familia e gratuita.
+
+   Lembramos que a partir do momento em que uma familia e criada, cria-se o
+compromisso de manter sempre, no minimo, 3 membros na familia.  Se alguma
+familia apresentar um numero menor do que 3 membros, ela correra o risco de
+ser apagada.
+
+   Os membros de familias, novas ou mesmo as ja existentes, serao aplicados
+mediante uma carta que deve ser enviada tanto a partir do novo membro,
+aceitando a sua entrada na familia, como do patriarca ou matriarca da familia
+no caso, que pedira a entrada deste novo membro na sua familia.  Ambas as
+cartas deverao ser enviadas para o atual Deus responsavel pelas familias.
+Novos membros somente poderao ser incluidos na familia se estiverem, no
+minimo, no nivel 10.
+
+   Alem do sobrenome, cada familia podera criar duas salas, sendo uma de
+acesso publico e uma privada, para os encontros familiares, uma especie de
+confraria.  Para que a construcao possa ser realizada dois dos membros desta
+familia devem ter renascido.
+
+   E importante observar que nao trocamos simplesmente a nossa familia,
+portanto, os membros de uma terao a sua entrada a outras vedada.
+#1
+FLAGS
+
+Jogadores as vezes tem "flags" apos seus nomes na lista do comando WHO.
+Estas "flags" estao sempre entre parenteses.
+
+  FLAG         SIGNIFICADO
+  ------------ ----------------------------------------------------------------
+  (ASSASSINO)  O jogador e' um fora-da-lei e esta' tentando matar outros
+               jogadores. Voce pode tentar mata'-lo sem correr o risco de se
+               tornar um fora-da-lei.
+  (LADRAO)     O jogador e' um fora-da-lei e esta' tentando roubar de outros
+               jogadores.  Fique a distancia ou ataque-o de uma vez.
+  (invis)      O jogador esta' invisivel; voce pode ve-lo porque voce e'
+               sensivel 'a presenca de coisas invisiveis.
+  (escrevendo) O jogador esta' escrevendo uma mensagem no quadro ou uma carta;
+               nao perturbe-o.
+  (deaf)       O jogador escolheu por nao escutar gritos.
+  (notell)     O jogador escolheu por nao aceitar mensagens telepaticas.
+  (quest)      O jogador esta participando de uma busca atualmente em andamento
+               ordenada pelos Deuses.
+
+Veja tambem: NOSHOUT, NOTELL, QUEST, STEAL, VISIBLE
+#1
+HEROIS HEROES
+
+   @R*@g O que e um Heroi?@n
+   E aquele que coloca seu companheiro acima de si mesmo
+   e torna-se verdadeira fonte de inspiracao para muitos.
+
+   @R*@g Qual o maior sonho de qualquer Vitaliano?@n
+   Tornar-se um Heroi, uma Lenda.
+
+   Sao 3 os objetivos desta Lista:
+
+-  Incentivar os jogadores a serem dignos e honrados e cumpridores das Leis.
+
+-  Despertar a consciencia daqueles que nao acreditam mais em mudancas.
+
+-  Mostrar que todos somos capazes de ser muito mais do que somos, que
+   ha um heroi dentro de cada um de nos de verdade, basta acreditarmos e
+   realmente desejarmos se-lo.
+
+   Para se tornar um verdadeiro Heroi:
+
+   @R*@g- E preciso ser um Aventureiro digno e honrado, nao possuir
+   antecedentes criminais, mas, se os tiver, transformar seu passado em
+   exemplo e seguir em frente, dando bons exemplos.@n
+
+   @R*@g- Ter participado de pelo menos um Grande Desafio, realizado um
+   grande feito ou uma grande conquista.  Nao estao incluidas as Quests
+   realizadas pelos Deuses.@n
+
+   @R*@g- Ser um verdadeiro Aventureiro.  Alguem que cultua a humildade, a
+   gentileza e acima de tudo, aquele que respeita seu semelhante, tratando-o
+   sempre em acordo com os principios da igualdade e fraternidade.
+   O Aventureiro nao faz diferenca entre nivel ou status entre seus
+   semelhantes.  E precisa ser, eximio conhecedor e explorador de seu mundo.
+   Nao um cacador de Xp e de equipamentos.@n
+
+   @R*@g- Ser uma pessoa de bem, que sabe discutir com equilibrio e
+   sabedoria e que jamais se sente menor quando percebe que errou e se
+   desculpa.@n
+
+   @R*@g- E acima de tudo, ter um bom coracao.  Fazer o bem pelo simples
+   fato de faze-lo, sem interesses ou motivos torpes.@n
+
+   @R*@g- Ao alcancar a Lista de Herois, o jogador passara a fazer parte
+   desta preciosa galeria de pessoas dignas que passaram por este mundo e
+   deixaram sua mensagem.  Terao seus nomes homenageados na lista e uma
+   estatua, que sera erigida no Santuario das Glorias.  Seu nome somente
+   sera retirado da Lista se o jogador se tornar imortal ou se sua conduta
+   se modificar radicalmente.  E para que ele mesmo jamais se esqueca desta
+   honra, levara consigo uma Medalha, que sera entregue por um Deus, em
+   cerimonia aberta a todo o povo de Vitalia.@n
+
+   @R*@g Lute por essa conquista... Torne-se um verdadeiro Heroi.@n
+#1
+HIT-POINTS HP
+
+Hit points, ou simplesmente 'hp', sao seus pontos de vida. Cada vez que voce e'
+atingido por um oponente e sofre danos, voce perde alguns pontos de vida. Se
+voce perder todos os seus pontos de vida, voce estara' atordoado, incapacitado
+ou mortalmente ferido. Se voce receber mais um golpe nestas condicoes, voce
+morrera'.
+
+Voce recupera seus pontos de vida sempre que nao estiver lutando, mas voce pode
+ter seus pontos de vida devolta mais rapidamente enquanto estiver dormindo.
+
+Sua quantidade maxima de hit points e' aumentada a cada nivel que voce passa,
+variando de acordo com sua classe, seu nivel, sua idade, sua constituicao e sua
+sorte.
+
+Veja tambem: CONSTITUTION, SLEEP, SCORE, DISPLAY
+#1
+IDADE
+
+   A idade do personagem define basicamente a velocidade da recuperacao dos
+pontos (hp, mn, mv) na passagem de cada hora/mud.
+
+   Recuperacao de saude por hora:
+ 34-|                                  __
+ 30-|                              ,--'  |__
+ 26-|                         __,--'        '--.
+ 22-|                   __,--'                 '--.
+ 18-|             __,--'                          '--.__
+ 14-|    __.-----'                                      '-----._____
+ 10-|___|
+   -+----------------------------------------------------------------> idade
+    ' 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72
+
+   Recuperacao de magia por hora:
+ 16-|                               __,--.__
+ 14-|                      __,-----'        '-----.__
+ 12-|                __,--'                          '-----._____
+ 10-|       __,-----'                                            '--
+  8-|   ,--'
+  6-|   |
+  4-|---'
+   -+----------------------------------------------------------------> idade
+    ' 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72
+
+   Recuperacao de movimento por hora:
+ 24-|                __,--.__
+ 22-|       __,-----'        '-----.__
+ 20-|   ,--'                          '--.__
+ 18-|   |                                   '-----.__
+ 16-|---'                                            '--.__
+ 14-|                                                      '-----.__
+ 12-|
+   -+----------------------------------------------------------------> idade
+    ' 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72
+
+#1
+IMORTAIS IMMORTALS
+
+Quando um jogador completar seu centesimo nivel, chegando ao nivel 101, ele se
+torna um imortal. Imortais sao seres superiores, pois apenas monstros realmente
+muito fortes podem o machucar.
+Imortais tem acesso a todas as magias e habilidades do jogo, e podem se
+locomover rapidamente de uma sala para outra.
+
+Imortais tem acesso a uma area especial, e podem ver e conversar com Deuses
+mais livremente.
+
+Veja tambem: DEUSES
+#1
+MAGO MAGE
+
+Esta e' a classe das magias poderosas e violentas, mas o mago nao pode
+controlar a natureza, e tambem nao pode curar ou abencoar.
+
+Voce pode melhorar suas magias usando o comando PRACTICE.
+
+Utilize o comando SPELL para uma lista das magias disponiveis.
+
+Veja tambem: PRACTICE, SPELL
+#1
+MANA MN
+
+Mana sao seus pontos de magia, e sao usadas quando voce lanca magias.  Voce
+deve ter uma certa quantidade de mana para poder lancar qualquer magia.
+Se voce nao tem mana suficiente para lancar uma magia, voce deve descansar ou
+meditar enquanto voce ganha os pontos suficientes.
+
+Veja tambem: SPELL, REST, MEDITATE, SCORE
+#1
+MESNADAS
+
+@YSaudacoes a todas as ilustres Casas de Vitalia.@n
+
+   @yViemos atraves desta mensagem fazer algumas consideracoes sobre a postura
+dos membros dos clas em uma mesnadas, ou seja, o controlador do campeao e
+tambem a torcida, desta forma podemos evitar aborrecimentos para todos nos.@n
+
+@u@RComportamento Geral:@n
+
+   @G*@n As mesnadas sao realizadas para divertimento de todos, logo, trate com
+respeito os participantes dos outros clas, assim tambem sera respeitado.
+
+   @G*@n As regras do policy continuam validas, portanto nao ha motivo algum
+para desrespeitar nenhuma.
+
+   @G*@n E proibido lancar qualquer magia nos campoes dos outros clas sem a sua
+devida autorizacao, isto inclui identifica-lo.
+
+@u@RComportamento das Torcidas:@n
+
+   @G*@n Torcer nao e enviar diversas mensagens repetidas, afinal isto e
+proibido, seja criativo.
+
+   @G*@n Jamais conte vantagem ou menospreze outro cla, nao estamos participando
+de uma guerra e sim de um torneio de integracao, onde todos sao vencedores
+apenas por estar participando.
+
+   @G*@n Caso seja transferido para a arena, lembre-se que esta representando
+seu cla, portanto porte-se com a honra devida a ocasiao.
+
+@u@RComportamento dos Controladores:@n
+
+   @G*@n Concentre-se em seu objetivo, ou seja, representar sua casa nas
+mesnadas.
+
+   @G*@n Tenha certeza que ira poder permanecer ate o final do torneio caso se
+candidate a ser o controlador.
+
+   @G*@n O 'wiznet' e um canal sagrado, portanto voce so deve utiliza-lo para
+assuntos relacionados as mesnadas.
+
+   @G*@n Nao podem e nao deve usar o 'goto' para se deslocar para qualquer local
+sem autorizacao, principalmente saindo da area onde ocorrem as mesnadas.
+
+   @G*@n Sempre que nao souber o que e ou nao permitido pergunte, nao faca nada
+sem saber se e permitido.
+
+   @yEstas observacoes foram criadas para que todos possam se divertir,
+evitando que ocorram incidentes que apaguem o brilho das Mesnadas de
+Vitalia.  Lembrem-se, qualquer duvida sempre perguntem antes de agir, afinal
+os deuses estao aqui para auxilia-los.@n
+#1
+MOVIMENTOS MV
+
+Define quanto voce ainda pode andar.  Os pontos de movimento sao gastos a cada
+comando de movimento que voce usa.  Quando voce estiver muito cansado, voce
+precisara' sentar ou descansar para poder continuar sua jornada.
+
+Veja tambem: SIT, REST, SCORE
+#1
+MAP
+
+Agora o mapa de Midgaard deve ser comprado.
+Para conseguir um mapa para voce, va' ate' a loja de mapas. La' voce podera'
+comprar o mapa de Midgaard e tambem de outras areas do mundo.
+
+Para chegar na loja de mapas, a partir do templo, ande tres passos para o sul,
+tres passos para o leste e um passo para o norte.
+#1
+LOJAS
+
+   As lojas sao os lugares onde o aventureiro pode comprar equipamento para
+suas buscas, e onde ele pode vender tesouros se ele desejar sobreviver os
+perigos com sua vida e saniedades intactos.  Varias lojas possuem somente
+com um tipo especafico de produto.  Como um padeiro, que vai certamente
+recusar comprar sua armadura mesmo se for de alta qualidade!
+
+   Para algumas pessoas, a ideia de obter o inventario completo de uma loja
+atacando o lojista pode parecer interessante - mas cuidado: Os lojistas sao
+pessoas fortes e capazes; carregando muitos anos de experiencia nos negocios
+e, tambem, sobrevivendo em um mundo onde a unica certeza e a morte no final.
+
+Veja tambem: BUY, SELL, LIST, VALUE
+#1
+LADRAO THIEF
+
+Ladroes sao conhecidos por terem qualidades muito especiais, que nenhuma outra
+classe oferece. Sua especialidade tende a ser na arte do roubo e do esconderijo.
+Varias destas qualidades podem vir a calhar em varias situacoes, como a
+abertura de travas e cadeados sem suas chaves.
+
+Voce pode melhorar suas habilidades usando o comando PRACTICE.
+
+Utilize o comando SKILLS para uma lista das habilidades disponiveis.
+Veja a ajuda para cada habilidade para maiores informacoes.
+
+Veja tambem: PRACTICE
+#1
+GUERREIRO WARRIOR
+
+Guerreiros sao conhecidos por serem mais fortes que os outros jogadores.
+Isto os fazem melhores nos combates sem armas, como eles possuem habilidades
+de violencia e luta inigualaveis pelos membros de qualquer outra classe.
+Portanto, eles fracassam na habilidade de usar magia de qualquer tipo.
+
+Voce pode melhorar suas habilidades usando o comando PRACTICE.
+
+Utilize o comando SKILLS para uma lista das habilidades disponiveis.
+Veja a ajuda para cada habilidade para maiores informacoes.
+
+Veja tambem: PRACTICE
+#1
+STR STRENGTH
+
+   E' a forca do personagem.  E' um numero no formato nn/aaa, onde o primeiro
+valor e' a forca padrao e o segundo e' a sua forca adicional.  A forca padrao
+indica sua quantidade de musculos.  A forca adicional e' a forca que voce so'
+obtem usando magia.
+
+   O forca padrao pode variar de 3 ate' 18 pontos.  A forca adicional, por
+padrao e' zero, e aumenta ate' 100.  A forca adicional so aparece depois que a
+forca padrao tiver atingido 18 pontos.
+
+Veja tambem: MAGIA STRENGTH
+#1
+INT INTELLIGENCE
+
+   E' a inteligencia do personagem.  Quanto maior a inteligencia, menos sera'
+necessario praticar as magias ou habilidades novas.
+
+   A inteligencia pode variar de 3 ate' 18 pontos, e e' sorteada
+automaticamente quando voce cria um novo personagem no MUD.  O valor da
+inteligencia pode ser modificado com alguns itens que estao pelo mundo.
+
+Veja tambem: PRACTICE, GUILD
+#1
+WIS WISDOM
+
+   Sabedoria do personagem.  Quanto maior, mais praticas ganhara' a cada nivel
+que atingir.
+
+   A sabedoria pode variar de 3 ate' 18 pontos, e e' sorteada automaticamente
+quando voce cria um novo personagem no MUD.  O valor da sabedoria pode ser
+modificado com alguns itens que estao pelo mundo.
+
+Veja tambem: PRACTICE, GUILD
+#1
+DEX DEXTERITY
+
+   Destreza do personagem.  Quanto maior, mais o personagem acertara' golpes e
+desviara' de golpes durante uma luta.  A destreza tambem lhe proporciona um
+bonus natural para o seu AC.
+
+   A destreza pode variar de 3 ate' 18 pontos, e e' sorteada automaticamente
+quando voce cria um novo personagem no MUD.  O valor da destreza pode ser
+modificado com alguns itens que estao pelo mundo.
+#1
+CON CONSTITUTION
+
+   Constituicao.  Quanto maior, mais pontos de energia o personagem ganhara' a
+cada nivel que atingir.
+
+   A constituicao pode variar de 3 ate' 18 pontos, e e' sorteada
+automaticamente quando voce cria um novo personagem no MUD.  O valor da
+constituicao pode ser modificado com alguns itens que estao pelo mundo.
+#1
+CHA CHARISMA
+
+   A simpatia do personagem.  Quanto maior, menor sao as chances de um monstro
+agressivo atacar.
+
+   A simpatia pode variar de 3 ate' 18 pontos, e e' sorteada automaticamente
+quando voce cria um novo personagem no MUD.  O valor do carisma pode ser
+modificado com alguns itens que estao pelo mundo.
+#1
+HITROLL
+
+   Quanto maior, mais chances de acertar os golpes o personagem tera durante
+a luta.
+
+   O HitRoll pode variar de -100 ate 100 pontos.  Por padrao, ele e sempre
+zero, mas voce pode altera-lo usando alguns itens que estao pelo mundo.
+#1
+DAMROLL
+
+   Quanto maior, mais destrutivos serao os golpes do personagem.
+
+   O DamRoll pode variar de -100 ate 100 pontos.  Por padrao, ele e sempre
+zero, mas voce pode altera-lo usando alguns itens que estao pelo mundo.
+#1
+ZMUD ZMUD-BUGS
+
+   Versoes antigas do zMud (cliente de MUD para Windows), anteriores a
+versao 6.x, entre varios outros clientes de MUD e terminais de TELNET para
+Windows, possuem um falha que os impedem de reconhecer corretamente as cores
+que sao enviadas pelo MUD.  Por esse motivo, as cores aparecem trocadas, ou
+simplesmente nao aparecem nestes terminais.
+
+   A decorrencia disso e que estes terminais foram programados baseando-se
+em uma versao muito antiga da especificacao ANSI, que era usada no MS-DOS.
+
+   O sistema de cores usado no VitaliaMUD foi codificado desde sua base,
+usando as novas especificacoes ANSI ECMA-48, e portanto, usa codigos de
+cores que nao sao compativeis com estes terminais.  Por esse motivo, o
+VitaliaMUD possui um recurso que permite determinar o tipo de terminal usado
+pelo jogador, para que o MUD possa enviar as cores usando codigos
+diferentes, que sejam compativeis com estes programas.
+
+   Para saber se o seu programa esta mostrando as cores corretamente, repare
+nas duas linhas de asteriscos a seguir:
+
+          @+3 @+W* @+n@+3@+w***** @+n@+3@+C* @+n@+3@+c***** @+n@+3@+M* @+n@+3@+m***** @+n@+3@+Y* @+n@+3@+y***** @+n @+R* @+n@+r***** @+n@+G* @+n@+g***** @+n@+B* @+n@+b***** @+n
+          @+3 @+W* @+w***** @+C* @+c***** @+M* @+m***** @+Y* @+y***** @+n @+R* @+r***** @+G* @+g***** @+B* @+b***** @+n
+
+   Se as duas linhas acima estiverem EXATAMENTE IGUAIS, significa que voce
+esta enxergando as cores corretamente.  Se elas estiverem diferentes,
+significa que seu programa de terminal ou cliente de MUD nao esta mostrando
+as cores corretamente.  Neste caso, voce deve digitar o comando "TERM
+DOSANSI" e em seguida consultar este HELP novamente, digitando "HELP ZMUD".
+
+Veja tambem: COLOR, CORES, TERM
+#1
+QUESTS
+
+   Quests sao desafios oferecidos pelos Deuses para promover a diversao e
+tambem para quebrar a monotonia de quem so quer lutar para ganhar
+experiencia.  Estes desafios permitem que sejam testadas a sabedoria, a
+sagacidade e outras diversas habilidades dos aventureiros e permite que os
+menos experientes possam explorar os mais diversos locais desse mundo.
+
+   Os Desafios (ou Quests) de Vitalia tambem visam promover a verdadeira
+interpretacao de seus personagens em um mundo medieval.  E o que mais
+aproxima nosso mundo a um verdadeiro RPG de mesa.
+
+   Nos Desafios (Quests) assim como em nosso dia a dia, e muito importante
+manter o respeito entre os Jogadores, aos Deuses e ao Policy.  E toda vez
+que um desafio for lancado pelos Deuses, observar e respeitar as instrucoes
+especificas que aquele desafio esteja requerendo.
+
+   Os Desafios consistem em buscas a monstros especificos, ou de
+equipamentos ou salas; a elucidacao de enigmas e o decifrar de misterios,
+entre muitas outras coisas.  Podem ser dados especificamente para jogadores
+entre determinados niveis ou para todos os que queiram simplesmente
+participar.  Mas e sempre uma verdadeira aventura.
+
+   Podem existir tambem outros tipos diferentes de desafios, que podem ser
+os famosos desafios de retorno, que tem por objetivo agucar nos jogadores o
+senso de astucia, de estrategia e de orientacao espacial, ja que os
+aventureiros sao colocados em verdadeiros labirintos com o objetivo de
+procurar pergaminhos de retorno especiais e usa-los para retirar o maior
+numero possivel de jogadores da area: vence o ultimo que permanecer, sem ser
+retirado.
+
+   Os aventureiros que conseguem concluir um destes Desafios, podem receber
+uma recompensa dos Deuses.  Esta recompensa pode ser tanto em dinheiro, ou
+itens raros, itens Sagrados ou podem nao haver nenhuma recompensa, mas
+apenas o prazer de poder ter vencido um grande Desafio.  O que importa e a
+diversao.
+
+   Tambem pode acontecer que o desafio nao tenha ocorrido exatamente
+conforme o pretendido pelos deuses desafiantes e que nao hajam premios.
+Aquele que nao possui espirito de aventura, que esteja apenas visando
+obter os premios, nao compreendeu o verdadeiro sentido destes desafios.
+
+   Para participar de uma Quest em andamento, basta digitar @RQUEST@N.  A partir
+deste instante, o aventureiro ganha entao, acesso ao canal @CQSAY@n, e podera
+neste canal, discutir com seus colegas aventureiros sobre o tema do desafio
+bem como ouvir ali as instrucoes que possam estar sendo dadas pelos Deuses
+desafiantes.
+
+   @ROS COMANDOS PARA A PARTICIPACAO EM UMA QUEST SAO:@n
+
+     @CQUEST@n: Serve para que voce faca parte do grupo da Quest em andamento.
+     @CQSAY@n:  Serve para falar com todos os integrantes que estao na Quest.
+            E proibido aos participantes de um desafio usarem cores
+            no comando QSAY.
+
+   Procure sempre @RINTERPRETAR SEU PERSONAGEM@n, entrando no clima que esta
+sendo proposto, agindo como se fosse de fato aquele que passou a ser seu
+companheiro de tantas e tantas horas.  Se de esta chance...  Mas se nao
+quiser ou nao for capaz, procure nao atrapalhar os que quiserem viver de
+FATO seus personagens, e lembre-se de manter-se sempre dentro da tematica
+medieval, afim de manter um clima epico e emocionante.
+
+Veja tambem: QUEST, QSAY
+#1
+CIRCLEMUD
+                    C  I  R  C  L  E  M  U  D     3  .  0
+
+CircleMUD was developed from DikuMUD (Gamma 0.0) by Jeremy "Ras" Elson at
+Johns Hopkins University's Department of Computer Science.  All code unique
+to CircleMUD is protected under a copyright by the Trustees of the Johns
+Hopkins University.
+
+Many, many people contributed to CircleMUD in one way or another throughout
+the course of its development.  Although it's impossible for me to remember
+them all, I'd like to extend special thanks to certain people:
+
+  -- Jeff Fink and George Greer, for submitting a veritable mountain of
+     excellent code.
+  -- Chris Epler and Chris Herringshaw for extensive beta-testing and bug
+     reporting.
+  -- Furry (Alex Fletcher), for single-handedly managing Circle's world files.
+  -- Fred Merkel, Ryan Watkins, Jay Levino, and Sharon Goza, for other
+     code and area submissions.
+  -- Jean-Jack Riethoven for porting the code to the Amiga, David Carver
+     for porting it to OS/2, and Jack Patton and Steffen Haeuser for the
+     Amiga port.
+  -- Bill Bogstad and Tim Stearns for allowing Circle to exist at JHU.
+  -- The DikuMUD folk, and the good old WhatMUD implementors Dave @ Justin,
+     for starting the ball rolling.
+  -- Bryan Jolson, Steven Lacher, Cat Stanton, and Naved Surve, for being
+     there in the very early days of Circle's development.
+  -- Sharon, Ben, Erica, Aly, and Josh, for keeping me sane.
+  -- Jules (hamotek sheli) for being the greatest.
+
+...plus everyone else in the Circle community who has submitted material!
+Thanks everyone!
+
+  Anonymous FTP:  ftp.circlemud.org or ftp2.circlemud.org in pub/CircleMUD
+ To report bugs:  bugs@circlemud.org
+    To get help:  help@circlemud.org
+            URL:  http://www.circlemud.org/
+   Mailing List:  listserv@post.queensu.ca
+                  (write "subscribe circle <first name> <last name>")
+
+--Jeremy Elson (jelson@circlemud.org)
+#1
+$

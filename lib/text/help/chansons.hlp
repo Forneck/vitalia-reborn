@@ -1,0 +1,251 @@
+CANCOES
+
+   Transformar cancoes em veiculo para o uso da magia e capacidade exclusiva
+dos bardos.  Para isso, devem pratica-las com seus instrutores e, ao
+executa-las, possuir a quantidade de pontos de magia (mana) necessaria.
+
+   Os comandos relacionados as cancoes podem ser vistos no HELP:
+
+       @gSING             @ncantar uma musica
+       @gCHANSON          @nlistar cancoes disponiveis
+       @gPRACTICE         @nmostrar suas cancoes e pratica-las
+
+   Ate o presente momento, as seguintes cancoes foram catalogadas pelos
+bardos:
+
+@g    * @WARDOR DAS CHAMAS@n
+@g    * @WVINHO PARA BRINDAR@n
+@g    * @WLUZ QUE OFUSCA@n
+@g    * @WCANCAO DE NINAR@n
+@g    * @WLEVEZA DAS AGUAS@n
+@g    * @WA BALADA DO ANDARILHO@n
+@g    * @WO BARDO QUER VOLTAR@n
+@g    * @WO GRITO DA MORTE@n
+@g    * @WCANCAO DO BARDO AMIGO@n
+@g    * @WVISAO DE ARTISTA@n
+@g    * @WVOZ DE ENCANTO@n
+@g    * @WVULNERABILIDADE@n
+@g    * @WTREMOR@n
+@g    * @WALENTO DE GUERRA@n
+@g    * @WECOS DE MALDICAO@n
+@g    * @WCLAMOR@n
+@g    * @WINVOCACAO AOS DEUSES@n
+
+   Para saber mais sobre uma cancao digite: @gHELP CANCAO TITULO@N
+#1
+SING
+
+Uso: sing 'titulo' <alvo>
+
+  Comando usado pelos bardos para cantar suas musicas. Os titulos delas
+devem estar entre aspas simples pois, dependendo de seu nome, pode haver
+confusao entre elas. Apos fechar-se as aspas, deve aparecer o nome do alvo
+(se ela for do tipo que aceita um).
+
+Exemplo:
+  > sing 'o grito da morte' fido
+  > sing 'o bardo quer voltar'
+
+Veja tambem a ajuda para cada cancao, por exemplo:
+  > help cancao tremor
+  > help cancao invocacao aos deuses
+#1
+CANCAO-ARDOR-DAS-CHAMAS
+
+Uso        : sing 'ardor das chamas'
+Acumulativa: -
+Duracao    : Instantanea
+Nivel      : Bardo Nivel 1
+
+   Com essa cancao, o bardo faz com que surja uma tocha que pode o auxiliar
+em horas de apuro.
+#1
+CANCAO-VINHO-PARA-BRINDAR
+
+Uso        : sing 'vinho para brindar' <recipiente>
+Acumulativa: -
+Duracao    : Instantanea
+Nivel      : Bardo Nivel 6
+
+   Ao cantar essa musica a direcionando a um recipiente, o bardo o enche de
+vinho.
+#1
+CANCAO-LUZ-QUE-OFUSCA
+
+Uso        : sing 'luz que ofusca' <vitima>
+Acumulativa: Nao
+Duracao    : 3 horas
+Nivel      : Bardo Nivel 9
+
+   Essa cancao faz a vitima ficar cega por algumas horas caso ela nao
+resista a magia do bardo.  Um oponente cego por esse meio tem penalidade de
+-4 no hitroll e em sua destreza.
+#1
+CANCAO-CANCAO-DE-NINAR
+
+Uso        : sing 'cancao de ninar' <vitima>
+Acumulativa: Nao
+Duracao    : 5 horas + nivel/5
+Nivel      : Bardo Nivel 12
+
+   A vitima dessa cancao cai em sono tao profundo que nao consegue acordar
+por meios normais.  Apenas o fim do efeito ou ser atingida a desperta.
+#1
+CANCAO-CANCAO-DO-BARDO-AMIGO
+
+Uso        : sing 'cancao do bardo amigo' <alvo>
+Acumulativa: Nao
+Duracao    : Instantanea
+Nivel      : Bardo nivel 42
+
+   Essa cancao consegue aliviar as feridas do alvo, recuperando
+3d5+(nivel/5) pontos de vida.
+#1
+CANCAO-VULNERABILIDADE
+
+Uso        : sing 'vulnerabilidade' <vitima>
+Acumulativa: Nao
+Duracao    : 24 horas
+Nivel      : Bardo Nivel 68
+
+   Aquele que e atingido pelo poder dessa cancao se torna vulneravel a
+ataques fisicos e magicos.
+#1
+CANCAO-A-BALADA-DO-ANDARILHO
+
+Uso        : sing 'a balada do andarilho' <alvo>
+Acumulativa: -
+Duracao    : Instantanea
+Nivel      : Bardo Nivel 28
+
+   Essa cancao consegue recuperar as forcas de uma pessoa.  O ganho de
+pontos de vida e de (2d6)+4 e o de movimentacao, (4d2)+12.
+#1
+CANCAO-O-GRITO-DA-MORTE
+
+Uso        : sing 'o grito da morte' <vitima>
+Acumulativa: -
+Duracao    : Instantanea
+Nivel      : Bardo Nivel 40
+
+   Ao cantar essa cancao, o bardo consegue trazer uma imagem do Ceifeiro
+Cruel, que ataca sua vitima de forma impiedosa.
+#1
+CANCAO-LEVEZA-DAS-AGUAS
+
+Uso        : sing 'leveza das aguas' <alvo>
+Acumulativa: Nao
+Duracao    : 24 horas
+Nivel      : Bardo Nivel 18
+
+   Essa musica faz com que o alvo consiga andar por sobre aguas, sem
+necessitar de embarcacoes.
+#1
+CANCAO-O-BARDO-QUER-VOLTAR
+
+Uso        : sing 'o bardo quer voltar'
+Acumulativa: -
+Duracao    : Instantanea
+Nivel      : Bardo Nivel 31
+
+   Quando a canta, o bardo e levado ate um refugio somente acessivel a sua
+classe.  De la pode ir, com seguranca, ate o templo de sua cidade.
+#1
+CANCAO-TREMOR
+
+Uso        : sing 'tremor'
+Acumulativa: -
+Duracao    : Instantanea
+Nivel      : Bardo Nivel 72
+
+   A cancao tremor evoca o movimento do solo, que atinge a todos na sala,
+causando um dano de (3d6)+nivel.  O chao pode fender-se, levando consigo os
+corpos das vitimas.
+#1
+CANCAO-ALENTO-DE-GUERRA
+
+Uso        : sing 'alento de guerra' <alvo>
+Acumulativa: Nao
+Duracao    : Nivel/4
+Nivel      : Bardo Nivel 77
+
+   Ao cantar o "Alento de Guerra", o bardo faz com que seu alvo se
+torne de alguma forma mais forte para uma luta. Para isso, entre
+o bardo e a pessoa afetada nao pode haver uma diferenca de niveis
+maior que 15.
+   Cada classe e afetada de uma maneira diferente:
+
+._________________________________________________________________.
+|__CLASSE__|_STR_|_CON_|_DEX_|_HITROLL_|_DAMROLL_|_HP_|_MV_|_MANA_|
+|Bardo     |  2  |  1  |  1  |    1    |    1    | 45 | -- |  --  |
+|Clerigo   |  2  |  1  |  -  |    -    |    -    | 45 | -- |  45  |
+|Druida    |  1  |  1  |  2  |    -    |    -    |-20 | -- |  45  |
+|Guerreiro |  2  |  -  |  2  |    1    |    -    | 50 |-25 |  --  |
+|Ladrao    |  3  |  2  |  -  |    -    |    1    | 45 | -- |  --  |
+|Mago      |  2  |  2  |  -  |    -    |    -    |-20 | -- |  50  |
+'-----------------------------------------------------------------'
+
+   Por ser bastante poderosa, exige consideravel energia do bardo.
+#1
+CANCAO-ECOS-DE-MALDICAO
+
+Uso        : sing 'ecos de maldicao' <vitima>
+Acumulativa: Sim
+Duracao    : 1 + (nivel/10)
+Nivel      : Bardo Nivel 82
+
+   A vitima dessa cancao tem sua mente atormentada, perdendo destreza e sua
+capacidade de dano e de movimentacao diminuidas.  Pode, ainda, comecar a
+movimentar-se em direcoes contrarias a desejada.
+#1
+CANCAO-CLAMOR
+
+Uso        : sing 'clamor' <alvo>
+Acumulativa: -
+Duracao    : Instantanea
+Nivel      : Bardo Nivel 88
+
+   Essa cancao consegue aliviar o tormento daqueles que sao atingidos pelos
+"Ecos de Maldicao", afastando a loucura.
+#1
+CANCAO-INVOCACAO-AOS-DEUSES
+
+Uso        : sing 'invocacao aos deuses' <alvo>
+Acumulativa: -
+Duracao    : Instantanea
+Nivel      : Bardo Nivel 95
+
+   Essa cancao invoca a bencao dos deuses, podendo curar o corpo da pessoa
+em (nivel-15)+(3d6) pontos de vida.
+#1
+CANCAO-VISAO-DE-ARTISTA
+
+Uso        : sing 'visao de artista'
+Acumulativa: Sim (Duracao)
+Duracao    : 12 Horas
+Nivel      : Bardo nivel 59
+
+   Essa cancao permite que o bardo veja objetos e pessoas invisiveis.
+#1
+CANCAO-VOZ-DE-ENCANTO
+
+Uso        : sing 'voz de encanto' <alvo>
+Acumulativa: Nao
+Duracao    : (35 - Inteligencia do alvo) Horas
+Nivel      : Bardo nivel 62
+
+   Com essa cancao, o bardo consegue encantar alguem, havendo para isso
+algumas restricoes: nao e possivel encantar alguem que ja esteja encantado,
+encantar a si mesmo ou ainda alguem de nivel mais alto que o seu.  O alvo
+passa por um teste contra paralisar, e, caso falhe, e encantado, passando a
+obedecer todas as ordens de quem o encantou.
+
+Um alvo encantado seguira voce e nao o podera atacar. Voce
+pode comandar um alvo encantado atraves do comando ORDER.
+
+Se o seu alvo for outro jogador e este estiver com a protecao de
+summon (nosummon) ativada, nao sera possivel encanta-lo.
+
+Veja tambem: MAGIA-CHARM-PERSON, FOLLOW, ORDER, NOSUMMON
+#1
+$
