@@ -975,6 +975,40 @@
 90 3 30 
 99 
  4 100
+ 1 K 247 1 32 6 9 0
+ 2 adagio
+10 Você para de vibrar.
+12 Você tenta fazer com que seu corpo vibre num ritmo de adagio.
+13 $N tenta vibrar em um ritmo mais lento!
+25 248
+80 1 self.level/45
+99 2
+81 19 self.level/45
+99 2
+82 2 -self.level/45
+99 2
+83 18 -self.level/45
+99 2
+90 5 45 
+99 
+ 4 100
+ 1 K 248 1 32 6 9 0
+ 2 allegro
+10 Você para de vibrar.
+12 Você tenta fazer com que seu corpo vibre num ritmo de allegro.
+13 $N tenta vibrar em um ritmo mais rapido!
+25 247
+80 2 self.level/45
+99 2
+81 18 self.level/45
+99 2
+82 1 -self.level/45
+99 2
+83 19 -self.level/45
+99 2
+90 5 50 
+99 
+ 4 100
  1 K 249 1 0 0 0 0
  2 trip
 90 5 35 

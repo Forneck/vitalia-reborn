@@ -5,7 +5,7 @@
 @B                |.'      |_.'    |_.'   |_.' |_.' |____.' |_.' |_.' |_.'@n
 @B ______________________________________________________________[@W Ajuda @B]_______@n
 
-   Para ler ajuda para um tópico, digite HELP (topico).
+   Para ler ajuda para um topico, digite HELP (topico).
 
    @gMOVIMENTACAO@n:
    Comandos para movimentar o seu personagem, olhar em volta, se localizar,
@@ -16,17 +16,17 @@ sentar, dormir, abrir portas, etc...
 
    @gOBJETOS@n:
    Comandos para recolher e descartar objetos, para usa-los, vesti-los ou
-empunha-los.  Também explica comandos para beber e comer.
+empunha-los.  Tambem explica comandos para beber e comer.
 
    @gINFORMACOES@n:
    Comandos para exibir informacoes sobre o seu personagem, sobre o MUD e
-também outras informacoes uteis para o jogo.
+tambem outras informacoes uteis para o jogo.
 
    @gCOMBATE@n:
    Comandos para atacar oponentes ou para serem usados durante as lutas.
 
    @gGRUPOS@n:
-   Comandos para formação e interacao de grupos de jogadores.
+   Comandos para formacao e interacao de grupos de jogadores.
 
    @gUTILITARIOS@n:
    Outros comandos de utilidade geral.
