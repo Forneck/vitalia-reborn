@@ -273,6 +273,7 @@ void create_spells_db()
  new_spell->applies[1].duration = strdup("2");
  new_spell->applies[2].appl_num = AFF_BLIND + NUM_APPLIES;
  new_spell->applies[2].duration = strdup("2");
+ new_spell->dispel[0] = strdup("162"); //Nao pode usar junto com a chanson
  new_spell->messages.to_vict = strdup("Você está ceg$r!");
  new_spell->messages.to_room = strdup("$N parece estar ceg$r!");
  new_spell->messages.wear_off = strdup("Você volta a enxergar.");
@@ -547,7 +548,7 @@ void create_spells_db()
  new_spell->messages.to_vict = strdup("Sua visão retorna!");
  new_spell->messages.to_room = strdup("Os olhos de $n brilham momentaneamente.");
  new_spell->dispel[0] = strdup("4");  // spell VNUM 4 = Blindness
-
+ new_spell->dispel[1] = strdup("162");
  spedit_save_internally(new_spell);
 
  // SPELL_CURE_CRITIC # 15
@@ -770,7 +771,7 @@ void create_spells_db()
  new_spell->assign[1].level = 70;
  new_spell->assign[1].num_mana = strdup(buf);
  new_spell->damages = strdup("dice(2, 8) + param");
- new_spell->max_dam = 100;
+ //new_spell->max_dam = 100;
  new_spell->messages.to_self = strdup("Você gesticula e a terra toda começa a tremer em a sua volta!");
  new_spell->messages.to_room = strdup("$n faz alguns gestos graciosos e a terra começa a tremer violentamente!");
 
@@ -1073,6 +1074,7 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->applies[0].appl_num = AFF_SANCTUARY + NUM_APPLIES;
  new_spell->applies[0].duration = strdup("4");
+ //new_spell->dispel[0] = strdup("91");
  new_spell->messages.to_vict = strdup("Uma aura branca $r envolve por instantes.");
  new_spell->messages.to_room = strdup("$N é envolvid$R por uma aura branca.");
  new_spell->messages.wear_off = strdup("A aura branca ao redor de seu corpo desaparece.");
@@ -1414,7 +1416,6 @@ new_spell->assign[0].level = 109;
  new_spell->targ_flags = TAR_CHAR_ROOM;
  new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
  new_spell->effectiveness = strdup("100");
- sprintf(buf, "(40 - (2 * self.level)) > 20 ? (40 - (2 * self.level)) : 20");
  new_spell->applies[0].appl_num = AFF_WATERWALK + NUM_APPLIES;
  new_spell->applies[0].duration = strdup("24");
  sprintf(buf, "(80 - (5 * self.level)) > 40 ? (80 - (5 * self.level)) : 40");
@@ -1925,7 +1926,7 @@ new_spell->vnum = SPELL_SKIN_LIKE_DIAMOND;
  
     //spell_BURST_OF_FLAME 71
 CREATE(new_spell, struct str_spells, 1);
- spedit_init_new_spell (new_spell);
+spedit_init_new_spell (new_spell);
 new_spell->vnum = SPELL_BURST_OF_FLAME;
  new_spell->status = available;
  new_spell->name = strdup("burst of flame");
@@ -2243,7 +2244,7 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->messages.to_room = strdup("$N invoca um leão para ajudar!");
  spedit_save_internally(new_spell);
  
- // SPELL_SPELL_VOICE_EXPLOSION # 89
+ // SPELL_VOICE_EXPLOSION # 89
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
@@ -2319,6 +2320,7 @@ new_spell->vnum = SPELL_INVIGOR;
   new_spell->applies[1].appl_num = APPLY_AC;
  new_spell->applies[1].modifier = strdup("-15");
  new_spell->applies[1].duration = strdup("4");
+ //new_spell->dispel[0] = strdup("36");
  new_spell->messages.to_vict = strdup("Um escudo de trevas resguarda o seu corpo.");
  new_spell->messages.to_room = strdup("Um escudo de trevas resguarda o corpo de $N.");
  new_spell->messages.wear_off = strdup("O escudo de trevas que $r resguardava se desvanece lentamente.");
@@ -2804,8 +2806,26 @@ new_spell->assign[2].class_num = CLASS_BARD;
  new_spell->assign[0].level = 50;
 
  spedit_save_internally(new_spell);
+ 
+ /*CHANSON_ARDOR #161 */
+ CREATE(new_spell, struct str_spells, 1);                                    spedit_init_new_spell (new_spell);
+ new_spell->vnum = CHANSON_ARDOR;
+ new_spell->status = available;
+ new_spell->name = strdup("ardor das chamas");
+ new_spell->type = CHANSON;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_IGNORE; 
+ new_spell->mag_flags = MAG_CREATIONS;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(20 - (2 * self.level)) > 5 ? (20 - (2 * self.level)) : 5")
+;
+ new_spell->assign[0].class_num = CLASS_BARD;
+ new_spell->assign[0].level = 1;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->objects[0] = strdup("34");  // object VNUM 34
+ spedit_save_internally(new_spell);
 
- //CHANSON_OFUSCAR
+ /*CHANSON_OFUSCAR #162 */
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
  new_spell->vnum = CHANSON_OFUSCAR;
@@ -2828,12 +2848,120 @@ new_spell->assign[2].class_num = CLASS_BARD;
  new_spell->applies[1].duration = strdup("3");
  new_spell->applies[2].appl_num = AFF_BLIND + NUM_APPLIES;
  new_spell->applies[2].duration = strdup("3");
+ new_spell->dispel[0] = strdup("4");
  new_spell->messages.to_vict = strdup("Você está ceg$r!");
  new_spell->messages.to_room = strdup("$N parece estar ceg$r!");
  new_spell->messages.wear_off = strdup("Você volta a enxergar.");
  spedit_save_internally(new_spell);
  
- //spellnum, spellname, maxmana, minmana, manachng, minpos, targets, viol   ent?,                                                                        * routines.
+/*CHANSON_NINAR #163 */
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = CHANSON_NINAR;
+ new_spell->status = available;
+ new_spell->name = strdup("cancao de ninar");
+ new_spell->type = CHANSON;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_CHAR_ROOM;
+ new_spell->mag_flags = MAG_AFFECTS;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(42 - (4 * self.level)) > 6 ? (42 - (4 * self.level)) : 6");
+ new_spell->assign[0].class_num = CLASS_BARD;
+ new_spell->assign[0].level = 12;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = AFF_SLEEP + NUM_APPLIES;
+ new_spell->applies[0].duration = strdup("5 + (self.level / 5)");
+ new_spell->messages.to_vict = strdup("A cancao parece fazer todo seu corpo adormecer e...     Zzzz......");
+ new_spell->messages.to_room = strdup("$N parece ficar sonolento!");
+ new_spell->messages.wear_off = strdup("Você se sente menos sonolent$r.");
+ spedit_save_internally(new_spell);
+ 
+ // CHANSON_TREMOR # 164
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = CHANSON_TREMOR;
+ new_spell->status = available;
+ new_spell->name = strdup("tremor");
+ new_spell->type = CHANSON;
+ new_spell->min_pos = POS_FIGHTING;
+ new_spell->targ_flags = TAR_IGNORE;
+ new_spell->mag_flags = MAG_AREAS | MAG_VIOLENT;  
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(60 - (4 * self.level)) > 20 ? (60 - (4 * self.level)) : 20");
+ new_spell->assign[0].class_num = CLASS_BARD;
+ new_spell->assign[0].level = 72;
+ new_spell->assign[0].num_mana = strdup(buf); 
+ new_spell->damages = strdup("dice(3, 6) + param");
+ //new_spell->max_dam = 100;
+ new_spell->messages.to_self = strdup("Com sua cancao voce faz com que o chao a redor comece a tremer e fender-se!");
+ new_spell->messages.to_room = strdup("Ao cantar sua cancao, $n faz com que o chao comece a tremer e fender-se!");
+ spedit_save_internally(new_spell);
+
+// CHANSON_ANDARILHO             165
+CREATE(new_spell, struct str_spells, 1);                                    spedit_init_new_spell (new_spell);                                          new_spell->vnum = CHANSON_ANDARILHO;
+new_spell->status = available;
+new_spell->name = strdup("a balada do andarilho");
+new_spell->type = CHANSON;
+new_spell->min_pos = POS_FIGHTING;
+new_spell->targ_flags = TAR_CHAR_ROOM;                                      new_spell->mag_flags = MAG_POINTS;
+new_spell->effectiveness = strdup("100"); 
+sprintf(buf, "(50 - (4 * self.level)) > 13 ? (50 - (4 * self.level)) : 13");                                                                            new_spell->assign[0].class_num = CLASS_BARD;
+new_spell->assign[0].level = 28;
+new_spell->assign[0].num_mana = strdup(buf);
+new_spell->messages.to_vict = strdup("Você sente que a Balada do Andarilho $r faz recuperar forças.");
+ new_spell->points.hp = strdup("4 + dice(2, 6)");
+ new_spell->points.move = strdup("12 + dice(4, 2)");
+ spedit_save_internally(new_spell);
+
+// CHANSON_MORTE # 166
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell);
+new_spell->vnum = CHANSON_MORTE;
+new_spell->status = available;
+new_spell->name = strdup("o grito da morte");
+new_spell->type = CHANSON;
+new_spell->min_pos = POS_FIGHTING;
+new_spell->targ_flags = TAR_CHAR_ROOM | TAR_FIGHT_VICT;
+new_spell->mag_flags = MAG_DAMAGE | MAG_VIOLENT;
+new_spell->effectiveness = strdup("100");
+sprintf(buf, "(100 - (4 * self.level)) > 45 ? (100 - (4 * self.level)) : 45");
+new_spell->assign[0].class_num = CLASS_BARD;
+new_spell->assign[0].level = 40;
+new_spell->assign[0].num_mana = strdup(buf);                                new_spell->damages = strdup("dice(9,9) + 20");
+//new_spell->max_dam = 100;
+new_spell->messages.to_self = strdup("Morte, o Ceifeiro Cruel responde ao seu chamado causando dano a $N!");
+new_spell->messages.to_room = strdup("Morte, o Ceifeiro Cruel responde ao chamado de $n e causa dano a $N!");
+new_spell->messages.to_vict = strdup("A propria Morte aparece e causa dano a voce!");
+spedit_save_internally(new_spell);
+
+// CHANSON_LEVEZA # 167 
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell); 
+new_spell->vnum = CHANSON_LEVEZA;
+new_spell->status = available;
+new_spell->name = strdup("leveza das aguas");
+new_spell->type = CHANSON;
+new_spell->min_pos = POS_STANDING;
+new_spell->targ_flags = TAR_CHAR_ROOM;
+new_spell->mag_flags = MAG_AFFECTS;
+new_spell->effectiveness = strdup("100");
+sprintf(buf, "(80 - (5 * self.level)) > 40 ? (80 - (5 * self.level)) : 40");
+new_spell->assign[0].class_num = CLASS_BARD;
+new_spell->assign[0].level = 18;
+new_spell->assign[0].num_mana = strdup(buf);
+new_spell->applies[0].appl_num = AFF_WATERWALK + NUM_APPLIES;
+new_spell->applies[0].duration = strdup("24");
+new_spell->messages.to_vict = strdup("Você sente que seus pés podem flutuar sobre a água.");
+new_spell->messages.wear_off = strdup("Seus pés parecem mais pesados.");
+spedit_save_internally(new_spell);
+
+// chanson_ardor #168 rever tabela
+
+
+// CHANSON_DEUSES
+
+
+//spellnum, spellname, maxmana, minmana, manachng, minpos, targets, viol   ent?, routines.
 
  // SPELL_SCROLL_IDENTIFY # 52
  CREATE(new_spell, struct str_spells, 1);

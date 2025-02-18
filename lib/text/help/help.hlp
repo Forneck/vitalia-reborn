@@ -1832,7 +1832,7 @@ Duracao    : Instantanea
 Nivel      : Bardo Nivel 40
 
    Ao cantar essa cancao, o bardo consegue trazer uma imagem do Ceifeiro
-Cruel, que ataca sua vitima de forma impiedosa.
+Cruel, que ataca sua vitima de forma impiedosa, causando dano de (9d9)+20 .
 #1
 CANCAO-TREMOR
 
@@ -6105,7 +6105,7 @@ Nivel      : Clerigo Nivel 18, Druida Nivel 70
 Resistencia: -
 
 Essa magia causa dano em todos que estiverem na sala menos
-em quem a lancou, causando 1d8+(nivel) de dano.
+em quem a lancou, causando 2d8+(nivel) de dano.
 #1
 MAGIA-ENCHANT-WEAPON
 
