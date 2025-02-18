@@ -844,6 +844,7 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj,
 		if (!OBJ_FLAGGED(obj, ITEM_BLESS) && (GET_OBJ_WEIGHT(obj) <= 5 * GET_LEVEL(ch)))
 		{
 			SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_BLESS);
+			if (GET_OBJ_TYPE(obj) == ITEM_WEAPON)                                               GET_OBJ_VAL(obj, 2)++; //Easter Egg: Bless oposto de Curse
 		}
 		break;
 	case SPELL_CURSE:

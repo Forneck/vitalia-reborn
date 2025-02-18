@@ -987,40 +987,34 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
 			send_to_char(ch, "\r\n");
 	}
 
-	/* Showing the bitvector */
-	sprintbitarray(AFF_FLAGS(k), affected_bits, AF_ARRAY_MAX, buf);
-	send_to_char(ch, "AFF: %s%s%s\r\n", CCYEL(ch, C_NRM), buf, CCNRM(ch, C_NRM));
+	  /* Showing the bitvector */
+           sprintbitarray(AFF_FLAGS(k), affected_bits, AF_ARRAY_MAX, buf);
+           send_to_char(ch, "AFF: %s%s%s\r\n", CCYEL(ch, C_NRM), buf, CCNRM(ch, C_NRM));
 
-	/* Routine to show what spells a char is affected by */
-	if (k->affected)
-	{
-		for (aff = k->affected; aff; aff = aff->next)
-		{
-			send_to_char(ch, "SPL: (%3dhr) %s%-21s%s ", aff->duration + 1, CCCYN(ch, C_NRM),
-						 get_spell_name(aff->spell), CCNRM(ch, C_NRM));
+           /* Routine to show what spells a char is affected by */
+         if (k->affected) {
+           for (aff = k->affected; aff; aff = aff->next) {
+               send_to_char(ch, "SPL: (%3dhr) %s%-21s%s ", aff->duration + 1, CCCYN(ch, C_NRM), get_spell_name(aff->spell), CCNRM(ch, C_NRM));
 
-			if (aff->modifier)
-				if (!IS_SET_AR(AFF_FLAGS(k), AFF_PROTECT))
-					send_to_char(ch, "%+d to %s", aff->modifier, apply_types[(int)aff->location]);
-				else
-					send_to_char(ch, "%%%d resist spell (%d): '%s'", aff->modifier, aff->location,
-								 get_spell_name(aff->location));
-		}
+            if (aff->modifier) {
+               if (!IS_SET_AR(AFF_FLAGS(k), AFF_PROTECT))
+                 send_to_char(ch, "%+d to %s", aff->modifier, apply_types[(int) aff->location]);
+               else
+                 send_to_char(ch, "%%%d resist spell (%d): '%s'", aff->modifier, aff->location, get_spell_name(aff->location));
+           }
 
-		if (aff->bitvector[0] || aff->bitvector[1] || aff->bitvector[2] || aff->bitvector[3])
-		{
-			if (aff->modifier)
-				send_to_char(ch, ", ");
-			for (i = 1; i < NUM_AFF_FLAGS; i++)
-			{
-				if (IS_SET_AR(aff->bitvector, i))
-				{
-					send_to_char(ch, "sets %s, ", affected_bits[i]);
-				}
-			}
-		}
-		send_to_char(ch, "\r\n");
-	}
+            if (aff->bitvector[0] || aff->bitvector[1] || aff->bitvector[2] || aff->bitvector[3]) {
+             if (aff->modifier)
+                send_to_char(ch, ", ");
+             for (i=1; i<NUM_AFF_FLAGS; i++) {
+                if (IS_SET_AR(aff->bitvector, i)) {
+                  send_to_char(ch, "sets %s, ", affected_bits[i]);
+                }
+              }
+            }
+           send_to_char(ch, "\r\n");
+        }
+       }
 	if (!IS_NPC(k) && (GET_LEVEL(k) >= LVL_IMMORT))
 	{
 		if (POOFIN(k))

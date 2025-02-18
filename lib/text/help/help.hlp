@@ -284,23 +284,14 @@ about being a newbie here.
 #101
 @@
 
-The @ character is used as a colorcode. If you see it, try toggling color to
-complete. If this still does not work you must not be able to view colors.
+   O caracter @@ e' usado como colorcode. Antigamente era usado o caracter
+& mas foi atualizado para evitar certos problemas durante a criacao e
+manutencao de areas.
+   
+   Para exibir um @@* e' preciso usar @@ seguido por * (asterisco).
 
-To print a single @* follow it with the * (asterisk).
-
-Many people have asked why use the @ as colorcodes while others use &. 
-Welcor of TBA changed this because of trigedit. A builder who enters:
-if %actor.is_pc% && %arg% would only see: if %actor.is_pc% & %arg%. No 
-big deal, but this could get confusing to newbies when you tell them AND 
-needs 2 & and they will only see &. The second problem is that trigedit 
-also uses the special character & to denote mob/obj pronoun: IT, YOU, 
-HE/SHE: &%obj%. So putting in colorcodes in echos returns garbage itititit
-etc. if done improperly. The fix is to use the escape character \&<colorcode> 
-in trigedit.
-
-See also: COLORCODES
-#101
+Veja tambem: COLORCODES
+#1
 ABBREVIATIONS ABBREVS
 
    We have added abbreviations so you do not have to type everything exactly as
@@ -658,10 +649,10 @@ Veja Tambem: ADAGIO, DEXTERITY, HITROLL, STRENGTH, DAMROLL
 #1
 MAGIA-ANIMATE-DEAD
 
-Usage: cast 'animate dead' corpse
+Uso: cast 'animate dead' corpo
 
-   This spell will harness evil necromancy magic and bring life into a
-corpse, creating a zombie.  The corpse will do the bidding of its master.
+   Esta magia ira' utilizar poderes necromanticos para trazer vida a
+um corpo, criando um zumbi. O corpo vai fazer a vontade do seu mestre.
 
 #0
 ANTI
@@ -736,8 +727,6 @@ areas 24    lista todas as areas que o nivel 24 esta dentro do limite.
 areas -10   lista as areas para nivel 0 ao 10.
 areas 15-   lista todas as areas com nivel maior que 15.
 areas 5-12  lista areas para nivel 5 ao 12.
-
-Any areas that 'overlap' the specified range are shown in red.
 
 Veja tambem: CREDITOS-AREAS
 #0
@@ -1000,64 +989,56 @@ Veja tambem: COMUNICACAO, CHANNEL
 #1
 AUTOASSIST
 
-Usage: toggle autoassist
+Uso: toggle autoassist
 
-   Enables you to automatically assist a fellow group member when they are
-attacked without having to manually type "assist."
+   Permite que voce de assistencia a outro membro do grupo automaticamente
+quando eles forem atacados sem que precise usar 'assist' ou 'gassist'.
 
-See Also: TOGGLE, ASSIST
+Veja tambem: TOGGLE, ASSIST, GASSIST
 #0
 AUTODOOR
 
-Usage: autodoor
+Uso: autodoor
 
-When enabled this toggle will automatically find the next available door when 
-using the open, close, lock, unlock or pick commands. For example, in a room 
-with several closed doors, one door will be opened each time the player types 
-open door until all the doors are open. The player can still specify a 
-direction to open a particular door.
+   Quando ativado, esta opção encontrará automaticamente a próxima porta
+disponível ao usar os comandos 'open', 'close', 'lock', 'unlock' ou 'pick'.
 
-See Also: AUTOKEY, TOGGLE, PREFEDIT
+   Por exemplo, em uma sala com varias portas fechadas, uma porta sera
+aberta cada vez que o jogador digitar open porta, ate que todas as portas
+estejam abertas. O jogador ainda pode especificar uma direcao para abrir
+uma porta especifica.
+
+Veja tambem: AUTOKEY, TOGGLE, PREFEDIT
 #0
 AUTOEXITS AUTO-EXITS
 
-Usage: autoexits
+Uso: autoexits
 
-Toggles the automatic display of currently available exits.  Not all
-possible exits will be displayed, only those immediately available.
-If a door is closed it will not show up as a possible exit.
-
-See also: TOGGLE
-#0
-AUTOEXITS AUTO-EXITS
-
-Uso: autoexit
-
-   Este comando fara com que voce, automaticamente, veja as saidas
-disponiveis da sala em que voce esta.  Nao todas as saidas possiveis serao
-mostradas, somente as que estao imediatamente disponiveis.
+   Permite exibir as saidas disponiveis. Nem todas as saidas possiveis
+serao mistradas, apenas as visiveis. As fechadas irao aparecer em
+vermelho.
 
 Veja tambem: TOGGLE
 #1
 AUTOGOLD 
 
-Usage: toggle autogold
+Uso: toggle autogold
 
-   Enables you to automatically take the gold from any mob you kill. This will
-not take any equipment or objects.
+   Permite que voce pegue automaticamente o ouro de qualquer mob que voce
+mate. Nao vai pegar qualquer equipamento ou objetos.
 
-See Also: TOGGLE, TAKE
+Veja tambem: TOGGLE, TAKE
 #0
 AUTOKEY
 
-Usage: autokey
+Uso: autokey
 
-When enabled this toggle will automatically use a door key (if it's in your 
-inventory) when you try to open a locked door. You do not need to use the 
-separate unlock command. It can be turned on and off using the autokey 
-command, the toggle autokey command, or prefedit.
+   Quando ativado, permite que quando a chave correta estiver no seu
+inventario, ao usar open, voce a utilize automaticamente sem a necessidade
+de usar o comando unlock.
+   Pode ser alterada pelo comando autokey, toggle autokey ou prefedit.
 
-See Also: AUTODOOR, TOGGLE, PREFEDIT
+Veja tambem: AUTODOOR, TOGGLE, PREFEDIT
 #0
 AUTOLOOT 
 
@@ -4834,6 +4815,7 @@ cabana local.
    1) @gMidgaard@n, a capital. (@rRecomendada para iniciantes@n).
    2) @gNova Thalos@n, a cidade no deserto. (Lar de um povo e cultura diferentes)
    3) @gThwester@n, a cidade na floresta. (@rRecomendada para aventureiros experientes@n)
+
 #0
 HORUS
 
@@ -11050,7 +11032,6 @@ ALL:   666
 
 See Also: SET, ZEDIT-CREATE, AEDIT, HEDIT
 #101
-#0
 IDENTIFY
 
 Usage: identify <item name> 
@@ -12370,7 +12351,7 @@ elas, evitando que Vitalia fique em completa escuridao."
 
    Alem de iluminar a noite vitali, a cada uma das luas de Vitalia foi
 confiada a guarda de uma estaçao.  Teriany, a Lua de Prata, guarda o
-Inverno, enquanto Latïzie, a Lua de Fogo, guarda o Verao.  O Outono e
+Inverno, enquanto Latizie, a Lua de Fogo, guarda o Verao.  O Outono e
 responsabilidade da Lua de Safira, Aqrien, enquanto Kadrictes, a Lua de
 Jade, guarda a Primavera.  É por isso, a guarda das estaçoes, que durante
 todo o periodo de cada estaçao, uma das irmas se aproxima mais e brilha com
@@ -15928,4 +15909,143 @@ um efeito adicional de protecao.
 Veja Tambem: MAGIA-ARMOR, MAGIA-SANCTUARY
 
 #1
+GASSIST
+
+Uso: gassist
+
+   Parecido com o 'assist', mas ajuda qualquer jogador do grupo que está
+lutando.
+
+Veja tambem: ASSIST
+#1
+SPLIT
+
+Uso: split <quantidade a ser dividida>
+
+   O comando 'split' e' usado para dividir uma quantidade de dinheiro entre
+os jogadores que estao no seu grupo, na mesma sala que voce.  Se voce esta
+em um grupo com quatro outras pessoas, todos que estiverem na mesma sala que
+voce, e voce digita SPLIT 100, 20 moedas serao dadas, por voce, para cada
+membro do grupo.  (100 moedas sao divididas em 5; voce fica com sua parte e
+entrega a outra parte aos membros do grupo).
+
+Veja tambem: FOLLOW, GROUP
+#1
+OFFER RENT
+
+   Os comandos 'offer' e 'rent' sao utilizados para alugar quartos de hoteis. 
+   O primeiro, 'offer' verifica o valor da hospedagem por dia enquanto o
+comando 'rent' confirma o aluguel.
+  Porem, atualmente por decreto do Rei Welmar, os aventureiros atualmente,
+nao precisam de hoteis para salvar seus itens, basta apenas usar os comandos
+'save' e 'quit'.
+
+Veja tambem: SAVE, QUIT
+
+#1
+LUPULO LUPULIS
+
+   O lupulo, conhecido cientificamente como Humulus lupulus, é uma
+planta trepadeira perene famosa por seu papel fundamental na producao
+de cerveja. No entanto, o que muitos nao sabem e que o lupulo possui
+uma serie de propriedades terapeuticas que tem atraido a atenção da
+comunidade cientifica. Por outro lado, tambem pode ser so mais um
+imperador amante da cerveja.
+
+#1
+MAGIA-TRANSPORT-VIA-PLANTS
+
+Uso        : cast 'transport via plants' <planta>
+Nivel      : Mago Nivel 5, Ranger Nivel 7
+
+   Esta magia permite o usuario se transporte por uma rede especial
+das plantas. Ao entrar em uma planta, voce viajara ate outra do mesmo
+tipo de entrada.
+   Em alguns casos, se a saida estiver protegida, voce voltara por onde
+veio.
+
+#1
+FORMULA
+
+Uso: formula (expressao)
+
+   Este comando permite resolver expressoes matematicas rapidamente. Seu
+principal uso e' ao definir novas magias, ou calculos matematicos.
+   Por exemplo formula 1+1 deve retornar 2. 
+#101
+RANGERS GUARDA-FLORESTAL
+  
+   Os Rangers sao os guardas florestais de Vitalia. Conhecidos por
+precisarem de habilidades de longo alcance, sua origem e' desconhecida.
+   Alguns autores dizem que por influencia da noite vitali, com a
+constelacao do Cacador, mais aventureiros decidiram seguir por este
+caminho.
+   Enquanto os Druidas estao mais ligados aos animais, os Rangers estao
+ligados ao vento e a flora vitali.
+
+Veja tambem: DRUIDAS, CEU, LUA
+#1
+CEU ESTRELAS
+
+   Deste os tempos imemoriais, diversos habitantes locais se dedicaram
+ao estudo dos ceus de Vitalia. O mais famoso deles, o Astrologo Real
+do Rei Welmar, recentemente publicou um estudo notando que ultimamente
+os aventureiros tambem comecaram a observar os ceus e as estrelas.
+   Das 8 constelacoes visiveis, a unica que tem nome e' a do Cacador,
+representando um homem com seu arco em busca da sua presa. Talvez por
+isto que recentemente mais aventureiros decidiram virar RANGERS. Isto
+tem levado a um aumento da populacao de Thewster, a cidade na floresta.
+
+Veja tambem: CIDADES, LUA
+
+#1
+RESSUCITE
+
+   Uso: ressucite <vitima>
+
+   Este comando permite ressucitar um jogador morto, se ele estiver online.
+   
+   É uma das formas de ressucitacao, alem dos meios usuais: via pergaminho ou magias de outro jogador, ou pelo tempo.
+
+#107
+PLRLOAD
+
+   Uso: plrload <jogador>
+
+   Permite carregar um jogador sem aparecer no who. Isto transfere a sua
+consciencia para o corpo da vitima, semelhante ao comando SWITCH. Para
+voltar ao corpo original, e' preciso usar os comandos QUIT ou RETURN.
+
+Veja tambem: SWITCH, RETURN
+
+#108
+SPLIST
+
+splist all - list all spells
+splist sk  - list all skills
+splist mu  - list all in class magical user
+splist cl  - list all in class cleric
+splist th  - list all in class thief
+splist wa  - list all in class warrior
+splist dru - list all in class druid
+splist ba  - list all in class bard
+splist ra  - list all in class ranger
+splist not - list all not assigned
+splist off - list all disabled
+splist spec - list all with a special function
+splist <word> - list all containing the <word>
+
+#101
+SPEDIT
+
+   Uso: spedit
+        spedit <vnum>
+
+   Permite criar ou editar novas magias, habilidades e cancoes.
+
+   Como precisa de um help detalhado, e' preciso cobrar de Cansian que
+escreva direito aqui.
+
+Veja tambem: SPLIST
+#108
 $~

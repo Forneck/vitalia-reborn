@@ -2805,6 +2805,36 @@ new_spell->assign[2].class_num = CLASS_BARD;
 
  spedit_save_internally(new_spell);
 
+ //CHANSON_OFUSCAR
+ CREATE(new_spell, struct str_spells, 1);
+ spedit_init_new_spell (new_spell);
+ new_spell->vnum = CHANSON_OFUSCAR;
+ new_spell->status = available;
+ new_spell->name = strdup("luz que ofusca");
+ new_spell->type = CHANSON;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
+ new_spell->mag_flags = MAG_AFFECTS;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(30 - (3 * self.level)) > 10 ? (30 - (3 * self.level)) : 10");
+ new_spell->assign[0].class_num = CLASS_BARD;
+ new_spell->assign[0].level = 9;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = APPLY_HITROLL;
+ new_spell->applies[0].modifier = strdup("-4");
+ new_spell->applies[0].duration = strdup("3");
+ new_spell->applies[1].appl_num = APPLY_DEX;
+ new_spell->applies[1].modifier = strdup("-4");
+ new_spell->applies[1].duration = strdup("3");
+ new_spell->applies[2].appl_num = AFF_BLIND + NUM_APPLIES;
+ new_spell->applies[2].duration = strdup("3");
+ new_spell->messages.to_vict = strdup("Você está ceg$r!");
+ new_spell->messages.to_room = strdup("$N parece estar ceg$r!");
+ new_spell->messages.wear_off = strdup("Você volta a enxergar.");
+ spedit_save_internally(new_spell);
+ 
+ //spellnum, spellname, maxmana, minmana, manachng, minpos, targets, viol   ent?,                                                                        * routines.
+
  // SPELL_SCROLL_IDENTIFY # 52
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
