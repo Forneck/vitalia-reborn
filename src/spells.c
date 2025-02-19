@@ -80,6 +80,32 @@ ASPELL(spell_create_nectar)
   }
 }
 
+ASPELL(chanson_brinde)
+{
+  int liq;
+  if (ch == NULL || obj == NULL)
+     return;
+  /* level = MAX(MIN(level, LVL_IMPL), 1);       - not used */
+                                                                              if (GET_OBJ_TYPE(obj) == ITEM_DRINKCON) {
+    if ((GET_OBJ_VAL(obj, 2) != LIQ_WINE) && (GET_OBJ_VAL(obj, 1) != 0)) {
+       name_from_drinkcon(obj);
+      GET_OBJ_VAL(obj, 2) = LIQ_BLOOD;
+      name_to_drinkcon(obj, LIQ_BLOOD);
+    } else {
+      liq = MAX(GET_OBJ_VAL(obj, 0) - GET_OBJ_VAL(obj, 1), 0);
+      if (liq > 0) { 
+	if (GET_OBJ_VAL(obj, 1) >= 0)
+	   name_from_drinkcon(obj);
+	GET_OBJ_VAL(obj, 2) = LIQ_WINE;
+	GET_OBJ_VAL(obj, 1) += liq;
+	name_to_drinkcon(obj, LIQ_WINE); 
+	weight_change_object(obj, liq);
+        act("As forças da natureza encheram $p.", FALSE, ch, obj, 0, TO_CHAR);
+      }
+    }
+  }
+}
+
 ASPELL(spell_recall)
 {  
   if (victim == NULL || IS_NPC(victim))
@@ -284,6 +310,8 @@ ASPELL(spell_charm)
     send_to_char(ch, "Voce falhou porque %s esta com o NOSUMMON ligado!\r\n", GET_NAME(victim));
   else if (AFF_FLAGGED(victim, AFF_SANCTUARY))
     send_to_char(ch, "A sua vitima esta protegida pelo santuario!\r\n");
+  else if (AFF_FLAGGED(victim, AFF_GLOOMSHIELD))
+    send_to_char(ch, "A sua vitima esta protegida por um escudo de trevas!\r\n");
   else if (MOB_FLAGGED(victim, MOB_NOCHARM))
     send_to_char(ch, "A sua vitima resiste!\r\n");
   else if (AFF_FLAGGED(ch, AFF_CHARM))
@@ -315,6 +343,58 @@ ASPELL(spell_charm)
 
     act("$n nao e' uma boa companhia?", FALSE, ch, 0, victim, TO_VICT);
     if (IS_NPC(victim))
+      //remover agro
+      REMOVE_BIT_AR(MOB_FLAGS(victim), MOB_SPEC);
+  }
+}
+
+ASPELL(chanson_encanto)
+{
+  struct affected_type af;
+
+  if (victim == NULL || ch == NULL)   
+     return;   
+
+  if (victim == ch) 
+    send_to_char(ch, "Voce gosta cada vez mais de si!\r\n");
+  else if (!IS_NPC(victim) && !PRF_FLAGGED(victim, PRF_SUMMONABLE))
+    send_to_char(ch, "Voce falhou porque %s esta com o NOSUMMON ligado!\r\n", GET_NAME(victim));
+  else if (AFF_FLAGGED(victim, AFF_SANCTUARY))
+    send_to_char(ch, "A sua vitima esta protegida pelo santuario!\r\n");
+  else if (AFF_FLAGGED(victim, AFF_GLOOMSHIELD))
+    send_to_char(ch, "A sua vitima esta protegida por um escudo de trevas!\r\n");
+  else if (MOB_FLAGGED(victim, MOB_NOCHARM))
+    send_to_char(ch, "A sua vitima resiste!\r\n");
+  else if (AFF_FLAGGED(ch, AFF_CHARM))
+    send_to_char(ch, "Voce nao pode ter seguidores!\r\n");
+  else if (AFF_FLAGGED(victim, AFF_CHARM) || level < GET_LEVEL(victim))
+    send_to_char(ch, "Voce falhou.\r\n");
+  /* player charming another player - no legal reason for this */
+  else if (!CONFIG_PK_ALLOWED && !IS_NPC(victim))
+    send_to_char(ch, "Voce falhou! Mas nao deveria ter feito isto.\r\n");
+  else if (circle_follow(victim, ch))
+    send_to_char(ch, "Desculpe, mas nao e' permitido seguir em circulos.\r\n");
+  else if (mag_savingthrow(victim, SAVING_PARA, 0))
+    send_to_char(ch, "A sua vitima resiste!\r\n");
+  else {
+    if (victim->master)
+      stop_follower(victim);
+
+    add_follower(victim, ch);
+
+    new_affect(&af);
+    af.spell = CHANSON_ENCANTO;
+    af.duration = 24 * 3;
+    if (GET_CHA(ch))
+      af.duration *= GET_CHA(ch);
+    if (GET_INT(victim))
+      af.duration /= GET_INT(victim);
+    SET_BIT_AR(af.bitvector, AFF_CHARM);
+    affect_to_char(victim, &af);
+
+    act("$n nao e' uma boa companhia?", FALSE, ch, 0, victim, TO_VICT);
+    if (IS_NPC(victim))
+      //remover agro
       REMOVE_BIT_AR(MOB_FLAGS(victim), MOB_SPEC);
   }
 }

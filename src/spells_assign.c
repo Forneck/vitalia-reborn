@@ -46,6 +46,9 @@ void set_spells_function()
 
  if ((spell = get_spell_by_vnum(SPELL_CHARM)))
    spell->function = spell_charm;
+ 
+ if ((spell = get_spell_by_vnum(CHANSON_ENCANTO)))
+    spell->function = chanson_encanto;
 
  if ((spell = get_spell_by_vnum(SPELL_CONTROL_WEATHER)))
    spell->function = spell_control_weather;
@@ -55,6 +58,9 @@ void set_spells_function()
    
     if ((spell = get_spell_by_vnum(SPELL_CREATE_NECTAR)))
    spell->function = spell_create_nectar;
+
+    if ((spell = get_spell_by_vnum(CHANSON_BRINDE)))
+   spell->function = chanson_brinde;
 
  if ((spell = get_spell_by_vnum(SPELL_DETECT_POISON)))
    spell->function = spell_detect_poison;
@@ -1066,7 +1072,7 @@ void create_spells_db()
  new_spell->type = SPELL;
  new_spell->min_pos = POS_STANDING;
  new_spell->targ_flags = TAR_CHAR_ROOM;
- new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_UNAFFECTS;
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(110 - (5 * self.level)) > 85 ? (110 - (5 * self.level)) : 85");
  new_spell->assign[0].class_num = CLASS_CLERIC;
@@ -1074,7 +1080,7 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->applies[0].appl_num = AFF_SANCTUARY + NUM_APPLIES;
  new_spell->applies[0].duration = strdup("4");
- //new_spell->dispel[0] = strdup("91");
+ new_spell->dispel[0] = strdup("91");
  new_spell->messages.to_vict = strdup("Uma aura branca $r envolve por instantes.");
  new_spell->messages.to_room = strdup("$N é envolvid$R por uma aura branca.");
  new_spell->messages.wear_off = strdup("A aura branca ao redor de seu corpo desaparece.");
@@ -2309,7 +2315,7 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->type = SPELL;
  new_spell->min_pos = POS_STANDING;
  new_spell->targ_flags = TAR_CHAR_ROOM;
- new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR | MAG_UNAFFECTS;
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(110 - (5 * self.level)) > 85 ? (110 - (5 * self.level)) : 85");
  new_spell->assign[0].class_num = CLASS_CLERIC;
@@ -2320,7 +2326,7 @@ new_spell->vnum = SPELL_INVIGOR;
   new_spell->applies[1].appl_num = APPLY_AC;
  new_spell->applies[1].modifier = strdup("-15");
  new_spell->applies[1].duration = strdup("4");
- //new_spell->dispel[0] = strdup("36");
+ new_spell->dispel[0] = strdup("36");
  new_spell->messages.to_vict = strdup("Um escudo de trevas resguarda o seu corpo.");
  new_spell->messages.to_room = strdup("Um escudo de trevas resguarda o corpo de $N.");
  new_spell->messages.wear_off = strdup("O escudo de trevas que $r resguardava se desvanece lentamente.");
@@ -2806,22 +2812,22 @@ new_spell->assign[0].level = 45;
 new_spell->dispel[0] = strdup("248"); //Dispel Allegro
 new_spell->min_pos = POS_FIGHTING;
 new_spell->targ_flags = TAR_SELF_ONLY;
-new_spell->mag_flags = MAG_AFFECTS; 
+new_spell->mag_flags = MAG_AFFECTS | MAG_UNAFFECTS; 
 new_spell->effectiveness = strdup("100");
 new_spell->applies[0].appl_num = APPLY_STR;
-new_spell->applies[0].modifier = strdup("self.level/45");
-new_spell->applies[0].duration = strdup("2");
+new_spell->applies[0].modifier = strdup("(self.level/45)");
+new_spell->applies[0].duration = strdup("6");
 new_spell->applies[0].appl_num = APPLY_DAMROLL;
-new_spell->applies[0].modifier = strdup("self.level/45");
-new_spell->applies[0].duration = strdup("2");
+new_spell->applies[0].modifier = strdup("(self.level/45)");
+new_spell->applies[0].duration = strdup("6");
 new_spell->applies[0].appl_num = APPLY_HITROLL;
 new_spell->applies[0].modifier = strdup("-(self.level/45)");
-new_spell->applies[0].duration = strdup("2");
+new_spell->applies[0].duration = strdup("6");
 new_spell->applies[0].appl_num = APPLY_DEX;   
 new_spell->applies[0].modifier = strdup("-(self.level/45)"); 
-new_spell->applies[0].duration = strdup("2");
+new_spell->applies[0].duration = strdup("6");
 new_spell->applies[0].appl_num = AFF_ADAGIO + NUM_APPLIES;     
-new_spell->applies[0].duration = strdup("2");
+new_spell->applies[0].duration = strdup("6");
 new_spell->messages.to_vict = strdup("Você tenta fazer com que seu corpo vibre num ritmo de adagio."); 
 new_spell->messages.wear_off = strdup("Você para de vibrar em adagio.");
 spedit_save_internally(new_spell);
@@ -2834,26 +2840,27 @@ new_spell->status = available;
 new_spell->name = strdup("allegro");
 new_spell->type = SKILL;  
 new_spell->effectiveness = strdup("100");      
+new_spell->min_pos = POS_FIGHTING;   
+new_spell->targ_flags = TAR_SELF_ONLY;      
+new_spell->mag_flags = MAG_AFFECTS | MAG_UNAFFECTS;    
+new_spell->effectiveness = strdup("100");
 new_spell->assign[0].class_num = CLASS_BARD;
 new_spell->assign[0].level = 50;  
 new_spell->dispel[0] = strdup("247"); //Dispel Adagio
-new_spell->min_pos = POS_FIGHTING;   
-new_spell->targ_flags = TAR_SELF_ONLY;      
-new_spell->mag_flags = MAG_AFFECTS;    
-new_spell->effectiveness = strdup("100");    
 new_spell->applies[0].appl_num = APPLY_STR;   
-new_spell->applies[0].modifier = strdup("-self.level/45");
-new_spell->applies[0].duration = strdup("2"); 
+new_spell->applies[0].modifier = strdup("-(self.level/45)");
+new_spell->applies[0].duration = strdup("6"); 
 new_spell->applies[0].appl_num = APPLY_DAMROLL;
-new_spell->applies[0].modifier = strdup("-self.level/45");  
-new_spell->applies[0].duration = strdup("2");   
+new_spell->applies[0].modifier = strdup("-(self.level/45)");  
+new_spell->applies[0].duration = strdup("6");   
 new_spell->applies[0].appl_num = APPLY_HITROLL; 
 new_spell->applies[0].modifier = strdup("(self.level/45)");
-new_spell->applies[0].duration = strdup("2"); 
+new_spell->applies[0].duration = strdup("6"); 
 new_spell->applies[0].appl_num = APPLY_DEX;  
-new_spell->applies[0].modifier = strdup("self.level/45"); 
-new_spell->applies[0].duration = strdup("2");                               new_spell->applies[0].appl_num = AFF_ALLEGRO + NUM_APPLIES;
-new_spell->applies[0].duration = strdup("2");  
+new_spell->applies[0].modifier = strdup("(self.level/45)"); 
+new_spell->applies[0].duration = strdup("6");
+new_spell->applies[0].appl_num = AFF_ALLEGRO + NUM_APPLIES;
+new_spell->applies[0].duration = strdup("6");  
 new_spell->messages.to_vict = strdup("Você tenta fazer com que seu corpo vibre num ritmo de allegro.");    
 new_spell->messages.wear_off = strdup("Você para de vibrar em allegro.");
 spedit_save_internally(new_spell);
@@ -2899,7 +2906,7 @@ spedit_save_internally(new_spell);
  new_spell->type = CHANSON;
  new_spell->min_pos = POS_STANDING;
  new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
- new_spell->mag_flags = MAG_AFFECTS;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_UNAFFECTS;
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(30 - (3 * self.level)) > 10 ? (30 - (3 * self.level)) : 10");
  new_spell->assign[0].class_num = CLASS_BARD;
@@ -3050,7 +3057,7 @@ new_spell->name = strdup("vulnerabilidade");
 new_spell->type = CHANSON;
 new_spell->min_pos = POS_STANDING;
 new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
-new_spell->mag_flags = MAG_AFFECTS;
+new_spell->mag_flags = MAG_AFFECTS | MAG_UNAFFECTS;
 new_spell->effectiveness = strdup("100");
 sprintf(buf, "(50 - (3 * self.level)) > 20 ? (50 - (3 * self.level)) : 20");
 new_spell->assign[0].class_num = CLASS_BARD;
@@ -3110,11 +3117,11 @@ new_spell->name = strdup("clamor");
 new_spell->type = CHANSON;  
 new_spell->min_pos = POS_STANDING;    
 new_spell->targ_flags = TAR_CHAR_ROOM;
-new_spell->mag_flags = MAG_AFFECTS;   
+new_spell->mag_flags = MAG_AFFECTS | MAG_UNAFFECTS;   
 new_spell->effectiveness = strdup("100");    
 sprintf(buf, "(40 - (3 * self.level)) > 10 ? (40 - (3 * self.level)) : 10");
 new_spell->assign[0].class_num = CLASS_BARD;   
-new_spell->assign[0].level = 50;    
+new_spell->assign[0].level = 52;    
 new_spell->assign[0].num_mana = strdup(buf);    
 new_spell->applies[0].appl_num = APPLY_SAVING_PARA + NUM_APPLIES;  
 new_spell->applies[0].duration = strdup("24");           
@@ -3134,6 +3141,83 @@ new_spell->applies[4].modifier = strdup("-3");
 new_spell->dispel[0] = strdup("170");
 new_spell->messages.to_vict = strdup("Você se sente menos vulnerável.");
 new_spell->messages.wear_off = strdup("Você se sente mais vulnerável.");
+spedit_save_internally(new_spell);
+
+//CHANSON_CESSAR #176
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell);
+new_spell->vnum = CHANSON_CESSAR;
+new_spell->status = available;
+new_spell->name = strdup("cancao do bardo amigo");
+new_spell->type = CHANSON;
+new_spell->min_pos = POS_FIGHTING;
+new_spell->targ_flags = TAR_CHAR_ROOM;
+new_spell->mag_flags = MAG_POINTS;
+new_spell->effectiveness = strdup("100");
+sprintf(buf, "(30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10");
+new_spell->assign[0].class_num = CLASS_BARD;
+new_spell->assign[0].level = 42;
+new_spell->assign[0].num_mana = strdup(buf);
+new_spell->messages.to_vict = strdup("A canção parece curar suas feridas!.");
+new_spell->points.hp = strdup("dice(5, 3) + (param / 4)");
+spedit_save_internally(new_spell);
+
+//CHANSON_VISAO 175
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell);
+new_spell->vnum = CHANSON_VISAO;
+new_spell->status = available;
+new_spell->name = strdup("visao de artista");
+new_spell->type = CHANSON;
+new_spell->min_pos = POS_STANDING;
+new_spell->targ_flags = TAR_CHAR_ROOM | TAR_SELF_ONLY;
+new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+new_spell->effectiveness = strdup("100");
+sprintf(buf, "(20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10");
+new_spell->assign[0].class_num = CLASS_BARD;
+new_spell->assign[0].level = 59;   
+new_spell->assign[0].num_mana = strdup(buf);
+new_spell->applies[0].appl_num = AFF_DETECT_INVIS + NUM_APPLIES;
+new_spell->applies[0].duration = strdup("12 + param");                      new_spell->messages.to_vict = strdup("Você se sente mais sensível ao mundo exterior.");
+new_spell->messages.wear_off = strdup("Você se sente menos sensível.");
+spedit_save_internally(new_spell);
+
+/*CHANSONS ESPECIAIS: BRINDE, VOLTAR, ENCANTO, ALENTO*/
+// CHANSON_BRINDE #88
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell); 
+new_spell->vnum = CHANSON_BRINDE;
+new_spell->status = available;
+new_spell->name = strdup("vinho para brindar");
+new_spell->function = chanson_brinde;
+new_spell->type = CHANSON;
+new_spell->min_pos = POS_STANDING;   
+new_spell->targ_flags = TAR_OBJ_INV | TAR_OBJ_EQUIP; 
+new_spell->mag_flags = MAG_MANUAL;
+new_spell->effectiveness = strdup("100");     
+sprintf(buf, "(30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5");  new_spell->assign[0].class_num = CLASS_BARD;
+new_spell->assign[0].level = 6;
+new_spell->assign[0].num_mana = strdup(buf);
+spedit_save_internally(new_spell);
+
+// CHANSON_ENCANTO #7
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell);
+new_spell->vnum = CHANSON_ENCANTO;
+new_spell->status = available;
+new_spell->name = strdup("voz do encanto");
+new_spell->function = chanson_encanto;
+new_spell->type = CHANSON;
+new_spell->min_pos = POS_FIGHTING;
+new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
+new_spell->mag_flags = MAG_MANUAL | MAG_VIOLENT;
+new_spell->effectiveness = strdup("100");
+sprintf(buf, "(80 - (5 * self.level)) > 50 ? (80 - (5 * self.level)) : 50");
+new_spell->assign[0].class_num = CLASS_BARD;
+new_spell->assign[0].level = 62;
+new_spell->assign[0].num_mana = strdup(buf);
+new_spell->messages.wear_off = strdup("Você se sente mais auto-confiante.");
+
 spedit_save_internally(new_spell);
 
 //spellnum, spellname, maxmana, minmana, manachng, minpos, targets, viol   ent?, routines.

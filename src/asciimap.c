@@ -504,10 +504,10 @@ static void perform_map( struct char_data *ch, char *argument, bool worldmap )
   send_to_char(ch, " \tY-\tyCartógrafos de Vitália:\tY-\tn\r\n"
                    "\tD  .-.__--.,--.__.-.\tn\r\n" );
 
-  count += sprintf(buf + count, "\tn\tn\tn%s Up\\\\", door_info[NUM_DOOR_TYPES + DOOR_UP].disp);
-  count += sprintf(buf + count, "\tn\tn\tn%s Down\\\\", door_info[NUM_DOOR_TYPES + DOOR_DOWN].disp);
+  count += sprintf(buf + count, "\tn\tn\tn%s Cima\\\\", door_info[NUM_DOOR_TYPES + DOOR_UP].disp);
+  count += sprintf(buf + count, "\tn\tn\tn%s Baixo\\\\", door_info[NUM_DOOR_TYPES + DOOR_DOWN].disp);
   count += sprintf(buf + count, "\tn%s Você\\\\", map_info[SECT_HERE].disp);
-  count += sprintf(buf + count, "\tn%s Interno\\\\", map_info[SECT_INSIDE].disp);
+  count += sprintf(buf + count, "\tn%s Interior\\\\", map_info[SECT_INSIDE].disp);
   count += sprintf(buf + count, "\tn%s Cidade\\\\", map_info[SECT_CITY].disp);
   count += sprintf(buf + count, "\tn%s Campo\\\\", map_info[SECT_FIELD].disp);
   count += sprintf(buf + count, "\tn%s Floresta\\\\", map_info[SECT_FOREST].disp);

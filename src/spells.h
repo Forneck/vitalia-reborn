@@ -166,10 +166,10 @@
 #define CHANSON_DEUSES		    169 /* -- AC - JUNE, 2003		 */
 #define CHANSON_VULNERAVEL	    170 /* -- AC - JUNE, 2003		 */
 #define CHANSON_VOLTAR		    171 /* -- AC - JUNE, 2003 manual	 */
-#define CHANSON_BRINDE		    172 /* -- AC - JUNE, 2003 manual	 */
+#define CHANSON_BRINDE		    172 /* -- AC - JUNE, 2003 manual-ok	 */
 #define CHANSON_ECOS		    173 /* -- AC - JUNE, 2003		 */
 #define CHANSON_CLAMOR		    174 /* -- AC - JUNE, 2003		 */
-#define CHANSON_ENCANTO             175 /* -- AC - SEPT, 2003 manual     */
+#define CHANSON_ENCANTO             175 /* -- AC - SEPT, 2003 manual-ok  */
 #define CHANSON_CESSAR              176 /* -- AC - SEPT, 2003            */
 #define CHANSON_VISAO               177 /* -- AC - SEPT, 2003            */
 

@@ -9,7 +9,9 @@
 @C-@G=@Y>@W XX de YYYY de 2025 @C@Y<@G=@C-@n
    
    @GThewster@n agora está disponivel para ser cidade natal na criação.
-   Agora é possivel anternar entre Adagio e Allegro sem esperar acabar.
+   A canção @YClamor@n alterada para nivel 50.
+   Agora é possivel anternar entre @YAdagio@n e @YAllegro@n sem esperar acabar.
+   @YAdagio@n e @YAllegro@n podem ser ativados durante as lutas.
    Sistema de magias reescrito e melhorado.
    Corrido bug que permitia certas canções de bardo dar dano em vez de curar.
    Alguns arquivos de Ajuda foram revisados e corrigidos.
@@ -34,6 +36,7 @@
    Comando sacrifice para sacrificar corpos e objetos. 
    Dex agora influencia na hora do primeiro hit.
    Carisma agora influencia a possibilidade de ser atacado por mobs agressivos.
+   Carisma passa a afetar a duracao de @YCharm Person@n e @YA Voz do Encanto@n.
    Intervalo depois do @YBackstab@n, @YBash@n diminuido.
    Habilidade @YBackflip@n modificada, agora ela para até dois oponentes.
    Habilidades @YMount@n, @YEscape@n temporariamente desabilitadas.
