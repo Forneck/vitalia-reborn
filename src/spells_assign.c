@@ -2793,7 +2793,72 @@ new_spell->assign[2].class_num = CLASS_BARD;
  spedit_save_internally(new_spell);
 
  
- 
+// SKILL_ADAGIO # 247
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell); 
+new_spell->vnum = SKILL_ADAGIO;
+new_spell->status = available; 
+new_spell->name = strdup("adagio");
+new_spell->type = SKILL;
+new_spell->effectiveness = strdup("100"); 
+new_spell->assign[0].class_num = CLASS_BARD;
+new_spell->assign[0].level = 45;
+new_spell->dispel[0] = strdup("248"); //Dispel Allegro
+new_spell->min_pos = POS_FIGHTING;
+new_spell->targ_flags = TAR_SELF_ONLY;
+new_spell->mag_flags = MAG_AFFECTS; 
+new_spell->effectiveness = strdup("100");
+new_spell->applies[0].appl_num = APPLY_STR;
+new_spell->applies[0].modifier = strdup("self.level/45");
+new_spell->applies[0].duration = strdup("2");
+new_spell->applies[0].appl_num = APPLY_DAMROLL;
+new_spell->applies[0].modifier = strdup("self.level/45");
+new_spell->applies[0].duration = strdup("2");
+new_spell->applies[0].appl_num = APPLY_HITROLL;
+new_spell->applies[0].modifier = strdup("-(self.level/45)");
+new_spell->applies[0].duration = strdup("2");
+new_spell->applies[0].appl_num = APPLY_DEX;   
+new_spell->applies[0].modifier = strdup("-(self.level/45)"); 
+new_spell->applies[0].duration = strdup("2");
+new_spell->applies[0].appl_num = AFF_ADAGIO + NUM_APPLIES;     
+new_spell->applies[0].duration = strdup("2");
+new_spell->messages.to_vict = strdup("Você tenta fazer com que seu corpo vibre num ritmo de adagio."); 
+new_spell->messages.wear_off = strdup("Você para de vibrar em adagio.");
+spedit_save_internally(new_spell);
+
+// SKILL_ALLEGRO # 248
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell); 
+new_spell->vnum = SKILL_ALLEGRO;
+new_spell->status = available;   
+new_spell->name = strdup("allegro");
+new_spell->type = SKILL;  
+new_spell->effectiveness = strdup("100");      
+new_spell->assign[0].class_num = CLASS_BARD;
+new_spell->assign[0].level = 50;  
+new_spell->dispel[0] = strdup("247"); //Dispel Adagio
+new_spell->min_pos = POS_FIGHTING;   
+new_spell->targ_flags = TAR_SELF_ONLY;      
+new_spell->mag_flags = MAG_AFFECTS;    
+new_spell->effectiveness = strdup("100");    
+new_spell->applies[0].appl_num = APPLY_STR;   
+new_spell->applies[0].modifier = strdup("-self.level/45");
+new_spell->applies[0].duration = strdup("2"); 
+new_spell->applies[0].appl_num = APPLY_DAMROLL;
+new_spell->applies[0].modifier = strdup("-self.level/45");  
+new_spell->applies[0].duration = strdup("2");   
+new_spell->applies[0].appl_num = APPLY_HITROLL; 
+new_spell->applies[0].modifier = strdup("(self.level/45)");
+new_spell->applies[0].duration = strdup("2"); 
+new_spell->applies[0].appl_num = APPLY_DEX;  
+new_spell->applies[0].modifier = strdup("self.level/45"); 
+new_spell->applies[0].duration = strdup("2");                               new_spell->applies[0].appl_num = AFF_ALLEGRO + NUM_APPLIES;
+new_spell->applies[0].duration = strdup("2");  
+new_spell->messages.to_vict = strdup("Você tenta fazer com que seu corpo vibre num ritmo de allegro.");    
+new_spell->messages.wear_off = strdup("Você para de vibrar em allegro.");
+spedit_save_internally(new_spell);
+
+
  /*NIGHTHAMMER*/
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
@@ -3006,7 +3071,7 @@ new_spell->applies[3].modifier = strdup("2");
 new_spell->applies[4].appl_num = APPLY_SAVING_SPELL + NUM_APPLIES;
 new_spell->applies[4].duration = strdup("24");     
 new_spell->applies[4].modifier = strdup("3");
-new_spell->dispel[0] = strdup("174")
+new_spell->dispel[0] = strdup("174");
 new_spell->messages.to_vict = strdup("Você se sente muito vulnerável.");
 new_spell->messages.wear_off = strdup("Você se sente menos vulnerável.");
 spedit_save_internally(new_spell);
@@ -3066,7 +3131,7 @@ new_spell->applies[3].modifier = strdup("+2");
 new_spell->applies[4].appl_num = APPLY_SAVING_SPELL + NUM_APPLIES;   
 new_spell->applies[4].duration = strdup("24");   
 new_spell->applies[4].modifier = strdup("-3");    
-new_spell->dispel[0] = strdup("170")
+new_spell->dispel[0] = strdup("170");
 new_spell->messages.to_vict = strdup("Você se sente menos vulnerável.");
 new_spell->messages.wear_off = strdup("Você se sente mais vulnerável.");
 spedit_save_internally(new_spell);

@@ -1767,10 +1767,11 @@ CANCAO-CLAMOR
 Uso        : sing 'clamor' <alvo>
 Acumulativa: -
 Duracao    : Instantanea
-Nivel      : Bardo Nivel 88
+Nivel      : Bardo Nivel 50
 
-   Essa cancao consegue aliviar o tormento daqueles que sao atingidos pelos
-"Ecos de Maldicao", afastando a loucura.
+   Aquele que e' atingido pelo poder dessa cancao se torna mais resistente a
+ataques fisicos e magicos, ao melhorar  as resistencias da vitima.
+
 #1
 CANCAO-ECOS-DE-MALDICAO
 
