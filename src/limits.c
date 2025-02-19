@@ -21,6 +21,7 @@
 #include "class.h"
 #include "fight.h"
 #include "screen.h"
+#include "spirits.h"
 #include "mud_event.h"
 
 /* local file scope function prototypes */
@@ -587,32 +588,52 @@ void point_update(void)
 			/* timer count down */
 			if (GET_OBJ_TIMER(j) > 0)
 				GET_OBJ_TIMER(j)--;
-			if (!GET_OBJ_TIMER(j))
+    if (!GET_OBJ_TIMER(j))
 			{
-
-				if (j->carried_by)
-					act("$p cai de suas mãos.", FALSE, j->carried_by, j, 0, TO_CHAR);
-				else if ((IN_ROOM(j) != NOWHERE) && (world[IN_ROOM(j)].people))
-				{
-					act("Uma multidão de vermes consomem $p.",
-						TRUE, world[IN_ROOM(j)].people, j, 0, TO_ROOM);
-					act("Uma multidão de vermes consomem $p.",
-						TRUE, world[IN_ROOM(j)].people, j, 0, TO_CHAR);
+				switch (autoraise_corpse(j)) {
+					case ar_skip:
+						/* Don't touch the corpse, leave it in place */
+							break;
+					case ar_dropobjs:
+						if (j->carried_by)
+							act("$p cai de suas mãos.", FALSE, j->carried_by, j, 0, TO_CHAR);
+						else if ((IN_ROOM(j) != NOWHERE) && (world[IN_ROOM(j)].people))
+						{
+							act("Uma multidão de vermes consomem $p.",
+								TRUE, world[IN_ROOM(j)].people, j, 0, TO_ROOM);
+							act("Uma multidão de vermes consomem $p.",
+								TRUE, world[IN_ROOM(j)].people, j, 0, TO_CHAR);
+						}
+					for (jj = j->contains; jj; jj = next_thing2)
+					{
+						next_thing2 = jj->next_content;	/* Next in inventory */
+						obj_from_obj(jj);
+						if (j->in_obj)
+							obj_to_obj(jj, j->in_obj);
+						else if (j->carried_by)
+							obj_to_room(jj, IN_ROOM(j->carried_by));
+						else if (IN_ROOM(j) != NOWHERE)
+							obj_to_room(jj, IN_ROOM(j));
+						else
+							core_dump();
+					}
+					extract_obj(j);
+					break;
+					case ar_extract: {
+						/*
+						 * Extract entire corpse.
+						 * Let's extract all it's contents. After this, next_thing may
+						 * point to an unexistent object. We need to re-set it to j->next
+						 * before proceding.
+						 */
+						for (jj = j->contains; jj; jj = next_thing2) {
+							next_thing2 = jj->next_content;
+							obj_from_obj(jj);
+							obj_to_room(jj, IN_ROOM(j));
+						}
+						extract_obj(j);
+					}
 				}
-				for (jj = j->contains; jj; jj = next_thing2)
-				{
-					next_thing2 = jj->next_content;	/* Next in inventory */
-					obj_from_obj(jj);
-					if (j->in_obj)
-						obj_to_obj(jj, j->in_obj);
-					else if (j->carried_by)
-						obj_to_room(jj, IN_ROOM(j->carried_by));
-					else if (IN_ROOM(j) != NOWHERE)
-						obj_to_room(jj, IN_ROOM(j));
-					else
-						core_dump();
-				}
-				extract_obj(j);
 			}
 		}
 

@@ -278,6 +278,7 @@ mob_rnum real_mobile(mob_vnum vnum);
 obj_rnum real_object(obj_vnum vnum);
 
 /* Public Procedures from objsave.c */
+int Crash_save(struct obj_data *obj, FILE *fp, int location);
 void  Crash_save_all(void);
 void  Crash_idlesave(struct char_data *ch);
 void  Crash_crashsave(struct char_data *ch);
@@ -290,6 +291,7 @@ void update_obj_file(void);
 void Crash_rentsave(struct char_data *ch, int cost);
 obj_save_data *objsave_parse_objects(FILE *fl);
 int objsave_save_obj_record(struct obj_data *obj, FILE *fl, int location);
+int Crash_write_rentcode(struct char_data *ch, FILE *fl, struct rent_info *rent);
 /* Special functions */
 SPECIAL(receptionist);
 SPECIAL(cryogenicist);

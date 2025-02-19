@@ -31,7 +31,7 @@
 #define MAX_BAG_ROWS   5
 
 /* local functions */
-static int Crash_save(struct obj_data *obj, FILE *fp, int location);
+
 static void Crash_extract_norent_eq(struct char_data *ch);
 static void auto_equip(struct char_data *ch, struct obj_data *obj, int location);
 static int Crash_offer_rent(struct char_data *ch, struct char_data *receptionist, int display, int factor);
@@ -49,6 +49,21 @@ static void Crash_cryosave(struct char_data *ch, int cost);
 static int Crash_load_objs(struct char_data *ch);
 static int handle_obj(struct obj_data *obj, struct char_data *ch, int locate, struct obj_data **cont_rows);
 static int objsave_write_rentcode(FILE *fl, int rentcode, int cost_per_day, struct char_data *ch);
+
+
+int Crash_write_rentcode(struct char_data *ch, FILE *fl, struct rent_info *rent)
+{
+  /* Atualiza o campo time do rent_info para o momento atual */
+  rent->time = (int) time(0);
+
+  /* Chama a função objsave_write_rentcode passando:
+     - rent->rentcode como o código de aluguel
+     - rent->net_cost_per_diem como custo por dia (se estiver sendo utilizado)
+     - ch para obter os valores de gold e bank_gold
+  */
+  return objsave_write_rentcode(fl, rent->rentcode, rent->net_cost_per_diem, ch);
+}
+
 
 /* Writes one object record to FILE.  Old name: Obj_to_store() */
 int objsave_save_obj_record(struct obj_data *obj, FILE *fp, int locate)
@@ -477,7 +492,7 @@ int Crash_load(struct char_data *ch)
   return (Crash_load_objs(ch));
 }
 
-static int Crash_save(struct obj_data *obj, FILE *fp, int location)
+int Crash_save(struct obj_data *obj, FILE *fp, int location)
 {
   struct obj_data *tmp;
   int result;
