@@ -2,6 +2,11 @@
 Vitalia~
 Norte da Cidade de Midgaard~
 3000 3099 15 2 j 0 0 0 -1 -1
+M 0 3096 1 3054 	(Maria, a instrutora de iniciantes)
+R 0 3001 3034 -1 	(um caixa automático)
+O 0 3034 100 3001 	(um caixa automático)
+R 0 3001 3088 -1 	(.uma parede pintada)
+O 0 3088 1 3001 	(.uma parede pintada)
 M 0 3012 1 3008 	(a recepcionista)
 R 0 3000 3099 -1 	(um quadro de mensagens)
 O 0 3099 13 3000 	(um quadro de mensagens)
@@ -43,11 +48,6 @@ G 1 3023 99 -1 	(uma clava de madeira)
 G 1 3024 99 -1 	(um machado de guerra)
 G 1 3025 99 -1 	(um flagelo)
 G 1 3022 100 -1 	(uma espada longa)
-R 0 3001 3034 -1 	(um caixa automático)
-O 0 3034 100 3001 	(um caixa automático)
-R 0 3001 3088 -1 	(.uma parede pintada)
-O 0 3088 1 3001 	(.uma parede pintada)
-M 0 3096 1 3001 	(Maria, a instrutora de iniciantes)
 M 0 3032 1 3090 	(a garçonete)
 G 1 3003 100 -1 	(uma garrafa)
 G 1 3004 100 -1 	(um frasco)

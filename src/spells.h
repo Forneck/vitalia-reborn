@@ -165,7 +165,7 @@
 #define CHANSON_ALENTO		    168 /* -- AC - JUNE, 2003 * tabela		 */
 #define CHANSON_DEUSES		    169 /* -- AC - JUNE, 2003		 */
 #define CHANSON_VULNERAVEL	    170 /* -- AC - JUNE, 2003		 */
-#define CHANSON_VOLTAR		    171 /* -- AC - JUNE, 2003 manual	 */
+#define CHANSON_VOLTAR		    171 /* -- AC - JUNE, 2003 manual-ok	 */
 #define CHANSON_BRINDE		    172 /* -- AC - JUNE, 2003 manual-ok	 */
 #define CHANSON_ECOS		    173 /* -- AC - JUNE, 2003		 */
 #define CHANSON_CLAMOR		    174 /* -- AC - JUNE, 2003		 */
@@ -350,7 +350,6 @@ ASPELL(spell_skinsteel);	/* -- mp */
 ASPELL(spell_skindiamond);	/* -- mp */
 ASPELL(spell_create_nectar);	/* -- mp */
 ASPELL(spell_soundbarrier);	/* -- ac */
-ASPELL(chanson_voltar);
 ASPELL(chanson_brinde);
 ASPELL(chanson_encanto);
 

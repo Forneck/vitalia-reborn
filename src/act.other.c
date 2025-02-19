@@ -1237,5 +1237,8 @@ ACMD(do_recall)
 	}
 	act("$n aparece no meio da sala.", TRUE, ch, 0, 0, TO_ROOM);
 	look_at_room(ch, 0);
+	entry_memory_mtrigger(ch);
+	greet_mtrigger(ch, -1);
+	greet_memory_mtrigger(ch);
 }
 

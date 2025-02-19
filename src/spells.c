@@ -118,7 +118,20 @@ ASPELL(spell_recall)
 
   act("$n desaparece.", TRUE, victim, 0, 0, TO_ROOM);
   char_from_room(victim);
-  char_to_room(victim, GET_HOMETOWN(ch));
+  switch (GET_HOMETOWN(victim)) {
+	  case 1:
+                char_to_room(victim, r_hometown_1);
+		break;
+        case 2:
+                char_to_room(victim, r_hometown_2);
+                break;
+	case 3:
+		char_to_room(victim, r_hometown_3);
+        break;
+        default:
+                char_to_room(victim, r_hometown_1);
+		break;
+        }
   act("$n aparece no meio da sala.", TRUE, victim, 0, 0, TO_ROOM);
   look_at_room(victim, 0);
   entry_memory_mtrigger(victim);

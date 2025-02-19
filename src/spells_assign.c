@@ -77,6 +77,9 @@ void set_spells_function()
  if ((spell = get_spell_by_vnum(SPELL_WORD_OF_RECALL)))
    spell->function = spell_recall;
 
+ if ((spell = get_spell_by_vnum(CHANSON_VOLTAR)))
+   spell->function = spell_recall;
+
  if ((spell = get_spell_by_vnum(SPELL_IDENTIFY)))
    spell->function = spell_identify;
 
@@ -3218,6 +3221,24 @@ new_spell->assign[0].level = 62;
 new_spell->assign[0].num_mana = strdup(buf);
 new_spell->messages.wear_off = strdup("Você se sente mais auto-confiante.");
 
+spedit_save_internally(new_spell);
+
+// CHANSON_VOLTAR 
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell);
+new_spell->vnum = CHANSON_VOLTAR;
+new_spell->status = available;
+new_spell->name = strdup("o bardo quer voltar");
+new_spell->function = spell_recall;
+new_spell->type = CHANSON;
+new_spell->min_pos = POS_FIGHTING;
+new_spell->targ_flags = TAR_CHAR_ROOM;
+new_spell->mag_flags = MAG_MANUAL;
+new_spell->effectiveness = strdup("100"); 
+sprintf(buf, "(30 - (3 * self.level)) > 10 ? (30 - (3 * self.level)) : 10");
+new_spell->assign[0].class_num = CLASS_BARD;
+new_spell->assign[0].level = 31;
+new_spell->assign[0].num_mana = strdup(buf);
 spedit_save_internally(new_spell);
 
 //spellnum, spellname, maxmana, minmana, manachng, minpos, targets, viol   ent?, routines.
