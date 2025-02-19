@@ -2958,8 +2958,118 @@ spedit_save_internally(new_spell);
 // chanson_ardor #168 rever tabela
 
 
-// CHANSON_DEUSES
+// CHANSON_DEUSES  169
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell);
+new_spell->vnum = CHANSON_DEUSES;
+new_spell->status = available;
+new_spell->name = strdup("invocacao aos deuses");
+new_spell->type = CHANSON;
+new_spell->min_pos = POS_FIGHTING;
+new_spell->targ_flags = TAR_CHAR_ROOM;                                      new_spell->mag_flags = MAG_POINTS;                                          new_spell->effectiveness = strdup("100");
+sprintf(buf, "(90 - (5 * self.level)) > 50 ? (90 - (5 * self.level)) : 50");
+new_spell->assign[0].class_num = CLASS_BARD;
+new_spell->assign[0].level = 95;
+new_spell->assign[0].num_mana = strdup(buf);
+new_spell->messages.to_vict = strdup("Os ecos de uma canção divina preenchem sua cabeça e curam seu corpo.\r\n");
+sprintf(buf, "(dice(3,6) + (param - 15)) > 1 ? (dice(3,6) + (param - 15) : 1");
+new_spell->points.hp = strdup(buf);
+spedit_save_internally(new_spell);
 
+//CHANSON_VULNERAVEL 170
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell);
+new_spell->vnum = CHANSON_VULNERAVEL;
+new_spell->status = available;
+new_spell->name = strdup("vulnerabilidade");
+new_spell->type = CHANSON;
+new_spell->min_pos = POS_STANDING;
+new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
+new_spell->mag_flags = MAG_AFFECTS;
+new_spell->effectiveness = strdup("100");
+sprintf(buf, "(50 - (3 * self.level)) > 20 ? (50 - (3 * self.level)) : 20");
+new_spell->assign[0].class_num = CLASS_BARD;
+new_spell->assign[0].level = 68;
+new_spell->assign[0].num_mana = strdup(buf);
+new_spell->applies[0].appl_num = APPLY_SAVING_PARA + NUM_APPLIES;
+new_spell->applies[0].duration = strdup("24");
+new_spell->applies[0].modifier = strdup("3");
+new_spell->applies[1].appl_num = APPLY_SAVING_ROD + NUM_APPLIES;
+new_spell->applies[1].duration = strdup("24");
+new_spell->applies[1].modifier = strdup("2");
+new_spell->applies[2].appl_num = APPLY_SAVING_PETRI + NUM_APPLIES;
+new_spell->applies[2].duration = strdup("24"); 
+new_spell->applies[2].modifier = strdup("2");
+new_spell->applies[3].appl_num = APPLY_SAVING_BREATH + NUM_APPLIES;
+new_spell->applies[3].duration = strdup("24"); 
+new_spell->applies[3].modifier = strdup("2");
+new_spell->applies[4].appl_num = APPLY_SAVING_SPELL + NUM_APPLIES;
+new_spell->applies[4].duration = strdup("24");     
+new_spell->applies[4].modifier = strdup("3");
+new_spell->dispel[0] = strdup("174")
+new_spell->messages.to_vict = strdup("Você se sente muito vulnerável.");
+new_spell->messages.wear_off = strdup("Você se sente menos vulnerável.");
+spedit_save_internally(new_spell);
+
+//CHANSON_ECOS
+
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell);
+new_spell->vnum = CHANSON_ECOS;
+new_spell->status = available; 
+new_spell->name = strdup("ecos da maldicao");
+new_spell->type = CHANSON;
+new_spell->min_pos = POS_STANDING;
+new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
+new_spell->mag_flags = MAG_AFFECTS | MAG_POINTS | MAG_ACCDUR;
+new_spell->effectiveness = strdup("100");
+sprintf(buf, "(70 - (4 * self.level)) > 30 ? (70 - (4 * self.level)) : 40");
+ new_spell->assign[0].class_num = CLASS_BARD;
+ new_spell->assign[0].level = 82;
+ new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->applies[0].appl_num = APPLY_DEX;
+ new_spell->applies[0].modifier = strdup("-(1+self.level/25)");
+ new_spell->applies[0].duration = strdup("1+(self.level/10)");
+ new_spell->applies[1].appl_num = APPLY_HITROLL;
+ new_spell->applies[1].modifier = strdup("-(2+self.level/25)");
+ new_spell->applies[1].duration = strdup("1+(self.level/10)");
+ new_spell->points.move = strdup("-(50 + (2*self.level))");
+ spedit_save_internally(new_spell);
+
+//CHANSON_CLAMOR 174
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell); 
+new_spell->vnum = CHANSON_CLAMOR;  
+new_spell->status = available;    
+new_spell->name = strdup("clamor");
+new_spell->type = CHANSON;  
+new_spell->min_pos = POS_STANDING;    
+new_spell->targ_flags = TAR_CHAR_ROOM;
+new_spell->mag_flags = MAG_AFFECTS;   
+new_spell->effectiveness = strdup("100");    
+sprintf(buf, "(40 - (3 * self.level)) > 10 ? (40 - (3 * self.level)) : 10");
+new_spell->assign[0].class_num = CLASS_BARD;   
+new_spell->assign[0].level = 50;    
+new_spell->assign[0].num_mana = strdup(buf);    
+new_spell->applies[0].appl_num = APPLY_SAVING_PARA + NUM_APPLIES;  
+new_spell->applies[0].duration = strdup("24");           
+new_spell->applies[0].modifier = strdup("-3");
+new_spell->applies[1].appl_num = APPLY_SAVING_ROD + NUM_APPLIES;  
+new_spell->applies[1].duration = strdup("24");     
+new_spell->applies[1].modifier = strdup("-2");
+new_spell->applies[2].appl_num = APPLY_SAVING_PETRI + NUM_APPLIES;
+new_spell->applies[2].duration = strdup("24");   
+new_spell->applies[2].modifier = strdup("-2");   
+new_spell->applies[3].appl_num = APPLY_SAVING_BREATH + NUM_APPLIES;  
+new_spell->applies[3].duration = strdup("24");    
+new_spell->applies[3].modifier = strdup("+2");   
+new_spell->applies[4].appl_num = APPLY_SAVING_SPELL + NUM_APPLIES;   
+new_spell->applies[4].duration = strdup("24");   
+new_spell->applies[4].modifier = strdup("-3");    
+new_spell->dispel[0] = strdup("170")
+new_spell->messages.to_vict = strdup("Você se sente menos vulnerável.");
+new_spell->messages.wear_off = strdup("Você se sente mais vulnerável.");
+spedit_save_internally(new_spell);
 
 //spellnum, spellname, maxmana, minmana, manachng, minpos, targets, viol   ent?, routines.
 

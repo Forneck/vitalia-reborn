@@ -1779,9 +1779,11 @@ Acumulativa: Sim
 Duracao    : 1 + (nivel/10)
 Nivel      : Bardo Nivel 82
 
-   A vitima dessa cancao tem sua mente atormentada, perdendo destreza e sua
-capacidade de dano e de movimentacao diminuidas.  Pode, ainda, comecar a
-movimentar-se em direcoes contrarias a desejada.
+   A vitima dessa cancao tem sua mente atormentada, perdendo destreza 
+(1 ponto, com adicional a cada 25 niveis) e sua capacidade de acertar
+(2 pontos, tambem com adicional a cada 25 niveis) e de movimentacao
+diminuidas.
+
 #1
 CANCAO-INVOCACAO-AOS-DEUSES
 
@@ -1893,7 +1895,9 @@ Duracao    : 24 horas
 Nivel      : Bardo Nivel 68
 
    Aquele que e atingido pelo poder dessa cancao se torna vulneravel a
-ataques fisicos e magicos.
+ataques fisicos e magicos, ao modificar as resistencias da vitima.
+
+Veja tambem: RESISTENCIAS
 #1
 CANCOES
 
@@ -16048,4 +16052,29 @@ escreva direito aqui.
 
 Veja tambem: SPLIST
 #108
+RESISTENCIAS
+
+   Existem cinco tipos de resistencias: Paralisia, Varinhas/Bastoes,
+Petrificacao, Sopro e Magias. Tambem conhecidas por PAR,ROD,PET,BRE e SPE.
+   Certos itens e magias podem afetar os valores, e assim como o AC quanto
+mais negativo melhor (mais protegido esta).
+   Por exemplo ao receber uma magia de ataque, a vitima realiza um teste
+de resistencia contra magias (SPE) para receber menos dano. Mas caso a
+fonte da magia for uma varinha ou bastao, a resistencia usada sera' ROD.
+   As resistencias tambem controlam a efetividade das magias de efeitos,
+como afetamentos e enfeiticamentos.
+
+Veja tambem: AC, MAGIAS, SINERGIAS
+#1
+SINERGIAS
+
+   Durante muitos anos acreditou-se que certas magias nao poderia ser
+usadas conjuntamente ou que os efeitos de uma anularia os efeitos da outra.
+   Mas com as pesquisas de Froboz, Merlin e tantos outros magos, parte
+do que se pensava estar correto sobre a magia provou-se estar completamente
+errado. Agora, com o surgimento de novas teorias magicas, e' possivel
+combinar os efeitos de algumas magias com outras criando sinergias e
+efeitos melhores.
+
+#1
 $~

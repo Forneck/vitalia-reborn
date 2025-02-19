@@ -146,6 +146,31 @@ afora.
 1200 200000
 6 6 1
 E
+#3012
+recepcionista~
+a recepcionista~
+A recepcionista está sentada em sua mesa, sorrindo para você.
+~
+   Atarefada e atrapalhada, ela parece muito sobrecarregada.  Suas roupas tem
+diversos rasgos e furos, provavelmente causados pelas tracas que sobrevivem em
+meio a tantos papeis velhos.
+~
+3205122 0 0 0 0 0 0 0 900 E
+108 -16 -54 21d21+1080 18d18+18
+1080 1166400
+9 9 2
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+SavingPara: 27
+SavingRod: 27
+SavingPetri: 27
+SavingBreath: 27
+SavingSpell: 27
+E
 #3015
 caçador aventuras~
 o caçador de aventuras~
