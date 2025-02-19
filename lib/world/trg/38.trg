@@ -9,7 +9,7 @@ if %actor.is_pc%
   if %random.5% == 0
     say Ol, tem cards pra trocar comigo?
   else
-    emote confere sua coleo, pra ver que cartas ainda esto faltando.
+    emote confere sua coleção, pra ver que cartas ainda estão faltando.
   end
 end
 ~
@@ -28,11 +28,11 @@ if %direction% != north
 end
 if !%actor.has_item(3803)% && !%actor.eq().vnum(3803)%
   emote barra a sua passagem.
-  say Para entrar aqui, voc ter que comprar o bilhete.
+  say Para entrar aqui, você ter que comprar o bilhete.
   return 0
   halt
 end
-emote toma um bilhete do Museu da sua mo e lhe concede passagem.
+emote toma um bilhete do Museu da sua mão e lhe concede passagem.
 if %actor.has_item(3803)%
   %purge% %actor.inventory(3803)%
 end
