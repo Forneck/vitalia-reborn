@@ -72,7 +72,7 @@ void mobile_activity(void)
 	if (best_obj != NULL) {
 	  obj_from_room(best_obj);
 	  obj_to_char(best_obj, ch);
-	  act("$n gets $p.", FALSE, ch, best_obj, 0, TO_ROOM);
+	  act("$n pega $p.", FALSE, ch, best_obj, 0, TO_ROOM);
 	}
       }
 

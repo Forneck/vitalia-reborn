@@ -121,11 +121,11 @@ static struct map_info_type map_info[] =
   { SECT_WATER_NOSWIM, "\tc[\tb=\tc]\tn" },
   { SECT_FLYING,       "\tc[\tC^\tc]\tn" },
   { SECT_UNDERWATER,   "\tc[\tbU\tc]\tn" },
-  { SECT_CLIMBING,       "\tc[\tC|\tc]\tn"}, /* 10 */
-  { SECT_AIR_FLOW,     "\tc[\tWV\tc]\tn"  },
-  { SECT_QUICKSAND,   "\tc[\tYA\tc]\tn"     },
-  { SECT_LAVA,       "\tc[\tRL\tc]\tn"        },
-  { SECT_ICE,       "\tc[\tCO\tc]\tn"      },
+  { SECT_CLIMBING,     "\tc[\tC|\tc]\tn" }, /* 10 */
+  { SECT_AIR_FLOW,     "\tc[\tWV\tc]\tn" },
+  { SECT_QUICKSAND,    "\tc[\tYA\tc]\tn" },
+  { SECT_LAVA,         "\tc[\tRL\tc]\tn" },
+  { SECT_ICE,          "\tc[\tCO\tc]\tn" },
   { -1,                ""        }, /* 15 */
   { -1,                ""        },
   { -1,                ""        },
@@ -506,14 +506,14 @@ static void perform_map( struct char_data *ch, char *argument, bool worldmap )
 
   count += sprintf(buf + count, "\tn\tn\tn%s Cima\\\\", door_info[NUM_DOOR_TYPES + DOOR_UP].disp);
   count += sprintf(buf + count, "\tn\tn\tn%s Baixo\\\\", door_info[NUM_DOOR_TYPES + DOOR_DOWN].disp);
-  count += sprintf(buf + count, "\tn%s Você\\\\", map_info[SECT_HERE].disp);
+  count += sprintf(buf + count, "\tn%s Voce\\\\", map_info[SECT_HERE].disp);
   count += sprintf(buf + count, "\tn%s Interior\\\\", map_info[SECT_INSIDE].disp);
   count += sprintf(buf + count, "\tn%s Cidade\\\\", map_info[SECT_CITY].disp);
   count += sprintf(buf + count, "\tn%s Campo\\\\", map_info[SECT_FIELD].disp);
   count += sprintf(buf + count, "\tn%s Floresta\\\\", map_info[SECT_FOREST].disp);
   count += sprintf(buf + count, "\tn%s Colinas\\\\", map_info[SECT_HILLS].disp);
   count += sprintf(buf + count, "\tn%s Montanha\\\\", map_info[SECT_MOUNTAIN].disp);
-  count += sprintf(buf + count, "\tn%s Água\\\\", map_info[SECT_WATER_SWIM].disp);
+  count += sprintf(buf + count, "\tn%s Agua\\\\", map_info[SECT_WATER_SWIM].disp);
   count += sprintf(buf + count, "\tn%s Barco\\\\", map_info[SECT_WATER_NOSWIM].disp);
   count += sprintf(buf + count, "\tn%s Voando\\\\", map_info[SECT_FLYING].disp);
   sprintf(buf + count, "\tn%s Mergulhando\\\\", map_info[SECT_UNDERWATER].disp);

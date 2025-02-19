@@ -1245,9 +1245,9 @@ void beware_lightning()
 					/* You can't damage an immortal! */
 					dam = 0;
 				GET_HIT(victim) -= dam;
-				act("KAZAK! um raio atinge $n.  Você escuta um assobio.",
+				act("KAZAK! Um raio atinge $n.  Você escuta um assobio.",
 					TRUE, victim, 0, 0, TO_ROOM);
-				act("KAZAK! um raio atinge você.  Você escuta um assobio.",
+				act("KAZAK! Um raio atinge você.  Você escuta um assobio.",
 					FALSE, victim, 0, 0, TO_CHAR);
 				if (dam > (GET_MAX_HIT(victim) >> 2))
 					act("Isto realmente DOEU!\r\n", FALSE, victim, 0, 0, TO_CHAR);
@@ -1285,7 +1285,7 @@ void beware_lightning()
 
 				if (GET_POS(victim) == POS_DEAD)
 				{
-					sprintf(buf, "Thunderstorm killed %s", GET_NAME(victim));
+					sprintf(buf, "Um raio matou %s", GET_NAME(victim));
 					log1(buf);
 					gain_exp(victim, -(GET_EXP(victim) / 2));
 					if (!IS_NPC(victim))

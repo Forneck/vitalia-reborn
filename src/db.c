@@ -3020,7 +3020,7 @@ void zone_update(void)
 			struct descriptor_data *pt;
 			for (pt = descriptor_list; pt; pt = pt->next)
 				if (IS_PLAYING(pt) && pt->character && PRF_FLAGGED(pt->character, PRF_ZONERESETS))
-					send_to_char(pt->character, "%s[Auto zone reset: %s (Zone %d)]%s",
+					send_to_char(pt->character, "%s[Auto zone reset: %s (Zone %d)]%s\r\n",
 								 CCGRN(pt->character, C_NRM),
 								 zone_table[update_u->zone_to_reset].name,
 								 zone_table[update_u->zone_to_reset].number,
