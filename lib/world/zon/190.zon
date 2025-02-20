@@ -1,7 +1,7 @@
 #190
 Vitalia~
 Os Bosques dos Elfos~
-19000 19099 60 2 j 0 0 0 -1 50
+19000 19099 60 2 j 0 0 0 -1 50 0
 D 0 19001 3 1 	(Entrada para a Floresta dos Elfos)
 M 0 19001 2 19001 	(o Guardião Elfo)
 E 1 19003 10 5 	(uma cota de malha de Mithril)

@@ -202,6 +202,7 @@ rznum = i;
   zone->reset_mode = 2;
   zone->min_level = -1;
   zone->max_level = -1;
+  zone->climate = 0;
 
   for (i=0; i<ZN_ARRAY_MAX; i++)  zone->zone_flags[i] = 0;
 
@@ -380,7 +381,7 @@ int save_zone(zone_rnum zone_num)
     fprintf(zfile, "#%d\n"
                    "%s~\n"
                    "%s~\n"
-                   "%d %d %d %d %s %s %s %s %d %d\n",       /* New tbaMUD data line */
+                   "%d %d %d %d %s %s %s %s %d %d %d\n",       /* New tbaMUD data line */
            zone_table[zone_num].number,
           (zone_table[zone_num].builders && *zone_table[zone_num].builders)
                 ? zone_table[zone_num].builders : "None.",
@@ -392,7 +393,8 @@ int save_zone(zone_rnum zone_num)
           zone_table[zone_num].reset_mode,
           zbuf1, zbuf2, zbuf3, zbuf4,
           zone_table[zone_num].min_level,
-          zone_table[zone_num].max_level
+          zone_table[zone_num].max_level,
+	  zone_table[zone_num].climate
           );
   }
 

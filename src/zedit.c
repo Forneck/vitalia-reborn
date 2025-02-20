@@ -212,6 +212,7 @@ static void zedit_setup(struct descriptor_data *d, int room_num)
 
   zone->min_level = zone_table[OLC_ZNUM(d)].min_level;
   zone->max_level = zone_table[OLC_ZNUM(d)].max_level;
+  zone->climate = zone_table[OLC_ZNUM(d)].climate;
 
   /* Start the reset command list with a terminator. */
   CREATE(zone->cmd, struct reset_com, 1);
@@ -350,6 +351,8 @@ static void zedit_save_internally(struct descriptor_data *d)
     zone_table[OLC_ZNUM(d)].lifespan = OLC_ZONE(d)->lifespan;
     zone_table[OLC_ZNUM(d)].min_level = OLC_ZONE(d)->min_level;
     zone_table[OLC_ZNUM(d)].max_level = OLC_ZONE(d)->max_level;
+    zone_table[OLC_ZNUM(d)].climate = OLC_ZONE(d)->climate;
+
     for (i=0; i<ZN_ARRAY_MAX; i++)
       zone_table[OLC_ZNUM(d)].zone_flags[(i)] = OLC_ZONE(d)->zone_flags[(i)];
   }
@@ -409,6 +412,15 @@ static bool zedit_get_levels(struct descriptor_data *d, char *buf)
   return TRUE;
 }
 
+static bool zedit_get_climate(struct descriptor_data *d, char *buf)
+{                                                                             /* Create a string for the recommended levels for this zone. */             if (OLC_ZONE(d)->climate == -1) {
+	sprintf(buf, "<Not Set!>");
+	return FALSE;}                                                                                                                                    if (OLC_ZONE(d)->climate) {
+    sprintf(buf, "Clima: %d", OLC_ZONE(d)->climate);
+    return TRUE;
+  }                                                                         
+}
+
 /*------------------------------------------------------------------*/
 /* Menu functions */
 /* the main menu */
@@ -434,7 +446,8 @@ static void zedit_disp_menu(struct descriptor_data *d)
 	  "%sT%s) Top of zone    : %s%d\r\n"
 	  "%sR%s) Reset Mode     : %s%s\r\n"
 	  "%sF%s) Zone Flags     : %s%s\r\n"
-	  "%sM%s) Level Range    : %s%s%s\r\n"
+	  "%sM%s) Level Range    : %s%s\r\n"
+	  "%sC%s) Climate        : %s%d%s\r\n"
 	  "[Command list]\r\n",
 
 	  cyn, OLC_NUM(d), nrm,
@@ -448,6 +461,7 @@ static void zedit_disp_menu(struct descriptor_data *d)
 	  OLC_ZONE(d)->reset_mode ? ((OLC_ZONE(d)->reset_mode == 1) ? "Reset when no players are in zone." : "Normal reset.") : "Never reset",
 	  grn, nrm, cyn, buf1,
 	  grn, nrm, levels_set ? cyn : yel, lev_string,
+          grn, nrm, cyn, OLC_ZONE(d)->climate,
 	  nrm
 	  );
 
@@ -722,6 +736,8 @@ static void zedit_disp_levels(struct descriptor_data *d)
 	);
   OLC_MODE(d) = ZEDIT_LEVELS;
 }
+
+
 
 /* The event handler */
 void zedit_parse(struct descriptor_data *d, char *arg)

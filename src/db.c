@@ -2539,8 +2539,8 @@ static void load_zones(FILE * fl, char *zonename)
 
 	line_num += get_line(fl, buf);
 	/* Look for 10 items first (new tbaMUD), if not found, try 4 (old tbaMUD) */
-	if (sscanf(buf, " %hd %hd %d %d %s %s %s %s %d %d", &Z.bot, &Z.top, &Z.lifespan,
-			   &Z.reset_mode, zbuf1, zbuf2, zbuf3, zbuf4, &Z.min_level, &Z.max_level) != 10)
+	if (sscanf(buf, " %hd %hd %d %d %s %s %s %s %d %d %d", &Z.bot, &Z.top, &Z.lifespan,
+			   &Z.reset_mode, zbuf1, zbuf2, zbuf3, zbuf4, &Z.min_level, &Z.max_level, &Z.climate) != 11)
 	{
 		if (sscanf(buf, " %hd %hd %d %d ", &Z.bot, &Z.top, &Z.lifespan, &Z.reset_mode) != 4)
 		{
@@ -2565,10 +2565,11 @@ static void load_zones(FILE * fl, char *zonename)
 		/* We only found 4 values, so set 'defaults' for the ones not found */
 		Z.min_level = -1;
 		Z.max_level = -1;
+		Z.climate = 0;
 	}
 	else
 	{
-		/* We found 10 values, so deal with the strings */
+		/* We found 11 values, so deal with the strings */
 		Z.zone_flags[0] = asciiflag_conv(zbuf1);
 		Z.zone_flags[1] = asciiflag_conv(zbuf2);
 		Z.zone_flags[2] = asciiflag_conv(zbuf3);
@@ -2579,11 +2580,6 @@ static void load_zones(FILE * fl, char *zonename)
 		log1("SYSERR: Zone %d bottom (%d) > top (%d).", Z.number, Z.bot, Z.top);
 		exit(1);
 	}
-	
-	/* Load the zone climate,if not found will be de global one */
-	line_num += get_line(fl, buf);
-	if (sscanf(buf, "%d", &Z.climate) != 1)
-        zone_fix = TRUE;
 	
 	cmd_no = 0;
 
