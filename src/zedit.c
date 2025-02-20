@@ -412,13 +412,15 @@ static bool zedit_get_levels(struct descriptor_data *d, char *buf)
   return TRUE;
 }
 
-static bool zedit_get_climate(struct descriptor_data *d, char *buf)
-{                                                                             /* Create a string for the recommended levels for this zone. */             if (OLC_ZONE(d)->climate == -1) {
-	sprintf(buf, "<Not Set!>");
-	return FALSE;}                                                                                                                                    if (OLC_ZONE(d)->climate) {
-    sprintf(buf, "Clima: %d", OLC_ZONE(d)->climate);
-    return TRUE;
-  }                                                                         
+static void zedit_disp_clim_menu(struct descriptor_data *d)
+{
+  clear_screen(d);                                                            column_list(d->character, 0, climate_types, NUM_CLIM_FLAGS, TRUE);
+  
+  write_to_output(d, "\r\nClima: \tc%s\tn\r\n"
+         "Entre com o Clima, 0 to quit : ",nrm);
+  OLC_MODE(d) = ZEDIT_ZONE_CLIMATE;
+
+                                                                           
 }
 
 /*------------------------------------------------------------------*/
@@ -865,6 +867,10 @@ void zedit_parse(struct descriptor_data *d, char *arg)
       /*** Edit zone level restrictions (sub-menu) ***/
       zedit_disp_levels(d);
       break;
+    case 'c':
+    case 'C':
+      zedit_disp_clim_menu(d);
+      break;
     default:
       zedit_disp_menu(d);
       break;
@@ -1279,6 +1285,25 @@ void zedit_parse(struct descriptor_data *d, char *arg)
     OLC_ZONE(d)->number = 1;
     zedit_disp_menu(d);
     break;
+
+/*-------------------------------------------------------------------*/
+  case ZEDIT_ZONE_CLIMATE:
+    number = atoi(arg);
+    if (number < 0 || number > NUM_CLIM_FLAGS) {
+      write_to_output(d, "That is not a valid choice!\r\n");
+      zedit_disp_clim_menu(d);
+    } else if (number == 0) {
+       zedit_disp_menu(d);
+       break;
+    }
+    else {
+      OLC_ZONE(d)->climate = number - 1;
+    OLC_ZONE(d)->number = 1;
+    zedit_disp_menu(d);
+    }
+    break;
+    
+/*-------------------------------------------------------------------*/
   default:
     /* We should never get here, but just in case... */
     cleanup_olc(d, CLEANUP_ALL);

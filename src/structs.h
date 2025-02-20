@@ -601,7 +601,6 @@
 #define SKY_LIGHTNING  3  /**< Weather = Lightning storm */
 #define SKY_SNOWING 4
 
-#define CLIM_DEFAULT -1
 #define CLIM_NEUTRAL 0
 #define CLIM_WINDY 1
 #define CLIM_RAINY 2

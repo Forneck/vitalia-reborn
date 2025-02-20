@@ -247,6 +247,7 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define ZEDIT_LEVELS            23
 #define ZEDIT_LEV_MIN           24
 #define ZEDIT_LEV_MAX           25
+#define ZEDIT_ZONE_CLIMATE      26
 
 /* Submodes of MEDIT connectedness. */
 #define MEDIT_MAIN_MENU            	0
