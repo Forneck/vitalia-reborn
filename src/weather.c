@@ -89,7 +89,7 @@ static void another_hour(int mode)
  */  
 static void weather_change(void)
 {
-  int diff, change;
+  int diff, press_diff;
     weather_info.before = weather_info.sky;
     
   if ((time_info.month >= 9) && (time_info.month <= 16))
@@ -97,67 +97,67 @@ static void weather_change(void)
   else
     diff = (weather_info.pressure > 1015 ? -2 : 2);
 
-  weather_info.change += (dice(1, 4) * diff + dice(2, 6) - dice(2, 6));
+  weather_info.press_diff += (dice(1, 4) * diff + dice(2, 6) - dice(2, 6));
 
-  weather_info.change = MIN(weather_info.change, 12);
-  weather_info.change = MAX(weather_info.change, -12);
+  weather_info.press_diff = MIN(weather_info.press_diff, 12);
+  weather_info.press_diff = MAX(weather_info.press_diff, -12);
 
-  weather_info.pressure += weather_info.change;
+  weather_info.pressure += weather_info.press_diff;
 
   weather_info.pressure = MIN(weather_info.pressure, 1040);
   weather_info.pressure = MAX(weather_info.pressure, 960);
 
-  change = 0;
+  press_diff = 0;
 
   switch (weather_info.sky) {
   case SKY_CLOUDLESS:
     if (weather_info.pressure < 990)
-      change = 1;
+      press_diff = 1;
     else if (weather_info.pressure < 1010)
       if (dice(1, 4) == 1)
-	change = 1;
+	press_diff = 1;
     break;
   case SKY_CLOUDY:
     if (weather_info.pressure < 970)
-      change = 2;
+      press_diff = 2;
     else if (weather_info.pressure < 990) {
       if (dice(1, 4) == 1)
-	change = 2;
+	press_diff = 2;
       else
-	change = 0;
+	press_diff = 0;
     } else if (weather_info.pressure > 1030)
       if (dice(1, 4) == 1)
-	change = 3;
+	press_diff = 3;
 
     break;
   case SKY_RAINING:
     if (weather_info.pressure < 970) {
       if (dice(1, 4) == 1)
-	change = 4;
+	press_diff = 4;
       else
-	change = 0;
+	press_diff = 0;
     } else if (weather_info.pressure > 1030)
-      change = 5;
+      press_diff = 5;
     else if (weather_info.pressure > 1010)
       if (dice(1, 4) == 1)
-	change = 5;
+	press_diff = 5;
 
     break;
   case SKY_LIGHTNING:
     if (weather_info.pressure > 1010)
-      change = 6;
+      press_diff = 6;
     else if (weather_info.pressure > 990)
       if (dice(1, 4) == 1)
-	change = 6;
+	press_diff = 6;
 
     break;
   default:
-    change = 0;
+    press_diff = 0;
     weather_info.sky = SKY_CLOUDLESS;
     break;
   }
 
-  switch (change) {
+  switch (press_diff) {
   case 0:
     break;
   case 1:
@@ -188,4 +188,6 @@ static void weather_change(void)
     break;
   }
 }
+
+
 

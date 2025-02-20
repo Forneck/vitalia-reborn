@@ -599,7 +599,7 @@
 #define SKY_CLOUDY     1  /**< Weather = Cloudy */
 #define SKY_RAINING    2  /**< Weather = Rain */
 #define SKY_LIGHTNING  3  /**< Weather = Lightning storm */
-#define SKY_SNOWING 4
+#define SKY_SNOWING 4 /**< Weather = Snowing */
 
 #define CLIM_NEUTRAL 0
 #define CLIM_WINDY 1
@@ -1397,16 +1397,16 @@ struct nighthammer_data {
 
 /** Stores, and used to deliver, the current weather information
  * in the mud world. */
-struct weather_data
-{
-  int temperature;		/* How is the temperature ( C )	 */
-  int pressure; /**< How is the pressure ( Mb )? */
-  int change; /**< How fast and what way does it change? */
-  int sky; /**< How is the sky? */
-  int before; /* How was the sky.			 */
-  int sunlight; /**< And how much sun? */
-  float humidity;
-  float winds;
+struct weather_data {
+  int temperature;  /* Temperatura atual (°C) */
+  int temp_diff;    /* Variação de temperatura */
+  int pressure;     /* Pressão atmosférica (Mb) */
+  int press_diff;   /* Variação da pressão */
+  float humidity;   /* Umidade relativa (%) */
+  float winds;      /* Velocidade do vento */
+  int sky;          /* Estado do céu (claro, nublado, chovendo, etc.) */
+  int before;       /* Estado anterior do céu */
+  int sunlight;     /* Intensidade da luz solar */
 };
 
 /** Element in monster and object index-tables.

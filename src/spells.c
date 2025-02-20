@@ -609,7 +609,7 @@ ASPELL(spell_control_weather)
   	return;}
   	else{
     change = 1; /* this will increase weather_info.sky by one, making it worse */
-    weather_info.change -= dice(1, 6); /* weather_info.change being lower will slightly bias future natural weather shifts towards worse weather */
+    weather_info.press_diff -= dice(1, 6); /* weather_info.change being lower will slightly bias future natural weather shifts towards worse weather */
   	}
   } else if (is_abbrev(arg, "melhor"))
   {
@@ -618,7 +618,7 @@ ASPELL(spell_control_weather)
   	return;}
   	else{
     change = -1; /* this will decrease weather_info.sky by one, making it better */
-    weather_info.change += dice(1, 6); /* weather_info.change being higher will slightly bias future natural weather shifts towards better weather */
+    weather_info.press_diff += dice(1, 6); /* weather_info.change being higher will slightly bias future natural weather shifts towards better weather */
   	}
   }
   else 

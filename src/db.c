@@ -949,6 +949,8 @@ log1("Sorting command list.");
 		log1("Resetting #%d: %s (rooms %d-%d).", zone_table[i].number,
 			zone_table[i].name, zone_table[i].bot, zone_table[i].top);
 		reset_zone(i);
+		log1("Inicializando clima da zona #%d: %s. (Clima %d)",zone_table[i].number,zone_table[i].name,zone_table[i].climate);
+		zone_table[i].weather = &climates[zone_table[i].climate];
 	}
 
 	reset_q.head = reset_q.tail = NULL;
@@ -3346,6 +3348,7 @@ void reset_zone(zone_rnum zone)
 			reset_wtrigger(&world[rrnum]);
 		rvnum++;
 	}
+	
 }
 
 	/* for use in reset_zone; return TRUE if zone 'nr' is free of PC's */
@@ -4845,3 +4848,5 @@ void load_config(void)
 
 	fclose(fl);
 }
+
+

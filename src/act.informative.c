@@ -1326,12 +1326,12 @@ ACMD(do_weather)
 	if (OUTSIDE(ch))
 	{
 		send_to_char(ch, " O céu está %s e %s.\r\n ", sky_look[weather_info.sky],
-					 weather_info.change >= 0 ? "você sente um vento quente vindo do sul" :
+					 weather_info.press_diff >= 0 ? "você sente um vento quente vindo do sul" :
 					 "seu pé lhe diz que um tempo ruim se aproxima");
 		if (GET_LEVEL(ch) >= LVL_GOD)
 			send_to_char(ch, " Pressão: %d(mudança: %d), Céu: %d(%s) \r\n ",
 						 weather_info.pressure,
-						 weather_info.change, weather_info.sky, sky_look[weather_info.sky]);
+						 weather_info.press_diff, weather_info.sky, sky_look[weather_info.sky]);
 	}
 	else
 		send_to_char(ch, " Você não tem idéia de como o tempo possa estar.\r\n ");
