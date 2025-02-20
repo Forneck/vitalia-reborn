@@ -19,7 +19,7 @@
 #include "fight.h"
 
 static void another_hour(int mode);
-static void weather_change(void);
+static void weather_change(zone_rnum zone);
 
 /** Call this function every mud hour to increment the gametime (by one hour)
  * and the weather patterns.
@@ -30,9 +30,12 @@ static void weather_change(void);
  */
 void weather_and_time(int mode)
 {
+  int i;
   another_hour(mode);
   if (mode)
-    weather_change();
+    for (i=0;i<top_of_zone_table;i++){
+       weather_change(zone_table[i].number);
+    }
 }
 
 /** Increment the game time by one hour (no matter what) and display any time 
@@ -87,73 +90,73 @@ static void another_hour(int mode)
  * @todo There are some hard coded values that could be extracted to make
  * customizing the weather patterns easier.
  */  
-static void weather_change(void)
+static void weather_change(zone_rnum zone)
 {
-  int diff, press_diff;
-    weather_info.before = weather_info.sky;
+  int diff, meant, meanp, sim_pressure,press_diff;
+  zone_table[zone].weather->before = zone_table[zone].weather->sky;
     
   if ((time_info.month >= 9) && (time_info.month <= 16))
-    diff = (weather_info.pressure > 985 ? -2 : 2);
+    diff = (zone_table[zone].weather->pressure > 985 ? -2 : 2);
   else
-    diff = (weather_info.pressure > 1015 ? -2 : 2);
+    diff = (zone_table[zone].weather->pressure > 1015 ? -2 : 2);
 
-  weather_info.press_diff += (dice(1, 4) * diff + dice(2, 6) - dice(2, 6));
+  zone_table[zone].weather->press_diff += (dice(1, 4) * diff + dice(2, 6) - dice(2, 6));
 
-  weather_info.press_diff = MIN(weather_info.press_diff, 12);
-  weather_info.press_diff = MAX(weather_info.press_diff, -12);
+  zone_table[zone].weather->press_diff = MIN(zone_table[zone].weather->press_diff, 12);
+  zone_table[zone].weather->press_diff = MAX(zone_table[zone].weather->press_diff, -12);
 
-  weather_info.pressure += weather_info.press_diff;
+  zone_table[zone].weather->pressure += zone_table[zone].weather->press_diff;
 
-  weather_info.pressure = MIN(weather_info.pressure, 1040);
-  weather_info.pressure = MAX(weather_info.pressure, 960);
+  zone_table[zone].weather->pressure = MIN(zone_table[zone].weather->pressure, 1040);
+  zone_table[zone].weather->pressure = MAX(zone_table[zone].weather->pressure, 960);
 
   press_diff = 0;
 
-  switch (weather_info.sky) {
+  switch (zone_table[zone].weather->sky) {
   case SKY_CLOUDLESS:
-    if (weather_info.pressure < 990)
+    if (zone_table[zone].weather->pressure < 990)
       press_diff = 1;
-    else if (weather_info.pressure < 1010)
+    else if (zone_table[zone].weather->pressure < 1010)
       if (dice(1, 4) == 1)
 	press_diff = 1;
     break;
   case SKY_CLOUDY:
-    if (weather_info.pressure < 970)
+    if (zone_table[zone].weather->pressure < 970)
       press_diff = 2;
-    else if (weather_info.pressure < 990) {
+    else if (zone_table[zone].weather->pressure < 990) {
       if (dice(1, 4) == 1)
 	press_diff = 2;
       else
 	press_diff = 0;
-    } else if (weather_info.pressure > 1030)
+    } else if (zone_table[zone].weather->pressure > 1030)
       if (dice(1, 4) == 1)
 	press_diff = 3;
 
     break;
   case SKY_RAINING:
-    if (weather_info.pressure < 970) {
+    if (zone_table[zone].weather->pressure < 970) {
       if (dice(1, 4) == 1)
 	press_diff = 4;
       else
 	press_diff = 0;
-    } else if (weather_info.pressure > 1030)
+    } else if (zone_table[zone].weather->pressure > 1030)
       press_diff = 5;
-    else if (weather_info.pressure > 1010)
+    else if (zone_table[zone].weather->pressure > 1010)
       if (dice(1, 4) == 1)
 	press_diff = 5;
 
     break;
   case SKY_LIGHTNING:
-    if (weather_info.pressure > 1010)
+    if (zone_table[zone].weather->pressure > 1010)
       press_diff = 6;
-    else if (weather_info.pressure > 990)
+    else if (zone_table[zone].weather->pressure > 990)
       if (dice(1, 4) == 1)
 	press_diff = 6;
 
     break;
   default:
     press_diff = 0;
-    weather_info.sky = SKY_CLOUDLESS;
+    zone_table[zone].weather->sky = SKY_CLOUDLESS;
     break;
   }
 
@@ -162,27 +165,27 @@ static void weather_change(void)
     break;
   case 1:
     send_to_outdoor("O ceu comeca a ficar nublado.\r\n");
-    weather_info.sky = SKY_CLOUDY;
+    zone_table[zone].weather->sky = SKY_CLOUDY;
     break;
   case 2:
     send_to_outdoor("A chuva comeca a cair.\r\n");
-    weather_info.sky = SKY_RAINING;
+    zone_table[zone].weather->sky = SKY_RAINING;
     break;
   case 3:
     send_to_outdoor("As nuvens desaparecem.\r\n");
-    weather_info.sky = SKY_CLOUDLESS;
+    zone_table[zone].weather->sky = SKY_CLOUDLESS;
     break;
   case 4:
   send_to_outdoor("Relampagos comecam a iluminar o ceu.\r\n");
-    weather_info.sky = SKY_LIGHTNING;
+    zone_table[zone].weather->sky = SKY_LIGHTNING;
     break;
   case 5:
     send_to_outdoor("A chuva parou.\r\n");
-    weather_info.sky = SKY_CLOUDY;
+    zone_table[zone].weather->sky = SKY_CLOUDY;
     break;
   case 6:
     send_to_outdoor("Os relampagos param.\r\n");
-    weather_info.sky = SKY_RAINING;
+    zone_table[zone].weather->sky = SKY_RAINING;
     break;
   default:
     break;
