@@ -2764,18 +2764,6 @@ Example: @RTSTAT 23612, 13495@n
 
 See also: REMOTE
 #101
-MAGIA-CONTROL-WEATHER
-
-Usage       : cast 'control weather' <'better' | 'worse'>
-Accumulative: Yes
-
-This spell will change the "course" of the current weather.
-
-Example:
-
-  > cast 'control wea' worse
-See also: %WEATHER%, WEATHER
-#101
 COPYOVERS
 
 Usage: copyover
@@ -5908,16 +5896,38 @@ Veja Tambem: MAGIA-LIGHTNING-BOLT
 #1
 MAGIA-CONTROL-WEATHER
 
-Uso        : cast 'control weather' <'better' | 'worse'>
+Uso: cast 'control weather' <propriedade>=<aumentar|diminuir>
 Acumulativa: Sim
-Duracao    : -
-Nivel      : Clerigo Nivel 26, Druida Nivel 55
+Duracao: -
+Nivel: Clerigo 26, Druida 55
 
-Esta magia muda as condicoes climaticas atuais.
+A magia Control Weather permite ao conjurador influenciar as condicoes
+climaticas da regiao. O efeito nao e imediato, mas altera gradualmente
+o clima ao longo do tempo.
 
-Exemplo:
+Parametros:
 
-  > cast 'control weather' worse
+pressao=aumentar|diminuir - Influencia a formacao de tempestades e 
+mudancas bruscas no clima.
+
+temperatura=aumentar|diminuir - Torna o ambiente mais quente ou mais frio.
+
+vento=aumentar|diminuir - Aumenta ou reduz a intensidade dos ventos.
+
+umidade=aumentar|diminuir - Torna o ar mais seco ou mais umido, afetando
+a possibilidade de chuva.
+
+
+Exemplo de uso:
+
+> cast 'control weather' pressao=aumentar
+
+Embora esta magia possa alterar significativamente o clima ao longo do
+tempo, os efeitos nao sao instantaneos. Se deseja mudancas climaticas
+imediatas, sera necessario lancar a magia varias vezes ou combinar
+diferentes modificacoes no ambiente.
+
+Veja tambem: WEATHER, TIME
 #1
 MAGIA-CREATE-FOOD
 
