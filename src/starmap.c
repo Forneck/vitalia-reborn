@@ -136,7 +136,7 @@ void look_at_sky(struct char_data *ch)
 
   send_to_char(ch, "Você olha para o ceu e vê:\r\n");
 
-  if (weather_info.sky != SKY_CLOUDLESS && GET_LEVEL(ch) < LVL_IMMORT) {
+  if (zone_table[world[IN_ROOM(ch)].zone].weather->sky != SKY_CLOUDLESS && GET_LEVEL(ch) < LVL_IMMORT) {
     send_to_char(ch, "Nuvens! Tente novamente quando o ceu estiver mais limpo.\r\n");
     return;
   }

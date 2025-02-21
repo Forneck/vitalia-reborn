@@ -1205,122 +1205,108 @@ void perform_violence(void)
 }
 
 	/* ported from Eltanin by AxL, 2feb97 */
-	/* added by Miikka M. Kangas 8-14-91 (note this is called with own
-	   pulses!) * / /* I was getting bored so I wanted to add some edge to
+	/* added by Miikka M. Kangas 8-14-91 (note this is called with ownpulses!)I was getting bored so I wanted to add some edge to
 	   weather.  */
-void beware_lightning()
-{
+void beware_lightning() {
 	int dam = 0;
 	struct char_data *victim = NULL, *temp = NULL;
 	char buf[256];
-	if (!(weather_info.sky == SKY_LIGHTNING))
-		return;					/* go away if its not even stormy! */
-	if (!(rand_number(0, 9) == 0))
-		return;					/* Bolt only 10% of time */
-	if (rand_number(0, 99) == 0)
-	{							/* nobody targeted 99% */
-		send_to_outdoor("Você ouve o ronco do trovão.\n\r");
-		return;
-	}
 
-	for (victim = character_list; victim; victim = temp)
-	{
-		temp = victim->next;
+    // Itera por todas as zonas
+   for (int zone = 0; zone < top_of_zone_table; zone++) {
+    if (zone_table[zone].weather->sky != SKY_LIGHTNING)
+        continue; // Pula para a próxima zona se não estiver relampejando
 
-		// if ((OUTSIDE(victim) == TRUE) && (!IS_NPC(victim)))
-		if (OUTSIDE(victim) == TRUE)
-		{						/* PCs only */
-			if ((rand_number(0, 9) == 0))
-			{					/* hit 1% */
-				/* damage routine here */
+    if (rand_number(0, 9) != 0)
+        continue; // Raio cai apenas 10% das vezes
 
-				dam = dice(1, (GET_MAX_HIT(victim) * 2));
-				if (IS_AFFECTED(victim, AFF_SANCTUARY))
-					dam = MIN(dam, 18);	/* Max 18 damage when sanctuary */
-				if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
-					dam = MIN(dam, 33);	/* Max 33 damage when gloomshield */
-				dam = MIN(dam, 100);	/* no more than 100 hp per round */
-				dam = MAX(dam, 0);	/* no less than 0 hp per round */
-				if ((GET_LEVEL(victim) >= LVL_IMMORT))
-					/* You can't damage an immortal! */
-					dam = 0;
-				GET_HIT(victim) -= dam;
-				act("KAZAK! Um raio atinge $n.  Você escuta um assobio.",
-					TRUE, victim, 0, 0, TO_ROOM);
-				act("KAZAK! Um raio atinge você.  Você escuta um assobio.",
-					FALSE, victim, 0, 0, TO_CHAR);
-				if (dam > (GET_MAX_HIT(victim) >> 2))
-					act("Isto realmente DOEU!\r\n", FALSE, victim, 0, 0, TO_CHAR);
-				send_to_outdoor("*BOOM*  Você escuta o ronco do trovão.\n\r");
-				update_pos(victim);
-				switch (GET_POS(victim))
-				{
-				case POS_MORTALLYW:
-					act("$n está mortalmente ferid$r, e vai morrer logo, se não for medicad$r.",
-						TRUE, victim, 0, 0, TO_ROOM);
-					act("Você está mortalmente ferid$r, e vai morrer logo, se não medicad$r.",
-						FALSE, victim, 0, 0, TO_CHAR);
-					break;
-				case POS_INCAP:
-					act("$n está incapacitad$r e vai morrer lentamente, se não for medicad$r.",
-						TRUE, victim, 0, 0, TO_ROOM);
-					act("Você está incapacitad$r e vai morrer lentamente, se não for medicad$r.", FALSE, victim, 0, 0, TO_CHAR);
-					break;
-				case POS_STUNNED:
-					act("$n está atordoad$r, mas provavelmente irá recuperar a consciência novamente.", TRUE, victim, 0, 0, TO_ROOM);
-					act("Você está atordoad$r, mas provavelmente irá recuperar a consciência novamente.", FALSE, victim, 0, 0, TO_CHAR);
-					break;
-				case POS_DEAD:
-					act("$n está mort$r!  R.I.P.", TRUE, victim, 0, 0, TO_ROOM);
-					act("Você está mort$r!  Sinto muito...\r\n", FALSE, victim, 0, 0, TO_CHAR);
-					break;
-				default:		/* >= POS_SLEEPING */
-					if (GET_HIT(victim) < (GET_MAX_HIT(victim) >> 2))
-					{
-						act("Você espera que seus ferimentos parem de SANGRAR tanto!",
-							FALSE, victim, 0, 0, TO_CHAR);
-					}			/* if BLEEDING */
-					break;
-				}				/* switch */
+    if (rand_number(0, 99) == 0) { // 99% das vezes, apenas trovão
+        send_to_zone_outdoor(zone, "Voce ouve o ronco do trovao.\n\r");
+        continue;
+    }
 
-				if (GET_POS(victim) == POS_DEAD)
-				{
-					sprintf(buf, "Um raio matou %s", GET_NAME(victim));
-					log1(buf);
-					gain_exp(victim, -(GET_EXP(victim) / 2));
-					if (!IS_NPC(victim))
-					{
-						REMOVE_BIT_AR(PLR_FLAGS(victim), PLR_KILLER);
-						REMOVE_BIT_AR(PLR_FLAGS(victim), PLR_THIEF);
-					}
-					if (FIGHTING(victim))
-						stop_fighting(victim);
-					while (victim->affected)
-						affect_remove(victim, victim->affected);
-					/* To make ordinary commands work in scripts. welcor */
-					GET_POS(victim) = POS_STANDING;
-					death_cry(victim);
-					/* Alert Group if Applicable */
-					if (GROUP(victim))
-						send_to_group(victim, GROUP(victim), "%s morreu.\r\n", GET_NAME(victim));
-					update_pos(victim);
-					make_corpse(victim);
-					extract_char(victim);
-				}				/* of death */
-				return;
-			}
-			else
-			{					/* number(0,10) */
-				act("KAZAK! um raio atinge perto.", FALSE, victim, 0, 0, TO_ROOM);
-				act("KAZAK! um raio atinge perto.", FALSE, victim, 0, 0, TO_CHAR);
-				send_to_outdoor("*BOOM*  Você escuta o ronco do trovão.\n\r");
-				return;			/* only 1 bolt at a time */
-			}
-		}						/* if outside=true */
-	}							/* of for victim hunt */
-}								/* of procedure */
+    for (victim = character_list; victim; victim = temp) {
+        temp = victim->next;
 
-	/* -- jr - 24/08/99 * Weapon Proficiencies -- (C) 1999 by Fabrizio Baldi */
+        if (OUTSIDE(victim) == TRUE) { // Apenas personagens ao ar livre
+            if (rand_number(0, 9) == 0) { // 1% de chance de acertar alguém
+                dam = dice(1, (GET_MAX_HIT(victim) * 2));
+                if (IS_AFFECTED(victim, AFF_SANCTUARY))
+                    dam = MIN(dam, 18);
+                if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
+                    dam = MIN(dam, 33);
+                dam = MIN(dam, 100);
+                dam = MAX(dam, 0);
+                if (GET_LEVEL(victim) >= LVL_IMMORT)
+                    dam = 0; // Imortais não são afetados
+
+                GET_HIT(victim) -= dam;
+
+                act("KAZAK! Um raio atinge $n. Voce escuta um assobio.", TRUE, victim, 0, 0, TO_ROOM);
+                act("KAZAK! Um raio atinge voce. Voce escuta um assobio.", FALSE, victim, 0, 0, TO_CHAR);
+
+                if (dam > (GET_MAX_HIT(victim) >> 2))
+                    act("Isto realmente DOEU!\r\n", FALSE, victim, 0, 0, TO_CHAR);
+
+                send_to_zone_outdoor(zone, "*BOOM* Voce escuta o ronco do trovao.\n\r");
+
+                update_pos(victim);
+
+                switch (GET_POS(victim)) {
+                    case POS_MORTALLYW:
+                        act("$n esta mortalmente ferid$r, e vai morrer logo, se nao for medicad$r.", TRUE, victim, 0, 0, TO_ROOM);
+                        act("Voce esta mortalmente ferid$r, e vai morrer logo, se nao medicad$r.", FALSE, victim, 0, 0, TO_CHAR);
+                        break;
+                    case POS_INCAP:
+                        act("$n esta incapacitad$r e vai morrer lentamente, se nao for medicad$r.", TRUE, victim, 0, 0, TO_ROOM);
+                        act("Voce esta incapacitad$r e vai morrer lentamente, se nao for medicad$r.", FALSE, victim, 0, 0, TO_CHAR);
+                        break;
+                    case POS_STUNNED:
+                        act("$n esta atordoad$r, mas provavelmente ira recuperar a consciencia novamente.", TRUE, victim, 0, 0, TO_ROOM);
+                        act("Voce esta atordoad$r, mas provavelmente ira recuperar a consciencia novamente.", FALSE, victim, 0, 0, TO_CHAR);
+                        break;
+                    case POS_DEAD:
+                        act("$n esta mort$r! R.I.P.", TRUE, victim, 0, 0, TO_ROOM);
+                        act("Voce esta mort$r! Sinto muito...\r\n", FALSE, victim, 0, 0, TO_CHAR);
+                        break;
+                    default:
+                        if (GET_HIT(victim) < (GET_MAX_HIT(victim) >> 2))
+                            act("Voce espera que seus ferimentos parem de SANGRAR tanto!", FALSE, victim, 0, 0, TO_CHAR);
+                        break;
+                }
+
+                if (GET_POS(victim) == POS_DEAD) {
+                    sprintf(buf, "Um raio matou %s", GET_NAME(victim));
+                    log1(buf);
+                    gain_exp(victim, -(GET_EXP(victim) / 2));
+                    if (!IS_NPC(victim)) {
+                        REMOVE_BIT_AR(PLR_FLAGS(victim), PLR_KILLER);
+                        REMOVE_BIT_AR(PLR_FLAGS(victim), PLR_THIEF);
+                    }
+                    if (FIGHTING(victim))
+                        stop_fighting(victim);
+                    while (victim->affected)
+                        affect_remove(victim, victim->affected);
+
+                    GET_POS(victim) = POS_STANDING;
+                    death_cry(victim);
+                    if (GROUP(victim))
+                        send_to_group(victim, GROUP(victim), "%s morreu.\r\n", GET_NAME(victim));
+                    update_pos(victim);
+                    make_corpse(victim);
+                    extract_char(victim);
+                }
+            } else {
+                act("KAZAK! Um raio atinge perto.", FALSE, victim, 0, 0, TO_ROOM);
+                act("KAZAK! Um raio atinge perto.", FALSE, victim, 0, 0, TO_CHAR);
+                send_to_zone_outdoor(zone, "*BOOM* Voce escuta o ronco do trovao.\n\r");
+                continue; // Continua verificando outros personagens
+            }
+        }
+    }
+ }
+}
+/* -- jr - 24/08/99 * Weapon Proficiencies -- (C) 1999 by Fabrizio Baldi */
 
 int get_weapon_prof(struct char_data *ch, struct obj_data *wield)
 {
