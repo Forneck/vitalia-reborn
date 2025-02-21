@@ -585,61 +585,110 @@ ASPELL(spell_detect_poison)
 
 ASPELL(spell_control_weather)
 {
-   int change = -1; 
-   char arg[MAX_INPUT_LENGTH] = {'\0'};
-   //zone_rnum i;
-
+  int change_val;
+  char arg[MAX_INPUT_LENGTH] = {'\0'};
+  char property[MAX_INPUT_LENGTH] = {'\0'};
+  char direction[MAX_INPUT_LENGTH] = {'\0'};
+  char *eq_ptr;
+  zone_rnum zone;
+  /* Verifica se o caster é um NPC ou não possui descriptor */
   if (IS_NPC(ch) || !ch->desc)
     return;
-  
-   /* Control Weather fails if you aren't outside */
-   if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_INDOORS))
-   {
-        send_to_char(ch, "Por mais que tente, voce nao consegue controlar o clima.\r\n");
-        act("Um brilho de luz aparece brevemente com a magia de $n antes de desaparecer.", TRUE, ch, 0, 0, TO_ROOM);
-        return;
-    }
 
-  one_argument(cast_arg2, arg); /* Thanks Zusuk! */
-
-  if (is_abbrev(arg, "pior"))
-  {
- 	if (weather_info.sky == SKY_LIGHTNING) {
-  	send_to_char(ch, "Voce nao consegue piorar o tempo mais do que isso!");
-  	return;}
-  	else{
-    change = 1; /* this will increase weather_info.sky by one, making it worse */
-    weather_info.press_diff -= dice(1, 6); /* weather_info.change being lower will slightly bias future natural weather shifts towards worse weather */
-  	}
-  } else if (is_abbrev(arg, "melhor"))
-  {
-  	if (weather_info.sky == SKY_CLOUDLESS){
-  	send_to_char(ch, "Voce nao consegue melhorar o tempo mais do que isso!");
-  	return;}
-  	else{
-    change = -1; /* this will decrease weather_info.sky by one, making it better */
-    weather_info.press_diff += dice(1, 6); /* weather_info.change being higher will slightly bias future natural weather shifts towards better weather */
-  	}
-  }
-  else 
-  {
-    send_to_char(ch, "Voce precisa lancar esta magia com 'melhor' ou 'pior' para ter sucesso!\r\n");
+  /* Control Weather falha se o personagem estiver dentro */
+  if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_INDOORS)) {
+    send_to_char(ch, "Por mais que tente, você não consegue controlar o clima estando dentro.\r\n");
+    act("Um brilho de luz aparece brevemente com a magia de $n antes de desaparecer.", TRUE, ch, 0, 0, TO_ROOM);
     return;
   }
-  
-    send_to_char(ch, "Voce solta uma bola de energia azul em direcao ao ceu!\r\n");
-    act("$n solta uma bola de energia azul em direcao ao ceu!", TRUE, ch, 0, 0, TO_ROOM);
 
-    /* Send to Outdoors each cast may be too spammy? */
-    if (change == -1)
-        send_to_outdoor("O clima parece estar melhorando.\r\n");
+  /* Pega o argumento passado com a magia; usamos cast_arg2 (ou outro buffer local) */
+  one_argument(cast_arg2, arg);
+  if (!*arg) {
+    send_to_char(ch, "Você deve especificar uma propriedade e uma direção (ex.: pressao=aumentar).\r\n");
+    return;
+  }
+
+  /* Primeiro, tenta encontrar o caractere '=' para separar propriedade e direção */
+  eq_ptr = strchr(arg, '=');
+  if (eq_ptr) {
+    *eq_ptr = '\0';  /* separa a string */
+    strcpy(property, arg);
+    strcpy(direction, eq_ptr + 1);
+  } else {
+    /* Se não houver '=', tenta separar a propriedade da direção usando o tamanho da palavra-chave */
+    if (is_abbrev(arg, "pressao")) {
+      strcpy(property, "pressao");
+      strcpy(direction, arg + strlen("pressao"));
+    } else if (is_abbrev(arg, "temperatura")) {
+      strcpy(property, "temperatura");
+      strcpy(direction, arg + strlen("temperatura"));
+    } else if (is_abbrev(arg, "vento")) {
+      strcpy(property, "vento");
+      strcpy(direction, arg + strlen("vento"));
+    } else if (is_abbrev(arg, "umidade")) {
+      strcpy(property, "umidade");
+      strcpy(direction, arg + strlen("umidade"));
+    } else {
+      send_to_char(ch, "Propriedade inválida. Use: pressao, temperatura, vento ou umidade.\r\n");
+      return;
+    }
+  }
+
+  /* Verifica se a direção é válida */
+  if (!is_abbrev(direction, "aumentar") && !is_abbrev(direction, "diminuir")) {
+    send_to_char(ch, "Você deve especificar 'aumentar' ou 'diminuir' para a direção.\r\n");
+    return;
+  }
+
+  /* Define um valor de mudança aleatório */
+  change_val = dice(1, 6);
+
+  /* Aplica a mudança na propriedade desejada na zona atual */
+  struct weather_data *weather = zone_table[world[IN_ROOM(ch)].zone].weather;
+  zone = world[IN_ROOM(ch)].zone;
+  if (!weather) {
+    send_to_char(ch, "O clima local está com mjita instabilidade. Tente novamente mais tarde.\r\n");
+    return;
+  }
+
+  if (is_abbrev(property, "pressao")) {
+    if (is_abbrev(direction, "aumentar"))
+      weather->press_diff += change_val;
+    else  /* diminuir */
+      weather->press_diff -= change_val;
+    send_to_char(ch, "Você canaliza sua magia e altera a pressão da area.\r\n");
+  }
+  else if (is_abbrev(property, "temperatura")) {
+    if (is_abbrev(direction, "aumentar"))
+      weather->temp_diff += change_val;
     else
-        send_to_outdoor("O clima parece estar piorando.\r\n");
-    
-    /* applies the changes to weather */
-    weather_info.sky += change;
-    weather_info.sky = MIN(MAX(weather_info.sky, SKY_CLOUDLESS), SKY_LIGHTNING);
+      weather->temp_diff -= change_val;
+    send_to_char(ch, "Você canaliza sua magia e altera a temperatura da area.\r\n");
+  }
+  else if (is_abbrev(property, "vento")) {
+    if (is_abbrev(direction, "aumentar"))
+      weather->winds += (float) change_val / 10.0;  /* ajuste conforme necessário */
+    else
+      weather->winds -= (float) change_val / 10.0;
+    send_to_char(ch, "Você canaliza sua magia e altera o vento na area.\r\n");
+  }
+  else if (is_abbrev(property, "umidade")) {
+    if (is_abbrev(direction, "aumentar"))
+      weather->humidity += (float) change_val / 100.0;
+    else
+      weather->humidity -= (float) change_val / 100.0;
+    if (weather->humidity < 0) weather->humidity = 0;
+    if (weather->humidity > 1) weather->humidity = 1;
+    send_to_char(ch, "Você canaliza sua magia e altera a umidade na area.\r\n");
+  }
+  else {
+    send_to_char(ch, "Propriedade inválida. Use: pressao, temperatura, vento ou umidade.\r\n");
+    return;
+  }
 
+  act("$n canaliza a energia dos elementos, alterando o clima local!", TRUE, ch, 0, 0, TO_ROOM);
+  send_to_zone_outdoor(zone,"O clima local parece estar mudando...\r\n");
 }
 
 ASPELL(spell_transport_via_plants) {

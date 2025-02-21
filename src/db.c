@@ -175,10 +175,24 @@ static void free_extra_descriptions(struct extra_descr_data *edesc);
 static bitvector_t asciiflag_conv_aff(char *flag);
 static int hsort(const void *a, const void *b);
 
+/* 
+ * Campos: 
+ *   temperature, temp_diff, pressure, press_diff, humidity, winds, sky, before, sunlight
+ *
+ * Clima 0: Temperado – temperaturas moderadas, variação sutil, pressão média e alta umidade.
+ * Clima 1: Chuvoso – temperaturas um pouco mais baixas, pressão ligeiramente inferior e alta umidade.
+ * Clima 2: Tropical – clima quente, pressão média e alta umidade.
+ * Clima 3: Frio/Seco – temperaturas baixas, pressão elevada e baixa umidade.
+ * Clima 4: Desértico – clima muito quente, pressão moderada a alta, e umidade extremamente baixa.
+ */
 struct weather_data climates[] = {
-  /* temp, temp_diff, press, press_diff, humidity, winds, sky, before, sunlight */        { 25, 4, 1000, 15, 0.50, 0.00, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT },  /* Clima 0:
- Temperado */                                                                             { 22, 2, 1000, 20, 0.40, 0.98, SKY_CLOUDY, SKY_CLOUDY, SUN_LIGHT },        /* Clima 1: Chuvoso */                                                                               { 20, 2, 980, 10, 0.75, 0.20, SKY_RAINING, SKY_CLOUDY, SUN_LIGHT },        /* Clima 2: Tropical */                                                                              { -5, 2, 975, 5, 0.25, 0.50, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_DARK },     /* Clima 3: Frio/Seco */                                                                             { 45, 3, 1025, 5, 0.02, 0.50, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT }    /* Clima 4: Desértico */
+    { 20, 3, 1010, 10, 0.60, 0.3, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT },   /* Clima 0: Temperado */
+    { 18, 2, 995, 15, 0.85, 0.5, SKY_RAINING,    SKY_RAINING,    SUN_LIGHT },   /* Clima 1: Chuvoso  */
+    { 28, 2, 1000, 10, 0.80, 0.4, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT },   /* Clima 2: Tropical */
+    {  0, 2, 1020, 5,  0.30, 0.2, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_DARK  },   /* Clima 3: Frio/Seco */
+    { 38, 3, 1025, 5,  0.05, 0.1, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT }    /* Clima 4: Desértico */
 };
+
 
 /* routines for booting the system */
 char *fread_action(FILE * fl, int nr)

@@ -296,6 +296,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"show", "show", POS_DEAD, do_show, LVL_IMMORT, 0, CMD_NOARG},
 	{"shutdow", "shutdow", POS_DEAD, do_shutdown, LVL_IMPL, 0, CMD_NOARG},
 	{"shutdown", "shutdown", POS_DEAD, do_shutdown, LVL_IMPL, SCMD_SHUTDOWN, CMD_NOARG},
+//	{"sing", "sin", POS_SITTING, do_cast, 1, SCMD_CHANSON, CMD_TWOARG},
 	{"sip", "sip", POS_RESTING, do_drink, 0, SCMD_SIP, CMD_ONEARG},
 	{"skillset", "skillset", POS_SLEEPING, do_skillset, LVL_GRGOD, 0, CMD_NOARG},
 	{"sleep", "sl", POS_SLEEPING, do_sleep, 0, 0, CMD_NOARG},

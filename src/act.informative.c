@@ -1318,26 +1318,58 @@ ACMD(do_time)
 				 day, suf, month_name[time_info.month], time_info.year);
 }
 
-ACMD(do_weather)
-{
-	const char *sky_look[] = {
-		" limpo ", " nublado ", " chuvoso ", " relampejando "
-	};
-	if (OUTSIDE(ch))
-	{
-		send_to_char(ch, " O céu está %s e %s.\r\n ", sky_look[zone_table[world[IN_ROOM(ch)].zone].weather->sky],
-					 zone_table[world[IN_ROOM(ch)].zone].weather->press_diff >= 0 ? "você sente um vento quente vindo do sul" :
-					 "seu pé lhe diz que um tempo ruim se aproxima");
-		if (GET_LEVEL(ch) >= LVL_GOD){
-			send_to_char(ch, " Pressão: %d(mudança: %d), Céu: %d(%s) \r\n ",
-			zone_table[world[IN_ROOM(ch)].zone].weather->pressure,zone_table[world[IN_ROOM(ch)].zone].weather->press_diff, zone_table[world[IN_ROOM(ch)].zone].weather->sky, sky_look[zone_table[world[IN_ROOM(ch)].zone].weather->sky]);
-			send_to_char(ch, "Temperatura %d(mudança: %d), Umidade %f\r\n", zone_table[world[IN_ROOM(ch)].zone].weather->temperature, zone_table[world[IN_ROOM(ch)].zone].weather->temp_diff, zone_table[world[IN_ROOM(ch)].zone].weather->humidity);
-			send_to_char(ch, "Vemto: %f, Intensidade Solar: %d\r\n",zone_table[world[IN_ROOM(ch)].zone].weather->winds * 10,zone_table[world[IN_ROOM(ch)].zone].weather->sunlight);
-		}
-		     
+ACMD(do_weather) {
+	const char *sky_look[] = {"limpo", "nublado", "chuvoso", "relampejando", "nevando"};
+
+	if (OUTSIDE(ch)) {
+    	    int pressure = zone_table[world[IN_ROOM(ch)].zone].weather->pressure;
+	    int press_diff = zone_table[world[IN_ROOM(ch)].zone].weather->press_diff;
+	    int sky = zone_table[world[IN_ROOM(ch)].zone].weather->sky;
+	    int temperature = zone_table[world[IN_ROOM(ch)].zone].weather->temperature;
+	    int temp_diff = zone_table[world[IN_ROOM(ch)].zone].weather->temp_diff;
+	    float humidity = zone_table[world[IN_ROOM(ch)].zone].weather->humidity;
+	    float wind = zone_table[world[IN_ROOM(ch)].zone].weather->winds * 10;
+	    int sunlight = zone_table[world[IN_ROOM(ch)].zone].weather->sunlight;
+    
+            const char *weather_feel;
+            const char *temp_feel;
+        
+           /* Descrição baseada na pressão, umidade e vento */
+           if (press_diff < 0 && humidity > 0.7 && wind > 5) {
+              weather_feel = "um temporal está se formando";
+           } else if (press_diff < 0) {
+              weather_feel = "seu pé lhe diz que um tempo ruim se aproxima";
+           } else if (wind > 8) {
+              weather_feel = "há um vento forte soprando";
+           } else if (humidity > 0.8) {
+              weather_feel = "o ar está pesado e úmido";
+           } else {
+              weather_feel = "você sente uma brisa agradável";
+          }
+        
+          /* Descrição baseada na temperatura */
+           if (temperature < 5) {
+              temp_feel = "e o frio congela seus ossos";
+           } else if (temperature > 30) {
+              temp_feel = "e o calor abrasador faz o suor escorrer";
+           } else {
+              temp_feel = "e o clima está ameno";
+          }
+        
+           /* Envia a mensagem combinando ambas as descrições */
+           send_to_char(ch, " O céu está %s, %s %s.\r\n", sky_look[sky], weather_feel, temp_feel); 
+    
+    	  if (GET_LEVEL(ch) >= LVL_GOD) {
+        	send_to_char(ch, " Pressão: %d(mudança: %d), Céu: %d(%s) \r\n",
+                     pressure, press_diff, sky, sky_look[sky]);
+	        send_to_char(ch, "Temperatura %d(mudança: %d), Umidade %.2f\r\n",
+                     temperature, temp_diff, humidity);
+	        send_to_char(ch, "Vento: %.2f, Intensidade Solar: %d\r\n",
+                     wind, sunlight);
+    	  }
+	} else {
+	    send_to_char(ch, " Você não tem idéia de como o tempo possa estar.\r\n");
 	}
-	else
-		send_to_char(ch, " Você não tem idéia de como o tempo possa estar.\r\n ");
 }
 
 	/* puts -'s instead of spaces */
