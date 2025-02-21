@@ -1328,10 +1328,13 @@ ACMD(do_weather)
 		send_to_char(ch, " O céu está %s e %s.\r\n ", sky_look[zone_table[world[IN_ROOM(ch)].zone].weather->sky],
 					 zone_table[world[IN_ROOM(ch)].zone].weather->press_diff >= 0 ? "você sente um vento quente vindo do sul" :
 					 "seu pé lhe diz que um tempo ruim se aproxima");
-		if (GET_LEVEL(ch) >= LVL_GOD)
+		if (GET_LEVEL(ch) >= LVL_GOD){
 			send_to_char(ch, " Pressão: %d(mudança: %d), Céu: %d(%s) \r\n ",
 						 zone_table[world[IN_ROOM(ch)].zone].weather->pressure,
 						 zone_table[world[IN_ROOM(ch)].zone].weather->press_diff, zone_table[world[IN_ROOM(ch)].zone].weather->sky, sky_look[zone_table[world[IN_ROOM(ch)].zone].weather->sky]);
+			send_to_char(ch, "Temperatura %d(mudança: %d", zone_table[world[IN_ROOM(ch)].zone].weather->temperature, zone_table[world[IN_ROOM(ch)].zone].weather->temp_diff);
+		}
+		     
 	}
 	else
 		send_to_char(ch, " Você não tem idéia de como o tempo possa estar.\r\n ");

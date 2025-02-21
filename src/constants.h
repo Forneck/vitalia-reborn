@@ -66,7 +66,6 @@ extern const char *climate_types[];
 extern const char *sky_conditions[];
 extern const char *npc_class_types[];
 extern const char *sun_states[];
-extern const struct weather_data climates[];
 
 extern const struct weapon_prof_data wpn_prof[];
 extern const struct nighthammer_data nighthammer_info[];

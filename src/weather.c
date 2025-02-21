@@ -19,7 +19,7 @@
 #include "fight.h"
 
 static void another_hour(int mode);
-static void weather_change(zone_rnum zone);
+void weather_change(zone_rnum zone);
 
 /** Call this function every mud hour to increment the gametime (by one hour)
  * and the weather patterns.
@@ -67,7 +67,7 @@ static void another_hour(int mode)
       break;
     default:
       break;
-    }
+
   }
   if (time_info.hours > 23) {	/* Changed by HHS due to bug ??? */
     time_info.hours -= 24;
@@ -83,114 +83,38 @@ static void another_hour(int mode)
       }
     }
   }
+ }
 }
-
 /** Controls the in game weather system. If the weather changes, an information
  * update is sent via send_to_outdoors().
  * @todo There are some hard coded values that could be extracted to make
  * customizing the weather patterns easier.
- */  
-static void weather_change(zone_rnum zone)
-{
-  int diff, meant, meanp, sim_pressure,press_diff;
-  zone_table[zone].weather->before = zone_table[zone].weather->sky;
-    
-  if ((time_info.month >= 9) && (time_info.month <= 16))
-    diff = (zone_table[zone].weather->pressure > 985 ? -2 : 2);
-  else
-    diff = (zone_table[zone].weather->pressure > 1015 ? -2 : 2);
+ */
 
-  zone_table[zone].weather->press_diff += (dice(1, 4) * diff + dice(2, 6) - dice(2, 6));
+void weather_change(zone_rnum zone) {
+    if (zone < 0 || zone > top_of_zone_table) {
+        fprintf(stderr, "Erro: Zona inválida #%d\n", zone);
+        return;
+    }
 
-  zone_table[zone].weather->press_diff = MIN(zone_table[zone].weather->press_diff, 12);
-  zone_table[zone].weather->press_diff = MAX(zone_table[zone].weather->press_diff, -12);
+    struct weather_data *clima = zone_table[zone].weather;
 
-  zone_table[zone].weather->pressure += zone_table[zone].weather->press_diff;
+    if (!clima) {
+        fprintf(stderr, "Erro: Clima não inicializado para a zona #%d\n", zone);
+        return;
+    }
 
-  zone_table[zone].weather->pressure = MIN(zone_table[zone].weather->pressure, 1040);
-  zone_table[zone].weather->pressure = MAX(zone_table[zone].weather->pressure, 960);
+    printf("Antes: Zona #%d - Temp: %d, Pressão: %d, Céu: %d\n",
+           zone, clima->temperature, clima->pressure, clima->sky);
 
-  press_diff = 0;
+    // Simplesmente altera alguns valores para teste
+    clima->temperature += (rand() % 3) - 1; // Varia -1 a +1
+    clima->pressure += (rand() % 5) - 2; // Varia -2 a +2
+    clima->sky = (clima->sky + 1) % 4; // Cicla entre 0-3
 
-  switch (zone_table[zone].weather->sky) {
-  case SKY_CLOUDLESS:
-    if (zone_table[zone].weather->pressure < 990)
-      press_diff = 1;
-    else if (zone_table[zone].weather->pressure < 1010)
-      if (dice(1, 4) == 1)
-	press_diff = 1;
-    break;
-  case SKY_CLOUDY:
-    if (zone_table[zone].weather->pressure < 970)
-      press_diff = 2;
-    else if (zone_table[zone].weather->pressure < 990) {
-      if (dice(1, 4) == 1)
-	press_diff = 2;
-      else
-	press_diff = 0;
-    } else if (zone_table[zone].weather->pressure > 1030)
-      if (dice(1, 4) == 1)
-	press_diff = 3;
+    printf("Depois: Zona #%d - Temp: %d, Pressão: %d, Céu: %d\n",
+           zone, clima->temperature, clima->pressure, clima->sky);
 
-    break;
-  case SKY_RAINING:
-    if (zone_table[zone].weather->pressure < 970) {
-      if (dice(1, 4) == 1)
-	press_diff = 4;
-      else
-	press_diff = 0;
-    } else if (zone_table[zone].weather->pressure > 1030)
-      press_diff = 5;
-    else if (zone_table[zone].weather->pressure > 1010)
-      if (dice(1, 4) == 1)
-	press_diff = 5;
 
-    break;
-  case SKY_LIGHTNING:
-    if (zone_table[zone].weather->pressure > 1010)
-      press_diff = 6;
-    else if (zone_table[zone].weather->pressure > 990)
-      if (dice(1, 4) == 1)
-	press_diff = 6;
-
-    break;
-  default:
-    press_diff = 0;
-    zone_table[zone].weather->sky = SKY_CLOUDLESS;
-    break;
-  }
-
-  switch (press_diff) {
-  case 0:
-    break;
-  case 1:
-    send_to_outdoor("O ceu comeca a ficar nublado.\r\n");
-    zone_table[zone].weather->sky = SKY_CLOUDY;
-    break;
-  case 2:
-    send_to_outdoor("A chuva comeca a cair.\r\n");
-    zone_table[zone].weather->sky = SKY_RAINING;
-    break;
-  case 3:
-    send_to_outdoor("As nuvens desaparecem.\r\n");
-    zone_table[zone].weather->sky = SKY_CLOUDLESS;
-    break;
-  case 4:
-  send_to_outdoor("Relampagos comecam a iluminar o ceu.\r\n");
-    zone_table[zone].weather->sky = SKY_LIGHTNING;
-    break;
-  case 5:
-    send_to_outdoor("A chuva parou.\r\n");
-    zone_table[zone].weather->sky = SKY_CLOUDY;
-    break;
-  case 6:
-    send_to_outdoor("Os relampagos param.\r\n");
-    zone_table[zone].weather->sky = SKY_RAINING;
-    break;
-  default:
-    break;
-  }
 }
-
-
 

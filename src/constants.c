@@ -1004,18 +1004,6 @@ const char *sky_conditions[] = {
   "\n"
 };
 
-
-const struct weather_data climates[] = {
-  /* temp, temp_diff, press, press_diff, humidity, winds, sky, before, sunlight */
-  { 25, 4, 1000, 15, 0.50, 0.00, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT },  /* Clima 0: Temperado */
-  { 22, 2, 1000, 20, 0.40, 0.98, SKY_CLOUDY, SKY_CLOUDY, SUN_LIGHT },        /* Clima 1: Chuvoso */
-  { 20, 2, 980, 10, 0.75, 0.20, SKY_RAINING, SKY_CLOUDY, SUN_LIGHT },        /* Clima 2: Tropical */
-  { -5, 2, 975, 5, 0.25, 0.50, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_DARK },     /* Clima 3: Frio/Seco */
-  { 45, 3, 1025, 5, 0.02, 0.50, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT }    /* Clima 4: Desértico */
-  
-};
-
-
 /** The names of the days of the mud week. Not used in sprinttype(). */
 const char *weekdays[] = {
 "Helis",

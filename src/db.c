@@ -175,6 +175,11 @@ static void free_extra_descriptions(struct extra_descr_data *edesc);
 static bitvector_t asciiflag_conv_aff(char *flag);
 static int hsort(const void *a, const void *b);
 
+struct weather_data climates[] = {
+  /* temp, temp_diff, press, press_diff, humidity, winds, sky, before, sunlight */        { 25, 4, 1000, 15, 0.50, 0.00, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT },  /* Clima 0:
+ Temperado */                                                                             { 22, 2, 1000, 20, 0.40, 0.98, SKY_CLOUDY, SKY_CLOUDY, SUN_LIGHT },        /* Clima 1: Chuvoso */                                                                               { 20, 2, 980, 10, 0.75, 0.20, SKY_RAINING, SKY_CLOUDY, SUN_LIGHT },        /* Clima 2: Tropical */                                                                              { -5, 2, 975, 5, 0.25, 0.50, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_DARK },     /* Clima 3: Frio/Seco */                                                                             { 45, 3, 1025, 5, 0.02, 0.50, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT }    /* Clima 4: Desértico */
+};
+
 /* routines for booting the system */
 char *fread_action(FILE * fl, int nr)
 {
@@ -950,7 +955,10 @@ log1("Sorting command list.");
 			zone_table[i].name, zone_table[i].bot, zone_table[i].top);
 		reset_zone(i);
 		log1("Inicializando clima da zona #%d: %s. (Clima %d)",zone_table[i].number,zone_table[i].name,zone_table[i].climate);
-		zone_table[i].weather = &climates[zone_table[i].climate];
+		zone_table[i].weather = malloc(sizeof(struct weather_data));
+			if (zone_table[i].weather) {
+			    *(zone_table[i].weather) = climates[zone_table[i].climate]; // Copia os valores
+			}
 	}
 
 	reset_q.head = reset_q.tail = NULL;
