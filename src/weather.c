@@ -20,6 +20,7 @@
 
 static void another_hour(int mode);
 void weather_change(zone_rnum zone);
+extern struct weather_data climates[];
 
 /** Call this function every mud hour to increment the gametime (by one hour)
  * and the weather patterns.
@@ -90,7 +91,7 @@ static void another_hour(int mode)
  * @todo There are some hard coded values that could be extracted to make
  * customizing the weather patterns easier.
  */
-
+/* 
 void weather_change(zone_rnum zone) {
     if (zone < 0 || zone > top_of_zone_table) {
         fprintf(stderr, "Erro: Zona inválida #%d\n", zone);
@@ -98,23 +99,108 @@ void weather_change(zone_rnum zone) {
     }
 
     struct weather_data *clima = zone_table[zone].weather;
+    int diff, meant, meanp, sim_pressure;
 
     if (!clima) {
         fprintf(stderr, "Erro: Clima não inicializado para a zona #%d\n", zone);
         return;
     }
+}
+*/
 
-    printf("Antes: Zona #%d - Temp: %d, Pressão: %d, Céu: %d\n",
-           zone, clima->temperature, clima->pressure, clima->sky);
+void weather_change(zone_rnum zone) {
+    int diff, meant, meanp, sim_pressure;
+    struct weather_data *weather;
+    struct weather_data *climate;
 
-    // Simplesmente altera alguns valores para teste
-    clima->temperature += (rand() % 3) - 1; // Varia -1 a +1
-    clima->pressure += (rand() % 5) - 2; // Varia -2 a +2
-    clima->sky = (clima->sky + 1) % 4; // Cicla entre 0-3
+    if (zone < 0 || zone > top_of_zone_table) return;
 
-    printf("Depois: Zona #%d - Temp: %d, Pressão: %d, Céu: %d\n",
-           zone, clima->temperature, clima->pressure, clima->sky);
+    weather = zone_table[zone].weather;
+    climate = &climates[zone_table[zone].climate];
 
+    if (!weather || !climate) return;
 
+    // Definição das médias baseadas na estação do ano
+    meant = climate->temperature;
+    meanp = climate->pressure;
+
+    if (time_info.month >= 9 && time_info.month <= 16) { // Outono/Inverno
+        meant -= climate->temp_diff;
+        meanp -= climate->press_diff;
+    } else { // Primavera/Verão
+        meant += climate->temp_diff;
+        meanp += climate->press_diff;
+    }
+
+    // Mudança de pressão atmosférica
+    diff = (weather->pressure > meanp ? -2 : 2);
+    weather->press_diff += (dice(1, 4) * diff + dice(2, 6) - dice(2, 6));
+    weather->press_diff = URANGE(weather->press_diff, -12, 12);
+
+    weather->pressure += weather->press_diff;
+    weather->pressure = URANGE(weather->pressure, 950, 1050);
+
+    // Mudança de temperatura
+    diff = (weather->temperature > meant ? -1 : 1);
+    weather->temperature += (weather->press_diff / 6 + diff * dice(1, 2));
+
+    // Simulação da pressão considerando umidade
+    sim_pressure = weather->pressure - (40 * climate->humidity) + 20;
+    weather->before = weather->sky;
+
+    // Lógica de mudança do clima baseada na pressão e temperatura
+    switch (weather->sky) {
+        case SKY_CLOUDLESS:
+            if (sim_pressure < 990) {
+                weather->sky = SKY_CLOUDY;
+            } else if (sim_pressure < 1010 && dice(1, 4) == 1) {
+                weather->sky = SKY_CLOUDY;
+            }
+            break;
+
+        case SKY_CLOUDY:
+            if (sim_pressure < 970) {
+                weather->sky = SKY_RAINING;
+            } else if (sim_pressure < 990 && dice(1, 4) == 1) {
+                weather->sky = (weather->temperature <= 0) ? SKY_SNOWING : SKY_RAINING;
+            } else if (sim_pressure > 1030 && weather->temperature > 0 && dice(1, 4) == 1) {
+                weather->sky = SKY_CLOUDLESS;
+            }
+            break;
+
+        case SKY_RAINING:
+            if (sim_pressure < 970) {
+                if (weather->temperature >= 15 && dice(1, 4) == 1) {
+                    weather->sky = SKY_LIGHTNING;
+                } else if (weather->temperature <= 0 && dice(1, 2) == 1) {
+                    weather->sky = SKY_SNOWING;
+                }
+            } else if (sim_pressure > 1030) {
+                weather->sky = SKY_CLOUDY;
+            } else if (sim_pressure > 1010 && dice(1, 4) == 1) {
+                weather->sky = SKY_CLOUDY;
+            } else if (weather->temperature <= 0 && dice(1, 4) == 1) {
+                weather->sky = SKY_SNOWING;
+            }
+            break;
+
+        case SKY_LIGHTNING:
+            if (sim_pressure > 1010) {
+                weather->sky = SKY_RAINING;
+            } else if (sim_pressure > 990 && dice(1, 4) == 1) {
+                weather->sky = SKY_RAINING;
+            }
+            break;
+
+        case SKY_SNOWING:
+            if (sim_pressure > 1030) {
+                weather->sky = SKY_CLOUDY;
+            } else if (sim_pressure > 1010 && dice(1, 4) == 1) {
+                weather->sky = SKY_CLOUDY;
+            } else if (weather->temperature > 0 && dice(1, 4) == 1) {
+                weather->sky = SKY_CLOUDY;
+            }
+            break;
+    }
 }
 
