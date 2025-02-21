@@ -1,7 +1,8 @@
 #54
 Vitalia~
 Nova Thalos~
-5400 5699 20 2 j 0 0 0 -1 -1 0
+5400 5699 20 2 j 0 0 0 -1 -1 4
+M 0 5404 1 5401 	(a recepcionista)
 M 0 5444 24 5524 	(o urubu)
 M 0 5480 1 5524 	(Braheem)
 G 1 5478 99 -1 	(um pergaminho de retorno)
@@ -116,7 +117,6 @@ M 0 5401 1 5503 	(o mestre da guilda dos clérigos)
 M 0 5402 1 5534 	(o mestre da guilda dos guerreiros)
 M 0 5403 1 5546 	(o mestre da guilda dos ladrões)
 M 0 5491 1 5676 	(o mestre da guilda dos druidas)
-M 0 5404 1 5401 	(a recepcionista)
 M 0 5407 1 5403 	(o crente)
 M 0 5408 1 5404 	(o crente)
 M 0 5409 20 5410 	(o mendigo)
