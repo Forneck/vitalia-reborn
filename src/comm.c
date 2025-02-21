@@ -2711,6 +2711,27 @@ void send_to_room(room_rnum room, const char *messg, ...)
 	}
 }
 
+void send_to_zone_outdoor(zone_rnum zone, const char *messg, ...) {
+    struct descriptor_data *d;
+    va_list args;
+
+    if (!messg || !*messg)
+        return;
+
+    for (d = descriptor_list; d; d = d->next) {
+        if (STATE(d) != CON_PLAYING || d->character == NULL)
+            continue;
+        if (!AWAKE(d->character) || !OUTSIDE(d->character))
+            continue;
+        if (d->character->in_room == NOWHERE || world[d->character->in_room].zone != zone)
+            continue;
+
+        va_start(args, messg);
+        vwrite_to_output(d, messg, args);
+        va_end(args);
+    }
+}
+
 /* Sends a message to the entire group, except for ch. Send 'ch' as NULL, if
    you want to message to reach everyone. -Vatiken */
 void send_to_group(struct char_data *ch, struct group_data *group, const char *msg, ...)

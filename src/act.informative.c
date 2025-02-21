@@ -1330,9 +1330,9 @@ ACMD(do_weather)
 					 "seu pé lhe diz que um tempo ruim se aproxima");
 		if (GET_LEVEL(ch) >= LVL_GOD){
 			send_to_char(ch, " Pressão: %d(mudança: %d), Céu: %d(%s) \r\n ",
-						 zone_table[world[IN_ROOM(ch)].zone].weather->pressure,
-						 zone_table[world[IN_ROOM(ch)].zone].weather->press_diff, zone_table[world[IN_ROOM(ch)].zone].weather->sky, sky_look[zone_table[world[IN_ROOM(ch)].zone].weather->sky]);
-			send_to_char(ch, "Temperatura %d(mudança: %d", zone_table[world[IN_ROOM(ch)].zone].weather->temperature, zone_table[world[IN_ROOM(ch)].zone].weather->temp_diff);
+			zone_table[world[IN_ROOM(ch)].zone].weather->pressure,zone_table[world[IN_ROOM(ch)].zone].weather->press_diff, zone_table[world[IN_ROOM(ch)].zone].weather->sky, sky_look[zone_table[world[IN_ROOM(ch)].zone].weather->sky]);
+			send_to_char(ch, "Temperatura %d(mudança: %d), Umidade %f\r\n", zone_table[world[IN_ROOM(ch)].zone].weather->temperature, zone_table[world[IN_ROOM(ch)].zone].weather->temp_diff, zone_table[world[IN_ROOM(ch)].zone].weather->humidity);
+			send_to_char(ch, "Vemto: %f, Intensidade Solar: %d\r\n",zone_table[world[IN_ROOM(ch)].zone].weather->winds * 10,zone_table[world[IN_ROOM(ch)].zone].weather->sunlight);
 		}
 		     
 	}

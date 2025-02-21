@@ -112,6 +112,7 @@ void weather_change(zone_rnum zone) {
     int diff, meant, meanp, sim_pressure;
     struct weather_data *weather;
     struct weather_data *climate;
+    int p;
 
     if (zone < 0 || zone > top_of_zone_table) return;
 
@@ -202,5 +203,95 @@ void weather_change(zone_rnum zone) {
             }
             break;
     }
+
+   
+  if (weather->sky != weather->before) {
+         switch (weather->sky) {
+           case SKY_CLOUDLESS:
+             send_to_zone_outdoor(zone, "As nuvens desapareceram do céu.\r\n");
+             break;
+
+           case SKY_CLOUDY:
+             if (weather->before == SKY_CLOUDLESS)
+               send_to_zone_outdoor(zone, "Nuvens misteriosas aparecem no céu.\r\n");
+             else if (weather->before == SKY_SNOWING)
+               send_to_zone_outdoor(zone, "A neve parou de cair.\r\n");
+             else
+               send_to_zone_outdoor(zone, "A chuva parou.\r\n");
+             break;
+
+           case SKY_RAINING:
+             if (weather->before == SKY_LIGHTNING)                                                             send_to_zone_outdoor(zone, "Os relâmpagos páram.\r\n");
+             else if (weather->before == SKY_SNOWING)
+               send_to_zone_outdoor(zone, "A neve pára de cair e dá lugar para a chuva.\r\n");
+             else
+               send_to_zone_outdoor(zone, "A chuva começa a cair.\r\n");
+             break;
+
+           case SKY_LIGHTNING:
+             send_to_zone_outdoor(zone, "Relâmpagos começam a aparecer no céu.\r\n");
+             break;
+
+           case SKY_SNOWING:
+             if (weather->before == SKY_RAINING)
+               send_to_zone_outdoor(zone, "A chuva pára de cair e começa a nevar.\r\n");
+             else
+               send_to_zone_outdoor(zone, "A neve começa a cair.\r\n");
+             break;
+         }
+       } else {
+         p = rand_number(0, 99);
+
+         switch (weather->sky) {
+           case SKY_CLOUDLESS:
+           case SKY_CLOUDY:
+             if (p < climate->winds * 100) {
+               if (p < 25)
+                 send_to_zone_outdoor(zone, "Você sente uma brisa passando por você.\r\n");
+               else if (p < 50)
+                 send_to_zone_outdoor(zone, "Um forte vento açoita o seu rosto.\r\n");
+               else if (p < 75)
+                 send_to_zone_outdoor(zone, "A ventania dificulta os seus movimentos.\r\n");
+               else
+                 send_to_zone_outdoor(zone, "Os ventos parecem o castigar.\r\n");
+             } else if (weather->temperature < 5)
+               send_to_zone_outdoor(zone, "Uma nevasca parece prestes a cair sobre a região.\r\n");   
+	     break;
+
+	   case SKY_RAINING:
+           case SKY_LIGHTNING:
+             if (p < climate->winds * 100) {
+               if (p < 25)
+                 send_to_zone_outdoor(zone, "Uma brisa passa por você, jogando a chuva contra o seu rosto.\r\n");
+               else
+                 send_to_zone_outdoor(zone, "A chuva e os fortes ventos dificultam os seus passos.\r\n");
+             }
+
+             switch (weather->sky) {
+               case SKY_RAINING:
+                 if (climate->humidity >= 0.75 && p >= 50)
+                   send_to_zone_outdoor(zone, "Pesadas gotas de chuva caem com violência.\r\n");
+                 break;
+
+               case SKY_LIGHTNING:
+                 if (climate->humidity >= 0.60 && p < 50)
+                   send_to_zone_outdoor(zone, "O som dos trovões preenchem o ar.\r\n");
+                 else if (climate->humidity >= 0.70 && p < 60)
+                   send_to_zone_outdoor(zone, "Um claro relâmpago rasga os céus.\r\n");
+                 break;
+
+               default:            /* stupid gcc */
+                 break;
+             }
+             break;
+
+           case SKY_SNOWING:
+             if (p < climate->winds * 100)
+               send_to_zone_outdoor(zone, "O frio vento do inverno parece congelar seus ossos.\r\n");
+             else
+               send_to_zone_outdoor(zone, "Pequenos flocos de neve se dispersam pelo ar.\r\n");
+             break;
+         }
+       }
 }
 
