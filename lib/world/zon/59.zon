@@ -1,14 +1,14 @@
 #59
 Vitalia~
 O Altar de Sacrifícios de Raantra~
-5900 5999 90 1 j 0 0 0 8 41 0
+5900 5999 90 1 j 0 0 0 8 41 1
+M 0 5902 1 5900 	(um corcunda)
+E 1 5916 20 3 	(alguns pedaços de couro rasgado)
+D 0 5900 3 1 	(A Entrada Para o Manicômio)
 R 0 5901 5900 -1 	(uma velha fonte rachada)
 O 0 5900 1 5901 	(uma velha fonte rachada)
 M 0 5903 1 5901 	(um elfo enjoado)
 G 1 5917 20 -1 	(uma poça de vômito)
-M 0 5902 1 5900 	(um corcunda)
-E 1 5916 20 3 	(alguns pedaços de couro rasgado)
-D 0 5900 3 1 	(A Entrada Para o Manicômio)
 M 0 5917 1 5922 	(um aventureiro)
 G 1 5929 20 -1 	(uma mochila de viajante)
 D 0 5922 1 1 	(O Escritório Administrativo)

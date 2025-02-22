@@ -1087,7 +1087,6 @@ void heartbeat(int heart_pulse)
 	if (!(heart_pulse % PULSE_IDLEPWD))	/* 15 seconds */
 	{
 		check_idle_passwords();
-	        update_weather();
 	}
 	if (!(heart_pulse % PULSE_MOBILE))
 		mobile_activity();

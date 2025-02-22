@@ -1,7 +1,9 @@
 #60
 Vitalia~
 Haon-Dor, Floresta Clara~
-6000 6099 13 2 j 0 0 0 -1 8 0
+6000 6099 13 2 j 0 0 0 -1 8 2
+R 0 6000 6012 -1 	(um grande aviso)
+O 0 6012 1 6000 	(um grande aviso)
 M 0 6000 1 6009 	(John o Lenhador)
 E 1 6000 2 16 	(um machado de serra)
 E 1 6001 10 5 	(uma camisa xadrez)
@@ -46,8 +48,6 @@ R 0 6069 6011 -1 	(um cogumelo)
 O 0 6011 10 6069 	(um cogumelo)
 R 0 6078 6011 -1 	(um cogumelo)
 O 0 6011 10 6078 	(um cogumelo)
-R 0 6000 6012 -1 	(um grande aviso)
-O 0 6012 1 6000 	(um grande aviso)
 M 0 6006 1 6033 	(o pássaro)
 M 0 6007 1 6033 	(o lince)
 M 0 6008 4 6005 	(o pardal)

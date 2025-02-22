@@ -14727,6 +14727,16 @@ Voce tera que estar em locais abertos para poder usar este comando.
 
 Veja tambem: MAGIA-CONTROL-WEATHER, TIME
 #1
+WEATHER                                                                                                                                                             Uso: weather                                                                      
+   Se voce nao tem certeza se o sol esta brilhando ou se esta chovendo.           Voce pode ver mesmo em locais fechados, e agora ele mostra os valores
+numericos e as unidades:
+
+Pressao: 1018 hPa (mudança: 0), Ceu: 1 (nublado)
+Temperatura 23 º.C (mudança: 3), Umidade 0.54
+Vento: 2.70 m/s, Intensidade Solar: 3
+
+Veja tambem: MAGIA-CONTROL-WEATHER, TIME
+#106
 WHERE
 
 Usage: where <monster | player>

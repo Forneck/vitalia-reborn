@@ -42,6 +42,7 @@ void update_weather(void) {
 void weather_and_time(int mode)
 {
   another_hour(mode);
+  update_weather();
 }
 /** Increment the game time by one hour (no matter what) and display any time 
  * dependent messages via send_to_outdoors() (if parameter is non-zero).
@@ -53,49 +54,94 @@ static void another_hour(int mode)
   time_info.hours++;
 
   if (mode) {
-   if (time_info.month >= 9 && time_info.month <= 16) {
-    //inverno
+    if (time_info.month >= 1 && time_info.month <= 4) {  
+       // Inverno - dias curtos
+       switch (time_info.hours) {
+       case 8:
+        weather_info.sunlight = SUN_RISE;
+        send_to_outdoor("O sol nasceu no leste.\r\n");
+        break;
+      case 9:
+        weather_info.sunlight = SUN_LIGHT;
+        send_to_outdoor("O dia comecou.\r\n");
+        break;
+      case 16:
+        weather_info.sunlight = SUN_SET;
+        send_to_outdoor("O sol lentamente desaparece no oeste.\r\n");
+        break;
+      case 17:
+        weather_info.sunlight = SUN_DARK;
+        send_to_outdoor("A noite comecou.\r\n");
+        break;
+      default:
+        break;
+     }
+    } else if (time_info.month >= 5 && time_info.month <= 8) {  
+      // Primavera - dias aumentando
+      switch (time_info.hours) {
+      case 6:
+        weather_info.sunlight = SUN_RISE;
+        send_to_outdoor("O sol nasceu no leste.\r\n");
+        break;
+      case 7:
+        weather_info.sunlight = SUN_LIGHT;
+        send_to_outdoor("O dia comecou.\r\n");
+        break;
+      case 18:
+        weather_info.sunlight = SUN_SET;
+        send_to_outdoor("O sol lentamente desaparece no oeste.\r\n");
+        break;
+      case 19:
+        weather_info.sunlight = SUN_DARK;
+        send_to_outdoor("A noite comecou.\r\n");
+        break;
+      default:
+        break;
+     }
+    } else if (time_info.month >= 9 && time_info.month <= 12) {  
+    // Verão - dias longos
     switch (time_info.hours) {
-    case 6:
-      weather_info.sunlight = SUN_RISE;
-      send_to_outdoor("O sol nasceu no leste.\r\n");
-      break;
-    case 7:
-      weather_info.sunlight = SUN_LIGHT;
-      send_to_outdoor("O dia comecou.\r\n");
-      break;
-    case 18:
-      weather_info.sunlight = SUN_SET;
-      send_to_outdoor("O sol lentamente desaparece no oeste.\r\n");
-      break;
-    case 19:
-      weather_info.sunlight = SUN_DARK;
-      send_to_outdoor("A noite comecou.\r\n");
-      break;
-    default:
-      break;
-    }
-  } else {
-    //Verao
-   switch (time_info.hours) {
     case 5:
-      weather_info.sunlight = SUN_RISE;
-      send_to_outdoor("O sol nasceu no leste.\r\n");
-      break;
+        weather_info.sunlight = SUN_RISE;
+        send_to_outdoor("O sol nasceu no leste.\r\n");
+        break;
     case 6:
-      weather_info.sunlight = SUN_LIGHT;
-      send_to_outdoor("O dia comecou.\r\n");
-      break;
-    case 19:
-      weather_info.sunlight = SUN_SET;
-      send_to_outdoor("O sol lentamente desaparece no oeste.\r\n");
-      break;
+        weather_info.sunlight = SUN_LIGHT;
+        send_to_outdoor("O dia comecou.\r\n");
+        break;
     case 20:
-      weather_info.sunlight = SUN_DARK;
-      send_to_outdoor("A noite comecou.\r\n");
-      break;
+        weather_info.sunlight = SUN_SET;
+        send_to_outdoor("O sol lentamente desaparece no oeste.\r\n");
+        break;
+    case 21:
+        weather_info.sunlight = SUN_DARK;
+        send_to_outdoor("A noite comecou.\r\n");
+        break;
     default:
-      break;
+        break;
+    }
+    } else {  
+    // Outono - dias encurtando
+    switch (time_info.hours) {
+    case 7:
+        weather_info.sunlight = SUN_RISE;
+        send_to_outdoor("O sol nasceu no leste.\r\n");
+        break;
+    case 8:
+        weather_info.sunlight = SUN_LIGHT;
+        send_to_outdoor("O dia comecou.\r\n");
+        break;
+    case 17:
+        weather_info.sunlight = SUN_SET;
+        send_to_outdoor("O sol lentamente desaparece no oeste.\r\n");
+        break;
+    case 18:
+        weather_info.sunlight = SUN_DARK;
+        send_to_outdoor("A noite comecou.\r\n");
+        break;
+    default:
+        break;
+     }
    }
   }
 
@@ -113,8 +159,8 @@ static void another_hour(int mode)
       }
     }
   }
- }
 }
+
 /** Controls the in game weather system. If the weather changes, an information
  * update is sent via send_to_outdoors().
  * @todo There are some hard coded values that could be extracted to make
@@ -154,24 +200,34 @@ void weather_change(int zone) {
     /* 1. Determina as médias sazonais */
     meant = climate->temperature;
     meanp = climate->pressure;
-    if (time_info.month >= 9 && time_info.month <= 16) {  // Outono/Inverno
-        meant -= climate->temp_diff;
-        meanp -= climate->press_diff;
-    } else {  // Primavera/Verão
-        meant += climate->temp_diff;
-        meanp += climate->press_diff;
+
+    if (time_info.month >= 1 && time_info.month <= 4) {  // Inverno
+       meant -= climate->temp_diff * 1.5;  // Redução mais intensa
+       meanp += climate->press_diff * 1.2; // Aumento da pressão
+    } else if (time_info.month >= 5 && time_info.month <= 8) {  // Primavera
+       meant -= climate->temp_diff * 0.5;  // Aumento leve
+       meanp += climate->press_diff * 0.5; // Aumento moderado
+    } else if (time_info.month >= 9 && time_info.month <= 12) {  // Verão
+       meant += climate->temp_diff * 1.5;  // Aumento intenso
+       meanp -= climate->press_diff * 1.2; // Queda na pressão
+    } else {  // Outono
+       meant += climate->temp_diff * 0.5;  // Resfriamento moderado
+       meanp -= climate->press_diff * 0.5; // Queda moderada
     }
 
     /* 2. Atualiza a pressão atmosférica */
     diff = (weather->pressure > meanp ? -2 : 2);
-    weather->press_diff += (dice(1, 4) * diff + dice(2, 6) - dice(2, 6));
-    weather->press_diff = URANGE(weather->press_diff, -12, 12);
+    weather->press_diff += (dice(1, 3) * diff + dice(1, 6) - dice(1, 6));
+    weather->press_diff = URANGE(weather->press_diff, -10, 10);
     weather->pressure += weather->press_diff;
-    weather->pressure = URANGE(weather->pressure, 950, 1050);
+    weather->pressure = URANGE(weather->pressure, 960, 1040);
 
     /* 3. Atualiza a temperatura */
     diff = (weather->temperature > meant ? -1 : 1);
-    weather->temperature += (weather->press_diff / 6 + diff * dice(1, 2));
+    int season_modifier = (time_info.month >= 1 || time_info.month <= 4) ? 1 : 2;
+    // No inverno, menos variação
+    weather->temperature += (weather->press_diff / (5 + season_modifier) + diff * dice(1, 2));
+    weather->temperature = URANGE(climate->temperature - 15, weather->temperature, climate->temperature + 15); // Limita variação
 
     /* 4. Calcula a pressão efetiva simulada (considerando umidade) */
     sim_pressure = weather->pressure - (40 * weather->humidity) + 20;
@@ -179,13 +235,15 @@ void weather_change(int zone) {
 
     /* 5. Atualiza a umidade */
     diff = (weather->pressure < meanp ? 1 : -1);
-    weather->humidity += (diff * dice(1, 3) + dice(1, 6) - dice(1, 6)) / 100.0;
-    weather->humidity = URANGE(climate->humidity - 0.1, weather->humidity, climate->humidity + 0.3);
+    int humidity_factor = (time_info.month >= 5 && time_info.month <= 8) || (time_info.month >= 9 && time_info.month <= 12) ? 2 : 1;
+    weather->humidity += ((diff * dice(1, 3) + dice(1, 6) - dice(1, 6)) / 100.0) * humidity_factor;
+    weather->humidity = URANGE(climate->humidity - 0.2, weather->humidity, climate->humidity + 0.3); // Maior estabilidade
 
     /* 6. Atualiza o vento */
     diff = (weather->press_diff > 6 ? 1 : (weather->press_diff < -6 ? -1 : 0));
-    weather->winds += (diff * dice(1, 2) + dice(1, 3) - dice(1, 3)) * climate->winds;
-    weather->winds = URANGE(climate->winds * 5, weather->winds, climate->winds * 30);
+    int wind_factor = (time_info.month >= 9 && time_info.month <= 12) || (time_info.month >= 1 || time_info.month <= 4) ? 2 : 1;
+    weather->winds += (diff * dice(1, 2) + dice(1, 3) - dice(1, 3)) * climate->winds * wind_factor;
+    weather->winds = URANGE(climate->winds * 3, weather->winds, climate->winds * 25); // Limita oscilações
 
     /* 7. Transição entre estados do céu com base em sim_pressure e temperatura */
     switch (weather->sky) {
@@ -279,51 +337,53 @@ void weather_change(int zone) {
 	}
 
     } else {
-        /* 9. Mensagens ambientais ocasionais, baseadas no vento e na temperatura */
-        p = rand_number(0, 99);
-        switch (weather->sky) {
-            case SKY_CLOUDLESS:
-            case SKY_CLOUDY:
-                if (p < weather->winds) {
-                    if (p < 25)
-                        send_to_zone_outdoor(zone, "Você sente uma brisa passando por você.\r\n");
-                    else if (p < 50)
-                        send_to_zone_outdoor(zone, "Um forte vento açoita o seu rosto.\r\n");
-                    else if (p < 75)
-                        send_to_zone_outdoor(zone, "A ventania dificulta os seus movimentos.\r\n");
-                    else
-                        send_to_zone_outdoor(zone, "Os ventos parecem o castigar.\r\n");
-                } else if (weather->temperature < 5) {
-                    send_to_zone_outdoor(zone, "Uma nevasca parece prestes a cair sobre a região.\r\n");
-                }
-                break;
-
-            case SKY_RAINING:
-            case SKY_LIGHTNING:
-                if (p < weather->winds) {
-                    if (p < 25)
-                        send_to_zone_outdoor(zone, "Uma brisa passa por você, jogando a chuva contra o seu rosto.\r\n");
-                    else
-                        send_to_zone_outdoor(zone, "A chuva e os fortes ventos dificultam os seus passos.\r\n");
-                }
-                if (weather->sky == SKY_RAINING) {
-                    if (weather->humidity >= 0.75 && p >= 50)
-                        send_to_zone_outdoor(zone, "Pesadas gotas de chuva caem com violência.\r\n");
-                } else if (weather->sky == SKY_LIGHTNING) {
-                    if (weather->humidity >= 0.60 && p < 50)
-                        send_to_zone_outdoor(zone, "O som dos trovões preenche o ar.\r\n");
-                    else if (weather->humidity >= 0.70 && p < 60)
-                        send_to_zone_outdoor(zone, "Um claro relâmpago rasga os céus.\r\n");
-                }
-                break;
-
-            case SKY_SNOWING:
-                if (p < weather->winds)
-                    send_to_zone_outdoor(zone, "O frio vento do inverno parece congelar seus ossos.\r\n");
-                else
-                    send_to_zone_outdoor(zone, "Pequenos flocos de neve se dispersam pelo ar.\r\n");
-                break;
+       /* 9. Mensagens ambientais ocasionais, baseadas no vento e na temperatura */
+     p = rand_number(0, 99);
+    switch (weather->sky) {
+    case SKY_CLOUDLESS:
+    case SKY_CLOUDY:
+        /* Ajustamos para que a probabilidade dependa do vento (m/s * 10) */
+        if (p < (weather->winds * 10)) {
+            if (p < 25)
+                send_to_zone_outdoor(zone, "Você sente uma brisa passando por você.\r\n");
+            else if (p < 50)
+                send_to_zone_outdoor(zone, "Um forte vento açoita o seu rosto.\r\n");
+            else if (p < 75)
+                send_to_zone_outdoor(zone, "A ventania dificulta os seus movimentos.\r\n");
+            else
+                send_to_zone_outdoor(zone, "Os ventos parecem o castigar.\r\n");
+        } else if (weather->temperature < 5) {
+            send_to_zone_outdoor(zone, "Uma nevasca parece prestes a cair sobre a região.\r\n");
         }
+        break;
+
+    case SKY_RAINING:
+    case SKY_LIGHTNING:
+        if (p < (weather->winds * 10)) {
+            if (p < 25)
+                send_to_zone_outdoor(zone, "Uma brisa passa por você, jogando a chuva contra o seu rosto.\r\n");
+            else
+                send_to_zone_outdoor(zone, "A chuva e os fortes ventos dificultam os seus passos.\r\n");
+        }
+        if (weather->sky == SKY_RAINING) {
+            if (weather->humidity >= 0.75 && p >= 50)
+                send_to_zone_outdoor(zone, "Pesadas gotas de chuva caem com violência.\r\n");
+        } else if (weather->sky == SKY_LIGHTNING) {
+            if (weather->humidity >= 0.60 && p < 50)
+                send_to_zone_outdoor(zone, "O som dos trovões preenche o ar.\r\n");
+            else if (weather->humidity >= 0.70 && p < 60)
+                send_to_zone_outdoor(zone, "Um claro relâmpago rasga os céus.\r\n");
+        }
+        break;
+
+    case SKY_SNOWING:
+        if (p < (weather->winds * 10))
+            send_to_zone_outdoor(zone, "O frio vento do inverno parece congelar seus ossos.\r\n");
+        else
+            send_to_zone_outdoor(zone, "Pequenos flocos de neve se dispersam pelo ar.\r\n");
+        break;
+     }
+
     }
     zone_table[zone].weather = weather;
 

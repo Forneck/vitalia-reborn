@@ -978,11 +978,11 @@ int movement_loss[] =
 };
 
 const char *climate_types[] = {
-   "NEUTRAL",
-  "WINDY",
-  "RAINY",
-  "SNOWY",
-  "DESERT"
+   "TEMPERADO",
+  "CHUVOSO",
+  "TROPICAL",
+  "FRIO/SECO",
+  "DESERTO"
 };
 
 

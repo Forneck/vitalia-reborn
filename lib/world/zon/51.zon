@@ -1,7 +1,8 @@
 #51
 Vitalia~
 Cidade Drow~
-5100 5199 30 1 j 0 0 0 8 25 0
+5100 5199 30 1 j 0 0 0 8 25 3
+D 0 5100 3 0 	(A Entrada da Cidade)
 M 0 5106 2 5101 	(o Mestre de Armas Drow)
 E 1 5105 5 16 	(uma longa espada negra)
 M 0 5109 6 5101 	(o Drow-aranha)
@@ -75,7 +76,6 @@ M 0 5111 1 5148 	(Yochlol)
 E 1 5113 1 16 	(uma adaga em formato de aranha)
 E 1 5115 2 17 	(uma chave de adamantite)
 O 1 5116 1 5149 	(uma pilha de moedas de ouro)
-D 0 5100 3 0 	(A Entrada da Cidade)
 D 0 5104 2 1 	(A Terceira Casa)
 D 0 5105 0 1 	(A Sala do Trono)
 D 0 5108 3 1 	(A Segunda Casa)

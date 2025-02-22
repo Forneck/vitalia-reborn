@@ -1,7 +1,13 @@
 #134
 Vitalia~
 A Cidade de Thewster e A Caverna Escura~
-13400 13499 65 2 j 0 0 0 -1 -1 0
+13400 13499 65 2 j 0 0 0 -1 -1 1
+M 0 13414 4 13400 	(um cidadão de Thewster)
+M 0 13414 4 13400 	(um cidadão de Thewster)
+M 0 13414 4 13400 	(um cidadão de Thewster)
+M 0 13414 4 13400 	(um cidadão de Thewster)
+M 0 13414 4 13400 	(um cidadão de Thewster)
+O 0 13400 1 13400 	(uma fonte jorrante)
 R 0 13405 3034 -1 	(um caixa automático)
 O 0 3034 100 13405 	(um caixa automático)
 M 0 13425 1 13436 	(Sion)
@@ -43,12 +49,6 @@ M 0 13409 3 13423 	(o zelador)
 M 0 13410 1 13423 	(o Pacificador)
 M 0 13411 1 13423 	(um pardal)
 M 0 13415 1 13423 	(o garçom)
-M 0 13414 4 13400 	(um cidadão de Thewster)
-M 0 13414 4 13400 	(um cidadão de Thewster)
-M 0 13414 4 13400 	(um cidadão de Thewster)
-M 0 13414 4 13400 	(um cidadão de Thewster)
-M 0 13414 4 13400 	(um cidadão de Thewster)
-O 0 13400 1 13400 	(uma fonte jorrante)
 M 0 13438 1 13445 	(um bebê dragão)
 M 0 13424 1 13433 	(Quétos, o Capitão da Guarda)
 M 0 13427 1 13435 	(um velho elfo)

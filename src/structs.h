@@ -601,11 +601,11 @@
 #define SKY_LIGHTNING  3  /**< Weather = Lightning storm */
 #define SKY_SNOWING 4 /**< Weather = Snowing */
 
-#define CLIM_NEUTRAL 0
-#define CLIM_WINDY 1
-#define CLIM_RAINY 2
-#define CLIM_SNOWY 3
-#define CLIM_DESERT 4
+#define CLIM_TEMPEADO 0
+#define CLIM_CHUVOSO 1
+#define CLIM_TROPICAL 2
+#define CLIM_FRIO_SECO 3
+#define CLIM_DESERTO 4
 #define NUM_CLIM_FLAGS    5
 
 /* Types of command  */
@@ -1400,10 +1400,10 @@ struct nighthammer_data {
 struct weather_data {
   int temperature;  /* Temperatura atual (°C) */
   int temp_diff;    /* Variação de temperatura */
-  int pressure;     /* Pressão atmosférica (Mb) */
+  int pressure;     /* Pressão atmosférica (hPa - Mb) */
   int press_diff;   /* Variação da pressão */
   float humidity;   /* Umidade relativa (%) */
-  float winds;      /* Velocidade do vento */
+  float winds;      /* Velocidade do vento (m/s) */
   int sky;          /* Estado do céu (claro, nublado, chovendo, etc.) */
   int before;       /* Estado anterior do céu */
   int sunlight;     /* Intensidade da luz solar */

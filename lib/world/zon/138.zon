@@ -1,7 +1,10 @@
 #138
 Vitalia~
 O Arquipélago de Yo~
-13800 13999 135 1 j 0 0 0 100 -1 0
+13800 13999 135 1 j 0 0 0 100 -1 2
+M 0 13821 6 13801 	(um lindo pássaro)
+R 0 13801 13825 -1 	(uma monumental estatua de pedra)
+O 0 13825 1 13801 	(uma monumental estatua de pedra)
 R 0 13800 13824 -1 	(uma monumental estatua de pedra)
 O 0 13824 1 13800 	(uma monumental estatua de pedra)
 M 0 13800 1 13898 	(Bahamut)
@@ -74,14 +77,11 @@ M 0 13819 1 13921 	(Yo)
 G 1 13846 20 -1 	(o magnífico cetro de cinco cabeças)
 E 1 13850 10 0 	(a estrela de nove pontas de Yo)
 M 0 13820 1 13902 	(uma assustadora horda de dracoliches)
-M 0 13821 6 13801 	(um lindo pássaro)
 M 0 13821 6 13804 	(um lindo pássaro)
 M 0 13821 6 13806 	(um lindo pássaro)
 M 0 13821 6 13862 	(um lindo pássaro)
 M 0 13821 6 13867 	(um lindo pássaro)
 M 0 13821 6 13875 	(um lindo pássaro)
-R 0 13801 13825 -1 	(uma monumental estatua de pedra)
-O 0 13825 1 13801 	(uma monumental estatua de pedra)
 R 0 13814 13826 -1 	(uma fonte de latão)
 O 0 13826 1 13814 	(uma fonte de latão)
 R 0 13819 13827 -1 	(uma fonte de cobre)
