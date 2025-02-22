@@ -646,7 +646,7 @@ ASPELL(spell_control_weather)
 
   /* Aplica a mudança na propriedade desejada na zona atual */
   struct weather_data *weather = zone_table[world[IN_ROOM(ch)].zone].weather;
-  zone = world[IN_ROOM(ch)].zone;
+  zone = world[IN_ROOM(ch)].zone; /* Pega o vnum da zona e converte pra rnum via zone_rnum */
   if (!weather) {
     send_to_char(ch, "O clima local está com muita instabilidade. Tente novamente mais tarde.\r\n");
     return;

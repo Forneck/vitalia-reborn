@@ -89,7 +89,7 @@ var indexSectionsWithContent = {
       "Y": false,
       "Z": true
       },
-   "Types": {
+   "Constants": {
       "Symbols": false,
       "Numbers": false,
       "A": false,
@@ -149,7 +149,7 @@ var indexSectionsWithContent = {
       "Y": false,
       "Z": true
       },
-   "Constants": {
+   "Types": {
       "Symbols": false,
       "Numbers": false,
       "A": false,

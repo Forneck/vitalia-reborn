@@ -1455,7 +1455,8 @@ void find_replacement(void *go, struct script_data *sc, trig_data *trig,
           "sunny",
           "cloudy",
           "rainy",
-          "lightning"
+          "lightning",
+	  "snowing"
         };
 
         if (!IS_SET_AR(r->room_flags, ROOM_INDOORS))

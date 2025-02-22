@@ -1213,7 +1213,7 @@ void beware_lightning() {
 	char buf[256];
 
     // Itera por todas as zonas
-   for (int zone = 0; zone < top_of_zone_table; zone++) {
+   for (int zone = 0; zone <= top_of_zone_table; zone++) {
     if (zone_table[zone].weather->sky != SKY_LIGHTNING)
         continue; // Pula para a próxima zona se não estiver relampejando
 
@@ -1227,9 +1227,9 @@ void beware_lightning() {
 
     for (victim = character_list; victim; victim = temp) {
         temp = victim->next;
-        if (IS_NPC(victim))
+        if (IS_NPC(victim) && GET_LEVEL(victim) < LVL_GOD)
 	   continue;
-        if (OUTSIDE(victim) == TRUE && GET_LEVEL(victim) < LVL_IMMORT) { // Apenas personagens ao ar livre
+        if (OUTSIDE(victim) == TRUE && GET_LEVEL(victim) < LVL_GOD) { // Apenas personagens ao ar livre
             if (rand_number(0, 9) == 0) { // 1% de chance de acertar alguém
                 dam = dice(1, (GET_MAX_HIT(victim) * 2));
                 if (IS_AFFECTED(victim, AFF_SANCTUARY))
@@ -1301,7 +1301,6 @@ void beware_lightning() {
                 act("KAZAK! Um raio atinge perto.", FALSE, victim, 0, 0, TO_ROOM);
                 act("KAZAK! Um raio atinge perto.", FALSE, victim, 0, 0, TO_CHAR);
                 send_to_zone_outdoor(zone, "*BOOM* Voce escuta o ronco do trovao.\n\r");
-                continue; // Continua verificando outros personagens
             }
         }
     }
