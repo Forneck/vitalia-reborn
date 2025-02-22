@@ -28,6 +28,7 @@
 #include "modify.h"
 #include "asciimap.h"
 #include "quest.h"
+#include "shop.h"
 
 /* prototypes of local functions */
 /* do_diagnose utility functions */
@@ -1314,22 +1315,25 @@ ACMD(do_time)
 	/* if (((day % 100) / 10) != 1) { switch (day % 10) { case 1: suf = " st
 	   "; break; case 2: suf = " nd "; break; case 3: suf = " rd "; break; } } 
 	 */
-	send_to_char(ch, " O %d%s dia do %s, Ano %d. \r\n ",
-				 day, suf, month_name[time_info.month], time_info.year);
+	send_to_char(ch, " O %d%s dia do %s (%d%s mes), Ano %d. \r\n ",
+				 day, suf, month_name[time_info.month],time_info.month, suf, time_info.year);
 }
 
 ACMD(do_weather) {
+	zone_rnum zona;
+        zona = world[IN_ROOM(ch)].zone;
 	const char *sky_look[] = {"limpo", "nublado", "chuvoso", "relampejando", "nevando"};
 
-	if (OUTSIDE(ch)) {
-    	    int pressure = zone_table[world[IN_ROOM(ch)].zone].weather->pressure;
-	    int press_diff = zone_table[world[IN_ROOM(ch)].zone].weather->press_diff;
-	    int sky = zone_table[world[IN_ROOM(ch)].zone].weather->sky;
-	    int temperature = zone_table[world[IN_ROOM(ch)].zone].weather->temperature;
-	    int temp_diff = zone_table[world[IN_ROOM(ch)].zone].weather->temp_diff;
-	    float humidity = zone_table[world[IN_ROOM(ch)].zone].weather->humidity;
-	    float wind = zone_table[world[IN_ROOM(ch)].zone].weather->winds * 10;
-	    int sunlight = zone_table[world[IN_ROOM(ch)].zone].weather->sunlight;
+    	    
+	    int pressure = zone_table[zona].weather->pressure;
+	    int press_diff = zone_table[zona].weather->press_diff;
+	    int sky = zone_table[zona].weather->sky;
+	    int temperature = zone_table[zona].weather->temperature;
+	    int temp_diff = zone_table[zona].weather->temp_diff;
+	    float humidity = zone_table[zona].weather->humidity;
+	    float wind = zone_table[zona].weather->winds;
+	    int sunlight = weather_info.sunlight; //Luz do sol global;
+
     
             const char *weather_feel;
             const char *temp_feel;
@@ -1356,15 +1360,16 @@ ACMD(do_weather) {
               temp_feel = "e o clima está ameno";
           }
         
-           /* Envia a mensagem combinando ambas as descrições */
-           send_to_char(ch, " O céu está %s, %s %s.\r\n", sky_look[sky], weather_feel, temp_feel); 
+           if (OUTSIDE(ch) || IS_GOD(ch)) {
+  	      /* Envia a mensagem combinando ambas as descrições */
+              send_to_char(ch, " O céu está %s, %s %s.\r\n", sky_look[sky], weather_feel, temp_feel); 
     
     	  if (GET_LEVEL(ch) >= LVL_GOD) {
-        	send_to_char(ch, " Pressão: %d(mudança: %d), Céu: %d(%s) \r\n",
+        	send_to_char(ch, " Pressão: %d hPa (mudança: %d), Céu: %d (%s) \r\n",
                      pressure, press_diff, sky, sky_look[sky]);
-	        send_to_char(ch, "Temperatura %d(mudança: %d), Umidade %.2f\r\n",
+	        send_to_char(ch, "Temperatura %d º.C (mudança: %d), Umidade %.2f\r\n",
                      temperature, temp_diff, humidity);
-	        send_to_char(ch, "Vento: %.2f, Intensidade Solar: %d\r\n",
+	        send_to_char(ch, "Vento: %.2f m/s, Intensidade Solar: %d\r\n",
                      wind, sunlight);
     	  }
 	} else {

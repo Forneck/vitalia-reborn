@@ -85,7 +85,6 @@
 #include "mud_event.h"
 #include "ann.h"
 
-
 #ifndef INVALID_SOCKET
 #define INVALID_SOCKET (-1)
 #endif
@@ -169,7 +168,7 @@ static RETSIGTYPE websterlink(int sig);
 static void handle_webster_file(void);
 
 static void msdp_update(void);	/* KaVir plugin */
-
+void update_weather(void);
 /* externally defined functions, used locally */
 #ifdef __CXREF__
 #undef FD_ZERO
@@ -1086,8 +1085,10 @@ void heartbeat(int heart_pulse)
 		zone_update();
 
 	if (!(heart_pulse % PULSE_IDLEPWD))	/* 15 seconds */
+	{
 		check_idle_passwords();
-
+	        update_weather();
+	}
 	if (!(heart_pulse % PULSE_MOBILE))
 		mobile_activity();
 

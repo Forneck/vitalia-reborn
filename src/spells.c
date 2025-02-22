@@ -648,7 +648,7 @@ ASPELL(spell_control_weather)
   struct weather_data *weather = zone_table[world[IN_ROOM(ch)].zone].weather;
   zone = world[IN_ROOM(ch)].zone;
   if (!weather) {
-    send_to_char(ch, "O clima local está com mjita instabilidade. Tente novamente mais tarde.\r\n");
+    send_to_char(ch, "O clima local está com muita instabilidade. Tente novamente mais tarde.\r\n");
     return;
   }
 
@@ -657,6 +657,9 @@ ASPELL(spell_control_weather)
       weather->press_diff += change_val;
     else  /* diminuir */
       weather->press_diff -= change_val;
+
+    if (weather->press_diff < -12) weather->press_diff = -12;
+    if (weather->humidity > 12) weather->press_diff = 12;
     send_to_char(ch, "Você canaliza sua magia e altera a pressão da area.\r\n");
   }
   else if (is_abbrev(property, "temperatura")) {
@@ -668,9 +671,11 @@ ASPELL(spell_control_weather)
   }
   else if (is_abbrev(property, "vento")) {
     if (is_abbrev(direction, "aumentar"))
-      weather->winds += (float) change_val / 10.0;  /* ajuste conforme necessário */
+      weather->winds += (float) change_val / 100.0;  /* ajuste conforme necessário */
     else
-      weather->winds -= (float) change_val / 10.0;
+      weather->winds -= (float) change_val / 100.0;
+      if (weather->winds < 0) weather->winds = 0;
+
     send_to_char(ch, "Você canaliza sua magia e altera o vento na area.\r\n");
   }
   else if (is_abbrev(property, "umidade")) {

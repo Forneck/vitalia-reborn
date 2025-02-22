@@ -140,7 +140,7 @@ time_t newsmod;					/* Time news file was last modified. */
 time_t motdmod;					/* Time motd file was last modified. */
 
 struct time_info_data time_info;	/* the infomation about the time */
-struct weather_data weather_info;	/* the infomation about the weather */
+struct weather_data weather_info;	/* the infomation about the weather global */
 struct player_special_data dummy_mob;	/* dummy spec area for mobs */
 struct reset_q_type reset_q;	/* queue of zones to be reset */
 
@@ -1010,7 +1010,7 @@ static void reset_time(void)
 	}
 
 	if (beginning_of_time == 0)
-		beginning_of_time = 650336715;
+		beginning_of_time = 1;
 
 	time_info = *mud_time_passed(time(0), beginning_of_time);
 

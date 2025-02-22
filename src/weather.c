@@ -1,5 +1,6 @@
 /**
 * @file weather.c                                          
+*
 * Functions that handle the in game progress of time and weather changes.
 * 
 * Part of the core tbaMUD source code distribution, which is a derivative
@@ -19,8 +20,9 @@
 #include "fight.h"
 
 static void another_hour(int mode);
-void weather_change(zone_rnum zone);
+void weather_change(int zone);
 extern struct weather_data climates[];
+void update_weather(void);
 
 /** Call this function every mud hour to increment the gametime (by one hour)
  * and the weather patterns.
@@ -29,16 +31,18 @@ extern struct weather_data climates[];
  * is non-zero, the gametime will increment one hour and the weather will be
  * changed.
  */
-void weather_and_time(int mode)
-{
-  int i;
-  another_hour(mode);
-  if (mode)
-    for (i=0;i<top_of_zone_table;i++){
-       weather_change(zone_table[i].number);
-    }
+
+void update_weather(void) {
+   int i;
+   for (i=0;i<=top_of_zone_table;i++){
+    weather_change(i);  
+   }
 }
 
+void weather_and_time(int mode)
+{
+  another_hour(mode);
+}
 /** Increment the game time by one hour (no matter what) and display any time 
  * dependent messages via send_to_outdoors() (if parameter is non-zero).
  * @param mode Really, this parameter has the effect of a boolean. If non-zero,
@@ -49,7 +53,31 @@ static void another_hour(int mode)
   time_info.hours++;
 
   if (mode) {
+   if (time_info.month >= 9 && time_info.month <= 16) {
+    //inverno
     switch (time_info.hours) {
+    case 6:
+      weather_info.sunlight = SUN_RISE;
+      send_to_outdoor("O sol nasceu no leste.\r\n");
+      break;
+    case 7:
+      weather_info.sunlight = SUN_LIGHT;
+      send_to_outdoor("O dia comecou.\r\n");
+      break;
+    case 18:
+      weather_info.sunlight = SUN_SET;
+      send_to_outdoor("O sol lentamente desaparece no oeste.\r\n");
+      break;
+    case 19:
+      weather_info.sunlight = SUN_DARK;
+      send_to_outdoor("A noite comecou.\r\n");
+      break;
+    default:
+      break;
+    }
+  } else {
+    //Verao
+   switch (time_info.hours) {
     case 5:
       weather_info.sunlight = SUN_RISE;
       send_to_outdoor("O sol nasceu no leste.\r\n");
@@ -58,7 +86,7 @@ static void another_hour(int mode)
       weather_info.sunlight = SUN_LIGHT;
       send_to_outdoor("O dia comecou.\r\n");
       break;
-    case 18:
+    case 19:
       weather_info.sunlight = SUN_SET;
       send_to_outdoor("O sol lentamente desaparece no oeste.\r\n");
       break;
@@ -68,8 +96,9 @@ static void another_hour(int mode)
       break;
     default:
       break;
-
+   }
   }
+
   if (time_info.hours > 23) {	/* Changed by HHS due to bug ??? */
     time_info.hours -= 24;
     time_info.day++;
@@ -108,19 +137,19 @@ void weather_change(zone_rnum zone) {
 }
 */
 
-void weather_change(zone_rnum zone) {
+void weather_change(int zone) {
     int diff, meant, meanp, sim_pressure, p;
-    struct weather_data *weather;
     struct weather_data *climate;
 
     if (zone < 0 || zone > top_of_zone_table)
         return;
-
-    weather = zone_table[zone].weather;
+    struct weather_data *weather = zone_table[zone].weather;
     climate = &climates[zone_table[zone].climate];
 
-    if (!weather || !climate)
+    if (!weather || !climate) {
+	log1("Weather com erro");
         return;
+    }
 
     /* 1. Determina as médias sazonais */
     meant = climate->temperature;
@@ -145,97 +174,117 @@ void weather_change(zone_rnum zone) {
     weather->temperature += (weather->press_diff / 6 + diff * dice(1, 2));
 
     /* 4. Calcula a pressão efetiva simulada (considerando umidade) */
-    sim_pressure = weather->pressure - (40 * climate->humidity) + 20;
+    sim_pressure = weather->pressure - (40 * weather->humidity) + 20;
     weather->before = weather->sky;
 
-    /* 5. Transição entre estados do céu com base em sim_pressure e temperatura */
+    /* 5. Atualiza a umidade */
+    diff = (weather->pressure < meanp ? 1 : -1);
+    weather->humidity += (diff * dice(1, 3) + dice(1, 6) - dice(1, 6)) / 100.0;
+    weather->humidity = URANGE(climate->humidity - 0.1, weather->humidity, climate->humidity + 0.3);
+
+    /* 6. Atualiza o vento */
+    diff = (weather->press_diff > 6 ? 1 : (weather->press_diff < -6 ? -1 : 0));
+    weather->winds += (diff * dice(1, 2) + dice(1, 3) - dice(1, 3)) * climate->winds;
+    weather->winds = URANGE(climate->winds * 5, weather->winds, climate->winds * 30);
+
+    /* 7. Transição entre estados do céu com base em sim_pressure e temperatura */
     switch (weather->sky) {
         case SKY_CLOUDLESS:
-            if (sim_pressure < 990)
+            if (weather->humidity > 0.60 && sim_pressure < 1005) {
                 weather->sky = SKY_CLOUDY;
-            else if (sim_pressure < 1010 && dice(1,4) == 1)
-                weather->sky = SKY_CLOUDY;
+                weather->before = SKY_CLOUDLESS;
+            }
             break;
 
         case SKY_CLOUDY:
-            if (sim_pressure < 970)
-                weather->sky = SKY_RAINING;
-            else if (sim_pressure < 990 && dice(1,4) == 1)
+            if (weather->humidity > 0.80 && sim_pressure < 990) {
                 weather->sky = (weather->temperature <= 0 ? SKY_SNOWING : SKY_RAINING);
-            else if (sim_pressure > 1030 && weather->temperature > 0 && dice(1,4) == 1)
+                weather->before = SKY_CLOUDY;
+            }
+            else if (sim_pressure > 1020 && weather->humidity < 0.50 && weather->winds > 6.0) {
                 weather->sky = SKY_CLOUDLESS;
+                weather->before = SKY_CLOUDY;
+            }
             break;
 
         case SKY_RAINING:
-            if (sim_pressure < 970) {
-                if (weather->temperature >= 15 && dice(1,4) == 1)
-                    weather->sky = SKY_LIGHTNING;
-                else if (weather->temperature <= 0 && dice(1,2) == 1)
-                    weather->sky = SKY_SNOWING;
-            } else if (sim_pressure > 1030)
-                weather->sky = SKY_CLOUDY;
-            else if (sim_pressure > 1010 && dice(1,4) == 1)
-                weather->sky = SKY_CLOUDY;
-            else if (weather->temperature <= 0 && dice(1,4) == 1)
+            if (weather->humidity > 0.90 && sim_pressure < 970 && weather->winds > 8.33) {
+                weather->sky = SKY_LIGHTNING;
+                weather->before = SKY_RAINING;
+            }
+            else if (weather->temperature <= 0) {
                 weather->sky = SKY_SNOWING;
+                weather->before = SKY_RAINING;
+            }
+            else if (sim_pressure > 1020 && weather->humidity < 0.50 && weather->winds > 5.0) {
+                weather->sky = SKY_CLOUDY;
+                weather->before = SKY_RAINING;
+            }
             break;
 
         case SKY_LIGHTNING:
-            if (sim_pressure > 1010)
+            if (sim_pressure > 990 || weather->humidity < 0.85) {
                 weather->sky = SKY_RAINING;
-            else if (sim_pressure > 990 && dice(1,4) == 1)
-                weather->sky = SKY_RAINING;
+                weather->before = SKY_LIGHTNING;
+            }
             break;
 
         case SKY_SNOWING:
-            if (sim_pressure > 1030)
+            if (weather->temperature > 0) {
                 weather->sky = SKY_CLOUDY;
-            else if (sim_pressure > 1010 && dice(1,4) == 1)
-                weather->sky = SKY_CLOUDY;
-            else if (weather->temperature > 0 && dice(1,4) == 1)
-                weather->sky = SKY_CLOUDY;
+                weather->before = SKY_SNOWING;
+            }
+            else if (sim_pressure > 1020) {
+                weather->sky = SKY_CLOUDLESS;
+                weather->before = SKY_SNOWING;
+            }
             break;
     }
 
-    /* 6. Envio de mensagens ambientais se houver mudança no estado do céu */
+    /* 8. Envio de mensagens ambientais se houver mudança no estado do céu */
     if (weather->sky != weather->before) {
-        switch (weather->sky) {
-            case SKY_CLOUDLESS:
-                send_to_zone_outdoor(zone, "As nuvens desapareceram do céu.\r\n");
-                break;
-            case SKY_CLOUDY:
-                if (weather->before == SKY_CLOUDLESS)
-                    send_to_zone_outdoor(zone, "Nuvens misteriosas aparecem no céu.\r\n");
-                else if (weather->before == SKY_SNOWING)
-                    send_to_zone_outdoor(zone, "A neve parou de cair.\r\n");
-                else
-                    send_to_zone_outdoor(zone, "A chuva parou.\r\n");
-                break;
-            case SKY_RAINING:
-                if (weather->before == SKY_LIGHTNING)
-                    send_to_zone_outdoor(zone, "Os relâmpagos páram.\r\n");
-                else if (weather->before == SKY_SNOWING)
-                    send_to_zone_outdoor(zone, "A neve pára de cair e dá lugar para a chuva.\r\n");
-                else
-                    send_to_zone_outdoor(zone, "A chuva começa a cair.\r\n");
-                break;
-            case SKY_LIGHTNING:
-                send_to_zone_outdoor(zone, "Relâmpagos começam a aparecer no céu.\r\n");
-                break;
-            case SKY_SNOWING:
-                if (weather->before == SKY_RAINING)
-                    send_to_zone_outdoor(zone, "A chuva pára de cair e começa a nevar.\r\n");
-                else
-                    send_to_zone_outdoor(zone, "A neve começa a cair.\r\n");
-                break;
-        }
+	switch (weather->sky) { 
+	  case SKY_CLOUDLESS: 
+	    send_to_zone_outdoor(zone, "As nuvens se dissipam, revelando um céu limpo.\r\n"); 
+	    break;
+
+	  case SKY_CLOUDY:
+            if (weather->before == SKY_CLOUDLESS)
+              send_to_zone_outdoor(zone, "Nuvens começam a se formar no céu.\r\n");
+            else if (weather->before == SKY_SNOWING)
+              send_to_zone_outdoor(zone, "A neve para de cair e as nuvens permanecem.\r\n");
+            else
+              send_to_zone_outdoor(zone, "A chuva cessa, mas as nuvens ainda cobrem o céu.\r\n");
+            break;
+    
+          case SKY_RAINING:
+            if (weather->before == SKY_LIGHTNING)
+               send_to_zone_outdoor(zone, "Os relâmpagos cessam, mas a chuva continua.\r\n");
+            else if (weather->before == SKY_SNOWING)
+              send_to_zone_outdoor(zone, "A neve se transforma em chuva.\r\n");
+            else
+              send_to_zone_outdoor(zone, "A chuva começa a cair suavemente.\r\n");
+            break;
+    
+          case SKY_LIGHTNING:
+            send_to_zone_outdoor(zone, "Relâmpagos iluminam o céu tempestuoso.\r\n");
+            break;
+    
+          case SKY_SNOWING:
+            if (weather->before == SKY_RAINING)
+              send_to_zone_outdoor(zone, "A chuva se transforma em flocos de neve.\r\n");
+            else
+              send_to_zone_outdoor(zone, "A neve começa a cair suavemente.\r\n");
+            break;
+	}
+
     } else {
-        /* 7. Mensagens ambientais ocasionais, baseadas no vento e na temperatura */
+        /* 9. Mensagens ambientais ocasionais, baseadas no vento e na temperatura */
         p = rand_number(0, 99);
         switch (weather->sky) {
             case SKY_CLOUDLESS:
             case SKY_CLOUDY:
-                if (p < climate->winds * 100) {
+                if (p < weather->winds) {
                     if (p < 25)
                         send_to_zone_outdoor(zone, "Você sente uma brisa passando por você.\r\n");
                     else if (p < 50)
@@ -251,30 +300,32 @@ void weather_change(zone_rnum zone) {
 
             case SKY_RAINING:
             case SKY_LIGHTNING:
-                if (p < climate->winds * 100) {
+                if (p < weather->winds) {
                     if (p < 25)
                         send_to_zone_outdoor(zone, "Uma brisa passa por você, jogando a chuva contra o seu rosto.\r\n");
                     else
                         send_to_zone_outdoor(zone, "A chuva e os fortes ventos dificultam os seus passos.\r\n");
                 }
                 if (weather->sky == SKY_RAINING) {
-                    if (climate->humidity >= 0.75 && p >= 50)
+                    if (weather->humidity >= 0.75 && p >= 50)
                         send_to_zone_outdoor(zone, "Pesadas gotas de chuva caem com violência.\r\n");
                 } else if (weather->sky == SKY_LIGHTNING) {
-                    if (climate->humidity >= 0.60 && p < 50)
+                    if (weather->humidity >= 0.60 && p < 50)
                         send_to_zone_outdoor(zone, "O som dos trovões preenche o ar.\r\n");
-                    else if (climate->humidity >= 0.70 && p < 60)
+                    else if (weather->humidity >= 0.70 && p < 60)
                         send_to_zone_outdoor(zone, "Um claro relâmpago rasga os céus.\r\n");
                 }
                 break;
 
             case SKY_SNOWING:
-                if (p < climate->winds * 100)
+                if (p < weather->winds)
                     send_to_zone_outdoor(zone, "O frio vento do inverno parece congelar seus ossos.\r\n");
                 else
                     send_to_zone_outdoor(zone, "Pequenos flocos de neve se dispersam pelo ar.\r\n");
                 break;
         }
     }
+    zone_table[zone].weather = weather;
+
 }
 

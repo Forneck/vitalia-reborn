@@ -1227,8 +1227,9 @@ void beware_lightning() {
 
     for (victim = character_list; victim; victim = temp) {
         temp = victim->next;
-
-        if (OUTSIDE(victim) == TRUE) { // Apenas personagens ao ar livre
+        if (IS_NPC(victim))
+	   continue;
+        if (OUTSIDE(victim) == TRUE && GET_LEVEL(victim) < LVL_IMMORT) { // Apenas personagens ao ar livre
             if (rand_number(0, 9) == 0) { // 1% de chance de acertar alguém
                 dam = dice(1, (GET_MAX_HIT(victim) * 2));
                 if (IS_AFFECTED(victim, AFF_SANCTUARY))
