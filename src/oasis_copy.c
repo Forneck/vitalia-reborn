@@ -23,6 +23,7 @@
 #include "improved-edit.h"
 #include "constants.h"
 #include "dg_scripts.h"
+#include "screen.h"
 
 /* Local, filescope function prototypes */
 /* Utility function for buildwalk */
@@ -164,8 +165,8 @@ ACMD(do_dig)
 
   /* Can't dig if we don't know where to go. */
   if (!*sdir || !*sroom) {
-    send_to_char(ch, "Format: dig <direction> <room> - to create an exit\r\n"
-                     "        dig <direction> -1     - to delete an exit\r\n");
+    send_to_char(ch, "Formato: dig <dir> <sala> - para criar saida\r\n"
+                     "        dig <direction> -1     - para deletar saida\r\n");
     return;
   }
 
@@ -179,18 +180,18 @@ ACMD(do_dig)
   zone = world[IN_ROOM(ch)].zone;
 
   if (dir < 0) {
-    send_to_char(ch, "You cannot create an exit to the '%s'.\r\n", sdir);
+    send_to_char(ch, "Você não pode criar uma saida para '%s'.\r\n", sdir);
     return;
   }
   /* Make sure that the builder has access to the zone he's in. */
   if ((zone == NOWHERE) || !can_edit_zone(ch, zone)) {
-    send_to_char(ch, "You do not have permission to edit this zone.\r\n");
+    send_to_char(ch, "Você não tem permissão para editar esta área.\r\n");
     return;
   }
   /* Lets not allow digging to limbo. After all, it'd just get us more errors 
    * on 'show errors.' */
   if (rvnum == 0) {
-   send_to_char(ch, "The target exists, but you can't dig to limbo!\r\n");
+   send_to_char(ch, "Você não pode cavar uma saída para O Vazio!\r\n");
    return;
   }
   /* Target room == -1 removes the exit. */
@@ -204,27 +205,27 @@ ACMD(do_dig)
       free(W_EXIT(IN_ROOM(ch), dir));
       W_EXIT(IN_ROOM(ch), dir) = NULL;
       add_to_save_list(zone_table[world[IN_ROOM(ch)].zone].number, SL_WLD);
-      send_to_char(ch, "You remove the exit to the %s.\r\n", dirs[dir]);
+      send_to_char(ch, "Você removeu a saída para %s.\r\n", dirs[dir]);
       return;
     }
-    send_to_char(ch, "There is no exit to the %s.\r\n"
-                     "No exit removed.\r\n", dirs[dir]);
+    send_to_char(ch, "Não existe saída para %s.\r\n"
+                     "Saída %snão%s removida.\r\n", CCRED(ch,C_NRM),dirs[dir],CCNRM(ch,C_NRM));
     return;
   }
   /* Can't dig in a direction, if it's already a door. */
   if (W_EXIT(IN_ROOM(ch), dir)) {
-      send_to_char(ch, "There already is an exit to the %s.\r\n", dirs[dir]);
+      send_to_char(ch, "Já existe saída para %s.\r\n", dirs[dir]);
       return;
   }
 
   /* Make sure that the builder has access to the zone he's linking to. */
   zone = real_zone_by_thing(rvnum);
   if (zone == NOWHERE) {
-    send_to_char(ch, "You cannot link to a non-existing zone!\r\n");
+    send_to_char(ch, "Você não pode ligar com uma área %sinexistente%s!\r\n",CCRED(ch,C_CMP),CCNRM(ch,C_CMP));
     return;
   }
   if (!can_edit_zone(ch, zone)) {
-    send_to_char(ch, "You do not have permission to edit room #%d.\r\n", rvnum);
+    send_to_char(ch, "Você não tem permissão para editar a sala  #%d.\r\n", rvnum);
     return;
   }
   /* Now we know the builder is allowed to make the link. */
@@ -246,10 +247,10 @@ ACMD(do_dig)
     if (*new_room_name)
      OLC_ROOM(d)->name = strdup(new_room_name);
     else
-     OLC_ROOM(d)->name = strdup("An unfinished room");
+     OLC_ROOM(d)->name = strdup("Uma Sala Interminada");
 
     /* Copy the room's description.*/
-    OLC_ROOM(d)->description = strdup("You are in an unfinished room.\r\n");
+    OLC_ROOM(d)->description = strdup("Esta é uma sala que ainda não foi terminada.\r\n");
     OLC_ROOM(d)->zone = OLC_ZNUM(d);
     OLC_ROOM(d)->number = NOWHERE;
 
@@ -258,7 +259,7 @@ ACMD(do_dig)
     redit_save_internally(d);
     OLC_VAL(d) = 0;
 
-    send_to_char(ch, "New room (%d) created.\r\n", rvnum);
+    send_to_char(ch, "Criada nova sala (%d).\r\n", rvnum);
     cleanup_olc(d, CLEANUP_ALL);
     /* Update rrnum to the correct room rnum after adding the room. */
     rrnum = real_room(rvnum);
@@ -271,12 +272,12 @@ ACMD(do_dig)
   W_EXIT(IN_ROOM(ch), dir)->to_room = rrnum;
   add_to_save_list(zone_table[world[IN_ROOM(ch)].zone].number, SL_WLD);
 
-  send_to_char(ch, "You make an exit %s to room %d (%s).\r\n",
+  send_to_char(ch, "Você fez uma nova saída para %s até a sala %d (%s).\r\n",
                    dirs[dir], rvnum, world[rrnum].name);
 
   /* Check if we can dig from there to here. */
   if (W_EXIT(rrnum, rev_dir[dir]))
-    send_to_char(ch, "You cannot dig from %d to here. The target room already has an exit to the %s.\r\n",
+    send_to_char(ch, "Você não pode cavar uma saída de %d até aqui. A sala alvo já tem uma saída %s.\r\n",
                      rvnum, dirs[rev_dir[dir]]);
   else {
     CREATE(W_EXIT(rrnum, rev_dir[dir]), struct room_direction_data, 1);
@@ -320,9 +321,9 @@ int buildwalk(struct char_data *ch, int dir)
     get_char_colors(ch);
 
     if (!can_edit_zone(ch, world[IN_ROOM(ch)].zone)) {
-      send_to_char(ch, "You do not have build permissions in this zone.\r\n");
+      send_to_char(ch, "Você não tem permissão para construir nesta área!\r\n");
     } else if ((vnum = redit_find_new_vnum(world[IN_ROOM(ch)].zone)) == NOWHERE) {
-      send_to_char(ch, "No free vnums are available in this zone!\r\n");
+      send_to_char(ch, "Não existem vnums livres nesta área!\r\n");
     } else {
       struct descriptor_data *d = ch->desc;
       /* Give the descriptor an olc struct. This way we can let 
@@ -336,9 +337,9 @@ int buildwalk(struct char_data *ch, int dir)
       OLC_NUM(d) = vnum;
       CREATE(OLC_ROOM(d), struct room_data, 1);
 
-      OLC_ROOM(d)->name = strdup("New BuildWalk Room");
+      OLC_ROOM(d)->name = strdup("Nova Sala do Buildwalk");
 
-      sprintf(buf, "This unfinished room was created by %s.\r\n", GET_NAME(ch));
+      sprintf(buf, "Esta sala interminada foi criada por %s.\r\n", GET_NAME(ch));
       OLC_ROOM(d)->description = strdup(buf);
       OLC_ROOM(d)->zone = OLC_ZNUM(d);
       OLC_ROOM(d)->number = NOWHERE;
@@ -357,7 +358,7 @@ int buildwalk(struct char_data *ch, int dir)
       world[rnum].dir_option[rev_dir[dir]]->to_room = IN_ROOM(ch);
 
       /* Report room creation to user */
-      send_to_char(ch, "%sRoom #%d created by BuildWalk.%s\r\n", yel, vnum, nrm);
+      send_to_char(ch, "%sSala #%d criada por BuildWalk.%s\r\n", yel, vnum, nrm);
       cleanup_olc(d, CLEANUP_STRUCTS);
 
       return (1);
