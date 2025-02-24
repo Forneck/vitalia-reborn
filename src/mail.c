@@ -219,17 +219,17 @@ char *read_delete(long recipient)
     to = get_name_by_id(record_to_keep->recipient);
 
  		snprintf(buf, sizeof(buf),
-             " * * * * CansMUD Mail System * * * *\r\n"
-             "Date: %s\r\n"
-             "To  : %s\r\n"
-             "From: %s\r\n"
+	     "@+C-@G=@Y>@+W Serviço de Correios de Vitália @+C@Y<@G=C-   @+n\r\n"
+             "Data: %s\r\n"
+             "De  : %s\r\n"
+             "Para: %s\r\n"
              "\r\n"
              "%s",
 
              timestr,
-             to ? to : "Unknown",
-             from ? from : "Unknown",
-             record_to_keep->body ? record_to_keep->body : "No message" );
+             to ? to : "(desconhecido)",
+             from ? from : "(desconhecido)",
+             record_to_keep->body ? record_to_keep->body : "Sem mensagem" );
 
     free_mail_record(record_to_keep);
   }
@@ -252,7 +252,7 @@ SPECIAL(postmaster)
     return (0);
 
   if (no_mail) {
-    send_to_char(ch, "Sorry, the mail system is having technical difficulties.\r\n");
+    send_to_char(ch, "Desculpe, mas estamos em greve aqui. Tente novamente mais tarde.\r\n");
     return (0);
   }
 
@@ -276,38 +276,38 @@ static void postmaster_send_mail(struct char_data *ch, struct char_data *mailman
   char buf[MAX_INPUT_LENGTH], **mailwrite;
 
   if (GET_LEVEL(ch) < MIN_MAIL_LEVEL) {
-    snprintf(buf, sizeof(buf), "$n tells you, 'Sorry, you have to be level %d to send mail!'", MIN_MAIL_LEVEL);
+    snprintf(buf, sizeof(buf), "$n lhe diz, 'Sinto muito. Você precisa alcançar o nível %d para poder enviar mensagens!'", MIN_MAIL_LEVEL);
     act(buf, FALSE, mailman, 0, ch, TO_VICT);
     return;
   }
   one_argument(arg, buf);
 
   if (!*buf) {			/* you'll get no argument from me! */
-    act("$n tells you, 'You need to specify an addressee!'",
+    act("$n lhe diz, 'Você precisa especificar um endereço!'",
 	FALSE, mailman, 0, ch, TO_VICT);
     return;
   }
   if (GET_GOLD(ch) < STAMP_PRICE && GET_LEVEL(ch) < LVL_IMMORT) {
-    snprintf(buf, sizeof(buf), "$n tells you, 'A stamp costs %d coin%s.'\r\n"
-	    "$n tells you, '...which I see you can't afford.'", STAMP_PRICE,
+    snprintf(buf, sizeof(buf), "$n lhe diz, 'São %lu moeda%s, mas você não pode pagar...''\r\n"
+	    "$n lhe diz, '... que você não pode pagar!'", STAMP_PRICE,
             STAMP_PRICE == 1 ? "" : "s");
     act(buf, FALSE, mailman, 0, ch, TO_VICT);
     return;
   }
   if ((recipient = get_id_by_name(buf)) < 0 || !mail_recip_ok(buf)) {
-    act("$n tells you, 'No one by that name is registered here!'",
+    act("$n lhe diz, 'Ninguém com esse nome está registrado aqui!'",
 	FALSE, mailman, 0, ch, TO_VICT);
     return;
   }
-  act("$n starts to write some mail.", TRUE, ch, 0, 0, TO_ROOM);
+  act("$n começa a escrever uma carta.", TRUE, ch, 0, 0, TO_ROOM);
 
   if (GET_LEVEL(ch) < LVL_IMMORT) {
-    snprintf(buf, sizeof(buf), "$n tells you, 'I'll take %d coins for the stamp.'", STAMP_PRICE);
+    snprintf(buf, sizeof(buf), "$n lhe diz, 'São %lu moeda%s.'", STAMP_PRICE,STAMP_PRICE == 1 ? "" : "s");
     act(buf, FALSE, mailman, 0, ch, TO_VICT);
     decrease_gold(ch, STAMP_PRICE);
   }
 
-  act("$n tells you, 'Write your message. (.s saves .h for help).'", FALSE, mailman, 0, ch, TO_VICT);
+  act("$n lhe diz, 'Escreva a sua mensagem. (.s salva e .h para ajuda).'", FALSE, mailman, 0, ch, TO_VICT);
 
   SET_BIT_AR(PLR_FLAGS(ch), PLR_MAILING);	/* string_write() sets writing. */
 
@@ -320,9 +320,9 @@ static void postmaster_check_mail(struct char_data *ch, struct char_data *mailma
 			  int cmd, char *arg)
 {
   if (has_mail(GET_IDNUM(ch)))
-    act("$n tells you, 'You have mail waiting.'", FALSE, mailman, 0, ch, TO_VICT);
+    act("$n lhe diz, 'Tenho algo para você.'", FALSE, mailman, 0, ch, TO_VICT);
   else
-    act("$n tells you, 'Sorry, you don't have any mail waiting.'", FALSE, mailman, 0, ch, TO_VICT);
+    act("$n lhe diz, 'Sinto muito, Você não tem nenhuma carta.'", FALSE, mailman, 0, ch, TO_VICT);
 }
 
 static void postmaster_receive_mail(struct char_data *ch, struct char_data *mailman,
@@ -333,21 +333,22 @@ static void postmaster_receive_mail(struct char_data *ch, struct char_data *mail
   int y;
 
   if (!has_mail(GET_IDNUM(ch))) {
-    snprintf(buf, sizeof(buf), "$n tells you, 'Sorry, you don't have any mail waiting.'");
+    snprintf(buf, sizeof(buf), "$n lhe diz, 'Sinto muito, Você não tem nenhuma carta.'");
     act(buf, FALSE, mailman, 0, ch, TO_VICT);
     return;
   }
   while (has_mail(GET_IDNUM(ch))) {
     obj = create_obj(); 
     obj->item_number = 1; 
-    obj->name = strdup("mail paper letter");
-    obj->short_description = strdup("a piece of mail");
-    obj->description = strdup("Someone has left a piece of mail here.");
+    obj->name = strdup("carta papel encomenda");
+    obj->short_description = strdup("@ruma carta@n");
+    obj->description = strdup("Alguém deixou uma carta aqui.");
 
     GET_OBJ_TYPE(obj) = ITEM_NOTE;
     for(y = 0; y < TW_ARRAY_MAX; y++)
       obj->obj_flags.wear_flags[y] = 0;
     SET_BIT_AR(GET_OBJ_WEAR(obj), ITEM_WEAR_TAKE);
+    SET_BIT_AR(GET_OBJ_WEAR(obj), ITEM_WEAR_HOLD);
     GET_OBJ_WEIGHT(obj) = 1;
     GET_OBJ_COST(obj) = 30;
     GET_OBJ_RENT(obj) = 10;
@@ -355,12 +356,12 @@ static void postmaster_receive_mail(struct char_data *ch, struct char_data *mail
 
     if (obj->action_description == NULL)
       obj->action_description =
-	strdup("Mail system error - please report.  Error #11.\r\n");
+	strdup("Erro nos Correios de Vitalia - Por Favor Reporte.  Erro #11.\r\n");
 
     obj_to_char(obj, ch);
 
-    act("$n gives you a piece of mail.", FALSE, mailman, 0, ch, TO_VICT);
-    act("$N gives $n a piece of mail.", FALSE, ch, 0, mailman, TO_ROOM);
+    act("$n lhe entrega uma carta.", FALSE, mailman, 0, ch, TO_VICT);
+    act("$N entrega uma carta para $n.", FALSE, ch, 0, mailman, TO_ROOM);
   }
 }
 
@@ -370,5 +371,5 @@ void notify_if_playing(struct char_data *from, int recipient_id)
 
   for (d = descriptor_list; d; d = d->next) 
     if ((IS_PLAYING(d)) && (GET_IDNUM(d->character) == recipient_id) && (has_mail(GET_IDNUM(d->character)))) 
-      send_to_char(d->character, "You have new mudmail from %s.\r\n", GET_NAME(from)); 
+      send_to_char(d->character, "Você tem uma nova carta de %s.\r\n", GET_NAME(from)); 
 } 
