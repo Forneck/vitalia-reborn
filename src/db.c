@@ -3116,8 +3116,8 @@ void reset_zone(zone_rnum zone)
 					if (SHOP_KEEPER(shop_nr) == mob->nr)
 						break;
 				}
-				if (shop_nr < top_shop)
-					load_shop_nonnative(shop_nr, mob);
+				//if (shop_nr < top_shop)
+				//	load_shop_nonnative(shop_nr, mob);
 			}
 			else
 				last_cmd = 0;

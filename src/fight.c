@@ -1211,6 +1211,7 @@ void beware_lightning() {
 	int dam = 0;
 	struct char_data *victim = NULL, *temp = NULL;
 	char buf[256];
+	zone_rnum zona_vitima;
 
     // Itera por todas as zonas
    for (int zone = 0; zone <= top_of_zone_table; zone++) {
@@ -1227,6 +1228,9 @@ void beware_lightning() {
 
     for (victim = character_list; victim; victim = temp) {
         temp = victim->next;
+        zona_vitima = world[IN_ROOM(victim)].zone; //pega a zona (vnum para rnum) da sala da vitima 
+	if (zona_vitima != zone)
+	   continue;
         if (IS_NPC(victim) && GET_LEVEL(victim) < LVL_GOD)
 	   continue;
         if (OUTSIDE(victim) == TRUE && GET_LEVEL(victim) < LVL_GOD) { // Apenas personagens ao ar livre
