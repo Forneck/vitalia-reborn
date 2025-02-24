@@ -1231,9 +1231,7 @@ void beware_lightning() {
         zona_vitima = world[IN_ROOM(victim)].zone; //pega a zona (vnum para rnum) da sala da vitima 
 	if (zona_vitima != zone)
 	   continue;
-        if (IS_NPC(victim) && GET_LEVEL(victim) < LVL_GOD)
-	   continue;
-        if (OUTSIDE(victim) == TRUE && GET_LEVEL(victim) < LVL_GOD) { // Apenas personagens ao ar livre
+        if (OUTSIDE(victim) == TRUE) { // Apenas personagens ao ar livre
             if (rand_number(0, 9) == 0) { // 1% de chance de acertar alguém
                 dam = dice(1, (GET_MAX_HIT(victim) * 2));
                 if (IS_AFFECTED(victim, AFF_SANCTUARY))
@@ -1287,6 +1285,7 @@ void beware_lightning() {
                     if (!IS_NPC(victim)) {
                         REMOVE_BIT_AR(PLR_FLAGS(victim), PLR_KILLER);
                         REMOVE_BIT_AR(PLR_FLAGS(victim), PLR_THIEF);
+			SET_BIT_AR(PLR_FLAGS(victim), PLR_GHOST);
                     }
                     if (FIGHTING(victim))
                         stop_fighting(victim);
