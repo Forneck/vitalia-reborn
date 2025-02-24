@@ -703,7 +703,7 @@ static void shopping_buy(char *arg, struct char_data *ch, struct char_data *keep
 
 	send_to_char(ch, "Agora voce tem %s.\r\n", tempstr);
 
-	save_shop_nonnative(shop_nr, keeper);
+	//save_shop_nonnative(shop_nr, keeper);
 	save_char(ch);
 
 
@@ -915,7 +915,7 @@ static void shopping_sell(char *arg, struct char_data *ch, struct char_data *kee
 
 	send_to_char(ch, "O vendedor agora tem %s.\r\n", tempstr);
 
-	save_shop_nonnative(shop_nr, keeper);
+	//save_shop_nonnative(shop_nr, keeper);
 	save_char(ch);
 
 	if (GET_GOLD(keeper) < MIN_OUTSIDE_BANK)

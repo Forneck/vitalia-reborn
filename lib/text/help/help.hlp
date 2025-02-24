@@ -16098,4 +16098,34 @@ combinar os efeitos de algumas magias com outras criando sinergias e
 efeitos melhores.
 
 #1
+ESTACOES SEASONS                                                            
+O tempo mostrado pelo comando WEATHER, sofre influencia das quatro
+estacoes do ano.                                                                                                                                        Elas estao distribuidas da seguinte maneira:
+                                                                            Kames'Hi, Teriany, Hiro, Prudis - Inverno
+Maqizie, Kadrictes, Mizu, Mysoluh - Primavera
+Karestis, Neruno, Latizie, Aminen - Verao
+Autumis, V'tah, Aqrien, Tellus e Brumis - Outono
+                                                                            Isto reflete nos limites maximos e minimos de cada parametro do             clima, como pressao, temperatura, umidade relativa e vento.
+                                                                            Com isso, algumas estacoes terao uma maior influencia sobre determinado
+parametro (que pode ser controlado pela MAGIA CONTROL WEATHER).
+
+                                                                            Veja tambem: WEATHER, BIOMAS, TIME, MAGIA-CONTROL-WEATHER
+#1
+CLIMAS BIOMAS
+                                                                            As areas tem seu proprio clima-base ou bioma. As areaa estao distribuidas   em um dos seguinres tipos:
+
+Temperado - temperaturas moderadas, variacao sutil, pressao media e
+alta umidade.
+Chuvoso - temperaturas um pouco mais baixas, pressao ligeiramente
+inferior e alta umidade.
+Tropical - clima quente, pressao media e alta umidade.
+Frio/Seco - temperaturas baixas, pressao elevada e baixa umidade.
+Desertico - clima muito quente, pressao moderada a alta, e umidade
+extremamente baixa.
+
+Assim, a chance de chover em um deserto e' baixa, mas por ser um clima
+quente ira afetar mais rapidamente a sede do jogador.
+
+Veja tambem: WEATHER, ESTACOES, TIME, MAGIA-CONTROL-WEATHER
+#1
 $~
