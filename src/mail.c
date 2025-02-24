@@ -19,6 +19,7 @@
 #include "handler.h"
 #include "mail.h"
 #include "modify.h"
+#include "screen.h"
 
 /* local (file scope) function prototypes */
 static void postmaster_send_mail(struct char_data *ch, struct char_data *mailman, int cmd, char *arg);
@@ -329,6 +330,7 @@ static void postmaster_receive_mail(struct char_data *ch, struct char_data *mail
 			  int cmd, char *arg)
 {
   char buf[256];
+  char buf2[256];
   struct obj_data *obj;
   int y;
 
@@ -341,7 +343,9 @@ static void postmaster_receive_mail(struct char_data *ch, struct char_data *mail
     obj = create_obj(); 
     obj->item_number = 1; 
     obj->name = strdup("carta papel encomenda");
-    obj->short_description = strdup("@ruma carta@n");
+   // obj->short_description = strdup("uma carta");
+    snprintf(buf2,sizeof(buf2),"%suma carta%s",CCRED(ch, C_SPR), CCNRM(ch, C_SPR));
+    obj->short_description = strdup(buf2);
     obj->description = strdup("Alguém deixou uma carta aqui.");
 
     GET_OBJ_TYPE(obj) = ITEM_NOTE;
