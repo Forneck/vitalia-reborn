@@ -220,14 +220,15 @@ char *read_delete(long recipient)
     to = get_name_by_id(record_to_keep->recipient);
 
  		snprintf(buf, sizeof(buf),
-	     "@+C-@G=@Y>@+W Serviço de Correios de Vitália @+C@Y<@G=C-   @+n\r\n"
+	     "-=> Serviço de Correios de Vitália <=-\r\n"
              "Data: %s\r\n"
              "De  : %s\r\n"
              "Para: %s\r\n"
              "\r\n"
              "%s",
 
-             timestr,
+             
+	     timestr,
              to ? to : "(desconhecido)",
              from ? from : "(desconhecido)",
              record_to_keep->body ? record_to_keep->body : "Sem mensagem" );
