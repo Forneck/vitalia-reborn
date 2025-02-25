@@ -313,7 +313,8 @@ GET_BREATH(ch) = PFDEF_BREATH;
       PLR_FLAGS(ch)[i] = PFDEF_PLRFLAGS;
     for (i = 0; i < PR_ARRAY_MAX; i++)
       PRF_FLAGS(ch)[i] = PFDEF_PREFFLAGS;
-
+    for (i = 0; i < MAX_REMORT; i++)
+      WAS_FLAGS(ch)[i] = PFDEF_WASFLAGS;
    
     while (get_line(fl, line)) {
       tag_argument(line, tag);
@@ -486,8 +487,16 @@ GET_BREATH(ch) = PFDEF_BREATH;
 	     if (!strcmp(tag, "Wate"))	GET_WEIGHT(ch)		= atoi(line);
 	else if (!strcmp(tag, "Wimp"))	GET_WIMP_LEV(ch)	= atoi(line);
 	else if (!strcmp(tag, "Wis "))	ch->real_abils.wis	= atoi(line);
+	else if (!strcmp(tag, "Was")) {                                    if (sscanf(line, "%s %s %s %s", f1, f2, f3, f4) == 4) {
+         WAS_FLAGS(ch)[0] = asciiflag_conv(f1);
+	 WAS_FLAGS(ch)[1] = asciiflag_conv(f2);
+	 WAS_FLAGS(ch)[2] = asciiflag_conv(f3);
+	 WAS_FLAGS(ch)[3] = asciiflag_conv(f4);
+          } else
+	    WAS_FLAGS(ch)[0] = asciiflag_conv(f1);
+	  }
 	break;
-
+     
       default:
 	sprintf(buf, "SYSERR: Unknown tag %s in pfile %s", tag, name);
       }
@@ -633,8 +642,14 @@ void save_char(struct char_data * ch)
   sprintascii(bits3, PRF_FLAGS(ch)[2]);
   sprintascii(bits4, PRF_FLAGS(ch)[3]);
   fprintf(fl, "Pref: %s %s %s %s\n", bits, bits2, bits3, bits4);
-
- if (GET_SAVE(ch, 0)	   != PFDEF_SAVETHROW)	fprintf(fl, "Thr1: %d\n", GET_SAVE(ch, 0));
+  
+  sprintascii(bits,  WAS_FLAGS(ch)[0]);
+  sprintascii(bits2, WAS_FLAGS(ch)[1]);
+  sprintascii(bits3, WAS_FLAGS(ch)[2]);
+  sprintascii(bits4, WAS_FLAGS(ch)[3]);
+  fprintf(fl, "Was: %s %s %s %s\n", bits, bits2, bits3, bits4);
+ 
+  if (GET_SAVE(ch, 0)	   != PFDEF_SAVETHROW)	fprintf(fl, "Thr1: %d\n", GET_SAVE(ch, 0));
   if (GET_SAVE(ch, 1)	   != PFDEF_SAVETHROW)	fprintf(fl, "Thr2: %d\n", GET_SAVE(ch, 1));
   if (GET_SAVE(ch, 2)	   != PFDEF_SAVETHROW)	fprintf(fl, "Thr3: %d\n", GET_SAVE(ch, 2));
   if (GET_SAVE(ch, 3)	   != PFDEF_SAVETHROW)	fprintf(fl, "Thr4: %d\n", GET_SAVE(ch, 3));

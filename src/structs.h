@@ -1205,7 +1205,9 @@ struct char_data
   long pref; /**< unique session id */
   
   struct list_data * events;
-  struct str_plrspells *plrspells; 
+  struct str_plrspells *plrspells;
+
+  long was_class;
 };
 
 /** descriptor-related structures */

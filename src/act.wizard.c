@@ -940,6 +940,9 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
 		sprintbitarray(PRF_FLAGS(k), preference_bits, PR_ARRAY_MAX, buf);
 		send_to_char(ch, "PRF: %s%s%s\r\n", CCGRN(ch, C_NRM), buf, CCNRM(ch, C_NRM));
 
+		sprintbitarray(WAS_FLAGS(k), class_abbrevs, MAX_REMORT, buf);
+		send_to_char(ch, "WAS: %s%s%s\r\n", CCGRN(ch, C_NRM), buf, CCNRM(ch, C_NRM));
+
 		send_to_char(ch, "Quest Points: [%9d] Quests Completed: [%5d]\r\n",
 					 GET_QUESTPOINTS(k), GET_NUM_QUESTS(k));
 		if (GET_QUEST(k) != NOTHING)
@@ -3284,11 +3287,18 @@ static struct set_struct {
    { "wis",             LVL_BUILDER,    BOTH,   NUMBER }, /* 55 */
    { "questpoints",     LVL_GOD,        PC,     NUMBER },
    { "questhistory",    LVL_GOD,        PC,   NUMBER },
-	{"hometown", LVL_GRGOD, PC, NUMBER},
-	{"breath", LVL_GOD, PC, NUMBER},
-	{"maxbreath", LVL_GOD, PC, NUMBER},
-	{"transcendeu", LVL_GOD, PC, BINARY},
-	{"espirito", LVL_GOD, PC, BINARY},
+   { "hometown",        LVL_GRGOD,      PC, NUMBER},
+   { "breath",          LVL_GOD, PC, NUMBER},
+   { "maxbreath",       LVL_GOD, PC, NUMBER},
+   { "transcendeu",     LVL_GOD, PC, BINARY},
+   { "espirito",        LVL_GOD, PC, BINARY},
+   { "wasmage",         LVL_GOD,    PC,   BINARY },
+   { "wascleric",       LVL_GOD,    PC,   BINARY },
+   { "wasthief",        LVL_GOD,    PC,   BINARY },
+   { "waswarrior",      LVL_GOD,    PC,   BINARY },
+   { "wasdruid",        LVL_GOD,    PC,   BINARY },
+   { "wasbard",         LVL_GOD,    PC,   BINARY },
+   { "wasranger",       LVL_GOD,    PC,   BINARY },
    { "\n", 0, BOTH, MISC }                                                          };
 
 static int perform_set(struct char_data *ch, struct char_data *vict, int mode, char *val_arg)
@@ -3795,6 +3805,27 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 		break;
 	case 62:
 		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_GHOST);
+		break;
+	case 63: /*WAS MU*/
+		SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_MAGIC_USER);
+		break;
+	case 64: /*WAS CLE*/
+	        SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_CLERIC);
+		break;
+	case 65: /*WAS THIEF*/
+		SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_THIEF);
+		break;
+	case 66: /*WAS WARRIOR*/
+		SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_WARRIOR);
+		break;
+	case 67: /*WAS DRUID*/
+		SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_DRUID);
+		break;
+	case 68: /*WAS BARD*/
+		SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_BARD);
+		break;
+	case 69: /*WAS WARRIOR*/
+		SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_RANGER);
 		break;
 	default:
 		send_to_char(ch, "Can't set that!\r\n");

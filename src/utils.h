@@ -375,7 +375,7 @@ do                                                              \
 /** Affect flags on the NPC or PC. */
 #define AFF_FLAGS(ch)	((ch)->char_specials.saved.affected_by)
 /** The was_class flags on a PC (not to be used on mobs).  */
-#define WAS_FLAGS(ch)   CHECK_PLAYER_SPECIAL((ch), ((ch)->char_specials.saved.was_class)
+#define WAS_FLAGS(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.was_class))
 
 /** Room flags.
  * @param loc The real room number. */

@@ -42,10 +42,10 @@ const char *class_menu =
 	"  [\t(C\t)]lerigo\r\n"
 	"  [\t(L\t)]adrão\r\n"
 	"  [\t(G\t)]uerreiro\r\n"
-	"  [\t(M\t)]ago\r\n" "  [\t(D\t)]ruida\r\n" "  [\t(B\t)]ardo\r\n" "  [\t(R\t)]anger\r\n";
-
-
-
+	"  [\t(M\t)]ago\r\n" 
+	"  [\t(D\t)]ruida\r\n" 
+	"  [\t(B\t)]ardo\r\n" 
+	"  [\t(R\t)]anger\r\n";
 /*
  * EXPERIENCE
  * exp_table[level][class]
