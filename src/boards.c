@@ -281,7 +281,7 @@ int board_show_board(int board_type, struct char_data *ch, char *arg, struct obj
   act("$n examina o quadro de mensagens.", TRUE, ch, 0, 0, TO_ROOM);
 
   if (!num_of_msgs[board_type]){
-    send_to_char(ch, "Este é o quadro de mensagens.  Para ler é uma mensagem, use %sREAD <número>%s.\r\n",CCCYN(ch,C_NRM),CCNRM(ch,C_NRM));
+    send_to_char(ch, "Este é o quadro de mensagens.  Para ler uma mensagem, use %sREAD <número>%s.\r\n",CCCYN(ch,C_NRM),CCNRM(ch,C_NRM));
     send_to_char(ch,"Para obter mais informações sobre como usar o quadro, digite %sHELP QUADROS%s.\r\n",CCCYN(ch,C_NRM),CCNRM(ch,C_NRM));
   }
   else {
@@ -289,7 +289,7 @@ int board_show_board(int board_type, struct char_data *ch, char *arg, struct obj
     int nlen;
 
     len = snprintf(buf, sizeof(buf),
-		"Este é o quadro de mensagens.  Para ler é uma mensagem, use %sREAD <número>%s.\r\n"
+		"Este é o quadro de mensagens.  Para ler uma mensagem, use %sREAD <número>%s.\r\n"
 		"Você precisa olhar para o quadro para confirmar a mensagem.\r\n"
 		"O total de mensagens é: %d \r\n",
 		CCCYN(ch,C_NRM),CCNRM(ch,C_NRM),num_of_msgs[board_type]);

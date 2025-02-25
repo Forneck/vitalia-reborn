@@ -374,6 +374,8 @@ do                                                              \
 #define PRF_FLAGS(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.pref))
 /** Affect flags on the NPC or PC. */
 #define AFF_FLAGS(ch)	((ch)->char_specials.saved.affected_by)
+/** The was_class flags on a PC (not to be used on mobs).  */
+#define WAS_FLAGS(ch)   CHECK_PLAYER_SPECIAL((ch), ((ch)->char_specials.saved.was_class)
 
 /** Room flags.
  * @param loc The real room number. */
@@ -413,6 +415,8 @@ do                                                              \
 #define PRF_FLAGGED(ch, flag) (IS_SET_AR(PRF_FLAGS(ch), (flag)))
 /** 1 if flag is set in the room of loc, 0 if not. */
 #define ROOM_FLAGGED(loc, flag) (IS_SET_AR(ROOM_FLAGS(loc), (flag)))
+/** 1 if flag is set in the was_classes bitarray, 0 if not. */
+#define WAS_FLAGGED(ch, flag) (IS_SET_AR(WAS_FLAGS(ch), (flag)))
 /** 1 if flag is set in the zone of rnum, 0 if not. */
 #define ZONE_FLAGGED(rnum, flag)   (IS_SET_AR(zone_table[(rnum)].zone_flags, (flag)))
 /** 1 if flag is set in the exit, 0 if not. */
@@ -433,6 +437,8 @@ do                                                              \
 #define PLR_TOG_CHK(ch,flag) ((TOGGLE_BIT_AR(PLR_FLAGS(ch), (flag))) & Q_BIT(flag))
 /** Toggle flag in ch PRF_FLAGS; turns on if off, or off if on. */
 #define PRF_TOG_CHK(ch,flag) ((TOGGLE_BIT_AR(PRF_FLAGS(ch), (flag))) & Q_BIT(flag))
+/** Toggle flag in ch WAS_FLAGS; turns on if off, or off if on. */
+#define WAS_TOG_CHK(ch,flag) ((TOGGLE_BIT_AR(WAS_FLAGS(ch), (flag))) & Q_BIT(flag))
 
 /** Checks to see if a PC or NPC is dead. */
 #define DEAD(ch) (PLR_FLAGGED((ch), PLR_NOTDEADYET) || MOB_FLAGGED((ch), MOB_NOTDEADYET))
@@ -899,7 +905,17 @@ do                                                              \
         (GET_CLASS(ch) == CLASS_BARD))
 #define IS_RANGER(ch)		(!IS_NPC(ch) && \
         (GET_CLASS(ch) == CLASS_RANGER))
-        
+
+#define GET_WAS_CLASS(ch)       (PLAYER(ch)->was_class)
+#define WAS_PC_CLASS(ch, cl)    (!IS_NPC(ch) && WAS_FLAGGED(ch, cl))
+#define WAS_MAGIC_USER(ch)      (WAS_PC_CLASS(ch, CLASS_MAGIC_USER))
+#define WAS_CLERIC(ch)          (WAS_PC_CLASS(ch, CLASS_CLERIC))
+#define WAS_THIEF(ch)           (WAS_PC_CLASS(ch, CLASS_THIEF))
+#define WAS_WARRIOR(ch)         (WAS_PC_CLASS(ch, CLASS_WARRIOR))
+#define WAS_DRUID(ch)           (WAS_PC_CLASS(ch, CLASS_DRUID))
+#define WAS_BARD(ch)            (WAS_PC_CLASS(ch, CLASS_BARD))
+#define WAS_RANGER(ch)            (WAS_PC_CLASS(ch, CLASS_RANGER))
+
 #define IS_FEMALE(ch)  (GET_SEX(ch) == SEX_FEMALE)
 #define OA(ch) (IS_FEMALE(ch) ? "a" : "o")
     
