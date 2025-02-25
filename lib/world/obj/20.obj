@@ -283,14 +283,6 @@ seus pés!~
 0 0 0 0
 78 0 0 0 0
 E
-placa~
-Letras em esmeraldas se destacam na placa em fundição e nela está escrito:
-Aventureiro: Agora esta é a vossa casa.  Esta é a vossa Família.  No
-aconchego de teu lar, contarás histórias e beberás do vinho, Alegrias
-imensas e tristezas irreperáveis que em tua vida ocorrer, agora esta casa
-também será testemunha e nela encontrarás o conforto de tua alma.
-~
-E
 estátua bronze saturno~
 Essa estátua mostra o Rei Saturno, o primeiro rei do legado dos atlântes,
 com a coroa da justiça e a famosa espada da verdade empunhada.  Montado
@@ -298,6 +290,14 @@ sobre um leão alado.  Segundo o mago Keu, a estátua ficara na cor do fogo
 enquanto seu espírito estiver com os atlantes.
 
 Você sente um estranho presentimento de que alguem está lhe observando.
+~
+E
+placa~
+Letras em esmeraldas se destacam na placa em fundição e nela está escrito:
+Aventureiro: Agora esta é a vossa casa.  Esta é a vossa Família.  No
+aconchego de teu lar, contarás histórias e beberás do vinho, Alegrias
+imensas e tristezas irreperáveis que em tua vida ocorrer, agora esta casa
+também será testemunha e nela encontrarás o conforto de tua alma.
 ~
 #2015
 quadro~
@@ -726,11 +726,11 @@ As letras aqui esculpidas brilham em cores quando você chega perto.
 Derrepente uma voz lhe diz as palavras do Hino das Virtudes:
 
 "Na espada em minha bainha
-Vejo minha @CFé@n e @CDisciplina@n.
+Vejo minha 	CFé	n e 	CDisciplina	n.
 No inimigo vencido antes da luta,
-Vejo minha @CPrudência@n e @CSabedoria@n.
+Vejo minha 	CPrudência	n e 	CSabedoria	n.
 Do respeito no olhar de meus semelhantes,
-Inspiro meu @CAmor@n.
+Inspiro meu 	CAmor	n.
 E a lâmina coberta de sangue
 pode atravessar minha carne,
 e eu não caírei ante a garra profana
@@ -738,23 +738,23 @@ E não precisarei da minha espada
 Se me armar com a pureza da minha alma
 E não precisarei de armadura
 Se me defender com a grandeza de meu espírito.
-A @CDignidade@n não esta em matar, em derrotar,
-Esta na pureza da @CBondade@n
+A 	CDignidade	n não esta em matar, em derrotar,
+Esta na pureza da 	CBondade	n
 E o maior guerreiro de todos
 Será o que menos matou inocentes,
-O que usou a @CJustiça@n verdadeira
+O que usou a 	CJustiça	n verdadeira
 E ofereceu o perdão antes da espada,
-Um voto de @CLealdade@n
+Um voto de 	CLealdade	n
 E estes são os olhos da imensidão
-A palavra com @CSinceridade@n
-A verdade da @CHumildade@n
+A palavra com 	CSinceridade	n
+A verdade da 	CHumildade	n
 A mão do saber
 .
 .
 .
 O ápice do ser..."
 
-@YClan dos Cavaleiros das Virtudes.@n
+	YClan dos Cavaleiros das Virtudes.	n
 ~
 #2034
 estátua membro~
@@ -955,8 +955,8 @@ Aqui se encontra um belo pergaminho, você deve le-lo.~
 10 0 0 0 0
 E
 pergaminho~
-@WEste é o livro que contém as regras o qual todos os membros do clan Solis
-devem seguir.@n
+	WEste é o livro que contém as regras o qual todos os membros do clan Solis
+devem seguir.	n
 
    Nos sentimos honrados com a vossa presenca aqui, mas algumas regras são
 necessárias para que todos tenham um bom jogo, com justiça, paz e
@@ -966,18 +966,18 @@ comando "clan members", e consulte algum Senhor ou Arque-senhor, que poderão
 soluciona-la.  Novamente, muito obrigado por estar conosco neste maravilhoso
 mundo que é Vitália.
 
-   @R1.@n A boa convivência aqui é tomada como prioridade máxima, portanto, não
+   	R1.	n A boa convivência aqui é tomada como prioridade máxima, portanto, não
 serão permitidas em hipótese alguma, a agressão direta ou indireta a
 membros, não-membros e outros clans, considerando que esse tipo de atitude
 não traz nenhum benefício para qualquer parte, sendo o infrator julgado com
 uma comissão composta por todos os Cultos, Senhores e Arque-senhores, com
 uma punição também definida pelo tipo e grau de infração.
 
-   @R2.@n O respeito também é muito importante para um grupo de pessoas, não
+   	R2.	n O respeito também é muito importante para um grupo de pessoas, não
 importando a classe, sexo, posto ou experiência no jogo, portanto não
 aceitaremos qualquer tipo de atitude desrespeituosa no nosso clã.
 
-   @R3.@n Em nossa sede existe uma sala de doações restrita a membros do clã,
+   	R3.	n Em nossa sede existe uma sala de doações restrita a membros do clã,
 onde serão encontrados dois baús, um branco e outro azul.  O 1º baú, branco,
 deve conter apenas itens usados para modificar atributos (Str, Wis, Int,
 Dex, Con, Cha), pois ao passar de level, é sempre bom ter alguns atributos
@@ -991,12 +991,12 @@ desde que a pessoa que emprestou mantenha total responsabilidade sobre o
 item.  É sempre bom lembrar que, apesar de permitido, essa cláusula deve ser
 evitada para evitar futuros problemas.
 
-   @R4.@n Existe em nossa sede um quadro de mensagens que é usado normalmente
+   	R4.	n Existe em nossa sede um quadro de mensagens que é usado normalmente
 para transmitir notícias entre os membros e também como uma ferramenta de
 maior integração entre estes, já que pode ser usado também para solucionar
 dúvidas, expor opiniões ou até mesmo dar novas idéias.
 
-   @R5.@n Ao entrar em um grupo, devemos estar cientes que a partir desse
+   	R5.	n Ao entrar em um grupo, devemos estar cientes que a partir desse
 momento, carregamos conosco o nome desse grupo, e consequentemente sua
 reputação, assim sendo, temos que estar sempre concientes do que estivermos
 falando, seja com outras pessoas (por 'tell'), seja com o MUD todo (por
@@ -1008,7 +1008,7 @@ quanto aos Deuses, os quais devem ser tratados com o máximo respeito.  Caso
 seja denunciada qualquer atitude que contrarie o que foi apresentado neste
 artigo, haverão severas punições.
 
-   @R6.@n Em nosso clã existe uma série de postos (hierarquia) que implica na
+   	R6.	n Em nosso clã existe uma série de postos (hierarquia) que implica na
 experiência e dedicação de uma pessoa ao clã.  Para evoluir na hierarquia do
 clã, você deve ser uma boa pessoa que ajude o clã, seja ajudando outros
 membros ou implementando e dando dicas para o clã.  Mas é sempre bom lembrar
@@ -1028,7 +1028,7 @@ jornada por Vitália com muita honra, humildade, respeito e solidariedade.
 Essas pequenas coisas nos ajudarão muito e são o que nós esperamos de você.
 
    Para obter maiores informações e também para enterder melhor o
-funcionamento do clã, pedimos que leia por favor o "@Rclan policy@n", onde são
+funcionamento do clã, pedimos que leia por favor o "	Rclan policy	n", onde são
 citadas regras de clãs, elaboradas pelos Deuses de Vitália.
 
    Aqui terminam as regras do clan Solis.  Lembrando que a palavra de um
@@ -1482,85 +1482,85 @@ estandarte~
 Você vê um belo Estandarte de ouro e prata, com vários desenhos e runas com
 os seguintes dizeres:
 
- @CPolicy do Exército Suicida de Vitália@n 
+ 	CPolicy do Exército Suicida de Vitália	n 
 
- @R1- Uso do Título:@n 
- @R1.1@n Uso OBRIGATÓRIO do título padrão do clan; 
- @R1.2@n Padrão para primeiro remorte (número) (classe/profissão) do Exército
+ 	R1- Uso do Título:	n 
+ 	R1.1	n Uso OBRIGATÓRIO do título padrão do clan; 
+ 	R1.2	n Padrão para primeiro remorte (número) (classe/profissão) do Exército
  Suicida de Vitália.; 
- @R1.3@n Padrão após o remorte: ESV ou Suicida(s) no título; 
- @R1.4@n PROIBIDO qualquer tipo de manifestação (luto, tristeza, campanha e
+ 	R1.3	n Padrão após o remorte: ESV ou Suicida(s) no título; 
+ 	R1.4	n PROIBIDO qualquer tipo de manifestação (luto, tristeza, campanha e
  outros); 
- @R1.5@n Em caso de Quest´s e ou pedido de um Deus ou Membro de alto posto no
+ 	R1.5	n Em caso de Quest´s e ou pedido de um Deus ou Membro de alto posto no
  clan, o título poderá ser alterado para uma forma fora do padrão
  TEMPORARIAMENTE, tendo que retornar para o padrão assim que possível. 
  
- @R2- Uso do clan say (canal de comunicação do clan):@n 
- @R2.1@n PROIBIDO usar palavras ofensivas ou palavras de baixo calão; 
- @R2.2@n PROIBIDO falar mal de outros clans ou jogadores, mortais ou imortais; 
- @R2.3@n PROIBIDO passar path´s; 
- @R2.4@n PROIBIDO fazer FLOOD. 
+ 	R2- Uso do clan say (canal de comunicação do clan):	n 
+ 	R2.1	n PROIBIDO usar palavras ofensivas ou palavras de baixo calão; 
+ 	R2.2	n PROIBIDO falar mal de outros clans ou jogadores, mortais ou imortais; 
+ 	R2.3	n PROIBIDO passar path´s; 
+ 	R2.4	n PROIBIDO fazer FLOOD. 
 
- @R3- Promoções:@n
- @R3.1@n PROIBIDO pedir por promoção; o membro que fizer isso será penalizado
+ 	R3- Promoções:	n
+ 	R3.1	n PROIBIDO pedir por promoção; o membro que fizer isso será penalizado
  com rebaixamento ou uma permanência maior no posto atual;
- @R3.2@n As promoções devem ser discutidas pelo Conselho, sendo necessário no
+ 	R3.2	n As promoções devem ser discutidas pelo Conselho, sendo necessário no
  mínimo 3 votos a favor  pra se promover um membro;
- @R3.3@n O Conselho deve procurar promover os membros a cada 2 a 3 meses, mas
+ 	R3.3	n O Conselho deve procurar promover os membros a cada 2 a 3 meses, mas
  mantendo o limite da pirâmide dos postos.
  
- @R4- Uso do nome do clan:@n 
- @R4.1@n PROIBIDO fazer propaganda do clan em canais públicos; 
- @R4.2@n PROIBIDO falar mal do clan e/ou de seus membros em canais públicos; 
- @R4.3@n PROIBIDO falar em nome do clan se não estiver em sua posição fazer isso
+ 	R4- Uso do nome do clan:	n 
+ 	R4.1	n PROIBIDO fazer propaganda do clan em canais públicos; 
+ 	R4.2	n PROIBIDO falar mal do clan e/ou de seus membros em canais públicos; 
+ 	R4.3	n PROIBIDO falar em nome do clan se não estiver em sua posição fazer isso
  e usar o nome do clan para defender uma posição PESSOAL sua; 
 
- @R5- Problemas com prisão e/ou gelo:@n 
- @R5.1@n Caso algum membro do clan for preso é de responsabilidade apenas dos
+ 	R5- Problemas com prisão e/ou gelo:	n 
+ 	R5.1	n Caso algum membro do clan for preso é de responsabilidade apenas dos
  LÍDERES do clan tentar descobrir do que se trata e resolver o problema; 
- @R5.2@n PROIBIDO a intromissão de qualquer outro membro não envolvido no
+ 	R5.2	n PROIBIDO a intromissão de qualquer outro membro não envolvido no
  Conselho para solucionar o problema de outro membro se não estiver
  envolvido na história (isso inclue pray, mudmail, Gossip e outras formas
  de comunicação). 
 
- @R6- Respeito no clan:@n 
- @R6.1@n Devemos sempre respeitar TODOS os membros do clan independente de seu
+ 	R6- Respeito no clan:	n 
+ 	R6.1	n Devemos sempre respeitar TODOS os membros do clan independente de seu
  posto; 
- @R6.2@n Sempre deverá ser respeitada uma decisão de um membro de posto superior,
+ 	R6.2	n Sempre deverá ser respeitada uma decisão de um membro de posto superior,
  e caso ela pareça ser injusta, deve ser enviada uma declaração ao Líder do
  clã ou um membro do Conselho (de preferência por mudmail) para que o caso
  possa ser analisado devidamente; 
 
- @R7- Responsabilidades:@n 
- @R7.1@n Um membro com posto mais alto é reponsável por todos os membros que estão
+ 	R7- Responsabilidades:	n 
+ 	R7.1	n Um membro com posto mais alto é reponsável por todos os membros que estão
  abaixo dele na hierarquia do clan; 
- @R7.2@n Deve-se respeitar todos os membros e não membros do clan; 
- @R7.3@n Deve-se zelar pelo bom nome de nosso clan; 
- @R7.4@n Deve-se ajudar os novatos do clan sem que isso tire dele os desafios do
+ 	R7.2	n Deve-se respeitar todos os membros e não membros do clan; 
+ 	R7.3	n Deve-se zelar pelo bom nome de nosso clan; 
+ 	R7.4	n Deve-se ajudar os novatos do clan sem que isso tire dele os desafios do
  jogo, ou seja, sem dar tudo de mão beijada. A exploração e descoberta devem
  ser encorajadas; 
- @R7.5@n Deve-se ajudar a pegar equipamentos para a Ladydeath nossa campeã quando
+ 	R7.5	n Deve-se ajudar a pegar equipamentos para a Ladydeath nossa campeã quando
  necessário; 
- @R7.6@n Deve-se manter as dependências do clan sempre limpas, evitando o acúmulo
+ 	R7.6	n Deve-se manter as dependências do clan sempre limpas, evitando o acúmulo
  de itens dropados pelas salas.
 
- @R8- Sala de Doações do Clan e equipamentos:@n 
- @R8.1@n Os membros devem evitar doar itens que são muito fáceis de se obter pois
+ 	R8- Sala de Doações do Clan e equipamentos:	n 
+ 	R8.1	n Os membros devem evitar doar itens que são muito fáceis de se obter pois
  existe um limite de itens pro Arsenal; 
- @R8.2@n Deve-se procurar manter um limite máximo de 6 itens repetidos na sala de
+ 	R8.2	n Deve-se procurar manter um limite máximo de 6 itens repetidos na sala de
  doações, a não ser quando for item mais raro de se conseguir; 
- @R8.3@n Não será permitido vender itens do Arsenal do clan; 
- @R8.4@n Não será permitido dar itens do clan para NÃO membros do clan; 
- @R8.5@n O membro deve procurar devolver um item pras doações ao invés de vendê-lo,
+ 	R8.3	n Não será permitido vender itens do Arsenal do clan; 
+ 	R8.4	n Não será permitido dar itens do clan para NÃO membros do clan; 
+ 	R8.5	n O membro deve procurar devolver um item pras doações ao invés de vendê-lo,
  se passar a utilizar algo melhor, caso tenha pego o item nas doações em
  primeiro lugar. Assim o mesmo item poderá beneficiar mais de um membro; 
- @R8.6@n Ter acesso ao Arsenal é um privilégio. Use dele com sabedoria e sem abuso; 
+ 	R8.6	n Ter acesso ao Arsenal é um privilégio. Use dele com sabedoria e sem abuso; 
  
- @R9- Policy de Vitália e Clan Policy:@n 
- @R9.1@n É OBRIGAÇÂO que o membro conheça e respeite TODAS as regras do policy. 
+ 	R9- Policy de Vitália e Clan Policy:	n 
+ 	R9.1	n É OBRIGAÇÂO que o membro conheça e respeite TODAS as regras do policy. 
  
- @CO descomprimento de qualquer uma destas regras poderá causar a  penalização
- do membro e em alguns casos poderá até gerar a expulsão do mesmo.@qn 
+ 	CO descomprimento de qualquer uma destas regras poderá causar a  penalização
+ do membro e em alguns casos poderá até gerar a expulsão do mesmo.	qn 
 ~
 #2108
 fonte~
@@ -1630,7 +1630,7 @@ reconhecidos.  Eis"
 ~
 #2118
 fonte~
-Uma enorme fonte~
+uma enorme fonte~
 Uma enorme fonte está aqui, jorrando muita agua cristalina.~
 ~
 23 cde 0 0 0 0 0 0 0 0 0 0 0
@@ -2084,7 +2084,7 @@ sua sede e encher seu cantil.
 ~
 #2169
 quadro~
-O Quadro de Mensagens~
+o Quadro de Mensagens~
 Um grande quadro de mensagens foi posto na parede aqui.~
 ~
 13 cdeq 0 0 0 0 0 0 0 0 0 0 0
@@ -2142,6 +2142,18 @@ Esta fonte é toda feita de ônix.  No centro há uma estátua de um dragão e a
 água sai de sua boca como se ele estivesse cuspindo fogo.
 ~
 #2179
+quadro~
+o quadro de mensagens~
+Um grande quadro de mensagens foi posto na parede aqui.~
+~
+13 cdeq 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0
+89 0 0 0 0
+E
+quadro~
+Se você está lendo isso, este quadro não está funcionando.
+~
+#2189
 quadro~
 o quadro de mensagens~
 Um grande quadro de mensagens foi posto na parede aqui.~

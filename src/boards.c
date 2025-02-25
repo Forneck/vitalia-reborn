@@ -49,7 +49,44 @@ struct board_info_type board_info[NUM_OF_BOARDS] = {
   {3099, 0, 0, LVL_GOD, LIB_ETC "board.mortal", 0},
   {3098, LVL_IMMORT, LVL_IMMORT, LVL_GRGOD, LIB_ETC "board.immortal", 0},
   {3097, LVL_IMMORT, LVL_GRGOD, LVL_IMPL, LIB_ETC "board.freeze", 0},
-  {3096, 0, 0, LVL_IMMORT, LIB_ETC "board.social", 0},
+  {3096, 0, 0, LVL_IMMORT, LIB_ETC "board.sociais", 0},
+  {3199, 0, 0, LVL_IMMORT, LIB_ETC "board.trocas", 0},
+  /* 5 */
+  {2009, 0, 0, LVL_IMMORT, LIB_ETC "board.discipulos", 0},
+  {2019, 0, 0, LVL_IMMORT, LIB_ETC "board.atlantes", 0},
+  {2029, 0, 0, LVL_IMMORT, LIB_ETC "board.mitra", 0},
+  {2039, 0, 0, LVL_IMMORT, LIB_ETC "board.virtude", 0},
+  {2049, 0, 0, LVL_IMMORT, LIB_ETC "board.numenor", 0},
+  /* 10 */
+  {2059, 0, 0, LVL_IMMORT, LIB_ETC "board.solis", 0},
+  {2069, 0, 0, LVL_IMMORT, LIB_ETC "board.jvkb", 0},
+  {2079, 0, 0, LVL_IMMORT, LIB_ETC "board.seth", 0},
+  {2089, 0, 0, LVL_IMMORT, LIB_ETC "board.suicidas", 0},
+  {2099, 0, 0, LVL_IMMORT, LIB_ETC "board.vingadores", 0},
+  /* 15 */
+  {2109, 0, 0, LVL_IMMORT, LIB_ETC "board.tempestade", 0},
+  {2119, 0, 0, LVL_IMMORT, LIB_ETC "board.dinastia", 0},
+  {2129, 0, 0, LVL_IMMORT, LIB_ETC "board.guardioes", 0},
+  {2139, 0, 0, LVL_IMMORT, LIB_ETC "board.luz", 0},
+  {2149, 0, 0, LVL_IMMORT, LIB_ETC "board.mclaud", 0},
+  /* 20 */
+  {2159, 0, 0, LVL_IMMORT, LIB_ETC "board.trevas", 0},
+  {2169, 0, 0, LVL_IMMORT, LIB_ETC "board.dragon", 0},
+  {2179, 0, 0, LVL_IMMORT, LIB_ETC "board.protetores", 0},
+  {2189, 0, 0, LVL_IMMORT, LIB_ETC "board.seguidores", 0},
+  {1210, LVL_IMMORT, LVL_GRGOD, LVL_IMPL, LIB_ETC "board.mesnada.azul", 0},
+  /* 25 */
+  {1211, LVL_IMMORT, LVL_GRGOD, LVL_IMPL, LIB_ETC "board.mesnada.vermelho", 0},
+  {1296, 0, 0, LVL_GOD, LIB_ETC "board.policy", 0},
+  {1297, LVL_IMMORT, LVL_GOD, LVL_IMPL, LIB_ETC "board.herois", 0},
+  {1298, LVL_GOD, LVL_GOD, LVL_IMPL, LIB_ETC "board.deuses", 0},
+  {1299, LVL_GRGOD, LVL_GRGOD, LVL_IMPL, LIB_ETC "board.grgod", 0},
+  /* 30 */
+  {16021, LVL_IMMORT, LVL_IMMORT, LVL_GRGOD, LIB_ETC "board.estrategistas", 0},
+  {20421, 0, 0, LVL_IMMORT, LIB_ETC "board.thief", 0},
+  {22010, 0, 0, LVL_IMMORT, LIB_ETC "board.banco", 0},
+  {22022, 0, 0, LVL_IMMORT, LIB_ETC "board.jornal", 0},
+  /* 34 */
   /*{1226, 0, 0, LVL_IMPL, LIB_ETC "board.builder", 0},
   {1227, 0, 0, LVL_IMPL, LIB_ETC "board.staff", 0},
   {1228, 0, 0, LVL_IMPL, LIB_ETC "board.advertising", 0},*/
@@ -237,8 +274,8 @@ int board_show_board(int board_type, struct char_data *ch, char *arg, struct obj
   act("$n examina o quadro de mensagens.", TRUE, ch, 0, 0, TO_ROOM);
 
   if (!num_of_msgs[board_type]){
-    send_to_char(ch, "@nEste é o quadro de mensagens.  Para ler é uma mensagem, use @cREAD <número>@n.\r\n");
-    send_to_char(ch,"Para obter mais informações sobre como usar o quadro, digite @cHELP QUADROS@n.\r\n");
+    send_to_char(ch, "Este é o quadro de mensagens.  Para ler é uma mensagem, use READ <número>.\r\n");
+    send_to_char(ch,"Para obter mais informações sobre como usar o quadro, digite HELP QUADROS.\r\n");
   }
   else {
     size_t len = 0;

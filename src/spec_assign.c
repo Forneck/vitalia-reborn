@@ -154,6 +154,36 @@ void assign_objects(void)
   ASSIGNOBJ(3097, gen_board);	/* freeze board */
   ASSIGNOBJ(3098, gen_board);	/* immortal board */
   ASSIGNOBJ(3099, gen_board);	/* mortal board */
+  ASSIGNOBJ(3199, gen_board);   /* social board */
+  ASSIGNOBJ(2009, gen_board);   /* board */
+  ASSIGNOBJ(2019, gen_board);   /* board */
+  ASSIGNOBJ(2029, gen_board);   /* board */
+  ASSIGNOBJ(2039, gen_board);   /* board */
+  ASSIGNOBJ(2049, gen_board);   /* board */
+  ASSIGNOBJ(2059, gen_board);   /* board */
+  ASSIGNOBJ(2069, gen_board);   /* board */
+  ASSIGNOBJ(2079, gen_board);   /* board */
+  ASSIGNOBJ(2089, gen_board);   /* board */
+  ASSIGNOBJ(2099, gen_board);   /* board */
+  ASSIGNOBJ(2109, gen_board);   /* board */
+  ASSIGNOBJ(2119, gen_board);   /* board */
+  ASSIGNOBJ(2129, gen_board);   /* board */
+  ASSIGNOBJ(2139, gen_board);   /* board */
+  ASSIGNOBJ(2149, gen_board);   /* board */
+  ASSIGNOBJ(2159, gen_board);   /* board */
+  ASSIGNOBJ(2169, gen_board);   /* board */
+  ASSIGNOBJ(2179, gen_board);   /* board */
+  ASSIGNOBJ(2189, gen_board);   /* board */
+  ASSIGNOBJ(1210, gen_board);   /* board */
+  ASSIGNOBJ(1211, gen_board);   /* board */
+  ASSIGNOBJ(1296, gen_board);   /* board */
+  ASSIGNOBJ(1297, gen_board);   /* board */
+  ASSIGNOBJ(1298, gen_board);   /* board */
+  ASSIGNOBJ(1299, gen_board);   /* board */
+  ASSIGNOBJ(16021, gen_board);   /* board */
+  ASSIGNOBJ(20421, gen_board);   /* board */
+  ASSIGNOBJ(22010, gen_board);   /* board */
+  ASSIGNOBJ(22022, gen_board);   /* board */
 
 //  ASSIGNOBJ(115, bank);
 //  ASSIGNOBJ(334, bank);	        /* atm */
