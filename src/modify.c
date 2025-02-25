@@ -319,8 +319,8 @@ ACMD(do_skillset)
   argument = one_argument(argument, name);
 
   if (!*name) {			/* no arguments. print an informative text */
-    send_to_char(ch, "Syntax: skillset <name> '<skill>' <value>\r\n"
-		"Skill being one of the following:\r\n");
+    send_to_char(ch, "Uso: skillset <jogador> '<habilidade>' <valor>\r\n"
+		"As habilidades são:\r\n");
     for (qend = 0, i = 0; i <= TOP_SPELL_DEFINE; i++) {
    sname = get_spell_name(i);
       if (sname == UNDEF_SPELL)	/* This is valid. */
@@ -344,11 +344,11 @@ ACMD(do_skillset)
 
   /* If there is no chars in argument */
   if (!*argument) {
-    send_to_char(ch, "Skill name expected.\r\n");
+    send_to_char(ch, "Digite o nome da habilidade ou magia.\r\n");
     return;
   }
   if (*argument != '\'') {
-    send_to_char(ch, "Skill must be enclosed in: ''\r\n");
+    send_to_char(ch, "Os nomes de magias devem estar entre os Sagrados Sím   bolos Mágicos: '\r\n");
     return;
   }
   /* Locate the last quote and lowercase the magic words (if any) */
@@ -357,7 +357,7 @@ ACMD(do_skillset)
     argument[qend] = LOWER(argument[qend]);
 
   if (argument[qend] != '\'') {
-    send_to_char(ch, "Skill must be enclosed in: ''\r\n");
+    send_to_char(ch, "Os nomes de magias devem estar entre os Sagrados Sím   bolos Mágicos: '\r\n");
     return;
   }
   strcpy(helpbuf, (argument + 1));	/* strcpy: OK (MAX_INPUT_LENGTH <= MAX_STRING_LENGTH) */
@@ -365,7 +365,7 @@ ACMD(do_skillset)
 
     spell = get_spell_by_name(helpbuf, SPSK);
   if (!spell) {
-    send_to_char(ch, "Unrecognized skill.\r\n");
+    send_to_char(ch, "Habilidade desconhecida.\r\n");
     return;
   } else
       sname = spell->name;
@@ -374,20 +374,20 @@ ACMD(do_skillset)
   argument = one_argument(argument, buf);
 
   if (!*buf) {
-    send_to_char(ch, "Learned value expected.\r\n");
+    send_to_char(ch, "Ajustar o quê nessa habilidade?\r\n");
     return;
   }
   value = atoi(buf);
   if (value < 0) {
-    send_to_char(ch, "Minimum value for learned is 0.\r\n");
+    send_to_char(ch, "O valor minimo é 0.\r\n");
     return;
   }
   if (value > 100) {
-    send_to_char(ch, "Max value for learned is 100.\r\n");
+    send_to_char(ch, "O valor máximo é 100.\r\n");
     return;
   }
   if (IS_NPC(vict)) {
-    send_to_char(ch, "You can't set NPC skills.\r\n");
+    send_to_char(ch, "Não é possível ajustar habilidades de monstros.\r\n");
     return;
     } 
 
@@ -395,21 +395,21 @@ ACMD(do_skillset)
 
   // -1 means not found. not assigned to this class.
   if (minlevel == -1) {
-    send_to_char(ch, "%s usually cannot be learned in class %s.\r\n", sname, pc_class_types[pc]);
+    send_to_char(ch, "%s geralmente não pode ser aprendida por %s.\r\n", sname, pc_class_types[pc]);
     //return;
   }
  if ((minlevel >= LVL_IMMORT) && (pl < LVL_IMMORT)) {
-    send_to_char(ch, "%s cannot be learned by mortals.\r\n", sname);
+    send_to_char(ch, "%s não pode ser aprendida por mortais.\r\n", sname);
     return;
 } else if (minlevel > pl) {
-    send_to_char(ch, "%s is a level %d %s.\r\n", GET_NAME(vict), pl, pc_class_types[pc]);
-    send_to_char(ch, "The minimum level for %s usually is %d for %ss.\r\n", sname, minlevel, pc_class_types[pc]);
+    send_to_char(ch, "%s está no nivel %d de %s.\r\n", GET_NAME(vict), pl, pc_class_types[pc]);
+    send_to_char(ch, "Gesalmente %s é para o nivel %d de %ss.\r\n", sname, minlevel, pc_class_types[pc]);
     //return;
   }
 
 SET_SKILL(vict, spell->vnum, value);
  mudlog(BRF, LVL_IMMORT, TRUE, "%s changed %s's %s to %d.", GET_NAME(ch), GET_NAME(vict), sname, value);
-  send_to_char(ch, "You change %s's %s to %d.\r\n", GET_NAME(vict), sname, value);
+  send_to_char(ch, "Você alterou %s de %s para %d.\r\n", sname, GET_NAME(vict), value);
 }
 
 /* By Michael Buselli. Traverse down the string until the begining of the next
