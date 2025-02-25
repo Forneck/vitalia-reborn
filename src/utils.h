@@ -406,17 +406,16 @@ do                                                              \
 
 /** 1 if ch is flagged an NPC and flag is set in the act bitarray, 0 if not. */
 #define MOB_FLAGGED(ch, flag) (IS_NPC(ch) && IS_SET_AR(MOB_FLAGS(ch), (flag)))
-/** 1 if ch is not flagged an NPC and flag is set in the act bitarray, 0 if
- * not. */
+/** 1 if ch is not flagged an NPC and flag is set in the act bitarray, 0 if not. */
 #define PLR_FLAGGED(ch, flag) (!IS_NPC(ch) && IS_SET_AR(PLR_FLAGS(ch), (flag)))
 /** 1 if flag is set in the affect bitarray, 0 if not. */
 #define AFF_FLAGGED(ch, flag) (IS_SET_AR(AFF_FLAGS(ch), (flag)))
 /** 1 if flag is set in the preferences bitarray, 0 if not. */
 #define PRF_FLAGGED(ch, flag) (IS_SET_AR(PRF_FLAGS(ch), (flag)))
-/** 1 if flag is set in the room of loc, 0 if not. */
-#define ROOM_FLAGGED(loc, flag) (IS_SET_AR(ROOM_FLAGS(loc), (flag)))
 /** 1 if flag is set in the was_classes bitarray, 0 if not. */
 #define WAS_FLAGGED(ch, flag) (IS_SET_AR(WAS_FLAGS(ch), (flag)))
+/** 1 if flag is set in the room of loc, 0 if not. */
+#define ROOM_FLAGGED(loc, flag) (IS_SET_AR(ROOM_FLAGS(loc), (flag)))
 /** 1 if flag is set in the zone of rnum, 0 if not. */
 #define ZONE_FLAGGED(rnum, flag)   (IS_SET_AR(zone_table[(rnum)].zone_flags, (flag)))
 /** 1 if flag is set in the exit, 0 if not. */
@@ -649,9 +648,6 @@ do                                                              \
 #define GET_DTS(ch)     CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.num_traps))
 #define GET_REMORT(ch)     CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.num_incarnations))
 #define GET_KARMA(ch)     CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.karma))
-/*pega a ordem do remort */
-#define GET_WASCLASS(ch,i)     CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.was_class[i]))
-
 
 /** Get obj worn in position i on ch. */
 #define GET_EQ(ch, i)		((ch)->equipment[i])
@@ -906,7 +902,6 @@ do                                                              \
 #define IS_RANGER(ch)		(!IS_NPC(ch) && \
         (GET_CLASS(ch) == CLASS_RANGER))
 
-#define GET_WAS_CLASS(ch)       (PLAYER(ch)->was_class)
 #define WAS_PC_CLASS(ch, cl)    (!IS_NPC(ch) && WAS_FLAGGED(ch, cl))
 #define WAS_MAGIC_USER(ch)      (WAS_PC_CLASS(ch, CLASS_MAGIC_USER))
 #define WAS_CLERIC(ch)          (WAS_PC_CLASS(ch, CLASS_CLERIC))
@@ -914,7 +909,7 @@ do                                                              \
 #define WAS_WARRIOR(ch)         (WAS_PC_CLASS(ch, CLASS_WARRIOR))
 #define WAS_DRUID(ch)           (WAS_PC_CLASS(ch, CLASS_DRUID))
 #define WAS_BARD(ch)            (WAS_PC_CLASS(ch, CLASS_BARD))
-#define WAS_RANGER(ch)            (WAS_PC_CLASS(ch, CLASS_RANGER))
+#define WAS_RANGER(ch)          (WAS_PC_CLASS(ch, CLASS_RANGER))
 
 #define IS_FEMALE(ch)  (GET_SEX(ch) == SEX_FEMALE)
 #define OA(ch) (IS_FEMALE(ch) ? "a" : "o")

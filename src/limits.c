@@ -31,7 +31,7 @@ static void check_idling(struct char_data *ch);
 /* When age < 15 return the value p0 When age is 15..29 calculate the line
    between p1 & p2 When age is 30..44 calculate the line between p2 & p3 When
    age is 45..59 calculate the line between p3 & p4 When age is 60..79
-   calculate the line between p4 & p5 When age >= 80 return the value p6 */
+   calyiculate the line between p4 & p5 When age >= 80 return the value p6 */
 static int graf(int grafage, int p0, int p1, int p2, int p3, int p4, int p5, int p6)
 {
 
@@ -73,13 +73,13 @@ int mana_gain(struct char_data *ch)
 		gain = graf(age(ch)->year, 4, 8, 12, 16, 12, 10, 8);
 
 		/* Class/Level calculations */
-		if (IS_MAGIC_USER(ch))
+		if (IS_MAGIC_USER(ch) || WAS_MAGIC_USER(ch))
 			gain *= 3;
-		else if (IS_DRUID(ch))
+		else if (IS_DRUID(ch) || WAS_DRUID(ch))
 			gain *= 2.5;
-		else if (IS_CLERIC(ch))
+		else if (IS_CLERIC(ch) || WAS_CLERIC(ch))
 			gain *= 2;
-		else if (IS_RANGER(ch))
+		else if (IS_RANGER(ch) || WAS_RANGER(ch))
 			gain += (gain / 2);
 
 		/* Skill/Spell calculations */
@@ -138,13 +138,13 @@ int hit_gain(struct char_data *ch)
 		if ((GET_COND(ch, HUNGER) == 0) || (GET_COND(ch, THIRST) == 0))
 			gain /= 4;
 
-		gain += (gain * (GET_MAX_HIT(ch) / 250) / 3);
-		gain += MAX(0, (GET_CON(ch) - 10) / 2);
 
 		/* Class/Level calculations */
 		if (IS_MAGIC_USER(ch) || IS_CLERIC(ch))
 			gain /= 2;			/* Ouch. */
 
+		gain += (gain * (GET_MAX_HIT(ch) / 250) / 3);
+		gain += MAX(0, (GET_CON(ch) - 10) / 2);
 		/* Skill/Spell calculations */
 		/* Position calculations */
 
@@ -206,7 +206,6 @@ int move_gain(struct char_data *ch)
 
 		/* Class/Level calculations */
 		gain += (GET_CON(ch) - 10) / 2;
-		/* Skill/Spell calculations */
 		/* Position calculations */
 		switch (GET_POS(ch))
 		{
@@ -222,6 +221,10 @@ int move_gain(struct char_data *ch)
 			gain += (gain / 8);	/* Divide by 8 */
 			break;
 		}
+
+		/* Skill/Spell calculations */
+		
+		/* Class calculatuions */
 
 		if (IS_RANGER(ch))
 			gain += (gain / 4);
@@ -298,8 +301,8 @@ void gain_exp(struct char_data *ch, int gain)
 	int top_level;
 	int num_levels = 0;
 
-	if (!IS_NPC(ch)
-		&& (GET_LEVEL(ch) < 1 || GET_LEVEL(ch) >= LVL_GRIMM || PLR_FLAGGED(ch, PLR_TRNS)))
+	if (!IS_NPC(ch) && 
+	   (GET_LEVEL(ch) < 1 || GET_LEVEL(ch) >= LVL_GRIMM || PLR_FLAGGED(ch, PLR_TRNS)))
 		return;
 	if (IS_NPC(ch))
 	{
@@ -310,8 +313,8 @@ void gain_exp(struct char_data *ch, int gain)
 	{
 		if ((IS_HAPPYHOUR) && (IS_HAPPYEXP))
 			gain += (int)((float)gain * ((float)HAPPY_EXP / (float)(100)));
-		gain = MIN(CONFIG_MAX_EXP_GAIN, gain);	/* put a cap on the max gain
-												   per kill */
+		gain = MIN(CONFIG_MAX_EXP_GAIN, gain);	/* put a cap on the max gain per kill */
+
 		GET_EXP(ch) += gain;
 		if (GET_LEVEL(ch) < LVL_IMMORT)
 			top_level = LVL_IMMORT - CONFIG_NO_MORT_TO_IMMORT;
@@ -501,15 +504,28 @@ void point_update(void)
 {
 	struct char_data *i, *next_char;
 	struct obj_data *j, *next_thing, *jj, *next_thing2;
-
+	zone_rnum zona;
+	int pressure, temperature, humidity, winds;
 	/* characters */
 	for (i = character_list; i; i = next_char)
 	{
 		next_char = i->next;
 		gain_condition(i, HUNGER, -1);
 		gain_condition(i, DRUNK, -1);
-		/* if (WEATHER(IN_ROOM(i))->temperature >= 38) gain_condition(i,
-		   THIRST, -2); else */
+		zona = world[IN_ROOM(i)].zone;
+		pressure = zone_table[zona].weather->pressure;
+		temperature = zone_table[zona].weather->temperature;
+		humidity = zone_table[zona].weather->humidity;
+		winds = zone_table[zona].weather->winds;
+		if ((temperature > 37.5) ||
+                    (humidity <= 0.30 && temperature > 20) ||
+                    (humidity >= 0.80 && temperature > 25) ||
+                    (pressure < 600) ||
+                    (winds > 5.56 && humidity < 0.40) ||
+                    (winds > 2.78 && temperature > 35)) {
+		   gain_condition(i,THIRST, -2);
+		}
+		else
 		gain_condition(i, THIRST, -1);
 		if (GET_POS(i) >= POS_STUNNED)
 		{

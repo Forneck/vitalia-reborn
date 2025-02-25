@@ -640,6 +640,7 @@
 #define PM_ARRAY_MAX    4  /**< # Bytes in Bit vector - Act and Player flags */
 #define PR_ARRAY_MAX    4  /**< # Bytes in Bit vector - Player Pref Flags */
 #define AF_ARRAY_MAX    4  /**< # Bytes in Bit vector - Affect flags */
+#define RM_ARRAY_MAX    4  /**< # Bytes in Bit vector - Remort Flags */
 #define TW_ARRAY_MAX    4  /**< # Bytes in Bit vector - Obj Wear Locations */
 #define EF_ARRAY_MAX    4  /**< # Bytes in Bit vector - Obj Extra Flags */
 #define ZN_ARRAY_MAX    4  /**< # Bytes in Bit vector - Zone Flags */
@@ -753,7 +754,6 @@
 
 #define MAX_GOLD 2140000000 /**< Maximum possible on hand gold (2.14 Billion) */
 #define MAX_BANK 2140000000 /**< Maximum possible in bank gold (2.14 Billion) */
-#define MAX_REMORT 100
 
 /** Define the largest set of commands for a trigger.
  * 16k should be plenty and then some. */
@@ -1115,7 +1115,7 @@ struct player_special_data_saved
   int num_incarnations;	/* Number of incarnations		 */
   
   int karma;
-  int was_class[MAX_REMORT]; /**< array of remorted classes */
+  int was_class[RM_ARRAY_MAX]; /**< array of remorted classes */
 };
 
 /** Specials needed only by PCs, not NPCs.  Space for this structure is
@@ -1207,7 +1207,6 @@ struct char_data
   struct list_data * events;
   struct str_plrspells *plrspells;
 
-  long was_class;
 };
 
 /** descriptor-related structures */

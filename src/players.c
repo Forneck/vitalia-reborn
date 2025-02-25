@@ -313,7 +313,7 @@ GET_BREATH(ch) = PFDEF_BREATH;
       PLR_FLAGS(ch)[i] = PFDEF_PLRFLAGS;
     for (i = 0; i < PR_ARRAY_MAX; i++)
       PRF_FLAGS(ch)[i] = PFDEF_PREFFLAGS;
-    for (i = 0; i < MAX_REMORT; i++)
+    for (i = 0; i < RM_ARRAY_MAX; i++)
       WAS_FLAGS(ch)[i] = PFDEF_WASFLAGS;
    
     while (get_line(fl, line)) {

@@ -940,7 +940,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
 		sprintbitarray(PRF_FLAGS(k), preference_bits, PR_ARRAY_MAX, buf);
 		send_to_char(ch, "PRF: %s%s%s\r\n", CCGRN(ch, C_NRM), buf, CCNRM(ch, C_NRM));
 
-		sprintbitarray(WAS_FLAGS(k), class_abbrevs, MAX_REMORT, buf);
+		sprintbitarray(WAS_FLAGS(k), pc_class_types, RM_ARRAY_MAX, buf);
 		send_to_char(ch, "WAS: %s%s%s\r\n", CCGRN(ch, C_NRM), buf, CCNRM(ch, C_NRM));
 
 		send_to_char(ch, "Quest Points: [%9d] Quests Completed: [%5d]\r\n",
@@ -3299,6 +3299,7 @@ static struct set_struct {
    { "wasdruid",        LVL_GOD,    PC,   BINARY },
    { "wasbard",         LVL_GOD,    PC,   BINARY },
    { "wasranger",       LVL_GOD,    PC,   BINARY },
+   { "wasclass",        LVL_GOD,    PC,  MISC },
    { "\n", 0, BOTH, MISC }                                                          };
 
 static int perform_set(struct char_data *ch, struct char_data *vict, int mode, char *val_arg)
@@ -3807,25 +3808,29 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_GHOST);
 		break;
 	case 63: /*WAS MU*/
-		SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_MAGIC_USER);
+		SET_BIT_AR(WAS_FLAGS(vict), CLASS_MAGIC_USER);
 		break;
 	case 64: /*WAS CLE*/
-	        SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_CLERIC);
+	        SET_BIT_AR(WAS_FLAGS(vict), CLASS_CLERIC);
 		break;
 	case 65: /*WAS THIEF*/
-		SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_THIEF);
+		SET_BIT_AR(WAS_FLAGS(vict), CLASS_THIEF);
 		break;
 	case 66: /*WAS WARRIOR*/
-		SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_WARRIOR);
+		SET_BIT_AR(WAS_FLAGS(vict), CLASS_WARRIOR);
 		break;
 	case 67: /*WAS DRUID*/
-		SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_DRUID);
+		SET_BIT_AR(WAS_FLAGS(vict), CLASS_DRUID);
 		break;
 	case 68: /*WAS BARD*/
-		SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_BARD);
+		SET_BIT_AR(WAS_FLAGS(vict), CLASS_BARD);
 		break;
 	case 69: /*WAS WARRIOR*/
-		SET_OR_REMOVE(WAS_FLAGS(vict), CLASS_RANGER);
+		SET_BIT_AR(WAS_FLAGS(vict), CLASS_RANGER);
+		break;
+	case 70:
+		if ((i = parse_class(*val_arg)) == CLASS_UNDEFINED)                                                                                 {                                                                         send_to_char(ch, "That is not a class.\r\n");                                                                                       return (0);                                               }
+		TOGGLE_BIT_AR(WAS_FLAGS(vict), i);
 		break;
 	default:
 		send_to_char(ch, "Can't set that!\r\n");
