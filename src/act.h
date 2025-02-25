@@ -25,6 +25,7 @@ extern void look_at_sky(struct char_data *ch);
 /*****************************************************************************
  * Begin Functions and defines for act.comm.c
  ****************************************************************************/
+bool legal_communication(char *arg);
 /* functions with subcommands */
 /* do_gen_comm */
 ACMD(do_gen_comm);

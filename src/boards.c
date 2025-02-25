@@ -40,6 +40,7 @@
 #include "improved-edit.h"
 #include "modify.h"
 #include "screen.h"
+#include "act.h"
 
 /* Board appearance order. */
 #define	NEWEST_AT_TOP	FALSE
@@ -211,6 +212,7 @@ int board_write_message(int board_type, struct char_data *ch, char *arg, struct 
 {
   time_t ct;
   char buf[MAX_INPUT_LENGTH], buf2[MAX_NAME_LENGTH + 3], tmstr[100];
+  char color_on[24];
 
   if (GET_LEVEL(ch) < WRITE_LVL(board_type)) {
     send_to_char(ch, "Você não pode escrever neste quadro.\r\n");
@@ -238,9 +240,13 @@ int board_write_message(int board_type, struct char_data *ch, char *arg, struct 
   }
   ct = time(0);
   strftime(tmstr, sizeof(tmstr), "%a %b %d %Y", localtime(&ct));
+  
+  if (CONFIG_SPECIAL_IN_COMM && legal_communication(arg))
+        parse_at(arg);
 
   snprintf(buf2, sizeof(buf2), "(%s)", GET_NAME(ch));
-  snprintf(buf, sizeof(buf), "%s %-12s :: %s", tmstr, buf2, arg);
+  snprintf(buf, sizeof(buf), "%s %-12s :: %s%s%s", tmstr, buf2,COLOR_LEV(ch) >= C_CMP ? color_on : "", arg,CCNRM(ch, C_CMP));
+
   NEW_MSG_INDEX(board_type).heading = strdup(buf);
   NEW_MSG_INDEX(board_type).level = GET_LEVEL(ch);
 

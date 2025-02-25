@@ -22,9 +22,9 @@
 #include "act.h"
 #include "modify.h"
 
-static bool legal_communication(char *arg);
+bool legal_communication(char *arg);
 
-static bool legal_communication(char *arg)
+bool legal_communication(char *arg)
 {
 	while (*arg)
 	{
