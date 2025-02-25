@@ -3292,13 +3292,6 @@ static struct set_struct {
    { "maxbreath",       LVL_GOD, PC, NUMBER},
    { "transcendeu",     LVL_GOD, PC, BINARY},
    { "espirito",        LVL_GOD, PC, BINARY},
-   { "wasmage",         LVL_GOD,    PC,   BINARY },
-   { "wascleric",       LVL_GOD,    PC,   BINARY },
-   { "wasthief",        LVL_GOD,    PC,   BINARY },
-   { "waswarrior",      LVL_GOD,    PC,   BINARY },
-   { "wasdruid",        LVL_GOD,    PC,   BINARY },
-   { "wasbard",         LVL_GOD,    PC,   BINARY },
-   { "wasranger",       LVL_GOD,    PC,   BINARY },
    { "wasclass",        LVL_GOD,    PC,  MISC },
    { "\n", 0, BOTH, MISC }                                                          };
 
@@ -3807,29 +3800,11 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 	case 62:
 		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_GHOST);
 		break;
-	case 63: /*WAS MU*/
-		SET_BIT_AR(WAS_FLAGS(vict), CLASS_MAGIC_USER);
-		break;
-	case 64: /*WAS CLE*/
-	        SET_BIT_AR(WAS_FLAGS(vict), CLASS_CLERIC);
-		break;
-	case 65: /*WAS THIEF*/
-		SET_BIT_AR(WAS_FLAGS(vict), CLASS_THIEF);
-		break;
-	case 66: /*WAS WARRIOR*/
-		SET_BIT_AR(WAS_FLAGS(vict), CLASS_WARRIOR);
-		break;
-	case 67: /*WAS DRUID*/
-		SET_BIT_AR(WAS_FLAGS(vict), CLASS_DRUID);
-		break;
-	case 68: /*WAS BARD*/
-		SET_BIT_AR(WAS_FLAGS(vict), CLASS_BARD);
-		break;
-	case 69: /*WAS WARRIOR*/
-		SET_BIT_AR(WAS_FLAGS(vict), CLASS_RANGER);
-		break;
-	case 70:
-		if ((i = parse_class(*val_arg)) == CLASS_UNDEFINED)                                                                                 {                                                                         send_to_char(ch, "That is not a class.\r\n");                                                                                       return (0);                                               }
+	case 63: /*WAS CLASS*/
+		if ((i = parse_class(*val_arg)) == CLASS_UNDEFINED) {
+			send_to_char(ch, "That is not a class.\r\n");
+			return (0);
+		}
 		TOGGLE_BIT_AR(WAS_FLAGS(vict), i);
 		break;
 	default:
