@@ -179,7 +179,7 @@ siteok_everyone = 1
 use_new_socials = 1
 
 * If the nameserver is fast, set to 0, otherwise, 1.
-nameserver_is_slow = 1
+nameserver_is_slow = 0
 
 * Should OLC autosave to disk (1) or save internally (0).
 auto_save_olc = 1
@@ -254,5 +254,5 @@ protocol_negotiation = 1
 special_in_comm = 1
 
 * If 0 then off, otherwise 1: Brief, 2: Normal, 3: Complete.
-debug_mode = 3
+debug_mode = 1
 

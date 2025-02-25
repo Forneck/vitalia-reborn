@@ -245,27 +245,27 @@ void send_char_pos(struct char_data *ch, int dam)
 {
   switch (GET_POS(ch)) {
     case POS_MORTALLYW:
-      act("$n is mortally wounded, and will die soon, if not aided.", TRUE, ch, 0, 0, TO_ROOM);
-      send_to_char(ch, "You are mortally wounded, and will die soon, if not aided.\r\n");
-      break;
+	act("$n está mortalmente ferid$r, e vai morrer logo, se não for medicad$r.", TRUE,ch, 0, 0, TO_ROOM);
+	act("Você está mortalmente ferid$r, e vai morrer logo, se não medicad$r.", TRUE,ch, 0, 0, TO_CHAR | TO_SLEEP);
+	break;
     case POS_INCAP:
-      act("$n is incapacitated and will slowly die, if not aided.", TRUE, ch, 0, 0, TO_ROOM);
-      send_to_char(ch, "You are incapacitated and will slowly die, if not aided.\r\n");
-      break;
+	act("$n está incapacitad$r e vai morrer lentamente, se não for medicad$r.", TRUE,ch, 0, 0, TO_ROOM);
+	act("Você está incapacitad$r e vai morrer lentamente, se não for medicad$r.", TRUE, ch, NULL, NULL, TO_CHAR | TO_SLEEP);
+	break;
     case POS_STUNNED:
-      act("$n is stunned, but will probably regain consciousness again.", TRUE, ch, 0, 0, TO_ROOM);
-      send_to_char(ch, "You're stunned, but will probably regain consciousness again.\r\n");
-      break;
+        act("$n está atordoad$r, mas provavelmente irá recuperar a consciência novamente.", TRUE, ch, 0, 0, TO_ROOM);
+	act("Você está atordoad$r, mas provavelmente irá recuperar a consciência novamente.", TRUE, ch, 0, 0, TO_CHAR | TO_SLEEP);
+	break;
     case POS_DEAD:
-      act("$n is dead!  R.I.P.", FALSE, ch, 0, 0, TO_ROOM);
-      send_to_char(ch, "You are dead!  Sorry...\r\n");
-      break;
+        act("$n está mort$r!  R.I.P.", FALSE, ch, 0, 0, TO_ROOM)
+;
+      act("Você está mort$r!  Sinto muito...\r\n", TRUE, ch, 0, 0, TO_CHAR | TO_SLEEP);
+	break;
     default:                        /* >= POSITION SLEEPING */
-      if (dam > (GET_MAX_HIT(ch) >> 2))
-        act("That really did HURT!", FALSE, ch, 0, 0, TO_CHAR);
-      if (GET_HIT(ch) < (GET_MAX_HIT(ch) >> 2))
-        send_to_char(ch, "%sYou wish that your wounds would stop BLEEDING so much!%s\r\n",
-                         CCRED(ch, C_SPR), CCNRM(ch, C_SPR));
+      if (dam > (GET_MAX_HIT(ch) / 4))
+	      send_to_char(ch, "Isto realmente DOEU!\r\n");
+      if (GET_HIT(ch) < (GET_MAX_HIT(ch) / 4))
+         send_to_char(ch, "Você espera que seus ferimentos parem de %sSANGRAR%s tanto!\r\n",CCRED(ch, C_SPR), CCNRM(ch, C_SPR));
   }
 }
 
@@ -292,8 +292,7 @@ int valid_dg_target(struct char_data *ch, int bitvector)
 void script_damage(struct char_data *vict, int dam)
 {
   if (GET_LEVEL(vict)>=LVL_IMMORT && (dam > 0)) {
-    send_to_char(vict, "Being the cool immortal you are, you sidestep a trap, "
-        "obviously placed to kill you.\r\n");
+    send_to_char(vict, "Sendo um imortal legal como você é, você desvia de uma armadilha, colocada obviamente para matar você.\r\n");
     return;
   }
 
