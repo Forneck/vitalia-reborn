@@ -849,7 +849,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
 	send_to_char(ch, "D-Des: %s", k->player.description ? k->player.description : "<None>\r\n");
 
 	sprinttype(k->player.chclass, pc_class_types, buf, sizeof(buf));
-	send_to_char(ch, "%s%s, Lev: [%s%2d%s], XP: [%s%7d%s], Align: [%4d]\r\n",
+	send_to_char(ch, "%s%s, Lev: [%s%2d%s], XP: [%s%8ld%s], Align: [%4d]\r\n",
 				 IS_NPC(k) ? "Mobile" : "Class: ", IS_NPC(k) ? "" : buf, CCYEL(ch, C_NRM),
 				 GET_LEVEL(k), CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), GET_EXP(k), CCNRM(ch, C_NRM),
 				 GET_ALIGNMENT(k));
@@ -2722,7 +2722,7 @@ ACMD(do_wizutil)
 			act("A sudden fireball conjured from nowhere thaws $n!", FALSE, vict, 0, 0, TO_ROOM);
 			break;
 		case SCMD_UNAFFECT:
-			if (vict->affected || AFF_FLAGS(vict))
+			if ((vict->affected) || AFF_FLAGS(vict))
 			{
 				while (vict->affected)
 					affect_remove(vict, vict->affected);
@@ -2990,7 +2990,7 @@ ACMD(do_show)
 			send_to_char(ch, "Player: %-12s (%s) [%2d %s]\r\n", GET_NAME(vict),
 						 genders[(int)GET_SEX(vict)], GET_LEVEL(vict),
 						 class_abbrevs[(int)GET_CLASS(vict)]);
-			send_to_char(ch, "Gold: %-8d  Bal: %-8d Exp: %-8d  Align: %-5d  Lessons: %-3d\r\n",
+			send_to_char(ch, "Gold: %-8d  Bal: %-8d Exp: %-8ld  Align: %-5d  Lessons: %-3d\r\n",
 						 GET_GOLD(vict), GET_BANK_GOLD(vict), GET_EXP(vict), GET_ALIGNMENT(vict),
 						 GET_PRACTICES(vict));
 			send_to_char(ch, "Started: %-25.25s  Last: %-25.25s\r\n", buf1, buf2);
@@ -3292,7 +3292,7 @@ static struct set_struct {
    { "maxbreath",       LVL_GOD, PC, NUMBER},
    { "transcendeu",     LVL_GOD, PC, BINARY},
    { "espirito",        LVL_GOD, PC, BINARY},
-   { "wasclass",        LVL_GOD,    PC,  MISC },
+   { "wasclass",        LVL_IMPL,    PC,  MISC },
    { "\n", 0, BOTH, MISC }                                                          };
 
 static int perform_set(struct char_data *ch, struct char_data *vict, int mode, char *val_arg)
@@ -3806,6 +3806,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 			return (0);
 		}
 		TOGGLE_BIT_AR(WAS_FLAGS(vict), i);
+		REMOVE_BIT_AR(PLR_FLAGS(vict), NUM_CLASSES);
 		break;
 	default:
 		send_to_char(ch, "Can't set that!\r\n");

@@ -69,5 +69,5 @@
 #define PFDEF_REMORT 0
 #define PFDEF_KARMA 0
 #define PFDEF_FIT 0
-#define PFDEF_WASFLAGS 0
+#define PFDEF_WASFLAGS 7
 #endif /* _PFDEFAULTS_H_ */

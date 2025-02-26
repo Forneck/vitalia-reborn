@@ -183,6 +183,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"history", "history", POS_DEAD, do_history, 0, 0, CMD_NOARG},
 	{"hit", "hit", POS_FIGHTING, do_hit, 0, SCMD_HIT, CMD_ONEARG},
 	{"hold", "hold", POS_RESTING, do_grab, 1, 0, CMD_ONEARG},
+	{"holler", "holler"  , POS_RESTING , do_gen_comm , 1, SCMD_HOLLER , CMD_NOARG},
 	{"holylight", "holy", POS_DEAD, do_gen_tog, LVL_IMMORT, SCMD_HOLYLIGHT, CMD_NOARG},
 	{"house", "house", POS_RESTING, do_house, 0, 0, CMD_ONEARG},
 	{"inventory", "i", POS_DEAD, do_inventory, 0, 0, CMD_NOARG},

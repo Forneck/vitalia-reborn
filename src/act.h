@@ -34,6 +34,7 @@ ACMD(do_gen_comm);
 #define SCMD_AUCTION  2
 #define SCMD_GRATZ    3
 #define SCMD_GEMOTE   4
+#define SCMD_HOLLER   5
 /* do_qcomm */
 ACMD(do_qcomm);
 #define SCMD_QSAY     0

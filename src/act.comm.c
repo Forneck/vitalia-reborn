@@ -518,6 +518,7 @@ ACMD(do_gen_comm)
 		HIST_AUCTION,
 		HIST_GRATS,
 		HIST_PRAY,
+		HIST_HOLLER,
 	};
 
 	/* com_msgs: [0] Message if you can't perform the action because of
@@ -547,7 +548,13 @@ ACMD(do_gen_comm)
 		{"Você não pode tagarelar as tuas emocoes!\r\n",
 		 "tagarela",
 		 "Você nem está neste canal!\r\n",
+		 KYEL},
+
+		{"Você não pode berrar!\r\n",
+                 "berra",
+                 "",
 		 KYEL}
+
 	};
 
 	if (PLR_FLAGGED(ch, PLR_NOSHOUT))
@@ -596,6 +603,13 @@ ACMD(do_gen_comm)
 		return;
 	}
 
+	if (subcmd == SCMD_HOLLER) {
+          if (GET_MOVE(ch) < CONFIG_HOLLER_MOVE_COST) {
+		  send_to_char(ch, "Você está muito cansad%s para berrar.\r\n",OA(ch));
+                   return;
+          } else
+            GET_MOVE(ch) -= CONFIG_HOLLER_MOVE_COST;
+        }
 	/* Set up the color on code. */
 	strlcpy(color_on, com_msgs[subcmd][3], sizeof(color_on));
 

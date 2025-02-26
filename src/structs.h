@@ -158,7 +158,7 @@
 #define HIST_GRATS     6 /**< Index to history of all 'grats' */
 #define HIST_PRAY    7 /**< Index to history of all 'pray' */
 #define HIST_AUCTION   8 /**< Index to history of all 'auction' */
-#define HIST_CLAN   9 /**< Index to history of all 'clan' */
+#define HIST_HOLLER   9 /**< Index to history of all 'holler' */
 #define HIST_GROUP 10
 
 #define NUM_HIST       11 /**< Total number of history indexes */
