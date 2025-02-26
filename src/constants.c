@@ -1124,7 +1124,7 @@ const char *history_types[] = {
   "grats",
   "pray",
   "auction",
-  "clan",
+  "holler",
   "group",
   "\n"
 };
