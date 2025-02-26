@@ -1855,6 +1855,11 @@ static void PerformSubnegotiation( descriptor_t *apDescriptor, char aCmd, char *
                /* We know for certain that this client does not have support */
                pProtocol->b256Support = eNO;
             }
+           
+            if ( MatchString(pClientName, "GMud") || MatchString(pClientName, "Pueblo") )
+            {                                                                                          /* We know for certain that this client does not have support */
+               pProtocol->pVariables[eMSDP_UTF_8]->ValueInt = 0;
+            }
          }
          break;
 
@@ -1882,7 +1887,7 @@ static void PerformSubnegotiation( descriptor_t *apDescriptor, char aCmd, char *
              *
              * Note that the user must also use a unicode font!
              */
-            if ( apData[0] == ACCEPTED )
+             if ( apData[0] == ACCEPTED )
                pProtocol->pVariables[eMSDP_UTF_8]->ValueInt = 1;
          }
          break;
