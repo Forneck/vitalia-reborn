@@ -516,12 +516,12 @@ static void perform_map( struct char_data *ch, char *argument, bool worldmap )
   count += sprintf(buf + count, "\tn%s Agua\\\\", map_info[SECT_WATER_SWIM].disp);
   count += sprintf(buf + count, "\tn%s Barco\\\\", map_info[SECT_WATER_NOSWIM].disp);
   count += sprintf(buf + count, "\tn%s Voando\\\\", map_info[SECT_FLYING].disp);
-  sprintf(buf + count, "\tn%s Mergulhando\\\\", map_info[SECT_UNDERWATER].disp);
-   sprintf(buf + count, "\tn%s Escalando\\\\", map_info[SECT_CLIMBING].disp);
-    sprintf(buf + count, "\tn%s Corrente Ar\\\\", map_info[SECT_AIR_FLOW].disp);
-     sprintf(buf + count, "\tn%s Areia\\\\", map_info[SECT_QUICKSAND].disp);
-      sprintf(buf + count, "\tn%s Lava\\\\", map_info[SECT_LAVA].disp);
-       sprintf(buf + count, "\tn%s Gelo\\\\", map_info[SECT_ICE].disp);
+  count += sprintf(buf + count, "\tn%s Mergulhando\\\\", map_info[SECT_UNDERWATER].disp);
+  count += sprintf(buf + count, "\tn%s Escalando\\\\", map_info[SECT_CLIMBING].disp);
+  count += sprintf(buf + count, "\tn%s Corrente Ar\\\\", map_info[SECT_AIR_FLOW].disp);
+  count += sprintf(buf + count, "\tn%s Areia\\\\", map_info[SECT_QUICKSAND].disp);
+  count += sprintf(buf + count, "\tn%s Lava\\\\", map_info[SECT_LAVA].disp);
+  count += sprintf(buf + count, "\tn%s Gelo\\\\", map_info[SECT_ICE].disp);
 
   strcpy(buf, strfrmt(buf, LEGEND_WIDTH, CANVAS_HEIGHT + 2, FALSE, TRUE, TRUE));
 

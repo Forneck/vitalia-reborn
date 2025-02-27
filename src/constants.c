@@ -62,6 +62,17 @@ const char *dirs_pt[] =
   "\n"
 };
 
+const char *doors_pt[] =
+{
+  "abre",
+  "fecha",
+  "tranca",
+  "destranca",
+  "arromba",
+  "\n"
+};
+
+
 const char *autoexits[] =
 {
   "n",

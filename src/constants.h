@@ -14,6 +14,7 @@
 
 extern const char *tbamud_version;
 extern const char *dirs[];
+extern const char *doors_pt[];
 extern const char *autoexits[];
 extern const char *dirs_pt[];
 extern const char *autoexits_pt[];

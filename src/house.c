@@ -315,8 +315,8 @@ void hcontrol_list_houses(struct char_data *ch, char *arg)
     return;
   }
   send_to_char(ch,
-	"Address  Atrium  Build Date       Guests  Owner        Last Paymt\r\n"
-	"-------  ------  ---------------  ------  ------------ ---------------\r\n");
+	"Endereço  Atrio  Construção       Convi.  Proprietário Ultimo Pag.\r\n"
+	"--------  -----  ---------------  ------  ------------ ---------------\r\n");
 
   for (i = 0; i < num_of_houses; i++) {
     /* Avoid seeing <UNDEF> entries from self-deleted people. -gg 6/21/98 */
@@ -326,16 +326,16 @@ void hcontrol_list_houses(struct char_data *ch, char *arg)
     if (house_control[i].built_on) {
       strftime(built_on, sizeof(built_on), "%a %b %d %Y", localtime(&(house_control[i].built_on)));
     } else
-      strcpy(built_on, "Unknown"); /* strcpy: OK */
+      strcpy(built_on, "Desconhecido"); /* strcpy: OK */
 
     if (house_control[i].last_payment) {
       strftime(last_pay, sizeof(last_pay), "%a %b %d %Y", localtime(&(house_control[i].last_payment)));
     } else
-      strcpy(last_pay, "None");	/* strcpy: OK */
+      strcpy(last_pay, "Nenhum");	/* strcpy: OK */
 
     /* Now we need a copy of the owner's name to capitalize. -gg 6/21/98 */
     strcpy(own_name, temp);	/* strcpy: OK (names guaranteed <= MAX_NAME_LENGTH+1) */
-    send_to_char(ch, "%7d %7d  %-15s    %2d    %-12s %s\r\n",
+    send_to_char(ch, "%8d %7d  %-15s    %2d    %-12s %s\r\n",
 	    house_control[i].vnum, house_control[i].atrium, built_on,
 	    house_control[i].num_of_guests, CAP(own_name), last_pay);
 
@@ -521,7 +521,7 @@ ACMD(do_house)
     send_to_char(ch, "Você precisa estar em sua casa para definir seus hóspedes.\r\n");
   else if ((i = find_house(GET_ROOM_VNUM(IN_ROOM(ch)))) == NOWHERE)
     send_to_char(ch, "Hum.. esta casa parece ter fracassado.\r\n");
-  else if (GET_IDNUM(ch) != house_control[i].owner)
+  else if ((GET_IDNUM(ch) != house_control[i].owner) || (GET_LEVEL(ch) = LVL_IMPL))
     send_to_char(ch, "Somente o dono da casa pode definir seus hóspedes.\r\n");
   else if (!*arg)
     House_list_guests(ch, i, FALSE);
@@ -573,7 +573,7 @@ int House_can_enter(struct char_data *ch, room_vnum house)
 
   switch (house_control[i].mode) {
   case HOUSE_PRIVATE:
-    if (GET_IDNUM(ch) == house_control[i].owner)
+    if (GET_IDNUM(ch) == house_control[i].owner || GET_LEVEL(ch) >= LVL_GRGOD)
       return (1);
     for (j = 0; j < house_control[i].num_of_guests; j++)
       if (GET_IDNUM(ch) == house_control[i].guests[j])

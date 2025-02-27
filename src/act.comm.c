@@ -484,21 +484,7 @@ ACMD(do_gen_comm)
 {
 	struct descriptor_data *i;
 	char color_on[24];
-	char buf1[MAX_INPUT_LENGTH], buf2[MAX_INPUT_LENGTH + 50], *msg;	// +
-	// 50
-	// to 
-	// 
-	// 
-	// 
-	// 
-	// 
-	// 
-	// 
-	// make
-	// room
-	// for
-	// color
-	// codes
+	char buf1[MAX_INPUT_LENGTH], buf2[MAX_INPUT_LENGTH + 50], *msg;	/* 50 to make room for color codes */
 	bool emoting = FALSE;
 
 	/* Array of flags which must _not_ be set in order for comm to be heard. */
