@@ -40,15 +40,15 @@ static const char *how_good(int percent)
 	if (percent < 0)
 		return " (erro)";
 	if (percent == 0)
-		return " (nao aprendeu)";
+		return " (desconhecida)";
 	if (percent <= 10)
-		return " (horrivel)";
+		return " (péssima)";
 	if (percent <= 20)
 		return " (ruim)";
 	if (percent <= 40)
-		return " (pobre)";
+		return " (fraca)";
 	if (percent <= 55)
-		return " (mediana)";
+		return " (média)";
 	if (percent <= 70)
 		return " (razoavel)";
 	if (percent <= 80)
@@ -60,7 +60,7 @@ static const char *how_good(int percent)
 	if (percent <= 99)
 		return " (excelente)";
 
-	return " (perfeitamente)";
+	return " (mestre)";
 }
 
 
@@ -122,9 +122,7 @@ void list_skills(struct char_data *ch)
 		spell = spell->next;
 	}
 	if (len >= sizeof(buf))
-		strcpy(buf + sizeof(buf) - strlen(overflow) - 1, overflow);	// strcpy: 
-																	// 
-	// OK 
+		strcpy(buf + sizeof(buf) - strlen(overflow) - 1, overflow);	// strcpy: OK 
 
 	page_string(ch->desc, buf, TRUE);
 }
@@ -178,7 +176,7 @@ SPECIAL(guild)
 	if ((level == -1) || (GET_LEVEL(ch) < level))
 	{
 		send_to_char(ch, "Você não pode praticar essa %s.\r\n",
-					 spell->type == SPELL ? "magia" : "habilidade");
+					 spell->type == SPELL ? "magia" : spell->type == SKILL ?"habilidade" : "canção");
 		return (TRUE);
 	}
 	if (GET_SKILL(ch, skill_num) >= LEARNED(ch))
@@ -194,10 +192,7 @@ SPECIAL(guild)
 	if ((class == -1) || !spell->assign[class].prac_gain)
 		percent += MIN(MAXGAIN(ch), MAX(MINGAIN(ch), int_app[GET_INT(ch)].learn));
 	else
-		 percent +=
-			MAX(5,
-				formula_interpreter(ch, ch, skill_num, TRUE, spell->assign[class].prac_gain,
-									GET_LEVEL(ch), &rts_code));
+		 percent +=MAX(5,formula_interpreter(ch, ch, skill_num, TRUE, spell->assign[class].prac_gain,GET_LEVEL(ch), &rts_code));
 
 	SET_SKILL(ch, skill_num, MIN(LEARNED(ch), percent));
 
@@ -232,8 +227,8 @@ SPECIAL(dump)
 
 	if (value)
 	{
-		send_to_char(ch, "Voce merece uma recompensa.\r\n");
-		act("$n ganhou uma recompensa pela sua cidadania.", TRUE, ch, 0, 0, TO_ROOM);
+		send_to_char(ch, "Voce é recompensad%s por considerável atuação.\r\n",OA(ch));
+		act("$n foi recompensad$r por sua considerável atuação.", TRUE, ch, 0, 0, TO_ROOM);
 
 		if (GET_LEVEL(ch) < 3)
 			gain_exp(ch, value);
@@ -283,12 +278,12 @@ SPECIAL(mayor)
 
 	case 'W':
 		GET_POS(ch) = POS_STANDING;
-		act("$n acorda e resmunga alto.", FALSE, ch, 0, 0, TO_ROOM);
+		act("$n acorda e boceja.", FALSE, ch, 0, 0, TO_ROOM);
 		break;
 
 	case 'S':
 		GET_POS(ch) = POS_SLEEPING;
-		act("$n deita e comeca a dormir.", FALSE, ch, 0, 0, TO_ROOM);
+		act("$n senta-se e imediatamente começa a dormir.", FALSE, ch, 0, 0, TO_ROOM);
 		break;
 
 	case 'a':
@@ -297,20 +292,19 @@ SPECIAL(mayor)
 		break;
 
 	case 'b':
-		act("$n fala 'Que vista! Preciso fazer algo sobre o lixao!'", FALSE, ch, 0, 0, TO_ROOM);
+		act("$n fala 'Que visão! Preciso fazer algo sobre o lixão!'", FALSE, ch, 0, 0, TO_ROOM);
 		break;
 
 	case 'c':
-		act("$n fala 'Vandalos!  Os jovens hoje nao tem respeito por nada!'",
-			FALSE, ch, 0, 0, TO_ROOM);
+		act("$n fala 'Vandalos!  Os adolescentes de hoje em dia não respeitam maisnada!'", FALSE, ch, 0, 0, TO_ROOM);
 		break;
 
 	case 'd':
-		act("$n fala 'Bom dia, amados cidadoes!'", FALSE, ch, 0, 0, TO_ROOM);
+		act("$n fala 'Bom dia, cidadãos!'", FALSE, ch, 0, 0, TO_ROOM);
 		break;
 
 	case 'e':
-		act("$n fala 'Eu declaro o bazar aberto!'", FALSE, ch, 0, 0, TO_ROOM);
+		act("$n fala 'Eu declaro esta cidade aberta!'", FALSE, ch, 0, 0, TO_ROOM);
 		break;
 
 	case 'E':
@@ -318,14 +312,14 @@ SPECIAL(mayor)
 		break;
 
 	case 'O':
-		do_gen_door(ch, strcpy(actbuf, "gate"), 0, SCMD_UNLOCK);	/* strcpy: 
+		do_gen_door(ch, strcpy(actbuf, "portao"), 0, SCMD_UNLOCK);	/* strcpy: 
 																	   OK */
-		do_gen_door(ch, strcpy(actbuf, "gate"), 0, SCMD_OPEN);	/* strcpy: OK */
+		do_gen_door(ch, strcpy(actbuf, "portao"), 0, SCMD_OPEN);	/* strcpy: OK */
 		break;
 
 	case 'C':
-		do_gen_door(ch, strcpy(actbuf, "gate"), 0, SCMD_CLOSE);	/* strcpy: OK */
-		do_gen_door(ch, strcpy(actbuf, "gate"), 0, SCMD_LOCK);	/* strcpy: OK */
+		do_gen_door(ch, strcpy(actbuf, "portao"), 0, SCMD_CLOSE);	/* strcpy: OK */
+		do_gen_door(ch, strcpy(actbuf, "portao"), 0, SCMD_LOCK);	/* strcpy: OK */
 		break;
 
 	case '.':
@@ -353,8 +347,8 @@ static void npc_steal(struct char_data *ch, struct char_data *victim)
 
 	if (AWAKE(victim) && (rand_number(0, GET_LEVEL(ch)) == 0))
 	{
-		act("Voce descobre que $n tinha as maos na sua carteira.", FALSE, ch, 0, victim, TO_VICT);
-		act("$n tenta roubar ouro de $N.", TRUE, ch, 0, victim, TO_NOTVICT);
+		act("Voce descobre que $n está com suas mãos em swu bolso.", FALSE, ch, 0, victim, TO_VICT);
+		act("$n tenta roubar dinheiro  de $N.", TRUE, ch, 0, victim, TO_NOTVICT);
 	}
 	else
 	{
@@ -478,7 +472,7 @@ SPECIAL(guild_guard)
 	int i, direction;
 	struct char_data *guard = (struct char_data *)me;
 	const char *buf = "O guarda humilia voce e bloqueia sua passagem.\r\n";
-	const char *buf2 = "O guarda humilia $n e bloqueia a passagem.";
+	const char *buf2 = "O guarda bloqueia a passagem de $n.";
 
 	if (!IS_MOVE(cmd) || AFF_FLAGGED(guard, AFF_BLIND))
 		return (FALSE);
@@ -560,7 +554,7 @@ SPECIAL(fido)
 		if (!IS_CORPSE(i))
 			continue;
 
-		act("$n devora um corpo selvagemente.", FALSE, ch, 0, 0, TO_ROOM);
+		act("$n brutalmente devora um corpo.", FALSE, ch, 0, 0, TO_ROOM);
 		for (temp = i->contains; temp; temp = next_obj)
 		{
 			next_obj = temp->next_content;
@@ -584,7 +578,7 @@ SPECIAL(janitor)
 	{
 		if (!CAN_WEAR(i, ITEM_WEAR_TAKE))
 			continue;
-		if (GET_OBJ_TYPE(i) != ITEM_DRINKCON && GET_OBJ_COST(i) >= 15)
+		if (GET_OBJ_TYPE(i) != ITEM_DRINKCON && GET_OBJ_COST(i) >= 50)
 			continue;
 		act("$n recolhe um pouco de lixo.", FALSE, ch, 0, 0, TO_ROOM);
 		obj_from_room(i);
@@ -642,7 +636,7 @@ SPECIAL(cityguard)
 
 	if (evil && GET_ALIGNMENT(FIGHTING(evil)) >= 0)
 	{
-		act("$n grita 'PROTEJAM OS INOCENTES!!  BANZAI!  AVANTE!  ARARARAGGGHH!'", FALSE, ch, 0, 0,
+		act("$n grita 'PROTEJAM OS INOCENTES!  BANZAI!  ARARARAGGGHH!'", FALSE, ch, 0, 0,
 			TO_ROOM);
 		hit(ch, evil, TYPE_UNDEFINED);
 		return (TRUE);
@@ -669,7 +663,7 @@ SPECIAL(cityguard)
 	return (FALSE);
 }
 
-#define PET_PRICE(pet) (GET_LEVEL(pet) * 300)
+#define PET_PRICE(pet) ((GET_LEVEL(pet) * GET_LEVEL(pet) * 9 + 21) * 10)
 SPECIAL(pet_shops)
 {
 	char buf[MAX_STRING_LENGTH], pet_name[256];
@@ -681,7 +675,7 @@ SPECIAL(pet_shops)
 
 	if (CMD_IS("list"))
 	{
-		send_to_char(ch, "Pets disponiveis:\r\n");
+		send_to_char(ch, "Os animais de estimação são:\r\n");
 		for (pet = world[pet_room].people; pet; pet = pet->next_in_room)
 		{
 			/* No, you can't have the Implementor as a pet if he's in there. */
@@ -718,9 +712,7 @@ SPECIAL(pet_shops)
 			/* free(pet->player.name); don't free the prototype! */
 			pet->player.name = strdup(buf);
 
-			snprintf(buf, sizeof(buf),
-					 "%s Uma pequena placa com corrente no pescoco com 'Me chamam de %s'\r\n",
-					 pet->player.description, pet_name);
+			snprintf(buf, sizeof(buf),"%s Uma pequena placa em uma coleira ao redor de seu pescoço diz: 'Meu nome é %s'\r\n",pet->player.description, pet_name);
 			/* free(pet->player.description); don't free the prototype! */
 			pet->player.description = strdup(buf);
 		}
@@ -731,8 +723,8 @@ SPECIAL(pet_shops)
 		IS_CARRYING_W(pet) = 1000;
 		IS_CARRYING_N(pet) = 100;
 
-		send_to_char(ch, "Obrigado por comprar conosco.\r\n");
-		act("$n comprou $N como pet.", FALSE, ch, 0, pet, TO_ROOM);
+		send_to_char(ch, "Divirta-se com o seu animal de estimação.\r\n");
+		act("$n compra $N.", FALSE, ch, 0, pet, TO_ROOM);
 
 		return (TRUE);
 	}
