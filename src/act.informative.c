@@ -1363,8 +1363,8 @@ ACMD(do_weather) {
            if (OUTSIDE(ch) || IS_GOD(ch)) {
   	      /* Envia a mensagem combinando ambas as descrições */
               send_to_char(ch, " O céu está %s, %s %s.\r\n", sky_look[sky], weather_feel, temp_feel); 
-    
-    	  if (GET_LEVEL(ch) >= LVL_GOD) {
+          /* Discutir melhor momento para exibir: Acima de level X, Remort Y ou Deuses */
+    	  if (GET_LEVEL(ch) >= 10) { 
         	send_to_char(ch, " Pressão: %d hPa (mudança: %d), Céu: %d (%s) \r\n",
                      pressure, press_diff, sky, sky_look[sky]);
 	        send_to_char(ch, "Temperatura %d º.C (mudança: %d), Umidade %.2f\r\n",

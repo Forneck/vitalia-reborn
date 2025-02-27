@@ -270,7 +270,8 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"report", "repo", POS_RESTING, do_report, 0, 0, CMD_NOARG},
 	{"reroll", "rero", POS_DEAD, do_wizutil, LVL_GRGOD, SCMD_REROLL, CMD_ONEARG},
 	{"rescue", "resc", POS_FIGHTING, do_cast, 1, SKILL_RESCUE, CMD_ONEARG},
-	{"ressucite", "ress", POS_DEAD, do_ressucite, LVL_GOD, 0, CMD_ONEARG},
+        {"ressucite", "ress", POS_DEAD, do_ressucite, LVL_GOD, 0, CMD_ONEARG},
+	{"reset", "reset", POS_RESTING, do_not_here, 0,0 , CMD_NOARG},
 	{"restore", "resto", POS_DEAD, do_restore, LVL_GOD, 0, CMD_ONEARG},
 	{"return", "retu", POS_DEAD, do_return, 0, 0, CMD_NOARG},
 	{"redit", "redit", POS_DEAD, do_oasis_redit, LVL_BUILDER, 0, CMD_NOARG},
@@ -318,9 +319,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"take", "ta", POS_RESTING, do_get, 0, 0, CMD_TWOARG},
 	{"taste", "tas", POS_RESTING, do_eat, 0, SCMD_TASTE, CMD_ONEARG},
 	{"teleport", "tele", POS_DEAD, do_teleport, LVL_BUILDER, 0, CMD_TWOARG},
-	{"tedit", "tedit", POS_DEAD, do_tedit, LVL_GOD, 0, CMD_NOARG},	/* XXX:
-																	   Oasisify 
-																	 */
+	{"tedit", "tedit", POS_DEAD, do_tedit, LVL_GOD, 0, CMD_NOARG},	/* XXX: Oasisify */
 	{"thaw", "thaw", POS_DEAD, do_wizutil, LVL_GRGOD, SCMD_THAW, CMD_ONEARG},
 	{"title", "title", POS_DEAD, do_title, 0, 0, CMD_NOARG},
 	{"time", "time", POS_DEAD, do_time, 0, 0, CMD_NOARG},
@@ -350,6 +349,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"vdelete", "vdelete", POS_DEAD, do_vdelete, LVL_BUILDER, 0, CMD_NOARG},
 
 	{"wake", "wake", POS_MEDITING, do_wake, 0, 0, CMD_NOARG},
+	{"want", "want", POS_RESTING, do_not_here, 0,0 , CMD_NOARG},
 	{"wear", "wea", POS_RESTING, do_wear, 0, 0, CMD_ONEARG},
 	{"weather", "weather", POS_RESTING, do_weather, 0, 0, CMD_NOARG},
 	{"who", "wh", POS_DEAD, do_who, 0, 0, CMD_NOARG},
@@ -513,14 +513,9 @@ void command_interpreter(struct char_data *ch, char *argument)
 	char arg[MAX_INPUT_LENGTH];
 
 	char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
-	struct char_data *victim;
 	struct obj_data *object;
-	int id_player = 0;
-	int door;
 	int grupo;
-	float mob = 0;
-	float obj = 0;
-    int count_obj = 0;
+        int count_obj = 0;
     	
     /* verifica grupo e inventario */
 	if (GROUP(ch) != NULL)
@@ -706,7 +701,7 @@ ACMD(do_alias)
 			send_to_char(ch, "\tWAtalhos definidos:\r\n");
 			while (a != NULL)
 			{
-				send_to_char(ch, "\tc%-15s\tn %s\t+n\r\n", a->alias, a->replacement);
+				send_to_char(ch, "\tc%-15s\tn %s\tn\r\n", a->alias, a->replacement);
 				a = a->next;
 			}
 		}

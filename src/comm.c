@@ -95,6 +95,7 @@
 
 extern time_t motdmod;
 extern time_t newsmod;
+extern void free_armweap();
 
 /* locally defined globals, used externally */
 struct descriptor_data *descriptor_list = NULL;	/* master desc list */
@@ -397,6 +398,7 @@ int main(int argc, char **argv)
 		free_recent_players();	/* act.informative.c */
 		free_list(world_events);	/* free up our global lists */
 		free_list(global_lists);
+		free_armweap();
 	}
 
 	if (last_act_message)

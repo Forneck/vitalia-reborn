@@ -21,6 +21,8 @@
 
 SPECIAL(questmaster); 
 SPECIAL(shop_keeper);
+SPECIAL(armorer);
+SPECIAL(blacksmith);
 
 /* local (file scope only) functions */
 static void ASSIGNROOM(room_vnum room, SPECIAL(fname));
@@ -142,6 +144,10 @@ void assign_mobiles(void)
   ASSIGNMOB(5404, receptionist);
  // ASSIGNMOB(27713, receptionist);
   //ASSIGNMOB(27730, receptionist);
+  
+  
+  ASSIGNMOB(1270, armorer);
+  ASSIGNMOB(1271, blacksmith);
 }
 
 /* assign special procedures to objects */
