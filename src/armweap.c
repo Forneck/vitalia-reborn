@@ -166,7 +166,7 @@ const signed int stat_limits [NUM_APPLIES][2] =
        {0,0},    // APPLY_LEVEL (Reserved)
        {-10,10}, // APPLY_AGE
        {-99,99}, // APPLY_CHAR_WEIGHT
-       {-1,1},   // APPLY_CHAR_HEIGHT
+       {-99,99}, // APPLY_CHAR_HEIGHT
        {0,100},  // APPLY_MANA
        {0,100},  // APPLY_HIT
        {0,100},  // APPLY_MOVE
@@ -185,7 +185,7 @@ const signed int stat_limits [NUM_APPLIES][2] =
 /* index (0-2)... 0=HITROLL_MODIFIER, 1=NUMBER_DAMAGE, 2=SIZE_DAMAGE */
 const short weapon_limits [3][2]  = {{0, 10}, {0, 10}, {0, 20}};
 
-const int damage_price = 800000;
+const int damage_price = 1000000;
 /* ----------------------------------------------------------------------- */
 
 /* ----------------------------------------------------------------------- */
@@ -264,11 +264,11 @@ const int attack_price [NUM_ATTACK_TYPES] =
 
 /* ----------------------------------------------------------------------- */
 const char weapon_affname [3][20] = {
-           "HITROLL_MODIFIER", 
-           "NUMBER_DAMAGE",  
-           "SIZE_DAMAGE"};
-const char name_mob_mode [2][20] = {"Armorer", "Blacksmith"};
-const char name_obj_mode [2][20] = {"armor", "weapon"};
+           "MODIFICADOR_BONUS", 
+           "QUANTIDADE_DADOS",  
+           "TAMANHO_DADOS"};
+const char name_mob_mode [2][20] = {"Arsenal", "Forja"};
+const char name_obj_mode [2][20] = {"armadura", "arma"};
 
 struct armory_olcs {
    char *name;
@@ -306,10 +306,10 @@ void list_stat (struct char_data *ch)
  char buf [2048] = "";
  char ind [4][10] = {"\r\n", "  *  ", "\r\n", "\r\n"};
 
- sprintf(buf, "There is the list of availables stats:\r\n"
-              "(choose one or more with: want <name> <value>)\r\n\r\n"
-              "@YName            Price   Limits         "
-              "Name            Price   Limits.@n\r\n");      
+ sprintf(buf, "Os seguintes stats estão disponiveis:\r\n"
+              "(escolha um com: want <nome> <valor>)\r\n\r\n"
+              "@YNome            Preço   Limites        "
+              "Nome            Preço   Limites.@n\r\n");      
  parse_at(buf);
  send_to_char(ch, "%s", buf);
 
@@ -333,9 +333,9 @@ void list_wear (struct char_data *ch)
  char buf [2048] = "";
  char ind [4][10] = {"\r\n", "   *   ", "\r\n", "\r\n"};
 
- sprintf (buf, "What kind of body armor do you want?\r\n"
-               "(choose a kind with: want wear <name>)\r\n\r\n"
-               "@YName            Price      Name            Price.@n\r\n");
+ sprintf (buf, "Que tipo de armadura você quer?\r\n"
+               "(escolha um com: want wear <nome>)\r\n\r\n"
+               "@YNome            Preço      Nome            Preço.@n\r\n");
  parse_at(buf);
  send_to_char (ch, "%s", buf);
 
@@ -358,9 +358,9 @@ void list_attack (struct char_data *ch)
  char buf [2048] = "";
  char ind [4][10] = {"\r\n", "   *   ", "\r\n", "\r\n"};
 
- sprintf (buf, "What kind of weapon do you want?\r\n"
-               "(choose a kind with: want attack <name>)\r\n\r\n"
-               "@YAttack name      Price       Attack name      Price.@n\r\n");
+ sprintf (buf, "Que tipo de arma você quer?\r\n"
+               "(escolha com: want attack <nome>)\r\n\r\n"
+               "@YAtaque      Preço       Ataque      Preço.@n\r\n");
  parse_at(buf);
  send_to_char (ch, "%s", buf);
 
@@ -381,34 +381,33 @@ void list_help (struct char_data *ch, int mode)
 {
   char buf [2048] = "";
 
-  sprintf (buf, "@RCommands are@5:@n\r\n"
-                "@YList stat   @m- @cShow you the list of add on.\r\n"
+  sprintf (buf, "@ROs comandos disponiveis são@5:@n\r\n"
+                "@YList stat   @m- @cMostra a lista de adicionais.\r\n"
                 "%s"
-                "@YWant        @m- @cac <value>.\r\n"
-                "@Y            @m- @clong <desc>.  (that's the description you see\r\n"
-                "                             @cif your %s is lying on the floor)\r\n"
-                "@Y            @m- @cname <name>.  (that's the words to handle your %s)\r\n"
-                "@Y            @m- @cshort <desc>. (that's the normal description)\r\n"
-                "@Y            @m- @cstat <value>. (see: 'list stat')\r\n"
+                "@YWant        @m- @cac <valor>.\r\n"
+                "@Y            @m- @clonga <desc>.  (A descrição quando a sua %s está no chão)\r\n"
+                "@Y            @m- @cnome <nome>.  (as palavras para usar nos comandos %s)\r\n"
+                "@Y            @m- @ccurta <desc>. (É a descrição normal)\r\n"
+                "@Y            @m- @cstat <valor>. (veja: 'list stat')\r\n"
                 "@Y%s" 
-                "@YBuy         @m- @cbuy the %s you just setted up.\r\n"
-                "@YReset       @m- @cWill reset the %s to the default one.\r\n"
-                "@RNote: @m- @cthere is a limits of @R%d @cstats per item.\r\n" 
-                "      @m- @cYou get a pay back of half the value for a negative stat.\n\r" 
-                "      @m- @cThere is a minimum fee per %s that is: the price of %s",
+                "@YBuy         @m- @cCompra a %s que você pediu.\r\n"
+                "@YReset       @m- @cLimpa as modificações no pedido da sua %s.\r\n"
+                "@RNotas: @m- @cNo maximo pode ter @R%d @cstats por item.\r\n" 
+                "       @m- @cTem desconto se o modificador \"piorar\" o item.\n\r" 
+                "       @m- @cExiste um valor minimo para cada %s que é o preço base d%s",
 
                 (mode == ARMORER_MODE) ? "@YList wear   @m- @cGet a look to my armorer's skills.\r\n"
                                        : "@YList attack @m- @cGet a look to my blacksmith's skills.\r\n",
                 name_obj_mode [mode], name_obj_mode [mode],
-                (mode == ARMORER_MODE) ? "            @m- @cwear <item_wear>.\r\n"
+                (mode == ARMORER_MODE) ? "            @m- @cwear <slot>.\r\n"
                                        :
-                                         "            @m- @cSIZE_DAMAGE <number>.\r\n"
-					 "            @m- @cNUMBER_DAMAGE <number>.\r\n",
+                                         "            @m- @cQUANTIDADE_DADOS <numero>.\r\n"
+					 "            @m- @cTAMANHO_DADOS <numero>.\r\n",
                 name_obj_mode [mode], name_obj_mode [mode],
                 MAX_OBJ_AFFECT, name_obj_mode [mode],
-                (mode == ARMORER_MODE) ? "item wear.\r\n" : 
-                "attack type.\r\n      @m- @cADD TO THE BASIC PRICE:"
-                "(NUMBER_DAMAGE * SIZE_DAMAGE * 800k)@n\r\n");
+                (mode == ARMORER_MODE) ? "a posição.\r\n" : 
+                "o tipo de ataque.\r\n       @m- @cAUMENTA O PREÇO BASE:"
+                "(QUANTIDADE_DADOS * TAMANHO_DADOS * 1M)@n\r\n");
   parse_at(buf);
   send_to_char (ch, "%s", buf);
   sprintf(buf, "@c-----------------------------------------------------------------@n\r\n");
@@ -429,8 +428,8 @@ void do_want (struct char_data *ch, char *argument, struct armory_olcs *d,
   for (i=0; i<NUM_APPLIES; i++) {
     if (allow_stat[i] && isname(buf, apply_types[i])) {
       if ((number < stat_limits[i][0]) || (number > stat_limits[i][1])) {
-        sprintf (buf, "@gYour value is out of range. the limits for @m%s"
-                      " @gis @c[@R%d@g, @R%d@c].@n\r\n", 
+        sprintf (buf, "@gO seu valor está fora dos limites para @m%s"
+                      " @gque são @c[@R%d@g, @R%d@c].@n\r\n", 
                  apply_types[i], stat_limits[i][0], stat_limits[i][1]);
         parse_at(buf);
         send_to_char (ch, "%s", buf);
@@ -446,11 +445,11 @@ void do_want (struct char_data *ch, char *argument, struct armory_olcs *d,
                      found = i2; 
           if (number != 0) {
             OLC_OBJ(d)->affected[found].location = i;
-            sprintf (buf, "@gYou set @m%s @gto @m: @R%d.\r\n@n",
+            sprintf (buf, "@gVocê quer @m%s @gpara @m: @R%d.\r\n@n",
                     apply_types[i], number);     
           } else {
               OLC_OBJ(d)->affected[found].location = 0;
-              sprintf (buf, "@gYou unset @m%s.@n\r\n", apply_types[i]);
+              sprintf (buf, "@gVocê limpou @m%s.@n\r\n", apply_types[i]);
             } 
           OLC_OBJ(d)->affected[found].modifier = number;
           parse_at(buf);
@@ -460,32 +459,32 @@ void do_want (struct char_data *ch, char *argument, struct armory_olcs *d,
     }
   }
 
-  if (isname(buf, "name")) {
+  if (isname(buf, "nome")) {
     if (OLC_OBJ(d)->name)
       free (OLC_OBJ(d)->name);
     val_desc (argument, false, MAX_OBJ_NAME);
     OLC_OBJ(d)->name = strdup(argument);
-    sprintf (buf, "@gYou set @mNAME@g to @m: @R%s@n\r\n", argument);
+    sprintf (buf, "@gVocê quer o @mNOME@g de @m: @R%s@n\r\n", argument);
     parse_at(buf);
     send_to_char (ch, "%s", buf);
     return;
   }
-  if (isname(buf, "long description")) {
+  if (isname(buf, "longa")) {
     if (OLC_OBJ(d)->description)
       free (OLC_OBJ(d)->description);
     val_desc(argument, true, MAX_OBJ_DESC);
     OLC_OBJ(d)->description = strdup(argument);
-    sprintf (buf, "@mYou set @gLONG DESCRIPTION@m to @g: @R%s@n\r\n", argument);
+    sprintf (buf, "@mVocê quer a descrição @gLONGA@m de @g: @R%s@n\r\n", argument);
     parse_at(buf);
     send_to_char (ch, "%s", buf); 
     return;
   }
-  if (isname(buf, "short description")) {
+  if (isname(buf, "curta")) {
     if (OLC_OBJ(d)->short_description)
       free (OLC_OBJ(d)->short_description);
     val_desc(argument, true, MAX_OBJ_DESC);
     OLC_OBJ(d)->short_description = strdup (argument);
-    sprintf (buf, "@mYou set @gSHORT DESCRIPTION@m to @g: @R%s@n\r\n", 
+    sprintf (buf, "@mVocê quer a descrição @gCURTA@m de @g: @R%s@n\r\n", 
              argument);
     parse_at(buf);
     send_to_char (ch, "%s", buf);
@@ -495,8 +494,8 @@ void do_want (struct char_data *ch, char *argument, struct armory_olcs *d,
     if (isname(buf, "ac")) {
       if ( (number < stat_limits[APPLY_AC][0]) ||
            (number > stat_limits[APPLY_AC][1]) ) {
-        sprintf (buf, "@gYour value is out of range. the limits for @m%s"
-                      " @gis @c[@R%d@g, @R%d@c].@n\r\n", 
+        sprintf (buf, "@gO seu valor está fora dos limites para @m%s"
+                      " @gque são @c[@R%d@g, @R%d@c].@n\r\n", 
                  apply_types[APPLY_AC], stat_limits[APPLY_AC][0],
                  stat_limits[APPLY_AC][1]);
         parse_at(buf);
@@ -504,7 +503,7 @@ void do_want (struct char_data *ch, char *argument, struct armory_olcs *d,
         return;
       }
       GET_OBJ_VAL(OLC_OBJ(d), 0) = number;
-      sprintf (buf, "@gYou set @mAC@g to @m: @R%d@n\r\n", number);
+      sprintf (buf, "@gVoce quer a @mAC@g de @m: @R%d@n\r\n", number);
       parse_at(buf);
       send_to_char (ch, "%s", buf);
       return;
@@ -513,7 +512,7 @@ void do_want (struct char_data *ch, char *argument, struct armory_olcs *d,
       for (i=0; i<NUM_ITEM_WEARS; i++)
         if (allow_wear [i] && isname(argument, wear_bits[i])) {
           GET_OBJ_WEAR(OLC_OBJ(d))[0] = i;
-          sprintf (buf, "@gYou set @mWEAR_ITEM@g to @m: @R%s@n\r\n", 
+          sprintf (buf, "@gVocê quer a @mPOSIÇÃO@g de @m: @R%s@n\r\n", 
                    wear_bits[i]);
           parse_at(buf);
           send_to_char (ch, "%s", buf);
@@ -526,7 +525,7 @@ void do_want (struct char_data *ch, char *argument, struct armory_olcs *d,
            if (allow_attack[i] && isname(argument,
                attack_hit_text[i].singular)) {
              GET_OBJ_VAL(OLC_OBJ(d), 3) = i;
-             sprintf (buf, "@gYou set @mATTACK TYPE@g to @m: @R%s@n\r\n",
+             sprintf (buf, "@gVocê quer o @mTIPO De ATAQUE@g @m: @R%s@n\r\n",
                       attack_hit_text[i].singular);
              parse_at(buf);
              send_to_char (ch, "%s", buf);
@@ -536,8 +535,8 @@ void do_want (struct char_data *ch, char *argument, struct armory_olcs *d,
         if (isname(buf, weapon_affname [i])) {
            if ((number < weapon_limits [i][0]) || 
                (number > weapon_limits [i][1])) {
-             sprintf (buf, "@gYour value is out of range. the limits for "
-                           "@m%s @gis @c[@R%d@g, @R%d@c].@n\r\n", 
+             sprintf (buf, "@gO seu valor está fora dos limites para "
+                           "@m%s @gque são @c[@R%d@g, @R%d@c].@n\r\n", 
                             weapon_affname [i], weapon_limits[i][0],
                             weapon_limits[i][1]);
              parse_at(buf);
@@ -545,7 +544,7 @@ void do_want (struct char_data *ch, char *argument, struct armory_olcs *d,
              return;     
            } else {
                GET_OBJ_VAL(OLC_OBJ(d), i) = number;
-               sprintf (buf, "@gYou set @m%s @gto @m: @R%d@n\r\n",
+               sprintf (buf, "@gVocê quer @m%s @gde @m: @R%d@n\r\n",
                         weapon_affname [i], number);
                parse_at(buf);
                send_to_char (ch, "%s", buf);
@@ -553,7 +552,7 @@ void do_want (struct char_data *ch, char *argument, struct armory_olcs *d,
              }         
         }
     }
- sprintf (buf, "@mSorry, @gbut i don't understand what you want.@n\r\n");
+ sprintf (buf, "@mDesculpe, @gmas eu não entendi oque você quer.@n\r\n");
  parse_at(buf);
  send_to_char (ch, "%s", buf);
 }
@@ -570,9 +569,9 @@ void reset_armweap (struct char_data *ch, struct armory_olcs *q, int aff,
    free(OLC_OBJ(q)->description);
  if (OLC_OBJ(q)->short_description)
    free(OLC_OBJ(q)->short_description); 
- OLC_OBJ(q)->name = strdup("Undefined object");
- OLC_OBJ(q)->description = strdup ("An unfinished object is lying here.");
- OLC_OBJ(q)->short_description = strdup("An unfinished object");
+ OLC_OBJ(q)->name = strdup("indefinido objeto");
+ OLC_OBJ(q)->description = strdup ("Um objeto indefinido foi jogado aqui.");
+ OLC_OBJ(q)->short_description = strdup("Um objeto indefinido");
  GET_OBJ_WEAR(OLC_OBJ(q))[0] = 1;
  if (mode == ARMORER_MODE) 
    GET_OBJ_TYPE(OLC_OBJ(q)) = ITEM_ARMOR;
@@ -580,7 +579,7 @@ void reset_armweap (struct char_data *ch, struct armory_olcs *q, int aff,
    GET_OBJ_TYPE(OLC_OBJ(q)) = ITEM_WEAPON; 
  OLC_VAL(q) = 0;
  if (aff) {
-   sprintf (buf, "@gStat for %s has been reset.@n\r\n", name_obj_mode [mode]);
+   sprintf (buf, "@gOs dados do pedido para a %s foram limpos.@n\r\n", name_obj_mode [mode]);
    parse_at(buf);
    send_to_char (ch, "%s", buf);
  }
@@ -639,7 +638,7 @@ void armweap_buy (struct char_data *ch, struct armory_olcs *q, int mode)
 
  cost = armory_cost (q, mode);
  if (GET_GOLD(ch) < cost) {
-   sprintf (buf, "@gSorry, you don't have enough coins!@n\r\n");
+   sprintf (buf, "@gDesculpe, mas você não pode pagar!@n\r\n");
    parse_at(buf);
    send_to_char (ch, "%s", buf);
    return;
@@ -650,10 +649,10 @@ void armweap_buy (struct char_data *ch, struct armory_olcs *q, int mode)
    while ( (zones_system[++x] != NOWHERE) &&
            ((OLC_ZNUM(q) = real_zone_by_thing(zones_system[x] * 100)) == NOWHERE));
    if (zones_system[x] == NOWHERE) {
-     sprintf (buf, "Sorry, there's no zone to create armor. notify an admin.\r\n");
+     sprintf (buf, "Desculpe, mas estou cheio de pedidos por enquanto!\r\n");
      send_to_char (ch, "%s", buf);
 
-     log1("SYSERR: There's no zone allowed to created new objs.");
+     log1("SYSERR: There's no zone allowed to created new custom made objs.");
      return;
    }
    for (i=0; i<100; i++)
@@ -678,14 +677,14 @@ void armweap_buy (struct char_data *ch, struct armory_olcs *q, int mode)
  obj = read_object (real_object(OLC_NUM(q)), REAL);
 
  if (!obj) {
-   send_to_char (ch, "Object creation failed!\r\n");
+   send_to_char (ch, "Alguma coisa deu errado!\r\n");
    return;
  }
 
  obj_to_char (obj, ch);
  GET_GOLD(ch) -= cost;
 
- sprintf (buf, "@gYou bought @m%s @gfor @R%lu @mcoins!@n\r\n", 
+ sprintf (buf, "@gVocê comprou @m%s @gpor @R%lu @mmoedas!@n\r\n", 
           obj->short_description, cost);
  parse_at(buf);
  send_to_char (ch, "%s", buf); 
@@ -711,7 +710,7 @@ int main_armweap (struct char_data *ch, int cmd, char *argument, int mode)
  if (CMD_IS("want") || CMD_IS("reset") || CMD_IS("list") ||
      CMD_IS("buy")) {
    if (IS_NPC(ch)) {
-     send_to_char (ch, "Little pet, Go Away!\r\n");
+     send_to_char (ch, "Pestinha! Vá embora!\r\n");
      return 1;
    }
    for (q = (mode == ARMORER_MODE) ? armorer_list : blacksmith_list; q;
@@ -746,7 +745,7 @@ int main_armweap (struct char_data *ch, int cmd, char *argument, int mode)
    return 1;
  } 
  if (CMD_IS("list")) {
-   sprintf (buf, "@gWelcome to the %s of @w%s@g.@n\r\n", 
+   sprintf (buf, "@gBem-Vind%s a %s para  @w%s@g.@n\r\n", OA(ch),
             name_mob_mode [mode], pc_class_types[(int)GET_CLASS(ch)]);
    parse_at(buf);
    send_to_char (ch, "%s", buf);
@@ -771,23 +770,23 @@ int main_armweap (struct char_data *ch, int cmd, char *argument, int mode)
      list_help (ch, mode);
      return 1;
    }
-   sprintf (buf, "@RNote@O: 'list help' to get a list of help.\r\n\r\n"
-                     "There is your current order@m:@n\r\n"
+   sprintf (buf, "@RNota@O: 'list help' para ajuda no pedido.\r\n\r\n"
+                     "Seu pedido atual é@m:@n\r\n"
                  "@c-----------------------------------------------------------------@n\r\n"
-                 "@YName list@m          :@c %s@n\r\n" 
-                 "@YShort description@m  :@c %s@n\r\n"
-                 "@YLong description@m   :@c %s@n\r\n", 
+                 "@YLista de nomes@m     :@c %s@n\r\n" 
+                 "@YDescrição Curta@m    :@c %s@n\r\n"
+                 "@YDescrição Longa@m    :@c %s@n\r\n", 
             OLC_OBJ(q)->name, OLC_OBJ(q)->short_description,
             OLC_OBJ(q)->description);
    parse_at(buf);
    send_to_char (ch, "%s", buf);
    if (mode == ARMORER_MODE) 
-     sprintf (buf, "@YWear@m               : @c%s\r\n"
+     sprintf (buf, "@YPosição@m            : @c%s\r\n"
                    "@YAC@m                 : @c%d@n\r\n",
               wear_bits[GET_OBJ_WEAR(OLC_OBJ(q))[0]], 
               GET_OBJ_VAL(OLC_OBJ(q), 0));
    else 
-     sprintf (buf, "@YAttack type        @m: @c%s\r\n" 
+     sprintf (buf, "@YTipo de Ataque@m     : @c%s\r\n" 
                    "@Y%-19s@m: @c%d\r\n" 
                    "@Y%-19s@m: @c%d\r\n"
                    "@Y%-19s@m: @c%d@n\r\n",
@@ -800,14 +799,14 @@ int main_armweap (struct char_data *ch, int cmd, char *argument, int mode)
 
    for (i=0; i<MAX_OBJ_AFFECT; i++) 
      if (OLC_OBJ(q)->affected[i].location) {
-       sprintf (buf, "@YModifier           @m: @c%s @mby @c%d@n\r\n", 
+       sprintf (buf, "@YAdicional          @m: @c%s @mem @c%d@n\r\n", 
                       apply_types [(int)OLC_OBJ(q)->affected[i].location],
                       OLC_OBJ(q)->affected[i].modifier);
        parse_at(buf);
        send_to_char (ch, "%s", buf);
      }  
-   sprintf (buf, "\r\n@gThis nice %s should cost you a little @m: @R%lu"
-                 " @gcoins.@n\r\n", 
+   sprintf (buf, "\r\n@gEsta linda %s pode ser sua por apenas @m: @R%lu"
+                 " @gmoedas.@n\r\n", 
             name_obj_mode [mode], armory_cost (q, mode));
    parse_at(buf);
    send_to_char (ch, "%s", buf);
