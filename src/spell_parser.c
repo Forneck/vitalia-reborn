@@ -31,7 +31,8 @@ char cast_arg2[MAX_INPUT_LENGTH];
 
 /* Local (File Scope) Function Prototypes */
 static void say_spell(struct char_data *ch, int spellnum, struct char_data *tch, struct obj_data *tobj);
-
+static void say_chanson(struct char_data *ch, int spellnum, struct char_data *tch, struct obj_data *tobj);
+	
 /* Local (File Scope) Variables */
 struct syllable {
   const char *org;
@@ -74,6 +75,7 @@ static struct syllable syls[] = {
   {"coat","gaitou"},
   {"rock","iwa"},
   {"steel","hagane"},
+  {"ball", "tama"},
   {"a", "i"}, {"b", "v"}, {"c", "q"}, {"d", "m"}, {"e", "o"}, {"f", "y"}, {"g", "t"},
   {"h", "p"}, {"i", "u"}, {"j", "y"}, {"k", "t"}, {"l", "r"}, {"m", "w"}, {"n", "b"},
   {"o", "a"}, {"p", "s"}, {"q", "d"}, {"r", "f"}, {"s", "g"}, {"t", "h"}, {"u", "e"},
@@ -151,7 +153,7 @@ static void say_spell(struct char_data *ch, int spellnum, struct char_data *tch,
 
   if (tch != NULL && IN_ROOM(tch) == IN_ROOM(ch)) {
     if (tch == ch)
-      format = "$n fecha os olhos $s e expressa as palavras, '%s'.";
+      format = "$n fecha seus olhos e expressa as palavras, '%s'.";
     else
       format = "$n olha para $N e expressa as palavras, '%s'.";
   } else if (tobj != NULL &&
@@ -175,6 +177,35 @@ static void say_spell(struct char_data *ch, int spellnum, struct char_data *tch,
   if (tch != NULL && tch != ch && IN_ROOM(tch) == IN_ROOM(ch)) {
     snprintf(buf1, sizeof(buf1), "$n olha para você e expressa as palavras, '%s'.",
 	    GET_CLASS(ch) == GET_CLASS(tch) ? skill_name(spellnum) : buf);
+    act(buf1, FALSE, ch, NULL, tch, TO_VICT);
+  }
+}
+
+static void say_chanson(struct char_data *ch, int spellnum, struct char_data *tch, struct obj_data *tobj)
+{
+  char buf[256], buf1[256]; 
+  const char *format;
+
+  struct char_data *i;
+
+  *buf = '\0';
+
+  if (tch != NULL && IN_ROOM(tch) == IN_ROOM(ch)) {
+    if (tch == ch)                                                                      format = "$n fecha seus olhos e começa a cantar.";
+    else
+      format = "$n olha para $N e começa a cantar.";
+  } else if (tobj != NULL &&
+             ((IN_ROOM(tobj) == IN_ROOM(ch)) || (tobj->carried_by == ch)))            format = "$n olha para $p e começa a cantar.";
+  else                                                                                format = "$n começa a cantar";
+
+                                                                                    snprintf(buf, sizeof(buf), format, skill_name(spellnum));
+
+  for (i = world[IN_ROOM(ch)].people; i; i = i->next_in_room) {
+    if (i == ch || i == tch || !i->desc || !AWAKE(i))                                   continue;
+    perform_act(buf, ch, tobj, tch, i);
+  }                                                                                  
+  if (tch != NULL && tch != ch && IN_ROOM(tch) == IN_ROOM(ch)) { 
+    snprintf(buf1, sizeof(buf1), "$n olha para você e começa a cantar.");
     act(buf1, FALSE, ch, NULL, tch, TO_VICT);
   }
 }
@@ -545,6 +576,8 @@ int cast_spell(struct char_data *ch, struct char_data *tch,
 
   if (spell->type == SPELL)
     say_spell(ch, spellnum, tch, tobj);
+  else if (spell->type == CHANSON)
+    say_chanson(ch,spellnum, tch, tobj);
 
   return (call_magic(ch, tch, tobj, spellnum, GET_LEVEL(ch), CAST_SPELL));
 }
@@ -565,7 +598,7 @@ ACMD(do_cast)
    return;
 
  // for spell check that is is enclosed in ''
- if (subcmd == SCMD_SPELL) {
+ if ((subcmd == SCMD_SPELL) || (subcmd == SCMD_CHANSON)) {
    s = strtok(argument, "'");
    if (s == NULL) {
      send_to_char (ch, "O que e aonde?\r\n");
@@ -582,7 +615,9 @@ ACMD(do_cast)
 
  if (subcmd == SCMD_SPELL)
    spell = get_spell_by_name(s, SPELL); 
- else
+ else if (subcmd == SCMD_CHANSON)
+   spell = get_spell_by_name(s, CHANSON);
+ else	 
    spell = get_spell_by_vnum(subcmd);
 
  if (!spell || (spell->status != available)) {
@@ -725,7 +760,8 @@ ACMD(do_cast)
    else
      WAIT_STATE(ch, PULSE_VIOLENCE);
 
-   if (spell->type == SPELL)
+   if ((spell->type == SPELL) || (spell->type == CHANSON))
      GET_MANA(ch) = MAX(0, MIN(GET_MAX_MANA(ch), GET_MANA(ch) - mana));
+
  }
 }

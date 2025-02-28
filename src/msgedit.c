@@ -322,7 +322,7 @@ ACMD(do_msgedit)
   for (d = descriptor_list; d; d = d->next)
     if (STATE(d) == CON_MSGEDIT) {
       if (OLC_MSG_LIST(d) && OLC_NUM(d) == num) {
-        send_to_char(ch, "Someone is already editing that message.\r\n");
+        send_to_char(ch, "Alguem já está editandonesta mensagem.\r\n");
         return;
       }
     }
@@ -346,7 +346,7 @@ ACMD(do_msgedit)
   msgedit_main_menu(ch->desc);
   STATE(d) = CON_MSGEDIT;
   
-  act("$n starts using OLC.", TRUE, d->character, 0, 0, TO_ROOM);
+  act("$n começa a alterar as regras deste mundo.", TRUE, d->character, 0, 0, TO_ROOM);
   SET_BIT_AR(PLR_FLAGS(ch), PLR_WRITING);
 
   mudlog(CMP, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE, "OLC: %s starts editing message %d",

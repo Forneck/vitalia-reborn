@@ -154,7 +154,6 @@
 #define MAX_SPELLS		    160
 
 /* PLAYER CHANSONS - Numbered from MAX_SPELLS+1 to MAX_CHANSON */
-#define CHANSON_HEAD		    161 /* First chanson, just for ctrl	 */
 #define CHANSON_ARDOR		    161 /* -- AC - JUNE, 2003		 */
 #define CHANSON_OFUSCAR		    162 /* -- AC - JUNE, 2003		 */
 #define CHANSON_NINAR		    163 /* -- AC - JUNE, 2003		 */
@@ -218,7 +217,7 @@
  * intended use is for spells and skills associated with objects (such as
  * SPELL_IDENTIFY used with scrolls of identify) or non-players (such as NPC
  * only spells). */
- #define SPELL_SCROLL_IDENTIFY		    301
+#define SPELL_SCROLL_IDENTIFY       301
 #define SPELL_FIRE_BREATH	    302
 #define SPELL_GAS_BREATH	    303
 #define SPELL_FROST_BREATH	    304
@@ -297,7 +296,7 @@
 #define TAR_OBJ_INV     (1 << 7)
 #define TAR_OBJ_ROOM    (1 << 8)
 #define TAR_OBJ_WORLD   (1 << 9)
-#define TAR_OBJ_EQUIP	  (1 << 10)
+#define TAR_OBJ_EQUIP	(1 << 10)
 #define TAR_GROUP       (1 << 11)
 #define TAR_GROUP_VICT  (1 << 12)
 

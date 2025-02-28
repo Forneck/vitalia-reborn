@@ -1316,7 +1316,7 @@ ACMD(do_time)
 	   "; break; case 2: suf = " nd "; break; case 3: suf = " rd "; break; } } 
 	 */
 	send_to_char(ch, " O %d%s dia do %s (%d%s mes), Ano %d. \r\n ",
-				 day, suf, month_name[time_info.month],time_info.month, suf, time_info.year);
+				 day, suf, month_name[time_info.month],time_info.month+1, suf, time_info.year);
 }
 
 ACMD(do_weather) {
