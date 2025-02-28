@@ -242,17 +242,18 @@ int call_magic(struct char_data *caster, struct char_data *cvict,
   if (!cast_mtrigger(caster, cvict, spellnum))
     return 0;
 
-  if (ROOM_FLAGGED(IN_ROOM(caster), ROOM_NOMAGIC)) {
-    send_to_char(caster, "A sua magia enfraquece e morre.\r\n");
-    act("A magia de $n enfraquece e morre.", FALSE, caster, 0, 0, TO_ROOM);
-    return (0);
-  }
-
-  spell = get_spell_by_vnum(spellnum); 
-  
-  if (!spell) {
+  spell = get_spell_by_vnum(spellnum);
+                                                                                          if (!spell) {
     log1("SYSERR: spell not found vnum %d passed to call_magic.", spellnum);
+    send_to_char(caster, "Algo deu errado  e você falha.");
     return 0;
+  }
+ 
+ if (GET_LEVEL(caster) < LVL_GRGOD) {
+  if (ROOM_FLAGGED(IN_ROOM(caster), ROOM_NOMAGIC)) {
+    send_to_char(caster, "A sua magia congela repentinamente e morre.\r\n");
+    act("A magia de $n congela repentinamente e morre.", FALSE, caster, 0, 0, TO_ROOM);
+    return (0);
   }
 
   if (spell->status == unavailable) {
@@ -269,7 +270,7 @@ int call_magic(struct char_data *caster, struct char_data *cvict,
 
   if (cvict) {
     if (MOB_FLAGGED(cvict, MOB_NOKILL)) {
-      send_to_char(caster, "Este mob está protegid%s\r\n",OA(cvict));
+      send_to_char(caster, "%s está protegid%s por forças divinas, que te impedem de atacar %s.\r\n",ELEAUpper(cvict), OA(cvict), ELEA(cvict));
       return (0);
     }
 
@@ -277,12 +278,12 @@ int call_magic(struct char_data *caster, struct char_data *cvict,
       if (IS_SET_AR(AFF_FLAGS(cvict), AFF_PROTECT) && (af->location == spellnum)) {
     
         if (af->modifier >= rand_number(0, 99)) {
-          send_to_char(caster, "%s está protegid%s e você falhou.\r\n", GET_NAME(cvict),OA(cvict));
+          send_to_char(caster, "%s está protegid%s e você falhou.\r\n", ELEAUpper(cvict),OA(cvict));
           return 0; 
         }
       }
-  }
-
+   }
+  } /* fim da verificação por grgod */
   /* determine the type of saving throw */
   switch (casttype) {
   case CAST_STAFF:
@@ -404,6 +405,12 @@ void mag_objectmagic(struct char_data *ch, struct obj_data *obj,
     } else {
       GET_OBJ_VAL(obj, 2)--;
       WAIT_STATE(ch, PULSE_VIOLENCE);
+
+      if (GET_LEVEL(ch) < GET_OBJ_LEVEL(obj)) {
+	send_to_char(ch, "$p brilha mas nada acontece.");
+        act("Aparentemente, nada aconteceu.", FALSE, ch, obj, 0, TO_ROOM);
+      }
+      else {
       /* Level to cast spell at. */
       k = GET_OBJ_VAL(obj, 0) ? GET_OBJ_VAL(obj, 0) : DEFAULT_STAFF_LVL;
 
@@ -421,6 +428,7 @@ void mag_objectmagic(struct char_data *ch, struct obj_data *obj,
 	    call_magic(ch, tch, NULL, GET_OBJ_VAL(obj, 3), k, CAST_STAFF);
 	}
       }
+     }
     }
     break;
   case ITEM_WAND:
@@ -436,11 +444,11 @@ void mag_objectmagic(struct char_data *ch, struct obj_data *obj,
 	  act("$n aponta $p para $N.", TRUE, ch, obj, tch, TO_ROOM);
       }
     } else if (tobj != NULL) {
-      act("Você aponta $p para $P.", FALSE, ch, obj, tobj, TO_CHAR);
+      act("Você encosta $p em $P.", FALSE, ch, obj, tobj, TO_CHAR);
       if (obj->action_description)
 	act(obj->action_description, FALSE, ch, obj, tobj, TO_ROOM);
       else
-	act("$n aponta $p para $P.", TRUE, ch, obj, tobj, TO_ROOM);
+	act("$n encosta $p em $P.", TRUE, ch, obj, tobj, TO_ROOM);
     } else if (IS_SET(get_spell_mag_flags(GET_OBJ_VAL(obj, 3)), MAG_AREAS | MAG_MASSES)) {
       /* Wands with area spells don't need to be pointed. */
       act("Você aponta $p ao redor.", FALSE, ch, obj, NULL, TO_CHAR);
@@ -457,18 +465,21 @@ void mag_objectmagic(struct char_data *ch, struct obj_data *obj,
     }
     GET_OBJ_VAL(obj, 2)--;
     WAIT_STATE(ch, PULSE_VIOLENCE);
+    if (GET_LEVEL(ch) < GET_OBJ_LEVEL(obj)) {                                                 send_to_char(ch, "$p brilha mas nada acontece.");
+        act("Aparentemente, nada aconteceu.", FALSE, ch, obj, 0, TO_ROOM);                    }
+    else {
     if (GET_OBJ_VAL(obj, 0))
       call_magic(ch, tch, tobj, GET_OBJ_VAL(obj, 3),
 		 GET_OBJ_VAL(obj, 0), CAST_WAND);
     else
       call_magic(ch, tch, tobj, GET_OBJ_VAL(obj, 3),
 		 DEFAULT_WAND_LVL, CAST_WAND);
+   }
     break;
   case ITEM_SCROLL:
     if (*arg) {
       if (!k) {
-	act("Não há nada aqui que possa ser afetado por $p.", FALSE,
-	    ch, obj, NULL, TO_CHAR);
+	act("Não há nada aqui que possa ser afetado por $p.", FALSE, ch, obj, NULL, TO_CHAR);
 	return;
       }
     } else
@@ -481,11 +492,16 @@ void mag_objectmagic(struct char_data *ch, struct obj_data *obj,
       act("$n recita $p.", FALSE, ch, obj, NULL, TO_ROOM);
 
     WAIT_STATE(ch, PULSE_VIOLENCE);
+    if (GET_LEVEL(ch) < GET_OBJ_LEVEL(obj)) {
+	send_to_char(ch, "Estranhamente, nada aconteceu.");
+	act("Aparentemente, nada aconteceu.", FALSE, ch, obj, 0, TO_ROOM); 
+    }
+    else {
     for (i = 1; i <= 3; i++)
       if (call_magic(ch, tch, tobj, GET_OBJ_VAL(obj, i),
 		       GET_OBJ_VAL(obj, 0), CAST_SCROLL) <= 0)
 	break;
-
+    }
     if (obj != NULL)
       extract_obj(obj);
     break;
@@ -502,11 +518,16 @@ void mag_objectmagic(struct char_data *ch, struct obj_data *obj,
       act("$n toma $p.", TRUE, ch, obj, NULL, TO_ROOM);
 
     WAIT_STATE(ch, PULSE_VIOLENCE);
-    for (i = 1; i <= 3; i++)
+    if (GET_LEVEL(ch) < GET_OBJ_LEVEL(obj)) {
+      send_to_char(ch, "Vicê sente um gosto estranhos, e nada acontece...");
+      act("Aparentemente, nada aconteceu.", FALSE, ch, obj, 0, TO_ROOM); 
+    }
+    else {
+     for (i = 1; i <= 3; i++)
       if (call_magic(ch, ch, NULL, GET_OBJ_VAL(obj, i),
 		       GET_OBJ_VAL(obj, 0), CAST_POTION) <= 0)
 	break;
-
+    }
     if (obj != NULL)
       extract_obj(obj);
     break;
@@ -542,7 +563,7 @@ int cast_spell(struct char_data *ch, struct char_data *tch,
       send_to_char(ch, "Você não pode se concentrar enquanto descansa.\r\n");
       break;
     case POS_SITTING:
-      send_to_char(ch, "Você não pode fazer isso sentado!\r\n");
+      send_to_char(ch, "Você não pode fazer isso sentad%s!\r\n",OA(ch));
       break;
     case POS_FIGHTING:
       send_to_char(ch, "Impossível!  Você não pode se concentrar o suficiente!\r\n");
@@ -591,7 +612,7 @@ ACMD(do_cast)
  int i, delay, rts_code = TRUE;
  int effectiveness = 0;
  int number;
- int level, target = 0;
+ int target = 0;
  int mana = 5;
 
  if (IS_NPC(ch))
@@ -622,7 +643,9 @@ ACMD(do_cast)
 
  if (!spell || (spell->status != available)) {
    if (subcmd == SCMD_SPELL)
-     send_to_char(ch, "Forneça o nome da magia!\r\n");
+     send_to_char(ch, "Lançar o quê?!?\r\n");
+   else if (subcmd == SCMD_CHANSON)
+     send_to_char(ch, "Cantar o quê?!?\r\n");
    else
      send_to_char(ch, "%s", HUH);  
    return;
