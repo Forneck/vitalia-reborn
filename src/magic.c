@@ -645,12 +645,14 @@ int mag_summons(int level, struct char_data *ch, struct obj_data *obj, int spell
 		if (mob_num == 0)
 		{
 			log1("SYSERR: Illegal mobile to summon at mag_summons.");
+			send_to_char(ch,"Você não se lembra muito bem como criar tal criatura.\r\n");
 			return MAGIC_FAILED;
 		}
 	}
 	else
 	{
 		log1("SYSERR: No mobile to summon at mag_summons.");
+		send_to_char(ch,"Você não se lembra muito bem como criar tal criatura.\r\n");
 		return MAGIC_FAILED;
 	}
 
@@ -665,10 +667,13 @@ int mag_summons(int level, struct char_data *ch, struct obj_data *obj, int spell
 		if (obj_num == 0)
 		{
 			log1("SYSERR: Illegal object required to summon at mag_summons.");
+			send_to_char(ch,"Você não consegue lembrar qual o componente para criar tal criatura.\r\n");
 			pfail = 102;
 		}
-		else if (!mag_materials(ch, obj_num, NOTHING, NOTHING, TRUE, TRUE))
+		else if (!mag_materials(ch, obj_num, NOTHING, NOTHING, TRUE, TRUE)) {
+			send_to_char(ch,"Você não tem o componente certo para criar tal criatura.\r\n");
 			pfail = 102;
+		}
 	}
 	else
 		pfail = 10;				/* 10% failure, should vary in the future. */
@@ -800,7 +805,7 @@ int mag_unaffects(int level, struct char_data *ch, struct char_data *victim,
 	}
 
 	// complementary messages for the spell HEAL.
-	if ((spellnum == SPELL_HEAL) && (affected_by_spell(victim, SPELL_BLINDNESS)))
+	if (((spellnum == SPELL_HEAL) || ( spellnum = SPELL_AID)) && (affected_by_spell(victim, SPELL_BLINDNESS)))
 	{
 		act("Sua visão retorna!", FALSE, victim, 0, ch, TO_CHAR);
 		act("Os olhos de $n brilham momentaneamente.", TRUE, victim, 0, ch, TO_ROOM);
@@ -834,7 +839,7 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj,
 				   int spellnum, int savetype)
 {
 	int effect = 1;
-
+        
 	if (obj == NULL)
 		return MAGIC_FAILED;
 
@@ -844,21 +849,25 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj,
 		if (!OBJ_FLAGGED(obj, ITEM_BLESS) && (GET_OBJ_WEIGHT(obj) <= 5 * GET_LEVEL(ch)))
 		{
 			SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_BLESS);
-			if (GET_OBJ_TYPE(obj) == ITEM_WEAPON)                                               GET_OBJ_VAL(obj, 2)++; //Easter Egg: Bless oposto de Curse
+			if (GET_OBJ_TYPE(obj) == ITEM_WEAPON)
+			   GET_OBJ_VAL(obj, 2)++; //Easter Egg: Bless oposto de Curse
+                        send_to_char(ch,"Isto brilha por alguns instantes.\r\n"); 
 		}
-		break;
+	break;
 	case SPELL_CURSE:
 		if (!OBJ_FLAGGED(obj, ITEM_NODROP))
 		{
 			SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_NODROP);
 			if (GET_OBJ_TYPE(obj) == ITEM_WEAPON)
 				GET_OBJ_VAL(obj, 2)--;
+			send_to_char(ch,"Isto brilha vermelho por alguns instantes.\r\n");
 		}
 		break;
 	case SPELL_INVISIBLE:
 		if (!OBJ_FLAGGED(obj, ITEM_NOINVIS) && !OBJ_FLAGGED(obj, ITEM_INVISIBLE))
 		{
 			SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_INVISIBLE);
+			send_to_char(ch,"Isto desaparece.\r\n");
 		}
 		break;
 	case SPELL_POISON:
@@ -867,6 +876,7 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj,
 			 (GET_OBJ_TYPE(obj) == ITEM_FOOD)) && !GET_OBJ_VAL(obj, 3))
 		{
 			GET_OBJ_VAL(obj, 3) = 1;
+			send_to_char(ch,"Isto emite uma fumaça escura por alguns instantes.\r\n");
 		}
 		break;
 	case SPELL_REMOVE_CURSE:
@@ -875,6 +885,7 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj,
 			REMOVE_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_NODROP);
 			if (GET_OBJ_TYPE(obj) == ITEM_WEAPON)
 				GET_OBJ_VAL(obj, 2)++;
+			send_to_char(ch,"Isto brilha azul por uns instantes.\r\n");
 		}
 		break;
 	case SPELL_REMOVE_POISON:
@@ -883,6 +894,7 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj,
 			 (GET_OBJ_TYPE(obj) == ITEM_FOOD)) && GET_OBJ_VAL(obj, 3))
 		{
 			GET_OBJ_VAL(obj, 3) = 0;
+			send_to_char(ch,"Isto emite uma fumaça clara por alguns instantes.\r\n");
 		}
 		break;
 	default:
@@ -972,7 +984,7 @@ int mag_rooms(int level, struct char_data *ch, int spellnum)
 		if (ROOM_FLAGGED(rnum, ROOM_DARK))
 			failure = TRUE;
 
-		duration = 5;
+		duration = 10;
 		SET_BIT_AR(ROOM_FLAGS(rnum), ROOM_DARK);
 		break;
 

@@ -787,7 +787,9 @@ do                                                              \
 
 #define PLURAL(num, ws, wp)	(num == 1 ? ws : wp)
 #define ELEA(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "ele":"ela") : "ele")
-#define ARTI(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "o"  :"a"  ) : "o")
+#define ELEAUpper(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "Ele":"Ela") : "Ele")
+#define OAUpper(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "O"  :"A"  ) : "O")
+#define OA(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "o"  :"a"  ) : "o")
 #define SEUSUA(ch) (GET_SEX(ch) ? (GET_SEX(ch)==SEX_MALE ? "seu":"sua") : "seu")
 /* Various macros building up to CAN_SEE */
 
@@ -912,7 +914,6 @@ do                                                              \
 #define WAS_RANGER(ch)          (WAS_PC_CLASS(ch, CLASS_RANGER))
 
 #define IS_FEMALE(ch)  (GET_SEX(ch) == SEX_FEMALE)
-#define OA(ch) (IS_FEMALE(ch) ? "a" : "o")
     
 
 /** Defines if ch is outdoors or not. */
