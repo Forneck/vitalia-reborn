@@ -50,10 +50,10 @@ static const char *quest_cmd[] = {
   "list", "history", "join", "leave", "progress", "status", "\n"};
 
 static const char *quest_mort_usage =
-  "Usage: quest list | history | progress | join <nn> | leave";
+  "Uso: quest list | history | progress | join <nn> | leave";
 
 static const char *quest_imm_usage =
-  "Usage: quest list | history | progress | join <nn> | leave | status <vnum>";
+  "Uso: quest list | history | progress | join <nn> | leave | status <vnum>";
 
 /*--------------------------------------------------------------------------*/
 /* Utility Functions                                                        */
@@ -300,12 +300,12 @@ void generic_complete_quest(struct char_data *ch)
       happy_qp = MAX(happy_qp, 0);
       GET_QUESTPOINTS(ch) += happy_qp;
       send_to_char(ch,
-          "%s\r\nYou have been awarded %d quest points for your service.\r\n",
+          "%s\r\nVocê recebeu %d pontos de busca pelos seus serviços.\r\n",
           QST_DONE(rnum), happy_qp);
 	} else {
       GET_QUESTPOINTS(ch) += QST_POINTS(rnum);
       send_to_char(ch,
-          "%s\r\nYou have been awarded %d quest points for your service.\r\n",
+          "%s\r\nVocê recebeu %d pontos de busca pelos seus serviços.\r\n",
           QST_DONE(rnum), QST_POINTS(rnum));
     }
     if (QST_GOLD(rnum)) {
@@ -314,12 +314,12 @@ void generic_complete_quest(struct char_data *ch)
         happy_gold = MAX(happy_gold, 0);
         increase_gold(ch, happy_gold);
         send_to_char(ch,
-              "You have been awarded %d gold coins for your service.\r\n",
+              "Você recebeu %d moedas pelos seus serviços.\r\n",
               happy_gold);
 	  } else {
         increase_gold(ch, QST_GOLD(rnum));
         send_to_char(ch,
-              "You have been awarded %d gold coins for your service.\r\n",
+              "Você recebeu %d moedas pelos seus serviços.\r\n",
               QST_GOLD(rnum));
       }
     }
@@ -329,11 +329,11 @@ void generic_complete_quest(struct char_data *ch)
         happy_exp = (int)(QST_EXP(rnum) * (((float)(100+HAPPY_EXP))/(float)100));
         happy_exp = MAX(happy_exp, 0);
         send_to_char(ch,
-              "You have been awarded %d experience for your service.\r\n",
+              "Você recebeu %d pontos de experiência pelos seus serviços.\r\n",
               happy_exp);
       } else {
         send_to_char(ch,
-              "You have been awarded %d experience points for your service.\r\n",
+              "Você recebeu %d pontos de experiência pelos seus serviços.\r\n",
               QST_EXP(rnum));
       }
     }
@@ -341,8 +341,8 @@ void generic_complete_quest(struct char_data *ch)
       if (real_object(QST_OBJ(rnum)) != NOTHING) {
         if ((new_obj = read_object((QST_OBJ(rnum)),VIRTUAL)) != NULL) {
             obj_to_char(new_obj, ch);
-            send_to_char(ch, "You have been presented with %s%s for your service.\r\n",
-                GET_OBJ_SHORT(new_obj), CCNRM(ch, C_NRM));
+            send_to_char(ch, "Você foi presentead%s com %s%s pelos seus serviços.\r\n",
+                OA(ch),GET_OBJ_SHORT(new_obj), CCNRM(ch, C_NRM));
         }
       }
     }
@@ -355,7 +355,7 @@ void generic_complete_quest(struct char_data *ch)
       rnum = real_quest(QST_NEXT(rnum));
       set_quest(ch, rnum);
       send_to_char(ch,
-          "The next stage of your quest awaits:\r\n%s",
+          "A sua busca continua:\r\n%s",
           QST_INFO(rnum));
     }
   }
@@ -432,7 +432,7 @@ void quest_timeout(struct char_data *ch)
 {
   if ((GET_QUEST(ch) != NOTHING) && (GET_QUEST_TIME(ch) != -1)) {
     clear_quest(ch);
-    send_to_char(ch, "You have run out of time to complete the quest.\r\n");
+    send_to_char(ch, "O tempo da sua busca expirou!\r\n");
   }
 }
 
@@ -449,7 +449,7 @@ void check_timed_quests(void)
 /*--------------------------------------------------------------------------*/
 /* Quest Command Helper Functions                                           */
 /*--------------------------------------------------------------------------*/
-
+/* Para imortais no qlist */
 void list_quests(struct char_data *ch, zone_rnum zone, qst_vnum vmin, qst_vnum vmax)
 {
   qst_rnum rnum;
@@ -481,19 +481,19 @@ static void quest_hist(struct char_data *ch)
   int i = 0, counter = 0;
   qst_rnum rnum = NOTHING;
 
-  send_to_char(ch, "Quests that you have completed:\r\n"
-    "Index Description                                          Questmaster\r\n"
+  send_to_char(ch, "Você completou as seguintes buscas:\r\n"
+    "Num.  Descrição                                            Responsável\r\n"
     "----- ---------------------------------------------------- -----------\r\n");
   for (i = 0; i < GET_NUM_QUESTS(ch); i++) {
     if ((rnum = real_quest(ch->player_specials->saved.completed_quests[i])) != NOTHING)
       send_to_char(ch, "\tg%4d\tn) \tc%-52.52s\tn \ty%s\tn\r\n",
- ++counter, QST_DESC(rnum), (real_mobile(QST_MASTER(rnum)) == NOBODY) ? "Unknown" : GET_NAME(&mob_proto[(real_mobile(QST_MASTER(rnum)))]));
+ ++counter, QST_DESC(rnum), (real_mobile(QST_MASTER(rnum)) == NOBODY) ? "Desconhecido" : GET_NAME(&mob_proto[(real_mobile(QST_MASTER(rnum)))]));
     else
       send_to_char(ch,
-        "\tg%4d\tn) \tcUnknown Quest (it no longer exists)\tn\r\n", ++counter);
+        "\tg%4d\tn) \tcBusca desconhecida! Não existe mais!\tn\r\n", ++counter);
   }
   if (!counter)
-    send_to_char(ch, "You haven't completed any quests yet.\r\n");
+    send_to_char(ch, "Você não completou nenhuma busca ainda.\r\n");
 }
 
 static void quest_join(struct char_data *ch, struct char_data *qm, char argument[MAX_INPUT_LENGTH])
@@ -504,51 +504,49 @@ static void quest_join(struct char_data *ch, struct char_data *qm, char argument
 
   if (!*argument)
     snprintf(buf, sizeof(buf),
-             "%s What quest did you wish to join?", GET_NAME(ch));
+             "%s Qual busca você quer aceitar, %s?", GET_NAME(ch), GET_NAME(ch));
   else if (GET_QUEST(ch) != NOTHING)
     snprintf(buf, sizeof(buf),
-             "%s But you are already part of a quest!", GET_NAME(ch));
+             "%s Mas vicê já tem uma busca ativa, %s!", GET_NAME(ch), GET_NAME(ch));
   else if((vnum = find_quest_by_qmnum(ch, GET_MOB_VNUM(qm), atoi(argument))) == NOTHING)
     snprintf(buf, sizeof(buf),
-             "%s I don't know of such a quest!", GET_NAME(ch));
+             "%s Eu não conheço nenhuma busca assim, %s!", GET_NAME(ch), GET_NAME(ch));
   else if ((rnum = real_quest(vnum)) == NOTHING)
     snprintf(buf, sizeof(buf),
-             "%s I don't know of such a quest!", GET_NAME(ch));
+             "%s Eu não conheço essa busca, %s!", GET_NAME(ch), GET_NAME(ch));
   else if (GET_LEVEL(ch) < QST_MINLEVEL(rnum))
     snprintf(buf, sizeof(buf),
-             "%s You are not experienced enough for that quest!", GET_NAME(ch));
+             "%s Sinto muito, mas você ainda não oode participar desta busca, %s!", GET_NAME(ch), GET_NAME(ch));
   else if (GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
-    snprintf(buf, sizeof(buf),
-             "%s You are too experienced for that quest!", GET_NAME(ch));
+    snprintf(buf , sizeof(buf),
+             "%s Sinto muito, mas você tem muita experiência para aceitar esta busca %s!", GET_NAME(ch), GET_NAME(ch));
   else if (is_complete(ch, vnum))
     snprintf(buf, sizeof(buf),
-             "%s You have already completed that quest!", GET_NAME(ch));
+             "%s Você já conpletou esta busca antes, %s!", GET_NAME(ch), GET_NAME(ch));
   else if ((QST_PREV(rnum) != NOTHING) && !is_complete(ch, QST_PREV(rnum)))
     snprintf(buf, sizeof(buf),
-             "%s That quest is not available to you yet!", GET_NAME(ch));
+             "%s Você precisa completar outra busca antes, %s!", GET_NAME(ch), GET_NAME(ch));
   else if ((QST_PREREQ(rnum) != NOTHING) &&
            (real_object(QST_PREREQ(rnum)) != NOTHING) &&
            (get_obj_in_list_num(real_object(QST_PREREQ(rnum)),
        ch->carrying) == NULL))
     snprintf(buf, sizeof(buf),
-             "%s You need to have %s first!", GET_NAME(ch),
+             "%s, você precisa primeiro ter %s antes!", GET_NAME(ch),
       obj_proto[real_object(QST_PREREQ(rnum))].short_description);
-  else {
-    act("You join the quest.",    TRUE, ch, NULL, NULL, TO_CHAR);
-    act("$n has joined a quest.", TRUE, ch, NULL, NULL, TO_ROOM);
-    snprintf(buf, sizeof(buf),
-             "%s Listen carefully to the instructions.", GET_NAME(ch));
+  else 
+  {
+    act("Você aceitou a busca.", TRUE, ch, NULL, NULL, TO_CHAR);
+    act("$n aceitou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
+    snprintf(buf, sizeof(buf),"%s As instruções para esta busca são:", GET_NAME(ch));
     do_tell(qm, buf, cmd_tell, 0);
     set_quest(ch, rnum);
     send_to_char(ch, "%s", QST_INFO(rnum));
-    if (QST_TIME(rnum) != -1)
-      snprintf(buf, sizeof(buf),
-        "%s You have a time limit of %d turn%s to complete the quest.",
-        GET_NAME(ch), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
-    else
-      snprintf(buf, sizeof(buf),
-        "%s You can take however long you want to complete the quest.",
- GET_NAME(ch));
+    if (QST_TIME(rnum) != -1) {
+      snprintf(buf, sizeof(buf),"%s, você tem um tempo limite de %d tick%s para completar esta busca!",GET_NAME(ch), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
+    }
+    else {
+      snprintf(buf, sizeof(buf),"%s, você pode levar o tempo que precisar", GET_NAME(ch));
+    }
   }
   do_tell(qm, buf, cmd_tell, 0);
   save_char(ch);
@@ -560,24 +558,23 @@ void quest_list(struct char_data *ch, struct char_data *qm, char argument[MAX_IN
   qst_rnum rnum;
 
   if ((vnum = find_quest_by_qmnum(ch, GET_MOB_VNUM(qm), atoi(argument))) == NOTHING)
-    send_to_char(ch, "That is not a valid quest!\r\n");
+    send_to_char(ch, "Esta não é uma busca válida!\r\n");
   else if ((rnum = real_quest(vnum)) == NOTHING)
-    send_to_char(ch, "That is not a valid quest!\r\n");
+    send_to_char(ch, "Esta não é uma busca válida!\r\n");
   else if (QST_INFO(rnum)) {
-    send_to_char(ch,"Complete Details on Quest %d \tc%s\tn:\r\n%s",
-                      vnum,
+    send_to_char(ch,"Detalhes Completos da Busca \tc%s\tn:\r\n%s",
          QST_DESC(rnum),
          QST_INFO(rnum));
     if (QST_PREV(rnum) != NOTHING)
-      send_to_char(ch, "You have to have completed quest %s first.\r\n",
+      send_to_char(ch, "Você precisa completar a busca %s primeiro.\r\n",
           QST_NAME(real_quest(QST_PREV(rnum))));
     if (QST_TIME(rnum) != -1)
       send_to_char(ch,
-         "There is a time limit of %d turn%s to complete the quest.\r\n",
+         "A busca tem um tempo limite de %d tick%s para ser completada.\r\n",
           QST_TIME(rnum),
           QST_TIME(rnum) == 1 ? "" : "s");
   } else
-    send_to_char(ch, "There is no further information on that quest.\r\n");
+    send_to_char(ch, "Não existem mais informações sobre esta busca!\r\n");
 }
 
 static void quest_quit(struct char_data *ch)
@@ -585,21 +582,21 @@ static void quest_quit(struct char_data *ch)
   qst_rnum rnum;
 
   if (GET_QUEST(ch) == NOTHING)
-    send_to_char(ch, "But you currently aren't on a quest!\r\n");
+    send_to_char(ch, "Mas você não tem busca ativa no momento!\r\n");
   else if ((rnum = real_quest(GET_QUEST(ch))) == NOTHING) {
     clear_quest(ch);
-    send_to_char(ch, "You are now no longer part of the quest.\r\n");
+    send_to_char(ch, "Você não faz mais parte desta busca.\r\n");
     save_char(ch);
   } else {
     clear_quest(ch);
     if (QST_QUIT(rnum) && (str_cmp(QST_QUIT(rnum), "undefined") != 0))
       send_to_char(ch, "%s", QST_QUIT(rnum));
     else
-      send_to_char(ch, "You are now no longer part of the quest.\r\n");
+      send_to_char(ch, "Você não faz mais parte desta busca.\r\n");
     if (QST_PENALTY(rnum)) {
       GET_QUESTPOINTS(ch) -= QST_PENALTY(rnum);
       send_to_char(ch,
-        "You have lost %d quest points for your cowardice.\r\n",
+        "Você paga %d pontos de busca por ter abandonando esta busca!\r\n",
         QST_PENALTY(rnum));
     }
     save_char(ch);
@@ -611,43 +608,44 @@ static void quest_progress(struct char_data *ch)
   qst_rnum rnum;
 
   if (GET_QUEST(ch) == NOTHING)
-    send_to_char(ch, "But you currently aren't on a quest!\r\n");
+    send_to_char(ch, "Mas você não está em uma busca no momento!\r\n");
   else if ((rnum = real_quest(GET_QUEST(ch))) == NOTHING) {
     clear_quest(ch);
-    send_to_char(ch, "Your quest seems to no longer exist.\r\n");
+    send_to_char(ch, "A busca foi cancelada e não existe mais!\r\n");
   } else {
-    send_to_char(ch, "You are on the following quest:\r\n%s\r\n%s",
+    send_to_char(ch, "Você aceitou as seguintes buscas:\r\n%s\r\n%s",
         QST_DESC(rnum), QST_INFO(rnum));
     if (QST_QUANTITY(rnum) > 1)
       send_to_char(ch,
-          "You still have to achieve %d out of %d goals for the quest.\r\n",
-   GET_QUEST_COUNTER(ch), QST_QUANTITY(rnum));
+          "Você ainda precisa realizar %d objetivo%s da busca.\r\n",
+   GET_QUEST_COUNTER(ch), GET_QUEST_COUNTER(ch) == 1 ? "" : "s");
     if (GET_QUEST_TIME(ch) > 0)
       send_to_char(ch,
-          "You have %d turn%s remaining to complete the quest.\r\n",
+          "Você ainda tem %d tick%s restando para concluir a busca.\r\n",
    GET_QUEST_TIME(ch),
    GET_QUEST_TIME(ch) == 1 ? "" : "s");
   }
 }
-
+//Lista quest para mortais com quest list
 static void quest_show(struct char_data *ch, mob_vnum qm)
 {
   qst_rnum rnum;
   int counter = 0;
 
   send_to_char(ch,
-  "The following quests are available:\r\n"
-  "Index Description                                          ( Vnum) Done?\r\n"
-  "----- ---------------------------------------------------- ------- -----\r\n");
-  for (rnum = 0; rnum < total_quests; rnum++)
+  "A lista de buscas: disponiveis é:\r\n"
+  "Num.  Descrção                                             Feita?\r\n"
+  "----- ---------------------------------------------------- ------\r\n");
+  for (rnum = 0; rnum < total_quests; rnum++)        
     if (qm == QST_MASTER(rnum))
-      send_to_char(ch, "\tg%4d\tn) \tc%-52.52s\tn \ty(%5d)\tn \ty(%s)\tn\r\n",
-        ++counter, QST_DESC(rnum), QST_NUM(rnum),
-        (is_complete(ch, QST_NUM(rnum)) ? "Yes" : "No "));
+      send_to_char(ch, "\tg%4d\tn) \tc%-52.52s\tn \ty(%s)\tn\r\n",
+        ++counter, QST_DESC(rnum),
+        (is_complete(ch, QST_NUM(rnum)) ? "Sim" : "Não "));
   if (!counter)
-    send_to_char(ch, "There are no quests available here at the moment.\r\n");
+    send_to_char(ch, "Não temos buscas disponiveis no momento, %s!\r\n",GET_NAME(ch));
 }
 
+/*Para imortais */
 static void quest_stat(struct char_data *ch, char argument[MAX_STRING_LENGTH])
 {
   qst_rnum rnum;
@@ -767,7 +765,7 @@ ACMD(do_quest)
       case SCMD_QUEST_LIST:
       case SCMD_QUEST_JOIN:
         /* list, join should hve been handled by questmaster spec proc */
-        send_to_char(ch, "Sorry, but you cannot do that here!\r\n");
+        send_to_char(ch, "Desculpe, mas você não oode fazer isto aqui!\r\n");
         break;
       case SCMD_QUEST_HISTORY:
         quest_hist(ch);
