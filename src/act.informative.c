@@ -28,7 +28,6 @@
 #include "modify.h"
 #include "asciimap.h"
 #include "quest.h"
-#include "shop.h"
 
 /* prototypes of local functions */
 /* do_diagnose utility functions */
@@ -1020,129 +1019,141 @@ ACMD(do_score)
 {
 	const char *underline =
 		"________________________________________________________________________________"
-		"________________________________________________________________________________\r\n";
+		"________________________________________________________________________________\tn\r\n";
+
 
 
 	struct time_info_data playing_time;
 	if (IS_NPC(ch))
 		return;
-	send_to_char(ch, "Você tem %d anos.", GET_AGE(ch));
-	if (age(ch)->month == 0 && age(ch)->day == 0)
-		send_to_char(ch, " E está fazendo aniversario hoje!\r\n");
-	else
-		send_to_char(ch, "\r\n");
-	send_to_char(ch, "Nome: %s %s. \r \n ", GET_NAME(ch), GET_TITLE(ch));
-	send_to_char(ch, "Nivel: %d \r\n ", GET_LEVEL(ch));
-	send_to_char(ch, "Alinhamento: %d  %s \r\n ", GET_ALIGNMENT(ch),
-				 align_gauge(GET_ALIGNMENT(ch)));
-	send_to_char(ch, "AC: %d / 10 Idade: %d \r\n ", compute_armor_class(ch), GET_AGE(ch));
-	switch (GET_SEX(ch))
-	{
-	case SEX_MALE:
-		send_to_char(ch, "Sexo: Masculino \r\n ");
-		break;
-	case SEX_FEMALE:
-		send_to_char(ch, "Sexo: Feminino \r\n ");
-		break;
-	default:
-		send_to_char(ch, "Sexo: Neutro \r\n ");
-		break;
+	ubyte screen_width = GET_SCREEN_WIDTH(ch);
+
+	char buffer[screen_width + 8]; // 80 caracteres + null terminator
+	snprintf(buffer, sizeof(buffer), "\tB___[ \tW%s, \tn%s \tB]___%s", GET_NAME(ch), GET_TITLE(ch), underline);
+	buffer[screen_width+7] = '\0'; // Garante o truncamento exato em screen_width  caracteres
+	send_to_char(ch, "%s\tn\r\n", buffer);
+
+	send_to_char(ch, "  %s, %d anos, nível %d.\r\n", 	pc_class_types[GET_CLASS(ch)], GET_AGE(ch), GET_LEVEL(ch));
+	send_to_char(ch, "\r\n");
+
+
+	send_to_char(ch, " \tW Saúde\tb......:\tn %5d\tgHp\tn (%5d) %s \tn \tW Armadura\tb...:\tn%5d/10\tn\r\n",
+				 GET_HIT(ch), GET_MAX_HIT(ch), gauge(0, 0, GET_HIT(ch), GET_MAX_HIT(ch)), compute_armor_class(ch));
+
+	send_to_char(ch, " \tW Magia\tb......:\tn %5d\tgMn\tn (%5d) %s \tn \tW Alinhamento\tb:\tn%5d %s\tn\r\n",
+				 GET_MANA(ch), GET_MAX_MANA(ch), gauge(0, 0, GET_MANA(ch), GET_MAX_MANA(ch)), GET_ALIGNMENT(ch), align_gauge(GET_ALIGNMENT(ch)));
+
+	send_to_char(ch, " \tW Movimento\tb..:\tn %5d\tgMv\tn (%5d) %s \tn \tW Fôlego\tb.....:\tn%5d%s %s\tn\r\n",
+				 GET_MOVE(ch), GET_MAX_MOVE(ch), gauge(0, 0, GET_MOVE(ch), GET_MAX_MOVE(ch)), (50 * 100) / 50, "%", gauge(0, 0, 50, 50));
+
+	send_to_char(ch, "\r\n");
+
+
+
+
+	send_to_char(ch, " \tW Experiência\tb:\tn %13ld\tgxp\tn        \tn \tW Ouro\tb.......:\tn%13ld\tYg\tn\r\n",
+				 GET_EXP(ch),  GET_GOLD(ch));
+	send_to_char(ch, " \tW Prox Nível\tb.:\tn %13ld\tgxp\tn %s\r\n ", level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - GET_EXP(ch),
+		gauge(0, 0, GET_MOVE(ch), GET_MAX_MOVE(ch)));
+	send_to_char(ch, "\r\n");
+
+	send_to_char(ch, " \tW Atrib\tb:\tW \tgStr\tn [%d/%d]   \tgInt\tn [%d]   \tgWis\tn [%d]   \tgDex\tn [%d]   \tgCon\tn [%d]   \tgChar\tn [%d] \r\n",
+		GET_STR(ch), GET_ADD(ch), GET_INT(ch), GET_WIS(ch), GET_DEX(ch), GET_CON(ch), GET_CHA(ch) );
+
+	send_to_char(ch,
+			"  \tWResis\tb: \tgPar\tn [%2d]   \tgRod\tn [%2d]   \tgPet\tn [%2d] "
+			"  \tgBre\tn [%2d]   \tgSpe\tn [%2d]\r\n",
+			GET_SAVE(ch, SAVING_PARA), GET_SAVE(ch, SAVING_ROD),
+			GET_SAVE(ch, SAVING_PETRI), GET_SAVE(ch, SAVING_BREATH),
+			GET_SAVE(ch, SAVING_SPELL));
+
+	send_to_char(ch,
+	"  \tWBônus\tb: \tgHitRoll\tn [%2d]   \tgDamRoll\tn [%2d]\r\n",
+	GET_HITROLL(ch), GET_DAMROLL(ch));
+	send_to_char(ch, "\r\n");
+	if (!IS_NPC(ch) && GET_LEVEL(ch) >= LVL_IMMORT ) {
+
+		send_to_char(ch, "  PoofIn:  &g%s&:&+n\r\n", POOFIN(ch));
+
+		send_to_char(ch, "  PoofOut: &g%s&:&+n\r\n", POOFOUT(ch));
+
+		if (!IS_NPC(ch) && !PRF_FLAGGED(ch, PRF_COMPACT))
+			send_to_char(ch, "\r\n");
 	}
 
-	playing_time =
-		*real_time_passed((time(0) - ch->player.time.logon) + ch->player.time.played, 0);
-	send_to_char(ch, "Você está jogando por %d dia%s e %d hora%s \r\n ",
+	send_to_char(ch, "\tnVocê irá recuperar [%d\tgHp\tn %d\tgMn\tn %d\tgMv\tn] por tick.\r\n", hit_gain(ch),mana_gain(ch), move_gain(ch));
+
+	send_to_char(ch, "Você morreu \tR%d\tn vez%s e caiu em \tR%d\tn armadilhas de morte.\r\n", GET_DEATH(ch),
+		GET_DEATH(ch) == 1 ? "" : "es", GET_DTS(ch));
+	playing_time = *real_time_passed((time(0) - ch->player.time.logon) + ch->player.time.played, 0);
+	send_to_char(ch, "Você está jogando por \tR%d\tn dia%s e \tR%d\tn hora%s \r\n",
 				 playing_time.day, playing_time.day == 1 ? " " : "s", playing_time.hours,
 				 playing_time.hours == 1 ? "." : "s.");
-	send_to_char(ch, "%s",  underline);
-	send_to_char(ch, " Str: %d(%d)| Hit:  %d(%d)--->Ganho: %d %s\r\n ", GET_STR(ch), GET_ADD(ch),
-				 GET_HIT(ch), GET_MAX_HIT(ch), hit_gain(ch), gauge(0, 0, GET_HIT(ch),
-																   GET_MAX_HIT(ch)));
-	send_to_char(ch, " Int: %d     | Mana: %d(%d)--->Ganho: %d %s\r\n ", GET_INT(ch), GET_MANA(ch),
-				 GET_MAX_MANA(ch), mana_gain(ch), gauge(0, 0, GET_MANA(ch), GET_MAX_MANA(ch)));
-	send_to_char(ch, " Wis: %d     | Move:   %d(%d)--->Ganho: %d %s\r\n ", GET_WIS(ch),
-				 GET_MOVE(ch), GET_MAX_MOVE(ch), move_gain(ch), gauge(0, 0, GET_MOVE(ch),
-																	  GET_MAX_MOVE(ch)));
-	send_to_char(ch, " Con: %d     | Hitroll: %d \r\n ", GET_CON(ch), (GET_HITROLL(ch)));
-	send_to_char(ch, " Dex: %d     | Damroll: %d \r\n ", GET_DEX(ch), (GET_DAMROLL(ch)));
-	send_to_char(ch, " Cha: %d     | Ouro: %d QP: %d \r\n ", GET_CHA(ch), GET_GOLD(ch),
-				 GET_QUESTPOINTS(ch));
-	send_to_char(ch, " Fol: %d(%d) %s \r\n ", GET_BREATH(ch), GET_MAX_BREATH(ch),
-				 gauge(0, 0, GET_BREATH(ch), GET_MAX_BREATH(ch)));
-	send_to_char(ch, "%s", underline);
-	send_to_char(ch, " EXP Ganha %ld \r\n ", GET_EXP(ch));
-	if (GET_LEVEL(ch) < LVL_IMMORT)
-		send_to_char(ch, " EXP Faltando %ld \r\n ",
-					 level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - GET_EXP(ch));
-	send_to_char(ch, "%s\r\n",
-				 gauge(0, 3, GET_EXP(ch),
-					   level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - GET_EXP(ch)));
-	send_to_char(ch, " Você tem %d pontos de busca. \r\n ", GET_QUESTPOINTS(ch));
-	send_to_char(ch, " Você completou %d busca%s, ", GET_NUM_QUESTS(ch),
+
+	send_to_char(ch, "Você tem \tg%d\tn pontos de busca e ", GET_QUESTPOINTS(ch));
+	send_to_char(ch, "completou \tg%d\tn busca%s.\r\n", GET_NUM_QUESTS(ch),
 				 GET_NUM_QUESTS(ch) == 1 ? " " : "s");
-	if (GET_QUEST(ch) == NOTHING)
-		send_to_char(ch, " e não está em uma busca no momento. \r\n ");
-	else
+	if (!GET_QUEST(ch) == NOTHING)
 	{
-		send_to_char(ch, " e a sua busca atual é: %s ", QST_NAME(real_quest(GET_QUEST(ch))));
+		send_to_char(ch, "A sua busca atual é: \tg%s\tn", QST_NAME(real_quest(GET_QUEST(ch))));
 		if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS))
-			send_to_char(ch, "[%d] \r\n ", GET_QUEST(ch));
+			send_to_char(ch, "\tn[%d] \r\n", GET_QUEST(ch));
 		else
-			send_to_char(ch, " \r\n ");
+			send_to_char(ch, " \tn\r\n");
 	}
 
 	if (PLR_FLAGGED(ch, PLR_TRNS))
-		send_to_char(ch, " Você transcendeu.\r\n");
-	send_to_char(ch, " \r\n ");
+		send_to_char(ch, "Você transcendeu.\r\n");
+
 
 	switch (GET_POS(ch))
 	{
 	case POS_DEAD:
-		send_to_char(ch, " Você está mort%s!\r\n", OA(ch));
+		send_to_char(ch, "Você está mort%s!\r\n", OA(ch));
 		break;
 	case POS_MORTALLYW:
 		send_to_char(ch,
-					 " Você está mortalmente ferid%s! Você precisa de ajuda!!\r \n ", OA(ch));
+					 "Você está mortalmente ferid%s! Você precisa de ajuda!!\r\n", OA(ch));
 		break;
 	case POS_INCAP:
-		send_to_char(ch, " Você está incapacitad%s, morrendo lentamente...\r\n", OA(ch));
+		send_to_char(ch, "Você está incapacitad%s, morrendo lentamente...\r\n", OA(ch));
 		break;
 	case POS_STUNNED:
-		send_to_char(ch, " Você está atordoad%s! Não pode se mover!\r\n", OA(ch));
+		send_to_char(ch, "Você está atordoad%s! Não pode se mover!\r\n", OA(ch));
 		break;
 	case POS_MEDITING:
-		send_to_char(ch, " Você está meditando profundamente.\r\n");
+		send_to_char(ch, "Você está meditando profundamente.\r\n");
 		break;
 	case POS_SLEEPING:
-		send_to_char(ch, " Você está dormindo.\r\n");
+		send_to_char(ch, "Você está dormindo.\r\n");
 		break;
 	case POS_RESTING:
-		send_to_char(ch, " Você está descansando.\r\n");
+		send_to_char(ch, "Você está descansando.\r\n");
 		break;
 	case POS_SITTING:
 		if (!SITTING(ch))
-			send_to_char(ch, " Você está sentad%s.\r\n", OA(ch));
+			send_to_char(ch, "Você está sentad%s.\r\n", OA(ch));
 		else
 		{
 			struct obj_data *furniture = SITTING(ch);
-			send_to_char(ch, " Você está sentad%s em %s.\r\n", OA(ch),
+			send_to_char(ch, "Você está sentad%s em %s.\r\n", OA(ch),
 						 furniture->short_description);
 		} break;
 	case POS_FIGHTING:
-		send_to_char(ch, " Você está lutando contra %s.\r\n",
+		send_to_char(ch, "Você está lutando contra %s.\r\n",
 					 FIGHTING(ch) ? PERS(FIGHTING(ch), ch) : "alguem que já partiu");
 		break;
 	case POS_STANDING:
-		send_to_char(ch, " Você está em pé.\r\n");
+		send_to_char(ch, "Você está em pé.\r\n");
 		break;
 	default:
-		send_to_char(ch, " Você está flutuando.\r\n");
+		send_to_char(ch, "Você está voando.\r\n");
 		break;
 	}
 	if (SWIMMING(ch))
-		send_to_char(ch, " Você está nadando\r\n");
+		send_to_char(ch, "Você está nadando\r\n");
 
-	send_to_char(ch, " Efeitos: \r\n ");
+
 	if (GET_COND(ch, DRUNK) > 10)
 		send_to_char(ch, "Você está bebad%s.\r\n", OA(ch));
 	if (GET_COND(ch, HUNGER) == 0)
@@ -1243,8 +1254,8 @@ ACMD(do_score)
 	else
 		send_to_char(ch, "Você NÃO pode ser convocad%s!\r\n", OA(ch));
 
-	send_to_char(ch, "Você morreu %d vez%s e caiu em %d armadilhas de morte.\r\n", GET_DEATH(ch),
-				 GET_DEATH(ch) == 1 ? "" : "es", GET_DTS(ch));
+
+
 	if (GET_LEVEL(ch) >= LVL_IMMORT)
 	{
 		if (POOFIN(ch))
@@ -1315,8 +1326,8 @@ ACMD(do_time)
 	/* if (((day % 100) / 10) != 1) { switch (day % 10) { case 1: suf = " st
 	   "; break; case 2: suf = " nd "; break; case 3: suf = " rd "; break; } } 
 	 */
-	send_to_char(ch, " O %d%s dia do %s (%d%s mes), Ano %d. \r\n ",
-				 day, suf, month_name[time_info.month],time_info.month+1, suf, time_info.year);
+	send_to_char(ch, " O %d%s dia do %s, Ano %d. \r\n ",
+				 day, suf, month_name[time_info.month], time_info.year);
 }
 
 ACMD(do_weather) {
