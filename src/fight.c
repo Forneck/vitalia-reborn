@@ -483,40 +483,49 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
 		const char *to_char;
 		const char *to_victim;
 	} dam_weapons[] =
-	{
+			{
 
-		/* use #w for singular (i.e. "slash") and #W for plural (i.e.
-		   "slashes") */
+				/* use #w for singular (i.e. "slash") and #W for plural (i.e.
+				   "slashes") */
 
-		{
-			"$n tenta #W $N, mas erra.",	/* 0: 0 */
-		"Você tenta #W $N, mas erra.", "$n tenta #W você, mas erra."},
-		{
-			"$n faz cócegas em $N quando $e #w $M.",	/* 1: 1..2 */
-		"Você faz cócegas em $N quando você #w $M.", "$n faz cócegas em você quando $e #w você."},
-		{
-			"$n fracamente #w $N.",	/* 2: 3..4 */
-		"Você fracamente #w $N.", "$n fracamente #w você."},
-		{
-			"$n #w $N.",		/* 3: 5..6 */
-		"Você #w $N.", "$n #w você."},
-		{
-			"$n #w $N forte.",	/* 4: 7..10 */
-		"Você #w $N forte.", "$n #w você forte."},
-		{
-			"$n #w $N muito forte.",	/* 5: 11..14 */
-		"Você #w $N muito forte.", "$n #w você muito forte."},
-		{
-			"$n #w $N extremamente forte.",	/* 6: 15..19 */
-		"Você #w $N extremamente forte.", "$n #w você extremamente forte."},
-		{
-			"$n massacra $N em pequenos fragmentos com a #w $l.",	/* 7: 19..23 */
-		"Você massacra $N em pequenos fragmentos com a sua #w.",
-				"$n massacra você em pequenos fragmentos com a #w $l."},
-		{
-			"$n OBLITERA $N com a #w mortal $l!!",	/* 8: > 23 */
-		"Você OBLITERA $N com a sua #w mortal!!", "$n OBLITERA você com a #w mortal $l!!"}
-	};
+				{
+					"$n tenta #W $N, mas erra.", /* 0: 0 */
+					"\tyVocê tenta #W $N, mas erra.\tn", "\tr$n tenta #W você, mas erra.\tn"
+				},
+				{
+					"$n faz cócegas em $N quando $e #w $M.", /* 1: 1..2 */
+					"\tyVocê faz cócegas em $N quando você #w $M.\tn", "\tr$n faz cócegas em você quando $e #w você.\tn"
+				},
+				{
+					"$n fracamente #w $N.", /* 2: 3..4 */
+					"\tyVocê fracamente #w $N.\tn", "\tr$n fracamente #w você.\tn"
+				},
+				{
+					"$n #w $N.", /* 3: 5..6 */
+					"\tyVocê #w $N.\tn", "\tr$n #w você.\tn"
+				},
+				{
+					"$n #w $N forte.", /* 4: 7..10 */
+					"\tyVocê #w $N forte.\tn", "\tr$n #w você forte.\tn"
+				},
+				{
+					"$n #w $N muito forte.", /* 5: 11..14 */
+					"\tyVocê #w $N muito forte.\tn", "\tr$n #w você muito forte.\tn"
+				},
+				{
+					"$n #w $N extremamente forte.", /* 6: 15..19 */
+					"\tyVocê #w $N extremamente forte.\tn", "\tr$n #w você extremamente forte.\tn"
+				},
+				{
+					"$n massacra $N em pequenos fragmentos com a #w $l.", /* 7: 19..23 */
+					"\tyVocê massacra $N em pequenos fragmentos com a sua #w.\tn",
+					"\tr$n massacra você em pequenos fragmentos com a #w $l.\tn"
+				},
+				{
+					"$n OBLITERA $N com a #w mortal $l!!", /* 8: > 23 */
+					"\tyVocê OBLITERA $N com a sua #w mortal!!\tn", "\ty$n OBLITERA você com a #w mortal $l!!\tn"
+				}
+			};
 	w_type -= TYPE_HIT;			/* Change to base of table with text */
 	if (dam == 0)
 		msgnum = 0;
@@ -778,7 +787,7 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 		if (GET_HIT(victim) < (GET_MAX_HIT(victim) / 4))
 		{
 			send_to_char(victim,
-						 "Você espera que seus ferimentos parem de %sSANGRAR%s tanto!\r\n",
+						 "\trVocê espera que seus ferimentos parem de %sSANGRAR%s tanto!\tn\r\n",
 						 CCRED(victim, C_SPR), CCNRM(victim, C_SPR));
 			if (ch != victim && MOB_FLAGGED(victim, MOB_WIMPY))
 				do_flee(victim, NULL, 0, 0);

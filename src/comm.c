@@ -85,6 +85,7 @@
 #include "mud_event.h"
 #include "ann.h"
 
+
 #ifndef INVALID_SOCKET
 #define INVALID_SOCKET (-1)
 #endif
@@ -1272,47 +1273,69 @@ static char *make_prompt(struct descriptor_data *d)
 			struct char_data *ch = d->character;
 			if (GET_HIT(ch) << 2 < GET_MAX_HIT(ch))
 			{
-				count = snprintf(prompt + len, sizeof(prompt) - len, "%dHp ", GET_HIT(ch));
+				count = snprintf(prompt + len, sizeof(prompt) - len, "< \tR%d\tgHp\tn ", GET_HIT(ch));
 				if (count >= 0)
 					len += count;
 			}
 			if (GET_MANA(ch) << 2 < GET_MAX_MANA(ch) && len < sizeof(prompt))
 			{
-				count = snprintf(prompt + len, sizeof(prompt) - len, "%dMn ", GET_MANA(ch));
+				count = snprintf(prompt + len, sizeof(prompt) - len, "\tR%d\tgMn\tn ", GET_MANA(ch));
 				if (count >= 0)
 					len += count;
 			}
 			if (GET_MOVE(ch) << 2 < GET_MAX_MOVE(ch) && len < sizeof(prompt))
 			{
-				count = snprintf(prompt + len, sizeof(prompt) - len, "%dMv ", GET_MOVE(ch));
+				count = snprintf(prompt + len, sizeof(prompt) - len, "\tR%d\tgMv\tn ", GET_MOVE(ch));
 				if (count >= 0)
 					len += count;
 			}
 		}
 		else
-		{						/* not auto prompt */
+		{
+			/* not auto prompt */
+			struct char_data *ch = d->character;
 			if (PRF_FLAGGED(d->character, PRF_DISPHP) && len < sizeof(prompt))
 			{
-				count =
-					snprintf(prompt + len, sizeof(prompt) - len, "%dHp ", GET_HIT(d->character));
-				if (count >= 0)
-					len += count;
+				if (GET_HIT(ch) << 2 < GET_MAX_HIT(ch))
+				{
+					count = snprintf(prompt + len, sizeof(prompt) - len, "< \tR%d\tgHp\tn ", GET_HIT(ch));
+					if (count >= 0)
+						len += count;
+				}else {
+					count =
+						snprintf(prompt + len, sizeof(prompt) - len, "< %d\tgHp\tn ", GET_HIT(d->character));
+					if (count >= 0)
+						len += count;
+				}
 			}
 
 			if (PRF_FLAGGED(d->character, PRF_DISPMANA) && len < sizeof(prompt))
-			{
-				count =
-					snprintf(prompt + len, sizeof(prompt) - len, "%dMn ", GET_MANA(d->character));
-				if (count >= 0)
-					len += count;
+				{if (GET_MANA(ch) << 2 < GET_MAX_MANA(ch) && len < sizeof(prompt))
+				{
+					count = snprintf(prompt + len, sizeof(prompt) - len, "\tR%d\tgMn\tn ", GET_MANA(ch));
+					if (count >= 0)
+						len += count;
+				}else {
+					count =
+						snprintf(prompt + len, sizeof(prompt) - len, "%d\tgMn\tn ", GET_MANA(d->character));
+					if (count >= 0)
+						len += count;
+				}
 			}
 
 			if (PRF_FLAGGED(d->character, PRF_DISPMOVE) && len < sizeof(prompt))
 			{
-				count =
-					snprintf(prompt + len, sizeof(prompt) - len, "%dMv ", GET_MOVE(d->character));
-				if (count >= 0)
-					len += count;
+				if (GET_MOVE(ch) << 2 < GET_MAX_MOVE(ch) && len < sizeof(prompt))
+				{
+					count = snprintf(prompt + len, sizeof(prompt) - len, "\tR%d\tgMv\tn ", GET_MOVE(ch));
+					if (count >= 0)
+						len += count;
+				}else {
+					count =
+						snprintf(prompt + len, sizeof(prompt) - len, "%d\tgMv\tn ", GET_MOVE(d->character));
+					if (count >= 0)
+						len += count;
+				}
 			}
 		}
 
@@ -1785,6 +1808,7 @@ static int process_output(struct descriptor_data *t)
 	if (t->has_prompt && !t->pProtocol->WriteOOB)
 	{
 		t->has_prompt = FALSE;
+
 		result = write_to_descriptor(t->descriptor, i);
 		if (result >= 2)
 			result -= 2;
@@ -1940,35 +1964,62 @@ static ssize_t perform_socket_write(socket_t desc, const char *txt, size_t lengt
    has been delivered to the OS, or until an error is encountered. Returns:
    >=0 If all is well and good.  -1 If an error was encountered, so that the
    player should be cut off. */
+
+descriptor_t *get_descriptor_by_socket(socket_t desc)
+{
+	descriptor_t *d;
+
+	for (d = descriptor_list; d; d = d->next)
+	{
+		if (d->descriptor == desc)
+			return d;
+	}
+
+	return NULL;
+}
 int write_to_descriptor(socket_t desc, const char *txt)
 {
 	ssize_t bytes_written;
-	size_t total = strlen(txt), write_total = 0;
+	size_t total, write_total = 0;
+	char buffer[MAX_STRING_LENGTH];  // Buffer para o texto formatado
+	int wantsize = 0;
+	descriptor_t *d;
 
+	// ✅ Localize o descritor do cliente com base no socket
+	d = get_descriptor_by_socket(desc);  // Crie essa função se ela não existir
+
+	if (!d) {
+		fprintf(stderr, "SYSERR: Descriptor not found for socket %d\n", desc);
+		return -1;
+	}
+
+	// ✅ Passe o texto por ProtocolOutput para aplicar as cores
+	strcpy(buffer, ProtocolOutput(d, txt, &wantsize));
+	total = strlen(buffer);  // Calcula o tamanho do texto processado
+
+	// ✅ Envie o texto processado ao cliente
 	while (total > 0)
 	{
-		bytes_written = perform_socket_write(desc, txt, total);
+		bytes_written = perform_socket_write(desc, buffer + write_total, total);
 
 		if (bytes_written < 0)
 		{
-			/* Fatal error.  Disconnect the player. */
 			perror("SYSERR: Write to socket");
-			return (-1);
+			return -1;  // Erro fatal, desconecta o cliente
 		}
 		else if (bytes_written == 0)
 		{
-			/* Temporary failure -- socket buffer full. */
-			return (write_total);
+			// Falha temporária (buffer cheio), tenta novamente depois
+			return write_total;
 		}
 		else
 		{
-			txt += bytes_written;
 			total -= bytes_written;
 			write_total += bytes_written;
 		}
 	}
 
-	return (write_total);
+	return write_total;
 }
 
 /* Same information about perform_socket_write applies here. I like standards, 
