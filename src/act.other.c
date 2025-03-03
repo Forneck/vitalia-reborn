@@ -61,8 +61,7 @@ ACMD(do_quit)
 	else
 	{
 		act("$n deixou o jogo.", TRUE, ch, 0, 0, TO_ROOM);
-		mudlog(NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE, "%s has quit the game.",
-			   GET_NAME(ch));
+		mudlog(NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE, "%s has quit the game.", GET_NAME(ch));
 
 		if (GET_QUEST_TIME(ch) != -1)
 			quest_timeout(ch);

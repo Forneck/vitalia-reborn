@@ -68,6 +68,9 @@ void set_spells_function()
  if ((spell = get_spell_by_vnum(SPELL_ENCHANT_WEAPON)))
    spell->function = spell_enchant_weapon;
 
+ if ((spell = get_spell_by_vnum(SPELL_BLESS_OBJECT)))
+   spell->function = spell_bless_object;
+
  if ((spell = get_spell_by_vnum(SPELL_LOCATE_OBJECT)))
    spell->function = spell_locate_object;
 
@@ -225,17 +228,17 @@ void create_spells_db()
  new_spell->assign[0].level = 100;
  spedit_save_internally(new_spell);
 
- // SPELL_BLESS #3
+ // SPELL_BLESS_PERSON #3
  CREATE(new_spell, struct str_spells, 1);
  spedit_init_new_spell (new_spell);
 
- new_spell->vnum = SPELL_BLESS;
+ new_spell->vnum = SPELL_BLESS_PERSON;
  new_spell->status = available;
- new_spell->name = strdup("bless");
+ new_spell->name = strdup("bless person");
  new_spell->type = SPELL;
  new_spell->min_pos = POS_STANDING;
- new_spell->targ_flags = TAR_CHAR_ROOM | TAR_OBJ_INV;
- new_spell->mag_flags = MAG_AFFECTS | MAG_ALTER_OBJS | MAG_ACCDUR;
+ new_spell->targ_flags = TAR_CHAR_ROOM;
+ new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(35 - (3 * self.level)) > 5 ? (35 - (3 * self.level)) : 5");
  new_spell->assign[0].class_num = CLASS_CLERIC;
@@ -2402,6 +2405,24 @@ new_spell->applies[1].appl_num = AFF_WINDWALL + NUM_APPLIES;
  new_spell->messages.to_vict = strdup("Uma parede de vento envolve você.");
   new_spell->messages.to_room = strdup("Uma parede de vento envolve $N.");
  new_spell->messages.wear_off = strdup("A parede de vento ao redor de seu corpo desaparece.");
+ spedit_save_internally(new_spell);
+
+// SPELL_BLESS_OBJECT # 97
+CREATE(new_spell, struct str_spells, 1);
+spedit_init_new_spell (new_spell);
+new_spell->vnum = SPELL_BLESS_OBJECT;
+new_spell->status = available;
+new_spell->name = strdup("bless object");
+new_spell->function = spell_enchant_weapon;
+new_spell->type = SPELL;
+new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_OBJ_INV;
+ new_spell->mag_flags = MAG_MANUAL;
+ new_spell->effectiveness = strdup("100");
+ sprintf(buf, "(35 - (3 * self.level)) > 5 ? (35 - (3 * self.level)) : 5");
+ new_spell->assign[0].class_num = CLASS_CLERIC;
+ new_spell->assign[0].level = 6;
+ new_spell->assign[0].num_mana = strdup(buf);
  spedit_save_internally(new_spell);
 
 // SKILL_BACKSTAB # 131 

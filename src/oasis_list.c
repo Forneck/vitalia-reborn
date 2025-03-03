@@ -164,6 +164,7 @@ static void perform_obj_type_list(struct char_data * ch, char *arg)
 
           case ITEM_SCROLL:
           case ITEM_POTION:
+	  case ITEM_BOOK:
             tmp_len = snprintf(buf+len, sizeof(buf)-len,"%s%3d%s) %s[%s%8d%s] %s%s\r\n",
                  QGRN, ++found, QNRM, QCYN, QYEL, ov, QCYN, obj_proto[r_num].short_description, QNRM);
             break;
@@ -177,12 +178,15 @@ static void perform_obj_type_list(struct char_data * ch, char *arg)
             break;
 
           case ITEM_WEAPON:
+	  case ITEM_AMMO:
+	  case ITEM_FIREWEAPON:
             v1 = ((obj_proto[num].obj_flags.value[2]+1)*(obj_proto[r_num].obj_flags.value[1])) / 2;
             tmp_len = snprintf(buf+len, sizeof(buf)-len,"%s%3d%s) %s[%s%8d%s]%s (%d Avg Dam) %s%s%s\r\n",
                  QGRN, ++found, QNRM, QCYN, QYEL, ov, QCYN, QNRM, v1, QCYN, obj_proto[r_num].short_description, QNRM);
             break;
 
           case ITEM_ARMOR:
+	  case ITEM_WINGS:
             tmp_len = snprintf(buf+len, sizeof(buf)-len,"%s%3d%s) %s[%s%8d%s]%s (%dAC) %s%s%s\r\n",
                  QGRN, ++found, QNRM, QCYN, QYEL, ov, QCYN, QNRM, v1, QCYN, obj_proto[r_num].short_description, QNRM);
             break;
@@ -226,6 +230,9 @@ static void perform_obj_type_list(struct char_data * ch, char *arg)
           case ITEM_PEN:
           case ITEM_BOAT:
           case ITEM_KEY:
+	  case ITEM_PORTAL:
+	  case ITEM_PLANT:
+	  case ITEM_CORPSE:
             tmp_len = snprintf(buf+len, sizeof(buf)-len,"%s%3d%s) %s[%s%8d%s] %s%s\r\n",
                  QGRN, ++found, QNRM, QCYN, QYEL, ov, QCYN, obj_proto[r_num].short_description, QNRM);
             break;

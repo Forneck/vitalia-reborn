@@ -86,7 +86,7 @@ ASPELL(chanson_brinde)
   if (ch == NULL || obj == NULL)
      return;
   /* level = MAX(MIN(level, LVL_IMPL), 1);       - not used */
-                                                                              if (GET_OBJ_TYPE(obj) == ITEM_DRINKCON) {
+  if (GET_OBJ_TYPE(obj) == ITEM_DRINKCON) {
     if ((GET_OBJ_VAL(obj, 2) != LIQ_WINE) && (GET_OBJ_VAL(obj, 1) != 0)) {
        name_from_drinkcon(obj);
       GET_OBJ_VAL(obj, 2) = LIQ_BLOOD;
@@ -187,9 +187,9 @@ ASPELL(spell_summon)
 
   if (!CONFIG_PK_ALLOWED) {
     if (MOB_FLAGGED(victim, MOB_AGGRESSIVE)) {
-      act("Assim que as palavras saem da  sua boca e $N viaja\r\n"
+      act("Assim que as palavras saem da sua boca e $N viaja\r\n"
 	  "atraves do tempo e espaco ate voce, voce percebe que $E\r\n"
-	  "pode te machucar, entao voce sabiamente manda $M de volta.",
+	  "pode te machucar, então você sabiamente manda $M de volta.",
 	  FALSE, ch, 0, victim, TO_CHAR);
       return;
     }
@@ -280,7 +280,7 @@ ASPELL(spell_locate_object)
   int j;
 
   if (!obj) {
-    send_to_char(ch, "Voce nao comsegue sentir isto.\r\n");
+    send_to_char(ch, "Você não comsegue sentir isto.\r\n");
     return;
   }
 
@@ -304,7 +304,7 @@ ASPELL(spell_locate_object)
     else if (i->worn_by)
       send_to_char(ch, " no corpo de %s.\r\n", PERS(i->worn_by, ch));
     else
-      send_to_char(ch, "esta' num lugar incerto.\r\n");
+      send_to_char(ch, "está num lugar incerto.\r\n");
 
     j--;
   }
@@ -328,14 +328,14 @@ ASPELL(spell_charm)
   else if (MOB_FLAGGED(victim, MOB_NOCHARM))
     send_to_char(ch, "A sua vitima resiste!\r\n");
   else if (AFF_FLAGGED(ch, AFF_CHARM))
-    send_to_char(ch, "Voce nao pode ter seguidores!\r\n");
+    send_to_char(ch, "Voce não pode ter seguidores!\r\n");
   else if (AFF_FLAGGED(victim, AFF_CHARM) || level < GET_LEVEL(victim))
     send_to_char(ch, "Voce falhou.\r\n");
   /* player charming another player - no legal reason for this */
   else if (!CONFIG_PK_ALLOWED && !IS_NPC(victim))
-    send_to_char(ch, "Voce falhou! Mas nao deveria ter feito isto.\r\n");
+    send_to_char(ch, "Voce falhou! Mas não deveria ter feito isto.\r\n");
   else if (circle_follow(victim, ch))
-    send_to_char(ch, "Desculpe, mas nao e' permitido seguir em circulos.\r\n");
+    send_to_char(ch, "Desculpe, mas não é permitido seguir em circulos.\r\n");
   else if (mag_savingthrow(victim, SAVING_PARA, 0))
     send_to_char(ch, "A sua vitima resiste!\r\n");
   else {
@@ -550,6 +550,90 @@ ASPELL(spell_enchant_weapon)
     act("$p brilha amarelo.", FALSE, ch, obj, 0, TO_CHAR);
 }
 
+/* Cannot use this spell on an equipped object or it will mess up the wielding
+ * character's hit/dam totals. */
+ASPELL(spell_bless_object)
+{
+  int i, pos_hit = -1, novo = 0;
+  int hit_aff = 0;
+
+  /* int lvl = 0; 
+   * DEPENDE DA TABELA SE VAI USAR */
+
+  if (ch == NULL || obj == NULL)
+    return;
+
+  /* Either already blessed or not a weapon or armoor. */
+  if ((GET_OBJ_TYPE(obj) != ITEM_WEAPON) && (GET_OBJ_TYPE(obj) != ITEM_ARMOR) && (GET_OBJ_TYPE(obj) != ITEM_FIREWEAPON) && (GET_OBJ_TYPE(obj) != ITEM_AMMO)) {
+     act("Você não pode abençoar $p.", FALSE, ch, obj, 0, TO_CHAR);
+    return;
+  }
+  if (OBJ_FLAGGED(obj, ITEM_BLESS)){
+    send_to_char(ch, "Alguem já abençoou isto antes!\r\n");
+    return;
+  }
+
+  if (!IS_GOOD(ch)) {
+    send_to_char(ch,"Você não é virtuos%s o suficiente!\r\n", OA(ch));
+    return;
+  }
+  
+  /* Primeiro, procurar APPLY_HITROLL */
+  for (i = 0; i < MAX_OBJ_AFFECT; i++) {
+    if (obj->affected[i].location == APPLY_HITROLL) {
+        pos_hit = i;
+        break;  // Já achamos, não precisa continuar
+    }
+  }
+
+  /* Se não encontrou APPLY_HITROLL, procurar um slot livre */
+  if (pos_hit == -1) {
+    for (i = 0; i < MAX_OBJ_AFFECT; i++) {
+        if (obj->affected[i].location == APPLY_NONE) {
+            pos_hit = i;
+            novo = 1; // Indica que está aplicando um novo efeito
+            break; // Achou um livre, pode parar
+        }
+    }
+  }
+
+  /* Se não encontrou nenhum dos dois, falha */
+  if (pos_hit == -1) {
+    act("Algo deu errado ao abençoar $p.", FALSE, ch, obj, 0, TO_CHAR);
+    return;
+  }
+  
+  /* VER TABELA PARA BALANCEAMENTO */
+  /*
+  if (level < 36)       { hit_aff = 2; lvl = 0;  }
+  else if (level < 38)  { hit_aff = 2; lvl = 5;  }
+  else if (level < 41)  { hit_aff = 2; lvl = 10; }
+  else if (level < 45)  { hit_aff = 2; lvl = 10; }
+  else if (level < 50)  { hit_aff = 2; lvl = 15; }
+  else if (level < 55)  { hit_aff = 2; lvl = 20; }
+  else if (level < 60)  { hit_aff = 2; lvl = 30; }
+  else if (level < 65)  { hit_aff = 2; lvl = 40; }
+  else                  { hit_aff = 2; lvl = 50; }
+  GET_OBJ_LEVEL(obj) = MAX(lvl, GET_OBJ_LEVEL(obj));
+  */
+  hit_aff = 2;
+
+  obj->affected[pos_hit].location = APPLY_HITROLL;
+  if (novo)
+    obj->affected[pos_hit].modifier = hit_aff;
+   else
+    obj->affected[pos_hit].modifier += hit_aff;
+  
+  if (IS_GOOD(ch)) {
+    SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_ANTI_EVIL);
+    SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_BLESS);
+    act("Você abençoa $p.", FALSE, ch, obj, 0, TO_CHAR);
+  }
+
+   if (GET_OBJ_TYPE(obj) == ITEM_WEAPON)
+       GET_OBJ_VAL(obj, 2)++;
+}
+
 ASPELL(spell_detect_poison)
 {
   if (victim) {
@@ -670,13 +754,10 @@ ASPELL(spell_control_weather)
     send_to_char(ch, "Você canaliza sua magia e altera a temperatura da area.\r\n");
   }
   else if (is_abbrev(property, "vento")) {
-    if (is_abbrev(direction, "aumentar"))
-      weather->winds += (float) change_val / 100.0;  /* ajuste conforme necessário */
-    else
-      weather->winds -= (float) change_val / 100.0;
-      if (weather->winds < 0) weather->winds = 0;
-
-    send_to_char(ch, "Você canaliza sua magia e altera o vento na area.\r\n");
+    if (is_abbrev(direction, "aumentar")) weather->winds += (float) change_val / 100.0;  /* ajuste conforme necessário */
+    else weather->winds -= (float) change_val / 100.0;
+    if (weather->winds < 0) weather->winds = 0;
+      send_to_char(ch, "Você canaliza sua magia e altera o vento na area.\r\n");
   }
   else if (is_abbrev(property, "umidade")) {
     if (is_abbrev(direction, "aumentar"))

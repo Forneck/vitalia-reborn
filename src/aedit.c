@@ -102,7 +102,7 @@ ACMD(do_oasis_aedit)
     OLC_MODE(d) = AEDIT_CONFIRM_EDIT;
   }
   STATE(d) = CON_AEDIT;
-  act("$n starts using OLC.", TRUE, d->character, 0, 0, TO_ROOM);
+  act("$n começpu a alterar o mundo.", TRUE, d->character, 0, 0, TO_ROOM);
   SET_BIT_AR(PLR_FLAGS(ch), PLR_WRITING);
   mudlog(CMP, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE, "OLC: %s starts editing actions.", GET_NAME(ch));
 }

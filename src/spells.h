@@ -50,7 +50,7 @@
 /* PLAYER SPELLS -- Numbered from 1 to MAX_SPELLS */
 #define SPELL_ARMOR                   1 /* Reserved Skill[] DO NOT CHANGE */
 #define SPELL_TELEPORT                2 /* Reserved Skill[] DO NOT CHANGE */
-#define SPELL_BLESS                   3 /* Reserved Skill[] DO NOT CHANGE */
+#define SPELL_BLESS_PERSON            3 /* Reserved Skill[] DO NOT CHANGE */
 #define SPELL_BLINDNESS               4 /* Reserved Skill[] DO NOT CHANGE */
 #define SPELL_BURNING_HANDS           5 /* Reserved Skill[] DO NOT CHANGE */
 #define SPELL_CALL_LIGHTNING          6 /* Reserved Skill[] DO NOT CHANGE */
@@ -104,8 +104,8 @@
 #define SPELL_FIRESHIELD	     54 /* -- vp -			 */
 #define SPELL_IMPROVED_ARMOR	     55 /* -- vp -			 */
 #define SPELL_DISINTEGRATE	     56 /* -- vp -			 */
-#define SPELL_EVOKE_AIR_SERVANT    57 /* -- vp -			 */
-#define SPELL_TALKDEAD		     58 /* -- vp -			 */
+#define SPELL_EVOKE_AIR_SERVANT      57 /* -- vp -			 */
+#define SPELL_TALKDEAD               58 /* -- vp -			 */
 #define SPELL_RAISE_DEAD	     59 /* -- vp -			 */
 #define SPELL_RESSURECT		     60 /* -- vp -			 */
 #define SPELL_VAMP_TOUCH	     61 /* -- vp -			 */
@@ -138,17 +138,17 @@
 #define SPELL_VOICE_EXPLOSION	     89 /* -- ac - March, 2003		 */
 #define SPELL_SOUNDBARRIER	     90 /* -- ac - March, 2003		 */
 #define SPELL_GLOOMSHIELD	     91 /* -- ac - September, 2003	 */
-
 #define SPELL_DARKNESS               92
-#define SPELL_TRANSPORT_VIA_PLANTS      93
+#define SPELL_TRANSPORT_VIA_PLANTS   93
 #define SPELL_PROT_FROM_GOOD         94
-#define SPELL_CREATE_BERRIES 95
-#define SPELL_WINDWALL 96
+#define SPELL_CREATE_BERRIES         95
+#define SPELL_WINDWALL               96
+#define SPELL_BLESS_OBJECT           97
 /* To make an affect induced by dg_affect look correct on 'stat' we need to define it with a 'spellname'. */
-#define SPELL_DG_AFFECT              97
+#define SPELL_DG_AFFECT              98
 
 /** Total Number of defined spells */
-#define NUM_SPELLS                   97
+#define NUM_SPELLS                   98
 
 /* Insert new spells here, up to MAX_SPELLS */
 #define MAX_SPELLS		    160
@@ -334,6 +334,7 @@ ASPELL(spell_charm);
 ASPELL(spell_ventriloquate); /* NEW */
 ASPELL(spell_information);
 ASPELL(spell_identify);
+ASPELL(spell_bless_object);
 ASPELL(spell_enchant_weapon);
 ASPELL(spell_detect_poison);
 ASPELL(spell_control_weather);

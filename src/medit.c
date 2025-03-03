@@ -163,7 +163,7 @@ ACMD(do_oasis_medit)
 
   /* Display the OLC messages to the players in the same room as the
      builder and also log it. */
-  act("$n starts using OLC.", TRUE, d->character, 0, 0, TO_ROOM);
+  act("$n começa a alterar alguma coisa no mundo.", TRUE, d->character, 0, 0, TO_ROOM);
   SET_BIT_AR(PLR_FLAGS(ch), PLR_WRITING);
 
   mudlog(CMP, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE,"OLC: %s starts editing zone %d allowed zone %d",

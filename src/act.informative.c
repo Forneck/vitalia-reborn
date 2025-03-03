@@ -1187,7 +1187,7 @@ ACMD(do_score)
 		send_to_char(ch, "Você se sente protegid%s contra seres bons.\r\n", OA(ch));
 	if (AFF_FLAGGED(ch, AFF_PROTECT_EVIL))
 		send_to_char(ch, "Você se sente protegid%s contra seres maus.\r\n", OA(ch));
-	if (affected_by_spell(ch, SPELL_BLESS))
+	if (affected_by_spell(ch, SPELL_BLESS_PERSON))
 		send_to_char(ch, "Você foi abençoad%s.\r\n", OA(ch));
 
 	else if (affected_by_spell(ch, SPELL_SKIN_LIKE_DIAMOND))

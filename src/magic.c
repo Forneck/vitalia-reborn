@@ -845,15 +845,6 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj,
 
 	switch (spellnum)
 	{
-	case SPELL_BLESS:
-		if (!OBJ_FLAGGED(obj, ITEM_BLESS) && (GET_OBJ_WEIGHT(obj) <= 5 * GET_LEVEL(ch)))
-		{
-			SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_BLESS);
-			if (GET_OBJ_TYPE(obj) == ITEM_WEAPON)
-			   GET_OBJ_VAL(obj, 2)++; //Easter Egg: Bless oposto de Curse
-                        send_to_char(ch,"Isto brilha por alguns instantes.\r\n"); 
-		}
-	break;
 	case SPELL_CURSE:
 		if (!OBJ_FLAGGED(obj, ITEM_NODROP))
 		{
