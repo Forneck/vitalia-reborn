@@ -2941,10 +2941,10 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj,
 				CHECK_NULL(vict_obj, ELEA((const struct char_data *)vict_obj));
 				break;
 			case 'r':
-				i = ARTI(ch);
+				i = OA(ch);
 				break;
 			case 'R':
-				CHECK_NULL(vict_obj, ARTI((const struct char_data *)vict_obj));
+				CHECK_NULL(vict_obj, OA((const struct char_data *)vict_obj));
 				break;
 				/* uppercase previous word */
 			case 'u':

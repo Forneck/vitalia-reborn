@@ -1192,10 +1192,9 @@ void create_spells_db()
  new_spell->type = SPELL;
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15");
-/*new_spell->assign[0].class_num = CLASS_MAGIC_USER;
-new_spell->assign[0].level = 109;
+//new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+//new_spell->assign[0].level = 109;
  new_spell->assign[0].num_mana = strdup(buf);
- */
  spedit_save_internally(new_spell) ;
 
  // SPELL_WORD_OF_RECALL # 42
