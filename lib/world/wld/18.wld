@@ -164,15 +164,15 @@ Por este caminho, você irá até o lado esquerdo da casa.
 ~
 0 -1 1808
 E
-casa~
-A pequena casa é feita com pedras, muito como um minúsculo castelo, só que com
-telhado e uma porta de casa comum. A arquitetura é muito incomum.
-~
-E
 montanha~
 A montanha é extremamente alta, parece tocar as núvens.  Mas você indaga
 que, a montanha é alta demais, deveria ser visível de Midgaard ou de outras
 cidades próximas...  Estranho...
+~
+E
+casa~
+A pequena casa é feita com pedras, muito como um minúsculo castelo, só que com
+telhado e uma porta de casa comum. A arquitetura é muito incomum.
 ~
 S
 #1807
@@ -271,21 +271,11 @@ Parece levar até a cozinha.
 ~
 0 -1 1811
 E
-lareira~
-A lareira está acesa.  A fuligem negra por todas as suas laterais denuncia
-já ter sido usada muitas e muitas vezes.  A lenha ainda não está muito
-queimada, o que indica que deve ter sido acesa a pouco tempo.
-~
-E
-poltrona~
-A grande poltrona foi feita em madeira, e possui ornamentos que parecem
-terem sido feitos por um escultor.  Parece muito macia e confortável.
-~
-E
-espada~
-É uma espada muito bonita, parece ter sido feita de ouro.  Possui uma longa
-lâmina, com um rubi encrustado muito próximo ao punho.  Certamente, é de
-alguém com muito bom gosto.
+quadro paisagem~
+É uma paisagem de um campo aberto, muito bonito, com poucas árvores e
+arbustos.  Há uma pessoa nessa pintura, de costas, vestida como um mago,
+segurando um longo báculo na mão direita.  Há uma montanha ao fundo, que se
+parece muito com a que está logo atrás da casa.
 ~
 E
 escudo~
@@ -294,11 +284,21 @@ centro.  Esse rubi brilha quando você se aproxima, e parece impedir que você
 chegue perto o suficiente para tocá-lo.
 ~
 E
-quadro paisagem~
-É uma paisagem de um campo aberto, muito bonito, com poucas árvores e
-arbustos.  Há uma pessoa nessa pintura, de costas, vestida como um mago,
-segurando um longo báculo na mão direita.  Há uma montanha ao fundo, que se
-parece muito com a que está logo atrás da casa.
+espada~
+É uma espada muito bonita, parece ter sido feita de ouro.  Possui uma longa
+lâmina, com um rubi encrustado muito próximo ao punho.  Certamente, é de
+alguém com muito bom gosto.
+~
+E
+poltrona~
+A grande poltrona foi feita em madeira, e possui ornamentos que parecem
+terem sido feitos por um escultor.  Parece muito macia e confortável.
+~
+E
+lareira~
+A lareira está acesa.  A fuligem negra por todas as suas laterais denuncia
+já ter sido usada muitas e muitas vezes.  A lenha ainda não está muito
+queimada, o que indica que deve ter sido acesa a pouco tempo.
 ~
 S
 #1811
@@ -364,6 +364,12 @@ O corredor continua para o norte.
 ~
 ~
 0 -1 1891
+D2
+   Um grande portao de energia impede a passagem tanto dos vivos, quanto dos
+mortos.
+~
+grande portao de energia~
+2 2 3
 S
 #1891
 A Entrada do Reino da Morte~
@@ -440,14 +446,14 @@ O grande solo parece ir ao infinito.
 ~
 0 -1 1899
 E
+céu ventos~
+Ventos gelados mergulham sobre você, vindos do céu escuro e sem núvens.
+~
+E
 solo~
 O solo de predras é cinza, e completamente plano, sem nenhum arranhão.
 É provavelmente tão duro que seria impossível alguma coisa fazer um mínimo
 arranhao nele.
-~
-E
-céu ventos~
-Ventos gelados mergulham sobre você, vindos do céu escuro e sem núvens.
 ~
 S
 $~

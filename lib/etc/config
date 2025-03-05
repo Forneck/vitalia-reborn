@@ -44,7 +44,7 @@ idle_void = 8
 idle_rent_time = 24
 
 * Level and above of players whom are immune to idle penalties.
-idle_max_level = 106
+idle_max_level = 10
 
 * Should the items in death traps be junked automatically?
 dts_are_dumps = 0
@@ -254,5 +254,5 @@ protocol_negotiation = 1
 special_in_comm = 1
 
 * If 0 then off, otherwise 1: Brief, 2: Normal, 3: Complete.
-debug_mode = 1
+debug_mode = 0
 

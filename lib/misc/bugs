@@ -284,3 +284,13 @@ Level     110
 Room      3801
 Flags     0 0 0 0
 End
+Text       Fly~
+Body      Mesmo com magia/affect fly, o comando fly nao levanta voo.
+~
+Name      Cansian~
+IdNum     1
+Dated     1740709013
+Level     110
+Room      206
+Flags     0 0 0 0
+End

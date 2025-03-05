@@ -1371,17 +1371,14 @@ ACMD(do_weather) {
               temp_feel = "e o clima está ameno";
           }
         
-           if (OUTSIDE(ch) || IS_GOD(ch)) {
+           if (OUTSIDE(ch) || GET_LEVEL(ch) > 106) {
   	      /* Envia a mensagem combinando ambas as descrições */
               send_to_char(ch, " O céu está %s, %s %s.\r\n", sky_look[sky], weather_feel, temp_feel); 
           /* Discutir melhor momento para exibir: Acima de level X, Remort Y ou Deuses */
     	  if (GET_LEVEL(ch) >= 10) { 
-        	send_to_char(ch, " Pressão: %d hPa (mudança: %d), Céu: %d (%s) \r\n",
-                     pressure, press_diff, sky, sky_look[sky]);
-	        send_to_char(ch, "Temperatura %d º.C (mudança: %d), Umidade %.2f\r\n",
-                     temperature, temp_diff, humidity);
-	        send_to_char(ch, "Vento: %.2f m/s, Intensidade Solar: %d\r\n",
-                     wind, sunlight);
+        	send_to_char(ch, " Pressão: %d hPa, Céu: %s \r\n", pressure, sky_look[sky]);
+	        send_to_char(ch, "Temperatura %d º.C, Umidade %.2f\r\n", temperature, humidity);
+	        send_to_char(ch, "Vento: %.2f m/s\r\n", wind);
     	  }
 	} else {
 	    send_to_char(ch, " Você não tem idéia de como o tempo possa estar.\r\n");

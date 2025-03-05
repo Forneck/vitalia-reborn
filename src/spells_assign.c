@@ -252,7 +252,7 @@ void create_spells_db()
  sprintf(buf,"-(1 + (self.level / 30))");
  new_spell->applies[1].modifier = strdup(buf);
  new_spell->applies[1].duration = strdup("6");
- new_spell->messages.to_self = strdup("$p brilha por alguns instantes.");
+ new_spell->messages.to_self = strdup("$N brilha por alguns instantes.");
  new_spell->messages.to_vict = strdup("Você se sente virtuos$r.");
  new_spell->messages.wear_off = strdup("Você se sente menos abençoad$r.");
 

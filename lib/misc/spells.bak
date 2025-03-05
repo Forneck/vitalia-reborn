@@ -17,7 +17,7 @@
  1 P 3 1 2 8194 9 0
  2 bless person
 10 Você se sente menos abençoad$r.
-11 $N brilha por alguns instantes.
+11 $p brilha por alguns instantes.
 12 Você se sente virtuos$r.
 80 18 1 + (1 + (self.level / 30))
 99 6
@@ -235,6 +235,7 @@
  1 P 28 1 2 12 8 0
  2 heal
 12 Uma calorosa sensação percorre o seu corpo.
+
 25 4
 50 100 + dice(3, 8)
 90 1 24 
@@ -329,6 +330,7 @@
  2 sleep
 10 Você se sente menos cansad$r.
 12 Você sente muito sono...  Zzzz......
+
 13 $N dorme.
 80 40 
 99 self.level / 4 + 4
@@ -507,6 +509,7 @@
  2 talk with dead
 10 Você não consegue mais sentir o mundo dos mortos.
 12 Agora você pode sentir o reino dos mortos.
+
 80 46 
 99 self.level
 90 1 10 
@@ -531,6 +534,7 @@
  2 breath
 10 Você sente necessidade de respirar novamente.
 12 Você sente que não precisa mais respirar.
+
 80 49 
 99 2
 90 0 7 
@@ -651,6 +655,7 @@
  1 P 75 1 2 8 8 0
  2 minor healing
 12 Uma onda de calor atravessa seu corpo, fazendo você se sentir melhor.
+
 50 dice(2, 8) + 2 + (param / 4)
 90 4 15 
 99 (30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10
@@ -666,6 +671,7 @@
  1 P 77 1 2 8 8 0
  2 regeneration
 12 Você sente o poder da natureza curando seu corpo.
+
 50 dice(6, 8)
 52 10 + dice(2, 6)
 90 4 40 
@@ -909,6 +915,7 @@
  1 C 169 1 2 8 8 0
  2 invocacao aos deuses
 12 Os ecos de uma canção divina preenchem sua cabeça e curam seu corpo.
+
 50 (dice(3,6) + (param - 15)) > 1 ? (dice(3,6) + (param - 15) : 1
 90 5 95 
 99 (90 - (5 * self.level)) > 50 ? (90 - (5 * self.level)) : 50
