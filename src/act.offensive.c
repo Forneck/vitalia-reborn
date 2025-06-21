@@ -1144,6 +1144,7 @@ ACMD(do_trip)
 }
 
 /* -- jr - Sep 15, 2000
+ * updated by Cansian
  * SEIZE skill.
  */
 ACMD(do_seize)

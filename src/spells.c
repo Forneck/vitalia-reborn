@@ -37,6 +37,7 @@ ASPELL(spell_create_water)
       name_from_drinkcon(obj);
       GET_OBJ_VAL(obj, 2) = LIQ_SLIME;
       name_to_drinkcon(obj, LIQ_SLIME);
+      act("Hum... alguma coisa deu errado em $p.", FALSE, ch, obj, 0, TO_CHAR);
     } else {
       water = MAX(GET_OBJ_VAL(obj, 0) - GET_OBJ_VAL(obj, 1), 0);
       if (water > 0) {
@@ -46,7 +47,7 @@ ASPELL(spell_create_water)
 	GET_OBJ_VAL(obj, 1) += water;
 	name_to_drinkcon(obj, LIQ_WATER);
 	weight_change_object(obj, water);
-	act("$p esta cheio.", FALSE, ch, obj, 0, TO_CHAR);
+	act("$p foi enchido.", FALSE, ch, obj, 0, TO_CHAR);
       }
     }
   }
@@ -65,6 +66,7 @@ ASPELL(spell_create_nectar)
       name_from_drinkcon(obj);
       GET_OBJ_VAL(obj, 2) = LIQ_SLIME;
       name_to_drinkcon(obj, LIQ_SLIME);
+      act("Hum... alguma coisa deu errado em $p.", FALSE, ch, obj, 0, TO_CHAR);
     } else {
       liq = MAX(GET_OBJ_VAL(obj, 0) - GET_OBJ_VAL(obj, 1), 0);
       if (liq > 0) {
@@ -91,6 +93,7 @@ ASPELL(chanson_brinde)
        name_from_drinkcon(obj);
       GET_OBJ_VAL(obj, 2) = LIQ_BLOOD;
       name_to_drinkcon(obj, LIQ_BLOOD);
+      act("Hum... alguma coisa deu errado em $p.", FALSE, ch, obj, 0, TO_CHAR);
     } else {
       liq = MAX(GET_OBJ_VAL(obj, 0) - GET_OBJ_VAL(obj, 1), 0);
       if (liq > 0) { 
@@ -100,7 +103,7 @@ ASPELL(chanson_brinde)
 	GET_OBJ_VAL(obj, 1) += liq;
 	name_to_drinkcon(obj, LIQ_WINE); 
 	weight_change_object(obj, liq);
-        act("As forças da natureza encheram $p.", FALSE, ch, obj, 0, TO_CHAR);
+	act("A canção faz com que $p se encha.", FALSE, ch, obj, 0, TO_CHAR);
       }
     }
   }
@@ -112,7 +115,7 @@ ASPELL(spell_recall)
     return;
   
   if (ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(victim)), ZONE_NOASTRAL)) {
-    send_to_char(ch, "Uma luz brilhante impede a sua magia de funcionar!");
+    send_to_char(ch, "Uma estranha força não lhe deixa sair daqui.\r\n");
     return;
   }
 
@@ -147,7 +150,7 @@ ASPELL(spell_teleport)
     return;
 
   if (ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(victim)), ZONE_NOASTRAL)) {
-    send_to_char(ch, "Uma luz brilhante impede a sua magia de funcionar!");
+    send_to_char(ch, "Uma estranha força não lhe deixa sair daqui.\r\n");
     return;
   }
 
@@ -157,11 +160,11 @@ ASPELL(spell_teleport)
            ROOM_FLAGGED(to_room, ROOM_GODROOM) || ZONE_FLAGGED(GET_ROOM_ZONE(to_room), ZONE_CLOSED) ||
            ZONE_FLAGGED(GET_ROOM_ZONE(to_room), ZONE_NOASTRAL));
 
-  act("$n lentamente some de existencia ate desaparecer completamente.",
+  act("$n lentamente some de existencia até desaparecer completamente.",
       FALSE, victim, 0, 0, TO_ROOM);
   char_from_room(victim);
   char_to_room(victim, to_room);
-  act("$n lentamente some de existencia.", FALSE, victim, 0, 0, TO_ROOM);
+  act("$n lentamente entra em existencia até aparecer completamente.", FALSE, victim, 0, 0, TO_ROOM);
   look_at_room(victim, 0);
   entry_memory_mtrigger(victim);
   greet_mtrigger(victim, -1);
@@ -181,26 +184,28 @@ ASPELL(spell_summon)
 
   if (ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(victim)), ZONE_NOASTRAL) ||
       ZONE_FLAGGED(GET_ROOM_ZONE(IN_ROOM(ch)), ZONE_NOASTRAL)) {
-  send_to_char(ch, "Uma luz brilhante impede a sua magia de funcionar!");
+  send_to_char(ch, "Uma estranha força impede de trazer %s até você!", ELEA(victim));
     return;
   }
 
   if (!CONFIG_PK_ALLOWED) {
     if (MOB_FLAGGED(victim, MOB_AGGRESSIVE)) {
-      act("Assim que as palavras saem da sua boca e $N viaja\r\n"
-	  "atraves do tempo e espaco ate voce, voce percebe que $E\r\n"
-	  "pode te machucar, então você sabiamente manda $M de volta.",
-	  FALSE, ch, 0, victim, TO_CHAR);
+     act("Assim que as palavras saem de seus lábios e $N viaja\r\n"
+           "através do tempo e do espaço para você, você percebe\r\n"
+           "que $L é agressiv$R e irá lhe machucar, e sabiamente\r\n"
+           "$R envia devolta.",
+	   FALSE, ch, 0, victim, TO_CHAR);
       return;
     }
     if (!IS_NPC(victim) && !PRF_FLAGGED(victim, PRF_SUMMONABLE) &&
 	!PLR_FLAGGED(victim, PLR_KILLER)) {
       send_to_char(victim, "%s acabou de tentar te invocar para: %s.\r\n"
-	      "Mas falhou!\r\n"
-	      "Digite NOSUMMON para permitir invocacao.\r\n",
-	      GET_NAME(ch), world[IN_ROOM(ch)].name);
+	     "%s falhou porquê você está com a proteção ligada.\r\n"
+                 "Digite NOSUMMON para permitir que outros jogadores lhe\r\n"
+                 "convoquem para outros lugares.\r\n",
+	      GET_NAME(ch), world[IN_ROOM(ch)].name, ELEAUpper(ch));
 
-      send_to_char(ch, "Voce falhou porque %s esta' com a protecao ligada.\r\n", GET_NAME(victim));
+      send_to_char(ch, "Voce falhou porquê %s está com a protecao ligada.\r\n", GET_NAME(victim));
       mudlog(BRF, MAX(LVL_IMMORT, MAX(GET_INVIS_LEV(ch), GET_INVIS_LEV(victim))), TRUE, 
         "%s falhou invocar %s para %s.", GET_NAME(ch), GET_NAME(victim), world[IN_ROOM(ch)].name);
       return;
@@ -213,13 +218,13 @@ ASPELL(spell_summon)
     return;
   }
 
-  act("$n desaparece subitamente", TRUE, victim, 0, 0, TO_ROOM);
+  act("$n desaparece repentinamente.", TRUE, victim, 0, 0, TO_ROOM);
 
   char_from_room(victim);
   char_to_room(victim, IN_ROOM(ch));
 
-  act("$n chega subitamente.", TRUE, victim, 0, 0, TO_ROOM);
-  act("$n invocou voce!", FALSE, ch, 0, victim, TO_VICT);
+  act("$n chega repentinamente.", TRUE, victim, 0, 0, TO_ROOM);
+  act("$n lhe convocou!", FALSE, ch, 0, victim, TO_VICT);
   look_at_room(victim, 0);
   entry_memory_mtrigger(victim);
   greet_mtrigger(victim, -1);
@@ -293,21 +298,22 @@ ASPELL(spell_locate_object)
     if (!isname_obj(name, i->name))
       continue;
 
-  send_to_char(ch, "%c%s", UPPER(*i->short_description), i->short_description + 1);
+  send_to_char(ch, "%c%s está", UPPER(*i->short_description), i->short_description + 1);
 
     if (i->carried_by)
-      send_to_char(ch, " carregado por %s.\r\n", PERS(i->carried_by, ch));
+      send_to_char(ch, " sendo carregado por %s.\r\n", PERS(i->carried_by, ch));
     else if (IN_ROOM(i) != NOWHERE)
-      send_to_char(ch, " esta em %s.\r\n", world[IN_ROOM(i)].name);
+      send_to_char(ch, " em %s.\r\n", world[IN_ROOM(i)].name);
     else if (i->in_obj)
       send_to_char(ch, " dentro de %s.\r\n", i->in_obj->short_description);
     else if (i->worn_by)
-      send_to_char(ch, " no corpo de %s.\r\n", PERS(i->worn_by, ch));
+      send_to_char(ch, " sendo vestido por %s.\r\n", PERS(i->worn_by, ch));
     else
-      send_to_char(ch, "está num lugar incerto.\r\n");
+      send_to_char(ch, " num lugar incerto.\r\n");
 
     j--;
   }
+
 }
 
 ASPELL(spell_charm)
@@ -320,7 +326,7 @@ ASPELL(spell_charm)
   if (victim == ch)
     send_to_char(ch, "Voce gosta cada vez mais de si!\r\n");
   else if (!IS_NPC(victim) && !PRF_FLAGGED(victim, PRF_SUMMONABLE))
-    send_to_char(ch, "Voce falhou porque %s esta com o NOSUMMON ligado!\r\n", GET_NAME(victim));
+    send_to_char(ch, "Voce falhou porque %s está com o NOSUMMON ligado!\r\n", GET_NAME(victim));
   else if (AFF_FLAGGED(victim, AFF_SANCTUARY))
     send_to_char(ch, "A sua vitima esta protegida pelo santuario!\r\n");
   else if (AFF_FLAGGED(victim, AFF_GLOOMSHIELD))
@@ -354,9 +360,10 @@ ASPELL(spell_charm)
     SET_BIT_AR(af.bitvector, AFF_CHARM);
     affect_to_char(victim, &af);
 
-    act("$n nao e' uma boa companhia?", FALSE, ch, 0, victim, TO_VICT);
+    act("$n não é uma boa companhia?", FALSE, ch, 0, victim, TO_VICT);
     if (IS_NPC(victim))
       //remover agro
+      REMOVE_BIT_AR(MOB_FLAGS(victim), MOB_AGGRESSIVE);
       REMOVE_BIT_AR(MOB_FLAGS(victim), MOB_SPEC);
   }
 }
@@ -379,14 +386,14 @@ ASPELL(chanson_encanto)
   else if (MOB_FLAGGED(victim, MOB_NOCHARM))
     send_to_char(ch, "A sua vitima resiste!\r\n");
   else if (AFF_FLAGGED(ch, AFF_CHARM))
-    send_to_char(ch, "Voce nao pode ter seguidores!\r\n");
+    send_to_char(ch, "Voce não pode ter seguidores!\r\n");
   else if (AFF_FLAGGED(victim, AFF_CHARM) || level < GET_LEVEL(victim))
     send_to_char(ch, "Voce falhou.\r\n");
   /* player charming another player - no legal reason for this */
   else if (!CONFIG_PK_ALLOWED && !IS_NPC(victim))
     send_to_char(ch, "Voce falhou! Mas nao deveria ter feito isto.\r\n");
   else if (circle_follow(victim, ch))
-    send_to_char(ch, "Desculpe, mas nao e' permitido seguir em circulos.\r\n");
+    send_to_char(ch, "Desculpe, mas não é  permitido seguir em circulos.\r\n");
   else if (mag_savingthrow(victim, SAVING_PARA, 0))
     send_to_char(ch, "A sua vitima resiste!\r\n");
   else {
@@ -405,9 +412,10 @@ ASPELL(chanson_encanto)
     SET_BIT_AR(af.bitvector, AFF_CHARM);
     affect_to_char(victim, &af);
 
-    act("$n nao e' uma boa companhia?", FALSE, ch, 0, victim, TO_VICT);
+    act("$n não é uma boa companhia?", FALSE, ch, 0, victim, TO_VICT);
     if (IS_NPC(victim))
       //remover agro
+      REMOVE_BIT_AR(MOB_FLAGS(victim), MOB_AGGRESSIVE);
       REMOVE_BIT_AR(MOB_FLAGS(victim), MOB_SPEC);
   }
 }

@@ -106,9 +106,11 @@ ACMD(do_save)
 	save_char(ch);
 	 send_to_char(ch, "Salvando objetos.\r\n");
 	Crash_crashsave(ch);
-	if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE_CRASH))
-	send_to_char(ch, "Salvando casa.\r\n");	House_crashsave(GET_ROOM_VNUM(IN_ROOM(ch)));
-		  GET_LOADROOM(ch) = GET_ROOM_VNUM(IN_ROOM(ch));    
+	if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE_CRASH)){
+	  send_to_char(ch, "Salvando casa.\r\n");
+	  House_crashsave(GET_ROOM_VNUM(IN_ROOM(ch)));
+	}
+	GET_LOADROOM(ch) = GET_ROOM_VNUM(IN_ROOM(ch));    
 }
 
 /* Generic function for commands which are normally overridden by special
@@ -401,8 +403,7 @@ ACMD(do_title)
 	else if (strstr(argument, "(") || strstr(argument, ")")  || strstr(argument, "[") || strstr(argument, "]") || strstr(argument, "<") || strstr(argument, ">") || strstr(argument, "{") || strstr(argument, "}"))
 		send_to_char(ch, "Títulos não podem conter os caracteres (, ), [, ], <, >, { ou }.\r\n");
 	else if (strlen(argument) > MAX_TITLE_LENGTH)
-		send_to_char(ch, "Sinto muito, os títulos não podem ser maiores que %d letras.\r\n",
-					 MAX_TITLE_LENGTH);
+		send_to_char(ch, "Sinto muito, os títulos não podem ser maiores que %d letras.\r\n", MAX_TITLE_LENGTH);
 	else
 	{
 		set_title(ch, argument);
@@ -609,7 +610,7 @@ ACMD(do_group)
 	}
 	else
 	{
-		send_to_char(ch, "Você precisa especificar a opção do grupo.\r\n");
+		send_to_char(ch, "Você precisa especificar o comando do grupo.\r\n");
 	}
 
 }
@@ -623,7 +624,6 @@ ACMD(do_report)
 		send_to_char(ch, "Mas você não é membro de um grupo!\r\n");
 		return;
 	}
-
 	send_to_group(NULL, group, "%s relata: %d/%dHp, %d/%dMn, %d/%dMv,%d/10Ac\r\n",
 				  GET_NAME(ch),
 				  GET_HIT(ch), GET_MAX_HIT(ch),
@@ -637,8 +637,10 @@ ACMD(do_split)
 	size_t len;
 	struct char_data *k;
 
-	if (IS_NPC(ch))
+	if (IS_NPC(ch)) {
+		send_to_char(ch, "Infelizmente você não pode fazer isto\r\n");
 		return;
+	}
 
 	one_argument(argument, buf);
 
@@ -879,7 +881,7 @@ ACMD(do_gen_tog)
 		{"Autoexits desligado.\r\n",
 		 "Autoexits ligado.\r\n"},
 		{"Não será mais possível rastrear através de portas.\r\n",
-				"Agora será possível rastrear através de portas.\r\n"},
+		 "Agora será possível rastrear através de portas.\r\n"},
 		{"A tela não vai ser limpa no OLC.\r\n", "A tela vai ser limpa no OLC.\r\n"},
 		{"Modo 'Construtor' desligado.\r\n", "Modo 'Construtor' ligado.\r\n"},
 		{"AWAY desligado.\r\n", "AWAY ligado"},
@@ -902,9 +904,9 @@ ACMD(do_gen_tog)
 		{"Você não irá mais ver os resets de áreas.\r\n",
 		 "Você irá mais ver os resets de áreas.\r\n"},
 		 {"Você não verá mais a saúde do oponente durante a luta.\r\n",
-				"Agora você verá a saúde do oponente durante a luta.\r\n"},
+		 "Agora você verá a saúde do oponente durante a luta.\r\n"},
 		{"Seu título não será mais alterado automaticamente.\r\n",
-				"Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"}
+		 "Seu título será alterado automaticamente sempre que evoluir um nível.\r\n"}
 	};
 
 	if (IS_NPC(ch))

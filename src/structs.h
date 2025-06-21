@@ -948,6 +948,18 @@ struct room_data
   struct list_data * events;  
 };
 
+
+/*
+ * Estrutura para armazenar os "genes" de um mob, que podem evoluir.
+ */
+struct mob_genetics {
+   int wimpy_tendency;  /* Tendência de fuga. Varia de 0 a 100. */
+   /* Futuramente, podemos adicionar outros genes aqui: */
+   int loot_tendency;
+   int equip_tendency;
+   int roam_tendency;
+};
+
 /* char-related structures */
 /** Memory structure used by NPCs to remember specific PCs. */
 struct memory_rec_struct
@@ -1206,6 +1218,7 @@ struct char_data
   
   struct list_data * events;
   struct str_plrspells *plrspells;
+  struct mob_genetics *genetics;   /* Genética do mob (para evolução) */
 
 };
 

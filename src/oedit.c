@@ -174,7 +174,7 @@ ACMD(do_oasis_oedit)
   STATE(d) = CON_OEDIT;
 
   /* Send the OLC message to the players in the same room as the builder. */
-  act("$n starts using OLC.", TRUE, d->character, 0, 0, TO_ROOM);
+  act("$n começou a mudar alguma coisa no mundo!", TRUE, d->character, 0, 0, TO_ROOM);
   SET_BIT_AR(PLR_FLAGS(ch), PLR_WRITING);
 
   /* Log the OLC message. */

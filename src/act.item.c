@@ -2001,7 +2001,7 @@ ACMD(do_envenom)
     }
 
   if (GET_OBJ_TYPE(weapon) != ITEM_WEAPON && GET_OBJ_TYPE(weapon) != ITEM_AMMO) {
-    send_to_char(ch, "Somente armas podem ser envenenadas!\r\n");
+    send_to_char(ch, "Somente armas ou munições podem ser envenenadas!\r\n");
     return;
   }
 
