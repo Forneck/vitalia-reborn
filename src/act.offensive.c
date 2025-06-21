@@ -514,54 +514,90 @@ ACMD(do_order)
 
 ACMD(do_flee)
 {
-	int i, attempt, loss;
-	struct char_data *was_fighting;
+    int i, attempt, loss;
+    struct char_data *was_fighting;
 
-	if (GET_POS(ch) < POS_FIGHTING)
-	{
-		send_to_char(ch, "Você não está em condições de fugir!\r\n");
-		return;
-	}
+    if (GET_POS(ch) < POS_FIGHTING)
+    {
+        send_to_char(ch, "Você não está em condições de fugir!\r\n");
+        return;
+    }
 
-	for (i = 0; i < 6; i++)
-	{
-		attempt = rand_number(0, DIR_COUNT - 1);	/* Select a random
-													   direction */
-		if (CAN_GO(ch, attempt) && !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH))
-		{
-			act("$n entra em pânico e tenta fugir!", TRUE, ch, 0, 0, TO_ROOM);
-			was_fighting = FIGHTING(ch);
+    for (i = 0; i < 6; i++)
+    {
+        attempt = rand_number(0, DIR_COUNT - 1);        /* Seleciona uma direção aleatória */
+        if (CAN_GO(ch, attempt) && !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH))
+        {
+            act("$n entra em pânico e tenta fugir!", TRUE, ch, 0, 0, TO_ROOM);
+            was_fighting = FIGHTING(ch);
 
-			if (AFF_FLAGGED(ch, AFF_PARALIZE))
-			{
-				send_to_char(ch, "Você está paralisado! Não pode fugir! Comece a rezar...\r\n");
-				act("$n não pode fugir, $l está paralisad$r!", TRUE, ch, 0, 0, TO_ROOM);
-			}
-			if (do_simple_move(ch, attempt, TRUE))
-			{
-				send_to_char(ch, "Você foge de pernas para o ar.\r\n");
-				if (was_fighting && !IS_NPC(ch))
-				{
-					loss = GET_MAX_HIT(was_fighting) - GET_HIT(was_fighting);
-					loss *= GET_LEVEL(was_fighting);
-					send_to_char(ch, "Você perdeu %ld pontos de experiência.\r\n", (long)loss);
-					gain_exp(ch, -loss);
-				}
-				if (FIGHTING(ch))
-					stop_fighting(ch);
-				if (was_fighting && ch == FIGHTING(was_fighting))
-					stop_fighting(was_fighting);
-			}
-			else
-			{
-				send_to_char(ch, "Você tenta fugir, mas não consegue!\r\n");
-				act("$n tenta fugir mas não consegue!", TRUE, ch, 0, 0, TO_ROOM);
-			}
-			return;
-		}
-	}
-	send_to_char(ch, "%sPANICO!  Você não tem escapatória!%s\r\n", CCWHT(ch, C_NRM),
-				 CCNRM(ch, C_NRM));
+            if (AFF_FLAGGED(ch, AFF_PARALIZE))
+            {
+                send_to_char(ch, "Você está paralisado! Não pode fugir! Comece a rezar...\r\n");
+                act("$n não pode fugir, $l está paralisad$r!", TRUE, ch, 0, 0, TO_ROOM);
+            }
+
+            if (do_simple_move(ch, attempt, TRUE))
+            {
+                send_to_char(ch, "Você foge de pernas para o ar.\r\n");
+
+                /************************************************
+                 * Genética: Mob conseguiu fugir com sucesso.   *
+                 * Aumenta a tendência de fugir (wimpy).        *
+                 ************************************************/
+                if (IS_NPC(ch) && ch->genetics) {
+                    ch->genetics->wimpy_tendency += 1;
+                    /* Garante que o valor não passa de 100 */
+                    if (ch->genetics->wimpy_tendency > 100)
+                        ch->genetics->wimpy_tendency = 100;
+                }
+
+                if (was_fighting && !IS_NPC(ch))
+                {
+                    loss = GET_MAX_HIT(was_fighting) - GET_HIT(was_fighting);
+                    loss *= GET_LEVEL(was_fighting);
+                    send_to_char(ch, "Você perdeu %ld pontos de experiência.\r\n", (long)loss);
+                    gain_exp(ch, -loss);
+                }
+
+                if (FIGHTING(ch))
+                    stop_fighting(ch);
+                if (was_fighting && ch == FIGHTING(was_fighting))
+                    stop_fighting(was_fighting);
+            }
+            else
+            {
+                send_to_char(ch, "Você tenta fugir, mas não consegue!\r\n");
+                act("$n tenta fugir mas não consegue!", TRUE, ch, 0, 0, TO_ROOM);
+
+                /************************************************
+                 * Genética: Mob falhou a tentativa de fugir.   *
+                 * Diminui a tendência de fugir (wimpy).        *
+                 ************************************************/
+                if (IS_NPC(ch) && ch->genetics) {
+                    ch->genetics->wimpy_tendency -= 5; /* Penalidade por falha */
+                    /* Garante que o valor não fica abaixo de 0 */
+                    if (ch->genetics->wimpy_tendency < 0)
+                        ch->genetics->wimpy_tendency = 0;
+                }
+            }
+            return;
+        }
+    }
+
+    send_to_char(ch, "%sPANICO!  Você não tem escapatória!%s\r\n", CCWHT(ch, C_NRM),
+                             CCNRM(ch, C_NRM));
+
+    /****************************************************************
+     * Genética: Mob entrou em pânico e não encontrou saídas.       *
+     * Isto também conta como uma falha.                            *
+     ****************************************************************/
+    if (IS_NPC(ch) && ch->genetics) {
+        ch->genetics->wimpy_tendency -= 5; /* Penalidade por pânico */
+        /* Garante que o valor não fica abaixo de 0 */
+        if (ch->genetics->wimpy_tendency < 0)
+            ch->genetics->wimpy_tendency = 0;
+    }
 }
 
 ACMD(do_bash)
