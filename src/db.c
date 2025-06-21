@@ -974,7 +974,18 @@ log1("Sorting command list.");
 			    *(zone_table[i].weather) = climates[zone_table[i].climate]; // Copia os valores
 			}
 	}
-
+        /* * PASSO NOVO: Alocar memória para a genética de CADA PROTÓTIPO de mob.
+        * Isto prepara os protótipos para receberem os valores guardados
+        * ou para terem um valor padrão.
+        */
+        log("Allocating memory for mob prototype genetics.");
+        int rnum;
+        for (rnum = 0; rnum <= top_of_mobt; rnum++) {
+         CREATE(mob_proto[rnum].genetics, struct mob_genetics, 1);
+          /* Inicializamos com um valor padrão. Se existir um valor no .mob,
+          * a função parse_mobile() irá substituí-lo. */
+         mob_proto[rnum].genetics->wimpy_tendency = 0;
+        }
 	reset_q.head = reset_q.tail = NULL;
 
 	if (!boot_time)
@@ -1978,6 +1989,19 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
 	if (value)
 		num_arg = atoi(value);
 
+        /*************************************************************************
+        * Adicionado para o sistema de Genética de Mobs                         *
+        * --------------------------------------------------------------------- *
+        * Adicionamos um novo CASE aqui. Quando o ficheiro .mob contiver uma    *
+        * linha como "GenWimpy: 10", esta secção irá lê-la e guardá-la.         *
+        *************************************************************************/
+        CASE("GenWimpy")
+        {
+              if (mob_proto[i].genetics) { /* Verifica se a genética foi alocada */
+                 mob_proto[i].genetics->wimpy_tendency = num_arg;
+              }
+	}
+
 	CASE("BareHandAttack")
 	{
 		RANGE(0, NUM_ATTACK_TYPES - 1);
@@ -2904,6 +2928,23 @@ struct char_data *read_mobile(mob_vnum nr, int type)	/* and mob_rnum */
 	clear_char(mob);
 
 	*mob = mob_proto[i];
+        /*************************************************************************
+        * Adicionado para o sistema de Genética de Mobs                         *
+        * --------------------------------------------------------------------- *
+        * O passo acima copiou o ponteiro 'genetics' do protótipo. Para que     *
+        * cada mob seja um indivíduo único que possa "aprender", precisamos     *
+        * de criar uma nova estrutura de genética para esta instância.          *
+        *************************************************************************/
+        CREATE(mob->genetics, struct mob_genetics, 1);
+
+        /* Agora, copiamos os VALORES da genética do protótipo para a nova instância. */
+        /* Isto garante que a instância começa com os genes base da sua espécie.      */
+        if (mob_proto[i].genetics) {
+           *(mob->genetics) = *(mob_proto[i].genetics);
+        }
+        /*************************************************************************
+        * Fim do bloco de Genética                                              *
+        *************************************************************************/
 	mob->next = character_list;
 	character_list = mob;
 
@@ -2927,7 +2968,7 @@ struct char_data *read_mobile(mob_vnum nr, int type)	/* and mob_rnum */
 	mob_index[i].number++;
 
 	mob->script_id = 0;			// this is set later by char_script_id
-
+         
 	copy_proto_script(&mob_proto[i], mob, MOB_TRIGGER);
 	assign_triggers(mob, MOB_TRIGGER);
 
@@ -3907,6 +3948,9 @@ void free_char(struct char_data *ch)
 	{
 		remove_from_lookup_table(ch->script_id);
 	}
+        
+	if (ch->genetics)
+            free(ch->genetics);
 
 	free(ch);
 }
