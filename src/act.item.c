@@ -45,9 +45,9 @@ static void perform_drop_gold(struct char_data *ch, int amount, byte mode, room_
 /* do_put utility functions */
 static void perform_put(struct char_data *ch, struct obj_data *obj, struct obj_data *cont);
 /* do_remove utility functions */
-static void perform_remove(struct char_data *ch, int pos);
+void perform_remove(struct char_data *ch, int pos);
 /* do_wear utility functions */
-static void perform_wear(struct char_data *ch, struct obj_data *obj, int where);
+void perform_wear(struct char_data *ch, struct obj_data *obj, int where);
 static void wear_message(struct char_data *ch, struct obj_data *obj, int where);
 
 
@@ -1506,7 +1506,7 @@ static void wear_message(struct char_data *ch, struct obj_data *obj, int where)
 	act(wear_messages[where][1], FALSE, ch, obj, 0, TO_CHAR);
 }
 
-static void perform_wear(struct char_data *ch, struct obj_data *obj, int where)
+void perform_wear(struct char_data *ch, struct obj_data *obj, int where)
 {
 	/* 
 	 * ITEM_WEAR_TAKE is used for objects that do not require special bits
@@ -1806,7 +1806,7 @@ ACMD(do_grab)
 	}
 }
 
-static void perform_remove(struct char_data *ch, int pos)
+void perform_remove(struct char_data *ch, int pos)
 {
 	struct obj_data *obj;
 

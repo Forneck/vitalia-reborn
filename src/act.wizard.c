@@ -901,7 +901,8 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
 	                 CCCYN(ch, C_NRM), GET_GENWIMPY(k), CCNRM(ch, C_NRM));
 	    send_to_char(ch, "Tendência Loot (Genética): [%s%d%s]\r\n",
 	                 CCCYN(ch, C_NRM), GET_GENLOOT(k), CCNRM(ch, C_NRM));
-	    
+	    send_to_char(ch, "Tendência Equip (Genética): [%s%d%s]\r\n",
+			 CCCYN(ch, C_NRM), GET_GENEQUIP(k), CCNRM(ch, C_NRM));
 	    /* Futuramente, podemos adicionar outros genes aqui. */
 	}
 

@@ -1225,6 +1225,7 @@ void index_boot(int mode)
         	   CREATE(mob_proto[rnum].genetics, struct mob_genetics, 1);
 		   mob_proto[rnum].genetics->wimpy_tendency = 0;
 		   mob_proto[rnum].genetics->loot_tendency = 0;
+		   mob_proto[rnum].genetics->equip_tendency = 0;
 	        }
 	    /*************************************************************************
 	     * Fim do Bloco de Genética                                              *
@@ -2017,6 +2018,11 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
 	      mob_proto[i].genetics->loot_tendency = num_arg;
 	  }
     	}
+	CASE("GenEquip")
+        {
+          if (mob_proto[i].genetics) {
+              mob_proto[i].genetics->equip_tendency = num_arg;
+          }                                                                                             }
 	CASE("BareHandAttack")
 	{
 		RANGE(0, NUM_ATTACK_TYPES - 1);

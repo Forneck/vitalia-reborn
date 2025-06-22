@@ -163,6 +163,75 @@ void mobile_activity(void)
       }
     }
 
+    /**************************************************************************
+     * Lógica de Genética: A "SESSÃO DE EQUIPAMENTO"                          *
+     * O mob agora equipa todos os upgrades possíveis de uma só vez.          *
+     **************************************************************************/
+    if (ch->carrying && ch->genetics && !FIGHTING(ch) && !AFF_FLAGGED(ch, AFF_CHARM)) {
+        
+        const int CURIOSIDADE_MINIMA_EQUIP = 5;
+        int final_chance = MAX(GET_GENEQUIP(ch), CURIOSIDADE_MINIMA_EQUIP);
+        final_chance = MIN(final_chance, 90);
+
+        if (rand_number(1, 100) <= final_chance) {
+            bool performed_an_upgrade_this_pulse = FALSE;
+            bool keep_trying = TRUE;
+
+            /* O loop 'while' garante que o mob continua a tentar equipar até estar otimizado. */
+            while (keep_trying) {
+                struct obj_data *obj, *best_possible_upgrade = NULL;
+                int max_score_improvement = 0;
+
+                /* Procura pelo melhor upgrade POSSÍVEL no estado atual. */
+                for (obj = ch->carrying; obj; obj = obj->next_content) {
+                    int wear_pos = find_eq_pos(ch, obj, NULL);
+                    if (wear_pos == -1) continue;
+
+                    struct obj_data *equipped_item = GET_EQ(ch, wear_pos);
+                    bool can_perform_swap = TRUE;
+                    if (equipped_item != NULL) {
+                        if (OBJ_FLAGGED(equipped_item, ITEM_NODROP) || IS_CARRYING_N(ch) >= CAN_CARRY_N(ch)) {
+                            can_perform_swap = FALSE;
+                        }
+                    }
+                    if (can_perform_swap) {
+                        int score_improvement = evaluate_item_for_mob(ch, obj) - evaluate_item_for_mob(ch, equipped_item);
+                        if (score_improvement > max_score_improvement) {
+                            max_score_improvement = score_improvement;
+                            best_possible_upgrade = obj;
+                        }
+                    }
+                }
+
+                /* Se encontrou um upgrade viável, executa-o e tenta de novo. */
+                if (best_possible_upgrade != NULL) {
+                    int wear_pos = find_eq_pos(ch, best_possible_upgrade, NULL);
+                    if (wear_pos != -1) {
+                        struct obj_data *equipped_item = GET_EQ(ch, wear_pos);
+                        if (equipped_item != NULL) {
+                            perform_remove(ch, wear_pos);
+                        }
+                        perform_wear(ch, best_possible_upgrade, wear_pos);
+                        performed_an_upgrade_this_pulse = TRUE;
+                        /* keep_trying continua TRUE para re-analisar o inventário. */
+                    }
+                } else {
+                    /* Se não encontrou mais upgrades, para a sessão. */
+                    keep_trying = FALSE;
+                }
+            } /* Fim do loop 'while' */
+
+            /* A aprendizagem acontece uma vez no final da sessão. */
+            if (performed_an_upgrade_this_pulse) {
+                ch->genetics->equip_tendency += 2;
+                if (ch->genetics->equip_tendency > 100) ch->genetics->equip_tendency = 100;
+            } else {
+                ch->genetics->equip_tendency -= 1;
+                if (ch->genetics->equip_tendency < 0) ch->genetics->equip_tendency = 0;
+            }
+        }
+    }
+
     /* Mob Memory */
     if (MOB_FLAGGED(ch, MOB_MEMORY) && MEMORY(ch)) {
       found = FALSE;

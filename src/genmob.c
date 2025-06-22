@@ -361,7 +361,10 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
    ****************************************************************/
   if (mob->genetics && mob->genetics->wimpy_tendency != 0)
     fprintf(fd, "GenWimpy: %d\n", mob->genetics->wimpy_tendency);
-
+  if (mob->genetics && mob->genetics->loot_tendency != 0)
+    fprintf(fd, "GenLoot: %d\n", mob->genetics->loot_tendency);
+  if (mob->genetics && mob->genetics->equip_tendency != 0)
+    fprintf(fd, "GenEquip: %d\n", mob->genetics->equip_tendency);
   fputs("E\n", fd);
   return TRUE;
 }

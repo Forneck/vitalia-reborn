@@ -1587,8 +1587,8 @@ void update_mob_prototype_genetics(struct char_data *mob)
     if (proto->genetics->wimpy_tendency < 0) proto->genetics->wimpy_tendency = 0;
     if (proto->genetics->wimpy_tendency > 100) proto->genetics->wimpy_tendency = 100;
 
-    /****************************************************************
-     * NOVO: LÓGICA PARA O GENE LOOT                                *
+     /****************************************************************
+     * LÓGICA PARA O GENE LOOT                                      *
      ****************************************************************/
     int old_loot = proto->genetics->loot_tendency;
     int instance_loot = mob->genetics->loot_tendency;
@@ -1599,6 +1599,19 @@ void update_mob_prototype_genetics(struct char_data *mob)
     /* Garante que o valor do protótipo também não saia dos limites. */
     if (proto->genetics->loot_tendency < 0) proto->genetics->loot_tendency = 0;
     if (proto->genetics->loot_tendency > 100) proto->genetics->loot_tendency = 100;
+
+     /****************************************************************
+     * LÓGICA PARA O GENE EQUIP                                      *
+     ****************************************************************/
+    int old_equip = proto->genetics->equip_tendency;
+    int instance_equip = mob->genetics->equip_tendency;
+
+    /* Simplesmente calculamos a nova média com base no que o mob aprendeu. */
+    proto->genetics->equip_tendency = ((old_equip * 7) + (instance_equip * 3)) / 10;
+
+    /* Garante que o valor do protótipo também não saia dos limites. */
+    if (proto->genetics->equip_tendency < 0) proto->genetics->equip_tendency = 0;
+    if (proto->genetics->equip_tendency > 100) proto->genetics->equip_tendency = 100;
 
     /* 5. Marca a zona como modificada para que seja salva no próximo 'save all'. */
     mob_vnum vnum = mob_index[rnum].vnum; /* Pega o vnum a partir do mob_index */
