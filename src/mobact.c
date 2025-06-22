@@ -502,6 +502,10 @@ int get_item_apply_score(struct char_data *ch, struct obj_data *obj)
  */
 int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj)
 {
+    if (obj == NULL) {
+	    return 0;
+    }
+
     int score = 0;
 
     /* --- FILTROS INICIAIS --- */
