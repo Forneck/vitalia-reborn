@@ -511,6 +511,9 @@ do                                                              \
 /** Fitness of ch. */
 #define GET_FIT(ch)	((ch)->player.fit)
 
+#define GET_GENWIMPY(ch)        ((ch)->genetics ? (ch)->genetics->wimpy_tendency : 0)
+
+
 /** Current strength of ch. */
 #define GET_STR(ch)     ((ch)->aff_abils.str)
 /** Current strength modifer of ch. */

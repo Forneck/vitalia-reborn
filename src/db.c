@@ -974,18 +974,7 @@ log1("Sorting command list.");
 			    *(zone_table[i].weather) = climates[zone_table[i].climate]; // Copia os valores
 			}
 	}
-        /* * PASSO NOVO: Alocar memória para a genética de CADA PROTÓTIPO de mob.
-        * Isto prepara os protótipos para receberem os valores guardados
-        * ou para terem um valor padrão.
-        */
-        log1("Allocating memory for mob prototype genetics.");
-        int rnum;
-        for (rnum = 0; rnum <= top_of_mobt; rnum++) {
-         CREATE(mob_proto[rnum].genetics, struct mob_genetics, 1);
-          /* Inicializamos com um valor padrão. Se existir um valor no .mob,
-          * a função parse_mobile() irá substituí-lo. */
-         mob_proto[rnum].genetics->wimpy_tendency = 0;
-        }
+	
 	reset_q.head = reset_q.tail = NULL;
 
 	if (!boot_time)
@@ -1225,6 +1214,21 @@ void index_boot(int mode)
 	case DB_BOOT_MOB:
 		CREATE(mob_proto, struct char_data, rec_count);
 		CREATE(mob_index, struct index_data, rec_count);
+   		 /*************************************************************************
+		     * Sistema de Genética: ALOCAÇÃO NO LOCAL CORRETO.                       *
+		     * --------------------------------------------------------------------- *
+		     * Alocamos a memória para a genética de cada protótipo AQUI, logo       *
+		     * após alocar os próprios protótipos e ANTES de começar a lê-los.       *
+		     *************************************************************************/
+		int rnum;
+		for (rnum = 0; rnum < rec_count; rnum++) {
+        	   CREATE(mob_proto[rnum].genetics, struct mob_genetics, 1);
+		   mob_proto[rnum].genetics->wimpy_tendency = 0;
+	        }
+	    /*************************************************************************
+	     * Fim do Bloco de Genética                                              *
+	     *************************************************************************/
+
 		size[0] = sizeof(struct index_data) * rec_count;
 		size[1] = sizeof(struct char_data) * rec_count;
 		log1("   %d mobs, %d bytes in index, %d bytes in prototypes.", rec_count, size[0], size[1]);

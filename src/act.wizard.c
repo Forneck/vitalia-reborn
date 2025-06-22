@@ -892,6 +892,16 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
 				 CCCYN(ch, C_NRM), GET_CON(k), CCNRM(ch, C_NRM),
 				 CCCYN(ch, C_NRM), GET_CHA(k), CCNRM(ch, C_NRM));
 
+	  /**************************************************************************
+	   * Genética: Adiciona a exibição dos genes do mob.                      *
+	   * A linha só aparece se o alvo for um NPC com o sistema genético ativo.  *
+	   **************************************************************************/
+	if (IS_NPC(k)) {
+	    send_to_char(ch, "Tendência Wimpy (Genética): [%s%d%s]\r\n",
+	                 CCCYN(ch, C_NRM), GET_GENWIMPY(k), CCNRM(ch, C_NRM));
+	    /* Futuramente, podemos adicionar outros genes aqui. */
+	}
+
 	send_to_char(ch, "Hit p.:[%s%d/%d+%d%s]  Mana p.:[%s%d/%d+%d%s]  Move p.:[%s%d/%d+%d%s]\r\n",
 				 CCGRN(ch, C_NRM), GET_HIT(k), GET_MAX_HIT(k), hit_gain(k), CCNRM(ch, C_NRM),
 				 CCGRN(ch, C_NRM), GET_MANA(k), GET_MAX_MANA(k), mana_gain(k), CCNRM(ch, C_NRM),
