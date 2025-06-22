@@ -2000,11 +2000,16 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
         * linha como "GenWimpy: 10", esta secção irá lê-la e guardá-la.         *
         *************************************************************************/
         CASE("GenWimpy")
-        {
-              if (mob_proto[i].genetics) { /* Verifica se a genética foi alocada */
-                 mob_proto[i].genetics->wimpy_tendency = num_arg;
-              }
-	}
+    {
+        if (mob_proto[i].genetics) {
+            mob_proto[i].genetics->wimpy_tendency = num_arg;
+            /* MENSAGEM DE SUCESSO - TEMPORÁRIA */
+            log1("DEBUG: Mob vnum #%d, GenWimpy carregado com sucesso: %d", nr, num_arg);
+        } else {
+            /* MENSAGEM DE ERRO - TEMPORÁRIA */
+            log1("DEBUG: Mob vnum #%d, FALHA ao carregar GenWimpy (genetics é NULL)", nr);
+        }
+    }
 
 	CASE("BareHandAttack")
 	{
@@ -4118,8 +4123,18 @@ void reset_char(struct char_data *ch)
 	   alloc'ed */
 void clear_char(struct char_data *ch)
 {
+     /*************************************************************************
+     * Sistema de Genética: Preservar o ponteiro da genética.                *
+     * Guardamos o ponteiro antes que o memset o apague.                     *
+     *************************************************************************/
+    	struct mob_genetics *preserved_genetics = ch->genetics;
 	memset((char *)ch, 0, sizeof(struct char_data));
-
+        
+	/* Agora, restauramos o ponteiro que guardámos. */
+        ch->genetics = preserved_genetics;
+        /*************************************************************************
+        * Fim do Bloco de Genética                                              *
+        *************************************************************************/
 	IN_ROOM(ch) = NOWHERE;
 	GET_PFILEPOS(ch) = -1;
 	GET_MOB_RNUM(ch) = NOBODY;
