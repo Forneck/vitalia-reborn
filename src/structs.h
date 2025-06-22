@@ -264,8 +264,9 @@
 #define MOB_NOKILL         20  /**< Mob can't be attacked */
 #define MOB_ISNPC           21   /**< (R) Automatically set on all Mobs */
 #define MOB_NOTDEADYET     22   /**< (R) Mob being extracted */
+#define MOB_BRAVE         23   /** < Fight until death */
 
-#define NUM_MOB_FLAGS      23
+#define NUM_MOB_FLAGS      24
 
 /* Preference flags: used by char_data.player_specials.pref */
 #define PRF_BRIEF         0   /**< Room descs won't normally be shown */

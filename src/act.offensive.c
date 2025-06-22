@@ -572,17 +572,12 @@ ACMD(do_flee)
 
                 /************************************************
                  * Genética: Mob falhou a tentativa de fugir.   *
-                 * Diminui a tendência de fugir (wimpy).        *
                  ************************************************/
                 if (IS_NPC(ch) && ch->genetics) {
                     if (MOB_FLAGGED(ch, MOB_BRAVE)) {
-                     /* Morte como "sacrifício heróico": inspira a espécie a ser mais corajosa. */
-                     /* Diminuir a tendência wimpy é uma "recompensa" por bravura. */
-                    ch->genetics->wimpy_tendency -= 5;
+                    ch->genetics->wimpy_tendency += 3;
                    } else {
-                   /* Morte como "falha em sobreviver": ensina a espécie a ser mais cautelosa. */
-                   /* Aumentar a tendência wimpy é uma "penalidade" por morrer. */
-                   ch->genetics->wimpy_tendency += 5;
+                   ch->genetics->wimpy_tendency -= 3;
                    }
                     /* Garante que o valor não fica abaixo de 0 */
                     if (ch->genetics->wimpy_tendency < 0)
@@ -602,9 +597,9 @@ ACMD(do_flee)
      ****************************************************************/
     if (IS_NPC(ch) && ch->genetics) {
         if (MOB_FLAGGED(ch, MOB_BRAVE)) {
-           ch->genetics->wimpy_tendency += 3; /* Mob corajoso tem penalidade por pânico */ }
+           ch->genetics->wimpy_tendency += 2; /* Mob corajoso tem penalidade por pânico */ }
 	else{
-	   ch->genetics->wimpy_tendency -=3; /* Penalidade por pânico */ }
+	   ch->genetics->wimpy_tendency -=2; /* Penalidade por pânico */ }
         /* Garante que o valor não fica abaixo de 0 */
         if (ch->genetics->wimpy_tendency < 0)
             ch->genetics->wimpy_tendency = 0;

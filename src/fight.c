@@ -1586,7 +1586,20 @@ void update_mob_prototype_genetics(struct char_data *mob)
     /* Garante que o valor do protótipo também não saia dos limites. */
     if (proto->genetics->wimpy_tendency < 0) proto->genetics->wimpy_tendency = 0;
     if (proto->genetics->wimpy_tendency > 100) proto->genetics->wimpy_tendency = 100;
-    
+
+    /****************************************************************
+     * NOVO: LÓGICA PARA O GENE LOOT                                *
+     ****************************************************************/
+    int old_loot = proto->genetics->loot_tendency;
+    int instance_loot = mob->genetics->loot_tendency;
+
+    /* Simplesmente calculamos a nova média com base no que o mob aprendeu. */
+    proto->genetics->loot_tendency = ((old_loot * 7) + (instance_loot * 3)) / 10;
+
+    /* Garante que o valor do protótipo também não saia dos limites. */
+    if (proto->genetics->loot_tendency < 0) proto->genetics->loot_tendency = 0;
+    if (proto->genetics->loot_tendency > 100) proto->genetics->loot_tendency = 100;
+
     /* 5. Marca a zona como modificada para que seja salva no próximo 'save all'. */
     mob_vnum vnum = mob_index[rnum].vnum; /* Pega o vnum a partir do mob_index */
     zone_rnum rznum = real_zone_by_thing(vnum);

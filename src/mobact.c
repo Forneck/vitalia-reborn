@@ -26,11 +26,14 @@
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
 
+int get_item_apply_score(struct char_data *ch, struct obj_data *obj);
+int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj);
+
 void mobile_activity(void)
 {
   struct char_data *ch, *next_ch, *vict;
   struct obj_data *obj, *best_obj;
-  int door, found, max;
+  int door, found;
   memory_rec *names;
 
   for (ch = character_list; ch; ch = next_ch) {
@@ -60,21 +63,52 @@ void mobile_activity(void)
     hunt_victim(ch);
 
     /* Scavenger (picking up objects) */
- /*   if (MOB_FLAGGED(ch, MOB_SCAVENGER))*/
-      if (world[IN_ROOM(ch)].contents && !rand_number(0, 10)) {
-	max = 1;
-	best_obj = NULL;
-	for (obj = world[IN_ROOM(ch)].contents; obj; obj = obj->next_content)
-	  if (CAN_GET_OBJ(ch, obj) && GET_OBJ_COST(obj) > max) {
-	    best_obj = obj;
-	    max = GET_OBJ_COST(obj);
-	  }
-	if (best_obj != NULL) {
-	  obj_from_room(best_obj);
-	  obj_to_char(best_obj, ch);
-	  act("$n pega $p.", FALSE, ch, best_obj, 0, TO_ROOM);
-	}
-      }
+    /*************************************************************************
+     * Lógica de Genética FINAL: Comportamento de SAQUEAR (Loot)              *
+     * Usa a função de avaliação e garante uma chance mínima de aprendizagem. *
+     *************************************************************************/
+    if (world[IN_ROOM(ch)].contents && ch->genetics && !FIGHTING(ch)) {
+        
+        const int CURIOSIDADE_AMBIENTE = 10;
+        int effective_loot_tendency = 0;
+        int base_scavenger_instinct = 0;
+        int final_chance = 0;
+
+        if (MOB_FLAGGED(ch, MOB_SCAVENGER)) {
+            base_scavenger_instinct = 25;
+        }
+
+        effective_loot_tendency = base_scavenger_instinct + GET_GENLOOT(ch);
+        final_chance = MAX(effective_loot_tendency, CURIOSIDADE_AMBIENTE);
+        final_chance = MIN(final_chance, 90);
+
+        if (rand_number(1, 100) <= final_chance) {
+            int max_score = 0;
+            best_obj = NULL;
+
+            for (obj = world[IN_ROOM(ch)].contents; obj; obj = obj->next_content) {
+                int current_score = evaluate_item_for_mob(ch, obj);
+                if (current_score > max_score) {
+                    best_obj = obj;
+                    max_score = current_score;
+                }
+            }
+            
+            if (best_obj != NULL) {
+                obj_from_room(best_obj);
+                obj_to_char(best_obj, ch);
+                act("$n pega $p.", FALSE, ch, best_obj, 0, TO_ROOM);
+
+                ch->genetics->loot_tendency += 2;
+                if (ch->genetics->loot_tendency > 100)
+                    ch->genetics->loot_tendency = 100;
+            } else {
+                ch->genetics->loot_tendency -= 1;
+                if (ch->genetics->loot_tendency < 0)
+                    ch->genetics->loot_tendency = 0;
+            }
+        }
+    }
 
     /* Mob Movement */
     if (!MOB_FLAGGED(ch, MOB_SENTINEL) && (GET_POS(ch) == POS_STANDING) &&
@@ -290,4 +324,169 @@ static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data 
 
   /* So sorry, now you're a player killer... Tsk tsk. */
   return (FALSE);
+}
+
+/* Em src/mobact.c */
+
+/**
+ * Calcula uma pontuação para os bónus (applies e affects) de um objeto.
+ * Esta função age como um "identify" para o mob.
+ */
+int get_item_apply_score(struct char_data *ch, struct obj_data *obj)
+{
+    int i, total_score = 0;
+
+    if (obj == NULL) {
+        return 0;
+    }
+
+    /* 1. Avalia os applies numéricos (bónus de stats) */
+    for (i = 0; i < MAX_OBJ_AFFECT; i++) {
+        if (obj->affected[i].location != APPLY_NONE) {
+            switch (obj->affected[i].location) {
+                case APPLY_STR:
+                case APPLY_DEX:
+                case APPLY_CON:
+                case APPLY_INT:
+                case APPLY_WIS:
+                case APPLY_CHA:
+                    total_score += obj->affected[i].modifier * 5;
+                    break;
+                case APPLY_HIT:
+                case APPLY_MANA:
+                case APPLY_MOVE:
+                    total_score += obj->affected[i].modifier;
+                    break;
+                case APPLY_AC:
+                    total_score -= obj->affected[i].modifier * 5;
+                    break;
+                case APPLY_HITROLL:
+                case APPLY_DAMROLL:
+                    total_score += obj->affected[i].modifier * 10;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    /* 2. Avalia os bónus de afetações (AFF_) - só dá pontos se o mob ainda não tiver o bónus */
+
+    // --- Auras Protetoras (Muito Valiosas) ---
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_SANCTUARY) && !AFF_FLAGGED(ch, AFF_SANCTUARY))
+        total_score += 200;
+
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_STONESKIN) && !AFF_FLAGGED(ch, AFF_STONESKIN))
+        total_score += 180;
+
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_GLOOMSHIELD) && !AFF_FLAGGED(ch, AFF_GLOOMSHIELD))
+        total_score += 150;
+
+    // --- Escudos de Dano (Damage Shields) ---
+    if ((IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_FIRESHIELD) && !AFF_FLAGGED(ch, AFF_FIRESHIELD)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_THISTLECOAT) && !AFF_FLAGGED(ch, AFF_THISTLECOAT)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_WINDWALL) && !AFF_FLAGGED(ch, AFF_WINDWALL)))
+        total_score += 120;
+
+    // --- Bónus de Alinhamento ---
+    if (IS_GOOD(ch) && IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_PROTECT_EVIL) && !AFF_FLAGGED(ch, AFF_PROTECT_EVIL))
+        total_score += 100;
+
+    if (IS_EVIL(ch) && IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_PROTECT_GOOD) && !AFF_FLAGGED(ch, AFF_PROTECT_GOOD))
+        total_score += 100;
+
+    // --- Bónus Táticos (Ofensivos/Furtivos) ---
+    if ((IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_INVISIBLE) && !AFF_FLAGGED(ch, AFF_INVISIBLE)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_SNEAK) && !AFF_FLAGGED(ch, AFF_SNEAK)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_HIDE) && !AFF_FLAGGED(ch, AFF_HIDE)))
+        total_score += 70;
+
+    // --- Bónus de Deteção ---
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_DETECT_INVIS) && !AFF_FLAGGED(ch, AFF_DETECT_INVIS))
+        total_score += 60;
+
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_SENSE_LIFE) && !AFF_FLAGGED(ch, AFF_SENSE_LIFE))
+        total_score += 60;
+
+    // --- Utilidades ---
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_INFRAVISION) && !AFF_FLAGGED(ch, AFF_INFRAVISION))
+        total_score += 30;
+
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_LIGHT) && !AFF_FLAGGED(ch, AFF_LIGHT))
+        total_score += 20;
+
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_WATERWALK) && !AFF_FLAGGED(ch, AFF_WATERWALK))
+        total_score += 15;
+
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_FLYING) && !AFF_FLAGGED(ch, AFF_FLYING))
+        total_score += 40;
+
+    return total_score;
+}
+
+
+/**
+ * Avalia o quão "desejável" um objeto é para um determinado mob.
+ * Retorna uma pontuação numérica. Quanto maior a pontuação, mais o mob quer o item.
+ */
+int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj)
+{
+    int score = 0;
+
+    if (!CAN_GET_OBJ(ch, obj) || !CAN_WEAR(obj, ITEM_WEAR_TAKE)) {
+        return 0;
+    }
+
+    /* Filtro de Alinhamento */
+    if ((IS_EVIL(ch) && OBJ_FLAGGED(obj, ITEM_ANTI_EVIL)) ||
+        (IS_GOOD(ch) && OBJ_FLAGGED(obj, ITEM_ANTI_GOOD)) ||
+        (IS_NEUTRAL(ch) && OBJ_FLAGGED(obj, ITEM_ANTI_NEUTRAL))) {
+        return 0;
+    }
+
+    /* Avaliação de Armas */
+    if (GET_OBJ_TYPE(obj) == ITEM_WEAPON) {
+        struct obj_data *current_weapon = GET_EQ(ch, WEAR_WIELD);
+        float new_w_dam = (float)(GET_OBJ_VAL(obj, 1) * (GET_OBJ_VAL(obj, 2) + 1)) / 2.0;
+        int new_w_stats_score = get_item_apply_score(ch, obj);
+
+        if (current_weapon == NULL) {
+            score += 100 + new_w_stats_score;
+        } else {
+            float old_w_dam = (float)(GET_OBJ_VAL(current_weapon, 1) * (GET_OBJ_VAL(current_weapon, 2) + 1)) / 2.0;
+            int old_w_stats_score = get_item_apply_score(ch, current_weapon);
+            int total_improvement = ((int)(new_w_dam - old_w_dam) * 10) + (new_w_stats_score - old_w_stats_score);
+            if (total_improvement > 0) {
+                score += total_improvement;
+            }
+        }
+    }
+
+    /* Avaliação de Armaduras */
+    if (GET_OBJ_TYPE(obj) == ITEM_ARMOR) {
+        int wear_pos = find_eq_pos(ch, obj, NULL);
+        if (wear_pos != -1) {
+            struct obj_data *current_armor = GET_EQ(ch, wear_pos);
+            int new_armor_ac = GET_OBJ_VAL(obj, 0);
+            int new_armor_stats_score = get_item_apply_score(ch, obj);
+
+            if (current_armor == NULL) {
+                score += 50 + new_armor_stats_score;
+            } else {
+                int old_armor_ac = GET_OBJ_VAL(current_armor, 0);
+                int old_armor_stats_score = get_item_apply_score(ch, current_armor);
+                int ac_improvement = (old_armor_ac - new_armor_ac) * 5;
+                int stats_improvement = new_armor_stats_score - old_armor_stats_score;
+
+                if (ac_improvement + stats_improvement > 0) {
+                    score += ac_improvement + stats_improvement;
+                }
+            }
+        }
+    }
+
+    /* Bónus base pelo valor em ouro (peso baixo) */
+    score += GET_OBJ_COST(obj) / 100;
+
+    return score;
 }

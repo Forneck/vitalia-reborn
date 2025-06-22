@@ -512,6 +512,7 @@ do                                                              \
 #define GET_FIT(ch)	((ch)->player.fit)
 
 #define GET_GENWIMPY(ch)        ((ch)->genetics ? (ch)->genetics->wimpy_tendency : 0)
+#define GET_GENLOOT(ch)         ((ch)->genetics ? (ch)->genetics->loot_tendency : 0)
 
 
 /** Current strength of ch. */

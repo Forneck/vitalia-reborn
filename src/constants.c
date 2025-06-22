@@ -285,6 +285,7 @@ const char *action_bits[] = {
   "NO_KILL",
   "ISNPC",
   "DEAD",    /* You should never see this. */
+  "BRAVE",   /*Para este mob, lutar até a morte é bom */
   "\n"
 };
 

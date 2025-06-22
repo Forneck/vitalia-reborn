@@ -1224,6 +1224,7 @@ void index_boot(int mode)
 		for (rnum = 0; rnum < rec_count; rnum++) {
         	   CREATE(mob_proto[rnum].genetics, struct mob_genetics, 1);
 		   mob_proto[rnum].genetics->wimpy_tendency = 0;
+		   mob_proto[rnum].genetics->loot_tendency = 0;
 	        }
 	    /*************************************************************************
 	     * Fim do Bloco de Genética                                              *
@@ -2010,7 +2011,12 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             log1("DEBUG: Mob vnum #%d, FALHA ao carregar GenWimpy (genetics é NULL)", nr);
         }
     }
-
+	CASE("GenLoot")
+    	{
+	  if (mob_proto[i].genetics) {
+	      mob_proto[i].genetics->loot_tendency = num_arg;
+	  }
+    	}
 	CASE("BareHandAttack")
 	{
 		RANGE(0, NUM_ATTACK_TYPES - 1);
