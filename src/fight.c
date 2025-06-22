@@ -1588,6 +1588,6 @@ void update_mob_prototype_genetics(struct char_data *mob)
     zone_rnum rznum = real_zone_by_thing(vnum);
 
     if (rznum != NOWHERE) {
-        add_to_save_list(rznum, SL_MOB);
+        add_to_save_list(zone_table[rznum].number, SL_MOB);
     }
 }
