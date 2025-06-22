@@ -345,26 +345,16 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
   
    
 	update_pos(ch);
+        
+	/*************************************************************************
+        * Sistema de Genética: O mob morreu. Chamamos a função de evolução.     *
+        *************************************************************************/
+        if (IS_NPC(ch) && ch->genetics) {
+           update_mob_prototype_genetics(ch);
+        }
         /*************************************************************************
-        * Sistema de Genética: O mob morreu.                                    *
-        * 1. Punição: Se ele morreu, sua tendência wimpy individual diminui.    *
-        * 2. Evolução: A sua genética final é usada para atualizar o protótipo. *
-	*************************************************************************/
-	if (IS_NPC(ch)) {
-        	/* Se o mob tiver genética, aplica a lógica. */
-	        if (ch->genetics) {
-	            /* Punição por morrer em combate em vez de fugir. */
-	            ch->genetics->wimpy_tendency -= 1;
-	            if (ch->genetics->wimpy_tendency < 0)
-	                ch->genetics->wimpy_tendency = 0;
-            
-	            /* ATUALIZA O PROTÓTIPO com os genes deste mob que morreu. */
-	            update_mob_prototype_genetics(ch);
-	        }
-	    }
-	    /*********************************************************************
-	     * Fim do Bloco de Genética                                           
-	     ********************************************************************/
+        * Fim do Bloco de Genética                                              *
+        *************************************************************************/
 
 	make_corpse(ch);
 	// -- jr - Mar 17, 2000 * Enhancement of player death
@@ -1571,18 +1561,32 @@ void update_mob_prototype_genetics(struct char_data *mob)
     /* Garante que o protótipo tem a sua própria estrutura de genética alocada. */
     if (!proto->genetics)
         return;
+     
 
-    /* 3. Calcula a nova média para wimpy_tendency. */
-    /* Usamos uma média ponderada: 70% do valor antigo (do protótipo), 30% do novo (da instância que morreu). */
+    /* Guarda os valores atuais para o cálculo */
     int old_wimpy = proto->genetics->wimpy_tendency;
-    int new_wimpy = mob->genetics->wimpy_tendency;
+    int instance_wimpy_final = mob->genetics->wimpy_tendency;
 
-    proto->genetics->wimpy_tendency = ((old_wimpy * 7) + (new_wimpy * 3)) / 10;
+    /* 2. Aplica a recompensa/penalidade com base na cultura do mob. */
+    if (MOB_FLAGGED(mob, MOB_BRAVE)) {
+        /* Morte heróica: A espécie fica mais corajosa (wimpy diminui). */
+        instance_wimpy_final -= 5;
+    } else {
+        /* Morte por falha: A espécie fica mais cautelosa (wimpy aumenta). */
+        instance_wimpy_final += 5;
+    }
 
-    /* 4. Garante que o valor genético do protótipo fica entre 0 e 100. */
+    /* Garante que o valor final da instância não saia dos limites (0-100). */
+    if (instance_wimpy_final < 0) instance_wimpy_final = 0;
+    if (instance_wimpy_final > 100) instance_wimpy_final = 100;
+
+    /* 3. Calcula a nova média para o protótipo. */
+    proto->genetics->wimpy_tendency = ((old_wimpy * 7) + (instance_wimpy_final * 3)) / 10;
+    
+    /* Garante que o valor do protótipo também não saia dos limites. */
     if (proto->genetics->wimpy_tendency < 0) proto->genetics->wimpy_tendency = 0;
     if (proto->genetics->wimpy_tendency > 100) proto->genetics->wimpy_tendency = 100;
-
+    
     /* 5. Marca a zona como modificada para que seja salva no próximo 'save all'. */
     mob_vnum vnum = mob_index[rnum].vnum; /* Pega o vnum a partir do mob_index */
     zone_rnum rznum = real_zone_by_thing(vnum);
