@@ -25,8 +25,11 @@
 #include "shop.h"
 #include "quest.h"
 #include "spedit.h"
+#include "genolc.h"
+
 	/* locally defined global variables, used externally */
 	/* head of l-list of fighting chars */
+
 struct char_data *combat_list = NULL;
 
 /* Weapon attack texts */
@@ -339,10 +342,29 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 	if (GROUP(ch))
 		send_to_group(ch, GROUP(ch), "%s morreu.\r\n", GET_NAME(ch));
   
-   GET_FIT(killer)++;
-   GET_FIT(ch)--;
    
 	update_pos(ch);
+        /*************************************************************************
+        * Sistema de Genética: O mob morreu.                                    *
+        * 1. Punição: Se ele morreu, sua tendência wimpy individual diminui.    *
+        * 2. Evolução: A sua genética final é usada para atualizar o protótipo. *
+	*************************************************************************/
+	if (IS_NPC(ch)) {
+        	/* Se o mob tiver genética, aplica a lógica. */
+	        if (ch->genetics) {
+	            /* Punição por morrer em combate em vez de fugir. */
+	            ch->genetics->wimpy_tendency -= 1;
+	            if (ch->genetics->wimpy_tendency < 0)
+	                ch->genetics->wimpy_tendency = 0;
+            
+	            /* ATUALIZA O PROTÓTIPO com os genes deste mob que morreu. */
+	            update_mob_prototype_genetics(ch);
+	        }
+	    }
+	    /*********************************************************************
+	     * Fim do Bloco de Genética                                           
+	     ********************************************************************/
+
 	make_corpse(ch);
 	// -- jr - Mar 17, 2000 * Enhancement of player death
 	if (!IS_NPC(ch))
@@ -784,14 +806,33 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 	default:					/* >= POSITION SLEEPING */
 		if (dam > (GET_MAX_HIT(victim) / 4))
 			send_to_char(victim, "Isto realmente DOEU!\r\n");
+
 		if (GET_HIT(victim) < (GET_MAX_HIT(victim) / 4))
 		{
-			send_to_char(victim,
-						 "\trVocê espera que seus ferimentos parem de %sSANGRAR%s tanto!\tn\r\n",
-						 CCRED(victim, C_SPR), CCNRM(victim, C_SPR));
-			if (ch != victim && MOB_FLAGGED(victim, MOB_WIMPY))
-				do_flee(victim, NULL, 0, 0);
+			send_to_char(victim, "\trVocê espera que seus ferimentos parem de %sSANGRAR%s tanto!\tn\r\n", CCRED(victim, C_SPR), CCNRM(victim, C_SPR));
 		}
+
+		/************************************************************************************
+                * Lógica de Genética REVISADA: Todos os mobs podem ser fujões.                     *                      * A flag MOB_WIMPY agora dá um bónus de "medo", em vez de ser um interruptor.     *                       ************************************************************************************/
+		if (ch != victim && IS_NPC(victim) && GET_POS(victim) > POS_STUNNED) {
+		    int flee_threshold = 0;
+		    int base_wimpy = 0;
+		                                                                                                              /* 1. O mob tem a flag MOB_WIMPY? Se sim, ele já tem uma base de medo. */                                 if (MOB_FLAGGED(victim, MOB_WIMPY)) {
+		        base_wimpy = 20; /* Valor base de 20% de vida para fuga. */                                           }
+
+		    /* 2. Adicionamos a tendência genética à base. */
+		    if (victim->genetics) {
+		        flee_threshold = base_wimpy + victim->genetics->wimpy_tendency;
+		    } else {
+		        flee_threshold = base_wimpy;
+		    }                                                                                                     
+		    /* 3. Garante que o limiar não passa de um valor razoável (ex: 80%) */
+		    flee_threshold = MIN(flee_threshold, 80);
+
+		    /* 4. Compara com a vida atual e tenta fugir se necessário. */                                            if (flee_threshold > 0 && GET_HIT(victim) < (GET_MAX_HIT(victim) * flee_threshold) / 100) {
+		        do_flee(victim, NULL, 0, 0);                                                                          }
+		}
+
 		if (!IS_NPC(victim) && GET_WIMP_LEV(victim) && (victim != ch)
 			&& GET_HIT(victim) < GET_WIMP_LEV(victim) && GET_HIT(victim) > 0)
 		{
@@ -1495,4 +1536,43 @@ void transcend(struct char_data *ch) {
 
   /* Save */
   save_char(ch);
+}
+
+
+/*
+ * Chamada quando um mob morre para atualizar a genética do seu protótipo.
+*/
+void update_mob_prototype_genetics(struct char_data *mob)
+{
+    /* 1. Verifica se é um NPC válido com genética. */
+    if (!IS_NPC(mob) || GET_MOB_RNUM(mob) == NOBODY || !mob->genetics)
+        return;
+
+    mob_rnum rnum = GET_MOB_RNUM(mob); /* Pega o número real do mob. */
+
+    /* 2. Pega um ponteiro para o PROTÓTIPO correto no array mob_proto. */
+    struct char_data *proto = &mob_proto[rnum];
+
+    /* Garante que o protótipo tem a sua própria estrutura de genética alocada. */
+    if (!proto->genetics)
+        return;
+
+    /* 3. Calcula a nova média para wimpy_tendency. */
+    /* Usamos uma média ponderada: 70% do valor antigo (do protótipo), 30% do novo (da instância que morreu). */
+    int old_wimpy = proto->genetics->wimpy_tendency;
+    int new_wimpy = mob->genetics->wimpy_tendency;
+
+    proto->genetics->wimpy_tendency = ((old_wimpy * 7) + (new_wimpy * 3)) / 10;
+
+    /* 4. Garante que o valor genético do protótipo fica entre 0 e 100. */
+    if (proto->genetics->wimpy_tendency < 0) proto->genetics->wimpy_tendency = 0;
+    if (proto->genetics->wimpy_tendency > 100) proto->genetics->wimpy_tendency = 100;
+
+    /* 5. Marca a zona como modificada para que seja salva no próximo 'save all'. */
+    mob_vnum vnum = mob_index[rnum].vnum; /* Pega o vnum a partir do mob_index */
+    zone_rnum rznum = real_zone_by_thing(vnum);
+
+    if (rznum != NOWHERE) {
+        add_to_save_list(rznum, SL_MOB);
+    }
 }

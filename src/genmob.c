@@ -353,6 +353,15 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
     fprintf(fd, "SavingBreath: %d\n", GET_SAVE(mob, SAVING_BREATH));
   if (GET_SAVE(mob, SAVING_SPELL) != 0)
     fprintf(fd, "SavingSpell: %d\n", GET_SAVE(mob, SAVING_SPELL));
+  
+  /****************************************************************
+   * Genética: Adicionamos o nosso novo campo genético aqui.        *
+   * Apenas salvamos se o valor não for o padrão (0) para manter  *
+   * os ficheiros .mob limpos.                                    *
+   ****************************************************************/
+  if (mob->genetics && mob->genetics->wimpy_tendency != 0)
+    fprintf(fd, "GenWimpy: %d\n", mob->genetics->wimpy_tendency);
+
   fputs("E\n", fd);
   return TRUE;
 }
