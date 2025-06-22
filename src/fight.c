@@ -818,7 +818,8 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 		if (ch != victim && IS_NPC(victim) && GET_POS(victim) > POS_STUNNED) {
 		    int flee_threshold = 0;
 		    int base_wimpy = 0;
-		                                                                                                              /* 1. O mob tem a flag MOB_WIMPY? Se sim, ele já tem uma base de medo. */                                 if (MOB_FLAGGED(victim, MOB_WIMPY)) {
+		                                                                                /* 1. O mob tem a flag MOB_WIMPY? Se sim, ele já tem uma base de medo. */
+		    if (MOB_FLAGGED(victim, MOB_WIMPY)) {
 		        base_wimpy = 20; /* Valor base de 20% de vida para fuga. */                                           }
 
 		    /* 2. Adicionamos a tendência genética à base. */
@@ -829,9 +830,22 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 		    }                                                                                                     
 		    /* 3. Garante que o limiar não passa de um valor razoável (ex: 80%) */
 		    flee_threshold = MIN(flee_threshold, 80);
-
-		    /* 4. Compara com a vida atual e tenta fugir se necessário. */                                            if (flee_threshold > 0 && GET_HIT(victim) < (GET_MAX_HIT(victim) * flee_threshold) / 100) {
-		        do_flee(victim, NULL, 0, 0);                                                                          }
+		    /* 4. Compara com a vida atual e tenta fugir se necessário. */
+    		    if (flee_threshold > 0) {
+		        /* Fuga DETERMINÍSTICA: Baseada na genética e na flag wimpy. */
+		        if (GET_HIT(victim) < (GET_MAX_HIT(victim) * flee_threshold) / 100) {
+		            do_flee(victim, NULL, 0, 0);
+		        }
+		    } else {
+		        /* Fuga de PÂNICO: Para mobs "corajosos" (threshold = 0) em estado crítico. */
+		        /* Se a vida estiver abaixo de 10%, há uma pequena chance de pânico. */
+		        if (GET_HIT(victim) < (GET_MAX_HIT(victim) / 10)) {
+		            if (rand_number(1, 100) <= 5) { /* Chance de 5% de entrar em pânico */
+		                act("$n olha para os seus ferimentos, entra em pânico e tenta fugir!", TRUE, victim, 0, 0, TO_ROOM);
+		                do_flee(victim, NULL, 0, 0);
+		            }		
+		        }
+		    }
 		}
 
 		if (!IS_NPC(victim) && GET_WIMP_LEV(victim) && (victim != ch)
