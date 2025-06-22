@@ -28,6 +28,7 @@ static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data 
 
 int get_item_apply_score(struct char_data *ch, struct obj_data *obj);
 int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj);
+bool mob_has_ammo(struct char_data *ch);
 
 void mobile_activity(void)
 {
@@ -143,20 +144,21 @@ void mobile_activity(void)
           if (aggressive_mob_on_a_leash(ch, ch->master, vict))
             continue;
             
-         if (vict == ch)
+          if (vict == ch)
             continue;
             
             if (IS_NPC(vict))
             continue;
-      if (rand_number(0, 20) <= GET_CHA(vict)) {
-        act("$n olha para $N com indiferença.",
-            FALSE, ch, 0, vict, TO_NOTVICT);
-        act("$N olha para você com indiferença.",
-            FALSE, vict, 0, ch, TO_CHAR);
-      } else {
-	  hit(ch, vict, TYPE_UNDEFINED);
-	  found = TRUE;
-      }
+
+          if (rand_number(0, 20) <= GET_CHA(vict)) {
+             act("$n olha para $N com indiferença.",
+               FALSE, ch, 0, vict, TO_NOTVICT);
+             act("$N olha para você com indiferença.",
+               FALSE, vict, 0, ch, TO_CHAR);
+          } else {
+   	    hit(ch, vict, TYPE_UNDEFINED);
+	    found = TRUE;
+          }
 	}
       }
     }
@@ -433,60 +435,146 @@ int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj)
 {
     int score = 0;
 
-    if (!CAN_GET_OBJ(ch, obj) || !CAN_WEAR(obj, ITEM_WEAR_TAKE)) {
-        return 0;
-    }
-
-    /* Filtro de Alinhamento */
+    /* --- FILTROS INICIAIS --- */
+    if (!CAN_GET_OBJ(ch, obj) || !CAN_WEAR(obj, ITEM_WEAR_TAKE)) return 0;
     if ((IS_EVIL(ch) && OBJ_FLAGGED(obj, ITEM_ANTI_EVIL)) ||
         (IS_GOOD(ch) && OBJ_FLAGGED(obj, ITEM_ANTI_GOOD)) ||
-        (IS_NEUTRAL(ch) && OBJ_FLAGGED(obj, ITEM_ANTI_NEUTRAL))) {
-        return 0;
-    }
+        (IS_NEUTRAL(ch) && OBJ_FLAGGED(obj, ITEM_ANTI_NEUTRAL))) return 0;
 
-    /* Avaliação de Armas */
-    if (GET_OBJ_TYPE(obj) == ITEM_WEAPON) {
-        struct obj_data *current_weapon = GET_EQ(ch, WEAR_WIELD);
-        float new_w_dam = (float)(GET_OBJ_VAL(obj, 1) * (GET_OBJ_VAL(obj, 2) + 1)) / 2.0;
-        int new_w_stats_score = get_item_apply_score(ch, obj);
+    /* --- AVALIAÇÃO POR TIPO DE ITEM --- */
+    switch (GET_OBJ_TYPE(obj)) {
 
-        if (current_weapon == NULL) {
-            score += 100 + new_w_stats_score;
-        } else {
-            float old_w_dam = (float)(GET_OBJ_VAL(current_weapon, 1) * (GET_OBJ_VAL(current_weapon, 2) + 1)) / 2.0;
-            int old_w_stats_score = get_item_apply_score(ch, current_weapon);
-            int total_improvement = ((int)(new_w_dam - old_w_dam) * 10) + (new_w_stats_score - old_w_stats_score);
-            if (total_improvement > 0) {
-                score += total_improvement;
-            }
-        }
-    }
+        case ITEM_WEAPON:
+        case ITEM_FIREWEAPON: {
+            struct obj_data *current_weapon = GET_EQ(ch, WEAR_WIELD);
+            int new_w_stats_score = get_item_apply_score(ch, obj);
 
-    /* Avaliação de Armaduras */
-    if (GET_OBJ_TYPE(obj) == ITEM_ARMOR) {
-        int wear_pos = find_eq_pos(ch, obj, NULL);
-        if (wear_pos != -1) {
-            struct obj_data *current_armor = GET_EQ(ch, wear_pos);
-            int new_armor_ac = GET_OBJ_VAL(obj, 0);
-            int new_armor_stats_score = get_item_apply_score(ch, obj);
-
-            if (current_armor == NULL) {
-                score += 50 + new_armor_stats_score;
+            if (GET_OBJ_TYPE(obj) == ITEM_FIREWEAPON) {
+                if (mob_has_ammo(ch)) {
+                    score = 150 + new_w_stats_score;
+                } else {
+                    score = 50 + new_w_stats_score;
+                }
             } else {
-                int old_armor_ac = GET_OBJ_VAL(current_armor, 0);
-                int old_armor_stats_score = get_item_apply_score(ch, current_armor);
-                int ac_improvement = (old_armor_ac - new_armor_ac) * 5;
-                int stats_improvement = new_armor_stats_score - old_armor_stats_score;
-
-                if (ac_improvement + stats_improvement > 0) {
-                    score += ac_improvement + stats_improvement;
+                float new_w_dam = (float)(GET_OBJ_VAL(obj, 1) * (GET_OBJ_VAL(obj, 2) + 1)) / 2.0;
+                if (current_weapon == NULL || GET_OBJ_TYPE(current_weapon) == ITEM_FIREWEAPON) {
+                    score = 100 + new_w_stats_score;
+                } else {
+                    float old_w_dam = (float)(GET_OBJ_VAL(current_weapon, 1) * (GET_OBJ_VAL(current_weapon, 2) + 1)) / 2.0;
+                    int old_w_stats_score = get_item_apply_score(ch, current_weapon);
+                    int total_improvement = ((int)(new_w_dam - old_w_dam) * 10) + (new_w_stats_score - old_w_stats_score);
+                    if (total_improvement > 0) score = total_improvement;
                 }
             }
+            break;
+        }
+
+        case ITEM_ARMOR:
+        case ITEM_WINGS: {
+            int wear_pos = find_eq_pos(ch, obj, NULL);
+            if (wear_pos != -1) {
+                struct obj_data *current_armor = GET_EQ(ch, wear_pos);
+                int new_armor_stats_score = get_item_apply_score(ch, obj) - (GET_OBJ_VAL(obj, 0) * 5);
+
+                if (current_armor == NULL) {
+                    score = 50 + new_armor_stats_score;
+                } else {
+                    int old_armor_stats_score = get_item_apply_score(ch, current_armor) - (GET_OBJ_VAL(current_armor, 0) * 5);
+                    if (new_armor_stats_score > old_armor_stats_score) {
+                        score = new_armor_stats_score - old_armor_stats_score;
+                    }
+                }
+            }
+            break;
+        }
+
+        case ITEM_LIGHT: {
+            bool has_light = FALSE;
+            if (IS_DARK(IN_ROOM(ch)) && !IS_AFFECTED(ch, AFF_INFRAVISION)) {
+                int i;
+                for (i = 0; i < NUM_WEARS; i++) {
+                    if (GET_EQ(ch, i) && GET_OBJ_TYPE(GET_EQ(ch, i)) == ITEM_LIGHT) {
+                        has_light = TRUE;
+                        break;
+                    }
+                }
+                if (!has_light) score = 75;
+            }
+            break;
+        }
+
+        case ITEM_POTION:
+        case ITEM_SCROLL:
+        case ITEM_WAND:
+        case ITEM_STAFF:
+            score = GET_OBJ_VAL(obj, 0) * 2;
+            break;
+
+        case ITEM_KEY:
+            score = 30;
+            break;
+
+        case ITEM_BOAT: {
+            bool near_water = FALSE;
+            int door;
+            room_rnum adjacent_room;
+
+            for (door = 0; door < DIR_COUNT; door++) {
+                if (world[IN_ROOM(ch)].dir_option[door] &&
+                    (adjacent_room = world[IN_ROOM(ch)].dir_option[door]->to_room) != NOWHERE) {
+
+                    if (world[adjacent_room].sector_type == SECT_WATER_SWIM ||
+                        world[adjacent_room].sector_type == SECT_WATER_NOSWIM) {
+                        near_water = TRUE;
+                        break;
+                    }
+                }
+            }
+            if (near_water) {
+                score = 200;
+            } else {
+                score = 5;
+            }
+            break;
+        }
+
+        case ITEM_CONTAINER:
+            score = 20;
+            break;
+
+        case ITEM_FOOD:
+            if (GET_COND(ch, HUNGER) >= 0 && GET_COND(ch, HUNGER) < 10) {
+                 score = 40;
+            }
+            break;
+
+        default:
+            score = GET_OBJ_COST(obj) / 100;
+            break;
+    }
+    return score;
+}
+
+/**
+ * Verifica se um mob possui qualquer item do tipo munição.
+ * @param ch O mob a ser verificado.
+ * @return TRUE se tiver munição, FALSE caso contrário.
+ */
+bool mob_has_ammo(struct char_data *ch)
+{
+    struct obj_data *obj;
+
+    /* Primeiro, verifica o item mais óbvio: a aljava (quiver) equipada. */
+    if (GET_EQ(ch, WEAR_QUIVER) != NULL) {
+        return TRUE;
+    }
+
+    /* Se não, percorre o inventário. */
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (GET_OBJ_TYPE(obj) == ITEM_AMMO) {
+            return TRUE;
         }
     }
 
-    /* Bónus base pelo valor em ouro (peso baixo) */
-    score += GET_OBJ_COST(obj) / 100;
-
-    return score;
+    return FALSE;
 }
