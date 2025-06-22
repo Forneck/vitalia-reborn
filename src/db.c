@@ -978,7 +978,7 @@ log1("Sorting command list.");
         * Isto prepara os protótipos para receberem os valores guardados
         * ou para terem um valor padrão.
         */
-        log("Allocating memory for mob prototype genetics.");
+        log1("Allocating memory for mob prototype genetics.");
         int rnum;
         for (rnum = 0; rnum <= top_of_mobt; rnum++) {
          CREATE(mob_proto[rnum].genetics, struct mob_genetics, 1);

@@ -42,6 +42,8 @@ void  stop_fighting(struct char_data *ch);
 int get_weapon_prof(struct char_data *ch, struct obj_data  *wield);
 int get_nighthammer(struct char_data *ch, bool real);
 
+void update_mob_prototype_genetics(struct char_data *mob);
+
 /* Global variables */
 extern struct attack_hit_type attack_hit_text[];
 extern struct char_data *combat_list;

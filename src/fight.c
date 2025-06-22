@@ -26,6 +26,7 @@
 #include "quest.h"
 #include "spedit.h"
 #include "genolc.h"
+#include "genzon.h"
 
 	/* locally defined global variables, used externally */
 	/* head of l-list of fighting chars */
