@@ -1226,6 +1226,7 @@ void index_boot(int mode)
 		   mob_proto[rnum].genetics->wimpy_tendency = 0;
 		   mob_proto[rnum].genetics->loot_tendency = 0;
 		   mob_proto[rnum].genetics->equip_tendency = 0;
+		   mob_proto[rnum].genetics->roam_tendency = 0;
 	        }
 	    /*************************************************************************
 	     * Fim do Bloco de Genética                                              *
@@ -2022,6 +2023,11 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
         {
           if (mob_proto[i].genetics) {
               mob_proto[i].genetics->equip_tendency = num_arg;
+          }                                                                                             }
+	CASE("GenRoam")
+        {
+          if (mob_proto[i].genetics) {
+              mob_proto[i].genetics->roam_tendency = num_arg;
           }                                                                                             }
 	CASE("BareHandAttack")
 	{

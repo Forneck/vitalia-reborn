@@ -111,19 +111,6 @@ void mobile_activity(void)
         }
     }
 
-    /* Mob Movement */
-    if (!MOB_FLAGGED(ch, MOB_SENTINEL) && (GET_POS(ch) == POS_STANDING) &&
-       ((door = rand_number(0, 18)) < DIR_COUNT) && CAN_GO(ch, door) &&
-       !ROOM_FLAGGED(EXIT(ch, door)->to_room, ROOM_NOMOB) &&
-       !ROOM_FLAGGED(EXIT(ch, door)->to_room, ROOM_DEATH) &&
-       (!MOB_FLAGGED(ch, MOB_STAY_ZONE) ||
-           (world[EXIT(ch, door)->to_room].zone == world[IN_ROOM(ch)].zone))) 
-    {
-      /* If the mob is charmed, do not move the mob. */
-      if (ch->master == NULL)
-        perform_move(ch, door, 1);
-    }
-
     /* Aggressive Mobs */
      if (!MOB_FLAGGED(ch, MOB_HELPER) && (!AFF_FLAGGED(ch, AFF_BLIND) || !AFF_FLAGGED(ch, AFF_CHARM))) {
       found = FALSE;
@@ -231,6 +218,69 @@ void mobile_activity(void)
             }
         }
     }
+    
+    /****************************************************************************
+     * Lógica de Genética: VAGUEAR (Roam) - VERSÃO FINAL E CORRIGIDA
+     * Substitui o bloco "Mob Movement" original.
+     ****************************************************************************/
+    if (ch->master == NULL) {
+        const int CURIOSIDADE_EXPLORAR = 10;
+	int effective_roam_tendency = 0;
+	int base_roam_instinct = 25;
+        int final_chance = 0;
+        if (MOB_FLAGGED(ch, MOB_SENTINEL)) {
+            base_roam_instinct = 1;
+        }
+        
+	effective_roam_tendency = base_roam_instinct + GET_GENROAM(ch);
+        final_chance = MAX(effective_roam_tendency, CURIOSIDADE_EXPLORAR);
+        final_chance = MIN(final_chance, 90);
+        if (rand_number(1, 100) <= final_chance) {
+                /* Prossegue com a lógica de movimento. */
+                int was_in = IN_ROOM(ch);
+                door = rand_number(0, DIR_COUNT - 1);
+                struct room_direction_data *exit;
+                room_rnum to_room;
+
+                if ((exit = EXIT(ch, door)) != NULL && (to_room = exit->to_room) != NOWHERE) {
+                    	
+                    /* 2. Lógica de Voo: Aterra/Descola conforme a necessidade antes de tentar andar no mesmo pulso. */
+                    if (AFF_FLAGGED(ch, AFF_FLYING) && ROOM_FLAGGED(to_room, ROOM_NO_FLY)) {
+                        stop_flying(ch);
+                    } else if (!AFF_FLAGGED(ch, AFF_FLYING) && world[to_room].sector_type == SECT_CLIMBING) {
+                        start_flying(ch);
+                    } 
+                    /* 3. Lógica de Obstáculos e Condições */
+                    if (!IS_SET(exit->exit_info, EX_CLOSED)) {
+                           if ((MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[was_in].zone) && (rand_number(1, 100) > 5)) || (!ROOM_FLAGGED(EXIT(ch, door)->to_room, ROOM_NOMOB)))  {
+                               /* Hesitou e não se moveu. */
+                           }
+			   else {
+                               if (perform_move(ch, door, 1)) {
+                                   /* 4. Lógica de Aprendizagem Pós-Movimento */
+                                   if (ch->genetics) {
+                                       int roam_change = 0;
+                                       int current_sect = world[IN_ROOM(ch)].sector_type;
+                                       if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_DEATH) || current_sect == SECT_LAVA || current_sect == SECT_QUICKSAND) {
+                                           roam_change = -20;
+                                       } else if (current_sect == SECT_ICE && GET_POS(ch) < POS_STANDING) {
+                                           roam_change = -5;
+					   /* Mob caiu ao andar, tem que andar com mais cuidado. Também precisa levantar para a proxima ação */
+					   do_stand(ch, "", 0, 0);
+                                       } else {
+                                           roam_change = 1;
+                                       }
+                                       ch->genetics->roam_tendency += roam_change;
+                                       if (ch->genetics->roam_tendency < 0) ch->genetics->roam_tendency = 0;
+                                       if (ch->genetics->roam_tendency > 100) ch->genetics->roam_tendency = 100;
+                                   }
+                               }
+                           }
+                        }
+                    }
+                }
+            }
+
 
     /* Mob Memory */
     if (MOB_FLAGGED(ch, MOB_MEMORY) && MEMORY(ch)) {

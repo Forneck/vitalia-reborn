@@ -9,7 +9,7 @@ condições de dizer de que cor ele seria de verdade!
 2119904 0 0 0 0 0 0 0 -900 E
 5 17 8 2d4+70 1d2+5
 0 150
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
 #2401
@@ -23,7 +23,8 @@ distinguir exatamente qual seria o seu aspecto.
 2119776 0 0 0 0 0 0 0 -1000 E
 8 16 6 2d9+150 1d3+7
 0 3998
-8 8 1
+9 9 1
+GenWimpy: 1
 E
 #2402
 capitao capitão fantasma~
@@ -36,7 +37,7 @@ viu.  E muito maior!
 2291746 0 0 0 0 0 0 0 -1000 E
 50 -1 -6 10d11+2250 5d4+22
 0 66000
-8 8 1
+9 9 1
 E
 #2403
 fantasma cozinheiro pirata~
@@ -50,7 +51,7 @@ pouco claro e nítido...mas com certeza há um grande cutelo nas mãos DISSO!
 2115618 0 0 0 0 0 0 0 -1000 E
 10 15 1 3d7+200 1d4+7
 0 4200
-8 8 1
+9 9 1
 E
 #2404
 fantasma pirata imediato~
@@ -62,7 +63,7 @@ Este homem deve ter sido um maníaco, até mesmo quando era vivo!
 2115618 0 0 0 0 0 0 0 -900 E
 27 9 0 9d11+2100 2d4+12
 0 57000
-8 8 1
+9 9 1
 E
 #2405
 velho marinheiro~
@@ -87,7 +88,7 @@ O horror dos horrores, se você ama sua vida, CORRA!
 2119714 0 0 0 0 0 0 0 -1000 E
 13 14 4 4d7+350 1d4+8
 1009 7200
-8 8 2
+9 9 2
 BareHandAttack: 9
 E
 $

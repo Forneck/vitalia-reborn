@@ -11,7 +11,7 @@ regateador é atualmente um ladrão disfarçado.
 2123924 0 0 0 1572944 0 0 0 -300 E
 14 11 2 1d14+400 1d5+7
 300 5390
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -27,10 +27,11 @@ tirando um intervalo de todo aquele trabalho.
 2158680 0 0 0 524400 0 0 0 400 E
 10 13 0 1d10+200 1d4+5
 200 2285
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #2702
 ferreiro~
@@ -43,7 +44,7 @@ das pessoas.  Levantando o martelo ele acerta um novo golpe no metal quente.
 2222098 0 0 0 526400 0 0 0 300 E
 18 16 1 1d18+800 1d6+9
 450 10232
-8 8 1
+9 9 1
 BareHandAttack: 9
 Dex: 12
 Int: 13
@@ -62,7 +63,7 @@ lutar bravamente se algum de seus amores estiver em apuros.
 2158850 0 0 0 2160 0 0 0 400 E
 16 13 2 1d16+600 1d6+8
 350 7577
-8 8 1
+9 9 1
 BareHandAttack: 2
 Dex: 12
 Int: 13
@@ -81,7 +82,7 @@ tê-lo à volta.
 2158740 0 0 0 524400 0 0 0 200 E
 10 12 1 1d10+200 1d4+5
 200 2285
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -97,7 +98,7 @@ para alguém como ela.
 2289792 0 0 0 1640528 0 0 0 200 E
 11 13 3 1d11+250 1d4+5
 225 2914
-8 8 2
+9 9 2
 BareHandAttack: 4
 Dex: 12
 Int: 13
@@ -116,10 +117,11 @@ guarda do castelo para estar passeando com tanto dinheiro.
 2154640 0 0 0 2160 0 0 0 0 E
 14 12 1 1d14+400 1d5+7
 300 10390
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #2707
 guarda real~
@@ -132,7 +134,7 @@ treinado.  Ele está em guarda, atento para qualquer problema.
 2161984 0 0 0 592240 0 0 0 100 E
 17 10 0 1d17+700 1d6+8
 400 8844
-8 8 0
+9 9 0
 Dex: 12
 Int: 13
 Wis: 13
@@ -164,7 +166,7 @@ espada em punho!!
 2220822 0 0 0 1640768 0 0 0 -200 E
 15 15 0 1d15+500 1d5+7
 325 6427
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -180,7 +182,7 @@ que você e ele terão.
 2160818 0 0 0 1575280 0 0 0 -300 E
 25 11 0 1d15+500 1d5+7
 325 6427
-8 8 0
+9 9 0
 Dex: 12
 Int: 13
 Wis: 13
@@ -196,7 +198,7 @@ vítima...VOCÊ!
 2160818 0 0 0 1837424 0 0 0 -700 E
 27 16 1 1d17+750 1d6+8
 400 8844
-8 8 1
+9 9 1
 BareHandAttack: 13
 Dex: 12
 Int: 13
@@ -212,7 +214,7 @@ O Mestre Torturador espera aqui, com muito sangue gotejando em sua mão.
 2160818 0 0 0 1902960 0 0 0 -1000 E
 40 7 -1 1d19+700 2d3+9
 500 29744
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -228,7 +230,7 @@ as chaves para o seu quarto.
 2158752 0 0 0 591920 0 0 0 750 E
 20 8 0 1d20+500 2d3+10
 550 13385
-8 8 2
+9 9 2
 Dex: 12
 Int: 13
 Wis: 13
@@ -245,7 +247,7 @@ sua cria, já que ela tem cinco garras de três polegadas em cada pata.
 2160658 0 0 0 65840 0 0 0 1000 E
 30 5 3 1d15+800 1d5+7
 0 15427
-8 8 2
+9 9 2
 BareHandAttack: 8
 Dex: 12
 Int: 13
@@ -262,11 +264,12 @@ dá saltos e cambalhotas, brincando com sua irmã.
 2154642 0 0 0 65584 0 0 0 500 E
 10 12 3 1d10+200 1d4+5
 0 2285
-8 8 2
+9 9 2
 BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #2718
 corca~
@@ -280,11 +283,12 @@ qualquer barulho não amigável.
 2154624 0 0 0 48 0 0 0 100 E
 9 12 3 1d9+175 1d3+4
 0 1747
-8 8 2
+9 9 2
 BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
 E
 #2719
 cinza raposa~
@@ -298,11 +302,12 @@ então continua a seguir sua presa antes que o rastro fique frio.
 2154624 0 0 0 48 0 0 0 100 E
 7 11 5 1d7+125 1d2+3
 0 920
-8 8 1
+9 9 1
 BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 2
 E
 #2720
 passaro~
@@ -315,7 +320,7 @@ distância de você, ela repete seu movimento bobo.
 2154624 0 0 0 48 0 0 0 200 E
 6 14 6 1d6+70 1d2+3
 0 621
-8 8 1
+9 9 1
 BareHandAttack: 8
 Dex: 12
 Int: 13
@@ -332,11 +337,12 @@ um momento para checar você, então ela voa alegre novamente.
 2154624 0 0 0 48 0 0 0 200 E
 6 17 7 1d6+70 1d2+3
 0 621
-8 8 0
+9 9 0
 BareHandAttack: 1
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 2
 E
 #2722
 porco~
@@ -349,7 +355,7 @@ ele não se preocupa com o mundo
 2154624 0 0 0 48 0 0 0 400 E
 7 15 7 1d7+125 1d2+3
 0 1920
-8 8 0
+9 9 0
 BareHandAttack: 4
 Dex: 12
 Int: 13
@@ -367,7 +373,7 @@ alimentá-la.
 2154624 0 0 0 48 0 0 0 200 E
 8 12 7 1d8+150 1d3+4
 0 7293
-8 8 2
+9 9 2
 BareHandAttack: 4
 Dex: 12
 Int: 13
@@ -384,7 +390,7 @@ bem merecido descanso, depois de ter trabalhado duro todo o dia, nos campos.
 2154624 0 0 0 48 0 0 0 200 E
 10 13 5 1d10+200 1d4+5
 0 2285
-8 8 1
+9 9 1
 BareHandAttack: 4
 Dex: 12
 Int: 13
@@ -401,7 +407,7 @@ firmemente fincada no chão, parece ansiosa para estar livre novamente.
 2154624 0 0 0 2352 0 0 0 200 E
 12 13 4 1d12+300 1d4+6
 0 3638
-8 8 2
+9 9 2
 BareHandAttack: 4
 Dex: 12
 Int: 13
@@ -419,7 +425,7 @@ ama comer.
 2158738 0 0 0 48 0 0 0 300 E
 22 9 -2 1d22+1400 2d3+11
 650 17068
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -436,7 +442,7 @@ para o nível da nobreza e possibilitar a entrada nas festividades lá fora.
 2158738 0 0 0 48 0 0 0 100 E
 9 12 6 1d9+175 1d3+4
 175 1747
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -453,7 +459,7 @@ seu extenso conhecimento em um novo trabalho...  Negócios.
 2158738 0 0 0 48 0 0 0 300 E
 20 8 0 1d20+1000 2d3+10
 550 13385
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -470,7 +476,7 @@ que ela obteve aquela feia e comprida cicatriz na face.
 2158738 0 0 0 1900592 0 0 0 200 E
 30 7 -5 1d19+900 2d3+9
 500 11744
-8 8 2
+9 9 2
 Dex: 12
 Int: 13
 Wis: 13
@@ -486,14 +492,14 @@ vê aqui.  Seu marido apenas vende e supervisiona outros aspectos da padaria.
 2158738 0 0 0 48 0 0 0 200 E
 21 8 3 1d21+1200 2d3+10
 600 15159
-8 8 2
+9 9 2
 Dex: 12
 Int: 13
 Wis: 13
 E
 #2731
 rei jorus~
-O Rei Jorus~
+o Rei Jorus~
 Um homem imponente vestindo um manto real anda pela sala.
 ~
 Ele é um bom e generoso home que governou Midantra por um longo tempo.  Sob
@@ -504,7 +510,7 @@ pesado bastante em sua mente ultimamente.
 2358544 0 0 0 262512 0 0 0 500 E
 60 -5 -10 8d23+3900 7d6+30
 40000 101028
-8 8 1
+9 9 1
 Dex: 13
 Int: 13
 Wis: 13
@@ -522,7 +528,7 @@ os negócios externos aos do castelo.
 2358544 0 0 0 262512 0 0 0 500 E
 50 0 -8 3d23+2800 5d4+19
 30000 91028
-8 8 2
+9 9 2
 Dex: 12
 Int: 13
 Wis: 13
@@ -539,10 +545,11 @@ saquear um corpo do que saquear uma pessoa viva.
 2158770 0 0 0 1900592 0 0 0 -500 E
 10 13 4 1d10+200 1d4+5
 200 2285
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #2734
 alguma coisa mulher~
@@ -556,7 +563,7 @@ habilidades tem sido proveitosa para ela em seus assaltos.
 2355332 0 0 0 1902704 0 0 0 -600 E
 11 13 4 1d11+250 1d4+5
 225 2914
-8 8 2
+9 9 2
 Dex: 12
 Int: 13
 Wis: 13
@@ -573,7 +580,7 @@ tradicional nível dominado por homens, ela não parece amedrontada pela tarefa
 2158738 0 0 0 48 0 0 0 200 E
 9 2 4 1d9+175 1d3+4
 175 11747
-8 8 2
+9 9 2
 Dex: 12
 Int: 13
 Wis: 13
@@ -592,7 +599,7 @@ cirúrgicos, mas com armas também.
 2158738 0 0 0 262192 0 0 0 300 E
 24 4 4 1d14+400 1d5+7
 300 5390
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -630,7 +637,7 @@ ao redor.  Um veterano de várias batalhas, ele não conhece o medo.
 2358544 0 0 0 368 0 0 0 500 E
 30 5 -1 1d15+500 1d5+7
 325 37069
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -648,10 +655,11 @@ irá fazer algo meio duvidoso...
 2160816 0 0 0 1900656 0 0 0 -200 E
 30 12 4 1d12+300 1d4+6
 250 13638
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #2740
 distraido cavaleiro~
@@ -665,7 +673,7 @@ aprimora suas habilidades.
 2158738 0 0 0 48 0 0 0 300 E
 13 14 4 1d13+350 1d5+6
 275 4462
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -682,11 +690,12 @@ seu sangue!
 2158752 0 0 0 262192 0 0 0 -100 E
 10 13 3 1d10+200 1d4+5
 0 2285
-8 8 0
+9 9 0
 BareHandAttack: 16
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #2742
 monstro~
@@ -701,7 +710,7 @@ monstro poderoso em uma luta.
 2158752 0 0 0 264304 0 0 0 -200 E
 15 5 2 1d15+500 1d5+12
 0 36427
-8 8 1
+9 9 1
 BareHandAttack: 4
 Dex: 12
 Int: 13
@@ -718,7 +727,7 @@ chifre, o cervo se tornou desconfiado quando se trata de seres humanos.
 2154624 0 0 0 48 0 0 0 100 E
 11 13 4 1d11+250 1d4+5
 0 6914
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -735,14 +744,14 @@ idade, sua força e graça ainda são bem evidentes em seus movimentos.
 2154624 0 0 0 4194352 0 0 0 400 E
 30 -10 -14 1d50+3000 4d5+25
 2500 138481
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
 E
 #2745
 cavaleiro negro espinho~
-O Cavaleiro do Espinho Negro~
+o Cavaleiro do Espinho Negro~
 Rangendo os rentes raivosamente, um cavaleiro vestido de preto convida-o a lutar!
 ~
 Banido para sempre da irmandade dos Paladinos por ter cometido horríveis
@@ -753,7 +762,7 @@ prazer de matar a qualquer custo.
 2349104 0 0 0 1902848 0 0 0 -1000 E
 45 6 -1 1d15+500 1d5+7
 325 27069
-8 8 1
+9 9 1
 BareHandAttack: 12
 Dex: 12
 Int: 13

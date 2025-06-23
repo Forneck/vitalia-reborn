@@ -12,7 +12,7 @@ quando existe conflitos entre povos vitalianos.
 2781248 0 0 0 67176472 0 0 0 700 E
 26 6 -2 4d5+700 3d6+5
 8000 63000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 13
 Dex: 18
@@ -34,7 +34,7 @@ quando existe conflitos entre povos vitalianos.
 2781248 0 0 0 67176472 0 0 0 750 E
 25 7 -1 4d5+580 3d5+5
 6000 60000
-8 8 2
+9 9 2
 BareHandAttack: 12
 Dex: 16
 Int: 13
@@ -57,7 +57,7 @@ a justiça entre os povos.
 2291714 0 0 0 262144 0 0 0 350 E
 35 3 -4 4d5+1200 3d6+10
 10000 120000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 16
 Dex: 18
@@ -80,7 +80,7 @@ a justiça entre os povos.
 2291714 0 0 0 18350208 0 0 0 350 E
 35 4 -4 4d5+1150 3d6+8
 10000 120000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 13
 Dex: 18
@@ -100,7 +100,7 @@ vitalianas: o poder de conversar telepaticamente com os animais.
 2769088 0 0 0 68747272 0 0 0 700 E
 18 7 2 4d5+400 3d5+4
 5000 35000
-8 8 2
+9 9 2
 BareHandAttack: 12
 Str: 10
 Dex: 15
@@ -121,7 +121,7 @@ limpando sua cidade, ele é alto e forte como todos os otavianos.
 2781248 0 0 0 67176472 0 0 0 700 E
 26 6 0 4d5+700 3d6+5
 5000 45000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 13
 Dex: 18
@@ -142,7 +142,7 @@ otavianos.
 2781250 0 0 0 67176472 0 0 0 700 E
 26 6 2 4d5+700 3d6+5
 5200 45000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 13
 Dex: 18
@@ -162,7 +162,7 @@ forma harmônica e suave em sua obra de arte.
 2781250 0 0 0 67176472 0 0 0 700 E
 26 6 1 4d5+650 3d6+5
 10000 40000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Dex: 13
 Int: 15
@@ -182,7 +182,7 @@ retratados em seus quadros.
 2781250 0 0 0 67176472 0 0 0 700 E
 26 6 1 4d5+650 3d6+5
 10000 40000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Dex: 13
 Int: 15
@@ -202,7 +202,7 @@ mistérios cabe a todos nós acreditarmos ou não.  O que ocorrerá no futuro ?
 2781250 0 0 0 67176472 0 0 0 750 E
 25 5 -3 4d5+580 3d5+5
 8000 43000
-8 8 2
+9 9 2
 BareHandAttack: 12
 Str: 10
 Dex: 14
@@ -222,7 +222,7 @@ emocionam e alegram a todos.
 2781248 0 0 0 67176472 0 0 0 700 E
 26 6 -1 4d5+700 3d6+5
 5000 63000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 13
 Dex: 18
@@ -242,7 +242,7 @@ de todos os males.
 2781250 0 0 0 67176472 0 0 0 700 E
 30 2 -5 4d5+900 3d6+15
 8000 63000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 18
 Dex: 18
@@ -264,7 +264,7 @@ a qualquer inimigo.
 2781248 0 0 0 67176728 0 0 0 700 E
 40 2 -10 4d5+1550 3d6+25
 40000 300000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 18
 Dex: 18
@@ -286,7 +286,7 @@ temor e medo em qualquer advers�rio.
 2291714 0 0 0 262400 0 0 0 350 E
 40 2 -10 4d5+1500 3d6+20
 40000 300000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 18
 Dex: 18
@@ -308,7 +308,7 @@ temor e medo em qualquer adversário.
 2291714 0 0 0 18350464 0 0 0 350 E
 40 2 -10 4d5+1500 3d6+20
 40000 300000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 18
 Dex: 18
@@ -330,7 +330,7 @@ um jovem.
 2781250 0 0 0 67176472 0 0 0 700 E
 28 4 -3 4d5+800 3d6+8
 8000 70000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 16
 Dex: 17
@@ -352,7 +352,7 @@ trevas.
 2781250 0 0 0 67176472 0 0 0 700 E
 35 0 -10 4d5+1100 3d6+20
 40000 130000
-8 8 2
+9 9 2
 BareHandAttack: 12
 Str: 16
 Dex: 18
@@ -377,7 +377,7 @@ este mistério.
 2873362 0 0 0 67109120 0 0 0 600 E
 80 -5 -17 4d5+2700 5d7+20
 60000 380000
-8 8 1
+9 9 1
 BareHandAttack: 4
 Str: 20
 Dex: 20
@@ -398,7 +398,7 @@ perto dele.
 2353170 0 0 0 1048580 0 0 0 350 E
 50 -7 -16 4d5+1800 5d7+25
 30000 230000
-8 8 1
+9 9 1
 BareHandAttack: 5
 Str: 20
 Dex: 15
@@ -419,7 +419,7 @@ carinhosos e adoram crianças.
 2097344 0 0 0 526336 0 0 0 350 E
 3 10 8 4d5+25 3d4+2
 0 3000
-8 8 1
+9 9 1
 BareHandAttack: 4
 Str: 5
 Dex: 10
@@ -427,6 +427,7 @@ Int: 8
 Wis: 6
 Con: 8
 Cha: 15
+GenWimpy: 1
 E
 #10721
 guardião fogo~
@@ -442,7 +443,7 @@ de sua vida.
 2353170 0 0 0 264448 0 0 0 350 E
 85 -12 -19 4d5+2900 5d7+29
 55000 600000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 22
 Dex: 22
@@ -464,7 +465,7 @@ dois pontos vermelhos que brilham em contraste com toda sua limpidez.
 2353170 0 0 0 17826176 0 0 0 350 E
 85 -13 -18 4d5+2850 5d7+26
 50000 430000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 20
 Dex: 25
@@ -487,7 +488,7 @@ observá-lo.
 2877458 0 0 0 68681988 0 0 0 350 E
 85 -12 -16 4d5+2300 5d7+27
 50000 430000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 18
 Dex: 25
@@ -510,7 +511,7 @@ males, principalmente da infertilidade.
 2353170 0 0 0 17826176 0 0 0 350 E
 85 -12 -18 4d5+2500 5d7+22
 50000 430000
-8 8 1
+9 9 1
 BareHandAttack: 5
 Str: 25
 Dex: 25
@@ -532,7 +533,7 @@ das pessoas.
 2353170 0 0 0 256 0 0 0 800 E
 85 -15 -20 4d5+2800 5d7+29
 40000 430000
-8 8 1
+9 9 1
 Str: 18
 Dex: 18
 Int: 25
@@ -552,7 +553,7 @@ sempre bem vindos por causa do seu canto melódico e magnífico.
 2353170 0 0 0 17826176 0 0 0 350 E
 2 12 8 4d5+8 3d2+2
 0 200
-8 8 1
+9 9 1
 BareHandAttack: 4
 Str: 5
 Dex: 12
@@ -573,7 +574,7 @@ cinza adora seguir e bisbilhotar os aventureiros que atravessam a floresta.
 2353170 0 0 0 17826176 0 0 0 350 E
 2 10 8 4d5+12 3d2+3
 0 300
-8 8 1
+9 9 1
 BareHandAttack: 4
 Str: 6
 Dex: 13
@@ -595,7 +596,7 @@ poesias desta nobre otaviana.
 2781250 0 0 0 67176472 0 0 0 750 E
 25 5 -3 4d5+580 3d5+13
 8000 43000
-8 8 2
+9 9 2
 BareHandAttack: 12
 Str: 10
 Dex: 14
@@ -614,7 +615,7 @@ conquistaria qualquer coisa com seus dons.
 2781186 0 0 0 67176472 0 0 0 750 E
 25 5 -4 4d5+650 3d5+15
 8000 50000
-8 8 2
+9 9 2
 BareHandAttack: 12
 Str: 13
 Dex: 14

@@ -9,7 +9,7 @@ Tomara que ele não esteja com fome!
 2156592 0 0 0 0 0 0 0 0 E
 15 5 -1 5d5+250 4d4+13
 10 4000
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
 #10301
@@ -23,7 +23,8 @@ mês, você pode ver que ele não é nada civilizado!
 2355346 0 0 0 16 0 0 0 0 E
 15 7 1 3d4+300 5d4+10
 100 4000
-8 8 1
+9 9 1
+GenWimpy: 1
 E
 #10302
 canibal~
@@ -36,7 +37,7 @@ Este aqui tem pedaços de carne e sangue por todo o corpo. Adivinhe, de onde ser
 2128036 0 0 0 524380 0 0 0 -100 E
 15 10 -1 6d6+270 5d4+10
 100 6500
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
 #10303
@@ -50,7 +51,7 @@ uma pobre garotinha que acidentalmente encontrou esse lugar!
 2128036 0 0 0 524380 0 0 0 -100 E
 15 10 0 6d6+260 5d5+10
 100 6500
-8 8 1
+9 9 1
 E
 #10304
 mulher~
@@ -63,7 +64,7 @@ poderia acabar com o sofrimento dela!
 2099336 0 0 0 0 0 0 0 0 E
 5 17 5 4d4+100 3d4+1
 50 1000
-8 8 2
+9 9 2
 E
 #10305
 mulher canibal~
@@ -77,7 +78,7 @@ algo sério!
 2128036 0 0 0 524380 0 0 0 -100 E
 11 17 7 3d3+100 3d3+3
 0 3500
-8 8 2
+9 9 2
 E
 #10306
 chefe canibal~
@@ -90,7 +91,7 @@ refeição. Tomara que você não vire o próximo prato!
 2128036 0 0 0 524636 0 0 0 -400 E
 20 4 -5 5d5+800 6d5+18
 3000 6000
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
 #10307
@@ -103,7 +104,7 @@ Esta cobra parece ser perigosa, sem dúvida. Veja só as presas!
 2128036 0 0 0 0 0 0 0 -50 E
 15 15 3 6d6+150 4d5+5
 300 4000
-8 8 2
+9 9 2
 BareHandAttack: 4
 E
 #10308
@@ -116,7 +117,7 @@ Esse macaquinho é muito mal educado!
 2128036 0 0 0 0 0 0 0 -50 E
 5 18 4 3d3+100 3d3+8
 300 2000
-8 8 1
+9 9 1
 BareHandAttack: 7
 E
 #10309
@@ -129,7 +130,7 @@ Peludo, mal cheiroso, e desagradável. Que tal deixá-lo sozinho?
 2128036 0 0 0 0 0 0 0 0 E
 13 16 2 7d5+175 4d5+5
 500 4000
-8 8 1
+9 9 1
 BareHandAttack: 9
 E
 #10310
@@ -142,7 +143,7 @@ Ela é bem parecida com os outros primatas. Cheira mal, horrível.
 2128036 0 0 0 0 0 0 0 0 E
 10 17 5 4d6+135 3d4+3
 500 3500
-8 8 2
+9 9 2
 BareHandAttack: 4
 E
 #10311
@@ -156,7 +157,7 @@ fedorento!
 2128036 0 0 0 524636 0 0 0 -200 E
 20 5 10 10d10+1000 6d7+13
 3000 6000
-8 8 1
+9 9 1
 BareHandAttack: 5
 E
 #10312
@@ -183,7 +184,7 @@ Este Troll é enorme e aparenta ser muito forte.
 2123810 0 0 0 336 0 0 0 -550 E
 20 0 0 5d5+1000 5d5+15
 1500 7000
-8 8 1
+9 9 1
 E
 #10314
 morcego~
@@ -209,7 +210,7 @@ sua última refeição.
 2120160 0 0 0 0 0 0 0 0 E
 6 10 6 2d2+100 3d3+6
 1000 3700
-8 8 2
+9 9 2
 E
 #10316
 zumbi~
@@ -221,7 +222,7 @@ Este zumbi é alto e forte, e está aqui pronto para lhe matar.
 2115936 0 0 0 0 0 0 0 0 E
 15 10 7 8d8+750 5d5+8
 3500 4000
-8 8 1
+9 9 1
 E
 #10317
 zumbi kenuthi~
@@ -234,6 +235,6 @@ tremenda.
 2285602 0 0 0 0 0 0 0 0 E
 20 10 10 5d5+900 6d5+8
 5000 6000
-8 8 1
+9 9 1
 E
 $

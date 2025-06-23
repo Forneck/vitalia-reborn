@@ -365,6 +365,8 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
     fprintf(fd, "GenLoot: %d\n", mob->genetics->loot_tendency);
   if (mob->genetics && mob->genetics->equip_tendency != 0)
     fprintf(fd, "GenEquip: %d\n", mob->genetics->equip_tendency);
+  if (mob->genetics && mob->genetics->roam_tendency != 0)
+    fprintf(fd, "GenRoam: %d\n", mob->genetics->roam_tendency);
   fputs("E\n", fd);
   return TRUE;
 }

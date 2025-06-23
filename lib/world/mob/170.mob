@@ -8,7 +8,8 @@ Ele parece tentar alcançar o outro lado da montanha, assim como você.
 2113602 0 0 0 0 0 0 0 0 E
 10 10 0 1d10+160 2d10+8
 400 600
-8 8 1
+9 9 1
+GenWimpy: 1
 E
 #17002
 ciclope~
@@ -20,7 +21,7 @@ Ele parece estar atrás de um almoço..
 2121762 0 0 0 0 0 0 0 -700 E
 22 0 0 1d5+380 3d5+20
 1000 20000
-8 8 1
+9 9 1
 E
 #17003
 elemental~
@@ -32,7 +33,7 @@ Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 2113666 0 0 0 0 0 0 0 0 E
 10 1 -1 1d5+100 3d8+10
 1100 6000
-8 8 1
+9 9 1
 E
 #17004
 elemental guardiao~
@@ -45,7 +46,7 @@ a todos?
 2158594 0 0 0 0 0 0 0 0 E
 20 -4 -5 1d5+650 8d4+17
 3000 50000
-8 8 1
+9 9 1
 E
 #17005
 pequeno elemental~
@@ -57,7 +58,8 @@ An undefined string.
 2646208 0 0 0 0 0 0 0 0 E
 5 0 -4 2d5+150 2d6+4
 1000 6000
-8 8 1
+9 9 1
+GenWimpy: 2
 E
 #17006
 elemental~
@@ -69,7 +71,7 @@ An undefined string.
 2646208 0 0 0 0 0 0 0 10 E
 10 6 -2 3d5+200 3d6+6
 1750 9000
-8 8 1
+9 9 1
 E
 #17007
 elemental grande~
@@ -81,7 +83,8 @@ An undefined string.
 2646208 0 0 0 0 0 0 0 20 E
 15 -4 -6 5d5+250 4d9+17
 2200 20000
-8 8 1
+9 9 1
+GenWimpy: 1
 E
 #17008
 lider elemental terra~
@@ -95,7 +98,7 @@ e aonde termina a parede.
 2680834 0 0 0 0 0 0 0 128 E
 30 -4 -11 1d5+600 5d10+21
 4120 70000
-8 8 1
+9 9 1
 E
 #17009
 lider elemental fogo~
@@ -107,7 +110,7 @@ Assim que você olha para ele, ele se mistura ao fogo de seu trono.
 2680834 0 0 0 0 0 0 0 128 E
 30 -4 -11 1d5+600 5d10+21
 4120 70000
-8 8 1
+9 9 1
 E
 #17010
 lider elemental ar~
@@ -119,7 +122,7 @@ Você parece estar olhando para os céus.
 2680834 0 0 0 0 0 0 0 128 E
 30 -4 -11 1d5+600 5d10+21
 4120 70000
-8 8 1
+9 9 1
 E
 #17011
 lider elemental trovao~
@@ -132,7 +135,7 @@ forte feixe que lhe cega.
 2680834 0 0 0 0 0 0 0 128 E
 30 -4 -11 1d5+600 5d10+21
 4120 70000
-8 8 1
+9 9 1
 E
 #17012
 lider elemental agua~
@@ -145,7 +148,7 @@ em sua direção.
 2680834 0 0 0 0 0 0 0 128 E
 30 -4 -11 1d5+600 5d10+21
 4120 70000
-8 8 1
+9 9 1
 E
 #17014
 poca agua elemental~
@@ -157,7 +160,8 @@ Ela percorre o chão em sua direção.
 2121952 0 0 0 0 0 0 0 0 E
 8 2 0 1d5+200 1d10+3
 980 5000
-8 8 2
+9 9 2
+GenWimpy: 1
 E
 #17015
 chama elemental fogo~
@@ -169,7 +173,7 @@ Ela corre ao seu redor, esperando uma brecha.
 2121952 0 0 0 0 0 0 0 0 E
 8 1 0 1d5+200 1d10+3
 850 5000
-8 8 2
+9 9 2
 E
 #17016
 elemental neve humanoide cristal~
@@ -181,7 +185,7 @@ Ele parece incapaz de se mover.
 2121730 0 0 0 0 0 0 0 520 E
 3 5 2 1d5+100 2d5+4
 400 3000
-8 8 1
+9 9 1
 E
 #17017
 elemental rocha humanoide~
@@ -193,7 +197,7 @@ Ela se mexeu?!
 2121730 0 0 0 0 0 0 0 520 E
 3 5 2 1d5+200 2d5+4
 400 3000
-8 8 1
+9 9 1
 E
 #17018
 orbe elemental humanoide~
@@ -206,7 +210,7 @@ todos os lados, produzindo barulhentas explosões.
 2121730 0 0 0 0 0 0 0 520 E
 3 5 2 1d5+200 2d5+4
 400 3000
-8 8 1
+9 9 1
 E
 #17019
 elemental acido liquido humanoide~
@@ -218,7 +222,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 2121730 0 0 0 0 0 0 0 520 E
 3 5 2 1d5+200 2d5+4
 400 3000
-8 8 1
+9 9 1
 E
 #17020
 besta lava elemental~
@@ -231,7 +235,8 @@ que suas calças sequem rápido.
 2121952 0 0 0 0 0 0 0 -20 E
 8 12 1 1d5+250 3d5+4
 1000 4000
-8 8 2
+9 9 2
+GenWimpy: 2
 E
 #17021
 lama monstro elemental~
@@ -243,7 +248,8 @@ O que há de interessante nisso?  Terra, água... garras??
 2121952 0 0 0 0 0 0 0 -10 E
 7 12 -2 1d5+250 3d5+6
 1000 4000
-8 8 1
+9 9 1
+GenWimpy: 1
 E
 #17022
 tufao elemental~
@@ -255,7 +261,7 @@ Ele parece um tanto quanto imprevisível.
 2121952 0 0 0 0 0 0 0 -20 E
 6 12 -3 1d5+250 3d5+5
 1000 4000
-8 8 1
+9 9 1
 E
 #17023
 particula elemental coisa~
@@ -267,7 +273,8 @@ Uma intrigante manifestação de energia.
 2121952 0 0 0 0 0 0 0 0 E
 5 14 -15 1d5+200 2d5+3
 1000 3000
-8 8 2
+9 9 2
+GenWimpy: 1
 E
 #17024
 nuvem poeira elemental~
@@ -279,7 +286,7 @@ Uma estranha mistura de terra e ar.. ela não parece nem te ver.
 2121952 0 0 0 0 0 0 0 0 E
 5 14 -15 1d5+200 2d5+3
 1000 3000
-8 8 2
+9 9 2
 E
 #17025
 redemoinho tornado elemental~
@@ -291,7 +298,7 @@ An undefined string.
 2121952 0 0 0 0 0 0 0 0 E
 2 17 2 1d5+100 1d8+1
 450 1000
-8 8 1
+9 9 1
 E
 #17026
 chama elemental azul humanoide~
@@ -304,7 +311,7 @@ e seus bruxuleantes membros, que parecem ser afiados como garras.
 2121824 0 0 0 0 0 0 0 -450 E
 26 -2 -5 1d5+590 6d4+14
 3000 30000
-8 8 2
+9 9 2
 E
 #17027
 magneto elemental humanoide~
@@ -316,7 +323,7 @@ Um humanóide que parece ter sido preso em um campo magnético.
 2121824 0 0 0 0 0 0 0 -450 E
 26 -2 -5 1d5+640 6d5+14
 3000 30000
-8 8 1
+9 9 1
 E
 #17028
 neve bandido~
@@ -329,7 +336,7 @@ frio subindo por suas costas.
 2121824 0 0 0 0 0 0 0 -450 E
 26 -2 -5 1d5+630 6d5+13
 3000 30000
-8 8 1
+9 9 1
 E
 #17029
 rochas monstro~
@@ -342,7 +349,7 @@ Elas parecem estar formando um tipo de humanóide. E sua expressão não
 2121824 0 0 0 0 0 0 0 -450 E
 26 -2 -5 1d5+620 6d5+12
 3000 30000
-8 8 1
+9 9 1
 E
 #17030
 furacao~
@@ -355,7 +362,7 @@ tempo até que ela lhe atinja.
 2121824 0 0 0 0 0 0 0 -450 E
 26 -2 -7 1d5+650 6d5+11
 3000 30000
-8 8 1
+9 9 1
 E
 #17031
 anciao mago elemental~
@@ -369,7 +376,7 @@ a Pedra da Rendição. Afaste-se.. enquanto ainda possui sua alma..."
 2154658 0 0 0 0 0 0 0 -360 E
 25 -4 -7 1d5+700 6d4+18
 6000 40000
-8 8 1
+9 9 1
 E
 #17032
 guerreiro alvorecer~
@@ -382,7 +389,7 @@ Você sente uma sensação de perigo passar por você como um trovão.
 2121730 0 0 0 0 0 0 0 500 E
 18 -4 -9 1d5+910 5d5+19
 4000 45000
-8 8 1
+9 9 1
 E
 #17033
 ilusionista homem~
@@ -397,7 +404,7 @@ enquanto cria outra bola negra nas mãos.
 2156608 0 0 0 0 0 0 0 -370 E
 20 -4 -9 2d10+900 10d4+19
 9000 45000
-8 8 1
+9 9 1
 E
 #17034
 alquimista~
@@ -409,7 +416,7 @@ As ervas que ele carrega parecem ser raras.
 2121858 0 0 0 0 0 0 0 -50 E
 13 10 -9 1d5+450 1d20+4
 2900 10000
-8 8 1
+9 9 1
 E
 #17035
 bebe dragao~
@@ -422,7 +429,7 @@ todos os elementos da natureza.
 2189318 0 0 0 0 0 0 0 0 E
 16 0 -5 1d5+1090 3d15+12
 2400 30000
-8 8 1
+9 9 1
 E
 #17036
 escravo~
@@ -434,7 +441,8 @@ Ele se assemelha bastante a um desagradável inseto.
 2121924 0 0 0 0 0 0 0 -500 E
 5 16 4 1d5+90 2d4+1
 800 1000
-8 8 1
+9 9 1
+GenWimpy: 4
 E
 #17037
 gigantesco elemental~
@@ -446,7 +454,7 @@ GIGANTESCO, é preciso mais??
 2189376 0 0 0 0 0 0 0 30 E
 20 -6 -8 1d5+1970 5d6+19
 3000 68000
-8 8 1
+9 9 1
 E
 #17038
 vendedor~
@@ -458,6 +466,6 @@ Ele possui um olhar misterioso.. parece ter muitos segredos em suas mangas.
 2121730 0 0 0 0 0 0 0 1000 E
 30 0 -10 1d1+1600 2d6+5
 5400 10000
-8 8 1
+9 9 1
 E
 $

@@ -647,11 +647,12 @@ Um fido bestial está aqui, fuçando no lixo, a procura de comida.
 O fido é um cachorro pequeno que tem um cheiro muito ruim e seus dentes estão
 cheios de pedaços de carne apodrecida grudadas.
 ~
-2162912 0 0 0 0 0 0 0 -200 E
+2162916 0 0 0 0 0 0 0 -200 E
 0 20 10 1d6+4 1d4+0
 0 25
 9 9 1
 BareHandAttack: 4
+GenWimpy: 2
 E
 T 3014
 #3063

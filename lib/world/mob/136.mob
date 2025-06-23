@@ -8,7 +8,8 @@ An undefined string.
 2097216 0 0 0 0 0 0 0 0 E
 13 7 4 1d1+350 6d1+13
 0 12880
-8 8 2
+9 9 2
+GenWimpy: 1
 E
 #13601
 dragao negro pequeno~
@@ -20,7 +21,7 @@ Algo lhe diz que sua vida não será muito longa..
 2164832 0 0 0 80 0 0 0 0 E
 25 -5 0 1d1+2000 11d1+25
 0 40074
-8 8 1
+9 9 1
 E
 #13602
 pequeno corcunda~
@@ -32,7 +33,7 @@ An undefined string.
 2097216 0 0 0 0 0 0 0 0 E
 15 5 4 1d1+500 6d1+15
 250 14000
-8 8 1
+9 9 1
 E
 #13603
 cervo corca~
@@ -44,7 +45,7 @@ Uma corça, um cervo, um cervo fêmea...  Vamos! Você conhece a música.
 2097216 0 0 0 0 0 0 0 0 E
 14 6 4 1d1+400 6d1+14
 0 13428
-8 8 2
+9 9 2
 E
 #13604
 veado~
@@ -56,7 +57,7 @@ Um veado, um cervo fêmea...    Ah Chega!!
 2097216 0 0 0 0 0 0 0 0 E
 14 6 4 1d1+400 6d1+14
 0 13428
-8 8 1
+9 9 1
 E
 #13605
 duende floresta~
@@ -68,7 +69,7 @@ Ele olha para você e ri frenéticamente.
 2097216 0 0 0 0 0 0 0 0 E
 14 6 4 1d1+400 6d1+14
 225 13428
-8 8 1
+9 9 1
 E
 #13606
 agil raposa~
@@ -80,7 +81,7 @@ An undefined string.
 2097216 0 0 0 0 0 0 0 0 E
 14 6 4 1d1+400 6d1+14
 225 13428
-8 8 0
+9 9 0
 E
 #13607
 multicolorida borboleta~
@@ -92,7 +93,7 @@ An undefined string.
 2097216 0 0 0 0 0 0 0 0 E
 13 7 4 1d1+350 6d1+13
 0 12880
-8 8 0
+9 9 0
 E
 #13608
 girassol grande~
@@ -104,7 +105,7 @@ Ele se moveu?
 2097216 0 0 0 0 0 0 0 0 E
 14 6 4 1d1+400 6d1+14
 0 13428
-8 8 1
+9 9 1
 E
 #13609
 arvore nirin odiosa~
@@ -116,7 +117,7 @@ An undefined string.
 2162752 0 0 0 0 0 0 0 0 E
 15 5 4 1d1+500 6d1+15
 0 15454
-8 8 0
+9 9 0
 E
 #13610
 inseto pedra inseto-pedra~
@@ -128,6 +129,6 @@ An undefined string.
 2097248 0 0 0 0 0 0 0 0 E
 13 7 4 1d1+350 6d1+13
 0 12937
-8 8 1
+9 9 1
 E
 $

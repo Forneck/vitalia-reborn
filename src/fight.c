@@ -1613,6 +1613,19 @@ void update_mob_prototype_genetics(struct char_data *mob)
     if (proto->genetics->equip_tendency < 0) proto->genetics->equip_tendency = 0;
     if (proto->genetics->equip_tendency > 100) proto->genetics->equip_tendency = 100;
 
+     /****************************************************************
+     * LÓGICA PARA O GENE ROAM                                       *
+     ****************************************************************/
+    int old_roam = proto->genetics->roam_tendency;
+    int instance_roam = mob->genetics->roam_tendency;
+
+    /* Simplesmente calculamos a nova média com base no que o mob aprendeu. */
+    proto->genetics->equip_tendency = ((old_roam * 7) + (instance_roam * 3)) / 10;
+
+    /* Garante que o valor do protótipo também não saia dos limites. */
+    if (proto->genetics->roam_tendency < 0) proto->genetics->roam_tendency = 0;
+    if (proto->genetics->roam_tendency > 100) proto->genetics->roam_tendency = 100;
+
     /* 5. Marca a zona como modificada para que seja salva no próximo 'save all'. */
     mob_vnum vnum = mob_index[rnum].vnum; /* Pega o vnum a partir do mob_index */
     zone_rnum rznum = real_zone_by_thing(vnum);

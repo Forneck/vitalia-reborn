@@ -56,6 +56,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 2
 E
 #705
 monstrinho menor criatura~
@@ -77,6 +78,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 5
 E
 #706
 duende~
@@ -97,6 +99,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 3
 E
 #707
 cristal monsto~
@@ -117,6 +120,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 2
 E
 #708
 escorpião escorpiao vermelho~
@@ -220,6 +224,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 1
 E
 #714
 cavaleiro negro tempestuoso armadura~
@@ -415,6 +420,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 6
 E
 #781
 planta carnivora venus carnívora vênus~
@@ -433,6 +439,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 1
 E
 #799
 banda~
