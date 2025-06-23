@@ -252,7 +252,7 @@ void mobile_activity(void)
                     } 
                     /* 3. Lógica de Obstáculos e Condições */
                     if (!IS_SET(exit->exit_info, EX_CLOSED)) {
-                           if ((MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[was_in].zone) && (rand_number(1, 100) > 5)) || (!ROOM_FLAGGED(EXIT(ch, door)->to_room, ROOM_NOMOB)))  {
+                           if ((MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[was_in].zone) && (rand_number(1, 100) > 5)) || (ROOM_FLAGGED(EXIT(ch, door)->to_room, ROOM_NOMOB)))  {
                                /* Hesitou e não se moveu. */
                            }
 			   else {
