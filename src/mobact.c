@@ -224,12 +224,13 @@ void mobile_activity(void)
      * Substitui o bloco "Mob Movement" original.
      ****************************************************************************/
     if (ch->master == NULL) {
-        const int CURIOSIDADE_EXPLORAR = 10;
+        int CURIOSIDADE_EXPLORAR = 10;
 	int effective_roam_tendency = 0;
 	int base_roam_instinct = 25;
         int final_chance = 0;
         if (MOB_FLAGGED(ch, MOB_SENTINEL)) {
             base_roam_instinct = 1;
+            CURIOSIDADE_EXPLORAR = 0;
         }
         
 	effective_roam_tendency = base_roam_instinct + GET_GENROAM(ch);
@@ -249,13 +250,30 @@ void mobile_activity(void)
                         stop_flying(ch);
                     } else if (!AFF_FLAGGED(ch, AFF_FLYING) && world[to_room].sector_type == SECT_CLIMBING) {
                         start_flying(ch);
-                    } 
-                    /* 3. Lógica de Obstáculos e Condições */
+                    }
+		                    /* 4. PRÉ-REQUISITO DE OBSTÁCULOS: A IA "olha" antes de ir. */
+                if ( (IS_SET(exit->exit_info, EX_HIDDEN) && rand_number(1, 20) > GET_WIS(ch)) ||
+                     (IS_SET(exit->exit_info, EX_DNOPEN)) ||
+                     (world[to_room].sector_type == SECT_UNDERWATER && !has_scuba(ch)) ||
+                      ROOM_FLAGGED(to_room, ROOM_NOMOB) ) {
+                     /* O caminho é impossível, a IA desiste por este pulso. */
+                } else {
+                    /* Se o caminho é possível, lida com portas. */
+                    if (IS_SET(exit->exit_info, EX_CLOSED)) {
+                        if (IS_SET(exit->exit_info, EX_LOCKED) && has_key(ch, exit->key)) {
+                             REMOVE_BIT(exit->exit_info, EX_LOCKED);
+                        }
+                        if (!IS_SET(exit->exit_info, EX_LOCKED)) {
+                            REMOVE_BIT(exit->exit_info, EX_CLOSED);
+                        }
+                    }
+
                     if (!IS_SET(exit->exit_info, EX_CLOSED)) {
-                           if ((MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[was_in].zone) && (rand_number(1, 100) > 5)) || (ROOM_FLAGGED(EXIT(ch, door)->to_room, ROOM_NOMOB)))  {
-                               /* Hesitou e não se moveu. */
-                           }
-			   else {
+                        /* 5. PRÉ-REQUISITO PSICOLÓGICO: Medo de sair da zona. */
+                        if (MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[IN_ROOM(ch)].zone) && (rand_number(1, 100) > 5)) {
+                            /* Hesitou. Fim do turno. */
+                        } else {
+                            /* 6. AÇÃO FINAL E APRENDIZAGEM */
                                if (perform_move(ch, door, 1)) {
                                    /* 4. Lógica de Aprendizagem Pós-Movimento */
                                    if (ch->genetics) {
@@ -280,7 +298,7 @@ void mobile_activity(void)
                     }
                 }
             }
-
+	}
 
     /* Mob Memory */
     if (MOB_FLAGGED(ch, MOB_MEMORY) && MEMORY(ch)) {

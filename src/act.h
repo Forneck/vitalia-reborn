@@ -180,6 +180,10 @@ ACMD(do_spy);
 
 int start_flying(struct char_data *ch);
 int stop_flying(struct char_data *ch);
+int has_boat(struct char_data *ch);
+int has_flight(struct char_data *ch);
+int has_scuba(struct char_data *ch);
+int has_key(struct char_data *ch, obj_vnum key);
 
 /* Global variables from act.movement.c */
 extern const char *cmd_door[];

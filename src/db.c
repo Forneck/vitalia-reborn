@@ -2023,12 +2023,14 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
         {
           if (mob_proto[i].genetics) {
               mob_proto[i].genetics->equip_tendency = num_arg;
-          }                                                                                             }
+          }                                                                                            
+	}
 	CASE("GenRoam")
         {
           if (mob_proto[i].genetics) {
               mob_proto[i].genetics->roam_tendency = num_arg;
-          }                                                                                             }
+          }                                                                                             
+	}
 	CASE("BareHandAttack")
 	{
 		RANGE(0, NUM_ATTACK_TYPES - 1);

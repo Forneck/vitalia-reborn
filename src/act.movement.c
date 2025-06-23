@@ -27,15 +27,13 @@
 
 /* local only functions */
 /* do_simple_move utility functions */
-static int has_boat(struct char_data *ch);
 /* do_gen_door utility functions */
 static int find_door(struct char_data *ch, const char *type, char *dir, const char *cmdname);
-static int has_key(struct char_data *ch, obj_vnum key);
 static void do_doorcmd(struct char_data *ch, struct obj_data *obj, int door, int scmd);
 static int ok_pick(struct char_data *ch, obj_vnum keynum, int pickproof, int scmd);
 
 /* simple function to determine if char can walk on water */
-static int has_boat(struct char_data *ch)
+int has_boat(struct char_data *ch)
 {
 	struct obj_data *obj;
 	int i;
@@ -63,7 +61,7 @@ static int has_boat(struct char_data *ch)
 }
 
 /* Simple function to determine if char can fly. */
-static int has_flight(struct char_data *ch)
+int has_flight(struct char_data *ch)
 {
 	struct obj_data *obj;
 	int i;
@@ -101,7 +99,7 @@ static int has_flight(struct char_data *ch)
 }
 
 /* Simple function to determine if char can scuba. */
-static int has_scuba(struct char_data *ch)
+int has_scuba(struct char_data *ch)
 {
 	struct obj_data *obj;
 	int i;
