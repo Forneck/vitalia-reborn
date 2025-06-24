@@ -21,7 +21,8 @@
 #include "act.h"
 #include "graph.h"
 #include "fight.h"
-
+#include "shop.h"
+#include "graph.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -59,6 +60,55 @@ void mobile_activity(void)
     /* If the mob has no specproc, do the default actions */
     if (FIGHTING(ch) || !AWAKE(ch))
       continue;
+
+    /**********************************************************************
+     * NOVA IA DE ROTINA DIÁRIA PARA LOJISTAS
+     * Esta lógica tem prioridade sobre os comportamentos genéticos.
+     **********************************************************************/
+    if (mob_index[GET_MOB_RNUM(ch)].func == shop_keeper) {
+        shop_rnum shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
+        
+        if (shop_nr != -1) {
+            if (is_shop_open(shop_nr)) {
+                /* --- HORÁRIO DE TRABALHO --- */
+                /* Objetivo: Estar em QUALQUER uma das salas da loja. */
+                if (!ok_shop_room(shop_nr, GET_ROOM_VNUM(IN_ROOM(ch)))) {
+                    /* Está fora da loja, precisa de voltar para a sala principal! */
+                    room_rnum primary_shop_room = real_room(SHOP_ROOM(shop_nr, 0));
+                    if (primary_shop_room != NOWHERE && IN_ROOM(ch) != primary_shop_room) {
+                        int direction = find_first_step(IN_ROOM(ch), primary_shop_room);
+                        if (direction >= 0) {
+                            perform_move(ch, direction, 1);
+                        }
+                    }
+                }
+                /* Se já está numa sala válida da loja, não faz mais nada. */
+                continue; /* O turno do lojista dedicado ao trabalho acaba aqui. */
+            }
+        }
+    }
+
+    /* Se o código chegou aqui, ou o mob não é um lojista, ou a sua loja está fechada. */
+    /* Portanto, ele está livre para executar a sua IA Genética normal. */
+    
+
+    if (mob_index[GET_MOB_RNUM(ch)].func == shop_keeper) {
+    	shop_rnum shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
+	    if (shop_nr != -1 && !is_shop_open(shop_nr)) {
+        /* --- IA ECONÓMICA: GESTÃO DE STOCK --- */
+        
+        /* O lojista verifica o seu inventário à procura de lixo para destruir. */
+        	struct obj_data *current_obj, *next_obj;
+	        for (current_obj = ch->carrying; current_obj; current_obj = next_obj) {
+	            next_obj = current_obj->next_content;
+	            if (OBJ_FLAGGED(current_obj, ITEM_TRASH)) {
+	                act("$n joga $p fora.", FALSE, ch, current_obj, 0, TO_ROOM);
+	                extract_obj(current_obj);
+	            }
+	        }
+	        continue;
+	    }
+    }
 
     /* hunt a victim, if applicable */
     hunt_victim(ch);

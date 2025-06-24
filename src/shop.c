@@ -92,7 +92,6 @@ static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper
 					 struct char_data *buyer);
 static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keeper,
 					  struct char_data *seller);
-static int ok_shop_room(int shop_nr, room_vnum room);
 static int add_to_shop_list(struct shop_buy_data *list, int type, int *len, int *val);
 static int end_read_list(struct shop_buy_data *list, int len, int error);
 static void read_line(FILE * shop_f, const char *string, void *data);
@@ -1061,7 +1060,7 @@ static void shopping_list(char *arg, struct char_data *ch, struct char_data *kee
 	}
 }
 
-static int ok_shop_room(int shop_nr, room_vnum room)
+int ok_shop_room(int shop_nr, room_vnum room)
 {
 	int mindex;
 
@@ -1979,4 +1978,27 @@ void load_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
 		slide_obj(obj, keeper, shop_num);
 	}
 	return;
+}
+
+
+/* Encontra o número real de uma loja com base no rnum do mob lojista. */
+shop_rnum find_shop_by_keeper(mob_rnum rnum)
+{
+    int i;
+    for (i = 0; i <= top_shop; i++) {
+        if (SHOP_KEEPER(i) == rnum) {
+            return i;
+        }
+    }
+    return -1; /* Retorna -1 se não for um lojista */
+}
+
+/* Verifica se uma loja está aberta com base no horário do jogo. */
+bool is_shop_open(shop_rnum snum)
+{
+    /* time_info é uma variável global com a hora atual do MUD. */
+    if (time_info.hours < SHOP_OPEN1(snum) || time_info.hours > SHOP_CLOSE1(snum)) {
+        return FALSE;
+    }
+    return TRUE;
 }
