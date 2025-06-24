@@ -1626,6 +1626,20 @@ void update_mob_prototype_genetics(struct char_data *mob)
     if (proto->genetics->roam_tendency < 0) proto->genetics->roam_tendency = 0;
     if (proto->genetics->roam_tendency > 100) proto->genetics->roam_tendency = 100;
 
+    /****************************************************************
+     * EVOLUÇÃO DO GENE DA BRAVURA (Implementando a sua escolha - Opção B)
+     ****************************************************************/
+    if (MOB_FLAGGED(mob, MOB_BRAVE)) {
+        /* A morte de um mob BRAVE reforça o traço na população. */
+        proto->genetics->brave_prevalence += 1;
+    } else {
+        /* A morte de um mob não-bravo diminui a prevalência da bravura na população. */
+        proto->genetics->brave_prevalence -= 1;
+    }
+
+    /* Garante os limites da prevalência (ex: 0 a 75, para que a bravura seja sempre rara). */
+    proto->genetics->brave_prevalence = MIN(MAX(proto->genetics->brave_prevalence, 0), 75);
+
     /* 5. Marca a zona como modificada para que seja salva no próximo 'save all'. */
     mob_vnum vnum = mob_index[rnum].vnum; /* Pega o vnum a partir do mob_index */
     zone_rnum rznum = real_zone_by_thing(vnum);

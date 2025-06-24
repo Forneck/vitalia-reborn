@@ -1227,6 +1227,7 @@ void index_boot(int mode)
 		   mob_proto[rnum].genetics->loot_tendency = 0;
 		   mob_proto[rnum].genetics->equip_tendency = 0;
 		   mob_proto[rnum].genetics->roam_tendency = 0;
+		   mob_proto[rnum].genetics->brave_prevalence = 0;
 	        }
 	    /*************************************************************************
 	     * Fim do Bloco de Genética                                              *
@@ -2030,6 +2031,12 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
           if (mob_proto[i].genetics) {
               mob_proto[i].genetics->roam_tendency = num_arg;
           }                                                                                             
+	}
+	CASE("GenBrave")
+	{
+	  if (mob_proto[i].genetics) {
+	      mob_proto[i].genetics->brave_prevalence = num_arg;
+	  }
 	}
 	CASE("BareHandAttack")
 	{
@@ -2971,6 +2978,15 @@ struct char_data *read_mobile(mob_vnum nr, int type)	/* and mob_rnum */
         if (mob_proto[i].genetics) {
            *(mob->genetics) = *(mob_proto[i].genetics);
         }
+
+	/*BRAVURA CARREGA NOS SENTINELAS DE ACORDO COM A GENETICA */
+        if (!MOB_FLAGGED(mob, MOB_BRAVE)) {
+
+	      /* A chance agora vem da genética do protótipo! */
+        	if (rand_number(1, 100) <= mob_proto[i].genetics->brave_prevalence) {
+	            SET_BIT_AR(MOB_FLAGS(mob), MOB_BRAVE);
+        	}
+	}
         /*************************************************************************
         * Fim do bloco de Genética                                              *
         *************************************************************************/

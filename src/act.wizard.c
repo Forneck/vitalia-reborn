@@ -905,6 +905,8 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
 			 CCCYN(ch, C_NRM), GET_GENEQUIP(k), CCNRM(ch, C_NRM));
 	    send_to_char(ch, "Tendência Roam (Genética): [%s%d%s]\r\n",
 			 CCCYN(ch, C_NRM), GET_GENROAM(k), CCNRM(ch, C_NRM));
+	    send_to_char(ch, "Tendência Bravura (Genética): [%s%d%s]\r\n",
+			 CCCYN(ch, C_NRM), GET_GENBRAVE(k), CCNRM(ch, C_NRM));
 	    /* Futuramente, podemos adicionar outros genes aqui. */
 	}
 
