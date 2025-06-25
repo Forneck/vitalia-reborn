@@ -3153,3 +3153,49 @@ ACMD(do_scan)
 			send_to_char(ch, "Você não vê nada próximo.\r\n");
 		}
 }				// end of do_scan
+
+
+ACMD(do_evaluate)
+{
+    char arg1[MAX_INPUT_LENGTH];
+    char arg2[MAX_INPUT_LENGTH];
+    struct char_data *target_char = NULL;
+    struct obj_data *target_obj = NULL;
+    int score;
+
+    half_chop(argument, arg1, arg2);
+
+    if (!*arg1) {
+        send_to_char(ch, "Avaliar que item?\r\nSintaxe: avaliar <item> [personagem]\r\n");
+        return;
+    }
+
+    /* Encontra o personagem alvo. Se nenhum for especificado, o alvo é o próprio jogador. */
+    if (!*arg2) {
+        target_char = ch;
+    } else {
+        if (!(target_char = get_char_vis(ch, arg2, NULL, FIND_CHAR_ROOM))) {
+            send_to_char(ch, "Não vê essa pessoa aqui.\r\n");
+            return;
+        }
+    }
+
+    /* Encontra o objeto no inventário do personagem alvo. */
+    if (!(target_obj = get_obj_in_list_vis(ch, arg1, NULL, target_char->carrying))) {
+        send_to_char(ch, "%s não parece ter '%s'.\r\n", 
+            (target_char == ch) ? "Você" : GET_NAME(target_char), arg1);
+        return;
+    }
+
+    /* Chama a nossa função de IA e mostra o resultado! */
+    score = evaluate_item_for_mob(target_char, target_obj);
+
+    send_to_char(ch, "A pontuação de desejo de '%s' para %s é: %s%d%s.\r\n",
+        target_obj->short_description,
+        (target_char == ch) ? "você" : GET_NAME(target_char),
+        CCCYN(ch, C_NRM), score, CCNRM(ch, C_NRM));
+    
+    if (IS_NPC(target_char)) {
+        send_to_char(ch, "(Quanto maior a pontuação, mais o mob irá desejar este item).\r\n");
+    }
+}
