@@ -76,7 +76,11 @@ char *stristr3(const char* haystack, const char* needle);
 const char *gauge(char *buf, int type, float pos, float total);
 const char *align_gauge(int align);
 
-/* Public functions made available form weather.c */
+/* Funções de avaliação para a IA Genética */
+int get_item_apply_score(struct char_data *ch, struct obj_data *obj);
+int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj);
+
+/* Public functions made available from weather.c */
 void weather_and_time(int mode);
 
 /** Creates a core dump for diagnostic purposes, but will keep (if it can)
