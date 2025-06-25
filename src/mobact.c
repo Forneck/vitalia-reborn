@@ -32,6 +32,7 @@ int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj);
 bool mob_has_ammo(struct char_data *ch);
 struct char_data *find_best_median_leader(struct char_data *ch);
 bool mob_handle_grouping(struct char_data *ch);
+bool mob_leader_evaluates_gear(struct char_data *leader);
 
 void mobile_activity(void)
 {
@@ -322,7 +323,12 @@ void mobile_activity(void)
             }
         }
     }
-    
+	  
+    /*Depois de equipar, lider avalia equipamento sobrando e doa para o grupo*/
+    if (mob_leader_evaluates_gear(ch)) {
+        continue;
+    }
+	  
     /****************************************************************************
      * Lógica de Genética: VAGUEAR (Roam) - VERSÃO FINAL E CORRIGIDA
      * Substitui o bloco "Mob Movement" original.
@@ -982,5 +988,75 @@ bool mob_handle_grouping(struct char_data *ch)
         }
         /* Se o melhor líder for outro, este mob irá esperar pelo turno desse outro mob. */
     }
+    return FALSE;
+}
+
+
+/**
+ * O líder do grupo avalia o seu inventário e distribui upgrades
+ * para os membros da sua equipa.
+ * Retorna TRUE se uma ação de partilha foi realizada.
+ */
+bool mob_leader_evaluates_gear(struct char_data *leader)
+{
+    /* Apenas líderes de grupo com inventário e genética executam esta lógica. */
+    if (!GROUP(leader) || GROUP_LEADER(GROUP(leader)) != leader || !leader->carrying || !leader->genetics) {
+        return FALSE;
+    }
+
+    /* Chance de executar a avaliação (para não sobrecarregar) */
+    if (rand_number(1, 100) > 25) {
+        return FALSE;
+    }
+
+    struct obj_data *inv_item, *item_to_give = NULL;
+    struct char_data *member, *receiver = NULL;
+    struct iterator_data iterator;
+    int max_improvement_for_group = 10; /* Só partilha se for uma melhoria significativa */
+
+    /* Para cada item no inventário do líder... */
+    for (inv_item = leader->carrying; inv_item; inv_item = inv_item->next_content) {
+        
+        /* ...avalia cada membro do grupo. */
+        member = (struct char_data *)merge_iterator(&iterator, GROUP(leader)->members);
+        while(member) {
+            if (leader == member) { /* Não avalia a si mesmo */
+                member = (struct char_data *)next_in_list(&iterator);
+                continue;
+            }
+
+            int wear_pos = find_eq_pos(member, inv_item, NULL);
+            if (wear_pos != -1) {
+                struct obj_data *member_eq = GET_EQ(member, wear_pos);
+                
+                /* Usamos a nossa função de avaliação, mas do ponto de vista do membro! */
+                int score_improvement = evaluate_item_for_mob(member, inv_item) - evaluate_item_for_mob(member, member_eq);
+                
+                if (score_improvement > max_improvement_for_group) {
+                    max_improvement_for_group = score_improvement;
+                    item_to_give = inv_item;
+                    receiver = member;
+                }
+            }
+            member = (struct char_data *)next_in_list(&iterator);
+        }
+    }
+
+    /* Se, depois de analisar tudo, encontrou uma boa partilha, executa-a. */
+    if (item_to_give && receiver) {
+        act("$n dá $p para $N.", FALSE, leader, item_to_give, receiver, TO_NOTVICT);
+        act("$n dá-lhe $p.", FALSE, leader, item_to_give, receiver, TO_VICT);
+        act("Você dá $p para $N.", FALSE, leader, item_to_give, receiver, TO_CHAR);
+
+        obj_from_char(item_to_give);
+        obj_to_char(item_to_give, receiver);
+        
+        /* APRENDIZAGEM: Comportamento de liderança é recompensado. */
+        leader->genetics->group_tendency += 5;
+        leader->genetics->group_tendency = MIN(leader->genetics->group_tendency, 100);
+        
+        return TRUE; /* Ação de partilha foi realizada. */
+    }
+
     return FALSE;
 }
