@@ -1575,3 +1575,252 @@ const char *align_gauge(int align)
 
   return ("\tW[\tR-----\tG|\tB-----\tW]\tn");
 }
+
+/**
+ * Calcula uma pontuação para os bónus (applies e affects) de um objeto.
+ * Esta função age como um "identify" para o mob.
+ */
+int get_item_apply_score(struct char_data *ch, struct obj_data *obj)
+{
+    int i, total_score = 0;
+
+    if (obj == NULL) {
+        return 0;
+    }
+
+    /* 1. Avalia os applies numéricos (bónus de stats) */
+    for (i = 0; i < MAX_OBJ_AFFECT; i++) {
+        if (obj->affected[i].location != APPLY_NONE) {
+            switch (obj->affected[i].location) {
+                case APPLY_STR:
+                case APPLY_DEX:
+                case APPLY_CON:
+                case APPLY_INT:
+                case APPLY_WIS:
+                case APPLY_CHA:
+                    total_score += obj->affected[i].modifier * 5;
+                    break;
+                case APPLY_HIT:
+                case APPLY_MANA:
+                case APPLY_MOVE:
+                    total_score += obj->affected[i].modifier;
+                    break;
+                case APPLY_AC:
+                    total_score -= obj->affected[i].modifier * 5;
+                    break;
+                case APPLY_HITROLL:
+                case APPLY_DAMROLL:
+                    total_score += obj->affected[i].modifier * 10;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    /* 2. Avalia os bónus de afetações (AFF_) - só dá pontos se o mob ainda não tiver o bónus */
+
+    // --- Auras Protetoras (Muito Valiosas) ---
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_SANCTUARY) && !AFF_FLAGGED(ch, AFF_SANCTUARY))
+        total_score += 200;
+
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_STONESKIN) && !AFF_FLAGGED(ch, AFF_STONESKIN))
+        total_score += 180;
+
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_GLOOMSHIELD) && !AFF_FLAGGED(ch, AFF_GLOOMSHIELD))
+        total_score += 150;
+
+    // --- Escudos de Dano (Damage Shields) ---
+    if ((IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_FIRESHIELD) && !AFF_FLAGGED(ch, AFF_FIRESHIELD)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_THISTLECOAT) && !AFF_FLAGGED(ch, AFF_THISTLECOAT)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_WINDWALL) && !AFF_FLAGGED(ch, AFF_WINDWALL)))
+        total_score += 120;
+
+    // --- Bónus de Alinhamento ---
+    if (IS_GOOD(ch) && IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_PROTECT_EVIL) && !AFF_FLAGGED(ch, AFF_PROTECT_EVIL))
+        total_score += 100;
+
+    if (IS_EVIL(ch) && IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_PROTECT_GOOD) && !AFF_FLAGGED(ch, AFF_PROTECT_GOOD))
+        total_score += 100;
+
+    // --- Bónus Táticos (Ofensivos/Furtivos) ---
+    if ((IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_INVISIBLE) && !AFF_FLAGGED(ch, AFF_INVISIBLE)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_SNEAK) && !AFF_FLAGGED(ch, AFF_SNEAK)) ||
+        (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_HIDE) && !AFF_FLAGGED(ch, AFF_HIDE)))
+        total_score += 70;
+
+    // --- Bónus de Deteção ---
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_DETECT_INVIS) && !AFF_FLAGGED(ch, AFF_DETECT_INVIS))
+        total_score += 60;
+
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_SENSE_LIFE) && !AFF_FLAGGED(ch, AFF_SENSE_LIFE))
+        total_score += 60;
+
+    // --- Utilidades ---
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_INFRAVISION) && !AFF_FLAGGED(ch, AFF_INFRAVISION))
+        total_score += 30;
+
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_LIGHT) && !AFF_FLAGGED(ch, AFF_LIGHT))
+        total_score += 20;
+
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_WATERWALK) && !AFF_FLAGGED(ch, AFF_WATERWALK))
+        total_score += 15;
+
+    if (IS_SET_AR(GET_OBJ_AFFECT(obj), AFF_FLYING) && !AFF_FLAGGED(ch, AFF_FLYING))
+        total_score += 40;
+
+    return total_score;
+}
+
+
+/**
+ * Avalia o quão "desejável" um objeto é para um determinado mob.
+ * Retorna uma pontuação numérica. Quanto maior a pontuação, mais o mob quer o item.
+ */
+int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj)
+{
+    if (obj == NULL) {
+	    return 0;
+    }
+
+    int score = 0;
+
+    /* --- FILTROS INICIAIS --- */
+    if (!CAN_GET_OBJ(ch, obj) || !CAN_WEAR(obj, ITEM_WEAR_TAKE)) return 0;
+    if ((IS_EVIL(ch) && OBJ_FLAGGED(obj, ITEM_ANTI_EVIL)) ||
+        (IS_GOOD(ch) && OBJ_FLAGGED(obj, ITEM_ANTI_GOOD)) ||
+        (IS_NEUTRAL(ch) && OBJ_FLAGGED(obj, ITEM_ANTI_NEUTRAL))) return 0;
+
+    /* --- AVALIAÇÃO POR TIPO DE ITEM --- */
+    switch (GET_OBJ_TYPE(obj)) {
+
+        case ITEM_WEAPON:
+        case ITEM_FIREWEAPON: {
+            struct obj_data *current_weapon = GET_EQ(ch, WEAR_WIELD);
+            int new_w_stats_score = get_item_apply_score(ch, obj);
+
+            if (GET_OBJ_TYPE(obj) == ITEM_FIREWEAPON) {
+                if (mob_has_ammo(ch)) {
+                    score = 150 + new_w_stats_score; /* Muito desejável! */
+                } else {
+                    score = 50 + new_w_stats_score;  /* Útil, mas precisa de munição. */
+                }
+            } else { /* Arma de corpo-a-corpo */
+                float new_w_dam = (float)(GET_OBJ_VAL(obj, 1) * (GET_OBJ_VAL(obj, 2) + 1)) / 2.0;
+                if (current_weapon == NULL || GET_OBJ_TYPE(current_weapon) == ITEM_FIREWEAPON) {
+                    score = 100 + new_w_stats_score;
+                } else {
+                    float old_w_dam = (float)(GET_OBJ_VAL(current_weapon, 1) * (GET_OBJ_VAL(current_weapon, 2) + 1)) / 2.0;
+                    int old_w_stats_score = get_item_apply_score(ch, current_weapon);
+                    int total_improvement = ((int)(new_w_dam - old_w_dam) * 10) + (new_w_stats_score - old_w_stats_score);
+                    if (total_improvement > 0) score = total_improvement;
+                }
+            }
+            break;
+        }
+
+        case ITEM_AMMO: {
+            struct obj_data *fireweapon = GET_EQ(ch, WEAR_WIELD);
+            if (fireweapon && GET_OBJ_TYPE(fireweapon) == ITEM_FIREWEAPON) {
+                /* Se já tem a arma, a munição é muito valiosa. */
+                /* A pontuação é baseada no dano potencial da munição. */
+                score = 80 + (GET_OBJ_VAL(obj, 1) * GET_OBJ_VAL(obj, 2));
+            } else {
+                /* Sem a arma, a munição é quase inútil. */
+                score = 5;
+            }
+            break;
+        }
+
+	case ITEM_ARMOR:
+        case ITEM_WINGS:{
+            int wear_pos = find_eq_pos(ch, obj, NULL);
+            if (wear_pos != -1) {
+                struct obj_data *current_armor = GET_EQ(ch, wear_pos);
+                int new_armor_stats_score = get_item_apply_score(ch, obj) - (GET_OBJ_VAL(obj, 0) * 5);
+
+                if (current_armor == NULL) {
+                    score = 50 + new_armor_stats_score;
+                } else {
+                    int old_armor_stats_score = get_item_apply_score(ch, current_armor) - (GET_OBJ_VAL(current_armor, 0) * 5);
+                    if (new_armor_stats_score > old_armor_stats_score) {
+                        score = new_armor_stats_score - old_armor_stats_score;
+                    }
+                }
+            }
+            break;
+        }
+
+        case ITEM_LIGHT: {
+            bool has_light = FALSE;
+            if (IS_DARK(IN_ROOM(ch)) && !IS_AFFECTED(ch, AFF_INFRAVISION)) {
+                int i;
+                for (i = 0; i < NUM_WEARS; i++) {
+                    if (GET_EQ(ch, i) && GET_OBJ_TYPE(GET_EQ(ch, i)) == ITEM_LIGHT) {
+                        has_light = TRUE;
+                        break;
+                    }
+                }
+                if (!has_light) score = 75;
+            }
+            break;
+        }
+
+        case ITEM_POTION:
+        case ITEM_SCROLL:
+        case ITEM_WAND:
+        case ITEM_STAFF:
+            score = GET_OBJ_VAL(obj, 0) * 2;
+            break;
+
+        case ITEM_KEY:
+            score = 30;
+            break;
+
+        case ITEM_BOAT: {
+            bool near_water = FALSE;
+            int door;
+            room_rnum adjacent_room;
+
+            for (door = 0; door < DIR_COUNT; door++) {
+                if (world[IN_ROOM(ch)].dir_option[door] &&
+                    (adjacent_room = world[IN_ROOM(ch)].dir_option[door]->to_room) != NOWHERE) {
+
+                    if (world[adjacent_room].sector_type == SECT_WATER_SWIM ||
+                        world[adjacent_room].sector_type == SECT_WATER_NOSWIM) {
+                        near_water = TRUE;
+                        break;
+                    }
+                }
+            }
+            if (near_water) {
+                score = 200;
+            } else {
+                score = 5;
+            }
+            break;
+        }
+
+        case ITEM_CONTAINER:
+            score = 20;
+            break;
+
+        case ITEM_FOOD:
+            if (GET_COND(ch, HUNGER) >= 0 && GET_COND(ch, HUNGER) < 10) {
+                 score = 40;
+            }
+            break;
+	
+	case ITEM_DRINKCON:
+	    if (GET_COND(ch, THIRST) >= 0 && GET_COND(ch, THIRST) < 10) {
+		    score = 40;
+	    }
+            break;
+
+        default:
+            score = GET_OBJ_COST(obj) / 100;
+            break;
+    }
+    return score;
+}
+
