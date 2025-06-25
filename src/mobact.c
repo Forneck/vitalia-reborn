@@ -30,6 +30,8 @@ static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data 
 int get_item_apply_score(struct char_data *ch, struct obj_data *obj);
 int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj);
 bool mob_has_ammo(struct char_data *ch);
+struct char_data *find_best_median_leader(struct char_data *ch);
+bool mob_handle_grouping(struct char_data *ch);
 
 void mobile_activity(void)
 {
@@ -66,7 +68,7 @@ void mobile_activity(void)
      * Esta lógica tem prioridade sobre os comportamentos genéticos.
      **********************************************************************/
     if (mob_index[GET_MOB_RNUM(ch)].func == shop_keeper) {
-        shop_rnum shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
+        int shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
         
         if (shop_nr != -1) {
             if (is_shop_open(shop_nr)) {
@@ -93,7 +95,7 @@ void mobile_activity(void)
     
 
     if (mob_index[GET_MOB_RNUM(ch)].func == shop_keeper) {
-    	shop_rnum shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
+    	int shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
 	    if (shop_nr != -1 && !is_shop_open(shop_nr)) {
         /* --- IA ECONÓMICA: GESTÃO DE STOCK --- */
         
@@ -109,9 +111,61 @@ void mobile_activity(void)
 	        continue;
 	    }
     }
+    
 
+    /**********************************************************************
+     * NOVA LÓGICA DE GRUPO: Seguir o Líder (Prioridade de Movimento)
+     **********************************************************************/
+    if (GROUP(ch) && GROUP_LEADER(GROUP(ch)) != ch) {
+        struct char_data *leader = GROUP_LEADER(GROUP(ch));
+
+        /* O líder está em outra sala? Se sim, a prioridade é segui-lo. */
+        if (IN_ROOM(ch) != IN_ROOM(leader)) {
+            int direction = find_first_step(IN_ROOM(ch), IN_ROOM(leader)); /* Pathfinding */
+
+            if (direction >= 0) {
+                /* Chama perform_move, que já tem as nossas verificações de terreno. */
+                perform_move(ch, direction, 1);
+                continue; /* Ação do pulso: seguiu o líder. Fim do turno. */
+            }
+        }
+    }
+    
+    if (GROUP(ch) && !FIGHTING(ch)) { /* Se está num grupo e não está a lutar */
+        struct char_data *member;
+        struct iterator_data iterator;
+        struct char_data *target_to_assist = NULL;
+        int max_threat_level = 0;
+
+        member = (struct char_data *)merge_iterator(&iterator, GROUP(ch)->members);
+        while(member) {
+            /* Verifica se um companheiro na mesma sala está a lutar. */
+            if (ch != member && IN_ROOM(ch) == IN_ROOM(member) && FIGHTING(member)) {
+                
+                /* Lógica de "priorizar a maior ameaça": ataca o inimigo de nível mais alto. */
+                if (GET_LEVEL(FIGHTING(member)) > max_threat_level) {
+                    max_threat_level = GET_LEVEL(FIGHTING(member));
+                    target_to_assist = member; /* Vamos ajudar este membro. */
+                }
+            }
+            member = (struct char_data *)next_in_list(&iterator);
+        }
+        
+        if (target_to_assist) {
+            act("$n vê que $N está em apuros e corre para ajudar!", FALSE, ch, 0, target_to_assist, TO_NOTVICT);
+            act("Você vê que $N está em apuros e corre para ajudar!", FALSE, ch, 0, target_to_assist, TO_CHAR);
+            hit(ch, FIGHTING(target_to_assist), TYPE_UNDEFINED);
+            continue; /* Ação do pulso: entrou em combate. Fim do turno. */
+        }
+    }
+    
     /* hunt a victim, if applicable */
     hunt_victim(ch);
+    
+
+    if (mob_handle_grouping(ch)) {
+        continue; /* Ação do pulso foi usada para agrupar, fim do turno. */
+    }
 
     /* Scavenger (picking up objects) */
     /*************************************************************************
@@ -301,7 +355,7 @@ void mobile_activity(void)
                     } else if (!AFF_FLAGGED(ch, AFF_FLYING) && world[to_room].sector_type == SECT_CLIMBING) {
                         start_flying(ch);
                     }
-		                    /* 4. PRÉ-REQUISITO DE OBSTÁCULOS: A IA "olha" antes de ir. */
+		 /* 3. PRÉ-REQUISITO DE OBSTÁCULOS: A IA "olha" antes de ir. */
                 if ( (IS_SET(exit->exit_info, EX_HIDDEN) && rand_number(1, 20) > GET_WIS(ch)) ||
                      (IS_SET(exit->exit_info, EX_DNOPEN)) ||
                      (world[to_room].sector_type == SECT_UNDERWATER && !has_scuba(ch)) ||
@@ -309,16 +363,37 @@ void mobile_activity(void)
                      /* O caminho é impossível, a IA desiste por este pulso. */
                 } else {
                     /* Se o caminho é possível, lida com portas. */
-                    if (IS_SET(exit->exit_info, EX_CLOSED)) {
-                        if (IS_SET(exit->exit_info, EX_LOCKED) && has_key(ch, exit->key)) {
-                             REMOVE_BIT(exit->exit_info, EX_LOCKED);
-                        }
-                        if (!IS_SET(exit->exit_info, EX_LOCKED)) {
-                            REMOVE_BIT(exit->exit_info, EX_CLOSED);
-                        }
+                 if (IS_SET(exit->exit_info, EX_CLOSED)) {
+                    /* Se a porta estiver trancada e o mob tiver a chave... */
+                    if (IS_SET(exit->exit_info, EX_LOCKED) && has_key(ch, exit->key)) {
+                        /* ...ele usa o comando para destrancar. */
+                        do_doorcmd(ch, NULL, door, SCMD_UNLOCK);
                     }
+                    
+                    /* Se a porta agora estiver destrancada (ou nunca esteve), ele a abre. */
+                    if (!IS_SET(exit->exit_info, EX_LOCKED) && !IS_SET(exit->exit_info, EX_DNOPEN)) {
+                        do_doorcmd(ch, NULL, door, SCMD_OPEN);
+                    }
+                }
+                
+                /* A IA só prossegue se, depois das suas ações, a porta estiver aberta. */
+                if (!IS_SET(exit->exit_info, EX_CLOSED)) {
+                    
+                    /* --- LÓGICA DE FECHAR A PORTA ATRÁS DE SI --- */
+                    bool should_close_behind = (GET_INT(ch) > 12 && rand_number(1,100) <= 25); /* Ex: 25% de chance para mobs inteligentes */
 
-                    if (!IS_SET(exit->exit_info, EX_CLOSED)) {
+                    /* Guarda a porta de retorno. */
+                    int back_door = rev_dir[door];
+                    
+                    /* Ação de mover e aprender (já existente) */
+                    if (perform_move(ch, door, 1)) {
+                        /* Se o mob se moveu e decidiu fechar a porta, ele o faz. */
+                        if (should_close_behind && EXIT(ch, back_door) && EXIT(ch, back_door)->to_room == was_in) {
+                             /* Verifica se a porta pode ser fechada. */
+                             if (!IS_SET(EXIT(ch, back_door)->exit_info, EX_DNCLOSE)) {
+                                do_doorcmd(ch, NULL, back_door, SCMD_CLOSE);
+                             }
+                        }
                         /* 5. PRÉ-REQUISITO PSICOLÓGICO: Medo de sair da zona. */
                         if (MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[IN_ROOM(ch)].zone) && (rand_number(1, 100) > 5)) {
                             /* Hesitou. Fim do turno. */
@@ -349,6 +424,7 @@ void mobile_activity(void)
                 }
             }
 	}
+    }
 
     /* Mob Memory */
     if (MOB_FLAGGED(ch, MOB_MEMORY) && MEMORY(ch)) {
@@ -661,7 +737,7 @@ int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj)
         }
 
         case ITEM_ARMOR:
-        case ITEM_WINGS: {
+        case ITEM_WINGS:{
             int wear_pos = find_eq_pos(ch, obj, NULL);
             if (wear_pos != -1) {
                 struct obj_data *current_armor = GET_EQ(ch, wear_pos);
@@ -738,6 +814,12 @@ int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj)
                  score = 40;
             }
             break;
+	
+	case ITEM_DRINKCON:
+	    if (GET_COND(ch, THIRST) >= 0 && GET_COND(ch, THIRST) < 10) {
+		    score = 40;
+	    }
+            break;
 
         default:
             score = GET_OBJ_COST(obj) / 100;
@@ -767,5 +849,138 @@ bool mob_has_ammo(struct char_data *ch)
         }
     }
 
+    return FALSE;
+}
+
+/**
+ * Verifica se um novo membro ('prospect') é compatível em nível com um
+ * grupo já existente, respeitando a regra de 15 níveis de diferença
+ * entre o novo mínimo e o novo máximo.
+ */
+bool is_level_compatible_with_group(struct char_data *prospect, struct group_data *group)
+{
+    if (!prospect || !group || !group->members) return FALSE;
+
+    struct char_data *member;
+    struct iterator_data iterator;
+
+    /* Começa com os níveis do prospecto */
+    int min_level = GET_LEVEL(prospect);
+    int max_level = GET_LEVEL(prospect);
+
+    /* Itera pelos membros existentes para encontrar o min/max atual do grupo */
+    member = (struct char_data *)merge_iterator(&iterator, group->members);
+    while(member) {
+        if (GET_LEVEL(member) < min_level) min_level = GET_LEVEL(member);
+        if (GET_LEVEL(member) > max_level) max_level = GET_LEVEL(member);
+        member = (struct char_data *)next_in_list(&iterator);
+    }
+
+    /* Retorna TRUE se a nova diferença total for 15 ou menos. */
+    return ((max_level - min_level) <= 15);
+}
+
+
+/**
+ * Avalia todos os mobs solitários numa sala para encontrar o melhor candidato
+ * a líder para um novo grupo, com base na regra do "líder mediano".
+ * @param ch O mob que está a iniciar a verificação.
+ * @return Um ponteiro para o melhor candidato a líder, ou NULL se nenhum grupo for viável.
+ */
+struct char_data *find_best_median_leader(struct char_data *ch)
+{
+    struct char_data *vict, *leader_candidate;
+    int min_level = GET_LEVEL(ch), max_level = GET_LEVEL(ch);
+    int count = 0;
+
+    /* Aumentei o array para segurança, mas ajuste se necessário. */
+    struct char_data *potential_members[51];
+
+    /* 1. Reúne todos os potenciais membros (mobs solitários) na sala. */
+    for (vict = world[IN_ROOM(ch)].people; vict && count < 50; vict = vict->next_in_room) {
+        if (!IS_NPC(vict) || vict->master != NULL || GROUP(vict))
+            continue;
+
+        potential_members[count++] = vict;
+        if (GET_LEVEL(vict) < min_level) min_level = GET_LEVEL(vict);
+        if (GET_LEVEL(vict) > max_level) max_level = GET_LEVEL(vict);
+    }
+    potential_members[count] = NULL; /* Marca o fim da lista. */
+
+    /* 2. Se a diferença de nível já for válida, o melhor líder é o de nível mais alto. */
+    if ((max_level - min_level) <= 15) {
+        struct char_data *best_leader = NULL;
+        for (int i = 0; i < count; i++) {
+            if (best_leader == NULL || GET_LEVEL(potential_members[i]) > GET_LEVEL(best_leader)) {
+                best_leader = potential_members[i];
+            }
+        }
+        return best_leader;
+    }
+
+    /* 3. Se a diferença for grande, procura por um "líder mediano". */
+    struct char_data *best_median = NULL;
+    for (int i = 0; i < count; i++) {
+        leader_candidate = potential_members[i];
+
+        if ((max_level - GET_LEVEL(leader_candidate)) <= 15 && (GET_LEVEL(leader_candidate) - min_level) <= 15) {
+            /* Este candidato é um "líder mediano" válido. Ele é o melhor até agora? */
+            if (best_median == NULL || GET_LEVEL(leader_candidate) > GET_LEVEL(best_median)) {
+                best_median = leader_candidate;
+            }
+        }
+    }
+
+    /* Retorna o melhor líder mediano encontrado (pode ser NULL se nenhum for viável). */
+    return best_median;
+}
+
+bool mob_handle_grouping(struct char_data *ch)
+{
+    if (GROUP(ch) || !ch->genetics)
+        return FALSE;
+
+    if (rand_number(1, 100) > MAX(GET_GENGROUP(ch), 5))
+        return FALSE;
+
+    struct char_data *vict, *target_leader = NULL;
+    int max_group_size = 6;
+
+    /* 1. Procura por um grupo existente para se juntar. */
+    for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+        if (GROUP(vict) && GROUP_LEADER(GROUP(vict)) == vict &&
+            IS_SET(GROUP_FLAGS(GROUP(vict)), GROUP_OPEN) &&
+            GROUP(vict)->members->iSize < max_group_size &&
+            is_level_compatible_with_group(ch, GROUP(vict))) { /* <-- USA A NOVA FUNÇÃO */
+            target_leader = vict;
+            break;
+        }
+    }
+
+    if (target_leader) {
+        /* Lógica de Aceitação do Líder */
+        int chance_aceitar = 100 - ((GROUP(target_leader)->members->iSize) * 15) + GET_GENGROUP(target_leader);
+        if (rand_number(1, 120) <= chance_aceitar) {
+            join_group(ch, GROUP(target_leader));
+            act("$n junta-se ao grupo de $N.", TRUE, ch, 0, target_leader, TO_ROOM);
+            return TRUE;
+        }
+    } else {
+        /* 2. Não encontrou grupo. Verifica se é possível formar um novo. */
+        struct char_data *leader_to_be = find_best_median_leader(ch); /* <-- USA A NOVA FUNÇÃO */
+
+        if (leader_to_be != NULL && leader_to_be == ch) {
+            /* O próprio mob 'ch' é o melhor candidato a líder, então ele cria o grupo. */
+            struct group_data *new_group;
+            CREATE(new_group, struct group_data, 1);
+            new_group->members = create_list();
+            SET_BIT(new_group->group_flags, GROUP_ANON);
+            SET_BIT(new_group->group_flags, GROUP_OPEN);
+            join_group(ch, new_group);
+            act("$n parece estar a formar um grupo e à procura de companheiros.", TRUE, ch, 0, 0, TO_ROOM);
+            return TRUE;
+        }
+        /* Se o melhor líder for outro, este mob irá esperar pelo turno desse outro mob. */
+    }
     return FALSE;
 }

@@ -960,6 +960,7 @@ struct mob_genetics {
    int equip_tendency;
    int roam_tendency;
    int brave_prevalence;
+   int group_tendency;
 };
 
 /* char-related structures */

@@ -426,9 +426,20 @@ static void group_gain(struct char_data *ch, struct char_data *victim)
 		base = MAX(1, tot_gain / tot_members);
 	else
 		base = 0;
-	while ((k = (struct char_data *)simple_list(GROUP(ch)->members)) != NULL)
-		if (IN_ROOM(k) == IN_ROOM(ch))
+	while ((k = (struct char_data *)simple_list(GROUP(ch)->members)) != NULL) {
+		if (IN_ROOM(k) == IN_ROOM(ch)) {
 			perform_group_gain(k, base, victim);
+	                /******************************************************************
+             * APRENDIZAGEM DE GRUPO: Reforço Positivo
+             * Se o membro for um NPC com genética, a vitória em grupo
+             * reforça a sua tendência de se agrupar.
+             ******************************************************************/
+           		 if (IS_NPC(k) && k->genetics) {
+		                k->genetics->group_tendency += 2;
+		                k->genetics->group_tendency = MIN(k->genetics->group_tendency, 100);
+		        }
+		}
+	}
 }
 
 static void solo_gain(struct char_data *ch, struct char_data *victim)
@@ -824,7 +835,28 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
     		    if (flee_threshold > 0) {
 		        /* Fuga DETERMINÍSTICA: Baseada na genética e na flag wimpy. */
 		        if (GET_HIT(victim) < (GET_MAX_HIT(victim) * flee_threshold) / 100) {
-		            do_flee(victim, NULL, 0, 0);
+		            /************************************************************
+                             * LÓGICA DE DESERÇÃO DE GRUPO (IA EGOÍSTA)
+                             * O medo pode levar à traição. Este é o local ideal.
+                             ************************************************************/
+                            if (GROUP(victim) && GROUP_LEADER(GROUP(victim)) != victim) {
+                                /* A chance de abandonar é proporcional à sua tendência de fugir (Wimpy). */
+                                if (rand_number(1, 150) <= GET_GENWIMPY(victim)) {
+                                    act("$n entra em pânico, abandona os seus companheiros e foge!", TRUE, victim, 0, 0, TO_ROOM);
+                                    send_to_char(victim, "Você não aguenta mais e abandona o seu grupo!\r\n");
+
+                                    /* Aplica a penalidade de aprendizagem ao gene de grupo. */
+                                    if (victim->genetics) {
+                                        victim->genetics->group_tendency -= 1;
+                                        if (victim->genetics->group_tendency < 0) victim->genetics->group_tendency = 0;
+                                    }
+                                    
+                                    leave_group(victim); /* Sai do grupo. */
+                                }
+                            }
+                            /************************************************************/
+
+			    do_flee(victim, NULL, 0, 0);
 		        }
 		    } else {
 		        /* Fuga de PÂNICO: Para mobs "corajosos" (threshold = 0) em estado crítico. */
@@ -1639,6 +1671,23 @@ void update_mob_prototype_genetics(struct char_data *mob)
 
     /* Garante os limites da prevalência (ex: 0 a 75, para que a bravura seja sempre rara). */
     proto->genetics->brave_prevalence = MIN(MAX(proto->genetics->brave_prevalence, 0), 75);
+
+    /****************************************************************
+     * LÓGICA PARA O GENE GROUP                                                      
+     ****************************************************************/
+    int old_group = proto->genetics->group_tendency;
+    int instance_group = mob->genetics->group_tendency;
+    
+    /* Penalidade por morrer mesmo estando em grupo. */
+    if (GROUP(mob)) {
+        instance_group -= 3;
+    }
+
+    /* Simplesmente calculamos a nova média com base no que o mob aprendeu. */
+    proto->genetics->group_tendency = ((old_group * 7) + (instance_group * 3)) / 10;
+    /* Garante que o valor do protótipo também não saia dos limites. */
+    if (proto->genetics->group_tendency < 0) proto->genetics->group_tendency = 0;
+    if (proto->genetics->group_tendency > 100) proto->genetics->group_tendency = 100;
 
     /* 5. Marca a zona como modificada para que seja salva no próximo 'save all'. */
     mob_vnum vnum = mob_index[rnum].vnum; /* Pega o vnum a partir do mob_index */

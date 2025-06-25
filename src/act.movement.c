@@ -29,7 +29,6 @@
 /* do_simple_move utility functions */
 /* do_gen_door utility functions */
 static int find_door(struct char_data *ch, const char *type, char *dir, const char *cmdname);
-static void do_doorcmd(struct char_data *ch, struct obj_data *obj, int door, int scmd);
 static int ok_pick(struct char_data *ch, obj_vnum keynum, int pickproof, int scmd);
 
 /* simple function to determine if char can walk on water */
@@ -620,7 +619,7 @@ static const int flags_door[] = {
 		(TOGGLE_BIT(GET_OBJ_VAL(obj, 1), CONT_LOCKED)) :\
 		(TOGGLE_BIT(EXITN(room, door)->exit_info, EX_LOCKED)))
 
-static void do_doorcmd(struct char_data *ch, struct obj_data *obj, int door, int scmd)
+void do_doorcmd(struct char_data *ch, struct obj_data *obj, int door, int scmd)
 {
 	char buf[MAX_STRING_LENGTH];
 	size_t len;

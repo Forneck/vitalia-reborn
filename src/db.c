@@ -1228,6 +1228,7 @@ void index_boot(int mode)
 		   mob_proto[rnum].genetics->equip_tendency = 0;
 		   mob_proto[rnum].genetics->roam_tendency = 0;
 		   mob_proto[rnum].genetics->brave_prevalence = 0;
+		   mob_proto[rnum].genetics->group_tendency = 0;
 	        }
 	    /*************************************************************************
 	     * Fim do Bloco de Genética                                              *
@@ -2032,6 +2033,12 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
               mob_proto[i].genetics->roam_tendency = num_arg;
           }                                                                                             
 	}
+	CASE("GenGroup")
+        {
+          if (mob_proto[i].genetics) {
+              mob_proto[i].genetics->group_tendency = num_arg;
+          }
+        }
 	CASE("GenBrave")
 	{
 	  if (mob_proto[i].genetics) {

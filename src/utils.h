@@ -516,6 +516,7 @@ do                                                              \
 #define GET_GENEQUIP(ch)         ((ch)->genetics ? (ch)->genetics->equip_tendency : 0)
 #define GET_GENROAM(ch)         ((ch)->genetics ? (ch)->genetics->roam_tendency : 0)
 #define GET_GENBRAVE(ch)         ((ch)->genetics ? (ch)->genetics->brave_prevalence : 0)
+#define GET_GENGROUP(ch)         ((ch)->genetics ? (ch)->genetics->group_tendency : 0)
 
 
 /** Current strength of ch. */

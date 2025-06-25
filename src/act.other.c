@@ -508,6 +508,36 @@ ACMD(do_group)
 			act("$N não faz parte de nenhum grupo!", FALSE, ch, 0, vict, TO_CHAR);
 			return;
 		}
+
+                /******************************************************************
+                 * NOVA LÓGICA DE IA: Interação Jogador -> Mob Líder
+                 ******************************************************************/
+		else if (IS_NPC(vict) && GROUP_LEADER(GROUP(vict)) == vict) {
+
+                    /* 1. Verifica a compatibilidade (nível e tamanho) */
+                    if (GROUP(vict)->members->iSize >= 6) {
+                        act("O grupo de $N já está cheio.", FALSE, ch, 0, vict, TO_CHAR);
+                        return;
+                    }
+                    if (!is_level_compatible_with_group(ch, GROUP(vict))) {
+                        act("$N parece achar que você não se encaixaria bem no grupo del$R.", FALSE, ch, 0, vict, TO_CHAR);
+                        return;
+                    }
+
+                    /* 2. O líder mob toma a sua decisão. */
+                    int chance_aceitar = 100 - (GROUP(vict)->members->iSize * 15) + GET_GENGROUP(vict);
+                    if (rand_number(1, 120) <= chance_aceitar) {
+                        /* ACEITOU */
+                        act("$N acena com a cabeça, te aceitando no seu bando.", FALSE, ch, 0, vict, TO_CHAR);
+                        join_group(ch, GROUP(vict));
+                    } else {
+                        /* RECUSOU */
+                        act("$N olha para você com desconfiança e rejeita a sua companhia.", FALSE, ch, 0, vict, TO_CHAR);
+                    }
+                }
+                /******************************************************************
+                 * Fim da Lógica de IA. A lógica original para grupos de jogadores continua.
+                 ******************************************************************/
 		else if (!IS_SET(GROUP_FLAGS(GROUP(vict)), GROUP_OPEN))
 		{
 			send_to_char(ch, "Este grupo não está aceitando novos membros.\r\n");

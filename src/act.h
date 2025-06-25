@@ -184,6 +184,7 @@ int has_boat(struct char_data *ch);
 int has_flight(struct char_data *ch);
 int has_scuba(struct char_data *ch);
 int has_key(struct char_data *ch, obj_vnum key);
+void do_doorcmd(struct char_data *ch, struct obj_data *obj, int door, int scmd);
 
 /* Global variables from act.movement.c */
 extern const char *cmd_door[];
@@ -384,4 +385,5 @@ ACMD(do_zpurge);
 ACMD(do_zreset);
 ACMD(do_zunlock);
 
+bool is_level_compatible_with_group(struct char_data *prospect, struct group_data *group);
 #endif /* _ACT_H_ */
