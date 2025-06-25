@@ -724,11 +724,11 @@ int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj)
 
             if (GET_OBJ_TYPE(obj) == ITEM_FIREWEAPON) {
                 if (mob_has_ammo(ch)) {
-                    score = 150 + new_w_stats_score;
+                    score = 150 + new_w_stats_score; /* Muito desejável! */
                 } else {
-                    score = 50 + new_w_stats_score;
+                    score = 50 + new_w_stats_score;  /* Útil, mas precisa de munição. */
                 }
-            } else {
+            } else { /* Arma de corpo-a-corpo */
                 float new_w_dam = (float)(GET_OBJ_VAL(obj, 1) * (GET_OBJ_VAL(obj, 2) + 1)) / 2.0;
                 if (current_weapon == NULL || GET_OBJ_TYPE(current_weapon) == ITEM_FIREWEAPON) {
                     score = 100 + new_w_stats_score;
@@ -742,7 +742,20 @@ int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj)
             break;
         }
 
-        case ITEM_ARMOR:
+        case ITEM_AMMO: {
+            struct obj_data *fireweapon = GET_EQ(ch, WEAR_WIELD);
+            if (fireweapon && GET_OBJ_TYPE(fireweapon) == ITEM_FIREWEAPON) {
+                /* Se já tem a arma, a munição é muito valiosa. */
+                /* A pontuação é baseada no dano potencial da munição. */
+                score = 80 + (GET_OBJ_VAL(obj, 1) * GET_OBJ_VAL(obj, 2));
+            } else {
+                /* Sem a arma, a munição é quase inútil. */
+                score = 5;
+            }
+            break;
+        }
+
+	case ITEM_ARMOR:
         case ITEM_WINGS:{
             int wear_pos = find_eq_pos(ch, obj, NULL);
             if (wear_pos != -1) {
