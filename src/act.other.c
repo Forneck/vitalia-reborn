@@ -520,7 +520,7 @@ ACMD(do_group)
                         return;
                     }
                     if (!is_level_compatible_with_group(ch, GROUP(vict))) {
-                        act("$N parece achar que você não se encaixaria bem no grupo del$R.", FALSE, ch, 0, vict, TO_CHAR);
+                        act("$N parece achar que você não se encaixaria bem no grupo.", FALSE, ch, 0, vict, TO_CHAR);
                         return;
                     }
 
