@@ -36,14 +36,14 @@ static void perform_get_from_container(struct char_data *ch, struct obj_data *ob
 static int perform_get_from_room(struct char_data *ch, struct obj_data *obj);
 /* do_give utility functions */
 static struct char_data *give_find_vict(struct char_data *ch, char *arg);
-static void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data *obj);
-static void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount);
+void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data *obj);
+void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount);
 /* do_drop utility functions */
-static int perform_drop(struct char_data *ch, struct obj_data *obj, byte mode, const char *sname,
+int perform_drop(struct char_data *ch, struct obj_data *obj, byte mode, const char *sname,
 						room_rnum RDR);
-static void perform_drop_gold(struct char_data *ch, int amount, byte mode, room_rnum RDR);
+void perform_drop_gold(struct char_data *ch, int amount, byte mode, room_rnum RDR);
 /* do_put utility functions */
-static void perform_put(struct char_data *ch, struct obj_data *obj, struct obj_data *cont);
+void perform_put(struct char_data *ch, struct obj_data *obj, struct obj_data *cont);
 /* do_remove utility functions */
 void perform_remove(struct char_data *ch, int pos);
 /* do_wear utility functions */
@@ -53,7 +53,7 @@ static void wear_message(struct char_data *ch, struct obj_data *obj, int where);
 
 
 
-static void perform_put(struct char_data *ch, struct obj_data *obj, struct obj_data *cont)
+void perform_put(struct char_data *ch, struct obj_data *obj, struct obj_data *cont)
 {
 
 	if (!drop_otrigger(obj, ch))
@@ -504,7 +504,7 @@ ACMD(do_get)
 }
 
 
-static void perform_drop_gold(struct char_data *ch, int amount, byte mode, room_rnum RDR)
+void perform_drop_gold(struct char_data *ch, int amount, byte mode, room_rnum RDR)
 {
 	struct obj_data *obj;
 
@@ -563,7 +563,7 @@ static void perform_drop_gold(struct char_data *ch, int amount, byte mode, room_
 
 #define VANISH(mode) ((mode == SCMD_DONATE || mode == SCMD_JUNK) ? \
 		      ", que desaparece em uma nuvem de fumaça!" : ".")
-static int perform_drop(struct char_data *ch, struct obj_data *obj,
+int perform_drop(struct char_data *ch, struct obj_data *obj,
 						byte mode, const char *sname, room_rnum RDR)
 {
 	char buf[MAX_STRING_LENGTH];
@@ -753,7 +753,7 @@ ACMD(do_drop)
 	}
 }
 
-static void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data *obj)
+void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data *obj)
 {
 	if (!give_otrigger(obj, ch, vict))
 		return;
@@ -816,7 +816,7 @@ static struct char_data *give_find_vict(struct char_data *ch, char *arg)
 	return (NULL);
 }
 
-static void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount)
+void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount)
 {
 	char buf[MAX_STRING_LENGTH];
 

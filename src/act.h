@@ -123,6 +123,13 @@ void weight_change_object(struct obj_data *obj, int weight);
 void perform_remove(struct char_data *ch, int pos);
 /* do_wear utility functions */
 void perform_wear(struct char_data *ch, struct obj_data *obj, int where);
+void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data *obj);
+void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount);
+/* do_drop utility functions */
+int perform_drop(struct char_data *ch, struct obj_data *obj, byte mode, const char *sname,                                                                room_rnum RDR);                                           void perform_drop_gold(struct char_data *ch, int amount, byte mode, room_rnum RDR);
+/* do_put utility functions */
+void perform_put(struct char_data *ch, struct obj_data *obj, struct obj_data *cont);
+
 /* functions with subcommands */
 /* do_drop */
 ACMD(do_drop);

@@ -22,6 +22,8 @@
 #include "handler.h"
 #include "interpreter.h"
 #include "class.h"
+#include "act.h"
+#include "constants.h"
 
 /** Aportable random number function.
  * @param from The lower bounds of the random number.

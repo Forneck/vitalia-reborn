@@ -27,7 +27,6 @@
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
 
-bool mob_has_ammo(struct char_data *ch);
 struct char_data *find_best_median_leader(struct char_data *ch);
 bool mob_handle_grouping(struct char_data *ch);
 bool mob_leader_evaluates_gear(struct char_data *leader);
@@ -392,7 +391,7 @@ void mobile_activity(void)
                     /* Ação de mover e aprender (já existente) */
                     if (perform_move(ch, door, 1)) {
                         /* Se o mob se moveu e decidiu fechar a porta, ele o faz. */
-                        if (should_close_behind && EXIT(ch, back_door) && EXIT(ch, back_door)->to_room == was_in) {
+                        if (should_close_behind && EXIT(ch, back_door) && EXIT(ch, back_door)->to_room == was_in && EXIT(ch, back_door)->keyword != NULL) {
                              /* Verifica se a porta pode ser fechada. */
                              if (!IS_SET(EXIT(ch, back_door)->exit_info, EX_DNCLOSE)) {
                                 do_doorcmd(ch, NULL, back_door, SCMD_CLOSE);
