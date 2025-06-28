@@ -118,24 +118,40 @@ void mobile_activity(void)
      **********************************************************************/
     if (GROUP(ch) && GROUP_LEADER(GROUP(ch)) != ch) {
         struct char_data *leader = GROUP_LEADER(GROUP(ch));
-
-        /******************************************************************
-         * CORREÇÃO DE SEGURANÇA: Verifica se o líder é um ponteiro válido.
-         ******************************************************************/
+        
         if (leader != NULL) {
             /* O líder está em outra sala? Se sim, a prioridade é segui-lo. */
             if (IN_ROOM(ch) != IN_ROOM(leader)) {
-                int direction = find_first_step(IN_ROOM(ch), IN_ROOM(leader)); /* Pathfinding */
+                if (MOB_FLAGGED(ch, MOB_SENTINEL) && rand_number(1, 100) > 2) { /* Chance de 2% */
+                    continue; /* Ignora a ordem do líder e fica no posto. */
+                }
 
+		int direction = find_first_step(IN_ROOM(ch), IN_ROOM(leader));
+                
                 if (direction >= 0) {
-                    perform_move(ch, direction, 1);
-                    continue; /* Ação do pulso: seguiu o líder. Fim do turno. */
+                    room_rnum to_room = EXIT(ch, direction)->to_room;
+                    bool can_follow = TRUE;
+
+                    /******************************************************************/
+                    /* REFINAMENTO FINAL: Verifica ROOM_NOMOB e o tipo do líder.      */
+                    /******************************************************************/
+                    if (ROOM_FLAGGED(to_room, ROOM_NOMOB)) {
+                        /* Se o destino é NOMOB, só pode entrar se o líder for um jogador. */
+                        if (IS_NPC(leader)) {
+                            can_follow = FALSE;
+                            /* Opcional: o mob poderia dizer algo como "Eu não posso ir aí, chefe." */
+                        }
+                    }
+
+                    if (can_follow) {
+                        perform_move(ch, direction, 1);
+                        continue; /* Ação do pulso: seguiu o líder. Fim do turno. */
+                    }
                 }
             }
         }
     }
-
-
+    
     if (GROUP(ch) && !FIGHTING(ch)) { /* Se está num grupo e não está a lutar */
         struct char_data *member;
         struct iterator_data iterator;
@@ -650,6 +666,9 @@ struct char_data *find_best_leader_for_new_group(struct char_data *ch)
  */
 bool mob_handle_grouping(struct char_data *ch)
 {
+    if (MOB_FLAGGED(ch, MOB_SENTINEL))
+        return FALSE;
+
     if (GROUP(ch) || !ch->genetics)
         return FALSE;
 

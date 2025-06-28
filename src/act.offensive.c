@@ -526,7 +526,7 @@ ACMD(do_flee)
     for (i = 0; i < 6; i++)
     {
         attempt = rand_number(0, DIR_COUNT - 1);        /* Seleciona uma direção aleatória */
-        if (CAN_GO(ch, attempt) && !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH))
+        if (CAN_GO(ch, attempt) && (!ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_DEATH) || !ROOM_FLAGGED(EXIT(ch, attempt)->to_room, ROOM_NOMOB) ))
         {
             act("$n entra em pânico e tenta fugir!", TRUE, ch, 0, 0, TO_ROOM);
             was_fighting = FIGHTING(ch);
