@@ -81,6 +81,7 @@ int get_item_apply_score(struct char_data *ch, struct obj_data *obj);
 int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj);
 bool mob_has_ammo(struct char_data *ch);
 
+bool are_groupable(struct char_data *ch, struct char_data *target);
 /* Public functions made available from weather.c */
 void weather_and_time(int mode);
 

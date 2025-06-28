@@ -38,7 +38,7 @@ static void display_group_list(struct char_data *ch);
 static int can_elevate(struct char_data *ch);
 static int can_rebegin(struct char_data *ch);
 void check_thief(struct char_data *ch, struct char_data *vict);
-
+bool are_groupable(struct char_data *ch, struct char_data *target);
 
 ACMD(do_quit)
 {
@@ -521,6 +521,12 @@ ACMD(do_group)
                     }
                     if (!is_level_compatible_with_group(ch, GROUP(vict))) {
                         act("$N parece achar que você não se encaixaria bem no grupo.", FALSE, ch, 0, vict, TO_CHAR);
+                        return;
+                    }
+
+
+                    if (!are_groupable(ch, vict)) { /* are_groupable verifica o alinhamento */
+                        act("$N olha para si com desconfiança devido ao seu alinhamento.", FALSE, ch, 0, vict, TO_CHAR);
                         return;
                     }
 

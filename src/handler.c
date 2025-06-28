@@ -1528,18 +1528,28 @@ void leave_group(struct char_data *ch)
 
 void join_group(struct char_data *ch, struct group_data *group)
 {
-  add_to_list(ch, group->members);
-	
-  if (group->leader == NULL)
-    group->leader = ch;
-	  
-  ch->group = group;  
-  
-  if (IS_SET(group->group_flags, GROUP_NPC) && !IS_NPC(ch))
-    REMOVE_BIT(GROUP_FLAGS(group), GROUP_NPC);
-	
-  if (group->leader == ch)
-    send_to_group(NULL, group, "%s se tornou lider do grupo.\r\n", GET_NAME(ch));
-  else
-    send_to_group(NULL, group, "%s é agora um membro do seu grupo.\r\n", GET_NAME(ch));		
+    /* Adiciona o personagem à lista de membros. */
+    add_to_list(ch, group->members);
+    ch->group = group;
+
+    /* Se o grupo era um grupo de NPCs e um jogador entrou, a flag é removida. */
+    if (IS_SET(group->group_flags, GROUP_NPC) && !IS_NPC(ch))
+        REMOVE_BIT(group->group_flags, GROUP_NPC);
+
+    /******************************************************************
+     * LÓGICA DE LIDERANÇA CORRIGIDA E COMPLETA
+     ******************************************************************/
+
+    /* 1. Se o grupo está a ser formado agora (não tem líder), o primeiro a entrar lidera. */
+    if (group->leader == NULL) {
+        group->leader = ch;
+        send_to_group(NULL, group, "%s criou o grupo.\r\n", GET_NAME(ch));
+    } else {
+        /* 2. Se um JOGADOR entrar num grupo que já tem um líder, o jogador assume. */
+        if (!IS_NPC(ch)) {
+            send_to_group(NULL, group, "%s é agora o novo líder do grupo.\r\n", GET_NAME(ch));
+            group->leader = ch;
+        }
+        send_to_group(NULL, group, "%s juntou-se ao grupo.\r\n", GET_NAME(ch));
+    }
 }

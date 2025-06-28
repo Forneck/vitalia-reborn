@@ -1648,6 +1648,11 @@ void update_mob_prototype_genetics(struct char_data *mob)
      /****************************************************************
      * LÓGICA PARA O GENE ROAM                                       *
      ****************************************************************/
+    if (IN_ROOM(mob) != real_room(GET_LOADROOM(mob))) {
+    	/* O mob morreu longe de casa. A sua estratégia de exploração falhou. */
+    	mob->genetics->roam_tendency -= 10; /* Penalidade por morrer em território desconhecido. */
+    }
+
     int old_roam = proto->genetics->roam_tendency;
     int instance_roam = mob->genetics->roam_tendency;
 

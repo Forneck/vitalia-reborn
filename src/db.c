@@ -3202,9 +3202,7 @@ void reset_zone(zone_rnum zone)
           			 * LÓGICA DO POSTO DE GUARDA (LOCAL CORRETO)
 		                 * O mob já está na sala, agora podemos guardar a sua posição.
 		                 ******************************************************************/
-		                 if (MOB_FLAGGED(mob, MOB_SENTINEL)) {
-			              GET_LOADROOM(mob) = world[IN_ROOM(mob)].number;
-		                }
+			        GET_LOADROOM(mob) = world[IN_ROOM(mob)].number;
 				load_mtrigger(mob);
 				tmob = mob;
 				last_cmd = 1;
