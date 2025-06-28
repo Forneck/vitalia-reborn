@@ -129,6 +129,7 @@ void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount)
 int perform_drop(struct char_data *ch, struct obj_data *obj, byte mode, const char *sname,                                                                room_rnum RDR);                                           void perform_drop_gold(struct char_data *ch, int amount, byte mode, room_rnum RDR);
 /* do_put utility functions */
 void perform_put(struct char_data *ch, struct obj_data *obj, struct obj_data *cont);
+int perform_get_from_room(struct char_data *ch, struct obj_data *obj);
 
 /* functions with subcommands */
 /* do_drop */

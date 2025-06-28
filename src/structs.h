@@ -117,7 +117,7 @@
 /* Exit info: used in room_data.dir_option.exit_info */
 #define EX_ISDOOR    (1 << 0) /**< Exit is a door */
 #define EX_PICKPROOF (1 << 1) /**< Lock can't be picked */
-#define EX_GHOSTPROOF (1 << 2) /**< Lock can't be picked */
+#define EX_GHOSTPROOF (1 << 2) /**< Lock IS GHOSTPROOF */
 #define EX_HIDDEN    (1 << 3) /**< Exit is hidden, secret */
 #define EX_CLIMBUP (1 << 4 )
 #define EX_CLIMBDOWN (1 << 5 )

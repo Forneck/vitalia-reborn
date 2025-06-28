@@ -33,7 +33,6 @@ static void get_from_container(struct char_data *ch, struct obj_data *cont, char
 static void get_from_room(struct char_data *ch, char *arg, int amount);
 static void perform_get_from_container(struct char_data *ch, struct obj_data *obj,
 									   struct obj_data *cont, int mode);
-static int perform_get_from_room(struct char_data *ch, struct obj_data *obj);
 /* do_give utility functions */
 static struct char_data *give_find_vict(struct char_data *ch, char *arg);
 void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data *obj);
@@ -343,7 +342,7 @@ void get_from_container(struct char_data *ch, struct obj_data *cont,
 	}
 }
 
-static int perform_get_from_room(struct char_data *ch, struct obj_data *obj)
+int perform_get_from_room(struct char_data *ch, struct obj_data *obj)
 {
 	if (can_take_obj(ch, obj) && get_otrigger(obj, ch))
 	{

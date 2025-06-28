@@ -30,12 +30,14 @@ static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data 
 struct char_data *find_best_median_leader(struct char_data *ch);
 bool mob_handle_grouping(struct char_data *ch);
 bool mob_leader_evaluates_gear(struct char_data *leader);
+bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, int was_in);
+bool mob_goal_oriented_roam(struct char_data *ch);
 
 void mobile_activity(void)
 {
   struct char_data *ch, *next_ch, *vict;
   struct obj_data *obj, *best_obj;
-  int door, found;
+  int  found;
   memory_rec *names;
 
   for (ch = character_list; ch; ch = next_ch) {
@@ -157,38 +159,39 @@ void mobile_activity(void)
         }
     }
     
-    /* hunt a victim, if applicable */
-    hunt_victim(ch);
-    
-
-    if (mob_handle_grouping(ch)) {
-        continue; /* Ação do pulso foi usada para agrupar, fim do turno. */
-    }
-
-    /* Scavenger (picking up objects) */
     /*************************************************************************
-     * Lógica de Genética FINAL: Comportamento de SAQUEAR (Loot)              *
-     * Usa a função de avaliação e garante uma chance mínima de aprendizagem. *
+     * Lógica de Genética v2: SAQUEAR (Loot) com "Bónus de Necessidade"
+     * PRECISA VIR ANTES DE EQUIPAR
      *************************************************************************/
     if (world[IN_ROOM(ch)].contents && ch->genetics && !FIGHTING(ch)) {
-        
-        const int CURIOSIDADE_AMBIENTE = 10;
-        int effective_loot_tendency = 0;
-        int base_scavenger_instinct = 0;
-        int final_chance = 0;
 
-        if (MOB_FLAGGED(ch, MOB_SCAVENGER)) {
-            base_scavenger_instinct = 25;
-        }
+        /* 1. Calcula a tendência base do mob (genética + instinto). */
+        int base_tendency = MOB_FLAGGED(ch, MOB_SCAVENGER) ? 25 : 0;
+        int genetic_tendency = GET_GENLOOT(ch);
+        int effective_tendency = base_tendency + genetic_tendency;
+        /* 2. Calcula o bónus com base nas necessidades urgentes. */
+        int need_bonus = 0;
+        if (GET_HIT(ch) < GET_MAX_HIT(ch) * 0.8)
+            need_bonus += 15; /* Precisa de itens de cura. */
 
-        effective_loot_tendency = base_scavenger_instinct + GET_GENLOOT(ch);
-        final_chance = MAX(effective_loot_tendency, CURIOSIDADE_AMBIENTE);
-        final_chance = MIN(final_chance, 90);
+        if (GET_EQ(ch, WEAR_WIELD) == NULL)
+            need_bonus += 25; /* Precisa desesperadamente de uma arma. */
+
+        if (GET_EQ(ch, WEAR_BODY) == NULL)
+            need_bonus += 15; /* Precisa de armadura. */
+
+        if (GET_EQ(ch, WEAR_WIELD) && GET_OBJ_TYPE(GET_EQ(ch, WEAR_WIELD)) == ITEM_FIREWEAPON && !mob_has_ammo(ch))
+            need_bonus += 50; /* Necessidade MUITO ALTA por munição! */
+
+        /* 3. A chance final é a combinação de tudo, com um mínimo de curiosidade. */
+        int final_chance = MAX(effective_tendency + need_bonus, 10);
+        final_chance = MIN(final_chance, 95); /* Limita a 95% para não ser garantido. */
 
         if (rand_number(1, 100) <= final_chance) {
             int max_score = 0;
             best_obj = NULL;
 
+            /* A IA agora procura ativamente pelo item que melhor satisfaz a sua necessidade. */
             for (obj = world[IN_ROOM(ch)].contents; obj; obj = obj->next_content) {
                 int current_score = evaluate_item_for_mob(ch, obj);
                 if (current_score > max_score) {
@@ -196,21 +199,25 @@ void mobile_activity(void)
                     max_score = current_score;
                 }
             }
-            
             if (best_obj != NULL) {
-                obj_from_room(best_obj);
-                obj_to_char(best_obj, ch);
-                act("$n pega $p.", FALSE, ch, best_obj, 0, TO_ROOM);
-
-                ch->genetics->loot_tendency += 2;
-                if (ch->genetics->loot_tendency > 100)
-                    ch->genetics->loot_tendency = 100;
-            } else {
+                /* Chama a função do jogo para pegar o item, garantindo todas as verificações. */
+                if (perform_get_from_room(ch, best_obj)) {
+                    /* Aprendizagem Positiva: A decisão foi boa e bem-sucedida. */
+                    ch->genetics->loot_tendency += 2;
+                    ch->genetics->loot_tendency = MIN(ch->genetics->loot_tendency, 100);                                                             }
+            } else {                                                                                                                                 /* Aprendizagem Negativa: A necessidade não foi satisfeita. */
                 ch->genetics->loot_tendency -= 1;
-                if (ch->genetics->loot_tendency < 0)
-                    ch->genetics->loot_tendency = 0;
+                ch->genetics->loot_tendency = MAX(ch->genetics->loot_tendency, 0);
             }
         }
+    }
+
+    /* hunt a victim, if applicable */
+    hunt_victim(ch);
+    
+
+    if (mob_handle_grouping(ch)) {
+        continue; /* Ação do pulso foi usada para agrupar, fim do turno. */
     }
 
     /* Aggressive Mobs */
@@ -320,113 +327,15 @@ void mobile_activity(void)
             }
         }
     }
-	  
+    
     /*Depois de equipar, lider avalia equipamento sobrando e doa para o grupo*/
     if (mob_leader_evaluates_gear(ch)) {
         continue;
     }
 	  
-    /****************************************************************************
-     * Lógica de Genética: VAGUEAR (Roam) - VERSÃO FINAL E CORRIGIDA
-     * Substitui o bloco "Mob Movement" original.
-     ****************************************************************************/
-    if (ch->master == NULL) {
-        int CURIOSIDADE_EXPLORAR = 10;
-	int effective_roam_tendency = 0;
-	int base_roam_instinct = 25;
-        int final_chance = 0;
-        if (MOB_FLAGGED(ch, MOB_SENTINEL)) {
-            base_roam_instinct = 1;
-            CURIOSIDADE_EXPLORAR = 0;
-        }
-        
-	effective_roam_tendency = base_roam_instinct + GET_GENROAM(ch);
-        final_chance = MAX(effective_roam_tendency, CURIOSIDADE_EXPLORAR);
-        final_chance = MIN(final_chance, 90);
-        if (rand_number(1, 100) <= final_chance) {
-                /* Prossegue com a lógica de movimento. */
-                int was_in = IN_ROOM(ch);
-                door = rand_number(0, DIR_COUNT - 1);
-                struct room_direction_data *exit;
-                room_rnum to_room;
-
-                if ((exit = EXIT(ch, door)) != NULL && (to_room = exit->to_room) != NOWHERE) {
-                    	
-                    /* 2. Lógica de Voo: Aterra/Descola conforme a necessidade antes de tentar andar no mesmo pulso. */
-                    if (AFF_FLAGGED(ch, AFF_FLYING) && ROOM_FLAGGED(to_room, ROOM_NO_FLY)) {
-                        stop_flying(ch);
-                    } else if (!AFF_FLAGGED(ch, AFF_FLYING) && world[to_room].sector_type == SECT_CLIMBING) {
-                        start_flying(ch);
-                    }
-		 /* 3. PRÉ-REQUISITO DE OBSTÁCULOS: A IA "olha" antes de ir. */
-                if ( (IS_SET(exit->exit_info, EX_HIDDEN) && rand_number(1, 20) > GET_WIS(ch)) ||
-                     (IS_SET(exit->exit_info, EX_DNOPEN)) ||
-                     (world[to_room].sector_type == SECT_UNDERWATER && !has_scuba(ch)) ||
-                      ROOM_FLAGGED(to_room, ROOM_NOMOB) ) {
-                     /* O caminho é impossível, a IA desiste por este pulso. */
-                } else {
-                    /* Se o caminho é possível, lida com portas. */
-                 if (IS_SET(exit->exit_info, EX_CLOSED)) {
-                    /* Se a porta estiver trancada e o mob tiver a chave... */
-                    if (IS_SET(exit->exit_info, EX_LOCKED) && has_key(ch, exit->key)) {
-                        /* ...ele usa o comando para destrancar. */
-                        do_doorcmd(ch, NULL, door, SCMD_UNLOCK);
-                    }
-                    
-                    /* Se a porta agora estiver destrancada (ou nunca esteve), ele a abre. */
-                    if (!IS_SET(exit->exit_info, EX_LOCKED) && !IS_SET(exit->exit_info, EX_DNOPEN)) {
-                        do_doorcmd(ch, NULL, door, SCMD_OPEN);
-                    }
-                }
-                
-                /* A IA só prossegue se, depois das suas ações, a porta estiver aberta. */
-                if (!IS_SET(exit->exit_info, EX_CLOSED)) {
-                    
-                    /* --- LÓGICA DE FECHAR A PORTA ATRÁS DE SI --- */
-                    bool should_close_behind = (GET_INT(ch) > 12 && rand_number(1,100) <= 25); /* Ex: 25% de chance para mobs inteligentes */
-
-                    /* Guarda a porta de retorno. */
-                    int back_door = rev_dir[door];
-                    
-                    /* Ação de mover e aprender (já existente) */
-                    if (perform_move(ch, door, 1)) {
-                        /* Se o mob se moveu e decidiu fechar a porta, ele o faz. */
-                        if (should_close_behind && EXIT(ch, back_door) && EXIT(ch, back_door)->to_room == was_in && EXIT(ch, back_door)->keyword != NULL) {
-                             /* Verifica se a porta pode ser fechada. */
-                             if (!IS_SET(EXIT(ch, back_door)->exit_info, EX_DNCLOSE)) {
-                                do_doorcmd(ch, NULL, back_door, SCMD_CLOSE);
-                             }
-                        }
-                        /* 5. PRÉ-REQUISITO PSICOLÓGICO: Medo de sair da zona. */
-                        if (MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[IN_ROOM(ch)].zone) && (rand_number(1, 100) > 5)) {
-                            /* Hesitou. Fim do turno. */
-                        } else {
-                            /* 6. AÇÃO FINAL E APRENDIZAGEM */
-                               if (perform_move(ch, door, 1)) {
-                                   /* 4. Lógica de Aprendizagem Pós-Movimento */
-                                   if (ch->genetics) {
-                                       int roam_change = 0;
-                                       int current_sect = world[IN_ROOM(ch)].sector_type;
-                                       if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_DEATH) || current_sect == SECT_LAVA || current_sect == SECT_QUICKSAND) {
-                                           roam_change = -20;
-                                       } else if (current_sect == SECT_ICE && GET_POS(ch) < POS_STANDING) {
-                                           roam_change = -5;
-					   /* Mob caiu ao andar, tem que andar com mais cuidado. Também precisa levantar para a proxima ação */
-					   do_stand(ch, "", 0, 0);
-                                       } else {
-                                           roam_change = 1;
-                                       }
-                                       ch->genetics->roam_tendency += roam_change;
-                                       if (ch->genetics->roam_tendency < 0) ch->genetics->roam_tendency = 0;
-                                       if (ch->genetics->roam_tendency > 100) ch->genetics->roam_tendency = 100;
-                                   }
-                               }
-                           }
-                        }
-                    }
-                }
-            }
-	}
+    /* Prioridade de Vaguear (Roam) */
+    if (mob_goal_oriented_roam(ch)) {
+        continue;
     }
 
     /* Mob Memory */
@@ -819,4 +728,171 @@ bool mob_leader_evaluates_gear(struct char_data *leader)
     }
 
     return FALSE;
+}
+
+/**
+ * Função de apoio que executa o movimento, táticas pós-movimento, e aprendizagem.
+ * VERSÃO FINAL COM APRENDIZAGEM AMBIENTAL.
+ * @param ch O mob que se move.
+ * @param dir A direção do movimento.
+ * @param should_close_behind TRUE se a IA decidiu que deve fechar a porta.
+ * @param was_in A sala de onde o mob veio.
+ * @return TRUE se o mob se moveu, FALSE caso contrário.
+ */
+bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, int was_in)
+{
+    int old_pos = GET_POS(ch);
+
+    if (perform_move(ch, dir, 1)) {
+        /* O movimento foi bem-sucedido. */
+
+        /* TÁTICA PÓS-MOVIMENTO: fechar a porta atrás de si (já implementado). */
+        if (should_close_behind) {
+            int back_door = rev_dir[dir];
+            if (EXIT(ch, back_door) && EXIT(ch, back_door)->to_room == was_in &&
+                EXIT(ch, back_door)->keyword != NULL && !IS_SET(EXIT(ch, back_door)->exit_info, EX_DNCLOSE)) {
+                do_doorcmd(ch, NULL, back_door, SCMD_CLOSE);
+            }
+        }
+
+        /******************************************************************
+         * APRENDIZAGEM PÓS-MOVIMENTO (VERSÃO FINAL E REFINADA)
+         ******************************************************************/
+        if (ch->genetics) {
+            int roam_change = 0;
+            int current_sect = world[IN_ROOM(ch)].sector_type;
+
+            if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_DEATH) || current_sect == SECT_LAVA || current_sect == SECT_QUICKSAND) {
+                roam_change = -20; /* Penalidade severa por perigo mortal. */
+                act("$n grita de dor ao entrar na armadilha!", FALSE, ch, 0, 0, TO_ROOM);
+            } else if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_FROZEN)) {
+                roam_change = -10; /* Penalidade média por desconforto. */
+                act("$n treme de frio ao entrar na sala gelada.", FALSE, ch, 0, 0, TO_ROOM);
+            } else if (current_sect == SECT_ICE && GET_POS(ch) < old_pos) {
+                roam_change = -5;  /* Penalidade leve por escorregar. */
+            } else if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HEAL)) {
+                roam_change = 10;   /* Recompensa média por encontrar um santuário. */
+                act("$n parece revigorado ao entrar nesta sala.", FALSE, ch, 0, 0, TO_ROOM);
+            } else {
+                roam_change = 1;   /* Recompensa normal por exploração segura. */
+            }
+            
+            ch->genetics->roam_tendency += roam_change;
+            ch->genetics->roam_tendency = MIN(MAX(ch->genetics->roam_tendency, 0), 100);
+        }
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+/**
+ * IA de exploração orientada a objetivos. O mob agora vagueia com um propósito.
+ * VERSÃO FINAL COM TODAS AS NUANCES.
+ * Retorna TRUE se uma ação de roam foi executada.
+ */
+bool mob_goal_oriented_roam(struct char_data *ch)
+{
+    if (ch->master != NULL || FIGHTING(ch))
+        return FALSE;
+
+    int direction = -1;
+    bool has_goal = FALSE;
+
+    /* 1. OBJETIVO PRIMÁRIO: Sentinelas e Lojistas voltam para o seu posto. */
+    if (MOB_FLAGGED(ch, MOB_SENTINEL) && IN_ROOM(ch) != real_room(GET_LOADROOM(ch))) {
+        direction = find_first_step(IN_ROOM(ch), real_room(GET_LOADROOM(ch)));
+        has_goal = TRUE;
+    }
+
+    /* 2. CÁLCULO DA MOTIVAÇÃO PARA EXPLORAR */
+    if (!has_goal) {
+        int base_roam = MOB_FLAGGED(ch, MOB_SENTINEL) ? 1 : 25;
+        int need_bonus = 0;
+        if (GET_EQ(ch, WEAR_WIELD) == NULL) need_bonus += 20;
+        if (!GROUP(ch)) need_bonus += 10;
+
+        int final_chance = MIN(base_roam + GET_GENROAM(ch) + need_bonus, 90);
+
+        if (rand_number(1, 100) <= final_chance) {
+            direction = rand_number(0, DIR_COUNT - 1);
+            has_goal = TRUE;
+        }
+    }
+
+    /* 3. EXECUÇÃO DA AÇÃO SE HOUVER UM OBJETIVO */
+    if (has_goal && direction != -1) {
+        struct room_direction_data *exit;
+        room_rnum to_room;
+
+        if ((exit = EXIT(ch, direction)) && (to_room = exit->to_room) <= top_of_world) {
+            
+            /* 3a. GESTÃO DE ESTADO (Pré-requisitos da Ação) */
+            if (GET_POS(ch) < POS_STANDING) {
+                do_stand(ch, "", 0, 0); 
+            }
+            if (AFF_FLAGGED(ch, AFF_FLYING) && ROOM_FLAGGED(to_room, ROOM_NO_FLY)) {
+                stop_flying(ch); 
+            }
+            if (!AFF_FLAGGED(ch, AFF_FLYING) && world[to_room].sector_type == SECT_CLIMBING) {
+              start_flying(ch);
+            }
+
+            /* 3b. RESOLUÇÃO DE OBSTÁCULOS (Lógica Corrigida e Segura) */
+
+            if (IS_SET(exit->exit_info, EX_ISDOOR) && IS_SET(exit->exit_info, EX_CLOSED)) {
+                    if (IS_SET(exit->exit_info, EX_LOCKED) && has_key(ch, exit->key)) {
+                        do_doorcmd(ch, NULL, direction, SCMD_UNLOCK);
+                    }
+                    /* A ação é encadeada: se agora estiver destrancada, tenta abrir. */
+                    if (!IS_SET(exit->exit_info, EX_LOCKED)) {
+                        do_doorcmd(ch, NULL, direction, SCMD_OPEN);
+                    }
+                /* Se a porta não tem nome ou está emperrada, a IA não pode passar e não faz nada. */
+		else {
+			return FALSE;
+		}
+
+            /* 3c. MOVIMENTO FINAL E APRENDIZAGEM */
+            /* Se chegou aqui, a porta já está aberta. */
+            	if ( (IS_SET(exit->exit_info, EX_HIDDEN) && rand_number(1, 20) > GET_WIS(ch)) ||
+                 (world[to_room].sector_type == SECT_UNDERWATER && !has_scuba(ch)) ||
+                  ROOM_FLAGGED(to_room, ROOM_NOMOB) ) {
+                 return FALSE; /* Caminho é impossível. */
+               }
+             
+            if (MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[IN_ROOM(ch)].zone) && (rand_number(1, 100) > 5)) {
+                return TRUE; /* Hesitou e gastou o turno. */
+            }
+            
+                /************************************************************/
+                /* LÓGICA DE DECISÃO TÁTICA: Fechar a porta atrás de si?    */
+                /************************************************************/
+                bool should_close_behind = FALSE;
+                /* Apenas mobs inteligentes consideram esta tática. */
+                if (GET_INT(ch) > 12 && exit->keyword != NULL && !IS_SET(exit->exit_info, EX_DNCLOSE)) {
+                    int chance = 5; /* 5% de chance base para qualquer mob inteligente. */
+
+                    if (ch->genetics) {
+                        /* Fator Medo: Um mob medroso cobre a sua retirada. */
+                        /* Um mob com 100 de wimpy ganha +25% de chance. */
+                        chance += (GET_GENWIMPY(ch) / 4);
+
+                        /* Fator Territorialismo: Mobs que vagueiam pouco são mais cuidadosos. */
+                        /* Um mob com 0 de roam ganha +12% de chance. */
+                        chance += (100 - GET_GENROAM(ch)) / 8;
+                    }
+
+                    if (rand_number(1, 100) <= chance) {
+                        should_close_behind = TRUE;
+                    }
+                }
+               
+                /* Ação de mover-se, passando a decisão tática como parâmetro. */
+                return perform_move_IA(ch, direction, should_close_behind, IN_ROOM(ch));
+            }
+      }
+    }
+    return FALSE; /* Nenhuma ação de roam foi executada. */
+
 }

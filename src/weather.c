@@ -224,7 +224,7 @@ void weather_change(int zone) {
 
     /* 3. Atualiza a temperatura */
     diff = (weather->temperature > meant ? -1 : 1);
-    int season_modifier = (time_info.month >= 1 || time_info.month <= 4) ? 1 : 2;
+    int season_modifier = (time_info.month >= 1 && time_info.month <= 4) ? 1 : 2;
     // No inverno, menos variação
     weather->temperature += (weather->press_diff / (5 + season_modifier) + diff * dice(1, 2));
     weather->temperature = URANGE(climate->temperature - 15, weather->temperature, climate->temperature + 15); // Limita variação
@@ -241,7 +241,7 @@ void weather_change(int zone) {
 
     /* 6. Atualiza o vento */
     diff = (weather->press_diff > 6 ? 1 : (weather->press_diff < -6 ? -1 : 0));
-    int wind_factor = (time_info.month >= 9 && time_info.month <= 12) || (time_info.month >= 1 || time_info.month <= 4) ? 2 : 1;
+    int wind_factor = (time_info.month >= 9 && time_info.month <= 12) || (time_info.month >= 1 && time_info.month <= 4) ? 2 : 1;
     weather->winds += (diff * dice(1, 2) + dice(1, 3) - dice(1, 3)) * climate->winds * wind_factor;
     weather->winds = URANGE(climate->winds * 3, weather->winds, climate->winds * 25); // Limita oscilações
 
