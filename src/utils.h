@@ -517,12 +517,12 @@ do                                                              \
 /** Fitness of ch. */
 #define GET_FIT(ch)	((ch)->player.fit)
 
-#define GET_GENWIMPY(ch)        ((ch)->genetics ? (ch)->genetics->wimpy_tendency : 0)
-#define GET_GENLOOT(ch)         ((ch)->genetics ? (ch)->genetics->loot_tendency : 0)
-#define GET_GENEQUIP(ch)         ((ch)->genetics ? (ch)->genetics->equip_tendency : 0)
-#define GET_GENROAM(ch)         ((ch)->genetics ? (ch)->genetics->roam_tendency : 0)
-#define GET_GENBRAVE(ch)         ((ch)->genetics ? (ch)->genetics->brave_prevalence : 0)
-#define GET_GENGROUP(ch)         ((ch)->genetics ? (ch)->genetics->group_tendency : 0)
+#define GET_GENWIMPY(ch)         ((ch)->ai_data ? (ch)->ai_data->genetics.wimpy_tendency : 0)
+#define GET_GENLOOT(ch)          ((ch)->ai_data ? (ch)->ai_data->genetics.loot_tendency : 0)
+#define GET_GENEQUIP(ch)         ((ch)->ai_data ? (ch)->ai_data->genetics.equip_tendency : 0)
+#define GET_GENROAM(ch)          ((ch)->ai_data ? (ch)->ai_data->genetics.roam_tendency : 0)
+#define GET_GENBRAVE(ch)         ((ch)->ai_data ? (ch)->ai_data->genetics.brave_prevalence : 0)
+#define GET_GENGROUP(ch)         ((ch)->ai_data ? (ch)->ai_data->genetics.group_tendency : 0)
 
 
 /** Current strength of ch. */

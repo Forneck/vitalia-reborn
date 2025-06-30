@@ -359,18 +359,20 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
    * Apenas salvamos se o valor não for o padrão (0) para manter  *
    * os ficheiros .mob limpos.                                    *
    ****************************************************************/
-  if (mob->genetics && mob->genetics->wimpy_tendency != 0)
-    fprintf(fd, "GenWimpy: %d\n", mob->genetics->wimpy_tendency);
-  if (mob->genetics && mob->genetics->loot_tendency != 0)
-    fprintf(fd, "GenLoot: %d\n", mob->genetics->loot_tendency);
-  if (mob->genetics && mob->genetics->equip_tendency != 0)
-    fprintf(fd, "GenEquip: %d\n", mob->genetics->equip_tendency);
-  if (mob->genetics && mob->genetics->roam_tendency != 0)
-    fprintf(fd, "GenRoam: %d\n", mob->genetics->roam_tendency);
-  if (mob->genetics && mob->genetics->group_tendency != 0)
-    fprintf(fd, "GenGroup: %d\n", mob->genetics->roam_tendency);
-  if (mob->genetics && mob->genetics->brave_prevalence != 0)
-    fprintf(fd, "GenBrave: %d\n", mob->genetics->brave_prevalence);
+  if (mob->ai_data) {
+   if (GET_GENWIMPY(mob) != 0)
+     fprintf(fd, "GenWimpy: %d\n", GET_GENWIMPY(mob));
+   if (GET_GENLOOT(mob) != 0)
+     fprintf(fd, "GenLoot: %d\n", GET_GENLOOT(mob));
+   if (GET_GENEQUIP(mob) != 0)
+     fprintf(fd, "GenEquip: %d\n", GET_GENEQUIP(mob));
+   if (GET_GENROAM(mob) != 0)
+     fprintf(fd, "GenRoam: %d\n", GET_GENROAM(mob));
+   if (GET_GENGROUP(mob) != 0)
+     fprintf(fd, "GenGroup: %d\n", GET_GENGROUP(mob));
+   if (GET_GENBRAVE(mob) != 0)
+     fprintf(fd, "GenBrave: %d\n", GET_GENBRAVE(mob));
+   }
 
   fputs("E\n", fd);
   return TRUE;

@@ -963,6 +963,13 @@ struct mob_genetics {
    int group_tendency;
 };
 
+struct mob_ai_data {
+    struct mob_genetics genetics; /* Contém todos os genes. */
+    room_vnum guard_post;         /* O "posto de guarda" para Sentinelas/Lojistas. */
+    int duty_frustration_timer;
+    /* Futuramente: int experience; int level; struct list *wishlist; etc. */
+};
+
 /* char-related structures */
 /** Memory structure used by NPCs to remember specific PCs. */
 struct memory_rec_struct
@@ -1221,8 +1228,7 @@ struct char_data
   
   struct list_data * events;
   struct str_plrspells *plrspells;
-  struct mob_genetics *genetics;   /* Genética do mob (para evolução) */
-
+  struct mob_ai_data *ai_data;  /* Genética do mob (para evolução) */
 };
 
 /** descriptor-related structures */

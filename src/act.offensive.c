@@ -545,11 +545,11 @@ ACMD(do_flee)
                  * Genética: Mob conseguiu fugir com sucesso.   *
                  * Aumenta a tendência de fugir (wimpy).        *
                  ************************************************/
-                if (IS_NPC(ch) && ch->genetics) {
-                    ch->genetics->wimpy_tendency += 1;
+                if (IS_NPC(ch) && ch->ai_data) {
+                    ch->ai_data->genetics.wimpy_tendency += 1;
                     /* Garante que o valor não passa de 100 */
-                    if (ch->genetics->wimpy_tendency > 100)
-                        ch->genetics->wimpy_tendency = 100;
+                    if (GET_GENWIMPY(ch) > 100)
+                        ch->ai_data->genetics.wimpy_tendency = 100;
                 }
 
                 if (was_fighting && !IS_NPC(ch))
@@ -573,15 +573,15 @@ ACMD(do_flee)
                 /************************************************
                  * Genética: Mob falhou a tentativa de fugir.   *
                  ************************************************/
-                if (IS_NPC(ch) && ch->genetics) {
+                if (IS_NPC(ch) && ch->ai_data) {
                     if (MOB_FLAGGED(ch, MOB_BRAVE)) {
-                    ch->genetics->wimpy_tendency += 3;
+                    ch->ai_data->genetics.wimpy_tendency += 3;
                    } else {
-                   ch->genetics->wimpy_tendency -= 3;
+                   ch->ai_data->genetics.wimpy_tendency -= 3;
                    }
                     /* Garante que o valor não fica abaixo de 0 */
-                    if (ch->genetics->wimpy_tendency < 0)
-                        ch->genetics->wimpy_tendency = 0;
+                    if (GET_GENWIMPY(ch) < 0)
+                        ch->ai_data->genetics.wimpy_tendency = 0;
                 }
             }
             return;
@@ -595,14 +595,14 @@ ACMD(do_flee)
      * Genética: Mob entrou em pânico e não encontrou saídas.       *
      * Isto também conta como uma falha.                            *
      ****************************************************************/
-    if (IS_NPC(ch) && ch->genetics) {
+    if (IS_NPC(ch) && ch->ai_data) {
         if (MOB_FLAGGED(ch, MOB_BRAVE)) {
-           ch->genetics->wimpy_tendency += 2; /* Mob corajoso tem penalidade por pânico */ }
+           ch->ai_data->genetics.wimpy_tendency += 2; /* Mob corajoso tem penalidade por pânico */ }
 	else{
-	   ch->genetics->wimpy_tendency -=2; /* Penalidade por pânico */ }
+	   ch->ai_data->genetics.wimpy_tendency -=2; /* Penalidade por pânico */ }
         /* Garante que o valor não fica abaixo de 0 */
-        if (ch->genetics->wimpy_tendency < 0)
-            ch->genetics->wimpy_tendency = 0;
+        if (GET_GENWIMPY(ch) < 0)
+            ch->ai_data->genetics.wimpy_tendency = 0;
     }
 }
 

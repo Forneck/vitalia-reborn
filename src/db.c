@@ -1214,25 +1214,13 @@ void index_boot(int mode)
 	case DB_BOOT_MOB:
 		CREATE(mob_proto, struct char_data, rec_count);
 		CREATE(mob_index, struct index_data, rec_count);
-   		 /*************************************************************************
-		     * Sistema de Genética: ALOCAÇÃO NO LOCAL CORRETO.                       *
-		     * --------------------------------------------------------------------- *
-		     * Alocamos a memória para a genética de cada protótipo AQUI, logo       *
-		     * após alocar os próprios protótipos e ANTES de começar a lê-los.       *
-		     *************************************************************************/
+   		
 		int rnum;
-		for (rnum = 0; rnum < rec_count; rnum++) {
-        	   CREATE(mob_proto[rnum].genetics, struct mob_genetics, 1);
-		   mob_proto[rnum].genetics->wimpy_tendency = 0;
-		   mob_proto[rnum].genetics->loot_tendency = 0;
-		   mob_proto[rnum].genetics->equip_tendency = 0;
-		   mob_proto[rnum].genetics->roam_tendency = 0;
-		   mob_proto[rnum].genetics->brave_prevalence = 0;
-		   mob_proto[rnum].genetics->group_tendency = 0;
-	        }
-	    /*************************************************************************
-	     * Fim do Bloco de Genética                                              *
-	     *************************************************************************/
+		/* Aloca a estrutura de IA para cada protótipo e inicializa os seus campos. */
+		for (int rnum = 0; rnum < rec_count; rnum++) {
+		        CREATE(mob_proto[rnum].ai_data, struct mob_ai_data, 1);
+		        memset(mob_proto[rnum].ai_data, 0, sizeof(struct mob_ai_data)); /* Limpa a memória */
+		}
 
 		size[0] = sizeof(struct index_data) * rec_count;
 		size[1] = sizeof(struct char_data) * rec_count;
@@ -2006,8 +1994,8 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
         *************************************************************************/
         CASE("GenWimpy")
     {
-        if (mob_proto[i].genetics) {
-            mob_proto[i].genetics->wimpy_tendency = num_arg;
+        if (mob_proto[i].ai_data) {
+            mob_proto[i].ai_data->genetics.wimpy_tendency = num_arg;
             /* MENSAGEM DE SUCESSO - TEMPORÁRIA */
             log1("DEBUG: Mob vnum #%d, GenWimpy carregado com sucesso: %d", nr, num_arg);
         } else {
@@ -2017,32 +2005,32 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
     }
 	CASE("GenLoot")
     	{
-	  if (mob_proto[i].genetics) {
-	      mob_proto[i].genetics->loot_tendency = num_arg;
+	  if (mob_proto[i].ai_data) {
+	      mob_proto[i].ai_data->genetics.loot_tendency = num_arg;
 	  }
     	}
 	CASE("GenEquip")
         {
-          if (mob_proto[i].genetics) {
-              mob_proto[i].genetics->equip_tendency = num_arg;
+          if (mob_proto[i].ai_data) {
+              mob_proto[i].ai_data->genetics.equip_tendency = num_arg;
           }                                                                                            
 	}
 	CASE("GenRoam")
         {
-          if (mob_proto[i].genetics) {
-              mob_proto[i].genetics->roam_tendency = num_arg;
+          if (mob_proto[i].ai_data) {
+              mob_proto[i].ai_data->genetics.roam_tendency = num_arg;
           }                                                                                             
 	}
 	CASE("GenGroup")
         {
-          if (mob_proto[i].genetics) {
-              mob_proto[i].genetics->group_tendency = num_arg;
+          if (mob_proto[i].ai_data) {
+              mob_proto[i].ai_data->genetics.group_tendency = num_arg;
           }
         }
 	CASE("GenBrave")
 	{
-	  if (mob_proto[i].genetics) {
-	      mob_proto[i].genetics->brave_prevalence = num_arg;
+	  if (mob_proto[i].ai_data) {
+	      mob_proto[i].ai_data->genetics.brave_prevalence = num_arg;
 	  }
 	}
 	CASE("BareHandAttack")
@@ -2971,26 +2959,18 @@ struct char_data *read_mobile(mob_vnum nr, int type)	/* and mob_rnum */
 	clear_char(mob);
 
 	*mob = mob_proto[i];
-        /*************************************************************************
-        * Adicionado para o sistema de Genética de Mobs                         *
-        * --------------------------------------------------------------------- *
-        * O passo acima copiou o ponteiro 'genetics' do protótipo. Para que     *
-        * cada mob seja um indivíduo único que possa "aprender", precisamos     *
-        * de criar uma nova estrutura de genética para esta instância.          *
-        *************************************************************************/
-        CREATE(mob->genetics, struct mob_genetics, 1);
-
-        /* Agora, copiamos os VALORES da genética do protótipo para a nova instância. */
-        /* Isto garante que a instância começa com os genes base da sua espécie.      */
-        if (mob_proto[i].genetics) {
-           *(mob->genetics) = *(mob_proto[i].genetics);
-        }
+    
+   	/* Cria uma cópia única da "ficha de IA" para esta instância. */
+    	CREATE(mob->ai_data, struct mob_ai_data, 1);
+    	if (mob_proto[i].ai_data) {
+        	*(mob->ai_data) = *(mob_proto[i].ai_data);
+	}
 
 	/*BRAVURA CARREGA NOS SENTINELAS DE ACORDO COM A GENETICA */
         if (!MOB_FLAGGED(mob, MOB_BRAVE)) {
 
 	      /* A chance agora vem da genética do protótipo! */
-        	if (rand_number(1, 100) <= mob_proto[i].genetics->brave_prevalence) {
+        	if (mob_proto[i].ai_data && rand_number(1, 100) <= mob_proto[i].ai_data->genetics.brave_prevalence) {
 	            SET_BIT_AR(MOB_FLAGS(mob), MOB_BRAVE);
         	}
 	}
@@ -3197,12 +3177,17 @@ void reset_zone(zone_rnum zone)
 			if (mob_index[ZCMD.arg1].number < ZCMD.arg2)
 			{
 				mob = read_mobile(ZCMD.arg1, REAL);
-				char_to_room(mob, ZCMD.arg3);
-				/******************************************************************
-          			 * LÓGICA DO POSTO DE GUARDA (LOCAL CORRETO)
-		                 * O mob já está na sala, agora podemos guardar a sua posição.
-		                 ******************************************************************/
-			        GET_LOADROOM(mob) = world[IN_ROOM(mob)].number;
+				
+          			/* Guarda o destino ANTES de mover o mob, usando a fonte de verdade (ZCMD). */
+			        room_rnum target_room_rnum = ZCMD.arg3;
+
+			        char_to_room(mob, target_room_rnum);
+
+          			/* Verifica se o destino é uma sala válida antes de guardar. */
+			        if (target_room_rnum != NOWHERE && target_room_rnum <= top_of_world) {
+			              mob->ai_data->guard_post = world[target_room_rnum].number;
+			        }
+
 				load_mtrigger(mob);
 				tmob = mob;
 				last_cmd = 1;
@@ -4007,8 +3992,9 @@ void free_char(struct char_data *ch)
 		remove_from_lookup_table(ch->script_id);
 	}
         
-	if (ch->genetics)
-            free(ch->genetics);
+	/* Antes da linha final 'free(ch);' */
+    	if (ch->ai_data)
+           free(ch->ai_data);
 
 	free(ch);
 }
@@ -4176,12 +4162,13 @@ void clear_char(struct char_data *ch)
      * Sistema de Genética: Preservar o ponteiro da genética.                *
      * Guardamos o ponteiro antes que o memset o apague.                     *
      *************************************************************************/
-    	struct mob_genetics *preserved_genetics = ch->genetics;
+    	struct mob_ai_data *preserved_ai_data = ch->ai_data;
+
 	memset((char *)ch, 0, sizeof(struct char_data));
         
 	/* Agora, restauramos o ponteiro que guardámos. */
-        ch->genetics = preserved_genetics;
-        /*************************************************************************
+        ch->ai_data = preserved_ai_data;
+	/*************************************************************************
         * Fim do Bloco de Genética                                              *
         *************************************************************************/
 	IN_ROOM(ch) = NOWHERE;

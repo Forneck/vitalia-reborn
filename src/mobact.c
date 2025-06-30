@@ -32,7 +32,11 @@ bool mob_handle_grouping(struct char_data *ch);
 bool mob_leader_evaluates_gear(struct char_data *leader);
 bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, int was_in);
 bool mob_goal_oriented_roam(struct char_data *ch);
-
+bool handle_duty_routine(struct char_data *ch);
+bool mob_follow_leader(struct char_data *ch);
+bool mob_assist_allies(struct char_data *ch);
+bool mob_try_and_loot(struct char_data *ch);
+bool mob_try_and_upgrade(struct char_data *ch);
 void mobile_activity(void)
 {
   struct char_data *ch, *next_ch, *vict;
@@ -58,41 +62,16 @@ void mobile_activity(void)
 	  continue;		/* go to next char */
       }
     }
-
-    /* If the mob has no specproc, do the default actions */
+    
     if (FIGHTING(ch) || !AWAKE(ch))
       continue;
-
-    /**********************************************************************
-     * NOVA IA DE ROTINA DIÁRIA PARA LOJISTAS
-     * Esta lógica tem prioridade sobre os comportamentos genéticos.
-     **********************************************************************/
-    if (mob_index[GET_MOB_RNUM(ch)].func == shop_keeper) {
-        int shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
-        
-        if (shop_nr != -1) {
-            if (is_shop_open(shop_nr)) {
-                /* --- HORÁRIO DE TRABALHO --- */
-                /* Objetivo: Estar em QUALQUER uma das salas da loja. */
-                if (!ok_shop_room(shop_nr, GET_ROOM_VNUM(IN_ROOM(ch)))) {
-                    /* Está fora da loja, precisa de voltar para a sala principal! */
-                    room_rnum primary_shop_room = real_room(SHOP_ROOM(shop_nr, 0));
-                    if (primary_shop_room != NOWHERE && IN_ROOM(ch) != primary_shop_room) {
-                        int direction = find_first_step(IN_ROOM(ch), primary_shop_room);
-                        if (direction >= 0) {
-                            perform_move(ch, direction, 1);
-                        }
-                    }
-                }
-                /* Se já está numa sala válida da loja, não faz mais nada. */
-                continue; /* O turno do lojista dedicado ao trabalho acaba aqui. */
-            }
-        }
-    }
-
-    /* Se o código chegou aqui, ou o mob não é um lojista, ou a sua loja está fechada. */
-    /* Portanto, ele está livre para executar a sua IA Genética normal. */
     
+    if (ch->ai_data && ch->ai_data->duty_frustration_timer > 0) {
+        ch->ai_data->duty_frustration_timer--;
+    }
+    
+    if (handle_duty_routine(ch))
+	    continue;
 
     if (mob_index[GET_MOB_RNUM(ch)].func == shop_keeper) {
     	int shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
@@ -111,127 +90,14 @@ void mobile_activity(void)
 	        continue;
 	    }
     }
-    
-
-    /**********************************************************************
-     * NOVA LÓGICA DE GRUPO: Seguir o Líder (Prioridade de Movimento)
-     **********************************************************************/
-    if (GROUP(ch) && GROUP_LEADER(GROUP(ch)) != ch) {
-        struct char_data *leader = GROUP_LEADER(GROUP(ch));
-        
-        if (leader != NULL) {
-            /* O líder está em outra sala? Se sim, a prioridade é segui-lo. */
-            if (IN_ROOM(ch) != IN_ROOM(leader)) {
-                if (MOB_FLAGGED(ch, MOB_SENTINEL) && rand_number(1, 100) > 2) { /* Chance de 2% */
-                    continue; /* Ignora a ordem do líder e fica no posto. */
-                }
-
-		int direction = find_first_step(IN_ROOM(ch), IN_ROOM(leader));
-                
-                if (direction >= 0) {
-                    room_rnum to_room = EXIT(ch, direction)->to_room;
-                    bool can_follow = TRUE;
-
-                    /******************************************************************/
-                    /* REFINAMENTO FINAL: Verifica ROOM_NOMOB e o tipo do líder.      */
-                    /******************************************************************/
-                    if (ROOM_FLAGGED(to_room, ROOM_NOMOB)) {
-                        /* Se o destino é NOMOB, só pode entrar se o líder for um jogador. */
-                        if (IS_NPC(leader)) {
-                            can_follow = FALSE;
-                            /* Opcional: o mob poderia dizer algo como "Eu não posso ir aí, chefe." */
-                        }
-                    }
-
-                    if (can_follow) {
-                        perform_move(ch, direction, 1);
-                        continue; /* Ação do pulso: seguiu o líder. Fim do turno. */
-                    }
-                }
-            }
-        }
+    if GROUP(ch){
+	    mob_follow_leader(ch);
     }
     
-    if (GROUP(ch) && !FIGHTING(ch)) { /* Se está num grupo e não está a lutar */
-        struct char_data *member;
-        struct iterator_data iterator;
-        struct char_data *target_to_assist = NULL;
-        int max_threat_level = 0;
 
-        member = (struct char_data *)merge_iterator(&iterator, GROUP(ch)->members);
-        while(member) {
-            /* Verifica se um companheiro na mesma sala está a lutar. */
-            if (ch != member && IN_ROOM(ch) == IN_ROOM(member) && FIGHTING(member)) {
-                
-                /* Lógica de "priorizar a maior ameaça": ataca o inimigo de nível mais alto. */
-                if (GET_LEVEL(FIGHTING(member)) > max_threat_level) {
-                    max_threat_level = GET_LEVEL(FIGHTING(member));
-                    target_to_assist = member; /* Vamos ajudar este membro. */
-                }
-            }
-            member = (struct char_data *)next_in_list(&iterator);
-        }
-        
-        if (target_to_assist) {
-            act("$n vê que $N está em apuros e corre para ajudar!", FALSE, ch, 0, target_to_assist, TO_NOTVICT);
-            act("Você vê que $N está em apuros e corre para ajudar!", FALSE, ch, 0, target_to_assist, TO_CHAR);
-            hit(ch, FIGHTING(target_to_assist), TYPE_UNDEFINED);
-            continue; /* Ação do pulso: entrou em combate. Fim do turno. */
-        }
-    }
+    mob_assist_allies(ch);
     
-    /*************************************************************************
-     * Lógica de Genética v2: SAQUEAR (Loot) com "Bónus de Necessidade"
-     * PRECISA VIR ANTES DE EQUIPAR
-     *************************************************************************/
-    if (world[IN_ROOM(ch)].contents && ch->genetics && !FIGHTING(ch)) {
-
-        /* 1. Calcula a tendência base do mob (genética + instinto). */
-        int base_tendency = MOB_FLAGGED(ch, MOB_SCAVENGER) ? 25 : 0;
-        int genetic_tendency = GET_GENLOOT(ch);
-        int effective_tendency = base_tendency + genetic_tendency;
-        /* 2. Calcula o bónus com base nas necessidades urgentes. */
-        int need_bonus = 0;
-        if (GET_HIT(ch) < GET_MAX_HIT(ch) * 0.8)
-            need_bonus += 15; /* Precisa de itens de cura. */
-
-        if (GET_EQ(ch, WEAR_WIELD) == NULL)
-            need_bonus += 25; /* Precisa desesperadamente de uma arma. */
-
-        if (GET_EQ(ch, WEAR_BODY) == NULL)
-            need_bonus += 15; /* Precisa de armadura. */
-
-        if (GET_EQ(ch, WEAR_WIELD) && GET_OBJ_TYPE(GET_EQ(ch, WEAR_WIELD)) == ITEM_FIREWEAPON && !mob_has_ammo(ch))
-            need_bonus += 50; /* Necessidade MUITO ALTA por munição! */
-
-        /* 3. A chance final é a combinação de tudo, com um mínimo de curiosidade. */
-        int final_chance = MAX(effective_tendency + need_bonus, 10);
-        final_chance = MIN(final_chance, 95); /* Limita a 95% para não ser garantido. */
-
-        if (rand_number(1, 100) <= final_chance) {
-            int max_score = 0;
-            best_obj = NULL;
-
-            /* A IA agora procura ativamente pelo item que melhor satisfaz a sua necessidade. */
-            for (obj = world[IN_ROOM(ch)].contents; obj; obj = obj->next_content) {
-                int current_score = evaluate_item_for_mob(ch, obj);
-                if (current_score > max_score) {
-                    best_obj = obj;
-                    max_score = current_score;
-                }
-            }
-            if (best_obj != NULL) {
-                /* Chama a função do jogo para pegar o item, garantindo todas as verificações. */
-                if (perform_get_from_room(ch, best_obj)) {
-                    /* Aprendizagem Positiva: A decisão foi boa e bem-sucedida. */
-                    ch->genetics->loot_tendency += 2;
-                    ch->genetics->loot_tendency = MIN(ch->genetics->loot_tendency, 100);                                                             }
-            } else {                                                                                                                                 /* Aprendizagem Negativa: A necessidade não foi satisfeita. */
-                ch->genetics->loot_tendency -= 1;
-                ch->genetics->loot_tendency = MAX(ch->genetics->loot_tendency, 0);
-            }
-        }
-    }
+    mob_try_and_loot(ch);
 
     /* hunt a victim, if applicable */
     hunt_victim(ch);
@@ -279,75 +145,8 @@ void mobile_activity(void)
 	}
       }
     }
-
-    /**************************************************************************
-     * Lógica de Genética: A "SESSÃO DE EQUIPAMENTO"                          *
-     * O mob agora equipa todos os upgrades possíveis de uma só vez.          *
-     **************************************************************************/
-    if (ch->carrying && ch->genetics && !FIGHTING(ch) && !AFF_FLAGGED(ch, AFF_CHARM)) {
-        
-        const int CURIOSIDADE_MINIMA_EQUIP = 5;
-        int final_chance = MAX(GET_GENEQUIP(ch), CURIOSIDADE_MINIMA_EQUIP);
-        final_chance = MIN(final_chance, 90);
-
-        if (rand_number(1, 100) <= final_chance) {
-            bool performed_an_upgrade_this_pulse = FALSE;
-            bool keep_trying = TRUE;
-
-            /* O loop 'while' garante que o mob continua a tentar equipar até estar otimizado. */
-            while (keep_trying) {
-                struct obj_data *obj, *best_possible_upgrade = NULL;
-                int max_score_improvement = 0;
-
-                /* Procura pelo melhor upgrade POSSÍVEL no estado atual. */
-                for (obj = ch->carrying; obj; obj = obj->next_content) {
-                    int wear_pos = find_eq_pos(ch, obj, NULL);
-                    if (wear_pos == -1) continue;
-
-                    struct obj_data *equipped_item = GET_EQ(ch, wear_pos);
-                    bool can_perform_swap = TRUE;
-                    if (equipped_item != NULL) {
-                        if (OBJ_FLAGGED(equipped_item, ITEM_NODROP) || IS_CARRYING_N(ch) >= CAN_CARRY_N(ch)) {
-                            can_perform_swap = FALSE;
-                        }
-                    }
-                    if (can_perform_swap) {
-                        int score_improvement = evaluate_item_for_mob(ch, obj) - evaluate_item_for_mob(ch, equipped_item);
-                        if (score_improvement > max_score_improvement) {
-                            max_score_improvement = score_improvement;
-                            best_possible_upgrade = obj;
-                        }
-                    }
-                }
-
-                /* Se encontrou um upgrade viável, executa-o e tenta de novo. */
-                if (best_possible_upgrade != NULL) {
-                    int wear_pos = find_eq_pos(ch, best_possible_upgrade, NULL);
-                    if (wear_pos != -1) {
-                        struct obj_data *equipped_item = GET_EQ(ch, wear_pos);
-                        if (equipped_item != NULL) {
-                            perform_remove(ch, wear_pos);
-                        }
-                        perform_wear(ch, best_possible_upgrade, wear_pos);
-                        performed_an_upgrade_this_pulse = TRUE;
-                        /* keep_trying continua TRUE para re-analisar o inventário. */
-                    }
-                } else {
-                    /* Se não encontrou mais upgrades, para a sessão. */
-                    keep_trying = FALSE;
-                }
-            } /* Fim do loop 'while' */
-
-            /* A aprendizagem acontece uma vez no final da sessão. */
-            if (performed_an_upgrade_this_pulse) {
-                ch->genetics->equip_tendency += 2;
-                if (ch->genetics->equip_tendency > 100) ch->genetics->equip_tendency = 100;
-            } else {
-                ch->genetics->equip_tendency -= 1;
-                if (ch->genetics->equip_tendency < 0) ch->genetics->equip_tendency = 0;
-            }
-        }
-    }
+    
+    mob_try_and_upgrade(ch);
     
     /*Depois de equipar, lider avalia equipamento sobrando e doa para o grupo*/
     if (mob_leader_evaluates_gear(ch)) {
@@ -390,36 +189,6 @@ void mobile_activity(void)
         if (CAN_SEE(ch, ch->master) && !PRF_FLAGGED(ch->master, PRF_NOHASSLE))
           hit(ch, ch->master, TYPE_UNDEFINED);
         stop_follower(ch);
-      }
-    }
-
-   /* Help your master */
-    if (AFF_FLAGGED(ch, AFF_CHARM) && ch->master) {
-     vict = FIGHTING(ch->master);
-      if (vict && vict != ch) {
-        act("$n se arremessa para salvar $N!", FALSE, ch, 0, ch->master, TO_ROOM);
-        hit(ch, vict, TYPE_UNDEFINED);
-      }
-    }
-
-
-    /* Helper Mobs */
-   if (!FIGHTING(ch) && MOB_FLAGGED(ch, MOB_HELPER) && 
-      (!AFF_FLAGGED(ch, AFF_BLIND) || !AFF_FLAGGED(ch, AFF_CHARM))) 
-    {
-      found = FALSE;
-      for (vict = world[IN_ROOM(ch)].people; vict && !found; vict = vict->next_in_room) 
-      {
-	      if (ch == vict || !IS_NPC(vict) || !FIGHTING(vict))
-          continue; 
-        if (GROUP(vict) && GROUP(vict) == GROUP(ch))
-          continue;
-	      if (IS_NPC(FIGHTING(vict)) || ch == FIGHTING(vict))
-          continue;
-
-	      act("$n se arremessa para salvar $N!", FALSE, ch, 0, vict, TO_ROOM);
-	      hit(ch, FIGHTING(vict), TYPE_UNDEFINED);
-	      found = TRUE;
       }
     }
 
@@ -669,7 +438,7 @@ bool mob_handle_grouping(struct char_data *ch)
     if (MOB_FLAGGED(ch, MOB_SENTINEL))
         return FALSE;
 
-    if (GROUP(ch) || !ch->genetics)
+    if (GROUP(ch) || !ch->ai_data)
         return FALSE;
 
     /* Verifica a chance de tentar agrupar-se. */
@@ -741,7 +510,7 @@ bool mob_handle_grouping(struct char_data *ch)
 bool mob_leader_evaluates_gear(struct char_data *leader)
 {
     /* Apenas líderes de grupo com inventário e genética executam esta lógica. */
-    if (!GROUP(leader) || GROUP_LEADER(GROUP(leader)) != leader || !leader->carrying || !leader->genetics) {
+    if (!GROUP(leader) || GROUP_LEADER(GROUP(leader)) != leader || !leader->carrying || !leader->ai_data) {
         return FALSE;
     }
 
@@ -793,8 +562,8 @@ bool mob_leader_evaluates_gear(struct char_data *leader)
         obj_to_char(item_to_give, receiver);
         
         /* APRENDIZAGEM: Comportamento de liderança é recompensado. */
-        leader->genetics->group_tendency += 5;
-        leader->genetics->group_tendency = MIN(leader->genetics->group_tendency, 100);
+        leader->ai_data->genetics.group_tendency += 5;
+        leader->ai_data->genetics.group_tendency = MIN(GET_GENGROUP(leader), 100);
         
         return TRUE; /* Ação de partilha foi realizada. */
     }
@@ -830,7 +599,7 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
         /******************************************************************
          * APRENDIZAGEM PÓS-MOVIMENTO (VERSÃO FINAL E REFINADA)
          ******************************************************************/
-        if (ch->genetics) {
+        if (ch->ai_data) {
             int roam_change = 0;
             int current_sect = world[IN_ROOM(ch)].sector_type;
 
@@ -849,8 +618,8 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
                 roam_change = 1;   /* Recompensa normal por exploração segura. */
             }
             
-            ch->genetics->roam_tendency += roam_change;
-            ch->genetics->roam_tendency = MIN(MAX(ch->genetics->roam_tendency, 0), 100);
+            ch->ai_data->genetics.roam_tendency += roam_change;
+            ch->ai_data->genetics.roam_tendency = MIN(MAX(GET_GENROAM(ch), 0), 100);
         }
         return TRUE;
     }
@@ -944,4 +713,341 @@ bool mob_goal_oriented_roam(struct char_data *ch)
         }
     }
     return FALSE;
+}
+
+/**
+ * Gere a rotina de dever para lojistas e sentinelas, agora com um
+ * "temporizador de frustração" para evitar que fiquem presos.
+ * Retorna TRUE se uma ação de dever foi executada ou se o mob deve ficar parado.
+ */
+bool handle_duty_routine(struct char_data *ch)
+{
+    bool is_shopkeeper = (mob_index[GET_MOB_RNUM(ch)].func == shop_keeper);
+    bool is_sentinel = MOB_FLAGGED(ch, MOB_SENTINEL);
+
+    if (!is_shopkeeper && !is_sentinel)
+        return FALSE; /* Não tem dever, a IA prossegue. */
+
+    /******************************************************************
+    * LÓGICA DE FRUSTRAÇÃO
+    ******************************************************************/
+    /* Se o mob está frustrado, ele "desiste" de voltar para casa por agora. */
+    if (ch->ai_data && ch->ai_data->duty_frustration_timer > 0) {
+        return FALSE; /* Permite que o mob execute outras IAs (loot, roam, etc.). */
+    }
+
+    bool is_on_duty = FALSE;
+    room_rnum home_room = NOWHERE;
+
+    if (is_shopkeeper) {
+        int shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
+        if (shop_nr != -1 && is_shop_open(shop_nr)) {
+            is_on_duty = TRUE;
+            home_room = real_room(SHOP_ROOM(shop_nr, 0));
+        }
+    } else { /* É um Sentinela */
+        is_on_duty = TRUE;
+        if (ch->ai_data) home_room = real_room(ch->ai_data->guard_post);
+    }
+
+    if (is_on_duty) {
+        /* Verifica se o mob já está no seu posto. */
+        if ((is_shopkeeper && ok_shop_room(find_shop_by_keeper(GET_MOB_RNUM(ch)), GET_ROOM_VNUM(IN_ROOM(ch)))) ||
+            (is_sentinel && IN_ROOM(ch) == home_room)) {
+            return TRUE; /* Está no posto, não faz mais nada. Fim do turno. */
+        }
+
+        /* Se não está no posto, tenta voltar. */
+        if (home_room != NOWHERE) {
+            int direction = find_first_step(IN_ROOM(ch), home_room);
+
+            if (direction >= 0) {
+                perform_move(ch, direction, 1);
+            } else {
+                /******************************************************************
+                * O CAMINHO FALHOU! O MOB FICA FRUSTRADO.
+                *******************************************************************/
+                if (ch->ai_data) {
+                    ch->ai_data->duty_frustration_timer = 6; /* Fica frustrado por 6 pulsos de IA. */
+                }
+                return FALSE; /* Permite que outras IAs sejam executadas. */
+            }
+            return TRUE; /* Tentou voltar, consome o turno. */
+        }
+    }
+
+    /* Se não está de serviço, está de "folga". */
+    return FALSE;
+}
+
+/**
+ * Lógica para um membro de grupo seguir o seu líder se estiverem em salas diferentes.
+ * VERSÃO REFINADA: Implementa a "Hierarquia de Comando".
+ * @param ch O mob a executar a ação.
+ * @return TRUE se o mob tentou mover-se, consumindo o seu turno de IA.
+ */
+bool mob_follow_leader(struct char_data *ch)
+{
+    /* A função só se aplica a membros de um grupo (que não são o líder). */
+    if (!GROUP(ch) || GROUP_LEADER(GROUP(ch)) == ch)
+        return FALSE;
+
+    struct char_data *leader = GROUP_LEADER(GROUP(ch));
+
+    /* Verifica se o líder é válido e se está numa sala diferente. */
+    if (leader != NULL && IN_ROOM(ch) != IN_ROOM(leader)) {
+
+        /******************************************************************/
+        /* REFINAMENTO: A IA agora entende a "Hierarquia de Comando".     */
+        /******************************************************************/
+        bool duty_is_overridden_by_player = FALSE;
+
+        /* Se o mob está encantado, o seu dever é seguir o mestre. */
+        if (AFF_FLAGGED(ch, AFF_CHARM) && ch->master == leader) {
+            duty_is_overridden_by_player = TRUE;
+        }
+        /* Se o líder é um jogador (o grupo não tem a flag NPC), o dever é seguir o líder. */
+        if (!IS_SET(GROUP_FLAGS(GROUP(ch)), GROUP_NPC)) {
+            duty_is_overridden_by_player = TRUE;
+        }
+
+        /* Um Sentinela só pode ser "teimoso" se não estiver sob ordens diretas de um jogador. */
+        if (MOB_FLAGGED(ch, MOB_SENTINEL) && !duty_is_overridden_by_player && rand_number(1, 100) > 2) {
+            return FALSE; /* Ficou no posto, leal ao seu dever original. */
+        }
+
+        /* Tenta encontrar o caminho até ao líder. */
+        int direction = find_first_step(IN_ROOM(ch), IN_ROOM(leader));
+
+        if (direction >= 0) {
+            room_rnum to_room;
+            if (EXIT(ch, direction) && (to_room = EXIT(ch, direction)->to_room) <= top_of_world) {
+
+                /* Regra especial para salas NOMOB. */
+                if (ROOM_FLAGGED(to_room, ROOM_NOMOB)) {
+                    /* Só pode entrar se o líder for um jogador (o que já é verificado acima). */
+                    if (IS_NPC(leader)) {
+                        return FALSE;
+                    }
+                }
+
+                perform_move(ch, direction, 1);
+                return TRUE; /* Ação de seguir foi executada. */
+            }
+        }
+    }
+
+    return FALSE; /* Nenhuma ação de seguir foi executada. */
+}
+
+/**
+ * A IA principal para um mob ocioso decidir ajudar aliados em combate.
+ * Consolida as lógicas de grupo, charmed e helper.
+ * Retorna TRUE se o mob entrou em combate.
+ */
+bool mob_assist_allies(struct char_data *ch)
+{
+    struct char_data *ally_in_trouble = NULL;
+    struct char_data *target_to_attack = NULL;
+    int max_threat_level = 0;
+
+    /* A IA só age se o mob estiver ocioso e puder ver. */
+    if (FIGHTING(ch) || AFF_FLAGGED(ch, AFF_BLIND)) {
+        return FALSE;
+    }
+
+    /* PRIORIDADE 1: Ajudar o Mestre (se estiver encantado) */
+    if (AFF_FLAGGED(ch, AFF_CHARM) && ch->master && FIGHTING(ch->master)) {
+        if (IN_ROOM(ch) == IN_ROOM(ch->master)) {
+            ally_in_trouble = ch->master;
+            target_to_attack = FIGHTING(ch->master);
+        }
+    }
+
+    /* PRIORIDADE 2: Ajudar o Grupo (se não tiver um mestre para ajudar) */
+    else if (GROUP(ch)) {
+        struct char_data *member;
+        struct iterator_data iterator;
+
+        member = (struct char_data *)merge_iterator(&iterator, GROUP(ch)->members);
+        while(member) {
+            if (ch != member && IN_ROOM(ch) == IN_ROOM(member) && FIGHTING(member)) {
+                /* Lógica de "priorizar a maior ameaça" */
+                if (GET_LEVEL(FIGHTING(member)) > max_threat_level) {
+                    max_threat_level = GET_LEVEL(FIGHTING(member));
+                    ally_in_trouble = member;
+                    target_to_attack = FIGHTING(member);
+                }
+            }
+            member = (struct char_data *)next_in_list(&iterator);
+        }
+    }
+
+    /* PRIORIDADE 3: Ajudar outros NPCs (se tiver a flag MOB_HELPER) */
+    else if (MOB_FLAGGED(ch, MOB_HELPER)) {
+        struct char_data *vict;
+        for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+            if (ch == vict || !IS_NPC(vict) || !FIGHTING(vict))
+                continue;
+            if (IS_NPC(FIGHTING(vict))) /* Não ajuda mobs que lutam contra outros mobs */
+                continue;
+
+            ally_in_trouble = vict;
+            target_to_attack = FIGHTING(vict);
+            break; /* Ajuda o primeiro que encontrar. */
+        }
+    }
+
+    /* Se encontrou alguém para ajudar, entra em combate. */
+    if (ally_in_trouble && target_to_attack) {
+        act("$n vê que $N está em apuros e corre para ajudar!", FALSE, ch, 0, ally_in_trouble, TO_NOTVICT);
+        hit(ch, target_to_attack, TYPE_UNDEFINED);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+/**
+ * A IA tenta saquear o melhor item da sala, com base nas suas necessidades
+ * e na sua genética. A sua "vontade" de procurar é aumentada se tiver
+ * uma necessidade urgente (ex: sem arma, com vida baixa).
+ * Retorna TRUE se uma ação de saque foi bem-sucedida.
+ */
+bool mob_try_and_loot(struct char_data *ch)
+{
+    /* A IA só age se houver itens na sala, se o mob tiver genética e não estiver em combate. */
+    if (!world[IN_ROOM(ch)].contents || !ch->ai_data || FIGHTING(ch))
+        return FALSE;
+
+    /* 1. Calcula a tendência base do mob (genética + instinto). */
+    int base_tendency = MOB_FLAGGED(ch, MOB_SCAVENGER) ? 25 : 0;
+    int genetic_tendency = GET_GENLOOT(ch);
+    int effective_tendency = base_tendency + genetic_tendency;
+
+    /* 2. Calcula o bónus com base nas necessidades urgentes. */
+    int need_bonus = 0;
+    if (GET_HIT(ch) < GET_MAX_HIT(ch) * 0.8)
+        need_bonus += 15; /* Precisa de itens de cura. */
+
+    if (GET_EQ(ch, WEAR_WIELD) == NULL)
+        need_bonus += 25; /* Precisa desesperadamente de uma arma. */
+
+    if (GET_EQ(ch, WEAR_BODY) == NULL)
+        need_bonus += 15; /* Precisa de armadura. */
+
+    if (GET_EQ(ch, WEAR_WIELD) && GET_OBJ_TYPE(GET_EQ(ch, WEAR_WIELD)) == ITEM_FIREWEAPON && !mob_has_ammo(ch))
+        need_bonus += 50; /* Necessidade MUITO ALTA por munição! */
+
+    /* 3. A chance final é a combinação de tudo, com um mínimo de curiosidade. */
+    int final_chance = MAX(effective_tendency + need_bonus, 10);
+    final_chance = MIN(final_chance, 95); /* Limita a 95% para não ser garantido. */
+
+    if (rand_number(1, 100) <= final_chance) {
+        int max_score = 0;
+        struct obj_data *obj, *best_obj = NULL;
+
+        /* A IA agora procura ativamente pelo item que melhor satisfaz a sua necessidade. */
+        for (obj = world[IN_ROOM(ch)].contents; obj; obj = obj->next_content) {
+            int current_score = evaluate_item_for_mob(ch, obj);
+            if (current_score > max_score) {
+                best_obj = obj;
+                max_score = current_score;
+            }
+        }
+
+        if (best_obj != NULL) {
+            /* Chama a função do jogo para pegar o item, garantindo todas as verificações. */
+            if (perform_get_from_room(ch, best_obj)) {
+                /* Aprendizagem Positiva: A decisão foi boa e bem-sucedida. */
+                ch->ai_data->genetics.loot_tendency += 2;
+                ch->ai_data->genetics.loot_tendency = MIN(ch->ai_data->genetics.loot_tendency, 100);
+                return TRUE; /* Ação bem-sucedida, consome o turno. */
+            }
+        } else {
+            /* Aprendizagem Negativa: A necessidade não foi satisfeita. */
+            ch->ai_data->genetics.loot_tendency -= 1;
+            ch->ai_data->genetics.loot_tendency = MAX(ch->ai_data->genetics.loot_tendency, 0);
+        }
+    }
+
+    return FALSE; /* Nenhuma ação de saque foi executada. */
+}
+
+/**
+ * A IA entra numa "sessão de equipamento", onde percorre o seu inventário
+ * várias vezes para encontrar e vestir todos os upgrades possíveis.
+ * Retorna TRUE se conseguiu equipar pelo menos um item.
+ */
+bool mob_try_and_upgrade(struct char_data *ch)
+{
+    /* A IA só age se tiver itens, genética e não estiver sob o controlo de um jogador. */
+    if (!ch->carrying || !ch->ai_data || AFF_FLAGGED(ch, AFF_CHARM))
+        return FALSE;
+
+    const int CURIOSIDADE_MINIMA_EQUIP = 5;
+    int final_chance = MAX(GET_GENEQUIP(ch), CURIOSIDADE_MINIMA_EQUIP);
+    final_chance = MIN(final_chance, 90);
+
+    /* Verifica se o mob tem a "vontade" de otimizar o seu equipamento neste pulso. */
+    if (rand_number(1, 100) <= final_chance) {
+        bool performed_an_upgrade_this_pulse = FALSE;
+        bool keep_trying = TRUE;
+
+        /* O loop 'while' garante que o mob continua a tentar equipar até estar otimizado. */
+        while (keep_trying) {
+            struct obj_data *obj, *best_possible_upgrade = NULL;
+            int max_score_improvement = 0;
+            int best_pos_to_equip = -1; /* Guarda a posição do melhor upgrade */
+
+            /* Procura pelo melhor upgrade POSSÍVEL no estado atual. */
+            for (obj = ch->carrying; obj; obj = obj->next_content) {
+                int wear_pos = find_eq_pos(ch, obj, NULL);
+                if (wear_pos == -1) continue;
+
+                struct obj_data *equipped_item = GET_EQ(ch, wear_pos);
+                bool can_perform_swap = TRUE;
+                if (equipped_item != NULL) {
+                    if (OBJ_FLAGGED(equipped_item, ITEM_NODROP) || IS_CARRYING_N(ch) >= CAN_CARRY_N(ch)) {
+                        can_perform_swap = FALSE;
+                    }
+                }
+                if (can_perform_swap) {
+                    int score_improvement = evaluate_item_for_mob(ch, obj) - evaluate_item_for_mob(ch, equipped_item);
+                    if (score_improvement > max_score_improvement) {
+                        max_score_improvement = score_improvement;
+                        best_possible_upgrade = obj;
+                        best_pos_to_equip = wear_pos;
+                    }
+                }
+            }
+
+            /* Se encontrou um upgrade viável, executa-o e tenta de novo. */
+            if (best_possible_upgrade != NULL) {
+                struct obj_data *equipped_item = GET_EQ(ch, best_pos_to_equip);
+                if (equipped_item != NULL) {
+                    perform_remove(ch, best_pos_to_equip);
+                }
+                perform_wear(ch, best_possible_upgrade, best_pos_to_equip);
+                performed_an_upgrade_this_pulse = TRUE;
+                /* keep_trying continua TRUE para que ele re-avalie o inventário com o novo item equipado. */
+            } else {
+                /* Se não encontrou mais upgrades, para a sessão. */
+                keep_trying = FALSE;
+            }
+        } /* Fim do loop 'while' */
+
+        /* A aprendizagem acontece uma vez no final da sessão. */
+        if (performed_an_upgrade_this_pulse) {
+            ch->ai_data->genetics.equip_tendency += 2;
+            ch->ai_data->genetics.equip_tendency = MIN(ch->ai_data->genetics.equip_tendency, 100);
+        } else {
+            ch->ai_data->genetics.equip_tendency -= 1;
+            ch->ai_data->genetics.equip_tendency = MAX(ch->ai_data->genetics.equip_tendency, 0);
+        }
+
+        return TRUE; /* Retorna TRUE porque a IA "pensou" em se equipar, mesmo que não tenha feito upgrades. */
+    }
+
+    return FALSE; /* Nenhuma ação de equipamento foi executada. */
 }

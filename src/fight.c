@@ -349,7 +349,7 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 	/*************************************************************************
         * Sistema de Genética: O mob morreu. Chamamos a função de evolução.     *
         *************************************************************************/
-        if (IS_NPC(ch) && ch->genetics) {
+        if (IS_NPC(ch) && ch->ai_data) {
            update_mob_prototype_genetics(ch);
         }
         /*************************************************************************
@@ -434,9 +434,9 @@ static void group_gain(struct char_data *ch, struct char_data *victim)
              * Se o membro for um NPC com genética, a vitória em grupo
              * reforça a sua tendência de se agrupar.
              ******************************************************************/
-           		 if (IS_NPC(k) && k->genetics) {
-		                k->genetics->group_tendency += 2;
-		                k->genetics->group_tendency = MIN(k->genetics->group_tendency, 100);
+           		 if (IS_NPC(k) && k->ai_data) {
+		                k->ai_data->genetics.group_tendency += 2;
+		                k->ai_data->genetics.group_tendency = MIN(GET_GENGROUP(k), 100);
 		        }
 		}
 	}
@@ -824,8 +824,8 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 		        base_wimpy = 20; /* Valor base de 20% de vida para fuga. */                                           }
 
 		    /* 2. Adicionamos a tendência genética à base. */
-		    if (victim->genetics) {
-		        flee_threshold = base_wimpy + victim->genetics->wimpy_tendency;
+		    if (victim->ai_data) {
+		        flee_threshold = base_wimpy + victim->ai_data->genetics.wimpy_tendency;
 		    } else {
 		        flee_threshold = base_wimpy;
 		    }                                                                                                     
@@ -846,9 +846,9 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                                     send_to_char(victim, "Você não aguenta mais e abandona o seu grupo!\r\n");
 
                                     /* Aplica a penalidade de aprendizagem ao gene de grupo. */
-                                    if (victim->genetics) {
-                                        victim->genetics->group_tendency -= 1;
-                                        if (victim->genetics->group_tendency < 0) victim->genetics->group_tendency = 0;
+                                    if (victim->ai_data) {
+                                        victim->ai_data->genetics.group_tendency -= 1;
+                                        if (GET_GENGROUP(victim) < 0) victim->ai_data->genetics.group_tendency = 0;
                                     }
                                     
                                     leave_group(victim); /* Sai do grupo. */
@@ -1575,127 +1575,70 @@ void transcend(struct char_data *ch) {
   save_char(ch);
 }
 
+/**
+ * Função auxiliar que calcula a nova média ponderada para um único gene
+ * e atualiza o valor do protótipo.
+ * @param proto_gene Um ponteiro para o campo do gene no protótipo.
+ * @param instance_gene O valor final do gene da instância que morreu.
+ * @param min O valor mínimo permitido para o gene.
+ * @param max O valor máximo permitido para o gene.
+ */
+void update_single_gene(int *proto_gene, int instance_gene, int min, int max)
+{
+    /* Usa a nossa fórmula de média ponderada 70/30. */
+    *proto_gene = (((*proto_gene) * 7) + (instance_gene * 3)) / 10;
 
-/*
+    /* Garante que o novo valor fica dentro dos limites. */
+    *proto_gene = MIN(MAX(*proto_gene, min), max);
+}
+
+/**
  * Chamada quando um mob morre para atualizar a genética do seu protótipo.
-*/
+ * VERSÃO REFATORADA: Usa uma função auxiliar para maior clareza e manutenção.
+ */
 void update_mob_prototype_genetics(struct char_data *mob)
 {
-    /* 1. Verifica se é um NPC válido com genética. */
-    if (!IS_NPC(mob) || GET_MOB_RNUM(mob) == NOBODY || !mob->genetics)
+    if (!IS_NPC(mob) || GET_MOB_RNUM(mob) == NOBODY || !mob->ai_data)
         return;
 
-    mob_rnum rnum = GET_MOB_RNUM(mob); /* Pega o número real do mob. */
-
-    /* 2. Pega um ponteiro para o PROTÓTIPO correto no array mob_proto. */
+    mob_rnum rnum = GET_MOB_RNUM(mob);
     struct char_data *proto = &mob_proto[rnum];
 
-    /* Garante que o protótipo tem a sua própria estrutura de genética alocada. */
-    if (!proto->genetics)
+    if (!proto->ai_data)
         return;
-     
 
-    /* Guarda os valores atuais para o cálculo */
-    int old_wimpy = proto->genetics->wimpy_tendency;
-    int instance_wimpy_final = mob->genetics->wimpy_tendency;
+    /* 1. Prepara os valores finais das instâncias, aplicando as penalidades de morte. */
+    int final_wimpy = mob->ai_data->genetics.wimpy_tendency;
+    int final_roam = mob->ai_data->genetics.roam_tendency;
+    int final_group = mob->ai_data->genetics.group_tendency;
+    int final_brave = mob->ai_data->genetics.brave_prevalence;
 
-    /* 2. Aplica a recompensa/penalidade com base na cultura do mob. */
     if (MOB_FLAGGED(mob, MOB_BRAVE)) {
-        /* Morte heróica: A espécie fica mais corajosa (wimpy diminui). */
-        instance_wimpy_final -= 5;
+        final_wimpy -= 5;
+        final_brave += 1; /* A morte de um bravo reforça o traço. */
     } else {
-        /* Morte por falha: A espécie fica mais cautelosa (wimpy aumenta). */
-        instance_wimpy_final += 5;
+        final_wimpy += 5;
+        final_brave -= 1; /* A morte de um não-bravo diminui a prevalência. */
     }
 
-    /* Garante que o valor final da instância não saia dos limites (0-100). */
-    if (instance_wimpy_final < 0) instance_wimpy_final = 0;
-    if (instance_wimpy_final > 100) instance_wimpy_final = 100;
-
-    /* 3. Calcula a nova média para o protótipo. */
-    proto->genetics->wimpy_tendency = ((old_wimpy * 7) + (instance_wimpy_final * 3)) / 10;
-    
-    /* Garante que o valor do protótipo também não saia dos limites. */
-    if (proto->genetics->wimpy_tendency < 0) proto->genetics->wimpy_tendency = 0;
-    if (proto->genetics->wimpy_tendency > 100) proto->genetics->wimpy_tendency = 100;
-
-     /****************************************************************
-     * LÓGICA PARA O GENE LOOT                                      *
-     ****************************************************************/
-    int old_loot = proto->genetics->loot_tendency;
-    int instance_loot = mob->genetics->loot_tendency;
-
-    /* Simplesmente calculamos a nova média com base no que o mob aprendeu. */
-    proto->genetics->loot_tendency = ((old_loot * 7) + (instance_loot * 3)) / 10;
-
-    /* Garante que o valor do protótipo também não saia dos limites. */
-    if (proto->genetics->loot_tendency < 0) proto->genetics->loot_tendency = 0;
-    if (proto->genetics->loot_tendency > 100) proto->genetics->loot_tendency = 100;
-
-     /****************************************************************
-     * LÓGICA PARA O GENE EQUIP                                      *
-     ****************************************************************/
-    int old_equip = proto->genetics->equip_tendency;
-    int instance_equip = mob->genetics->equip_tendency;
-
-    /* Simplesmente calculamos a nova média com base no que o mob aprendeu. */
-    proto->genetics->equip_tendency = ((old_equip * 7) + (instance_equip * 3)) / 10;
-
-    /* Garante que o valor do protótipo também não saia dos limites. */
-    if (proto->genetics->equip_tendency < 0) proto->genetics->equip_tendency = 0;
-    if (proto->genetics->equip_tendency > 100) proto->genetics->equip_tendency = 100;
-
-     /****************************************************************
-     * LÓGICA PARA O GENE ROAM                                       *
-     ****************************************************************/
     if (IN_ROOM(mob) != real_room(GET_LOADROOM(mob))) {
-    	/* O mob morreu longe de casa. A sua estratégia de exploração falhou. */
-    	mob->genetics->roam_tendency -= 10; /* Penalidade por morrer em território desconhecido. */
+        final_roam -= 10;
     }
 
-    int old_roam = proto->genetics->roam_tendency;
-    int instance_roam = mob->genetics->roam_tendency;
-
-    /* Simplesmente calculamos a nova média com base no que o mob aprendeu. */
-    proto->genetics->roam_tendency = ((old_roam * 7) + (instance_roam * 3)) / 10;
-
-    /* Garante que o valor do protótipo também não saia dos limites. */
-    if (proto->genetics->roam_tendency < 0) proto->genetics->roam_tendency = 0;
-    if (proto->genetics->roam_tendency > 100) proto->genetics->roam_tendency = 100;
-
-    /****************************************************************
-     * EVOLUÇÃO DO GENE DA BRAVURA (Implementando a sua escolha - Opção B)
-     ****************************************************************/
-    if (MOB_FLAGGED(mob, MOB_BRAVE)) {
-        /* A morte de um mob BRAVE reforça o traço na população. */
-        proto->genetics->brave_prevalence += 1;
-    } else {
-        /* A morte de um mob não-bravo diminui a prevalência da bravura na população. */
-        proto->genetics->brave_prevalence -= 1;
-    }
-
-    /* Garante os limites da prevalência (ex: 0 a 75, para que a bravura seja sempre rara). */
-    proto->genetics->brave_prevalence = MIN(MAX(proto->genetics->brave_prevalence, 0), 75);
-
-    /****************************************************************
-     * LÓGICA PARA O GENE GROUP                                                      
-     ****************************************************************/
-    int old_group = proto->genetics->group_tendency;
-    int instance_group = mob->genetics->group_tendency;
-    
-    /* Penalidade por morrer mesmo estando em grupo. */
     if (GROUP(mob)) {
-        instance_group -= 3;
+        final_group -= 3;
     }
 
-    /* Simplesmente calculamos a nova média com base no que o mob aprendeu. */
-    proto->genetics->group_tendency = ((old_group * 7) + (instance_group * 3)) / 10;
-    /* Garante que o valor do protótipo também não saia dos limites. */
-    if (proto->genetics->group_tendency < 0) proto->genetics->group_tendency = 0;
-    if (proto->genetics->group_tendency > 100) proto->genetics->group_tendency = 100;
+    /* 2. Chama a função auxiliar para atualizar cada gene do protótipo. */
+    update_single_gene(&proto->ai_data->genetics.wimpy_tendency, final_wimpy, 0, 100);
+    update_single_gene(&proto->ai_data->genetics.loot_tendency, mob->ai_data->genetics.loot_tendency, 0, 100);
+    update_single_gene(&proto->ai_data->genetics.equip_tendency, mob->ai_data->genetics.equip_tendency, 0, 100);
+    update_single_gene(&proto->ai_data->genetics.roam_tendency, final_roam, 0, 100);
+    update_single_gene(&proto->ai_data->genetics.group_tendency, final_group, 0, 100);
+    update_single_gene(&proto->ai_data->genetics.brave_prevalence, final_brave, 0, 75); /* Usa o limite de 75 que definimos. */
 
-    /* 5. Marca a zona como modificada para que seja salva no próximo 'save all'. */
-    mob_vnum vnum = mob_index[rnum].vnum; /* Pega o vnum a partir do mob_index */
+    /* 3. Marca a zona para salvar. */
+    mob_vnum vnum = mob_index[rnum].vnum;
     zone_rnum rznum = real_zone_by_thing(vnum);
 
     if (rznum != NOWHERE) {

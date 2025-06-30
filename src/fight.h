@@ -43,6 +43,7 @@ int get_weapon_prof(struct char_data *ch, struct obj_data  *wield);
 int get_nighthammer(struct char_data *ch, bool real);
 
 void update_mob_prototype_genetics(struct char_data *mob);
+void update_single_gene(int *proto_gene, int instance_gene, int min, int max);
 
 /* Global variables */
 extern struct attack_hit_type attack_hit_text[];
