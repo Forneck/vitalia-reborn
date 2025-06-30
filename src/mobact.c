@@ -40,7 +40,6 @@ bool mob_try_and_upgrade(struct char_data *ch);
 void mobile_activity(void)
 {
   struct char_data *ch, *next_ch, *vict;
-  struct obj_data *obj, *best_obj;
   int  found;
   memory_rec *names;
 
@@ -675,19 +674,19 @@ bool mob_goal_oriented_roam(struct char_data *ch)
         if ((exit = EXIT(ch, direction)) && (to_room = exit->to_room) <= top_of_world) {
 
             /* GESTÃO DE VOO (Ação que consome o turno) */
-            if (AFF_FLAGGED(ch, AFF_FLYING) && ROOM_FLAGGED(to_room, ROOM_NO_FLY)) { stop_flying(ch); return TRUE; }
-            if (!AFF_FLAGGED(ch, AFF_FLYING) && world[to_room].sector_type == SECT_CLIMBING) { if(start_flying(ch)) return TRUE; }
+            if (AFF_FLAGGED(ch, AFF_FLYING) && ROOM_FLAGGED(to_room, ROOM_NO_FLY)) 
+		    stop_flying(ch); 
+            if (!AFF_FLAGGED(ch, AFF_FLYING) && world[to_room].sector_type == SECT_CLIMBING)
+		    start_flying(ch);
 
-            /* RESOLUÇÃO DE PORTAS (Ação encadeada e segura) */
+            /* RESOLUÇÃO DE PORTAS (UMA AÇÃO DE CADA VEZ, E APENAS EM PORTAS REAIS) */
             if (IS_SET(exit->exit_info, EX_ISDOOR) && IS_SET(exit->exit_info, EX_CLOSED)) {
                 if (!IS_SET(exit->exit_info, EX_DNOPEN)) {
                     if (IS_SET(exit->exit_info, EX_LOCKED) && has_key(ch, exit->key)) {
-                        REMOVE_BIT(exit->exit_info, EX_LOCKED);
-                        act("$n usa uma chave e destranca $t.", FALSE, ch, 0, exit->keyword, TO_ROOM);
+                        do_doorcmd(ch, NULL, direction, SCMD_UNLOCK);
                     }
                     if (!IS_SET(exit->exit_info, EX_LOCKED)) {
-                        REMOVE_BIT(exit->exit_info, EX_CLOSED);
-                        act("$n abre $t.", FALSE, ch, 0, exit->keyword, TO_ROOM);
+                        do_doorcmd(ch, NULL, direction, SCMD_OPEN);
                     }
                 }
             }
