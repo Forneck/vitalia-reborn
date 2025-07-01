@@ -372,6 +372,8 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
      fprintf(fd, "GenGroup: %d\n", GET_GENGROUP(mob));
    if (GET_GENBRAVE(mob) != 0)
      fprintf(fd, "GenBrave: %d\n", GET_GENBRAVE(mob));
+   if (GET_GENUSE(mob) != 0)
+     fprintf(fd, "GenUse: %d\n", GET_GENUSE(mob));
    }
 
   fputs("E\n", fd);

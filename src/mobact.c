@@ -27,9 +27,10 @@
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
 
+struct mob_upgrade_plan find_best_upgrade_for_mob(struct char_data *ch);
 struct char_data *find_best_median_leader(struct char_data *ch);
 bool mob_handle_grouping(struct char_data *ch);
-bool mob_leader_evaluates_gear(struct char_data *leader);
+bool mob_share_gear_with_group(struct char_data *ch);
 bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, int was_in);
 bool mob_goal_oriented_roam(struct char_data *ch);
 bool handle_duty_routine(struct char_data *ch);
@@ -37,6 +38,7 @@ bool mob_follow_leader(struct char_data *ch);
 bool mob_assist_allies(struct char_data *ch);
 bool mob_try_and_loot(struct char_data *ch);
 bool mob_try_and_upgrade(struct char_data *ch);
+bool mob_manage_inventory(struct char_data *ch);
 void mobile_activity(void)
 {
   struct char_data *ch, *next_ch, *vict;
@@ -147,15 +149,11 @@ void mobile_activity(void)
     
     mob_try_and_upgrade(ch);
     
-    /*Depois de equipar, lider avalia equipamento sobrando e doa para o grupo*/
-    if (mob_leader_evaluates_gear(ch)) {
-        continue;
-    }
-	  
+    mob_share_gear_with_group(ch);
+
+
     /* Prioridade de Vaguear (Roam) */
-    if (mob_goal_oriented_roam(ch)) {
-        continue;
-    }
+    mob_goal_oriented_roam(ch);
 
     /* Mob Memory */
     if (MOB_FLAGGED(ch, MOB_MEMORY) && MEMORY(ch)) {
@@ -449,6 +447,34 @@ bool mob_handle_grouping(struct char_data *ch)
     bool best_is_local = FALSE;
     int max_group_size = 6;
 
+    /* CENÁRIO 1: O mob está num grupo. */
+    if (GROUP(ch)) {
+        /* Se ele é um líder de um grupo muito pequeno (só ele), ele pode tentar uma fusão. */
+        if (GROUP_LEADER(GROUP(ch)) == ch && GROUP(ch)->members->iSize <= 1) {
+            struct char_data *vict, *best_target_leader = NULL;
+            /* Procura por outros grupos maiores na sala. */
+            for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+                if (GROUP(vict) && GROUP_LEADER(GROUP(vict)) == vict && vict != ch) {
+                    if (is_level_compatible_with_group(ch, GROUP(vict)) && are_groupable(ch, vict)) {
+                        /* Encontrou um grupo maior e compatível. É uma boa opção. */
+                        if (best_target_leader == NULL || GROUP(vict)->members->iSize > GROUP(best_target_leader)->members->iSize) {
+                            best_target_leader = vict;
+                        }
+                    }
+                }
+            }
+            if (best_target_leader) {
+                /* Decisão tática de abandonar a própria liderança para se juntar a um grupo mais forte. */
+                act("$n avalia o grupo de $N e decide que é mais forte juntar-se a eles.", TRUE, ch, 0, best_target_leader, TO_ROOM);
+                leave_group(ch); /* Abandona o seu próprio grupo solitário. */
+                join_group(ch, GROUP(best_target_leader));
+                return TRUE;
+            }
+        }
+    } 
+    /* CENÁRIO 2: O mob está sozinho. */
+    else {
+
     /* 1. Procura pelo MELHOR grupo existente para se juntar. */
     for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
         if (GROUP(vict) && GROUP_LEADER(GROUP(vict)) == vict &&
@@ -497,72 +523,98 @@ bool mob_handle_grouping(struct char_data *ch)
             act("$n parece estar a formar um grupo e à procura de companheiros.", TRUE, ch, 0, 0, TO_ROOM);
             return TRUE;
         }
+     }
     }
     return FALSE; 
 }
 
 /**
- * O líder do grupo avalia o seu inventário e distribui upgrades
- * para os membros da sua equipa.
+ * Um membro do grupo avalia o seu inventário completo (incluindo contentores) e
+ * partilha o melhor upgrade possível com o companheiro de equipa que mais
+ * beneficiaria dele.
+ * VERSÃO FINAL COM GESTÃO DE CONTENTORES.
  * Retorna TRUE se uma ação de partilha foi realizada.
  */
-bool mob_leader_evaluates_gear(struct char_data *leader)
+bool mob_share_gear_with_group(struct char_data *ch)
 {
-    /* Apenas líderes de grupo com inventário e genética executam esta lógica. */
-    if (!GROUP(leader) || GROUP_LEADER(GROUP(leader)) != leader || !leader->carrying || !leader->ai_data) {
+    /* A IA só age se o mob estiver num grupo, tiver itens e não for encantado. */
+    if (!GROUP(ch) || ch->carrying == NULL || !ch->ai_data || AFF_FLAGGED(ch, AFF_CHARM)) {
         return FALSE;
     }
 
-    /* Chance de executar a avaliação (para não sobrecarregar) */
+    /* Chance de executar a avaliação para não sobrecarregar. */
     if (rand_number(1, 100) > 25) {
         return FALSE;
     }
 
-    struct obj_data *inv_item, *item_to_give = NULL;
-    struct char_data *member, *receiver = NULL;
-    struct iterator_data iterator;
+    struct obj_data *item_to_give = NULL;
+    struct char_data *receiver = NULL;
+    struct obj_data *container_source = NULL; /* De onde o item será tirado */
     int max_improvement_for_group = 10; /* Só partilha se for uma melhoria significativa */
 
-    /* Para cada item no inventário do líder... */
-    for (inv_item = leader->carrying; inv_item; inv_item = inv_item->next_content) {
-        
-        /* ...avalia cada membro do grupo. */
-        member = (struct char_data *)merge_iterator(&iterator, GROUP(leader)->members);
-        while(member) {
-            if (leader == member) { /* Não avalia a si mesmo */
-                member = (struct char_data *)next_in_list(&iterator);
-                continue;
-            }
+    struct obj_data *item;
+    struct char_data *member;
+    struct iterator_data iterator;
 
-            int wear_pos = find_eq_pos(member, inv_item, NULL);
-            if (wear_pos != -1) {
-                struct obj_data *member_eq = GET_EQ(member, wear_pos);
-                
-                /* Usamos a nossa função de avaliação, mas do ponto de vista do membro! */
-                int score_improvement = evaluate_item_for_mob(member, inv_item) - evaluate_item_for_mob(member, member_eq);
-                
-                if (score_improvement > max_improvement_for_group) {
-                    max_improvement_for_group = score_improvement;
-                    item_to_give = inv_item;
-                    receiver = member;
+    /* 1. O mob avalia todo o seu inventário para encontrar a melhor oportunidade de partilha. */
+    for (item = ch->carrying; item; item = item->next_content) {
+        /* Avalia o item atual do inventário principal. */
+        member = (struct char_data *)merge_iterator(&iterator, GROUP(ch)->members);
+        while(member) {
+            if (ch != member) {
+                int wear_pos = find_eq_pos(member, item, NULL);
+                if (wear_pos != -1) {
+                    int improvement = evaluate_item_for_mob(member, item) - evaluate_item_for_mob(member, GET_EQ(member, wear_pos));
+                    if (improvement > max_improvement_for_group) {
+                        max_improvement_for_group = improvement;
+                        item_to_give = item;
+                        receiver = member;
+                        container_source = NULL;
+                    }
                 }
             }
             member = (struct char_data *)next_in_list(&iterator);
         }
+
+        /* Se o item for um contentor, avalia os itens lá dentro. */
+        if (GET_OBJ_TYPE(item) == ITEM_CONTAINER && !OBJVAL_FLAGGED(item, CONT_CLOSED)) {
+            struct obj_data *contained_item;
+            for (contained_item = item->contains; contained_item; contained_item = contained_item->next_content) {
+                member = (struct char_data *)merge_iterator(&iterator, GROUP(ch)->members);
+                while(member) {
+                     if (ch != member) {
+                        int wear_pos = find_eq_pos(member, contained_item, NULL);
+                        if (wear_pos != -1) {
+                            int improvement = evaluate_item_for_mob(member, contained_item) - evaluate_item_for_mob(member, GET_EQ(member, wear_pos));
+                            if (improvement > max_improvement_for_group) {
+                                max_improvement_for_group = improvement;
+                                item_to_give = contained_item;
+                                receiver = member;
+                                container_source = item; /* Lembra-se de que o item está neste contentor. */
+                            }
+                        }
+                    }
+                    member = (struct char_data *)next_in_list(&iterator);
+                }
+            }
+        }
     }
 
-    /* Se, depois de analisar tudo, encontrou uma boa partilha, executa-a. */
+    /* 2. Se, depois de analisar tudo, encontrou uma boa partilha, executa-a. */
     if (item_to_give && receiver) {
-        act("$n dá $p para $N.", FALSE, leader, item_to_give, receiver, TO_NOTVICT);
-        act("$n dá-lhe $p.", FALSE, leader, item_to_give, receiver, TO_VICT);
-        act("Você dá $p para $N.", FALSE, leader, item_to_give, receiver, TO_CHAR);
+        /* Se o item estiver num contentor, tira-o primeiro. */
+        if (container_source) {
+            obj_from_obj(item_to_give);
+            obj_to_char(item_to_give, ch);
+            act("$n tira $p de $P.", TRUE, ch, item_to_give, container_source, TO_ROOM);
+        }
 
-        obj_from_char(item_to_give);
-        obj_to_char(item_to_give, receiver);
+        /* Agora, o item está no inventário principal. Executa a partilha. */
+        perform_give(ch, receiver, item_to_give);
         
-        /* APRENDIZAGEM: Comportamento de liderança é recompensado. */
-        leader->ai_data->genetics.group_tendency += 5;
-        leader->ai_data->genetics.group_tendency = MIN(GET_GENGROUP(leader), 100);
+        /* APRENDIZAGEM: Comportamento cooperativo é recompensado. */
+        ch->ai_data->genetics.group_tendency += 3;
+        ch->ai_data->genetics.group_tendency = MIN(ch->ai_data->genetics.group_tendency, 100);
         
         return TRUE; /* Ação de partilha foi realizada. */
     }
@@ -975,78 +1027,174 @@ bool mob_try_and_loot(struct char_data *ch)
 
 /**
  * A IA entra numa "sessão de equipamento", onde percorre o seu inventário
- * várias vezes para encontrar e vestir todos os upgrades possíveis.
+ * (incluindo contentores) várias vezes para encontrar e vestir todos os upgrades possíveis.
+ * VERSÃO FINAL COMPLETA.
  * Retorna TRUE se conseguiu equipar pelo menos um item.
  */
 bool mob_try_and_upgrade(struct char_data *ch)
 {
-    /* A IA só age se tiver itens, genética e não estiver sob o controlo de um jogador. */
-    if (!ch->carrying || !ch->ai_data || AFF_FLAGGED(ch, AFF_CHARM))
+    if (!ch->ai_data || AFF_FLAGGED(ch, AFF_CHARM))
         return FALSE;
 
-    const int CURIOSIDADE_MINIMA_EQUIP = 5;
-    int final_chance = MAX(GET_GENEQUIP(ch), CURIOSIDADE_MINIMA_EQUIP);
-    final_chance = MIN(final_chance, 90);
+    /* A chance de sequer pensar em se equipar é baseada na genética. */
+    if (rand_number(1, 100) > MIN(MAX(GET_GENEQUIP(ch), 5), 90))
+        return FALSE;
 
-    /* Verifica se o mob tem a "vontade" de otimizar o seu equipamento neste pulso. */
-    if (rand_number(1, 100) <= final_chance) {
-        bool performed_an_upgrade_this_pulse = FALSE;
-        bool keep_trying = TRUE;
+    bool performed_an_upgrade_this_pulse = FALSE;
+    bool keep_trying = TRUE;
 
-        /* O loop 'while' garante que o mob continua a tentar equipar até estar otimizado. */
-        while (keep_trying) {
-            struct obj_data *obj, *best_possible_upgrade = NULL;
-            int max_score_improvement = 0;
-            int best_pos_to_equip = -1; /* Guarda a posição do melhor upgrade */
+    /* O loop 'while' garante que o mob continua a tentar equipar até estar otimizado. */
+    while (keep_trying) {
+        
+        /* Pede à nossa função de busca para encontrar o melhor plano de upgrade. */
+        struct mob_upgrade_plan plan = find_best_upgrade_for_mob(ch);
 
-            /* Procura pelo melhor upgrade POSSÍVEL no estado atual. */
-            for (obj = ch->carrying; obj; obj = obj->next_content) {
-                int wear_pos = find_eq_pos(ch, obj, NULL);
-                if (wear_pos == -1) continue;
-
-                struct obj_data *equipped_item = GET_EQ(ch, wear_pos);
-                bool can_perform_swap = TRUE;
-                if (equipped_item != NULL) {
-                    if (OBJ_FLAGGED(equipped_item, ITEM_NODROP) || IS_CARRYING_N(ch) >= CAN_CARRY_N(ch)) {
-                        can_perform_swap = FALSE;
-                    }
-                }
-                if (can_perform_swap) {
-                    int score_improvement = evaluate_item_for_mob(ch, obj) - evaluate_item_for_mob(ch, equipped_item);
-                    if (score_improvement > max_score_improvement) {
-                        max_score_improvement = score_improvement;
-                        best_possible_upgrade = obj;
-                        best_pos_to_equip = wear_pos;
-                    }
-                }
+        /* Se encontrou um upgrade viável (melhoria > 0), executa-o. */
+        if (plan.item_to_equip && plan.improvement_score > 0) {
+            
+            /* PASSO 1: Se o item estiver num contentor, tira-o primeiro. */
+            if (plan.container) {
+                obj_from_obj(plan.item_to_equip);
+                obj_to_char(plan.item_to_equip, ch);
+            }
+            
+            /* PASSO 2: Remove o item antigo que está no slot. */
+            struct obj_data *equipped_item = GET_EQ(ch, plan.wear_pos);
+            if (equipped_item) {
+                perform_remove(ch, plan.wear_pos);
             }
 
-            /* Se encontrou um upgrade viável, executa-o e tenta de novo. */
-            if (best_possible_upgrade != NULL) {
-                struct obj_data *equipped_item = GET_EQ(ch, best_pos_to_equip);
-                if (equipped_item != NULL) {
-                    perform_remove(ch, best_pos_to_equip);
-                }
-                perform_wear(ch, best_possible_upgrade, best_pos_to_equip);
-                performed_an_upgrade_this_pulse = TRUE;
-                /* keep_trying continua TRUE para que ele re-avalie o inventário com o novo item equipado. */
-            } else {
-                /* Se não encontrou mais upgrades, para a sessão. */
-                keep_trying = FALSE;
-            }
-        } /* Fim do loop 'while' */
+            /* PASSO 3: Equipa o novo item no slot agora vazio. */
+            perform_wear(ch, plan.item_to_equip, plan.wear_pos);
 
-        /* A aprendizagem acontece uma vez no final da sessão. */
-        if (performed_an_upgrade_this_pulse) {
-            ch->ai_data->genetics.equip_tendency += 2;
-            ch->ai_data->genetics.equip_tendency = MIN(ch->ai_data->genetics.equip_tendency, 100);
+            performed_an_upgrade_this_pulse = TRUE;
+            /* keep_trying continua TRUE para que ele re-avalie o inventário. */
+            
         } else {
-            ch->ai_data->genetics.equip_tendency -= 1;
-            ch->ai_data->genetics.equip_tendency = MAX(ch->ai_data->genetics.equip_tendency, 0);
+            /* Se não encontrou mais upgrades viáveis, para a sessão. */
+            keep_trying = FALSE;
         }
+    } /* Fim do loop 'while' */
 
-        return TRUE; /* Retorna TRUE porque a IA "pensou" em se equipar, mesmo que não tenha feito upgrades. */
+    /* A aprendizagem acontece uma vez no final da sessão. */
+    if (performed_an_upgrade_this_pulse) {
+        ch->ai_data->genetics.equip_tendency = MIN(ch->ai_data->genetics.equip_tendency + 2, 100);
+    } else {
+        ch->ai_data->genetics.equip_tendency = MAX(ch->ai_data->genetics.equip_tendency - 1, 0);
+    }
+    
+    /* Retorna TRUE se a IA "pensou" em se equipar, para consumir o seu foco neste pulso. */
+    return TRUE;
+}
+
+/**
+ * A IA de gestão de inventário. O mob tenta organizar os seus itens,
+ * guardando-os no melhor contentoir que possui.
+ * Retorna TRUE se uma ação de organização foi realizada.
+ */
+bool mob_manage_inventory(struct char_data *ch)
+{
+    /* A IA só age se tiver genética e se o inventário estiver a ficar cheio. */
+    if (!ch->ai_data || !ch->carrying || IS_CARRYING_N(ch) < (CAN_CARRY_N(ch) * 0.8))
+        return FALSE;
+
+    /* A "vontade" de se organizar é baseada no use_tendency. */
+    if (rand_number(1, 100) > GET_GENUSE(ch)) /* GET_GENUSE será a nova macro */
+        return FALSE;
+
+    struct obj_data *obj, *container = NULL, *best_container = NULL;
+    int max_capacity = 0;
+
+    /* 1. Encontra o melhor contentor aberto no inventário. */
+    for (container = ch->carrying; container; container = container->next_content) {
+        if (GET_OBJ_TYPE(container) == ITEM_CONTAINER && !OBJVAL_FLAGGED(container, CONT_CLOSED)) {
+            if (GET_OBJ_VAL(container, 0) > max_capacity) {
+                max_capacity = GET_OBJ_VAL(container, 0);
+                best_container = container;
+            }
+        }
     }
 
-    return FALSE; /* Nenhuma ação de equipamento foi executada. */
+    /* Se não encontrou um contentor utilizável, não pode fazer nada. */
+    if (!best_container)
+        return FALSE;
+
+    bool item_stored = FALSE;
+
+    /* 2. Percorre o inventário novamente para guardar os itens. */
+    struct obj_data *next_obj_to_store;
+    for (obj = ch->carrying; obj; obj = next_obj_to_store) {
+        next_obj_to_store = obj->next_content;
+
+        /* Não guarda o próprio contentor, nem itens amaldiçoados, nem outros contentores. */
+        if (obj == best_container || OBJ_FLAGGED(obj, ITEM_NODROP) || GET_OBJ_TYPE(obj) == ITEM_CONTAINER)
+            continue;
+
+        /* Verifica se o item cabe no contentor (lógica de perform_put). */
+        if ((GET_OBJ_WEIGHT(best_container) + GET_OBJ_WEIGHT(obj)) <= GET_OBJ_VAL(best_container, 0)) {
+            perform_put(ch, obj, best_container);
+            item_stored = TRUE;
+        }
+    }
+
+    /* A IA aprende que organizar é útil. */
+    if (item_stored && ch->ai_data) {
+        ch->ai_data->genetics.use_tendency += 1;
+        ch->ai_data->genetics.use_tendency = MIN(ch->ai_data->genetics.use_tendency, 100);
+    }
+
+    return item_stored;
+}
+
+/**
+ * Procura em todo o inventário de um mob (incluindo contentores) pelo
+ * melhor upgrade de equipamento possível.
+ * @param ch O mob que está a procurar.
+ * @return Uma estrutura mob_upgrade_plan com o plano para o melhor upgrade.
+ */
+struct mob_upgrade_plan find_best_upgrade_for_mob(struct char_data *ch)
+{
+    struct mob_upgrade_plan best_plan = {NULL, NULL, -1, 0};
+    struct obj_data *item, *contained_item, *equipped_item;
+    int wear_pos, score;
+
+    /* Loop através de todos os itens (no inventário principal e dentro de contentores) */
+    for (item = ch->carrying; item; item = item->next_content) {
+        /* Primeiro, avalia o item atual do inventário principal. */
+        wear_pos = find_eq_pos(ch, item, NULL);
+        if (wear_pos != -1) {
+            equipped_item = GET_EQ(ch, wear_pos);
+            /* Verifica se a troca é possível antes de avaliar. */
+            if (equipped_item == NULL || (!OBJ_FLAGGED(equipped_item, ITEM_NODROP) && IS_CARRYING_N(ch) < CAN_CARRY_N(ch))) {
+                score = evaluate_item_for_mob(ch, item) - evaluate_item_for_mob(ch, equipped_item);
+                if (score > best_plan.improvement_score) {
+                    best_plan.improvement_score = score;
+                    best_plan.item_to_equip = item;
+                    best_plan.wear_pos = wear_pos;
+                    best_plan.container = NULL; /* Item está no inventário principal. */
+                }
+            }
+        }
+
+        /* Se o item for um contentor aberto, procura dentro dele. */
+        if (GET_OBJ_TYPE(item) == ITEM_CONTAINER && !OBJVAL_FLAGGED(item, CONT_CLOSED)) {
+            for (contained_item = item->contains; contained_item; contained_item = contained_item->next_content) {
+                wear_pos = find_eq_pos(ch, contained_item, NULL);
+                if (wear_pos != -1) {
+                    equipped_item = GET_EQ(ch, wear_pos);
+                    /* Ao tirar um item, o número de itens não aumenta, por isso a verificação de CAN_CARRY_N não é necessária aqui. */
+                    if (equipped_item == NULL || !OBJ_FLAGGED(equipped_item, ITEM_NODROP)) {
+                        score = evaluate_item_for_mob(ch, contained_item) - evaluate_item_for_mob(ch, equipped_item);
+                        if (score > best_plan.improvement_score) {
+                            best_plan.improvement_score = score;
+                            best_plan.item_to_equip = contained_item;
+                            best_plan.wear_pos = wear_pos;
+                            best_plan.container = item; /* Lembra-se de onde o item está! */
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return best_plan;
 }

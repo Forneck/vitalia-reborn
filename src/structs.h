@@ -961,6 +961,7 @@ struct mob_genetics {
    int roam_tendency;
    int brave_prevalence;
    int group_tendency;
+   int use_tendency;
 };
 
 struct mob_ai_data {
@@ -968,6 +969,16 @@ struct mob_ai_data {
     room_vnum guard_post;         /* O "posto de guarda" para Sentinelas/Lojistas. */
     int duty_frustration_timer;
     /* Futuramente: int experience; int level; struct list *wishlist; etc. */
+};
+
+/**
+ * Estrutura para ajudar a IA a planear uma troca de equipamento.
+ */
+struct mob_upgrade_plan {
+    struct obj_data *item_to_equip; /* O item a ser equipado. */
+    struct obj_data *container;     /* De que contentor o item deve ser tirado (NULL se do inventário). */
+    int wear_pos;                   /* Onde o item será equipado. */
+    int improvement_score;          /* A pontuação de melhoria desta troca. */
 };
 
 /* char-related structures */

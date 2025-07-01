@@ -523,6 +523,7 @@ do                                                              \
 #define GET_GENROAM(ch)          ((ch)->ai_data ? (ch)->ai_data->genetics.roam_tendency : 0)
 #define GET_GENBRAVE(ch)         ((ch)->ai_data ? (ch)->ai_data->genetics.brave_prevalence : 0)
 #define GET_GENGROUP(ch)         ((ch)->ai_data ? (ch)->ai_data->genetics.group_tendency : 0)
+#define GET_GENUSE(ch)           ((ch)->ai_data ? (ch)->ai_data->genetics.use_tendency : 0)
 
 
 /** Current strength of ch. */

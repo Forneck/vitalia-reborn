@@ -2033,6 +2033,12 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
 	      mob_proto[i].ai_data->genetics.brave_prevalence = num_arg;
 	  }
 	}
+	CASE("GenUse")
+	{
+	  if (mob_proto[i].ai_data) {
+	      mob_proto[i].ai_data->genetics.use_tendency = num_arg;
+	  }
+	}
 	CASE("BareHandAttack")
 	{
 		RANGE(0, NUM_ATTACK_TYPES - 1);
@@ -2966,14 +2972,30 @@ struct char_data *read_mobile(mob_vnum nr, int type)	/* and mob_rnum */
         	*(mob->ai_data) = *(mob_proto[i].ai_data);
 	}
 
-	/*BRAVURA CARREGA NOS SENTINELAS DE ACORDO COM A GENETICA */
-        if (!MOB_FLAGGED(mob, MOB_BRAVE)) {
+	/* Em src/db.c, dentro da função read_mobile */
 
-	      /* A chance agora vem da genética do protótipo! */
-        	if (mob_proto[i].ai_data && rand_number(1, 100) <= mob_proto[i].ai_data->genetics.brave_prevalence) {
-	            SET_BIT_AR(MOB_FLAGS(mob), MOB_BRAVE);
-        	}
-	}
+    if (!MOB_FLAGGED(mob, MOB_BRAVE)) {
+
+        bool becomes_brave = FALSE;
+        /* A chance de uma mutação espontânea para a bravura. (ex: 1%) */
+        const int MUTATION_CHANCE = 1;
+
+        /* 1. Verifica se ele nasce BRAVE devido à genética da sua espécie. */
+        if (mob_proto[i].ai_data && rand_number(1, 100) <= mob_proto[i].ai_data->genetics.brave_prevalence) {
+            becomes_brave = TRUE;
+        }
+
+        /* 2. Se não nasceu bravo pela genética, ainda há uma pequena chance de mutação. */
+        else if (rand_number(1, 100) <= MUTATION_CHANCE) {
+            becomes_brave = TRUE;
+            /* Opcional: Podemos até logar este evento raro para observação. */
+            log1("EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em %s (VNum %d).", GET_NAME(mob), mob_index[i].vnum);
+        }
+
+        if (becomes_brave) {
+            SET_BIT_AR(MOB_FLAGS(mob), MOB_BRAVE);
+        }
+     }
         /*************************************************************************
         * Fim do bloco de Genética                                              *
         *************************************************************************/

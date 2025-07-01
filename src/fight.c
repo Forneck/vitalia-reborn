@@ -1611,6 +1611,7 @@ void update_mob_prototype_genetics(struct char_data *mob)
     int final_wimpy = mob->ai_data->genetics.wimpy_tendency;
     int final_roam = mob->ai_data->genetics.roam_tendency;
     int final_group = mob->ai_data->genetics.group_tendency;
+    int final_use = mob->ai_data->genetics.use_tendency;
     int final_brave = mob->ai_data->genetics.brave_prevalence;
 
     if (MOB_FLAGGED(mob, MOB_BRAVE)) {
@@ -1635,6 +1636,7 @@ void update_mob_prototype_genetics(struct char_data *mob)
     update_single_gene(&proto->ai_data->genetics.equip_tendency, mob->ai_data->genetics.equip_tendency, 0, 100);
     update_single_gene(&proto->ai_data->genetics.roam_tendency, final_roam, 0, 100);
     update_single_gene(&proto->ai_data->genetics.group_tendency, final_group, 0, 100);
+    update_single_gene(&proto->ai_data->genetics.use_tendency, final_use, 0, 100);
     update_single_gene(&proto->ai_data->genetics.brave_prevalence, final_brave, 0, 75); /* Usa o limite de 75 que definimos. */
 
     /* 3. Marca a zona para salvar. */

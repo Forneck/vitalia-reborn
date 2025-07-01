@@ -1804,7 +1804,15 @@ int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj)
         }
 
         case ITEM_CONTAINER:
-            score = 20;
+            int capacity_score = GET_OBJ_VAL(obj, 0) / 2; /* Pontuação base pela capacidade. */
+            int need_bonus = 0;
+            
+            /* Se o inventário estiver mais de 75% cheio, o bónus de necessidade é alto. */
+            if (IS_CARRYING_N(ch) > (CAN_CARRY_N(ch) * 0.75)) {
+                need_bonus = 100;
+            }
+            
+            score = capacity_score + need_bonus;
             break;
 
         case ITEM_FOOD:
