@@ -46,11 +46,11 @@ static void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mo
 static void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode);
 static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch);
 /* do_where utility functions */
-static void perform_immort_where(struct char_data *ch, char *arg);
+static void perform_immort_where(char_data *ch, const char *arg);
 static void perform_mortal_where(struct char_data *ch, char *arg);
-static void print_object_location(int num, struct obj_data *obj, struct char_data *ch, int recur);
+static size_t print_object_location(int num, const obj_data *obj, const char_data *ch,
+  char *buf, size_t len, size_t buf_size, int recur);
 extern void look_at_sky(struct char_data *ch);
-
 /* Subcommands */
 /* For show_obj_to_char 'mode'. /-- arbitrary */
 #define SHOW_OBJ_LONG     0
@@ -1987,97 +1987,150 @@ static void perform_mortal_where(struct char_data *ch, char *arg)
 	}
 }
 
-static void print_object_location(int num, struct obj_data *obj, struct char_data *ch, int recur)
+static size_t print_object_location(const int num, const obj_data *obj, const char_data *ch, // NOLINT(*-no-recursion)
+                   char *buf, size_t len, const size_t buf_size, const int recur)
 {
-	if (num > 0)
-		send_to_char(ch, "O%3d. %-25s%s - ", num, obj->short_description, QNRM);
-	else
-		send_to_char(ch, "%33s", " - ");
-	if (SCRIPT(obj))
-	{
-		if (!TRIGGERS(SCRIPT(obj))->next)
-			send_to_char(ch, "[T%d] ", GET_TRIG_VNUM(TRIGGERS(SCRIPT(obj))));
-		else
-			send_to_char(ch, "[TRIGS] ");
-	}
+  size_t nlen = 0;
 
-	if (IN_ROOM(obj) != NOWHERE)
-		send_to_char(ch, "[%5d] %s%s\r\n", GET_ROOM_VNUM(IN_ROOM(obj)),
-					 world[IN_ROOM(obj)].name, QNRM);
-	else if (obj->carried_by)
-		send_to_char(ch, "carregado por %s%s\r\n", PERS(obj->carried_by, ch), QNRM);
-	else if (obj->worn_by)
-		send_to_char(ch, "vestido por %s%s\r\n", PERS(obj->worn_by, ch), QNRM);
-	else if (obj->in_obj)
-	{
-		send_to_char(ch, "dentro %s%s%s\r\n", obj->in_obj->short_description, QNRM,
-					 (recur ? ", qual é" : " "));
-		if (recur)
-			print_object_location(0, obj->in_obj, ch, recur);
-	}
-	else
-		send_to_char(ch, "em um lugar desconhecido.\r\n");
+  if (num > 0)
+    nlen = snprintf(buf + len, buf_size - len, "O%4d. %-25s%s - ", num, obj->short_description, QNRM);
+  else
+    nlen = snprintf(buf + len, buf_size - len, "%37s", " - ");
+
+  len += nlen;
+  nlen = 0;
+  if (len > buf_size)
+    return len; // let the caller know we overflowed
+
+  if (SCRIPT(obj)) {
+    if (!TRIGGERS(SCRIPT(obj))->next)
+      nlen = snprintf(buf + len, buf_size - len, "[T%d] ", GET_TRIG_VNUM(TRIGGERS(SCRIPT(obj))));
+    else
+      nlen = snprintf(buf + len, buf_size - len, "[TRIGS] ");
+  }
+
+  len += nlen;
+  if (len > buf_size)
+    return len; // let the caller know we overflowed
+
+  if (IN_ROOM(obj) != NOWHERE)
+    nlen = snprintf(buf + len, buf_size - len, "[%5d] %s%s\r\n", GET_ROOM_VNUM(IN_ROOM(obj)), world[IN_ROOM(obj)].name, QNRM);
+  else if (obj->carried_by) {
+    if (PRF_FLAGGED(ch, PRF_SHOWVNUMS))
+      nlen = snprintf(buf + len, buf_size - len, "carried by [%5d] %s%s\r\n", GET_MOB_VNUM(obj->carried_by), PERS(obj->carried_by, ch), QNRM);
+    else
+      nlen = snprintf(buf + len, buf_size - len, "carried by %s%s\r\n", PERS(obj->carried_by, ch), QNRM);
+    if (PRF_FLAGGED(ch, PRF_VERBOSE) && IN_ROOM(obj->carried_by) != NOWHERE && len + nlen < buf_size)
+      nlen += snprintf(buf + len + nlen, buf_size - len - nlen, "%37sin [%5d] %s%s\r\n", " - ", GET_ROOM_VNUM(IN_ROOM(obj->carried_by)), world[IN_ROOM(obj->carried_by)].name, QNRM);
+  } else if (obj->worn_by) {
+    if (PRF_FLAGGED(ch, PRF_SHOWVNUMS))
+      nlen = snprintf(buf + len, buf_size - len, "worn by [%5d] %s%s\r\n", GET_MOB_VNUM(obj->worn_by), PERS(obj->worn_by, ch), QNRM);
+    else
+      nlen = snprintf(buf + len, buf_size - len, "worn by %s%s\r\n", PERS(obj->worn_by, ch), QNRM);
+    if (PRF_FLAGGED(ch, PRF_VERBOSE) && IN_ROOM(obj->worn_by) != NOWHERE && len + nlen < buf_size)
+      nlen += snprintf(buf + len + nlen, buf_size - len - nlen, "%37sin [%5d] %s%s\r\n", " - ", GET_ROOM_VNUM(IN_ROOM(obj->worn_by)), world[IN_ROOM(obj->worn_by)].name, QNRM);
+  } else if (obj->in_obj) {
+    nlen = snprintf(buf + len, buf_size - len, "inside %s%s%s\r\n", obj->in_obj->short_description, QNRM, (recur ? ", which is" : " "));
+    if (recur && nlen + len < buf_size) {
+      len += nlen;
+      nlen = 0;
+      len = print_object_location(0, obj->in_obj, ch, buf, len, buf_size, recur);
+    }
+  } else
+    nlen = snprintf(buf + len, buf_size - len, "in an unknown location\r\n");
+  len += nlen;
+  return len;
 }
 
-static void perform_immort_where(struct char_data *ch, char *arg)
+static void perform_immort_where(char_data *ch, const char *arg)
 {
-	struct char_data *i;
-	struct obj_data *k;
-	struct descriptor_data *d;
-	int num = 0, found = 0;
-	if (!*arg)
-	{
-		send_to_char(ch, "Pers.  Sala    Localização                       Zona\r\n");
-		send_to_char(ch,
-					 "-------- ------- ------------------------------ -------------------\r\n");
-		for (d = descriptor_list; d; d = d->next)
-			if (IS_PLAYING(d))
-			{
-				i = (d->original ? d->original : d->character);
-				if (i && CAN_SEE(ch, i) && (IN_ROOM(i) != NOWHERE))
-				{
-					if (d->original)
-						send_to_char(ch, "%-8s%s - [%5d] %s%s (em %s%s)\r\n",
-									 GET_NAME(i), QNRM,
-									 GET_ROOM_VNUM(IN_ROOM(d->character)),
-									 world[IN_ROOM(d->character)].name, QNRM,
-									 GET_NAME(d->character), QNRM);
-					else
-						send_to_char(ch, "%-8s%s %s[%s%5d%s]%s %-*s%s %s%s\r\n",
-									 GET_NAME(i), QNRM, QCYN, QYEL,
-									 GET_ROOM_VNUM(IN_ROOM(i)), QCYN, QNRM,
-									 30 + count_color_chars(world[IN_ROOM(i)].name),
-									 world[IN_ROOM(i)].name, QNRM,
-									 zone_table[(world[IN_ROOM(i)].zone)].name, QNRM);
-				}
-			}
-	}
-	else
-	{
-		for (i = character_list; i; i = i->next)
-			if (CAN_SEE(ch, i) && IN_ROOM(i) != NOWHERE && isname(arg, i->player.name))
-			{
-				found = 1;
-				send_to_char(ch, "M%3d. %-25s%s - [%5d] %-25s%s", ++num, GET_NAME(i), QNRM,
-							 GET_ROOM_VNUM(IN_ROOM(i)), world[IN_ROOM(i)].name, QNRM);
-				if (SCRIPT(i) && TRIGGERS(SCRIPT(i)))
-				{
-					if (!TRIGGERS(SCRIPT(i))->next)
-						send_to_char(ch, "[T%d] ", GET_TRIG_VNUM(TRIGGERS(SCRIPT(i))));
-					else
-						send_to_char(ch, "[TRIGS] ");
-				}
-				send_to_char(ch, "%s\r\n", QNRM);
-			}
-		for (num = 0, k = object_list; k; k = k->next)
-			if (CAN_SEE_OBJ(ch, k) && isname(arg, k->name))
-			{
-				found = 1;
-				print_object_location(++num, k, ch, TRUE);
-			}
-		if (!found)
-			send_to_char(ch, "Não encontrado tal coisa.\r\n");
-	}
+  char_data *i;
+  obj_data *k;
+  struct descriptor_data *d;
+  int num = 0, found = FALSE; // "num" here needs to match the lookup in do_stat, so "stat 4.sword" finds the right one
+  const char *error_message = "\r\n***OVERFLOW***\r\n";
+  char buf[MAX_STRING_LENGTH];
+  size_t len = 0, nlen = 0;
+  const size_t buf_size = sizeof(buf) - strlen(error_message) - 1;
+
+  if (!*arg) {
+    send_to_char(ch, "Players  Room    Location                       Zone\r\n");
+    send_to_char(ch, "-------- ------- ------------------------------ -------------------\r\n");
+    for (d = descriptor_list; d; d = d->next)
+      if (IS_PLAYING(d)) {
+        i = (d->original ? d->original : d->character);
+        if (i && CAN_SEE(ch, i) && (IN_ROOM(i) != NOWHERE)) {
+          if (d->original)
+            send_to_char(ch, "%-8s%s - [%5d] %s%s (in %s%s)\r\n",
+              GET_NAME(i), QNRM, GET_ROOM_VNUM(IN_ROOM(d->character)),
+              world[IN_ROOM(d->character)].name, QNRM, GET_NAME(d->character), QNRM);
+          else
+            send_to_char(ch, "%-8s%s %s[%s%5d%s]%s %-*s%s %s%s\r\n", GET_NAME(i), QNRM,
+              QCYN, QYEL, GET_ROOM_VNUM(IN_ROOM(i)), QCYN, QNRM,
+              30+count_color_chars(world[IN_ROOM(i)].name), world[IN_ROOM(i)].name, QNRM,
+              zone_table[(world[IN_ROOM(i)].zone)].name, QNRM);
+        }
+      }
+  } else {
+    if (PRF_FLAGGED(ch, PRF_VERBOSE))
+      len = snprintf(buf, buf_size, "   ### Mob name                   - Room #  Room name\r\n");
+
+    for (i = character_list; i; i = i->next)
+      if (CAN_SEE(ch, i) && IN_ROOM(i) != NOWHERE && isname(arg, i->player.name)) {
+        found = 1;
+        nlen = snprintf(buf + len, buf_size - len, "M%4d. %-25s%s - [%5d] %-25s%s", ++num, GET_NAME(i), QNRM,
+               GET_ROOM_VNUM(IN_ROOM(i)), world[IN_ROOM(i)].name, QNRM);
+        if (len + nlen >= buf_size) {
+          len += snprintf(buf + len, buf_size - len, "%s", error_message);
+          break;
+        }
+        len += nlen;
+        if (SCRIPT(i) && TRIGGERS(SCRIPT(i))) {
+          if (!TRIGGERS(SCRIPT(i))->next)
+            nlen = snprintf(buf + len, buf_size - len, "[T%d]", GET_TRIG_VNUM(TRIGGERS(SCRIPT(i))));
+          else
+            nlen = snprintf(buf + len, buf_size - len, "[TRIGS]");
+
+          if (len + nlen >= buf_size) {
+            snprintf(buf + len, buf_size - len, "%s", error_message);
+            break;
+          }
+          len += nlen;
+        }
+        nlen = snprintf(buf + len, buf_size - len, "%s\r\n", QNRM);
+        if (len + nlen >= buf_size) {
+          snprintf(buf + len, buf_size - len, "%s", error_message);
+          break;
+        }
+        len += nlen;
+      }
+
+    if (PRF_FLAGGED(ch, PRF_VERBOSE) && len < buf_size) {
+      nlen = snprintf(buf + len, buf_size - len, "  ###  Object name                 Location\r\n");
+      if (len + nlen >= buf_size) {
+        snprintf(buf + len, buf_size - len, "%s", error_message);
+      }
+      len += nlen;
+    }
+
+    if (len < buf_size) {
+      for (k = object_list; k; k = k->next) {
+        if (CAN_SEE_OBJ(ch, k) && isname(arg, k->name)) {
+          found = 1;
+          len = print_object_location(++num, k, ch, buf, len, buf_size, TRUE);
+          if (len >= buf_size) {
+            snprintf(buf + buf_size, sizeof(buf) - buf_size, "%s", error_message);
+            break;
+          }
+        }
+      }
+    }
+
+    if (!found)
+      send_to_char(ch, "Couldn't find any such thing.\r\n");
+    else
+      page_string(ch->desc, buf, TRUE);
+  }
 }
 
 ACMD(do_where)
@@ -2381,30 +2434,110 @@ ACMD(do_toggle)
 						 ONOFF(CONFIG_NS_IS_SLOW), ONOFF(CONFIG_TRACK_T_DOORS));
 		}
 
-		if (GET_LEVEL(ch) >= LVL_IMMORT)
-		{
-			send_to_char(ch,
-						 "      Buildwalk: %-3s    "
-						 "          NoWiz: %-3s    "
-						 "         ClsOLC: %-3s\r\n"
-						 "      No Hassle: %-3s    "
-						 "      Holylight: %-3s    "
-						 "      Room Flags: %-3s\r\n"
-						 "         Syslog: %-3s%s    ",
-						 ONOFF(PRF_FLAGGED(ch, PRF_BUILDWALK)),
-						 ONOFF(PRF_FLAGGED(ch, PRF_NOWIZ)),
-						 ONOFF(PRF_FLAGGED(ch, PRF_CLS)),
-						 ONOFF(PRF_FLAGGED(ch, PRF_NOHASSLE)),
-						 ONOFF(PRF_FLAGGED(ch, PRF_HOLYLIGHT)),
-						 ONOFF(PRF_FLAGGED(ch, PRF_SHOWVNUMS)),
-						 types[(PRF_FLAGGED(ch, PRF_LOG1) ? 1 : 0) +
-							   (PRF_FLAGGED(ch, PRF_LOG2) ? 2 : 0)],
-						 GET_LEVEL(ch) == LVL_IMPL ? "" : "\r\n");
-		}
-		if (GET_LEVEL(ch) >= LVL_IMPL)
-		{
-			send_to_char(ch, "     Resets: %-3s\r\n", ONOFF(PRF_FLAGGED(ch, PRF_ZONERESETS)));
-		}
+    const struct {
+    char *command;
+    bitvector_t toggle; /* this needs changing once hashmaps are implemented */
+    char min_level;
+    char *disable_msg;
+    char *enable_msg;
+  } tog_messages[] = {
+    {"summonable", PRF_SUMMONABLE, 0,
+    "You are now safe from summoning by other players.\r\n",
+    "You may now be summoned by other players.\r\n"},
+    {"nohassle", PRF_NOHASSLE, LVL_IMMORT,
+    "Nohassle disabled.\r\n",
+    "Nohassle enabled.\r\n"},
+    {"brief", PRF_BRIEF, 0,
+    "Brief mode off.\r\n",
+    "Brief mode on.\r\n"},
+    {"compact", PRF_COMPACT, 0,
+    "Compact mode off.\r\n",
+    "Compact mode on.\r\n"},
+    {"notell", PRF_NOTELL, 0,
+    "You can now hear tells.\r\n",
+    "You are now deaf to tells.\r\n"},
+    {"noauction", PRF_NOAUCT, 0,
+    "You can now hear auctions.\r\n",
+    "You are now deaf to auctions.\r\n"},
+    {"noshout", PRF_NOSHOUT, 0,
+    "You can now hear shouts.\r\n",
+    "You are now deaf to shouts.\r\n"},
+    {"nogossip", PRF_NOGOSS, 0,
+    "You can now hear gossip.\r\n",
+    "You are now deaf to gossip.\r\n"},
+    {"nograts", PRF_NOGRATZ, 0,
+    "You can now hear gratz.\r\n",
+    "You are now deaf to gratz.\r\n"},
+    {"nowiz", PRF_NOWIZ, LVL_IMMORT,
+    "You can now hear the Wiz-channel.\r\n",
+    "You are now deaf to the Wiz-channel.\r\n"},
+    {"quest", PRF_QUEST, 0,
+    "You are no longer part of the Quest.\r\n",
+    "Okay, you are part of the Quest.\r\n"},
+    {"showvnums", PRF_SHOWVNUMS, LVL_IMMORT,
+    "You will no longer see the vnums.\r\n",
+    "You will now see the vnums.\r\n"},
+    {"norepeat", PRF_NOREPEAT, 0,
+    "You will now have your communication repeated.\r\n",
+    "You will no longer have your communication repeated.\r\n"},
+    {"holylight", PRF_HOLYLIGHT, LVL_IMMORT,
+    "HolyLight mode off.\r\n",
+    "HolyLight mode on.\r\n"},
+    {"slownameserver", 0, LVL_IMPL,
+    "Nameserver_is_slow changed to OFF; IP addresses will now be resolved.\r\n",
+    "Nameserver_is_slow changed to ON; sitenames will no longer be resolved.\r\n"},
+    {"autoexits", PRF_AUTOEXIT, 0,
+    "Autoexits disabled.\r\n",
+    "Autoexits enabled.\r\n"},
+    {"trackthru", 0, LVL_IMPL,
+    "Players can no longer track through doors.\r\n",
+    "Players can now track through doors.\r\n"},
+    {"clsolc", PRF_CLS, LVL_BUILDER,
+    "You will no longer clear screen in OLC.\r\n",
+    "You will now clear screen in OLC.\r\n"},
+    {"buildwalk", PRF_BUILDWALK, LVL_BUILDER,
+    "Buildwalk is now Off.\r\n",
+    "Buildwalk is now On.\r\n"},
+    {"afk", PRF_AFK, 0,
+    "AFK is now Off.\r\n",
+    "AFK is now On.\r\n"},
+    {"autoloot", PRF_AUTOLOOT, 0,
+    "Autoloot disabled.\r\n",
+    "Autoloot enabled.\r\n"},
+    {"autogold", PRF_AUTOGOLD, 0,
+    "Autogold disabled.\r\n",
+    "Autogold enabled.\r\n"},
+    {"autosplit", PRF_AUTOSPLIT, 0,
+    "Autosplit disabled.\r\n",
+    "Autosplit enabled.\r\n"},
+    {"autosac", PRF_AUTOSAC, 0,
+    "Autosac disabled.\r\n",
+    "Autosac enabled.\r\n"},
+    {"autoassist", PRF_AUTOASSIST, 0,
+    "Autoassist disabled.\r\n",
+    "Autoassist enabled.\r\n"},
+    {"automap", PRF_AUTOMAP, 1,
+    "You will no longer see the mini-map.\r\n",
+    "You will now see a mini-map at the side of room descriptions.\r\n"},
+    {"autokey", PRF_AUTOKEY, 0,
+    "You will now have to unlock doors manually before opening.\r\n",
+    "You will now automatically unlock doors when opening them (if you have the key).\r\n"},
+    {"autodoor", PRF_AUTODOOR, 0,
+    "You will now need to specify a door direction when opening, closing and unlocking.\r\n",
+    "You will now find the next available door when opening, closing or unlocking.\r\n"},
+    {"zoneresets", PRF_ZONERESETS, LVL_IMPL,
+    "You will no longer see zone resets.\r\n",
+    "You will now see zone resets.\r\n"},
+    {"syslog", 0, LVL_IMMORT, "\n", "\n"},
+    {"wimpy", 0, 0, "\n", "\n"},
+    {"pagelength", 0, 0, "\n", "\n"},
+    {"screenwidth", 0, 0, "\n", "\n"},
+    {"color", 0, 0, "\n", "\n"},
+    {"verbose", PRF_VERBOSE, LVL_IMMORT,
+      "You will no longer see verbose output in listings.\n",
+      "You will now see verbose listings.\n"},
+    {"\n", 0, -1, "\n", "\n"} /* must be last */
+  };
 
 		send_to_char(ch,
 					 "      Exibir Hp: %-3s    "
@@ -2485,203 +2618,281 @@ ACMD(do_toggle)
 			return;
 		}
 
-		if (((tp = search_block(arg2, types, FALSE)) == -1))
-		{
-			send_to_char(ch, "Uso: toggle color { Desligado | Breve | Normal | Ligado }\r\n");
-			return;
-		}
-		REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_COLOR_1);
-		REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_COLOR_2);
-		if (tp & 1)
-			SET_BIT_AR(PRF_FLAGS(ch), PRF_COLOR_1);
-		if (tp & 2)
-			SET_BIT_AR(PRF_FLAGS(ch), PRF_COLOR_2);
-		send_to_char(ch, "Seu nível atual de %scores%s agora está %s.\r\n", CCRED(ch, C_SPR),
-					 CCNRM(ch, C_OFF), types[tp]);
-		return;
-	case SCMD_SYSLOG:
-		if (!*arg2)
-		{
-			send_to_char(ch, "O seu syslog está %s.\r\n",
-						 types[(PRF_FLAGGED(ch, PRF_LOG1) ? 1 : 0) +
-							   (PRF_FLAGGED(ch, PRF_LOG2) ? 2 : 0)]);
-			return;
-		}
-		if (((tp = search_block(arg2, types, FALSE)) == -1))
-		{
-			send_to_char(ch, "Uso: toggle syslog { Desligado | Breve | Normal | Ligado }\r\n");
-			return;
-		}
-		REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_LOG1);
-		REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_LOG2);
-		if (tp & 1)
-			SET_BIT_AR(PRF_FLAGS(ch), PRF_LOG1);
-		if (tp & 2)
-			SET_BIT_AR(PRF_FLAGS(ch), PRF_LOG2);
-		send_to_char(ch, "Seu syslog está %s.\r\n", types[tp]);
-		return;
-	case SCMD_SLOWNS:
-		result = (CONFIG_NS_IS_SLOW = !CONFIG_NS_IS_SLOW);
-		break;
-	case SCMD_TRACK:
-		result = (CONFIG_TRACK_T_DOORS = !CONFIG_TRACK_T_DOORS);
-		break;
-	case SCMD_BUILDWALK:
-		if (GET_LEVEL(ch) < LVL_BUILDER)
-		{
-			send_to_char(ch, "Apenas construtores, desculpe.\r\n");
-			return;
-		}
-		result = PRF_TOG_CHK(ch, PRF_BUILDWALK);
-		if (PRF_FLAGGED(ch, PRF_BUILDWALK))
-		{
-			for (i = 0; *arg2 && *(sector_types[i]) != '\n'; i++)
-				if (is_abbrev(arg2, sector_types[i]))
-					break;
-			if (*(sector_types[i]) == '\n')
-				i = 0;
-			GET_BUILDWALK_SECTOR(ch) = i;
-			send_to_char(ch, "Setor Padrão %s\r\n", sector_types[i]);
-			mudlog(CMP, GET_LEVEL(ch), TRUE,
-				   "OLC: %s turned buildwalk on.  Allowed zone %d", GET_NAME(ch),
-				   GET_OLC_ZONE(ch));
-		}
-		else
-			mudlog(CMP, GET_LEVEL(ch), TRUE,
-				   "OLC: %s turned buildwalk off.  Allowed zone %d", GET_NAME(ch),
-				   GET_OLC_ZONE(ch));
-		break;
-	case SCMD_AFK:
-		if ((result = PRF_TOG_CHK(ch, PRF_AFK)))
-			act("$n agora está longe do teclado.", TRUE, ch, 0, 0, TO_ROOM);
-		else
-		{
-			act("$n retornou ao teclado.", TRUE, ch, 0, 0, TO_ROOM);
-			if (has_mail(GET_IDNUM(ch)))
-				send_to_char(ch, "Você tem carta esperando.\r\n");
-		}
-		break;
-	case SCMD_WIMPY:
-		if (!*arg2)
-		{
-			if (GET_WIMP_LEV(ch))
-			{
-				send_to_char(ch, "O seu nível de fuga atual é de %d pontos de saúde.\r\n",
-							 GET_WIMP_LEV(ch));
-				return;
-			}
-			else
-			{
-				send_to_char(ch, "Você não tem fuga automática...\r\n");
-				return;
-			}
-		}
-		if (isdigit(*arg2))
-		{
-			if ((wimp_lev = atoi(arg2)) != 0)
-			{
-				if (wimp_lev < 0)
-					send_to_char(ch, "Ha, ha, ha.. você acha engraçado?\r\n");
-				else if (wimp_lev > GET_MAX_HIT(ch))
-					send_to_char(ch, "Não faz muito sentido, ou faz?\r\n");
-				else if (wimp_lev > (GET_MAX_HIT(ch) / 2))
-					send_to_char(ch,
-								 "Você não pode ajustar seu nível de fuga acima da metade da sua saúde total.\r\n");
-				else
-				{
-					send_to_char(ch,
-								 "Certo, Você irá fugir se sua saúde ficar abaixo de %d pontos.\r\n",
-								 wimp_lev);
-					GET_WIMP_LEV(ch) = wimp_lev;
-				}
-			}
-			else
-			{
-				send_to_char(ch, "Certo, você irá lutar até o fim (seja lá qual for).\r\n");
-				GET_WIMP_LEV(ch) = 0;
-			}
-		}
-		else
-			send_to_char(ch,
-						 "Diga com quantos pontos de saúde você deseja fugir (0 para desabilitar).\r\n");
-		break;
-	case SCMD_PAGELENGTH:
-		if (!*arg2)
-			send_to_char(ch, "Tamanho do terminal: %d linhas, %d colunas.\r\n",
-						 GET_PAGE_LENGTH(ch), GET_SCREEN_WIDTH(ch));
-		else if (is_number(arg2))
-		{
-			GET_PAGE_LENGTH(ch) = MIN(MAX(atoi(arg2), 5), 255);
-			send_to_char(ch, "Número de linhas alterado para %d.\r\n", GET_PAGE_LENGTH(ch));
-		}
-		else
-			send_to_char(ch, "Por favor entre com um número de linhas (5 - 255).");
-		break;
-	case SCMD_SCREENWIDTH:
-		if (!*arg2)
-			send_to_char(ch, "Tamanho do terminal: %d linhas, %d colunas.", GET_PAGE_LENGTH(ch),
-						 GET_SCREEN_WIDTH(ch));
-		else if (is_number(arg2))
-		{
-			GET_SCREEN_WIDTH(ch) = MIN(MAX(atoi(arg2), 40), 200);
-			send_to_char(ch, "Número de colunas alterado para %d.\r\n", GET_SCREEN_WIDTH(ch));
-		}
-		else
-			send_to_char(ch, "Por favor entre com um número de caracteres (40 - 200).");
-		break;
-	case SCMD_AUTOMAP:
-		if (can_see_map(ch))
-		{
-			if (!*arg2)
-			{
-				TOGGLE_BIT_AR(PRF_FLAGS(ch), tog_messages[toggle].toggle);
-				result = (PRF_FLAGGED(ch, tog_messages[toggle].toggle));
-			}
-			else if (!strcmp(arg2, "on"))
-			{
-				SET_BIT_AR(PRF_FLAGS(ch), tog_messages[toggle].toggle);
-				result = 1;
-			}
-			else if (!strcmp(arg2, "off"))
-			{
-				REMOVE_BIT_AR(PRF_FLAGS(ch), tog_messages[toggle].toggle);
-			}
-			else
-			{
-				send_to_char(ch, "Valor para %s precisa ser 'on' ou 'off'.\r\n",
-							 tog_messages[toggle].command);
-				return;
-			}
-		}
-		else
-			send_to_char(ch, "Desculpe, mas o  mapa automático está desabilitado.\r\n");
-		break;
-	default:
-		if (!*arg2)
-		{
-			TOGGLE_BIT_AR(PRF_FLAGS(ch), tog_messages[toggle].toggle);
-			result = (PRF_FLAGGED(ch, tog_messages[toggle].toggle));
-		}
-		else if (!strcmp(arg2, "on"))
-		{
-			SET_BIT_AR(PRF_FLAGS(ch), tog_messages[toggle].toggle);
-			result = 1;
-		}
-		else if (!strcmp(arg2, "off"))
-		{
-			REMOVE_BIT_AR(PRF_FLAGS(ch), tog_messages[toggle].toggle);
-		}
-		else
-		{
-			send_to_char(ch, "Valor para %s precisa ser 'on' ou 'off'.\r\n",
-						 tog_messages[toggle].command);
-			return;
-		}
-	}
-	if (result)
-		send_to_char(ch, "%s", tog_messages[toggle].enable_msg);
-	else
-		send_to_char(ch, "%s", tog_messages[toggle].disable_msg);
+    if (GET_LEVEL(ch) == LVL_IMPL) {
+      send_to_char(ch,
+        " SlowNameserver: %-3s   "
+    "                        "
+    " Trackthru Doors: %-3s\r\n",
+
+    ONOFF(CONFIG_NS_IS_SLOW),
+    ONOFF(CONFIG_TRACK_T_DOORS));
+    }
+
+    if (GET_LEVEL(ch) >= LVL_IMMORT) {
+      send_to_char(ch,
+        "      Buildwalk: %-3s    "
+        "          NoWiz: %-3s    "
+        "         ClsOLC: %-3s\r\n"
+        "       NoHassle: %-3s    "
+        "      Holylight: %-3s    "
+        "      ShowVnums: %-3s\r\n"
+        "         Syslog: %-3s    "
+        "        Verbose: %-3s%s  ",
+
+        ONOFF(PRF_FLAGGED(ch, PRF_BUILDWALK)),
+        ONOFF(PRF_FLAGGED(ch, PRF_NOWIZ)),
+        ONOFF(PRF_FLAGGED(ch, PRF_CLS)),
+        ONOFF(PRF_FLAGGED(ch, PRF_NOHASSLE)),
+        ONOFF(PRF_FLAGGED(ch, PRF_HOLYLIGHT)),
+        ONOFF(PRF_FLAGGED(ch, PRF_SHOWVNUMS)),
+        types[(PRF_FLAGGED(ch, PRF_LOG1) ? 1 : 0) + (PRF_FLAGGED(ch, PRF_LOG2) ? 2 : 0)],
+        ONOFF(PRF_FLAGGED(ch, PRF_VERBOSE)),
+        GET_LEVEL(ch) == LVL_IMPL ? "" : "\r\n");
+    }
+    if (GET_LEVEL(ch) >= LVL_IMPL) {
+      send_to_char(ch,
+        "     ZoneResets: %-3s\r\n",
+        ONOFF(PRF_FLAGGED(ch, PRF_ZONERESETS)));
+    }
+
+  send_to_char(ch,
+    "Hit Pnt Display: %-3s    "
+    "          Brief: %-3s    "
+    "     Summonable: %-3s\r\n"
+
+    "   Move Display: %-3s    "
+    "        Compact: %-3s    "
+    "          Quest: %-3s\r\n"
+
+    "   Mana Display: %-3s    "
+    "         NoTell: %-3s    "
+    "       NoRepeat: %-3s\r\n"
+
+    "      AutoExits: %-3s    "
+    "        NoShout: %-3s    "
+    "          Wimpy: %-3s\r\n"
+
+    "       NoGossip: %-3s    "
+    "      NoAuction: %-3s    "
+    "        NoGrats: %-3s\r\n"
+
+    "       AutoLoot: %-3s    "
+    "       AutoGold: %-3s    "
+    "      AutoSplit: %-3s\r\n"
+
+    "        AutoSac: %-3s    "
+    "     AutoAssist: %-3s    "
+    "        AutoMap: %-3s\r\n"
+
+    "     Pagelength: %-3d    "
+    "    Screenwidth: %-3d    "
+    "            AFK: %-3s\r\n"
+
+    "        Autokey: %-3s    "
+    "       Autodoor: %-3s    "
+    "          Color: %s     \r\n ",
+
+    ONOFF(PRF_FLAGGED(ch, PRF_DISPHP)),
+    ONOFF(PRF_FLAGGED(ch, PRF_BRIEF)),
+    ONOFF(PRF_FLAGGED(ch, PRF_SUMMONABLE)),
+
+    ONOFF(PRF_FLAGGED(ch, PRF_DISPMOVE)),
+    ONOFF(PRF_FLAGGED(ch, PRF_COMPACT)),
+    ONOFF(PRF_FLAGGED(ch, PRF_QUEST)),
+
+    ONOFF(PRF_FLAGGED(ch, PRF_DISPMANA)),
+    ONOFF(PRF_FLAGGED(ch, PRF_NOTELL)),
+    ONOFF(PRF_FLAGGED(ch, PRF_NOREPEAT)),
+
+    ONOFF(PRF_FLAGGED(ch, PRF_AUTOEXIT)),
+    ONOFF(PRF_FLAGGED(ch, PRF_NOSHOUT)),
+    buf2,
+
+    ONOFF(PRF_FLAGGED(ch, PRF_NOGOSS)),
+    ONOFF(PRF_FLAGGED(ch, PRF_NOAUCT)),
+    ONOFF(PRF_FLAGGED(ch, PRF_NOGRATZ)),
+
+    ONOFF(PRF_FLAGGED(ch, PRF_AUTOLOOT)),
+    ONOFF(PRF_FLAGGED(ch, PRF_AUTOGOLD)),
+    ONOFF(PRF_FLAGGED(ch, PRF_AUTOSPLIT)),
+
+    ONOFF(PRF_FLAGGED(ch, PRF_AUTOSAC)),
+    ONOFF(PRF_FLAGGED(ch, PRF_AUTOASSIST)),
+    ONOFF(PRF_FLAGGED(ch, PRF_AUTOMAP)),
+
+    GET_PAGE_LENGTH(ch),
+    GET_SCREEN_WIDTH(ch),
+    ONOFF(PRF_FLAGGED(ch, PRF_AFK)),
+
+    ONOFF(PRF_FLAGGED(ch, PRF_AUTOKEY)),
+    ONOFF(PRF_FLAGGED(ch, PRF_AUTODOOR)),
+    types[COLOR_LEV(ch)]);
+    return;
+  }
+
+  len = strlen(arg);
+  for (toggle = 0; *tog_messages[toggle].command != '\n'; toggle++)
+    if (!strncmp(arg, tog_messages[toggle].command, len))
+      break;
+
+  if (*tog_messages[toggle].command == '\n' || tog_messages[toggle].min_level > GET_LEVEL(ch)) {
+    send_to_char(ch, "You can't toggle that!\r\n");
+    return;
+  }
+
+  switch (toggle) {
+  case SCMD_COLOR:
+    if (!*arg2) {
+      send_to_char(ch, "Your current color level is %s.\r\n", types[COLOR_LEV(ch)]);
+      return;
+    }
+
+    if (((tp = search_block(arg2, types, FALSE)) == -1)) {
+      send_to_char(ch, "Usage: toggle color { Off | Brief | Normal | On }\r\n");
+      return;
+    }
+    REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_COLOR_1);
+    REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_COLOR_2);
+    if (tp & 1) SET_BIT_AR(PRF_FLAGS(ch), PRF_COLOR_1);
+    if (tp & 2) SET_BIT_AR(PRF_FLAGS(ch), PRF_COLOR_2);
+
+    send_to_char(ch, "Your %scolor%s is now %s.\r\n", CCRED(ch, C_SPR), CCNRM(ch, C_OFF), types[tp]);
+    return;
+  case SCMD_SYSLOG:
+    if (!*arg2) {
+      send_to_char(ch, "Your syslog is currently %s.\r\n",
+        types[(PRF_FLAGGED(ch, PRF_LOG1) ? 1 : 0) + (PRF_FLAGGED(ch, PRF_LOG2) ? 2 : 0)]);
+      return;
+    }
+    if (((tp = search_block(arg2, types, FALSE)) == -1)) {
+      send_to_char(ch, "Usage: toggle syslog { Off | Brief | Normal | On }\r\n");
+      return;
+    }
+    REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_LOG1);
+    REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_LOG2);
+    if (tp & 1) SET_BIT_AR(PRF_FLAGS(ch), PRF_LOG1);
+    if (tp & 2) SET_BIT_AR(PRF_FLAGS(ch), PRF_LOG2);
+
+    send_to_char(ch, "Your syslog is now %s.\r\n", types[tp]);
+    return;
+  case SCMD_SLOWNS:
+    result = (CONFIG_NS_IS_SLOW = !CONFIG_NS_IS_SLOW);
+    break;
+  case SCMD_TRACK:
+    result = (CONFIG_TRACK_T_DOORS = !CONFIG_TRACK_T_DOORS);
+    break;
+  case SCMD_BUILDWALK:
+    if (GET_LEVEL(ch) < LVL_BUILDER) {
+      send_to_char(ch, "Builders only, sorry.\r\n");
+      return;
+    }
+    result = PRF_TOG_CHK(ch, PRF_BUILDWALK);
+    if (PRF_FLAGGED(ch, PRF_BUILDWALK)) {
+      for (i=0; *arg2 && *(sector_types[i]) != '\n'; i++)
+        if (is_abbrev(arg2, sector_types[i]))
+          break;
+      if (*(sector_types[i]) == '\n')
+        i=0;
+      GET_BUILDWALK_SECTOR(ch) = i;
+      send_to_char(ch, "Default sector type is %s\r\n", sector_types[i]);
+      mudlog(CMP, GET_LEVEL(ch), TRUE,
+             "OLC: %s turned buildwalk on.  Allowed zone %d", GET_NAME(ch), GET_OLC_ZONE(ch));
+    } else
+      mudlog(CMP, GET_LEVEL(ch), TRUE,
+             "OLC: %s turned buildwalk off.  Allowed zone %d", GET_NAME(ch), GET_OLC_ZONE(ch));
+    break;
+  case SCMD_AFK:
+    if ((result = PRF_TOG_CHK(ch, PRF_AFK)))
+      act("$n is now away from $s keyboard.", TRUE, ch, 0, 0, TO_ROOM);
+    else {
+      act("$n has returned to $s keyboard.", TRUE, ch, 0, 0, TO_ROOM);
+      if (has_mail(GET_IDNUM(ch)))
+        send_to_char(ch, "You have mail waiting.\r\n");
+    }
+    break;
+  case SCMD_WIMPY:
+    if (!*arg2) {
+      if (GET_WIMP_LEV(ch)) {
+        send_to_char(ch, "Your current wimp level is %d hit points.\r\n", GET_WIMP_LEV(ch));
+        return;
+      } else {
+        send_to_char(ch, "At the moment, you're not a wimp.  (sure, sure...)\r\n");
+        return;
+      }
+    }
+    if (isdigit(*arg2)) {
+      if ((wimp_lev = atoi(arg2)) != 0) {
+        if (wimp_lev < 0)
+          send_to_char(ch, "Heh, heh, heh.. we are jolly funny today, eh?\r\n");
+        else if (wimp_lev > GET_MAX_HIT(ch))
+          send_to_char(ch, "That doesn't make much sense, now does it?\r\n");
+        else if (wimp_lev > (GET_MAX_HIT(ch) / 2))
+          send_to_char(ch, "You can't set your wimp level above half your hit points.\r\n");
+        else {
+          send_to_char(ch, "Okay, you'll wimp out if you drop below %d hit points.", wimp_lev);
+          GET_WIMP_LEV(ch) = wimp_lev;
+        }
+      } else {
+        send_to_char(ch, "Okay, you'll now tough out fights to the bitter end.");
+        GET_WIMP_LEV(ch) = 0;
+      }
+    } else
+      send_to_char(ch, "Specify at how many hit points you want to wimp out at.  (0 to disable)\r\n");
+    break;
+  case SCMD_PAGELENGTH:
+    if (!*arg2)
+      send_to_char(ch, "Your current page length is set to %d lines.", GET_PAGE_LENGTH(ch));
+    else if (is_number(arg2)) {
+      GET_PAGE_LENGTH(ch) = MIN(MAX(atoi(arg2), 5), 255);
+      send_to_char(ch, "Okay, your page length is now set to %d lines.", GET_PAGE_LENGTH(ch));
+    } else
+      send_to_char(ch, "Please specify a number of lines (5 - 255).");
+    break;
+  case SCMD_SCREENWIDTH:
+    if (!*arg2)
+      send_to_char(ch, "Your current screen width is set to %d characters.", GET_SCREEN_WIDTH(ch));
+    else if (is_number(arg2)) {
+      GET_SCREEN_WIDTH(ch) = MIN(MAX(atoi(arg2), 40), 200);
+      send_to_char(ch, "Okay, your screen width is now set to %d characters.", GET_SCREEN_WIDTH(ch));
+    } else
+      send_to_char(ch, "Please specify a number of characters (40 - 200).");
+    break;
+  case SCMD_AUTOMAP:
+    if (can_see_map(ch)) {
+      if (!*arg2) {
+        TOGGLE_BIT_AR(PRF_FLAGS(ch), tog_messages[toggle].toggle);
+        result = (PRF_FLAGGED(ch, tog_messages[toggle].toggle));
+      } else if (!strcmp(arg2, "on")) {
+        SET_BIT_AR(PRF_FLAGS(ch), tog_messages[toggle].toggle);
+        result = 1;
+      } else if (!strcmp(arg2, "off")) {
+        REMOVE_BIT_AR(PRF_FLAGS(ch), tog_messages[toggle].toggle);
+      } else {
+        send_to_char(ch, "Value for %s must either be 'on' or 'off'.\r\n", tog_messages[toggle].command);
+        return;
+      }
+    } else
+      send_to_char(ch, "Sorry, automap is currently disabled.\r\n");
+    break;
+  default:
+    if (!*arg2) {
+      TOGGLE_BIT_AR(PRF_FLAGS(ch), tog_messages[toggle].toggle);
+      result = (PRF_FLAGGED(ch, tog_messages[toggle].toggle));
+    } else if (!strcmp(arg2, "on")) {
+      SET_BIT_AR(PRF_FLAGS(ch), tog_messages[toggle].toggle);
+      result = 1;
+    } else if (!strcmp(arg2, "off")) {
+      REMOVE_BIT_AR(PRF_FLAGS(ch), tog_messages[toggle].toggle);
+    } else {
+      send_to_char(ch, "Value for %s must either be 'on' or 'off'.\r\n", tog_messages[toggle].command);
+      return;
+    }
+  }
+  if (result)
+    send_to_char(ch, "%s", tog_messages[toggle].enable_msg);
+  else
+    send_to_char(ch, "%s", tog_messages[toggle].disable_msg);
+
 }
 
 ACMD(do_commands)
