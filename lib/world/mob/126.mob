@@ -1960,9 +1960,9 @@ ajude-as a sobreviver nessas gélidas e desérticas terras gelo.
 500 13000
 9 9 2
 BareHandAttack: 13
-GenWimpy: 6
+GenWimpy: 8
 GenLoot: 1
-GenRoam: 68
+GenRoam: 73
 E
 #12685
 cavalo selvagem~
@@ -2215,8 +2215,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 23
-GenRoam: 4
+GenWimpy: 25
+GenRoam: 2
 E
 #12697
 ave marinha~
@@ -2259,8 +2259,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 6
-GenRoam: 64
+GenWimpy: 5
+GenRoam: 71
 E
 #12699
 sif esposa~

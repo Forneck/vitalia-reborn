@@ -119,8 +119,8 @@ terminam por revelar o eterno paciente dentro dele.
 1100 1000
 9 9 1
 GenWimpy: 22
-GenRoam: 46
-GenGroup: 3
+GenRoam: 57
+GenGroup: 2
 E
 #20108
 assistente~
@@ -137,8 +137,8 @@ azuis, ela demonstra seu lado sério.
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 2
-GenWimpy: 10
-GenRoam: 58
+GenWimpy: 11
+GenRoam: 57
 GenGroup: 11
 E
 #20109
@@ -186,9 +186,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 14
+GenWimpy: 16
 GenRoam: 58
-GenGroup: 3
+GenGroup: 1
 E
 #20112
 jovem mulher Tricia~
@@ -203,8 +203,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 31
-GenRoam: 80
+GenWimpy: 32
+GenRoam: 83
 E
 #20113
 jovem mulher Lorraine~
@@ -219,8 +219,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 23
-GenRoam: 74
+GenWimpy: 25
+GenRoam: 73
 E
 #20114
 jovem mulher Renee~
@@ -235,8 +235,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 17
-GenRoam: 64
+GenWimpy: 18
+GenRoam: 63
 E
 #20115
 jovem mulher Stela~
@@ -251,8 +251,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 28
-GenRoam: 65
+GenWimpy: 30
+GenRoam: 64
 E
 #20116
 jovem mulher dorothy~
@@ -270,7 +270,7 @@ original.
 700 600
 9 9 2
 GenWimpy: 18
-GenRoam: 55
+GenRoam: 60
 E
 #20117
 jovem mulher gabrielle~

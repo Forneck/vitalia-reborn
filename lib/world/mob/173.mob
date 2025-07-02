@@ -370,9 +370,8 @@ sorri maliciosamente para você.
 0 103765
 9 9 1
 GenWimpy: 6
-GenLoot: 1
-GenRoam: 8
-GenGroup: 3
+GenRoam: 6
+GenGroup: 2
 E
 #17325
 bufao dagonet bobo~
@@ -541,7 +540,7 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
-GenWimpy: 12
+GenWimpy: 13
 GenRoam: 87
 E
 #17337
@@ -647,7 +646,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 15
+GenWimpy: 16
 E
 #17344
 escrava~

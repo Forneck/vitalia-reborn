@@ -373,6 +373,7 @@ coração.
 30 5 0 2d2+2000 3d4+13
 500 18000
 9 9 1
+GenWimpy: 1
 E
 #8128
 nefertiti~
@@ -477,8 +478,8 @@ Esse gato negro aparenta ser muito esperto e corajoso.
 7 19 0 2d5+150 1d2+2
 0 100
 9 9 1
-GenWimpy: 20
-GenRoam: 16
+GenWimpy: 21
+GenRoam: 21
 E
 #8136
 escaravelho~
@@ -492,8 +493,7 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 0 100
 9 9 1
 GenWimpy: 5
-GenRoam: 7
-GenGroup: 6
+GenGroup: 5
 E
 #8137
 rato~
@@ -608,7 +608,7 @@ urgentemente, com sua lamparina, por uma saída.
 29 4 -4 2d5+1400 1d1+22
 50 10000
 9 9 1
-GenWimpy: 9
+GenWimpy: 10
 GenRoam: 27
 E
 #8145
@@ -639,7 +639,8 @@ enquanto lágrimas desesperadas rolam por sua face corada.
 16 12 0 2d3+300 1d2+5
 10 1800
 9 9 2
-GenWimpy: 6
+GenWimpy: 7
+GenRoam: 4
 E
 #8147
 serpente~
@@ -710,7 +711,7 @@ que deve ser sua boca.
 0 21000
 9 9 2
 GenWimpy: 10
-GenRoam: 85
+GenRoam: 86
 E
 #8152
 soldado egipcio~

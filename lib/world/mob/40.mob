@@ -9,7 +9,7 @@ Ela parece estar com fome.
 11 7 4 5d10+50 3d6+0
 0 12000
 9 9 0
-GenWimpy: 11
+GenWimpy: 12
 E
 T 3008
 #4001
@@ -185,7 +185,7 @@ O leão parece bastante hostil com enormes garras e grandes dentes.
 5 16 5 1d10+60 2d4+0
 0 900
 9 9 1
-GenWimpy: 46
+GenWimpy: 48
 GenRoam: 87
 E
 #4058

@@ -84,7 +84,7 @@ mundo perigoso lá fora.'
 30 0 -2 200d2+200 3d6+11
 20000 40000
 9 9 1
-GenWimpy: 18
+GenWimpy: 17
 E
 #5707
 diabinho diabo~
@@ -98,7 +98,7 @@ se ele mordesse seu braço.
 8 12 3 50d1+10 3d3+6
 1 5000
 9 9 1
-GenWimpy: 14
+GenWimpy: 16
 E
 #5708
 menor demonio~
@@ -112,7 +112,7 @@ dentes.  Ele o fita com muita fúria em seus olhos.
 13 8 1 150d2+80 2d7+8
 1 15000
 9 9 1
-GenWimpy: 10
+GenWimpy: 11
 GenRoam: 4
 E
 #5709
@@ -128,7 +128,7 @@ sitiada por demônios.
 1000 22000
 9 9 1
 GenWimpy: 6
-GenRoam: 86
+GenRoam: 87
 E
 #5710
 cidada mulher~
@@ -142,9 +142,8 @@ sitiada por demônios.
 19 6 2 150d2+20 2d7+9
 3000 22000
 9 9 2
-GenWimpy: 7
-GenLoot: 1
-GenRoam: 84
+GenWimpy: 8
+GenRoam: 86
 E
 #5711
 demonio maior~
@@ -186,7 +185,7 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 12
+GenWimpy: 13
 E
 #5714
 rymat conselheiro~

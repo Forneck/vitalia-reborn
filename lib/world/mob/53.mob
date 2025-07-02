@@ -10,8 +10,8 @@ venenosa desta cobra derrubou muitos faraós poderosos.
 5 14 8 5d5+50 1d6+1
 10 1000
 9 9 0
-GenWimpy: 89
-GenRoam: 22
+GenWimpy: 91
+GenRoam: 20
 E
 T 3008
 #5301
@@ -29,8 +29,8 @@ vítimas antes do bote.
 7 13 7 7d7+70 2d4+2
 25 2000
 9 9 0
-GenWimpy: 55
-GenRoam: 7
+GenWimpy: 57
+GenRoam: 10
 E
 T 3008
 #5302
@@ -76,7 +76,7 @@ O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
 10 10 5 10d10+100 2d6+3
 500 9000
 9 9 1
-GenWimpy: 84
+GenWimpy: 87
 GenRoam: 87
 E
 T 3007
@@ -124,8 +124,8 @@ etéreo espírito de um morto.
 12 8 4 12d12+120 1d6+6
 750 15000
 9 9 0
-GenWimpy: 90
-GenRoam: 85
+GenWimpy: 91
+GenRoam: 86
 E
 #5308
 homem areia~
@@ -141,6 +141,7 @@ quentes e arenosos.
 1500 18000
 9 9 1
 GenWimpy: 100
+GenLoot: 1
 GenRoam: 85
 E
 #5309
@@ -202,7 +203,7 @@ dos seus primos mais velhos.
 7500 21000
 9 9 2
 GenWimpy: 22
-GenRoam: 65
+GenRoam: 71
 E
 #5313
 ginoesfinge esfinge~

@@ -22,7 +22,7 @@ Ele parece estar atrás de um almoço..
 22 0 0 1d5+380 3d5+20
 1000 20000
 9 9 1
-GenWimpy: 19
+GenWimpy: 21
 E
 #17003
 elemental~
@@ -35,7 +35,7 @@ Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 10 1 -1 1d5+100 3d8+10
 1100 6000
 9 9 1
-GenWimpy: 18
+GenWimpy: 19
 E
 #17004
 elemental guardiao~
@@ -91,7 +91,7 @@ An undefined string.
 2200 20000
 9 9 1
 GenWimpy: 17
-GenRoam: 64
+GenRoam: 61
 E
 #17008
 lider elemental terra~
@@ -183,6 +183,8 @@ Ela corre ao seu redor, esperando uma brecha.
 850 5000
 9 9 2
 GenWimpy: 59
+GenLoot: 2
+GenRoam: 3
 E
 #17016
 elemental neve humanoide cristal~
@@ -221,7 +223,7 @@ todos os lados, produzindo barulhentas explosões.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
 E
 #17019
 elemental acido liquido humanoide~
@@ -234,7 +236,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 23
+GenWimpy: 24
 E
 #17020
 besta lava elemental~
@@ -248,8 +250,7 @@ que suas calças sequem rápido.
 8 12 1 1d5+250 3d5+4
 1000 4000
 9 9 2
-GenWimpy: 29
-GenRoam: 1
+GenWimpy: 28
 E
 #17021
 lama monstro elemental~
@@ -332,8 +333,8 @@ e seus bruxuleantes membros, que parecem ser afiados como garras.
 26 -2 -5 1d5+590 6d4+14
 3000 30000
 9 9 2
-GenWimpy: 34
-GenGroup: 21
+GenWimpy: 32
+GenGroup: 20
 E
 #17027
 magneto elemental humanoide~
@@ -361,7 +362,7 @@ frio subindo por suas costas.
 26 -2 -5 1d5+630 6d5+13
 3000 30000
 9 9 1
-GenWimpy: 26
+GenWimpy: 27
 E
 #17029
 rochas monstro~
@@ -448,8 +449,8 @@ As ervas que ele carrega parecem ser raras.
 13 10 -9 1d5+450 1d20+4
 2900 10000
 9 9 1
-GenWimpy: 29
-GenRoam: 4
+GenWimpy: 32
+GenRoam: 3
 E
 #17035
 bebe dragao~
@@ -475,8 +476,8 @@ Ele se assemelha bastante a um desagradável inseto.
 5 16 4 1d5+90 2d4+1
 800 1000
 9 9 1
-GenWimpy: 29
-GenRoam: 76
+GenWimpy: 32
+GenRoam: 81
 E
 #17037
 gigantesco elemental~

@@ -66,7 +66,7 @@ Ou então, ele pode apenas estar com dor de cabeça.
 10 10 -1 10d10+100 1d8+8
 436 3500
 9 9 1
-GenWimpy: 27
+GenWimpy: 21
 GenRoam: 87
 E
 T 3009
@@ -180,7 +180,7 @@ As mãos estremecem com a antecipação de estrangular alguém.
 0 3100
 9 9 0
 GenWimpy: 28
-GenRoam: 64
+GenRoam: 59
 E
 #2513
 guardioes maiores olhos~
@@ -193,9 +193,9 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 19
-GenRoam: 87
-GenGroup: 21
+GenWimpy: 21
+GenRoam: 86
+GenGroup: 20
 E
 #2514
 mago visitante~
@@ -236,7 +236,7 @@ Ele parece ignorar tudo à sua volta, exceto o feitiço que está memorizando.
 7 6 2 7d6+25 2d4+5
 487 2750
 9 9 1
-GenWimpy: 61
+GenWimpy: 63
 E
 T 3009
 #2517
@@ -251,7 +251,7 @@ Ele parece estar sonhando.
 7 7 2 7d6+25 2d4+4
 211 2650
 4 4 1
-GenWimpy: 48
+GenWimpy: 49
 E
 T 3009
 #2518
@@ -865,7 +865,7 @@ Parece ser nada mais que uma grande bola de pêlos, com garras.
 15 4 -4 15d8+10 3d7+3
 0 7950
 9 9 0
-GenWimpy: 28
+GenWimpy: 31
 E
 #2562
 mestre branco~

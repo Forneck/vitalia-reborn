@@ -67,8 +67,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 8
-GenRoam: 76
+GenWimpy: 9
+GenRoam: 80
 E
 #13505
 inseto folha cinza~
@@ -178,8 +178,8 @@ Seus olhos possuem uma expressão não muito amigável.
 14 6 4 1d1+400 6d1+14
 0 13496
 9 9 1
-GenWimpy: 92
-GenRoam: 47
+GenWimpy: 95
+GenRoam: 60
 E
 #13513
 coelho pequeno~
@@ -206,8 +206,8 @@ Olhando bem você percebe que isso NÃO é uma cobra!
 9 11 6 1d1+175 4d1+9
 0 11371
 9 9 2
-GenWimpy: 14
-GenRoam: 66
+GenWimpy: 15
+GenRoam: 63
 E
 #13515
 druida~

@@ -255,8 +255,8 @@ vai ser uma atividade saudável.
 17 4 -1 3d5+220 1d6+9
 1281 28000
 9 9 1
-GenWimpy: 7
-GenRoam: 74
+GenWimpy: 10
+GenRoam: 78
 E
 #12020
 imperador julius caesar~
@@ -291,7 +291,7 @@ BareHandAttack: 6
 Str: 18
 StrAdd: 90
 GenWimpy: 11
-GenLoot: 3
+GenLoot: 2
 E
 T 3013
 #12022
