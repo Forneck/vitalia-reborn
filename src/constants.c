@@ -1070,6 +1070,7 @@ const char *trig_types[] = {
   "Door",
   "UNUSED",
   "Time",
+	"Damage",
   "\n"
 };
 

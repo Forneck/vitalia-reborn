@@ -806,6 +806,16 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 		}
 	}
 
+	dam = damage_mtrigger(ch, victim, dam, attacktype);
+	if (dam == -1) {
+           return (0);
+	}
+        if (victim != ch) {
+		/* Start the attacker fighting the victim */
+		if (GET_POS(ch) > POS_STUNNED && (FIGHTING(ch) == NULL))
+		 set_fighting(ch, victim);
+	}
+
 	/* Use send_to_char -- act() doesn't send message if you are DEAD. */
 	switch (GET_POS(victim))
 	{
@@ -1003,6 +1013,7 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 	}
 	return (dam);
 }
+
 
 	/* Calculate the THAC0 of the attacker. 'victim' currently isn't used but
 	   you could use it for special cases like weapons that hit evil creatures 
