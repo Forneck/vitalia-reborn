@@ -26,6 +26,7 @@
 #include "spells.h"				/* for skill_name() */
 #include "screen.h"
 #include "fight.h"
+#include <sys/stat.h>				/* for mkdir() */
 
 /* Global variables definitions used externally */
 /* Constant list for printing out who we sell to */
@@ -702,7 +703,7 @@ static void shopping_buy(char *arg, struct char_data *ch, struct char_data *keep
 
 	send_to_char(ch, "Agora voce tem %s.\r\n", tempstr);
 
-	//save_shop_nonnative(shop_nr, keeper);
+	save_shop_nonnative(shop_nr, keeper);
 	save_char(ch);
 
 
@@ -914,7 +915,7 @@ static void shopping_sell(char *arg, struct char_data *ch, struct char_data *kee
 
 	send_to_char(ch, "O vendedor agora tem %s.\r\n", tempstr);
 
-	//save_shop_nonnative(shop_nr, keeper);
+	save_shop_nonnative(shop_nr, keeper);
 	save_char(ch);
 
 	if (GET_GOLD(keeper) < MIN_OUTSIDE_BANK)
@@ -1905,16 +1906,17 @@ void save_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
 	struct obj_data *obj, *next_obj;
 	char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 
-	sprintf(buf, "shop_item/%ld", shop_num);
+	sprintf(buf, "shop_item/%d", shop_num);
 
 	if ((cfile = fopen(buf, "w")) == NULL)
 	{
-		/* Create the File Then */
-		sprintf(buf2, "shop_item/%ld", shop_num);
-		if (!(cfile = fopen(buf2, "w")))
+		/* Try to create the directory first */
+		mkdir("shop_item", 0755);
+		/* Try again after creating directory */
+		if (!(cfile = fopen(buf, "w")))
 		{
-			mudlog(BRF, LVL_IMPL, TRUE, "SYSERR: SHP: Can't write new shop_item file.");
-			exit(0);
+			mudlog(BRF, LVL_IMPL, TRUE, "SYSERR: SHP: Can't write shop_item file for shop %d.", shop_num);
+			return;
 		}
 	}
 
@@ -1922,16 +1924,16 @@ void save_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
 	   isnt, it writes the item's VNUM to the file */
 	*buf = '\0';
 	*buf2 = '\0';
-	sprintf(buf2, "#%ld\n%s\n", shop_num, GET_NAME(keeper));
+	sprintf(buf2, "#%d\n%s\n", shop_num, GET_NAME(keeper));
 	for (obj = keeper->carrying; obj; obj = next_obj)
 	{
 		next_obj = obj->next_content;
 		if (!shop_producing(obj, shop_num))
-			sprintf(buf2 + strlen(buf2), "%ld\n", GET_OBJ_VNUM(obj));
+			sprintf(buf2 + strlen(buf2), "%d\n", GET_OBJ_VNUM(obj));
 		if (!next_obj)
 			break;
 	}
-	fprintf(cfile, buf2);
+	fprintf(cfile, "%s", buf2);
 	fprintf(cfile, "$\n");
 	fclose(cfile);
 	return;
@@ -1945,7 +1947,7 @@ void load_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
 	obj_vnum v_this;
 	char buf[MAX_STRING_LENGTH];
 
-	sprintf(buf, "shop_item/%ld", shop_num);
+	sprintf(buf, "shop_item/%d", shop_num);
 
 	/* Check to see if we have a file for this shop number */
 	if ((cfile = fopen(buf, "r")) == NULL)
@@ -1955,8 +1957,9 @@ void load_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
 	line_num += get_line(cfile, buf);
 	if (sscanf(buf, "#%d", &placer) != 1)
 	{
-		fprintf(stderr, "Format error in shop_item %ld, line %d.\n", shop_num, line_num);
-		exit(0);
+		mudlog(BRF, LVL_IMPL, TRUE, "SYSERR: SHP: Format error in shop_item %d, line %d.", shop_num, line_num);
+		fclose(cfile);
+		return;
 	}
 
 	// Name of shopkeeper
@@ -1970,13 +1973,18 @@ void load_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
 			break;
 		if (sscanf(buf, "%d", &placer) != 1)
 		{
-			fprintf(stderr, "Format error in shop_item %ld, line %d.\n", shop_num, line_num);
-			exit(0);
+			mudlog(BRF, LVL_IMPL, TRUE, "SYSERR: SHP: Format error in shop_item %d, line %d.", shop_num, line_num);
+			fclose(cfile);
+			return;
 		}
 		v_this = placer;
 		obj = read_object(v_this, VIRTUAL);
-		slide_obj(obj, keeper, shop_num);
+		if (obj != NULL)
+			slide_obj(obj, keeper, shop_num);
+		else
+			mudlog(BRF, LVL_IMPL, TRUE, "SYSERR: SHP: Could not load object %d for shop %d.", v_this, shop_num);
 	}
+	fclose(cfile);
 	return;
 }
 
