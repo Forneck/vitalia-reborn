@@ -632,7 +632,7 @@ void do_doorcmd(struct char_data *ch, struct obj_data *obj, int door, int scmd)
 	if (!door_wtrigger(ch, scmd, door))
 		return;
 
-	len = snprintf(buf, sizeof(buf), "$n %s ", cmd_door[scmd]);
+	len = snprintf(buf, sizeof(buf), "$n %s ", doors_pt[scmd]);
 	if (!obj && ((other_room = EXIT(ch, door)->to_room) != NOWHERE))
 		if ((back = world[other_room].dir_option[rev_dir[door]]) != NULL)
 			if (back->to_room != IN_ROOM(ch))
