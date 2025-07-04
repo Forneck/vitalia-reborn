@@ -1834,3 +1834,85 @@ int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj)
     return score;
 }
 
+/* Adicione estas novas funções ao ficheiro */
+
+/**
+ * Verifica se um item é o "último" do seu tipo no inventário do mob.
+ * Para poções/pergaminhos, verifica a quantidade. Para varinhas/bastões, as cargas.
+ * @param ch O mob que possui o item.
+ * @param obj O item a ser verificado.
+ * @return TRUE se for o último, FALSE caso contrário.
+ */
+bool is_last_consumable(struct char_data *ch, struct obj_data *obj)
+{
+    if (!ch || !obj)
+        return TRUE; /* Segurança: se algo for nulo, não usa. */
+
+    switch (GET_OBJ_TYPE(obj)) {
+        case ITEM_POTION:
+        case ITEM_SCROLL:
+            /* Retorna TRUE se a contagem deste VNUM no inventário for 1 ou menos. */
+            return (count_obj_in_list(GET_OBJ_VNUM(obj), ch->carrying) <= 1);
+
+        case ITEM_WAND:
+        case ITEM_STAFF:
+            /* Retorna TRUE se o número de cargas restantes for 1 ou menos. */
+            return (GET_OBJ_VAL(obj, 2) <= 1);
+        
+        default:
+            /* Outros tipos de item não são "consumíveis" desta forma. */
+            return FALSE;
+    }
+}
+
+
+/**
+ * Consome um item após o seu uso bem-sucedido.
+ * Poções/pergaminhos são destruídos. Varinhas/bastões perdem uma carga.
+ * @param ch O mob que usou o item.
+ * @param obj O item que foi usado.
+ */
+void consume_item_after_use(struct char_data *ch, struct obj_data *obj)
+{
+    if (!ch || !obj)
+        return;
+
+    switch (GET_OBJ_TYPE(obj)) {
+        case ITEM_POTION:
+        case ITEM_SCROLL:
+            /* Itens de uso único são extraídos do jogo. */
+            extract_obj(obj);
+            break;
+        case ITEM_WAND:
+        case ITEM_STAFF:
+            /* Itens de cargas múltiplas perdem uma carga. */
+            GET_OBJ_VAL(obj, 2) -= 1;
+            break;
+        default:
+            /* Outros tipos de item não são consumidos. */
+            break;
+    }
+}
+
+
+/* Adicione esta função ao final do utils.c */
+
+/**
+ * Conta o número de ocorrências de um objeto com um VNUM específico
+ * numa lista de objetos.
+ * @param vnum O VNUM do objeto a ser contado.
+ * @param list Um ponteiro para o início da lista de objetos (ex: ch->carrying).
+ * @return O número de vezes que o objeto foi encontrado.
+ */
+int count_obj_in_list(obj_vnum vnum, struct obj_data *list)
+{
+    int count = 0;
+    struct obj_data *i;
+
+    for (i = list; i; i = i->next_content) {
+        if (GET_OBJ_VNUM(i) == vnum) {
+            count++;
+        }
+    }
+    return count;
+}

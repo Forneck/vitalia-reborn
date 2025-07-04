@@ -80,8 +80,10 @@ const char *align_gauge(int align);
 int get_item_apply_score(struct char_data *ch, struct obj_data *obj);
 int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj);
 bool mob_has_ammo(struct char_data *ch);
-
+void consume_item_after_use(struct char_data *ch, struct obj_data *obj);
+bool is_last_consumable(struct char_data *ch, struct obj_data *obj);
 bool are_groupable(struct char_data *ch, struct char_data *target);
+int count_obj_in_list(obj_vnum vnum, struct obj_data *list);
 /* Public functions made available from weather.c */
 void weather_and_time(int mode);
 

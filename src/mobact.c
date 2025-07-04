@@ -23,6 +23,7 @@
 #include "fight.h"
 #include "shop.h"
 #include "graph.h"
+#include "spedit.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -39,6 +40,9 @@ bool mob_assist_allies(struct char_data *ch);
 bool mob_try_and_loot(struct char_data *ch);
 bool mob_try_and_upgrade(struct char_data *ch);
 bool mob_manage_inventory(struct char_data *ch);
+bool mob_handle_item_usage(struct char_data *ch);
+struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch);
+struct obj_data *find_cursed_item_in_inventory(struct char_data *ch);
 void mobile_activity(void)
 {
   struct char_data *ch, *next_ch, *vict;
@@ -1197,4 +1201,129 @@ struct mob_upgrade_plan find_best_upgrade_for_mob(struct char_data *ch)
         }
     }
     return best_plan;
+}
+
+/**
+ * Procura no inventário de um personagem por um item amaldiçoado
+ * (que tenha a flag ITEM_NODROP).
+ * @param ch O personagem cujo inventário será verificado.
+ * @return Um ponteiro para o primeiro item amaldiçoado encontrado, ou NULL se não houver nenhum.
+ */
+struct obj_data *find_cursed_item_in_inventory(struct char_data *ch)
+{
+    struct obj_data *obj;
+
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (OBJ_FLAGGED(obj, ITEM_NODROP)) {
+            return obj;
+        }
+    }
+    return NULL;
+}
+
+/**
+ * Procura no inventário de um personagem por uma arma ou armadura que ainda
+ * não tenha sido abençoada (sem a flag ITEM_BLESS).
+ * @param ch O personagem cujo inventário será verificado.
+ * @return Um ponteiro para o primeiro item válido encontrado, ou NULL se não houver.
+ */
+struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch)
+{
+    struct obj_data *obj;
+
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (GET_OBJ_TYPE(obj) == ITEM_WEAPON || GET_OBJ_TYPE(obj) == ITEM_ARMOR) {
+            if (!OBJ_FLAGGED(obj, ITEM_BLESS)) {
+                return obj;
+            }
+        }
+    }
+    return NULL;
+}
+
+/**
+ * A IA principal para um mob decidir, usar e aprender com itens.
+ * VERSÃO FINAL COM LÓGICA DE SUPORTE E PREPARAÇÃO DE ITENS.
+ * Retorna TRUE se uma ação foi executada.
+ */
+bool mob_handle_item_usage(struct char_data *ch)
+{
+    if (!ch->carrying || !ch->ai_data) return FALSE;
+    if (rand_number(1, 100) > MAX(GET_GENUSE(ch), 5)) return FALSE;
+
+    struct obj_data *obj, *item_to_use = NULL, *target_obj = NULL;
+    struct char_data *target_char = NULL;
+    int best_score = 0;
+    int spellnum_to_cast = -1;
+
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        int current_score = 0;
+        int skillnum = get_spell_from_item(obj);
+        if (skillnum <= 0) continue;
+
+        struct str_spells *spell = get_spell_by_vnum(skillnum);
+        if (!spell) continue;
+
+        /* --- Início da Árvore de Decisão Tática --- */
+        if (FIGHTING(ch)) {
+            /* ** MODO DE COMBATE ** */
+            // 1. Cura ou Proteção de Alinhamento Tática
+            if (IS_SET(spell->mag_flags, MAG_POINTS) && GET_HIT(ch) < (GET_MAX_HIT(ch) * 0.7)) {
+                current_score = 100; target_char = ch;
+            } else if (skillnum == SPELL_PROT_FROM_EVIL && IS_GOOD(ch) && IS_EVIL(FIGHTING(ch)) && !IS_AFFECTED(ch, AFF_PROTECT_EVIL)) {
+                current_score = 120; target_char = ch;
+            } else if (skillnum == SPELL_PROT_FROM_GOOD && IS_EVIL(ch) && IS_GOOD(FIGHTING(ch)) && !IS_AFFECTED(ch, AFF_PROTECT_GOOD)) {
+                current_score = 120; target_char = ch;
+            }
+            // 2. Buffs defensivos como Sanctuary e Gloomshield
+            else if ((skillnum == SPELL_SANCTUARY || skillnum == SPELL_GLOOMSHIELD) && !IS_AFFECTED(ch, skillnum)) {
+                 current_score = 110; target_char = ch;
+            }
+            // Prioridade 2: Debuffs de Controlo
+            else if ((spell->mag_flags & MAG_AFFECTS) && (skillnum == SPELL_BLINDNESS || skillnum == SPELL_SLEEP) && !IS_AFFECTED(FIGHTING(ch), skillnum)) {
+                current_score = 90; target_char = FIGHTING(ch);
+            }
+            // Prioridade 3: Dano Direto
+            else if (spell->mag_flags & MAG_DAMAGE) {
+                current_score = 80; target_char = FIGHTING(ch);
+            }
+        } else {
+            /* ** MODO DE PREPARAÇÃO (Fora de Combate) ** */
+            // 1. Limpar itens amaldiçoados.
+            if (IS_SET(spell->mag_flags, MAG_UNAFFECTS) && skillnum == SPELL_REMOVE_CURSE) {
+                struct obj_data *cursed_item = find_cursed_item_in_inventory(ch); /* Nova função auxiliar */
+                if (cursed_item) { current_score = 90; target_obj = cursed_item; }
+            }
+            // 2. Abençoar itens (se for GOOD).
+            else if (IS_SET(spell->mag_flags, MAG_MANUAL) && (skillnum == SPELL_BLESS_OBJECT) && IS_GOOD(ch)) {
+                struct obj_data *item_to_buff = find_unblessed_weapon_or_armor(ch); /* Nova função auxiliar */
+                if (item_to_buff) { current_score = 60; target_obj = item_to_buff; }
+            }
+            // 3. Usar buffs defensivos genéricos.
+            else if (IS_SET(spell->mag_flags, MAG_AFFECTS) && IS_SET(spell->targ_flags, TAR_SELF_ONLY)) {
+                 /* Verifica qualquer magia de buff defensivo (ex: armor, stoneskin) */
+                 if (!IS_AFFECTED(ch, skillnum)) { current_score = 50; target_char = ch; }
+            }
+        }
+        
+        if (current_score > best_score) {
+            best_score = current_score; item_to_use = obj; spellnum_to_cast = skillnum;
+        }
+    }
+
+        if (item_to_use) {
+        if (is_last_consumable(ch, item_to_use)) {
+            ch->ai_data->genetics.use_tendency = MAX(ch->ai_data->genetics.use_tendency - 1, 0);
+            return FALSE;
+        }
+
+        if (cast_spell(ch, target_char, target_obj, spellnum_to_cast)) {
+            ch->ai_data->genetics.use_tendency += 2;
+        } else {
+            ch->ai_data->genetics.use_tendency -= 2;
+        }
+        ch->ai_data->genetics.use_tendency = MIN(MAX(ch->ai_data->genetics.use_tendency, 0), 100);
+        return TRUE;
+    }
+    return FALSE;
 }
