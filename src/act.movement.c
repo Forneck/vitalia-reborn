@@ -746,24 +746,24 @@ ACMD(do_gen_door)
 
 	if (!*argument)
 	{
-		send_to_char(ch, "%c%s Oque?\r\n", UPPER(*cmd_door[subcmd]), cmd_door[subcmd] + 1);
+		send_to_char(ch, "%c%s Oque?\r\n", UPPER(*doors_pt[subcmd]), doors_pt[subcmd] + 1);
 		return;
 	}
 	two_arguments(argument, type, dir);
 	if (!generic_find(type, FIND_OBJ_INV | FIND_OBJ_ROOM, ch, &victim, &obj))
-		door = find_door(ch, type, dir, cmd_door[subcmd]);
+		door = find_door(ch, type, dir, doors_pt[subcmd]);
 
 	if ((obj) && (GET_OBJ_TYPE(obj) != ITEM_CONTAINER))
 	{
 		obj = NULL;
-		door = find_door(ch, type, dir, cmd_door[subcmd]);
+		door = find_door(ch, type, dir, doors_pt[subcmd]);
 	}
 
 	if ((obj) || (door >= 0))
 	{
 		keynum = DOOR_KEY(ch, obj, door);
 		if (!(DOOR_IS_OPENABLE(ch, obj, door)))
-			send_to_char(ch, "Você não pode %s  isso!!\r\n", cmd_door[subcmd]);
+			send_to_char(ch, "Você não pode %s  isso!!\r\n", doors_pt[subcmd]);
 		else if (!DOOR_IS_OPEN(ch, obj, door) && IS_SET(flags_door[subcmd], NEED_OPEN))
 			send_to_char(ch, "Mas já está fechado!\r\n");
 		else if (!DOOR_IS_CLOSED(ch, obj, door) && IS_SET(flags_door[subcmd], NEED_CLOSED))
