@@ -1242,6 +1242,26 @@ struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch)
 }
 
 /**
+ * Retorna o número da magia contida em um item mágico (wand, staff, scroll, potion).
+ * @param obj O objeto a ser verificado.
+ * @return O número da magia, ou -1 se o item não for mágico.
+ */
+int get_spell_from_item(struct obj_data *obj)
+{
+    if (!obj) return -1;
+    
+    switch (GET_OBJ_TYPE(obj)) {
+        case ITEM_WAND:
+        case ITEM_STAFF:
+        case ITEM_SCROLL:
+        case ITEM_POTION:
+            return GET_OBJ_VAL(obj, 3);
+        default:
+            return -1;
+    }
+}
+
+/**
  * A IA principal para um mob decidir, usar e aprender com itens.
  * VERSÃO FINAL COM LÓGICA DE SUPORTE E PREPARAÇÃO DE ITENS.
  * Retorna TRUE se uma ação foi executada.
@@ -1251,63 +1271,200 @@ bool mob_handle_item_usage(struct char_data *ch)
     if (!ch->carrying || !ch->ai_data) return FALSE;
     if (rand_number(1, 100) > MAX(GET_GENUSE(ch), 5)) return FALSE;
 
-    struct obj_data *obj, *item_to_use = NULL, *target_obj = NULL;
-    struct char_data *target_char = NULL;
+    struct obj_data *obj, *item_to_use = NULL, *target_obj = NULL, *best_target_obj = NULL;
+    struct char_data *target_char = NULL, *best_target_char = NULL;
     int best_score = 0;
     int spellnum_to_cast = -1;
 
     for (obj = ch->carrying; obj; obj = obj->next_content) {
         int current_score = 0;
+        target_char = NULL;  // Reset targets for each iteration
+        target_obj = NULL;
         int skillnum = get_spell_from_item(obj);
         if (skillnum <= 0) continue;
 
         struct str_spells *spell = get_spell_by_vnum(skillnum);
         if (!spell) continue;
 
-        /* --- Início da Árvore de Decisão Tática --- */
+        /* --- Início da Árvore de Decisão Tática Expandida --- */
         if (FIGHTING(ch)) {
             /* ** MODO DE COMBATE ** */
-            // 1. Cura ou Proteção de Alinhamento Tática
-            if (IS_SET(spell->mag_flags, MAG_POINTS) && GET_HIT(ch) < (GET_MAX_HIT(ch) * 0.7)) {
-                current_score = 100; target_char = ch;
-            } else if (skillnum == SPELL_PROT_FROM_EVIL && IS_GOOD(ch) && IS_EVIL(FIGHTING(ch)) && !IS_AFFECTED(ch, AFF_PROTECT_EVIL)) {
-                current_score = 120; target_char = ch;
+            
+            // PRIORIDADE 1: EMERGÊNCIA - Cura crítica
+            if (IS_SET(spell->mag_flags, MAG_POINTS) && GET_HIT(ch) < (GET_MAX_HIT(ch) * 0.3)) {
+                current_score = 200; target_char = ch;
+            }
+            // PRIORIDADE 2: Cura moderada
+            else if (IS_SET(spell->mag_flags, MAG_POINTS) && GET_HIT(ch) < (GET_MAX_HIT(ch) * 0.7)) {
+                current_score = 150; target_char = ch;
+            }
+            
+            // PRIORIDADE 3: Proteções específicas de alinhamento
+            else if (skillnum == SPELL_PROT_FROM_EVIL && IS_GOOD(ch) && IS_EVIL(FIGHTING(ch)) && !IS_AFFECTED(ch, AFF_PROTECT_EVIL)) {
+                current_score = 140; target_char = ch;
             } else if (skillnum == SPELL_PROT_FROM_GOOD && IS_EVIL(ch) && IS_GOOD(FIGHTING(ch)) && !IS_AFFECTED(ch, AFF_PROTECT_GOOD)) {
+                current_score = 140; target_char = ch;
+            }
+            
+            // PRIORIDADE 4: Proteções defensivas supremas
+            else if (skillnum == SPELL_SANCTUARY && !IS_AFFECTED(ch, AFF_SANCTUARY)) {
+                current_score = 130; target_char = ch;
+            } else if (skillnum == SPELL_GLOOMSHIELD && !IS_AFFECTED(ch, AFF_GLOOMSHIELD)) {
+                current_score = 125; target_char = ch;
+            } else if (skillnum == SPELL_STONESKIN && !IS_AFFECTED(ch, AFF_STONESKIN)) {
                 current_score = 120; target_char = ch;
             }
-            // 2. Buffs defensivos como Sanctuary e Gloomshield
-            else if ((skillnum == SPELL_SANCTUARY || skillnum == SPELL_GLOOMSHIELD) && !IS_AFFECTED(ch, skillnum)) {
-                 current_score = 110; target_char = ch;
+            
+            // PRIORIDADE 5: Escudos de dano
+            else if (skillnum == SPELL_FIRESHIELD && !IS_AFFECTED(ch, AFF_FIRESHIELD)) {
+                current_score = 115; target_char = ch;
+            } else if (skillnum == SPELL_THISTLECOAT && !IS_AFFECTED(ch, AFF_THISTLECOAT)) {
+                current_score = 115; target_char = ch;
+            } else if (skillnum == SPELL_WINDWALL && !IS_AFFECTED(ch, AFF_WINDWALL)) {
+                current_score = 115; target_char = ch;
+            } else if (skillnum == SPELL_SOUNDBARRIER && !IS_AFFECTED(ch, AFF_SOUNDBARRIER)) {
+                current_score = 110; target_char = ch;
             }
-            // Prioridade 2: Debuffs de Controlo
-            else if ((spell->mag_flags & MAG_AFFECTS) && (skillnum == SPELL_BLINDNESS || skillnum == SPELL_SLEEP) && !IS_AFFECTED(FIGHTING(ch), skillnum)) {
+            
+            // PRIORIDADE 6: Buffs de combate
+            else if (skillnum == SPELL_STRENGTH && !IS_AFFECTED(ch, skillnum)) {
+                current_score = 105; target_char = ch;
+            } else if (skillnum == SPELL_ARMOR && !IS_AFFECTED(ch, skillnum)) {
+                current_score = 100; target_char = ch;
+            }
+            
+            // PRIORIDADE 7: Debuffs táticos inimigos
+            else if (skillnum == SPELL_BLINDNESS && !IS_AFFECTED(FIGHTING(ch), AFF_BLIND)) {
+                current_score = 95; target_char = FIGHTING(ch);
+            } else if (skillnum == SPELL_SLEEP && !IS_AFFECTED(FIGHTING(ch), AFF_SLEEP)) {
+                current_score = 95; target_char = FIGHTING(ch);
+            } else if (skillnum == SPELL_PARALYSE && !IS_AFFECTED(FIGHTING(ch), AFF_PARALIZE)) {
+                current_score = 95; target_char = FIGHTING(ch);
+            } else if (skillnum == SPELL_CURSE && !IS_AFFECTED(FIGHTING(ch), AFF_CURSE)) {
                 current_score = 90; target_char = FIGHTING(ch);
+            } else if (skillnum == SPELL_POISON && !IS_AFFECTED(FIGHTING(ch), AFF_POISON)) {
+                current_score = 85; target_char = FIGHTING(ch);
             }
-            // Prioridade 3: Dano Direto
+            
+            // PRIORIDADE 8: Dano direto
             else if (spell->mag_flags & MAG_DAMAGE) {
-                current_score = 80; target_char = FIGHTING(ch);
+                // Danos mais altos para magias mais poderosas
+                if (skillnum == SPELL_DISINTEGRATE || skillnum == SPELL_FIREBALL || skillnum == SPELL_LIGHTNING_BOLT) {
+                    current_score = 80; target_char = FIGHTING(ch);
+                } else if (skillnum == SPELL_DISPEL_EVIL || skillnum == SPELL_DISPEL_GOOD || skillnum == SPELL_HARM) {
+                    current_score = 75; target_char = FIGHTING(ch);
+                } else {
+                    current_score = 70; target_char = FIGHTING(ch);
+                }
             }
+            
         } else {
             /* ** MODO DE PREPARAÇÃO (Fora de Combate) ** */
-            // 1. Limpar itens amaldiçoados.
-            if (IS_SET(spell->mag_flags, MAG_UNAFFECTS) && skillnum == SPELL_REMOVE_CURSE) {
-                struct obj_data *cursed_item = find_cursed_item_in_inventory(ch); /* Nova função auxiliar */
-                if (cursed_item) { current_score = 90; target_obj = cursed_item; }
+            
+            // PRIORIDADE 1: Remover problemas sérios
+            if (IS_AFFECTED(ch, AFF_CURSE) && skillnum == SPELL_REMOVE_CURSE) {
+                current_score = 180; target_char = ch;
+            } else if (IS_AFFECTED(ch, AFF_POISON) && skillnum == SPELL_REMOVE_POISON) {
+                current_score = 170; target_char = ch;
+            } else if (IS_AFFECTED(ch, AFF_BLIND) && skillnum == SPELL_CURE_BLIND) {
+                current_score = 160; target_char = ch;
             }
-            // 2. Abençoar itens (se for GOOD).
+            
+            // PRIORIDADE 2: Limpar itens amaldiçoados
+            else if (IS_SET(spell->mag_flags, MAG_UNAFFECTS) && skillnum == SPELL_REMOVE_CURSE) {
+                struct obj_data *cursed_item = find_cursed_item_in_inventory(ch);
+                if (cursed_item) { current_score = 150; target_obj = cursed_item; }
+            }
+            
+            // PRIORIDADE 3: Proteções defensivas supremas
+            else if (skillnum == SPELL_SANCTUARY && !IS_AFFECTED(ch, AFF_SANCTUARY)) {
+                current_score = 140; target_char = ch;
+            } else if (skillnum == SPELL_STONESKIN && !IS_AFFECTED(ch, AFF_STONESKIN)) {
+                current_score = 135; target_char = ch;
+            } else if (skillnum == SPELL_GLOOMSHIELD && !IS_AFFECTED(ch, AFF_GLOOMSHIELD)) {
+                current_score = 130; target_char = ch;
+            }
+            
+            // PRIORIDADE 4: Escudos de dano e proteções
+            else if (skillnum == SPELL_FIRESHIELD && !IS_AFFECTED(ch, AFF_FIRESHIELD)) {
+                current_score = 125; target_char = ch;
+            } else if (skillnum == SPELL_THISTLECOAT && !IS_AFFECTED(ch, AFF_THISTLECOAT)) {
+                current_score = 125; target_char = ch;
+            } else if (skillnum == SPELL_WINDWALL && !IS_AFFECTED(ch, AFF_WINDWALL)) {
+                current_score = 125; target_char = ch;
+            } else if (skillnum == SPELL_SOUNDBARRIER && !IS_AFFECTED(ch, AFF_SOUNDBARRIER)) {
+                current_score = 120; target_char = ch;
+            }
+            
+            // PRIORIDADE 5: Proteções de alinhamento
+            else if (skillnum == SPELL_PROT_FROM_EVIL && IS_GOOD(ch) && !IS_AFFECTED(ch, AFF_PROTECT_EVIL)) {
+                current_score = 115; target_char = ch;
+            } else if (skillnum == SPELL_PROT_FROM_GOOD && IS_EVIL(ch) && !IS_AFFECTED(ch, AFF_PROTECT_GOOD)) {
+                current_score = 115; target_char = ch;
+            }
+            
+            // PRIORIDADE 6: Melhoramento de itens
             else if (IS_SET(spell->mag_flags, MAG_MANUAL) && (skillnum == SPELL_BLESS_OBJECT) && IS_GOOD(ch)) {
-                struct obj_data *item_to_buff = find_unblessed_weapon_or_armor(ch); /* Nova função auxiliar */
-                if (item_to_buff) { current_score = 60; target_obj = item_to_buff; }
+                struct obj_data *item_to_buff = find_unblessed_weapon_or_armor(ch);
+                if (item_to_buff) { current_score = 110; target_obj = item_to_buff; }
+            } else if (skillnum == SPELL_ENCHANT_WEAPON) {
+                // Procura arma não encantada
+                struct obj_data *weapon = GET_EQ(ch, WEAR_WIELD);
+                if (weapon && GET_OBJ_TYPE(weapon) == ITEM_WEAPON) {
+                    current_score = 105; target_obj = weapon;
+                }
             }
-            // 3. Usar buffs defensivos genéricos.
+            
+            // PRIORIDADE 7: Buffs físicos
+            else if (skillnum == SPELL_STRENGTH && !IS_AFFECTED(ch, skillnum)) {
+                current_score = 100; target_char = ch;
+            } else if (skillnum == SPELL_ARMOR && !IS_AFFECTED(ch, skillnum)) {
+                current_score = 95; target_char = ch;
+            }
+            
+            // PRIORIDADE 8: Habilidades de detecção
+            else if (skillnum == SPELL_DETECT_INVIS && !IS_AFFECTED(ch, AFF_DETECT_INVIS)) {
+                current_score = 90; target_char = ch;
+            } else if (skillnum == SPELL_DETECT_MAGIC && !IS_AFFECTED(ch, AFF_DETECT_MAGIC)) {
+                current_score = 85; target_char = ch;
+            } else if (skillnum == SPELL_DETECT_ALIGN && !IS_AFFECTED(ch, AFF_DETECT_ALIGN)) {
+                current_score = 85; target_char = ch;
+            } else if (skillnum == SPELL_SENSE_LIFE && !IS_AFFECTED(ch, AFF_SENSE_LIFE)) {
+                current_score = 80; target_char = ch;
+            } else if (skillnum == SPELL_INFRAVISION && !IS_AFFECTED(ch, AFF_INFRAVISION)) {
+                current_score = 75; target_char = ch;
+            }
+            
+            // PRIORIDADE 9: Habilidades de movimento/utilidade
+            else if (skillnum == SPELL_FLY && !IS_AFFECTED(ch, AFF_FLYING)) {
+                current_score = 70; target_char = ch;
+            } else if (skillnum == SPELL_WATERWALK && !IS_AFFECTED(ch, AFF_WATERWALK)) {
+                current_score = 65; target_char = ch;
+            } else if (skillnum == SPELL_BREATH && !IS_AFFECTED(ch, AFF_BREATH)) {
+                current_score = 60; target_char = ch;
+            }
+            
+            // PRIORIDADE 10: Habilidades furtivas/táticas
+            else if (skillnum == SPELL_INVISIBLE && !IS_AFFECTED(ch, AFF_INVISIBLE)) {
+                current_score = 55; target_char = ch;
+            }
+            
+            // PRIORIDADE 11: Buffs genéricos restantes
             else if (IS_SET(spell->mag_flags, MAG_AFFECTS) && IS_SET(spell->targ_flags, TAR_SELF_ONLY)) {
-                 /* Verifica qualquer magia de buff defensivo (ex: armor, stoneskin) */
-                 if (!IS_AFFECTED(ch, skillnum)) { current_score = 50; target_char = ch; }
+                // Verifica qualquer magia de buff defensivo genérico
+                if (!IS_AFFECTED(ch, skillnum)) { 
+                    current_score = 50; target_char = ch; 
+                }
             }
         }
         
         if (current_score > best_score) {
-            best_score = current_score; item_to_use = obj; spellnum_to_cast = skillnum;
+            best_score = current_score; 
+            item_to_use = obj; 
+            spellnum_to_cast = skillnum;
+            // Store the correct target
+            best_target_char = target_char;
+            best_target_obj = target_obj;
         }
     }
 
@@ -1317,7 +1474,7 @@ bool mob_handle_item_usage(struct char_data *ch)
             return FALSE;
         }
 
-        if (cast_spell(ch, target_char, target_obj, spellnum_to_cast)) {
+        if (cast_spell(ch, best_target_char, best_target_obj, spellnum_to_cast)) {
             ch->ai_data->genetics.use_tendency += 2;
         } else {
             ch->ai_data->genetics.use_tendency -= 2;
