@@ -170,6 +170,7 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
+GenWimpy: 4
 E
 #2513
 guardioes maiores olhos~
@@ -182,6 +183,7 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
+GenWimpy: 1
 E
 #2514
 mago visitante~
@@ -701,6 +703,7 @@ revolver de repulsão.
 20 5 -2 20d20+200 3d6+5
 2150 26850
 9 9 2
+GenWimpy: 1
 E
 T 3009
 #2553

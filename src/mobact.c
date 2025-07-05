@@ -517,6 +517,7 @@ bool mob_handle_grouping(struct char_data *ch)
             /* O próprio mob 'ch' é o melhor candidato a líder, então ele cria o grupo. */
             struct group_data *new_group;
             CREATE(new_group, struct group_data, 1);
+	    add_to_list(new_group, group_list);
 	    new_group->leader = NULL;
             new_group->members = create_list();
             SET_BIT(new_group->group_flags, GROUP_ANON);

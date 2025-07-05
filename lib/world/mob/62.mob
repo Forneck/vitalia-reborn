@@ -8,7 +8,7 @@ Este veado é muito bonito.
 2097280 0 0 0 0 0 0 0 0 E
 3 18 1 3d5+33 1d7+0
 0 350
-8 8 0
+9 9 0
 E
 #6201
 coelho~
@@ -20,7 +20,7 @@ Ele é um pequeno e peludo roedor com grandes orelhas.
 2097280 0 0 0 0 0 0 0 0 E
 0 20 3 1d5+3 1d3+0
 0 25
-8 8 0
+9 9 0
 E
 #6202
 esquilo~
@@ -32,11 +32,11 @@ Ele é um esquilo pequeno e marrom.  Um excelente espécime saltador.
 2097280 0 0 0 0 0 0 0 0 E
 0 20 -1 1d3+0 1d1+1
 0 10
-8 8 0
+9 9 0
 E
 #6203
 cacador orc~
-O caçador orc~
+o caçador orc~
 Um caçador orc olha para você com seus odiosos olhos.
 ~
 Ele parece nervoso, violento e talvez um pouco doente.
@@ -45,7 +45,7 @@ Sua pele verde está definitivamente pintada e ele parece coxear um pouco...
 2101280 0 0 0 2048 0 0 0 -350 E
 7 14 5 3d5+83 2d3+2
 0 2250
-8 8 1
+9 9 1
 E
 #6204
 chefe orc~
@@ -59,7 +59,7 @@ como ele é bom em ambas as coisas.
 2103330 0 0 0 2048 0 0 0 -600 E
 10 11 2 3d5+120 2d7+2
 17 9000
-8 8 1
+9 9 1
 E
 #6205
 mulher orc~
@@ -72,7 +72,7 @@ dissesse "Não me mate!!".
 2097280 0 0 0 2048 0 0 0 -50 E
 5 16 7 3d5+58 2d4+0
 0 900
-8 8 2
+9 9 2
 E
 #6206
 crianca orc~
@@ -84,7 +84,7 @@ Ela é escabrosa e parece estar coberta por chagas.
 2097280 0 0 0 2048 0 0 0 50 E
 3 18 9 3d5+30 1d7+0
 0 350
-8 8 2
+9 9 2
 E
 #6207
 mulher orc~
@@ -123,7 +123,7 @@ mais.
 2097152 0 0 0 2048 0 0 0 0 E
 6 20 1 3d5+60 1d1+0
 0 10
-8 8 0
+9 9 0
 E
 #6210
 feiticeiro elfo elfico elstar~
@@ -137,7 +137,7 @@ destruir você, não é mesmo?
 2099234 0 0 0 2064 0 0 0 -1000 E
 15 6 -8 3d5+183 2d8+2
 10000 21000
-8 8 1
+9 9 1
 E
 #6211
 crianca elfo duende aprendiz~
@@ -150,7 +150,7 @@ aqui.
 2097154 0 0 0 2048 0 0 0 600 E
 3 18 6 3d5+35 2d4+0
 0 400
-8 8 1
+9 9 1
 E
 #6212
 coisa mutante~
@@ -163,7 +163,7 @@ para longe do seu caminho para chegar até você.
 2099232 0 0 0 2048 0 0 0 -800 E
 12 9 -2 3d5+170 2d7+4
 0 15000
-8 8 0
+9 9 0
 E
 #6213
 coisa mutante~
@@ -176,6 +176,7 @@ para longe de seu caminho, para chegar até você.
 2099202 0 0 0 2048 0 0 0 -800 E
 12 9 -2 3d5+170 2d7+4
 0 15000
-8 8 0
+9 9 0
+GenWimpy: 1
 E
 $

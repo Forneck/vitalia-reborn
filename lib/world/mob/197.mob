@@ -9,7 +9,7 @@ seu.  Ele olha para sua bolsa como quem olha para uma presa fácil.
 2117312 0 0 0 1116248 0 0 0 -500 E
 43 -3 -10 15d6+900 5d6+12
 1000 46000
-8 8 1
+9 9 1
 E
 #19701
 guarda orc negro~
@@ -23,7 +23,7 @@ direção.
 2117122 0 0 0 67864 0 0 0 -500 E
 46 -10 -15 15d6+1000 5d8+16
 1000 56000
-8 8 1
+9 9 1
 E
 #19702
 guarda orc negro chefe~
@@ -36,7 +36,7 @@ Você vê um orc de tamanho considerável..
 2117122 0 0 0 67864 0 0 0 -500 E
 50 -15 -20 15d6+1500 8d6+35
 8000 100000
-8 8 1
+9 9 1
 E
 #19703
 aranha negra~
@@ -50,7 +50,7 @@ VOCÊ!!
 2097316 0 0 0 2128 0 0 0 0 E
 11 14 0 15d6+100 2d6+4
 0 6000
-8 8 2
+9 9 2
 E
 #19704
 cobra negra~
@@ -64,7 +64,8 @@ que você está esperando?  AO ATAQUE!
 2097184 0 0 0 1050704 0 0 0 0 E
 12 13 0 15d6+100 2d6+6
 0 8000
-8 8 2
+9 9 2
+GenWimpy: 2
 E
 #19705
 cobra verde~
@@ -77,7 +78,7 @@ sabe?
 2097188 0 0 0 2064 0 0 0 -15 E
 15 12 -1 15d6+300 2d4+10
 0 10000
-8 8 2
+9 9 2
 E
 #19706
 enorme orc~
@@ -90,7 +91,7 @@ quase brilha.  Ele olha para você e procura sua faca..
 2115780 0 0 0 1050712 0 0 0 -500 E
 48 -10 -25 15d6+800 10d4+23
 3000 90000
-8 8 1
+9 9 1
 E
 #19707
 orc negro grande~
@@ -104,7 +105,8 @@ desejá-la.
 2115684 0 0 0 256 0 0 0 -600 E
 48 -8 -20 15d6+800 10d6+28
 2000 150000
-8 8 1
+9 9 1
+GenWimpy: 1
 E
 #19708
 orc lider negro~
@@ -120,7 +122,7 @@ sim pela sua força incomensurável.
 2287746 0 0 0 1116496 0 0 0 -1000 E
 80 -18 -35 15d6+5000 10d8+41
 13000 225000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 19
 StrAdd: 100
@@ -140,7 +142,7 @@ Você vê um velho e profundo conhecedor das ervas medicinais.
 2353298 0 0 0 67924 0 0 0 0 E
 50 -4 -17 15d6+1000 3d6+22
 3000 100000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 16
 Dex: 18
@@ -151,7 +153,7 @@ Cha: 18
 E
 #19710
 feiticeiro orc~
-O feiticeiro orc~
+o feiticeiro orc~
 Um orc com vestes negras está parado olhando para o nada.
 ~
 Você olha para esta criatura e ela nem se quer toma conhecimento de sua
@@ -160,7 +162,7 @@ chegada.  Parece muito ocupado fingindo-se de inteligente..
 2097346 0 0 0 2424 0 0 0 -500 E
 49 5 -12 15d6+600 3d4+15
 7500 70000
-8 8 1
+9 9 1
 E
 #19711
 mulher bela donzela~
@@ -188,7 +190,7 @@ falta de habilidade para batalhas do que por filosofia...
 2113542 0 0 0 2424 0 0 0 -800 E
 40 3 -13 15d6+500 3d6+17
 3000 77000
-8 8 1
+9 9 1
 E
 #19713
 velho homem~
@@ -204,7 +206,7 @@ história ainda está por ser contada ..
 2310146 0 0 0 67920 0 0 0 1000 E
 90 -19 -25 15d6+3000 8d6+38
 15000 192000
-8 8 1
+9 9 1
 E
 #19714
 prisioneiro elfo~
@@ -218,7 +220,7 @@ beleza.
 2113538 0 0 0 2128 0 0 0 500 E
 53 0 -14 15d6+700 4d6+15
 1000 40000
-8 8 1
+9 9 1
 E
 #19715
 prisioneiro elfo~
@@ -231,7 +233,7 @@ sua sorte há de mudar em breve.
 2113542 0 0 0 67648 0 0 0 500 E
 56 0 -20 15d6+900 4d6+18
 1000 49000
-8 8 1
+9 9 1
 E
 #19716
 orc crianca~
@@ -244,11 +246,12 @@ aprender os movimentos de luta dos orcs em treinamento.
 2113538 0 0 0 2128 0 0 0 -500 E
 13 4 -2 15d6+300 3d6+10
 100 24000
-8 8 2
+9 9 2
+GenWimpy: 1
 E
 #19717
 general orc~
-O General Orc~
+o General Orc~
 Um orc com aparência imponente grita com todo mundo.
 ~
 Ele anda de um lado para o outro, grita com todos e olha furiosamente para
@@ -257,7 +260,7 @@ cada um dos presentes nesta sala.  INCLUSIVE VOCÊ!!!
 2121894 0 0 0 67928 0 0 0 -1000 E
 90 -24 -35 15d6+3500 8d6+39
 3000 192000
-8 8 1
+9 9 1
 E
 #19718
 aventureiro perdido~
@@ -273,6 +276,6 @@ sua familia ou amigos..  Ele segue sempre em busca de novos desafios..
 2344966 0 0 0 1640784 0 0 0 0 E
 76 0 -13 15d6+970 8d6+19
 1000 90000
-8 8 1
+9 9 1
 E
 $

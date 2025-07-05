@@ -8,7 +8,8 @@ Ele olha calmamente para você e continua a andar lenta e graciosamente.
 2097252 0 0 0 0 0 0 0 0 E
 2 19 9 2d4+16 1d4+1
 0 400
-8 8 1
+9 9 1
+GenWimpy: 4
 E
 #4901
 elfo gato~
@@ -32,7 +33,7 @@ Ele parece não se preocupar com você, e continua a se banhar.
 2097154 0 0 0 0 0 0 0 0 E
 2 18 10 2d4+20 1d3+1
 0 500
-8 8 1
+9 9 1
 E
 #4903
 cobra madeira jaculi~
@@ -44,7 +45,7 @@ Ela parece não se importar muito com sua presença.
 2097216 0 0 0 0 0 0 0 0 E
 3 18 8 6d5+22 1d7+1
 0 600
-8 8 1
+9 9 1
 E
 #4904
 rã ra~
@@ -56,7 +57,7 @@ Ela parece estar faminta.
 2097216 0 0 0 0 0 0 0 0 E
 2 18 10 2d4+20 1d3+1
 0 500
-8 8 2
+9 9 2
 E
 #4905
 babuino selvagem~
@@ -68,7 +69,7 @@ Ele pula rapidamente pelas árvores, procurando algo para mastigar.
 2097216 0 0 0 0 0 0 0 0 E
 4 17 6 8d5+20 1d6+1
 0 500
-8 8 1
+9 9 1
 E
 #4906
 macaco carnívoro~
@@ -81,7 +82,7 @@ sobrevivência de outros animais.
 2097344 0 0 0 0 0 0 0 0 E
 2 18 10 2d4+20 1d3+1
 0 500
-8 8 1
+9 9 1
 E
 #4907
 xamã xama atom~
@@ -94,7 +95,7 @@ concentração.
 2097216 0 0 0 0 0 0 0 0 E
 4 17 6 8d5+20 1d6+1
 250 500
-8 8 1
+9 9 1
 E
 #4908
 atom~
@@ -107,7 +108,7 @@ nas árvores em que residem.
 2097154 0 0 0 0 0 0 0 350 E
 4 17 5 1d8+46 2d4+0
 300 600
-8 8 1
+9 9 1
 E
 #4909
 atom~
@@ -120,7 +121,7 @@ povo, e parece um tanto quanto prematura.
 2097154 0 0 0 0 0 0 0 350 E
 4 17 5 1d8+46 2d4+0
 300 600
-8 8 2
+9 9 2
 E
 #4910
 criança crianca atom~
@@ -133,7 +134,7 @@ qualquer coisa.
 2097282 0 0 0 0 0 0 0 250 E
 3 18 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #4911
 dríade driade~
@@ -145,7 +146,7 @@ Ela acena educadamente para você e continua seu caminho.
 2097344 0 0 0 0 0 0 0 450 E
 5 17 5 4d6+42 1d5+1
 109 1200
-8 8 2
+9 9 2
 E
 #4912
 sílfide silfide~
@@ -158,7 +159,7 @@ contagiante.
 2097344 0 0 0 0 0 0 0 450 E
 5 17 5 4d6+43 1d5+1
 118 1200
-8 8 2
+9 9 2
 E
 #4913
 duende pequeno~
@@ -170,7 +171,7 @@ Ele olha para você com um sorriso maldoso. Assim que você pisca ele some.
 2097344 0 0 0 0 0 0 0 450 E
 5 17 5 4d6+45 1d5+1
 127 1200
-8 8 1
+9 9 1
 E
 #4914
 ettercap~
@@ -182,7 +183,7 @@ Ele parece estar acordado, mas sua cabeça tomba a todo momento.
 2097282 0 0 0 0 0 0 0 -300 E
 5 16 5 4d6+38 2d4+0
 900 1200
-8 8 1
+9 9 1
 E
 #4915
 xamã xama grigue~
@@ -195,7 +196,7 @@ ao seu redor.
 2097154 0 0 0 0 0 0 0 100 E
 4 17 6 1d4+50 1d6+1
 390 1000
-8 8 1
+9 9 1
 E
 #4916
 grigue~
@@ -207,7 +208,7 @@ Ele trabalha duro para o bem-estar da árvore.
 2097154 0 0 0 0 0 0 0 0 E
 3 18 7 2d6+40 1d7+0
 200 800
-8 8 1
+9 9 1
 E
 #4917
 grigue~
@@ -219,7 +220,7 @@ Ela parece preocupada.  Ela anda incessantemente procurando algo errado.
 2097154 0 0 0 0 0 0 0 0 E
 3 18 6 2d6+34 1d7+0
 200 850
-8 8 2
+9 9 2
 E
 #4918
 grigue criança~
@@ -231,6 +232,6 @@ Ela parece calma, muito mais do que todos os grigues na árvore.
 2097282 0 0 0 0 0 0 0 0 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 $

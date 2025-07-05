@@ -10,6 +10,7 @@ venenosa desta cobra derrubou muitos faraós poderosos.
 5 14 8 5d5+50 1d6+1
 10 1000
 9 9 0
+GenWimpy: 3
 E
 T 3008
 #5301
@@ -27,6 +28,7 @@ vítimas antes do bote.
 7 13 7 7d7+70 2d4+2
 25 2000
 9 9 0
+GenWimpy: 2
 E
 T 3008
 #5302
@@ -42,6 +44,7 @@ mãos.
 11 10 6 11d11+110 3d5+3
 100 10000
 9 9 2
+GenWimpy: 1
 E
 #5303
 guardiao piramide~
@@ -56,6 +59,7 @@ roupas cor de areia.
 8 12 5 8d8+80 2d6+2
 200 3750
 9 9 1
+GenWimpy: 4
 E
 #5304
 ladrao tumba~
@@ -68,6 +72,7 @@ O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
 10 10 5 10d10+100 2d6+3
 500 9000
 9 9 1
+GenWimpy: 1
 E
 T 3007
 #5305
@@ -112,6 +117,7 @@ etéreo espírito de um morto.
 12 8 4 12d12+120 1d6+6
 750 15000
 9 9 0
+GenWimpy: 4
 E
 #5308
 homem areia~
@@ -126,6 +132,7 @@ quentes e arenosos.
 14 6 2 14d14+140 2d7+4
 1500 18000
 9 9 1
+GenWimpy: 1
 E
 #5309
 efreeti~
@@ -185,6 +192,7 @@ dos seus primos mais velhos.
 15 0 -23 15d15+650 4d10+25
 7500 21000
 9 9 2
+GenWimpy: 3
 E
 #5313
 ginoesfinge esfinge~

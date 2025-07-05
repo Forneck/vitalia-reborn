@@ -8,7 +8,7 @@ O doente mental tem apenas um olhar vazio.
 2097160 0 0 0 0 0 0 0 0 E
 2 19 9 2d4+16 1d4+1
 250 400
-8 8 1
+9 9 1
 E
 #20101
 enfermeira curandeira e conselheira~
@@ -20,7 +20,7 @@ A bondosa e velha enfermeira sorri de volta para você.
 2097162 0 0 0 0 0 0 0 0 E
 2 19 9 2d4+16 1d4+1
 250 400
-8 8 2
+9 9 2
 E
 #20102
 O Guarda~
@@ -33,7 +33,7 @@ Esse Guarda parece forte. Ele carrega uma clava e parece ser terrível.
 2097154 0 0 0 0 0 0 0 0 E
 3 18 7 2d6+34 1d7+0
 500 800
-8 8 1
+9 9 1
 E
 #20103
 medico Asilo~
@@ -47,7 +47,7 @@ na sua suposição.
 2097154 0 0 0 0 0 0 0 0 E
 5 16 5 4d6+38 2d4+0
 1000 1200
-8 8 1
+9 9 1
 E
 #20104
 paciente mental~
@@ -61,7 +61,7 @@ roupa que ela viu, feroz, com uma luz triunfante em seus olhos.
 2097216 0 0 0 0 0 0 0 -250 E
 1 20 10 1d4+8 1d4+0
 0 100
-8 8 1
+9 9 1
 E
 #20105
 paciente mental~
@@ -74,7 +74,7 @@ Há uma grande possibilidade de que Ted seja um grande amigo imaginário...
 2097216 0 0 0 0 0 0 0 -250 E
 1 20 10 1d4+8 1d4+0
 0 100
-8 8 0
+9 9 0
 E
 #20106
 cerebro~
@@ -91,7 +91,7 @@ espera o dia em que poderá sair desse terrível lugar.
 2098752 0 0 0 0 0 0 0 -1000 E
 7 15 5 3d5+85 2d4+1
 1000 3000
-8 8 1
+9 9 1
 E
 #20107
 pesquisador distraido~
@@ -107,7 +107,7 @@ terminam por revelar o eterno paciente dentro dele.
 2097220 0 0 0 0 0 0 0 500 E
 5 15 9 10d5+20 2d3+2
 1100 1000
-8 8 1
+9 9 1
 E
 #20108
 assistente~
@@ -123,7 +123,7 @@ azuis, ela demonstra seu lado sério.
 2097220 0 0 0 0 0 0 0 -500 E
 2 18 10 2d4+20 1d3+1
 250 500
-8 8 2
+9 9 2
 E
 #20109
 jovem mulher Eva~
@@ -137,7 +137,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 2097216 0 0 0 0 0 0 0 100 E
 3 18 8 6d5+22 1d7+1
 700 600
-8 8 2
+9 9 2
+GenWimpy: 1
 E
 #20110
 jovem mulher Sybila~
@@ -151,7 +152,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 2097216 0 0 0 0 0 0 0 100 E
 3 18 8 6d5+22 1d7+1
 700 600
-8 8 2
+9 9 2
+GenWimpy: 2
 E
 #20111
 jovem mulher Anouk~
@@ -165,7 +167,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 2097216 0 0 0 0 0 0 0 100 E
 3 18 8 6d5+22 1d7+1
 700 600
-8 8 2
+9 9 2
 E
 #20112
 jovem mulher Tricia~
@@ -179,7 +181,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 2097216 0 0 0 0 0 0 0 100 E
 3 18 8 6d5+22 1d7+1
 700 600
-8 8 2
+9 9 2
+GenWimpy: 2
 E
 #20113
 jovem mulher Lorraine~
@@ -193,7 +196,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 2097216 0 0 0 0 0 0 0 100 E
 3 18 8 6d5+22 1d7+1
 700 600
-8 8 2
+9 9 2
+GenWimpy: 2
 E
 #20114
 jovem mulher Renee~
@@ -207,7 +211,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 2097216 0 0 0 0 0 0 0 100 E
 3 18 8 6d5+22 1d7+1
 700 600
-8 8 2
+9 9 2
 E
 #20115
 jovem mulher Stela~
@@ -221,7 +225,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 2097216 0 0 0 0 0 0 0 100 E
 3 18 8 6d5+22 1d7+1
 700 600
-8 8 2
+9 9 2
 E
 #20116
 jovem mulher dorothy~
@@ -237,7 +241,7 @@ original.
 2097216 0 0 0 0 0 0 0 100 E
 3 18 8 6d5+22 1d7+1
 700 600
-8 8 2
+9 9 2
 E
 #20117
 jovem mulher gabrielle~
@@ -252,7 +256,8 @@ original.
 2097216 0 0 0 0 0 0 0 100 E
 3 18 8 6d5+22 1d7+1
 700 600
-8 8 2
+9 9 2
+GenWimpy: 1
 E
 #20118
 jovem mulher nancy~
@@ -266,7 +271,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 2097216 0 0 0 0 0 0 0 100 E
 3 18 8 6d5+22 1d7+1
 700 600
-8 8 2
+9 9 2
 E
 #20119
 Spike~
@@ -281,7 +286,7 @@ algum dia alguém traga-lhe água.
 2097220 0 0 0 0 0 0 0 0 E
 1 20 10 1d1+19 1d3+1
 50 220
-8 8 1
+9 9 1
 E
 #20120
 barba ruiva~
@@ -296,7 +301,7 @@ Apesar dos tratamentos aqui, ele permanece tão insano como sempre.
 2097220 0 0 0 0 0 0 0 -500 E
 2 18 10 2d4+20 1d3+1
 250 500
-8 8 1
+9 9 1
 E
 #20121
 Nero~
@@ -311,7 +316,7 @@ todos pudessem viver com relativa calma e paz de espírito.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20122
 Lucrecia Borgia mulher~
@@ -326,7 +331,7 @@ dessa rainha tirana. Ela permanece aqui, recebendo o melhor tratamento possível
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 2
+9 9 2
 E
 #20123
 Wlad empalador~
@@ -341,7 +346,7 @@ moscas atraídas pelo mel. Cuidado.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20124
 toulan~
@@ -357,7 +362,7 @@ marionetes venha e lhe tire desse lugar morto.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20125
 genghis khan~
@@ -371,7 +376,7 @@ constantemente fala algo sobre homens que viajaram no espaço.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20126
 atila huno ser hostil~
@@ -387,7 +392,7 @@ sedado ser.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20127
 cristal meth~
@@ -402,7 +407,7 @@ pessoas inocentes para prender em sua teia de maldade.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20128
 Palenre~
@@ -416,7 +421,7 @@ sobre os pais que nunca teve.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20129
 malvada bruxa oeste~
@@ -432,7 +437,7 @@ feitiço.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20130
 Tharnt demonio~
@@ -447,7 +452,7 @@ inimaginável que, de alguma forma, levará à liberdade eterna.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20131
 ryth~
@@ -462,7 +467,7 @@ em solidariedade a ele.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20132
 Galenzi~
@@ -476,7 +481,7 @@ ele parece ser apenas um pacato cidadão vitaliano.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20133
 henrique VIII~
@@ -491,7 +496,7 @@ mulher foi cortada. Preso e mandado de volta, ele espera por reabilitação.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20134
 Mahunt~
@@ -508,7 +513,7 @@ possa garantir sua presença aqui.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20135
 Hojenkis estripador~
@@ -523,7 +528,7 @@ ele pensa na sua próxima vítima.
 2097380 0 0 0 0 0 0 0 -800 E
 3 19 7 1d10+30 1d4+1
 0 300
-8 8 1
+9 9 1
 E
 #20160
 cervo~
@@ -535,7 +540,7 @@ O cervo parece estar com bastante fome, pois não para de mastigar.
 2097216 0 0 0 0 0 0 0 -250 E
 1 20 10 1d4+8 1d4+0
 0 100
-8 8 1
+9 9 1
 E
 #20161
 Ogdlen anao~
@@ -547,7 +552,7 @@ Ogdlen é um anão velho, com uma barriga de cerveja como prova.
 2097216 0 0 0 0 0 0 0 -250 E
 1 20 10 1d4+8 1d4+0
 0 100
-8 8 1
+9 9 1
 E
 #20162
 goblin enfurecido~
@@ -559,7 +564,7 @@ Ele parece estar pronto para chutar alguns traseiros.
 2097252 0 0 0 0 0 0 0 -500 E
 4 17 5 1d8+46 2d4+0
 300 600
-8 8 1
+9 9 1
 E
 #20163
 gigante~
@@ -574,7 +579,7 @@ inteligência maléfica enquanto um sorriso maldoso aparece em sua boca.
 2097252 0 0 0 0 0 0 0 -500 E
 4 17 5 1d8+46 2d4+0
 300 600
-8 8 1
+9 9 1
 E
 #20164
 Odglen anao~
@@ -586,7 +591,7 @@ Odglen é um velho anão com uma barriga de cerveja como prova disso.
 2097216 0 0 0 0 0 0 0 -250 E
 1 20 10 1d4+8 1d4+0
 0 100
-8 8 1
+9 9 1
 E
 #20165
 Oglden anao~
@@ -598,7 +603,7 @@ Oglden é um velho anão com uma barriga de cerveja como prova disso.
 2097216 0 0 0 0 0 0 0 -250 E
 1 20 10 1d4+8 1d4+0
 0 100
-8 8 1
+9 9 1
 E
 #20166
 vermelho capa mago~
@@ -610,7 +615,7 @@ Capas vermelhas geralmente representam maldade.
 2097154 0 0 0 0 0 0 0 0 E
 5 16 5 4d6+38 2d4+0
 1000 1200
-8 8 1
+9 9 1
 E
 #20167
 branca capa mago~
@@ -622,7 +627,7 @@ Capas brancas geralmente representam bons magos.
 2097154 0 0 0 0 0 0 0 0 E
 5 16 5 4d6+38 2d4+0
 1000 1200
-8 8 1
+9 9 1
 E
 #20168
 cleriga~
@@ -635,7 +640,7 @@ infeliz.
 2097154 0 0 0 0 0 0 0 0 E
 5 16 5 4d6+38 2d4+0
 1000 1200
-8 8 2
+9 9 2
 E
 #20169
 goblin infeliz~
@@ -647,7 +652,7 @@ Esse gigante deve achar goblins muito gostosos, há vários deles por aqui.
 2097154 0 0 0 0 0 0 0 0 E
 5 16 5 4d6+38 2d4+0
 1000 1200
-8 8 1
+9 9 1
 E
 #20170
 espinhento inseto~
@@ -660,6 +665,6 @@ espinhos.
 2097154 0 0 0 0 0 0 0 0 E
 5 16 5 4d6+38 2d4+0
 1000 1200
-8 8 1
+9 9 1
 E
 $
