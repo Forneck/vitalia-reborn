@@ -1473,6 +1473,29 @@ struct group_data * create_group(struct char_data * leader)
   return (new_group);
 }
 
+/* Helper function to check if a character is actually in a group's member list */
+bool is_char_in_group_list(struct char_data *ch, struct group_data *group)
+{
+  struct char_data *member;
+  struct iterator_data iterator;
+  bool found = FALSE;
+  
+  if (!group || !group->members || group->members->iSize == 0)
+    return FALSE;
+    
+  member = (struct char_data *) merge_iterator(&iterator, group->members);
+  while (member && !found) {
+    if (member == ch) {
+      found = TRUE;
+      break;
+    }
+    member = next_in_list(&iterator);
+  }
+  
+  remove_iterator(&iterator);
+  return found;
+}
+
 void free_group(struct group_data * group)
 {
   struct char_data *tch;
@@ -1501,6 +1524,14 @@ void leave_group(struct char_data *ch)
 	
   if ((group = ch->group) == NULL)
     return;
+
+  /* Check if the character is actually in the group's member list before removing */
+  if (!is_char_in_group_list(ch, group)) {
+    mudlog(CMP, LVL_GOD, TRUE, "WARNING: Character %s attempting to leave group but not in member list.", 
+           GET_NAME(ch));
+    ch->group = NULL; /* Clear the group reference to fix inconsistency */
+    return;
+  }
 
   send_to_group(NULL, group, "%s não é mais membro de seu grupo.", GET_NAME(ch));
 
