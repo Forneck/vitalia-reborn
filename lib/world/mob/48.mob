@@ -9,7 +9,7 @@ para explodir qualquer coisa que tente passar por aqui.
 2119730 0 0 0 0 0 0 0 0 E
 45 3 -4 16d17+1450 5d5+20
 2000 79000
-8 8 1
+9 9 1
 E
 #4801
 homem palido~
@@ -24,7 +24,7 @@ na cabeça.
 2353202 0 0 0 0 0 0 0 -900 E
 50 0 -5 20d22+3000 5d9+20
 4978 71000
-8 8 1
+9 9 1
 E
 #4802
 mae aboleth~
@@ -37,7 +37,7 @@ comprimento, sua pele é verde azulada com manchas de cor cinza.
 2097186 0 0 0 0 0 0 0 -700 E
 41 5 -4 14d16+1300 3d6+15
 0 59000
-8 8 2
+9 9 2
 E
 #4803
 bebe aboleth~
@@ -49,7 +49,7 @@ Ele se parece com sua mãe porém é menor e não tem manchas cinza.
 2128002 0 0 0 0 0 0 0 -200 E
 34 8 -3 11d15+1175 3d4+13
 0 39000
-8 8 1
+9 9 1
 E
 #4804
 largo morcego~
@@ -62,7 +62,7 @@ ataque.
 2103330 0 0 0 0 0 0 0 0 E
 27 8 -1 9d11+1200 2d4+12
 0 39000
-8 8 1
+9 9 1
 E
 #4805
 escravo imundo~
@@ -75,7 +75,7 @@ apenas trabalhar.
 2097286 0 0 0 0 0 0 0 -100 E
 24 9 0 8d10+1200 2d3+10
 0 20000
-8 8 1
+9 9 1
 E
 #4806
 reptil carnicento~
@@ -88,7 +88,9 @@ procurando por restos perdidos em batalhas.
 2099808 0 0 0 0 0 0 0 -400 E
 26 9 0 9d11+950 4d4+11
 0 56000
-8 8 1
+9 9 1
+GenWimpy: 2
+GenRoam: 3
 E
 #4807
 beijo morte~
@@ -101,7 +103,7 @@ desconfortavel quando encarca um dos olhos.
 2189362 0 0 0 0 0 0 0 -1000 E
 43 3 -4 14d18+2500 4d9+7
 2541 103000
-8 8 1
+9 9 1
 BareHandAttack: 16
 E
 #4808
@@ -115,7 +117,7 @@ para atacar...
 2226210 0 0 0 0 0 0 0 -400 E
 39 2 -6 13d16+2100 8d6+5
 3180 103000
-8 8 1
+9 9 1
 E
 #4809
 lider bugbear~
@@ -128,7 +130,7 @@ com os outros bugbears porém mais largo e com presas maiores.
 2226210 0 0 0 0 0 0 0 -700 E
 38 2 -5 13d14+2475 8d5+6
 2651 103000
-8 8 1
+9 9 1
 E
 #4810
 bugbear xama~
@@ -140,7 +142,7 @@ Parece que esse bugbear sabe ler alguma coisa. Ele está lendo um Tomo Antigo.
 2127906 0 0 0 0 0 0 0 -900 E
 37 3 -4 12d15+2150 3d5+4
 1876 80000
-8 8 1
+9 9 1
 E
 #4811
 criatura profundezas~
@@ -154,7 +156,7 @@ da destruição.
 2226210 0 0 0 0 0 0 0 -1000 E
 44 2 -5 16d16+2625 4d5+6
 3687 105000
-8 8 2
+9 9 2
 E
 #4812
 feyr dorminhoco~
@@ -168,7 +170,7 @@ X'Raantra's.
 2185250 0 0 0 0 0 0 0 -1000 E
 47 2 -5 17d16+2750 6d6+7
 3411 76000
-8 8 1
+9 9 1
 E
 #4813
 gargula~
@@ -181,7 +183,7 @@ mesmo se movendo?
 2099234 0 0 0 0 0 0 0 -900 E
 43 3 -4 14d18+1600 4d5+6
 1432 64000
-8 8 1
+9 9 1
 BareHandAttack: 8
 E
 #4814
@@ -195,7 +197,7 @@ qualquer forma, parece que um dos olhos está encarando você.
 2099234 0 0 0 0 0 0 0 -990 E
 46 3 -4 16d18+1800 4d7+16
 3711 84000
-8 8 1
+9 9 1
 BareHandAttack: 8
 E
 #4815
@@ -209,7 +211,7 @@ forma nunca se sabe.
 2127906 0 0 0 0 0 0 0 -500 E
 28 3 -1 9d12+1150 3d4+16
 1089 90000
-8 8 1
+9 9 1
 E
 #4816
 monstro~
@@ -222,7 +224,7 @@ realidade ele é um minotauro, porém o corpo não parece com o de um humano.
 2103330 0 0 0 0 0 0 0 -400 E
 36 3 -4 12d14+1425 5d4+17
 1099 100000
-8 8 1
+9 9 1
 BareHandAttack: 6
 E
 #4817
@@ -237,7 +239,7 @@ e escamosa.
 2291746 0 0 0 0 0 0 0 -800 E
 48 3 -4 17d18+2200 5d6+22
 3677 111000
-8 8 1
+9 9 1
 E
 #4818
 assombracao~
@@ -251,7 +253,7 @@ arranhar e causar dor.
 2119730 0 0 0 0 0 0 0 -1000 E
 49 3 -4 17d20+2700 5d7+20
 4211 120000
-8 8 2
+9 9 2
 E
 #4819
 monte argila~
@@ -266,7 +268,7 @@ ferir quem incomoda-lo.
 2103330 0 0 0 0 0 0 0 -200 E
 42 5 -4 14d17+2175 4d7+15
 0 121000
-8 8 1
+9 9 1
 E
 #4820
 homem argila~
@@ -279,7 +281,7 @@ ter muita força. Ele deve estar esperando uma oportunidade para atacar.
 2103346 0 0 0 0 0 0 0 -300 E
 35 5 -4 12d13+1800 4d5+13
 1099 80000
-8 8 1
+9 9 1
 E
 #4821
 membro bugbear~
@@ -292,7 +294,7 @@ deixando-o com uma aparência assustadora.
 2120194 0 0 0 0 0 0 0 -200 E
 31 5 -2 10d1+1500 4d5+12
 1566 70000
-8 8 1
+9 9 1
 E
 #4822
 dragao profundezas~

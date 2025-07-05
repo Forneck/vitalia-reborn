@@ -466,6 +466,7 @@ Esse gato negro aparenta ser muito esperto e corajoso.
 7 19 0 2d5+150 1d2+2
 0 100
 9 9 1
+GenWimpy: 2
 E
 #8136
 escaravelho~
@@ -478,7 +479,7 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 5 15 0 3d4+400 1d2+3
 0 100
 9 9 1
-GenWimpy: 3
+GenWimpy: 6
 E
 #8137
 rato~
@@ -560,6 +561,7 @@ Você mal o vê diante da escuridão.
 30 5 0 3d3+600 1d2+2
 500 15000
 9 9 1
+GenWimpy: 1
 E
 #8143
 cordoniz~
@@ -575,6 +577,7 @@ sua busca por comida.
 5 19 0 2d2+50 2d1+3
 0 500
 9 9 1
+GenWimpy: 3
 E
 #8144
 explorador homem~
@@ -602,7 +605,7 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 1
+GenWimpy: 5
 E
 #8146
 crianca egipcia~
@@ -685,6 +688,7 @@ que deve ser sua boca.
 30 10 0 2d5+1000 2d2+14
 0 21000
 9 9 2
+GenWimpy: 6
 E
 #8152
 soldado egipcio~

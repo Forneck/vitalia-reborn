@@ -36,7 +36,7 @@ espírito da terra e a mãe das belas valquírias.
 2357266 0 0 0 330104 0 0 0 1000 E
 108 -50 -60 5d15+21000 10d15+70
 100000 6000000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -109,7 +109,7 @@ responsável pela chuva, pelo brilho do sol e por todos os frutos da terra.
 2357266 0 0 0 338296 0 0 0 1000 E
 108 -45 -55 5d5+22000 10d16+65
 90000 6500000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -129,7 +129,7 @@ o deus do sol, sob cuja luz os elfos luminosos estavam sempre brincando.
 2357266 0 0 0 330104 0 0 0 800 E
 108 -40 -60 5d15+21500 10d16+67
 80000 6500000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -151,7 +151,7 @@ aprenderam a respeita-lo através de sua força e seu martelo.
 2357266 0 0 0 330104 0 0 0 800 E
 108 -50 -70 5d15+23000 10d16+72
 50000 6200000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -182,7 +182,7 @@ Odin e irmão de Thor.
 2357266 0 0 0 330104 0 0 0 800 E
 108 -45 -68 5d15+21500 10d15+68
 100000 6800000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -205,7 +205,7 @@ possui três filhos:  O lobo Fenris, a serpente de Midgaard e Hela, a morte.
 2353170 0 0 0 329848 0 0 0 -600 E
 107 -35 -45 5d15+19000 10d14+50
 70000 4800000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 25
 Dex: 25
@@ -226,7 +226,7 @@ considerada a mãe terra.
 2357266 0 0 0 330104 0 0 0 1000 E
 108 -48 -60 5d15+21500 10d14+62
 150000 6000000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -247,7 +247,7 @@ todos os amantes podem invocá-la com proveito.
 2357266 0 0 0 330104 0 0 0 800 E
 107 -40 -55 5d15+18000 10d14+55
 50000 5000000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -288,7 +288,7 @@ quer entre os deuses quer entre os homens, atrocidade comparável a essa.
 2357266 0 0 0 330104 0 0 0 1000 E
 108 -50 -90 5d15+22500 10d16+70
 0 5700000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -310,7 +310,7 @@ recuperar, imediatamente a mocidade.
 2353154 0 0 0 264528 0 0 0 800 E
 105 -30 -40 5d15+15000 10d12+45
 70000 2300000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 20
 Dex: 20
@@ -330,7 +330,7 @@ guerreiros e sua esposa Iduna é a guardiã da mocidade.
 2353170 0 0 0 264568 0 0 0 1000 E
 106 -35 -42 5d15+16000 10d14+50
 80000 2500000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -350,7 +350,7 @@ Njord é um poderoso guerreiro, forte e concessor de riquezas.
 2357266 0 0 0 264568 0 0 0 1000 E
 106 -38 -40 5d15+16800 10d14+52
 70000 2800000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -373,7 +373,7 @@ Asgard, para que as folhas permaneçam verdes.
 2357266 0 0 0 264528 0 0 0 400 E
 106 -30 -45 5d15+16000 10d14+42
 50000 3000000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -395,7 +395,7 @@ presente.
 2357266 0 0 0 264528 0 0 0 400 E
 106 -30 -48 5d15+16500 10d14+42
 50000 3000000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -416,7 +416,7 @@ da monumental raiz que penetra em Asgard.  Skuld é a dona do futuro.
 2357266 0 0 0 264528 0 0 0 400 E
 106 -45 -50 5d15+17000 10d15+42
 50000 3000000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -437,7 +437,7 @@ porque de chamarem Trudr, de a força.
 2353154 0 0 0 264528 0 0 0 400 E
 105 -35 -45 5d15+16500 10d12+40
 80000 2000000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 18
@@ -460,7 +460,7 @@ como o poder.
 2353154 0 0 0 264528 0 0 0 400 E
 105 -40 -48 5d15+15000 10d13+38
 70000 1800000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 18
 Dex: 18
@@ -480,7 +480,7 @@ inteligência, Modi sempre tem a solução para todos os problemas.
 2353154 0 0 0 264528 0 0 0 400 E
 105 -35 -48 5d15+15000 10d12+35
 70000 1500000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 18
 Dex: 18
@@ -508,7 +508,7 @@ facilmente reconhecida, pois seu corpo era metade cor-de-carne e metade azul
 2353170 0 0 0 329848 0 0 0 -1000 E
 108 -60 -80 5d15+23000 10d18+60
 100000 6000000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -534,7 +534,7 @@ arte.
 2353154 0 0 0 264528 0 0 0 400 E
 100 -40 -50 5d15+18000 10d12+49
 60000 2500000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 21
 Dex: 21
@@ -554,7 +554,7 @@ mais temidos guerreiros do gelo.
 2353154 0 0 0 2384 0 0 0 400 E
 100 -30 -48 5d15+17000 10d12+47
 50000 2100000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 20
 Dex: 20
@@ -576,7 +576,7 @@ governou-os com disciplina férrea.
 2353154 0 0 0 264272 0 0 0 -400 E
 100 -35 -40 5d15+18000 10d12+35
 50000 800000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 22
 Dex: 22
@@ -599,7 +599,7 @@ da relva crescendo e da lã crescendo em um carneiro.
 2357266 0 0 0 264528 0 0 0 800 E
 106 -40 -50 5d15+18000 10d15+52
 50000 3000000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 25
 Dex: 25
@@ -620,7 +620,7 @@ marcas de sangue da sua última refeição.
 2353170 0 0 0 264272 0 0 0 360 E
 100 -35 -50 5d15+22000 10d15+45
 0 900000
-8 8 1
+9 9 1
 BareHandAttack: 4
 Str: 18
 Dex: 18
@@ -643,7 +643,7 @@ a ordem.
 2353170 0 0 0 65536 0 0 0 -700 E
 100 -20 -30 5d15+15000 10d10+41
 50000 800000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 18
 Dex: 18
@@ -669,7 +669,7 @@ deuses e Asgard, no dia do crepúsculo dos deuses, o Ragnarok.
 2353154 0 0 0 17572176 0 0 0 500 E
 101 -25 -20 5d15+8000 10d10+38
 40000 600000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 18
 Dex: 18
@@ -696,7 +696,7 @@ boreal.
 2353170 0 0 0 71117180 0 0 0 1000 E
 105 -30 -30 5d15+13000 10d10+45
 60000 2000000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 21
 Dex: 21
@@ -723,7 +723,7 @@ boreal.
 2353170 0 0 0 71117180 0 0 0 1000 E
 105 -30 -28 5d15+12000 10d10+45
 60000 1400000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 21
 Dex: 21
@@ -750,7 +750,7 @@ boreal
 2353170 0 0 0 71117180 0 0 0 1000 E
 105 -30 -29 5d15+11500 10d10+45
 60000 1350000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 21
 Dex: 21
@@ -777,7 +777,7 @@ boreal
 2353170 0 0 0 71117180 0 0 0 1000 E
 105 -30 -27 5d15+11800 10d10+45
 60000 1400000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 21
 Dex: 21
@@ -804,7 +804,7 @@ boreal
 2353170 0 0 0 71117180 0 0 0 1000 E
 105 -30 -28 5d15+11850 10d10+45
 60000 1400000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 21
 Dex: 21
@@ -831,7 +831,7 @@ boreal
 2353170 0 0 0 71117180 0 0 0 1000 E
 105 -30 -28 5d15+11850 10d10+45
 60000 1400000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 21
 Dex: 21
@@ -858,7 +858,7 @@ boreal
 2353170 0 0 0 71117180 0 0 0 1000 E
 105 -30 -29 5d15+11350 10d10+45
 60000 1400000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 21
 Dex: 21
@@ -885,7 +885,7 @@ boreal
 2353170 0 0 0 71117180 0 0 0 1000 E
 105 -30 -28 5d15+11450 10d10+45
 60000 1400000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 21
 Dex: 21
@@ -912,7 +912,7 @@ boreal
 2353170 0 0 0 71117180 0 0 0 1000 E
 105 -30 -25 5d15+11050 10d10+45
 60000 1400000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 21
 Dex: 21
@@ -933,7 +933,7 @@ a sua própria manutenção.
 2121796 0 0 0 524544 0 0 0 700 E
 55 -10 -5 5d15+2000 8d8+25
 25000 50000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 13
 Dex: 15
@@ -956,7 +956,7 @@ terras desconhecidas.
 2127874 0 0 0 0 0 0 0 360 E
 80 -25 -20 5d15+6500 10d6+35
 100000 300000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 18
 Dex: 18
@@ -978,7 +978,7 @@ corroí perpetuamente a raiz que penetra em Niffhelheim.
 2878994 0 0 0 85786712 0 0 0 -1000 E
 95 -35 -21 5d15+7500 10d9+45
 0 600000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 18
 Dex: 18
@@ -1002,7 +1002,7 @@ dormir, beber ou falar.
 2121858 0 0 0 524288 0 0 0 360 E
 55 -15 -6 5d15+2500 10d8+25
 20000 130000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 15
 Dex: 18
@@ -1023,7 +1023,7 @@ aventuras, carregando sua mochila que continha as suas provisões.
 2125826 0 0 0 524288 0 0 0 600 E
 40 -5 -4 5d15+2700 7d8+25
 10000 250000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 15
 Dex: 18
@@ -1047,7 +1047,7 @@ para decidi e verificar se Balder era mesmo tão amado pelos deuses.
 2193426 0 0 0 794880 0 0 0 600 E
 105 -25 -20 5d15+15000 10d9+40
 10000 1500000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 21
 Dex: 21
@@ -1067,7 +1067,7 @@ Ele vaga pelas terras de Niffheleim, cuidando e semeando as trevas.
 2353154 0 0 0 1638488 0 0 0 -1000 E
 90 -20 -25 5d15+6500 7d8+35
 0 800000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 18
 Dex: 18
@@ -1088,7 +1088,7 @@ notícias e acontecimento do mundo dos mortos para a terrível Hela.
 2353154 0 0 0 1638488 0 0 0 -1000 E
 90 -15 -22 5d15+6000 8d8+28
 0 700000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 18
 Dex: 18
@@ -1111,7 +1111,7 @@ rumo a terra do gelo.
 2127874 0 0 0 0 0 0 0 -600 E
 60 -11 -20 5d15+3500 9d7+28
 50000 280000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 18
 Dex: 18
@@ -1133,7 +1133,7 @@ Eric, o ruivo.
 2127874 0 0 0 0 0 0 0 -480 E
 55 -10 -18 5d15+3000 5d5+25
 30000 150000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 18
 Dex: 18
@@ -1154,7 +1154,7 @@ algas dos mares gelados.
 2353170 0 0 0 16777600 0 0 0 -400 E
 100 -30 -40 5d15+16000 10d11+41
 70000 1500000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 21
 Dex: 21
@@ -1177,7 +1177,7 @@ provocarem as tempestades e os ventos.
 2353170 0 0 0 256 0 0 0 -360 E
 100 -32 -35 5d15+14800 10d12+40
 30000 1200000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 21
 Dex: 21
@@ -1197,7 +1197,7 @@ tempestades, apenas soprando ou batendo uma das suas mãos sobre a outra.
 2353170 0 0 0 256 0 0 0 -360 E
 100 -35 -38 5d15+15200 10d11+38
 40000 1400000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 21
 Dex: 21
@@ -1222,7 +1222,7 @@ empunhava.
 2287618 0 0 0 329792 0 0 0 -500 E
 85 -20 -20 5d15+7500 9d8+34
 80000 800000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 18
 Dex: 18
@@ -1244,7 +1244,7 @@ Jotunheim.
 2353170 0 0 0 256 0 0 0 -760 E
 100 -45 -40 5d15+18000 10d12+45
 65000 700000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 21
 Dex: 21
@@ -1265,7 +1265,7 @@ todo o corpo dele, com exceção da sua cabeça, que está coberta por nuvens.
 2353170 0 0 0 256 0 0 0 -460 E
 100 -30 -35 5d15+15800 10d11+39
 40000 300000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 21
 Dex: 21
@@ -1287,7 +1287,7 @@ qualquer custo.
 2353170 0 0 0 327680 0 0 0 -360 E
 100 -35 -48 5d15+17500 9d10+55
 120000 1600000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 21
 Dex: 21
@@ -1307,7 +1307,7 @@ Você observa um magnífico gigante de cabelos ruivos e olhos vermelhos.
 2351122 0 0 0 327680 0 0 0 -360 E
 90 -20 -20 5d15+10000 9d10+40
 0 500000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 18
 Dex: 18
@@ -1329,7 +1329,7 @@ futuro.
 2351122 0 0 0 65792 0 0 0 -360 E
 100 -25 -20 5d15+9000 10d10+37
 80000 600000
-8 8 2
+9 9 2
 BareHandAttack: 6
 Str: 21
 Dex: 21
@@ -1350,7 +1350,7 @@ Sleipnir, o cavalo do deus Odin.
 2449472 0 0 0 328064 0 0 0 600 E
 50 -5 -18 5d15+5000 7d9+28
 0 50000
-8 8 1
+9 9 1
 Str: 18
 Dex: 18
 Int: 18
@@ -1371,7 +1371,7 @@ todo sobre o mundo e, quando volta, conta ao deus tudo que viu e ouviu.
 2846722 0 0 0 68223232 0 0 0 650 E
 30 0 -8 5d15+1200 6d6+8
 0 12000
-8 8 1
+9 9 1
 BareHandAttack: 1
 Str: 18
 Dex: 18
@@ -1393,7 +1393,7 @@ todo sobre o mundo e, quando volta, conta ao deus tudo que viu e ouviu.
 2846722 0 0 0 68223232 0 0 0 650 E
 30 0 -8 5d15+1200 6d6+8
 0 12000
-8 8 1
+9 9 1
 BareHandAttack: 1
 Str: 18
 Dex: 18
@@ -1416,7 +1416,7 @@ bebida.
 2127874 0 0 0 65792 0 0 0 700 E
 40 -10 -9 5d15+2500 8d8+20
 0 78000
-8 6 1
+9 6 1
 BareHandAttack: 4
 Str: 18
 Dex: 18
@@ -1439,7 +1439,7 @@ bebida.
 2127874 0 0 0 65792 0 0 0 700 E
 40 -10 -9 5d15+2500 8d8+20
 0 780000
-8 6 1
+9 6 1
 BareHandAttack: 4
 Str: 18
 Dex: 18
@@ -1461,7 +1461,7 @@ novamente todas as noites.
 2385954 0 0 0 65792 0 0 0 360 E
 65 -10 -15 5d15+3800 4d10+25
 0 104000
-8 8 1
+9 9 1
 BareHandAttack: 9
 Str: 18
 Dex: 18
@@ -1481,7 +1481,7 @@ fornece hidromel em abundância aos heróis do exercito de Odin.
 2384002 0 0 0 1114368 0 0 0 450 E
 40 -5 -5 5d15+1500 4d6+20
 0 90000
-8 8 2
+9 9 2
 BareHandAttack: 5
 Str: 18
 Dex: 18
@@ -1508,7 +1508,7 @@ pequena ilha de Lyngvi, no lago de Amsvartnir.
 2385954 0 0 0 346176 0 0 0 -800 E
 75 -25 -15 5d15+4500 10d9+28
 5000 100000
-8 8 1
+9 9 1
 BareHandAttack: 4
 Str: 18
 Dex: 18
@@ -1530,7 +1530,7 @@ correr mais que o vento.
 2449472 0 0 0 328144 0 0 0 800 E
 70 -15 -15 5d15+4100 5d9+39
 0 350000
-8 8 1
+9 9 1
 Str: 21
 Dex: 18
 Int: 18
@@ -1550,7 +1550,7 @@ tremem.  Gulltopp é fiel a Heindall e possui ele como seu único dono.
 2449472 0 0 0 328064 0 0 0 600 E
 55 -5 -12 5d15+3900 5d9+22
 0 80000
-8 8 1
+9 9 1
 Str: 21
 Dex: 18
 Int: 18
@@ -1573,7 +1573,7 @@ terra.
 2615314 0 0 0 17041616 0 0 0 -900 E
 100 -55 -45 5d15+19000 10d15+55
 100000 1500000
-8 8 2
+9 9 2
 BareHandAttack: 4
 Str: 21
 Dex: 21
@@ -1595,7 +1595,7 @@ forças a cidade de ataques malignos.
 2619410 0 0 0 17050104 0 0 0 800 E
 101 -75 -50 5d15+20000 20d25+70
 0 5000000
-8 8 1
+9 9 1
 BareHandAttack: 6
 Str: 21
 Dex: 21
@@ -1617,7 +1617,7 @@ chegada do Ragnarok.
 2113728 0 0 0 786688 0 0 0 500 E
 15 0 -1 5d7+250 4d4+5
 0 15000
-8 8 1
+9 9 1
 BareHandAttack: 1
 Cha: 18
 E
@@ -1638,7 +1638,7 @@ ciclo.
 2351158 0 0 0 67438680 0 0 0 -600 E
 90 -25 -28 5d15+7000 8d10+32
 80000 180000
-8 8 1
+9 9 1
 BareHandAttack: 4
 Str: 18
 Dex: 18
@@ -1658,7 +1658,7 @@ a guardiã da celestial Yggdrasill e defenderá a árvore de todos os males.
 3139602 0 0 0 68495696 0 0 0 800 E
 70 -15 -20 5d15+3800 9d9+32
 0 300000
-8 8 1
+9 9 1
 BareHandAttack: 1
 Str: 18
 Dex: 18
@@ -1678,7 +1678,7 @@ ao senhor dos trovões e servirá sempre ao seu senhor.
 2383874 0 0 0 65792 0 0 0 400 E
 30 -5 -3 5d7+1500 4d7+18
 0 60000
-8 8 1
+9 9 1
 Str: 15
 Dex: 15
 Con: 18
@@ -1695,7 +1695,7 @@ ao senhor dos trovões e servirá sempre ao seu senhor.
 2383874 0 0 0 65792 0 0 0 400 E
 30 -5 -3 5d7+1500 4d7+18
 0 60000
-8 8 1
+9 9 1
 Str: 15
 Dex: 15
 Con: 18
@@ -1714,7 +1714,7 @@ fica no topo da árvore.
 2113538 0 0 0 1114112 0 0 0 360 E
 10 0 0 5d7+200 4d4+8
 0 15000
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
 #12675
@@ -1731,7 +1731,7 @@ transformavam imediatamente em pedras.
 2291718 0 0 0 75856 0 0 0 -700 E
 50 -20 -10 5d10+2300 10d9+30
 25000 180000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -1754,7 +1754,7 @@ paz, apenas com um simples olhar.  Dain é o soberano dos elfos luminosos.
 2351106 0 0 0 67447164 0 0 0 900 E
 101 -35 -28 5d15+5200 10d11+38
 8000 800000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 21
 Dex: 21
@@ -1776,7 +1776,7 @@ mais perto dela você observa em seu rosto uma expressão de dor e terror.
 2351168 0 0 0 84475904 0 0 0 -370 E
 50 -12 -15 5d15+3200 8d10+28
 0 56000
-8 8 2
+9 9 2
 Str: 18
 Dex: 18
 Int: 18
@@ -1799,7 +1799,7 @@ embarcação e pelo seu instinto selvagem e violento.
 2125892 0 0 0 0 0 0 0 360 E
 50 -10 -8 5d15+3500 7d7+27
 2000 56100
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -1824,7 +1824,7 @@ marítimas.
 2125892 0 0 0 0 0 0 0 360 E
 50 -10 -8 5d15+3500 7d7+27
 2000 56100
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -1849,7 +1849,7 @@ os mais destemidos e corajosos em alto mar.
 2125892 0 0 0 0 0 0 0 360 E
 50 -10 -9 5d15+3600 7d7+27
 2000 56500
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -1873,7 +1873,7 @@ vikings não prosperariam.
 2125892 0 0 0 0 0 0 0 360 E
 50 0 -5 5d15+2800 5d7+12
 1500 41000
-8 8 2
+9 9 2
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -1897,7 +1897,7 @@ vikings não prosperariam.
 2125892 0 0 0 0 0 0 0 360 E
 50 0 -5 5d15+2800 5d7+12
 1500 4100
-8 8 2
+9 9 2
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -1923,7 +1923,7 @@ do gelo, a Islândia, não teriam conquistado tal feito.
 2125892 0 0 0 0 0 0 0 360 E
 50 0 -5 5d15+2890 5d7+14
 1500 41000
-8 8 2
+9 9 2
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -1945,7 +1945,7 @@ ajude-as a sobreviver nessas gélidas e desérticas terras gelo.
 2125892 0 0 0 0 0 0 0 500 E
 20 0 -3 5d15+1200 3d6+15
 500 13000
-8 8 2
+9 9 2
 BareHandAttack: 13
 E
 #12685
@@ -1960,7 +1960,7 @@ do frio.
 2453506 0 0 0 65536 0 0 0 360 E
 25 0 0 5d3+550 3d4+18
 0 36000
-8 8 1
+9 9 1
 Str: 18
 Dex: 18
 Int: 15
@@ -1982,7 +1982,7 @@ trazem sorte para a viajem.
 2351122 0 0 0 208 0 0 0 360 E
 101 -70 -80 10d5+6500 28d25+85
 0 3000000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 25
 Dex: 25
@@ -2004,7 +2004,7 @@ roupas delicadas e transparentes, e amam a luz.
 2351106 0 0 0 67447164 0 0 0 900 E
 60 -15 -20 5d15+2300 7d10+28
 3000 220000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Str: 18
 Dex: 18
@@ -2026,7 +2026,7 @@ roupas delicadas e transparentes, e amam a luz.
 2351106 0 0 0 67447164 0 0 0 900 E
 60 -18 -20 5d15+2400 7d10+30
 35000 260000
-8 8 2
+9 9 2
 BareHandAttack: 12
 Str: 18
 Dex: 18
@@ -2049,7 +2049,7 @@ pedras.
 2291718 0 0 0 75856 0 0 0 -700 E
 45 -5 -10 5d10+2000 5d7+22
 20000 90000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -2072,7 +2072,7 @@ pedras.
 2291718 0 0 0 75856 0 0 0 -700 E
 45 -10 -10 5d10+2100 5d7+25
 20000 80000
-8 8 2
+9 9 2
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -2093,7 +2093,7 @@ eles utilizarem as renas como um meio de transporte sobre a neve.
 2375872 0 0 0 0 0 0 0 400 E
 15 2 -2 5d7+450 4d4+15
 0 35000
-8 8 2
+9 9 2
 BareHandAttack: 11
 Str: 15
 Dex: 18
@@ -2114,7 +2114,7 @@ a doçura de uma criança.
 2179202 0 0 0 16777344 0 0 0 450 E
 12 2 -1 5d7+350 4d4+10
 0 28000
-8 8 2
+9 9 2
 BareHandAttack: 4
 Dex: 18
 Int: 18
@@ -2132,7 +2132,7 @@ Você observa um majestoso cisne de penas brancas e bico dourado.
 2687106 0 0 0 128 0 0 0 360 E
 10 2 0 5d7+150 4d4+5
 0 18000
-8 8 1
+9 9 1
 BareHandAttack: 4
 Cha: 18
 E
@@ -2148,7 +2148,7 @@ atravessasse o caminho.
 2115776 0 0 0 524288 0 0 0 360 E
 20 2 -2 5d7+480 4d4+20
 0 36000
-8 8 1
+9 9 1
 BareHandAttack: 3
 Str: 18
 Dex: 18
@@ -2168,7 +2168,7 @@ Os alces vivem nos bosques e florestas destas gélidas terras.
 2375872 0 0 0 0 0 0 0 360 E
 20 2 -3 5d7+500 4d4+20
 0 39000
-8 8 1
+9 9 1
 BareHandAttack: 11
 Str: 18
 Dex: 18
@@ -2188,7 +2188,7 @@ e seus potentes dentes poderiam causar sérios danos a viajantes descuidados.
 2113632 0 0 0 526336 0 0 0 360 E
 25 2 -3 5d7+550 4d4+22
 0 40000
-8 8 1
+9 9 1
 BareHandAttack: 4
 Str: 18
 Dex: 18
@@ -2196,6 +2196,7 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
 E
 #12697
 ave marinha~
@@ -2207,7 +2208,7 @@ Você observa uma bela ave marinha de penas brancas e amarelas.
 2637888 0 0 0 67108864 0 0 0 360 E
 10 2 0 5d7+200 4d4+7
 0 15000
-8 8 2
+9 9 2
 BareHandAttack: 1
 Str: 10
 Dex: 10
@@ -2215,6 +2216,7 @@ Int: 10
 Wis: 10
 Con: 10
 Cha: 18
+GenWimpy: 1
 E
 #12698
 berserk~
@@ -2229,7 +2231,7 @@ poderoso Odin.
 2156656 0 0 0 327936 0 0 0 -500 E
 50 -15 -15 5d10+2000 8d7+42
 35000 280000
-8 8 1
+9 9 1
 BareHandAttack: 13
 Str: 18
 Dex: 18
@@ -2237,6 +2239,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 2
+GenRoam: 12
 E
 #12699
 sif esposa~
@@ -2250,7 +2254,7 @@ substituindo assim os fios de cabelos cortados maleficamente por Loge.
 2285570 0 0 0 336128 0 0 0 600 E
 55 -20 -8 5d15+2500 8d8+32
 25000 100000
-8 8 2
+9 9 2
 BareHandAttack: 9
 Str: 18
 Dex: 18

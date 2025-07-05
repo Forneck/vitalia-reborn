@@ -9,7 +9,7 @@ amigável esta criaturinha.
 2097348 0 0 0 1048580 0 0 0 800 E
 12 9 1 150d1+20 2d7+5
 300 15000
-8 8 1
+9 9 1
 E
 #5702
 lobo~
@@ -22,7 +22,7 @@ VOCÊ não teria o mesmo gosto de um coelho.
 2097220 0 0 0 1048576 0 0 0 -300 E
 5 16 5 50d1+10 3d3+2
 0 2000
-8 8 1
+9 9 1
 E
 #5703
 coelho pardo~
@@ -35,7 +35,7 @@ em retirada..  OPA..  Lá vai seu almoço!
 2097344 0 0 0 0 0 0 0 400 E
 3 18 7 30d1+5 1d3+1
 0 600
-8 8 1
+9 9 1
 E
 #5704
 tomal mateiro~
@@ -48,11 +48,11 @@ forasteiro - o nome é Tomal..  Como vai?'
 2097348 0 0 0 256 0 0 0 800 E
 23 2 -2 400d1+250 3d8+8
 1000 70000
-8 8 1
+9 9 1
 E
 #5705
 demonio guardiao forma sombria~
-O guardião demônio~
+o guardião demônio~
 Uma forma sombria aparece da neblina.
 ~
 Você vê uma tenebrosa combinação de dentes e garras, o guardião demônio está
@@ -61,11 +61,11 @@ decidido a arrancar suas tripas.
 2097250 0 0 0 788736 0 0 0 -1000 E
 30 -1 -10 500d2+300 5d5+10
 10000 132317
-8 8 1
+9 9 1
 E
 #5706
 guarda sentinela graye~
-O guarda de Graye~
+o guarda de Graye~
 O guarda de Graye vigia em seu posto.
 ~
 O guarda sorri gentilmente dizendo, 'Melhor ficar perto de mim, amigo, é um
@@ -74,7 +74,8 @@ mundo perigoso lá fora.'
 2097218 0 0 0 256 0 0 0 900 E
 30 0 -2 200d2+200 3d6+11
 20000 40000
-8 8 1
+9 9 1
+GenWimpy: 2
 E
 #5707
 diabinho diabo~
@@ -87,7 +88,8 @@ se ele mordesse seu braço.
 2097252 0 0 0 1048576 0 0 0 -800 E
 8 12 3 50d1+10 3d3+6
 1 5000
-8 8 1
+9 9 1
+GenWimpy: 3
 E
 #5708
 menor demonio~
@@ -100,11 +102,11 @@ dentes.  Ele o fita com muita fúria em seus olhos.
 2097248 0 0 0 2097156 0 0 0 -900 E
 13 8 1 150d2+80 2d7+8
 1 15000
-8 8 1
+9 9 1
 E
 #5709
 cidadao graye homem~
-O cidadão Graye~
+o cidadão Graye~
 Um cidadão de Graye passa correndo olhando por sobre os ombros.
 ~
 O homem parece preocupado - Você também estaria se sua cidade estivesse
@@ -113,7 +115,7 @@ sitiada por demônios.
 2097344 0 0 0 256 0 0 0 700 E
 17 6 1 150d2+30 2d8+8
 1000 22000
-8 8 1
+9 9 1
 E
 #5710
 cidada mulher~
@@ -126,7 +128,7 @@ sitiada por demônios.
 2097280 0 0 0 256 0 0 0 700 E
 19 6 2 150d2+20 2d7+9
 3000 22000
-8 8 2
+9 9 2
 E
 #5711
 demonio maior~
@@ -139,11 +141,11 @@ conhecimento a não ser uma imensa sêde de poder e destruição.
 2097252 0 0 0 260 0 0 0 -900 E
 36 -2 -1 350d2+220 3d8+14
 5000 64000
-8 8 1
+9 9 1
 E
 #5712
 guardiao gruta espectro~
-O guardião da gruta~
+o guardião da gruta~
 Um espectro de sombra aparece violentamente em seu caminho.
 ~
 Tudo que você vê é um nevoeiro com dois grandes olhos vermelhos brilhando...
@@ -151,7 +153,7 @@ Tudo que você vê é um nevoeiro com dois grandes olhos vermelhos brilhando...
 2097250 0 0 0 260 0 0 0 -900 E
 35 -1 -3 800d1+250 3d7+13
 10000 125987
-8 8 1
+9 9 1
 E
 #5713
 guarda cela carcereiro~
@@ -165,7 +167,8 @@ armas..  Prisioneiro!'
 2097254 0 0 0 256 0 0 0 -800 E
 28 1 0 250d1+110 3d6+10
 5000 48999
-8 8 1
+9 9 1
+GenWimpy: 1
 E
 #5714
 rymat conselheiro~
@@ -179,11 +182,12 @@ lhe dá as costas e continua a lamentar-se, tremendo incontrolavelmente.
 2097218 0 0 0 256 0 0 0 900 E
 23 0 0 350d1+50 3d8+13
 1000 70000
-8 8 1
+9 9 1
+GenWimpy: 2
 E
 #5715
 irgon arque demonio~
-O Arque-Deomônio Irgon~
+o Arque-Deomônio Irgon~
 O Arque-Demônio emerge das sombras.
 ~
 Irgon olha para você com desprezo.  Suas costas oleosas refletem a luz das
@@ -193,7 +197,7 @@ tochas.  Uma grande garra branca aponta em sua direção e ele profetiza,
 2097250 0 0 0 262404 0 0 0 -900 E
 43 -3 -18 900d2+150 5d5+17
 29000 130000
-8 8 1
+9 9 1
 E
 #5716
 scrytin demonio discipulo~
@@ -209,7 +213,7 @@ morrer'
 2097248 0 0 0 65856 0 0 0 -999 E
 45 -4 -10 1000d2+250 4d8+18
 29000 140000
-8 8 1
+9 9 1
 E
 #5717
 relnar rei~
@@ -222,6 +226,6 @@ agora é capaz de compreender porque sua cidade é tão próspera e feliz.
 2097218 0 0 0 65856 0 0 0 999 E
 45 -6 -10 1000d2+250 4d8+19
 32000 150000
-8 8 1
+9 9 1
 E
 $

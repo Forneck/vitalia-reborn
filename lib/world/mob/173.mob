@@ -75,6 +75,7 @@ guerra.
 80 0 -13 2d12+1400 3d8+18
 8000 100444
 9 9 1
+GenWimpy: 1
 E
 #17306
 galahad cavaleiro~
@@ -224,6 +225,8 @@ da meia idade, mas ainda é um vigoroso combatente.
 60 4 -7 2d8+678 12d6+18
 10000 62000
 9 9 1
+GenWimpy: 1
+GenRoam: 1
 E
 #17316
 besta busca criatura~
@@ -348,7 +351,7 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 2
+GenWimpy: 4
 E
 #17325
 bufao dagonet bobo~
@@ -509,6 +512,7 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
+GenWimpy: 1
 E
 #17337
 demonio~

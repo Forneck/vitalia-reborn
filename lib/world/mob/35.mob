@@ -9,7 +9,7 @@ a poucas polegadas de sua cabeça, batendo suas asas e chiando muito alto.
 2163298 0 0 0 0 0 0 0 -700 E
 8 13 3 2d10+90 2d6+1
 0 3575
-8 8 0
+9 9 0
 E
 #3501
 montanha goblin~
@@ -23,7 +23,9 @@ para o jantar.
 2103392 0 0 0 2048 0 0 0 -250 E
 4 17 6 1d1+55 1d8+0
 50 600
-8 8 1
+9 9 1
+GenWimpy: 7
+GenRoam: 2
 E
 #3502
 goblin tenente~
@@ -36,7 +38,7 @@ homens para bater, mas talvez quem bata seja você...
 2103904 0 0 0 2064 0 0 0 -600 E
 7 15 3 1d12+100 2d5+1
 300 2000
-8 8 1
+9 9 1
 E
 #3503
 goblin lider~
@@ -49,7 +51,7 @@ espada curta e dispara em direção ao seu pescoço.
 2103846 0 0 0 2064 0 0 0 -900 E
 9 10 1 1d12+120 2d5+3
 1000 8000
-8 8 1
+9 9 1
 E
 #3504
 garoto pequeno~
@@ -76,7 +78,7 @@ hospedaria não é mais o lugar feliz que foi no passado.
 2103362 0 0 0 0 0 0 0 400 E
 10 8 1 1d12+200 2d8+1
 1500 7000
-8 8 1
+9 9 1
 E
 #3506
 bardo~
@@ -103,6 +105,6 @@ pequenos pedaços.
 2101440 0 0 0 589824 0 0 0 -900 E
 8 12 4 1d12+97 1d5+7
 1000 4000
-8 8 1
+9 9 1
 E
 $

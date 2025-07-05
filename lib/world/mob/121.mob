@@ -212,7 +212,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
+GenWimpy: 3
 E
 #12113
 beemonte~
@@ -246,7 +246,7 @@ BareHandAttack: 3
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
+GenWimpy: 5
 E
 #12115
 drakian~
@@ -347,7 +347,9 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
+GenWimpy: 7
+GenLoot: 1
+GenRoam: 3
 E
 #12121
 quimera leao bode dragao~
@@ -384,7 +386,7 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 4
 E
 #12123
 hidra gigante~
@@ -434,7 +436,8 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 14
+GenLoot: 1
 E
 #12126
 cynamolgus peludo~

@@ -44,8 +44,9 @@ mesmo os dragões pequenos podem causar um grande problema.
 4 17 6 1d4+50 1d6+1
 0 1000
 9 9 1
-GenWimpy: 4
-GenEquip: 3
+GenWimpy: 5
+GenEquip: 2
+GenRoam: 2
 E
 #18604
 novato guarda monstro~
@@ -89,7 +90,7 @@ vermes imundos, pequenos, cheios de pernas e marrons não estariam aqui!
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 8
+GenWimpy: 9
 E
 #18607
 novato zumbi~
@@ -104,7 +105,8 @@ espere!!  Ele parece que está querendo atacá-lo!
 4 17 5 1d8+46 2d4+0
 300 600
 9 9 0
-GenWimpy: 3
+GenWimpy: 5
+GenRoam: 4
 E
 #18608
 demônio demonio diabo travesso~
@@ -182,7 +184,8 @@ acabar logo com a mediocridade dele.
 1 20 10 1d1+19 1d3+1
 50 220
 9 9 1
-GenWimpy: 4
+GenWimpy: 6
+GenRoam: 3
 E
 #18613
 novata tagarela~
@@ -228,7 +231,8 @@ leu os arquivos de ajuda?
 5 15 9 10d5+20 2d3+2
 1100 1000
 9 9 1
-GenWimpy: 5
+GenWimpy: 6
 GenLoot: 1
+GenRoam: 1
 E
 $

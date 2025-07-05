@@ -12,7 +12,7 @@ suga sua essência.
 2123810 0 0 0 0 0 0 0 -100 E
 39 0 -20 1d39+2500 4d5+23
 0 73490
-8 8 1
+9 9 1
 BareHandAttack: 11
 Dex: 12
 Int: 13
@@ -32,7 +32,7 @@ aventureiros.
 2119842 0 0 0 0 0 0 0 -400 E
 40 0 -20 1d40+2525 4d5+20
 0 78392
-8 8 2
+9 9 2
 BareHandAttack: 2
 Dex: 12
 Int: 13
@@ -51,7 +51,7 @@ dentes afiadíssimos, que brilham com maldade.
 2127906 0 0 0 0 0 0 0 -535 E
 42 -8 -24 1d42+2700 4d5+21
 0 88777
-8 8 1
+9 9 1
 BareHandAttack: 4
 Dex: 12
 Int: 13
@@ -70,7 +70,7 @@ veneno, e que somente poucos, e poderosos seres conheçem o antidoto.
 2127906 0 0 0 0 0 0 0 -750 E
 46 -10 -24 1d46+3500 5d5+26
 0 111957
-8 8 2
+9 9 2
 BareHandAttack: 1
 Dex: 12
 Int: 13
@@ -90,7 +90,7 @@ mante-las precipitando.
 2288146 0 0 0 0 0 0 0 -750 E
 49 -12 -28 1d49+5000 5d5+28
 0 144680
-8 8 1
+9 9 1
 BareHandAttack: 12
 Dex: 12
 Int: 13
@@ -110,7 +110,7 @@ todas as maneiras possíveis.
 2288146 0 0 0 0 0 0 0 -750 E
 49 -12 -28 1d49+5000 5d5+28
 0 144680
-8 8 1
+9 9 1
 BareHandAttack: 12
 Dex: 12
 Int: 13
@@ -130,7 +130,7 @@ forma, e tempo.
 2288146 0 0 0 0 0 0 0 -750 E
 49 -12 -28 1d49+5000 5d5+28
 0 131528
-8 8 1
+9 9 1
 BareHandAttack: 12
 Dex: 12
 Int: 13
@@ -149,7 +149,7 @@ parece ser a causa!
 2288146 0 0 0 0 0 0 0 -750 E
 49 -12 -28 1d49+5000 5d5+28
 0 144680
-8 8 1
+9 9 1
 BareHandAttack: 12
 Dex: 12
 Int: 13
@@ -187,7 +187,7 @@ as ordens de Apocalipse.
 2353170 0 0 0 0 0 0 0 0 E
 50 -12 -28 1d50+6000 6d5+33
 2500 152329
-8 8 2
+9 9 2
 BareHandAttack: 8
 Dex: 12
 Int: 13
@@ -207,7 +207,7 @@ poderosos sob seu comando.
 2353170 0 0 0 0 0 0 0 0 E
 50 -12 -28 1d50+6000 6d5+33
 2500 152329
-8 8 2
+9 9 2
 BareHandAttack: 8
 Dex: 12
 Int: 13
@@ -246,7 +246,7 @@ o que é, e o que ainda está por vir...
 2353170 0 0 0 0 0 0 0 0 E
 50 -14 -28 1d50+6000 7d5+35
 2500 166177
-8 8 1
+9 9 1
 BareHandAttack: 13
 Dex: 12
 Int: 13
@@ -267,7 +267,7 @@ frente ao fatal poder de Apocalipse.
 2353202 0 0 0 0 0 0 0 -1000 E
 50 -14 -28 1d50+6000 7d5+35
 2500 1700000
-8 8 1
+9 9 1
 BareHandAttack: 12
 Dex: 12
 Int: 13
@@ -286,7 +286,7 @@ prazer de ver o nascimento de incontáveis seres.
 2353170 0 0 0 0 0 0 0 0 E
 47 -5 -28 1d47+4000 5d5+28
 2200 130094
-8 8 2
+9 9 2
 Dex: 12
 Int: 13
 Wis: 13
@@ -304,7 +304,7 @@ sabe que é assim que a vida funciona.
 2353170 0 0 0 0 0 0 0 0 E
 47 -5 -28 1d47+4000 5d5+28
 2200 130094
-8 8 2
+9 9 2
 Dex: 12
 Int: 13
 Wis: 13
@@ -323,7 +323,7 @@ mesma maneira.
 2353170 0 0 0 0 0 0 0 0 E
 47 -5 -28 1d47+4000 5d5+26
 2200 130094
-8 8 2
+9 9 2
 Dex: 12
 Int: 13
 Wis: 13
@@ -361,7 +361,7 @@ imunda surpresa para os descuidados aventureiros.
 2353202 0 0 0 0 0 0 0 -1000 E
 46 -7 -24 1d46+3500 5d5+26
 2100 123152
-8 8 1
+9 9 1
 BareHandAttack: 10
 Dex: 12
 Int: 13
@@ -380,7 +380,7 @@ que ele o leve pelo rio, do que tentar ir sozinho.
 2353170 0 0 0 0 0 0 0 0 E
 48 -8 -28 1d48+4500 5d5+28
 2300 149749
-8 8 1
+9 9 1
 BareHandAttack: 5
 Dex: 12
 Int: 13
@@ -398,7 +398,7 @@ três cabeças, ele se move graciosamente e com ótima discrição.
 2353202 0 0 0 0 0 0 0 0 E
 48 0 -28 1d48+4500 4d5+24
 2300 104791
-8 8 1
+9 9 1
 BareHandAttack: 4
 Dex: 12
 Int: 13
@@ -417,11 +417,12 @@ será.
 2353264 0 0 0 0 0 0 0 -800 E
 39 1 -20 1d39+2500 4d5+19
 0 73490
-8 8 1
+9 9 1
 BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
 E
 #3722
 demonio ossos~
@@ -438,7 +439,7 @@ o demônio de ossos as pegassem!
 2353264 0 0 0 0 0 0 0 -900 E
 42 6 -24 1d42+2700 4d5+21
 1700 97654
-8 8 1
+9 9 1
 BareHandAttack: 7
 Dex: 12
 Int: 13
@@ -455,7 +456,7 @@ Este guerreio esqueleto guarda a de Ilha de visitantes não desejados.
 2353264 0 0 0 0 0 0 0 -850 E
 44 5 -24 1d44+2900 4d5+22
 0 109954
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -492,7 +493,7 @@ negras de combate, este guerreiro é um notável oponente.
 2353264 0 0 0 0 0 0 0 -1000 E
 42 2 -24 1d42+2700 4d5+21
 1700 97654
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -510,7 +511,7 @@ de simplesmente matar aqueles que não se encaixaram.
 2287712 0 0 0 0 0 0 0 -1000 E
 45 1 -24 1d45+3000 4d5+22
 2000 127024
-8 8 1
+9 9 1
 Dex: 12
 Int: 13
 Wis: 13
@@ -527,7 +528,7 @@ pacto com Apocalipse, total obediência por mais tempo de divertimento.
 2353202 0 0 0 0 0 0 0 -1000 E
 46 -2 -24 1d46+3500 4d5+23
 2100 134347
-8 8 1
+9 9 1
 BareHandAttack: 7
 Dex: 12
 Int: 13
@@ -546,7 +547,7 @@ perfeito guardião das terras sob o poder de Apocalipse.
 2353202 0 0 0 0 0 0 0 -1000 E
 40 2 -20 1d40+2525 4d5+20
 1550 78392
-8 8 1
+9 9 1
 BareHandAttack: 2
 Dex: 12
 Int: 13
@@ -565,7 +566,7 @@ forte e mortal.
 2357282 0 0 0 0 0 0 0 -1000 E
 48 0 -28 1d48+4500 4d5+24
 2300 137270
-8 8 0
+9 9 0
 BareHandAttack: 1
 Dex: 12
 Int: 13
@@ -584,7 +585,7 @@ que descobrir.
 2353186 0 0 0 0 0 0 0 -1000 E
 50 0 -28 1d50+6000 4d5+25
 0 152329
-8 8 1
+9 9 1
 BareHandAttack: 12
 Dex: 12
 Int: 13
@@ -602,10 +603,11 @@ Ele é tímido e solitário, fujindo da luz e da multidão.
 2287712 0 0 0 616528 0 0 0 -200 E
 39 0 -20 1d39+2500 4d5+19
 1500 73490
-8 8 0
+9 9 0
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
 E
 #3732
 zumbi guarda~
@@ -620,7 +622,7 @@ estátuas.
 2287650 0 0 0 0 0 0 0 -300 E
 45 0 -24 1d45+3000 4d5+22
 0 116439
-8 8 1
+9 9 1
 BareHandAttack: 13
 Dex: 12
 Int: 13

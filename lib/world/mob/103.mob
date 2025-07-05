@@ -11,6 +11,7 @@ Tomara que ele não esteja com fome!
 10 4000
 9 9 1
 BareHandAttack: 4
+GenWimpy: 1
 E
 #10301
 guarda nativo~
@@ -65,6 +66,8 @@ poderia acabar com o sofrimento dela!
 5 17 5 4d4+100 3d4+1
 50 1000
 9 9 2
+GenWimpy: 1
+GenRoam: 1
 E
 #10305
 mulher canibal~
@@ -106,6 +109,8 @@ Esta cobra parece ser perigosa, sem dúvida. Veja só as presas!
 300 4000
 9 9 2
 BareHandAttack: 4
+GenWimpy: 1
+GenRoam: 1
 E
 #10308
 macaco pequeno~
@@ -119,6 +124,7 @@ Esse macaquinho é muito mal educado!
 300 2000
 9 9 1
 BareHandAttack: 7
+GenWimpy: 1
 E
 #10309
 primata~
@@ -173,6 +179,7 @@ grosso couro.  Em sua boca você vê enormes dentes, pronto para atacá-lo.
 0 2700
 5 5 1
 BareHandAttack: 4
+GenWimpy: 2
 E
 #10313
 troll~
@@ -211,6 +218,8 @@ sua última refeição.
 6 10 6 2d2+100 3d3+6
 1000 3700
 9 9 2
+GenWimpy: 3
+GenRoam: 1
 E
 #10316
 zumbi~
@@ -223,6 +232,8 @@ Este zumbi é alto e forte, e está aqui pronto para lhe matar.
 15 10 7 8d8+750 5d5+8
 3500 4000
 9 9 1
+GenWimpy: 6
+GenLoot: 1
 E
 #10317
 zumbi kenuthi~
@@ -236,5 +247,6 @@ tremenda.
 20 10 10 5d5+900 6d5+8
 5000 6000
 9 9 1
+GenWimpy: 1
 E
 $

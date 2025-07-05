@@ -47,6 +47,8 @@ Ele é horrível.
 4 16 5 2d10+40 1d8+1
 50 800
 9 9 0
+GenWimpy: 4
+GenRoam: 1
 E
 #4004
 orc~
@@ -59,6 +61,7 @@ Você percebe toda a maldade no seu olhar...
 5 15 5 2d10+60 2d4+0
 100 900
 9 9 0
+GenWimpy: 8
 E
 #4005
 orc enorme~
@@ -96,6 +99,8 @@ Ele parece ter jeito com armas.
 7 13 5 3d10+80 2d5+0
 200 2500
 9 9 1
+GenWimpy: 4
+GenRoam: 1
 E
 #4052
 hobgoblin~
@@ -108,6 +113,7 @@ O hobgoblin parece um tanto perdido.
 6 12 6 3d8+70 2d4+0
 100 1500
 9 9 1
+GenWimpy: 2
 E
 #4053
 serpente cobra marrom~
@@ -157,6 +163,7 @@ Bem, ele não parece ser muito amigável.
 8 13 2 3d10+100 2d5+2
 150 4000
 9 9 1
+GenWimpy: 1
 E
 #4057
 leao montanha~
@@ -169,6 +176,7 @@ O leão parece bastante hostil com enormes garras e grandes dentes.
 5 16 5 1d10+60 2d4+0
 0 900
 9 9 1
+GenWimpy: 6
 E
 #4058
 gigante colina~
@@ -234,6 +242,8 @@ o SEU ouro também...
 8 13 3 1d10+100 2d5+2
 100 4000
 9 9 1
+GenWimpy: 3
+GenRoam: 1
 E
 T 3007
 #4104
@@ -259,6 +269,7 @@ Bem, ela não parece prestar muita atenção em você.
 6 15 4 3d10+50 1d8+1
 0 1500
 9 9 0
+GenWimpy: 1
 E
 #4106
 guerreiro~
@@ -271,6 +282,7 @@ Ele não parece muito amigável...
 9 10 3 3d10+100 2d6+2
 500 9000
 9 9 1
+GenWimpy: 1
 E
 #4107
 kobold~
@@ -283,5 +295,6 @@ Ele parece lodoso..
 7 14 4 4d10+25 1d9+1
 20 3000
 9 9 1
+GenWimpy: 4
 E
 $

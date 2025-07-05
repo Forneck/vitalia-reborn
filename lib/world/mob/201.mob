@@ -9,6 +9,7 @@ O doente mental tem apenas um olhar vazio.
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
+GenWimpy: 1
 E
 #20101
 enfermeira curandeira e conselheira~
@@ -92,6 +93,8 @@ espera o dia em que poderá sair desse terrível lugar.
 7 15 5 3d5+85 2d4+1
 1000 3000
 9 9 1
+GenWimpy: 4
+GenGroup: 3
 E
 #20107
 pesquisador distraido~
@@ -108,6 +111,7 @@ terminam por revelar o eterno paciente dentro dele.
 5 15 9 10d5+20 2d3+2
 1100 1000
 9 9 1
+GenWimpy: 2
 E
 #20108
 assistente~
@@ -124,6 +128,7 @@ azuis, ela demonstra seu lado sério.
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 2
+GenWimpy: 3
 E
 #20109
 jovem mulher Eva~
@@ -138,7 +143,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 1
+GenWimpy: 6
 E
 #20110
 jovem mulher Sybila~
@@ -153,7 +158,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 2
+GenWimpy: 5
 E
 #20111
 jovem mulher Anouk~
@@ -168,6 +173,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
+GenWimpy: 1
 E
 #20112
 jovem mulher Tricia~
@@ -182,7 +188,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 2
+GenWimpy: 5
 E
 #20113
 jovem mulher Lorraine~
@@ -197,7 +203,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 2
+GenWimpy: 6
 E
 #20114
 jovem mulher Renee~
@@ -226,6 +232,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
+GenWimpy: 2
 E
 #20116
 jovem mulher dorothy~
@@ -272,6 +279,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
+GenWimpy: 1
 E
 #20119
 Spike~

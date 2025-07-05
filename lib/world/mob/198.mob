@@ -10,7 +10,7 @@ bravos e destemidos entrem.
 2160690 0 0 0 67920 0 0 0 0 E
 30 1 -20 6d20+500 5d6+20
 5000 99000
-8 8 1
+9 9 1
 E
 #19801
 centauro ~
@@ -24,7 +24,7 @@ você com um olhar indiferente..
 2124100 0 0 0 67920 0 0 0 0 E
 40 1 -30 15d6+600 6d6+21
 3500 100000
-8 8 1
+9 9 1
 E
 #19802
 fada labirinto~
@@ -37,7 +37,7 @@ mesmo desconhece..  Ela é a guardiã do labirinto e de seus segredos.
 2154692 0 0 0 67924 0 0 0 500 E
 50 1 -16 15d6+850 5d6+30
 5000 150000
-8 8 2
+9 9 2
 E
 #19803
 aventureiro perdido~
@@ -51,7 +51,7 @@ no labirinto pois ele parece estar aqui há muito tempo.
 2123968 0 0 0 67584 0 0 0 -500 E
 50 3 -26 15d6+600 5d6+27
 30000 145000
-8 8 1
+9 9 1
 E
 #19804
 guerreiro lider grupo~
@@ -66,7 +66,7 @@ esse guerreiro.
 2226194 0 0 0 65792 0 0 0 500 E
 60 0 -25 15d6+870 5d6+33
 5000 200000
-8 8 1
+9 9 1
 E
 #19805
 mago grupo~
@@ -81,7 +81,7 @@ batalhas sangrentas.
 2259074 0 0 0 67696 0 0 0 500 E
 60 6 -10 15d6+300 3d4+25
 15000 99000
-8 8 1
+9 9 1
 E
 #19806
 ladrao grupo~
@@ -97,7 +97,7 @@ cintura.
 2259078 0 0 0 1575252 0 0 0 300 E
 60 4 -20 15d6+600 5d6+25
 15000 100000
-8 8 1
+9 9 1
 E
 #19807
 clerigo padre grupo~
@@ -110,7 +110,7 @@ ajudar seu grupo com suas magias de cura e suas auras poderosas.
 2292098 0 0 0 76120 0 0 0 700 E
 60 7 -20 15d6+400 5d6+21
 5000 87000
-8 8 1
+9 9 1
 E
 #19808
 unicornio cavalo~
@@ -124,7 +124,7 @@ ver um unicórnio e a pureza de seu olhar.
 2312512 0 0 0 1051084 0 0 0 900 E
 70 2 -32 15d6+800 4d6+37
 1000 150000
-8 8 1
+9 9 1
 Str: 18
 StrAdd: 100
 Dex: 25
@@ -145,7 +145,8 @@ branco?'.
 2226180 0 0 0 2304 0 0 0 100 E
 60 5 -10 15d6+500 5d6+20
 5000 900000
-8 8 2
+9 9 2
+GenWimpy: 2
 E
 #19810
 amarelo demonio~
@@ -159,7 +160,7 @@ GRANDE perigo.
 2158082 0 0 0 67648 0 0 0 -900 E
 90 -12 -20 15d6+700 5d6+40
 75000 400000
-8 8 1
+9 9 1
 E
 #19811
 verde demonio~
@@ -172,7 +173,7 @@ DE MORRER!!!'
 2158098 0 0 0 67648 0 0 0 -900 E
 90 -12 -20 15d6+700 5d6+40
 75000 400000
-8 8 1
+9 9 1
 E
 #19812
 demonio vermelho~
@@ -186,7 +187,7 @@ sentidos.  Você pode senti-la no ar, pode quase mesmo tocá-la.
 2158082 0 0 0 67904 0 0 0 -999 E
 95 -18 -45 15d6+1000 5d6+47
 75000 500000
-8 8 1
+9 9 1
 BareHandAttack: 8
 Str: 18
 StrAdd: 100
@@ -209,7 +210,7 @@ verde e os mistérios que esta porta esconde.
 2154498 0 0 0 65794 0 0 0 -700 E
 60 -20 -35 15d6+800 4d6+20
 5000 300000
-8 8 1
+9 9 1
 E
 #19814
 guardiao amarelo~
@@ -224,7 +225,7 @@ chave amarela e os mistérios que esta porta esconde.
 2154498 0 0 0 65794 0 0 0 0 E
 60 -20 -35 15d6+600 5d4+20
 5000 300000
-8 8 0
+9 9 0
 E
 #19815
 guardiao vermelho~
@@ -239,7 +240,7 @@ chave vermelha e os mistérios que esta porta esconde.
 2154514 0 0 0 65794 0 0 0 -700 E
 60 -20 -30 15d6+600 5d4+19
 5000 300000
-8 8 1
+9 9 1
 E
 #19816
 fantasma aventureiro~
@@ -252,7 +253,7 @@ esperava?  É um fantasma!
 2156704 0 0 0 1640516 0 0 0 0 E
 50 10 -3 15d6+500 5d4+10
 20000 40000
-8 8 1
+9 9 1
 E
 #19817
 guerreiro fantasma~
@@ -269,7 +270,7 @@ guerreiro citado na história.
 2222086 0 0 0 1640772 0 0 0 -400 E
 60 0 -15 15d6+700 5d6+20
 15000 100000
-8 8 1
+9 9 1
 E
 #19818
 dama mulher bela~
@@ -282,7 +283,7 @@ vida pode ser bela e descomplicada.
 2105472 0 0 0 67584 0 0 0 600 E
 25 15 0 15d6+100 5d3+5
 1000 50000
-8 8 2
+9 9 2
 E
 #19819
 necromante figura estranha sombria~
@@ -296,7 +297,7 @@ dos mortos.  Ao olhar para esta figura você reconhece este NECROMANTE.
 2287778 0 0 0 67916 0 0 0 -500 E
 60 5 -18 15d6+600 5d4+15
 15000 200000
-8 8 1
+9 9 1
 E
 #19820
 guardiao esperanca~
@@ -310,7 +311,7 @@ embora você não saiba bem como...
 2344978 0 0 0 1116224 0 0 0 900 E
 80 5 -25 15d6+800 5d4+16
 1000 300000
-8 8 1
+9 9 1
 E
 #19821
 ladrao fantasma~
@@ -324,6 +325,6 @@ num piscar de olhos em outra posição.  É notoriamente um fantasma.
 2098708 0 0 0 67660 0 0 0 -800 E
 70 -10 -30 600d1+250 2d8+25
 10000 200000
-8 8 1
+9 9 1
 E
 $
