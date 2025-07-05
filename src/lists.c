@@ -107,6 +107,11 @@ void remove_from_list(void * pContent, struct list_data * pList)
 {
   struct item_data *pRemovedItem;
 
+  /* Check for NULL list before attempting to find content */
+  if (pList == NULL) {
+    return;
+  }
+
   if ((pRemovedItem = find_in_list(pContent, pList)) == NULL) {
     mudlog(CMP, LVL_GOD, TRUE, "WARNING: Attempting to remove contents that don't exist in list.");
     return;
@@ -209,6 +214,11 @@ struct item_data * find_in_list(void * pContent, struct list_data * pList)
   struct item_data *pItem = NULL;
   bool found;
 
+  /* Check for NULL or empty list before attempting to merge iterator */
+  if (pList == NULL || pList->pFirstItem == NULL) {
+    return NULL;
+  }
+
   pFoundItem = merge_iterator(&Iterator, pList);
 
   for (found = FALSE; pFoundItem != NULL; pFoundItem = next_in_list(&Iterator)) {
@@ -254,8 +264,11 @@ void * simple_list(struct list_data * pList)
       pLastList = pList;    
       loop = TRUE;
       return (pContent);
-    } else
+    } else {
+      /* merge_iterator failed, no need to call remove_iterator */
+      loop = FALSE;
       return NULL;
+    }
   }
    
   if ((pContent = next_in_list(&Iterator)) != NULL)
@@ -274,7 +287,7 @@ void * random_from_list(struct list_data * pList)
   int number;
   int count = 1;
 
-  if (pList->iSize <= 0)
+  if (pList == NULL || pList->iSize <= 0)
     return NULL;
   else
     number = rand_number(1, pList->iSize);
