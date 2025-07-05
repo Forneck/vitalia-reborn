@@ -543,6 +543,12 @@ static int find_door(struct char_data *ch, const char *type, char *dir, const ch
 						else if ((is_abbrev(cmdname, "pick"))
 								 && (IS_SET(EXIT(ch, door)->exit_info, EX_LOCKED)))
 							return door;
+						else
+						{
+							/* Door found with matching keyword but doesn't meet command requirements.
+							 * Return it anyway to allow do_gen_door to handle appropriate error messages. */
+							return door;
+						}
 					}
 				}
 			}
