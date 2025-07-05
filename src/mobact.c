@@ -439,7 +439,7 @@ bool mob_handle_grouping(struct char_data *ch)
     if (MOB_FLAGGED(ch, MOB_SENTINEL))
         return FALSE;
 
-    if (GROUP(ch) || !ch->ai_data)
+    if (!ch->ai_data)
         return FALSE;
 
     /* Verifica a chance de tentar agrupar-se. */

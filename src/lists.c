@@ -113,7 +113,12 @@ void remove_from_list(void * pContent, struct list_data * pList)
   }
 
   if ((pRemovedItem = find_in_list(pContent, pList)) == NULL) {
-    mudlog(CMP, LVL_GOD, TRUE, "WARNING: Attempting to remove contents that don't exist in list.");
+    /* Enhanced warning with more context for debugging */
+    if (pList == group_list) {
+      mudlog(CMP, LVL_GOD, TRUE, "WARNING: Attempting to remove group contents that don't exist in group_list (size: %d).", pList->iSize);
+    } else {
+      mudlog(CMP, LVL_GOD, TRUE, "WARNING: Attempting to remove contents that don't exist in list (size: %d).", pList->iSize);
+    }
     return;
   }
 

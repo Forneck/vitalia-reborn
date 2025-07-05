@@ -82,6 +82,7 @@ struct group_data * create_group(struct char_data * leader);
 void free_group(struct group_data * group);
 void leave_group(struct char_data *ch);
 void join_group(struct char_data *ch, struct group_data *group);
+bool is_char_in_group_list(struct char_data *ch, struct group_data *group);
 
 /* Generic Find */
 int	generic_find(char *arg, bitvector_t bitvector, struct char_data *ch,
