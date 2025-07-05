@@ -587,7 +587,10 @@ bool mob_share_gear_with_group(struct char_data *ch)
             for (contained_item = item->contains; contained_item; contained_item = contained_item->next_content) {
                 member = (struct char_data *)merge_iterator(&iterator, GROUP(ch)->members);
                 while(member) {
-                     if (ch != member) {
+                   if (ch == member || IN_ROOM(ch) != IN_ROOM(member)) {
+                      member = (struct char_data *)next_in_list(&iterator);
+                      continue;
+                   }
                         int wear_pos = find_eq_pos(member, contained_item, NULL);
                         if (wear_pos != -1) {
                             int improvement = evaluate_item_for_mob(member, contained_item) - evaluate_item_for_mob(member, GET_EQ(member, wear_pos));
@@ -598,7 +601,6 @@ bool mob_share_gear_with_group(struct char_data *ch)
                                 container_source = item; /* Lembra-se de que o item está neste contentor. */
                             }
                         }
-                    }
                     member = (struct char_data *)next_in_list(&iterator);
                 }
             }
@@ -1242,6 +1244,10 @@ struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch)
     return NULL;
 }
 
+/*
+* staff  - [0] level   [1] max charges [2] num charges [3] spell num
+ * wand   - [0] level   [1] max charges [2] num charges [3] spell num        * scroll - [0] level   [1] spell num   [2] spell num   [3] spell num        * potion - [0] level   [1] spell num   [2] spell num   [3] spell num        * Staves and wands will default to level 14 if the level is not specified;*/
+
 /**
  * Retorna o número da magia contida em um item mágico (wand, staff, scroll, potion).
  * @param obj O objeto a ser verificado.
@@ -1254,9 +1260,10 @@ int get_spell_from_item(struct obj_data *obj)
     switch (GET_OBJ_TYPE(obj)) {
         case ITEM_WAND:
         case ITEM_STAFF:
-        case ITEM_SCROLL:
-        case ITEM_POTION:
             return GET_OBJ_VAL(obj, 3);
+        case ITEM_SCROLL:
+        case ITEM_POTION: /*Poções e Scrolls tem magia no principal no 1, lcom 2 e 3 como extras se existirem*/
+            return GET_OBJ_VAL(obj, 1);
         default:
             return -1;
     }
