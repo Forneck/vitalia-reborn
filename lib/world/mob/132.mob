@@ -10,7 +10,8 @@ Um pelicano está aqui, descansando no sol.
 0 453
 9 9 1
 BareHandAttack: 4
-GenWimpy: 2
+GenWimpy: 3
+GenRoam: 3
 E
 #13201
 lontra mar~
@@ -24,6 +25,7 @@ Ela é pequena e engraçadinha, apesar de parecer um pouco pegajosa.
 0 764
 6 9 2
 BareHandAttack: 4
+GenWimpy: 1
 E
 #13202
 gaivota marinha~

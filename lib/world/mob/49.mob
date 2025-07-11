@@ -9,7 +9,8 @@ Ele olha calmamente para você e continua a andar lenta e graciosamente.
 2 19 9 2d4+16 1d4+1
 0 400
 9 9 1
-GenWimpy: 14
+GenWimpy: 35
+GenRoam: 6
 E
 #4901
 elfo gato~
@@ -35,6 +36,7 @@ Ele parece não se preocupar com você, e continua a se banhar.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 1
+GenWimpy: 1
 E
 #4903
 cobra madeira jaculi~
@@ -59,6 +61,8 @@ Ela parece estar faminta.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 2
+GenWimpy: 1
+GenRoam: 26
 E
 #4905
 babuino selvagem~

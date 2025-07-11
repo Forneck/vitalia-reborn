@@ -288,7 +288,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 1
+GenRoam: 2
 E
 #2719
 cinza raposa~
@@ -325,6 +326,8 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
+GenRoam: 3
 E
 #2721
 borboleta~
@@ -342,7 +345,8 @@ BareHandAttack: 1
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 3
+GenRoam: 2
 E
 #2722
 porco~
@@ -567,6 +571,8 @@ habilidades tem sido proveitosa para ela em seus assaltos.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
+GenRoam: 9
 E
 #2735
 jovem~

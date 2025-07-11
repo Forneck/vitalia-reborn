@@ -36,7 +36,8 @@ Parece estar em sua maneira de cuidar de algo...'
 23 8 -7 10d10+1600 2d2+16
 900 46544
 9 9 1
-GenWimpy: 1
+GenWimpy: 2
+GenRoam: 1
 E
 #803
 cigano Ornah~
@@ -50,7 +51,9 @@ desejo de matar...
 20 8 -8 10d10+1000 3d3+15
 700 38676
 9 9 1
-GenWimpy: 3
+GenWimpy: 6
+GenLoot: 2
+GenRoam: 9
 E
 #804
 grande vampiro~

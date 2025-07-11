@@ -10,7 +10,8 @@ encara repentinamente.
 2097222 0 0 0 276 0 0 0 600 E
 10 11 2 70d2+200 2d6+9
 50 10000
-8 8 1
+9 9 1
+GenWimpy: 1
 E
 #13302
 estatua prata~
@@ -23,7 +24,7 @@ diabos ela foi virar para olhar para você?
 2097346 0 0 0 276 0 0 0 400 E
 15 6 1 150d1+40 2d8+4
 1000 15000
-8 8 0
+9 9 0
 E
 #13303
 templar~
@@ -36,7 +37,7 @@ se vira lentamente e o olha sem expressão.
 2097250 0 0 0 276 0 0 0 800 E
 20 0 -20 200d1+60 3d5+16
 6000 30000
-8 8 1
+9 9 1
 E
 #13304
 mateon cavaleiro~
@@ -49,7 +50,7 @@ chegar PERTO do homem mascarado.
 2097250 0 0 0 276 0 0 0 600 E
 22 0 -20 430d1+10 4d6+19
 5000 40000
-8 8 1
+9 9 1
 E
 #13305
 arrumadeira mulher~
@@ -62,7 +63,7 @@ estar simplesmente aterrorizada.
 2097346 0 0 0 16 0 0 0 100 E
 10 15 3 100d1+10 2d6+1
 500 1000
-8 8 2
+9 9 2
 E
 #13306
 taurus homem~
@@ -78,7 +79,7 @@ pensa.
 2097218 0 0 0 276 0 0 0 800 E
 60 -19 -7 700d1+50 6d6+38
 10000 100000
-8 8 1
+9 9 1
 E
 #13307
 acolito~
@@ -91,6 +92,6 @@ fingir que você não existe.
 2097348 0 0 0 20 0 0 0 600 E
 10 12 3 100d1+10 2d5+4
 200 10000
-8 8 1
+9 9 1
 E
 $

@@ -75,9 +75,6 @@ void mobile_activity(void)
         ch->ai_data->duty_frustration_timer--;
     }
     
-    if (handle_duty_routine(ch))
-	    continue;
-
     if (mob_index[GET_MOB_RNUM(ch)].func == shop_keeper) {
     	int shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
 	    if (shop_nr != -1 && !is_shop_open(shop_nr)) {
@@ -95,6 +92,7 @@ void mobile_activity(void)
 	        continue;
 	    }
     }
+    
     if GROUP(ch){
 	    mob_follow_leader(ch);
     }
@@ -108,9 +106,7 @@ void mobile_activity(void)
     hunt_victim(ch);
     
 
-    if (mob_handle_grouping(ch)) {
-        continue; /* Ação do pulso foi usada para agrupar, fim do turno. */
-    }
+    mob_handle_grouping(ch);
 
     /* Aggressive Mobs */
      if (!MOB_FLAGGED(ch, MOB_HELPER) && (!AFF_FLAGGED(ch, AFF_BLIND) || !AFF_FLAGGED(ch, AFF_CHARM))) {
@@ -155,7 +151,9 @@ void mobile_activity(void)
     
     mob_share_gear_with_group(ch);
 
-
+    if (handle_duty_routine(ch)) {                                                                          continue;
+    }
+    
     /* Prioridade de Vaguear (Roam) */
     mob_goal_oriented_roam(ch);
 
@@ -1277,7 +1275,7 @@ int get_spell_from_item(struct obj_data *obj)
 bool mob_handle_item_usage(struct char_data *ch)
 {
     if (!ch->carrying || !ch->ai_data) return FALSE;
-    if (rand_number(1, 100) > MAX(GET_GENUSE(ch), 5)) return FALSE;
+    if (rand_number(1, 100) > MAX(GET_GENUSE(ch), 15)) return FALSE;
 
     struct obj_data *obj, *item_to_use = NULL, *target_obj = NULL, *best_target_obj = NULL;
     struct char_data *target_char = NULL, *best_target_char = NULL;

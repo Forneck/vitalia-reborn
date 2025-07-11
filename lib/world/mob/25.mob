@@ -9,8 +9,8 @@ Isto parece ser feito de nada mais que escuridão...
 9 10 1 9d9+90 2d5+5
 100 4000
 9 9 0
-GenWimpy: 2
-GenRoam: 8
+GenWimpy: 6
+GenRoam: 71
 E
 #2501
 aventureiro~
@@ -39,7 +39,8 @@ exterminador de coelhinhos em pessoa, Edgar o Horrível!
 1 20 10 3d9+10 1d8+1
 23 100
 9 9 1
-GenWimpy: 1
+GenWimpy: 3
+GenRoam: 41
 E
 #2503
 diamante golem~
@@ -66,7 +67,7 @@ Ou então, ele pode apenas estar com dor de cabeça.
 436 3500
 9 9 1
 GenWimpy: 3
-GenRoam: 4
+GenRoam: 5
 E
 T 3009
 #2505
@@ -105,7 +106,7 @@ mas ela certamente se encaixa no esperado para uma torre cheia de magos.
 20 6 -1 20d20+200 3d4+8
 1092 31300
 9 9 2
-GenWimpy: 1
+GenWimpy: 3
 E
 T 3009
 #2508
@@ -190,8 +191,9 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 4
-GenRoam: 3
+GenWimpy: 9
+GenRoam: 75
+GenGroup: 7
 E
 #2514
 mago visitante~
@@ -217,7 +219,8 @@ Ela parece estar bastante concentrada em seus estudos.
 7 7 2 7d6+25 2d4+5
 369 2950
 6 6 2
-GenWimpy: 3
+GenWimpy: 11
+GenLoot: 1
 E
 T 3009
 #2516
@@ -231,7 +234,7 @@ Ele parece ignorar tudo à sua volta, exceto o feitiço que está memorizando.
 7 6 2 7d6+25 2d4+5
 487 2750
 9 9 1
-GenWimpy: 2
+GenWimpy: 6
 E
 T 3009
 #2517
@@ -246,7 +249,7 @@ Ele parece estar sonhando.
 7 7 2 7d6+25 2d4+4
 211 2650
 4 4 1
-GenWimpy: 4
+GenWimpy: 12
 E
 T 3009
 #2518
@@ -260,6 +263,7 @@ Ele parece ser um jovem travesso.
 7 7 1 7d6+25 2d4+5
 382 2300
 9 9 1
+GenWimpy: 5
 E
 T 3009
 #2519
@@ -274,6 +278,7 @@ algumas marcas de queimaduras menores marcam sua pelugem mosqueada.
 1 20 1 1d1+10 1d4+1
 0 11
 9 9 2
+GenWimpy: 3
 E
 #2520
 estudante~
@@ -286,6 +291,7 @@ O estudante boceja.
 8 9 1 8d8+80 2d4+6
 263 3000
 6 6 1
+GenWimpy: 2
 E
 T 3009
 #2521
@@ -338,7 +344,7 @@ Ela parece não ter resistido ao tédio absoluto.
 9 11 -2 9d9+90 2d4+7
 567 3800
 4 4 2
-GenWimpy: 1
+GenWimpy: 2
 E
 T 3009
 #2525
@@ -392,7 +398,7 @@ An undefined string.
 15 5 1 15d15+150 3d4+4
 1002 15800
 5 5 1
-GenWimpy: 1
+GenWimpy: 4
 E
 T 3009
 #2529
@@ -420,7 +426,7 @@ An undefined string.
 14 6 -1 14d14+140 3d4+4
 312 14850
 9 9 1
-GenWimpy: 1
+GenWimpy: 2
 E
 T 3009
 #2531
@@ -549,7 +555,7 @@ Ele parece inflamável.
 16 7 -5 16d16+160 1d10+10
 1000 17500
 9 9 0
-GenWimpy: 5
+GenWimpy: 7
 E
 #2540
 mestre vinculador~
@@ -589,6 +595,7 @@ desajeitado, em sua direção.
 20 7 -6 20d20+200 4d5+10
 0 25600
 9 9 0
+GenWimpy: 1
 E
 #2543
 golem bronze~
@@ -626,6 +633,7 @@ Isto mais parece uma trouxa de roupa suja, é surpreendente que possa andar.
 8 10 1 8d8+80 3d4+1
 0 2100
 9 9 0
+GenWimpy: 4
 E
 #2546
 golem adamantite~
@@ -721,7 +729,8 @@ revolver de repulsão.
 20 5 -2 20d20+200 3d6+5
 2150 26850
 9 9 2
-GenWimpy: 6
+GenWimpy: 12
+GenRoam: 16
 E
 T 3009
 #2553
