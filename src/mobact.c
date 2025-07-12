@@ -46,6 +46,7 @@ bool mob_try_to_sell_junk(struct char_data *ch);
 struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch);
 struct obj_data *find_cursed_item_in_inventory(struct char_data *ch);
 struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum);
+void mob_process_wishlist_goals(struct char_data *ch);
 
 void mobile_activity(void)
 {
@@ -85,14 +86,61 @@ void mobile_activity(void)
         ch->ai_data->goal_timer++;
         
         /* If stuck on shopping goal for too long (50 ticks = ~5 minutes), abandon it */
-        if (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL && ch->ai_data->goal_timer > 50) {
+        if ((ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL || 
+             ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY) && 
+            ch->ai_data->goal_timer > 50) {
             act("$n parece frustrado e desiste da viagem.", FALSE, ch, 0, 0, TO_ROOM);
             ch->ai_data->current_goal = GOAL_NONE;
             ch->ai_data->goal_destination = NOWHERE;
             ch->ai_data->goal_obj = NULL;
             ch->ai_data->goal_target_mob_rnum = NOBODY;
+            ch->ai_data->goal_item_vnum = NOTHING;
             ch->ai_data->goal_timer = 0;
             continue; /* Allow other priorities this turn */
+        }
+        
+        /* Handle goals that don't require movement */
+        if (ch->ai_data->current_goal == GOAL_HUNT_TARGET || 
+            ch->ai_data->current_goal == GOAL_GET_GOLD) {
+            
+            /* For hunting, implement basic hunting behavior */
+            if (ch->ai_data->current_goal == GOAL_HUNT_TARGET) {
+                /* Look for the target mob in the current room */
+                struct char_data *target = NULL;
+                struct char_data *temp_char;
+                
+                for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                    if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == ch->ai_data->goal_target_mob_rnum) {
+                        target = temp_char;
+                        break;
+                    }
+                }
+                
+                if (target && !FIGHTING(ch)) {
+                    /* Attack the target */
+                    act("$n se concentra em $N com olhos determinados.", FALSE, ch, 0, target, TO_ROOM);
+                    hit(ch, target, TYPE_UNDEFINED);
+                } else if (ch->ai_data->goal_timer > 100) {
+                    /* Give up hunting after too long */
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    ch->ai_data->goal_target_mob_rnum = NOBODY;
+                    ch->ai_data->goal_item_vnum = NOTHING;
+                    ch->ai_data->goal_timer = 0;
+                }
+                continue;
+            }
+            
+            /* For getting gold, prioritize normal looting behavior */
+            if (ch->ai_data->current_goal == GOAL_GET_GOLD) {
+                /* The mob's normal looting behavior will be more active */
+                /* This is handled elsewhere in the code */
+                if (ch->ai_data->goal_timer > 200) { /* Give up after longer time */
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    ch->ai_data->goal_item_vnum = NOTHING;
+                    ch->ai_data->goal_timer = 0;
+                }
+                continue;
+            }
         }
 
         room_rnum dest = ch->ai_data->goal_destination;
@@ -143,12 +191,26 @@ void mobile_activity(void)
                         }
                     }
                 }
+            } else if (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY) {
+                /* Chegou à loja para comprar um item da wishlist */
+                struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
+                if (keeper && ch->ai_data->goal_item_vnum != NOTHING) {
+                    /* Tenta comprar o item */
+                    char buy_command[MAX_INPUT_LENGTH];
+                    sprintf(buy_command, "%d", ch->ai_data->goal_item_vnum);
+                    shopping_buy(buy_command, ch, keeper, find_shop_by_keeper(keeper->nr));
+                    
+                    /* Remove o item da wishlist se a compra foi bem sucedida */
+                    remove_item_from_wishlist(ch, ch->ai_data->goal_item_vnum);
+                    act("$n parece satisfeito com a sua compra.", FALSE, ch, 0, 0, TO_ROOM);
+                }
             }
             /* Limpa o objetivo, pois foi concluído. */
             ch->ai_data->current_goal = GOAL_NONE;
             ch->ai_data->goal_destination = NOWHERE;
             ch->ai_data->goal_obj = NULL;
             ch->ai_data->goal_target_mob_rnum = NOBODY;
+            ch->ai_data->goal_item_vnum = NOTHING;
             ch->ai_data->goal_timer = 0;
         } else {
             /* Ainda não chegou. Continua a vaguear em direção ao objetivo. */
@@ -188,6 +250,10 @@ void mobile_activity(void)
     /* hunt a victim, if applicable */
     hunt_victim(ch);
     
+    /* Wishlist-based goal planning */
+    if (ch->ai_data && rand_number(1, 100) <= 10) { /* 10% chance per tick */
+        mob_process_wishlist_goals(ch);
+    }
 
     mob_handle_grouping(ch);
 
@@ -1746,4 +1812,118 @@ bool mob_try_to_sell_junk(struct char_data *ch)
     }
     
     return FALSE;
+}
+
+/*
+ * ===============================================
+ * WISHLIST GOAL PROCESSING FOR MOB AI
+ * ===============================================
+ */
+
+/**
+ * Processa a wishlist de um mob e define um objetivo baseado no item de maior prioridade.
+ * Implementa a árvore de decisão tática descrita no issue.
+ * @param ch O mob cujo wishlist será processado
+ */
+void mob_process_wishlist_goals(struct char_data *ch)
+{
+    struct mob_wishlist_item *desired_item;
+    mob_rnum target_mob;
+    shop_rnum target_shop;
+    room_rnum shop_room;
+    obj_rnum obj_rnum;
+    int item_cost, required_gold;
+    
+    if (!IS_NPC(ch) || !ch->ai_data || ch->ai_data->current_goal != GOAL_NONE) {
+        return; /* Já tem um objetivo ou não é um mob com AI */
+    }
+    
+    desired_item = get_top_wishlist_item(ch);
+    if (!desired_item) {
+        return; /* Wishlist vazia */
+    }
+    
+    /* Passo 1: Identificar o objetivo */
+    /* Passo 2: Encontrar fontes para o item */
+    
+    /* Tenta encontrar um mob que dropa o item */
+    target_mob = find_mob_with_item(desired_item->vnum);
+    
+    /* Tenta encontrar uma loja que vende o item */
+    target_shop = find_shop_selling_item(desired_item->vnum);
+    
+    /* Passo 3: Avaliar as opções e escolher o melhor plano */
+    
+    /* Opção 1: Caçar um mob */
+    if (target_mob != NOBODY) {
+        /* Verifica se consegue matar o alvo (simplificado) */
+        if (GET_LEVEL(ch) >= mob_proto[target_mob].player.level - 5) {
+            /* Pode caçar este mob */
+            ch->ai_data->current_goal = GOAL_HUNT_TARGET;
+            ch->ai_data->goal_target_mob_rnum = target_mob;
+            ch->ai_data->goal_item_vnum = desired_item->vnum;
+            ch->ai_data->goal_timer = 0;
+            act("$n parece estar a planear uma caça.", FALSE, ch, 0, 0, TO_ROOM);
+            return;
+        }
+    }
+    
+    /* Opção 2: Comprar numa loja */
+    if (target_shop != NOTHING) {
+        /* Verifica se pode chegar à loja e tem ouro suficiente */
+        shop_room = real_room(SHOP_ROOM(target_shop, 0));
+        
+        if (shop_room != NOWHERE && !ROOM_FLAGGED(shop_room, ROOM_NOTRACK)) {
+            /* Calcula o custo do item */
+            obj_rnum = real_object(desired_item->vnum);
+            if (obj_rnum != NOTHING) {
+                item_cost = GET_OBJ_COST(&obj_proto[obj_rnum]);
+                if (item_cost <= 0) item_cost = 1;
+                item_cost = (int)(item_cost * shop_index[target_shop].profit_buy);
+                
+                if (GET_GOLD(ch) >= item_cost) {
+                    /* Tem ouro suficiente, vai comprar */
+                    ch->ai_data->current_goal = GOAL_GOTO_SHOP_TO_BUY;
+                    ch->ai_data->goal_destination = shop_room;
+                    ch->ai_data->goal_target_mob_rnum = SHOP_KEEPER(target_shop);
+                    ch->ai_data->goal_item_vnum = desired_item->vnum;
+                    ch->ai_data->goal_timer = 0;
+                    act("$n examina a sua bolsa e sorri.", FALSE, ch, 0, 0, TO_ROOM);
+                    return;
+                } else {
+                    /* Não tem ouro suficiente, precisa conseguir mais */
+                    required_gold = item_cost - GET_GOLD(ch);
+                    if (required_gold <= GET_LEVEL(ch) * 100) { /* Meta razoável */
+                        ch->ai_data->current_goal = GOAL_GET_GOLD;
+                        ch->ai_data->goal_item_vnum = desired_item->vnum;
+                        ch->ai_data->goal_timer = 0;
+                        act("$n conta as suas moedas e franze o sobrolho.", FALSE, ch, 0, 0, TO_ROOM);
+                        return;
+                    }
+                }
+            }
+        }
+    }
+    
+    /* Opção 3: Postar uma quest (implementação básica) */
+    if (GET_GOLD(ch) >= desired_item->priority * 2) {
+        /* Tem ouro suficiente para oferecer uma recompensa */
+        ch->ai_data->current_goal = GOAL_POST_QUEST;
+        ch->ai_data->goal_item_vnum = desired_item->vnum;
+        ch->ai_data->goal_timer = 0;
+        act("$n parece estar a considerar contratar aventureiros.", FALSE, ch, 0, 0, TO_ROOM);
+        
+        /* Por ora, simula a postagem da quest */
+        mob_posts_quest(ch, desired_item->vnum, desired_item->priority * 2);
+        
+        /* Reseta o objetivo após "postar" a quest */
+        ch->ai_data->current_goal = GOAL_NONE;
+        return;
+    }
+    
+    /* Se chegou aqui, não consegue obter o item por agora */
+    /* Remove da wishlist itens muito antigos (>1 hora) */
+    if (time(0) - desired_item->added_time > 3600) {
+        remove_item_from_wishlist(ch, desired_item->vnum);
+    }
 }

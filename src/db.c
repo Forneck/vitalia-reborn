@@ -4021,8 +4021,11 @@ void free_char(struct char_data *ch)
 	}
         
 	/* Antes da linha final 'free(ch);' */
-    	if (ch->ai_data)
-           free(ch->ai_data);
+    	if (ch->ai_data) {
+    	    /* Limpa a wishlist antes de liberar a AI data */
+    	    clear_wishlist(ch);
+            free(ch->ai_data);
+        }
 
 	free(ch);
 }

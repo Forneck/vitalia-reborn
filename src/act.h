@@ -370,6 +370,8 @@ ACMD(do_plrload);
 ACMD(do_purge);
 ACMD(do_recent);
 ACMD(do_ressucite);
+ACMD(do_mwishlist);
+ACMD(do_mwant);
 ACMD(do_restore);
 void return_to_char(struct char_data * ch);
 ACMD(do_return);
