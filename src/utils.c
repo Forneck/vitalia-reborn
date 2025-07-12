@@ -2159,22 +2159,24 @@ bool mob_can_afford_item(struct char_data *ch, obj_vnum item_vnum)
 
 /**
  * Faz um mob postar uma quest para obter um item.
- * Esta é uma implementação básica que pode ser expandida.
+ * Esta é uma implementação básica que simula a postagem de uma quest.
+ * Em uma implementação futura, isto seria integrado com o sistema de quest boards.
  * @param ch O mob que posta a quest
  * @param item_vnum VNUM do item desejado
  * @param reward Recompensa oferecida
  */
 void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
 {
-    /* Esta é uma implementação placeholder.
-     * A implementação completa exigiria integração com o sistema de quest
-     * e criação de quest boards nas cidades.
-     * 
-     * Por ora, apenas removemos o item da wishlist e deduzimos o ouro,
-     * simulando que a quest foi postada.
-     */
+    obj_rnum obj_rnum;
+    char *item_name = "um item";
     
     if (!IS_NPC(ch) || GET_GOLD(ch) < reward) return;
+    
+    /* Tenta obter o nome do item para uma mensagem mais descritiva */
+    obj_rnum = real_object(item_vnum);
+    if (obj_rnum != NOTHING) {
+        item_name = obj_proto[obj_rnum].short_description;
+    }
     
     /* Deduz o ouro */
     GET_GOLD(ch) -= reward;
@@ -2182,7 +2184,24 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     /* Remove da wishlist (temporariamente) */
     remove_item_from_wishlist(ch, item_vnum);
     
-    /* Log da ação para debug */
-    log1("WISHLIST: %s posted quest for item %d with reward %d gold", 
-        GET_NAME(ch), item_vnum, reward);
+    /* Simula a postagem da quest com uma mensagem para jogadores próximos */
+    char quest_msg[MAX_STRING_LENGTH];
+    sprintf(quest_msg, "$n coloca um aviso numa parede próxima oferecendo %d moedas de ouro por %s.",
+            reward, item_name);
+    act(quest_msg, FALSE, ch, 0, 0, TO_ROOM);
+    
+    /* Log da ação para administradores */
+    log1("WISHLIST QUEST: %s (room %d) posted quest for item %d (%s) with reward %d gold", 
+        GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)), item_vnum, item_name, reward);
+    
+    /* TODO: Implementação futura - criar uma quest real no sistema de quests
+     * Isto exigiria:
+     * 1. Criar uma estrutura aq_data para a nova quest
+     * 2. Definir o tipo da quest (provavelmente AQ_OBJ_RETURN)
+     * 3. Usar add_quest() para adicionar ao sistema
+     * 4. Guardar a quest no ficheiro apropriado
+     * 
+     * Por agora, a quest é apenas "virtual" - o mob gasta o ouro mas
+     * nenhuma quest real é criada para os jogadores.
+     */
 }

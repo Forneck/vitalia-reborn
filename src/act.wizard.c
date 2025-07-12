@@ -6062,3 +6062,130 @@ ACMD(do_ressucite)
 	}
 	return;
 }
+
+/*
+ * Debug command to inspect mob wishlists
+ */
+ACMD(do_mwishlist)
+{
+    struct char_data *mob;
+    struct mob_wishlist_item *item;
+    char arg[MAX_INPUT_LENGTH];
+    int count = 0;
+    
+    one_argument(argument, arg);
+    
+    if (!*arg) {
+        send_to_char(ch, "Usage: mwishlist <mob name or 'all'>\r\n");
+        return;
+    }
+    
+    if (!str_cmp(arg, "all")) {
+        /* Show wishlists for all mobs in the room */
+        for (mob = world[IN_ROOM(ch)].people; mob; mob = mob->next_in_room) {
+            if (IS_NPC(mob) && mob->ai_data && mob->ai_data->wishlist) {
+                send_to_char(ch, "\r\n--- Wishlist for %s ---\r\n", GET_NAME(mob));
+                count = 0;
+                for (item = mob->ai_data->wishlist; item; item = item->next) {
+                    send_to_char(ch, "%d. Item %d (priority %d, added %ld seconds ago)\r\n",
+                               ++count, item->vnum, item->priority, 
+                               (long)(time(0) - item->added_time));
+                }
+                if (count == 0) {
+                    send_to_char(ch, "  (empty wishlist)\r\n");
+                }
+                send_to_char(ch, "Current goal: %d\r\n", mob->ai_data->current_goal);
+            }
+        }
+    } else {
+        /* Show wishlist for specific mob */
+        mob = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM);
+        if (!mob) {
+            send_to_char(ch, "There is no one here by that name.\r\n");
+            return;
+        }
+        
+        if (!IS_NPC(mob)) {
+            send_to_char(ch, "That's not a mob.\r\n");
+            return;
+        }
+        
+        if (!mob->ai_data) {
+            send_to_char(ch, "%s has no AI data.\r\n", GET_NAME(mob));
+            return;
+        }
+        
+        send_to_char(ch, "--- Wishlist for %s ---\r\n", GET_NAME(mob));
+        count = 0;
+        for (item = mob->ai_data->wishlist; item; item = item->next) {
+            send_to_char(ch, "%d. Item %d (priority %d, added %ld seconds ago)\r\n",
+                       ++count, item->vnum, item->priority, 
+                       (long)(time(0) - item->added_time));
+        }
+        
+        if (count == 0) {
+            send_to_char(ch, "  (empty wishlist)\r\n");
+        }
+        
+        send_to_char(ch, "Current goal: %d\r\n", mob->ai_data->current_goal);
+        if (mob->ai_data->goal_item_vnum != NOTHING) {
+            send_to_char(ch, "Goal item: %d\r\n", mob->ai_data->goal_item_vnum);
+        }
+    }
+}
+
+/*
+ * Debug command to add items to a mob's wishlist for testing
+ */
+ACMD(do_mwant)
+{
+    struct char_data *mob;
+    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
+    obj_vnum item_vnum;
+    int priority = 150;
+    
+    two_arguments(argument, arg1, arg2);
+    
+    if (!*arg1 || !*arg2) {
+        send_to_char(ch, "Usage: mwant <mob name> <item vnum> [priority]\r\n");
+        return;
+    }
+    
+    mob = get_char_vis(ch, arg1, NULL, FIND_CHAR_ROOM);
+    if (!mob) {
+        send_to_char(ch, "There is no one here by that name.\r\n");
+        return;
+    }
+    
+    if (!IS_NPC(mob)) {
+        send_to_char(ch, "That's not a mob.\r\n");
+        return;
+    }
+    
+    if (!mob->ai_data) {
+        send_to_char(ch, "%s has no AI data.\r\n", GET_NAME(mob));
+        return;
+    }
+    
+    item_vnum = atoi(arg2);
+    if (item_vnum <= 0) {
+        send_to_char(ch, "Invalid item vnum.\r\n");
+        return;
+    }
+    
+    /* Check for optional priority argument */
+    if (argument && *argument) {
+        char *priority_str = strstr(argument, arg2);
+        if (priority_str) {
+            priority_str += strlen(arg2);
+            while (*priority_str && isspace(*priority_str)) priority_str++;
+            if (*priority_str && isdigit(*priority_str)) {
+                priority = atoi(priority_str);
+            }
+        }
+    }
+    
+    add_item_to_wishlist(mob, item_vnum, priority);
+    send_to_char(ch, "Added item %d to %s's wishlist with priority %d.\r\n", 
+                 item_vnum, GET_NAME(mob), priority);
+}
