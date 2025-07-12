@@ -1243,7 +1243,46 @@ struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch)
 }
 
 /**
+ * Retorna todos os números de magia contidos em um item mágico.
+ * @param obj O objeto a ser verificado.
+ * @param spells Array para armazenar os números das magias (deve ter pelo menos 3 elementos).
+ * @return O número de magias válidas encontradas, ou 0 se o item não for mágico.
+ */
+int get_all_spells_from_item(struct obj_data *obj, int *spells)
+{
+    if (!obj || !spells) return 0;
+    
+    int count = 0;
+    
+    switch (GET_OBJ_TYPE(obj)) {
+        case ITEM_WAND:
+        case ITEM_STAFF:
+            // Wands and staves only have one spell in slot 3
+            if (GET_OBJ_VAL(obj, 3) > 0) {
+                spells[count++] = GET_OBJ_VAL(obj, 3);
+            }
+            break;
+            
+        case ITEM_SCROLL:
+        case ITEM_POTION:
+            // Scrolls and potions can have spells in slots 1, 2, and 3
+            for (int slot = 1; slot <= 3; slot++) {
+                if (GET_OBJ_VAL(obj, slot) > 0) {
+                    spells[count++] = GET_OBJ_VAL(obj, slot);
+                }
+            }
+            break;
+            
+        default:
+            break;
+    }
+    
+    return count;
+}
+
+/**
  * Retorna o número da magia contida em um item mágico (wand, staff, scroll, potion).
+ * Para scrolls e potions, retorna a primeira magia válida encontrada.
  * @param obj O objeto a ser verificado.
  * @return O número da magia, ou -1 se o item não for mágico.
  */
@@ -1254,9 +1293,18 @@ int get_spell_from_item(struct obj_data *obj)
     switch (GET_OBJ_TYPE(obj)) {
         case ITEM_WAND:
         case ITEM_STAFF:
+            return GET_OBJ_VAL(obj, 3);
+            
         case ITEM_SCROLL:
         case ITEM_POTION:
-            return GET_OBJ_VAL(obj, 3);
+            // For scrolls and potions, return the first valid spell found
+            for (int slot = 1; slot <= 3; slot++) {
+                if (GET_OBJ_VAL(obj, slot) > 0) {
+                    return GET_OBJ_VAL(obj, slot);
+                }
+            }
+            return -1;
+            
         default:
             return -1;
     }
@@ -1278,14 +1326,20 @@ bool mob_handle_item_usage(struct char_data *ch)
     int spellnum_to_cast = -1;
 
     for (obj = ch->carrying; obj; obj = obj->next_content) {
-        int current_score = 0;
-        target_char = NULL;  // Reset targets for each iteration
-        target_obj = NULL;
-        int skillnum = get_spell_from_item(obj);
-        if (skillnum <= 0) continue;
-
-        struct str_spells *spell = get_spell_by_vnum(skillnum);
-        if (!spell) continue;
+        int spells[3];  // Maximum 3 spells for scrolls/potions
+        int spell_count = get_all_spells_from_item(obj, spells);
+        
+        if (spell_count <= 0) continue;
+        
+        // Evaluate each spell in the item
+        for (int spell_idx = 0; spell_idx < spell_count; spell_idx++) {
+            int current_score = 0;
+            target_char = NULL;  // Reset targets for each iteration
+            target_obj = NULL;
+            int skillnum = spells[spell_idx];
+            
+            struct str_spells *spell = get_spell_by_vnum(skillnum);
+            if (!spell) continue;
 
         /* --- Início da Árvore de Decisão Tática Expandida --- */
         if (FIGHTING(ch)) {
@@ -1467,6 +1521,7 @@ bool mob_handle_item_usage(struct char_data *ch)
             best_target_char = target_char;
             best_target_obj = target_obj;
         }
+        }  // End of spell evaluation loop
     }
 
         if (item_to_use) {
