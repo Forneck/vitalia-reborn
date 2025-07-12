@@ -80,6 +80,20 @@ void mobile_activity(void)
     }
     
     if (ch->ai_data && ch->ai_data->current_goal != GOAL_NONE) {
+        
+        /* Increment goal timer and check for timeout */
+        ch->ai_data->goal_timer++;
+        
+        /* If stuck on shopping goal for too long (50 ticks = ~5 minutes), abandon it */
+        if (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL && ch->ai_data->goal_timer > 50) {
+            act("$n parece frustrado e desiste da viagem.", FALSE, ch, 0, 0, TO_ROOM);
+            ch->ai_data->current_goal = GOAL_NONE;
+            ch->ai_data->goal_destination = NOWHERE;
+            ch->ai_data->goal_obj = NULL;
+            ch->ai_data->goal_target_mob_rnum = NOBODY;
+            ch->ai_data->goal_timer = 0;
+            continue; /* Allow other priorities this turn */
+        }
 
         room_rnum dest = ch->ai_data->goal_destination;
 
@@ -90,6 +104,43 @@ void mobile_activity(void)
                 struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
                 if (keeper && ch->ai_data->goal_obj) {
                     shopping_sell(ch->ai_data->goal_obj->name, ch, keeper, find_shop_by_keeper(keeper->nr));
+                    
+                    /* After selling, check if there are more items to sell to this same shop */
+                    struct obj_data *next_item_to_sell = NULL;
+                    int min_score = 10;
+                    int shop_rnum = find_shop_by_keeper(keeper->nr);
+                    
+                    if (shop_rnum != -1) {
+                        /* Look for more junk to sell to this same shop */
+                        struct obj_data *obj;
+                        for (obj = ch->carrying; obj; obj = obj->next_content) {
+                            if (OBJ_FLAGGED(obj, ITEM_NODROP) || (GET_OBJ_TYPE(obj) == ITEM_CONTAINER && obj->contains))
+                                continue;
+                            
+                            /* Check if this shop buys this type of item */
+                            bool shop_buys_this = FALSE;
+                            for (int i = 0; SHOP_BUYTYPE(shop_rnum, i) != NOTHING; i++) {
+                                if (SHOP_BUYTYPE(shop_rnum, i) == GET_OBJ_TYPE(obj)) {
+                                    shop_buys_this = TRUE;
+                                    break;
+                                }
+                            }
+                            
+                            if (shop_buys_this) {
+                                int score = evaluate_item_for_mob(ch, obj);
+                                if (score < min_score) {
+                                    min_score = score;
+                                    next_item_to_sell = obj;
+                                }
+                            }
+                        }
+                        
+                        /* If we found another item to sell to this shop, continue selling */
+                        if (next_item_to_sell) {
+                            ch->ai_data->goal_obj = next_item_to_sell;
+                            continue; /* Continue with current goal, don't clear it */
+                        }
+                    }
                 }
             }
             /* Limpa o objetivo, pois foi concluído. */
@@ -97,6 +148,7 @@ void mobile_activity(void)
             ch->ai_data->goal_destination = NOWHERE;
             ch->ai_data->goal_obj = NULL;
             ch->ai_data->goal_target_mob_rnum = NOBODY;
+            ch->ai_data->goal_timer = 0;
         } else {
             /* Ainda não chegou. Continua a vaguear em direção ao objetivo. */
             mob_goal_oriented_roam(ch, dest);
@@ -787,8 +839,12 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
                 (world[to_room].sector_type == SECT_UNDERWATER && !has_scuba(ch))) {
                  return FALSE;
             }
-            if (MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[IN_ROOM(ch)].zone) && (rand_number(1, 100) > 1)) {
-                return TRUE; /* Hesitou e gastou o turno. */
+            if (MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[IN_ROOM(ch)].zone)) {
+                /* For shopping goals, be more willing to cross zones */
+                int zone_cross_chance = (ch->ai_data && ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL) ? 25 : 1;
+                if (rand_number(1, 100) > zone_cross_chance) {
+                    return TRUE; /* Hesitou e gastou o turno. */
+                }
             }
 
             /* Movimento Final */
@@ -1629,25 +1685,63 @@ bool mob_try_to_sell_junk(struct char_data *ch)
     /* CORREÇÃO: Usamos 'int' para podermos verificar o -1. */
     int best_shop_rnum = find_best_shop_to_sell(ch, item_to_sell);
     
-    if (best_shop_rnum >= 0 && best_shop_rnum <= top_shop) {
-
-        if (SHOP_ROOM(best_shop_rnum, 0) == NOWHERE) {
-            /* Esta loja está "quebrada" (sem sala), então a IA a ignora. */
-            return FALSE;
+    /* If the best shop is not reachable, try to find an alternative */
+    if (best_shop_rnum == -1 || best_shop_rnum > top_shop || SHOP_ROOM(best_shop_rnum, 0) == NOWHERE) {
+        return FALSE; /* No shops available */
+    }
+    
+    room_rnum target_shop_room = real_room(SHOP_ROOM(best_shop_rnum, 0));
+    
+    /* Check if we can reach the shop, if not try to find an alternative */
+    if (target_shop_room == NOWHERE || find_first_step(IN_ROOM(ch), target_shop_room) == -1) {
+        /* Try to find a second-best shop that is reachable */
+        best_shop_rnum = -1;
+        float best_profit = 0.0;
+        
+        for (int snum = 0; snum <= top_shop; snum++) {
+            if (!is_shop_open(snum)) continue;
+            
+            /* Check if shop buys this type of item */
+            bool buys_this_type = FALSE;
+            for (int i = 0; SHOP_BUYTYPE(snum, i) != NOTHING; i++) {
+                if (SHOP_BUYTYPE(snum, i) == GET_OBJ_TYPE(item_to_sell)) {
+                    buys_this_type = TRUE;
+                    break;
+                }
+            }
+            if (!buys_this_type) continue;
+            
+            room_rnum shop_location = real_room(SHOP_ROOM(snum, 0));
+            if (shop_location == NOWHERE) continue;
+            
+            /* This time, prioritize reachability over profit */
+            if (find_first_step(IN_ROOM(ch), shop_location) != -1) {
+                float current_profit = GET_OBJ_COST(item_to_sell) * SHOP_BUYPROFIT(snum);
+                if (current_profit > best_profit) {
+                    best_profit = current_profit;
+                    best_shop_rnum = snum;
+                }
+            }
         }
-        room_rnum target_shop_room = real_room(SHOP_ROOM(best_shop_rnum, 0));
-
-        if (target_shop_room != NOWHERE) {
-            /* Se ainda não está na loja, o objetivo é ir para lá. */
-            act("$n olha para a sua mochila e parece estar a planejar uma viagem.", FALSE, ch, 0, 0, TO_ROOM);
-	    ch->ai_data->current_goal = GOAL_GOTO_SHOP_TO_SELL;
-            ch->ai_data->goal_destination = target_shop_room;
-            ch->ai_data->goal_obj = item_to_sell;
-	    ch->ai_data->goal_target_mob_rnum = SHOP_KEEPER(best_shop_rnum);
-
-            mob_goal_oriented_roam(ch, target_shop_room);
-            return TRUE;
+        
+        if (best_shop_rnum == -1) {
+            return FALSE; /* No reachable shops found */
         }
+        
+        target_shop_room = real_room(SHOP_ROOM(best_shop_rnum, 0));
+    }
+    
+    if (best_shop_rnum >= 0 && best_shop_rnum <= top_shop && target_shop_room != NOWHERE) {
+        /* Se ainda não está na loja, o objetivo é ir para lá. */
+        act("$n olha para a sua mochila e parece estar a planejar uma viagem.", FALSE, ch, 0, 0, TO_ROOM);
+        ch->ai_data->current_goal = GOAL_GOTO_SHOP_TO_SELL;
+        ch->ai_data->goal_destination = target_shop_room;
+        ch->ai_data->goal_obj = item_to_sell;
+        ch->ai_data->goal_target_mob_rnum = SHOP_KEEPER(best_shop_rnum);
+        ch->ai_data->goal_timer = 0; /* Reset timer for new goal */
+
+        mob_goal_oriented_roam(ch, target_shop_room);
+        return TRUE;
     }
     
     return FALSE;
