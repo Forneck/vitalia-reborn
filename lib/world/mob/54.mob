@@ -554,8 +554,8 @@ final.
 7 16 5 1d1+1 1d5+1
 1 10
 9 9 1
-GenWimpy: 1
-GenRoam: 12
+GenWimpy: 2
+GenRoam: 24
 E
 #5443
 gato rua~
@@ -568,8 +568,8 @@ Você vê um pequeno gatinho faminto.
 2 18 7 1d2+5 2d2+1
 1 0
 9 9 1
-GenWimpy: 2
-GenRoam: 17
+GenWimpy: 3
+GenRoam: 24
 E
 #5444
 urubu~
@@ -619,7 +619,7 @@ O que você vê diante de si é realmente um bebê de um elemental do ar.
 1 19 9 2d2+1 2d3+1
 1 10
 9 9 1
-GenWimpy: 24
+GenWimpy: 38
 E
 #5448
 lamia~
@@ -634,8 +634,9 @@ ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 10
-GenRoam: 11
+GenWimpy: 17
+GenRoam: 14
+GenGroup: 1
 E
 #5449
 dervixe~
@@ -648,8 +649,7 @@ Este homem parece poder usar montes e montes de restos.
 8 12 3 4d4+20 2d6+1
 1 105
 9 9 1
-GenWimpy: 18
-GenRoam: 4
+GenWimpy: 31
 E
 #5450
 sultao~
@@ -675,6 +675,7 @@ azul.   Sua lealdade para com o Sultão é eterna.
 3 17 7 1d1+15 1d6+1
 0 40
 9 9 2
+GenWimpy: 29
 E
 #5452
 carcereiro~
@@ -701,6 +702,7 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
+GenWimpy: 14
 E
 #5454
 garota preferida nichole~
@@ -714,6 +716,7 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
+GenWimpy: 11
 E
 #5455
 ala alá~
@@ -806,6 +809,7 @@ necessidade.
 10 10 9 2d4+120 1d8+0
 150 2500
 9 9 1
+GenWimpy: 2
 E
 T 3013
 #5462
@@ -1027,11 +1031,12 @@ Elriva está aqui preparando uma poção do amor.
 ~
 Você vê uma mulher vestida em negro, com longos cabelos negros para combinar.
 ~
-2156546 0 0 0 0 0 0 0 0 E
+2156544 0 0 0 0 0 0 0 0 E
 108 10 0 1d1+30000 1d10+10
 1 2000
 9 9 2
 Cha: 18
+GenWimpy: 1
 E
 #5480
 braheem~

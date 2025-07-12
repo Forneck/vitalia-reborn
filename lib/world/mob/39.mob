@@ -245,6 +245,7 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #3916
 demonio bael~
@@ -262,6 +263,7 @@ mãos, agora livres, vêm na direção de sua alma.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 2
 E
 #3917
 svern demonio~
@@ -280,6 +282,8 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
+GenRoam: 6
 E
 #3918
 vrock demonio ave~
@@ -298,6 +302,7 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #3919
 valik zumbi dragao~
@@ -388,6 +393,7 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #3924
 pilar gelo~
@@ -405,6 +411,7 @@ BareHandAttack: 5
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #3925
 yeti agua~

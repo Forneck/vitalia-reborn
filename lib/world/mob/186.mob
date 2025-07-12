@@ -28,7 +28,8 @@ Melhor matar mesmo!
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
-GenWimpy: 17
+GenWimpy: 21
+GenRoam: 9
 E
 #18603
 dragão bebê dragao bebe~
@@ -44,7 +45,7 @@ mesmo os dragões pequenos podem causar um grande problema.
 4 17 6 1d4+50 1d6+1
 0 1000
 9 9 1
-GenWimpy: 8
+GenWimpy: 10
 E
 #18604
 novato guarda monstro~
@@ -61,8 +62,8 @@ Mestre irá me arrancar a cabeça se eu não encontrar o bichinho!"
 500 800
 9 9 1
 GenWimpy: 11
-GenLoot: 90
-GenEquip: 50
+GenLoot: 89
+GenEquip: 28
 GenUse: 20
 E
 #18605
@@ -77,7 +78,7 @@ ocupado, tentando misturar um líquido a outro.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 0
-GenWimpy: 8
+GenWimpy: 10
 E
 #18606
 réptil reptil coisa inseto pavoroso nojento~
@@ -91,9 +92,9 @@ vermes imundos, pequenos, cheios de pernas e marrons não estariam aqui!
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 21
-GenRoam: 76
-GenGroup: 6
+GenWimpy: 27
+GenRoam: 77
+GenGroup: 2
 E
 #18607
 novato zumbi~
@@ -108,9 +109,9 @@ espere!!  Ele parece que está querendo atacá-lo!
 4 17 5 1d8+46 2d4+0
 300 600
 9 9 0
-GenWimpy: 13
-GenRoam: 80
-GenGroup: 10
+GenWimpy: 15
+GenRoam: 81
+GenGroup: 9
 E
 #18608
 demônio demonio diabo travesso~
@@ -143,10 +144,10 @@ direção.
 7 15 5 3d5+85 2d4+1
 1000 3000
 9 9 1
-GenWimpy: 7
-GenLoot: 4
-GenRoam: 41
-GenGroup: 12
+GenWimpy: 8
+GenLoot: 5
+GenRoam: 42
+GenGroup: 16
 E
 #18610
 espectro fantasma~
@@ -160,7 +161,7 @@ de uma chance de levar à morte qualquer um que cruze o seu caminho.
 6 16 3 3d5+62 2d4+0
 0 1600
 9 9 0
-GenWimpy: 2
+GenWimpy: 3
 E
 #18611
 novato chato imbecil~
@@ -176,7 +177,7 @@ HAHAHAHAHAHAHAHAHAHA!
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 1
-GenWimpy: 7
+GenWimpy: 9
 E
 #18612
 novato retardado ignorante~
@@ -192,8 +193,8 @@ acabar logo com a mediocridade dele.
 1 20 10 1d1+19 1d3+1
 50 220
 9 9 1
-GenWimpy: 10
-GenRoam: 37
+GenWimpy: 9
+GenRoam: 43
 E
 #18613
 novata tagarela~
@@ -225,9 +226,9 @@ não o ajuda um pouco.
 4 17 6 8d5+20 1d6+1
 250 500
 9 9 1
-GenWimpy: 9
+GenWimpy: 11
 GenLoot: 2
-GenRoam: 10
+GenRoam: 9
 E
 #18615
 novato esperto~

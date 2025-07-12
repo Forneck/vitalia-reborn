@@ -422,9 +422,9 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 13
+GenWimpy: 10
 GenLoot: 1
-GenRoam: 23
+GenRoam: 25
 E
 #3722
 demonio ossos~
@@ -446,7 +446,7 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 3
 E
 #3723
 esqueleto guerreiro~
@@ -463,7 +463,7 @@ Este guerreio esqueleto guarda a de Ilha de visitantes não desejados.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 4
 E
 #3724
 esqueleto dragao~

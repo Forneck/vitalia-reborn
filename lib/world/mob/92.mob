@@ -10,7 +10,7 @@ pergunta gentilmente:
 2132102 0 0 0 68 0 0 0 0 E
 11 12 1 2d5+100 3d5+2
 1250 15000
-8 6 2
+9 6 2
 E
 #9201
 valete guarda copas~
@@ -25,7 +25,7 @@ exclama com imponência:
 2103298 0 0 0 256 0 0 0 -500 E
 15 8 0 3d6+150 2d6+3
 2500 18000
-8 8 1
+9 9 1
 E
 #9202
 valete guarda ouros~
@@ -40,7 +40,7 @@ exclama com imponência:
 2103298 0 0 0 256 0 0 0 -500 E
 15 8 0 3d6+150 2d6+3
 2500 18000
-8 8 1
+9 9 1
 E
 #9203
 valete guarda espadas~
@@ -55,7 +55,7 @@ exclama com imponência:
 2103298 0 0 0 256 0 0 0 500 E
 15 8 0 3d6+150 2d6+3
 2500 18000
-8 8 1
+9 9 1
 E
 #9204
 valete guarda paus~
@@ -70,7 +70,7 @@ exclama com imponência:
 2103298 0 0 0 256 0 0 0 500 E
 15 8 0 3d6+150 2d6+3
 2500 18000
-8 8 1
+9 9 1
 E
 #9205
 valete guarda coringa~
@@ -85,7 +85,7 @@ exclama com imponência:
 2103298 0 0 0 256 0 0 0 0 E
 15 8 0 3d6+150 2d6+3
 2500 18000
-8 8 1
+9 9 1
 E
 #9206
 sete copas~
@@ -97,7 +97,8 @@ Apenas sete comum ...
 2099396 0 0 0 0 0 0 0 -400 E
 10 15 2 2d6+100 2d4+0
 500 9000
-8 8 1
+9 9 1
+GenWimpy: 1
 E
 #9207
 sete ouros~
@@ -109,7 +110,8 @@ Apenas um sete comum ...
 2099396 0 0 0 0 0 0 0 -400 E
 10 15 2 2d6+100 2d4+0
 500 9000
-8 8 1
+9 9 1
+GenWimpy: 1
 E
 #9208
 sete espadas~
@@ -121,7 +123,8 @@ Apenas um sete comum ...
 2099396 0 0 0 0 0 0 0 400 E
 10 15 2 2d6+100 2d4+0
 500 9000
-8 8 1
+9 9 1
+GenWimpy: 3
 E
 #9209
 sete paus~
@@ -133,7 +136,9 @@ Apenas um sete comum ...
 2099396 0 0 0 0 0 0 0 400 E
 10 15 2 2d6+100 2d4+0
 500 9000
-8 8 1
+9 9 1
+GenWimpy: 2
+GenRoam: 5
 E
 #9210
 sete coringa~
@@ -145,7 +150,9 @@ Apenas um sete (?) comum ...
 2099396 0 0 0 0 0 0 0 0 E
 10 15 2 2d6+100 2d4+0
 500 9000
-8 8 1
+9 9 1
+GenWimpy: 4
+GenRoam: 5
 E
 #9211
 tres copas~
@@ -157,7 +164,7 @@ Apenas um três comum...
 2099268 0 0 0 0 0 0 0 -400 E
 4 16 7 2d4+50 2d3+1
 250 600
-8 8 1
+9 9 1
 E
 #9212
 tres ouros~
@@ -169,7 +176,9 @@ Apenas um três comum...
 2099268 0 0 0 0 0 0 0 -400 E
 4 16 7 2d4+50 2d3+1
 250 600
-8 8 1
+9 9 1
+GenWimpy: 2
+GenRoam: 2
 E
 #9213
 tres espadas~
@@ -181,7 +190,8 @@ Apenas um três comum...
 2099268 0 0 0 0 0 0 0 -400 E
 4 16 7 2d4+50 2d3+1
 250 600
-8 8 1
+9 9 1
+GenWimpy: 3
 E
 #9214
 tres paus~
@@ -193,7 +203,9 @@ Apenas um três comum...
 2099268 0 0 0 0 0 0 0 400 E
 4 16 7 2d4+50 2d3+1
 250 600
-8 8 1
+9 9 1
+GenWimpy: 3
+GenRoam: 1
 E
 #9215
 tres coringa~
@@ -205,7 +217,8 @@ Apenas um três (?) comum...
 2099268 0 0 0 0 0 0 0 0 E
 4 16 7 2d4+50 2d3+1
 250 600
-8 8 1
+9 9 1
+GenWimpy: 3
 E
 #9216
 canastra cartas copas~
@@ -218,7 +231,7 @@ pensa se seria uma boa idéia enfrentar esta CANASTRA ...
 2267138 0 0 0 324 0 0 0 -700 E
 10 10 2 3d6+100 2d5+2
 2500 15000
-8 8 2
+9 9 2
 E
 #9217
 canastra cartas ouros~
@@ -231,7 +244,7 @@ pensa se seria uma boa idéia enfrentar esta CANASTRA ...
 2267138 0 0 0 324 0 0 0 -700 E
 10 10 2 3d6+100 2d5+2
 2500 15000
-8 8 2
+9 9 2
 E
 #9218
 canastra cartas espadas~
@@ -244,7 +257,7 @@ pensa se seria uma boa idéia enfrentar esta CANASTRA ...
 2267138 0 0 0 324 0 0 0 700 E
 10 10 2 3d6+100 2d5+2
 2500 15000
-8 8 2
+9 9 2
 E
 #9219
 canastra cartas paus~
@@ -257,7 +270,7 @@ pensa se seria uma boa idéia enfrentar esta CANASTRA ...
 2267138 0 0 0 324 0 0 0 700 E
 10 10 2 3d6+100 2d5+2
 2500 15000
-8 8 2
+9 9 2
 E
 #9220
 canastra cartas suja~
@@ -271,7 +284,7 @@ suja...
 2267138 0 0 0 324 0 0 0 0 E
 10 10 2 3d6+100 2d5+2
 2500 15000
-8 8 2
+9 9 2
 E
 #9221
 rei copas figura~
@@ -284,7 +297,7 @@ sabedoria e força o levaram a ocupar um cargo tão nobre!
 2267138 0 0 0 324 0 0 0 -700 E
 20 7 -1 8d1+500 4d6+3
 5000 60000
-8 6 1
+9 6 1
 E
 #9222
 rei ouros figura~
@@ -297,7 +310,7 @@ sabedoria e força o levaram a ocupar um cargo tão nobre!
 2267138 0 0 0 324 0 0 0 -700 E
 20 7 -1 8d1+500 4d6+3
 5000 60000
-8 6 1
+9 6 1
 E
 #9223
 rei espadas figura~
@@ -310,7 +323,7 @@ sabedoria e força o levaram a ocupar um cargo tão nobre!
 2267138 0 0 0 324 0 0 0 700 E
 20 7 -1 8d1+500 4d6+3
 5000 60000
-8 6 1
+9 6 1
 E
 #9224
 rei paus figura~
@@ -323,7 +336,7 @@ sabedoria e força o levaram a ocupar um cargo tão nobre!
 2267138 0 0 0 324 0 0 0 700 E
 20 7 -1 8d1+500 4d6+3
 5000 60000
-8 6 1
+9 6 1
 E
 #9225
 rei figura coringa~
@@ -336,7 +349,7 @@ sua sabedoria e força o levaram a ocupar um cargo tão nobre!
 2267138 0 0 0 324 0 0 0 0 E
 20 7 -1 8d1+500 4d6+3
 5000 60000
-8 6 1
+9 6 1
 E
 #9226
 as pacificador copas figura~
@@ -349,7 +362,7 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 2353202 0 0 0 67904 0 0 0 -800 E
 20 5 -2 8d1+600 6d4+5
 5000 70000
-8 8 1
+9 9 1
 E
 #9227
 as pacificador ouros figura~
@@ -362,7 +375,7 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 2353202 0 0 0 67904 0 0 0 -800 E
 20 5 -2 8d1+600 6d4+5
 5000 70000
-8 8 1
+9 9 1
 E
 #9228
 as pacificador espadas figura~
@@ -375,7 +388,7 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 2353202 0 0 0 67904 0 0 0 800 E
 20 5 -2 8d1+600 6d4+5
 5000 70000
-8 8 1
+9 9 1
 E
 #9229
 as pacificador paus figura~
@@ -388,7 +401,7 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 2353202 0 0 0 67904 0 0 0 800 E
 20 5 -2 8d1+600 6d4+5
 5000 70000
-8 8 1
+9 9 1
 E
 #9230
 as pacificador figura falso~
@@ -401,7 +414,7 @@ Pacificador do Rei!  Você não mexeria com ele impunemente...
 2353202 0 0 0 67904 0 0 0 0 E
 20 5 -2 8d1+600 6d4+5
 5000 70000
-8 8 1
+9 9 1
 E
 #9231
 dama princesa donzela copas~
@@ -414,7 +427,7 @@ força descomunal!  Você não deveria mexer com ela.
 2099350 0 0 0 256 0 0 0 -500 E
 19 4 -3 3d5+400 3d6+4
 5000 80000
-8 8 2
+9 9 2
 E
 #9232
 dama princesa donzela ouros~
@@ -427,7 +440,7 @@ força descomunal!  Você não deveria mexer com ela.
 2099350 0 0 0 256 0 0 0 -500 E
 19 4 -3 3d5+400 3d6+4
 5000 80000
-8 8 2
+9 9 2
 E
 #9233
 dama princesa donzela espadas~
@@ -440,7 +453,7 @@ força descomunal!  Você não deveria mexer com ela.
 2099350 0 0 0 256 0 0 0 500 E
 19 4 -3 3d5+400 3d6+4
 5000 80000
-8 8 2
+9 9 2
 E
 #9234
 dama princesa donzela paus~
@@ -453,7 +466,7 @@ força descomunal!  Você não deveria mexer com ela.
 2099350 0 0 0 256 0 0 0 500 E
 19 4 -3 3d5+400 3d6+4
 5000 80000
-8 8 2
+9 9 2
 E
 #9235
 dama princesa donzela coringa~
@@ -466,7 +479,7 @@ força descomunal!  Você não deveria mexer com ela.
 2099350 0 0 0 256 0 0 0 0 E
 19 4 -3 3d5+400 3d6+4
 5000 80000
-8 8 2
+9 9 2
 E
 #9236
 pequeno falsificador chaveiro~
@@ -479,6 +492,6 @@ louváveis ...
 2099268 0 0 0 0 0 0 0 0 E
 4 16 7 2d4+50 2d3+1
 250 600
-8 8 1
+9 9 1
 E
 $

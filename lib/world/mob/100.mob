@@ -10,7 +10,8 @@ rua de Vitália.
 2097220 0 0 0 0 0 0 0 -200 E
 6 12 6 2d6+70 1d2+6
 275 1890
-8 8 1
+9 9 1
+GenWimpy: 17
 E
 #10001
 magra mulher aldeã~
@@ -24,7 +25,9 @@ aparecendo pelo mal fabricado e raquítico vestido.
 2097220 0 0 0 0 0 0 0 400 E
 6 12 7 2d6+70 1d2+6
 175 1876
-8 8 2
+9 9 2
+GenWimpy: 12
+GenRoam: 6
 E
 #10002
 tenente caspan soldado~
@@ -37,7 +40,7 @@ rasgar você de membro a membro.
 2123810 0 0 0 0 0 0 0 -600 E
 29 0 -1 10d10+800 13d1+18
 500 34533
-8 8 1
+9 9 1
 E
 #10003
 penelope~
@@ -50,7 +53,7 @@ alguns truques com cartas.
 2123778 0 0 0 0 0 0 0 600 E
 27 2 0 9d11+600 12d1+16
 200 28765
-8 8 2
+9 9 2
 E
 #10004
 soldado mordecai~
@@ -63,7 +66,8 @@ angustiante conjunto.
 2097186 0 0 0 0 0 0 0 -400 E
 18 3 0 4d7+550 15d1+19
 300 32456
-8 8 1
+9 9 1
+GenWimpy: 9
 E
 #10005
 pequena aldeia ladra menina~
@@ -77,7 +81,8 @@ pena dela?
 2097216 0 0 0 0 0 0 0 -50 E
 8 11 6 2d9+150 1d3+7
 2 3000
-8 8 2
+9 9 2
+GenWimpy: 11
 E
 #10006
 pálida criança trapos~
@@ -90,7 +95,9 @@ inocentes, e sorri um sorriso sem dentes.
 2097216 0 0 0 0 0 0 0 -50 E
 8 16 6 2d9+150 1d3+16
 0 3000
-8 8 1
+9 9 1
+GenWimpy: 6
+GenRoam: 4
 E
 #10007
 grávida mulher~
@@ -116,8 +123,9 @@ tristemente para você e continua mancando em frente.
 2097216 0 0 0 0 0 0 0 0 E
 2 17 6 1d6+15 1d1+2
 0 323
-8 8 0
+9 9 0
 BareHandAttack: 4
+GenWimpy: 10
 E
 #10009
 bruxa dente~
@@ -143,7 +151,7 @@ Mordecai é uma figura ameaçadora. O verdadeiro Senhor dos Mendigos.
 2124418 0 0 0 0 0 0 0 -999 E
 40 -2 -6 13d8+2525 3d6+20
 2000 93657
-8 8 1
+9 9 1
 E
 #10011
 andarilha galinha~
@@ -155,7 +163,9 @@ As vezes você se pergunta se sua vida seria melhor se você fosse uma galinha.
 2097216 0 0 0 0 0 0 0 0 E
 3 18 8 1d5+20 1d2+2
 2 30
-8 8 2
+9 9 2
+GenWimpy: 4
+GenRoam: 25
 E
 #10012
 mulher piolhente~
@@ -167,7 +177,8 @@ A mulher se coça freneticamente enquanto cata piolhos de sua cabeça.  Ela não
 2121730 0 0 0 0 0 0 0 0 E
 4 14 6 1d10+95 1d1+6
 37 1800
-8 8 2
+9 9 2
+GenWimpy: 7
 E
 #10013
 orfão escondido pequeno ladrãozinho moleque~
@@ -181,7 +192,7 @@ que roubou. Talvez algo seja seu.
 2097348 0 0 0 0 0 0 0 0 E
 10 13 4 1d1+200 1d1+12
 75 4000
-8 8 1
+9 9 1
 E
 #10014
 homem velho~
@@ -193,6 +204,6 @@ Ele é um homem velho e mal-humorado. E só.
 2099202 0 0 0 0 0 0 0 -200 E
 15 10 4 2d20+480 5d3+12
 69 15000
-8 8 1
+9 9 1
 E
 $

@@ -25,8 +25,8 @@ uma possível presa.
 16 4 3 1d1+600 6d1+16
 275 30000
 9 9 2
-GenWimpy: 2
-GenRoam: 9
+GenWimpy: 3
+GenRoam: 17
 E
 #13502
 fada~
@@ -39,8 +39,8 @@ Que bela fada você pode ver deste ângulo.
 16 4 3 1d1+600 6d1+16
 275 30000
 9 9 2
-GenWimpy: 2
-GenRoam: 26
+GenWimpy: 4
+GenRoam: 35
 E
 #13503
 inseto folha inseto-folha~
@@ -53,8 +53,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 3
-GenRoam: 35
+GenWimpy: 4
+GenRoam: 51
 E
 #13504
 inseto galho inseto-galho~
@@ -67,8 +67,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 4
-GenRoam: 39
+GenWimpy: 6
+GenRoam: 53
 E
 #13505
 inseto folha cinza~
@@ -81,8 +81,8 @@ An undefined string.
 20 0 2 1d1+1000 8d1+20
 0 40000
 9 9 0
-GenWimpy: 2
-GenRoam: 19
+GenWimpy: 3
+GenRoam: 29
 E
 #13506
 hierofante velho homem~
@@ -122,6 +122,7 @@ falta de rugas em seu rosto.
 45 -2 1 1d1+1400 9d1+22
 425 100000
 9 9 1
+GenWimpy: 1
 E
 #13509
 druidesa ancia~
@@ -148,8 +149,8 @@ você, parecendo procurar algo, mas logo volta a comer a grama.
 12 8 5 1d1+300 5d1+12
 0 12105
 9 9 2
-GenWimpy: 6
-GenRoam: 7
+GenWimpy: 7
+GenRoam: 4
 E
 #13511
 cervo~
@@ -163,8 +164,8 @@ aponta a parte superior de sua cabeça para você.
 13 7 4 1d1+350 6d1+13
 0 13880
 9 9 1
-GenWimpy: 3
-GenRoam: 20
+GenWimpy: 4
+GenRoam: 18
 E
 #13512
 veado~
@@ -177,8 +178,8 @@ Seus olhos possuem uma expressão não muito amigável.
 14 6 4 1d1+400 6d1+14
 0 13496
 9 9 1
-GenWimpy: 40
-GenRoam: 3
+GenWimpy: 59
+GenRoam: 6
 E
 #13513
 coelho pequeno~
@@ -191,8 +192,8 @@ Ele é simplesmente adorável, você queria ter um igual a esse!
 8 12 6 1d1+150 4d1+8
 0 10333
 9 9 1
-GenWimpy: 8
-GenRoam: 15
+GenWimpy: 9
+GenRoam: 13
 E
 #13514
 cobra cega~
@@ -205,7 +206,7 @@ Olhando bem você percebe que isso NÃO é uma cobra!
 9 11 6 1d1+175 4d1+9
 0 11371
 9 9 2
-GenWimpy: 6
+GenWimpy: 8
 E
 #13515
 druida~
@@ -219,7 +220,8 @@ demais para pedir que você saia.
 18 2 2 1d1+800 7d1+18
 325 20769
 9 9 1
-GenRoam: 27
+GenWimpy: 3
+GenRoam: 67
 E
 #13516
 druidesa~
@@ -248,7 +250,7 @@ Rã, sabe?  Apenas uma rã.
 8 12 6 1d1+150 4d1+8
 0 1333
 9 9 0
-GenWimpy: 4
-GenRoam: 43
+GenWimpy: 7
+GenRoam: 64
 E
 $

@@ -37,7 +37,7 @@ Parece estar em sua maneira de cuidar de algo...'
 900 46544
 9 9 1
 GenWimpy: 2
-GenRoam: 1
+GenRoam: 2
 E
 #803
 cigano Ornah~
@@ -51,9 +51,9 @@ desejo de matar...
 20 8 -8 10d10+1000 3d3+15
 700 38676
 9 9 1
-GenWimpy: 6
+GenWimpy: 9
 GenLoot: 2
-GenRoam: 9
+GenRoam: 20
 E
 #804
 grande vampiro~
@@ -79,6 +79,8 @@ Observe o dente - alguma coisa parece lembrar você sobre o dente.
 30 0 -10 10d10+2250 3d6+18
 1600 69345
 9 9 1
+GenWimpy: 1
+GenRoam: 2
 E
 #806
 Soberano Vampiro~

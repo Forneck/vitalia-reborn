@@ -37,6 +37,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 1
+GenRoam: 13
 E
 #702
 planta figueira~
@@ -56,8 +58,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 3
-GenRoam: 8
+GenWimpy: 4
+GenRoam: 27
 E
 #705
 monstrinho menor criatura~
@@ -100,7 +102,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 3
+GenWimpy: 4
+GenRoam: 16
 E
 #707
 cristal monsto~
@@ -121,7 +124,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 2
+GenWimpy: 6
 E
 #708
 escorpião escorpiao vermelho~
@@ -184,6 +187,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 2
 E
 #712
 impiedoso ceifeiro~
@@ -226,7 +230,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 1
+GenWimpy: 4
+GenRoam: 26
 E
 #714
 cavaleiro negro tempestuoso armadura~
@@ -271,8 +276,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 12
-GenRoam: 44
+GenWimpy: 17
+GenRoam: 50
+GenGroup: 1
 E
 #716
 pequena encurvada crianca criança~
@@ -311,7 +317,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 2
+GenWimpy: 5
 E
 #719
 ivian senhora~
@@ -427,7 +433,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 8
+GenWimpy: 10
 E
 #781
 planta carnivora venus carnívora vênus~
@@ -446,8 +452,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 1
-GenRoam: 10
+GenWimpy: 5
+GenRoam: 2
 E
 #799
 banda~

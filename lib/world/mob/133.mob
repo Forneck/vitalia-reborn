@@ -38,6 +38,7 @@ se vira lentamente e o olha sem expressão.
 20 0 -20 200d1+60 3d5+16
 6000 30000
 9 9 1
+GenWimpy: 3
 E
 #13304
 mateon cavaleiro~
@@ -51,6 +52,7 @@ chegar PERTO do homem mascarado.
 22 0 -20 430d1+10 4d6+19
 5000 40000
 9 9 1
+GenWimpy: 2
 E
 #13305
 arrumadeira mulher~
@@ -93,5 +95,7 @@ fingir que você não existe.
 10 12 3 100d1+10 2d5+4
 200 10000
 9 9 1
+GenWimpy: 6
+GenRoam: 22
 E
 $
