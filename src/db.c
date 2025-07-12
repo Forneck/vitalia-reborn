@@ -2039,6 +2039,12 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
 	      mob_proto[i].ai_data->genetics.use_tendency = num_arg;
 	  }
 	}
+	CASE("GenTrade")
+	{
+          if (mob_proto[i].ai_data) {
+              mob_proto[i].ai_data->genetics.trade_tendency = num_arg;
+          }
+        }
 	CASE("BareHandAttack")
 	{
 		RANGE(0, NUM_ATTACK_TYPES - 1);

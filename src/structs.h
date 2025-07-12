@@ -962,6 +962,7 @@ struct mob_genetics {
    int brave_prevalence;
    int group_tendency;
    int use_tendency;
+   int trade_tendency;
 };
 
 struct mob_ai_data {

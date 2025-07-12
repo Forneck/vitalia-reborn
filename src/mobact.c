@@ -24,6 +24,7 @@
 #include "shop.h"
 #include "graph.h"
 #include "spedit.h"
+#include "shop.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -41,8 +42,11 @@ bool mob_try_and_loot(struct char_data *ch);
 bool mob_try_and_upgrade(struct char_data *ch);
 bool mob_manage_inventory(struct char_data *ch);
 bool mob_handle_item_usage(struct char_data *ch);
+bool mob_try_to_sell_junk(struct char_data *ch);
 struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch);
 struct obj_data *find_cursed_item_in_inventory(struct char_data *ch);
+struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum);
+
 void mobile_activity(void)
 {
   struct char_data *ch, *next_ch, *vict;
@@ -155,7 +159,9 @@ void mobile_activity(void)
     }
     
     /* Prioridade de Vaguear (Roam) */
-    mob_goal_oriented_roam(ch, NOWHERE);
+    if (!mob_try_to_sell_junk(ch)) {
+     mob_goal_oriented_roam(ch, NOWHERE);
+    }
 
     /* Mob Memory */
     if (MOB_FLAGGED(ch, MOB_MEMORY) && MEMORY(ch)) {
@@ -1486,5 +1492,86 @@ bool mob_handle_item_usage(struct char_data *ch)
         ch->ai_data->genetics.use_tendency = MIN(MAX(ch->ai_data->genetics.use_tendency, 0), 100);
         return TRUE;
     }
+    return FALSE;
+}
+
+/**
+ * Encontra um mob específico em uma sala pelo seu número real (rnum).
+ */
+struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum)
+{
+    struct char_data *i;
+    for (i = world[room].people; i; i = i->next_in_room) {
+        if (IS_NPC(i) && GET_MOB_RNUM(i) == rnum) {
+            return i;
+        }
+    }
+    return NULL;
+}
+
+/**
+ * A IA de economia. O mob tenta vender os seus itens de menor valor.
+ * VERSÃO FINAL COM CORREÇÃO DE BUGS.
+ * Retorna TRUE se o mob definiu um objetivo ou executou uma venda.
+ */
+bool mob_try_to_sell_junk(struct char_data *ch)
+{
+    
+    /* 1. GATILHO: A IA só age se tiver genética e se o inventário estiver > 80% cheio. */
+    bool inventory_full = (IS_CARRYING_N(ch) >= CAN_CARRY_N(ch) * 0.8);
+    bool inventory_heavy = (IS_CARRYING_W(ch) >= CAN_CARRY_W(ch) * 0.8);
+
+    if (!ch->ai_data || !ch->carrying || (!inventory_full && !inventory_heavy))
+        return FALSE;
+
+    if (rand_number(1, 100) > MAX(GET_GENTRADE(ch), 5))
+        return FALSE;
+
+    struct obj_data *obj, *item_to_sell = NULL;
+    int min_score = 10;
+
+    /* 2. ANÁLISE DE INVENTÁRIO: Encontra o pior item para vender. */
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (OBJ_FLAGGED(obj, ITEM_NODROP) || (GET_OBJ_TYPE(obj) == ITEM_CONTAINER && obj->contains))
+            continue;
+        
+        int score = evaluate_item_for_mob(ch, obj);
+        if (score < min_score) {
+            min_score = score;
+            item_to_sell = obj;
+        }
+    }
+
+    if (!item_to_sell)
+        return FALSE; /* Não tem "lixo" para vender. */
+
+    /* 3. ANÁLISE DE MERCADO: Encontra a melhor loja para vender o item. */
+    /* CORREÇÃO: Usamos 'int' para podermos verificar o -1. */
+    int best_shop_rnum = find_best_shop_to_sell(ch, item_to_sell);
+    
+    if (best_shop_rnum != -1) {
+        room_rnum target_shop_room = real_room(SHOP_ROOM(best_shop_rnum, 0));
+
+        /* 4. AÇÃO: Vender ou Viajar */
+        if (IN_ROOM(ch) == target_shop_room) {
+            /* Se já está na loja, vende o item. */
+            char item_name[MAX_INPUT_LENGTH];
+            one_argument(item_to_sell->name, item_name);
+            
+            /* CORREÇÃO: Usa a nova função para encontrar o lojista de forma segura. */
+            struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), SHOP_KEEPER(best_shop_rnum));
+            if (keeper) {
+                 shopping_sell(item_name, ch, keeper, best_shop_rnum);
+                 ch->ai_data->genetics.trade_tendency = MIN(ch->ai_data->genetics.trade_tendency + 3, 100);
+                 return TRUE;
+            }
+        } else if (target_shop_room != NOWHERE) {
+            /* Se ainda não está na loja, o objetivo é ir para lá. */
+            act("$n olha para a sua mochila e parece estar a planejar uma viagem.", FALSE, ch, 0, 0, TO_ROOM);
+            mob_goal_oriented_roam(ch, target_shop_room);
+            return TRUE;
+        }
+    }
+    
     return FALSE;
 }
