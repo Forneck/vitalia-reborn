@@ -53,8 +53,8 @@ tempo e pelo cansaço.
 20 15 2 3d30+200 1d1+4
 1 7000
 9 9 1
-GenWimpy: 2
-GenRoam: 9
+GenWimpy: 3
+GenRoam: 26
 E
 #8105
 campones~
@@ -699,7 +699,7 @@ que deve ser sua boca.
 0 21000
 9 9 2
 GenWimpy: 7
-GenRoam: 68
+GenRoam: 74
 E
 #8152
 soldado egipcio~

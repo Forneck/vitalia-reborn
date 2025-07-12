@@ -11,8 +11,8 @@ Tomara que ele não esteja com fome!
 10 4000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 4
-GenRoam: 7
+GenWimpy: 5
+GenRoam: 6
 GenGroup: 2
 E
 #10301
@@ -42,8 +42,8 @@ Este aqui tem pedaços de carne e sangue por todo o corpo. Adivinhe, de onde ser
 100 6500
 9 9 1
 BareHandAttack: 4
-GenWimpy: 2
-GenRoam: 6
+GenWimpy: 3
+GenRoam: 9
 E
 #10303
 canibal~
@@ -57,8 +57,8 @@ uma pobre garotinha que acidentalmente encontrou esse lugar!
 15 10 0 6d6+260 5d5+10
 100 6500
 9 9 1
-GenWimpy: 1
-GenRoam: 8
+GenWimpy: 2
+GenRoam: 15
 E
 #10304
 mulher~
@@ -73,7 +73,7 @@ poderia acabar com o sofrimento dela!
 50 1000
 9 9 2
 GenWimpy: 5
-GenRoam: 5
+GenRoam: 12
 E
 #10305
 mulher canibal~
@@ -88,8 +88,8 @@ algo sério!
 11 17 7 3d3+100 3d3+3
 0 3500
 9 9 2
-GenWimpy: 2
-GenRoam: 21
+GenWimpy: 4
+GenRoam: 29
 E
 #10306
 chefe canibal~
@@ -117,8 +117,9 @@ Esta cobra parece ser perigosa, sem dúvida. Veja só as presas!
 300 4000
 9 9 2
 BareHandAttack: 4
-GenWimpy: 9
-GenRoam: 26
+GenWimpy: 11
+GenRoam: 43
+GenGroup: 2
 E
 #10308
 macaco pequeno~
@@ -162,8 +163,8 @@ Ela é bem parecida com os outros primatas. Cheira mal, horrível.
 500 3500
 9 9 2
 BareHandAttack: 4
-GenWimpy: 11
-GenRoam: 36
+GenWimpy: 13
+GenRoam: 51
 E
 #10311
 chefe primata~
@@ -231,7 +232,7 @@ sua última refeição.
 6 10 6 2d2+100 3d3+6
 1000 3700
 9 9 2
-GenWimpy: 27
+GenWimpy: 31
 E
 #10316
 zumbi~
@@ -244,9 +245,9 @@ Este zumbi é alto e forte, e está aqui pronto para lhe matar.
 15 10 7 8d8+750 5d5+8
 3500 4000
 9 9 1
-GenWimpy: 10
-GenLoot: 4
-GenRoam: 22
+GenWimpy: 8
+GenLoot: 2
+GenRoam: 37
 E
 #10317
 zumbi kenuthi~

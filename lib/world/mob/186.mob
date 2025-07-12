@@ -28,9 +28,8 @@ Melhor matar mesmo!
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
-GenWimpy: 22
-GenLoot: 1
-GenRoam: 12
+GenWimpy: 23
+GenRoam: 17
 E
 #18603
 dragão bebê dragao bebe~
@@ -79,7 +78,7 @@ ocupado, tentando misturar um líquido a outro.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 0
-GenWimpy: 11
+GenWimpy: 12
 E
 #18606
 réptil reptil coisa inseto pavoroso nojento~
@@ -93,9 +92,8 @@ vermes imundos, pequenos, cheios de pernas e marrons não estariam aqui!
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 28
-GenRoam: 80
-GenGroup: 1
+GenWimpy: 29
+GenRoam: 85
 E
 #18607
 novato zumbi~
@@ -110,9 +108,9 @@ espere!!  Ele parece que está querendo atacá-lo!
 4 17 5 1d8+46 2d4+0
 300 600
 9 9 0
-GenWimpy: 17
-GenRoam: 83
-GenGroup: 8
+GenWimpy: 25
+GenRoam: 87
+GenGroup: 7
 E
 #18608
 demônio demonio diabo travesso~
@@ -127,8 +125,9 @@ dar uma boa examinada nela, a coisa dispara na direção das sombras e some.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 6
-GenRoam: 19
+GenWimpy: 8
+GenRoam: 40
+GenGroup: 1
 E
 #18609
 minotauro~
@@ -145,10 +144,10 @@ direção.
 7 15 5 3d5+85 2d4+1
 1000 3000
 9 9 1
-GenWimpy: 8
-GenLoot: 5
-GenRoam: 42
-GenGroup: 16
+GenWimpy: 9
+GenLoot: 3
+GenRoam: 56
+GenGroup: 18
 E
 #18610
 espectro fantasma~

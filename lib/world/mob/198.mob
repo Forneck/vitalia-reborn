@@ -25,6 +25,8 @@ você com um olhar indiferente..
 40 1 -30 15d6+600 6d6+21
 3500 100000
 9 9 1
+GenWimpy: 1
+GenRoam: 2
 E
 #19802
 fada labirinto~
@@ -327,7 +329,8 @@ num piscar de olhos em outra posição.  É notoriamente um fantasma.
 70 -10 -30 600d1+250 2d8+25
 10000 200000
 9 9 1
-GenWimpy: 5
-GenRoam: 12
+GenWimpy: 6
+GenLoot: 1
+GenRoam: 33
 E
 $

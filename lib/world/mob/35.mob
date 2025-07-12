@@ -24,7 +24,7 @@ para o jantar.
 4 17 6 1d1+55 1d8+0
 50 600
 9 9 1
-GenWimpy: 25
+GenWimpy: 28
 GenRoam: 87
 E
 #3502
@@ -111,7 +111,7 @@ pequenos pedaços.
 8 12 4 1d12+97 1d5+7
 1000 4000
 9 9 1
-GenWimpy: 2
-GenRoam: 27
+GenWimpy: 3
+GenRoam: 45
 E
 $

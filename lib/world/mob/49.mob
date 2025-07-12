@@ -9,7 +9,8 @@ Ele olha calmamente para você e continua a andar lenta e graciosamente.
 2 19 9 2d4+16 1d4+1
 0 400
 9 9 1
-GenWimpy: 56
+GenWimpy: 65
+GenRoam: 4
 E
 #4901
 elfo gato~
@@ -89,6 +90,8 @@ sobrevivência de outros animais.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 1
+GenWimpy: 1
+GenRoam: 7
 E
 #4907
 xamã xama atom~

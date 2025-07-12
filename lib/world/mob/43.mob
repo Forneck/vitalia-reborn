@@ -110,7 +110,8 @@ um pombo branco está aqui
 0 250
 9 9 1
 BareHandAttack: 1
-GenWimpy: 1
+GenWimpy: 2
+GenRoam: 1
 E
 #4326
 homem corcunda~
@@ -140,8 +141,7 @@ Ele está vestido com uma túnica marrom.
 8 17 5 3d4+75 4d2+2
 3825 2567
 9 9 1
-GenWimpy: 2
-GenRoam: 1
+GenWimpy: 3
 E
 #4334
 estatua gargula pedra~

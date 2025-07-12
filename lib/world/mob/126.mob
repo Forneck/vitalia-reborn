@@ -1687,7 +1687,7 @@ Str: 15
 Dex: 15
 Con: 18
 Cha: 15
-GenWimpy: 1
+GenWimpy: 2
 E
 #12673
 Tanngrisni bode~
@@ -1705,7 +1705,7 @@ Str: 15
 Dex: 15
 Con: 18
 Cha: 15
-GenWimpy: 1
+GenWimpy: 2
 E
 #12674
 Ratatosk esquilo~
@@ -2207,8 +2207,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 11
-GenRoam: 7
+GenWimpy: 14
+GenRoam: 14
 E
 #12697
 ave marinha~

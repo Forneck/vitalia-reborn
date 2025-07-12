@@ -171,7 +171,7 @@ espada em punho!!
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 4
 E
 #2710
 torturador~
@@ -366,6 +366,7 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 2
 E
 #2723
 vaca~

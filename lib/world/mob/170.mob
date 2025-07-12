@@ -22,7 +22,7 @@ Ele parece estar atrás de um almoço..
 22 0 0 1d5+380 3d5+20
 1000 20000
 9 9 1
-GenWimpy: 3
+GenWimpy: 4
 E
 #17003
 elemental~
@@ -313,8 +313,8 @@ An undefined string.
 2 17 2 1d5+100 1d8+1
 450 1000
 9 9 1
-GenWimpy: 8
-GenRoam: 54
+GenWimpy: 10
+GenRoam: 71
 E
 #17026
 chama elemental azul humanoide~
@@ -387,9 +387,9 @@ tempo até que ela lhe atinja.
 26 -2 -7 1d5+650 6d5+11
 3000 30000
 9 9 1
-GenWimpy: 13
+GenWimpy: 16
 GenLoot: 2
-GenGroup: 2
+GenGroup: 4
 E
 #17031
 anciao mago elemental~

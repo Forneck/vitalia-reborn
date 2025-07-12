@@ -619,7 +619,7 @@ O que você vê diante de si é realmente um bebê de um elemental do ar.
 1 19 9 2d2+1 2d3+1
 1 10
 9 9 1
-GenWimpy: 43
+GenWimpy: 46
 E
 #5448
 lamia~
@@ -674,7 +674,7 @@ azul.   Sua lealdade para com o Sultão é eterna.
 3 17 7 1d1+15 1d6+1
 0 40
 9 9 2
-GenWimpy: 42
+GenWimpy: 54
 E
 #5452
 carcereiro~
@@ -701,7 +701,7 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 12
+GenWimpy: 16
 E
 #5454
 garota preferida nichole~
@@ -715,7 +715,7 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
-GenWimpy: 14
+GenWimpy: 17
 E
 #5455
 ala alá~

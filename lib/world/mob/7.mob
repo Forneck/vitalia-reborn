@@ -81,8 +81,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 7
-GenRoam: 1
+GenWimpy: 8
+GenRoam: 3
 E
 #706
 duende~
@@ -125,7 +125,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 6
+GenWimpy: 8
 E
 #708
 escorpião escorpiao vermelho~
@@ -188,7 +188,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 4
+GenWimpy: 5
 E
 #712
 impiedoso ceifeiro~
@@ -277,8 +277,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 18
-GenRoam: 44
+GenWimpy: 19
+GenRoam: 54
 E
 #716
 pequena encurvada crianca criança~
@@ -317,7 +317,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 7
+GenWimpy: 8
 E
 #719
 ivian senhora~
@@ -374,6 +374,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 1
+GenRoam: 7
 E
 #750
 febre escarlate~
@@ -412,8 +414,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 2
+GenRoam: 34
 E
 #780
 Mosquito inseto~
@@ -452,8 +454,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 5
-GenRoam: 2
+GenWimpy: 6
+GenRoam: 4
 E
 #799
 banda~

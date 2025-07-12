@@ -71,7 +71,7 @@ econômica...e também divertida!
 11 10 2 1d6+150 2d6+11
 0 11000
 9 9 1
-GenWimpy: 14
+GenWimpy: 15
 E
 #1705
 cavaleiro fantasma~
@@ -86,7 +86,7 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 28
+GenWimpy: 37
 E
 #1706
 guardiao guardião cripta~
@@ -134,7 +134,7 @@ Você não pode conseguir mais nada com ele.
 10 11 4 2d8+325 2d6+11
 23 9000
 9 9 1
-GenWimpy: 7
+GenWimpy: 9
 E
 #1708
 bolha lama~
@@ -218,9 +218,9 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 18 3 0 3d6+625 3d6+21
 0 30000
 9 9 1
-GenWimpy: 9
-GenLoot: 4
-GenRoam: 81
+GenWimpy: 13
+GenLoot: 3
+GenRoam: 83
 E
 #1714
 gelatina ocre~
@@ -235,9 +235,9 @@ passado infeliz, você presume.
 16 5 1 2d6+496 2d8+12
 1576 25000
 9 9 2
-GenWimpy: 16
+GenWimpy: 20
 GenLoot: 2
-GenRoam: 86
+GenRoam: 87
 E
 #1715
 necromante~

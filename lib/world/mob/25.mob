@@ -9,8 +9,8 @@ Isto parece ser feito de nada mais que escuridão...
 9 10 1 9d9+90 2d5+5
 100 4000
 9 9 0
-GenWimpy: 6
-GenRoam: 76
+GenWimpy: 8
+GenRoam: 83
 E
 #2501
 aventureiro~
@@ -66,8 +66,8 @@ Ou então, ele pode apenas estar com dor de cabeça.
 10 10 -1 10d10+100 1d8+8
 436 3500
 9 9 1
-GenWimpy: 4
-GenRoam: 19
+GenWimpy: 5
+GenRoam: 36
 E
 T 3009
 #2505
@@ -106,7 +106,7 @@ mas ela certamente se encaixa no esperado para uma torre cheia de magos.
 20 6 -1 20d20+200 3d4+8
 1092 31300
 9 9 2
-GenWimpy: 4
+GenWimpy: 5
 E
 T 3009
 #2508
@@ -121,7 +121,7 @@ panela.
 11 8 1 11d11+110 3d4+4
 116 4600
 9 9 1
-GenWimpy: 1
+GenWimpy: 2
 E
 T 3009
 #2509
@@ -179,7 +179,7 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 12
+GenWimpy: 17
 E
 #2513
 guardioes maiores olhos~
@@ -192,10 +192,8 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 8
-GenLoot: 1
-GenRoam: 75
-GenGroup: 3
+GenWimpy: 9
+GenRoam: 81
 E
 #2514
 mago visitante~
@@ -221,7 +219,7 @@ Ela parece estar bastante concentrada em seus estudos.
 7 7 2 7d6+25 2d4+5
 369 2950
 6 6 2
-GenWimpy: 13
+GenWimpy: 18
 E
 T 3009
 #2516
@@ -235,7 +233,7 @@ Ele parece ignorar tudo à sua volta, exceto o feitiço que está memorizando.
 7 6 2 7d6+25 2d4+5
 487 2750
 9 9 1
-GenWimpy: 12
+GenWimpy: 16
 E
 T 3009
 #2517
@@ -250,7 +248,7 @@ Ele parece estar sonhando.
 7 7 2 7d6+25 2d4+4
 211 2650
 4 4 1
-GenWimpy: 17
+GenWimpy: 20
 E
 T 3009
 #2518
@@ -264,7 +262,7 @@ Ele parece ser um jovem travesso.
 7 7 1 7d6+25 2d4+5
 382 2300
 9 9 1
-GenWimpy: 5
+GenWimpy: 7
 E
 T 3009
 #2519
@@ -279,7 +277,7 @@ algumas marcas de queimaduras menores marcam sua pelugem mosqueada.
 1 20 1 1d1+10 1d4+1
 0 11
 9 9 2
-GenWimpy: 4
+GenWimpy: 7
 E
 #2520
 estudante~
@@ -556,7 +554,7 @@ Ele parece inflamável.
 16 7 -5 16d16+160 1d10+10
 1000 17500
 9 9 0
-GenWimpy: 8
+GenWimpy: 9
 E
 #2540
 mestre vinculador~
@@ -716,6 +714,8 @@ zumbi.
 18 5 -4 18d18+180 3d5+10
 0 22000
 9 9 0
+GenWimpy: 1
+GenRoam: 1
 E
 #2552
 bruxa velha feia~
@@ -730,8 +730,8 @@ revolver de repulsão.
 20 5 -2 20d20+200 3d6+5
 2150 26850
 9 9 2
-GenWimpy: 15
-GenRoam: 26
+GenWimpy: 17
+GenRoam: 44
 E
 T 3009
 #2553
@@ -857,7 +857,7 @@ Parece ser nada mais que uma grande bola de pêlos, com garras.
 15 4 -4 15d8+10 3d7+3
 0 7950
 9 9 0
-GenWimpy: 15
+GenWimpy: 16
 E
 #2562
 mestre branco~

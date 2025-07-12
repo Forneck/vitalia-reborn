@@ -12,7 +12,7 @@ escudeiro.
 70 2 -20 10d20+1200 4d6+16
 5000 99344
 9 9 1
-GenWimpy: 1
+GenWimpy: 2
 E
 T 3013
 #17302
@@ -360,7 +360,7 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 9
+GenWimpy: 7
 E
 #17325
 bufao dagonet bobo~
@@ -643,7 +643,8 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 2
+GenWimpy: 3
+GenRoam: 5
 E
 #17345
 chefe saxao render~

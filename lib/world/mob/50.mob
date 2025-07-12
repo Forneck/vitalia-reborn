@@ -40,8 +40,8 @@ vermelho, amarelo e preto.
 4 17 4 1d6+40 1d9+0
 0 600
 9 9 0
-GenWimpy: 15
-GenRoam: 17
+GenWimpy: 16
+GenRoam: 14
 E
 #5003
 escorpiao pequeno~
@@ -203,8 +203,8 @@ O xamã está espalhando esporos pelo ar.
 14 7 1 1d12+173 2d7+2
 2500 18000
 9 9 1
-GenWimpy: 4
-GenRoam: 22
+GenWimpy: 5
+GenRoam: 27
 E
 T 3009
 #5015
