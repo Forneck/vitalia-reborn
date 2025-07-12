@@ -12,6 +12,7 @@ escudeiro.
 70 2 -20 10d20+1200 4d6+16
 5000 99344
 9 9 1
+GenWimpy: 1
 E
 T 3013
 #17302
@@ -39,6 +40,7 @@ carrega uma grande lança.
 70 2 -19 12d12+1200 14d14+15
 10000 65030
 9 9 1
+GenWimpy: 3
 E
 T 3013
 #17304
@@ -75,7 +77,7 @@ guerra.
 80 0 -13 2d12+1400 3d8+18
 8000 100444
 9 9 1
-GenWimpy: 1
+GenWimpy: 3
 E
 #17306
 galahad cavaleiro~
@@ -225,8 +227,8 @@ da meia idade, mas ainda é um vigoroso combatente.
 60 4 -7 2d8+678 12d6+18
 10000 62000
 9 9 1
-GenWimpy: 1
-GenRoam: 1
+GenWimpy: 2
+GenRoam: 4
 E
 #17316
 besta busca criatura~
@@ -283,6 +285,7 @@ vagamente em você!
 60 3 -3 20d20+550 4d4+14
 500 46088
 9 9 1
+GenWimpy: 2
 E
 #17320
 encantado cavaleiro graduado~
@@ -296,6 +299,8 @@ olhos são vazios, sua espada quebrada e ele está muito desalinhado.
 63 3 -7 13d13+765 9d7+15
 5800 46890
 9 9 1
+GenWimpy: 1
+GenRoam: 3
 E
 #17321
 dama espera~
@@ -310,6 +315,8 @@ vestido e tem uma coroa de flores enfeitando seus cabelos.
 30 5 -2 10d10+360 4d6+8
 3000 10030
 9 9 2
+GenWimpy: 3
+GenRoam: 3
 E
 #17322
 rainha guinevere~
@@ -337,6 +344,8 @@ estado de desordem.
 67 3 0 6d12+900 5d8+15
 0 56090
 9 9 1
+GenWimpy: 4
+GenRoam: 4
 E
 #17324
 barant rei apres cavaleiro~
@@ -351,7 +360,7 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 4
+GenWimpy: 9
 E
 #17325
 bufao dagonet bobo~
@@ -435,6 +444,8 @@ nele.
 25 5 0 5d3+400 6d7+7
 1200 21000
 9 9 1
+GenWimpy: 1
+GenRoam: 1
 E
 #17331
 mercador~
@@ -512,7 +523,8 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
-GenWimpy: 1
+GenWimpy: 6
+GenRoam: 29
 E
 #17337
 demonio~
@@ -617,6 +629,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
+GenWimpy: 4
 E
 #17344
 escrava~
@@ -630,6 +643,7 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
+GenWimpy: 2
 E
 #17345
 chefe saxao render~
@@ -644,6 +658,7 @@ coberto por piolhos.
 73 2 -13 5d13+1200 6d6+17
 10000 60994
 9 9 1
+GenWimpy: 1
 E
 #17346
 guarda fronteira norte~
@@ -718,6 +733,7 @@ O servo segura um instrumento de fazenda e usa trapos para se cobrir.
 10 7 1 4d12+250 6d6+5
 1240 4769
 9 9 1
+GenWimpy: 4
 E
 #17351
 invasor anglo~
@@ -913,5 +929,6 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
+GenWimpy: 1
 E
 $

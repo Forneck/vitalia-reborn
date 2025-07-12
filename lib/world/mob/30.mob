@@ -612,6 +612,8 @@ Ele parece muito forte e sábio. Parece que ele não fala com QUALQUER um.
 4000 50500
 9 9 1
 BareHandAttack: 10
+GenWimpy: 1
+GenRoam: 5
 E
 T 3013
 #3060
@@ -625,6 +627,8 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
+GenWimpy: 3
+GenRoam: 19
 E
 T 3013
 #3061
@@ -652,7 +656,8 @@ cheios de pedaços de carne apodrecida grudadas.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 2
+GenWimpy: 7
+GenRoam: 78
 E
 T 3014
 #3063

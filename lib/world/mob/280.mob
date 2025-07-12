@@ -10,7 +10,7 @@ corpo possui um brilho luminoso.
 2340946 0 0 0 130 0 0 0 1000 E
 15 3 -4 3d8+300 4d4+6
 1000 25000
-8 8 2
+9 9 2
 E
 #28002
 trabalhador~
@@ -25,7 +25,7 @@ agora em atividades braçais.
 2097218 0 0 0 0 0 0 0 100 E
 12 8 1 3d5+250 3d3+7
 800 3000
-8 8 1
+9 9 1
 E
 #28003
 trabalhadora~
@@ -40,7 +40,7 @@ vida callyuni e trabalham agora em atividades braçais.
 2097218 0 0 0 0 0 0 0 100 E
 12 8 1 3d5+250 3d3+7
 800 3000
-8 8 2
+9 9 2
 E
 #28004
 sanguessuga parasita~
@@ -53,7 +53,8 @@ detalhada sem sentir o estômago embrulhar.
 2099058 0 0 0 8 0 0 0 -1000 E
 15 5 0 5d6+420 3d5+10
 0 30000
-8 8 0
+9 9 0
+GenWimpy: 5
 E
 #28005
 espantalho boneco palha~
@@ -66,7 +67,7 @@ proteger os campos contra os ataques dos pássaros.
 2097218 0 0 0 0 0 0 0 0 E
 15 4 0 4d5+380 2d9+6
 0 25000
-8 8 0
+9 9 0
 E
 #28006
 goblin~
@@ -78,7 +79,8 @@ Você vê um goblin com nadadeiras e barbatanas.
 2100822 0 0 0 64 0 0 0 -250 E
 15 5 0 3d10+280 4d3+8
 500 7000
-8 8 0
+9 9 0
+GenWimpy: 11
 E
 #28007
 gafanhoto inseto~
@@ -90,7 +92,7 @@ Um pequeno inseto marrom e verde que parece ser extremamente voraz.
 2097218 0 0 0 0 0 0 0 -100 E
 10 10 10 2d5+130 2d4+8
 1 1000
-8 8 0
+9 9 0
 E
 #28008
 vaca louca~
@@ -102,7 +104,8 @@ Ali está uma vaca louca, usando um chapéu de Viking!
 2099058 0 0 0 0 0 0 0 -250 E
 12 7 0 3d5+200 3d5+7
 1000 13000
-8 8 0
+9 9 0
+GenWimpy: 7
 E
 #28009
 estatua idolo metal guerreiro~
@@ -116,7 +119,7 @@ Você vê uma placa em sua base.  Há uma inscrição ali:
 2351186 0 0 0 128 0 0 0 250 E
 40 -3 -15 10d25+2000 6d8+21
 0 200000
-8 8 0
+9 9 0
 E
 #28010
 vaca~
@@ -128,7 +131,8 @@ Apenas uma vaquinha...
 2097218 0 0 0 0 0 0 0 250 E
 12 7 0 3d5+200 3d5+3
 0 13000
-8 8 0
+9 9 0
+GenWimpy: 8
 E
 #28011
 cavalo~
@@ -140,7 +144,7 @@ Você vê um magnífico cavalo Árabe.
 2097218 0 0 0 0 0 0 0 250 E
 12 7 1 2d3+210 3d5+5
 0 15000
-8 8 0
+9 9 0
 E
 #28012
 mulher vendedora~
@@ -152,11 +156,11 @@ Ela é bonita, com traços suaves e olhos sonhadores.
 2351312 0 0 0 0 0 0 0 500 E
 20 -5 -10 0d0+500 4d6+14
 50000 26000
-8 8 2
+9 9 2
 E
 #28013
 guardiao~
-O Guardião das Águas~
+o Guardião das Águas~
 O Guardião das Águas está aqui para proteger os seres aquáticos.
 ~
 O Guardião das Águas é um ser fluídico.  À primeira vista, parece tratar-se
@@ -166,11 +170,11 @@ em inúmeras outras formas.
 2127954 0 0 0 1258 0 0 0 250 E
 30 -10 -20 8d20+1200 4d8+25
 0 120000
-8 8 0
+9 9 0
 E
 #28014
 guardiao florestas floresta~
-O Guardião das Florestas~
+o Guardião das Florestas~
 O Guardião das Florestas está aqui para proteger os seres da floresta.
 ~
 É muito difícil descrever a aparência desta entidade.  Você pode ver apenas
@@ -179,11 +183,11 @@ uma sombra esfumaçada, movendo-se por entre a folhagem.
 2127952 0 0 0 8362 0 0 0 250 E
 30 -10 -20 5d30+1200 4d8+25
 0 80000
-8 8 0
+9 9 0
 E
 #28015
 guardiao sombras escuridao~
-O Guardião da Escuridão~
+o Guardião da Escuridão~
 O Guardião da Escuridão está aqui para proteger as almas perdidas.
 ~
 Aos poucos você nota a presença desta entidade que vai emergindo da
@@ -194,7 +198,7 @@ e os grandes olhos vermelhos.
 2123858 0 0 0 9450 0 0 0 -500 E
 30 -8 -18 8d25+1150 4d9+21
 0 120000
-8 8 0
+9 9 0
 E
 #28016
 ninfa~
@@ -207,7 +211,7 @@ existe alguma coisa diferente nela e você não consegue saber o que.
 2101314 0 0 0 64 0 0 0 500 E
 18 3 -5 5d6+490 4d4+5
 2000 20000
-8 8 2
+9 9 2
 E
 #28017
 guarda cally~
@@ -220,11 +224,11 @@ treinado para proteger os cidadãos callyunis dos problemas e dos rufiões.
 2103376 0 0 0 0 0 0 0 250 E
 20 -5 -5 5d6+800 4d4+12
 1500 90000
-8 8 1
+9 9 1
 E
 #28018
 almirante dasher~
-O Almirante Dasher~
+o Almirante Dasher~
 O Almirante Dasher está sentado aqui, desenvolvendo estratégias de guerra.
 ~
 O Almirante Dasher é um homem forte, com barba e cabelos brancos.  Suas
@@ -234,7 +238,7 @@ Callyus.
 2353234 0 0 0 9384 0 0 0 500 E
 50 -15 -60 10d15+1700 5d7+25
 100000 400000
-8 8 1
+9 9 1
 E
 #28019
 secretaria ginger~
@@ -250,7 +254,7 @@ almirante...
 2156758 0 0 0 0 0 0 0 500 E
 27 -2 -25 12d5+800 3d8+12
 20000 40000
-8 8 2
+9 9 2
 E
 #28020
 salomao mestre estaleiro~
@@ -265,7 +269,7 @@ um tubarão, há muitos anos atrás.
 2123862 0 0 0 0 0 0 0 250 E
 30 -8 -40 12d5+1200 3d8+18
 50000 100000
-8 8 1
+9 9 1
 E
 #28021
 mestre docas estivador~
@@ -278,7 +282,7 @@ navios, coordenar os trabalhadores e manter as instalações das docas.
 2099268 0 0 0 0 0 0 0 100 E
 20 10 -8 4d5+990 3d6+12
 500 7000
-8 8 1
+9 9 1
 E
 #28022
 trabalhador estivador~
@@ -290,7 +294,7 @@ O estivador é um homem forte.
 2097216 0 0 0 0 0 0 0 0 E
 15 5 -5 6d10+650 3d5+8
 500 5000
-8 8 1
+9 9 1
 E
 #28023
 marinheiro~
@@ -302,6 +306,8 @@ Você vê um homem vestindo uma farda branca.
 2099264 0 0 0 0 0 0 0 50 E
 15 7 -2 1d10+490 2d5+12
 7500 2000
-8 8 1
+9 9 1
+GenWimpy: 1
+GenRoam: 1
 E
 $

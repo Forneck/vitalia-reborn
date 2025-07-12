@@ -27,6 +27,8 @@
 #include "screen.h"
 #include "fight.h"
 #include <sys/stat.h>				/* for mkdir() */
+#include "graph.h"
+
 
 /* Global variables definitions used externally */
 /* Constant list for printing out who we sell to */
@@ -66,7 +68,6 @@ static void shopping_list(char *arg, struct char_data *ch, struct char_data *kee
 static bool shopping_identify(char *arg, struct char_data *ch, struct char_data *keeper,
 							  int shop_nr);
 static void shopping_value(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr);
-static void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr);
 static struct obj_data *get_selling_obj(struct char_data *ch, char *name, struct char_data *keeper,
 										int shop_nr, int msg);
 static struct obj_data *slide_obj(struct obj_data *obj, struct char_data *keeper, int shop_nr);
@@ -824,7 +825,7 @@ static void sort_keeper_objs(struct char_data *keeper, int shop_nr)
 	}
 }
 
-static void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr)
+void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr)
 {
 	char tempstr[MAX_INPUT_LENGTH - 10], name[MAX_INPUT_LENGTH], tempbuf[MAX_INPUT_LENGTH];	// - 
 																							// 
@@ -2009,4 +2010,77 @@ bool is_shop_open(shop_rnum snum)
         return FALSE;
     }
     return TRUE;
+}
+
+/**
+ * Analisa todas as lojas do mundo para encontrar a melhor opção de venda
+ * para um item específico, com base na acessibilidade e no lucro.
+ * @param ch O mob que quer vender.
+ * @param item O item a ser vendido.
+ * @return O rnum da melhor loja encontrada, ou -1 se nenhuma for adequada.
+ */
+int find_best_shop_to_sell(struct char_data *ch, struct obj_data *item)
+{
+    shop_rnum snum, best_shop = -1;
+    float best_profit = 0.0;
+    int i;
+
+    if (!ch || !item)
+        return -1;
+
+    /* A IA percorre o índice de todas as lojas do MUD. */
+    for (snum = 0; snum <= top_shop; snum++) {
+
+        /* Filtro 1: A loja está aberta? */
+        if (!is_shop_open(snum)) {
+            continue;
+        }
+
+        /* Filtro 2: A loja compra este tipo de item? */
+        bool buys_this_type = FALSE;
+        for (i = 0; SHOP_BUYTYPE(snum, i) != NOTHING; i++) {
+            if (SHOP_BUYTYPE(snum, i) == GET_OBJ_TYPE(item)) {
+                buys_this_type = TRUE;
+                break;
+            }
+        }
+        if (!buys_this_type) {
+            continue;
+        }
+
+        /* Filtro 3: O mob consegue chegar à loja? */
+        /* Assumindo que uma loja tem apenas uma sala principal por simplicidade. */
+        room_rnum shop_location = real_room(SHOP_ROOM(snum, 0));
+        if (shop_location == NOWHERE) {
+            continue;
+        }
+
+        /* find_first_step retorna -1 se não houver caminho. */
+        if (find_first_step(IN_ROOM(ch), shop_location) == -1) {
+            continue;
+        }
+
+        /* Análise Económica: Esta loja oferece um lucro melhor que a melhor encontrada até agora? */   
+        float current_profit = GET_OBJ_COST(item) * SHOP_BUYPROFIT(snum);
+
+
+    	/******************************************************************/
+	/* LÓGICA DE LOJISTA: Compara o lucro da venda com o lucro de manter o item. */
+    	/******************************************************************/
+    	int own_shop_rnum = find_shop_by_keeper(GET_MOB_RNUM(ch));
+    	if (own_shop_rnum != -1) {
+        	float profit_at_home = GET_OBJ_COST(item) * SHOP_SELLPROFIT(own_shop_rnum);
+	        if (current_profit <= profit_at_home) {
+        	    continue; /* Não vale a pena vender para outro, o lucro em casa é maior. */
+	        }
+	}
+
+	/* Análise Económica: Esta loja oferece um lucro melhor? */
+        if (current_profit > best_profit) {
+            best_profit = current_profit;
+            best_shop = snum;
+        }
+    }
+
+    return best_shop; /* Retorna o rnum da melhor loja, ou -1 se nenhuma foi encontrada. */
 }

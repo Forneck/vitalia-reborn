@@ -10,7 +10,7 @@ mais freqüentemente.
 2156546 0 0 0 16 0 0 0 1000 E
 108 0 -10 1d1+30000 1d8+22
 2000 80000
-8 8 2
+9 9 2
 E
 #3101
 sacristao~
@@ -35,7 +35,8 @@ Um chefe muito bravo.
 2097190 0 0 0 16 0 0 0 800 E
 17 3 1 1d12+210 1d8+18
 0 28000
-8 8 1
+9 9 1
+GenWimpy: 1
 E
 #3103
 sentinela guarda~
@@ -47,7 +48,8 @@ Um grande, forte e bravo sentinela.
 2097190 0 0 0 0 0 0 0 1000 E
 10 10 2 1d12+123 1d8+3
 0 9000
-8 8 1
+9 9 1
+GenWimpy: 15
 E
 #3104
 secretaria~
@@ -62,7 +64,8 @@ A Secretária diz 'Por favor, sente-se enquanto espera.'
 2097154 0 0 0 0 0 0 0 900 E
 12 9 2 1d12+148 2d7+1
 100 13000
-8 8 2
+9 9 2
+GenWimpy: 1
 E
 #3105
 prefeito~
@@ -89,7 +92,7 @@ Ele é muito bom em seu trabalho - completamente derretido em lágrimas.
 2097280 0 0 0 0 0 0 0 900 E
 1 20 9 2d6+10 1d5+0
 34 100
-8 8 1
+9 9 1
 E
 #3120
 cisne~
@@ -101,7 +104,7 @@ O cisne branco é muito elegante.
 2097154 0 0 0 0 0 0 0 1000 E
 1 20 9 2d6+10 1d5+0
 0 100
-8 8 1
+9 9 1
 E
 #3121
 patinho~
@@ -113,7 +116,7 @@ O patinho é adorável, ele se parece mais com um floquinho de plumas pequenino.
 2097154 0 0 0 0 0 0 0 1000 E
 0 20 10 1d1+0 1d1+0
 0 1
-8 8 1
+9 9 1
 E
 #3122
 pardal~
@@ -125,7 +128,7 @@ Parece que o pardal está aproveitando a vida.
 2097344 0 0 0 0 0 0 0 1000 E
 0 20 10 2d6+0 1d3+0
 0 25
-8 8 1
+9 9 1
 E
 #3123
 pato~
@@ -137,7 +140,7 @@ O pato á bem gordo. Parece que ele está aproveitando a vida.
 2097216 0 0 0 0 0 0 0 1000 E
 1 20 10 2d6+5 1d4+0
 0 75
-8 8 0
+9 9 0
 E
 #3124
 guarda-costas~
@@ -150,7 +153,7 @@ proteger seu Prefeito.
 2097232 0 0 0 16 0 0 0 1000 E
 40 0 -6 10d10+750 8d8+21
 1000 45000
-8 8 1
+9 9 1
 BareHandAttack: 10
 E
 $

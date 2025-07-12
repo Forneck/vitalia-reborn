@@ -25,6 +25,9 @@ int ok_shop_room(int shop_nr, room_vnum room);
 /* Adicione estas linhas em src/shop.h */
 shop_rnum find_shop_by_keeper(mob_rnum rnum);
 bool is_shop_open(shop_rnum snum);
+int find_best_shop_to_sell(struct char_data *ch, struct obj_data *item);
+bool mob_try_to_sell_junk(struct char_data *ch);
+void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr);
 
 
 struct shop_buy_data {

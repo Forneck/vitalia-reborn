@@ -24,6 +24,7 @@
 #include "shop.h"
 #include "graph.h"
 #include "spedit.h"
+#include "shop.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -33,7 +34,7 @@ struct char_data *find_best_median_leader(struct char_data *ch);
 bool mob_handle_grouping(struct char_data *ch);
 bool mob_share_gear_with_group(struct char_data *ch);
 bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, int was_in);
-bool mob_goal_oriented_roam(struct char_data *ch);
+bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room);
 bool handle_duty_routine(struct char_data *ch);
 bool mob_follow_leader(struct char_data *ch);
 bool mob_assist_allies(struct char_data *ch);
@@ -41,8 +42,11 @@ bool mob_try_and_loot(struct char_data *ch);
 bool mob_try_and_upgrade(struct char_data *ch);
 bool mob_manage_inventory(struct char_data *ch);
 bool mob_handle_item_usage(struct char_data *ch);
+bool mob_try_to_sell_junk(struct char_data *ch);
 struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch);
 struct obj_data *find_cursed_item_in_inventory(struct char_data *ch);
+struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum);
+
 void mobile_activity(void)
 {
   struct char_data *ch, *next_ch, *vict;
@@ -75,9 +79,32 @@ void mobile_activity(void)
         ch->ai_data->duty_frustration_timer--;
     }
     
-    if (handle_duty_routine(ch))
-	    continue;
+    if (ch->ai_data && ch->ai_data->current_goal != GOAL_NONE) {
 
+        room_rnum dest = ch->ai_data->goal_destination;
+
+        /* Já chegou ao destino? */
+        if (IN_ROOM(ch) == dest) {
+            if (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL) {
+                /* Usa a memória para encontrar o lojista correto. */
+                struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
+                if (keeper && ch->ai_data->goal_obj) {
+                    shopping_sell(ch->ai_data->goal_obj->name, ch, keeper, find_shop_by_keeper(keeper->nr));
+                }
+            }
+            /* Limpa o objetivo, pois foi concluído. */
+            ch->ai_data->current_goal = GOAL_NONE;
+            ch->ai_data->goal_destination = NOWHERE;
+            ch->ai_data->goal_obj = NULL;
+            ch->ai_data->goal_target_mob_rnum = NOBODY;
+        } else {
+            /* Ainda não chegou. Continua a vaguear em direção ao objetivo. */
+            mob_goal_oriented_roam(ch, dest);
+        }
+
+        continue; /* O turno do mob foi gasto a trabalhar no seu objetivo. */
+    }
+    
     if (mob_index[GET_MOB_RNUM(ch)].func == shop_keeper) {
     	int shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
 	    if (shop_nr != -1 && !is_shop_open(shop_nr)) {
@@ -95,6 +122,7 @@ void mobile_activity(void)
 	        continue;
 	    }
     }
+    
     if GROUP(ch){
 	    mob_follow_leader(ch);
     }
@@ -108,9 +136,7 @@ void mobile_activity(void)
     hunt_victim(ch);
     
 
-    if (mob_handle_grouping(ch)) {
-        continue; /* Ação do pulso foi usada para agrupar, fim do turno. */
-    }
+    mob_handle_grouping(ch);
 
     /* Aggressive Mobs */
      if (!MOB_FLAGGED(ch, MOB_HELPER) && (!AFF_FLAGGED(ch, AFF_BLIND) || !AFF_FLAGGED(ch, AFF_CHARM))) {
@@ -155,9 +181,13 @@ void mobile_activity(void)
     
     mob_share_gear_with_group(ch);
 
-
+    if (handle_duty_routine(ch)) {                                                                          continue;
+    }
+    
     /* Prioridade de Vaguear (Roam) */
-    mob_goal_oriented_roam(ch);
+    if (!mob_try_to_sell_junk(ch)) {
+     mob_goal_oriented_roam(ch, NOWHERE);
+    }
 
     /* Mob Memory */
     if (MOB_FLAGGED(ch, MOB_MEMORY) && MEMORY(ch)) {
@@ -587,7 +617,10 @@ bool mob_share_gear_with_group(struct char_data *ch)
             for (contained_item = item->contains; contained_item; contained_item = contained_item->next_content) {
                 member = (struct char_data *)merge_iterator(&iterator, GROUP(ch)->members);
                 while(member) {
-                     if (ch != member) {
+                   if (ch == member || IN_ROOM(ch) != IN_ROOM(member)) {
+                      member = (struct char_data *)next_in_list(&iterator);
+                      continue;
+                   }
                         int wear_pos = find_eq_pos(member, contained_item, NULL);
                         if (wear_pos != -1) {
                             int improvement = evaluate_item_for_mob(member, contained_item) - evaluate_item_for_mob(member, GET_EQ(member, wear_pos));
@@ -598,7 +631,6 @@ bool mob_share_gear_with_group(struct char_data *ch)
                                 container_source = item; /* Lembra-se de que o item está neste contentor. */
                             }
                         }
-                    }
                     member = (struct char_data *)next_in_list(&iterator);
                 }
             }
@@ -685,10 +717,12 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
 
 /**
  * IA de exploração orientada a objetivos. O mob agora vagueia com um propósito.
- * VERSÃO FINAL E DEFINITIVA: Segura, tática e com fluxo de ações corrigido.
+ * Se um 'target_room' for fornecido, ele tentará navegar até lá.
+ * Se não, ele usa a sua lógica de exploração padrão.
+ * VERSÃO FINAL COM NAVEGAÇÃO POR OBJETIVO.
  * Retorna TRUE se uma ação de roam foi executada.
  */
-bool mob_goal_oriented_roam(struct char_data *ch)
+bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
 {
     if (ch->master != NULL || FIGHTING(ch) || GET_POS(ch) < POS_STANDING)
         return FALSE;
@@ -696,34 +730,30 @@ bool mob_goal_oriented_roam(struct char_data *ch)
     int direction = -1;
     bool has_goal = FALSE;
 
-    /* 1. Define um objetivo (voltar ao posto ou explorar). */
-    if (MOB_FLAGGED(ch, MOB_SENTINEL) && IN_ROOM(ch) != real_room(GET_LOADROOM(ch))) {
-        direction = find_first_step(IN_ROOM(ch), real_room(GET_LOADROOM(ch)));
+    /* --- FASE 1: DEFINIÇÃO DO OBJETIVO --- */
+
+    /* Se um destino específico foi dado, essa é a prioridade máxima. */
+    if (target_room != NOWHERE && IN_ROOM(ch) != target_room) {
+        direction = find_first_step(IN_ROOM(ch), target_room);
         has_goal = TRUE;
     } else {
-        int base_roam = MOB_FLAGGED(ch, MOB_SENTINEL) ? 1 : 25;
-        int curiosidade_minima = 10;
-        int chance_roll = 100;
-        int need_bonus = (GET_EQ(ch, WEAR_WIELD) == NULL ? 20 : 0) + (!GROUP(ch) ? 10 : 0);
-        
-        /************************************************************/
-        /* REFINAMENTO: Sentinelas são muito mais relutantes.       */
-        if (MOB_FLAGGED(ch, MOB_SENTINEL)) {
-            curiosidade_minima = 0;
-            chance_roll = 1000; /* Mais difícil de ser motivado. */
-        }
-        /************************************************************/
-
-        int final_chance = MIN(MAX(base_roam + GET_GENROAM(ch) + need_bonus, curiosidade_minima), 90);
-        
-        if (rand_number(1, chance_roll) <= final_chance) {
-            direction = rand_number(0, DIR_COUNT - 1);
+        /* Se nenhum destino foi dado, usa a lógica de exploração padrão. */
+        if (MOB_FLAGGED(ch, MOB_SENTINEL) && IN_ROOM(ch) != real_room(ch->ai_data->guard_post)) {
+            direction = find_first_step(IN_ROOM(ch), real_room(ch->ai_data->guard_post));
             has_goal = TRUE;
+        } else {
+            int base_roam = MOB_FLAGGED(ch, MOB_SENTINEL) ? 1 : 25;
+            int need_bonus = (GET_EQ(ch, WEAR_WIELD) == NULL ? 20 : 0) + (!GROUP(ch) ? 10 : 0);
+            int final_chance = MIN(base_roam + GET_GENROAM(ch) + need_bonus, 90);
+            
+            if (rand_number(1, 100) <= final_chance) {
+                direction = rand_number(0, DIR_COUNT - 1);
+                has_goal = TRUE;
+            }
         }
     }
-
-
-    /* 2. Se tiver um objetivo, tenta agir. */
+    
+    /* --- FASE 2: EXECUÇÃO DA AÇÃO SE HOUVER UM OBJETIVO --- */
     if (has_goal && direction >= 0 && direction < DIR_COUNT) { /* Verificação de segurança para direction */
         struct room_direction_data *exit;
         room_rnum to_room;
@@ -731,10 +761,10 @@ bool mob_goal_oriented_roam(struct char_data *ch)
         if ((exit = EXIT(ch, direction)) && (to_room = exit->to_room) <= top_of_world) {
 
             /* GESTÃO DE VOO (Ação que consome o turno) */
-            if (AFF_FLAGGED(ch, AFF_FLYING) && ROOM_FLAGGED(to_room, ROOM_NO_FLY)) 
-		    stop_flying(ch); 
+            if (AFF_FLAGGED(ch, AFF_FLYING) && ROOM_FLAGGED(to_room, ROOM_NO_FLY))
+                    stop_flying(ch);
             if (!AFF_FLAGGED(ch, AFF_FLYING) && world[to_room].sector_type == SECT_CLIMBING)
-		    start_flying(ch);
+                    start_flying(ch);
 
             /* RESOLUÇÃO DE PORTAS (UMA AÇÃO DE CADA VEZ, E APENAS EM PORTAS REAIS) */
             if (IS_SET(exit->exit_info, EX_ISDOOR) && IS_SET(exit->exit_info, EX_CLOSED)) {
@@ -749,8 +779,7 @@ bool mob_goal_oriented_roam(struct char_data *ch)
             }
 
             /* Se, depois de tudo, a porta ainda estiver fechada, a IA não pode passar. */
-            if (IS_SET(exit->exit_info, EX_CLOSED)) {
-                return FALSE;
+            if (IS_SET(exit->exit_info, EX_CLOSED)) {                                                                                                return FALSE;
             }
 
             /* Verificações Finais de Caminho */
@@ -768,6 +797,7 @@ bool mob_goal_oriented_roam(struct char_data *ch)
             return perform_move_IA(ch, direction, should_close, was_in);
         }
     }
+
     return FALSE;
 }
 
@@ -1242,6 +1272,10 @@ struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch)
     return NULL;
 }
 
+/*
+* staff  - [0] level   [1] max charges [2] num charges [3] spell num
+ * wand   - [0] level   [1] max charges [2] num charges [3] spell num        * scroll - [0] level   [1] spell num   [2] spell num   [3] spell num        * potion - [0] level   [1] spell num   [2] spell num   [3] spell num        * Staves and wands will default to level 14 if the level is not specified;*/
+
 /**
  * Retorna todos os números de magia contidos em um item mágico.
  * @param obj O objeto a ser verificado.
@@ -1318,7 +1352,7 @@ int get_spell_from_item(struct obj_data *obj)
 bool mob_handle_item_usage(struct char_data *ch)
 {
     if (!ch->carrying || !ch->ai_data) return FALSE;
-    if (rand_number(1, 100) > MAX(GET_GENUSE(ch), 5)) return FALSE;
+    if (rand_number(1, 100) > MAX(GET_GENUSE(ch), 15)) return FALSE;
 
     struct obj_data *obj, *item_to_use = NULL, *target_obj = NULL, *best_target_obj = NULL;
     struct char_data *target_char = NULL, *best_target_char = NULL;
@@ -1538,5 +1572,83 @@ bool mob_handle_item_usage(struct char_data *ch)
         ch->ai_data->genetics.use_tendency = MIN(MAX(ch->ai_data->genetics.use_tendency, 0), 100);
         return TRUE;
     }
+    return FALSE;
+}
+
+/**
+ * Encontra um mob específico em uma sala pelo seu número real (rnum).
+ */
+struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum)
+{
+    struct char_data *i;
+    for (i = world[room].people; i; i = i->next_in_room) {
+        if (IS_NPC(i) && GET_MOB_RNUM(i) == rnum) {
+            return i;
+        }
+    }
+    return NULL;
+}
+
+/**
+ * A IA de economia. O mob tenta vender os seus itens de menor valor.
+ * VERSÃO FINAL COM CORREÇÃO DE BUGS.
+ * Retorna TRUE se o mob definiu um objetivo ou executou uma venda.
+ */
+bool mob_try_to_sell_junk(struct char_data *ch)
+{
+    
+    /* 1. GATILHO: A IA só age se tiver genética e se o inventário estiver > 80% cheio. */
+    bool inventory_full = (IS_CARRYING_N(ch) >= CAN_CARRY_N(ch) * 0.8);
+    bool inventory_heavy = (IS_CARRYING_W(ch) >= CAN_CARRY_W(ch) * 0.8);
+
+    if (!ch->ai_data || !ch->carrying || (!inventory_full && !inventory_heavy))
+        return FALSE;
+
+    if (rand_number(1, 100) > MAX(GET_GENTRADE(ch), 5))
+        return FALSE;
+
+    struct obj_data *obj, *item_to_sell = NULL;
+    int min_score = 10;
+
+    /* 2. ANÁLISE DE INVENTÁRIO: Encontra o pior item para vender. */
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (OBJ_FLAGGED(obj, ITEM_NODROP) || (GET_OBJ_TYPE(obj) == ITEM_CONTAINER && obj->contains))
+            continue;
+        
+        int score = evaluate_item_for_mob(ch, obj);
+        if (score < min_score) {
+            min_score = score;
+            item_to_sell = obj;
+        }
+    }
+
+    if (!item_to_sell)
+        return FALSE; /* Não tem "lixo" para vender. */
+
+    /* 3. ANÁLISE DE MERCADO: Encontra a melhor loja para vender o item. */
+    /* CORREÇÃO: Usamos 'int' para podermos verificar o -1. */
+    int best_shop_rnum = find_best_shop_to_sell(ch, item_to_sell);
+    
+    if (best_shop_rnum >= 0 && best_shop_rnum <= top_shop) {
+
+        if (SHOP_ROOM(best_shop_rnum, 0) == NOWHERE) {
+            /* Esta loja está "quebrada" (sem sala), então a IA a ignora. */
+            return FALSE;
+        }
+        room_rnum target_shop_room = real_room(SHOP_ROOM(best_shop_rnum, 0));
+
+        if (target_shop_room != NOWHERE) {
+            /* Se ainda não está na loja, o objetivo é ir para lá. */
+            act("$n olha para a sua mochila e parece estar a planejar uma viagem.", FALSE, ch, 0, 0, TO_ROOM);
+	    ch->ai_data->current_goal = GOAL_GOTO_SHOP_TO_SELL;
+            ch->ai_data->goal_destination = target_shop_room;
+            ch->ai_data->goal_obj = item_to_sell;
+	    ch->ai_data->goal_target_mob_rnum = SHOP_KEEPER(best_shop_rnum);
+
+            mob_goal_oriented_roam(ch, target_shop_room);
+            return TRUE;
+        }
+    }
+    
     return FALSE;
 }

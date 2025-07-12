@@ -136,6 +136,7 @@ Ele aparenta ser um elfo forte e bravo...  e parece não falar com NINGUÉM.
 30 -10 -2 1d1+2250 13d1+30
 625 153337
 9 9 1
+GenWimpy: 1
 E
 T 3013
 #13411
@@ -381,6 +382,8 @@ Você pouco pode ver olhando para esta criatura.
 1 14 7 1d1+100 3d1+6
 0 75
 9 9 1
+GenWimpy: 1
+GenRoam: 9
 E
 #13431
 fada~

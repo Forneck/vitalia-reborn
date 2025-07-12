@@ -27,6 +27,7 @@ muito perigoso e bastante agressivo.
 5 16 5 1d12+80 2d4+4
 0 1000
 9 9 0
+GenWimpy: 1
 E
 #6102
 lobo cinzento~
@@ -40,6 +41,8 @@ uma baba viscosa vai escorrendo por entre os seus lábios.
 3 18 7 1d12+35 1d7+0
 0 450
 9 9 0
+GenWimpy: 7
+GenRoam: 43
 E
 #6103
 lobo negro~
@@ -53,6 +56,8 @@ uma baba viscosa vai escorrendo por entre os seus lábios.
 3 18 7 1d12+45 1d7+3
 0 450
 9 9 0
+GenWimpy: 2
+GenRoam: 27
 E
 #6110
 arvore antiga milenar ancia~
@@ -119,6 +124,7 @@ de paralizar ou matar em segundos.
 8 13 2 1d12+98 2d5+1
 0 4000
 9 9 0
+GenWimpy: 2
 E
 T 3008
 #6114
@@ -135,6 +141,7 @@ arredondados, estão fixos em você.
 15 6 1 1d12+185 2d8+3
 0 31000
 9 9 2
+GenWimpy: 3
 E
 T 3009
 #6115
@@ -150,6 +157,8 @@ esfarrapado traje marrom e verde e parece que ele está se divertindo muito.
 10 1 -10 1d12+47 1d8+0
 1000 11000
 9 9 1
+GenWimpy: 3
+GenRoam: 20
 E
 T 3009
 #6116
@@ -166,6 +175,7 @@ bastante difícil.
 19 2 0 1d12+236 3d6+4
 5000 45000
 9 9 1
+GenWimpy: 1
 E
 T 3009
 #6117
@@ -184,6 +194,7 @@ prende uma longa e delgada espada em seu bainha de prata.
 20 1 0 1d12+245 3d6+4
 5000 40000
 9 9 2
+GenWimpy: 2
 E
 T 3009
 $

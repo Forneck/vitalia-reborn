@@ -950,6 +950,12 @@ struct room_data
 };
 
 
+/* Define os possíveis objetivos de longo prazo da IA */
+#define GOAL_NONE              0
+#define GOAL_GOTO_SHOP_TO_SELL 1
+#define GOAL_RETURN_TO_POST    2
+/* Futuramente: GOAL_HUNT_TARGET, GOAL_GATHER_RESOURCES, etc. */
+
 /*
  * Estrutura para armazenar os "genes" de um mob, que podem evoluir.
  */
@@ -962,13 +968,21 @@ struct mob_genetics {
    int brave_prevalence;
    int group_tendency;
    int use_tendency;
+   int trade_tendency;
 };
+
+
 
 struct mob_ai_data {
     struct mob_genetics genetics; /* Contém todos os genes. */
     room_vnum guard_post;         /* O "posto de guarda" para Sentinelas/Lojistas. */
     int duty_frustration_timer;
     /* Futuramente: int experience; int level; struct list *wishlist; etc. */
+
+    int current_goal;           /* O objetivo atual do mob (ex: GOAL_GOTO_SHOP_TO_SELL). */
+    room_rnum goal_destination; /* A sala de destino do seu objetivo. */
+    struct obj_data *goal_obj;  /* O objeto alvo do objetivo */
+    mob_rnum goal_target_mob_rnum; /*Falar com quem?*/
 };
 
 /**

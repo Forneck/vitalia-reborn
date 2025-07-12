@@ -9,7 +9,7 @@ E você deveria deixa-lo exatamente daquele jeito ou então matá-lo.
 2234440 0 0 0 1065 0 0 0 -15 E
 3 15 4 4d5+20 3d3+5
 0 212
-4 8 0
+4 9 0
 BareHandAttack: 4
 E
 #4304
@@ -23,7 +23,7 @@ pedinte, que está implorando por algumas moedas ou por um pedaço de carne.
 2099272 0 0 0 1056 0 0 0 -20 E
 12 13 3 3d5+288 2d4+12
 1 5760
-6 8 1
+6 9 1
 BareHandAttack: 13
 E
 #4311
@@ -39,7 +39,7 @@ lado dele, portanto, nada de importuná-lo.
 2115594 0 0 0 1152 0 0 0 50 E
 12 12 3 3d1+112 5d6+5
 2500 4358
-6 8 1
+6 9 1
 BareHandAttack: 13
 E
 #4316
@@ -53,7 +53,7 @@ Ele está vestido com botas pretas, calças marrom e camisa branca.
 2103432 0 0 0 1056 0 0 0 10 E
 8 12 1 5d3+115 3d4+10
 2853 6578
-8 8 1
+9 9 1
 E
 #4321
 menino cantor coral~
@@ -67,7 +67,7 @@ qualquer música por algum dinheiro.
 2101384 0 0 0 32 0 0 0 20 E
 10 14 3 5d2+155 3d3+5
 1200 4800
-8 8 1
+9 9 1
 E
 #4322
 crente~
@@ -82,11 +82,11 @@ roupas brancas.
 2103368 0 0 0 1024 0 0 0 20 E
 6 15 5 2d3+85 4d3+6
 1200 4325
-6 8 2
+6 9 2
 E
 #4324
 Richelieu Cardeal~
-O Cardeal Richelieu~
+o Cardeal Richelieu~
 O Cardeal Richelieu está aqui, gritando com as pessoas.
 ~
 O Cardeal da França e ministro de Luis XIV, todo vestido de vermelho, 
@@ -96,7 +96,7 @@ peculiar bigode.
 2099210 0 0 0 1160 0 0 0 50 E
 33 5 -4 4d6+3575 5d6+15
 9000 53672
-8 8 1
+9 9 1
 E
 #4325
 pombo~
@@ -108,8 +108,9 @@ um pombo branco está aqui
 2097160 0 0 0 0 0 0 0 1 E
 1 18 9 2d1+12 1d2+1
 0 250
-8 8 1
+9 9 1
 BareHandAttack: 1
+GenWimpy: 1
 E
 #4326
 homem corcunda~
@@ -123,7 +124,7 @@ roupas coloridas.
 2115850 0 0 0 172 0 0 0 10 E
 33 4 -3 3d20+1576 9d6+18
 2500 45753
-8 8 1
+9 9 1
 E
 #4330
 Monge Jean~
@@ -138,7 +139,8 @@ Ele está vestido com uma túnica marrom.
 2101448 0 0 0 32 0 0 0 -25 E
 8 17 5 3d4+75 4d2+2
 3825 2567
-8 8 1
+9 9 1
+GenWimpy: 2
 E
 #4334
 estatua gargula pedra~
@@ -152,7 +154,7 @@ maldades e tristezas do mundo. Este monstro horrível parece ser perigoso.
 2115626 0 0 0 128 0 0 0 -100 E
 22 5 -5 3d10+876 6d5+15
 18653 33656
-8 8 0
+9 9 0
 BareHandAttack: 10
 E
 #4337
@@ -166,7 +168,7 @@ olhar demonstra que ele talvez esteja meio perdido e distraído. Talvez você de
 2101576 0 0 0 132 0 0 0 10 E
 26 7 -2 4d4+1275 5d6+15
 12675 28653
-8 8 1
+9 9 1
 BareHandAttack: 3
 E
 #4340
@@ -181,7 +183,7 @@ um grande lutador.
 2101448 0 0 0 0 0 0 0 10 E
 8 15 1 3d4+75 3d3+8
 1000 1200
-8 8 1
+9 9 1
 E
 #4341
 poodle~
@@ -193,7 +195,7 @@ Parece que seu dono o deixou aqui, enquanto foi fazer algumas compras pelas loja
 2103306 0 0 0 1192 0 0 0 -15 E
 11 10 -2 5d3+185 1d2+8
 0 3567
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
 #4343
@@ -206,7 +208,7 @@ Ele é um homem muito ocupado, que está trabalhando em uma poção muito especi
 2097162 0 0 0 136 0 0 0 100 E
 50 0 1 10d20+1000 7d5+18
 10000 80000
-8 8 1
+9 9 1
 E
 #4345
 mercador~
@@ -220,7 +222,7 @@ de Lyon.
 2103306 0 0 0 128 0 0 0 18 E
 15 6 -1 5d5+250 2d3+10
 150 5678
-8 8 1
+9 9 1
 E
 #4347
 Mulher francesa~
@@ -234,7 +236,7 @@ feito com um tecido caro e exótico.
 2101448 0 0 0 32 0 0 0 8 E
 5 14 6 3d3+72 2d3+4
 2500 2836
-5 8 2
+5 9 2
 E
 #4348
 rato preto~
@@ -247,7 +249,7 @@ morda você, pois isto seria extremamente perigoso.
 2098698 0 0 0 1088 0 0 0 -100 E
 1 17 5 2d1+8 1d4+5
 0 250
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
 #4349
@@ -262,7 +264,7 @@ caminho por onde você veio.
 2099242 0 0 0 525416 0 0 0 -100 E
 20 0 -5 4d4+1865 5d3+18
 1845 35865
-6 8 1
+6 9 1
 BareHandAttack: 3
 E
 #4351
@@ -278,12 +280,12 @@ em seu bolso.
 2103432 0 0 0 1024 0 0 0 -20 E
 15 8 -1 3d3+233 3d3+12
 150 3275
-8 8 1
+9 9 1
 BareHandAttack: 13
 E
 #4355
 esquilo marrom~
-Um esquilo marrom~
+um esquilo marrom~
 Um esquilo marrom está aqui, a procura de nozes.  
 ~
 É um pequeno esquilo atraente que está preparando durante o inverno.  
@@ -291,7 +293,7 @@ Um esquilo marrom está aqui, a procura de nozes.
 2101384 0 0 0 1024 0 0 0 0 E
 2 19 10 1d1+12 1d1+0
 0 85
-8 8 1
+9 9 1
 BareHandAttack: 4
 E
 #4357
@@ -306,7 +308,7 @@ grandes.
 2099210 0 0 0 130 0 0 0 -50 E
 40 10 1 8d2+856 5d3+12
 15275 17546
-8 8 2
+9 9 2
 BareHandAttack: 3
 E
 #4363
@@ -320,7 +322,7 @@ de insegurança que todos na França estão vivendo neste momento.
 2103496 0 0 0 0 0 0 0 10 E
 12 10 5 3d3+100 3d3+10
 1250 1873
-8 8 1
+9 9 1
 BareHandAttack: 13
 E
 #4367
@@ -335,7 +337,7 @@ que seja muito forte.
 2103304 0 0 0 262184 0 0 0 0 E
 18 0 -1 4d5+455 4d5+8
 12000 16250
-8 8 1
+9 9 1
 BareHandAttack: 13
 E
 #4368
@@ -351,7 +353,7 @@ se torne Mosqueteiro.
 2103306 0 0 0 16416 0 0 0 -25 E
 16 2 -1 3d5+255 5d3+8
 500 8500
-4 8 1
+4 9 1
 BareHandAttack: 3
 E
 #4371
@@ -365,7 +367,7 @@ contar com a proteção da guarda pessoal do rei Luís XIV.
 2099210 0 0 0 168 0 0 0 100 E
 35 0 -1 10d10+800 3d4+13
 5000 50000
-8 8 1
+9 9 1
 E
 #4372
 Portos~
@@ -378,7 +380,7 @@ Você deveria pensar duas vezes antes de puxar uma briga com ele.
 2103560 0 0 0 132 0 0 0 25 E
 35 2 -5 10d50+1258 5d5+18
 5000 42055
-8 8 1
+9 9 1
 E
 #4377
 Atos mosqueteuri~
@@ -391,7 +393,7 @@ o trabalho dele com muita seriedade e com isso ele ganhou o respeito de todos.
 2103306 0 0 0 8576 0 0 0 12 E
 30 2 -2 5d5+1299 5d5+12
 5000 40000
-8 8 1
+9 9 1
 BareHandAttack: 3
 E
 #4378
@@ -405,7 +407,7 @@ inteligente de todos...pelo menos é isso que ele diz.
 2103306 0 0 0 1408 0 0 0 12 E
 30 2 -2 5d5+1299 5d5+12
 5000 40000
-8 8 1
+9 9 1
 BareHandAttack: 3
 E
 #4387
@@ -419,7 +421,7 @@ e são usados pelos guardas do rei francês.
 2101454 0 0 0 40 0 0 0 20 E
 8 11 1 3d3+385 3d3+7
 0 3500
-8 8 0
+9 9 0
 BareHandAttack: 4
 E
 #4388
@@ -432,7 +434,7 @@ Ela é uma linda jovem que parece estar bastante interessada em ajudar você.
 2103306 0 0 0 0 0 0 0 15 E
 15 13 0 4d6+500 5d5+5
 8500 6750
-6 8 2
+6 9 2
 E
 #4389
 Mosqueteiro real~
@@ -445,7 +447,7 @@ dos Mosqueteiros que pessoalmente protegem a vida do Rei.
 2103368 0 0 0 1280 0 0 0 10 E
 20 5 10 6d8+650 2d1+10
 2500 6750
-8 8 1
+9 9 1
 E
 #4390
 mascara homem~
@@ -460,7 +462,7 @@ importante no passado.
 2099210 0 0 0 1024 0 0 0 -10 E
 22 14 -3 1d2+896 2d1+15
 1 12675
-8 8 1
+9 9 1
 E
 #4392
 pulga~
@@ -474,7 +476,7 @@ por estes insetos nojentos.
 2101448 0 0 0 1280 0 0 0 -100 E
 3 17 1 1d1+35 1d1+1
 0 150
-8 8 0
+9 9 0
 BareHandAttack: 4
 E
 #4393
@@ -488,7 +490,7 @@ fácilmente matá-lo mesmo com uma das mãos amarradas às costas.
 2097194 0 0 0 525480 0 0 0 -500 E
 55 12 1 10d5+1000 5d4+35
 5000 90000
-8 8 1
+9 9 1
 BareHandAttack: 10
 E
 #4395
@@ -503,7 +505,7 @@ ser complicado.
 2177034 0 0 0 1192 0 0 0 10 E
 22 6 1 5d5+525 3d2+10
 12650 12765
-8 8 1
+9 9 1
 E
 #4396
 guardiao~
@@ -518,7 +520,7 @@ que abre os portais para muitos mundos de fanstasia.
 2162760 0 0 0 170 0 0 0 0 E
 45 15 1 5d5+750 10d15+10
 5000 12000
-8 8 1
+9 9 1
 BareHandAttack: 6
 E
 #4398
@@ -532,7 +534,7 @@ mais diferentes e interessantes que turistas em geral procuram para comprar.
 2103306 0 0 0 168 0 0 0 10 E
 35 5 1 3d3+1000 3d3+10
 10000 12000
-8 8 1
+9 9 1
 E
 #4399
 rei Luis XIV~
@@ -544,6 +546,6 @@ Ele é o responsável por todos os problemas que estão acontecendo neste país.
 2103306 0 0 0 1152 0 0 0 -50 E
 48 0 -10 10d100+2500 3d9+25
 25000 90000
-6 8 1
+6 9 1
 E
 $

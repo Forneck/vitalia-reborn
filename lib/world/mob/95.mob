@@ -8,7 +8,9 @@ Você vai ficar igual a ele se não for cuidadoso.
 2105540 0 0 0 0 0 0 0 0 E
 4 16 6 10d5+20 1d6+3
 100 600
-8 8 1
+9 9 1
+GenWimpy: 10
+GenRoam: 12
 E
 #9502
 estrela prateada~
@@ -21,7 +23,8 @@ realmente!
 2236418 0 0 0 320 0 0 0 500 E
 8 15 2 4d5+80 2d3+5
 500 2000
-8 8 2
+9 9 2
+GenWimpy: 4
 E
 #9503
 nebulosa jovem~
@@ -34,7 +37,9 @@ poeira cósmica.
 2170882 0 0 0 65600 0 0 0 200 E
 10 10 0 3d6+340 2d4+10
 1000 5000
-8 8 2
+9 9 2
+GenWimpy: 2
+GenLoot: 1
 E
 #9504
 cometa veloz~
@@ -47,7 +52,8 @@ parece querer lançar toda sua ira contra você.
 2105394 0 0 0 65616 0 0 0 -500 E
 10 9 -2 4d6+260 2d6+8
 1500 5000
-8 8 1
+9 9 1
+GenWimpy: 19
 E
 #9505
 gigante vermelha~
@@ -59,7 +65,7 @@ Hm.. talvez ela não seja tão forte assim. Ou talvez seja.
 2170898 0 0 0 65600 0 0 0 0 E
 24 -4 -6 5d5+700 6d3+26
 2000 63000
-4 8 2
+4 9 2
 E
 #9506
 ana branca~
@@ -73,7 +79,7 @@ truques escondidos.
 2105362 0 0 0 65792 0 0 0 0 E
 27 -7 -8 8d5+850 4d2+30
 2000 71000
-8 8 2
+9 9 2
 E
 #9507
 cavalo nebulosa cabeca~
@@ -87,7 +93,7 @@ ninguém.
 2285586 0 0 0 1114116 0 0 0 -1000 E
 37 -4 -10 8d5+1000 4d5+33
 6000 80000
-6 8 2
+6 9 2
 E
 #9508
 andromeda~
@@ -103,7 +109,7 @@ puniram seu reino...  O sacrifício da princesa salvaria a todos, mas ela não
 2170882 0 0 0 256 0 0 0 1000 E
 25 0 -4 8d5+500 4d4+20
 7500 33000
-8 8 2
+9 9 2
 E
 #9509
 hercules~
@@ -119,7 +125,7 @@ realizar. Tendo êxito nos doze trabalhos, Hércules pode seguir com sua vida.
 2170898 0 0 0 65792 0 0 0 1000 E
 72 -11 -26 6d7+1800 6d5+31
 7500 180000
-8 8 1
+9 9 1
 E
 #9510
 pegasus~
@@ -133,7 +139,7 @@ não importanto a distância.
 2629650 0 0 0 67174464 0 0 0 300 E
 40 -7 -10 5d7+1070 7d2+24
 5000 65000
-8 8 1
+9 9 1
 E
 #9511
 orion~
@@ -149,7 +155,7 @@ seu algoz.
 2170882 0 0 0 65792 0 0 0 300 E
 71 -14 -14 6d7+2000 6d4+41
 7500 220000
-8 8 1
+9 9 1
 E
 #9512
 pleiade merope~
@@ -163,7 +169,7 @@ escondeu do caçador justamente aqui...
 2105346 0 0 0 65536 0 0 0 300 E
 21 5 3 3d4+120 2d7+15
 3000 37000
-8 8 2
+9 9 2
 E
 #9513
 draco dragao cabeca~
@@ -178,7 +184,7 @@ interior da galáxia é muito poderoso!
 2269698 0 0 0 65872 0 0 0 -1000 E
 74 -20 -25 5d4+1200 8d5+42
 15000 380000
-8 8 1
+9 9 1
 E
 #9514
 draco bebe~
@@ -192,7 +198,7 @@ que você está caminhando...
 2105346 0 0 0 65536 0 0 0 -700 E
 9 6 3 3d3+400 3d5+14
 4000 20000
-8 8 1
+9 9 1
 E
 #9515
 aries~
@@ -206,7 +212,7 @@ os forasteiros.  E parece que ele já o esperava...
 2105362 0 0 0 65792 0 0 0 700 E
 73 -12 -19 6d4+2500 8d5+35
 8000 280000
-6 8 1
+6 9 1
 E
 #9516
 touro~
@@ -220,7 +226,7 @@ sobreviveu...
 2170914 0 0 0 65872 0 0 0 -100 E
 70 -18 -18 5d8+2500 8d6+30
 8000 270000
-8 8 1
+9 9 1
 E
 #9517
 gemeo~
@@ -233,7 +239,7 @@ Assim que você o vê, você percebe que ele é o homem mais perfeito já visto.
 2170898 0 0 0 65792 0 0 0 1000 E
 65 -16 -25 7d3+2200 5d4+38
 10000 280000
-8 8 1
+9 9 1
 E
 #9518
 gemeo~
@@ -246,7 +252,7 @@ visto.  Como pode haver tamanho contraste?  Bem que você queria saber...
 2105986 0 0 0 1130500 0 0 0 -1000 E
 65 -16 -25 7d3+2200 6d3+38
 5000 280000
-8 8 1
+9 9 1
 E
 #9519
 cancer~
@@ -263,7 +269,7 @@ servidor colocando-o aqui.
 2236434 0 0 0 65792 0 0 0 0 E
 61 -19 -23 10d2+2900 7d4+41
 12000 280000
-8 8 1
+9 9 1
 E
 #9520
 leao~
@@ -278,7 +284,7 @@ partí-lo em dois a partir de sua boca!
 2123810 0 0 0 65872 0 0 0 -100 E
 71 -19 -23 20d2+2234 8d3+43
 10000 380000
-8 8 1
+9 9 1
 E
 #9521
 virgem~
@@ -292,7 +298,7 @@ movimento seu, seja ele qual for...
 2170898 0 0 0 65792 0 0 0 1000 E
 66 -12 -35 8d3+1850 4d5+44
 10000 280000
-6 8 2
+6 9 2
 E
 #9522
 libra~
@@ -305,7 +311,7 @@ olhos. Neste momento o que ele vê de você é pura ambição e sede de sangue..
 2187282 0 0 0 65792 0 0 0 0 E
 74 -14 -35 4d5+3611 6d6+42
 10000 480000
-8 8 1
+9 9 1
 E
 #9523
 escorpiao~
@@ -318,7 +324,7 @@ Sagitário eternamente apontada para seu coração.  Vai entender...
 2353202 0 0 0 65872 0 0 0 -200 E
 76 -18 -35 4d3+3770 7d6+41
 10000 580000
-8 8 1
+9 9 1
 E
 #9524
 sagitario centauro~
@@ -331,7 +337,7 @@ arqueiro.  Ninguém escapa de suas flechas.
 2156546 0 0 0 65792 0 0 0 1000 E
 72 -21 -25 5d6+3600 9d4+42
 10000 500000
-8 8 1
+9 9 1
 E
 #9525
 bode capricornio~
@@ -345,7 +351,7 @@ passe o resto de sua vida em paz.
 2156546 0 0 0 65792 0 0 0 -700 E
 73 -24 -25 4d4+3520 13d3+39
 10000 500000
-8 8 1
+9 9 1
 E
 #9526
 aquario~
@@ -358,7 +364,7 @@ seria melhor dar-lhe uma mãozinha em sua tarefa de segurar o vaso...
 2156546 0 0 0 65792 0 0 0 1000 E
 72 -26 -23 3d5+3234 2d10+37
 10000 480000
-8 8 2
+9 9 2
 E
 #9527
 pisces sereia~
@@ -371,7 +377,8 @@ um peixe.  Ela merece sua piedade...
 2154498 0 0 0 65792 0 0 0 1000 E
 68 -10 -20 5d5+2600 7d3+30
 10000 399999
-6 8 2
+6 9 2
+GenWimpy: 2
 E
 #9528
 peixe~
@@ -385,7 +392,9 @@ que seja mais bela (ou menos feia) que ele.
 2155010 0 0 0 65792 0 0 0 -1000 E
 72 -14 -20 7d3+2600 3d6+32
 0 380000
-8 8 1
+9 9 1
+GenWimpy: 1
+GenLoot: 1
 E
 #9529
 ursa maior~
@@ -398,7 +407,7 @@ voltar...  Enquanto ainda pode.
 2222130 0 0 0 65872 0 0 0 0 E
 90 -20 -37 10d4+6000 10d5+43
 15000 930000
-8 8 2
+9 9 2
 E
 #9530
 cassiopeia rainha~
@@ -411,7 +420,7 @@ desaparecer...
 2353170 0 0 0 65792 0 0 0 700 E
 101 -24 -46 10d5+6800 10d7+43
 42000 1710000
-6 8 2
+6 9 2
 E
 #9531
 cefeu rei~
@@ -424,7 +433,7 @@ e inútil diante dele.
 2353170 0 0 0 65792 0 0 0 700 E
 102 -26 -46 10d5+6800 10d8+41
 42000 1710000
-6 8 1
+6 9 1
 E
 #9532
 polaris polar estrela~
@@ -439,7 +448,7 @@ ter vindo aqui...
 2353170 0 0 0 65872 0 0 0 1000 E
 105 -29 -50 8d8+12900 8d8+43
 50000 5000000
-8 8 2
+9 9 2
 E
 #9533
 pleiade elektra~
@@ -453,7 +462,7 @@ escondeu do caçador justamente aqui...
 2105346 0 0 0 65536 0 0 0 300 E
 21 5 3 3d4+120 2d7+15
 3000 37000
-8 8 2
+9 9 2
 E
 #9534
 pleiade alcione~
@@ -467,7 +476,7 @@ escondeu do caçador justamente aqui...
 2105346 0 0 0 65536 0 0 0 300 E
 21 5 3 3d4+120 2d7+15
 3000 37000
-8 8 2
+9 9 2
 E
 #9535
 pleiade maia~
@@ -481,7 +490,7 @@ escondeu do caçador justamente aqui...
 2105346 0 0 0 65536 0 0 0 300 E
 21 5 3 3d4+120 2d7+15
 3000 37000
-8 8 2
+9 9 2
 E
 #9536
 pleiade asterope~
@@ -495,7 +504,7 @@ escondeu do caçador justamente aqui...
 2105346 0 0 0 65536 0 0 0 300 E
 21 5 3 3d4+120 2d7+15
 3000 37000
-8 8 2
+9 9 2
 E
 #9537
 pleiade taigete~
@@ -509,7 +518,7 @@ escondeu do caçador justamente aqui...
 2105346 0 0 0 65536 0 0 0 300 E
 21 5 3 3d4+120 2d7+15
 3000 37000
-8 8 2
+9 9 2
 E
 #9538
 pleiade celaeno~
@@ -523,6 +532,6 @@ escondeu do caçador justamente aqui...
 2097154 0 0 0 65536 0 0 0 300 E
 21 5 3 3d4+120 2d7+15
 3000 37000
-8 8 2
+9 9 2
 E
 $

@@ -17,6 +17,7 @@ BareHandAttack: 11
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 2
 E
 #3701
 enguia satanica flamejante~
@@ -422,7 +423,9 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 10
+GenLoot: 1
+GenRoam: 25
 E
 #3722
 demonio ossos~
@@ -444,6 +447,7 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
 E
 #3723
 esqueleto guerreiro~
@@ -460,6 +464,7 @@ Este guerreio esqueleto guarda a de Ilha de visitantes não desejados.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 4
 E
 #3724
 esqueleto dragao~
@@ -497,6 +502,8 @@ negras de combate, este guerreiro é um notável oponente.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenRoam: 24
 E
 #3726
 zumbi guerreiro~
@@ -515,6 +522,8 @@ de simplesmente matar aqueles que não se encaixaram.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 2
+GenRoam: 5
 E
 #3727
 general~
@@ -607,7 +616,8 @@ Ele é tímido e solitário, fujindo da luz e da multidão.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 5
+GenRoam: 1
 E
 #3732
 zumbi guarda~

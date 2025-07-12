@@ -11,7 +11,7 @@ jardins.
 2353426 0 0 0 256 0 0 0 1000 E
 102 -21 -30 10d10+5999 7d10+45
 0 400000
-8 8 1
+9 9 1
 E
 #1501
 miguel anjo arcanjo~
@@ -25,7 +25,7 @@ isto também vai se esvanecendo e você não vê mais nada...
 2123778 0 0 0 256 0 0 0 1000 E
 101 -12 -15 2d100+2900 10d7+33
 0 280000
-8 8 1
+9 9 1
 E
 #1502
 gabriel anjo arcanjo~
@@ -39,7 +39,7 @@ de uma miraculosa jornada para a sagrada cidade de Jerusalém.
 2123778 0 0 0 256 0 0 0 1000 E
 101 -12 -15 2d100+2900 10d7+33
 0 280000
-8 8 1
+9 9 1
 E
 #1503
 rafael anjo arcanjo~
@@ -53,7 +53,7 @@ em sua mente.
 2123778 0 0 0 256 0 0 0 1000 E
 101 -12 -15 2d100+2900 10d7+33
 0 280000
-8 8 1
+9 9 1
 E
 #1504
 uriel anjo arcanjo~
@@ -66,7 +66,7 @@ e foi esse anjo, Uriel, que subiu os degraus mais altos.
 2123778 0 0 0 256 0 0 0 1000 E
 101 -12 -15 2d100+2900 10d7+33
 0 280000
-8 8 1
+9 9 1
 E
 #1505
 querubim~
@@ -81,7 +81,7 @@ estridente gargalhada, puxa sua espada e bloqueia o caminho.
 2121762 0 0 0 256 0 0 0 400 E
 70 -5 -5 10d5+1260 3d6+14
 0 40000
-8 8 0
+9 9 0
 E
 #1506
 zombeteiro~
@@ -110,7 +110,8 @@ pequeno duende.
 2121796 0 0 0 4 0 0 0 0 E
 75 -6 -7 25d2+1400 3d9+13
 0 70000
-8 8 0
+9 9 0
+GenWimpy: 12
 E
 #1508
 velho homem fracassado~
@@ -125,11 +126,11 @@ testa, e sua mão direita treme e treme...
 2121762 0 0 0 2064 0 0 0 -1000 E
 80 -11 -12 4d10+1840 6d9+26
 34000 180000
-8 8 1
+9 9 1
 E
 #1509
 califa hakim hakin~
-O Califa de Hakin~
+o Califa de Hakin~
 O louco Califa de Hakin está aqui, dissecando um jovem garoto.
 ~
 Com uma pele muito escura e imensos olhos tão brancos...  Coberto apenas por
@@ -139,7 +140,7 @@ há dias e ainda assim, seu sorriso é tão encantador...
 2121762 0 0 0 2064 0 0 0 -1000 E
 80 -11 -12 4d10+1840 6d9+26
 34000 180000
-8 8 1
+9 9 1
 E
 #1510
 judas escariotes~
@@ -152,7 +153,7 @@ Deus.
 2121734 0 0 0 2064 0 0 0 -1000 E
 100 -13 -10 5d10+2650 6d6+25
 30 145000
-8 8 1
+9 9 1
 E
 #1511
 faraó farao~
@@ -165,7 +166,7 @@ ele olha para você com ares de um forçado contentamento.
 2121730 0 0 0 2064 0 0 0 -1000 E
 80 -13 -10 5d10+1650 6d6+25
 25000 145000
-8 8 1
+9 9 1
 E
 #1512
 abu baquir primeiro califa~
@@ -179,7 +180,7 @@ nunca morreria.
 2121730 0 0 0 2064 0 0 0 1000 E
 80 -13 -10 5d10+1650 6d6+25
 25000 145000
-8 8 1
+9 9 1
 E
 #1513
 umar segundo califa~
@@ -193,7 +194,7 @@ verdade da Palavra, então eu devo."
 2121730 0 0 0 2064 0 0 0 1000 E
 80 -13 -10 5d10+1650 6d6+25
 25000 145000
-8 8 1
+9 9 1
 E
 #1514
 otomano terceiro califa~
@@ -208,7 +209,7 @@ final foi morto por seus inimigos.
 2121762 0 0 0 2064 0 0 0 1000 E
 80 -14 -12 4d10+1840 6d9+26
 34000 180000
-8 8 1
+9 9 1
 E
 #1515
 ali quarto último califa~
@@ -223,7 +224,7 @@ decida por si só.
 2121762 0 0 0 2064 0 0 0 1000 E
 80 -14 -12 4d10+1840 6d9+26
 34000 180000
-8 8 1
+9 9 1
 E
 #1516
 anjo belo iblis~
@@ -238,7 +239,7 @@ que serão suas se você o seguir.
 2121766 0 0 0 2064 0 0 0 -1000 E
 80 -12 -10 10d5+1650 6d6+25
 25000 145000
-8 8 1
+9 9 1
 E
 #1517
 iblis satã sata tentação tentacao voz~
@@ -251,7 +252,7 @@ risada atormentada, gemendo, gritando e implorando.
 2121766 0 0 0 2064 0 0 0 -1000 E
 80 -12 -10 10d5+1650 6d6+25
 25000 145000
-8 8 1
+9 9 1
 E
 #1518
 serpente dragão dragao satã sata iblis~
@@ -266,7 +267,7 @@ humanidade sucumbir diante de seu poder, olha para você como se você fosse a
 2121766 0 0 0 2064 0 0 0 -1000 E
 27 -12 -10 75d2+1825 6d8+25
 40000 180000
-8 8 1
+9 9 1
 E
 #1519
 demônio demonio fogo~
@@ -279,7 +280,7 @@ inferior que você teme ser seu destino.
 2121766 0 0 0 2064 0 0 0 -1000 E
 80 -12 -10 75d2+1825 6d8+25
 40000 180000
-8 8 1
+9 9 1
 E
 #1520
 bebê bebe inocente~
@@ -304,7 +305,7 @@ nota que ele está contemplando as belezas da lua.
 2121730 0 0 0 2064 0 0 0 1000 E
 74 -12 -12 5d10+1680 6d6+25
 22000 145000
-8 8 1
+9 9 1
 E
 #1522
 homem~
@@ -330,6 +331,6 @@ explicar ou descrever esta perfeição, esta felicidade absoluta.
 2121762 0 0 0 2064 0 0 0 1000 E
 90 -15 -15 100d2+2820 7d8+29
 0 190000
-8 8 1
+9 9 1
 E
 $

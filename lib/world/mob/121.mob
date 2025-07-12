@@ -65,6 +65,8 @@ BareHandAttack: 3
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
+GenRoam: 18
 E
 #12104
 cerbero~
@@ -97,6 +99,7 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 8
 E
 #12106
 anao negro~
@@ -147,6 +150,8 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
+GenLoot: 1
 E
 #12109
 enorme sanguessuga~
@@ -163,6 +168,7 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 6
 E
 #12110
 leao jamuuran~
@@ -179,6 +185,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #12111
 jor~
@@ -212,7 +219,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 5
 E
 #12113
 beemonte~
@@ -246,7 +253,7 @@ BareHandAttack: 3
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
+GenWimpy: 14
 E
 #12115
 drakian~
@@ -347,9 +354,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 7
-GenLoot: 1
-GenRoam: 3
+GenWimpy: 28
+GenRoam: 62
 E
 #12121
 quimera leao bode dragao~
@@ -386,7 +392,7 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
+GenWimpy: 6
 E
 #12123
 hidra gigante~
@@ -436,8 +442,8 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 14
-GenLoot: 1
+GenWimpy: 48
+GenRoam: 1
 E
 #12126
 cynamolgus peludo~
