@@ -954,7 +954,10 @@ struct room_data
 #define GOAL_NONE              0
 #define GOAL_GOTO_SHOP_TO_SELL 1
 #define GOAL_RETURN_TO_POST    2
-/* Futuramente: GOAL_HUNT_TARGET, GOAL_GATHER_RESOURCES, etc. */
+#define GOAL_HUNT_TARGET       3
+#define GOAL_GOTO_SHOP_TO_BUY  4
+#define GOAL_POST_QUEST        5
+#define GOAL_GET_GOLD          6
 
 /*
  * Estrutura para armazenar os "genes" de um mob, que podem evoluir.
@@ -973,16 +976,27 @@ struct mob_genetics {
 
 
 
+/**
+ * Estrutura para um item desejado na wishlist de um mob
+ */
+struct mob_wishlist_item {
+    obj_vnum vnum;                    /* Virtual number do item desejado */
+    int priority;                     /* Prioridade do item (score do evaluate_item_for_mob) */
+    time_t added_time;                /* Quando foi adicionado à wishlist */
+    struct mob_wishlist_item *next;   /* Próximo item na lista */
+};
+
 struct mob_ai_data {
     struct mob_genetics genetics; /* Contém todos os genes. */
     room_vnum guard_post;         /* O "posto de guarda" para Sentinelas/Lojistas. */
     int duty_frustration_timer;
-    /* Futuramente: int experience; int level; struct list *wishlist; etc. */
+    struct mob_wishlist_item *wishlist; /* Lista de itens desejados */
 
     int current_goal;           /* O objetivo atual do mob (ex: GOAL_GOTO_SHOP_TO_SELL). */
     room_rnum goal_destination; /* A sala de destino do seu objetivo. */
     struct obj_data *goal_obj;  /* O objeto alvo do objetivo */
     mob_rnum goal_target_mob_rnum; /*Falar com quem?*/
+    obj_vnum goal_item_vnum;    /* VNUM do item alvo para compra/quest */
     int goal_timer;             /* Contador para evitar ficar preso no mesmo objetivo */
 };
 

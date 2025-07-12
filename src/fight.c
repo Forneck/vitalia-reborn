@@ -1007,6 +1007,14 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 		return;
 	}
 
+	/* If this is the start of combat, observe equipment (mob AI feature) */
+	if (IS_NPC(ch) && ch->ai_data && !FIGHTING(ch)) {
+		/* 20% chance to observe equipment during the first round of combat */
+		if (rand_number(1, 100) <= 20) {
+			observe_combat_equipment(ch, victim);
+		}
+	}
+
 	/* Find the weapon type (for display purposes only) */
 	if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
 		w_type = GET_OBJ_VAL(wielded, 3) + TYPE_HIT;

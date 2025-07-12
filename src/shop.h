@@ -28,6 +28,7 @@ bool is_shop_open(shop_rnum snum);
 int find_best_shop_to_sell(struct char_data *ch, struct obj_data *item);
 bool mob_try_to_sell_junk(struct char_data *ch);
 void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr);
+void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr);
 
 
 struct shop_buy_data {

@@ -24,6 +24,9 @@
 #include "class.h"
 #include "act.h"
 #include "constants.h"
+#include "shop.h"
+#include "db.h"
+#include "fight.h"
 
 /** Aportable random number function.
  * @param from The lower bounds of the random number.
@@ -1915,4 +1918,271 @@ int count_obj_in_list(obj_vnum vnum, struct obj_data *list)
         }
     }
     return count;
+}
+
+/*
+ * ===============================================
+ * WISHLIST MANAGEMENT FUNCTIONS FOR MOB AI
+ * ===============================================
+ */
+
+/**
+ * Adiciona um item à wishlist de um mob.
+ * @param ch O mob que deseja o item
+ * @param vnum VNUM do item desejado
+ * @param priority Prioridade do item (score do evaluate_item_for_mob)
+ */
+void add_item_to_wishlist(struct char_data *ch, obj_vnum vnum, int priority)
+{
+    struct mob_wishlist_item *item, *prev, *current;
+    
+    if (!IS_NPC(ch) || !ch->ai_data) return;
+    
+    /* Verifica se o item já está na wishlist */
+    if (find_item_in_wishlist(ch, vnum)) return;
+    
+    /* Cria novo item da wishlist */
+    CREATE(item, struct mob_wishlist_item, 1);
+    item->vnum = vnum;
+    item->priority = priority;
+    item->added_time = time(0);
+    item->next = NULL;
+    
+    /* Insere na lista ordenada por prioridade (maior prioridade primeiro) */
+    if (!ch->ai_data->wishlist || ch->ai_data->wishlist->priority < priority) {
+        item->next = ch->ai_data->wishlist;
+        ch->ai_data->wishlist = item;
+        return;
+    }
+    
+    prev = NULL;
+    current = ch->ai_data->wishlist;
+    while (current && current->priority >= priority) {
+        prev = current;
+        current = current->next;
+    }
+    
+    prev->next = item;
+    item->next = current;
+}
+
+/**
+ * Remove um item da wishlist de um mob.
+ * @param ch O mob
+ * @param vnum VNUM do item a ser removido
+ */
+void remove_item_from_wishlist(struct char_data *ch, obj_vnum vnum)
+{
+    struct mob_wishlist_item *current, *prev;
+    
+    if (!IS_NPC(ch) || !ch->ai_data || !ch->ai_data->wishlist) return;
+    
+    /* Se é o primeiro item */
+    if (ch->ai_data->wishlist->vnum == vnum) {
+        current = ch->ai_data->wishlist;
+        ch->ai_data->wishlist = current->next;
+        free(current);
+        return;
+    }
+    
+    /* Procura o item na lista */
+    prev = ch->ai_data->wishlist;
+    current = prev->next;
+    while (current) {
+        if (current->vnum == vnum) {
+            prev->next = current->next;
+            free(current);
+            return;
+        }
+        prev = current;
+        current = current->next;
+    }
+}
+
+/**
+ * Encontra um item específico na wishlist.
+ * @param ch O mob
+ * @param vnum VNUM do item procurado
+ * @return Ponteiro para o item ou NULL se não encontrado
+ */
+struct mob_wishlist_item *find_item_in_wishlist(struct char_data *ch, obj_vnum vnum)
+{
+    struct mob_wishlist_item *current;
+    
+    if (!IS_NPC(ch) || !ch->ai_data) return NULL;
+    
+    for (current = ch->ai_data->wishlist; current; current = current->next) {
+        if (current->vnum == vnum) {
+            return current;
+        }
+    }
+    return NULL;
+}
+
+/**
+ * Retorna o item de maior prioridade na wishlist.
+ * @param ch O mob
+ * @return Ponteiro para o item de maior prioridade ou NULL se lista vazia
+ */
+struct mob_wishlist_item *get_top_wishlist_item(struct char_data *ch)
+{
+    if (!IS_NPC(ch) || !ch->ai_data) return NULL;
+    return ch->ai_data->wishlist;
+}
+
+/**
+ * Limpa toda a wishlist de um mob.
+ * @param ch O mob
+ */
+void clear_wishlist(struct char_data *ch)
+{
+    struct mob_wishlist_item *current, *next;
+    
+    if (!IS_NPC(ch) || !ch->ai_data) return;
+    
+    current = ch->ai_data->wishlist;
+    while (current) {
+        next = current->next;
+        free(current);
+        current = next;
+    }
+    ch->ai_data->wishlist = NULL;
+}
+
+/**
+ * Observa o equipamento de um alvo durante o combate e adiciona itens interessantes à wishlist.
+ * @param observer O mob que está observando
+ * @param target O alvo sendo observado
+ */
+void observe_combat_equipment(struct char_data *observer, struct char_data *target)
+{
+    int i, score;
+    struct obj_data *eq;
+    
+    if (!IS_NPC(observer) || !observer->ai_data || !target) return;
+    
+    /* Observa o equipamento do alvo */
+    for (i = 0; i < NUM_WEARS; i++) {
+        eq = GET_EQ(target, i);
+        if (!eq) continue;
+        
+        /* Avalia se o item seria útil para o observador */
+        score = evaluate_item_for_mob(observer, eq);
+        
+        /* Se a pontuação for muito alta (>100), adiciona à wishlist */
+        if (score > 100) {
+            add_item_to_wishlist(observer, GET_OBJ_VNUM(eq), score);
+        }
+    }
+}
+
+/**
+ * Encontra um mob que pode dropar um item específico.
+ * @param item_vnum VNUM do item procurado
+ * @return RNUM do mob que pode dropar o item, ou NOBODY se não encontrado
+ */
+mob_rnum find_mob_with_item(obj_vnum item_vnum)
+{
+    mob_rnum mob;
+    int i;
+    
+    /* Procura nos protótipos de mobs para ver quem carrega este item */
+    for (mob = 0; mob <= top_of_mobt; mob++) {
+        /* Verifica equipamento padrão */
+        for (i = 0; i < NUM_WEARS; i++) {
+            if (mob_proto[mob].equipment[i] && 
+                GET_OBJ_VNUM(mob_proto[mob].equipment[i]) == item_vnum) {
+                return mob;
+            }
+        }
+        
+        /* Verifica inventário padrão */
+        /* Note: Esta é uma implementação simplificada. 
+         * Um sistema mais sofisticado verificaria as chances de drop. */
+    }
+    
+    return NOBODY;
+}
+
+/**
+ * Encontra uma loja que vende um item específico.
+ * @param item_vnum VNUM do item procurado
+ * @return RNUM da loja que vende o item, ou NOTHING se não encontrada
+ */
+shop_rnum find_shop_selling_item(obj_vnum item_vnum)
+{
+    int shop, i;
+    
+    /* Procura nas lojas */
+    for (shop = 0; shop <= top_shop; shop++) {
+        /* Verifica se a loja produz este item */
+        for (i = 0; shop_index[shop].producing[i] != NOTHING; i++) {
+            if (shop_index[shop].producing[i] == item_vnum) {
+                return shop;
+            }
+        }
+    }
+    
+    return NOTHING;
+}
+
+/**
+ * Verifica se um mob tem ouro suficiente para comprar um item.
+ * @param ch O mob
+ * @param item_vnum VNUM do item
+ * @return TRUE se pode comprar, FALSE caso contrário
+ */
+bool mob_can_afford_item(struct char_data *ch, obj_vnum item_vnum)
+{
+    shop_rnum shop;
+    obj_rnum obj_rnum;
+    int cost;
+    
+    if (!IS_NPC(ch)) return FALSE;
+    
+    /* Encontra a loja que vende o item */
+    shop = find_shop_selling_item(item_vnum);
+    if (shop == NOTHING) return FALSE;
+    
+    /* Calcula o custo do item */
+    obj_rnum = real_object(item_vnum);
+    if (obj_rnum == NOTHING) return FALSE;
+    
+    cost = GET_OBJ_COST(&obj_proto[obj_rnum]);
+    if (cost <= 0) cost = 1;
+    
+    /* Aplica a margem de lucro da loja */
+    cost = (int)(cost * SHOP_BUYPROFIT(shop));
+    
+    return (GET_GOLD(ch) >= cost);
+}
+
+/**
+ * Faz um mob postar uma quest para obter um item.
+ * Esta é uma implementação básica que pode ser expandida.
+ * @param ch O mob que posta a quest
+ * @param item_vnum VNUM do item desejado
+ * @param reward Recompensa oferecida
+ */
+void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
+{
+    /* Esta é uma implementação placeholder.
+     * A implementação completa exigiria integração com o sistema de quest
+     * e criação de quest boards nas cidades.
+     * 
+     * Por ora, apenas removemos o item da wishlist e deduzimos o ouro,
+     * simulando que a quest foi postada.
+     */
+    
+    if (!IS_NPC(ch) || GET_GOLD(ch) < reward) return;
+    
+    /* Deduz o ouro */
+    GET_GOLD(ch) -= reward;
+    
+    /* Remove da wishlist (temporariamente) */
+    remove_item_from_wishlist(ch, item_vnum);
+    
+    /* Log da ação para debug */
+    log1("WISHLIST: %s posted quest for item %d with reward %d gold", 
+        GET_NAME(ch), item_vnum, reward);
 }

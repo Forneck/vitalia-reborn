@@ -84,6 +84,18 @@ void consume_item_after_use(struct char_data *ch, struct obj_data *obj);
 bool is_last_consumable(struct char_data *ch, struct obj_data *obj);
 bool are_groupable(struct char_data *ch, struct char_data *target);
 int count_obj_in_list(obj_vnum vnum, struct obj_data *list);
+
+/* Funções de wishlist para mobs */
+void add_item_to_wishlist(struct char_data *ch, obj_vnum vnum, int priority);
+void remove_item_from_wishlist(struct char_data *ch, obj_vnum vnum);
+struct mob_wishlist_item *find_item_in_wishlist(struct char_data *ch, obj_vnum vnum);
+struct mob_wishlist_item *get_top_wishlist_item(struct char_data *ch);
+void clear_wishlist(struct char_data *ch);
+void observe_combat_equipment(struct char_data *observer, struct char_data *target);
+mob_rnum find_mob_with_item(obj_vnum item_vnum);
+shop_rnum find_shop_selling_item(obj_vnum item_vnum);
+bool mob_can_afford_item(struct char_data *ch, obj_vnum item_vnum);
+void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward);
 /* Public functions made available from weather.c */
 void weather_and_time(int mode);
 

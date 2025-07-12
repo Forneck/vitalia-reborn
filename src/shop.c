@@ -71,7 +71,7 @@ static void shopping_value(char *arg, struct char_data *ch, struct char_data *ke
 static struct obj_data *get_selling_obj(struct char_data *ch, char *name, struct char_data *keeper,
 										int shop_nr, int msg);
 static struct obj_data *slide_obj(struct obj_data *obj, struct char_data *keeper, int shop_nr);
-static void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr);
+void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr);
 static struct obj_data *get_purchase_obj(struct char_data *ch, char *arg, struct char_data *keeper,
 										 int shop_nr, int msg);
 static struct obj_data *get_hash_obj_vis(struct char_data *ch, char *name, struct obj_data *list);
@@ -511,7 +511,7 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
 	return (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
 }
 
-static void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr)
+void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr)
 {
 	char tempstr[MAX_INPUT_LENGTH - 10], tempbuf[MAX_INPUT_LENGTH];
 	struct obj_data *obj, *last_obj = NULL;
