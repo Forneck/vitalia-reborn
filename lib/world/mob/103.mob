@@ -147,8 +147,8 @@ Peludo, mal cheiroso, e desagradável. Que tal deixá-lo sozinho?
 500 4000
 9 9 1
 BareHandAttack: 9
-GenWimpy: 6
-GenRoam: 30
+GenWimpy: 8
+GenRoam: 39
 E
 #10310
 primata fêmea~
@@ -162,8 +162,8 @@ Ela é bem parecida com os outros primatas. Cheira mal, horrível.
 500 3500
 9 9 2
 BareHandAttack: 4
-GenWimpy: 9
-GenRoam: 26
+GenWimpy: 11
+GenRoam: 36
 E
 #10311
 chefe primata~
@@ -231,7 +231,7 @@ sua última refeição.
 6 10 6 2d2+100 3d3+6
 1000 3700
 9 9 2
-GenWimpy: 21
+GenWimpy: 25
 E
 #10316
 zumbi~
@@ -244,9 +244,9 @@ Este zumbi é alto e forte, e está aqui pronto para lhe matar.
 15 10 7 8d8+750 5d5+8
 3500 4000
 9 9 1
-GenWimpy: 9
+GenWimpy: 10
 GenLoot: 4
-GenRoam: 17
+GenRoam: 22
 E
 #10317
 zumbi kenuthi~

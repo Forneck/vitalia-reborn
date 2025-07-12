@@ -399,7 +399,7 @@ tudo para que nada saia errado.
 15 8 -3 10d10+300 3d3+9
 1000 10020
 9 9 1
-GenWimpy: 1
+GenWimpy: 2
 E
 #11628
 convidado nobre homem arrogante~
@@ -490,6 +490,7 @@ que fez com que Lorde Indra saísse imediatamente do salão...
 67 -4 -8 10d10+970 4d5+23
 10000 104020
 9 9 1
+GenWimpy: 1
 E
 T 3008
 #11634
@@ -532,7 +533,7 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 1
+GenWimpy: 15
 E
 T 3009
 #11636
@@ -661,7 +662,7 @@ realmente exija sua interferência.
 55 0 -10 10d10+870 4d3+23
 1000 54020
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
 E
 #11644
 guarda velho treinador~

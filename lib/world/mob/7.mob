@@ -81,7 +81,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 6
+GenWimpy: 7
+GenRoam: 1
 E
 #706
 duende~
@@ -103,7 +104,7 @@ Wis: 15
 Con: 15
 Cha: 15
 GenWimpy: 4
-GenRoam: 16
+GenRoam: 24
 E
 #707
 cristal monsto~
@@ -145,7 +146,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 2
+GenWimpy: 3
 E
 #710
 maldito guarda~
@@ -187,7 +188,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 2
+GenWimpy: 4
 E
 #712
 impiedoso ceifeiro~
@@ -277,8 +278,7 @@ Wis: 15
 Con: 15
 Cha: 15
 GenWimpy: 17
-GenRoam: 50
-GenGroup: 1
+GenRoam: 47
 E
 #716
 pequena encurvada crianca criança~
@@ -317,7 +317,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 5
+GenWimpy: 6
 E
 #719
 ivian senhora~

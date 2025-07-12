@@ -53,8 +53,8 @@ tempo e pelo cansaço.
 20 15 2 3d30+200 1d1+4
 1 7000
 9 9 1
-GenWimpy: 1
-GenRoam: 4
+GenWimpy: 2
+GenRoam: 9
 E
 #8105
 campones~
@@ -199,7 +199,7 @@ escultural. Sua cabeça de leoa, porém, dá-lhe uma aparencia assustadora.
 90 -7 -36 8d9+2700 3d7+34
 60000 200000
 9 9 2
-GenWimpy: 1
+GenWimpy: 2
 E
 #8116
 ra rá~
@@ -472,7 +472,7 @@ Esse gato negro aparenta ser muito esperto e corajoso.
 0 100
 9 9 1
 GenWimpy: 8
-GenRoam: 9
+GenRoam: 1
 E
 #8136
 escaravelho~
@@ -599,8 +599,7 @@ urgentemente, com sua lamparina, por uma saída.
 29 4 -4 2d5+1400 1d1+22
 50 10000
 9 9 1
-GenWimpy: 4
-GenRoam: 2
+GenWimpy: 5
 E
 #8145
 vibora víbora cobra~
@@ -615,8 +614,8 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 16
-GenRoam: 38
+GenWimpy: 21
+GenRoam: 42
 E
 #8146
 crianca egipcia~
@@ -701,8 +700,8 @@ que deve ser sua boca.
 30 10 0 2d5+1000 2d2+14
 0 21000
 9 9 2
-GenWimpy: 6
-GenRoam: 59
+GenWimpy: 7
+GenRoam: 68
 E
 #8152
 soldado egipcio~

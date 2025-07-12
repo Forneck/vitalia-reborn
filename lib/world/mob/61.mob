@@ -27,6 +27,7 @@ muito perigoso e bastante agressivo.
 5 16 5 1d12+80 2d4+4
 0 1000
 9 9 0
+GenWimpy: 1
 E
 #6102
 lobo cinzento~
@@ -40,7 +41,7 @@ uma baba viscosa vai escorrendo por entre os seus lábios.
 3 18 7 1d12+35 1d7+0
 0 450
 9 9 0
-GenWimpy: 6
+GenWimpy: 7
 GenRoam: 43
 E
 #6103

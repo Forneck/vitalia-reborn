@@ -93,7 +93,7 @@ se ele mordesse seu braço.
 8 12 3 50d1+10 3d3+6
 1 5000
 9 9 1
-GenWimpy: 9
+GenWimpy: 10
 E
 #5708
 menor demonio~
@@ -123,8 +123,7 @@ sitiada por demônios.
 1000 22000
 9 9 1
 GenWimpy: 4
-GenRoam: 16
-GenGroup: 1
+GenRoam: 31
 E
 #5710
 cidada mulher~
@@ -140,7 +139,7 @@ sitiada por demônios.
 9 9 2
 GenWimpy: 3
 GenLoot: 2
-GenRoam: 28
+GenRoam: 36
 E
 #5711
 demonio maior~
@@ -180,7 +179,7 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 6
+GenWimpy: 5
 E
 #5714
 rymat conselheiro~

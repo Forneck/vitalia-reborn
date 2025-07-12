@@ -28,8 +28,9 @@ Melhor matar mesmo!
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
-GenWimpy: 21
-GenRoam: 9
+GenWimpy: 22
+GenLoot: 1
+GenRoam: 12
 E
 #18603
 dragão bebê dragao bebe~
@@ -92,9 +93,9 @@ vermes imundos, pequenos, cheios de pernas e marrons não estariam aqui!
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 27
-GenRoam: 77
-GenGroup: 2
+GenWimpy: 28
+GenRoam: 80
+GenGroup: 1
 E
 #18607
 novato zumbi~
@@ -109,9 +110,9 @@ espere!!  Ele parece que está querendo atacá-lo!
 4 17 5 1d8+46 2d4+0
 300 600
 9 9 0
-GenWimpy: 15
-GenRoam: 81
-GenGroup: 9
+GenWimpy: 18
+GenRoam: 83
+GenGroup: 8
 E
 #18608
 demônio demonio diabo travesso~
@@ -177,7 +178,8 @@ HAHAHAHAHAHAHAHAHAHA!
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 1
-GenWimpy: 9
+GenWimpy: 10
+GenRoam: 2
 E
 #18612
 novato retardado ignorante~
@@ -242,8 +244,8 @@ leu os arquivos de ajuda?
 5 15 9 10d5+20 2d3+2
 1100 1000
 9 9 1
-GenWimpy: 7
+GenWimpy: 8
 GenLoot: 1
-GenRoam: 20
+GenRoam: 23
 E
 $

@@ -22,7 +22,7 @@ Ele parece estar atrás de um almoço..
 22 0 0 1d5+380 3d5+20
 1000 20000
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
 E
 #17003
 elemental~
@@ -75,7 +75,8 @@ An undefined string.
 10 6 -2 3d5+200 3d6+6
 1750 9000
 9 9 1
-GenWimpy: 3
+GenWimpy: 5
+GenLoot: 1
 E
 #17007
 elemental grande~
@@ -88,7 +89,7 @@ An undefined string.
 15 -4 -6 5d5+250 4d9+17
 2200 20000
 9 9 1
-GenWimpy: 8
+GenWimpy: 9
 E
 #17008
 lider elemental terra~
@@ -179,8 +180,8 @@ Ela corre ao seu redor, esperando uma brecha.
 8 1 0 1d5+200 1d10+3
 850 5000
 9 9 2
-GenWimpy: 28
-GenLoot: 2
+GenWimpy: 30
+GenLoot: 1
 E
 #17016
 elemental neve humanoide cristal~
@@ -232,7 +233,6 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 400 3000
 9 9 1
 GenWimpy: 11
-GenLoot: 1
 E
 #17020
 besta lava elemental~
@@ -246,8 +246,7 @@ que suas calças sequem rápido.
 8 12 1 1d5+250 3d5+4
 1000 4000
 9 9 2
-GenWimpy: 18
-GenLoot: 1
+GenWimpy: 20
 E
 #17021
 lama monstro elemental~
@@ -331,8 +330,8 @@ e seus bruxuleantes membros, que parecem ser afiados como garras.
 3000 30000
 9 9 2
 GenWimpy: 15
-GenRoam: 4
-GenGroup: 18
+GenRoam: 2
+GenGroup: 17
 E
 #17027
 magneto elemental humanoide~
@@ -362,7 +361,7 @@ frio subindo por suas costas.
 9 9 1
 GenWimpy: 9
 GenLoot: 4
-GenGroup: 5
+GenGroup: 4
 E
 #17029
 rochas monstro~
@@ -376,7 +375,7 @@ Elas parecem estar formando um tipo de humanóide. E sua expressão não
 26 -2 -5 1d5+620 6d5+12
 3000 30000
 9 9 1
-GenWimpy: 10
+GenWimpy: 9
 E
 #17030
 furacao~
@@ -390,9 +389,9 @@ tempo até que ela lhe atinja.
 26 -2 -7 1d5+650 6d5+11
 3000 30000
 9 9 1
-GenWimpy: 9
+GenWimpy: 13
 GenLoot: 2
-GenGroup: 3
+GenGroup: 2
 E
 #17031
 anciao mago elemental~
@@ -448,8 +447,8 @@ As ervas que ele carrega parecem ser raras.
 13 10 -9 1d5+450 1d20+4
 2900 10000
 9 9 1
-GenWimpy: 15
-GenLoot: 6
+GenWimpy: 18
+GenLoot: 9
 E
 #17035
 bebe dragao~
@@ -476,7 +475,7 @@ Ele se assemelha bastante a um desagradável inseto.
 800 1000
 9 9 1
 GenWimpy: 11
-GenRoam: 50
+GenRoam: 47
 E
 #17037
 gigantesco elemental~

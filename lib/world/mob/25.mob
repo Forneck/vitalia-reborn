@@ -10,7 +10,7 @@ Isto parece ser feito de nada mais que escuridão...
 100 4000
 9 9 0
 GenWimpy: 6
-GenRoam: 71
+GenRoam: 76
 E
 #2501
 aventureiro~
@@ -152,6 +152,7 @@ Ele está um tanto sujo.
 17 5 -3 17d17+170 3d5+10
 1326 12000
 4 4 1
+GenWimpy: 1
 E
 T 3009
 #2511
@@ -178,7 +179,7 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 11
+GenWimpy: 13
 E
 #2513
 guardioes maiores olhos~
@@ -249,7 +250,7 @@ Ele parece estar sonhando.
 7 7 2 7d6+25 2d4+4
 211 2650
 4 4 1
-GenWimpy: 16
+GenWimpy: 17
 E
 T 3009
 #2518
@@ -541,7 +542,7 @@ novo bichinho de estimação.
 23 4 -4 23d23+230 3d5+10
 4672 31050
 9 9 1
-GenWimpy: 1
+GenWimpy: 2
 E
 T 3009
 #2539
@@ -729,8 +730,8 @@ revolver de repulsão.
 20 5 -2 20d20+200 3d6+5
 2150 26850
 9 9 2
-GenWimpy: 14
-GenRoam: 29
+GenWimpy: 15
+GenRoam: 26
 E
 T 3009
 #2553
@@ -775,7 +776,7 @@ garras bem grandes.
 15 5 -5 15d15+150 5d5+5
 0 18750
 9 9 2
-GenWimpy: 6
+GenWimpy: 9
 E
 #2556
 mestre cinza~
@@ -856,7 +857,7 @@ Parece ser nada mais que uma grande bola de pêlos, com garras.
 15 4 -4 15d8+10 3d7+3
 0 7950
 9 9 0
-GenWimpy: 12
+GenWimpy: 14
 E
 #2562
 mestre branco~

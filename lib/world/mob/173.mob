@@ -40,7 +40,7 @@ carrega uma grande lança.
 70 2 -19 12d12+1200 14d14+15
 10000 65030
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
 E
 T 3013
 #17304
@@ -315,7 +315,8 @@ vestido e tem uma coroa de flores enfeitando seus cabelos.
 30 5 -2 10d10+360 4d6+8
 3000 10030
 9 9 2
-GenWimpy: 1
+GenWimpy: 3
+GenRoam: 3
 E
 #17322
 rainha guinevere~
@@ -628,7 +629,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 3
+GenWimpy: 4
 E
 #17344
 escrava~

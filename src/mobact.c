@@ -79,6 +79,32 @@ void mobile_activity(void)
         ch->ai_data->duty_frustration_timer--;
     }
     
+    if (ch->ai_data && ch->ai_data->current_goal != GOAL_NONE) {
+
+        room_rnum dest = ch->ai_data->goal_destination;
+
+        /* Já chegou ao destino? */
+        if (IN_ROOM(ch) == dest) {
+            if (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL) {
+                /* Usa a memória para encontrar o lojista correto. */
+                struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
+                if (keeper && ch->ai_data->goal_obj) {
+                    shopping_sell(ch->ai_data->goal_obj->name, ch, keeper, find_shop_by_keeper(keeper->nr));
+                }
+            }
+            /* Limpa o objetivo, pois foi concluído. */
+            ch->ai_data->current_goal = GOAL_NONE;
+            ch->ai_data->goal_destination = NOWHERE;
+            ch->ai_data->goal_obj = NULL;
+            ch->ai_data->goal_target_mob_rnum = NOBODY;
+        } else {
+            /* Ainda não chegou. Continua a vaguear em direção ao objetivo. */
+            mob_goal_oriented_roam(ch, dest);
+        }
+
+        continue; /* O turno do mob foi gasto a trabalhar no seu objetivo. */
+    }
+    
     if (mob_index[GET_MOB_RNUM(ch)].func == shop_keeper) {
     	int shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
 	    if (shop_nr != -1 && !is_shop_open(shop_nr)) {
@@ -1557,22 +1583,14 @@ bool mob_try_to_sell_junk(struct char_data *ch)
         }
         room_rnum target_shop_room = real_room(SHOP_ROOM(best_shop_rnum, 0));
 
-        /* 4. AÇÃO: Vender ou Viajar */
-        if (IN_ROOM(ch) == target_shop_room) {
-            /* Se já está na loja, vende o item. */
-            char item_name[MAX_INPUT_LENGTH];
-            one_argument(item_to_sell->name, item_name);
-            
-            /* CORREÇÃO: Usa a nova função para encontrar o lojista de forma segura. */
-            struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), SHOP_KEEPER(best_shop_rnum));
-            if (keeper) {
-                 shopping_sell(item_name, ch, keeper, best_shop_rnum);
-                 ch->ai_data->genetics.trade_tendency = MIN(ch->ai_data->genetics.trade_tendency + 3, 100);
-                 return TRUE;
-            }
-        } else if (target_shop_room != NOWHERE) {
+        if (target_shop_room != NOWHERE) {
             /* Se ainda não está na loja, o objetivo é ir para lá. */
             act("$n olha para a sua mochila e parece estar a planejar uma viagem.", FALSE, ch, 0, 0, TO_ROOM);
+	    ch->ai_data->current_goal = GOAL_GOTO_SHOP_TO_SELL;
+            ch->ai_data->goal_destination = target_shop_room;
+            ch->ai_data->goal_obj = item_to_sell;
+	    ch->ai_data->goal_target_mob_rnum = SHOP_KEEPER(best_shop_rnum);
+
             mob_goal_oriented_roam(ch, target_shop_room);
             return TRUE;
         }
