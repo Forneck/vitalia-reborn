@@ -104,7 +104,8 @@ void mobile_activity(void)
                 struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
                 if (keeper && ch->ai_data->goal_obj) {
                     shopping_sell(ch->ai_data->goal_obj->name, ch, keeper, find_shop_by_keeper(keeper->nr));
-                    
+		    ch->ai_data->genetics.trade_tendency += 1;
+		    ch->ai_data->genetics.trade_tendency = MIN(ch->ai_data->genetics.trade_tendency, 100);
                     /* After selling, check if there are more items to sell to this same shop */
                     struct obj_data *next_item_to_sell = NULL;
                     int min_score = 10;
@@ -1230,7 +1231,7 @@ bool mob_manage_inventory(struct char_data *ch)
 
     /* A IA aprende que organizar é útil. */
     if (item_stored && ch->ai_data) {
-        ch->ai_data->genetics.use_tendency += 1;
+        ch->ai_data->genetics.use_tendency += 3;
         ch->ai_data->genetics.use_tendency = MIN(ch->ai_data->genetics.use_tendency, 100);
     }
 

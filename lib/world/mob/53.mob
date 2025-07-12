@@ -10,7 +10,7 @@ venenosa desta cobra derrubou muitos faraós poderosos.
 5 14 8 5d5+50 1d6+1
 10 1000
 9 9 0
-GenWimpy: 30
+GenWimpy: 32
 E
 T 3008
 #5301
@@ -44,8 +44,7 @@ mãos.
 11 10 6 11d11+110 3d5+3
 100 10000
 9 9 2
-GenWimpy: 17
-GenRoam: 2
+GenWimpy: 19
 E
 #5303
 guardiao piramide~
@@ -121,7 +120,7 @@ etéreo espírito de um morto.
 12 8 4 12d12+120 1d6+6
 750 15000
 9 9 0
-GenWimpy: 35
+GenWimpy: 34
 GenLoot: 2
 GenRoam: 50
 E
@@ -138,8 +137,8 @@ quentes e arenosos.
 14 6 2 14d14+140 2d7+4
 1500 18000
 9 9 1
-GenWimpy: 61
-GenRoam: 48
+GenWimpy: 62
+GenRoam: 51
 E
 #5309
 efreeti~
@@ -199,9 +198,8 @@ dos seus primos mais velhos.
 15 0 -23 15d15+650 4d10+25
 7500 21000
 9 9 2
-GenWimpy: 15
-GenLoot: 1
-GenRoam: 10
+GenWimpy: 16
+GenRoam: 6
 E
 #5313
 ginoesfinge esfinge~

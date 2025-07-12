@@ -79,7 +79,7 @@ ocupado, tentando misturar um líquido a outro.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 0
-GenWimpy: 10
+GenWimpy: 11
 E
 #18606
 réptil reptil coisa inseto pavoroso nojento~
@@ -110,7 +110,7 @@ espere!!  Ele parece que está querendo atacá-lo!
 4 17 5 1d8+46 2d4+0
 300 600
 9 9 0
-GenWimpy: 18
+GenWimpy: 17
 GenRoam: 83
 GenGroup: 8
 E

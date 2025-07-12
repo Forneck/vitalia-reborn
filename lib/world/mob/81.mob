@@ -471,8 +471,7 @@ Esse gato negro aparenta ser muito esperto e corajoso.
 7 19 0 2d5+150 1d2+2
 0 100
 9 9 1
-GenWimpy: 8
-GenRoam: 1
+GenWimpy: 9
 E
 #8136
 escaravelho~
@@ -630,7 +629,6 @@ enquanto lágrimas desesperadas rolam por sua face corada.
 10 1800
 9 9 2
 GenWimpy: 3
-GenRoam: 1
 E
 #8147
 serpente~

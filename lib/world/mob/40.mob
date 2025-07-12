@@ -9,7 +9,7 @@ Ela parece estar com fome.
 11 7 4 5d10+50 3d6+0
 0 12000
 9 9 0
-GenWimpy: 1
+GenWimpy: 2
 E
 T 3008
 #4001
@@ -48,8 +48,8 @@ Ele é horrível.
 4 16 5 2d10+40 1d8+1
 50 800
 9 9 0
-GenWimpy: 25
-GenRoam: 84
+GenWimpy: 26
+GenRoam: 82
 E
 #4004
 orc~

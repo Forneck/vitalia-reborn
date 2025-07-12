@@ -81,7 +81,7 @@ Há uma grande possibilidade de que Ted seja um grande amigo imaginário...
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 4
+GenWimpy: 5
 E
 #20106
 cerebro~
@@ -118,8 +118,8 @@ terminam por revelar o eterno paciente dentro dele.
 5 15 9 10d5+20 2d3+2
 1100 1000
 9 9 1
-GenWimpy: 11
-GenRoam: 5
+GenWimpy: 13
+GenRoam: 2
 E
 #20108
 assistente~
@@ -153,8 +153,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 16
-GenRoam: 38
+GenWimpy: 17
+GenRoam: 35
 E
 #20110
 jovem mulher Sybila~
@@ -218,7 +218,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 11
+GenWimpy: 12
 E
 #20114
 jovem mulher Renee~
@@ -233,8 +233,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 5
-GenRoam: 28
+GenWimpy: 6
+GenLoot: 1
+GenRoam: 29
 E
 #20115
 jovem mulher Stela~
@@ -268,8 +269,7 @@ original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 5
-GenRoam: 1
+GenWimpy: 6
 E
 #20117
 jovem mulher gabrielle~

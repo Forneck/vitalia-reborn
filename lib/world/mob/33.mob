@@ -99,7 +99,7 @@ Este Cíclope atira pedras realmente bem.  Com um olho, porêm, acertar o alvo
 10000 24000
 9 9 1
 BareHandAttack: 13
-GenWimpy: 5
+GenWimpy: 6
 E
 #3307
 salle woman~
@@ -249,7 +249,7 @@ serviço de guarda...
 18 3 -3 3d5+220 3d6+2
 2400 32000
 9 9 1
-GenWimpy: 11
+GenWimpy: 7
 E
 #3317
 mineiro escravo~
@@ -264,8 +264,8 @@ você deveria, ou melhor, se você pode dar-lhe a liberdade.
 6 15 10 3d5+70 1d8+1
 0 1500
 9 9 1
-GenWimpy: 9
-GenLoot: 2
+GenWimpy: 11
+GenLoot: 1
 E
 #3318
 fazendeiro~

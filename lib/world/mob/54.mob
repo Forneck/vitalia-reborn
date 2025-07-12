@@ -619,7 +619,7 @@ O que você vê diante de si é realmente um bebê de um elemental do ar.
 1 19 9 2d2+1 2d3+1
 1 10
 9 9 1
-GenWimpy: 42
+GenWimpy: 43
 E
 #5448
 lamia~
@@ -648,7 +648,7 @@ Este homem parece poder usar montes e montes de restos.
 8 12 3 4d4+20 2d6+1
 1 105
 9 9 1
-GenWimpy: 31
+GenWimpy: 32
 E
 #5450
 sultao~
@@ -674,7 +674,7 @@ azul.   Sua lealdade para com o Sultão é eterna.
 3 17 7 1d1+15 1d6+1
 0 40
 9 9 2
-GenWimpy: 40
+GenWimpy: 42
 E
 #5452
 carcereiro~
@@ -701,7 +701,7 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 13
+GenWimpy: 12
 E
 #5454
 garota preferida nichole~
