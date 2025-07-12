@@ -33,7 +33,7 @@ struct char_data *find_best_median_leader(struct char_data *ch);
 bool mob_handle_grouping(struct char_data *ch);
 bool mob_share_gear_with_group(struct char_data *ch);
 bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, int was_in);
-bool mob_goal_oriented_roam(struct char_data *ch);
+bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room);
 bool handle_duty_routine(struct char_data *ch);
 bool mob_follow_leader(struct char_data *ch);
 bool mob_assist_allies(struct char_data *ch);
@@ -155,7 +155,7 @@ void mobile_activity(void)
     }
     
     /* Prioridade de Vaguear (Roam) */
-    mob_goal_oriented_roam(ch);
+    mob_goal_oriented_roam(ch, NOWHERE);
 
     /* Mob Memory */
     if (MOB_FLAGGED(ch, MOB_MEMORY) && MEMORY(ch)) {
@@ -685,10 +685,12 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
 
 /**
  * IA de exploração orientada a objetivos. O mob agora vagueia com um propósito.
- * VERSÃO FINAL E DEFINITIVA: Segura, tática e com fluxo de ações corrigido.
+ * Se um 'target_room' for fornecido, ele tentará navegar até lá.
+ * Se não, ele usa a sua lógica de exploração padrão.
+ * VERSÃO FINAL COM NAVEGAÇÃO POR OBJETIVO.
  * Retorna TRUE se uma ação de roam foi executada.
  */
-bool mob_goal_oriented_roam(struct char_data *ch)
+bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
 {
     if (ch->master != NULL || FIGHTING(ch) || GET_POS(ch) < POS_STANDING)
         return FALSE;
@@ -696,34 +698,30 @@ bool mob_goal_oriented_roam(struct char_data *ch)
     int direction = -1;
     bool has_goal = FALSE;
 
-    /* 1. Define um objetivo (voltar ao posto ou explorar). */
-    if (MOB_FLAGGED(ch, MOB_SENTINEL) && IN_ROOM(ch) != real_room(GET_LOADROOM(ch))) {
-        direction = find_first_step(IN_ROOM(ch), real_room(GET_LOADROOM(ch)));
+    /* --- FASE 1: DEFINIÇÃO DO OBJETIVO --- */
+
+    /* Se um destino específico foi dado, essa é a prioridade máxima. */
+    if (target_room != NOWHERE && IN_ROOM(ch) != target_room) {
+        direction = find_first_step(IN_ROOM(ch), target_room);
         has_goal = TRUE;
     } else {
-        int base_roam = MOB_FLAGGED(ch, MOB_SENTINEL) ? 1 : 25;
-        int curiosidade_minima = 10;
-        int chance_roll = 100;
-        int need_bonus = (GET_EQ(ch, WEAR_WIELD) == NULL ? 20 : 0) + (!GROUP(ch) ? 10 : 0);
-        
-        /************************************************************/
-        /* REFINAMENTO: Sentinelas são muito mais relutantes.       */
-        if (MOB_FLAGGED(ch, MOB_SENTINEL)) {
-            curiosidade_minima = 0;
-            chance_roll = 1000; /* Mais difícil de ser motivado. */
-        }
-        /************************************************************/
-
-        int final_chance = MIN(MAX(base_roam + GET_GENROAM(ch) + need_bonus, curiosidade_minima), 90);
-        
-        if (rand_number(1, chance_roll) <= final_chance) {
-            direction = rand_number(0, DIR_COUNT - 1);
+        /* Se nenhum destino foi dado, usa a lógica de exploração padrão. */
+        if (MOB_FLAGGED(ch, MOB_SENTINEL) && IN_ROOM(ch) != real_room(ch->ai_data->guard_post)) {
+            direction = find_first_step(IN_ROOM(ch), real_room(ch->ai_data->guard_post));
             has_goal = TRUE;
+        } else {
+            int base_roam = MOB_FLAGGED(ch, MOB_SENTINEL) ? 1 : 25;
+            int need_bonus = (GET_EQ(ch, WEAR_WIELD) == NULL ? 20 : 0) + (!GROUP(ch) ? 10 : 0);
+            int final_chance = MIN(base_roam + GET_GENROAM(ch) + need_bonus, 90);
+            
+            if (rand_number(1, 100) <= final_chance) {
+                direction = rand_number(0, DIR_COUNT - 1);
+                has_goal = TRUE;
+            }
         }
     }
-
-
-    /* 2. Se tiver um objetivo, tenta agir. */
+    
+    /* --- FASE 2: EXECUÇÃO DA AÇÃO SE HOUVER UM OBJETIVO --- */
     if (has_goal && direction >= 0 && direction < DIR_COUNT) { /* Verificação de segurança para direction */
         struct room_direction_data *exit;
         room_rnum to_room;
@@ -731,10 +729,10 @@ bool mob_goal_oriented_roam(struct char_data *ch)
         if ((exit = EXIT(ch, direction)) && (to_room = exit->to_room) <= top_of_world) {
 
             /* GESTÃO DE VOO (Ação que consome o turno) */
-            if (AFF_FLAGGED(ch, AFF_FLYING) && ROOM_FLAGGED(to_room, ROOM_NO_FLY)) 
-		    stop_flying(ch); 
+            if (AFF_FLAGGED(ch, AFF_FLYING) && ROOM_FLAGGED(to_room, ROOM_NO_FLY))
+                    stop_flying(ch);
             if (!AFF_FLAGGED(ch, AFF_FLYING) && world[to_room].sector_type == SECT_CLIMBING)
-		    start_flying(ch);
+                    start_flying(ch);
 
             /* RESOLUÇÃO DE PORTAS (UMA AÇÃO DE CADA VEZ, E APENAS EM PORTAS REAIS) */
             if (IS_SET(exit->exit_info, EX_ISDOOR) && IS_SET(exit->exit_info, EX_CLOSED)) {
@@ -749,8 +747,7 @@ bool mob_goal_oriented_roam(struct char_data *ch)
             }
 
             /* Se, depois de tudo, a porta ainda estiver fechada, a IA não pode passar. */
-            if (IS_SET(exit->exit_info, EX_CLOSED)) {
-                return FALSE;
+            if (IS_SET(exit->exit_info, EX_CLOSED)) {                                                                                                return FALSE;
             }
 
             /* Verificações Finais de Caminho */
@@ -768,6 +765,7 @@ bool mob_goal_oriented_roam(struct char_data *ch)
             return perform_move_IA(ch, direction, should_close, was_in);
         }
     }
+
     return FALSE;
 }
 
