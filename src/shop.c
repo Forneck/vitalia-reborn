@@ -2019,7 +2019,7 @@ bool is_shop_open(shop_rnum snum)
  * @param item O item a ser vendido.
  * @return O rnum da melhor loja encontrada, ou -1 se nenhuma for adequada.
  */
-shop_rnum find_best_shop_to_sell(struct char_data *ch, struct obj_data *item)
+int find_best_shop_to_sell(struct char_data *ch, struct obj_data *item)
 {
     shop_rnum snum, best_shop = -1;
     float best_profit = 0.0;
