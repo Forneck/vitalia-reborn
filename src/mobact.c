@@ -1550,7 +1550,7 @@ bool mob_try_to_sell_junk(struct char_data *ch)
     int best_shop_rnum = find_best_shop_to_sell(ch, item_to_sell);
     
     if (best_shop_rnum != -1) {
-        room_rnum target_shop_room = real_room(SHOP_ROOM(best_shop_rnum, 0));
+        int target_shop_room = real_room(SHOP_ROOM(best_shop_rnum, 0));
 
         /* 4. AÇÃO: Vender ou Viajar */
         if (IN_ROOM(ch) == target_shop_room) {
