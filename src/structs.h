@@ -983,6 +983,7 @@ struct mob_ai_data {
     room_rnum goal_destination; /* A sala de destino do seu objetivo. */
     struct obj_data *goal_obj;  /* O objeto alvo do objetivo */
     mob_rnum goal_target_mob_rnum; /*Falar com quem?*/
+    int goal_timer;             /* Contador para evitar ficar preso no mesmo objetivo */
 };
 
 /**
