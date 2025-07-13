@@ -264,6 +264,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"reply", "r", POS_SLEEPING, do_reply, 0, 0, CMD_NOARG},
 	{"rest", "res", POS_RESTING, do_rest, 0, 0, CMD_NOARG},
 	{"read", "rea", POS_RESTING, do_look, 0, SCMD_READ, CMD_ONEARG},
+	{"rebegin", "rebegin", POS_STANDING, do_rebegin, 0, 0, CMD_NOARG},
 	{"reload", "reload", POS_DEAD, do_reboot, LVL_IMPL, 0, CMD_NOARG},
 	{"recall", "reca", POS_RESTING, do_recall, 0, 0, CMD_NOARG},
 	{"recite", "reci", POS_RESTING, do_use, 0, SCMD_RECITE, CMD_TWOARG},
@@ -1958,6 +1959,78 @@ void nanny(struct descriptor_data *d, char *arg)
 		   while they are at the password prompt. We'll let the game_loop()axe 
 		   them. */
 	case CON_CLOSE:
+		break;
+	case CON_RB_SKILL:			/* rebegin: confirm rebegin */
+		if (!*arg || (*arg != 's' && *arg != 'S' && *arg != 'n' && *arg != 'N')) {
+			write_to_output(d, "Por favor, responda s ou n: ");
+			return;
+		}
+		if (*arg == 'n' || *arg == 'N') {
+			write_to_output(d, "Renascimento cancelado.\r\n");
+			STATE(d) = CON_PLAYING;
+			return;
+		}
+		/* For now, skip skill selection and go directly to class selection */
+		write_to_output(d, "\r\nEscolha sua nova classe:\r\n");
+		write_to_output(d, "%s", class_menu);
+		STATE(d) = CON_RB_NEW_CLASS;
+		break;
+	case CON_RB_NEW_CLASS:		/* rebegin: choose new class */
+		load_result = parse_class(*arg);
+		if (load_result == CLASS_UNDEFINED) {
+			write_to_output(d, "Isso não é uma classe válida.\r\nClasse: ");
+			return;
+		}
+		/* Check if class was already used */
+		if (d->character->player_specials->saved.was_class[load_result]) {
+			write_to_output(d, "Você já viveu como essa classe. Escolha outra.\r\nClasse: ");
+			return;
+		}
+		/* Mark current class as used and set new class */
+		d->character->player_specials->saved.was_class[GET_CLASS(d->character)] = 1;
+		GET_CLASS(d->character) = load_result;
+		write_to_output(d, "\r\nRolando novos atributos...\r\n");
+		STATE(d) = CON_RB_REROLL;
+		break;
+	case CON_RB_REROLL:			/* rebegin: reroll attributes */
+		roll_real_abils(d->character);
+		write_to_output(d, "Força: %d, Inteligência: %d, Sabedoria: %d, Destreza: %d, Constituição: %d, Carisma: %d\r\n",
+			GET_STR(d->character), GET_INT(d->character), GET_WIS(d->character),
+			GET_DEX(d->character), GET_CON(d->character), GET_CHA(d->character));
+		write_to_output(d, "Aceitar estes atributos? (s/N): ");
+		STATE(d) = CON_RB_QHOME;
+		break;
+	case CON_RB_QHOME:			/* rebegin: reroll or accept attributes */
+		if (!*arg || (*arg != 's' && *arg != 'S' && *arg != 'n' && *arg != 'N')) {
+			write_to_output(d, "Por favor, responda s ou n: ");
+			return;
+		}
+		if (*arg == 'n' || *arg == 'N') {
+			roll_real_abils(d->character);
+			write_to_output(d, "Força: %d, Inteligência: %d, Sabedoria: %d, Destreza: %d, Constituição: %d, Carisma: %d\r\n",
+				GET_STR(d->character), GET_INT(d->character), GET_WIS(d->character),
+				GET_DEX(d->character), GET_CON(d->character), GET_CHA(d->character));
+			write_to_output(d, "Aceitar estes atributos? (s/N): ");
+			return;
+		}
+		
+		/* Finalize rebegin process */
+		GET_REMORT(d->character)++;
+		GET_LEVEL(d->character) = 1;
+		GET_EXP(d->character) = 1;
+		GET_GOLD(d->character) = 0;
+		GET_BANK_GOLD(d->character) = 0;
+		GET_HIT(d->character) = GET_MAX_HIT(d->character);
+		GET_MANA(d->character) = GET_MAX_MANA(d->character);
+		GET_MOVE(d->character) = GET_MAX_MOVE(d->character);
+		
+		/* Initialize character for new class */
+		do_start(d->character);
+		save_char(d->character);
+		
+		write_to_output(d, "\r\nVocê renasceu com sucesso! Bem-vindo à sua nova vida.\r\n");
+		write_to_output(d, "*** APERTE ENTER: ");
+		STATE(d) = CON_RMOTD;
 		break;
 	default:
 		log1("SYSERR: Nanny: illegal state of con'ness (%d) for '%s'; closing connection.",

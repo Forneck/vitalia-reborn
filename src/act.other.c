@@ -1275,3 +1275,27 @@ ACMD(do_recall)
 	greet_memory_mtrigger(ch);
 }
 
+ACMD(do_rebegin)
+{
+	if (IS_NPC(ch)) {
+		send_to_char(ch, "NPCs não podem renascer.\r\n");
+		return;
+	}
+
+	if (!can_rebegin(ch)) {
+		send_to_char(ch, "Você não pode renascer neste momento.\r\n");
+		return;
+	}
+
+	if (GET_POS(ch) == POS_FIGHTING) {
+		send_to_char(ch, "Você não pode renascer durante uma luta.\r\n");
+		return;
+	}
+
+	/* Show rebegin information */
+	send_to_char(ch, "%s", rebegin);
+	send_to_char(ch, "\r\nVocê tem certeza que quer renascer? (s/N): ");
+	
+	STATE(ch->desc) = CON_RB_SKILL;
+}
+
