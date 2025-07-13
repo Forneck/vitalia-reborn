@@ -28,6 +28,7 @@
 #include "db.h"
 #include "fight.h"
 #include "quest.h"
+#include "graph.h"
 #include "genolc.h"
 
 /** Aportable random number function.
@@ -2305,6 +2306,48 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
          
     /* TODO: Salvar quest permanentemente se necessário */
     /* save_quests(mob_zone); */
+}
+
+/**
+ * Encontra um questmaster acessível na zona especificada.
+ * Procura questmasters que estão atualmente carregados no jogo e podem ser alcançados.
+ * @param ch O mob que quer encontrar um questmaster
+ * @param zone A zona para procurar
+ * @return Ponteiro para o questmaster encontrado, ou NULL se nenhum for encontrado
+ */
+struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone_rnum zone)
+{
+    qst_rnum rnum;
+    mob_rnum qm_mob_rnum;
+    struct char_data *qm_char;
+    room_rnum qm_room;
+    
+    if (zone == NOWHERE || zone >= top_of_zone_table) {
+        return NULL;
+    }
+    
+    /* Procura por questmasters carregados na zona especificada */
+    for (rnum = 0; rnum < total_quests; rnum++) {
+        if (QST_MASTER(rnum) != NOBODY) {
+            qm_mob_rnum = real_mobile(QST_MASTER(rnum));
+            if (qm_mob_rnum != NOBODY) {
+                /* Procura este questmaster carregado no mundo */
+                for (qm_char = character_list; qm_char; qm_char = qm_char->next) {
+                    if (IS_NPC(qm_char) && GET_MOB_RNUM(qm_char) == qm_mob_rnum) {
+                        qm_room = IN_ROOM(qm_char);
+                        if (qm_room != NOWHERE && world[qm_room].zone == zone) {
+                            /* Verifica se é acessível usando pathfinding */
+                            if (find_first_step(IN_ROOM(ch), qm_room) != BFS_NO_PATH) {
+                                return qm_char;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    return NULL;
 }
 
 /**

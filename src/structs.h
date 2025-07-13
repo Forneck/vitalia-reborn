@@ -958,6 +958,7 @@ struct room_data
 #define GOAL_GOTO_SHOP_TO_BUY  4
 #define GOAL_POST_QUEST        5
 #define GOAL_GET_GOLD          6
+#define GOAL_GOTO_QUESTMASTER  7
 
 /*
  * Estrutura para armazenar os "genes" de um mob, que podem evoluir.
