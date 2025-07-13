@@ -48,6 +48,9 @@ static void Write( descriptor_t *apDescriptor, const char *apData )
    write_to_output( apDescriptor, apData, 0 );
 }
 
+/* Forward declaration for UTF-8 filtering function */
+static void FilterUTF8ToASCII(char *input, char *output, int max_output_size);
+
 static void ReportBug( const char *apText )
 {
    log1( "%s", apText);
@@ -860,6 +863,15 @@ const char *ProtocolOutput( descriptor_t *apDescriptor, const char *apData, int 
    /* Terminate the string */
    Result[i] = '\0';
 
+   /* Apply UTF-8 filtering if UTF-8 is disabled */
+   if ( pProtocol && !pProtocol->pVariables[eMSDP_UTF_8]->ValueInt )
+   {
+      static char FilteredResult[MAX_OUTPUT_BUFFER+1];
+      FilterUTF8ToASCII(Result, FilteredResult, MAX_OUTPUT_BUFFER+1);
+      strcpy(Result, FilteredResult);
+      i = strlen(Result);
+   }
+
    /* Store the length */
    if ( apLength )
       *apLength = i;
@@ -1458,6 +1470,99 @@ const char *ColourRGB( descriptor_t *apDescriptor, const char *apRGB )
 /******************************************************************************
  UTF-8 global functions.
  ******************************************************************************/
+
+/* Function: FilterUTF8ToASCII
+ *
+ * Filters UTF-8 characters to ASCII equivalents for older clients.
+ * Converts Portuguese characters like ç, ã, ô, etc. to their ASCII equivalents.
+ */
+static void FilterUTF8ToASCII(char *input, char *output, int max_output_size)
+{
+   int input_len = strlen(input);
+   int i = 0, j = 0;
+   
+   while (i < input_len && j < max_output_size - 1) {
+      unsigned char c = (unsigned char)input[i];
+      
+      if (c < 0x80) {
+         /* ASCII character, copy as-is */
+         output[j++] = input[i++];
+      } else if ((c & 0xE0) == 0xC0 && i + 1 < input_len) {
+         /* 2-byte UTF-8 sequence */
+         unsigned char c2 = (unsigned char)input[i + 1];
+         if ((c2 & 0xC0) == 0x80) {
+            /* Valid UTF-8 sequence, check for Portuguese characters */
+            int unicode = ((c & 0x1F) << 6) | (c2 & 0x3F);
+            
+            /* Convert common Portuguese characters to ASCII */
+            switch (unicode) {
+               case 0x00E7: /* ç */ output[j++] = 'c'; break;
+               case 0x00C7: /* Ç */ output[j++] = 'C'; break;
+               case 0x00E3: /* ã */ output[j++] = 'a'; break;
+               case 0x00C3: /* Ã */ output[j++] = 'A'; break;
+               case 0x00F5: /* õ */ output[j++] = 'o'; break;
+               case 0x00D5: /* Õ */ output[j++] = 'O'; break;
+               case 0x00E1: /* á */ output[j++] = 'a'; break;
+               case 0x00C1: /* Á */ output[j++] = 'A'; break;
+               case 0x00E0: /* à */ output[j++] = 'a'; break;
+               case 0x00C0: /* À */ output[j++] = 'A'; break;
+               case 0x00E2: /* â */ output[j++] = 'a'; break;
+               case 0x00C2: /* Â */ output[j++] = 'A'; break;
+               case 0x00E9: /* é */ output[j++] = 'e'; break;
+               case 0x00C9: /* É */ output[j++] = 'E'; break;
+               case 0x00EA: /* ê */ output[j++] = 'e'; break;
+               case 0x00CA: /* Ê */ output[j++] = 'E'; break;
+               case 0x00ED: /* í */ output[j++] = 'i'; break;
+               case 0x00CD: /* Í */ output[j++] = 'I'; break;
+               case 0x00F3: /* ó */ output[j++] = 'o'; break;
+               case 0x00D3: /* Ó */ output[j++] = 'O'; break;
+               case 0x00F4: /* ô */ output[j++] = 'o'; break;
+               case 0x00D4: /* Ô */ output[j++] = 'O'; break;
+               case 0x00FA: /* ú */ output[j++] = 'u'; break;
+               case 0x00DA: /* Ú */ output[j++] = 'U'; break;
+               default:
+                  /* Unknown UTF-8 character, replace with '?' */
+                  output[j++] = '?';
+                  break;
+            }
+            i += 2; /* Skip both bytes of the UTF-8 sequence */
+         } else {
+            /* Invalid UTF-8, copy as-is or replace with ? */
+            output[j++] = '?';
+            i++;
+         }
+      } else if ((c & 0xF0) == 0xE0 && i + 2 < input_len) {
+         /* 3-byte UTF-8 sequence - replace with ? for now */
+         unsigned char c2 = (unsigned char)input[i + 1];
+         unsigned char c3 = (unsigned char)input[i + 2];
+         if ((c2 & 0xC0) == 0x80 && (c3 & 0xC0) == 0x80) {
+            output[j++] = '?';
+            i += 3;
+         } else {
+            output[j++] = '?';
+            i++;
+         }
+      } else if ((c & 0xF8) == 0xF0 && i + 3 < input_len) {
+         /* 4-byte UTF-8 sequence - replace with ? for now */
+         unsigned char c2 = (unsigned char)input[i + 1];
+         unsigned char c3 = (unsigned char)input[i + 2];
+         unsigned char c4 = (unsigned char)input[i + 3];
+         if ((c2 & 0xC0) == 0x80 && (c3 & 0xC0) == 0x80 && (c4 & 0xC0) == 0x80) {
+            output[j++] = '?';
+            i += 4;
+         } else {
+            output[j++] = '?';
+            i++;
+         }
+      } else {
+         /* Invalid UTF-8 byte or incomplete sequence */
+         output[j++] = '?';
+         i++;
+      }
+   }
+   
+   output[j] = '\0';
+}
 
 char *UnicodeGet( int aValue )
 {
