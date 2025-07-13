@@ -27,6 +27,8 @@
 #include "shop.h"
 #include "db.h"
 #include "fight.h"
+#include "quest.h"
+#include "genolc.h"
 
 /** Aportable random number function.
  * @param from The lower bounds of the random number.
@@ -2169,39 +2171,317 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
 {
     obj_rnum obj_rnum;
     char *item_name = "um item";
+    mob_vnum questmaster_vnum;
+    qst_vnum new_quest_vnum;
+    struct aq_data *new_quest;
+    int difficulty;
+    int calculated_reward;
+    zone_rnum mob_zone;
+    char quest_name[MAX_QUEST_NAME];
+    char quest_desc[MAX_QUEST_DESC];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
     
-    if (!IS_NPC(ch) || GET_GOLD(ch) < reward) return;
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
     
-    /* Tenta obter o nome do item para uma mensagem mais descritiva */
+    /* Obtém informações sobre o item */
     obj_rnum = real_object(item_vnum);
     if (obj_rnum != NOTHING) {
         item_name = obj_proto[obj_rnum].short_description;
     }
     
-    /* Deduz o ouro */
-    GET_GOLD(ch) -= reward;
+    /* Encontra zona do mob */
+    mob_zone = world[IN_ROOM(ch)].zone;
     
-    /* Remove da wishlist (temporariamente) */
+    /* Encontra questmaster apropriado */
+    questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    if (questmaster_vnum == NOBODY) {
+        /* Não há questmaster disponível, usa implementação anterior */
+        log1("WISHLIST QUEST: No questmaster found for %s in zone %d, using old implementation", 
+             GET_NAME(ch), mob_zone);
+        GET_GOLD(ch) -= MIN(reward, GET_GOLD(ch));
+        remove_item_from_wishlist(ch, item_vnum);
+        act("$n parece frustrado por não conseguir postar sua solicitação.", FALSE, ch, 0, 0, TO_ROOM);
+        return;
+    }
+    
+    /* Calcula dificuldade e recompensa adequada */
+    difficulty = calculate_quest_difficulty(item_vnum);
+    calculated_reward = calculate_quest_reward(ch, item_vnum, difficulty);
+    
+    /* Verifica se o mob tem ouro suficiente */
+    if (GET_GOLD(ch) < calculated_reward) {
+        calculated_reward = MAX(50, GET_GOLD(ch) / 2);
+    }
+    
+    /* Cria uma nova quest */
+    CREATE(new_quest, struct aq_data, 1);
+    
+    /* Gera VNUM único para a nova quest baseado na zona */
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    while (real_quest(new_quest_vnum) != NOTHING) {
+        new_quest_vnum++;
+        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
+            new_quest_vnum = zone_table[mob_zone].bot + 9000;
+        }
+    }
+    
+    /* Configura a quest */
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = AQ_OBJ_RETURN;
+    new_quest->qm = questmaster_vnum;
+    new_quest->target = item_vnum;
+    new_quest->prereq = NOTHING;
+    new_quest->flags = 0; /* Não repetível por padrão */
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
+    
+    /* Configura valores da quest */
+    new_quest->value[0] = calculated_reward / 10; /* Questpoints reward */
+    new_quest->value[1] = 0; /* Penalty */
+    new_quest->value[2] = MAX(1, GET_LEVEL(ch) - 10); /* Min level */
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15); /* Max level */
+    new_quest->value[4] = -1; /* No time limit */
+    new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
+    new_quest->value[6] = 1; /* Quantity */
+    
+    /* Determina se a quest deve ser repetível baseado no tipo de item */
+    if (obj_rnum != NOTHING) {
+        int obj_type = GET_OBJ_TYPE(&obj_proto[obj_rnum]);
+        /* Quests para itens consumíveis (poções, pergaminhos, comida) são repetíveis */
+        if (obj_type == ITEM_POTION || obj_type == ITEM_SCROLL || 
+            obj_type == ITEM_FOOD || obj_type == ITEM_DRINKCON) {
+            SET_BIT(new_quest->flags, AQ_REPEATABLE);
+        }
+    }
+    
+    /* Configura recompensas */
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 2;
+    new_quest->obj_reward = NOTHING; /* TODO: Implementar item rewards do inventário do mob */
+    
+    /* Cria strings da quest */
+    snprintf(quest_name, sizeof(quest_name), "Busca por %s", item_name);
+    snprintf(quest_desc, sizeof(quest_desc), "%s precisa de %s", GET_NAME(ch), item_name);
+    snprintf(quest_info, sizeof(quest_info), 
+             "%s está procurando por %s. Se você encontrar este item, "
+             "traga-o de volta para %s para receber sua recompensa.",
+             GET_NAME(ch), item_name, GET_NAME(ch));
+    snprintf(quest_done, sizeof(quest_done),
+             "Excelente! Você trouxe exatamente o que eu precisava. "
+             "Muito obrigado pela sua ajuda!");
+    
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Que pena que você desistiu desta busca.");
+    
+    /* Adiciona a quest ao sistema */
+    if (add_quest(new_quest) < 0) {
+        log1("SYSERR: Failed to add wishlist quest for %s (item %d)", 
+             GET_NAME(ch), item_vnum);
+        free_quest(new_quest);
+        return;
+    }
+    
+    /* Deduz o ouro do mob */
+    GET_GOLD(ch) -= calculated_reward;
+    
+    /* Remove da wishlist temporariamente */
     remove_item_from_wishlist(ch, item_vnum);
     
-    /* Simula a postagem da quest com uma mensagem para jogadores próximos */
-    char quest_msg[MAX_STRING_LENGTH];
-    sprintf(quest_msg, "$n coloca um aviso numa parede próxima oferecendo %d moedas de ouro por %s.",
-            reward, item_name);
-    act(quest_msg, FALSE, ch, 0, 0, TO_ROOM);
+    /* Mensagens para jogadores */
+    act("$n escreve algo num pergaminho e o envia para o questmaster.", 
+        FALSE, ch, 0, 0, TO_ROOM);
     
-    /* Log da ação para administradores */
-    log1("WISHLIST QUEST: %s (room %d) posted quest for item %d (%s) with reward %d gold", 
-        GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)), item_vnum, item_name, reward);
+    /* Log da ação */
+    log1("WISHLIST QUEST: %s (room %d) created quest %d for item %d (%s) with QM %d, reward %d gold", 
+         GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)), new_quest_vnum, item_vnum, 
+         item_name, questmaster_vnum, calculated_reward);
+         
+    /* TODO: Salvar quest permanentemente se necessário */
+    /* save_quests(mob_zone); */
+}
+
+/**
+ * Encontra um questmaster adequado para a zona especificada.
+ * Procura primeiro na própria zona, depois em zonas adjacentes.
+ * @param zone A zona para a qual procurar um questmaster
+ * @return VNUM do questmaster encontrado, ou NOBODY se nenhum for encontrado
+ */
+mob_vnum find_questmaster_for_zone(zone_rnum zone)
+{
+    qst_rnum rnum;
+    mob_vnum best_qm = NOBODY;
+    zone_rnum qm_zone;
+    mob_rnum qm_mob_rnum;
     
-    /* TODO: Implementação futura - criar uma quest real no sistema de quests
-     * Isto exigiria:
-     * 1. Criar uma estrutura aq_data para a nova quest
-     * 2. Definir o tipo da quest (provavelmente AQ_OBJ_RETURN)
-     * 3. Usar add_quest() para adicionar ao sistema
-     * 4. Guardar a quest no ficheiro apropriado
-     * 
-     * Por agora, a quest é apenas "virtual" - o mob gasta o ouro mas
-     * nenhuma quest real é criada para os jogadores.
+    if (zone == NOWHERE || zone >= top_of_zone_table) {
+        return NOBODY;
+    }
+    
+    /* Primeiro tenta encontrar um questmaster na própria zona */
+    for (rnum = 0; rnum < total_quests; rnum++) {
+        if (QST_MASTER(rnum) != NOBODY) {
+            qm_mob_rnum = real_mobile(QST_MASTER(rnum));
+            if (qm_mob_rnum != NOBODY) {
+                /* Verifica se o questmaster está na zona desejada */
+                if (mob_proto[qm_mob_rnum].in_room != NOWHERE) {
+                    qm_zone = world[mob_proto[qm_mob_rnum].in_room].zone;
+                    if (qm_zone == zone) {
+                        return QST_MASTER(rnum);
+                    }
+                }
+            }
+        }
+    }
+    
+    /* Se não encontrou na zona, procura o questmaster mais próximo */
+    for (rnum = 0; rnum < total_quests; rnum++) {
+        if (QST_MASTER(rnum) != NOBODY) {
+            qm_mob_rnum = real_mobile(QST_MASTER(rnum));
+            if (qm_mob_rnum != NOBODY) {
+                if (mob_proto[qm_mob_rnum].in_room != NOWHERE) {
+                    /* Aceita qualquer questmaster ativo */
+                    best_qm = QST_MASTER(rnum);
+                    break; /* Usa o primeiro questmaster encontrado */
+                }
+            }
+        }
+    }
+    
+    return best_qm;
+}
+
+/**
+ * Calcula a dificuldade de uma quest baseada no item solicitado.
+ * Leva em consideração o max load do item (da zona) e as estatísticas
+ * do proprietário atual (se aplicável).
+ * @param item_vnum VNUM do item para calcular dificuldade
+ * @return Valor de dificuldade de 1 a 100
+ */
+int calculate_quest_difficulty(obj_vnum item_vnum)
+{
+    obj_rnum obj_rnum;
+    int difficulty = 50; /* Base difficulty */
+    
+    obj_rnum = real_object(item_vnum);
+    if (obj_rnum == NOTHING) {
+        return 75; /* Item não existe, dificuldade alta */
+    }
+    
+    /* Base difficulty no nível do item */
+    if (GET_OBJ_LEVEL(&obj_proto[obj_rnum]) > 0) {
+        difficulty = MIN(GET_OBJ_LEVEL(&obj_proto[obj_rnum]), 100);
+    }
+    
+    /* Aumenta dificuldade baseado no valor do item */
+    if (GET_OBJ_COST(&obj_proto[obj_rnum]) > 10000) {
+        difficulty += 20;
+    } else if (GET_OBJ_COST(&obj_proto[obj_rnum]) > 5000) {
+        difficulty += 10;
+    }
+    
+    /* Aumenta dificuldade para itens raros/especiais */
+    if (GET_OBJ_TYPE(&obj_proto[obj_rnum]) == ITEM_TREASURE ||
+        OBJ_FLAGGED(&obj_proto[obj_rnum], ITEM_MAGIC)) {
+        difficulty += 15;
+    }
+    
+    /* TODO: Adicionar cálculo baseado no owner atual do item
+     * Isto requereria encontrar quem possui o item atualmente
+     * e ajustar a dificuldade baseado no nível/stats do proprietário
      */
+    
+    return URANGE(10, difficulty, 100);
+}
+
+/**
+ * Calcula a recompensa apropriada para uma quest baseada no mob solicitante,
+ * item desejado e dificuldade da quest.
+ * @param requesting_mob Mob que está solicitando o item
+ * @param item_vnum VNUM do item desejado
+ * @param difficulty Dificuldade calculada da quest
+ * @return Valor em ouro da recompensa
+ */
+int calculate_quest_reward(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty)
+{
+    int base_reward = 100;
+    int final_reward;
+    obj_rnum obj_rnum;
+    
+    if (!requesting_mob || !IS_NPC(requesting_mob)) {
+        return base_reward;
+    }
+    
+    /* Base reward baseado no nível do mob solicitante */
+    base_reward = GET_LEVEL(requesting_mob) * 10;
+    
+    /* Ajusta baseado na dificuldade */
+    base_reward = (base_reward * difficulty) / 50;
+    
+    /* Ajusta baseado no valor do item */
+    obj_rnum = real_object(item_vnum);
+    if (obj_rnum != NOTHING) {
+        int item_value = GET_OBJ_COST(&obj_proto[obj_rnum]);
+        if (item_value > 0) {
+            base_reward = MAX(base_reward, item_value / 2);
+        }
+    }
+    
+    /* Garante que o mob tem ouro suficiente para pagar */
+    final_reward = MIN(base_reward, GET_GOLD(requesting_mob) / 2);
+    
+    /* Mínimo e máximo para evitar valores extremos */
+    return URANGE(50, final_reward, 5000);
+}
+
+/**
+ * Verifica se uma quest é uma wishlist quest baseado no VNUM.
+ * Wishlist quests são criadas com VNUMs específicos na faixa da zona + 9000.
+ * @param quest_vnum VNUM da quest a verificar
+ * @return TRUE se for uma wishlist quest, FALSE caso contrário
+ */
+int is_wishlist_quest(qst_vnum quest_vnum)
+{
+    zone_rnum zone;
+    
+    /* Verifica todas as zonas para ver se o VNUM está na faixa de wishlist quests */
+    for (zone = 0; zone <= top_of_zone_table; zone++) {
+        if (quest_vnum >= zone_table[zone].bot + 9000 && 
+            quest_vnum <= zone_table[zone].top + 9000) {
+            return TRUE;
+        }
+    }
+    
+    return FALSE;
+}
+
+/**
+ * Remove uma wishlist quest completada do sistema se ela não for repetível.
+ * Isto evita acumulação de quests temporárias no sistema.
+ * @param quest_vnum VNUM da quest completada a limpar
+ */
+void cleanup_completed_wishlist_quest(qst_vnum quest_vnum)
+{
+    qst_rnum rnum;
+    
+    if (!is_wishlist_quest(quest_vnum)) {
+        return; /* Não é uma wishlist quest */
+    }
+    
+    rnum = real_quest(quest_vnum);
+    if (rnum == NOTHING) {
+        return; /* Quest não existe */
+    }
+    
+    /* Se a quest não é repetível, remove-a do sistema */
+    if (!IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE)) {
+        log1("WISHLIST QUEST: Cleaning up completed non-repeatable quest %d", quest_vnum);
+        delete_quest(rnum);
+    }
 }

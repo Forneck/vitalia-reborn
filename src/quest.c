@@ -349,6 +349,10 @@ void generic_complete_quest(struct char_data *ch)
     if (!IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE))
       add_completed_quest(ch, vnum);
     clear_quest(ch);
+    
+    /* Cleanup wishlist quests after completion */
+    cleanup_completed_wishlist_quest(vnum);
+    
     if ((real_quest(QST_NEXT(rnum)) != NOTHING) &&
         (QST_NEXT(rnum) != vnum) &&
         !is_complete(ch, QST_NEXT(rnum))) {
