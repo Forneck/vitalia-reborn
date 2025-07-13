@@ -56,8 +56,6 @@ em cada movimento calculado. Uma aura azulada pulsa ao redor de seu corpo.
 35 2 -2 1d8+600 4d8+12
 2500 25000
 8 8 1
-Spell: 8
-Spell: 30
 E
 
 #204
@@ -74,10 +72,6 @@ aspectos do inverno eterno deste castelo.
 45 -5 -8 2d10+1000 6d10+20
 8000 50000
 4 4 2
-Spell: 6
-Spell: 11
-Spell: 23
-Spell: 30
 E
 
 #205
@@ -108,7 +102,6 @@ gelados até o fim dos tempos.
 20 5 0 1d4+300 2d7+5
 1000 10000
 8 8 0
-Spell: 38
 E
 
 #207
@@ -139,8 +132,6 @@ afiados giram ao seu redor como lâminas cortantes.
 28 3 -3 1d7+450 3d8+9
 1800 18000
 8 8 0
-Spell: 8
-Spell: 37
 E
 
 #209
@@ -186,8 +177,6 @@ preservados no frio perpétuo da biblioteca do castelo.
 26 4 0 1d6+380 3d7+8
 1600 16000
 8 8 1
-Spell: 20
-Spell: 31
 E
 
 #212

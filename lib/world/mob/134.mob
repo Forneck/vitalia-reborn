@@ -593,8 +593,6 @@ pesquisa e estudo.
 22 2 1 1d5+275 2d8+4
 1000 10000
 8 8 1
-Spell: 1
-Spell: 12
 E
 
 #13447
@@ -610,8 +608,6 @@ aos primeiros dias da cidade élfica.
 28 0 0 1d7+350 3d8+6
 1400 14000
 8 8 1
-Spell: 25
-Spell: 28
 E
 
 #13448
@@ -657,9 +653,6 @@ criando itens únicos.
 26 -1 -1 1d7+325 3d7+5
 1300 13000
 8 8 1
-Spell: 3
-Spell: 17
-Spell: 25
 E
 
 #13451
@@ -675,8 +668,6 @@ da floresta.
 23 2 2 1d5+287 2d8+4
 1050 10500
 8 8 1
-Spell: 28
-Spell: 1
 E
 
 #13452
@@ -692,9 +683,6 @@ tradicional élfica com magia natural.
 24 1 1 1d6+300 2d8+4
 1100 11000
 8 8 1
-Spell: 15
-Spell: 28
-Spell: 1
 E
 
 $
