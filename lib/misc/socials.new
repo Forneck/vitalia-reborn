@@ -973,14 +973,14 @@ $n desafia seu $t para um duelo.
 Você desafia $p para um duelo.
 $n desafia $p para um duelo.
 ~channel channel 0 8 8 0
-You receive the "I don't know how to talk on the right channel" award.
-$n wins the "I don't know how to talk on the right channel" award.
-You give $N the "I don't know how to talk on the right channel" award.
-$n gives $N the "I don't know how to talk on the right channel" award.
-$n gives you the "I don't know how to talk on the right channel" award.
-They left before you could present the award.
-You award yourself for your accomplishments.
-$n gives $mself the "I don't know how to talk on the right channel" award.
+Você recebe o prêmio "Eu não sei como falar no canal certo".
+$n ganha o prêmio "Eu não sei como falar no canal certo".
+Você dá a $N o prêmio "Eu não sei como falar no canal certo".
+$n dá a $N o prêmio "Eu não sei como falar no canal certo".
+$n dá a você o prêmio "Eu não sei como falar no canal certo".
+Eles saíram antes que você pudesse apresentar o prêmio.
+Você se premia por suas conquistas.
+$n dá a $e mesmo(a) o prêmio "Eu não sei como falar no canal certo".
 #
 #
 #
@@ -988,74 +988,74 @@ $n gives $mself the "I don't know how to talk on the right channel" award.
 #
 
 ~charge charge 0 5 0 0
-CHARGE! Into the fray!
-$n charges into the fray!
-You charge headlong into $M!
-$n charges headlong into $N.
-$n charges right into you!
-Will that be VISA, MasterCard, or AmEx?
-Charge yourself? How?
-$n looks real stupid, trying to charge at $mself!
-You charge $S $t.
-$n charges $N's $t.
-$n charges your $t.
-You charges $p.
-$n charges $p.
+CARGA! Para a batalha!
+$n ataca para a batalha!
+Você ataca de cabeça contra $M!
+$n ataca de cabeça contra $N.
+$n ataca direto em você!
+Será VISA, MasterCard ou AmEx?
+Atacar você mesmo? Como?
+$n parece muito idiota, tentando atacar a $e mesmo(a)!
+Você ataca o $t de $S.
+$n ataca o $t de $N.
+$n ataca seu $t.
+Você ataca $p.
+$n ataca $p.
 
 ~charm charm 0 5 0 0
-You look charming.
-$n looks charming.
-You are charmed by $M.
-$n is charmed by $N.
-$n is charmed by you.
-Charming, isn't it?
-You seem to be charmed by your own reflection.
-$n is charmed by $s own reflection.
-You are charmed by $S $t.
-$n is charmed by $N's $t.
-$n is charmed by your $t.
-You is charmed by $p.
-$n is charmed $p.
+Você parece charmoso(a).
+$n parece charmoso(a).
+Você está encantado(a) com $M.
+$n está encantado(a) com $N.
+$n está encantado(a) com você.
+Charmoso, não é?
+Você parece estar encantado(a) com seu próprio reflexo.
+$n está encantado(a) com seu próprio reflexo.
+Você está encantado(a) com o $t de $S.
+$n está encantado(a) com o $t de $N.
+$n está encantado(a) com seu $t.
+Você está encantado(a) com $p.
+$n está encantado(a) com $p.
 
 ~cheers cheers 0 5 0 0
-Hooray!
-$n gives a resounding cheer.
-You cheer $M.
-$n cheers $N's great work.
-$n gives you a hearty cheer.
-Hmmm wonder where they went?
-You congratulate yourself.
-$n seems to be very impressed with $mself.
-You cheer at $S $t.
-$n cheers at $N's $t.
-$n cheers at your $t.
-You cheer at $p.
-$n cheers at $p.
+Hurra!
+$n dá uma alegria ressonante.
+Você comemora $M.
+$n comemora o excelente trabalho de $N.
+$n dá a você uma calorosa comemoração.
+Hmm, onde será que eles foram?
+Você se parabeniza.
+$n parece estar muito impressionado(a) consigo mesmo(a).
+Você comemora o $t de $S.
+$n comemora o $t de $N.
+$n comemora seu $t.
+Você comemora $p.
+$n comemora $p.
 
 ~chitter chitter 0 5 0 0
-You chitter like a squirrel.
-$n chitters loudly.
-You chitter at $M like a squirrel.
-$n chitters at $N.
-$n chitters at you.
-You chitter like a rabid squirrel at no one in particular.
-You chitter to yourself like a squirrel off $s nut.
-$n chitters loudly to $mself.
-You chitter at $S $t.
-$n chitters at $N's $t.
-$n chitters at your $t.
-You chitter at $p.
-$n chitters at $p.
+Você tagarelar como um esquilo.
+$n tagarelar alto.
+Você tagarelar para $M como um esquilo.
+$n tagarelar para $N.
+$n tagarelar para você.
+Você tagarelar como um esquilo raivoso para ninguém em particular.
+Você tagarelar para si mesmo(a) como um esquilo fora da $s noz.
+$n tagarelar alto para $e mesmo(a).
+Você tagarelar para o $t de $S.
+$n tagarelar para o $t de $N.
+$n tagarelar para seu $t.
+Você tagarelar para $p.
+$n tagarelar para $p.
 
 ~choke choke 0 5 5 0
-You choke and gasp for breath.
-$n chokes and gasps for breath.
-You look pleadingly at $N as you choke and gasp for breath.
-$n looks pleadingly at $N as $e chokes and gasps for breath.
-$n looks pleadingly at you as $e chokes and gasps for breath.
-I can't see them, I'm sorry.
-You're slowly choking to death. Help!
-$n is slowly choking to death. Help!
+Você se engasga e luta por ar.
+$n se engasga e luta por ar.
+Você olha suplicante para $N enquanto se engasga e luta por ar.
+$n olha suplicante para $N enquanto $e se engasga e luta por ar.
+$n olha suplicante para você enquanto $e se engasga e luta por ar.
+Não consigo vê-los, me desculpe.
+Você está lentamente se sufocando até a morte. Socorro!
+$n está lentamente se sufocando até a morte. Socorro!
 #
 #
 #
@@ -1063,12 +1063,12 @@ $n is slowly choking to death. Help!
 #
 
 ~chortle chortle 0 5 0 0
-You chortle.
-$n chortles.
-You chortle at $N.
-$n chortles at $N.
-$n chortles at you.
-You don't see them here!
+Você ri satisfeito.
+$n ri satisfeito.
+Você ri satisfeito para $N.
+$n ri satisfeito para $N.
+$n ri satisfeito para você.
+Você não os vê aqui!
 #
 #
 #
@@ -1078,14 +1078,14 @@ You don't see them here!
 #
 
 ~christmas christmas 0 8 8 0
-You wish everyone a Merry Christmas!!!
-$n wishes everyone a Merry Christmas!!!
-You wish $N a Merry Christmas!!!
-$n wishes $N a very Merry Christmas!!!
-$n wishes you a very Merry Christmas!!!
-First sign of insanity...
-You wish yourself a very Merry Christmas.
-$n wishes $mself a very Merry Christmas.
+Você deseja a todos um Feliz Natal!!!
+$n deseja a todos um Feliz Natal!!!
+Você deseja a $N um Feliz Natal!!!
+$n deseja a $N um Feliz Natal!!!
+$n deseja a você um Feliz Natal!!!
+Primeiro sinal de insanidade...
+Você deseja a si mesmo(a) um Feliz Natal.
+$n deseja a $e mesmo(a) um Feliz Natal.
 #
 #
 #
@@ -1093,59 +1093,59 @@ $n wishes $mself a very Merry Christmas.
 #
 
 ~chuckles chu 0 5 0 0
-You chuckle politely.
-$n chuckles politely.
-You chuckle at $N.
-$n chuckles at $N.
-$n chuckles at you.
-Hmm... No one like that seems to be about.
-You chuckle quietly to yourself.
-$n chuckles quietly to $mself, obviously some private joke.
-You chuckle at $S $t.
-$n chuckles at $N's $t.
-$n chuckles at your $t.
-You chuckle at $p.
-$n chuckles at $p.
+Você ri educadamente.
+$n ri educadamente.
+Você ri para $N.
+$n ri para $N.
+$n ri para você.
+Hmm... Ninguém assim parece estar por perto.
+Você ri baixinho para si mesmo(a).
+$n ri baixinho para $e mesmo(a), obviamente alguma piada particular.
+Você ri do $t de $S.
+$n ri do $t de $N.
+$n ri do seu $t.
+Você ri de $p.
+$n ri de $p.
 
 ~clap clap 0 5 0 0
-You clap your small hands together.
-$n shows $s approval by clapping $s hands together.
-You clap wholeheartedly for $N's achievement!
-$n claps wholeheartedly for $N's achievement!
-$n claps wholeheartedly for your achievement!
-You make the sound of one hand clapping.
-You clap your hands over your ears.
-$n claps $s hands over $s ears.
-You clap at $S $t.
-$n claps at $N's $t.
-$n claps at your $t.
-You clap at $p.
-$n claps at $p.
+Você bate suas pequenas mãos juntas.
+$n mostra $s aprovação batendo $s mãos juntas.
+Você bate palmas de todo o coração para a conquista de $N!
+$n bate palmas de todo o coração para a conquista de $N!
+$n bate palmas de todo o coração para sua conquista!
+Você faz o som de uma mão batendo palmas.
+Você bate suas mãos sobre seus ouvidos.
+$n bate $s mãos sobre $s ouvidos.
+Você bate palmas para o $t de $S.
+$n bate palmas para o $t de $N.
+$n bate palmas para seu $t.
+Você bate palmas para $p.
+$n bate palmas para $p.
 
 ~clobber clobber 0 5 0 0
-Clobber the air?  Sure, go ahead, fine by me...
-$n starts shadow-boxing.
-You clobber $M right in the face!  Yuck, the BLOOD!
-$n swings weakly at $N, missing by miles.
-$n tries to clobber you but misses by a good quarter-mile...
-Clobber who?
-You clobber yourself in the face resulting in your own nose being bloodied.
-$n clobbers $mself in the face, looking kind of stupid.
-You clobber $M in the $t!
-$n clobbers $N in the $t!
-$n clobbers you in the $t!
-You clobber $p.
-$n clobbers $p.
+Espancar o ar? Claro, vá em frente, não tem problema para mim...
+$n começa a lutar boxe sombra.
+Você espanca $M bem no rosto! Que nojo, o SANGUE!
+$n balança fracamente para $N, errando por quilômetros.
+$n tenta te espancar mas erra por uns bons quatrocentos metros...
+Espancar quem?
+Você se espanca no rosto resultando em seu próprio nariz sangrando.
+$n se espanca no rosto, parecendo meio idiota.
+Você espanca $M no $t!
+$n espanca $N no $t!
+$n espanca você no $t!
+Você espanca $p.
+$n espanca $p.
 
 ~coffee coffee 0 8 8 0
-You pour coffee for everyone, offering to tape eyelids open as needed.
-$n pours coffee for everyone, offering to tape eyelids open as needed.
-You fix two strips of tape to $N's eyelids and pour $M some coffee.
-$n fixes two strips of tape to $N's eyelids and pours $M some coffee.
-$n fixes two strips of tape to your eyelids and pours you some coffee.
-Pouring coffee for imaginary friends?
-You fix two strips of tape to your eyelids and pour yourself some coffee.
-$n fixes two strips of tape to $s eyelids and pours $mself some coffee.
+Você serve café para todos, oferecendo colar as pálpebras abertas conforme necessário.
+$n serve café para todos, oferecendo colar as pálpebras abertas conforme necessário.
+Você cola duas tiras de fita nas pálpebras de $N e serve café para $M.
+$n cola duas tiras de fita nas pálpebras de $N e serve café para $M.
+$n cola duas tiras de fita em suas pálpebras e serve café para você.
+Servindo café para amigos imaginários?
+Você cola duas tiras de fita em suas pálpebras e serve café para si mesmo(a).
+$n cola duas tiras de fita em $s pálpebras e serve café para $e mesmo(a).
 #
 #
 #
@@ -1153,8 +1153,8 @@ $n fixes two strips of tape to $s eyelids and pours $mself some coffee.
 #
 
 ~cold cold 0 8 8 0
-You shiver and hug your body, trying to get warm
-$n's teeth starts chattering from the extremely cold weather
+Você treme e abraça seu corpo, tentando se aquecer
+Os dentes de $n começam a bater do tempo extremamente frio
 #
 #
 #
@@ -1168,73 +1168,73 @@ $n's teeth starts chattering from the extremely cold weather
 #
 
 ~collapse collapse 0 5 0 0
-You collapse into a heap of weary bones.
-$n collapses into a heap.
-You collapse on top of $M.
-$n collapses on top of $N.
-$n collapses on top of you.
-Are you really at the point of total collapse?
-You totally collapse.
-$n totally collapses.
-You collapse on $S $t.
-$n collapses on $N's $t.
-$n collapses on your $t.
-You collapse on $p.
-$n collapses on $p.
+Você desmorona numa pilha de ossos cansados.
+$n desmorona numa pilha.
+Você desmorona em cima de $M.
+$n desmorona em cima de $N.
+$n desmorona em cima de você.
+Você está realmente no ponto de colapso total?
+Você desmorona totalmente.
+$n desmorona totalmente.
+Você desmorona no $t de $S.
+$n desmorona no $t de $N.
+$n desmorona no seu $t.
+Você desmorona em $p.
+$n desmorona em $p.
 
 ~comfort com 0 5 0 0
-Do you feel uncomfortable?
-$n looks for someone to comfort.
-You comfort $M.
-$n comforts $N.
-$n comforts you.
-Comfort who?
-You make a vain attempt to comfort yourself.
-$n tries to comfort $mself.
-You comfort $S $t.
-$n comforts $N's $t.
-$n comforts your $t.
-You comfort $p.
-$n comforts $p.
+Você se sente desconfortável?
+$n procura alguém para consolar.
+Você consola $M.
+$n consola $N.
+$n consola você.
+Consolar quem?
+Você faz uma tentativa vã de se consolar.
+$n tenta se consolar.
+Você consola o $t de $S.
+$n consola o $t de $N.
+$n consola seu $t.
+Você consola $p.
+$n consola $p.
 
 ~comb comb 0 5 0 0
-You comb your hair -- perfect.
-$n combs $s hair, what a dashing specimen!
-You patiently untangle $N's hair -- what a mess!
-$n tries patiently to untangle $N's hair.
-$n pulls your hair in an attempt to comb it.
-That person is not here.
-You pull your hair, but it will not be combed.
-$n tries to comb $s tangled hair.
-You comb $S $t.
-$n combs $N's $t.
-$n combs your $t.
-You comb $p.
-$n comb $p.
+Você penteia seu cabelo -- perfeito.
+$n penteia $s cabelo, que espécime deslumbrante!
+Você pacientemente desembaraça o cabelo de $N -- que bagunça!
+$n tenta pacientemente desembaraçar o cabelo de $N.
+$n puxa seu cabelo numa tentativa de penteá-lo.
+Essa pessoa não está aqui.
+Você puxa seu cabelo, mas ele não será penteado.
+$n tenta pentear $s cabelo embaraçado.
+Você penteia o $t de $S.
+$n penteia o $t de $N.
+$n penteia seu $t.
+Você penteia $p.
+$n penteia $p.
 
 ~confuse confuse 0 5 0 0
-You feel very confused.
-$n feels very confused.
-You try to confuse $M.
-$n tries to confuse $N.
-$n tries to confuse you.
-You're confused? So am I! Who's that supposed to be aimed at?
-Well done, you've gone and confused yourself!
-$n has confused $mself now.
-You look at $N's $i in confusion.
-$n looks at $N's $i in confusion.
-$n looks at your $i in confusion.
+Você se sente muito confuso(a).
+$n se sente muito confuso(a).
+Você tenta confundir $M.
+$n tenta confundir $N.
+$n tenta confundir você.
+Você está confuso(a)? Eu também! Para quem isso deveria ser direcionado?
+Muito bem, você foi e se confundiu!
+$n confundiu a $e mesmo(a) agora.
+Você olha para o $i de $N confuso(a).
+$n olha para o $i de $N confuso(a).
+$n olha para seu $i confuso(a).
 #
 #
 
 ~conga conga 0 8 8 0
-@YYou start a conga line! Conga conga conga!!@n
-@Y$n starts dancing around creating a conga line! (type CONGA <person> to join $m)@n
-@YYou put your hands on $N's hips and join the conga line!@n
-@Y$n places their hands on $N's hips and joins the conga line!@n
-@Y$n places their hands on your hips and joins the conga line! Weee fun!@n
-You do not see them here.
-You must conga with someone else!
+@YVocê inicia uma linha de conga! Conga conga conga!!@n
+@Y$n começa a dançar criando uma linha de conga! (digite CONGA <pessoa> para se juntar a $m)@n
+@YVocê coloca suas mãos nos quadris de $N e se junta à linha de conga!@n
+@Y$n coloca suas mãos nos quadris de $N e se junta à linha de conga!@n
+@Y$n coloca suas mãos em seus quadris e se junta à linha de conga! Uhu, divertido!@n
+Você não os vê aqui.
+Você deve dançar conga com outra pessoa!
 #
 #
 #
@@ -1243,8 +1243,8 @@ You must conga with someone else!
 #
 
 ~conga2 conga2 0 8 8 0
-@YThe conga line dances around the location bringing joy and happiness to everyone!@n
-@YThe conga line dances around the location bringing joy and happiness to everyone!@n
+@YA linha de conga dança ao redor do local trazendo alegria e felicidade para todos!@n
+@YA linha de conga dança ao redor do local trazendo alegria e felicidade para todos!@n
 #
 #
 #
@@ -1258,94 +1258,94 @@ You must conga with someone else!
 #
 
 ~console conso 0 5 0 0
-You feel unconsolable.
-$n looks for someone to console $m.
-You console $M.
-$n consoles $N.
-$n consoles you.
-Console who?
-You make a vain attempt to console yourself.
-$n tries to console $mself.
-You console $S $t.
-$n consoles $N's $t.
-$n consoles your $t.
-You console $p.
-$n consoles $p.
+Você se sente inconsolável.
+$n procura alguém para consolá-lo(a).
+Você consola $M.
+$n consola $N.
+$n consola você.
+Consolar quem?
+Você faz uma tentativa vã de se consolar.
+$n tenta se consolar.
+Você consola o $t de $S.
+$n consola o $t de $N.
+$n consola seu $t.
+Você consola $p.
+$n consola $p.
 
 ~contemplate contemplate 0 5 5 0
-You contemplate theology, the concept of heaven and hell and ethereal realities.
-$n contemplates theology, the concept of heaven and hell and ethereal realities.
-You contemplate $N, and the reason why $E exists.
-$n contemplates $N, and the reason why $E exists.
-$n contemplates you, and the reason why you exist.
-You contemplate nothingness, mainly because that person isn't even there!
-You contemplate yourself and the reason for why you exist.
-$n contemplates $mself and the reason for why $e exists.
-You contemplate the meaning of $N's $t.
-$n contemplates the meaning of $N's $t.
-$n contemplates the meaning of your $t.
+Você contempla teologia, o conceito de céu e inferno e realidades etéreas.
+$n contempla teologia, o conceito de céu e inferno e realidades etéreas.
+Você contempla $N, e a razão pela qual $E existe.
+$n contempla $N, e a razão pela qual $E existe.
+$n contempla você, e a razão pela qual você existe.
+Você contempla o nada, principalmente porque essa pessoa nem está lá!
+Você contempla a si mesmo(a) e a razão pela qual você existe.
+$n contempla a $e mesmo(a) e a razão pela qual $e existe.
+Você contempla o significado do $t de $N.
+$n contempla o significado do $t de $N.
+$n contempla o significado de seu $t.
 #
 #
 
 ~cough cough 0 5 0 0
-You cough.
-$n coughs.
-You cough at $M trying to get attention.
-$n coughs all over $N.
-$n coughs all over you.
-You cough, but they don't seem to care.
-Something tickles your throat and you begin to cough.
-$n coughs all over $sself.
-You cough on $S $t.
-$n coughs on $N's $t.
-$n coughs on your $t.
-You cough on $p.
-$n coughs on $p.
+Você tosse.
+$n tosse.
+Você tosse para $M tentando chamar atenção.
+$n tosse por toda parte em $N.
+$n tosse por toda parte em você.
+Você tosse, mas eles não parecem se importar.
+Algo faz cócegas em sua garganta e você começa a tossir.
+$n tosse por toda parte em $e mesmo(a).
+Você tosse no $t de $S.
+$n tosse no $t de $N.
+$n tosse no seu $t.
+Você tosse em $p.
+$n tosse em $p.
 
 ~cower cower 0 5 0 0
-You cower away in fear.
-$n cowers away in fear.
-You cower away from $M in fear!
-$n cowers away from $N.
-$n cowers away from you in fear!
-Who has scared you to the point of cowering?
-You cower away from your own shadow.
-$n cowers away from $s own shadow!
-You cower away from $S $t.
-$n cowers away from $N's $t.
-$n cowers away from your $t.
-You cower away from $p.
-$n cowers away from $p.
+Você se acovarda com medo.
+$n se acovarda com medo.
+Você se acovarda longe de $M com medo!
+$n se acovarda longe de $N.
+$n se acovarda longe de você com medo!
+Quem te assustou ao ponto de se acovardar?
+Você se acovarda longe de sua própria sombra.
+$n se acovarda longe de sua própria sombra!
+Você se acovarda longe do $t de $S.
+$n se acovarda longe do $t de $N.
+$n se acovarda longe de seu $t.
+Você se acovarda longe de $p.
+$n se acovarda longe de $p.
 
 ~cradle cradle 0 5 0 0
-You look around desperately for someone to cradle in your arms.
-$n is looking for someone to cradle in $s arms.
-You wrap your arms around $N, cradling $M close to you.
-$n wraps $s arms around $N, cradling $M to $m closely.
-$n wraps $s arms gently around you, cradling you close to $m.
-Sorry, they aren't here....maybe a cat would better suit you?
-You wrap your arms around yourself and pretend it is your loved one.
-n wraps $s arms around $mself as $e rocks side to side.
-You cradle $S $t.
-$n cradles $N's $t.
-$n cradles your $t.
-You cradle $p.
-$n cradles $p.
+Você olha ao redor desesperadamente por alguém para embalar em seus braços.
+$n está procurando alguém para embalar em $s braços.
+Você envolve seus braços ao redor de $N, embalando $M perto de você.
+$n envolve $s braços ao redor de $N, embalando $M perto de $m.
+$n envolve $s braços gentilmente ao redor de você, embalando você perto de $m.
+Desculpe, eles não estão aqui.... talvez um gato seja melhor para você?
+Você envolve seus braços ao redor de si mesmo(a) e finge que é seu ente querido.
+$n envolve $s braços ao redor de $e mesmo(a) enquanto $e balança de um lado para o outro.
+Você embala o $t de $S.
+$n embala o $t de $N.
+$n embala seu $t.
+Você embala $p.
+$n embala $p.
 
 ~crazed crazed 0 8 8 0
-You get a crazed look in your eyes.
-$n gets a crazed look in $s eyes.
-You glance at $N with a crazed look in your eyes.
-$n glances at $N with a crazed look in $s eyes.
-$n glances at you with a crazed look in $s eyes.
-You're crazy, they're not here.
-You give yourself a crazed look.
-$n gives $mself a crazed look.
-You glance at $N's $t with a crazed look in your eyes.
-$n glances at $N's $t with a crazed look in $s eyes.
-$n glances at your $t with a crazed look in $s eyes.
-You glance at $p with a crazed look in your eyes.
-$n glances at $p with a crazed look in $s eyes.
+Você tem um olhar enlouquecido em seus olhos.
+$n tem um olhar enlouquecido em $s olhos.
+Você olha para $N com um olhar enlouquecido em seus olhos.
+$n olha para $N com um olhar enlouquecido em $s olhos.
+$n olha para você com um olhar enlouquecido em $s olhos.
+Você está louco(a), eles não estão aqui.
+Você se dá um olhar enlouquecido.
+$n se dá um olhar enlouquecido.
+Você olha para o $t de $N com um olhar enlouquecido em seus olhos.
+$n olha para o $t de $N com um olhar enlouquecido em $s olhos.
+$n olha para seu $t com um olhar enlouquecido em $s olhos.
+Você olha para $p com um olhar enlouquecido em seus olhos.
+$n olha para $p com um olhar enlouquecido em $s olhos.
 
 ~crazy crazy 0 8 8 0
 You look around. "Crazy, I used to be crazy once... they put me in a rubber room with rubber rats." The memories flow back.
