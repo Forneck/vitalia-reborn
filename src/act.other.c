@@ -38,7 +38,6 @@ static void display_group_list(struct char_data *ch);
 
 int can_elevate(struct char_data *ch);
 int can_rebegin(struct char_data *ch);
-void show_class_skills(struct char_data *ch, int class_num);
 void show_menu_with_options(struct descriptor_data *d);
 void check_thief(struct char_data *ch, struct char_data *vict);
 bool are_groupable(struct char_data *ch, struct char_data *target);
