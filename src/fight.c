@@ -67,8 +67,7 @@ static void change_alignment(struct char_data *ch, struct char_data *victim);
 static void group_gain(struct char_data *ch, struct char_data *victim);
 static void solo_gain(struct char_data *ch, struct char_data *victim);
 /** @todo refactor this function name */
-static char *replace_string(const char *str, const char *weapon_singular,
-							const char *weapon_plural);
+static char *replace_string(const char *str, const struct attack_hit_type *attack_type);
 int get_weapon_prof(struct char_data *ch, struct obj_data *wield);
 int get_nighthammer(struct char_data *ch, bool real);
 int attacks_per_round(struct char_data *ch);
@@ -484,8 +483,7 @@ static void solo_gain(struct char_data *ch, struct char_data *victim)
 	change_alignment(ch, victim);
 }
 
-static char *replace_string(const char *str,
-							const char *weapon_singular, const char *weapon_plural)
+static char *replace_string(const char *str, const struct attack_hit_type *attack_type)
 {
 	static char buf[256];
 	char *cp = buf;
@@ -496,10 +494,13 @@ static char *replace_string(const char *str,
 			switch (*(++str))
 			{
 			case 'W':
-				for (; *weapon_plural; *(cp++) = *(weapon_plural++));
+				for (const char *weapon = attack_type->plural; *weapon; *(cp++) = *(weapon++));
 				break;
 			case 'w':
-				for (; *weapon_singular; *(cp++) = *(weapon_singular++));
+				for (const char *weapon = attack_type->singular; *weapon; *(cp++) = *(weapon++));
+				break;
+			case 'n':
+				for (const char *weapon = attack_type->tipo; *weapon; *(cp++) = *(weapon++));
 				break;
 			default:
 				*(cp++) = '#';
@@ -559,13 +560,13 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
 					"\tyVocê #w $N extremamente forte.\tn", "\tr$n #w você extremamente forte.\tn"
 				},
 				{
-					"$n massacra $N em pequenos fragmentos com a sua #w.", /* 7: 19..23 */
-					"\tyVocê massacra $N em pequenos fragmentos com a sua #w.\tn",
-					"\tr$n massacra você em pequenos fragmentos com a sua #w.\tn"
+					"$n massacra $N em pequenos fragmentos com a sua #n.", /* 7: 19..23 */
+					"\tyVocê massacra $N em pequenos fragmentos com a sua #n.\tn",
+					"\tr$n massacra você em pequenos fragmentos com a sua #n.\tn"
 				},
 				{
-					"$n OBLITERA $N com a sua #w mortal!!", /* 8: > 23 */
-					"\tyVocê OBLITERA $N com a sua #w mortal!!\tn", "\ty$n OBLITERA você com a sua #w mortal!!\tn"
+					"$n OBLITERA $N com a sua #n mortal!!", /* 8: > 23 */
+					"\tyVocê OBLITERA $N com a sua #n mortal!!\tn", "\ty$n OBLITERA você com a sua #n mortal!!\tn"
 				}
 			};
 	w_type -= TYPE_HIT;			/* Change to base of table with text */
@@ -588,21 +589,18 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
 	else
 		msgnum = 8;
 	/* damage message to onlookers */
-	buf = replace_string(dam_weapons[msgnum].to_room,
-						 attack_hit_text[w_type].singular, attack_hit_text[w_type].plural);
+	buf = replace_string(dam_weapons[msgnum].to_room, &attack_hit_text[w_type]);
 	act(buf, FALSE, ch, NULL, victim, TO_NOTVICT);
 	/* damage message to damager */
 	if (GET_LEVEL(ch) >= LVL_IMMORT)
 		send_to_char(ch, "(%d) ", dam);
-	buf = replace_string(dam_weapons[msgnum].to_char,
-						 attack_hit_text[w_type].singular, attack_hit_text[w_type].plural);
+	buf = replace_string(dam_weapons[msgnum].to_char, &attack_hit_text[w_type]);
 	act(buf, FALSE, ch, NULL, victim, TO_CHAR);
 	send_to_char(ch, CCNRM(ch, C_CMP));
 	/* damage message to damagee */
 	if (GET_LEVEL(victim) >= LVL_IMMORT)
 		send_to_char(victim, "\tR(%d)", dam);
-	buf = replace_string(dam_weapons[msgnum].to_victim,
-						 attack_hit_text[w_type].singular, attack_hit_text[w_type].plural);
+	buf = replace_string(dam_weapons[msgnum].to_victim, &attack_hit_text[w_type]);
 	act(buf, FALSE, ch, NULL, victim, TO_VICT | TO_SLEEP);
 	send_to_char(victim, CCNRM(victim, C_CMP));
 }
