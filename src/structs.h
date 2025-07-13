@@ -996,6 +996,7 @@ struct mob_ai_data {
     struct mob_genetics genetics; /* Contém todos os genes. */
     room_vnum guard_post;         /* O "posto de guarda" para Sentinelas/Lojistas. */
     int duty_frustration_timer;
+    int quest_posting_frustration_timer; /* Prevents quest posting after fleeing */
     struct mob_wishlist_item *wishlist; /* Lista de itens desejados */
 
     int current_goal;           /* O objetivo atual do mob (ex: GOAL_GOTO_SHOP_TO_SELL). */

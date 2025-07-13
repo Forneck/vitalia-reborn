@@ -875,6 +875,11 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                             /************************************************************/
 
 			    do_flee(victim, NULL, 0, 0);
+			    
+			    /* Set quest posting frustration timer after fleeing */
+			    if (IS_NPC(victim) && victim->ai_data) {
+			        victim->ai_data->quest_posting_frustration_timer = 6; /* 6 ticks (~1 minute) */
+			    }
 		        }
 		    } else {
 		        /* Fuga de PÂNICO: Para mobs "corajosos" (threshold = 0) em estado crítico. */
@@ -883,6 +888,11 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 		            if (rand_number(1, 100) <= 5) { /* Chance de 5% de entrar em pânico */
 		                act("$n olha para os seus ferimentos, entra em pânico e tenta fugir!", TRUE, victim, 0, 0, TO_ROOM);
 		                do_flee(victim, NULL, 0, 0);
+		                
+		                /* Set quest posting frustration timer after panic fleeing */
+		                if (IS_NPC(victim) && victim->ai_data) {
+		                    victim->ai_data->quest_posting_frustration_timer = 6; /* 6 ticks (~1 minute) */
+		                }
 		            }		
 		        }
 		    }

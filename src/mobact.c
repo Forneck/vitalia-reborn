@@ -81,6 +81,10 @@ void mobile_activity(void)
         ch->ai_data->duty_frustration_timer--;
     }
     
+    if (ch->ai_data && ch->ai_data->quest_posting_frustration_timer > 0) {
+        ch->ai_data->quest_posting_frustration_timer--;
+    }
+    
     if (ch->ai_data && ch->ai_data->current_goal != GOAL_NONE) {
         
         /* Increment goal timer and check for timeout */
@@ -2030,6 +2034,11 @@ void mob_process_wishlist_goals(struct char_data *ch)
     
     if (!IS_NPC(ch) || !ch->ai_data || ch->ai_data->current_goal != GOAL_NONE) {
         return; /* Já tem um objetivo ou não é um mob com AI */
+    }
+    
+    /* Check quest posting frustration timer - prevent quest posting after fleeing */
+    if (ch->ai_data->quest_posting_frustration_timer > 0) {
+        return; /* Still frustrated from fleeing, cannot post quests */
     }
     
     desired_item = get_top_wishlist_item(ch);
