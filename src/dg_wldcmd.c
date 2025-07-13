@@ -20,6 +20,7 @@
 #include "constants.h"
 #include "genzon.h" /* for zone_rnum real_zone_by_thing */
 #include "fight.h"  /* for die() */
+#include "shop.h"   /* for END_OF macro */
 
 /* Local functions, macros, defines and structs */
 
@@ -55,6 +56,7 @@ WCMD(do_wmove);
 WCMD(do_wlog);
 WCMD(do_wsector);
 WCMD(do_wflow);
+WCMD(do_wshowhead);
 
 
 /* attaches room vnum to msg and sends it to script_log */
@@ -683,6 +685,76 @@ WCMD(do_wflow)
     }
 }
 
+WCMD(do_wshowhead)
+{
+    char_data *i, *ch = NULL;
+    room_data *target_room = NULL;
+    room_rnum r;
+    zone_rnum zone_num;
+    char arg[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH];
+    int count = 0;
+    
+    one_argument(argument, arg);
+    
+    if (!*arg) {
+        wld_log(room, "wshowhead called with no actor argument");
+        return;
+    }
+    
+    /* Find the character in the room who triggered this */
+    for (ch = room->people; ch; ch = ch->next_in_room) {
+        if (isname(arg, ch->player.name))
+            break;
+    }
+    
+    if (!ch) {
+        wld_log(room, "wshowhead: character %s not found in room", arg);
+        return;
+    }
+    
+    /* Get the zone number of the current room */
+    zone_num = room->zone;
+    
+    /* Search through all rooms in the world to find the first one in this zone with ROOM_BROADCAST flag */
+    for (r = 0; r <= top_of_world; r++) {
+        if (world[r].zone == zone_num && IS_SET_AR(world[r].room_flags, ROOM_BROADCAST)) {
+            target_room = &world[r];
+            break;
+        }
+    }
+    
+    if (!target_room) {
+        send_to_char(ch, "Você não consegue ver nada especial ao longe.\r\n");
+        return;
+    }
+    
+    /* Display the target room information */
+    send_to_char(ch, "\r\n%s%s%s:\r\n", CCBLU(ch, C_NRM), target_room->name, CCNRM(ch, C_NRM));
+    
+    /* List all visible characters in the target room */
+    for (i = target_room->people; i; i = i->next_in_room) {
+        if (!CAN_SEE(ch, i))
+            continue;
+            
+        if (IS_NPC(i)) {
+            snprintf(buf, sizeof(buf), "  %s%s%s\r\n", CCYEL(ch, C_NRM), GET_NAME(i), CCNRM(ch, C_NRM));
+            send_to_char(ch, "%s", buf);
+        } else {
+            snprintf(buf, sizeof(buf), "  %s%s", CCYEL(ch, C_NRM), GET_NAME(i));
+            if (GET_TITLE(i) && *GET_TITLE(i)) {
+                snprintf(END_OF(buf), sizeof(buf) - strlen(buf), " %s", GET_TITLE(i));
+            }
+            snprintf(END_OF(buf), sizeof(buf) - strlen(buf), "%s\r\n", CCNRM(ch, C_NRM));
+            send_to_char(ch, "%s", buf);
+        }
+        count++;
+    }
+    
+    if (count == 0) {
+        send_to_char(ch, "  Ninguém.\r\n");
+    }
+}
+
 static const struct wld_command_info wld_cmd_info[] = {
     { "RESERVED", 0, 0 },/* this must be first -- for specprocs */
 
@@ -703,8 +775,7 @@ static const struct wld_command_info wld_cmd_info[] = {
     { "wlog"        , do_wlog      , 0 },
     { "wsector "    , do_wsector   , 0 },
     { "wflow "      , do_wflow     , 0 },
-    { "wsector "    , do_wsector   , 0 },
-    { "wflow "      , do_wflow     , 0 },
+    { "wshowhead "  , do_wshowhead , 0 },
     { "\n", 0, 0 }        /* this must be last */
 };
 
