@@ -15,13 +15,13 @@ CircleMUD v3.0 Shop File~
 4
 10
 -1
-%s Sorry, I haven't got exactly that item.~
-%s You don't seem to have that.~
-%s I don't buy such items.~
+%s Desculpe, não tenho exatamente esse item.~
+%s Você não parece ter isso.~
+%s Não compro esse tipo de item.~
 %s That is too expensive for me!~
-%s You can't afford it!~
-%s That'll be %d coins, please.~
-%s You'll get %d coins for it!~
+%s Você não pode pagar por isso!~
+%s Isso custará %d moedas, por favor.~
+%s Você receberá %d moedas por isso!~
 0
 2
 3000
@@ -40,13 +40,13 @@ CircleMUD v3.0 Shop File~
 1.40
 0.90
 -1
-%s Haven't got that on storage - try list!~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s If you have no money, you'll have to go!~
-%s That'll be %d coins.~
-%s Oops - %d a minor bug - please report!~
+%s Não tenho isso no estoque - tente listar!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Se você não tem dinheiro, terá que sair!~
+%s Isso custará %d moedas.~
+%s Ops - %d um pequeno erro - por favor reporte!~
 0
 6
 3001
@@ -70,13 +70,13 @@ CircleMUD v3.0 Shop File~
 8
 15
 -1
-%s Haven't got that on storage - try list!~
-%s You don't seem to have that.~
-%s I don't buy THAT... Try another shop.~
-%s I can't afford such a treasure.~
-%s You can't afford it!~
-%s That'll be %d coins, please.~
-%s You'll get %d coins for it!~
+%s Não tenho isso no estoque - tente listar!~
+%s Você não parece ter isso.~
+%s Não compro ISSO... Tente outra loja.~
+%s Não posso pagar por tal tesouro.~
+%s Você não pode pagar por isso!~
+%s Isso custará %d moedas, por favor.~
+%s Você receberá %d moedas por isso!~
 0
 6
 3002
@@ -99,13 +99,13 @@ CircleMUD v3.0 Shop File~
 0.40
 5
 -1
-%s I haven't got that kind of a weapon!~
-%s You don't carry that weapon!~
-%s I only buy weapons.~
-%s I can't afford such a great weapon!~
-%s sorry, but NO CREDIT!~
-%s That costs just %d coins.~
-%s Here, you can have %d coins for that.~
+%s Não tenho esse tipo de arma!~
+%s Você não porta essa arma!~
+%s Só compro armas.~
+%s Não posso pagar por uma arma tão boa!~
+%s Desculpe, mas NÃO FIADO!~
+%s Isso custa apenas %d moedas.~
+%s Aqui estão %d moedas por isso.~
 0
 6
 3003
@@ -137,13 +137,13 @@ CircleMUD v3.0 Shop File~
 0.50
 9
 -1
-%s Haven't got that on storage - try list!~
-%s You don't seem to have that.~
-%s I only buy armors.. Go away!~
-%s That is too expensive for me - Try a wizard!~
-%s You can't afford it!~
-%s That'll be %d coins, please.~
-%s You'll get %d coins for it!~
+%s Não tenho isso no estoque - tente listar!~
+%s Você não parece ter isso.~
+%s Só compro armaduras... Vá embora!~
+%s Isso é muito caro para mim - Tente um mago!~
+%s Você não pode pagar por isso!~
+%s Isso custará %d moedas, por favor.~
+%s Você receberá %d moedas por isso!~
 0
 6
 3004
@@ -159,13 +159,13 @@ CircleMUD v3.0 Shop File~
 1.20
 0.90
 -1
-%s Sorry, I don't stock that item.~
-%s You don't seem to have that.~
-%s I don't trade in such items.~
-%s I can't afford that!~
-%s You are too poor!~
-%s That'll be %d coins, thanks.~
-%s I'll give you %d coins for that.~
+%s Desculpe, não tenho esse item em estoque.~
+%s Você não parece ter isso.~
+%s Não comercializo esse tipo de item.~
+%s Não posso pagar tanto por isso!~
+%s Você não tem dinheiro suficiente!~
+%s Isso custará %d moedas, obrigado.~
+%s Te dou %d moedas por isso.~
 0
 6
 3011
@@ -184,13 +184,13 @@ CircleMUD v3.0 Shop File~
 0.90
 22
 -1
-%s Sorry pal, I have not got that kind of ship.~
-%s Ok, but let me see it first.~
-%s I only trade ships.~
-%s I can't afford such a nice ship.~
-%s This ship is too expensive for you.~
-%s Here is your ship, I'll take %d gold coins.~
-%s What a fine deal, you get %d gold coins.~
+%s Desculpe amigo, não tenho esse tipo de navio.~
+%s Ok, mas deixe-me ver primeiro.~
+%s Só negocio navios.~
+%s Não posso pagar por um navio tão bom.~
+%s Este navio é muito caro para você.~
+%s Aqui está seu navio, aceito %d moedas de ouro.~
+%s Que bom negócio, você ganha %d moedas de ouro.~
 0
 6
 3006
@@ -206,13 +206,13 @@ CircleMUD v3.0 Shop File~
 2.00
 0.50
 -1
-%s Sorry, you aren't on my list of people I can sell to.~
-%s Sorry, I don't buy from outsiders.~
-%s Sorry, I don't buy from outsiders.~
-%s Sorry, I don't buy from outsiders.~
-%s Sorry, but here, no money means no goods!~
+%s Desculpe, você não está na minha lista de pessoas para quem posso vender.~
+%s Desculpe, não compro de forasteiros.~
+%s Desculpe, não compro de forasteiros.~
+%s Desculpe, não compro de forasteiros.~
+%s Desculpe, mas aqui, sem dinheiro não há mercadorias!~
 %s That will be %d coins, please.  Thank you.~
-%s Here, you can have %d coins for that.~
+%s Aqui estão %d moedas por isso.~
 2
 6
 3007
@@ -231,13 +231,13 @@ CircleMUD v3.0 Shop File~
 1.20
 0.80
 -1
-%s Sorry, I don't have that -- try list!~
-%s Sorry, I don't buy waters from outsiders.~
-%s Sorry, I don't buy waters from outsiders.~
-%s Sorry, I don't buy waters from outsiders.~
-%s Sorry, but here, no money means no water!~
+%s Desculpe, não tenho isso -- tente listar!~
+%s Desculpe, não compro águas de forasteiros.~
+%s Desculpe, não compro águas de forasteiros.~
+%s Desculpe, não compro águas de forasteiros.~
+%s Desculpe, mas aqui, sem dinheiro não há água!~
 %s That will be %d coins, please.  Thank you.~
-%s Here, you can have %d coins for that.~
+%s Aqui estão %d moedas por isso.~
 0
 6
 3009
@@ -255,13 +255,13 @@ CircleMUD v3.0 Shop File~
 1.70
 1.00
 -1
-%s Haven't got that on storage - try list!~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s I'm sorry, I don't do tabs.~
-%s That'll be %d coins.~
-%s Oops - %d a minor bug - please report!~
+%s Não tenho isso no estoque - tente listar!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Desculpe, não trabalho fiado.~
+%s Isso custará %d moedas.~
+%s Ops - %d um pequeno erro - por favor reporte!~
 0
 2
 -1
@@ -282,13 +282,13 @@ CircleMUD v3.0 Shop File~
 1.10
 0.90
 -1
-%s It's very noisy in here, what did you say you wanted to buy?~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s Are you drunk or what?? - NO CREDIT!~
-%s That'll be - say %d coins.~
-%s Here, you can have %d coins for that.~
+%s Está muito barulhento aqui, o que você disse que queria comprar?~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Você está bêbado ou o quê?? - NÃO FIADO!~
+%s Isso custará - digamos %d moedas.~
+%s Aqui estão %d moedas por isso.~
 0
 6
 3040
@@ -306,13 +306,13 @@ CircleMUD v3.0 Shop File~
 1.20
 0.80
 -1
-%s Haven't got that on storage - try list!~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s If you have no money, you'll have to go!~
-%s That'll be %d coins.~
-%s Here, you can have %d coins for that.~
+%s Não tenho isso no estoque - tente listar!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Se você não tem dinheiro, terá que sair!~
+%s Isso custará %d moedas.~
+%s Aqui estão %d moedas por isso.~
 0
 6
 3042
@@ -330,13 +330,13 @@ CircleMUD v3.0 Shop File~
 1.10
 0.90
 -1
-%s Haven't got that on storage - try list!~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s If you have no money, you'll have to go!~
-%s That'll be %d coins.~
-%s Here, you can have %d coins for that.~
+%s Não tenho isso no estoque - tente listar!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Se você não tem dinheiro, terá que sair!~
+%s Isso custará %d moedas.~
+%s Aqui estão %d moedas por isso.~
 0
 6
 3043
@@ -354,13 +354,13 @@ CircleMUD v3.0 Shop File~
 1.70
 0.80
 -1
-%s Haven't got that on storage - try list!~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s If you have no money, you'll have to go!~
-%s That'll be %d coins.~
-%s Here, you can have %d coins for that.~
+%s Não tenho isso no estoque - tente listar!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Se você não tem dinheiro, terá que sair!~
+%s Isso custará %d moedas.~
+%s Aqui estão %d moedas por isso.~
 0
 6
 3044
@@ -379,13 +379,13 @@ CircleMUD v3.0 Shop File~
 1.50
 0.75
 -1
-%s Haven't got that on storage - try list!~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s If you have no money, you'll have to go!~
-%s That'll be %d coins.~
-%s Here, you can have %d coins for that.~
+%s Não tenho isso no estoque - tente listar!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Se você não tem dinheiro, terá que sair!~
+%s Isso custará %d moedas.~
+%s Aqui estão %d moedas por isso.~
 0
 6
 3045
@@ -403,13 +403,13 @@ CircleMUD v3.0 Shop File~
 1.30
 0.70
 -1
-%s It's very noisy in here, what did you say you wanted to buy?~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s Oh, bugger off, NO CREDIT!~
-%s That'll be - say %d coins.~
-%s Here, you can have %d coins for that.~
+%s Está muito barulhento aqui, o que você disse que queria comprar?~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Ah, saia daqui, NÃO FIADO!~
+%s Isso custará - digamos %d moedas.~
+%s Aqui estão %d moedas por isso.~
 0
 6
 3046
@@ -425,13 +425,13 @@ CircleMUD v3.0 Shop File~
 1.00
 1.00
 -1
-%s Sorry, I don't stock that item.~
-%s You don't seem to have that.~
-%s I don't trade in such items.~
-%s I can't afford that!~
-%s You are too poor!~
-%s That'll be %d coins, thanks.~
-%s I'll give you %d coins for that.~
+%s Desculpe, não tenho esse item em estoque.~
+%s Você não parece ter isso.~
+%s Não comercializo esse tipo de item.~
+%s Não posso pagar tanto por isso!~
+%s Você não tem dinheiro suficiente!~
+%s Isso custará %d moedas, obrigado.~
+%s Te dou %d moedas por isso.~
 0
 2
 3095

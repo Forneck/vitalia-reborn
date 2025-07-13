@@ -11,11 +11,11 @@ CircleMUD v3.0 Shop File~
 9
 5
 -1
-%s We don't have any in storage, sorry!~
-%s Check your possessions, you don't have that.~
+%s Não temos nenhum no estoque, desculpe!~
+%s Verifique seus pertences, você não tem isso.~
 %s I don't care for those types of goods.~
-%s I can't afford something that great!~
-%s You can't afford it, and don't ask a God for the money!~
+%s Não posso pagar algo tão caro!~
+%s Você não pode pagar, e não peça dinheiro a um Deus!~
 %s That'll cost you %d coins, please.~
 %s You'll get %d coins for that.~
 1
@@ -44,11 +44,11 @@ CircleMUD v3.0 Shop File~
 19
 -1
 %s Haven't got that on storage!~
-%s You don't seem to have that!~
-%s I don't buy those types, try another shop.~
+%s Você não parece ter isso!~
+%s Não compro esse tipo, tente outra loja.~
 %s I cannot afford such a great treasure!~
-%s You can't afford that!~
-%s That'll be %d coins, please.~
+%s Você não pode pagar isso!~
+%s Isso custará %d moedas, por favor.~
 %s You'll get %d coins for that!~
 0
 6

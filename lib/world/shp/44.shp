@@ -5,13 +5,13 @@ CircleMUD v3.0 Shop File~
 1.50
 0.60
 -1
-%s Sorry, I don't stock that item.~
-%s You don't seem to have that.~
-%s I don't trade in such items.~
-%s I can't afford that!~
-%s You are too poor!~
-%s That'll be %d coins, thanks.~
-%s I'll give you %d coins for that.~
+%s Desculpe, não tenho esse item em estoque.~
+%s Você não parece ter isso.~
+%s Não comercializo esse tipo de item.~
+%s Não posso pagar tanto por isso!~
+%s Você não tem dinheiro suficiente!~
+%s Isso custará %d moedas, obrigado.~
+%s Te dou %d moedas por isso.~
 0
 2
 4413

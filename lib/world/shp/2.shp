@@ -7,10 +7,13 @@ CircleMUD v3.0 Shop File~
 50.00			; Profit when selling 
 1.25			; Profit when buying
 205 206 207 208 215	; Types of items traded
-O vendedor de itens mágicos não está interessado nisso.~	; Message when can't trade item (no type match)
-O vendedor de itens mágicos não possui isso no momento.~	; Message when can't afford item
-O vendedor de itens mágicos não pode pagar isso.~		; Message when can't afford to buy from customer  
-O vendedor de itens mágicos não negocia com pessoas como você!~	; Message when won't trade with customer (alignment)
+%s O vendedor de itens mágicos não possui isso no momento.~	; Message when keeper doesn't have item
+%s O vendedor não tem isso que você procura.~			; Message when player doesn't have item
+%s O vendedor de itens mágicos não está interessado nisso.~	; Message when can't trade item (no type match)
+%s O vendedor de itens mágicos não pode pagar isso.~		; Message when can't afford to buy from customer  
+%s Você não tem dinheiro suficiente para isso!~			; Message when player can't afford item
+%s Isso custará %d moedas, obrigado.~				; Message when player buys item
+%s Te dou %d moedas por isso.~					; Message when player sells item
 233			; Shop room
 1 0			; Open/close times (always open: 0 = midnight, 1 = 1am... 23 = 11pm)
 0			; Bank account number
@@ -21,10 +24,13 @@ O vendedor de itens mágicos não negocia com pessoas como você!~	; Message whe
 75.00			; Profit when selling
 1.50			; Profit when buying
 205 215			; Types of items traded  
-O cozinheiro não está interessado nisso.~			; Message when can't trade item
-O cozinheiro não possui isso no momento.~			; Message when can't afford item
-O cozinheiro não pode pagar isso.~				; Message when can't afford to buy
-O cozinheiro não negocia com estranhos!~			; Message when won't trade with customer
+%s O cozinheiro não possui isso no momento.~			; Message when keeper doesn't have item
+%s O cozinheiro não tem isso que você procura.~			; Message when player doesn't have item
+%s O cozinheiro não está interessado nisso.~			; Message when can't trade item
+%s O cozinheiro não pode pagar isso.~				; Message when can't afford to buy
+%s Você não tem dinheiro suficiente para isso!~			; Message when player can't afford item
+%s Isso custará %d moedas.~					; Message when player buys item
+%s Te dou %d moedas por isso.~					; Message when player sells item
 242			; Shop room (dormitório)
 0 23			; Open/close times (always open)
 0			; Bank account number
