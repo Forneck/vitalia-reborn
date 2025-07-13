@@ -957,6 +957,16 @@ bool handle_duty_routine(struct char_data *ch)
         return FALSE; /* Permite que o mob execute outras IAs (loot, roam, etc.). */
     }
 
+    /******************************************************************
+    * SENTINELS COM GOALS DE QUEST TÊM PRIORIDADE TEMPORÁRIA
+    ******************************************************************/
+    /* Allow sentinels to temporarily abandon their post for quest activities */
+    if (is_sentinel && ch->ai_data && 
+        (ch->ai_data->current_goal == GOAL_POST_QUEST || 
+         ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER)) {
+        return FALSE; /* Let quest-related AI take priority over guard duty */
+    }
+
     bool is_on_duty = FALSE;
     room_rnum home_room = NOWHERE;
 

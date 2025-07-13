@@ -91,6 +91,36 @@ qst_vnum find_quest_by_qmnum(struct char_data *ch, mob_vnum qm, int num)
   return NOTHING;
 }
 
+/* Find quest by list position number in available quest list for a questmaster */
+qst_vnum find_available_quest_by_qmnum(struct char_data *ch, mob_vnum qm, int num)
+{
+  qst_rnum rnum;
+  int counter = 0;
+  int quest_completed, quest_repeatable;
+  
+  for (rnum = 0; rnum < total_quests; rnum++) {
+    if (qm == QST_MASTER(rnum)) {
+      quest_completed = is_complete(ch, QST_NUM(rnum));
+      quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
+      
+      /* Only count quest if it's available (not completed or repeatable) */
+      if (!quest_completed || quest_repeatable) {
+        if (++counter == num)
+          return (QST_NUM(rnum));
+      }
+    }
+  }
+  return NOTHING;
+}
+
+/* Find quest by list position number in the global quest list - for immortals */
+qst_vnum find_quest_by_listnum(int num)
+{
+  if (num < 1 || num > total_quests)
+    return NOTHING;
+  return QST_NUM(num - 1);  /* Convert from 1-based to 0-based index */
+}
+
 /*--------------------------------------------------------------------------*/
 /* Quest Loading and Unloading Functions                                    */
 /*--------------------------------------------------------------------------*/
@@ -542,7 +572,7 @@ static void quest_join(struct char_data *ch, struct char_data *qm, char argument
   else if (GET_QUEST(ch) != NOTHING)
     snprintf(buf, sizeof(buf),
              "%s Mas vicê já tem uma busca ativa, %s!", GET_NAME(ch), GET_NAME(ch));
-  else if((vnum = find_quest_by_qmnum(ch, GET_MOB_VNUM(qm), atoi(argument))) == NOTHING)
+  else if((vnum = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(qm), atoi(argument))) == NOTHING)
     snprintf(buf, sizeof(buf),
              "%s Eu não conheço nenhuma busca assim, %s!", GET_NAME(ch), GET_NAME(ch));
   else if ((rnum = real_quest(vnum)) == NOTHING)
@@ -591,7 +621,7 @@ void quest_list(struct char_data *ch, struct char_data *qm, char argument[MAX_IN
   qst_vnum vnum;
   qst_rnum rnum;
 
-  if ((vnum = find_quest_by_qmnum(ch, GET_MOB_VNUM(qm), atoi(argument))) == NOTHING)
+  if ((vnum = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(qm), atoi(argument))) == NOTHING)
     send_to_char(ch, "Esta não é uma busca válida!\r\n");
   else if ((rnum = real_quest(vnum)) == NOTHING)
     send_to_char(ch, "Esta não é uma busca válida!\r\n");
@@ -665,117 +695,146 @@ static void quest_show(struct char_data *ch, mob_vnum qm)
 {
   qst_rnum rnum;
   int counter = 0;
+  int quest_completed, quest_repeatable;
 
   send_to_char(ch,
   "A lista de buscas: disponiveis é:\r\n"
   "Num.  Descrção                                             Feita?\r\n"
   "----- ---------------------------------------------------- ------\r\n");
-  for (rnum = 0; rnum < total_quests; rnum++)        
-    if (qm == QST_MASTER(rnum))
-      send_to_char(ch, "\tg%4d\tn) \tc%-52.52s\tn \ty(%s)\tn\r\n",
-        ++counter, QST_DESC(rnum),
-        (is_complete(ch, QST_NUM(rnum)) ? "Sim" : "Não "));
+  for (rnum = 0; rnum < total_quests; rnum++) {        
+    if (qm == QST_MASTER(rnum)) {
+      quest_completed = is_complete(ch, QST_NUM(rnum));
+      quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
+      
+      /* Only show quest if:
+       * 1. It's not completed, OR
+       * 2. It's completed but repeatable
+       */
+      if (!quest_completed || quest_repeatable) {
+        send_to_char(ch, "\tg%4d\tn) \tc%-52.52s\tn \ty(%s)\tn\r\n",
+          ++counter, QST_DESC(rnum),
+          (quest_completed ? "Sim" : "Não "));
+      }
+    }
+  }
   if (!counter)
     send_to_char(ch, "Não temos buscas disponiveis no momento, %s!\r\n",GET_NAME(ch));
 }
 
 /*Para imortais */
-static void quest_stat(struct char_data *ch, char argument[MAX_STRING_LENGTH])
+static void quest_stat(struct char_data *ch, char *argument)
 {
   qst_rnum rnum;
   mob_rnum qmrnum;
   char buf[MAX_STRING_LENGTH];
   char targetname[MAX_STRING_LENGTH];
+  qst_vnum quest_vnum;
+  int quest_num;
 
-  if (!*argument)
+  if (!*argument) {
     send_to_char(ch, "%s\r\n", quest_imm_usage);
-  else if ((rnum = real_quest(atoi(argument))) == NOTHING )
-    send_to_char(ch, "That quest does not exist.\r\n");
-  else {
-    sprintbit(QST_FLAGS(rnum), aq_flags, buf, sizeof(buf));
-    switch (QST_TYPE(rnum)) {
-      case AQ_OBJ_FIND:
-      case AQ_OBJ_RETURN:
-        snprintf(targetname, sizeof(targetname), "%s",
-                 real_object(QST_TARGET(rnum)) == NOTHING ?
-                 "An unknown object" :
-    obj_proto[real_object(QST_TARGET(rnum))].short_description);
- break;
-      case AQ_ROOM_FIND:
-      case AQ_ROOM_CLEAR:
-        snprintf(targetname, sizeof(targetname), "%s",
-          real_room(QST_TARGET(rnum)) == NOWHERE ?
-                 "An unknown room" :
-    world[real_room(QST_TARGET(rnum))].name);
-        break;
-      case AQ_MOB_FIND:
-      case AQ_MOB_KILL:
-      case AQ_MOB_SAVE:
- snprintf(targetname, sizeof(targetname), "%s",
-                 real_mobile(QST_TARGET(rnum)) == NOBODY ?
-    "An unknown mobile" :
-    GET_NAME(&mob_proto[real_mobile(QST_TARGET(rnum))]));
- break;
-      default:
- snprintf(targetname, sizeof(targetname), "Unknown");
- break;
-    }
-    qmrnum = real_mobile(QST_MASTER(rnum));
-    send_to_char(ch,
-        "VNum  : [\ty%5d\tn], RNum: [\ty%5d\tn] -- Questmaster: [\ty%5d\tn] \ty%s\tn\r\n"
-        "Name  : \ty%s\tn\r\n"
- "Desc  : \ty%s\tn\r\n"
- "Accept Message:\r\n\tc%s\tn"
- "Completion Message:\r\n\tc%s\tn"
- "Quit Message:\r\n\tc%s\tn"
- "Type  : \ty%s\tn\r\n"
-        "Target: \ty%d\tn \ty%s\tn, Quantity: \ty%d\tn\r\n"
- "Value : \ty%d\tn, Penalty: \ty%d\tn, Min Level: \ty%2d\tn, Max Level: \ty%2d\tn\r\n"
- "Flags : \tc%s\tn\r\n",
-     QST_NUM(rnum), rnum,
- QST_MASTER(rnum) == NOBODY ? -1 : QST_MASTER(rnum),
- (qmrnum == NOBODY) ? "(Invalid vnum)" : GET_NAME(&mob_proto[(qmrnum)]),
-        QST_NAME(rnum), QST_DESC(rnum),
-        QST_INFO(rnum), QST_DONE(rnum),
- (QST_QUIT(rnum) &&
-  (str_cmp(QST_QUIT(rnum), "undefined") != 0)
-          ? QST_QUIT(rnum) : "Nothing\r\n"),
-     quest_types[QST_TYPE(rnum)],
- QST_TARGET(rnum) == NOBODY ? -1 : QST_TARGET(rnum),
- targetname,
- QST_QUANTITY(rnum),
-     QST_POINTS(rnum), QST_PENALTY(rnum), QST_MINLEVEL(rnum),
- QST_MAXLEVEL(rnum), buf);
-    if (QST_PREREQ(rnum) != NOTHING)
-      send_to_char(ch, "Preq  : [\ty%5d\tn] \ty%s\tn\r\n",
-        QST_PREREQ(rnum) == NOTHING ? -1 : QST_PREREQ(rnum),
-        QST_PREREQ(rnum) == NOTHING ? "" :
-   real_object(QST_PREREQ(rnum)) == NOTHING ? "an unknown object" :
-       obj_proto[real_object(QST_PREREQ(rnum))].short_description);
-    if (QST_TYPE(rnum) == AQ_OBJ_RETURN)
-      send_to_char(ch, "Mob   : [\ty%5d\tn] \ty%s\tn\r\n",
-        QST_RETURNMOB(rnum),
- real_mobile(QST_RETURNMOB(rnum)) == NOBODY ? "an unknown mob" :
-           mob_proto[real_mobile(QST_RETURNMOB(rnum))].player.short_descr);
-    if (QST_TIME(rnum) != -1)
-      send_to_char(ch, "Limit : There is a time limit of %d turn%s to complete.\r\n",
-   QST_TIME(rnum),
-   QST_TIME(rnum) == 1 ? "" : "s");
-    else
-      send_to_char(ch, "Limit : There is no time limit on this quest.\r\n");
-    send_to_char(ch, "Prior :");
-    if (QST_PREV(rnum) == NOTHING)
-      send_to_char(ch, " \tyNone.\tn\r\n");
-    else
-      send_to_char(ch, " [\ty%5d\tn] \tc%s\tn\r\n",
-        QST_PREV(rnum), QST_DESC(real_quest(QST_PREV(rnum))));
-    send_to_char(ch, "Next  :");
-    if (QST_NEXT(rnum) == NOTHING)
-      send_to_char(ch, " \tyNone.\tn\r\n");
-    else
-      send_to_char(ch, " [\ty%5d\tn] \tc%s\tn\r\n",
-        QST_NEXT(rnum), QST_DESC(real_quest(QST_NEXT(rnum))));
+    return;
   }
+  
+  quest_num = atoi(argument);
+  
+  /* First try to find by vnum (direct vnum lookup) */
+  if ((rnum = real_quest(quest_num)) != NOTHING) {
+    quest_vnum = quest_num;
+  }
+  /* If not found by vnum, try to find by list position */
+  else if ((quest_vnum = find_quest_by_listnum(quest_num)) != NOTHING && 
+           (rnum = real_quest(quest_vnum)) != NOTHING) {
+    /* Found by list position */
+  }
+  else {
+    send_to_char(ch, "That quest does not exist.\r\n");
+    return;
+  }
+
+  sprintbit(QST_FLAGS(rnum), aq_flags, buf, sizeof(buf));
+  switch (QST_TYPE(rnum)) {
+    case AQ_OBJ_FIND:
+    case AQ_OBJ_RETURN:
+      snprintf(targetname, sizeof(targetname), "%s",
+               real_object(QST_TARGET(rnum)) == NOTHING ?
+               "An unknown object" :
+  obj_proto[real_object(QST_TARGET(rnum))].short_description);
+break;
+    case AQ_ROOM_FIND:
+    case AQ_ROOM_CLEAR:
+      snprintf(targetname, sizeof(targetname), "%s",
+        real_room(QST_TARGET(rnum)) == NOWHERE ?
+               "An unknown room" :
+  world[real_room(QST_TARGET(rnum))].name);
+      break;
+    case AQ_MOB_FIND:
+    case AQ_MOB_KILL:
+    case AQ_MOB_SAVE:
+snprintf(targetname, sizeof(targetname), "%s",
+               real_mobile(QST_TARGET(rnum)) == NOBODY ?
+  "An unknown mobile" :
+  GET_NAME(&mob_proto[real_mobile(QST_TARGET(rnum))]));
+break;
+    default:
+snprintf(targetname, sizeof(targetname), "Unknown");
+break;
+  }
+  qmrnum = real_mobile(QST_MASTER(rnum));
+  send_to_char(ch,
+      "VNum  : [\ty%5d\tn], RNum: [\ty%5d\tn] -- Questmaster: [\ty%5d\tn] \ty%s\tn\r\n"
+      "Name  : \ty%s\tn\r\n"
+"Desc  : \ty%s\tn\r\n"
+"Accept Message:\r\n\tc%s\tn"
+"Completion Message:\r\n\tc%s\tn"
+"Quit Message:\r\n\tc%s\tn"
+"Type  : \ty%s\tn\r\n"
+      "Target: \ty%d\tn \ty%s\tn, Quantity: \ty%d\tn\r\n"
+"Value : \ty%d\tn, Penalty: \ty%d\tn, Min Level: \ty%2d\tn, Max Level: \ty%2d\tn\r\n"
+"Flags : \tc%s\tn\r\n",
+   QST_NUM(rnum), rnum,
+QST_MASTER(rnum) == NOBODY ? -1 : QST_MASTER(rnum),
+(qmrnum == NOBODY) ? "(Invalid vnum)" : GET_NAME(&mob_proto[(qmrnum)]),
+      QST_NAME(rnum), QST_DESC(rnum),
+      QST_INFO(rnum), QST_DONE(rnum),
+(QST_QUIT(rnum) &&
+(str_cmp(QST_QUIT(rnum), "undefined") != 0)
+        ? QST_QUIT(rnum) : "Nothing\r\n"),
+   quest_types[QST_TYPE(rnum)],
+QST_TARGET(rnum) == NOBODY ? -1 : QST_TARGET(rnum),
+targetname,
+QST_QUANTITY(rnum),
+   QST_POINTS(rnum), QST_PENALTY(rnum), QST_MINLEVEL(rnum),
+QST_MAXLEVEL(rnum), buf);
+  if (QST_PREREQ(rnum) != NOTHING)
+    send_to_char(ch, "Preq  : [\ty%5d\tn] \ty%s\tn\r\n",
+      QST_PREREQ(rnum) == NOTHING ? -1 : QST_PREREQ(rnum),
+      QST_PREREQ(rnum) == NOTHING ? "" :
+ real_object(QST_PREREQ(rnum)) == NOTHING ? "an unknown object" :
+     obj_proto[real_object(QST_PREREQ(rnum))].short_description);
+  if (QST_TYPE(rnum) == AQ_OBJ_RETURN)
+    send_to_char(ch, "Mob   : [\ty%5d\tn] \ty%s\tn\r\n",
+      QST_RETURNMOB(rnum),
+real_mobile(QST_RETURNMOB(rnum)) == NOBODY ? "an unknown mob" :
+         mob_proto[real_mobile(QST_RETURNMOB(rnum))].player.short_descr);
+  if (QST_TIME(rnum) != -1)
+    send_to_char(ch, "Limit : There is a time limit of %d turn%s to complete.\r\n",
+ QST_TIME(rnum),
+ QST_TIME(rnum) == 1 ? "" : "s");
+  else
+    send_to_char(ch, "Limit : There is no time limit on this quest.\r\n");
+  send_to_char(ch, "Prior :");
+  if (QST_PREV(rnum) == NOTHING)
+    send_to_char(ch, " \tyNone.\tn\r\n");
+  else
+    send_to_char(ch, " [\ty%5d\tn] \tc%s\tn\r\n",
+      QST_PREV(rnum), QST_DESC(real_quest(QST_PREV(rnum))));
+  send_to_char(ch, "Next  :");
+  if (QST_NEXT(rnum) == NOTHING)
+    send_to_char(ch, " \tyNone.\tn\r\n");
+  else
+    send_to_char(ch, " [\ty%5d\tn] \tc%s\tn\r\n",
+      QST_NEXT(rnum), QST_DESC(real_quest(QST_NEXT(rnum))));
 }
 
 /*--------------------------------------------------------------------------*/
