@@ -83,7 +83,15 @@ int add_quest(struct aq_data *nqst)
 {
   qst_rnum rnum;
   mob_rnum qmrnum;
-  zone_rnum rznum = real_zone_by_thing(nqst->vnum);
+  zone_rnum rznum;
+
+  /* Try to determine zone based on questmaster mob */
+  if (nqst->qm != NOBODY) {
+    rznum = real_zone_by_thing(nqst->qm);
+  } else {
+    /* If no questmaster, try by quest vnum */
+    rznum = real_zone_by_thing(nqst->vnum);
+  }
 
   /* The quest already exists, just update it.  */
   if ((rnum = real_quest(nqst->vnum)) != NOWHERE) {
@@ -136,7 +144,13 @@ int delete_quest(qst_rnum rnum)
 
   if (rnum >= total_quests)
     return FALSE;
-  rznum = real_zone_by_thing(QST_NUM(rnum)); 
+  /* Try to determine zone based on questmaster mob first */
+  if (QST_MASTER(rnum) != NOBODY) {
+    rznum = real_zone_by_thing(QST_MASTER(rnum));
+  } else {
+    /* If no questmaster, try by quest vnum */
+    rznum = real_zone_by_thing(QST_NUM(rnum));
+  } 
   log1("GenOLC: delete_quest: Deleting quest #%d (%s).",
        QST_NUM(rnum), QST_NAME(rnum));
   /* make a note of the quest master's secondary spec proc */
