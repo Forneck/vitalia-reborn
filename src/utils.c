@@ -2230,6 +2230,16 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
         return;
     }
     
+    /* Check if there's already an active quest for this item from this mob */
+    for (int i = 0; i < total_quests; i++) {
+        if (QST_RETURNMOB(i) == GET_MOB_VNUM(ch) && 
+            QST_TARGET(i) == item_vnum && 
+            QST_TYPE(i) == AQ_OBJ_RETURN) {
+            /* Already have an active quest for this item from this mob */
+            return;
+        }
+    }
+    
     /* Obtém informações sobre o item */
     obj_rnum = real_object(item_vnum);
     if (obj_rnum != NOTHING) {
