@@ -86,6 +86,7 @@ static void cedit_setup(struct descriptor_data *d)
 	OLC_CONFIG(d)->play.pk_allowed = CONFIG_PK_ALLOWED;
 	OLC_CONFIG(d)->play.pt_allowed = CONFIG_PT_ALLOWED;
 	OLC_CONFIG(d)->play.fit_evolve = CONFIG_FIT_EVOLVE;
+	OLC_CONFIG(d)->play.weather_affects_spells = CONFIG_WEATHER_AFFECTS_SPELLS;
 	OLC_CONFIG(d)->play.level_can_shout = CONFIG_LEVEL_CAN_SHOUT;
 	OLC_CONFIG(d)->play.holler_move_cost = CONFIG_HOLLER_MOVE_COST;
 	OLC_CONFIG(d)->play.tunnel_size = CONFIG_TUNNEL_SIZE;
@@ -199,6 +200,7 @@ static void cedit_save_internally(struct descriptor_data *d)
 	CONFIG_PK_ALLOWED = OLC_CONFIG(d)->play.pk_allowed;
 	CONFIG_PT_ALLOWED = OLC_CONFIG(d)->play.pt_allowed;
 	CONFIG_FIT_EVOLVE = OLC_CONFIG(d)->play.fit_evolve;
+	CONFIG_WEATHER_AFFECTS_SPELLS = OLC_CONFIG(d)->play.weather_affects_spells;
 	CONFIG_LEVEL_CAN_SHOUT = OLC_CONFIG(d)->play.level_can_shout;
 	CONFIG_HOLLER_MOVE_COST = OLC_CONFIG(d)->play.holler_move_cost;
 	CONFIG_TUNNEL_SIZE = OLC_CONFIG(d)->play.tunnel_size;
@@ -659,6 +661,7 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
 					"%s6%s) Default map size        : %s%d\r\n"
 					"%s7%s) Default minimap size    : %s%d\r\n"
 					"%s8%s) Scripts on PC's         : %s%s\r\n"
+					"%s0%s) Weather Affects Spells  : %s%s\r\n"
 					"%sQ%s) Exit To The Main Menu\r\n"
 					"Enter your choice : ",
 					grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.pk_allowed),
@@ -688,7 +691,8 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
 										  1 ? "On" : (m_opt == 2 ? "Imm-Only" : "Invalid!")), grn,
 					nrm, cyn, OLC_CONFIG(d)->play.map_size, grn, nrm, cyn,
 					OLC_CONFIG(d)->play.minimap_size, grn, nrm, cyn,
-					CHECK_VAR(OLC_CONFIG(d)->play.script_players), grn, nrm),
+					CHECK_VAR(OLC_CONFIG(d)->play.script_players), grn, nrm, cyn,
+					CHECK_VAR(OLC_CONFIG(d)->play.weather_affects_spells), grn, nrm),
 
 	OLC_MODE(d) = CEDIT_GAME_OPTIONS_MENU;
 }
@@ -1063,7 +1067,11 @@ void cedit_parse(struct descriptor_data *d, char *arg)
 			break;
   
       case '9':
-TOGGLE_VAR(OLC_CONFIG(d)->play.fit_evolve);
+			TOGGLE_VAR(OLC_CONFIG(d)->play.fit_evolve);
+			break;
+
+		case '0':
+			TOGGLE_VAR(OLC_CONFIG(d)->play.weather_affects_spells);
 			break;
 
 		case 'q':

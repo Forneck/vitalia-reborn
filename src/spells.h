@@ -348,6 +348,11 @@ ASPELL(spell_portal);		/* -- jr - 24/09/99 */
 ASPELL(spell_fury_air);		/* -- mp */
 ASPELL(spell_skinrock);		/* -- mp */
 ASPELL(spell_skinsteel);	/* -- mp */
+
+/* Weather and spell element interaction functions */
+float get_weather_spell_modifier(struct char_data *ch, int spell_element);
+const char *get_spell_school_name(int school);
+const char *get_spell_element_name(int element);
 ASPELL(spell_skindiamond);	/* -- mp */
 ASPELL(spell_create_nectar);	/* -- mp */
 ASPELL(spell_soundbarrier);	/* -- ac */

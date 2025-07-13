@@ -81,6 +81,7 @@ extern int protocol_negotiation;
 extern int special_in_comm;
 extern int debug_mode;
 extern int fit_evolve;
+extern int weather_affects_spells;
 /* Automap and map options */
 extern int map_option;
 extern int default_map_size;

@@ -1564,6 +1564,7 @@ struct game_data
   int minimap_size;       /**< Default size for mini-map (automap)  */
   int script_players;     /**< Is attaching scripts to players allowed? */
   int fit_evolve;
+  int weather_affects_spells; /**< Does weather affect spell effectiveness? */
 
   char *OK;       /**< When player receives 'Okay.' text.    */
   char *HUH;      /**< 'Huh!?!'                              */ 

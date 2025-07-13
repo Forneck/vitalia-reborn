@@ -22,6 +22,10 @@
 #include "act.h"
 #include "fight.h"
 #include "spirits.h"
+#include "spedit.h"
+
+/* External declarations */
+extern struct weather_data climates[];
 
 /* Special spells appear below. */
 ASPELL(spell_create_water)
@@ -1204,4 +1208,112 @@ ASPELL(spell_ventriloquate)
   }
   
   send_to_char(ch, "Você faz %s dizer: '%s'\r\n", GET_NAME(victim), msg);
+}
+
+/*
+ * Weather and spell element interaction system
+ */
+
+/* Get weather modifier for spell effectiveness based on element */
+float get_weather_spell_modifier(struct char_data *ch, int spell_element) {
+  struct weather_data *weather;
+  float modifier = 1.0; /* Default no change */
+  int zone_num;
+  
+  /* Check if weather affects spells is enabled */
+  if (!CONFIG_WEATHER_AFFECTS_SPELLS) {
+    return modifier;
+  }
+  
+  /* Get the character's zone weather data */
+  zone_num = world[IN_ROOM(ch)].zone;
+  if (zone_num < 0 || zone_num > top_of_zone_table) {
+    return modifier;
+  }
+  
+  weather = &climates[zone_num];
+  
+  switch (spell_element) {
+    case ELEMENT_FIRE:
+      /* Fire spells: more effective in low humidity, less effective in high humidity */
+      if (weather->humidity < 30.0) {
+        modifier = 1.25; /* 25% more effective */
+      } else if (weather->humidity > 70.0) {
+        modifier = 0.75; /* 25% less effective */
+      }
+      break;
+      
+    case ELEMENT_WATER:
+    case ELEMENT_ICE:
+      /* Water/Ice spells: more effective in high humidity, less effective in low humidity */
+      if (weather->humidity > 70.0) {
+        modifier = 1.25; /* 25% more effective */
+      } else if (weather->humidity < 30.0) {
+        modifier = 0.75; /* 25% less effective */
+      }
+      break;
+      
+    case ELEMENT_LIGHTNING:
+      /* Lightning spells: more effective in high humidity and stormy weather */
+      if (weather->humidity > 80.0 && weather->sky >= SKY_RAINING) {
+        modifier = 1.3; /* 30% more effective */
+      } else if (weather->humidity < 20.0) {
+        modifier = 0.8; /* 20% less effective */
+      }
+      break;
+      
+    case ELEMENT_AIR:
+      /* Air spells: more effective in windy conditions */
+      if (weather->winds > 15.0) {
+        modifier = 1.2; /* 20% more effective */
+      }
+      break;
+      
+    case ELEMENT_EARTH:
+      /* Earth spells: slightly less effective in very wet conditions */
+      if (weather->humidity > 90.0 && weather->sky >= SKY_RAINING) {
+        modifier = 0.9; /* 10% less effective */
+      }
+      break;
+      
+    default:
+      /* Other elements not affected by weather */
+      break;
+  }
+  
+  return modifier;
+}
+
+/* Get spell school name */
+const char *get_spell_school_name(int school) {
+  switch (school) {
+    case SCHOOL_ABJURATION:   return "Abjuração";
+    case SCHOOL_ALTERATION:   return "Alteração";
+    case SCHOOL_CONJURATION:  return "Conjuração";
+    case SCHOOL_DIVINATION:   return "Adivinhação";
+    case SCHOOL_ENCHANTMENT:  return "Encantamento";
+    case SCHOOL_EVOCATION:    return "Evocação";
+    case SCHOOL_ILLUSION:     return "Ilusão";
+    case SCHOOL_NECROMANCY:   return "Necromancia";
+    default:                  return "Indefinida";
+  }
+}
+
+/* Get spell element name */
+const char *get_spell_element_name(int element) {
+  switch (element) {
+    case ELEMENT_FIRE:        return "Fogo";
+    case ELEMENT_WATER:       return "Água";
+    case ELEMENT_AIR:         return "Ar";
+    case ELEMENT_EARTH:       return "Terra";
+    case ELEMENT_LIGHTNING:   return "Raio";
+    case ELEMENT_ICE:         return "Gelo";
+    case ELEMENT_ACID:        return "Ácido";
+    case ELEMENT_POISON:      return "Veneno";
+    case ELEMENT_HOLY:        return "Sagrado";
+    case ELEMENT_UNHOLY:      return "Profano";
+    case ELEMENT_MENTAL:      return "Mental";
+    case ELEMENT_PHYSICAL:    return "Físico";
+    default:                  return "Indefinido";
+  }
 }

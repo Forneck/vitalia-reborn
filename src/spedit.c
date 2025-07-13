@@ -822,6 +822,9 @@ void spedit_init_new_spell (struct str_spells *spell)
    spell->assign[i].prac_gain   = NULL;
    spell->assign[i].num_mana   = NULL;
  }
+ 
+ spell->school                 = SCHOOL_UNDEFINED;
+ spell->element                = ELEMENT_UNDEFINED;
  spell->function               = NULL;
 }
 
