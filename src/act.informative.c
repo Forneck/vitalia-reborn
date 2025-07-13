@@ -303,6 +303,11 @@ static void look_at_char(struct char_data *i, struct char_data *ch)
 
 	diag_char_to_char(i, ch);
 
+	/* Check if this is a questmaster */
+	if (IS_NPC(i) && mob_index[GET_MOB_RNUM(i)].func == questmaster) {
+		send_to_char(ch, "\r\n\tyEste personagem é um \tCQuestmaster\ty - você pode usar '\tcquest list\ty' aqui.\tn\r\n");
+	}
+
 	found = FALSE;
 	for (j = 0; !found && j < NUM_WEARS; j++)
 		if (GET_EQ(i, j) && CAN_SEE_OBJ(ch, GET_EQ(i, j)))
