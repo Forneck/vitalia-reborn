@@ -4246,6 +4246,11 @@ void init_char(struct char_data *ch)
 	if (ch->player_specials == NULL)
 		CREATE(ch->player_specials, struct player_special_data, 1);
 
+	/* Initialize class history array */
+	for (int i = 0; i < 100; i++) {
+		ch->player_specials->saved.class_history[i] = -1;
+	}
+
 	/* If this is our first player make him IMPL. */
 	if (top_of_p_table == 0)
 	{

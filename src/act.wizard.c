@@ -6710,8 +6710,29 @@ ACMD(do_rstats)
         send_to_char(ch, "@WCurrent Class:@n %s\r\n", pc_class_types[GET_CLASS(target_player)]);
         send_to_char(ch, "@WRemort Count:@n %d\r\n", GET_REMORT(target_player));
         
+        /* Show class progression history */
+        send_to_char(ch, "\r\n@WClass Progression History:@n\r\n");
+        int has_history = 0;
+        for (i = 0; i < GET_REMORT(target_player) && i < 100; i++) {
+            int class_num = target_player->player_specials->saved.class_history[i];
+            if (class_num >= 0 && class_num < NUM_CLASSES) {
+                if (!has_history) {
+                    send_to_char(ch, "  ");
+                    has_history = 1;
+                } else {
+                    send_to_char(ch, " -> ");
+                }
+                send_to_char(ch, "%s", pc_class_types[class_num]);
+            }
+        }
+        if (has_history) {
+            send_to_char(ch, " -> %s (current)\r\n", pc_class_types[GET_CLASS(target_player)]);
+        } else {
+            send_to_char(ch, "  No progression history recorded.\r\n");
+        }
+        
         /* Show class history */
-        send_to_char(ch, "\r\n@WClass History:@n\r\n");
+        send_to_char(ch, "\r\n@WClasses Ever Experienced:@n\r\n");
         int class_history_count = 0;
         for (i = 0; i < NUM_CLASSES; i++) {
             if (WAS_FLAGGED(target_player, i)) {

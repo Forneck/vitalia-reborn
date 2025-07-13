@@ -2021,12 +2021,18 @@ void nanny(struct descriptor_data *d, char *arg)
 			return;
 		}
 		/* Check if class was already used */
-		if (d->character->player_specials->saved.was_class[load_result]) {
+		if (WAS_FLAGGED(d->character, load_result)) {
 			write_to_output(d, "Você já viveu como essa classe. Escolha outra.\r\nClasse: ");
 			return;
 		}
-		/* Mark current class as used and set new class */
-		d->character->player_specials->saved.was_class[GET_CLASS(d->character)] = 1;
+		/* Mark current class as used and add to class history */
+		SET_BIT_AR(d->character->player_specials->saved.was_class, GET_CLASS(d->character));
+		
+		/* Record in class history for statistics */
+		int num_incarnations = d->character->player_specials->saved.num_incarnations;
+		if (num_incarnations < 100) { /* Prevent overflow */
+			d->character->player_specials->saved.class_history[num_incarnations] = GET_CLASS(d->character);
+		}
 		GET_CLASS(d->character) = load_result;
 		write_to_output(d, "\r\nRolando novos atributos...\r\n");
 		STATE(d) = CON_RB_REROLL;
