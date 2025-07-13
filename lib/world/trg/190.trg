@@ -98,4 +98,18 @@ if !%self.canbeseen(%actor%)
 end
 greet %actor.name%
 ~
+#19004
+Elven Mayor Behavior~
+0 g 5
+~
+* Old SpecProc: elven_mayor - Elven mayor behavior
+set actor %random.char%
+if %actor.is_pc%
+  if %actor.race% == Elfo
+    say Bem-vindo, irmão élfico.
+  else
+    say Seja bem-vindo às terras élficas, forasteiro.
+  end
+end
+~
 $~
