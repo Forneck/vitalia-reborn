@@ -208,18 +208,41 @@ static void aff_apply_modify(struct char_data *ch, byte loc, sbyte mod, char *ms
 
 static void affect_modify_ar(struct char_data * ch, byte loc, sbyte mod, int bitv[], bool add)
 {
-  int i , j;
+  int i, j, bit_index;
+
+  /* Safety checks */
+  if (!ch || !bitv) {
+    log1("SYSERR: affect_modify_ar called with NULL pointer (ch=%p, bitv=%p)", 
+         (void *)ch, (void *)bitv);
+    return;
+  }
 
   if (add) {
-    for(i = 0; i < AF_ARRAY_MAX; i++)
-      for(j = 0; j < 32; j++)
-        if(IS_SET_AR(bitv, (i*32)+j))
-          SET_BIT_AR(AFF_FLAGS(ch), (i*32)+j);
+    for(i = 0; i < AF_ARRAY_MAX; i++) {
+      for(j = 0; j < 32; j++) {
+        bit_index = (i*32)+j;
+        /* Bounds check for safety */
+        if (bit_index >= AF_ARRAY_MAX * 32) {
+          log1("SYSERR: affect_modify_ar bit index out of bounds: %d", bit_index);
+          continue;
+        }
+        if(IS_SET_AR(bitv, bit_index))
+          SET_BIT_AR(AFF_FLAGS(ch), bit_index);
+      }
+    }
   } else {
-    for(i = 0; i < AF_ARRAY_MAX; i++)
-      for(j = 0; j < 32; j++)
-        if(IS_SET_AR(bitv, (i*32)+j))
-          REMOVE_BIT_AR(AFF_FLAGS(ch), (i*32)+j);
+    for(i = 0; i < AF_ARRAY_MAX; i++) {
+      for(j = 0; j < 32; j++) {
+        bit_index = (i*32)+j;
+        /* Bounds check for safety */
+        if (bit_index >= AF_ARRAY_MAX * 32) {
+          log1("SYSERR: affect_modify_ar bit index out of bounds: %d", bit_index);
+          continue;
+        }
+        if(IS_SET_AR(bitv, bit_index))
+          REMOVE_BIT_AR(AFF_FLAGS(ch), bit_index);
+      }
+    }
     mod = -mod;
   }
 
