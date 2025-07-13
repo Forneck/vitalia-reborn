@@ -2490,10 +2490,9 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
  */
 mob_vnum find_questmaster_for_zone_enhanced(zone_rnum zone, struct char_data *requesting_mob)
 {
-    qst_rnum rnum;
+    mob_rnum mob_rnum;
     mob_vnum best_qm = NOBODY;
     zone_rnum qm_zone;
-    mob_rnum qm_mob_rnum;
     int best_score = -1;
     int requesting_alignment = 0; /* Default neutral */
     
@@ -2507,58 +2506,73 @@ mob_vnum find_questmaster_for_zone_enhanced(zone_rnum zone, struct char_data *re
     }
     
     /* Enhancement 5: Search for questmasters with preference scoring */
-    for (rnum = 0; rnum < total_quests; rnum++) {
-        if (QST_MASTER(rnum) != NOBODY) {
-            qm_mob_rnum = real_mobile(QST_MASTER(rnum));
-            if (qm_mob_rnum != NOBODY) {
-                if (mob_proto[qm_mob_rnum].in_room != NOWHERE) {
-                    qm_zone = world[mob_proto[qm_mob_rnum].in_room].zone;
-                    
-                    /* Calculate preference score for this questmaster */
-                    int score = 0;
-                    
-                    /* Prefer questmasters in the same zone (highest priority) */
-                    if (qm_zone == zone) {
-                        score += 100;
-                    } else {
-                        /* Enhancement 5: Proximity bonus - closer zones are preferred */
-                        int zone_distance = abs((int)qm_zone - (int)zone);
-                        score += MAX(0, 50 - zone_distance * 5); /* Max 50 points for proximity */
-                    }
-                    
-                    /* Enhancement 5: Alignment preference - similar alignments are preferred */
-                    if (requesting_mob) {
-                        int qm_alignment = GET_ALIGNMENT(&mob_proto[qm_mob_rnum]);
-                        int alignment_diff = abs(requesting_alignment - qm_alignment);
-                        
-                        /* Perfect alignment match gets bonus */
-                        if (alignment_diff < 100) {
-                            score += 20;
-                        } else if (alignment_diff < 300) {
-                            score += 10;
-                        }
-                        /* Opposite alignments get penalty */
-                        else if (alignment_diff > 700) {
-                            score -= 10;
-                        }
-                    }
-                    
-                    /* Enhancement 5: Prefer questmasters in allied/friendly zones */
-                    /* Check if zones have similar characteristics */
-                    if (qm_zone != zone && qm_zone < top_of_zone_table && zone < top_of_zone_table) {
-                        /* Zones with similar level ranges are considered "allied" */
-                        int zone_level_diff = abs((int)zone_table[qm_zone].bot - (int)zone_table[zone].bot);
-                        if (zone_level_diff < 50) {
-                            score += 15; /* Allied zone bonus */
-                        }
-                    }
-                    
-                    /* Update best questmaster if this one scores higher */
-                    if (score > best_score) {
-                        best_score = score;
-                        best_qm = QST_MASTER(rnum);
+    for (mob_rnum = 0; mob_rnum <= top_of_mobt; mob_rnum++) {
+        if (mob_index[mob_rnum].func == questmaster) {
+            /* Try to get zone information from mob */
+            qm_zone = NOWHERE;
+            
+            /* First check if mob has initial room assigned */
+            if (mob_proto[mob_rnum].in_room != NOWHERE) {
+                qm_zone = world[mob_proto[mob_rnum].in_room].zone;
+            } else {
+                /* Look for instance in world */
+                struct char_data *qm_char;
+                for (qm_char = character_list; qm_char; qm_char = qm_char->next) {
+                    if (IS_NPC(qm_char) && GET_MOB_RNUM(qm_char) == mob_rnum) {
+                        qm_zone = world[IN_ROOM(qm_char)].zone;
+                        break;
                     }
                 }
+            }
+            
+            if (qm_zone != NOWHERE) {
+                /* Calculate preference score for this questmaster */
+                int score = 0;
+                
+                /* Prefer questmasters in the same zone (highest priority) */
+                if (qm_zone == zone) {
+                    score += 100;
+                } else {
+                    /* Enhancement 5: Proximity bonus - closer zones are preferred */
+                    int zone_distance = abs((int)qm_zone - (int)zone);
+                    score += MAX(0, 50 - zone_distance * 5); /* Max 50 points for proximity */
+                }
+                
+                /* Enhancement 5: Alignment preference - similar alignments are preferred */
+                if (requesting_mob) {
+                    int qm_alignment = GET_ALIGNMENT(&mob_proto[mob_rnum]);
+                    int alignment_diff = abs(requesting_alignment - qm_alignment);
+                    
+                    /* Perfect alignment match gets bonus */
+                    if (alignment_diff < 100) {
+                        score += 20;
+                    } else if (alignment_diff < 300) {
+                        score += 10;
+                    }
+                    /* Opposite alignments get penalty */
+                    else if (alignment_diff > 700) {
+                        score -= 10;
+                    }
+                }
+                
+                /* Enhancement 5: Prefer questmasters in allied/friendly zones */
+                /* Check if zones have similar characteristics */
+                if (qm_zone != zone && qm_zone < top_of_zone_table && zone < top_of_zone_table) {
+                    /* Zones with similar level ranges are considered "allied" */
+                    int zone_level_diff = abs((int)zone_table[qm_zone].bot - (int)zone_table[zone].bot);
+                    if (zone_level_diff < 50) {
+                        score += 15; /* Allied zone bonus */
+                    }
+                }
+                
+                /* Update best questmaster if this one scores higher */
+                if (score > best_score) {
+                    best_score = score;
+                    best_qm = mob_index[mob_rnum].vnum;
+                }
+            } else if (best_qm == NOBODY) {
+                /* If no zone info but it's a questmaster, use as fallback */
+                best_qm = mob_index[mob_rnum].vnum;
             }
         }
     }
@@ -2568,41 +2582,53 @@ mob_vnum find_questmaster_for_zone_enhanced(zone_rnum zone, struct char_data *re
 
 mob_vnum find_questmaster_for_zone(zone_rnum zone)
 {
-    qst_rnum rnum;
+    mob_rnum mob_rnum;
     mob_vnum best_qm = NOBODY;
     zone_rnum qm_zone;
-    mob_rnum qm_mob_rnum;
     
     if (zone == NOWHERE || zone >= top_of_zone_table) {
         return NOBODY;
     }
     
     /* Primeiro tenta encontrar um questmaster na própria zona */
-    for (rnum = 0; rnum < total_quests; rnum++) {
-        if (QST_MASTER(rnum) != NOBODY) {
-            qm_mob_rnum = real_mobile(QST_MASTER(rnum));
-            if (qm_mob_rnum != NOBODY) {
-                /* Verifica se o questmaster está na zona desejada */
-                if (mob_proto[qm_mob_rnum].in_room != NOWHERE) {
-                    qm_zone = world[mob_proto[qm_mob_rnum].in_room].zone;
-                    if (qm_zone == zone) {
-                        return QST_MASTER(rnum);
+    for (mob_rnum = 0; mob_rnum <= top_of_mobt; mob_rnum++) {
+        /* Verifica se o mob tem a função questmaster */
+        if (mob_index[mob_rnum].func == questmaster) {
+            /* Verifica se o mob tem uma sala inicial definida */
+            if (mob_proto[mob_rnum].in_room != NOWHERE) {
+                qm_zone = world[mob_proto[mob_rnum].in_room].zone;
+                if (qm_zone == zone) {
+                    return mob_index[mob_rnum].vnum;
+                }
+            }
+            /* Se não tem sala inicial, verifica se existe uma instância no mundo */
+            else {
+                struct char_data *qm_char;
+                for (qm_char = character_list; qm_char; qm_char = qm_char->next) {
+                    if (IS_NPC(qm_char) && GET_MOB_RNUM(qm_char) == mob_rnum) {
+                        qm_zone = world[IN_ROOM(qm_char)].zone;
+                        if (qm_zone == zone) {
+                            return mob_index[mob_rnum].vnum;
+                        }
                     }
                 }
             }
         }
     }
     
-    /* Se não encontrou na zona, procura o questmaster mais próximo */
-    for (rnum = 0; rnum < total_quests; rnum++) {
-        if (QST_MASTER(rnum) != NOBODY) {
-            qm_mob_rnum = real_mobile(QST_MASTER(rnum));
-            if (qm_mob_rnum != NOBODY) {
-                if (mob_proto[qm_mob_rnum].in_room != NOWHERE) {
-                    /* Aceita qualquer questmaster ativo */
-                    best_qm = QST_MASTER(rnum);
-                    break; /* Usa o primeiro questmaster encontrado */
+    /* Se não encontrou na zona, procura qualquer questmaster disponível */
+    for (mob_rnum = 0; mob_rnum <= top_of_mobt; mob_rnum++) {
+        if (mob_index[mob_rnum].func == questmaster) {
+            /* Verifica se existe uma instância ativa no mundo */
+            struct char_data *qm_char;
+            for (qm_char = character_list; qm_char; qm_char = qm_char->next) {
+                if (IS_NPC(qm_char) && GET_MOB_RNUM(qm_char) == mob_rnum) {
+                    return mob_index[mob_rnum].vnum;
                 }
+            }
+            /* Se não há instância ativa, mas tem questmaster function, usa mesmo assim */
+            if (best_qm == NOBODY) {
+                best_qm = mob_index[mob_rnum].vnum;
             }
         }
     }
