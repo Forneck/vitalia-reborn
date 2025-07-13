@@ -101,7 +101,7 @@ CircleMUD v3.0 Shop File~
 1.05
 0.15
 -1
-%s Sorry, I haven't got exactly that item.~
+%s Desculpe, não tenho exatamente esse item.~
 %s Você não parece ter isso.~
 %s Não compro esse tipo de item.~
 %s That is too expensive for me!~
@@ -129,12 +129,12 @@ CircleMUD v3.0 Shop File~
 0.90
 -1
 %s I've never heard of that... what kind of vegetable is it?~
-%s I don't buy.~
-%s I don't buy.~
-%s I don't buy.~
+%s Eu não compro.~
+%s Eu não compro.~
+%s Eu não compro.~
 %s If you come back with more money, I may consider selling it.~
 %s That's %d coins... can I wrap it up for you?~
-%s I don't buy.~
+%s Eu não compro.~
 0
 6
 5414
@@ -154,11 +154,11 @@ CircleMUD v3.0 Shop File~
 0.90
 19
 -1
-%s I didn't kill any of those this season, sorry.~
-%s I don't buy that.~
-%s I don't buy that.~
-%s I don't buy that when I don't have the money.~
-%s That costs money.  Something you don't have... sorry.~
+%s Não matei nenhum desses nesta temporada, desculpe.~
+%s Não compro isso.~
+%s Não compro isso.~
+%s Não compro isso quando não tenho o dinheiro.~
+%s Isso custa dinheiro. Algo que você não tem... desculpe.~
 %s That costs %d coins.~
 %s Here are %d coins, thank you for your business.~
 0
@@ -223,7 +223,7 @@ CircleMUD v3.0 Shop File~
 %s You don't carry that weapon~
 %s Só compro armas.~
 %s Não posso pagar por uma arma tão boa~
-%s Sorry, but NO CREDIT~
+%s Desculpe, mas NÃO FIADO~
 %s That just costs %d coins.~
 %s Here is %d coins for that.~
 0
@@ -244,9 +244,9 @@ CircleMUD v3.0 Shop File~
 0.50
 19
 -1
-%s Sorry buddy, I don't sell that.~
+%s Desculpe amigo, não vendo isso.~
 %s Why don't you sell something you own?~
-%s I don't buy such items!~
+%s Não compro esse tipo de item!~
 %s That is much to valuable for you to let go!~
 %s No money.  Off with ya then!~
 %s That will be %d gold.~
@@ -270,7 +270,7 @@ CircleMUD v3.0 Shop File~
 4
 8
 -1
-%s Don't have one, but I think I might be able to find one...~
+%s Não tenho um, mas acho que posso conseguir encontrar um...~
 %s You have one?  Really?  Let me see!~
 %s I'm not interested.  Anything else?~
 %s Too rich for my blood!~
@@ -374,7 +374,7 @@ CircleMUD v3.0 Shop File~
 -1
 %s Havn't got that in storage, try LIST!~
 %s You can't sell what you dont HAVE!~
-%s Sorry, I'm not a fence.~
+%s Desculpe, não sou receptador.~
 %s I'd love to buy it, I just can't spare the coinage~
 %s Bah, come back when you can pay!~
 %s Isso custará %d moedas -- obrigado.~
@@ -401,9 +401,9 @@ CircleMUD v3.0 Shop File~
 0.80
 10
 -1
-%s We don't have any of those, Sugar.~
+%s Não temos nenhum desses, querida.~
 %s Are you sure you have one, handsome?~
-%s I don't buy those, darling.~
+%s Não compro esses, querida.~
 %s I'm a little strapped -- how about a gift?~
 %s Perhaps later, when you've more cash, honey.~
 %s That's %d coins, love.~
@@ -432,9 +432,9 @@ CircleMUD v3.0 Shop File~
 3
 4
 -1
-%s Sorry buddy, I don't sell that.~
+%s Desculpe amigo, não vendo isso.~
 %s Why don't you sell something you own?~
-%s I don't buy that kind of crap!~
+%s Não compro esse tipo de porcaria!~
 %s That is much to valuable for you to let go!~
 %s No money.  I killed my mother for less.~
 %s That will be %d gold.~
@@ -494,7 +494,7 @@ CircleMUD v3.0 Shop File~
 -1
 %s Havn't got that in storage, try LIST!~
 %s You can't sell what you dont HAVE!~
-%s Sorry, I'm not a fence.~
+%s Desculpe, não sou receptador.~
 %s I'd love to buy it, I just can't spare the coinage~
 %s Bah, come back when you can pay!~
 %s Isso custará %d moedas -- obrigado.~
