@@ -550,6 +550,13 @@ do                                                              \
 #define GET_GENGROUP(ch)         ((ch)->ai_data ? (ch)->ai_data->genetics.group_tendency : 0)
 #define GET_GENUSE(ch)           ((ch)->ai_data ? (ch)->ai_data->genetics.use_tendency : 0)
 #define GET_GENTRADE(ch)         ((ch)->ai_data ? (ch)->ai_data->genetics.trade_tendency : 0)
+#define GET_GENQUEST(ch)         ((ch)->ai_data ? (ch)->ai_data->genetics.quest_tendency : 0)
+#define GET_GENADVENTURER(ch)    ((ch)->ai_data ? (ch)->ai_data->genetics.adventurer_tendency : 0)
+
+#define GET_MOB_REPUTATION(ch)   ((ch)->ai_data ? (ch)->ai_data->reputation : 0)
+#define GET_MOB_QUEST(ch)        ((ch)->ai_data ? (ch)->ai_data->current_quest : NOTHING)
+#define GET_MOB_QUEST_TIME(ch)   ((ch)->ai_data ? (ch)->ai_data->quest_timer : 0)
+#define GET_MOB_QUEST_COUNTER(ch) ((ch)->ai_data ? (ch)->ai_data->quest_counter : 0)
 
 
 /** Current strength of ch. */

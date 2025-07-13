@@ -25,6 +25,7 @@
 #include "graph.h"
 #include "spedit.h"
 #include "shop.h"
+#include "quest.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -265,6 +266,35 @@ void mobile_activity(void)
     /* Wishlist-based goal planning */
     if (ch->ai_data && rand_number(1, 100) <= 10) { /* 10% chance per tick */
         mob_process_wishlist_goals(ch);
+    }
+
+    /* Mob quest processing */
+    if (ch->ai_data && rand_number(1, 100) <= 5) { /* 5% chance per tick to check quests */
+        /* Check if mob has a quest and handle quest-related goals */
+        if (GET_MOB_QUEST(ch) != NOTHING) {
+            /* Decrement quest timer if applicable */
+            if (ch->ai_data->quest_timer > 0) {
+                ch->ai_data->quest_timer--;
+                if (ch->ai_data->quest_timer <= 0) {
+                    /* Quest timeout */
+                    act("$n parece desapontado por não completar uma tarefa a tempo.", TRUE, ch, 0, 0, TO_ROOM);
+                    clear_mob_quest(ch);
+                }
+            }
+        } else {
+            /* Mob doesn't have a quest, check if it should try to find one */
+            if (GET_GENQUEST(ch) > 30 && GET_GENADVENTURER(ch) > 20) {
+                /* Look for available mob-posted quests */
+                qst_rnum rnum;
+                for (rnum = 0; rnum < total_quests; rnum++) {
+                    if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && mob_should_accept_quest(ch, rnum)) {
+                        set_mob_quest(ch, rnum);
+                        act("$n parece determinado e parte em uma missão.", TRUE, ch, 0, 0, TO_ROOM);
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     mob_handle_grouping(ch);

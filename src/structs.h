@@ -959,6 +959,8 @@ struct room_data
 #define GOAL_POST_QUEST        5
 #define GOAL_GET_GOLD          6
 #define GOAL_GOTO_QUESTMASTER  7
+#define GOAL_ACCEPT_QUEST      8
+#define GOAL_COMPLETE_QUEST    9
 
 /*
  * Estrutura para armazenar os "genes" de um mob, que podem evoluir.
@@ -973,6 +975,8 @@ struct mob_genetics {
    int group_tendency;
    int use_tendency;
    int trade_tendency;
+   int quest_tendency;      /* Tendência de aceitar quests. Varia de 0 a 100. */
+   int adventurer_tendency; /* Tendência de ser aventureiro/explorar. Varia de 0 a 100. */
 };
 
 
@@ -999,6 +1003,11 @@ struct mob_ai_data {
     mob_rnum goal_target_mob_rnum; /*Falar com quem?*/
     obj_vnum goal_item_vnum;    /* VNUM do item alvo para compra/quest */
     int goal_timer;             /* Contador para evitar ficar preso no mesmo objetivo */
+    
+    int reputation;             /* Reputação do mob para quests (0-100) */
+    qst_vnum current_quest;     /* Quest ativa atual do mob (se houver) */
+    int quest_timer;            /* Timer para a quest atual */
+    int quest_counter;          /* Contador de progresso da quest */
 };
 
 /**

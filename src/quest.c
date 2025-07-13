@@ -10,6 +10,8 @@
 
 #include "conf.h"
 #include "sysdep.h"
+#include <string.h>
+#include <time.h>
 
 #include "structs.h"
 #include "utils.h"
@@ -33,10 +35,13 @@ const char *quest_types[] = {
   "Save mob",
   "Return object",
   "Clear room",
+  "Kill player",
+  "Kill mob (bounty)",
   "\n"
 };
 const char *aq_flags[] = {
   "REPEATABLE",
+  "MOB_POSTED",
   "\n"
 };
 
@@ -486,6 +491,15 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict,
    generic_complete_quest(ch);
       }
       break;
+    case AQ_PLAYER_KILL:
+      if (!IS_NPC(ch) && !IS_NPC(vict) && (ch != vict))
+        generic_complete_quest(ch);
+      break;
+    case AQ_MOB_KILL_BOUNTY:
+      if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict))
+        if (QST_TARGET(rnum) == GET_MOB_VNUM(vict))
+          generic_complete_quest(ch);
+      break;
     default:
       log1("SYSERR: Invalid quest type passed to autoquest_trigger_check");
       break;
@@ -921,5 +935,209 @@ SPECIAL(questmaster)
     }
   } else {
     return FALSE; /* not a questmaster command */
+  }
+}
+
+/*--------------------------------------------------------------------------*/
+/* Mob Quest Functions                                                      */
+/*--------------------------------------------------------------------------*/
+
+/* Calculate mob's capability to handle a quest based on stats and level */
+int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum)
+{
+  int capability = 0;
+  int level_diff;
+  
+  if (!IS_NPC(mob) || !mob->ai_data || rnum == NOTHING)
+    return 0;
+  
+  /* Base capability from quest genetics */
+  capability = GET_GENQUEST(mob) + GET_GENADVENTURER(mob);
+  
+  /* Level consideration */
+  level_diff = GET_LEVEL(mob) - QST_MINLEVEL(rnum);
+  if (level_diff < 0)
+    capability -= (level_diff * -10);  /* Penalty for being too low level */
+  else if (level_diff > 10)
+    capability += 20;  /* Bonus for being high level */
+  
+  /* Reputation consideration */
+  capability += GET_MOB_REPUTATION(mob);
+  
+  /* Adjust based on quest difficulty */
+  switch (QST_TYPE(rnum)) {
+    case AQ_MOB_KILL:
+    case AQ_MOB_KILL_BOUNTY:
+    case AQ_PLAYER_KILL:
+      capability += GET_GENBRAVE(mob);  /* Combat quests need bravery */
+      break;
+    case AQ_OBJ_FIND:
+    case AQ_ROOM_FIND:
+      capability += GET_GENROAM(mob);   /* Exploration quests need roaming */
+      break;
+    case AQ_ROOM_CLEAR:
+      capability += (GET_GENBRAVE(mob) + GET_GENGROUP(mob)) / 2;  /* Need both */
+      break;
+  }
+  
+  return MAX(0, MIN(100, capability));
+}
+
+/* Check if a mob should accept a quest */
+bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
+{
+  int capability, chance;
+  
+  if (!IS_NPC(mob) || !mob->ai_data || rnum == NOTHING)
+    return FALSE;
+  
+  /* Don't accept if already on a quest */
+  if (GET_MOB_QUEST(mob) != NOTHING)
+    return FALSE;
+  
+  /* Don't accept immortal quests (only mob-posted quests) */
+  if (!IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+    return FALSE;
+  
+  /* Calculate capability */
+  capability = calculate_mob_quest_capability(mob, rnum);
+  
+  /* Random chance based on capability */
+  chance = rand() % 100;
+  
+  return (chance < capability);
+}
+
+/* Set a quest for a mob */
+void set_mob_quest(struct char_data *mob, qst_rnum rnum)
+{
+  if (!IS_NPC(mob) || !mob->ai_data || rnum == NOTHING)
+    return;
+  
+  mob->ai_data->current_quest = QST_NUM(rnum);
+  mob->ai_data->quest_timer = QST_TIME(rnum);
+  mob->ai_data->quest_counter = QST_QUANTITY(rnum) > 0 ? QST_QUANTITY(rnum) : 1;
+}
+
+/* Clear a quest from a mob */
+void clear_mob_quest(struct char_data *mob)
+{
+  if (!IS_NPC(mob) || !mob->ai_data)
+    return;
+  
+  mob->ai_data->current_quest = NOTHING;
+  mob->ai_data->quest_timer = 0;
+  mob->ai_data->quest_counter = 0;
+}
+
+/* Mob completes a quest and gets rewards */
+void mob_complete_quest(struct char_data *mob)
+{
+  qst_rnum rnum;
+  qst_vnum vnum;
+  struct obj_data *new_obj;
+  
+  if (!IS_NPC(mob) || !mob->ai_data)
+    return;
+  
+  vnum = GET_MOB_QUEST(mob);
+  if (vnum == NOTHING)
+    return;
+  
+  rnum = real_quest(vnum);
+  if (rnum == NOTHING)
+    return;
+  
+  /* Give gold reward */
+  if (QST_GOLD(rnum)) {
+    increase_gold(mob, QST_GOLD(rnum));
+  }
+  
+  /* Give object reward */
+  if (QST_OBJ(rnum) != NOTHING) {
+    if (real_object(QST_OBJ(rnum)) != NOTHING) {
+      new_obj = read_object(QST_OBJ(rnum), VIRTUAL);
+      if (new_obj) {
+        obj_to_char(new_obj, mob);
+      }
+    }
+  }
+  
+  /* Increase reputation */
+  if (mob->ai_data->reputation < 100) {
+    mob->ai_data->reputation = MIN(100, mob->ai_data->reputation + rand() % 10 + 1);
+  }
+  
+  /* Clear the quest */
+  clear_mob_quest(mob);
+  
+  act("$n parece satisfeito com sua tarefa concluída.", TRUE, mob, 0, 0, TO_ROOM);
+}
+
+/* Check mob quest completion triggers */
+void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struct obj_data *object, int type)
+{
+  qst_rnum rnum;
+  qst_vnum vnum;
+  struct char_data *i;
+  bool found = TRUE;
+  
+  if (!IS_NPC(ch) || !ch->ai_data)
+    return;
+  
+  vnum = GET_MOB_QUEST(ch);
+  if (vnum == NOTHING)
+    return;
+  
+  rnum = real_quest(vnum);
+  if (rnum == NOTHING)
+    return;
+  
+  switch (QST_TYPE(rnum)) {
+    case AQ_MOB_KILL:
+    case AQ_MOB_KILL_BOUNTY:
+      if (IS_NPC(vict) && (ch != vict))
+        if (QST_TARGET(rnum) == GET_MOB_VNUM(vict)) {
+          if (--ch->ai_data->quest_counter <= 0)
+            mob_complete_quest(ch);
+        }
+      break;
+    case AQ_PLAYER_KILL:
+      if (!IS_NPC(vict) && (ch != vict)) {
+        if (--ch->ai_data->quest_counter <= 0)
+          mob_complete_quest(ch);
+      }
+      break;
+    case AQ_OBJ_FIND:
+      if (object && (GET_OBJ_VNUM(object) == QST_TARGET(rnum))) {
+        if (--ch->ai_data->quest_counter <= 0)
+          mob_complete_quest(ch);
+      }
+      break;
+    case AQ_ROOM_FIND:
+      if (QST_TARGET(rnum) == world[IN_ROOM(ch)].number) {
+        if (--ch->ai_data->quest_counter <= 0)
+          mob_complete_quest(ch);
+      }
+      break;
+    case AQ_MOB_FIND:
+      for (i = world[IN_ROOM(ch)].people; i; i = i->next_in_room)
+        if (IS_NPC(i))
+          if (QST_TARGET(rnum) == GET_MOB_VNUM(i)) {
+            if (--ch->ai_data->quest_counter <= 0)
+              mob_complete_quest(ch);
+          }
+      break;
+    case AQ_ROOM_CLEAR:
+      if (QST_TARGET(rnum) == world[IN_ROOM(ch)].number) {
+        for (i = world[IN_ROOM(ch)].people; i && found; i = i->next_in_room)
+          if (i && IS_NPC(i) && !MOB_FLAGGED(i, MOB_NOTDEADYET) && i != ch)
+            found = FALSE;
+        if (found) {
+          if (--ch->ai_data->quest_counter <= 0)
+            mob_complete_quest(ch);
+        }
+      }
+      break;
   }
 }
