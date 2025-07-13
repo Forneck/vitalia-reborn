@@ -339,6 +339,7 @@ ASPELL(spell_enchant_weapon);
 ASPELL(spell_detect_poison);
 ASPELL(spell_control_weather);
 ASPELL(spell_transport_via_plants);
+ASPELL(spell_stoneskin);
 ASPELL(spell_raise_dead); /* NEW */
 ASPELL(spell_ressurect); /* NEW */
 ASPELL(spell_vamp_touch); /* NEW */

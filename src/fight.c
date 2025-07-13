@@ -747,6 +747,16 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 		appear(ch);
 	if (AFF_FLAGGED(victim, AFF_STONESKIN))
 	{
+		/* Stoneskin absorbs damage and loses 1 point */
+		if (reduce_stoneskin_points(victim, 1)) {
+			/* Stoneskin was removed (no more points) */
+			act("A proteção de sua pele se desfaz completamente!", FALSE, victim, 0, 0, TO_CHAR);
+			act("A pele dura de $n volta ao normal.", FALSE, victim, 0, 0, TO_ROOM);
+		} else {
+			/* Still has points left */
+			act("Sua pele dura absorve o impacto!", FALSE, victim, 0, 0, TO_CHAR);
+			act("A pele dura de $n absorve o golpe.", FALSE, victim, 0, 0, TO_ROOM);
+		}
 		dam = 0;				/* no damage when using stoneskin */
 	}
 	/* Cut damage in half if victim has sanct, to a minimum 1 */
@@ -1202,10 +1212,12 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 			damage(ch, victim, dam, w_type);
 	}
 	/* 
-	 * Poisoned weapons.
+	 * Poisoned weapons - only apply poison if damage was actually dealt.
+	 * If stoneskin or other protection completely absorbed the attack,
+	 * the poison shouldn't penetrate.
 	 */
 
-	if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON && OBJ_FLAGGED(wielded, ITEM_POISONED)
+	if (wielded && dam > 0 && GET_OBJ_TYPE(wielded) == ITEM_WEAPON && OBJ_FLAGGED(wielded, ITEM_POISONED)
 		&& !MOB_FLAGGED(victim, MOB_NO_POISON))
 	{
 		new_affect(&af);
@@ -1222,7 +1234,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 			act("$n fica muito doente!", TRUE, victim, 0, ch, TO_ROOM);
 		}
 		SET_BIT_AR(af.bitvector, AFF_POISON);
-		affect_join(ch, &af, FALSE, FALSE, FALSE, FALSE);
+		affect_join(victim, &af, FALSE, FALSE, FALSE, FALSE);
 		//remover veneno da arma
 		if (rand_number(0, 3) == 0) REMOVE_BIT_AR(GET_OBJ_EXTRA(wielded),ITEM_POISONED);
 	}

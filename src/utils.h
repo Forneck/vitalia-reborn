@@ -111,6 +111,11 @@ obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty);
 struct char_data *find_item_owner(obj_vnum item_vnum);
 int is_wishlist_quest(qst_vnum quest_vnum);
 void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
+
+/* Stoneskin utility functions */
+int get_stoneskin_points(struct char_data *ch);
+void set_stoneskin_points(struct char_data *ch, int points);
+bool reduce_stoneskin_points(struct char_data *ch, int reduction);
 /* Public functions made available from weather.c */
 void weather_and_time(int mode);
 

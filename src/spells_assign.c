@@ -110,6 +110,12 @@ void set_spells_function()
    if ((spell = get_spell_by_vnum(SPELL_FURY_OF_AIR)))
    spell->function = spell_fury_air;
 
+ if ((spell = get_spell_by_vnum(SPELL_STONESKIN)))
+   spell->function = spell_stoneskin;
+
+ if ((spell = get_spell_by_vnum(SPELL_VENTRILOQUATE)))
+   spell->function = spell_ventriloquate;
+
  if ((spell = get_spell_by_vnum(SKILL_BACKSTAB)))
    spell->function = do_backstab;
 
@@ -1193,12 +1199,26 @@ void create_spells_db()
  new_spell->status = available;
  new_spell->name = strdup("ventriloquate");
  new_spell->type = SPELL;
+ new_spell->min_pos = POS_STANDING;
+ new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
+ new_spell->mag_flags = MAG_MANUAL;
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15");
-//new_spell->assign[0].class_num = CLASS_MAGIC_USER;
-//new_spell->assign[0].level = 109;
+ new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+ new_spell->assign[0].level = 15;
  new_spell->assign[0].num_mana = strdup(buf);
- spedit_save_internally(new_spell) ;
+ new_spell->assign[1].class_num = CLASS_CLERIC;
+ new_spell->assign[1].level = 15;
+ new_spell->assign[1].num_mana = strdup(buf);
+ new_spell->assign[2].class_num = CLASS_DRUID;
+ new_spell->assign[2].level = 15;
+ new_spell->assign[2].num_mana = strdup(buf);
+ new_spell->assign[3].class_num = CLASS_BARD;
+ new_spell->assign[3].level = 15;
+ new_spell->assign[3].num_mana = strdup(buf);
+ new_spell->messages.to_self = strdup("Você manipula as palavras através da magia.");
+ new_spell->messages.to_room = strdup("$n murmura palavras arcanas.");
+ spedit_save_internally(new_spell);
 
  // SPELL_WORD_OF_RECALL # 42
  CREATE(new_spell, struct str_spells, 1);
@@ -1585,14 +1605,15 @@ new_spell->assign[1].class_num = CLASS_CLERIC;                             new_s
  new_spell->type = SPELL;
  new_spell->min_pos = POS_STANDING;
  new_spell->targ_flags = TAR_CHAR_ROOM;
- new_spell->mag_flags = MAG_AFFECTS | MAG_ACCDUR;
+ new_spell->mag_flags = MAG_MANUAL;
  new_spell->effectiveness = strdup("100");
  sprintf(buf, "(200 - (10 * self.level)) > 100 ? (200 - (10 * self.level)) : 100");
- new_spell->assign[0].class_num = CLASS_CLERIC;
- new_spell->assign[0].level = 90;
+ new_spell->assign[0].class_num = CLASS_MAGIC_USER;
+ new_spell->assign[0].level = 34;
  new_spell->assign[0].num_mana = strdup(buf);
- new_spell->applies[0].appl_num = AFF_STONESKIN + NUM_APPLIES;
- new_spell->applies[0].duration = strdup("24");
+ new_spell->assign[1].class_num = CLASS_CLERIC;
+ new_spell->assign[1].level = 90;
+ new_spell->assign[1].num_mana = strdup(buf);
  new_spell->messages.to_vict = strdup("Você sente sua pele se tornando dura como rocha.");
  new_spell->messages.to_room = strdup("A pele de $N se torna mais dura.");
  new_spell->messages.wear_off = strdup("Sua pele perde a dureza.");

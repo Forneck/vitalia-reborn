@@ -1119,3 +1119,89 @@ ASPELL(spell_ressurect)
   else
     send_to_char(ch,"Esta magia deve ser lançada em um espírito ou em um corpo.\r\n");
 }
+
+ASPELL(spell_stoneskin)
+{
+  struct affected_type af;
+  int new_points, current_points;
+  
+  if (victim == NULL)
+    return;
+    
+  /* Calculate new points to add: 1 point per 4 caster levels, min 1 */
+  new_points = MAX(1, level / 4);
+  
+  /* Check current stoneskin points */
+  current_points = get_stoneskin_points(victim);
+  
+  /* Cap total at 168 as per help file */
+  if (current_points + new_points > 168) {
+    new_points = 168 - current_points;
+    if (new_points <= 0) {
+      send_to_char(ch, "%s já possui o máximo de proteção possível.\r\n", 
+                   (victim == ch) ? "Você" : GET_NAME(victim));
+      return;
+    }
+  }
+  
+  new_affect(&af);
+  af.spell = SPELL_STONESKIN;
+  af.duration = new_points * (60 - (level / 10)); /* 1 hour per point minus level factor */
+  af.modifier = new_points;
+  af.location = APPLY_NONE;
+  SET_BIT_AR(af.bitvector, AFF_STONESKIN);
+  
+  if (current_points > 0) {
+    /* Accumulate with existing stoneskin */
+    affect_join(victim, &af, TRUE, FALSE, TRUE, FALSE);
+    act("A proteção de sua pele se torna ainda mais resistente.", FALSE, victim, 0, 0, TO_CHAR);
+    act("A pele de $n se torna ainda mais dura.", FALSE, victim, 0, 0, TO_ROOM);
+  } else {
+    /* First time casting */
+    affect_to_char(victim, &af);
+    act("Você sente sua pele se tornando dura como rocha.", FALSE, victim, 0, 0, TO_CHAR);
+    act("A pele de $n se torna mais dura.", FALSE, victim, 0, 0, TO_ROOM);
+  }
+}
+
+ASPELL(spell_ventriloquate)
+{
+  struct char_data *vch;
+  char *msg;
+  char buf[MAX_STRING_LENGTH];
+  
+  if (victim == NULL || ch == NULL)
+    return;
+    
+  /* Get the message from cast_arg2 */
+  msg = cast_arg2;
+  
+  if (!msg || !*msg) {
+    send_to_char(ch, "O que você quer que %s diga?\r\n", GET_NAME(victim));
+    return;
+  }
+  
+  /* Check for saving throw */
+  if (mag_savingthrow(victim, SAVING_SPELL, 0)) {
+    send_to_char(ch, "%s resiste à sua magia de ventriloquia.\r\n", GET_NAME(victim));
+    act("$n tenta fazer você dizer algo, mas você resiste.", FALSE, ch, 0, victim, TO_VICT);
+    return;
+  }
+  
+  /* Make the victim "say" the message */
+  sprintf(buf, "%s diz: '%s'", GET_NAME(victim), msg);
+  act(buf, FALSE, victim, 0, 0, TO_ROOM);
+  send_to_char(victim, "Você se ouve dizendo: '%s'\r\n", msg);
+  
+  /* Let everyone know it was ventriloquism if they make their save */
+  for (vch = world[IN_ROOM(victim)].people; vch; vch = vch->next_in_room) {
+    if (vch != victim && vch != ch && !mag_savingthrow(vch, SAVING_SPELL, 0)) {
+      continue; /* They believe it was really the victim speaking */
+    }
+    if (vch != victim && vch != ch) {
+      send_to_char(vch, "(Você nota que foi uma ilusão de ventriloquia)\r\n");
+    }
+  }
+  
+  send_to_char(ch, "Você faz %s dizer: '%s'\r\n", GET_NAME(victim), msg);
+}
