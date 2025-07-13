@@ -449,128 +449,128 @@ Você derrama cerveja em $p, que desperdício.
 $n derrama cerveja em $p, que bêbado desleixado.
 
 ~beg beg 0 5 0 0
-You beg the gods for mercy.  (No way you're gonna get it! :-))
-The gods fall down laughing at $n's request for mercy.
-You desperately try to squeeze a few coins from $M.
-$n begs $N for a dime or two -- or twenty!
-$n begs you for money.  You gratiously let $m peep at your fortune.
-Your money-lender seems to be out for the moment.
-How? - begging yourself for money doesn't help.
-$n begs $mself for money.
-You look at $S $t and beg pitifully.
-$n looks at $N's $t and begs pitifully.
-$n looks at your $t and begs pitifully.
-You look at $p and beg pitifully.
-$n looks at $p and begs pitifully.
+Você implora misericórdia aos deuses. (De jeito nenhum você vai conseguir! :-))
+Os deuses caem na gargalhada com o pedido de misericórdia de $n.
+Você tenta desesperadamente arrancar algumas moedas de $M.
+$n implora a $N por algumas moedas -- ou vinte!
+$n implora por dinheiro a você. Você graciosamente deixa $m espiar sua fortuna.
+Seu agiota parece estar fora no momento.
+Como? - implorar por dinheiro para si mesmo não ajuda.
+$n implora dinheiro para si mesmo.
+Você olha para o $t de $S e implora piedosamente.
+$n olha para o $t de $N e implora piedosamente.
+$n olha para seu $t e implora piedosamente.
+Você olha para $p e implora piedosamente.
+$n olha para $p e implora piedosamente.
 
 ~behind behind 1 8 0 0
-Whom do you want to hide behind?
+Atrás de quem você quer se esconder?
 #
-You hide behind $N.
-$n hides behind $N.
-$n hides behind you.
-That person isn't here to hide behind.
-You can't hide behind yourself!
-$n tries to hide behind $mself, and fails miserably.
+Você se esconde atrás de $N.
+$n se esconde atrás de $N.
+$n se esconde atrás de você.
+Essa pessoa não está aqui para se esconder atrás.
+Você não pode se esconder atrás de si mesmo!
+$n tenta se esconder atrás de si mesmo, e falha miseravelmente.
 #
 #
 #
-You hide behind $p.
-$n hides behind $p.
+Você se esconde atrás de $p.
+$n se esconde atrás de $p.
 
 ~belch belch 0 5 0 0
-A belch rumbles from the bottom of your stomach and echoes loudly in the room!
-The room rumbles and shakes as $n belches!
-You belch in $S face for a long time.
-$n belches in $N's face.
-$n belches in your face for a long time.
-Belching in someone's face is quite disgusting!
-You belch at yourself, that's disgusting.
-$n belches at $mself, how disgusting.
-You look at $S $t and belch at it.
-$n looks at $N's $t and belches at it.
-$n looks at your $t and belches at it.
-You look at $p and belch at it.
-$n looks at $p and belches at it.
+Um arroto ressoa do fundo do seu estômago e ecoa alto na sala!
+A sala ressoa e treme quando $n arrota!
+Você arrota na cara de $S por um longo tempo.
+$n arrota na cara de $N.
+$n arrota na sua cara por um longo tempo.
+Arrotar na cara de alguém é bem nojento!
+Você arrota para si mesmo, isso é nojento.
+$n arrota para si mesmo, que nojento.
+Você olha para o $t de $S e arrota para ele.
+$n olha para o $t de $N e arrota para ele.
+$n olha para seu $t e arrota para ele.
+Você olha para $p e arrota para ele.
+$n olha para $p e arrota para ele.
 
 ~bite bite 0 5 5 0
-Who do you want to bite?
+Quem você quer morder?
 #
-You savagely bite $N.
-$n savagely bites $N.
-$n savagely bites you!
-I cannot see that person here.
-You attempt to bite yourself on the neck.
-$n attempts to bite $mself on the neck.
-You sink your teeth into $N's $t.
-$n sinks $s teeth into $N's $t.
-$n sinks $s teeth into your $t.
+Você morde $N selvagemente.
+$n morde $N selvagemente.
+$n morde você selvagemente!
+Eu não posso ver essa pessoa aqui.
+Você tenta se morder no pescoço.
+$n tenta se morder no pescoço.
+Você crava os dentes no $t de $N.
+$n crava os dentes no $t de $N.
+$n crava os dentes no seu $t.
 #
 #
 
 ~blah blah 0 8 8 0
-You say, "BLAH!!"
-$n goes, "BLAH!!"
-You look at $N and go, "BLAH!"
-$n looks at $N and goes, "BLAH!"
-$n looks at you and goes, "BLAH!"
-There's no one around by that name.
-You look at yourself and go, "BLAH!"
-$n looks at $mself and goes, "BLAH!"
-You take a marker and write "BLAH!" on $N's $t.
-$n takes a marker and writes "BLAH!" on $N's $t.
-$n takes a marker and writes "BLAH!" on your $t.
-You take a marker and write "BLAH!" on $p.
-$n takes a marker and writes "BLAH!" on $p.
+Você diz, "BLAH!!"
+$n faz, "BLAH!!"
+Você olha para $N e faz, "BLAH!"
+$n olha para $N e faz, "BLAH!"
+$n olha para você e faz, "BLAH!"
+Não há ninguém por aqui com esse nome.
+Você olha para si mesmo e faz, "BLAH!"
+$n olha para si mesmo e faz, "BLAH!"
+Você pega um marcador e escreve "BLAH!" no $t de $N.
+$n pega um marcador e escreve "BLAH!" no $t de $N.
+$n pega um marcador e escreve "BLAH!" no seu $t.
+Você pega um marcador e escreve "BLAH!" em $p.
+$n pega um marcador e escreve "BLAH!" em $p.
 
 ~blame blame 0 5 0 0
-You blame everyone!
-$n blames you!
-You blame $M.
-$n blames $N.
-$n blames YOU!
-Try placing the blame on someone you can see.
-You blame yourself.
-$n blames $mself.
-You blame everything on $S $t.
-$n blames everything on $N's $t.
-$n blames everything on your $t.
-You blame everything on $p.
-$n blames everything on $p.
+Você culpa todo mundo!
+$n culpa você!
+Você culpa $M.
+$n culpa $N.
+$n culpa VOCÊ!
+Tente colocar a culpa em alguém que você possa ver.
+Você se culpa.
+$n se culpa.
+Você culpa tudo no $t de $S.
+$n culpa tudo no $t de $N.
+$n culpa tudo no seu $t.
+Você culpa tudo em $p.
+$n culpa tudo em $p.
 
 ~bleed bleed 0 5 0 0
-You bleed profusely, making an awful mess...
-$n bleeds profusely, making an awful mess...
-You bleed all over $M.
-$n bleeds all over $N.
-$n bleeds all over you..  YUCK!
-You bleed in vain for no one cares.
-You pick at an old scab and begin to bleed.
-$n picks at an old scab and bleeds all over $sself.
-You bleed all over $S $t.
-$n bleeds all over $N's $t.
-$n bleeds all over your $t.
-You bleed all over $p.
-$n bleeds all over $p.
+Você sangra profusamente, fazendo uma bagunça terrível...
+$n sangra profusamente, fazendo uma bagunça terrível...
+Você sangra todo em $M.
+$n sangra todo em $N.
+$n sangra todo em você.. NOJENTO!
+Você sangra em vão pois ninguém se importa.
+Você mexe numa casquinha velha e começa a sangrar.
+$n mexe numa casquinha velha e sangra todo em si mesmo.
+Você sangra todo no $t de $S.
+$n sangra todo no $t de $N.
+$n sangra todo no seu $t.
+Você sangra todo em $p.
+$n sangra todo em $p.
 
 ~blink blink 0 5 0 0
-You blink.
-$n blinks.
-You blink at $M in disbelief.
-$n blinks at $N.
-$n blinks at you in disbelief.
-Surprise! Surprise they are not here.
-You blink your eye... Something in there?
-$n seems to have something caught in $s eye.
-You blink at $S $t
-$n blinks at $N's $t.
-$n blinks at your $t.
-You blinks at $p.
-$n blinks at $p.
+Você pisca.
+$n pisca.
+Você pisca para $M em descrença.
+$n pisca para $N.
+$n pisca para você em descrença.
+Surpresa! Surpresa, eles não estão aqui.
+Você pisca o olho... Algo aí dentro?
+$n parece ter algo preso no olho.
+Você pisca para o $t de $S
+$n pisca para o $t de $N.
+$n pisca para seu $t.
+Você pisca para $p.
+$n pisca para $p.
 
 ~bloob bloob 0 0 8 0
-You tell a story about a bloober, you once saw.
-$n bloobs out about nothing and everything.
+Você conta uma história sobre um bloober, que uma vez você viu.
+$n balbucia sobre nada e tudo.
 #
 #
 #
@@ -584,14 +584,14 @@ $n bloobs out about nothing and everything.
 #
 
 ~blue blue 0 5 5 0
-You take a deep breath and hold it.
-$n holds $s breath.
-You glance at $N as you slowly start turning blue.
-$n glances at $N as $e slowly starts turning blue.
-$n glances at you as $e slowly starts turning blue.
-Don't hold your breath, they're not here.
-You slowly start turning blue.
-$n slowly starts turning blue.
+Você respira fundo e prende a respiração.
+$n prende a respiração.
+Você olha para $N enquanto lentamente começa a ficar azul.
+$n olha para $N enquanto $e lentamente começa a ficar azul.
+$n olha para você enquanto $e lentamente começa a ficar azul.
+Não prenda a respiração, eles não estão aqui.
+Você lentamente começa a ficar azul.
+$n lentamente começa a ficar azul.
 #
 #
 #
@@ -599,34 +599,34 @@ $n slowly starts turning blue.
 #
 
 ~blush blush 0 5 0 0
-Your cheeks are burning.
-$n blushes.
-You glance at $M and blush.
-$n glances at $N and blushes.
-$n glances at you and blushes deeply.
-You are too embarrassed for words.
-You blush at the merest sight of yourself.
-$n seems to be blushing over $mself.
-You look at $S $t and blush.
-$n looks at $N's $t and blushes.
-$n looks at your $t and blushes.
-You look at $p and blush.
-$n looks at $p and blushes.
+Suas bochechas estão queimando.
+$n fica vermelho.
+Você olha para $M e fica vermelho.
+$n olha para $N e fica vermelho.
+$n olha para você e fica vermelho profundamente.
+Você está envergonhado demais para palavras.
+Você fica vermelho só de se ver.
+$n parece estar ficando vermelho de si mesmo.
+Você olha para o $t de $S e fica vermelho.
+$n olha para o $t de $N e fica vermelho.
+$n olha para seu $t e fica vermelho.
+Você olha para $p e fica vermelho.
+$n olha para $p e fica vermelho.
 
 ~bounce bo 0 5 0 0
 BOIINNNNNNGG!
-$n bounces around the room.
-You take $M out for a joyful bounce.
-$n grabs $N and bounces around the room with $M.
-$n grabs you and bounces around with you in joy.
-Find another trampoline to bounce upon.
-You go bouncing against the walls.
-$n bounces off the walls!
-You grab $S $t and start bouncing around with it.
-$n grabs $N's $t and starts bouncing around with it.
-$n grabs your $t and starts bouncing around with it.
-You take it out for a joyful bounce.
-$n grabs $p and starts bouncing around with it.
+$n quica pela sala.
+Você leva $M para um quique alegre.
+$n agarra $N e quica pela sala com $M.
+$n agarra você e quica com você em alegria.
+Encontre outro trampolim para quicar.
+Você sai quicando contra as paredes.
+$n quica nas paredes!
+Você agarra o $t de $S e começa a quicar com ele.
+$n agarra o $t de $N e começa a quicar com ele.
+$n agarra seu $t e começa a quicar com ele.
+Você o leva para um quique alegre.
+$n agarra $p e começa a quicar com ele.
 
 ~boast boast 0 5 0 0
 You boast about your great deed.
