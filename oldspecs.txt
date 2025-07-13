@@ -1,0 +1,2990 @@
+/* ----------------------------=== VitaliaMUD ===---------------------------- *
+ *   File: anura-spec.c
+ *  Usage: (PLUGIN) Specprocs for the Os Templos de Anura zone (69)
+ *
+ * Part of VitaliaMUD source code, Copyright (C) 2000 - Juliano Ravasi Ferraz
+ * Copyright (C) 2000-2002 - Juliano Ravasi Ferraz -= All rights reserved =-
+ * -------------------------------------------------------------------------- */
+
+#include "common.h"
+#include "descriptor.h"
+#include "character.h"
+#include "zone.h"
+#include "room.h"
+#include "interpreter.h"
+#include "handler.h"
+#include "special.h"
+#include "db.h"
+
+PLUGIN_HANDLE("anura-spec");
+PLUGIN_NAME("SpecProcs da área Anura (69)");
+
+/* Macros and Definitions ___________________________________________________ */
+#define ZONE_VNUM		69
+#define ANURA_SPC_FILE		SPC_PREFIX "69.spc"
+#define ZONE_ITEM(item)		(ZONE_VNUM*100+(item))
+
+
+/* Local special procedures _________________________________________________ */
+specproc_func airflow;
+specproc_func blocker;
+
+static const struct {
+  const char *name;
+  bitvector_t bits;
+  specproc_func *fn;
+} specprocs[] = {
+  { "anura:airflow", spRoom | spPulseDrv, airflow },
+  { "anura:blocker", spMobile | spEventDrv, blocker },
+  { NULL, 0, NULL }
+};
+
+
+/* External functions _______________________________________________________ */
+void load_spec(const char *filename);
+
+/* Plugin Functions _________________________________________________________ */
+int plugin_load(void) {
+  int i;
+
+  for (i = 0; specprocs[i].name; i++)
+    register_special(specprocs[i].name, specprocs[i].bits, specprocs[i].fn);
+
+  if (mud.state == game_running)
+    load_spec(ANURA_SPC_FILE);
+
+  return (0);
+}
+
+int plugin_unload(void) {
+  int i;
+
+  for (i = 0; specprocs[i].name; i++)
+    unregister_special(specprocs[i].name);
+
+  return (0);
+}
+
+/* Special Procedures _______________________________________________________ */
+SPECIAL(airflow) {
+  Room *room = me;
+  Character *tch, *next;
+
+  if (SPEC_EVENT != spEvPulse)
+    return (false);
+
+  if (SECT(room) == SECT_FLYING) {
+    SECT(room) = SECT_AIR_FLOW;
+    send_to_room("Uma intensa coluna de ar surge, impelindo tudo para o alto.\r\n", room);
+    return (true);
+  } else if (SECT(room) == SECT_AIR_FLOW) {
+    SECT(room) = SECT_FLYING;
+    send_to_room("A coluna de ar desaparece.\r\n", room);
+
+    LIST_FOR_SECURE(room->people, tch, next, l_room)
+      check_fly(tch);
+
+    return (true);
+  }
+
+  return (false);
+}
+
+SPECIAL(blocker) {
+  Character *guard = me;
+  int dir;
+  const char *msg_vict = "$n $R encara, e bloqueia sua passagem.";
+  const char *msg_room = "$n bloqueia a passagem de $N.";
+
+  if (SPEC_EVENT != spEvDepart)
+    return (false);
+
+  if (AFF_FLAGGED(guard, AFF_BLIND))
+    return (false);
+
+  if (GET_LEVEL(ch) >= LVL_IMMORT)
+    return (false);
+
+  dir = va_arg(ap, int);
+
+  act(msg_vict, false, guard, 0, ch, TO_VICT);
+  act(msg_room, true, guard, 0, ch, TO_NOTVICT);
+  return (true);
+}
+
+/* vim: set ts=8 sw=2: */
+/* vim600: set fdm=marker fdc=3: */
+/* ----------------------------=== VitaliaMUD ===---------------------------- *
+ *   File: lindrel-spec.c
+ *  Usage: (PLUGIN) Specprocs for the Lindrel zone (140)
+ *
+ * Part of VitaliaMUD source code, Copyright (C) 2000 - Juliano Ravasi Ferraz
+ * Copyright (C) 2000-2002 - Juliano Ravasi Ferraz -= All rights reserved =-
+ * -------------------------------------------------------------------------- */
+
+#include "common.h"
+#include "descriptor.h"
+#include "character.h"
+#include "mobile.h"
+#include "object.h"
+#include "room.h"
+#include "interpreter.h"
+#include "special.h"
+#include "spells.h"
+#include "fight.h"
+#include "db.h"
+
+PLUGIN_HANDLE("lindrel-spec");
+PLUGIN_NAME("SpecProcs da área Lindrel (140)");
+
+/* Macros and Definitions ___________________________________________________ */
+#define ZONE_VNUM		140
+#define LINDREL_SPC_FILE	SPC_PREFIX "140.spc"
+
+#define ZONE_ITEM(item)		(ZONE_VNUM*100+(item))
+#define ELLORA_VNUM		ZONE_ITEM(0)
+#define ELDORA_VNUM		ZONE_ITEM(1)
+
+/* Local special procedures _________________________________________________ */
+specproc_func ellora, eldora, arando;
+specproc_func tree;
+
+static const struct {
+  const char *name;
+  bitvector_t bits;
+  specproc_func *fn;
+} specprocs[] = {
+  { "lindrel:ellora", spMobile | spEventDrv | spPulseDrv, ellora },
+  { "lindrel:eldora", spMobile | spEventDrv | spPulseDrv, eldora },
+  { "lindrel:arando", spMobile | spEventDrv | spPulseDrv, arando },
+  { "lindrel:tree", spObject | spPulseDrv, tree },
+  { NULL, 0, NULL }
+};
+
+
+/* External functions _______________________________________________________ */
+void load_spec(const char *filename);
+extern Command cmd_say;
+
+/* Plugin Functions _________________________________________________________ */
+int plugin_load(void) {
+  int i;
+
+  for (i = 0; specprocs[i].name; i++)
+    register_special(specprocs[i].name, specprocs[i].bits, specprocs[i].fn);
+
+  if (mud.state == game_running)
+    load_spec(LINDREL_SPC_FILE);
+
+  return (0);
+}
+
+int plugin_unload(void) {
+  int i;
+
+  for (i = 0; specprocs[i].name; i++)
+    unregister_special(specprocs[i].name);
+
+  return (0);
+}
+
+/* Special Procedures _______________________________________________________ */
+SPECIAL(ellora) {
+  Character *mob = me;
+  Character *vict;
+
+  switch (SPEC_EVENT) {
+    case spEvRound:
+      if (GET_POS(mob) != POS_FIGHTING)
+	return (false);
+
+      LIST_FOR(IN_ROOM(mob)->people, vict, l_room)
+	if (FIGHTING(vict) == mob && !number(0, 4))
+	  break;
+
+      if (vict == NULL && IN_ROOM(FIGHTING(mob)) == IN_ROOM(mob))
+	vict = FIGHTING(mob);
+
+      if (vict == NULL)
+	return (true);
+
+      if (number(0, 1) == 0)
+	cast_spell(mob, vict, NULL, SPELL_FIREBALL);
+
+      if (number(0, 1) == 0)
+	cast_spell(mob, vict, NULL, SPELL_CURSE);
+
+      return (true);
+
+    case spEvPulse:
+      if (FIGHTING(mob))
+	return (false);
+
+      if (GET_POS(mob) != POS_STANDING)
+	return (false);
+
+      LIST_FOR(IN_ROOM(mob)->people, vict, l_room)
+	if (CAN_SEE(mob, vict) && IS_MOB(vict) && GET_MOB_VNUM(vict) == ELDORA_VNUM)
+	  break;
+
+      if (vict) {
+	if (FIGHTING(vict) && GET_HIT(vict) < (GET_MAX_HIT(vict) * .75)) {
+	  hit(mob, FIGHTING(vict), TYPE_UNDEFINED);
+	  return (true);
+	}
+      }
+      return (false);
+
+    default:
+      break;
+  }
+
+  return (false);
+}
+
+SPECIAL(eldora) {
+  Character *mob = me;
+  Character *vict;
+
+  switch (SPEC_EVENT) {
+    case spEvRound:
+      if (GET_POS(mob) != POS_FIGHTING)
+	return (false);
+
+      LIST_FOR(IN_ROOM(mob)->people, vict, l_room)
+	if (FIGHTING(vict) == mob && !number(0, 4))
+	  break;
+
+      if (vict == NULL && IN_ROOM(FIGHTING(mob)) == IN_ROOM(mob))
+	vict = FIGHTING(mob);
+
+      if (vict == NULL)
+	return (true);
+
+      if (number(0, 1) == 0)
+	cast_spell(mob, vict, NULL, SPELL_FURY_OF_AIR);
+
+      if (number(0, 1) == 0)
+	cast_spell(mob, vict, NULL, SPELL_BLINDNESS);
+
+      return (true);
+
+    case spEvPulse:
+      if (FIGHTING(mob))
+	return (false);
+
+      if (GET_POS(mob) != POS_STANDING)
+	return (false);
+
+      LIST_FOR(IN_ROOM(mob)->people, vict, l_room)
+	if (CAN_SEE(mob, vict) && IS_MOB(vict) && GET_MOB_VNUM(vict) == ELLORA_VNUM)
+	  break;
+
+      if (vict) {
+	if (FIGHTING(vict) && GET_HIT(vict) < (GET_MAX_HIT(vict) * .75)) {
+	  hit(mob, FIGHTING(vict), TYPE_UNDEFINED);
+	  return (true);
+	}
+      }
+      return (false);
+
+    default:
+      break;
+  }
+
+  return (false);
+}
+
+SPECIAL(arando) {
+  Character *mob = me;
+  Character *vict;
+
+  int dir;
+  Room *was_in;
+
+  switch (SPEC_EVENT) {
+    case spEvRound:
+      if (GET_POS(mob) != POS_FIGHTING)
+	break;
+
+      LIST_FOR(IN_ROOM(mob)->people, vict, l_room)
+	if (FIGHTING(vict) == mob && !number(0, 4))
+	  break;
+
+      if (vict == NULL && IN_ROOM(FIGHTING(mob)) == IN_ROOM(mob))
+	vict = FIGHTING(mob);
+
+      if (vict == NULL)
+	return (true);
+
+      if (number(0, 1) == 0)
+	cast_spell(mob, vict, NULL, SPELL_CHILL_TOUCH);
+
+      return (true);
+
+    case spEvArrive:
+      if (!AWAKE(mob) || IN_ROOM(mob)->vnum != ZONE_ITEM(28))
+	break;
+      if (IS_NPC(ch))
+	break;
+
+      dir = va_arg(ap, int);
+      was_in = va_arg(ap, Room *);
+
+      if (was_in->vnum == ZONE_ITEM(34)) {
+	CALL_COMMAND(mob, cmd_say, "Eu falei pra você não entrar!!! Saia da minha frente!");
+	remember(mob, ch);
+	GET_MOB_VAL(mob, 0) = 0;
+      }
+
+      break;
+
+    case spEvDepart:
+      if (!AWAKE(mob) || IN_ROOM(mob)->vnum != ZONE_ITEM(28))
+	break;
+      if (IS_NPC(ch))
+	break;
+
+      dir = va_arg(ap, int);
+      if (dir == NORTH)
+	CALL_COMMAND(mob, cmd_say, "Hei! Onde você pensa que vai???");
+
+      forget(mob, ch);
+
+      break;
+
+    case spEvPulse:
+      if (!AWAKE(mob) || IN_ROOM(mob)->vnum != ZONE_ITEM(28))
+	break;
+      if (FIGHTING(mob))
+	break;
+
+      LIST_FOR(IN_ROOM(mob)->people, vict, l_room)
+	if (IS_PC(vict) && in_memory(mob, vict))
+	  break;
+
+      if (vict == NULL) {
+	GET_MOB_VAL(mob, 0) = 0;
+	clear_mob_memory(mob);
+	break;
+      }
+
+      if (GET_MOB_VAL(mob, 0)++) {
+	if (GET_POS(mob) == POS_STANDING) {
+	  CALL_COMMAND(mob, cmd_say, "Eu avisei!!!");
+	  hit(mob, vict, TYPE_UNDEFINED);
+	}
+	clear_mob_memory(mob);
+      }
+      return (true);
+
+    default:
+      break;
+  }
+
+  return (false);
+}
+
+SPECIAL(tree) {
+  Object *obj, *tree = me;
+  ObjProto *fruit;
+  Character *tch;
+  int count = 0;
+
+  if (tree->in_room == NULL)
+    return (false);
+
+  switch (SPEC_EVENT) {
+    case spEvPulse:
+      if (number(0, 4))
+	break;
+
+      LIST_FOR(tree->in_room->people, tch, l_room)
+	if (IS_PC(tch) && GET_LEVEL(tch) < LVL_IMMORT)
+	  count++;
+
+      if (count == 0)
+	break;
+
+      if ((fruit = get_obj_by_vnum(GET_OBJ_VAL(tree, 0))) == NULL)
+	break;
+
+      obj = create_object(fruit);
+      obj_to_room(obj, tree->in_room);
+
+      if (number(0, 1)) {
+	act("$p cai de $P no chão.", FALSE, NULL, obj, tree, TO_ROOM);
+      } else {
+	count = number(0, count-1);
+	LIST_FOR(tree->in_room->people, tch, l_room)
+	  if (IS_PC(tch) && GET_LEVEL(tch) < LVL_IMMORT && count-- == 0)
+	    break;
+	act("$p cai sobre a sua cabeça! Ai!", FALSE, tch, obj, tree, TO_CHAR);
+	act("$p cai de $P na cabeça de $n.", FALSE, tch, obj, tree, TO_ROOM);
+	damage(tch, tch, 2 * GET_OBJ_WEIGHT(obj), TYPE_UNDEFINED);
+      }
+      break;
+
+    default:
+      break;
+  }
+
+  return (false);
+}
+
+/* vim: set ts=8 sw=2: */
+/* vim600: set fdm=marker fdc=3: */
+/* ----------------------------=== VitaliaMUD ===---------------------------- *
+ *   File: svarga-spec.c
+ *  Usage: (PLUGIN) Specprocs for the Svarga zone (116)
+ *
+ * Part of VitaliaMUD source code, Copyright (C) 2000 - Juliano Ravasi Ferraz
+ * Copyright (C) 2000-2003 - Juliano Ravasi Ferraz -= All rights reserved =-
+ * -------------------------------------------------------------------------- */
+
+#include "common.h"
+#include "character.h"
+#include "mobile.h"
+#include "object.h"
+#include "zone.h"
+#include "room.h"
+#include "special.h"
+#include "db.h"
+#include "utils.h"
+
+PLUGIN_HANDLE("svarga-spec");
+PLUGIN_NAME("SpecProcs da área Svarga (116)");
+
+
+/* Macros and Definitions ___________________________________________________ */
+#define ZONE_VNUM		116
+#define ZONE_SPC_FILE		SPC_PREFIX "116.spc"
+
+#define ZONE_ITEM(item)		(ZONE_VNUM*100+(item))
+
+
+/* Local special procedures _________________________________________________ */
+specproc_func kanakajja;
+specproc_func river;
+
+static const struct {
+  const char *name;
+  bitvector_t bits;
+  specproc_func *fn;
+} specprocs[] = {
+  { "svarga:kanakajja", spMobile | spEventDrv, kanakajja },
+  { NULL, 0, NULL }
+};
+
+
+/* External functions _______________________________________________________ */
+void load_spec(const char *filename);
+extern Command cmd_say;
+
+
+/* Plugin Functions _________________________________________________________ */
+int plugin_load(void) {
+  int i;
+
+  for (i = 0; specprocs[i].name; i++)
+    register_special(specprocs[i].name, specprocs[i].bits, specprocs[i].fn);
+
+  if (mud.state == game_running)
+    load_spec(ZONE_SPC_FILE);
+
+  return (0);
+}
+
+int plugin_unload(void) {
+  int i;
+
+  for (i = 0; specprocs[i].name; i++)
+    unregister_special(specprocs[i].name);
+
+  return (0);
+}
+
+
+/* Special Procedures _______________________________________________________ */
+SPECIAL(kanakajja) {
+  Character *mob = me;
+  int dir;
+
+  if (IN_ROOM(mob)->vnum != ZONE_ITEM(42))
+    return (false);
+  if (IS_NPC(ch))
+    return (false);
+
+  switch (SPEC_EVENT) {
+    case spEvArrive:
+      if (!AWAKE(mob))
+	return (false);
+
+      act("$n disse, 'Não é permitido, para o bem de todos, que se vá além daqui nesse rio.'", false, mob, NULL, ch, TO_VICT);
+      break;
+
+    case spEvDepart:
+      if (!AWAKE(mob))
+	return (false);
+
+      dir = va_arg(ap, int);
+
+      if (dir == SOUTH) {
+	act("$n disse, 'Ir além é possível. Mas não posso permitir. Perigos demais.'", false, mob, NULL, NULL, TO_ROOM);
+	return (true);
+      }
+      break;
+
+    case spEvFight:
+      act("$n disse, 'Imprudente, sofrerás agora de qualquer maneira.'", false, mob, NULL, NULL, TO_ROOM);
+      break;
+
+    case spEvKill:
+      act("$n disse, 'Regozije-se desta morte. Poupei-lhe de uma pior.'", false, mob, NULL, NULL, TO_ROOM);
+      break;
+
+    case spEvDeath:
+      act("$n disse, 'Prepare-se agora para seu merecido castigo. Eu avisei.'", false, mob, NULL, NULL, TO_ROOM);
+      break;
+
+    default:
+      break;
+  }
+
+  return (false);
+}
+
+/* vim: set ts=8 sw=2: */
+/* vim600: set fdm=marker fdc=3: */
+/* ----------------------------=== VitaliaMUD ===---------------------------- *
+ *   File: spec_procs.c
+ *  Usage: implementation of special procedures for mobiles/objects/rooms
+ *
+ * Originally from CircleMUD 3.0 bpl 11.
+ * All rights reserved.  See license.doc for complete information.
+ * Copyright (C) 1993, 94 by the Trustees of the Johns Hopkins University
+ * CircleMUD is based on DikuMUD, Copyright (C) 1990, 1991.
+ * -------------------------------------------------------------------------- */
+
+#include "common.h"
+#include "descriptor.h"
+#include "player.h"
+#include "zone.h"
+#include "mobile.h"
+#include "object.h"
+#include "room.h"
+#include "class.h"
+
+#include "informative.h"
+#include "interpreter.h"
+#include "special.h"
+#include "handler.h"
+#include "fight.h"
+#include "db.h"
+#include "spells.h"
+#include "constants.h"
+
+/* External variables _______________________________________________________ */
+extern struct spell_info_type spell_info[];
+extern int prac_params[NUM_CLASSES][3];
+extern int guild_info[][3];
+extern Command cmd_practice, cmd_say, cmd_drop;
+extern Command cmd_list, cmd_buy;
+extern Command cmd_open, cmd_close, cmd_unlock, cmd_lock;
+extern Command cmd_balance, cmd_deposit, cmd_withdraw;
+
+/* External function prototypes _____________________________________________ */
+void perform_give(Character *, Character *, Object *);
+void castle_spec_reg(void);
+int perform_get_from_room(Character *, Object *);
+
+/* Local global procedure references ________________________________________ */
+SpecProc *dump_special = NULL;		/* Dump special proc */
+SpecProc *bank_special = NULL;		/* Bank special proc */
+SpecProc *mail_special = NULL;		/* Postmaster special proc */
+
+/* Local special procedures _________________________________________________ */
+specproc_func guild;
+specproc_func mayor;
+specproc_func snake;
+specproc_func thief;
+specproc_func magic_user;
+specproc_func magic_mmissile;
+specproc_func magic_cspray;
+specproc_func magic_ctouch;
+specproc_func magic_lbolt;
+specproc_func guild_guard;
+specproc_func puff;
+specproc_func fido;
+specproc_func janitor;
+specproc_func cityguard;
+specproc_func death_90;
+specproc_func dump;
+specproc_func waters;
+specproc_func pet_shops;
+specproc_func show_head_room;
+specproc_func magik;
+specproc_func flow;
+specproc_func bank;
+specproc_func autodestruct;
+specproc_func blug_staff_s;
+specproc_func blug_staff_f;
+
+specproc_func angels;
+specproc_func evil_boss;
+specproc_func room_9823;
+specproc_func scroll_9808;
+specproc_func elven_mayor;
+specproc_func elven_28;
+specproc_func elven_27;
+specproc_func elven_22;
+specproc_func elven_12;
+specproc_func card_golem;
+specproc_func card_garoto;
+specproc_func mob_401;
+specproc_func mob_11103;
+specproc_func scroll_24400;
+specproc_func scroll_3118;
+specproc_func object_16009;
+specproc_func horacio;
+specproc_func honireves;
+
+
+/* External special procedures ______________________________________________ */
+specproc_func postmaster;
+specproc_func clan_guard;
+
+
+/* Functions ________________________________________________________________ */
+void local_spec_reg(void)
+{
+  /* Mobiles */
+  register_special("guild",	   spMobile | spCmdDrv,		guild);
+  register_special("mayor",	   spMobile | spPulseDrv,	mayor);
+  register_special("snake",	   spMobile | spEventDrv,	snake);
+  register_special("thief",	   spMobile | spPulseDrv,	thief);
+  register_special("magic_user",   spMobile | spEventDrv,	magic_user);
+  register_special("magic:mmissile", spMobile | spEventDrv,	magic_mmissile);
+  register_special("magic:cspray", spMobile | spEventDrv,	magic_cspray);
+  register_special("magic:ctouch", spMobile | spEventDrv,	magic_ctouch);
+  register_special("magic:lbolt",  spMobile | spEventDrv,	magic_lbolt);
+  register_special("guild_guard",  spMobile | spEventDrv,	guild_guard);
+  register_special("puff",	   spMobile | spPulseDrv,	puff);
+  register_special("fido",	   spMobile | spPulseDrv,	fido);
+  register_special("janitor",	   spMobile | spPulseDrv,	janitor);
+  register_special("cityguard",	   spMobile | spPulseDrv,	cityguard);
+  register_special("death:90",	   spMobile | spPulseDrv | spEventDrv, death_90);
+  register_special("postmaster",   spMobile | spCmdDrv,		postmaster);
+  register_special("clan:guard",   spMobile | spEventDrv,	clan_guard);
+  register_special("horacio",	   spMobile | spPulseDrv,	horacio);
+  register_special("honireves",	   spMobile | spPulseDrv,	honireves);
+
+  /* Rooms */
+  register_special("dump",	   spRoom | spCmdDrv,		dump);
+  register_special("waters",	   spRoom | spCmdDrv,		waters);
+  register_special("pet-shop",	   spRoom | spCmdDrv,		pet_shops);
+  register_special("show-head-room", spRoom | spEventDrv,	show_head_room);
+  register_special("magik",        spRoom | spEventDrv,         magik);
+  register_special("flow",         spRoom | spPulseDrv,         flow);
+
+  /* Objects */
+  register_special("bank",	   spObject | spCmdDrv,		bank);
+  register_special("autodestruct", spObject | spEventDrv,	autodestruct);
+  register_special("blug-staff-s", spObject | spPulseDrv | spEventDrv, blug_staff_s);
+  register_special("blug-staff-f", spObject | spPulseDrv | spEventDrv, blug_staff_f);
+
+  /* Areas 97 and 98 */
+  register_special("angels",	   spMobile | spEventDrv,	angels);
+  register_special("evil-boss",	   spMobile | spEventDrv,	evil_boss);
+  register_special("room:9823",	   spRoom   | spEventDrv,	room_9823);
+  register_special("scroll:9808",  spObject | spEventDrv,	scroll_9808);
+
+  /* Area 190 */
+  register_special("elven:mayor",  spMobile | spPulseDrv,	elven_mayor);
+  register_special("elven:28",	   spMobile | spEventDrv,	elven_28);
+  register_special("elven:27",	   spMobile | spPulseDrv | spEventDrv, elven_27);
+  register_special("elven:22",	   spMobile | spPulseDrv | spEventDrv, elven_22);
+  register_special("elven:12",	   spMobile | spPulseDrv | spEventDrv, elven_12);
+
+  /* Area 38 */
+  register_special("card:golem",   spMobile | spEventDrv,	card_golem);
+  register_special("card:garoto",  spMobile | spPulseDrv,	card_garoto);
+
+  /* Other */
+  register_special("mob:401",	   spMobile | spEventDrv | spPulseDrv, mob_401);
+  register_special("mob:11103",	   spMobile | spEventDrv | spPulseDrv, mob_11103);
+  register_special("scroll:24400", spObject | spEventDrv,	scroll_24400);
+  register_special("scroll:3118",  spObject | spEventDrv,	scroll_3118);
+  register_special("object:16009", spObject | spEventDrv,	object_16009);
+
+  /* Other sources */
+  castle_spec_reg();		/* Welmar castle specs in castle.c */
+
+  /* Global reference to some special procedures */
+  dump_special = find_special("dump", 0);
+  bank_special = find_special("bank", 0);
+  mail_special = find_special("postmaster", 0);
+}
+
+
+void assign_death_traps(void)
+{
+  Zone *zone;
+  Room *room;
+
+  if (mud.opt.dump_dts)
+    LIST_FOR(zones, zone, zone_list) LIST_FOR(zone->rooms, room, in_zone)
+      if (ROOM_FLAGGED(room, ROOM_DEATH))
+	raw_assign_room_special(room, dump_special);
+}
+
+
+/* Special procedures _______________________________________________________ */
+
+
+/* ************************************************************************** *
+ *  Special procedures for mobiles
+ * ************************************************************************** */
+
+
+int spell_sort_info[MAX_SKILLS + 1];
+
+int compare_spells(const void *x, const void *y)
+{
+  int	a = *(const int *)x,
+	b = *(const int *)y;
+
+  return strcmp(spell_info[a].name, spell_info[b].name);
+}
+
+void sort_spells(void)
+{
+  int a;
+
+  /* initialize array, avoiding reserved. */
+  for (a = 1; a <= MAX_SKILLS; a++)
+    spell_sort_info[a] = a;
+
+  qsort(&spell_sort_info[1], MAX_SKILLS, sizeof(int), compare_spells);
+}
+
+const char *how_good(int percent)
+{
+  static const struct {
+    int lim;
+    char *str;
+  } strings[] = {
+    {   0, "(desconhecida)"	 },
+    {  10, "(péssima)"		 },
+    {  20, "(ruim)"		 },
+    {  40, "(fraca)"		 },
+    {  55, "(média)"		 },
+    {  70, "(razoável)"		 },
+    {  80, "(bom)"		 },
+    {  85, "(muito bom)"	 },
+    {  99, "(excelente)"	 },
+    { 100, "(mestre)"		 }
+  };
+
+  int i;
+
+  for (i = 0; strings[i].lim < 100 && strings[i].lim < percent; i++);
+  return (strings[i].str);
+}
+
+void list_skills(Character * ch)
+{
+  int i, t, sortpos;
+  int c[3] = { 0 };
+  string *mstr, *str[3];
+
+  if (IS_NPC(ch) || !DESC(ch))
+    return;
+
+  mstr = sstrnew(0);
+  sstrsetf(mstr, SSTR_STREAM);
+
+  str[0] = sstrnew(0);
+  sstrsetf(str[0], SSTR_STREAM);
+
+  str[1] = sstrnew(0);
+  sstrsetf(str[1], SSTR_STREAM);
+
+  str[2] = sstrnew(0);
+  sstrsetf(str[2], SSTR_STREAM);
+
+  if (!GET_PRACTICES(ch))
+    sstrcpy(mstr, "Você não possui créditos, e não pode mais praticar.\r\n");
+  else
+    ssprintf(mstr, "Você possui %d %s para praticar.\r\n",
+	     GET_PRACTICES(ch), PLURAL(GET_PRACTICES(ch), "crédito", "créditos"));
+
+  ssprintf(str[0], "%s&WVocê conhece as seguintes habilidades:&n\r\n",
+	   !PRF_FLAGGED(ch, PRF_COMPACT) ? "\r\n" : "");
+  ssprintf(str[1], "%s&WVocê conhece as seguintes canções:&n\r\n",
+	   !PRF_FLAGGED(ch, PRF_COMPACT) ? "\r\n" : "");
+  ssprintf(str[2], "%s&WVocê conhece as seguintes magias:&n\r\n",
+	   !PRF_FLAGGED(ch, PRF_COMPACT) ? "\r\n" : "");
+
+  for (sortpos = 1; sortpos <= MAX_SKILLS; sortpos++) {
+    i = spell_sort_info[sortpos];
+
+    if (spell_info[i].name == unused_spellname)
+      continue;
+
+    if (!GET_SKILL_PRAC(ch, i) && !SKL_FLAGGED(ch, i, SKL_RETAIN) &&
+	GET_LEVEL(ch) < spell_info[i].min_level[(int) GET_CLASS(ch)])
+      continue;
+
+    t = (i <= MAX_SPELLS) + (i <= MAX_CHANSONS);
+    ssprintf(str[t], "%-20s %-14s%s",
+	      spell_info[i].name, how_good(GET_SKILL_PRAC(ch, i)),
+	      ++c[t] % 2 ? "     " : "\r\n");
+  }
+
+  for (t = 0; t < 3; t++) {
+    if (!c[t])
+      continue;
+
+    if (c[t] % 2)
+      sstrcat(str[t], "\r\n");
+
+    sstrcat(mstr, str[t]);
+  }
+
+  pager_start(DESC(ch), create_pager(mstr, false));
+
+  sstrunref(mstr);
+  sstrunref(str[0]);
+  sstrunref(str[1]);
+  sstrunref(str[2]);
+}
+
+
+SPECIAL(guild)
+{
+  Command *cmd;
+  char *argument;
+  int skill_num, percent;
+  int max_learn;
+
+  if (IS_NPC(ch) || SPEC_EVENT != spEvCommand)
+    return (0);
+
+  cmd = va_arg(ap, Command *);
+  argument = va_arg(ap, char *);
+
+  if (cmd != &cmd_practice)
+    return (0);
+
+  skip_spaces(&argument);
+
+  if (!*argument) {
+    list_skills(ch);
+    return (1);
+  }
+  if (GET_PRACTICES(ch) <= 0) {
+    act("Você não parece estar apt$r a praticar agora.", FALSE, ch, NULL, NULL, TO_CHAR);
+    return (1);
+  }
+
+  skill_num = find_skill_num(argument);
+
+  if (skill_num < 1) {
+    ch_printf(ch, "Você não conhece nenhuma habilidade com esse nome.\r\n");
+    return (1);
+  }
+  if (GET_LEVEL(ch) < spell_info[skill_num].min_level[(int) GET_CLASS(ch)]) {
+    ch_printf(ch, "Você ainda não é capaz de aprender tal %s.\r\n",
+	      PRAC_NAME(skill_num));
+    return (1);
+  }
+
+  max_learn =
+    GET_LEVEL(ch) >= LVL_DEMIGOD ? GOD_LEARNED_PERC :
+    GET_LEVEL(ch) >= LVL_IMMORT ? IMM_LEARNED_PERC :
+    MIN(LEARNED(ch), spell_info[skill_num].max_learn);
+
+  if (SKL_FLAGGED(ch, skill_num, SKL_BLOCK)) {
+    act("$N se nega a ensinar essa habilidade a você.",
+	FALSE, ch, NULL, (Character *) me, TO_CHAR);
+    return (1);
+  }
+  if (GET_SKILL_PRAC(ch, skill_num) >= max_learn) {
+    ch_printf(ch, "Você já conhece totalmente essa %s.\r\n",
+	      PRAC_NAME(skill_num));
+    return (1);
+  }
+  act("Você pratica por alguns instantes...", FALSE, ch, NULL, NULL, TO_CHAR);
+
+  sprintf(buf, "$n pratica a %s %s.",
+	  PRAC_NAME(skill_num), skill_name(skill_num));
+  act(buf, FALSE, ch, NULL, NULL, TO_ROOM);
+  GET_PRACTICES(ch)--;
+
+  percent = GET_SKILL_PRAC(ch, skill_num);
+  percent += MIN(MAXGAIN(ch), MAX(MINGAIN(ch), int_app[GET_INT(ch)].learn));
+
+  GET_SKILL_PRAC(ch, skill_num) = MIN(max_learn, percent);
+
+  if (GET_SKILL_PRAC(ch, skill_num) >= max_learn)
+    ch_printf(ch, "Agora você conhece totalmente essa %s.\r\n",
+	      PRAC_NAME(skill_num));
+
+  return (1);
+}
+
+
+SPECIAL(mayor)
+{
+  Character *mob = me;
+
+  const char open_path[] =
+	"W3a3003b33000c111d00d111Oe333333Oe22c222112212111a1S.";
+
+  const char close_path[] =
+	"W3a3003b33000c111d00d111CE333333CE22c222112212111a1S.";
+
+  static const char *path = NULL;
+  static int index;
+  static bool move = FALSE;
+
+  if (!move) {
+    if (mud.time.hours == 6) {
+      move = TRUE;
+      path = open_path;
+      index = 0;
+    } else if (mud.time.hours == 20) {
+      move = TRUE;
+      path = close_path;
+      index = 0;
+    }
+  }
+  if (!move || (GET_POS(mob) < POS_SLEEPING) ||
+      (GET_POS(mob) == POS_FIGHTING))
+    return (FALSE);
+
+  if (AFF_FLAGGED(mob, AFF_BLIND) ||
+      AFF_FLAGGED(mob, AFF_CHARM) ||
+      AFF_FLAGGED(mob, AFF_PARALYSE))
+    return (FALSE);
+
+  switch (path[index]) {
+    case '0':
+    case '1':
+    case '2':
+    case '3':
+      if (GET_POS(mob) < POS_STANDING)
+	return (FALSE);
+      perform_move(mob, path[index] - '0', 1);
+      break;
+
+    case 'W':
+      GET_POS(mob) = POS_STANDING;
+      act("$n acorda e boceja.", FALSE, mob, 0, 0, TO_ROOM);
+      break;
+
+    case 'S':
+      GET_POS(mob) = POS_SLEEPING;
+      act("$n senta-se e instantaneamente cai no sono.", FALSE, mob, 0, 0, TO_ROOM);
+      break;
+
+    case 'a':
+      act("$n disse 'Olá Margarida!'", FALSE, mob, 0, 0, TO_ROOM);
+      act("$n sorri.", FALSE, mob, 0, 0, TO_ROOM);
+      break;
+
+    case 'b':
+      act("$n disse 'Que visão!  Eu preciso fazer algo com este depósito!'",
+	  FALSE, mob, 0, 0, TO_ROOM);
+      break;
+
+    case 'c':
+      act("$n disse 'Vândalos!  Os adolescentes de hoje em dia não respeitam mais nada!'",
+	  FALSE, mob, 0, 0, TO_ROOM);
+      break;
+
+    case 'd':
+      act("$n disse 'Bom dia, cidadãos!'", FALSE, mob, 0, 0, TO_ROOM);
+      break;
+
+    case 'e':
+      act("$n disse 'Eu declaro esta cidade aberta!'", FALSE, mob, 0, 0, TO_ROOM);
+      break;
+
+    case 'E':
+      act("$n disse 'Eu declaro Midgaard fechada!'", FALSE, mob, 0, 0, TO_ROOM);
+      break;
+
+    case 'O':
+      CALL_COMMAND(mob, cmd_unlock, "portao");
+      CALL_COMMAND(mob, cmd_open, "portao");
+      break;
+
+    case 'C':
+      CALL_COMMAND(mob, cmd_close, "portao");
+      CALL_COMMAND(mob, cmd_lock, "portao");
+      break;
+
+    case '.':
+      move = FALSE;
+      break;
+  }
+
+  index++;
+  return (FALSE);
+}
+
+
+SPECIAL(snake)
+{
+  Character *mob = me;
+
+  if (SPEC_EVENT != spEvRound || !FIGHTING(mob))
+    return (FALSE);
+
+  if (GET_POS(mob) != POS_FIGHTING)
+    return (FALSE);
+
+  /* XXX: weird number()... */
+  if (IN_ROOM(FIGHTING(mob)) == IN_ROOM(mob) &&
+      number(0, 42 - GET_LEVEL(mob)) == 0) {
+    act("$n morde $N!", 1, mob, 0, FIGHTING(mob), TO_NOTVICT);
+    act("$n morde você!", 1, mob, 0, FIGHTING(mob), TO_VICT);
+    call_magic(mob, FIGHTING(mob), 0, SPELL_POISON, GET_LEVEL(mob), CAST_SPELL);
+    return (TRUE);
+  }
+  return (FALSE);
+}
+
+
+void npc_steal(Character * ch, Character * victim)
+{
+  int gold;
+
+  if (IS_NPC(victim))
+    return;
+  if (GET_LEVEL(victim) >= LVL_IMMORT)
+    return;
+  if (!CAN_SEE(ch, victim))
+    return;
+
+  if (AWAKE(victim) && (number(0, GET_LEVEL(ch)) == 0)) {
+    act("Você descobre que $n está com as mãos em seu bolso.", FALSE, ch, 0, victim, TO_VICT);
+    act("$n tenta roubar dinheiro de $N.", TRUE, ch, 0, victim, TO_NOTVICT);
+  } else {
+    /* Steal some gold coins */
+    gold = (int) ((GET_GOLD(victim) * number(1, 10)) / 100);
+    if (gold > 0) {
+      GET_GOLD(ch) += gold;
+      GET_GOLD(victim) -= gold;
+    }
+  }
+}
+
+
+SPECIAL(thief)
+{
+  Character *mob = me;
+  Character *cons;
+
+  if (GET_POS(mob) != POS_STANDING)
+    return (FALSE);
+
+  LIST_FOR(IN_ROOM(mob)->people, cons, l_room)
+    if (!IS_NPC(cons) && (GET_LEVEL(cons) < LVL_IMMORT) && (!number(0, 4))) {
+      npc_steal(mob, cons);
+      return (TRUE);
+    }
+
+  return (FALSE);
+}
+
+
+SPECIAL(magic_user)
+{
+  Character *mob = me;
+  Character *vict;
+
+  if (SPEC_EVENT != spEvRound)
+    return (FALSE);
+
+  if (GET_POS(mob) != POS_FIGHTING)
+    return (FALSE);
+
+  /* pseudo-randomly choose someone in the room who is fighting me */
+  LIST_FOR(IN_ROOM(mob)->people, vict, l_room)
+    if (FIGHTING(vict) == mob && !number(0, 4))
+      break;
+
+  /* if I didn't pick any of those, then just slam the guy I'm fighting */
+  if (vict == NULL && IN_ROOM(FIGHTING(mob)) == IN_ROOM(mob))
+    vict = FIGHTING(mob);
+
+  /* Hm...didn't pick anyone...I'll wait a round. */
+  if (vict == NULL)
+    return (TRUE);
+
+  if ((GET_LEVEL(mob) > 13) && (number(0, 10) == 0))
+    cast_spell(mob, vict, NULL, SPELL_POISON);
+
+  if ((GET_LEVEL(mob) > 7) && (number(0, 8) == 0))
+    cast_spell(mob, vict, NULL, SPELL_BLINDNESS);
+
+  if ((GET_LEVEL(mob) > 12) && (number(0, 12) == 0)) {
+    if (IS_EVIL(mob))
+      cast_spell(mob, vict, NULL, SPELL_ENERGY_DRAIN);
+    else if (IS_GOOD(mob))
+      cast_spell(mob, vict, NULL, SPELL_DISPEL_EVIL);
+  }
+  if (number(0, 4))
+    return (TRUE);
+
+  switch (GET_LEVEL(mob)) {
+    case 4:
+    case 5:
+      cast_spell(mob, vict, NULL, SPELL_MAGIC_MISSILE);
+      break;
+    case 6:
+    case 7:
+      cast_spell(mob, vict, NULL, SPELL_CHILL_TOUCH);
+      break;
+    case 8:
+    case 9:
+      cast_spell(mob, vict, NULL, SPELL_BURNING_HANDS);
+      break;
+    case 10:
+    case 11:
+      cast_spell(mob, vict, NULL, SPELL_SHOCKING_GRASP);
+      break;
+    case 12:
+    case 13:
+      cast_spell(mob, vict, NULL, SPELL_LIGHTNING_BOLT);
+      break;
+    case 14:
+    case 15:
+    case 16:
+    case 17:
+      cast_spell(mob, vict, NULL, SPELL_COLOR_SPRAY);
+      break;
+    default:
+      cast_spell(mob, vict, NULL, SPELL_FIREBALL);
+      break;
+  }
+  return (TRUE);
+}
+
+
+static int magic_mobile(long event, Character *mob, Character *ch, int spell)
+{
+  Character *vict;
+
+  if (SPEC_EVENT != spEvRound)
+    return (FALSE);
+
+  if (GET_POS(mob) != POS_FIGHTING)
+    return (FALSE);
+
+  /* pseudo-randomly choose someone in the room who is fighting me */
+  LIST_FOR(IN_ROOM(mob)->people, vict, l_room)
+    if (FIGHTING(vict) == mob && !number(0, 4))
+      break;
+
+  /* if I didn't pick any of those, then just slam the guy I'm fighting */
+  if (vict == NULL && IN_ROOM(FIGHTING(mob)) == IN_ROOM(mob))
+    vict = FIGHTING(mob);
+
+  /* Hm...didn't pick anyone...I'll wait a round. */
+  if (vict == NULL)
+    return (FALSE);
+
+  cast_spell(mob, vict, NULL, spell);
+  return (TRUE);
+}
+
+SPECIAL(magic_mmissile)
+{
+  return (magic_mobile(event, (Character *) me, ch, SPELL_MAGIC_MISSILE));
+}
+
+SPECIAL(magic_cspray)
+{
+  return (magic_mobile(event, (Character *) me, ch, SPELL_COLOR_SPRAY));
+}
+
+SPECIAL(magic_ctouch)
+{
+  return (magic_mobile(event, (Character *) me, ch, SPELL_CHILL_TOUCH));
+}
+
+SPECIAL(magic_lbolt)
+{
+  return (magic_mobile(event, (Character *) me, ch, SPELL_LIGHTNING_BOLT));
+}
+
+
+SPECIAL(guild_guard)
+{
+  Character *guard = (Character *) me;
+  int i, dir;
+  const char *buf = "$n $R encara, e bloqueia sua passagem.";
+  const char *buf2 = "$n bloqueia a passagem de $N.";
+
+  if (SPEC_EVENT != spEvDepart)
+    return (FALSE);
+
+  if (AFF_FLAGGED(guard, AFF_BLIND))
+    return (FALSE);
+
+  if (GET_LEVEL(ch) >= LVL_IMMORT)
+    return (FALSE);
+
+  dir = va_arg(ap, int);
+
+  for (i = 0; guild_info[i][0] != -1; i++) {
+    if ((IS_NPC(ch) || GET_CLASS(ch) != guild_info[i][0]) &&
+	IN_ROOM(ch)->vnum == guild_info[i][1] &&
+	dir == guild_info[i][2]) {
+      act(buf, FALSE, guard, 0, ch, TO_VICT);
+      act(buf2, FALSE, guard, 0, ch, TO_NOTVICT);
+      return (TRUE);
+    }
+  }
+
+  return (FALSE);
+}
+
+
+SPECIAL(puff)
+{
+  Character *mob = me;
+
+  int i;
+  static char *speech[] = {
+    "Meu Deus!  Aqui está cheio de estrelas!",
+    "Como todos estes peixes vieram parar aqui?",
+    "Eu sou um dragão muito feminino.",
+    "Aqui está muito tranqüilo.",
+    "Hoje parece um dia perfeito para compras!",
+    "Sou uma garota tão ocupada...",
+    "Adoro as cores do arco-íris!",
+    "As vozes em minha cabeça querem que eu domine o mundo...",
+    "Vou escrever um poema... Sim! Falarei de flores. De flores perfumadas!",
+    "Vou viajar de cometa!",
+    "Prefiro comida sem conservantes!"
+  };
+
+  if ((i = number(0, 30)) < (sizeof speech / sizeof *speech)) {
+    CALL_COMMAND(mob, cmd_say, speech[i]);
+    return (1);
+  } else
+    return (0);
+}
+
+
+SPECIAL(fido)
+{
+  Character *mob = me;
+  Object *i, *temp, *next_obj;
+
+  if (!AWAKE(mob))
+    return (FALSE);
+
+  LIST_FOR(IN_ROOM(mob)->contents, i, l_content) {
+    if (GET_OBJ_TYPE(i) == ITEM_CORPSE && !GET_OBJ_VAL(i, 0)) {
+      act("$n brutalmente devora $p.", FALSE, mob, i, 0, TO_ROOM);
+      LIST_FOR_SECURE(i->contains, temp, next_obj, l_content) {
+	obj_from_obj(temp);
+	obj_to_room(temp, IN_ROOM(mob));
+      }
+      destroy_object(i);
+      return (TRUE);
+    }
+  }
+
+  return (FALSE);
+}
+
+
+SPECIAL(horacio)
+{
+  Character *mob = me;
+
+  int i;
+  static char *speech[] = {
+    "Está servido um bolinho de queijo bem quentinho?",
+    "O ponche de néctar está incrível, senhor. Gostaria de prová-lo?",
+    "Gostaria de provar uma fatia do melhor bolo do mundo?",
+    "Os canapés de camarão estão inigualáveis!! Aceitaria um?",
+    "O brigadeiro está absolutamente inesquecível! Estaria servido de um?",
+    "A massa-folhada do pastel está derretendo na boca! Que tal comer um?",
+    "O champagne está na temperatura ideal, bem gelada. Gostaria de uma taça?",
+    "Os docinhos estão especialmente saborosos. Quer provar um?"
+  };
+
+  if ((i = number(0, 30)) < (sizeof speech / sizeof *speech)) {
+    CALL_COMMAND(mob, cmd_say, speech[i]);
+    return (1);
+  } else
+    return (0);
+}
+
+
+SPECIAL(honireves)
+{
+  Character *mob = me;
+
+  int i;
+  static char *speech[] = {
+    "Olá amigo, eu lhe desejo Paz e lhe ofereço uma das minhas mensagens de Luz",
+    "Gostaria de levar para casa uma das minhas mensagens?",
+    "Estou com algumas mensagens aqui. São lindas. Gostaria de receber uma?"
+  };
+
+  if ((i = number(0, 30)) < (sizeof speech / sizeof *speech)) {
+    CALL_COMMAND(mob, cmd_say, speech[i]);
+    return (1);
+  } else
+    return (0);
+}
+
+
+SPECIAL(janitor)
+{
+  Character *mob = me;
+  Object *i;
+
+  if (!AWAKE(mob))
+    return (FALSE);
+
+  LIST_FOR(IN_ROOM(mob)->contents, i, l_content) {
+    if (!CAN_WEAR(i, ITEM_WEAR_TAKE))
+      continue;
+    if (GET_OBJ_TYPE(i) != ITEM_DRINKCON && GET_OBJ_COST(i) >= 50)
+      continue;
+    perform_get_from_room(mob, i);
+    return (TRUE);
+  }
+
+  return (FALSE);
+}
+
+
+SPECIAL(cityguard)
+{
+  Character *mob = me;
+  Character *tch, *evil = NULL;
+  int max_evil = 1000;
+
+  if (!AWAKE(mob) || FIGHTING(mob))
+    return (FALSE);
+
+  LIST_FOR(IN_ROOM(mob)->people, tch, l_room) {
+    if (IS_PC(tch) && CAN_SEE(mob, tch)) {
+      if (PLR_FLAGGED(tch, PLR_KILLER | PLR_THIEF)) {
+	act("$n grita 'EI!!!  Você é um FORA-DA-LEI!!!'", FALSE, mob, 0, 0, TO_ROOM);
+	hit(mob, tch, TYPE_UNDEFINED);
+	return (TRUE);
+      }
+    }
+  }
+
+  LIST_FOR(IN_ROOM(mob)->people, tch, l_room) {
+    if (CAN_SEE(mob, tch) && FIGHTING(tch)) {
+      if ((GET_ALIGNMENT(tch) < max_evil) &&
+	  (IS_NPC(tch) || IS_NPC(FIGHTING(tch)))) {
+	max_evil = GET_ALIGNMENT(tch);
+	evil = tch;
+      }
+    }
+  }
+
+  if (evil && GET_ALIGNMENT(FIGHTING(evil)) >= 0) {
+    act("$n grita 'PROTEJAM OS INOCENTES!  BANZAI!  ARARARAGGGHH!'", FALSE, mob, 0, 0, TO_ROOM);
+    hit(mob, evil, TYPE_UNDEFINED);
+    return (TRUE);
+  }
+
+  return (FALSE);
+}
+
+
+SPECIAL(death_90) {
+  Character *mob = (Character *) me;
+
+  switch (SPEC_EVENT) {
+    case spEvPulse:
+      if (FIGHTING(mob) || !AWAKE(mob))
+	break;
+      if (GET_MOB_VAL(mob, 0) == 0)
+	break;
+      switch (GET_MOB_VAL(mob, 0)++) {
+	case  1:
+	  act("$n disse, 'Por aqui passam os espíritos de todos os "
+	      "aventureiros que morreram durante suas batalhas. Não adianta "
+	      "tentar voltar. A entrada é muito bem protegida, para evitar "
+	      "que os mortos voltem para assombrar os vivos, ou vice-versa.'",
+	      FALSE, mob, NULL, NULL, TO_ROOM);
+	  break;
+	case  2:
+	  act("$n disse, 'Quando você morre, seu corpo é carregado até a "
+	      "Cabana da Ressurreição, e lá ele permanece para se "
+	      "reconstituir, com a ajuda da poderosa magia dos sacerdotes de "
+	      "Midgaard. Enquanto isso, seu espírito é trazido para cá, para "
+	      "que possa aguardar este demorado processo.'",
+	      FALSE, mob, NULL, NULL, TO_ROOM);
+	  break;
+	case  3:
+	  act("$n disse, 'Sete dias depois de morrer, seu corpo já deverá "
+	      "estar totalmente reconstituído, e você será ressuscitado pelos "
+	      "Deuses (isso equivale a 3 horas e meia na vida real).'",
+	      FALSE, mob, NULL, NULL, TO_ROOM);
+	  break;
+	case  4:
+	  act("$n disse, 'Também pode acontecer de outro aventureiro encontrar "
+	      "seu corpo e lhe ressuscitar usando magias muito poderosas, como "
+	      "\"raise dead\" ou \"ressurect\". Dessa forma, você não "
+	      "precisará esperar tanto tempo.'",
+	      FALSE, mob, NULL, NULL, TO_ROOM);
+	  break;
+	case  5:
+	  act("$n disse, 'Todos os bens que você carregava continuarão no seu "
+	      "corpo. Mas não se preocupe, pois os Deuses protegem os corpos "
+	      "dos aventureiros mortos para que eles não sejam roubados.'",
+	      FALSE, mob, NULL, NULL, TO_ROOM);
+	  break;
+	case  6:
+	  act("$n disse, 'Por outro lado, caso seu corpo tenha sido "
+	      "desintegrado na luta, não será possível reconstituí-lo, e você "
+	      "terá que esperar pacientemente até que um clérigo muito "
+	      "poderoso ou um Deus ressuscite você em um novo corpo.'",
+	      FALSE, mob, NULL, NULL, TO_ROOM);
+	  break;
+	case  7:
+	  act("$n disse, 'Agora você pode entrar para o Reino da Morte, "
+	      "enquanto espera pacientemente pela sua ressurreição.'",
+	      FALSE, mob, NULL, NULL, TO_ROOM);
+	  CALL_COMMAND(mob, cmd_open, "portao");
+	  act("$n disse, 'Tenha uma boa morte!!'",
+	      FALSE, mob, NULL, NULL, TO_ROOM);
+	  break;
+	case  8: {
+	  int num = 0;
+	  Character *tch;
+
+	  LIST_FOR(IN_ROOM(mob)->people, tch, l_room)
+	    if (IS_PC(tch) && IS_DEAD(tch))
+	      num++;
+
+	  if (num) {
+	    GET_MOB_VAL(mob, 0)--;
+	    break;
+	  }
+
+	  CALL_COMMAND(mob, cmd_close, "portao");
+	  GET_MOB_VAL(mob, 0) = 0;
+	  break;
+	}
+	default:
+	  GET_MOB_VAL(mob, 0) = 0;
+	  break;
+      }
+      return (1);
+    case spEvArrive:
+      if (IS_NPC(ch))
+	break;
+      if (!CAN_SEE(mob, ch) || GET_INVIS_LEV(ch))
+	break;
+      if (ALIVE(ch)) {
+	act("$n exclama, 'Um vivo por aqui?! Que surpresa!'.", FALSE, mob, NULL, ch, TO_VICT);
+      } else if (GET_NUM_DEATH(ch) > 3) {
+	act("$n disse, '$R!!! Você denovo por aqui?! Seja bem-vind$R, e sinta-se em casa!", FALSE, mob, NULL, ch, TO_ROOM);
+	CALL_COMMAND(mob, cmd_open, "portao");
+
+	if (GET_MOB_VAL(mob, 0) == 0)
+	  GET_MOB_VAL(mob, 0) = 8;
+      } else {
+	act("$n exclama, 'Olá falecid$R aventureir$R! Seja bem-vind$R ao Reino da Morte!'.", FALSE, mob, NULL, ch, TO_ROOM);
+	GET_MOB_VAL(mob, 0) = 1;
+      }
+      break;
+    default:
+      break;
+  }
+
+  return (0);
+}
+
+
+/* ************************************************************************** *
+ *  Special procedures for rooms
+ * ************************************************************************** */
+
+
+SPECIAL(dump)
+{
+  Room *room = me;
+  Command *cmd = va_arg(ap, Command *);
+  char *argument = va_arg(ap, char *);
+
+  Object *k;
+  int value = 0;
+
+  while ((k = LIST_HEAD(room->contents))) {
+    act("$p some em uma nuvem de fumaça!", FALSE, NULL, k, NULL, TO_ROOM);
+    destroy_object(k);
+  }
+
+  if (cmd != &cmd_drop)
+    return (FALSE);
+
+  CALL_COMMAND(ch, *cmd, argument);
+
+  while ((k = LIST_HEAD(room->contents))) {
+    act("$p some em uma nuvem de fumaça!", FALSE, NULL, k, NULL, TO_ROOM);
+    value += MAX(1, MIN(50, GET_OBJ_COST(k) / 10));
+    destroy_object(k);
+  }
+
+  if (value) {
+    act("Você é recompensad$r por considerável atuação.", FALSE, ch, 0, 0, TO_CHAR);
+    act("$n foi recompensad$r por sua considerável atuação.", TRUE, ch, 0, 0, TO_ROOM);
+
+    if (GET_LEVEL(ch) < 3)
+      gain_exp(ch, value);
+    else
+      GET_GOLD(ch) += value;
+  }
+  return (1);
+}
+
+
+SPECIAL(waters)
+{
+  Room *room = me;
+  Command *cmd = va_arg(ap, Command *);
+  char *argument = va_arg(ap, char *);
+
+  Object *k;
+
+  while ((k = LIST_HEAD(room->contents))) {
+    act("$p some nas profundezas das águas.", FALSE, NULL, k, NULL, TO_ROOM);
+    destroy_object(k);
+  }
+
+  if (cmd != &cmd_drop)
+    return (FALSE);
+
+  CALL_COMMAND(ch, *cmd, argument);
+
+  while ((k = LIST_HEAD(room->contents))) {
+    act("$p some nas profundezas das águas.", FALSE, NULL, k, NULL, TO_ROOM);
+    destroy_object(k);
+  }
+
+  return (1);
+}
+
+
+#define PET_PRICE(pet) ((gold_t) (GET_LEVEL(pet) * GET_LEVEL(pet) * 9 + 21) * 10)
+#define PET_LIMIT  16
+
+SPECIAL(pet_shops)
+{
+  Room *room = me;
+  Room *pet_room = ITEM_NEXT(room, in_zone);
+
+  char buf[MAX_STRING_LENGTH], pet_name[256];
+  Character *pet;
+  Follower *f;
+  int count = 0;
+
+  Command *cmd = va_arg(ap, Command *);
+  char *argument = va_arg(ap, char *);
+
+  if (cmd == &cmd_list) {
+    if (!pet_room) {
+      send_to_char("Não há animais de estimação disponíveis.\r\n", ch);
+      return (0);
+    }
+
+    send_to_char("Os animais de estimação são:\r\n", ch);
+    LIST_FOR(pet_room->people, pet, l_room) {
+      if (IS_PC(pet))
+	continue;
+      ch_printf(ch, "%8lu - %s\r\n", PET_PRICE(pet), GET_NAME(pet));
+    }
+    return (TRUE);
+  } else if (cmd == &cmd_buy) {
+    if (!pet_room) {
+      send_to_char("Não há animais de estimação disponíveis.\r\n", ch);
+      return (0);
+    }
+
+    argument = one_argument(argument, buf);
+    argument = one_argument(argument, pet_name);
+
+    if (!(pet = get_char_room(buf, NULL, pet_room)) || !IS_MOB(pet)) {
+      send_to_char("Não existe este animal de estimação!\r\n", ch);
+      return (TRUE);
+    }
+    if (GET_GOLD(ch) < PET_PRICE(pet)) {
+      send_to_char("Você não tem dinheiro suficiente!\r\n", ch);
+      return (TRUE);
+    }
+
+    for (f = ch->followers; f; f = f->next)
+      if (AFF_FLAGGED(f->follower, AFF_CHARM))
+	count++;
+    if (count >= PET_LIMIT) {
+      ch_printf(ch, "Já existem muitos seres fiéis a você.\r\n");
+      return (TRUE);
+    }
+
+    GET_GOLD(ch) -= PET_PRICE(pet);
+
+    pet = create_mobile((MobProto *) GET_MOB_PROTO(pet));
+    GET_EXP(pet) = 0;
+    SET(AFF_FLAGS(pet), AFF_CHARM);
+
+    if (*pet_name) {
+      sprintf(buf, "%s %s", GET_KEYWORD(pet), pet_name);
+      GET_KEYWORD(pet) = strdup(buf);
+
+      sprintf(buf, "%sUma pequena placa em uma coleira ao redor de seu pescoço diz: 'Meu nome é %s'\r\n",
+	      GET_DESCR(pet), pet_name);
+      GET_DESCR(pet) = strdup(buf);
+    }
+    char_to_room(pet, room);
+    add_follower(pet, ch);
+
+    /* Be certain that pets can't get/carry/use/wield/wear items */
+    IS_CARRYING_W(pet) = 1000;
+    IS_CARRYING_N(pet) = 100;
+
+    send_to_char("Divirta-se com o seu animal de estimação.\r\n", ch);
+    act("$n compra $N.", FALSE, ch, 0, pet, TO_ROOM);
+
+    return (1);
+  }
+
+  /* All commands except list and buy */
+  return (0);
+}
+
+
+SPECIAL(show_head_room)
+{
+  Room *room = me, *r;
+  int num;
+
+  switch (SPEC_EVENT) {
+    case spEvLook:
+      num = va_arg(ap, int);
+      if (num != 2)
+	break;
+      for (r = room;;) {
+	if ((r = ITEM_PREV(r, in_zone)) == NULL)
+	  return (0);
+	if (r->subzone != room->subzone)
+	  return (0);
+	if (ROOM_FLAGGED(r, ROOM_BROADCAST))
+	  break;
+      }
+
+      {
+	int count = 0;
+	Character *i;
+
+	ch_printf(ch, "\n&c%s&n:\r\n", r->name);
+	LIST_FOR(r->people, i, l_room) {
+	  if (!CAN_SEE(ch, i))
+	    continue;
+
+	  if (IS_NPC(i)) {
+	    strcpy(buf, GET_NAME(i));
+	    CAP(buf);
+	    ch_printf(ch, "  &y%s&n\r\n", buf);
+	  } else {
+	    strcpy(buf, GET_NAME(i));
+	    if (GET_FAMILY(i))
+	      sprintf(END_OF(buf), " %s", GET_FAMILY(i));
+	    if (GET_TITLE(i) && *GET_TITLE(i))
+	      sprintf(END_OF(buf), " %s&:", GET_TITLE(i));
+	    ch_printf(ch, "  &y%s&+n\r\n", buf);
+	  }
+	  count++;
+	}
+
+	if (count == 0)
+	  ch_printf(ch, "  Ninguém.\r\n");
+      }
+      return (1);
+    default:
+      break;
+  }
+  return (0);
+}
+
+
+/* Magik®
+ * -- jr - Feb  3, 2002
+ */
+SPECIAL(magik)
+{
+  Room *room = (Room *) me;
+  Exit *exit;
+  ExField *ef;
+  char *argument, *s;
+  int dir;
+
+  switch (SPEC_EVENT) {
+    case spEvTalk:
+      argument = va_arg(ap, char *);
+
+      for (ef = room->extra_fields; ef; ef = ef->next) {
+	if (strcmp(ef->name, "magik"))
+	  continue;
+	if (!ef->value)
+	  continue;
+
+	/* Check matching word */
+	s = ef->value;
+	if (*s == '"') {		/* pattern for strmatch */
+	  s = one_word(s, buf);
+	  if (!*buf)
+	    continue;
+	  if (strmatch(buf, argument))
+	    continue;
+	} else if (*s == '/') {		/* pattern for regex */
+	  /* TODO: regex support */
+	  continue;
+	} else
+	  continue;
+
+	/* Get command */
+	two_arguments(s, buf1, buf2);
+	if (!*buf1 || !*buf2)
+	  continue;
+
+	/* Check direction */
+	if ((dir = search_block(buf2, abbr_dirs, FALSE)) == -1)
+	  if ((dir = search_block(buf2, dirs, FALSE)) == -1)
+	    continue;
+
+	/* Check if direction exists */
+	if (!(exit = room->exit[dir]) || !EXIT_FLAGGED(exit, EX_ISDOOR))
+	  continue;
+
+	if (isname(buf1, "open")) {
+	  if (!EXIT_FLAGGED(exit, EX_CLOSED) || EXIT_FLAGGED(exit, EX_LOCKED))
+	    continue;
+	  REMOVE_BIT(exit->flags, EX_CLOSED | EX_LOCKED);
+	  sprintf(buf, "%s se abre.\r\n", door_name(exit));
+	  send_to_room(CAP(buf), room);
+	  if ((room = exit->room) && (exit = room->exit[rev_dir[dir]]))
+	    if (EXIT_FLAGGED(exit, EX_ISDOOR)) {
+	      REMOVE_BIT(exit->flags, EX_CLOSED | EX_LOCKED);
+	      sprintf(buf, "%s se abre.\r\n", door_name(exit));
+	      send_to_room(CAP(buf), room);
+	    }
+	} else if (isname(buf1, "close")) {
+	  if (EXIT_FLAGGED(exit, EX_CLOSED))
+	    continue;
+	  SET_BIT(exit->flags, EX_CLOSED);
+	  sprintf(buf, "%s se fecha.\r\n", door_name(exit));
+	  send_to_room(CAP(buf), room);
+	  if ((room = exit->room) && (exit = room->exit[rev_dir[dir]]))
+	    if (EXIT_FLAGGED(exit, EX_ISDOOR)) {
+	      SET_BIT(exit->flags, EX_CLOSED);
+	      sprintf(buf, "%s se fecha.\r\n", door_name(exit));
+	      send_to_room(CAP(buf), room);
+	    }
+	} else if (isname(buf1, "lock")) {
+	  if (!EXIT_FLAGGED(exit, EX_CLOSED) || EXIT_FLAGGED(exit, EX_LOCKED))
+	    continue;
+	  SET_BIT(exit->flags, EX_CLOSED | EX_LOCKED);
+	  sprintf(buf, "Você escuta um ruido vindo d%s.\r\n", door_name(exit));
+	  send_to_room(CAP(buf), room);
+	  if ((room = exit->room) && (exit = room->exit[rev_dir[dir]]))
+	    if (EXIT_FLAGGED(exit, EX_ISDOOR))
+	      SET_BIT(exit->flags, EX_CLOSED | EX_LOCKED);
+	} else if (isname(buf1, "unlock")) {
+	  if (!EXIT_FLAGGED(exit, EX_CLOSED) || !EXIT_FLAGGED(exit, EX_LOCKED))
+	    continue;
+	  REMOVE_BIT(exit->flags, EX_LOCKED);
+	  sprintf(buf, "Você escuta um ruido vindo d%s.\r\n", door_name(exit));
+	  send_to_room(CAP(buf), room);
+	  if ((room = exit->room) && (exit = room->exit[rev_dir[dir]]))
+	    if (EXIT_FLAGGED(exit, EX_ISDOOR))
+	      REMOVE_BIT(exit->flags, EX_LOCKED);
+	} else
+	  continue;
+
+	return (1);
+      }
+
+      return (0);
+
+    default:
+      break;
+  }
+
+  return (0);
+}
+
+
+/* Flow
+ * -- jr - Mar  1, 2003
+ */
+SPECIAL(flow) {
+  Room *room = (Room *) me;
+  Character *tch, *nextch;
+  ExField *ef;
+  char *msg = NULL, *dirname = NULL, *mobvnum = NULL;
+  int dir;
+  mob_vnum blocker;
+
+  switch (SPEC_EVENT) {
+    case spEvPulse:
+      for (ef = room->extra_fields; ef; ef = ef->next) {
+	if (!strcmp(ef->name, "flow-msg"))
+	  msg = ef->value;
+	else if (!strcmp(ef->name, "flow-dir"))
+	  dirname = ef->value;
+	else if (!strcmp(ef->name, "flow-mob"))
+	  mobvnum = ef->value;
+      }
+
+      if (!msg || !dirname) {
+	log(logError, 0, "Room #%d: flow: missing 'flow' extra fields in this room.", room->vnum);
+	raw_assign_room_special(room, NULL);
+	break;
+      }
+
+      if ((dir = search_block(dirname, abbr_dirs, FALSE)) == -1)
+	if ((dir = search_block(dirname, dirs, FALSE)) == -1)
+	  goto field_error;
+
+      if (mobvnum) {
+	if (!(blocker = atoi(mobvnum)))
+	  goto field_error;
+
+	LIST_FOR(room->people, tch, l_room)
+	  if (GET_MOB_VNUM(tch) == blocker)
+	    break;
+
+	if (tch)
+	  break;
+      }
+
+      LIST_FOR_SECURE(room->people, ch, nextch, l_room) {
+	if (IS_NPC(ch))
+	  continue;
+
+	act(msg, false, ch, NULL, NULL, TO_CHAR);
+	act(msg, true, ch, NULL, NULL, TO_ROOM);
+	perform_move(ch, dir, 0);
+      }
+
+      break;
+
+    default:
+      break;
+  }
+
+  return (false);
+
+
+field_error:
+  log(logError, 0, "Room #%d: flow: invalid 'flow' extra fields in this room.", room->vnum);
+  raw_assign_room_special(room, NULL);
+  return (false);
+}
+
+
+/* ************************************************************************** *
+ *  Special procedures for objects
+ * ************************************************************************** */
+
+
+SPECIAL(bank)
+{
+  Command *cmd = va_arg(ap, Command *);
+  char *argument = va_arg(ap, char *);
+
+  gold_t amount;
+
+  if (cmd == &cmd_balance)
+  {
+    if (GET_BANK_GOLD(ch) > 0)
+      ch_printf(ch,
+#ifdef USE_THOUSANDS_SEP
+		"Seu saldo atual é de %'lu moedas.\r\n",
+#else
+		"Seu saldo atual é de %lu moedas.\r\n",
+#endif
+		GET_BANK_GOLD(ch));
+    else
+      ch_printf(ch, "Você não possui dinheiro depositado.\r\n");
+    return (1);
+  }
+  else if (cmd == &cmd_deposit)
+  {
+    if (IS_DEAD(ch) || PLR_FLAGGED(ch, PLR_TRNS)) {
+      ch_printf(ch, "Como você pretende depositar algo?\r\n");
+      return (1);
+    }
+    if ((amount = atoi(argument)) <= 0) {
+      ch_printf(ch, "Quanto você deseja depositar?\r\n");
+      return (1);
+    }
+    if (GET_GOLD(ch) < amount) {
+      ch_printf(ch, "Você não tem tantas moedas!\r\n");
+      return (1);
+    }
+    GET_GOLD(ch) -= amount;
+    GET_BANK_GOLD(ch) += amount;
+    ch_printf(ch,
+#ifdef USE_THOUSANDS_SEP
+	      "Você deposita %'lu moedas.\r\n",
+#else
+	      "Você deposita %lu moedas.\r\n",
+#endif
+	      amount);
+    act("$n faz uma transação bancária.", TRUE, ch, 0, 0, TO_ROOM);
+    return (1);
+  }
+  else if (cmd == &cmd_withdraw)
+  {
+    if (IS_DEAD(ch) || PLR_FLAGGED(ch, PLR_TRNS)) {
+      ch_printf(ch, "Como você pretende sacar algo?\r\n");
+      return (1);
+    }
+    if ((amount = atoi(argument)) <= 0) {
+      send_to_char("Quanto você deseja sacar?\r\n", ch);
+      return (1);
+    }
+    if (GET_BANK_GOLD(ch) < amount) {
+      send_to_char("Você não possui tantas moedas depositadas!\r\n", ch);
+      return (1);
+    }
+    GET_GOLD(ch) += amount;
+    GET_BANK_GOLD(ch) -= amount;
+    ch_printf(ch,
+#ifdef USE_THOUSANDS_SEP
+	      "Você saca %'lu moedas.\r\n",
+#else
+	      "Você saca %lu moedas.\r\n",
+#endif
+	      amount);
+    act("$n faz uma transação bancária.", TRUE, ch, 0, 0, TO_ROOM);
+    return (1);
+  }
+  else
+    return (0);
+}
+
+
+SPECIAL(autodestruct)
+{
+  Object *obj = (Object *) me;
+
+  switch (SPEC_EVENT) {
+    case spEvUse:
+    case spEvWear:
+      if (GET_OBJ_TIMER(obj) == 0)
+	GET_OBJ_TIMER(obj) = 12;
+      break;
+  }
+
+  return (0);
+}
+
+
+/*
+ * Special procedures for the Blug staff (objects 1202 and 1203).
+ */
+#define SMALL_STAFF	    1202
+#define FULL_STAFF	    1203
+#define LEVEL_TO_WAKE	      75
+#define MANA_TO_WAKE	     800
+#define MANA_TO_HOLD	       8
+SPECIAL(blug_staff_s)
+{
+  Object *obj = (Object *) me;
+  Character *tch;
+  char *argument;
+
+  void transform(void) {
+    ObjProto *opr;
+    Object *newobj;
+    Character *tch;
+
+    if (!(opr = get_obj_by_vnum(FULL_STAFF))) {
+      log(logError, 0, "blug_staff_s: Couldn't find prototype for object #%d, extracting.",
+	  FULL_STAFF);
+      destroy_object(obj);
+      obj = NULL;
+      return;
+    }
+
+    if ((tch = obj->carried_by) == NULL || obj->worn_on == INVENTORY) {
+      log(logError, 0, "blug_staff_s: Couldn't transform object if not worn, extracting.");
+      destroy_object(obj);
+      obj = NULL;
+      return;
+    }
+
+    act("$p brilha intensamente, se solta da sua mão e começa a flutuar.", FALSE, tch, obj, NULL, TO_CHAR);
+    act("Uma esfera mágica o envolve, fazendo-o crescer...", FALSE, tch, obj, NULL, TO_CHAR);
+    act("$p que $n segurava começou a brilhar e a crescer...", FALSE, tch, obj, NULL, TO_ROOM);
+
+    if ((newobj = objChange(obj, opr)) == NULL) {
+      log(logError, 0, "blug_staff_s: Couldn't change object, extracting.");
+      destroy_object(obj);
+      obj = NULL;
+      return;
+    } else
+      obj = newobj;
+
+    act("...e se transforma n$p!!!", FALSE, tch, obj, NULL, TO_CHAR);
+    act("...e se transformou n$p!!!", FALSE, tch, obj, NULL, TO_ROOM);
+    GET_OBJ_VAL(obj, 0) = 3;
+  }
+
+  switch (SPEC_EVENT) {
+    case spEvPulse:
+      if (GET_OBJ_VAL(obj, 0) > 0) {
+	if (--GET_OBJ_VAL(obj, 0) == 0) {
+	  if ((tch = obj->carried_by)) {
+	    REMOVE_BIT(OBJ_FLAGS(obj), ITEM_GLOW);
+	    act("$p pára de brilhar e adormece.", FALSE, tch, obj, NULL, TO_CHAR);
+	  }
+	}
+	return (1);
+      }
+      break;
+    case spEvTalk:
+      argument = va_arg(ap, char *);
+
+      if (obj->carried_by == NULL || obj->carried_by != ch)
+	break;
+      if (GET_OBJ_VAL(obj, 0) == 0) {
+	if (!strmatch("bast?o que guarda os poderes do mago blug*", argument) ||
+	    (!strmatch("bast?o que guarda os meus poderes*", argument) && !strcasecmp(GET_NAME(ch), "Blug"))) {
+	  if (!IS_GOOD(ch))
+	    break;
+	  if (!IS_MAGIC_USER(ch) && !IS_CLERIC(ch))
+	    break;
+	  GET_OBJ_VAL(obj, 0) = 5;
+	  SET_BIT(OBJ_FLAGS(obj), ITEM_GLOW);
+	  act("$p começa a brilhar!", FALSE, ch, obj, NULL, TO_CHAR);
+	  act("$p começa a brilhar!", FALSE, ch, obj, NULL, TO_ROOM);
+	}
+	return (1);
+      } else {
+	if (!strmatch("entregue-os a mim, para que eu possa realizar o bem*", argument)) {
+	  if (GET_MANA(ch) < MANA_TO_WAKE ||
+	      GET_LEVEL(ch) < LEVEL_TO_WAKE) {
+	    GET_OBJ_VAL(obj, 0) = 0;
+	    REMOVE_BIT(OBJ_FLAGS(obj), ITEM_GLOW);
+	    act("$p parece se mexer, mas pára de brilhar e adormece.", FALSE, ch, obj, NULL, TO_CHAR);
+	    act("$p parece se mexer, mas pára de brilhar e adormece.", FALSE, ch, obj, NULL, TO_ROOM);
+	  } else {
+	    transform();
+	    GET_MANA(ch) -= MANA_TO_WAKE;
+	  }
+	  return (1);
+	} else {
+	  GET_OBJ_VAL(obj, 0) = 0;
+	  REMOVE_BIT(OBJ_FLAGS(obj), ITEM_GLOW);
+	  act("$p pára de brilhar e adormece.", FALSE, ch, obj, NULL, TO_CHAR);
+	  act("$p pára de brilhar e adormece.", FALSE, ch, obj, NULL, TO_ROOM);
+	}
+      }
+      break;
+    case spEvJunk:
+      act("Impossível... parece indestrutível!!", FALSE, ch, obj, NULL, TO_CHAR);
+      return (1);
+    default:
+      break;
+  }
+
+  return (0);
+}
+
+SPECIAL(blug_staff_f)
+{
+  Object *obj = (Object *) me;
+  Character *master, *vict;
+  char *argument;
+
+  void transform(int msg) {
+    ObjProto *opr;
+    const char *oldname = GET_OBJ_NAME(obj);
+    Object *newobj;
+    Character *tch;
+
+    if (!(opr = get_obj_by_vnum(SMALL_STAFF))) {
+      log(logError, 0, "blug_staff_f: Couldn't find proto for object #%d, extracting.",
+	  SMALL_STAFF);
+      destroy_object(obj);
+      obj = NULL;
+      return;
+    }
+
+    if (obj->in_room)
+      act("$p começa a perder o brilho...", FALSE, NULL, obj, NULL, TO_ROOM);
+    else if ((tch = obj->carried_by)) {
+      if (msg == 0) {
+	act("Sua magia parece não ser suficiente para manter $p desperto...", FALSE, tch, obj, NULL, TO_CHAR);
+	act("$n parece não ser capaz de manter $p desperto...", FALSE, tch, obj, NULL, TO_ROOM);
+      }
+    }
+
+    if ((newobj = objChange(obj, opr)) == NULL) {
+      log(logError, 0, "blug_staff_f: Couldn't change object, extracting.");
+      destroy_object(obj);
+      obj = NULL;
+      return;
+    } else
+      obj = newobj;
+
+    if (obj->in_room)
+      act("...e se transforma em $p.", FALSE, NULL, obj, NULL, TO_ROOM);
+    else if ((tch = obj->carried_by)) {
+      if (msg == 0) {
+	act("...que se transforma novamente em $p.", FALSE, tch, obj, NULL, TO_CHAR);
+	act("...que se transforma novamente em $p.", FALSE, tch, obj, NULL, TO_ROOM);
+      } else if (msg == 1) {
+	sprintf(buf, "%s se transforma novamente em $p.", oldname);
+	act(buf, FALSE, tch, obj, NULL, TO_CHAR);
+      }
+    }
+
+    GET_OBJ_VAL(obj, 0) = 0;
+  }
+
+  switch (SPEC_EVENT) {
+    case spEvPulse:
+      if ((master = obj->carried_by) != NULL) {
+	if (!IS_MAGIC_USER(master) && !IS_CLERIC(master))
+	  transform(0);
+	else if (GET_MANA(master) < MANA_TO_HOLD)
+	  transform(0);
+	else if (GET_POS(master) <= POS_SLEEPING)
+	  transform(0);
+	else
+	  GET_MANA(master) -= MANA_TO_HOLD;
+      } else
+	transform(0);
+
+      return (1);
+    case spEvJunk:
+      act("Impossível... parece indestrutível!!", FALSE, ch, obj, NULL, TO_CHAR);
+      return (1);
+    case spEvRemove:
+      transform(1);
+      return (1);
+    case spEvUse:
+      argument = va_arg(ap, char *);
+
+      if (GET_OBJ_VAL(obj, 0) > 0) {
+	one_argument(argument, arg);
+	if (!*arg) {
+	  ch_printf(ch, "Como? Em quem?\r\n");
+	  return (1);
+	} else if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL) {
+	  if (FIGHTING(ch)) {
+	    vict = FIGHTING(ch);
+	  } else {
+	    ch_printf(ch, "Usar o báculo em quem?\r\n");
+	    return (1);
+	  }
+	} else if (vict == ch) {
+	  ch_printf(ch, "Você tem certeza que quer isso?\r\n");
+	  return (1);
+	} else if (IS_PC_NOKILLER(ch) && IS_PC_NOKILLER(vict)) {
+	  act("Use 'murder' se você realmente deseja atacar $N.", FALSE, ch, 0, vict, TO_CHAR);
+	  return (1);
+	}
+	act("Você bate a base do báculo no chão, e em seguida aponta-o para $N.", FALSE, ch, obj, vict, TO_CHAR);
+	act("$n bate a base de seu báculo no chão, e aponta-o para $N.", FALSE, ch, obj, vict, TO_NOTVICT);
+	act("$n bate a base de seu báculo no chão, e aponta-o para você...", FALSE, ch, obj, vict, TO_VICT);
+	act("Uma enorme tempestade de fogo surge na sala, e vai em direção de $N!", FALSE, NULL, obj, vict, TO_NOTVICT);
+	act("Uma enorme tempestade de fogo surge na sala, e começa a ir na sua direção!", FALSE, NULL, obj, vict, TO_VICT);
+	call_magic(ch, vict, 0, SPELL_FIRESTORM, LVL_IMMORT - 1, CAST_WAND);
+	--GET_OBJ_VAL(obj, 0);
+      }
+      if (GET_OBJ_VAL(obj, 0) <= 0)
+	transform(1);
+      return (1);
+    default:
+      break;
+  }
+
+  return (0);
+}
+#undef SMALL_STAFF
+#undef FULL_STAFF
+#undef LEVEL_TO_WAKE
+#undef MANA_TO_WAKE
+#undef MANA_TO_HOLD
+
+
+/* ************************************************************************** *
+ * Zones 97 and 98
+ * ************************************************************************** */
+
+
+SPECIAL(angels)
+{
+  Character *mob = (Character *) me;
+
+  switch (SPEC_EVENT) {
+    case spEvArrive:
+      if (IS_NPC(ch))
+	break;
+      if (!CAN_SEE(mob, ch) || GET_INVIS_LEV(ch))
+	break;
+      switch (GET_MOB_VNUM(mob)) {
+	case 9806:
+	  act("$n lhe diz, 'Você passou pelo primeiro teste, a cada passagem "
+	      "saiba guardar os ensinamentos, pois com eles você derrotará o "
+	      "Mal Supremo. Agora siga e trace seu destino.'",
+	      FALSE, mob, NULL, ch, TO_VICT);
+	  break;
+	case 9807:
+	  act("$n lhe diz, 'Sabia foi sua escolha, assim como sabio voce deve "
+	      "ser. Para poder derrotar o inimigo maior, deve adquirir "
+	      "aliados tambem poderosos. Lembre-se com a magia do amor seus "
+	      "inimigos serão os mais fiés soldados.'",
+	      FALSE, mob, NULL, ch, TO_VICT);
+	  break;
+	case 9808:
+	  act("$n lhe diz, 'Vitalia está em festa, pois o grande aventureiro "
+	      "se mostra digno.  Quando estiver diante dos maléficos poderes "
+	      "use o encantamento do amor, para que o mal se transforme em "
+	      "amigo e juntos vão em busca de libertar a legião do bem, pois "
+	      "lá receberá o poder de por os maus contra os maus, e só assim "
+	      "o Mal Supremo será derrotado.'",
+	      FALSE, mob, NULL, ch, TO_VICT);
+	  break;
+	case 9809:
+	  act("$n lhe diz, 'Abençoado seja você aventureiro de Vitalia, que "
+	      "com honestidade e amor chegou até aqui, receba esse poderoso "
+	      "pergaminho escritos pelos Deuses de Vitalia.  Use-o com fé e "
+	      "seus mais fortes inimigos lhe serão os servos mais fiéis.  "
+	      "Agora dê um passo atrás para que seu destino seja traçado.'",
+	      FALSE, mob, NULL, ch, TO_VICT);
+	  {
+	    Object *obj;
+
+	    LIST_FOR(mob->carrying, obj, l_content)
+	      if (GET_OBJ_VNUM(obj) == 9808)
+		break;
+
+	    if (obj)
+	      perform_give(mob, ch, obj);
+	  }
+	  break;
+	default:
+	  return (0);
+      }
+      break;
+    default:
+      return (0);
+  }
+  return (1);
+}
+
+
+SPECIAL(evil_boss)
+{
+  Character *mob = (Character *) me;
+  Character *loyal, *next;
+
+  switch (SPEC_EVENT) {
+    case spEvFight:
+    {
+      LIST_FOR_SECURE(IN_ROOM(mob)->people, loyal, next, l_room) {
+	if (IS_MOB(loyal) && (GET_MOB_VNUM(loyal) == 9801 ||
+	    GET_MOB_VNUM(loyal) == 9802 || GET_MOB_VNUM(loyal) == 9803))
+	  if (AFF_FLAGGED(loyal, AFF_CHARM) && loyal->master == ch)
+	    if (!FIGHTING(loyal)) {
+	      act("$n diz, 'Lutarei ao lado de $X(meu mestre,minha mestra)!'",
+		  FALSE, loyal, NULL, ch, TO_ROOM);
+	      set_fighting(loyal, mob, TYPE_UNDEFINED);
+	    }
+      }
+      break;
+    }
+    case spEvDeath:
+    case spEvKill:
+    {
+      Character *tch;
+
+      LIST_FOR_SECURE(character_list, tch, next, l_global) {
+	if (IS_MOB(tch) && (GET_MOB_VNUM(tch) == 9801 ||
+	    GET_MOB_VNUM(tch) == 9802 || GET_MOB_VNUM(tch) == 9803))
+	  if (AFF_FLAGGED(tch, AFF_CHARM)) {
+	    act("$n diz, 'Minha missão aqui terminou.'",
+		FALSE, tch, NULL, NULL, TO_ROOM);
+
+	    if (tch->master) {
+	      CLR(AFF_FLAGS(tch), AFF_CHARM);
+	      stop_follower(tch);
+	    }
+
+	    if (tch != ch) {		/* Oops... :-/ */
+	      act("$n desaparece misteriosamente.",
+		  FALSE, tch, NULL, NULL, TO_ROOM);
+	      extract_char(tch);
+	    }
+	  }
+      }
+      break;
+    }
+    default:
+      break;
+  }
+  return (0);
+}
+
+
+SPECIAL(room_9823)
+{
+  Room *room = me;
+
+  switch (SPEC_EVENT) {
+    case spEvArrive:
+    {
+      Object *obj;
+
+      LIST_FOR(room->contents, obj, l_content)
+	if (GET_OBJ_VNUM(obj) == 9808)
+	  break;
+
+      if (!obj)
+	break;
+
+      ch_printf(ch, "Alguém lhe diz, 'Louvados sejam os Deuses de Vitalia por "
+		"nos libertar.  Em nome da honra e da bondade lhe damos esse "
+		"pergaminho que há de lhe ajudar a derrotar o mal que impera "
+		"nesse lugar.\r\n");
+      return (0);
+    }
+    default:
+      break;
+  }
+  return (0);
+}
+
+
+SPECIAL(scroll_9808)
+{
+  Object *obj = (Object *) me;
+  Character *vict;
+  char *argument;
+
+  switch (SPEC_EVENT) {
+    case spEvUse:
+      argument = va_arg(ap, char *);
+
+      one_argument(argument, arg);
+      if (!*arg) {
+	ch_printf(ch, "Como? Usar os poderes deste pergaminho em quem?\r\n");
+	return (1);
+      } else if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL) {
+	ch_print(ch, NOPERSON);
+	return (1);
+      } else if (vict == ch || IS_PC(vict)) {
+	ch_printf(ch, "Acho que não seria uma boa idéia...\r\n");
+	return (1);
+      }
+
+      act("Você enrola o pergaminho e aponta-o para $N.", FALSE, ch, obj, vict, TO_CHAR);
+      act("$n enrola $p, e aponta-o para $N.", FALSE, ch, obj, vict, TO_NOTVICT);
+      act("$n enrola $p, e aponta-o para você...", FALSE, ch, obj, vict, TO_VICT);
+
+      if (GET_MOB_VNUM(vict) == 9801 ||
+	  GET_MOB_VNUM(vict) == 9802 ||
+	  GET_MOB_VNUM(vict) == 9803) {
+	if (!AWAKE(vict)) {
+	  GET_POS(vict) = POS_STANDING;
+	  act("$n se levanta.", TRUE, vict, NULL, NULL, TO_ROOM);
+	}
+
+	if (vict->master)
+	  stop_follower(vict);
+
+	add_follower(vict, ch);
+
+	act("$n diz a você, 'Reconheço você como $X(meu senhor,minha senhora), "
+	    "e irei ajudar-lhe em sua batalha.", FALSE, vict, NULL, ch, TO_VICT);
+	act("$n diz a $N, 'Reconheço você como $X(meu senhor,minha senhora), "
+	    "e irei ajudar-lhe em sua batalha.", FALSE, vict, NULL, ch, TO_NOTVICT);
+	REMOVE_BIT(MOB_FLAGS(vict), MOB_AGGRESSIVE);
+	SET(AFF_FLAGS(vict), AFF_CHARM);
+
+	act("$p se desfaz.", FALSE, ch, obj, NULL, TO_CHAR);
+	destroy_object(obj);
+      } else
+	ch_print(ch, NOEFFECT);
+
+      return (1);
+    default:
+      break;
+  }
+  return (0);
+}
+
+
+/* ************************************************************************** *
+ * Zone 190
+ * ************************************************************************** */
+
+
+SPECIAL(elven_mayor)
+{
+  Character *mob = (Character *) me;
+
+  if (SPEC_EVENT != spEvPulse)
+    return (0);
+
+  if (FIGHTING(mob) || !AWAKE(mob))
+    return (0);
+  if (number(0, 2))
+    return (0);
+
+  switch (GET_MOB_VAL(mob, 0)++) {
+    case 0:
+      act("$n parece estar com muito sono...", FALSE, mob, NULL, NULL, TO_ROOM);
+      break;
+    case 1:
+      act("$n balança a cabeça e recomeça seu trabalho.", FALSE, mob, NULL, NULL, TO_ROOM);
+      break;
+    case 2:
+      act("$n organiza os papéis de uma pilha que quase caiu no chão.", FALSE, mob, NULL, NULL, TO_ROOM);
+      break;
+    case 3:
+      act("$n assina alguns documentos.", FALSE, mob, NULL, NULL, TO_ROOM);
+      break;
+    case 4:
+      act("$n murmura: ...só uns 5 minutinhos não farão mal a ninguém...", FALSE, mob, NULL, NULL, TO_ROOM);
+      break;
+    case 5:
+      act("$n fecha os olhos lentamente, caindo num sono profundo...", FALSE, mob, NULL, NULL, TO_ROOM);
+      break;
+    case 6:
+      act("$n ronca muito alto.", FALSE, mob, NULL, NULL, TO_ROOM);
+      break;
+    case 7:
+      act("$n acorda num sobressalto.", FALSE, mob, NULL, NULL, TO_ROOM);
+    default:
+      GET_MOB_VAL(mob, 0) = 0;
+      break;
+  }
+  return (1);
+}
+
+
+/*
+ * Event-driven special.
+ *    spEvArrive	act: "$n ri desdenhosamente ao notar sua presença."
+ *    spEvDeath		act: "$n diz com evidente ódio nas palavras, 'Esse não é o fim... Mwahahaha!!'"
+ *    spEvKill		act: "$n diz sarcasticamente, 'Este é o SEU fim!'"
+ *    spEvHit		cast: fireball
+ */
+SPECIAL(elven_28)
+{
+  Character *mob = (Character *) me;
+
+  switch (SPEC_EVENT) {
+    case spEvArrive:
+      if (IS_NPC(ch))
+	break;
+      if (!CAN_SEE(mob, ch) || GET_INVIS_LEV(ch))
+	break;
+      act("$n rí desdenhosamente ao notar sua presença.", FALSE, mob, NULL, ch, TO_VICT);
+      act("$n rí desdenhosamente ao notar a presença de $N.", FALSE, mob, NULL, ch, TO_NOTVICT);
+      break;
+    case spEvDeath:
+      act("$n diz com evidente ódio nas palavras, 'Esse não é o fim... Mwahahaha!!'", FALSE, mob, NULL, NULL, TO_ROOM);
+      break;
+    case spEvKill:
+      act("$n diz sarcasticamente, 'Este é o SEU fim!'", FALSE, mob, NULL, ch, TO_VICT | TO_SLEEP);
+      act("$n diz sarcasticamente, 'Este é o SEU fim!'", FALSE, mob, NULL, NULL, TO_NOTVICT);
+      break;
+    case spEvHit:
+      if (number(0, 5) >= 1)
+	break;
+      cast_spell(mob, ch, NULL, SPELL_FIREBALL);
+      return (1);
+    default:
+      break;
+  }
+
+  return (0);
+}
+
+
+SPECIAL(elven_27)
+{
+  Character *mob = (Character *) me;
+
+  switch (SPEC_EVENT) {
+    case spEvPulse:
+      if (FIGHTING(mob) || !AWAKE(mob))
+	break;
+      if (number(0, 2))
+	break;
+      switch (GET_MOB_VAL(mob, 0)++) {
+	case 0:
+	  act("$n pega um livro de feitiços na estante.", FALSE, mob, NULL, NULL, TO_ROOM);
+	  break;
+	case 1:
+	  act("$n examina o livro de feitiços.", FALSE, mob, NULL, NULL, TO_ROOM);
+	  break;
+	case 2:
+	  act("$n faz algumas anotações em um pergaminho.", FALSE, mob, NULL, NULL, TO_ROOM);
+	  break;
+	case 3:
+	  act("$n devolve o livro de feitiços à estante.", FALSE, mob, NULL, NULL, TO_ROOM);
+	  break;
+	case 4:
+	  act("$n lacra o pergaminho e coloca-o junto a uma pilha, com outros.", FALSE, mob, NULL, NULL, TO_ROOM);
+	  break;
+	case 5:
+	  act("$n parece procurar algo no grande mapa.", FALSE, mob, NULL, NULL, TO_ROOM);
+	default:
+	  GET_MOB_VAL(mob, 0) = 0;
+	  break;
+      }
+      return (1);
+    case spEvHit:
+      if (number(0, 5) >= 1)
+	break;
+      cast_spell(mob, ch, NULL, SPELL_FIREBALL);
+      return (1);
+    default:
+      break;
+  }
+
+  return (0);
+}
+
+
+SPECIAL(elven_22)
+{
+  Character *mob = (Character *) me;
+
+  switch (SPEC_EVENT) {
+    case spEvPulse:
+      if (FIGHTING(mob) || !AWAKE(mob))
+	break;
+      switch (GET_MOB_VAL(mob, 0)++) {
+	case  0: act("$n termina de comer uma fatia de torta.", FALSE, mob, NULL, NULL, TO_ROOM); break;
+	case  1: perform_move(mob, WEST, 1); break;
+	case  2: perform_move(mob, WEST, 1); break;
+	case  3: perform_move(mob, WEST, 1); break;
+	case  4: perform_move(mob, SOUTH, 1); break;
+	case  5: perform_move(mob, UP, 1); break;
+	case  6: act("$n tira o pó de suas roupas.", FALSE, mob, NULL, NULL, TO_ROOM); break;
+	case  7: act("$n bate na porta.", FALSE, mob, NULL, NULL, TO_ROOM); break;
+	case  8: CALL_COMMAND(mob, cmd_open, "porta"); break;
+	case  9: perform_move(mob, UP, 1); break;
+	case 10: CALL_COMMAND(mob, cmd_close, "porta"); break;
+	case 11: act("$n se aproxima do prefeito.", FALSE, mob, NULL, NULL, TO_ROOM); break;
+	case 12: act("$n sussurra para o prefeito, 'Prefeito? Senhor? O Senhor está acordado?'.", FALSE, mob, NULL, NULL, TO_ROOM); break;
+	case 13: act("$n coloca alguns papéis na mesa do Prefeito.", FALSE, mob, NULL, NULL, TO_ROOM); break;
+	case 14: act("$n despede-se de todos.", FALSE, mob, NULL, NULL, TO_ROOM); break;
+	case 15: CALL_COMMAND(mob, cmd_open, "porta"); break;
+	case 16: perform_move(mob, DOWN, 1); break;
+	case 17: CALL_COMMAND(mob, cmd_close, "porta"); break;
+	case 18: perform_move(mob, DOWN, 1); break;
+	case 19: perform_move(mob, NORTH, 1); break;
+	case 20: perform_move(mob, EAST, 1); break;
+	case 21: perform_move(mob, EAST, 1); break;
+	case 22: perform_move(mob, EAST, 1); break;
+	case 23: act("$n pede um copo de limonada e uma fatia de torta ao barman.", FALSE, mob, NULL, NULL, TO_ROOM);
+	default: GET_MOB_VAL(mob, 0) = 0; break;
+      }
+      return (1);
+    case spEvArrive:
+      if (IS_NPC(ch))
+	break;
+      if (!CAN_SEE(mob, ch) || GET_INVIS_LEV(ch))
+	break;
+      act("$n cumprimenta você.", FALSE, mob, NULL, ch, TO_VICT);
+      act("$n cumprimenta $N.", FALSE, mob, NULL, ch, TO_NOTVICT);
+      break;
+    default:
+      break;
+  }
+
+  return (0);
+}
+
+
+SPECIAL(elven_12)
+{
+  Character *mob = (Character *) me;
+
+  switch (SPEC_EVENT) {
+    case spEvPulse:
+      if (FIGHTING(mob) || !AWAKE(mob))
+	break;
+      if (number(0, 1))
+	break;
+      switch (GET_MOB_VAL(mob, 0)++) {
+	case  0: act("$n rega algumas plantas.", FALSE, mob, NULL, NULL, TO_ROOM); break;
+	case  1: act("$n poda cuidadosamente uma roseira.", FALSE, mob, NULL, NULL, TO_ROOM); break;
+	case  2: act("$n parece conversar com as flores do jardim...", FALSE, mob, NULL, NULL, TO_ROOM);
+	default: GET_MOB_VAL(mob, 0) = 0; break;
+      }
+      return (1);
+    case spEvArrive:
+      if (IS_NPC(ch))
+	break;
+      if (!CAN_SEE(mob, ch) || GET_INVIS_LEV(ch))
+	break;
+      act("$n sorri gentilmente para você.", FALSE, mob, NULL, ch, TO_VICT);
+      act("$n sorri gentilmente para $N.", FALSE, mob, NULL, ch, TO_NOTVICT);
+      break;
+    default:
+      break;
+  }
+
+  return (0);
+}
+
+
+SPECIAL(card_golem)
+{
+  Character *mob = (Character *) me;
+  Object *obj;
+  int dir;
+
+  switch (SPEC_EVENT) {
+    case spEvDepart:
+      if (!AWAKE(mob) || !CAN_SEE(mob, ch))
+	break;
+      if (IS_NPC(ch))
+	break;
+
+      dir = va_arg(ap, int);
+
+      if (dir != NORTH)
+	break;
+
+      LIST_FOR(ch->carrying, obj, l_content)
+	if (GET_OBJ_VNUM(obj) == 3803)
+	  break;
+
+      if (!obj)
+	obj = GET_EQ(ch, WEAR_HOLD);
+
+      if (!obj || GET_OBJ_VNUM(obj) != 3803) {
+	act("$n barra a sua passagem.", FALSE, mob, NULL, ch, TO_VICT);
+	act("$n barra a passagem de $N.", FALSE, mob, NULL, ch, TO_NOTVICT);
+	act("$n diz, 'Para entrar aqui, você terá que comprar o bilhete.'",
+	    FALSE, mob, NULL, ch, TO_ROOM);
+	return (1);
+      }
+
+      act("$n toma $p da sua mão e lhe concede passagem.",
+	  FALSE, mob, obj, ch, TO_VICT);
+      act("$n toma $p da mão de $N e, concedendo-lhe passagem.",
+	  FALSE, mob, obj, ch, TO_NOTVICT);
+
+      destroy_object(obj);
+      return (0);
+
+    default:
+      break;
+  }
+
+  return (0);
+}
+
+
+SPECIAL(card_garoto)
+{
+  Character *mob = (Character *) me;
+
+  switch (SPEC_EVENT) {
+    case spEvPulse:
+      if (FIGHTING(mob) || !AWAKE(mob))
+	break;
+      if (number(0, 4))
+	break;
+
+      if (number(0, 1)) {
+	act("$n diz, 'Olá, tem cards pra trocar comigo?'", FALSE, mob, 0, 0, TO_ROOM);
+      } else {
+	act("$n confere sua coleção, pra ver que cartas ainda estão faltando.", FALSE, mob, 0, 0, TO_ROOM);
+      }
+      break;
+
+    default:
+      break;
+  }
+
+  return (0);
+}
+
+
+SPECIAL(mob_401)
+{
+  Character *mob = me;
+
+  int i;
+  static const char *speech[] = {
+    "$n disse, 'Você tem hora marcada?'",
+    "$n disse, 'O salão de reuniões é só para líderes e seus sucessores, lamento.'",
+    "$n disse, 'Este prédio é lindo não acha?'",
+    "$n disse, 'Tenho que regar as plantas.'",
+    "$n disse, 'Com licença, tenho que escrever uns papiros e marcar umas reuniões.'",
+    "$n disse, 'Visite toda a nossa Torre, heim?.'",
+    "$n disse, 'Já escolheu um de nossos Clãs?'",
+    "$n disse, 'Não se esqueça de ler sempre o Policy de Vitália e o Clã Policy.'",
+    "$n escreve em um papiro.",
+    "$n rega as plantas.",
+    "$n olha pela janela.",
+    "$n sorri.",
+    "$n anota recados."
+  };
+
+  if (FIGHTING(mob) || !AWAKE(mob))
+    return (0);
+
+  switch (SPEC_EVENT) {
+    case spEvPulse:
+      if ((i = number(0, 40)) < (sizeof speech / sizeof *speech)) {
+	act(speech[i], FALSE, mob, 0, 0, TO_ROOM);
+	return (1);
+      }
+
+      break;
+
+    case spEvArrive:
+      if (!CAN_SEE(mob, ch))
+	break;
+
+      if (mud.time.hours < 6 || mud.time.hours >= 18)
+	act("$n disse, 'Boa noite.'", FALSE, mob, 0, ch, TO_ROOM);
+      else if (mud.time.hours < 12)
+	act("$n disse, 'Bom dia.'", FALSE, mob, 0, ch, TO_ROOM);
+      else
+	act("$n disse, 'Boa tarde.'", FALSE, mob, 0, ch, TO_ROOM);
+
+      break;
+
+    default:
+      break;
+  }
+
+  return (0);
+}
+
+
+SPECIAL(mob_11103)
+{
+  Character *mob = (Character *) me;
+  Object *obj;
+
+  switch (SPEC_EVENT) {
+    case spEvPulse:
+      if (FIGHTING(mob) || !AWAKE(mob))
+	break;
+      if (number(0, 4))
+	break;
+
+      if (number(0, 1)) {
+	act("Você ouve o estômago de $N roncando... Alimente-$R!", FALSE, mob, 0, mob, TO_ROOM);
+      } else if (mob->master && IN_ROOM(mob->master) == IN_ROOM(mob)) {
+	act("$n sente o seu cheiro... acho que $l está com fome!", FALSE, mob, 0, mob->master, TO_VICT);
+	act("$n sente o cheiro de $N... acho que $l está com fome!", FALSE, mob, 0, mob->master, TO_NOTVICT);
+      }
+      break;
+
+    case spEvReceiveObj:
+      obj = va_arg(ap, Object *);
+
+      if (AWAKE(mob) && GET_OBJ_TYPE(obj) == ITEM_FOOD)
+	act("$n come $p.", TRUE, mob, obj, 0, TO_ROOM);
+
+      destroy_object(obj);
+      break;
+
+    case spEvArrive:
+      if (FIGHTING(mob))
+	break;
+      if (AWAKE(mob) || AFF_FLAGGED(mob, AFF_SLEEP) || mob->master || ch->master)
+	break;
+      if (GET_LEVEL(ch) >= LVL_IMMORT || !CAN_SEE(mob, ch))
+	break;
+
+      act("$n acorda.", FALSE, mob, 0, 0, TO_ROOM);
+      GET_POS(mob) = POS_STANDING;
+      add_follower(mob, ch);
+      break;
+
+    default:
+      break;
+  }
+
+  return (false);
+}
+
+
+SPECIAL(scroll_24400) {
+#define TARGET_ZONE	244
+#define TARGET_ROOM	24599
+  Object *obj = (Object *) me;
+  Character *vict;
+  char *argument;
+
+  switch (SPEC_EVENT) {
+    case spEvUse:
+      argument = va_arg(ap, char *);
+
+      one_argument(argument, arg);
+      if (!*arg) {
+	ch_printf(ch, "Como? Usar os poderes deste pergaminho em quem?\r\n");
+	return (true);
+      }
+      if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL) {
+	ch_print(ch, NOPERSON);
+	return (true);
+      }
+      if (IS_NPC(vict)) {
+	ch_printf(ch, "Acho que isso não vai dar certo...\r\n");
+	return (true);
+      }
+
+      act("Você recita algumas palavras do pergaminho olhando para $N.", FALSE, ch, obj, vict, TO_CHAR);
+      act("$n recita algumas palavras de $p olhando para $N.", FALSE, ch, obj, vict, TO_NOTVICT);
+      act("$n recita algumas palavras de $p olhando para você... oops...", FALSE, ch, obj, vict, TO_VICT);
+
+      if (IN_ROOM(vict)->zone->vnum == TARGET_ZONE) {
+	Room *dest = get_room_by_vnum(TARGET_ROOM);
+
+	if (dest == NULL)
+	  dest = GET_HOME(vict)->start;
+
+	act("$n desaparece.", TRUE, vict, 0, 0, TO_ROOM);
+	char_from_room(vict);
+	char_to_room(vict, dest);
+	act("$n aparece no meio da sala.", TRUE, vict, 0, 0, TO_ROOM);
+	look_at_room(vict, 0);
+      } else {
+	ch_print(ch, NOEFFECT);
+      }
+
+      act("$p se desfaz.", FALSE, ch, obj, NULL, TO_CHAR);
+      destroy_object(obj);
+      return (true);
+
+    default:
+      break;
+  }
+  return (false);
+#undef TARGET_ZONE
+#undef TARGET_ROOM
+}
+
+
+SPECIAL(scroll_3118) {
+#define TARGET_ROOM	3208
+  Object *obj = (Object *) me;
+  Room *dest = get_room_by_vnum(TARGET_ROOM);
+  Character *vict;
+  char *argument;
+
+  switch (SPEC_EVENT) {
+    case spEvUse:
+      argument = va_arg(ap, char *);
+
+      one_argument(argument, arg);
+      if (!*arg) {
+	ch_printf(ch, "Como? Usar os poderes deste pergaminho em quem?\r\n");
+	return (true);
+      }
+      if ((vict = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)) == NULL) {
+	ch_print(ch, NOPERSON);
+	return (true);
+      }
+      if (IS_NPC(vict)) {
+	ch_printf(ch, "Acho que isso não vai dar certo...\r\n");
+	return (true);
+      }
+
+      act("Você recita algumas palavras do pergaminho olhando para $N.", FALSE, ch, obj, vict, TO_CHAR);
+      act("$n recita algumas palavras de $p olhando para $N.", FALSE, ch, obj, vict, TO_NOTVICT);
+      act("$n recita algumas palavras de $p olhando para você... oops...", FALSE, ch, obj, vict, TO_VICT);
+
+      if (dest == NULL)
+	dest = GET_HOME(vict)->start;
+
+      act("$n desaparece.", TRUE, vict, 0, 0, TO_ROOM);
+      char_from_room(vict);
+      char_to_room(vict, dest);
+      act("$n aparece no meio da sala.", TRUE, vict, 0, 0, TO_ROOM);
+      look_at_room(vict, 0);
+
+      act("$p se desfaz.", FALSE, ch, obj, NULL, TO_CHAR);
+      destroy_object(obj);
+      return (true);
+
+    default:
+      break;
+  }
+  return (false);
+#undef TARGET_ROOM
+}
+
+
+SPECIAL(object_16009) {
+  Object *obj = (Object *) me;
+  Character *was_fighting = NULL;
+  skill_t using_skill = TYPE_UNDEFINED;
+
+  if (!IS_PC(ch))
+    return (false);
+
+  switch (SPEC_EVENT) {
+    case spEvTake:
+      if (FIGHTING(ch)) {
+	was_fighting = FIGHTING(ch);
+	using_skill = FIGHTSK(ch);
+      }
+
+      if (GET_OBJ_ACT_DESCR(obj)) {
+	act(GET_OBJ_ACT_DESCR(obj), true, ch, obj, ch, TO_CHAR);
+	act(GET_OBJ_ACT_DESCR(obj), true, ch, obj, ch, TO_ROOM);
+      }
+
+      act("$n desaparece.", TRUE, ch, 0, 0, TO_ROOM);
+      char_from_room(ch);
+      char_to_room(ch, GET_HOME(ch)->start);
+      act("$n aparece no meio da sala.", TRUE, ch, 0, 0, TO_ROOM);
+      look_at_room(ch, 0);
+
+      if (was_fighting)
+	on_player_flee(ch, was_fighting, using_skill);
+
+      destroy_object(obj);
+      return (true);
+
+    default:
+      break;
+  }
+
+  return (false);
+}
+
+/* vim: set ts=8 sw=2: */
+/* vim600: set fdm=marker fdc=3: */

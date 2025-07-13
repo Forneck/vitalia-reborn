@@ -1,0 +1,696 @@
+# VitaliaMUD SpecProc file for:
+# Limbo (zone 0)
+
+# Mobiles
+mob 1 "puff";
+# VitaliaMUD SpecProc file for:
+# O Castelo de Jareth (zone 102)
+
+mob 10200 "magic_user";
+mob 10217 "magic_user";
+mob 10218 "magic_user";
+# VitaliaMUD SpecProc file for:
+# Otávia (zone 107)
+
+# VitaliaMUD SpecProc file for:
+# As Mesnadas de Vitália (zone 110)
+
+# Rooms
+room 11007 "show-head-room";
+room 11008 "show-head-room";
+room 11009 "show-head-room";
+room 11010 "show-head-room";
+room 11011 "show-head-room";
+room 11012 "show-head-room";
+room 11013 "show-head-room";
+room 11014 "show-head-room";
+room 11015 "show-head-room";
+room 11016 "show-head-room";
+# VitaliaMUD SpecProc file for:
+# O Reino das Pedras (zone 111)
+
+# Mobiles
+mob 11103 "mob:11103";
+# VitaliaMUD SpecProc file for:
+# Bhogavati, A Cidade das Jóias (zone 113)
+
+# Mobiles
+mob 11322 "postmaster";
+mob 11325 "guild";
+mob 11326 "guild";
+mob 11328 "guild";
+mob 11329 "guild";
+mob 11330 "guild";
+mob 11341 "cityguard";
+mob 11342 "cityguard";
+mob 11343 "cityguard";
+mob 11343 "snake";
+mob 11336 "snake";
+mob 11337 "snake";
+mob 11340 "snake";
+mob 11344 "cityguard";
+mob 11331 "guild_guard";
+mob 11332 "guild_guard";
+mob 11333 "guild_guard";
+mob 11334 "guild_guard";
+mob 11335 "guild_guard";
+
+# Rooms
+room 11313 "flow";
+room 11312 "flow";
+room 11320 "waters";
+room 11321 "waters";
+room 11322 "waters";
+room 11323 "waters";
+room 11329 "waters";
+room 11330 "waters";
+room 11331 "waters";
+room 11332 "waters";
+room 11333 "waters";
+room 11334 "waters";
+room 11343 "waters";
+room 11344 "waters";
+room 11345 "waters";
+room 11346 "waters";
+room 11350 "waters";
+room 11351 "waters";
+room 11352 "waters";
+room 11353 "waters";
+room 11377 "waters";
+room 11357 "waters";
+room 11358 "waters";
+room 11359 "waters";
+room 11360 "waters";
+room 11362 "waters";
+room 11363 "waters";
+room 11365 "waters";
+room 11366 "waters";
+room 11367 "waters";
+room 11368 "waters";
+room 11369 "waters";
+room 11370 "waters";
+room 11371 "waters";
+room 11372 "waters";
+room 11373 "waters";
+room 11374 "waters";
+room 11375 "waters";
+room 11376 "waters";
+room 11381 "waters";
+room 11382 "waters";
+# VitaliaMUD SpecProc file for:
+# A Fenda Entre Mundos (zone 114)
+
+# Rooms
+room 11417 "magik";
+room 11433 "magik";
+
+# Mobs
+mob 11406 "magic_user";
+mob 11407 "magic_user";
+mob 11409 "magic_user";
+mob 11410 "magic_user";
+mob 11405 "snake";
+
+# VitaliaMUD SpecProc file for:
+# O Sétimo Mundo Oculto, Patala (zone 115)
+
+# Mobs
+mob 11501 "magic_user";
+mob 11514 "magic_user";
+mob 11505 "magic_user";
+mob 11506 "snake";
+mob 11504 "snake";
+mob 11504 "magic_user";
+# VitaliaMUD SpecProc file for:
+# Svarga, O Reino Celestial (zone 116)
+
+# Mobs
+mob 11600 "magic_user";
+mob 11609 "magic_user";
+mob 11635 "magic_user";
+mob 11636 "magic_user";
+mob 11637 "magic_user";
+mob 11638 "magic_user";
+mob 11601 "magic:lbolt";
+mob 11608 "magic:lbolt";
+mob 11610 "magic:lbolt";
+mob 11611 "magic:lbolt";
+mob 11612 "magic:lbolt";
+mob 11613 "magic:lbolt";
+mob 11640 "magic:lbolt";
+mob 11633 "snake";
+
+# Rio
+mob 11609 "svarga:kanakajja";
+room 11644 "flow";
+room 11643 "flow";
+room 11642 "flow";
+# VitaliaMUD SpecProc file for:
+# O Reino dos Imortais (zone 12)
+
+# Mobiles
+mob 1201 "postmaster";
+mob 1202 "janitor";
+
+# Objects
+obj 1202 "blug-staff-s";
+obj 1203 "blug-staff-f";
+
+# Rooms
+room 1209 "dump";
+room 1290 "magik";
+# VitaliaMUD SpecProc file for:
+# Roma (zone 120)
+
+mob 12009 "magic_user";
+mob 12018 "cityguard";
+mob 12020 "magic_user";
+mob 12021 "cityguard";
+mob 12025 "magic_user";
+mob 12030 "magic_user";
+mob 12031 "magic_user";
+mob 12032 "magic_user";
+# VitaliaMUD SpecProc file for:
+# A Cidade de Thewster (zone 134)
+
+mob 13404 "guild";
+mob 13407 "guild";
+mob 13410 "cityguard";
+mob 13428 "cityguard";
+mob 13437 "snake";
+mob 13438 "magic_user";
+mob 13439 "snake";
+mob 13441 "snake";
+# VitaliaMUD SpecProc file for:
+# Lothlórien (zone 137)
+
+# Rooms
+room 13760 "magik";
+room 13774 "magik";
+# VitaliaMUD SpecProc file for:
+# O Arquipélago de Yo (zone 138)
+
+# Rooms
+room 13886 "show-head-room";
+room 13887 "show-head-room";
+room 13888 "show-head-room";
+room 13889 "show-head-room";
+
+# Mobs
+mob 13800 "magic_user";
+mob 13813 "magic_user";
+mob 13814 "magic_user";
+mob 13815 "magic_user";
+mob 13819 "magic_user";
+# VitaliaMUD SpecProc file for:
+# Lindrel (zone 140)
+
+# Mobiles
+mob 14000 "lindrel:ellora";
+mob 14001 "lindrel:eldora";
+mob 14002 "magic:cspray";
+mob 14003 "magic:cspray";
+mob 14004 "magic:cspray";
+mob 14005 "magic:cspray";
+mob 14006 "magic:cspray";
+mob 14007 "magic:cspray";
+mob 14008 "magic:cspray";
+mob 14009 "magic:cspray"; # Should also use combo attack & seize (?)
+mob 14010 "magic:cspray";
+mob 14011 "magic:mmissile";
+mob 14012 "magic:cspray";
+mob 14013 "magic:ctouch";
+mob 14014 "magic:cspray";
+mob 14015 "magic:ctouch";
+mob 14016 "lindrel:arando";
+mob 14017 "magic:cspray";
+mob 14018 "magic:cspray";
+mob 14019 "magic:cspray";
+mob 14020 "magic:mmissile";
+mob 14022 "magic:mmissile";
+mob 14030 "magic:cspray";
+mob 14032 "magic:cspray";
+mob 14034 "magic:cspray";
+mob 14035 "magic:cspray";
+mob 14036 "magic:cspray";
+mob 14037 "magic:cspray";
+mob 14038 "magic:cspray";
+mob 14039 "magic:cspray";
+
+# Objects
+obj 14087 "lindrel:tree";
+obj 14089 "lindrel:tree";
+obj 14091 "lindrel:tree";
+
+# VitaliaMUD SpecProc file for:
+# A Aldeia de Bri (zone 144)
+
+# Mobs
+mob 14411 "thief";
+
+# VitaliaMUD SpecProc file for:
+# O Castelo do Rei Welmar (zone 150)
+
+# Mobiles
+mob 15000 "welmar:guard";	/* Gwydion */
+mob 15001 "welmar:king";	/* Welmar */
+mob 15003 "welmar:guard";	/* Jim */
+mob 15004 "welmar:guard";	/* Brian */
+mob 15005 "welmar:guard";	/* Mick */
+mob 15006 "welmar:guard";	/* Matt */
+mob 15007 "welmar:guard";	/* Jochem */
+mob 15008 "welmar:guard";	/* Anne */
+mob 15009 "welmar:guard";	/* Andrew */
+mob 15010 "welmar:guard";	/* Bertram */
+mob 15011 "welmar:guard";	/* Jeanette */
+mob 15012 "welmar:peter";	/* Peter */
+mob 15013 "welmar:master";	/* The training master */
+mob 15016 "welmar:cleaning";	/* James the Butler */
+mob 15017 "welmar:cleaning";	/* Ze Cleaning Fomen */
+mob 15020 "welmar:twin";	/* Tim */
+mob 15021 "welmar:twin";	/* Tom */
+mob 15024 "welmar:dick";	/* Dick */
+mob 15025 "welmar:dick";	/* David */
+mob 15026 "welmar:jerry";	/* Jerry */
+mob 15027 "welmar:guard";	/* Michael */
+mob 15028 "welmar:guard";	/* Hans */
+mob 15029 "welmar:guard";	/* Boris */
+
+mob 15015 "thief";		/* Ergan... have a better idea? */
+mob 15032 "magic_user";		/* Pit Fiend, have something better? Use it */
+# VitaliaMUD SpecProc file for:
+# O Castelo de Flyre (zone 157)
+
+# Mobiles
+mob 15709 "magic_user";
+mob 15711 "magic_user";
+mob 15712 "magic_user";
+# VitaliaMUD SpecProc file for:
+# A Vila dos Gnomos (zone 16)
+
+# Mobiles
+mob 1603 "magic_user";
+mob 1605 "magic_user";	// should be cleric
+mob 1609 "snake";
+mob 1610 "snake";
+mob 1611 "snake";
+mob 1619 "magic_user";
+/*
+ * These specials doesn't exists on VitaliaMUD.
+ *
+mob 1613 "breath_acid";
+mob 1614 "animate_dead";
+mob 1615 "breath_fire";
+ */
+# VitaliaMUD SpecProc file for:
+# Os Estrategistas de Vitália (zone 160)
+
+obj 16009 "object:16009";
+# VitaliaMUD SpecProc file for:
+# Ancalador && A Guilda de Necromantes (zone 17)
+
+mob 1701 "snake";
+# VitaliaMUD SpecProc file for:
+# Camelot (zone 173)
+
+room 17398 "pet-shop";
+mob 17301 "cityguard";
+mob 17303 "cityguard";
+mob 17306 "cityguard";
+mob 17312 "cityguard";
+mob 17313 "magic_user";
+mob 17314 "magic_user";
+mob 17318 "thief";
+/*
+ * Not available on VitaliaMUD
+ *
+mob 17316 "breath_lightning";
+mob 17337 "breath_fire";
+ */
+# VitaliaMUD SpecProc file for:
+# O Império Chinês (zone 76)
+
+# Rooms
+room 17853 "magik";
+
+# Mobiles
+mob 17617 "guild_guard";
+# VitaliaMUD SpecProc file for:
+# Os Campos de Midgaard (zone 18)
+
+# Mobiles
+mob 1890 "death:90";
+# VitaliaMUD SpecProc file for:
+# Os Caminhos Iniciais (zone 181)
+
+# VitaliaMUD SpecProc file for:
+# Os Bosques dos Elfos (zone )
+
+mob 19012 "elven:12";
+mob 19015 "elven:mayor";
+mob 19022 "elven:22";
+mob 19027 "elven:27";
+mob 19028 "elven:28";
+# VitaliaMUD SpecProc file for:
+# Clãs (zone 20)
+
+# Mobiles
+mob 2000 "clan:guard";
+mob 2010 "clan:guard";
+mob 2020 "clan:guard";
+mob 2030 "clan:guard";
+mob 2031 "clan:guard";
+mob 2040 "clan:guard";
+mob 2050 "clan:guard";
+mob 2060 "clan:guard";
+mob 2070 "clan:guard";
+mob 2071 "clan:guard";
+mob 2080 "clan:guard";
+mob 2090 "clan:guard";
+mob 2091 "clan:guard";
+mob 2100 "clan:guard";
+mob 2110 "clan:guard";
+mob 2111 "clan:guard";
+mob 2120 "clan:guard";
+mob 2121 "clan:guard";
+mob 2130 "clan:guard";
+mob 2131 "clan:guard";
+mob 2140 "clan:guard";
+mob 2141 "clan:guard";
+mob 2150 "clan:guard";
+mob 2151 "clan:guard";
+mob 2160 "clan:guard";
+mob 2161 "clan:guard";
+mob 2170 "clan:guard";
+mob 2171 "clan:guard";
+# VitaliaMUD SpecProc file for:
+# O Labirinto do Templo dos Ladrões (zone 204)
+
+# Mobiles
+mob 20414 "postmaster";
+mob 20459 "guild_guard";
+# VitaliaMUD SpecProc file for:
+# Anexo (zone 220)
+
+# Mobiles
+mob 22030 "honireves";
+# VitaliaMUD SpecProc file for:
+# O Grande Desafio (zone 244)
+
+# Objects
+obj 24400 "scroll:24400";
+# VitaliaMUD SpecProc file for:
+# A Grande Torre de Magia (zones 25-26)
+
+# Mobiles
+mob 2501 "magic_user"; /* should likely be cleric */
+mob 2504 "magic_user";
+mob 2507 "magic_user";
+mob 2508 "magic_user";
+mob 2510 "magic_user";
+mob 2511 "thief";
+mob 2514 "magic_user";
+mob 2515 "magic_user";
+mob 2516 "magic_user";
+mob 2517 "magic_user";
+mob 2518 "magic_user";
+mob 2520 "magic_user";
+mob 2521 "magic_user";
+mob 2522 "magic_user";
+mob 2523 "magic_user";
+mob 2524 "magic_user";
+mob 2525 "magic_user";
+mob 2526 "magic_user";
+mob 2527 "magic_user";
+mob 2528 "magic_user";
+mob 2529 "magic_user";
+mob 2530 "magic_user";
+mob 2531 "magic_user";
+mob 2532 "magic_user";
+mob 2533 "magic_user";
+mob 2534 "magic_user";
+mob 2536 "magic_user";
+mob 2537 "magic_user";
+mob 2538 "magic_user";
+mob 2540 "magic_user";
+mob 2541 "magic_user";
+mob 2548 "magic_user";
+mob 2549 "magic_user";
+mob 2552 "magic_user";
+mob 2553 "magic_user";
+mob 2554 "magic_user";
+mob 2556 "magic_user";
+mob 2557 "magic_user";
+mob 2559 "magic_user";
+mob 2560 "magic_user";
+mob 2562 "magic_user";
+mob 2564 "magic_user";
+# VitaliaMUD SpecProc file for:
+# A Catedral (zone 28)
+
+# Rooms
+room 2812 "show-head-room";
+room 2813 "show-head-room";
+room 2814 "show-head-room";
+room 2815 "show-head-room";
+room 2816 "show-head-room";
+
+# Mobiles
+mob 2802 "horacio";
+# VitaliaMUD SpecProc file for:
+# Midgaard (zone 30)
+
+# Mobiles
+mob 3010 "postmaster";
+mob 3020 "guild";
+mob 3021 "guild";
+mob 3022 "guild";
+mob 3023 "guild";
+mob 3028 "guild";
+mob 3051 "guild";
+mob 3048 "guild";
+mob 3024 "guild_guard";
+mob 3025 "guild_guard";
+mob 3026 "guild_guard";
+mob 3027 "guild_guard";
+mob 3029 "guild_guard";
+mob 3049 "guild_guard";
+mob 3059 "cityguard";
+mob 3060 "cityguard";
+mob 3061 "janitor";
+mob 3062 "fido";
+mob 3066 "fido";
+mob 3067 "cityguard";
+mob 3068 "janitor";
+#if !MINI
+mob 3105 "mayor";
+#endif
+
+# Objects
+obj 3034 "bank";
+obj 3036 "bank";
+
+# Rooms
+room 3030 "dump";
+room 3031 "pet-shop";
+# VitaliaMUD SpecProc file for:
+# Sul da Cidade de Midgaard (zone 31)
+
+# Objects
+obj 3118 "scroll:3118";
+# VitaliaMUD SpecProc file for:
+# O Museu do Colecionador (zone 38)
+
+# Mobiles
+mob 3801 "card:golem";
+mob 3803 "card:garoto";
+# VitaliaMUD SpecProc file for:
+# O Abismo Profundo (zone 39)
+
+# Mobiles
+mob 3902 "magic_user";
+# VitaliaMUD SpecProc file for:
+# A Embaixada dos Clãs de Vitália (zone 4)
+
+# Mobiles
+mob 401 "mob:401";
+# VitaliaMUD SpecProc file for:
+# Moria (zones 40-41)
+
+mob 4000 "snake";
+mob 4001 "snake";
+mob 4053 "snake";
+mob 4100 "magic_user";
+mob 4102 "snake";
+mob 4103 "thief";
+# VitaliaMUD SpecProc file for:
+# O Escaldante Deserto de Kubalai (zone 42)
+
+# Mobiles
+mob 4202 "snake";
+# VitaliaMUD SpecProc file for:
+# Qui'Lur (zone 44)
+
+# Mobiles
+mob 4400 "magic_user";
+mob 4407 "magic_user";
+mob 4411 "magic_user";
+# VitaliaMUD SpecProc file for:
+# Gondolin (zone 45)
+
+# Rooms
+room 4553 "magik";
+room 4554 "magik";
+room 4599 "flow";
+room 4598 "flow";
+room 4597 "flow";
+room 4596 "flow";
+room 4595 "flow";
+room 4594 "flow";
+room 4593 "flow";
+room 4592 "flow";
+room 4591 "flow";
+room 4590 "flow";
+# VitaliaMUD SpecProc file for:
+# Templos Imortais (zone 5)
+
+room 500 "dump";
+# VitaliaMUD SpecProc file for:
+# O Grande Deserto Oriental (zone 50)
+
+mob 5004 "magic_user";
+mob 5005 "guild_guard"; /* brass dragon */
+mob 5010 "magic_user";
+mob 5014 "magic_user";
+# VitaliaMUD SpecProc file for:
+# Cidade Drow (zone 51)
+
+mob 5103 "magic_user";
+mob 5104 "magic_user";
+mob 5107 "magic_user";
+mob 5108 "magic_user";
+# VitaliaMUD SpecProc file for:
+# A Cidade de Thalos (zone 52)
+
+mob 5200 "magic_user";
+mob 5201 "magic_user";
+mob 5209 "magic_user";
+# VitaliaMUD SpecProc file for:
+# A Grande Pirâmide (zone 53)
+
+mob 5300 "snake";
+mob 5301 "snake";
+mob 5304 "thief";
+mob 5305 "thief";
+mob 5309 "magic_user"; /* should breath fire */
+mob 5311 "magic_user";
+mob 5313 "magic_user"; /* should be a cleric */
+mob 5314 "magic_user"; /* should be a cleric */
+mob 5315 "magic_user"; /* should be a cleric */
+mob 5316 "magic_user"; /* should be a cleric */
+mob 5317 "magic_user";
+# VitaliaMUD SpecProc file for:
+# Nova Thalos (zone 54)
+
+# Mobiles
+mob 5421 "magic_user";
+mob 5422 "magic_user";
+mob 5423 "magic_user";
+mob 5424 "magic_user";
+mob 5425 "magic_user";
+mob 5426 "magic_user";
+mob 5427 "magic_user";
+mob 5428 "magic_user";
+mob 5434 "cityguard";
+mob 5440 "magic_user";
+mob 5455 "magic_user";
+mob 5461 "cityguard";
+mob 5462 "cityguard";
+mob 5463 "cityguard";
+# mob 5481 "cleric";
+mob 5482 "cityguard";
+mob 5494 "postmaster";
+
+# Guilds
+mob 5400 "guild";
+mob 5401 "guild";
+mob 5402 "guild";
+mob 5403 "guild";
+mob 5491 "guild";
+mob 5456 "guild_guard";
+mob 5457 "guild_guard";
+mob 5458 "guild_guard";
+mob 5459 "guild_guard";
+mob 5492 "guild_guard";
+
+# Rooms
+room 5547 "dump";
+# VitaliaMUD SpecProc file for:
+# Haon-Dor, Floresta Escura (zone 61)
+
+mob 6112 "magic_user";
+mob 6113 "snake";
+mob 6114 "magic_user";
+mob 6115 "magic_user";
+mob 6116 "magic_user"; /* should be a cleric */
+mob 6117 "magic_user";
+# VitaliaMUD SpecProc file for:
+# Arachnos (zone 63)
+
+mob 6302 "magic_user";
+mob 6309 "magic_user";
+mob 6312 "magic_user";
+mob 6314 "magic_user";
+mob 6315 "magic_user";
+# VitaliaMUD SpecProc file for:
+# O Reino dos Anões (zone 65)
+
+mob 6500 "cityguard";
+mob 6502 "magic_user";
+mob 6509 "magic_user";
+mob 6516 "magic_user";
+# VitaliaMUD SpecProc file for:
+# Os Templos de Anura (zone 69)
+
+# Rooms
+room 6910 "magik";
+room 6921 "magik";
+room 6957 "magik";
+room 6964 "magik";
+room 6976 "magik";
+room 6978 "anura:airflow";
+room 6980 "anura:airflow";
+room 6984 "anura:airflow";
+room 6986 "anura:airflow";
+
+# Mobiles
+mob 6901 "anura:blocker";
+mob 6902 "snake";
+# VitaliaMUD SpecProc file for:
+# O Esgoto (zones 70-73)
+
+mob 7006 "snake";
+mob 7009 "magic_user";
+mob 7200 "magic_user";
+mob 7201 "magic_user";
+mob 7202 "magic_user";
+# VitaliaMUD SpecProc file for:
+# A Residência de Redferne (zone 79)
+
+mob 7900 "cityguard";
+# VitaliaMUD SpecProc file for:
+# O Subterrâneo (zone 97)
+
+mob 9701 "snake";
+mob 9704 "snake";
+mob 9705 "snake";
+mob 9804 "evil-boss";
+# VitaliaMUD SpecProc file for:
+# O Abismo (zone 98)
+
+mob 9806 "angels";
+mob 9807 "angels";
+mob 9808 "angels";
+mob 9809 "angels";
+obj 9808 "scroll:9808";
+room 9823 "room:9823";
