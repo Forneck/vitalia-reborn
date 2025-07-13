@@ -238,15 +238,16 @@ D2
 0 -1 11310
 S
 #11312
-No Túnel~
-   Você não vê quase nada. A correnteza aqui tornou-se muito intensa, sendo impossível
-nadar para sul. Você não vê saída alguma.
+No Tunel~
+   Voce nao ve quase nada. A correnteza aqui tornou-se muito intensa, sendo impossivel
+nadar para sul. Voce nao ve saida alguma.
 ~
 113 69 0 0 0 8
 D4
 ~
 ~
-3 -1 11313
+0 -1 11313
+T 11308
 S
 #11313
 No Túnel~
@@ -257,8 +258,8 @@ Lá, parece haver alguma coisa iluminando um dos lados do túnel.
 D4
 ~
 ~
-3 -1 11314
-
+0 -1 11314
+T 11308
 S
 #11314
 No Túnel~
@@ -538,6 +539,7 @@ D3
 ~
 ~
 0 -1 11329
+T 11309
 S
 #11322
 A Via Norte~
@@ -567,6 +569,7 @@ D3
 ~
 ~
 0 -1 11328
+T 11309
 S
 #11323
 A Via Norte~
@@ -591,6 +594,7 @@ D3
 ~
 ~
 0 -1 11382
+T 11309
 S
 #11324
 A Oficina de Twashtri~
@@ -724,6 +728,7 @@ D2
 ~
 ~
 0 -1 11367
+T 11309
 S
 #11330
 A Via Leste~
@@ -755,6 +760,7 @@ D3
 ~
 ~
 0 -1 11317
+T 11309
 S
 #11331
 A Via Leste~
@@ -785,6 +791,7 @@ D3
 ~
 ~
 0 -1 11330
+T 11309
 S
 #11332
 A Via Leste~
@@ -815,6 +822,7 @@ D3
 ~
 ~
 0 -1 11331
+T 11309
 S
 #11333
 A Via Leste~
@@ -844,6 +852,7 @@ D3
 ~
 ~
 0 -1 11332
+T 11309
 S
 #11334
 A Via Leste~
@@ -868,6 +877,7 @@ D3
 ~
 ~
 0 -1 11333
+T 11309
 S
 #11335
 A Entrada da Congregação de Clérigos de Bhogavati~
@@ -1034,6 +1044,7 @@ D3
 ~
 ~
 0 -1 11347
+T 11309
 S
 #11344
 A Via Sul~
@@ -1063,6 +1074,7 @@ D3
 ~
 ~
 0 -1 11349
+T 11309
 S
 #11345
 A Via Sul~
@@ -1092,6 +1104,7 @@ D3
 ~
 ~
 0 -1 11371
+T 11309
 S
 #11346
 A Via Sul~
@@ -1116,6 +1129,7 @@ D3
 ~
 ~
 0 -1 11363
+T 11309
 S
 #11347
 Serviço Postal~
@@ -1210,6 +1224,7 @@ D3
 ~
 ~
 0 -1 11351
+T 11309
 S
 #11351
 A Via Oeste~
@@ -1235,6 +1250,7 @@ D3
 ~
 ~
 0 -1 11352
+T 11309
 S
 #11352
 A Via Oeste~
@@ -1264,6 +1280,7 @@ D3
 ~
 ~
 0 -1 11353
+T 11309
 S
 #11353
 A Via Oeste~
@@ -1289,6 +1306,7 @@ D3
 ~
 ~
 0 -1 11377
+T 11309
 S
 #11354
 A Pedra Preciosa~
@@ -1391,6 +1409,7 @@ D8
 ~
 ~
 0 -1 11358
+T 11309
 S
 #11358
 Um Afluente das Vias~
@@ -1415,6 +1434,7 @@ D9
 ~
 ~
 0 -1 11376
+T 11309
 S
 #11359
 Um Afluente das Vias~
@@ -1439,6 +1459,7 @@ D6
 ~
 ~
 0 -1 11358
+T 11309
 S
 #11360
 Um Afluente das Vias~
@@ -1464,6 +1485,7 @@ Por ali você passa por baixo de uma ponte.
 ~
 ~
 0 -1 11362
+T 11309
 S
 #11361
 Um Pátio Fora do Templo~
@@ -1515,6 +1537,7 @@ Por ali você passa por baixo de uma ponte.
 ~
 ~
 0 -1 11360
+T 11309
 S
 #11363
 Um Afluente das Vias~
@@ -1540,6 +1563,7 @@ Por ali você passa por baixo de uma ponte.
 ~
 ~
 0 -1 11365
+T 11309
 S
 #11364
 A Ponte Noroeste~
@@ -1589,6 +1613,7 @@ Por ali você passa por baixo de uma ponte.
 ~
 ~
 0 -1 11363
+T 11309
 S
 #11366
 Um Afluente das Vias~
@@ -1613,6 +1638,7 @@ D3
 ~
 ~
 0 -1 11381
+T 11309
 S
 #11367
 Um Afluente das Vias~
@@ -1637,6 +1663,7 @@ D3
 ~
 ~
 0 -1 11366
+T 11309
 S
 #11368
 Um Afluente das Vias~
@@ -1665,6 +1692,7 @@ D3
 ~
 ~
 0 -1 11365
+T 11309
 S
 #11369
 Um Afluente das Vias~
@@ -1685,6 +1713,7 @@ D3
 ~
 ~
 0 -1 11368
+T 11309
 S
 #11370
 Um Afluente das Vias~
@@ -1709,6 +1738,7 @@ D8
 ~
 ~
 0 -1 11371
+T 11309
 S
 #11371
 Um Afluente das Vias~
@@ -1729,6 +1759,7 @@ D6
 ~
 ~
 0 -1 11370
+T 11309
 S
 #11372
 Um Afluente das Vias~
@@ -1753,6 +1784,7 @@ D3
 ~
 ~
 0 -1 11344
+T 11309
 S
 #11373
 Um Afluente das Vias~
@@ -1777,6 +1809,7 @@ D2
 ~
 ~
 0 -1 11372
+T 11309
 S
 #11374
 Um Afluente das Vias~
@@ -1801,6 +1834,7 @@ D8
 ~
 ~
 0 -1 11360
+T 11309
 S
 #11375
 Um Afluente das Vias~
@@ -1825,6 +1859,7 @@ D3
 ~
 ~
 0 -1 11376
+T 11309
 S
 #11376
 Um Afluente das Vias~
@@ -1853,6 +1888,7 @@ D9
 ~
 ~
 0 -1 11320
+T 11309
 S
 #11377
 A Via Oeste~
@@ -1877,6 +1913,7 @@ D2
 ~
 ~
 0 -1 11365
+T 11309
 S
 #11378
 A Entrada da Confraria dos Druidas de Bhogavati~
@@ -1960,6 +1997,7 @@ D7
 ~
 ~
 0 -1 11382
+T 11309
 S
 #11382
 Um Afluente das Vias~
@@ -1984,6 +2022,7 @@ D9
 ~
 ~
 0 -1 11381
+T 11309
 S
 #11383
 As Antigüidades e Inutilidades do Senhor Kalidas~
