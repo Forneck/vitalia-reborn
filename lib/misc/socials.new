@@ -1,27 +1,27 @@
 ~... ... 0 5 0 0
-You're speechless.
-$n is speechless.
-You're speechless about what $E just did!
-$n is speechless about what $N just did!
-$n is speechless at what you just did!
-Well they're not here, eh who cares? You were speechless anyway!
-You're speechless about what you just did!
-$n is speechless about what $e just did!
-You're speechless about $S $t.
-$n is speechless about $N's $t.
-$n is speechless about your $t.
+Você está sem palavras.
+$n está sem palavras.
+Você está sem palavras com o que $E acabou de fazer!
+$n está sem palavras com o que $N acabou de fazer!
+$n está sem palavras com o que você acabou de fazer!
+Bem, eles não estão aqui, eh quem se importa? Você estava sem palavras mesmo!
+Você está sem palavras com o que acabou de fazer!
+$n está sem palavras com o que $e acabou de fazer!
+Você está sem palavras sobre $S $t.
+$n está sem palavras sobre o $t de $N.
+$n está sem palavras sobre seu $t.
 #
 #
 
 ~abc abc 1 1 0 0
-You start to sing, "ABCD LSD, Gummy Bears are chasing me."
-$n starts to sing, "ABCD LSD, Gummy Bears are chasing me."
-You look at $N. "Are the gummy bears chasing you?"
-$n looks at $N and says, "Are the gummy bears chasing you?"
-$n looks at you and says, "Are the gummy bears chasing you?" You see a small gummy bear jumping up and down on their shoulder.
-You must be crazy... you can't see the gummy bears!
-You look behind you. You look back forward, worried. "ABCD LSD, Gummy Bears are chasing me."
-$n looks behind themselves. They look forward quickly, worried. "ABCD LSD, Gummy Bears are chasing me" escapes their lips.
+Você começa a cantar, "ABCD LSD, Ursinhos de Goma estão me perseguindo."
+$n começa a cantar, "ABCD LSD, Ursinhos de Goma estão me perseguindo."
+Você olha para $N. "Os ursinhos de goma estão te perseguindo?"
+$n olha para $N e diz, "Os ursinhos de goma estão te perseguindo?"
+$n olha para você e diz, "Os ursinhos de goma estão te perseguindo?" Você vê um pequeno ursinho de goma pulando em seu ombro.
+Você deve estar louco... você não consegue ver os ursinhos de goma!
+Você olha para trás. Você olha para frente, preocupado. "ABCD LSD, Ursinhos de Goma estão me perseguindo."
+$n olha para trás. Eles olham para frente rapidamente, preocupados. "ABCD LSD, Ursinhos de Goma estão me perseguindo" escapa de seus lábios.
 #
 #
 #
@@ -30,7 +30,7 @@ $n looks behind themselves. They look forward quickly, worried. "ABCD LSD, Gummy
 
 ~abrac abrac 0 8 8 0
 Abra Abra Cadabra!
-$n goes 'Abra Cadabra!'
+$n fala 'Abra Cadabra!'
 #
 #
 #
@@ -44,64 +44,64 @@ $n goes 'Abra Cadabra!'
 #
 
 ~accuse accuse 0 5 0 0
-Accuse who??
-$n accuses everyone.
-You look accusingly at $M.
-$n looks accusingly at $N.
-$n looks accusingly at you.
-Accuse somebody who's not even there??
-You accuse yourself.
-$n seems to have a bad conscience.
-You look accusingly at $S $t.
-$n looks accusingly at $N's $t.
-$n looks at your $t accusingly.
-You look accusingly at $p.
-$n looks accusingly at $p.
+Acusar quem??
+$n acusa todo mundo.
+Você olha para $M acusando.
+$n olha acusadoramente para $N.
+$n olha acusadoramente para você.
+Acusar alguém que não está aqui??
+Você acusa a si mesmo.
+$n parece ter consciência pesada.
+Você olha acusadoramente para o $t de $S.
+$n olha acusadoramente para o $t de $N.
+$n olha para seu $t acusadoramente.
+Você olha acusadoramente para $p.
+$n olha acusadoramente para $p.
 
 ~ack ack 0 5 0 0
 ACK!
-$n goes ACK!!
-You look at $M and go ACK!
-$n looks at $N and goes ACK!
-$n looks at you and goes ACK!
-You look for someone to go ACK! at.
-You look at yourself and go ACK!
-$n looks at $mself and goes ACK!
-You look at $S $t and go ACK!
-$n looks atat $N's $t and goes ACK!
-$n looks at your $t and goes ACK!
-You look at $p and go ACK!
-$n looks at $p and goes ACK!
+$n fala ACK!!
+Você olha para $M e fala ACK!
+$n olha para $N e fala ACK!
+$n olha para você e fala ACK!
+Você procura alguém para falar ACK!
+Você olha para si mesmo e fala ACK!
+$n olha para si mesmo e fala ACK!
+Você olha para o $t de $S e fala ACK!
+$n olha para o $t de $N e fala ACK!
+$n olha para seu $t e fala ACK!
+Você olha para $p e fala ACK!
+$n olha para $p e fala ACK!
 
 ~adieu adieu 0 5 0 0
-You bid adieu to the world.
-$n bids adieu to this world.
-You bid $M a fond adieu.
-$n bids $N a fond adieu.
-$n bids you a fond adieu.
-They must have already left.
-You bid yourself a fond adieu.
-$n bids $mself a fond adieu.
-You look at $S $t and say adieu.
-$n looks at $N's $t and bids it adieu.
-$n looks at your $t and bids it adieu.
-You look at $p and bids it adieu.
-$n looks at $p and bids it adieu.
+Você se despede do mundo.
+$n se despede deste mundo.
+Você se despede carinhosamente de $M.
+$n se despede carinhosamente de $N.
+$n se despede carinhosamente de você.
+Eles já devem ter partido.
+Você se despede carinhosamente de si mesmo.
+$n se despede carinhosamente de si mesmo.
+Você olha para o $t de $S e diz adeus.
+$n olha para o $t de $N e se despede dele.
+$n olha para seu $t e se despede dele.
+Você olha para $p e se despede dele.
+$n olha para $p e se despede dele.
 
 ~admire admire 0 5 0 0
-Who do you wish to admire in this Cruel World?
-$n admires the Cruel World $e has become part of.
-You look admiringly at $M.
-$n looks admiringly at $N.
-$n looks admiringly at you.
-Your idol seems not to be here...
-You must love yourself, huh?
-$n admires $mself... get a life, huh?
-You look admiringly at $S $t.
-$n looks admiringly at $N's $t.
-$n looks at your $t admiringly.
-You look admiringly at $p.
-$n looks admiringly at $p.
+Quem você deseja admirar neste mundo cruel?
+$n admira o mundo cruel do qual $e se tornou parte.
+Você olha com admiração para $M.
+$n olha com admiração para $N.
+$n olha para você com admiração.
+Seu ídolo parece não estar aqui...
+Você deve se amar muito, hein?
+$n se admira... arranje uma vida, hein?
+Você olha com admiração para o $t de $S.
+$n olha com admiração para o $t de $N.
+$n olha para seu $t com admiração.
+Você olha com admiração para $p.
+$n olha com admiração para $p.
 
 ~adoring adoring 0 8 8 0
 You look around with adoring eyes.
@@ -119,19 +119,19 @@ You can't find that person! :(
 #
 
 ~agree agree 0 5 0 0
-You nod in agreement.
-$n nods in agreement.
-You nod in agreement with $M.
-$n nods, agreeing with $N.
-$n nods in agreement with you.
-Agree with them - you can't even see them.
-You agree with yourself, how very reasonable.
-$n starts agreeing with $mself. Perhaps $e should seek professional help.
-You look at $S $t and agree with it. How strange.
-$n looks at $N's $t and agree's with it. How strange.
-$n looks at your $t and nods in agreement.
-You look at $p and nod in agreement.
-$n looks at $p and nods in agreement.
+Você concorda com tudo que está sendo dito.
+$n concorda com tudo que está sendo dito.
+Você concorda com tudo que $M diz.
+$n concorda com tudo que $N diz.
+$n concorda com tudo que você diz.
+Concorde com alguém mais próximo daqui!
+Você concorda consigo mesmo... Certo...
+$n crê piamente estar sempre certo.
+Você olha para o $t de $S e concorda com ele. Que estranho.
+$n olha para o $t de $N e concorda com ele. Que estranho.
+$n olha para seu $t e acena concordando.
+Você olha para $p e acena concordando.
+$n olha para $p e acena concordando.
 
 ~ahem ahem 0 5 8 0
 You look down your nose and grunt 'Ahem!'
@@ -195,18 +195,18 @@ $n looks at $p and apologizes.
 
 ~applaud applaud 0 5 0 0
 Clap, clap, clap.
-$n gives a round of applause.
-You give $M a round of applause.
-$n gives $N a round of applause.
-$n gives you a round of applause.
-Clap away, they're not here.
-No one else will do it, you may as well do it yourself.
-$n must be desperate for praise, $e is applauding $mself.
-You look at $S $t and applaud.
-$n looks at $N's $t and applauds.
-$n looks at your $t and applauds.
-You look at $p and applaud.
-$n looks at $p and applauds.
+$n bate palmas em aplauso.
+Você dá uma salva de palmas para $M.
+$n dá uma salva de palmas para $N.
+$n dá uma salva de palmas para você.
+Bata palmas à vontade, eles não estão aqui.
+Ninguém mais vai fazer isso, é melhor você mesmo fazer.
+$n deve estar desesperado por elogios, $e está se aplaudindo.
+Você olha para o $t de $S e aplaude.
+$n olha para o $t de $N e aplaude.
+$n olha para seu $t e aplaude.
+Você olha para $p e aplaude.
+$n olha para $p e aplaude.
 
 ~arch arch 0 5 0 0
 You arch an eyebrow.
@@ -749,19 +749,19 @@ Feeling bored, you try to annoy everyone with $p.
 $n tries to annoy everyone with $p.
 
 ~bow bow 0 5 0 0
-You bow deeply.
-$n bows deeply.
-You bow before $M.
-$n bows before $N.
-$n bows before you.
-Who's that?
-You kiss your toes.
-$n folds up like a jacknife and kisses $s own toes.
-You bow at $S $t
-$n bows at $N's $t.
-$n bows at your $t.
-You bow at $p.
-$n bows at $p.
+Você faz uma reverência lentamente.
+$n se curva lentamente.
+Você se curva perante $M.
+$n se curva frente a $N, demonstrando respeito.
+$n se curva perante você.
+Quem é este?
+Você beija seu dedão do pé. É nojento!
+$n se abaixa e beija seu próprio dedão!
+Você se curva diante do $t de $S
+$n se curva diante do $t de $N.
+$n se curva diante de seu $t.
+Você se curva diante de $p.
+$n se curva diante de $p.
 
 ~box box 0 8 8 0
 You look for someone to box.
