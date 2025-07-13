@@ -16158,6 +16158,34 @@ em 4 pontos enquanto durar a magia.
 
 Veja tambem: MAGIA-FIRESHIELD, MAGIA-THISTLECOAT
 #1
+MAGIA-CLONE
+
+Uso        : cast 'clone'
+Acumulativa: Nao
+Duracao    : Permanente (ate a morte do clone)
+Nivel      : Mago Nivel 14
+
+Cria uma replica exata do conjurador que ira segui-lo e obedece-lo
+como um servo fiel. O clone possui o mesmo nome e aparencia, mas
+e uma criatura separada com menor poder que o original.
+Esta e uma magia de invocacao que requer componentes especiais.
+
+Veja Tambem: MAGIA-SUMMON, MAGIA-ANIMATE-DEAD, CHARM
+#1
+MAGIA-EVOKE-AIR-SERVANT
+
+Uso        : cast 'evoke air servant'
+Acumulativa: Nao  
+Duracao    : Permanente (ate a morte do servo)
+Nivel      : Guardiao (Ranger) Nivel 14
+
+Invoca um servo elemental do ar para auxiliar o conjurador.
+O servo e uma criatura magica que seguira e obedecera ao
+guardiao, podendo ajudar em combate e outras tarefas.
+Como toda invocacao, requer componentes especiais.
+
+Veja Tambem: EVOKE-CROW, EVOKE-WOLF, EVOKE-BEAR, EVOKE-LION
+#1
 MAGIA-PARALYSE
 
 Uso        : cast 'paralyse' <alvo>
