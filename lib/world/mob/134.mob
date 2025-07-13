@@ -564,4 +564,137 @@ guarda estaria protegendo?
 10025 169234
 9 9 1
 E
+
+#13445
+nobre elfo~
+um nobre elfo~
+Um elfo elegantemente vestido observa a cidade de sua residência.
+~
+Este nobre elfo possui uma presença digna e refinada. Suas roupas são
+feitas dos melhores tecidos élficos, e sua postura demonstra séculos
+de linhagem nobre.
+~
+2156546 0 0 0 0 0 0 0 700 E
+25 1 2 1d6+300 3d8+5
+1200 12000
+8 8 1
+E
+
+#13446
+bibliotecario elfo~
+o bibliotecário élfico~
+Um bibliotecário élfico cuida dos livros antigos com reverência.
+~
+Este elfo dedicou sua longa vida ao estudo e preservação do conhecimento.
+Seus olhos brilham com sabedoria acumulada ao longo de séculos de
+pesquisa e estudo.
+~
+2156546 0 0 0 0 0 0 0 650 E
+22 2 1 1d5+275 2d8+4
+1000 10000
+8 8 1
+Spell: 1
+Spell: 12
+E
+
+#13447
+arquivista elfo~
+o arquivista élfico~
+Um elfo anciãao cuida dos pergaminhos mais antigos.
+~
+Este é um dos elfos mais antigos de Thewster, guardião dos registros
+históricos mais preciosos. Sua memória contém conhecimentos que remontam
+aos primeiros dias da cidade élfica.
+~
+2156546 0 0 0 0 0 0 0 750 E
+28 0 0 1d7+350 3d8+6
+1400 14000
+8 8 1
+Spell: 25
+Spell: 28
+E
+
+#13448
+comerciante elfo~
+um comerciante élfico~
+Um comerciante élfico apresenta suas mercadorias especiais.
+~
+Este elfo especializa-se em produtos únicos da floresta que só podem
+ser encontrados nas copas das árvores de Thewster. Sua expertise em
+produtos élficos é reconhecida em toda a região.
+~
+2156546 0 0 0 0 0 0 0 600 E
+20 3 3 1d4+250 2d7+3
+900 9000
+8 8 1
+E
+
+#13449
+artesao elfo~
+o artesão élfico~
+Um mestre artesão élfico trabalha em uma peça intrincada.
+~
+As mãos habilidosas deste elfo criam obras de arte que combinam
+funcionalidade com beleza excepcional. Cada peça que ele produz
+é uma expressão da cultura élfica refinada.
+~
+2156546 0 0 0 0 0 0 0 675 E
+24 1 1 1d6+300 2d8+4
+1100 11000
+8 8 1
+E
+
+#13450
+encantador elfo~
+o encantador élfico~
+Um mago élfico especializado em encantamentos trabalha com cristais.
+~
+Este elfo domina as artes arcanas relacionadas ao encantamento de objetos.
+Sua especialidade são encantamentos que harmonizam magia com natureza,
+criando itens únicos.
+~
+2156546 0 0 0 0 0 0 0 725 E
+26 -1 -1 1d7+325 3d7+5
+1300 13000
+8 8 1
+Spell: 3
+Spell: 17
+Spell: 25
+E
+
+#13451
+druida elfo~
+o druida élfico~
+Um druida élfico medita em harmonia com a natureza.
+~
+Este elfo dedicou sua existência à compreensão e proteção das forças
+naturais. Ele serve como ponte entre a cidade élfica e os espíritos
+da floresta.
+~
+2156546 0 0 0 0 0 0 0 650 E
+23 2 2 1d5+287 2d8+4
+1050 10500
+8 8 1
+Spell: 28
+Spell: 1
+E
+
+#13452
+curandeiro elfo~
+o curandeiro élfico~
+Um curandeiro élfico cultiva plantas medicinais mágicas.
+~
+Este elfo possui conhecimento profundo sobre as propriedades curativas
+das plantas da floresta. Suas habilidades de cura combinam medicina
+tradicional élfica com magia natural.
+~
+2156546 0 0 0 0 0 0 0 675 E
+24 1 1 1d6+300 2d8+4
+1100 11000
+8 8 1
+Spell: 15
+Spell: 28
+Spell: 1
+E
+
 $

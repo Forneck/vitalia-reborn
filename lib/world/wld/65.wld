@@ -849,4 +849,162 @@ D1
 porta~
 2 6500 6532
 S
+
+#6555
+A Taverna de Strangelove~
+   Esta taverna animada é o coração social do reino dos anões de Strangelove.
+Barris de cerveja anã estão empilhados ao longo das paredes, e o ar está
+carregado com o aroma de carne assada e cerveja forte. Anões de toda a
+montanha se reúnem aqui para beber, comer e contar histórias de suas
+aventuras.
+~
+65 8 0 0 0 0
+D0
+A cozinha da taverna fica ao norte.
+~
+~
+0 0 6556
+D1
+O salão principal do castelo fica a leste.
+~
+~
+0 0 6525
+S
+
+#6556
+A Cozinha da Taverna~
+   Uma cozinha robusta onde são preparadas as refeições hearty preferidas
+pelos anões. Enormes caldeirões borbulham sobre fornos de pedra, e carcaças
+de caça estão penduradas nas vigas do teto. O cheiro de pão recém-assado
+mistura-se com o aroma de ensopados temperados.
+~
+65 8 0 0 0 0
+D2
+A taverna principal fica ao sul.
+~
+~
+0 0 6555
+S
+
+#6557
+A Forja Real de Strangelove~
+   Esta é a forja mais avançada do reino dos anões, onde são criadas as
+armas e armaduras da realeza. O calor intenso das fornalhas rivaliza com
+o centro de um vulcão, e ferramentas especiais de precisão estão organizadas
+com cuidado militar. Apenas os mestres ferreiros mais habilidosos trabalham
+aqui.
+~
+65 8 0 0 0 0
+D1
+O arsenal real fica a leste.
+~
+~
+0 0 6558
+S
+
+#6558
+O Arsenal Real~
+   Um arsenal impressionante contendo as melhores armas e armaduras do reino
+dos anões. Machados de guerra ornamentados estão expostos em suportes especiais,
+e armaduras de placas reluzem sob a luz das tochas. Cada peça representa o
+auge da metalurgia anã.
+~
+65 8 0 0 0 0
+D3
+A forja real fica a oeste.
+~
+~
+0 0 6557
+D0
+A sala do conselho fica ao norte.
+~
+~
+0 0 6559
+S
+
+#6559
+A Sala do Conselho dos Anões~
+   Aqui os líderes anões se reúnem para discutir assuntos importantes do reino.
+Uma mesa de pedra circular domina o centro da sala, rodeada por cadeiras
+esculpidas especialmente para cada conselheiro. Mapas das minas e territórios
+anões decoram as paredes de granito.
+~
+65 8 0 0 0 0
+D2
+O arsenal real fica ao sul.
+~
+~
+0 0 6558
+D1
+Os aposentos reais ficam a leste.
+~
+~
+0 0 6560
+S
+
+#6560
+Os Aposentos Reais~
+   Os quartos privados da realeza anã são luxuosamente decorados com os
+melhores trabalhos em pedra e metal do reino. Móveis entalhados em granito
+negro contrastam com detalhes em ouro e mithril. Esta é a residência pessoal
+dos governantes de Strangelove.
+~
+65 8 0 0 0 0
+D3
+A sala do conselho fica a oeste.
+~
+~
+0 0 6559
+S
+
+#6561
+A Grande Mina de Mithril~
+   Esta é a mina mais valiosa do reino dos anões, onde o precioso mithril é
+extraído das profundezas da montanha. Veios prateados brilham nas paredes
+de rocha, e o som de picaretas ressoa constantemente. A segurança aqui é
+extremamente rigorosa.
+~
+65 0 0 0 0 2
+D0
+O túnel principal continua ao norte.
+~
+~
+0 0 6562
+S
+
+#6562
+Túnel da Mina de Mithril~
+   Um túnel bem iluminado que leva às seções mais profundas da mina de mithril.
+Trilhos de minério correm pelo chão, e carrinhos carregados com minério
+precioso passam regularmente. O ar está fresco devido ao sistema de ventilação
+anão bem projetado.
+~
+65 0 0 0 0 2
+D2
+A entrada da mina fica ao sul.
+~
+~
+0 0 6561
+D0
+A câmara de refino fica ao norte.
+~
+~
+0 0 6563
+S
+
+#6563
+A Câmara de Refino~
+   Aqui o mithril bruto é refinado e purificado usando técnicas secretas
+dos anões. Fornos especiais operam em temperaturas extremas, e alquimistas
+anões trabalham com precisão para extrair a pureza máxima do metal precioso.
+O resultado são lingotes de mithril de qualidade incomparável.
+~
+65 8 0 0 0 0
+D2
+O túnel da mina fica ao sul.
+~
+~
+0 0 6562
+S
+
 $~

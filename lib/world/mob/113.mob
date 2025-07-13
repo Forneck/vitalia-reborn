@@ -708,4 +708,69 @@ portões e controlando o canal a seu redor.
 BareHandAttack: 10
 E
 T 3013
+
+#11346
+artesao naga~
+um artesão naga~
+Um naga habilidoso trabalha com metais preciosos em sua oficina.
+~
+Este artesão naga é mestre em várias artes relacionadas a metais nobres
+e pedras preciosas. Suas criações são procuradas por toda Bhogavati
+por sua qualidade excepcional.
+~
+2156546 0 0 0 0 0 0 0 600 E
+21 2 1 1d9+275 2d7+3
+950 9500
+8 8 1
+E
+
+#11347
+joalheiro naga~
+o joalheiro naga~
+Um mestre joalheiro naga examina gemas com olhos experientes.
+~
+Este naga dedicou séculos à arte da joalheria, desenvolvendo técnicas
+únicas para realçar a beleza natural das pedras preciosas. Suas peças
+são consideradas obras de arte.
+~
+2156546 0 0 0 0 0 0 0 650 E
+23 1 0 1d10+300 3d6+4
+1100 11000
+8 8 1
+E
+
+#11348
+sacerdote pedras~
+o sacerdote das pedras~
+Um sacerdote naga cuida dos rituais relacionados às gemas sagradas.
+~
+Este sacerdote naga é guardião dos segredos sobre as propriedades
+místicas das pedras preciosas. Ele conduz rituais que abençoam
+as gemas antes de serem transformadas em joias.
+~
+2156546 0 0 0 0 0 0 0 625 E
+22 1 1 1d9+287 2d7+3
+1000 10000
+8 8 1
+Spell: 28
+Spell: 25
+E
+
+#11349
+principe naga~
+o príncipe naga~
+Um nobre naga com escamas que brilham como esmeraldas governa com sabedoria.
+~
+Este príncipe naga é herdeiro do trono de Bhogavatti e possui tanto poder
+político quanto místico. Suas escamas esmeraldinas e sua presença majestosa
+comandam respeito de todos os habitantes da cidade.
+~
+2156546 0 0 0 0 0 0 0 700 E
+26 -1 -2 1d12+350 3d8+5
+1300 13000
+8 8 1
+Spell: 25
+Spell: 17
+E
+
 $

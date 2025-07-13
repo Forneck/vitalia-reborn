@@ -1,0 +1,22 @@
+#56
+Vitalia~
+Nova Thalos - Distrito Mercantil~
+5600 5699 20 2 j 0 0 0 -1 -1 4
+M 0 5601 1 5601 	(o mercador de armas do deserto)
+M 0 5602 1 5602 	(o comerciante de temperos)
+M 0 5603 1 5603 	(o curandeiro do deserto)
+M 0 5604 1 5604 	(o estalajadeiro)
+M 0 5605 1 5605 	(o ferreiro do deserto)
+M 0 5606 2 5606 	(o guarda de Nova Thalos)
+M 0 5606 2 5607 	(o guarda de Nova Thalos)
+M 0 5607 1 5608 	(o mercador de couro)
+M 0 5608 1 5609 	(o cambista)
+M 0 5609 1 5610 	(o capitão da guarda)
+O 0 5601 1 5601 	(uma prateleira de armas)
+O 0 5602 1 5602 	(um balcão de temperos)
+O 0 5603 1 5603 	(uma mesa de cura)
+O 0 5604 1 5604 	(um balcão da pousada)
+O 0 5605 1 5605 	(uma forja do deserto)
+O 0 5606 1 5608 	(uma bancada de couro)
+O 0 5607 1 5609 	(uma mesa de câmbio)
+S

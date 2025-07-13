@@ -1344,4 +1344,167 @@ carpete corpos~
 Coelhos, pássaros, elfos, guerreiros. Se você pode nomear, está aqui.
 ~
 S
+
+#13482
+O Distrito Élfico Superior~
+   Você se encontra em uma área elevada da cidade élfica de Thewster, onde
+as casas mais elegantes estão construídas entre os galhos superiores das
+árvores gigantes. A arquitetura élfica aqui é mais refinada, com detalhes
+entalhados que brilham suavemente com magia élfica. Pontes de madeira
+conectam as diferentes habitações.
+~
+134 0 0 0 0 1
+D0
+Uma ponte leva ao norte para mais residências élficas.
+~
+~
+0 0 13483
+D2
+O caminho desce para o nível principal da cidade.
+~
+~
+0 0 13400
+S
+
+#13483
+Residências Élficas Nobres~
+   Esta área exclusiva abriga as famílias élficas mais influentes de Thewster.
+Cada casa é uma obra de arte arquitetônica, integrada harmoniosamente com
+as árvores vivas. Jardins suspensos florescem entre as habitações, e o ar
+está perfumado com flores mágicas que só crescem nestes galhos altos.
+~
+134 0 0 0 0 1
+D2
+O distrito élfico superior fica ao sul.
+~
+~
+0 0 13482
+D1
+A biblioteca élfica fica a leste.
+~
+~
+0 0 13484
+S
+
+#13484
+A Grande Biblioteca Élfica~
+   Uma impressionante biblioteca construída no tronco oco de uma árvore
+ancestral. Prateleiras espiraladas sobem pelas paredes curvas, carregadas
+com tomos antigos e pergaminhos élficos. A luz suave filtra através de
+aberturas naturais, iluminando mesas de estudo onde estudiosos élficos
+pesquisam conhecimentos arcanos.
+~
+134 8 0 0 0 0
+D3
+As residências élficas ficam a oeste.
+~
+~
+0 0 13483
+D1
+O arquivo de pergaminhos fica a leste.
+~
+~
+0 0 13485
+S
+
+#13485
+Arquivo de Pergaminhos Antigos~
+   Uma câmara silenciosa onde os pergaminhos mais antigos e preciosos são
+preservados por magia élfica. O ar está seco e perfumado com ervas
+preservativas. Apenas os bibliotecários mais qualificados têm acesso a
+esta seção, onde registros da história élfica são mantidos seguros.
+~
+134 8 0 0 0 0
+D3
+A biblioteca principal fica a oeste.
+~
+~
+0 0 13484
+S
+
+#13486
+O Mercado das Árvores~
+   Um mercado único construído em plataformas conectadas entre várias árvores.
+Comerciantes élficos vendem produtos exclusivos da floresta: frutas mágicas,
+madeiras especiais, e artesanatos élficos. O mercado flutua literalmente no
+ar, suspenso por magia élfica e engenharia natural.
+~
+134 0 0 0 0 1
+D0
+O caminho continua para o norte.
+~
+~
+0 0 13487
+D2
+O caminho desce para a praça central.
+~
+~
+0 0 13400
+S
+
+#13487
+Oficina do Artesão Élfico~
+   Uma oficina especializada onde mestres artesãos élficos criam itens únicos
+combinando habilidade tradicional com magia natural. Ferramentas élficas
+estão organizadas com precisão, e peças semi-acabadas demonstram a qualidade
+excepcional do trabalho élfico.
+~
+134 8 0 0 0 0
+D2
+O mercado das árvores fica ao sul.
+~
+~
+0 0 13486
+D1
+O ateliê de encantamento fica a leste.
+~
+~
+0 0 13488
+S
+
+#13488
+Ateliê de Encantamento~
+   Nesta câmara mística, magos élficos especializados encantam itens com
+propriedades mágicas. Círculos rúnicos estão gravados no chão de madeira,
+e cristais mágicos projetam luz colorida pelas paredes. O ar vibra com
+energia arcana concentrada.
+~
+134 8 0 0 0 0
+D3
+A oficina do artesão fica a oeste.
+~
+~
+0 0 13487
+S
+
+#13489
+O Santuário da Natureza~
+   Um local sagrado onde os elfos vêm para meditar e se conectar com as
+forças naturais da floresta. Flores silvestres crescem em padrões mágicos,
+e uma pequena fonte cristalina murmura suavemente. A paz e harmonia deste
+lugar restauram tanto o corpo quanto o espírito.
+~
+134 4 0 0 0 0
+D0
+O jardim medicinal fica ao norte.
+~
+~
+0 0 13490
+S
+
+#13490
+Jardim Medicinal Élfico~
+   Um jardim cuidadosamente cultivado onde crescem plantas medicinais raras
+e mágicas. Cada erva é plantada de acordo com antigas tradições élficas,
+e algumas plantas brilham suavemente com propriedades curativas naturais.
+Curandeiros élficos colhem ingredientes aqui para suas poções.
+~
+134 0 0 0 0 1
+D2
+O santuário da natureza fica ao sul.
+~
+~
+0 0 13489
+S
+
 $~

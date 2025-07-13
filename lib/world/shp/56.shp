@@ -1,0 +1,68 @@
+#5601
+~
+Items for sale:
+   5413 - uma cimitarra
+   5420 - um escudo de madeira
+   5421 - um escudo de espinhos
+   5403 - uma maça de espinhos
+Shopkeeper: 5601 - o mercador de armas do deserto
+Buy at: 1.20
+Sell at: 0.80
+Shop flags: WILL_FIGHT
+~
+
+#5602
+~
+Items for sale:
+   5456 - um ovo
+   5457 - uma cenoura
+   5458 - um tomate
+   5459 - um figo
+   5460 - algumas tâmaras
+Shopkeeper: 5602 - o comerciante de temperos
+Buy at: 1.10
+Sell at: 0.90
+Shop flags: WILL_FIGHT
+~
+
+#5603
+~
+Items for sale:
+   5470 - um frasco azul brilhante
+   5471 - uma poção verde-escuro
+   5472 - uma poção cristalina
+   5473 - uma poção lactescente
+Shopkeeper: 5603 - o curandeiro do deserto
+Buy at: 1.25
+Sell at: 0.75
+Shop flags: WILL_FIGHT
+~
+
+#5604
+~
+Items for sale:
+   5464 - um arenque salgado
+   5465 - um músculo
+   5440 - um pedaço de queijo
+   5441 - um pouco de pão
+Shopkeeper: 5604 - o estalajadeiro
+Buy at: 1.15
+Sell at: 0.85
+Shop flags: WILL_FIGHT
+~
+
+#5607
+~
+Items for sale:
+   5422 - um escudo
+   5423 - uma jaqueta de couro
+   5424 - um par de mangas de couro
+   5425 - um gorro de couro
+   5426 - uma calça de couro
+Shopkeeper: 5607 - o mercador de couro
+Buy at: 1.20
+Sell at: 0.80
+Shop flags: WILL_FIGHT
+~
+
+$~
