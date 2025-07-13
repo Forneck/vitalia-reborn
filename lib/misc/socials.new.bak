@@ -629,68 +629,68 @@ Você o leva para um quique alegre.
 $n agarra $p e começa a quicar com ele.
 
 ~boast boast 0 5 0 0
-Você se gaba sobre seu grande feito.
-$n se gaba em voz alta sobre $s grande feito.
-Você fala arrogantemente para $M sobre si mesmo.
-$n se gaba para $N.
-$n fala arrogantemente para você sobre $mself.
-Suas vanglórias parecem ser geralmente ignoradas.
-Você se gaba para si mesmo e enche sua cabeça com pensamentos tolos.
-$n se gaba para $mself, que convencido.
-Você se gaba sobre o $t de $S.
-$n se gaba sobre o $t de $N.
-$n se gaba sobre seu $t.
-Você se gaba sobre $p.
-$n se gaba sobre $p.
+You boast about your great deed.
+$n boasts loudly about $s great deed.
+You boastfully tell $M about yourself.
+$n boasts to $N.
+$n boastfully tells you about $mself.
+Your boasts seem generally ignored.
+You boast to yourself and fill your head with silly thoughts.
+$n boasts to $mself, how conceited.
+You boast about $S $t.
+$n boasts about $N's $t.
+$n boasts about your $t.
+You boast about $p.
+$n boast about $p.
 
 ~boggle boggle 0 5 0 0
-Você está completamente confuso.
-$n está completamente confuso.
-Você está confuso com $M.
-$n parece um pouco confuso com $N.
-Você parece ter confundido $n.
-Você está verdadeira e completamente confuso, parece.
-Você se confunde... evidentemente foi bem fácil.
-A mente de $n está completamente confusa.
-Você está confuso sobre o $t de $S.
-$n parece estar confuso sobre o $t de $N.
-$n está confuso sobre seu $t.
-Você está confuso com $p.
-$n parece estar confuso com $p.
+You are completely boggled.
+$n is completely boggled.
+You are boggled by $M.
+$n seems a bit boggled by $N.
+You seem to have boggled $n.
+You are truly and utterly boggled it seems.
+You boggle yourself... evidently it was quite easy.
+$n's mind is completely boggled.
+You are boggled over $S $t.
+$n seems to be boggled over $N's $t.
+$n boggles over your $t.
+You are boggled by $p.
+$n seems to be boggled over $p.
 
 ~boink boink 0 5 0 0
-Quem você quer cutucar?
-$n olha ao redor, confuso.
-Você cutuca $M.
-$n cutuca $N com paixão suprema.
-$n cutuca você apaixonadamente.
-Quem é essa pessoa?
-Você cutuca a si mesmo na cabeça.
-*QUE NOJO* $n cutuca $mself na cabeça.
-Você cutuca o $t de $S.
-$n cutuca o $t de $N.
-$n cutuca seu $t.
-Você cutuca $p.
-$n cutuca $p.
+Who do you want to boink?
+$n looks around, puzzled.
+You boink $M.
+$n boinks $N with ultimate passion.
+$n boinks you passionately.
+Who's that?
+You boink yourself on the head.
+*YUCK* $n boinks $mself on the head.
+You boink $S $t.
+$n boinks $N's $t.
+$n boinks your $t.
+You boink $p.
+$n boinks $p.
 
 ~bonk bonk 0 5 0 0
-Quem você deseja bater na cabeça?
-$n está procurando alguém para bater, CORRAM!
-Você bate em $M na cabeça.
-$n bate em $N na cabeça.
-$n bate em você na cabeça. AI!
-O alvo parece ter fugido.
-Você bate em si mesmo na cabeça. Ei! isso doeu!
-$n bate em $mself na cabeça.
-Você bate no $t de $S.
-$n bate no $t de $N.
-$n bate em seu $t.
-Você bate em $p.
-$n bate em $p.
+Whom do you wish to bonk on the head?
+$n is looking for someone to bonk, RUN!
+You bonk $M on the head.
+$n bonks $N on the head.
+$n bonks you on the head. OUCH!
+The bonkee seems to have fled.
+You bonk yourself on the head. Hey! that hurt!
+$n bonks $mself in the head.
+You bonk $S $t.
+$n bonks $N's $t.
+$n bonks your $t.
+You bonk $p.
+$n bonk $p.
 
 ~boo boo 0 5 0 0
-'BOO!' você é uma pessoa assustadora, não é?
-Do nada, $n faz, "BOO!"
+'BOO!' you're a frightening person, aren't ya?
+From out of nowhere, $n goes, "BOO!"
 #
 #
 #
@@ -704,74 +704,74 @@ Do nada, $n faz, "BOO!"
 #
 
 ~booger booger 0 5 0 0
-Você tira a meleca do seu dedo e a arremessa no espaço.
-$n tira a meleca de $s dedo.
-Você arremessa uma meleca viscosa em $M.
-$n arremessa uma meleca em $N.
-$n arremessa uma meleca em você.
-Que nojento... você não consegue achar a meleca.
-Você procura em seu nariz por melecas.
-$n procura em $s nariz por melecas.
-Você esfrega uma meleca no $t de $S.
-$n esfrega uma meleca no $t de $N.
-$n esfrega uma meleca em seu $t.
-Você arremessa melecas em $p.
-$n arremessa melecas em $p.
+You flick a booger from your finger off into space.
+$n flicks a booger from $s finger.
+You flick a slimy booger at $M.
+$n flicks a booger at $N.
+$n flicks a slimy booger at you. How disgusting!
+Flicking boogers at people is not a good way of becoming well liked.
+You pick your nose and discover a tasty booger.
+$n picks $s nose and finds a big, green booger... ick!
+You wipe a booger on $S $t.
+$n wipes a booger on $N's $t.
+$n wipes a booger on your $t.
+You wipes a booger on $p.
+$n wipes a booger $p.
 
 ~bop bop 0 5 0 0
-Quem você quer dar uma pancadinha?
-$n está procurando alguém para dar pancadinhas.
-Você dá uma pancadinha em $M.
-$n dá uma pancadinha em $N.
-$n dá uma pancadinha em você.
-Eles não estão aqui.
-Você dá uma pancadinha em si mesmo.
-$n dá uma pancadinha em $mself.
-Você dá uma pancadinha no $t de $S.
-$n dá uma pancadinha no $t de $N.
-$n dá uma pancadinha em seu $t.
-Você dá uma pancadinha em $p.
-$n dá uma pancadinha em $p.
+Bop who?
+$n bops around like a teenager!
+You bop $N over the head, OUCH!
+$n bops $N over the head, OUCH!
+$n bops you over the head, are you going to take that?
+You bop around like a teenager.
+You bop yourself over the head.
+$n bops $s head hard with $s fist.
+You bop $S $t.
+$n bops $N's $t.
+$n bops your $t.
+You bop $p.
+$n bop $p.
 
 ~bored bored 0 5 0 0
-Você boceja de tédio.
-$n boceja de tédio.
-Você olha para $M e boceja de tédio.
-$n olha para $N e boceja de tédio.
-$n olha para você e boceja de tédio.
-Você boceja de tédio com a falta da presença deles.
-Você se entedia até mesmo consigo mesmo.
-$n está entediado até mesmo consigo próprio.
-Você se entedia com o $t de $S.
-$n se entedia com o $t de $N.
-$n se entedia com seu $t.
-Você se entedia com $p.
-$n se entedia com $p.
+You're bored out of your mind!
+$n is bored out of $s mind!
+Out of boredom, you try to annoy $N.
+Out of boredom, $n tries to annoy $N.
+Out of boredom, $n tries to annoy you.
+They must be bored. They've left you all alone!
+You're SO boring you even bore yourself!
+$n bores even $mself!
+Feeling very bored, you annoy $S $i.
+Feeling very bored, $n annoys $N's $i.
+Feeling very bored, $n annoys your $i.
+Feeling bored, you try to annoy everyone with $p.
+$n tries to annoy everyone with $p.
 
 ~bow bow 0 5 0 0
-Você se curva perante o mundo.
-$n se curva graciosamente.
+Você faz uma reverência lentamente.
+$n se curva lentamente.
 Você se curva perante $M.
-$n se curva perante $N.
+$n se curva frente a $N, demonstrando respeito.
 $n se curva perante você.
-Você se curva para o vazio.
-Você se curva perante si mesmo.
-$n se curva perante $mself - que humilde!
-Você se curva perante o $t de $S.
-$n se curva perante o $t de $N.
-$n se curva perante seu $t.
-Você se curva perante $p.
-$n se curva perante $p.
+Quem é este?
+Você beija seu dedão do pé. É nojento!
+$n se abaixa e beija seu próprio dedão!
+Você se curva diante do $t de $S
+$n se curva diante do $t de $N.
+$n se curva diante de seu $t.
+Você se curva diante de $p.
+$n se curva diante de $p.
 
 ~box box 0 8 8 0
-Você soca o ar, treinando seus golpes.
-$n soca o ar, treinando $s golpes.
-#
-#
-#
-#
-#
-#
+You look for someone to box.
+$n looks for someone to box.
+You beat $N up. KO!
+$n boxes $N. They both lose.
+$n boxes with you. Oi... KO!
+You beet him to a bloody pulp, they arn't here...
+You can't beat yourself up!
+Back away! $n is beating themselves up!
 #
 #
 #
@@ -779,199 +779,200 @@ $n soca o ar, treinando $s golpes.
 #
 
 ~brag brag 0 5 0 0
-Você se vangloria sobre seus grandes feitos.
-$n se vangloria sobre $s grandes feitos.
-Você se vangloria para $M sobre si mesmo.
-$n se vangloria para $N.
-$n se vangloria para você sobre $mself.
-Suas fanfarronadas parecem ser ignoradas.
-Você se vangloria para si mesmo. Que ego!
-$n se vangloria para $mself. Que ego!
-Você se vangloria sobre o $t de $S.
-$n se vangloria sobre o $t de $N.
-$n se vangloria sobre seu $t.
-Você se vangloria sobre $p.
-$n se vangloria sobre $p.
+You brag about your adventures.
+$n brags about deeds, done during $s countless adventures.
+You brag to $M about your adventures.
+$n brags to $N.
+$n brags to you about $s adventures.
+Your brags seem generally ignored.
+You brag to yourself and make your head swell.
+$n brags about $mself, how conceited.
+You brag about $S $t.
+$n brags about $N's $t.
+$n bragss about your $t.
+You brag about $p.
+$n brags about $p.
 
 ~brb brb 0 5 0 0
-Você diz: 'Já volto!'
-$n diz: 'Já volto!'
-Você diz para $M: 'Já volto!'
-$n diz para $N: 'Já volto!'
-$n diz para você: 'Já volto!'
-Você grita: 'Já volto!' para o vazio.
-Você murmura para si mesmo: 'Já volto!'
-$n murmura para $mself: 'Já volto!'
-Você diz para o $t de $S: 'Já volto!'
-$n diz para o $t de $N: 'Já volto!'
-$n diz para seu $t: 'Já volto!'
-Você diz para $p: 'Já volto!'
-$n diz para $p: 'Já volto!'
+You let everyone know that you'll be right back!
+$n will be right back!
+You tell $M you'll be right back.
+$n tells $N that $e will be right back.
+$n tells you that $e will be right back.
+You tell someone that isn't there that you will be right back.
+You tell yourself that you'll be right back.
+$n tells $mself that $e will be right back.
+You tell $S $t that you'll be right back.
+$n tells $N's $t that you'll be right back.
+$n tells $t that you'll be right back.
+You tell $p that you'll be right back.
+$n tells $p that you'll be right back.
 
 ~breathe breathe 0 5 0 0
-Você respira fundo.
-$n respira fundo.
-Você respira fundo ao olhar para $M.
-$n respira fundo ao olhar para $N.
-$n respira fundo ao olhar para você.
-Você respira fundo, imaginando onde eles poderiam estar.
-Você respira fundo e relaxa.
-$n respira fundo e relaxa.
-Você inala o aroma do $t de $S.
-$n inala o aroma do $t de $N.
-$n inala o aroma de seu $t.
-Você respira fundo próximo a $p.
-$n respira fundo próximo a $p.
+You breathe slowly and steadily.
+$n breathes.
+You breathe on $M.
+$n breathes on $N.
+$n's breathes deeply, $s breath warm against your skin.
+You can't breathe on someone that isn't even here!
+You breathe onto your hand and sniff it... what a pong!
+$n breathes onto $s hand and sniffs it.
+#
+#
+#
+#
+#
 
 ~burn burn 0 8 8 0
-Você se sente queimando por dentro.
-$n parece estar queimando por dentro.
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+You shriek for the witch to be BURNED!
+$n shrieks for the witch to be BURNED!
+You shriek that $N is a witch! BURN $M!
+$n shrieks that $N is a witch! BURN $M!
+$n shrieks that you are a witch! Do you smell smoke?
+You need to find them first!
+You're a witch, BURN!
+$n shrieks that $e's a witch, and promptly BURNS $mself!
+You shriek that $N's $t is the sign of a witch! BURN $M!
+$n shrieks that $N's $t is the sign of a witch! BURN $M!
+$n shrieks that your $t is the sign of a witch! Do you smell smoke?
+You shriek that $p is the sign of a witch! BURN it!
+$n shrieks that $p is the sign of a witch! BURN it!
 
 ~burp burp 0 5 0 0
-Você arrota alto.
-$n arrota alto.
-Você arrota alto e ri para $M.
-$n arrota alto e ri para $N.
-$n arrota alto e ri para você.
-Você arrota alto para o vazio.
-Você arrota e se desculpa.
-$n arrota e parece envergonhado.
-Você arrota perto do $t de $S.
-$n arrota perto do $t de $N.
-$n arrota perto de seu $t.
-Você arrota perto de $p.
-$n arrota perto de $p.
+You burp loudly! Better excuse yourself.
+$n burps loudly.
+You burp in $S face.
+$n burps in $N's face.
+$n burps in your face.
+Burping in someone's face is not polite.
+You try to stifle a small burp.
+$n's tummy seems to be bothering $m.
+You look at $S $t and burp at it.
+$n looks at $N's $t and burps at it.
+$n looks at your $t and burps at it.
+You look at $p and burps at it.
+$n looks at $p and burps at it.
 
 ~buzz buzz 0 5 0 0
-Você faz um zumbido como uma abelha.
-$n faz um zumbido como uma abelha.
-Você zumbe ao redor de $M como uma abelha irritante.
-$n zumbe ao redor de $N como uma abelha irritante.
-$n zumbe ao redor de você como uma abelha irritante.
-Você zumbe sozinho pelo ar.
-Você zumbe para si mesmo.
-$n zumbe para $mself.
-Você zumbe perto do $t de $S.
-$n zumbe perto do $t de $N.
-$n zumbe perto de seu $t.
-Você zumbe perto de $p.
-$n zumbe perto de $p.
+You buzz like a bug.
+$n buzzes.
+You buzz like a mosquito in $S ear.
+$n is buzzing in $N's ear.
+$n buzzes annoyingly in your ear.
+You are much too big of a bug to buzz!
+Something seems to be buzzing in your ear.
+A cloud of gnats buzz around $n's head.
+You buzz at $S $t.
+$n buzzes at $N's $t.
+$n buzzes at your $t.
+You buzz at $p.
+$n buzzes at $p.
 
 ~cackle cackle 0 5 0 0
-Você gargalha maldosamente.
-$n gargalha maldosamente.
-Você gargalha maldosamente para $M.
-$n gargalha maldosamente para $N.
-$n gargalha maldosamente para você.
-Você gargalha maldosamente sozinho.
-Você gargalha maldosamente para si mesmo.
-$n gargalha maldosamente para $mself.
-Você gargalha maldosamente sobre o $t de $S.
-$n gargalha maldosamente sobre o $t de $N.
-$n gargalha maldosamente sobre seu $t.
-Você gargalha maldosamente sobre $p.
-$n gargalha maldosamente sobre $p.
+You cackle gleefully.
+$n throws back $s head and cackles with insane glee!
+You grasp $S shoulder and cackle at $M.
+$n grasps $N's shoulder, throws back $s head and cackles insanely.
+$n insanely cackles in your face.
+Your madness seems to have affected your eyesight.
+Still working on that wicked witch impersonation?
+$n begins to cackle to $mself like an old crone.
+You cackle insanely at $S $t.
+$n cackles insanely at $N's $t.
+$n cackles insanely at your $t.
+You cackles insanely at $p.
+$n cackles insanely at $p.
 
 ~cake cake 0 5 0 0
-Você deseja um bolo delicioso.
-$n parece estar desejando um bolo.
-Você oferece um pedaço de bolo imaginário para $M.
-$n oferece um pedaço de bolo imaginário para $N.
-$n oferece um pedaço de bolo imaginário para você.
-Você come bolo imaginário sozinho.
-Você come bolo imaginário e sorri.
-$n come bolo imaginário e sorri.
-Você coloca bolo imaginário no $t de $S.
-$n coloca bolo imaginário no $t de $N.
-$n coloca bolo imaginário em seu $t.
-Você joga bolo imaginário em $p.
-$n joga bolo imaginário em $p.
+Piece of cake!
+$n thinks it will be a `piece of cake!'
+You tell $M that it will be a 'piece of cake.'
+$n tells $N that that it will be a 'piece of cake.'
+$n tells you that that it will be a 'piece of cake.'
+You tell someone that it will be a 'piece of cake.'
+You tell yourself that it will be a 'piece of cake.'
+$n tells $mself that that it will be a 'piece of cake.'
+You tell $S $t that it will be a 'piece of cake.'
+$n tells $N's $t that it will be a 'piece of cake.'
+$n tells your $t that it will be a 'piece of cake.'
+You tell $p that it will be a 'piece of cake.'
+$n tells $p that it will be a 'piece of cake.'
 
 ~calm calm 0 5 0 0
-Você se acalma e relaxa.
-$n se acalma e relaxa.
-Você tenta acalmar $M.
-$n tenta acalmar $N.
-$n tenta acalmar você.
-Você se acalma sozinho.
-Você respira fundo e se acalma.
-$n respira fundo e se acalma.
-Você se acalma com o $t de $S.
-$n se acalma com o $t de $N.
-$n se acalma com seu $t.
-Você se sente calmo perto de $p.
-$n se sente calmo perto de $p.
+You breathe deeply and count to 10.
+$n takes in a few deep breaths and counts to 10.
+You try to calm $N down.
+$n tries to calm $N down.
+$n tries to calm you down.
+To late!
+You breathe deeply and think happy thoughts.
+$n breathes deeply and tries to calm $mself down.
+You look at $N's $t and tell it to calm down.
+$n looks at $N's $t and tells it to calm down.
+$n looks at your $t and tells it to calm down.
+#
+#
 
 ~caress caress 0 5 0 0
-Quem você deseja acariciar?
-$n procura alguém para acariciar.
-Você acaricia $M gentilmente.
-$n acaricia $N gentilmente.
-$n acaricia você gentilmente.
-Você acaricia o ar vazio.
-Você se acaricia.
-$n se acaricia.
-Você acaricia o $t de $S.
-$n acaricia o $t de $N.
-$n acaricia seu $t.
-Você acaricia $p gentilmente.
-$n acaricia $p gentilmente.
+Whom do you wish to caress?
+$n is looking for someone to caress?
+You gently caress $M.
+$n gently caress $N.
+$n gently caresses you.
+I hope you know this person!
+You caress yourself... hmmmm.
+$n caresses $mself in front of everyone.
+You gently caress $S $t.
+$n gently caresses $N's $t.
+$n gently caresses your $t, it feels nice.
+You gently caress $p.
+$n gently caresses $p.
 
 ~carrot carrot 0 8 8 0
-Você masca uma cenoura imaginária.
-$n masca algo que parece ser uma cenoura.
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+What would you possibly do with a carrot.....?
+$n whips out a firm carrot!
+You whip out a carrot and wink at $N.
+$n whips a carrot out of $s pocket and winks at $N.
+$n whips a carrot out of $s pocket and winks at you.
+You try penetrating the air with your carrot!
+You whip out a carrot with a demented look on your face.
+$n whips out a carrot with an odd look on $s face.
+You prod $N's $t with your carrot.
+$n prods $N's $t with $s carrot!
+$n prods your $t with $s carrot.
+You stick your carrot in $p.
+$n sticks $s carrot into $p.
 
 ~cartwheel cartwheel 0 5 0 0
-Você faz uma estrela perfeita!
-$n faz uma estrela perfeita!
-Você faz uma estrela na frente de $M.
-$n faz uma estrela na frente de $N.
-$n faz uma estrela na frente de você.
-Você faz uma estrela sozinho.
-Você tenta fazer uma estrela mas cai.
-$n tenta fazer uma estrela mas cai.
-Você faz uma estrela sobre o $t de $S.
-$n faz uma estrela sobre o $t de $N.
-$n faz uma estrela sobre seu $t.
-Você faz estrelas ao redor de $p.
-$n faz estrelas ao redor de $p.
+You do a cartwheel. Wheeee!
+$n does a cartwheel!
+You cartwheel past $M.
+$n cartwheels past $N in a blur.
+$n cartwheels past you in a blur.
+You spin me right round baby, right round...
+You spin yourself around and around and around and...
+$n does several cartwheels in a row. $e looks quite dizzy!
+You do a cartwheel over $S $t.
+$n does a cartwheel over $N's $t.
+$n does a cartwheel over your $t.
+You do a cartwheel over $p.
+$n does a cartwheel over $p.
 
 ~challenge challenge 0 5 0 0
-Quem você deseja desafiar?
-$n está procurando alguém para desafiar.
-Você desafia $M para um duelo.
-$n desafia $N para um duelo.
-$n desafia você para um duelo.
-Você desafia as sombras para um duelo.
-Você se desafia a melhorar.
-$n se desafia a melhorar.
-Você desafia o $t de $S para um duelo.
-$n desafia o $t de $N para um duelo.
-$n desafia seu $t para um duelo.
-Você desafia $p para um duelo.
-$n desafia $p para um duelo.
+You challenge all who dare oppose you.
+$n challenges all who dare oppose $m - better stay clear.
+You challenge $N to a fight until DEATH!
+$n challenges $N to fight $m until DEATH!
+$n challenges you to fight $m until DEATH!
+Challenge who?!?
+Challenge yourself to mortal combat?? - stupid!
+$n looks real stupid, walking in circles around $mself shadowfighting!
+You challenge $S $t to a duel.
+$n challenges $N's $t to a duel.
+$n challenges your $t to a duel.
+You challenge $p to a duel.
+$n challenge $p to a duel.
+
 ~channel channel 0 8 8 0
 You receive the "I don't know how to talk on the right channel" award.
 $n wins the "I don't know how to talk on the right channel" award.
