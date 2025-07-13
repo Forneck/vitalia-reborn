@@ -87,7 +87,8 @@ void mobile_activity(void)
         
         /* If stuck on shopping goal for too long (50 ticks = ~5 minutes), abandon it */
         if ((ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL || 
-             ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY) && 
+             ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY ||
+             ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER) && 
             ch->ai_data->goal_timer > 50) {
             act("$n parece frustrado e desiste da viagem.", FALSE, ch, 0, 0, TO_ROOM);
             ch->ai_data->current_goal = GOAL_NONE;
@@ -203,6 +204,17 @@ void mobile_activity(void)
                     /* Remove o item da wishlist se a compra foi bem sucedida */
                     remove_item_from_wishlist(ch, ch->ai_data->goal_item_vnum);
                     act("$n parece satisfeito com a sua compra.", FALSE, ch, 0, 0, TO_ROOM);
+                }
+            } else if (ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER) {
+                /* Chegou ao questmaster para postar uma quest */
+                if (ch->ai_data->goal_item_vnum != NOTHING) {
+                    /* Encontra o item na wishlist para obter a prioridade correta */
+                    struct mob_wishlist_item *wishlist_item = find_item_in_wishlist(ch, ch->ai_data->goal_item_vnum);
+                    int reward = wishlist_item ? wishlist_item->priority * 2 : ch->ai_data->goal_item_vnum;
+                    
+                    /* Posta a quest no questmaster */
+                    mob_posts_quest(ch, ch->ai_data->goal_item_vnum, reward);
+                    act("$n fala com o questmaster e entrega um pergaminho.", FALSE, ch, 0, 0, TO_ROOM);
                 }
             }
             /* Limpa o objetivo, pois foi concluído. */
@@ -1905,20 +1917,34 @@ void mob_process_wishlist_goals(struct char_data *ch)
         }
     }
     
-    /* Opção 3: Postar uma quest (implementação básica) */
+    /* Opção 3: Postar uma quest (implementação aprimorada) */
     if (GET_GOLD(ch) >= desired_item->priority * 2) {
         /* Tem ouro suficiente para oferecer uma recompensa */
-        ch->ai_data->current_goal = GOAL_POST_QUEST;
-        ch->ai_data->goal_item_vnum = desired_item->vnum;
-        ch->ai_data->goal_timer = 0;
-        act("$n parece estar a considerar contratar aventureiros.", FALSE, ch, 0, 0, TO_ROOM);
+        zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
+        struct char_data *accessible_qm = find_accessible_questmaster_in_zone(ch, mob_zone);
         
-        /* Por ora, simula a postagem da quest */
-        mob_posts_quest(ch, desired_item->vnum, desired_item->priority * 2);
-        
-        /* Reseta o objetivo após "postar" a quest */
-        ch->ai_data->current_goal = GOAL_NONE;
-        return;
+        if (accessible_qm && accessible_qm != ch) {
+            /* Há um questmaster acessível, vai até ele para postar */
+            ch->ai_data->current_goal = GOAL_GOTO_QUESTMASTER;
+            ch->ai_data->goal_destination = IN_ROOM(accessible_qm);
+            ch->ai_data->goal_item_vnum = desired_item->vnum;
+            ch->ai_data->goal_timer = 0;
+            act("$n parece estar a considerar contratar aventureiros.", FALSE, ch, 0, 0, TO_ROOM);
+            return; /* Vai tentar chegar ao questmaster */
+        } else {
+            /* Não há questmaster acessível, torna-se questmaster próprio */
+            ch->ai_data->current_goal = GOAL_POST_QUEST;
+            ch->ai_data->goal_item_vnum = desired_item->vnum;
+            ch->ai_data->goal_timer = 0;
+            act("$n parece estar a considerar contratar aventureiros.", FALSE, ch, 0, 0, TO_ROOM);
+            
+            /* Simula a postagem da quest */
+            mob_posts_quest(ch, desired_item->vnum, desired_item->priority * 2);
+            
+            /* Reseta o objetivo após "postar" a quest */
+            ch->ai_data->current_goal = GOAL_NONE;
+            return;
+        }
     }
     
     /* Se chegou aqui, não consegue obter o item por agora */
