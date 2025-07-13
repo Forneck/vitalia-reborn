@@ -39,6 +39,7 @@ static int  medit_get_mob_flag_by_number(int num);
 static void medit_disp_mob_flags(struct descriptor_data *d);
 static void medit_disp_aff_flags(struct descriptor_data *d);
 static void medit_disp_menu(struct descriptor_data *d);
+static void medit_disp_genetics_menu(struct descriptor_data *d);
 
 /*  utility functions */
 ACMD(do_oasis_medit)
@@ -437,6 +438,7 @@ static void medit_disp_menu(struct descriptor_data *d)
       "%s9%s) Stats Menu...\r\n"
 	  "%sA%s) NPC Flags : %s%s\r\n"
 	  "%sB%s) AFF Flags : %s%s\r\n"
+	  "%sG%s) Genetics Menu...\r\n"
           "%sS%s) Script    : %s%s\r\n"
           "%sW%s) Copy mob\r\n"
 	  "%sX%s) Delete mob\r\n"
@@ -449,6 +451,7 @@ static void medit_disp_menu(struct descriptor_data *d)
 	  grn, nrm,
 	  grn, nrm, cyn, flags,
 	  grn, nrm, cyn, flag2,
+	  grn, nrm,
           grn, nrm, cyn, OLC_SCRIPT(d) ?"Set.":"Not Set.",
           grn, nrm,
 	  grn, nrm,
@@ -456,6 +459,52 @@ static void medit_disp_menu(struct descriptor_data *d)
 	  );
 
   OLC_MODE(d) = MEDIT_MAIN_MENU;
+}
+
+static void medit_disp_genetics_menu(struct descriptor_data *d)
+{
+  struct char_data *mob;
+
+  mob = OLC_MOB(d);
+  get_char_colors(d->character);
+  clear_screen(d);
+
+  /* Ensure mob has ai_data */
+  if (!mob->ai_data) {
+    CREATE(mob->ai_data, struct mob_ai_data, 1);
+    memset(mob->ai_data, 0, sizeof(struct mob_ai_data));
+  }
+
+  write_to_output(d,
+  "-- Genetics Menu for Mob [%s%d%s] --\r\n"
+  "%s1%s) Wimpy Tendency      : %s%d%s\r\n"
+  "%s2%s) Loot Tendency       : %s%d%s\r\n"
+  "%s3%s) Equip Tendency      : %s%d%s\r\n"
+  "%s4%s) Roam Tendency       : %s%d%s\r\n"
+  "%s5%s) Brave Prevalence    : %s%d%s\r\n"
+  "%s6%s) Group Tendency      : %s%d%s\r\n"
+  "%s7%s) Use Tendency        : %s%d%s\r\n"
+  "%s8%s) Trade Tendency      : %s%d%s\r\n"
+  "%s9%s) Quest Tendency      : %s%d%s\r\n"
+  "%sA%s) Adventurer Tendency : %s%d%s\r\n"
+  "%sQ%s) Return to main menu\r\n"
+  "Enter choice : ",
+
+	cyn, OLC_NUM(d), nrm,
+	grn, nrm, yel, mob->ai_data->genetics.wimpy_tendency, nrm,
+	grn, nrm, yel, mob->ai_data->genetics.loot_tendency, nrm,
+	grn, nrm, yel, mob->ai_data->genetics.equip_tendency, nrm,
+	grn, nrm, yel, mob->ai_data->genetics.roam_tendency, nrm,
+	grn, nrm, yel, mob->ai_data->genetics.brave_prevalence, nrm,
+	grn, nrm, yel, mob->ai_data->genetics.group_tendency, nrm,
+	grn, nrm, yel, mob->ai_data->genetics.use_tendency, nrm,
+	grn, nrm, yel, mob->ai_data->genetics.trade_tendency, nrm,
+	grn, nrm, yel, mob->ai_data->genetics.quest_tendency, nrm,
+	grn, nrm, yel, mob->ai_data->genetics.adventurer_tendency, nrm,
+	grn, nrm
+	);
+
+  OLC_MODE(d) = MEDIT_GENETICS_MENU;
 }
 
 /* Display main menu. */
@@ -634,6 +683,11 @@ void medit_parse(struct descriptor_data *d, char *arg)
     case 'B':
       OLC_MODE(d) = MEDIT_AFF_FLAGS;
       medit_disp_aff_flags(d);
+      return;
+    case 'g':
+    case 'G':
+      OLC_MODE(d) = MEDIT_GENETICS_MENU;
+      medit_disp_genetics_menu(d);
       return;
     case 'w':
     case 'W':
@@ -845,6 +899,66 @@ void medit_parse(struct descriptor_data *d, char *arg)
   case OLC_SCRIPT_EDIT:
     if (dg_script_edit_parse(d, arg)) return;
     break;
+
+  case MEDIT_GENETICS_MENU:
+    i = 0;
+    switch (*arg) {
+    case 'q':
+    case 'Q':
+      medit_disp_menu(d);
+      return;
+    case '1':
+      OLC_MODE(d) = MEDIT_GEN_WIMPY;
+      i++;
+      break;
+    case '2':
+      OLC_MODE(d) = MEDIT_GEN_LOOT;
+      i++;
+      break;
+    case '3':
+      OLC_MODE(d) = MEDIT_GEN_EQUIP;
+      i++;
+      break;
+    case '4':
+      OLC_MODE(d) = MEDIT_GEN_ROAM;
+      i++;
+      break;
+    case '5':
+      OLC_MODE(d) = MEDIT_GEN_BRAVE;
+      i++;
+      break;
+    case '6':
+      OLC_MODE(d) = MEDIT_GEN_GROUP;
+      i++;
+      break;
+    case '7':
+      OLC_MODE(d) = MEDIT_GEN_USE;
+      i++;
+      break;
+    case '8':
+      OLC_MODE(d) = MEDIT_GEN_TRADE;
+      i++;
+      break;
+    case '9':
+      OLC_MODE(d) = MEDIT_GEN_QUEST;
+      i++;
+      break;
+    case 'a':
+    case 'A':
+      OLC_MODE(d) = MEDIT_GEN_ADVENTURER;
+      i++;
+      break;
+    default:
+      medit_disp_genetics_menu(d);
+      return;
+    }
+    if (i == 0)
+      break;
+    else if (i == 1)
+      write_to_output(d, "\r\nEnter new value (0-100): ");
+    else
+      write_to_output(d, "Oops...\r\n");
+    return;
 
   case MEDIT_KEYWORD:
     smash_tilde(arg);
@@ -1087,6 +1201,96 @@ void medit_parse(struct descriptor_data *d, char *arg)
     } else
       write_to_output(d, "Please answer 'Y' or 'N': ");
     break;
+
+  case MEDIT_GEN_WIMPY:
+    if (!OLC_MOB(d)->ai_data) {
+      CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+      memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+    }
+    OLC_MOB(d)->ai_data->genetics.wimpy_tendency = LIMIT(i, 0, 100);
+    medit_disp_genetics_menu(d);
+    return;
+
+  case MEDIT_GEN_LOOT:
+    if (!OLC_MOB(d)->ai_data) {
+      CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+      memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+    }
+    OLC_MOB(d)->ai_data->genetics.loot_tendency = LIMIT(i, 0, 100);
+    medit_disp_genetics_menu(d);
+    return;
+
+  case MEDIT_GEN_EQUIP:
+    if (!OLC_MOB(d)->ai_data) {
+      CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+      memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+    }
+    OLC_MOB(d)->ai_data->genetics.equip_tendency = LIMIT(i, 0, 100);
+    medit_disp_genetics_menu(d);
+    return;
+
+  case MEDIT_GEN_ROAM:
+    if (!OLC_MOB(d)->ai_data) {
+      CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+      memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+    }
+    OLC_MOB(d)->ai_data->genetics.roam_tendency = LIMIT(i, 0, 100);
+    medit_disp_genetics_menu(d);
+    return;
+
+  case MEDIT_GEN_BRAVE:
+    if (!OLC_MOB(d)->ai_data) {
+      CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+      memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+    }
+    OLC_MOB(d)->ai_data->genetics.brave_prevalence = LIMIT(i, 0, 100);
+    medit_disp_genetics_menu(d);
+    return;
+
+  case MEDIT_GEN_GROUP:
+    if (!OLC_MOB(d)->ai_data) {
+      CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+      memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+    }
+    OLC_MOB(d)->ai_data->genetics.group_tendency = LIMIT(i, 0, 100);
+    medit_disp_genetics_menu(d);
+    return;
+
+  case MEDIT_GEN_USE:
+    if (!OLC_MOB(d)->ai_data) {
+      CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+      memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+    }
+    OLC_MOB(d)->ai_data->genetics.use_tendency = LIMIT(i, 0, 100);
+    medit_disp_genetics_menu(d);
+    return;
+
+  case MEDIT_GEN_TRADE:
+    if (!OLC_MOB(d)->ai_data) {
+      CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+      memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+    }
+    OLC_MOB(d)->ai_data->genetics.trade_tendency = LIMIT(i, 0, 100);
+    medit_disp_genetics_menu(d);
+    return;
+
+  case MEDIT_GEN_QUEST:
+    if (!OLC_MOB(d)->ai_data) {
+      CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+      memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+    }
+    OLC_MOB(d)->ai_data->genetics.quest_tendency = LIMIT(i, 0, 100);
+    medit_disp_genetics_menu(d);
+    return;
+
+  case MEDIT_GEN_ADVENTURER:
+    if (!OLC_MOB(d)->ai_data) {
+      CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+      memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+    }
+    OLC_MOB(d)->ai_data->genetics.adventurer_tendency = LIMIT(i, 0, 100);
+    medit_disp_genetics_menu(d);
+    return;
 
   default:
     /* We should never get here. */
