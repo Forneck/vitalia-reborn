@@ -3,7 +3,10 @@ Flow Room Effect~
 2 g 100
 ~
 * Old SpecProc: flow - Room flow effect
-%echo% A correnteza flui forte nesta direção.
+* This creates a flowing current that moves players
+if %self.people%
+  wflow A correnteza o arrasta! south
+end
 ~
 #11601
 Lightning Bolt Caster~

@@ -18,12 +18,12 @@ Airflow Room Effect~
 ~
 * Old SpecProc: airflow - Converts room between FLYING and AIR_FLOW sectors
 * This creates an alternating air current effect in the room
-if %self.sector% == 8
+if %self.sector% == 9
   %echo% Uma intensa coluna de ar surge, impelindo tudo para o alto.
-  * Change sector would need MUD code support
+  wsector 11
 else
   %echo% A coluna de ar desaparece.
-  * Change sector would need MUD code support
+  wsector 9
 end
 ~
 $~
