@@ -1398,9 +1398,12 @@ bool mob_try_and_upgrade(struct char_data *ch)
 
     bool performed_an_upgrade_this_pulse = FALSE;
     bool keep_trying = TRUE;
+    int max_iterations = 10; /* Prevent infinite loops by limiting iterations */
+    int iteration_count = 0;
 
     /* O loop 'while' garante que o mob continua a tentar equipar até estar otimizado. */
-    while (keep_trying) {
+    while (keep_trying && iteration_count < max_iterations) {
+        iteration_count++;
         
         /* Pede à nossa função de busca para encontrar o melhor plano de upgrade. */
         struct mob_upgrade_plan plan = find_best_upgrade_for_mob(ch);
@@ -1431,6 +1434,12 @@ bool mob_try_and_upgrade(struct char_data *ch)
             keep_trying = FALSE;
         }
     } /* Fim do loop 'while' */
+
+    /* Log if we hit the iteration limit to help debug infinite loops */
+    if (iteration_count >= max_iterations) {
+        log1("SYSERR: mob_try_and_upgrade hit iteration limit for mob %s (vnum %d)", 
+             GET_NAME(ch), GET_MOB_VNUM(ch));
+    }
 
     /* A aprendizagem acontece uma vez no final da sessão. */
     if (performed_an_upgrade_this_pulse) {
