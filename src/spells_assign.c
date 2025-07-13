@@ -234,6 +234,9 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->assign[0].class_num = CLASS_RANGER;
  new_spell->assign[0].level = 100;
+ new_spell->school = SCHOOL_CONJURATION;   /* Transportation magic */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure teleportation */
+
  spedit_save_internally(new_spell);
 
  // SPELL_BLESS_PERSON #3
@@ -816,6 +819,8 @@ void create_spells_db()
  //new_spell->max_dam = 100;
  new_spell->messages.to_self = strdup("Você gesticula e a terra toda começa a tremer em a sua volta!");
  new_spell->messages.to_room = strdup("$n faz alguns gestos graciosos e a terra começa a tremer violentamente!");
+ new_spell->school = SCHOOL_EVOCATION;     /* Area damage spell */
+ new_spell->element = ELEMENT_EARTH;       /* Earth-based damage */
 
  spedit_save_internally(new_spell);
 
@@ -857,6 +862,8 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->damages = strdup("vict.level <= 2 ? 100 : dice(1, 10)");
  new_spell->max_dam = 100;
+ new_spell->school = SCHOOL_EVOCATION;     /* Damage spell */
+ new_spell->element = ELEMENT_UNHOLY;      /* Negative energy */
 
  spedit_save_internally(new_spell);
 
@@ -1566,6 +1573,8 @@ void create_spells_db()
  new_spell->applies[1].duration = strdup("4");
  new_spell->messages.to_vict = strdup("Você se sente muito leve...");
  new_spell->messages.wear_off = strdup("Você se sente pesad$r novamente.");
+ new_spell->school = SCHOOL_ALTERATION;    /* Movement enhancement */
+ new_spell->element = ELEMENT_AIR;         /* Air-based flight */
 
  spedit_save_internally(new_spell);
 

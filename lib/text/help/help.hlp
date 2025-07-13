@@ -6223,6 +6223,7 @@ Uso        : cast 'fireball' <alvo>
 Acumulativa: -
 Duracao    : Instantanea
 Nivel      : Mago Nivel 22
+Escola     : Evocação
 Resistencia: Contra magia para metade do dano
 
 Essa magia e mais poderosa que color spray. Com ela o mago cria
@@ -6310,6 +6311,7 @@ Uso        : cast 'heal' <alvo>
 Acumulativa: Nao
 Duracao    : Instantanea
 Nivel      : Clerigo Nivel 24
+Escola     : Conjuração
 
 Essa magia cura todos os pontos de vida do alvo, menos 1d4. No
 maximo 100 pontos de vida podem ser recuperados. Uma pessoa afetada
@@ -6702,6 +6704,7 @@ Uso        : cast 'stoneskin' <alvo>
 Acumulativa: Sim
 Duracao    : 1 hora/ponto - 1 ponto/10 Niveis
 Nivel      : Mago Nivel 34, Clerigo Nivel 90
+Escola     : Abjuração
 
 O jogador protegido ganhara 1 ponto de pedra a cada 4 niveis de quem
 lancou a magia, toda vez que ela e utilizada. A cada hora voce perde
