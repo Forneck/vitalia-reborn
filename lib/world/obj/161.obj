@@ -1,0 +1,105 @@
+#16101
+portao ferro~
+um portão de ferro~
+Um massivo portão de ferro forjado com runas anãs está aqui.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+10 10 10 0
+8000 0 0 0 0
+E
+portao ferro~
+Este portão é uma obra-prima da engenharia anã, decorado
+com runas que contam a história do reino de Strangelove.
+~
+#16102
+forja anã~
+uma forja anã~
+Uma forja especialmente construída pelos anões está aqui.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+8 8 8 0
+5000 0 0 0 0
+E
+forja anã~
+Esta forja foi construída com técnicas secretas dos anões,
+permitindo atingir temperaturas extremamente altas.
+~
+#16103
+mesa gemas~
+uma mesa de gemas~
+Uma mesa especial para exame de gemas está aqui.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+3 3 3 0
+2000 0 0 0 0
+E
+mesa gemas~
+Esta mesa tem ferramentas especiais para cortar e polir
+as mais preciosas gemas encontradas nas minas.
+~
+#16104
+barril cerveja~
+um barril de cerveja~
+Um grande barril de cerveja anã está aqui.~
+~
+17 0 0 0 0 0 0 0 0 0 0 0 0
+5 5 5 0
+500 0 0 0 0
+E
+barril cerveja~
+Este barril contém a famosa cerveja anã, conhecida por
+sua qualidade superior em todo o reino.
+~
+#16105
+altar pedra~
+um altar de pedra~
+Um altar sagrado de pedra está aqui.~
+~
+15 0 0 0 0 0 0 0 0 0 0 0 0
+6 6 6 0
+3000 0 0 0 0
+E
+altar pedra~
+Este altar é dedicado a Moradin, o deus forjador dos anões.
+Chamas sagradas nunca se apagam em sua superfície.
+~
+#16110
+machado de guerra anão~
+um machado de guerra anão~
+Um magnifico machado de guerra anão está aqui.~
+~
+5 bh 0 0 0 0 0 0 0 0 0 0 0
+12 4 3 0
+4000 2000 0 0 0
+E
+machado guerra anão~
+Este machado foi forjado pelos melhores artesãos anões
+com técnicas passadas de geração em geração.
+~
+#16111
+armadura de placas anã~
+uma armadura de placas anã~
+Uma pesada armadura de placas anã está aqui.~
+~
+9 bi 0 0 0 aj 0 0 0 0 0 0 0
+8 0 0 0
+3500 1750 0 0 0
+E
+armadura placas anã~
+Esta armadura oferece proteção superior, forjada com
+os melhores metais das minas de Strangelove.
+~
+#16112
+anel de rubi~
+um anel de rubi~
+Um valioso anel com rubi está aqui.~
+~
+9 ai 0 0 0 0 0 0 0 0 0 0 0
+1 0 0 0
+2500 1250 0 0 0
+E
+anel rubi~
+Este anel é adornado com um rubi perfeitamente lapidado,
+símbolo da riqueza das minas anãs.
+~
+$

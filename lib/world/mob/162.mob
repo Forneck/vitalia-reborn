@@ -1,0 +1,99 @@
+#16201
+guardião naga~
+um guardião naga~
+Um imponente naga guardião protege a entrada da cidade.
+~
+Este naga tem uma cauda longa e poderosa, escamas verdes
+brilhantes e olhos hipnóticos. Sua presença intimida
+invasores mas tranquiliza os habitantes da cidade.
+~
+2156546 0 0 0 0 0 0 0 900 E
+125 -22 -15 1d1+3200 26d1+50
+65000 55000
+8 8 1
+E
+#16202
+comerciante de escamas~
+o comerciante de escamas~
+Um naga comerciante exibe suas mercadorias exóticas.
+~
+Este naga tem escamas douradas que brilham sob a luz.
+É conhecido por sua habilidade em negociar e por possuir
+os itens mais raros da região aquática.
+~
+2156546 0 0 0 0 0 0 0 900 E
+105 -15 -8 1d1+2400 21d1+40
+50000 40000
+8 8 1
+E
+#16203
+curandeiro serpente~
+o curandeiro serpente~
+Um sábio curandeiro serpente está imerso em meditação.
+~
+Esta criatura reptiliana dedicou sua vida ao estudo
+das artes curativas aquáticas. Sua pele é coberta por
+escamas medicinais que brilham com energia curativa.
+~
+2156546 0 0 0 0 0 0 0 900 E
+100 -12 -6 1d1+2000 19d1+35
+45000 35000
+8 8 1
+E
+#16204
+sacerdote naga~
+o sacerdote naga~
+Um venerável sacerdote naga conduz rituais sagrados.
+~
+Este naga ancião tem escamas prateadas e olhos que
+refletem séculos de sabedoria. Sua voz hipnótica
+pode acalmar as águas mais turbulentas.
+~
+2156546 0 0 0 0 0 0 0 900 E
+110 -18 -10 1d1+2600 23d1+45
+55000 45000
+8 8 1
+E
+#16205
+mestre das águas~
+o mestre das águas~
+O mestre das águas controla os elementos aquáticos da cidade.
+~
+Este naga possui uma conexão mística com todas as águas
+de Boghavatti. Suas escamas azuis brilham com poder
+elemental e sua presença mantém o equilíbrio aquático.
+~
+2156546 0 0 0 0 0 0 0 900 E
+130 -25 -18 1d1+3500 28d1+55
+70000 60000
+8 8 1
+E
+#16206
+rainha naga~
+a rainha naga~
+A majestosa rainha naga governa sua cidade aquática com sabedoria.
+~
+Uma naga ancestral de beleza hipnótica e poder imenso.
+Suas escamas prateadas brilham como pérolas e sua
+coroa é feita de coral raro e pedras preciosas aquáticas.
+~
+2156546 0 0 0 0 0 0 0 900 E
+160 -35 -25 1d1+4500 35d1+70
+120000 100000
+8 8 1
+E
+#16207
+caçador reptiliano~
+um caçador reptiliano~
+Um ágil caçador reptiliano retorna de sua expedição aos pântanos.
+~
+Este reptiliano é especialista em caçar nas águas rasas
+e pântanos. Sua pele escamosa oferece camuflagem perfeita
+e seus reflexos são extremamente rápidos.
+~
+2156546 0 0 0 0 0 0 0 900 E
+115 -20 -12 1d1+2800 24d1+48
+60000 48000
+8 8 1
+E
+$

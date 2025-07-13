@@ -1,0 +1,162 @@
+#5500
+Entrada do Distrito Comercial~
+   Você está na entrada do distrito comercial de Nova Thalos. As ruas são
+largas e bem pavimentadas, com edifícios de pedra arenosa que se erguem ao
+redor da praça central. Mercadores gritam seus produtos enquanto compradores
+negociam preços. O ar está carregado com o aroma de especiarias exóticas.
+O distrito principal fica ao norte, enquanto lojas se espalham nas direções
+leste e oeste.
+~
+55 0 0 0 0 1
+D0
+Para o distrito principal.
+~
+~
+0 -1 5501
+D1
+Para as lojas do leste.
+~
+~
+0 -1 5510
+D2
+Para a Praça do Mercado de Nova Thalos.
+~
+~
+0 -1 5405
+D3
+Para as lojas do oeste.
+~
+~
+0 -1 5520
+S
+#5501
+Loja de Armas do Deserto~
+   Esta é uma bem equipada loja de armas especializada em equipamentos
+adequados ao clima desértico. As paredes são cobertas com cimitarras
+curvas, lanças leves e escudos decorados com motivos do deserto. O
+mercador examina suas mercadorias com olhar experiente.
+~
+55 8 0 0 0 0
+D2
+Para a entrada do distrito.
+~
+~
+0 -1 5500
+S
+#5502
+Templo de Cura~
+   Um pequeno mas eficiente templo dedicado à cura. Incenso arde em
+braseiros de bronze enquanto água fresca goteja de uma fonte central.
+O curandeiro está sempre disponível para ajudar os feridos e doentes.
+Prateleiras contêm ervas medicinais e poções de cura.
+~
+55 12 0 0 0 0
+D2
+Para a entrada do distrito.
+~
+~
+0 -1 5500
+S
+#5503
+A Estalagem do Oásis~
+   Uma acolhedora estalagem com paredes grossas que mantêm o interior
+fresco mesmo durante o calor do dia. Tapetes coloridos cobrem o chão
+e almofadas estão espalhadas ao redor de mesas baixas. O estalajadeiro
+oferece descanso e refeições para viajantes cansados.
+~
+55 12 0 0 0 0
+D1
+Para o quarto dos hóspedes.
+~
+~
+0 -1 5504
+D2
+Para a entrada do distrito.
+~
+~
+0 -1 5500
+S
+#5504
+Quarto da Estalagem~
+   Um quarto simples mas confortável com uma cama de palha e uma
+pequena janela que oferece vista para o pátio interno. Uma bacia
+com água fresca está disponível para os hóspedes se refrescarem.
+~
+55 12 0 0 0 0
+D3
+De volta à estalagem.
+~
+~
+0 -1 5503
+S
+#5505
+Posto da Guarda~
+   Um pequeno posto onde os guardas da cidade fazem suas rondas.
+Mapas da cidade estão afixados nas paredes e equipamentos básicos
+estão organizados em prateleiras. Os guardas mantêm ordem no
+distrito comercial.
+~
+55 0 0 0 0 0
+D2
+Para a entrada do distrito.
+~
+~
+0 -1 5500
+S
+#5506
+Loja de Especiarias~
+   O ar aqui está saturado com aromas intensos de especiarias
+exóticas do deserto. Sacos abertos contêm pimentas, açafrão,
+canela e outras especiarias raras. O comerciante pesa cuidadosamente
+cada compra em sua balança dourada.
+~
+55 0 0 0 0 0
+D2
+Para a entrada do distrito.
+~
+~
+0 -1 5500
+S
+#5507
+Ferraria do Deserto~
+   Uma ferraria adaptada ao clima quente, com sistemas de ventilação
+especiais para manter as chamas controladas. O ferreiro trabalha
+principalmente com metais leves adequados ao combate no deserto.
+O som rítmico do martelo ecoa pela oficina.
+~
+55 0 0 0 0 0
+D2
+Para a entrada do distrito.
+~
+~
+0 -1 5500
+S
+#5510
+Bazar do Leste~
+   Uma área movimentada cheia de barracas e pequenas lojas vendendo
+todo tipo de mercadoria. Tecidos coloridos, joias, cerâmicas e
+artesanatos locais estão em exibição. Comerciantes negociam
+intensamente com compradores.
+~
+55 0 0 0 0 1
+D3
+De volta à entrada do distrito.
+~
+~
+0 -1 5500
+S
+#5520
+Mercado do Oeste~
+   O mercado ocidental é especializado em produtos alimentícios
+e suprimentos básicos. Frutas secas, carnes curadas e outros
+alimentos próprios para viagem no deserto são vendidos aqui.
+Água fresca também está disponível.
+~
+55 0 0 0 0 1
+D1
+De volta à entrada do distrito.
+~
+~
+0 -1 5500
+S
+$

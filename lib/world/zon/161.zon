@@ -1,0 +1,18 @@
+#161
+Vitalia~
+Strangelove - Reino dos Anões~
+16100 16199 30 2 j 0 0 0 -1 -1 5
+M 0 16101 1 16100 	(o guarda anão)
+M 0 16101 1 16101 	(o guarda anão)
+M 0 16102 1 16102 	(o ferreiro anão)
+M 0 16103 1 16103 	(o comerciante de gemas)
+M 0 16104 1 16104 	(o minerador)
+M 0 16105 1 16105 	(o taverneiro anão)
+M 0 16106 1 16106 	(o sacerdote anão)
+M 0 16107 1 16110 	(o rei dos anões)
+O 0 16101 1 16100 	(um portão de ferro)
+O 0 16102 1 16102 	(uma forja anã)
+O 0 16103 1 16103 	(uma mesa de gemas)
+O 0 16104 1 16105 	(um barril de cerveja)
+O 0 16105 1 16106 	(um altar de pedra)
+S

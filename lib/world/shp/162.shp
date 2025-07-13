@@ -1,0 +1,54 @@
+CircleMUD v3.0 Shop File~
+#16202~
+16210
+16211
+16212
+-1
+1.40
+0.75
+5
+29
+7
+12
+-1
+%s Sorry, I don't have that aquatic item in stock.~
+%s You don't seem to have that item.~
+%s I only deal in aquatic weapons, armor and treasures.~
+%s That's too expensive for me!~
+%s You can't afford such a rare treasure!~
+%s That'll be %d coins for this aquatic treasure.~
+%s I'll give you %d coins for that fine item.~
+0
+6
+16202
+0
+16202
+-1
+0
+28
+0
+0
+#16203~
+-1
+1.00
+0.00
+19
+-1
+%s I don't sell items, only healing.~
+%s I don't buy items from visitors.~
+%s I don't buy items from visitors.~
+%s I don't buy items from visitors.~
+%s Healing is free for those who seek it.~
+%s The waters heal freely.~
+%s I don't buy items from visitors.~
+0
+6
+16203
+0
+16208
+-1
+0
+28
+0
+0
+$~
