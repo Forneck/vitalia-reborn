@@ -1188,6 +1188,7 @@ struct player_special_data_saved
   
   int karma;
   int was_class[RM_ARRAY_MAX]; /**< array of remorted classes */
+  int retained_skills[MAX_SKILLS+1]; /**< skills retained from previous incarnations */
 };
 
 /** Specials needed only by PCs, not NPCs.  Space for this structure is

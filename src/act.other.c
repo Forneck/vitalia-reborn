@@ -37,6 +37,7 @@ static void display_group_list(struct char_data *ch);
 
 static int can_elevate(struct char_data *ch);
 static int can_rebegin(struct char_data *ch);
+void show_class_skills(struct char_data *ch, int class_num);
 void check_thief(struct char_data *ch, struct char_data *vict);
 bool are_groupable(struct char_data *ch, struct char_data *target);
 
@@ -1200,6 +1201,20 @@ static int can_rebegin(struct char_data *ch)
 	return (1);
 }
 
+void show_class_skills(struct char_data *ch, int class_num)
+{
+	int i;
+	send_to_char(ch, "\r\nHabilidades e magias disponíveis para %s:\r\n", pc_class_types[class_num]);
+	
+	/* Show skills the character currently has from their class */
+	for (i = 1; i <= MAX_SKILLS; i++) {
+		if (GET_SKILL(ch, i) > 0) {
+			send_to_char(ch, "%3d. %s (%d%%)\r\n", i, skill_name(i), GET_SKILL(ch, i));
+		}
+	}
+	send_to_char(ch, "\r\nDigite o número da habilidade que deseja manter, ou 0 para não manter nenhuma: ");
+}
+
 
 static int can_elevate(struct char_data *ch)
 {
@@ -1294,7 +1309,7 @@ ACMD(do_rebegin)
 
 	/* Show rebegin information */
 	send_to_char(ch, "%s", rebegin);
-	send_to_char(ch, "\r\nVocê tem certeza que quer renascer? (s/N): ");
+	show_class_skills(ch, GET_CLASS(ch));
 	
 	STATE(ch->desc) = CON_RB_SKILL;
 }

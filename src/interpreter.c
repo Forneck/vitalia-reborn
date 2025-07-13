@@ -1960,20 +1960,30 @@ void nanny(struct descriptor_data *d, char *arg)
 		   them. */
 	case CON_CLOSE:
 		break;
-	case CON_RB_SKILL:			/* rebegin: confirm rebegin */
-		if (!*arg || (*arg != 's' && *arg != 'S' && *arg != 'n' && *arg != 'N')) {
-			write_to_output(d, "Por favor, responda s ou n: ");
-			return;
+	case CON_RB_SKILL:			/* rebegin: choose skill to retain */
+		{
+			int skill_num = atoi(arg);
+			if (skill_num < 0 || skill_num > MAX_SKILLS) {
+				write_to_output(d, "Número inválido. Digite novamente: ");
+				return;
+			}
+			if (skill_num != 0 && GET_SKILL(d->character, skill_num) <= 0) {
+				write_to_output(d, "Você não tem essa habilidade. Digite novamente: ");
+				return;
+			}
+			
+			/* Save the selected skill to retained skills */
+			if (skill_num > 0) {
+				d->character->player_specials->saved.retained_skills[skill_num] = GET_SKILL(d->character, skill_num);
+				write_to_output(d, "Habilidade %s será mantida.\r\n", skill_name(skill_num));
+			} else {
+				write_to_output(d, "Nenhuma habilidade será mantida.\r\n");
+			}
+			
+			write_to_output(d, "\r\nEscolha sua nova classe:\r\n");
+			write_to_output(d, "%s", class_menu);
+			STATE(d) = CON_RB_NEW_CLASS;
 		}
-		if (*arg == 'n' || *arg == 'N') {
-			write_to_output(d, "Renascimento cancelado.\r\n");
-			STATE(d) = CON_PLAYING;
-			return;
-		}
-		/* For now, skip skill selection and go directly to class selection */
-		write_to_output(d, "\r\nEscolha sua nova classe:\r\n");
-		write_to_output(d, "%s", class_menu);
-		STATE(d) = CON_RB_NEW_CLASS;
 		break;
 	case CON_RB_NEW_CLASS:		/* rebegin: choose new class */
 		load_result = parse_class(*arg);
@@ -2026,6 +2036,17 @@ void nanny(struct descriptor_data *d, char *arg)
 		
 		/* Initialize character for new class */
 		do_start(d->character);
+		
+		/* Restore retained skills */
+		{
+			int i;
+			for (i = 1; i <= MAX_SKILLS; i++) {
+				if (d->character->player_specials->saved.retained_skills[i] > 0) {
+					SET_SKILL(d->character, i, d->character->player_specials->saved.retained_skills[i]);
+				}
+			}
+		}
+		
 		save_char(d->character);
 		
 		write_to_output(d, "\r\nVocê renasceu com sucesso! Bem-vindo à sua nova vida.\r\n");
