@@ -294,6 +294,8 @@ ACMD(do_visible);
 ACMD(do_recall);
 ACMD(do_rebegin);
 ACMD(do_elevate);
+ACMD(do_rskill);
+ACMD(do_rstats);
 void show_menu_with_options(struct descriptor_data *d);
 int can_rebegin(struct char_data *ch);
 int can_elevate(struct char_data *ch);

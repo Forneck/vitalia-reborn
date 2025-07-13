@@ -271,6 +271,8 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"recite", "reci", POS_RESTING, do_use, 0, SCMD_RECITE, CMD_TWOARG},
 	{"receive", "rece", POS_STANDING, do_not_here, 1, 0, CMD_NOARG},
 	{"recent", "recent", POS_DEAD, do_recent, LVL_IMMORT, 0, CMD_NOARG},
+	{"rskill", "rskill", POS_DEAD, do_rskill, LVL_GOD, 0, CMD_TWOARG},
+	{"rstats", "rstats", POS_DEAD, do_rstats, LVL_IMMORT, 0, CMD_TWOARG},
 	{"remove", "rem", POS_RESTING, do_remove, 0, 0, CMD_ONEARG},
 	{"rent", "rent", POS_STANDING, do_not_here, 1, 0, CMD_NOARG},
 	{"report", "repo", POS_RESTING, do_report, 0, 0, CMD_NOARG},
