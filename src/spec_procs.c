@@ -816,3 +816,121 @@ SPECIAL(bank)
 	else
 		return (FALSE);
 }
+
+/* Old VitaliaMUD SpecProcs - Complex ones that need to remain as SpecProcs */
+
+SPECIAL(autodestruct)
+{
+  struct obj_data *obj = (struct obj_data *) me;
+  struct char_data *owner;
+  
+  if (cmd || !FIGHTING(ch))
+    return (FALSE);
+    
+  /* Only trigger on pulse */
+  if (GET_OBJ_TIMER(obj) > 0) {
+    GET_OBJ_TIMER(obj)--;
+    if (GET_OBJ_TIMER(obj) == 0) {
+      /* Object auto-destructs */
+      if ((owner = obj->carried_by)) {
+        act("$p suddenly explodes in your hands!", FALSE, owner, obj, 0, TO_CHAR);
+        act("$p in $n's hands explodes!", FALSE, owner, obj, 0, TO_ROOM);
+        GET_HIT(owner) = MAX(1, GET_HIT(owner) - dice(3, 8));
+      } else if (obj->in_room != NOWHERE) {
+        send_to_room(obj->in_room, "An object here suddenly explodes!");
+      }
+      extract_obj(obj);
+      return (TRUE);
+    }
+  }
+  return (FALSE);
+}
+
+SPECIAL(death_90)
+{
+  struct char_data *vict = (struct char_data *) me;
+  
+  if (cmd || !FIGHTING(vict))
+    return (FALSE);
+    
+  /* Special death sequence at 90% health loss */
+  if (GET_HIT(vict) <= (GET_MAX_HIT(vict) / 10)) {
+    act("$n lets out a death scream that chills you to the bone!", 
+        FALSE, vict, 0, 0, TO_ROOM);
+    act("$n's body begins to glow with an unholy light!", 
+        FALSE, vict, 0, 0, TO_ROOM);
+    
+    /* Cast a powerful spell before dying */
+    if (GET_SKILL(vict, SPELL_FIREBALL) > 0) {
+      cast_spell(vict, FIGHTING(vict), NULL, SPELL_FIREBALL);
+    }
+    
+    return (TRUE);
+  }
+  return (FALSE);
+}
+
+SPECIAL(magik)
+{
+  struct char_data *magician = (struct char_data *) me;
+  struct char_data *vict;
+  int spell_choice;
+  
+  if (cmd || !FIGHTING(magician))
+    return (FALSE);
+    
+  vict = FIGHTING(magician);
+  if (!vict)
+    return (FALSE);
+    
+  /* Complex magic system - chooses spells based on situation */
+  if (GET_MANA(magician) < 20)
+    return (FALSE);
+    
+  spell_choice = rand_number(1, 8);
+  
+  switch (spell_choice) {
+    case 1:
+      if (GET_SKILL(magician, SPELL_MAGIC_MISSILE) > 0) {
+        cast_spell(magician, vict, NULL, SPELL_MAGIC_MISSILE);
+      }
+      break;
+    case 2:
+      if (GET_SKILL(magician, SPELL_FIREBALL) > 0) {
+        cast_spell(magician, vict, NULL, SPELL_FIREBALL);
+      }
+      break;
+    case 3:
+      if (GET_SKILL(magician, SPELL_LIGHTNING_BOLT) > 0) {
+        cast_spell(magician, vict, NULL, SPELL_LIGHTNING_BOLT);
+      }
+      break;
+    case 4:
+      if (GET_SKILL(magician, SPELL_COLOR_SPRAY) > 0) {
+        cast_spell(magician, vict, NULL, SPELL_COLOR_SPRAY);
+      }
+      break;
+    case 5:
+      if (GET_SKILL(magician, SPELL_BLINDNESS) > 0) {
+        cast_spell(magician, vict, NULL, SPELL_BLINDNESS);
+      }
+      break;
+    case 6:
+      if (GET_SKILL(magician, SPELL_CURSE) > 0) {
+        cast_spell(magician, vict, NULL, SPELL_CURSE);
+      }
+      break;
+    case 7:
+      if (GET_SKILL(magician, SPELL_POISON) > 0) {
+        cast_spell(magician, vict, NULL, SPELL_POISON);
+      }
+      break;
+    case 8:
+      if (GET_SKILL(magician, SPELL_SLEEP) > 0) {
+        cast_spell(magician, vict, NULL, SPELL_SLEEP);
+      }
+      break;
+  }
+  
+  return (TRUE);
+}

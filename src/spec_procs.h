@@ -51,4 +51,9 @@ SPECIAL(cityguard);
 SPECIAL(pet_shops);
 SPECIAL(bank);
 
+/* Old VitaliaMUD SpecProcs */
+SPECIAL(autodestruct);
+SPECIAL(death_90);
+SPECIAL(magik);
+
 #endif /* _SPEC_PROCS_H_ */

@@ -222,6 +222,9 @@ void assign_rooms(void)
   ASSIGNROOM(31523, pet_shops);
   */
 
+  /* Assign old VitaliaMUD SpecProcs that need to remain as SpecProcs */
+  ASSIGNMOB(1890, death_90);  /* death:90 mob */
+
   if (CONFIG_DTS_ARE_DUMPS)
     for (i = 0; i <= top_of_world; i++)
       if (ROOM_FLAGGED(i, ROOM_DEATH))
@@ -253,6 +256,9 @@ static struct spec_func_data spec_func_list[] = {
   {"Guild Guard",    guild_guard }, 
   {"Questmaster",    questmaster }, 
   {"Shopkeeper",     shop_keeper }, 
+  {"Autodestruct",   autodestruct },
+  {"Death 90",       death_90 },
+  {"Magik",          magik },
   {"\n", NULL} 
 }; 
 
