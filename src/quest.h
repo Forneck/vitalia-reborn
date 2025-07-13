@@ -19,7 +19,9 @@
 #define AQ_MOB_SAVE         4   /* Player must save mob                 */
 #define AQ_OBJ_RETURN       5   /* Player gives object to mob in val5   */
 #define AQ_ROOM_CLEAR       6   /* Player must clear room of all mobs   */
-#define NUM_AQ_TYPES        7   /* Used in qedit functions              */
+#define AQ_PLAYER_KILL      7   /* Kill a specific player or any player killer */
+#define AQ_MOB_KILL_BOUNTY  8   /* Kill a specific mob for bounty (posted by mobs) */
+#define NUM_AQ_TYPES        9   /* Used in qedit functions              */
 
 #define MAX_QUEST_NAME     40   /* Length of quest name                 */
 #define MAX_QUEST_DESC     75   /* Length of quest description          */
@@ -33,7 +35,8 @@
 #define SCMD_QUEST_STATUS   5   /* Show complete details of a quest     */
 /* AQ Flags (much room for expansion) ********************************* */
 #define AQ_REPEATABLE (1 << 0)  /* Quest can be repeated                */
-#define NUM_AQ_FLAGS        1
+#define AQ_MOB_POSTED (1 << 1)  /* Quest posted by a mob (not immortal) */
+#define NUM_AQ_FLAGS        2
 /* Main quest struct ************************************************** */
 struct aq_data {
   qst_vnum vnum;                /* Virtual nr of the quest              */
@@ -102,6 +105,15 @@ void quest_timeout(struct char_data *ch);
 void check_timed_quests(void);
 SPECIAL(questmaster);
 ACMD(do_quest);
+
+/* Mob Quest Functions */
+int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum);
+bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum);
+void set_mob_quest(struct char_data *mob, qst_rnum rnum);
+void clear_mob_quest(struct char_data *mob);
+void fail_mob_quest(struct char_data *mob, const char *reason);
+void mob_complete_quest(struct char_data *mob);
+void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struct obj_data *object, int type);
 /* Implemented in qedit.c  */
 void qedit_parse(struct descriptor_data *d, char *arg);
 void qedit_string_cleanup(struct descriptor_data *d, int terminator);

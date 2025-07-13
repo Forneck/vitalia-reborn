@@ -339,6 +339,24 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 			autoquest_trigger_check(killer, ch, NULL, AQ_MOB_KILL);
 	}
 
+	/* Check mob quest triggers for all mobs in the area */
+	if (IS_NPC(ch)) {
+		struct char_data *mob;
+		for (mob = character_list; mob; mob = mob->next) {
+			if (IS_NPC(mob) && mob != ch && GET_MOB_QUEST(mob) != NOTHING) {
+				if (IN_ROOM(mob) == IN_ROOM(ch) || 
+				    (world[IN_ROOM(mob)].zone == world[IN_ROOM(ch)].zone)) {
+					mob_autoquest_trigger_check(mob, ch, NULL, AQ_MOB_KILL);
+				}
+			}
+		}
+	}
+
+	/* Check mob quest triggers for player kills */
+	if (!IS_NPC(ch) && killer && IS_NPC(killer) && GET_MOB_QUEST(killer) != NOTHING) {
+		mob_autoquest_trigger_check(killer, ch, NULL, AQ_PLAYER_KILL);
+	}
+
 	/* Alert Group if Applicable */
 	if (GROUP(ch))
 		send_to_group(ch, GROUP(ch), "%s morreu.\r\n", GET_NAME(ch));
