@@ -1106,6 +1106,8 @@ void create_spells_db()
  new_spell->messages.to_vict = strdup("Uma aura branca $r envolve por instantes.");
  new_spell->messages.to_room = strdup("$N é envolvid$R por uma aura branca.");
  new_spell->messages.wear_off = strdup("A aura branca ao redor de seu corpo desaparece.");
+ new_spell->school = SCHOOL_ABJURATION;    /* Protective spell */
+ new_spell->element = ELEMENT_HOLY;        /* Divine protection */
 
  spedit_save_internally(new_spell);
 
@@ -1127,6 +1129,8 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->damages = strdup("dice(5, self.class == 0 ? 8 : 6) + 5");
  new_spell->max_dam = 100;
+ new_spell->school = SCHOOL_EVOCATION;     /* Damage spell */
+ new_spell->element = ELEMENT_LIGHTNING;   /* Electric damage */
 
  spedit_save_internally(new_spell);
 
