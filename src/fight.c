@@ -559,13 +559,13 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
 					"\tyVocê #w $N extremamente forte.\tn", "\tr$n #w você extremamente forte.\tn"
 				},
 				{
-					"$n massacra $N em pequenos fragmentos com a #w $l.", /* 7: 19..23 */
+					"$n massacra $N em pequenos fragmentos com a sua #w.", /* 7: 19..23 */
 					"\tyVocê massacra $N em pequenos fragmentos com a sua #w.\tn",
-					"\tr$n massacra você em pequenos fragmentos com a #w $l.\tn"
+					"\tr$n massacra você em pequenos fragmentos com a sua #w.\tn"
 				},
 				{
-					"$n OBLITERA $N com a #w mortal $l!!", /* 8: > 23 */
-					"\tyVocê OBLITERA $N com a sua #w mortal!!\tn", "\ty$n OBLITERA você com a #w mortal $l!!\tn"
+					"$n OBLITERA $N com a sua #w mortal!!", /* 8: > 23 */
+					"\tyVocê OBLITERA $N com a sua #w mortal!!\tn", "\ty$n OBLITERA você com a sua #w mortal!!\tn"
 				}
 			};
 	w_type -= TYPE_HIT;			/* Change to base of table with text */
