@@ -35,9 +35,10 @@
 static void print_group(struct char_data *ch);
 static void display_group_list(struct char_data *ch);
 
-static int can_elevate(struct char_data *ch);
-static int can_rebegin(struct char_data *ch);
+int can_elevate(struct char_data *ch);
+int can_rebegin(struct char_data *ch);
 void show_class_skills(struct char_data *ch, int class_num);
+void show_menu_with_options(struct descriptor_data *d);
 void check_thief(struct char_data *ch, struct char_data *vict);
 bool are_groupable(struct char_data *ch, struct char_data *target);
 
@@ -1193,7 +1194,7 @@ ACMD(do_happyhour)
 	}
 }
 
-static int can_rebegin(struct char_data *ch)
+int can_rebegin(struct char_data *ch)
 {
 	if (!PLR_FLAGGED(ch, PLR_TRNS))
 		return (0);
@@ -1215,12 +1216,76 @@ void show_class_skills(struct char_data *ch, int class_num)
 	send_to_char(ch, "\r\nDigite o número da habilidade que deseja manter, ou 0 para não manter nenhuma: ");
 }
 
-
-static int can_elevate(struct char_data *ch)
+void show_menu_with_options(struct descriptor_data *d)
 {
+	char menu_buffer[4096];
+	
+	strcpy(menu_buffer, 
+		"\r\n"
+		"O MUNDO DE VITALIA\r\n"
+		"\r\n"
+		"         .-.\r\n"
+		"        (0.0)\r\n"
+		"      '=.|m|.='\r\n"
+		"      .='/	\\`=.\r\n"
+		"         	8	\r\n"
+		"     _   8	8   _\r\n"
+		"    (	__/	8	\\__	)\r\n"
+		"     `-=:8	8:=-'\r\n"
+		"         |:|\r\n"
+		"         |:|   [1] Entrar no jogo.\r\n"
+		"         |:|   [2]  Ler a historia deste mundo.\r\n"
+		"         |:|   [3]  Ajustar a descriçao\r\n"
+		"         |:|   [4]  Mudar a sua senha de acesso\r\n");
+		
+	/* Add rebegin option if eligible */
+	if (d->character && can_rebegin(d->character)) {
+		strcat(menu_buffer, "         |:|   [5]  Renascer (Rebegin)\r\n");
+	}
+	
+	/* Add elevate option if eligible */
+	if (d->character && can_elevate(d->character)) {
+		strcat(menu_buffer, "         |:|   [6]  Transcender (Elevate)\r\n");
+	}
+	
+	strcat(menu_buffer, 
+		"         |:|   [9]  Apagar o personagem\r\n"
+		"         |:|   [0]  Deixar este mundo\r\n"
+		"         |:|\r\n"
+		"         |:|\r\n"
+		"         |:|\r\n"
+		"         |:|\r\n"
+		"         |:|\r\n"
+		"        \\:/\r\n"
+		"          ^\r\n"
+		"\r\n"
+		"\r\n"
+		"-=>  Faca sua escolha: ");
+		
+	write_to_output(d, "%s", menu_buffer);
+}
+
+
+int can_elevate(struct char_data *ch)
+{
+	/* Must be transcended */
 	if (!PLR_FLAGGED(ch, PLR_TRNS))
 		return (0);
+		
+	/* Must be at maximum mortal level */
+	if (GET_LEVEL(ch) != (LVL_IMMORT - 1))
+		return (0);
+		
+	/* Must have enough experience to level to next level */
+	if (GET_EXP(ch) < level_exp(GET_CLASS(ch), LVL_IMMORT))
+		return (0);
+		
+	/* Must have minimum number of incarnations (remorts) */
 	if (GET_REMORT(ch) < 4)
+		return (0);
+		
+	/* Config must allow mortal to immortal advancement */
+	if (CONFIG_NO_MORT_TO_IMMORT)
 		return (0);
 
 	return (1);
@@ -1312,5 +1377,30 @@ ACMD(do_rebegin)
 	show_class_skills(ch, GET_CLASS(ch));
 	
 	STATE(ch->desc) = CON_RB_SKILL;
+}
+
+ACMD(do_elevate)
+{
+	if (IS_NPC(ch)) {
+		send_to_char(ch, "NPCs não podem transcender.\r\n");
+		return;
+	}
+
+	if (!can_elevate(ch)) {
+		send_to_char(ch, "Você não pode transcender neste momento.\r\n");
+		return;
+	}
+
+	if (GET_POS(ch) == POS_FIGHTING) {
+		send_to_char(ch, "Você não pode transcender durante uma luta.\r\n");
+		return;
+	}
+
+	/* Show elevation confirmation message */
+	send_to_char(ch, "Ao transcender, você se tornará um imortal e deixará para trás sua vida mortal.\r\n");
+	send_to_char(ch, "Esta decisão é irreversível.\r\n\r\n");
+	send_to_char(ch, "Deseja realmente transcender? (S/N): ");
+	
+	STATE(ch->desc) = CON_ELEVATE_CONF;
 }
 

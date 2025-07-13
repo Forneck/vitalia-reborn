@@ -394,8 +394,9 @@
 #define CON_RB_NEW_CLASS 37
 #define CON_RB_REROLL 38
 #define CON_RB_QHOME 39
-#define CON_IMM_CONF 40
-#define CON_REMOTE 41
+#define CON_ELEVATE_CONF 40
+#define CON_IMM_CONF 41
+#define CON_REMOTE 42
 
 /* OLC States range - used by IS_IN_OLC and IS_PLAYING */
 #define FIRST_OLC_STATE CON_OEDIT     /**< The first CON_ state that is an OLC */
