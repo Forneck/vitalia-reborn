@@ -934,3 +934,49 @@ SPECIAL(magik)
   
   return (TRUE);
 }
+
+SPECIAL(blug_staff_f)
+{
+  struct obj_data *obj = (struct obj_data *) me;
+  
+  if (cmd || !ch)
+    return (FALSE);
+    
+  /* Full staff - more powerful version */
+  if (rand_number(1, 100) <= 5) {
+    act("$p pulses with a powerful magical energy!", FALSE, ch, obj, 0, TO_CHAR);
+    act("$n's $p glows brightly with magic!", FALSE, ch, obj, 0, TO_ROOM);
+    
+    /* Give the wielder a temporary bonus */
+    if (ch && !FIGHTING(ch)) {
+      GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + 10);
+    }
+    
+    return (TRUE);
+  }
+  
+  return (FALSE);
+}
+
+SPECIAL(blug_staff_s)
+{
+  struct obj_data *obj = (struct obj_data *) me;
+  
+  if (cmd || !ch)
+    return (FALSE);
+    
+  /* Small staff - weaker version */
+  if (rand_number(1, 100) <= 3) {
+    act("$p glows softly with magical energy.", FALSE, ch, obj, 0, TO_CHAR);
+    act("$n's $p shimmers with a faint light.", FALSE, ch, obj, 0, TO_ROOM);
+    
+    /* Give the wielder a small bonus */
+    if (ch && !FIGHTING(ch)) {
+      GET_MANA(ch) = MIN(GET_MAX_MANA(ch), GET_MANA(ch) + 5);
+    }
+    
+    return (TRUE);
+  }
+  
+  return (FALSE);
+}

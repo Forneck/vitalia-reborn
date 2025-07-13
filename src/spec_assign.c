@@ -224,6 +224,10 @@ void assign_rooms(void)
 
   /* Assign old VitaliaMUD SpecProcs that need to remain as SpecProcs */
   ASSIGNMOB(1890, death_90);  /* death:90 mob */
+  
+  /* Assign staff objects */
+  ASSIGNOBJ(1202, blug_staff_s);  /* blug-staff-s */
+  ASSIGNOBJ(1203, blug_staff_f);  /* blug-staff-f */
 
   if (CONFIG_DTS_ARE_DUMPS)
     for (i = 0; i <= top_of_world; i++)
@@ -259,6 +263,8 @@ static struct spec_func_data spec_func_list[] = {
   {"Autodestruct",   autodestruct },
   {"Death 90",       death_90 },
   {"Magik",          magik },
+  {"Blug Staff F",   blug_staff_f },
+  {"Blug Staff S",   blug_staff_s },
   {"\n", NULL} 
 }; 
 
