@@ -284,14 +284,14 @@ $n bate o pé e joga o punho no ar, fazendo a Saudação do Avatar para você!
 #
 
 ~aww aww 0 8 8 0
-You go AWWW.
-$n goes AWWW.
-You go AWWW at $N.
-$n goes AWWW at $N.
-$n goes AWWW at you.
-You go AWWW, they're not here.
-You go AWWW at yourself.
-$n goes AWWW at $mself.
+Você faz AWWW.
+$n faz AWWW.
+Você faz AWWW para $N.
+$n faz AWWW para $N.
+$n faz AWWW para você.
+Você faz AWWW, eles não estão aqui.
+Você faz AWWW para si mesmo.
+$n faz AWWW para si mesmo.
 #
 #
 #
@@ -299,29 +299,29 @@ $n goes AWWW at $mself.
 #
 
 ~babble babble 0 5 0 0
-You babble unintelligently.
-$n is babbling unintelligently.
-You babble at $M in a meaningless manner.
-$n is babbling at $N in a confused way.
-$n is babbling something utterly meaningless at you.
-You babble like a brook that only you can hear.
-You babble to yourself like the total idiot that you are.
-$n babbles to $mself like the fool $e really is.
-You look at $S $t and start babbling incoherently.
-$n looks at $N's $t and babbles incoherently.
-$n looks at your $t and babbles unintellig.
-You look at $p and begin babbling at it.
-$n looks at $p and begins babbling like an idiot.
+Você balbucia de forma ininteligível.
+$n está balbuciando de forma ininteligível.
+Você balbucia para $M de forma sem sentido.
+$n está balbuciando para $N de forma confusa.
+$n está balbuciando algo completamente sem sentido para você.
+Você balbucia como um riacho que só você pode ouvir.
+Você balbucia para si mesmo como o idiota completo que você é.
+$n balbucia para si mesmo como o tolo que $e realmente é.
+Você olha para o $t de $S e começa a balbuciar incoerentemente.
+$n olha para o $t de $N e balbucia incoerentemente.
+$n olha para seu $t e balbucia de forma ininteligível.
+Você olha para $p e começa a balbuciar para ele.
+$n olha para $p e começa a balbuciar como um idiota.
 
 ~backclap backclap 0 8 8 0
-You clap everyone on the back... good job!
-$n claps everyone on the back... good job!
-You clap $N on the back... good job!
-$n claps $N on the back for a job well done!
-$n claps you on the back, job well done!
-You clap the air... where their back would have been.
-You clap yourself on the back... good job you!
-$n claps $mself on the back, $e did a good job!
+Você bate nas costas de todos... bom trabalho!
+$n bate nas costas de todos... bom trabalho!
+Você bate nas costas de $N... bom trabalho!
+$n bate nas costas de $N por um trabalho bem feito!
+$n bate em suas costas, trabalho bem feito!
+Você bate no ar... onde as costas deles estariam.
+Você bate em suas próprias costas... bom trabalho!
+$n bate em suas próprias costas, $e fez um bom trabalho!
 #
 #
 #
@@ -329,42 +329,42 @@ $n claps $mself on the back, $e did a good job!
 #
 
 ~bark bark 0 5 0 0
-You bark like a dog.
-$n barks! Has $e taken $s medication lately?
-You bark angrily at $M.
-$n is barking angrily at $N.
-$n barks at you!
-Your bark would make a tree proud -- too bad no one can hear you.
-You make like a dog and bark at yourself.
-$n seems to be barking at $mself. $E must think $e is a dog!
-You look at $S $t and start barking.
-$n looks at $N's $t and barks at it.
-$n looks at your $t and barks at it.
-You look at $p and start barking.
-$n looks at $p and barks at it.
+Você late como um cachorro.
+$n late! Será que $e tomou a medicação ultimamente?
+Você late com raiva para $M.
+$n está latindo com raiva para $N.
+$n late para você!
+Seu latido faria uma árvore se orgulhar -- pena que ninguém pode te ouvir.
+Você imita um cachorro e late para si mesmo.
+$n parece estar latindo para si mesmo. $E deve achar que é um cachorro!
+Você olha para o $t de $S e começa a latir.
+$n olha para o $t de $N e late para ele.
+$n olha para seu $t e late para ele.
+Você olha para $p e começa a latir.
+$n olha para $p e late para ele.
 
 ~bat bat 1 5 0 0
-You bat your eyelashes.
-$n bats $s eyelashes and looks cute.
-You bat your eyelashes convincingly at $M.
-$n bats $s eyelashes at $N.
-$n bats $s eyelashes at you, how cute.
-$E isn't here to be charmed!
-How exactly do you propose to do that?
-$n tries to bat $s eyelashes at $mself. It looks weird.
+Você bate os cílios.
+$n bate os cílios e fica fofo.
+Você bate os cílios convincentemente para $M.
+$n bate os cílios para $N.
+$n bate os cílios para você, que fofo.
+$E não está aqui para ser encantado!
+Como exatamente você pretende fazer isso?
+$n tenta bater os cílios para si mesmo. Parece estranho.
 #
 #
 #
-For some reason, you bat your eyelashes at $p.
-$n bats $s eyelashes at $p. Strange.
+Por alguma razão, você bate os cílios para $p.
+$n bate os cílios para $p. Estranho.
 
 ~batman batman 0 5 0 0
-'Quick Robin, to the BATMOBILE!'
-$n exclaims, 'Quick Robin, to the BATMOBILE!' as $e dashes off!
-You exclaim, 'Quick $N, to the BATMOBILE!' and dash off!
-$n exclaims, 'Quick $N, to the BATMOBILE!' and dashes off!
-$n exclaims, 'Quick $N, to the BATMOBILE!' and dashes off!
-You don't see them here.
+'Rápido Robin, para o BATMÓVEL!'
+$n exclama, 'Rápido Robin, para o BATMÓVEL!' enquanto $e sai correndo!
+Você exclama, 'Rápido $N, para o BATMÓVEL!' e sai correndo!
+$n exclama, 'Rápido $N, para o BATMÓVEL!' e sai correndo!
+$n exclama, 'Rápido $N, para o BATMÓVEL!' e sai correndo!
+Você não os vê aqui.
 #
 #
 #
@@ -374,79 +374,79 @@ You don't see them here.
 #
 
 ~battlecry battlecry 0 5 0 0
-You beat your hands on your armor and give a blood-curdling warcry!
-$n gives a blood-curdling warcry as $e beats $s hands on $s armor.
-You beat your hands on your chest real hard, warcrying madly at $N.
-$n beats $s hands on $s chest real hard, warcrying madly at $N.
-$n beats $s hands on $s chest real hard, warcrying madly at you.
-You begin to sound a warcry, until you realize they aren't here.
-You start warcrying for no evident reason.  Kind of looks weird.
-$n starts warcrying at $mself for no evident reason.  Hmmm.. Really weird.
-You scream a warcry at $S $t
-$n screams a warcry at $N's $t.
-$n screams a warcry at at your $t and prepares for the attack.
-You start to scream loudly in a strong battle cry at $p.
-$n starts to scream loudly in a strong battle cry at $p.
+Você bate as mãos na sua armadura e solta um grito de guerra ensurdecedor!
+$n solta um grito de guerra ensurdecedor enquanto bate as mãos na armadura.
+Você bate as mãos no peito bem forte, gritando de guerra loucamente para $N.
+$n bate as mãos no peito bem forte, gritando de guerra loucamente para $N.
+$n bate as mãos no peito bem forte, gritando de guerra loucamente para você.
+Você começa a soltar um grito de guerra, até perceber que eles não estão aqui.
+Você começa a gritar de guerra sem razão aparente. Meio estranho.
+$n começa a gritar de guerra para si mesmo sem razão aparente. Hmmm.. Bem estranho.
+Você grita um grito de guerra para o $t de $S
+$n grita um grito de guerra para o $t de $N.
+$n grita um grito de guerra para seu $t e se prepara para o ataque.
+Você começa a gritar alto num forte grito de guerra para $p.
+$n começa a gritar alto num forte grito de guerra para $p.
 
 ~beam beam 0 5 0 0
-You beam like a golden ray of sunshine.
-$n is beaming like a golden ray of sunshine.
-You beam a cheery smile at $M.
-$n beams a cheery smile at $N.
-$n beams a cheery smile at you.
-You feel so warm and sunny, why not beam a smile at a real person?
-You inwardly glow with warmth.
-$n beams a warm smile at $mself.
-You beam a cheery smile at $S $t
-$n beam a cheery smile at $N's $t.
-$n beams a cheery smile at your $t.
-You beam a cheery smile at $p.
-$n beam a cheery smile at $p.
+Você brilha como um raio dourado de sol.
+$n está brilhando como um raio dourado de sol.
+Você dá um sorriso alegre para $M.
+$n dá um sorriso alegre para $N.
+$n dá um sorriso alegre para você.
+Você se sente tão caloroso e ensolarado, por que não dar um sorriso para uma pessoa real?
+Você brilha internamente com calor.
+$n dá um sorriso caloroso para si mesmo.
+Você dá um sorriso alegre para o $t de $S
+$n dá um sorriso alegre para o $t de $N.
+$n dá um sorriso alegre para seu $t.
+Você dá um sorriso alegre para $p.
+$n dá um sorriso alegre para $p.
 
 ~bearhug bearhug 0 5 0 0
-Which bear do you wish to hug?
-$n is pretending to be a bear... RUN!
-You give $M a HUGE bearhug and nearly crack $S spine.
-$n gives $N a huge bearhug!
-$n gives you a huge, bone crushing bearhug!
-Perhaps you better take lessons from a real bear?
-You try to break every bone in your body.
-$n seems to be trying to break every bone in $s body!
-You squeeze $S $t in an impressive bearhug.
-$n squeezes $N's $t in an impressive bearhug.
-$n bearhugs your $t.
-You give $p a huge bearhug.
-$n gives $p a huge bearhug.
+Qual urso você deseja abraçar?
+$n está fingindo ser um urso... CORRA!
+Você dá um ENORME abraço de urso em $M e quase quebra a coluna de $S.
+$n dá um enorme abraço de urso em $N!
+$n te dá um enorme abraço de urso que quebra os ossos!
+Talvez seja melhor você ter aulas com um urso de verdade?
+Você tenta quebrar todos os ossos do seu corpo.
+$n parece estar tentando quebrar todos os ossos do corpo!
+Você aperta o $t de $S num impressionante abraço de urso.
+$n aperta o $t de $N num impressionante abraço de urso.
+$n dá um abraço de urso no seu $t.
+Você dá um enorme abraço de urso em $p.
+$n dá um enorme abraço de urso em $p.
 
 ~beckon beckon 0 5 0 0
-Whom do you wish to beckon?
-$n beckons everyone closer.
-You beckon $M over to where you stand.
-$n beckons $N over to $m.
-$n beckons you over to $m.
-You beckon, but no one comes.
-You beckon to yourself, are you coming?
-$n beckons to $mself, how strange.
-You look at $S $t and beckon it closer.
-$n looks at $N's $t and beckons it closer.
-$n looks at your $t and beckons it closer.
-You look at $p and beckon it closer.
-$n looks at $p and beckons it closer.
+Quem você deseja chamar?
+$n chama todos para mais perto.
+Você chama $M para onde você está.
+$n chama $N para perto de $m.
+$n chama você para perto de $m.
+Você chama, mas ninguém vem.
+Você chama para si mesmo, você está vindo?
+$n chama para si mesmo, que estranho.
+Você olha para o $t de $S e o chama para mais perto.
+$n olha para o $t de $N e o chama para mais perto.
+$n olha para seu $t e o chama para mais perto.
+Você olha para $p e o chama para mais perto.
+$n olha para $p e o chama para mais perto.
 
 ~beer beer 0 5 0 0
-Aaaaaaaah! Better now...
-$n opens up a bottle of beer and drinks it in less than 0 seconds!!!
-Dang! You spilled the beer all over $N!
-$n, sloppy as always, spills $s beer over $N!
-$n spills $s beer all over you!
-They're not here, you'll have to drink it yourself, darn it?
-You spill it all over yourself! GAAAhhhhhh!
-$n is so drunk that $e spills the beer over $mself.
-You spill beer on $S $t.
-$n spills beer on $N's $t, what a sloppy drunk.
-$n spills beer on your $t, what a sloppy drunk.
-You spill beer on $p, what a waste.
-$n spills beer on $p, what a sloppy drunk.
+Aaaaaaaah! Melhor agora...
+$n abre uma garrafa de cerveja e a bebe em menos de 0 segundos!!!
+Droga! Você derramou a cerveja toda em $N!
+$n, desleixado como sempre, derrama sua cerveja em $N!
+$n derrama sua cerveja toda em você!
+Eles não estão aqui, você terá que beber sozinho, droga!
+Você derrama tudo em si mesmo! GAAAhhhhhh!
+$n está tão bêbado que derrama a cerveja em si mesmo.
+Você derrama cerveja no $t de $S.
+$n derrama cerveja no $t de $N, que bêbado desleixado.
+$n derrama cerveja no seu $t, que bêbado desleixado.
+Você derrama cerveja em $p, que desperdício.
+$n derrama cerveja em $p, que bêbado desleixado.
 
 ~beg beg 0 5 0 0
 You beg the gods for mercy.  (No way you're gonna get it! :-))
