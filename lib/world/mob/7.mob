@@ -39,6 +39,8 @@ Con: 15
 Cha: 15
 GenWimpy: 1
 GenRoam: 13
+GenQuest: 60
+GenAdventurer: 70
 E
 #702
 planta figueira~
@@ -60,6 +62,8 @@ Con: 15
 Cha: 15
 GenWimpy: 4
 GenRoam: 27
+GenQuest: 40
+GenAdventurer: 50
 E
 #705
 monstrinho menor criatura~
