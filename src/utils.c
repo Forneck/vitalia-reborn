@@ -2168,6 +2168,46 @@ bool mob_can_afford_item(struct char_data *ch, obj_vnum item_vnum)
  * @param item_vnum VNUM do item desejado
  * @param reward Recompensa oferecida
  */
+/* Helper function to select an appropriate item from mob's inventory as reward */
+obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty)
+{
+    struct obj_data *obj, *best_obj = NULL;
+    int best_value = 0;
+    int target_value = difficulty * 100; /* Target item value based on difficulty */
+    
+    if (!IS_NPC(ch)) {
+        return NOTHING;
+    }
+    
+    /* Iterate through mob's inventory to find suitable reward item */
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        /* Skip quest items, containers with contents, and nodrop items */
+        if (OBJ_FLAGGED(obj, ITEM_QUEST) || OBJ_FLAGGED(obj, ITEM_NODROP) ||
+            (GET_OBJ_TYPE(obj) == ITEM_CONTAINER && obj->contains)) {
+            continue;
+        }
+        
+        /* Skip essential equipment (weapons, armor the mob is wearing) */
+        if (obj->worn_by == ch) {
+            continue;
+        }
+        
+        /* Calculate item value considering type and stats */
+        int item_value = GET_OBJ_COST(obj);
+        if (item_value <= 0) {
+            item_value = 10; /* Minimum value for worthless items */
+        }
+        
+        /* Prefer items close to target value but not too expensive */
+        if (item_value <= target_value * 2 && item_value > best_value) {
+            best_obj = obj;
+            best_value = item_value;
+        }
+    }
+    
+    return best_obj ? GET_OBJ_VNUM(best_obj) : NOTHING;
+}
+
 void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
 {
     obj_rnum obj_rnum;
@@ -2182,6 +2222,9 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     char quest_desc[MAX_QUEST_DESC];
     char quest_info[MAX_QUEST_MSG];
     char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+    ush_int reward_item_rnum;
+    char *reward_item_name = "";
     
     if (!IS_NPC(ch) || !ch->ai_data) {
         return;
@@ -2211,6 +2254,9 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     /* Calcula dificuldade e recompensa adequada */
     difficulty = calculate_quest_difficulty(item_vnum);
     calculated_reward = calculate_quest_reward(ch, item_vnum, difficulty);
+    
+    /* Enhancement 1: Select item reward from mob's inventory */
+    reward_item = select_mob_inventory_reward(ch, difficulty);
     
     /* Verifica se o mob tem ouro suficiente */
     if (GET_GOLD(ch) < calculated_reward) {
@@ -2262,7 +2308,7 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
     new_quest->exp_reward = calculated_reward * 2;
-    new_quest->obj_reward = NOTHING; /* TODO: Implementar item rewards do inventário do mob */
+    new_quest->obj_reward = reward_item; /* Enhancement 1: Item from mob inventory */
     
     /* Cria strings da quest */
     snprintf(quest_name, sizeof(quest_name), "Busca por %s", item_name);
@@ -2280,16 +2326,42 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
         }
     }
     
+    /* Get reward item name for quest info */
+    if (reward_item != NOTHING) {
+        reward_item_rnum = real_object(reward_item);
+        if (reward_item_rnum != NOTHING) {
+            reward_item_name = obj_proto[reward_item_rnum].short_description;
+        }
+    }
+    
     if (qm_char && qm_char != ch) {
-        snprintf(quest_info, sizeof(quest_info), 
-                 "%s está procurando por %s. Se você encontrar este item, "
-                 "traga-o para mim ou diretamente para %s para receber sua recompensa.",
-                 GET_NAME(ch), item_name, GET_NAME(ch));
+        if (reward_item != NOTHING) {
+            snprintf(quest_info, sizeof(quest_info), 
+                     "%s está procurando por %s. Se você encontrar este item, "
+                     "traga-o para mim ou diretamente para %s para receber %d moedas de ouro, "
+                     "%d pontos de experiência e %s como recompensa.",
+                     GET_NAME(ch), item_name, GET_NAME(ch), calculated_reward, 
+                     calculated_reward * 2, reward_item_name);
+        } else {
+            snprintf(quest_info, sizeof(quest_info), 
+                     "%s está procurando por %s. Se você encontrar este item, "
+                     "traga-o para mim ou diretamente para %s para receber sua recompensa.",
+                     GET_NAME(ch), item_name, GET_NAME(ch));
+        }
     } else {
-        snprintf(quest_info, sizeof(quest_info), 
-                 "%s está procurando por %s. Se você encontrar este item, "
-                 "traga-o de volta para %s para receber sua recompensa.",
-                 GET_NAME(ch), item_name, GET_NAME(ch));
+        if (reward_item != NOTHING) {
+            snprintf(quest_info, sizeof(quest_info), 
+                     "%s está procurando por %s. Se você encontrar este item, "
+                     "traga-o de volta para %s para receber %d moedas de ouro, "
+                     "%d pontos de experiência e %s como recompensa.",
+                     GET_NAME(ch), item_name, GET_NAME(ch), calculated_reward,
+                     calculated_reward * 2, reward_item_name);
+        } else {
+            snprintf(quest_info, sizeof(quest_info), 
+                     "%s está procurando por %s. Se você encontrar este item, "
+                     "traga-o de volta para %s para receber sua recompensa.",
+                     GET_NAME(ch), item_name, GET_NAME(ch));
+        }
     }
     snprintf(quest_done, sizeof(quest_done),
              "Excelente! Você trouxe exatamente o que eu precisava. "
@@ -2427,10 +2499,38 @@ mob_vnum find_questmaster_for_zone(zone_rnum zone)
  * @param item_vnum VNUM do item para calcular dificuldade
  * @return Valor de dificuldade de 1 a 100
  */
+/* Enhancement 2: Helper function to find current owner of an item */
+struct char_data *find_item_owner(obj_vnum item_vnum)
+{
+    struct char_data *ch;
+    struct obj_data *obj;
+    
+    /* Search through all characters in game */
+    for (ch = character_list; ch; ch = ch->next) {
+        /* Check carried items */
+        for (obj = ch->carrying; obj; obj = obj->next_content) {
+            if (GET_OBJ_VNUM(obj) == item_vnum) {
+                return ch;
+            }
+        }
+        
+        /* Check equipped items */
+        int i;
+        for (i = 0; i < NUM_WEARS; i++) {
+            if (GET_EQ(ch, i) && GET_OBJ_VNUM(GET_EQ(ch, i)) == item_vnum) {
+                return ch;
+            }
+        }
+    }
+    
+    return NULL; /* Item not found in anyone's possession */
+}
+
 int calculate_quest_difficulty(obj_vnum item_vnum)
 {
     obj_rnum obj_rnum;
     int difficulty = 50; /* Base difficulty */
+    struct char_data *current_owner;
     
     obj_rnum = real_object(item_vnum);
     if (obj_rnum == NOTHING) {
@@ -2455,10 +2555,33 @@ int calculate_quest_difficulty(obj_vnum item_vnum)
         difficulty += 15;
     }
     
-    /* TODO: Adicionar cálculo baseado no owner atual do item
-     * Isto requereria encontrar quem possui o item atualmente
-     * e ajustar a dificuldade baseado no nível/stats do proprietário
-     */
+    /* Enhancement 2: Dynamic difficulty based on current item owner's stats */
+    current_owner = find_item_owner(item_vnum);
+    if (current_owner) {
+        /* Increase difficulty based on owner's level */
+        difficulty += GET_LEVEL(current_owner) / 2;
+        
+        /* If owner is a player, additional considerations */
+        if (!IS_NPC(current_owner)) {
+            /* Higher difficulty if player has high stats */
+            int avg_stat = (GET_STR(current_owner) + GET_DEX(current_owner) + 
+                           GET_CON(current_owner) + GET_INT(current_owner) + 
+                           GET_WIS(current_owner) + GET_CHA(current_owner)) / 6;
+            difficulty += (avg_stat - 10) / 2; /* Bonus for above-average stats */
+            
+            /* Increase difficulty if player has high karma (experienced player) */
+            if (GET_KARMA(current_owner) > 500) {
+                difficulty += 10;
+            } else if (GET_KARMA(current_owner) > 200) {
+                difficulty += 5;
+            }
+        } else {
+            /* For NPC owners, consider their combat abilities */
+            if (GET_HITROLL(current_owner) > 10 || GET_DAMROLL(current_owner) > 10) {
+                difficulty += 10;
+            }
+        }
+    }
     
     return URANGE(10, difficulty, 100);
 }
