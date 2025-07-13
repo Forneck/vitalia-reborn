@@ -263,6 +263,8 @@ void create_spells_db()
  new_spell->messages.to_self = strdup("$N brilha por alguns instantes.");
  new_spell->messages.to_vict = strdup("Você se sente virtuos$r.");
  new_spell->messages.wear_off = strdup("Você se sente menos abençoad$r.");
+ new_spell->school = SCHOOL_ABJURATION;    /* Protective blessing */
+ new_spell->element = ELEMENT_HOLY;        /* Divine blessing */
 
  spedit_save_internally(new_spell);
 
@@ -341,6 +343,8 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->damages = strdup("dice(7, 8) + 7");
  new_spell->max_dam = 100;
+ new_spell->school = SCHOOL_EVOCATION;     /* Damage spell */
+ new_spell->element = ELEMENT_LIGHTNING;   /* Lightning damage */
 
  spedit_save_internally(new_spell);
 
@@ -368,6 +372,8 @@ void create_spells_db()
  new_spell->assign[2].level = 24;
  new_spell->assign[2].num_mana = strdup(buf);
  new_spell->messages.wear_off = strdup("Você se sente mais auto-confiante.");
+ new_spell->school = SCHOOL_ENCHANTMENT;   /* Mind-affecting spell */
+ new_spell->element = ELEMENT_MENTAL;      /* Mental manipulation */
 
  spedit_save_internally(new_spell);
 
@@ -595,6 +601,9 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->messages.to_vict = strdup("Você se sente muito melhor!");
  new_spell->points.hp = strdup("dice(3, 8) + 3 + (param / 4)");
+ new_spell->school = SCHOOL_CONJURATION;   /* Healing magic */
+ new_spell->element = ELEMENT_HOLY;        /* Divine healing */
+
  spedit_save_internally(new_spell);
  
  // SPELL_CURE_LIGHT # 16
@@ -728,6 +737,8 @@ void create_spells_db()
  new_spell->applies[0].duration = strdup("12 + param");
  new_spell->messages.to_vict = strdup("Você sente suas pupilas se dilatando.");
  new_spell->messages.wear_off = strdup("Suas pupilas voltam ao normal.");
+ new_spell->school = SCHOOL_DIVINATION;    /* Detection magic */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure divination */
 
  spedit_save_internally(new_spell);
 
@@ -1650,6 +1661,8 @@ new_spell->assign[1].class_num = CLASS_CLERIC;                             new_s
  new_spell->messages.to_vict = strdup("Você sente sua pele se tornando dura como rocha.");
  new_spell->messages.to_room = strdup("A pele de $N se torna mais dura.");
  new_spell->messages.wear_off = strdup("Sua pele perde a dureza.");
+ new_spell->school = SCHOOL_ABJURATION;    /* Protective skin enhancement */
+ new_spell->element = ELEMENT_EARTH;       /* Stone/earth-based */
 
  spedit_save_internally(new_spell);
 
