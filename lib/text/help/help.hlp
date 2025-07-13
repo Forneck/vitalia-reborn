@@ -6575,7 +6575,10 @@ Nivel      : Clerigo Nivel 21
 Quando protegido pelo santuario voce sofrera apenas metade
 do dano que sofreria normalmente.
 
-Veja Tambem: MAGIA-ARMOR, MAGIA-BLESS
+IMPORTANTE: Esta magia cancela e e cancelada por Gloomshield.
+Nao e possivel ter ambas as protecoes ativas simultaneamente.
+
+Veja Tambem: MAGIA-ARMOR, MAGIA-BLESS, MAGIA-GLOOMSHIELD
 #1
 MAGIA-SENSE-LIFE
 
@@ -6707,6 +6710,12 @@ batalha, ele perde 1 ponto de pedra, mas nao leva dano algum. Quando
 os pontos acabam, o jogador volta a sofrer dano normalmente.
 
 Só se pode acumular um maximo de 168 pontos de stoneskin.
+
+SINERGIA: Stoneskin pode ser combinado com Sanctuary ou Gloomshield.
+A protecao de pedra absorve o dano primeiro. Se os pontos se esgotarem,
+o Sanctuary/Gloomshield continuara protegendo com reducao de dano.
+
+Veja Tambem: MAGIA-SANCTUARY, MAGIA-GLOOMSHIELD, SINERGIAS
 #1
 MAGIA-STRENGTH
 
@@ -11990,7 +11999,7 @@ returned to your own body.
 
 See also: RETURN, TRIG-SWITCH
 #101
-SWORDS DAGGERS WHIPS "TALONOUS ARMS" BLUDGEONS EXOTICS POLEARMS
+SWORDS DAGGERS WHIPS "TALONOUS ARMS" BLUDGEONS EXOTICS POLEARMS BOWS
 
    Estas habilidades oferecem bonus nos atributos de luta quando o guerreiro
 ou ladrao empunha uma arma a qual esteja preparado para usar.  Usando uma
@@ -12008,6 +12017,9 @@ de luta.
    bludgeons            cacetada, espancada, moida, esmagada
    exotics              golpe, esmurrada, mordida, explosao
    polearms             perfurada, espetada, cortada
+   bows                 tiro, flechada
+
+Veja Tambem: BLAST, SHOOT, QUIVERS
 #1
 SWORDS
 
@@ -15930,6 +15942,9 @@ Quando protegido pelo escudo das trevas voce sofrera apenas parte do dano
 que sofreria normalmente.
 Apesar de ser menos eficiente que sua contraparte boa 'SANCTUARY', ela tem
 um efeito adicional de protecao.
+
+IMPORTANTE: Esta magia cancela e e cancelada por Sanctuary.
+Nao e possivel ter ambas as protecoes ativas simultaneamente.
 
 Veja Tambem: MAGIA-ARMOR, MAGIA-SANCTUARY
 
