@@ -103,4 +103,21 @@ Profundezas~
 %echo% %object.shortdesc% some nas profundezas das águas.
 %purge% %object%
 ~
+#11308
+Flow Room Effect~
+2 g 100
+~
+* Old SpecProc: flow - Room flow effect
+* This creates a flowing current that moves players
+if %self.people%
+  wflow A correnteza o arrasta! south
+end
+~
+#11309
+Waters Room Effect~
+2 g 100
+~
+* Old SpecProc: waters - Room water effect (need to examine original more)
+%echo% As águas borbulham suavemente ao redor.
+~
 $~

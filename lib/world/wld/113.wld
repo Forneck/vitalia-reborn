@@ -238,16 +238,17 @@ D2
 0 -1 11310
 S
 #11312
-No Túnel~
-   Você não vê quase nada. A correnteza aqui tornou-se muito intensa, sendo impossível
-nadar para sul. Você não vê saída alguma.
+No Tunel~
+   Voce nao ve quase nada. A correnteza aqui tornou-se muito intensa, sendo impossivel
+nadar para sul. Voce nao ve saida alguma.
 ~
 113 69 0 0 0 8
 D4
 ~
 ~
-3 -1 11313
+0 -1 11313
 S
+T 11308
 #11313
 No Túnel~
    Você não vê quase nada. A forte correnteza o atrai cada vez mais para cima.
@@ -257,8 +258,9 @@ Lá, parece haver alguma coisa iluminando um dos lados do túnel.
 D4
 ~
 ~
-3 -1 11314
+0 -1 11314
 S
+T 11308
 #11314
 No Túnel~
    Você sente que perdeu o controle sobre seu corpo, de tão forte se mostra
@@ -508,6 +510,7 @@ D7
 ~
 0 -1 11376
 S
+T 11309
 #11321
 A Via Norte~
    Você está sobre as águas do pequeno rio que corre a norte do templo a
@@ -537,6 +540,7 @@ D3
 ~
 0 -1 11329
 S
+T 11309
 #11322
 A Via Norte~
    Você está sobre as águas do pequeno rio que corre a norte do templo a
@@ -566,6 +570,7 @@ D3
 ~
 0 -1 11328
 S
+T 11309
 #11323
 A Via Norte~
    Você está sobre as águas do pequeno rio que corre a norte do templo a
@@ -590,6 +595,7 @@ D3
 ~
 0 -1 11382
 S
+T 11309
 #11324
 A Oficina de Twashtri~
    Você está na oficina em que alguns dos mais fantásticos artefatos que
@@ -723,6 +729,7 @@ D2
 ~
 0 -1 11367
 S
+T 11309
 #11330
 A Via Leste~
    Você está sobre as águas do pequeno rio que corre a leste do templo a
@@ -754,6 +761,7 @@ D3
 ~
 0 -1 11317
 S
+T 11309
 #11331
 A Via Leste~
    Você está sobre as águas do pequeno rio que corre a leste do templo a
@@ -784,6 +792,7 @@ D3
 ~
 0 -1 11330
 S
+T 11309
 #11332
 A Via Leste~
    Você está sobre as águas do pequeno rio que corre a leste do templo a
@@ -814,6 +823,7 @@ D3
 ~
 0 -1 11331
 S
+T 11309
 #11333
 A Via Leste~
    Você está sobre as águas do pequeno rio que corre a leste do templo a
@@ -843,6 +853,7 @@ D3
 ~
 0 -1 11332
 S
+T 11309
 #11334
 A Via Leste~
    Você está sobre as águas do pequeno rio que corre a leste do templo a
@@ -867,6 +878,7 @@ D3
 ~
 0 -1 11333
 S
+T 11309
 #11335
 A Entrada da Congregação de Clérigos de Bhogavati~
    Você está em frente à uma simples casa de madeira pintada de branco
@@ -1033,6 +1045,7 @@ D3
 ~
 0 -1 11347
 S
+T 11309
 #11344
 A Via Sul~
    Você está sobre as águas do pequeno rio que corre a sul do templo a
@@ -1062,6 +1075,7 @@ D3
 ~
 0 -1 11349
 S
+T 11309
 #11345
 A Via Sul~
    Você está sobre as águas do pequeno rio que corre a sul do templo a
@@ -1091,6 +1105,7 @@ D3
 ~
 0 -1 11371
 S
+T 11309
 #11346
 A Via Sul~
    Você está sobre as águas do pequeno rio que corre a sul do templo a
@@ -1115,6 +1130,7 @@ D3
 ~
 0 -1 11363
 S
+T 11309
 #11347
 Serviço Postal~
    Você está dentro de uma grande barco ancorado ao lado da via sul de
@@ -1209,6 +1225,7 @@ D3
 ~
 0 -1 11351
 S
+T 11309
 #11351
 A Via Oeste~
    Você está sobre as águas do pequeno rio que corre a oeste do templo a
@@ -1234,6 +1251,7 @@ D3
 ~
 0 -1 11352
 S
+T 11309
 #11352
 A Via Oeste~
    Você está sobre as águas do pequeno rio que corre a oeste do templo a
@@ -1263,6 +1281,7 @@ D3
 ~
 0 -1 11353
 S
+T 11309
 #11353
 A Via Oeste~
    Você está sobre as águas do pequeno rio que corre a oeste do templo a
@@ -1288,6 +1307,7 @@ D3
 ~
 0 -1 11377
 S
+T 11309
 #11354
 A Pedra Preciosa~
    Você está em uma aconchegante (se é que alguma coisa naga pode ser
@@ -1390,6 +1410,7 @@ D8
 ~
 0 -1 11358
 S
+T 11309
 #11358
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1414,6 +1435,7 @@ D9
 ~
 0 -1 11376
 S
+T 11309
 #11359
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1438,6 +1460,7 @@ D6
 ~
 0 -1 11358
 S
+T 11309
 #11360
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1463,6 +1486,7 @@ Por ali você passa por baixo de uma ponte.
 ~
 0 -1 11362
 S
+T 11309
 #11361
 Um Pátio Fora do Templo~
    Você está em um pequeno pátio gramado fora do templo.  A água das vias
@@ -1514,6 +1538,7 @@ Por ali você passa por baixo de uma ponte.
 ~
 0 -1 11360
 S
+T 11309
 #11363
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1539,6 +1564,7 @@ Por ali você passa por baixo de uma ponte.
 ~
 0 -1 11365
 S
+T 11309
 #11364
 A Ponte Noroeste~
    Você está andando sobre a ponte noroeste de Bhogavati, uma bela construção
@@ -1588,6 +1614,7 @@ Por ali você passa por baixo de uma ponte.
 ~
 0 -1 11363
 S
+T 11309
 #11366
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1612,6 +1639,7 @@ D3
 ~
 0 -1 11381
 S
+T 11309
 #11367
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1636,6 +1664,7 @@ D3
 ~
 0 -1 11366
 S
+T 11309
 #11368
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1664,6 +1693,7 @@ D3
 ~
 0 -1 11365
 S
+T 11309
 #11369
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1684,6 +1714,7 @@ D3
 ~
 0 -1 11368
 S
+T 11309
 #11370
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1708,6 +1739,7 @@ D8
 ~
 0 -1 11371
 S
+T 11309
 #11371
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1728,6 +1760,7 @@ D6
 ~
 0 -1 11370
 S
+T 11309
 #11372
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1752,6 +1785,7 @@ D3
 ~
 0 -1 11344
 S
+T 11309
 #11373
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1776,6 +1810,7 @@ D2
 ~
 0 -1 11372
 S
+T 11309
 #11374
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1800,6 +1835,7 @@ D8
 ~
 0 -1 11360
 S
+T 11309
 #11375
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1824,6 +1860,7 @@ D3
 ~
 0 -1 11376
 S
+T 11309
 #11376
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1852,6 +1889,7 @@ D9
 ~
 0 -1 11320
 S
+T 11309
 #11377
 A Via Oeste~
    Você está sobre as águas do pequeno rio que corre a oeste do templo a
@@ -1876,6 +1914,7 @@ D2
 ~
 0 -1 11365
 S
+T 11309
 #11378
 A Entrada da Confraria dos Druidas de Bhogavati~
    Às margens da Via Leste, a entrada da confraria é um bem-cuidado jardim
@@ -1959,6 +1998,7 @@ D7
 ~
 0 -1 11382
 S
+T 11309
 #11382
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1983,6 +2023,7 @@ D9
 ~
 0 -1 11381
 S
+T 11309
 #11383
 As Antigüidades e Inutilidades do Senhor Kalidas~
    Você está dentro de uma pequena loja repleta das mais variadas

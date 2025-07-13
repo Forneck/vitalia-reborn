@@ -62,6 +62,8 @@ próxima aula.
 18 4 0 4d8+616 3d4+11
 3330 36999
 8 8 2
+T 14002
+T 14002
 E
 #14003
 violeta fada seria~
@@ -77,6 +79,7 @@ está com os restos da aula sobre a roupa.
 17 3 0 5d7+606 4d3+10
 3330 33999
 8 8 2
+T 14002
 E
 #14004
 alamanda fada veloz~
@@ -92,6 +95,7 @@ tipo, não acha?
 15 5 -1 4d6+563 3d4+13
 3330 32999
 8 8 2
+T 14002
 E
 #14005
 acacia delicada fada~
@@ -108,6 +112,7 @@ uma das "crianças".
 13 6 1 4d5+589 3d4+9
 3330 31999
 8 8 2
+T 14002
 E
 #14006
 malva fada~
@@ -123,6 +128,7 @@ não fazê-lo virar alguma coisa... rosa.
 14 3 1 4d8+501 3d4+9
 3330 36000
 8 8 2
+T 14002
 E
 #14007
 azaleia fada~
@@ -138,6 +144,7 @@ eficiente: ninguém é tão boa na coleta de néctar como ela.
 20 3 -1 4d8+750 7d4+13
 3330 45000
 8 8 2
+T 14002
 E
 #14008
 hibisco duende jovem~
@@ -153,6 +160,7 @@ fazendo com que o duende fique encabulado. É sempre assim...
 18 4 1 8d3+659 3d4+13
 3330 35999
 8 8 1
+T 14002
 E
 #14009
 lirio duende agitado~
@@ -168,6 +176,7 @@ aqui, ou Lírio terá de agir...
 27 2 -4 4d8+819 7d5+17
 3330 50999
 8 8 1
+T 14002
 E
 #14010
 absinto bonachao duende saltitante~
@@ -184,6 +193,7 @@ taverna O Velho Carvalho.
 21 6 -2 7d4+671 3d4+14
 3330 39999
 8 8 1
+T 14002
 E
 #14011
 dalia fada bebe fada-bebe~
@@ -199,6 +209,7 @@ bela fada.
 9 10 2 4d3+216 3d4+9
 333 20999
 8 8 2
+T 14001
 E
 #14012
 cipreste duende~
@@ -214,6 +225,7 @@ surpreender.
 15 6 -3 4d8+603 3d4+12
 3330 27999
 8 8 1
+T 14002
 E
 #14013
 freixo duendinho~
@@ -229,6 +241,7 @@ encontrou tempo para sondar a seu respeito.
 12 5 0 4d8+405 3d4+12
 3330 25999
 8 8 1
+T 14003
 E
 #14014
 papoula fada~
@@ -244,6 +257,7 @@ ela também é ótima em consertar varinhas.
 27 4 -4 4d8+600 4d5+13
 3330 47999
 8 8 2
+T 14002
 E
 #14015
 lilas fada~
@@ -259,6 +273,7 @@ que compensa sua falta de juízo.
 13 8 -1 4d8+419 3d4+10
 3330 20999
 4 4 2
+T 14003
 E
 #14016
 arando duende mal-humorado~
@@ -288,6 +303,7 @@ estranhamente, se revigorado enquanto ouvia o ensaio do duende.
 21 5 -1 4d8+702 4d4+14
 3330 39999
 8 8 1
+T 14002
 E
 #14018
 primula fada ancia~
@@ -320,6 +336,7 @@ para as guardiãs daqui.
 35 0 -5 4d8+900 6d4+18
 3330 59999
 8 8 1
+T 14002
 E
 #14020
 rosa-bebe rosa bebe~
@@ -332,6 +349,7 @@ A pequena rosa está dormindo... não faça barulho.
 6 12 3 4d8+216 3d4+7
 30 12999
 8 8 2
+T 14001
 E
 #14021
 joaninha adoidada~
@@ -359,6 +377,7 @@ O pequeno botão parece estar com fome.
 8 12 3 4d8+201 3d4+8
 333 27999
 8 8 1
+T 14001
 E
 #14023
 jovem duende abeto~
@@ -468,6 +487,7 @@ dando muito atenção para sua chegada.
 18 4 1 4d8+716 4d4+14
 3330 33999
 8 8 1
+T 14002
 E
 #14031
 simpatico geranio duende~
@@ -497,6 +517,7 @@ próprio Girassol brilha no escuro.
 18 4 1 4d8+716 4d4+14
 3330 33999
 8 8 1
+T 14002
 E
 #14033
 framboesa gordinha sorridente fada~
@@ -523,6 +544,7 @@ Ela está distraída demais.
 17 3 0 5d7+606 4d3+10
 3330 33999
 8 8 2
+T 14002
 E
 #14035
 laricio duende~
@@ -539,6 +561,7 @@ de útil.
 23 2 -2 7d5+681 4d4+14
 3330 37999
 8 8 1
+T 14002
 E
 #14036
 trevo duende~
@@ -551,6 +574,7 @@ Não está pronto.
 17 3 0 5d7+606 4d3+10
 3330 33999
 8 8 1
+T 14002
 E
 #14037
 visco duende~
@@ -563,6 +587,7 @@ Não está pronto.
 17 3 0 5d7+606 4d3+10
 3330 33999
 8 8 1
+T 14002
 E
 #14038
 calendula fada~
@@ -579,6 +604,7 @@ em sua magia.
 17 4 -1 5d7+581 4d3+12
 3330 34000
 8 8 2
+T 14002
 E
 #14039
 zimbro duende~
@@ -591,5 +617,6 @@ Não está pronto.
 17 3 0 5d7+606 4d3+10
 3330 33999
 8 8 1
+T 14002
 E
 $

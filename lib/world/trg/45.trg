@@ -102,4 +102,14 @@ while %word%
   eval rest %rest.cdr%
 done
 ~
+#4508
+Flow Room Effect~
+2 g 100
+~
+* Old SpecProc: flow - Room flow effect
+* This creates a flowing current that moves players
+if %self.people%
+  wflow A correnteza o arrasta! south
+end
+~
 $~
