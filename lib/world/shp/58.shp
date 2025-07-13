@@ -10,12 +10,12 @@ CircleMUD v3.0 Shop File~
 5
 -1
 %s I don't stock that item.~
-%s You don't seem to have that.~
-%s I don't trade in such items.~
-%s I can't afford that!~
-%s You are too poor!~
-%s That'll be %d coins, thanks.~
-%s I'll give you %d coins for that.~
+%s Você não parece ter isso.~
+%s Não comercializo esse tipo de item.~
+%s Não posso pagar tanto por isso!~
+%s Você não tem dinheiro suficiente!~
+%s Isso custará %d moedas, obrigado.~
+%s Te dou %d moedas por isso.~
 0
 24
 5801
@@ -38,12 +38,12 @@ CircleMUD v3.0 Shop File~
 19
 -1
 %s I don't stock that item.~
-%s You don't seem to have that.~
-%s I don't trade in such items.~
-%s I can't afford that!~
-%s You are too poor!~
-%s That'll be %d coins, thanks.~
-%s I'll give you %d coins for that.~
+%s Você não parece ter isso.~
+%s Não comercializo esse tipo de item.~
+%s Não posso pagar tanto por isso!~
+%s Você não tem dinheiro suficiente!~
+%s Isso custará %d moedas, obrigado.~
+%s Te dou %d moedas por isso.~
 0
 24
 5802
@@ -65,12 +65,12 @@ CircleMUD v3.0 Shop File~
 10
 -1
 %s I don't stock that item.~
-%s You don't seem to have that.~
-%s I don't trade in such items.~
-%s I can't afford that!~
-%s You are too poor!~
-%s That'll be %d coins, thanks.~
-%s I'll give you %d coins for that.~
+%s Você não parece ter isso.~
+%s Não comercializo esse tipo de item.~
+%s Não posso pagar tanto por isso!~
+%s Você não tem dinheiro suficiente!~
+%s Isso custará %d moedas, obrigado.~
+%s Te dou %d moedas por isso.~
 0
 24
 5803
@@ -92,12 +92,12 @@ CircleMUD v3.0 Shop File~
 19
 -1
 %s I don't stock that item.~
-%s You don't seem to have that.~
-%s I don't trade in such items.~
-%s I can't afford that!~
-%s You are too poor!~
-%s That'll be %d coins, thanks.~
-%s I'll give you %d coins for that.~
+%s Você não parece ter isso.~
+%s Não comercializo esse tipo de item.~
+%s Não posso pagar tanto por isso!~
+%s Você não tem dinheiro suficiente!~
+%s Isso custará %d moedas, obrigado.~
+%s Te dou %d moedas por isso.~
 0
 24
 5804
@@ -120,12 +120,12 @@ CircleMUD v3.0 Shop File~
 9
 -1
 %s I don't stock that item.~
-%s You don't seem to have that.~
-%s I don't trade in such items.~
-%s I can't afford that!~
-%s You are too poor!~
-%s That'll be %d coins, thanks.~
-%s I'll give you %d coins for that.~
+%s Você não parece ter isso.~
+%s Não comercializo esse tipo de item.~
+%s Não posso pagar tanto por isso!~
+%s Você não tem dinheiro suficiente!~
+%s Isso custará %d moedas, obrigado.~
+%s Te dou %d moedas por isso.~
 0
 24
 5807

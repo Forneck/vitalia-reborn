@@ -155,19 +155,26 @@ static int is_ok_char(struct char_data *keeper, struct char_data *ch, int shop_n
 static int is_open(struct char_data *keeper, int shop_nr, int msg)
 {
 	char buf[MAX_INPUT_LENGTH];
+	int current_hour = time_info.hours;
 
 	*buf = '\0';
-	if (SHOP_OPEN1(shop_nr) > time_info.hours)
-		strlcpy(buf, MSG_NOT_OPEN_YET, sizeof(buf));
-	else if (SHOP_CLOSE1(shop_nr) < time_info.hours)
-	{
-		if (SHOP_OPEN2(shop_nr) > time_info.hours)
-			strlcpy(buf, MSG_NOT_REOPEN_YET, sizeof(buf));
-		else if (SHOP_CLOSE2(shop_nr) < time_info.hours)
-			strlcpy(buf, MSG_CLOSED_FOR_DAY, sizeof(buf));
-	}
-	if (!*buf)
+	
+	/* Check if shop is open during first period (open1 to close1) */
+	if (SHOP_OPEN1(shop_nr) <= current_hour && current_hour <= SHOP_CLOSE1(shop_nr))
 		return (TRUE);
+	
+	/* Check if shop is open during second period (open2 to close2) */
+	if (SHOP_OPEN2(shop_nr) <= current_hour && current_hour <= SHOP_CLOSE2(shop_nr))
+		return (TRUE);
+	
+	/* Shop is closed, determine appropriate message */
+	if (current_hour < SHOP_OPEN1(shop_nr))
+		strlcpy(buf, MSG_NOT_OPEN_YET, sizeof(buf));
+	else if (current_hour > SHOP_CLOSE1(shop_nr) && current_hour < SHOP_OPEN2(shop_nr))
+		strlcpy(buf, MSG_NOT_REOPEN_YET, sizeof(buf));
+	else
+		strlcpy(buf, MSG_CLOSED_FOR_DAY, sizeof(buf));
+	
 	if (msg)
 		do_say(keeper, buf, cmd_tell, 0);
 	return (FALSE);
@@ -2005,11 +2012,17 @@ shop_rnum find_shop_by_keeper(mob_rnum rnum)
 /* Verifica se uma loja está aberta com base no horário do jogo. */
 bool is_shop_open(shop_rnum snum)
 {
-    /* time_info é uma variável global com a hora atual do MUD. */
-    if (time_info.hours < SHOP_OPEN1(snum) || time_info.hours > SHOP_CLOSE1(snum)) {
-        return FALSE;
-    }
-    return TRUE;
+    int current_hour = time_info.hours;
+    
+    /* Verifica se está no primeiro período de funcionamento (open1 to close1) */
+    if (SHOP_OPEN1(snum) <= current_hour && current_hour <= SHOP_CLOSE1(snum))
+        return TRUE;
+    
+    /* Verifica se está no segundo período de funcionamento (open2 to close2) */
+    if (SHOP_OPEN2(snum) <= current_hour && current_hour <= SHOP_CLOSE2(snum))
+        return TRUE;
+    
+    return FALSE;
 }
 
 /**

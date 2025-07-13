@@ -36,13 +36,13 @@ CircleMUD v3.0 Shop File~
 1.10
 0.90
 -1
-%s Haven't got that on storage - try list!~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s If you have no money, you'll have to go!~
-%s That'll be %d coins.~
-%s Here, you can have %d coins for that.~
+%s Não tenho isso no estoque - tente listar!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Se você não tem dinheiro, terá que sair!~
+%s Isso custará %d moedas.~
+%s Aqui estão %d moedas por isso.~
 0
 6
 5410
@@ -69,13 +69,13 @@ CircleMUD v3.0 Shop File~
 13
 8
 -1
-%s Haven't got that on storage - try list!~
-%s You don't seem to have that.~
-%s I don't buy THAT... Try another shop.~
-%s I can't afford such a treasure.~
-%s You can't afford it!~
-%s That'll be %d coins, please.~
-%s You'll get %d coins for it!~
+%s Não tenho isso no estoque - tente listar!~
+%s Você não parece ter isso.~
+%s Não compro ISSO... Tente outra loja.~
+%s Não posso pagar por tal tesouro.~
+%s Você não pode pagar por isso!~
+%s Isso custará %d moedas, por favor.~
+%s Você receberá %d moedas por isso!~
 0
 6
 5411
@@ -102,12 +102,12 @@ CircleMUD v3.0 Shop File~
 0.15
 -1
 %s Sorry, I haven't got exactly that item.~
-%s You don't seem to have that.~
-%s I don't buy such items.~
+%s Você não parece ter isso.~
+%s Não compro esse tipo de item.~
 %s That is too expensive for me!~
-%s You can't afford it!~
-%s That'll be %d coins, please.~
-%s You'll get %d coins for it!~
+%s Você não pode pagar por isso!~
+%s Isso custará %d moedas, por favor.~
+%s Você receberá %d moedas por isso!~
 0
 6
 5413
@@ -184,13 +184,13 @@ CircleMUD v3.0 Shop File~
 0.50
 9
 -1
-%s Haven't got that on storage - try list!~
-%s You don't seem to have that.~
-%s I only buy armors.. Go away!~
-%s That is too expensive for me - Try a wizard!~
-%s You can't afford it!~
-%s That'll be %d coins, please.~
-%s You'll get %d coins for it!~
+%s Não tenho isso no estoque - tente listar!~
+%s Você não parece ter isso.~
+%s Só compro armaduras... Vá embora!~
+%s Isso é muito caro para mim - Tente um mago!~
+%s Você não pode pagar por isso!~
+%s Isso custará %d moedas, por favor.~
+%s Você receberá %d moedas por isso!~
 2
 6
 5416
@@ -221,8 +221,8 @@ CircleMUD v3.0 Shop File~
 -1
 %s I haven't got that kind of a weapon~
 %s You don't carry that weapon~
-%s I only buy weapons.~
-%s I can't afford such a great weapon~
+%s Só compro armas.~
+%s Não posso pagar por uma arma tão boa~
 %s Sorry, but NO CREDIT~
 %s That just costs %d coins.~
 %s Here is %d coins for that.~
@@ -345,13 +345,13 @@ CircleMUD v3.0 Shop File~
 0.90
 22
 -1
-%s Sorry pal, I have not got that kind of ship.~
-%s Ok, but let me see it first.~
-%s I only trade ships.~
-%s I can't afford such a nice ship.~
-%s This ship is too expensive for you.~
-%s Here is your ship, I'll take %d gold coins.~
-%s What a fine deal, you get %d gold coins.~
+%s Desculpe amigo, não tenho esse tipo de navio.~
+%s Ok, mas deixe-me ver primeiro.~
+%s Só negocio navios.~
+%s Não posso pagar por um navio tão bom.~
+%s Este navio é muito caro para você.~
+%s Aqui está seu navio, aceito %d moedas de ouro.~
+%s Que bom negócio, você ganha %d moedas de ouro.~
 0
 6
 5465
@@ -377,7 +377,7 @@ CircleMUD v3.0 Shop File~
 %s Sorry, I'm not a fence.~
 %s I'd love to buy it, I just can't spare the coinage~
 %s Bah, come back when you can pay!~
-%s That'll be %d coins -- thank you.~
+%s Isso custará %d moedas -- obrigado.~
 %s I'll give ya %d coins for that!~
 0
 6
@@ -457,13 +457,13 @@ CircleMUD v3.0 Shop File~
 1.30
 0.70
 -1
-%s It's very noisy in here, what did you say you wanted to buy?~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
+%s Está muito barulhento aqui, o que você disse que queria comprar?~
+%s Eu não compro!~
+%s Eu não compro!~
+%s Eu não compro!~
 %s Are you drunk or what ?? - NO CREDIT!~
-%s That'll be - say %d coins.~
-%s Here, you can have %d coins for that.~
+%s Isso custará - digamos %d moedas.~
+%s Aqui estão %d moedas por isso.~
 0
 6
 5483
@@ -497,7 +497,7 @@ CircleMUD v3.0 Shop File~
 %s Sorry, I'm not a fence.~
 %s I'd love to buy it, I just can't spare the coinage~
 %s Bah, come back when you can pay!~
-%s That'll be %d coins -- thank you.~
+%s Isso custará %d moedas -- obrigado.~
 %s I'll give ya %d coins for that!~
 0
 6
