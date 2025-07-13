@@ -1,4 +1,4 @@
-#5601
+#5801
 o mercador de armas do deserto~
 um mercador de armas~
    Um homem bronzeado pelo sol do deserto inspeciona cuidadosamente cada arma
@@ -16,7 +16,7 @@ clima árido de Nova Thalos.
 8 8 1
 E
 
-#5602
+#5802
 o comerciante de temperos~
 um comerciante~
    Este homem pequeno e ágil conhece as especiarias mais raras do deserto.
@@ -34,7 +34,7 @@ de melhor qualidade.
 8 8 1
 E
 
-#5603
+#5803
 o curandeiro do deserto~
 um curandeiro~
    Uma mulher sábia com conhecimento profundo das plantas medicinais do
@@ -55,7 +55,7 @@ Spell: 28
 Spell: 15
 E
 
-#5604
+#5804
 o estalajadeiro~
 um estalajadeiro~
    Um homem corpulento e jovial que administra a pousada com eficiência e
@@ -72,7 +72,7 @@ de toda a região.
 8 8 1
 E
 
-#5605
+#5805
 o ferreiro do deserto~
 um ferreiro~
    Este artesão musculoso domina as técnicas especiais necessárias para
@@ -90,7 +90,7 @@ de Nova Thalos.
 8 8 1
 E
 
-#5606
+#5806
 o guarda de Nova Thalos~
 um guarda~
    Este soldado disciplinado veste uma armadura adaptada para o clima do
@@ -109,7 +109,7 @@ cidade.
 BareHandAttack: 5
 E
 
-#5607
+#5807
 o mercador de couro~
 um mercador~
    Um artesão habilidoso especializado em trabalhar couro usando técnicas
@@ -125,7 +125,7 @@ couro resistentes às condições adversas do deserto.
 8 8 1
 E
 
-#5608
+#5808
 o cambista~
 um cambista~
    Um homem de aparência próspera que lida com moedas de várias regiões.
@@ -141,7 +141,7 @@ transações entre mercadores de diferentes regiões com suas próprias moedas.
 8 8 1
 E
 
-#5609
+#5809
 o capitão da guarda~
 um capitão~
    Um veterano de guerra com cicatrizes que contam histórias de muitas

@@ -1,4 +1,4 @@
-#5600
+#5800
 Entrada do Distrito Mercantil~
    Você se encontra na entrada principal do distrito mercantil de Nova Thalos.
 O ar está carregado com os aromas de especiarias exóticas e o som de negociadores
@@ -6,12 +6,12 @@ discutindo preços. Tendas e lojas se estendem em todas as direções, oferecend
 mercadorias de terras distantes. Para o norte você vê a rua principal do
 distrito, enquanto ao sul o caminho leva de volta ao centro da cidade.
 ~
-56 0 0 0 0 1
+58 0 0 0 0 1
 D0
 A rua principal do distrito mercantil se estende à frente.
 ~
 ~
-0 0 5601
+0 0 5801
 D2
 O caminho de volta ao centro da cidade.
 ~
@@ -19,189 +19,189 @@ O caminho de volta ao centro da cidade.
 0 0 5461
 S
 
-#5601
+#5801
 Loja de Armas do Deserto~
    Esta loja especializada vende armas adaptadas para o clima árido de Nova
 Thalos. As paredes estão forradas com cimitarras reluzentes, lanças ornamentadas
 e escudos decorados com símbolos do deserto. O mercador, um homem bronzeado
 pelo sol, examina cada arma com cuidado antes de vendê-la.
 ~
-56 8 0 0 0 0
+58 8 0 0 0 0
 D2
 A entrada do distrito mercantil fica ao sul.
 ~
 ~
-0 0 5600
+0 0 5800
 S
 
-#5602
+#5802
 Mercador de Temperos e Especiarias~
    O aroma intenso de canela, cardamomo e outras especiarias exóticas preenche
 este pequeno estabelecimento. Sacos de temperos coloridos estão arrumados
 cuidadosamente em prateleiras, cada um rotulado em vários idiomas. O comerciante
 conhece a origem e os usos culinários de cada especiaria em seu estoque.
 ~
-56 8 0 0 0 0
+58 8 0 0 0 0
 D1
 A rua principal continua a leste.
 ~
 ~
-0 0 5603
+0 0 5803
 S
 
-#5603
+#5803
 Casa de Cura do Deserto~
    Este santuário de cura é decorado com tapetes coloridos e possui um pequeno
 oásis artificial no centro. Plantas medicinais do deserto crescem em vasos de
 cerâmica, e o curandeiro prepara seus remédios usando antigas receitas tribais.
 O som suave de água corrente cria uma atmosfera tranquila.
 ~
-56 8 0 0 0 0
+58 8 0 0 0 0
 D3
 A loja de especiarias fica a oeste.
 ~
 ~
-0 0 5602
+0 0 5802
 D1
 A pousada fica a leste.
 ~
 ~
-0 0 5604
+0 0 5804
 S
 
-#5604
+#5804
 A Pousada do Mercador~
    Esta pousada acolhedora atende principalmente aos comerciantes que visitam
 Nova Thalos. O saguão é decorado com troféus de viagens e mapas de rotas
 comerciais. Mesas baixas estão dispostas para refeições comunitárias, e o
 estalajadeiro conhece todas as fofocas comerciais da região.
 ~
-56 8 0 0 0 0
+58 8 0 0 0 0
 D3
 A casa de cura fica a oeste.
 ~
 ~
-0 0 5603
+0 0 5803
 D1
 A forja fica a leste.
 ~
 ~
-0 0 5605
+0 0 5805
 S
 
-#5605
+#5805
 Forja do Deserto~
    O calor intenso desta forja rivaliza com o do sol do deserto. O ferreiro,
 suado e concentrado, trabalha em uma nova peça. Ferramentas especializadas
 para trabalhar metais do deserto estão espalhadas pela bancada, e o som rítmico
 do martelo ecoa pelas paredes de pedra.
 ~
-56 8 0 0 0 0
+58 8 0 0 0 0
 D3
 A pousada fica a oeste.
 ~
 ~
-0 0 5604
+0 0 5804
 D0
 O posto da guarda fica ao norte.
 ~
 ~
-0 0 5606
+0 0 5806
 S
 
-#5606
+#5806
 Posto da Guarda~
    Este posto avançado da guarda de Nova Thalos protege o distrito mercantil.
 Guardas bem armados patrulham constantemente, garantindo que o comércio flua
 sem perturbações. Armas e equipamentos estão organizados de forma militar,
 prontos para qualquer emergência.
 ~
-56 8 0 0 0 0
+58 8 0 0 0 0
 D2
 A forja fica ao sul.
 ~
 ~
-0 0 5605
+0 0 5805
 D1
 O quartel da guarda continua a leste.
 ~
 ~
-0 0 5607
+0 0 5807
 S
 
-#5607
+#5807
 Quartel da Guarda~
    Uma extensão do posto da guarda, este quartel abriga soldados adicionais
 responsáveis pela segurança do distrito mercantil. Camas simples estão alinhadas
 e armários contêm equipamentos sobressalentes. A disciplina militar é evidente
 em cada detalhe da organização.
 ~
-56 8 0 0 0 0
+58 8 0 0 0 0
 D3
 O posto da guarda fica a oeste.
 ~
 ~
-0 0 5606
+0 0 5806
 D1
 A loja de couro fica a leste.
 ~
 ~
-0 0 5608
+0 0 5808
 S
 
-#5608
+#5808
 Oficina de Couro~
    Esta oficina produz artigos de couro adaptados para o clima seco do deserto.
 Peles curtidas com métodos tradicionais estão empilhadas, e o artesão trabalha
 em botas, cintos e bolsas resistentes. O cheiro característico do couro tratado
 permeia o ambiente.
 ~
-56 8 0 0 0 0
+58 8 0 0 0 0
 D3
 O quartel da guarda fica a oeste.
 ~
 ~
-0 0 5607
+0 0 5807
 D1
 A casa de câmbio fica a leste.
 ~
 ~
-0 0 5609
+0 0 5809
 S
 
-#5609
+#5809
 Casa de Câmbio~
    Este estabelecimento lida com a troca de moedas de várias regiões. Balanças
 precisas e cofres seguros garantem transações honestas. O cambista, um homem
 de aparência próspera, conhece as taxas de câmbio de todas as principais cidades
 comerciais.
 ~
-56 8 0 0 0 0
+58 8 0 0 0 0
 D3
 A oficina de couro fica a oeste.
 ~
 ~
-0 0 5608
+0 0 5808
 D1
 O gabinete do capitão fica a leste.
 ~
 ~
-0 0 5610
+0 0 5810
 S
 
-#5610
+#5810
 Gabinete do Capitão da Guarda~
    Este escritório bem organizado serve como centro de comando para a segurança
 do distrito mercantil. Mapas da área estão afixados nas paredes, e relatórios
 de patrulhamento estão organizados na mesa do capitão. A autoridade militar
 é claramente estabelecida aqui.
 ~
-56 8 0 0 0 0
+58 8 0 0 0 0
 D3
 A casa de câmbio fica a oeste.
 ~
 ~
-0 0 5609
+0 0 5809
 S
 
 $~

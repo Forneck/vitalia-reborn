@@ -1,0 +1,22 @@
+#58
+Vitalia~
+Nova Thalos - Distrito Mercantil~
+5800 5899 20 2 j 0 0 0 -1 -1 4
+M 0 5801 1 5801 	(o mercador de armas do deserto)
+M 0 5802 1 5802 	(o comerciante de temperos)
+M 0 5803 1 5803 	(o curandeiro do deserto)
+M 0 5804 1 5804 	(o estalajadeiro)
+M 0 5805 1 5805 	(o ferreiro do deserto)
+M 0 5806 2 5806 	(o guarda de Nova Thalos)
+M 0 5806 2 5807 	(o guarda de Nova Thalos)
+M 0 5807 1 5808 	(o mercador de couro)
+M 0 5808 1 5809 	(o cambista)
+M 0 5809 1 5810 	(o capitão da guarda)
+O 0 5801 1 5801 	(uma prateleira de armas)
+O 0 5802 1 5802 	(um balcão de temperos)
+O 0 5803 1 5803 	(uma mesa de cura)
+O 0 5804 1 5804 	(um balcão da pousada)
+O 0 5805 1 5805 	(uma forja do deserto)
+O 0 5806 1 5808 	(uma bancada de couro)
+O 0 5807 1 5809 	(uma mesa de câmbio)
+S
