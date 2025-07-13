@@ -1,0 +1,208 @@
+#200
+guarda gelo~
+um guarda de gelo~
+Um guarda de gelo está parado aqui, vigiando os portões.
+~
+Este guerreiro é feito completamente de gelo cristalino azulado. Seus olhos 
+brilham com uma luz fria e seus movimentos são precisos e letais. Cada passo 
+que ele dá deixa pequenos cristais de gelo no chão.
+~
+2099266 0 0 0 0 0 0 0 600 E
+25 8 2 1d6+400 3d6+8
+1500 15000
+8 8 1
+E
+
+#201
+soldado gelado~
+um soldado gelado~
+Um soldado gelado patrulha esta área com determinação.
+~
+Este soldado vestia uma armadura completa antes de ser transformado em gelo.
+Agora, a armadura e o corpo formam uma única peça cristalina azul-esbranquiçada
+que reflete a luz de forma hipnotizante.
+~
+2099266 0 0 0 0 0 0 0 650 E
+22 6 1 1d5+350 2d8+6
+1200 12000
+8 8 1
+E
+
+#202
+servo gelo~
+um servo de gelo~
+Um servo de gelo trabalha aqui silenciosamente.
+~
+Este humanoide de gelo foi criado para servir no castelo. Seus movimentos
+são mecânicos mas eficientes, e ele parece não ter consciência própria,
+apenas seguindo ordens pré-estabelecidas.
+~
+2099200 0 0 0 0 0 0 0 400 E
+18 10 4 1d4+250 2d6+4
+800 8000
+8 8 1
+E
+
+#203
+capitao gelo~
+o Capitão de Gelo~
+O Capitão de Gelo comanda seus soldados com autoridade gelada.
+~
+Um imponente guerreiro de gelo com detalhes dourados congelados em seu peito.
+Sua presença irradia um frio intenso e sua experiência militar é evidente
+em cada movimento calculado. Uma aura azulada pulsa ao redor de seu corpo.
+~
+2156546 0 0 0 0 0 0 0 800 E
+35 2 -2 1d8+600 4d8+12
+2500 25000
+8 8 1
+Spell: 8
+Spell: 30
+E
+
+#204
+rainha gelada~
+a Rainha Gelada~
+A Rainha Gelada está sentada em seu trono de gelo cristalino.
+~
+Uma figura majestosa e aterrorizante. Sua beleza é sobrenatural, mas seus
+olhos azuis gelados não demonstram qualquer calor humano. Vestida com um
+manto que parece ser feito de neve cristalizada, ela controla todos os
+aspectos do inverno eterno deste castelo.
+~
+2156562 0 0 0 0 0 0 0 1000 E
+45 -5 -8 2d10+1000 6d10+20
+8000 50000
+4 4 2
+Spell: 6
+Spell: 11
+Spell: 23
+Spell: 30
+E
+
+#205
+prisioneiro~
+um prisioneiro~
+Um prisioneiro está aqui, tremendo de frio.
+~
+Este pobre coitado foi capturado e trazido para as masmorras geladas.
+Seus lábios estão azuis de frio e ele mal consegue se mover devido
+à temperatura extremamente baixa das celas.
+~
+2097152 0 0 0 0 0 0 0 0 E
+12 12 6 1d3+150 1d6+3
+400 4000
+8 8 1
+E
+
+#206
+espírito gelo~
+um espírito do gelo~
+Um espírito translúcido do gelo flutua pela área.
+~
+Esta aparição etérea é a alma de alguém que morreu de frio no castelo.
+Agora está preso eternamente a este lugar, fadado a vagar pelos corredores
+gelados até o fim dos tempos.
+~
+2361378 0 0 0 0 0 0 0 -200 E
+20 5 0 1d4+300 2d7+5
+1000 10000
+8 8 0
+Spell: 38
+E
+
+#207
+construto gelo~
+um construto de gelo~
+Um grande construto de gelo bloqueia a passagem.
+~
+Uma criatura artificial massiva feita de blocos de gelo densamente comprimidos.
+Seus punhos são como martelos de guerra e seus movimentos são lentos mas
+devastadores. Runas geladas brilham em sua superfície.
+~
+2099266 0 0 0 0 0 0 0 750 E
+30 0 -5 1d8+500 4d6+10
+2000 20000
+8 8 0
+E
+
+#208
+elemental gelo~
+um elemental do gelo~
+Um elemental do gelo maior manifesta-se aqui.
+~
+Uma criação mágica pura do elemento gelo. Este ser não possui forma física
+definida, sendo uma massa de gelo e neve em constante movimento. Cristais
+afiados giram ao seu redor como lâminas cortantes.
+~
+2099266 0 0 0 0 0 0 0 700 E
+28 3 -3 1d7+450 3d8+9
+1800 18000
+8 8 0
+Spell: 8
+Spell: 37
+E
+
+#209
+aranha cristal~
+uma aranha de cristal~
+Uma aranha feita de cristais de gelo caminha pelas paredes.
+~
+Esta criatura aracnídea é completamente transparente, formada por cristais
+de gelo que se movem com precisão sobrenatural. Suas patas fazem um som
+delicado como sinos quando toca o chão gelado.
+~
+2097218 0 0 0 0 0 0 0 300 E
+15 8 3 1d3+200 2d5+4
+600 6000
+8 8 2
+E
+
+#210
+lobo gelo~
+um lobo do gelo~
+Um lobo feito de gelo uiva silenciosamente.
+~
+Este predador foi transformado em gelo, mas manteve todos os seus instintos
+selvagens. Seus olhos vermelhos brilham como rubis em contraste com seu
+corpo cristalino, e seu hálito forma nuvens de vapor gelado.
+~
+2097218 0 0 0 0 0 0 0 500 E
+24 6 1 1d5+350 3d6+7
+1400 14000
+8 8 1
+E
+
+#211
+bibliotecario gelo~
+o bibliotecário de gelo~
+Um bibliotecário de gelo cuida dos pergaminhos congelados.
+~
+Este erudito foi transformado em gelo enquanto estudava os segredos do
+inverno eterno. Agora serve como guardião dos conhecimentos arcanos
+preservados no frio perpétuo da biblioteca do castelo.
+~
+2156546 0 0 0 0 0 0 0 550 E
+26 4 0 1d6+380 3d7+8
+1600 16000
+8 8 1
+Spell: 20
+Spell: 31
+E
+
+#212
+cozinheiro gelo~
+o cozinheiro de gelo~
+Um cozinheiro de gelo prepara banquetes gelados.
+~
+Ironia do destino: este cozinheiro que dedicou sua vida a preparar pratos
+quentes agora só consegue criar iguarias congeladas. Suas mãos de gelo
+ainda se movem com a habilidade de anos de experiência culinária.
+~
+2156546 0 0 0 0 0 0 0 450 E
+20 8 2 1d4+280 2d8+6
+1000 10000
+8 8 1
+E
+
+$

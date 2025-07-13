@@ -127,6 +127,11 @@ D2
 ~
 0 -1 5404
 D3
+Para o distrito comercial.
+~
+~
+0 -1 5500
+D3
 ~
 ~
 0 -1 5408
@@ -1338,6 +1343,11 @@ D3
 ~
 ~
 0 -1 5506
+D4
+O distrito mercantil fica acima.
+~
+~
+0 0 5800
 S
 #5462
 O Caminho das Guildas~

@@ -2150,4 +2150,98 @@ A Cidade das Jóias está ali.
 portao cristal negro~
 1 -1 11389
 S
+
+#11391
+O Distrito dos Artífices Nagas~
+   Esta área especializada de Bhogavati é dedicada aos artesãos nagas mais
+habilidosos da cidade. Oficinas ornamentadas se alinham ao longo dos canais
+dourados, cada uma especializada em diferentes artes: joalheria, escultura
+em pedras preciosas, forjaria de metais nobres. O som suave de ferramentas
+delicadas mistura-se com o murmúrio das águas.
+~
+113 0 0 0 0 7
+D0
+O canal principal leva ao norte.
+~
+~
+0 0 11392
+D1
+A oficina de joias fica a leste.
+~
+~
+0 0 11393
+S
+
+#11392
+Canal dos Artífices~
+   Um canal estreito mas profundo onde pequenas embarcações nagas transportam
+materiais preciosos entre as oficinas. As águas aqui têm uma tonalidade
+dourada mais intensa, resultado dos resíduos de metais nobres que são
+cuidadosamente filtrados e reaproveitados pelos artesãos nagas.
+~
+113 131136 0 0 0 7
+D2
+O distrito dos artífices fica ao sul.
+~
+~
+0 0 11391
+D0
+O templo das pedras preciosas fica ao norte.
+~
+~
+0 0 11394
+S
+
+#11393
+Oficina de Joalheria Naga~
+   Uma oficina suntuosa onde os mestres joalheiros nagas criam as peças mais
+refinadas da cidade. Bancadas de mármore negro exibem ferramentas de precisão
+feitas de mithril, e cofres seguros guardam gemas raras. A luz é projetada
+através de cristais especiais para revelar cada faceta das pedras preciosas
+em sua verdadeira beleza.
+~
+113 8 0 0 0 0
+D3
+O distrito dos artífices fica a oeste.
+~
+~
+0 0 11391
+S
+
+#11394
+Templo das Pedras Preciosas~
+   Um santuário dedicado às forças que governam a formação de gemas e metais
+preciosos nas profundezas da terra. Estátuas de nagas ancestrais, esculpidas
+em diamante e safira, guardam altares onde oferendas de pedras brutas são
+deixadas para serem abençoadas antes da lapidação.
+~
+113 4 0 0 0 0
+D2
+O canal dos artífices fica ao sul.
+~
+~
+0 0 11392
+D1
+Os aposentos reais ficam a leste.
+~
+~
+0 0 11395
+S
+
+#11395
+Aposentos Reais dos Nagas~
+   Os luxuosos aposentos onde reside a realeza naga de Bhogavati. Cada
+superfície é incrustada com pedras preciosas em padrões que contam a história
+ancestral dos nagas. Piscinas de águas termais perfumadas proporcionam conforto
+aos habitantes serpentinos, e jardins de plantas aquáticas raras decoram
+os ambientes.
+~
+113 8 0 0 0 0
+D3
+O templo das pedras preciosas fica a oeste.
+~
+~
+0 0 11394
+S
+
 $~
