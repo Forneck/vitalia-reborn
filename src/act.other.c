@@ -28,6 +28,7 @@
 #include "mail.h"				/* for has_mail() */
 #include "shop.h"
 #include "quest.h"
+#include "spedit.h"				/* for get_spell_level() */
 #include "modify.h"
 
 /* Local defined utility functions */
@@ -1207,10 +1208,19 @@ void show_class_skills(struct char_data *ch, int class_num)
 	int i;
 	send_to_char(ch, "\r\nHabilidades e magias disponíveis para %s:\r\n", pc_class_types[class_num]);
 	
-	/* Show skills the character currently has from their class */
+	/* Show skills the character currently has that are available to their class */
 	for (i = 1; i <= MAX_SKILLS; i++) {
-		if (GET_SKILL(ch, i) > 0) {
+		if (GET_SKILL(ch, i) > 0 && get_spell_level(i, class_num) >= 0) {
 			send_to_char(ch, "%3d. %s (%d%%)\r\n", i, skill_name(i), GET_SKILL(ch, i));
+		}
+	}
+	
+	/* For bards, also show chansons */
+	if (class_num == CLASS_BARD) {
+		for (i = CHANSON_ARDOR; i <= MAX_CHANSONS; i++) {
+			if (GET_SKILL(ch, i) > 0 && get_spell_level(i, class_num) >= 0) {
+				send_to_char(ch, "%3d. %s (%d%%)\r\n", i, skill_name(i), GET_SKILL(ch, i));
+			}
 		}
 	}
 	send_to_char(ch, "\r\nDigite o número da habilidade que deseja manter, ou 0 para não manter nenhuma: ");
@@ -1268,6 +1278,8 @@ void show_menu_with_options(struct descriptor_data *d)
 
 int can_elevate(struct char_data *ch)
 {
+	int i, classes_experienced = 0;
+	
 	/* Must be transcended */
 	if (!PLR_FLAGGED(ch, PLR_TRNS))
 		return (0);
@@ -1280,8 +1292,12 @@ int can_elevate(struct char_data *ch)
 	if (GET_EXP(ch) < level_exp(GET_CLASS(ch), LVL_IMMORT))
 		return (0);
 		
-	/* Must have minimum number of incarnations (remorts) */
-	if (GET_REMORT(ch) < 4)
+	/* Must have experienced all classes at least once */
+	for (i = 0; i < NUM_CLASSES; i++) {
+		if (ch->player_specials->saved.was_class[i] || GET_CLASS(ch) == i)
+			classes_experienced++;
+	}
+	if (classes_experienced < NUM_CLASSES)
 		return (0);
 		
 	/* Config must allow mortal to immortal advancement */
