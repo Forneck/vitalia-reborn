@@ -297,6 +297,40 @@ void mobile_activity(void)
         }
     }
 
+    /* Mob combat quest posting - chance to post bounty/revenge quests */
+    if (ch->ai_data && rand_number(1, 100) <= 2) { /* 2% chance per tick to consider posting combat quests */
+        /* Check if mob should post a player kill quest (revenge for being attacked) */
+        if (GET_GENBRAVE(ch) > 50 && GET_GENQUEST(ch) > 40) {
+            /* Check if mob was recently attacked by a player (has hostile memory) */
+            struct char_data *attacker = HUNTING(ch);
+            if (attacker && !IS_NPC(attacker) && GET_GOLD(ch) > 200) {
+                /* Post a player kill quest for revenge */
+                int reward = MIN(GET_GOLD(ch) / 3, 500 + rand_number(0, 300));
+                mob_posts_combat_quest(ch, AQ_PLAYER_KILL, NOTHING, reward);
+                HUNTING(ch) = NULL; /* Clear hunting after posting quest */
+            }
+        }
+        
+        /* Check if mob should post a bounty quest against hostile mobs in area */
+        if (GET_GENQUEST(ch) > 60 && GET_GOLD(ch) > 300) {
+            struct char_data *target;
+            /* Look for aggressive mobs in the same zone */
+            for (target = character_list; target; target = target->next) {
+                if (IS_NPC(target) && target != ch && 
+                    world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
+                    MOB_FLAGGED(target, MOB_AGGRESSIVE) && 
+                    GET_ALIGNMENT(target) < -200 && 
+                    GET_LEVEL(target) >= GET_LEVEL(ch) - 5) {
+                    
+                    /* Post bounty quest against this aggressive mob */
+                    int reward = MIN(GET_GOLD(ch) / 4, 400 + GET_LEVEL(target) * 10);
+                    mob_posts_combat_quest(ch, AQ_MOB_KILL_BOUNTY, GET_MOB_VNUM(target), reward);
+                    break; /* Only post one bounty quest per tick */
+                }
+            }
+        }
+    }
+
     mob_handle_grouping(ch);
 
     /* Aggressive Mobs */

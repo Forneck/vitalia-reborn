@@ -2285,7 +2285,7 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     new_quest->qm = questmaster_vnum;
     new_quest->target = item_vnum;
     new_quest->prereq = NOTHING;
-    new_quest->flags = 0; /* Não repetível por padrão */
+    new_quest->flags = AQ_MOB_POSTED; /* Marca como postada por mob */
     new_quest->prev_quest = NOTHING;
     new_quest->next_quest = NOTHING;
     new_quest->func = NULL;
@@ -2431,6 +2431,205 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
         log1("WISHLIST QUEST: Saved quest %d to disk for persistence across restarts", new_quest_vnum);
     } else {
         log1("SYSERR: Failed to save wishlist quest %d to disk", new_quest_vnum);
+    }
+}
+
+/**
+ * Faz um mob postar uma quest de combate (AQ_PLAYER_KILL ou AQ_MOB_KILL_BOUNTY).
+ * @param ch O mob que posta a quest
+ * @param quest_type Tipo da quest (AQ_PLAYER_KILL ou AQ_MOB_KILL_BOUNTY)
+ * @param target_vnum VNUM do alvo (mob vnum para bounty, NOTHING para player kill)
+ * @param reward Recompensa em ouro oferecida
+ */
+void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnum, int reward)
+{
+    mob_vnum questmaster_vnum;
+    qst_vnum new_quest_vnum;
+    struct aq_data *new_quest;
+    int difficulty;
+    int calculated_reward;
+    zone_rnum mob_zone;
+    char quest_name[MAX_QUEST_NAME];
+    char quest_desc[MAX_QUEST_DESC];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+    char *target_name = "alvo desconhecido";
+    mob_rnum target_mob_rnum = NOBODY;
+    
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+    
+    /* Validar tipo de quest */
+    if (quest_type != AQ_PLAYER_KILL && quest_type != AQ_MOB_KILL_BOUNTY) {
+        log1("SYSERR: Invalid combat quest type %d from %s", quest_type, GET_NAME(ch));
+        return;
+    }
+    
+    /* Obter nome do alvo para quests de bounty */
+    if (quest_type == AQ_MOB_KILL_BOUNTY && target_vnum != NOTHING) {
+        target_mob_rnum = real_mobile(target_vnum);
+        if (target_mob_rnum != NOBODY) {
+            target_name = mob_proto[target_mob_rnum].player.short_descr;
+        }
+    }
+    
+    /* Encontra zona do mob */
+    mob_zone = world[IN_ROOM(ch)].zone;
+    
+    /* Encontra questmaster */
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    }
+    if (questmaster_vnum == NOBODY) {
+        log1("COMBAT QUEST: No questmaster found for %s in zone %d", 
+             GET_NAME(ch), mob_zone);
+        act("$n parece frustrado por não conseguir postar sua solicitação de ajuda.", FALSE, ch, 0, 0, TO_ROOM);
+        return;
+    }
+    
+    /* Calcula dificuldade baseada no tipo de quest */
+    if (quest_type == AQ_PLAYER_KILL) {
+        difficulty = 70 + rand_number(0, 20); /* Player kills são naturalmente difíceis */
+    } else {
+        /* Para bounty quests, dificuldade baseada no nível do alvo */
+        if (target_mob_rnum != NOBODY) {
+            int target_level = mob_proto[target_mob_rnum].player.level;
+            difficulty = MIN(90, MAX(30, target_level * 3));
+        } else {
+            difficulty = 60; /* Default para alvos desconhecidos */
+        }
+    }
+    
+    /* Calcula recompensa adequada */
+    calculated_reward = reward + (difficulty * 2);
+    
+    /* Seleciona item de recompensa do inventário do mob */
+    reward_item = select_mob_inventory_reward(ch, difficulty);
+    
+    /* Verifica se o mob tem ouro suficiente */
+    if (GET_GOLD(ch) < calculated_reward) {
+        calculated_reward = MAX(100, GET_GOLD(ch) / 2); /* Quests de combate têm recompensa mínima maior */
+    }
+    
+    /* Cria uma nova quest */
+    CREATE(new_quest, struct aq_data, 1);
+    
+    /* Gera VNUM único para a nova quest */
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    while (real_quest(new_quest_vnum) != NOTHING) {
+        new_quest_vnum++;
+        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
+            new_quest_vnum = zone_table[mob_zone].bot + 9000;
+        }
+    }
+    
+    /* Configura a quest */
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = quest_type;
+    new_quest->qm = questmaster_vnum;
+    new_quest->target = (quest_type == AQ_MOB_KILL_BOUNTY) ? target_vnum : NOTHING;
+    new_quest->prereq = NOTHING;
+    new_quest->flags = AQ_MOB_POSTED; /* Marca como postada por mob */
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
+    
+    /* Configura valores da quest */
+    int base_questpoints = calculated_reward / 15;
+    
+    /* Bonus para quests de combate difíceis */
+    if (difficulty >= 80) {
+        base_questpoints += 4;
+    } else if (difficulty >= 60) {
+        base_questpoints += 2;
+    }
+    
+    /* Bonus para mobs com boa reputação */
+    if (GET_MOB_REPUTATION(ch) > 70) {
+        base_questpoints += 2;
+    } else if (GET_MOB_REPUTATION(ch) > 40) {
+        base_questpoints += 1;
+    }
+    
+    new_quest->value[0] = URANGE(2, base_questpoints, 15); /* Questpoints reward */
+    new_quest->value[1] = calculated_reward / 4; /* Penalty for failure */
+    new_quest->value[2] = MAX(10, GET_LEVEL(ch) - 5); /* Min level */
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 20); /* Max level */
+    new_quest->value[4] = -1; /* No time limit */
+    new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
+    new_quest->value[6] = 1; /* Quantity */
+    
+    /* Configura recompensas */
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 3; /* Quests de combate dão mais XP */
+    new_quest->obj_reward = reward_item;
+    
+    /* Cria strings da quest baseadas no tipo */
+    if (quest_type == AQ_PLAYER_KILL) {
+        snprintf(quest_name, sizeof(quest_name), "Eliminar Assassinos");
+        snprintf(quest_desc, sizeof(quest_desc), "%s busca vingança contra assassinos", GET_NAME(ch));
+        snprintf(quest_info, sizeof(quest_info), 
+                 "%s foi atacado por assassinos e busca vingança. Elimine qualquer "
+                 "assassino de jogadores para receber %d moedas de ouro e %d pontos de experiência.",
+                 GET_NAME(ch), calculated_reward, calculated_reward * 3);
+        snprintf(quest_done, sizeof(quest_done),
+                 "Excelente! Você eliminou um assassino. A justiça foi feita!");
+    } else {
+        snprintf(quest_name, sizeof(quest_name), "Caça: %s", target_name);
+        snprintf(quest_desc, sizeof(quest_desc), "%s oferece recompensa por %s", GET_NAME(ch), target_name);
+        snprintf(quest_info, sizeof(quest_info), 
+                 "%s está oferecendo uma recompensa pela eliminação de %s. "
+                 "Encontre e elimine este alvo para receber %d moedas de ouro e %d pontos de experiência.",
+                 GET_NAME(ch), target_name, calculated_reward, calculated_reward * 3);
+        snprintf(quest_done, sizeof(quest_done),
+                 "Fantástico! Você eliminou o alvo. Aqui está sua recompensa!");
+    }
+    
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Compreensível. Esta era uma tarefa perigosa.");
+    
+    /* Adiciona a quest ao sistema */
+    if (add_quest(new_quest) < 0) {
+        log1("SYSERR: Failed to add combat quest for %s (type %d, target %d)", 
+             GET_NAME(ch), quest_type, target_vnum);
+        free_quest(new_quest);
+        return;
+    }
+    
+    /* Deduz o ouro do mob */
+    GET_GOLD(ch) -= calculated_reward;
+    
+    /* Aumenta ligeiramente a reputação por postar uma quest */
+    if (ch->ai_data->reputation < 100) {
+        ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + 1);
+    }
+    
+    /* Mensagens para jogadores */
+    if (quest_type == AQ_PLAYER_KILL) {
+        act("$n aparenta estar furioso e escreve algo num pergaminho.", 
+            FALSE, ch, 0, 0, TO_ROOM);
+    } else {
+        act("$n escreve um cartaz de procurado e o envia para o questmaster.", 
+            FALSE, ch, 0, 0, TO_ROOM);
+    }
+    
+    /* Log da ação */
+    log1("COMBAT QUEST: %s (room %d) created %s quest %d (target %d) with QM %d, reward %d gold", 
+         GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)), 
+         (quest_type == AQ_PLAYER_KILL) ? "player kill" : "bounty",
+         new_quest_vnum, target_vnum, questmaster_vnum, calculated_reward);
+    
+    /* Salva quest para persistência */
+    if (save_quests(mob_zone)) {
+        log1("COMBAT QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
+    } else {
+        log1("SYSERR: Failed to save combat quest %d to disk", new_quest_vnum);
     }
 }
 
