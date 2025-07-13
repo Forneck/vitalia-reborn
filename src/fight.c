@@ -876,9 +876,14 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 
 			    do_flee(victim, NULL, 0, 0);
 			    
-			    /* Set quest posting frustration timer after fleeing */
+			    /* Set frustration timers after fleeing */
 			    if (IS_NPC(victim) && victim->ai_data) {
 			        victim->ai_data->quest_posting_frustration_timer = 6; /* 6 ticks (~1 minute) */
+			        
+			        /* For sentinel mobs, also set duty frustration timer to prevent immediate return to guard post */
+			        if (MOB_FLAGGED(victim, MOB_SENTINEL)) {
+			            victim->ai_data->duty_frustration_timer = 6; /* 6 ticks (~1 minute) */
+			        }
 			    }
 		        }
 		    } else {
@@ -889,9 +894,14 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
 		                act("$n olha para os seus ferimentos, entra em pânico e tenta fugir!", TRUE, victim, 0, 0, TO_ROOM);
 		                do_flee(victim, NULL, 0, 0);
 		                
-		                /* Set quest posting frustration timer after panic fleeing */
+		                /* Set frustration timers after panic fleeing */
 		                if (IS_NPC(victim) && victim->ai_data) {
 		                    victim->ai_data->quest_posting_frustration_timer = 6; /* 6 ticks (~1 minute) */
+		                    
+		                    /* For sentinel mobs, also set duty frustration timer to prevent immediate return to guard post */
+		                    if (MOB_FLAGGED(victim, MOB_SENTINEL)) {
+		                        victim->ai_data->duty_frustration_timer = 6; /* 6 ticks (~1 minute) */
+		                    }
 		                }
 		            }		
 		        }
