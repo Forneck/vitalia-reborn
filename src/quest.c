@@ -413,9 +413,39 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict,
         generic_complete_quest(ch);
       break;
     case AQ_OBJ_RETURN:
-      if (IS_NPC(vict) && (GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum)))
-        if (object && (GET_OBJ_VNUM(object) == QST_TARGET(rnum)))
+      /* Enhanced logic: allow return to either the original requester or the questmaster */
+      if (IS_NPC(vict) && object && (GET_OBJ_VNUM(object) == QST_TARGET(rnum))) {
+        if (GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum)) {
+          /* Returned directly to original requester - complete quest normally */
           generic_complete_quest(ch);
+        } else if (GET_MOB_VNUM(vict) == QST_MASTER(rnum)) {
+          /* Returned to questmaster - transfer to original requester if different */
+          mob_rnum original_requester_rnum = real_mobile(QST_RETURNMOB(rnum));
+          if (original_requester_rnum != NOBODY) {
+            struct char_data *original_requester = NULL;
+            
+            /* Find the original requester in the world */
+            for (original_requester = character_list; original_requester; 
+                 original_requester = original_requester->next) {
+              if (IS_NPC(original_requester) && 
+                  GET_MOB_RNUM(original_requester) == original_requester_rnum) {
+                break;
+              }
+            }
+            
+            if (original_requester && original_requester != vict) {
+              /* Transfer item from questmaster to original requester */
+              obj_from_char(object);
+              obj_to_char(object, original_requester);
+              act("$n entrega $p para $N.", FALSE, vict, object, original_requester, TO_ROOM);
+              act("$n recebe $p de $N.", FALSE, original_requester, object, vict, TO_ROOM);
+            }
+            
+            /* Complete the quest */
+            generic_complete_quest(ch);
+          }
+        }
+      }
       break;
     case AQ_ROOM_CLEAR:
       if (QST_TARGET(rnum) == world[IN_ROOM(ch)].number) {

@@ -2267,10 +2267,30 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     /* Cria strings da quest */
     snprintf(quest_name, sizeof(quest_name), "Busca por %s", item_name);
     snprintf(quest_desc, sizeof(quest_desc), "%s precisa de %s", GET_NAME(ch), item_name);
-    snprintf(quest_info, sizeof(quest_info), 
-             "%s está procurando por %s. Se você encontrar este item, "
-             "traga-o de volta para %s para receber sua recompensa.",
-             GET_NAME(ch), item_name, GET_NAME(ch));
+    
+    /* Check if questmaster is different from requester */
+    mob_rnum qm_mob_rnum = real_mobile(questmaster_vnum);
+    struct char_data *qm_char = NULL;
+    if (qm_mob_rnum != NOBODY) {
+        /* Find questmaster in world to get their name */
+        for (qm_char = character_list; qm_char; qm_char = qm_char->next) {
+            if (IS_NPC(qm_char) && GET_MOB_RNUM(qm_char) == qm_mob_rnum) {
+                break;
+            }
+        }
+    }
+    
+    if (qm_char && qm_char != ch) {
+        snprintf(quest_info, sizeof(quest_info), 
+                 "%s está procurando por %s. Se você encontrar este item, "
+                 "traga-o para mim ou diretamente para %s para receber sua recompensa.",
+                 GET_NAME(ch), item_name, GET_NAME(ch));
+    } else {
+        snprintf(quest_info, sizeof(quest_info), 
+                 "%s está procurando por %s. Se você encontrar este item, "
+                 "traga-o de volta para %s para receber sua recompensa.",
+                 GET_NAME(ch), item_name, GET_NAME(ch));
+    }
     snprintf(quest_done, sizeof(quest_done),
              "Excelente! Você trouxe exatamente o que eu precisava. "
              "Muito obrigado pela sua ajuda!");

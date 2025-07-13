@@ -208,8 +208,12 @@ void mobile_activity(void)
             } else if (ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER) {
                 /* Chegou ao questmaster para postar uma quest */
                 if (ch->ai_data->goal_item_vnum != NOTHING) {
+                    /* Encontra o item na wishlist para obter a prioridade correta */
+                    struct mob_wishlist_item *wishlist_item = find_item_in_wishlist(ch, ch->ai_data->goal_item_vnum);
+                    int reward = wishlist_item ? wishlist_item->priority * 2 : ch->ai_data->goal_item_vnum;
+                    
                     /* Posta a quest no questmaster */
-                    mob_posts_quest(ch, ch->ai_data->goal_item_vnum, ch->ai_data->goal_item_vnum * 2);
+                    mob_posts_quest(ch, ch->ai_data->goal_item_vnum, reward);
                     act("$n fala com o questmaster e entrega um pergaminho.", FALSE, ch, 0, 0, TO_ROOM);
                 }
             }
