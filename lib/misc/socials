@@ -99,698 +99,698 @@ $n tosse aos gritos.
 #
 
 cringe 1 0
-You cringe in terror.
-$n cringes in terror!
-You cringe away from $M.
-$n cringes away from $N in mortal terror.
-$n cringes away from you.
-I don't see anyone by that name here.. what are you afraid of?
-I beg your pardon?
+Você se encolhe aterrorizad$r.
+$n se encolhe, aterrorizad$r!
+Você se encolhe, mantendo-se afastad$r de $M.
+$n se encolhe, afastando-se de $N, aterrorizad$r.
+$n se encolhe, mantendo-se afastad$r de você.
+Ninguém com este nome por aqui... Do que você tem medo?
+Me desculpe?
 #
 
 cry 0 5
-Waaaaah..
-$n bursts into tears.
-You cry on $S shoulder.
-$n cries on $N's shoulder.
-$n cries on your shoulder.
-Who's that?
-You cry to yourself.
-$n sobs quietly to $mself.
+Buuuuaaaaaaa!!!
+$n desata a chorar.
+Você chora no ombro de $S.
+$n chora no ombro de $N.
+$n chora em seu ombro.
+Quem é este?
+Você chora pra si mesmo.
+$n chora quietamente consigo.
 
 cuddle 1 5
-Who do you feel like cuddling today?
+Quem você quer acariciar hoje?
 #
-You cuddle $M.
-$n cuddles $N.
-$n cuddles you.
-They aren't here.
-You must feel very cuddly indeed.  :)
+Você acaricia $M.
+$n acaricia $N.
+$n te acaricia. Que meigo!
+Esta pessoa não está aqui.
+Você deve se sentir muito com vontade de acariciar :-)
 #
 
 curse 0 0
-You swear loudly for a long time.
-$n swears: #@*"*&^$$%@*&!!!!!!
+Você xinga com raiva por um longo tempo.
+$n xinga: #@*"*&^$$DROGA$$%@*&!!!!!!
 #
 
 curtsey 0 0
-You curtsey to your audience.
-$n curtseys gracefully.
+Você faz uma reverência para sua audiência.
+$n faz uma reverência graciosamente.
 #
 
 dance 1 8
-Feels silly, doesn't it?
-$n tries to dance breakdance but nearly breaks $s neck!
-You lead $M to the dancefloor.
-$n sends $N across the dancefloor.
-$n sends you across the dancefloor.
-Eh, WHO?
-You skip and dance around by yourself.
-$n skips a light Fandango.
+Parece bobo, não é?
+$n tenta dançar breakdance mas quase quebra o pescoço!
+Você leva $M para a pista de dança.
+$n leva $N para a pista de dança.
+$n te leva para a pista de dança.
+Eh, QUEM?
+Você pula e dança sozinho.
+$n dança um Fandango ligeiro.
 
 daydream 1 0
-You dream of better times.
-$n looks absent-minded, $s eyes staring into space.
+Você sonha com tempos melhores.
+$n parece distraído, seus olhos fixos no espaço.
 #
 
 drool 1 0
-You start to drool.
-$n starts to drool.
-You drool all over $N.
-$n drools all over $N.
-$n drools all over you.
-Pardon??
-Sure, go ahead and drool...yuk!
-$n drools on $mself.  What a sight.
+Você começa a babar.
+$n começa a babar.
+Você baba em cima de $N.
+$n baba em cima de $N.
+$n baba em cima de você.
+Perdão??
+Claro, vá em frente e babe... eca!
+$n baba em si mesmo. Que espetáculo.
 
 embrace 0 0 
-You reach but come away empty.  :(
-$n reaches out for an embrace, but no one is there.
-You embrace $M warmly.
-$n embraces $N warmly.
-$n embraces you warmly.
-Alas, your embracee is not here.
-You embrace yourself??  
-$n wraps his arms around himself for a warm self-embrace.
+Você estende a mão mas fica de mãos vazias. :(
+$n estende os braços para um abraço, mas não há ninguém lá.
+Você abraça $M calorosamente.
+$n abraça $N calorosamente.
+$n abraça você calorosamente.
+Infelizmente, quem você quer abraçar não está aqui.
+Você se abraça??
+$n envolve os braços em volta de si mesmo para um auto-abraço caloroso.
 
 fart 0 0
-Where are your manners?
-$n lets off a real rip-roarer!
+Onde estão suas boas maneiras?
+$n solta um pum bem barulhento!
 #
 
 flip 0 0
-You flip head over heels.
-$n flips head over heels.
+Você dá uma cambalhota.
+$n dá uma cambalhota.
 #
 
 flirt 1 5
-You flirt outrageously.
-$n flirts outrageously.
-You flirt outrageously with $N.
-$n flirts outrageously with $N.
-$n flirts outrageously with you.
-Sorry, your dearly beloved is not around.
-You flirt with yourself.  Must look stupid.
-$n thinks $e is the most wonderful person in the world.
+Você flerta de forma escandalosa.
+$n flerta de forma escandalosa.
+Você flerta escandalosamente com $N.
+$n flerta escandalosamente com $N.
+$n flerta escandalosamente com você.
+Desculpe, sua amada não está por perto.
+Você flerta consigo mesmo. Deve parecer estúpido.
+$n acha que $e é a pessoa mais maravilhosa do mundo.
 
 fondle 0 5
-Who needs to be fondled?
+Quem precisa ser acariciado?
 #
-You fondly fondle $M.
-$n fondly fondles $N.
-$n fondly fondles you.
-You fondly try to fondle someone not in the room, but who cares.
-You fondly fondle yourself, feels funny doesn't it?
-$n fondly fondles $mself -- this is going too far!!
+Você acaricia $M carinhosamente.
+$n acaricia $N carinhosamente.
+$n acaricia você carinhosamente.
+Você tenta acariciar alguém que não está na sala, mas quem se importa.
+Você se acaricia carinhosamente, parece engraçado não é?
+$n se acaricia carinhosamente -- isso está indo longe demais!!
 
 french 0 0
-French whom??
+Beijar quem francês??
 #
-You give $N a long and passionate kiss, it seems to take forever...
-$n kisses $N passionately.
-$n gives you a long and passionate kiss, it seems to take forever...
-Your heart is filled with despair as that person is not here.
-You gather yourself in your arms and try to kiss yourself.
-$n makes an attempt at kissing $mself.
+Você dá um beijo longo e apaixonado em $N, parece durar para sempre...
+$n beija $N apaixonadamente.
+$n te dá um beijo longo e apaixonado, parece durar para sempre...
+Seu coração se enche de desespero pois essa pessoa não está aqui.
+Você se abraça e tenta se beijar.
+$n faz uma tentativa de beijar a si mesmo.
 
 frown 0 0
-What's bothering you?
-$n frowns.
+O que está te incomodando?
+$n franze a testa.
 #
 
 fume 1 5
-Take it easy now!  Count to ten, very slowly.
-$n grits $s teeth and fumes with rage.
-You stare at $M, fuming.
-$n stares at $N, fuming with rage.
-$n stares at you, fuming with rage!
-Fume away.. they ain't here.
-That's right - hate yourself!
-$n clenches $s fists and stomps his feet, fuming with anger.
+Calma agora! Conte até dez, bem devagar.
+$n range os dentes e ferve de raiva.
+Você olha para $M, fervendo de raiva.
+$n olha para $N, fervendo de raiva.
+$n olha para você, fervendo de raiva!
+Ferva de raiva à vontade... eles não estão aqui.
+Isso mesmo - se odeie!
+$n cerra os punhos e bate os pés, fervendo de raiva.
 
 gasp 0 0
-You gasp in astonishment.
-$n gasps in astonishment.
+Você fica ofegante de espanto.
+$n fica ofegante de espanto.
 #
 
 giggle 0 0
-You giggle.
-$n giggles.
+Você ri como criança.
+$n ri como criança.
 #
 
 glare 0 5
-You glare at nothing in particular.
-$n glares around $m.
-You glare icily at $M.
-$n glares at $N.
-$n glares icily at you, you feel cold to your bones.
-You try to glare at somebody who is not present.
-You glare icily at your feet, they are suddenly very cold.
-$n glares at $s feet, what is bothering $m?
+Você olha feio para nada em particular.
+$n olha feio ao redor.
+Você olha geladamente para $M.
+$n olha feio para $N.
+$n olha geladamente para você, você sente frio até os ossos.
+Você tenta olhar feio para alguém que não está presente.
+Você olha geladamente para seus pés, eles ficam subitamente muito frios.
+$n olha feio para seus pés, o que está incomodando $m?
 
 greet 0 0
-Greet Who?
+Cumprimentar quem?
 #
-You greet $m with a light kiss on his cheek.
-$n greets $N with a light kiss on its cheek.
-$n greets you with a light kiss on your cheek.
-Please -- try someone who is here?
-So, you've finally discovered yourself!
-$n greets $mself.. $e always was a strange one.
+Você cumprimenta $m com um beijo leve na bochecha.
+$n cumprimenta $N com um beijo leve na bochecha.
+$n te cumprimenta com um beijo leve na sua bochecha.
+Por favor -- tente alguém que esteja aqui?
+Então, finalmente você se descobriu!
+$n se cumprimenta.. $e sempre foi estranho.
 
 grin 0 0
-You grin evilly.
-$n grins evilly.
+Você sorri maliciosamente.
+$n sorri maliciosamente.
 #
 
 groan 0 0
-You groan loudly.
-$n groans loudly.
+Você geme alto.
+$n geme alto.
 #
 
 grope 0 5
-Whom do you wish to grope??
+Quem você deseja apalpar??
 #
-Well, what sort of noise do you expect here?
-$n gropes $N.
-$n gropes you.
-Try someone who's here.
-You grope yourself -- YUCK.
-$n gropes $mself -- YUCK.
+Bem, que tipo de barulho você espera aqui?
+$n apalpa $N.
+$n apalpa você.
+Tente alguém que esteja aqui.
+Você se apalpa -- NOJENTO.
+$n se apalpa -- NOJENTO.
 
 grovel 1 0
-You grovel in the dirt.
-$n grovels in the dirt.
-You grovel before $M
-$n grovels in the dirt before $N.
-$n grovels in the dirt before you.
-Who?
-That seems a little silly to me..
+Você se humilha na sujeira.
+$n se humilha na sujeira.
+Você se humilha diante de $M
+$n se humilha na sujeira diante de $N.
+$n se humilha na sujeira diante de você.
+Quem?
+Isso parece um pouco bobo para mim...
 #
 
 growl 0 0
 Grrrrrrrrrr...
-$n growls.
+$n rosna.
 #
 
 hiccup 0 0
 *HIC*
-$n hiccups.
+$n soluça.
 #
 
 hug 1 5
-Hug who?
+Abraçar quem?
 #
-You hug $M.
-$n hugs $N.
-$n hugs you.
-Sorry, friend, I can't see that person here.
-You hug yourself.
-$n hugs $mself.
+Você abraça $M.
+$n abraça $N.
+$n abraça você.
+Desculpe, amigo, eu não vejo essa pessoa aqui.
+Você se abraça.
+$n se abraça.
 
 kiss 0 0
-Isn't there someone you want to kiss?
+Não há alguém que você queira beijar?
 #
-You kiss $M.
-$n kisses $N.
-$n kisses you.
-Never around when required.
-All the lonely people :(
+Você beija $M.
+$n beija $N.
+$n beija você.
+Nunca por perto quando necessário.
+Todas as pessoas solitárias :(
 #
 
 laugh 0 0
-You fall down laughing.
-$n falls down laughing.
+Você cai na gargalhada.
+$n cai na gargalhada.
 #
 
 lick 0 0
-You lick your mouth and smile.
-$n licks $s mouth and smiles.
-You lick $M.
-$n licks $N.
-$n licks you.
-Lick away, nobody's here with that name.
-You lick yourself.
-$n licks $mself -- YUCK.
+Você lambe a boca e sorri.
+$n lambe a boca e sorri.
+Você lambe $M.
+$n lambe $N.
+$n lambe você.
+Lambe à vontade, ninguém com esse nome está aqui.
+Você se lambe.
+$n se lambe -- NOJENTO.
 
 love 0 0
-You love the whole world.
-$n loves everybody in the world.
-You tell your true feelings to $N.
-$n whispers softly to $N.
-$n whispers to you sweet words of love.
-Alas, your love is not present...
-Well, we already know you love yourself (lucky someone does!)
-$n loves $mself, can you believe it?
+Você ama o mundo inteiro.
+$n ama todo mundo no mundo.
+Você conta seus verdadeiros sentimentos para $N.
+$n sussurra suavemente para $N.
+$n sussurra palavras doces de amor para você.
+Infelizmente, seu amor não está presente...
+Bem, já sabemos que você se ama (que sorte alguém amar!)
+$n se ama, você consegue acreditar?
 
 massage 0 0
-Massage what, thin air?
+Massagear o quê, ar?
 #
-You gently massage $N's shoulders.
-$n massages $N's shoulders.
-$n gently massages your shoulders...ahhhhhhhhhh...
-You can only massage someone in the same room as you.
-You practise yoga as you try to massage yourself.
-$n gives a show on yoga-positions, trying to massage $mself.
+Você massageia gentilmente os ombros de $N.
+$n massageia os ombros de $N.
+$n massageia gentilmente seus ombros...ahhhhhhhhhh...
+Você só pode massagear alguém que esteja na mesma sala que você.
+Você pratica yoga enquanto tenta se massagear.
+$n faz uma demonstração de posições de yoga, tentando se massagear.
 
 moan 0 0
-You start to moan.
-$n starts moaning.
+Você começa a gemer.
+$n começa a gemer.
 #
 
 nibble 0 0
-Nibble on who?
+Mordiscar quem?
 #
-You nibble on $N's ear.
-$n nibbles on $N's ear.
-$n nibbles on your ear.
-Sorry, not here, better go back to dreaming about it.
-You nibble on your OWN ear???????????????????
-$n nibbles on $s OWN ear (I wonder how it is done!!).
+Você mordisca a orelha de $N.
+$n mordisca a orelha de $N.
+$n mordisca sua orelha.
+Desculpe, não está aqui, é melhor voltar a sonhar com isso.
+Você mordisca sua PRÓPRIA orelha???????????????????
+$n mordisca sua PRÓPRIA orelha (me pergunto como isso é feito!!).
 
 nod 1 0
-You nod solemnly.
-$n nods solemnly.
+Você acena solenemente.
+$n acena solenemente.
 #
 
 nudge 0 0
-Nudge?  Nudge???  The HELL you say!!!!
+Cutucar? Cutucar??? DROGA você disse!!!!
 #
-You nudge $M with your elbow.
-$n nudges $N suggestively with $s elbow.
-$n nudges you suggestively.  You two have an understanding.
-Eh?  That person isn't here, you know.
-Well, just nudge yourself, but how do you get your elbow in that position?
-$n nudges $mself with $s elbows, making $m look like a large chicken.
+Você cutuca $M com seu cotovelo.
+$n cutuca $N sugestivamente com seu cotovelo.
+$n cutuca você sugestivamente. Vocês dois se entendem.
+Eh? Essa pessoa não está aqui, você sabe.
+Bem, apenas se cutoque, mas como você coloca seu cotovelo nessa posição?
+$n se cutuca com seus cotovelos, fazendo $m parecer uma galinha grande.
 
 nuzzle 1 5
-Nuzzle who??
+Esfregar em quem??
 #
-You nuzzle $S neck softly.
-$n softly nuzzles $N's neck.
-$n softly nuzzles your neck.
-No.. they aren't here..
-I'm sorry, friend, but that's impossible.
+Você esfrega o pescoço de $S suavemente.
+$n esfrega suavemente o pescoço de $N.
+$n esfrega suavemente seu pescoço.
+Não.. eles não estão aqui..
+Sinto muito, amigo, mas isso é impossível.
 #
 
 pat 0 0
-Pat who??
+Bater em quem??
 #
-You pat $N on $S head.
-$n pats $N on $S head.
-$n pats you on your head.
-Who, where, what??
-You pat yourself on your head, very reassuring.
-$n pats $mself on the head.
+Você bate na cabeça de $N.
+$n bate na cabeça de $N.
+$n bate em sua cabeça.
+Quem, onde, o quê??
+Você bate em sua própria cabeça, muito reconfortante.
+$n bate em sua própria cabeça.
 
 peer 1 0
-You peer around you, uncertain that what you see is actually true.
-$n peers around, looking as if $e has trouble seeing everything clearly.
+Você espia ao seu redor, incerto de que o que vê é realmente verdade.
+$n espia ao redor, parecendo ter problemas para ver tudo claramente.
 #
 
 point 1 0
-You point whereto?
-$n points in all directions, seemingly confused.
-You point at $M -- $E DOES look funny.
-$n muffles a laugh, pointing at $N.
-$n points at you... how rude!
-You must have a VERY long index-finger...
-You point at yourself.  Insinuating something?
-$n points at $mself, suggesting that the center of matters is $e.
+Você aponta para onde?
+$n aponta em todas as direções, parecendo confuso.
+Você aponta para $M -- $E PARECE engraçado.
+$n abafa uma risada, apontando para $N.
+$n aponta para você... que rude!
+Você deve ter um dedo indicador MUITO longo...
+Você aponta para si mesmo. Insinuando algo?
+$n aponta para si mesmo, sugerindo que o centro das questões é $e.
 
 poke 0 0
-Poke who??
+Cutucar quem??
 #
-You poke $M in the ribs.
-$n pokes $N in the ribs.
-$n pokes you in the ribs.
-You can't poke someone who's not here!
-You poke yourself in the ribs, feeling very silly.
-$n pokes $mself in the ribs, looking very sheepish.
+Você cutuca $M nas costelas.
+$n cutuca $N nas costelas.
+$n cutuca você nas costelas.
+Você não pode cutucar alguém que não está aqui!
+Você se cutuca nas costelas, se sentindo muito bobo.
+$n se cutuca nas costelas, parecendo muito envergonhado.
 
 ponder 1 0
-You ponder over matters as they appear to you at this moment.
-$n sinks deeply into $s own thoughts.
+Você pondera sobre assuntos como eles aparecem para você neste momento.
+$n mergulha profundamente em seus próprios pensamentos.
 #
 
 pout 0 0
-Ah, don't take it so hard.
-$n pouts.
+Ah, não leve isso tão a sério.
+$n faz bico.
 #
 
 pray 0 0
-You feel righteous, and maybe a little foolish.
-$n begs and grovels to the powers that be.
-You crawl in the dust before $M.
-$n falls down and grovels in the dirt before $N.
-$n kisses the dirt at your feet.
-No such person around; your prayers vanish into the endless voids.
-Talk about narcissism...
-$n performs some strange yoga-exercises and mumbles a prayer to $mself.
+Você se sente justo, e talvez um pouco tolo.
+$n implora e se humilha para os poderes superiores.
+Você rasteja na poeira diante de $M.
+$n cai e se humilha na sujeira diante de $N.
+$n beija a sujeira aos seus pés.
+Nenhuma pessoa assim por perto; suas orações se desvanecem no vazio infinito.
+Falando sobre narcisismo...
+$n executa alguns exercícios estranhos de yoga e murmura uma oração para si mesmo.
 
 puke 0 0
-You puke.
-$n pukes.
-You puke on $M.
-$n pukes on $N.
-$n pukes on your clothes!
-Once again?
-You puke on yourself.
-$n pukes on $s clothes.
+Você vomita.
+$n vomita.
+Você vomita em $M.
+$n vomita em $N.
+$n vomita em suas roupas!
+Mais uma vez?
+Você vomita em si mesmo.
+$n vomita em suas roupas.
 
 punch 0 0
-Punch the air?  Sure, go ahead, fine by me...
-$n starts shadow-boxing.
-You punch $M right in the face!  Yuck, the BLOOD!
-$n punches weakly at $N, missing by miles.
-$n tries a punch at you but misses by a good quarter-mile...
-Punch who?
-You punch yourself in the face resulting in your own nose being bloodied.
-$n punches $mself in the face, looking kind of stupid.
+Socar o ar? Claro, vá em frente, tudo bem para mim...
+$n começa a fazer boxe sombra.
+Você soca $M bem no rosto! Eca, o SANGUE!
+$n soca fracamente $N, errando por quilômetros.
+$n tenta um soco em você mas erra por uns bons quatrocentos metros...
+Socar quem?
+Você se soca no rosto resultando em seu próprio nariz sangrando.
+$n se soca no rosto, parecendo meio estúpido.
 
 purr 0 0
 MMMMEEEEEEEEOOOOOOOOOWWWWWWWWWWWW.
-$n purrs contentedly.
+$n ronrona satisfeito.
 #
 
 roll 1 0 
-You roll your eyes in disgust.
-$n rolls $s eyes in disgust.
-You look at $M and roll your eyes in disgust.
-$n looks at $N in contempt and rolls $s eyes with disgust.
-$n stares at you and rolls $s eyes in digust.
-Um... who?
-You roll your eyes, disgusted with your own incompetence.
-$n rolls $s eyes, disgusted with $mself.
+Você revira os olhos de nojo.
+$n revira os olhos de nojo.
+Você olha para $M e revira os olhos de nojo.
+$n olha para $N com desprezo e revira os olhos de nojo.
+$n olha para você e revira os olhos de nojo.
+Hum... quem?
+Você revira os olhos, enojado com sua própria incompetência.
+$n revira os olhos, enojado consigo mesmo.
 
 ruffle 0 0
-You've got to ruffle SOMEONE.
+Você tem que bagunçar o cabelo de ALGUÉM.
 #
-You ruffle $N's hair playfully.
-$n ruffles $N's hair playfully.
-$n ruffles your hair playfully.
-Might be a bit difficult.
-You ruffle your hair, wondering how far you can go before the rest think you're crazy.
-$n ruffles $s hair -- weirdo!
+Você bagunça o cabelo de $N brincalhonamente.
+$n bagunça o cabelo de $N brincalhonamente.
+$n bagunça seu cabelo brincalhonamente.
+Pode ser um pouco difícil.
+Você bagunça seu cabelo, pensando até onde pode ir antes que os outros pensem que você está louco.
+$n bagunça seu cabelo -- esquisito!
 
 scream 0 0
 ARRRRRRRRRRGH!!!!!
-$n screams loudly!
+$n grita alto!
 #
 
 shake 0 5
-You shake your head.
-$n shakes $s head.
-You shake $S hand.
-$n shakes $N's hand.
-$n shakes your hand.
-Sorry good buddy, but that person doesn't seem to be here.
-You are shaken by yourself.
-$n shakes and quivers like a bowlful of jelly.
+Você balança a cabeça.
+$n balança a cabeça.
+Você aperta a mão de $S.
+$n aperta a mão de $N.
+$n aperta sua mão.
+Desculpe bom amigo, mas essa pessoa não parece estar aqui.
+Você está abalado por si mesmo.
+$n treme e vibra como uma tigela cheia de gelatina.
 
 shiver 0 0
 Brrrrrrrrr.
-$n shivers uncomfortably.
+$n treme desconfortavelmente.
 #
 
 shrug 0 0
-You shrug.
-$n shrugs helplessly.
+Você dá de ombros.
+$n dá de ombros sem esperança.
 #
 
 sigh 0 0
-You sigh.
-$n sighs loudly.
+Você suspira.
+$n suspira alto.
 #
 
 sing 0 0
-You raise your clear (?) voice towards the sky.
-SEEK SHELTER AT ONCE!  $n has begun to sing.
+Você eleva sua voz clara (?) em direção ao céu.
+PROCURE ABRIGO IMEDIATAMENTE! $n começou a cantar.
 #
 
 slap 0 0
-Normally you slap SOMEBODY.
+Normalmente você bate em ALGUÉM.
 #
-You slap $N.
-$n slaps $N.
-You are slapped by $n.
-How about slapping someone in the same room as you??
-You slap yourself, silly you.
-$n slaps $mself, really strange...
+Você bate em $N.
+$n bate em $N.
+Você recebeu um tapa de $n.
+Que tal bater em alguém na mesma sala que você??
+Você se bate, bobo.
+$n se bate, realmente estranho...
 
 smile 1 0
-You smile happily.
-$n smiles happily.
-You smile at $M.
-$n beams a smile at $N.
-$n smiles at you.
-There's no one by that name around.
-You smile at yourself.
-$n smiles at $mself.
+Você sorri felizmente.
+$n sorri felizmente.
+Você sorri para $M.
+$n mostra um sorriso para $N.
+$n sorri para você.
+Não há ninguém com esse nome por aqui.
+Você sorri para si mesmo.
+$n sorri para si mesmo.
 
 smirk 0 0
-You smirk.
-$n smirks.
+Você sorri de lado.
+$n sorri de lado.
 #
 
 snap 0 0
-PRONTO!  You snap your fingers.
-$n snaps $s fingers.
+RÁPIDO! Você estala os dedos.
+$n estala os dedos.
 #
 
 snarl 0 0
-You snarl like a vicious animal.
-$n snarls like a cornered, vicious animal.
-You snarl at $M angrily.  Control yourself!
-$n snarls angrily at $N.  $e$u seems incapable of controlling $mself.
-$n snarls viciously at you.  $U$s self-control seems to have gone bananas.
-Eh?  Who?  Not here, my friend.
-You snarl at yourself, obviously suffering from schizophrenia.
-$n snarls at $mself, and suddenly looks very frightened.
+Você rosna como um animal selvagem.
+$n rosna como um animal selvagem encurralado.
+Você rosna para $M com raiva. Se controle!
+$n rosna com raiva para $N. $e parece incapaz de se controlar.
+$n rosna ferozmente para você. O autocontrole de $s parece ter enlouquecido.
+Eh? Quem? Não está aqui, meu amigo.
+Você rosna para si mesmo, obviamente sofrendo de esquizofrenia.
+$n rosna para si mesmo, e de repente parece muito assustado.
 
 sneeze 0 0
-Gesundheit!
-$n sneezes.
+Saúde!
+$n espirra.
 #
 
 snicker 0 0
-You snicker softly.
-$n snickers softly.
+Você ri baixinho.
+$n ri baixinho.
 #
 
 sniff 0 0
-You sniff sadly.  *SNIFF*
-$n sniffs sadly.
+Você funga tristemente. *FUNF*
+$n funga tristemente.
 #
 
 snore 0 0
 Zzzzzzzzzzzzzzzzz.
-$n snores loudly.
+$n ronca alto.
 #
 
 snowball 0 0
-Who do you want to throw a snowball at??
+Em quem você quer jogar uma bola de neve??
 #
-You throw a snowball in $N's face.
-$n conjures a snowball from thin air and throws it at $N.
-$n conjures a snowball from thin air and throws it at you.
-You stand with the snowball in your hand because your victim is not here.
-You conjure a snowball from thin air and throw it at yourself.
-$n conjures a snowball out of the thin air and throws it at $mself.
+Você joga uma bola de neve no rosto de $N.
+$n conjura uma bola de neve do ar e joga em $N.
+$n conjura uma bola de neve do ar e joga em você.
+Você fica parado com a bola de neve na mão porque sua vítima não está aqui.
+Você conjura uma bola de neve do ar e joga em si mesmo.
+$n conjura uma bola de neve do ar e joga em si mesmo.
 
 snuggle 1 5
-Who?
+Quem?
 #
-you snuggle $M.
-$n snuggles up to $N.
-$n snuggles up to you.
-They aren't here.
+você se aninha com $M.
+$n se aninha com $N.
+$n se aninha com você.
+Eles não estão aqui.
 Hmmm...
 #
 
 spank 0 8
-You spank WHO?  Eh?  How?  Naaah, you'd never.
-$n spanks the thin air with a flat hand.
-You spank $M vigorously, long and hard.  Your hand hurts.
-$n spanks $N over $s knee.  It hurts to even watch.
-$n spanks you long and hard.  You feel like a naughty child.
-Are you sure about this?  I mean, that person isn't even here!
-Hmm, not likely.
+Você bate em QUEM? Eh? Como? Naaah, você nunca faria isso.
+$n bate no ar com a mão aberta.
+Você bate em $M vigorosamente, longo e forte. Sua mão dói.
+$n bate em $N sobre o joelho. Dói só de ver.
+$n bate em você longo e forte. Você se sente como uma criança levada.
+Você tem certeza sobre isso? Quer dizer, essa pessoa nem está aqui!
+Hmmm, não é provável.
 #
 
 spit 0 0
-You spit over your left shoulder.
-$n spits over $s left shoulder.
-You spit on $M.
-$n spits in $N's face.
-$n spits in your face.
-Can you spit that far?
-You drool down your front.
-$n drools down $s front.
+Você cospe por cima do ombro esquerdo.
+$n cospe por cima do ombro esquerdo.
+Você cospe em $M.
+$n cospe no rosto de $N.
+$n cospe em seu rosto.
+Você consegue cuspir tão longe?
+Você baba pela frente.
+$n baba pela frente.
 
 squeeze 0 0
-Where, what, how, WHO???
+Onde, o quê, como, QUEM???
 #
-You squeeze $M fondly.
-$n squeezes $N fondly.
-$n squeezes you fondly.
-Where, what, how, WHO???
-You squeeze yourself -- try to relax a little!
-$n squeezes $mself.
+Você aperta $M carinhosamente.
+$n aperta $N carinhosamente.
+$n aperta você carinhosamente.
+Onde, o quê, como, QUEM???
+Você se aperta -- tente relaxar um pouco!
+$n se aperta.
 
 stare 0 5
-You stare at the sky.
-$n stares at the sky.
-You stare dreamily at $N, completely lost in $S eyes..
-$n stares dreamily at $N.
-$n stares dreamily at you, completely lost in your eyes.
-You stare and stare but can't see that person anywhere...
-You stare dreamily at yourself - enough narcissism for now.
-$n stares dreamily at $mself - NARCISSIST!
+Você olha para o céu.
+$n olha para o céu.
+Você olha sonhadoramente para $N, completamente perdido nos olhos de $S..
+$n olha sonhadoramente para $N.
+$n olha sonhadoramente para você, completamente perdido em seus olhos.
+Você olha e olha mas não consegue ver essa pessoa em lugar algum...
+Você olha sonhadoramente para si mesmo - chega de narcisismo por enquanto.
+$n olha sonhadoramente para si mesmo - NARCISISTA!
 
 steam 0 0 
-You let out some steam, much to the others' relief (and your own!)
-$n lets out a lot of steam, much to your relief.
+Você libera um pouco de vapor, para grande alívio dos outros (e seu também!)
+$n libera muito vapor, para seu alívio.
 #
 
 stroke 0 0
-Whose thigh would you like to stroke?
+De quem você gostaria de acariciar a coxa?
 #
-You gently stroke $S inner thigh.
-$n gently strokes $N's inner thigh... hmm...
-$n gently strokes your inner thigh with feathery touches.
-That person is not within reach.
-You are about to do something you would rather not be caught doing.
-$n starts to do something disgusting and then stops.
+Você acaricia gentilmente a coxa interna de $S.
+$n acaricia gentilmente a coxa interna de $N... hmmm...
+$n acaricia gentilmente sua coxa interna com toques plumosos.
+Essa pessoa não está ao alcance.
+Você está prestes a fazer algo que preferiria não ser pego fazendo.
+$n começa a fazer algo nojento e então para.
 
 strut 0 0
-Strut your stuff.
-$n struts proudly.
+Exiba suas coisas.
+$n pavoneia orgulhosamente.
 #
 
 sulk 1 0
-You sulk.
-$n sulks in the corner.
+Você faz bico.
+$n faz bico no canto.
 #
 
 tackle 0 5
-You tackle the air.  It stands not a chance.
-$n starts running around $mself in a desperate attempt to tackle the air.
-You ruthlessly tackle $M to the ground.
-$n ruthlessly tackles $N, pinning $M to the ground.
-$n suddenly lunges at you and tackles you to the ground!
-That person isn't here (luck for them, it would seem...)
-Tackle yourself?  Yeah, right....
-$n makes a dexterous move and kicks $s left leg away with $s right.
+Você derruba o ar. Ele não tem chance.
+$n começa a correr em volta de si mesmo numa tentativa desesperada de derrubar o ar.
+Você derruba $M no chão impiedosamente.
+$n derruba $N impiedosamente, imobilizando $M no chão.
+$n de repente se joga em você e te derruba no chão!
+Essa pessoa não está aqui (sorte deles, pelo que parece...)
+Derrubar você mesmo? É, claro....
+$n faz um movimento hábil e chuta sua perna esquerda com a direita.
 
 tango 0 8
-With whom would you like to tango?
-$n puts a rose between $s teeth, but takes out it since noone joins $m.
-You put a rose between your teeth and tango with $M seductively.
-$n puts a rose between $s teeth and tangos with $N seductively.
-$n puts a rose between $s teeth and tangos with you seductively.
-That person isn't around.  Better sit this one out.
-Feels rather stupid, doesn't it?
-$n puts a rose between $s teeth and tries to tango with $mself.
+Com quem você gostaria de dançar tango?
+$n coloca uma rosa entre os dentes, mas a tira já que ninguém se junta a $m.
+Você coloca uma rosa entre os dentes e dança tango sedutoramente com $M.
+$n coloca uma rosa entre os dentes e dança tango sedutoramente com $N.
+$n coloca uma rosa entre os dentes e dança tango sedutoramente com você.
+Essa pessoa não está por perto. Melhor sentar essa.
+Parece meio estúpido, não é?
+$n coloca uma rosa entre os dentes e tenta dançar tango consigo mesmo.
 
 taunt 0 0
-You taunt the nothing in front of you. 
-$n taunts something that seems to be right in front of $m.
-You taunt $M, to your own delight.
-$n taunts $N rather insultingly.  $U$n seems to enjoy it tremendously.
-$n taunts you.  It really hurts your feelings.
-Hmmmmmmm.....nope, no one by that name here.
-You taunt yourself, almost making you cry...:(
-$n taunts $mself to tears.
+Você provoca o nada na sua frente.
+$n provoca algo que parece estar bem na frente de $m.
+Você provoca $M, para seu próprio deleite.
+$n provoca $N de forma bastante insultante. $n parece gostar tremendamente.
+$n provoca você. Isso realmente machuca seus sentimentos.
+Hmmmmmmm.....não, ninguém com esse nome aqui.
+Você provoca a si mesmo, quase fazendo você chorar...:(
+$n provoca a si mesmo até as lágrimas.
 
 thank 0 5
-Thank you too.
+Obrigado para você também.
 #
-You thank $N heartily.
-$n thanks $N heartily.
-$n thanks you heartily.
-No one answers to that name here.
-You thank yourself since nobody else wants to!
-$n thanks $mself since you won't.
+Você agradece $N cordialmente.
+$n agradece $N cordialmente.
+$n agradece você cordialmente.
+Ninguém responde a esse nome aqui.
+Você se agradece já que ninguém mais quer!
+$n se agradece já que você não o fará.
 
 think 1 0
-You think about life, the universe and everything.
-$n sinks deeply into thought about the meaning of life.
-You think about what purpose $E has in relation to your part of life.
-$n stops and thinks about $N, completely lost in thought.
-Your ears burn as $n thinks about you.. you wonder what about.
-You'd better think harder, if you hope to make contact!
-You think about yourself (for once).
-$n thinks about $mself for a change.....(?)
+Você pensa sobre a vida, o universo e tudo mais.
+$n mergulha profundamente em pensamentos sobre o significado da vida.
+Você pensa sobre que propósito $E tem em relação à sua parte da vida.
+$n para e pensa sobre $N, completamente perdido em pensamentos.
+Suas orelhas queimam enquanto $n pensa em você... você se pergunta sobre o quê.
+É melhor você pensar mais, se espera fazer contato!
+Você pensa sobre si mesmo (por uma vez).
+$n pensa sobre si mesmo para variar.....(?)
 
 tickle 0 0
-Who do you want to tickle??
+Quem você quer fazer cócegas??
 #
-You tickle $N.
-$n tickles $N.
-$n tickles you - hee hee hee.
-Who is that??
-You tickle yourself, how funny!
-$n tickles $mself.
+Você faz cócegas em $N.
+$n faz cócegas em $N.
+$n faz cócegas em você - hi hi hi.
+Quem é esse??
+Você faz cócegas em si mesmo, que engraçado!
+$n faz cócegas em si mesmo.
 
 twiddle 0 0
-You patiently twiddle your thumbs.
-$n patiently twiddles $s thumbs.
+Você pacientemente mexe os polegares.
+$n pacientemente mexe os polegares.
 #
 
 wave 0 0
-You wave.
-$n waves happily.
-You wave goodbye to $N.
-$n waves goodbye to $N.
-$n waves goodbye to you.  Have a good journey.
-They didn't wait for you to wave goodbye.
-Are you going on adventures as well??
-$n waves goodbye to $mself.
+Você acena.
+$n acena felizmente.
+Você acena tchau para $N.
+$n acena tchau para $N.
+$n acena tchau para você. Tenha uma boa viagem.
+Eles não esperaram você acenar tchau.
+Você também vai sair em aventuras??
+$n acena tchau para si mesmo.
 
 whine 0 0
-You whine pitifully.
-$n whines pitifully about the whole situation.
+Você choraminga piedosamente.
+$n choraminga piedosamente sobre toda a situação.
 #
 
 whistle 0 0
-You whistle appreciatively.
-$n whistles appreciatively.
+Você assobia apreciativamente.
+$n assobia apreciativamente.
 #
 
 wiggle 0 0
-Your wiggle your bottom.
-$n wiggles $s bottom.
+Você rebola.
+$n rebola.
 #
 
 wink 0 5
-Have you got something in your eye?
-$n winks suggestively.
-You wink suggestively at $N.
-$n winks at $N.
-$n winks suggestively at you.
-No one with that name is present.
-You wink at yourself?? -- what are you up to?
-$n winks at $mself -- something strange is going on...
+Tem algo no seu olho?
+$n pisca sugestivamente.
+Você pisca sugestivamente para $N.
+$n pisca para $N.
+$n pisca sugestivamente para você.
+Ninguém com esse nome está presente.
+Você pisca para si mesmo?? -- o que você está tramando?
+$n pisca para si mesmo -- algo estranho está acontecendo...
 
 worship 0 5
-You find yourself head-down in the dirt, worshipping.
-$n starts worshipping nothing at all.
-You fall to your knees and worship $M deeply.
-$n falls to $s knees, worshipping $N with uncanny dedication.
-$n kneels before you in solemn worship.
-Uh.. who?  They're not here, pal.
-You seem sure to have found a true deity.....
-$n falls to $s knees and humbly worships $mself.
+Você se encontra de cabeça para baixo na sujeira, adorando.
+$n começa a adorar o nada.
+Você cai de joelhos e adora $M profundamente.
+$n cai de joelhos, adorando $N com dedicação estranha.
+$n se ajoelha diante de você em adoração solene.
+Uh.. quem? Eles não estão aqui, cara.
+Você parece certo de ter encontrado uma verdadeira divindade.....
+$n cai de joelhos e humildemente se adora.
 
 yawn 0 0
-Gosh, will you trade those teeth for mine?? -- you get my glasseyes in the bargain too!
-$n yawns.
+Caramba, você trocaria esses dentes pelos meus?? -- você ganha meus olhos de vidro na barganha também!
+$n boceja.
 #
 
 yodel 0 0
-You start yodelling loudly and rather beautifully in your own ears.
-$n starts a yodelling session that goes right to the bone.
+Você começa a cantar tirolês alto e bem bonito aos seus próprios ouvidos.
+$n começa uma sessão de canto tirolês que vai direto ao osso.
 #
 
 $
