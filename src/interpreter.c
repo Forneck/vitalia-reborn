@@ -168,6 +168,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"goto", "go", POS_SLEEPING, do_goto, LVL_IMMORT, 0, CMD_ONEARG},
 	{"gold", "gol", POS_RESTING, do_gold, 0, 0, CMD_NOARG},
 	{"gossip", "gos", POS_SLEEPING, do_gen_comm, 0, SCMD_GOSSIP, CMD_NOARG},
+	{"gstats", "gst", POS_DEAD, do_gstats, LVL_IMMORT, 0, CMD_TWOARG},
 	{"group", "gr", POS_RESTING, do_group, 1, 0, CMD_TWOARG},
 	{"grab", "grab", POS_RESTING, do_grab, 0, 0, CMD_ONEARG},
 	{"grats", "grat", POS_SLEEPING, do_gen_comm, 0, SCMD_GRATZ, CMD_NOARG},

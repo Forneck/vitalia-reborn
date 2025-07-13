@@ -36,6 +36,7 @@
 #include "screen.h"
 #include "spedit.h"
 #include "spirits.h"
+#include <math.h>
 
 /* external functions*/
 extern char *get_spell_name(int vnum);
@@ -6188,4 +6189,217 @@ ACMD(do_mwant)
     add_item_to_wishlist(mob, item_vnum, priority);
     send_to_char(ch, "Added item %d to %s's wishlist with priority %d.\r\n", 
                  item_vnum, GET_NAME(mob), priority);
+}
+
+/* Helper functions for gstats command */
+static void calculate_gene_stats(int *values, int count, float *mean, float *median, float *std_dev, int *min_val, int *max_val) {
+    int i, sum = 0;
+    float variance = 0.0;
+    
+    if (count == 0) {
+        *mean = *median = *std_dev = 0.0;
+        *min_val = *max_val = 0;
+        return;
+    }
+    
+    /* Calculate mean */
+    for (i = 0; i < count; i++) {
+        sum += values[i];
+    }
+    *mean = (float)sum / count;
+    
+    /* Sort values for median */
+    for (i = 0; i < count - 1; i++) {
+        int j;
+        for (j = i + 1; j < count; j++) {
+            if (values[i] > values[j]) {
+                int temp = values[i];
+                values[i] = values[j];
+                values[j] = temp;
+            }
+        }
+    }
+    
+    /* Calculate median */
+    if (count % 2 == 0) {
+        *median = (values[count/2 - 1] + values[count/2]) / 2.0;
+    } else {
+        *median = values[count/2];
+    }
+    
+    /* Calculate standard deviation */
+    for (i = 0; i < count; i++) {
+        variance += (values[i] - *mean) * (values[i] - *mean);
+    }
+    variance /= count;
+    *std_dev = sqrt(variance);
+    
+    /* Min and max */
+    *min_val = values[0];
+    *max_val = values[count - 1];
+}
+
+/*
+ * gstats command - Display genetics statistics for mob populations
+ */
+ACMD(do_gstats)
+{
+    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
+    struct char_data *mob = NULL;
+    struct char_data *proto_mob;
+    mob_vnum target_vnum = NOBODY;
+    zone_rnum target_zone = NOWHERE;
+    int i, count = 0;
+    int gene_values[1000]; /* Assume max 1000 mobs in analysis */
+    float mean, median, std_dev;
+    int min_val, max_val;
+    char *gene_name = NULL;
+    
+    two_arguments(argument, arg1, arg2);
+    
+    if (!*arg1) {
+        send_to_char(ch, "Usage: gstats <target> <gene>\r\n");
+        send_to_char(ch, "Target can be: mob name/vnum, zone <zone_num>, or 'all'\r\n");
+        send_to_char(ch, "Genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+        return;
+    }
+    
+    if (!*arg2) {
+        send_to_char(ch, "Specify a gene to analyze.\r\n");
+        send_to_char(ch, "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+        return;
+    }
+    
+    /* Determine gene type */
+    if (!str_cmp(arg2, "wimpy")) gene_name = "Wimpy Tendency";
+    else if (!str_cmp(arg2, "loot")) gene_name = "Loot Tendency";
+    else if (!str_cmp(arg2, "equip")) gene_name = "Equip Tendency";
+    else if (!str_cmp(arg2, "roam")) gene_name = "Roam Tendency";
+    else if (!str_cmp(arg2, "brave")) gene_name = "Brave Prevalence";
+    else if (!str_cmp(arg2, "group")) gene_name = "Group Tendency";
+    else if (!str_cmp(arg2, "use")) gene_name = "Use Tendency";
+    else if (!str_cmp(arg2, "trade")) gene_name = "Trade Tendency";
+    else if (!str_cmp(arg2, "quest")) gene_name = "Quest Tendency";
+    else if (!str_cmp(arg2, "adventurer")) gene_name = "Adventurer Tendency";
+    else {
+        send_to_char(ch, "Invalid gene. Available: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+        return;
+    }
+    
+    /* Determine target scope */
+    if (!str_cmp(arg1, "zone")) {
+        char zone_arg[MAX_INPUT_LENGTH];
+        one_argument(argument + strlen(arg1) + strlen(arg2) + 2, zone_arg);
+        if (!*zone_arg || !isdigit(*zone_arg)) {
+            send_to_char(ch, "Zone analysis requires a zone number.\r\n");
+            return;
+        }
+        target_zone = real_zone(atoi(zone_arg));
+        if (target_zone == NOWHERE) {
+            send_to_char(ch, "No such zone.\r\n");
+            return;
+        }
+    } else if (!str_cmp(arg1, "all")) {
+        /* Analyze all mobs */
+        target_zone = NOWHERE;
+        target_vnum = NOBODY;
+    } else {
+        /* Try to find specific mob */
+        if (isdigit(*arg1)) {
+            target_vnum = atoi(arg1);
+            if (real_mobile(target_vnum) == NOBODY) {
+                send_to_char(ch, "No mobile with that vnum.\r\n");
+                return;
+            }
+        } else {
+            mob = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD);
+            if (!mob || !IS_NPC(mob)) {
+                send_to_char(ch, "No such mobile found.\r\n");
+                return;
+            }
+            target_vnum = GET_MOB_VNUM(mob);
+        }
+    }
+    
+    /* Collect genetic data */
+    count = 0;
+    for (i = 0; i <= top_of_mobt; i++) {
+        proto_mob = &mob_proto[i];
+        
+        /* Check if this mob matches our criteria */
+        if (target_vnum != NOBODY && GET_MOB_VNUM(proto_mob) != target_vnum)
+            continue;
+        if (target_zone != NOWHERE && real_zone_by_thing(GET_MOB_VNUM(proto_mob)) != target_zone)
+            continue;
+        
+        /* Skip if no genetics data */
+        if (!proto_mob->ai_data) continue;
+        
+        /* Extract the requested gene value */
+        int gene_value = 0;
+        if (!str_cmp(arg2, "wimpy")) gene_value = proto_mob->ai_data->genetics.wimpy_tendency;
+        else if (!str_cmp(arg2, "loot")) gene_value = proto_mob->ai_data->genetics.loot_tendency;
+        else if (!str_cmp(arg2, "equip")) gene_value = proto_mob->ai_data->genetics.equip_tendency;
+        else if (!str_cmp(arg2, "roam")) gene_value = proto_mob->ai_data->genetics.roam_tendency;
+        else if (!str_cmp(arg2, "brave")) gene_value = proto_mob->ai_data->genetics.brave_prevalence;
+        else if (!str_cmp(arg2, "group")) gene_value = proto_mob->ai_data->genetics.group_tendency;
+        else if (!str_cmp(arg2, "use")) gene_value = proto_mob->ai_data->genetics.use_tendency;
+        else if (!str_cmp(arg2, "trade")) gene_value = proto_mob->ai_data->genetics.trade_tendency;
+        else if (!str_cmp(arg2, "quest")) gene_value = proto_mob->ai_data->genetics.quest_tendency;
+        else if (!str_cmp(arg2, "adventurer")) gene_value = proto_mob->ai_data->genetics.adventurer_tendency;
+        
+        if (count < 1000) {
+            gene_values[count++] = gene_value;
+        }
+    }
+    
+    if (count == 0) {
+        send_to_char(ch, "No mobs found with genetics data matching the criteria.\r\n");
+        return;
+    }
+    
+    /* Calculate statistics */
+    calculate_gene_stats(gene_values, count, &mean, &median, &std_dev, &min_val, &max_val);
+    
+    /* Display results */
+    send_to_char(ch, "\r\n@Y--- Genetics Statistics for %s ---@n\r\n", gene_name);
+    
+    if (target_vnum != NOBODY) {
+        send_to_char(ch, "@WTarget:@n Mob vnum %d population\r\n", target_vnum);
+    } else if (target_zone != NOWHERE) {
+        send_to_char(ch, "@WTarget:@n Zone %d mobs\r\n", zone_table[target_zone].number);
+    } else {
+        send_to_char(ch, "@WTarget:@n All mobs in the world\r\n");
+    }
+    
+    send_to_char(ch, "@WSample Size:@n %d mobs\r\n", count);
+    send_to_char(ch, "@WMean:@n %.2f\r\n", mean);
+    send_to_char(ch, "@WMedian:@n %.2f\r\n", median);
+    send_to_char(ch, "@WStandard Deviation:@n %.2f\r\n", std_dev);
+    send_to_char(ch, "@WMinimum:@n %d\r\n", min_val);
+    send_to_char(ch, "@WMaximum:@n %d\r\n", max_val);
+    
+    /* Distribution histogram */
+    send_to_char(ch, "\r\n@WDistribution (0-100 range):@n\r\n");
+    int ranges[10] = {0}; /* 0-9, 10-19, ..., 90-99 */
+    for (i = 0; i < count; i++) {
+        int range_idx = gene_values[i] / 10;
+        if (range_idx > 9) range_idx = 9;
+        ranges[range_idx]++;
+    }
+    
+    for (i = 0; i < 10; i++) {
+        char bar[21] = "";
+        int bar_len = (ranges[i] * 20) / count;
+        if (bar_len > 20) bar_len = 20;
+        
+        int j;
+        for (j = 0; j < bar_len; j++) {
+            bar[j] = '#';
+        }
+        bar[bar_len] = '\0';
+        
+        send_to_char(ch, "%2d-%2d: %-20s (%d mobs)\r\n", 
+                     i*10, i*10+9, bar, ranges[i]);
+    }
 }
