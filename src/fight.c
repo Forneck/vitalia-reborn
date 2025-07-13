@@ -1229,7 +1229,8 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 			af.duration = 1;
 		else
 		{
-			af.duration = rand_number(2, 5);
+			/* Use level-based duration to match MAGIA-POISON help documentation */
+			af.duration = GET_LEVEL(ch);
 			act("Você se sente doente.", FALSE, victim, 0, ch, TO_CHAR);
 			act("$n fica muito doente!", TRUE, victim, 0, ch, TO_ROOM);
 		}

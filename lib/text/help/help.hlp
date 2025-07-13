@@ -16128,4 +16128,46 @@ quente ira afetar mais rapidamente a sede do jogador.
 
 Veja tambem: WEATHER, ESTACOES, TIME, MAGIA-CONTROL-WEATHER
 #1
+MAGIA-WINDWALL
+
+Uso        : cast 'windwall' <alvo>
+Acumulativa: Nao
+Duracao    : Nivel em Horas
+Nivel      : Guardiao (Ranger) Nivel 15
+
+Uma parede de vento envolve o alvo, proporcionando protecao contra
+ataques fisicos. Todo dano causado no alvo sera parcialmente
+redirecionado para o atacante. Se o atacante passar em um teste
+de resistencia, sofrera metade do dano. O AC tambem melhora
+em 4 pontos enquanto durar a magia.
+
+Veja tambem: MAGIA-FIRESHIELD, MAGIA-THISTLECOAT
+#1
+MAGIA-PARALYSE
+
+Uso        : cast 'paralyse' <alvo>
+Acumulativa: Nao
+Duracao    : Nivel/4 + 4 Horas
+Nivel      : Mago Nivel 22
+
+Paralisa temporariamente o alvo, impedindo que ele se mova.
+O alvo nao pode andar, mas ainda pode realizar outras acoes
+como lutar ou lancar magias. A magia permite teste de resistencia.
+
+Veja tambem: MAGIA-SLEEP, MAGIA-HOLD-PERSON
+#1
+MAGIA-PROTECTION-FROM-GOOD
+
+Uso        : cast 'protection from good' <alvo>
+Acumulativa: Sim (Duracao)
+Duracao    : 24 Horas
+Nivel      : Mago Nivel 60
+
+Protege o alvo contra criaturas bondosas, dificultando que
+essas criaturas o ataquem com eficacia. Funciona de forma
+similar a Protection from Evil, mas contra personagens
+e criaturas de tendencia boa.
+
+Veja tambem: MAGIA-PROTECTION-FROM-EVIL
+#1
 $~
