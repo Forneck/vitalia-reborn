@@ -1,0 +1,1430 @@
+#file "vitalia/socials" 1.0
+# VitaliaMUD Social definition file
+
+/*
+ * General social format:
+ * social "command name" {
+ *	  name-pt "command name in portuguese";
+ *	[ hide-invis;							]
+ *	[ level <level>;						]
+ *	  char-pos <position>;
+ *	[ vict-pos <position>;						]
+ *	  char-noarg "msg sent to actor when no additional arg";
+ *	[ room-noarg "msg sent to room when no additional arg";		]
+ *	[ char-found "msg sent to actor when a victim is found";	]
+ *	[ room-found "msg sent to room when a victim is found";		]
+ *	[ vict-found "msg sent to victim when it is found";		]
+ *	[ not-found "msg sent to actor when no victim is found";	]
+ *	[ char-self "msg sent to actor when it actions itself";		]
+ *	[ room-self "msg sent to room when actor actions itself";	]
+ * };
+ *
+ * Command names should be written without any space, number or extended
+ * character, even for portuguese names.  "abraçar" should be written
+ * "abracar".  VitaliaMUD takes care of extended characters.
+ * 
+ * Fields surrounded by [ ] are optional. For vict-pos, it defaults to
+ * DEAD.
+ */
+ 
+social "accuse" {
+	name-pt "acusar";
+	hide-invis;
+	char-pos SITTING;
+	vict-pos RESTING;
+	char-noarg "Acusar quem??";
+	char-found "Você olha $R acusando.";
+	vict-found "$n parece estar acusando você.";
+	room-found "$n parece acusar $N.";
+	not-found "Acusar alguém que não está aqui??";
+	char-self "Você acusa a si mesm$r.";
+	room-self "$n parece ter consciência pesada.";
+};
+
+social "agree" {
+	name-pt "concordar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você concorda com tudo que está sendo dito.";
+	room-noarg "$n concorda com tudo que está sendo dito.";
+	char-found "Você concorda com tudo que $N diz.";
+	room-found "$n concorda com tudo que $N diz.";
+	vict-found "$n concorda com tudo que você diz.";
+	not-found "Concorde com alguém mais próximo daqui!";
+	char-self "Você concorda consigo mesm$r... Certo...";
+	room-self "$n crê piamente estar sempre cert$r.";
+};
+
+
+social "apologize" {
+	name-pt "desculpar";
+	char-pos RESTING;
+	char-noarg "Você se desculpa com todos.";
+	room-noarg "$n pede desculpas a todos.";
+	char-found "Você pede desculpas a $L.";
+	room-found "$n pede desculpas a $N. O que será que $l fez?";
+	vict-found "$n lhe pede desculpas. Aceite-as!";
+	not-found "Assumir erros é bom, mas primeiro encontre alguém para se desculpar!";
+	char-self "Você tentar desculpar-se consigo mesm$r. Por mais que tente, não consigo lhe entender!";
+	room-self "$n murmura desculpas a si mesm$r. Finja que não viu isso...";
+};
+
+social "applaud" {
+	name-pt "aplaudir";
+	char-pos RESTING;
+	char-noarg "Clap, clap, clap.";
+	room-noarg "$n bate palmas em aplauso.";
+};
+
+social "ballet" {
+	name-pt "ballet";
+	char-pos STANDING;
+	char-noarg "Você calça sapatilhas e sai girando como $x(um,uma) bailarin$r clássic$r.";
+	room-noarg "$n está muito gracios$r de titi e sapatilhas de ballet.";
+};
+
+social "beg" {
+	name-pt "suplicar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você suplica aos Deuses por piedade (não pense que vai consegui-la!).";
+	room-noarg "Os Deuses caem na gargalhada frente à súplica por piedade de $n.";
+	char-found "Você desesperadamente tenta conseguir algumas moedas d$L.";
+	room-found "$n suplica a $N por uma moeda ou duas -- ou vinte!";
+	vict-found "$n suplica a você por dinheiro. Você graciosamente $r deixa espiar sua fortuna.";
+	not-found "Seu agiota favorito parece não estar presente no momento.";
+	char-self "Como? - Implorar a si mesm$r por dinheiro não ajuda.";
+};
+
+social "bighug" {
+	name-pt "grandeabraco";
+	char-pos STANDING;
+	char-noarg "Você abraça todo mundo!";
+	room-noarg "$n abraça todo mundo! Que legal!";
+};
+
+social "bleed" {
+	name-pt "sangrar";
+	char-pos RESTING;
+	char-noarg "Você sangra muito, fazendo uma terrível sujeira...";
+	room-noarg "$n sangra muito, fazendo uma terrível sujeira...";
+};
+
+social "blush" {
+	name-pt "corar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "As suas bochechas estão queimando.";
+	room-noarg "$n ruboriza-se.";
+};
+
+social "bounce" {
+	name-pt "saltar";
+	char-pos STANDING;
+	char-noarg "BOIINNNNNNGG!";
+	room-noarg "$n começa a saltar por aí.";
+};
+
+social "bow" {
+	name-pt "saudar";
+	hide-invis;
+	char-pos STANDING;
+	vict-pos RESTING;
+	char-noarg "Você faz uma reverência lentamente.";
+	room-noarg "$n se curva lentamente.";
+	char-found "Você se curva perante $L.";
+	room-found "$n se curva frente a $N, demonstrando respeito.";
+	vict-found "$n se curva perante você.";
+	not-found "Quem é este?";
+	char-self "Você beija seu dedão do pé. É nojento!";
+	room-self "$n se abaixa e beija seu próprio dedão!";
+};
+
+social "brb" {
+	name-pt "javolto";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Volte logo!";
+	room-noarg "$n volta em um instante!";
+};
+
+social "burp" {
+	name-pt "arrotar";
+	char-pos RESTING;
+	char-noarg "Você arrota de modo vulgar.";
+	room-noarg "$n arrota de modo vulgar.";
+};
+
+social "cackle" {
+	name-pt "gargalhar";
+	char-pos RESTING;
+	char-noarg "Você cai na gargalhada.";
+	room-noarg "$n joga a cabeça para trás e gargalha loucamente!";
+};
+
+social "carry" {
+	name-pt "transportar";
+	char-pos STANDING;
+	vict-pos STANDING;
+	char-noarg "Você quer carregar quem?";
+	char-found "Com algum esforço, você levanta $N no colo e rodopia alegremente.";
+	room-found "$n, muito feliz, levanta $N no colo e gira em volta de si mesm$r.";
+	vict-found "Muito contente, $n lhe ergue em seu colo e gira rapidamente.";
+	not-found "Por favor, tente carregar alguém que esteja AQUI!";
+	char-self "Como você conseguiu realizar tal façanha???";
+	room-self "Você não sabe como nem porque, mas $n segura os próprios pés enquando rodopia!?";
+};
+
+social "chant" {
+	name-pt "salmodiar";
+	char-pos SITTING;
+	vict-pos SITTING;
+	char-noarg "Você começa a cantar e chama a todos a sua volta para acompanha-l$r.";
+	room-noarg "$n animadamente chama a todos para fazer um coral. Deseja cantar junto?";
+	char-found "Você, muito animad$r, chama $N para um dueto.";
+	room-found "$n convida $N para um dueto. Tomara dê certo, ou seus ouvidos não agüentarão...";
+	vict-found "$n lhe convida para um dueto. Que tal cantar um pouquinho?";
+	not-found "Você pretente cantar acompanhad$r por alguém que esteja aqui... Ou não?";
+	char-self "Você animadamente canta, mudando o tom de voz em cada parte diferente. Feliz, hein?";
+	room-self "$n parece tentar cantar, mas as alterações na voz mais lembram personalidades múltiplas.";
+};
+
+social "chuckle" {
+	name-pt "risada";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você ri educadamente.";
+	room-noarg "$n ri educadamente.";
+};
+
+social "clap" {
+	name-pt "palmas";
+	char-pos RESTING;
+	char-noarg "Você bate palmas.";
+	room-noarg "$n mostra sua aprovação batendo palmas.";
+};
+
+social "comb" {
+	name-pt "pentear";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você penteia o cabelo -- perfeito.";
+	room-noarg "$n penteia o cabelo, que ser arrojado!";
+	char-found "Você pacientemente desembaraça o cabelo de $N -- que bagunça!";
+	room-found "$n tenta pacientemente desembaraçar o cabelo de $N.";
+	vict-found "$n puxa seu cabelo, e tenta penteá-lo.";
+	not-found "Esta pessoa não está aqui.";
+	char-self "Você puxa seu cabelo, mas percebe que não vai conseguir penteá-lo.";
+	room-self "$n tenta pentear o próprio cabelo.";
+};
+
+social "comfort" {
+	name-pt "consolar";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Você se sente desconfortável?";
+	char-found "Você $R consola.";
+	room-found "$n consola $N.";
+	vict-found "$n consola você.";
+	not-found "Consolar quem?";
+	char-self "Você faz uma vã tentativa de consolar a si mesm$r.";
+};
+
+social "complicate" {
+	name-pt "complicado";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você acha o mundo muito complicado para seu gosto.";
+	room-noarg "$n acha o mundo todo muito complicado...";
+	char-found "Você acha $N uma pessoa muito complicada!";
+	room-found "$n mostra o quanto acha $N uma pessoa complicada.";
+	vict-found "$n te acha uma pessoa complicada! Como pode??";
+	not-found "Ninguém com esse nome aqui.";
+	char-self "Você se acha uma pessoa complicada. O primeiro passo foi assumir isso. ;)";
+	room-self "$n assume ser uma pessoa complicada. Você concorda?";
+};
+
+social "cough" {
+	name-pt "tossir";
+	char-pos RESTING;
+	char-noarg "Eca, tente cobrir sua boca da próxima vez!";
+	room-noarg "$n tosse aos gritos.";
+};
+
+social "cringe" {
+	name-pt "encolher";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você se encolhe aterrorizad$r.";
+	room-noarg "$n se encolhe, aterrorizad$r.";
+	char-found "Você se encolhe, mantendo-se afastad$r d$L.";
+	room-found "$n se encolhe, afastando-se de $N, aterrorizad$r.";
+	vict-found "$n se encolhe, mantendo-se afastad$r de você.";
+	not-found "Ninguém com este nome por aqui... Do que você tem medo?";
+	char-self "Me desculpe?";
+};
+
+social "cry" {
+	name-pt "chorar";
+	char-pos RESTING;
+	char-noarg "Buuuuaaaaaaa!!!";
+	room-noarg "$n desata a chorar.";
+	char-found "Você chora no ombro d$L.";
+	room-found "$n chora no ombro de $N.";
+	vict-found "$n chora em seu ombro.";
+	not-found "Quem é este?";
+	char-self "Você chora pra si mesm$r.";
+	room-self "$n chora quietamente consigo.";
+};
+
+social "cuddle" {
+	name-pt "acariciar";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos SLEEPING;
+	char-noarg "Quem você quer acariciar hoje?";
+	char-found "Você acaricia $L.";
+	room-found "$n acaricia $N.";
+	vict-found "$n te acaricia. Que meigo!";
+	not-found "Esta pessoa não está aqui.";
+	char-self "Você deve se sentir mesm$r com vontade de acariciar :-)";
+};
+
+social "curse" {
+	name-pt "amaldicoar";
+	char-pos RESTING;
+	char-noarg "Você xinga com raiva por um longo tempo.";
+	room-noarg "$n xinga: #@*\"*&&^$$DROGA$$%@*&&!!!!!!";
+};
+
+social "curtsey" {
+	name-pt "reverenciar";
+	hide-invis;
+	char-pos STANDING;
+	char-noarg "Reverenciar quem?";
+	char-found "Você reverencia $L.";
+	room-found "$n faz uma reverência cheia de graça para $N.";
+	vict-found "$n, chei$r de graça, reverencia você!'";
+	not-found "É melhor você reverenciar alguém que esteja aqui.";
+	char-self "Reverenciar a si mesm$r? Como?";
+};
+
+social "dance" {
+	name-pt "dancar";
+	hide-invis;
+	char-pos STANDING;
+	vict-pos STANDING;
+	char-noarg "É uma sensação boba, não é?";
+	room-noarg "$n tenta dançar, mas tropeça a perna esquerda na direita.";
+	char-found "Você leva $L para a pista de dança.";
+	room-found "$n leva $N através da pista de dança.";
+	vict-found "$n lhe leva através da pista de dança.";
+	not-found "É, QUEM?!?";
+	char-self "Você dança sozinh$r, balançando os braços e pernas aleatoriamente.";
+	room-self "$n dança como bob$r alegre.";
+};
+
+social "daydream" {
+	name-pt "devaneio";
+	hide-invis;
+	char-pos SLEEPING;
+	char-noarg "Você sonha acordad$r e esquece do mundo ao seu redor.";
+	room-noarg "$n parece distraíd$r, seus olhos se perdem no vazio.";
+};
+
+social "despair" {
+	name-pt "desespero";
+	hide-invis;
+	char-pos SITTING;
+	char-noarg "Você, desesperad$r, começa a arrancar os próprios cabelos!";
+	room-noarg "$n deve estar bem desesperad$r: não pára de arrancar os próprios cabelos!";
+};
+
+social "dizzy" {
+	name-pt "zonzo";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você se sente zonz$r.";
+	room-noarg "$n parece estar zonz$r.";
+};
+
+social "drool" {
+	name-pt "babar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você começa a babar.";
+	room-noarg "$n começa a babar.";
+	char-found "Você baba em cima de $N.";
+	room-found "$n baba em cima de $N.";
+	vict-found "$n BABA em cima de você. ECA!";
+	not-found "Me desculpe?";
+	char-self "Certo, vé em frente e babe. ECA!";
+	room-self "$n baba em si mesm$r. Que problema!";
+};
+
+social "dry" {
+	name-pt "enxugar";
+	char-pos STANDING;
+	vict-pos RESTING;
+	char-noarg "Você pega seu lenço e o agita no ar.";
+	room-noarg "$n parece querer secar as lágrimas de alguma pessoa. QUALQUER pessoa.";
+	char-found "Você, muito educad$r, seca as lágrimas d$L.";
+	room-found "$n mostra ser bastante prestativ$r ao secar as lágrimas de $N com um lenço.";
+	vict-found "$n é uma pessoa muito prestativa. Imagine, usando o próprio lenço para secar suas lágrimas!";
+	not-found "Seria bom tentar secar lágrimas de alguém que estivesse aqui..";
+	char-self "Você seca suas lágrimas com um lencinho... :(~~~";
+	room-self "$n seca as lágrimas com um lenço. Coitad$r!";
+};
+
+social "embrace" {
+	name-pt "abracar";
+	hide-invis;
+	char-pos STANDING;
+	vict-pos RESTING;
+	char-noarg "Você procura alguém pra abraçar, mas volta de braços vazios. :-(";
+	room-noarg "$n tenta conseguir um abraço, mas ninguém chega perto d$l.";
+	char-found "Você abraça $L com força.";
+	room-found "$n abraça $N com força.";
+	vict-found "$n te abraça com força.";
+	not-found "Desculpe, mas esta pessoa não está presente.";
+	char-self "Você abraça a si mesm$r.";
+	room-self "$n coloca seus braços ao redor de si mesm$r, e se abraça.";
+};
+
+social "faint" {
+	name-pt "desmaiar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você se sente frac$r e desmaia!";
+	room-noarg "$n desmaiou! Acuda-$r!";
+};
+
+social "fart" {
+	name-pt "peidar";
+	char-pos RESTING;
+	char-noarg "Onde estão os seus modos? Peidorreir$r!";
+	room-noarg "$n solta um peido que lhe obriga a parar de respirar!";
+};
+
+social "fear" {
+	name-pt "temer";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você teme o mundo lá fora...";
+	room-noarg "$n olha para todos os lados e se encolhe ao máximo, com medo de algo que você não vê.";
+	char-found "Você treme de medo ao ver $N.";
+	room-found "$n parece tremer de medo ao ver $N.";
+	vict-found "$n parece temer qualquer coisa vinda de você...Que coisa terrível você pode ter lhe feito??";
+	not-found "Temer o quê?? A sua sombra??";
+	char-self "Você teme a si mesm$r... Isso não é nada bom...";
+	room-self "$n está muito agitad$r. Seu olhar de medo é quase insano. O que está havendo com $l?";
+};
+
+social "flip" {
+	name-pt "virar";
+	hide-invis;
+	char-pos STANDING;
+	char-noarg "Você se vira de ponta-cabeça.";
+	room-noarg "$n se vira de ponta-cabeça. Que acrobacia!";
+};
+
+social "flirt" {
+	name-pt "flertar";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Você flerta descaradamente.";
+	room-noarg "$n flerta descaradamente.";
+	char-found "Você flerta com $N descaradamente.";
+	room-found "$n flerta descaradamente com $N.";
+	vict-found "$n flerta descaradamente com você.";
+	not-found "Me desculpe, mas seu amor não está por aqui.";
+	char-self "Você flerta consigo. Que estúpido.";
+	room-self "$n pensa que é a pessoa mais maravilhosa do mundo.";
+};
+
+social "fondle" {
+	name-pt "afagar";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos SLEEPING;
+	char-noarg "Quem precisa ser acariciado?";
+	char-found "Você acaricia $L.";
+	room-found "$n acaricia $N.";
+	vict-found "$n mostra todo seu afeto por você.";
+	not-found "Você tenta acariciar alguém que não está na sala, mas quem se importa?!?";
+	char-self "Você acaricia a si mesm$r. Sensação engraçada, não?";
+	room-self "$n acaricia a si mesm$r -- isto está indo longe demais!!";
+};
+
+social "french" {
+	name-pt "frances";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Beijar os lábios de quem??";
+	char-found "Você beija os lábios de $N longamente, parece nunca acabar...";
+	room-found "$n beija $N na boca, longamente, sem pressa.";
+	vict-found "$n te dá um longo beijo, parece nunca acabar...";
+	not-found "O seu coração se enche de desespero ao perceber que esta pessoa não está aqui.";
+	char-self "Você tenta beijar a si mesm$r.";
+	room-self "$n tenta beijar a si mesm$r.";
+};
+
+social "friendship" {
+	name-pt "amizade";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você quer ser amig$r de todos!";
+	room-noarg "$n deseja ser amig$r de todo mundo.";
+	char-found "Você quer ser amigo de $N. Quem sabe não consegue? :)";
+	room-found "$n deseja fazer amizade com $N. Torça para que dê certo!";
+	vict-found "$n deseja a sua amizade. Que tal retribuir?";
+	not-found "Você quer ser amigo de alguém? Ótimo! Mas tente de uma pessoa que esteja presente...";
+	char-self "É... Você precisa se gostar.. Mas não exagere, Ok?";
+	room-self "$n é o melhor amigo de si mesm$r. Não tente entendê-l$r...";
+};
+
+social "frown" {
+	name-pt "franzir";
+	char-pos RESTING;
+	char-noarg "O que está te irritando?";
+	room-noarg "$n franze as sombrancelhas, irritad$r.";
+};
+
+social "fume" {
+	name-pt "fumegar";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Acalme-se!  Conte até dez, bem lentamente.";
+	room-noarg "$n range os dentes, e FUMEGA de raiva, com ódio no olhar.";
+	char-found "Você olha para $L, fumegando de raiva.";
+	room-found "$n olha para $N, fumegando de raiva.";
+	vict-found "$n olha pra você, FUMEGANDO de raiva, com ÓDIO no olhar!";
+	not-found "Fumegue em outro lugar... Esta pessoa não está aqui.";
+	char-self "Tudo certo - ODEIE a si mesm$r!";
+	room-self "$n fecha os punhos e bate o pé no chão, fumegando com ódio.";
+};
+
+social "gasp" {
+	name-pt "arfar";
+	char-pos RESTING;
+	char-noarg "Você arfa assombrad$r.";
+	room-noarg "$n arfa, assombrad$r.";
+};
+
+social "giggle" {
+	name-pt "risadinha";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você dá uma risadinha.";
+	room-noarg "$n dá uma risadinha.";
+};
+
+social "glare" {
+	name-pt "olharfurioso";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Você olha penetrantemente todos a seu redor.";
+	room-noarg "$n lança um penetrante olhar ao redor.";
+	char-found "Você pousa seu penetrante olhar por sobre $L.";
+	room-found "$n olha $N penetrantemente.";
+	vict-found "$n olha penetrantemente para você, causando-lhe arrepios.";
+	not-found "Por mais que você olhe, você não vê esta pessoa.";
+	char-self "Olhar para si mesm$r? Como?";
+};
+
+social "gnaw" {
+	name-pt "roer";
+	hide-invis;
+	char-pos SITTING;
+	char-noarg "Você deve estar com fome mesmo: não para de roer as unhas...";
+	room-noarg "$n deve estar passando por muita fome, ou não roeria tanto as unhas.";
+};
+
+social "greet" {
+	name-pt "cumprimentar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Cumprimentar Quem?";
+	char-found "Você cumprimenta $L dando-lhe um estalado beijo nas bochechas. {SMACK!!}";
+	room-found "$n cumprimenta $N com um estalado beijo nas bochechas.";
+	vict-found "$n lhe cumprimenta com um estalado beijo nas bochechas. {SMACK!!}";
+	not-found "Por favor, tente cumprimentar alguém que esteja aqui!";
+	char-self "Você tenta, tenta, mas é um tanto impossível esticar seus lábios até as bochechas...";
+	room-self "Você se assusta com a verdadeira ginástica facial que $n está executando.";
+};
+
+social "grin" {
+	name-pt "sorrisomaldoso";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você sorri maldosamente.";
+	room-noarg "$n sorri, maldosamente.";
+};
+
+social "groan" {
+	name-pt "gemer";
+	char-pos RESTING;
+	char-noarg "Você geme alto.";
+	room-noarg "$n geme alto.";
+};
+
+social "grope" {
+	name-pt "procurar";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Quem você procura???";
+	char-found "Bem, que tipo de barulho você espera aqui?";
+	room-found "$n procura $N.";
+	vict-found "$n procura você.";
+	not-found "Tente alguém que esteja aqui.";
+	char-self "Você procura a si mesm$r - DUH!";
+	room-self "$n procura a si mesm$r - DUH!";
+};
+
+social "grovel" {
+	name-pt "ajoelhar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você se ajoelha ao chão, junto à sujeira.";
+	room-noarg "$n se ajoelha no chão, junto à sujeira.";
+	char-found "Você se ajoelha perante $L.";
+	room-found "$n se ajoelha perante $N.";
+	vict-found "$n se ajoelha perante você.";
+	not-found "Quem?";
+	char-self "Que coisa boba - DUH!";
+};
+
+social "growl" {
+	name-pt "rosnar";
+	char-pos RESTING;
+	char-noarg "Grrrrrrrrrr...";
+	room-noarg "$n range os dentes! (Grrrrrrrrrr...)";
+};
+
+social "gulp" {
+	name-pt "engolir";
+	char-pos RESTING;
+	char-noarg "Você engole seco.";
+	room-noarg "$n engole seco.";
+};
+
+social "happy" {
+	name-pt "feliz";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você mostra o quanto está feliz!";
+	room-noarg "$n está visivelmente feliz!";
+};
+
+social "hiccup" {
+	name-pt "soluco";
+	char-pos RESTING;
+	char-noarg "*HIC*";
+	room-noarg "$n soluça.";
+};
+
+social "hug" {
+	name-pt "abracar";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Abraçar quem?";
+	char-found "Você abraça $L.";
+	room-found "$n abraça $N.";
+	vict-found "$n abraca você.";
+	not-found "Me desculpe amigo, eu não posso ver esta pessoa aqui.";
+	char-self "Você abraça a si mesm$r.";
+	room-self "$n abraça a si mesm$r.";
+};
+
+social "hunger" {
+	name-pt "fome";
+	char-pos SLEEPING;
+	char-noarg "Sua barriga está roncando muito alto!!!";
+	room-noarg "A barriga de $n está roncando muito alto! Alimente-$r!";
+};
+
+social "jump" {
+	name-pt "pular";
+	hide-invis;
+	char-pos STANDING;
+	char-noarg "Você se sente bem ao PULAR!";
+	room-noarg "$n começa a pular e não para.";
+};
+
+social "kiss" {
+	name-pt "beijar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Não há ninguem que você queira beijar?";
+	char-found "Você beija $L.";
+	room-found "$n beija $N.";
+	vict-found "$n beija você.";
+	not-found "Esta pessoa nunca está por perto quando necessária.";
+	char-self "Estas pessoas solitárias... :-(";
+};
+
+social "lack" {
+	name-pt "carente";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você faz uma cara triste, pois se sente carente de afeto.";
+	room-noarg "$n parece bem triste: está carente de afeto.";
+};
+
+social "laugh" {
+	name-pt "rir";
+	char-pos RESTING;
+	char-noarg "Você cai no chão, sem conseguir respirar de tanto rir!";
+	room-noarg "$n cai no chão, gargalhando, quase se sufocando de rir!";
+};
+
+social "lead" {
+	name-pt "guiar";
+	hide-invis;
+	char-pos STANDING;
+	vict-pos STANDING;
+	char-noarg "Você desejar pegar na mão de quem?";
+	char-found "Você pega na mão de $N e $R conduz.";
+	room-found "$n pega na mão de $N. Onde será que eles vão?";
+	vict-found "$n pega na sua mão. $l parece querer lhe levar a algum lugar.";
+	not-found "Pegue na mão de alguém aqui presente... É bem mais fácil...";
+	char-self "Como é que é???";
+};
+
+social "lick" {
+	name-pt "lamber";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você lambe seus lábios e sorri.";
+	room-noarg "$n lambe os lábios e sorri.";
+	char-found "Você lambe $L.";
+	room-found "$n lambe $N.";
+	vict-found "$n te lambe.";
+	not-found "Vá lamber na esquina, não há ninguém por perto com este nome!";
+	char-self "Você se lambe.";
+	room-self "$n lambe a si mesm$r -- ECA!";
+};
+
+social "lousy" {
+	name-pt "piolhos";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Procurar piolhos em quem?";
+	char-found "Você realmete está empenhad$r na tarefa de encontrar piolhos nos cabelos d$L.";
+	room-found "$n procura piolhos nos cabelos de $N. Será que achou??";
+	vict-found "$n procura piolhos em seus cabelos! Como $l ousa??";
+	not-found "Por acaso você espera encontrar piolhos em alguém que não está aqui?";
+	char-self "Seria melhor tomar mais banho...";
+	room-self "Você sente nojo ao perceber que $n caça piolhos na própria cabeça!";
+};
+
+social "love" {
+	name-pt "amar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você ama o mundo inteiro.";
+	room-noarg "$n ama a todos no mundo.";
+	char-found "Você diz seus verdadeiros sentimentos a $N.";
+	room-found "$n declara todo o seu amor a $N.";
+	vict-found "$n lhe diz lindas palavras de amor.";
+	not-found "O seu amor não está presente...";
+	char-self "Bem, nós já sabemos que você se ama (sorte que alguém ama!)";
+	room-self "$n ama a si mesm$r, você pode acreditar nisto?";
+};
+
+social "luck" {
+	name-pt "sorte";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você se sente com sorte hoje?";
+	room-noarg "$n parece se sentir com sorte. O que será que houve?";
+};
+
+social "massage" {
+	name-pt "massagear";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Massagear o quê?";
+	char-found "Você gentilmente massageia os ombros d$L.";
+	room-found "$n massageia os ombros de $N.";
+	vict-found "$n gentilmente massageia seus ombros... ahhhhhhh...";
+	not-found "Você só pode massagear alguém que esteja no mesmo cômodo que você.";
+	char-self "Você pratica ioga enquanto tenta se massagear.";
+	room-self "$n dá um show de posições de Ioga, tentando massagear a si mesm$r.";
+};
+
+social "moan" {
+	name-pt "lamentar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você começa a se lamentar.";
+	room-noarg "$n começa a se lamentar.";
+};
+
+social "nibble" {
+	name-pt "mordiscar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Mordiscar quem?";
+	char-found "Você mordisca a orelha de $N.";
+	room-found "$n mordisca a orelha de $N.";
+	vict-found "$n mordisca sua orelha.";
+	not-found "Me desculpe, esta pessoa não está aqui. Melhor voltar a sonhar com ela.";
+	char-self "Você mordisca sua PRÓPRIA orelha???????????";
+	room-self "$n mordisca a própria orelha (Eu me pergunto agora: COMO isto é feito?!? :-))";
+};
+
+social "nod" {
+	name-pt "sim";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você balança a cabeça, fazendo um sim solene.";
+	room-noarg "$n faz sim com a cabeça, solenemente.";
+};
+
+social "nudge" {
+	name-pt "cutucar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Cutucar o que?";
+	char-found "Você cutuca $L com seu cotovelo.";
+	room-found "$n cutuca $N sugestivamente com seu cotovelo.";
+	vict-found "$n cutuca você sugestivamente. Vocês dois se entendem.";
+	not-found "Quê? Esta pessoa não está aqui.";
+	char-self "Bem, você se cotovela. Como conseguiu colocar seus cotovelos nessa posição??";
+	room-self "$n cotovela a si mesm$r, parecendo imitar uma grande galinha.";
+};
+
+social "nuzzle" { 
+	name-pt "fungar";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Beijar o pescoço de quem?";
+	char-found "Você beija com carinho o pescoco d$L.";
+	room-found "$n beija o pescoco de $N.";
+	vict-found "$n beija seu pescoço, com carinho.";
+	not-found "Nem... Esta pessoa não está aqui.";
+	char-self "Me desculpe, amig$r, mas isto é completamente impossível.";
+};
+
+social "pat" {
+	name-pt "tapinha";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Dar tapinhas em quem?";
+	char-found "Você dá tapinhas na cabeça d$L.";
+	room-found "$n dá tapinhas na cabeça de $N.";
+	vict-found "$n dá tapinhas em sua cabeça.";
+	not-found "Quem, onde, o quê??";
+	char-self "Você da tapas na própria cabeça.";
+	room-self "$n da tapas em sua própria cabeça.";
+};
+
+social "peer" {
+	name-pt "espreitar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você espreita ao redor, incert$r se o que vê é verdade.";
+	room-noarg "$n espreita ao redor, parecendo não entender o que acontece.";
+};
+
+social "point" {
+	name-pt "apontar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você aponta para onde?";
+	room-noarg "$n aponta para todas as direções, visivelmente confus$r.";
+	char-found "Você aponta para $N -- $L parece engracad$R!";
+	room-found "$n segura o riso, apontando para $N.";
+	vict-found "$n aponta pra você... Que indelicad$r!";
+	not-found "Você deve ter um dedo indicador BEM longo...";
+	char-self "Você aponta pra si mesm$r. Insinuando algo?";
+	room-self "$n aponta para si mesm$r, sugerindo que $l seja o centro do universo.";
+};
+
+social "poke" {
+	name-pt "safanao";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Dar um safanão quem?";
+	char-found "Você dá um safanão nas costelas d$L.";
+	room-found "$n dá um safanão em $N.";
+	vict-found "$n lhe dá um safanão nas costelas!";
+	not-found "Você não pode dar um safanão em alguém que não esteja aqui!";
+	char-self "Você dá um safanão em si mesm$r, se sentindo muito bob$r.";
+	room-self "$n dá um safanão em si mesm$r, parecendo $x(um,uma) otári$r.";
+};
+
+social "ponder" {
+	name-pt "refletir";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você reflete sobre seus problemas, e esquece do mundo.";
+	room-noarg "$n afunda em seus próprios pensamentos.";
+};
+
+social "pout" {
+	name-pt "zangado";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Encare de outra maneira...";
+	room-noarg "$n faz beicinho.";
+};
+
+social "pry" {
+	name-pt "xeretar";
+	char-pos STANDING;
+	vict-pos STANDING;
+	char-noarg "Você começa a xeretar por aí.";
+	room-noarg "$n começa a xeretar por aí. Cuidado!";
+	char-found "Você começa a xeretar nas coisas d$L.";
+	room-found "$n está xeretando nas coisas de $N.";
+	vict-found "$n está xeretando em suas coisas! Que falta de educação!";
+	not-found "Xerete nas coisas de alguém que esteja aqui!";
+	char-self "Você perdeu alguma coisa??";
+	room-self "$n parece ter perdido algo: está vasculhando as próprias coisas!";
+};
+
+social "puke" {
+	name-pt "vomitar";
+	char-pos RESTING;
+	char-noarg "Você vomita.";
+	room-noarg "$n vomita.";
+	char-found "Você vomita n$L.";
+	room-found "$n vomita em $N.";
+	vict-found "$n vomita em suas roupas!";
+	not-found "Denovo?";
+	char-self "Você vomita em si mesm$r.";
+	room-self "$n vomita em suas próprias roupas.";
+};
+
+social "punch" {
+	name-pt "esmurrar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Esmurrar o ar? Tudo bem, vá em frente. Não tenho nada contra...";
+	room-noarg "$n começa a golpear sombras.";
+	char-found "Você tenta esmurrar a cara d$L, mas erra.";
+	room-found "$n esmurra fracamente $N, errando por quilômetros.";
+	vict-found "$n tenta esmurrar você, mas falha miseravelmente.";
+	not-found "Esmurrar qual infeliz?";
+	char-self "Você esmurra a si mesm$r, resultando em um nariz sangrando. Otári$r!";
+	room-self "$n soca a si mesm$r, parecendo meio estúpid$r.";
+};
+
+social "purr" {
+	name-pt "ronronar";
+	char-pos RESTING;
+	char-noarg "Roooooooorrrr.";
+	room-noarg "$n ronrona.";
+};
+
+social "ready" {
+	name-pt "pronto";
+	char-pos STANDING;
+	char-noarg "Sempre alerta!!";
+	room-noarg "$n se prepara para a batalha!";
+};
+
+social "ruffle" {
+	name-pt "despentear";
+	hide-invis;
+	char-pos STANDING;
+	char-noarg "Você tem que despentear ALGUÉM.";
+	char-found "Você despenteia o cabelo d$L.";
+	room-found "$n despenteia o cabelo de $N.";
+	vict-found "$n despenteia seu cabelo.";
+	not-found "Pode ser um pouco dificil...";
+	char-self "Você despenteia o cabelo, pensando em quanto tempo pode fazer isto sem que os outros lhe internem em um hospício!";
+	room-self "$n despenteia o próprio cabelo -- estranho!";
+};
+
+social "run" {
+	name-pt "correr";
+	hide-invis;
+	char-pos STANDING;
+	char-noarg "Você corre em disparada! Para onde você vai com tanta pressa?";
+	room-noarg "$n se coloca a postos e corre em disparada. Para onde $l vai com tanta pressa?";
+};
+
+social "satisfied" {
+	name-pt "satisfeito";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Sorrir para quem?";
+	char-found "Você sorri agradecid$r para $L. Era disso que precisava!";
+	room-found "$n sorri agradecid$r. Parece que $N realmente $r ajudou.";
+	vict-found "$n sorri agradecid$r para você. É gratificante ajudar, não? :)";
+	not-found "Sorria sempre, mas principalmente quando a pessoa está aqui...";
+	char-self "Você sorri para si mesm$r, satisfeit$r. Que bom!";
+	room-self "$n parece satisfeit$r consigo mesm$r: está sorrindo sozinh$r!";
+};
+
+social "scream" {
+	name-pt "berro";
+	char-pos RESTING;
+	char-noarg "ARRRRRRRRRRGH!!!!!";
+	room-noarg "$n grita MUITO alto!";
+};
+
+social "shake" {
+	name-pt "aperto";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Você aperta a mão de todos na sala.";
+	room-noarg "$n aperta a mão de todos na sala.";
+	char-found "Você aperta a mão d$L.";
+	room-found "$n aperta a mão de $N.";
+	vict-found "$n aperta a sua mão.";
+	not-found "Desculpe-me bom parceiro, mas esta pessoa não está aqui.";
+	char-self "Você aperta a si mesm$r.";
+	room-self "$n se aperta e treme como uma geléia.";
+};
+
+social "shiver" {
+	name-pt "tremer";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Brrrrrrrrr.";
+	room-noarg "$n treme parecendo desconfortável.";
+};
+
+social "shrug" {
+	name-pt "ombros";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você encolhe os ombros.";
+	room-noarg "$n encolhe seus ombros.";
+};
+
+social "sigh" {
+	name-pt "suspirar";
+	char-pos RESTING;
+	char-noarg "Você suspira.";
+	room-noarg "$n suspira.";
+};
+
+social "sing" {
+	name-pt "cantar";
+	char-pos RESTING;
+	char-noarg "Você comeca uma linda (?) melodia.";
+	room-noarg "ESCONDA-SE RAPIDAMENTE! $n comecou a cantar!";
+};
+
+social "slap" {
+	name-pt "tapa";
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Normalmente você dá tapas em ALGUÉM.";
+	char-found "Você dá um tapa em $N.";
+	room-found "$n dá um tapa em $N.";
+	vict-found "Você leva um tapa de $n.";
+	not-found "Que tal dar um tapa em alguém na mesma sala que você??";
+	char-self "Você dá um tapa em si mesm$r. Que bob$r.";
+	room-self "$n da um tapa em si mesm$r. Realmente estranho...";
+};
+
+social "smile" {
+	name-pt "sorrir";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você sorri alegremente.";
+	room-noarg "$n sorri alegremente.";
+	char-found "Você sorri para $L.";
+	room-found "$n sorri para $N.";
+	vict-found "$n sorri para você.";
+	not-found "Ninguém com este nome por aqui.";
+	char-self "Você sorri para si mesm$r.";
+	room-self "$n sorri para $l mesm$r.";
+};
+
+social "smirk" {
+	name-pt "sorrisofalso";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você da um sorriso forçado.";
+	room-noarg "$n da um sorriso forçado.";
+};
+
+social "snap" {
+	name-pt "estalar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "CLICK! Você estala os dedos.";
+	room-noarg "$n estala seus dedos.";
+};
+
+social "snarl" {
+	name-pt "grunhir";
+	char-pos RESTING;
+	char-noarg "Você grunhi como um animal.";
+	room-noarg "$n grunhi como um animal.";
+	char-found "Você grunhi para $L, furioso. CONTROLE-SE!";
+	room-found "$n grunhi furioso para $N. $L parece incapaz de se controlar.";
+	vict-found "$n grunhi furioso para você. O auto-controle d$l foi pro saco...";
+	not-found "É? Quem? Não aqui, $x(meu,minha) amig$r.";
+	char-self "Você grunhi para si mesm$r, obviamente sofrendo de esquizofrenia.";
+	room-self "$n grunhi para si mesm$r, subitamente parecendo muito assustado.";
+};
+
+social "sneeze" {
+	name-pt "espirrar";
+	char-pos RESTING;
+	char-noarg "Saúde!";
+	room-noarg "$n espirra.";
+};
+
+social "snicker" {
+	name-pt "relinchar";
+	char-pos RESTING;
+	char-noarg "Você relincha.";
+	room-noarg "$n relincha.";
+};
+
+social "sniff" {
+	name-pt "fungar";
+	char-pos RESTING;
+	char-noarg "Você funga tristemente.  *SNIFF*";
+	room-noarg "$n funga tristemente.";
+};
+
+social "snore" {
+	name-pt "roncar";
+	char-pos SLEEPING;
+	char-noarg "Rooooonc.";
+	room-noarg "$n ronca muito alto.";
+};
+
+social "snowball" {
+	name-pt "boladeneve";
+	level 105;
+	char-pos STANDING;
+	vict-pos RESTING;
+	char-noarg "Em quem você quer jogar uma bola de neve?";
+	char-found "Você joga uma bola de neve na cara d$L.";
+	room-found "$n cria uma bola de neve do nada e joga na cara de $N.";
+	vict-found "$n cria uma bola de neve do nada e joga em você.";
+	not-found "Você fica com a bola de neve em sua mão porque sua vítima não está aqui.";
+	char-self "Você cria uma bola de neve do nada e joga em si mesm$r.";
+	room-self "$n cria uma bola de neve do nada e joga em si mesm$r.";
+};
+
+social "snuggle" {
+	name-pt "aconchegar";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Quem?";
+	char-found "Você aconchega $L.";
+	room-found "$n aconchega $N.";
+	vict-found "$n aconchega você.";
+	not-found "Essa pessoa não está por aqui.";
+	char-self "Hummm...";
+};
+
+social "spank" {
+	name-pt "palmadas";
+	char-pos STANDING;
+	vict-pos STANDING;
+	char-noarg "Dar palmadas em quem?";
+	room-noarg "$n dá palmadas no nada com a mão aberta.";
+	char-found "Você dá palmadas n$L vigorosamente, longamente e com força. Sua mão chega a doer.";
+	room-found "$n dá palmadas sem parar em $N. Machuca só de olhar.";
+	vict-found "$n lhe dá palmadas com força. Você se sente uma criança levada.";
+	not-found "Você tem certeza? Quero dizer, esta pessoa nem está aqui!";
+	char-self "Humm.. Nem.";
+};
+
+social "spit" {
+	name-pt "cuspir";
+	char-pos RESTING;
+	char-noarg "Você vira a cabeça para o lado e cospe.";
+	room-noarg "$n cospe por cima do ombro.";
+	char-found "Você cospe n$L.";
+	room-found "$n cospe na cara de $N.";
+	vict-found "$n cospe na sua cara.";
+	not-found "Você pode cuspir tão longe?";
+	char-self "Você cospe em si mesm$r.";
+	room-self "$n cospe em sua própria roupa.";
+};
+
+social "squeeze" {
+	name-pt "apertar";
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Onde, o que, como, QUEM?!?";
+	char-found "Você $R aperta carinhosamente.";
+	room-found "$n aperta $N carinhosamente.";
+	vict-found "$n aperta você carinhosamente.";
+	not-found "Onde, como, o que, QUEM?!?";
+	char-self "Você aperta a si mesm$r -- tente relaxar um pouco!";
+	room-self "$n aperta a si mesm$r.";
+};
+
+social "stare" {
+	name-pt "fitar";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Você olha fixamente para o céu.";
+	room-noarg "$n olha fixamente para o céu.";
+	char-found "Você fita os olhos em $N, completamente perdid$r em seu olhar.";
+	room-found "$n fita seus olhos em $N.";
+	vict-found "$n fita seus olhos em você, completamente perdid$r em seus olhos.";
+	not-found "Você olha para um lado, olha para o outro mas não consegue ver esta pessoa...";
+	char-self "Você fita a si mesm$r - narcisismo suficiente por agora.";
+	room-self "$n fita a si mesm$r - NARCISISTA!";
+};
+
+social "strut" {
+	name-pt "endireitar";
+	hide-invis;
+	char-pos STANDING;
+	char-noarg "Você se endireita.";
+	room-noarg "$n se endireita.";
+};
+
+social "succour" {
+	name-pt "socorro";
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Você clama por ajuda.";
+	room-noarg "$n parece precisar de ajuda.";
+	char-found "Você pede ajuda a $L.";
+	room-found "$n pede a ajuda de $N.";
+	vict-found "$n pede a sua ajuda.";
+	not-found "Apenas alguém presente poderá lhe ajudar...";
+	char-self "É, você não precisa da ajuda de ninguém além da de si mesm$r.";
+	room-self "$n acha que precisa apenas da própria ajuda.";
+};
+
+social "sulk" {
+	name-pt "beicinho";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você faz beicinho.";
+	room-noarg "$n faz beicinho, emburrad$r.";
+};
+
+social "tackle" {
+	name-pt "atracar";
+	char-pos STANDING;
+	vict-pos RESTING;
+	char-noarg "Você golpeia o ar aleatoriamente. Sem chances.";
+	room-noarg "$n começa a correr ao redor de si mesm$r, tentando acertar o ar.";
+	char-found "Você brutalmente se atraca com $L no chão.";
+	room-found "$n brutalmente se atraca com $N, jogando-$R no chão.";
+	vict-found "$n subitamente arremete-se contra você e se atraca contigo no chão!";
+	not-found "Esta pessoa não está aqui. (sorte dela...)";
+	char-self "Se atracar consigo mesm$r? Sim, certo...";
+	room-self "$n faz um hábil movimento e chuta a própia perna esquerda com o pé direito.";
+};
+
+social "tango" {
+	name-pt "tango";
+	char-pos STANDING;
+	vict-pos STANDING;
+	char-noarg "Com quem você quer dançar tango?";
+	room-noarg "$n põe uma rosa entre os dentes, mas a tira já que ninguem quer dançar com $l.";
+	char-found "Você põe uma rosa entre os dentes e dança tango com $L sedutoramente.";
+	room-found "$n põe uma rosa entre os dentes e dança tango com $N sedutoramente.";
+	vict-found "$n põe uma rosa entre os dentes e dança tango com você sedutoramente.";
+	not-found "Esta pessoa não está por perto. Melhor ficar sentad$r durante esta música.";
+	char-self "Parece estúpido, não?";
+	room-self "$n põe uma rosa entre seus dentes e tenta dançar tango com si mesm$r.";
+};
+
+social "taunt" {
+	name-pt "zombar";
+	char-pos RESTING;
+	char-noarg "Você tira sarro do nada a sua frente.";
+	room-noarg "$n tira sarro de algo que parece estar na frente d$l.";
+	char-found "Você tira sarro d$L. Que legal!";
+	room-found "$n tira sarro de $N de forma muito insultante. $n parece adorar.";
+	vict-found "$n tira sarro de sua cara. $l realmente fere seus sentimentos.";
+	not-found "Hummmmmm.....nem. Ninguém com este nome por aqui.";
+	char-self "Você tira sarro de si mesm$r, quase chorando... :(";
+	room-self "$n tira sarro de si mesm$r e começa a chorar.";
+};
+
+social "thank" {
+	name-pt "agradecer";
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Obrigado para você também!";
+	char-found "Você agradece $N de todo o coração.";
+	room-found "$n agradece $N de todo o coração.";
+	vict-found "$n te agradece de todo o coração.";
+	not-found "Ninguém com este nome aqui.";
+	char-self "Você agradece a si mesm$r já que ninguém mais quis!";
+	room-self "$n agradece a si mesm$r já que você não o fez.";
+};
+
+social "think" {
+	name-pt "pensar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você pensa sobre a vida, o universo e tudo.";
+	room-noarg "$n se afunda profundamente em seus pensamentos sobre o significado da vida.";
+	char-found "Você pensa no porquê d$L fazer parte de sua vida.";
+	room-found "$n para e pensa sobre $N, completamente perdido em sua própria mente.";
+	vict-found "Suas orelhas queimam conforme $N pensa sobre você... O que será que $l pensa?";
+	not-found "Você precisa pensar com mais força, se espera fazer contato.";
+	char-self "Você pensa sobre si mesm$r (uma vez na vida).";
+	room-self "$n pensa sobre si mesm$r, e revê suas atitudes...";
+};
+
+social "tickle" {
+	name-pt "cocegas";
+	char-pos RESTING;
+	char-noarg "Em quem você quer fazer cócegas?";
+	char-found "Você faz cosquinha n$L.";
+	room-found "$n faz cosquinha em $N.";
+	vict-found "$n faz cosquinha em você - he he he.";
+	not-found "QUEM?!?";
+	char-self "Você faz cosquinha em si mesm$r, que engraçado!";
+	room-self "$n faz cosquinha em si mesm$r.";
+};
+
+social "tongue" {
+	name-pt "lingua";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você parece uma criança mal-criada, mostrando a língua para todo mundo..";
+	room-noarg "$n mostra a língua. Que desaforo!";
+	char-found "Você mostra a língua para $N, que não parece estar nada satisfeit$R..";
+	room-found "$n mostra a língua para $N, que não parece estar nada satisfeit$R..";
+	vict-found "$n mostra a língua para você. Que criancice!";
+	not-found "Você pretende mostrar a língua para um ser material??";
+	char-self "Certo... Essa é mais uma de suas estranhas atitudes...";
+	room-self "Você se surpreende ao constatar que $n está pacientemente admirando a própria língua.";
+};
+
+social "torture" {
+	name-pt "torturar";
+	char-pos STANDING;
+	char-noarg "Você sente ímpetos de torturar alguém!";
+	room-noarg "Cuidado! $n está doid$r para torturar alguém!";
+	char-found "Você inicia seu ritual de tortura em $N!";
+	room-found "$n está entretid$r em torturar $N!";
+	vict-found "$n começa a tortura-l$R! AI!!";
+	not-found "Torture alguém que esteja mais perto!";
+	char-self "Você faz isso sempre???";
+	room-self "Não repare, mas $n está se auto-flagelando!";
+};
+
+social "trample" {
+	name-pt "pisar";
+	char-pos STANDING;
+	vict-pos STANDING;
+	char-noarg "Você quer pisar no pé de quem?";
+	char-found "Você pisa com muita força no pé de $N... Hehehehe :P";
+	room-found "$n pisa com tanta força no pé de $N que você até assusta. Deve doer..";
+	vict-found "$n pisa em seu pé com muita força! Ai!!";
+	not-found "Tente pisar em alguém que, de preferência, esteja aqui.";
+	char-self "O que você pretente com isso!?!?";
+	room-self "$n fica em uma estranha posição ao tentar pisar nos próprios pés. Cada uma...";
+};
+
+social "twiddle" {
+	name-pt "brincar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você pacientemente chupa seu polegar.";
+	room-noarg "$n pacientemente chupa o polegar.";
+};
+
+social "wave" {
+	name-pt "acenar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você acena.";
+	room-noarg "$n acena feliz.";
+	char-found "Você acena "tchau" para $N.";
+	room-found "$n acena fazendo "tchau" para $N.";
+	vict-found "$n acena fazendo "tchau" para você. Tenha uma boa jornada.";
+	not-found "Esta pessoa não esperou você dizer tchau.";
+	char-self "Você está indo se aventurar também?";
+	room-self "$n acena fazendo "tchau" para si mesm$r.";
+};
+
+social "whine" {
+	name-pt "reclamar";
+	char-pos RESTING;
+	char-noarg "Você reclama.";
+	room-noarg "$n reclama.";
+};
+
+social "whistle" {
+	name-pt "assobiar";
+	char-pos RESTING;
+	char-noarg "Você assobia.";
+	room-noarg "$n assobia.";
+};
+
+social "wing" {
+	name-pt "asas";
+	char-pos STANDING;
+	char-noarg "Você começa a pular a agitar os braços como se fossem asas - outra vã tentativa de virar pássaro?";
+	room-noarg "$n começa a saltar e mover os braços como se fossem asas. Sim, $l ainda pretende voar...";
+};
+
+social "wink" {
+	name-pt "piscar";
+	hide-invis;
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Você tem algo no seu olho?";
+	room-noarg "$n pisca sugestivamente.";
+	char-found "Você pisca sugestivamente para $N.";
+	room-found "$n pisca sugestivamente para $N - $L achou que você não perceberia!";
+	vict-found "$n pisca sugestivamente para você.";
+	not-found "Ninguém com este nome está presente.";
+	char-self "Você pisca para si mesm$r?? -- Qual é a sua?";
+	room-self "$n pisca para si mesm$r -- algo estranho está acontecendo...";
+};
+
+social "wipe" {
+	name-pt "assoar";
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Você quer assoar o nariz de alguma pessoa, não é?";
+	char-found "Você gentilmente assoa o nariz de $N com um lenço.";
+	room-found "$n, muito gentil, usa um lenço para assoar o nariz de $N.";
+	vict-found "$n gentilmente usa um lenço para assoar seu nariz.";
+	not-found "Sim, assoar... Mas o nariz de alguém que esteja presente, ou não??";
+	char-self "Você assoa seu nariz, fazendo muito barulho.";
+	room-self "$n assoa o nariz com um lenço, fazendo um tremendo barulho.";
+};
+
+social "worship" {
+	name-pt "orar";
+	char-pos RESTING;
+	vict-pos RESTING;
+	char-noarg "Você se ajoelha no chão, cabisbaix$r, orando.";
+	room-noarg "$n começa a orar ao nada.";
+	char-found "Você fica de joelhos e ora a $L profundamente.";
+	room-found "$n fica de joelhos, orando a $N com excepcional dedicação.";
+	vict-found "$n fica de joelhos perante você em solene adoração.";
+	not-found "Esta pessoa não está aqui, parceir$r.";
+	char-self "Você parece realmente ter encontrado uma verdadeira divinidade...";
+	room-self "$n fica de joelhos e humildemente ora a si mesm$r.";
+};
+
+social "yawn" {
+	name-pt "bocejar";
+	hide-invis;
+	char-pos RESTING;
+	char-noarg "Você boceja.";
+	room-noarg "$n boceja.";
+};
