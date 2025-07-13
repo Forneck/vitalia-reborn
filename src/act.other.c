@@ -28,6 +28,7 @@
 #include "mail.h"				/* for has_mail() */
 #include "shop.h"
 #include "quest.h"
+#include "spedit.h"				/* for get_spell_level() */
 #include "modify.h"
 
 /* Local defined utility functions */
@@ -35,8 +36,10 @@
 static void print_group(struct char_data *ch);
 static void display_group_list(struct char_data *ch);
 
-static int can_elevate(struct char_data *ch);
-static int can_rebegin(struct char_data *ch);
+int can_elevate(struct char_data *ch);
+int can_rebegin(struct char_data *ch);
+void show_class_skills(struct char_data *ch, int class_num);
+void show_menu_with_options(struct descriptor_data *d);
 void check_thief(struct char_data *ch, struct char_data *vict);
 bool are_groupable(struct char_data *ch, struct char_data *target);
 
@@ -1192,7 +1195,7 @@ ACMD(do_happyhour)
 	}
 }
 
-static int can_rebegin(struct char_data *ch)
+int can_rebegin(struct char_data *ch)
 {
 	if (!PLR_FLAGGED(ch, PLR_TRNS))
 		return (0);
@@ -1200,12 +1203,105 @@ static int can_rebegin(struct char_data *ch)
 	return (1);
 }
 
-
-static int can_elevate(struct char_data *ch)
+void show_class_skills(struct char_data *ch, int class_num)
 {
+	int i;
+	send_to_char(ch, "\r\nHabilidades e magias disponíveis para %s:\r\n", pc_class_types[class_num]);
+	
+	/* Show skills the character currently has that are available to their class */
+	for (i = 1; i <= MAX_SKILLS; i++) {
+		if (GET_SKILL(ch, i) > 0 && get_spell_level(i, class_num) >= 0) {
+			send_to_char(ch, "%3d. %s (%d%%)\r\n", i, skill_name(i), GET_SKILL(ch, i));
+		}
+	}
+	
+	/* For bards, also show chansons */
+	if (class_num == CLASS_BARD) {
+		for (i = CHANSON_ARDOR; i <= MAX_CHANSONS; i++) {
+			if (GET_SKILL(ch, i) > 0 && get_spell_level(i, class_num) >= 0) {
+				send_to_char(ch, "%3d. %s (%d%%)\r\n", i, skill_name(i), GET_SKILL(ch, i));
+			}
+		}
+	}
+	send_to_char(ch, "\r\nDigite o número da habilidade que deseja manter, ou 0 para não manter nenhuma: ");
+}
+
+void show_menu_with_options(struct descriptor_data *d)
+{
+	char menu_buffer[4096];
+	
+	strcpy(menu_buffer, 
+		"\r\n"
+		"O MUNDO DE VITALIA\r\n"
+		"\r\n"
+		"         .-.\r\n"
+		"        (0.0)\r\n"
+		"      '=.|m|.='\r\n"
+		"      .='/	\\`=.\r\n"
+		"         	8	\r\n"
+		"     _   8	8   _\r\n"
+		"    (	__/	8	\\__	)\r\n"
+		"     `-=:8	8:=-'\r\n"
+		"         |:|\r\n"
+		"         |:|   [1] Entrar no jogo.\r\n"
+		"         |:|   [2]  Ler a historia deste mundo.\r\n"
+		"         |:|   [3]  Ajustar a descriçao\r\n"
+		"         |:|   [4]  Mudar a sua senha de acesso\r\n");
+		
+	/* Add rebegin option if eligible */
+	if (d->character && can_rebegin(d->character)) {
+		strcat(menu_buffer, "         |:|   [5]  Renascer (Rebegin)\r\n");
+	}
+	
+	/* Add elevate option if eligible */
+	if (d->character && can_elevate(d->character)) {
+		strcat(menu_buffer, "         |:|   [6]  Transcender (Elevate)\r\n");
+	}
+	
+	strcat(menu_buffer, 
+		"         |:|   [9]  Apagar o personagem\r\n"
+		"         |:|   [0]  Deixar este mundo\r\n"
+		"         |:|\r\n"
+		"         |:|\r\n"
+		"         |:|\r\n"
+		"         |:|\r\n"
+		"         |:|\r\n"
+		"        \\:/\r\n"
+		"          ^\r\n"
+		"\r\n"
+		"\r\n"
+		"-=>  Faca sua escolha: ");
+		
+	write_to_output(d, "%s", menu_buffer);
+}
+
+
+int can_elevate(struct char_data *ch)
+{
+	int i, classes_experienced = 0;
+	
+	/* Must be transcended */
 	if (!PLR_FLAGGED(ch, PLR_TRNS))
 		return (0);
-	if (GET_REMORT(ch) < 4)
+		
+	/* Must be at maximum mortal level */
+	if (GET_LEVEL(ch) != (LVL_IMMORT - 1))
+		return (0);
+		
+	/* Must have enough experience to level to next level */
+	if (GET_EXP(ch) < level_exp(GET_CLASS(ch), LVL_IMMORT))
+		return (0);
+		
+	/* Must have experienced all classes at least once */
+	for (i = 0; i < NUM_CLASSES; i++) {
+		if (ch->player_specials->saved.was_class[i] || GET_CLASS(ch) == i)
+			classes_experienced++;
+	}
+	if (classes_experienced < NUM_CLASSES)
+		return (0);
+		
+	/* Config must allow mortal to immortal advancement */
+	if (CONFIG_NO_MORT_TO_IMMORT)
 		return (0);
 
 	return (1);
@@ -1273,5 +1369,54 @@ ACMD(do_recall)
 	entry_memory_mtrigger(ch);
 	greet_mtrigger(ch, -1);
 	greet_memory_mtrigger(ch);
+}
+
+ACMD(do_rebegin)
+{
+	if (IS_NPC(ch)) {
+		send_to_char(ch, "NPCs não podem renascer.\r\n");
+		return;
+	}
+
+	if (!can_rebegin(ch)) {
+		send_to_char(ch, "Você não pode renascer neste momento.\r\n");
+		return;
+	}
+
+	if (GET_POS(ch) == POS_FIGHTING) {
+		send_to_char(ch, "Você não pode renascer durante uma luta.\r\n");
+		return;
+	}
+
+	/* Show rebegin information */
+	send_to_char(ch, "%s", rebegin);
+	show_class_skills(ch, GET_CLASS(ch));
+	
+	STATE(ch->desc) = CON_RB_SKILL;
+}
+
+ACMD(do_elevate)
+{
+	if (IS_NPC(ch)) {
+		send_to_char(ch, "NPCs não podem transcender.\r\n");
+		return;
+	}
+
+	if (!can_elevate(ch)) {
+		send_to_char(ch, "Você não pode transcender neste momento.\r\n");
+		return;
+	}
+
+	if (GET_POS(ch) == POS_FIGHTING) {
+		send_to_char(ch, "Você não pode transcender durante uma luta.\r\n");
+		return;
+	}
+
+	/* Show elevation confirmation message */
+	send_to_char(ch, "Ao transcender, você se tornará um imortal e deixará para trás sua vida mortal.\r\n");
+	send_to_char(ch, "Esta decisão é irreversível.\r\n\r\n");
+	send_to_char(ch, "Deseja realmente transcender? (S/N): ");
+	
+	STATE(ch->desc) = CON_ELEVATE_CONF;
 }
 

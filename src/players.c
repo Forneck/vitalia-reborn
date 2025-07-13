@@ -38,6 +38,8 @@
 /* local functions */
 static void load_affects(FILE *fl, struct char_data *ch);
 static void load_skills(FILE *fl, struct char_data *ch);
+static void load_retained_skills(FILE *fl, struct char_data *ch);
+static void load_class_history(FILE *fl, struct char_data *ch);
 static void load_quests(FILE *fl, struct char_data *ch);
 static void load_HMVS(struct char_data *ch, const char *line, int mode);
 static void write_aliases_ascii(FILE *file, struct char_data *ch);
@@ -250,6 +252,8 @@ int load_char(const char *name, struct char_data *ch)
     ch->affected = NULL;
     for (i = 1; i <= MAX_SKILLS; i++)
       GET_SKILL(ch, i) = 0;
+    for (i = 1; i <= MAX_SKILLS; i++)
+      ch->player_specials->saved.retained_skills[i] = 0;
     GET_SEX(ch) = PFDEF_SEX;
     GET_CLASS(ch) = PFDEF_CLASS;
     GET_LEVEL(ch) = PFDEF_LEVEL;
@@ -355,6 +359,7 @@ GET_BREATH(ch) = PFDEF_BREATH;
       case 'C':
 	     if (!strcmp(tag, "Cha "))	ch->real_abils.cha	= atoi(line);
 	else if (!strcmp(tag, "Clas"))	GET_CLASS(ch)		= atoi(line);
+	else if (!strcmp(tag, "ClHs"))	load_class_history(fl, ch);
 	else if (!strcmp(tag, "Con "))	ch->real_abils.con	= atoi(line);
 	break;
 
@@ -452,6 +457,7 @@ GET_BREATH(ch) = PFDEF_BREATH;
       case 'R':
 	     if (!strcmp(tag, "Room"))	GET_LOADROOM(ch)	= atoi(line);
 	      if (!strcmp(tag, "Remo"))	GET_REMORT(ch)	= atoi(line);
+	else if (!strcmp(tag, "RtSk"))	load_retained_skills(fl, ch);
 	break;
 
       case 'S':
@@ -721,6 +727,42 @@ void save_char(struct char_data * ch)
     fprintf(fl, "0 0\n");
   }
 
+  /* Save retained skills from previous incarnations */
+  {
+    int has_retained = 0;
+    for (i = 1; i <= MAX_SKILLS; i++) {
+      if (ch->player_specials->saved.retained_skills[i]) {
+        has_retained = 1;
+        break;
+      }
+    }
+    if (has_retained) {
+      fprintf(fl, "RtSk:\n");
+      for (i = 1; i <= MAX_SKILLS; i++) {
+        if (ch->player_specials->saved.retained_skills[i])
+          fprintf(fl, "%d %d\n", i, ch->player_specials->saved.retained_skills[i]);
+      }
+      fprintf(fl, "0 0\n");
+    }
+    
+    /* Save class history */
+    int has_history = 0;
+    for (i = 0; i < ch->player_specials->saved.num_incarnations && i < 100; i++) {
+      if (ch->player_specials->saved.class_history[i] >= 0) {
+        has_history = 1;
+        break;
+      }
+    }
+    if (has_history) {
+      fprintf(fl, "ClHs:\n");
+      for (i = 0; i < ch->player_specials->saved.num_incarnations && i < 100; i++) {
+        if (ch->player_specials->saved.class_history[i] >= 0)
+          fprintf(fl, "%d %d\n", i, ch->player_specials->saved.class_history[i]);
+      }
+      fprintf(fl, "-1 -1\n");
+    }
+  }
+
   /* Save affects */
   if (tmp_aff[0].spell > 0) {
     fprintf(fl, "Affs:\n");
@@ -913,6 +955,37 @@ static void load_skills(FILE *fl, struct char_data *ch)
     sscanf(line, "%d %d", &num, &num2);
       if (num != 0)
 	GET_SKILL(ch, num) = num2;
+  } while (num != 0);
+}
+
+static void load_class_history(FILE *fl, struct char_data *ch)
+{
+  int incarnation = 0, class_num = 0;
+  char line[MAX_INPUT_LENGTH + 1];
+
+  /* Initialize class history array */
+  for (int i = 0; i < 100; i++) {
+    ch->player_specials->saved.class_history[i] = -1;
+  }
+
+  do {
+    get_line(fl, line);
+    sscanf(line, "%d %d", &incarnation, &class_num);
+    if (incarnation != -1 && incarnation >= 0 && incarnation < 100 && class_num >= 0)
+      ch->player_specials->saved.class_history[incarnation] = class_num;
+  } while (incarnation != -1);
+}
+
+static void load_retained_skills(FILE *fl, struct char_data *ch)
+{
+  int num = 0, num2 = 0;
+  char line[MAX_INPUT_LENGTH + 1];
+
+  do {
+    get_line(fl, line);
+    sscanf(line, "%d %d", &num, &num2);
+      if (num != 0)
+	ch->player_specials->saved.retained_skills[num] = num2;
   } while (num != 0);
 }
 

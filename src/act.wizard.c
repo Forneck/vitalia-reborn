@@ -3317,6 +3317,7 @@ static struct set_struct {
    { "maxbreath",       LVL_GOD, PC, NUMBER},
    { "transcendeu",     LVL_GOD, PC, BINARY},
    { "espirito",        LVL_GOD, PC, BINARY},
+   { "incarnations",    LVL_GOD, PC, NUMBER},
    { "wasclass",        LVL_IMPL,    PC,  MISC },
    { "\n", 0, BOTH, MISC }                                                          };
 
@@ -3825,7 +3826,10 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
 	case 62:
 		SET_OR_REMOVE(PLR_FLAGS(vict), PLR_GHOST);
 		break;
-	case 63: /*WAS CLASS*/
+	case 63: /* incarnations */
+		GET_REMORT(vict) = RANGE(0, 1000);
+		break;
+	case 64: /*WAS CLASS*/
 		if ((i = parse_class(*val_arg)) == CLASS_UNDEFINED) {
 			send_to_char(ch, "That is not a class.\r\n");
 			return (0);
@@ -6402,4 +6406,364 @@ ACMD(do_gstats)
         send_to_char(ch, "%2d-%2d: %-20s (%d mobs)\r\n", 
                      i*10, i*10+9, bar, ranges[i]);
     }
+}
+
+/*
+ * rskill command - Manage retained skills for players
+ */
+ACMD(do_rskill)
+{
+    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH], arg3[MAX_INPUT_LENGTH];
+    struct char_data *vict = NULL;
+    int skill_num, skill_value;
+    
+    one_argument(two_arguments(argument, arg1, arg2), arg3);
+    
+    if (!*arg1) {
+        send_to_char(ch, "Usage: rskill <player> <list|add|remove> [skill_num] [value]\r\n");
+        send_to_char(ch, "       rskill <player> list - Show all retained skills\r\n");
+        send_to_char(ch, "       rskill <player> add <skill_num> <value> - Add/set retained skill\r\n");
+        send_to_char(ch, "       rskill <player> remove <skill_num> - Remove retained skill\r\n");
+        return;
+    }
+    
+    /* Find the target player */
+    if (!(vict = get_player_vis(ch, arg1, NULL, FIND_CHAR_WORLD))) {
+        send_to_char(ch, "There is no such player online.\r\n");
+        return;
+    }
+    
+    if (IS_NPC(vict)) {
+        send_to_char(ch, "You can't manage retained skills for NPCs.\r\n");
+        return;
+    }
+    
+    if (!*arg2) {
+        send_to_char(ch, "Specify an action: list, add, or remove.\r\n");
+        return;
+    }
+    
+    if (!str_cmp(arg2, "list")) {
+        /* List all retained skills */
+        int found = 0;
+        send_to_char(ch, "\r\nRetained skills for %s:\r\n", GET_NAME(vict));
+        send_to_char(ch, "Skill#  Value  Skill Name\r\n");
+        send_to_char(ch, "------  -----  ----------\r\n");
+        
+        for (int i = 1; i <= MAX_SKILLS; i++) {
+            if (vict->player_specials->saved.retained_skills[i] > 0) {
+                send_to_char(ch, "%6d  %5d  %s\r\n", 
+                    i, vict->player_specials->saved.retained_skills[i], 
+                    skill_name(i));
+                found++;
+            }
+        }
+        
+        if (!found) {
+            send_to_char(ch, "No retained skills found.\r\n");
+        } else {
+            send_to_char(ch, "\r\nTotal: %d retained skills.\r\n", found);
+        }
+        return;
+    }
+    
+    if (!str_cmp(arg2, "add")) {
+        char arg4[MAX_INPUT_LENGTH];
+        
+        if (!*arg3) {
+            send_to_char(ch, "Specify a skill number to add.\r\n");
+            return;
+        }
+        
+        skill_num = atoi(arg3);
+        if (skill_num < 1 || skill_num > MAX_SKILLS) {
+            send_to_char(ch, "Skill number must be between 1 and %d.\r\n", MAX_SKILLS);
+            return;
+        }
+        
+        /* Check if there's a 4th argument for skill value */
+        one_argument(argument, arg4); /* Skip first 3 args */
+        one_argument(argument + strlen(arg1) + 1, arg4);
+        one_argument(argument + strlen(arg1) + strlen(arg2) + 2, arg4);
+        one_argument(argument + strlen(arg1) + strlen(arg2) + strlen(arg3) + 3, arg4);
+        
+        if (*arg4) {
+            skill_value = atoi(arg4);
+            if (skill_value < 1 || skill_value > 100) {
+                send_to_char(ch, "Skill value must be between 1 and 100.\r\n");
+                return;
+            }
+        } else {
+            skill_value = GET_SKILL(vict, skill_num);
+            if (skill_value <= 0) {
+                send_to_char(ch, "Player doesn't know that skill. Specify a value.\r\n");
+                return;
+            }
+        }
+        
+        vict->player_specials->saved.retained_skills[skill_num] = skill_value;
+        send_to_char(ch, "Added retained skill %d (%s) with value %d for %s.\r\n",
+            skill_num, skill_name(skill_num),
+            skill_value, GET_NAME(vict));
+        return;
+    }
+    
+    if (!str_cmp(arg2, "remove")) {
+        if (!*arg3) {
+            send_to_char(ch, "Specify a skill number to remove.\r\n");
+            return;
+        }
+        
+        skill_num = atoi(arg3);
+        if (skill_num < 1 || skill_num > MAX_SKILLS) {
+            send_to_char(ch, "Skill number must be between 1 and %d.\r\n", MAX_SKILLS);
+            return;
+        }
+        
+        if (vict->player_specials->saved.retained_skills[skill_num] <= 0) {
+            send_to_char(ch, "Player doesn't have that skill retained.\r\n");
+            return;
+        }
+        
+        int old_value = vict->player_specials->saved.retained_skills[skill_num];
+        vict->player_specials->saved.retained_skills[skill_num] = 0;
+        send_to_char(ch, "Removed retained skill %d (%s, was %d%%) from %s.\r\n",
+            skill_num, skill_name(skill_num),
+            old_value, GET_NAME(vict));
+        return;
+    }
+    
+    send_to_char(ch, "Invalid action. Use: list, add, or remove.\r\n");
+}
+
+/*
+ * rstats command - Display remort and skill statistics
+ */
+ACMD(do_rstats)
+{
+    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
+    struct char_data *target_player = NULL;
+    int i;
+    
+    two_arguments(argument, arg1, arg2);
+    
+    if (!*arg1) {
+        send_to_char(ch, "Usage: rstats <type> [target]\r\n");
+        send_to_char(ch, "Types:\r\n");
+        send_to_char(ch, "  classes     - Most/least prevalent classes across all players\r\n");
+        send_to_char(ch, "  skills      - Most popular retained skills across all players\r\n");
+        send_to_char(ch, "  player <name> - Show individual player's class history and skills\r\n");
+        return;
+    }
+    
+    if (!str_cmp(arg1, "classes")) {
+        /* Analyze class distribution across all players */
+        int class_counts[NUM_CLASSES] = {0};
+        int total_players = 0;
+        
+        /* Count online players */
+        struct descriptor_data *d;
+        for (d = descriptor_list; d; d = d->next) {
+            if (STATE(d) != CON_PLAYING || !d->character || IS_NPC(d->character))
+                continue;
+            
+            total_players++;
+            /* Count class history */
+            for (i = 0; i < NUM_CLASSES; i++) {
+                if (WAS_FLAGGED(d->character, i)) {
+                    class_counts[i]++;
+                }
+            }
+        }
+        
+        send_to_char(ch, "\r\n@Y--- Class Distribution Statistics ---@n\r\n");
+        send_to_char(ch, "@WTotal Players Analyzed:@n %d (online only)\r\n\r\n", total_players);
+        
+        if (total_players == 0) {
+            send_to_char(ch, "No players found to analyze.\r\n");
+            return;
+        }
+        
+        /* Sort classes by prevalence */
+        struct class_stat_s {
+            int class_num;
+            int count;
+            float percentage;
+        } class_stats[NUM_CLASSES];
+        int j;
+        
+        for (i = 0; i < NUM_CLASSES; i++) {
+            class_stats[i].class_num = i;
+            class_stats[i].count = class_counts[i];
+            class_stats[i].percentage = (float)class_counts[i] * 100.0 / total_players;
+        }
+        
+        /* Simple bubble sort by count */
+        for (i = 0; i < NUM_CLASSES - 1; i++) {
+            for (j = i + 1; j < NUM_CLASSES; j++) {
+                if (class_stats[i].count < class_stats[j].count) {
+                    struct class_stat_s temp = class_stats[i];
+                    class_stats[i] = class_stats[j];
+                    class_stats[j] = temp;
+                }
+            }
+        }
+        
+        send_to_char(ch, "@WRank  Class      Count   Percentage@n\r\n");
+        send_to_char(ch, "----  ---------  -----   ----------\r\n");
+        
+        for (i = 0; i < NUM_CLASSES; i++) {
+            send_to_char(ch, "%4d  %-9s  %5d   %6.1f%%\r\n",
+                i + 1, pc_class_types[class_stats[i].class_num],
+                class_stats[i].count, class_stats[i].percentage);
+        }
+        
+        return;
+    }
+    
+    if (!str_cmp(arg1, "skills")) {
+        /* Analyze retained skill distribution */
+        int skill_counts[MAX_SKILLS + 1] = {0};
+        int total_players = 0;
+        
+        /* Count online players and their retained skills */
+        struct descriptor_data *d;
+        for (d = descriptor_list; d; d = d->next) {
+            if (STATE(d) != CON_PLAYING || !d->character || IS_NPC(d->character))
+                continue;
+            
+            total_players++;
+            for (i = 1; i <= MAX_SKILLS; i++) {
+                if (d->character->player_specials->saved.retained_skills[i] > 0) {
+                    skill_counts[i]++;
+                }
+            }
+        }
+        
+        send_to_char(ch, "\r\n@Y--- Retained Skills Statistics ---@n\r\n");
+        send_to_char(ch, "@WTotal Players Analyzed:@n %d (online only)\r\n\r\n", total_players);
+        
+        if (total_players == 0) {
+            send_to_char(ch, "No players found to analyze.\r\n");
+            return;
+        }
+        
+        /* Find top 20 most popular retained skills */
+        struct skill_stat_s {
+            int skill_num;
+            int count;
+            float percentage;
+        } top_skills[20];
+        int top_count = 0;
+        int j;
+        for (i = 1; i <= MAX_SKILLS && top_count < 20; i++) {
+            if (skill_counts[i] > 0) {
+                top_skills[top_count].skill_num = i;
+                top_skills[top_count].count = skill_counts[i];
+                top_skills[top_count].percentage = (float)skill_counts[i] * 100.0 / total_players;
+                top_count++;
+            }
+        }
+        
+        /* Sort by count */
+        for (i = 0; i < top_count - 1; i++) {
+            for (j = i + 1; j < top_count; j++) {
+                if (top_skills[i].count < top_skills[j].count) {
+                    struct skill_stat_s temp = top_skills[i];
+                    top_skills[i] = top_skills[j];
+                    top_skills[j] = temp;
+                }
+            }
+        }
+        
+        send_to_char(ch, "@WTop Retained Skills:@n\r\n");
+        send_to_char(ch, "Rank  Skill#  Count   %%     Skill Name\r\n");
+        send_to_char(ch, "----  ------  -----   ----  ----------\r\n");
+        
+        for (i = 0; i < top_count && i < 15; i++) {
+            send_to_char(ch, "%4d  %6d  %5d  %5.1f%%  %s\r\n",
+                i + 1, top_skills[i].skill_num, top_skills[i].count,
+                top_skills[i].percentage, skill_name(top_skills[i].skill_num));
+        }
+        
+        return;
+    }
+    
+    if (!str_cmp(arg1, "player")) {
+        if (!*arg2) {
+            send_to_char(ch, "Specify a player name to analyze.\r\n");
+            return;
+        }
+        
+        /* Find the target player */
+        if (!(target_player = get_player_vis(ch, arg2, NULL, FIND_CHAR_WORLD))) {
+            send_to_char(ch, "There is no such player online.\r\n");
+            return;
+        }
+        
+        if (IS_NPC(target_player)) {
+            send_to_char(ch, "You can't analyze NPCs.\r\n");
+            return;
+        }
+        
+        send_to_char(ch, "\r\n@Y--- Player Analysis: %s ---@n\r\n", GET_NAME(target_player));
+        send_to_char(ch, "@WCurrent Class:@n %s\r\n", pc_class_types[GET_CLASS(target_player)]);
+        send_to_char(ch, "@WRemort Count:@n %d\r\n", GET_REMORT(target_player));
+        
+        /* Show class progression history */
+        send_to_char(ch, "\r\n@WClass Progression History:@n\r\n");
+        int has_history = 0;
+        for (i = 0; i < GET_REMORT(target_player) && i < 100; i++) {
+            int class_num = target_player->player_specials->saved.class_history[i];
+            if (class_num >= 0 && class_num < NUM_CLASSES) {
+                if (!has_history) {
+                    send_to_char(ch, "  ");
+                    has_history = 1;
+                } else {
+                    send_to_char(ch, " -> ");
+                }
+                send_to_char(ch, "%s", pc_class_types[class_num]);
+            }
+        }
+        if (has_history) {
+            send_to_char(ch, " -> %s (current)\r\n", pc_class_types[GET_CLASS(target_player)]);
+        } else {
+            send_to_char(ch, "  No progression history recorded.\r\n");
+        }
+        
+        /* Show class history */
+        send_to_char(ch, "\r\n@WClasses Ever Experienced:@n\r\n");
+        int class_history_count = 0;
+        for (i = 0; i < NUM_CLASSES; i++) {
+            if (WAS_FLAGGED(target_player, i)) {
+                send_to_char(ch, "  %s\r\n", pc_class_types[i]);
+                class_history_count++;
+            }
+        }
+        
+        if (class_history_count == 0) {
+            send_to_char(ch, "  No previous incarnations recorded.\r\n");
+        }
+        
+        /* Show retained skills */
+        send_to_char(ch, "\r\n@WRetained Skills:@n\r\n");
+        int retained_count = 0;
+        for (i = 1; i <= MAX_SKILLS; i++) {
+            if (target_player->player_specials->saved.retained_skills[i] > 0) {
+                send_to_char(ch, "  %3d. %s (%d%%)\r\n", 
+                    i, skill_name(i), target_player->player_specials->saved.retained_skills[i]);
+                retained_count++;
+            }
+        }
+        
+        if (retained_count == 0) {
+            send_to_char(ch, "  No retained skills.\r\n");
+        } else {
+            send_to_char(ch, "\r\n@WTotal Retained Skills:@n %d\r\n", retained_count);
+        }
+        
+        return;
+    }
+    
+    send_to_char(ch, "Invalid statistics type. Use: classes, skills, or player <name>\r\n");
 }

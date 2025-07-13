@@ -264,11 +264,15 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"reply", "r", POS_SLEEPING, do_reply, 0, 0, CMD_NOARG},
 	{"rest", "res", POS_RESTING, do_rest, 0, 0, CMD_NOARG},
 	{"read", "rea", POS_RESTING, do_look, 0, SCMD_READ, CMD_ONEARG},
+	{"rebegin", "rebegin", POS_STANDING, do_rebegin, 0, 0, CMD_NOARG},
+	{"elevate", "elevate", POS_STANDING, do_elevate, 0, 0, CMD_NOARG},
 	{"reload", "reload", POS_DEAD, do_reboot, LVL_IMPL, 0, CMD_NOARG},
 	{"recall", "reca", POS_RESTING, do_recall, 0, 0, CMD_NOARG},
 	{"recite", "reci", POS_RESTING, do_use, 0, SCMD_RECITE, CMD_TWOARG},
 	{"receive", "rece", POS_STANDING, do_not_here, 1, 0, CMD_NOARG},
 	{"recent", "recent", POS_DEAD, do_recent, LVL_IMMORT, 0, CMD_NOARG},
+	{"rskill", "rskill", POS_DEAD, do_rskill, LVL_GOD, 0, CMD_TWOARG},
+	{"rstats", "rstats", POS_DEAD, do_rstats, LVL_IMMORT, 0, CMD_TWOARG},
 	{"remove", "rem", POS_RESTING, do_remove, 0, 0, CMD_ONEARG},
 	{"rent", "rent", POS_STANDING, do_not_here, 1, 0, CMD_NOARG},
 	{"report", "repo", POS_RESTING, do_report, 0, 0, CMD_NOARG},
@@ -1724,7 +1728,8 @@ void nanny(struct descriptor_data *d, char *arg)
 		else
 		{
 			save_char(d->character);
-			write_to_output(d, "\r\nSua senha foi alterada com sucesso.\r\n%s", CONFIG_MENU);
+			write_to_output(d, "\r\nSua senha foi alterada com sucesso.\r\n");
+			show_menu_with_options(d);
 			STATE(d) = CON_MENU;
 		}
 		break;
@@ -1794,7 +1799,7 @@ void nanny(struct descriptor_data *d, char *arg)
 		}
 		break;
 	case CON_RMOTD:			/* read CR after printing motd */
-		write_to_output(d, "%s", CONFIG_MENU);
+		show_menu_with_options(d);
 		if (IS_HAPPYHOUR > 0)
 		{
 			write_to_output(d, "\r\n");
@@ -1871,13 +1876,36 @@ void nanny(struct descriptor_data *d, char *arg)
 				echo_off(d);
 				STATE(d) = CON_CHPWD_GETOLD;
 				break;
+			case '5':
+				if (can_rebegin(d->character)) {
+					/* Show rebegin information */
+					send_to_char(d->character, "%s", rebegin);
+					show_class_skills(d->character, GET_CLASS(d->character));
+					STATE(d) = CON_RB_SKILL;
+				} else {
+					write_to_output(d, "\r\nVocê não pode renascer neste momento.\r\n");
+					show_menu_with_options(d);
+				}
+				break;
+			case '6':
+				if (can_elevate(d->character)) {
+					write_to_output(d, "Ao transcender, você se tornará um imortal e deixará para trás sua vida mortal.\r\n");
+					write_to_output(d, "Esta decisão é irreversível.\r\n\r\n");
+					write_to_output(d, "Deseja realmente transcender? (S/N): ");
+					STATE(d) = CON_ELEVATE_CONF;
+				} else {
+					write_to_output(d, "\r\nVocê não pode transcender neste momento.\r\n");
+					show_menu_with_options(d);
+				}
+				break;
 			case '9':
 				write_to_output(d, "\r\nEntre com a sua senha para verificacao: ");
 				echo_off(d);
 				STATE(d) = CON_DELCNF1;
 				break;
 			default:
-				write_to_output(d, "\r\nOpcao Invalida!\r\n%s", CONFIG_MENU);
+				write_to_output(d, "\r\nOpcao Invalida!\r\n");
+				show_menu_with_options(d);
 				break;
 			}
 			break;
@@ -1888,7 +1916,8 @@ void nanny(struct descriptor_data *d, char *arg)
 			(CRYPT(arg, GET_PASSWD(d->character)), GET_PASSWD(d->character), MAX_PWD_LENGTH))
 		{
 			echo_on(d);
-			write_to_output(d, "\r\nSenha incorreta.\r\n%s", CONFIG_MENU);
+			write_to_output(d, "\r\nSenha incorreta.\r\n");
+			show_menu_with_options(d);
 			STATE(d) = CON_MENU;
 		}
 		else
@@ -1950,7 +1979,8 @@ void nanny(struct descriptor_data *d, char *arg)
 		}
 		else
 		{
-			write_to_output(d, "\r\nSeu personagem não foi apagado.\r\n%s", CONFIG_MENU);
+			write_to_output(d, "\r\nSeu personagem não foi apagado.\r\n");
+			show_menu_with_options(d);
 			STATE(d) = CON_MENU;
 		}
 		break;
@@ -1959,6 +1989,130 @@ void nanny(struct descriptor_data *d, char *arg)
 		   them. */
 	case CON_CLOSE:
 		break;
+	case CON_RB_SKILL:			/* rebegin: choose skill to retain */
+		{
+			int skill_num = atoi(arg);
+			if (skill_num < 0 || skill_num > MAX_SKILLS) {
+				write_to_output(d, "Número inválido. Digite novamente: ");
+				return;
+			}
+			if (skill_num != 0 && GET_SKILL(d->character, skill_num) <= 0) {
+				write_to_output(d, "Você não tem essa habilidade. Digite novamente: ");
+				return;
+			}
+			
+			/* Save the selected skill to retained skills */
+			if (skill_num > 0) {
+				d->character->player_specials->saved.retained_skills[skill_num] = GET_SKILL(d->character, skill_num);
+				write_to_output(d, "Habilidade %s será mantida.\r\n", skill_name(skill_num));
+			} else {
+				write_to_output(d, "Nenhuma habilidade será mantida.\r\n");
+			}
+			
+			write_to_output(d, "\r\nEscolha sua nova classe:\r\n");
+			write_to_output(d, "%s", class_menu);
+			STATE(d) = CON_RB_NEW_CLASS;
+		}
+		break;
+	case CON_RB_NEW_CLASS:		/* rebegin: choose new class */
+		load_result = parse_class(*arg);
+		if (load_result == CLASS_UNDEFINED) {
+			write_to_output(d, "Isso não é uma classe válida.\r\nClasse: ");
+			return;
+		}
+		/* Check if class was already used */
+		if (WAS_FLAGGED(d->character, load_result)) {
+			write_to_output(d, "Você já viveu como essa classe. Escolha outra.\r\nClasse: ");
+			return;
+		}
+		/* Mark current class as used and add to class history */
+		SET_BIT_AR(d->character->player_specials->saved.was_class, GET_CLASS(d->character));
+		
+		/* Record in class history for statistics */
+		int num_incarnations = d->character->player_specials->saved.num_incarnations;
+		if (num_incarnations < 100) { /* Prevent overflow */
+			d->character->player_specials->saved.class_history[num_incarnations] = GET_CLASS(d->character);
+		}
+		GET_CLASS(d->character) = load_result;
+		write_to_output(d, "\r\nRolando novos atributos...\r\n");
+		STATE(d) = CON_RB_REROLL;
+		break;
+	case CON_RB_REROLL:			/* rebegin: reroll attributes */
+		roll_real_abils(d->character);
+		write_to_output(d, "Força: %d, Inteligência: %d, Sabedoria: %d, Destreza: %d, Constituição: %d, Carisma: %d\r\n",
+			GET_STR(d->character), GET_INT(d->character), GET_WIS(d->character),
+			GET_DEX(d->character), GET_CON(d->character), GET_CHA(d->character));
+		write_to_output(d, "Aceitar estes atributos? (s/N): ");
+		STATE(d) = CON_RB_QHOME;
+		break;
+	case CON_RB_QHOME:			/* rebegin: reroll or accept attributes */
+		if (!*arg || (*arg != 's' && *arg != 'S' && *arg != 'n' && *arg != 'N')) {
+			write_to_output(d, "Por favor, responda s ou n: ");
+			return;
+		}
+		if (*arg == 'n' || *arg == 'N') {
+			roll_real_abils(d->character);
+			write_to_output(d, "Força: %d, Inteligência: %d, Sabedoria: %d, Destreza: %d, Constituição: %d, Carisma: %d\r\n",
+				GET_STR(d->character), GET_INT(d->character), GET_WIS(d->character),
+				GET_DEX(d->character), GET_CON(d->character), GET_CHA(d->character));
+			write_to_output(d, "Aceitar estes atributos? (s/N): ");
+			return;
+		}
+		
+		/* Finalize rebegin process */
+		GET_REMORT(d->character)++;
+		GET_LEVEL(d->character) = 1;
+		GET_EXP(d->character) = 1;
+		GET_GOLD(d->character) = 0;
+		GET_BANK_GOLD(d->character) = 0;
+		GET_HIT(d->character) = GET_MAX_HIT(d->character);
+		GET_MANA(d->character) = GET_MAX_MANA(d->character);
+		GET_MOVE(d->character) = GET_MAX_MOVE(d->character);
+		
+		/* Initialize character for new class */
+		do_start(d->character);
+		
+		/* Restore retained skills */
+		{
+			int i;
+			for (i = 1; i <= MAX_SKILLS; i++) {
+				if (d->character->player_specials->saved.retained_skills[i] > 0) {
+					SET_SKILL(d->character, i, d->character->player_specials->saved.retained_skills[i]);
+				}
+			}
+		}
+		
+		save_char(d->character);
+		
+		write_to_output(d, "\r\nVocê renasceu com sucesso! Bem-vindo à sua nova vida.\r\n");
+		write_to_output(d, "*** APERTE ENTER: ");
+		STATE(d) = CON_RMOTD;
+		break;
+		
+	case CON_ELEVATE_CONF:		/* elevate: confirmation */
+		if (!*arg || (*arg != 's' && *arg != 'S' && *arg != 'n' && *arg != 'N')) {
+			write_to_output(d, "Por favor, responda s ou n: ");
+			return;
+		}
+		if (*arg == 'n' || *arg == 'N') {
+			write_to_output(d, "\r\nTranscendência cancelada.\r\n");
+			write_to_output(d, "*** APERTE ENTER: ");
+			STATE(d) = CON_RMOTD;
+			return;
+		}
+		
+		/* Finalize elevation process */
+		GET_LEVEL(d->character) = LVL_IMMORT;
+		GET_EXP(d->character) = level_exp(GET_CLASS(d->character), LVL_IMMORT);
+		
+		save_char(d->character);
+		
+		write_to_output(d, "\r\nParabéns! Você transcendeu e se tornou um imortal!\r\n");
+		write_to_output(d, "Bem-vindo ao reino dos imortais.\r\n");
+		write_to_output(d, "*** APERTE ENTER: ");
+		STATE(d) = CON_RMOTD;
+		break;
+		
 	default:
 		log1("SYSERR: Nanny: illegal state of con'ness (%d) for '%s'; closing connection.",
 			 STATE(d), d->character ? GET_NAME(d->character) : "<unknown>");

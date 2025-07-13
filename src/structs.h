@@ -394,8 +394,9 @@
 #define CON_RB_NEW_CLASS 37
 #define CON_RB_REROLL 38
 #define CON_RB_QHOME 39
-#define CON_IMM_CONF 40
-#define CON_REMOTE 41
+#define CON_ELEVATE_CONF 40
+#define CON_IMM_CONF 41
+#define CON_REMOTE 42
 
 /* OLC States range - used by IS_IN_OLC and IS_PLAYING */
 #define FIRST_OLC_STATE CON_OEDIT     /**< The first CON_ state that is an OLC */
@@ -1188,6 +1189,8 @@ struct player_special_data_saved
   
   int karma;
   int was_class[RM_ARRAY_MAX]; /**< array of remorted classes */
+  int class_history[100]; /**< chronological sequence of classes (class numbers) */
+  int retained_skills[MAX_SKILLS+1]; /**< skills retained from previous incarnations */
 };
 
 /** Specials needed only by PCs, not NPCs.  Space for this structure is
