@@ -1030,6 +1030,64 @@ void clear_mob_quest(struct char_data *mob)
   mob->ai_data->quest_counter = 0;
 }
 
+/* Clear a quest from a mob with failure penalty */
+void fail_mob_quest(struct char_data *mob, const char *reason)
+{
+  qst_rnum rnum;
+  qst_vnum vnum;
+  
+  if (!IS_NPC(mob) || !mob->ai_data)
+    return;
+  
+  vnum = GET_MOB_QUEST(mob);
+  if (vnum == NOTHING) {
+    clear_mob_quest(mob);
+    return;
+  }
+  
+  rnum = real_quest(vnum);
+  if (rnum == NOTHING) {
+    clear_mob_quest(mob);
+    return;
+  }
+  
+  /* Apply genetics penalties based on quest type */
+  switch (QST_TYPE(rnum)) {
+    case AQ_OBJ_FIND:
+    case AQ_ROOM_FIND:
+    case AQ_MOB_FIND:
+      /* Exploration quest failures decrease adventurer_tendency */
+      if (mob->ai_data->genetics.adventurer_tendency > 0) {
+        mob->ai_data->genetics.adventurer_tendency = MAX(0, mob->ai_data->genetics.adventurer_tendency - rand() % 3 - 1);
+      }
+      break;
+    case AQ_MOB_KILL:
+    case AQ_MOB_KILL_BOUNTY:
+    case AQ_PLAYER_KILL:
+    case AQ_MOB_SAVE:
+    case AQ_ROOM_CLEAR:
+    case AQ_OBJ_RETURN:
+      /* All other quest failures decrease quest_tendency */
+      if (mob->ai_data->genetics.quest_tendency > 0) {
+        mob->ai_data->genetics.quest_tendency = MAX(0, mob->ai_data->genetics.quest_tendency - rand() % 2 - 1);
+      }
+      break;
+  }
+  
+  /* Decrease reputation slightly for failing */
+  if (mob->ai_data->reputation > 0) {
+    mob->ai_data->reputation = MAX(0, mob->ai_data->reputation - rand() % 5 - 1);
+  }
+  
+  /* Log the failure */
+  log1("QUEST FAILURE: %s failed quest %d (%s)", GET_NAME(mob), vnum, reason);
+  
+  /* Clear the quest */
+  clear_mob_quest(mob);
+  
+  act("$n parece desapontado.", TRUE, mob, 0, 0, TO_ROOM);
+}
+
 /* Mob completes a quest and gets rewards */
 void mob_complete_quest(struct char_data *mob)
 {
@@ -1066,6 +1124,37 @@ void mob_complete_quest(struct char_data *mob)
   /* Increase reputation */
   if (mob->ai_data->reputation < 100) {
     mob->ai_data->reputation = MIN(100, mob->ai_data->reputation + rand() % 10 + 1);
+  }
+  
+  /* Increase genetics based on quest type */
+  switch (QST_TYPE(rnum)) {
+    case AQ_OBJ_FIND:
+    case AQ_ROOM_FIND:
+    case AQ_MOB_FIND:
+      /* Exploration quests increase adventurer_tendency */
+      if (mob->ai_data->genetics.adventurer_tendency < 100) {
+        mob->ai_data->genetics.adventurer_tendency = MIN(100, mob->ai_data->genetics.adventurer_tendency + rand() % 3 + 1);
+      }
+      break;
+    case AQ_MOB_KILL:
+    case AQ_MOB_KILL_BOUNTY:
+    case AQ_PLAYER_KILL:
+    case AQ_MOB_SAVE:
+    case AQ_ROOM_CLEAR:
+      /* Combat/protection quests increase quest_tendency moderately */
+      if (mob->ai_data->genetics.quest_tendency < 100) {
+        mob->ai_data->genetics.quest_tendency = MIN(100, mob->ai_data->genetics.quest_tendency + rand() % 2 + 1);
+      }
+      break;
+    case AQ_OBJ_RETURN:
+      /* Return quests increase both genetics slightly */
+      if (mob->ai_data->genetics.quest_tendency < 100) {
+        mob->ai_data->genetics.quest_tendency = MIN(100, mob->ai_data->genetics.quest_tendency + 1);
+      }
+      if (mob->ai_data->genetics.adventurer_tendency < 100) {
+        mob->ai_data->genetics.adventurer_tendency = MIN(100, mob->ai_data->genetics.adventurer_tendency + 1);
+      }
+      break;
   }
   
   /* Clear the quest */
@@ -1126,6 +1215,18 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
           if (QST_TARGET(rnum) == GET_MOB_VNUM(i)) {
             if (--ch->ai_data->quest_counter <= 0)
               mob_complete_quest(ch);
+          }
+      break;
+    case AQ_MOB_SAVE:
+      /* Mob save quests complete when the target mob is in the same room and healthy */
+      for (i = world[IN_ROOM(ch)].people; i; i = i->next_in_room)
+        if (IS_NPC(i))
+          if (QST_TARGET(rnum) == GET_MOB_VNUM(i)) {
+            /* Check if the mob is "saved" (healthy and not in combat) */
+            if (GET_HIT(i) > GET_MAX_HIT(i) * 0.8 && !FIGHTING(i)) {
+              if (--ch->ai_data->quest_counter <= 0)
+                mob_complete_quest(ch);
+            }
           }
       break;
     case AQ_ROOM_CLEAR:

@@ -2413,6 +2413,14 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     /* Remove da wishlist temporariamente */
     remove_item_from_wishlist(ch, item_vnum);
     
+    /* Deduz o ouro do mob */
+    GET_GOLD(ch) -= calculated_reward;
+    
+    /* Aumenta quest_tendency por postar uma quest */
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+    
     /* Mensagens para jogadores */
     act("$n escreve algo num pergaminho e o envia para o questmaster.", 
         FALSE, ch, 0, 0, TO_ROOM);
@@ -2605,6 +2613,11 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
     /* Deduz o ouro do mob */
     GET_GOLD(ch) -= calculated_reward;
     
+    /* Aumenta quest_tendency por postar uma quest */
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+    
     /* Aumenta ligeiramente a reputação por postar uma quest */
     if (ch->ai_data->reputation < 100) {
         ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + 1);
@@ -2630,6 +2643,600 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
         log1("COMBAT QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
     } else {
         log1("SYSERR: Failed to save combat quest %d to disk", new_quest_vnum);
+    }
+}
+
+/**
+ * Faz um mob postar uma quest de exploração (AQ_OBJ_FIND, AQ_ROOM_FIND, AQ_MOB_FIND).
+ * @param ch O mob que posta a quest
+ * @param quest_type Tipo da quest (AQ_OBJ_FIND, AQ_ROOM_FIND, ou AQ_MOB_FIND)
+ * @param target_vnum VNUM do alvo (obj, room, ou mob)
+ * @param reward Recompensa em ouro oferecida
+ */
+void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int target_vnum, int reward)
+{
+    mob_vnum questmaster_vnum;
+    qst_vnum new_quest_vnum;
+    struct aq_data *new_quest;
+    int difficulty;
+    int calculated_reward;
+    zone_rnum mob_zone;
+    char quest_name[MAX_QUEST_NAME];
+    char quest_desc[MAX_QUEST_DESC];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+    char *target_name = "alvo desconhecido";
+    obj_rnum target_obj_rnum = NOTHING;
+    mob_rnum target_mob_rnum = NOBODY;
+    
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+    
+    /* Validar tipo de quest */
+    if (quest_type != AQ_OBJ_FIND && quest_type != AQ_ROOM_FIND && quest_type != AQ_MOB_FIND) {
+        log1("SYSERR: Invalid exploration quest type %d from %s", quest_type, GET_NAME(ch));
+        return;
+    }
+    
+    /* Obter nome do alvo */
+    if (quest_type == AQ_OBJ_FIND && target_vnum != NOTHING) {
+        target_obj_rnum = real_object(target_vnum);
+        if (target_obj_rnum != NOTHING) {
+            target_name = obj_proto[target_obj_rnum].short_description;
+        }
+    } else if (quest_type == AQ_MOB_FIND && target_vnum != NOTHING) {
+        target_mob_rnum = real_mobile(target_vnum);
+        if (target_mob_rnum != NOBODY) {
+            target_name = mob_proto[target_mob_rnum].player.short_descr;
+        }
+    } else if (quest_type == AQ_ROOM_FIND) {
+        target_name = "local específico";
+    }
+    
+    /* Encontra zona do mob */
+    mob_zone = world[IN_ROOM(ch)].zone;
+    
+    /* Encontra questmaster */
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    }
+    if (questmaster_vnum == NOBODY) {
+        log1("EXPLORATION QUEST: No questmaster found for %s in zone %d", 
+             GET_NAME(ch), mob_zone);
+        act("$n procura por alguém para ajudar, mas não encontra ninguém.", FALSE, ch, 0, 0, TO_ROOM);
+        return;
+    }
+    
+    /* Calcula dificuldade baseada no tipo de quest */
+    switch (quest_type) {
+        case AQ_OBJ_FIND:
+            difficulty = 40 + rand_number(0, 30); /* Objetos são moderadamente difíceis */
+            break;
+        case AQ_ROOM_FIND:
+            difficulty = 30 + rand_number(0, 25); /* Salas são menos difíceis */
+            break;
+        case AQ_MOB_FIND:
+            if (target_mob_rnum != NOBODY) {
+                int target_level = mob_proto[target_mob_rnum].player.level;
+                difficulty = MIN(80, MAX(20, target_level * 2));
+            } else {
+                difficulty = 50; /* Default para alvos desconhecidos */
+            }
+            break;
+        default:
+            difficulty = 40;
+            break;
+    }
+    
+    /* Calcula recompensa adequada */
+    calculated_reward = reward + (difficulty * 1.5);
+    
+    /* Seleciona item de recompensa do inventário do mob */
+    reward_item = select_mob_inventory_reward(ch, difficulty);
+    
+    /* Verifica se o mob tem ouro suficiente */
+    if (GET_GOLD(ch) < calculated_reward) {
+        calculated_reward = MAX(75, GET_GOLD(ch) / 2);
+    }
+    
+    /* Cria uma nova quest */
+    CREATE(new_quest, struct aq_data, 1);
+    
+    /* Gera VNUM único para a nova quest */
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    while (real_quest(new_quest_vnum) != NOTHING) {
+        new_quest_vnum++;
+        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
+            new_quest_vnum = zone_table[mob_zone].bot + 9000;
+        }
+    }
+    
+    /* Configura a quest */
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = quest_type;
+    new_quest->qm = questmaster_vnum;
+    new_quest->target = target_vnum;
+    new_quest->prereq = NOTHING;
+    new_quest->flags = AQ_MOB_POSTED; /* Marca como postada por mob */
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
+    
+    /* Configura valores da quest */
+    int base_questpoints = calculated_reward / 20;
+    
+    /* Bonus para quests de exploração difíceis */
+    if (difficulty >= 70) {
+        base_questpoints += 3;
+    } else if (difficulty >= 50) {
+        base_questpoints += 2;
+    }
+    
+    /* Bonus para mobs aventureiros */
+    if (GET_GENADVENTURER(ch) > 70) {
+        base_questpoints += 2;
+    } else if (GET_GENADVENTURER(ch) > 40) {
+        base_questpoints += 1;
+    }
+    
+    new_quest->value[0] = URANGE(1, base_questpoints, 12); /* Questpoints reward */
+    new_quest->value[1] = calculated_reward / 5; /* Penalty for failure */
+    new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10); /* Min level */
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15); /* Max level */
+    new_quest->value[4] = -1; /* No time limit */
+    new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
+    new_quest->value[6] = 1; /* Quantity */
+    
+    /* Configura recompensas */
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 2; /* Quests de exploração dão menos XP que combate */
+    new_quest->obj_reward = reward_item;
+    
+    /* Cria strings da quest baseadas no tipo */
+    switch (quest_type) {
+        case AQ_OBJ_FIND:
+            snprintf(quest_name, sizeof(quest_name), "Buscar: %s", target_name);
+            snprintf(quest_desc, sizeof(quest_desc), "%s procura por %s", GET_NAME(ch), target_name);
+            snprintf(quest_info, sizeof(quest_info), 
+                     "%s perdeu %s e precisa desesperadamente recuperá-lo. "
+                     "Encontre e traga este item para receber %d moedas de ouro.",
+                     GET_NAME(ch), target_name, calculated_reward);
+            snprintf(quest_done, sizeof(quest_done),
+                     "Perfeito! Você encontrou o que eu estava procurando!");
+            break;
+        case AQ_ROOM_FIND:
+            snprintf(quest_name, sizeof(quest_name), "Explorar Local");
+            snprintf(quest_desc, sizeof(quest_desc), "%s precisa de um explorador", GET_NAME(ch));
+            snprintf(quest_info, sizeof(quest_info), 
+                     "%s precisa que alguém explore um local específico (sala %d). "
+                     "Vá até lá para receber %d moedas de ouro.",
+                     GET_NAME(ch), target_vnum, calculated_reward);
+            snprintf(quest_done, sizeof(quest_done),
+                     "Excelente! Você chegou ao local que eu precisava explorar!");
+            break;
+        case AQ_MOB_FIND:
+            snprintf(quest_name, sizeof(quest_name), "Encontrar: %s", target_name);
+            snprintf(quest_desc, sizeof(quest_desc), "%s procura por %s", GET_NAME(ch), target_name);
+            snprintf(quest_info, sizeof(quest_info), 
+                     "%s está procurando por %s. Encontre esta pessoa para receber %d moedas de ouro.",
+                     GET_NAME(ch), target_name, calculated_reward);
+            snprintf(quest_done, sizeof(quest_done),
+                     "Maravilhoso! Você encontrou quem eu estava procurando!");
+            break;
+    }
+    
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Tudo bem. Talvez outro aventureiro possa ajudar.");
+    
+    /* Adiciona a quest ao sistema */
+    if (add_quest(new_quest) < 0) {
+        log1("SYSERR: Failed to add exploration quest for %s (type %d, target %d)", 
+             GET_NAME(ch), quest_type, target_vnum);
+        free_quest(new_quest);
+        return;
+    }
+    
+    /* Deduz o ouro do mob */
+    GET_GOLD(ch) -= calculated_reward;
+    
+    /* Aumenta quest_tendency por postar uma quest */
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+    
+    /* Mensagens para jogadores */
+    act("$n desenha um mapa e escreve uma nota, enviando-a para o questmaster.", 
+        FALSE, ch, 0, 0, TO_ROOM);
+    
+    /* Log da ação */
+    log1("EXPLORATION QUEST: %s (room %d) created %s quest %d (target %d) with QM %d, reward %d gold", 
+         GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)), 
+         (quest_type == AQ_OBJ_FIND) ? "object find" : 
+         (quest_type == AQ_ROOM_FIND) ? "room find" : "mob find",
+         new_quest_vnum, target_vnum, questmaster_vnum, calculated_reward);
+    
+    /* Salva quest para persistência */
+    if (save_quests(mob_zone)) {
+        log1("EXPLORATION QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
+    } else {
+        log1("SYSERR: Failed to save exploration quest %d to disk", new_quest_vnum);
+    }
+}
+
+/**
+ * Faz um mob postar uma quest de proteção (AQ_MOB_SAVE, AQ_ROOM_CLEAR).
+ * @param ch O mob que posta a quest
+ * @param quest_type Tipo da quest (AQ_MOB_SAVE ou AQ_ROOM_CLEAR)
+ * @param target_vnum VNUM do alvo (mob vnum para save, room vnum para clear)
+ * @param reward Recompensa em ouro oferecida
+ */
+void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target_vnum, int reward)
+{
+    mob_vnum questmaster_vnum;
+    qst_vnum new_quest_vnum;
+    struct aq_data *new_quest;
+    int difficulty;
+    int calculated_reward;
+    zone_rnum mob_zone;
+    char quest_name[MAX_QUEST_NAME];
+    char quest_desc[MAX_QUEST_DESC];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+    char *target_name = "alvo desconhecido";
+    mob_rnum target_mob_rnum = NOBODY;
+    
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+    
+    /* Validar tipo de quest */
+    if (quest_type != AQ_MOB_SAVE && quest_type != AQ_ROOM_CLEAR) {
+        log1("SYSERR: Invalid protection quest type %d from %s", quest_type, GET_NAME(ch));
+        return;
+    }
+    
+    /* Obter nome do alvo */
+    if (quest_type == AQ_MOB_SAVE && target_vnum != NOTHING) {
+        target_mob_rnum = real_mobile(target_vnum);
+        if (target_mob_rnum != NOBODY) {
+            target_name = mob_proto[target_mob_rnum].player.short_descr;
+        }
+    } else if (quest_type == AQ_ROOM_CLEAR) {
+        target_name = "área específica";
+    }
+    
+    /* Encontra zona do mob */
+    mob_zone = world[IN_ROOM(ch)].zone;
+    
+    /* Encontra questmaster */
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    }
+    if (questmaster_vnum == NOBODY) {
+        log1("PROTECTION QUEST: No questmaster found for %s in zone %d", 
+             GET_NAME(ch), mob_zone);
+        act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
+        return;
+    }
+    
+    /* Calcula dificuldade baseada no tipo de quest */
+    if (quest_type == AQ_MOB_SAVE) {
+        if (target_mob_rnum != NOBODY) {
+            int target_level = mob_proto[target_mob_rnum].player.level;
+            difficulty = MIN(85, MAX(35, target_level * 2.5));
+        } else {
+            difficulty = 60; /* Default para alvos desconhecidos */
+        }
+    } else { /* AQ_ROOM_CLEAR */
+        difficulty = 65 + rand_number(0, 25); /* Room clear é naturalmente difícil */
+    }
+    
+    /* Calcula recompensa adequada */
+    calculated_reward = reward + (difficulty * 1.8);
+    
+    /* Seleciona item de recompensa do inventário do mob */
+    reward_item = select_mob_inventory_reward(ch, difficulty);
+    
+    /* Verifica se o mob tem ouro suficiente */
+    if (GET_GOLD(ch) < calculated_reward) {
+        calculated_reward = MAX(80, GET_GOLD(ch) / 2);
+    }
+    
+    /* Cria uma nova quest */
+    CREATE(new_quest, struct aq_data, 1);
+    
+    /* Gera VNUM único para a nova quest */
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    while (real_quest(new_quest_vnum) != NOTHING) {
+        new_quest_vnum++;
+        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
+            new_quest_vnum = zone_table[mob_zone].bot + 9000;
+        }
+    }
+    
+    /* Configura a quest */
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = quest_type;
+    new_quest->qm = questmaster_vnum;
+    new_quest->target = target_vnum;
+    new_quest->prereq = NOTHING;
+    new_quest->flags = AQ_MOB_POSTED; /* Marca como postada por mob */
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
+    
+    /* Configura valores da quest */
+    int base_questpoints = calculated_reward / 18;
+    
+    /* Bonus para quests de proteção difíceis */
+    if (difficulty >= 75) {
+        base_questpoints += 3;
+    } else if (difficulty >= 55) {
+        base_questpoints += 2;
+    }
+    
+    /* Bonus para mobs corajosos */
+    if (GET_GENBRAVE(ch) > 70) {
+        base_questpoints += 2;
+    } else if (GET_GENBRAVE(ch) > 40) {
+        base_questpoints += 1;
+    }
+    
+    new_quest->value[0] = URANGE(2, base_questpoints, 14); /* Questpoints reward */
+    new_quest->value[1] = calculated_reward / 4; /* Penalty for failure */
+    new_quest->value[2] = MAX(8, GET_LEVEL(ch) - 8); /* Min level */
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 18); /* Max level */
+    new_quest->value[4] = -1; /* No time limit */
+    new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
+    new_quest->value[6] = 1; /* Quantity */
+    
+    /* Configura recompensas */
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 2.5; /* Quests de proteção dão XP moderado */
+    new_quest->obj_reward = reward_item;
+    
+    /* Cria strings da quest baseadas no tipo */
+    if (quest_type == AQ_MOB_SAVE) {
+        snprintf(quest_name, sizeof(quest_name), "Salvar: %s", target_name);
+        snprintf(quest_desc, sizeof(quest_desc), "%s precisa salvar %s", GET_NAME(ch), target_name);
+        snprintf(quest_info, sizeof(quest_info), 
+                 "%s está preocupado com a segurança de %s. "
+                 "Ajude a garantir que esta pessoa esteja segura para receber %d moedas de ouro.",
+                 GET_NAME(ch), target_name, calculated_reward);
+        snprintf(quest_done, sizeof(quest_done),
+                 "Obrigado! Agora posso ficar tranquilo sabendo que estão seguros!");
+    } else {
+        snprintf(quest_name, sizeof(quest_name), "Limpar Área");
+        snprintf(quest_desc, sizeof(quest_desc), "%s precisa limpar uma área", GET_NAME(ch));
+        snprintf(quest_info, sizeof(quest_info), 
+                 "%s precisa que alguém limpe uma área específica (sala %d) de todas as criaturas hostis. "
+                 "Elimine todos os inimigos da área para receber %d moedas de ouro.",
+                 GET_NAME(ch), target_vnum, calculated_reward);
+        snprintf(quest_done, sizeof(quest_done),
+                 "Perfeito! A área está limpa e segura agora!");
+    }
+    
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Compreendo. É uma tarefa perigosa mesmo.");
+    
+    /* Adiciona a quest ao sistema */
+    if (add_quest(new_quest) < 0) {
+        log1("SYSERR: Failed to add protection quest for %s (type %d, target %d)", 
+             GET_NAME(ch), quest_type, target_vnum);
+        free_quest(new_quest);
+        return;
+    }
+    
+    /* Deduz o ouro do mob */
+    GET_GOLD(ch) -= calculated_reward;
+    
+    /* Aumenta quest_tendency por postar uma quest */
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+    
+    /* Mensagens para jogadores */
+    if (quest_type == AQ_MOB_SAVE) {
+        act("$n escreve uma carta urgente e a envia para o questmaster.", 
+            FALSE, ch, 0, 0, TO_ROOM);
+    } else {
+        act("$n desenha um mapa de uma área perigosa e envia para o questmaster.", 
+            FALSE, ch, 0, 0, TO_ROOM);
+    }
+    
+    /* Log da ação */
+    log1("PROTECTION QUEST: %s (room %d) created %s quest %d (target %d) with QM %d, reward %d gold", 
+         GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)), 
+         (quest_type == AQ_MOB_SAVE) ? "mob save" : "room clear",
+         new_quest_vnum, target_vnum, questmaster_vnum, calculated_reward);
+    
+    /* Salva quest para persistência */
+    if (save_quests(mob_zone)) {
+        log1("PROTECTION QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
+    } else {
+        log1("SYSERR: Failed to save protection quest %d to disk", new_quest_vnum);
+    }
+}
+
+/**
+ * Faz um mob postar uma quest de kill geral (AQ_MOB_KILL).
+ * Diferente de bounty quests, estas são para eliminação direta sem recompensa especial.
+ * @param ch O mob que posta a quest
+ * @param target_vnum VNUM do mob alvo
+ * @param reward Recompensa em ouro oferecida
+ */
+void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int reward)
+{
+    mob_vnum questmaster_vnum;
+    qst_vnum new_quest_vnum;
+    struct aq_data *new_quest;
+    int difficulty;
+    int calculated_reward;
+    zone_rnum mob_zone;
+    char quest_name[MAX_QUEST_NAME];
+    char quest_desc[MAX_QUEST_DESC];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+    char *target_name = "criatura hostil";
+    mob_rnum target_mob_rnum = NOBODY;
+    
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+    
+    /* Obter nome do alvo */
+    if (target_vnum != NOTHING) {
+        target_mob_rnum = real_mobile(target_vnum);
+        if (target_mob_rnum != NOBODY) {
+            target_name = mob_proto[target_mob_rnum].player.short_descr;
+        }
+    }
+    
+    /* Encontra zona do mob */
+    mob_zone = world[IN_ROOM(ch)].zone;
+    
+    /* Encontra questmaster */
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    }
+    if (questmaster_vnum == NOBODY) {
+        log1("KILL QUEST: No questmaster found for %s in zone %d", 
+             GET_NAME(ch), mob_zone);
+        act("$n parece agitado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
+        return;
+    }
+    
+    /* Calcula dificuldade baseada no nível do alvo */
+    if (target_mob_rnum != NOBODY) {
+        int target_level = mob_proto[target_mob_rnum].player.level;
+        difficulty = MIN(90, MAX(40, target_level * 3));
+    } else {
+        difficulty = 65; /* Default para alvos desconhecidos */
+    }
+    
+    /* Calcula recompensa adequada */
+    calculated_reward = reward + (difficulty * 2.2);
+    
+    /* Seleciona item de recompensa do inventário do mob */
+    reward_item = select_mob_inventory_reward(ch, difficulty);
+    
+    /* Verifica se o mob tem ouro suficiente */
+    if (GET_GOLD(ch) < calculated_reward) {
+        calculated_reward = MAX(90, GET_GOLD(ch) / 2);
+    }
+    
+    /* Cria uma nova quest */
+    CREATE(new_quest, struct aq_data, 1);
+    
+    /* Gera VNUM único para a nova quest */
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    while (real_quest(new_quest_vnum) != NOTHING) {
+        new_quest_vnum++;
+        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
+            new_quest_vnum = zone_table[mob_zone].bot + 9000;
+        }
+    }
+    
+    /* Configura a quest */
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = AQ_MOB_KILL;
+    new_quest->qm = questmaster_vnum;
+    new_quest->target = target_vnum;
+    new_quest->prereq = NOTHING;
+    new_quest->flags = AQ_MOB_POSTED; /* Marca como postada por mob */
+    new_quest->prev_quest = NOTHING;
+    new_quest->next_quest = NOTHING;
+    new_quest->func = NULL;
+    
+    /* Configura valores da quest */
+    int base_questpoints = calculated_reward / 16;
+    
+    /* Bonus para quests de kill difíceis */
+    if (difficulty >= 80) {
+        base_questpoints += 4;
+    } else if (difficulty >= 60) {
+        base_questpoints += 2;
+    }
+    
+    /* Bonus para mobs corajosos */
+    if (GET_GENBRAVE(ch) > 70) {
+        base_questpoints += 2;
+    } else if (GET_GENBRAVE(ch) > 40) {
+        base_questpoints += 1;
+    }
+    
+    new_quest->value[0] = URANGE(2, base_questpoints, 15); /* Questpoints reward */
+    new_quest->value[1] = calculated_reward / 4; /* Penalty for failure */
+    new_quest->value[2] = MAX(10, GET_LEVEL(ch) - 5); /* Min level */
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 20); /* Max level */
+    new_quest->value[4] = -1; /* No time limit */
+    new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
+    new_quest->value[6] = 1; /* Quantity */
+    
+    /* Configura recompensas */
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 3; /* Quests de kill dão mais XP */
+    new_quest->obj_reward = reward_item;
+    
+    /* Cria strings da quest */
+    snprintf(quest_name, sizeof(quest_name), "Eliminar: %s", target_name);
+    snprintf(quest_desc, sizeof(quest_desc), "%s quer eliminar %s", GET_NAME(ch), target_name);
+    snprintf(quest_info, sizeof(quest_info), 
+             "%s está incomodado com %s e quer vê-lo eliminado. "
+             "Encontre e elimine esta criatura para receber %d moedas de ouro e %d pontos de experiência.",
+             GET_NAME(ch), target_name, calculated_reward, calculated_reward * 3);
+    snprintf(quest_done, sizeof(quest_done),
+             "Excelente trabalho! A ameaça foi eliminada!");
+    
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Entendo. É uma tarefa perigosa mesmo.");
+    
+    /* Adiciona a quest ao sistema */
+    if (add_quest(new_quest) < 0) {
+        log1("SYSERR: Failed to add kill quest for %s (target %d)", 
+             GET_NAME(ch), target_vnum);
+        free_quest(new_quest);
+        return;
+    }
+    
+    /* Deduz o ouro do mob */
+    GET_GOLD(ch) -= calculated_reward;
+    
+    /* Aumenta quest_tendency por postar uma quest */
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+    
+    /* Mensagens para jogadores */
+    act("$n escreve um pedido de eliminação e o envia para o questmaster.", 
+        FALSE, ch, 0, 0, TO_ROOM);
+    
+    /* Log da ação */
+    log1("KILL QUEST: %s (room %d) created kill quest %d (target %d) with QM %d, reward %d gold", 
+         GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)), 
+         new_quest_vnum, target_vnum, questmaster_vnum, calculated_reward);
+    
+    /* Salva quest para persistência */
+    if (save_quests(mob_zone)) {
+        log1("KILL QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
+    } else {
+        log1("SYSERR: Failed to save kill quest %d to disk", new_quest_vnum);
     }
 }
 

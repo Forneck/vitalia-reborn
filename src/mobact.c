@@ -278,7 +278,7 @@ void mobile_activity(void)
                 if (ch->ai_data->quest_timer <= 0) {
                     /* Quest timeout */
                     act("$n parece desapontado por não completar uma tarefa a tempo.", TRUE, ch, 0, 0, TO_ROOM);
-                    clear_mob_quest(ch);
+                    fail_mob_quest(ch, "timeout");
                 }
             }
         } else {
@@ -326,6 +326,114 @@ void mobile_activity(void)
                     int reward = MIN(GET_GOLD(ch) / 4, 400 + GET_LEVEL(target) * 10);
                     mob_posts_combat_quest(ch, AQ_MOB_KILL_BOUNTY, GET_MOB_VNUM(target), reward);
                     break; /* Only post one bounty quest per tick */
+                }
+            }
+        }
+    }
+
+    /* Additional quest posting - exploration, protection, and general kill quests */
+    if (ch->ai_data && rand_number(1, 100) <= 3) { /* 3% chance per tick for other quest types */
+        struct char_data *target;
+        struct obj_data *obj;
+        room_rnum room_target;
+        int reward;
+        
+        /* Check genetics and decide what type of quest to post */
+        if (GET_GENADVENTURER(ch) > 50 && rand_number(1, 100) <= 30) {
+            /* Post exploration quests */
+            if (rand_number(1, 100) <= 40) {
+                /* AQ_OBJ_FIND quest - find a random object in the zone */
+                zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
+                obj_vnum obj_target = NOTHING;
+                
+                /* Find a suitable object in the zone to search for */
+                for (int i = zone_table[mob_zone].bot; i <= zone_table[mob_zone].top; i++) {
+                    if (real_object(i) != NOTHING) {
+                        obj_target = i;
+                        break;
+                    }
+                }
+                
+                if (obj_target != NOTHING && GET_GOLD(ch) > 100) {
+                    reward = MIN(GET_GOLD(ch) / 6, 200 + GET_LEVEL(ch) * 5);
+                    mob_posts_exploration_quest(ch, AQ_OBJ_FIND, obj_target, reward);
+                }
+            } else if (rand_number(1, 100) <= 50) {
+                /* AQ_ROOM_FIND quest - explore a room in the zone */
+                zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
+                room_rnum room_target = zone_table[mob_zone].bot + rand_number(0, zone_table[mob_zone].top - zone_table[mob_zone].bot);
+                
+                if (GET_GOLD(ch) > 75) {
+                    reward = MIN(GET_GOLD(ch) / 8, 150 + GET_LEVEL(ch) * 3);
+                    mob_posts_exploration_quest(ch, AQ_ROOM_FIND, world[real_room(room_target)].number, reward);
+                }
+            } else {
+                /* AQ_MOB_FIND quest - find a friendly mob */
+                for (target = character_list; target; target = target->next) {
+                    if (IS_NPC(target) && target != ch && 
+                        world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
+                        GET_ALIGNMENT(target) > 0 && !MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
+                        
+                        if (GET_GOLD(ch) > 80) {
+                            reward = MIN(GET_GOLD(ch) / 7, 120 + GET_LEVEL(target) * 4);
+                            mob_posts_exploration_quest(ch, AQ_MOB_FIND, GET_MOB_VNUM(target), reward);
+                        }
+                        break; /* Only post one find quest per tick */
+                    }
+                }
+            }
+        } else if (GET_GENBRAVE(ch) > 60 && rand_number(1, 100) <= 25) {
+            /* Post protection quests */
+            if (rand_number(1, 100) <= 60) {
+                /* AQ_MOB_SAVE quest - protect a weak mob */
+                for (target = character_list; target; target = target->next) {
+                    if (IS_NPC(target) && target != ch && 
+                        world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
+                        GET_LEVEL(target) < GET_LEVEL(ch) && GET_ALIGNMENT(target) > 200) {
+                        
+                        if (GET_GOLD(ch) > 120) {
+                            reward = MIN(GET_GOLD(ch) / 5, 250 + GET_LEVEL(target) * 6);
+                            mob_posts_protection_quest(ch, AQ_MOB_SAVE, GET_MOB_VNUM(target), reward);
+                        }
+                        break; /* Only post one save quest per tick */
+                    }
+                }
+            } else {
+                /* AQ_ROOM_CLEAR quest - clear a dangerous room */
+                zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
+                room_rnum dangerous_room = NOWHERE;
+                
+                /* Find a room with aggressive mobs */
+                for (int r = zone_table[mob_zone].bot; r <= zone_table[mob_zone].top; r++) {
+                    room_rnum real_r = real_room(r);
+                    if (real_r != NOWHERE) {
+                        for (target = world[real_r].people; target; target = target->next_in_room) {
+                            if (IS_NPC(target) && MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
+                                dangerous_room = r;
+                                break;
+                            }
+                        }
+                        if (dangerous_room != NOWHERE) break;
+                    }
+                }
+                
+                if (dangerous_room != NOWHERE && GET_GOLD(ch) > 150) {
+                    reward = MIN(GET_GOLD(ch) / 4, 300 + GET_LEVEL(ch) * 8);
+                    mob_posts_protection_quest(ch, AQ_ROOM_CLEAR, dangerous_room, reward);
+                }
+            }
+        } else if (GET_GENQUEST(ch) > 40 && rand_number(1, 100) <= 20) {
+            /* Post general kill quests */
+            for (target = character_list; target; target = target->next) {
+                if (IS_NPC(target) && target != ch && 
+                    world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
+                    GET_ALIGNMENT(target) < -100 && GET_LEVEL(target) >= GET_LEVEL(ch) - 10) {
+                    
+                    if (GET_GOLD(ch) > 100) {
+                        reward = MIN(GET_GOLD(ch) / 5, 200 + GET_LEVEL(target) * 8);
+                        mob_posts_general_kill_quest(ch, GET_MOB_VNUM(target), reward);
+                    }
+                    break; /* Only post one kill quest per tick */
                 }
             }
         }

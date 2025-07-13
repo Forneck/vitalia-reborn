@@ -111,6 +111,7 @@ int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum);
 bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum);
 void set_mob_quest(struct char_data *mob, qst_rnum rnum);
 void clear_mob_quest(struct char_data *mob);
+void fail_mob_quest(struct char_data *mob, const char *reason);
 void mob_complete_quest(struct char_data *mob);
 void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struct obj_data *object, int type);
 /* Implemented in qedit.c  */
