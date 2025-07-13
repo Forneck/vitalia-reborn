@@ -104,12 +104,12 @@ Você olha com admiração para $p.
 $n olha com admiração para $p.
 
 ~adoring adoring 0 8 8 0
-You look around with adoring eyes.
-$n looks around with adoring eyes.
-You look at $N with adoring eyes.
-$n looks at $N with big, adoring eyes.
-$n is looking at you with big, adoring eyes. Hmm...
-You can't find that person! :(
+Você olha ao redor com olhos de adoração.
+$n olha ao redor com olhos de adoração.
+Você olha para $N com olhos de adoração.
+$n olha para $N com grandes olhos de adoração.
+$n está olhando para você com grandes olhos de adoração. Hmm...
+Você não consegue encontrar essa pessoa! :(
 #
 #
 #
@@ -134,10 +134,10 @@ Você olha para $p e acena concordando.
 $n olha para $p e acena concordando.
 
 ~ahem ahem 0 5 8 0
-You look down your nose and grunt 'Ahem!'
-$n looks down $s nose and grunts 'Ahem!'
-You look down your nose and grunt 'Ahem!' at $N.
-$n looks down $s nose and grunts 'Ahem!' at $N.
+Você olha de nariz empinado e grunhe 'Ahem!'
+$n olha de nariz empinado e grunhe 'Ahem!'
+Você olha de nariz empinado e grunhe 'Ahem!' para $N.
+$n olha de nariz empinado e grunhe 'Ahem!' para $N.
 $n looks down $s nose and grunts 'Ahem!' at you.
 Ahem! That person isn't here!
 You look down your nose and grunt 'Ahem!' to yourself.
@@ -164,34 +164,34 @@ You take your best aim at $p.
 $n takes $s best aim at $p.
 
 ~amused amused 0 8 8 0
-Your eyes flicker with amusement.
-$n's eyes flicker with amusement.
-You smile, amused with $N.
-$n seems to find $N very amusing.
-$n's eyes flicker with amusement at you.
-You find yourself very amused but not quite sure why.
-You find yourself very amusing.
-$n finds $mself very amusing.
-You find $N's $t very amusing.
-$n finds $N's $t very amusing.
-$n finds your $t very amusing.
-You smile, amused with $p.
-$n smiles, amused with $p.
+Seus olhos brilham com diversão.
+Os olhos de $n brilham com diversão.
+Você sorri, divertido com $N.
+$n parece achar $N muito divertido.
+Os olhos de $n brilham com diversão por você.
+Você se acha muito divertido mas não tem certeza do porquê.
+Você se acha muito divertido.
+$n se acha muito divertido.
+Você acha o $t de $N muito divertido.
+$n acha o $t de $N muito divertido.
+$n acha seu $t muito divertido.
+Você sorri, divertido com $p.
+$n sorri, divertido com $p.
 
 ~apologize apologize 0 5 0 0
-You apologize to the gods for your very existence.
-$n apologizes for even being alive.
-You apologize to $M.
-$n apologizes to $N.
-$n apologizes to you.
-Your apology does not seem to have been well received.
-You apologize to yourself for being such a numskull.
-$n apologizes to $mself for everything $e has ever done.
-You look at $S $t and apologize.
-$n looks at $N's $t and apologizes.
-$n looks at your $t and apologizes.
-You look at $p and apologize.
-$n looks at $p and apologizes.
+Você se desculpa com os deuses por sua própria existência.
+$n se desculpa por sequer estar vivo.
+Você se desculpa com $M.
+$n se desculpa com $N.
+$n se desculpa com você.
+Seu pedido de desculpas não parece ter sido bem recebido.
+Você se desculpa consigo mesmo por ser tão idiota.
+$n se desculpa consigo mesmo por tudo que $e já fez.
+Você olha para o $t de $S e se desculpa.
+$n olha para o $t de $N e se desculpa.
+$n olha para seu $t e se desculpa.
+Você olha para $p e se desculpa.
+$n olha para $p e se desculpa.
 
 ~applaud applaud 0 5 0 0
 Clap, clap, clap.
@@ -209,72 +209,72 @@ Você olha para $p e aplaude.
 $n olha para $p e aplaude.
 
 ~arch arch 0 5 0 0
-You arch an eyebrow.
-$n raises an eyebrow speculatively.
-You raise an eyebrow at $N.
-$n arches an eyebrow at $N.
-$n raise an eyebrow at you.
-They seem to have left.
-What's the matter? Right brain not talking to the left?
-$n furiously waggles $s eyebrows... What a loony!
-You look at $S $t and arch an eyebrow in speculation.
-$n looks at $N's $t and raises an eyebrow speculatively.
-$n looks at your $t and raises an eyebrow speculatively.
-You look at $p and arch an eyebrow in speculation.
-$n looks at $p and raises an eyebrow in speculation.
+Você levanta uma sobrancelha.
+$n levanta uma sobrancelha especulativamente.
+Você levanta uma sobrancelha para $N.
+$n levanta uma sobrancelha para $N.
+$n levanta uma sobrancelha para você.
+Eles parecem ter ido embora.
+Qual é o problema? O cérebro direito não está falando com o esquerdo?
+$n balança furiosamente $s sobrancelhas... Que maluco!
+Você olha para o $t de $S e levanta uma sobrancelha especulativamente.
+$n olha para o $t de $N e levanta uma sobrancelha especulativamente.
+$n olha para seu $t e levanta uma sobrancelha especulativamente.
+Você olha para $p e levanta uma sobrancelha especulativamente.
+$n olha para $p e levanta uma sobrancelha especulativamente.
 
 ~argh argh 0 8 8 0
-You slap your hands on your face - AARRGGHH!!
-$n slaps $s hands on $s face - AARRGGHH!!
-You take one look at $N - AARRGGHH!!
-$n screams AARRGGHH at $N!!
-$n screams AARRGGHH at you!!
-ARGH! They're not here!
-You provoke yourself into screaming AARRGGHH!
-$n provokes $mself into screaming AARRGGHH!
-You take one look at $N's $t - AARRGGHH!!
-$n screams AARRGGHH at $N's $t!!
-$n screams AARRGGHH at your $t!!
-You take one look at $p - AARRGGHH!!
-$n screams AARRGGHH at $p!!
+Você bate as mãos no rosto - AARRGGHH!!
+$n bate as mãos no rosto - AARRGGHH!!
+Você dá uma olhada em $N - AARRGGHH!!
+$n grita AARRGGHH para $N!!
+$n grita AARRGGHH para você!!
+ARGH! Eles não estão aqui!
+Você se provoca a gritar AARRGGHH!
+$n se provoca a gritar AARRGGHH!
+Você dá uma olhada no $t de $N - AARRGGHH!!
+$n grita AARRGGHH para o $t de $N!!
+$n grita AARRGGHH para seu $t!!
+Você dá uma olhada em $p - AARRGGHH!!
+$n grita AARRGGHH para $p!!
 
 ~armcross armcross 0 5 0 0
-You cross your arms.
-$n crosses $s arms.
-You look at $N, crossing your arms and being somewhat deffensive.
-$n looks at $N, crossing $s arms and being somewhat deffensive.
-$n looks at you, crossing $s arms and being somewhat deffensive.
-They left before you had the chance to become deffensive.
-You cross your arms and look at yourself deffensively? 
-$n crosses $s arms and looks at $mself deffensively.
-You look at $S $t and cross your arms deffensively.
-$n looks at $N's $t and crosses $s arms deffensively.
-$n looks at your $t and crosses $s arms deffensively.
-You look at $p and cross your arms deffensively.
-$n looks at $p and crosses $s arms deffensively.
+Você cruza os braços.
+$n cruza os braços.
+Você olha para $N, cruzando os braços e ficando um pouco defensivo.
+$n olha para $N, cruzando os braços e ficando um pouco defensivo.
+$n olha para você, cruzando os braços e ficando um pouco defensivo.
+Eles foram embora antes que você tivesse a chance de ficar defensivo.
+Você cruza os braços e se olha defensivamente?
+$n cruza os braços e se olha defensivamente.
+Você olha para o $t de $S e cruza os braços defensivamente.
+$n olha para o $t de $N e cruza os braços defensivamente.
+$n olha para seu $t e cruza os braços defensivamente.
+Você olha para $p e cruza os braços defensivamente.
+$n olha para $p e cruza os braços defensivamente.
 
 ~arrest arrest 0 5 0 0
-You read everyone their rights. But you skip the part about the phonecall... ;)
-$n has placed you all under arrest. 'You have the right to...bla bla bla...' 
-You read $N $S rights.
-$n has placed $N under arrest. Everything $E will, and can say, will be used against $M.
-$n says, 'You have the right to remain silent. You have the right to....' $e just arrested you!
-NOOO! They fled! After them!
-You read the rights to yourself and wait for someone to take you to jail.
-$n reads the rights to $mself and sits down waiting for someone to take $m to jail.
-You look at $S $t and try to arrest it.
-$n looks at $N's $t and places it under arrest.
-$n looks at your $t and places it under arrest, I hope you didn't need that.
-You look at $p and place it under arrest.
-$n looks at $p and places it under arrest.
+Você lê os direitos de todos. Mas pula a parte sobre a ligação telefônica... ;)
+$n colocou vocês todos sob custódia. 'Vocês têm o direito de...blá blá blá...'
+Você lê os direitos de $N.
+$n colocou $N sob custódia. Tudo que $E disser, pode e será usado contra $M.
+$n diz, 'Você tem o direito de permanecer calado. Você tem o direito de....' $e acabou de te prender!
+NÃO! Eles fugiram! Atrás deles!
+Você lê os direitos para si mesmo e espera alguém te levar para a cadeia.
+$n lê os direitos para si mesmo e se senta esperando alguém levá-lo para a cadeia.
+Você olha para o $t de $S e tenta prendê-lo.
+$n olha para o $t de $N e o coloca sob custódia.
+$n olha para seu $t e o coloca sob custódia, espero que você não precisasse disso.
+Você olha para $p e o coloca sob custódia.
+$n olha para $p e o coloca sob custódia.
 
 ~avsalute avsalute 0 5 0 0
-@YYou stamp your foot and give the mighty Avatar Salute!@n
-@Y$n stamps $s foot and throws a fist in the air giving the proper Avatar Salute!@n
-@YYou stamp your foot and give the mighty Avatar Salute towards $N!@n
-$n stamps $s foot and throws a fist in the air, Avatar Saluting $N!
-$n stamps $s foot and throws $s fist in the air, giving you the Avatar Salute!
-@YYou do not see this person here.@n
+@YVocê bate o pé e faz a poderosa Saudação do Avatar!@n
+@Y$n bate o pé e joga o punho no ar fazendo a Saudação do Avatar apropriada!@n
+@YVocê bate o pé e faz a poderosa Saudação do Avatar para $N!@n
+$n bate o pé e joga o punho no ar, fazendo a Saudação do Avatar para $N!
+$n bate o pé e joga o punho no ar, fazendo a Saudação do Avatar para você!
+@YVocê não vê essa pessoa aqui.@n
 #
 #
 #
