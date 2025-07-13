@@ -11,8 +11,8 @@ penetrante.
 0 4466
 9 9 1
 BareHandAttack: 8
-GenWimpy: 5
-GenRoam: 14
+GenWimpy: 6
+GenRoam: 44
 E
 #801
 cigano zigeuner~
@@ -26,8 +26,8 @@ coisa que ele esperaria encontrar.
 35 0 -15 10d10+2250 3d5+18
 1300 75632
 9 9 1
-GenWimpy: 2
-GenRoam: 10
+GenWimpy: 3
+GenRoam: 28
 E
 #802
 cigano~
@@ -41,7 +41,7 @@ Parece estar em sua maneira de cuidar de algo...'
 900 46544
 9 9 1
 GenWimpy: 3
-GenRoam: 23
+GenRoam: 39
 E
 #803
 cigano Ornah~
@@ -55,9 +55,9 @@ desejo de matar...
 20 8 -8 10d10+1000 3d3+15
 700 38676
 9 9 1
-GenWimpy: 8
+GenWimpy: 7
 GenLoot: 2
-GenRoam: 17
+GenRoam: 26
 E
 #804
 grande vampiro~
@@ -72,7 +72,7 @@ ele já esta lhe atacando!
 2200 120764
 9 9 1
 GenWimpy: 2
-GenRoam: 7
+GenRoam: 57
 E
 #805
 pequeno vampiro~
@@ -86,7 +86,7 @@ Observe o dente - alguma coisa parece lembrar você sobre o dente.
 1600 69345
 9 9 1
 GenWimpy: 2
-GenRoam: 25
+GenRoam: 62
 E
 #806
 Soberano Vampiro~

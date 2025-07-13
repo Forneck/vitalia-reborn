@@ -627,8 +627,8 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
-GenWimpy: 5
-GenRoam: 43
+GenWimpy: 11
+GenRoam: 68
 E
 T 3013
 #3061
@@ -656,8 +656,8 @@ cheios de pedaços de carne apodrecida grudadas.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 7
-GenRoam: 78
+GenWimpy: 11
+GenRoam: 85
 E
 T 3014
 #3063
@@ -736,6 +736,8 @@ Uma coisa medonha de se olhar; é enorme, esverdeado e se parece com uma bolha.
 1000 40000
 9 9 2
 BareHandAttack: 6
+GenWimpy: 4
+GenRoam: 36
 E
 #3089
 animais loja garoto~

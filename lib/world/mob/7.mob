@@ -37,10 +37,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 1
-GenRoam: 13
-GenQuest: 60
-GenAdventurer: 70
+GenWimpy: 3
+GenRoam: 56
 E
 #702
 planta figueira~
@@ -60,10 +58,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 4
-GenRoam: 27
-GenQuest: 40
-GenAdventurer: 50
+GenWimpy: 5
+GenRoam: 45
 E
 #705
 monstrinho menor criatura~
@@ -85,8 +81,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 8
-GenRoam: 3
+GenWimpy: 10
+GenRoam: 66
 E
 #706
 duende~
@@ -107,8 +103,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 4
-GenRoam: 24
+GenWimpy: 7
+GenRoam: 67
 E
 #707
 cristal monsto~
@@ -129,7 +125,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 8
+GenWimpy: 13
+GenLoot: 2
 E
 #708
 escorpião escorpiao vermelho~
@@ -150,7 +147,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 3
+GenWimpy: 5
+GenRoam: 41
 E
 #710
 maldito guarda~
@@ -171,6 +169,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 1
 E
 #711
 guardião guardiao guarda~
@@ -192,7 +191,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 5
+GenWimpy: 12
 E
 #712
 impiedoso ceifeiro~
@@ -235,8 +234,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 4
-GenRoam: 26
+GenWimpy: 9
+GenRoam: 69
 E
 #714
 cavaleiro negro tempestuoso armadura~
@@ -281,8 +280,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 19
-GenRoam: 54
+GenWimpy: 20
+GenRoam: 51
 E
 #716
 pequena encurvada crianca criança~
@@ -321,7 +320,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 8
+GenWimpy: 13
 E
 #719
 ivian senhora~
@@ -378,8 +377,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 1
-GenRoam: 7
+GenWimpy: 2
+GenRoam: 25
 E
 #750
 febre escarlate~
@@ -418,8 +417,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 2
-GenRoam: 34
+GenWimpy: 4
+GenRoam: 47
 E
 #780
 Mosquito inseto~
@@ -439,7 +438,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 10
+GenWimpy: 12
 E
 #781
 planta carnivora venus carnívora vênus~
@@ -458,8 +457,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 6
-GenRoam: 4
+GenWimpy: 8
+GenRoam: 8
 E
 #799
 banda~
@@ -478,5 +477,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 1
+GenRoam: 27
 E
 $

@@ -225,8 +225,8 @@ Parece ser mais um cidadão comum, se dirigindo para o seu trabalho.
 5 16 5 1d4+85 1d8+1
 100 1000
 9 9 1
-GenWimpy: 14
-GenRoam: 68
+GenWimpy: 28
+GenRoam: 87
 E
 #12018
 sentinela guarda~
@@ -239,6 +239,7 @@ Você vê um defensor público forte e leal.
 11 10 2 3d6+130 1d6+5
 500 11000
 9 9 1
+GenWimpy: 1
 E
 T 3013
 #12019
@@ -254,8 +255,8 @@ vai ser uma atividade saudável.
 17 4 -1 3d5+220 1d6+9
 1281 28000
 9 9 1
-GenWimpy: 2
-GenRoam: 9
+GenWimpy: 3
+GenRoam: 33
 E
 #12020
 imperador julius caesar~
@@ -289,7 +290,8 @@ tiverem as menores das intenções.
 BareHandAttack: 6
 Str: 18
 StrAdd: 90
-GenWimpy: 7
+GenWimpy: 9
+GenLoot: 2
 E
 T 3013
 #12022
@@ -332,7 +334,7 @@ Uma bola verde de lodo escorrendo atraves das paredes.
 9 9 2
 BareHandAttack: 9
 Int: 3
-GenWimpy: 43
+GenWimpy: 55
 E
 #12025
 mago froboz~

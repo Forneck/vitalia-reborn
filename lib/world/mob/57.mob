@@ -10,6 +10,8 @@ amigável esta criaturinha.
 12 9 1 150d1+20 2d7+5
 300 15000
 9 9 1
+GenWimpy: 3
+GenRoam: 46
 E
 #5702
 lobo~
@@ -23,8 +25,8 @@ VOCÊ não teria o mesmo gosto de um coelho.
 5 16 5 50d1+10 3d3+2
 0 2000
 9 9 1
-GenWimpy: 4
-GenRoam: 73
+GenWimpy: 7
+GenRoam: 83
 E
 #5703
 coelho pardo~
@@ -38,8 +40,8 @@ em retirada..  OPA..  Lá vai seu almoço!
 3 18 7 30d1+5 1d3+1
 0 600
 9 9 1
-GenWimpy: 4
-GenRoam: 61
+GenWimpy: 7
+GenRoam: 80
 E
 #5704
 tomal mateiro~
@@ -53,6 +55,8 @@ forasteiro - o nome é Tomal..  Como vai?'
 23 2 -2 400d1+250 3d8+8
 1000 70000
 9 9 1
+GenWimpy: 1
+GenRoam: 27
 E
 #5705
 demonio guardiao forma sombria~
@@ -79,7 +83,7 @@ mundo perigoso lá fora.'
 30 0 -2 200d2+200 3d6+11
 20000 40000
 9 9 1
-GenWimpy: 18
+GenWimpy: 17
 E
 #5707
 diabinho diabo~
@@ -123,7 +127,7 @@ sitiada por demônios.
 1000 22000
 9 9 1
 GenWimpy: 4
-GenRoam: 31
+GenRoam: 48
 E
 #5710
 cidada mulher~
@@ -138,8 +142,7 @@ sitiada por demônios.
 3000 22000
 9 9 2
 GenWimpy: 3
-GenLoot: 2
-GenRoam: 36
+GenRoam: 53
 E
 #5711
 demonio maior~
@@ -179,7 +182,7 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 5
+GenWimpy: 7
 E
 #5714
 rymat conselheiro~

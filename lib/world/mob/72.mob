@@ -28,6 +28,8 @@ quatro grandes tentáculos com pontas muito afiadas.
 8 13 2 1d10+100 2d4+3
 400 4500
 9 9 0
+GenWimpy: 1
+GenRoam: 4
 E
 T 3009
 #7202
@@ -59,8 +61,8 @@ exceto por estar em pé.
 6 15 3 4d6+69 2d4+2
 50 1500
 9 9 0
-GenWimpy: 9
-GenRoam: 11
+GenWimpy: 15
+GenRoam: 53
 E
 #7204
 rato gigantesco~

@@ -67,7 +67,7 @@ que você está esperando?  AO ATAQUE!
 12 13 0 15d6+100 2d6+6
 0 8000
 9 9 2
-GenWimpy: 22
+GenWimpy: 29
 E
 #19705
 cobra verde~
@@ -112,8 +112,8 @@ desejá-la.
 48 -8 -20 15d6+800 10d6+28
 2000 150000
 9 9 1
-GenWimpy: 8
-GenRoam: 2
+GenWimpy: 7
+GenRoam: 1
 E
 #19708
 orc lider negro~
@@ -255,7 +255,7 @@ aprender os movimentos de luta dos orcs em treinamento.
 13 4 -2 15d6+300 3d6+10
 100 24000
 9 9 2
-GenWimpy: 2
+GenWimpy: 4
 E
 #19717
 general orc~

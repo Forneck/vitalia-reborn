@@ -9,8 +9,8 @@ Ela parece recém-saída do ovo e esperta.  Suas presas ainda estão crescendo.
 3 18 7 1d12+40 1d7+0
 80 350
 9 9 1
-GenWimpy: 12
-GenRoam: 34
+GenWimpy: 21
+GenRoam: 76
 E
 #6302
 yevaud dragao usurpador~
@@ -37,7 +37,7 @@ A aranha-lobo é peluda, muito peluda.
 6 12 6 3d8+70 2d5+3
 1250 6000
 9 9 2
-GenWimpy: 6
+GenWimpy: 9
 E
 #6304
 orc~
@@ -65,7 +65,7 @@ Você nota um olhar vidrado nos olhos dela.
 14 7 1 1d12+172 2d8+1
 2000 18000
 9 9 2
-GenWimpy: 1
+GenWimpy: 3
 E
 #6306
 aranha zangao~
@@ -109,8 +109,8 @@ própria ou se foi seduzido você não poderá ter certeza.
 11 8 4 1d12+130 2d7+1
 1000 13500
 9 9 1
-GenWimpy: 5
-GenRoam: 18
+GenWimpy: 6
+GenRoam: 55
 E
 #6309
 quasit~
@@ -139,7 +139,7 @@ A aranha-pássaro estala suas poderosas mandíbulas.
 14 7 1 1d8+100 2d9+2
 1750 18000
 9 9 2
-GenWimpy: 4
+GenWimpy: 5
 GenLoot: 1
 E
 #6311

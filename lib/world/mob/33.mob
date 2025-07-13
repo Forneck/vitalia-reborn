@@ -175,6 +175,9 @@ quando ele passa.
 11 10 -2 3d5+133 2d6+2
 1200 11000
 9 9 1
+GenWimpy: 1
+GenLoot: 1
+GenRoam: 25
 E
 #3312
 garcom~
@@ -233,6 +236,8 @@ dentes cariados.  Porém, sua espada é polida e limpa...
 16 5 -2 3d5+195 2d8+3
 1000 25000
 9 9 1
+GenWimpy: 1
+GenRoam: 6
 E
 #3316
 bandido sentinela~
@@ -249,7 +254,7 @@ serviço de guarda...
 18 3 -3 3d5+220 3d6+2
 2400 32000
 9 9 1
-GenWimpy: 9
+GenWimpy: 10
 E
 #3317
 mineiro escravo~
@@ -264,8 +269,8 @@ você deveria, ou melhor, se você pode dar-lhe a liberdade.
 6 15 10 3d5+70 1d8+1
 0 1500
 9 9 1
-GenWimpy: 10
-GenLoot: 1
+GenWimpy: 14
+GenLoot: 6
 E
 #3318
 fazendeiro~

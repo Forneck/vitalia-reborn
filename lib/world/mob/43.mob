@@ -54,6 +54,8 @@ Ele está vestido com botas pretas, calças marrom e camisa branca.
 8 12 1 5d3+115 3d4+10
 2853 6578
 9 9 1
+GenWimpy: 1
+GenRoam: 7
 E
 #4321
 menino cantor coral~
@@ -68,6 +70,8 @@ qualquer música por algum dinheiro.
 10 14 3 5d2+155 3d3+5
 1200 4800
 9 9 1
+GenWimpy: 2
+GenRoam: 43
 E
 #4322
 crente~
@@ -110,8 +114,7 @@ um pombo branco está aqui
 0 250
 9 9 1
 BareHandAttack: 1
-GenWimpy: 2
-GenRoam: 1
+GenWimpy: 4
 E
 #4326
 homem corcunda~
@@ -141,7 +144,7 @@ Ele está vestido com uma túnica marrom.
 8 17 5 3d4+75 4d2+2
 3825 2567
 9 9 1
-GenWimpy: 3
+GenWimpy: 4
 E
 #4334
 estatua gargula pedra~

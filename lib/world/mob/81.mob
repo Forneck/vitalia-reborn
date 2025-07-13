@@ -24,6 +24,7 @@ faraó.
 25 3 -3 2d10+200 2d3+12
 0 15000
 9 9 1
+GenRoam: 1
 E
 #8103
 esposa farao bela jovem~
@@ -421,6 +422,7 @@ humilde.  Ele está um pouco atrapalhado pois tenta servir bem a todos.
 20 10 0 5d5+1000 4d4+4
 10 1000
 9 9 1
+GenWimpy: 1
 E
 #8132
 banqueiro~
@@ -471,7 +473,7 @@ Esse gato negro aparenta ser muito esperto e corajoso.
 7 19 0 2d5+150 1d2+2
 0 100
 9 9 1
-GenWimpy: 9
+GenWimpy: 11
 E
 #8136
 escaravelho~
@@ -484,7 +486,8 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 5 15 0 3d4+400 1d2+3
 0 100
 9 9 1
-GenWimpy: 5
+GenWimpy: 6
+GenRoam: 3
 E
 #8137
 rato~
@@ -583,8 +586,8 @@ sua busca por comida.
 5 19 0 2d2+50 2d1+3
 0 500
 9 9 1
-GenWimpy: 6
-GenRoam: 4
+GenWimpy: 9
+GenRoam: 2
 E
 #8144
 explorador homem~
@@ -598,7 +601,7 @@ urgentemente, com sua lamparina, por uma saída.
 29 4 -4 2d5+1400 1d1+22
 50 10000
 9 9 1
-GenWimpy: 5
+GenWimpy: 7
 E
 #8145
 vibora víbora cobra~
@@ -613,8 +616,8 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 21
-GenRoam: 42
+GenWimpy: 24
+GenRoam: 36
 E
 #8146
 crianca egipcia~
@@ -628,7 +631,8 @@ enquanto lágrimas desesperadas rolam por sua face corada.
 16 12 0 2d3+300 1d2+5
 10 1800
 9 9 2
-GenWimpy: 3
+GenWimpy: 4
+GenRoam: 2
 E
 #8147
 serpente~
@@ -698,8 +702,8 @@ que deve ser sua boca.
 30 10 0 2d5+1000 2d2+14
 0 21000
 9 9 2
-GenWimpy: 7
-GenRoam: 74
+GenWimpy: 9
+GenRoam: 80
 E
 #8152
 soldado egipcio~

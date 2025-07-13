@@ -17,7 +17,7 @@ BareHandAttack: 11
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 5
 E
 #3701
 enguia satanica flamejante~
@@ -423,8 +423,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 11
-GenRoam: 30
+GenWimpy: 21
+GenRoam: 64
 E
 #3722
 demonio ossos~
@@ -446,7 +446,8 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 5
+GenRoam: 1
 E
 #3723
 esqueleto guerreiro~
@@ -521,8 +522,8 @@ de simplesmente matar aqueles que não se encaixaram.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
-GenRoam: 5
+GenWimpy: 3
+GenRoam: 34
 E
 #3727
 general~
@@ -616,7 +617,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 7
+GenRoam: 17
 E
 #3732
 zumbi guarda~

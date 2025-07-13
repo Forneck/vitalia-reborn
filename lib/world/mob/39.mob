@@ -86,6 +86,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #3907
 febre amarela figura~
@@ -104,6 +105,7 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #3908
 demilich esqueleto~
@@ -245,7 +247,7 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
+GenWimpy: 3
 E
 #3916
 demonio bael~
@@ -264,7 +266,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 3
-GenRoam: 16
+GenRoam: 18
 E
 #3917
 svern demonio~
@@ -284,7 +286,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 2
-GenRoam: 8
+GenRoam: 7
 E
 #3918
 vrock demonio ave~

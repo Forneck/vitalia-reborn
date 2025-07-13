@@ -12,6 +12,8 @@ no café da manhã e está com a intenção de comer o mesmo no jantar.
 12 9 2 4d6+140 2d5+3
 100 13000
 9 9 0
+GenWimpy: 1
+GenRoam: 4
 E
 #7001
 morcego pequeno ameacador~
@@ -39,7 +41,8 @@ An undefined string.
 5 16 5 1d12+48 2d4+0
 30 1000
 9 9 1
-GenWimpy: 25
+GenWimpy: 31
+GenRoam: 22
 E
 #7003
 aranha pequena peluda~
@@ -52,8 +55,8 @@ An undefined string.
 1 20 3 1d12+8 1d4+0
 1 100
 9 9 1
-GenWimpy: 48
-GenRoam: 70
+GenWimpy: 58
+GenRoam: 85
 E
 #7004
 besouro gigante terra~
@@ -78,8 +81,8 @@ An undefined string.
 3 17 9 2d5+35 1d7+0
 2 350
 9 9 2
-GenWimpy: 8
-GenRoam: 76
+GenWimpy: 10
+GenRoam: 81
 E
 #7006
 cobra~
@@ -92,8 +95,8 @@ An undefined string.
 4 16 7 2d5+40 1d9+0
 1 1000
 9 9 2
-GenWimpy: 11
-GenRoam: 64
+GenWimpy: 15
+GenRoam: 86
 E
 T 3008
 #7007
@@ -180,8 +183,8 @@ da beleza.
 14 7 1 1d8+172 2d8+1
 0 18000
 9 9 2
-GenWimpy: 8
-GenRoam: 24
+GenWimpy: 9
+GenRoam: 43
 E
 #7042
 naga guardiao~
@@ -211,8 +214,8 @@ verde pálido.
 13 11 0 1d12+160 2d7+2
 350 16000
 9 9 0
-GenWimpy: 4
-GenRoam: 6
+GenWimpy: 6
+GenRoam: 36
 E
 #7044
 bolha lemure~
@@ -227,8 +230,8 @@ mas ela ataca de qualquer jeito.  Parece que a mente dela foi queimada.
 5 16 6 3d5+57 2d4+0
 0 1000
 9 9 2
-GenWimpy: 11
-GenRoam: 60
+GenWimpy: 15
+GenRoam: 83
 E
 #7045
 jones esmagador ettin~

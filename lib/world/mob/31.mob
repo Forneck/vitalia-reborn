@@ -24,6 +24,7 @@ cavar mais uma sepultura.
 3 18 7 2d6+35 1d7+0
 13 300
 6 6 1
+GenWimpy: 1
 E
 #3102
 chefe sentinela~
@@ -36,7 +37,7 @@ Um chefe muito bravo.
 17 3 1 1d12+210 1d8+18
 0 28000
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
 E
 #3103
 sentinela guarda~
@@ -65,7 +66,7 @@ A Secretária diz 'Por favor, sente-se enquanto espera.'
 12 9 2 1d12+148 2d7+1
 100 13000
 9 9 2
-GenWimpy: 1
+GenWimpy: 2
 E
 #3105
 prefeito~
@@ -93,6 +94,8 @@ Ele é muito bom em seu trabalho - completamente derretido em lágrimas.
 1 20 9 2d6+10 1d5+0
 34 100
 9 9 1
+GenWimpy: 1
+GenRoam: 9
 E
 #3120
 cisne~
