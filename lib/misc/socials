@@ -1,101 +1,101 @@
 accuse 0 5
-Accuse who??
+Acusar quem??
 #
-You look accusingly at $M.
-$n looks accusingly at $N.
-$n looks accusingly at you.
-Accuse somebody who's not even there??
-You accuse yourself.
-$n seems to have a bad conscience.
+Você olha acusadoramente para $M.
+$n olha acusadoramente para $N.
+$n olha acusadoramente para você.
+Acusar alguém que não está aqui??
+Você acusa a si mesmo.
+$n parece ter consciência pesada.
 
 applaud 0 0
 Clap, clap, clap.
-$n gives a round of applause.
+$n bate palmas em aplauso.
 #
 
 beg 0 0
-You beg the gods for mercy.  (No way you're gonna get it! :-))
-The gods fall down laughing at $n's request for mercy.
-You desperately try to squeeze a few coins from $M.
-$n begs you for money.  You graciously let $m peep at your fortune.
-$n begs $N for a dime or two -- or twenty!
-Your money-lender seems to be out for the moment.
-How? - begging yourself for money doesn't help.
+Você suplica aos Deuses por piedade (não pense que vai consegui-la!).
+Os Deuses caem na gargalhada frente à súplica por piedade de $n.
+Você desesperadamente tenta conseguir algumas moedas de $M.
+$n suplica a você por dinheiro. Você graciosamente $m deixa espiar sua fortuna.
+$n suplica a $N por uma moeda ou duas -- ou vinte!
+Seu agiota favorito parece não estar presente no momento.
+Como? - Implorar a si mesmo por dinheiro não ajuda.
 #
 
 bleed 0 0
-You bleed profusely, making an awful mess...
-$n bleeds profusely, making an awful mess...
+Você sangra muito, fazendo uma terrível sujeira...
+$n sangra muito, fazendo uma terrível sujeira...
 #
 
 blush 0 0
-Your cheeks are burning.
-$n blushes.
+As suas bochechas estão queimando.
+$n ruboriza-se.
 #
 
 bounce 0 0
 BOIINNNNNNGG!
-$n bounces around.
+$n começa a saltar por aí.
 #
 
 bow 0 5
-You bow deeply.
-$n bows deeply.
-You bow before $M.
-$n bows before $N.
-$n bows before you.
-Who's that?
-You kiss your toes.
-$n folds up like a jacknife and kisses $s own toes.
+Você faz uma reverência lentamente.
+$n se curva lentamente.
+Você se curva perante $M.
+$n se curva frente a $N, demonstrando respeito.
+$n se curva perante você.
+Quem é este?
+Você beija seu dedão do pé. É nojento!
+$n se abaixa e beija seu próprio dedão!
 
 brb 0 0
-Come back soon!
-$n will be right back!
+Volte logo!
+$n volta em um instante!
 #
 
 burp 0 0
-You burp loudly.
-$n burps loudly.
+Você arrota de modo vulgar.
+$n arrota de modo vulgar.
 #
 
 cackle 0 0
-You cackle gleefully.
-$n throws back $s head and cackles with insane glee!
+Você cai na gargalhada.
+$n joga a cabeça para trás e gargalha loucamente!
 #
 
 chuckle 0 0
-You chuckle politely.
-$n chuckles politely.
+Você ri educadamente.
+$n ri educadamente.
 #
 
 clap 0 0
-You clap your small hands together.
-$n shows $s approval by clapping $s small hands together.
+Você bate palmas.
+$n mostra sua aprovação batendo palmas.
 #
 
 comb 0 0
-You comb your hair -- perfect.
-$n combs $s hair, what a dashing specimen!
-You patiently untangle $N's hair -- what a mess!
-$n tries patiently to untangle $N's hair.
-$n pulls your hair in an attempt to comb it.
-That person is not here.
-You pull your hair, but it will not be combed.
-$n tries to comb $s tangled hair.
+Você penteia o cabelo -- perfeito.
+$n penteia o cabelo, que ser arrojado!
+Você pacientemente desembaraça o cabelo de $N -- que bagunça!
+$n tenta pacientemente desembaraçar o cabelo de $N.
+$n puxa seu cabelo, e tenta penteá-lo.
+Esta pessoa não está aqui.
+Você puxa seu cabelo, mas percebe que não vai conseguir penteá-lo.
+$n tenta pentear o próprio cabelo.
 
 comfort 0 5
-Do you feel uncomfortable?
+Você se sente desconfortável?
 #
-You comfort $M.
-$n comforts $N.
-$n comforts you.
-Comfort who?
-You make a vain attempt to comfort yourself.
+Você consola $M.
+$n consola $N.
+$n consola você.
+Consolar quem?
+Você faz uma vã tentativa de consolar a si mesmo.
 #
 
 cough 0 0
-Yuck, try to cover your mouth next time!
-$n coughs loudly.
+Eca, tente cobrir sua boca da próxima vez!
+$n tosse aos gritos.
 #
 
 cringe 1 0

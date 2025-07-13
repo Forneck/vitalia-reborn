@@ -1454,19 +1454,19 @@ You collapse into broken pieces on the floor - CRUSHED by $p!
 $n collapses into broken pieces on the floor - CRUSHED by $p!
 
 ~cry cry 0 5 0 0
-Waaaaah..
-$n bursts into tears.
-You cry on $S shoulder.
-$n cries on $N's shoulder.
-$n cries on your shoulder.
-Who's that?
-You cry to yourself.
-$n sobs quietly to $mself.
-You cry on $S $t.
-$n cries on $N's $t.
-$n cries on your $t.
-You cry on $p.
-$n cries on $p.
+Buuuuaaaaaaa!!!
+$n desata a chorar.
+Você chora no ombro de $S.
+$n chora no ombro de $N.
+$n chora em seu ombro.
+Quem é este?
+Você chora pra si mesmo.
+$n chora quietamente consigo.
+Você chora no $t de $S.
+$n chora no $t de $N.
+$n chora em seu $t.
+Você chora em $p.
+$n chora em $p.
 
 ~crylaugh crylaugh 0 8 8 0
 You wipe a tear from your eye.
@@ -3134,19 +3134,19 @@ You look at $p and go hrmph.
 $n looks at $p and goes hrmph.
 
 ~hug hug 0 5 0 0
-Hug who?
-$n is looking for someone to hug.
-You hug $M.
-$n hugs $N.
-$n hugs you.
-Sorry, friend, I can't see that person here.
-You hug yourself.
-$n hugs $mself.
-You hug $S $t.
-$n hugs $N's $t.
-$n hugs your $t.
-You hug $p.
-$n hugs $p.
+Abraçar quem?
+$n está procurando alguém para abraçar.
+Você abraça $M.
+$n abraça $N.
+$n abraça você.
+Desculpe, amigo, eu não vejo essa pessoa aqui.
+Você se abraça.
+$n se abraça.
+Você abraça o $t de $S.
+$n abraça o $t de $N.
+$n abraça seu $t.
+Você abraça $p.
+$n abraça $p.
 
 ~huggle huggle 0 8 5 0
 Who do you want to huggle?
@@ -3449,19 +3449,19 @@ You juggle a knife, a flaming torch, a bowling ball, and $p.
 $n juggles a knife, a flaming torch, a bowling ball, and $p.
 
 ~kiss ki 0 5 0 0
-Isn't there someone you want to kiss?
-$n is looking for someone to kiss.
-You kiss $M.
-$n kisses $N.
-$n kisses you.
-Never around when required.
-All the lonely people :(
-Tres bizarre! $n kisses $mself all over $s body.
-You kiss $M on $S $t.
-$n kisses $N on $S $t.
-$n kisses you on your $t.
-You kiss $p.
-$n kisses $p.
+Não há alguém que você queira beijar?
+$n está procurando alguém para beijar.
+Você beija $M.
+$n beija $N.
+$n beija você.
+Nunca por perto quando necessário.
+Todas as pessoas solitárias :(
+Três bizarro! $n se beija por todo o corpo.
+Você beija $M no $t de $S.
+$n beija $N no $t de $S.
+$n beija você no seu $t.
+Você beija $p.
+$n beija $p.
 
 ~kneel kneel 0 5 0 0
 You kneel.
@@ -6524,19 +6524,19 @@ This action is unfinished.
 #
 
 ~thanks thank 0 5 0 0
-Thank you too.
-$n thanks everyone.
-You thank $N heartily.
-$n thanks $N heartily.
-$n thanks you heartily.
-No one answers to that name here.
-You thank yourself since nobody else wants to!
-$n thanks $mself since you won't.
-You thank $S $t.
-$n thanks $N's $t.
-$n thanks your $t.
-You thank $p.
-$n thanks $p.
+Obrigado para você também.
+$n agradece a todos.
+Você agradece cordialmente a $N.
+$n agradece cordialmente a $N.
+$n agradece cordialmente a você.
+Ninguém com esse nome responde aqui.
+Você se agradece já que ninguém mais quer!
+$n se agradece já que você não o fará.
+Você agradece ao $t de $S.
+$n agradece ao $t de $N.
+$n agradece ao seu $t.
+Você agradece a $p.
+$n agradece a $p.
 
 ~think think 0 5 0 0
 You think about life, the universe and everything.
