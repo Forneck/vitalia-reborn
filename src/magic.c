@@ -229,6 +229,12 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim,
 				formula_interpreter(ch, victim, spellnum, TRUE, spell->damages, level,
 									&rts_code)));
 
+	/* Apply weather modifier if enabled */
+	if (CONFIG_WEATHER_AFFECTS_SPELLS && spell->element != ELEMENT_UNDEFINED) {
+		float weather_modifier = get_weather_spell_modifier(ch, spell->element);
+		dam = (int)(dam * weather_modifier);
+	}
+
 	// special spells that formula interpreter can't deal with.
 	switch (spellnum)
 	{

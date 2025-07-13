@@ -207,6 +207,8 @@ void create_spells_db()
  new_spell->assign[1].class_num = CLASS_CLERIC;
  new_spell->assign[1].level = 1;
  new_spell->assign[1].num_mana = strdup(buf);
+ new_spell->school = SCHOOL_ABJURATION;    /* Protective spell */
+ new_spell->element = ELEMENT_UNDEFINED;   /* No elemental nature */
  new_spell->applies[0].appl_num = APPLY_AC;
  new_spell->applies[0].modifier = strdup("-20");
  new_spell->applies[0].duration = strdup("24");
@@ -390,6 +392,8 @@ void create_spells_db()
  new_spell->max_dam = 100;
  new_spell->messages.to_vict = strdup("Você sente sua força indo embora!");
  new_spell->messages.wear_off = strdup("Você se sente retomando suas forças.");
+ new_spell->school = SCHOOL_NECROMANCY;    /* Death/negative energy */
+ new_spell->element = ELEMENT_ICE;         /* Cold damage */
 
  spedit_save_internally(new_spell);
 
@@ -524,6 +528,8 @@ void create_spells_db()
   new_spell->assign[1].class_num = CLASS_RANGER;
  new_spell->assign[1].level = 12;
  new_spell->assign[1].num_mana = strdup(buf);
+ new_spell->school = SCHOOL_CONJURATION;   /* Creates something */
+ new_spell->element = ELEMENT_WATER;       /* Water-based */
 
  spedit_save_internally(new_spell);
 
@@ -854,6 +860,8 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->damages = strdup("dice(11, self.class == 0 ? 8 : 6) + 11");
  new_spell->max_dam = 100;
+ new_spell->school = SCHOOL_EVOCATION;     /* Damage spell */
+ new_spell->element = ELEMENT_FIRE;        /* Fire damage */
 
  spedit_save_internally(new_spell);
 
@@ -952,6 +960,8 @@ void create_spells_db()
  new_spell->assign[1].num_mana = strdup(buf);
  new_spell->damages = strdup("dice(7, self.class == 0 ? 8 : 6) + 7");
  new_spell->max_dam = 100;
+ new_spell->school = SCHOOL_EVOCATION;     /* Damage spell */
+ new_spell->element = ELEMENT_LIGHTNING;   /* Lightning damage */
 
  spedit_save_internally(new_spell);
 
