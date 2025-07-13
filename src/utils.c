@@ -2168,6 +2168,46 @@ bool mob_can_afford_item(struct char_data *ch, obj_vnum item_vnum)
  * @param item_vnum VNUM do item desejado
  * @param reward Recompensa oferecida
  */
+/* Helper function to select an appropriate item from mob's inventory as reward */
+obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty)
+{
+    struct obj_data *obj, *best_obj = NULL;
+    int best_value = 0;
+    int target_value = difficulty * 100; /* Target item value based on difficulty */
+    
+    if (!IS_NPC(ch)) {
+        return NOTHING;
+    }
+    
+    /* Iterate through mob's inventory to find suitable reward item */
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        /* Skip quest items, containers with contents, and nodrop items */
+        if (OBJ_FLAGGED(obj, ITEM_QUEST) || OBJ_FLAGGED(obj, ITEM_NODROP) ||
+            (GET_OBJ_TYPE(obj) == ITEM_CONTAINER && obj->contains)) {
+            continue;
+        }
+        
+        /* Skip essential equipment (weapons, armor the mob is wearing) */
+        if (obj->worn_by == ch) {
+            continue;
+        }
+        
+        /* Calculate item value considering type and stats */
+        int item_value = GET_OBJ_COST(obj);
+        if (item_value <= 0) {
+            item_value = 10; /* Minimum value for worthless items */
+        }
+        
+        /* Prefer items close to target value but not too expensive */
+        if (item_value <= target_value * 2 && item_value > best_value) {
+            best_obj = obj;
+            best_value = item_value;
+        }
+    }
+    
+    return best_obj ? GET_OBJ_VNUM(best_obj) : NOTHING;
+}
+
 void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
 {
     obj_rnum obj_rnum;
@@ -2182,6 +2222,9 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     char quest_desc[MAX_QUEST_DESC];
     char quest_info[MAX_QUEST_MSG];
     char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+    ush_int reward_item_rnum;
+    char *reward_item_name = "";
     
     if (!IS_NPC(ch) || !ch->ai_data) {
         return;
@@ -2196,8 +2239,12 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     /* Encontra zona do mob */
     mob_zone = world[IN_ROOM(ch)].zone;
     
-    /* Encontra questmaster apropriado */
-    questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    /* Enhancement 5: Find questmaster with zone-based preferences */
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        /* Fallback to basic questmaster finding */
+        questmaster_vnum = find_questmaster_for_zone(mob_zone);
+    }
     if (questmaster_vnum == NOBODY) {
         /* Não há questmaster disponível, usa implementação anterior */
         log1("WISHLIST QUEST: No questmaster found for %s in zone %d, using old implementation", 
@@ -2211,6 +2258,9 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     /* Calcula dificuldade e recompensa adequada */
     difficulty = calculate_quest_difficulty(item_vnum);
     calculated_reward = calculate_quest_reward(ch, item_vnum, difficulty);
+    
+    /* Enhancement 1: Select item reward from mob's inventory */
+    reward_item = select_mob_inventory_reward(ch, difficulty);
     
     /* Verifica se o mob tem ouro suficiente */
     if (GET_GOLD(ch) < calculated_reward) {
@@ -2240,8 +2290,30 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     new_quest->next_quest = NOTHING;
     new_quest->func = NULL;
     
+    /* Enhancement 6: Questpoints as rewards for high difficulty + reputation */
+    int base_questpoints = calculated_reward / 10;
+    
+    /* Enhancement 6: Bonus questpoints for high difficulty quests */
+    if (difficulty >= 80) {
+        base_questpoints += 3; /* High difficulty bonus */
+    } else if (difficulty >= 60) {
+        base_questpoints += 2; /* Medium difficulty bonus */
+    }
+    
+    /* Enhancement 6: Additional questpoints for requesting mob with good karma */
+    if (GET_KARMA(ch) > 500) {
+        base_questpoints += 2; /* High karma bonus */
+    } else if (GET_KARMA(ch) > 200) {
+        base_questpoints += 1; /* Good karma bonus */
+    }
+    
+    /* Enhancement 6: Ensure minimum questpoints for very difficult quests */
+    if (difficulty >= 90 && GET_KARMA(ch) > 300) {
+        base_questpoints = MAX(base_questpoints, 5); /* Minimum 5 QP for elite quests */
+    }
+    
     /* Configura valores da quest */
-    new_quest->value[0] = calculated_reward / 10; /* Questpoints reward */
+    new_quest->value[0] = URANGE(1, base_questpoints, 10); /* Enhanced Questpoints reward */
     new_quest->value[1] = 0; /* Penalty */
     new_quest->value[2] = MAX(1, GET_LEVEL(ch) - 10); /* Min level */
     new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15); /* Max level */
@@ -2262,7 +2334,7 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
     new_quest->exp_reward = calculated_reward * 2;
-    new_quest->obj_reward = NOTHING; /* TODO: Implementar item rewards do inventário do mob */
+    new_quest->obj_reward = reward_item; /* Enhancement 1: Item from mob inventory */
     
     /* Cria strings da quest */
     snprintf(quest_name, sizeof(quest_name), "Busca por %s", item_name);
@@ -2280,16 +2352,42 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
         }
     }
     
+    /* Get reward item name for quest info */
+    if (reward_item != NOTHING) {
+        reward_item_rnum = real_object(reward_item);
+        if (reward_item_rnum != NOTHING) {
+            reward_item_name = obj_proto[reward_item_rnum].short_description;
+        }
+    }
+    
     if (qm_char && qm_char != ch) {
-        snprintf(quest_info, sizeof(quest_info), 
-                 "%s está procurando por %s. Se você encontrar este item, "
-                 "traga-o para mim ou diretamente para %s para receber sua recompensa.",
-                 GET_NAME(ch), item_name, GET_NAME(ch));
+        if (reward_item != NOTHING) {
+            snprintf(quest_info, sizeof(quest_info), 
+                     "%s está procurando por %s. Se você encontrar este item, "
+                     "traga-o para mim ou diretamente para %s para receber %d moedas de ouro, "
+                     "%d pontos de experiência e %s como recompensa.",
+                     GET_NAME(ch), item_name, GET_NAME(ch), calculated_reward, 
+                     calculated_reward * 2, reward_item_name);
+        } else {
+            snprintf(quest_info, sizeof(quest_info), 
+                     "%s está procurando por %s. Se você encontrar este item, "
+                     "traga-o para mim ou diretamente para %s para receber sua recompensa.",
+                     GET_NAME(ch), item_name, GET_NAME(ch));
+        }
     } else {
-        snprintf(quest_info, sizeof(quest_info), 
-                 "%s está procurando por %s. Se você encontrar este item, "
-                 "traga-o de volta para %s para receber sua recompensa.",
-                 GET_NAME(ch), item_name, GET_NAME(ch));
+        if (reward_item != NOTHING) {
+            snprintf(quest_info, sizeof(quest_info), 
+                     "%s está procurando por %s. Se você encontrar este item, "
+                     "traga-o de volta para %s para receber %d moedas de ouro, "
+                     "%d pontos de experiência e %s como recompensa.",
+                     GET_NAME(ch), item_name, GET_NAME(ch), calculated_reward,
+                     calculated_reward * 2, reward_item_name);
+        } else {
+            snprintf(quest_info, sizeof(quest_info), 
+                     "%s está procurando por %s. Se você encontrar este item, "
+                     "traga-o de volta para %s para receber sua recompensa.",
+                     GET_NAME(ch), item_name, GET_NAME(ch));
+        }
     }
     snprintf(quest_done, sizeof(quest_done),
              "Excelente! Você trouxe exatamente o que eu precisava. "
@@ -2324,8 +2422,16 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
          GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)), new_quest_vnum, item_vnum, 
          item_name, questmaster_vnum, calculated_reward);
          
-    /* TODO: Salvar quest permanentemente se necessário */
-    /* save_quests(mob_zone); */
+    /* Enhancement 3: Quest Persistence - Mark as persistent quest */
+    /* Add a special flag to identify this as a wishlist quest that should persist */
+    SET_BIT(new_quest->flags, AQ_REPEATABLE); /* Most wishlist quests should be repeatable */
+    
+    /* Enhancement 3: Quest Persistence - Save quest to disk for server restarts */
+    if (save_quests(mob_zone)) {
+        log1("WISHLIST QUEST: Saved quest %d to disk for persistence across restarts", new_quest_vnum);
+    } else {
+        log1("SYSERR: Failed to save wishlist quest %d to disk", new_quest_vnum);
+    }
 }
 
 /**
@@ -2376,6 +2482,90 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
  * @param zone A zona para a qual procurar um questmaster
  * @return VNUM do questmaster encontrado, ou NOBODY se nenhum for encontrado
  */
+/**
+ * Enhancement 5: Find questmaster for zone with alignment and proximity preferences
+ * @param zone Zone to find questmaster for
+ * @param requesting_mob Mob requesting the quest (for alignment considerations)
+ * @return VNUM do questmaster mais apropriado, ou NOBODY se não encontrado
+ */
+mob_vnum find_questmaster_for_zone_enhanced(zone_rnum zone, struct char_data *requesting_mob)
+{
+    qst_rnum rnum;
+    mob_vnum best_qm = NOBODY;
+    zone_rnum qm_zone;
+    mob_rnum qm_mob_rnum;
+    int best_score = -1;
+    int requesting_alignment = 0; /* Default neutral */
+    
+    if (zone == NOWHERE || zone >= top_of_zone_table) {
+        return NOBODY;
+    }
+    
+    /* Get requesting mob's alignment for preference calculation */
+    if (requesting_mob && IS_NPC(requesting_mob)) {
+        requesting_alignment = GET_ALIGNMENT(requesting_mob);
+    }
+    
+    /* Enhancement 5: Search for questmasters with preference scoring */
+    for (rnum = 0; rnum < total_quests; rnum++) {
+        if (QST_MASTER(rnum) != NOBODY) {
+            qm_mob_rnum = real_mobile(QST_MASTER(rnum));
+            if (qm_mob_rnum != NOBODY) {
+                if (mob_proto[qm_mob_rnum].in_room != NOWHERE) {
+                    qm_zone = world[mob_proto[qm_mob_rnum].in_room].zone;
+                    
+                    /* Calculate preference score for this questmaster */
+                    int score = 0;
+                    
+                    /* Prefer questmasters in the same zone (highest priority) */
+                    if (qm_zone == zone) {
+                        score += 100;
+                    } else {
+                        /* Enhancement 5: Proximity bonus - closer zones are preferred */
+                        int zone_distance = abs((int)qm_zone - (int)zone);
+                        score += MAX(0, 50 - zone_distance * 5); /* Max 50 points for proximity */
+                    }
+                    
+                    /* Enhancement 5: Alignment preference - similar alignments are preferred */
+                    if (requesting_mob) {
+                        int qm_alignment = GET_ALIGNMENT(&mob_proto[qm_mob_rnum]);
+                        int alignment_diff = abs(requesting_alignment - qm_alignment);
+                        
+                        /* Perfect alignment match gets bonus */
+                        if (alignment_diff < 100) {
+                            score += 20;
+                        } else if (alignment_diff < 300) {
+                            score += 10;
+                        }
+                        /* Opposite alignments get penalty */
+                        else if (alignment_diff > 700) {
+                            score -= 10;
+                        }
+                    }
+                    
+                    /* Enhancement 5: Prefer questmasters in allied/friendly zones */
+                    /* Check if zones have similar characteristics */
+                    if (qm_zone != zone && qm_zone < top_of_zone_table && zone < top_of_zone_table) {
+                        /* Zones with similar level ranges are considered "allied" */
+                        int zone_level_diff = abs((int)zone_table[qm_zone].bot - (int)zone_table[zone].bot);
+                        if (zone_level_diff < 50) {
+                            score += 15; /* Allied zone bonus */
+                        }
+                    }
+                    
+                    /* Update best questmaster if this one scores higher */
+                    if (score > best_score) {
+                        best_score = score;
+                        best_qm = QST_MASTER(rnum);
+                    }
+                }
+            }
+        }
+    }
+    
+    return best_qm;
+}
+
 mob_vnum find_questmaster_for_zone(zone_rnum zone)
 {
     qst_rnum rnum;
@@ -2427,10 +2617,38 @@ mob_vnum find_questmaster_for_zone(zone_rnum zone)
  * @param item_vnum VNUM do item para calcular dificuldade
  * @return Valor de dificuldade de 1 a 100
  */
+/* Enhancement 2: Helper function to find current owner of an item */
+struct char_data *find_item_owner(obj_vnum item_vnum)
+{
+    struct char_data *ch;
+    struct obj_data *obj;
+    
+    /* Search through all characters in game */
+    for (ch = character_list; ch; ch = ch->next) {
+        /* Check carried items */
+        for (obj = ch->carrying; obj; obj = obj->next_content) {
+            if (GET_OBJ_VNUM(obj) == item_vnum) {
+                return ch;
+            }
+        }
+        
+        /* Check equipped items */
+        int i;
+        for (i = 0; i < NUM_WEARS; i++) {
+            if (GET_EQ(ch, i) && GET_OBJ_VNUM(GET_EQ(ch, i)) == item_vnum) {
+                return ch;
+            }
+        }
+    }
+    
+    return NULL; /* Item not found in anyone's possession */
+}
+
 int calculate_quest_difficulty(obj_vnum item_vnum)
 {
     obj_rnum obj_rnum;
     int difficulty = 50; /* Base difficulty */
+    struct char_data *current_owner;
     
     obj_rnum = real_object(item_vnum);
     if (obj_rnum == NOTHING) {
@@ -2455,12 +2673,110 @@ int calculate_quest_difficulty(obj_vnum item_vnum)
         difficulty += 15;
     }
     
-    /* TODO: Adicionar cálculo baseado no owner atual do item
-     * Isto requereria encontrar quem possui o item atualmente
-     * e ajustar a dificuldade baseado no nível/stats do proprietário
-     */
+    /* Enhancement 2: Dynamic difficulty based on current item owner's stats */
+    current_owner = find_item_owner(item_vnum);
+    if (current_owner) {
+        /* Increase difficulty based on owner's level */
+        difficulty += GET_LEVEL(current_owner) / 2;
+        
+        /* If owner is a player, additional considerations */
+        if (!IS_NPC(current_owner)) {
+            /* Higher difficulty if player has high stats */
+            int avg_stat = (GET_STR(current_owner) + GET_DEX(current_owner) + 
+                           GET_CON(current_owner) + GET_INT(current_owner) + 
+                           GET_WIS(current_owner) + GET_CHA(current_owner)) / 6;
+            difficulty += (avg_stat - 10) / 2; /* Bonus for above-average stats */
+            
+            /* Increase difficulty if player has high karma (experienced player) */
+            if (GET_KARMA(current_owner) > 500) {
+                difficulty += 10;
+            } else if (GET_KARMA(current_owner) > 200) {
+                difficulty += 5;
+            }
+        } else {
+            /* For NPC owners, consider their combat abilities */
+            if (GET_HITROLL(current_owner) > 10 || GET_DAMROLL(current_owner) > 10) {
+                difficulty += 10;
+            }
+        }
+    }
     
     return URANGE(10, difficulty, 100);
+}
+
+/**
+ * Enhancement 4: Calculate player reputation based on quest completion history
+ * @param ch Player character
+ * @return Reputation score (0-100, where higher is better)
+ */
+int calculate_player_reputation(struct char_data *ch)
+{
+    int reputation = 50; /* Base reputation */
+    int completed_quests;
+    int karma_bonus;
+    
+    if (!ch || IS_NPC(ch)) {
+        return reputation;
+    }
+    
+    /* Enhancement 4: Base reputation on number of completed quests */
+    completed_quests = GET_NUM_QUESTS(ch);
+    if (completed_quests > 0) {
+        reputation += MIN(completed_quests * 2, 30); /* Max 30 points from completed quests */
+    }
+    
+    /* Enhancement 4: Factor in karma (existing reputation system) */
+    karma_bonus = GET_KARMA(ch) / 20; /* Karma divided by 20 for reputation bonus */
+    reputation += URANGE(-25, karma_bonus, 25); /* Karma can add/subtract up to 25 points */
+    
+    /* Enhancement 4: Level-based reputation (experienced players are more trusted) */
+    if (GET_LEVEL(ch) >= 20) {
+        reputation += (GET_LEVEL(ch) - 15) / 2; /* Higher level = better reputation */
+    }
+    
+    return URANGE(0, reputation, 100);
+}
+
+/**
+ * Enhancement 4: Calculate quest reward with player reputation adjustment
+ * @param requesting_mob Mob que está solicitando o item
+ * @param item_vnum VNUM do item desejado
+ * @param difficulty Dificuldade calculada da quest
+ * @param player Player taking the quest (NULL if general quest)
+ * @return Valor em ouro da recompensa
+ */
+int calculate_quest_reward_with_reputation(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty, struct char_data *player)
+{
+    int base_reward;
+    int final_reward;
+    int reputation_modifier = 100; /* Default 100% (no change) */
+    
+    /* Calculate base reward using existing function */
+    base_reward = calculate_quest_reward(requesting_mob, item_vnum, difficulty);
+    
+    /* Enhancement 4: Adjust reward based on player reputation */
+    if (player && !IS_NPC(player)) {
+        int reputation = calculate_player_reputation(player);
+        
+        /* High reputation (80+) gets 20% bonus */
+        if (reputation >= 80) {
+            reputation_modifier = 120;
+        }
+        /* Good reputation (60-79) gets 10% bonus */
+        else if (reputation >= 60) {
+            reputation_modifier = 110;
+        }
+        /* Poor reputation (0-39) gets 10% penalty */
+        else if (reputation < 40) {
+            reputation_modifier = 90;
+        }
+        /* Average reputation (40-59) gets no modifier */
+    }
+    
+    /* Apply reputation modifier */
+    final_reward = (base_reward * reputation_modifier) / 100;
+    
+    return final_reward;
 }
 
 /**

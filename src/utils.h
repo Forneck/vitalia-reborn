@@ -97,9 +97,14 @@ shop_rnum find_shop_selling_item(obj_vnum item_vnum);
 bool mob_can_afford_item(struct char_data *ch, obj_vnum item_vnum);
 void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward);
 mob_vnum find_questmaster_for_zone(zone_rnum zone);
+mob_vnum find_questmaster_for_zone_enhanced(zone_rnum zone, struct char_data *requesting_mob);
 struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone_rnum zone);
 int calculate_quest_difficulty(obj_vnum item_vnum);
 int calculate_quest_reward(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty);
+int calculate_player_reputation(struct char_data *ch);
+int calculate_quest_reward_with_reputation(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty, struct char_data *player);
+obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty);
+struct char_data *find_item_owner(obj_vnum item_vnum);
 int is_wishlist_quest(qst_vnum quest_vnum);
 void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
 /* Public functions made available from weather.c */
