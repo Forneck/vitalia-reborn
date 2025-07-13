@@ -80,7 +80,7 @@ VOCÊ MATOU $N!!! -- Não se sente envergonhado?
 Sua cabeça é preenchida com todas as cores do arco-íris antes dela explodir!
 $n transforma $N em um cadáver totalmente colorido!
 Seu spray de cores erra $N -- que mundo tolo...
-$n tenta sem sucesso dar mais cor é sua vida!
+$n tenta sem sucesso dar mais cor à sua vida!
 $n respinga cores por todos os lados, exceto $N.
 Seu arco-íris particular acerta a cara de $N -- EBA!!
 Uma repentina explosão de cores faz você rodar!
@@ -156,8 +156,8 @@ A bola-de-fogo de $n é educadamente ignorada por $N.
 * Harm
 M
   27
-Assim que você termina seu encantamento $N cai mort$R.. o dano foid demais para $L.
-Você se sente zonzo quando $n termina seu encantamento. O Dano foi tamanho que você não resiste e sucumbe.
+Assim que você termina seu encantamento $N cai mort$R.. o dano foi demais para $L.
+Você se sente zonzo quando $n termina seu encantamento. o dano foi tamanho que você não resiste e sucumbe.
 $N absorve todo o dano da magia de $n e cai mort$R.
 $N esquiva-se de seu toque e você não consegue causar dano algum com sua magia.
 Você se esquiva habilmente da magia de $n não sofrendo dano algum.
@@ -341,7 +341,7 @@ $N, por um milagre, não foi eletrocutado pela descarga de raios de $n.
 Você tenta eletrocutar $N com sua descarga de raios, fazendo um tremendo estrago...
 A descarga de raios de $n conseguiu atingi-l$R. Você está sendo eletrocutad$R!!
 $n atinge $N com uma descarga de raios!
-Você tenta eletrocutar $N, mas sua descarga de raios não passa nme perto d$L.
+Você tenta eletrocutar $N, mas sua descarga de raios não passa nem perto d$L.
 $n tenta eletrocutá-l$R com uma descarga de raios. $l deve pagar por isso!
 $n tenta eletrocutar a divina pessoa de $N. Pobrezinh$r... Pagará caro por isso...
 
@@ -530,16 +530,16 @@ M
  249
 $N foi tão fortemente atingid$R por sua rasteira que caiu mort$R, com o pescoço quebrado!
 A rasteira de $n foi tão repentina que faz você cair e quebrar o pescoço, morrendo!
-$N tem o pescoço quebrado ai cair com a rasteira de $n!
+$N tem o pescoço quebrado ao cair com a rasteira de $n!
 Você tenta passar uma rasteira em $N, que rapidamente desvia, fazendo-$r cair desequilibrad$r!
 Você consegue evitar a rasteira de $n, que cai ao perder o equilíbrio!
 $N evita a rasteira de $n, que acaba perdendo o equilíbrio e indo ao chão!
 Com hábil movimento de pernas, você passa uma rasteira em $N, que cai no chão, desequilibrad$R!
 Com hábil movimento de pernas, $n passa uma rasteira em você, fazendo-$R cair no chão!
 Com hábil movimento de pernas, $n passa uma rasteira em $N, fazendo-$R cair no chão!
-Você tanta passar uma rasteira em $N, mas quem cai no chão é você!
-$n tanta passar uma rasteira em você, mas é $l quem cai no chão!
-$n tanta passar uma rasteira em $N, mas quem cai no chão é $l!
+Você tenta passar uma rasteira em $N, mas quem cai no chão é você!
+$n tenta passar uma rasteira em você, mas é $l quem cai no chão!
+$n tenta passar uma rasteira em $N, mas quem cai no chão é $l!
 
 
 ***************************************************************************
@@ -854,8 +854,8 @@ $n tenta arranhar $N mas erra por milímetros!
 #
 #
 #
-Seu estúpido! Não se arranha alguem tão poderoso!
-$n deve star louco ao tentar arranhar você!
+Seu estúpido! Não se arranha alguém tão poderoso!
+$n deve estar louco ao tentar arranhar você!
 $n deve estar louco ao tentar arranhar $N!
 M
  408
@@ -868,8 +868,8 @@ $n tenta arranhar $N mas quase corta a si mesm$r.
 #
 #
 #
-Seu estúpido! Não se arranha alguem tão poderoso!
-$n deve star louco ao tentar arranhar você!
+Seu estúpido! Não se arranha alguém tão poderoso!
+$n deve estar louco ao tentar arranhar você!
 $n deve estar louco ao tentar arranhar $N!
 
 * Maul
@@ -884,7 +884,7 @@ $n tenta espancar $N mas erra feio!
 #
 #
 #
-Espancar um ser divino? O que sua mãe diria disso? Claro que provavelmente você tentaria espanca-la tambem!
+Espancar um ser divino? O que sua mãe diria disso? Claro que provavelmente você tentaria espanca-la também!
 $n tenta espancar você e falha miseravelmente.
 $N ri da desastrosa tentativa de $n em espanca-l$R. Que engraçado!
 
