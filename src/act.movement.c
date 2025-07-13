@@ -82,7 +82,7 @@ int has_flight(struct char_data *ch)
 
 	/* Non-wearable flying items in inventory will do it. */
 	for (obj = ch->carrying; obj; obj = obj->next_content)
-		if (OBJAFF_FLAGGED(obj, AFF_FLYING) && OBJAFF_FLAGGED(obj, AFF_FLYING))
+		if (OBJAFF_FLAGGED(obj, AFF_FLYING))
 			return (1);
 
 	/* Any equipped objects with AFF_FLYING will do it too. */
@@ -1285,7 +1285,7 @@ int stop_flying(struct char_data *ch)
 
 ACMD(do_fly)
 {
-	if (SCMD_FLY)
+	if (subcmd == SCMD_FLY)
 	{
 		if (!has_flight(ch))
 		{
