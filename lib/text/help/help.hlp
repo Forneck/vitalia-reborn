@@ -6854,10 +6854,21 @@ Para obter ajuda para um comando, digite HELP (comando).
    @gSPELL                @nMostrar todas as magias que voce pode vir a ter.
    @gVISIBLE              @nPara cancelar o efeito da magia 'invisibility'.
 
+   @rEscolas de Magia:@n
+   As magias são organizadas em diferentes escolas segundo sua natureza:
+   @cAbjuração@n   - Proteção, banimento e remoção de efeitos
+   @cAlteração@n   - Mudanças físicas e aprimoramentos  
+   @cConjuração@n  - Criação, cura, invocação e transporte
+   @cAdivinhação@n - Detecção e revelação de informações
+   @cEncantamento@n- Controle mental e aprimoramento mágico
+   @cEvocação@n    - Ataques diretos e manipulação de energia
+   @cIlusão@n      - Enganos e disfarces mágicos
+   @cNecromancia@n - Magia da morte e energia negativa
+
    As seguintes magias estao documentadas no VitaliaMUD:
 Para obter ajuda para uma magia, digite HELP MAGIA (nome da magia).
 
-   @WMagias de cura@n                        @WMagias de protecao@n
+   @WMagias de cura@n @c(Escola: Conjuração)@n       @WMagias de protecao@n @c(Escola: Abjuração)@n
    [ -  Cle  -   - ] AID                 [Mag Cle  -   - ] ARMOR
    [ -  Cle  -   - ] CURE BLIND          [Mag Cle  -   - ] IMPROVED ARMOR
    [ -  Cle  -   - ] CURE CRITIC         [ -  Cle  -   - ] PROTECTION FROM EVIL
@@ -6872,7 +6883,7 @@ Para obter ajuda para uma magia, digite HELP MAGIA (nome da magia).
                                          [ -  Cle  -   - ] GLOOMSHIELD
 					 [ -   -   -  Ran] WINDWALL
 
-   @WMagias de ataque@n                      @WMagias de afetamento@n
+   @WMagias de ataque@n @c(Escola: Evocação)@n           @WMagias de afetamento@n @c(Escola: Encantamento)@n
    [Mag  -   -  Brd] MAGIC MISSILE       [ -  Cle  -   - ] BLESS
    [Mag  -   -   - ] CHILL TOUCH         [Mag Cle  -   - ] BLINDNESS
    [Mag  -   -   - ] BURNING HANDS       [Mag Cle Dru  - ] BREATH
@@ -6884,35 +6895,35 @@ Para obter ajuda para uma magia, digite HELP MAGIA (nome da magia).
    [Mag  -   -   - ] CURSE               [Mag  -   -   - ] STRENGTH
    [Mag  -   -   - ] FIREBALL            [Mag Cle Dru  - ] WATERWALK
    [Mag  -   -   - ] FIRESHIELD
-   [Mag  -   -   - ] DISINTEGRATE            @WMagias sobrenaturais@n
+   [Mag  -   -   - ] DISINTEGRATE            @WMagias sobrenaturais@n @c(Escola: Necromancia)@n
    [Mag Cle  -   - ] POISON              [ -  Cle  -   - ] RAISE DEAD
    [ -  Cle Dru  - ] EARTHQUAKE          [ -  Cle  -   - ] RESSURECT
    [ -  Cle  -   - ] DISPEL EVIL         [ -  Cle  -   - ] TALK WITH DEAD
    [ -  Cle  -   - ] DISPEL GOOD
-   [ -  Cle  -   - ] CALL LIGHTNING          @WMagias de grupo@n
+   [ -  Cle  -   - ] CALL LIGHTNING          @WMagias de grupo@n @c(Escola: Variada)@n
    [ -  Cle  -   - ] HARM                [ -  Cle  -   - ] GROUP HEAL
    [ -   -  Dru  - ] BURST OF FLAME      [ -  Cle  -   - ] GROUP ARMOR
    [ -   -  Dru  - ] BURST OF FIRE       [ -  Cle  -   - ] GROUP RECALL
    [ -   -  Dru  - ] IGNITE
-   [ -   -  Dru  - ] CASCADE OF HAIL         @WMagias de enfeiticamento@n
+   [ -   -  Dru  - ] CASCADE OF HAIL         @WMagias de enfeiticamento@n @c(Escola: Encantamento/Ilusão)@n
    [ -   -  Dru  - ] FURY OF AIR         [Mag Cle Dru  - ] CHARM PERSON
    [ -   -  Dru  - ] LIGHTNING BLAST     [ -   -   -   - ] VENTRILOQUATE
    [ -   -  Dru  - ] THISTLECOAT         [ -   -  Dru  - ] STINGING SWARM
    [ -   -  Dru  - ] STINGING SWARM
    [ -   -   -  Brd] VOICE EXPLOSION
 
-   @WMagias de criacao@n                     @WMagias de invocacao@n
+   @WMagias de criacao@n @c(Escola: Conjuração)@n     @WMagias de invocacao@n @c(Escola: Conjuração)@n
    [ -  Cle  -   - ] CREATE FOOD         [ -  Cle  -   - ] ANIMATE DEAD
    [ -  Cle  -   - ] CREATE WATER        [Mag  -   -   - ] CLONE
    [Mag  -   -   - ] PORTAL              [ -   -  Dru  - ] EVOKE CROW
    [ -   -  Dru Ran] CREATE BERRIES      [ -   -  Dru  - ] EVOKE WOLF
-   @WMagias de transporte@n              [ -   -  Dru  - ] EVOKE BEAR
+   @WMagias de transporte@n @c(Escola: Conjuração)@n  [ -   -  Dru  - ] EVOKE BEAR
    [ -   -   -  Ran] TELEPORT            [ -   -  Dru  - ] EVOKE LION
    [Mag Cle Dru  - ] WORD OF RECALL      [ -   -   -  Ran] EVOKE AIR SERVANT
    [Mag Cle  -   - ] SUMMON
    [Mag  -   -  Ran] TRANSPORT VIA PLANTS
 
-   @WMagias de sensibilidade@n               @WMagias de controle da natureza@n
+   @WMagias de sensibilidade@n @c(Escola: Adivinhação)@n   @WMagias de controle da natureza@n @c(Escola: Alteração)@n
    [ -  Cle  -   - ] DETECT ALIGN        [ -  Cle Dru  - ] CONTROL WEATHER
    [Mag Cle  -   - ] DETECT INVIS        [ -   -  Dru  - ] DANCE OF FIREFLIES
    [Mag  -   -   - ] DETECT MAGIC        [ -   -  Dru  - ] STINGING SWARM
