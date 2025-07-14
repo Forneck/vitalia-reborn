@@ -12,6 +12,7 @@ que ele dá deixa pequenos cristais de gelo no chão.
 1500 15000
 8 8 1
 E
+T 201
 
 #201
 soldado gelado~
@@ -73,6 +74,7 @@ aspectos do inverno eterno deste castelo.
 8000 50000
 4 4 2
 E
+T 202
 
 #205
 prisioneiro~
@@ -133,6 +135,7 @@ afiados giram ao seu redor como lâminas cortantes.
 1800 18000
 8 8 0
 E
+T 205
 
 #209
 aranha cristal~

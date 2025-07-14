@@ -6,10 +6,11 @@ Forjada a partir do gelo mágico mais puro do castelo, esta espada nunca derrete
 e mantém um gume afiado como navalha. Runas azuis percorrem sua lâmina,
 pulsando com energia gélida.
 ~
-9 8388624 0 0 0 0 0 0 0 0 5 2400 12000 0 0
+5 h o 0 0 ao 0 0 0 0 0 0 0
+0 2 4 3
+5 2400 12000 0 0
 A
 18 2
-E
 
 #201
 armadura placas gelo~
@@ -145,6 +146,7 @@ A
 18 4
 A
 19 10
+T 208
 E
 
 #211
@@ -199,6 +201,7 @@ com fechaduras e dobradiças de prata. Seu interior é forrado com veludo
 azul e contém os tesouros mais valiosos do reino gelado.
 ~
 15 8388608 0 0 0 0 0 0 0 0 20 2400 12000 0 0
+T 204
 E
 
 #215
