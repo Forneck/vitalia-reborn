@@ -302,6 +302,8 @@ void create_spells_db()
  new_spell->messages.to_vict = strdup("Você está ceg$r!");
  new_spell->messages.to_room = strdup("$N parece estar ceg$r!");
  new_spell->messages.wear_off = strdup("Você volta a enxergar.");
+ new_spell->school = SCHOOL_NECROMANCY;    /* Debilitating curse */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure magical effect */
 
  spedit_save_internally(new_spell);
 
@@ -448,6 +450,8 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->damages = strdup("dice(9, self.class == 0 ? 8 : 6) + 9");
  new_spell->max_dam = 100;
+ new_spell->school = SCHOOL_ILLUSION;      /* Visual/light-based attack */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure magical effect */
 
  spedit_save_internally(new_spell);
 
@@ -493,6 +497,8 @@ void create_spells_db()
  new_spell->assign[0].level = 2;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->objects[0] = strdup("10");  // object VNUM 10 = waybread
+ new_spell->school = SCHOOL_CONJURATION;   /* Creates physical matter */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure creation */
  
  spedit_save_internally(new_spell);
 
@@ -584,6 +590,8 @@ void create_spells_db()
  new_spell->messages.to_room = strdup("Os olhos de $n brilham momentaneamente.");
  new_spell->dispel[0] = strdup("4");  // spell VNUM 4 = Blindness
  new_spell->dispel[1] = strdup("162");
+ new_spell->school = SCHOOL_ABJURATION;    /* Removes affliction */
+ new_spell->element = ELEMENT_HOLY;        /* Divine healing */
  spedit_save_internally(new_spell);
 
  // SPELL_CURE_CRITIC # 15
@@ -688,6 +696,8 @@ void create_spells_db()
  new_spell->applies[0].duration = strdup("12 + param");
  new_spell->messages.to_vict = strdup("Você sente suas pupilas se dilatando.");
  new_spell->messages.wear_off = strdup("Você perde sua sensibilidade.");
+ new_spell->school = SCHOOL_DIVINATION;    /* Reveals information */
+ new_spell->element = ELEMENT_HOLY;        /* Divine insight */
 
  spedit_save_internally(new_spell);
 
@@ -717,6 +727,8 @@ void create_spells_db()
  new_spell->applies[0].duration = strdup("12 + param");
  new_spell->messages.to_vict = strdup("Você sente suas pupilas se dilatando.");
  new_spell->messages.wear_off = strdup("Suas pupilas voltam ao normal.");
+ new_spell->school = SCHOOL_DIVINATION;    /* Reveals hidden things */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure magical sight */
 
  spedit_save_internally(new_spell);
 
@@ -772,6 +784,8 @@ void create_spells_db()
  new_spell->assign[3].level = 12;
  new_spell->assign[3].num_mana = strdup(buf);
  new_spell->messages.wear_off = strdup("A detecção de veneno se encerra.");	
+ new_spell->school = SCHOOL_DIVINATION;    /* Reveals information */
+ new_spell->element = ELEMENT_POISON;      /* Poison detection */
 
  spedit_save_internally(new_spell);
 
@@ -793,6 +807,8 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->damages = strdup("dice(6, 8) + 6");
  new_spell->max_dam = 100;
+ new_spell->school = SCHOOL_ABJURATION;    /* Protective/banishing magic */
+ new_spell->element = ELEMENT_HOLY;        /* Divine power against evil */
 
  spedit_save_internally(new_spell);
 
@@ -841,6 +857,8 @@ void create_spells_db()
  new_spell->assign[0].class_num = CLASS_MAGIC_USER;
  new_spell->assign[0].level = 65;
  new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->school = SCHOOL_ENCHANTMENT;   /* Magical enhancement */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure magical effect */
 
  spedit_save_internally(new_spell);
 
@@ -908,6 +926,8 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->damages = strdup("dice(8, 8) + 8");
  new_spell->max_dam = 100;
+ new_spell->school = SCHOOL_NECROMANCY;    /* Negative energy */
+ new_spell->element = ELEMENT_UNHOLY;      /* Dark divine power */
 
  spedit_save_internally(new_spell);
 
@@ -1483,6 +1503,8 @@ void create_spells_db()
  new_spell->messages.to_vict = strdup("Sua visão fica avermelhada.");
  new_spell->messages.to_room = strdup("Os olhos de $N ficam vermelhos.");
  new_spell->messages.wear_off = strdup("Sua visão noturna parece desaparecer.");
+ new_spell->school = SCHOOL_ALTERATION;    /* Enhances sight */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure magical effect */
 
  spedit_save_internally(new_spell);
 
@@ -1515,6 +1537,8 @@ void create_spells_db()
  new_spell->assign[3].num_mana = strdup(buf);
  new_spell->messages.to_vict = strdup("Você sente um tipo de rede surgir sob seus pés.");
  new_spell->messages.wear_off = strdup("Seus pés parecem menos boiantes.");
+ new_spell->school = SCHOOL_ALTERATION;    /* Movement enhancement */
+ new_spell->element = ELEMENT_WATER;       /* Water-based effect */
 
  spedit_save_internally(new_spell);
 
@@ -1538,6 +1562,8 @@ void create_spells_db()
  new_spell->assign[1].class_num = CLASS_BARD;
  new_spell->assign[1].level = 20;
  new_spell->assign[1].num_mana = strdup(buf);
+ new_spell->school = SCHOOL_DIVINATION;    /* Reveals information */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure magical analysis */
 
  spedit_save_internally(new_spell);
 
