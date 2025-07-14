@@ -1230,8 +1230,10 @@ ACMD(do_score)
 	if (AFF_FLAGGED(ch, AFF_STINGING))
 		send_to_char(ch, "Vários insetos rodeiam você, causando muita dor.\r\n");
 
-	if (AFF_FLAGGED(ch, AFF_STONESKIN))
-		send_to_char(ch, "Sua pele está muito dura.\r\n");
+	if (AFF_FLAGGED(ch, AFF_STONESKIN)) {
+		int points = get_stoneskin_points(ch);
+		send_to_char(ch, "Sua pele está muito dura (%d pontos de proteção).\r\n", points);
+	}
 
 	if (AFF_FLAGGED(ch, AFF_THISTLECOAT))
 		send_to_char(ch, "Você está protegid%s por um casaco de espinhos.\r\n", OA(ch));

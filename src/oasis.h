@@ -454,6 +454,8 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define SPEDIT_GET_POINTS               37
 #define SPEDIT_SHOW_MOBILE              38
 #define SPEDIT_GET_MOBILE               39
+#define SPEDIT_SCHOOL_MENU              40
+#define SPEDIT_ELEMENT_MENU             41
 
 int  save_config( IDXTYPE nowhere );
 

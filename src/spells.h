@@ -339,6 +339,7 @@ ASPELL(spell_enchant_weapon);
 ASPELL(spell_detect_poison);
 ASPELL(spell_control_weather);
 ASPELL(spell_transport_via_plants);
+ASPELL(spell_stoneskin);
 ASPELL(spell_raise_dead); /* NEW */
 ASPELL(spell_ressurect); /* NEW */
 ASPELL(spell_vamp_touch); /* NEW */
@@ -347,6 +348,16 @@ ASPELL(spell_portal);		/* -- jr - 24/09/99 */
 ASPELL(spell_fury_air);		/* -- mp */
 ASPELL(spell_skinrock);		/* -- mp */
 ASPELL(spell_skinsteel);	/* -- mp */
+
+/* Weather and spell element interaction functions */
+float get_weather_spell_modifier(struct char_data *ch, int spell_element);
+float get_school_weather_modifier(struct char_data *ch, int spell_school);
+float get_weather_healing_modifier(struct char_data *ch, int spell_element, int spell_school);
+float get_weather_summoning_modifier(struct char_data *ch, int spell_element, int spell_school);
+float get_weather_duration_modifier(struct char_data *ch, int spell_element, int spell_school);
+float get_weather_success_modifier(struct char_data *ch, int spell_element, int spell_school);
+const char *get_spell_school_name(int school);
+const char *get_spell_element_name(int element);
 ASPELL(spell_skindiamond);	/* -- mp */
 ASPELL(spell_create_nectar);	/* -- mp */
 ASPELL(spell_soundbarrier);	/* -- ac */

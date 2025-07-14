@@ -3706,3 +3706,78 @@ void cleanup_completed_wishlist_quest(qst_vnum quest_vnum)
         delete_quest(rnum);
     }
 }
+
+/**
+ * Gets the current stoneskin points for a character.
+ * Returns 0 if the character doesn't have stoneskin active.
+ * @param ch The character to check
+ * @return Number of stoneskin points, or 0 if no stoneskin
+ */
+int get_stoneskin_points(struct char_data *ch)
+{
+    struct affected_type *af;
+    
+    if (!ch || !AFF_FLAGGED(ch, AFF_STONESKIN))
+        return 0;
+        
+    for (af = ch->affected; af; af = af->next) {
+        if (af->spell == SPELL_STONESKIN) {
+            return af->modifier;
+        }
+    }
+    
+    return 0;
+}
+
+/**
+ * Sets the stoneskin points for a character.
+ * If points <= 0, removes the stoneskin effect entirely.
+ * @param ch The character to modify
+ * @param points New number of stoneskin points
+ */
+void set_stoneskin_points(struct char_data *ch, int points)
+{
+    struct affected_type *af;
+    
+    if (!ch)
+        return;
+        
+    for (af = ch->affected; af; af = af->next) {
+        if (af->spell == SPELL_STONESKIN) {
+            if (points <= 0) {
+                affect_remove(ch, af);
+                return;
+            }
+            af->modifier = MIN(points, 168); /* Max 168 points as per help */
+            return;
+        }
+    }
+}
+
+/**
+ * Reduces stoneskin points by the specified amount.
+ * If points reach 0 or below, removes the stoneskin effect.
+ * @param ch The character to modify
+ * @param reduction Amount to reduce points by
+ * @return TRUE if stoneskin was removed, FALSE if still active
+ */
+bool reduce_stoneskin_points(struct char_data *ch, int reduction)
+{
+    struct affected_type *af;
+    
+    if (!ch || !AFF_FLAGGED(ch, AFF_STONESKIN))
+        return FALSE;
+        
+    for (af = ch->affected; af; af = af->next) {
+        if (af->spell == SPELL_STONESKIN) {
+            af->modifier -= reduction;
+            if (af->modifier <= 0) {
+                affect_remove(ch, af);
+                return TRUE;
+            }
+            return FALSE;
+        }
+    }
+    
+    return FALSE;
+}

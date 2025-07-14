@@ -111,6 +111,11 @@ obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty);
 struct char_data *find_item_owner(obj_vnum item_vnum);
 int is_wishlist_quest(qst_vnum quest_vnum);
 void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
+
+/* Stoneskin utility functions */
+int get_stoneskin_points(struct char_data *ch);
+void set_stoneskin_points(struct char_data *ch, int points);
+bool reduce_stoneskin_points(struct char_data *ch, int reduction);
 /* Public functions made available from weather.c */
 void weather_and_time(int mode);
 
@@ -1052,6 +1057,10 @@ do                                                              \
 #define CONFIG_PT_ALLOWED       config_info.play.pt_allowed
 
 #define CONFIG_FIT_EVOLVE       config_info.play.fit_evolve
+/** Does weather affect spell effectiveness? */
+#define CONFIG_WEATHER_AFFECTS_SPELLS config_info.play.weather_affects_spells
+/** Does weather affect spells based on school? */
+#define CONFIG_SCHOOL_WEATHER_AFFECTS config_info.play.school_weather_affects
 /** What level to use the shout command? */
 #define CONFIG_LEVEL_CAN_SHOUT  config_info.play.level_can_shout
 /** How many move points does holler cost? */

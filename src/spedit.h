@@ -48,6 +48,34 @@ SOFTWARE. */
 #define DB_CODE_PTS_HP          50
 #define DB_CODE_PTS_MANA        51
 #define DB_CODE_PTS_MOVE        52
+
+/* Spell Schools (Escolas) */
+#define SCHOOL_UNDEFINED        0
+#define SCHOOL_ABJURATION       1  /* Abjuração */
+#define SCHOOL_ALTERATION       2  /* Alteração */
+#define SCHOOL_CONJURATION      3  /* Conjuração */
+#define SCHOOL_DIVINATION       4  /* Adivinhação */
+#define SCHOOL_ENCHANTMENT      5  /* Encantamento */
+#define SCHOOL_EVOCATION        6  /* Evocação */
+#define SCHOOL_ILLUSION         7  /* Ilusão */
+#define SCHOOL_NECROMANCY       8  /* Necromancia */
+#define NUM_SCHOOLS             9
+
+/* Spell Elements */
+#define ELEMENT_UNDEFINED       0
+#define ELEMENT_FIRE            1  /* Fogo */
+#define ELEMENT_WATER           2  /* Água */
+#define ELEMENT_AIR             3  /* Ar */
+#define ELEMENT_EARTH           4  /* Terra */
+#define ELEMENT_LIGHTNING       5  /* Raio */
+#define ELEMENT_ICE             6  /* Gelo */
+#define ELEMENT_ACID            7  /* Ácido */
+#define ELEMENT_POISON          8  /* Veneno */
+#define ELEMENT_HOLY            9  /* Sagrado */
+#define ELEMENT_UNHOLY          10 /* Profano */
+#define ELEMENT_MENTAL          11 /* Mental */
+#define ELEMENT_PHYSICAL        12 /* Físico */
+#define NUM_ELEMENTS            13
 #define DB_CODE_PTS_GOLD        53
 #define DB_CODE_PTS_BREATH        54
   /* 55 to 59 are free */
@@ -142,6 +170,8 @@ struct str_spells {
    struct str_assign assign [NUM_CLASSES]; 
    struct str_mesg messages;
    struct str_pts points;
+   int  school;       /* Spell school (Escola) */
+   int  element;      /* Spell element (hidden) */
    void *function;
    struct str_spells *next;
 };

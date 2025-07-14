@@ -22,6 +22,10 @@
 #include "act.h"
 #include "fight.h"
 #include "spirits.h"
+#include "spedit.h"
+
+/* External declarations */
+extern struct weather_data climates[];
 
 /* Special spells appear below. */
 ASPELL(spell_create_water)
@@ -1118,4 +1122,631 @@ ASPELL(spell_ressurect)
   }
   else
     send_to_char(ch,"Esta magia deve ser lançada em um espírito ou em um corpo.\r\n");
+}
+
+ASPELL(spell_stoneskin)
+{
+  struct affected_type af;
+  int new_points, current_points;
+  
+  if (victim == NULL)
+    return;
+    
+  /* Calculate new points to add: 1 point per 4 caster levels, min 1 */
+  new_points = MAX(1, level / 4);
+  
+  /* Check current stoneskin points */
+  current_points = get_stoneskin_points(victim);
+  
+  /* Cap total at 168 as per help file */
+  if (current_points + new_points > 168) {
+    new_points = 168 - current_points;
+    if (new_points <= 0) {
+      send_to_char(ch, "%s já possui o máximo de proteção possível.\r\n", 
+                   (victim == ch) ? "Você" : GET_NAME(victim));
+      return;
+    }
+  }
+  
+  new_affect(&af);
+  af.spell = SPELL_STONESKIN;
+  af.duration = new_points * (60 - (level / 10)); /* 1 hour per point minus level factor */
+  af.modifier = new_points;
+  af.location = APPLY_NONE;
+  SET_BIT_AR(af.bitvector, AFF_STONESKIN);
+  
+  if (current_points > 0) {
+    /* Accumulate with existing stoneskin */
+    affect_join(victim, &af, TRUE, FALSE, TRUE, FALSE);
+    act("A proteção de sua pele se torna ainda mais resistente.", FALSE, victim, 0, 0, TO_CHAR);
+    act("A pele de $n se torna ainda mais dura.", FALSE, victim, 0, 0, TO_ROOM);
+  } else {
+    /* First time casting */
+    affect_to_char(victim, &af);
+    act("Você sente sua pele se tornando dura como rocha.", FALSE, victim, 0, 0, TO_CHAR);
+    act("A pele de $n se torna mais dura.", FALSE, victim, 0, 0, TO_ROOM);
+  }
+}
+
+ASPELL(spell_ventriloquate)
+{
+  struct char_data *vch;
+  char *msg;
+  char buf[MAX_STRING_LENGTH];
+  
+  if (victim == NULL || ch == NULL)
+    return;
+    
+  /* Get the message from cast_arg2 */
+  msg = cast_arg2;
+  
+  if (!msg || !*msg) {
+    send_to_char(ch, "O que você quer que %s diga?\r\n", GET_NAME(victim));
+    return;
+  }
+  
+  /* Check for saving throw */
+  if (mag_savingthrow(victim, SAVING_SPELL, 0)) {
+    send_to_char(ch, "%s resiste à sua magia de ventriloquia.\r\n", GET_NAME(victim));
+    act("$n tenta fazer você dizer algo, mas você resiste.", FALSE, ch, 0, victim, TO_VICT);
+    return;
+  }
+  
+  /* Make the victim "say" the message */
+  sprintf(buf, "%s diz: '%s'", GET_NAME(victim), msg);
+  act(buf, FALSE, victim, 0, 0, TO_ROOM);
+  send_to_char(victim, "Você se ouve dizendo: '%s'\r\n", msg);
+  
+  /* Let everyone know it was ventriloquism if they make their save */
+  for (vch = world[IN_ROOM(victim)].people; vch; vch = vch->next_in_room) {
+    if (vch != victim && vch != ch && !mag_savingthrow(vch, SAVING_SPELL, 0)) {
+      continue; /* They believe it was really the victim speaking */
+    }
+    if (vch != victim && vch != ch) {
+      send_to_char(vch, "(Você nota que foi uma ilusão de ventriloquia)\r\n");
+    }
+  }
+  
+  send_to_char(ch, "Você faz %s dizer: '%s'\r\n", GET_NAME(victim), msg);
+}
+
+/*
+ * Weather and spell element interaction system
+ */
+
+/* Get weather modifier for spell effectiveness based on element */
+float get_weather_spell_modifier(struct char_data *ch, int spell_element) {
+  struct weather_data *weather;
+  float modifier = 1.0; /* Default no change */
+  int zone_num;
+  
+  /* Check if weather affects spells is enabled */
+  if (!CONFIG_WEATHER_AFFECTS_SPELLS) {
+    return modifier;
+  }
+  
+  /* Get the character's zone weather data */
+  zone_num = world[IN_ROOM(ch)].zone;
+  if (zone_num < 0 || zone_num > top_of_zone_table) {
+    return modifier;
+  }
+  
+  weather = &climates[zone_num];
+  
+  switch (spell_element) {
+    case ELEMENT_FIRE:
+      /* Fire spells: more effective in low humidity, less effective in high humidity */
+      if (weather->humidity < 30.0) {
+        modifier = 1.25; /* 25% more effective */
+      } else if (weather->humidity > 70.0) {
+        modifier = 0.75; /* 25% less effective */
+      }
+      break;
+      
+    case ELEMENT_WATER:
+    case ELEMENT_ICE:
+      /* Water/Ice spells: more effective in high humidity, less effective in low humidity */
+      if (weather->humidity > 70.0) {
+        modifier = 1.25; /* 25% more effective */
+      } else if (weather->humidity < 30.0) {
+        modifier = 0.75; /* 25% less effective */
+      }
+      break;
+      
+    case ELEMENT_LIGHTNING:
+      /* Lightning spells: more effective in high humidity and stormy weather */
+      if (weather->humidity > 80.0 && weather->sky >= SKY_RAINING) {
+        modifier = 1.3; /* 30% more effective */
+      } else if (weather->humidity < 20.0) {
+        modifier = 0.8; /* 20% less effective */
+      }
+      break;
+      
+    case ELEMENT_AIR:
+      /* Air spells: more effective in windy conditions */
+      if (weather->winds > 15.0) {
+        modifier = 1.2; /* 20% more effective */
+      }
+      break;
+      
+    case ELEMENT_EARTH:
+      /* Earth spells: slightly less effective in very wet conditions */
+      if (weather->humidity > 90.0 && weather->sky >= SKY_RAINING) {
+        modifier = 0.9; /* 10% less effective */
+      }
+      break;
+      
+    default:
+      /* Other elements not affected by weather */
+      break;
+  }
+  
+  return modifier;
+}
+
+/* Get spell school name */
+const char *get_spell_school_name(int school) {
+  switch (school) {
+    case SCHOOL_ABJURATION:   return "Abjuração";
+    case SCHOOL_ALTERATION:   return "Alteração";
+    case SCHOOL_CONJURATION:  return "Conjuração";
+    case SCHOOL_DIVINATION:   return "Adivinhação";
+    case SCHOOL_ENCHANTMENT:  return "Encantamento";
+    case SCHOOL_EVOCATION:    return "Evocação";
+    case SCHOOL_ILLUSION:     return "Ilusão";
+    case SCHOOL_NECROMANCY:   return "Necromancia";
+    default:                  return "Indefinida";
+  }
+}
+
+/* Get spell element name */
+const char *get_spell_element_name(int element) {
+  switch (element) {
+    case ELEMENT_FIRE:        return "Fogo";
+    case ELEMENT_WATER:       return "Água";
+    case ELEMENT_AIR:         return "Ar";
+    case ELEMENT_EARTH:       return "Terra";
+    case ELEMENT_LIGHTNING:   return "Raio";
+    case ELEMENT_ICE:         return "Gelo";
+    case ELEMENT_ACID:        return "Ácido";
+    case ELEMENT_POISON:      return "Veneno";
+    case ELEMENT_HOLY:        return "Sagrado";
+    case ELEMENT_UNHOLY:      return "Profano";
+    case ELEMENT_MENTAL:      return "Mental";
+    case ELEMENT_PHYSICAL:    return "Físico";
+    default:                  return "Indefinido";
+  }
+}
+
+/* Get school-based weather modifier for spell effectiveness */
+float get_school_weather_modifier(struct char_data *ch, int spell_school) {
+  struct weather_data *weather;
+  float modifier = 1.0; /* Default no change */
+  int zone_num;
+  
+  /* Check if school weather affects is enabled */
+  if (!CONFIG_SCHOOL_WEATHER_AFFECTS) {
+    return modifier;
+  }
+  
+  /* Get the character's zone weather data */
+  zone_num = world[IN_ROOM(ch)].zone;
+  if (zone_num < 0 || zone_num > top_of_zone_table) {
+    return modifier;
+  }
+  
+  weather = &climates[zone_num];
+  
+  switch (spell_school) {
+    case SCHOOL_EVOCATION:
+      /* Evocation spells: affected by extreme weather conditions */
+      if (weather->sky >= SKY_RAINING && weather->humidity > 60.0) {
+        modifier = 1.15; /* 15% more effective in storms */
+      } else if (weather->sky <= SKY_CLOUDLESS && weather->humidity < 40.0) {
+        modifier = 0.9; /* 10% less effective in clear, dry conditions */
+      }
+      break;
+      
+    case SCHOOL_CONJURATION:
+      /* Conjuration spells: more effective in balanced conditions */
+      if (weather->humidity >= 40.0 && weather->humidity <= 70.0) {
+        modifier = 1.1; /* 10% more effective in moderate humidity */
+      }
+      break;
+      
+    case SCHOOL_ILLUSION:
+      /* Illusion spells: more effective in misty/foggy conditions */
+      if (weather->sky == SKY_CLOUDY && weather->humidity > 80.0) {
+        modifier = 1.2; /* 20% more effective in foggy conditions */
+      } else if (weather->sky == SKY_CLOUDLESS) {
+        modifier = 0.85; /* 15% less effective in clear conditions */
+      }
+      break;
+      
+    case SCHOOL_DIVINATION:
+      /* Divination spells: affected by atmospheric clarity */
+      if (weather->sky == SKY_CLOUDLESS && weather->humidity < 50.0) {
+        modifier = 1.15; /* 15% more effective in clear, dry conditions */
+      } else if (weather->sky >= SKY_RAINING) {
+        modifier = 0.9; /* 10% less effective during storms */
+      }
+      break;
+      
+    case SCHOOL_NECROMANCY:
+      /* Necromancy spells: more effective during dark/stormy weather */
+      if (weather->sky >= SKY_RAINING) {
+        modifier = 1.2; /* 20% more effective during storms */
+      } else if (weather->sky == SKY_CLOUDLESS) {
+        modifier = 0.85; /* 15% less effective in bright conditions */
+      }
+      break;
+      
+    case SCHOOL_ENCHANTMENT:
+      /* Enchantment spells: slightly affected by atmospheric pressure */
+      if (weather->pressure > 1020.0) {
+        modifier = 1.05; /* 5% more effective in high pressure */
+      } else if (weather->pressure < 980.0) {
+        modifier = 0.95; /* 5% less effective in low pressure */
+      }
+      break;
+      
+    default:
+      /* Other schools (Abjuration, Alteration) less affected by weather */
+      break;
+  }
+  
+  return modifier;
+}
+
+/*
+ * Weather effects for healing spells
+ */
+float get_weather_healing_modifier(struct char_data *ch, int spell_element, int spell_school) {
+  struct weather_data *weather;
+  float modifier = 1.0; /* Default no change */
+  int zone_num;
+  
+  /* Check if weather affects spells is enabled */
+  if (!CONFIG_WEATHER_AFFECTS_SPELLS && !CONFIG_SCHOOL_WEATHER_AFFECTS) {
+    return modifier;
+  }
+  
+  /* Get the character's zone weather data */
+  zone_num = world[IN_ROOM(ch)].zone;
+  if (zone_num < 0 || zone_num > top_of_zone_table) {
+    return modifier;
+  }
+  
+  weather = &climates[zone_num];
+  
+  /* Element-based modifiers for healing */
+  if (CONFIG_WEATHER_AFFECTS_SPELLS) {
+    switch (spell_element) {
+      case ELEMENT_HOLY:
+        /* Holy healing: more effective in clear, bright conditions */
+        if (weather->sky == SKY_CLOUDLESS && weather->humidity < 60.0) {
+          modifier *= 1.2; /* 20% more effective */
+        } else if (weather->sky >= SKY_RAINING) {
+          modifier *= 0.9; /* 10% less effective in storms */
+        }
+        break;
+        
+      case ELEMENT_WATER:
+        /* Water-based healing: enhanced by humidity */
+        if (weather->humidity > 70.0) {
+          modifier *= 1.15; /* 15% more effective */
+        } else if (weather->humidity < 30.0) {
+          modifier *= 0.85; /* 15% less effective */
+        }
+        break;
+        
+      case ELEMENT_EARTH:
+        /* Earth-based healing: steady in all conditions, slight bonus in moderate weather */
+        if (weather->humidity >= 40.0 && weather->humidity <= 70.0 && weather->sky <= SKY_CLOUDY) {
+          modifier *= 1.05; /* 5% more effective */
+        }
+        break;
+    }
+  }
+  
+  /* School-based modifiers for healing */
+  if (CONFIG_SCHOOL_WEATHER_AFFECTS) {
+    switch (spell_school) {
+      case SCHOOL_CONJURATION:
+        /* Conjuration healing: channeling divine energy works better in balanced conditions */
+        if (weather->humidity >= 40.0 && weather->humidity <= 70.0) {
+          modifier *= 1.1; /* 10% more effective */
+        }
+        break;
+        
+      case SCHOOL_NECROMANCY:
+        /* Necromantic healing: draws from life force, enhanced in dark/stormy weather */
+        if (weather->sky >= SKY_RAINING) {
+          modifier *= 1.15; /* 15% more effective */
+        } else if (weather->sky == SKY_CLOUDLESS) {
+          modifier *= 0.9; /* 10% less effective */
+        }
+        break;
+        
+      case SCHOOL_EVOCATION:
+        /* Evocation healing: raw energy manipulation, affected by atmospheric energy */
+        if (weather->sky >= SKY_RAINING && weather->humidity > 60.0) {
+          modifier *= 1.1; /* 10% more effective in storms */
+        }
+        break;
+    }
+  }
+  
+  return modifier;
+}
+
+/*
+ * Weather effects for summoning spells
+ */
+float get_weather_summoning_modifier(struct char_data *ch, int spell_element, int spell_school) {
+  struct weather_data *weather;
+  float modifier = 1.0; /* Default no change */
+  int zone_num;
+  
+  /* Check if weather affects spells is enabled */
+  if (!CONFIG_WEATHER_AFFECTS_SPELLS && !CONFIG_SCHOOL_WEATHER_AFFECTS) {
+    return modifier;
+  }
+  
+  /* Get the character's zone weather data */
+  zone_num = world[IN_ROOM(ch)].zone;
+  if (zone_num < 0 || zone_num > top_of_zone_table) {
+    return modifier;
+  }
+  
+  weather = &climates[zone_num];
+  
+  /* Element-based modifiers for summoning */
+  if (CONFIG_WEATHER_AFFECTS_SPELLS) {
+    switch (spell_element) {
+      case ELEMENT_AIR:
+        /* Air elementals: easier to summon in windy conditions */
+        if (weather->winds > 15.0) {
+          modifier *= 1.25; /* 25% better success rate */
+        } else if (weather->winds < 5.0) {
+          modifier *= 0.8; /* 20% worse success rate */
+        }
+        break;
+        
+      case ELEMENT_WATER:
+        /* Water elementals: easier in humid/rainy conditions */
+        if (weather->humidity > 70.0 || weather->sky >= SKY_RAINING) {
+          modifier *= 1.2; /* 20% better success rate */
+        } else if (weather->humidity < 30.0) {
+          modifier *= 0.75; /* 25% worse success rate */
+        }
+        break;
+        
+      case ELEMENT_FIRE:
+        /* Fire elementals: easier in dry conditions */
+        if (weather->humidity < 30.0 && weather->sky <= SKY_CLOUDY) {
+          modifier *= 1.2; /* 20% better success rate */
+        } else if (weather->humidity > 80.0 || weather->sky >= SKY_RAINING) {
+          modifier *= 0.7; /* 30% worse success rate */
+        }
+        break;
+        
+      case ELEMENT_EARTH:
+        /* Earth elementals: stable in most conditions, slight penalty in very wet weather */
+        if (weather->humidity > 90.0 && weather->sky >= SKY_RAINING) {
+          modifier *= 0.9; /* 10% worse success rate */
+        }
+        break;
+        
+      case ELEMENT_LIGHTNING:
+        /* Lightning creatures: enhanced during storms */
+        if (weather->sky >= SKY_RAINING && weather->humidity > 70.0) {
+          modifier *= 1.3; /* 30% better success rate */
+        } else if (weather->humidity < 30.0 && weather->sky == SKY_CLOUDLESS) {
+          modifier *= 0.8; /* 20% worse success rate */
+        }
+        break;
+    }
+  }
+  
+  /* School-based modifiers for summoning */
+  if (CONFIG_SCHOOL_WEATHER_AFFECTS) {
+    switch (spell_school) {
+      case SCHOOL_CONJURATION:
+        /* Conjuration: bringing creatures from other planes, works better in stable conditions */
+        if (weather->humidity >= 40.0 && weather->humidity <= 70.0 && weather->sky <= SKY_CLOUDY) {
+          modifier *= 1.15; /* 15% better success rate */
+        } else if (weather->sky >= SKY_RAINING) {
+          modifier *= 0.9; /* 10% worse success rate */
+        }
+        break;
+        
+      case SCHOOL_NECROMANCY:
+        /* Necromancy: animating the dead, enhanced in dark/stormy weather */
+        if (weather->sky >= SKY_RAINING) {
+          modifier *= 1.2; /* 20% better success rate */
+        } else if (weather->sky == SKY_CLOUDLESS) {
+          modifier *= 0.85; /* 15% worse success rate */
+        }
+        break;
+    }
+  }
+  
+  return modifier;
+}
+
+/*
+ * Weather effects for spell duration
+ */
+float get_weather_duration_modifier(struct char_data *ch, int spell_element, int spell_school) {
+  struct weather_data *weather;
+  float modifier = 1.0; /* Default no change */
+  int zone_num;
+  
+  /* Check if weather affects spells is enabled */
+  if (!CONFIG_WEATHER_AFFECTS_SPELLS && !CONFIG_SCHOOL_WEATHER_AFFECTS) {
+    return modifier;
+  }
+  
+  /* Get the character's zone weather data */
+  zone_num = world[IN_ROOM(ch)].zone;
+  if (zone_num < 0 || zone_num > top_of_zone_table) {
+    return modifier;
+  }
+  
+  weather = &climates[zone_num];
+  
+  /* Element-based duration modifiers */
+  if (CONFIG_WEATHER_AFFECTS_SPELLS) {
+    switch (spell_element) {
+      case ELEMENT_FIRE:
+        /* Fire-based effects: last longer in dry conditions */
+        if (weather->humidity < 30.0) {
+          modifier *= 1.2; /* 20% longer duration */
+        } else if (weather->humidity > 80.0 || weather->sky >= SKY_RAINING) {
+          modifier *= 0.8; /* 20% shorter duration */
+        }
+        break;
+        
+      case ELEMENT_ICE:
+        /* Ice-based effects: last longer in cold/humid conditions */
+        if (weather->humidity > 70.0 && weather->temperature < 10.0) {
+          modifier *= 1.3; /* 30% longer duration */
+        } else if (weather->humidity < 30.0 && weather->temperature > 25.0) {
+          modifier *= 0.7; /* 30% shorter duration */
+        }
+        break;
+        
+      case ELEMENT_AIR:
+        /* Air-based effects: more stable in windy conditions */
+        if (weather->winds > 10.0 && weather->winds < 25.0) {
+          modifier *= 1.1; /* 10% longer duration */
+        } else if (weather->winds > 30.0) {
+          modifier *= 0.9; /* 10% shorter duration - too windy */
+        }
+        break;
+    }
+  }
+  
+  /* School-based duration modifiers */
+  if (CONFIG_SCHOOL_WEATHER_AFFECTS) {
+    switch (spell_school) {
+      case SCHOOL_ABJURATION:
+        /* Protective magic: more stable in calm conditions */
+        if (weather->sky <= SKY_CLOUDY && weather->winds < 15.0) {
+          modifier *= 1.15; /* 15% longer duration */
+        } else if (weather->sky >= SKY_RAINING) {
+          modifier *= 0.9; /* 10% shorter duration */
+        }
+        break;
+        
+      case SCHOOL_ILLUSION:
+        /* Illusions: last longer in misty/obscured conditions */
+        if (weather->sky == SKY_CLOUDY && weather->humidity > 80.0) {
+          modifier *= 1.25; /* 25% longer duration */
+        } else if (weather->sky == SKY_CLOUDLESS && weather->humidity < 40.0) {
+          modifier *= 0.8; /* 20% shorter duration */
+        }
+        break;
+        
+      case SCHOOL_ENCHANTMENT:
+        /* Mental effects: affected by atmospheric pressure */
+        if (weather->pressure >= 1010.0 && weather->pressure <= 1020.0) {
+          modifier *= 1.1; /* 10% longer duration */
+        } else if (weather->pressure < 980.0 || weather->pressure > 1030.0) {
+          modifier *= 0.9; /* 10% shorter duration */
+        }
+        break;
+    }
+  }
+  
+  return modifier;
+}
+
+/*
+ * Weather effects for spell success rate
+ */
+float get_weather_success_modifier(struct char_data *ch, int spell_element, int spell_school) {
+  struct weather_data *weather;
+  float modifier = 1.0; /* Default no change */
+  int zone_num;
+  
+  /* Check if weather affects spells is enabled */
+  if (!CONFIG_WEATHER_AFFECTS_SPELLS && !CONFIG_SCHOOL_WEATHER_AFFECTS) {
+    return modifier;
+  }
+  
+  /* Get the character's zone weather data */
+  zone_num = world[IN_ROOM(ch)].zone;
+  if (zone_num < 0 || zone_num > top_of_zone_table) {
+    return modifier;
+  }
+  
+  weather = &climates[zone_num];
+  
+  /* Element-based success modifiers */
+  if (CONFIG_WEATHER_AFFECTS_SPELLS) {
+    switch (spell_element) {
+      case ELEMENT_LIGHTNING:
+        /* Lightning magic: much easier during storms */
+        if (weather->sky >= SKY_RAINING && weather->humidity > 70.0) {
+          modifier *= 1.25; /* 25% better success rate */
+        } else if (weather->humidity < 30.0) {
+          modifier *= 0.85; /* 15% worse success rate */
+        }
+        break;
+        
+      case ELEMENT_WATER:
+        /* Water magic: easier in humid conditions */
+        if (weather->humidity > 70.0) {
+          modifier *= 1.15; /* 15% better success rate */
+        } else if (weather->humidity < 30.0) {
+          modifier *= 0.9; /* 10% worse success rate */
+        }
+        break;
+        
+      case ELEMENT_FIRE:
+        /* Fire magic: easier in dry conditions */
+        if (weather->humidity < 30.0 && weather->sky <= SKY_CLOUDY) {
+          modifier *= 1.15; /* 15% better success rate */
+        } else if (weather->humidity > 80.0 || weather->sky >= SKY_RAINING) {
+          modifier *= 0.85; /* 15% worse success rate */
+        }
+        break;
+    }
+  }
+  
+  /* School-based success modifiers */
+  if (CONFIG_SCHOOL_WEATHER_AFFECTS) {
+    switch (spell_school) {
+      case SCHOOL_DIVINATION:
+        /* Divination: clearer perception in clear weather */
+        if (weather->sky == SKY_CLOUDLESS && weather->humidity < 50.0) {
+          modifier *= 1.2; /* 20% better success rate */
+        } else if (weather->sky >= SKY_RAINING) {
+          modifier *= 0.85; /* 15% worse success rate */
+        }
+        break;
+        
+      case SCHOOL_ILLUSION:
+        /* Illusion: easier to weave in misty conditions */
+        if (weather->sky == SKY_CLOUDY && weather->humidity > 70.0) {
+          modifier *= 1.15; /* 15% better success rate */
+        } else if (weather->sky == SKY_CLOUDLESS && weather->humidity < 40.0) {
+          modifier *= 0.9; /* 10% worse success rate */
+        }
+        break;
+        
+      case SCHOOL_NECROMANCY:
+        /* Necromancy: draws power from darkness and storms */
+        if (weather->sky >= SKY_RAINING) {
+          modifier *= 1.15; /* 15% better success rate */
+        } else if (weather->sky == SKY_CLOUDLESS) {
+          modifier *= 0.9; /* 10% worse success rate */
+        }
+        break;
+    }
+  }
+  
+  return modifier;
 }

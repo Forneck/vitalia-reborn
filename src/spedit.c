@@ -548,6 +548,56 @@ void spedit_show_mobile(struct descriptor_data *d) {
   OLC_MODE(d) = SPEDIT_SHOW_MOBILE;
 }
 
+void spedit_school_menu (struct descriptor_data *d) {
+  char buf[BUFSIZE];
+  int i, len, total_len = 0;
+  
+  total_len = snprintf (buf, BUFSIZE, "%s\r\n-- SPELL SCHOOL (Escola) :    \r\n", nrm);
+  
+  for (i = 0; i < NUM_SCHOOLS; i++) {
+    len = snprintf (buf + total_len, BUFSIZE - total_len, 
+                   "%s%2d%s) %-20s", grn, i, nrm, get_spell_school_name(i));
+    if (len < 0 || total_len + len >= BUFSIZE)
+      break;
+    total_len += len;
+  }
+  
+  snprintf (buf + total_len, BUFSIZE - total_len, 
+           "\r\n%sEnter choice (current: %s%s%s) : ", 
+           nrm, cyn, get_spell_school_name(OLC_SPELL(d)->school), nrm);
+  send_to_char (d->character, "%s", buf);
+  OLC_MODE(d) = SPEDIT_SCHOOL_MENU;
+}
+
+void spedit_element_menu (struct descriptor_data *d) {
+  char buf[BUFSIZE];
+  int i, len, total_len = 0;
+  
+  total_len = snprintf (buf, BUFSIZE, "%s\r\n-- SPELL ELEMENT (Elemento) :    \r\n", nrm);
+  
+  for (i = 0; i < NUM_ELEMENTS; i++) {
+    len = snprintf (buf + total_len, BUFSIZE - total_len, 
+                   "%s%2d%s) %-15s", grn, i, nrm, get_spell_element_name(i));
+    if (len < 0 || total_len + len >= BUFSIZE)
+      break;
+    total_len += len;
+    
+    /* Add newline every 3 elements for better formatting */
+    if ((i + 1) % 3 == 0) {
+      len = snprintf (buf + total_len, BUFSIZE - total_len, "\r\n");
+      if (len < 0 || total_len + len >= BUFSIZE)
+        break;
+      total_len += len;
+    }
+  }
+  
+  snprintf (buf + total_len, BUFSIZE - total_len, 
+           "\r\n%sEnter choice (current: %s%s%s) : ", 
+           nrm, cyn, get_spell_element_name(OLC_SPELL(d)->element), nrm);
+  send_to_char (d->character, "%s", buf);
+  OLC_MODE(d) = SPEDIT_ELEMENT_MENU;
+}
+
 void spedit_main_menu (struct descriptor_data *d) {
   char buf[BUFSIZE];
   char tflags[TINY_BUFSIZE];
@@ -574,6 +624,8 @@ void spedit_main_menu (struct descriptor_data *d) {
                 "%s6%s) Damages           : %s%s %s(%s%4d%s)\r\n"
                 "%s7%s) Pulse delay       : %s%s\r\n"
                 "%s8%s) %sEffectiveness %%   : %s%s\r\n"
+                "%sE%s) School            : %s%s\r\n"
+                "%sL%s) Element           : %s%s\r\n"
                 "%s9%s) %sMenu -> Points\r\n"
                 "%sP%s) %sMenu -> Protection from\r\n"
                 "%sA%s) %sMenu -> Applies & Affects\r\n"
@@ -597,6 +649,8 @@ void spedit_main_menu (struct descriptor_data *d) {
                  prog ? red : grn, nrm, cyn, EMPTY_STR(Q->damages), nrm, cyn, Q->max_dam, nrm,  
                  prog ? red : grn, nrm, cyn, EMPTY_STR(Q->delay),
                  prog ? red : grn, nrm, Q->effectiveness ? nrm : YEL, cyn, EMPTY_STR(Q->effectiveness),
+                 prog ? red : grn, nrm, cyn, get_spell_school_name(Q->school),
+                 prog ? red : grn, nrm, cyn, get_spell_element_name(Q->element),
                  prog ? red : grn, nrm, is_points_set(Q) ? bln : nrm,
                  prog ? red : grn, nrm, is_prot_set(Q) ? bln : nrm,
                  prog ? red : grn, nrm, is_apply_set(Q) ? bln : nrm, 
@@ -822,6 +876,9 @@ void spedit_init_new_spell (struct str_spells *spell)
    spell->assign[i].prac_gain   = NULL;
    spell->assign[i].num_mana   = NULL;
  }
+ 
+ spell->school                 = SCHOOL_UNDEFINED;
+ spell->element                = ELEMENT_UNDEFINED;
  spell->function               = NULL;
 }
 
@@ -1738,6 +1795,24 @@ void spedit_parse (struct descriptor_data *d, char *arg) {
            OLC_SPELL(d)->mag_flags ^= (1 << (x - 1));
          spedit_mag_flags_menu (d);
          return;
+    case SPEDIT_SCHOOL_MENU :
+         if (!(x = atoi (arg))) break;
+         if ((x < 0) || (x >= NUM_SCHOOLS)) {
+           send_to_char (d->character, "Invalid choice!\r\n");
+           spedit_school_menu (d);
+           return;
+         }
+         OLC_SPELL(d)->school = x;
+         break;
+    case SPEDIT_ELEMENT_MENU :
+         if (!(x = atoi (arg))) break;
+         if ((x < 0) || (x >= NUM_ELEMENTS)) {
+           send_to_char (d->character, "Invalid choice!\r\n");
+           spedit_element_menu (d);
+           return;
+         }
+         OLC_SPELL(d)->element = x;
+         break;
     case SPEDIT_PROTECTION_MENU :
          if (!(x = atoi (arg))) break;
          if ((x < 0) || (x > MAX_SPELL_PROTECTIONS)) {
@@ -1902,6 +1977,12 @@ void spedit_parse (struct descriptor_data *d, char *arg) {
                      return;
           case '8' : send_to_char (d->character, "%% of effectiveness : ");
                      OLC_MODE(d) = SPEDIT_GET_EFFECTIVENESS;
+                     return;
+          case 'e' :
+          case 'E' : spedit_school_menu (d);
+                     return;
+          case 'l' :
+          case 'L' : spedit_element_menu (d);
                      return;
           case '9' : spedit_show_points (d);
                      return;

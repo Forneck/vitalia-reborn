@@ -1385,12 +1385,13 @@ ACMD(do_shoot){
 			af.duration = 1;
 		else
 		{
-			af.duration = rand_number(2, 5);
+			/* Use level-based duration to match MAGIA-POISON help documentation */
+			af.duration = GET_LEVEL(ch);
 			act("Você se sente doente.", FALSE, vict, 0, ch, TO_CHAR);
 			act("$n fica muito doente!", TRUE, vict, 0, ch, TO_ROOM);
 		}
 		SET_BIT_AR(af.bitvector, AFF_POISON);
-		affect_join(ch, &af, FALSE, FALSE, FALSE, FALSE);
+		affect_join(vict, &af, FALSE, FALSE, FALSE, FALSE);
 	}
 		damage(ch, vict, dam, GET_OBJ_VAL(ammo, 3) + TYPE_HIT);
 		remember(ch,vict);
