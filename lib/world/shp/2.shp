@@ -1,38 +1,59 @@
-#0~
 CircleMUD v3.0 Shop File~
-
-#200
-211			; Shop keeper (bibliotecário de gelo)
-205 206 207		; Objects produced (poção, pergaminho, gema)
-50.00			; Profit when selling 
-1.25			; Profit when buying
-205 206 207 208 215	; Types of items traded
-%s O vendedor de itens mágicos não possui isso no momento.~	; Message when keeper doesn't have item
-%s O vendedor não tem isso que você procura.~			; Message when player doesn't have item
-%s O vendedor de itens mágicos não está interessado nisso.~	; Message when can't trade item (no type match)
-%s O vendedor de itens mágicos não pode pagar isso.~		; Message when can't afford to buy from customer  
-%s Você não tem dinheiro suficiente para isso!~			; Message when player can't afford item
-%s Isso custará %d moedas, obrigado.~				; Message when player buys item
-%s Te dou %d moedas por isso.~					; Message when player sells item
-233			; Shop room
-1 0			; Open/close times (always open: 0 = midnight, 1 = 1am... 23 = 11pm)
-0			; Bank account number
-
-#201
-212			; Shop keeper (cozinheiro de gelo)  
-205			; Objects produced (poção)
-75.00			; Profit when selling
-1.50			; Profit when buying
-205 215			; Types of items traded  
-%s O cozinheiro não possui isso no momento.~			; Message when keeper doesn't have item
-%s O cozinheiro não tem isso que você procura.~			; Message when player doesn't have item
-%s O cozinheiro não está interessado nisso.~			; Message when can't trade item
-%s O cozinheiro não pode pagar isso.~				; Message when can't afford to buy
-%s Você não tem dinheiro suficiente para isso!~			; Message when player can't afford item
-%s Isso custará %d moedas.~					; Message when player buys item
-%s Te dou %d moedas por isso.~					; Message when player sells item
-242			; Shop room (dormitório)
-0 23			; Open/close times (always open)
-0			; Bank account number
-
+#200~
+211
+205
+206
+207
+-1
+1.50
+0.75
+205
+206
+207
+208
+215
+-1
+%s O vendedor de itens mágicos não possui isso no momento.~
+%s O vendedor não tem isso que você procura.~
+%s O vendedor de itens mágicos não está interessado nisso.~
+%s O vendedor de itens mágicos não pode pagar isso.~
+%s Você não tem dinheiro suficiente para isso!~
+%s Isso custará %d moedas, obrigado.~
+%s Te dou %d moedas por isso.~
+233
+1
+0
+0
+99
+-1
+0
+28
+0
+0
+#201~
+212
+205
+-1
+1.75
+0.50
+205
+215
+-1
+%s O cozinheiro não possui isso no momento.~
+%s O cozinheiro não tem isso que você procura.~
+%s O cozinheiro não está interessado nisso.~
+%s O cozinheiro não pode pagar isso.~
+%s Você não tem dinheiro suficiente para isso!~
+%s Isso custará %d moedas.~
+%s Te dou %d moedas por isso.~
+242
+0
+23
+0
+99
+-1
+0
+28
+0
+0
 $~

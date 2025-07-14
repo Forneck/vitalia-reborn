@@ -2,214 +2,168 @@
 espada gelo cristalina~
 uma espada de gelo cristalina~
 Uma espada de gelo cristalina está aqui, irradiando frio.~
-Forjada a partir do gelo mágico mais puro do castelo, esta espada nunca derrete
-e mantém um gume afiado como navalha. Runas azuis percorrem sua lâmina,
-pulsando com energia gélida.
 ~
-9 8388624 0 0 0 0 0 0 0 0 5 2400 12000 0 0
+5 h 0 0 0 an 0 0 0 0 0 0 0
+2 4 3 0
+5 2400 12000 0 0
 A
 18 2
-E
-
 #201
 armadura placas gelo~
 uma armadura de placas de gelo~
 Uma armadura de placas de gelo está aqui.~
-Esta armadura foi moldada a partir do gelo eterno do castelo. Apesar de ser
-feita de gelo, oferece proteção superior e nunca derrete. Detalhes ornamentais
-em azul e prata adornam cada placa.
 ~
-9 8388608 0 0 0 0 0 0 0 0 8 4800 24000 0 0
+9 h 0 0 0 ap 0 0 0 0 0 0 0
+0 0 0 0
+8 4800 24000 0 0
 A
 16 3
 A
 17 1
-E
-
 #202
 elmo real gelo~
 um elmo real de gelo~
 Um elmo real de gelo repousa aqui majestosamente.~
-Este elmo ornamentado foi criado especialmente para a realeza do castelo.
-Cristais azuis incrustados formam uma coroa congelada, e a proteção que
-oferece é tanto física quanto mágica.
 ~
-9 8388608 0 0 0 0 0 0 0 0 1 1200 6000 0 0
+9 h 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+1 1200 6000 0 0
 A
 12 2
 A
 18 1
-E
-
 #203
 anel proteção gélida~
 um anel de proteção gélida~
 Um anel de proteção gélida brilha com luz azulada.~
-Este anel foi encantado com magias de proteção contra o frio. Ironicamente,
-também oferece resistência ao calor, criando um equilíbrio térmico perfeito
-para quem o usa.
 ~
-9 8388673 0 0 0 0 0 0 0 0 0 480 2400 0 0
+9 ha 0 0 0 ab 0 0 0 0 0 0 0
+0 0 0 0
+0 480 2400 0 0
 A
 13 2
 A
 15 1
-E
-
 #204
 cajado inverno~
 um cajado do inverno eterno~
 Um cajado do inverno eterno está fincado no chão.~
-O topo deste cajado é ornamentado com um cristal de gelo que nunca derrete.
-Pequenos flocos de neve caem constantemente de sua extremidade, e o ar ao
-redor fica visivelmente mais frio quando empunhado.
 ~
-18 8388624 0 0 0 0 0 0 0 0 3 2400 12000 0 0
+18 hj 0 0 0 an 0 0 0 0 0 0 0
+0 0 0 0
+3 2400 12000 0 0
 A
 18 3
 A
 19 15
-E
-
 #205
 poção resistência frio~
 uma poção de resistência ao frio~
 Uma pequena poção azulada está aqui.~
-Esta poção foi preparada com essências extraídas do próprio gelo mágico do
-castelo. Quando consumida, oferece proteção temporária contra temperaturas
-extremamente baixas.
 ~
-10 8388608 3 0 0 0 0 0 0 0 1 240 1200 0 0
-E
-
+10 h 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 240 1200 0 0
 #206
 pergaminho congelamento~
 um pergaminho de congelamento~
 Um pergaminho azulado está aqui, irradiando frio.~
-As palavras mágicas neste pergaminho foram escritas com tinta especial que
-se mantém líquida mesmo em temperaturas abaixo de zero. Quando lido, libera
-uma poderosa magia de gelo.
 ~
-2 8388608 30 3 0 0 0 0 0 0 1 480 2400 0 0
-E
-
+2 h 0 0 0 a 0 0 0 0 0 0 0
+30 3 0 0
+1 480 2400 0 0
 #207
 gema gelo eterno~
 uma gema de gelo eterno~
 Uma gema de gelo eterno pulsa com energia mística.~
-Esta gema rara só pode ser encontrada no coração dos castelos de gelo mais
-antigos. Sua energia é usada para alimentar magias poderosas e criar itens
-encantados de grande valor.
 ~
-12 8388608 0 0 0 0 0 0 0 0 0 2400 12000 0 0
-E
-
+12 h 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+0 2400 12000 0 0
 #208
 chave mestra gelo~
 uma chave mestra de gelo~
 Uma chave mestra feita de gelo está aqui.~
-Esta chave foi moldada magicamente para abrir qualquer fechadura dentro do
-castelo. Sua forma muda sutilmente conforme necessário, adaptando-se a
-diferentes tipos de trancas.
 ~
-18 8388608 0 0 0 0 0 0 0 0 0 120 600 0 0
-E
-
+18 h 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+0 120 600 0 0
 #209
 manto real inverno~
 um manto real do inverno~
 Um luxuoso manto real está aqui.~
-Este manto foi tecido com fibras especiais que mantêm o usuário aquecido
-mesmo nas condições mais geladas. Bordados em fios de prata representam
-padrões de flocos de neve únicos.
 ~
-9 8388609 0 0 0 0 0 0 0 0 4 1800 9000 0 0
+9 ha 0 0 0 ak 0 0 0 0 0 0 0
+0 0 0 0
+4 1800 9000 0 0
 A
 17 2
 A
 18 2
-E
-
 #210
 coroa rainha gelo~
 a coroa da Rainha de Gelo~
 A coroa da Rainha de Gelo brilha com poder real.~
-Esta coroa é o símbolo do poder sobre o inverno eterno. Forjada com o gelo
-mais puro e incrustada com diamantes congelados, ela irradia uma aura de
-autoridade absoluta sobre o frio.
 ~
-9 8388681 0 0 0 0 0 0 0 0 1 12000 60000 0 0
+9 hij 0 0 0 ae 0 0 0 0 0 0 0
+0 0 0 0
+1 12000 60000 0 0
 A
 12 4
 A
 18 4
 A
 19 10
-E
-
+T 208
 #211
 botas caminhada gelo~
 botas de caminhada no gelo~
 Um par de botas especiais está aqui.~
-Estas botas possuem solas especialmente texturizadas que proporcionam
-aderência perfeita em superfícies geladas. Também mantêm os pés aquecidos
-mesmo durante longas caminhadas no frio extremo.
 ~
-9 8388608 0 0 0 0 0 0 0 0 2 960 4800 0 0
+9 h 0 0 0 ag 0 0 0 0 0 0 0
+0 0 0 0
+2 960 4800 0 0
 A
 14 1
 A
 15 1
-E
-
 #212
 escudo cristal protetor~
 um escudo de cristal protetor~
 Um escudo translúcido está aqui, refletindo a luz.~
-Este escudo foi moldado a partir de um único cristal de gelo mágico.
-Sua superfície pode refletir não apenas ataques físicos, mas também
-certas magias direcionadas ao portador.
 ~
-20 8388608 0 0 0 0 0 0 0 0 3 1800 9000 0 0
+20 h 0 0 0 aj 0 0 0 0 0 0 0
+0 0 0 0
+3 1800 9000 0 0
 A
 17 3
-E
-
 #213
 orbe poder glacial~
 um orbe de poder glacial~
 Um orbe de poder glacial flutua aqui.~
-Este orbe contém a essência concentrada do inverno eterno. Magos poderosos
-podem usar sua energia para amplificar magias relacionadas ao gelo e ao frio.
-Sua superfície está em constante movimento, como uma tempestade de neve em miniatura.
 ~
-18 8388617 0 0 0 0 0 0 0 0 1 3600 18000 0 0
+18 hij 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 3600 18000 0 0
 A
 19 8
 A
 18 3
-E
-
 #214
 baú tesouro real~
 um baú do tesouro real~
 Um ornamentado baú do tesouro real está aqui.~
-Este baú é feito de madeira nobre preservada magicamente contra o frio,
-com fechaduras e dobradiças de prata. Seu interior é forrado com veludo
-azul e contém os tesouros mais valiosos do reino gelado.
 ~
-15 8388608 0 0 0 0 0 0 0 0 20 2400 12000 0 0
-E
-
+15 h 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+20 2400 12000 0 0
+T 204
 #215
 lanterna eterna~
 uma lanterna eterna de gelo~
 Uma lanterna que nunca se apaga está aqui.~
-Esta lanterna queima com uma chama fria que nunca consome combustível.
-A luz azulada que emite é perfeita para navegação em ambientes gelados,
-pois não derrete o gelo ao redor.
 ~
-1 8388608 0 0 0 0 0 0 0 0 2 600 3000 0 0
-E
-
+1 h 0 0 0 a 0 0 0 0 0 0 0
+0 0 -1 0
+2 600 3000 0 0
 $
