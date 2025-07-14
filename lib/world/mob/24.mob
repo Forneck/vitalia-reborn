@@ -11,6 +11,8 @@ condições de dizer de que cor ele seria de verdade!
 0 150
 9 9 1
 BareHandAttack: 4
+GenWimpy: 1
+GenRoam: 20
 E
 #2401
 fantasma pirata~
@@ -24,7 +26,7 @@ distinguir exatamente qual seria o seu aspecto.
 8 16 6 2d9+150 1d3+7
 0 3998
 9 9 1
-GenWimpy: 28
+GenWimpy: 31
 GenRoam: 87
 E
 #2402

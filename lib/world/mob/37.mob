@@ -423,8 +423,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 21
-GenRoam: 64
+GenWimpy: 20
+GenRoam: 70
 E
 #3722
 demonio ossos~
@@ -485,6 +485,7 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #3725
 guereiro~
@@ -617,7 +618,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 17
+GenRoam: 12
 E
 #3732
 zumbi guarda~

@@ -12,8 +12,8 @@ vive uma vida simples e pacífica.
 5 15 6 1d12+60 1d4+3
 100 1050
 9 9 1
-GenWimpy: 1
-GenRoam: 6
+GenWimpy: 3
+GenRoam: 20
 E
 #6001
 pequeno coelho~
@@ -26,8 +26,8 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 0 20 6 1d4+1 1d4+0
 0 60
 9 9 0
-GenWimpy: 13
-GenRoam: 85
+GenWimpy: 15
+GenRoam: 87
 E
 #6002
 urso marrom~
@@ -70,7 +70,7 @@ castanhos que olham fixamente para você, com grande interesse.
 0 230
 9 9 2
 GenWimpy: 16
-GenRoam: 55
+GenRoam: 53
 E
 #6005
 raposa marrom~
@@ -98,7 +98,7 @@ O pássaro parece que não vai viver muito, pelo jeito.
 0 17 10 2d3+1 1d2+1
 0 25
 9 9 0
-GenWimpy: 51
+GenWimpy: 59
 E
 #6007
 gato lince gato-selvagem~
@@ -140,7 +140,7 @@ O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 13
+GenWimpy: 15
 GenRoam: 9
 E
 #6010
@@ -184,8 +184,8 @@ no chão.
 2 19 8 1d12+22 1d6+0
 0 200
 9 9 0
-GenWimpy: 23
-GenRoam: 69
+GenWimpy: 24
+GenRoam: 73
 E
 #6013
 esquilinho~
@@ -201,8 +201,8 @@ pensa você.
 0 20 5 2d5+3 1d4+0
 0 40
 9 9 0
-GenWimpy: 24
-GenRoam: 60
+GenWimpy: 25
+GenRoam: 67
 E
 #6014
 corvo negro passaro~
@@ -216,7 +216,7 @@ comida.
 2 19 8 1d12+22 1d5+1
 3 200
 9 9 0
-GenWimpy: 100
+GenWimpy: 99
 E
 #6015
 grotesco abutre urubu~
@@ -233,7 +233,7 @@ de proteger o seu banquete.
 6 15 4 1d12+68 2d3+2
 14 1750
 9 9 0
-GenWimpy: 1
+GenWimpy: 2
 E
 #6016
 alce gamo~
@@ -286,7 +286,7 @@ O pato é bastante gordo.   Ele parece estar aproveitando bem sua vida.
 1 20 10 2d6+5 1d4+0
 0 75
 9 9 0
-GenWimpy: 43
-GenRoam: 18
+GenWimpy: 47
+GenRoam: 32
 E
 $

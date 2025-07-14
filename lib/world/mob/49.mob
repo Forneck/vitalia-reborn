@@ -9,8 +9,8 @@ Ele olha calmamente para você e continua a andar lenta e graciosamente.
 2 19 9 2d4+16 1d4+1
 0 400
 9 9 1
-GenWimpy: 95
-GenRoam: 41
+GenWimpy: 98
+GenRoam: 56
 E
 #4901
 elfo gato~
@@ -49,8 +49,8 @@ Ela parece não se importar muito com sua presença.
 3 18 8 6d5+22 1d7+1
 0 600
 9 9 1
-GenWimpy: 2
-GenRoam: 18
+GenWimpy: 3
+GenRoam: 36
 E
 #4904
 rã ra~
@@ -63,8 +63,8 @@ Ela parece estar faminta.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 2
-GenWimpy: 2
-GenRoam: 27
+GenWimpy: 3
+GenRoam: 30
 E
 #4905
 babuino selvagem~
@@ -206,6 +206,7 @@ ao seu redor.
 4 17 6 1d4+50 1d6+1
 390 1000
 9 9 1
+GenWimpy: 1
 E
 #4916
 grigue~

@@ -27,8 +27,8 @@ para você, ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 99
-GenRoam: 85
+GenWimpy: 100
+GenRoam: 87
 E
 T 3009
 #5202
@@ -71,7 +71,7 @@ destruição.
 11 11 3 2d6+110 2d6+0
 0 10500
 9 9 0
-GenWimpy: 14
+GenWimpy: 15
 E
 #5205
 mimico potes pedacos~
@@ -85,7 +85,7 @@ provavelmente antes da cidade tombar.
 11 14 0 1d8+100 2d5+3
 0 9800
 9 9 0
-GenWimpy: 17
+GenWimpy: 18
 E
 #5206
 mimico tábuas madeira~
@@ -113,7 +113,7 @@ Um pequeno e lindo lagarto -- bem, isso se você gostar de répteis!
 0 500
 9 9 0
 GenWimpy: 100
-GenRoam: 21
+GenRoam: 1
 E
 #5208
 golem pedra~
@@ -141,8 +141,8 @@ para você, ambiciosamente.
 9 10 3 1d12+120 1d4+5
 1500 7000
 9 9 2
-GenWimpy: 93
-GenRoam: 73
+GenWimpy: 96
+GenRoam: 87
 E
 T 3009
 $

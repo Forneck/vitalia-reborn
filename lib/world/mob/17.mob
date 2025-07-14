@@ -70,7 +70,7 @@ econômica...e também divertida!
 11 10 2 1d6+150 2d6+11
 0 11000
 9 9 1
-GenWimpy: 18
+GenWimpy: 21
 E
 #1705
 cavaleiro fantasma~
@@ -85,7 +85,7 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 54
+GenWimpy: 55
 E
 #1706
 guardiao guardião cripta~
@@ -176,7 +176,7 @@ dá uma luz verde.  Ela bate suas mandíbulas cristalizadas para irritá-lo.
 0 13750
 9 9 2
 GenWimpy: 4
-GenRoam: 81
+GenRoam: 86
 E
 #1711
 aranha amarela~
@@ -191,7 +191,7 @@ feita de uma substância cristalina viva que brilha amarelo.
 351 12250
 9 9 2
 GenWimpy: 2
-GenRoam: 78
+GenRoam: 84
 E
 #1712
 guarda petrificado~
@@ -218,6 +218,7 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 0 30000
 9 9 1
 GenWimpy: 12
+GenLoot: 1
 GenRoam: 87
 E
 #1714
@@ -233,8 +234,8 @@ passado infeliz, você presume.
 16 5 1 2d6+496 2d8+12
 1576 25000
 9 9 2
-GenWimpy: 23
-GenLoot: 1
+GenWimpy: 21
+GenLoot: 2
 GenRoam: 87
 E
 #1715

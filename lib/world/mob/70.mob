@@ -41,8 +41,8 @@ An undefined string.
 5 16 5 1d12+48 2d4+0
 30 1000
 9 9 1
-GenWimpy: 30
-GenRoam: 19
+GenWimpy: 32
+GenRoam: 24
 E
 #7003
 aranha pequena peluda~
@@ -55,8 +55,8 @@ An undefined string.
 1 20 3 1d12+8 1d4+0
 1 100
 9 9 1
-GenWimpy: 58
-GenRoam: 85
+GenWimpy: 61
+GenRoam: 87
 E
 #7004
 besouro gigante terra~
@@ -81,8 +81,8 @@ An undefined string.
 3 17 9 2d5+35 1d7+0
 2 350
 9 9 2
-GenWimpy: 10
-GenRoam: 81
+GenWimpy: 11
+GenRoam: 83
 E
 #7006
 cobra~
@@ -95,8 +95,8 @@ An undefined string.
 4 16 7 2d5+40 1d9+0
 1 1000
 9 9 2
-GenWimpy: 15
-GenRoam: 86
+GenWimpy: 19
+GenRoam: 87
 E
 T 3008
 #7007
@@ -168,6 +168,8 @@ se para perto de você, 'Eu NUNCA posso dormir em paz...Hssss...'
 19 2 0 5d4+230 3d6+3
 16842 40000
 9 9 0
+GenWimpy: 1
+GenLoot: 1
 E
 #7041
 bruxa mar~
@@ -183,8 +185,8 @@ da beleza.
 14 7 1 1d8+172 2d8+1
 0 18000
 9 9 2
-GenWimpy: 9
-GenRoam: 43
+GenWimpy: 11
+GenRoam: 57
 E
 #7042
 naga guardiao~
@@ -214,8 +216,8 @@ verde pálido.
 13 11 0 1d12+160 2d7+2
 350 16000
 9 9 0
-GenWimpy: 6
-GenRoam: 36
+GenWimpy: 8
+GenRoam: 57
 E
 #7044
 bolha lemure~
@@ -230,8 +232,8 @@ mas ela ataca de qualquer jeito.  Parece que a mente dela foi queimada.
 5 16 6 3d5+57 2d4+0
 0 1000
 9 9 2
-GenWimpy: 15
-GenRoam: 83
+GenWimpy: 16
+GenRoam: 87
 E
 #7045
 jones esmagador ettin~

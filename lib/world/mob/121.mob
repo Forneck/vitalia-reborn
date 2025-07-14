@@ -150,7 +150,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 4
 GenLoot: 1
 E
 #12109
@@ -168,7 +168,7 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 15
+GenWimpy: 18
 E
 #12110
 leao jamuuran~
@@ -253,7 +253,7 @@ BareHandAttack: 3
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 19
+GenWimpy: 21
 E
 #12115
 drakian~
@@ -287,7 +287,7 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
+GenWimpy: 2
 E
 #12117
 wyrm~
@@ -355,8 +355,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 45
-GenRoam: 75
+GenWimpy: 52
+GenRoam: 85
 E
 #12121
 quimera leao bode dragao~
@@ -393,7 +393,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
+GenWimpy: 10
+GenRoam: 1
 E
 #12123
 hidra gigante~
@@ -443,8 +444,8 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 75
-GenRoam: 21
+GenWimpy: 85
+GenRoam: 33
 E
 #12126
 cynamolgus peludo~

@@ -9,8 +9,8 @@ Você vai ficar igual a ele se não for cuidadoso.
 4 16 6 10d5+20 1d6+3
 100 600
 9 9 1
-GenWimpy: 19
-GenRoam: 50
+GenWimpy: 22
+GenRoam: 57
 E
 #9502
 estrela prateada~
@@ -24,7 +24,7 @@ realmente!
 8 15 2 4d5+80 2d3+5
 500 2000
 9 9 2
-GenWimpy: 5
+GenWimpy: 6
 E
 #9503
 nebulosa jovem~
@@ -53,7 +53,7 @@ parece querer lançar toda sua ira contra você.
 10 9 -2 4d6+260 2d6+8
 1500 5000
 9 9 1
-GenWimpy: 32
+GenWimpy: 35
 E
 #9505
 gigante vermelha~

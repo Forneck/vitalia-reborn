@@ -68,17 +68,6 @@ Level     110
 Room      3001
 Flags     0 0 0 0
 End
-Text      IA~
-Body      nao ta treinando arg1 de magias (cast).
-buy e sell tb nao por dnh
-~
-Name      Cansian~
-IdNum     1
-Dated     1604136131
-Level     110
-Room      3375
-Flags     0 0 0 0
-End
 Text      autoequip~
 Body      brincos, rosto e asas
 ~
@@ -284,7 +273,7 @@ Level     110
 Room      3801
 Flags     0 0 0 0
 End
-Text       Fly~
+Text      Fly~
 Body      Mesmo com magia/affect fly, o comando fly nao levanta voo.
 ~
 Name      Cansian~
@@ -292,5 +281,5 @@ IdNum     1
 Dated     1740709013
 Level     110
 Room      206
-Flags     0 0 0 0
+Flags     1 0 0 0
 End

@@ -25,7 +25,7 @@ precisando de MUITO descanso.
 8 12 3 2d6+100 2d6+1
 150 7000
 9 9 1
-GenWimpy: 22
+GenWimpy: 24
 E
 #5002
 cobra coral~
@@ -39,8 +39,8 @@ vermelho, amarelo e preto.
 4 17 4 1d6+40 1d9+0
 0 600
 9 9 0
-GenWimpy: 25
-GenRoam: 36
+GenWimpy: 34
+GenRoam: 54
 E
 #5003
 escorpiao pequeno~
@@ -54,8 +54,8 @@ pequenina.
 3 17 1 1d6+40 1d8+0
 0 500
 9 9 0
-GenWimpy: 19
-GenRoam: 52
+GenWimpy: 22
+GenRoam: 48
 E
 #5004
 verme arroxeado gigantesco~

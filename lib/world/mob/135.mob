@@ -10,8 +10,8 @@ perigosa.
 14 6 4 1d1+400 6d1+14
 0 27000
 9 9 1
-GenWimpy: 5
-GenRoam: 15
+GenWimpy: 7
+GenRoam: 32
 E
 #13501
 elfo cacador~
@@ -192,8 +192,8 @@ Ele é simplesmente adorável, você queria ter um igual a esse!
 8 12 6 1d1+150 4d1+8
 0 10333
 9 9 1
-GenWimpy: 10
-GenRoam: 25
+GenWimpy: 11
+GenRoam: 47
 E
 #13514
 cobra cega~
@@ -235,8 +235,8 @@ entrou aqui.
 13 7 4 1d1+350 6d1+13
 200 12880
 9 9 2
-GenWimpy: 5
-GenRoam: 6
+GenWimpy: 6
+GenRoam: 5
 E
 #13517
 ra~

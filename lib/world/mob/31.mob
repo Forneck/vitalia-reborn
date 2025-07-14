@@ -50,7 +50,7 @@ Um grande, forte e bravo sentinela.
 10 10 2 1d12+123 1d8+3
 0 9000
 9 9 1
-GenWimpy: 16
+GenWimpy: 17
 E
 #3104
 secretaria~
@@ -132,6 +132,8 @@ Parece que o pardal está aproveitando a vida.
 0 20 10 2d6+0 1d3+0
 0 25
 9 9 1
+GenWimpy: 2
+GenRoam: 17
 E
 #3123
 pato~
@@ -144,8 +146,8 @@ O pato á bem gordo. Parece que ele está aproveitando a vida.
 1 20 10 2d6+5 1d4+0
 0 75
 9 9 0
-GenWimpy: 1
-GenRoam: 20
+GenWimpy: 4
+GenRoam: 57
 E
 #3124
 guarda-costas~

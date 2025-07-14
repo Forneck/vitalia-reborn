@@ -51,8 +51,8 @@ Uma corça, um cervo, um cervo fêmea...  Vamos! Você conhece a música.
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 2
-GenWimpy: 12
-GenRoam: 79
+GenWimpy: 14
+GenRoam: 78
 E
 #13604
 veado~
@@ -79,8 +79,8 @@ Ele olha para você e ri frenéticamente.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 1
-GenWimpy: 15
-GenRoam: 71
+GenWimpy: 17
+GenRoam: 80
 E
 #13606
 agil raposa~
@@ -135,8 +135,8 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 0 15454
 9 9 0
-GenWimpy: 4
-GenRoam: 1
+GenWimpy: 5
+GenRoam: 11
 E
 #13610
 inseto pedra inseto-pedra~
@@ -149,7 +149,7 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12937
 9 9 1
-GenWimpy: 80
-GenRoam: 80
+GenWimpy: 86
+GenRoam: 83
 E
 $
