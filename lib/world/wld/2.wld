@@ -229,6 +229,7 @@ D2
 ~
 0 0 211
 S
+T 200
 #213
 O Pátio Aberto~
    Aqui é a parte do pátio mais proxima dos portões. Algumas marcas podem ser vistas no chao.
@@ -485,6 +486,7 @@ D6
 ~
 0 0 219
 S
+T 207
 #226
 O Topo da Torre Sudeste~
    Daqui é possivel ver os arredores do castelo e a entrada de uma mina.
@@ -513,6 +515,7 @@ D9
 ~
 0 0 220
 S
+T 207
 #228
 O Topo da Torre Nordeste~
    Daqui é possivel ver os arredores do castelo e a estrada que circula o castelo.
@@ -541,6 +544,7 @@ D8
 ~
 0 0 221
 S
+T 207
 #230
 O Topo da Torre Noroeste~
     Daqui é possivel ver os arredores do castelo e a estrada que circula o castelo.
@@ -570,6 +574,7 @@ D7
 ~
 0 0 222
 S
+T 207
 #232
 O Topo da Torre Sudoeste~
    Daqui é possivel ver os arredores do castelo.
@@ -650,6 +655,7 @@ D3
 ~
 0 0 235
 S
+T 203
 #237
 Cela 2~
    Esta cela é grande o suficiente para caber um grupo pequeno de aventureiros. As paredes são totalmente lisas.
@@ -661,6 +667,7 @@ D1
 ~
 0 0 235
 S
+T 203
 #238
 O Corredor da Prisão~
    Um corredor escuro e estreito. O corredor continua ao norte e ao sul.
