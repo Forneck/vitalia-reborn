@@ -3324,6 +3324,8 @@ new_spell->applies[4].modifier = strdup("3");
 new_spell->dispel[0] = strdup("174");
 new_spell->messages.to_vict = strdup("Você se sente muito vulnerável.");
 new_spell->messages.wear_off = strdup("Você se sente menos vulnerável.");
+new_spell->school = SCHOOL_ENCHANTMENT;   /* Debuff/weakness */
+new_spell->element = ELEMENT_MENTAL;      /* Mental vulnerability */
 spedit_save_internally(new_spell);
 
 //CHANSON_ECOS
@@ -3349,6 +3351,8 @@ sprintf(buf, "(70 - (4 * self.level)) > 30 ? (70 - (4 * self.level)) : 40");
  new_spell->applies[1].modifier = strdup("-(2+self.level/25)");
  new_spell->applies[1].duration = strdup("1+(self.level/10)");
  new_spell->points.move = strdup("-(50 + (2*self.level))");
+ new_spell->school = SCHOOL_NECROMANCY;    /* Cursing debuff */
+ new_spell->element = ELEMENT_UNHOLY;      /* Dark curse magic */
  spedit_save_internally(new_spell);
 
 //CHANSON_CLAMOR 174
@@ -3384,6 +3388,8 @@ new_spell->applies[4].modifier = strdup("-3");
 new_spell->dispel[0] = strdup("170");
 new_spell->messages.to_vict = strdup("Você se sente menos vulnerável.");
 new_spell->messages.wear_off = strdup("Você se sente mais vulnerável.");
+new_spell->school = SCHOOL_ABJURATION;    /* Protection from harm */
+new_spell->element = ELEMENT_UNDEFINED;   /* General protection */
 spedit_save_internally(new_spell);
 
 //CHANSON_CESSAR #176
@@ -3403,6 +3409,8 @@ new_spell->assign[0].level = 42;
 new_spell->assign[0].num_mana = strdup(buf);
 new_spell->messages.to_vict = strdup("A canção parece curar suas feridas!.");
 new_spell->points.hp = strdup("dice(5, 3) + (param / 4)");
+new_spell->school = SCHOOL_CONJURATION;   /* Healing song */
+new_spell->element = ELEMENT_UNDEFINED;   /* Musical healing */
 spedit_save_internally(new_spell);
 
 //CHANSON_VISAO 175
@@ -3423,6 +3431,8 @@ new_spell->assign[0].num_mana = strdup(buf);
 new_spell->applies[0].appl_num = AFF_DETECT_INVIS + NUM_APPLIES;
 new_spell->applies[0].duration = strdup("12 + param");                      new_spell->messages.to_vict = strdup("Você se sente mais sensível ao mundo exterior.");
 new_spell->messages.wear_off = strdup("Você se sente menos sensível.");
+new_spell->school = SCHOOL_DIVINATION;    /* Enhanced perception */
+new_spell->element = ELEMENT_MENTAL;      /* Mental enhancement */
 spedit_save_internally(new_spell);
 
 //CHANSON_ALENTO
@@ -3458,6 +3468,9 @@ new_spell->applies[4].duration = strdup("param/4");
  new_spell->messages.to_vict = strdup("Uma grande força parece tormar conta de seu coração.");
  new_spell->messages.to_room = strdup("$N!");
  new_spell->messages.wear_off = strdup("Você volta a enxergar.");
+ new_spell->school = SCHOOL_ENCHANTMENT;   /* Combat enhancement */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Battle inspiration */
+ spedit_save_internally(new_spell);
 
 
 /*CHANSONS ESPECIAIS: BRINDE, VOLTAR, ENCANTO, ALENTO*/
@@ -3476,6 +3489,8 @@ new_spell->effectiveness = strdup("100");
 sprintf(buf, "(30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5");  new_spell->assign[0].class_num = CLASS_BARD;
 new_spell->assign[0].level = 6;
 new_spell->assign[0].num_mana = strdup(buf);
+new_spell->school = SCHOOL_CONJURATION;   /* Object creation/transformation */
+new_spell->element = ELEMENT_UNDEFINED;   /* Liquid transformation */
 spedit_save_internally(new_spell);
 
 // CHANSON_ENCANTO #7
@@ -3495,6 +3510,8 @@ new_spell->assign[0].class_num = CLASS_BARD;
 new_spell->assign[0].level = 62;
 new_spell->assign[0].num_mana = strdup(buf);
 new_spell->messages.wear_off = strdup("Você se sente mais auto-confiante.");
+new_spell->school = SCHOOL_ENCHANTMENT;   /* Mind control */
+new_spell->element = ELEMENT_MENTAL;      /* Mental charm */
 
 spedit_save_internally(new_spell);
 
@@ -3514,6 +3531,8 @@ sprintf(buf, "(30 - (3 * self.level)) > 10 ? (30 - (3 * self.level)) : 10");
 new_spell->assign[0].class_num = CLASS_BARD;
 new_spell->assign[0].level = 31;
 new_spell->assign[0].num_mana = strdup(buf);
+new_spell->school = SCHOOL_CONJURATION;   /* Transportation */
+new_spell->element = ELEMENT_UNDEFINED;   /* Recall magic */
 spedit_save_internally(new_spell);
 
 //spellnum, spellname, maxmana, minmana, manachng, minpos, targets, viol   ent?, routines.
