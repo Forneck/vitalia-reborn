@@ -1317,3 +1317,83 @@ const char *get_spell_element_name(int element) {
     default:                  return "Indefinido";
   }
 }
+
+/* Get school-based weather modifier for spell effectiveness */
+float get_school_weather_modifier(struct char_data *ch, int spell_school) {
+  struct weather_data *weather;
+  float modifier = 1.0; /* Default no change */
+  int zone_num;
+  
+  /* Check if school weather affects is enabled */
+  if (!CONFIG_SCHOOL_WEATHER_AFFECTS) {
+    return modifier;
+  }
+  
+  /* Get the character's zone weather data */
+  zone_num = world[IN_ROOM(ch)].zone;
+  if (zone_num < 0 || zone_num > top_of_zone_table) {
+    return modifier;
+  }
+  
+  weather = &climates[zone_num];
+  
+  switch (spell_school) {
+    case SCHOOL_EVOCATION:
+      /* Evocation spells: affected by extreme weather conditions */
+      if (weather->sky >= SKY_RAINING && weather->humidity > 60.0) {
+        modifier = 1.15; /* 15% more effective in storms */
+      } else if (weather->sky <= SKY_CLOUDLESS && weather->humidity < 40.0) {
+        modifier = 0.9; /* 10% less effective in clear, dry conditions */
+      }
+      break;
+      
+    case SCHOOL_CONJURATION:
+      /* Conjuration spells: more effective in balanced conditions */
+      if (weather->humidity >= 40.0 && weather->humidity <= 70.0) {
+        modifier = 1.1; /* 10% more effective in moderate humidity */
+      }
+      break;
+      
+    case SCHOOL_ILLUSION:
+      /* Illusion spells: more effective in misty/foggy conditions */
+      if (weather->sky == SKY_CLOUDY && weather->humidity > 80.0) {
+        modifier = 1.2; /* 20% more effective in foggy conditions */
+      } else if (weather->sky == SKY_CLOUDLESS) {
+        modifier = 0.85; /* 15% less effective in clear conditions */
+      }
+      break;
+      
+    case SCHOOL_DIVINATION:
+      /* Divination spells: affected by atmospheric clarity */
+      if (weather->sky == SKY_CLOUDLESS && weather->humidity < 50.0) {
+        modifier = 1.15; /* 15% more effective in clear, dry conditions */
+      } else if (weather->sky >= SKY_RAINING) {
+        modifier = 0.9; /* 10% less effective during storms */
+      }
+      break;
+      
+    case SCHOOL_NECROMANCY:
+      /* Necromancy spells: more effective during dark/stormy weather */
+      if (weather->sky >= SKY_RAINING) {
+        modifier = 1.2; /* 20% more effective during storms */
+      } else if (weather->sky == SKY_CLOUDLESS) {
+        modifier = 0.85; /* 15% less effective in bright conditions */
+      }
+      break;
+      
+    case SCHOOL_ENCHANTMENT:
+      /* Enchantment spells: slightly affected by atmospheric pressure */
+      if (weather->pressure > 1020.0) {
+        modifier = 1.05; /* 5% more effective in high pressure */
+      } else if (weather->pressure < 980.0) {
+        modifier = 0.95; /* 5% less effective in low pressure */
+      }
+      break;
+      
+    default:
+      /* Other schools (Abjuration, Alteration) less affected by weather */
+      break;
+  }
+  
+  return modifier;
+}

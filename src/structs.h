@@ -1565,6 +1565,7 @@ struct game_data
   int script_players;     /**< Is attaching scripts to players allowed? */
   int fit_evolve;
   int weather_affects_spells; /**< Does weather affect spell effectiveness? */
+  int school_weather_affects; /**< Does weather affect spells based on school? */
 
   char *OK;       /**< When player receives 'Okay.' text.    */
   char *HUH;      /**< 'Huh!?!'                              */ 

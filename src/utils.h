@@ -1059,6 +1059,8 @@ do                                                              \
 #define CONFIG_FIT_EVOLVE       config_info.play.fit_evolve
 /** Does weather affect spell effectiveness? */
 #define CONFIG_WEATHER_AFFECTS_SPELLS config_info.play.weather_affects_spells
+/** Does weather affect spells based on school? */
+#define CONFIG_SCHOOL_WEATHER_AFFECTS config_info.play.school_weather_affects
 /** What level to use the shout command? */
 #define CONFIG_LEVEL_CAN_SHOUT  config_info.play.level_can_shout
 /** How many move points does holler cost? */

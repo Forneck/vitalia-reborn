@@ -235,6 +235,12 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim,
 		dam = (int)(dam * weather_modifier);
 	}
 
+	/* Apply school-based weather modifier if enabled */
+	if (CONFIG_SCHOOL_WEATHER_AFFECTS && spell->school != SCHOOL_UNDEFINED) {
+		float school_modifier = get_school_weather_modifier(ch, spell->school);
+		dam = (int)(dam * school_modifier);
+	}
+
 	// special spells that formula interpreter can't deal with.
 	switch (spellnum)
 	{
