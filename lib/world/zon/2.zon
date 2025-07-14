@@ -3,57 +3,56 @@ Cansian~
 O Castelo da Rainha Gelada~
 200 299 60 1 bg 0 0 0 -1 -1 3
 
-* Zona temporariamente desabilitada devido a problemas de índice de mobs
-* Os mobs 200-212 existem mas não estão sendo reconhecidos pelo sistema
-* TODO: Investigar problema de indexação de mobs
-* 
 * Carrega guardas nos portões principais
-* M 0 200 2 212		; Guarda de gelo nos portões 
-* M 0 201 1 213		; Soldado gelado no pátio
-* M 0 202 2 213		; Servo de gelo no pátio
-* 
-* * Carrega a Rainha Gelada na sala do trono
-* M 0 204 1 224		; Rainha Gelada no trono
-* G 1 210 1		; Rainha usa a coroa real
-* 
-* * Torres com guardas
-* M 0 200 1 225		; Guarda na torre sudeste
-* M 0 200 1 227		; Guarda na torre nordeste  
-* M 0 200 1 229		; Guarda na torre noroeste
-* M 0 200 1 231		; Guarda na torre sudoeste
-* 
-* * Capitão no depósito de armas
-* M 0 203 1 243		; Capitão de gelo
-* G 1 200 1		; Capitão usa espada de gelo
-* E 1 201 1 16		; Capitão usa armadura de placas
-* E 1 202 1 12		; Capitão usa elmo real
-* 
-* * Prisioneiros nas celas
-* M 0 205 1 236		; Prisioneiro na cela 1
-* M 0 205 1 237		; Prisioneiro na cela 2
-* 
-* * Bibliotecário na biblioteca (sala especial)
-* M 0 211 1 233		; Bibliotecário de gelo (onde seria a biblioteca)
-* G 1 204 1		; Bibliotecário usa cajado do inverno
-* G 1 206 3		; Bibliotecário tem pergaminhos
-* G 1 207 2		; Bibliotecário tem gemas
-* 
-* * Cozinheiro no dormitório  
-* M 0 212 1 242		; Cozinheiro de gelo
-* G 1 205 5		; Cozinheiro tem poções
-* 
-* * Criaturas mágicas espalhadas
-* M 0 206 2 277		; Espírito do gelo na passagem secreta
-* M 0 208 1 278		; Elemental do gelo no tesouro
-* M 0 209 3 279		; Aranhas de cristal nos aposentos reais
-* M 0 210 2 276		; Lobos de gelo na estrada externa
-* 
-* * Objetos especiais
+M 0 200 2 212		; Guarda de gelo nos portões 
+M 0 201 1 213		; Soldado gelado no pátio
+M 0 202 2 213		; Servo de gelo no pátio
+
+* Carrega a Rainha Gelada na sala do trono
+M 0 204 1 224		; Rainha Gelada no trono
+* G 1 210 1		; Rainha usa a coroa real (obj 210 disabled - see objects issue below)
+
+* Torres com guardas
+M 0 200 1 225		; Guarda na torre sudeste
+M 0 200 1 227		; Guarda na torre nordeste  
+M 0 200 1 229		; Guarda na torre noroeste
+M 0 200 1 231		; Guarda na torre sudoeste
+
+* Capitão no depósito de armas
+M 0 203 1 243		; Capitão de gelo
+* G 1 200 1		; Capitão usa espada de gelo (obj 200 disabled - see objects issue below)
+* E 1 201 1 16		; Capitão usa armadura de placas (obj 201 disabled - see objects issue below)
+* E 1 202 1 12		; Capitão usa elmo real (obj 202 disabled - see objects issue below)
+
+* Prisioneiros nas celas
+M 0 205 1 236		; Prisioneiro na cela 1
+M 0 205 1 237		; Prisioneiro na cela 2
+
+* Bibliotecário na biblioteca (sala especial)
+M 0 211 1 233		; Bibliotecário de gelo (onde seria a biblioteca)
+* G 1 204 1		; Bibliotecário usa cajado do inverno (obj 204 disabled - see objects issue below)
+* G 1 206 3		; Bibliotecário tem pergaminhos (obj 206 disabled - see objects issue below)
+* G 1 207 2		; Bibliotecário tem gemas (obj 207 disabled - see objects issue below)
+
+* Cozinheiro no dormitório  
+M 0 212 1 242		; Cozinheiro de gelo
+* G 1 205 5		; Cozinheiro tem poções (obj 205 disabled - see objects issue below)
+
+* Criaturas mágicas espalhadas
+M 0 206 2 277		; Espírito do gelo na passagem secreta
+M 0 208 1 278		; Elemental do gelo no tesouro
+M 0 209 3 279		; Aranhas de cristal nos aposentos reais
+M 0 210 2 276		; Lobos de gelo na estrada externa
+
+* Objetos especiais (DISABLED - parser issue with obj #200)
+* TODO: Objects 200-215 exist in 2.obj but cause "Format error in first numeric line (expecting 13 args, got 0)"
+* This appears to be a parser/format issue with objects in the 200 range
+* Objects load correctly in other ranges, suggesting a specific issue with the 200-series objects
 * O 0 214 1 278		; Baú do tesouro real no tesouro
 * O 0 215 2 233		; Lanternas eternas na biblioteca
 * O 0 213 1 279		; Orbe de poder nos aposentos reais
-* 
-* * Equipamentos espalhados
+
+* Equipamentos espalhados (DISABLED - same objects issue)
 * O 0 209 1 224		; Manto real na sala do trono
 * O 0 211 2 243		; Botas especiais no depósito
 * O 0 212 1 243		; Escudo protetor no depósito
