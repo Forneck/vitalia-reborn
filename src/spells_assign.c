@@ -1822,6 +1822,8 @@ new_spell->applies[1].appl_num = AFF_FIRESHIELD + NUM_APPLIES;
  new_spell->assign[0].class_num = CLASS_DRUID;
  new_spell->assign[0].level = 50;
  new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->school = SCHOOL_EVOCATION;     /* Air-based damage spell */
+ new_spell->element = ELEMENT_AIR;         /* Wind and air magic */
 
  spedit_save_internally(new_spell);
  
@@ -1946,6 +1948,8 @@ sprintf(buf, "(130 - (3 * self.level)) > 120 ? (130 - (3 * self.level)) : 120 ")
  new_spell->assign[3].num_mana = strdup(buf);
  new_spell->messages.to_vict = strdup("Você sente que não precisa mais respirar.\r\n");
  new_spell->messages.wear_off = strdup("Você sente necessidade de respirar novamente.");
+ new_spell->school = SCHOOL_ALTERATION;    /* Body modification */
+ new_spell->element = ELEMENT_AIR;         /* Air-breathing enhancement */
  spedit_save_internally(new_spell);
  
   // SPELL_Paralyze #64
@@ -2274,6 +2278,8 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->messages.to_vict = strdup("Você é recobert$r por um casaco de espinhos!");
   new_spell->messages.to_room = strdup("Um casaco de espinhos recobre $N.");
  new_spell->messages.wear_off = strdup("Você percebe que seu casaco de espinhos se desfez.");
+ new_spell->school = SCHOOL_ALTERATION;    /* Body modification protection */
+ new_spell->element = ELEMENT_EARTH;       /* Natural thorny protection */
  spedit_save_internally(new_spell);
  
  // SPELL_CASCADE_HAIL	     79
@@ -2294,6 +2300,8 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->damages = strdup("12+rand(8)");
  new_spell->max_dam = 100;
+ new_spell->school = SCHOOL_EVOCATION;     /* Area damage spell */
+ new_spell->element = ELEMENT_ICE;         /* Ice/hail damage */
  
  spedit_save_internally(new_spell);
  
@@ -2320,6 +2328,8 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->messages.to_vict = strdup("Você percebe que pequenos vaga-lumes surgem e iluminam seu caminho!");
   new_spell->messages.to_room = strdup("Você se surpreende com a nuvem de pequenos vaga-lumes que apareceram para iluminar $n");
  new_spell->messages.wear_off = strdup("Você observa os vaga-lumes indo embora, um a um.");
+ new_spell->school = SCHOOL_CONJURATION;   /* Summoning creatures/light */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Light-providing magic */
  spedit_save_internally(new_spell);
  
  //SPELL_STINGING_SWARM	     80
@@ -2457,6 +2467,8 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->max_dam = 100;
  new_spell->messages.to_self = strdup("Com sua voz você emite um som de extrema violência, ferindo tudo que $r cerca!");
  new_spell->messages.to_room = strdup("$n emite com sua voz um som de violência extrema, ferindo a todos!");
+ new_spell->school = SCHOOL_EVOCATION;     /* Sound-based damage spell */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Sonic magic */
 
  spedit_save_internally(new_spell);
   // SPELL_SOUNDBARRIER #90
@@ -2491,6 +2503,8 @@ new_spell->vnum = SPELL_INVIGOR;
  new_spell->messages.to_vict = strdup("Você é envolvid$r por uma protetora barreira de som.");
  new_spell->messages.to_room = strdup("$N é envolvid$r por uma protetora barreira de som.");
  new_spell->messages.wear_off = strdup("Você percebe a barreira de som se dissipar.");
+ new_spell->school = SCHOOL_ABJURATION;    /* Protection spell */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Sound-based protection */
  spedit_save_internally(new_spell);
   
   // SPELL_GLOOMSHIELD # 91
@@ -2587,6 +2601,8 @@ new_spell->applies[1].appl_num = AFF_WINDWALL + NUM_APPLIES;
  new_spell->messages.to_vict = strdup("Uma parede de vento envolve você.");
   new_spell->messages.to_room = strdup("Uma parede de vento envolve $N.");
  new_spell->messages.wear_off = strdup("A parede de vento ao redor de seu corpo desaparece.");
+ new_spell->school = SCHOOL_ABJURATION;    /* Protection spell */
+ new_spell->element = ELEMENT_AIR;         /* Wind-based protection */
  spedit_save_internally(new_spell);
 
 // SPELL_BLESS_OBJECT # 97
@@ -2605,6 +2621,8 @@ new_spell->min_pos = POS_STANDING;
  new_spell->assign[0].class_num = CLASS_CLERIC;
  new_spell->assign[0].level = 6;
  new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->school = SCHOOL_ENCHANTMENT;   /* Object enhancement */
+ new_spell->element = ELEMENT_HOLY;        /* Divine blessing */
  spedit_save_internally(new_spell);
 
 // SKILL_BACKSTAB # 131 
@@ -3104,6 +3122,8 @@ spedit_save_internally(new_spell);
  new_spell->assign[0].level = 1;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->objects[0] = strdup("34");  // object VNUM 34
+ new_spell->school = SCHOOL_CONJURATION;   /* Creates flame object */
+ new_spell->element = ELEMENT_FIRE;        /* Fire-based song */
  spedit_save_internally(new_spell);
 
  /*CHANSON_OFUSCAR #162 */
@@ -3133,6 +3153,8 @@ spedit_save_internally(new_spell);
  new_spell->messages.to_vict = strdup("Você está ceg$r!");
  new_spell->messages.to_room = strdup("$N parece estar ceg$r!");
  new_spell->messages.wear_off = strdup("Você volta a enxergar.");
+ new_spell->school = SCHOOL_ILLUSION;      /* Light/visual effect */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Light-based blinding */
  spedit_save_internally(new_spell);
  
 /*CHANSON_NINAR #163 */
@@ -3155,6 +3177,8 @@ spedit_save_internally(new_spell);
  new_spell->messages.to_vict = strdup("A cancao parece fazer todo seu corpo adormecer e...     Zzzz......");
  new_spell->messages.to_room = strdup("$N parece ficar sonolento!");
  new_spell->messages.wear_off = strdup("Você se sente menos sonolent$r.");
+ new_spell->school = SCHOOL_ENCHANTMENT;   /* Mind-affecting sleep */
+ new_spell->element = ELEMENT_MENTAL;      /* Mental effect */
  spedit_save_internally(new_spell);
  
  // CHANSON_TREMOR # 164
@@ -3176,6 +3200,8 @@ spedit_save_internally(new_spell);
  //new_spell->max_dam = 100;
  new_spell->messages.to_self = strdup("Com sua cancao voce faz com que o chao a redor comece a tremer e fender-se!");
  new_spell->messages.to_room = strdup("Ao cantar sua cancao, $n faz com que o chao comece a tremer e fender-se!");
+ new_spell->school = SCHOOL_EVOCATION;     /* Area damage spell */
+ new_spell->element = ELEMENT_EARTH;       /* Earth tremor effect */
  spedit_save_internally(new_spell);
 
 // CHANSON_ANDARILHO             165
@@ -3192,6 +3218,8 @@ new_spell->assign[0].num_mana = strdup(buf);
 new_spell->messages.to_vict = strdup("Você sente que a Balada do Andarilho $r faz recuperar forças.");
  new_spell->points.hp = strdup("4 + dice(2, 6)");
  new_spell->points.move = strdup("12 + dice(4, 2)");
+ new_spell->school = SCHOOL_CONJURATION;   /* Healing/restoration */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Restoration effect */
  spedit_save_internally(new_spell);
 
 // CHANSON_MORTE # 166
@@ -3213,6 +3241,8 @@ new_spell->assign[0].num_mana = strdup(buf);                                new_
 new_spell->messages.to_self = strdup("Morte, o Ceifeiro Cruel responde ao seu chamado causando dano a $N!");
 new_spell->messages.to_room = strdup("Morte, o Ceifeiro Cruel responde ao chamado de $n e causa dano a $N!");
 new_spell->messages.to_vict = strdup("A propria Morte aparece e causa dano a voce!");
+new_spell->school = SCHOOL_NECROMANCY;    /* Death-based damage */
+new_spell->element = ELEMENT_UNHOLY;      /* Death/negative energy */
 spedit_save_internally(new_spell);
 
 // CHANSON_LEVEZA # 167 
@@ -3234,6 +3264,8 @@ new_spell->applies[0].appl_num = AFF_WATERWALK + NUM_APPLIES;
 new_spell->applies[0].duration = strdup("24");
 new_spell->messages.to_vict = strdup("Você sente que seus pés podem flutuar sobre a água.");
 new_spell->messages.wear_off = strdup("Seus pés parecem mais pesados.");
+new_spell->school = SCHOOL_ALTERATION;    /* Body modification */
+new_spell->element = ELEMENT_WATER;       /* Water-walking ability */
 spedit_save_internally(new_spell);
 
 // chanson_ardor #168 rever tabela
@@ -3255,6 +3287,8 @@ new_spell->assign[0].num_mana = strdup(buf);
 new_spell->messages.to_vict = strdup("Os ecos de uma canção divina preenchem sua cabeça e curam seu corpo.\r\n");
 sprintf(buf, "(dice(3,6) + (param - 15)) > 1 ? (dice(3,6) + (param - 15) : 1");
 new_spell->points.hp = strdup(buf);
+new_spell->school = SCHOOL_CONJURATION;   /* Divine healing */
+new_spell->element = ELEMENT_HOLY;        /* Divine intervention */
 spedit_save_internally(new_spell);
 
 //CHANSON_VULNERAVEL 170
@@ -3497,6 +3531,8 @@ spedit_save_internally(new_spell);
  new_spell->targ_flags = TAR_CHAR_ROOM | TAR_OBJ_INV | TAR_OBJ_ROOM;
  new_spell->mag_flags = MAG_MANUAL;
  new_spell->effectiveness = strdup("100");
+ new_spell->school = SCHOOL_DIVINATION;    /* Information gathering */
+ new_spell->element = ELEMENT_MENTAL;      /* Mental analysis */
  spedit_save_internally(new_spell);
 
   //SPELL_YOUTH
@@ -3512,6 +3548,8 @@ spedit_save_internally(new_spell);
  new_spell->targ_flags = TAR_OBJ_ROOM;
  new_spell->mag_flags = MAG_MANUAL;
  new_spell->effectiveness = strdup("100");
+ new_spell->school = SCHOOL_ALTERATION;    /* Time/age manipulation */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Temporal magic */
  spedit_save_internally(new_spell);
 
  // SPELL_DG_AFFECT # 298 
@@ -3525,6 +3563,8 @@ spedit_save_internally(new_spell);
  new_spell->min_pos = POS_SITTING;
  new_spell->targ_flags = TAR_IGNORE;
  new_spell->effectiveness = strdup("100");
+ new_spell->school = SCHOOL_UNDEFINED;     /* Script-triggered effect */
+ new_spell->element = ELEMENT_UNDEFINED;   /* No specific element */
 
  spedit_save_internally(new_spell);
 
