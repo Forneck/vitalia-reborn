@@ -1622,9 +1622,9 @@ void create_spells_db()
  new_spell->assign[3].num_mana = strdup(buf);
  new_spell->applies[0].appl_num = APPLY_DEX;
  new_spell->applies[0].modifier = strdup("1 + (param > 18)");
-  new_spell->applies[0].duration = strdup("1");
-   new_spell->applies[1].appl_num = AFF_LIGHT + NUM_APPLIES;
- new_spell->applies[1].duration = strdup("4");
+  new_spell->applies[0].duration = strdup("self.level / 4");
+   new_spell->applies[1].appl_num = AFF_FLYING + NUM_APPLIES;
+ new_spell->applies[1].duration = strdup("self.level / 4");
  new_spell->messages.to_vict = strdup("Você se sente muito leve...");
  new_spell->messages.wear_off = strdup("Você se sente pesad$r novamente.");
  new_spell->school = SCHOOL_ALTERATION;    /* Movement enhancement */
