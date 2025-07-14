@@ -8,6 +8,10 @@ para  as  diversas  lojas  de  Thewster,  ao sul fica a Taverna da Baía das
 Folhas.  Para leste fica o caminho devolta à floresta.
 ~
 134 16 0 0 0 1
+D0
+~
+~
+0 0 13482
 D1
 A Escadaria.
 ~
@@ -1336,15 +1340,14 @@ D0
 porta sul~
 1 13437 13479
 E
-peles pele animais paredes~
-As peles tem um estranho símbolo de um olho e um dente marcada nelas.
-~
-E
 carpete corpos~
 Coelhos, pássaros, elfos, guerreiros. Se você pode nomear, está aqui.
 ~
+E
+peles pele animais paredes~
+As peles tem um estranho símbolo de um olho e um dente marcada nelas.
+~
 S
-
 #13482
 O Distrito Élfico Superior~
    Você se encontra em uma área elevada da cidade élfica de Thewster, onde
@@ -1365,7 +1368,6 @@ O caminho desce para o nível principal da cidade.
 ~
 0 0 13400
 S
-
 #13483
 Residências Élficas Nobres~
    Esta área exclusiva abriga as famílias élficas mais influentes de Thewster.
@@ -1374,18 +1376,17 @@ as árvores vivas. Jardins suspensos florescem entre as habitações, e o ar
 está perfumado com flores mágicas que só crescem nestes galhos altos.
 ~
 134 0 0 0 0 1
-D2
-O distrito élfico superior fica ao sul.
-~
-~
-0 0 13482
 D1
 A biblioteca élfica fica a leste.
 ~
 ~
 0 0 13484
+D2
+O distrito élfico superior fica ao sul.
+~
+~
+0 0 13482
 S
-
 #13484
 A Grande Biblioteca Élfica~
    Uma impressionante biblioteca construída no tronco oco de uma árvore
@@ -1395,18 +1396,17 @@ aberturas naturais, iluminando mesas de estudo onde estudiosos élficos
 pesquisam conhecimentos arcanos.
 ~
 134 8 0 0 0 0
-D3
-As residências élficas ficam a oeste.
-~
-~
-0 0 13483
 D1
 O arquivo de pergaminhos fica a leste.
 ~
 ~
 0 0 13485
+D3
+As residências élficas ficam a oeste.
+~
+~
+0 0 13483
 S
-
 #13485
 Arquivo de Pergaminhos Antigos~
    Uma câmara silenciosa onde os pergaminhos mais antigos e preciosos são
@@ -1421,7 +1421,6 @@ A biblioteca principal fica a oeste.
 ~
 0 0 13484
 S
-
 #13486
 O Mercado das Árvores~
    Um mercado único construído em plataformas conectadas entre várias árvores.
@@ -1441,7 +1440,6 @@ O caminho desce para a praça central.
 ~
 0 0 13400
 S
-
 #13487
 Oficina do Artesão Élfico~
    Uma oficina especializada onde mestres artesãos élficos criam itens únicos
@@ -1450,18 +1448,17 @@ estão organizadas com precisão, e peças semi-acabadas demonstram a qualidade
 excepcional do trabalho élfico.
 ~
 134 8 0 0 0 0
-D2
-O mercado das árvores fica ao sul.
-~
-~
-0 0 13486
 D1
 O ateliê de encantamento fica a leste.
 ~
 ~
 0 0 13488
+D2
+O mercado das árvores fica ao sul.
+~
+~
+0 0 13486
 S
-
 #13488
 Ateliê de Encantamento~
    Nesta câmara mística, magos élficos especializados encantam itens com
@@ -1476,7 +1473,6 @@ A oficina do artesão fica a oeste.
 ~
 0 0 13487
 S
-
 #13489
 O Santuário da Natureza~
    Um local sagrado onde os elfos vêm para meditar e se conectar com as
@@ -1491,7 +1487,6 @@ O jardim medicinal fica ao norte.
 ~
 0 0 13490
 S
-
 #13490
 Jardim Medicinal Élfico~
    Um jardim cuidadosamente cultivado onde crescem plantas medicinais raras
@@ -1506,5 +1501,4 @@ O santuário da natureza fica ao sul.
 ~
 0 0 13489
 S
-
 $~

@@ -225,6 +225,10 @@ D2
 ~
 ~
 0 -1 6511
+D3
+~
+~
+0 0 6555
 S
 #6513
 Dentro da Entrada~
@@ -849,7 +853,6 @@ D1
 porta~
 2 6500 6532
 S
-
 #6555
 A Taverna de Strangelove~
    Esta taverna animada é o coração social do reino dos anões de Strangelove.
@@ -868,9 +871,8 @@ D1
 O salão principal do castelo fica a leste.
 ~
 ~
-0 0 6525
+0 0 6512
 S
-
 #6556
 A Cozinha da Taverna~
    Uma cozinha robusta onde são preparadas as refeições hearty preferidas
@@ -885,7 +887,6 @@ A taverna principal fica ao sul.
 ~
 0 0 6555
 S
-
 #6557
 A Forja Real de Strangelove~
    Esta é a forja mais avançada do reino dos anões, onde são criadas as
@@ -901,7 +902,6 @@ O arsenal real fica a leste.
 ~
 0 0 6558
 S
-
 #6558
 O Arsenal Real~
    Um arsenal impressionante contendo as melhores armas e armaduras do reino
@@ -910,18 +910,17 @@ e armaduras de placas reluzem sob a luz das tochas. Cada peça representa o
 auge da metalurgia anã.
 ~
 65 8 0 0 0 0
-D3
-A forja real fica a oeste.
-~
-~
-0 0 6557
 D0
 A sala do conselho fica ao norte.
 ~
 ~
 0 0 6559
+D3
+A forja real fica a oeste.
+~
+~
+0 0 6557
 S
-
 #6559
 A Sala do Conselho dos Anões~
    Aqui os líderes anões se reúnem para discutir assuntos importantes do reino.
@@ -930,18 +929,17 @@ esculpidas especialmente para cada conselheiro. Mapas das minas e territórios
 anões decoram as paredes de granito.
 ~
 65 8 0 0 0 0
-D2
-O arsenal real fica ao sul.
-~
-~
-0 0 6558
 D1
 Os aposentos reais ficam a leste.
 ~
 ~
 0 0 6560
+D2
+O arsenal real fica ao sul.
+~
+~
+0 0 6558
 S
-
 #6560
 Os Aposentos Reais~
    Os quartos privados da realeza anã são luxuosamente decorados com os
@@ -956,7 +954,6 @@ A sala do conselho fica a oeste.
 ~
 0 0 6559
 S
-
 #6561
 A Grande Mina de Mithril~
    Esta é a mina mais valiosa do reino dos anões, onde o precioso mithril é
@@ -971,7 +968,6 @@ O túnel principal continua ao norte.
 ~
 0 0 6562
 S
-
 #6562
 Túnel da Mina de Mithril~
    Um túnel bem iluminado que leva às seções mais profundas da mina de mithril.
@@ -980,18 +976,17 @@ precioso passam regularmente. O ar está fresco devido ao sistema de ventilaçã
 anão bem projetado.
 ~
 65 0 0 0 0 2
-D2
-A entrada da mina fica ao sul.
-~
-~
-0 0 6561
 D0
 A câmara de refino fica ao norte.
 ~
 ~
 0 0 6563
+D2
+A entrada da mina fica ao sul.
+~
+~
+0 0 6561
 S
-
 #6563
 A Câmara de Refino~
    Aqui o mithril bruto é refinado e purificado usando técnicas secretas
@@ -1006,5 +1001,4 @@ O túnel da mina fica ao sul.
 ~
 0 0 6562
 S
-
 $~

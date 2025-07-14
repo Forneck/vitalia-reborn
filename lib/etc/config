@@ -76,6 +76,12 @@ default_minimap_size = 2
 * Do you want scripts to be attachable to players?
 script_players = 0
 
+* Does weather affect spell effectiveness?
+weather_affects_spells = 1
+
+* Does weather affect spells based on school?
+school_weather_affects = 1
+
 * Text sent to players when OK is all that is needed.
 ok = Pronto.
 

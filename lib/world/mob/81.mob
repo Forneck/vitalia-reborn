@@ -486,8 +486,7 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 5 15 0 3d4+400 1d2+3
 0 100
 9 9 1
-GenWimpy: 6
-GenRoam: 3
+GenWimpy: 5
 E
 #8137
 rato~
@@ -601,7 +600,7 @@ urgentemente, com sua lamparina, por uma saída.
 29 4 -4 2d5+1400 1d1+22
 50 10000
 9 9 1
-GenWimpy: 7
+GenWimpy: 8
 E
 #8145
 vibora víbora cobra~
@@ -703,7 +702,7 @@ que deve ser sua boca.
 0 21000
 9 9 2
 GenWimpy: 9
-GenRoam: 80
+GenRoam: 78
 E
 #8152
 soldado egipcio~

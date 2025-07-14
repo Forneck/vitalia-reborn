@@ -1,0 +1,65 @@
+Name: Dougal
+Pass: DodX4ptGBZLfw
+Titl: o Veterano
+Sex : 1
+Clas: 3
+Levl: 31
+Id  : 163
+Brth: 1745701310
+Plyd: 135970
+Last: 1752417565
+Lmot: 1750568196
+Lnew: 1750557014
+Htwn: 1
+Host: localhost
+Hite: 188
+Wate: 153
+Alin: -18
+Act : gh 0 0 0
+Aff : 0 0 0 0
+Pref: efghnoBCDE abd 0 0
+Was: abc abc abc abc
+Wimp: 300
+Room: 3001
+Lern: 122
+Hung: -1
+Thir: -1
+Hit : 1680/1670
+Mana : 100/100
+Move: 316/316
+Str : 18/63
+Int : 15
+Wis : 15
+Dex : 17
+Con : 16
+Cha : 14
+Ac  : 100
+Gold: 61918
+Bank: 1330763
+Exp : 7293406
+Page: 60
+Skil:
+222 80
+224 80
+227 80
+230 80
+231 80
+232 80
+233 80
+234 80
+235 100
+236 80
+240 80
+245 75
+250 80
+0 0
+Alis: 3
+ gc
+ get all all.corpo
+0
+ of
+ order fol $*
+1
+ k
+ kil $1
+1

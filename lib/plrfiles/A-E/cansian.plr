@@ -7,14 +7,14 @@ Levl: 110
 Id  : 1
 Brth: 1739554530
 Plyd: 17783
-Last: 1751677490
+Last: 1752457806
 Lmot: 1739554701
 Lnew: 1751677365
 Htwn: 1
 Host: localhost
 Hite: 198
 Wate: 137
-Act : e 0 0 0
+Act : 0 0 0 0
 Aff : 0 0 0 0
 Pref: efghimnoqrvABCDEF abcd 0 0
 Was: abc abc abc abc
@@ -33,9 +33,9 @@ Exp : 7000000
 Olc : 0
 ScrW: 70
 Alis: 2
- cheat
- return
-0
  lv1
  set cansian level 1
+0
+ cheat
+ return
 0

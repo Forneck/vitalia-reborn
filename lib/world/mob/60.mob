@@ -98,7 +98,7 @@ O pássaro parece que não vai viver muito, pelo jeito.
 0 17 10 2d3+1 1d2+1
 0 25
 9 9 0
-GenWimpy: 49
+GenWimpy: 51
 E
 #6007
 gato lince gato-selvagem~
@@ -126,8 +126,8 @@ O pardal parece estar aproveitando bem a vida.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 12
-GenRoam: 68
+GenWimpy: 13
+GenRoam: 67
 E
 #6009
 tordo~
@@ -184,8 +184,8 @@ no chão.
 2 19 8 1d12+22 1d6+0
 0 200
 9 9 0
-GenWimpy: 22
-GenRoam: 72
+GenWimpy: 23
+GenRoam: 69
 E
 #6013
 esquilinho~
@@ -201,8 +201,8 @@ pensa você.
 0 20 5 2d5+3 1d4+0
 0 40
 9 9 0
-GenWimpy: 23
-GenRoam: 62
+GenWimpy: 24
+GenRoam: 60
 E
 #6014
 corvo negro passaro~

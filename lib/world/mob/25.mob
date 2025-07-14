@@ -39,8 +39,8 @@ exterminador de coelhinhos em pessoa, Edgar o Horrível!
 1 20 10 3d9+10 1d8+1
 23 100
 9 9 1
-GenWimpy: 5
-GenRoam: 59
+GenWimpy: 6
+GenRoam: 63
 E
 #2503
 diamante golem~
@@ -179,8 +179,8 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 26
-GenRoam: 19
+GenWimpy: 23
+GenRoam: 12
 E
 #2513
 guardioes maiores olhos~
@@ -223,7 +223,7 @@ Ela parece estar bastante concentrada em seus estudos.
 7 7 2 7d6+25 2d4+5
 369 2950
 6 6 2
-GenWimpy: 23
+GenWimpy: 24
 E
 T 3009
 #2516
@@ -237,7 +237,7 @@ Ele parece ignorar tudo à sua volta, exceto o feitiço que está memorizando.
 7 6 2 7d6+25 2d4+5
 487 2750
 9 9 1
-GenWimpy: 20
+GenWimpy: 21
 E
 T 3009
 #2517
@@ -281,7 +281,7 @@ algumas marcas de queimaduras menores marcam sua pelugem mosqueada.
 1 20 1 1d1+10 1d4+1
 0 11
 9 9 2
-GenWimpy: 10
+GenWimpy: 11
 E
 #2520
 estudante~
@@ -736,7 +736,7 @@ revolver de repulsão.
 2150 26850
 9 9 2
 GenWimpy: 16
-GenRoam: 57
+GenRoam: 55
 E
 T 3009
 #2553

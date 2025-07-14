@@ -91,7 +91,7 @@ An undefined string.
 2200 20000
 9 9 1
 GenWimpy: 14
-GenRoam: 27
+GenRoam: 24
 E
 #17008
 lider elemental terra~
@@ -182,7 +182,7 @@ Ela corre ao seu redor, esperando uma brecha.
 8 1 0 1d5+200 1d10+3
 850 5000
 9 9 2
-GenWimpy: 39
+GenWimpy: 40
 E
 #17016
 elemental neve humanoide cristal~
@@ -234,7 +234,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 15
+GenWimpy: 16
 E
 #17020
 besta lava elemental~
@@ -345,7 +345,7 @@ Um humanóide que parece ter sido preso em um campo magnético.
 26 -2 -5 1d5+640 6d5+14
 3000 30000
 9 9 1
-GenWimpy: 23
+GenWimpy: 26
 E
 #17028
 neve bandido~
@@ -359,8 +359,7 @@ frio subindo por suas costas.
 26 -2 -5 1d5+630 6d5+13
 3000 30000
 9 9 1
-GenWimpy: 10
-GenLoot: 1
+GenWimpy: 11
 GenGroup: 3
 E
 #17029
@@ -375,8 +374,8 @@ Elas parecem estar formando um tipo de humanóide. E sua expressão não
 26 -2 -5 1d5+620 6d5+12
 3000 30000
 9 9 1
-GenWimpy: 14
-GenRoam: 6
+GenWimpy: 16
+GenRoam: 3
 E
 #17030
 furacao~
@@ -390,7 +389,7 @@ tempo até que ela lhe atinja.
 26 -2 -7 1d5+650 6d5+11
 3000 30000
 9 9 1
-GenWimpy: 15
+GenWimpy: 18
 GenGroup: 5
 E
 #17031
@@ -474,8 +473,8 @@ Ele se assemelha bastante a um desagradável inseto.
 5 16 4 1d5+90 2d4+1
 800 1000
 9 9 1
-GenWimpy: 18
-GenRoam: 71
+GenWimpy: 19
+GenRoam: 67
 E
 #17037
 gigantesco elemental~

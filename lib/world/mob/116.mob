@@ -32,7 +32,6 @@ velha que as vidas de vários anciões unidas, sabendo muito bem se defender.
 54 -2 -12 10d10+900 4d4+20
 1000 90020
 9 9 2
-T 11601
 E
 #11602
 rouxinol espiao pequena ave~
@@ -105,7 +104,7 @@ de sua ajuda. Afinal, ela é paga para isso...
 15 8 -3 10d10+300 3d3+9
 1000 10020
 9 9 2
-GenWimpy: 4
+GenWimpy: 6
 E
 #11608
 marut menino belo azulada~
@@ -122,7 +121,6 @@ sempre os rostos mais inocentes são os mais indefesos.
 54 -2 -12 10d10+800 4d4+20
 1000 90020
 9 9 1
-T 11601
 E
 #11609
 kanakajja naga dourado lotus ouro~
@@ -161,7 +159,6 @@ chegue até o que há no fim do muro.  Cuidado, Maruts sabem ser mortais...
 57 -4 -13 10d10+900 5d4+22
 1000 80020
 9 9 1
-T 11601
 E
 #11611
 idrksa marut guarda~
@@ -177,7 +174,6 @@ assume sua impassível posição, de olhos cerrados.
 59 -7 -14 10d10+1000 5d5+25
 1000 95020
 9 9 1
-T 11601
 E
 #11612
 adrksa marut guarda~
@@ -193,7 +189,6 @@ muito a atenção dele: não será nada bom se você for escolhido para
 59 -7 -14 10d10+1000 5d5+25
 1000 95020
 9 9 1
-T 11601
 E
 #11613
 menina estatua jyoti marut~
@@ -209,7 +204,6 @@ parecem todas enfeitiçadas...
 34 2 -12 10d10+800 4d4+16
 1000 40020
 9 9 2
-T 11601
 E
 #11614
 jovem heroi rama estatua~
@@ -625,7 +619,6 @@ acontecesse...
 1000 84020
 9 9 1
 GenWimpy: 3
-T 11601
 E
 #11641
 gandhava musico~

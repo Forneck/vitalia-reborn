@@ -54,7 +54,7 @@ detalhada sem sentir o estômago embrulhar.
 15 5 0 5d6+420 3d5+10
 0 30000
 9 9 0
-GenWimpy: 8
+GenWimpy: 9
 E
 #28005
 espantalho boneco palha~
@@ -80,7 +80,7 @@ Você vê um goblin com nadadeiras e barbatanas.
 15 5 0 3d10+280 4d3+8
 500 7000
 9 9 0
-GenWimpy: 21
+GenWimpy: 24
 E
 #28007
 gafanhoto inseto~
@@ -105,7 +105,7 @@ Ali está uma vaca louca, usando um chapéu de Viking!
 12 7 0 3d5+200 3d5+7
 1000 13000
 9 9 0
-GenWimpy: 18
+GenWimpy: 17
 E
 #28009
 estatua idolo metal guerreiro~
@@ -132,7 +132,7 @@ Apenas uma vaquinha...
 12 7 0 3d5+200 3d5+3
 0 13000
 9 9 0
-GenWimpy: 13
+GenWimpy: 15
 E
 #28011
 cavalo~

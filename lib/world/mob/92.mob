@@ -127,8 +127,7 @@ Apenas um sete comum ...
 500 9000
 9 9 1
 GenWimpy: 6
-GenLoot: 1
-GenRoam: 7
+GenRoam: 2
 E
 #9209
 sete paus~
@@ -141,8 +140,8 @@ Apenas um sete comum ...
 10 15 2 2d6+100 2d4+0
 500 9000
 9 9 1
-GenWimpy: 6
-GenRoam: 16
+GenWimpy: 5
+GenRoam: 14
 E
 #9210
 sete coringa~
@@ -212,7 +211,7 @@ Apenas um três comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 14
+GenWimpy: 15
 E
 #9215
 tres coringa~

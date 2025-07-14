@@ -10,7 +10,7 @@ venenosa desta cobra derrubou muitos faraós poderosos.
 5 14 8 5d5+50 1d6+1
 10 1000
 9 9 0
-GenWimpy: 47
+GenWimpy: 49
 E
 T 3008
 #5301
@@ -44,8 +44,8 @@ mãos.
 11 10 6 11d11+110 3d5+3
 100 10000
 9 9 2
-GenWimpy: 23
-GenRoam: 16
+GenWimpy: 24
+GenRoam: 13
 E
 #5303
 guardiao piramide~
@@ -60,8 +60,7 @@ roupas cor de areia.
 8 12 5 8d8+80 2d6+2
 200 3750
 9 9 1
-GenWimpy: 69
-GenRoam: 1
+GenWimpy: 72
 E
 #5304
 ladrao tumba~
@@ -74,8 +73,8 @@ O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
 10 10 5 10d10+100 2d6+3
 500 9000
 9 9 1
-GenWimpy: 45
-GenRoam: 48
+GenWimpy: 48
+GenRoam: 47
 E
 T 3007
 #5305
@@ -122,8 +121,8 @@ etéreo espírito de um morto.
 12 8 4 12d12+120 1d6+6
 750 15000
 9 9 0
-GenWimpy: 56
-GenRoam: 79
+GenWimpy: 58
+GenRoam: 80
 E
 #5308
 homem areia~
@@ -138,9 +137,8 @@ quentes e arenosos.
 14 6 2 14d14+140 2d7+4
 1500 18000
 9 9 1
-GenWimpy: 84
-GenLoot: 1
-GenRoam: 82
+GenWimpy: 88
+GenRoam: 84
 E
 #5309
 efreeti~

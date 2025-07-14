@@ -235,6 +235,7 @@
  1 P 28 1 2 12 8 0
  2 heal
 12 Uma calorosa sensação percorre o seu corpo.
+
 25 4
 50 100 + dice(3, 8)
 90 1 24 
@@ -329,6 +330,7 @@
  2 sleep
 10 Você se sente menos cansad$r.
 12 Você sente muito sono...  Zzzz......
+
 13 $N dorme.
 80 40 
 99 self.level / 4 + 4
@@ -351,8 +353,18 @@
 91 1 15 
 99 (75 - (3 * self.level)) > 50 ? (75 - (3 * self.level)) : 50
  4 100
- 1 P 41 1 0 0 0 0
+ 1 P 41 1 66 1024 9 0
  2 ventriloquate
+11 Você manipula as palavras através da magia.
+13 $n murmura palavras arcanas.
+90 0 15 
+99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
+91 1 15 
+99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
+92 4 15 
+99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
+93 5 0 
+99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
  4 100
  1 P 42 1 2 1024 8 0
  2 word of recall
@@ -457,14 +469,14 @@
 91 5 20 
 99 (40 - (5 * self.level)) > 20 ? (50 - (5 * self.level)) : 20
  4 100
- 1 P 53 1 2 8194 9 0
+ 1 P 53 1 2 1024 9 0
  2 stoneskin
 10 Sua pele perde a dureza.
 12 Você sente sua pele se tornando dura como rocha.
 13 A pele de $N se torna mais dura.
-80 42 
-99 24
-90 1 90 
+90 0 34 
+99 (200 - (10 * self.level)) > 100 ? (200 - (10 * self.level)) : 100
+91 1 90 
 99 (200 - (10 * self.level)) > 100 ? (200 - (10 * self.level)) : 100
  4 100
  1 P 54 1 2 8194 9 0
@@ -507,6 +519,7 @@
  2 talk with dead
 10 Você não consegue mais sentir o mundo dos mortos.
 12 Agora você pode sentir o reino dos mortos.
+
 80 46 
 99 self.level
 90 1 10 
@@ -531,6 +544,7 @@
  2 breath
 10 Você sente necessidade de respirar novamente.
 12 Você sente que não precisa mais respirar.
+
 80 49 
 99 2
 90 0 7 
@@ -547,9 +561,9 @@
 10 Você se sente pesad$r novamente.
 12 Você se sente muito leve...
 80 2 1 + (param > 18)
-99 1
-81 51 
-99 4
+99 self.level / 4
+81 48 
+99 self.level / 4
 90 0 18 
 99 (80 - (3 * self.level)) > 40 ? (80 - (3 * self.level)) : 40
 91 1 65 
@@ -651,6 +665,7 @@
  1 P 75 1 2 8 8 0
  2 minor healing
 12 Uma onda de calor atravessa seu corpo, fazendo você se sentir melhor.
+
 50 dice(2, 8) + 2 + (param / 4)
 90 4 15 
 99 (30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10
@@ -666,6 +681,7 @@
  1 P 77 1 2 8 8 0
  2 regeneration
 12 Você sente o poder da natureza curando seu corpo.
+
 50 dice(6, 8)
 52 10 + dice(2, 6)
 90 4 40 
@@ -906,9 +922,28 @@
 90 5 18 
 99 (80 - (5 * self.level)) > 40 ? (80 - (5 * self.level)) : 40
  4 100
+ 1 C 168 1 2 2 9 0
+ 2 alento de guerra
+10 Você volta a enxergar.
+12 Uma grande força parece tormar conta de seu coração.
+13 $N!
+80 18 2
+99 param/4
+81 19 2
+99 param/4
+82 1 2
+99 param/4
+83 2 1
+99 param/
+84 5 1
+99 param/4
+90 5 77 
+99 (270 - (15 * self.level)) > 115 ? (270 - (15 * self.level)) : 115
+ 4 100
  1 C 169 1 2 8 8 0
  2 invocacao aos deuses
 12 Os ecos de uma canção divina preenchem sua cabeça e curam seu corpo.
+
 50 (dice(3,6) + (param - 15)) > 1 ? (dice(3,6) + (param - 15) : 1
 90 5 95 
 99 (90 - (5 * self.level)) > 50 ? (90 - (5 * self.level)) : 50
