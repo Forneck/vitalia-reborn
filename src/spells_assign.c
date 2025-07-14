@@ -429,6 +429,8 @@ void create_spells_db()
  new_spell->assign[0].level = 14;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->messages.to_room = strdup("$N magicamente se divide!");
+ new_spell->school = SCHOOL_CONJURATION;   /* Creates duplicate */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure magical creation */
 
  spedit_save_internally(new_spell);
 
@@ -477,6 +479,8 @@ void create_spells_db()
     new_spell->assign[2].class_num = CLASS_DRUID;
  new_spell->assign[2].level = 55;
  new_spell->assign[2].num_mana = strdup(buf);
+ new_spell->school = SCHOOL_ALTERATION;    /* Controls weather patterns */
+ new_spell->element = ELEMENT_AIR;         /* Weather/air manipulation */
 
  spedit_save_internally(new_spell);
 
@@ -1289,6 +1293,8 @@ void create_spells_db()
  new_spell->assign[3].num_mana = strdup(buf);
  new_spell->messages.to_self = strdup("Você manipula as palavras através da magia.");
  new_spell->messages.to_room = strdup("$n murmura palavras arcanas.");
+ new_spell->school = SCHOOL_ILLUSION;      /* Voice illusion */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure magical deception */
  spedit_save_internally(new_spell);
 
  // SPELL_WORD_OF_RECALL # 42
@@ -1317,6 +1323,8 @@ void create_spells_db()
   new_spell->assign[3].class_num = CLASS_RANGER;
  new_spell->assign[3].level = 50;
  new_spell->assign[3].num_mana = strdup(buf);
+ new_spell->school = SCHOOL_CONJURATION;   /* Transportation magic */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure magical transport */
  spedit_save_internally(new_spell);
 
  // SPELL_REMOVE_POISON # 43
@@ -1842,6 +1850,8 @@ new_spell->vnum = SPELL_DISINTEGRATE;
  new_spell->assign[0].level = 85;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->damages = strdup ("dice(3, self.class == 0 ? 8 : 6) + self.class == 0 ? 195 : 180");
+ new_spell->school = SCHOOL_EVOCATION;     /* Pure destruction */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Disintegration force */
  spedit_save_internally(new_spell);
  
   // SPELL_EVOKE_AIR_SERVANT # 57
