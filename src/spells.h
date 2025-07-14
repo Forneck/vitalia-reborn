@@ -352,6 +352,10 @@ ASPELL(spell_skinsteel);	/* -- mp */
 /* Weather and spell element interaction functions */
 float get_weather_spell_modifier(struct char_data *ch, int spell_element);
 float get_school_weather_modifier(struct char_data *ch, int spell_school);
+float get_weather_healing_modifier(struct char_data *ch, int spell_element, int spell_school);
+float get_weather_summoning_modifier(struct char_data *ch, int spell_element, int spell_school);
+float get_weather_duration_modifier(struct char_data *ch, int spell_element, int spell_school);
+float get_weather_success_modifier(struct char_data *ch, int spell_element, int spell_school);
 const char *get_spell_school_name(int school);
 const char *get_spell_element_name(int element);
 ASPELL(spell_skindiamond);	/* -- mp */

@@ -332,6 +332,13 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim,
 				formula_interpreter(ch, victim, spellnum, TRUE, spell->applies[i].duration, level,
 									&rts_code));
 
+		/* Apply weather modifier to spell duration if enabled */
+		if ((CONFIG_WEATHER_AFFECTS_SPELLS || CONFIG_SCHOOL_WEATHER_AFFECTS) && 
+		    spell->element != ELEMENT_UNDEFINED && spell->school != SCHOOL_UNDEFINED) {
+			float weather_modifier = get_weather_duration_modifier(ch, spell->element, spell->school);
+			af[i].duration = MAX(1, (int)(af[i].duration * weather_modifier));
+		}
+
 		if (spell->mag_flags & MAG_ACCDUR)
 			accum_duration = TRUE;
 
@@ -460,6 +467,13 @@ int mag_protections(int level, struct char_data *ch, struct char_data *tch,
 	af.location = spellprot;
 	af.modifier = res;
 	af.duration = dur;
+
+	/* Apply weather modifier to protection spell duration if enabled */
+	if ((CONFIG_WEATHER_AFFECTS_SPELLS || CONFIG_SCHOOL_WEATHER_AFFECTS) && 
+	    spell->element != ELEMENT_UNDEFINED && spell->school != SCHOOL_UNDEFINED) {
+		float weather_modifier = get_weather_duration_modifier(ch, spell->element, spell->school);
+		af.duration = MAX(1, (int)(af.duration * weather_modifier));
+	}
 
 	affect_join(tch, &af, accum_duration, FALSE, FALSE, FALSE);
 	return MAGIC_SUCCESS;
@@ -690,6 +704,15 @@ int mag_summons(int level, struct char_data *ch, struct obj_data *obj, int spell
 	else
 		pfail = 10;				/* 10% failure, should vary in the future. */
 
+	/* Apply weather modifier to summoning success rate */
+	if ((CONFIG_WEATHER_AFFECTS_SPELLS || CONFIG_SCHOOL_WEATHER_AFFECTS) && 
+	    spell->element != ELEMENT_UNDEFINED && spell->school != SCHOOL_UNDEFINED) {
+		float weather_modifier = get_weather_summoning_modifier(ch, spell->element, spell->school);
+		/* Convert success modifier to failure modifier (inverse relationship) */
+		pfail = (int)(pfail / weather_modifier);
+		pfail = MAX(1, MIN(95, pfail)); /* Keep failure rate between 1% and 95% */
+	}
+
 	if (AFF_FLAGGED(ch, AFF_CHARM))
 	{
 		send_to_char(ch, "Você é muito levian$R para ter qualquer seguidor!\r\n");
@@ -765,6 +788,14 @@ int mag_points(int level, struct char_data *ch, struct char_data *victim,
 	if (spell->points.hp)
 	{
 		hp = formula_interpreter(ch, victim, spellnum, TRUE, spell->points.hp, level, &rts_code);
+		
+		/* Apply weather modifier for healing if enabled */
+		if ((CONFIG_WEATHER_AFFECTS_SPELLS || CONFIG_SCHOOL_WEATHER_AFFECTS) && 
+		    spell->element != ELEMENT_UNDEFINED && spell->school != SCHOOL_UNDEFINED) {
+			float weather_modifier = get_weather_healing_modifier(ch, spell->element, spell->school);
+			hp = (int)(hp * weather_modifier);
+		}
+		
 		GET_HIT(victim) = MIN(GET_MAX_HIT(victim), MAX(1, GET_HIT(victim) + hp));
 		effect++;
 	}
@@ -851,9 +882,26 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj,
 				   int spellnum, int savetype)
 {
 	int effect = 1;
+	struct str_spells *spell;
         
 	if (obj == NULL)
 		return MAGIC_FAILED;
+
+	/* Check for weather-based success modifier */
+	spell = get_spell_by_vnum(spellnum);
+	if (spell && (CONFIG_WEATHER_AFFECTS_SPELLS || CONFIG_SCHOOL_WEATHER_AFFECTS) && 
+	    spell->element != ELEMENT_UNDEFINED && spell->school != SCHOOL_UNDEFINED) {
+		float weather_modifier = get_weather_success_modifier(ch, spell->element, spell->school);
+		
+		/* Apply weather-based success chance - lower modifier means higher chance of failure */
+		if (weather_modifier < 1.0) {
+			int failure_chance = (int)((1.0 - weather_modifier) * 50); /* Up to 50% failure chance */
+			if (rand_number(1, 100) <= failure_chance) {
+				send_to_char(ch, "As condições climáticas interferem na sua magia.\r\n");
+				return MAGIC_NOEFFECT;
+			}
+		}
+	}
 
 	switch (spellnum)
 	{
