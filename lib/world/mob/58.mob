@@ -1,5 +1,5 @@
 #5801
-o mercador de armas do deserto~
+mercador armas deserto~
 um mercador de armas~
    Um homem bronzeado pelo sol do deserto inspeciona cuidadosamente cada arma
 antes de vendê-la. Suas mãos calejadas mostram anos de experiência no manuseio
@@ -10,14 +10,14 @@ poderiam ignorar.
 guerreiros do deserto. Ele vende apenas armas testadas e aprovadas para o
 clima árido de Nova Thalos.
 ~
-2104986624 0 0 0 0 0 0 0 400 E
+2156546 0 0 0 0 0 0 0 400 E
 15 2 -2 1d8+200 2d4+1
 500 5000
 8 8 1
 E
 
 #5802
-o comerciante de temperos~
+comerciante temperos~
 um comerciante~
    Este homem pequeno e ágil conhece as especiarias mais raras do deserto.
 Seu nariz aguçado pode identificar qualquer tempero apenas pelo aroma, e
@@ -28,14 +28,14 @@ os ingredientes mais exóticos.
 Nova Thalos por sua habilidade em encontrar os ingredientes mais raros e
 de melhor qualidade.
 ~
-2104986624 0 0 0 0 0 0 0 350 E
+2156546 0 0 0 0 0 0 0 350 E
 12 4 2 1d6+150 1d8+2
 400 4000
 8 8 1
 E
 
 #5803
-o curandeiro do deserto~
+curandeiro deserto~
 um curandeiro~
    Uma mulher sábia com conhecimento profundo das plantas medicinais do
 deserto. Suas mãos são suaves mas firmes, e ela trata cada paciente com
@@ -46,7 +46,7 @@ de gerações de curandeiros.
 sua reputação de conseguir curar doenças que outros não conseguem tratar
 usando plantas únicas do deserto.
 ~
-2104986624 0 0 0 0 0 0 0 375 E
+2156546 0 0 0 0 0 0 0 375 E
 13 3 1 1d7+175 2d5+1
 450 4500
 8 8 2
@@ -54,7 +54,7 @@ BareHandAttack: 4
 E
 
 #5804
-o estalajadeiro~
+estalajadeiro~
 um estalajadeiro~
    Um homem corpulento e jovial que administra a pousada com eficiência e
 alegria. Ele conhece todos os comerciantes regulares pelo nome e sempre tem
@@ -64,14 +64,14 @@ uma história interessante para contar sobre suas viagens pelo deserto.
 e condições do deserto. Sua pousada é um ponto de encontro para mercadores
 de toda a região.
 ~
-2104986624 0 0 0 0 0 0 0 325 E
+2156546 0 0 0 0 0 0 0 325 E
 11 5 3 1d5+125 1d6+2
 350 3500
 8 8 1
 E
 
 #5805
-o ferreiro do deserto~
+ferreiro deserto~
 um ferreiro~
    Este artesão musculoso domina as técnicas especiais necessárias para
 trabalhar metais no clima seco do deserto. Seu martelo ressoa com precisão,
@@ -82,14 +82,14 @@ da região.
 mantêm sua qualidade mesmo sob o sol escaldante e tempestades de areia
 de Nova Thalos.
 ~
-2104986624 0 0 0 0 0 0 0 425 E
+2156546 0 0 0 0 0 0 0 425 E
 16 1 -1 1d9+225 2d6+2
 550 5500
 8 8 1
 E
 
 #5806
-o guarda de Nova Thalos~
+guarda nova thalos~
 um guarda~
    Este soldado disciplinado veste uma armadura adaptada para o clima do
 deserto. Sua postura alerta e movimentos precisos demonstram treinamento
@@ -100,7 +100,7 @@ o distrito mercantil.
 no deserto e proteger as rotas comerciais vitais para a prosperidade da
 cidade.
 ~
-2104988672 0 0 0 0 0 0 0 450 E
+3205122 0 0 0 0 0 0 0 450 E
 17 0 -3 1d10+250 2d7+2
 600 6000
 8 8 1
@@ -108,7 +108,7 @@ BareHandAttack: 5
 E
 
 #5807
-o mercador de couro~
+mercador couro~
 um mercador~
    Um artesão habilidoso especializado em trabalhar couro usando técnicas
 tradicionais do deserto. Suas mãos experientes conseguem avaliar a qualidade
@@ -117,14 +117,14 @@ do couro apenas pelo toque, e ele produz apenas artigos da mais alta qualidade.
    Este mercador é procurado por viajantes que precisam de equipamentos de
 couro resistentes às condições adversas do deserto.
 ~
-2104986624 0 0 0 0 0 0 0 375 E
+2156546 0 0 0 0 0 0 0 375 E
 14 2 0 1d8+200 2d5+1
 475 4750
 8 8 1
 E
 
 #5808
-o cambista~
+cambista~
 um cambista~
    Um homem de aparência próspera que lida com moedas de várias regiões.
 Seus olhos treinados conseguem detectar moedas falsas instantaneamente, e
@@ -133,14 +133,14 @@ ele mantém registros meticulosos de todas as transações financeiras.
    O cambista é essencial para o comércio em Nova Thalos, facilitando
 transações entre mercadores de diferentes regiões com suas próprias moedas.
 ~
-2104986624 0 0 0 0 0 0 0 350 E
+2156546 0 0 0 0 0 0 0 350 E
 13 3 2 1d7+175 1d8+2
 425 4250
 8 8 1
 E
 
 #5809
-o capitão da guarda~
+capitão capitao guarda~
 um capitão~
    Um veterano de guerra com cicatrizes que contam histórias de muitas
 batalhas. Sua presença comanda respeito imediato, e sua experiência tática
@@ -149,7 +149,7 @@ batalhas. Sua presença comanda respeito imediato, e sua experiência tática
    Este capitão experiente é responsável por manter a ordem no distrito
 mercantil e garantir que as rotas comerciais permaneçam seguras.
 ~
-2104988672 0 0 0 0 0 0 0 500 E
+3205122 0 0 0 0 0 0 0 500 E
 20 -2 -5 1d12+300 3d6+3
 750 7500
 8 8 1
