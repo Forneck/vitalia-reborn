@@ -1345,6 +1345,8 @@ void create_spells_db()
  new_spell->messages.to_self = strdup("$p emite uma fumaça por alguns instantes.");
  new_spell->messages.to_vict = strdup("Uma calorosa sensação percorre o seu corpo!");
  new_spell->messages.to_room = strdup("$N aparenta estar melhor."); 
+ new_spell->school = SCHOOL_ABJURATION;    /* Removes affliction */
+ new_spell->element = ELEMENT_HOLY;        /* Divine cleansing */
 
  spedit_save_internally(new_spell);
 
@@ -1377,6 +1379,8 @@ void create_spells_db()
  new_spell->applies[0].duration = strdup("self.level");
  new_spell->messages.to_vict = strdup("Você sente sua sensibilidade aumentar.");
  new_spell->messages.wear_off = strdup("Você se sente menos sensível às coisas ao seu redor.");
+ new_spell->school = SCHOOL_DIVINATION;    /* Detects living beings */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure magical sense */
 
  spedit_save_internally(new_spell);
 
@@ -1398,6 +1402,8 @@ void create_spells_db()
  new_spell->assign[0].level = 14;
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->messages.to_room = strdup("$N anima um corpo!!");
+ new_spell->school = SCHOOL_NECROMANCY;    /* Raises undead */
+ new_spell->element = ELEMENT_UNHOLY;      /* Death magic */
 
  spedit_save_internally(new_spell);
 
@@ -1419,6 +1425,8 @@ void create_spells_db()
  new_spell->assign[0].num_mana = strdup(buf);
  new_spell->damages = strdup("dice(6, 8) + 6");
  new_spell->max_dam = 100;
+ new_spell->school = SCHOOL_ABJURATION;    /* Banishing magic */
+ new_spell->element = ELEMENT_UNHOLY;      /* Evil divine power */
 
  spedit_save_internally(new_spell);
 
@@ -1457,6 +1465,8 @@ void create_spells_db()
  new_spell->assign[0].class_num = CLASS_CLERIC;
  new_spell->assign[0].level = 32;
  new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->school = SCHOOL_CONJURATION;   /* Group healing */
+ new_spell->element = ELEMENT_HOLY;        /* Divine healing power */
 
  spedit_save_internally(new_spell);
 
@@ -1744,6 +1754,8 @@ new_spell->applies[1].appl_num = AFF_FIRESHIELD + NUM_APPLIES;
  new_spell->assign[0].class_num = CLASS_MAGIC_USER;
  new_spell->assign[0].level = 90;
  new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->school = SCHOOL_CONJURATION;   /* Creates portal */
+ new_spell->element = ELEMENT_UNDEFINED;   /* Pure magical transportation */
 
  spedit_save_internally(new_spell);
  
@@ -1764,6 +1776,8 @@ new_spell->applies[1].appl_num = AFF_FIRESHIELD + NUM_APPLIES;
  new_spell->assign[0].class_num = CLASS_MAGIC_USER;
  new_spell->assign[0].level = 15;
  new_spell->assign[0].num_mana = strdup(buf);
+ new_spell->school = SCHOOL_NECROMANCY;    /* Life drain magic */
+ new_spell->element = ELEMENT_UNHOLY;      /* Dark life energy */
 
  spedit_save_internally(new_spell);
  
