@@ -1,947 +1,845 @@
-Jul 14 02:28:09 2025 :: Loading configuration.
-Jul 14 02:28:09 2025 :: Vitalia Reborn 2025 V0.3
-Jul 14 02:28:09 2025 :: Using lib as data directory.
-Jul 14 02:28:09 2025 :: Running game on port 4000.
-Jul 14 02:28:09 2025 :: SYSERR: lib/.killscript: No such file or directory
-Jul 14 02:28:09 2025 :: Finding player limit.
-Jul 14 02:28:09 2025 ::    Setting player limit to 200 using rlimit.
-Jul 14 02:28:09 2025 :: Opening mother connection.
-Jul 14 02:28:09 2025 :: Binding to all IP interfaces on this host.
-Jul 14 02:28:09 2025 :: Boot db -- BEGIN.
-Jul 14 02:28:09 2025 :: Resetting the game time:
-Jul 14 02:28:09 2025 ::    Current Gametime: 12H 27D 4M 1636Y.
-Jul 14 02:28:09 2025 :: Initialize Global Lists
-Jul 14 02:28:09 2025 :: Initializing Events
-Jul 14 02:28:09 2025 :: Reading news, credits, help, ihelp, bground, info & motds.
-Jul 14 02:28:09 2025 :: Reading menu, rebegin & clanpolicies
-Jul 14 02:28:09 2025 :: Loading zone table.
-Jul 14 02:28:09 2025 ::    126 zones, 11088 bytes.
-Jul 14 02:28:09 2025 :: Loading triggers and generating index.
-Jul 14 02:28:09 2025 :: Loading rooms.
-Jul 14 02:28:09 2025 ::    9527 rooms, 1752968 bytes.
-Jul 14 02:28:09 2025 :: Loading spells.
-Jul 14 02:28:09 2025 :: Assigning spells's function.
-Jul 14 02:28:09 2025 :: Renumbering rooms.
-Jul 14 02:28:09 2025 :: Checking start rooms.
-Jul 14 02:28:09 2025 :: Loading mobs and generating index.
-Jul 14 02:28:09 2025 ::    2620 mobs, 83840 bytes in index, 1739680 bytes in prototypes.
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #701, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #702, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #705, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #706, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #707, GenWimpy carregado com sucesso: 13
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #708, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #710, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #711, GenWimpy carregado com sucesso: 12
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #713, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #715, GenWimpy carregado com sucesso: 21
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #717, GenWimpy carregado com sucesso: 13
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #740, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #775, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #780, GenWimpy carregado com sucesso: 12
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #781, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #799, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #800, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #801, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #802, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #803, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #804, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #805, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #900, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #909, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #911, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1507, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1600, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1617, GenWimpy carregado com sucesso: 61
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1621, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1700, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1704, GenWimpy carregado com sucesso: 18
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1705, GenWimpy carregado com sucesso: 54
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1707, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1709, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1710, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1711, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1713, GenWimpy carregado com sucesso: 12
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #1714, GenWimpy carregado com sucesso: 23
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2304, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2324, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2346, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2401, GenWimpy carregado com sucesso: 28
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2500, GenWimpy carregado com sucesso: 14
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2502, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2504, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2507, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2508, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2510, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2512, GenWimpy carregado com sucesso: 23
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2513, GenWimpy carregado com sucesso: 11
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2514, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2515, GenWimpy carregado com sucesso: 24
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2516, GenWimpy carregado com sucesso: 21
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2517, GenWimpy carregado com sucesso: 25
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2518, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2519, GenWimpy carregado com sucesso: 11
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2520, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2524, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2528, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2530, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2531, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2533, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2538, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2539, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2542, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2544, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2545, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2551, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2552, GenWimpy carregado com sucesso: 16
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2555, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2561, GenWimpy carregado com sucesso: 23
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2701, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2706, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2709, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2717, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2718, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2719, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2720, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2721, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2722, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2733, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2734, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2739, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #2741, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3059, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3060, GenWimpy carregado com sucesso: 11
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3062, GenWimpy carregado com sucesso: 11
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3068, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3101, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3102, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3103, GenWimpy carregado com sucesso: 16
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3104, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3106, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3123, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3306, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3311, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3315, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3316, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3317, GenWimpy carregado com sucesso: 13
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3500, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3501, GenWimpy carregado com sucesso: 35
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3502, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3504, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3505, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3506, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3507, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3700, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3721, GenWimpy carregado com sucesso: 21
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3722, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3723, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3725, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3726, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3731, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3906, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3907, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3915, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3916, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3917, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3918, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3923, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #3924, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4000, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4003, GenWimpy carregado com sucesso: 36
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4004, GenWimpy carregado com sucesso: 33
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4005, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4051, GenWimpy carregado com sucesso: 32
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4052, GenWimpy carregado com sucesso: 22
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4055, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4056, GenWimpy carregado com sucesso: 18
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4057, GenWimpy carregado com sucesso: 31
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4100, GenWimpy carregado com sucesso: 12
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4103, GenWimpy carregado com sucesso: 20
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4105, GenWimpy carregado com sucesso: 36
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4106, GenWimpy carregado com sucesso: 20
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4107, GenWimpy carregado com sucesso: 35
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4201, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4206, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4316, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4321, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4325, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4330, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4800, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4806, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4900, GenWimpy carregado com sucesso: 95
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4901, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4902, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4903, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4904, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #4906, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5000, GenWimpy carregado com sucesso: 23
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5001, GenWimpy carregado com sucesso: 22
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5002, GenWimpy carregado com sucesso: 25
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5003, GenWimpy carregado com sucesso: 19
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5014, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5015, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5201, GenWimpy carregado com sucesso: 99
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5202, GenWimpy carregado com sucesso: 14
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5204, GenWimpy carregado com sucesso: 14
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5205, GenWimpy carregado com sucesso: 17
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5206, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5207, GenWimpy carregado com sucesso: 100
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5209, GenWimpy carregado com sucesso: 93
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5300, GenWimpy carregado com sucesso: 49
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5301, GenWimpy carregado com sucesso: 32
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5302, GenWimpy carregado com sucesso: 24
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5303, GenWimpy carregado com sucesso: 72
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5304, GenWimpy carregado com sucesso: 48
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5305, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5307, GenWimpy carregado com sucesso: 58
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5308, GenWimpy carregado com sucesso: 88
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5312, GenWimpy carregado com sucesso: 19
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5441, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5442, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5443, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5447, GenWimpy carregado com sucesso: 61
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5448, GenWimpy carregado com sucesso: 20
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5449, GenWimpy carregado com sucesso: 33
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5451, GenWimpy carregado com sucesso: 95
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5453, GenWimpy carregado com sucesso: 17
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5454, GenWimpy carregado com sucesso: 27
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5460, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5461, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5479, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5701, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5702, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5703, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5704, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5706, GenWimpy carregado com sucesso: 17
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5707, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5708, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5709, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5710, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5713, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #5714, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6000, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6001, GenWimpy carregado com sucesso: 13
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6004, GenWimpy carregado com sucesso: 16
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6005, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6006, GenWimpy carregado com sucesso: 51
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6007, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6008, GenWimpy carregado com sucesso: 13
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6009, GenWimpy carregado com sucesso: 13
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6010, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6012, GenWimpy carregado com sucesso: 23
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6013, GenWimpy carregado com sucesso: 24
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6014, GenWimpy carregado com sucesso: 100
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6015, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6017, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6018, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6019, GenWimpy carregado com sucesso: 43
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6100, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6101, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6102, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6103, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6113, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6114, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6115, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6116, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6117, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6212, GenWimpy carregado com sucesso: 20
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6213, GenWimpy carregado com sucesso: 19
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6301, GenWimpy carregado com sucesso: 21
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6302, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6303, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6304, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6305, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6306, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6307, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6308, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6309, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6310, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6314, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6315, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6316, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6501, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #6903, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #7000, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #7002, GenWimpy carregado com sucesso: 30
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #7003, GenWimpy carregado com sucesso: 58
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #7005, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #7006, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #7010, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #7041, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #7043, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #7044, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #7201, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #7203, GenWimpy carregado com sucesso: 16
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #7901, GenWimpy carregado com sucesso: 11
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8104, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8105, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8115, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8131, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8135, GenWimpy carregado com sucesso: 11
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8136, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8137, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8142, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8143, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8144, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8145, GenWimpy carregado com sucesso: 24
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8146, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8151, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #8415, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9100, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9101, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9102, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9103, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9104, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9105, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9206, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9207, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9208, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9209, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9210, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9211, GenWimpy carregado com sucesso: 11
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9212, GenWimpy carregado com sucesso: 14
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9213, GenWimpy carregado com sucesso: 11
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9214, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9215, GenWimpy carregado com sucesso: 14
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9319, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9320, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9322, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9323, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9325, GenWimpy carregado com sucesso: 11
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9501, GenWimpy carregado com sucesso: 19
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9502, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9503, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9504, GenWimpy carregado com sucesso: 32
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9527, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9528, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 9800 in mob #9806
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 9800 in mob #9806
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 9800 in mob #9807
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 9800 in mob #9808
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 9800 in mob #9809
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #9911, GenWimpy carregado com sucesso: 13
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10000, GenWimpy carregado com sucesso: 37
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10001, GenWimpy carregado com sucesso: 31
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10004, GenWimpy carregado com sucesso: 20
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10005, GenWimpy carregado com sucesso: 21
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10006, GenWimpy carregado com sucesso: 20
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10008, GenWimpy carregado com sucesso: 26
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10011, GenWimpy carregado com sucesso: 18
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10012, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10300, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10301, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10302, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10303, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10304, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10305, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10307, GenWimpy carregado com sucesso: 13
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10308, GenWimpy carregado com sucesso: 12
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10309, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10310, GenWimpy carregado com sucesso: 17
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10312, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10314, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10315, GenWimpy carregado com sucesso: 45
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10316, GenWimpy carregado com sucesso: 12
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10317, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10720, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #10860, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #11606, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #11627, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #11629, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #11630, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #11631, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #11632, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #11633, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #11635, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #11637, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #11638, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #11640, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #11643, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12017, GenWimpy carregado com sucesso: 31
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12018, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12019, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12021, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12024, GenWimpy carregado com sucesso: 55
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12035, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12103, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12105, GenWimpy carregado com sucesso: 14
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12108, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12109, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12110, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12112, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12114, GenWimpy carregado com sucesso: 19
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12116, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12120, GenWimpy carregado com sucesso: 45
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12122, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12125, GenWimpy carregado com sucesso: 75
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12662, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12666, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12671, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12672, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12673, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12674, GenWimpy carregado com sucesso: 13
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12677, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12679, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12682, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12684, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12691, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12696, GenWimpy carregado com sucesso: 17
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12697, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #12698, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13200, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13201, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13202, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13301, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13303, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13304, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13307, GenWimpy carregado com sucesso: 12
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13410, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13430, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13500, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13501, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13502, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13503, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13504, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13505, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13508, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13509, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13510, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13511, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13512, GenWimpy carregado com sucesso: 69
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13513, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13514, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13515, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13516, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13517, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13600, GenWimpy carregado com sucesso: 19
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13601, GenWimpy carregado com sucesso: 16
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13602, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13603, GenWimpy carregado com sucesso: 12
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13604, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13605, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13606, GenWimpy carregado com sucesso: 14
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13607, GenWimpy carregado com sucesso: 21
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13608, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13609, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13610, GenWimpy carregado com sucesso: 80
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #13821, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14002
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14002
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14003
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14004
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14005
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14006
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14007
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14008
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14009
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14010
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14001 in mob #14011
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14012
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14003 in mob #14013
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14014
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14003 in mob #14015
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14017
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14019
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14001 in mob #14020
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14001 in mob #14022
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14030
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14032
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14034
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14035
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14036
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14037
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14038
-Jul 14 02:28:09 2025 :: SYSERR: Warning: unrecognized espec keyword T 14002 in mob #14039
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #14401, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #15009, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #15014, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #15030, GenWimpy carregado com sucesso: 12
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #15031, GenWimpy carregado com sucesso: 14
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17001, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17002, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17003, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17005, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17006, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17007, GenWimpy carregado com sucesso: 14
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17014, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17015, GenWimpy carregado com sucesso: 40
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17016, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17018, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17019, GenWimpy carregado com sucesso: 16
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17020, GenWimpy carregado com sucesso: 22
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17022, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17023, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17024, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17025, GenWimpy carregado com sucesso: 13
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17026, GenWimpy carregado com sucesso: 20
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17027, GenWimpy carregado com sucesso: 26
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17028, GenWimpy carregado com sucesso: 11
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17029, GenWimpy carregado com sucesso: 16
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17030, GenWimpy carregado com sucesso: 18
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17031, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17034, GenWimpy carregado com sucesso: 18
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17036, GenWimpy carregado com sucesso: 19
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17301, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17303, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17305, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17315, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17319, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17320, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17321, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17323, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17324, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17330, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17332, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17334, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17336, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17343, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17344, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17345, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17350, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #17363, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18601, GenWimpy carregado com sucesso: 5
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18602, GenWimpy carregado com sucesso: 29
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18603, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18604, GenWimpy carregado com sucesso: 13
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18605, GenWimpy carregado com sucesso: 14
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18606, GenWimpy carregado com sucesso: 42
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18607, GenWimpy carregado com sucesso: 37
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18608, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18609, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18610, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18611, GenWimpy carregado com sucesso: 14
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18612, GenWimpy carregado com sucesso: 14
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18613, GenWimpy carregado com sucesso: 8
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18614, GenWimpy carregado com sucesso: 13
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #18615, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #19703, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #19704, GenWimpy carregado com sucesso: 29
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #19705, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #19706, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #19707, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #19711, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #19716, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #19800, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #19801, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #19809, GenWimpy carregado com sucesso: 3
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #19821, GenWimpy carregado com sucesso: 6
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20100, GenWimpy carregado com sucesso: 20
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20103, GenWimpy carregado com sucesso: 4
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20104, GenWimpy carregado com sucesso: 2
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20105, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20106, GenWimpy carregado com sucesso: 21
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20107, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20108, GenWimpy carregado com sucesso: 7
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20109, GenWimpy carregado com sucesso: 23
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20110, GenWimpy carregado com sucesso: 20
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20111, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20112, GenWimpy carregado com sucesso: 21
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20113, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20114, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20115, GenWimpy carregado com sucesso: 16
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20116, GenWimpy carregado com sucesso: 10
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20117, GenWimpy carregado com sucesso: 11
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #20118, GenWimpy carregado com sucesso: 12
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #28004, GenWimpy carregado com sucesso: 9
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #28006, GenWimpy carregado com sucesso: 24
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #28008, GenWimpy carregado com sucesso: 17
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #28010, GenWimpy carregado com sucesso: 15
-Jul 14 02:28:09 2025 :: DEBUG: Mob vnum #28023, GenWimpy carregado com sucesso: 1
-Jul 14 02:28:09 2025 :: Loading objs and generating index.
-Jul 14 02:28:09 2025 ::    3712 objs, 118784 bytes in index, 890880 bytes in prototypes.
-Jul 14 02:28:09 2025 :: Renumbering zone table.
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 200, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 7
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 201, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 8
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 202, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 9
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 204, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 12
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 210, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'G' cmd in zone #2, line 13
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 200, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 16
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 200, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 17
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 200, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 18
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 200, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 19
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 203, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 22
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 200, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'G' cmd in zone #2, line 23
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 201, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'E' cmd in zone #2, line 24
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 202, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'E' cmd in zone #2, line 25
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 205, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 28
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 205, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 29
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 211, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 32
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 204, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'G' cmd in zone #2, line 33
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 206, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'G' cmd in zone #2, line 34
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 207, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'G' cmd in zone #2, line 35
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 212, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 38
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 205, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'G' cmd in zone #2, line 39
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 206, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 42
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 208, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 43
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 209, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 44
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 210, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'M' cmd in zone #2, line 45
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 214, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'O' cmd in zone #2, line 48
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 215, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'O' cmd in zone #2, line 49
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 213, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'O' cmd in zone #2, line 50
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 209, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'O' cmd in zone #2, line 53
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 211, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'O' cmd in zone #2, line 54
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 212, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'O' cmd in zone #2, line 55
-Jul 14 02:28:09 2025 :: SYSERR: zone file: Invalid vnum 203, cmd disabled
-Jul 14 02:28:09 2025 :: SYSERR: ...offending cmd: 'O' cmd in zone #2, line 56
-Jul 14 02:28:09 2025 :: Loading shops.
-Jul 14 02:28:09 2025 :: Loading quests.
-Jul 14 02:28:09 2025 ::    1 entries, 128 bytes.
-Jul 14 02:28:09 2025 :: Loading help entries.
-Jul 14 02:28:09 2025 ::    2758 entries, 88256 bytes.
-Jul 14 02:28:09 2025 :: Generating player index.
-Jul 14 02:28:09 2025 :: Loading fight messages.
-Jul 14 02:28:09 2025 :: Loaded 63 Combat Messages...
-Jul 14 02:28:09 2025 :: Loading social messages.
-Jul 14 02:28:09 2025 :: Social table contains 490 socials.
-Jul 14 02:28:09 2025 :: Building command list.
-Jul 14 02:28:09 2025 :: Command info rebuilt, 796 total commands.
-Jul 14 02:28:09 2025 :: Assigning function pointers:
-Jul 14 02:28:09 2025 ::    Mobiles.
-Jul 14 02:28:09 2025 ::    Shopkeepers.
-Jul 14 02:28:09 2025 ::    Objects.
-Jul 14 02:28:09 2025 ::    Rooms.
-Jul 14 02:28:09 2025 ::    Questmasters.
-Jul 14 02:28:09 2025 :: Sorting command list.
-Jul 14 02:28:09 2025 :: Booting mail system.
-Jul 14 02:28:09 2025 ::    Mail file read -- 1 messages.
-Jul 14 02:28:09 2025 :: Reading banned site and invalid-name list.
-Jul 14 02:28:09 2025 :: Loading Ideas.
-Jul 14 02:28:09 2025 :: Loading Bugs.
-Jul 14 02:28:09 2025 :: Loading Typos.
-Jul 14 02:28:09 2025 :: Booting houses.
-Jul 14 02:28:09 2025 :: Cleaning up last log.
-Jul 14 02:28:09 2025 :: Resetting #0: Limbo - Interno (rooms 0-99).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #0: Limbo - Interno. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #1: Entre Dimensões (rooms 100-199).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #1: Entre Dimensões. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #2: O Castelo da Rainha Gelada (rooms 200-299).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #2: O Castelo da Rainha Gelada. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #3: Bandar, A Cidade Maldita (rooms 300-399).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #3: Bandar, A Cidade Maldita. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #4: A Embaixada dos Clãs de Vitália (rooms 400-499).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em Hemengarda, a secretária ocupada (VNum 401).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #4: A Embaixada dos Clãs de Vitália. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #5: Templos Imortais (rooms 500-599).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #5: Templos Imortais. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #6: A Prisão (rooms 600-699).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #6: A Prisão. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #7: A Floresta Sombria (rooms 700-799).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #7: A Floresta Sombria. (Clima 1)
-Jul 14 02:28:09 2025 :: Resetting #8: O Castelo dos Vampiros (rooms 800-899).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #8: O Castelo dos Vampiros. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #9: Ilha do Rio de Minos (rooms 900-999).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #9: Ilha do Rio de Minos. (Clima 2)
-Jul 14 02:28:09 2025 :: Resetting #10: Vila de Midgaard (rooms 1000-1099).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #10: Vila de Midgaard. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #11: Os Campos Secretos (rooms 1100-1199).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #11: Os Campos Secretos. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #12: O Reino dos Imortais (rooms 1200-1299).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #12: O Reino dos Imortais. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #13: Residencial Midgaard (rooms 1300-1399).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #13: Residencial Midgaard. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #14: Quest (rooms 1400-1499).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #14: Quest. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #15: O Caminho da Virtude (rooms 1500-1599).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o querubim (VNum 1505).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #15: O Caminho da Virtude. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #16: A Vila dos Gnomos (rooms 1600-1699).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #16: A Vila dos Gnomos. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #17: Ancalador e A Guilda de Necromantes (rooms 1700-1799).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em a aranha amarela de cristal (VNum 1711).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #17: Ancalador e A Guilda de Necromantes. (Clima 1)
-Jul 14 02:28:09 2025 :: Resetting #18: Os Campos de Midgaard (rooms 1800-1899).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #18: Os Campos de Midgaard. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #19: Zona de Experiencias (rooms 1900-1999).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #19: Zona de Experiencias. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #20: Clãs (rooms 2000-2199).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o sentinela (VNum 2000).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #20: Clãs. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #22: O Safári no Covil dos Lagartos (rooms 2200-2299).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #22: O Safári no Covil dos Lagartos. (Clima 2)
-Jul 14 02:28:09 2025 :: Resetting #23: O Grande Festival (rooms 2300-2399).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma jovem camponesa (VNum 2359).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #23: O Grande Festival. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #24: O Navio Fantasma (rooms 2400-2499).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um fantasma pirata (VNum 2401).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #24: O Navio Fantasma. (Clima 1)
-Jul 14 02:28:09 2025 :: Resetting #25: A Grande Torre de Magia (rooms 2500-2699).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o Mestre das Ilusões (VNum 2548).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #25: A Grande Torre de Magia. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #27: Os Mistérios de Midantra (rooms 2700-2799).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um camponês (VNum 2701).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #27: Os Mistérios de Midantra. (Clima 1)
-Jul 14 02:28:09 2025 :: Resetting #28: A Grande Catedral de Cristal (rooms 2800-2899).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #28: A Grande Catedral de Cristal. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #30: Norte da Cidade de Midgaard (rooms 3000-3099).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o sentinela (VNum 3060).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #30: Norte da Cidade de Midgaard. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #31: Sul da Cidade de Midgaard (rooms 3100-3299).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #31: Sul da Cidade de Midgaard. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #33: O Três de Espadas (rooms 3300-3399).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #33: O Três de Espadas. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #34: A Vila de Villspah (rooms 3400-3499).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um homem da realeza (VNum 3435).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #34: A Vila de Villspah. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #35: Miden'Nir (rooms 3500-3599).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #35: Miden'Nir. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #36: O Tabuleiro de Xadrez (rooms 3600-3699).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em a Torre Branca (VNum 3603).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #36: O Tabuleiro de Xadrez. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #37: O Reino dos Mortos-Vivos (rooms 3700-3799).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #37: O Reino dos Mortos-Vivos. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #38: O Museu do Colecionador (rooms 3800-3899).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #38: O Museu do Colecionador. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #39: O Abismo Profundo (rooms 3900-3999).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em Demilich (VNum 3908).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um monolito gigante (VNum 3922).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #39: O Abismo Profundo. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #40: Moria (rooms 4000-4199).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em a serpente (VNum 4000).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o guerreiro (VNum 4051).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o leão da montanha (VNum 4057).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #40: Moria. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #42: O Escaldante Deserto de Kubalai (rooms 4200-4299).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #42: O Escaldante Deserto de Kubalai. (Clima 4)
-Jul 14 02:28:09 2025 :: Resetting #43: Uma Noite em Notre Dame (rooms 4300-4399).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o gárgula (VNum 4334).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #43: Uma Noite em Notre Dame. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #44: Qui'Lur (rooms 4400-4499).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma garoupa (VNum 4406).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #44: Qui'Lur. (Clima 2)
-Jul 14 02:28:09 2025 :: Resetting #45: Gondolin, o Reino Oculto (rooms 4500-4599).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #45: Gondolin, o Reino Oculto. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #48: As Cavernas dos Homens Brancos (rooms 4800-4899).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #48: As Cavernas dos Homens Brancos. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #49: A Grande Árvore dos Inciantes (rooms 4900-4999).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma criança grigue (VNum 4918).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #49: A Grande Árvore dos Inciantes. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #50: O Grande Deserto Oriental (rooms 5000-5099).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma escavadeira empoeirada (VNum 5015).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o escorpião pequeno (VNum 5003).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #50: O Grande Deserto Oriental. (Clima 4)
-Jul 14 02:28:09 2025 :: Resetting #51: Cidade Drow (rooms 5100-5199).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #51: Cidade Drow. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #52: A Cidade de Thalos (rooms 5200-5299).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #52: A Cidade de Thalos. (Clima 4)
-Jul 14 02:28:09 2025 :: Resetting #53: A Grande Pirâmide (rooms 5300-5399).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #53: A Grande Pirâmide. (Clima 4)
-Jul 14 02:28:09 2025 :: Resetting #54: Nova Thalos (rooms 5400-5699).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o guarda do Sultão (VNum 5462).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #54: Nova Thalos. (Clima 4)
-Jul 14 02:28:09 2025 :: Resetting #57: Graye (rooms 5700-5799).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o lobo (VNum 5702).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #57: Graye. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #58: Nova Thalos - Distrito Mercantil (rooms 5800-5899).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #58: Nova Thalos - Distrito Mercantil. (Clima 4)
-Jul 14 02:28:09 2025 :: Resetting #59: O Altar de Sacrifícios de Raantra (rooms 5900-5999).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #59: O Altar de Sacrifícios de Raantra. (Clima 1)
-Jul 14 02:28:09 2025 :: Resetting #60: Haon-Dor, Floresta Clara (rooms 6000-6099).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #60: Haon-Dor, Floresta Clara. (Clima 2)
-Jul 14 02:28:09 2025 :: Resetting #61: Haon-Dor, Floresta Escura (rooms 6100-6199).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #61: Haon-Dor, Floresta Escura. (Clima 1)
-Jul 14 02:28:09 2025 :: Resetting #62: A Planície dos Orcs (rooms 6200-6299).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #62: A Planície dos Orcs. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #63: Arachnos (rooms 6300-6399).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #63: Arachnos. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #64: A Torre de Rand (rooms 6400-6499).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #64: A Torre de Rand. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #65: O Reino dos Anoes (rooms 6500-6599).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o rei dos anões (VNum 6523).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #65: O Reino dos Anoes. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #66: Vila Norte de Nova Thalos (rooms 6600-6799).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #66: Vila Norte de Nova Thalos. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #69: Os Templos de Anura (rooms 6900-6999).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #69: Os Templos de Anura. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #70: O Esgoto, Primeiro Nível (rooms 7000-7099).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em a pequena Aranha (VNum 7003).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #70: O Esgoto, Primeiro Nível. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #71: O Segundo Esgoto (rooms 7100-7199).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #71: O Segundo Esgoto. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #72: O Esgoto Labirinto (rooms 7200-7299).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #72: O Esgoto Labirinto. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #73: Os Túneis nos Esgotos (rooms 7300-7399).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #73: Os Túneis nos Esgotos. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #75: Nos Domínios do Barão Darwin (rooms 7500-7599).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #75: Nos Domínios do Barão Darwin. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #79: A Residência de Redferne (rooms 7900-7999).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #79: A Residência de Redferne. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #81: Egito (rooms 8100-8299).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o escriba (VNum 8109).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o explorador (VNum 8144).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #81: Egito. (Clima 4)
-Jul 14 02:28:09 2025 :: Resetting #83: A Aldeia Maldita (rooms 8300-8399).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #83: A Aldeia Maldita. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #84: Valfenda (rooms 8400-8499).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #84: Valfenda. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #91: O Labirinto do Milharal (rooms 9100-9199).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #91: O Labirinto do Milharal. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #92: Os Cinco Reinos (rooms 9200-9299).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #92: Os Cinco Reinos. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #93: Paraíso dos Dragões (rooms 9300-9399).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #93: Paraíso dos Dragões. (Clima 2)
-Jul 14 02:28:09 2025 :: Resetting #94: Trilha do Destino (rooms 9400-9499).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #94: Trilha do Destino. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #95: Galáxia (rooms 9500-9599).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #95: Galáxia. (Clima 2)
-Jul 14 02:28:09 2025 :: Resetting #97: O Subterrâneo (rooms 9700-9799).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o escaravelho (VNum 9703).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #97: O Subterrâneo. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #98: O Abismo (rooms 9800-9899).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #98: O Abismo. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #99: Ghenna (rooms 9900-9999).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #99: Ghenna. (Clima 4)
-Jul 14 02:28:09 2025 :: Resetting #100: A Vila de Mordecai (rooms 10000-10099).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #100: A Vila de Mordecai. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #102: O Castelo de Jareth (rooms 10200-10299).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #102: O Castelo de Jareth. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #103: A Selva de Makira (rooms 10300-10399).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #103: A Selva de Makira. (Clima 2)
-Jul 14 02:28:09 2025 :: Resetting #107: Otávia (rooms 10700-10799).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um cidadão otaviano (VNum 10701).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #107: Otávia. (Clima 1)
-Jul 14 02:28:09 2025 :: Resetting #108: A Cidade de Tróia (rooms 10800-10999).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um soldado grego (VNum 10830).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um batalhão etíope (VNum 10831).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #108: A Cidade de Tróia. (Clima 2)
-Jul 14 02:28:09 2025 :: Resetting #110: As Mesnadas de Vitália (rooms 11000-11099).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #110: As Mesnadas de Vitália. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #111: O Reino das Pedras (rooms 11100-11199).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #111: O Reino das Pedras. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #113: Bhogavati, A Cidade das Jóias (rooms 11300-11399).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma pequena serpente de rubi (VNum 11336).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #113: Bhogavati, A Cidade das Jóias. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #114: A Fenda Entre Mundos (rooms 11400-11499).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #114: A Fenda Entre Mundos. (Clima 1)
-Jul 14 02:28:09 2025 :: Resetting #115: O Sétimo Mundo Oculto, Patala (rooms 11500-11599).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #115: O Sétimo Mundo Oculto, Patala. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #116: Svarga, O Reino Celestial (rooms 11600-11799).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #116: Svarga, O Reino Celestial. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #120: Roma (rooms 12000-12099).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #120: Roma. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #121: O Labirinto do Minotauro (rooms 12100-12199).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o grande lobo (VNum 12107).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o Cavaleiro Khordovian (VNum 12128).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #121: O Labirinto do Minotauro. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #124: Vila de Nova Thalos (rooms 12400-12599).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #124: Vila de Nova Thalos. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #126: Escandinavia, a Terra do Gelo (rooms 12600-12899).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em Mime (VNum 12651).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #126: Escandinavia, a Terra do Gelo. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #131: Torin (rooms 13100-13199).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #131: Torin. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #132: O Farol da Praia (rooms 13200-13299).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma gaivota marinha (VNum 13202).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #132: O Farol da Praia. (Clima 2)
-Jul 14 02:28:09 2025 :: Resetting #133: O Templo do Grande Búfalo (rooms 13300-13399).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um acólito (VNum 13307).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #133: O Templo do Grande Búfalo. (Clima 2)
-Jul 14 02:28:09 2025 :: Resetting #134: A Cidade de Thewster e A Caverna Escura (rooms 13400-13499).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em Dios, o armeiro (VNum 13401).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #134: A Cidade de Thewster e A Caverna Escura. (Clima 1)
-Jul 14 02:28:09 2025 :: Resetting #135: A Floresta Tropical de Thewster (rooms 13500-13599).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #135: A Floresta Tropical de Thewster. (Clima 2)
-Jul 14 02:28:09 2025 :: Resetting #136: A Floresta Leste de Thewster (rooms 13600-13699).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #136: A Floresta Leste de Thewster. (Clima 1)
-Jul 14 02:28:09 2025 :: Resetting #137: Lothlórien (rooms 13700-13799).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #137: Lothlórien. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #138: O Arquipélago de Yo (rooms 13800-13999).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #138: O Arquipélago de Yo. (Clima 2)
-Jul 14 02:28:09 2025 :: Resetting #140: Lindrel (rooms 14000-14099).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em Lírio de Lindrel (VNum 14009).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #140: Lindrel. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #144: A Aldeia de Bri (rooms 14400-14499).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em Nob, o empregado hobbit (VNum 14405).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #144: A Aldeia de Bri. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #145: O Condado (rooms 14500-14699).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma pequenina tûk (VNum 14504).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #145: O Condado. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #150: O Castelo do Rei Welmar (rooms 15000-15099).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em Brian (VNum 15004).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #150: O Castelo do Rei Welmar. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #151: O Templo Samurai (rooms 15100-15199).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um discípulo Samurai (VNum 15100).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #151: O Templo Samurai. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #155: O Moinho de Vento (rooms 15500-15599).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #155: O Moinho de Vento. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #157: O Castelo de Flyre (rooms 15700-15799).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #157: O Castelo de Flyre. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #160: Os Estrategistas de Vitália (rooms 16000-16399).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #160: Os Estrategistas de Vitália. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #170: O Canyon dos Elementais (rooms 17000-17099).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma partícula subatômica (VNum 17023).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #170: O Canyon dos Elementais. (Clima 1)
-Jul 14 02:28:09 2025 :: Resetting #173: Camelot (rooms 17300-17399).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um mercador (VNum 17331).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #173: Camelot. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #176: O Império Chinês (rooms 17600-17999).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #176: O Império Chinês. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #181: Os Caminhos Iniciais (rooms 18100-18199).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #181: Os Caminhos Iniciais. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #186: Zona dos Iniciantes. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o Guarda Elfo (VNum 19011).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #190: Os Bosques dos Elfos. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #197: O Vale dos Orcs Negros. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #198: O Labirinto das Almas Perdidas. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #201: O Asilo dos Novatos. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
-Jul 14 02:28:09 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um ladrão furioso (VNum 20403).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #204: O Labirinto do Templo dos Ladrões. (Clima 3)
-Jul 14 02:28:09 2025 :: Resetting #220: Anexo (rooms 22000-22099).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #220: Anexo. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #221: A Biblioteca de Vitália. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #222: O Santuário das Glórias. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #244: O Grande Desafio. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #280: As Planícies de Callyus. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #290: A Torre do Barão de Cailveh. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #652: New Zone (rooms 65200-65299).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #652: New Zone. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #653: New Zone (rooms 65300-65399).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #653: New Zone. (Clima 0)
-Jul 14 02:28:09 2025 :: Resetting #654: New Zone (rooms 65400-65499).
-Jul 14 02:28:09 2025 :: Inicializando clima da zona #654: New Zone. (Clima 0)
-Jul 14 02:28:09 2025 :: Boot db -- DONE.
-Jul 14 02:28:09 2025 :: Signal trapping.
-Jul 14 02:28:09 2025 :: Entering game loop.
-Jul 14 02:28:09 2025 :: No connections.  Going to sleep.
-Jul 14 02:28:33 2025 :: SYSERR: Received SIGHUP, SIGINT, or SIGTERM.  Shutting down...
+Jul 14 02:32:49 2025 :: Loading configuration.
+Jul 14 02:32:49 2025 :: Vitalia Reborn 2025 V0.3
+Jul 14 02:32:49 2025 :: Using lib as data directory.
+Jul 14 02:32:49 2025 :: Running game on port 4000.
+Jul 14 02:32:49 2025 :: SYSERR: lib/.killscript: No such file or directory
+Jul 14 02:32:49 2025 :: Finding player limit.
+Jul 14 02:32:49 2025 ::    Setting player limit to 200 using rlimit.
+Jul 14 02:32:49 2025 :: Opening mother connection.
+Jul 14 02:32:49 2025 :: Binding to all IP interfaces on this host.
+Jul 14 02:32:49 2025 :: Boot db -- BEGIN.
+Jul 14 02:32:49 2025 :: Resetting the game time:
+Jul 14 02:32:49 2025 ::    Current Gametime: 16H 27D 4M 1636Y.
+Jul 14 02:32:49 2025 :: Initialize Global Lists
+Jul 14 02:32:49 2025 :: Initializing Events
+Jul 14 02:32:49 2025 :: Reading news, credits, help, ihelp, bground, info & motds.
+Jul 14 02:32:49 2025 :: Reading menu, rebegin & clanpolicies
+Jul 14 02:32:49 2025 :: Loading zone table.
+Jul 14 02:32:49 2025 ::    126 zones, 11088 bytes.
+Jul 14 02:32:49 2025 :: Loading triggers and generating index.
+Jul 14 02:32:49 2025 :: Loading rooms.
+Jul 14 02:32:49 2025 ::    9527 rooms, 1752968 bytes.
+Jul 14 02:32:49 2025 :: Loading spells.
+Jul 14 02:32:49 2025 :: Assigning spells's function.
+Jul 14 02:32:49 2025 :: Renumbering rooms.
+Jul 14 02:32:49 2025 :: Checking start rooms.
+Jul 14 02:32:49 2025 :: Loading mobs and generating index.
+Jul 14 02:32:49 2025 ::    2620 mobs, 83840 bytes in index, 1739680 bytes in prototypes.
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #701, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #702, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #705, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #706, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #707, GenWimpy carregado com sucesso: 13
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #708, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #710, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #711, GenWimpy carregado com sucesso: 12
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #713, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #715, GenWimpy carregado com sucesso: 21
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #717, GenWimpy carregado com sucesso: 13
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #740, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #775, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #780, GenWimpy carregado com sucesso: 12
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #781, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #799, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #800, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #801, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #802, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #803, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #804, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #805, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #900, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #909, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #911, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1507, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1600, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1617, GenWimpy carregado com sucesso: 61
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1621, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1700, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1704, GenWimpy carregado com sucesso: 18
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1705, GenWimpy carregado com sucesso: 54
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1707, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1709, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1710, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1711, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1713, GenWimpy carregado com sucesso: 12
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #1714, GenWimpy carregado com sucesso: 23
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2304, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2324, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2346, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2401, GenWimpy carregado com sucesso: 28
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2500, GenWimpy carregado com sucesso: 14
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2502, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2504, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2507, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2508, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2510, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2512, GenWimpy carregado com sucesso: 23
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2513, GenWimpy carregado com sucesso: 11
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2514, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2515, GenWimpy carregado com sucesso: 24
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2516, GenWimpy carregado com sucesso: 21
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2517, GenWimpy carregado com sucesso: 25
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2518, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2519, GenWimpy carregado com sucesso: 11
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2520, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2524, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2528, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2530, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2531, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2533, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2538, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2539, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2542, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2544, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2545, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2551, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2552, GenWimpy carregado com sucesso: 16
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2555, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2561, GenWimpy carregado com sucesso: 23
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2701, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2706, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2709, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2717, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2718, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2719, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2720, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2721, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2722, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2733, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2734, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2739, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #2741, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3059, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3060, GenWimpy carregado com sucesso: 11
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3062, GenWimpy carregado com sucesso: 11
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3068, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3101, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3102, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3103, GenWimpy carregado com sucesso: 16
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3104, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3106, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3123, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3306, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3311, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3315, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3316, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3317, GenWimpy carregado com sucesso: 13
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3500, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3501, GenWimpy carregado com sucesso: 35
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3502, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3504, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3505, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3506, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3507, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3700, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3721, GenWimpy carregado com sucesso: 21
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3722, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3723, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3725, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3726, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3731, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3906, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3907, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3915, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3916, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3917, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3918, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3923, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #3924, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4000, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4003, GenWimpy carregado com sucesso: 36
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4004, GenWimpy carregado com sucesso: 33
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4005, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4051, GenWimpy carregado com sucesso: 32
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4052, GenWimpy carregado com sucesso: 22
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4055, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4056, GenWimpy carregado com sucesso: 18
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4057, GenWimpy carregado com sucesso: 31
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4100, GenWimpy carregado com sucesso: 12
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4103, GenWimpy carregado com sucesso: 20
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4105, GenWimpy carregado com sucesso: 36
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4106, GenWimpy carregado com sucesso: 20
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4107, GenWimpy carregado com sucesso: 35
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4201, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4206, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4316, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4321, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4325, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4330, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4800, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4806, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4900, GenWimpy carregado com sucesso: 95
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4901, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4902, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4903, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4904, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #4906, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5000, GenWimpy carregado com sucesso: 23
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5001, GenWimpy carregado com sucesso: 22
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5002, GenWimpy carregado com sucesso: 25
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5003, GenWimpy carregado com sucesso: 19
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5014, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5015, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5201, GenWimpy carregado com sucesso: 99
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5202, GenWimpy carregado com sucesso: 14
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5204, GenWimpy carregado com sucesso: 14
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5205, GenWimpy carregado com sucesso: 17
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5206, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5207, GenWimpy carregado com sucesso: 100
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5209, GenWimpy carregado com sucesso: 93
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5300, GenWimpy carregado com sucesso: 49
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5301, GenWimpy carregado com sucesso: 32
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5302, GenWimpy carregado com sucesso: 24
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5303, GenWimpy carregado com sucesso: 72
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5304, GenWimpy carregado com sucesso: 48
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5305, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5307, GenWimpy carregado com sucesso: 58
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5308, GenWimpy carregado com sucesso: 88
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5312, GenWimpy carregado com sucesso: 19
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5441, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5442, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5443, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5447, GenWimpy carregado com sucesso: 61
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5448, GenWimpy carregado com sucesso: 20
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5449, GenWimpy carregado com sucesso: 33
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5451, GenWimpy carregado com sucesso: 95
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5453, GenWimpy carregado com sucesso: 17
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5454, GenWimpy carregado com sucesso: 27
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5460, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5461, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5479, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5701, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5702, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5703, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5704, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5706, GenWimpy carregado com sucesso: 17
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5707, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5708, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5709, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5710, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5713, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #5714, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6000, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6001, GenWimpy carregado com sucesso: 13
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6004, GenWimpy carregado com sucesso: 16
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6005, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6006, GenWimpy carregado com sucesso: 51
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6007, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6008, GenWimpy carregado com sucesso: 13
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6009, GenWimpy carregado com sucesso: 13
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6010, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6012, GenWimpy carregado com sucesso: 23
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6013, GenWimpy carregado com sucesso: 24
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6014, GenWimpy carregado com sucesso: 100
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6015, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6017, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6018, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6019, GenWimpy carregado com sucesso: 43
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6100, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6101, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6102, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6103, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6113, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6114, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6115, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6116, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6117, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6212, GenWimpy carregado com sucesso: 20
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6213, GenWimpy carregado com sucesso: 19
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6301, GenWimpy carregado com sucesso: 21
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6302, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6303, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6304, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6305, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6306, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6307, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6308, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6309, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6310, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6314, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6315, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6316, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6501, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #6903, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #7000, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #7002, GenWimpy carregado com sucesso: 30
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #7003, GenWimpy carregado com sucesso: 58
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #7005, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #7006, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #7010, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #7041, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #7043, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #7044, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #7201, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #7203, GenWimpy carregado com sucesso: 16
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #7901, GenWimpy carregado com sucesso: 11
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8104, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8105, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8115, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8131, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8135, GenWimpy carregado com sucesso: 11
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8136, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8137, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8142, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8143, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8144, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8145, GenWimpy carregado com sucesso: 24
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8146, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8151, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #8415, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9100, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9101, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9102, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9103, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9104, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9105, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9206, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9207, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9208, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9209, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9210, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9211, GenWimpy carregado com sucesso: 11
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9212, GenWimpy carregado com sucesso: 14
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9213, GenWimpy carregado com sucesso: 11
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9214, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9215, GenWimpy carregado com sucesso: 14
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9319, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9320, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9322, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9323, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9325, GenWimpy carregado com sucesso: 11
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9501, GenWimpy carregado com sucesso: 19
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9502, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9503, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9504, GenWimpy carregado com sucesso: 32
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9527, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9528, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #9911, GenWimpy carregado com sucesso: 13
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10000, GenWimpy carregado com sucesso: 37
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10001, GenWimpy carregado com sucesso: 31
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10004, GenWimpy carregado com sucesso: 20
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10005, GenWimpy carregado com sucesso: 21
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10006, GenWimpy carregado com sucesso: 20
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10008, GenWimpy carregado com sucesso: 26
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10011, GenWimpy carregado com sucesso: 18
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10012, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10300, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10301, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10302, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10303, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10304, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10305, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10307, GenWimpy carregado com sucesso: 13
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10308, GenWimpy carregado com sucesso: 12
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10309, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10310, GenWimpy carregado com sucesso: 17
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10312, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10314, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10315, GenWimpy carregado com sucesso: 45
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10316, GenWimpy carregado com sucesso: 12
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10317, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10720, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #10860, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #11606, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #11627, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #11629, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #11630, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #11631, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #11632, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #11633, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #11635, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #11637, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #11638, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #11640, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #11643, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12017, GenWimpy carregado com sucesso: 31
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12018, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12019, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12021, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12024, GenWimpy carregado com sucesso: 55
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12035, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12103, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12105, GenWimpy carregado com sucesso: 14
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12108, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12109, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12110, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12112, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12114, GenWimpy carregado com sucesso: 19
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12116, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12120, GenWimpy carregado com sucesso: 45
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12122, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12125, GenWimpy carregado com sucesso: 75
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12662, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12666, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12671, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12672, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12673, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12674, GenWimpy carregado com sucesso: 13
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12677, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12679, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12682, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12684, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12691, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12696, GenWimpy carregado com sucesso: 17
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12697, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #12698, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13200, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13201, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13202, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13301, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13303, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13304, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13307, GenWimpy carregado com sucesso: 12
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13410, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13430, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13500, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13501, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13502, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13503, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13504, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13505, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13508, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13509, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13510, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13511, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13512, GenWimpy carregado com sucesso: 69
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13513, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13514, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13515, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13516, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13517, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13600, GenWimpy carregado com sucesso: 19
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13601, GenWimpy carregado com sucesso: 16
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13602, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13603, GenWimpy carregado com sucesso: 12
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13604, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13605, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13606, GenWimpy carregado com sucesso: 14
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13607, GenWimpy carregado com sucesso: 21
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13608, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13609, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13610, GenWimpy carregado com sucesso: 80
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #13821, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #14401, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #15009, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #15014, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #15030, GenWimpy carregado com sucesso: 12
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #15031, GenWimpy carregado com sucesso: 14
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17001, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17002, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17003, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17005, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17006, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17007, GenWimpy carregado com sucesso: 14
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17014, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17015, GenWimpy carregado com sucesso: 40
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17016, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17018, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17019, GenWimpy carregado com sucesso: 16
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17020, GenWimpy carregado com sucesso: 22
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17022, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17023, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17024, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17025, GenWimpy carregado com sucesso: 13
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17026, GenWimpy carregado com sucesso: 20
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17027, GenWimpy carregado com sucesso: 26
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17028, GenWimpy carregado com sucesso: 11
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17029, GenWimpy carregado com sucesso: 16
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17030, GenWimpy carregado com sucesso: 18
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17031, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17034, GenWimpy carregado com sucesso: 18
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17036, GenWimpy carregado com sucesso: 19
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17301, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17303, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17305, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17315, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17319, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17320, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17321, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17323, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17324, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17330, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17332, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17334, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17336, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17343, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17344, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17345, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17350, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #17363, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18601, GenWimpy carregado com sucesso: 5
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18602, GenWimpy carregado com sucesso: 29
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18603, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18604, GenWimpy carregado com sucesso: 13
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18605, GenWimpy carregado com sucesso: 14
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18606, GenWimpy carregado com sucesso: 42
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18607, GenWimpy carregado com sucesso: 37
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18608, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18609, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18610, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18611, GenWimpy carregado com sucesso: 14
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18612, GenWimpy carregado com sucesso: 14
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18613, GenWimpy carregado com sucesso: 8
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18614, GenWimpy carregado com sucesso: 13
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #18615, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #19703, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #19704, GenWimpy carregado com sucesso: 29
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #19705, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #19706, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #19707, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #19711, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #19716, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #19800, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #19801, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #19809, GenWimpy carregado com sucesso: 3
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #19821, GenWimpy carregado com sucesso: 6
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20100, GenWimpy carregado com sucesso: 20
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20103, GenWimpy carregado com sucesso: 4
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20104, GenWimpy carregado com sucesso: 2
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20105, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20106, GenWimpy carregado com sucesso: 21
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20107, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20108, GenWimpy carregado com sucesso: 7
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20109, GenWimpy carregado com sucesso: 23
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20110, GenWimpy carregado com sucesso: 20
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20111, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20112, GenWimpy carregado com sucesso: 21
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20113, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20114, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20115, GenWimpy carregado com sucesso: 16
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20116, GenWimpy carregado com sucesso: 10
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20117, GenWimpy carregado com sucesso: 11
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #20118, GenWimpy carregado com sucesso: 12
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #28004, GenWimpy carregado com sucesso: 9
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #28006, GenWimpy carregado com sucesso: 24
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #28008, GenWimpy carregado com sucesso: 17
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #28010, GenWimpy carregado com sucesso: 15
+Jul 14 02:32:49 2025 :: DEBUG: Mob vnum #28023, GenWimpy carregado com sucesso: 1
+Jul 14 02:32:49 2025 :: Loading objs and generating index.
+Jul 14 02:32:49 2025 ::    3712 objs, 118784 bytes in index, 890880 bytes in prototypes.
+Jul 14 02:32:49 2025 :: Renumbering zone table.
+Jul 14 02:32:49 2025 :: Loading shops.
+Jul 14 02:32:49 2025 :: Loading quests.
+Jul 14 02:32:49 2025 ::    1 entries, 128 bytes.
+Jul 14 02:32:49 2025 :: Loading help entries.
+Jul 14 02:32:49 2025 ::    2758 entries, 88256 bytes.
+Jul 14 02:32:49 2025 :: Generating player index.
+Jul 14 02:32:49 2025 :: Loading fight messages.
+Jul 14 02:32:49 2025 :: Loaded 63 Combat Messages...
+Jul 14 02:32:49 2025 :: Loading social messages.
+Jul 14 02:32:49 2025 :: Social table contains 490 socials.
+Jul 14 02:32:49 2025 :: Building command list.
+Jul 14 02:32:49 2025 :: Command info rebuilt, 796 total commands.
+Jul 14 02:32:49 2025 :: Assigning function pointers:
+Jul 14 02:32:49 2025 ::    Mobiles.
+Jul 14 02:32:49 2025 ::    Shopkeepers.
+Jul 14 02:32:49 2025 ::    Objects.
+Jul 14 02:32:49 2025 ::    Rooms.
+Jul 14 02:32:49 2025 ::    Questmasters.
+Jul 14 02:32:49 2025 :: Sorting command list.
+Jul 14 02:32:49 2025 :: Booting mail system.
+Jul 14 02:32:49 2025 ::    Mail file read -- 1 messages.
+Jul 14 02:32:49 2025 :: Reading banned site and invalid-name list.
+Jul 14 02:32:49 2025 :: Loading Ideas.
+Jul 14 02:32:49 2025 :: Loading Bugs.
+Jul 14 02:32:49 2025 :: Loading Typos.
+Jul 14 02:32:49 2025 :: Booting houses.
+Jul 14 02:32:49 2025 :: Cleaning up last log.
+Jul 14 02:32:49 2025 :: Resetting #0: Limbo - Interno (rooms 0-99).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #0: Limbo - Interno. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #1: Entre Dimensões (rooms 100-199).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #1: Entre Dimensões. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #2: O Castelo da Rainha Gelada (rooms 200-299).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #2: O Castelo da Rainha Gelada. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #3: Bandar, A Cidade Maldita (rooms 300-399).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #3: Bandar, A Cidade Maldita. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #4: A Embaixada dos Clãs de Vitália (rooms 400-499).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #4: A Embaixada dos Clãs de Vitália. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #5: Templos Imortais (rooms 500-599).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #5: Templos Imortais. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #6: A Prisão (rooms 600-699).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #6: A Prisão. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #7: A Floresta Sombria (rooms 700-799).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #7: A Floresta Sombria. (Clima 1)
+Jul 14 02:32:49 2025 :: Resetting #8: O Castelo dos Vampiros (rooms 800-899).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #8: O Castelo dos Vampiros. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #9: Ilha do Rio de Minos (rooms 900-999).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #9: Ilha do Rio de Minos. (Clima 2)
+Jul 14 02:32:49 2025 :: Resetting #10: Vila de Midgaard (rooms 1000-1099).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #10: Vila de Midgaard. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #11: Os Campos Secretos (rooms 1100-1199).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #11: Os Campos Secretos. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #12: O Reino dos Imortais (rooms 1200-1299).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #12: O Reino dos Imortais. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #13: Residencial Midgaard (rooms 1300-1399).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #13: Residencial Midgaard. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #14: Quest (rooms 1400-1499).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #14: Quest. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #15: O Caminho da Virtude (rooms 1500-1599).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #15: O Caminho da Virtude. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #16: A Vila dos Gnomos (rooms 1600-1699).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o soldado hobgoblin (VNum 1617).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o soldado hobgoblin (VNum 1617).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #16: A Vila dos Gnomos. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #17: Ancalador e A Guilda de Necromantes (rooms 1700-1799).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #17: Ancalador e A Guilda de Necromantes. (Clima 1)
+Jul 14 02:32:49 2025 :: Resetting #18: Os Campos de Midgaard (rooms 1800-1899).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #18: Os Campos de Midgaard. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #19: Zona de Experiencias (rooms 1900-1999).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #19: Zona de Experiencias. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #20: Clãs (rooms 2000-2199).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o sentinela (VNum 2060).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #20: Clãs. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #22: O Safári no Covil dos Lagartos (rooms 2200-2299).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o guarda (VNum 2204).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o principe (VNum 2205).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #22: O Safári no Covil dos Lagartos. (Clima 2)
+Jul 14 02:32:49 2025 :: Resetting #23: O Grande Festival (rooms 2300-2399).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma criança com a face pintada de leão (VNum 2341).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #23: O Grande Festival. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #24: O Navio Fantasma (rooms 2400-2499).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #24: O Navio Fantasma. (Clima 1)
+Jul 14 02:32:49 2025 :: Resetting #25: A Grande Torre de Magia (rooms 2500-2699).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #25: A Grande Torre de Magia. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #27: Os Mistérios de Midantra (rooms 2700-2799).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um cavaleiro distraído (VNum 2740).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #27: Os Mistérios de Midantra. (Clima 1)
+Jul 14 02:32:49 2025 :: Resetting #28: A Grande Catedral de Cristal (rooms 2800-2899).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #28: A Grande Catedral de Cristal. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #30: Norte da Cidade de Midgaard (rooms 3000-3099).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #30: Norte da Cidade de Midgaard. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #31: Sul da Cidade de Midgaard (rooms 3100-3299).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o pato (VNum 3123).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #31: Sul da Cidade de Midgaard. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #33: O Três de Espadas (rooms 3300-3399).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #33: O Três de Espadas. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #34: A Vila de Villspah (rooms 3400-3499).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um homem da realeza (VNum 3435).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #34: A Vila de Villspah. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #35: Miden'Nir (rooms 3500-3599).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #35: Miden'Nir. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #36: O Tabuleiro de Xadrez (rooms 3600-3699).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o Peão da Corte Negra (VNum 3600).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o Peão da Corte Branca (VNum 3601).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #36: O Tabuleiro de Xadrez. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #37: O Reino dos Mortos-Vivos (rooms 3700-3799).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #37: O Reino dos Mortos-Vivos. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #38: O Museu do Colecionador (rooms 3800-3899).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #38: O Museu do Colecionador. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #39: O Abismo Profundo (rooms 3900-3999).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #39: O Abismo Profundo. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #40: Moria (rooms 4000-4199).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o ladrão (VNum 4103).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #40: Moria. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #42: O Escaldante Deserto de Kubalai (rooms 4200-4299).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #42: O Escaldante Deserto de Kubalai. (Clima 4)
+Jul 14 02:32:49 2025 :: Resetting #43: Uma Noite em Notre Dame (rooms 4300-4399).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #43: Uma Noite em Notre Dame. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #44: Qui'Lur (rooms 4400-4499).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um elfo (VNum 4413).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #44: Qui'Lur. (Clima 2)
+Jul 14 02:32:49 2025 :: Resetting #45: Gondolin, o Reino Oculto (rooms 4500-4599).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #45: Gondolin, o Reino Oculto. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #48: As Cavernas dos Homens Brancos (rooms 4800-4899).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #48: As Cavernas dos Homens Brancos. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #49: A Grande Árvore dos Inciantes (rooms 4900-4999).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #49: A Grande Árvore dos Inciantes. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #50: O Grande Deserto Oriental (rooms 5000-5099).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #50: O Grande Deserto Oriental. (Clima 4)
+Jul 14 02:32:49 2025 :: Resetting #51: Cidade Drow (rooms 5100-5199).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o Guerreiro Drow (VNum 5102).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o Drow-aranha (VNum 5109).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #51: Cidade Drow. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #52: A Cidade de Thalos (rooms 5200-5299).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #52: A Cidade de Thalos. (Clima 4)
+Jul 14 02:32:49 2025 :: Resetting #53: A Grande Pirâmide (rooms 5300-5399).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em a grande esfinge (VNum 5316).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #53: A Grande Pirâmide. (Clima 4)
+Jul 14 02:32:49 2025 :: Resetting #54: Nova Thalos (rooms 5400-5699).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o trabalhador da construção (VNum 5420).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma garota de harém (VNum 5451).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #54: Nova Thalos. (Clima 4)
+Jul 14 02:32:49 2025 :: Resetting #57: Graye (rooms 5700-5799).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #57: Graye. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #58: Nova Thalos - Distrito Mercantil (rooms 5800-5899).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #58: Nova Thalos - Distrito Mercantil. (Clima 4)
+Jul 14 02:32:49 2025 :: Resetting #59: O Altar de Sacrifícios de Raantra (rooms 5900-5999).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #59: O Altar de Sacrifícios de Raantra. (Clima 1)
+Jul 14 02:32:49 2025 :: Resetting #60: Haon-Dor, Floresta Clara (rooms 6000-6099).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #60: Haon-Dor, Floresta Clara. (Clima 2)
+Jul 14 02:32:49 2025 :: Resetting #61: Haon-Dor, Floresta Escura (rooms 6100-6199).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #61: Haon-Dor, Floresta Escura. (Clima 1)
+Jul 14 02:32:49 2025 :: Resetting #62: A Planície dos Orcs (rooms 6200-6299).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #62: A Planície dos Orcs. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #63: Arachnos (rooms 6300-6399).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #63: Arachnos. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #64: A Torre de Rand (rooms 6400-6499).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #64: A Torre de Rand. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #65: O Reino dos Anoes (rooms 6500-6599).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o mestre ferreiro anão (VNum 6520).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #65: O Reino dos Anoes. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #66: Vila Norte de Nova Thalos (rooms 6600-6799).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #66: Vila Norte de Nova Thalos. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #69: Os Templos de Anura (rooms 6900-6999).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #69: Os Templos de Anura. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #70: O Esgoto, Primeiro Nível (rooms 7000-7099).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #70: O Esgoto, Primeiro Nível. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #71: O Segundo Esgoto (rooms 7100-7199).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #71: O Segundo Esgoto. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #72: O Esgoto Labirinto (rooms 7200-7299).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #72: O Esgoto Labirinto. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #73: Os Túneis nos Esgotos (rooms 7300-7399).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #73: Os Túneis nos Esgotos. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #75: Nos Domínios do Barão Darwin (rooms 7500-7599).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #75: Nos Domínios do Barão Darwin. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #79: A Residência de Redferne (rooms 7900-7999).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #79: A Residência de Redferne. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #81: Egito (rooms 8100-8299).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em Nefertiti (VNum 8128).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em Khons (VNum 8138).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #81: Egito. (Clima 4)
+Jul 14 02:32:49 2025 :: Resetting #83: A Aldeia Maldita (rooms 8300-8399).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #83: A Aldeia Maldita. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #84: Valfenda (rooms 8400-8499).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #84: Valfenda. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #91: O Labirinto do Milharal (rooms 9100-9199).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #91: O Labirinto do Milharal. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #92: Os Cinco Reinos (rooms 9200-9299).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o Ás de copas (VNum 9226).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #92: Os Cinco Reinos. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #93: Paraíso dos Dragões (rooms 9300-9399).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #93: Paraíso dos Dragões. (Clima 2)
+Jul 14 02:32:49 2025 :: Resetting #94: Trilha do Destino (rooms 9400-9499).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #94: Trilha do Destino. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #95: Galáxia (rooms 9500-9599).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em Cefeu, o Rei (VNum 9531).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #95: Galáxia. (Clima 2)
+Jul 14 02:32:49 2025 :: Resetting #97: O Subterrâneo (rooms 9700-9799).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #97: O Subterrâneo. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #98: O Abismo (rooms 9800-9899).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #98: O Abismo. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #99: Ghenna (rooms 9900-9999).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma vendedora (VNum 9918).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #99: Ghenna. (Clima 4)
+Jul 14 02:32:49 2025 :: Resetting #100: A Vila de Mordecai (rooms 10000-10099).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #100: A Vila de Mordecai. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #102: O Castelo de Jareth (rooms 10200-10299).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #102: O Castelo de Jareth. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #103: A Selva de Makira (rooms 10300-10399).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #103: A Selva de Makira. (Clima 2)
+Jul 14 02:32:49 2025 :: Resetting #107: Otávia (rooms 10700-10799).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma cidadã otaviana (VNum 10702).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #107: Otávia. (Clima 1)
+Jul 14 02:32:49 2025 :: Resetting #108: A Cidade de Tróia (rooms 10800-10999).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um soldado grego (VNum 10830).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #108: A Cidade de Tróia. (Clima 2)
+Jul 14 02:32:49 2025 :: Resetting #110: As Mesnadas de Vitália (rooms 11000-11099).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #110: As Mesnadas de Vitália. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #111: O Reino das Pedras (rooms 11100-11199).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #111: O Reino das Pedras. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #113: Bhogavati, A Cidade das Jóias (rooms 11300-11399).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma pequena serpente de rubi (VNum 11336).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #113: Bhogavati, A Cidade das Jóias. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #114: A Fenda Entre Mundos (rooms 11400-11499).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #114: A Fenda Entre Mundos. (Clima 1)
+Jul 14 02:32:49 2025 :: Resetting #115: O Sétimo Mundo Oculto, Patala (rooms 11500-11599).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #115: O Sétimo Mundo Oculto, Patala. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #116: Svarga, O Reino Celestial (rooms 11600-11799).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em a estátua de Kadru (VNum 11615).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma linda apsara (VNum 11634).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #116: Svarga, O Reino Celestial. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #120: Roma (rooms 12000-12099).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o sentinela (VNum 12018).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #120: Roma. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #121: O Labirinto do Minotauro (rooms 12100-12199).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o pequeno demônio (VNum 12103).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #121: O Labirinto do Minotauro. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #124: Vila de Nova Thalos (rooms 12400-12599).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #124: Vila de Nova Thalos. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #126: Escandinavia, a Terra do Gelo (rooms 12600-12899).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma viking sueca (VNum 12681).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #126: Escandinavia, a Terra do Gelo. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #131: Torin (rooms 13100-13199).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #131: Torin. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #132: O Farol da Praia (rooms 13200-13299).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #132: O Farol da Praia. (Clima 2)
+Jul 14 02:32:49 2025 :: Resetting #133: O Templo do Grande Búfalo (rooms 13300-13399).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #133: O Templo do Grande Búfalo. (Clima 2)
+Jul 14 02:32:49 2025 :: Resetting #134: A Cidade de Thewster e A Caverna Escura (rooms 13400-13499).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em uma fada (VNum 13431).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #134: A Cidade de Thewster e A Caverna Escura. (Clima 1)
+Jul 14 02:32:49 2025 :: Resetting #135: A Floresta Tropical de Thewster (rooms 13500-13599).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #135: A Floresta Tropical de Thewster. (Clima 2)
+Jul 14 02:32:49 2025 :: Resetting #136: A Floresta Leste de Thewster (rooms 13600-13699).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #136: A Floresta Leste de Thewster. (Clima 1)
+Jul 14 02:32:49 2025 :: Resetting #137: Lothlórien (rooms 13700-13799).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #137: Lothlórien. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #138: O Arquipélago de Yo (rooms 13800-13999).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #138: O Arquipélago de Yo. (Clima 2)
+Jul 14 02:32:49 2025 :: Resetting #140: Lindrel (rooms 14000-14099).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em a pequena lagarta (VNum 14026).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #140: Lindrel. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #144: A Aldeia de Bri (rooms 14400-14499).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #144: A Aldeia de Bri. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #145: O Condado (rooms 14500-14699).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #145: O Condado. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #150: O Castelo do Rei Welmar (rooms 15000-15099).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #150: O Castelo do Rei Welmar. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #151: O Templo Samurai (rooms 15100-15199).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #151: O Templo Samurai. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #155: O Moinho de Vento (rooms 15500-15599).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #155: O Moinho de Vento. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #157: O Castelo de Flyre (rooms 15700-15799).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #157: O Castelo de Flyre. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #160: Os Estrategistas de Vitália (rooms 16000-16399).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #160: Os Estrategistas de Vitália. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #170: O Canyon dos Elementais (rooms 17000-17099).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um pequeno elemental (VNum 17003).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #170: O Canyon dos Elementais. (Clima 1)
+Jul 14 02:32:49 2025 :: Resetting #173: Camelot (rooms 17300-17399).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o graduado Cavaleiro Encantado (VNum 17320).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o Chefe do clã escocês (VNum 17349).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #173: Camelot. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #176: O Império Chinês (rooms 17600-17999).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #176: O Império Chinês. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #181: Os Caminhos Iniciais (rooms 18100-18199).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #181: Os Caminhos Iniciais. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #186: Zona dos Iniciantes (rooms 18600-18699).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em o espectro escuro (VNum 18610).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #186: Zona dos Iniciantes. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #190: Os Bosques dos Elfos (rooms 19000-19099).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #190: Os Bosques dos Elfos. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #197: O Vale dos Orcs Negros (rooms 19700-19799).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em um velho druida (VNum 19709).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #197: O Vale dos Orcs Negros. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #198: O Labirinto das Almas Perdidas (rooms 19800-19899).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #198: O Labirinto das Almas Perdidas. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #201: O Asilo dos Novatos (rooms 20100-20199).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #201: O Asilo dos Novatos. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #204: O Labirinto do Templo dos Ladrões (rooms 20400-20599).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #204: O Labirinto do Templo dos Ladrões. (Clima 3)
+Jul 14 02:32:49 2025 :: Resetting #220: Anexo (rooms 22000-22099).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #220: Anexo. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #221: A Biblioteca de Vitália (rooms 22100-22199).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #221: A Biblioteca de Vitália. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #222: O Santuário das Glórias (rooms 22200-22299).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #222: O Santuário das Glórias. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #244: O Grande Desafio (rooms 24400-24599).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #244: O Grande Desafio. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #280: As Planícies de Callyus (rooms 28000-28099).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em a ninfa (VNum 28016).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #280: As Planícies de Callyus. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #290: A Torre do Barão de Cailveh (rooms 29000-29099).
+Jul 14 02:32:49 2025 :: EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em Necromocis (VNum 29003).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #290: A Torre do Barão de Cailveh. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #652: New Zone (rooms 65200-65299).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #652: New Zone. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #653: New Zone (rooms 65300-65399).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #653: New Zone. (Clima 0)
+Jul 14 02:32:49 2025 :: Resetting #654: New Zone (rooms 65400-65499).
+Jul 14 02:32:49 2025 :: Inicializando clima da zona #654: New Zone. (Clima 0)
+Jul 14 02:32:49 2025 :: Boot db -- DONE.
+Jul 14 02:32:49 2025 :: Signal trapping.
+Jul 14 02:32:49 2025 :: Entering game loop.
+Jul 14 02:32:49 2025 :: No connections.  Going to sleep.
+Jul 14 02:33:19 2025 :: SYSERR: Received SIGHUP, SIGINT, or SIGTERM.  Shutting down...
