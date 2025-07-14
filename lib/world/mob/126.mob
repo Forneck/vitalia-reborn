@@ -1469,7 +1469,7 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 1
+GenWimpy: 2
 E
 #12663
 Heidrum cabra~
@@ -1722,7 +1722,7 @@ fica no topo da árvore.
 0 15000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 14
+GenWimpy: 16
 E
 #12675
 Dvalin soberano anao~
@@ -1841,8 +1841,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 2
-GenRoam: 37
+GenWimpy: 3
+GenRoam: 63
 E
 #12680
 viking islandes~
@@ -1960,8 +1960,8 @@ ajude-as a sobreviver nessas gélidas e desérticas terras gelo.
 500 13000
 9 9 2
 BareHandAttack: 13
-GenWimpy: 2
-GenRoam: 1
+GenWimpy: 4
+GenRoam: 45
 E
 #12685
 cavalo selvagem~
@@ -1982,6 +1982,7 @@ Int: 15
 Wis: 15
 Con: 18
 Cha: 18
+GenWimpy: 1
 E
 #12686
 navio guerra viking~
@@ -2116,7 +2117,8 @@ Int: 15
 Wis: 13
 Con: 16
 Cha: 18
-GenWimpy: 4
+GenWimpy: 5
+GenRoam: 16
 E
 #12692
 foca~
@@ -2212,8 +2214,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 17
-GenRoam: 9
+GenWimpy: 21
+GenRoam: 12
 E
 #12697
 ave marinha~
@@ -2257,7 +2259,7 @@ Wis: 18
 Con: 18
 Cha: 18
 GenWimpy: 5
-GenRoam: 39
+GenRoam: 54
 E
 #12699
 sif esposa~

@@ -133,6 +133,8 @@ Você tem o desejo de matar esta vil criatura.
 4 15 8 3d4+48 1d8+0
 10 550
 9 9 1
+GenWimpy: 1
+GenRoam: 27
 E
 T 3008
 #1611
@@ -225,7 +227,7 @@ guarda de elite. Ele parece bravo.
 29 3 -4 5d10+822 4d8+0
 1000 35000
 9 9 1
-GenWimpy: 89
+GenWimpy: 73
 GenRoam: 87
 E
 #1618
@@ -281,7 +283,7 @@ consegue enxergar um palmo em frente de seu nariz.
 18 9 3 3d5+400 2d6+1
 5000 12000
 9 9 1
-GenWimpy: 8
+GenWimpy: 9
 E
 #1622
 prisioneiro gnomo~
@@ -319,6 +321,7 @@ você por sua ousadia em acorda-lo.
 5 12 6 1d11+61 1d8+0
 200 600
 9 9 1
+GenWimpy: 1
 E
 #1626
 cozinheiro hobgoblin~

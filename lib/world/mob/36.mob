@@ -10,7 +10,7 @@ Coroa.
 2097350 0 0 0 16 0 0 0 -400 E
 4 14 8 3d3+25 2d3+1
 100 400
-8 8 1
+9 9 1
 E
 #3601
 peao branco~
@@ -24,7 +24,7 @@ dar sua vida pela Coroa.
 2097350 0 0 0 16 0 0 0 400 E
 4 14 8 3d3+25 2d3+1
 100 400
-8 8 1
+9 9 1
 E
 #3602
 torre negra castelo~
@@ -37,7 +37,7 @@ Apenas por sua aparência, ela será provavelmente a SUA tumba.
 2326530 0 0 0 16 0 0 0 -600 E
 14 11 5 2d4+250 3d6+3
 1000 20000
-8 8 2
+9 9 2
 E
 #3603
 torre branca castelo~
@@ -50,7 +50,7 @@ Apenas por sua aparência, ela será provavelmente a SUA tumba.
 2326530 0 0 0 16 0 0 0 600 E
 14 11 5 2d4+250 3d6+3
 1000 20000
-8 8 2
+9 9 2
 E
 #3604
 cavaleiro negro~
@@ -63,7 +63,8 @@ como o ébano. Seus olhos flamejam por vingança, por trás de sua viseira.
 2097186 0 0 0 16 0 0 0 -400 E
 9 11 3 3d5+175 2d4+1
 1000 8000
-8 8 1
+9 9 1
+GenWimpy: 16
 E
 #3605
 cavaleiro branco~
@@ -76,7 +77,7 @@ como o marfim. Seus olhos brilham de alegria, por trás de sua viseira.
 2097186 0 0 0 16 0 0 0 400 E
 9 11 3 3d5+175 2d4+1
 1000 8000
-8 8 1
+9 9 1
 E
 #3606
 bispo negro~
@@ -89,7 +90,7 @@ assim ele poderá abençoá-lo apropriadamente.
 2097154 0 0 0 16 0 0 0 -500 E
 12 11 5 2d3+175 3d4+6
 1300 13000
-8 8 1
+9 9 1
 E
 #3607
 bispo branco~
@@ -102,7 +103,7 @@ para que assim ele possa atingir a um grau de espiritualidade mais alto.
 2097154 0 0 0 16 0 0 0 500 E
 12 11 5 2d3+175 3d4+6
 1300 13000
-8 8 1
+9 9 1
 E
 #3608
 rainha negra~
@@ -116,7 +117,7 @@ negra. Se olhares pudessem matar, você já estaria morto.
 2099238 0 0 0 272 0 0 0 -750 E
 16 8 1 4d6+450 4d4+6
 2000 26000
-8 8 2
+9 9 2
 E
 #3609
 rainha branca~
@@ -130,7 +131,7 @@ raio de sol dourado. Para você, isto é seguramente amor a primeira vista.
 2099238 0 0 0 272 0 0 0 750 E
 16 8 1 4d6+450 4d4+6
 2000 26000
-8 8 2
+9 9 2
 E
 #3610
 rei negro~
@@ -143,7 +144,7 @@ facilmente consegue entender o porque dele ser o rei e não você.
 2099254 0 0 0 272 0 0 0 -999 E
 18 8 -1 8d5+700 5d5+8
 6000 34000
-8 8 1
+9 9 1
 E
 #3611
 rei branco~
@@ -156,6 +157,6 @@ você facilmente consegue entender o porque dele ser o rei e não você.
 2099254 0 0 0 272 0 0 0 999 E
 18 8 -1 8d5+700 5d5+8
 6000 34000
-8 8 1
+9 9 1
 E
 $

@@ -69,6 +69,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #3906
 praga negra espirito~
@@ -265,8 +266,8 @@ mãos, agora livres, vêm na direção de sua alma.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenRoam: 31
+GenWimpy: 4
+GenRoam: 42
 E
 #3917
 svern demonio~
@@ -285,8 +286,8 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
-GenRoam: 7
+GenWimpy: 3
+GenRoam: 18
 E
 #3918
 vrock demonio ave~
@@ -306,7 +307,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 2
-GenRoam: 4
+GenRoam: 6
 E
 #3919
 valik zumbi dragao~
@@ -397,7 +398,7 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
+GenWimpy: 2
 E
 #3924
 pilar gelo~
@@ -415,7 +416,7 @@ BareHandAttack: 5
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 3
 E
 #3925
 yeti agua~
@@ -432,6 +433,8 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 2
+GenRoam: 41
 E
 #3926
 pseudo-hidra pseudo hidra dragao~

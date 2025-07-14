@@ -9,8 +9,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12880
 9 9 2
-GenWimpy: 19
-GenRoam: 57
+GenWimpy: 24
+GenRoam: 73
 E
 #13601
 dragao negro pequeno~
@@ -37,8 +37,8 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 250 14000
 9 9 1
-GenWimpy: 15
-GenRoam: 79
+GenWimpy: 17
+GenRoam: 82
 E
 #13603
 cervo corca~
@@ -51,8 +51,8 @@ Uma corça, um cervo, um cervo fêmea...  Vamos! Você conhece a música.
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 2
-GenWimpy: 14
-GenRoam: 78
+GenWimpy: 16
+GenRoam: 83
 E
 #13604
 veado~
@@ -65,8 +65,8 @@ Um veado, um cervo fêmea...    Ah Chega!!
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 1
-GenWimpy: 8
-GenRoam: 31
+GenWimpy: 9
+GenRoam: 42
 E
 #13605
 duende floresta~
@@ -79,8 +79,8 @@ Ele olha para você e ri frenéticamente.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 1
-GenWimpy: 17
-GenRoam: 80
+GenWimpy: 18
+GenRoam: 83
 E
 #13606
 agil raposa~
@@ -93,8 +93,8 @@ An undefined string.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 0
-GenWimpy: 14
-GenRoam: 57
+GenWimpy: 16
+GenRoam: 60
 E
 #13607
 multicolorida borboleta~
@@ -107,8 +107,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12880
 9 9 0
-GenWimpy: 21
-GenRoam: 71
+GenWimpy: 23
+GenRoam: 76
 E
 #13608
 girassol grande~
@@ -121,8 +121,8 @@ Ele se moveu?
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 1
-GenWimpy: 10
-GenRoam: 25
+GenWimpy: 11
+GenRoam: 37
 E
 #13609
 arvore nirin odiosa~
@@ -135,8 +135,8 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 0 15454
 9 9 0
-GenWimpy: 5
-GenRoam: 11
+GenWimpy: 6
+GenRoam: 32
 E
 #13610
 inseto pedra inseto-pedra~
@@ -149,7 +149,7 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12937
 9 9 1
-GenWimpy: 86
-GenRoam: 83
+GenWimpy: 100
+GenRoam: 87
 E
 $

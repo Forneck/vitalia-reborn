@@ -42,7 +42,7 @@ An undefined string.
 30 1000
 9 9 1
 GenWimpy: 32
-GenRoam: 24
+GenRoam: 28
 E
 #7003
 aranha pequena peluda~
@@ -55,8 +55,8 @@ An undefined string.
 1 20 3 1d12+8 1d4+0
 1 100
 9 9 1
-GenWimpy: 61
-GenRoam: 87
+GenWimpy: 70
+GenRoam: 81
 E
 #7004
 besouro gigante terra~
@@ -81,8 +81,8 @@ An undefined string.
 3 17 9 2d5+35 1d7+0
 2 350
 9 9 2
-GenWimpy: 11
-GenRoam: 83
+GenWimpy: 18
+GenRoam: 87
 E
 #7006
 cobra~
@@ -95,8 +95,8 @@ An undefined string.
 4 16 7 2d5+40 1d9+0
 1 1000
 9 9 2
-GenWimpy: 19
-GenRoam: 87
+GenWimpy: 23
+GenRoam: 84
 E
 T 3008
 #7007
@@ -185,8 +185,8 @@ da beleza.
 14 7 1 1d8+172 2d8+1
 0 18000
 9 9 2
-GenWimpy: 11
-GenRoam: 57
+GenWimpy: 16
+GenRoam: 83
 E
 #7042
 naga guardiao~
@@ -216,8 +216,8 @@ verde pálido.
 13 11 0 1d12+160 2d7+2
 350 16000
 9 9 0
-GenWimpy: 8
-GenRoam: 57
+GenWimpy: 11
+GenRoam: 73
 E
 #7044
 bolha lemure~
@@ -232,7 +232,7 @@ mas ela ataca de qualquer jeito.  Parece que a mente dela foi queimada.
 5 16 6 3d5+57 2d4+0
 0 1000
 9 9 2
-GenWimpy: 16
+GenWimpy: 26
 GenRoam: 87
 E
 #7045

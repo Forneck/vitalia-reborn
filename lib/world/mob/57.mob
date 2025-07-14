@@ -10,8 +10,8 @@ amigável esta criaturinha.
 12 9 1 150d1+20 2d7+5
 300 15000
 9 9 1
-GenWimpy: 3
-GenRoam: 46
+GenWimpy: 4
+GenRoam: 59
 E
 #5702
 lobo~
@@ -25,7 +25,7 @@ VOCÊ não teria o mesmo gosto de um coelho.
 5 16 5 50d1+10 3d3+2
 0 2000
 9 9 1
-GenWimpy: 10
+GenWimpy: 14
 GenRoam: 87
 E
 #5703
@@ -40,8 +40,8 @@ em retirada..  OPA..  Lá vai seu almoço!
 3 18 7 30d1+5 1d3+1
 0 600
 9 9 1
-GenWimpy: 8
-GenRoam: 83
+GenWimpy: 10
+GenRoam: 86
 E
 #5704
 tomal mateiro~
@@ -84,7 +84,7 @@ mundo perigoso lá fora.'
 30 0 -2 200d2+200 3d6+11
 20000 40000
 9 9 1
-GenWimpy: 22
+GenWimpy: 20
 E
 #5707
 diabinho diabo~
@@ -112,8 +112,8 @@ dentes.  Ele o fita com muita fúria em seus olhos.
 13 8 1 150d2+80 2d7+8
 1 15000
 9 9 1
-GenWimpy: 9
-GenRoam: 6
+GenWimpy: 10
+GenRoam: 4
 E
 #5709
 cidadao graye homem~
@@ -128,8 +128,7 @@ sitiada por demônios.
 1000 22000
 9 9 1
 GenWimpy: 5
-GenLoot: 1
-GenRoam: 60
+GenRoam: 82
 E
 #5710
 cidada mulher~
@@ -143,8 +142,8 @@ sitiada por demônios.
 19 6 2 150d2+20 2d7+9
 3000 22000
 9 9 2
-GenWimpy: 3
-GenRoam: 56
+GenWimpy: 7
+GenRoam: 81
 E
 #5711
 demonio maior~
@@ -158,6 +157,7 @@ conhecimento a não ser uma imensa sêde de poder e destruição.
 36 -2 -1 350d2+220 3d8+14
 5000 64000
 9 9 1
+GenWimpy: 1
 E
 #5712
 guardiao gruta espectro~
@@ -184,7 +184,7 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 7
+GenWimpy: 8
 E
 #5714
 rymat conselheiro~

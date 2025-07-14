@@ -458,8 +458,8 @@ ela mesma e pintadas com vários tons de tinta.
 Str: 8
 Con: 8
 Cha: 15
-GenWimpy: 1
-GenRoam: 15
+GenWimpy: 2
+GenRoam: 37
 E
 #9322
 fada~
@@ -480,8 +480,8 @@ Int: 13
 Wis: 13
 Con: 7
 Cha: 16
-GenWimpy: 3
-GenRoam: 68
+GenWimpy: 4
+GenRoam: 74
 E
 #9323
 filhote dragao verde~
@@ -539,8 +539,8 @@ corcova.  Vive perambulando no deserto dos dragões de Vitália à procura de
 Str: 13
 Wis: 8
 Con: 13
-GenWimpy: 12
-GenRoam: 12
+GenWimpy: 15
+GenRoam: 27
 E
 #9326
 serpente negra~

@@ -34,7 +34,7 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 10
+GenWimpy: 14
 GenLoot: 1
 E
 #4202
@@ -107,8 +107,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 4
+GenRoam: 51
 E
 #4206
 escorpiao~
@@ -125,8 +125,8 @@ BareHandAttack: 1
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
-GenRoam: 17
+GenWimpy: 2
+GenRoam: 28
 E
 #4207
 chefe nomade~

@@ -315,8 +315,8 @@ vestido e tem uma coroa de flores enfeitando seus cabelos.
 30 5 -2 10d10+360 4d6+8
 3000 10030
 9 9 2
-GenWimpy: 5
-GenRoam: 24
+GenWimpy: 7
+GenRoam: 66
 E
 #17322
 rainha guinevere~
@@ -360,8 +360,9 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 8
-GenRoam: 3
+GenWimpy: 7
+GenRoam: 4
+GenGroup: 4
 E
 #17325
 bufao dagonet bobo~
@@ -445,8 +446,8 @@ nele.
 25 5 0 5d3+400 6d7+7
 1200 21000
 9 9 1
-GenWimpy: 1
-GenRoam: 1
+GenWimpy: 2
+GenRoam: 27
 E
 #17331
 mercador~
@@ -527,8 +528,8 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
-GenWimpy: 7
-GenRoam: 67
+GenWimpy: 10
+GenRoam: 83
 E
 #17337
 demonio~
@@ -633,7 +634,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 7
+GenWimpy: 8
 E
 #17344
 escrava~
@@ -647,8 +648,7 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 3
-GenRoam: 2
+GenWimpy: 4
 E
 #17345
 chefe saxao render~
@@ -738,7 +738,7 @@ O servo segura um instrumento de fazenda e usa trapos para se cobrir.
 10 7 1 4d12+250 6d6+5
 1240 4769
 9 9 1
-GenWimpy: 8
+GenWimpy: 9
 E
 #17351
 invasor anglo~

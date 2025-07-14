@@ -554,8 +554,8 @@ final.
 7 16 5 1d1+1 1d5+1
 1 10
 9 9 1
-GenWimpy: 4
-GenRoam: 49
+GenWimpy: 5
+GenRoam: 61
 E
 #5443
 gato rua~
@@ -568,8 +568,8 @@ Você vê um pequeno gatinho faminto.
 2 18 7 1d2+5 2d2+1
 1 0
 9 9 1
-GenWimpy: 8
-GenRoam: 59
+GenWimpy: 9
+GenRoam: 74
 E
 #5444
 urubu~
@@ -619,7 +619,7 @@ O que você vê diante de si é realmente um bebê de um elemental do ar.
 1 19 9 2d2+1 2d3+1
 1 10
 9 9 1
-GenWimpy: 67
+GenWimpy: 82
 E
 #5448
 lamia~
@@ -634,8 +634,8 @@ ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 21
-GenRoam: 9
+GenWimpy: 26
+GenRoam: 42
 E
 #5449
 dervixe~
@@ -648,8 +648,7 @@ Este homem parece poder usar montes e montes de restos.
 8 12 3 4d4+20 2d6+1
 1 105
 9 9 1
-GenWimpy: 38
-GenRoam: 2
+GenWimpy: 45
 E
 #5450
 sultao~
@@ -675,7 +674,7 @@ azul.   Sua lealdade para com o Sultão é eterna.
 3 17 7 1d1+15 1d6+1
 0 40
 9 9 2
-GenWimpy: 99
+GenWimpy: 100
 E
 #5452
 carcereiro~
@@ -716,7 +715,7 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
-GenWimpy: 29
+GenWimpy: 31
 E
 #5455
 ala alá~
@@ -796,8 +795,8 @@ Você vê um pequeno garoto correndo em volta das paredes do palácio.
 2 19 9 10d1+1 1d4+1
 1 10
 9 9 1
-GenWimpy: 3
-GenRoam: 40
+GenWimpy: 5
+GenRoam: 65
 E
 #5461
 guarda sultao~
@@ -811,8 +810,8 @@ necessidade.
 10 10 9 2d4+120 1d8+0
 150 2500
 9 9 1
-GenWimpy: 5
-GenRoam: 27
+GenWimpy: 8
+GenRoam: 56
 E
 T 3013
 #5462

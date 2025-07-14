@@ -17,6 +17,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 1
+GenRoam: 10
+GenGroup: 5
 E
 #701
 corpo zumbi morto vivo criatura~
@@ -37,8 +40,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 3
-GenRoam: 56
+GenWimpy: 7
+GenRoam: 83
 E
 #702
 planta figueira~
@@ -58,8 +61,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 5
-GenRoam: 45
+GenWimpy: 9
+GenRoam: 83
 E
 #705
 monstrinho menor criatura~
@@ -81,8 +84,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 10
-GenRoam: 66
+GenWimpy: 15
+GenRoam: 86
 E
 #706
 duende~
@@ -103,8 +106,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 8
-GenRoam: 73
+GenWimpy: 11
+GenRoam: 85
 E
 #707
 cristal monsto~
@@ -125,7 +128,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 15
+GenWimpy: 18
 E
 #708
 escorpião escorpiao vermelho~
@@ -146,8 +149,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 6
-GenRoam: 38
+GenWimpy: 7
+GenRoam: 53
 E
 #710
 maldito guarda~
@@ -168,7 +171,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 1
+GenWimpy: 3
+GenRoam: 24
 E
 #711
 guardião guardiao guarda~
@@ -190,7 +194,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 17
+GenWimpy: 22
 E
 #712
 impiedoso ceifeiro~
@@ -233,8 +237,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 10
-GenRoam: 69
+GenWimpy: 17
+GenRoam: 87
 E
 #714
 cavaleiro negro tempestuoso armadura~
@@ -279,8 +283,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 25
-GenRoam: 53
+GenWimpy: 31
+GenRoam: 73
 E
 #716
 pequena encurvada crianca criança~
@@ -319,7 +323,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 13
+GenWimpy: 19
 E
 #719
 ivian senhora~
@@ -376,8 +380,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 2
-GenRoam: 25
+GenWimpy: 4
+GenRoam: 54
 E
 #750
 febre escarlate~
@@ -416,8 +420,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 4
-GenRoam: 47
+GenWimpy: 5
+GenRoam: 59
 E
 #780
 Mosquito inseto~
@@ -437,7 +441,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 12
+GenWimpy: 15
 E
 #781
 planta carnivora venus carnívora vênus~
@@ -456,8 +460,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 9
-GenRoam: 7
+GenWimpy: 12
+GenRoam: 43
 E
 #799
 banda~
@@ -476,7 +480,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 2
+GenRoam: 45
 E
 $
