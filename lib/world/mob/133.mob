@@ -38,7 +38,7 @@ se vira lentamente e o olha sem expressão.
 20 0 -20 200d1+60 3d5+16
 6000 30000
 9 9 1
-GenWimpy: 6
+GenWimpy: 5
 E
 #13304
 mateon cavaleiro~
@@ -95,8 +95,8 @@ fingir que você não existe.
 10 12 3 100d1+10 2d5+4
 200 10000
 9 9 1
-GenWimpy: 19
-GenLoot: 7
-GenRoam: 84
+GenWimpy: 23
+GenLoot: 2
+GenRoam: 87
 E
 $

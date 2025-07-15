@@ -6366,25 +6366,25 @@ ACMD(do_gstats)
     calculate_gene_stats(gene_values, count, &mean, &median, &std_dev, &min_val, &max_val);
     
     /* Display results */
-    send_to_char(ch, "\r\n@Y--- Genetics Statistics for %s ---@n\r\n", gene_name);
+    send_to_char(ch, "\r\n%s--- Genetics Statistics for %s ---%s\r\n", CCYEL(ch, C_NRM),gene_name,CCNRM(ch, C_NRM));
     
     if (target_vnum != NOBODY) {
-        send_to_char(ch, "@WTarget:@n Mob vnum %d population\r\n", target_vnum);
+        send_to_char(ch, "%sTarget:%s Mob vnum %d population\r\n", CCGRN(ch, C_NRM),CCNRM(ch, C_NRM),target_vnum);
     } else if (target_zone != NOWHERE) {
-        send_to_char(ch, "@WTarget:@n Zone %d mobs\r\n", zone_table[target_zone].number);
+        send_to_char(ch, "%sTarget:%s Zone %d mobs\r\n",CCGRN(ch, C_NRM),CCNRM(ch, C_NRM), zone_table[target_zone].number);
     } else {
-        send_to_char(ch, "@WTarget:@n All mobs in the world\r\n");
+        send_to_char(ch, "%sTarget:%s All mobs in the world\r\n",CCGRN(ch, C_NRM),CCNRM(ch, C_NRM));
     }
     
-    send_to_char(ch, "@WSample Size:@n %d mobs\r\n", count);
-    send_to_char(ch, "@WMean:@n %.2f\r\n", mean);
-    send_to_char(ch, "@WMedian:@n %.2f\r\n", median);
-    send_to_char(ch, "@WStandard Deviation:@n %.2f\r\n", std_dev);
-    send_to_char(ch, "@WMinimum:@n %d\r\n", min_val);
-    send_to_char(ch, "@WMaximum:@n %d\r\n", max_val);
+    send_to_char(ch, "%sSample Size:%s %d mobs\r\n",CCGRN(ch, C_NRM),CCNRM(ch, C_NRM), count);
+    send_to_char(ch, "%sMean:%s %.2f\r\n",CCGRN(ch, C_NRM),CCNRM(ch, C_NRM), mean);
+    send_to_char(ch, "%sMedian:%s %.2f\r\n", CCGRN(ch, C_NRM),CCNRM(ch, C_NRM),median);
+    send_to_char(ch, "%sStandard Deviation:%s %.2f\r\n",CCGRN(ch, C_NRM),CCNRM(ch, C_NRM), std_dev);
+    send_to_char(ch, "%sMinimum:%s %d\r\n",CCGRN(ch, C_NRM),CCNRM(ch, C_NRM), min_val);
+    send_to_char(ch, "%sMaximum:%s %d\r\n",CCGRN(ch, C_NRM),CCNRM(ch, C_NRM), max_val);
     
     /* Distribution histogram */
-    send_to_char(ch, "\r\n@WDistribution (0-100 range):@n\r\n");
+    send_to_char(ch, "\r\n%sDistribution (0-100 range):%s\r\n",CCGRN(ch, C_NRM),CCNRM(ch, C_NRM));
     int ranges[10] = {0}; /* 0-9, 10-19, ..., 90-99 */
     for (i = 0; i < count; i++) {
         int range_idx = gene_values[i] / 10;

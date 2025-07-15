@@ -24,7 +24,7 @@ realmente!
 8 15 2 4d5+80 2d3+5
 500 2000
 9 9 2
-GenWimpy: 7
+GenWimpy: 8
 E
 #9503
 nebulosa jovem~
@@ -53,7 +53,7 @@ parece querer lançar toda sua ira contra você.
 10 9 -2 4d6+260 2d6+8
 1500 5000
 9 9 1
-GenWimpy: 42
+GenWimpy: 45
 E
 #9505
 gigante vermelha~
@@ -378,7 +378,7 @@ um peixe.  Ela merece sua piedade...
 68 -10 -20 5d5+2600 7d3+30
 10000 399999
 6 9 2
-GenWimpy: 2
+GenWimpy: 3
 E
 #9528
 peixe~

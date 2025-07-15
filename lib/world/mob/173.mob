@@ -40,7 +40,8 @@ carrega uma grande lança.
 70 2 -19 12d12+1200 14d14+15
 10000 65030
 9 9 1
-GenWimpy: 3
+GenWimpy: 4
+GenRoam: 11
 E
 T 3013
 #17304
@@ -113,6 +114,7 @@ de duas mãos.
 50 2 -10 5d7+800 3d7+16
 1000 32000
 9 9 1
+GenWimpy: 1
 E
 #17308
 gareth cavaleiro beumains~
@@ -154,6 +156,7 @@ e carregando sua grande espada Galantine.
 82 2 -10 4d8+1000 5d8+17
 8000 74998
 9 9 1
+GenWimpy: 1
 E
 #17311
 lamorak cavaleiro~
@@ -227,8 +230,8 @@ da meia idade, mas ainda é um vigoroso combatente.
 60 4 -7 2d8+678 12d6+18
 10000 62000
 9 9 1
-GenWimpy: 2
-GenRoam: 4
+GenWimpy: 3
+GenRoam: 7
 E
 #17316
 besta busca criatura~
@@ -315,8 +318,8 @@ vestido e tem uma coroa de flores enfeitando seus cabelos.
 30 5 -2 10d10+360 4d6+8
 3000 10030
 9 9 2
-GenWimpy: 7
-GenRoam: 66
+GenWimpy: 8
+GenRoam: 78
 E
 #17322
 rainha guinevere~
@@ -447,7 +450,7 @@ nele.
 1200 21000
 9 9 1
 GenWimpy: 2
-GenRoam: 27
+GenRoam: 44
 E
 #17331
 mercador~
@@ -461,6 +464,8 @@ mercadorias.
 25 5 -1 7d12+600 5d6+12
 10000 39004
 9 9 1
+GenWimpy: 1
+GenRoam: 15
 E
 #17332
 monge~
@@ -476,7 +481,7 @@ maneira dos fransciscanos.
 1200 19078
 9 9 1
 GenWimpy: 3
-GenRoam: 32
+GenRoam: 35
 E
 #17333
 trovador~
@@ -502,7 +507,7 @@ camisa laranja.
 14 7 0 3d9+209 7d7+7
 1245 16980
 9 9 1
-GenWimpy: 1
+GenWimpy: 2
 E
 #17335
 artista~
@@ -529,7 +534,7 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 1000 7900
 9 9 1
 GenWimpy: 10
-GenRoam: 83
+GenRoam: 86
 E
 #17337
 demonio~
@@ -634,7 +639,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 8
+GenWimpy: 7
 E
 #17344
 escrava~
@@ -934,6 +939,7 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 2
+GenWimpy: 3
+GenRoam: 15
 E
 $

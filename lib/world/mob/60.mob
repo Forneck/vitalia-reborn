@@ -12,8 +12,8 @@ vive uma vida simples e pacífica.
 5 15 6 1d12+60 1d4+3
 100 1050
 9 9 1
-GenWimpy: 3
-GenRoam: 20
+GenWimpy: 4
+GenRoam: 26
 E
 #6001
 pequeno coelho~
@@ -26,7 +26,7 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 0 20 6 1d4+1 1d4+0
 0 60
 9 9 0
-GenWimpy: 21
+GenWimpy: 23
 GenRoam: 87
 E
 #6002
@@ -69,8 +69,8 @@ castanhos que olham fixamente para você, com grande interesse.
 2 19 5 2d8+8 1d6+0
 0 230
 9 9 2
-GenWimpy: 17
-GenRoam: 56
+GenWimpy: 20
+GenRoam: 55
 E
 #6005
 raposa marrom~
@@ -98,7 +98,7 @@ O pássaro parece que não vai viver muito, pelo jeito.
 0 17 10 2d3+1 1d2+1
 0 25
 9 9 0
-GenWimpy: 80
+GenWimpy: 93
 E
 #6007
 gato lince gato-selvagem~
@@ -125,8 +125,8 @@ O pardal parece estar aproveitando bem a vida.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 16
-GenRoam: 81
+GenWimpy: 17
+GenRoam: 83
 E
 #6009
 tordo~
@@ -139,8 +139,8 @@ O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 19
-GenRoam: 44
+GenWimpy: 20
+GenRoam: 42
 E
 #6010
 esquilo~
@@ -200,8 +200,8 @@ pensa você.
 0 20 5 2d5+3 1d4+0
 0 40
 9 9 0
-GenWimpy: 29
-GenRoam: 77
+GenWimpy: 30
+GenRoam: 80
 E
 #6014
 corvo negro passaro~
@@ -285,7 +285,7 @@ O pato é bastante gordo.   Ele parece estar aproveitando bem sua vida.
 1 20 10 2d6+5 1d4+0
 0 75
 9 9 0
-GenWimpy: 59
-GenRoam: 61
+GenWimpy: 64
+GenRoam: 66
 E
 $

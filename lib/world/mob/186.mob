@@ -65,7 +65,7 @@ Mestre irá me arrancar a cabeça se eu não encontrar o bichinho!"
 9 9 1
 GenWimpy: 18
 GenLoot: 42
-GenEquip: 6
+GenEquip: 4
 GenUse: 20
 E
 #18605
@@ -110,7 +110,7 @@ espere!!  Ele parece que está querendo atacá-lo!
 4 17 5 1d8+46 2d4+0
 300 600
 9 9 0
-GenWimpy: 59
+GenWimpy: 62
 GenRoam: 87
 E
 #18608
@@ -194,8 +194,8 @@ acabar logo com a mediocridade dele.
 1 20 10 1d1+19 1d3+1
 50 220
 9 9 1
-GenWimpy: 18
-GenRoam: 80
+GenWimpy: 19
+GenRoam: 83
 E
 #18613
 novata tagarela~

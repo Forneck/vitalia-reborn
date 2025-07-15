@@ -150,6 +150,8 @@ An undefined string.
 1 17 8 1d1+30 2d1+3
 0 75
 9 9 0
+GenWimpy: 1
+GenRoam: 27
 E
 #13412
 esquilo~
@@ -382,8 +384,8 @@ Você pouco pode ver olhando para esta criatura.
 1 14 7 1d1+100 3d1+6
 0 75
 9 9 1
-GenWimpy: 2
-GenRoam: 28
+GenWimpy: 3
+GenRoam: 44
 E
 #13431
 fada~
@@ -409,6 +411,8 @@ maravilhas espalhadas por Vitália.
 15 5 4 1d1+500 6d1+15
 250 5454
 9 9 1
+GenWimpy: 2
+GenRoam: 39
 E
 #13433
 aranha negra pequena~
@@ -564,7 +568,6 @@ guarda estaria protegendo?
 10025 169234
 9 9 1
 E
-
 #13445
 nobre elfo~
 um nobre elfo~
@@ -577,9 +580,8 @@ de linhagem nobre.
 2156546 0 0 0 0 0 0 0 700 E
 25 1 2 1d6+300 3d8+5
 1200 12000
-8 8 1
+9 9 1
 E
-
 #13446
 bibliotecario elfo~
 o bibliotecário élfico~
@@ -592,9 +594,8 @@ pesquisa e estudo.
 2156546 0 0 0 0 0 0 0 650 E
 22 2 1 1d5+275 2d8+4
 1000 10000
-8 8 1
+9 9 1
 E
-
 #13447
 arquivista elfo~
 o arquivista élfico~
@@ -607,9 +608,8 @@ aos primeiros dias da cidade élfica.
 2156546 0 0 0 0 0 0 0 750 E
 28 0 0 1d7+350 3d8+6
 1400 14000
-8 8 1
+9 9 1
 E
-
 #13448
 comerciante elfo~
 um comerciante élfico~
@@ -622,9 +622,8 @@ produtos élficos é reconhecida em toda a região.
 2156546 0 0 0 0 0 0 0 600 E
 20 3 3 1d4+250 2d7+3
 900 9000
-8 8 1
+9 9 1
 E
-
 #13449
 artesao elfo~
 o artesão élfico~
@@ -637,9 +636,8 @@ funcionalidade com beleza excepcional. Cada peça que ele produz
 2156546 0 0 0 0 0 0 0 675 E
 24 1 1 1d6+300 2d8+4
 1100 11000
-8 8 1
+9 9 1
 E
-
 #13450
 encantador elfo~
 o encantador élfico~
@@ -652,9 +650,8 @@ criando itens únicos.
 2156546 0 0 0 0 0 0 0 725 E
 26 -1 -1 1d7+325 3d7+5
 1300 13000
-8 8 1
+9 9 1
 E
-
 #13451
 druida elfo~
 o druida élfico~
@@ -667,9 +664,8 @@ da floresta.
 2156546 0 0 0 0 0 0 0 650 E
 23 2 2 1d5+287 2d8+4
 1050 10500
-8 8 1
+9 9 1
 E
-
 #13452
 curandeiro elfo~
 o curandeiro élfico~
@@ -682,7 +678,6 @@ tradicional élfica com magia natural.
 2156546 0 0 0 0 0 0 0 675 E
 24 1 1 1d6+300 2d8+4
 1100 11000
-8 8 1
+9 9 1
 E
-
 $

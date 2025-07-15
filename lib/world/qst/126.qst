@@ -1,3 +1,13 @@
+#12700
+Busca por a adaga do Clamor~
+um ladrão de túmulos precisa de a adaga do Clamor~
+um ladrão de túmulos está procurando por a adaga do Clamor. Se você encontrar este item, traga-o para mim ou diretamente para um ladrão de túmulos para receber sua recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 3709 -1 -1 -1
+10 0 29 54 -1 3731 1
+616 1232 65535
+S
 #12711
 Busca por o Card Goblins~
 um leão realmente forte precisa de o Card Goblins~
@@ -17,6 +27,16 @@ Que pena que você desistiu desta busca.~
 5 3012 b 3720 -1 -1 -1
 10 0 35 60 -1 3726 1
 792 1584 65535
+S
+#12859
+Busca por a garra da decadência~
+um ladrão de túmulos precisa de a garra da decadência~
+um ladrão de túmulos está procurando por a garra da decadência. Se você encontrar este item, traga-o para mim ou diretamente para um ladrão de túmulos para receber sua recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 3711 -1 -1 -1
+10 0 29 54 -1 3731 1
+717 1434 65535
 S
 #12872
 Busca por a garra sangrenta~

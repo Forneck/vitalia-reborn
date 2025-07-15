@@ -9,7 +9,7 @@ Ela parece estar com fome.
 11 7 4 5d10+50 3d6+0
 0 12000
 9 9 0
-GenWimpy: 7
+GenWimpy: 9
 E
 T 3008
 #4001
@@ -48,7 +48,7 @@ Ele é horrível.
 4 16 5 2d10+40 1d8+1
 50 800
 9 9 0
-GenWimpy: 51
+GenWimpy: 53
 GenRoam: 87
 E
 #4004
@@ -62,8 +62,8 @@ Você percebe toda a maldade no seu olhar...
 5 15 5 2d10+60 2d4+0
 100 900
 9 9 0
-GenWimpy: 49
-GenRoam: 85
+GenWimpy: 53
+GenRoam: 87
 E
 #4005
 orc enorme~
@@ -76,8 +76,8 @@ Ele parece pavoroso.
 7 11 2 3d20+75 2d6+2
 200 3000
 9 9 1
-GenWimpy: 6
-GenRoam: 31
+GenWimpy: 8
+GenRoam: 45
 E
 #4050
 guerreiro~
@@ -103,8 +103,9 @@ Ele parece ter jeito com armas.
 7 13 5 3d10+80 2d5+0
 200 2500
 9 9 1
-GenWimpy: 37
+GenWimpy: 42
 GenRoam: 87
+GenGroup: 1
 E
 #4052
 hobgoblin~
@@ -156,8 +157,9 @@ O hobgoblin parece bastante perigoso.
 10 8 2 1d16+120 2d6+3
 300 10000
 9 9 1
-GenWimpy: 5
-GenRoam: 62
+GenWimpy: 7
+GenRoam: 76
+GenGroup: 10
 E
 #4056
 orc~
@@ -170,8 +172,8 @@ Bem, ele não parece ser muito amigável.
 8 13 2 3d10+100 2d5+2
 150 4000
 9 9 1
-GenWimpy: 24
-GenRoam: 86
+GenWimpy: 26
+GenRoam: 87
 E
 #4057
 leao montanha~
@@ -184,7 +186,7 @@ O leão parece bastante hostil com enormes garras e grandes dentes.
 5 16 5 1d10+60 2d4+0
 0 900
 9 9 1
-GenWimpy: 33
+GenWimpy: 36
 GenRoam: 87
 E
 #4058
@@ -212,8 +214,7 @@ Parece que ele lida bem com magia.
 13 10 2 3d20+100 2d6+0
 2500 21000
 9 9 1
-GenWimpy: 17
-GenRoam: 8
+GenWimpy: 26
 E
 T 3009
 #4101
@@ -253,8 +254,8 @@ o SEU ouro também...
 8 13 3 1d10+100 2d5+2
 100 4000
 9 9 1
-GenWimpy: 26
-GenRoam: 69
+GenWimpy: 33
+GenRoam: 86
 E
 T 3007
 #4104
@@ -280,8 +281,8 @@ Bem, ela não parece prestar muita atenção em você.
 6 15 4 3d10+50 1d8+1
 0 1500
 9 9 0
-GenWimpy: 49
-GenRoam: 1
+GenWimpy: 60
+GenRoam: 5
 E
 #4106
 guerreiro~
@@ -294,8 +295,8 @@ Ele não parece muito amigável...
 9 10 3 3d10+100 2d6+2
 500 9000
 9 9 1
-GenWimpy: 24
-GenRoam: 85
+GenWimpy: 27
+GenRoam: 87
 E
 #4107
 kobold~
@@ -308,7 +309,7 @@ Ele parece lodoso..
 7 14 4 4d10+25 1d9+1
 20 3000
 9 9 1
-GenWimpy: 42
-GenRoam: 53
+GenWimpy: 48
+GenRoam: 71
 E
 $

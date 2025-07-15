@@ -37,7 +37,7 @@ Um chefe muito bravo.
 17 3 1 1d12+210 1d8+18
 0 28000
 9 9 1
-GenWimpy: 3
+GenWimpy: 5
 E
 #3103
 sentinela guarda~
@@ -50,7 +50,7 @@ Um grande, forte e bravo sentinela.
 10 10 2 1d12+123 1d8+3
 0 9000
 9 9 1
-GenWimpy: 18
+GenWimpy: 20
 E
 #3104
 secretaria~
@@ -146,8 +146,8 @@ O pato á bem gordo. Parece que ele está aproveitando a vida.
 1 20 10 2d6+5 1d4+0
 0 75
 9 9 0
-GenWimpy: 8
-GenRoam: 68
+GenWimpy: 10
+GenRoam: 65
 E
 #3124
 guarda-costas~

@@ -10,8 +10,8 @@ perigosa.
 14 6 4 1d1+400 6d1+14
 0 27000
 9 9 1
-GenWimpy: 10
-GenRoam: 50
+GenWimpy: 11
+GenRoam: 51
 E
 #13501
 elfo cacador~
@@ -178,8 +178,8 @@ Seus olhos possuem uma expressão não muito amigável.
 14 6 4 1d1+400 6d1+14
 0 13496
 9 9 1
-GenWimpy: 69
-GenRoam: 26
+GenWimpy: 76
+GenRoam: 34
 E
 #13513
 coelho pequeno~
@@ -192,8 +192,8 @@ Ele é simplesmente adorável, você queria ter um igual a esse!
 8 12 6 1d1+150 4d1+8
 0 10333
 9 9 1
-GenWimpy: 16
-GenRoam: 80
+GenWimpy: 17
+GenRoam: 85
 E
 #13514
 cobra cega~
@@ -206,8 +206,8 @@ Olhando bem você percebe que isso NÃO é uma cobra!
 9 11 6 1d1+175 4d1+9
 0 11371
 9 9 2
-GenWimpy: 11
-GenRoam: 40
+GenWimpy: 12
+GenRoam: 55
 E
 #13515
 druida~
@@ -221,8 +221,8 @@ demais para pedir que você saia.
 18 2 2 1d1+800 7d1+18
 325 20769
 9 9 1
-GenWimpy: 5
-GenRoam: 74
+GenWimpy: 7
+GenRoam: 77
 E
 #13516
 druidesa~

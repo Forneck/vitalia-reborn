@@ -39,8 +39,8 @@ exterminador de coelhinhos em pessoa, Edgar o Horrível!
 1 20 10 3d9+10 1d8+1
 23 100
 9 9 1
-GenWimpy: 9
-GenRoam: 76
+GenWimpy: 11
+GenRoam: 80
 E
 #2503
 diamante golem~
@@ -66,7 +66,7 @@ Ou então, ele pode apenas estar com dor de cabeça.
 10 10 -1 10d10+100 1d8+8
 436 3500
 9 9 1
-GenWimpy: 16
+GenWimpy: 20
 GenRoam: 87
 E
 T 3009
@@ -179,8 +179,8 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 33
-GenRoam: 58
+GenWimpy: 34
+GenRoam: 64
 E
 #2513
 guardioes maiores olhos~
@@ -193,9 +193,9 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 15
+GenWimpy: 17
 GenRoam: 84
-GenGroup: 9
+GenGroup: 7
 E
 #2514
 mago visitante~
@@ -222,7 +222,7 @@ Ela parece estar bastante concentrada em seus estudos.
 7 7 2 7d6+25 2d4+5
 369 2950
 6 6 2
-GenWimpy: 36
+GenWimpy: 44
 E
 T 3009
 #2516
@@ -236,7 +236,7 @@ Ele parece ignorar tudo à sua volta, exceto o feitiço que está memorizando.
 7 6 2 7d6+25 2d4+5
 487 2750
 9 9 1
-GenWimpy: 35
+GenWimpy: 48
 E
 T 3009
 #2517
@@ -251,7 +251,7 @@ Ele parece estar sonhando.
 7 7 2 7d6+25 2d4+4
 211 2650
 4 4 1
-GenWimpy: 33
+GenWimpy: 40
 E
 T 3009
 #2518
@@ -265,7 +265,7 @@ Ele parece ser um jovem travesso.
 7 7 1 7d6+25 2d4+5
 382 2300
 9 9 1
-GenWimpy: 24
+GenWimpy: 34
 E
 T 3009
 #2519
@@ -280,7 +280,7 @@ algumas marcas de queimaduras menores marcam sua pelugem mosqueada.
 1 20 1 1d1+10 1d4+1
 0 11
 9 9 2
-GenWimpy: 26
+GenWimpy: 32
 E
 #2520
 estudante~
@@ -293,7 +293,7 @@ O estudante boceja.
 8 9 1 8d8+80 2d4+6
 263 3000
 6 6 1
-GenWimpy: 6
+GenWimpy: 5
 E
 T 3009
 #2521
@@ -307,6 +307,7 @@ Ele parece estar bastante nervoso por ser interrompido por você.
 14 6 -2 14d14+140 3d4+8
 880 18500
 9 9 1
+GenWimpy: 1
 E
 T 3009
 #2522
@@ -637,7 +638,7 @@ Isto mais parece uma trouxa de roupa suja, é surpreendente que possa andar.
 8 10 1 8d8+80 3d4+1
 0 2100
 9 9 0
-GenWimpy: 11
+GenWimpy: 12
 E
 #2546
 golem adamantite~
@@ -720,8 +721,8 @@ zumbi.
 18 5 -4 18d18+180 3d5+10
 0 22000
 9 9 0
-GenWimpy: 6
-GenRoam: 60
+GenWimpy: 8
+GenRoam: 69
 E
 #2552
 bruxa velha feia~
@@ -736,8 +737,8 @@ revolver de repulsão.
 20 5 -2 20d20+200 3d6+5
 2150 26850
 9 9 2
-GenWimpy: 19
-GenRoam: 77
+GenWimpy: 20
+GenRoam: 80
 E
 T 3009
 #2553
@@ -782,7 +783,7 @@ garras bem grandes.
 15 5 -5 15d15+150 5d5+5
 0 18750
 9 9 2
-GenWimpy: 10
+GenWimpy: 12
 E
 #2556
 mestre cinza~

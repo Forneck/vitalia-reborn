@@ -9,7 +9,7 @@ Ele parece tentar alcançar o outro lado da montanha, assim como você.
 10 10 0 1d10+160 2d10+8
 400 600
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
 E
 #17002
 ciclope~
@@ -22,7 +22,8 @@ Ele parece estar atrás de um almoço..
 22 0 0 1d5+380 3d5+20
 1000 20000
 9 9 1
-GenWimpy: 9
+GenWimpy: 11
+GenLoot: 1
 E
 #17003
 elemental~
@@ -35,7 +36,7 @@ Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 10 1 -1 1d5+100 3d8+10
 1100 6000
 9 9 1
-GenWimpy: 8
+GenWimpy: 12
 E
 #17004
 elemental guardiao~
@@ -61,8 +62,8 @@ An undefined string.
 5 0 -4 2d5+150 2d6+4
 1000 6000
 9 9 1
-GenWimpy: 8
-GenRoam: 65
+GenWimpy: 10
+GenRoam: 73
 E
 #17006
 elemental~
@@ -90,7 +91,8 @@ An undefined string.
 2200 20000
 9 9 1
 GenWimpy: 16
-GenRoam: 42
+GenLoot: 1
+GenRoam: 62
 E
 #17008
 lider elemental terra~
@@ -167,8 +169,8 @@ Ela percorre o chão em sua direção.
 8 2 0 1d5+200 1d10+3
 980 5000
 9 9 2
-GenWimpy: 5
-GenRoam: 15
+GenWimpy: 8
+GenRoam: 42
 E
 #17015
 chama elemental fogo~
@@ -275,7 +277,7 @@ Ele parece um tanto quanto imprevisível.
 1000 4000
 9 9 1
 GenWimpy: 3
-GenRoam: 4
+GenRoam: 17
 E
 #17023
 particula elemental coisa~
@@ -317,6 +319,7 @@ An undefined string.
 450 1000
 9 9 1
 GenWimpy: 17
+GenLoot: 1
 GenRoam: 87
 E
 #17026
@@ -331,7 +334,7 @@ e seus bruxuleantes membros, que parecem ser afiados como garras.
 26 -2 -5 1d5+590 6d4+14
 3000 30000
 9 9 2
-GenWimpy: 25
+GenWimpy: 30
 GenGroup: 18
 E
 #17027
@@ -345,7 +348,7 @@ Um humanóide que parece ter sido preso em um campo magnético.
 26 -2 -5 1d5+640 6d5+14
 3000 30000
 9 9 1
-GenWimpy: 27
+GenWimpy: 25
 E
 #17028
 neve bandido~
@@ -388,7 +391,7 @@ tempo até que ela lhe atinja.
 26 -2 -7 1d5+650 6d5+11
 3000 30000
 9 9 1
-GenWimpy: 20
+GenWimpy: 21
 GenGroup: 4
 E
 #17031

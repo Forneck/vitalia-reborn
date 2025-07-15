@@ -423,8 +423,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 10
-GenRoam: 81
+GenWimpy: 9
+GenRoam: 86
 E
 #3722
 demonio ossos~
@@ -446,8 +446,8 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenRoam: 41
+GenWimpy: 6
+GenRoam: 51
 E
 #3723
 esqueleto guerreiro~
@@ -464,8 +464,8 @@ Este guerreio esqueleto guarda a de Ilha de visitantes não desejados.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenRoam: 35
+GenWimpy: 7
+GenRoam: 55
 E
 #3724
 esqueleto dragao~
@@ -505,7 +505,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 4
-GenRoam: 81
+GenRoam: 87
 E
 #3726
 zumbi guerreiro~
@@ -619,7 +619,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 7
+GenRoam: 5
 E
 #3732
 zumbi guarda~

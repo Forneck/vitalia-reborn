@@ -37,7 +37,7 @@ anel proteção gélida~
 um anel de proteção gélida~
 Um anel de proteção gélida brilha com luz azulada.~
 ~
-9 ha 0 0 0 ab 0 0 0 0 0 0 0
+9 ah 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
 0 480 2400 0 0
 A
@@ -93,7 +93,7 @@ manto real inverno~
 um manto real do inverno~
 Um luxuoso manto real está aqui.~
 ~
-9 ha 0 0 0 ak 0 0 0 0 0 0 0
+9 ah 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
 4 1800 9000 0 0
 A
@@ -108,13 +108,13 @@ A coroa da Rainha de Gelo brilha com poder real.~
 9 hij 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
 1 12000 60000 0 0
+T 208
 A
 12 4
 A
 18 4
 A
 19 10
-T 208
 #211
 botas caminhada gelo~
 botas de caminhada no gelo~
@@ -150,7 +150,7 @@ A
 A
 18 3
 #214
-baú tesouro real~
+bau tesouro real~
 um baú do tesouro real~
 Um ornamentado baú do tesouro real está aqui.~
 ~
@@ -166,4 +166,4 @@ Uma lanterna que nunca se apaga está aqui.~
 1 h 0 0 0 a 0 0 0 0 0 0 0
 0 0 -1 0
 2 600 3000 0 0
-$
+$~

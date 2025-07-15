@@ -1,5 +1,3 @@
-* Zone 2 Triggers - O Castelo da Rainha Gelada
-
 #200
 Entrada do Castelo - Atmosfera - R2XX~
 2 b 10
@@ -14,13 +12,12 @@ if %random.10% == 1
   %load% mob 201
 end
 ~
-
-#201  
+#201
 Guarda Gelo - Desafio - M201~
 0 g 100
 ~
 * This is for mob 201 - Ice guard challenge trigger
-if %direction% == north
+if %direction% == south
   %send% %actor% %self.name% bloqueia sua passagem com uma lança de gelo.
   %echoaround% %actor% %self.name% impede a passagem de %actor.name%.
   %force% %actor% look
@@ -37,7 +34,6 @@ if %direction% == north
   end
 end
 ~
-
 #202
 Rainha Gelada - Boss Fight - M2XX~
 0 b 10
@@ -67,7 +63,6 @@ switch %random.4%
   break
 done
 ~
-
 #203
 Prisão - Evento Escape - R2XX~
 2 b 5
@@ -82,7 +77,6 @@ if %random.10% == 1
   %load% mob 205
 end
 ~
-
 #204
 Tesouro Real - Armadilha - O2XX~
 1 g 100
@@ -100,7 +94,6 @@ else
   %echoaround% %actor% %actor.name% é gravemente ferido pelos espinhos de gelo!
 end
 ~
-
 #205
 Elemental Gelo - Invocação - M2XX~
 0 f 100
@@ -116,25 +109,27 @@ if %random.3% == 1
   %echo% Outro elemental do gelo se materializa, enfurecido!
 end
 ~
-
-#206  
+#206
 Biblioteca Gélida - Conhecimento - R2XX~
 2 c 100
-livro pergaminho~
+e~
 * This is for room 2XX - Icy library book command trigger
-%send% %actor% Você examina os tomos antigos preservados pelo frio eterno.
-%echoaround% %actor% %actor.name% estuda os livros gelados da biblioteca.
-wait 2 sec
-%send% %actor% As páginas contêm segredos sobre magia de gelo e inverno.
-if %actor.class% == Mago
-  %send% %actor% Como mago, você compreende melhor estes conhecimentos arcanos!
-  %send% %actor% Sua compreensão sobre magias de gelo aumenta temporariamente.
-  %affect% %actor% 'bless' 300
+if %cmd.mudcommand% == examine && %livros.contains('%arg%)%
+  %send% %actor% Você examina os tomos antigos preservados pelo frio eterno.
+  %echoaround% %actor% %actor.name% estuda os livros gelados da biblioteca.
+  wait 2 sec
+  %send% %actor% As páginas contêm segredos sobre magia de gelo e inverno.
+  if %actor.class% == Mago
+    %send% %actor% Como mago, você compreende melhor estes conhecimentos arcanos!
+    %send% %actor% Sua compreensão sobre magias de gelo aumenta temporariamente.
+    %affect% %actor% 'bless' 300
+  end
+  %load% obj 206
+  %send% %actor% Você encontra um pergaminho útil entre os livros!
+else
+  return 0
 end
-%load% obj 206
-%send% %actor% Você encontra um pergaminho útil entre os livros!
 ~
-
 #207
 Torres - Sistema Vigilância - R2XX~
 2 b 15
@@ -150,7 +145,6 @@ if %random.5% == 1
   %echo% Um guarda de gelo responde ao chamado e vem investigar!
 end
 ~
-
 #208
 Coroa Real - Maldição - O2XX~
 1 j 100
@@ -169,13 +163,12 @@ else
   %send% %actor% Você sente como se estivesse congelando por dentro!
 end
 ~
-
 #209
 Passagem Secreta - Descoberta - R2XX~
 2 c 100
-pesquisa procura examina~
+examine pesquisa procura~
 * This is for room 2XX - Secret passage discovery trigger
-if %cmd% == pesquisa || %cmd% == procura || %cmd% == examina
+if %cmd% == pesquisa || %cmd% == procura || %cmd% == examine
   if %arg% == parede || %arg% == muralha || %arg% == pedra
     %send% %actor% Você examina cuidadosamente as paredes de gelo...
     %echoaround% %actor% %actor.name% examina as paredes com atenção.
@@ -192,5 +185,4 @@ if %cmd% == pesquisa || %cmd% == procura || %cmd% == examina
   end
 end
 ~
-
 $~

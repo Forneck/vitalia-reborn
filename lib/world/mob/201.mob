@@ -50,7 +50,7 @@ na sua suposição.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 1
-GenWimpy: 7
+GenWimpy: 8
 E
 #20104
 paciente mental~
@@ -80,8 +80,8 @@ Há uma grande possibilidade de que Ted seja um grande amigo imaginário...
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 13
-GenRoam: 43
+GenWimpy: 16
+GenRoam: 60
 E
 #20106
 cerebro~
@@ -99,9 +99,9 @@ espera o dia em que poderá sair desse terrível lugar.
 7 15 5 3d5+85 2d4+1
 1000 3000
 9 9 1
-GenWimpy: 20
-GenRoam: 15
-GenGroup: 28
+GenWimpy: 22
+GenRoam: 13
+GenGroup: 31
 E
 #20107
 pesquisador distraido~
@@ -118,8 +118,8 @@ terminam por revelar o eterno paciente dentro dele.
 5 15 9 10d5+20 2d3+2
 1100 1000
 9 9 1
-GenWimpy: 21
-GenRoam: 4
+GenWimpy: 22
+GenRoam: 28
 E
 #20108
 assistente~
@@ -153,10 +153,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 25
-GenLoot: 1
-GenRoam: 71
-GenGroup: 3
+GenWimpy: 27
+GenRoam: 70
+GenGroup: 1
 E
 #20110
 jovem mulher Sybila~
@@ -186,10 +185,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 12
-GenLoot: 1
-GenRoam: 41
-GenGroup: 1
+GenWimpy: 13
+GenRoam: 55
+GenGroup: 4
 E
 #20112
 jovem mulher Tricia~
@@ -204,8 +202,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 25
-GenRoam: 51
+GenWimpy: 28
+GenRoam: 72
 E
 #20113
 jovem mulher Lorraine~
@@ -220,9 +218,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 18
-GenRoam: 58
-GenGroup: 2
+GenWimpy: 20
+GenRoam: 66
 E
 #20114
 jovem mulher Renee~
@@ -237,8 +234,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 12
-GenRoam: 63
+GenWimpy: 13
+GenRoam: 62
 E
 #20115
 jovem mulher Stela~
@@ -253,8 +250,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 17
-GenRoam: 34
+GenWimpy: 19
+GenLoot: 1
+GenRoam: 47
 E
 #20116
 jovem mulher dorothy~
@@ -288,9 +286,9 @@ original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 13
-GenRoam: 54
-GenGroup: 2
+GenWimpy: 14
+GenRoam: 64
+GenGroup: 1
 E
 #20118
 jovem mulher nancy~
@@ -305,10 +303,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 15
-GenLoot: 1
-GenRoam: 53
-GenGroup: 2
+GenWimpy: 18
+GenRoam: 62
 E
 #20119
 Spike~
@@ -324,8 +320,8 @@ algum dia alguém traga-lhe água.
 1 20 10 1d1+19 1d3+1
 50 220
 9 9 1
-GenWimpy: 5
-GenRoam: 19
+GenWimpy: 6
+GenRoam: 32
 E
 #20120
 barba ruiva~

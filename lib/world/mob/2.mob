@@ -10,10 +10,9 @@ que ele dá deixa pequenos cristais de gelo no chão.
 2099266 0 0 0 0 0 0 0 600 E
 25 8 2 1d6+400 3d6+8
 1500 15000
-8 8 1
+9 9 1
 E
 T 201
-
 #201
 soldado gelado~
 um soldado gelado~
@@ -26,9 +25,9 @@ que reflete a luz de forma hipnotizante.
 2099266 0 0 0 0 0 0 0 650 E
 22 6 1 1d5+350 2d8+6
 1200 12000
-8 8 1
+9 9 1
+GenWimpy: 1
 E
-
 #202
 servo gelo~
 um servo de gelo~
@@ -41,9 +40,9 @@ apenas seguindo ordens pré-estabelecidas.
 2099200 0 0 0 0 0 0 0 400 E
 18 10 4 1d4+250 2d6+4
 800 8000
-8 8 1
+9 9 1
+GenWimpy: 1
 E
-
 #203
 capitao gelo~
 o Capitão de Gelo~
@@ -53,12 +52,18 @@ Um imponente guerreiro de gelo com detalhes dourados congelados em seu peito.
 Sua presença irradia um frio intenso e sua experiência militar é evidente
 em cada movimento calculado. Uma aura azulada pulsa ao redor de seu corpo.
 ~
-2156546 0 0 0 0 0 0 0 800 E
+2156544 0 0 0 0 0 0 0 800 E
 35 2 -2 1d8+600 4d8+12
 2500 25000
-8 8 1
+9 9 1
+GenLoot: 100
+GenEquip: 50
+GenRoam: 50
+GenGroup: 100
+GenBrave: 100
+GenUse: 50
+GenTrade: 100
 E
-
 #204
 rainha gelada~
 a Rainha Gelada~
@@ -75,7 +80,6 @@ aspectos do inverno eterno deste castelo.
 4 4 2
 E
 T 202
-
 #205
 prisioneiro~
 um prisioneiro~
@@ -88,9 +92,8 @@ Seus lábios estão azuis de frio e ele mal consegue se mover devido
 2097152 0 0 0 0 0 0 0 0 E
 12 12 6 1d3+150 1d6+3
 400 4000
-8 8 1
+9 9 1
 E
-
 #206
 espírito gelo~
 um espírito do gelo~
@@ -103,9 +106,8 @@ gelados até o fim dos tempos.
 2361378 0 0 0 0 0 0 0 -200 E
 20 5 0 1d4+300 2d7+5
 1000 10000
-8 8 0
+9 9 0
 E
-
 #207
 construto gelo~
 um construto de gelo~
@@ -118,9 +120,8 @@ devastadores. Runas geladas brilham em sua superfície.
 2099266 0 0 0 0 0 0 0 750 E
 30 0 -5 1d8+500 4d6+10
 2000 20000
-8 8 0
+9 9 0
 E
-
 #208
 elemental gelo~
 um elemental do gelo~
@@ -133,10 +134,10 @@ afiados giram ao seu redor como lâminas cortantes.
 2099266 0 0 0 0 0 0 0 700 E
 28 3 -3 1d7+450 3d8+9
 1800 18000
-8 8 0
+9 9 0
+GenWimpy: 1
 E
 T 205
-
 #209
 aranha cristal~
 uma aranha de cristal~
@@ -149,9 +150,10 @@ delicado como sinos quando toca o chão gelado.
 2097218 0 0 0 0 0 0 0 300 E
 15 8 3 1d3+200 2d5+4
 600 6000
-8 8 2
+9 9 2
+GenWimpy: 1
+GenLoot: 1
 E
-
 #210
 lobo gelo~
 um lobo do gelo~
@@ -164,9 +166,8 @@ corpo cristalino, e seu hálito forma nuvens de vapor gelado.
 2097218 0 0 0 0 0 0 0 500 E
 24 6 1 1d5+350 3d6+7
 1400 14000
-8 8 1
+9 9 1
 E
-
 #211
 bibliotecario gelo~
 o bibliotecário de gelo~
@@ -179,9 +180,8 @@ preservados no frio perpétuo da biblioteca do castelo.
 2156546 0 0 0 0 0 0 0 550 E
 26 4 0 1d6+380 3d7+8
 1600 16000
-8 8 1
+9 9 1
 E
-
 #212
 cozinheiro gelo~
 o cozinheiro de gelo~
@@ -191,10 +191,12 @@ Ironia do destino: este cozinheiro que dedicou sua vida a preparar pratos
 quentes agora só consegue criar iguarias congeladas. Suas mãos de gelo
 ainda se movem com a habilidade de anos de experiência culinária.
 ~
-2156546 0 0 0 0 0 0 0 450 E
+2156544 0 0 0 0 0 0 0 450 E
 20 8 2 1d4+280 2d8+6
 1000 10000
-8 8 1
+9 9 1
+GenLoot: 50
+GenUse: 50
+GenTrade: 50
 E
-
 $

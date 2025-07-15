@@ -11,9 +11,9 @@ Tomara que ele não esteja com fome!
 10 4000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 15
-GenRoam: 78
-GenGroup: 14
+GenWimpy: 17
+GenRoam: 85
+GenGroup: 23
 E
 #10301
 guarda nativo~
@@ -42,8 +42,8 @@ Este aqui tem pedaços de carne e sangue por todo o corpo. Adivinhe, de onde ser
 100 6500
 9 9 1
 BareHandAttack: 4
-GenWimpy: 5
-GenRoam: 33
+GenWimpy: 6
+GenRoam: 62
 E
 #10303
 canibal~
@@ -57,8 +57,8 @@ uma pobre garotinha que acidentalmente encontrou esse lugar!
 15 10 0 6d6+260 5d5+10
 100 6500
 9 9 1
-GenWimpy: 5
-GenRoam: 53
+GenWimpy: 6
+GenRoam: 57
 E
 #10304
 mulher~
@@ -72,8 +72,8 @@ poderia acabar com o sofrimento dela!
 5 17 5 4d4+100 3d4+1
 50 1000
 9 9 2
-GenWimpy: 8
-GenRoam: 37
+GenWimpy: 12
+GenRoam: 51
 E
 #10305
 mulher canibal~
@@ -88,8 +88,8 @@ algo sério!
 11 17 7 3d3+100 3d3+3
 0 3500
 9 9 2
-GenWimpy: 8
-GenRoam: 80
+GenWimpy: 9
+GenRoam: 86
 E
 #10306
 chefe canibal~
@@ -117,9 +117,8 @@ Esta cobra parece ser perigosa, sem dúvida. Veja só as presas!
 300 4000
 9 9 2
 BareHandAttack: 4
-GenWimpy: 19
-GenRoam: 83
-GenGroup: 1
+GenWimpy: 20
+GenRoam: 87
 E
 #10308
 macaco pequeno~
@@ -133,8 +132,8 @@ Esse macaquinho é muito mal educado!
 300 2000
 9 9 1
 BareHandAttack: 7
-GenWimpy: 21
-GenRoam: 83
+GenWimpy: 24
+GenRoam: 85
 E
 #10309
 primata~
@@ -148,8 +147,8 @@ Peludo, mal cheiroso, e desagradável. Que tal deixá-lo sozinho?
 500 4000
 9 9 1
 BareHandAttack: 9
-GenWimpy: 16
-GenRoam: 71
+GenWimpy: 20
+GenRoam: 76
 E
 #10310
 primata fêmea~
@@ -163,8 +162,8 @@ Ela é bem parecida com os outros primatas. Cheira mal, horrível.
 500 3500
 9 9 2
 BareHandAttack: 4
-GenWimpy: 20
-GenRoam: 75
+GenWimpy: 21
+GenRoam: 82
 E
 #10311
 chefe primata~
@@ -220,7 +219,7 @@ Este perigoso morcego pode ser uma tarefa difícil para você.
 500 1000
 4 4 1
 BareHandAttack: 4
-GenWimpy: 3
+GenWimpy: 7
 E
 #10315
 mulher zumbi~
@@ -234,8 +233,8 @@ sua última refeição.
 6 10 6 2d2+100 3d3+6
 1000 3700
 9 9 2
-GenWimpy: 60
-GenRoam: 15
+GenWimpy: 67
+GenRoam: 24
 E
 #10316
 zumbi~
@@ -248,8 +247,8 @@ Este zumbi é alto e forte, e está aqui pronto para lhe matar.
 15 10 7 8d8+750 5d5+8
 3500 4000
 9 9 1
-GenWimpy: 16
-GenRoam: 84
+GenWimpy: 14
+GenRoam: 85
 E
 #10317
 zumbi kenuthi~
@@ -263,6 +262,7 @@ tremenda.
 20 10 10 5d5+900 6d5+8
 5000 6000
 9 9 1
-GenWimpy: 7
+GenWimpy: 8
+GenLoot: 1
 E
 $

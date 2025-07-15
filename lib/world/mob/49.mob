@@ -10,7 +10,7 @@ Ele olha calmamente para você e continua a andar lenta e graciosamente.
 0 400
 9 9 1
 GenWimpy: 99
-GenRoam: 75
+GenRoam: 77
 E
 #4901
 elfo gato~
@@ -23,7 +23,7 @@ Ele dorme despreocupadamente sob uma sombra fresca de uma árvore.
 3 18 7 2d6+34 1d7+0
 0 800
 4 4 1
-GenWimpy: 2
+GenWimpy: 3
 E
 #4902
 leopardo manchado~
@@ -36,7 +36,7 @@ Ele parece não se preocupar com você, e continua a se banhar.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
 E
 #4903
 cobra madeira jaculi~

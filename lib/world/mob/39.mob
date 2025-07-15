@@ -231,6 +231,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
+GenRoam: 15
 E
 #3915
 zumbi guerreiro abismo~
@@ -287,7 +289,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 3
-GenRoam: 18
+GenRoam: 36
 E
 #3918
 vrock demonio ave~
@@ -434,7 +436,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 2
-GenRoam: 41
+GenRoam: 55
 E
 #3926
 pseudo-hidra pseudo hidra dragao~

@@ -9,7 +9,7 @@ seu caminho.
 2097156 0 0 0 1048592 0 0 0 0 E
 6 15 2 3d5+70 2d4+1
 5 1500
-8 8 1
+9 9 1
 E
 #2201
 homem lagarto sentinela~
@@ -21,7 +21,8 @@ Ele parece estar fazendo um bom trabalho cuidando daqui.
 2097314 0 0 0 16 0 0 0 -150 E
 10 11 3 5d3+150 2d5+4
 150 9250
-8 8 1
+9 9 1
+GenWimpy: 2
 E
 #2202
 homem lagarto feiticeiro~
@@ -34,7 +35,7 @@ ainda.
 2097154 0 0 0 0 0 0 0 -200 E
 15 6 1 2d6+280 5d4+10
 3500 22000
-8 6 1
+9 6 1
 E
 #2203
 água agua elemental~
@@ -46,7 +47,7 @@ Parece fazer parte da magia que o feiticeiro está lançando.
 2097186 0 0 0 272 0 0 0 0 E
 10 8 5 2d6+135 2d7+4
 0 10000
-8 8 1
+9 9 1
 E
 #2204
 homem lagarto guarda~
@@ -60,7 +61,7 @@ Isto é provado pelo simples fato de que você ainda estar aqui.
 2097158 0 0 0 16 0 0 0 -100 E
 9 12 3 5d3+110 2d5+6
 200 8750
-8 8 1
+9 9 1
 E
 #2205
 homem lagarto principe príncipe~
@@ -72,7 +73,7 @@ O olhar dele é muito desanimador. Talvez você devesse atacá-lo...
 2097158 0 0 0 272 0 0 0 -350 E
 20 1 0 7d7+745 5d6+13
 8000 40000
-8 8 1
+9 9 1
 E
 #2206
 hooper velho homem senhor~
@@ -86,6 +87,6 @@ loja.   Ele inclina a cabeça diante de você e olha por cima de seus
 2285574 0 0 0 16 0 0 0 250 E
 108 16 6 1d100+900 1d16+55
 0 50000
-8 8 1
+9 9 1
 E
 $

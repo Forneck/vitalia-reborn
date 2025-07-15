@@ -460,6 +460,8 @@ olhar.
 7 12 1 14d1+1 2d5+1
 1 100
 9 9 1
+GenWimpy: 1
+GenRoam: 27
 E
 #5436
 trabalhador doca~
@@ -568,8 +570,8 @@ Você vê um pequeno gatinho faminto.
 2 18 7 1d2+5 2d2+1
 1 0
 9 9 1
-GenWimpy: 9
-GenRoam: 74
+GenWimpy: 10
+GenRoam: 78
 E
 #5444
 urubu~
@@ -619,7 +621,7 @@ O que você vê diante de si é realmente um bebê de um elemental do ar.
 1 19 9 2d2+1 2d3+1
 1 10
 9 9 1
-GenWimpy: 82
+GenWimpy: 89
 E
 #5448
 lamia~
@@ -634,8 +636,8 @@ ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 26
-GenRoam: 42
+GenWimpy: 31
+GenRoam: 51
 E
 #5449
 dervixe~
@@ -648,7 +650,7 @@ Este homem parece poder usar montes e montes de restos.
 8 12 3 4d4+20 2d6+1
 1 105
 9 9 1
-GenWimpy: 45
+GenWimpy: 50
 E
 #5450
 sultao~
@@ -701,7 +703,7 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 19
+GenWimpy: 22
 E
 #5454
 garota preferida nichole~
@@ -715,7 +717,7 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
-GenWimpy: 31
+GenWimpy: 32
 E
 #5455
 ala alá~
@@ -810,8 +812,8 @@ necessidade.
 10 10 9 2d4+120 1d8+0
 150 2500
 9 9 1
-GenWimpy: 8
-GenRoam: 56
+GenWimpy: 10
+GenRoam: 64
 E
 T 3013
 #5462
