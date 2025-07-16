@@ -111,8 +111,8 @@ pequeno duende.
 75 -6 -7 25d2+1400 3d9+13
 0 70000
 9 9 0
-GenWimpy: 36
-GenRoam: 86
+GenWimpy: 48
+GenRoam: 87
 E
 #1508
 velho homem fracassado~
@@ -241,6 +241,7 @@ que serão suas se você o seguir.
 80 -12 -10 10d5+1650 6d6+25
 25000 145000
 9 9 1
+GenWimpy: 1
 E
 #1517
 iblis satã sata tentação tentacao voz~
@@ -254,6 +255,7 @@ risada atormentada, gemendo, gritando e implorando.
 80 -12 -10 10d5+1650 6d6+25
 25000 145000
 9 9 1
+GenWimpy: 1
 E
 #1518
 serpente dragão dragao satã sata iblis~

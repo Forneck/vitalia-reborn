@@ -87,7 +87,8 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
+GenWimpy: 2
+GenLoot: 1
 E
 #3907
 febre amarela figura~
@@ -106,7 +107,7 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
+GenWimpy: 2
 E
 #3908
 demilich esqueleto~
@@ -231,8 +232,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
-GenRoam: 15
+GenWimpy: 2
+GenRoam: 24
 E
 #3915
 zumbi guerreiro abismo~
@@ -269,7 +270,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 4
-GenRoam: 42
+GenRoam: 43
 E
 #3917
 svern demonio~
@@ -288,8 +289,8 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenRoam: 36
+GenWimpy: 4
+GenRoam: 47
 E
 #3918
 vrock demonio ave~
@@ -309,7 +310,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 2
-GenRoam: 6
+GenRoam: 7
 E
 #3919
 valik zumbi dragao~
@@ -400,7 +401,7 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 3
 E
 #3924
 pilar gelo~
@@ -435,8 +436,8 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
-GenRoam: 55
+GenWimpy: 3
+GenRoam: 72
 E
 #3926
 pseudo-hidra pseudo hidra dragao~

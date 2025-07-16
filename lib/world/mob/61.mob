@@ -11,8 +11,8 @@ muito perigoso e bastante agressivo.
 5 16 5 1d12+60 2d4+0
 0 1000
 9 9 0
-GenWimpy: 1
-GenRoam: 6
+GenWimpy: 4
+GenRoam: 21
 E
 #6101
 lobo feroz~
@@ -27,7 +27,8 @@ muito perigoso e bastante agressivo.
 5 16 5 1d12+80 2d4+4
 0 1000
 9 9 0
-GenWimpy: 1
+GenWimpy: 4
+GenRoam: 34
 E
 #6102
 lobo cinzento~
@@ -41,8 +42,8 @@ uma baba viscosa vai escorrendo por entre os seus lábios.
 3 18 7 1d12+35 1d7+0
 0 450
 9 9 0
-GenWimpy: 19
-GenRoam: 86
+GenWimpy: 24
+GenRoam: 87
 E
 #6103
 lobo negro~
@@ -56,8 +57,8 @@ uma baba viscosa vai escorrendo por entre os seus lábios.
 3 18 7 1d12+45 1d7+3
 0 450
 9 9 0
-GenWimpy: 2
-GenRoam: 27
+GenWimpy: 4
+GenRoam: 58
 E
 #6110
 arvore antiga milenar ancia~
@@ -158,7 +159,7 @@ esfarrapado traje marrom e verde e parece que ele está se divertindo muito.
 1000 11000
 9 9 1
 GenWimpy: 4
-GenRoam: 31
+GenRoam: 33
 GenTrade: 3
 E
 T 3009

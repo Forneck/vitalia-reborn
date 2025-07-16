@@ -104,7 +104,8 @@ de sua ajuda. Afinal, ela é paga para isso...
 15 8 -3 10d10+300 3d3+9
 1000 10020
 9 9 2
-GenWimpy: 12
+GenWimpy: 17
+GenLoot: 1
 E
 #11608
 marut menino belo azulada~
@@ -399,7 +400,7 @@ tudo para que nada saia errado.
 15 8 -3 10d10+300 3d3+9
 1000 10020
 9 9 1
-GenWimpy: 8
+GenWimpy: 10
 E
 #11628
 convidado nobre homem arrogante~
@@ -413,6 +414,7 @@ e como os "plebeus" são desagradáveis. Você conclui que não gosta dele...
 45 3 -4 10d10+700 4d3+15
 8000 34020
 9 9 1
+GenWimpy: 1
 E
 #11629
 convidado sacerdote~
@@ -442,7 +444,7 @@ sacerdote.
 40 4 -3 10d10+500 4d3+14
 8000 24020
 9 9 2
-GenWimpy: 2
+GenWimpy: 3
 E
 #11631
 senhora convidada bem-vestida~
@@ -490,7 +492,7 @@ que fez com que Lorde Indra saísse imediatamente do salão...
 67 -4 -8 10d10+970 4d5+23
 10000 104020
 9 9 1
-GenWimpy: 2
+GenWimpy: 4
 E
 T 3008
 #11634
@@ -550,6 +552,7 @@ palácio, sendo que você já pode considerá-los "velhos conhecidos"...
 77 -11 -12 10d10+1270 7d5+29
 5000 124020
 9 9 2
+GenWimpy: 1
 E
 T 3009
 #11637
@@ -662,7 +665,7 @@ realmente exija sua interferência.
 55 0 -10 10d10+870 4d3+23
 1000 54020
 9 9 1
-GenWimpy: 5
+GenWimpy: 7
 E
 #11644
 guarda velho treinador~

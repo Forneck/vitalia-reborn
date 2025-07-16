@@ -8,9 +8,21 @@ brilham com uma luz fria e seus movimentos são precisos e letais. Cada passo
 que ele dá deixa pequenos cristais de gelo no chão.
 ~
 2099266 0 0 0 0 0 0 0 600 E
-25 8 2 1d6+400 3d6+8
-1500 15000
+25 12 -5 5d5+250 4d4+4
+250 62500
 9 9 1
+Str: 16
+Dex: 16
+Int: 16
+Wis: 16
+Con: 16
+Cha: 16
+SavingPara: 6
+SavingRod: 6
+SavingPetri: 6
+SavingBreath: 6
+SavingSpell: 6
+GenWimpy: 2
 E
 T 201
 #201
@@ -22,11 +34,11 @@ Este soldado vestia uma armadura completa antes de ser transformado em gelo.
 Agora, a armadura e o corpo formam uma única peça cristalina azul-esbranquiçada
 que reflete a luz de forma hipnotizante.
 ~
-2099266 0 0 0 0 0 0 0 650 E
+2099264 0 0 0 0 0 0 0 650 E
 22 6 1 1d5+350 2d8+6
 1200 12000
 9 9 1
-GenWimpy: 1
+GenWimpy: 3
 E
 #202
 servo gelo~
@@ -38,10 +50,21 @@ são mecânicos mas eficientes, e ele parece não ter consciência própria,
 apenas seguindo ordens pré-estabelecidas.
 ~
 2099200 0 0 0 0 0 0 0 400 E
-18 10 4 1d4+250 2d6+4
-800 8000
+18 14 0 3d3+180 3d3+3
+180 32400
 9 9 1
-GenWimpy: 1
+Str: 12
+Dex: 12
+Int: 12
+Wis: 12
+Con: 12
+Cha: 12
+SavingPara: 4
+SavingRod: 4
+SavingPetri: 4
+SavingBreath: 4
+SavingSpell: 4
+GenWimpy: 2
 E
 #203
 capitao gelo~
@@ -53,9 +76,20 @@ Sua presença irradia um frio intenso e sua experiência militar é evidente
 em cada movimento calculado. Uma aura azulada pulsa ao redor de seu corpo.
 ~
 2156544 0 0 0 0 0 0 0 800 E
-35 2 -2 1d8+600 4d8+12
-2500 25000
+35 9 -11 7d7+350 5d5+5
+350 122500
 9 9 1
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+SavingPara: 8
+SavingRod: 8
+SavingPetri: 8
+SavingBreath: 8
+SavingSpell: 8
 GenLoot: 100
 GenEquip: 50
 GenRoam: 50
@@ -74,10 +108,21 @@ olhos azuis gelados não demonstram qualquer calor humano. Vestida com um
 manto que parece ser feito de neve cristalizada, ela controla todos os
 aspectos do inverno eterno deste castelo.
 ~
-2156562 0 0 0 0 0 0 0 1000 E
-45 -5 -8 2d10+1000 6d10+20
-8000 50000
+2156562 0 0 0 0 0 0 0 -1000 E
+45 5 -17 9d9+450 7d7+7
+450 202500
 4 4 2
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+SavingPara: 11
+SavingRod: 11
+SavingPetri: 11
+SavingBreath: 11
+SavingSpell: 11
 E
 T 202
 #205
@@ -90,9 +135,15 @@ Seus lábios estão azuis de frio e ele mal consegue se mover devido
 à temperatura extremamente baixa das celas.
 ~
 2097152 0 0 0 0 0 0 0 0 E
-12 12 6 1d3+150 1d6+3
-400 4000
+12 16 2 2d2+120 2d2+2
+120 14400
 9 9 1
+SavingPara: 3
+SavingRod: 3
+SavingPetri: 3
+SavingBreath: 3
+SavingSpell: 3
+GenWimpy: 5
 E
 #206
 espírito gelo~
@@ -103,10 +154,21 @@ Esta aparição etérea é a alma de alguém que morreu de frio no castelo.
 Agora está preso eternamente a este lugar, fadado a vagar pelos corredores
 gelados até o fim dos tempos.
 ~
-2361378 0 0 0 0 0 0 0 -200 E
-20 5 0 1d4+300 2d7+5
-1000 10000
+11012192 0 0 0 0 0 0 0 -200 E
+20 14 -2 4d4+200 3d3+3
+200 40000
 9 9 0
+Str: 13
+Dex: 13
+Int: 13
+Wis: 13
+Con: 13
+Cha: 13
+SavingPara: 5
+SavingRod: 5
+SavingPetri: 5
+SavingBreath: 5
+SavingSpell: 5
 E
 #207
 construto gelo~
@@ -118,9 +180,20 @@ Seus punhos são como martelos de guerra e seus movimentos são lentos mas
 devastadores. Runas geladas brilham em sua superfície.
 ~
 2099266 0 0 0 0 0 0 0 750 E
-30 0 -5 1d8+500 4d6+10
-2000 20000
+30 10 -8 6d6+300 5d5+5
+300 90000
 9 9 0
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+SavingPara: 7
+SavingRod: 7
+SavingPetri: 7
+SavingBreath: 7
+SavingSpell: 7
 E
 #208
 elemental gelo~
@@ -131,10 +204,21 @@ Uma criação mágica pura do elemento gelo. Este ser não possui forma física
 definida, sendo uma massa de gelo e neve em constante movimento. Cristais
 afiados giram ao seu redor como lâminas cortantes.
 ~
-2099266 0 0 0 0 0 0 0 700 E
-28 3 -3 1d7+450 3d8+9
-1800 18000
+10487874 0 0 0 0 0 0 0 700 E
+28 11 -6 5d5+280 4d4+4
+280 78400
 9 9 0
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+SavingPara: 7
+SavingRod: 7
+SavingPetri: 7
+SavingBreath: 7
+SavingSpell: 7
 GenWimpy: 1
 E
 T 205
@@ -147,10 +231,15 @@ Esta criatura aracnídea é completamente transparente, formada por cristais
 de gelo que se movem com precisão sobrenatural. Suas patas fazem um som
 delicado como sinos quando toca o chão gelado.
 ~
-2097218 0 0 0 0 0 0 0 300 E
-15 8 3 1d3+200 2d5+4
-600 6000
+2097360 0 0 0 0 0 0 0 300 E
+15 15 1 3d3+150 2d2+2
+150 22500
 9 9 2
+SavingPara: 3
+SavingRod: 3
+SavingPetri: 3
+SavingBreath: 3
+SavingSpell: 3
 GenWimpy: 1
 GenLoot: 1
 E
@@ -164,9 +253,20 @@ selvagens. Seus olhos vermelhos brilham como rubis em contraste com seu
 corpo cristalino, e seu hálito forma nuvens de vapor gelado.
 ~
 2097218 0 0 0 0 0 0 0 500 E
-24 6 1 1d5+350 3d6+7
-1400 14000
+24 12 -4 4d4+240 4d4+4
+240 57600
 9 9 1
+Str: 16
+Dex: 16
+Int: 16
+Wis: 16
+Con: 16
+Cha: 16
+SavingPara: 6
+SavingRod: 6
+SavingPetri: 6
+SavingBreath: 6
+SavingSpell: 6
 E
 #211
 bibliotecario gelo~
@@ -177,10 +277,21 @@ Este erudito foi transformado em gelo enquanto estudava os segredos do
 inverno eterno. Agora serve como guardião dos conhecimentos arcanos
 preservados no frio perpétuo da biblioteca do castelo.
 ~
-2156546 0 0 0 0 0 0 0 550 E
-26 4 0 1d6+380 3d7+8
-1600 16000
+2156544 0 0 0 0 0 0 0 550 E
+26 12 -5 5d5+260 4d4+4
+260 67600
 9 9 1
+Str: 17
+Dex: 17
+Int: 17
+Wis: 17
+Con: 17
+Cha: 17
+SavingPara: 6
+SavingRod: 6
+SavingPetri: 6
+SavingBreath: 6
+SavingSpell: 6
 E
 #212
 cozinheiro gelo~
@@ -192,9 +303,20 @@ quentes agora só consegue criar iguarias congeladas. Suas mãos de gelo
 ainda se movem com a habilidade de anos de experiência culinária.
 ~
 2156544 0 0 0 0 0 0 0 450 E
-20 8 2 1d4+280 2d8+6
-1000 10000
+20 14 -2 4d4+200 3d3+3
+200 40000
 9 9 1
+Str: 13
+Dex: 13
+Int: 13
+Wis: 13
+Con: 13
+Cha: 13
+SavingPara: 5
+SavingRod: 5
+SavingPetri: 5
+SavingBreath: 5
+SavingSpell: 5
 GenLoot: 50
 GenUse: 50
 GenTrade: 50

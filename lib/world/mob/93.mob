@@ -438,8 +438,8 @@ ele mesmo e pintadas com vários tons de tinta.
 Str: 8
 Dex: 15
 Con: 8
-GenWimpy: 3
-GenRoam: 42
+GenWimpy: 5
+GenRoam: 55
 E
 #9320
 duende~
@@ -458,8 +458,8 @@ ela mesma e pintadas com vários tons de tinta.
 Str: 8
 Con: 8
 Cha: 15
-GenWimpy: 2
-GenRoam: 37
+GenWimpy: 3
+GenRoam: 52
 E
 #9322
 fada~
@@ -480,8 +480,8 @@ Int: 13
 Wis: 13
 Con: 7
 Cha: 16
-GenWimpy: 4
-GenRoam: 78
+GenWimpy: 7
+GenRoam: 85
 E
 #9323
 filhote dragao verde~
@@ -502,7 +502,7 @@ Dex: 8
 Int: 8
 Wis: 8
 Cha: 8
-GenWimpy: 11
+GenWimpy: 13
 E
 #9324
 aranha fogo~
@@ -539,8 +539,8 @@ corcova.  Vive perambulando no deserto dos dragões de Vitália à procura de
 Str: 13
 Wis: 8
 Con: 13
-GenWimpy: 15
-GenRoam: 27
+GenWimpy: 16
+GenRoam: 33
 E
 #9326
 serpente negra~

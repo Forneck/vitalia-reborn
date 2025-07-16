@@ -27,6 +27,8 @@ cheirosos, seu olhar e gestos aparentam pressa.
 30 0 -10 5d15+400 6d12+8
 500 15246
 9 9 1
+GenWimpy: 1
+GenRoam: 27
 E
 #17303
 cavaleiro nobre~
@@ -114,7 +116,7 @@ de duas mãos.
 50 2 -10 5d7+800 3d7+16
 1000 32000
 9 9 1
-GenWimpy: 1
+GenWimpy: 2
 E
 #17308
 gareth cavaleiro beumains~
@@ -215,6 +217,8 @@ de seda, que escondem um pouco seu feio e detestável corpo retorcido.
 69 3 -14 4d6+803 5d7+17
 800 45000
 9 9 2
+GenWimpy: 1
+GenRoam: 4
 E
 T 3009
 #17315
@@ -230,8 +234,8 @@ da meia idade, mas ainda é um vigoroso combatente.
 60 4 -7 2d8+678 12d6+18
 10000 62000
 9 9 1
-GenWimpy: 3
-GenRoam: 7
+GenWimpy: 5
+GenRoam: 31
 E
 #17316
 besta busca criatura~
@@ -318,8 +322,8 @@ vestido e tem uma coroa de flores enfeitando seus cabelos.
 30 5 -2 10d10+360 4d6+8
 3000 10030
 9 9 2
-GenWimpy: 8
-GenRoam: 78
+GenWimpy: 11
+GenRoam: 85
 E
 #17322
 rainha guinevere~
@@ -334,6 +338,7 @@ Lancelot.
 50 4 -1 7d9+409 2d12+10
 10000 34000
 9 9 2
+GenWimpy: 1
 E
 #17323
 escudeiro encantado~
@@ -364,7 +369,7 @@ sorri maliciosamente para você.
 0 103765
 9 9 1
 GenWimpy: 7
-GenRoam: 4
+GenRoam: 5
 GenGroup: 4
 E
 #17325
@@ -450,7 +455,7 @@ nele.
 1200 21000
 9 9 1
 GenWimpy: 2
-GenRoam: 44
+GenRoam: 66
 E
 #17331
 mercador~
@@ -480,8 +485,8 @@ maneira dos fransciscanos.
 23 6 0 2d10+307 7d9+8
 1200 19078
 9 9 1
-GenWimpy: 3
-GenRoam: 35
+GenWimpy: 5
+GenRoam: 69
 E
 #17333
 trovador~
@@ -494,6 +499,7 @@ O trovador, vestido com roupas de cores festivas, está tocando um bandolim.
 15 6 0 7d8+250 4d8+8
 1090 16098
 9 9 1
+GenWimpy: 1
 E
 #17334
 bardo~
@@ -507,7 +513,7 @@ camisa laranja.
 14 7 0 3d9+209 7d7+7
 1245 16980
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
 E
 #17335
 artista~
@@ -533,8 +539,8 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
-GenWimpy: 10
-GenRoam: 86
+GenWimpy: 12
+GenRoam: 87
 E
 #17337
 demonio~
@@ -639,7 +645,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 7
+GenWimpy: 15
 E
 #17344
 escrava~
@@ -668,7 +674,7 @@ coberto por piolhos.
 73 2 -13 5d13+1200 6d6+17
 10000 60994
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
 E
 #17346
 guarda fronteira norte~
@@ -743,7 +749,7 @@ O servo segura um instrumento de fazenda e usa trapos para se cobrir.
 10 7 1 4d12+250 6d6+5
 1240 4769
 9 9 1
-GenWimpy: 9
+GenWimpy: 10
 E
 #17351
 invasor anglo~
@@ -939,7 +945,7 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 3
-GenRoam: 15
+GenWimpy: 5
+GenRoam: 7
 E
 $

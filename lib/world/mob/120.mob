@@ -225,7 +225,7 @@ Parece ser mais um cidadão comum, se dirigindo para o seu trabalho.
 5 16 5 1d4+85 1d8+1
 100 1000
 9 9 1
-GenWimpy: 49
+GenWimpy: 59
 GenRoam: 87
 E
 #12018
@@ -256,7 +256,7 @@ vai ser uma atividade saudável.
 1281 28000
 9 9 1
 GenWimpy: 7
-GenRoam: 68
+GenRoam: 74
 E
 #12020
 imperador julius caesar~
@@ -290,8 +290,8 @@ tiverem as menores das intenções.
 BareHandAttack: 6
 Str: 18
 StrAdd: 90
-GenWimpy: 10
-GenLoot: 4
+GenWimpy: 11
+GenLoot: 3
 E
 T 3013
 #12022
@@ -335,7 +335,7 @@ Uma bola verde de lodo escorrendo atraves das paredes.
 BareHandAttack: 9
 Int: 3
 GenWimpy: 100
-GenRoam: 81
+GenRoam: 87
 E
 #12025
 mago froboz~
@@ -515,7 +515,7 @@ Suas atitudes são muito sádicas e ele claramente adora aquilo que faz.
 20 1 0 2d6+260 2d2+14
 1000 40000
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
 E
 #12036
 padeiro~

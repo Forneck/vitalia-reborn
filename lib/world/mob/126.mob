@@ -1687,7 +1687,7 @@ Str: 15
 Dex: 15
 Con: 18
 Cha: 15
-GenWimpy: 2
+GenWimpy: 3
 E
 #12673
 Tanngrisni bode~
@@ -1722,7 +1722,7 @@ fica no topo da árvore.
 0 15000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 17
+GenWimpy: 21
 E
 #12675
 Dvalin soberano anao~
@@ -1841,8 +1841,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 3
-GenRoam: 63
+GenWimpy: 5
+GenRoam: 57
 E
 #12680
 viking islandes~
@@ -1916,8 +1916,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 2
-GenRoam: 24
+GenWimpy: 4
+GenRoam: 36
 E
 #12683
 viking islandesa~
@@ -1960,8 +1960,9 @@ ajude-as a sobreviver nessas gélidas e desérticas terras gelo.
 500 13000
 9 9 2
 BareHandAttack: 13
-GenWimpy: 5
-GenRoam: 58
+GenWimpy: 6
+GenLoot: 1
+GenRoam: 68
 E
 #12685
 cavalo selvagem~
@@ -2117,8 +2118,8 @@ Int: 15
 Wis: 13
 Con: 16
 Cha: 18
-GenWimpy: 5
-GenRoam: 16
+GenWimpy: 6
+GenRoam: 38
 E
 #12692
 foca~
@@ -2214,8 +2215,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 19
-GenRoam: 5
+GenWimpy: 23
+GenRoam: 4
 E
 #12697
 ave marinha~

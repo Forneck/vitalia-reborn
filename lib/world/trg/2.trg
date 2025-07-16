@@ -43,24 +43,23 @@ switch %random.4%
   case 1
     %echo% A Rainha Gelada levanta sua mão e cristais de gelo começam a se formar no ar!
     %areaattack% 50 Uma rajada de cristais afiados atinge todos ao redor!
-  break
+    break
   case 2
     %echo% A temperatura despenca drasticamente!
     %echo% Um frio intenso drena suas forças!
-    %damage% all 25
-  break
+    break
   case 3
     %echo% A Rainha Gelada convoca servos de gelo para ajudá-la!
     %load% mob 201
     %load% mob 201
-  break
+    break
   case 4
     %echo% Os olhos da Rainha brilham com poder sobrenatural!
     say Mortais tolos! Vocês não podem derrotar o inverno eterno!
-  break
+    break
   default
     %echo% O trono de gelo pulsa com energia mágica.
-  break
+    break
 done
 ~
 #203

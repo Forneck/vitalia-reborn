@@ -39,8 +39,8 @@ Que bela fada você pode ver deste ângulo.
 16 4 3 1d1+600 6d1+16
 275 30000
 9 9 2
-GenWimpy: 4
-GenRoam: 35
+GenWimpy: 5
+GenRoam: 51
 E
 #13503
 inseto folha inseto-folha~
@@ -53,8 +53,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 9
-GenRoam: 80
+GenWimpy: 11
+GenRoam: 79
 E
 #13504
 inseto galho inseto-galho~
@@ -149,8 +149,8 @@ você, parecendo procurar algo, mas logo volta a comer a grama.
 12 8 5 1d1+300 5d1+12
 0 12105
 9 9 2
-GenWimpy: 7
-GenRoam: 4
+GenWimpy: 8
+GenRoam: 13
 E
 #13511
 cervo~
@@ -178,8 +178,8 @@ Seus olhos possuem uma expressão não muito amigável.
 14 6 4 1d1+400 6d1+14
 0 13496
 9 9 1
-GenWimpy: 76
-GenRoam: 34
+GenWimpy: 92
+GenRoam: 47
 E
 #13513
 coelho pequeno~
@@ -193,7 +193,7 @@ Ele é simplesmente adorável, você queria ter um igual a esse!
 0 10333
 9 9 1
 GenWimpy: 17
-GenRoam: 85
+GenRoam: 86
 E
 #13514
 cobra cega~
@@ -206,8 +206,8 @@ Olhando bem você percebe que isso NÃO é uma cobra!
 9 11 6 1d1+175 4d1+9
 0 11371
 9 9 2
-GenWimpy: 12
-GenRoam: 55
+GenWimpy: 14
+GenRoam: 66
 E
 #13515
 druida~
@@ -222,7 +222,7 @@ demais para pedir que você saia.
 325 20769
 9 9 1
 GenWimpy: 7
-GenRoam: 77
+GenRoam: 80
 E
 #13516
 druidesa~
@@ -236,8 +236,8 @@ entrou aqui.
 13 7 4 1d1+350 6d1+13
 200 12880
 9 9 2
-GenWimpy: 7
-GenRoam: 13
+GenWimpy: 8
+GenRoam: 12
 E
 #13517
 ra~

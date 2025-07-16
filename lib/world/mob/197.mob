@@ -52,7 +52,7 @@ VOCÊ!!
 0 6000
 9 9 2
 GenWimpy: 7
-GenRoam: 36
+GenRoam: 51
 E
 #19704
 cobra negra~
@@ -67,8 +67,8 @@ que você está esperando?  AO ATAQUE!
 12 13 0 15d6+100 2d6+6
 0 8000
 9 9 2
-GenWimpy: 48
-GenRoam: 30
+GenWimpy: 55
+GenRoam: 44
 E
 #19705
 cobra verde~
@@ -82,8 +82,8 @@ sabe?
 15 12 -1 15d6+300 2d4+10
 0 10000
 9 9 2
-GenWimpy: 4
-GenRoam: 7
+GenWimpy: 6
+GenRoam: 6
 E
 #19706
 enorme orc~
@@ -114,7 +114,7 @@ desejá-la.
 2000 150000
 9 9 1
 GenWimpy: 8
-GenRoam: 60
+GenRoam: 72
 E
 #19708
 orc lider negro~
@@ -256,7 +256,7 @@ aprender os movimentos de luta dos orcs em treinamento.
 13 4 -2 15d6+300 3d6+10
 100 24000
 9 9 2
-GenWimpy: 7
+GenWimpy: 8
 E
 #19717
 general orc~

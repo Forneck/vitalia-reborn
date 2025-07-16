@@ -135,6 +135,8 @@ para proteger o caminho dos intrusos indesejados aqui.
 13 10 0 1d12+123 1d8+5
 654 12000
 6 6 1
+GenWimpy: 2
+GenLoot: 1
 E
 #19012
 elfo jardineiro~
@@ -179,6 +181,8 @@ presença.
 10 10 0 2d2+400 4d3+8
 6000 14600
 9 9 2
+GenWimpy: 1
+GenRoam: 27
 E
 #19015
 prefeito nador bherlion~
@@ -398,6 +402,7 @@ Você vê que é grande, listrado e está furioso.
 30 2 1 2d10+160 1d8+8
 0 29000
 9 9 0
+GenWimpy: 1
 E
 #19031
 elfo campeao~

@@ -13,6 +13,7 @@
 #include "improved-edit.h"
 #include "dg_scripts.h"
 #include "modify.h"
+#include "screen.h"
 
 void send_editor_help(struct descriptor_data *d)
 {
@@ -256,7 +257,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
       *t = '\0';
       RECREATE(*d->str, char, strlen(*d->str) + 3);
 
-      write_to_output(d, "@R***@&n %d linhs%sapagada%s\r\n", total_len, (total_len != 1 ? "s " : " "),(total_len != 1 ? "s." : "."));
+      write_to_output(d, "*** %d linha%sapagada%s\r\n",total_len, (total_len != 1 ? "s " : " "),(total_len != 1 ? "s." : "."));
     } else {
       write_to_output(d, "Intervalo inválido.\r\n");
       return;

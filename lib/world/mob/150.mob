@@ -139,8 +139,8 @@ pela próxima!
 13 7 2 3d6+150 1d8+5
 400 16000
 9 9 1
-GenWimpy: 1
-GenRoam: 9
+GenWimpy: 2
+GenRoam: 13
 E
 #15010
 bertram bert guarda real~
@@ -213,8 +213,8 @@ Este é um jovem de constituição poderosa, e sua função principal
 18 1 -1 3d6+220 1d8+9
 500 30000
 9 9 1
-GenWimpy: 1
-GenRoam: 6
+GenWimpy: 2
+GenRoam: 12
 E
 #15015
 ergan assassino~
@@ -434,7 +434,7 @@ desejo de vingança.
 11 6 3 4d4+95 2d4+8
 0 10000
 9 9 0
-GenWimpy: 19
+GenWimpy: 23
 E
 #15031
 esqueleto aldeao~
@@ -450,7 +450,7 @@ desejo de vingança.
 10 8 3 4d4+80 2d3+6
 0 8000
 9 9 0
-GenWimpy: 24
+GenWimpy: 31
 E
 #15032
 poço demonio~
@@ -465,6 +465,7 @@ Abismo. Ele olha enfurecido para você com olhos vermelhos de sangue, deixa
 33 0 -10 3d60+1480 4d8+16
 35000 1000000
 6 9 1
+GenWimpy: 1
 E
 T 15001
 $

@@ -9,6 +9,8 @@ Este veado é muito bonito.
 3 18 1 3d5+33 1d7+0
 0 350
 9 9 0
+GenWimpy: 3
+GenRoam: 58
 E
 #6201
 coelho~
@@ -21,6 +23,8 @@ Ele é um pequeno e peludo roedor com grandes orelhas.
 0 20 3 1d5+3 1d3+0
 0 25
 9 9 0
+GenWimpy: 1
+GenRoam: 27
 E
 #6202
 esquilo~
@@ -33,6 +37,8 @@ Ele é um esquilo pequeno e marrom.  Um excelente espécime saltador.
 0 20 -1 1d3+0 1d1+1
 0 10
 9 9 0
+GenWimpy: 2
+GenRoam: 45
 E
 #6203
 cacador orc~
@@ -46,6 +52,8 @@ Sua pele verde está definitivamente pintada e ele parece coxear um pouco...
 7 14 5 3d5+83 2d3+2
 0 2250
 9 9 1
+GenWimpy: 4
+GenRoam: 83
 E
 #6204
 chefe orc~
@@ -73,6 +81,8 @@ dissesse "Não me mate!!".
 5 16 7 3d5+58 2d4+0
 0 900
 9 9 2
+GenWimpy: 1
+GenRoam: 27
 E
 #6206
 crianca orc~
@@ -124,6 +134,8 @@ mais.
 6 20 1 3d5+60 1d1+0
 0 10
 9 9 0
+GenWimpy: 3
+GenRoam: 53
 E
 #6210
 feiticeiro elfo elfico elstar~
@@ -164,7 +176,7 @@ para longe do seu caminho para chegar até você.
 12 9 -2 3d5+170 2d7+4
 0 15000
 9 9 0
-GenWimpy: 36
+GenWimpy: 42
 GenRoam: 87
 E
 #6213
@@ -179,7 +191,7 @@ para longe de seu caminho, para chegar até você.
 12 9 -2 3d5+170 2d7+4
 0 15000
 9 9 0
-GenWimpy: 28
-GenRoam: 15
+GenWimpy: 34
+GenRoam: 37
 E
 $

@@ -446,6 +446,7 @@ O grande meio-orc rapidamente mede você e volta para seu dever.
 12 10 3 3d10+100 1d6+3
 1 400
 9 9 1
+GenWimpy: 7
 E
 T 3013
 #5435
@@ -460,8 +461,8 @@ olhar.
 7 12 1 14d1+1 2d5+1
 1 100
 9 9 1
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 2
+GenRoam: 45
 E
 #5436
 trabalhador doca~
@@ -556,8 +557,8 @@ final.
 7 16 5 1d1+1 1d5+1
 1 10
 9 9 1
-GenWimpy: 5
-GenRoam: 61
+GenWimpy: 10
+GenRoam: 75
 E
 #5443
 gato rua~
@@ -570,8 +571,8 @@ Você vê um pequeno gatinho faminto.
 2 18 7 1d2+5 2d2+1
 1 0
 9 9 1
-GenWimpy: 10
-GenRoam: 78
+GenWimpy: 13
+GenRoam: 84
 E
 #5444
 urubu~
@@ -621,7 +622,7 @@ O que você vê diante de si é realmente um bebê de um elemental do ar.
 1 19 9 2d2+1 2d3+1
 1 10
 9 9 1
-GenWimpy: 89
+GenWimpy: 98
 E
 #5448
 lamia~
@@ -636,8 +637,8 @@ ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 31
-GenRoam: 51
+GenWimpy: 39
+GenRoam: 80
 E
 #5449
 dervixe~
@@ -650,7 +651,8 @@ Este homem parece poder usar montes e montes de restos.
 8 12 3 4d4+20 2d6+1
 1 105
 9 9 1
-GenWimpy: 50
+GenWimpy: 65
+GenRoam: 23
 E
 #5450
 sultao~
@@ -663,6 +665,7 @@ Você vê um grande e saudável homem em robes vermelhos sorrindo para você.
 10 5 -4 6d6+830 1d6+0
 1200 25000
 5 5 1
+GenWimpy: 1
 E
 #5451
 garota harem~
@@ -703,7 +706,8 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 22
+GenWimpy: 45
+GenRoam: 5
 E
 #5454
 garota preferida nichole~
@@ -717,7 +721,7 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
-GenWimpy: 32
+GenWimpy: 38
 E
 #5455
 ala alá~
@@ -797,8 +801,8 @@ Você vê um pequeno garoto correndo em volta das paredes do palácio.
 2 19 9 10d1+1 1d4+1
 1 10
 9 9 1
-GenWimpy: 5
-GenRoam: 65
+GenWimpy: 8
+GenRoam: 80
 E
 #5461
 guarda sultao~
@@ -813,7 +817,7 @@ necessidade.
 150 2500
 9 9 1
 GenWimpy: 10
-GenRoam: 64
+GenRoam: 68
 E
 T 3013
 #5462

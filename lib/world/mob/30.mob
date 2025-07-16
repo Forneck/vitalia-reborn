@@ -180,10 +180,17 @@ O caçador de aventuras é um homem bem alto e forte, muito bem treinado nas
 artes de caçar e matar. Se eu fosse você, eu não o aborreceria. Pode ser
 extremamente perigoso para sua saúde.
 ~
-2271378 0 0 0 0 0 0 0 -100 E
+2271248 0 0 0 0 0 0 0 -100 E
 15 10 0 100d5+50 2d6+6
 5000 42000
 9 9 1
+GenLoot: 100
+GenEquip: 100
+GenRoam: 100
+GenGroup: 100
+GenBrave: 50
+GenUse: 100
+GenTrade: 100
 E
 #3016
 vendedor jornaleiro garoto~
@@ -627,8 +634,8 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
-GenWimpy: 17
-GenRoam: 71
+GenWimpy: 21
+GenRoam: 84
 E
 T 3013
 #3061
@@ -658,8 +665,8 @@ cheios de pedaços de carne apodrecida grudadas.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 18
-GenRoam: 87
+GenWimpy: 21
+GenRoam: 64
 E
 T 3014
 #3063

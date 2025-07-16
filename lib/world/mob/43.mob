@@ -55,7 +55,7 @@ Ele está vestido com botas pretas, calças marrom e camisa branca.
 2853 6578
 9 9 1
 GenWimpy: 2
-GenRoam: 13
+GenRoam: 36
 E
 #4321
 menino cantor coral~
@@ -114,7 +114,7 @@ um pombo branco está aqui
 0 250
 9 9 1
 BareHandAttack: 1
-GenWimpy: 7
+GenWimpy: 8
 GenRoam: 3
 E
 #4326
@@ -190,6 +190,8 @@ um grande lutador.
 8 15 1 3d4+75 3d3+8
 1000 1200
 9 9 1
+GenWimpy: 1
+GenRoam: 27
 E
 #4341
 poodle~

@@ -149,8 +149,8 @@ branco?'.
 60 5 -10 15d6+500 5d6+20
 5000 900000
 9 9 2
-GenWimpy: 4
-GenRoam: 7
+GenWimpy: 5
+GenRoam: 11
 E
 #19810
 amarelo demonio~
@@ -258,6 +258,8 @@ esperava?  É um fantasma!
 50 10 -3 15d6+500 5d4+10
 20000 40000
 9 9 1
+GenWimpy: 1
+GenRoam: 2
 E
 #19817
 guerreiro fantasma~
@@ -332,6 +334,6 @@ num piscar de olhos em outra posição.  É notoriamente um fantasma.
 9 9 1
 GenWimpy: 6
 GenLoot: 1
-GenRoam: 33
+GenRoam: 35
 E
 $

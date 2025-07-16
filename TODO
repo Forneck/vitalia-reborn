@@ -18,15 +18,14 @@ remort:
 ideia: volta nivel 1 (hp, mov, mana continua). segue para plano 2, nao ganha xp em plano inferior (pode alternar entre planos), Skills voltam a poder usar quando atingir nivel novamente.
 
 verificar modificadores nos objs no inventario (2 maos)
-remover veneno da arma
-weather
 talk_dead no move
 
-diminuir carga de stoneskin no dano
 modificar o consider
 
 lojas
-   - Hometown em 113
+
+
+   - Hometown em 113 - WIP
    - Fix gas pao CRASH
    - Imp: Informatizar o banco de Vitalia
       - Casa de leilões
@@ -89,8 +88,6 @@ mob sem load:
 loja feita 3,22,25,27,28,30,31,33,43,44,54,65,81,113,120,134,140,144,150,173,176,190,204,220,221,280,290
 falta loja catedral de cristal,mercador nomade de nt (54)
 
-typo: obj 11303 alias medraperola -> madreperola
-typo obj 11403 alias 
 
 typo 4048 saida leste You can head towards the narrow trail this way.
 

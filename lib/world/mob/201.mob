@@ -9,8 +9,8 @@ O doente mental tem apenas um olhar vazio.
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
-GenWimpy: 32
-GenRoam: 83
+GenWimpy: 34
+GenRoam: 87
 E
 #20101
 enfermeira curandeira e conselheira~
@@ -50,7 +50,7 @@ na sua suposição.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 1
-GenWimpy: 8
+GenWimpy: 10
 E
 #20104
 paciente mental~
@@ -80,8 +80,8 @@ Há uma grande possibilidade de que Ted seja um grande amigo imaginário...
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 16
-GenRoam: 60
+GenWimpy: 24
+GenRoam: 80
 E
 #20106
 cerebro~
@@ -99,9 +99,9 @@ espera o dia em que poderá sair desse terrível lugar.
 7 15 5 3d5+85 2d4+1
 1000 3000
 9 9 1
-GenWimpy: 22
-GenRoam: 13
-GenGroup: 31
+GenWimpy: 23
+GenRoam: 11
+GenGroup: 34
 E
 #20107
 pesquisador distraido~
@@ -119,7 +119,8 @@ terminam por revelar o eterno paciente dentro dele.
 1100 1000
 9 9 1
 GenWimpy: 22
-GenRoam: 28
+GenRoam: 46
+GenGroup: 3
 E
 #20108
 assistente~
@@ -136,9 +137,9 @@ azuis, ela demonstra seu lado sério.
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 2
-GenWimpy: 9
-GenRoam: 60
-GenGroup: 12
+GenWimpy: 10
+GenRoam: 58
+GenGroup: 11
 E
 #20109
 jovem mulher Eva~
@@ -153,9 +154,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 27
-GenRoam: 70
-GenGroup: 1
+GenWimpy: 29
+GenRoam: 81
 E
 #20110
 jovem mulher Sybila~
@@ -170,7 +170,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 20
+GenWimpy: 23
+GenRoam: 21
 E
 #20111
 jovem mulher Anouk~
@@ -185,9 +186,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 13
-GenRoam: 55
-GenGroup: 4
+GenWimpy: 14
+GenRoam: 58
+GenGroup: 3
 E
 #20112
 jovem mulher Tricia~
@@ -202,8 +203,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 28
-GenRoam: 72
+GenWimpy: 31
+GenRoam: 80
 E
 #20113
 jovem mulher Lorraine~
@@ -218,8 +219,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 20
-GenRoam: 66
+GenWimpy: 23
+GenRoam: 74
 E
 #20114
 jovem mulher Renee~
@@ -234,8 +235,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 13
-GenRoam: 62
+GenWimpy: 17
+GenRoam: 64
 E
 #20115
 jovem mulher Stela~
@@ -250,9 +251,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 19
-GenLoot: 1
-GenRoam: 47
+GenWimpy: 28
+GenRoam: 65
 E
 #20116
 jovem mulher dorothy~
@@ -269,7 +269,7 @@ original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 16
+GenWimpy: 18
 GenRoam: 55
 E
 #20117
@@ -286,8 +286,9 @@ original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 14
-GenRoam: 64
+GenWimpy: 16
+GenLoot: 1
+GenRoam: 71
 GenGroup: 1
 E
 #20118
@@ -303,8 +304,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 18
-GenRoam: 62
+GenWimpy: 19
+GenRoam: 70
 E
 #20119
 Spike~

@@ -65,8 +65,8 @@ BareHandAttack: 3
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 7
-GenRoam: 53
+GenWimpy: 9
+GenRoam: 76
 E
 #12104
 cerbero~
@@ -99,7 +99,7 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 19
+GenWimpy: 21
 E
 #12106
 anao negro~
@@ -150,7 +150,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
+GenWimpy: 8
 GenLoot: 1
 E
 #12109
@@ -168,7 +168,8 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 22
+GenWimpy: 33
+GenRoam: 9
 E
 #12110
 leao jamuuran~
@@ -254,7 +255,7 @@ BareHandAttack: 3
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 24
+GenWimpy: 29
 E
 #12115
 drakian~
@@ -356,8 +357,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 63
-GenRoam: 86
+GenWimpy: 68
+GenRoam: 84
 E
 #12121
 quimera leao bode dragao~
@@ -445,8 +446,8 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 93
-GenRoam: 48
+GenWimpy: 98
+GenRoam: 44
 E
 #12126
 cynamolgus peludo~

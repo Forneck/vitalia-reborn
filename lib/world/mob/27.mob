@@ -171,7 +171,7 @@ espada em punho!!
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 7
+GenWimpy: 13
 E
 #2710
 torturador~
@@ -290,8 +290,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
-GenRoam: 2
+GenWimpy: 2
+GenRoam: 28
 E
 #2719
 cinza raposa~
@@ -311,6 +311,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 2
+GenRoam: 27
 E
 #2720
 passaro~
@@ -366,8 +367,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenRoam: 8
+GenWimpy: 7
+GenRoam: 53
 E
 #2723
 vaca~
@@ -741,6 +742,8 @@ chifre, o cervo se tornou desconfiado quando se trata de seres humanos.
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
+GenRoam: 27
 E
 #2744
 supervisor geral Rizzo~
