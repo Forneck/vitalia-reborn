@@ -109,9 +109,6 @@ typedef enum
    eMSDP_CLASS, 
    eMSDP_MANA, 
    eMSDP_MANA_MAX, 
-   eMSDP_WIMPY, 
-   eMSDP_PRACTICE, 
-   eMSDP_MONEY, 
    eMSDP_MOVEMENT, 
    eMSDP_MOVEMENT_MAX, 
    eMSDP_HITROLL, 
@@ -126,7 +123,21 @@ typedef enum
    eMSDP_INT_PERM, 
    eMSDP_WIS_PERM, 
    eMSDP_DEX_PERM, 
-   eMSDP_CON_PERM, 
+   eMSDP_CON_PERM,
+
+   /* Extended Character Status */
+   eMSDP_WIMPY, 
+   eMSDP_PRACTICE, 
+   eMSDP_MONEY, 
+   eMSDP_HUNGER,
+   eMSDP_THIRST,
+   eMSDP_DRUNK,
+   eMSDP_BREATH,
+   eMSDP_BREATH_MAX,
+   eMSDP_CARRYING_CAPACITY,
+   eMSDP_CARRYING_CURRENT,
+   eMSDP_WEIGHT_CAPACITY,
+   eMSDP_WEIGHT_CURRENT, 
 
    /* Combat */
    eMSDP_OPPONENT_HEALTH, 
@@ -139,7 +150,18 @@ typedef enum
    eMSDP_ROOM_EXITS, 
    eMSDP_ROOM_NAME, 
    eMSDP_ROOM_VNUM, 
-   eMSDP_WORLD_TIME, 
+   eMSDP_WORLD_TIME,
+   eMSDP_ROOM_TERRAIN,
+   eMSDP_ROOM_FLAGS,
+   eMSDP_ZONE_NAME,
+   eMSDP_ZONE_WEATHER,
+
+   /* Group/Social */
+   eMSDP_GROUP,
+   eMSDP_GROUP_MEMBERS,
+   eMSDP_PARTY_LEADER,
+   eMSDP_FOLLOWING,
+   eMSDP_FOLLOWERS, 
 
    /* Configuration */
    eMSDP_CLIENT_ID, 

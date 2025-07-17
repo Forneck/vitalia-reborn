@@ -3328,6 +3328,17 @@ static void msdp_update(void)
 			MSDPSetNumber(d, eMSDP_MOVEMENT_MAX, GET_MAX_MOVE(ch));
 			MSDPSetNumber(d, eMSDP_AC, compute_armor_class(ch));
 
+			/* Extended character status */
+			MSDPSetNumber(d, eMSDP_HUNGER, GET_COND(ch, HUNGER));
+			MSDPSetNumber(d, eMSDP_THIRST, GET_COND(ch, THIRST));
+			MSDPSetNumber(d, eMSDP_DRUNK, GET_COND(ch, DRUNK));
+			MSDPSetNumber(d, eMSDP_BREATH, GET_BREATH(ch));
+			MSDPSetNumber(d, eMSDP_BREATH_MAX, GET_MAX_BREATH(ch));
+			MSDPSetNumber(d, eMSDP_CARRYING_CAPACITY, CAN_CARRY_N(ch));
+			MSDPSetNumber(d, eMSDP_CARRYING_CURRENT, IS_CARRYING_N(ch));
+			MSDPSetNumber(d, eMSDP_WEIGHT_CAPACITY, CAN_CARRY_W(ch));
+			MSDPSetNumber(d, eMSDP_WEIGHT_CURRENT, IS_CARRYING_W(ch));
+
 			/* This would be better moved elsewhere */
 			if (pOpponent != NULL)
 			{
@@ -3342,6 +3353,44 @@ static void msdp_update(void)
 				MSDPSetNumber(d, eMSDP_OPPONENT_HEALTH, 0);
 				MSDPSetNumber(d, eMSDP_OPPONENT_LEVEL, 0);
 				MSDPSetString(d, eMSDP_OPPONENT_NAME, "");
+			}
+
+			/* Room and world information */
+			if (IN_ROOM(ch) != NOWHERE) {
+				room_rnum room = IN_ROOM(ch);
+				zone_rnum zone = GET_ROOM_ZONE(room);
+				
+				MSDPSetString(d, eMSDP_ROOM_NAME, world[room].name ? world[room].name : "");
+				MSDPSetNumber(d, eMSDP_ROOM_VNUM, GET_ROOM_VNUM(room));
+				
+				/* Set room terrain/sector */
+				extern const char *sector_types[];
+				if (SECT(room) >= 0 && SECT(room) < NUM_ROOM_SECTORS)
+					MSDPSetString(d, eMSDP_ROOM_TERRAIN, sector_types[SECT(room)]);
+				else
+					MSDPSetString(d, eMSDP_ROOM_TERRAIN, "unknown");
+				
+				/* Set zone information */
+				if (zone != NOWHERE) {
+					MSDPSetString(d, eMSDP_ZONE_NAME, zone_table[zone].name ? zone_table[zone].name : "");
+					MSDPSetString(d, eMSDP_AREA_NAME, zone_table[zone].name ? zone_table[zone].name : "");
+				} else {
+					MSDPSetString(d, eMSDP_ZONE_NAME, "");
+					MSDPSetString(d, eMSDP_AREA_NAME, "");
+				}
+			} else {
+				MSDPSetString(d, eMSDP_ROOM_NAME, "");
+				MSDPSetNumber(d, eMSDP_ROOM_VNUM, 0);
+				MSDPSetString(d, eMSDP_ROOM_TERRAIN, "");
+				MSDPSetString(d, eMSDP_ZONE_NAME, "");
+				MSDPSetString(d, eMSDP_AREA_NAME, "");
+			}
+
+			/* Group/following information */
+			if (ch->master) {
+				MSDPSetString(d, eMSDP_FOLLOWING, GET_NAME(ch->master));
+			} else {
+				MSDPSetString(d, eMSDP_FOLLOWING, "");
 			}
 
 			MSDPUpdate(d);

@@ -206,9 +206,6 @@ static variable_name_t VariableNameTable[eMSDP_MAX+1] =
    { eMSDP_CLASS,            "CLASS",            STRING_READ_ONLY }, 
    { eMSDP_MANA,             "MANA",             NUMBER_READ_ONLY }, 
    { eMSDP_MANA_MAX,         "MANA_MAX",         NUMBER_READ_ONLY }, 
-   { eMSDP_WIMPY,            "WIMPY",            NUMBER_READ_ONLY }, 
-   { eMSDP_PRACTICE,         "PRACTICE",         NUMBER_READ_ONLY }, 
-   { eMSDP_MONEY,            "MONEY",            NUMBER_READ_ONLY }, 
    { eMSDP_MOVEMENT,         "MOVEMENT",         NUMBER_READ_ONLY }, 
    { eMSDP_MOVEMENT_MAX,     "MOVEMENT_MAX",     NUMBER_READ_ONLY }, 
    { eMSDP_HITROLL,          "HITROLL",          NUMBER_READ_ONLY }, 
@@ -223,7 +220,21 @@ static variable_name_t VariableNameTable[eMSDP_MAX+1] =
    { eMSDP_INT_PERM,         "INT_PERM",         NUMBER_READ_ONLY }, 
    { eMSDP_WIS_PERM,         "WIS_PERM",         NUMBER_READ_ONLY }, 
    { eMSDP_DEX_PERM,         "DEX_PERM",         NUMBER_READ_ONLY }, 
-   { eMSDP_CON_PERM,         "CON_PERM",         NUMBER_READ_ONLY }, 
+   { eMSDP_CON_PERM,         "CON_PERM",         NUMBER_READ_ONLY },
+
+   /* Extended Character Status */
+   { eMSDP_WIMPY,            "WIMPY",            NUMBER_READ_ONLY }, 
+   { eMSDP_PRACTICE,         "PRACTICE",         NUMBER_READ_ONLY }, 
+   { eMSDP_MONEY,            "MONEY",            NUMBER_READ_ONLY }, 
+   { eMSDP_HUNGER,           "HUNGER",           NUMBER_READ_ONLY },
+   { eMSDP_THIRST,           "THIRST",           NUMBER_READ_ONLY },
+   { eMSDP_DRUNK,            "DRUNK",            NUMBER_READ_ONLY },
+   { eMSDP_BREATH,           "BREATH",           NUMBER_READ_ONLY },
+   { eMSDP_BREATH_MAX,       "BREATH_MAX",       NUMBER_READ_ONLY },
+   { eMSDP_CARRYING_CAPACITY, "CARRYING_CAPACITY", NUMBER_READ_ONLY },
+   { eMSDP_CARRYING_CURRENT, "CARRYING_CURRENT", NUMBER_READ_ONLY },
+   { eMSDP_WEIGHT_CAPACITY,  "WEIGHT_CAPACITY",  NUMBER_READ_ONLY },
+   { eMSDP_WEIGHT_CURRENT,   "WEIGHT_CURRENT",   NUMBER_READ_ONLY }, 
 
    /* Combat */
    { eMSDP_OPPONENT_HEALTH,  "OPPONENT_HEALTH",  NUMBER_READ_ONLY }, 
@@ -236,7 +247,18 @@ static variable_name_t VariableNameTable[eMSDP_MAX+1] =
    { eMSDP_ROOM_EXITS,       "ROOM_EXITS",       STRING_READ_ONLY }, 
    { eMSDP_ROOM_NAME,        "ROOM_NAME",        STRING_READ_ONLY }, 
    { eMSDP_ROOM_VNUM,        "ROOM_VNUM",        NUMBER_READ_ONLY }, 
-   { eMSDP_WORLD_TIME,       "WORLD_TIME",       NUMBER_READ_ONLY }, 
+   { eMSDP_WORLD_TIME,       "WORLD_TIME",       NUMBER_READ_ONLY },
+   { eMSDP_ROOM_TERRAIN,     "ROOM_TERRAIN",     STRING_READ_ONLY },
+   { eMSDP_ROOM_FLAGS,       "ROOM_FLAGS",       STRING_READ_ONLY },
+   { eMSDP_ZONE_NAME,        "ZONE_NAME",        STRING_READ_ONLY },
+   { eMSDP_ZONE_WEATHER,     "ZONE_WEATHER",     STRING_READ_ONLY },
+
+   /* Group/Social */
+   { eMSDP_GROUP,            "GROUP",            STRING_READ_ONLY },
+   { eMSDP_GROUP_MEMBERS,    "GROUP_MEMBERS",    STRING_READ_ONLY },
+   { eMSDP_PARTY_LEADER,     "PARTY_LEADER",     STRING_READ_ONLY },
+   { eMSDP_FOLLOWING,        "FOLLOWING",        STRING_READ_ONLY },
+   { eMSDP_FOLLOWERS,        "FOLLOWERS",        STRING_READ_ONLY }, 
 
    /* Configurable variables */
    { eMSDP_CLIENT_ID,        "CLIENT_ID",        STRING_WRITE_ONCE(1,40) }, 
@@ -2457,102 +2479,34 @@ static void SendMSSP( descriptor_t *apDescriptor )
 
       /* Generic */
       { "CRAWL DELAY",        "-1", NULL },
-/*  { "HOSTNAME",           "" },
-      { "PORT",               "4000" },
-      { "CODEBASE",           "tbaMUD" },
-      { "CONTACT",            "" },
-      { "CREATED",            "" },
-      { "ICON",               "" },
-      { "IP",                 "" },
-      { "LANGUAGE",           "" },
-      { "LOCATION",           "" },
-      { "MINIMUM AGE",        "" },
-      { "WEBSITE",            "" },
-*/
-      /* Categorisation */
-/*
-      { "FAMILY",             "" },
-      { "GENRE",              "" },
-      { "GAMEPLAY",           "" },
-      { "STATUS",             "" },
-      { "GAMESYSTEM",         "" },
-      { "INTERMUD",           "" },
-      { "SUBGENRE",           "" },
-*/
-      /* World */
-/*
-      { "AREAS",              "0" },
-      { "HELPFILES",          "0" },
-      { "MOBILES",            "0" },
-      { "OBJECTS",            "0" },
-      { "ROOMS",              "0" },
-      { "CLASSES",            "0" },
-      { "LEVELS",             "0" },
-      { "RACES",              "0" },
-      { "SKILLS",             "0" },
-*/
-      /* Protocols */
-/*
-      { "ANSI",               "1" },
-      { "GMCP",               "0" },
-#ifdef USING_MCCP
-      { "MCCP",               "1" },
-#else
-      { "MCCP",               "0" },
-#endif // USING_MCCP
-      { "MCP",                "0" },
-      { "MSDP",               "1" },
-      { "MSP",                "1" },
-      { "MXP",                "1" },
-      { "PUEBLO",             "0" },
-      { "UTF-8",              "1" },
-      { "VT100",              "0" },
-      { "XTERM 256 COLORS",   "1" },
-*/
-      /* Commercial */
-/*
-      { "PAY TO PLAY",        "0" },
-      { "PAY FOR PERKS",      "0" },
-*/
-      /* Hiring */
-/*
-      { "HIRING BUILDERS",    "1" },
-      { "HIRING CODERS",      "0" },
-*/
-      /* Extended variables */
+      { "CODEBASE",           "tbaMUD", NULL },
+      { "LANGUAGE",           "Portuguese", NULL },
 
-      /* World */
-/*
-      { "DBSIZE",             "0" },
-      { "EXITS",              "0" },
-      { "EXTRA DESCRIPTIONS", "0" },
-      { "MUDPROGS",           "0" },
-      { "MUDTRIGS",           "0" },
-      { "RESETS",             "0" },
-*/
-      /* Game */
-/*
-      { "ADULT MATERIAL",     "0" },
-      { "MULTICLASSING",      "0" },
-      { "NEWBIE FRIENDLY",    "0" },
-      { "PLAYER CITIES",      "0" },
-      { "PLAYER CLANS",       "0" },
-      { "PLAYER CRAFTING",    "0" },
-      { "PLAYER GUILDS",      "0" },
-      { "EQUIPMENT SYSTEM",   "" },
-      { "MULTIPLAYING",       "" },
-      { "PLAYERKILLING",      "" },
-      { "QUEST SYSTEM",       "" },
-      { "ROLEPLAYING",        "" },
-      { "TRAINING SYSTEM",    "" },
-      { "WORLD ORIGINALITY",  "" },
-*/
+      /* Categorisation */
+      { "FAMILY",             "CircleMUD", NULL },
+      { "GENRE",              "Fantasy", NULL },
+      { "GAMEPLAY",           "Hack and Slash", NULL },
+      { "STATUS",             "Alpha", NULL },
+      { "GAMESYSTEM",         "Custom", NULL },
+
       /* Protocols */
-/*
-      { "ATCP",               "1" },
-      { "SSL",                "0" },
-      { "ZMP",                "0" },
-*/
+      { "ANSI",               "1", NULL },
+      { "GMCP",               "0", NULL },
+#ifdef USING_MCCP
+      { "MCCP",               "1", NULL },
+#else
+      { "MCCP",               "0", NULL },
+#endif // USING_MCCP
+      { "MCP",                "0", NULL },
+      { "MSDP",               "1", NULL },
+      { "MSP",                "1", NULL },
+      { "MXP",                "1", NULL },
+      { "PUEBLO",             "0", NULL },
+      { "UTF-8",              "1", NULL },
+      { "VT100",              "0", NULL },
+      { "XTERM 256 COLORS",   "1", NULL },
+      { "ATCP",               "1", NULL },
+      { "SSL",                "0", NULL },
       { NULL, NULL, NULL } /* This must always be last. */
    };
 
