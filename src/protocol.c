@@ -2823,12 +2823,13 @@ void z_free(void *opaque, void *address)
 bool_t ProtocolMCCPStart( descriptor_t *apDescriptor )
 {
    protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
+   struct char_data *ch = apDescriptor ? apDescriptor->character : NULL;
    
-   if (!pProtocol)
+   if (!pProtocol || !ch)
       return false;
    
-   /* Only start compression if client supports it and we're not already compressing */
-   if ((pProtocol->bMCCP2 || pProtocol->bMCCP3) && !pProtocol->bCompressing)
+   /* Only start compression if preference is enabled, client supports it and we're not already compressing */
+   if (PRF_FLAGGED(ch, PRF_MCCP) && (pProtocol->bMCCP2 || pProtocol->bMCCP3) && !pProtocol->bCompressing)
    {
       CompressStart(apDescriptor);
       return true;
@@ -2864,6 +2865,10 @@ void ProtocolNAWSAutoConfig( descriptor_t *apDescriptor )
    struct char_data *ch = apDescriptor ? apDescriptor->character : NULL;
    
    if (!pProtocol || !ch || !pProtocol->bNAWS)
+      return;
+      
+   /* Only auto-configure if the preference is enabled */
+   if (!PRF_FLAGGED(ch, PRF_AUTOSIZE))
       return;
       
    /* Auto-configure pager width and height if NAWS is active and we have valid dimensions */

@@ -214,7 +214,6 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"meditate", "medi", POS_DEAD, do_cast, 1, SKILL_MEDITATE, CMD_NOARG},
 	{"mlist", "mlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_MLIST, CMD_ONEARG},
 	{"mcopy", "mcopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_MEDIT, CMD_TWOARG},
-	{"mccp", "mccp", POS_DEAD, do_mccp, 0, 0, CMD_NOARG},
 	{"msgedit", "msgedit", POS_DEAD, do_msgedit, LVL_GOD, 0, CMD_NOARG},
 	{"mwishlist", "mwish", POS_DEAD, do_mwishlist, LVL_IMMORT, 0, CMD_ONEARG},
 	{"mwant", "mwant", POS_DEAD, do_mwant, LVL_IMMORT, 0, CMD_ONEARG},

@@ -533,9 +533,14 @@ void copyover_recover()
 
 			d->connected = CON_PLAYING;
 			
-			/* Auto-configure NAWS if detected */
+			/* Auto-configure NAWS if detected and preference enabled */
 			if (d->pProtocol) {
 				ProtocolNAWSAutoConfig(d);
+			}
+			
+			/* Auto-start MCCP compression if preference enabled */
+			if (PRF_FLAGGED(d->character, PRF_MCCP)) {
+				ProtocolMCCPStart(d);
 			}
 			
 			look_at_room(d->character, 0);
