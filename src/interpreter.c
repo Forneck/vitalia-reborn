@@ -1234,6 +1234,12 @@ static int perform_dupe_check(struct descriptor_data *d)
 	REMOVE_BIT_AR(PLR_FLAGS(d->character), PLR_WRITING);
 	STATE(d) = CON_PLAYING;
 	MXPSendTag(d, "<VERSION>");
+	
+	/* Auto-start MCCP compression if preference enabled */
+	if (PRF_FLAGGED(d->character, PRF_MCCP)) {
+		ProtocolMCCPStart(d);
+	}
+	
 	switch (mode)
 	{
 	case RECON:
@@ -1832,6 +1838,12 @@ void nanny(struct descriptor_data *d, char *arg)
 				act("$n entrou no jogo.", TRUE, d->character, 0, 0, TO_ROOM);
 				STATE(d) = CON_PLAYING;
 				MXPSendTag(d, "<VERSION>");
+				
+				/* Auto-start MCCP compression if preference enabled */
+				if (PRF_FLAGGED(d->character, PRF_MCCP)) {
+					ProtocolMCCPStart(d);
+				}
+				
 				if (GET_LEVEL(d->character) == 0)
 				{
 					do_start(d->character);
