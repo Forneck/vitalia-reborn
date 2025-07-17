@@ -84,6 +84,7 @@
 #include "ibt.h"				/* for free_ibt_lists */
 #include "mud_event.h"
 #include "ann.h"
+#include "protocol.h"			/* for ProtocolNAWSAutoConfig */
 
 
 #ifndef INVALID_SOCKET
@@ -531,6 +532,12 @@ void copyover_recover()
 				GET_LOADROOM(d->character) = NOWHERE;
 
 			d->connected = CON_PLAYING;
+			
+			/* Auto-configure NAWS if detected */
+			if (d->pProtocol) {
+				ProtocolNAWSAutoConfig(d);
+			}
+			
 			look_at_room(d->character, 0);
 
 			/* Add to the list of 'recent' players (since last reboot) with

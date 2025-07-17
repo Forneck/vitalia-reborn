@@ -565,4 +565,12 @@ void UnicodeAdd( char **apString, int aValue );
 
 void *z_alloc(void *opaque, uint items, uint size);
 void z_free(void *opaque, void *address);
+
+/* MCCP compression control functions */
+bool_t ProtocolMCCPStart( descriptor_t *apDescriptor );
+void ProtocolMCCPStop( descriptor_t *apDescriptor );
+bool_t ProtocolMCCPEnabled( descriptor_t *apDescriptor );
+
+/* NAWS auto-configuration function */
+void ProtocolNAWSAutoConfig( descriptor_t *apDescriptor );
 #endif /* PROTOCOL_H */
