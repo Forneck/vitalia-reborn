@@ -1169,9 +1169,8 @@ void CopyoverSet( descriptor_t *apDescriptor, const char *apData )
       if ( pProtocol->bMXP )
          MXPSendTag( apDescriptor, "<VERSION>" );
 
-      /* Start compression if either MCCP2 or MCCP3 was saved */
-      if ( pProtocol->bMCCP2 || pProtocol->bMCCP3 )
-         CompressStart(apDescriptor);
+      /* Don't start compression here - it will be started later with proper 
+       * preference checks after character data is loaded during copyover recovery */
    }
 }
 
