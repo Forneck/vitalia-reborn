@@ -87,7 +87,7 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 66
+GenWimpy: 67
 E
 #1706
 guardiao guardião cripta~
@@ -135,7 +135,7 @@ Você não pode conseguir mais nada com ele.
 10 11 4 2d8+325 2d6+11
 23 9000
 9 9 1
-GenWimpy: 10
+GenWimpy: 12
 E
 #1708
 bolha lama~
@@ -241,7 +241,8 @@ passado infeliz, você presume.
 16 5 1 2d6+496 2d8+12
 1576 25000
 9 9 2
-GenWimpy: 30
+GenWimpy: 31
+GenLoot: 2
 GenRoam: 87
 E
 #1715

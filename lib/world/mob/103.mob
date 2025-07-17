@@ -11,9 +11,9 @@ Tomara que ele não esteja com fome!
 10 4000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 25
-GenRoam: 87
-GenGroup: 34
+GenWimpy: 26
+GenRoam: 86
+GenGroup: 33
 E
 #10301
 guarda nativo~
@@ -118,7 +118,7 @@ Esta cobra parece ser perigosa, sem dúvida. Veja só as presas!
 300 4000
 9 9 2
 BareHandAttack: 4
-GenWimpy: 22
+GenWimpy: 20
 GenRoam: 87
 E
 #10308

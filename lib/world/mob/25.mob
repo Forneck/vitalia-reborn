@@ -179,8 +179,8 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 25
-GenRoam: 59
+GenWimpy: 28
+GenRoam: 64
 E
 #2513
 guardioes maiores olhos~
@@ -280,7 +280,7 @@ algumas marcas de queimaduras menores marcam sua pelugem mosqueada.
 1 20 1 1d1+10 1d4+1
 0 11
 9 9 2
-GenWimpy: 41
+GenWimpy: 42
 E
 #2520
 estudante~
@@ -560,7 +560,7 @@ Ele parece inflamável.
 16 7 -5 16d16+160 1d10+10
 1000 17500
 9 9 0
-GenWimpy: 14
+GenWimpy: 15
 E
 #2540
 mestre vinculador~

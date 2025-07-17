@@ -80,7 +80,8 @@ guerra.
 80 0 -13 2d12+1400 3d8+18
 8000 100444
 9 9 1
-GenWimpy: 3
+GenWimpy: 4
+GenRoam: 1
 E
 #17306
 galahad cavaleiro~
@@ -368,9 +369,10 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 7
-GenRoam: 5
-GenGroup: 4
+GenWimpy: 6
+GenLoot: 1
+GenRoam: 8
+GenGroup: 3
 E
 #17325
 bufao dagonet bobo~

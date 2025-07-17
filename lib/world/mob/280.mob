@@ -80,8 +80,8 @@ Você vê um goblin com nadadeiras e barbatanas.
 15 5 0 3d10+280 4d3+8
 500 7000
 9 9 0
-GenWimpy: 99
-GenRoam: 39
+GenWimpy: 100
+GenRoam: 47
 E
 #28007
 gafanhoto inseto~
@@ -106,8 +106,8 @@ Ali está uma vaca louca, usando um chapéu de Viking!
 12 7 0 3d5+200 3d5+7
 1000 13000
 9 9 0
-GenWimpy: 85
-GenRoam: 3
+GenWimpy: 90
+GenRoam: 4
 E
 #28009
 estatua idolo metal guerreiro~
@@ -134,7 +134,7 @@ Apenas uma vaquinha...
 12 7 0 3d5+200 3d5+3
 0 13000
 9 9 0
-GenWimpy: 21
+GenWimpy: 24
 E
 #28011
 cavalo~

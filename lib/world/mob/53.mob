@@ -76,7 +76,7 @@ O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
 10 10 5 10d10+100 2d6+3
 500 9000
 9 9 1
-GenWimpy: 83
+GenWimpy: 84
 GenRoam: 87
 E
 T 3007
@@ -94,9 +94,8 @@ não hoje...
 18 2 0 18d18+180 3d8+2
 1000 30000
 9 9 1
-GenWimpy: 14
-GenRoam: 39
-GenGroup: 1
+GenWimpy: 15
+GenRoam: 38
 E
 T 3007
 #5306
@@ -142,7 +141,7 @@ quentes e arenosos.
 1500 18000
 9 9 1
 GenWimpy: 100
-GenRoam: 83
+GenRoam: 85
 E
 #5309
 efreeti~

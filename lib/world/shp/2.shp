@@ -7,9 +7,9 @@ CircleMUD v3.0 Shop File~
 -1
 1.50
 0.75
-5gigante
-9gigante
-17
+5
+7
+9
 -1
 %s O vendedor de itens mágicos não possui isso no momento.~
 %s O vendedor não tem isso que você procura.~
@@ -20,9 +20,9 @@ CircleMUD v3.0 Shop File~
 %s Te dou %d moedas por isso.~
 233
 1
-203
+211
 0
-243
+281
 -1
 6
 18

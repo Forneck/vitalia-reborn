@@ -22,7 +22,7 @@ Ele parece estar atrás de um almoço..
 22 0 0 1d5+380 3d5+20
 1000 20000
 9 9 1
-GenWimpy: 18
+GenWimpy: 19
 E
 #17003
 elemental~
@@ -35,7 +35,7 @@ Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 10 1 -1 1d5+100 3d8+10
 1100 6000
 9 9 1
-GenWimpy: 15
+GenWimpy: 18
 E
 #17004
 elemental guardiao~
@@ -76,8 +76,8 @@ An undefined string.
 10 6 -2 3d5+200 3d6+6
 1750 9000
 9 9 1
-GenWimpy: 11
-GenRoam: 48
+GenWimpy: 13
+GenRoam: 44
 E
 #17007
 elemental grande~
@@ -303,8 +303,8 @@ Uma estranha mistura de terra e ar.. ela não parece nem te ver.
 5 14 -15 1d5+200 2d5+3
 1000 3000
 9 9 2
-GenWimpy: 7
-GenRoam: 47
+GenWimpy: 6
+GenRoam: 59
 E
 #17025
 redemoinho tornado elemental~
@@ -332,8 +332,8 @@ e seus bruxuleantes membros, que parecem ser afiados como garras.
 26 -2 -5 1d5+590 6d4+14
 3000 30000
 9 9 2
-GenWimpy: 30
-GenGroup: 20
+GenWimpy: 34
+GenGroup: 21
 E
 #17027
 magneto elemental humanoide~
@@ -346,7 +346,8 @@ Um humanóide que parece ter sido preso em um campo magnético.
 26 -2 -5 1d5+640 6d5+14
 3000 30000
 9 9 1
-GenWimpy: 26
+GenWimpy: 24
+GenLoot: 1
 E
 #17028
 neve bandido~
@@ -360,7 +361,7 @@ frio subindo por suas costas.
 26 -2 -5 1d5+630 6d5+13
 3000 30000
 9 9 1
-GenWimpy: 22
+GenWimpy: 26
 E
 #17029
 rochas monstro~
