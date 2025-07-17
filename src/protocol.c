@@ -387,6 +387,7 @@ protocol_t *ProtocolCreate( void )
    pProtocol->bNAWS = false;
    pProtocol->bCHARSET = false;
    pProtocol->bMSDP = false;
+   pProtocol->bGMCP = false;
    pProtocol->bATCP = false;
    pProtocol->bMSP = false;
    pProtocol->bMXP = false;
@@ -1011,6 +1012,8 @@ const char *CopyoverGet( descriptor_t *apDescriptor )
          *pBuffer++ = 'N';
       if ( pProtocol->bMSDP )
          *pBuffer++ = 'M';
+      if ( pProtocol->bGMCP )
+         *pBuffer++ = 'G';
       if ( pProtocol->bATCP )
          *pBuffer++ = 'A';
       if ( pProtocol->bMSP )
@@ -1064,6 +1067,9 @@ void CopyoverSet( descriptor_t *apDescriptor, const char *apData )
             case 'M':
                pProtocol->bMSDP = true;
                break;
+            case 'G':
+               pProtocol->bGMCP = true;
+               break;
             case 'A':
                pProtocol->bATCP = true;
                break;
@@ -1116,7 +1122,7 @@ void CopyoverSet( descriptor_t *apDescriptor, const char *apData )
       pProtocol->ScreenWidth = Width;
       pProtocol->ScreenHeight = Height;
 
-      /* If we're using MSDP or ATCP, we need to renegotiate it so that the 
+      /* If we're using MSDP, GMCP or ATCP, we need to renegotiate it so that the 
        * client can resend the list of variables it wants us to REPORT.
        *
        * Note that we only use ATCP if MSDP is not supported.
@@ -1125,6 +1131,11 @@ void CopyoverSet( descriptor_t *apDescriptor, const char *apData )
       {
          char WillMSDP [] = { (char)IAC, (char)WILL, TELOPT_MSDP, '\0' };
          Write(apDescriptor, WillMSDP);
+      }
+      if ( pProtocol->bGMCP )
+      {
+         char WillGMCP [] = { (char)IAC, (char)WILL, TELOPT_GMCP, '\0' };
+         Write(apDescriptor, WillGMCP);
       }
       else if ( pProtocol->bATCP )
       {
@@ -1462,6 +1473,57 @@ void MSSPSetPlayers( int aPlayers )
 }
 
 /******************************************************************************
+ GMCP global functions.
+ ******************************************************************************/
+
+void GMCPSend( descriptor_t *apDescriptor, const char *apMessage )
+{
+   protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
+
+   if ( pProtocol != NULL && pProtocol->bGMCP && apMessage != NULL )
+   {
+      char GMCPBuffer[MAX_VARIABLE_LENGTH+1];
+      int RequiredBuffer = strlen(apMessage) + 10; /* IAC SB TELOPT_GMCP <data> IAC SE */
+
+      if ( RequiredBuffer >= MAX_VARIABLE_LENGTH )
+      {
+         char ErrorBuffer[256];
+         sprintf( ErrorBuffer, 
+            "GMCPSend: Message length %d bytes (exceeds MAX_VARIABLE_LENGTH of %d).\n", 
+            RequiredBuffer, MAX_VARIABLE_LENGTH );
+         ReportBug( ErrorBuffer );
+         return;
+      }
+
+      sprintf( GMCPBuffer, "%c%c%c%s%c%c", 
+         IAC, SB, TELOPT_GMCP, apMessage, IAC, SE );
+      Write( apDescriptor, GMCPBuffer );
+   }
+}
+
+void GMCPSendData( descriptor_t *apDescriptor, const char *apPackage, const char *apData )
+{
+   if ( apPackage != NULL && apData != NULL )
+   {
+      char GMCPMessage[MAX_VARIABLE_LENGTH];
+      int RequiredBuffer = strlen(apPackage) + strlen(apData) + 2; /* package + space + data */
+
+      if ( RequiredBuffer >= MAX_VARIABLE_LENGTH )
+      {
+         char ErrorBuffer[256];
+         sprintf( ErrorBuffer, 
+            "GMCPSendData: Combined length %d bytes (exceeds MAX_VARIABLE_LENGTH of %d).\n", 
+            RequiredBuffer, MAX_VARIABLE_LENGTH );
+         ReportBug( ErrorBuffer );
+         return;
+      }
+
+      sprintf( GMCPMessage, "%s %s", apPackage, apData );
+      GMCPSend( apDescriptor, GMCPMessage );
+   }
+}
+
+/******************************************************************************
  MXP global functions.
  ******************************************************************************/
 
@@ -1710,6 +1772,7 @@ static void Negotiate( descriptor_t *apDescriptor )
       const char DoNAWS         [] = { (char)IAC, (char)DO,   TELOPT_NAWS,      '\0' };
       const char DoCHARSET      [] = { (char)IAC, (char)DO,   TELOPT_CHARSET,   '\0' };
       const char WillMSDP       [] = { (char)IAC, (char)WILL, TELOPT_MSDP,      '\0' };
+      const char WillGMCP       [] = { (char)IAC, (char)WILL, TELOPT_GMCP,      '\0' };
       const char WillMSSP       [] = { (char)IAC, (char)WILL, TELOPT_MSSP,      '\0' };
       const char DoATCP         [] = { (char)IAC, (char)DO,   (char)TELOPT_ATCP,'\0' };
       const char WillMSP        [] = { (char)IAC, (char)WILL, TELOPT_MSP,       '\0' };
@@ -1737,6 +1800,7 @@ static void Negotiate( descriptor_t *apDescriptor )
        * https://bugs.launchpad.net/ubuntu/+source/gnome-mud/+bug/398340 */
       Write(apDescriptor, DoCHARSET);
       Write(apDescriptor, WillMSDP);
+      Write(apDescriptor, WillGMCP);
       Write(apDescriptor, WillMSSP);
       Write(apDescriptor, DoATCP);
       Write(apDescriptor, WillMSP);
@@ -1809,6 +1873,19 @@ static void PerformHandshake( descriptor_t *apDescriptor, char aCmd, char aProto
          }
          else if ( aCmd == (char)DONT )
             pProtocol->bMSDP = false;
+         break;
+
+      case (char)TELOPT_GMCP:
+         if ( aCmd == (char)DO )
+         {
+            pProtocol->bGMCP = true;
+
+            /* Send GMCP hello and supported modules */
+            GMCPSend( apDescriptor, "Core.Hello { \"client\": \"VitaliaMUD Reborn\", \"version\": \"1.0\" }" );
+            GMCPSend( apDescriptor, "Core.Supports.Set [\"Char 1\", \"Char.Items 1\", \"Char.Skills 1\", \"Room 1\", \"Comm.Channel 1\"]" );
+         }
+         else if ( aCmd == (char)DONT )
+            pProtocol->bGMCP = false;
          break;
 
       case (char)TELOPT_MSSP:
@@ -2094,6 +2171,12 @@ static void PerformSubnegotiation( descriptor_t *apDescriptor, char aCmd, char *
 
       case (char)TELOPT_MSDP:
          ParseMSDP( apDescriptor, apData );
+         break;
+
+      case (char)TELOPT_GMCP:
+         /* Parse GMCP message - it should be in JSON format */
+         /* For now, we'll just handle basic messages */
+         /* A proper implementation would parse JSON and handle different modules */
          break;
 
       case (char)TELOPT_ATCP:
@@ -2491,7 +2574,7 @@ static void SendMSSP( descriptor_t *apDescriptor )
 
       /* Protocols */
       { "ANSI",               "1", NULL },
-      { "GMCP",               "0", NULL },
+      { "GMCP",               "1", NULL },
 #ifdef USING_MCCP
       { "MCCP",               "1", NULL },
 #else

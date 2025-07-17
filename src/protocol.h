@@ -45,6 +45,7 @@ typedef struct descriptor_data descriptor_t;
 #define REJECTED                       3
 
 #define TELOPT_CHARSET                 42
+#define TELOPT_GMCP                    201  /* GMCP (Generic MUD Communication Protocol) */
 #define TELOPT_MSDP                    69
 #define TELOPT_MSSP                    70
 #define TELOPT_MCCP2                    86 /* This is MCCP version 2 */
@@ -227,6 +228,7 @@ typedef struct
    bool_t    bNAWS;            /* The client supports NAWS */
    bool_t    bCHARSET;         /* The client supports CHARSET */
    bool_t    bMSDP;            /* The client supports MSDP */
+   bool_t    bGMCP;            /* The client supports GMCP */
    bool_t    bATCP;            /* The client supports ATCP */
    bool_t    bMSP;             /* The client supports MSP */
    bool_t    bMXP;             /* The client supports MXP */
@@ -472,6 +474,23 @@ void MSDPSetArray( descriptor_t *apDescriptor, variable_t aMSDP, const char *apV
  * stores the uptime.
  */
 void MSSPSetPlayers( int aPlayers );
+
+/******************************************************************************
+ GMCP functions.
+ ******************************************************************************/
+
+/* Function: GMCPSend
+ *
+ * Send a GMCP message to the player. GMCP uses JSON format for data exchange.
+ * The message should be in the format "Module.Submodule" followed by JSON data.
+ */
+void GMCPSend( descriptor_t *apDescriptor, const char *apMessage );
+
+/* Function: GMCPSendData
+ *
+ * Send GMCP data with a specific module/package and JSON data string.
+ */
+void GMCPSendData( descriptor_t *apDescriptor, const char *apPackage, const char *apData );
 
 /******************************************************************************
  MXP functions.

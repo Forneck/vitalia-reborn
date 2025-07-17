@@ -3393,6 +3393,23 @@ static void msdp_update(void)
 				MSDPSetString(d, eMSDP_FOLLOWING, "");
 			}
 
+			/* Send GMCP character data if supported */
+			if (d->pProtocol->bGMCP) {
+				char gmcp_buffer[MAX_STRING_LENGTH];
+				
+				/* Send basic character vitals */
+				sprintf(gmcp_buffer, "{ \"name\": \"%s\", \"level\": %d, \"hp\": %d, \"maxhp\": %d, \"mana\": %d, \"maxmana\": %d, \"moves\": %d, \"maxmoves\": %d }",
+					GET_NAME(ch), GET_LEVEL(ch), GET_HIT(ch), GET_MAX_HIT(ch), 
+					GET_MANA(ch), GET_MAX_MANA(ch), GET_MOVE(ch), GET_MAX_MOVE(ch));
+				GMCPSendData(d, "Char.Vitals", gmcp_buffer);
+				
+				/* Send character status */
+				sprintf(gmcp_buffer, "{ \"class\": \"%s\", \"race\": \"%s\", \"alignment\": %d, \"hunger\": %d, \"thirst\": %d }",
+					pc_class_types[ch->player.chclass], "Human", GET_ALIGNMENT(ch), 
+					GET_COND(ch, HUNGER), GET_COND(ch, THIRST));
+				GMCPSendData(d, "Char.Status", gmcp_buffer);
+			}
+
 			MSDPUpdate(d);
 		}
 

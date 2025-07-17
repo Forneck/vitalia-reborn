@@ -271,6 +271,7 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
                              "%sL%s) Charset      %s[%s%3s%s]      %sO%s) ATCP     %s[%s%3s%s]\r\n"
                              "%sP%s) UTF-8        %s[%s%3s%s]      %sR%s) MSP      %s[%s%3s%s]\r\n"
                              "%sS%s) MCCP2        %s[%s%3s%s]      %sT%s) MCCP3    %s[%s%3s%s]\r\n"
+                             "%sU%s) GMCP         %s[%s%3s%s]\r\n"
                              "\r\n",
              CBWHT(d->character, C_NRM),
 /* Line 12 - 256 and mxp */
@@ -292,7 +293,10 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
 /* Line 16 - mccp2 and mccp3 */
              CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
              ONOFF(d->pProtocol->bMCCP2), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM),
-             CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM), ONOFF(d->pProtocol->bMCCP3), CCCYN(d->character, C_NRM)
+             CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM), ONOFF(d->pProtocol->bMCCP3), CCCYN(d->character, C_NRM),
+/* Line 17 - gmcp */
+             CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
+             ONOFF(d->pProtocol->bGMCP), CCCYN(d->character, C_NRM)
              );
 /* Finishing Off */
   send_to_char(d->character, "%sQ%s) Sair das preferencias...\r\n",
@@ -699,6 +703,11 @@ void prefedit_parse(struct descriptor_data * d, char *arg)
       case 't':
       case 'T':
         TOGGLE_VAR(d->pProtocol->bMCCP3);
+        break;
+
+      case 'u':
+      case 'U':
+        TOGGLE_VAR(d->pProtocol->bGMCP);
         break;
         
         case '0':
