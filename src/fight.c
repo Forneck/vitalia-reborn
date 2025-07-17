@@ -1674,7 +1674,7 @@ void update_mob_prototype_genetics(struct char_data *mob)
 
     if (MOB_FLAGGED(mob, MOB_BRAVE)) {
         final_wimpy -= 5;
-        final_brave += 1; /* A morte de um bravo reforça o traço. */
+        final_brave += 3; /* A morte de um bravo reforça o traço. */
     } else {
         final_wimpy += 5;
         final_brave -= 1; /* A morte de um não-bravo diminui a prevalência. */
