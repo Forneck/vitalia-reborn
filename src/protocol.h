@@ -18,7 +18,7 @@ typedef struct descriptor_data descriptor_t;
  ******************************************************************************/
 
 
-//#define USING_MCCP
+#define USING_MCCP
 
 
 /******************************************************************************
@@ -45,6 +45,7 @@ typedef struct descriptor_data descriptor_t;
 #define REJECTED                       3
 
 #define TELOPT_CHARSET                 42
+#define TELOPT_GMCP                    201  /* GMCP (Generic MUD Communication Protocol) */
 #define TELOPT_MSDP                    69
 #define TELOPT_MSSP                    70
 #define TELOPT_MCCP2                    86 /* This is MCCP version 2 */
@@ -109,9 +110,6 @@ typedef enum
    eMSDP_CLASS, 
    eMSDP_MANA, 
    eMSDP_MANA_MAX, 
-   eMSDP_WIMPY, 
-   eMSDP_PRACTICE, 
-   eMSDP_MONEY, 
    eMSDP_MOVEMENT, 
    eMSDP_MOVEMENT_MAX, 
    eMSDP_HITROLL, 
@@ -126,7 +124,21 @@ typedef enum
    eMSDP_INT_PERM, 
    eMSDP_WIS_PERM, 
    eMSDP_DEX_PERM, 
-   eMSDP_CON_PERM, 
+   eMSDP_CON_PERM,
+
+   /* Extended Character Status */
+   eMSDP_WIMPY, 
+   eMSDP_PRACTICE, 
+   eMSDP_MONEY, 
+   eMSDP_HUNGER,
+   eMSDP_THIRST,
+   eMSDP_DRUNK,
+   eMSDP_BREATH,
+   eMSDP_BREATH_MAX,
+   eMSDP_CARRYING_CAPACITY,
+   eMSDP_CARRYING_CURRENT,
+   eMSDP_WEIGHT_CAPACITY,
+   eMSDP_WEIGHT_CURRENT, 
 
    /* Combat */
    eMSDP_OPPONENT_HEALTH, 
@@ -139,7 +151,18 @@ typedef enum
    eMSDP_ROOM_EXITS, 
    eMSDP_ROOM_NAME, 
    eMSDP_ROOM_VNUM, 
-   eMSDP_WORLD_TIME, 
+   eMSDP_WORLD_TIME,
+   eMSDP_ROOM_TERRAIN,
+   eMSDP_ROOM_FLAGS,
+   eMSDP_ZONE_NAME,
+   eMSDP_ZONE_WEATHER,
+
+   /* Group/Social */
+   eMSDP_GROUP,
+   eMSDP_GROUP_MEMBERS,
+   eMSDP_PARTY_LEADER,
+   eMSDP_FOLLOWING,
+   eMSDP_FOLLOWERS, 
 
    /* Configuration */
    eMSDP_CLIENT_ID, 
@@ -205,6 +228,7 @@ typedef struct
    bool_t    bNAWS;            /* The client supports NAWS */
    bool_t    bCHARSET;         /* The client supports CHARSET */
    bool_t    bMSDP;            /* The client supports MSDP */
+   bool_t    bGMCP;            /* The client supports GMCP */
    bool_t    bATCP;            /* The client supports ATCP */
    bool_t    bMSP;             /* The client supports MSP */
    bool_t    bMXP;             /* The client supports MXP */
@@ -216,6 +240,10 @@ typedef struct
    char     *pMXPVersion;      /* The version of MXP supported */
    char     *pLastTTYPE;       /* Used for the cyclic TTYPE check */
    MSDP_t  **pVariables;       /* The MSDP variables */
+#ifdef USING_MCCP
+   void     *pCompress;        /* Compression stream (z_stream*) */
+   bool_t    bCompressing;     /* Is compression currently active? */
+#endif
 } protocol_t;
 
 /******************************************************************************
@@ -446,6 +474,23 @@ void MSDPSetArray( descriptor_t *apDescriptor, variable_t aMSDP, const char *apV
  * stores the uptime.
  */
 void MSSPSetPlayers( int aPlayers );
+
+/******************************************************************************
+ GMCP functions.
+ ******************************************************************************/
+
+/* Function: GMCPSend
+ *
+ * Send a GMCP message to the player. GMCP uses JSON format for data exchange.
+ * The message should be in the format "Module.Submodule" followed by JSON data.
+ */
+void GMCPSend( descriptor_t *apDescriptor, const char *apMessage );
+
+/* Function: GMCPSendData
+ *
+ * Send GMCP data with a specific module/package and JSON data string.
+ */
+void GMCPSendData( descriptor_t *apDescriptor, const char *apPackage, const char *apData );
 
 /******************************************************************************
  MXP functions.

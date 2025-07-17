@@ -13,6 +13,10 @@
 #include <sys/types.h>
 #include "protocol.h"
 
+#ifdef USING_MCCP
+#include <zlib.h>
+#endif
+
 /******************************************************************************
  The following section is for Diku/Merc derivatives.  Replace as needed.
  ******************************************************************************/
@@ -64,32 +68,84 @@ static void InfoMessage( descriptor_t *apDescriptor, const char *apData )
 
 static void CompressStart( descriptor_t *apDescriptor )
 {
-   /* If your mud uses MCCP (Mud Client Compression Protocol), you need to 
-    * call whatever function normally starts compression from here - the 
-    * ReportBug() call should then be deleted.
-    * 
-    * Otherwise you can just ignore this function.
-    */
-          const char WontMCCP2       [] = { (char)IAC, (char)WONT, TELOPT_MCCP2,      '\0' };
-     const char WontMCCP3      [] = { (char)IAC, (char)WONT, TELOPT_MCCP3,      '\0' };
-     Write( apDescriptor, WontMCCP2);
-     Write( apDescriptor, WontMCCP3);
- //  ReportBug( "CompressStart() in protocol.c is being called, but it doesn't do anything!\n" );
+#ifdef USING_MCCP
+   protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
+   
+   if (!pProtocol || pProtocol->bCompressing)
+      return;
+
+   /* Only start compression if MCCP2 or MCCP3 is enabled */
+   if (!pProtocol->bMCCP2 && !pProtocol->bMCCP3)
+   {
+      const char WontMCCP2[] = { (char)IAC, (char)WONT, TELOPT_MCCP2, '\0' };
+      const char WontMCCP3[] = { (char)IAC, (char)WONT, TELOPT_MCCP3, '\0' };
+      Write( apDescriptor, WontMCCP2);
+      Write( apDescriptor, WontMCCP3);
+      return;
+   }
+
+   /* Allocate and initialize compression stream */
+   z_stream *stream = malloc(sizeof(z_stream));
+   if (!stream)
+      return;
+
+   stream->zalloc = z_alloc;
+   stream->zfree = z_free;
+   stream->opaque = NULL;
+
+   /* Initialize deflate for compression */
+   if (deflateInit(stream, Z_DEFAULT_COMPRESSION) != Z_OK)
+   {
+      free(stream);
+      return;
+   }
+
+   pProtocol->pCompress = stream;
+   pProtocol->bCompressing = true;
+
+   /* Send the compression start sequence */
+   if (pProtocol->bMCCP3)
+   {
+      const char StartMCCP3[] = { (char)IAC, (char)SB, TELOPT_MCCP3, (char)IAC, (char)SE, '\0' };
+      Write(apDescriptor, StartMCCP3);
+   }
+   else if (pProtocol->bMCCP2)
+   {
+      const char StartMCCP2[] = { (char)IAC, (char)SB, TELOPT_MCCP2, (char)IAC, (char)SE, '\0' };
+      Write(apDescriptor, StartMCCP2);
+   }
+#else
+   /* If MCCP is not compiled in, send rejection */
+   const char WontMCCP2[] = { (char)IAC, (char)WONT, TELOPT_MCCP2, '\0' };
+   const char WontMCCP3[] = { (char)IAC, (char)WONT, TELOPT_MCCP3, '\0' };
+   Write( apDescriptor, WontMCCP2);
+   Write( apDescriptor, WontMCCP3);
+#endif
 }
 
 static void CompressEnd( descriptor_t *apDescriptor )
 {
-   /* If your mud uses MCCP (Mud Client Compression Protocol), you need to 
-    * call whatever function normally starts compression from here - the 
-    * ReportBug() call should then be deleted.
-    * 
-    * Otherwise you can just ignore this function.
-    */
-     const char WontMCCP2       [] = { (char)IAC, (char)WONT, TELOPT_MCCP2,      '\0' };
-     const char WontMCCP3      [] = { (char)IAC, (char)WONT, TELOPT_MCCP3,      '\0' };
-     Write( apDescriptor, WontMCCP2);
-     Write( apDescriptor, WontMCCP3);
-//  ReportBug( "CompressEnd() in protocol.c is being called, but it doesn't do anything!\n" );
+#ifdef USING_MCCP
+   protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
+   
+   if (!pProtocol || !pProtocol->bCompressing || !pProtocol->pCompress)
+      return;
+
+   z_stream *stream = (z_stream*)pProtocol->pCompress;
+   
+   /* Finish compression */
+   deflateEnd(stream);
+   free(stream);
+   
+   pProtocol->pCompress = NULL;
+   pProtocol->bCompressing = false;
+#else
+   /* If MCCP is not compiled in, send rejection */
+   const char WontMCCP2[] = { (char)IAC, (char)WONT, TELOPT_MCCP2, '\0' };
+   const char WontMCCP3[] = { (char)IAC, (char)WONT, TELOPT_MCCP3, '\0' };
+   Write( apDescriptor, WontMCCP2);
+   Write( apDescriptor, WontMCCP3);
+#endif
 }
 
 /******************************************************************************
@@ -150,9 +206,6 @@ static variable_name_t VariableNameTable[eMSDP_MAX+1] =
    { eMSDP_CLASS,            "CLASS",            STRING_READ_ONLY }, 
    { eMSDP_MANA,             "MANA",             NUMBER_READ_ONLY }, 
    { eMSDP_MANA_MAX,         "MANA_MAX",         NUMBER_READ_ONLY }, 
-   { eMSDP_WIMPY,            "WIMPY",            NUMBER_READ_ONLY }, 
-   { eMSDP_PRACTICE,         "PRACTICE",         NUMBER_READ_ONLY }, 
-   { eMSDP_MONEY,            "MONEY",            NUMBER_READ_ONLY }, 
    { eMSDP_MOVEMENT,         "MOVEMENT",         NUMBER_READ_ONLY }, 
    { eMSDP_MOVEMENT_MAX,     "MOVEMENT_MAX",     NUMBER_READ_ONLY }, 
    { eMSDP_HITROLL,          "HITROLL",          NUMBER_READ_ONLY }, 
@@ -167,7 +220,21 @@ static variable_name_t VariableNameTable[eMSDP_MAX+1] =
    { eMSDP_INT_PERM,         "INT_PERM",         NUMBER_READ_ONLY }, 
    { eMSDP_WIS_PERM,         "WIS_PERM",         NUMBER_READ_ONLY }, 
    { eMSDP_DEX_PERM,         "DEX_PERM",         NUMBER_READ_ONLY }, 
-   { eMSDP_CON_PERM,         "CON_PERM",         NUMBER_READ_ONLY }, 
+   { eMSDP_CON_PERM,         "CON_PERM",         NUMBER_READ_ONLY },
+
+   /* Extended Character Status */
+   { eMSDP_WIMPY,            "WIMPY",            NUMBER_READ_ONLY }, 
+   { eMSDP_PRACTICE,         "PRACTICE",         NUMBER_READ_ONLY }, 
+   { eMSDP_MONEY,            "MONEY",            NUMBER_READ_ONLY }, 
+   { eMSDP_HUNGER,           "HUNGER",           NUMBER_READ_ONLY },
+   { eMSDP_THIRST,           "THIRST",           NUMBER_READ_ONLY },
+   { eMSDP_DRUNK,            "DRUNK",            NUMBER_READ_ONLY },
+   { eMSDP_BREATH,           "BREATH",           NUMBER_READ_ONLY },
+   { eMSDP_BREATH_MAX,       "BREATH_MAX",       NUMBER_READ_ONLY },
+   { eMSDP_CARRYING_CAPACITY, "CARRYING_CAPACITY", NUMBER_READ_ONLY },
+   { eMSDP_CARRYING_CURRENT, "CARRYING_CURRENT", NUMBER_READ_ONLY },
+   { eMSDP_WEIGHT_CAPACITY,  "WEIGHT_CAPACITY",  NUMBER_READ_ONLY },
+   { eMSDP_WEIGHT_CURRENT,   "WEIGHT_CURRENT",   NUMBER_READ_ONLY }, 
 
    /* Combat */
    { eMSDP_OPPONENT_HEALTH,  "OPPONENT_HEALTH",  NUMBER_READ_ONLY }, 
@@ -180,7 +247,18 @@ static variable_name_t VariableNameTable[eMSDP_MAX+1] =
    { eMSDP_ROOM_EXITS,       "ROOM_EXITS",       STRING_READ_ONLY }, 
    { eMSDP_ROOM_NAME,        "ROOM_NAME",        STRING_READ_ONLY }, 
    { eMSDP_ROOM_VNUM,        "ROOM_VNUM",        NUMBER_READ_ONLY }, 
-   { eMSDP_WORLD_TIME,       "WORLD_TIME",       NUMBER_READ_ONLY }, 
+   { eMSDP_WORLD_TIME,       "WORLD_TIME",       NUMBER_READ_ONLY },
+   { eMSDP_ROOM_TERRAIN,     "ROOM_TERRAIN",     STRING_READ_ONLY },
+   { eMSDP_ROOM_FLAGS,       "ROOM_FLAGS",       STRING_READ_ONLY },
+   { eMSDP_ZONE_NAME,        "ZONE_NAME",        STRING_READ_ONLY },
+   { eMSDP_ZONE_WEATHER,     "ZONE_WEATHER",     STRING_READ_ONLY },
+
+   /* Group/Social */
+   { eMSDP_GROUP,            "GROUP",            STRING_READ_ONLY },
+   { eMSDP_GROUP_MEMBERS,    "GROUP_MEMBERS",    STRING_READ_ONLY },
+   { eMSDP_PARTY_LEADER,     "PARTY_LEADER",     STRING_READ_ONLY },
+   { eMSDP_FOLLOWING,        "FOLLOWING",        STRING_READ_ONLY },
+   { eMSDP_FOLLOWERS,        "FOLLOWERS",        STRING_READ_ONLY }, 
 
    /* Configurable variables */
    { eMSDP_CLIENT_ID,        "CLIENT_ID",        STRING_WRITE_ONCE(1,40) }, 
@@ -309,6 +387,7 @@ protocol_t *ProtocolCreate( void )
    pProtocol->bNAWS = false;
    pProtocol->bCHARSET = false;
    pProtocol->bMSDP = false;
+   pProtocol->bGMCP = false;
    pProtocol->bATCP = false;
    pProtocol->bMSP = false;
    pProtocol->bMXP = false;
@@ -320,6 +399,11 @@ protocol_t *ProtocolCreate( void )
    pProtocol->pMXPVersion = AllocString("Unknown");
    pProtocol->pLastTTYPE = NULL;
    pProtocol->pVariables = (MSDP_t **) malloc(sizeof(MSDP_t*)*eMSDP_MAX);
+
+#ifdef USING_MCCP
+   pProtocol->pCompress = NULL;
+   pProtocol->bCompressing = false;
+#endif
 
    for ( i = eMSDP_NONE+1; i < eMSDP_MAX; ++i )
    {
@@ -362,6 +446,16 @@ void ProtocolDestroy( protocol_t *apProtocol )
    if (apProtocol->pLastTTYPE) /* Isn't saved over copyover so may still be NULL */
      free(apProtocol->pLastTTYPE);
    free(apProtocol->pMXPVersion);
+
+#ifdef USING_MCCP
+   if (apProtocol->pCompress)
+   {
+      z_stream *stream = (z_stream*)apProtocol->pCompress;
+      deflateEnd(stream);
+      free(apProtocol->pCompress);
+   }
+#endif
+
    free(apProtocol);
 }
 
@@ -863,8 +957,10 @@ const char *ProtocolOutput( descriptor_t *apDescriptor, const char *apData, int 
    /* Terminate the string */
    Result[i] = '\0';
 
-   /* Apply UTF-8 filtering if UTF-8 is disabled */
-   if ( pProtocol && !pProtocol->pVariables[eMSDP_UTF_8]->ValueInt )
+   /* Apply UTF-8 filtering if UTF-8 is disabled, but not during protocol negotiation
+    * or for protocol control sequences that could interfere with client identification */
+   if ( pProtocol && !pProtocol->pVariables[eMSDP_UTF_8]->ValueInt && apDescriptor && 
+        STATE(apDescriptor) != CON_GET_PROTOCOL )
    {
       static char FilteredResult[MAX_OUTPUT_BUFFER+1];
       FilterUTF8ToASCII(Result, FilteredResult, MAX_OUTPUT_BUFFER+1);
@@ -916,6 +1012,8 @@ const char *CopyoverGet( descriptor_t *apDescriptor )
          *pBuffer++ = 'N';
       if ( pProtocol->bMSDP )
          *pBuffer++ = 'M';
+      if ( pProtocol->bGMCP )
+         *pBuffer++ = 'G';
       if ( pProtocol->bATCP )
          *pBuffer++ = 'A';
       if ( pProtocol->bMSP )
@@ -969,6 +1067,9 @@ void CopyoverSet( descriptor_t *apDescriptor, const char *apData )
             case 'M':
                pProtocol->bMSDP = true;
                break;
+            case 'G':
+               pProtocol->bGMCP = true;
+               break;
             case 'A':
                pProtocol->bATCP = true;
                break;
@@ -1021,7 +1122,7 @@ void CopyoverSet( descriptor_t *apDescriptor, const char *apData )
       pProtocol->ScreenWidth = Width;
       pProtocol->ScreenHeight = Height;
 
-      /* If we're using MSDP or ATCP, we need to renegotiate it so that the 
+      /* If we're using MSDP, GMCP or ATCP, we need to renegotiate it so that the 
        * client can resend the list of variables it wants us to REPORT.
        *
        * Note that we only use ATCP if MSDP is not supported.
@@ -1030,6 +1131,11 @@ void CopyoverSet( descriptor_t *apDescriptor, const char *apData )
       {
          char WillMSDP [] = { (char)IAC, (char)WILL, TELOPT_MSDP, '\0' };
          Write(apDescriptor, WillMSDP);
+      }
+      if ( pProtocol->bGMCP )
+      {
+         char WillGMCP [] = { (char)IAC, (char)WILL, TELOPT_GMCP, '\0' };
+         Write(apDescriptor, WillGMCP);
       }
       else if ( pProtocol->bATCP )
       {
@@ -1367,6 +1473,57 @@ void MSSPSetPlayers( int aPlayers )
 }
 
 /******************************************************************************
+ GMCP global functions.
+ ******************************************************************************/
+
+void GMCPSend( descriptor_t *apDescriptor, const char *apMessage )
+{
+   protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
+
+   if ( pProtocol != NULL && pProtocol->bGMCP && apMessage != NULL )
+   {
+      char GMCPBuffer[MAX_VARIABLE_LENGTH+1];
+      int RequiredBuffer = strlen(apMessage) + 10; /* IAC SB TELOPT_GMCP <data> IAC SE */
+
+      if ( RequiredBuffer >= MAX_VARIABLE_LENGTH )
+      {
+         char ErrorBuffer[256];
+         sprintf( ErrorBuffer, 
+            "GMCPSend: Message length %d bytes (exceeds MAX_VARIABLE_LENGTH of %d).\n", 
+            RequiredBuffer, MAX_VARIABLE_LENGTH );
+         ReportBug( ErrorBuffer );
+         return;
+      }
+
+      sprintf( GMCPBuffer, "%c%c%c%s%c%c", 
+         IAC, SB, TELOPT_GMCP, apMessage, IAC, SE );
+      Write( apDescriptor, GMCPBuffer );
+   }
+}
+
+void GMCPSendData( descriptor_t *apDescriptor, const char *apPackage, const char *apData )
+{
+   if ( apPackage != NULL && apData != NULL )
+   {
+      char GMCPMessage[MAX_VARIABLE_LENGTH];
+      int RequiredBuffer = strlen(apPackage) + strlen(apData) + 2; /* package + space + data */
+
+      if ( RequiredBuffer >= MAX_VARIABLE_LENGTH )
+      {
+         char ErrorBuffer[256];
+         sprintf( ErrorBuffer, 
+            "GMCPSendData: Combined length %d bytes (exceeds MAX_VARIABLE_LENGTH of %d).\n", 
+            RequiredBuffer, MAX_VARIABLE_LENGTH );
+         ReportBug( ErrorBuffer );
+         return;
+      }
+
+      sprintf( GMCPMessage, "%s %s", apPackage, apData );
+      GMCPSend( apDescriptor, GMCPMessage );
+   }
+}
+
+/******************************************************************************
  MXP global functions.
  ******************************************************************************/
 
@@ -1615,6 +1772,7 @@ static void Negotiate( descriptor_t *apDescriptor )
       const char DoNAWS         [] = { (char)IAC, (char)DO,   TELOPT_NAWS,      '\0' };
       const char DoCHARSET      [] = { (char)IAC, (char)DO,   TELOPT_CHARSET,   '\0' };
       const char WillMSDP       [] = { (char)IAC, (char)WILL, TELOPT_MSDP,      '\0' };
+      const char WillGMCP       [] = { (char)IAC, (char)WILL, TELOPT_GMCP,      '\0' };
       const char WillMSSP       [] = { (char)IAC, (char)WILL, TELOPT_MSSP,      '\0' };
       const char DoATCP         [] = { (char)IAC, (char)DO,   (char)TELOPT_ATCP,'\0' };
       const char WillMSP        [] = { (char)IAC, (char)WILL, TELOPT_MSP,       '\0' };
@@ -1642,6 +1800,7 @@ static void Negotiate( descriptor_t *apDescriptor )
        * https://bugs.launchpad.net/ubuntu/+source/gnome-mud/+bug/398340 */
       Write(apDescriptor, DoCHARSET);
       Write(apDescriptor, WillMSDP);
+      Write(apDescriptor, WillGMCP);
       Write(apDescriptor, WillMSSP);
       Write(apDescriptor, DoATCP);
       Write(apDescriptor, WillMSP);
@@ -1714,6 +1873,19 @@ static void PerformHandshake( descriptor_t *apDescriptor, char aCmd, char aProto
          }
          else if ( aCmd == (char)DONT )
             pProtocol->bMSDP = false;
+         break;
+
+      case (char)TELOPT_GMCP:
+         if ( aCmd == (char)DO )
+         {
+            pProtocol->bGMCP = true;
+
+            /* Send GMCP hello and supported modules */
+            GMCPSend( apDescriptor, "Core.Hello { \"client\": \"VitaliaMUD Reborn\", \"version\": \"1.0\" }" );
+            GMCPSend( apDescriptor, "Core.Supports.Set [\"Char 1\", \"Char.Items 1\", \"Char.Skills 1\", \"Room 1\", \"Comm.Channel 1\"]" );
+         }
+         else if ( aCmd == (char)DONT )
+            pProtocol->bGMCP = false;
          break;
 
       case (char)TELOPT_MSSP:
@@ -1999,6 +2171,12 @@ static void PerformSubnegotiation( descriptor_t *apDescriptor, char aCmd, char *
 
       case (char)TELOPT_MSDP:
          ParseMSDP( apDescriptor, apData );
+         break;
+
+      case (char)TELOPT_GMCP:
+         /* Parse GMCP message - it should be in JSON format */
+         /* For now, we'll just handle basic messages */
+         /* A proper implementation would parse JSON and handle different modules */
          break;
 
       case (char)TELOPT_ATCP:
@@ -2384,102 +2562,34 @@ static void SendMSSP( descriptor_t *apDescriptor )
 
       /* Generic */
       { "CRAWL DELAY",        "-1", NULL },
-/*  { "HOSTNAME",           "" },
-      { "PORT",               "4000" },
-      { "CODEBASE",           "tbaMUD" },
-      { "CONTACT",            "" },
-      { "CREATED",            "" },
-      { "ICON",               "" },
-      { "IP",                 "" },
-      { "LANGUAGE",           "" },
-      { "LOCATION",           "" },
-      { "MINIMUM AGE",        "" },
-      { "WEBSITE",            "" },
-*/
-      /* Categorisation */
-/*
-      { "FAMILY",             "" },
-      { "GENRE",              "" },
-      { "GAMEPLAY",           "" },
-      { "STATUS",             "" },
-      { "GAMESYSTEM",         "" },
-      { "INTERMUD",           "" },
-      { "SUBGENRE",           "" },
-*/
-      /* World */
-/*
-      { "AREAS",              "0" },
-      { "HELPFILES",          "0" },
-      { "MOBILES",            "0" },
-      { "OBJECTS",            "0" },
-      { "ROOMS",              "0" },
-      { "CLASSES",            "0" },
-      { "LEVELS",             "0" },
-      { "RACES",              "0" },
-      { "SKILLS",             "0" },
-*/
-      /* Protocols */
-/*
-      { "ANSI",               "1" },
-      { "GMCP",               "0" },
-#ifdef USING_MCCP
-      { "MCCP",               "1" },
-#else
-      { "MCCP",               "0" },
-#endif // USING_MCCP
-      { "MCP",                "0" },
-      { "MSDP",               "1" },
-      { "MSP",                "1" },
-      { "MXP",                "1" },
-      { "PUEBLO",             "0" },
-      { "UTF-8",              "1" },
-      { "VT100",              "0" },
-      { "XTERM 256 COLORS",   "1" },
-*/
-      /* Commercial */
-/*
-      { "PAY TO PLAY",        "0" },
-      { "PAY FOR PERKS",      "0" },
-*/
-      /* Hiring */
-/*
-      { "HIRING BUILDERS",    "1" },
-      { "HIRING CODERS",      "0" },
-*/
-      /* Extended variables */
+      { "CODEBASE",           "tbaMUD", NULL },
+      { "LANGUAGE",           "Portuguese", NULL },
 
-      /* World */
-/*
-      { "DBSIZE",             "0" },
-      { "EXITS",              "0" },
-      { "EXTRA DESCRIPTIONS", "0" },
-      { "MUDPROGS",           "0" },
-      { "MUDTRIGS",           "0" },
-      { "RESETS",             "0" },
-*/
-      /* Game */
-/*
-      { "ADULT MATERIAL",     "0" },
-      { "MULTICLASSING",      "0" },
-      { "NEWBIE FRIENDLY",    "0" },
-      { "PLAYER CITIES",      "0" },
-      { "PLAYER CLANS",       "0" },
-      { "PLAYER CRAFTING",    "0" },
-      { "PLAYER GUILDS",      "0" },
-      { "EQUIPMENT SYSTEM",   "" },
-      { "MULTIPLAYING",       "" },
-      { "PLAYERKILLING",      "" },
-      { "QUEST SYSTEM",       "" },
-      { "ROLEPLAYING",        "" },
-      { "TRAINING SYSTEM",    "" },
-      { "WORLD ORIGINALITY",  "" },
-*/
+      /* Categorisation */
+      { "FAMILY",             "CircleMUD", NULL },
+      { "GENRE",              "Fantasy", NULL },
+      { "GAMEPLAY",           "Hack and Slash", NULL },
+      { "STATUS",             "Alpha", NULL },
+      { "GAMESYSTEM",         "Custom", NULL },
+
       /* Protocols */
-/*
-      { "ATCP",               "1" },
-      { "SSL",                "0" },
-      { "ZMP",                "0" },
-*/
+      { "ANSI",               "1", NULL },
+      { "GMCP",               "1", NULL },
+#ifdef USING_MCCP
+      { "MCCP",               "1", NULL },
+#else
+      { "MCCP",               "0", NULL },
+#endif // USING_MCCP
+      { "MCP",                "0", NULL },
+      { "MSDP",               "1", NULL },
+      { "MSP",                "1", NULL },
+      { "MXP",                "1", NULL },
+      { "PUEBLO",             "0", NULL },
+      { "UTF-8",              "1", NULL },
+      { "VT100",              "0", NULL },
+      { "XTERM 256 COLORS",   "1", NULL },
+      { "ATCP",               "1", NULL },
+      { "SSL",                "0", NULL },
       { NULL, NULL, NULL } /* This must always be last. */
    };
 
