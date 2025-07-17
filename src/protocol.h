@@ -18,7 +18,7 @@ typedef struct descriptor_data descriptor_t;
  ******************************************************************************/
 
 
-//#define USING_MCCP
+#define USING_MCCP
 
 
 /******************************************************************************
@@ -216,6 +216,10 @@ typedef struct
    char     *pMXPVersion;      /* The version of MXP supported */
    char     *pLastTTYPE;       /* Used for the cyclic TTYPE check */
    MSDP_t  **pVariables;       /* The MSDP variables */
+#ifdef USING_MCCP
+   void     *pCompress;        /* Compression stream (z_stream*) */
+   bool_t    bCompressing;     /* Is compression currently active? */
+#endif
 } protocol_t;
 
 /******************************************************************************

@@ -13,6 +13,10 @@
 #include <sys/types.h>
 #include "protocol.h"
 
+#ifdef USING_MCCP
+#include <zlib.h>
+#endif
+
 /******************************************************************************
  The following section is for Diku/Merc derivatives.  Replace as needed.
  ******************************************************************************/
@@ -64,32 +68,84 @@ static void InfoMessage( descriptor_t *apDescriptor, const char *apData )
 
 static void CompressStart( descriptor_t *apDescriptor )
 {
-   /* If your mud uses MCCP (Mud Client Compression Protocol), you need to 
-    * call whatever function normally starts compression from here - the 
-    * ReportBug() call should then be deleted.
-    * 
-    * Otherwise you can just ignore this function.
-    */
-          const char WontMCCP2       [] = { (char)IAC, (char)WONT, TELOPT_MCCP2,      '\0' };
-     const char WontMCCP3      [] = { (char)IAC, (char)WONT, TELOPT_MCCP3,      '\0' };
-     Write( apDescriptor, WontMCCP2);
-     Write( apDescriptor, WontMCCP3);
- //  ReportBug( "CompressStart() in protocol.c is being called, but it doesn't do anything!\n" );
+#ifdef USING_MCCP
+   protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
+   
+   if (!pProtocol || pProtocol->bCompressing)
+      return;
+
+   /* Only start compression if MCCP2 or MCCP3 is enabled */
+   if (!pProtocol->bMCCP2 && !pProtocol->bMCCP3)
+   {
+      const char WontMCCP2[] = { (char)IAC, (char)WONT, TELOPT_MCCP2, '\0' };
+      const char WontMCCP3[] = { (char)IAC, (char)WONT, TELOPT_MCCP3, '\0' };
+      Write( apDescriptor, WontMCCP2);
+      Write( apDescriptor, WontMCCP3);
+      return;
+   }
+
+   /* Allocate and initialize compression stream */
+   z_stream *stream = malloc(sizeof(z_stream));
+   if (!stream)
+      return;
+
+   stream->zalloc = z_alloc;
+   stream->zfree = z_free;
+   stream->opaque = NULL;
+
+   /* Initialize deflate for compression */
+   if (deflateInit(stream, Z_DEFAULT_COMPRESSION) != Z_OK)
+   {
+      free(stream);
+      return;
+   }
+
+   pProtocol->pCompress = stream;
+   pProtocol->bCompressing = true;
+
+   /* Send the compression start sequence */
+   if (pProtocol->bMCCP3)
+   {
+      const char StartMCCP3[] = { (char)IAC, (char)SB, TELOPT_MCCP3, (char)IAC, (char)SE, '\0' };
+      Write(apDescriptor, StartMCCP3);
+   }
+   else if (pProtocol->bMCCP2)
+   {
+      const char StartMCCP2[] = { (char)IAC, (char)SB, TELOPT_MCCP2, (char)IAC, (char)SE, '\0' };
+      Write(apDescriptor, StartMCCP2);
+   }
+#else
+   /* If MCCP is not compiled in, send rejection */
+   const char WontMCCP2[] = { (char)IAC, (char)WONT, TELOPT_MCCP2, '\0' };
+   const char WontMCCP3[] = { (char)IAC, (char)WONT, TELOPT_MCCP3, '\0' };
+   Write( apDescriptor, WontMCCP2);
+   Write( apDescriptor, WontMCCP3);
+#endif
 }
 
 static void CompressEnd( descriptor_t *apDescriptor )
 {
-   /* If your mud uses MCCP (Mud Client Compression Protocol), you need to 
-    * call whatever function normally starts compression from here - the 
-    * ReportBug() call should then be deleted.
-    * 
-    * Otherwise you can just ignore this function.
-    */
-     const char WontMCCP2       [] = { (char)IAC, (char)WONT, TELOPT_MCCP2,      '\0' };
-     const char WontMCCP3      [] = { (char)IAC, (char)WONT, TELOPT_MCCP3,      '\0' };
-     Write( apDescriptor, WontMCCP2);
-     Write( apDescriptor, WontMCCP3);
-//  ReportBug( "CompressEnd() in protocol.c is being called, but it doesn't do anything!\n" );
+#ifdef USING_MCCP
+   protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
+   
+   if (!pProtocol || !pProtocol->bCompressing || !pProtocol->pCompress)
+      return;
+
+   z_stream *stream = (z_stream*)pProtocol->pCompress;
+   
+   /* Finish compression */
+   deflateEnd(stream);
+   free(stream);
+   
+   pProtocol->pCompress = NULL;
+   pProtocol->bCompressing = false;
+#else
+   /* If MCCP is not compiled in, send rejection */
+   const char WontMCCP2[] = { (char)IAC, (char)WONT, TELOPT_MCCP2, '\0' };
+   const char WontMCCP3[] = { (char)IAC, (char)WONT, TELOPT_MCCP3, '\0' };
+   Write( apDescriptor, WontMCCP2);
+   Write( apDescriptor, WontMCCP3);
+#endif
 }
 
 /******************************************************************************
@@ -321,6 +377,11 @@ protocol_t *ProtocolCreate( void )
    pProtocol->pLastTTYPE = NULL;
    pProtocol->pVariables = (MSDP_t **) malloc(sizeof(MSDP_t*)*eMSDP_MAX);
 
+#ifdef USING_MCCP
+   pProtocol->pCompress = NULL;
+   pProtocol->bCompressing = false;
+#endif
+
    for ( i = eMSDP_NONE+1; i < eMSDP_MAX; ++i )
    {
       pProtocol->pVariables[i] = (MSDP_t *) malloc(sizeof(MSDP_t));
@@ -362,6 +423,16 @@ void ProtocolDestroy( protocol_t *apProtocol )
    if (apProtocol->pLastTTYPE) /* Isn't saved over copyover so may still be NULL */
      free(apProtocol->pLastTTYPE);
    free(apProtocol->pMXPVersion);
+
+#ifdef USING_MCCP
+   if (apProtocol->pCompress)
+   {
+      z_stream *stream = (z_stream*)apProtocol->pCompress;
+      deflateEnd(stream);
+      free(apProtocol->pCompress);
+   }
+#endif
+
    free(apProtocol);
 }
 
@@ -863,8 +934,10 @@ const char *ProtocolOutput( descriptor_t *apDescriptor, const char *apData, int 
    /* Terminate the string */
    Result[i] = '\0';
 
-   /* Apply UTF-8 filtering if UTF-8 is disabled */
-   if ( pProtocol && !pProtocol->pVariables[eMSDP_UTF_8]->ValueInt )
+   /* Apply UTF-8 filtering if UTF-8 is disabled, but not during protocol negotiation
+    * or for protocol control sequences that could interfere with client identification */
+   if ( pProtocol && !pProtocol->pVariables[eMSDP_UTF_8]->ValueInt && apDescriptor && 
+        STATE(apDescriptor) != CON_GET_PROTOCOL )
    {
       static char FilteredResult[MAX_OUTPUT_BUFFER+1];
       FilterUTF8ToASCII(Result, FilteredResult, MAX_OUTPUT_BUFFER+1);

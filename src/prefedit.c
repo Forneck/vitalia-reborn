@@ -270,6 +270,7 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
                              "%sK%s) ANSI         %s[%s%3s%s]      %sN%s) MSDP     %s[%s%3s%s]\r\n"
                              "%sL%s) Charset      %s[%s%3s%s]      %sO%s) ATCP     %s[%s%3s%s]\r\n"
                              "%sP%s) UTF-8        %s[%s%3s%s]      %sR%s) MSP      %s[%s%3s%s]\r\n"
+                             "%sS%s) MCCP2        %s[%s%3s%s]      %sT%s) MCCP3    %s[%s%3s%s]\r\n"
                              "\r\n",
              CBWHT(d->character, C_NRM),
 /* Line 12 - 256 and mxp */
@@ -287,7 +288,11 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
 /* Line 15 - utf-8 and msp */
              CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
              ONOFF(d->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM),
-             CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM), ONOFF(d->pProtocol->bMSP), CCCYN(d->character, C_NRM)
+             CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM), ONOFF(d->pProtocol->bMSP), CCCYN(d->character, C_NRM),
+/* Line 16 - mccp2 and mccp3 */
+             CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
+             ONOFF(d->pProtocol->bMCCP2), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM),
+             CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM), ONOFF(d->pProtocol->bMCCP3), CCCYN(d->character, C_NRM)
              );
 /* Finishing Off */
   send_to_char(d->character, "%sQ%s) Sair das preferencias...\r\n",
@@ -685,6 +690,16 @@ void prefedit_parse(struct descriptor_data * d, char *arg)
       case 'R':
         TOGGLE_VAR(d->pProtocol->bMSP);
         break;   
+
+      case 's':
+      case 'S':
+        TOGGLE_VAR(d->pProtocol->bMCCP2);
+        break;
+
+      case 't':
+      case 'T':
+        TOGGLE_VAR(d->pProtocol->bMCCP3);
+        break;
         
         case '0':
 TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_HITBAR);
