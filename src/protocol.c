@@ -74,6 +74,15 @@ static void CompressStart( descriptor_t *apDescriptor )
    if (!pProtocol || pProtocol->bCompressing)
       return;
 
+   /* Prioritize MCCP3 over MCCP2 - if both are available, use MCCP3 only */
+   if (pProtocol->bMCCP3 && pProtocol->bMCCP2)
+   {
+      /* Disable MCCP2 when MCCP3 is available */
+      pProtocol->bMCCP2 = false;
+      const char WontMCCP2[] = { (char)IAC, (char)WONT, TELOPT_MCCP2, '\0' };
+      Write( apDescriptor, WontMCCP2);
+   }
+
    /* Only start compression if MCCP2 or MCCP3 is enabled */
    if (!pProtocol->bMCCP2 && !pProtocol->bMCCP3)
    {
@@ -103,16 +112,18 @@ static void CompressStart( descriptor_t *apDescriptor )
    pProtocol->pCompress = stream;
    pProtocol->bCompressing = true;
 
-   /* Send the compression start sequence */
+   /* Send the compression start sequence - prioritize MCCP3 */
    if (pProtocol->bMCCP3)
    {
       const char StartMCCP3[] = { (char)IAC, (char)SB, TELOPT_MCCP3, (char)IAC, (char)SE, '\0' };
       Write(apDescriptor, StartMCCP3);
+      InfoMessage(apDescriptor, "MCCP3 INITIALIZED\r\n");
    }
    else if (pProtocol->bMCCP2)
    {
       const char StartMCCP2[] = { (char)IAC, (char)SB, TELOPT_MCCP2, (char)IAC, (char)SE, '\0' };
       Write(apDescriptor, StartMCCP2);
+      InfoMessage(apDescriptor, "MCCP2 INITIALIZED\r\n");
    }
 #else
    /* If MCCP is not compiled in, send rejection */
@@ -133,12 +144,22 @@ static void CompressEnd( descriptor_t *apDescriptor )
 
    z_stream *stream = (z_stream*)pProtocol->pCompress;
    
-   /* Finish compression */
+   /* Finish compression stream properly */
    deflateEnd(stream);
    free(stream);
    
    pProtocol->pCompress = NULL;
    pProtocol->bCompressing = false;
+   
+   /* Send notification that compression is ending */
+   if (pProtocol->bMCCP3)
+   {
+      InfoMessage(apDescriptor, "MCCP3: COMPRESSION END, DISABLING MCCP3\r\n");
+   }
+   else if (pProtocol->bMCCP2)
+   {
+      InfoMessage(apDescriptor, "MCCP2: COMPRESSION END, DISABLING MCCP2\r\n");
+   }
 #else
    /* If MCCP is not compiled in, send rejection */
    const char WontMCCP2[] = { (char)IAC, (char)WONT, TELOPT_MCCP2, '\0' };
@@ -1023,11 +1044,14 @@ const char *CopyoverGet( descriptor_t *apDescriptor )
       if ( pProtocol->bMCCP2 )
       {
          *pBuffer++ = 'c';
-         CompressEnd(apDescriptor);
       }
-       if ( pProtocol->bMCCP3 )
+      if ( pProtocol->bMCCP3 )
       {
          *pBuffer++ = 'd';
+      }
+      /* End compression only once if either MCCP is active */
+      if ( pProtocol->bMCCP2 || pProtocol->bMCCP3 )
+      {
          CompressEnd(apDescriptor);
       }
       if ( pProtocol->pVariables[eMSDP_XTERM_256_COLORS]->ValueInt )
@@ -1082,12 +1106,10 @@ void CopyoverSet( descriptor_t *apDescriptor, const char *apData )
                break;
             case 'c':
                pProtocol->bMCCP2 = true;
-               CompressStart(apDescriptor);
                break;
         
-             case 'd':
+            case 'd':
                pProtocol->bMCCP3 = true;
-               CompressStart(apDescriptor);
                break;
             case 'C':
                pProtocol->pVariables[eMSDP_XTERM_256_COLORS]->ValueInt = 1;
@@ -1146,6 +1168,10 @@ void CopyoverSet( descriptor_t *apDescriptor, const char *apData )
       /* Ask the client to send its MXP version again */
       if ( pProtocol->bMXP )
          MXPSendTag( apDescriptor, "<VERSION>" );
+
+      /* Start compression if either MCCP2 or MCCP3 was saved */
+      if ( pProtocol->bMCCP2 || pProtocol->bMCCP3 )
+         CompressStart(apDescriptor);
    }
 }
 
@@ -1898,17 +1924,26 @@ static void PerformHandshake( descriptor_t *apDescriptor, char aCmd, char aProto
          if ( aCmd == (char)DO )
          {
             pProtocol->bMCCP2 = true;
-           CompressStart( apDescriptor );
+            /* Only start compression if MCCP3 is not already active */
+            if (!pProtocol->bMCCP3)
+               CompressStart( apDescriptor );
          }
          else if ( aCmd == (char)DONT )
          {
             pProtocol->bMCCP2 = false;
-            CompressEnd( apDescriptor );
+            /* Only end compression if no other MCCP protocol is active */
+            if (!pProtocol->bMCCP3)
+               CompressEnd( apDescriptor );
          }
          break;
- case (char)TELOPT_MCCP3:
+      case (char)TELOPT_MCCP3:
          if ( aCmd == (char)DO )
          {
+            /* If MCCP2 was active, stop it first to switch to MCCP3 */
+            if (pProtocol->bMCCP2 && pProtocol->bCompressing)
+            {
+               CompressEnd( apDescriptor );
+            }
             pProtocol->bMCCP3 = true;
             CompressStart( apDescriptor );
          }
@@ -1916,6 +1951,9 @@ static void PerformHandshake( descriptor_t *apDescriptor, char aCmd, char aProto
          {
             pProtocol->bMCCP3 = false;
             CompressEnd( apDescriptor );
+            /* If MCCP2 is still available, start it as fallback */
+            if (pProtocol->bMCCP2)
+               CompressStart( apDescriptor );
          }
          break;
 
