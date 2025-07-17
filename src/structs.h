@@ -307,9 +307,11 @@
 #define PRF_HITBAR 35
 #define PRF_AUTOTITLE 36
 #define PRF_NOCLAN      37   /**< Can't hear gossip channel */
+#define PRF_MCCP        38   /**< Auto MCCP compression (MCCP3 > MCCP2) */
+#define PRF_AUTOSIZE    39   /**< Auto NAWS terminal size configuration */
 
 /** Total number of available PRF flags */
-#define NUM_PRF_FLAGS    38
+#define NUM_PRF_FLAGS    40
 
 /* Affect bits: used in char_data.char_specials.saved.affected_by */
 /* WARNING: In the world files, NEVER set the bits marked "R" ("Reserved") */

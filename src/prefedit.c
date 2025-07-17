@@ -20,6 +20,7 @@
 #include "oasis.h"
 #include "prefedit.h"
 #include "screen.h"
+#include "protocol.h"
 
 /* Internal (static) functions */
 static void prefedit_setup(struct descriptor_data *d, struct char_data *vict);
@@ -270,7 +271,7 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
                              "%sK%s) ANSI         %s[%s%3s%s]      %sN%s) MSDP     %s[%s%3s%s]\r\n"
                              "%sL%s) Charset      %s[%s%3s%s]      %sO%s) ATCP     %s[%s%3s%s]\r\n"
                              "%sP%s) UTF-8        %s[%s%3s%s]      %sR%s) MSP      %s[%s%3s%s]\r\n"
-                             "%sS%s) MCCP2        %s[%s%3s%s]      %sT%s) MCCP3    %s[%s%3s%s]\r\n"
+                             "%sS%s) MCCP         %s[%s%3s%s]      %sT%s) AutoSize %s[%s%3s%s]\r\n"
                              "%sU%s) GMCP         %s[%s%3s%s]\r\n"
                              "\r\n",
              CBWHT(d->character, C_NRM),
@@ -290,10 +291,10 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
              CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
              ONOFF(d->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM),
              CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM), ONOFF(d->pProtocol->bMSP), CCCYN(d->character, C_NRM),
-/* Line 16 - mccp2 and mccp3 */
-             CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
-             ONOFF(d->pProtocol->bMCCP2), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM),
-             CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM), ONOFF(d->pProtocol->bMCCP3), CCCYN(d->character, C_NRM),
+/* Line 16 - mccp and autosize */
+             CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), PREFEDIT_FLAGGED(PRF_MCCP) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
+             ONOFF(PREFEDIT_FLAGGED(PRF_MCCP)), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM),
+             CCCYN(d->character, C_NRM), PREFEDIT_FLAGGED(PRF_AUTOSIZE) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM), ONOFF(PREFEDIT_FLAGGED(PRF_AUTOSIZE)), CCCYN(d->character, C_NRM),
 /* Line 17 - gmcp */
              CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
              ONOFF(d->pProtocol->bGMCP), CCCYN(d->character, C_NRM)
@@ -697,12 +698,25 @@ void prefedit_parse(struct descriptor_data * d, char *arg)
 
       case 's':
       case 'S':
-        TOGGLE_VAR(d->pProtocol->bMCCP2);
+        /* Toggle MCCP preference and handle compression */
+        TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_MCCP);
+        /* Apply compression change immediately if connected */
+        if (d->character && d->character->desc) {
+          if (PREFEDIT_FLAGGED(PRF_MCCP)) {
+            ProtocolMCCPStart(d->character->desc);
+          } else {
+            ProtocolMCCPStop(d->character->desc);
+          }
+        }
         break;
 
       case 't':
       case 'T':
-        TOGGLE_VAR(d->pProtocol->bMCCP3);
+        TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_AUTOSIZE);
+        /* Apply NAWS auto-config if enabled and NAWS data available */
+        if (PREFEDIT_FLAGGED(PRF_AUTOSIZE) && d->pProtocol && d->pProtocol->bNAWS) {
+          ProtocolNAWSAutoConfig(d);
+        }
         break;
 
       case 'u':

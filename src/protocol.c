@@ -1924,36 +1924,28 @@ static void PerformHandshake( descriptor_t *apDescriptor, char aCmd, char aProto
          if ( aCmd == (char)DO )
          {
             pProtocol->bMCCP2 = true;
-            /* Only start compression if MCCP3 is not already active */
-            if (!pProtocol->bMCCP3)
-               CompressStart( apDescriptor );
+            /* Don't start compression during negotiation - wait for login */
          }
          else if ( aCmd == (char)DONT )
          {
             pProtocol->bMCCP2 = false;
-            /* Only end compression if no other MCCP protocol is active */
-            if (!pProtocol->bMCCP3)
+            /* End compression if it was active */
+            if (pProtocol->bCompressing && !pProtocol->bMCCP3)
                CompressEnd( apDescriptor );
          }
          break;
       case (char)TELOPT_MCCP3:
          if ( aCmd == (char)DO )
          {
-            /* If MCCP2 was active, stop it first to switch to MCCP3 */
-            if (pProtocol->bMCCP2 && pProtocol->bCompressing)
-            {
-               CompressEnd( apDescriptor );
-            }
             pProtocol->bMCCP3 = true;
-            CompressStart( apDescriptor );
+            /* Don't start compression during negotiation - wait for login */
          }
          else if ( aCmd == (char)DONT )
          {
             pProtocol->bMCCP3 = false;
-            CompressEnd( apDescriptor );
-            /* If MCCP2 is still available, start it as fallback */
-            if (pProtocol->bMCCP2)
-               CompressStart( apDescriptor );
+            /* End compression if it was active */
+            if (pProtocol->bCompressing)
+               CompressEnd( apDescriptor );
          }
          break;
 
@@ -2190,6 +2182,12 @@ static void PerformSubnegotiation( descriptor_t *apDescriptor, char aCmd, char *
             pProtocol->ScreenHeight = (unsigned char)apData[2];
             pProtocol->ScreenHeight <<= 8;
             pProtocol->ScreenHeight += (unsigned char)apData[3];
+            
+            /* Auto-configure pager if character is logged in */
+            if (apDescriptor->character && STATE(apDescriptor) == CON_PLAYING)
+            {
+               ProtocolNAWSAutoConfig(apDescriptor);
+            }
          }
          break;
 
@@ -2816,4 +2814,78 @@ void *z_alloc(void *opaque, uint items, uint size)
 void z_free(void *opaque, void *address)
 {
   return free(address);
+}
+
+/******************************************************************************
+ MCCP compression control functions.
+ ******************************************************************************/
+
+bool_t ProtocolMCCPStart( descriptor_t *apDescriptor )
+{
+   protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
+   struct char_data *ch = apDescriptor ? apDescriptor->character : NULL;
+   
+   if (!pProtocol || !ch)
+      return false;
+   
+   /* Only start compression if preference is enabled, client supports it and we're not already compressing */
+   if (PRF_FLAGGED(ch, PRF_MCCP) && (pProtocol->bMCCP2 || pProtocol->bMCCP3) && !pProtocol->bCompressing)
+   {
+      CompressStart(apDescriptor);
+      return true;
+   }
+   
+   return false;
+}
+
+void ProtocolMCCPStop( descriptor_t *apDescriptor )
+{
+   protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
+   
+   if (pProtocol && pProtocol->bCompressing)
+   {
+      CompressEnd(apDescriptor);
+   }
+}
+
+bool_t ProtocolMCCPEnabled( descriptor_t *apDescriptor )
+{
+   protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
+   
+   return (pProtocol && pProtocol->bCompressing);
+}
+
+/******************************************************************************
+ NAWS auto-configuration function.
+ ******************************************************************************/
+
+void ProtocolNAWSAutoConfig( descriptor_t *apDescriptor )
+{
+   protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
+   struct char_data *ch = apDescriptor ? apDescriptor->character : NULL;
+   
+   if (!pProtocol || !ch || !pProtocol->bNAWS)
+      return;
+      
+   /* Only auto-configure if the preference is enabled */
+   if (!PRF_FLAGGED(ch, PRF_AUTOSIZE))
+      return;
+      
+   /* Auto-configure pager width and height if NAWS is active and we have valid dimensions */
+   if (pProtocol->ScreenWidth > 20 && pProtocol->ScreenWidth <= 200)
+   {
+      GET_SCREEN_WIDTH(ch) = pProtocol->ScreenWidth;
+   }
+   
+   if (pProtocol->ScreenHeight > 10 && pProtocol->ScreenHeight <= 100)
+   {
+      GET_PAGE_LENGTH(ch) = pProtocol->ScreenHeight - 2; /* Leave room for prompt */
+   }
+   
+   /* Inform the player about the auto-configuration */
+   if (pProtocol->ScreenWidth > 20 && pProtocol->ScreenHeight > 10)
+   {
+      send_to_char(ch, "\r\n[INFO] NAWS detectado: configurando pager para %dx%d.\r\n", 
+                   pProtocol->ScreenWidth, pProtocol->ScreenHeight - 2);
+   }
 }

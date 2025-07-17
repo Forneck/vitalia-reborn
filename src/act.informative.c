@@ -3206,3 +3206,5 @@ ACMD(do_evaluate)
         send_to_char(ch, "(Quanto maior a pontuação, mais o mob irá desejar este item).\r\n");
     }
 }
+
+
