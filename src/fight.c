@@ -1682,7 +1682,9 @@ void update_mob_prototype_genetics(struct char_data *mob)
     int final_use = mob->ai_data->genetics.use_tendency;
     int final_brave = mob->ai_data->genetics.brave_prevalence;
     int final_trade = mob->ai_data->genetics.trade_tendency;
-
+    int final_quest = mob->ai_data->genetics.quest_tendency;
+    int final_adventurer = mob->ai_data->genetics.adventurer_tendency;
+    
     if (MOB_FLAGGED(mob, MOB_BRAVE)) {
         final_wimpy -= 5;
         final_brave += 3; /* A morte de um bravo reforça o traço. */
@@ -1708,6 +1710,8 @@ void update_mob_prototype_genetics(struct char_data *mob)
     update_single_gene(&proto->ai_data->genetics.use_tendency, final_use, 0, 100);
     update_single_gene(&proto->ai_data->genetics.trade_tendency, final_trade, 0, 100);
     update_single_gene(&proto->ai_data->genetics.brave_prevalence, final_brave, 0, 75); /* Usa o limite de 75 que definimos. */
+    update_single_gene(&proto->ai_data->genetics.quest_tendency, final_quest, 0, 100);
+    update_single_gene(&proto->ai_data->genetics.adventurer_tendency, final_adventurer, 0, 100);
 
     /* 3. Marca a zona para salvar. */
     mob_vnum vnum = mob_index[rnum].vnum;
