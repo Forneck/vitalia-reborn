@@ -1578,22 +1578,36 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
     mob_rnum qm_rnum = real_mobile(qm_vnum);
     
     if (qm_rnum != NOBODY) {
-      /* Find the questmaster in the world */
+      /* Ensure the questmaster prototype has the correct special procedure */
+      if (mob_index[qm_rnum].func != questmaster) {
+        mob_index[qm_rnum].func = questmaster;
+        log1("QUEST: Fixed questmaster special procedure for mob prototype %d", qm_vnum);
+      }
+      
+      /* Find the questmaster in the world and ensure instance also has correct procedure */
       for (qm = character_list; qm; qm = qm->next) {
         if (IS_NPC(qm) && GET_MOB_VNUM(qm) == qm_vnum) {
-          /* Ensure this questmaster has the questmaster special procedure */
+          /* Double-check that this specific instance has the questmaster function */
           if (mob_index[GET_MOB_RNUM(qm)].func != questmaster) {
             mob_index[GET_MOB_RNUM(qm)].func = questmaster;
-            log1("QUEST: Fixed questmaster special procedure for mob %s (%d)", 
+            log1("QUEST: Fixed questmaster special procedure for mob instance %s (%d)", 
                  GET_NAME(qm), qm_vnum);
           }
           break;
         }
       }
+      
+      if (qm) {
+        log1("QUEST: Mob %s posted quest %d to questmaster %s (%d) - quest should be immediately available", 
+             GET_NAME(mob), quest_vnum, GET_NAME(qm), qm_vnum);
+      } else {
+        log1("QUEST: Mob %s posted quest %d to questmaster %d (not found in world) - quest assigned to prototype", 
+             GET_NAME(mob), quest_vnum, qm_vnum);
+      }
+    } else {
+      log1("QUEST: WARNING - Mob %s posted quest %d to invalid questmaster %d", 
+           GET_NAME(mob), quest_vnum, qm_vnum);
     }
-    
-    log1("QUEST: Mob %s posted quest %d to reachable questmaster %d - quest should be available", 
-         GET_NAME(mob), quest_vnum, qm_vnum);
   }
 }
 
