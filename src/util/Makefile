@@ -24,7 +24,7 @@ CFLAGS = -g -O2 $(MYFLAGS) $(PROFILE) -I$(INCDIR)
 
 default: all
 
-all: $(BINDIR)/asciipasswd $(BINDIR)/autowiz $(BINDIR)/plrtoascii $(BINDIR)/rebuildIndex $(BINDIR)/rebuildMailIndex $(BINDIR)/shopconv $(BINDIR)/sign $(BINDIR)/split $(BINDIR)/wld2html $(BINDIR)/webster
+all: $(BINDIR)/asciipasswd $(BINDIR)/autowiz $(BINDIR)/plrtoascii $(BINDIR)/rebuildIndex $(BINDIR)/rebuildMailIndex $(BINDIR)/shopconv $(BINDIR)/sign $(BINDIR)/split $(BINDIR)/wld2html
 
 asciipasswd: $(BINDIR)/asciipasswd
 
@@ -43,8 +43,6 @@ sign: $(BINDIR)/sign
 split: $(BINDIR)/split
 
 wld2html: $(BINDIR)/wld2html
-
-webster: $(BINDIR)/webster
 
 $(BINDIR)/asciipasswd: asciipasswd.c
 	$(CC) $(CFLAGS) -o $(BINDIR)/asciipasswd asciipasswd.c -lcrypt
@@ -72,9 +70,6 @@ $(BINDIR)/split: split.c
 
 $(BINDIR)/wld2html: wld2html.c
 	$(CC) $(CFLAGS) -o $(BINDIR)/wld2html wld2html.c
-
-$(BINDIR)/webster: webster.c
-	$(CC) $(CFLAGS) -o $(BINDIR)/webster webster.c
 
 # Dependencies for the object files (automagically generated with
 # gcc -MM)

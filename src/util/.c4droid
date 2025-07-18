@@ -2,7 +2,7 @@
 run_mode=0
 conf_internal=false
 binary_fname=
-sm_names=rebuildAsciiIndex.c plrtoascii.c webster.c rebuildMailIndex.c sign.c shopconv.c split.c asciipasswd.c autowiz.c wld2html.c
+sm_names=rebuildAsciiIndex.c plrtoascii.c rebuildMailIndex.c sign.c shopconv.c split.c asciipasswd.c autowiz.c wld2html.c
 conf_patch=true
 qmake_cmd=export PATH\=(c4droid\:GCCROOT)qt/bin/\:$PATH\nexport C4DROID_QTLIBPATH\=(c4droid\:QTLIBPATH)\nqmake -spec android-g++
 make_cmd=make CC\="$CC" CXX\="$CXX" SHELL\="$SHELL"

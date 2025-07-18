@@ -1093,7 +1093,7 @@ AUTOQUESTS QUESTS QUESTMASTERS QUEST-MOBS QUESTMOBS
 
    An autoquest is a quest that can be automatically started and completed 
 without the intervention of an immortal.  Simply visit a questmaster and join 
-an available quest, and get rewarded on it�s completion. Keep an eye out for
+an available quest, and get rewarded on it's completion. Keep an eye out for
 autoquests scattered throughout the World.
 
 See Also: QUEST-FLAG, QUESTPOINTS
@@ -2314,7 +2314,6 @@ qedit (quest editor)
 questpoints
 buildwalk
 dig
-tell m-w (an in game dictionary lookup)
 gemote
 history
 file
@@ -3094,25 +3093,6 @@ Exemplos:
    > diagnose rasmussen
 
 Veja tambem: CONSIDER, HIT, KILL
-#1
-DICTIONARY DICTIONARIES THESAURUS M-W.COM DEFINITION MERRIAM-WEBSTER M-W-DEFINITION WEBSTER MW TELL-M-W BREATHER SPELLING WORDS
-
-Usage: tell m-w <word>
-
-   We have a direct link to Merriam Webster. To use the dictionary just
-tell m-w <word>
-
->tell m-w breather
-You get this feedback from Merriam-Webster:
-That means:
-1 : one that breathes
-2 : a break in activity for rest or relief
-3 : a small vent in an otherwise airtight enclosure
- 
-A few obscure definitions are not available through m-w since they are in the
-unabridged version that requires membership. They also offer a thesaurus at:
-@Chttp://m-w.com/@n
-
 #101
 DIG UNDIG RDIG RELINK RLINKS 
 
@@ -3902,7 +3882,7 @@ game.
    Invest in a thesaurus. Makes a world of difference, and if that doesn't 
 help, just make up your own words for things you create (just be sure to 
 describe them very well. Use @Chttp://m-w.com/@n for an online thesaurus
-and dictionary. You can @Rtell m-w <word>@n to lookup a definition.
+and dictionary.
 
 4. Where can I learn Trigedit?
    Here! Welcor is now the developer of trigedit. We have extensive help files,
@@ -4299,8 +4279,8 @@ GRAMMAR GRAMMER TIPS
 words can be particularly tricky and elude electronic spell checkers. A good 
 dictionary, however, will help you spell archaic words. Whenever I am building 
 I use our Merriam Webster dictionary link on TBA to check any tough words for
-proper spelling. Test it out @RTELL M-W DEFINITION@n. We hope to add a thesaurus
-soon! Goto @Chttp://m-w.com/@n until then.
+proper spelling. We hope to add a thesaurus soon! Goto @Chttp://m-w.com/@n 
+until then.
   I have found that a good principle to make is to avoid the use of all 
 contractions. For example, if you mean to say "it is", do not use "it's", spell
 it out. This will help differentiate between "its" (which means 'belonging to 
