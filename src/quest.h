@@ -106,6 +106,10 @@ void check_timed_quests(void);
 SPECIAL(questmaster);
 ACMD(do_quest);
 
+/* Quest display functions for temporary quest masters */
+void quest_show_temp(struct char_data *ch, struct char_data *qm);
+void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg);
+
 /* Mob Quest Functions */
 int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum);
 bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum);
@@ -114,6 +118,22 @@ void clear_mob_quest(struct char_data *mob);
 void fail_mob_quest(struct char_data *mob, const char *reason);
 void mob_complete_quest(struct char_data *mob);
 void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struct obj_data *object, int type);
+
+/* Temporary Quest Master Functions */
+void init_temp_questmaster(struct char_data *mob);
+void clear_temp_questmaster(struct char_data *mob);
+bool add_temp_quest_to_mob(struct char_data *mob, qst_vnum quest_vnum);
+bool remove_temp_quest_from_mob(struct char_data *mob, qst_vnum quest_vnum);
+qst_vnum find_temp_quest_by_qmnum(struct char_data *ch, struct char_data *qm, int num);
+void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_vnum);
+bool mob_can_reach_questmaster(struct char_data *mob, mob_vnum qm_vnum);
+
+SPECIAL(temp_questmaster);
+
+/* Save/Load functions for temporary quest assignments */
+void save_temp_quest_assignments(void);
+void load_temp_quest_assignments(void);
+void init_mob_ai_data(struct char_data *mob);
 /* Implemented in qedit.c  */
 void qedit_parse(struct descriptor_data *d, char *arg);
 void qedit_string_cleanup(struct descriptor_data *d, int terminator);

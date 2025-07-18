@@ -1119,6 +1119,7 @@ void heartbeat(int heart_pulse)
 			mins_since_crashsave = 0;
 			Crash_save_all();
 			House_save_all();
+			save_temp_quest_assignments();
 		}
 	}
 

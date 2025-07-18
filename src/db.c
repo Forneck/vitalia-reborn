@@ -617,6 +617,9 @@ void boot_world(void)
 	log1("Loading quests.");
 	index_boot(DB_BOOT_QST);
 
+	log1("Loading temporary quest assignments.");
+	load_temp_quest_assignments();
+
 }
 
 static void free_extra_descriptions(struct extra_descr_data *edesc)
@@ -1220,6 +1223,7 @@ void index_boot(int mode)
 		for (int rnum = 0; rnum < rec_count; rnum++) {
 		        CREATE(mob_proto[rnum].ai_data, struct mob_ai_data, 1);
 		        memset(mob_proto[rnum].ai_data, 0, sizeof(struct mob_ai_data)); /* Limpa a memória */
+		        init_mob_ai_data(&mob_proto[rnum]); /* Initialize temporary quest master fields */
 		}
 
 		size[0] = sizeof(struct index_data) * rec_count;
@@ -2989,6 +2993,7 @@ struct char_data *read_mobile(mob_vnum nr, int type)	/* and mob_rnum */
     	if (mob_proto[i].ai_data) {
         	*(mob->ai_data) = *(mob_proto[i].ai_data);
 	}
+	init_mob_ai_data(mob); /* Initialize temporary quest master fields */
 
 	/* Em src/db.c, dentro da função read_mobile */
 
@@ -4036,6 +4041,8 @@ void free_char(struct char_data *ch)
     	if (ch->ai_data) {
     	    /* Limpa a wishlist antes de liberar a AI data */
     	    clear_wishlist(ch);
+    	    /* Clear temporary quest master data */
+    	    clear_temp_questmaster(ch);
             free(ch->ai_data);
         }
 
