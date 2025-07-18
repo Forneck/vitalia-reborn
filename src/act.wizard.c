@@ -914,6 +914,10 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
 			 CCCYN(ch, C_NRM), GET_GENBRAVE(k), CCNRM(ch, C_NRM));
 	    send_to_char(ch, "Tendência Trade (Genética): [%s%d%s]\r\n",
 			 CCCYN(ch, C_NRM), GET_GENTRADE(k), CCNRM(ch, C_NRM));
+	    send_to_char(ch, "Tendência Postar Quest (Genética): [%s%d%s]\r\n",
+			 CCCYN(ch, C_NRM), GET_GENQUEST(k), CCNRM(ch, C_NRM));
+	    send_to_char(ch, "Tendência Trade (Genética): [%s%d%s]\r\n",
+			 CCCYN(ch, C_NRM), GET_GENADVENTURER(k), CCNRM(ch, C_NRM));
 	    /* Futuramente, podemos adicionar outros genes aqui. */
 	}
 
