@@ -64,8 +64,7 @@ void game_loop(socket_t mother_desc);
 void heartbeat(int heart_pulse);
 void copyover_recover(void);
 
-/** webster dictionary lookup */
-extern long last_webster_teller;
+
 
 extern struct descriptor_data *descriptor_list;
 extern int buf_largecount;

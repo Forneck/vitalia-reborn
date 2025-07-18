@@ -186,45 +186,7 @@ ACMD(do_tell)
 
 	if (!*buf || !*buf2)
 		send_to_char(ch, "Com quem você deseja falar? E o quê?\r\n");
-	else if (!str_cmp(buf, "m-w"))
-	{
-#ifdef CIRCLE_WINDOWS
-		/* getpid() is not portable */
-		send_to_char(ch, "Desculpe, mas não está disponivel.\r\n");
-#else /* all other configurations */
-		char word[MAX_INPUT_LENGTH], *p, *q;
 
-		if (last_webster_teller != -1L)
-		{
-			if (GET_IDNUM(ch) == last_webster_teller)
-			{
-				send_to_char(ch, "Você ainda está esperando uma resposta.\r\n");
-				return;
-			}
-			else
-			{
-				send_to_char(ch, "Espere, m-w está ocupado! Tente novamente depois.\r\n");
-				return;
-			}
-		}
-
-		/* Only a-z and +/- allowed. */
-		for (p = buf2, q = word; *p; p++)
-			if ((LOWER(*p) <= 'z' && LOWER(*p) >= 'a') || (*p == '+') || (*p == '-'))
-				*q++ = *p;
-
-		*q = '\0';
-
-		if (!*word)
-		{
-			send_to_char(ch, "Desculpe, mas apenas letras são permitidas.\r\n");
-			return;
-		}
-		snprintf(buf, sizeof(buf), "../lib/bin/webster %s %d &", word, (int)getpid());
-		last_webster_teller = GET_IDNUM(ch);
-		send_to_char(ch, "Você procura '%s' no dicionario.\r\n", word);
-#endif /* platform specific part */
-	}
 	else if (GET_LEVEL(ch) < LVL_IMMORT
 			 && !(vict = get_player_vis(ch, buf, NULL, FIND_CHAR_WORLD)))
 		send_to_char(ch, "%s", CONFIG_NOPERSON);
