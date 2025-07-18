@@ -574,60 +574,47 @@ static void quest_hist(struct char_data *ch)
     send_to_char(ch, "Você não completou nenhuma busca ainda.\r\n");
 }
 
-static void quest_join(struct char_data *ch, struct char_data *qm, char argument[MAX_INPUT_LENGTH])
+/* Unified quest finding function - searches both regular and temporary quests */
+static qst_vnum find_unified_quest_by_qmnum(struct char_data *ch, struct char_data *qm, int num)
 {
-  qst_vnum vnum;
   qst_rnum rnum;
-  char buf[MAX_INPUT_LENGTH];
+  int counter = 0, i;
+  int quest_completed, quest_repeatable;
+  mob_vnum qm_vnum = GET_MOB_VNUM(qm);
 
-  if (!*argument)
-    snprintf(buf, sizeof(buf),
-             "%s Qual busca você quer aceitar, %s?", GET_NAME(ch), GET_NAME(ch));
-  else if (GET_QUEST(ch) != NOTHING)
-    snprintf(buf, sizeof(buf),
-             "%s Mas vicê já tem uma busca ativa, %s!", GET_NAME(ch), GET_NAME(ch));
-  else if((vnum = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(qm), atoi(argument))) == NOTHING)
-    snprintf(buf, sizeof(buf),
-             "%s Eu não conheço nenhuma busca assim, %s!", GET_NAME(ch), GET_NAME(ch));
-  else if ((rnum = real_quest(vnum)) == NOTHING)
-    snprintf(buf, sizeof(buf),
-             "%s Eu não conheço essa busca, %s!", GET_NAME(ch), GET_NAME(ch));
-  else if (GET_LEVEL(ch) < QST_MINLEVEL(rnum))
-    snprintf(buf, sizeof(buf),
-             "%s Sinto muito, mas você ainda não oode participar desta busca, %s!", GET_NAME(ch), GET_NAME(ch));
-  else if (GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
-    snprintf(buf , sizeof(buf),
-             "%s Sinto muito, mas você tem muita experiência para aceitar esta busca %s!", GET_NAME(ch), GET_NAME(ch));
-  else if (is_complete(ch, vnum))
-    snprintf(buf, sizeof(buf),
-             "%s Você já conpletou esta busca antes, %s!", GET_NAME(ch), GET_NAME(ch));
-  else if ((QST_PREV(rnum) != NOTHING) && !is_complete(ch, QST_PREV(rnum)))
-    snprintf(buf, sizeof(buf),
-             "%s Você precisa completar outra busca antes, %s!", GET_NAME(ch), GET_NAME(ch));
-  else if ((QST_PREREQ(rnum) != NOTHING) &&
-           (real_object(QST_PREREQ(rnum)) != NOTHING) &&
-           (get_obj_in_list_num(real_object(QST_PREREQ(rnum)),
-       ch->carrying) == NULL))
-    snprintf(buf, sizeof(buf),
-             "%s, você precisa primeiro ter %s antes!", GET_NAME(ch),
-      obj_proto[real_object(QST_PREREQ(rnum))].short_description);
-  else 
-  {
-    act("Você aceitou a busca.", TRUE, ch, NULL, NULL, TO_CHAR);
-    act("$n aceitou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
-    snprintf(buf, sizeof(buf),"%s As instruções para esta busca são:", GET_NAME(ch));
-    do_tell(qm, buf, cmd_tell, 0);
-    set_quest(ch, rnum);
-    send_to_char(ch, "%s", QST_INFO(rnum));
-    if (QST_TIME(rnum) != -1) {
-      snprintf(buf, sizeof(buf),"%s, você tem um tempo limite de %d tick%s para completar esta busca!",GET_NAME(ch), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
-    }
-    else {
-      snprintf(buf, sizeof(buf),"%s, você pode levar o tempo que precisar", GET_NAME(ch));
+  /* First, search through regular quests assigned to this questmaster */
+  for (rnum = 0; rnum < total_quests; rnum++) {
+    if (qm_vnum == QST_MASTER(rnum)) {
+      quest_completed = is_complete(ch, QST_NUM(rnum));
+      quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
+      
+      /* Only count quest if it's available (not completed or repeatable) */
+      if (!quest_completed || quest_repeatable) {
+        if (++counter == num)
+          return (QST_NUM(rnum));
+      }
     }
   }
-  do_tell(qm, buf, cmd_tell, 0);
-  save_char(ch);
+
+  /* Then, search through temporary quests if this mob is a temporary questmaster */
+  if (IS_TEMP_QUESTMASTER(qm) && GET_NUM_TEMP_QUESTS(qm) > 0) {
+    for (i = 0; i < GET_NUM_TEMP_QUESTS(qm); i++) {
+      rnum = real_quest(GET_TEMP_QUESTS(qm)[i]);
+      if (rnum == NOTHING)
+        continue;
+      
+      quest_completed = is_complete(ch, QST_NUM(rnum));
+      quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
+      
+      /* Only count quest if it's available (not completed or repeatable) */
+      if (!quest_completed || quest_repeatable) {
+        if (++counter == num)
+          return GET_TEMP_QUESTS(qm)[i];
+      }
+    }
+  }
+
+  return NOTHING;
 }
 
 void quest_list(struct char_data *ch, struct char_data *qm, char argument[MAX_INPUT_LENGTH])
@@ -635,7 +622,7 @@ void quest_list(struct char_data *ch, struct char_data *qm, char argument[MAX_IN
   qst_vnum vnum;
   qst_rnum rnum;
 
-  if ((vnum = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(qm), atoi(argument))) == NOTHING)
+  if ((vnum = find_unified_quest_by_qmnum(ch, qm, atoi(argument))) == NOTHING)
     send_to_char(ch, "Esta não é uma busca válida!\r\n");
   else if ((rnum = real_quest(vnum)) == NOTHING)
     send_to_char(ch, "Esta não é uma busca válida!\r\n");
@@ -681,6 +668,114 @@ static void quest_quit(struct char_data *ch)
   }
 }
 
+/* Unified quest display function - shows both regular and temporary quests */
+static void quest_show_unified(struct char_data *ch, struct char_data *qm)
+{
+  qst_rnum rnum;
+  int counter = 0, i;
+  int quest_completed, quest_repeatable;
+  mob_vnum qm_vnum = GET_MOB_VNUM(qm);
+
+  send_to_char(ch,
+  "A lista de buscas: disponiveis é:\r\n"
+  "Num.  Descrção                                             Feita?\r\n"
+  "----- ---------------------------------------------------- ------\r\n");
+
+  /* First, show regular quests assigned to this questmaster */
+  for (rnum = 0; rnum < total_quests; rnum++) {        
+    if (qm_vnum == QST_MASTER(rnum)) {
+      quest_completed = is_complete(ch, QST_NUM(rnum));
+      quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
+      
+      /* Only show quest if not completed or repeatable */
+      if (!quest_completed || quest_repeatable) {
+        send_to_char(ch, "\tg%4d\tn) \tc%-52.52s\tn \ty(%s)\tn\r\n",
+          ++counter, QST_DESC(rnum),
+          (quest_completed ? "Sim" : "Não "));
+      }
+    }
+  }
+
+  /* Then, show temporary quests if this mob is a temporary questmaster */
+  if (IS_TEMP_QUESTMASTER(qm) && GET_NUM_TEMP_QUESTS(qm) > 0) {
+    for (i = 0; i < GET_NUM_TEMP_QUESTS(qm); i++) {
+      rnum = real_quest(GET_TEMP_QUESTS(qm)[i]);
+      if (rnum == NOTHING)
+        continue;
+        
+      quest_completed = is_complete(ch, QST_NUM(rnum));
+      quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
+      
+      /* Only show quest if not completed or repeatable */
+      if (!quest_completed || quest_repeatable) {
+        send_to_char(ch, "\tg%4d\tn) \tc%-52.52s\tn \ty(%s)\tn\r\n",
+          ++counter, QST_DESC(rnum),
+          (quest_completed ? "Sim" : "Não "));
+      }
+    }
+  }
+
+  if (!counter)
+    send_to_char(ch, "Não temos buscas disponiveis no momento, %s!\r\n", GET_NAME(ch));
+}
+
+/* Unified quest join function - uses unified quest finding */
+static void quest_join_unified(struct char_data *ch, struct char_data *qm, char argument[MAX_INPUT_LENGTH])
+{
+  qst_vnum vnum;
+  qst_rnum rnum;
+  char buf[MAX_INPUT_LENGTH];
+
+  if (!*argument)
+    snprintf(buf, sizeof(buf),
+             "%s Qual busca você quer aceitar, %s?", GET_NAME(qm), GET_NAME(ch));
+  else if (GET_QUEST(ch) != NOTHING)
+    snprintf(buf, sizeof(buf),
+             "%s Mas você já tem uma busca ativa, %s!", GET_NAME(qm), GET_NAME(ch));
+  else if((vnum = find_unified_quest_by_qmnum(ch, qm, atoi(argument))) == NOTHING)
+    snprintf(buf, sizeof(buf),
+             "%s Eu não conheço nenhuma busca assim, %s!", GET_NAME(qm), GET_NAME(ch));
+  else if ((rnum = real_quest(vnum)) == NOTHING)
+    snprintf(buf, sizeof(buf),
+             "%s Eu não conheço essa busca, %s!", GET_NAME(qm), GET_NAME(ch));
+  else if (GET_LEVEL(ch) < QST_MINLEVEL(rnum))
+    snprintf(buf, sizeof(buf),
+             "%s Sinto muito, mas você ainda não pode participar desta busca, %s!", GET_NAME(qm), GET_NAME(ch));
+  else if (GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
+    snprintf(buf , sizeof(buf),
+             "%s Sinto muito, mas você tem muita experiência para aceitar esta busca %s!", GET_NAME(qm), GET_NAME(ch));
+  else if (is_complete(ch, vnum))
+    snprintf(buf, sizeof(buf),
+             "%s Você já completou esta busca antes, %s!", GET_NAME(qm), GET_NAME(ch));
+  else if ((QST_PREV(rnum) != NOTHING) && !is_complete(ch, QST_PREV(rnum)))
+    snprintf(buf, sizeof(buf),
+             "%s Você precisa completar outra busca antes, %s!", GET_NAME(qm), GET_NAME(ch));
+  else if ((QST_PREREQ(rnum) != NOTHING) &&
+           (real_object(QST_PREREQ(rnum)) != NOTHING) &&
+           (get_obj_in_list_num(real_object(QST_PREREQ(rnum)),
+       ch->carrying) == NULL))
+    snprintf(buf, sizeof(buf),
+             "%s, você precisa primeiro ter %s antes!", GET_NAME(qm),
+      obj_proto[real_object(QST_PREREQ(rnum))].short_description);
+  else 
+  {
+    act("Você aceitou a busca.", TRUE, ch, NULL, NULL, TO_CHAR);
+    act("$n aceitou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
+    snprintf(buf, sizeof(buf),"%s As instruções para esta busca são:", GET_NAME(ch));
+    do_tell(qm, buf, cmd_tell, 0);
+    set_quest(ch, rnum);
+    send_to_char(ch, "%s", QST_INFO(rnum));
+    if (QST_TIME(rnum) != -1) {
+      snprintf(buf, sizeof(buf),"%s, você tem um tempo limite de %d tick%s para completar esta busca!",GET_NAME(ch), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
+    }
+    else {
+      snprintf(buf, sizeof(buf),"%s, você pode levar o tempo que precisar", GET_NAME(ch));
+    }
+  }
+  do_tell(qm, buf, cmd_tell, 0);
+  save_char(ch);
+}
+
 static void quest_progress(struct char_data *ch)
 {
   qst_rnum rnum;
@@ -703,36 +798,6 @@ static void quest_progress(struct char_data *ch)
    GET_QUEST_TIME(ch),
    GET_QUEST_TIME(ch) == 1 ? "" : "s");
   }
-}
-//Lista quest para mortais com quest list
-static void quest_show(struct char_data *ch, mob_vnum qm)
-{
-  qst_rnum rnum;
-  int counter = 0;
-  int quest_completed, quest_repeatable;
-
-  send_to_char(ch,
-  "A lista de buscas: disponiveis é:\r\n"
-  "Num.  Descrção                                             Feita?\r\n"
-  "----- ---------------------------------------------------- ------\r\n");
-  for (rnum = 0; rnum < total_quests; rnum++) {        
-    if (qm == QST_MASTER(rnum)) {
-      quest_completed = is_complete(ch, QST_NUM(rnum));
-      quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
-      
-      /* Only show quest if:
-       * 1. It's not completed, OR
-       * 2. It's completed but repeatable
-       */
-      if (!quest_completed || quest_repeatable) {
-        send_to_char(ch, "\tg%4d\tn) \tc%-52.52s\tn \ty(%s)\tn\r\n",
-          ++counter, QST_DESC(rnum),
-          (quest_completed ? "Sim" : "Não "));
-      }
-    }
-  }
-  if (!counter)
-    send_to_char(ch, "Não temos buscas disponiveis no momento, %s!\r\n",GET_NAME(ch));
 }
 
 /*Para imortais */
@@ -903,20 +968,38 @@ SPECIAL(questmaster)
   char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
   int  tp;
   struct char_data *qm = (struct char_data *)me;
+  bool has_regular_quests = FALSE;
+  bool has_temp_quests = FALSE;
 
-  /* First check if this mob is a temporary questmaster */
-  if (IS_TEMP_QUESTMASTER(qm) && GET_NUM_TEMP_QUESTS(qm) > 0) {
-    return temp_questmaster(ch, me, cmd, argument);
+  /* Check if this mob has regular quests assigned */
+  for (rnum = 0; rnum < total_quests; rnum++) {
+    if (QST_MASTER(rnum) == GET_MOB_VNUM(qm)) {
+      has_regular_quests = TRUE;
+      break;
+    }
   }
 
-  /* check that qm mob has quests assigned */
-  for (rnum = 0; (rnum < total_quests &&
-      QST_MASTER(rnum) != GET_MOB_VNUM(qm)) ; rnum ++);
-  if (rnum >= total_quests)
-    return FALSE; /* No quests for this mob */
-  else if (QST_FUNC(rnum) && (QST_FUNC(rnum) (ch, me, cmd, argument)))
-    return TRUE;  /* The secondary spec proc handled this command */
-  else if (CMD_IS("quest")) {
+  /* Check if this mob has temporary quests */
+  if (IS_TEMP_QUESTMASTER(qm) && GET_NUM_TEMP_QUESTS(qm) > 0) {
+    has_temp_quests = TRUE;
+  }
+
+  /* If no quests at all, not a questmaster */
+  if (!has_regular_quests && !has_temp_quests)
+    return FALSE;
+
+  /* Handle secondary spec procs for regular quests */
+  if (has_regular_quests) {
+    for (rnum = 0; rnum < total_quests; rnum++) {
+      if (QST_MASTER(rnum) == GET_MOB_VNUM(qm)) {
+        if (QST_FUNC(rnum) && (QST_FUNC(rnum) (ch, me, cmd, argument)))
+          return TRUE;  /* The secondary spec proc handled this command */
+        break; /* Only check first matching quest for secondary spec proc */
+      }
+    }
+  }
+
+  if (CMD_IS("quest")) {
     two_arguments(argument, arg1, arg2);
     if (!*arg1)
       return FALSE;
@@ -926,15 +1009,15 @@ SPECIAL(questmaster)
       switch (tp) {
       case SCMD_QUEST_LIST:
         if (!*arg2)
-          quest_show(ch, GET_MOB_VNUM(qm));
+          quest_show_unified(ch, qm);
         else
-   quest_list(ch, qm, arg2);
+          quest_list(ch, qm, arg2);
         break;
       case SCMD_QUEST_JOIN:
-        quest_join(ch, qm, arg2);
+        quest_join_unified(ch, qm, arg2);
         break;
       default:
- return FALSE; /* fall through to the do_quest command processor */
+        return FALSE; /* fall through to the do_quest command processor */
       } /* switch on subcmd number */
       return TRUE;
     }
@@ -1475,7 +1558,6 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
 /* Temporary questmaster special function - handles quest interactions for temporary quest masters */
 SPECIAL(temp_questmaster)
 {
-  qst_rnum rnum;
   char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
   int  tp;
   struct char_data *qm = (struct char_data *)me;
