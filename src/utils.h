@@ -116,6 +116,11 @@ void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
 int get_stoneskin_points(struct char_data *ch);
 void set_stoneskin_points(struct char_data *ch, int points);
 bool reduce_stoneskin_points(struct char_data *ch, int reduction);
+
+/* String utility functions */
+void remove_from_string(char *str, const char *substr);
+char *right_trim_whitespace(const char *str);
+
 /* Public functions made available from weather.c */
 void weather_and_time(int mode);
 

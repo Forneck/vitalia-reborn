@@ -3781,3 +3781,80 @@ bool reduce_stoneskin_points(struct char_data *ch, int reduction)
     
     return FALSE;
 }
+/**
+ * Removes all occurrences of a substring from a string.
+ * Modifies the original string in-place.
+ * @param str The string to modify
+ * @param substr The substring to remove
+ */
+void remove_from_string(char *str, const char *substr)
+{
+    char *pos, *src, *dst;
+    size_t substr_len;
+    
+    if (!str || !substr || !*substr)
+        return;
+        
+    substr_len = strlen(substr);
+    src = dst = str;
+    
+    while ((pos = strstr(src, substr)) != NULL) {
+        /* Copy everything before the match */
+        while (src < pos) {
+            *dst++ = *src++;
+        }
+        /* Skip the match */
+        src += substr_len;
+    }
+    
+    /* Copy the rest of the string */
+    while (*src) {
+        *dst++ = *src++;
+    }
+    *dst = '\0';
+}
+
+/**
+ * Removes trailing whitespace from a string and returns a new string.
+ * The caller is responsible for freeing the returned string.
+ * @param str The string to trim
+ * @return A new string with trailing whitespace removed
+ */
+char *right_trim_whitespace(const char *str)
+{
+    char *result;
+    size_t len;
+    int end;
+    
+    if (!str)
+        return NULL;
+        
+    len = strlen(str);
+    if (len == 0) {
+        result = malloc(1);
+        if (result)
+            result[0] = '\0';
+        return result;
+    }
+    
+    /* Find the last non-whitespace character */
+    end = len - 1;
+    while (end >= 0 && isspace(str[end])) {
+        end--;
+    }
+    
+    /* Allocate memory for the trimmed string */
+    result = malloc(end + 2);
+    if (!result)
+        return NULL;
+        
+    /* Copy the non-whitespace part */
+    if (end >= 0) {
+        strncpy(result, str, end + 1);
+        result[end + 1] = '\0';
+    } else {
+        result[0] = '\0';
+    }
+    
+    return result;
+}
