@@ -12,7 +12,8 @@ escudeiro.
 70 2 -20 10d20+1200 4d6+16
 5000 99344
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
+GenRoam: 6
 E
 T 3013
 #17302
@@ -27,8 +28,8 @@ cheirosos, seu olhar e gestos aparentam pressa.
 30 0 -10 5d15+400 6d12+8
 500 15246
 9 9 1
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 2
+GenRoam: 58
 E
 #17303
 cavaleiro nobre~
@@ -43,7 +44,7 @@ carrega uma grande lança.
 10000 65030
 9 9 1
 GenWimpy: 4
-GenRoam: 11
+GenRoam: 34
 E
 T 3013
 #17304
@@ -80,8 +81,9 @@ guerra.
 80 0 -13 2d12+1400 3d8+18
 8000 100444
 9 9 1
-GenWimpy: 4
-GenRoam: 1
+GenWimpy: 5
+GenRoam: 27
+GenGroup: 3
 E
 #17306
 galahad cavaleiro~
@@ -218,8 +220,9 @@ de seda, que escondem um pouco seu feio e detestável corpo retorcido.
 69 3 -14 4d6+803 5d7+17
 800 45000
 9 9 2
-GenWimpy: 1
-GenRoam: 4
+GenWimpy: 2
+GenLoot: 1
+GenRoam: 2
 E
 T 3009
 #17315
@@ -235,8 +238,8 @@ da meia idade, mas ainda é um vigoroso combatente.
 60 4 -7 2d8+678 12d6+18
 10000 62000
 9 9 1
-GenWimpy: 5
-GenRoam: 31
+GenWimpy: 6
+GenRoam: 46
 E
 #17316
 besta busca criatura~
@@ -323,8 +326,8 @@ vestido e tem uma coroa de flores enfeitando seus cabelos.
 30 5 -2 10d10+360 4d6+8
 3000 10030
 9 9 2
-GenWimpy: 11
-GenRoam: 85
+GenWimpy: 13
+GenRoam: 87
 E
 #17322
 rainha guinevere~
@@ -339,7 +342,7 @@ Lancelot.
 50 4 -1 7d9+409 2d12+10
 10000 34000
 9 9 2
-GenWimpy: 1
+GenWimpy: 2
 E
 #17323
 escudeiro encantado~
@@ -354,7 +357,7 @@ estado de desordem.
 0 56090
 9 9 1
 GenWimpy: 4
-GenRoam: 4
+GenRoam: 24
 E
 #17324
 barant rei apres cavaleiro~
@@ -369,9 +372,9 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 6
-GenRoam: 6
-GenGroup: 2
+GenWimpy: 12
+GenRoam: 36
+GenGroup: 7
 E
 #17325
 bufao dagonet bobo~
@@ -455,8 +458,8 @@ nele.
 25 5 0 5d3+400 6d7+7
 1200 21000
 9 9 1
-GenWimpy: 2
-GenRoam: 66
+GenWimpy: 4
+GenRoam: 81
 E
 #17331
 mercador~
@@ -487,7 +490,7 @@ maneira dos fransciscanos.
 1200 19078
 9 9 1
 GenWimpy: 5
-GenRoam: 69
+GenRoam: 79
 E
 #17333
 trovador~
@@ -514,7 +517,7 @@ camisa laranja.
 14 7 0 3d9+209 7d7+7
 1245 16980
 9 9 1
-GenWimpy: 3
+GenWimpy: 5
 E
 #17335
 artista~
@@ -528,6 +531,7 @@ vertiginosas acrobacias.
 15 6 0 6d7+290 5d9+8
 1100 19080
 9 9 1
+GenWimpy: 2
 E
 #17336
 criado~
@@ -540,7 +544,7 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
-GenWimpy: 13
+GenWimpy: 16
 GenRoam: 87
 E
 #17337
@@ -660,7 +664,8 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 4
+GenWimpy: 5
+GenRoam: 23
 E
 #17345
 chefe saxao render~
@@ -675,7 +680,7 @@ coberto por piolhos.
 73 2 -13 5d13+1200 6d6+17
 10000 60994
 9 9 1
-GenWimpy: 3
+GenWimpy: 5
 E
 #17346
 guarda fronteira norte~
@@ -750,7 +755,7 @@ O servo segura um instrumento de fazenda e usa trapos para se cobrir.
 10 7 1 4d12+250 6d6+5
 1240 4769
 9 9 1
-GenWimpy: 10
+GenWimpy: 16
 E
 #17351
 invasor anglo~
@@ -933,6 +938,7 @@ armado com uma espada comum.
 59 3 -2 6d10+709 8d7+14
 1200 59003
 9 9 1
+GenWimpy: 1
 E
 #17363
 escrava~
@@ -947,6 +953,6 @@ resistir.
 1000 8870
 9 9 2
 GenWimpy: 5
-GenRoam: 7
+GenRoam: 1
 E
 $

@@ -31,8 +31,8 @@ tirando um intervalo de todo aquele trabalho.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
-GenRoam: 60
+GenWimpy: 7
+GenRoam: 79
 E
 #2702
 ferreiro~
@@ -171,7 +171,8 @@ espada em punho!!
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 13
+GenWimpy: 44
+GenRoam: 45
 E
 #2710
 torturador~
@@ -310,8 +311,8 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
-GenRoam: 27
+GenWimpy: 3
+GenRoam: 45
 E
 #2720
 passaro~
@@ -329,8 +330,9 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
-GenRoam: 29
+GenWimpy: 3
+GenRoam: 47
+GenGroup: 3
 E
 #2721
 borboleta~
@@ -348,8 +350,8 @@ BareHandAttack: 1
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenRoam: 28
+GenWimpy: 5
+GenRoam: 68
 E
 #2722
 porco~
@@ -367,8 +369,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 7
-GenRoam: 53
+GenWimpy: 11
+GenRoam: 76
 E
 #2723
 vaca~
@@ -558,7 +560,7 @@ saquear um corpo do que saquear uma pessoa viva.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
+GenWimpy: 2
 E
 #2734
 alguma coisa mulher~

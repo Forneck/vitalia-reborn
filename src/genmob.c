@@ -376,6 +376,10 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
      fprintf(fd, "GenUse: %d\n", GET_GENUSE(mob));
    if (GET_GENTRADE(mob) != 0)
      fprintf(fd, "GenTrade: %d\n", GET_GENTRADE(mob));
+   if (GET_GENQUEST(mob) != 0)
+     fprintf(fd, "GenQuest: %d\n", GET_GENQUEST(mob));
+   if (GET_GENADVENTURER(mob) != 0)
+     fprintf(fd, "GenAdventurer: %d\n", GET_GENADVENTURER(mob));
    }
 
   fputs("E\n", fd);

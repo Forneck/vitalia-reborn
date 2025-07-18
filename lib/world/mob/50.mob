@@ -10,7 +10,7 @@ precisando de um bom descanso.
 5 15 5 1d10+60 2d4+0
 70 1000
 9 9 1
-GenWimpy: 43
+GenWimpy: 54
 GenRoam: 87
 E
 #5001
@@ -25,8 +25,8 @@ precisando de MUITO descanso.
 8 12 3 2d6+100 2d6+1
 150 7000
 9 9 1
-GenWimpy: 57
-GenRoam: 41
+GenWimpy: 61
+GenRoam: 55
 E
 #5002
 cobra coral~
@@ -40,9 +40,8 @@ vermelho, amarelo e preto.
 4 17 4 1d6+40 1d9+0
 0 600
 9 9 0
-GenWimpy: 51
-GenLoot: 1
-GenRoam: 71
+GenWimpy: 64
+GenRoam: 80
 E
 #5003
 escorpiao pequeno~
@@ -56,8 +55,8 @@ pequenina.
 3 17 1 1d6+40 1d8+0
 0 500
 9 9 0
-GenWimpy: 47
-GenRoam: 76
+GenWimpy: 64
+GenRoam: 87
 E
 #5004
 verme arroxeado gigantesco~
@@ -205,8 +204,8 @@ O xamã está espalhando esporos pelo ar.
 14 7 1 1d12+173 2d7+2
 2500 18000
 9 9 1
-GenWimpy: 13
-GenRoam: 78
+GenWimpy: 18
+GenRoam: 85
 E
 T 3009
 #5015
@@ -220,7 +219,8 @@ Um pequeno oásis convida-lhe a um mergulho.
 7 10 1 1d6+85 3d4+0
 450 2250
 9 9 0
-GenWimpy: 15
+GenWimpy: 84
+GenRoam: 28
 E
 #5017
 camelo selvagem~

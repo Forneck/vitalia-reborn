@@ -23,8 +23,8 @@ Ele é um pequeno e peludo roedor com grandes orelhas.
 0 20 3 1d5+3 1d3+0
 0 25
 9 9 0
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 2
+GenRoam: 45
 E
 #6202
 esquilo~
@@ -37,8 +37,8 @@ Ele é um esquilo pequeno e marrom.  Um excelente espécime saltador.
 0 20 -1 1d3+0 1d1+1
 0 10
 9 9 0
-GenWimpy: 2
-GenRoam: 45
+GenWimpy: 4
+GenRoam: 67
 E
 #6203
 cacador orc~
@@ -52,8 +52,9 @@ Sua pele verde está definitivamente pintada e ele parece coxear um pouco...
 7 14 5 3d5+83 2d3+2
 0 2250
 9 9 1
-GenWimpy: 4
-GenRoam: 83
+GenWimpy: 5
+GenLoot: 2
+GenRoam: 85
 E
 #6204
 chefe orc~
@@ -176,7 +177,7 @@ para longe do seu caminho para chegar até você.
 12 9 -2 3d5+170 2d7+4
 0 15000
 9 9 0
-GenWimpy: 53
+GenWimpy: 44
 GenRoam: 87
 E
 #6213

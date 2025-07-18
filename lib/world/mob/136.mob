@@ -37,8 +37,8 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 250 14000
 9 9 1
-GenWimpy: 22
-GenRoam: 86
+GenWimpy: 24
+GenRoam: 87
 E
 #13603
 cervo corca~
@@ -51,7 +51,7 @@ Uma corça, um cervo, um cervo fêmea...  Vamos! Você conhece a música.
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 2
-GenWimpy: 25
+GenWimpy: 27
 GenRoam: 87
 E
 #13604
@@ -79,8 +79,8 @@ Ele olha para você e ri frenéticamente.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 1
-GenWimpy: 21
-GenRoam: 86
+GenWimpy: 23
+GenRoam: 87
 GenGroup: 1
 E
 #13606
@@ -122,8 +122,8 @@ Ele se moveu?
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 1
-GenWimpy: 12
-GenRoam: 53
+GenWimpy: 16
+GenRoam: 71
 E
 #13609
 arvore nirin odiosa~
@@ -150,7 +150,7 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12937
 9 9 1
-GenWimpy: 98
+GenWimpy: 93
 GenRoam: 87
 E
 $

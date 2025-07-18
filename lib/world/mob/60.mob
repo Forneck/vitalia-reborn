@@ -12,8 +12,8 @@ vive uma vida simples e pacífica.
 5 15 6 1d12+60 1d4+3
 100 1050
 9 9 1
-GenWimpy: 4
-GenRoam: 26
+GenWimpy: 8
+GenRoam: 55
 E
 #6001
 pequeno coelho~
@@ -26,8 +26,8 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 0 20 6 1d4+1 1d4+0
 0 60
 9 9 0
-GenWimpy: 31
-GenRoam: 87
+GenWimpy: 39
+GenRoam: 86
 E
 #6002
 urso marrom~
@@ -69,8 +69,8 @@ castanhos que olham fixamente para você, com grande interesse.
 2 19 5 2d8+8 1d6+0
 0 230
 9 9 2
-GenWimpy: 25
-GenRoam: 51
+GenWimpy: 34
+GenRoam: 76
 E
 #6005
 raposa marrom~
@@ -84,8 +84,8 @@ peluda cauda.
 2 18 6 1d4+18 1d6+0
 0 225
 9 9 0
-GenWimpy: 12
-GenRoam: 85
+GenWimpy: 19
+GenRoam: 87
 E
 #6006
 passaro grande~
@@ -98,7 +98,7 @@ O pássaro parece que não vai viver muito, pelo jeito.
 0 17 10 2d3+1 1d2+1
 0 25
 9 9 0
-GenWimpy: 100
+GenWimpy: 99
 E
 #6007
 gato lince gato-selvagem~
@@ -112,7 +112,7 @@ pássaro, se você lhe der chance.
 5 15 5 1d12+60 2d4+3
 0 1100
 9 9 0
-GenWimpy: 6
+GenWimpy: 7
 E
 #6008
 pardal~
@@ -125,7 +125,7 @@ O pardal parece estar aproveitando bem a vida.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 24
+GenWimpy: 34
 GenRoam: 87
 E
 #6009
@@ -139,8 +139,8 @@ O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 27
-GenRoam: 76
+GenWimpy: 38
+GenRoam: 87
 E
 #6010
 esquilo~
@@ -154,7 +154,7 @@ silenciosamente para que você saia dali e o deixe sózinho.
 1 20 8 1d7+9 1d5+0
 0 120
 9 9 0
-GenWimpy: 1
+GenWimpy: 6
 E
 #6011
 texugo~
@@ -169,6 +169,7 @@ prendem a sua atenção, enquanto você fica considerando se deve ou não matá-
 4 17 5 1d5+48 2d3+2
 0 650
 9 9 0
+GenWimpy: 1
 E
 #6012
 esquilo cinzento~
@@ -183,8 +184,8 @@ no chão.
 2 19 8 1d12+22 1d6+0
 0 200
 9 9 0
-GenWimpy: 39
-GenRoam: 85
+GenWimpy: 50
+GenRoam: 87
 E
 #6013
 esquilinho~
@@ -200,8 +201,8 @@ pensa você.
 0 20 5 2d5+3 1d4+0
 0 40
 9 9 0
-GenWimpy: 37
-GenRoam: 77
+GenWimpy: 47
+GenRoam: 81
 E
 #6014
 corvo negro passaro~
@@ -216,6 +217,7 @@ comida.
 3 200
 9 9 0
 GenWimpy: 100
+GenRoam: 11
 E
 #6015
 grotesco abutre urubu~
@@ -259,7 +261,7 @@ O peixe tem exatamente o tamanho certo para um excelente refeição.
 0 20 10 2d5+0 1d3+0
 0 30
 9 9 0
-GenWimpy: 2
+GenWimpy: 7
 E
 #6018
 patinho~
@@ -272,7 +274,7 @@ O patinho é adorável!   Ele se parece com uma bolinha de penugem.
 0 20 10 1d1+0 1d1+0
 0 1
 9 9 0
-GenWimpy: 1
+GenWimpy: 3
 E
 #6019
 pato~
@@ -285,7 +287,7 @@ O pato é bastante gordo.   Ele parece estar aproveitando bem sua vida.
 1 20 10 2d6+5 1d4+0
 0 75
 9 9 0
-GenWimpy: 68
-GenRoam: 70
+GenWimpy: 92
+GenRoam: 87
 E
 $

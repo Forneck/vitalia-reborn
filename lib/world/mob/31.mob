@@ -50,7 +50,7 @@ Um grande, forte e bravo sentinela.
 10 10 2 1d12+123 1d8+3
 0 9000
 9 9 1
-GenWimpy: 23
+GenWimpy: 21
 E
 #3104
 secretaria~
@@ -94,8 +94,8 @@ Ele é muito bom em seu trabalho - completamente derretido em lágrimas.
 1 20 9 2d6+10 1d5+0
 34 100
 9 9 1
-GenWimpy: 2
-GenRoam: 27
+GenWimpy: 3
+GenRoam: 45
 E
 #3120
 cisne~
@@ -146,8 +146,8 @@ O pato á bem gordo. Parece que ele está aproveitando a vida.
 1 20 10 2d6+5 1d4+0
 0 75
 9 9 0
-GenWimpy: 13
-GenRoam: 75
+GenWimpy: 16
+GenRoam: 85
 E
 #3124
 guarda-costas~

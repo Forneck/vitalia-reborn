@@ -18,6 +18,26 @@ Que pena que você desistiu desta busca.~
 10 0 5 30 -1 10300 1
 2305 4610 3501
 S
+#12774
+Busca por a adaga das lágrimas~
+um cachorro esqueleto precisa de a adaga das lágrimas~
+um cachorro esqueleto está procurando por a adaga das lágrimas. Se você encontrar este item, traga-o para mim ou diretamente para um cachorro esqueleto para receber 647 moedas de ouro, 1294 pontos de experiência e um pedaço de osso como recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 3704 -1 -1 -1
+10 0 29 54 -1 3721 1
+647 1294 3718
+S
+#12839
+Busca por a adaga das lágrimas~
+um guerreiro precisa de a adaga das lágrimas~
+um guerreiro está procurando por a adaga das lágrimas. Se você encontrar este item, traga-o para mim ou diretamente para um guerreiro para receber sua recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 3704 -1 -1 -1
+10 0 32 57 -1 3725 1
+697 1394 65535
+S
 #12841
 Busca por um pedaço de osso~
 o guerreiro zumbi precisa de um pedaço de osso~
@@ -47,5 +67,15 @@ Que pena que você desistiu desta busca.~
 5 3012 b 3717 -1 -1 -1
 10 0 35 60 -1 3726 1
 208 416 65535
+S
+#12894
+Busca por um cartaz de 'Procurado'~
+o caçador de aventuras precisa de um cartaz de 'Procurado'~
+o caçador de aventuras está procurando por um cartaz de 'Procurado'. Se você encontrar este item, traga-o para mim ou diretamente para o caçador de aventuras para receber sua recompensa.~
+Excelente! Você trouxe exatamente o que eu precisava. Muito obrigado pela sua ajuda!~
+Que pena que você desistiu desta busca.~
+5 3012 b 3019 -1 -1 -1
+10 0 5 30 -1 3015 1
+150 300 65535
 S
 $~

@@ -184,13 +184,16 @@ extremamente perigoso para sua saúde.
 15 10 0 100d5+50 2d6+6
 5000 42000
 9 9 1
-GenLoot: 100
-GenEquip: 100
-GenRoam: 100
-GenGroup: 100
-GenBrave: 50
+GenWimpy: 1
+GenLoot: 70
+GenEquip: 70
+GenRoam: 73
+GenGroup: 99
+GenBrave: 49
 GenUse: 100
 GenTrade: 100
+GenQuest: 15
+GenAdventurer: 50
 E
 #3016
 vendedor jornaleiro garoto~
@@ -634,8 +637,8 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
-GenWimpy: 22
-GenRoam: 85
+GenWimpy: 27
+GenRoam: 87
 E
 T 3013
 #3061
@@ -649,8 +652,8 @@ Que trabalho pesado ele tem.
 1 20 9 2d6+10 1d5+0
 34 100
 9 9 1
-GenWimpy: 3
-GenRoam: 55
+GenWimpy: 5
+GenRoam: 72
 E
 #3062
 cachorro fido~
@@ -665,8 +668,8 @@ cheios de pedaços de carne apodrecida grudadas.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 21
-GenRoam: 64
+GenWimpy: 27
+GenRoam: 87
 E
 T 3014
 #3063
@@ -705,6 +708,7 @@ A mendiga parece que está farta da vida.
 1 20 9 2d6+10 1d5+0
 0 100
 9 9 2
+GenWimpy: 1
 E
 #3066
 odif laitseb~
@@ -718,8 +722,8 @@ O odif é um deus pequeno que foi transformado por algum cachorro.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 3
+GenRoam: 58
 E
 T 3014
 #3067

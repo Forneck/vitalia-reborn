@@ -39,8 +39,8 @@ Que bela fada você pode ver deste ângulo.
 16 4 3 1d1+600 6d1+16
 275 30000
 9 9 2
-GenWimpy: 5
-GenRoam: 51
+GenWimpy: 7
+GenRoam: 62
 E
 #13503
 inseto folha inseto-folha~
@@ -53,8 +53,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 11
-GenRoam: 79
+GenWimpy: 13
+GenRoam: 82
 E
 #13504
 inseto galho inseto-galho~
@@ -68,7 +68,7 @@ An undefined string.
 0 12000
 9 9 1
 GenWimpy: 9
-GenRoam: 80
+GenRoam: 83
 E
 #13505
 inseto folha cinza~
@@ -149,8 +149,8 @@ você, parecendo procurar algo, mas logo volta a comer a grama.
 12 8 5 1d1+300 5d1+12
 0 12105
 9 9 2
-GenWimpy: 8
-GenRoam: 13
+GenWimpy: 10
+GenRoam: 19
 E
 #13511
 cervo~
@@ -206,8 +206,8 @@ Olhando bem você percebe que isso NÃO é uma cobra!
 9 11 6 1d1+175 4d1+9
 0 11371
 9 9 2
-GenWimpy: 15
-GenRoam: 63
+GenWimpy: 19
+GenRoam: 81
 E
 #13515
 druida~
@@ -221,8 +221,8 @@ demais para pedir que você saia.
 18 2 2 1d1+800 7d1+18
 325 20769
 9 9 1
-GenWimpy: 7
-GenRoam: 80
+GenWimpy: 9
+GenRoam: 81
 E
 #13516
 druidesa~
@@ -236,8 +236,8 @@ entrou aqui.
 13 7 4 1d1+350 6d1+13
 200 12880
 9 9 2
-GenWimpy: 8
-GenRoam: 12
+GenWimpy: 9
+GenRoam: 35
 E
 #13517
 ra~
@@ -250,7 +250,7 @@ Rã, sabe?  Apenas uma rã.
 8 12 6 1d1+150 4d1+8
 0 1333
 9 9 0
-GenWimpy: 9
-GenRoam: 76
+GenWimpy: 14
+GenRoam: 82
 E
 $

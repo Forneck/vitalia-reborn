@@ -124,6 +124,8 @@ An undefined string.
 10 10 6 1d1+200 5d1+10
 125 1785
 9 9 1
+GenWimpy: 1
+GenRoam: 27
 E
 #13410
 pacificador elfo~
@@ -150,8 +152,8 @@ An undefined string.
 1 17 8 1d1+30 2d1+3
 0 75
 9 9 0
-GenWimpy: 2
-GenRoam: 30
+GenWimpy: 4
+GenRoam: 57
 E
 #13412
 esquilo~
@@ -398,6 +400,8 @@ Esta bela fada flutua levemente sorrindo para quem olha para ela.
 15 5 4 1d1+500 6d1+15
 250 5454
 9 9 1
+GenWimpy: 1
+GenRoam: 27
 E
 #13432
 elfo~
@@ -411,8 +415,8 @@ maravilhas espalhadas por Vitália.
 15 5 4 1d1+500 6d1+15
 250 5454
 9 9 1
-GenWimpy: 2
-GenRoam: 39
+GenWimpy: 3
+GenRoam: 54
 E
 #13433
 aranha negra pequena~
@@ -581,6 +585,7 @@ de linhagem nobre.
 25 1 2 1d6+300 3d8+5
 1200 12000
 9 9 1
+GenWimpy: 1
 E
 #13446
 bibliotecario elfo~

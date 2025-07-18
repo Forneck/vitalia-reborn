@@ -28,8 +28,8 @@ quatro grandes tentáculos com pontas muito afiadas.
 8 13 2 1d10+100 2d4+3
 400 4500
 9 9 0
-GenWimpy: 3
-GenRoam: 38
+GenWimpy: 5
+GenRoam: 62
 E
 T 3009
 #7202
@@ -46,8 +46,8 @@ tem quatro pequenos tentáculos no centro de sua cabeça.
 6 15 4 1d10+75 1d4+2
 200 1500
 9 9 0
-GenWimpy: 1
-GenRoam: 18
+GenWimpy: 4
+GenRoam: 39
 E
 T 3009
 #7203
@@ -63,7 +63,7 @@ exceto por estar em pé.
 6 15 3 4d6+69 2d4+2
 50 1500
 9 9 0
-GenWimpy: 47
+GenWimpy: 70
 GenRoam: 87
 E
 #7204

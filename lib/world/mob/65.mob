@@ -10,6 +10,7 @@ como se não tivesse tomado banho por um mês.
 21 0 -1 4d20+336 2d8+9
 10000 60000
 9 9 1
+GenWimpy: 2
 E
 T 3013
 #6501
@@ -23,7 +24,9 @@ Ele é muito sujo e parece extremamente exausto pelo excesso de trabalho.
 13 7 2 25d5+170 2d4+6
 3500 16000
 9 9 1
-GenWimpy: 1
+GenWimpy: 3
+GenRoam: 70
+GenGroup: 43
 E
 #6502
 fantasma~
@@ -188,7 +191,6 @@ An undefined string.
 3000 800000
 9 9 2
 E
-
 #6518
 taverneiro anao~
 o taverneiro anão~
@@ -201,9 +203,8 @@ quanto suas receitas de família.
 2156546 0 0 0 0 0 0 0 500 E
 18 2 1 1d8+250 2d6+3
 800 8000
-8 8 1
+9 9 1
 E
-
 #6519
 cozinheiro anao~
 o cozinheiro anão~
@@ -215,9 +216,8 @@ que satisfazem mesmo os apetites mais robustos dos trabalhadores das minas.
 2156546 0 0 0 0 0 0 0 450 E
 16 3 2 1d7+225 2d5+2
 700 7000
-8 8 1
+9 9 1
 E
-
 #6520
 mestre ferreiro anao~
 o mestre ferreiro anão~
@@ -229,9 +229,8 @@ armaduras da realeza anã. Sua habilidade é lendária mesmo entre os anões.
 2156546 0 0 0 0 0 0 0 600 E
 22 0 -1 1d10+300 3d6+4
 1000 10000
-8 8 1
+9 9 1
 E
-
 #6521
 guarda real anao~
 um guarda real anão~
@@ -243,10 +242,9 @@ militares do reino. Sua lealdade e habilidade de combate são inabaláveis.
 2158758 0 0 0 0 0 0 0 550 E
 20 1 -2 1d9+275 2d7+3
 900 9000
-8 8 1
+9 9 1
 BareHandAttack: 5
 E
-
 #6522
 conselheiro anao~
 um conselheiro anão~
@@ -258,9 +256,8 @@ Sua sabedoria é respeitada por toda a hierarquia do reino de Strangelove.
 2156546 0 0 0 0 0 0 0 525 E
 19 2 0 1d8+262 2d6+3
 850 8500
-8 8 1
+9 9 1
 E
-
 #6523
 rei anao anões~
 o rei dos anões~
@@ -272,10 +269,9 @@ comanda respeito imediato, e sua coroa de mithril simboliza seu poder.
 2156546 0 0 0 0 0 0 0 650 E
 25 -1 -3 1d12+350 3d8+5
 1200 12000
-8 8 1
+9 9 1
 BareHandAttack: 6
 E
-
 #6524
 minerador mithril anao~
 um minerador de mithril~
@@ -288,9 +284,8 @@ invaluável para o reino.
 2156546 0 0 0 0 0 0 0 475 E
 17 3 1 1d8+237 2d6+2
 750 7500
-8 8 1
+9 9 1
 E
-
 #6525
 refinador mithril anao~
 o refinador de mithril~
@@ -303,7 +298,6 @@ o mithril mais puro conhecido.
 2156546 0 0 0 0 0 0 0 525 E
 19 2 0 1d8+262 2d6+3
 850 8500
-8 8 1
+9 9 1
 E
-
 $

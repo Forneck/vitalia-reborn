@@ -69,7 +69,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 1
+GenWimpy: 2
 E
 #3906
 praga negra espirito~
@@ -270,7 +270,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 4
-GenRoam: 43
+GenRoam: 73
 E
 #3917
 svern demonio~
@@ -289,8 +289,8 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenRoam: 47
+GenWimpy: 5
+GenRoam: 56
 E
 #3918
 vrock demonio ave~
@@ -310,7 +310,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 2
-GenRoam: 7
+GenRoam: 6
 E
 #3919
 valik zumbi dragao~
@@ -402,6 +402,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 3
+GenRoam: 4
 E
 #3924
 pilar gelo~
@@ -420,6 +421,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 3
+GenRoam: 25
 E
 #3925
 yeti agua~
@@ -437,7 +439,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 3
-GenRoam: 72
+GenRoam: 85
 E
 #3926
 pseudo-hidra pseudo hidra dragao~

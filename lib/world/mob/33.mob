@@ -10,6 +10,8 @@ pessoas mais chatas do mundo.
 7 14 4 3d5+83 2d4+1
 1000 2250
 9 9 1
+GenWimpy: 2
+GenRoam: 45
 E
 #3301
 comerciante~
@@ -99,7 +101,7 @@ Este Cíclope atira pedras realmente bem.  Com um olho, porêm, acertar o alvo
 10000 24000
 9 9 1
 BareHandAttack: 13
-GenWimpy: 9
+GenWimpy: 10
 E
 #3307
 salle woman~
@@ -175,9 +177,8 @@ quando ele passa.
 11 10 -2 3d5+133 2d6+2
 1200 11000
 9 9 1
-GenWimpy: 1
-GenLoot: 1
-GenRoam: 25
+GenWimpy: 3
+GenRoam: 57
 E
 #3312
 garcom~
@@ -236,8 +237,8 @@ dentes cariados.  Porém, sua espada é polida e limpa...
 16 5 -2 3d5+195 2d8+3
 1000 25000
 9 9 1
-GenWimpy: 1
-GenRoam: 6
+GenWimpy: 4
+GenRoam: 60
 E
 #3316
 bandido sentinela~
@@ -254,7 +255,7 @@ serviço de guarda...
 18 3 -3 3d5+220 3d6+2
 2400 32000
 9 9 1
-GenWimpy: 12
+GenWimpy: 7
 E
 #3317
 mineiro escravo~
@@ -269,8 +270,8 @@ você deveria, ou melhor, se você pode dar-lhe a liberdade.
 6 15 10 3d5+70 1d8+1
 0 1500
 9 9 1
-GenWimpy: 18
-GenLoot: 2
+GenWimpy: 24
+GenLoot: 54
 E
 #3318
 fazendeiro~

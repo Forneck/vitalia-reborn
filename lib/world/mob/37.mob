@@ -423,8 +423,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenRoam: 83
+GenWimpy: 7
+GenRoam: 87
 E
 #3722
 demonio ossos~
@@ -447,7 +447,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 66
+GenRoam: 73
 E
 #3723
 esqueleto guerreiro~
@@ -465,7 +465,8 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 79
+GenLoot: 1
+GenRoam: 87
 E
 #3724
 esqueleto dragao~
@@ -486,7 +487,7 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 3
 E
 #3725
 guereiro~
@@ -505,7 +506,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 86
+GenRoam: 87
 E
 #3726
 zumbi guerreiro~
@@ -563,6 +564,7 @@ BareHandAttack: 2
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 1
 E
 #3729
 morte sombra~
@@ -619,6 +621,8 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
+GenLoot: 1
+GenRoam: 3
 E
 #3732
 zumbi guarda~

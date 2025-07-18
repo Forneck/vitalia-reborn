@@ -25,7 +25,7 @@ para o jantar.
 4 17 6 1d1+55 1d8+0
 50 600
 9 9 1
-GenWimpy: 64
+GenWimpy: 72
 GenRoam: 87
 E
 #3502
@@ -40,9 +40,8 @@ homens para bater, mas talvez quem bata seja você...
 7 15 3 1d12+100 2d5+1
 300 2000
 9 9 1
-GenWimpy: 21
+GenWimpy: 29
 GenRoam: 87
-GenGroup: 2
 E
 #3503
 goblin lider~
@@ -69,7 +68,7 @@ Aparentemente, ele foi o único sobrevivente da emboscada.
 4 17 6 1d12+47 1d8+0
 0 600
 5 5 1
-GenWimpy: 1
+GenWimpy: 3
 E
 #3505
 estalajadeiro~
@@ -84,7 +83,7 @@ hospedaria não é mais o lugar feliz que foi no passado.
 10 8 1 1d12+200 2d8+1
 1500 7000
 9 9 1
-GenWimpy: 7
+GenWimpy: 8
 E
 #3506
 bardo~
@@ -99,7 +98,7 @@ esquecimento.
 8 13 3 1d12+110 2d6+0
 1500 3750
 6 6 1
-GenWimpy: 4
+GenWimpy: 6
 E
 #3507
 cavaleiro negro~
@@ -113,7 +112,7 @@ pequenos pedaços.
 8 12 4 1d12+97 1d5+7
 1000 4000
 9 9 1
-GenWimpy: 20
+GenWimpy: 34
 GenRoam: 87
 E
 $

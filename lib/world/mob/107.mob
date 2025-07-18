@@ -427,7 +427,8 @@ Int: 8
 Wis: 6
 Con: 8
 Cha: 15
-GenWimpy: 1
+GenWimpy: 2
+GenRoam: 27
 E
 #10721
 guardião fogo~
@@ -561,7 +562,7 @@ Int: 12
 Wis: 5
 Con: 8
 Cha: 18
-GenWimpy: 1
+GenWimpy: 3
 E
 #10727
 esquilo cinza~

@@ -257,6 +257,8 @@ Apesar dela ter um trabalho servil, ela parece gostar dele.
 1 20 9 4d6+1 1d5+0
 10 100
 9 9 2
+GenWimpy: 1
+GenRoam: 27
 E
 #15018
 barata~
@@ -405,6 +407,8 @@ pela próxima!
 13 7 2 3d6+150 1d8+5
 400 16000
 9 9 1
+GenWimpy: 1
+GenRoam: 27
 E
 #15029
 boris guarda real~
@@ -434,7 +438,7 @@ desejo de vingança.
 11 6 3 4d4+95 2d4+8
 0 10000
 9 9 0
-GenWimpy: 24
+GenWimpy: 27
 E
 #15031
 esqueleto aldeao~
@@ -450,7 +454,7 @@ desejo de vingança.
 10 8 3 4d4+80 2d3+6
 0 8000
 9 9 0
-GenWimpy: 34
+GenWimpy: 37
 E
 #15032
 poço demonio~
