@@ -572,6 +572,12 @@ do                                                              \
 #define GET_MOB_QUEST_TIME(ch)   ((ch)->ai_data ? (ch)->ai_data->quest_timer : 0)
 #define GET_MOB_QUEST_COUNTER(ch) ((ch)->ai_data ? (ch)->ai_data->quest_counter : 0)
 
+/* Temporary Quest Master macros */
+#define IS_TEMP_QUESTMASTER(ch)  ((ch)->ai_data ? (ch)->ai_data->is_temp_questmaster : FALSE)
+#define GET_TEMP_QUESTS(ch)      ((ch)->ai_data ? (ch)->ai_data->temp_quests : NULL)
+#define GET_NUM_TEMP_QUESTS(ch)  ((ch)->ai_data ? (ch)->ai_data->num_temp_quests : 0)
+#define GET_MAX_TEMP_QUESTS(ch)  ((ch)->ai_data ? (ch)->ai_data->max_temp_quests : 0)
+
 
 /** Current strength of ch. */
 #define GET_STR(ch)     ((ch)->aff_abils.str)

@@ -904,6 +904,11 @@ SPECIAL(questmaster)
   int  tp;
   struct char_data *qm = (struct char_data *)me;
 
+  /* First check if this mob is a temporary questmaster */
+  if (IS_TEMP_QUESTMASTER(qm) && GET_NUM_TEMP_QUESTS(qm) > 0) {
+    return temp_questmaster(ch, me, cmd, argument);
+  }
+
   /* check that qm mob has quests assigned */
   for (rnum = 0; (rnum < total_quests &&
       QST_MASTER(rnum) != GET_MOB_VNUM(qm)) ; rnum ++);
@@ -1241,4 +1246,453 @@ void mob_autoquest_trigger_check(struct char_data *ch, struct char_data *vict, s
       }
       break;
   }
+}
+
+/*--------------------------------------------------------------------------*/
+/* Temporary Quest Master Functions                                        */
+/*--------------------------------------------------------------------------*/
+
+/* Initialize a mob as a temporary quest master */
+void init_temp_questmaster(struct char_data *mob)
+{
+  if (!IS_NPC(mob) || !mob->ai_data)
+    return;
+  
+  if (!IS_TEMP_QUESTMASTER(mob)) {
+    mob->ai_data->is_temp_questmaster = TRUE;
+    mob->ai_data->temp_quests = NULL;
+    mob->ai_data->num_temp_quests = 0;
+    mob->ai_data->max_temp_quests = 10; /* Maximum 10 temporary quests per mob */
+  }
+}
+
+/* Clear temporary quest master status and free associated memory */
+void clear_temp_questmaster(struct char_data *mob)
+{
+  if (!IS_NPC(mob) || !mob->ai_data)
+    return;
+  
+  if (IS_TEMP_QUESTMASTER(mob)) {
+    if (mob->ai_data->temp_quests) {
+      free(mob->ai_data->temp_quests);
+      mob->ai_data->temp_quests = NULL;
+    }
+    mob->ai_data->is_temp_questmaster = FALSE;
+    mob->ai_data->num_temp_quests = 0;
+    mob->ai_data->max_temp_quests = 0;
+  }
+}
+
+/* Add a quest to a mob's temporary quest list */
+bool add_temp_quest_to_mob(struct char_data *mob, qst_vnum quest_vnum)
+{
+  qst_vnum *new_temp_quests;
+  int i;
+  
+  if (!IS_NPC(mob) || !mob->ai_data || quest_vnum == NOTHING)
+    return FALSE;
+  
+  /* Initialize as temp quest master if not already */
+  if (!IS_TEMP_QUESTMASTER(mob))
+    init_temp_questmaster(mob);
+  
+  /* Check if quest is already in the list */
+  for (i = 0; i < GET_NUM_TEMP_QUESTS(mob); i++) {
+    if (GET_TEMP_QUESTS(mob)[i] == quest_vnum)
+      return TRUE; /* Already have this quest */
+  }
+  
+  /* Check if we have space */
+  if (GET_NUM_TEMP_QUESTS(mob) >= GET_MAX_TEMP_QUESTS(mob)) {
+    log1("QUEST: Mob %s cannot accept more temporary quests (max %d)", 
+         GET_NAME(mob), GET_MAX_TEMP_QUESTS(mob));
+    return FALSE;
+  }
+  
+  /* Allocate or reallocate memory */
+  if (GET_TEMP_QUESTS(mob) == NULL) {
+    new_temp_quests = malloc(sizeof(qst_vnum) * GET_MAX_TEMP_QUESTS(mob));
+  } else {
+    new_temp_quests = realloc(GET_TEMP_QUESTS(mob), 
+                              sizeof(qst_vnum) * GET_MAX_TEMP_QUESTS(mob));
+  }
+  
+  if (!new_temp_quests) {
+    log1("SYSERR: add_temp_quest_to_mob: Memory allocation failed");
+    return FALSE;
+  }
+  
+  mob->ai_data->temp_quests = new_temp_quests;
+  mob->ai_data->temp_quests[mob->ai_data->num_temp_quests] = quest_vnum;
+  mob->ai_data->num_temp_quests++;
+  
+  log1("QUEST: Added temporary quest %d to mob %s", quest_vnum, GET_NAME(mob));
+  return TRUE;
+}
+
+/* Remove a quest from a mob's temporary quest list */
+bool remove_temp_quest_from_mob(struct char_data *mob, qst_vnum quest_vnum)
+{
+  int i, j;
+  
+  if (!IS_NPC(mob) || !mob->ai_data || !IS_TEMP_QUESTMASTER(mob) || quest_vnum == NOTHING)
+    return FALSE;
+  
+  /* Find and remove the quest */
+  for (i = 0; i < GET_NUM_TEMP_QUESTS(mob); i++) {
+    if (GET_TEMP_QUESTS(mob)[i] == quest_vnum) {
+      /* Shift remaining quests down */
+      for (j = i; j < GET_NUM_TEMP_QUESTS(mob) - 1; j++) {
+        GET_TEMP_QUESTS(mob)[j] = GET_TEMP_QUESTS(mob)[j + 1];
+      }
+      mob->ai_data->num_temp_quests--;
+      
+      /* If no more temporary quests, clear temp quest master status */
+      if (GET_NUM_TEMP_QUESTS(mob) == 0) {
+        clear_temp_questmaster(mob);
+      }
+      
+      log1("QUEST: Removed temporary quest %d from mob %s", quest_vnum, GET_NAME(mob));
+      return TRUE;
+    }
+  }
+  
+  return FALSE; /* Quest not found */
+}
+
+/* Find quest by list position number for a temporary quest master */
+qst_vnum find_temp_quest_by_qmnum(struct char_data *ch, struct char_data *qm, int num)
+{
+  int counter = 0, i;
+  qst_rnum rnum;
+  int quest_completed, quest_repeatable;
+  
+  if (!IS_NPC(qm) || !IS_TEMP_QUESTMASTER(qm))
+    return NOTHING;
+  
+  /* Iterate through the mob's temporary quests */
+  for (i = 0; i < GET_NUM_TEMP_QUESTS(qm); i++) {
+    rnum = real_quest(GET_TEMP_QUESTS(qm)[i]);
+    if (rnum == NOTHING)
+      continue;
+    
+    quest_completed = is_complete(ch, QST_NUM(rnum));
+    quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
+    
+    /* Only count quest if it's available (not completed or repeatable) */
+    if (!quest_completed || quest_repeatable) {
+      if (++counter == num)
+        return GET_TEMP_QUESTS(qm)[i];
+    }
+  }
+  
+  return NOTHING;
+}
+
+/* Check if a mob can reach the questmaster for a specific quest */
+bool mob_can_reach_questmaster(struct char_data *mob, mob_vnum qm_vnum)
+{
+  struct char_data *qm;
+  room_rnum qm_room, mob_room;
+  
+  if (!IS_NPC(mob) || qm_vnum == NOTHING)
+    return FALSE;
+  
+  /* Find the questmaster in the world */
+  for (qm = character_list; qm; qm = qm->next) {
+    if (IS_NPC(qm) && GET_MOB_VNUM(qm) == qm_vnum)
+      break;
+  }
+  
+  if (!qm)
+    return FALSE; /* Questmaster not found in world */
+  
+  qm_room = IN_ROOM(qm);
+  mob_room = IN_ROOM(mob);
+  
+  if (qm_room == NOWHERE || mob_room == NOWHERE)
+    return FALSE;
+  
+  /* For simplicity, check if they're in the same zone */
+  /* In a more sophisticated implementation, we could use pathfinding */
+  if (world[qm_room].zone == world[mob_room].zone)
+    return TRUE;
+  
+  return FALSE; /* Different zones, assume unreachable */
+}
+
+/* Make a mob a temporary questmaster if it can't reach the real questmaster */
+void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_vnum)
+{
+  qst_rnum rnum;
+  mob_vnum qm_vnum;
+  
+  if (!IS_NPC(mob) || !mob->ai_data || quest_vnum == NOTHING)
+    return;
+  
+  rnum = real_quest(quest_vnum);
+  if (rnum == NOTHING)
+    return;
+  
+  qm_vnum = QST_MASTER(rnum);
+  
+  /* Check if mob can reach the questmaster */
+  if (!mob_can_reach_questmaster(mob, qm_vnum)) {
+    /* Mob can't reach questmaster, make it a temporary questmaster */
+    add_temp_quest_to_mob(mob, quest_vnum);
+    
+    act("$n parece ter algo importante para dizer.", TRUE, mob, 0, 0, TO_ROOM);
+    log1("QUEST: Mob %s became temporary questmaster for quest %d (can't reach QM %d)", 
+         GET_NAME(mob), quest_vnum, qm_vnum);
+  }
+}
+
+/* Temporary questmaster special function - handles quest interactions for temporary quest masters */
+SPECIAL(temp_questmaster)
+{
+  qst_rnum rnum;
+  char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
+  int  tp;
+  struct char_data *qm = (struct char_data *)me;
+
+  /* Only handle if this mob is a temporary questmaster */
+  if (!IS_TEMP_QUESTMASTER(qm) || GET_NUM_TEMP_QUESTS(qm) == 0)
+    return FALSE;
+
+  if (CMD_IS("quest")) {
+    two_arguments(argument, arg1, arg2);
+    if (!*arg1)
+      return FALSE;
+    else if (((tp = search_block(arg1, quest_cmd, FALSE)) == -1))
+      return FALSE;
+    else {
+      switch (tp) {
+      case SCMD_QUEST_LIST:
+        quest_show_temp(ch, qm);
+        break;
+      case SCMD_QUEST_JOIN:
+        quest_join_temp(ch, qm, arg2);
+        break;
+      default:
+        return FALSE; /* fall through to the do_quest command processor */
+      } /* switch on subcmd number */
+      return TRUE;
+    }
+  } else {
+    return FALSE; /* not a questmaster command */
+  }
+}
+
+/* Quest display function for temporary quest masters */
+void quest_show_temp(struct char_data *ch, struct char_data *qm)
+{
+  qst_rnum rnum;
+  int counter = 0, i;
+  int quest_completed, quest_repeatable;
+
+  if (!IS_NPC(qm) || !IS_TEMP_QUESTMASTER(qm)) {
+    send_to_char(ch, "Este mob não é um mestre de buscas temporário.\r\n");
+    return;
+  }
+
+  send_to_char(ch,
+  "Buscas temporárias disponíveis:\r\n"
+  "Num.  Descrição                                            Feita?\r\n"
+  "----- ---------------------------------------------------- ------\r\n");
+  
+  /* Iterate through the mob's temporary quests */
+  for (i = 0; i < GET_NUM_TEMP_QUESTS(qm); i++) {
+    rnum = real_quest(GET_TEMP_QUESTS(qm)[i]);
+    if (rnum == NOTHING)
+      continue;
+      
+    quest_completed = is_complete(ch, QST_NUM(rnum));
+    quest_repeatable = IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE);
+    
+    /* Only show quest if not completed or repeatable */
+    if (!quest_completed || quest_repeatable) {
+      send_to_char(ch, "\tg%4d\tn) \tc%-52.52s\tn \ty(%s)\tn\r\n",
+        ++counter, QST_DESC(rnum),
+        (quest_completed ? "Sim" : "Não "));
+    }
+  }
+  
+  if (!counter)
+    send_to_char(ch, "Não tenho buscas disponíveis no momento, %s!\r\n", GET_NAME(ch));
+}
+
+/* Quest join function for temporary quest masters */
+void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg)
+{
+  qst_vnum vnum;
+  qst_rnum rnum;
+  char buf[MAX_INPUT_LENGTH];
+
+  if (!IS_NPC(qm) || !IS_TEMP_QUESTMASTER(qm)) {
+    send_to_char(ch, "Este mob não é um mestre de buscas temporário.\r\n");
+    return;
+  }
+
+  if (!*arg)
+    snprintf(buf, sizeof(buf),
+             "%s Qual busca você quer aceitar, %s?", GET_NAME(qm), GET_NAME(ch));
+  else if (GET_QUEST(ch) != NOTHING)
+    snprintf(buf, sizeof(buf),
+             "%s Mas você já tem uma busca ativa, %s!", GET_NAME(qm), GET_NAME(ch));
+  else if((vnum = find_temp_quest_by_qmnum(ch, qm, atoi(arg))) == NOTHING)
+    snprintf(buf, sizeof(buf),
+             "%s Eu não conheço nenhuma busca assim, %s!", GET_NAME(qm), GET_NAME(ch));
+  else if ((rnum = real_quest(vnum)) == NOTHING)
+    snprintf(buf, sizeof(buf),
+             "%s Eu não conheço essa busca, %s!", GET_NAME(qm), GET_NAME(ch));
+  else if (GET_LEVEL(ch) < QST_MINLEVEL(rnum))
+    snprintf(buf, sizeof(buf),
+             "%s Sinto muito, mas você ainda não pode participar desta busca, %s!", GET_NAME(qm), GET_NAME(ch));
+  else if (GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
+    snprintf(buf , sizeof(buf),
+             "%s Sinto muito, mas você tem muita experiência para aceitar esta busca %s!", GET_NAME(qm), GET_NAME(ch));
+  else if (is_complete(ch, vnum))
+    snprintf(buf, sizeof(buf),
+             "%s Você já completou esta busca antes, %s!", GET_NAME(qm), GET_NAME(ch));
+  else if ((QST_PREV(rnum) != NOTHING) && !is_complete(ch, QST_PREV(rnum)))
+    snprintf(buf, sizeof(buf),
+             "%s Você precisa completar outra busca antes, %s!", GET_NAME(qm), GET_NAME(ch));
+  else if ((QST_PREREQ(rnum) != NOTHING) &&
+           (real_object(QST_PREREQ(rnum)) != NOTHING) &&
+           (get_obj_in_list_num(real_object(QST_PREREQ(rnum)),
+       ch->carrying) == NULL))
+    snprintf(buf, sizeof(buf),
+             "%s, você precisa primeiro ter %s antes!", GET_NAME(qm),
+      obj_proto[real_object(QST_PREREQ(rnum))].short_description);
+  else 
+  {
+    act("Você aceitou a busca.", TRUE, ch, NULL, NULL, TO_CHAR);
+    act("$n aceitou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
+    snprintf(buf, sizeof(buf),"%s As instruções para esta busca são:", GET_NAME(ch));
+    do_tell(qm, buf, cmd_tell, 0);
+    set_quest(ch, rnum);
+    send_to_char(ch, "%s", QST_INFO(rnum));
+    if (QST_TIME(rnum) != -1) {
+      snprintf(buf, sizeof(buf),"%s, você tem um tempo limite de %d tick%s para completar esta busca!",GET_NAME(ch), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
+    }
+    else {
+      snprintf(buf, sizeof(buf),"%s, você pode levar o tempo que precisar", GET_NAME(ch));
+    }
+  }
+  do_tell(qm, buf, cmd_tell, 0);
+  save_char(ch);
+}
+
+/*--------------------------------------------------------------------------*/
+/* Save/Load Functions for Temporary Quest Assignments                     */
+/*--------------------------------------------------------------------------*/
+
+/* Initialize mob AI data with defaults for temporary quest master fields */
+void init_mob_ai_data(struct char_data *mob)
+{
+  if (!IS_NPC(mob) || !mob->ai_data)
+    return;
+  
+  mob->ai_data->is_temp_questmaster = FALSE;
+  mob->ai_data->temp_quests = NULL;
+  mob->ai_data->num_temp_quests = 0;
+  mob->ai_data->max_temp_quests = 0;
+}
+
+/* Save temporary quest assignments to file */
+void save_temp_quest_assignments(void)
+{
+  FILE *fp;
+  struct char_data *mob;
+  int i;
+  
+  if (!(fp = fopen("lib/etc/tempquests.dat", "w"))) {
+    log1("SYSERR: Unable to open tempquests.dat for writing");
+    return;
+  }
+  
+  fprintf(fp, "# Temporary Quest Assignments Save File\n");
+  fprintf(fp, "# Format: MOB_VNUM ROOM_VNUM NUM_QUESTS QUEST_VNUM1 QUEST_VNUM2 ...\n");
+  
+  /* Iterate through all mobs in the world */
+  for (mob = character_list; mob; mob = mob->next) {
+    if (IS_NPC(mob) && IS_TEMP_QUESTMASTER(mob) && GET_NUM_TEMP_QUESTS(mob) > 0) {
+      fprintf(fp, "%d %d %d", GET_MOB_VNUM(mob), 
+              IN_ROOM(mob) != NOWHERE ? world[IN_ROOM(mob)].number : -1,
+              GET_NUM_TEMP_QUESTS(mob));
+      
+      for (i = 0; i < GET_NUM_TEMP_QUESTS(mob); i++) {
+        fprintf(fp, " %d", GET_TEMP_QUESTS(mob)[i]);
+      }
+      fprintf(fp, "\n");
+    }
+  }
+  
+  fclose(fp);
+  log1("Temporary quest assignments saved.");
+}
+
+/* Load temporary quest assignments from file */
+void load_temp_quest_assignments(void)
+{
+  FILE *fp;
+  char line[256];
+  int mob_vnum, room_vnum, num_quests, quest_vnum;
+  struct char_data *mob;
+  room_rnum room_rnum;
+  int i;
+  
+  if (!(fp = fopen("lib/etc/tempquests.dat", "r"))) {
+    log1("No tempquests.dat file found - starting fresh");
+    return;
+  }
+  
+  while (fgets(line, sizeof(line), fp)) {
+    /* Skip comments and empty lines */
+    if (line[0] == '#' || line[0] == '\n' || line[0] == '\r')
+      continue;
+    
+    if (sscanf(line, "%d %d %d", &mob_vnum, &room_vnum, &num_quests) < 3)
+      continue;
+    
+    /* Find the mob in the world */
+    mob = NULL;
+    for (mob = character_list; mob; mob = mob->next) {
+      if (IS_NPC(mob) && GET_MOB_VNUM(mob) == mob_vnum) {
+        /* If room_vnum is specified, check if mob is in the right room */
+        if (room_vnum != -1) {
+          room_rnum = real_room(room_vnum);
+          if (room_rnum == NOWHERE || IN_ROOM(mob) != room_rnum)
+            continue; /* Wrong room, keep looking */
+        }
+        break; /* Found the right mob */
+      }
+    }
+    
+    if (!mob) {
+      log1("TEMPQUEST: Mob %d not found for temporary quest assignment", mob_vnum);
+      continue;
+    }
+    
+    /* Read quest vnums and assign them to the mob */
+    char *ptr = line;
+    int scanned = 0;
+    
+    /* Skip the first three numbers we already read */
+    sscanf(ptr, "%d %d %d%n", &mob_vnum, &room_vnum, &num_quests, &scanned);
+    ptr += scanned;
+    
+    for (i = 0; i < num_quests; i++) {
+      if (sscanf(ptr, "%d%n", &quest_vnum, &scanned) == 1) {
+        add_temp_quest_to_mob(mob, quest_vnum);
+        ptr += scanned;
+      }
+    }
+    
+    log1("TEMPQUEST: Loaded %d temporary quests for mob %s (%d)", 
+         GET_NUM_TEMP_QUESTS(mob), GET_NAME(mob), mob_vnum);
+  }
+  
+  fclose(fp);
+  log1("Temporary quest assignments loaded.");
 }

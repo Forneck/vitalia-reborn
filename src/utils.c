@@ -2417,6 +2417,9 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
         return;
     }
     
+    /* Check if mob can reach questmaster, if not make it a temporary questmaster */
+    make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
+    
     /* Deduz o ouro do mob */
     GET_GOLD(ch) -= calculated_reward;
     
@@ -2619,6 +2622,9 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
         free_quest(new_quest);
         return;
     }
+    
+    /* Check if mob can reach questmaster, if not make it a temporary questmaster */
+    make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
     
     /* Deduz o ouro do mob */
     GET_GOLD(ch) -= calculated_reward;
@@ -2852,6 +2858,9 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
         return;
     }
     
+    /* Check if mob can reach questmaster, if not make it a temporary questmaster */
+    make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
+    
     /* Deduz o ouro do mob */
     GET_GOLD(ch) -= calculated_reward;
     
@@ -3048,6 +3057,9 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
         return;
     }
     
+    /* Check if mob can reach questmaster, if not make it a temporary questmaster */
+    make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
+    
     /* Deduz o ouro do mob */
     GET_GOLD(ch) -= calculated_reward;
     
@@ -3224,6 +3236,9 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
         free_quest(new_quest);
         return;
     }
+    
+    /* Check if mob can reach questmaster, if not make it a temporary questmaster */
+    make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
     
     /* Deduz o ouro do mob */
     GET_GOLD(ch) -= calculated_reward;
