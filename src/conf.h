@@ -113,7 +113,7 @@
 #define HAVE_LIMITS_H 1
 
 /* Define if you have the <mcheck.h> header file.  */
-/* #undef HAVE_MCHECK_H */
+#define HAVE_MCHECK_H 1
 
 /* Define if you have the <memory.h> header file.  */
 #define HAVE_MEMORY_H 1

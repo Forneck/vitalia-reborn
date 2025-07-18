@@ -2314,7 +2314,6 @@ qedit (quest editor)
 questpoints
 buildwalk
 dig
-tell m-w (an in game dictionary lookup)
 gemote
 history
 file
@@ -2945,7 +2944,7 @@ the builder process began. Do what works best for you, everyone has their own
 style of building. Use it to your advantage.
    Use adjectives. Sad, Angry, Dirty, Nice, Morose, Gleeful, Enraged, Filthy,
 Pleasant, Melancholy, Ecstatic, Pestilent, Comfortable, Depressing, Blissful,
-Spiteful, Smutty, etc. A thesaurus is great for this. @Chttp://m-w.com/@n
+Spiteful, Smutty, etc. A thesaurus is great for this.
    An interesting area will always attract more players than a bland one.  
 There are many ways to make an area interesting.  Try to be as descriptive as
 possible.  Do not hold back on writing extra descriptions.  Players are so
@@ -3094,25 +3093,6 @@ Exemplos:
    > diagnose rasmussen
 
 Veja tambem: CONSIDER, HIT, KILL
-#1
-DICTIONARY DICTIONARIES THESAURUS M-W.COM DEFINITION MERRIAM-WEBSTER M-W-DEFINITION WEBSTER MW TELL-M-W BREATHER SPELLING WORDS
-
-Usage: tell m-w <word>
-
-   We have a direct link to Merriam Webster. To use the dictionary just
-tell m-w <word>
-
->tell m-w breather
-You get this feedback from Merriam-Webster:
-That means:
-1 : one that breathes
-2 : a break in activity for rest or relief
-3 : a small vent in an otherwise airtight enclosure
- 
-A few obscure definitions are not available through m-w since they are in the
-unabridged version that requires membership. They also offer a thesaurus at:
-@Chttp://m-w.com/@n
-
 #101
 DIG UNDIG RDIG RELINK RLINKS 
 
@@ -3901,8 +3881,8 @@ game.
 3. I'm building an area, but I don't want to be redundant with words.
    Invest in a thesaurus. Makes a world of difference, and if that doesn't 
 help, just make up your own words for things you create (just be sure to 
-describe them very well. Use @Chttp://m-w.com/@n for an online thesaurus
-and dictionary. You can @Rtell m-w <word>@n to lookup a definition.
+describe them very well. Use an online thesaurus
+and dictionary to check definitions.
 
 4. Where can I learn Trigedit?
    Here! Welcor is now the developer of trigedit. We have extensive help files,
@@ -4297,10 +4277,8 @@ GRAMMAR GRAMMER TIPS
 
    Love thy dictionary. Be sure to check the spelling of your work. Medieval 
 words can be particularly tricky and elude electronic spell checkers. A good 
-dictionary, however, will help you spell archaic words. Whenever I am building 
-I use our Merriam Webster dictionary link on TBA to check any tough words for
-proper spelling. Test it out @RTELL M-W DEFINITION@n. We hope to add a thesaurus
-soon! Goto @Chttp://m-w.com/@n until then.
+dictionary, however, will help you spell archaic words. Be sure to check
+proper spelling when building.
   I have found that a good principle to make is to avoid the use of all 
 contractions. For example, if you mean to say "it is", do not use "it's", spell
 it out. This will help differentiate between "its" (which means 'belonging to 
@@ -11977,8 +11955,7 @@ happening with newbie builders. I know I am rambling and I assure you I do
 have a point and here it is: *drum roll please*
    Building is hard work! It is a form of expression and creativity.  What kind
 of areas you build generally reflects on what kind of person you are.  You 
-do not have to be a good speller but you do need a good dictionary/thesaurus.  
-@RHELP M-W@n.  Sometimes building can seem like a thankless job and sometimes 
+do not have to be a good speller but you do need a good dictionary/thesaurus.  Sometimes building can seem like a thankless job and sometimes 
 building can be a reward in itself.  Building a few areas, even a few good 
 ones, does not make you an Immortal or an Imp.  It takes more than building to 
 be one of those and it entails even more work.  Respect others and they will 
