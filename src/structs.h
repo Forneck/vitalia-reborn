@@ -1013,6 +1013,12 @@ struct mob_ai_data {
     qst_vnum current_quest;     /* Quest ativa atual do mob (se houver) */
     int quest_timer;            /* Timer para a quest atual */
     int quest_counter;          /* Contador de progresso da quest */
+    
+    /* Temporary Quest Master functionality */
+    bool is_temp_questmaster;   /* True if this mob is acting as temporary quest master */
+    qst_vnum *temp_quests;      /* Array of quest vnums this mob is managing temporarily */
+    int num_temp_quests;        /* Number of temporary quests managed */
+    int max_temp_quests;        /* Maximum temporary quests this mob can manage */
 };
 
 /**
