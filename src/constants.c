@@ -331,6 +331,9 @@ const char *preference_bits[] = {
   "HITBAR",
   "AUTOTITLE",
   "NO_CLAN",
+  "MCCP",
+  "AUTOSIZE",
+  "VERBOSE",
   "\n"
 };
 
