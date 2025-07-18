@@ -1421,69 +1421,7 @@ bool mob_can_reach_questmaster(struct char_data *mob, mob_vnum qm_vnum)
   return FALSE; /* Different zones, assume unreachable */
 }
 
-/* Try to move a mob to the questmaster and post a quest there */
-bool mob_try_go_to_questmaster(struct char_data *mob, qst_vnum quest_vnum)
-{
-  qst_rnum rnum;
-  mob_vnum qm_vnum;
-  struct char_data *qm;
-  room_rnum original_room, qm_room;
-  
-  if (!IS_NPC(mob) || !mob->ai_data || quest_vnum == NOTHING)
-    return FALSE;
-    
-  rnum = real_quest(quest_vnum);
-  if (rnum == NOTHING)
-    return FALSE;
-    
-  qm_vnum = QST_MASTER(rnum);
-  
-  /* Find the questmaster in the world */
-  for (qm = character_list; qm; qm = qm->next) {
-    if (IS_NPC(qm) && GET_MOB_VNUM(qm) == qm_vnum)
-      break;
-  }
-  
-  if (!qm) {
-    log1("QUEST: Questmaster %d not found in world for quest %d", qm_vnum, quest_vnum);
-    return FALSE;
-  }
-  
-  original_room = IN_ROOM(mob);
-  qm_room = IN_ROOM(qm);
-  
-  if (original_room == NOWHERE || qm_room == NOWHERE)
-    return FALSE;
-  
-  /* Check if they're in the same zone - if so, try to move */
-  if (world[qm_room].zone == world[original_room].zone) {
-    log1("QUEST: Mob %s attempting to go to questmaster %s to post quest %d", 
-         GET_NAME(mob), GET_NAME(qm), quest_vnum);
-    
-    /* Move mob to questmaster's room */
-    char_from_room(mob);
-    char_to_room(mob, qm_room);
-    
-    /* Simulate posting the quest */
-    act("$n chega e se aproxima de $N.", TRUE, mob, 0, qm, TO_NOTVICT);
-    act("$n se aproxima de você com uma expressão determinada.", TRUE, mob, 0, qm, TO_VICT);
-    
-    /* Simulate brief interaction - in a real implementation, this could be more complex */
-    /* For now, we'll just assume the quest was successfully communicated */
-    
-    /* Return mob to original room */
-    char_from_room(mob);
-    char_to_room(mob, original_room);
-    
-    act("$n retorna de sua jornada, parecendo satisfeito.", TRUE, mob, 0, 0, TO_ROOM);
-    
-    log1("QUEST: Mob %s successfully posted quest %d with questmaster %s and returned", 
-         GET_NAME(mob), quest_vnum, GET_NAME(qm));
-    return TRUE;
-  }
-  
-  return FALSE; /* Different zones, cannot reach */
-}
+
 
 /* Make a mob a temporary questmaster if it can't reach the real questmaster */
 void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_vnum)
@@ -1500,15 +1438,22 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
   
   qm_vnum = QST_MASTER(rnum);
   
-  /* First, try to have the mob go to the questmaster and post the quest there */
-  if (mob_try_go_to_questmaster(mob, quest_vnum)) {
-    /* Success! The mob managed to go to the questmaster and post the quest */
-    log1("QUEST: Mob %s successfully posted quest %d with official questmaster", 
+  /* 
+   * If the mob was actively trying to reach a questmaster (GOAL_GOTO_QUESTMASTER),
+   * it means it successfully reached one and posted the quest there.
+   * In this case, we should NOT make it a temporary questmaster.
+   */
+  if (mob->ai_data->current_goal == GOAL_GOTO_QUESTMASTER) {
+    log1("QUEST: Mob %s successfully posted quest %d with questmaster via GOAL system", 
          GET_NAME(mob), quest_vnum);
     return;
   }
   
-  /* If that failed, check if mob can reach the questmaster at all */
+  /* 
+   * Check if mob can reach the questmaster at all.
+   * This function is called when the mob posted a quest locally (not via GOAL movement),
+   * so we need to determine if it should become a temporary questmaster.
+   */
   if (!mob_can_reach_questmaster(mob, qm_vnum)) {
     /* Mob can't reach questmaster, make it a temporary questmaster */
     add_temp_quest_to_mob(mob, quest_vnum);
@@ -1517,13 +1462,13 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
     log1("QUEST: Mob %s became temporary questmaster for quest %d (can't reach QM %d)", 
          GET_NAME(mob), quest_vnum, qm_vnum);
   } else {
-    /* Mob could potentially reach questmaster but something went wrong */
-    log1("QUEST: Mob %s failed to post quest %d with questmaster %d - unknown issue", 
+    /* 
+     * Mob could potentially reach questmaster but chose to post locally.
+     * This could happen if the questmaster was busy or the mob decided to post locally
+     * for other reasons. For now, we trust the existing AI logic.
+     */
+    log1("QUEST: Mob %s posted quest %d locally - questmaster %d is reachable but quest posted locally", 
          GET_NAME(mob), quest_vnum, qm_vnum);
-    
-    /* As a fallback, still make it a temporary questmaster */
-    add_temp_quest_to_mob(mob, quest_vnum);
-    act("$n parece ter algo importante para dizer.", TRUE, mob, 0, 0, TO_ROOM);
   }
 }
 

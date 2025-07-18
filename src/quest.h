@@ -127,7 +127,7 @@ bool remove_temp_quest_from_mob(struct char_data *mob, qst_vnum quest_vnum);
 qst_vnum find_temp_quest_by_qmnum(struct char_data *ch, struct char_data *qm, int num);
 void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_vnum);
 bool mob_can_reach_questmaster(struct char_data *mob, mob_vnum qm_vnum);
-bool mob_try_go_to_questmaster(struct char_data *mob, qst_vnum quest_vnum);
+
 SPECIAL(temp_questmaster);
 
 /* Save/Load functions for temporary quest assignments */
