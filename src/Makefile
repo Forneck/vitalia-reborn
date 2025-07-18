@@ -19,7 +19,7 @@ BINDIR = ../bin
 
 CFLAGS = -g -O2 $(MYFLAGS) $(PROFILE)
 
-LIBS =  -lcrypt -lz 
+LIBS =  -lcrypt  -lm -lz
 
 SRCFILES := $(shell ls *.c | sort)
 OBJFILES := $(patsubst %.c,%.o,$(SRCFILES))  
@@ -40,7 +40,7 @@ circle:
 	$(MAKE) $(BINDIR)/circle
 
 $(BINDIR)/circle : $(OBJFILES)
-	$(CC) -o $(BINDIR)/circle $(PROFILE) $(OBJFILES) $(LIBS) -lm
+	$(CC) -o $(BINDIR)/circle $(PROFILE) $(OBJFILES) $(LIBS)
 
 $%.o: %.c
 	$(CC) $< $(CFLAGS) -c -o $@ 

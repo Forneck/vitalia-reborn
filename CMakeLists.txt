@@ -242,6 +242,21 @@ if (NOT HAVE_SOCKET)
     endif()
 endif()
 
+# ========== math library ==========
+find_library(MATH_LIBRARY m)
+if (MATH_LIBRARY)
+    message(STATUS "Found libm: ${MATH_LIBRARY}")
+    list(APPEND EXTRA_LIBS ${MATH_LIBRARY})
+endif()
+
+# ========== zlib library ==========
+find_library(ZLIB_LIBRARY z)
+if (ZLIB_LIBRARY)
+    message(STATUS "Found libz: ${ZLIB_LIBRARY}")
+    list(APPEND EXTRA_LIBS ${ZLIB_LIBRARY})
+    check_include_file("zlib.h" HAVE_ZLIB_H)
+endif()
+
 # ========== time.h needs special treatment ==========
 check_include_file("sys/time.h" HAVE_SYS_TIME_H)
 check_include_file("sys/time.h" HAVE_TIME_H)
