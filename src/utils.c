@@ -3563,22 +3563,54 @@ int calculate_player_reputation(struct char_data *ch)
         return reputation;
     }
 
-    /* Enhancement 4: Base reputation on number of completed quests */
-    completed_quests = GET_NUM_QUESTS(ch);
-    if (completed_quests > 0) {
-        reputation += MIN(completed_quests * 2, 30); /* Max 30 points from completed quests */
+    /* Use stored reputation as base if it exists, otherwise calculate initial value */
+    if (GET_PLAYER_REPUTATION(ch) > 0) {
+        reputation = GET_PLAYER_REPUTATION(ch);
+    } else {
+        /* First time calculation - set initial reputation */
+
+        /* Enhancement 4: Base reputation on number of completed quests */
+        completed_quests = GET_NUM_QUESTS(ch);
+        if (completed_quests > 0) {
+            reputation += MIN(completed_quests * 2, 30); /* Max 30 points from completed quests */
+        }
+
+        /* Enhancement 4: Factor in karma (existing reputation system) */
+        karma_bonus = GET_KARMA(ch) / 20;           /* Karma divided by 20 for reputation bonus */
+        reputation += URANGE(-25, karma_bonus, 25); /* Karma can add/subtract up to 25 points */
+
+        /* Enhancement 4: Level-based reputation (experienced players are more trusted) */
+        if (GET_LEVEL(ch) >= 20) {
+            reputation += (GET_LEVEL(ch) - 15) / 2; /* Higher level = better reputation */
+        }
+
+        reputation = URANGE(0, reputation, 100);
+
+        /* Store the calculated reputation */
+        ch->player_specials->saved.reputation = reputation;
     }
 
-    /* Enhancement 4: Factor in karma (existing reputation system) */
-    karma_bonus = GET_KARMA(ch) / 20;           /* Karma divided by 20 for reputation bonus */
-    reputation += URANGE(-25, karma_bonus, 25); /* Karma can add/subtract up to 25 points */
+    return reputation;
+}
 
-    /* Enhancement 4: Level-based reputation (experienced players are more trusted) */
-    if (GET_LEVEL(ch) >= 20) {
-        reputation += (GET_LEVEL(ch) - 15) / 2; /* Higher level = better reputation */
+/**
+ * Modifies player reputation by a given amount
+ * @param ch Player character
+ * @param amount Amount to modify reputation by (positive or negative)
+ */
+void modify_player_reputation(struct char_data *ch, int amount)
+{
+    if (!ch || IS_NPC(ch)) {
+        return;
     }
 
-    return URANGE(0, reputation, 100);
+    /* Ensure reputation is initialized */
+    if (GET_PLAYER_REPUTATION(ch) == 0) {
+        calculate_player_reputation(ch);
+    }
+
+    /* Apply the change */
+    ch->player_specials->saved.reputation = URANGE(0, ch->player_specials->saved.reputation + amount, 100);
 }
 
 /**
