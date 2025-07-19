@@ -1,10 +1,10 @@
 /**
-* @file bsd-snprintf.h
-* Used if your OS does not provide snprintf() or vsnprintf().
-* 
-* Part of the core tbaMUD source code distribution, which is a derivative
-* of, and continuation of, CircleMUD.               
-*/
+ * @file bsd-snprintf.h
+ * Used if your OS does not provide snprintf() or vsnprintf().
+ *
+ * Part of the core tbaMUD source code distribution, which is a derivative
+ * of, and continuation of, CircleMUD.
+ */
 
 /* This file taken from openbsd-compat of OpenSSH 3.1:
  *
@@ -42,7 +42,6 @@
  * --- 8< --- OpenSSH LICENSE --- 8< ---
  */
 
-
 #ifndef _BSD_SNPRINTF_H_
 #define _BSD_SNPRINTF_H_
 
@@ -53,6 +52,5 @@ int snprintf(char *str, size_t count, const char *fmt, ...);
 #ifndef HAVE_VSNPRINTF
 int vsnprintf(char *str, size_t count, const char *fmt, va_list args);
 #endif /* !HAVE_SNPRINTF */
-
 
 #endif /* _BSD_SNPRINTF_H_ */

@@ -1,20 +1,20 @@
 /**
-* @file act.h
-* Header file for the core act* c files.
-*
-* Part of the core tbaMUD source code distribution, which is a derivative
-* of, and continuation of, CircleMUD.
-*
-* All rights reserved.  See license for complete information.
-* Copyright (C) 1993, 94 by the Trustees of the Johns Hopkins University
-* CircleMUD is based on DikuMUD, Copyright (C) 1990, 1991.
-*
-* @todo Utility functions that could easily be moved elsewhere have been
-* marked. Suggest a review of all utility functions (aka. non ACMDs) and
-* determine if the utility functions should be placed into a lower level
-* (non-ACMD focused) shared module.
-*
-*/
+ * @file act.h
+ * Header file for the core act* c files.
+ *
+ * Part of the core tbaMUD source code distribution, which is a derivative
+ * of, and continuation of, CircleMUD.
+ *
+ * All rights reserved.  See license for complete information.
+ * Copyright (C) 1993, 94 by the Trustees of the Johns Hopkins University
+ * CircleMUD is based on DikuMUD, Copyright (C) 1990, 1991.
+ *
+ * @todo Utility functions that could easily be moved elsewhere have been
+ * marked. Suggest a review of all utility functions (aka. non ACMDs) and
+ * determine if the utility functions should be placed into a lower level
+ * (non-ACMD focused) shared module.
+ *
+ */
 #ifndef _ACT_H_
 #define _ACT_H_
 
@@ -29,20 +29,20 @@ bool legal_communication(char *arg);
 /* functions with subcommands */
 /* do_gen_comm */
 ACMD(do_gen_comm);
-#define SCMD_SHOUT    0
-#define SCMD_GOSSIP   1
-#define SCMD_AUCTION  2
-#define SCMD_GRATZ    3
-#define SCMD_GEMOTE   4
-#define SCMD_HOLLER   5
+#define SCMD_SHOUT 0
+#define SCMD_GOSSIP 1
+#define SCMD_AUCTION 2
+#define SCMD_GRATZ 3
+#define SCMD_GEMOTE 4
+#define SCMD_HOLLER 5
 /* do_qcomm */
 ACMD(do_qcomm);
-#define SCMD_QSAY     0
-#define SCMD_QECHO    1
+#define SCMD_QSAY 0
+#define SCMD_QECHO 1
 /* do_spec_com */
 ACMD(do_spec_comm);
-#define SCMD_WHISPER  0
-#define SCMD_ASK      1
+#define SCMD_WHISPER 0
+#define SCMD_ASK 1
 /* functions without subcommands */
 ACMD(do_say);
 ACMD(do_gsay);
@@ -67,21 +67,21 @@ void free_recent_players(void);
 /* do_commands */
 ACMD(do_commands);
 #define SCMD_COMMANDS 0
-#define SCMD_SOCIALS  1
+#define SCMD_SOCIALS 1
 /* do_gen_ps */
 ACMD(do_gen_ps);
-#define SCMD_INFO      0
-#define SCMD_HANDBOOK  1
-#define SCMD_CREDITS   2
-#define SCMD_NEWS      3
-#define SCMD_WIZLIST   4
-#define SCMD_POLICIES  5
-#define SCMD_VERSION   6
-#define SCMD_IMMLIST   7
-#define SCMD_MOTD      8
-#define SCMD_IMOTD     9
-#define SCMD_CLEAR     10
-#define SCMD_WHOAMI    11
+#define SCMD_INFO 0
+#define SCMD_HANDBOOK 1
+#define SCMD_CREDITS 2
+#define SCMD_NEWS 3
+#define SCMD_WIZLIST 4
+#define SCMD_POLICIES 5
+#define SCMD_VERSION 6
+#define SCMD_IMMLIST 7
+#define SCMD_MOTD 8
+#define SCMD_IMOTD 9
+#define SCMD_CLEAR 10
+#define SCMD_WHOAMI 11
 #define SCMD_CLANPOLICIES 12
 /* do_look */
 ACMD(do_look);
@@ -126,7 +126,8 @@ void perform_wear(struct char_data *ch, struct obj_data *obj, int where);
 void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data *obj);
 void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount);
 /* do_drop utility functions */
-int perform_drop(struct char_data *ch, struct obj_data *obj, byte mode, const char *sname,                                                                room_rnum RDR);                                           void perform_drop_gold(struct char_data *ch, int amount, byte mode, room_rnum RDR);
+int perform_drop(struct char_data *ch, struct obj_data *obj, byte mode, const char *sname, room_rnum RDR);
+void perform_drop_gold(struct char_data *ch, int amount, byte mode, room_rnum RDR);
 /* do_put utility functions */
 void perform_put(struct char_data *ch, struct obj_data *obj, struct obj_data *cont);
 int perform_get_from_room(struct char_data *ch, struct obj_data *obj);
@@ -134,19 +135,19 @@ int perform_get_from_room(struct char_data *ch, struct obj_data *obj);
 /* functions with subcommands */
 /* do_drop */
 ACMD(do_drop);
-#define SCMD_DROP   0
-#define SCMD_JUNK   1
+#define SCMD_DROP 0
+#define SCMD_JUNK 1
 #define SCMD_DONATE 2
 /* do_eat */
 ACMD(do_eat);
-#define SCMD_EAT    0
-#define SCMD_TASTE  1
-#define SCMD_DRINK  2
-#define SCMD_SIP    3
+#define SCMD_EAT 0
+#define SCMD_TASTE 1
+#define SCMD_DRINK 2
+#define SCMD_SIP 3
 /* do_pour */
 ACMD(do_pour);
-#define SCMD_POUR  0
-#define SCMD_FILL  1
+#define SCMD_POUR 0
+#define SCMD_FILL 1
 /* functions without subcommands */
 ACMD(do_drink);
 ACMD(do_get);
@@ -165,11 +166,11 @@ ACMD(do_envenom);
 /* Functions with subcommands */
 /* do_gen_door */
 ACMD(do_gen_door);
-#define SCMD_OPEN       0
-#define SCMD_CLOSE      1
-#define SCMD_UNLOCK     2
-#define SCMD_LOCK       3
-#define SCMD_PICK       4
+#define SCMD_OPEN 0
+#define SCMD_CLOSE 1
+#define SCMD_UNLOCK 2
+#define SCMD_LOCK 3
+#define SCMD_PICK 4
 ACMD(do_fly);
 #define SCMD_FLY 0
 #define SCMD_LAND 1
@@ -198,14 +199,13 @@ void do_doorcmd(struct char_data *ch, struct obj_data *obj, int door, int scmd);
 /* Global variables from act.movement.c */
 extern const char *cmd_door[];
 
-
 /*****************************************************************************
  * Begin Functions and defines for act.offensive.c
  ****************************************************************************/
 /* Functions with subcommands */
 /* do_hit */
 ACMD(do_hit);
-#define SCMD_HIT    0
+#define SCMD_HIT 0
 #define SCMD_MURDER 1
 /* Functions without subcommands */
 ACMD(do_assist);
@@ -214,7 +214,7 @@ ACMD(do_bash);
 ACMD(do_backstab);
 ACMD(do_backflip);
 ACMD(do_flee);
-#define SCMD_ESCAPE  0
+#define SCMD_ESCAPE 0
 ACMD(do_kick);
 ACMD(do_kill);
 ACMD(do_order);
@@ -231,51 +231,51 @@ ACMD(do_shoot);
 /* Functions with subcommands */
 /* do_gen_tog */
 ACMD(do_gen_tog);
-#define SCMD_NOSUMMON    0
-#define SCMD_NOHASSLE    1
-#define SCMD_BRIEF       2
-#define SCMD_COMPACT     3
-#define SCMD_NOTELL      4
-#define SCMD_NOAUCTION   5
-#define SCMD_NOSHOUT     6
-#define SCMD_NOGOSSIP    7
-#define SCMD_NOGRATZ     8
-#define SCMD_NOWIZ       9
-#define SCMD_QUEST       10
-#define SCMD_SHOWVNUMS   11
-#define SCMD_NOREPEAT    12
-#define SCMD_HOLYLIGHT   13
-#define SCMD_SLOWNS      14
-#define SCMD_AUTOEXIT    15
-#define SCMD_TRACK       16
-#define SCMD_CLS         17
-#define SCMD_BUILDWALK   18
-#define SCMD_AFK         19
-#define SCMD_AUTOLOOT    20
-#define SCMD_AUTOGOLD    21
-#define SCMD_AUTOSPLIT   22
-#define SCMD_AUTOSAC     23
-#define SCMD_AUTOASSIST  24
-#define SCMD_AUTOMAP     25
-#define SCMD_AUTOKEY     26
-#define SCMD_AUTODOOR    27
-#define SCMD_ZONERESETS  28
-#define SCMD_SYSLOG      29
-#define SCMD_WIMPY       30
-#define SCMD_PAGELENGTH  31
+#define SCMD_NOSUMMON 0
+#define SCMD_NOHASSLE 1
+#define SCMD_BRIEF 2
+#define SCMD_COMPACT 3
+#define SCMD_NOTELL 4
+#define SCMD_NOAUCTION 5
+#define SCMD_NOSHOUT 6
+#define SCMD_NOGOSSIP 7
+#define SCMD_NOGRATZ 8
+#define SCMD_NOWIZ 9
+#define SCMD_QUEST 10
+#define SCMD_SHOWVNUMS 11
+#define SCMD_NOREPEAT 12
+#define SCMD_HOLYLIGHT 13
+#define SCMD_SLOWNS 14
+#define SCMD_AUTOEXIT 15
+#define SCMD_TRACK 16
+#define SCMD_CLS 17
+#define SCMD_BUILDWALK 18
+#define SCMD_AFK 19
+#define SCMD_AUTOLOOT 20
+#define SCMD_AUTOGOLD 21
+#define SCMD_AUTOSPLIT 22
+#define SCMD_AUTOSAC 23
+#define SCMD_AUTOASSIST 24
+#define SCMD_AUTOMAP 25
+#define SCMD_AUTOKEY 26
+#define SCMD_AUTODOOR 27
+#define SCMD_ZONERESETS 28
+#define SCMD_SYSLOG 29
+#define SCMD_WIMPY 30
+#define SCMD_PAGELENGTH 31
 #define SCMD_SCREENWIDTH 32
-#define SCMD_COLOR       33
+#define SCMD_COLOR 33
 #define SCMD_HITBAR 34
 #define SCMD_AUTOTITLE 35
 
 /* do_quit */
 ACMD(do_quit);
-#define SCMD_QUI  0
+#define SCMD_QUI 0
 #define SCMD_QUIT 1
 /* do_use */
 ACMD(do_use);
-#define SCMD_USE  0
-#define SCMD_QUAFF  1
+#define SCMD_USE 0
+#define SCMD_QUAFF 1
 #define SCMD_RECITE 2
 /* Functions without subcommands */
 ACMD(do_display);
@@ -290,6 +290,7 @@ ACMD(do_sneak);
 ACMD(do_split);
 ACMD(do_steal);
 ACMD(do_title);
+ACMD(do_autotitle);
 ACMD(do_visible);
 ACMD(do_recall);
 ACMD(do_rebegin);
@@ -317,8 +318,6 @@ void create_command_list(void);
 ACMD(do_action);
 ACMD(do_gmote);
 
-
-
 /*****************************************************************************
  * Begin Functions and defines for act.wizard.c
  ****************************************************************************/
@@ -335,27 +334,27 @@ bool AddRecentPlayer(char *chname, char *chhost, bool newplr, bool cpyplr);
 /* Functions with subcommands */
 /* do_date */
 ACMD(do_date);
-#define SCMD_DATE   0
+#define SCMD_DATE 0
 #define SCMD_UPTIME 1
 /* do_echo */
 ACMD(do_echo);
-#define SCMD_ECHO   0
-#define SCMD_EMOTE  1
+#define SCMD_ECHO 0
+#define SCMD_EMOTE 1
 /* do_last */
 ACMD(do_last);
 #define SCMD_LIST_ALL 1
 /* do_shutdown */
 ACMD(do_shutdown);
-#define SCMD_SHUTDOW   0
-#define SCMD_SHUTDOWN  1
+#define SCMD_SHUTDOW 0
+#define SCMD_SHUTDOWN 1
 /* do_wizutil */
 ACMD(do_wizutil);
-#define SCMD_REROLL   0
-#define SCMD_PARDON   1
-#define SCMD_NOTITLE  2
-#define SCMD_MUTE     3
-#define SCMD_FREEZE   4
-#define SCMD_THAW     5
+#define SCMD_REROLL 0
+#define SCMD_PARDON 1
+#define SCMD_NOTITLE 2
+#define SCMD_MUTE 3
+#define SCMD_FREEZE 4
+#define SCMD_THAW 5
 #define SCMD_UNAFFECT 6
 /* Functions without subcommands */
 ACMD(do_advance);
@@ -382,7 +381,7 @@ ACMD(do_ressucite);
 ACMD(do_mwishlist);
 ACMD(do_mwant);
 ACMD(do_restore);
-void return_to_char(struct char_data * ch);
+void return_to_char(struct char_data *ch);
 ACMD(do_return);
 ACMD(do_saveall);
 ACMD(do_send);
