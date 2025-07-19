@@ -239,7 +239,8 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
   send_to_char(d->character, "%s7%s) Mapa Auto    %s[%s%3s%s]\r\n"
                              "%s8%s) Chave Auto   %s[%s%3s%s]\r\n"
                              "%s9%s) Porta Auto   %s[%s%3s%s]\r\n"
-                              "%s0%s) Hitbar       %s[%s%3s%s]\r\n",
+                             "%s0%s) Hitbar       %s[%s%3s%s]\r\n"
+                             "%s=%s) Auto Titulo  %s[%s%3s%s]\r\n",
 /* Line 7 - automap */
              CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), PREFEDIT_FLAGGED(PRF_AUTOMAP) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
              ONOFF(PREFEDIT_FLAGGED(PRF_AUTOMAP)), CCCYN(d->character, C_NRM),
@@ -251,7 +252,10 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
              ONOFF(PREFEDIT_FLAGGED(PRF_AUTODOOR)), CCCYN(d->character, C_NRM),
              /* Line 10 - hitbar*/
              CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), PREFEDIT_FLAGGED(PRF_HITBAR) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
-             ONOFF(PREFEDIT_FLAGGED(PRF_HITBAR)), CCCYN(d->character, C_NRM)
+             ONOFF(PREFEDIT_FLAGGED(PRF_HITBAR)), CCCYN(d->character, C_NRM),
+             /* Line 11 - autotitle*/
+             CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), PREFEDIT_FLAGGED(PRF_AUTOTITLE) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
+             ONOFF(PREFEDIT_FLAGGED(PRF_AUTOTITLE)), CCCYN(d->character, C_NRM)
              );
 
   /* The bottom section of the toggles menu */
@@ -744,6 +748,10 @@ void prefedit_parse(struct descriptor_data * d, char *arg)
         
         case '0':
 TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_HITBAR);
+        break;
+
+        case '=':
+        TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_AUTOTITLE);
         break;
 
       default  : send_to_char(d->character, "Invalid Choice, try again (Q to Quit to main menu): ");

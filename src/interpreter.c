@@ -106,6 +106,7 @@ cpp_extern const struct command_info cmd_info[] = {
 	{"automap", "automap", POS_DEAD, do_gen_tog, 0, SCMD_AUTOMAP, CMD_NOARG},
 	{"autosac", "autosac", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSAC, CMD_NOARG},
 	{"autosplit", "autospl", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSPLIT, CMD_NOARG},
+	{"autotitle", "autotitle", POS_DEAD, do_autotitle, 0, 0, CMD_NOARG},
 	{"away", "aw", POS_DEAD, do_gen_tog, 0, SCMD_AFK, CMD_NOARG},
 	{"backstab", "ba", POS_STANDING, do_cast, 1, SKILL_BACKSTAB, CMD_ONEARG},
 	{"backflip", "bac", POS_FIGHTING, do_cast, 1, SKILL_BACKFLIP, CMD_ONEARG},

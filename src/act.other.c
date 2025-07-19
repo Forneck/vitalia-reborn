@@ -410,6 +410,26 @@ ACMD(do_title)
 	}
 }
 
+ACMD(do_autotitle)
+{
+	if (IS_NPC(ch))
+	{
+		send_to_char(ch, "NPCs não podem alterar configurações de autotitle.\r\n");
+		return;
+	}
+
+	if (PRF_FLAGGED(ch, PRF_AUTOTITLE))
+	{
+		REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_AUTOTITLE);
+		send_to_char(ch, "Seu título não será mais alterado automaticamente.\r\n");
+	}
+	else
+	{
+		SET_BIT_AR(PRF_FLAGS(ch), PRF_AUTOTITLE);
+		send_to_char(ch, "Seu título será alterado automaticamente sempre que evoluir um nível.\r\n");
+	}
+}
+
 static void print_group(struct char_data *ch)
 {
 	struct char_data *k;
