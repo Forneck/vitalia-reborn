@@ -106,11 +106,11 @@ ACMD(do_wizhelp)
 	if (!ch->desc)
 		return;
 
-	send_to_char(ch, "The following privileged commands are available:\r\n");
+	send_to_char(ch, "Os seguintes comandos privilegiados estão disponíveis:\r\n");
 
 	for (level = LVL_IMPL; level >= LVL_IMMORT; level--)
 	{
-		send_to_char(ch, "%sLevel %d%s:\r\n", CCCYN(ch, C_NRM), level, CCNRM(ch, C_NRM));
+		send_to_char(ch, "%sNível %d%s:\r\n", CCCYN(ch, C_NRM), level, CCNRM(ch, C_NRM));
 		for (no = 1, cmd_num = 1; complete_cmd_info[cmd_sort_info[cmd_num]].command[0] != '\n';
 			 cmd_num++)
 		{
@@ -133,7 +133,7 @@ ACMD(do_echo)
 	skip_spaces(&argument);
 
 	if (!*argument)
-		send_to_char(ch, "Yes.. but what?\r\n");
+		send_to_char(ch, "Sim.. mas o quê?\r\n");
 	else
 	{
 		char buf[MAX_INPUT_LENGTH + 4];
@@ -164,7 +164,7 @@ ACMD(do_send)
 
 	if (!*arg)
 	{
-		send_to_char(ch, "Send what to who?\r\n");
+		send_to_char(ch, "Enviar o quê para quem?\r\n");
 		return;
 	}
 	if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_WORLD)))
@@ -177,9 +177,9 @@ ACMD(do_send)
 		   GET_NAME(vict), buf);
 
 	if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_NOREPEAT))
-		send_to_char(ch, "Sent.\r\n");
+		send_to_char(ch, "Enviado.\r\n");
 	else
-		send_to_char(ch, "You send '%s' to %s.\r\n", buf, GET_NAME(vict));
+		send_to_char(ch, "Você enviou '%s' para %s.\r\n", buf, GET_NAME(vict));
 }
 
 /* take a string, and return an rnum.. used for goto, at, etc.  -je 4/6/93 */
@@ -192,7 +192,7 @@ room_rnum find_target_room(struct char_data *ch, char *rawroomstr)
 
 	if (!*roomstr)
 	{
-		send_to_char(ch, "You must supply a room number or name.\r\n");
+		send_to_char(ch, "Você deve fornecer um número ou nome de sala.\r\n");
 		return (NOWHERE);
 	}
 
@@ -200,7 +200,7 @@ room_rnum find_target_room(struct char_data *ch, char *rawroomstr)
 	{
 		if ((location = real_room((room_vnum) atoi(roomstr))) == NOWHERE)
 		{
-			send_to_char(ch, "No room exists with that number.\r\n");
+			send_to_char(ch, "Não existe sala com esse número.\r\n");
 			return (NOWHERE);
 		}
 	}
@@ -216,7 +216,7 @@ room_rnum find_target_room(struct char_data *ch, char *rawroomstr)
 		{
 			if ((location = IN_ROOM(target_mob)) == NOWHERE)
 			{
-				send_to_char(ch, "That character is currently lost.\r\n");
+				send_to_char(ch, "Esse personagem está atualmente perdido.\r\n");
 				return (NOWHERE);
 			}
 		}
@@ -231,14 +231,14 @@ room_rnum find_target_room(struct char_data *ch, char *rawroomstr)
 
 			if (location == NOWHERE)
 			{
-				send_to_char(ch, "That object is currently not in a room.\r\n");
+				send_to_char(ch, "Esse objeto atualmente não está em uma sala.\r\n");
 				return (NOWHERE);
 			}
 		}
 
 		if (location == NOWHERE)
 		{
-			send_to_char(ch, "Nothing exists by that name.\r\n");
+			send_to_char(ch, "Nada existe com esse nome.\r\n");
 			return (NOWHERE);
 		}
 	}
@@ -248,12 +248,12 @@ room_rnum find_target_room(struct char_data *ch, char *rawroomstr)
 		return (location);
 
 	if (ROOM_FLAGGED(location, ROOM_GODROOM))
-		send_to_char(ch, "You are not godly enough to use that room!\r\n");
+		send_to_char(ch, "Você não é divino o suficiente para usar essa sala!\r\n");
 	else if (ROOM_FLAGGED(location, ROOM_PRIVATE) && world[location].people
 			 && world[location].people->next_in_room)
-		send_to_char(ch, "There's a private conversation going on in that room.\r\n");
+		send_to_char(ch, "Há uma conversa privada acontecendo nessa sala.\r\n");
 	else if (ROOM_FLAGGED(location, ROOM_HOUSE) && !House_can_enter(ch, GET_ROOM_VNUM(location)))
-		send_to_char(ch, "That's private property -- no trespassing!\r\n");
+		send_to_char(ch, "Essa é propriedade privada -- proibido invadir!\r\n");
 	else
 		return (location);
 	return (NOWHERE);
@@ -267,13 +267,13 @@ ACMD(do_at)
 	half_chop(argument, buf, command);
 	if (!*buf)
 	{
-		send_to_char(ch, "You must supply a room number or a name.\r\n");
+		send_to_char(ch, "Você deve fornecer um número ou nome de sala.\r\n");
 		return;
 	}
 
 	if (!*command)
 	{
-		send_to_char(ch, "What do you want to do there?\r\n");
+		send_to_char(ch, "O que você quer fazer lá?\r\n");
 		return;
 	}
 
@@ -305,7 +305,7 @@ ACMD(do_goto)
 	if (ZONE_FLAGGED(GET_ROOM_ZONE(location), ZONE_NOIMMORT) && (GET_LEVEL(ch) >= LVL_IMMORT)
 		&& (GET_LEVEL(ch) < LVL_GRGOD))
 	{
-		send_to_char(ch, "Sorry, that zone is off-limits for immortals!");
+		send_to_char(ch, "Desculpe, essa zona é proibida para imortais!");
 		return;
 	}
 
@@ -332,18 +332,18 @@ ACMD(do_trans)
 
 	one_argument(argument, buf);
 	if (!*buf)
-		send_to_char(ch, "Whom do you wish to transfer?\r\n");
+		send_to_char(ch, "Quem você deseja transferir?\r\n");
 	else if (str_cmp("all", buf))
 	{
 		if (!(victim = get_char_vis(ch, buf, NULL, FIND_CHAR_WORLD)))
 			send_to_char(ch, "%s", CONFIG_NOPERSON);
 		else if (victim == ch)
-			send_to_char(ch, "That doesn't make much sense, does it?\r\n");
+			send_to_char(ch, "Isso não faz muito sentido, não é?\r\n");
 		else
 		{
 			if ((GET_LEVEL(ch) < GET_LEVEL(victim)) && !IS_NPC(victim))
 			{
-				send_to_char(ch, "Go transfer someone your own size.\r\n");
+				send_to_char(ch, "Vá transferir alguém do seu tamanho.\r\n");
 				return;
 			}
 			act("$n disappears in a mushroom cloud.", FALSE, victim, 0, 0, TO_ROOM);
@@ -360,7 +360,7 @@ ACMD(do_trans)
 	{							/* Trans All */
 		if (GET_LEVEL(ch) < LVL_GRGOD)
 		{
-			send_to_char(ch, "I think not.\r\n");
+			send_to_char(ch, "Acho que não.\r\n");
 			return;
 		}
 
@@ -391,15 +391,15 @@ ACMD(do_teleport)
 	two_arguments(argument, buf, buf2);
 
 	if (!*buf)
-		send_to_char(ch, "Whom do you wish to teleport?\r\n");
+		send_to_char(ch, "Quem você deseja teletransportar?\r\n");
 	else if (!(victim = get_char_vis(ch, buf, NULL, FIND_CHAR_WORLD)))
 		send_to_char(ch, "%s", CONFIG_NOPERSON);
 	else if (victim == ch)
-		send_to_char(ch, "Use 'goto' to teleport yourself.\r\n");
+		send_to_char(ch, "Use 'goto' para se teletransportar.\r\n");
 	else if (GET_LEVEL(victim) >= GET_LEVEL(ch))
-		send_to_char(ch, "Maybe you shouldn't do that.\r\n");
+		send_to_char(ch, "Talvez você não devesse fazer isso.\r\n");
 	else if (!*buf2)
-		send_to_char(ch, "Where do you wish to send this person?\r\n");
+		send_to_char(ch, "Para onde você deseja enviar essa pessoa?\r\n");
 	else if ((target = find_target_room(ch, buf2)) != NOWHERE)
 	{
 		send_to_char(ch, "%s", CONFIG_OK);
