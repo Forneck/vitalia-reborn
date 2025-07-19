@@ -2417,17 +2417,24 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
         return;
     }
     
+    /* Verify the quest was added correctly */
+    qst_rnum added_rnum = real_quest(new_quest_vnum);
+    if (added_rnum == NOTHING) {
+        log1("SYSERR: Quest %d was supposedly added but can't be found in quest table", new_quest_vnum);
+        return;
+    }
+    
+    log1("QUEST: Successfully added quest %d (rnum %d) to quest table, assigned to QM %d", 
+         new_quest_vnum, added_rnum, questmaster_vnum);
+    
     /* Check if mob can reach questmaster, if not make it a temporary questmaster */
     make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
     
-    /* Deduz o ouro do mob */
+    /* Deduz o ouro do mob (only once) */
     GET_GOLD(ch) -= calculated_reward;
     
     /* Remove da wishlist temporariamente */
     remove_item_from_wishlist(ch, item_vnum);
-    
-    /* Deduz o ouro do mob */
-    GET_GOLD(ch) -= calculated_reward;
     
     /* Aumenta quest_tendency por postar uma quest */
     if (ch->ai_data->genetics.quest_tendency < 100) {

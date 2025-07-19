@@ -715,8 +715,30 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
     }
   }
 
-  if (!counter)
+  if (!counter) {
     send_to_char(ch, "Não temos buscas disponiveis no momento, %s!\r\n", GET_NAME(ch));
+    
+    /* Debug information for immortals */
+    if (GET_LEVEL(ch) >= LVL_IMMORT) {
+      int total_regular = 0, total_temp = 0;
+      
+      /* Count regular quests for this questmaster */
+      for (rnum = 0; rnum < total_quests; rnum++) {
+        if (qm_vnum == QST_MASTER(rnum)) {
+          total_regular++;
+        }
+      }
+      
+      /* Count temporary quests */
+      if (IS_TEMP_QUESTMASTER(qm)) {
+        total_temp = GET_NUM_TEMP_QUESTS(qm);
+      }
+      
+      send_to_char(ch, "\tc[DEBUG: QM %d has %d regular quests, %d temp quests, is_temp_qm=%s]\tn\r\n", 
+                   qm_vnum, total_regular, total_temp, 
+                   IS_TEMP_QUESTMASTER(qm) ? "YES" : "NO");
+    }
+  }
 }
 
 /* Unified quest join function - uses unified quest finding */
@@ -1546,12 +1568,46 @@ void make_mob_temp_questmaster_if_needed(struct char_data *mob, qst_vnum quest_v
          GET_NAME(mob), quest_vnum, qm_vnum);
   } else {
     /* 
-     * Mob could potentially reach questmaster but chose to post locally.
-     * This could happen if the questmaster was busy or the mob decided to post locally
-     * for other reasons. For now, we trust the existing AI logic.
+     * Mob can reach questmaster - the quest should be available through the permanent questmaster.
+     * However, if the permanent questmaster is in the same room and the mob successfully 
+     * delivered the quest, we should ensure the quest is visible immediately.
+     * 
+     * Find the questmaster and ensure they have the questmaster special procedure assigned.
      */
-    log1("QUEST: Mob %s posted quest %d locally - questmaster %d is reachable but quest posted locally", 
-         GET_NAME(mob), quest_vnum, qm_vnum);
+    struct char_data *qm = NULL;
+    mob_rnum qm_rnum = real_mobile(qm_vnum);
+    
+    if (qm_rnum != NOBODY) {
+      /* Ensure the questmaster prototype has the correct special procedure */
+      if (mob_index[qm_rnum].func != questmaster) {
+        mob_index[qm_rnum].func = questmaster;
+        log1("QUEST: Fixed questmaster special procedure for mob prototype %d", qm_vnum);
+      }
+      
+      /* Find the questmaster in the world and ensure instance also has correct procedure */
+      for (qm = character_list; qm; qm = qm->next) {
+        if (IS_NPC(qm) && GET_MOB_VNUM(qm) == qm_vnum) {
+          /* Double-check that this specific instance has the questmaster function */
+          if (mob_index[GET_MOB_RNUM(qm)].func != questmaster) {
+            mob_index[GET_MOB_RNUM(qm)].func = questmaster;
+            log1("QUEST: Fixed questmaster special procedure for mob instance %s (%d)", 
+                 GET_NAME(qm), qm_vnum);
+          }
+          break;
+        }
+      }
+      
+      if (qm) {
+        log1("QUEST: Mob %s posted quest %d to questmaster %s (%d) - quest should be immediately available", 
+             GET_NAME(mob), quest_vnum, GET_NAME(qm), qm_vnum);
+      } else {
+        log1("QUEST: Mob %s posted quest %d to questmaster %d (not found in world) - quest assigned to prototype", 
+             GET_NAME(mob), quest_vnum, qm_vnum);
+      }
+    } else {
+      log1("QUEST: WARNING - Mob %s posted quest %d to invalid questmaster %d", 
+           GET_NAME(mob), quest_vnum, qm_vnum);
+    }
   }
 }
 
