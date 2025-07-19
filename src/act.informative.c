@@ -1098,7 +1098,7 @@ ACMD(do_score)
 	send_to_char(ch, "Você tem \tg%d\tn pontos de busca e ", GET_QUESTPOINTS(ch));
 	send_to_char(ch, "completou \tg%d\tn busca%s.\r\n", GET_NUM_QUESTS(ch),
 				 GET_NUM_QUESTS(ch) == 1 ? " " : "s");
-	if (!GET_QUEST(ch) == NOTHING)
+	if (GET_QUEST(ch) != NOTHING)
 	{
 		send_to_char(ch, "A sua busca atual é: \tg%s\tn", QST_NAME(real_quest(GET_QUEST(ch))));
 		if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS))
