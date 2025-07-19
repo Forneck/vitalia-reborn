@@ -2532,10 +2532,11 @@ ACMD(do_show)
         return;
     }
 
-    strcpy(arg, two_arguments(argument, field, value)); /* strcpy: OK
-                                                                                                           (argument <=
-                                                                                                           MAX_INPUT_LENGTH
-                                                           == arg) */
+    strcpy(arg,
+           two_arguments(argument, field, value)); /* strcpy: OK
+                                                                                                      (argument <=
+                                                                                                      MAX_INPUT_LENGTH
+                                                      == arg) */
 
     for (l = 0; *(fields[l].cmd) != '\n'; l++)
         if (!strncmp(field, fields[l].cmd, strlen(field)))

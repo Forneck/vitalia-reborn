@@ -697,42 +697,45 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
     char buf[MAX_INPUT_LENGTH];
 
     if (!*argument)
-        snprintf(buf, sizeof(buf), "%s Qual busca você quer aceitar, %s?", GET_NAME(qm), GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Qual busca você quer aceitar, %s?'", GET_NAME(qm), GET_NAME(ch));
     else if (GET_QUEST(ch) != NOTHING)
-        snprintf(buf, sizeof(buf), "%s Mas você já tem uma busca ativa, %s!", GET_NAME(qm), GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Mas você já tem uma busca ativa, %s!'", GET_NAME(qm), GET_NAME(ch));
     else if ((vnum = find_unified_quest_by_qmnum(ch, qm, atoi(argument))) == NOTHING)
-        snprintf(buf, sizeof(buf), "%s Eu não conheço nenhuma busca assim, %s!", GET_NAME(qm), GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Eu não conheço nenhuma busca assim, %s!'", GET_NAME(qm), GET_NAME(ch));
     else if ((rnum = real_quest(vnum)) == NOTHING)
-        snprintf(buf, sizeof(buf), "%s Eu não conheço essa busca, %s!", GET_NAME(qm), GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Eu não conheço essa busca, %s!'", GET_NAME(qm), GET_NAME(ch));
     else if (GET_LEVEL(ch) < QST_MINLEVEL(rnum))
-        snprintf(buf, sizeof(buf), "%s Sinto muito, mas você ainda não pode participar desta busca, %s!", GET_NAME(qm),
-                 GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Sinto muito, mas você ainda não pode participar desta busca, %s!'",
+                 GET_NAME(qm), GET_NAME(ch));
     else if (GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
-        snprintf(buf, sizeof(buf), "%s Sinto muito, mas você tem muita experiência para aceitar esta busca %s!",
+        snprintf(buf, sizeof(buf), "%s diz, 'Sinto muito, mas você tem muita experiência para aceitar esta busca, %s!'",
                  GET_NAME(qm), GET_NAME(ch));
     else if (is_complete(ch, vnum))
-        snprintf(buf, sizeof(buf), "%s Você já completou esta busca antes, %s!", GET_NAME(qm), GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Você já completou esta busca antes, %s!'", GET_NAME(qm), GET_NAME(ch));
     else if ((QST_PREV(rnum) != NOTHING) && !is_complete(ch, QST_PREV(rnum)))
-        snprintf(buf, sizeof(buf), "%s Você precisa completar outra busca antes, %s!", GET_NAME(qm), GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Você precisa completar outra busca antes, %s!'", GET_NAME(qm),
+                 GET_NAME(ch));
     else if ((QST_PREREQ(rnum) != NOTHING) && (real_object(QST_PREREQ(rnum)) != NOTHING) &&
              (get_obj_in_list_num(real_object(QST_PREREQ(rnum)), ch->carrying) == NULL))
-        snprintf(buf, sizeof(buf), "%s, você precisa primeiro ter %s antes!", GET_NAME(qm),
+        snprintf(buf, sizeof(buf), "%s diz, 'Você precisa primeiro ter %s antes!'", GET_NAME(qm),
                  obj_proto[real_object(QST_PREREQ(rnum))].short_description);
     else {
         act("Você aceitou a busca.", TRUE, ch, NULL, NULL, TO_CHAR);
         act("$n aceitou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
-        snprintf(buf, sizeof(buf), "%s As instruções para esta busca são:", GET_NAME(ch));
-        do_tell(qm, buf, cmd_tell, 0);
+        send_to_char(ch, "%s diz, 'As instruções para esta busca são:'\r\n", GET_NAME(qm));
         set_quest(ch, rnum);
         send_to_char(ch, "%s", QST_INFO(rnum));
         if (QST_TIME(rnum) != -1) {
-            snprintf(buf, sizeof(buf), "%s, você tem um tempo limite de %d tick%s para completar esta busca!",
-                     GET_NAME(ch), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
+            send_to_char(ch, "%s diz, 'Você tem um tempo limite de %d tick%s para completar esta busca!'\r\n",
+                         GET_NAME(qm), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
         } else {
-            snprintf(buf, sizeof(buf), "%s, você pode levar o tempo que precisar", GET_NAME(ch));
+            send_to_char(ch, "%s diz, 'Você pode levar o tempo que precisar para completar esta busca.'\r\n",
+                         GET_NAME(qm));
         }
+        save_char(ch);
+        return;
     }
-    do_tell(qm, buf, cmd_tell, 0);
+    send_to_char(ch, "%s\r\n", buf);
     save_char(ch);
 }
 
@@ -1612,42 +1615,45 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg)
     }
 
     if (!*arg)
-        snprintf(buf, sizeof(buf), "%s Qual busca você quer aceitar, %s?", GET_NAME(qm), GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Qual busca você quer aceitar, %s?'", GET_NAME(qm), GET_NAME(ch));
     else if (GET_QUEST(ch) != NOTHING)
-        snprintf(buf, sizeof(buf), "%s Mas você já tem uma busca ativa, %s!", GET_NAME(qm), GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Mas você já tem uma busca ativa, %s!'", GET_NAME(qm), GET_NAME(ch));
     else if ((vnum = find_temp_quest_by_qmnum(ch, qm, atoi(arg))) == NOTHING)
-        snprintf(buf, sizeof(buf), "%s Eu não conheço nenhuma busca assim, %s!", GET_NAME(qm), GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Eu não conheço nenhuma busca assim, %s!'", GET_NAME(qm), GET_NAME(ch));
     else if ((rnum = real_quest(vnum)) == NOTHING)
-        snprintf(buf, sizeof(buf), "%s Eu não conheço essa busca, %s!", GET_NAME(qm), GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Eu não conheço essa busca, %s!'", GET_NAME(qm), GET_NAME(ch));
     else if (GET_LEVEL(ch) < QST_MINLEVEL(rnum))
-        snprintf(buf, sizeof(buf), "%s Sinto muito, mas você ainda não pode participar desta busca, %s!", GET_NAME(qm),
-                 GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Sinto muito, mas você ainda não pode participar desta busca, %s!'",
+                 GET_NAME(qm), GET_NAME(ch));
     else if (GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
-        snprintf(buf, sizeof(buf), "%s Sinto muito, mas você tem muita experiência para aceitar esta busca %s!",
+        snprintf(buf, sizeof(buf), "%s diz, 'Sinto muito, mas você tem muita experiência para aceitar esta busca, %s!'",
                  GET_NAME(qm), GET_NAME(ch));
     else if (is_complete(ch, vnum))
-        snprintf(buf, sizeof(buf), "%s Você já completou esta busca antes, %s!", GET_NAME(qm), GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Você já completou esta busca antes, %s!'", GET_NAME(qm), GET_NAME(ch));
     else if ((QST_PREV(rnum) != NOTHING) && !is_complete(ch, QST_PREV(rnum)))
-        snprintf(buf, sizeof(buf), "%s Você precisa completar outra busca antes, %s!", GET_NAME(qm), GET_NAME(ch));
+        snprintf(buf, sizeof(buf), "%s diz, 'Você precisa completar outra busca antes, %s!'", GET_NAME(qm),
+                 GET_NAME(ch));
     else if ((QST_PREREQ(rnum) != NOTHING) && (real_object(QST_PREREQ(rnum)) != NOTHING) &&
              (get_obj_in_list_num(real_object(QST_PREREQ(rnum)), ch->carrying) == NULL))
-        snprintf(buf, sizeof(buf), "%s, você precisa primeiro ter %s antes!", GET_NAME(qm),
+        snprintf(buf, sizeof(buf), "%s diz, 'Você precisa primeiro ter %s antes!'", GET_NAME(qm),
                  obj_proto[real_object(QST_PREREQ(rnum))].short_description);
     else {
         act("Você aceitou a busca.", TRUE, ch, NULL, NULL, TO_CHAR);
         act("$n aceitou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
-        snprintf(buf, sizeof(buf), "%s As instruções para esta busca são:", GET_NAME(ch));
-        do_tell(qm, buf, cmd_tell, 0);
+        send_to_char(ch, "%s diz, 'As instruções para esta busca são:'\r\n", GET_NAME(qm));
         set_quest(ch, rnum);
         send_to_char(ch, "%s", QST_INFO(rnum));
         if (QST_TIME(rnum) != -1) {
-            snprintf(buf, sizeof(buf), "%s, você tem um tempo limite de %d tick%s para completar esta busca!",
-                     GET_NAME(ch), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
+            send_to_char(ch, "%s diz, 'Você tem um tempo limite de %d tick%s para completar esta busca!'\r\n",
+                         GET_NAME(qm), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
         } else {
-            snprintf(buf, sizeof(buf), "%s, você pode levar o tempo que precisar", GET_NAME(ch));
+            send_to_char(ch, "%s diz, 'Você pode levar o tempo que precisar para completar esta busca.'\r\n",
+                         GET_NAME(qm));
         }
+        save_char(ch);
+        return;
     }
-    do_tell(qm, buf, cmd_tell, 0);
+    send_to_char(ch, "%s\r\n", buf);
     save_char(ch);
 }
 
