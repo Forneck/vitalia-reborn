@@ -1,18 +1,18 @@
 /**************************************************************************
-*  File: config.c                                          Part of tbaMUD *
-*  Usage: Configuration of various aspects of tbaMUD operation.           *
-*                                                                         *
-*  All rights reserved.  See license for complete information.            *
-*                                                                         *
-*  Copyright (C) 1993, 94 by the Trustees of the Johns Hopkins University *
-*  CircleMUD is based on DikuMUD, Copyright (C) 1990, 1991.               *
-**************************************************************************/
+ *  File: config.c                                          Part of tbaMUD *
+ *  Usage: Configuration of various aspects of tbaMUD operation.           *
+ *                                                                         *
+ *  All rights reserved.  See license for complete information.            *
+ *                                                                         *
+ *  Copyright (C) 1993, 94 by the Trustees of the Johns Hopkins University *
+ *  CircleMUD is based on DikuMUD, Copyright (C) 1990, 1991.               *
+ **************************************************************************/
 
 #include "conf.h"
 #include "sysdep.h"
 #include "structs.h"
 #include "utils.h"
-#include "interpreter.h"	/* alias_data definition for structs.h */
+#include "interpreter.h" /* alias_data definition for structs.h */
 #include "config.h"
 #include "asciimap.h"
 
@@ -67,8 +67,8 @@ int holler_move_cost = 20;
 int tunnel_size = 2;
 
 /* Exp change limits. */
-int max_exp_gain = 100000;	/* max gainable per kill */
-int max_exp_loss = 500000;	/* max losable per death */
+int max_exp_gain = 100000; /* max gainable per kill */
+int max_exp_loss = 500000; /* max losable per death */
 
 /* Number of tics (usually 75 seconds) before PC/NPC corpses decompose. */
 int max_npc_corpse_time = 5;
@@ -108,7 +108,7 @@ int track_through_doors = NO;
 int no_mort_to_immort = YES;
 
 /* Are diagonal directions enabled?
-* If set to NO, then only the 6 directions n,e,s,w,u,d are allowed */
+ * If set to NO, then only the 6 directions n,e,s,w,u,d are allowed */
 int diagonal_dirs = YES;
 
 /* RENT/CRASHSAVE OPTIONS */
@@ -162,14 +162,11 @@ int auto_pwipe = NO;
    * Element 7: Because -2 is less than LVL_IMPL, this is assumed to be the end
      of the criteria.  The days entry is not used in this case. */
 struct pclean_criteria_data pclean_criteria[] = {
-/*	LEVEL		DAYS	*/
-  {	0		,0	}, /* level 0 */
-  {	1		,4	},
-  {	4		,7	},
-  {	10		,30	},
-  {	LVL_IMMORT - 1	,60	}, /* highest mortal */
-  {	LVL_IMPL	,90	}, /* all immortals */
-  {	-1		,0	}  /* no more level checks */
+    /*	LEVEL		DAYS	*/
+    {0, 0},                                                 /* level 0 */
+    {1, 4},         {4, 7}, {10, 30}, {LVL_IMMORT - 1, 60}, /* highest mortal */
+    {LVL_IMPL, 90},                                         /* all immortals */
+    {-1, 0}                                                 /* no more level checks */
 };
 
 /* Do you want players who self-delete to be wiped immediately with no backup? */
@@ -197,7 +194,6 @@ room_vnum hometown_3 = 13400;
 room_vnum ress_room_1 = 1803;
 room_vnum ress_room_2 = 5505;
 room_vnum ress_room_3 = 13435;
-
 
 /* GAME OPERATION OPTIONS */
 
@@ -276,44 +272,44 @@ int auto_save_olc = YES;
 int use_new_socials = YES;
 
 const char *MENU =
-"\r\n"
-"O MUNDO DE VITALIA\r\n"
-"\r\n"
-"         .-.\r\n"
-"        (0.0)\r\n"
-"      '=.|m|.='\r\n"
-"      .='/	\\`=.\r\n"
-"         	8	\r\n"
-"     _   8	8   _\r\n"
-"    (	__/	8	\\__	)\r\n"
-"     `-=:8	8:=-'\r\n"
-"         |:|\r\n"
-"         |:|   [1] Entrar no jogo.\r\n"
-"         |:|   [2]  Ler a historia deste mundo.\r\n"
-"         |:|   [3]  Ajustar a descriçao\r\n"
-"         |:|   [4]  Mudar a sua senha de acesso\r\n"
-"         |:|   [9]  Apagar o personagem\r\n"
-"         |:|   [0]  Deixar este mundo\r\n"
-"         |:|\r\n"
-"         |:|\r\n"
-"         |:|\r\n"
-"         |:|\r\n"
-"         |:|\r\n"
-"        \\:/\r\n"
-"          ^\r\n"
-"\r\n"
-"\r\n"
-"-=>  Faca sua escolha: ";
+    "\r\n"
+    "O MUNDO DE VITALIA\r\n"
+    "\r\n"
+    "         .-.\r\n"
+    "        (0.0)\r\n"
+    "      '=.|m|.='\r\n"
+    "      .='/	\\`=.\r\n"
+    "         	8	\r\n"
+    "     _   8	8   _\r\n"
+    "    (	__/	8	\\__	)\r\n"
+    "     `-=:8	8:=-'\r\n"
+    "         |:|\r\n"
+    "         |:|   [1] Entrar no jogo.\r\n"
+    "         |:|   [2]  Ler a historia deste mundo.\r\n"
+    "         |:|   [3]  Ajustar a descriçao\r\n"
+    "         |:|   [4]  Mudar a sua senha de acesso\r\n"
+    "         |:|   [9]  Apagar o personagem\r\n"
+    "         |:|   [0]  Deixar este mundo\r\n"
+    "         |:|\r\n"
+    "         |:|\r\n"
+    "         |:|\r\n"
+    "         |:|\r\n"
+    "         |:|\r\n"
+    "        \\:/\r\n"
+    "          ^\r\n"
+    "\r\n"
+    "\r\n"
+    "-=>  Faca sua escolha: ";
 
 const char *WELC_MESSG =
-"\r\n"
-"Bem vindo a Vitália, talvez sua visita aqui seja... Interessante.\r\n"
-"\r\n";
+    "\r\n"
+    "Bem vindo a Vitália, talvez sua visita aqui seja... Interessante.\r\n"
+    "\r\n";
 
 const char *START_MESSG =
-"Bem vindo.  Este é o seu novo personagem no Mundo de Vitália!  Agora você\r\n"
-"pode acumular riquezas, ganhar experiências, encontrar armas e equipamentos,\r\n"
-"e muito mais, explorando esse fascinante mundo.\r\n\r\n";
+    "Bem vindo.  Este é o seu novo personagem no Mundo de Vitália!  Agora você\r\n"
+    "pode acumular riquezas, ganhar experiências, encontrar armas e equipamentos,\r\n"
+    "e muito mais, explorando esse fascinante mundo.\r\n\r\n";
 
 /* AUTOWIZ OPTIONS */
 /* Should the game automatically create a new wizlist/immlist every time someone

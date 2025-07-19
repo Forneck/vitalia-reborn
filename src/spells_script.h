@@ -8,19 +8,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. */
 
-#define ASCRIPT(name) int name(char **str, struct char_data *self, \
-                                           struct char_data *vict, \
-                                           struct obj_data  *ovict, \
-                                           int    from, \
-                                           int    param)
+#define ASCRIPT(name)                                                                                                  \
+    int name(char **str, struct char_data *self, struct char_data *vict, struct obj_data *ovict, int from, int param)
 struct str_script {
-   char *name;
-   void *function;   
-   int  param;
+    char *name;
+    void *function;
+    int param;
 };
 
-int perform_script (char *str, struct char_data *self,
-                               struct char_data *vict,
-                               struct obj_data  *ovict,
-                    int   from,
-                    int   param);
+int perform_script(char *str, struct char_data *self, struct char_data *vict, struct obj_data *ovict, int from,
+                   int param);

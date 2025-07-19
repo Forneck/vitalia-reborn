@@ -1,9 +1,9 @@
 /**************************************************************************
-*  File: lists.c                                           Part of tbaMUD *
-*  Usage: Handling of in-game lists                                       *
-*                                                                         *
-*  By Vatiken. Copyright 2012 by Joseph Arnusch                           *
-**************************************************************************/
+ *  File: lists.c                                           Part of tbaMUD *
+ *  Usage: Handling of in-game lists                                       *
+ *                                                                         *
+ *  By Vatiken. Copyright 2012 by Joseph Arnusch                           *
+ **************************************************************************/
 
 #include "conf.h"
 #include "sysdep.h"
@@ -17,195 +17,198 @@ static bool loop = FALSE;
 static struct list_data *pLastList = NULL;
 
 /* Global lists */
-struct list_data * global_lists = NULL;
-struct list_data * group_list   = NULL;
+struct list_data *global_lists = NULL;
+struct list_data *group_list = NULL;
 
-struct list_data * create_list(void) 
+struct list_data *create_list(void)
 {
-  struct list_data *pNewList;
-  static bool first_list = TRUE;
-  
-  CREATE(pNewList, struct list_data, 1);
-  
-  pNewList->pFirstItem = NULL;
-  pNewList->pLastItem  = NULL;
-  pNewList->iIterators = 0;
-  pNewList->iSize      = 0;
-  
-  /* Add to global lists, primarily for debugging purposes */
-  if (first_list == FALSE)
-    add_to_list(pNewList, global_lists);
-  else 
-    first_list = FALSE;
+    struct list_data *pNewList;
+    static bool first_list = TRUE;
 
-  return (pNewList);
+    CREATE(pNewList, struct list_data, 1);
+
+    pNewList->pFirstItem = NULL;
+    pNewList->pLastItem = NULL;
+    pNewList->iIterators = 0;
+    pNewList->iSize = 0;
+
+    /* Add to global lists, primarily for debugging purposes */
+    if (first_list == FALSE)
+        add_to_list(pNewList, global_lists);
+    else
+        first_list = FALSE;
+
+    return (pNewList);
 }
 
-static struct item_data * create_item(void)
+static struct item_data *create_item(void)
 {
-  struct item_data *pNewItem;
+    struct item_data *pNewItem;
 
-  CREATE(pNewItem, struct item_data, 1);
+    CREATE(pNewItem, struct item_data, 1);
 
-  pNewItem->pNextItem = NULL;
-  pNewItem->pPrevItem = NULL;
-  pNewItem->pContent  = NULL;
+    pNewItem->pNextItem = NULL;
+    pNewItem->pPrevItem = NULL;
+    pNewItem->pContent = NULL;
 
-  return (pNewItem);
+    return (pNewItem);
 }
 
-void free_list(struct list_data * pList)
+void free_list(struct list_data *pList)
 {
-  void * pContent;
-  
-  clear_simple_list();  
-    
-  if (pList->iSize)
-    while ((pContent = simple_list(pList)))
-      remove_from_list(pContent, pList);
-    
-  if (pList->iSize > 0)
-    mudlog(CMP, LVL_GOD, TRUE, "List being freed while not empty.");
-      
-  /* Global List for debugging */
-  if (pList != global_lists)
-    remove_from_list(pList, global_lists);  
-  
-  free(pList);
+    void *pContent;
+
+    clear_simple_list();
+
+    if (pList->iSize)
+        while ((pContent = simple_list(pList)))
+            remove_from_list(pContent, pList);
+
+    if (pList->iSize > 0)
+        mudlog(CMP, LVL_GOD, TRUE, "List being freed while not empty.");
+
+    /* Global List for debugging */
+    if (pList != global_lists)
+        remove_from_list(pList, global_lists);
+
+    free(pList);
 }
 
-void add_to_list(void * pContent, struct list_data * pList)
+void add_to_list(void *pContent, struct list_data *pList)
 {
-  struct item_data * pNewItem;
-  struct item_data * pLastItem;
+    struct item_data *pNewItem;
+    struct item_data *pLastItem;
 
-  /* Allocate our memory */
-  pNewItem = create_item();
+    /* Allocate our memory */
+    pNewItem = create_item();
 
-  /* Place the contents in the item */
-  pNewItem->pContent  = pContent;
-  pNewItem->pNextItem = NULL;
+    /* Place the contents in the item */
+    pNewItem->pContent = pContent;
+    pNewItem->pNextItem = NULL;
 
-  /* If we are the first entry in the list, mark us as such */
-  if (pList->pFirstItem == NULL)
-    pList->pFirstItem = pNewItem;
- 
-  /* Grab our last item from the list and attach it to our new item */
-  if (pList->pLastItem) {
-    pLastItem = pList->pLastItem;
-    pLastItem->pNextItem = pNewItem;
-    pNewItem->pPrevItem = pLastItem;
-  }
+    /* If we are the first entry in the list, mark us as such */
+    if (pList->pFirstItem == NULL)
+        pList->pFirstItem = pNewItem;
 
-  /* Make our new item our last item in the list */
-  pList->pLastItem = pNewItem;
-
-  pList->iSize++;
-}
-
-void remove_from_list(void * pContent, struct list_data * pList)
-{
-  struct item_data *pRemovedItem;
-
-  /* Check for NULL list before attempting to find content */
-  if (pList == NULL) {
-    return;
-  }
-
-  if ((pRemovedItem = find_in_list(pContent, pList)) == NULL) {
-    /* Enhanced warning with more context for debugging */
-    if (pList == group_list) {
-      mudlog(CMP, LVL_GOD, TRUE, "WARNING: Attempting to remove group contents that don't exist in group_list (size: %d).", pList->iSize);
-    } else {
-      mudlog(CMP, LVL_GOD, TRUE, "WARNING: Attempting to remove contents that don't exist in list (size: %d).", pList->iSize);
+    /* Grab our last item from the list and attach it to our new item */
+    if (pList->pLastItem) {
+        pLastItem = pList->pLastItem;
+        pLastItem->pNextItem = pNewItem;
+        pNewItem->pPrevItem = pLastItem;
     }
-    return;
-  }
 
-  if (pRemovedItem == pList->pFirstItem)
-    pList->pFirstItem = pRemovedItem->pNextItem;  
+    /* Make our new item our last item in the list */
+    pList->pLastItem = pNewItem;
 
-  if (pRemovedItem == pList->pLastItem)
-    pList->pLastItem = pRemovedItem->pPrevItem;  
- 
-  if (pRemovedItem->pPrevItem)
-    pRemovedItem->pPrevItem->pNextItem = pRemovedItem->pNextItem;
- 
-  if (pRemovedItem->pNextItem)
-    pRemovedItem->pNextItem->pPrevItem = pRemovedItem->pPrevItem;
-  
-  pList->iSize--;
-  if (pList->iSize == 0) {
-    pList->pFirstItem = NULL;
-    pList->pLastItem  = NULL;
-  }
-  free(pRemovedItem);
+    pList->iSize++;
+}
+
+void remove_from_list(void *pContent, struct list_data *pList)
+{
+    struct item_data *pRemovedItem;
+
+    /* Check for NULL list before attempting to find content */
+    if (pList == NULL) {
+        return;
+    }
+
+    if ((pRemovedItem = find_in_list(pContent, pList)) == NULL) {
+        /* Enhanced warning with more context for debugging */
+        if (pList == group_list) {
+            mudlog(CMP, LVL_GOD, TRUE,
+                   "WARNING: Attempting to remove group contents that don't exist in group_list (size: %d).",
+                   pList->iSize);
+        } else {
+            mudlog(CMP, LVL_GOD, TRUE, "WARNING: Attempting to remove contents that don't exist in list (size: %d).",
+                   pList->iSize);
+        }
+        return;
+    }
+
+    if (pRemovedItem == pList->pFirstItem)
+        pList->pFirstItem = pRemovedItem->pNextItem;
+
+    if (pRemovedItem == pList->pLastItem)
+        pList->pLastItem = pRemovedItem->pPrevItem;
+
+    if (pRemovedItem->pPrevItem)
+        pRemovedItem->pPrevItem->pNextItem = pRemovedItem->pNextItem;
+
+    if (pRemovedItem->pNextItem)
+        pRemovedItem->pNextItem->pPrevItem = pRemovedItem->pPrevItem;
+
+    pList->iSize--;
+    if (pList->iSize == 0) {
+        pList->pFirstItem = NULL;
+        pList->pLastItem = NULL;
+    }
+    free(pRemovedItem);
 }
 
 /** Merges an iterator with a list
  * @post Don't forget to remove the iterator with remove_iterator().
  * */
 
-void * merge_iterator(struct iterator_data * pIterator, struct list_data * pList)
+void *merge_iterator(struct iterator_data *pIterator, struct list_data *pList)
 {
-  void * pContent;
+    void *pContent;
 
-  if (pList == NULL) {
-    mudlog(NRM, LVL_GOD, TRUE, "WARNING: Attempting to merge iterator to NULL list.");
-    pIterator->pList = NULL;
-    pIterator->pItem = NULL;
-    return NULL;
-  }
-  if (pList->pFirstItem == NULL) {
-    mudlog(NRM, LVL_GOD, TRUE, "WARNING: Attempting to merge iterator to empty list.");
-    pIterator->pList = NULL;
-    pIterator->pItem = NULL;
-    return NULL;
-  }
+    if (pList == NULL) {
+        mudlog(NRM, LVL_GOD, TRUE, "WARNING: Attempting to merge iterator to NULL list.");
+        pIterator->pList = NULL;
+        pIterator->pItem = NULL;
+        return NULL;
+    }
+    if (pList->pFirstItem == NULL) {
+        mudlog(NRM, LVL_GOD, TRUE, "WARNING: Attempting to merge iterator to empty list.");
+        pIterator->pList = NULL;
+        pIterator->pItem = NULL;
+        return NULL;
+    }
 
-  pList->iIterators++;
-  pIterator->pList = pList;
-  pIterator->pItem = pList->pFirstItem;
+    pList->iIterators++;
+    pIterator->pList = pList;
+    pIterator->pItem = pList->pFirstItem;
 
-  pContent = pIterator->pItem ? pIterator->pItem->pContent : NULL;
+    pContent = pIterator->pItem ? pIterator->pItem->pContent : NULL;
 
-  return (pContent);
+    return (pContent);
 }
 
-void remove_iterator(struct iterator_data * pIterator)
+void remove_iterator(struct iterator_data *pIterator)
 {
-  if (pIterator->pList == NULL) {
-    mudlog(NRM, LVL_GOD, TRUE, "WARNING: Attempting to remove iterator from NULL list.");
-    return;
-  }
+    if (pIterator->pList == NULL) {
+        mudlog(NRM, LVL_GOD, TRUE, "WARNING: Attempting to remove iterator from NULL list.");
+        return;
+    }
 
-  pIterator->pList->iIterators--;
-  pIterator->pList = NULL;
-  pIterator->pItem = NULL;
+    pIterator->pList->iIterators--;
+    pIterator->pList = NULL;
+    pIterator->pItem = NULL;
 }
 
-/** Spits out an item and cycles down the list  
+/** Spits out an item and cycles down the list
  * @return Returns the content of the list
  * */
 
-void * next_in_list(struct iterator_data * pIterator)
+void *next_in_list(struct iterator_data *pIterator)
 {
-  void * pContent;
-  struct item_data * pTempItem;
+    void *pContent;
+    struct item_data *pTempItem;
 
-  if (pIterator->pList == NULL) {
-    mudlog(NRM, LVL_GOD, TRUE, "WARNING: Attempting to get content from iterator with NULL list.");
-    return NULL;
-  }
+    if (pIterator->pList == NULL) {
+        mudlog(NRM, LVL_GOD, TRUE, "WARNING: Attempting to get content from iterator with NULL list.");
+        return NULL;
+    }
 
-  /* Cycle down the list */
-  pTempItem = pIterator->pItem->pNextItem;
-  pIterator->pItem = pTempItem;
+    /* Cycle down the list */
+    pTempItem = pIterator->pItem->pNextItem;
+    pIterator->pItem = pTempItem;
 
-  /* Grab the content */
-  pContent = pIterator->pItem ? pIterator->pItem->pContent : NULL;
+    /* Grab the content */
+    pContent = pIterator->pItem ? pIterator->pItem->pContent : NULL;
 
-  return (pContent);
+    return (pContent);
 }
 
 /** Searches through the a list and returns the item block that holds pContent
@@ -213,123 +216,123 @@ void * next_in_list(struct iterator_data * pIterator)
  * it is assumed you already have the pContent.
  * */
 
-struct item_data * find_in_list(void * pContent, struct list_data * pList)
+struct item_data *find_in_list(void *pContent, struct list_data *pList)
 {
-  void * pFoundItem;
-  struct item_data *pItem = NULL;
-  bool found;
+    void *pFoundItem;
+    struct item_data *pItem = NULL;
+    bool found;
 
-  /* Check for NULL or empty list before attempting to merge iterator */
-  if (pList == NULL || pList->pFirstItem == NULL) {
-    return NULL;
-  }
-
-  pFoundItem = merge_iterator(&Iterator, pList);
-
-  for (found = FALSE; pFoundItem != NULL; pFoundItem = next_in_list(&Iterator)) {
-    if (pFoundItem == pContent) {
-      found = TRUE;
-      break;
+    /* Check for NULL or empty list before attempting to merge iterator */
+    if (pList == NULL || pList->pFirstItem == NULL) {
+        return NULL;
     }
-  }
 
-  if (found)
-    pItem = Iterator.pItem;
+    pFoundItem = merge_iterator(&Iterator, pList);
 
-  remove_iterator(&Iterator);
+    for (found = FALSE; pFoundItem != NULL; pFoundItem = next_in_list(&Iterator)) {
+        if (pFoundItem == pContent) {
+            found = TRUE;
+            break;
+        }
+    }
 
-  if (found)
-    return (pItem);
-  else
-    return NULL;
+    if (found)
+        pItem = Iterator.pItem;
+
+    remove_iterator(&Iterator);
+
+    if (found)
+        return (pItem);
+    else
+        return NULL;
 }
 
 void clear_simple_list(void)
 {
-  loop = FALSE;
-  pLastList = NULL;  
+    loop = FALSE;
+    pLastList = NULL;
 }
 
-void * simple_list(struct list_data * pList)
+void *simple_list(struct list_data *pList)
 {
-  void * pContent;
+    void *pContent;
 
-  /* Reset List */
-  if (pList == NULL) {
-    clear_simple_list();
-    return NULL;
-  }
-
-  if (!loop || pLastList != pList) {
-    if (loop && pLastList != pList)
-      mudlog(CMP, LVL_GRGOD, TRUE, "SYSERR: simple_list() forced to reset itself.");
-  
-    pContent = merge_iterator(&Iterator, pList);
-    if (pContent != NULL) {
-      pLastList = pList;    
-      loop = TRUE;
-      return (pContent);
-    } else {
-      /* merge_iterator failed, no need to call remove_iterator */
-      loop = FALSE;
-      return NULL;
+    /* Reset List */
+    if (pList == NULL) {
+        clear_simple_list();
+        return NULL;
     }
-  }
-   
-  if ((pContent = next_in_list(&Iterator)) != NULL)
-    return (pContent);
 
-  remove_iterator(&Iterator);  
-  loop = FALSE;
-  return NULL;
-}
+    if (!loop || pLastList != pList) {
+        if (loop && pLastList != pList)
+            mudlog(CMP, LVL_GRGOD, TRUE, "SYSERR: simple_list() forced to reset itself.");
 
-void * random_from_list(struct list_data * pList)
-{
-  struct iterator_data localIterator;
-  void * pFoundItem;
-  bool found;
-  int number;
-  int count = 1;
-
-  if (pList == NULL || pList->iSize <= 0)
-    return NULL;
-  else
-    number = rand_number(1, pList->iSize);
-
-  pFoundItem = merge_iterator(&localIterator, pList);
-
-  for (found = FALSE; pFoundItem != NULL; pFoundItem = next_in_list(&localIterator), count++) {
-    if (count == number) {
-      found = TRUE;
-      break;
+        pContent = merge_iterator(&Iterator, pList);
+        if (pContent != NULL) {
+            pLastList = pList;
+            loop = TRUE;
+            return (pContent);
+        } else {
+            /* merge_iterator failed, no need to call remove_iterator */
+            loop = FALSE;
+            return NULL;
+        }
     }
-  }
 
-  remove_iterator(&localIterator);
-  
-  if (found)
-    return (pFoundItem);
-  else
+    if ((pContent = next_in_list(&Iterator)) != NULL)
+        return (pContent);
+
+    remove_iterator(&Iterator);
+    loop = FALSE;
     return NULL;
 }
 
-struct list_data * randomize_list(struct list_data * pList)
+void *random_from_list(struct list_data *pList)
 {
-  struct list_data * newList;
-  void * pContent;
-  
-  if (pList->iSize == 0)
-    return NULL;
-    
-  newList = create_list();
-  
-  while ((pContent = random_from_list(pList)) != NULL) {
-    remove_from_list(pContent, pList);
-    add_to_list(pContent, newList);
-  }
-  
-  free_list(pList);
-  
-  return (newList);
+    struct iterator_data localIterator;
+    void *pFoundItem;
+    bool found;
+    int number;
+    int count = 1;
+
+    if (pList == NULL || pList->iSize <= 0)
+        return NULL;
+    else
+        number = rand_number(1, pList->iSize);
+
+    pFoundItem = merge_iterator(&localIterator, pList);
+
+    for (found = FALSE; pFoundItem != NULL; pFoundItem = next_in_list(&localIterator), count++) {
+        if (count == number) {
+            found = TRUE;
+            break;
+        }
+    }
+
+    remove_iterator(&localIterator);
+
+    if (found)
+        return (pFoundItem);
+    else
+        return NULL;
+}
+
+struct list_data *randomize_list(struct list_data *pList)
+{
+    struct list_data *newList;
+    void *pContent;
+
+    if (pList->iSize == 0)
+        return NULL;
+
+    newList = create_list();
+
+    while ((pContent = random_from_list(pList)) != NULL) {
+        remove_from_list(pContent, pList);
+        add_to_list(pContent, newList);
+    }
+
+    free_list(pList);
+
+    return (newList);
 }

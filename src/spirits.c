@@ -20,8 +20,8 @@
 
 #include "screen.h"
 
-
-struct char_data *load_offline_char_by_name2(const char *name) {
+struct char_data *load_offline_char_by_name2(const char *name)
+{
     struct char_data *victim = NULL;
 
     CREATE(victim, struct char_data, 1);
@@ -39,23 +39,28 @@ struct char_data *load_offline_char_by_name2(const char *name) {
     }
 }
 
-struct char_data *load_offline_char_by_name(const char *name) {
+struct char_data *load_offline_char_by_name(const char *name)
+{
     struct char_data *victim = NULL; /*Inicializa o ponteiro victim, que será o personagem a ser carregado.*/
     int player_i;
     CREATE(victim, struct char_data, 1);
-    /*Macro CREATE aloca dinamicamente memória para uma estrutura do tipo char_data e atribui o ponteiro resultante a victim.*/
+    /*Macro CREATE aloca dinamicamente memória para uma estrutura do tipo char_data e atribui o ponteiro resultante a
+     * victim.*/
     clear_char(victim); /*Limpa e inicializa todos os campos da estrutura char_data, evitando lixo de memória.*/
 
     CREATE(victim->player_specials, struct player_special_data, 1);
-    /* Aloca memória para os dados especiais do jogador (player_special_data), que contém atributos específicos como preferências, configurações, etc.*/
+    /* Aloca memória para os dados especiais do jogador (player_special_data), que contém atributos específicos como
+     * preferências, configurações, etc.*/
     new_mobile_data(victim);
-    /*Inicializa os dados móveis (dinâmicos) do personagem, como atributos temporários, status de combate, entre outros*/
+    /*Inicializa os dados móveis (dinâmicos) do personagem, como atributos temporários, status de combate, entre
+     * outros*/
 
-    /*Função que carrega o jogador do arquivo de disco para a memória. Se retornar >= 0, o carregamento foi bem-sucedido.*/
+    /*Função que carrega o jogador do arquivo de disco para a memória. Se retornar >= 0, o carregamento foi
+     * bem-sucedido.*/
     player_i = load_char(name, victim);
-    if ( player_i >= 0) /* Vai carregar o player pelo nome passado no parametro*/
+    if (player_i >= 0) /* Vai carregar o player pelo nome passado no parametro*/
     {
-        //Crash_load(victim); /* vai carregar os itens do player*/
+        // Crash_load(victim); /* vai carregar os itens do player*/
         victim->next = character_list;
         GET_PFILEPOS(victim) = player_i;
         return victim;
@@ -66,8 +71,8 @@ struct char_data *load_offline_char_by_name(const char *name) {
     return NULL;
 }
 
-
-AutoRaiseResult autoraise_corpse(struct obj_data *corpse) {
+AutoRaiseResult autoraise_corpse(struct obj_data *corpse)
+{
     struct obj_data *obj = NULL, *next_obj = NULL;
     struct char_data *ch;
     int idnum, offline = FALSE;
@@ -75,10 +80,10 @@ AutoRaiseResult autoraise_corpse(struct obj_data *corpse) {
     /*Verificação se o objeto é nulo:
     Se corpse for NULL, registra um erro e retorna ar_dropobjs (ação que indica deixar os objetos do corpo no chão).
     Verificação do tipo do objeto:
-    Se o tipo do objeto não for ITEM_CORPSE (ou seja, não é um corpo), é registrado um erro e também retorna ar_dropobjs.
-    Verificação do ID:
-    Obtém o ID do personagem associado ao corpo usando GET_OBJ_VAL(corpse, 0).
-    Se esse ID for menor ou igual a zero (geralmente indica que se trata de um monstro e não de um personagem jogador), retorna ar_dropobjs.*/
+    Se o tipo do objeto não for ITEM_CORPSE (ou seja, não é um corpo), é registrado um erro e também retorna
+    ar_dropobjs. Verificação do ID: Obtém o ID do personagem associado ao corpo usando GET_OBJ_VAL(corpse, 0). Se esse
+    ID for menor ou igual a zero (geralmente indica que se trata de um monstro e não de um personagem jogador), retorna
+    ar_dropobjs.*/
     if (!corpse) {
         return (ar_dropobjs);
     } else if (GET_OBJ_TYPE(corpse) != ITEM_CORPSE) {
@@ -90,10 +95,10 @@ AutoRaiseResult autoraise_corpse(struct obj_data *corpse) {
 
     /*Objetivo:
     Tenta recuperar o nome do personagem associado ao idnum usando get_name_by_id(idnum).
-    Se não for encontrado (temp fica nulo), isso indica que o jogador pode ter recriado seu personagem (ou seja, a identidade mudou).
-    Ação:
-    Emite uma mensagem para o ambiente (usando act) para indicar que o corpo está sendo descartado (seja caindo das mãos ou se desfazendo em pó).
-    Retorna ar_extract, sinalizando que o corpo deve ser extraído.*/
+    Se não for encontrado (temp fica nulo), isso indica que o jogador pode ter recriado seu personagem (ou seja, a
+    identidade mudou). Ação: Emite uma mensagem para o ambiente (usando act) para indicar que o corpo está sendo
+    descartado (seja caindo das mãos ou se desfazendo em pó). Retorna ar_extract, sinalizando que o corpo deve ser
+    extraído.*/
     if ((temp = get_name_by_id(idnum)) == NULL) {
         if (corpse->carried_by && corpse->worn_on == -1) {
             act("$p cai de suas mãos.", FALSE, corpse->carried_by, corpse, NULL, TO_CHAR);
@@ -106,9 +111,9 @@ AutoRaiseResult autoraise_corpse(struct obj_data *corpse) {
     }
 
     /*Objetivo:
-    Percorre a lista global de personagens (character_list) procurando um personagem jogador (PC) cujo ID seja igual ao idnum obtido do corpo.
-    Resultado:
-    Se encontrado, ch apontará para esse personagem; caso contrário, ch continuará nulo.*/
+    Percorre a lista global de personagens (character_list) procurando um personagem jogador (PC) cujo ID seja igual ao
+    idnum obtido do corpo. Resultado: Se encontrado, ch apontará para esse personagem; caso contrário, ch continuará
+    nulo.*/
     for (ch = character_list; ch != NULL; ch = ch->next) {
         if (!IS_NPC(ch) && (GET_IDNUM(ch) == idnum)) {
             break;
@@ -116,11 +121,10 @@ AutoRaiseResult autoraise_corpse(struct obj_data *corpse) {
     }
 
     /*Objetivo:
-    Se não encontrou o personagem online (ch é NULL), tenta carregá-lo a partir do arquivo de jogadores usando load_offline_char_by_name(name).
-    Caso falhe:
-    Se o personagem não for encontrado no arquivo, ar_dropobjs.
-    Flag Offline:
-    Se o personagem for carregado com sucesso, define offline como verdadeiro, indicando que ele não estava online.*/
+    Se não encontrou o personagem online (ch é NULL), tenta carregá-lo a partir do arquivo de jogadores usando
+    load_offline_char_by_name(name). Caso falhe: Se o personagem não for encontrado no arquivo, ar_dropobjs. Flag
+    Offline: Se o personagem for carregado com sucesso, define offline como verdadeiro, indicando que ele não estava
+    online.*/
     if (!ch) {
         if ((ch = load_offline_char_by_name(get_name_by_id(idnum))) == NULL) {
             return (ar_dropobjs);
@@ -151,7 +155,8 @@ AutoRaiseResult autoraise_corpse(struct obj_data *corpse) {
     }
 
     /*Objetivo:
-    Se o personagem não está morto (ou seja, já foi ressuscitado ou nunca morreu), então não há razão para realizar a ressurreição.
+    Se o personagem não está morto (ou seja, já foi ressuscitado ou nunca morreu), então não há razão para realizar a
+    ressurreição.
 
     Ação:
     Se o personagem estava offline, destrói o personagem carregado.
@@ -172,7 +177,8 @@ AutoRaiseResult autoraise_corpse(struct obj_data *corpse) {
     }*/
 
     /*Objetivo:
-    Se todas as condições anteriores forem atendidas (o personagem está morto, não se deletou, tem CON suficiente, etc.), então prossegue para a ressurreição.
+    Se todas as condições anteriores forem atendidas (o personagem está morto, não se deletou, tem CON suficiente,
+    etc.), então prossegue para a ressurreição.
 
     Caso Offline:
     Chama a função raise_offline(ch, corpse) para ressuscitar o personagem que estava offline.
@@ -181,9 +187,10 @@ AutoRaiseResult autoraise_corpse(struct obj_data *corpse) {
     Caso Online:
     Chama a função raise_online(ch, NULL, corpse, corpse->in_room, FALSE) para ressuscitar o personagem que está online.
     Retorno Final:cd
-    Após a ressurreição, o metodo retorna ar_extract, indicando que o corpo deve ser extraído (removido), já que a ressurreição ocorreu.*/
+    Após a ressurreição, o metodo retorna ar_extract, indicando que o corpo deve ser extraído (removido), já que a
+    ressurreição ocorreu.*/
     if (offline) {
-        raise_offline(ch,  corpse );
+        raise_offline(ch, corpse);
         free_char(ch);
     } else {
         raise_online(ch, NULL, corpse, corpse->in_room, FALSE);
@@ -192,7 +199,8 @@ AutoRaiseResult autoraise_corpse(struct obj_data *corpse) {
 }
 
 void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_data *corpse, room_rnum targ_room,
-                  int restore) {
+                  int restore)
+{
     struct obj_data *obj = NULL, *next_obj = NULL;
 
     if (targ_room && targ_room != IN_ROOM(ch)) {
@@ -204,7 +212,8 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
     }
 
     act("@GUma estranha sensação percorre seu espírito, que é puxado por uma força\r\n"
-        "divina, carregando-$r por uma longa distância.", FALSE, ch, 0, 0, TO_CHAR);
+        "divina, carregando-$r por uma longa distância.",
+        FALSE, ch, 0, 0, TO_CHAR);
 
     REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
     if (AFF_FLAGGED(ch, AFF_FLYING))
@@ -217,7 +226,8 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
         send_to_char(ch,
                      "Estranhamente, seu espírito começa a voltar ao formato de um corpo humano.\r\n"
                      "Você começa a sentir novamente seus braços, suas pernas, o chão, o ar\r\n"
-                     "entrando pelos seus pulmões!%s\r\n",CCNRM(ch, C_NRM));
+                     "entrando pelos seus pulmões!%s\r\n",
+                     CCNRM(ch, C_NRM));
     }
     send_to_char(ch, "\r\n");
 
@@ -236,16 +246,13 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
         act("\tWVocê foi trazid$r devolta à vida pelos Deuses!\tn", FALSE, ch, 0, 0, TO_CHAR);
     } else if (GET_LEVEL(raiser) >= LVL_IMMORT) {
         act("Sua força divina trouxe $N devolta à vida.", FALSE, raiser, 0, ch, TO_CHAR);
-        act("$n foi trazid$r devolta à vida pela força divina de $N!", FALSE, ch, 0, raiser,
-            TO_NOTVICT);
-        act("\tWVocê foi trazid$r devolta à vida pela força divina de $N!\tn", FALSE, ch, 0,
-            raiser, TO_CHAR);
+        act("$n foi trazid$r devolta à vida pela força divina de $N!", FALSE, ch, 0, raiser, TO_NOTVICT);
+        act("\tWVocê foi trazid$r devolta à vida pela força divina de $N!\tn", FALSE, ch, 0, raiser, TO_CHAR);
     } else {
-        act("\tWVocê sente a força de seu Deus trazendo $N devolta à vida!\tn", FALSE, raiser, 0,
-            ch, TO_CHAR);
+        act("\tWVocê sente a força de seu Deus trazendo $N devolta à vida!\tn", FALSE, raiser, 0, ch, TO_CHAR);
         act("$n foi trazid$r devolta à vida pelo Deus de $N!", FALSE, ch, 0, raiser, TO_NOTVICT);
-        act("\tWVocê foi trazid$r devolta à vida pela força divina dos Deuses de $N!\tn", FALSE,
-            ch, 0, raiser, TO_CHAR);
+        act("\tWVocê foi trazid$r devolta à vida pela força divina dos Deuses de $N!\tn", FALSE, ch, 0, raiser,
+            TO_CHAR);
     }
 
     if (restore >= 2) {
@@ -291,7 +298,8 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
     save_char(ch);
 }
 
-void raise_offline(struct char_data *ch, struct obj_data *corpse) {
+void raise_offline(struct char_data *ch, struct obj_data *corpse)
+{
     struct obj_data *obj = NULL, *next_obj = NULL;
 
     room_vnum room_vnum_corpse = world[corpse->in_room].number;
@@ -322,17 +330,16 @@ void raise_offline(struct char_data *ch, struct obj_data *corpse) {
     save_char(ch);
 }
 
-
 void raise_save_objs(struct char_data *ch, struct obj_data *corpse)
 {
     struct obj_data *obj, *next_obj;
     FILE *f;
-    struct rent_info rent;  /* Estrutura para armazenar informações do "rent" */
+    struct rent_info rent; /* Estrutura para armazenar informações do "rent" */
     char fname[MAX_STRING_LENGTH];
 
     /* Procura por dinheiro no corpo e adiciona ao personagem */
     for (obj = corpse->contains; obj; obj = next_obj) {
-        next_obj = obj->next_content;  /* Salva próximo objeto antes de remover o atual */
+        next_obj = obj->next_content; /* Salva próximo objeto antes de remover o atual */
         if (GET_OBJ_TYPE(obj) == ITEM_MONEY) {
             GET_GOLD(ch) += GET_OBJ_VAL(obj, 0);
             extract_obj(obj);
@@ -344,10 +351,9 @@ void raise_save_objs(struct char_data *ch, struct obj_data *corpse)
         return;
 
     /* Monta o nome do arquivo de crash/rent do jogador */
-    if (!get_filename(fname, sizeof(fname), CRASH_FILE, GET_NAME(ch)) ||
-        !(f = fopen(fname, "wb"))) {
+    if (!get_filename(fname, sizeof(fname), CRASH_FILE, GET_NAME(ch)) || !(f = fopen(fname, "wb"))) {
         return;
-        }
+    }
 
     /* Prepara as informações de aluguel */
 
@@ -364,15 +370,14 @@ void raise_save_objs(struct char_data *ch, struct obj_data *corpse)
     Crash_extract_norents(corpse->contains);
     /* Salva os itens restantes do corpo */
     while ((obj = corpse->contains) != NULL) {
-        obj_from_obj(obj);  /* Remove o objeto da lista do corpo */
+        obj_from_obj(obj); /* Remove o objeto da lista do corpo */
         if (!Crash_save(obj, f, 0)) {
 
             fclose(f);
             return;
         }
-        Crash_extract_objs(obj);  /* Trata a remoção definitiva do objeto, se necessário */
+        Crash_extract_objs(obj); /* Trata a remoção definitiva do objeto, se necessário */
     }
 
     fclose(f);
 }
-
