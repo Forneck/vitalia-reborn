@@ -455,6 +455,20 @@ const char *climate_types[] = {"TEMPERADO", "CHUVOSO", "TROPICAL", "FRIO/SECO", 
 
 const char *sun_states[] = {"DARK", "RISE", "LIGHT", "SET", "\n"};
 
+const char *goal_names[] = {
+    "None",                  /* GOAL_NONE 0 */
+    "Go to shop to sell",    /* GOAL_GOTO_SHOP_TO_SELL 1 */
+    "Return to post",        /* GOAL_RETURN_TO_POST 2 */
+    "Hunt target",           /* GOAL_HUNT_TARGET 3 */
+    "Go to shop to buy",     /* GOAL_GOTO_SHOP_TO_BUY 4 */
+    "Post quest",            /* GOAL_POST_QUEST 5 */
+    "Get gold",              /* GOAL_GET_GOLD 6 */
+    "Go to questmaster",     /* GOAL_GOTO_QUESTMASTER 7 */
+    "Accept quest",          /* GOAL_ACCEPT_QUEST 8 */
+    "Complete quest",        /* GOAL_COMPLETE_QUEST 9 */
+    "\n"
+};
+
 const char *sky_conditions[] = {"CLOUDLESS", "CLOUDY", "RAINING", "LIGHTNING", "SNOWING", "\n"};
 
 /** The names of the days of the mud week. Not used in sprinttype(). */
