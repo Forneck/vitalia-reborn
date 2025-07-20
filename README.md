@@ -25,6 +25,20 @@ History
 1995, in Universidade de Campinas (UNICAMP), by Vitor de Paula. In 2000, "O Mundo de Vitália" (VitaliaMUD). had some changes in the staff. 
    The Reborn version is trying to bring back from this earlier glory with a lot of bugfixes and new resources as they were in the devs todo notes from before.
 
+Features
+--------
+
+### Multiline Aliases
+Vitalia Reborn supports creating aliases that execute multiple commands in sequence using semicolon (`;`) separation:
+
+```
+alias chess n;n;n;n;w;w;w;w
+alias prep cast 'bless';cast 'armor';cast 'shield'
+alias info score;time;who;weather
+```
+
+See [docs/MULTILINE_ALIASES.md](docs/MULTILINE_ALIASES.md) for detailed documentation and examples.
+
 Additional Notes
 ----------------
 
