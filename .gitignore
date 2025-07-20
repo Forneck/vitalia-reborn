@@ -15,6 +15,7 @@ build/*
 !build/README.md 
 syslog
 syslog.txt
+test_output.txt
 
 # Do not commit files from players 
 # lib/plrfiles/A-E/* 
