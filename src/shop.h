@@ -156,7 +156,7 @@ struct stack_data {
 #define MIN_OUTSIDE_BANK 5000
 #define MAX_OUTSIDE_BANK 15000
 
-#define MSG_NOT_OPEN_YET "Come back later!"
+#define MSG_NOT_OPEN_YET "Volte mais tarde!"
 #define MSG_NOT_REOPEN_YET "Sorry, we have closed, but come back later."
 #define MSG_CLOSED_FOR_DAY "Sorry, come back tomorrow."
 #define MSG_NO_STEAL_HERE "$n is a bloody thief!"
