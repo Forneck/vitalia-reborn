@@ -195,7 +195,7 @@ Ele parece incapaz de se mover.
 3 5 2 1d5+100 2d5+4
 400 3000
 9 9 1
-GenWimpy: 5
+GenWimpy: 7
 E
 #17017
 elemental rocha humanoide~
@@ -275,8 +275,8 @@ Ele parece um tanto quanto imprevisível.
 6 12 -3 1d5+250 3d5+5
 1000 4000
 9 9 1
-GenWimpy: 7
-GenRoam: 39
+GenWimpy: 10
+GenRoam: 78
 E
 #17023
 particula elemental coisa~
@@ -478,8 +478,8 @@ Ele se assemelha bastante a um desagradável inseto.
 5 16 4 1d5+90 2d4+1
 800 1000
 9 9 1
-GenWimpy: 41
-GenRoam: 84
+GenWimpy: 42
+GenRoam: 86
 E
 #17037
 gigantesco elemental~

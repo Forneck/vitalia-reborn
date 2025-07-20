@@ -80,8 +80,8 @@ Você vê um goblin com nadadeiras e barbatanas.
 15 5 0 3d10+280 4d3+8
 500 7000
 9 9 0
-GenWimpy: 100
-GenRoam: 89
+GenWimpy: 98
+GenRoam: 87
 E
 #28007
 gafanhoto inseto~
@@ -107,7 +107,7 @@ Ali está uma vaca louca, usando um chapéu de Viking!
 1000 13000
 9 9 0
 GenWimpy: 100
-GenRoam: 28
+GenRoam: 50
 E
 #28009
 estatua idolo metal guerreiro~
@@ -309,7 +309,7 @@ Você vê um homem vestindo uma farda branca.
 15 7 -2 1d10+490 2d5+12
 7500 2000
 9 9 1
-GenWimpy: 3
-GenRoam: 37
+GenWimpy: 5
+GenRoam: 74
 E
 $

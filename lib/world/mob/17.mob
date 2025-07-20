@@ -71,7 +71,7 @@ econômica...e também divertida!
 11 10 2 1d6+150 2d6+11
 0 11000
 9 9 1
-GenWimpy: 44
+GenWimpy: 50
 E
 #1705
 cavaleiro fantasma~
@@ -86,7 +86,7 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 63
+GenWimpy: 69
 E
 #1706
 guardiao guardião cripta~
@@ -218,9 +218,8 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 18 3 0 3d6+625 3d6+21
 0 30000
 9 9 1
-GenWimpy: 23
-GenLoot: 4
-GenRoam: 87
+GenWimpy: 26
+GenRoam: 89
 E
 #1714
 gelatina ocre~

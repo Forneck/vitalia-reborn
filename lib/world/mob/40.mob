@@ -9,7 +9,7 @@ Ela parece estar com fome.
 11 7 4 5d10+50 3d6+0
 0 12000
 9 9 0
-GenWimpy: 14
+GenWimpy: 15
 E
 T 3008
 #4001
@@ -48,7 +48,7 @@ Ele é horrível.
 4 16 5 2d10+40 1d8+1
 50 800
 9 9 0
-GenWimpy: 69
+GenWimpy: 74
 GenRoam: 87
 E
 #4004
@@ -309,7 +309,7 @@ Ele parece lodoso..
 7 14 4 4d10+25 1d9+1
 20 3000
 9 9 1
-GenWimpy: 69
-GenRoam: 87
+GenWimpy: 77
+GenRoam: 88
 E
 $

@@ -860,7 +860,7 @@ carta card mobs~
 o Card Anões~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -878,7 +878,7 @@ carta card mobs~
 o Card Cidadão Romano~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -898,7 +898,7 @@ carta card mobs~
 o Card Hobbits~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -918,7 +918,7 @@ carta card mobs~
 o Card Goblins~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -936,7 +936,7 @@ carta card mobs~
 o Card Hobgoblins~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -955,7 +955,7 @@ carta card mobs~
 o Card Orcs~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -970,7 +970,7 @@ carta card mobsII~
 o Card Puff~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -986,7 +986,7 @@ carta card mobsII~
 o Card Dragão do Apocalipse~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -1002,7 +1002,7 @@ carta card mobsII~
 o Card Dragão Esqueleto~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -1019,7 +1019,7 @@ carta card mobsII~
 o Card Bebê Dragão~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -1036,7 +1036,7 @@ carta card mobsII~
 o Card Nidhogg~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -1053,7 +1053,7 @@ carta card mobsII~
 o Card Aglandiir~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1070,7 +1070,7 @@ carta card mobsII~
 o Card Dragão Fada~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1086,7 +1086,7 @@ carta card mobsII~
 o Card Draco~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1102,7 +1102,7 @@ carta card mobsII~
 o Card Fafnir~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1118,7 +1118,7 @@ carta card mobsII~
 o Card Dracolich~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1134,7 +1134,7 @@ carta card mobsII~
 o Card Valik~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1151,7 +1151,7 @@ carta card mobsII~
 o Card Dragão Invisível~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -1168,7 +1168,7 @@ carta card mobsII~
 o Card Rainha Dragoneza~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1184,7 +1184,7 @@ carta card mobsII~
 o Card Tiamat~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1201,7 +1201,7 @@ carta card mobsII~
 o Card Ancião Dragão Dourado~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1218,7 +1218,7 @@ carta card mobsII~
 o Card Ancião Dragão Prateado~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1235,7 +1235,7 @@ carta card mobsII~
 o Card Ancião Dragão de Bronze~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1251,7 +1251,7 @@ carta card mobsII~
 o Card Dracolich Ancião~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1268,7 +1268,7 @@ carta card mobsII~
 o Card Dragão Fantasma~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1284,7 +1284,7 @@ carta card mobsII~
 o Card Ancião Dragão Vermelho~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1300,7 +1300,7 @@ carta card mobsII~
 o Card Ancião Dragão Azul~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1316,7 +1316,7 @@ carta card mobsII~
 o Card Ancião Dragão Amarelo~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1333,7 +1333,7 @@ carta card mobsII~
 o Card Ancião Dragão Verde~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1349,7 +1349,7 @@ carta card mobsII~
 o Card Ancião Dragão Negro~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1365,7 +1365,7 @@ carta card mobsII~
 o Card Ancião Dragão Branco~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E

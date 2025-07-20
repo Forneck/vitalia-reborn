@@ -225,7 +225,7 @@ Parece ser mais um cidadão comum, se dirigindo para o seu trabalho.
 5 16 5 1d4+85 1d8+1
 100 1000
 9 9 1
-GenWimpy: 80
+GenWimpy: 90
 GenRoam: 87
 E
 #12018
@@ -291,7 +291,7 @@ BareHandAttack: 6
 Str: 18
 StrAdd: 90
 GenWimpy: 14
-GenLoot: 6
+GenLoot: 5
 E
 T 3013
 #12022

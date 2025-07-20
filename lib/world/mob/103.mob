@@ -11,9 +11,9 @@ Tomara que ele não esteja com fome!
 10 4000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 32
-GenRoam: 87
-GenGroup: 43
+GenWimpy: 36
+GenRoam: 88
+GenGroup: 52
 E
 #10301
 guarda nativo~
@@ -149,8 +149,8 @@ Peludo, mal cheiroso, e desagradável. Que tal deixá-lo sozinho?
 500 4000
 9 9 1
 BareHandAttack: 9
-GenWimpy: 28
-GenRoam: 87
+GenWimpy: 33
+GenRoam: 88
 E
 #10310
 primata fêmea~
@@ -194,7 +194,7 @@ grosso couro.  Em sua boca você vê enormes dentes, pronto para atacá-lo.
 0 2700
 5 5 1
 BareHandAttack: 4
-GenWimpy: 13
+GenWimpy: 20
 E
 #10313
 troll~

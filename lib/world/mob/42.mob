@@ -34,7 +34,7 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 26
+GenWimpy: 28
 GenLoot: 1
 E
 #4202
@@ -307,6 +307,7 @@ bocarra e engolem-na inteira.  Parece que você teve sorte...
 Dex: 12
 Int: 13
 Wis: 13
+GenWimpy: 3
 E
 #4252
 urubu~

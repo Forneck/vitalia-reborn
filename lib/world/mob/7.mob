@@ -128,7 +128,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 21
+GenWimpy: 16
 E
 #708
 escorpião escorpiao vermelho~
@@ -194,7 +194,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 49
+GenWimpy: 54
 E
 #712
 impiedoso ceifeiro~
@@ -283,9 +283,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 49
-GenRoam: 85
-GenGroup: 18
+GenWimpy: 51
+GenRoam: 80
+GenGroup: 17
 E
 #716
 pequena encurvada crianca criança~

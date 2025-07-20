@@ -11,7 +11,7 @@ bravos e destemidos entrem.
 30 1 -20 6d20+500 5d6+20
 5000 99000
 9 9 1
-GenWimpy: 2
+GenWimpy: 5
 E
 #19801
 centauro ~
@@ -150,7 +150,7 @@ branco?'.
 5000 900000
 9 9 2
 GenWimpy: 7
-GenRoam: 10
+GenRoam: 42
 E
 #19810
 amarelo demonio~

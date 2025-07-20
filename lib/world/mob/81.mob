@@ -58,8 +58,8 @@ tempo e pelo cansaço.
 20 15 2 3d30+200 1d1+4
 1 7000
 9 9 1
-GenWimpy: 7
-GenRoam: 81
+GenWimpy: 10
+GenRoam: 85
 E
 #8105
 campones~
@@ -496,7 +496,8 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 0 100
 9 9 1
 GenWimpy: 5
-GenGroup: 5
+GenRoam: 29
+GenGroup: 4
 E
 #8137
 rato~
@@ -627,8 +628,8 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 39
-GenRoam: 79
+GenWimpy: 37
+GenRoam: 85
 E
 #8146
 crianca egipcia~
@@ -713,8 +714,8 @@ que deve ser sua boca.
 30 10 0 2d5+1000 2d2+14
 0 21000
 9 9 2
-GenWimpy: 12
-GenRoam: 88
+GenWimpy: 11
+GenRoam: 89
 E
 #8152
 soldado egipcio~

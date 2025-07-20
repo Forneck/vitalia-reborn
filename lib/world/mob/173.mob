@@ -296,7 +296,8 @@ vagamente em você!
 60 3 -3 20d20+550 4d4+14
 500 46088
 9 9 1
-GenWimpy: 2
+GenWimpy: 5
+GenRoam: 27
 E
 #17320
 encantado cavaleiro graduado~
@@ -372,9 +373,9 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 12
-GenRoam: 36
-GenGroup: 7
+GenWimpy: 17
+GenRoam: 45
+GenGroup: 10
 E
 #17325
 bufao dagonet bobo~
@@ -938,7 +939,7 @@ armado com uma espada comum.
 59 3 -2 6d10+709 8d7+14
 1200 59003
 9 9 1
-GenWimpy: 1
+GenWimpy: 4
 E
 #17363
 escrava~

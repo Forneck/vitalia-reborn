@@ -113,7 +113,8 @@ Apenas um sete comum ...
 500 9000
 9 9 1
 GenWimpy: 9
-GenRoam: 30
+GenLoot: 1
+GenRoam: 26
 E
 #9208
 sete espadas~
@@ -126,7 +127,8 @@ Apenas um sete comum ...
 10 15 2 2d6+100 2d4+0
 500 9000
 9 9 1
-GenWimpy: 5
+GenWimpy: 6
+GenRoam: 6
 E
 #9209
 sete paus~
@@ -139,8 +141,8 @@ Apenas um sete comum ...
 10 15 2 2d6+100 2d4+0
 500 9000
 9 9 1
-GenWimpy: 5
-GenRoam: 39
+GenWimpy: 8
+GenRoam: 60
 E
 #9210
 sete coringa~
