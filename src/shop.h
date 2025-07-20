@@ -157,14 +157,14 @@ struct stack_data {
 #define MAX_OUTSIDE_BANK 15000
 
 #define MSG_NOT_OPEN_YET "Volte mais tarde!"
-#define MSG_NOT_REOPEN_YET "Sorry, we have closed, but come back later."
-#define MSG_CLOSED_FOR_DAY "Sorry, come back tomorrow."
-#define MSG_NO_STEAL_HERE "$n is a bloody thief!"
-#define MSG_NO_SEE_CHAR "I don't trade with someone I can't see!"
-#define MSG_NO_SELL_ALIGN "Get out of here before I call the guards!"
-#define MSG_NO_SELL_CLASS "We don't serve your kind here!"
-#define MSG_NO_USED_WANDSTAFF "I don't buy used up wands or staves!"
-#define MSG_CANT_KILL_KEEPER "Get out of here before I call the guards!"
+#define MSG_NOT_REOPEN_YET "Estamos fechados, mas volte mais tarde."
+#define MSG_CLOSED_FOR_DAY "Desculpe, volte amanhã."
+#define MSG_NO_STEAL_HERE "SOCORRO! $n Esta' querendo ne roubar!"
+#define MSG_NO_SEE_CHAR "Eu não faço negocios com quem não posso ver!"
+#define MSG_NO_SELL_ALIGN "Saia daqui antes que eu chame os guardas!"
+#define MSG_NO_SELL_CLASS "Não servimos o seu tipo aqui!"
+#define MSG_NO_USED_WANDSTAFF "Eu não compro coisas mágicas usadas!"
+#define MSG_CANT_KILL_KEEPER "Saia daqui antes quw eu chame OS GUARDAS!"
 
 /* Global variables */
 
