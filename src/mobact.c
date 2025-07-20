@@ -48,6 +48,10 @@ struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch);
 struct obj_data *find_cursed_item_in_inventory(struct char_data *ch);
 struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum);
 void mob_process_wishlist_goals(struct char_data *ch);
+bool mob_try_donate(struct char_data *ch, struct obj_data *obj);
+bool mob_try_sacrifice(struct char_data *ch, struct obj_data *corpse);
+bool mob_try_junk(struct char_data *ch, struct obj_data *obj);
+bool mob_try_drop(struct char_data *ch, struct obj_data *obj);
 
 void mobile_activity(void)
 {
@@ -1465,6 +1469,40 @@ bool mob_manage_inventory(struct char_data *ch)
     if (!ch->ai_data || !ch->carrying || IS_CARRYING_N(ch) < (CAN_CARRY_N(ch) * 0.8))
         return FALSE;
 
+    /* Check if mob should sacrifice corpses in the room first */
+    if (rand_number(1, 100) <= 15) { /* 15% chance to check for corpses */
+        if (mob_try_sacrifice(ch, NULL)) {
+            return TRUE; /* Mob sacrificed something, that's enough for this pulse */
+        }
+    }
+
+    /* Check if inventory is extremely full - may need to donate or junk items */
+    bool inventory_overfull = (IS_CARRYING_N(ch) >= CAN_CARRY_N(ch) * 0.95);
+    bool inventory_heavy = (IS_CARRYING_W(ch) >= CAN_CARRY_W(ch) * 0.95);
+
+    if (inventory_overfull || inventory_heavy) {
+        /* Try to donate valuable items if mob has good alignment */
+        if (GET_ALIGNMENT(ch) > 0 && rand_number(1, 100) <= 20) {
+            if (mob_try_donate(ch, NULL)) {
+                return TRUE;
+            }
+        }
+
+        /* Try to junk worthless items if desperate */
+        if (rand_number(1, 100) <= 30) {
+            if (mob_try_junk(ch, NULL)) {
+                return TRUE;
+            }
+        }
+
+        /* Last resort - drop something */
+        if (rand_number(1, 100) <= 40) {
+            if (mob_try_drop(ch, NULL)) {
+                return TRUE;
+            }
+        }
+    }
+
     /* A "vontade" de se organizar é baseada no use_tendency. */
     if (rand_number(1, 100) > GET_GENUSE(ch)) /* GET_GENUSE será a nova macro */
         return FALSE;
@@ -2224,4 +2262,185 @@ void mob_process_wishlist_goals(struct char_data *ch)
     if (time(0) - desired_item->added_time > 3600) {
         remove_item_from_wishlist(ch, desired_item->vnum);
     }
+}
+
+/*
+ * ===============================================
+ * MOB COMMAND USAGE FUNCTIONS
+ * ===============================================
+ */
+
+/**
+ * Makes a mob try to donate an item to one of the donation rooms
+ * @param ch The mob
+ * @param obj The object to donate (NULL to find one automatically)
+ * @return TRUE if donation was attempted
+ */
+bool mob_try_donate(struct char_data *ch, struct obj_data *obj)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data) {
+        return FALSE;
+    }
+
+    /* If no object specified, find a suitable item to donate */
+    if (!obj) {
+        struct obj_data *item;
+        int min_score = 10000;
+
+        /* Find the least valuable item to donate */
+        for (item = ch->carrying; item; item = item->next_content) {
+            if (!CAN_WEAR(item, ITEM_WEAR_TAKE) || OBJ_FLAGGED(item, ITEM_NODROP)) {
+                continue;
+            }
+
+            int score = evaluate_item_for_mob(ch, item);
+            if (score < min_score) {
+                min_score = score;
+                obj = item;
+            }
+        }
+
+        if (!obj) {
+            return FALSE; /* No suitable item found */
+        }
+    }
+
+    /* Use the donate command */
+    char cmd_buf[MAX_INPUT_LENGTH];
+    snprintf(cmd_buf, sizeof(cmd_buf), "%s", obj->name);
+    do_drop(ch, cmd_buf, 0, SCMD_DONATE);
+
+    return TRUE;
+}
+
+/**
+ * Makes a mob try to sacrifice a corpse
+ * @param ch The mob
+ * @param corpse The corpse to sacrifice (NULL to find one automatically)
+ * @return TRUE if sacrifice was attempted
+ */
+bool mob_try_sacrifice(struct char_data *ch, struct obj_data *corpse)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data) {
+        return FALSE;
+    }
+
+    /* If no corpse specified, find one in the room */
+    if (!corpse) {
+        struct obj_data *obj;
+
+        for (obj = world[IN_ROOM(ch)].contents; obj; obj = obj->next_content) {
+            if (IS_CORPSE(obj)) {
+                corpse = obj;
+                break;
+            }
+        }
+
+        if (!corpse) {
+            return FALSE; /* No corpse found */
+        }
+    }
+
+    /* Use the sacrifice command */
+    char cmd_buf[MAX_INPUT_LENGTH];
+    snprintf(cmd_buf, sizeof(cmd_buf), "%s", corpse->name);
+    do_sac(ch, cmd_buf, 0, 0);
+
+    return TRUE;
+}
+
+/**
+ * Makes a mob try to junk (destroy) an item
+ * @param ch The mob
+ * @param obj The object to junk (NULL to find one automatically)
+ * @return TRUE if junk was attempted
+ */
+bool mob_try_junk(struct char_data *ch, struct obj_data *obj)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data) {
+        return FALSE;
+    }
+
+    /* If no object specified, find a suitable item to junk */
+    if (!obj) {
+        struct obj_data *item;
+        int min_score = 10000;
+
+        /* Find the least valuable item to junk */
+        for (item = ch->carrying; item; item = item->next_content) {
+            if (!CAN_WEAR(item, ITEM_WEAR_TAKE) || OBJ_FLAGGED(item, ITEM_NODROP)) {
+                continue;
+            }
+
+            int score = evaluate_item_for_mob(ch, item);
+            if (score < min_score && GET_OBJ_COST(item) < 50) { /* Only junk cheap items */
+                min_score = score;
+                obj = item;
+            }
+        }
+
+        if (!obj) {
+            return FALSE; /* No suitable item found */
+        }
+    }
+
+    /* Use the junk command */
+    char cmd_buf[MAX_INPUT_LENGTH];
+    snprintf(cmd_buf, sizeof(cmd_buf), "%s", obj->name);
+    do_drop(ch, cmd_buf, 0, SCMD_JUNK);
+
+    return TRUE;
+}
+
+/**
+ * Makes a mob try to drop an item
+ * @param ch The mob
+ * @param obj The object to drop (NULL to find one automatically)
+ * @return TRUE if drop was attempted
+ */
+bool mob_try_drop(struct char_data *ch, struct obj_data *obj)
+{
+    if (!ch || !IS_NPC(ch) || !ch->ai_data) {
+        return FALSE;
+    }
+
+    /* If no object specified, find a suitable item to drop */
+    if (!obj) {
+        struct obj_data *item;
+
+        /* Drop a random item from inventory */
+        int count = 0;
+        for (item = ch->carrying; item; item = item->next_content) {
+            if (CAN_WEAR(item, ITEM_WEAR_TAKE) && !OBJ_FLAGGED(item, ITEM_NODROP)) {
+                count++;
+            }
+        }
+
+        if (count == 0) {
+            return FALSE; /* No droppable items */
+        }
+
+        int target = rand_number(1, count);
+        count = 0;
+        for (item = ch->carrying; item; item = item->next_content) {
+            if (CAN_WEAR(item, ITEM_WEAR_TAKE) && !OBJ_FLAGGED(item, ITEM_NODROP)) {
+                count++;
+                if (count == target) {
+                    obj = item;
+                    break;
+                }
+            }
+        }
+
+        if (!obj) {
+            return FALSE;
+        }
+    }
+
+    /* Use the drop command */
+    char cmd_buf[MAX_INPUT_LENGTH];
+    snprintf(cmd_buf, sizeof(cmd_buf), "%s", obj->name);
+    do_drop(ch, cmd_buf, 0, SCMD_DROP);
+
+    return TRUE;
 }

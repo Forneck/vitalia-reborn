@@ -3877,6 +3877,9 @@ void init_char(struct char_data *ch)
     ch->player_specials->saved.completed_quests = NULL;
     GET_QUEST(ch) = NOTHING;
 
+    /* Initialize reputation to default value */
+    ch->player_specials->saved.reputation = 50; /* Default reputation */
+
     ch->player.time.birth = time(0);
     ch->player.time.logon = time(0);
     ch->player.time.played = 0;

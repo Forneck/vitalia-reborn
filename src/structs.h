@@ -1172,6 +1172,7 @@ struct player_special_data_saved {
     int num_incarnations; /* Number of incarnations		 */
 
     int karma;
+    int reputation;                      /**< Player reputation (0-100) for quest system */
     int was_class[RM_ARRAY_MAX];         /**< array of remorted classes */
     int class_history[100];              /**< chronological sequence of classes (class numbers) */
     int retained_skills[MAX_SKILLS + 1]; /**< skills retained from previous incarnations */

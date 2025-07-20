@@ -105,6 +105,7 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
 int calculate_quest_difficulty(obj_vnum item_vnum);
 int calculate_quest_reward(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty);
 int calculate_player_reputation(struct char_data *ch);
+void modify_player_reputation(struct char_data *ch, int amount);
 int calculate_quest_reward_with_reputation(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty,
                                            struct char_data *player);
 obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty);
@@ -567,6 +568,8 @@ void char_from_furniture(struct char_data *ch);
 #define GET_GENADVENTURER(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.adventurer_tendency : 0)
 
 #define GET_MOB_REPUTATION(ch) ((ch)->ai_data ? (ch)->ai_data->reputation : 0)
+#define GET_PLAYER_REPUTATION(ch) (IS_NPC(ch) ? 0 : GET_REPUTATION(ch))
+#define GET_REPUTATION(ch) (IS_NPC(ch) ? GET_MOB_REPUTATION(ch) : (ch)->player_specials->saved.reputation)
 #define GET_MOB_QUEST(ch) ((ch)->ai_data ? (ch)->ai_data->current_quest : NOTHING)
 #define GET_MOB_QUEST_TIME(ch) ((ch)->ai_data ? (ch)->ai_data->quest_timer : 0)
 #define GET_MOB_QUEST_COUNTER(ch) ((ch)->ai_data ? (ch)->ai_data->quest_counter : 0)
