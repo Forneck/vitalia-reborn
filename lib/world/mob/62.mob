@@ -23,8 +23,8 @@ Ele é um pequeno e peludo roedor com grandes orelhas.
 0 20 3 1d5+3 1d3+0
 0 25
 9 9 0
-GenWimpy: 2
-GenRoam: 45
+GenWimpy: 3
+GenRoam: 54
 E
 #6202
 esquilo~
@@ -177,8 +177,8 @@ para longe do seu caminho para chegar até você.
 12 9 -2 3d5+170 2d7+4
 0 15000
 9 9 0
-GenWimpy: 49
-GenRoam: 88
+GenWimpy: 66
+GenRoam: 89
 E
 #6213
 coisa mutante~
@@ -192,7 +192,7 @@ para longe de seu caminho, para chegar até você.
 12 9 -2 3d5+170 2d7+4
 0 15000
 9 9 0
-GenWimpy: 34
-GenRoam: 50
+GenWimpy: 39
+GenRoam: 60
 E
 $

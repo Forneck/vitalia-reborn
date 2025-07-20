@@ -9,8 +9,9 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12880
 9 9 2
-GenWimpy: 31
-GenRoam: 83
+GenWimpy: 30
+GenRoam: 86
+GenBrave: 1
 E
 #13601
 dragao negro pequeno~
@@ -151,7 +152,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12937
 9 9 1
-GenWimpy: 99
-GenRoam: 88
+GenWimpy: 100
+GenLoot: 2
+GenRoam: 89
 E
 $

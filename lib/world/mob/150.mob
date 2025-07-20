@@ -187,6 +187,8 @@ voltar a si ao ver ele.
 19 1 -1 3d6+240 2d6+8
 1000 35000
 9 9 1
+GenWimpy: 3
+GenRoam: 51
 E
 #15013
 mestre treinador~
@@ -437,7 +439,7 @@ desejo de vingança.
 11 6 3 4d4+95 2d4+8
 0 10000
 9 9 0
-GenWimpy: 30
+GenWimpy: 35
 E
 #15031
 esqueleto aldeao~
@@ -453,7 +455,7 @@ desejo de vingança.
 10 8 3 4d4+80 2d3+6
 0 8000
 9 9 0
-GenWimpy: 39
+GenWimpy: 47
 E
 #15032
 poço demonio~

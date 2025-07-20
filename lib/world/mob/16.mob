@@ -11,8 +11,9 @@ no colo e abraça-lo.
 12 15 7 3d6+145 3d4+0
 150 40000
 9 9 1
-GenWimpy: 3
-GenRoam: 51
+GenWimpy: 6
+GenLoot: 1
+GenRoam: 72
 E
 #1601
 mulher gnomo~
@@ -231,8 +232,8 @@ guarda de elite. Ele parece bravo.
 29 3 -4 5d10+822 4d8+0
 1000 35000
 9 9 1
-GenWimpy: 95
-GenRoam: 87
+GenWimpy: 98
+GenRoam: 89
 E
 #1618
 guarda-costas hobgoblin~
@@ -288,7 +289,7 @@ consegue enxergar um palmo em frente de seu nariz.
 18 9 3 3d5+400 2d6+1
 5000 12000
 9 9 1
-GenWimpy: 11
+GenWimpy: 13
 E
 #1622
 prisioneiro gnomo~
@@ -326,7 +327,7 @@ você por sua ousadia em acorda-lo.
 5 12 6 1d11+61 1d8+0
 200 600
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
 E
 #1626
 cozinheiro hobgoblin~

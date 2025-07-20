@@ -49,8 +49,8 @@ switch %random.4%
     break
   case 3
     %echo% A Rainha Gelada convoca servos de gelo para ajudá-la!
-    %load% mob 201
-    %load% mob 201
+    %load% mob 207
+    %load% mob 207
     break
   case 4
     %echo% Os olhos da Rainha brilham com poder sobrenatural!

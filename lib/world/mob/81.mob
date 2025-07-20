@@ -26,8 +26,8 @@ faraó.
 25 3 -3 2d10+200 2d3+12
 0 15000
 9 9 1
-GenWimpy: 7
-GenRoam: 72
+GenWimpy: 9
+GenRoam: 73
 E
 #8103
 esposa farao bela jovem~
@@ -482,7 +482,7 @@ Esse gato negro aparenta ser muito esperto e corajoso.
 0 100
 9 9 1
 GenWimpy: 28
-GenRoam: 68
+GenRoam: 69
 E
 #8136
 escaravelho~
@@ -496,8 +496,8 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 0 100
 9 9 1
 GenWimpy: 5
-GenRoam: 29
-GenGroup: 4
+GenRoam: 27
+GenGroup: 2
 E
 #8137
 rato~
@@ -510,7 +510,7 @@ Esse rato nojento está todo coberto com um espessa e fétida camada de lama.
 7 19 0 3d3+200 1d2+2
 0 100
 9 9 1
-GenWimpy: 13
+GenWimpy: 14
 E
 #8138
 khons~
@@ -580,8 +580,8 @@ Você mal o vê diante da escuridão.
 30 5 0 3d3+600 1d2+2
 500 15000
 9 9 1
-GenWimpy: 5
-GenRoam: 64
+GenWimpy: 6
+GenRoam: 62
 E
 #8143
 cordoniz~
@@ -612,8 +612,8 @@ urgentemente, com sua lamparina, por uma saída.
 29 4 -4 2d5+1400 1d1+22
 50 10000
 9 9 1
-GenWimpy: 11
-GenRoam: 26
+GenWimpy: 12
+GenRoam: 27
 E
 #8145
 vibora víbora cobra~
@@ -628,8 +628,8 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 37
-GenRoam: 85
+GenWimpy: 39
+GenRoam: 87
 E
 #8146
 crianca egipcia~
@@ -643,8 +643,8 @@ enquanto lágrimas desesperadas rolam por sua face corada.
 16 12 0 2d3+300 1d2+5
 10 1800
 9 9 2
-GenWimpy: 8
-GenRoam: 19
+GenWimpy: 9
+GenRoam: 20
 E
 #8147
 serpente~
@@ -714,7 +714,7 @@ que deve ser sua boca.
 30 10 0 2d5+1000 2d2+14
 0 21000
 9 9 2
-GenWimpy: 11
+GenWimpy: 16
 GenRoam: 89
 E
 #8152

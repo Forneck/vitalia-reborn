@@ -10,8 +10,7 @@ com um tom amarelado,  garras sujas e afiadas.
 13 8 1 4d6+565 2d7+11
 0 16000
 9 9 1
-GenWimpy: 23
-GenLoot: 5
+GenWimpy: 28
 E
 #1701
 vibora víbora~
@@ -71,7 +70,7 @@ econômica...e também divertida!
 11 10 2 1d6+150 2d6+11
 0 11000
 9 9 1
-GenWimpy: 50
+GenWimpy: 52
 E
 #1705
 cavaleiro fantasma~
@@ -86,7 +85,7 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 69
+GenWimpy: 89
 E
 #1706
 guardiao guardião cripta~
@@ -134,7 +133,7 @@ Você não pode conseguir mais nada com ele.
 10 11 4 2d8+325 2d6+11
 23 9000
 9 9 1
-GenWimpy: 12
+GenWimpy: 15
 E
 #1708
 bolha lama~
@@ -218,7 +217,8 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 18 3 0 3d6+625 3d6+21
 0 30000
 9 9 1
-GenWimpy: 26
+GenWimpy: 32
+GenLoot: 1
 GenRoam: 89
 E
 #1714
@@ -234,8 +234,8 @@ passado infeliz, você presume.
 16 5 1 2d6+496 2d8+12
 1576 25000
 9 9 2
-GenWimpy: 53
-GenLoot: 3
+GenWimpy: 51
+GenLoot: 2
 GenRoam: 89
 E
 #1715

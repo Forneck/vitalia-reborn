@@ -87,7 +87,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 3
 GenLoot: 1
 E
 #3907
@@ -107,7 +107,7 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 4
 E
 #3908
 demilich esqueleto~

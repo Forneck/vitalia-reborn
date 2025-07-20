@@ -26,8 +26,8 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 0 20 6 1d4+1 1d4+0
 0 60
 9 9 0
-GenWimpy: 41
-GenRoam: 83
+GenWimpy: 42
+GenRoam: 86
 E
 #6002
 urso marrom~
@@ -84,7 +84,7 @@ peluda cauda.
 2 18 6 1d4+18 1d6+0
 0 225
 9 9 0
-GenWimpy: 19
+GenWimpy: 21
 GenRoam: 87
 E
 #6006
@@ -139,7 +139,7 @@ O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 39
+GenWimpy: 40
 GenRoam: 81
 E
 #6010
@@ -184,7 +184,7 @@ no chão.
 2 19 8 1d12+22 1d6+0
 0 200
 9 9 0
-GenWimpy: 49
+GenWimpy: 50
 GenRoam: 83
 E
 #6013
@@ -201,8 +201,8 @@ pensa você.
 0 20 5 2d5+3 1d4+0
 0 40
 9 9 0
-GenWimpy: 49
-GenRoam: 84
+GenWimpy: 50
+GenRoam: 85
 E
 #6014
 corvo negro passaro~

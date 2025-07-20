@@ -9,7 +9,7 @@ Ela parece recém-saída do ovo e esperta.  Suas presas ainda estão crescendo.
 3 18 7 1d12+40 1d7+0
 80 350
 9 9 1
-GenWimpy: 42
+GenWimpy: 44
 GenRoam: 87
 E
 #6302
@@ -78,8 +78,8 @@ Um zangão comum.
 6 14 4 3d8+70 2d4+1
 200 1600
 9 9 0
-GenWimpy: 17
-GenRoam: 87
+GenWimpy: 20
+GenRoam: 88
 E
 #6307
 aranha eterea~
@@ -109,8 +109,8 @@ própria ou se foi seduzido você não poderá ter certeza.
 11 8 4 1d12+130 2d7+1
 1000 13500
 9 9 1
-GenWimpy: 17
-GenRoam: 88
+GenWimpy: 18
+GenRoam: 87
 E
 #6309
 quasit~

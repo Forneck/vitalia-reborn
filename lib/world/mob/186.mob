@@ -11,7 +11,7 @@ existir algo assim?
 5 17 5 4d6+42 1d5+1
 100 1200
 9 9 0
-GenWimpy: 7
+GenWimpy: 8
 E
 #18602
 monstro novato~
@@ -28,8 +28,8 @@ Melhor matar mesmo!
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
-GenWimpy: 41
-GenRoam: 86
+GenWimpy: 43
+GenRoam: 87
 E
 #18603
 dragão bebê dragao bebe~
@@ -63,7 +63,7 @@ Mestre irá me arrancar a cabeça se eu não encontrar o bichinho!"
 3 18 7 2d6+34 1d7+0
 500 800
 9 9 1
-GenWimpy: 22
+GenWimpy: 23
 GenLoot: 6
 GenUse: 20
 E
@@ -79,7 +79,7 @@ ocupado, tentando misturar um líquido a outro.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 0
-GenWimpy: 27
+GenWimpy: 29
 E
 #18606
 réptil reptil coisa inseto pavoroso nojento~
@@ -93,7 +93,7 @@ vermes imundos, pequenos, cheios de pernas e marrons não estariam aqui!
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 75
+GenWimpy: 77
 GenRoam: 87
 E
 #18607
@@ -109,8 +109,8 @@ espere!!  Ele parece que está querendo atacá-lo!
 4 17 5 1d8+46 2d4+0
 300 600
 9 9 0
-GenWimpy: 63
-GenRoam: 87
+GenWimpy: 67
+GenRoam: 88
 E
 #18608
 demônio demonio diabo travesso~
@@ -125,7 +125,7 @@ dar uma boa examinada nela, a coisa dispara na direção das sombras e some.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 19
+GenWimpy: 20
 GenRoam: 87
 E
 #18609
@@ -143,9 +143,9 @@ direção.
 7 15 5 3d5+85 2d4+1
 1000 3000
 9 9 1
-GenWimpy: 13
-GenRoam: 77
-GenGroup: 14
+GenWimpy: 16
+GenRoam: 84
+GenGroup: 12
 E
 #18610
 espectro fantasma~
@@ -159,7 +159,7 @@ de uma chance de levar à morte qualquer um que cruze o seu caminho.
 6 16 3 3d5+62 2d4+0
 0 1600
 9 9 0
-GenWimpy: 4
+GenWimpy: 5
 E
 #18611
 novato chato imbecil~
@@ -208,8 +208,8 @@ ela estar aqui, ao contrário dos outros que você já viu.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 13
-GenRoam: 68
+GenWimpy: 15
+GenRoam: 76
 E
 #18614
 novato perdido~

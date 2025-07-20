@@ -34,8 +34,9 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 28
+GenWimpy: 34
 GenLoot: 1
+GenRoam: 1
 E
 #4202
 parda aspide cobra~
@@ -125,8 +126,9 @@ BareHandAttack: 1
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
-GenRoam: 28
+GenWimpy: 4
+GenLoot: 2
+GenRoam: 73
 E
 #4207
 chefe nomade~

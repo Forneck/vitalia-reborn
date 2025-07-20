@@ -80,8 +80,8 @@ Há uma grande possibilidade de que Ted seja um grande amigo imaginário...
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 31
-GenRoam: 81
+GenWimpy: 32
+GenRoam: 79
 E
 #20106
 cerebro~
@@ -99,9 +99,10 @@ espera o dia em que poderá sair desse terrível lugar.
 7 15 5 3d5+85 2d4+1
 1000 3000
 9 9 1
-GenWimpy: 23
-GenRoam: 11
-GenGroup: 34
+GenWimpy: 27
+GenLoot: 1
+GenRoam: 3
+GenGroup: 37
 E
 #20107
 pesquisador distraido~
@@ -119,8 +120,7 @@ terminam por revelar o eterno paciente dentro dele.
 1100 1000
 9 9 1
 GenWimpy: 23
-GenRoam: 60
-GenGroup: 1
+GenRoam: 73
 E
 #20108
 assistente~
@@ -170,8 +170,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 29
-GenRoam: 31
+GenWimpy: 30
+GenRoam: 38
 E
 #20111
 jovem mulher Anouk~
@@ -202,8 +202,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 39
-GenRoam: 82
+GenWimpy: 40
+GenRoam: 83
 E
 #20113
 jovem mulher Lorraine~
@@ -234,7 +234,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 20
+GenWimpy: 22
 GenRoam: 74
 E
 #20115
@@ -268,8 +268,9 @@ original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 19
-GenRoam: 68
+GenWimpy: 20
+GenRoam: 79
+GenGroup: 4
 E
 #20117
 jovem mulher gabrielle~
@@ -302,8 +303,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 24
-GenRoam: 81
+GenWimpy: 25
+GenRoam: 85
+GenGroup: 5
 E
 #20119
 Spike~
