@@ -218,6 +218,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"msgedit", "msgedit", POS_DEAD, do_msgedit, LVL_GOD, 0, CMD_NOARG},
     {"mwishlist", "mwish", POS_DEAD, do_mwishlist, LVL_IMMORT, 0, CMD_ONEARG},
     {"mwant", "mwant", POS_DEAD, do_mwant, LVL_IMMORT, 0, CMD_ONEARG},
+    {"gedit", "gedit", POS_DEAD, do_oasis_gedit, LVL_BUILDER, 0, CMD_ONEARG},
     {"murder", "mur", POS_FIGHTING, do_hit, 0, SCMD_MURDER, CMD_ONEARG},
     {"mute", "mute", POS_DEAD, do_wizutil, LVL_GOD, SCMD_MUTE, CMD_ONEARG},
     {"news", "news", POS_SLEEPING, do_gen_ps, 0, SCMD_NEWS, CMD_NOARG},
@@ -1301,11 +1302,14 @@ void nanny(struct descriptor_data *d, char *arg)
     struct {
         int state;
         void (*func)(struct descriptor_data *, char *);
-    } olc_functions[] = {{CON_OEDIT, oedit_parse},       {CON_ZEDIT, zedit_parse},       {CON_SEDIT, sedit_parse},
-                         {CON_MEDIT, medit_parse},       {CON_REDIT, redit_parse},       {CON_CEDIT, cedit_parse},
-                         {CON_TRIGEDIT, trigedit_parse}, {CON_AEDIT, aedit_parse},       {CON_HEDIT, hedit_parse},
-                         {CON_QEDIT, qedit_parse},       {CON_PREFEDIT, prefedit_parse}, {CON_IBTEDIT, ibtedit_parse},
-                         {CON_MSGEDIT, msgedit_parse},   {CON_SPEDIT, spedit_parse},     {-1, NULL}};
+    } olc_functions[] = {{CON_OEDIT, oedit_parse},       {CON_ZEDIT, zedit_parse},
+                         {CON_SEDIT, sedit_parse},       {CON_MEDIT, medit_parse},
+                         {CON_REDIT, redit_parse},       {CON_CEDIT, cedit_parse},
+                         {CON_TRIGEDIT, trigedit_parse}, {CON_AEDIT, aedit_parse},
+                         {CON_HEDIT, hedit_parse},       {CON_QEDIT, qedit_parse},
+                         {CON_PREFEDIT, prefedit_parse}, {CON_IBTEDIT, ibtedit_parse},
+                         {CON_MSGEDIT, msgedit_parse},   {CON_SPEDIT, spedit_parse},
+                         {CON_GEDIT, gedit_parse},       {-1, NULL}};
     skip_spaces(&arg);
     /* Quick check for the OLC states. */
     for (player_i = 0; olc_functions[player_i].state >= 0; player_i++)

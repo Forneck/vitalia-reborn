@@ -2902,6 +2902,11 @@ static struct set_struct {
                   {"espirito", LVL_GOD, PC, BINARY},
                   {"incarnations", LVL_GOD, PC, NUMBER},
                   {"wasclass", LVL_IMPL, PC, MISC},
+                  {"goal", LVL_BUILDER, NPC, NUMBER}, /* 64 */
+                  {"goalroom", LVL_BUILDER, NPC, NUMBER},
+                  {"goalitem", LVL_BUILDER, NPC, NUMBER},
+                  {"goaltarget", LVL_BUILDER, NPC, NUMBER},
+                  {"goaltimer", LVL_BUILDER, NPC, NUMBER},
                   {"\n", 0, BOTH, MISC}};
 
 static int perform_set(struct char_data *ch, struct char_data *vict, int mode, char *val_arg)
@@ -3356,6 +3361,81 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             TOGGLE_BIT_AR(WAS_FLAGS(vict), i);
             REMOVE_BIT_AR(PLR_FLAGS(vict), NUM_CLASSES);
             break;
+        case 65: /* goal */
+            if (!IS_NPC(vict)) {
+                send_to_char(ch, "Goals can only be set on NPCs.\r\n");
+                return (0);
+            }
+            if (!vict->ai_data) {
+                CREATE(vict->ai_data, struct mob_ai_data, 1);
+                memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
+                vict->ai_data->goal_destination = NOWHERE;
+                vict->ai_data->goal_item_vnum = NOTHING;
+                vict->ai_data->goal_target_mob_rnum = NOBODY;
+            }
+            vict->ai_data->current_goal = RANGE(0, 9);
+            break;
+        case 66: /* goalroom */
+            if (!IS_NPC(vict)) {
+                send_to_char(ch, "Goals can only be set on NPCs.\r\n");
+                return (0);
+            }
+            if (!vict->ai_data) {
+                CREATE(vict->ai_data, struct mob_ai_data, 1);
+                memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
+                vict->ai_data->goal_destination = NOWHERE;
+                vict->ai_data->goal_item_vnum = NOTHING;
+                vict->ai_data->goal_target_mob_rnum = NOBODY;
+            }
+            rnum = real_room(value);
+            if (rnum == NOWHERE && value != -1) {
+                send_to_char(ch, "Room does not exist.\r\n");
+                return (0);
+            }
+            vict->ai_data->goal_destination = (value == -1) ? NOWHERE : rnum;
+            break;
+        case 67: /* goalitem */
+            if (!IS_NPC(vict)) {
+                send_to_char(ch, "Goals can only be set on NPCs.\r\n");
+                return (0);
+            }
+            if (!vict->ai_data) {
+                CREATE(vict->ai_data, struct mob_ai_data, 1);
+                memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
+                vict->ai_data->goal_destination = NOWHERE;
+                vict->ai_data->goal_item_vnum = NOTHING;
+                vict->ai_data->goal_target_mob_rnum = NOBODY;
+            }
+            vict->ai_data->goal_item_vnum = (value == -1) ? NOTHING : value;
+            break;
+        case 68: /* goaltarget */
+            if (!IS_NPC(vict)) {
+                send_to_char(ch, "Goals can only be set on NPCs.\r\n");
+                return (0);
+            }
+            if (!vict->ai_data) {
+                CREATE(vict->ai_data, struct mob_ai_data, 1);
+                memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
+                vict->ai_data->goal_destination = NOWHERE;
+                vict->ai_data->goal_item_vnum = NOTHING;
+                vict->ai_data->goal_target_mob_rnum = NOBODY;
+            }
+            vict->ai_data->goal_target_mob_rnum = (value == -1) ? NOBODY : value;
+            break;
+        case 69: /* goaltimer */
+            if (!IS_NPC(vict)) {
+                send_to_char(ch, "Goals can only be set on NPCs.\r\n");
+                return (0);
+            }
+            if (!vict->ai_data) {
+                CREATE(vict->ai_data, struct mob_ai_data, 1);
+                memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
+                vict->ai_data->goal_destination = NOWHERE;
+                vict->ai_data->goal_item_vnum = NOTHING;
+                vict->ai_data->goal_target_mob_rnum = NOBODY;
+            }
+            vict->ai_data->goal_timer = RANGE(0, 10000);
+            break;
         default:
             send_to_char(ch, "Can't set that!\r\n");
             return (0);
@@ -3700,7 +3780,7 @@ ACMD(do_zcheck)
                                 MAX_MOB_GOLD_ALLOWED);
 
             if (GET_EXP(mob) > MAX_EXP_ALLOWED && (found = 1))
-                len += snprintf(buf + len, sizeof(buf) - len, "- Has %d experience (limit: %d)\r\n", GET_EXP(mob),
+                len += snprintf(buf + len, sizeof(buf) - len, "- Has %ld experience (limit: %d)\r\n", GET_EXP(mob),
                                 MAX_EXP_ALLOWED);
             if ((AFF_FLAGGED(mob, AFF_CHARM) || AFF_FLAGGED(mob, AFF_POISON)) && (found = 1))
                 len +=
@@ -5081,7 +5161,6 @@ ACMD(do_oset)
 ACMD(do_plrload)
 {
     char arg[MAX_INPUT_LENGTH];
-    char buf[MAX_INPUT_LENGTH];
     struct char_data *victim = NULL;
 
     one_argument(argument, arg);
@@ -5205,7 +5284,24 @@ ACMD(do_mwishlist)
                 if (count == 0) {
                     send_to_char(ch, "  (empty wishlist)\r\n");
                 }
-                send_to_char(ch, "Current goal: %d\r\n", mob->ai_data->current_goal);
+                send_to_char(ch, "Current goal: %s (%d)\r\n",
+                             (mob->ai_data->current_goal >= 0 && goal_names[mob->ai_data->current_goal] &&
+                              *goal_names[mob->ai_data->current_goal] != '\n')
+                                 ? goal_names[mob->ai_data->current_goal]
+                                 : "Unknown",
+                             mob->ai_data->current_goal);
+                if (mob->ai_data->goal_destination != NOWHERE) {
+                    send_to_char(ch, "Goal room: %d\r\n", mob->ai_data->goal_destination);
+                }
+                if (mob->ai_data->goal_item_vnum != NOTHING) {
+                    send_to_char(ch, "Goal item: %d\r\n", mob->ai_data->goal_item_vnum);
+                }
+                if (mob->ai_data->goal_target_mob_rnum != NOBODY) {
+                    send_to_char(ch, "Goal target mob: %d\r\n", mob->ai_data->goal_target_mob_rnum);
+                }
+                if (mob->ai_data->goal_timer > 0) {
+                    send_to_char(ch, "Goal timer: %d\r\n", mob->ai_data->goal_timer);
+                }
             }
         }
     } else {
@@ -5237,9 +5333,23 @@ ACMD(do_mwishlist)
             send_to_char(ch, "  (empty wishlist)\r\n");
         }
 
-        send_to_char(ch, "Current goal: %d\r\n", mob->ai_data->current_goal);
+        send_to_char(ch, "Current goal: %s (%d)\r\n",
+                     (mob->ai_data->current_goal >= 0 && goal_names[mob->ai_data->current_goal] &&
+                      *goal_names[mob->ai_data->current_goal] != '\n')
+                         ? goal_names[mob->ai_data->current_goal]
+                         : "Unknown",
+                     mob->ai_data->current_goal);
+        if (mob->ai_data->goal_destination != NOWHERE) {
+            send_to_char(ch, "Goal room: %d\r\n", mob->ai_data->goal_destination);
+        }
         if (mob->ai_data->goal_item_vnum != NOTHING) {
             send_to_char(ch, "Goal item: %d\r\n", mob->ai_data->goal_item_vnum);
+        }
+        if (mob->ai_data->goal_target_mob_rnum != NOBODY) {
+            send_to_char(ch, "Goal target mob: %d\r\n", mob->ai_data->goal_target_mob_rnum);
+        }
+        if (mob->ai_data->goal_timer > 0) {
+            send_to_char(ch, "Goal timer: %d\r\n", mob->ai_data->goal_timer);
         }
     }
 }

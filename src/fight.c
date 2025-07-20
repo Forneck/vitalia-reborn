@@ -383,7 +383,7 @@ static void perform_group_gain(struct char_data *ch, int base, struct char_data 
         share = MIN(CONFIG_MAX_EXP_GAIN, MAX(1, hap_share));
     }
     if (share > 1)
-        send_to_char(ch, "Você recebe sua parte da experiência -- %lu pontos.\r\n", share);
+        send_to_char(ch, "Você recebe sua parte da experiência -- %d pontos.\r\n", share);
     else
         send_to_char(ch, "Você recebe sua parte da experiência -- um mísero ponto!\r\n");
     gain_exp(ch, share);
@@ -438,7 +438,7 @@ static void solo_gain(struct char_data *ch, struct char_data *victim)
     }
 
     if (exp > 1)
-        send_to_char(ch, "Você recebeu %lu pontos de experiência.\r\n", exp);
+        send_to_char(ch, "Você recebeu %d pontos de experiência.\r\n", exp);
     else
         send_to_char(ch, "Você recebeu um mísero ponto de experiência.\r\n");
     gain_exp(ch, exp);
@@ -945,7 +945,6 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
     struct obj_data *wielded = GET_EQ(ch, WEAR_WIELD);
     int w_type, victim_ac, calc_thaco, dam, diceroll;
     struct affected_type af;
-    int percent;
     int wpnprof = 0, nham = 0;
     /* Check that the attacker and victim exist */
     if (!ch || !victim)
@@ -982,6 +981,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             wpnprof = get_weapon_prof(ch, wielded);
         nham = get_nighthammer(ch, true);
     }
+    (void)wpnprof; /* Suppress unused variable warning */
 
     /* Calculate chance of hit. Lower THAC0 is better for attacker. */
     calc_thaco = compute_thaco(ch, victim);

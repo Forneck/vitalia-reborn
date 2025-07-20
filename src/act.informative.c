@@ -927,7 +927,7 @@ ACMD(do_score)
 
     send_to_char(ch, "\r\n");
 
-    send_to_char(ch, " \tW Experiência\tb:\tn %13ld\tgxp\tn        \tn \tW Ouro\tb.......:\tn%13ld\tYg\tn\r\n",
+    send_to_char(ch, " \tW Experiência\tb:\tn %13ld\tgxp\tn        \tn \tW Ouro\tb.......:\tn%13d\tYg\tn\r\n",
                  GET_EXP(ch), GET_GOLD(ch));
     send_to_char(ch, " \tW Prox Nível\tb.:\tn %13ld\tgxp\tn %s\r\n ",
                  level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - GET_EXP(ch),
@@ -1194,10 +1194,8 @@ ACMD(do_weather)
     int press_diff = zone_table[zona].weather->press_diff;
     int sky = zone_table[zona].weather->sky;
     int temperature = zone_table[zona].weather->temperature;
-    int temp_diff = zone_table[zona].weather->temp_diff;
     float humidity = zone_table[zona].weather->humidity;
     float wind = zone_table[zona].weather->winds;
-    int sunlight = weather_info.sunlight;   // Luz do sol global;
 
     const char *weather_feel;
     const char *temp_feel;
@@ -1292,7 +1290,7 @@ ACMD(do_help)
     space_to_minus(argument);
     if ((mid = search_help(argument, GET_LEVEL(ch))) == NOWHERE) {
         send_to_char(ch, " Não encontrei ajuda para %s. \r\n", argument);
-        mudlog(NRM, MIN(LVL_IMPL, GET_INVIS_LEV(ch)), TRUE, " % s tried to get help on %s ", GET_NAME(ch), argument);
+        mudlog(NRM, MIN(LVL_IMPL, GET_INVIS_LEV(ch)), TRUE, "%s tried to get help on %s", GET_NAME(ch), argument);
         for (i = 0; i < top_of_helpt; i++) {
             if (help_table[i].min_level > GET_LEVEL(ch))
                 continue;
