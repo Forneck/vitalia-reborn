@@ -5384,14 +5384,16 @@ ACMD(do_gstats)
         gene_arg = arg3; /* For "zone <num> <gene>", gene is third argument */
         if (!*arg2 || !*arg3) {
             send_to_char(ch, "Usage: gstats zone <zone_number> <gene>\r\n");
-            send_to_char(ch, "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+            send_to_char(ch,
+                         "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
             return;
         }
     } else {
         gene_arg = arg2; /* For "all <gene>" or "<mobname> <gene>", gene is second argument */
         if (!*arg2) {
             send_to_char(ch, "Specify a gene to analyze.\r\n");
-            send_to_char(ch, "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+            send_to_char(ch,
+                         "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
             return;
         }
     }
