@@ -205,7 +205,8 @@ void mobile_activity(void)
                     struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
                     if (keeper && ch->ai_data->goal_item_vnum != NOTHING) {
                         /* Tenta comprar o item */
-                        char buy_command[MAX_INPUT_LENGTH];
+			char buy_command[MAX_INPUT_LENGTH];
+			act("$n olha os produtos da loja.",FALSE, ch, 0,0, TO_ROOM);
                         sprintf(buy_command, "%d", ch->ai_data->goal_item_vnum);
                         shopping_buy(buy_command, ch, keeper, find_shop_by_keeper(keeper->nr));
 

@@ -42,7 +42,6 @@ Rainha Gelada - Boss Fight - M2XX~
 switch %random.4%
   case 1
     %echo% A Rainha Gelada levanta sua mão e cristais de gelo começam a se formar no ar!
-    %areaattack% 50 Uma rajada de cristais afiados atinge todos ao redor!
     break
   case 2
     %echo% A temperatura despenca drasticamente!
@@ -109,7 +108,7 @@ if %random.3% == 1
 end
 ~
 #206
-Biblioteca Gélida - Conhecimento - R2XX~
+Biblioteca Gelida - Conhecimento - R2XX~
 2 c 100
 e~
 * This is for room 2XX - Icy library book command trigger

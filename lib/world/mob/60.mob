@@ -27,7 +27,7 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 0 60
 9 9 0
 GenWimpy: 39
-GenRoam: 86
+GenRoam: 85
 E
 #6002
 urso marrom~
@@ -69,8 +69,8 @@ castanhos que olham fixamente para você, com grande interesse.
 2 19 5 2d8+8 1d6+0
 0 230
 9 9 2
-GenWimpy: 34
-GenRoam: 76
+GenWimpy: 35
+GenRoam: 74
 E
 #6005
 raposa marrom~
@@ -139,8 +139,8 @@ O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 38
-GenRoam: 87
+GenWimpy: 39
+GenRoam: 85
 E
 #6010
 esquilo~
@@ -185,7 +185,7 @@ no chão.
 0 200
 9 9 0
 GenWimpy: 50
-GenRoam: 87
+GenRoam: 85
 E
 #6013
 esquilinho~
@@ -217,7 +217,7 @@ comida.
 3 200
 9 9 0
 GenWimpy: 100
-GenRoam: 11
+GenRoam: 9
 E
 #6015
 grotesco abutre urubu~
