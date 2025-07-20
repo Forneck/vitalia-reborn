@@ -35,7 +35,7 @@ ACMD(do_assist)
         return;
     }
     if IS_DEAD (ch) {
-        send_to_char(ch, "Você não pode dar assistência a ninguém, você está mort%c!", OA(ch));
+        send_to_char(ch, "Você não pode dar assistência a ninguém, você está mort%s!", OA(ch));
         return;
     }
     one_argument(argument, arg);
@@ -45,7 +45,7 @@ ACMD(do_assist)
     else if (!(helpee = get_char_vis(ch, arg, NULL, FIND_CHAR_ROOM)))
         send_to_char(ch, "%s", CONFIG_NOPERSON);
     else if (helpee == ch)
-        send_to_char(ch, "Você não pode ajudar a si mesm%c!\r\n", OA(ch));
+        send_to_char(ch, "Você não pode ajudar a si mesm%s!\r\n", OA(ch));
     else {
         /*
          * Hit the same enemy the person you're helping is.
@@ -92,7 +92,7 @@ ACMD(do_gassist)
     }
 
     if IS_DEAD (ch) {
-        send_to_char(ch, "Você não pode dar assistência a ninguém, você está mort%c!", OA(ch));
+        send_to_char(ch, "Você não pode dar assistência a ninguém, você está mort%s!", OA(ch));
         return;
     }
     if (GROUP(ch))
@@ -147,11 +147,12 @@ ACMD(do_hit)
             return; /* you can't order a charmed pet to attack a
                                player */
 
-        if (!CONFIG_PK_ALLOWED && !IS_NPC(vict) && !IS_NPC(ch))
+        if (!CONFIG_PK_ALLOWED && !IS_NPC(vict) && !IS_NPC(ch)) {
             if (!SCMD_MURDER)
                 send_to_char(ch, "Use 'murder' se você realmente deseja atacar outro jogador.\r\n");
             else
                 check_killer(ch, vict);
+        }
 
         if ((GET_POS(ch) == POS_STANDING) && (vict != FIGHTING(ch))) {
             if (GET_DEX(ch) > GET_DEX(vict) ||
@@ -335,7 +336,6 @@ EVENTFUNC(event_backflip)
     struct char_data *ch, *tch;
     struct mud_event_data *pMudEvent;
     struct list_data *room_list;
-    int count;
 
     /* This is just a dummy check, but we'll do it anyway */
     if (event_obj == NULL)
@@ -618,7 +618,6 @@ ACMD(do_combo)
     struct char_data *vict;
     struct obj_data *weapon;
     int perc, prob, hits, basedam, dam, i;
-    int can_improve = true;
 
     one_argument(argument, arg);
 
@@ -721,7 +720,7 @@ ACMD(do_rescue)
     }
 
     if (IS_DEAD(ch)) {
-        act("Você não pode ajudar $N, você está mort$r!", FALSE, ch, 0, vict, TO_CHAR);
+        send_to_char(ch, "Você não pode ajudar ninguém, você está mort%s!\r\n", OA(ch));
         return;
     }
 
@@ -1116,7 +1115,7 @@ ACMD(do_shoot)
     char arg1[MAX_INPUT_LENGTH];
     char arg2[MAX_INPUT_LENGTH];
     struct affected_type af;
-    int dam;
+    int dam = 0;
     int door;
     bool found = FALSE;
 

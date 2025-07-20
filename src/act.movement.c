@@ -1184,7 +1184,7 @@ ACMD(do_spy)
 
     if (EXIT_FLAGGED(EXIT(ch, dir), EX_CLOSED)) {
         if (is_name(arg, EXIT(ch, dir)->keyword)) {
-            sprintf(buf, "%s parece estar fechada. \r\n", is_name(arg, EXIT(ch, dir)->keyword));
+            sprintf(buf, "%s parece estar fechada. \r\n", EXIT(ch, dir)->keyword ? EXIT(ch, dir)->keyword : "porta");
             CAP(buf);
             send_to_char(ch, "%s", buf);
         } else

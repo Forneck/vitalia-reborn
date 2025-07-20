@@ -375,7 +375,7 @@ ACMD(do_get)
                 send_to_char(ch, "Você não tem um %s.\r\n", arg2);
             else if ((GET_OBJ_TYPE(cont) != ITEM_CONTAINER) && (GET_OBJ_TYPE(cont) != ITEM_CORPSE))
                 act("$p não é um recipiente", FALSE, ch, cont, 0, TO_CHAR);
-            else if (IS_CORPSE(cont) && GET_OBJ_VAL(cont, 0) != 0)
+            else if ((IS_CORPSE(cont)) && GET_OBJ_VAL(cont, 0) != 0)
                 act("Você não pode tocar em $p!", FALSE, ch, cont, 0, TO_CHAR);
             else
                 get_from_container(ch, cont, arg1, mode, amount);

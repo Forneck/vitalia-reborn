@@ -3780,7 +3780,7 @@ ACMD(do_zcheck)
                                 MAX_MOB_GOLD_ALLOWED);
 
             if (GET_EXP(mob) > MAX_EXP_ALLOWED && (found = 1))
-                len += snprintf(buf + len, sizeof(buf) - len, "- Has %d experience (limit: %d)\r\n", GET_EXP(mob),
+                len += snprintf(buf + len, sizeof(buf) - len, "- Has %ld experience (limit: %d)\r\n", GET_EXP(mob),
                                 MAX_EXP_ALLOWED);
             if ((AFF_FLAGGED(mob, AFF_CHARM) || AFF_FLAGGED(mob, AFF_POISON)) && (found = 1))
                 len +=
@@ -5161,7 +5161,6 @@ ACMD(do_oset)
 ACMD(do_plrload)
 {
     char arg[MAX_INPUT_LENGTH];
-    char buf[MAX_INPUT_LENGTH];
     struct char_data *victim = NULL;
 
     one_argument(argument, arg);
