@@ -389,20 +389,21 @@
 #define CON_IBTEDIT 30      /**< OLC mode - idea/bug/typo edit */
 #define CON_MSGEDIT 31      /**< OLC mode - message editor */
 #define CON_SPEDIT 32       /**< OLC mode - spell editor	*/
-#define CON_GET_PROTOCOL 33 /**< Used at log-in while attempting to get protocols > */
-#define CON_REROLL 34
-#define CON_QHOME 35
-#define CON_RB_SKILL 36
-#define CON_RB_NEW_CLASS 37
-#define CON_RB_REROLL 38
-#define CON_RB_QHOME 39
-#define CON_ELEVATE_CONF 40
-#define CON_IMM_CONF 41
-#define CON_REMOTE 42
+#define CON_GEDIT 33        /**< OLC mode - goal editor	*/
+#define CON_GET_PROTOCOL 34 /**< Used at log-in while attempting to get protocols > */
+#define CON_REROLL 35
+#define CON_QHOME 36
+#define CON_RB_SKILL 37
+#define CON_RB_NEW_CLASS 38
+#define CON_RB_REROLL 39
+#define CON_RB_QHOME 40
+#define CON_ELEVATE_CONF 41
+#define CON_IMM_CONF 42
+#define CON_REMOTE 43
 
 /* OLC States range - used by IS_IN_OLC and IS_PLAYING */
 #define FIRST_OLC_STATE CON_OEDIT /**< The first CON_ state that is an OLC */
-#define LAST_OLC_STATE CON_SPEDIT /**< The last CON_ state that is an OLC  */
+#define LAST_OLC_STATE CON_GEDIT  /**< The last CON_ state that is an OLC  */
 
 /* Character equipment positions: used as index for char_data.equipment[] */
 /* NOTE: Don't confuse these constants with the ITEM_ bitvectors
