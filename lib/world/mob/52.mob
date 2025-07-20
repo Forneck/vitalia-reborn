@@ -27,8 +27,8 @@ para você, ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 91
-GenRoam: 85
+GenWimpy: 100
+GenRoam: 89
 E
 T 3009
 #5202
@@ -43,7 +43,7 @@ na frente.
 11 10 1 1d20+130 2d7+0
 0 13000
 9 9 0
-GenWimpy: 20
+GenWimpy: 18
 E
 #5203
 mímico pedra esqueletos~
@@ -113,8 +113,8 @@ Um pequeno e lindo lagarto -- bem, isso se você gostar de répteis!
 0 500
 9 9 0
 GenWimpy: 100
-GenLoot: 1
-GenRoam: 39
+GenLoot: 2
+GenRoam: 45
 E
 #5208
 golem pedra~
@@ -142,9 +142,9 @@ para você, ambiciosamente.
 9 10 3 1d12+120 1d4+5
 1500 7000
 9 9 2
-GenWimpy: 92
-GenLoot: 1
-GenRoam: 86
+GenWimpy: 100
+GenLoot: 2
+GenRoam: 89
 E
 T 3009
 $

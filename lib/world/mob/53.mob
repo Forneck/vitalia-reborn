@@ -63,7 +63,7 @@ roupas cor de areia.
 200 3750
 9 9 1
 GenWimpy: 100
-GenRoam: 85
+GenRoam: 82
 E
 #5304
 ladrao tumba~
@@ -76,8 +76,8 @@ O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
 10 10 5 10d10+100 2d6+3
 500 9000
 9 9 1
-GenWimpy: 100
-GenRoam: 84
+GenWimpy: 93
+GenRoam: 87
 E
 T 3007
 #5305
@@ -124,8 +124,8 @@ etéreo espírito de um morto.
 12 8 4 12d12+120 1d6+6
 750 15000
 9 9 0
-GenWimpy: 98
-GenRoam: 86
+GenWimpy: 100
+GenRoam: 88
 E
 #5308
 homem areia~
@@ -141,7 +141,7 @@ quentes e arenosos.
 1500 18000
 9 9 1
 GenWimpy: 100
-GenRoam: 88
+GenRoam: 89
 E
 #5309
 efreeti~

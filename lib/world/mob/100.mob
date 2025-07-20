@@ -11,8 +11,9 @@ rua de Vitália.
 6 12 6 2d6+70 1d2+6
 275 1890
 9 9 1
-GenWimpy: 99
-GenRoam: 81
+GenWimpy: 100
+GenLoot: 1
+GenRoam: 84
 E
 #10001
 magra mulher aldeã~
@@ -168,7 +169,7 @@ As vezes você se pergunta se sua vida seria melhor se você fosse uma galinha.
 3 18 8 1d5+20 1d2+2
 2 30
 9 9 2
-GenWimpy: 62
+GenWimpy: 63
 GenRoam: 87
 E
 #10012

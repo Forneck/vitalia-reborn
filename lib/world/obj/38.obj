@@ -233,16 +233,6 @@ Uma estátua de forma abstrata encontra-se aqui.~
 0 0 0 0
 80 10000 1000 0 0
 E
-estátua abstrata~
-   Na verdade, essa estátua possui uma forma mais abstrata, por isso se
-destaca um pouco das demais.  Parece ser uma pessoa empunhando uma arma, mas
-você nem ao menos é capaz de identificar seu sexo, ou sua profissão.  Ainda
-assim ela te lembra muito alguém que você conhece... só não está conseguindo
-lembrar o nome.  O chão embaixo da estátua está um pouco arranhado, como se
-a houvessem arrastado algumas vezes.  Ao pé da estátua há uma pequena
-inscrição.
-~
-E
 inscrição~
    "Esta estátua representa você, sim, você!  Assim como também representa
 todos os grandes homens e mulheres que se aventuram ou já se aventuraram
@@ -251,6 +241,16 @@ conquistar é a amizade de seus companheiros, e o amor deles será a melhor
 recompensa que irá receber.  Mantenha isso em mente e você nunca será
 esquecido, e ao mesmo tempo levará para sempre Vitália em seu coração.
 A AMIZADE irá abrir o mundo para você."
+~
+E
+estátua abstrata~
+   Na verdade, essa estátua possui uma forma mais abstrata, por isso se
+destaca um pouco das demais.  Parece ser uma pessoa empunhando uma arma, mas
+você nem ao menos é capaz de identificar seu sexo, ou sua profissão.  Ainda
+assim ela te lembra muito alguém que você conhece... só não está conseguindo
+lembrar o nome.  O chão embaixo da estátua está um pouco arranhado, como se
+a houvessem arrastado algumas vezes.  Ao pé da estátua há uma pequena
+inscrição.
 ~
 #3809
 lista personalidades~
@@ -276,7 +276,7 @@ carta card itens~
 o Card Lâmina Élfica de Alaric~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -294,7 +294,7 @@ carta card itens~
 o Card Escudo de Fogo~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -312,7 +312,7 @@ carta card itens~
 o Card Manoplas de Zoghtu~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -330,7 +330,7 @@ carta card itens~
 o Card Olho de Horus~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -347,7 +347,7 @@ carta card itens~
 o Card Carnax~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -364,7 +364,7 @@ carta card itens~
 o Card Manto das Trevas de Huthven~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -381,7 +381,7 @@ carta card itens~
 o Card Bastão de Bruenor~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -398,7 +398,7 @@ carta card itens~
 o Card Tiara de Calíope~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -414,7 +414,7 @@ carta card itens~
 o Card Machado de Júpiter~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -431,7 +431,7 @@ carta card itens~
 o Card Anel de Cranaloc~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -449,7 +449,7 @@ carta card itens~
 o Card Chave de Nabaqila~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -467,7 +467,7 @@ carta card itens~
 o Card Rosa Vermelha~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -484,7 +484,7 @@ carta card itens~
 o Card Cálice Sagrado~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -501,7 +501,7 @@ carta card itens~
 o Card Manto do Inverno~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -518,7 +518,7 @@ carta card itens~
 o Card Bracelete do Verão~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -535,7 +535,7 @@ carta card itens~
 o Card Anel da Primavera~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -552,7 +552,7 @@ carta card itens~
 o Card Cinturão do Outono~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -571,7 +571,7 @@ carta card itens~
 o Card Aro de Phanzyenon~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -589,7 +589,7 @@ carta card itens~
 o Card Pena Dourada do Escritor~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -608,7 +608,7 @@ carta card mobs~
 o Card Guardião da Floresta~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -623,7 +623,7 @@ carta card mobs~
 o Card Drows~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -643,7 +643,7 @@ carta card mobs~
 o Card Novatos~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -667,7 +667,7 @@ carta card mobs~
 o Card Urubu~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -683,7 +683,7 @@ carta card mobs~
 o Card Fido~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 300000 30000 0 0
 E
@@ -699,7 +699,7 @@ carta card mobs~
 o Card Atoms~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -718,7 +718,7 @@ carta card mobs~
 o Card Bolha Gelatinosa Verde~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -735,7 +735,7 @@ carta card mobs~
 o Card Homens Lagarto~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -753,7 +753,7 @@ carta card mobs~
 o Card Miconóides~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -771,7 +771,7 @@ carta card mobs~
 o Card Lâmia~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 200000 30000 0 0
 E
@@ -788,7 +788,7 @@ carta card mobs~
 o Card Peças de Xadrez~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -804,7 +804,7 @@ carta card mobs~
 o Card Cartas de Baralho~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -822,7 +822,7 @@ carta card mobs~
 o Card Elfos~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -841,7 +841,7 @@ carta card mobs~
 o Card Gnomos~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 100000 30000 0 0
 E
@@ -1534,7 +1534,7 @@ carta card~
 o Card Bracelete de Ossos~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E
@@ -1551,7 +1551,7 @@ carta card itens~
 o Card Espada de Geandrias~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
-8 degq 0 0 0 ao 0 0 0 0 0 0 0
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 500000 30000 0 0
 E

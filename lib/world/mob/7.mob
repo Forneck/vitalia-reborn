@@ -61,7 +61,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 26
+GenWimpy: 27
 GenRoam: 87
 E
 #705
@@ -381,8 +381,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 8
-GenRoam: 73
+GenWimpy: 10
+GenRoam: 82
 E
 #750
 febre escarlate~

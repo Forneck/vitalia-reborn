@@ -37,7 +37,7 @@ A aranha-lobo é peluda, muito peluda.
 6 12 6 3d8+70 2d5+3
 1250 6000
 9 9 2
-GenWimpy: 19
+GenWimpy: 21
 E
 #6304
 orc~
@@ -110,7 +110,7 @@ própria ou se foi seduzido você não poderá ter certeza.
 1000 13500
 9 9 1
 GenWimpy: 17
-GenRoam: 87
+GenRoam: 88
 E
 #6309
 quasit~

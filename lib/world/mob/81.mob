@@ -11,8 +11,8 @@ de aparência sombria.
 40 0 -5 2d500+200 3d4+18
 2000 40000
 9 9 1
-GenWimpy: 2
-GenRoam: 43
+GenWimpy: 4
+GenRoam: 52
 E
 #8102
 cidadao egipcio~
@@ -496,7 +496,7 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 0 100
 9 9 1
 GenWimpy: 5
-GenGroup: 6
+GenGroup: 5
 E
 #8137
 rato~
@@ -714,7 +714,7 @@ que deve ser sua boca.
 0 21000
 9 9 2
 GenWimpy: 12
-GenRoam: 87
+GenRoam: 88
 E
 #8152
 soldado egipcio~

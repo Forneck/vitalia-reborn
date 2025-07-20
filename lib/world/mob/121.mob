@@ -150,7 +150,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 10
+GenWimpy: 16
 E
 #12109
 enorme sanguessuga~
@@ -356,8 +356,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 92
-GenRoam: 80
+GenWimpy: 99
+GenRoam: 87
 E
 #12121
 quimera leao bode dragao~

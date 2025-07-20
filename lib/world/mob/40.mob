@@ -117,8 +117,8 @@ O hobgoblin parece um tanto perdido.
 6 12 6 3d8+70 2d4+0
 100 1500
 9 9 1
-GenWimpy: 33
-GenRoam: 87
+GenWimpy: 34
+GenRoam: 88
 E
 #4053
 serpente cobra marrom~
@@ -295,9 +295,8 @@ Ele não parece muito amigável...
 9 10 3 3d10+100 2d6+2
 500 9000
 9 9 1
-GenWimpy: 40
-GenRoam: 87
-GenGroup: 1
+GenWimpy: 43
+GenRoam: 86
 E
 #4107
 kobold~

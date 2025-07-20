@@ -67,7 +67,7 @@ Ou então, ele pode apenas estar com dor de cabeça.
 436 3500
 9 9 1
 GenWimpy: 20
-GenRoam: 87
+GenRoam: 88
 E
 T 3009
 #2505
@@ -179,8 +179,8 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 43
-GenRoam: 74
+GenWimpy: 41
+GenRoam: 70
 E
 #2513
 guardioes maiores olhos~
@@ -193,9 +193,9 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 16
-GenRoam: 88
-GenGroup: 51
+GenWimpy: 17
+GenRoam: 89
+GenGroup: 50
 E
 #2514
 mago visitante~
@@ -222,7 +222,7 @@ Ela parece estar bastante concentrada em seus estudos.
 7 7 2 7d6+25 2d4+5
 369 2950
 6 6 2
-GenWimpy: 66
+GenWimpy: 65
 E
 T 3009
 #2516
@@ -236,7 +236,7 @@ Ele parece ignorar tudo à sua volta, exceto o feitiço que está memorizando.
 7 6 2 7d6+25 2d4+5
 487 2750
 9 9 1
-GenWimpy: 74
+GenWimpy: 72
 E
 T 3009
 #2517
@@ -251,7 +251,7 @@ Ele parece estar sonhando.
 7 7 2 7d6+25 2d4+4
 211 2650
 4 4 1
-GenWimpy: 67
+GenWimpy: 65
 E
 T 3009
 #2518
@@ -450,7 +450,7 @@ de conhecimento que ela está traduzindo.
 15 6 -1 15d15+150 2d4+10
 684 16550
 9 9 2
-GenWimpy: 2
+GenWimpy: 3
 E
 T 3009
 #2532
@@ -564,7 +564,7 @@ Ele parece inflamável.
 16 7 -5 16d16+160 1d10+10
 1000 17500
 9 9 0
-GenWimpy: 15
+GenWimpy: 19
 E
 #2540
 mestre vinculador~
