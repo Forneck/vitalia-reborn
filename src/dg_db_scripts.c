@@ -54,6 +54,13 @@ void parse_trigger(FILE *trig_f, int nr)
     trig->trigger_type = (long)asciiflag_conv(flags);
     trig->narg = (k == 3) ? t[0] : 0;
 
+    /* Validate narg for random triggers to prevent crashes */
+    if (IS_SET(trig->trigger_type, MTRIG_RANDOM) && (trig->narg < 0 || trig->narg > 100)) {
+        mudlog(BRF, LVL_BUILDER, TRUE, "SYSERR: Invalid narg %d for random trigger %d (%s). Using 0.", trig->narg, nr,
+               trig->name ? trig->name : "unnamed");
+        trig->narg = 0;
+    }
+
     trig->arglist = fread_string(trig_f, errors);
 
     cmds = s = fread_string(trig_f, errors);

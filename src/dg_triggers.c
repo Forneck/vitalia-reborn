@@ -113,9 +113,18 @@ void random_mtrigger(char_data *ch)
         return;
 
     for (t = TRIGGERS(SCRIPT(ch)); t; t = t->next) {
-        if (TRIGGER_CHECK(t, MTRIG_RANDOM) && (rand_number(1, 100) <= GET_TRIG_NARG(t))) {
-            script_driver(&ch, t, MOB_TRIGGER, TRIG_NEW);
-            break;
+        if (TRIGGER_CHECK(t, MTRIG_RANDOM)) {
+            int narg = GET_TRIG_NARG(t);
+            /* Bounds check narg to prevent issues with corrupted data */
+            if (narg < 0 || narg > 100) {
+                mudlog(BRF, LVL_BUILDER, TRUE, "SYSERR: Invalid narg %d in random trigger %s on mob %s. Skipping.",
+                       narg, GET_TRIG_NAME(t) ? GET_TRIG_NAME(t) : "unnamed", GET_NAME(ch));
+                continue;
+            }
+            if (rand_number(1, 100) <= narg) {
+                script_driver(&ch, t, MOB_TRIGGER, TRIG_NEW);
+                break;
+            }
         }
     }
 }
