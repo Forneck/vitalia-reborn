@@ -5355,7 +5355,7 @@ static void calculate_gene_stats(int *values, int count, float *mean, float *med
  */
 ACMD(do_gstats)
 {
-    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
+    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH], arg3[MAX_INPUT_LENGTH];
     struct char_data *mob = NULL;
     struct char_data *proto_mob;
     mob_vnum target_vnum = NOBODY;
@@ -5365,8 +5365,12 @@ ACMD(do_gstats)
     float mean, median, std_dev;
     int min_val, max_val;
     char *gene_name = NULL;
+    char *gene_arg = NULL;
 
-    two_arguments(argument, arg1, arg2);
+    /* Parse all three possible arguments */
+    argument = one_argument(argument, arg1);
+    argument = one_argument(argument, arg2);
+    one_argument(argument, arg3);
 
     if (!*arg1) {
         send_to_char(ch, "Usage: gstats <target> <gene>\r\n");
@@ -5375,32 +5379,43 @@ ACMD(do_gstats)
         return;
     }
 
-    if (!*arg2) {
-        send_to_char(ch, "Specify a gene to analyze.\r\n");
-        send_to_char(ch, "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
-        return;
+    /* Determine the gene argument based on the target type */
+    if (!str_cmp(arg1, "zone")) {
+        gene_arg = arg3; /* For "zone <num> <gene>", gene is third argument */
+        if (!*arg2 || !*arg3) {
+            send_to_char(ch, "Usage: gstats zone <zone_number> <gene>\r\n");
+            send_to_char(ch, "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+            return;
+        }
+    } else {
+        gene_arg = arg2; /* For "all <gene>" or "<mobname> <gene>", gene is second argument */
+        if (!*arg2) {
+            send_to_char(ch, "Specify a gene to analyze.\r\n");
+            send_to_char(ch, "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+            return;
+        }
     }
 
     /* Determine gene type */
-    if (!str_cmp(arg2, "wimpy"))
+    if (!str_cmp(gene_arg, "wimpy"))
         gene_name = "Wimpy Tendency";
-    else if (!str_cmp(arg2, "loot"))
+    else if (!str_cmp(gene_arg, "loot"))
         gene_name = "Loot Tendency";
-    else if (!str_cmp(arg2, "equip"))
+    else if (!str_cmp(gene_arg, "equip"))
         gene_name = "Equip Tendency";
-    else if (!str_cmp(arg2, "roam"))
+    else if (!str_cmp(gene_arg, "roam"))
         gene_name = "Roam Tendency";
-    else if (!str_cmp(arg2, "brave"))
+    else if (!str_cmp(gene_arg, "brave"))
         gene_name = "Brave Prevalence";
-    else if (!str_cmp(arg2, "group"))
+    else if (!str_cmp(gene_arg, "group"))
         gene_name = "Group Tendency";
-    else if (!str_cmp(arg2, "use"))
+    else if (!str_cmp(gene_arg, "use"))
         gene_name = "Use Tendency";
-    else if (!str_cmp(arg2, "trade"))
+    else if (!str_cmp(gene_arg, "trade"))
         gene_name = "Trade Tendency";
-    else if (!str_cmp(arg2, "quest"))
+    else if (!str_cmp(gene_arg, "quest"))
         gene_name = "Quest Tendency";
-    else if (!str_cmp(arg2, "adventurer"))
+    else if (!str_cmp(gene_arg, "adventurer"))
         gene_name = "Adventurer Tendency";
     else {
         send_to_char(
@@ -5410,13 +5425,12 @@ ACMD(do_gstats)
 
     /* Determine target scope */
     if (!str_cmp(arg1, "zone")) {
-        char zone_arg[MAX_INPUT_LENGTH];
-        one_argument(argument + strlen(arg1) + strlen(arg2) + 2, zone_arg);
-        if (!*zone_arg || !isdigit(*zone_arg)) {
+        if (!isdigit(*arg2)) {
             send_to_char(ch, "Zone analysis requires a zone number.\r\n");
+            send_to_char(ch, "Usage: gstats zone <zone_number> <gene>\r\n");
             return;
         }
-        target_zone = real_zone(atoi(zone_arg));
+        target_zone = real_zone(atoi(arg2));
         if (target_zone == NOWHERE) {
             send_to_char(ch, "No such zone.\r\n");
             return;
@@ -5460,25 +5474,25 @@ ACMD(do_gstats)
 
         /* Extract the requested gene value */
         int gene_value = 0;
-        if (!str_cmp(arg2, "wimpy"))
+        if (!str_cmp(gene_arg, "wimpy"))
             gene_value = proto_mob->ai_data->genetics.wimpy_tendency;
-        else if (!str_cmp(arg2, "loot"))
+        else if (!str_cmp(gene_arg, "loot"))
             gene_value = proto_mob->ai_data->genetics.loot_tendency;
-        else if (!str_cmp(arg2, "equip"))
+        else if (!str_cmp(gene_arg, "equip"))
             gene_value = proto_mob->ai_data->genetics.equip_tendency;
-        else if (!str_cmp(arg2, "roam"))
+        else if (!str_cmp(gene_arg, "roam"))
             gene_value = proto_mob->ai_data->genetics.roam_tendency;
-        else if (!str_cmp(arg2, "brave"))
+        else if (!str_cmp(gene_arg, "brave"))
             gene_value = proto_mob->ai_data->genetics.brave_prevalence;
-        else if (!str_cmp(arg2, "group"))
+        else if (!str_cmp(gene_arg, "group"))
             gene_value = proto_mob->ai_data->genetics.group_tendency;
-        else if (!str_cmp(arg2, "use"))
+        else if (!str_cmp(gene_arg, "use"))
             gene_value = proto_mob->ai_data->genetics.use_tendency;
-        else if (!str_cmp(arg2, "trade"))
+        else if (!str_cmp(gene_arg, "trade"))
             gene_value = proto_mob->ai_data->genetics.trade_tendency;
-        else if (!str_cmp(arg2, "quest"))
+        else if (!str_cmp(gene_arg, "quest"))
             gene_value = proto_mob->ai_data->genetics.quest_tendency;
-        else if (!str_cmp(arg2, "adventurer"))
+        else if (!str_cmp(gene_arg, "adventurer"))
             gene_value = proto_mob->ai_data->genetics.adventurer_tendency;
 
         if (count < 1000) {

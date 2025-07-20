@@ -1509,6 +1509,119 @@ void transcend(struct char_data *ch)
 }
 
 /**
+ * Check if a mob is a shopkeeper by looking through the shop array
+ */
+bool is_shopkeeper(struct char_data *mob)
+{
+    if (!IS_NPC(mob))
+        return FALSE;
+        
+    int shop_nr;
+    for (shop_nr = 0; shop_nr <= top_shop; shop_nr++)
+        if (SHOP_KEEPER(shop_nr) == mob->nr)
+            return TRUE;
+            
+    return FALSE;
+}
+
+/**
+ * Calculate the fitness of a mob based on its type and performance.
+ * Higher fitness means the mob was more successful and should contribute
+ * more to the genetic pool. Returns a value between 0 and 100.
+ */
+int calculate_mob_fitness(struct char_data *mob)
+{
+    if (!IS_NPC(mob) || !mob->ai_data)
+        return 0;
+
+    int base_fitness = 0;
+    
+    /* Base fitness from experience gained (survival and combat effectiveness) */
+    int exp_gained = GET_EXP(mob);
+    if (exp_gained > 0) {
+        /* Scale XP to fitness: 0-2500 XP maps to 0-40 fitness points */
+        base_fitness += MIN(exp_gained / 62, 40); /* 2500 / 62 ≈ 40 */
+    }
+    
+    /* Base fitness from gold accumulated (economic success) */
+    int gold = GET_GOLD(mob);
+    if (gold > 0) {
+        /* Scale gold to fitness: 0-1000 gold maps to 0-20 fitness points */
+        base_fitness += MIN(gold / 50, 20); /* 1000 / 50 = 20 */
+    }
+    
+    /* Bonus fitness based on mob type and special behaviors */
+    
+    /* Shopkeeper fitness: based on economic activity */
+    if (is_shopkeeper(mob)) {
+        /* Shopkeepers get bonus for having more money */
+        if (gold > 500) base_fitness += 10;
+        if (gold > 1000) base_fitness += 10;
+        /* Future: could add shop transaction count, inventory turnover, etc. */
+    }
+    
+    /* Sentinel fitness: based on combat effectiveness and area defense */
+    if (MOB_FLAGGED(mob, MOB_SENTINEL)) {
+        /* Sentinels get bonus for higher level (more dangerous defender) */
+        base_fitness += MIN(GET_LEVEL(mob) / 5, 15); /* Level 75 gives 15 points */
+        /* Sentinels get bonus for being brave */
+        if (MOB_FLAGGED(mob, MOB_BRAVE)) base_fitness += 5;
+    }
+    
+    /* Group member fitness: based on group cooperation */
+    if (GROUP(mob)) {
+        /* Mobs that died while in a group get a small cooperation bonus */
+        base_fitness += 5;
+        /* Larger groups indicate better cooperation */
+        if (GROUP(mob)->members && GROUP(mob)->members->iSize > 2) {
+            base_fitness += 5;
+        }
+    }
+    
+    /* Aggressive mobs get bonus for combat engagement */
+    if (MOB_FLAGGED(mob, MOB_AGGRESSIVE)) {
+        base_fitness += 5;
+    }
+    
+    /* Penalty for dying too close to starting location (didn't explore/adapt) */
+    if (IN_ROOM(mob) == real_room(GET_LOADROOM(mob))) {
+        base_fitness -= 10;
+    }
+    
+    /* Bonus for dying far from starting location (exploration/adaptation) */
+    room_vnum load_room = GET_LOADROOM(mob);
+    if (load_room != NOWHERE && IN_ROOM(mob) != NOWHERE) {
+        /* This is a simple distance check - could be improved with pathfinding */
+        int room_diff = abs(GET_ROOM_VNUM(IN_ROOM(mob)) - load_room);
+        if (room_diff > 50) base_fitness += 5;  /* Explored different areas */
+        if (room_diff > 100) base_fitness += 5; /* Explored far areas */
+    }
+    
+    /* Ensure fitness is within bounds */
+    return MAX(0, MIN(base_fitness, 100));
+}
+
+/**
+ * Improved version of update_single_gene that uses fitness as weight.
+ * Instead of a fixed 70/30 split, this uses fitness to determine
+ * how much the dying mob should influence the prototype.
+ */
+void update_single_gene_with_fitness(int *proto_gene, int instance_gene, int fitness, int min, int max)
+{
+    /* Convert fitness (0-100) to influence weight (10-90) */
+    /* Even low-fitness mobs get some influence (minimum 10%) */
+    /* High-fitness mobs get major influence (up to 90%) */
+    int influence_weight = 10 + ((fitness * 80) / 100); /* Maps 0-100 fitness to 10-90 weight */
+    int prototype_weight = 100 - influence_weight;
+    
+    /* Apply the weighted formula */
+    *proto_gene = ((*proto_gene * prototype_weight) + (instance_gene * influence_weight)) / 100;
+    
+    /* Ensure the new value stays within bounds */
+    *proto_gene = MAX(min, MIN(*proto_gene, max));
+}
+
+/**
  * Função auxiliar que calcula a nova média ponderada para um único gene
  * e atualiza o valor do protótipo.
  * @param proto_gene Um ponteiro para o campo do gene no protótipo.
@@ -1527,7 +1640,7 @@ void update_single_gene(int *proto_gene, int instance_gene, int min, int max)
 
 /**
  * Chamada quando um mob morre para atualizar a genética do seu protótipo.
- * VERSÃO REFATORADA: Usa uma função auxiliar para maior clareza e manutenção.
+ * VERSÃO MELHORADA: Usa fitness para determinar a influência genética.
  */
 void update_mob_prototype_genetics(struct char_data *mob)
 {
@@ -1540,7 +1653,13 @@ void update_mob_prototype_genetics(struct char_data *mob)
     if (!proto->ai_data)
         return;
 
-    /* 1. Prepara os valores finais das instâncias, aplicando as penalidades de morte. */
+    /* 1. Calculate the mob's fitness based on its performance */
+    int fitness = calculate_mob_fitness(mob);
+    
+    /* Store fitness in the mob for potential future use/debugging */
+    GET_FIT(mob) = fitness;
+
+    /* 2. Prepare final gene values, applying death-related adjustments */
     int final_wimpy = mob->ai_data->genetics.wimpy_tendency;
     int final_roam = mob->ai_data->genetics.roam_tendency;
     int final_group = mob->ai_data->genetics.group_tendency;
@@ -1566,20 +1685,19 @@ void update_mob_prototype_genetics(struct char_data *mob)
         final_group -= 3;
     }
 
-    /* 2. Chama a função auxiliar para atualizar cada gene do protótipo. */
-    update_single_gene(&proto->ai_data->genetics.wimpy_tendency, final_wimpy, 0, 100);
-    update_single_gene(&proto->ai_data->genetics.loot_tendency, mob->ai_data->genetics.loot_tendency, 0, 100);
-    update_single_gene(&proto->ai_data->genetics.equip_tendency, mob->ai_data->genetics.equip_tendency, 0, 100);
-    update_single_gene(&proto->ai_data->genetics.roam_tendency, final_roam, 0, 100);
-    update_single_gene(&proto->ai_data->genetics.group_tendency, final_group, 0, 100);
-    update_single_gene(&proto->ai_data->genetics.use_tendency, final_use, 0, 100);
-    update_single_gene(&proto->ai_data->genetics.trade_tendency, final_trade, 0, 100);
-    update_single_gene(&proto->ai_data->genetics.brave_prevalence, final_brave, 0,
-                       75); /* Usa o limite de 75 que definimos. */
-    update_single_gene(&proto->ai_data->genetics.quest_tendency, final_quest, 0, 100);
-    update_single_gene(&proto->ai_data->genetics.adventurer_tendency, final_adventurer, 0, 100);
+    /* 3. Use fitness-based genetic updates instead of fixed 70/30 split */
+    update_single_gene_with_fitness(&proto->ai_data->genetics.wimpy_tendency, final_wimpy, fitness, 0, 100);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.loot_tendency, mob->ai_data->genetics.loot_tendency, fitness, 0, 100);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.equip_tendency, mob->ai_data->genetics.equip_tendency, fitness, 0, 100);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.roam_tendency, final_roam, fitness, 0, 100);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.group_tendency, final_group, fitness, 0, 100);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.use_tendency, final_use, fitness, 0, 100);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.trade_tendency, final_trade, fitness, 0, 100);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.brave_prevalence, final_brave, fitness, 0, 75);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.quest_tendency, final_quest, fitness, 0, 100);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.adventurer_tendency, final_adventurer, fitness, 0, 100);
 
-    /* 3. Marca a zona para salvar. */
+    /* 4. Marca a zona para salvar. */
     mob_vnum vnum = mob_index[rnum].vnum;
     zone_rnum rznum = real_zone_by_thing(vnum);
 

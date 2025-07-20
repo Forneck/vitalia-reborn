@@ -43,6 +43,9 @@ int get_nighthammer(struct char_data *ch, bool real);
 
 void update_mob_prototype_genetics(struct char_data *mob);
 void update_single_gene(int *proto_gene, int instance_gene, int min, int max);
+void update_single_gene_with_fitness(int *proto_gene, int instance_gene, int fitness, int min, int max);
+int calculate_mob_fitness(struct char_data *mob);
+bool is_shopkeeper(struct char_data *mob);
 
 /* Global variables */
 extern struct attack_hit_type attack_hit_text[];
