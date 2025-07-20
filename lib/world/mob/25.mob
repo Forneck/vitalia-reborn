@@ -179,8 +179,8 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 45
-GenRoam: 81
+GenWimpy: 43
+GenRoam: 74
 E
 #2513
 guardioes maiores olhos~
@@ -193,9 +193,9 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 15
-GenRoam: 87
-GenGroup: 53
+GenWimpy: 16
+GenRoam: 88
+GenGroup: 51
 E
 #2514
 mago visitante~
@@ -236,7 +236,7 @@ Ele parece ignorar tudo à sua volta, exceto o feitiço que está memorizando.
 7 6 2 7d6+25 2d4+5
 487 2750
 9 9 1
-GenWimpy: 75
+GenWimpy: 74
 E
 T 3009
 #2517
@@ -788,7 +788,7 @@ garras bem grandes.
 15 5 -5 15d15+150 5d5+5
 0 18750
 9 9 2
-GenWimpy: 15
+GenWimpy: 16
 E
 #2556
 mestre cinza~
@@ -869,7 +869,7 @@ Parece ser nada mais que uma grande bola de pêlos, com garras.
 15 4 -4 15d8+10 3d7+3
 0 7950
 9 9 0
-GenWimpy: 31
+GenWimpy: 33
 E
 #2562
 mestre branco~

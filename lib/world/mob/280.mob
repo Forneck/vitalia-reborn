@@ -54,7 +54,7 @@ detalhada sem sentir o estômago embrulhar.
 15 5 0 5d6+420 3d5+10
 0 30000
 9 9 0
-GenWimpy: 18
+GenWimpy: 21
 E
 #28005
 espantalho boneco palha~
@@ -81,7 +81,7 @@ Você vê um goblin com nadadeiras e barbatanas.
 500 7000
 9 9 0
 GenWimpy: 100
-GenRoam: 87
+GenRoam: 89
 E
 #28007
 gafanhoto inseto~
@@ -134,7 +134,7 @@ Apenas uma vaquinha...
 12 7 0 3d5+200 3d5+3
 0 13000
 9 9 0
-GenWimpy: 27
+GenWimpy: 30
 E
 #28011
 cavalo~

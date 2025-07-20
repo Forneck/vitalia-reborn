@@ -458,8 +458,8 @@ nele.
 25 5 0 5d3+400 6d7+7
 1200 21000
 9 9 1
-GenWimpy: 4
-GenRoam: 81
+GenWimpy: 5
+GenRoam: 83
 E
 #17331
 mercador~
@@ -650,7 +650,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 16
+GenWimpy: 14
 E
 #17344
 escrava~

@@ -158,8 +158,7 @@ conhecimento a não ser uma imensa sêde de poder e destruição.
 36 -2 -1 350d2+220 3d8+14
 5000 64000
 9 9 1
-GenWimpy: 2
-GenRoam: 1
+GenWimpy: 4
 E
 #5712
 guardiao gruta espectro~
@@ -186,7 +185,7 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 13
+GenWimpy: 17
 E
 #5714
 rymat conselheiro~

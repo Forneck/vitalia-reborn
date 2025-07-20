@@ -2,6 +2,11 @@
 Vitalia~
 Norte da Cidade de Midgaard~
 3000 3099 15 2 j 0 0 0 -1 -1 0
+M 0 3009 1 3058 	(Wally o vendedor de água)
+G 1 3102 99 -1 	(uma xícara)
+G 1 3103 99 -1 	(uma garrafa de água Evian)
+G 1 3104 99 -1 	(um cantil)
+G 1 6013 100 -1 	(um barril)
 R 0 3001 3034 -1 	(um caixa automático)
 O 0 3034 100 3001 	(um caixa automático)
 R 0 3001 3088 -1 	(.uma parede pintada)
@@ -75,8 +80,6 @@ D 1 3066 3 1 	(O Caminho de Terra)
 M 0 3011 1 3034 	(Moe o Cartógrafo)
 E 1 3020 100 16 	(uma adaga)
 M 0 3007 1 3050 	(o marinheiro)
-M 0 3009 1 3058 	(Wally o vendedor de água)
-G 1 6013 100 -1 	(um barril)
 M 0 3040 1 3007 	(o barman)
 E 1 3022 100 16 	(uma espada longa)
 M 0 3043 1 3003 	(o garçom)

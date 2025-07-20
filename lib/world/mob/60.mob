@@ -26,8 +26,8 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 0 20 6 1d4+1 1d4+0
 0 60
 9 9 0
-GenWimpy: 39
-GenRoam: 85
+GenWimpy: 41
+GenRoam: 83
 E
 #6002
 urso marrom~
@@ -98,7 +98,7 @@ O pássaro parece que não vai viver muito, pelo jeito.
 0 17 10 2d3+1 1d2+1
 0 25
 9 9 0
-GenWimpy: 99
+GenWimpy: 100
 E
 #6007
 gato lince gato-selvagem~
@@ -140,7 +140,7 @@ O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 0 25
 9 9 0
 GenWimpy: 39
-GenRoam: 85
+GenRoam: 81
 E
 #6010
 esquilo~
@@ -184,8 +184,8 @@ no chão.
 2 19 8 1d12+22 1d6+0
 0 200
 9 9 0
-GenWimpy: 50
-GenRoam: 85
+GenWimpy: 49
+GenRoam: 83
 E
 #6013
 esquilinho~
@@ -217,7 +217,6 @@ comida.
 3 200
 9 9 0
 GenWimpy: 100
-GenRoam: 9
 E
 #6015
 grotesco abutre urubu~
@@ -287,7 +286,7 @@ O pato é bastante gordo.   Ele parece estar aproveitando bem sua vida.
 1 20 10 2d6+5 1d4+0
 0 75
 9 9 0
-GenWimpy: 92
-GenRoam: 87
+GenWimpy: 93
+GenRoam: 84
 E
 $

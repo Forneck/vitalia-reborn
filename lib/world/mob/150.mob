@@ -232,7 +232,6 @@ como se o fosse.
 0 18000
 6 6 1
 E
-T 15000
 #15016
 mordomo james~
 James o Mordomo~
@@ -438,7 +437,7 @@ desejo de vingança.
 11 6 3 4d4+95 2d4+8
 0 10000
 9 9 0
-GenWimpy: 31
+GenWimpy: 30
 E
 #15031
 esqueleto aldeao~
@@ -471,5 +470,4 @@ Abismo. Ele olha enfurecido para você com olhos vermelhos de sangue, deixa
 6 9 1
 GenWimpy: 1
 E
-T 15001
 $

@@ -89,8 +89,8 @@ An undefined string.
 15 -4 -6 5d5+250 4d9+17
 2200 20000
 9 9 1
-GenWimpy: 21
-GenRoam: 65
+GenWimpy: 22
+GenRoam: 60
 E
 #17008
 lider elemental terra~
@@ -181,8 +181,8 @@ Ela corre ao seu redor, esperando uma brecha.
 8 1 0 1d5+200 1d10+3
 850 5000
 9 9 2
-GenWimpy: 61
-GenRoam: 15
+GenWimpy: 68
+GenRoam: 6
 E
 #17016
 elemental neve humanoide cristal~
@@ -195,7 +195,7 @@ Ele parece incapaz de se mover.
 3 5 2 1d5+100 2d5+4
 400 3000
 9 9 1
-GenWimpy: 3
+GenWimpy: 5
 E
 #17017
 elemental rocha humanoide~
@@ -234,7 +234,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 32
+GenWimpy: 35
 E
 #17020
 besta lava elemental~
@@ -248,7 +248,7 @@ que suas calças sequem rápido.
 8 12 1 1d5+250 3d5+4
 1000 4000
 9 9 2
-GenWimpy: 36
+GenWimpy: 40
 E
 #17021
 lama monstro elemental~
@@ -390,7 +390,8 @@ tempo até que ela lhe atinja.
 26 -2 -7 1d5+650 6d5+11
 3000 30000
 9 9 1
-GenWimpy: 35
+GenWimpy: 36
+GenLoot: 1
 GenGroup: 1
 E
 #17031
@@ -449,8 +450,8 @@ As ervas que ele carrega parecem ser raras.
 13 10 -9 1d5+450 1d20+4
 2900 10000
 9 9 1
-GenWimpy: 32
-GenRoam: 3
+GenWimpy: 37
+GenRoam: 5
 E
 #17035
 bebe dragao~
@@ -476,8 +477,8 @@ Ele se assemelha bastante a um desagradável inseto.
 5 16 4 1d5+90 2d4+1
 800 1000
 9 9 1
-GenWimpy: 39
-GenRoam: 86
+GenWimpy: 41
+GenRoam: 84
 E
 #17037
 gigantesco elemental~

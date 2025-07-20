@@ -495,8 +495,7 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 5 15 0 3d4+400 1d2+3
 0 100
 9 9 1
-GenWimpy: 6
-GenRoam: 19
+GenWimpy: 5
 GenGroup: 6
 E
 #8137
@@ -628,8 +627,8 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 35
-GenRoam: 82
+GenWimpy: 39
+GenRoam: 79
 E
 #8146
 crianca egipcia~
@@ -714,7 +713,7 @@ que deve ser sua boca.
 30 10 0 2d5+1000 2d2+14
 0 21000
 9 9 2
-GenWimpy: 11
+GenWimpy: 12
 GenRoam: 87
 E
 #8152
