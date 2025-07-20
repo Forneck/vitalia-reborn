@@ -218,7 +218,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"msgedit", "msgedit", POS_DEAD, do_msgedit, LVL_GOD, 0, CMD_NOARG},
     {"mwishlist", "mwish", POS_DEAD, do_mwishlist, LVL_IMMORT, 0, CMD_ONEARG},
     {"mwant", "mwant", POS_DEAD, do_mwant, LVL_IMMORT, 0, CMD_ONEARG},
-    {"goaledit", "goaledit", POS_DEAD, do_goaledit, LVL_BUILDER, 0, CMD_ONEARG},
+    {"gedit", "gedit", POS_DEAD, do_gedit, LVL_BUILDER, 0, CMD_ONEARG},
     {"murder", "mur", POS_FIGHTING, do_hit, 0, SCMD_MURDER, CMD_ONEARG},
     {"mute", "mute", POS_DEAD, do_wizutil, LVL_GOD, SCMD_MUTE, CMD_ONEARG},
     {"news", "news", POS_SLEEPING, do_gen_ps, 0, SCMD_NEWS, CMD_NOARG},
