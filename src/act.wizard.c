@@ -5354,6 +5354,139 @@ ACMD(do_mwishlist)
 }
 
 /*
+ * Goal editor command for setting mob goals and parameters
+ */
+ACMD(do_goaledit)
+{
+    struct char_data *mob;
+    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH], arg3[MAX_INPUT_LENGTH];
+    char temp_arg[MAX_INPUT_LENGTH];
+    int goal_num, value;
+    room_rnum rnum;
+    
+    /* Parse three arguments manually */
+    argument = one_argument(argument, arg1);
+    argument = one_argument(argument, arg2);
+    argument = one_argument(argument, arg3);
+    
+    if (!*arg1) {
+        send_to_char(ch, "Usage: goaledit <mob name> [show|goal|room|item|target|timer] [value]\r\n");
+        send_to_char(ch, "       goaledit <mob> show - Display current goal settings\r\n");
+        send_to_char(ch, "       goaledit <mob> goal <0-9> - Set current goal\r\n");
+        send_to_char(ch, "       goaledit <mob> room <vnum|-1> - Set goal destination room\r\n");
+        send_to_char(ch, "       goaledit <mob> item <vnum|-1> - Set goal item vnum\r\n");
+        send_to_char(ch, "       goaledit <mob> target <rnum|-1> - Set goal target mob rnum\r\n");
+        send_to_char(ch, "       goaledit <mob> timer <value> - Set goal timer\r\n");
+        send_to_char(ch, "\r\nAvailable goals:\r\n");
+        for (int i = 0; i <= 9; i++) {
+            send_to_char(ch, "  %d: %s\r\n", i, goal_names[i]);
+        }
+        return;
+    }
+    
+    mob = get_char_vis(ch, arg1, NULL, FIND_CHAR_ROOM);
+    if (!mob) {
+        send_to_char(ch, "There is no one here by that name.\r\n");
+        return;
+    }
+    
+    if (!IS_NPC(mob)) {
+        send_to_char(ch, "Goals can only be set on NPCs.\r\n");
+        return;
+    }
+    
+    /* Create AI data if it doesn't exist */
+    if (!mob->ai_data) {
+        CREATE(mob->ai_data, struct mob_ai_data, 1);
+        memset(mob->ai_data, 0, sizeof(struct mob_ai_data));
+        mob->ai_data->goal_destination = NOWHERE;
+        mob->ai_data->goal_item_vnum = NOTHING;
+        mob->ai_data->goal_target_mob_rnum = NOBODY;
+        send_to_char(ch, "Created AI data for %s.\r\n", GET_NAME(mob));
+    }
+    
+    if (!*arg2 || !str_cmp(arg2, "show")) {
+        /* Show current goal settings */
+        send_to_char(ch, "=== Goal Settings for %s ===\r\n", GET_NAME(mob));
+        send_to_char(ch, "Current goal: %s (%d)\r\n", 
+                   (mob->ai_data->current_goal >= 0 && goal_names[mob->ai_data->current_goal] && 
+                    *goal_names[mob->ai_data->current_goal] != '\n') ? 
+                   goal_names[mob->ai_data->current_goal] : "Unknown", 
+                   mob->ai_data->current_goal);
+        send_to_char(ch, "Goal room: %d %s\r\n", mob->ai_data->goal_destination,
+                   mob->ai_data->goal_destination == NOWHERE ? "(none)" : "");
+        send_to_char(ch, "Goal item: %d %s\r\n", mob->ai_data->goal_item_vnum,
+                   mob->ai_data->goal_item_vnum == NOTHING ? "(none)" : "");
+        send_to_char(ch, "Goal target: %d %s\r\n", mob->ai_data->goal_target_mob_rnum,
+                   mob->ai_data->goal_target_mob_rnum == NOBODY ? "(none)" : "");
+        send_to_char(ch, "Goal timer: %d\r\n", mob->ai_data->goal_timer);
+        return;
+    }
+    
+    if (!*arg3) {
+        send_to_char(ch, "You must specify a value.\r\n");
+        return;
+    }
+    
+    if (!str_cmp(arg2, "goal")) {
+        goal_num = atoi(arg3);
+        if (goal_num < 0 || goal_num > 9) {
+            send_to_char(ch, "Goal must be between 0 and 9.\r\n");
+            return;
+        }
+        mob->ai_data->current_goal = goal_num;
+        send_to_char(ch, "Set %s's goal to: %s (%d)\r\n", GET_NAME(mob), goal_names[goal_num], goal_num);
+    }
+    else if (!str_cmp(arg2, "room")) {
+        value = atoi(arg3);
+        if (value == -1) {
+            mob->ai_data->goal_destination = NOWHERE;
+            send_to_char(ch, "Cleared %s's goal room.\r\n", GET_NAME(mob));
+        } else {
+            rnum = real_room(value);
+            if (rnum == NOWHERE) {
+                send_to_char(ch, "Room %d does not exist.\r\n", value);
+                return;
+            }
+            mob->ai_data->goal_destination = rnum;
+            send_to_char(ch, "Set %s's goal room to: %d\r\n", GET_NAME(mob), value);
+        }
+    }
+    else if (!str_cmp(arg2, "item")) {
+        value = atoi(arg3);
+        if (value == -1) {
+            mob->ai_data->goal_item_vnum = NOTHING;
+            send_to_char(ch, "Cleared %s's goal item.\r\n", GET_NAME(mob));
+        } else {
+            mob->ai_data->goal_item_vnum = value;
+            send_to_char(ch, "Set %s's goal item to: %d\r\n", GET_NAME(mob), value);
+        }
+    }
+    else if (!str_cmp(arg2, "target")) {
+        value = atoi(arg3);
+        if (value == -1) {
+            mob->ai_data->goal_target_mob_rnum = NOBODY;
+            send_to_char(ch, "Cleared %s's goal target.\r\n", GET_NAME(mob));
+        } else {
+            mob->ai_data->goal_target_mob_rnum = value;
+            send_to_char(ch, "Set %s's goal target to: %d\r\n", GET_NAME(mob), value);
+        }
+    }
+    else if (!str_cmp(arg2, "timer")) {
+        value = atoi(arg3);
+        if (value < 0 || value > 10000) {
+            send_to_char(ch, "Timer must be between 0 and 10000.\r\n");
+            return;
+        }
+        mob->ai_data->goal_timer = value;
+        send_to_char(ch, "Set %s's goal timer to: %d\r\n", GET_NAME(mob), value);
+    }
+    else {
+        send_to_char(ch, "Invalid option. Use: show, goal, room, item, target, or timer.\r\n");
+    }
+}
+
+/*
  * Debug command to add items to a mob's wishlist for testing
  */
 ACMD(do_mwant)
