@@ -521,7 +521,7 @@ ACMD(do_house)
         send_to_char(ch, "Você precisa estar em sua casa para definir seus hóspedes.\r\n");
     else if ((i = find_house(GET_ROOM_VNUM(IN_ROOM(ch)))) == NOWHERE)
         send_to_char(ch, "Hum.. esta casa parece ter fracassado.\r\n");
-    else if ((GET_IDNUM(ch) != house_control[i].owner) || (GET_LEVEL(ch) = LVL_IMPL))
+    else if ((GET_IDNUM(ch) != house_control[i].owner) || (GET_LEVEL(ch) != LVL_IMPL))
         send_to_char(ch, "Somente o dono da casa pode definir seus hóspedes.\r\n");
     else if (!*arg)
         House_list_guests(ch, i, FALSE);

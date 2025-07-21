@@ -12,7 +12,7 @@
 #ifndef _HOUSE_H_
 #define _HOUSE_H_
 
-#define MAX_HOUSES 100
+#define MAX_HOUSES 400
 #define MAX_GUESTS 10
 
 #define HOUSE_PRIVATE 0
