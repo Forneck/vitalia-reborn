@@ -48,7 +48,7 @@ Ele é horrível.
 4 16 5 2d10+40 1d8+1
 50 800
 9 9 0
-GenWimpy: 74
+GenWimpy: 76
 GenRoam: 88
 E
 #4004
@@ -62,7 +62,7 @@ Você percebe toda a maldade no seu olhar...
 5 15 5 2d10+60 2d4+0
 100 900
 9 9 0
-GenWimpy: 87
+GenWimpy: 86
 GenRoam: 88
 E
 #4005
@@ -76,8 +76,8 @@ Ele parece pavoroso.
 7 11 2 3d20+75 2d6+2
 200 3000
 9 9 1
-GenWimpy: 15
-GenRoam: 66
+GenWimpy: 20
+GenRoam: 77
 E
 #4050
 guerreiro~
@@ -185,7 +185,7 @@ O leão parece bastante hostil com enormes garras e grandes dentes.
 5 16 5 1d10+60 2d4+0
 0 900
 9 9 1
-GenWimpy: 68
+GenWimpy: 70
 GenRoam: 88
 E
 #4058
@@ -254,8 +254,8 @@ o SEU ouro também...
 8 13 3 1d10+100 2d5+2
 100 4000
 9 9 1
-GenWimpy: 41
-GenRoam: 87
+GenWimpy: 54
+GenRoam: 89
 E
 T 3007
 #4104
@@ -295,8 +295,9 @@ Ele não parece muito amigável...
 9 10 3 3d10+100 2d6+2
 500 9000
 9 9 1
-GenWimpy: 43
-GenRoam: 86
+GenWimpy: 46
+GenRoam: 88
+GenGroup: 1
 E
 #4107
 kobold~

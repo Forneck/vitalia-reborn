@@ -424,7 +424,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 6
-GenRoam: 88
+GenRoam: 89
 E
 #3722
 demonio ossos~
@@ -447,7 +447,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 88
+GenRoam: 89
 E
 #3723
 esqueleto guerreiro~
@@ -465,7 +465,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 88
+GenRoam: 89
 E
 #3724
 esqueleto dragao~
@@ -505,7 +505,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 87
+GenRoam: 89
 E
 #3726
 zumbi guerreiro~
@@ -619,7 +619,7 @@ Ele é tímido e solitário, fujindo da luz e da multidão.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
+GenWimpy: 5
 GenLoot: 1
 E
 #3732

@@ -35,7 +35,8 @@ Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 10 1 -1 1d5+100 3d8+10
 1100 6000
 9 9 1
-GenWimpy: 23
+GenWimpy: 28
+GenLoot: 2
 E
 #17004
 elemental guardiao~
@@ -61,8 +62,8 @@ An undefined string.
 5 0 -4 2d5+150 2d6+4
 1000 6000
 9 9 1
-GenWimpy: 15
-GenRoam: 87
+GenWimpy: 22
+GenRoam: 89
 E
 #17006
 elemental~
@@ -89,8 +90,8 @@ An undefined string.
 15 -4 -6 5d5+250 4d9+17
 2200 20000
 9 9 1
-GenWimpy: 22
-GenRoam: 60
+GenWimpy: 25
+GenRoam: 78
 E
 #17008
 lider elemental terra~
@@ -181,7 +182,8 @@ Ela corre ao seu redor, esperando uma brecha.
 8 1 0 1d5+200 1d10+3
 850 5000
 9 9 2
-GenWimpy: 68
+GenWimpy: 83
+GenRoam: 12
 E
 #17016
 elemental neve humanoide cristal~
@@ -194,7 +196,7 @@ Ele parece incapaz de se mover.
 3 5 2 1d5+100 2d5+4
 400 3000
 9 9 1
-GenWimpy: 7
+GenWimpy: 9
 E
 #17017
 elemental rocha humanoide~
@@ -220,7 +222,7 @@ todos os lados, produzindo barulhentas explosões.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 4
+GenWimpy: 6
 E
 #17019
 elemental acido liquido humanoide~
@@ -233,7 +235,8 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 39
+GenWimpy: 45
+GenLoot: 1
 E
 #17020
 besta lava elemental~
@@ -247,7 +250,7 @@ que suas calças sequem rápido.
 8 12 1 1d5+250 3d5+4
 1000 4000
 9 9 2
-GenWimpy: 44
+GenWimpy: 51
 E
 #17021
 lama monstro elemental~
@@ -302,8 +305,8 @@ Uma estranha mistura de terra e ar.. ela não parece nem te ver.
 5 14 -15 1d5+200 2d5+3
 1000 3000
 9 9 2
-GenWimpy: 8
-GenRoam: 81
+GenWimpy: 14
+GenRoam: 86
 E
 #17025
 redemoinho tornado elemental~
@@ -316,8 +319,8 @@ An undefined string.
 2 17 2 1d5+100 1d8+1
 450 1000
 9 9 1
-GenWimpy: 30
-GenRoam: 87
+GenWimpy: 33
+GenRoam: 88
 E
 #17026
 chama elemental azul humanoide~
@@ -331,8 +334,9 @@ e seus bruxuleantes membros, que parecem ser afiados como garras.
 26 -2 -5 1d5+590 6d4+14
 3000 30000
 9 9 2
-GenWimpy: 64
-GenGroup: 18
+GenWimpy: 81
+GenRoam: 3
+GenGroup: 15
 E
 #17027
 magneto elemental humanoide~
@@ -345,7 +349,8 @@ Um humanóide que parece ter sido preso em um campo magnético.
 26 -2 -5 1d5+640 6d5+14
 3000 30000
 9 9 1
-GenWimpy: 41
+GenWimpy: 40
+GenLoot: 1
 E
 #17028
 neve bandido~
@@ -359,9 +364,8 @@ frio subindo por suas costas.
 26 -2 -5 1d5+630 6d5+13
 3000 30000
 9 9 1
-GenWimpy: 49
-GenLoot: 4
-GenRoam: 7
+GenWimpy: 52
+GenGroup: 5
 E
 #17029
 rochas monstro~
@@ -375,8 +379,10 @@ Elas parecem estar formando um tipo de humanóide. E sua expressão não
 26 -2 -5 1d5+620 6d5+12
 3000 30000
 9 9 1
-GenWimpy: 43
+GenWimpy: 53
 GenLoot: 1
+GenRoam: 4
+GenGroup: 1
 E
 #17030
 furacao~
@@ -390,9 +396,9 @@ tempo até que ela lhe atinja.
 26 -2 -7 1d5+650 6d5+11
 3000 30000
 9 9 1
-GenWimpy: 36
-GenLoot: 1
-GenGroup: 1
+GenWimpy: 64
+GenRoam: 5
+GenGroup: 2
 E
 #17031
 anciao mago elemental~
@@ -477,8 +483,8 @@ Ele se assemelha bastante a um desagradável inseto.
 5 16 4 1d5+90 2d4+1
 800 1000
 9 9 1
-GenWimpy: 47
-GenRoam: 82
+GenWimpy: 55
+GenRoam: 86
 E
 #17037
 gigantesco elemental~
@@ -491,6 +497,9 @@ GIGANTESCO, é preciso mais??
 20 -6 -8 1d5+1970 5d6+19
 3000 68000
 9 9 1
+GenWimpy: 3
+GenLoot: 1
+GenRoam: 9
 E
 #17038
 vendedor~

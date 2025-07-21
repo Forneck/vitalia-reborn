@@ -11,7 +11,7 @@ venenosa desta cobra derrubou muitos faraós poderosos.
 10 1000
 9 9 0
 GenWimpy: 100
-GenRoam: 36
+GenRoam: 44
 E
 T 3008
 #5301
@@ -29,8 +29,8 @@ vítimas antes do bote.
 7 13 7 7d7+70 2d4+2
 25 2000
 9 9 0
-GenWimpy: 90
-GenRoam: 80
+GenWimpy: 94
+GenRoam: 85
 E
 T 3008
 #5302
@@ -46,8 +46,9 @@ mãos.
 11 10 6 11d11+110 3d5+3
 100 10000
 9 9 2
-GenWimpy: 83
+GenWimpy: 93
 GenRoam: 89
+GenBrave: 1
 E
 #5303
 guardiao piramide~
@@ -63,7 +64,6 @@ roupas cor de areia.
 200 3750
 9 9 1
 GenWimpy: 100
-GenLoot: 2
 GenEquip: 1
 GenRoam: 89
 E
@@ -79,7 +79,7 @@ O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
 500 9000
 9 9 1
 GenWimpy: 100
-GenRoam: 89
+GenRoam: 88
 E
 T 3007
 #5305
@@ -142,10 +142,8 @@ quentes e arenosos.
 14 6 2 14d14+140 2d7+4
 1500 18000
 9 9 1
-GenWimpy: 97
-GenLoot: 1
+GenWimpy: 100
 GenRoam: 89
-GenBrave: 2
 E
 #5309
 efreeti~
@@ -205,9 +203,9 @@ dos seus primos mais velhos.
 15 0 -23 15d15+650 4d10+25
 7500 21000
 9 9 2
-GenWimpy: 28
+GenWimpy: 18
 GenLoot: 1
-GenRoam: 87
+GenRoam: 88
 E
 #5313
 ginoesfinge esfinge~

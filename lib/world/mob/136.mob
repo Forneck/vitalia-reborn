@@ -53,8 +53,8 @@ Uma corça, um cervo, um cervo fêmea...  Vamos! Você conhece a música.
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 2
-GenWimpy: 31
-GenRoam: 88
+GenWimpy: 38
+GenRoam: 89
 E
 #13604
 veado~
@@ -124,8 +124,8 @@ Ele se moveu?
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 1
-GenWimpy: 16
-GenRoam: 71
+GenWimpy: 22
+GenRoam: 82
 E
 #13609
 arvore nirin odiosa~
@@ -153,7 +153,6 @@ An undefined string.
 0 12937
 9 9 1
 GenWimpy: 100
-GenLoot: 2
 GenRoam: 89
 E
 $

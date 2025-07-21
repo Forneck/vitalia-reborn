@@ -61,7 +61,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 27
+GenWimpy: 28
 GenRoam: 87
 E
 #705
@@ -128,7 +128,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 22
+GenWimpy: 19
 GenLoot: 4
 E
 #708
@@ -172,7 +172,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 8
+GenWimpy: 10
 GenRoam: 73
 E
 #711
@@ -195,7 +195,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 54
+GenWimpy: 61
 E
 #712
 impiedoso ceifeiro~
@@ -238,9 +238,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 37
+GenWimpy: 38
 GenRoam: 88
-GenBrave: 1
 E
 #714
 cavaleiro negro tempestuoso armadura~
@@ -285,9 +284,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 53
-GenRoam: 85
-GenGroup: 16
+GenWimpy: 60
+GenRoam: 87
+GenGroup: 14
 E
 #716
 pequena encurvada crianca criança~
@@ -383,8 +382,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 10
-GenRoam: 82
+GenWimpy: 12
+GenRoam: 86
 E
 #750
 febre escarlate~
@@ -423,7 +422,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 14
+GenWimpy: 16
 GenRoam: 88
 E
 #780

@@ -10,7 +10,7 @@ precisando de um bom descanso.
 5 15 5 1d10+60 2d4+0
 70 1000
 9 9 1
-GenWimpy: 62
+GenWimpy: 67
 GenRoam: 87
 E
 #5001
@@ -55,8 +55,8 @@ pequenina.
 3 17 1 1d6+40 1d8+0
 0 500
 9 9 0
-GenWimpy: 67
-GenRoam: 85
+GenWimpy: 68
+GenRoam: 86
 E
 #5004
 verme arroxeado gigantesco~
@@ -204,8 +204,8 @@ O xamã está espalhando esporos pelo ar.
 14 7 1 1d12+173 2d7+2
 2500 18000
 9 9 1
-GenWimpy: 24
-GenRoam: 85
+GenWimpy: 27
+GenRoam: 88
 E
 T 3009
 #5015

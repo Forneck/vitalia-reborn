@@ -42,7 +42,7 @@ uma baba viscosa vai escorrendo por entre os seus lábios.
 3 18 7 1d12+35 1d7+0
 0 450
 9 9 0
-GenWimpy: 24
+GenWimpy: 25
 GenRoam: 87
 E
 #6103
@@ -57,7 +57,7 @@ uma baba viscosa vai escorrendo por entre os seus lábios.
 3 18 7 1d12+45 1d7+3
 0 450
 9 9 0
-GenWimpy: 5
+GenWimpy: 6
 GenRoam: 73
 GenGroup: 1
 E
@@ -155,7 +155,7 @@ Esta pequenina criatura tem apenas três pés de altura, com seus revoltos
 cabelos castanhos e sua longa barba embaraçada.   Ele veste um estranho e
 esfarrapado traje marrom e verde e parece que ele está se divertindo muito.
 ~
-2099396 0 0 0 0 0 0 0 1000 E
+2099396 0 0 0 524288 0 0 0 1000 E
 10 1 -10 1d12+47 1d8+0
 1000 11000
 9 9 1

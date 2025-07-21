@@ -66,7 +66,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 11
-GenRoam: 83
+GenRoam: 89
 E
 #12104
 cerbero~
@@ -99,8 +99,7 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 41
-GenRoam: 1
+GenWimpy: 54
 E
 #12106
 anao negro~
@@ -151,7 +150,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 18
+GenWimpy: 20
 E
 #12109
 enorme sanguessuga~
@@ -256,7 +255,7 @@ BareHandAttack: 3
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 48
+GenWimpy: 64
 E
 #12115
 drakian~
@@ -290,7 +289,7 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 10
+GenWimpy: 19
 E
 #12117
 wyrm~
@@ -447,8 +446,8 @@ BareHandAttack: 7
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 98
-GenRoam: 45
+GenWimpy: 100
+GenRoam: 80
 E
 #12126
 cynamolgus peludo~

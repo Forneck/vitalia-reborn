@@ -10,7 +10,7 @@ Ele olha calmamente para você e continua a andar lenta e graciosamente.
 0 400
 9 9 1
 GenWimpy: 100
-GenRoam: 73
+GenRoam: 65
 E
 #4901
 elfo gato~
@@ -49,8 +49,8 @@ Ela parece não se importar muito com sua presença.
 3 18 8 6d5+22 1d7+1
 0 600
 9 9 1
-GenWimpy: 8
-GenRoam: 79
+GenWimpy: 9
+GenRoam: 82
 E
 #4904
 rã ra~
@@ -77,9 +77,8 @@ Ele pula rapidamente pelas árvores, procurando algo para mastigar.
 4 17 6 8d5+20 1d6+1
 0 500
 9 9 1
-GenWimpy: 2
-GenRoam: 44
-GenGroup: 1
+GenWimpy: 3
+GenRoam: 57
 E
 #4906
 macaco carnívoro~

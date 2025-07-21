@@ -10,7 +10,7 @@ Você vai ficar igual a ele se não for cuidadoso.
 100 600
 9 9 1
 GenWimpy: 42
-GenRoam: 84
+GenRoam: 81
 E
 #9502
 estrela prateada~
@@ -54,7 +54,6 @@ parece querer lançar toda sua ira contra você.
 1500 5000
 9 9 1
 GenWimpy: 100
-GenRoam: 1
 E
 #9505
 gigante vermelha~
@@ -379,7 +378,7 @@ um peixe.  Ela merece sua piedade...
 68 -10 -20 5d5+2600 7d3+30
 10000 399999
 6 9 2
-GenWimpy: 4
+GenWimpy: 6
 E
 #9528
 peixe~

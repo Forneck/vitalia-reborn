@@ -85,7 +85,7 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 89
+GenWimpy: 100
 E
 #1706
 guardiao guardião cripta~
@@ -133,7 +133,7 @@ Você não pode conseguir mais nada com ele.
 10 11 4 2d8+325 2d6+11
 23 9000
 9 9 1
-GenWimpy: 15
+GenWimpy: 17
 E
 #1708
 bolha lama~
@@ -161,7 +161,7 @@ adorando seu estado.
 14 7 1 1d10+475 2d8+11
 18000 18000
 6 6 1
-GenWimpy: 7
+GenWimpy: 9
 E
 #1710
 aranha verde~
@@ -175,8 +175,8 @@ dá uma luz verde.  Ela bate suas mandíbulas cristalizadas para irritá-lo.
 8 13 3 2d6+296 2d5+11
 0 13750
 9 9 2
-GenWimpy: 5
-GenRoam: 87
+GenWimpy: 8
+GenRoam: 89
 E
 #1711
 aranha amarela~
@@ -190,8 +190,8 @@ feita de uma substância cristalina viva que brilha amarelo.
 7 14 4 1d8+285 2d4+11
 351 12250
 9 9 2
-GenWimpy: 6
-GenRoam: 87
+GenWimpy: 11
+GenRoam: 89
 E
 #1712
 guarda petrificado~
@@ -217,8 +217,8 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 18 3 0 3d6+625 3d6+21
 0 30000
 9 9 1
-GenWimpy: 32
-GenLoot: 1
+GenWimpy: 36
+GenLoot: 2
 GenRoam: 89
 E
 #1714
@@ -234,7 +234,7 @@ passado infeliz, você presume.
 16 5 1 2d6+496 2d8+12
 1576 25000
 9 9 2
-GenWimpy: 51
+GenWimpy: 37
 GenLoot: 2
 GenRoam: 89
 E

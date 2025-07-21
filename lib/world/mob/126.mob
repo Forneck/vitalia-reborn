@@ -1558,8 +1558,8 @@ Int: 18
 Wis: 18
 Con: 21
 Cha: 18
-GenWimpy: 2
-GenRoam: 37
+GenWimpy: 3
+GenRoam: 65
 E
 #12667
 Jormungand serpente~
@@ -1669,7 +1669,7 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 2
+GenWimpy: 3
 E
 #12672
 Tanngnost bode~
@@ -1722,7 +1722,7 @@ fica no topo da árvore.
 0 15000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 33
+GenWimpy: 38
 E
 #12675
 Dvalin soberano anao~
@@ -1960,8 +1960,8 @@ ajude-as a sobreviver nessas gélidas e desérticas terras gelo.
 500 13000
 9 9 2
 BareHandAttack: 13
-GenWimpy: 11
-GenRoam: 69
+GenWimpy: 15
+GenRoam: 70
 E
 #12685
 cavalo selvagem~
@@ -2215,7 +2215,7 @@ Wis: 18
 Con: 18
 Cha: 18
 GenWimpy: 36
-GenRoam: 23
+GenRoam: 24
 E
 #12697
 ave marinha~

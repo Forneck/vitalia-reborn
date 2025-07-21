@@ -43,8 +43,8 @@ carrega uma grande lança.
 70 2 -19 12d12+1200 14d14+15
 10000 65030
 9 9 1
-GenWimpy: 7
-GenRoam: 64
+GenWimpy: 6
+GenRoam: 61
 E
 T 3013
 #17304
@@ -327,7 +327,7 @@ vestido e tem uma coroa de flores enfeitando seus cabelos.
 30 5 -2 10d10+360 4d6+8
 3000 10030
 9 9 2
-GenWimpy: 15
+GenWimpy: 17
 GenRoam: 89
 E
 #17322
@@ -490,8 +490,8 @@ maneira dos fransciscanos.
 23 6 0 2d10+307 7d9+8
 1200 19078
 9 9 1
-GenWimpy: 5
-GenRoam: 79
+GenWimpy: 9
+GenRoam: 86
 E
 #17333
 trovador~
@@ -518,7 +518,7 @@ camisa laranja.
 14 7 0 3d9+209 7d7+7
 1245 16980
 9 9 1
-GenWimpy: 5
+GenWimpy: 9
 E
 #17335
 artista~
@@ -545,8 +545,8 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
-GenWimpy: 17
-GenRoam: 88
+GenWimpy: 20
+GenRoam: 89
 E
 #17337
 demonio~
@@ -651,7 +651,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 22
+GenWimpy: 19
 E
 #17344
 escrava~
@@ -666,7 +666,7 @@ resistir.
 1000 8870
 9 9 2
 GenWimpy: 5
-GenRoam: 16
+GenRoam: 8
 E
 #17345
 chefe saxao render~

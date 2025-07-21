@@ -232,8 +232,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
-GenRoam: 24
+GenWimpy: 4
+GenRoam: 55
 E
 #3915
 zumbi guerreiro abismo~
@@ -251,7 +251,7 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 4
 E
 #3916
 demonio bael~
@@ -270,7 +270,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 4
-GenRoam: 81
+GenRoam: 78
 E
 #3917
 svern demonio~
@@ -290,7 +290,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 56
+GenRoam: 72
 E
 #3918
 vrock demonio ave~
@@ -309,8 +309,8 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenRoam: 9
+GenWimpy: 5
+GenRoam: 16
 E
 #3919
 valik zumbi dragao~
@@ -421,7 +421,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 4
-GenRoam: 20
+GenRoam: 16
 E
 #3925
 yeti agua~
@@ -438,8 +438,8 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenRoam: 87
+GenWimpy: 5
+GenRoam: 88
 E
 #3926
 pseudo-hidra pseudo hidra dragao~

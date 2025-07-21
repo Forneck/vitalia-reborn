@@ -155,9 +155,19 @@ CircleMUD v3.0 Shop File~
 0
 0
 #3005~
+63
+64
+65
+2051
+2131
+3412
+3413
+5013
+5690
 -1
 1.20
 0.90
+12mapa
 -1
 %s Desculpe, não tenho esse item em estoque.~
 %s Você não parece ter isso.~
@@ -170,12 +180,12 @@ CircleMUD v3.0 Shop File~
 6
 3011
 0
-3000
+3034
 -1
-0
+6
+12
+22
 28
-0
-0
 #3006~
 3060
 3061
