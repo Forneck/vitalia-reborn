@@ -4,7 +4,9 @@
 @W            DE  @B|  .'    |  |    |  |   |  .-.  | |  |___ |  | |  .-.  |
 @W                @B|.'      |_.'    |_.'   |_.' |_.' |____.' |_.' |_.' |_.'@n
 
-   Como esta é uma @Rversão de teste@n muitos @rbugs@n e @rfeatures incompletas@n são esperados.
+   Vitalia foi atualizada! Ainda existem muitas coisas para melhorarmos mas
+contamos com o apoio de todos! Se enontrar erros ou coisas estranjas, por favor
+reportem atavés dos comandos @rBUG@n e @rTYPO@n.
    
    BUG conhecido: Se você trocar de janela ao voltar pro cliente, podem aparecer caracteres estranhos no lugar dos acentos.
    Isto é um erro do cliente, para arrumar desative e reative o UTF-8 nas opções do cliente.
@@ -12,9 +14,6 @@
    Clientes mais recentes oferecem suporte a MXP e MSDP que são protocolos de extensão. Podem ser ativados ou desativados no prefedit.
    MXP torna alguns comandos clicaveis! e o MSDP envia variaveis para o cliente para personalização da aparência, como hitbar customizaveis entre outras coisas.
    
-   Estamos tendo atualizações diariamente, então se algo estiver estranho
-pode ganhar implementação ou ser arrumado nos próximos dias.
-     
     Se você é novo no jogo ou ainda não conhece bem os comandos digite @gINFO@n
 ou @gAJUDA@n para obter ajuda.
 
