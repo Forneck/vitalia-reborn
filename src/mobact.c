@@ -1451,11 +1451,11 @@ bool mob_try_and_upgrade(struct char_data *ch)
     /* A aprendizagem acontece uma vez no final da sessão. */
     if (performed_an_upgrade_this_pulse) {
         ch->ai_data->genetics.equip_tendency = MIN(ch->ai_data->genetics.equip_tendency + 2, 100);
-    /* Se mob não se equipar, fica frustrado demais e a tendencia cai a 0. Devemos evitar isso.
-     }
-     else {
-        ch->ai_data->genetics.equip_tendency = MAX(ch->ai_data->genetics.equip_tendency - 1, 0);
-    */
+        /* Se mob não se equipar, fica frustrado demais e a tendencia cai a 0. Devemos evitar isso.
+         }
+         else {
+            ch->ai_data->genetics.equip_tendency = MAX(ch->ai_data->genetics.equip_tendency - 1, 0);
+        */
     }
 
     /* Retorna TRUE se a IA "pensou" em se equipar, para consumir o seu foco neste pulso. */
@@ -2001,9 +2001,9 @@ bool mob_handle_item_usage(struct char_data *ch)
     if (item_to_use) {
         if (is_last_consumable(ch, item_to_use)) {
             /* Bloco comentado: Se fosse o ultimo e a tendencia caisse, tendencia cai pra 0
-	    ch->ai_data->genetics.use_tendency = MAX(ch->ai_data->genetics.use_tendency - 1, 0);
+            ch->ai_data->genetics.use_tendency = MAX(ch->ai_data->genetics.use_tendency - 1, 0);
             */
-	    return FALSE;
+            return FALSE;
         }
 
         if (cast_spell(ch, best_target_char, best_target_obj, spellnum_to_cast)) {
