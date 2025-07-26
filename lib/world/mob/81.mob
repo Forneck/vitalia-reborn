@@ -481,8 +481,8 @@ Esse gato negro aparenta ser muito esperto e corajoso.
 7 19 0 2d5+150 1d2+2
 0 100
 9 9 1
-GenWimpy: 28
-GenRoam: 77
+GenWimpy: 29
+GenRoam: 79
 E
 #8136
 escaravelho~
@@ -495,8 +495,8 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 5 15 0 3d4+400 1d2+3
 0 100
 9 9 1
-GenWimpy: 6
-GenRoam: 20
+GenWimpy: 5
+GenRoam: 26
 E
 #8137
 rato~
@@ -627,9 +627,8 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 47
-GenRoam: 87
-GenGroup: 1
+GenWimpy: 48
+GenRoam: 86
 E
 #8146
 crianca egipcia~
@@ -643,8 +642,8 @@ enquanto lágrimas desesperadas rolam por sua face corada.
 16 12 0 2d3+300 1d2+5
 10 1800
 9 9 2
-GenWimpy: 11
-GenRoam: 27
+GenWimpy: 12
+GenRoam: 28
 E
 #8147
 serpente~
@@ -714,8 +713,8 @@ que deve ser sua boca.
 30 10 0 2d5+1000 2d2+14
 0 21000
 9 9 2
-GenWimpy: 16
-GenRoam: 67
+GenWimpy: 17
+GenRoam: 80
 E
 #8152
 soldado egipcio~

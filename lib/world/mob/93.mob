@@ -502,7 +502,7 @@ Dex: 8
 Int: 8
 Wis: 8
 Cha: 8
-GenWimpy: 19
+GenWimpy: 20
 E
 #9324
 aranha fogo~
@@ -539,8 +539,8 @@ corcova.  Vive perambulando no deserto dos dragões de Vitália à procura de
 Str: 13
 Wis: 8
 Con: 13
-GenWimpy: 30
-GenRoam: 88
+GenWimpy: 34
+GenRoam: 84
 E
 #9326
 serpente negra~

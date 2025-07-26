@@ -12,8 +12,7 @@ rua de Vitália.
 275 1890
 9 9 1
 GenWimpy: 100
-GenLoot: 1
-GenRoam: 84
+GenRoam: 81
 E
 #10001
 magra mulher aldeã~
@@ -29,7 +28,7 @@ aparecendo pelo mal fabricado e raquítico vestido.
 175 1876
 9 9 2
 GenWimpy: 100
-GenRoam: 76
+GenRoam: 86
 E
 #10002
 tenente caspan soldado~
@@ -69,8 +68,7 @@ angustiante conjunto.
 18 3 0 4d7+550 15d1+19
 300 32456
 9 9 1
-GenWimpy: 45
-GenRoam: 1
+GenWimpy: 30
 E
 #10005
 pequena aldeia ladra menina~
@@ -85,7 +83,7 @@ pena dela?
 8 11 6 2d9+150 1d3+7
 2 3000
 9 9 2
-GenWimpy: 68
+GenWimpy: 70
 GenRoam: 72
 E
 #10006
@@ -100,7 +98,7 @@ inocentes, e sorri um sorriso sem dentes.
 8 16 6 2d9+150 1d3+16
 0 3000
 9 9 1
-GenWimpy: 69
+GenWimpy: 74
 GenLoot: 1
 GenRoam: 88
 E
@@ -130,8 +128,8 @@ tristemente para você e continua mancando em frente.
 0 323
 9 9 0
 BareHandAttack: 4
-GenWimpy: 94
-GenRoam: 77
+GenWimpy: 97
+GenRoam: 70
 E
 #10009
 bruxa dente~
@@ -171,7 +169,7 @@ As vezes você se pergunta se sua vida seria melhor se você fosse uma galinha.
 3 18 8 1d5+20 1d2+2
 2 30
 9 9 2
-GenWimpy: 70
+GenWimpy: 74
 GenRoam: 87
 E
 #10012
@@ -185,7 +183,7 @@ A mulher se coça freneticamente enquanto cata piolhos de sua cabeça.  Ela não
 4 14 6 1d10+95 1d1+6
 37 1800
 9 9 2
-GenWimpy: 47
+GenWimpy: 54
 E
 #10013
 orfão escondido pequeno ladrãozinho moleque~

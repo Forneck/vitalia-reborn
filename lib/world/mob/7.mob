@@ -40,8 +40,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 18
-GenRoam: 87
+GenWimpy: 21
+GenRoam: 85
 E
 #702
 planta figueira~
@@ -61,8 +61,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 28
-GenRoam: 87
+GenWimpy: 31
+GenRoam: 84
 E
 #705
 monstrinho menor criatura~
@@ -84,7 +84,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 31
+GenWimpy: 32
 GenRoam: 87
 E
 #706
@@ -128,8 +128,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 19
-GenLoot: 4
+GenWimpy: 22
+GenLoot: 2
 E
 #708
 escorpião escorpiao vermelho~
@@ -151,7 +151,7 @@ Wis: 15
 Con: 15
 Cha: 15
 GenWimpy: 15
-GenRoam: 84
+GenRoam: 85
 E
 #710
 maldito guarda~
@@ -172,8 +172,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 10
-GenRoam: 73
+GenWimpy: 13
+GenRoam: 82
 E
 #711
 guardião guardiao guarda~
@@ -195,7 +195,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 61
+GenWimpy: 60
 E
 #712
 impiedoso ceifeiro~
@@ -238,7 +238,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 38
+GenWimpy: 39
 GenRoam: 88
 E
 #714
@@ -462,8 +462,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 18
-GenRoam: 86
+GenWimpy: 19
+GenRoam: 85
 E
 #799
 banda~
@@ -482,7 +482,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 9
-GenRoam: 83
+GenWimpy: 12
+GenRoam: 86
 E
 $

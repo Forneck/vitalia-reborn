@@ -3555,7 +3555,7 @@ int calculate_quest_difficulty(obj_vnum item_vnum)
  */
 int calculate_player_reputation(struct char_data *ch)
 {
-    int reputation = 50; /* Base reputation */
+    int reputation = 0; /* Base reputation */
     int completed_quests;
     int karma_bonus;
 

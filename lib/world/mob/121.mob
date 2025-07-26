@@ -99,7 +99,8 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 54
+GenWimpy: 60
+GenRoam: 1
 E
 #12106
 anao negro~
@@ -167,9 +168,9 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 61
+GenWimpy: 66
 GenLoot: 1
-GenRoam: 63
+GenRoam: 75
 E
 #12110
 leao jamuuran~
@@ -186,8 +187,9 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenRoam: 45
+GenWimpy: 6
+GenLoot: 1
+GenRoam: 78
 E
 #12111
 jor~
@@ -255,7 +257,7 @@ BareHandAttack: 3
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 64
+GenWimpy: 67
 E
 #12115
 drakian~
@@ -447,7 +449,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 100
-GenRoam: 80
+GenRoam: 83
 E
 #12126
 cynamolgus peludo~

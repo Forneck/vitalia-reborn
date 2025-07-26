@@ -22,7 +22,8 @@ Ele parece estar atrás de um almoço..
 22 0 0 1d5+380 3d5+20
 1000 20000
 9 9 1
-GenWimpy: 43
+GenWimpy: 45
+GenEquip: 1
 E
 #17003
 elemental~
@@ -35,7 +36,7 @@ Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 10 1 -1 1d5+100 3d8+10
 1100 6000
 9 9 1
-GenWimpy: 28
+GenWimpy: 36
 GenLoot: 2
 E
 #17004
@@ -62,7 +63,7 @@ An undefined string.
 5 0 -4 2d5+150 2d6+4
 1000 6000
 9 9 1
-GenWimpy: 22
+GenWimpy: 26
 GenRoam: 89
 E
 #17006
@@ -76,8 +77,9 @@ An undefined string.
 10 6 -2 3d5+200 3d6+6
 1750 9000
 9 9 1
-GenWimpy: 14
-GenRoam: 57
+GenWimpy: 20
+GenLoot: 1
+GenRoam: 68
 E
 #17007
 elemental grande~
@@ -168,8 +170,9 @@ Ela percorre o chão em sua direção.
 8 2 0 1d5+200 1d10+3
 980 5000
 9 9 2
-GenWimpy: 13
-GenRoam: 67
+GenWimpy: 19
+GenLoot: 1
+GenRoam: 88
 E
 #17015
 chama elemental fogo~
@@ -182,8 +185,8 @@ Ela corre ao seu redor, esperando uma brecha.
 8 1 0 1d5+200 1d10+3
 850 5000
 9 9 2
-GenWimpy: 83
-GenRoam: 12
+GenWimpy: 96
+GenRoam: 14
 E
 #17016
 elemental neve humanoide cristal~
@@ -222,7 +225,7 @@ todos os lados, produzindo barulhentas explosões.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 6
+GenWimpy: 9
 E
 #17019
 elemental acido liquido humanoide~
@@ -235,7 +238,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 45
+GenWimpy: 49
 GenLoot: 1
 E
 #17020
@@ -250,7 +253,8 @@ que suas calças sequem rápido.
 8 12 1 1d5+250 3d5+4
 1000 4000
 9 9 2
-GenWimpy: 51
+GenWimpy: 55
+GenRoam: 1
 E
 #17021
 lama monstro elemental~
@@ -263,8 +267,8 @@ O que há de interessante nisso?  Terra, água... garras??
 7 12 -2 1d5+250 3d5+6
 1000 4000
 9 9 1
-GenWimpy: 4
-GenRoam: 59
+GenWimpy: 6
+GenRoam: 52
 E
 #17022
 tufao elemental~
@@ -277,8 +281,8 @@ Ele parece um tanto quanto imprevisível.
 6 12 -3 1d5+250 3d5+5
 1000 4000
 9 9 1
-GenWimpy: 10
-GenRoam: 78
+GenWimpy: 17
+GenRoam: 89
 E
 #17023
 particula elemental coisa~
@@ -291,8 +295,8 @@ Uma intrigante manifestação de energia.
 5 14 -15 1d5+200 2d5+3
 1000 3000
 9 9 2
-GenWimpy: 6
-GenRoam: 48
+GenWimpy: 10
+GenRoam: 56
 E
 #17024
 nuvem poeira elemental~
@@ -319,7 +323,7 @@ An undefined string.
 2 17 2 1d5+100 1d8+1
 450 1000
 9 9 1
-GenWimpy: 33
+GenWimpy: 35
 GenRoam: 88
 E
 #17026
@@ -379,10 +383,9 @@ Elas parecem estar formando um tipo de humanóide. E sua expressão não
 26 -2 -5 1d5+620 6d5+12
 3000 30000
 9 9 1
-GenWimpy: 53
+GenWimpy: 61
 GenLoot: 1
-GenRoam: 4
-GenGroup: 1
+GenRoam: 1
 E
 #17030
 furacao~
@@ -456,7 +459,7 @@ As ervas que ele carrega parecem ser raras.
 13 10 -9 1d5+450 1d20+4
 2900 10000
 9 9 1
-GenWimpy: 39
+GenWimpy: 43
 GenRoam: 6
 E
 #17035
@@ -483,7 +486,7 @@ Ele se assemelha bastante a um desagradável inseto.
 5 16 4 1d5+90 2d4+1
 800 1000
 9 9 1
-GenWimpy: 55
+GenWimpy: 54
 GenRoam: 86
 E
 #17037

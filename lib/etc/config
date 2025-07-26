@@ -38,22 +38,22 @@ max_npc_corpse_time = 5
 max_pc_corpse_time = 168
 
 * Number of tics before a PC is sent to the void.
-idle_void = 8
+idle_void = 3
 
 * Number of tics before a PC is autorented.
-idle_rent_time = 24
+idle_rent_time = 30
 
 * Level and above of players whom are immune to idle penalties.
-idle_max_level = 10
+idle_max_level = 106
 
 * Should the items in death traps be junked automatically?
-dts_are_dumps = 0
+dts_are_dumps = 1
 
 * When an immortal loads an object, should it load into their inventory?
 load_into_inventory = 1
 
 * Should PC's be able to track through hidden or closed doors?
-track_through_doors = 1
+track_through_doors = 0
 
 * Should players who reach enough exp be prevented from automatically levelling to immortal?
 no_mort_to_immort = 1
@@ -77,7 +77,7 @@ default_minimap_size = 2
 script_players = 0
 
 * Does weather affect spell effectiveness?
-weather_affects_spells = 1
+weather_affects_spells = 0
 
 * Does weather affect spells based on school?
 school_weather_affects = 1
@@ -251,7 +251,7 @@ ibt_autosave = 1
 use_autowiz = 1
 
 * If yes, what is the lowest level which should be on the wizlist?
-min_wizlist_lev = 101
+min_wizlist_lev = 106
 
 * If yes, enable the protocol negotiation system.
 protocol_negotiation = 1

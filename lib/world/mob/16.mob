@@ -289,7 +289,7 @@ consegue enxergar um palmo em frente de seu nariz.
 18 9 3 3d5+400 2d6+1
 5000 12000
 9 9 1
-GenWimpy: 12
+GenWimpy: 8
 E
 #1622
 prisioneiro gnomo~
@@ -327,7 +327,8 @@ você por sua ousadia em acorda-lo.
 5 12 6 1d11+61 1d8+0
 200 600
 9 9 1
-GenWimpy: 3
+GenWimpy: 1
+GenBrave: 1
 E
 #1626
 cozinheiro hobgoblin~

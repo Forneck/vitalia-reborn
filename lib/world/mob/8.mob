@@ -40,7 +40,7 @@ Parece estar em sua maneira de cuidar de algo...'
 23 8 -7 10d10+1600 2d2+16
 900 46544
 9 9 1
-GenWimpy: 6
+GenWimpy: 7
 GenRoam: 89
 E
 #803
@@ -55,7 +55,7 @@ desejo de matar...
 20 8 -8 10d10+1000 3d3+15
 700 38676
 9 9 1
-GenWimpy: 43
+GenWimpy: 44
 GenLoot: 1
 GenRoam: 89
 E
@@ -72,7 +72,7 @@ ele já esta lhe atacando!
 2200 120764
 9 9 1
 GenWimpy: 4
-GenRoam: 84
+GenRoam: 89
 E
 #805
 pequeno vampiro~
@@ -85,7 +85,7 @@ Observe o dente - alguma coisa parece lembrar você sobre o dente.
 30 0 -10 10d10+2250 3d6+18
 1600 69345
 9 9 1
-GenWimpy: 6
+GenWimpy: 5
 GenRoam: 89
 E
 #806

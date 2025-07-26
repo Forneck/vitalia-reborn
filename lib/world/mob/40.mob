@@ -62,7 +62,7 @@ Você percebe toda a maldade no seu olhar...
 5 15 5 2d10+60 2d4+0
 100 900
 9 9 0
-GenWimpy: 86
+GenWimpy: 89
 GenRoam: 88
 E
 #4005
@@ -76,8 +76,8 @@ Ele parece pavoroso.
 7 11 2 3d20+75 2d6+2
 200 3000
 9 9 1
-GenWimpy: 20
-GenRoam: 77
+GenWimpy: 18
+GenRoam: 74
 E
 #4050
 guerreiro~
@@ -103,7 +103,7 @@ Ele parece ter jeito com armas.
 7 13 5 3d10+80 2d5+0
 200 2500
 9 9 1
-GenWimpy: 75
+GenWimpy: 79
 GenRoam: 88
 E
 #4052
@@ -156,9 +156,9 @@ O hobgoblin parece bastante perigoso.
 10 8 2 1d16+120 2d6+3
 300 10000
 9 9 1
-GenWimpy: 9
-GenRoam: 85
-GenGroup: 9
+GenWimpy: 11
+GenRoam: 87
+GenGroup: 10
 E
 #4056
 orc~
@@ -185,8 +185,8 @@ O leão parece bastante hostil com enormes garras e grandes dentes.
 5 16 5 1d10+60 2d4+0
 0 900
 9 9 1
-GenWimpy: 70
-GenRoam: 88
+GenWimpy: 73
+GenRoam: 89
 E
 #4058
 gigante colina~
@@ -200,6 +200,8 @@ logo chega a conclusão que ele não é muito inteligente.
 13 8 2 1d10+160 2d10+0
 1000 16500
 9 9 1
+GenWimpy: 3
+GenRoam: 13
 E
 #4100
 mago~
@@ -255,7 +257,7 @@ o SEU ouro também...
 100 4000
 9 9 1
 GenWimpy: 54
-GenRoam: 89
+GenRoam: 87
 E
 T 3007
 #4104

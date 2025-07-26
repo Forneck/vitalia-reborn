@@ -66,7 +66,7 @@ roupa que ela viu, feroz, com uma luz triunfante em seus olhos.
 0 100
 9 9 1
 GenWimpy: 14
-GenRoam: 60
+GenRoam: 59
 E
 #20105
 paciente mental~
@@ -170,8 +170,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 31
-GenRoam: 31
+GenWimpy: 32
+GenRoam: 56
 E
 #20111
 jovem mulher Anouk~
@@ -219,7 +219,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 700 600
 9 9 2
 GenWimpy: 26
-GenRoam: 79
+GenRoam: 76
 E
 #20114
 jovem mulher Renee~
@@ -234,9 +234,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 28
-GenRoam: 77
-GenGroup: 4
+GenWimpy: 30
+GenRoam: 74
+GenGroup: 3
 E
 #20115
 jovem mulher Stela~
@@ -287,9 +287,9 @@ original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 21
-GenRoam: 76
-GenGroup: 9
+GenWimpy: 23
+GenRoam: 74
+GenGroup: 8
 E
 #20118
 jovem mulher nancy~

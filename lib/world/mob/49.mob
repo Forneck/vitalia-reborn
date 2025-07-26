@@ -9,8 +9,8 @@ Ele olha calmamente para você e continua a andar lenta e graciosamente.
 2 19 9 2d4+16 1d4+1
 0 400
 9 9 1
-GenWimpy: 100
-GenRoam: 65
+GenWimpy: 99
+GenRoam: 72
 E
 #4901
 elfo gato~
@@ -23,7 +23,7 @@ Ele dorme despreocupadamente sob uma sombra fresca de uma árvore.
 3 18 7 2d6+34 1d7+0
 0 800
 4 4 1
-GenWimpy: 3
+GenWimpy: 4
 E
 #4902
 leopardo manchado~
@@ -77,8 +77,8 @@ Ele pula rapidamente pelas árvores, procurando algo para mastigar.
 4 17 6 8d5+20 1d6+1
 0 500
 9 9 1
-GenWimpy: 3
-GenRoam: 57
+GenWimpy: 4
+GenRoam: 59
 E
 #4906
 macaco carnívoro~
