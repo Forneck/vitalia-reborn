@@ -896,12 +896,17 @@ void game_loop(socket_t local_mother_desc)
                 /* Reset the idle timer & pull char back from void if
                    necessary */
                 d->character->char_specials.timer = 0;
-                if (STATE(d) == CON_PLAYING && GET_WAS_IN(d->character) != NOWHERE) {
+                if ((STATE(d) == CON_PLAYING || STATE(d) == CON_IDLE) && GET_WAS_IN(d->character) != NOWHERE) {
                     if (IN_ROOM(d->character) != NOWHERE)
                         char_from_room(d->character);
                     char_to_room(d->character, GET_WAS_IN(d->character));
                     GET_WAS_IN(d->character) = NOWHERE;
                     act("$n retornou.", TRUE, d->character, 0, 0, TO_ROOM);
+                    send_to_char(d->character, "Você retornou ao mundo dos vivos!\r\n");
+                    /* If player was idle, change state back to playing */
+                    if (STATE(d) == CON_IDLE) {
+                        STATE(d) = CON_PLAYING;
+                    }
                 }
                 GET_WAIT_STATE(d->character) = 1;
             }
@@ -911,12 +916,27 @@ void game_loop(socket_t local_mother_desc)
                 show_string(d, comm);
             else if (d->str) /* Writing boards, mail, etc. */
                 string_add(d, comm);
-            else if (STATE(d) != CON_PLAYING) /* In menus, etc. */
+            else if (STATE(d) != CON_PLAYING && STATE(d) != CON_IDLE) /* In menus, etc. */
                 nanny(d, comm);
-            else {                        /* else: we're playing normally. */
+            else if (STATE(d) == CON_IDLE) {
+                /* Player is idle, any command should wake them up */
+                /* This is handled above in the timer reset section */
+                /* Just process the command normally now that they're awake */
                 if (aliased)              /* To prevent recursive aliases. */
                     d->has_prompt = TRUE; /* To get newline before next cmd
                                                                      output. */
+                else if (perform_alias(d, comm,
+                                       sizeof(comm))) /* Run it
+                                                                                                         through
+                                                                                                         aliasing
+                                                                                                         system */
+                    get_from_q(&d->input, comm, &aliased);
+                command_interpreter(d->character, comm); /* Send it to
+                                                                                                    interpreter */
+            } else {                                     /* else: we're playing normally. */
+                if (aliased)                             /* To prevent recursive aliases. */
+                    d->has_prompt = TRUE;                /* To get newline before next cmd
+                                                                                    output. */
                 else if (perform_alias(d, comm,
                                        sizeof(comm))) /* Run it
                                                                                                          through
@@ -1144,7 +1164,7 @@ static char *make_prompt(struct descriptor_data *d)
                  d->showstr_count, d->showstr_page >= d->showstr_count ? "sair" : "continuar");
     else if (d->str)
         strcpy(prompt, "] "); /* strcpy: OK (for 'MAX_PROMPT_LENGTH >= 3') */
-    else if (STATE(d) == CON_PLAYING && !IS_NPC(d->character)) {
+    else if ((STATE(d) == CON_PLAYING || STATE(d) == CON_IDLE) && !IS_NPC(d->character)) {
         int count;
         size_t len = 0;
 
@@ -1263,8 +1283,10 @@ static char *make_prompt(struct descriptor_data *d)
         if (len < sizeof(prompt))
             strncat(prompt, "> ", sizeof(prompt) - len - 1); /* strncat: OK
                                                               */
-    } else if (STATE(d) == CON_PLAYING && IS_NPC(d->character))
+    } else if ((STATE(d) == CON_PLAYING || STATE(d) == CON_IDLE) && IS_NPC(d->character))
         snprintf(prompt, sizeof(prompt), "%s> ", GET_NAME(d->character));
+    else if (STATE(d) == CON_IDLE)
+        snprintf(prompt, sizeof(prompt), "[IDLE] Digite qualquer comando para retornar: ");
     else
         *prompt = '\0';
 

@@ -783,7 +783,7 @@ void char_from_furniture(struct char_data *ch);
 #define IS_IN_OLC(d) ((STATE(d) >= FIRST_OLC_STATE) && (STATE(d) <= LAST_OLC_STATE))
 
 /** Defines whether d is playing or not. */
-#define IS_PLAYING(d) (IS_IN_OLC(d) || STATE(d) == CON_PLAYING)
+#define IS_PLAYING(d) (IS_IN_OLC(d) || STATE(d) == CON_PLAYING || STATE(d) == CON_IDLE)
 
 /** Defines if it is ok to send a message to ch. */
 #define SENDOK(ch)                                                                                                     \

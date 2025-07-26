@@ -408,6 +408,16 @@ void gain_condition(struct char_data *ch, int condition, int value)
 
 static void check_idling(struct char_data *ch)
 {
+    /* High level players (LVL_GOD and above) should not be idled out */
+    if (GET_LEVEL(ch) >= LVL_GOD) {
+        /* Send a periodic "keep-alive" command to maintain connection */
+        if (ch->desc && (ch->char_specials.timer % 10) == 0) {
+            /* Send a subtle look command every 10 ticks to keep connection alive */
+            send_to_char(ch, "");
+        }
+        return;
+    }
+
     if (ch->char_specials.timer > CONFIG_IDLE_VOID) {
         if (GET_WAS_IN(ch) == NOWHERE && IN_ROOM(ch) != NOWHERE &&
             !PLR_FLAGGED(ch, PLR_GHOST | PLR_FROZEN | PLR_JAILED)) {
@@ -417,12 +427,17 @@ static void check_idling(struct char_data *ch)
                 stop_fighting(ch);
             }
             act("$n desaparece no vazio.", TRUE, ch, 0, 0, TO_ROOM);
-            send_to_char(ch, "Você esteve ocios%s e caiu em um vazio.\r\n", OA(ch));
+            send_to_char(ch, "Você esteve ocios%s e foi transportad%s para Puff.\r\n", OA(ch), OA(ch));
             save_char(ch);
             Crash_crashsave(ch);
             char_from_room(ch);
-            char_to_room(ch, 1);
+            char_to_room(ch, 1); /* Move to room 1 where Puff is */
+            /* Set connection state to CON_IDLE instead of disconnecting */
+            if (ch->desc) {
+                STATE(ch->desc) = CON_IDLE;
+            }
         } else if (ch->char_specials.timer > CONFIG_IDLE_RENT_TIME) {
+            /* If still idle after rent time, then disconnect */
             if (IN_ROOM(ch) != NOWHERE)
                 char_from_room(ch);
             char_to_room(ch, 3);

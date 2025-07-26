@@ -400,6 +400,7 @@
 #define CON_ELEVATE_CONF 41
 #define CON_IMM_CONF 42
 #define CON_REMOTE 43
+#define CON_IDLE 44 /**< Player is idle and moved to void */
 
 /* OLC States range - used by IS_IN_OLC and IS_PLAYING */
 #define FIRST_OLC_STATE CON_OEDIT /**< The first CON_ state that is an OLC */
