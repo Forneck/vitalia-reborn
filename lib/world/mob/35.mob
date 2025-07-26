@@ -25,7 +25,7 @@ para o jantar.
 4 17 6 1d1+55 1d8+0
 50 600
 9 9 1
-GenWimpy: 81
+GenWimpy: 83
 GenRoam: 87
 E
 #3502
@@ -40,8 +40,8 @@ homens para bater, mas talvez quem bata seja você...
 7 15 3 1d12+100 2d5+1
 300 2000
 9 9 1
-GenWimpy: 36
-GenRoam: 88
+GenWimpy: 38
+GenRoam: 85
 E
 #3503
 goblin lider~

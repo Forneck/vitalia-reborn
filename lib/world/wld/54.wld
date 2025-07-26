@@ -127,11 +127,6 @@ D2
 ~
 0 -1 5404
 D3
-Para o distrito comercial.
-~
-~
-0 -1 5500
-D3
 ~
 ~
 0 -1 5408
@@ -2814,6 +2809,7 @@ D2
 ~
 0 -1 5442
 S
+T 5412
 #5548
 O Laborátório dos Magos~
    Você está no topo de uma velha torre de rochas.  Ao longo das paredes
@@ -3288,14 +3284,14 @@ D0
 porta~
 1 -1 5577
 E
-espelho~
-Você vê a imagem de um lutador humanóide com estranhas armaduras e uma arma
-empunhada.
-~
-E
 janela~
 Olhando por essa janela você pode ver os campos que separam os muros do próprio
 palácio.
+~
+E
+espelho~
+Você vê a imagem de um lutador humanóide com estranhas armaduras e uma arma
+empunhada.
 ~
 S
 #5577

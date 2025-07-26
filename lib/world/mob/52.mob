@@ -27,8 +27,8 @@ para você, ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 100
-GenRoam: 88
+GenWimpy: 97
+GenRoam: 81
 E
 T 3009
 #5202
@@ -113,7 +113,7 @@ Um pequeno e lindo lagarto -- bem, isso se você gostar de répteis!
 0 500
 9 9 0
 GenWimpy: 100
-GenRoam: 22
+GenRoam: 16
 E
 #5208
 golem pedra~

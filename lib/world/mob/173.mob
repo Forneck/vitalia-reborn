@@ -296,8 +296,8 @@ vagamente em você!
 60 3 -3 20d20+550 4d4+14
 500 46088
 9 9 1
-GenWimpy: 5
-GenRoam: 27
+GenWimpy: 7
+GenRoam: 22
 E
 #17320
 encantado cavaleiro graduado~
@@ -373,9 +373,9 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 10
-GenRoam: 49
-GenGroup: 8
+GenWimpy: 7
+GenRoam: 46
+GenGroup: 6
 E
 #17325
 bufao dagonet bobo~
@@ -651,7 +651,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 18
+GenWimpy: 25
 E
 #17344
 escrava~
@@ -665,8 +665,8 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 5
-GenRoam: 8
+GenWimpy: 6
+GenRoam: 2
 E
 #17345
 chefe saxao render~

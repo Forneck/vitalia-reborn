@@ -141,7 +141,7 @@ O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 0 25
 9 9 0
 GenWimpy: 46
-GenRoam: 80
+GenRoam: 78
 E
 #6010
 esquilo~
@@ -186,7 +186,7 @@ no chão.
 0 200
 9 9 0
 GenWimpy: 57
-GenRoam: 84
+GenRoam: 80
 E
 #6013
 esquilinho~
@@ -288,6 +288,6 @@ O pato é bastante gordo.   Ele parece estar aproveitando bem sua vida.
 0 75
 9 9 0
 GenWimpy: 100
-GenRoam: 86
+GenRoam: 84
 E
 $

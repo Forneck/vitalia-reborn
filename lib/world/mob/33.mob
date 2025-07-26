@@ -255,8 +255,7 @@ serviço de guarda...
 18 3 -3 3d5+220 3d6+2
 2400 32000
 9 9 1
-GenWimpy: 11
-GenLoot: 1
+GenWimpy: 20
 E
 #3317
 mineiro escravo~
@@ -272,7 +271,7 @@ você deveria, ou melhor, se você pode dar-lhe a liberdade.
 0 1500
 9 9 1
 GenWimpy: 14
-GenLoot: 9
+GenLoot: 7
 E
 #3318
 fazendeiro~
