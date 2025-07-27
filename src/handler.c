@@ -1506,15 +1506,30 @@ void free_group(struct group_data *group)
     struct char_data *tch;
     struct iterator_data Iterator;
 
-    if (group->members->iSize) {
-        for (tch = (struct char_data *)merge_iterator(&Iterator, group->members); tch; tch = next_in_list(&Iterator))
-            leave_group(tch);
+    if (!group) {
+        return; /* Safety check for NULL group */
+    }
 
+    /* Clear group references from all members without calling leave_group to avoid recursion */
+    if (group->members && group->members->iSize) {
+        for (tch = (struct char_data *)merge_iterator(&Iterator, group->members); tch; tch = next_in_list(&Iterator)) {
+            if (tch && tch->group == group) {
+                tch->group = NULL; /* Clear the group reference directly */
+            }
+        }
         remove_iterator(&Iterator);
     }
 
-    free_list(group->members);
-    remove_from_list(group, group_list);
+    if (group->members) {
+        free_list(group->members);
+        group->members = NULL; /* Prevent double-free */
+    }
+    
+    /* Only remove from group_list if it's still in the list */
+    if (group_list && find_in_list(group, group_list)) {
+        remove_from_list(group, group_list);
+    }
+    
     free(group);
 }
 

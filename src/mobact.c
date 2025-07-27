@@ -48,6 +48,7 @@ struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch);
 struct obj_data *find_cursed_item_in_inventory(struct char_data *ch);
 struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum);
 void mob_process_wishlist_goals(struct char_data *ch);
+bool mob_try_to_accept_quest(struct char_data *ch);
 bool mob_try_donate(struct char_data *ch, struct obj_data *obj);
 bool mob_try_sacrifice(struct char_data *ch, struct obj_data *corpse);
 bool mob_try_junk(struct char_data *ch, struct obj_data *obj);
@@ -96,7 +97,8 @@ void mobile_activity(void)
             /* If stuck on shopping goal for too long (50 ticks = ~5 minutes), abandon it */
             if ((ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL ||
                  ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY ||
-                 ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER) &&
+                 ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER ||
+                 ch->ai_data->current_goal == GOAL_ACCEPT_QUEST) &&
                 ch->ai_data->goal_timer > 50) {
                 act("$n parece frustrado e desiste da viagem.", FALSE, ch, 0, 0, TO_ROOM);
                 ch->ai_data->current_goal = GOAL_NONE;
@@ -265,6 +267,22 @@ void mobile_activity(void)
                         mob_posts_quest(ch, ch->ai_data->goal_item_vnum, reward);
                         act("$n fala com o questmaster e entrega um pergaminho.", FALSE, ch, 0, 0, TO_ROOM);
                     }
+                } else if (ch->ai_data->current_goal == GOAL_ACCEPT_QUEST) {
+                    /* Chegou ao questmaster para aceitar uma quest */
+                    struct char_data *questmaster = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
+                    if (questmaster && !GET_QUEST(ch)) {
+                        /* Procura por quests disponíveis neste questmaster */
+                        qst_vnum available_quest = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), 1);
+                        if (available_quest != NOTHING) {
+                            qst_rnum quest_rnum = real_quest(available_quest);
+                            if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {
+                                set_mob_quest(ch, quest_rnum);
+                                act("$n fala com $N e aceita uma tarefa.", FALSE, ch, 0, questmaster, TO_ROOM);
+                            }
+                        } else {
+                            act("$n fala com $N mas parece não haver tarefas disponíveis.", FALSE, ch, 0, questmaster, TO_ROOM);
+                        }
+                    }
                 }
                 /* Limpa o objetivo, pois foi concluído. */
                 ch->ai_data->current_goal = GOAL_NONE;
@@ -313,6 +331,11 @@ void mobile_activity(void)
         /* Wishlist-based goal planning */
         if (ch->ai_data && rand_number(1, 100) <= 10) { /* 10% chance per tick */
             mob_process_wishlist_goals(ch);
+        }
+
+        /* Quest acceptance - try to find and accept quests occasionally */
+        if (ch->ai_data && rand_number(1, 100) <= 3) { /* 3% chance per tick to seek quests */
+            mob_try_to_accept_quest(ch);
         }
 
         /* Mob quest processing */
@@ -1185,7 +1208,8 @@ bool handle_duty_routine(struct char_data *ch)
      ******************************************************************/
     /* Allow sentinels to temporarily abandon their post for quest activities */
     if (is_sentinel && ch->ai_data &&
-        (ch->ai_data->current_goal == GOAL_POST_QUEST || ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER)) {
+        (ch->ai_data->current_goal == GOAL_POST_QUEST || ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER ||
+         ch->ai_data->current_goal == GOAL_ACCEPT_QUEST)) {
         return FALSE; /* Let quest-related AI take priority over guard duty */
     }
 
@@ -2180,6 +2204,60 @@ bool mob_try_to_sell_junk(struct char_data *ch)
  * WISHLIST GOAL PROCESSING FOR MOB AI
  * ===============================================
  */
+
+/**
+ * Makes a mob occasionally decide to seek out and accept quests.
+ * Called when a mob has no current goal and not already on a quest.
+ * @param ch The mob that might accept a quest
+ * @return TRUE if the mob decides to pursue quest acceptance, FALSE otherwise
+ */
+bool mob_try_to_accept_quest(struct char_data *ch)
+{
+    struct char_data *questmaster;
+    zone_rnum mob_zone;
+    
+    if (!IS_NPC(ch) || !ch->ai_data || ch->ai_data->current_goal != GOAL_NONE) {
+        return FALSE; /* Already has a goal or not an AI mob */
+    }
+    
+    /* Don't accept quests if already on one */
+    if (GET_QUEST(ch)) {
+        return FALSE;
+    }
+    
+    /* Only occasionally try to accept quests - about 5% chance per call */
+    if (rand() % 100 > 5) {
+        return FALSE;
+    }
+    
+    /* Check if frustrated from recent quest activities */
+    if (ch->ai_data->quest_posting_frustration_timer > 0) {
+        return FALSE;
+    }
+    
+    /* Look for accessible questmasters in the current zone */
+    mob_zone = world[IN_ROOM(ch)].zone;
+    questmaster = find_accessible_questmaster_in_zone(ch, mob_zone);
+    
+    if (questmaster && questmaster != ch) {
+        /* Check if this questmaster has available quests for this mob */
+        qst_vnum available_quest = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), 1);
+        if (available_quest != NOTHING) {
+            qst_rnum quest_rnum = real_quest(available_quest);
+            if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {
+                /* Set goal to go to questmaster and accept quest */
+                ch->ai_data->current_goal = GOAL_ACCEPT_QUEST;
+                ch->ai_data->goal_destination = IN_ROOM(questmaster);
+                ch->ai_data->goal_target_mob_rnum = GET_MOB_RNUM(questmaster);
+                ch->ai_data->goal_timer = 0;
+                act("$n parece estar à procura de trabalho.", FALSE, ch, 0, 0, TO_ROOM);
+                return TRUE;
+            }
+        }
+    }
+    
+    return FALSE;
+}
 
 /**
  * Processa a wishlist de um mob e define um objetivo baseado no item de maior prioridade.
