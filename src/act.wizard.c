@@ -2665,10 +2665,11 @@ ACMD(do_show)
                          "  %5d triggers         %5d shops\r\n"
                          "  %5d large bufs       %5d autoquests\r\n"
                          "  %5d buf switches     %5d overflows\r\n"
-                         "  %5d lists\r\n",
+                         "  %5d lists            %5d groups (%5d pending cleanup)\r\n",
                          i, con, top_of_p_table + 1, j, top_of_mobt + 1, k, top_of_objt + 1, top_of_world + 1,
                          top_of_zone_table + 1, top_of_trigt + 1, top_shop + 1, buf_largecount, total_quests,
-                         buf_switches, buf_overflows, global_lists->iSize);
+                         buf_switches, buf_overflows, global_lists->iSize, group_list ? group_list->iSize : 0,
+                         get_pending_group_cleanup_count());
             break;
 
             /* show errors */
