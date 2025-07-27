@@ -100,17 +100,16 @@ void mobile_activity(void)
             /* If stuck on shopping goal for too long (50 ticks = ~5 minutes), abandon it */
             if ((ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL ||
                  ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY ||
-                 ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER ||
-                 ch->ai_data->current_goal == GOAL_ACCEPT_QUEST ||
+                 ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER || ch->ai_data->current_goal == GOAL_ACCEPT_QUEST ||
                  ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) &&
                 ch->ai_data->goal_timer > 50) {
                 act("$n parece frustrado e desiste da viagem.", FALSE, ch, 0, 0, TO_ROOM);
-                
+
                 /* If abandoning quest completion, fail the quest */
                 if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
                     fail_mob_quest(ch, "timeout");
                 }
-                
+
                 ch->ai_data->current_goal = GOAL_NONE;
                 ch->ai_data->goal_destination = NOWHERE;
                 ch->ai_data->goal_obj = NULL;
@@ -279,7 +278,8 @@ void mobile_activity(void)
                     }
                 } else if (ch->ai_data->current_goal == GOAL_ACCEPT_QUEST) {
                     /* Chegou ao questmaster para aceitar uma quest */
-                    struct char_data *questmaster = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
+                    struct char_data *questmaster =
+                        get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
                     if (questmaster && !GET_QUEST(ch)) {
                         /* Procura por quests disponíveis neste questmaster */
                         qst_vnum available_quest = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), 1);
@@ -288,7 +288,7 @@ void mobile_activity(void)
                             if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {
                                 set_mob_quest(ch, quest_rnum);
                                 act("$n fala com $N e aceita uma tarefa.", FALSE, ch, 0, questmaster, TO_ROOM);
-                                
+
                                 /* Automatically transition to quest completion goal */
                                 ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
                                 ch->ai_data->goal_destination = NOWHERE;
@@ -298,7 +298,8 @@ void mobile_activity(void)
                                 continue; /* Process quest completion immediately */
                             }
                         } else {
-                            act("$n fala com $N mas parece não haver tarefas disponíveis.", FALSE, ch, 0, questmaster, TO_ROOM);
+                            act("$n fala com $N mas parece não haver tarefas disponíveis.", FALSE, ch, 0, questmaster,
+                                TO_ROOM);
                         }
                     }
                 } else if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
@@ -876,6 +877,21 @@ bool mob_handle_grouping(struct char_data *ch)
 
     if (!ch->ai_data)
         return FALSE;
+
+    /* Don't form groups in death traps or near dangerous areas to reduce cleanup overhead */
+    if (IN_ROOM(ch) != NOWHERE && ROOM_FLAGGED(IN_ROOM(ch), ROOM_DEATH))
+        return FALSE;
+
+    /* Check adjacent rooms for death traps - avoid grouping near danger */
+    int i;
+    for (i = 0; i < NUM_OF_DIRS; i++) {
+        if (EXIT(ch, i) && EXIT(ch, i)->to_room != NOWHERE && ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
+            /* Only skip grouping 50% of the time near death traps to avoid completely killing group formation */
+            if (rand_number(1, 100) <= 50)
+                return FALSE;
+            break;
+        }
+    }
 
     /* Verifica a chance de tentar agrupar-se. */
     const int CURIOSIDADE_MINIMA_GRUPO = 5;
@@ -2152,13 +2168,12 @@ struct char_data *get_mob_in_room_by_vnum(room_rnum room, mob_vnum vnum)
 struct char_data *find_questmaster_by_vnum(mob_vnum vnum)
 {
     struct char_data *i;
-    
+
     /* Search through all characters in the world */
     for (i = character_list; i; i = i->next) {
         if (IS_NPC(i) && GET_MOB_VNUM(i) == vnum) {
             /* Check if this mob is a questmaster (has quest special procedure) */
-            if (mob_index[GET_MOB_RNUM(i)].func == questmaster || 
-                mob_index[GET_MOB_RNUM(i)].func == temp_questmaster) {
+            if (mob_index[GET_MOB_RNUM(i)].func == questmaster || mob_index[GET_MOB_RNUM(i)].func == temp_questmaster) {
                 return i;
             }
         }
@@ -2287,30 +2302,30 @@ bool mob_try_to_accept_quest(struct char_data *ch)
 {
     struct char_data *questmaster;
     zone_rnum mob_zone;
-    
+
     if (!IS_NPC(ch) || !ch->ai_data || ch->ai_data->current_goal != GOAL_NONE) {
         return FALSE; /* Already has a goal or not an AI mob */
     }
-    
+
     /* Don't accept quests if already on one */
     if (GET_QUEST(ch)) {
         return FALSE;
     }
-    
+
     /* Only occasionally try to accept quests - about 5% chance per call */
     if (rand() % 100 > 5) {
         return FALSE;
     }
-    
+
     /* Check if frustrated from recent quest activities */
     if (ch->ai_data->quest_posting_frustration_timer > 0) {
         return FALSE;
     }
-    
+
     /* Look for accessible questmasters in the current zone */
     mob_zone = world[IN_ROOM(ch)].zone;
     questmaster = find_accessible_questmaster_in_zone(ch, mob_zone);
-    
+
     if (questmaster && questmaster != ch) {
         /* Check if this questmaster has available quests for this mob */
         qst_vnum available_quest = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), 1);
@@ -2327,7 +2342,7 @@ bool mob_try_to_accept_quest(struct char_data *ch)
             }
         }
     }
-    
+
     return FALSE;
 }
 
@@ -2344,11 +2359,11 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
     struct obj_data *target_obj;
     room_rnum target_room;
     int quest_type = QST_TYPE(quest_rnum);
-    
+
     if (!IS_NPC(ch) || !ch->ai_data) {
         return FALSE;
     }
-    
+
     /* Handle quest completion based on quest type */
     switch (quest_type) {
         case AQ_OBJ_FIND:
@@ -2362,11 +2377,11 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
             } else {
                 /* Object not found, add to wishlist and seek it */
                 add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100); /* High priority */
-                ch->ai_data->current_goal = GOAL_NONE; /* Let wishlist system handle it */
+                ch->ai_data->current_goal = GOAL_NONE;                 /* Let wishlist system handle it */
                 return TRUE;
             }
             break;
-            
+
         case AQ_ROOM_FIND:
             /* Check if mob is in the target room */
             target_room = real_room(QST_TARGET(quest_rnum));
@@ -2382,7 +2397,7 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 return TRUE;
             }
             break;
-            
+
         case AQ_MOB_FIND:
             /* Check if target mob is in current room */
             target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
@@ -2396,13 +2411,14 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 /* For now, just roam randomly looking for it */
                 if (rand() % 2) { /* 50% chance to move */
                     char_from_room(ch);
-                    char_to_room(ch, world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS] ? 
-                                  world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]->to_room : IN_ROOM(ch));
+                    char_to_room(ch, world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]
+                                         ? world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]->to_room
+                                         : IN_ROOM(ch));
                 }
                 return TRUE;
             }
             break;
-            
+
         case AQ_MOB_KILL:
         case AQ_MOB_KILL_BOUNTY:
             /* Check if target mob is in current room and attack it */
@@ -2416,13 +2432,14 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 /* Target mob not found, seek it */
                 if (rand() % 2) { /* 50% chance to move */
                     char_from_room(ch);
-                    char_to_room(ch, world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS] ? 
-                                  world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]->to_room : IN_ROOM(ch));
+                    char_to_room(ch, world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]
+                                         ? world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]->to_room
+                                         : IN_ROOM(ch));
                 }
                 return TRUE;
             }
             break;
-            
+
         case AQ_OBJ_RETURN:
             /* Check if mob has the required object to return */
             target_obj = get_obj_in_list_num(QST_TARGET(quest_rnum), ch->carrying);
@@ -2432,7 +2449,7 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 if (!questmaster) {
                     questmaster = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_MASTER(quest_rnum));
                 }
-                
+
                 if (questmaster) {
                     /* Return object to questmaster */
                     act("$n entrega $p para $N.", FALSE, ch, target_obj, questmaster, TO_ROOM);
@@ -2447,7 +2464,7 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                     if (!questmaster) {
                         questmaster = find_questmaster_by_vnum(QST_MASTER(quest_rnum));
                     }
-                    
+
                     if (questmaster) {
                         ch->ai_data->goal_destination = IN_ROOM(questmaster);
                         mob_goal_oriented_roam(ch, IN_ROOM(questmaster));
@@ -2457,11 +2474,11 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
             } else {
                 /* Don't have object, add to wishlist and seek it */
                 add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100); /* High priority */
-                ch->ai_data->current_goal = GOAL_NONE; /* Let wishlist system handle it */
+                ch->ai_data->current_goal = GOAL_NONE;                 /* Let wishlist system handle it */
                 return TRUE;
             }
             break;
-            
+
         case AQ_ROOM_CLEAR:
             /* Kill all mobs in target room */
             target_room = real_room(QST_TARGET(quest_rnum));
@@ -2470,7 +2487,7 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                     /* In target room, check for hostile mobs */
                     struct char_data *temp_mob;
                     bool found_hostile = FALSE;
-                    
+
                     for (temp_mob = world[target_room].people; temp_mob; temp_mob = temp_mob->next_in_room) {
                         if (IS_NPC(temp_mob) && temp_mob != ch && !AFF_FLAGGED(temp_mob, AFF_CHARM)) {
                             /* Found a mob to kill */
@@ -2482,7 +2499,7 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                             break;
                         }
                     }
-                    
+
                     if (!found_hostile) {
                         /* Room cleared, complete quest */
                         mob_complete_quest(ch);
@@ -2497,14 +2514,14 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 }
             }
             break;
-            
+
         default:
             /* Unknown quest type, abandon quest */
             fail_mob_quest(ch, "unknown quest type");
             ch->ai_data->current_goal = GOAL_NONE;
             return TRUE;
     }
-    
+
     return FALSE;
 }
 
@@ -2536,17 +2553,17 @@ void mob_process_wishlist_goals(struct char_data *ch)
         qst_rnum quest_rnum = real_quest(GET_QUEST(ch));
         if (quest_rnum != NOTHING) {
             int quest_type = QST_TYPE(quest_rnum);
-            
+
             /* For object-based quests, add quest objects to wishlist with high priority */
             if (quest_type == AQ_OBJ_FIND || quest_type == AQ_OBJ_RETURN) {
                 obj_vnum quest_obj_vnum = QST_TARGET(quest_rnum);
-                
+
                 /* Check if mob already has the quest object */
                 struct obj_data *quest_obj = get_obj_in_list_num(quest_obj_vnum, ch->carrying);
                 if (!quest_obj) {
                     /* Add quest object to wishlist with maximum priority */
                     add_item_to_wishlist(ch, quest_obj_vnum, 200); /* Higher than normal max priority */
-                    
+
                     /* Process this quest object as highest priority item */
                     desired_item = get_top_wishlist_item(ch);
                     if (desired_item && desired_item->vnum == quest_obj_vnum) {

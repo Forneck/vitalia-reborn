@@ -1573,7 +1573,7 @@ void deferred_free_group(struct group_data *group)
 }
 
 /* Check if we need more frequent group cleanup based on pending list size */
-bool needs_frequent_group_cleanup(void) { return (pending_group_cleanup && pending_group_cleanup->iSize >= 100); }
+bool needs_frequent_group_cleanup(void) { return (pending_group_cleanup && pending_group_cleanup->iSize >= 50); }
 
 /* Process a limited number of deferred cleanups during each heartbeat to avoid lag */
 void process_deferred_cleanups(void)
@@ -1586,23 +1586,24 @@ void process_deferred_cleanups(void)
         return; /* Nothing to cleanup */
     }
 
-    /* Adaptive cleanup rate based on pending list size to handle high-traffic periods */
-    if (pending_group_cleanup->iSize >= 1000) {
-        max_cleanups_per_cycle = 10; /* High traffic: process more groups per cycle */
-        if (pending_group_cleanup->iSize >= 2000) {
-            max_cleanups_per_cycle = 20; /* Very high traffic: aggressive cleanup */
-            /* Log warning for extremely large pending lists */
-            if (pending_group_cleanup->iSize >= 5000) {
-                mudlog(BRF, LVL_GOD, TRUE,
-                       "WARNING: Group cleanup list is very large (%d groups pending). Consider investigating group "
-                       "creation/destruction patterns.",
-                       pending_group_cleanup->iSize);
-            }
+    /* More aggressive cleanup strategy to handle high death trap scenarios */
+    if (pending_group_cleanup->iSize >= 2000) {
+        max_cleanups_per_cycle = 50; /* Very high traffic: very aggressive cleanup */
+        /* Log warning for extremely large pending lists */
+        if (pending_group_cleanup->iSize >= 5000) {
+            mudlog(BRF, LVL_GOD, TRUE,
+                   "WARNING: Group cleanup list is very large (%d groups pending). Consider investigating group "
+                   "creation/destruction patterns.",
+                   pending_group_cleanup->iSize);
         }
+    } else if (pending_group_cleanup->iSize >= 1000) {
+        max_cleanups_per_cycle = 25; /* High traffic: aggressive cleanup */
+    } else if (pending_group_cleanup->iSize >= 500) {
+        max_cleanups_per_cycle = 15; /* Medium-high traffic: increased cleanup rate */
     } else if (pending_group_cleanup->iSize >= 100) {
-        max_cleanups_per_cycle = 5; /* Medium traffic: moderate cleanup rate */
+        max_cleanups_per_cycle = 8; /* Medium traffic: moderate cleanup rate */
     } else {
-        max_cleanups_per_cycle = 2; /* Low traffic: original conservative rate */
+        max_cleanups_per_cycle = 3; /* Low traffic: slightly higher than original */
     }
 
     /* Process a limited number of groups per cycle */
@@ -1636,6 +1637,16 @@ void process_deferred_cleanups(void)
     if (pending_group_cleanup && pending_group_cleanup->iSize == 0) {
         free_list(pending_group_cleanup);
         pending_group_cleanup = NULL;
+    }
+
+    /* Log group statistics periodically when there are many cleanups */
+    static int cleanup_cycles = 0;
+    cleanup_cycles++;
+    if (cleanup_cycles % 100 == 0 && cleanups_processed > 0) {
+        int total_groups = group_list ? group_list->iSize : 0;
+        int pending_cleanups = pending_group_cleanup ? pending_group_cleanup->iSize : 0;
+        mudlog(BRF, LVL_GRGOD, TRUE, "GROUP STATS: Total groups: %d, Pending cleanups: %d, Last cycle processed: %d",
+               total_groups, pending_cleanups, cleanups_processed);
     }
 }
 
@@ -1680,12 +1691,16 @@ void cleanup_all_pending_groups(void)
     }
 }
 
+/* Get the number of groups pending cleanup for stats display */
+int get_pending_group_cleanup_count(void) { return pending_group_cleanup ? pending_group_cleanup->iSize : 0; }
+
 void leave_group(struct char_data *ch)
 {
     struct group_data *group;
     struct char_data *tch;
     struct iterator_data Iterator;
     bool found_pc = FALSE;
+    bool immediate_cleanup = FALSE;
 
     if ((group = ch->group) == NULL)
         return;
@@ -1696,6 +1711,12 @@ void leave_group(struct char_data *ch)
                GET_NAME(ch));
         ch->group = NULL; /* Clear the group reference to fix inconsistency */
         return;
+    }
+
+    /* Check if this is a death trap extraction - use immediate cleanup for better performance */
+    if (IS_NPC(ch) && MOB_FLAGGED(ch, MOB_NOTDEADYET) && IN_ROOM(ch) != NOWHERE &&
+        ROOM_FLAGGED(IN_ROOM(ch), ROOM_DEATH)) {
+        immediate_cleanup = TRUE;
     }
 
     send_to_group(NULL, group, "%s não é mais membro de seu grupo.", GET_NAME(ch));
@@ -1717,8 +1738,14 @@ void leave_group(struct char_data *ch)
     if (GROUP_LEADER(group) == ch && group->members->iSize) {
         group->leader = (struct char_data *)random_from_list(group->members);
         send_to_group(NULL, group, "%s assumiu a liderança do grupo.\r\n", GET_NAME(GROUP_LEADER(group)));
-    } else if (group->members->iSize == 0)
-        deferred_free_group(group); /* Use deferred cleanup to avoid blocking main loop */
+    } else if (group->members->iSize == 0) {
+        if (immediate_cleanup) {
+            /* Immediate cleanup for death trap extractions to prevent list buildup */
+            free_group(group);
+        } else {
+            deferred_free_group(group); /* Use deferred cleanup for normal gameplay */
+        }
+    }
 }
 
 void join_group(struct char_data *ch, struct group_data *group)
