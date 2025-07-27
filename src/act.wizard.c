@@ -5291,13 +5291,17 @@ ACMD(do_mwishlist)
                                  : "Unknown",
                              mob->ai_data->current_goal);
                 if (mob->ai_data->goal_destination != NOWHERE) {
-                    send_to_char(ch, "Goal room: %d\r\n", mob->ai_data->goal_destination);
+                    send_to_char(ch, "Goal room: %d\r\n", GET_ROOM_VNUM(mob->ai_data->goal_destination));
                 }
                 if (mob->ai_data->goal_item_vnum != NOTHING) {
                     send_to_char(ch, "Goal item: %d\r\n", mob->ai_data->goal_item_vnum);
                 }
                 if (mob->ai_data->goal_target_mob_rnum != NOBODY) {
-                    send_to_char(ch, "Goal target mob: %d\r\n", mob->ai_data->goal_target_mob_rnum);
+                    send_to_char(
+                        ch, "Goal target mob: %d\r\n",
+                        (mob->ai_data->goal_target_mob_rnum >= 0 && mob->ai_data->goal_target_mob_rnum < top_of_mobt)
+                            ? mob_index[mob->ai_data->goal_target_mob_rnum].vnum
+                            : -1);
                 }
                 if (mob->ai_data->goal_timer > 0) {
                     send_to_char(ch, "Goal timer: %d\r\n", mob->ai_data->goal_timer);
@@ -5340,13 +5344,16 @@ ACMD(do_mwishlist)
                          : "Unknown",
                      mob->ai_data->current_goal);
         if (mob->ai_data->goal_destination != NOWHERE) {
-            send_to_char(ch, "Goal room: %d\r\n", mob->ai_data->goal_destination);
+            send_to_char(ch, "Goal room: %d\r\n", GET_ROOM_VNUM(mob->ai_data->goal_destination));
         }
         if (mob->ai_data->goal_item_vnum != NOTHING) {
             send_to_char(ch, "Goal item: %d\r\n", mob->ai_data->goal_item_vnum);
         }
         if (mob->ai_data->goal_target_mob_rnum != NOBODY) {
-            send_to_char(ch, "Goal target mob: %d\r\n", mob->ai_data->goal_target_mob_rnum);
+            send_to_char(ch, "Goal target mob: %d\r\n",
+                         (mob->ai_data->goal_target_mob_rnum >= 0 && mob->ai_data->goal_target_mob_rnum < top_of_mobt)
+                             ? mob_index[mob->ai_data->goal_target_mob_rnum].vnum
+                             : -1);
         }
         if (mob->ai_data->goal_timer > 0) {
             send_to_char(ch, "Goal timer: %d\r\n", mob->ai_data->goal_timer);

@@ -58,6 +58,11 @@ void free_list(struct list_data *pList)
 {
     void *pContent;
 
+    /* Check for NULL list */
+    if (pList == NULL) {
+        return;
+    }
+
     clear_simple_list();
 
     if (pList->iSize)
@@ -67,8 +72,8 @@ void free_list(struct list_data *pList)
     if (pList->iSize > 0)
         mudlog(CMP, LVL_GOD, TRUE, "List being freed while not empty.");
 
-    /* Global List for debugging */
-    if (pList != global_lists)
+    /* Global List for debugging - avoid double removal */
+    if (pList != global_lists && global_lists != NULL)
         remove_from_list(pList, global_lists);
 
     free(pList);
@@ -107,20 +112,22 @@ void remove_from_list(void *pContent, struct list_data *pList)
 {
     struct item_data *pRemovedItem;
 
-    /* Check for NULL list before attempting to find content */
-    if (pList == NULL) {
+    /* Check for NULL list or content before attempting to find content */
+    if (pList == NULL || pContent == NULL) {
         return;
     }
 
     if ((pRemovedItem = find_in_list(pContent, pList)) == NULL) {
-        /* Enhanced warning with more context for debugging */
-        if (pList == group_list) {
-            mudlog(CMP, LVL_GOD, TRUE,
-                   "WARNING: Attempting to remove group contents that don't exist in group_list (size: %d).",
-                   pList->iSize);
-        } else {
-            mudlog(CMP, LVL_GOD, TRUE, "WARNING: Attempting to remove contents that don't exist in list (size: %d).",
-                   pList->iSize);
+        /* Only log warning if the list actually has content - avoid spam for empty lists */
+        if (pList->iSize > 0) {
+            if (pList == group_list) {
+                mudlog(CMP, LVL_GOD, TRUE,
+                       "WARNING: Attempting to remove group contents that don't exist in group_list (size: %d).",
+                       pList->iSize);
+            } else {
+                mudlog(CMP, LVL_GOD, TRUE,
+                       "WARNING: Attempting to remove contents that don't exist in list (size: %d).", pList->iSize);
+            }
         }
         return;
     }
@@ -249,6 +256,10 @@ struct item_data *find_in_list(void *pContent, struct list_data *pList)
 
 void clear_simple_list(void)
 {
+    /* Properly clean up iterator if it was active */
+    if (loop && Iterator.pList != NULL) {
+        remove_iterator(&Iterator);
+    }
     loop = FALSE;
     pLastList = NULL;
 }
@@ -263,9 +274,19 @@ void *simple_list(struct list_data *pList)
         return NULL;
     }
 
+    /* Validate list structure before proceeding */
+    if (pList->iSize < 0 || (pList->iSize > 0 && pList->pFirstItem == NULL)) {
+        mudlog(CMP, LVL_GRGOD, TRUE, "SYSERR: simple_list() detected corrupted list structure, resetting.");
+        clear_simple_list();
+        return NULL;
+    }
+
     if (!loop || pLastList != pList) {
-        if (loop && pLastList != pList)
+        if (loop && pLastList != pList) {
+            /* Clean up previous iterator before switching to new list */
+            remove_iterator(&Iterator);
             mudlog(CMP, LVL_GRGOD, TRUE, "SYSERR: simple_list() forced to reset itself.");
+        }
 
         pContent = merge_iterator(&Iterator, pList);
         if (pContent != NULL) {
@@ -275,6 +296,7 @@ void *simple_list(struct list_data *pList)
         } else {
             /* merge_iterator failed, no need to call remove_iterator */
             loop = FALSE;
+            pLastList = NULL;
             return NULL;
         }
     }
@@ -284,6 +306,7 @@ void *simple_list(struct list_data *pList)
 
     remove_iterator(&Iterator);
     loop = FALSE;
+    pLastList = NULL;
     return NULL;
 }
 
