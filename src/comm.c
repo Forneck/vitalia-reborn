@@ -357,6 +357,12 @@ int main(int argc, char **argv)
     }
 
     log1("Clearing game world.");
+    
+    if (!scheck) {
+        log1("Saving temporary quest assignments before shutdown.");
+        save_temp_quest_assignments();
+    }
+    
     destroy_db();
 
     if (!scheck) {
@@ -1048,7 +1054,7 @@ void heartbeat(int heart_pulse)
             mins_since_crashsave = 0;
             Crash_save_all();
             House_save_all();
-            save_temp_quest_assignments();
+            /* Removed save_temp_quest_assignments() to reduce lag - only save on shutdown */
         }
     }
 

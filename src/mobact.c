@@ -47,7 +47,11 @@ bool mob_try_to_sell_junk(struct char_data *ch);
 struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch);
 struct obj_data *find_cursed_item_in_inventory(struct char_data *ch);
 struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum);
+struct char_data *get_mob_in_room_by_vnum(room_rnum room, mob_vnum vnum);
+struct char_data *find_questmaster_by_vnum(mob_vnum vnum);
 void mob_process_wishlist_goals(struct char_data *ch);
+bool mob_try_to_accept_quest(struct char_data *ch);
+bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum);
 bool mob_try_donate(struct char_data *ch, struct obj_data *obj);
 bool mob_try_sacrifice(struct char_data *ch, struct obj_data *corpse);
 bool mob_try_junk(struct char_data *ch, struct obj_data *obj);
@@ -96,9 +100,17 @@ void mobile_activity(void)
             /* If stuck on shopping goal for too long (50 ticks = ~5 minutes), abandon it */
             if ((ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL ||
                  ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY ||
-                 ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER) &&
+                 ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER ||
+                 ch->ai_data->current_goal == GOAL_ACCEPT_QUEST ||
+                 ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) &&
                 ch->ai_data->goal_timer > 50) {
                 act("$n parece frustrado e desiste da viagem.", FALSE, ch, 0, 0, TO_ROOM);
+                
+                /* If abandoning quest completion, fail the quest */
+                if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
+                    fail_mob_quest(ch, "timeout");
+                }
+                
                 ch->ai_data->current_goal = GOAL_NONE;
                 ch->ai_data->goal_destination = NOWHERE;
                 ch->ai_data->goal_obj = NULL;
@@ -265,6 +277,47 @@ void mobile_activity(void)
                         mob_posts_quest(ch, ch->ai_data->goal_item_vnum, reward);
                         act("$n fala com o questmaster e entrega um pergaminho.", FALSE, ch, 0, 0, TO_ROOM);
                     }
+                } else if (ch->ai_data->current_goal == GOAL_ACCEPT_QUEST) {
+                    /* Chegou ao questmaster para aceitar uma quest */
+                    struct char_data *questmaster = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
+                    if (questmaster && !GET_QUEST(ch)) {
+                        /* Procura por quests disponíveis neste questmaster */
+                        qst_vnum available_quest = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), 1);
+                        if (available_quest != NOTHING) {
+                            qst_rnum quest_rnum = real_quest(available_quest);
+                            if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {
+                                set_mob_quest(ch, quest_rnum);
+                                act("$n fala com $N e aceita uma tarefa.", FALSE, ch, 0, questmaster, TO_ROOM);
+                                
+                                /* Automatically transition to quest completion goal */
+                                ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
+                                ch->ai_data->goal_destination = NOWHERE;
+                                ch->ai_data->goal_target_mob_rnum = NOBODY;
+                                ch->ai_data->goal_item_vnum = NOTHING;
+                                ch->ai_data->goal_timer = 0;
+                                continue; /* Process quest completion immediately */
+                            }
+                        } else {
+                            act("$n fala com $N mas parece não haver tarefas disponíveis.", FALSE, ch, 0, questmaster, TO_ROOM);
+                        }
+                    }
+                } else if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
+                    /* Process quest completion based on quest type */
+                    if (GET_QUEST(ch) != NOTHING) {
+                        qst_rnum quest_rnum = real_quest(GET_QUEST(ch));
+                        if (quest_rnum != NOTHING) {
+                            if (mob_process_quest_completion(ch, quest_rnum)) {
+                                /* Quest completed, goal will be cleared in mob_complete_quest */
+                                continue;
+                            }
+                        } else {
+                            /* Invalid quest, clear it */
+                            clear_mob_quest(ch);
+                        }
+                    } else {
+                        /* No quest, clear goal */
+                        ch->ai_data->current_goal = GOAL_NONE;
+                    }
                 }
                 /* Limpa o objetivo, pois foi concluído. */
                 ch->ai_data->current_goal = GOAL_NONE;
@@ -313,6 +366,11 @@ void mobile_activity(void)
         /* Wishlist-based goal planning */
         if (ch->ai_data && rand_number(1, 100) <= 10) { /* 10% chance per tick */
             mob_process_wishlist_goals(ch);
+        }
+
+        /* Quest acceptance - try to find and accept quests occasionally */
+        if (ch->ai_data && rand_number(1, 100) <= 3) { /* 3% chance per tick to seek quests */
+            mob_try_to_accept_quest(ch);
         }
 
         /* Mob quest processing */
@@ -379,8 +437,6 @@ void mobile_activity(void)
         /* Additional quest posting - exploration, protection, and general kill quests */
         if (ch->ai_data && rand_number(1, 100) <= 3) { /* 3% chance per tick for other quest types */
             struct char_data *target;
-            struct obj_data *obj;
-            room_rnum room_target;
             int reward;
 
             /* Check genetics and decide what type of quest to post */
@@ -1185,7 +1241,8 @@ bool handle_duty_routine(struct char_data *ch)
      ******************************************************************/
     /* Allow sentinels to temporarily abandon their post for quest activities */
     if (is_sentinel && ch->ai_data &&
-        (ch->ai_data->current_goal == GOAL_POST_QUEST || ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER)) {
+        (ch->ai_data->current_goal == GOAL_POST_QUEST || ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER ||
+         ch->ai_data->current_goal == GOAL_ACCEPT_QUEST || ch->ai_data->current_goal == GOAL_COMPLETE_QUEST)) {
         return FALSE; /* Let quest-related AI take priority over guard duty */
     }
 
@@ -2071,6 +2128,45 @@ struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum)
 }
 
 /**
+ * Find a mob in a room by its virtual number (vnum).
+ * @param room The room number to search in
+ * @param vnum The virtual number of the mob to find
+ * @return Pointer to the mob if found, NULL otherwise
+ */
+struct char_data *get_mob_in_room_by_vnum(room_rnum room, mob_vnum vnum)
+{
+    struct char_data *i;
+    for (i = world[room].people; i; i = i->next_in_room) {
+        if (IS_NPC(i) && GET_MOB_VNUM(i) == vnum) {
+            return i;
+        }
+    }
+    return NULL;
+}
+
+/**
+ * Find a questmaster mob anywhere in the world by its virtual number.
+ * @param vnum The virtual number of the questmaster to find
+ * @return Pointer to the questmaster if found, NULL otherwise
+ */
+struct char_data *find_questmaster_by_vnum(mob_vnum vnum)
+{
+    struct char_data *i;
+    
+    /* Search through all characters in the world */
+    for (i = character_list; i; i = i->next) {
+        if (IS_NPC(i) && GET_MOB_VNUM(i) == vnum) {
+            /* Check if this mob is a questmaster (has quest special procedure) */
+            if (mob_index[GET_MOB_RNUM(i)].func == questmaster || 
+                mob_index[GET_MOB_RNUM(i)].func == temp_questmaster) {
+                return i;
+            }
+        }
+    }
+    return NULL;
+}
+
+/**
  * A IA de economia. O mob tenta vender os seus itens de menor valor.
  * VERSÃO FINAL COM CORREÇÃO DE BUGS.
  * Retorna TRUE se o mob definiu um objetivo ou executou uma venda.
@@ -2182,6 +2278,237 @@ bool mob_try_to_sell_junk(struct char_data *ch)
  */
 
 /**
+ * Makes a mob occasionally decide to seek out and accept quests.
+ * Called when a mob has no current goal and not already on a quest.
+ * @param ch The mob that might accept a quest
+ * @return TRUE if the mob decides to pursue quest acceptance, FALSE otherwise
+ */
+bool mob_try_to_accept_quest(struct char_data *ch)
+{
+    struct char_data *questmaster;
+    zone_rnum mob_zone;
+    
+    if (!IS_NPC(ch) || !ch->ai_data || ch->ai_data->current_goal != GOAL_NONE) {
+        return FALSE; /* Already has a goal or not an AI mob */
+    }
+    
+    /* Don't accept quests if already on one */
+    if (GET_QUEST(ch)) {
+        return FALSE;
+    }
+    
+    /* Only occasionally try to accept quests - about 5% chance per call */
+    if (rand() % 100 > 5) {
+        return FALSE;
+    }
+    
+    /* Check if frustrated from recent quest activities */
+    if (ch->ai_data->quest_posting_frustration_timer > 0) {
+        return FALSE;
+    }
+    
+    /* Look for accessible questmasters in the current zone */
+    mob_zone = world[IN_ROOM(ch)].zone;
+    questmaster = find_accessible_questmaster_in_zone(ch, mob_zone);
+    
+    if (questmaster && questmaster != ch) {
+        /* Check if this questmaster has available quests for this mob */
+        qst_vnum available_quest = find_available_quest_by_qmnum(ch, GET_MOB_VNUM(questmaster), 1);
+        if (available_quest != NOTHING) {
+            qst_rnum quest_rnum = real_quest(available_quest);
+            if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {
+                /* Set goal to go to questmaster and accept quest */
+                ch->ai_data->current_goal = GOAL_ACCEPT_QUEST;
+                ch->ai_data->goal_destination = IN_ROOM(questmaster);
+                ch->ai_data->goal_target_mob_rnum = GET_MOB_RNUM(questmaster);
+                ch->ai_data->goal_timer = 0;
+                act("$n parece estar à procura de trabalho.", FALSE, ch, 0, 0, TO_ROOM);
+                return TRUE;
+            }
+        }
+    }
+    
+    return FALSE;
+}
+
+/**
+ * Process quest completion for a mob with an active quest.
+ * Handles different quest types and implements quest completion logic.
+ * @param ch The mob attempting to complete a quest
+ * @param quest_rnum The real number of the quest being completed
+ * @return TRUE if quest completion was attempted (even if not successful), FALSE if quest could not be processed
+ */
+bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
+{
+    struct char_data *target_mob, *questmaster;
+    struct obj_data *target_obj;
+    room_rnum target_room;
+    int quest_type = QST_TYPE(quest_rnum);
+    
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return FALSE;
+    }
+    
+    /* Handle quest completion based on quest type */
+    switch (quest_type) {
+        case AQ_OBJ_FIND:
+            /* Check if mob has the required object */
+            target_obj = get_obj_in_list_num(QST_TARGET(quest_rnum), ch->carrying);
+            if (target_obj) {
+                /* Object found, complete quest */
+                mob_complete_quest(ch);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            } else {
+                /* Object not found, add to wishlist and seek it */
+                add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100); /* High priority */
+                ch->ai_data->current_goal = GOAL_NONE; /* Let wishlist system handle it */
+                return TRUE;
+            }
+            break;
+            
+        case AQ_ROOM_FIND:
+            /* Check if mob is in the target room */
+            target_room = real_room(QST_TARGET(quest_rnum));
+            if (target_room != NOWHERE && IN_ROOM(ch) == target_room) {
+                /* Target room reached, complete quest */
+                mob_complete_quest(ch);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            } else if (target_room != NOWHERE) {
+                /* Move toward target room */
+                ch->ai_data->goal_destination = target_room;
+                mob_goal_oriented_roam(ch, target_room);
+                return TRUE;
+            }
+            break;
+            
+        case AQ_MOB_FIND:
+            /* Check if target mob is in current room */
+            target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
+            if (target_mob) {
+                /* Target mob found, complete quest */
+                mob_complete_quest(ch);
+                ch->ai_data->current_goal = GOAL_NONE;
+                return TRUE;
+            } else {
+                /* Target mob not found, seek it */
+                /* For now, just roam randomly looking for it */
+                if (rand() % 2) { /* 50% chance to move */
+                    char_from_room(ch);
+                    char_to_room(ch, world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS] ? 
+                                  world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]->to_room : IN_ROOM(ch));
+                }
+                return TRUE;
+            }
+            break;
+            
+        case AQ_MOB_KILL:
+        case AQ_MOB_KILL_BOUNTY:
+            /* Check if target mob is in current room and attack it */
+            target_mob = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_TARGET(quest_rnum));
+            if (target_mob && !FIGHTING(ch)) {
+                /* Attack the target mob */
+                act("$n olha para $N com determinação.", FALSE, ch, 0, target_mob, TO_ROOM);
+                hit(ch, target_mob, TYPE_UNDEFINED);
+                return TRUE;
+            } else if (!target_mob) {
+                /* Target mob not found, seek it */
+                if (rand() % 2) { /* 50% chance to move */
+                    char_from_room(ch);
+                    char_to_room(ch, world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS] ? 
+                                  world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]->to_room : IN_ROOM(ch));
+                }
+                return TRUE;
+            }
+            break;
+            
+        case AQ_OBJ_RETURN:
+            /* Check if mob has the required object to return */
+            target_obj = get_obj_in_list_num(QST_TARGET(quest_rnum), ch->carrying);
+            if (target_obj) {
+                /* Has object, find questmaster to return it to */
+                questmaster = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_RETURNMOB(quest_rnum));
+                if (!questmaster) {
+                    questmaster = get_mob_in_room_by_vnum(IN_ROOM(ch), QST_MASTER(quest_rnum));
+                }
+                
+                if (questmaster) {
+                    /* Return object to questmaster */
+                    act("$n entrega $p para $N.", FALSE, ch, target_obj, questmaster, TO_ROOM);
+                    obj_from_char(target_obj);
+                    extract_obj(target_obj);
+                    mob_complete_quest(ch);
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    return TRUE;
+                } else {
+                    /* Need to find questmaster - go to questmaster location */
+                    questmaster = find_questmaster_by_vnum(QST_RETURNMOB(quest_rnum));
+                    if (!questmaster) {
+                        questmaster = find_questmaster_by_vnum(QST_MASTER(quest_rnum));
+                    }
+                    
+                    if (questmaster) {
+                        ch->ai_data->goal_destination = IN_ROOM(questmaster);
+                        mob_goal_oriented_roam(ch, IN_ROOM(questmaster));
+                        return TRUE;
+                    }
+                }
+            } else {
+                /* Don't have object, add to wishlist and seek it */
+                add_item_to_wishlist(ch, QST_TARGET(quest_rnum), 100); /* High priority */
+                ch->ai_data->current_goal = GOAL_NONE; /* Let wishlist system handle it */
+                return TRUE;
+            }
+            break;
+            
+        case AQ_ROOM_CLEAR:
+            /* Kill all mobs in target room */
+            target_room = real_room(QST_TARGET(quest_rnum));
+            if (target_room != NOWHERE) {
+                if (IN_ROOM(ch) == target_room) {
+                    /* In target room, check for hostile mobs */
+                    struct char_data *temp_mob;
+                    bool found_hostile = FALSE;
+                    
+                    for (temp_mob = world[target_room].people; temp_mob; temp_mob = temp_mob->next_in_room) {
+                        if (IS_NPC(temp_mob) && temp_mob != ch && !AFF_FLAGGED(temp_mob, AFF_CHARM)) {
+                            /* Found a mob to kill */
+                            if (!FIGHTING(ch)) {
+                                act("$n ataca $N para limpar a área.", FALSE, ch, 0, temp_mob, TO_ROOM);
+                                hit(ch, temp_mob, TYPE_UNDEFINED);
+                            }
+                            found_hostile = TRUE;
+                            break;
+                        }
+                    }
+                    
+                    if (!found_hostile) {
+                        /* Room cleared, complete quest */
+                        mob_complete_quest(ch);
+                        ch->ai_data->current_goal = GOAL_NONE;
+                        return TRUE;
+                    }
+                } else {
+                    /* Move toward target room */
+                    ch->ai_data->goal_destination = target_room;
+                    mob_goal_oriented_roam(ch, target_room);
+                    return TRUE;
+                }
+            }
+            break;
+            
+        default:
+            /* Unknown quest type, abandon quest */
+            fail_mob_quest(ch, "unknown quest type");
+            ch->ai_data->current_goal = GOAL_NONE;
+            return TRUE;
+    }
+    
+    return FALSE;
+}
+
+/**
  * Processa a wishlist de um mob e define um objetivo baseado no item de maior prioridade.
  * Implementa a árvore de decisão tática descrita no issue.
  * @param ch O mob cujo wishlist será processado
@@ -2202,6 +2529,43 @@ void mob_process_wishlist_goals(struct char_data *ch)
     /* Check quest posting frustration timer - prevent quest posting after fleeing */
     if (ch->ai_data->quest_posting_frustration_timer > 0) {
         return; /* Still frustrated from fleeing, cannot post quests */
+    }
+
+    /* Priority 1: If mob has an active quest, prioritize quest completion */
+    if (GET_QUEST(ch) != NOTHING) {
+        qst_rnum quest_rnum = real_quest(GET_QUEST(ch));
+        if (quest_rnum != NOTHING) {
+            int quest_type = QST_TYPE(quest_rnum);
+            
+            /* For object-based quests, add quest objects to wishlist with high priority */
+            if (quest_type == AQ_OBJ_FIND || quest_type == AQ_OBJ_RETURN) {
+                obj_vnum quest_obj_vnum = QST_TARGET(quest_rnum);
+                
+                /* Check if mob already has the quest object */
+                struct obj_data *quest_obj = get_obj_in_list_num(quest_obj_vnum, ch->carrying);
+                if (!quest_obj) {
+                    /* Add quest object to wishlist with maximum priority */
+                    add_item_to_wishlist(ch, quest_obj_vnum, 200); /* Higher than normal max priority */
+                    
+                    /* Process this quest object as highest priority item */
+                    desired_item = get_top_wishlist_item(ch);
+                    if (desired_item && desired_item->vnum == quest_obj_vnum) {
+                        /* Continue with normal wishlist processing for quest object */
+                        /* This will make the mob seek the quest object through normal means */
+                    }
+                } else if (quest_type == AQ_OBJ_RETURN) {
+                    /* Has object for return quest, transition to quest completion goal */
+                    ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
+                    ch->ai_data->goal_timer = 0;
+                    return;
+                }
+            } else {
+                /* For non-object quests (mob kill, room find, etc.), transition to quest completion */
+                ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
+                ch->ai_data->goal_timer = 0;
+                return;
+            }
+        }
     }
 
     desired_item = get_top_wishlist_item(ch);
