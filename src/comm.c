@@ -1071,7 +1071,7 @@ void heartbeat(int heart_pulse)
     extract_pending_chars();
 
     /* Process deferred group cleanups to avoid blocking main loop during normal gameplay */
-    if (!(heart_pulse % (5 * PASSES_PER_SEC))) { /* Every 5 seconds */
+    if (!(heart_pulse % (3 * PASSES_PER_SEC))) { /* Every 15 seconds */
         process_deferred_cleanups();
     }
 }

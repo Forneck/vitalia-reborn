@@ -1577,7 +1577,7 @@ void process_deferred_cleanups(void)
 {
     struct group_data *group;
     int cleanups_processed = 0;
-    const int MAX_CLEANUPS_PER_CYCLE = 5; /* Limit cleanups per cycle to avoid lag */
+    const int MAX_CLEANUPS_PER_CYCLE = 2; /* Limit cleanups per cycle to avoid lag */
 
     if (!pending_group_cleanup || !pending_group_cleanup->iSize) {
         return; /* Nothing to cleanup */
