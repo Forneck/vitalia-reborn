@@ -1679,9 +1679,13 @@ void save_temp_quest_assignments(void)
     FILE *fp;
     struct char_data *mob;
     int i;
+    char temp_file[256];
 
-    if (!(fp = fopen("lib/etc/tempquests.dat", "w"))) {
-        log1("SYSERR: Unable to open tempquests.dat for writing");
+    /* Use a temporary file for atomic writes */
+    snprintf(temp_file, sizeof(temp_file), "lib/etc/tempquests.dat.tmp");
+
+    if (!(fp = fopen(temp_file, "w"))) {
+        log1("SYSERR: Unable to open tempquests.dat.tmp for writing");
         return;
     }
 
@@ -1702,7 +1706,14 @@ void save_temp_quest_assignments(void)
     }
 
     fclose(fp);
-    log1("Temporary quest assignments saved.");
+
+    /* Atomically move temp file to final location */
+    if (rename(temp_file, "lib/etc/tempquests.dat") != 0) {
+        log1("SYSERR: Unable to rename tempquests.dat.tmp to tempquests.dat");
+        unlink(temp_file); /* Clean up temp file on failure */
+    } else {
+        log1("Temporary quest assignments saved.");
+    }
 }
 
 /* Load temporary quest assignments from file */
