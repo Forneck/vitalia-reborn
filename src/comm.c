@@ -1071,8 +1071,15 @@ void heartbeat(int heart_pulse)
     extract_pending_chars();
 
     /* Process deferred group cleanups to avoid blocking main loop during normal gameplay */
-    if (!(heart_pulse % (3 * PASSES_PER_SEC))) { /* Every 15 seconds */
-        process_deferred_cleanups();
+    /* Use adaptive frequency: every 3 seconds normally, but every 1 second when list is large */
+    if (needs_frequent_group_cleanup()) {
+        if (!(heart_pulse % PASSES_PER_SEC)) { /* Every 1 second when cleanup is needed */
+            process_deferred_cleanups();
+        }
+    } else {
+        if (!(heart_pulse % (3 * PASSES_PER_SEC))) { /* Every 3 seconds normally */
+            process_deferred_cleanups();
+        }
     }
 }
 

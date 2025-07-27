@@ -1572,19 +1572,41 @@ void deferred_free_group(struct group_data *group)
     add_to_list(group, pending_group_cleanup);
 }
 
+/* Check if we need more frequent group cleanup based on pending list size */
+bool needs_frequent_group_cleanup(void) { return (pending_group_cleanup && pending_group_cleanup->iSize >= 100); }
+
 /* Process a limited number of deferred cleanups during each heartbeat to avoid lag */
 void process_deferred_cleanups(void)
 {
     struct group_data *group;
     int cleanups_processed = 0;
-    const int MAX_CLEANUPS_PER_CYCLE = 2; /* Limit cleanups per cycle to avoid lag */
+    int max_cleanups_per_cycle;
 
     if (!pending_group_cleanup || !pending_group_cleanup->iSize) {
         return; /* Nothing to cleanup */
     }
 
+    /* Adaptive cleanup rate based on pending list size to handle high-traffic periods */
+    if (pending_group_cleanup->iSize >= 1000) {
+        max_cleanups_per_cycle = 10; /* High traffic: process more groups per cycle */
+        if (pending_group_cleanup->iSize >= 2000) {
+            max_cleanups_per_cycle = 20; /* Very high traffic: aggressive cleanup */
+            /* Log warning for extremely large pending lists */
+            if (pending_group_cleanup->iSize >= 5000) {
+                mudlog(BRF, LVL_GOD, TRUE,
+                       "WARNING: Group cleanup list is very large (%d groups pending). Consider investigating group "
+                       "creation/destruction patterns.",
+                       pending_group_cleanup->iSize);
+            }
+        }
+    } else if (pending_group_cleanup->iSize >= 100) {
+        max_cleanups_per_cycle = 5; /* Medium traffic: moderate cleanup rate */
+    } else {
+        max_cleanups_per_cycle = 2; /* Low traffic: original conservative rate */
+    }
+
     /* Process a limited number of groups per cycle */
-    while (cleanups_processed < MAX_CLEANUPS_PER_CYCLE && pending_group_cleanup->iSize > 0) {
+    while (cleanups_processed < max_cleanups_per_cycle && pending_group_cleanup->iSize > 0) {
         group = (struct group_data *)simple_list(pending_group_cleanup);
         if (!group) {
             break; /* Safety check */
