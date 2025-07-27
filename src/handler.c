@@ -24,9 +24,13 @@
 #include "fight.h"
 #include "quest.h"
 #include "mud_event.h"
+#include "lists.h"
 
 /* local file scope variables */
 static int extractions_pending = 0;
+
+/* Deferred cleanup for groups to avoid lag during normal gameplay */
+static struct list_data *pending_group_cleanup = NULL;
 
 /* local file scope functions */
 static int apply_ac(struct char_data *ch, int eq_pos);
@@ -1524,13 +1528,134 @@ void free_group(struct group_data *group)
         free_list(group->members);
         group->members = NULL; /* Prevent double-free */
     }
-    
+
     /* Only remove from group_list if it's still in the list */
     if (group_list && find_in_list(group, group_list)) {
         remove_from_list(group, group_list);
     }
-    
+
     free(group);
+}
+
+/* Add a group to the deferred cleanup list to avoid blocking the main game loop */
+void deferred_free_group(struct group_data *group)
+{
+    if (!group) {
+        return; /* Safety check for NULL group */
+    }
+
+    /* Initialize the cleanup list if it doesn't exist */
+    if (!pending_group_cleanup) {
+        pending_group_cleanup = create_list();
+    }
+
+    /* Check if the group is already pending cleanup to avoid double-free */
+    if (find_in_list(group, pending_group_cleanup)) {
+        mudlog(CMP, LVL_GOD, TRUE, "WARNING: Group already pending cleanup, skipping double addition.");
+        return;
+    }
+
+    /* Clear group references from all members immediately to avoid dangling pointers */
+    if (group->members && group->members->iSize) {
+        struct char_data *tch;
+        struct iterator_data Iterator;
+
+        for (tch = (struct char_data *)merge_iterator(&Iterator, group->members); tch; tch = next_in_list(&Iterator)) {
+            if (tch && tch->group == group) {
+                tch->group = NULL; /* Clear the group reference immediately */
+            }
+        }
+        remove_iterator(&Iterator);
+    }
+
+    /* Add to the deferred cleanup list */
+    add_to_list(group, pending_group_cleanup);
+}
+
+/* Process a limited number of deferred cleanups during each heartbeat to avoid lag */
+void process_deferred_cleanups(void)
+{
+    struct group_data *group;
+    int cleanups_processed = 0;
+    const int MAX_CLEANUPS_PER_CYCLE = 5; /* Limit cleanups per cycle to avoid lag */
+
+    if (!pending_group_cleanup || !pending_group_cleanup->iSize) {
+        return; /* Nothing to cleanup */
+    }
+
+    /* Process a limited number of groups per cycle */
+    while (cleanups_processed < MAX_CLEANUPS_PER_CYCLE && pending_group_cleanup->iSize > 0) {
+        group = (struct group_data *)simple_list(pending_group_cleanup);
+        if (!group) {
+            break; /* Safety check */
+        }
+
+        /* Remove from the cleanup list first to avoid issues if free_group has problems */
+        remove_from_list(group, pending_group_cleanup);
+
+        /* Now free the group's resources (member list already cleared in deferred_free_group) */
+        if (group->members) {
+            free_list(group->members);
+            group->members = NULL; /* Prevent double-free */
+        }
+
+        /* Remove from group_list if it's still there */
+        if (group_list && find_in_list(group, group_list)) {
+            remove_from_list(group, group_list);
+        }
+
+        /* Finally free the group structure itself */
+        free(group);
+
+        cleanups_processed++;
+    }
+
+    /* Clean up the pending cleanup list if it's empty */
+    if (pending_group_cleanup && pending_group_cleanup->iSize == 0) {
+        free_list(pending_group_cleanup);
+        pending_group_cleanup = NULL;
+    }
+}
+
+/* Cleanup all pending groups during shutdown - no need to limit processing */
+void cleanup_all_pending_groups(void)
+{
+    struct group_data *group;
+
+    if (!pending_group_cleanup || !pending_group_cleanup->iSize) {
+        return; /* Nothing to cleanup */
+    }
+
+    /* Process all pending groups during shutdown */
+    while (pending_group_cleanup->iSize > 0) {
+        group = (struct group_data *)simple_list(pending_group_cleanup);
+        if (!group) {
+            break; /* Safety check */
+        }
+
+        /* Remove from the cleanup list first */
+        remove_from_list(group, pending_group_cleanup);
+
+        /* Now free the group's resources (member list already cleared in deferred_free_group) */
+        if (group->members) {
+            free_list(group->members);
+            group->members = NULL; /* Prevent double-free */
+        }
+
+        /* Remove from group_list if it's still there */
+        if (group_list && find_in_list(group, group_list)) {
+            remove_from_list(group, group_list);
+        }
+
+        /* Finally free the group structure itself */
+        free(group);
+    }
+
+    /* Clean up the pending cleanup list */
+    if (pending_group_cleanup) {
+        free_list(pending_group_cleanup);
+        pending_group_cleanup = NULL;
+    }
 }
 
 void leave_group(struct char_data *ch)
@@ -1571,7 +1696,7 @@ void leave_group(struct char_data *ch)
         group->leader = (struct char_data *)random_from_list(group->members);
         send_to_group(NULL, group, "%s assumiu a liderança do grupo.\r\n", GET_NAME(GROUP_LEADER(group)));
     } else if (group->members->iSize == 0)
-        free_group(group);
+        deferred_free_group(group); /* Use deferred cleanup to avoid blocking main loop */
 }
 
 void join_group(struct char_data *ch, struct group_data *group)
