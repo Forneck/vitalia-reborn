@@ -41,8 +41,8 @@ em retirada..  OPA..  Lá vai seu almoço!
 3 18 7 30d1+5 1d3+1
 0 600
 9 9 1
-GenWimpy: 14
-GenRoam: 85
+GenWimpy: 15
+GenRoam: 86
 E
 #5704
 tomal mateiro~
@@ -99,7 +99,7 @@ se ele mordesse seu braço.
 8 12 3 50d1+10 3d3+6
 1 5000
 9 9 1
-GenWimpy: 21
+GenWimpy: 23
 E
 #5708
 menor demonio~
@@ -187,8 +187,8 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 34
-GenBrave: 2
+GenWimpy: 36
+GenBrave: 1
 E
 #5714
 rymat conselheiro~

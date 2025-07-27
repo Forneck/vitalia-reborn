@@ -64,7 +64,7 @@ roupas cor de areia.
 9 9 1
 GenWimpy: 100
 GenEquip: 2
-GenRoam: 81
+GenRoam: 84
 E
 #5304
 ladrao tumba~
@@ -78,8 +78,9 @@ O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
 500 9000
 9 9 1
 GenWimpy: 100
+GenLoot: 2
+GenEquip: 1
 GenRoam: 89
-GenGroup: 1
 E
 T 3007
 #5305
@@ -127,7 +128,7 @@ etéreo espírito de um morto.
 750 15000
 9 9 0
 GenWimpy: 100
-GenRoam: 85
+GenRoam: 84
 E
 #5308
 homem areia~
@@ -143,7 +144,7 @@ quentes e arenosos.
 1500 18000
 9 9 1
 GenWimpy: 100
-GenRoam: 89
+GenRoam: 86
 E
 #5309
 efreeti~
@@ -203,8 +204,8 @@ dos seus primos mais velhos.
 15 0 -23 15d15+650 4d10+25
 7500 21000
 9 9 2
-GenWimpy: 31
-GenRoam: 79
+GenWimpy: 30
+GenRoam: 73
 E
 #5313
 ginoesfinge esfinge~

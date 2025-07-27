@@ -12,8 +12,7 @@ rua de Vitália.
 275 1890
 9 9 1
 GenWimpy: 100
-GenLoot: 1
-GenRoam: 86
+GenRoam: 82
 E
 #10001
 magra mulher aldeã~
@@ -69,7 +68,7 @@ angustiante conjunto.
 18 3 0 4d7+550 15d1+19
 300 32456
 9 9 1
-GenWimpy: 36
+GenWimpy: 39
 E
 #10005
 pequena aldeia ladra menina~
@@ -85,7 +84,7 @@ pena dela?
 2 3000
 9 9 2
 GenWimpy: 71
-GenRoam: 73
+GenRoam: 69
 E
 #10006
 pálida criança trapos~
@@ -170,8 +169,8 @@ As vezes você se pergunta se sua vida seria melhor se você fosse uma galinha.
 3 18 8 1d5+20 1d2+2
 2 30
 9 9 2
-GenWimpy: 75
-GenRoam: 87
+GenWimpy: 76
+GenRoam: 86
 E
 #10012
 mulher piolhente~
@@ -184,7 +183,7 @@ A mulher se coça freneticamente enquanto cata piolhos de sua cabeça.  Ela não
 4 14 6 1d10+95 1d1+6
 37 1800
 9 9 2
-GenWimpy: 59
+GenWimpy: 61
 E
 #10013
 orfão escondido pequeno ladrãozinho moleque~

@@ -184,7 +184,6 @@ Ela corre ao seu redor, esperando uma brecha.
 850 5000
 9 9 2
 GenWimpy: 100
-GenRoam: 1
 E
 #17016
 elemental neve humanoide cristal~
@@ -236,7 +235,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 56
+GenWimpy: 57
 E
 #17020
 besta lava elemental~
@@ -250,8 +249,7 @@ que suas calças sequem rápido.
 8 12 1 1d5+250 3d5+4
 1000 4000
 9 9 2
-GenWimpy: 59
-GenRoam: 4
+GenWimpy: 60
 E
 #17021
 lama monstro elemental~

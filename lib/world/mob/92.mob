@@ -156,7 +156,7 @@ Apenas um sete (?) comum ...
 500 9000
 9 9 1
 GenWimpy: 11
-GenRoam: 62
+GenRoam: 58
 E
 #9211
 tres copas~
@@ -170,7 +170,7 @@ Apenas um três comum...
 250 600
 9 9 1
 GenWimpy: 31
-GenRoam: 8
+GenRoam: 6
 E
 #9212
 tres ouros~
@@ -183,8 +183,8 @@ Apenas um três comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 34
-GenRoam: 12
+GenWimpy: 35
+GenRoam: 11
 E
 #9213
 tres espadas~
@@ -197,8 +197,8 @@ Apenas um três comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 33
-GenRoam: 18
+GenWimpy: 32
+GenRoam: 17
 E
 #9214
 tres paus~
@@ -225,8 +225,7 @@ Apenas um três (?) comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 35
-GenRoam: 3
+GenWimpy: 36
 E
 #9216
 canastra cartas copas~

@@ -164,7 +164,7 @@ Ela é bem parecida com os outros primatas. Cheira mal, horrível.
 500 3500
 9 9 2
 BareHandAttack: 4
-GenWimpy: 47
+GenWimpy: 51
 GenRoam: 89
 E
 #10311
@@ -248,9 +248,9 @@ Este zumbi é alto e forte, e está aqui pronto para lhe matar.
 15 10 7 8d8+750 5d5+8
 3500 4000
 9 9 1
-GenWimpy: 19
+GenWimpy: 20
 GenLoot: 1
-GenRoam: 87
+GenRoam: 80
 E
 #10317
 zumbi kenuthi~
