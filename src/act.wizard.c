@@ -963,9 +963,10 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         else
             send_to_char(ch, "%sPOOFOUT: %s%s disappears in a puff of smoke.%s\r\n", QYEL, QCYN, GET_NAME(k), QNRM);
     }
-    if (!IS_NPC(k))
+    if (!IS_NPC(k)) {
         send_to_char(ch, "Hometown: %d\r\n", GET_ROOM_VNUM(GET_HOMETOWN(k)));
-
+        send_to_char(ch, "Karma: %'d\r\n", GET_KARMA(k));
+    }
     /* check mobiles for a script */
     do_sstat_character(ch, k);
     if (SCRIPT_MEM(k)) {
