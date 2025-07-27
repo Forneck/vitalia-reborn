@@ -82,6 +82,7 @@ struct group_data *create_group(struct char_data *leader);
 void free_group(struct group_data *group);
 void deferred_free_group(struct group_data *group);
 void process_deferred_cleanups(void);
+bool needs_frequent_group_cleanup(void);
 void cleanup_all_pending_groups(void);
 void leave_group(struct char_data *ch);
 void join_group(struct char_data *ch, struct group_data *group);
