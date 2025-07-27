@@ -88,6 +88,7 @@ Você vê o vocalista dos Lokettes cantando muito alto uma melodia.
 15 4 0 3d5+150 2d5+3
 21 1350
 9 9 1
+GenWimpy: 1
 E
 #5407
 crente~
@@ -265,6 +266,7 @@ Um grande homem muito suado nem ao menos retorna seu olhar.
 10 12 0 3d8+35 2d5+2
 1 50
 9 9 1
+GenWimpy: 1
 E
 #5421
 estatua brahman~
@@ -528,6 +530,7 @@ Este homem está vestido em longos robes marrons e tem um olhar penetrante.
 15 5 3 5d2+180 1d6+2
 0 8700
 9 9 1
+GenWimpy: 2
 E
 T 3009
 #5441
@@ -560,7 +563,7 @@ final.
 1 10
 9 9 1
 GenWimpy: 13
-GenRoam: 71
+GenRoam: 69
 E
 #5443
 gato rua~
@@ -573,8 +576,8 @@ Você vê um pequeno gatinho faminto.
 2 18 7 1d2+5 2d2+1
 1 0
 9 9 1
-GenWimpy: 15
-GenRoam: 86
+GenWimpy: 16
+GenRoam: 84
 E
 #5444
 urubu~
@@ -641,8 +644,8 @@ ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 52
-GenRoam: 77
+GenWimpy: 56
+GenRoam: 71
 E
 #5449
 dervixe~
@@ -710,8 +713,8 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 42
-GenRoam: 68
+GenWimpy: 68
+GenRoam: 88
 E
 #5454
 garota preferida nichole~
@@ -725,7 +728,7 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
-GenWimpy: 41
+GenWimpy: 44
 E
 #5455
 ala alá~
@@ -821,7 +824,7 @@ necessidade.
 150 2500
 9 9 1
 GenWimpy: 18
-GenRoam: 78
+GenRoam: 83
 E
 T 3013
 #5462

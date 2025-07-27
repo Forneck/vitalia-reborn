@@ -41,8 +41,8 @@ An undefined string.
 5 16 5 1d12+48 2d4+0
 30 1000
 9 9 1
-GenWimpy: 26
-GenRoam: 23
+GenWimpy: 32
+GenRoam: 16
 E
 #7003
 aranha pequena peluda~
@@ -95,8 +95,8 @@ An undefined string.
 4 16 7 2d5+40 1d9+0
 1 1000
 9 9 2
-GenWimpy: 51
-GenRoam: 87
+GenWimpy: 52
+GenRoam: 86
 E
 T 3008
 #7007
@@ -152,8 +152,8 @@ brilhantes.  A parte de baixo tem uma cor alaranjada.
 12 9 2 2d26+148 2d7+1
 1500 13000
 9 9 0
-GenWimpy: 2
-GenRoam: 12
+GenWimpy: 11
+GenRoam: 29
 E
 #7040
 dragao vermelho~

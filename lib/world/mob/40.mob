@@ -9,7 +9,7 @@ Ela parece estar com fome.
 11 7 4 5d10+50 3d6+0
 0 12000
 9 9 0
-GenWimpy: 15
+GenWimpy: 17
 E
 T 3008
 #4001
@@ -156,9 +156,9 @@ O hobgoblin parece bastante perigoso.
 10 8 2 1d16+120 2d6+3
 300 10000
 9 9 1
-GenWimpy: 11
-GenRoam: 87
-GenGroup: 10
+GenWimpy: 15
+GenRoam: 86
+GenGroup: 8
 E
 #4056
 orc~
@@ -172,7 +172,7 @@ Bem, ele não parece ser muito amigável.
 150 4000
 9 9 1
 GenWimpy: 34
-GenRoam: 87
+GenRoam: 88
 E
 #4057
 leao montanha~
@@ -185,7 +185,7 @@ O leão parece bastante hostil com enormes garras e grandes dentes.
 5 16 5 1d10+60 2d4+0
 0 900
 9 9 1
-GenWimpy: 73
+GenWimpy: 75
 GenRoam: 89
 E
 #4058

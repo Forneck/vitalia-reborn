@@ -180,8 +180,8 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 13
-GenRoam: 69
+GenWimpy: 26
+GenRoam: 55
 E
 #2513
 guardioes maiores olhos~
@@ -223,7 +223,7 @@ Ela parece estar bastante concentrada em seus estudos.
 7 7 2 7d6+25 2d4+5
 369 2950
 6 6 2
-GenWimpy: 77
+GenWimpy: 78
 E
 T 3009
 #2516
@@ -237,7 +237,7 @@ Ele parece ignorar tudo à sua volta, exceto o feitiço que está memorizando.
 7 6 2 7d6+25 2d4+5
 487 2750
 9 9 1
-GenWimpy: 84
+GenWimpy: 85
 E
 T 3009
 #2517
@@ -252,7 +252,7 @@ Ele parece estar sonhando.
 7 7 2 7d6+25 2d4+4
 211 2650
 4 4 1
-GenWimpy: 85
+GenWimpy: 84
 GenLoot: 1
 E
 T 3009
@@ -791,7 +791,7 @@ garras bem grandes.
 15 5 -5 15d15+150 5d5+5
 0 18750
 9 9 2
-GenWimpy: 18
+GenWimpy: 21
 E
 #2556
 mestre cinza~

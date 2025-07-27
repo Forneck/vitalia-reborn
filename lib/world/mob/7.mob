@@ -40,8 +40,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 21
-GenRoam: 85
+GenWimpy: 22
+GenRoam: 87
 E
 #702
 planta figueira~
@@ -61,8 +61,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 31
-GenRoam: 84
+GenWimpy: 32
+GenRoam: 85
 E
 #705
 monstrinho menor criatura~
@@ -128,7 +128,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 22
+GenWimpy: 25
 GenLoot: 2
 E
 #708
@@ -195,7 +195,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 60
+GenWimpy: 68
 E
 #712
 impiedoso ceifeiro~
@@ -238,7 +238,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 39
+GenWimpy: 41
 GenRoam: 88
 E
 #714
@@ -284,9 +284,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 60
-GenRoam: 83
-GenGroup: 14
+GenWimpy: 66
+GenRoam: 82
+GenGroup: 12
 E
 #716
 pequena encurvada crianca criança~
@@ -422,7 +422,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 16
+GenWimpy: 18
 GenRoam: 88
 E
 #780
@@ -462,7 +462,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 19
+GenWimpy: 20
 GenRoam: 85
 E
 #799

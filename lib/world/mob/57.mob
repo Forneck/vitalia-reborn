@@ -41,8 +41,8 @@ em retirada..  OPA..  Lá vai seu almoço!
 3 18 7 30d1+5 1d3+1
 0 600
 9 9 1
-GenWimpy: 12
-GenRoam: 87
+GenWimpy: 14
+GenRoam: 85
 E
 #5704
 tomal mateiro~
@@ -85,7 +85,7 @@ mundo perigoso lá fora.'
 30 0 -2 200d2+200 3d6+11
 20000 40000
 9 9 1
-GenWimpy: 19
+GenWimpy: 16
 E
 #5707
 diabinho diabo~
@@ -99,8 +99,7 @@ se ele mordesse seu braço.
 8 12 3 50d1+10 3d3+6
 1 5000
 9 9 1
-GenWimpy: 20
-GenBrave: 1
+GenWimpy: 21
 E
 #5708
 menor demonio~
@@ -145,8 +144,8 @@ sitiada por demônios.
 19 6 2 150d2+20 2d7+9
 3000 22000
 9 9 2
-GenWimpy: 7
-GenRoam: 87
+GenWimpy: 5
+GenRoam: 89
 E
 #5711
 demonio maior~
@@ -161,6 +160,7 @@ conhecimento a não ser uma imensa sêde de poder e destruição.
 5000 64000
 9 9 1
 GenWimpy: 4
+GenRoam: 3
 E
 #5712
 guardiao gruta espectro~
@@ -187,7 +187,8 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 15
+GenWimpy: 34
+GenBrave: 2
 E
 #5714
 rymat conselheiro~
@@ -202,8 +203,7 @@ lhe dá as costas e continua a lamentar-se, tremendo incontrolavelmente.
 23 0 0 350d1+50 3d8+13
 1000 70000
 9 9 1
-GenWimpy: 14
-GenLoot: 1
+GenWimpy: 15
 E
 #5715
 irgon arque demonio~

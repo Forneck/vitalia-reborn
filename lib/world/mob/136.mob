@@ -81,9 +81,9 @@ Ele olha para você e ri frenéticamente.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 1
-GenWimpy: 23
-GenRoam: 87
-GenGroup: 1
+GenWimpy: 26
+GenRoam: 88
+GenGroup: 3
 E
 #13606
 agil raposa~
@@ -96,8 +96,8 @@ An undefined string.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 0
-GenWimpy: 24
-GenRoam: 67
+GenWimpy: 28
+GenRoam: 77
 E
 #13607
 multicolorida borboleta~
@@ -124,7 +124,7 @@ Ele se moveu?
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 1
-GenWimpy: 26
+GenWimpy: 28
 GenRoam: 86
 E
 #13609
@@ -152,7 +152,7 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12937
 9 9 1
-GenWimpy: 88
+GenWimpy: 96
 GenRoam: 89
 E
 $

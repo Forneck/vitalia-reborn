@@ -10,8 +10,8 @@ perigosa.
 14 6 4 1d1+400 6d1+14
 0 27000
 9 9 1
-GenWimpy: 11
-GenRoam: 51
+GenWimpy: 14
+GenRoam: 52
 E
 #13501
 elfo cacador~
@@ -54,8 +54,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 13
-GenRoam: 82
+GenWimpy: 16
+GenRoam: 84
 E
 #13504
 inseto galho inseto-galho~
@@ -68,8 +68,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 13
-GenRoam: 84
+GenWimpy: 17
+GenRoam: 87
 E
 #13505
 inseto folha cinza~
@@ -150,8 +150,8 @@ você, parecendo procurar algo, mas logo volta a comer a grama.
 12 8 5 1d1+300 5d1+12
 0 12105
 9 9 2
-GenWimpy: 16
-GenRoam: 56
+GenWimpy: 19
+GenRoam: 74
 E
 #13511
 cervo~
@@ -193,8 +193,8 @@ Ele é simplesmente adorável, você queria ter um igual a esse!
 8 12 6 1d1+150 4d1+8
 0 10333
 9 9 1
-GenWimpy: 22
-GenRoam: 87
+GenWimpy: 25
+GenRoam: 88
 E
 #13514
 cobra cega~
@@ -251,7 +251,7 @@ Rã, sabe?  Apenas uma rã.
 8 12 6 1d1+150 4d1+8
 0 1333
 9 9 0
-GenWimpy: 17
-GenRoam: 85
+GenWimpy: 20
+GenRoam: 87
 E
 $

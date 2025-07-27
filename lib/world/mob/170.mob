@@ -22,7 +22,7 @@ Ele parece estar atrás de um almoço..
 22 0 0 1d5+380 3d5+20
 1000 20000
 9 9 1
-GenWimpy: 47
+GenWimpy: 55
 GenEquip: 1
 E
 #17003
@@ -62,7 +62,7 @@ An undefined string.
 5 0 -4 2d5+150 2d6+4
 1000 6000
 9 9 1
-GenWimpy: 26
+GenWimpy: 37
 GenRoam: 89
 E
 #17006
@@ -76,9 +76,8 @@ An undefined string.
 10 6 -2 3d5+200 3d6+6
 1750 9000
 9 9 1
-GenWimpy: 20
-GenLoot: 1
-GenRoam: 68
+GenWimpy: 25
+GenRoam: 76
 E
 #17007
 elemental grande~
@@ -91,8 +90,8 @@ An undefined string.
 15 -4 -6 5d5+250 4d9+17
 2200 20000
 9 9 1
-GenWimpy: 30
-GenRoam: 83
+GenWimpy: 35
+GenRoam: 79
 E
 #17008
 lider elemental terra~
@@ -184,8 +183,8 @@ Ela corre ao seu redor, esperando uma brecha.
 8 1 0 1d5+200 1d10+3
 850 5000
 9 9 2
-GenWimpy: 98
-GenRoam: 4
+GenWimpy: 100
+GenRoam: 1
 E
 #17016
 elemental neve humanoide cristal~
@@ -237,8 +236,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 49
-GenLoot: 1
+GenWimpy: 56
 E
 #17020
 besta lava elemental~
@@ -252,8 +250,8 @@ que suas calças sequem rápido.
 8 12 1 1d5+250 3d5+4
 1000 4000
 9 9 2
-GenWimpy: 55
-GenRoam: 1
+GenWimpy: 59
+GenRoam: 4
 E
 #17021
 lama monstro elemental~
@@ -322,7 +320,7 @@ An undefined string.
 2 17 2 1d5+100 1d8+1
 450 1000
 9 9 1
-GenWimpy: 35
+GenWimpy: 41
 GenRoam: 88
 E
 #17026
@@ -352,7 +350,7 @@ Um humanóide que parece ter sido preso em um campo magnético.
 26 -2 -5 1d5+640 6d5+14
 3000 30000
 9 9 1
-GenWimpy: 50
+GenWimpy: 54
 E
 #17028
 neve bandido~
@@ -366,8 +364,9 @@ frio subindo por suas costas.
 26 -2 -5 1d5+630 6d5+13
 3000 30000
 9 9 1
-GenWimpy: 52
-GenGroup: 5
+GenWimpy: 70
+GenGroup: 2
+GenBrave: 2
 E
 #17029
 rochas monstro~
@@ -457,8 +456,8 @@ As ervas que ele carrega parecem ser raras.
 13 10 -9 1d5+450 1d20+4
 2900 10000
 9 9 1
-GenWimpy: 43
-GenRoam: 6
+GenWimpy: 44
+GenRoam: 3
 E
 #17035
 bebe dragao~
@@ -484,7 +483,7 @@ Ele se assemelha bastante a um desagradável inseto.
 5 16 4 1d5+90 2d4+1
 800 1000
 9 9 1
-GenWimpy: 56
+GenWimpy: 61
 GenRoam: 84
 E
 #17037

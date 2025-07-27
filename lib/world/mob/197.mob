@@ -51,8 +51,8 @@ VOCÊ!!
 11 14 0 15d6+100 2d6+4
 0 6000
 9 9 2
-GenWimpy: 10
-GenRoam: 70
+GenWimpy: 15
+GenRoam: 73
 E
 #19704
 cobra negra~
@@ -67,9 +67,9 @@ que você está esperando?  AO ATAQUE!
 12 13 0 15d6+100 2d6+6
 0 8000
 9 9 2
-GenWimpy: 88
-GenRoam: 83
-GenGroup: 15
+GenWimpy: 86
+GenRoam: 79
+GenGroup: 11
 E
 #19705
 cobra verde~
@@ -115,7 +115,7 @@ desejá-la.
 2000 150000
 9 9 1
 GenWimpy: 10
-GenRoam: 87
+GenRoam: 84
 E
 #19708
 orc lider negro~

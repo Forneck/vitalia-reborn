@@ -424,7 +424,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 88
+GenRoam: 87
 E
 #3722
 demonio ossos~
@@ -447,7 +447,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 88
+GenRoam: 89
 E
 #3723
 esqueleto guerreiro~
@@ -619,7 +619,7 @@ Ele é tímido e solitário, fujindo da luz e da multidão.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
+GenWimpy: 7
 GenLoot: 1
 E
 #3732

@@ -927,9 +927,9 @@ ACMD(do_score)
 
     send_to_char(ch, "\r\n");
 
-    send_to_char(ch, " \tW Experiência\tb:\tn %13ld\tgxp\tn        \tn \tW Ouro\tb.......:\tn%13d\tYg\tn\r\n",
+    send_to_char(ch, " \tW Experiência\tb:\tn %'13ld\tgxp\tn        \tn \tW Ouro\tb.......:\tn%'13d\tYg\tn\r\n",
                  GET_EXP(ch), GET_GOLD(ch));
-    send_to_char(ch, " \tW Prox Nível\tb.:\tn %13ld\tgxp\tn %s\r\n ",
+    send_to_char(ch, " \tW Prox Nível\tb.:\tn %'13ld\tgxp\tn %s\r\n ",
                  level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - GET_EXP(ch),
                  gauge(0, 0, GET_MOVE(ch), GET_MAX_MOVE(ch)));
     send_to_char(ch, "\r\n");

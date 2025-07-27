@@ -43,8 +43,8 @@ carrega uma grande lança.
 70 2 -19 12d12+1200 14d14+15
 10000 65030
 9 9 1
-GenWimpy: 6
-GenRoam: 70
+GenWimpy: 5
+GenRoam: 65
 E
 T 3013
 #17304
@@ -358,7 +358,7 @@ estado de desordem.
 0 56090
 9 9 1
 GenWimpy: 4
-GenRoam: 24
+GenRoam: 41
 E
 #17324
 barant rei apres cavaleiro~
@@ -651,7 +651,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 25
+GenWimpy: 19
 E
 #17344
 escrava~
@@ -665,8 +665,7 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 6
-GenRoam: 2
+GenWimpy: 5
 E
 #17345
 chefe saxao render~
