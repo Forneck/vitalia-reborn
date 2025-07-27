@@ -80,6 +80,9 @@ int find_all_dots(char *arg);
 /* group */
 struct group_data *create_group(struct char_data *leader);
 void free_group(struct group_data *group);
+void deferred_free_group(struct group_data *group);
+void process_deferred_cleanups(void);
+void cleanup_all_pending_groups(void);
 void leave_group(struct char_data *ch);
 void join_group(struct char_data *ch, struct group_data *group);
 bool is_char_in_group_list(struct char_data *ch, struct group_data *group);

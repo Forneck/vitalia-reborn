@@ -357,12 +357,12 @@ int main(int argc, char **argv)
     }
 
     log1("Clearing game world.");
-    
+
     if (!scheck) {
         log1("Saving temporary quest assignments before shutdown.");
         save_temp_quest_assignments();
     }
-    
+
     destroy_db();
 
     if (!scheck) {
@@ -384,6 +384,9 @@ int main(int argc, char **argv)
         free_list(world_events);               /* free up our global lists */
 
         /* Free all groups before freeing the group_list */
+        /* First process any pending deferred cleanups */
+        cleanup_all_pending_groups();
+
         if (group_list) {
             struct group_data *group;
             while (group_list->iSize > 0) {
@@ -1066,6 +1069,11 @@ void heartbeat(int heart_pulse)
 
     /* Every pulse! Don't want them to stink the place up... */
     extract_pending_chars();
+
+    /* Process deferred group cleanups to avoid blocking main loop during normal gameplay */
+    if (!(heart_pulse % (5 * PASSES_PER_SEC))) { /* Every 5 seconds */
+        process_deferred_cleanups();
+    }
 }
 
 /* new code to calculate time differences, which works on systems for which
