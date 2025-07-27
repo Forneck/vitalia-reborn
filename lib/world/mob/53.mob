@@ -62,7 +62,7 @@ roupas cor de areia.
 8 12 5 8d8+80 2d6+2
 200 3750
 9 9 1
-GenWimpy: 100
+GenWimpy: 99
 GenEquip: 2
 GenRoam: 84
 E
@@ -144,7 +144,7 @@ quentes e arenosos.
 1500 18000
 9 9 1
 GenWimpy: 100
-GenRoam: 86
+GenRoam: 89
 E
 #5309
 efreeti~
@@ -204,8 +204,8 @@ dos seus primos mais velhos.
 15 0 -23 15d15+650 4d10+25
 7500 21000
 9 9 2
-GenWimpy: 30
-GenRoam: 73
+GenWimpy: 27
+GenRoam: 67
 E
 #5313
 ginoesfinge esfinge~

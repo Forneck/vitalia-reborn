@@ -145,6 +145,7 @@
 #define ROOMSDUMP_FILE LIB_ETC "roomsdump.txt"
 #define SDESCDUMP_FILE LIB_ETC "sdesc.txt"
 #define LDESCDUMP_FILE LIB_ETC "ldesc.txt"
+#define TEMP_QUEST_FILE LIB_ETC "tempquests.dat"
 
 /* new bitvector data for use in player_index_element */
 #define PINDEX_DELETED (1 << 0)    /* deleted player	*/

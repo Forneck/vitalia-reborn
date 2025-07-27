@@ -99,8 +99,8 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 83
-GenRoam: 9
+GenWimpy: 89
+GenRoam: 10
 E
 #12106
 anao negro~
@@ -257,7 +257,7 @@ BareHandAttack: 3
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 88
+GenWimpy: 92
 E
 #12115
 drakian~
@@ -359,9 +359,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 94
-GenRoam: 88
-GenBrave: 1
+GenWimpy: 100
+GenRoam: 89
 E
 #12121
 quimera leao bode dragao~

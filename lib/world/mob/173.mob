@@ -373,9 +373,9 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 7
-GenRoam: 46
-GenGroup: 6
+GenWimpy: 14
+GenRoam: 42
+GenGroup: 5
 E
 #17325
 bufao dagonet bobo~
@@ -651,7 +651,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 17
+GenWimpy: 19
 E
 #17344
 escrava~

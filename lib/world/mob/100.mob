@@ -12,7 +12,8 @@ rua de Vitália.
 275 1890
 9 9 1
 GenWimpy: 100
-GenRoam: 82
+GenLoot: 1
+GenRoam: 81
 E
 #10001
 magra mulher aldeã~
@@ -28,7 +29,7 @@ aparecendo pelo mal fabricado e raquítico vestido.
 175 1876
 9 9 2
 GenWimpy: 100
-GenRoam: 84
+GenRoam: 82
 E
 #10002
 tenente caspan soldado~
@@ -83,8 +84,8 @@ pena dela?
 8 11 6 2d9+150 1d3+7
 2 3000
 9 9 2
-GenWimpy: 71
-GenRoam: 69
+GenWimpy: 72
+GenRoam: 62
 E
 #10006
 pálida criança trapos~
@@ -128,7 +129,7 @@ tristemente para você e continua mancando em frente.
 9 9 0
 BareHandAttack: 4
 GenWimpy: 100
-GenRoam: 65
+GenRoam: 63
 E
 #10009
 bruxa dente~
@@ -183,7 +184,7 @@ A mulher se coça freneticamente enquanto cata piolhos de sua cabeça.  Ela não
 4 14 6 1d10+95 1d1+6
 37 1800
 9 9 2
-GenWimpy: 61
+GenWimpy: 62
 E
 #10013
 orfão escondido pequeno ladrãozinho moleque~

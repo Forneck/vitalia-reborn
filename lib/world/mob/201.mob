@@ -99,10 +99,8 @@ espera o dia em que poderá sair desse terrível lugar.
 7 15 5 3d5+85 2d4+1
 1000 3000
 9 9 1
-GenWimpy: 27
-GenLoot: 1
-GenRoam: 3
-GenGroup: 37
+GenWimpy: 30
+GenGroup: 35
 E
 #20107
 pesquisador distraido~
@@ -287,9 +285,9 @@ original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 23
-GenRoam: 74
-GenGroup: 8
+GenWimpy: 24
+GenRoam: 71
+GenGroup: 6
 E
 #20118
 jovem mulher nancy~

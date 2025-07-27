@@ -194,7 +194,7 @@ grosso couro.  Em sua boca você vê enormes dentes, pronto para atacá-lo.
 0 2700
 5 5 1
 BareHandAttack: 4
-GenWimpy: 24
+GenWimpy: 27
 E
 #10313
 troll~
@@ -248,9 +248,8 @@ Este zumbi é alto e forte, e está aqui pronto para lhe matar.
 15 10 7 8d8+750 5d5+8
 3500 4000
 9 9 1
-GenWimpy: 20
-GenLoot: 1
-GenRoam: 80
+GenWimpy: 19
+GenRoam: 78
 E
 #10317
 zumbi kenuthi~
@@ -264,6 +263,6 @@ tremenda.
 20 10 10 5d5+900 6d5+8
 5000 6000
 9 9 1
-GenWimpy: 12
+GenWimpy: 16
 E
 $

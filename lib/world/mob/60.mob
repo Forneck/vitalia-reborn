@@ -27,7 +27,7 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 0 20 6 1d4+1 1d4+0
 0 60
 9 9 0
-GenWimpy: 51
+GenWimpy: 52
 GenRoam: 86
 E
 #6002
@@ -99,7 +99,7 @@ O pássaro parece que não vai viver muito, pelo jeito.
 0 17 10 2d3+1 1d2+1
 0 25
 9 9 0
-GenWimpy: 96
+GenWimpy: 94
 E
 #6007
 gato lince gato-selvagem~
@@ -185,8 +185,8 @@ no chão.
 2 19 8 1d12+22 1d6+0
 0 200
 9 9 0
-GenWimpy: 58
-GenRoam: 73
+GenWimpy: 59
+GenRoam: 72
 E
 #6013
 esquilinho~
@@ -202,8 +202,8 @@ pensa você.
 0 20 5 2d5+3 1d4+0
 0 40
 9 9 0
-GenWimpy: 56
-GenRoam: 83
+GenWimpy: 57
+GenRoam: 82
 E
 #6014
 corvo negro passaro~
