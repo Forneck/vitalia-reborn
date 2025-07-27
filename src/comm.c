@@ -376,7 +376,7 @@ int main(int argc, char **argv)
         free_ibt_lists();                      /* ibt.c */
         free_recent_players();                 /* act.informative.c */
         free_list(world_events);               /* free up our global lists */
-        
+
         /* Free all groups before freeing the group_list */
         if (group_list) {
             struct group_data *group;
@@ -387,7 +387,7 @@ int main(int argc, char **argv)
             }
             free_list(group_list);
         }
-        
+
         free_list(global_lists);
         free_armweap();
     }

@@ -159,13 +159,52 @@ void mobile_activity(void)
                     /* Usa a memória para encontrar o lojista correto. */
                     struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
                     if (keeper && ch->ai_data->goal_obj) {
-                        shopping_sell(ch->ai_data->goal_obj->name, ch, keeper, find_shop_by_keeper(keeper->nr));
-                        ch->ai_data->genetics.trade_tendency += 1;
-                        ch->ai_data->genetics.trade_tendency = MIN(ch->ai_data->genetics.trade_tendency, 100);
+                        int shop_rnum = find_shop_by_keeper(keeper->nr);
+
+                        /* Check if this shop actually buys this type of item */
+                        bool shop_buys_this_item = FALSE;
+                        if (shop_rnum != -1) {
+                            for (int i = 0; SHOP_BUYTYPE(shop_rnum, i) != NOTHING; i++) {
+                                if (SHOP_BUYTYPE(shop_rnum, i) == GET_OBJ_TYPE(ch->ai_data->goal_obj)) {
+                                    shop_buys_this_item = TRUE;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (shop_buys_this_item) {
+                            /* Shop buys this item, proceed with sale */
+                            shopping_sell(ch->ai_data->goal_obj->name, ch, keeper, shop_rnum);
+                            ch->ai_data->genetics.trade_tendency += 1;
+                            ch->ai_data->genetics.trade_tendency = MIN(ch->ai_data->genetics.trade_tendency, 100);
+                        } else {
+                            /* Shop doesn't buy this item, find a new shop */
+                            int new_shop_rnum = find_best_shop_to_sell(ch, ch->ai_data->goal_obj);
+                            if (new_shop_rnum != -1 && new_shop_rnum <= top_shop) {
+                                room_rnum new_target_room = real_room(SHOP_ROOM(new_shop_rnum, 0));
+                                if (new_target_room != NOWHERE && find_first_step(IN_ROOM(ch), new_target_room) != -1) {
+                                    /* Found a new shop, update goal */
+                                    ch->ai_data->goal_destination = new_target_room;
+                                    ch->ai_data->goal_target_mob_rnum = SHOP_KEEPER(new_shop_rnum);
+                                    act("$n percebe que esta loja não compra o que tem e decide procurar outra.", FALSE,
+                                        ch, 0, 0, TO_ROOM);
+                                    continue; /* Continue with updated goal */
+                                }
+                            }
+                            /* No suitable shop found, abandon goal */
+                            act("$n parece frustrado por não conseguir vender os seus itens.", FALSE, ch, 0, 0,
+                                TO_ROOM);
+                            ch->ai_data->current_goal = GOAL_NONE;
+                            ch->ai_data->goal_destination = NOWHERE;
+                            ch->ai_data->goal_obj = NULL;
+                            ch->ai_data->goal_target_mob_rnum = NOBODY;
+                            ch->ai_data->goal_item_vnum = NOTHING;
+                            ch->ai_data->goal_timer = 0;
+                            continue;
+                        }
                         /* After selling, check if there are more items to sell to this same shop */
                         struct obj_data *next_item_to_sell = NULL;
                         int min_score = 10;
-                        int shop_rnum = find_shop_by_keeper(keeper->nr);
 
                         if (shop_rnum != -1) {
                             /* Look for more junk to sell to this same shop */
@@ -1451,11 +1490,11 @@ bool mob_try_and_upgrade(struct char_data *ch)
     /* A aprendizagem acontece uma vez no final da sessão. */
     if (performed_an_upgrade_this_pulse) {
         ch->ai_data->genetics.equip_tendency = MIN(ch->ai_data->genetics.equip_tendency + 2, 100);
-    /* Se mob não se equipar, fica frustrado demais e a tendencia cai a 0. Devemos evitar isso.
-     }
-     else {
-        ch->ai_data->genetics.equip_tendency = MAX(ch->ai_data->genetics.equip_tendency - 1, 0);
-    */
+        /* Se mob não se equipar, fica frustrado demais e a tendencia cai a 0. Devemos evitar isso.
+         }
+         else {
+            ch->ai_data->genetics.equip_tendency = MAX(ch->ai_data->genetics.equip_tendency - 1, 0);
+        */
     }
 
     /* Retorna TRUE se a IA "pensou" em se equipar, para consumir o seu foco neste pulso. */
@@ -2001,9 +2040,9 @@ bool mob_handle_item_usage(struct char_data *ch)
     if (item_to_use) {
         if (is_last_consumable(ch, item_to_use)) {
             /* Bloco comentado: Se fosse o ultimo e a tendencia caisse, tendencia cai pra 0
-	    ch->ai_data->genetics.use_tendency = MAX(ch->ai_data->genetics.use_tendency - 1, 0);
+            ch->ai_data->genetics.use_tendency = MAX(ch->ai_data->genetics.use_tendency - 1, 0);
             */
-	    return FALSE;
+            return FALSE;
         }
 
         if (cast_spell(ch, best_target_char, best_target_obj, spellnum_to_cast)) {
