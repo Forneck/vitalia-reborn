@@ -1,0 +1,36 @@
+
+------------ Checking leaks ------------
+
+zmalloc: UNfreed memory 0x0x55e76f32b814 73 bytes mallocd at /home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:3254
+     0D0A4265 6D207669 6E646F20 61205669     ..Bem vindo a Vi
+     74C3A16C 69612C20 74616C76 657A2073     t..lia, talvez s
+
+zmalloc: UNfreed memory 0x0x55e76f32b0f4 10 bytes mallocd at /home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:4506
+     50726F6E 746F2E0D 0A00                  Pronto....
+
+zmalloc: UNfreed memory 0x0x55e76f32b904 209 bytes mallocd at /home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:3254
+     42656D20 76696E64 6F2E2020 45737465     Bem vindo.  Este
+     20C3A920 6F207365 75206E6F 766F2070      .. o seu novo p
+
+zmalloc: UNfreed memory 0x0x55e76f32b1a4 9 bytes mallocd at /home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:4398
+     48756821 3F210D0A 00                    Huh!?!...
+
+zmalloc: UNfreed memory 0x0x55e76f32b254 31 bytes mallocd at /home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:4490
+     4E696E67 75C3A96D 20636F6D 20657373     Ningu..m com ess
+     65206E6F 6D652061 7175692E 0D0A00       e nome aqui....
+
+zmalloc: UNfreed memory 0x0x55e76f32b314 33 bytes mallocd at /home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:4496
+     41706172 656E7465 6D656E74 652C206E     Aparentemente, n
+     61646120 61636F6E 74656365 752E0D0A     ada aconteceu...
+
+zmalloc: UNfreed memory 0x0x55e76f32b3e4 4 bytes mallocd at /home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:4365
+     6C696200                                lib.
+
+zmalloc: UNfreed memory 0x0x55e76f32b494 11 bytes mallocd at /home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:4438
+     7379736C 6F672E74 787400                syslog.txt.
+
+zmalloc: UNfreed memory 0x0x55e76f32b544 551 bytes mallocd at /home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:3254
+     0D0A4F20 4D554E44 4F204445 20564954     ..O MUNDO DE VIT
+     414C4941 0D0A0D0A 20202020 20202020     ALIA....        
+
+zmalloc: 9 leaks totalling 931 bytes... close, but not there yet.

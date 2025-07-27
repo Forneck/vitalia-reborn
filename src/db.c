@@ -667,6 +667,10 @@ void destroy_db(void)
 
         while (mob_proto[cnt].affected)
             affect_remove(&mob_proto[cnt], mob_proto[cnt].affected);
+
+        /* free AI data allocated during boot */
+        if (mob_proto[cnt].ai_data)
+            free(mob_proto[cnt].ai_data);
     }
     free(mob_proto);
     free(mob_index);
@@ -685,6 +689,8 @@ void destroy_db(void)
             free(zone_table[cnt].name);
         if (zone_table[cnt].builders)
             free(zone_table[cnt].builders);
+        if (zone_table[cnt].weather)
+            free(zone_table[cnt].weather);
         if (zone_table[cnt].cmd) {
             /* first see if any vars were defined in this zone */
             for (itr = 0; THIS_CMD.command != 'S'; itr++)
@@ -872,7 +878,7 @@ void boot_db(void)
         reset_zone(i);
         log1("Inicializando clima da zona #%d: %s. (Clima %d)", zone_table[i].number, zone_table[i].name,
              zone_table[i].climate);
-        zone_table[i].weather = malloc(sizeof(struct weather_data));
+        zone_table[i].weather = (struct weather_data *)malloc(sizeof(struct weather_data));
         if (zone_table[i].weather) {
             *(zone_table[i].weather) = climates[zone_table[i].climate];   // Copia os valores
         }
