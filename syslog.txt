@@ -1,736 +1,736 @@
-Jul 27 01:41:22 2025 :: Loading configuration.
-Jul 27 01:41:22 2025 :: Vitalia Reborn 2025 V0.3
-Jul 27 01:41:22 2025 :: Using lib as data directory.
-Jul 27 01:41:22 2025 :: Loading zone table.
-Jul 27 01:41:22 2025 ::    126 zones, 11088 bytes.
-Jul 27 01:41:22 2025 :: Loading triggers and generating index.
-Jul 27 01:41:22 2025 :: Loading rooms.
-Jul 27 01:41:22 2025 ::    9528 rooms, 1753152 bytes.
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #2802 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #2802 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #2802 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #2802 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #2802 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4500 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4501 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4503 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4502 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #6901 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #6901 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #6901 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #6901 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11308 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11308 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11600 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11600 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11600 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #13800 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #13800 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #13800 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #13800 asked for but non-existant! (room:65535)
-Jul 27 01:41:22 2025 :: Loading spells.
-Jul 27 01:41:22 2025 :: Assigning spells's function.
-Jul 27 01:41:22 2025 :: Renumbering rooms.
-Jul 27 01:41:22 2025 :: Checking start rooms.
-Jul 27 01:41:22 2025 :: Loading mobs and generating index.
-Jul 27 01:41:22 2025 ::    2633 mobs, 84256 bytes in index, 1748312 bytes in prototypes.
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #200, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #201, GenWimpy carregado com sucesso: 10
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #202, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #205, GenWimpy carregado com sucesso: 8
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #700, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #701, GenWimpy carregado com sucesso: 22
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #702, GenWimpy carregado com sucesso: 32
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #705, GenWimpy carregado com sucesso: 32
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #706, GenWimpy carregado com sucesso: 20
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #707, GenWimpy carregado com sucesso: 25
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #708, GenWimpy carregado com sucesso: 15
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #710, GenWimpy carregado com sucesso: 13
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #711, GenWimpy carregado com sucesso: 68
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #713, GenWimpy carregado com sucesso: 41
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #715, GenWimpy carregado com sucesso: 66
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #717, GenWimpy carregado com sucesso: 36
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #740, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #775, GenWimpy carregado com sucesso: 18
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #780, GenWimpy carregado com sucesso: 21
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #781, GenWimpy carregado com sucesso: 20
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #799, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #800, GenWimpy carregado com sucesso: 27
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #801, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #802, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #803, GenWimpy carregado com sucesso: 44
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #804, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #805, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #900, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #909, GenWimpy carregado com sucesso: 13
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #910, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #911, GenWimpy carregado com sucesso: 9
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1507, GenWimpy carregado com sucesso: 63
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1516, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1517, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1600, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1609, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1610, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1611, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1617, GenWimpy carregado com sucesso: 98
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1620, GenWimpy carregado com sucesso: 8
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1621, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1624, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1700, GenWimpy carregado com sucesso: 28
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1704, GenWimpy carregado com sucesso: 57
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1705, GenWimpy carregado com sucesso: 79
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1707, GenWimpy carregado com sucesso: 17
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1709, GenWimpy carregado com sucesso: 9
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1710, GenWimpy carregado com sucesso: 8
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1711, GenWimpy carregado com sucesso: 14
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1713, GenWimpy carregado com sucesso: 38
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1714, GenWimpy carregado com sucesso: 44
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #1715, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2200, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2201, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2304, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2324, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2346, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2400, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2401, GenWimpy carregado com sucesso: 64
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2500, GenWimpy carregado com sucesso: 39
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2502, GenWimpy carregado com sucesso: 16
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2504, GenWimpy carregado com sucesso: 14
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2507, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2508, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2510, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2512, GenWimpy carregado com sucesso: 26
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2513, GenWimpy carregado com sucesso: 44
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2514, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2515, GenWimpy carregado com sucesso: 78
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2516, GenWimpy carregado com sucesso: 85
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2517, GenWimpy carregado com sucesso: 84
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2518, GenWimpy carregado com sucesso: 63
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2519, GenWimpy carregado com sucesso: 68
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2520, GenWimpy carregado com sucesso: 10
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2521, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2522, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2523, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2524, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2526, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2527, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2528, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2529, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2530, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2531, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2533, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2538, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2539, GenWimpy carregado com sucesso: 21
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2540, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2542, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2544, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2545, GenWimpy carregado com sucesso: 18
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2547, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2551, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2552, GenWimpy carregado com sucesso: 49
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2555, GenWimpy carregado com sucesso: 21
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2561, GenWimpy carregado com sucesso: 33
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2701, GenWimpy carregado com sucesso: 8
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2706, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2709, GenWimpy carregado com sucesso: 46
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2717, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2718, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2719, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2720, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2721, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2722, GenWimpy carregado com sucesso: 11
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2733, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2734, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2739, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2741, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #2743, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3011, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3015, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3059, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3060, GenWimpy carregado com sucesso: 31
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3061, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3062, GenWimpy carregado com sucesso: 30
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3065, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3066, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3068, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3101, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3102, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3103, GenWimpy carregado com sucesso: 28
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3104, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3106, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3122, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3123, GenWimpy carregado com sucesso: 19
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3300, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3306, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3311, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3315, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3316, GenWimpy carregado com sucesso: 17
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3317, GenWimpy carregado com sucesso: 15
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3500, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3501, GenWimpy carregado com sucesso: 84
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3502, GenWimpy carregado com sucesso: 38
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3504, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3505, GenWimpy carregado com sucesso: 8
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3506, GenWimpy carregado com sucesso: 9
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3507, GenWimpy carregado com sucesso: 34
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3604, GenWimpy carregado com sucesso: 16
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3700, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3721, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3722, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3723, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3724, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3725, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3726, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3728, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3731, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3905, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3906, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3907, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3914, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3915, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3916, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3917, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3918, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3923, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3924, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #3925, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4000, GenWimpy carregado com sucesso: 17
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4003, GenWimpy carregado com sucesso: 76
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4004, GenWimpy carregado com sucesso: 89
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4005, GenWimpy carregado com sucesso: 18
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4051, GenWimpy carregado com sucesso: 79
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4052, GenWimpy carregado com sucesso: 36
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4055, GenWimpy carregado com sucesso: 15
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4056, GenWimpy carregado com sucesso: 34
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4057, GenWimpy carregado com sucesso: 75
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4058, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4100, GenWimpy carregado com sucesso: 36
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4103, GenWimpy carregado com sucesso: 54
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4105, GenWimpy carregado com sucesso: 85
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4106, GenWimpy carregado com sucesso: 46
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4107, GenWimpy carregado com sucesso: 77
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4201, GenWimpy carregado com sucesso: 40
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4205, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4206, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4244, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4316, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4321, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4325, GenWimpy carregado com sucesso: 9
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4330, GenWimpy carregado com sucesso: 17
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4340, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4800, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4806, GenWimpy carregado com sucesso: 21
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4900, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4901, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4902, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4903, GenWimpy carregado com sucesso: 10
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4904, GenWimpy carregado com sucesso: 14
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4905, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4906, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4907, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4908, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4909, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4910, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4912, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4913, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4915, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4917, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #4918, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5000, GenWimpy carregado com sucesso: 72
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5001, GenWimpy carregado com sucesso: 61
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5002, GenWimpy carregado com sucesso: 72
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5003, GenWimpy carregado com sucesso: 69
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5009, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5014, GenWimpy carregado com sucesso: 27
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5015, GenWimpy carregado com sucesso: 84
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5109, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5201, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5202, GenWimpy carregado com sucesso: 19
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5204, GenWimpy carregado com sucesso: 30
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5205, GenWimpy carregado com sucesso: 21
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5206, GenWimpy carregado com sucesso: 23
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5207, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5209, GenWimpy carregado com sucesso: 82
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5300, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5301, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5302, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5303, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5304, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5305, GenWimpy carregado com sucesso: 26
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5307, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5308, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5312, GenWimpy carregado com sucesso: 31
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5406, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5409, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5420, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5434, GenWimpy carregado com sucesso: 8
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5435, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5440, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5441, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5442, GenWimpy carregado com sucesso: 13
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5443, GenWimpy carregado com sucesso: 16
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5444, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5447, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5448, GenWimpy carregado com sucesso: 56
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5449, GenWimpy carregado com sucesso: 90
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5450, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5451, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5453, GenWimpy carregado com sucesso: 68
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5454, GenWimpy carregado com sucesso: 44
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5460, GenWimpy carregado com sucesso: 10
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5461, GenWimpy carregado com sucesso: 18
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5479, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5701, GenWimpy carregado com sucesso: 9
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5702, GenWimpy carregado com sucesso: 23
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5703, GenWimpy carregado com sucesso: 14
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5704, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5706, GenWimpy carregado com sucesso: 16
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5707, GenWimpy carregado com sucesso: 21
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5708, GenWimpy carregado com sucesso: 21
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5709, GenWimpy carregado com sucesso: 9
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5710, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5711, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5713, GenWimpy carregado com sucesso: 34
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #5714, GenWimpy carregado com sucesso: 15
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6000, GenWimpy carregado com sucesso: 9
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6001, GenWimpy carregado com sucesso: 50
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6004, GenWimpy carregado com sucesso: 36
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6005, GenWimpy carregado com sucesso: 26
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6006, GenWimpy carregado com sucesso: 98
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6007, GenWimpy carregado com sucesso: 8
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6008, GenWimpy carregado com sucesso: 37
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6009, GenWimpy carregado com sucesso: 46
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6010, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6011, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6012, GenWimpy carregado com sucesso: 57
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6013, GenWimpy carregado com sucesso: 56
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6014, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6015, GenWimpy carregado com sucesso: 10
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6017, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6018, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6019, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6100, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6101, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6102, GenWimpy carregado com sucesso: 28
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6103, GenWimpy carregado com sucesso: 8
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6113, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6114, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6115, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6116, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6117, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6200, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6201, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6202, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6203, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6205, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6209, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6212, GenWimpy carregado com sucesso: 51
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6213, GenWimpy carregado com sucesso: 39
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6301, GenWimpy carregado com sucesso: 46
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6302, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6303, GenWimpy carregado com sucesso: 26
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6304, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6305, GenWimpy carregado com sucesso: 11
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6306, GenWimpy carregado com sucesso: 25
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6307, GenWimpy carregado com sucesso: 14
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6308, GenWimpy carregado com sucesso: 22
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6309, GenWimpy carregado com sucesso: 10
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6310, GenWimpy carregado com sucesso: 14
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6314, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6315, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6316, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6500, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6501, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #6903, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7000, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7002, GenWimpy carregado com sucesso: 32
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7003, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7005, GenWimpy carregado com sucesso: 35
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7006, GenWimpy carregado com sucesso: 52
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7010, GenWimpy carregado com sucesso: 11
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7040, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7041, GenWimpy carregado com sucesso: 18
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7043, GenWimpy carregado com sucesso: 18
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7044, GenWimpy carregado com sucesso: 49
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7201, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7202, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7203, GenWimpy carregado com sucesso: 70
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #7901, GenWimpy carregado com sucesso: 13
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8101, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8102, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8103, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8104, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8105, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8115, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8126, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8127, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8129, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8131, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8134, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8135, GenWimpy carregado com sucesso: 29
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8136, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8137, GenWimpy carregado com sucesso: 15
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8142, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8143, GenWimpy carregado com sucesso: 21
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8144, GenWimpy carregado com sucesso: 13
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8145, GenWimpy carregado com sucesso: 41
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8146, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8151, GenWimpy carregado com sucesso: 16
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #8415, GenWimpy carregado com sucesso: 9
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9100, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9101, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9102, GenWimpy carregado com sucesso: 11
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9103, GenWimpy carregado com sucesso: 19
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9104, GenWimpy carregado com sucesso: 14
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9105, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9205, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9206, GenWimpy carregado com sucesso: 9
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9207, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9208, GenWimpy carregado com sucesso: 11
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9209, GenWimpy carregado com sucesso: 10
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9210, GenWimpy carregado com sucesso: 11
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9211, GenWimpy carregado com sucesso: 31
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9212, GenWimpy carregado com sucesso: 34
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9213, GenWimpy carregado com sucesso: 33
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9214, GenWimpy carregado com sucesso: 34
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9215, GenWimpy carregado com sucesso: 35
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9236, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9319, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9320, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9322, GenWimpy carregado com sucesso: 11
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9323, GenWimpy carregado com sucesso: 26
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9325, GenWimpy carregado com sucesso: 41
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9501, GenWimpy carregado com sucesso: 48
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9502, GenWimpy carregado com sucesso: 18
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9503, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9504, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9527, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9528, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9904, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9905, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #9911, GenWimpy carregado com sucesso: 33
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10000, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10001, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10004, GenWimpy carregado com sucesso: 36
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10005, GenWimpy carregado com sucesso: 71
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10006, GenWimpy carregado com sucesso: 73
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10008, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10009, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10011, GenWimpy carregado com sucesso: 75
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10012, GenWimpy carregado com sucesso: 59
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10300, GenWimpy carregado com sucesso: 35
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10301, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10302, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10303, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10304, GenWimpy carregado com sucesso: 24
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10305, GenWimpy carregado com sucesso: 21
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10307, GenWimpy carregado com sucesso: 33
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10308, GenWimpy carregado com sucesso: 60
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10309, GenWimpy carregado com sucesso: 35
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10310, GenWimpy carregado com sucesso: 47
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10312, GenWimpy carregado com sucesso: 24
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10313, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10314, GenWimpy carregado com sucesso: 10
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10315, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10316, GenWimpy carregado com sucesso: 19
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10317, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10720, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10726, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10860, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #10867, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11100 asked for but non-existant! (mob: o grande urso da montanha - 65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11101 asked for but non-existant! (mob: o grande urso da montanha - 65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11102 asked for but non-existant! (mob: o grande urso da montanha - 65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11300 asked for but non-existant! (mob: um feiticeiro naga - 65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11301 asked for but non-existant! (mob: a nagini templar - 65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11302 asked for but non-existant! (mob: a nagini assassina - 65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11303 asked for but non-existant! (mob: a nagini guerreira - 65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11305 asked for but non-existant! (mob: o druida naga - 65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11500 asked for but non-existant! (mob: Khanti, a nagini Guardiã - 65535)
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11606, GenWimpy carregado com sucesso: 51
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11627, GenWimpy carregado com sucesso: 38
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11628, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11629, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11630, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11631, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11632, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11633, GenWimpy carregado com sucesso: 16
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11635, GenWimpy carregado com sucesso: 15
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11636, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11637, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11638, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11640, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11642, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #11643, GenWimpy carregado com sucesso: 34
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12017, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12018, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12019, GenWimpy carregado com sucesso: 17
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12021, GenWimpy carregado com sucesso: 16
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12024, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12035, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12103, GenWimpy carregado com sucesso: 11
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12105, GenWimpy carregado com sucesso: 75
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12108, GenWimpy carregado com sucesso: 20
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12109, GenWimpy carregado com sucesso: 77
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12110, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12112, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12114, GenWimpy carregado com sucesso: 81
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12116, GenWimpy carregado com sucesso: 19
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12120, GenWimpy carregado com sucesso: 96
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12122, GenWimpy carregado com sucesso: 20
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12125, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12662, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12666, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12671, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12672, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12673, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12674, GenWimpy carregado com sucesso: 39
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12677, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12679, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12682, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12684, GenWimpy carregado com sucesso: 15
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12685, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12691, GenWimpy carregado com sucesso: 9
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12696, GenWimpy carregado com sucesso: 30
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12697, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #12698, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13200, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13201, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13202, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13301, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13303, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13304, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13307, GenWimpy carregado com sucesso: 38
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13409, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13410, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13411, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13430, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13431, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13432, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13445, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13500, GenWimpy carregado com sucesso: 14
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13501, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13502, GenWimpy carregado com sucesso: 16
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13503, GenWimpy carregado com sucesso: 16
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13504, GenWimpy carregado com sucesso: 17
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13505, GenWimpy carregado com sucesso: 8
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13508, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13509, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13510, GenWimpy carregado com sucesso: 19
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13511, GenWimpy carregado com sucesso: 13
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13512, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13513, GenWimpy carregado com sucesso: 25
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13514, GenWimpy carregado com sucesso: 19
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13515, GenWimpy carregado com sucesso: 13
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13516, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13517, GenWimpy carregado com sucesso: 20
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13600, GenWimpy carregado com sucesso: 30
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13601, GenWimpy carregado com sucesso: 16
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13602, GenWimpy carregado com sucesso: 34
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13603, GenWimpy carregado com sucesso: 38
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13604, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13605, GenWimpy carregado com sucesso: 26
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13606, GenWimpy carregado com sucesso: 28
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13607, GenWimpy carregado com sucesso: 26
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13608, GenWimpy carregado com sucesso: 28
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13609, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13610, GenWimpy carregado com sucesso: 96
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13711, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #13821, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #14401, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #14402, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #14423, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #15009, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #15012, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #15014, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #15017, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #15028, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #15030, GenWimpy carregado com sucesso: 59
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #15031, GenWimpy carregado com sucesso: 65
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #15032, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #15502, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17001, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17002, GenWimpy carregado com sucesso: 55
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17003, GenWimpy carregado com sucesso: 43
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17005, GenWimpy carregado com sucesso: 37
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17006, GenWimpy carregado com sucesso: 25
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17007, GenWimpy carregado com sucesso: 35
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17014, GenWimpy carregado com sucesso: 19
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17015, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17016, GenWimpy carregado com sucesso: 11
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17018, GenWimpy carregado com sucesso: 9
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17019, GenWimpy carregado com sucesso: 56
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17020, GenWimpy carregado com sucesso: 59
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17021, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17022, GenWimpy carregado com sucesso: 17
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17023, GenWimpy carregado com sucesso: 10
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17024, GenWimpy carregado com sucesso: 14
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17025, GenWimpy carregado com sucesso: 41
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17026, GenWimpy carregado com sucesso: 81
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17027, GenWimpy carregado com sucesso: 54
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17028, GenWimpy carregado com sucesso: 70
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17029, GenWimpy carregado com sucesso: 61
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17030, GenWimpy carregado com sucesso: 64
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17031, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17033, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17034, GenWimpy carregado com sucesso: 44
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17036, GenWimpy carregado com sucesso: 61
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17037, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17301, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17302, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17303, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17305, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17307, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17310, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17314, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17315, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17319, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17320, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17321, GenWimpy carregado com sucesso: 17
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17322, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17323, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17324, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17330, GenWimpy carregado com sucesso: 8
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17331, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17332, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17333, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17334, GenWimpy carregado com sucesso: 13
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17335, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17336, GenWimpy carregado com sucesso: 20
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17343, GenWimpy carregado com sucesso: 19
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17344, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17345, GenWimpy carregado com sucesso: 6
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17350, GenWimpy carregado com sucesso: 19
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17362, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #17363, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18601, GenWimpy carregado com sucesso: 10
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18602, GenWimpy carregado com sucesso: 45
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18603, GenWimpy carregado com sucesso: 14
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18604, GenWimpy carregado com sucesso: 27
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18605, GenWimpy carregado com sucesso: 31
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18606, GenWimpy carregado com sucesso: 84
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18607, GenWimpy carregado com sucesso: 78
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18608, GenWimpy carregado com sucesso: 21
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18609, GenWimpy carregado com sucesso: 16
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18610, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18611, GenWimpy carregado com sucesso: 23
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18612, GenWimpy carregado com sucesso: 31
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18613, GenWimpy carregado com sucesso: 19
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18614, GenWimpy carregado com sucesso: 17
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #18615, GenWimpy carregado com sucesso: 11
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19011, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #19000 asked for but non-existant! (mob: o elfo jardineiro - 65535)
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #19001 asked for but non-existant! (mob: o elfo jardineiro - 65535)
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19014, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: SYSERR: dg_read_trigger: Trigger vnum #19003 asked for but non-existant! (mob: o elfo apressado - 65535)
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19030, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19032, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19703, GenWimpy carregado com sucesso: 15
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19704, GenWimpy carregado com sucesso: 86
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19705, GenWimpy carregado com sucesso: 7
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19706, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19707, GenWimpy carregado com sucesso: 10
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19711, GenWimpy carregado com sucesso: 4
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19716, GenWimpy carregado com sucesso: 16
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19800, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19801, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19809, GenWimpy carregado com sucesso: 15
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19816, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #19821, GenWimpy carregado com sucesso: 9
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20100, GenWimpy carregado com sucesso: 46
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20103, GenWimpy carregado com sucesso: 12
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20104, GenWimpy carregado com sucesso: 14
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20105, GenWimpy carregado com sucesso: 35
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20106, GenWimpy carregado com sucesso: 27
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20107, GenWimpy carregado com sucesso: 22
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20108, GenWimpy carregado com sucesso: 15
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20109, GenWimpy carregado com sucesso: 33
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20110, GenWimpy carregado com sucesso: 32
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20111, GenWimpy carregado com sucesso: 23
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20112, GenWimpy carregado com sucesso: 43
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20113, GenWimpy carregado com sucesso: 31
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20114, GenWimpy carregado com sucesso: 30
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20115, GenWimpy carregado com sucesso: 33
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20116, GenWimpy carregado com sucesso: 20
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20117, GenWimpy carregado com sucesso: 23
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20118, GenWimpy carregado com sucesso: 27
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20119, GenWimpy carregado com sucesso: 10
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20127, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20128, GenWimpy carregado com sucesso: 3
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20132, GenWimpy carregado com sucesso: 2
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20133, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #20134, GenWimpy carregado com sucesso: 1
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #28004, GenWimpy carregado com sucesso: 24
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #28006, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #28008, GenWimpy carregado com sucesso: 100
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #28010, GenWimpy carregado com sucesso: 57
-Jul 27 01:41:22 2025 :: DEBUG: Mob vnum #28023, GenWimpy carregado com sucesso: 5
-Jul 27 01:41:22 2025 :: Loading objs and generating index.
-Jul 27 01:41:22 2025 ::    3728 objs, 119296 bytes in index, 894720 bytes in prototypes.
-Jul 27 01:41:22 2025 :: Renumbering zone table.
-Jul 27 01:41:22 2025 :: Loading quests.
-Jul 27 01:41:22 2025 ::    9 entries, 1152 bytes.
-Jul 27 01:41:22 2025 :: Loading temporary quest assignments.
-Jul 27 01:41:22 2025 :: No tempquests.dat file found - creating new file
-Jul 27 01:41:22 2025 :: SYSERR: Unable to create tempquests.dat file
-Jul 27 01:41:22 2025 :: Clearing game world.
-Jul 27 01:41:24 2025 :: Done.
+Jul 27 01:43:32 2025 :: Loading configuration.
+Jul 27 01:43:32 2025 :: Vitalia Reborn 2025 V0.3
+Jul 27 01:43:32 2025 :: Using lib as data directory.
+Jul 27 01:43:32 2025 :: Loading zone table.
+Jul 27 01:43:32 2025 ::    126 zones, 11088 bytes.
+Jul 27 01:43:32 2025 :: Loading triggers and generating index.
+Jul 27 01:43:32 2025 :: Loading rooms.
+Jul 27 01:43:32 2025 ::    9528 rooms, 1753152 bytes.
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #2802 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #2802 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #2802 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #2802 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #2802 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4500 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4501 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4503 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4502 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #4508 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #6901 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #6901 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #6901 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #6901 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11000 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11308 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11308 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11309 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11600 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11600 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11600 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #13800 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #13800 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #13800 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #13800 asked for but non-existant! (room:65535)
+Jul 27 01:43:32 2025 :: Loading spells.
+Jul 27 01:43:32 2025 :: Assigning spells's function.
+Jul 27 01:43:32 2025 :: Renumbering rooms.
+Jul 27 01:43:32 2025 :: Checking start rooms.
+Jul 27 01:43:32 2025 :: Loading mobs and generating index.
+Jul 27 01:43:32 2025 ::    2633 mobs, 84256 bytes in index, 1748312 bytes in prototypes.
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #200, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #201, GenWimpy carregado com sucesso: 10
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #202, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #205, GenWimpy carregado com sucesso: 8
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #700, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #701, GenWimpy carregado com sucesso: 22
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #702, GenWimpy carregado com sucesso: 32
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #705, GenWimpy carregado com sucesso: 32
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #706, GenWimpy carregado com sucesso: 20
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #707, GenWimpy carregado com sucesso: 25
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #708, GenWimpy carregado com sucesso: 15
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #710, GenWimpy carregado com sucesso: 13
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #711, GenWimpy carregado com sucesso: 68
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #713, GenWimpy carregado com sucesso: 41
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #715, GenWimpy carregado com sucesso: 66
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #717, GenWimpy carregado com sucesso: 36
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #740, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #775, GenWimpy carregado com sucesso: 18
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #780, GenWimpy carregado com sucesso: 21
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #781, GenWimpy carregado com sucesso: 20
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #799, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #800, GenWimpy carregado com sucesso: 27
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #801, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #802, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #803, GenWimpy carregado com sucesso: 44
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #804, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #805, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #900, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #909, GenWimpy carregado com sucesso: 13
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #910, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #911, GenWimpy carregado com sucesso: 9
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1507, GenWimpy carregado com sucesso: 63
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1516, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1517, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1600, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1609, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1610, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1611, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1617, GenWimpy carregado com sucesso: 98
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1620, GenWimpy carregado com sucesso: 8
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1621, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1624, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1700, GenWimpy carregado com sucesso: 28
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1704, GenWimpy carregado com sucesso: 57
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1705, GenWimpy carregado com sucesso: 79
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1707, GenWimpy carregado com sucesso: 17
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1709, GenWimpy carregado com sucesso: 9
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1710, GenWimpy carregado com sucesso: 8
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1711, GenWimpy carregado com sucesso: 14
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1713, GenWimpy carregado com sucesso: 38
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1714, GenWimpy carregado com sucesso: 44
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #1715, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2200, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2201, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2304, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2324, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2346, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2400, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2401, GenWimpy carregado com sucesso: 64
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2500, GenWimpy carregado com sucesso: 39
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2502, GenWimpy carregado com sucesso: 16
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2504, GenWimpy carregado com sucesso: 14
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2507, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2508, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2510, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2512, GenWimpy carregado com sucesso: 26
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2513, GenWimpy carregado com sucesso: 44
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2514, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2515, GenWimpy carregado com sucesso: 78
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2516, GenWimpy carregado com sucesso: 85
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2517, GenWimpy carregado com sucesso: 84
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2518, GenWimpy carregado com sucesso: 63
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2519, GenWimpy carregado com sucesso: 68
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2520, GenWimpy carregado com sucesso: 10
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2521, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2522, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2523, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2524, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2526, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2527, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2528, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2529, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2530, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2531, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2533, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2538, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2539, GenWimpy carregado com sucesso: 21
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2540, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2542, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2544, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2545, GenWimpy carregado com sucesso: 18
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2547, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2551, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2552, GenWimpy carregado com sucesso: 49
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2555, GenWimpy carregado com sucesso: 21
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2561, GenWimpy carregado com sucesso: 33
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2701, GenWimpy carregado com sucesso: 8
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2706, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2709, GenWimpy carregado com sucesso: 46
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2717, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2718, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2719, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2720, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2721, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2722, GenWimpy carregado com sucesso: 11
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2733, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2734, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2739, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2741, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #2743, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3011, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3015, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3059, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3060, GenWimpy carregado com sucesso: 31
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3061, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3062, GenWimpy carregado com sucesso: 30
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3065, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3066, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3068, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3101, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3102, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3103, GenWimpy carregado com sucesso: 28
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3104, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3106, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3122, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3123, GenWimpy carregado com sucesso: 19
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3300, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3306, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3311, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3315, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3316, GenWimpy carregado com sucesso: 17
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3317, GenWimpy carregado com sucesso: 15
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3500, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3501, GenWimpy carregado com sucesso: 84
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3502, GenWimpy carregado com sucesso: 38
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3504, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3505, GenWimpy carregado com sucesso: 8
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3506, GenWimpy carregado com sucesso: 9
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3507, GenWimpy carregado com sucesso: 34
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3604, GenWimpy carregado com sucesso: 16
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3700, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3721, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3722, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3723, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3724, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3725, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3726, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3728, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3731, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3905, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3906, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3907, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3914, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3915, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3916, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3917, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3918, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3923, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3924, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #3925, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4000, GenWimpy carregado com sucesso: 17
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4003, GenWimpy carregado com sucesso: 76
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4004, GenWimpy carregado com sucesso: 89
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4005, GenWimpy carregado com sucesso: 18
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4051, GenWimpy carregado com sucesso: 79
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4052, GenWimpy carregado com sucesso: 36
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4055, GenWimpy carregado com sucesso: 15
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4056, GenWimpy carregado com sucesso: 34
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4057, GenWimpy carregado com sucesso: 75
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4058, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4100, GenWimpy carregado com sucesso: 36
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4103, GenWimpy carregado com sucesso: 54
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4105, GenWimpy carregado com sucesso: 85
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4106, GenWimpy carregado com sucesso: 46
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4107, GenWimpy carregado com sucesso: 77
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4201, GenWimpy carregado com sucesso: 40
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4205, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4206, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4244, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4316, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4321, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4325, GenWimpy carregado com sucesso: 9
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4330, GenWimpy carregado com sucesso: 17
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4340, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4800, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4806, GenWimpy carregado com sucesso: 21
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4900, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4901, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4902, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4903, GenWimpy carregado com sucesso: 10
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4904, GenWimpy carregado com sucesso: 14
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4905, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4906, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4907, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4908, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4909, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4910, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4912, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4913, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4915, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4917, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #4918, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5000, GenWimpy carregado com sucesso: 72
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5001, GenWimpy carregado com sucesso: 61
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5002, GenWimpy carregado com sucesso: 72
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5003, GenWimpy carregado com sucesso: 69
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5009, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5014, GenWimpy carregado com sucesso: 27
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5015, GenWimpy carregado com sucesso: 84
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5109, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5201, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5202, GenWimpy carregado com sucesso: 19
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5204, GenWimpy carregado com sucesso: 30
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5205, GenWimpy carregado com sucesso: 21
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5206, GenWimpy carregado com sucesso: 23
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5207, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5209, GenWimpy carregado com sucesso: 82
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5300, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5301, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5302, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5303, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5304, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5305, GenWimpy carregado com sucesso: 26
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5307, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5308, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5312, GenWimpy carregado com sucesso: 31
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5406, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5409, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5420, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5434, GenWimpy carregado com sucesso: 8
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5435, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5440, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5441, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5442, GenWimpy carregado com sucesso: 13
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5443, GenWimpy carregado com sucesso: 16
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5444, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5447, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5448, GenWimpy carregado com sucesso: 56
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5449, GenWimpy carregado com sucesso: 90
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5450, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5451, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5453, GenWimpy carregado com sucesso: 68
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5454, GenWimpy carregado com sucesso: 44
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5460, GenWimpy carregado com sucesso: 10
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5461, GenWimpy carregado com sucesso: 18
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5479, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5701, GenWimpy carregado com sucesso: 9
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5702, GenWimpy carregado com sucesso: 23
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5703, GenWimpy carregado com sucesso: 14
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5704, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5706, GenWimpy carregado com sucesso: 16
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5707, GenWimpy carregado com sucesso: 21
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5708, GenWimpy carregado com sucesso: 21
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5709, GenWimpy carregado com sucesso: 9
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5710, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5711, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5713, GenWimpy carregado com sucesso: 34
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #5714, GenWimpy carregado com sucesso: 15
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6000, GenWimpy carregado com sucesso: 9
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6001, GenWimpy carregado com sucesso: 50
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6004, GenWimpy carregado com sucesso: 36
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6005, GenWimpy carregado com sucesso: 26
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6006, GenWimpy carregado com sucesso: 98
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6007, GenWimpy carregado com sucesso: 8
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6008, GenWimpy carregado com sucesso: 37
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6009, GenWimpy carregado com sucesso: 46
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6010, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6011, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6012, GenWimpy carregado com sucesso: 57
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6013, GenWimpy carregado com sucesso: 56
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6014, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6015, GenWimpy carregado com sucesso: 10
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6017, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6018, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6019, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6100, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6101, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6102, GenWimpy carregado com sucesso: 28
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6103, GenWimpy carregado com sucesso: 8
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6113, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6114, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6115, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6116, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6117, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6200, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6201, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6202, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6203, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6205, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6209, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6212, GenWimpy carregado com sucesso: 51
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6213, GenWimpy carregado com sucesso: 39
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6301, GenWimpy carregado com sucesso: 46
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6302, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6303, GenWimpy carregado com sucesso: 26
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6304, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6305, GenWimpy carregado com sucesso: 11
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6306, GenWimpy carregado com sucesso: 25
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6307, GenWimpy carregado com sucesso: 14
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6308, GenWimpy carregado com sucesso: 22
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6309, GenWimpy carregado com sucesso: 10
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6310, GenWimpy carregado com sucesso: 14
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6314, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6315, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6316, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6500, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6501, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #6903, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7000, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7002, GenWimpy carregado com sucesso: 32
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7003, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7005, GenWimpy carregado com sucesso: 35
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7006, GenWimpy carregado com sucesso: 52
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7010, GenWimpy carregado com sucesso: 11
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7040, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7041, GenWimpy carregado com sucesso: 18
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7043, GenWimpy carregado com sucesso: 18
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7044, GenWimpy carregado com sucesso: 49
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7201, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7202, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7203, GenWimpy carregado com sucesso: 70
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #7901, GenWimpy carregado com sucesso: 13
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8101, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8102, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8103, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8104, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8105, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8115, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8126, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8127, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8129, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8131, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8134, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8135, GenWimpy carregado com sucesso: 29
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8136, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8137, GenWimpy carregado com sucesso: 15
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8142, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8143, GenWimpy carregado com sucesso: 21
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8144, GenWimpy carregado com sucesso: 13
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8145, GenWimpy carregado com sucesso: 41
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8146, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8151, GenWimpy carregado com sucesso: 16
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #8415, GenWimpy carregado com sucesso: 9
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9100, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9101, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9102, GenWimpy carregado com sucesso: 11
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9103, GenWimpy carregado com sucesso: 19
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9104, GenWimpy carregado com sucesso: 14
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9105, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9205, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9206, GenWimpy carregado com sucesso: 9
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9207, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9208, GenWimpy carregado com sucesso: 11
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9209, GenWimpy carregado com sucesso: 10
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9210, GenWimpy carregado com sucesso: 11
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9211, GenWimpy carregado com sucesso: 31
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9212, GenWimpy carregado com sucesso: 34
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9213, GenWimpy carregado com sucesso: 33
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9214, GenWimpy carregado com sucesso: 34
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9215, GenWimpy carregado com sucesso: 35
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9236, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9319, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9320, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9322, GenWimpy carregado com sucesso: 11
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9323, GenWimpy carregado com sucesso: 26
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9325, GenWimpy carregado com sucesso: 41
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9501, GenWimpy carregado com sucesso: 48
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9502, GenWimpy carregado com sucesso: 18
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9503, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9504, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9527, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9528, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9904, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9905, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #9911, GenWimpy carregado com sucesso: 33
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10000, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10001, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10004, GenWimpy carregado com sucesso: 36
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10005, GenWimpy carregado com sucesso: 71
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10006, GenWimpy carregado com sucesso: 73
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10008, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10009, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10011, GenWimpy carregado com sucesso: 75
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10012, GenWimpy carregado com sucesso: 59
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10300, GenWimpy carregado com sucesso: 35
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10301, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10302, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10303, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10304, GenWimpy carregado com sucesso: 24
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10305, GenWimpy carregado com sucesso: 21
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10307, GenWimpy carregado com sucesso: 33
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10308, GenWimpy carregado com sucesso: 60
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10309, GenWimpy carregado com sucesso: 35
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10310, GenWimpy carregado com sucesso: 47
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10312, GenWimpy carregado com sucesso: 24
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10313, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10314, GenWimpy carregado com sucesso: 10
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10315, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10316, GenWimpy carregado com sucesso: 19
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10317, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10720, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10726, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10860, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #10867, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11100 asked for but non-existant! (mob: o grande urso da montanha - 65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11101 asked for but non-existant! (mob: o grande urso da montanha - 65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11102 asked for but non-existant! (mob: o grande urso da montanha - 65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11300 asked for but non-existant! (mob: um feiticeiro naga - 65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11301 asked for but non-existant! (mob: a nagini templar - 65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11302 asked for but non-existant! (mob: a nagini assassina - 65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11303 asked for but non-existant! (mob: a nagini guerreira - 65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11305 asked for but non-existant! (mob: o druida naga - 65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #11500 asked for but non-existant! (mob: Khanti, a nagini Guardiã - 65535)
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11606, GenWimpy carregado com sucesso: 51
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11627, GenWimpy carregado com sucesso: 38
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11628, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11629, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11630, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11631, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11632, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11633, GenWimpy carregado com sucesso: 16
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11635, GenWimpy carregado com sucesso: 15
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11636, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11637, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11638, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11640, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11642, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #11643, GenWimpy carregado com sucesso: 34
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12017, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12018, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12019, GenWimpy carregado com sucesso: 17
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12021, GenWimpy carregado com sucesso: 16
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12024, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12035, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12103, GenWimpy carregado com sucesso: 11
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12105, GenWimpy carregado com sucesso: 75
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12108, GenWimpy carregado com sucesso: 20
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12109, GenWimpy carregado com sucesso: 77
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12110, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12112, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12114, GenWimpy carregado com sucesso: 81
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12116, GenWimpy carregado com sucesso: 19
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12120, GenWimpy carregado com sucesso: 96
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12122, GenWimpy carregado com sucesso: 20
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12125, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12662, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12666, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12671, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12672, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12673, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12674, GenWimpy carregado com sucesso: 39
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12677, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12679, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12682, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12684, GenWimpy carregado com sucesso: 15
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12685, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12691, GenWimpy carregado com sucesso: 9
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12696, GenWimpy carregado com sucesso: 30
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12697, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #12698, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13200, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13201, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13202, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13301, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13303, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13304, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13307, GenWimpy carregado com sucesso: 38
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13409, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13410, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13411, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13430, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13431, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13432, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13445, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13500, GenWimpy carregado com sucesso: 14
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13501, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13502, GenWimpy carregado com sucesso: 16
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13503, GenWimpy carregado com sucesso: 16
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13504, GenWimpy carregado com sucesso: 17
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13505, GenWimpy carregado com sucesso: 8
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13508, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13509, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13510, GenWimpy carregado com sucesso: 19
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13511, GenWimpy carregado com sucesso: 13
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13512, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13513, GenWimpy carregado com sucesso: 25
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13514, GenWimpy carregado com sucesso: 19
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13515, GenWimpy carregado com sucesso: 13
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13516, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13517, GenWimpy carregado com sucesso: 20
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13600, GenWimpy carregado com sucesso: 30
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13601, GenWimpy carregado com sucesso: 16
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13602, GenWimpy carregado com sucesso: 34
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13603, GenWimpy carregado com sucesso: 38
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13604, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13605, GenWimpy carregado com sucesso: 26
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13606, GenWimpy carregado com sucesso: 28
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13607, GenWimpy carregado com sucesso: 26
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13608, GenWimpy carregado com sucesso: 28
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13609, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13610, GenWimpy carregado com sucesso: 96
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13711, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #13821, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #14401, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #14402, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #14423, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #15009, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #15012, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #15014, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #15017, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #15028, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #15030, GenWimpy carregado com sucesso: 59
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #15031, GenWimpy carregado com sucesso: 65
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #15032, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #15502, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17001, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17002, GenWimpy carregado com sucesso: 55
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17003, GenWimpy carregado com sucesso: 43
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17005, GenWimpy carregado com sucesso: 37
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17006, GenWimpy carregado com sucesso: 25
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17007, GenWimpy carregado com sucesso: 35
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17014, GenWimpy carregado com sucesso: 19
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17015, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17016, GenWimpy carregado com sucesso: 11
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17018, GenWimpy carregado com sucesso: 9
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17019, GenWimpy carregado com sucesso: 56
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17020, GenWimpy carregado com sucesso: 59
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17021, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17022, GenWimpy carregado com sucesso: 17
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17023, GenWimpy carregado com sucesso: 10
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17024, GenWimpy carregado com sucesso: 14
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17025, GenWimpy carregado com sucesso: 41
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17026, GenWimpy carregado com sucesso: 81
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17027, GenWimpy carregado com sucesso: 54
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17028, GenWimpy carregado com sucesso: 70
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17029, GenWimpy carregado com sucesso: 61
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17030, GenWimpy carregado com sucesso: 64
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17031, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17033, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17034, GenWimpy carregado com sucesso: 44
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17036, GenWimpy carregado com sucesso: 61
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17037, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17301, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17302, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17303, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17305, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17307, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17310, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17314, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17315, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17319, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17320, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17321, GenWimpy carregado com sucesso: 17
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17322, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17323, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17324, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17330, GenWimpy carregado com sucesso: 8
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17331, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17332, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17333, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17334, GenWimpy carregado com sucesso: 13
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17335, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17336, GenWimpy carregado com sucesso: 20
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17343, GenWimpy carregado com sucesso: 19
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17344, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17345, GenWimpy carregado com sucesso: 6
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17350, GenWimpy carregado com sucesso: 19
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17362, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #17363, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18601, GenWimpy carregado com sucesso: 10
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18602, GenWimpy carregado com sucesso: 45
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18603, GenWimpy carregado com sucesso: 14
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18604, GenWimpy carregado com sucesso: 27
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18605, GenWimpy carregado com sucesso: 31
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18606, GenWimpy carregado com sucesso: 84
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18607, GenWimpy carregado com sucesso: 78
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18608, GenWimpy carregado com sucesso: 21
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18609, GenWimpy carregado com sucesso: 16
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18610, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18611, GenWimpy carregado com sucesso: 23
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18612, GenWimpy carregado com sucesso: 31
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18613, GenWimpy carregado com sucesso: 19
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18614, GenWimpy carregado com sucesso: 17
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #18615, GenWimpy carregado com sucesso: 11
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19011, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #19000 asked for but non-existant! (mob: o elfo jardineiro - 65535)
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #19001 asked for but non-existant! (mob: o elfo jardineiro - 65535)
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19014, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: SYSERR: dg_read_trigger: Trigger vnum #19003 asked for but non-existant! (mob: o elfo apressado - 65535)
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19030, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19032, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19703, GenWimpy carregado com sucesso: 15
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19704, GenWimpy carregado com sucesso: 86
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19705, GenWimpy carregado com sucesso: 7
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19706, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19707, GenWimpy carregado com sucesso: 10
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19711, GenWimpy carregado com sucesso: 4
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19716, GenWimpy carregado com sucesso: 16
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19800, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19801, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19809, GenWimpy carregado com sucesso: 15
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19816, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #19821, GenWimpy carregado com sucesso: 9
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20100, GenWimpy carregado com sucesso: 46
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20103, GenWimpy carregado com sucesso: 12
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20104, GenWimpy carregado com sucesso: 14
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20105, GenWimpy carregado com sucesso: 35
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20106, GenWimpy carregado com sucesso: 27
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20107, GenWimpy carregado com sucesso: 22
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20108, GenWimpy carregado com sucesso: 15
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20109, GenWimpy carregado com sucesso: 33
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20110, GenWimpy carregado com sucesso: 32
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20111, GenWimpy carregado com sucesso: 23
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20112, GenWimpy carregado com sucesso: 43
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20113, GenWimpy carregado com sucesso: 31
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20114, GenWimpy carregado com sucesso: 30
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20115, GenWimpy carregado com sucesso: 33
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20116, GenWimpy carregado com sucesso: 20
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20117, GenWimpy carregado com sucesso: 23
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20118, GenWimpy carregado com sucesso: 27
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20119, GenWimpy carregado com sucesso: 10
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20127, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20128, GenWimpy carregado com sucesso: 3
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20132, GenWimpy carregado com sucesso: 2
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20133, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #20134, GenWimpy carregado com sucesso: 1
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #28004, GenWimpy carregado com sucesso: 24
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #28006, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #28008, GenWimpy carregado com sucesso: 100
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #28010, GenWimpy carregado com sucesso: 57
+Jul 27 01:43:32 2025 :: DEBUG: Mob vnum #28023, GenWimpy carregado com sucesso: 5
+Jul 27 01:43:32 2025 :: Loading objs and generating index.
+Jul 27 01:43:32 2025 ::    3728 objs, 119296 bytes in index, 894720 bytes in prototypes.
+Jul 27 01:43:32 2025 :: Renumbering zone table.
+Jul 27 01:43:32 2025 :: Loading quests.
+Jul 27 01:43:32 2025 ::    9 entries, 1152 bytes.
+Jul 27 01:43:32 2025 :: Loading temporary quest assignments.
+Jul 27 01:43:32 2025 :: No tempquests.dat file found - creating new file
+Jul 27 01:43:32 2025 :: SYSERR: Unable to create tempquests.dat file
+Jul 27 01:43:32 2025 :: Clearing game world.
+Jul 27 01:43:34 2025 :: Done.
