@@ -38,6 +38,7 @@ ACMD(do_mine);
 ACMD(do_fishing);
 ACMD(do_forage);
 ACMD(do_eavesdrop);
+ACMD(do_taint);
 
 void set_spells_function()
 {
@@ -188,6 +189,9 @@ void set_spells_function()
 
     if ((spell = get_spell_by_vnum(SKILL_EAVESDROP)))
         spell->function = do_eavesdrop;
+
+    if ((spell = get_spell_by_vnum(SKILL_TAINT_FLUID)))
+        spell->function = do_taint;
 }
 
 // This function create the database of all the spells and skills,
@@ -3104,6 +3108,21 @@ void create_spells_db()
     new_spell->assign[0].level = 10;
     new_spell->assign[1].class_num = CLASS_BARD;
     new_spell->assign[1].level = 12;
+
+    spedit_save_internally(new_spell);
+
+    // SKILL_TAINT_FLUID # 257
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SKILL_TAINT_FLUID;
+    new_spell->status = available;
+    new_spell->name = strdup("taint fluid");
+    new_spell->function = do_taint;
+    new_spell->type = SKILL;
+    new_spell->effectiveness = strdup("100");
+    new_spell->assign[0].class_num = CLASS_THIEF;
+    new_spell->assign[0].level = 30;
 
     spedit_save_internally(new_spell);
 

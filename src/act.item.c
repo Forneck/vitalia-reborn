@@ -1732,3 +1732,78 @@ ACMD(do_envenom)
     if (percent < prob && GET_OBJ_VAL(liqcon, 3))
         SET_BIT_AR(GET_OBJ_EXTRA(weapon), ITEM_POISONED);
 }
+
+ACMD(do_taint)
+{
+    struct obj_data *target, *source, *next_obj;
+    struct char_data *vict;
+    int percent, prob;
+    char arg[MAX_INPUT_LENGTH], buf[MAX_INPUT_LENGTH];
+
+    two_arguments(argument, arg, buf);
+
+    if (!GET_SKILL(ch, SKILL_TAINT_FLUID)) {
+        send_to_char(ch, "Você não sabe como fazer isso!\r\n");
+        return;
+    }
+    if (!*arg) {
+        send_to_char(ch, "De quem você quer contaminar os fluidos?\r\n");
+        return;
+    }
+    if (!(vict = get_char_room_vis(ch, arg, NULL))) {
+        send_to_char(ch, "Sua vítima não parece estar na sala.\r\n");
+        return;
+    }
+    if (!*buf) {
+        send_to_char(ch, "Qual item de %s você deseja contaminar?\r\n", GET_NAME(vict));
+        return;
+    }
+    if (!(target = get_obj_in_list_vis(vict, buf, NULL, vict->carrying))) {
+        send_to_char(ch, "%s não tem um desses.\r\n", GET_NAME(vict));
+        return;
+    }
+    for (target = vict->carrying; target; target = next_obj) {
+        next_obj = target->next_content;
+        if (CAN_SEE_OBJ(ch, target) && GET_OBJ_TYPE(target) == ITEM_DRINKCON) {
+            if (GET_OBJ_VAL(target, 1) <= 0) {
+                send_to_char(ch, "Droga! %s de %s está vazio atualmente. Você aguardará até que seja enchido.\r\n",
+                             target->short_description, GET_NAME(vict));
+                return;
+            }
+            if (GET_OBJ_VAL(target, 3)) {
+                send_to_char(ch, "O conteúdo de %s já está envenenado.\r\nParece que alguém chegou primeiro!\r\n",
+                             target->short_description);
+                return;
+            }
+            percent = rand_number(1, 110);
+            prob = GET_SKILL(ch, SKILL_TAINT_FLUID);
+
+            for (source = ch->carrying; source; source = next_obj) {
+                next_obj = source->next_content;
+                if (CAN_SEE_OBJ(ch, source) && GET_OBJ_TYPE(source) == ITEM_DRINKCON) {
+                    if (GET_OBJ_VAL(source, 3) <= 0) {
+                        send_to_char(ch, "Como você pode envenenar algo com líquido que não está envenenado?!\r\n");
+                        return;
+                    }
+                    if (GET_OBJ_VAL(source, 3) >= 1 && percent < prob) {
+                        send_to_char(ch, "\r\nVocê discretamente despeja o conteúdo de %s em %s de %s.\r\n",
+                                     source->short_description, target->short_description, GET_NAME(vict));
+                        GET_OBJ_VAL(target, 3)++;
+                        GET_OBJ_VAL(source, 1) = 0;
+                        send_to_char(vict, "\r\n%s lhe dá uma piscadela e uma risadinha e se afasta.\r\n",
+                                     GET_NAME(ch));
+                        act("$n dá um sorriso malicioso ao esbarrar em $N.", FALSE, ch, 0, vict, TO_NOTVICT);
+                        return;
+                    }
+                    send_to_char(ch, "Uh oh. Parece que você foi pego!\r\n");
+                    act("$n acabou de tentar envenenar seu $p!", FALSE, ch, target, 0, TO_VICT);
+                    act("$n acabou de tentar envenenar $p de $N!", FALSE, ch, target, vict, TO_NOTVICT);
+                    WAIT_STATE(ch, 10);
+                    return;
+                }
+            }
+            send_to_char(ch, "Você não tem nada em seu inventário que possa ser usado para envenenar.\r\n");
+            return;
+        }
+    }
+}
