@@ -2550,6 +2550,7 @@ void send_to_room(room_rnum room, const char *messg, ...)
 {
     struct char_data *i;
     va_list args;
+    char buf[MAX_STRING_LENGTH];
 
     if (messg == NULL)
         return;
@@ -2561,6 +2562,19 @@ void send_to_room(room_rnum room, const char *messg, ...)
         va_start(args, messg);
         vwrite_to_output(i->desc, messg, args);
         va_end(args);
+    }
+
+    /* Send to listeners in adjacent rooms */
+    for (i = world[room].listeners; i; i = i->next_listener) {
+        if (!i->desc)
+            continue;
+
+        /* Format the message with visual markers to differentiate eavesdropped content */
+        va_start(args, messg);
+        vsnprintf(buf, sizeof(buf), messg, args);
+        va_end(args);
+
+        write_to_output(i->desc, "----------\r\n%s----------\r\n", buf);
     }
 }
 

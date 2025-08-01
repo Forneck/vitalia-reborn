@@ -1541,10 +1541,14 @@ ACMD(do_forage)
 
 ACMD(do_eavesdrop)
 {
+    int dir;
+    char buf[MAX_STRING_LENGTH];
+    room_rnum target_room;
     int skill_num = GET_SKILL(ch, SKILL_EAVESDROP);
     int percent, prob;
-    struct char_data *vict;
-    char buf[MAX_STRING_LENGTH];
+    struct char_data *temp;
+
+    one_argument(argument, buf);
 
     if (!skill_num) {
         send_to_char(ch, "Você não sabe como espionar conversas.\r\n");
@@ -1556,121 +1560,47 @@ ACMD(do_eavesdrop)
         return;
     }
 
-    WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+    // If already listening, stop listening
+    if (ch->listening_to != NOWHERE) {
+        REMOVE_FROM_LIST(ch, world[ch->listening_to].listeners, next_listener);
+        ch->listening_to = NOWHERE;
+        send_to_char(ch, "Você para de espionar conversas.\r\n");
+        return;
+    }
 
+    if (!*buf) {
+        send_to_char(ch, "Em qual direção você gostaria de espionar?\r\n");
+        return;
+    }
+
+    if ((dir = search_block(buf, dirs_pt, FALSE)) < 0) {
+        send_to_char(ch, "Que direção é essa?\r\n");
+        return;
+    }
+
+    // Check skill
     percent = rand_number(1, 101);
-    prob = GET_SKILL(ch, SKILL_EAVESDROP) - 10;   // Harder skill
+    prob = skill_num;
 
-    send_to_char(ch, "Você tenta escutar conversas próximas...\r\n");
+    if (percent > prob) {
+        send_to_char(ch, "Você tenta espionar nessa direção, mas falha.\r\n");
+        WAIT_STATE(ch, PULSE_VIOLENCE);
+        return;
+    }
 
-    if (percent <= prob) {
-        // Look for NPCs with information or players talking
-        bool found_info = FALSE;
-        int dir;
-
-        // First, check current room
-        for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
-            if (vict == ch || GET_POS(vict) < POS_RESTING)
-                continue;
-
-            if (IS_NPC(vict) && rand_number(1, 100) <= 30 + (skill_num / 4)) {
-                // Enhanced NPC information based on skill level
-                int info_quality = skill_num + rand_number(-10, 10);
-
-                if (info_quality >= 80) {
-                    sprintf(buf, "Você escuta %s sussurrando sobre 'uma entrada secreta ao norte da fonte mágica'.\r\n",
-                            GET_NAME(vict));
-                } else if (info_quality >= 60) {
-                    sprintf(buf, "Você escuta %s falando sobre 'guardas que mudam de posto na terceira vigília'.\r\n",
-                            GET_NAME(vict));
-                } else if (info_quality >= 40) {
-                    sprintf(buf, "Você escuta %s mencionando '%s'.\r\n", GET_NAME(vict),
-                            (rand_number(1, 4) == 1)   ? "um baú escondido na floresta"
-                            : (rand_number(1, 3) == 1) ? "monstros perigosos nas cavernas"
-                            : (rand_number(1, 2) == 1) ? "um comerciante que paga bem por gemas"
-                                                       : "rumores sobre uma quest lucrativa");
-                } else {
-                    sprintf(buf, "Você escuta %s murmurando algo sobre '%s'.\r\n", GET_NAME(vict),
-                            (rand_number(1, 4) == 1)   ? "um tesouro escondido"
-                            : (rand_number(1, 3) == 1) ? "perigos próximos"
-                            : (rand_number(1, 2) == 1) ? "uma quest importante"
-                                                       : "informações valiosas");
-                }
-
-                send_to_char(ch, "%s", buf);
-                found_info = TRUE;
-
-                // Better chance of useful info with higher skill
-                if (rand_number(1, 100) <= (skill_num / 5)) {
-                    send_to_char(ch, "Você consegue informações muito úteis!\r\n");
-                    gain_exp(ch, rand_number(15, 30));
-                }
-                break;
-            }
-
-            // Overhear player conversations
-            if (!IS_NPC(vict) && vict->desc && rand_number(1, 100) <= 20 + (skill_num / 6)) {
-                send_to_char(ch, "Você escuta %s sussurrando algo importante.\r\n", GET_NAME(vict));
-                found_info = TRUE;
-            }
-        }
-
-        // High skill allows eavesdropping on adjacent rooms
-        if (!found_info && skill_num >= 50) {
-            for (dir = 0; dir < NUM_OF_DIRS; dir++) {
-                if (EXIT(ch, dir) && EXIT(ch, dir)->to_room != NOWHERE) {
-                    room_rnum target_room = EXIT(ch, dir)->to_room;
-
-                    for (vict = world[target_room].people; vict; vict = vict->next_in_room) {
-                        if (GET_POS(vict) < POS_RESTING)
-                            continue;
-
-                        if (rand_number(1, 100) <= 15 + (skill_num / 8)) {
-                            sprintf(buf, "Você escuta vozes vindas do %s...\r\n",
-                                    (dir == NORTH)       ? "norte"
-                                    : (dir == SOUTH)     ? "sul"
-                                    : (dir == EAST)      ? "leste"
-                                    : (dir == WEST)      ? "oeste"
-                                    : (dir == UP)        ? "andar de cima"
-                                    : (dir == DOWN)      ? "andar de baixo"
-                                    : (dir == NORTHWEST) ? "noroeste"
-                                    : (dir == NORTHEAST) ? "nordeste"
-                                    : (dir == SOUTHWEST) ? "sudoeste"
-                                                         : "sudeste");
-                            send_to_char(ch, "%s", buf);
-
-                            if (IS_NPC(vict)) {
-                                send_to_char(ch, "Alguém está falando sobre atividades suspeitas.\r\n");
-                            } else {
-                                send_to_char(ch, "Você escuta pessoas conversando baixinho.\r\n");
-                            }
-                            found_info = TRUE;
-                            break;
-                        }
-                    }
-
-                    if (found_info)
-                        break;
-                }
-            }
-        }
-
-        if (!found_info) {
-            send_to_char(ch, "Você não consegue escutar nada interessante.\r\n");
+    if (EXIT(ch, dir)) {
+        if (IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED) && EXIT(ch, dir)->keyword) {
+            sprintf(buf, "A %s está fechada.\r\n", fname(EXIT(ch, dir)->keyword));
+            send_to_char(ch, "%s", buf);
         } else {
-            gain_exp(ch, rand_number(5, 15));
+            target_room = EXIT(ch, dir)->to_room;
+            ch->next_listener = world[target_room].listeners;
+            world[target_room].listeners = ch;
+            ch->listening_to = target_room;
+            send_to_char(ch, "Você começa a espionar conversas nessa direção.\r\n");
+            WAIT_STATE(ch, PULSE_VIOLENCE);
         }
     } else {
-        send_to_char(ch, "Você não consegue escutar nada útil.\r\n");
-
-        // Chance of being noticed when failing
-        if (rand_number(1, 100) <= 25) {
-            for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
-                if (vict != ch && !IS_NPC(vict)) {
-                    act("Você nota $n tentando espionar conversas.", FALSE, ch, 0, vict, TO_VICT);
-                }
-            }
-            send_to_char(ch, "Você sente que alguém pode ter percebido sua tentativa.\r\n");
-        }
+        send_to_char(ch, "Não há uma sala nessa direção...\r\n");
     }
 }

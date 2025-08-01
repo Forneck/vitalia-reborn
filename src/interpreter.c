@@ -505,6 +505,13 @@ void command_interpreter(struct char_data *ch, char *argument)
 
     REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
 
+    /* Remove character from any listener list when taking action */
+    if (ch->listening_to != NOWHERE) {
+        struct char_data *temp;
+        REMOVE_FROM_LIST(ch, world[ch->listening_to].listeners, next_listener);
+        ch->listening_to = NOWHERE;
+    }
+
     /* just drop to next line for hitting CR */
     skip_spaces(&argument);
     if (!*argument)
