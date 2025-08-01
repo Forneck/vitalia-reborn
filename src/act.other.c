@@ -1293,13 +1293,13 @@ ACMD(do_mine)
         int roll = rand_number(1, 100);
 
         if (roll <= 10 + (skill_num / 10)) {
-            vnum = 3020;   // Some gem or valuable ore
+            vnum = 1041;   // Gold ring (valuable treasure)
             send_to_char(ch, "Você encontra algo valioso!\r\n");
             act("$n encontra algo valioso!", TRUE, ch, 0, 0, TO_ROOM);
         } else if (roll <= 30 + (skill_num / 5)) {
-            vnum = 3019;   // Common ore
-            send_to_char(ch, "Você encontra um pouco de minério.\r\n");
-            act("$n encontra um pouco de minério.", TRUE, ch, 0, 0, TO_ROOM);
+            vnum = 10711;   // Iron pickaxe (mining tool)
+            send_to_char(ch, "Você encontra uma ferramenta de mineração.\r\n");
+            act("$n encontra uma ferramenta de mineração.", TRUE, ch, 0, 0, TO_ROOM);
         } else {
             send_to_char(ch, "Você encontra apenas pedras sem valor.\r\n");
             act("$n encontra apenas pedras sem valor.", TRUE, ch, 0, 0, TO_ROOM);
@@ -1311,6 +1311,16 @@ ACMD(do_mine)
             if (obj) {
                 obj_to_char(obj, ch);
                 send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
+            }
+        }
+
+        // Very small chance to attract a traveling dwarf who might trade
+        if (percent <= prob && vnum != NOTHING && rand_number(1, 100) <= 2) {
+            struct char_data *dwarf_mob = read_mobile(14410, VIRTUAL);   // Traveling dwarf
+            if (dwarf_mob) {
+                char_to_room(dwarf_mob, IN_ROOM(ch));
+                send_to_char(ch, "O barulho da mineração atraiu um anão viajante!\r\n");
+                act("O barulho da mineração de $n atraiu um anão viajante!", TRUE, ch, 0, 0, TO_ROOM);
             }
         }
 
@@ -1357,11 +1367,11 @@ ACMD(do_fishing)
         int roll = rand_number(1, 100);
 
         if (roll <= 15 + (skill_num / 8)) {
-            vnum = 3021;   // Large fish
+            vnum = 4402;   // Large fish
             send_to_char(ch, "Você fisga um peixe grande!\r\n");
             act("$n fisga um peixe grande!", TRUE, ch, 0, 0, TO_ROOM);
         } else if (roll <= 40 + (skill_num / 4)) {
-            vnum = 3022;   // Small fish
+            vnum = 10922;   // Fresh fish
             send_to_char(ch, "Você fisga um pequeno peixe.\r\n");
             act("$n fisga um pequeno peixe.", TRUE, ch, 0, 0, TO_ROOM);
         } else {
@@ -1374,6 +1384,16 @@ ACMD(do_fishing)
             if (obj) {
                 obj_to_char(obj, ch);
                 send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
+            }
+        }
+
+        // Small chance to attract a school of fish
+        if (percent <= prob && rand_number(1, 100) <= 5) {
+            struct char_data *fish_mob = read_mobile(10864, VIRTUAL);   // Colorful fish school
+            if (fish_mob) {
+                char_to_room(fish_mob, IN_ROOM(ch));
+                send_to_char(ch, "Sua pesca atraiu um cardume de peixes coloridos!\r\n");
+                act("A pesca de $n atraiu um cardume de peixes coloridos!", TRUE, ch, 0, 0, TO_ROOM);
             }
         }
 
@@ -1419,13 +1439,20 @@ ACMD(do_forage)
         int roll = rand_number(1, 100);
 
         if (roll <= 20 + (skill_num / 6)) {
-            vnum = 3023;   // Herbs or berries
+            vnum = 12027;   // Herb bag
             send_to_char(ch, "Você encontra algumas ervas medicinais!\r\n");
             act("$n encontra algumas ervas medicinais.", TRUE, ch, 0, 0, TO_ROOM);
         } else if (roll <= 50 + (skill_num / 3)) {
-            vnum = 3024;   // Food items
-            send_to_char(ch, "Você encontra alguns frutos selvagens.\r\n");
-            act("$n encontra alguns frutos selvagens.", TRUE, ch, 0, 0, TO_ROOM);
+            // Randomly choose between strawberries and fresh fruits
+            if (rand_number(1, 2) == 1) {
+                vnum = 11;   // Wild strawberries
+                send_to_char(ch, "Você encontra morangos silvestres!\r\n");
+                act("$n encontra morangos silvestres.", TRUE, ch, 0, 0, TO_ROOM);
+            } else {
+                vnum = 2328;   // Fresh fruits
+                send_to_char(ch, "Você encontra alguns frutos selvagens.\r\n");
+                act("$n encontra alguns frutos selvagens.", TRUE, ch, 0, 0, TO_ROOM);
+            }
         } else {
             send_to_char(ch, "Você encontra apenas galhos e folhas secas.\r\n");
             act("$n encontra apenas galhos e folhas secas.", TRUE, ch, 0, 0, TO_ROOM);
@@ -1436,6 +1463,16 @@ ACMD(do_forage)
             if (obj) {
                 obj_to_char(obj, ch);
                 send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
+            }
+        }
+
+        // Small chance to attract a curious squirrel
+        if (percent <= prob && rand_number(1, 100) <= 8) {
+            struct char_data *squirrel_mob = read_mobile(10727, VIRTUAL);   // Gray squirrel
+            if (squirrel_mob) {
+                char_to_room(squirrel_mob, IN_ROOM(ch));
+                send_to_char(ch, "Sua procura por comida atraiu um esquilo curioso!\r\n");
+                act("A procura de $n por comida atraiu um esquilo curioso!", TRUE, ch, 0, 0, TO_ROOM);
             }
         }
 
