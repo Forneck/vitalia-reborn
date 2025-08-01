@@ -52,6 +52,8 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 9 9 1
+GenWimpy: 3
+GenRoam: 54
 E
 #15004
 brian guarda real~
@@ -246,6 +248,8 @@ uma respeitável barriga.
 8 13 3 1d6+100 1d9+2
 200 3750
 9 9 1
+GenWimpy: 2
+GenRoam: 45
 E
 #15017
 mulher limpeza~
@@ -258,8 +262,8 @@ Apesar dela ter um trabalho servil, ela parece gostar dele.
 1 20 9 4d6+1 1d5+0
 10 100
 9 9 2
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 2
+GenRoam: 51
 E
 #15018
 barata~
@@ -439,7 +443,8 @@ desejo de vingança.
 11 6 3 4d4+95 2d4+8
 0 10000
 9 9 0
-GenWimpy: 57
+GenWimpy: 77
+GenRoam: 13
 E
 #15031
 esqueleto aldeao~
@@ -455,7 +460,7 @@ desejo de vingança.
 10 8 3 4d4+80 2d3+6
 0 8000
 9 9 0
-GenWimpy: 67
+GenWimpy: 72
 E
 #15032
 poço demonio~
@@ -470,6 +475,6 @@ Abismo. Ele olha enfurecido para você com olhos vermelhos de sangue, deixa
 33 0 -10 3d60+1480 4d8+16
 35000 1000000
 6 9 1
-GenWimpy: 1
+GenWimpy: 3
 E
 $

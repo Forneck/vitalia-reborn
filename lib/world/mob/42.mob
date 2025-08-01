@@ -34,7 +34,7 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 40
+GenWimpy: 53
 GenLoot: 1
 E
 #4202
@@ -125,9 +125,8 @@ BareHandAttack: 1
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenLoot: 2
-GenRoam: 73
+GenWimpy: 13
+GenRoam: 83
 E
 #4207
 chefe nomade~
@@ -308,7 +307,7 @@ bocarra e engolem-na inteira.  Parece que você teve sorte...
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 6
 E
 #4252
 urubu~

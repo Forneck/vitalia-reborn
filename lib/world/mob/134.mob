@@ -124,8 +124,8 @@ An undefined string.
 10 10 6 1d1+200 5d1+10
 125 1785
 9 9 1
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 6
+GenRoam: 73
 E
 #13410
 pacificador elfo~
@@ -152,8 +152,8 @@ An undefined string.
 1 17 8 1d1+30 2d1+3
 0 75
 9 9 0
-GenWimpy: 4
-GenRoam: 57
+GenWimpy: 9
+GenRoam: 79
 E
 #13412
 esquilo~
@@ -386,8 +386,8 @@ Você pouco pode ver olhando para esta criatura.
 1 14 7 1d1+100 3d1+6
 0 75
 9 9 1
-GenWimpy: 3
-GenRoam: 44
+GenWimpy: 7
+GenRoam: 70
 E
 #13431
 fada~
@@ -429,6 +429,8 @@ Uma pequena aranha com grande colmilhos e seis olhos vermelhos.
 45 2 -6 1d1+800 7d1+18
 0 50769
 9 9 2
+GenWimpy: 2
+GenRoam: 52
 E
 #13434
 minhoca viscosa~

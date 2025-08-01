@@ -423,8 +423,9 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenRoam: 87
+GenWimpy: 12
+GenLoot: 3
+GenRoam: 89
 E
 #3722
 demonio ossos~
@@ -465,7 +466,8 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 89
+GenLoot: 1
+GenRoam: 86
 E
 #3724
 esqueleto dragao~
@@ -505,6 +507,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
+GenLoot: 1
 GenRoam: 89
 E
 #3726
@@ -524,8 +527,9 @@ de simplesmente matar aqueles que não se encaixaram.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenRoam: 34
+GenWimpy: 4
+GenLoot: 3
+GenRoam: 88
 E
 #3727
 general~
@@ -619,8 +623,10 @@ Ele é tímido e solitário, fujindo da luz e da multidão.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
-GenLoot: 1
+GenWimpy: 5
+GenLoot: 2
+GenRoam: 73
+GenGroup: 14
 E
 #3732
 zumbi guarda~

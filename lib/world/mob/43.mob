@@ -114,8 +114,8 @@ um pombo branco está aqui
 0 250
 9 9 1
 BareHandAttack: 1
-GenWimpy: 10
-GenRoam: 3
+GenWimpy: 12
+GenRoam: 26
 E
 #4326
 homem corcunda~
@@ -145,8 +145,8 @@ Ele está vestido com uma túnica marrom.
 8 17 5 3d4+75 4d2+2
 3825 2567
 9 9 1
-GenWimpy: 20
-GenRoam: 27
+GenWimpy: 27
+GenRoam: 35
 E
 #4334
 estatua gargula pedra~
@@ -190,8 +190,8 @@ um grande lutador.
 8 15 1 3d4+75 3d3+8
 1000 1200
 9 9 1
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 3
+GenRoam: 70
 E
 #4341
 poodle~
@@ -303,6 +303,8 @@ Um esquilo marrom está aqui, a procura de nozes.
 0 85
 9 9 1
 BareHandAttack: 4
+GenWimpy: 1
+GenRoam: 14
 E
 #4357
 cigana misteriosa linda Esmeralda~
@@ -332,6 +334,8 @@ de insegurança que todos na França estão vivendo neste momento.
 1250 1873
 9 9 1
 BareHandAttack: 13
+GenWimpy: 2
+GenRoam: 45
 E
 #4367
 Revolucionario Robespierre~

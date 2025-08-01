@@ -9,8 +9,9 @@ O doente mental tem apenas um olhar vazio.
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
-GenWimpy: 46
-GenRoam: 85
+GenWimpy: 61
+GenLoot: 1
+GenRoam: 88
 E
 #20101
 enfermeira curandeira e conselheira~
@@ -50,7 +51,7 @@ na sua suposição.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 1
-GenWimpy: 12
+GenWimpy: 18
 E
 #20104
 paciente mental~
@@ -65,8 +66,8 @@ roupa que ela viu, feroz, com uma luz triunfante em seus olhos.
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 1
-GenWimpy: 14
-GenRoam: 59
+GenWimpy: 17
+GenRoam: 76
 E
 #20105
 paciente mental~
@@ -80,8 +81,8 @@ Há uma grande possibilidade de que Ted seja um grande amigo imaginário...
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 35
-GenRoam: 78
+GenWimpy: 45
+GenRoam: 85
 E
 #20106
 cerebro~
@@ -117,8 +118,8 @@ terminam por revelar o eterno paciente dentro dele.
 5 15 9 10d5+20 2d3+2
 1100 1000
 9 9 1
-GenWimpy: 23
-GenRoam: 61
+GenWimpy: 27
+GenRoam: 77
 E
 #20108
 assistente~
@@ -135,9 +136,10 @@ azuis, ela demonstra seu lado sério.
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 2
-GenWimpy: 15
-GenRoam: 73
-GenGroup: 12
+GenWimpy: 20
+GenEquip: 1
+GenRoam: 82
+GenGroup: 16
 E
 #20109
 jovem mulher Eva~
@@ -152,8 +154,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 33
-GenRoam: 65
+GenWimpy: 34
+GenRoam: 54
 E
 #20110
 jovem mulher Sybila~
@@ -168,8 +170,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 32
-GenRoam: 53
+GenWimpy: 36
+GenRoam: 83
+GenGroup: 2
 E
 #20111
 jovem mulher Anouk~
@@ -184,8 +187,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 23
-GenRoam: 68
+GenWimpy: 26
+GenRoam: 85
+GenBrave: 1
 E
 #20112
 jovem mulher Tricia~
@@ -200,8 +204,10 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 43
-GenRoam: 85
+GenWimpy: 67
+GenLoot: 2
+GenEquip: 1
+GenRoam: 89
 E
 #20113
 jovem mulher Lorraine~
@@ -216,8 +222,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 32
-GenRoam: 75
+GenWimpy: 31
+GenRoam: 80
 E
 #20114
 jovem mulher Renee~
@@ -232,9 +238,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 30
-GenRoam: 74
-GenGroup: 3
+GenWimpy: 41
+GenLoot: 1
+GenRoam: 88
 E
 #20115
 jovem mulher Stela~
@@ -249,8 +255,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 33
-GenRoam: 72
+GenWimpy: 38
+GenRoam: 86
+GenGroup: 2
 E
 #20116
 jovem mulher dorothy~
@@ -267,9 +274,8 @@ original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 20
-GenRoam: 79
-GenGroup: 4
+GenWimpy: 32
+GenRoam: 88
 E
 #20117
 jovem mulher gabrielle~
@@ -285,9 +291,8 @@ original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 24
-GenRoam: 71
-GenGroup: 6
+GenWimpy: 37
+GenRoam: 88
 E
 #20118
 jovem mulher nancy~
@@ -302,9 +307,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 27
-GenRoam: 82
-GenGroup: 4
+GenWimpy: 28
+GenRoam: 87
+GenGroup: 1
 E
 #20119
 Spike~
@@ -320,8 +325,8 @@ algum dia alguém traga-lhe água.
 1 20 10 1d1+19 1d3+1
 50 220
 9 9 1
-GenWimpy: 10
-GenRoam: 67
+GenWimpy: 13
+GenRoam: 79
 E
 #20120
 barba ruiva~
@@ -337,6 +342,10 @@ Apesar dos tratamentos aqui, ele permanece tão insano como sempre.
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 1
+GenWimpy: 5
+GenLoot: 1
+GenRoam: 68
+GenGroup: 3
 E
 #20121
 Nero~
@@ -382,6 +391,8 @@ moscas atraídas pelo mel. Cuidado.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
+GenWimpy: 1
+GenRoam: 24
 E
 #20124
 toulan~
@@ -412,6 +423,8 @@ constantemente fala algo sobre homens que viajaram no espaço.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
+GenWimpy: 1
+GenRoam: 27
 E
 #20126
 atila huno ser hostil~
@@ -459,8 +472,8 @@ sobre os pais que nunca teve.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 3
-GenRoam: 65
+GenWimpy: 4
+GenRoam: 73
 E
 #20129
 malvada bruxa oeste~
@@ -477,6 +490,8 @@ feitiço.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
+GenWimpy: 1
+GenRoam: 29
 E
 #20130
 Tharnt demonio~
@@ -559,8 +574,9 @@ possa garantir sua presença aqui.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 3
+GenRoam: 57
+GenGroup: 1
 E
 #20135
 Hojenkis estripador~
@@ -588,6 +604,8 @@ O cervo parece estar com bastante fome, pois não para de mastigar.
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 1
+GenWimpy: 1
+GenRoam: 23
 E
 #20161
 Ogdlen anao~

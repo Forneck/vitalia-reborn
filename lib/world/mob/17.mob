@@ -10,7 +10,8 @@ com um tom amarelado,  garras sujas e afiadas.
 13 8 1 4d6+565 2d7+11
 0 16000
 9 9 1
-GenWimpy: 28
+GenWimpy: 30
+GenLoot: 5
 E
 #1701
 vibora víbora~
@@ -70,7 +71,7 @@ econômica...e também divertida!
 11 10 2 1d6+150 2d6+11
 0 11000
 9 9 1
-GenWimpy: 57
+GenWimpy: 67
 E
 #1705
 cavaleiro fantasma~
@@ -85,7 +86,8 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 49
+GenWimpy: 100
+GenLoot: 1
 E
 #1706
 guardiao guardião cripta~
@@ -133,7 +135,7 @@ Você não pode conseguir mais nada com ele.
 10 11 4 2d8+325 2d6+11
 23 9000
 9 9 1
-GenWimpy: 17
+GenWimpy: 22
 E
 #1708
 bolha lama~
@@ -161,7 +163,7 @@ adorando seu estado.
 14 7 1 1d10+475 2d8+11
 18000 18000
 6 6 1
-GenWimpy: 9
+GenWimpy: 12
 E
 #1710
 aranha verde~
@@ -175,7 +177,9 @@ dá uma luz verde.  Ela bate suas mandíbulas cristalizadas para irritá-lo.
 8 13 3 2d6+296 2d5+11
 0 13750
 9 9 2
-GenWimpy: 8
+GenWimpy: 14
+GenLoot: 4
+GenEquip: 1
 GenRoam: 89
 E
 #1711
@@ -190,8 +194,9 @@ feita de uma substância cristalina viva que brilha amarelo.
 7 14 4 1d8+285 2d4+11
 351 12250
 9 9 2
-GenWimpy: 14
-GenRoam: 89
+GenWimpy: 11
+GenLoot: 2
+GenRoam: 87
 E
 #1712
 guarda petrificado~
@@ -217,10 +222,10 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 18 3 0 3d6+625 3d6+21
 0 30000
 9 9 1
-GenWimpy: 38
-GenLoot: 11
+GenWimpy: 41
+GenLoot: 18
 GenRoam: 89
-GenGroup: 1
+GenGroup: 4
 E
 #1714
 gelatina ocre~
@@ -235,8 +240,9 @@ passado infeliz, você presume.
 16 5 1 2d6+496 2d8+12
 1576 25000
 9 9 2
-GenWimpy: 44
-GenLoot: 4
+GenWimpy: 57
+GenLoot: 11
+GenEquip: 3
 GenRoam: 89
 E
 #1715

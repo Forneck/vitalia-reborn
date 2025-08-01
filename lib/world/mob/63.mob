@@ -9,7 +9,7 @@ Ela parece recém-saída do ovo e esperta.  Suas presas ainda estão crescendo.
 3 18 7 1d12+40 1d7+0
 80 350
 9 9 1
-GenWimpy: 46
+GenWimpy: 52
 GenRoam: 88
 E
 #6302
@@ -37,7 +37,8 @@ A aranha-lobo é peluda, muito peluda.
 6 12 6 3d8+70 2d5+3
 1250 6000
 9 9 2
-GenWimpy: 26
+GenWimpy: 37
+GenLoot: 1
 E
 #6304
 orc~
@@ -65,7 +66,9 @@ Você nota um olhar vidrado nos olhos dela.
 14 7 1 1d12+172 2d8+1
 2000 18000
 9 9 2
-GenWimpy: 11
+GenWimpy: 15
+GenLoot: 22
+GenEquip: 1
 E
 #6306
 aranha zangao~
@@ -78,7 +81,7 @@ Um zangão comum.
 6 14 4 3d8+70 2d4+1
 200 1600
 9 9 0
-GenWimpy: 25
+GenWimpy: 35
 GenRoam: 88
 E
 #6307
@@ -93,8 +96,8 @@ sem uma arma mágica.
 13 9 -2 1d12+163 2d4+4
 1250 16000
 9 9 2
-GenWimpy: 14
-GenRoam: 85
+GenWimpy: 25
+GenRoam: 89
 E
 #6308
 escravo humano~
@@ -109,7 +112,7 @@ própria ou se foi seduzido você não poderá ter certeza.
 11 8 4 1d12+130 2d7+1
 1000 13500
 9 9 1
-GenWimpy: 22
+GenWimpy: 25
 GenRoam: 89
 E
 #6309
@@ -124,8 +127,8 @@ cria um tesouro mágico!
 10 1 -10 1d12+47 1d8+0
 1500 11000
 9 9 1
-GenWimpy: 10
-GenRoam: 86
+GenWimpy: 13
+GenRoam: 88
 E
 T 3009
 #6310
@@ -139,8 +142,9 @@ A aranha-pássaro estala suas poderosas mandíbulas.
 14 7 1 1d8+100 2d9+2
 1750 18000
 9 9 2
-GenWimpy: 14
-GenLoot: 1
+GenWimpy: 32
+GenLoot: 4
+GenRoam: 3
 E
 #6311
 eremita~

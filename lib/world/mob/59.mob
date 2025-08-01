@@ -10,7 +10,7 @@ sussurra algumas palavras e preces que parecem não ter sentido.
 2121730 0 0 0 67600 0 0 0 -1000 E
 80 -7 -7 4d10+1840 4d9+16
 1234 176000
-8 8 1
+9 9 1
 E
 #5901
 seguidor crente~
@@ -23,7 +23,7 @@ parece não tirar os olhos da lâmina que seu líder aponta aos céus.
 2127874 0 0 0 67600 0 0 0 -1000 E
 24 9 -3 1d50+450 15d2+14
 978 65000
-8 8 1
+9 9 1
 E
 #5902
 corcunda~
@@ -36,7 +36,7 @@ parece estar tentando falar com você.
 2121730 0 0 0 65536 0 0 0 0 E
 15 6 -6 5d20+900 1d10+6
 150 25000
-8 8 1
+9 9 1
 E
 #5903
 elfo enjoado~
@@ -62,7 +62,7 @@ ou amedrontada.  Ela está extremamente desconfortável, parece temer algo.
 2097282 0 0 0 16 0 0 0 -200 E
 12 11 5 3d3+275 3d4+6
 130 23000
-8 8 2
+9 9 2
 E
 #5905
 mendigo homem~
@@ -74,7 +74,7 @@ Ele está extremamente sujo. E seu cheiro...
 2097286 0 0 0 16 0 0 0 -750 E
 16 8 1 4d6+450 4d3+6
 2000 33000
-8 8 1
+9 9 1
 E
 #5906
 crianca apavorada~
@@ -100,7 +100,7 @@ filho, acariciando seus cabelos ensangüentados.
 2097154 0 0 0 65536 0 0 0 100 E
 18 6 -2 6d7+800 5d1+9
 90 32000
-8 8 1
+9 9 1
 E
 #5908
 rato~
@@ -112,7 +112,9 @@ Um rato comum e desagradável.
 2097220 0 0 0 0 0 0 0 0 E
 8 16 6 2d9+150 1d3+7
 0 3300
-8 8 1
+9 9 1
+GenWimpy: 2
+GenRoam: 38
 E
 #5909
 gunter~
@@ -125,7 +127,7 @@ escolhido, e possui a tarefa de selecionar o próximo escolhido.
 2158720 0 0 0 606216 0 0 0 -700 E
 41 -4 -10 5d100+2000 6d7+24
 2000 105000
-8 8 1
+9 9 1
 E
 #5910
 carrasco homem~
@@ -138,7 +140,7 @@ e move seu braço para cima e para baixo, preparando seu chicote.
 2103298 0 0 0 67600 0 0 0 -1000 E
 25 8 -1 10d8+520 3d5+12
 10000 40000
-8 8 1
+9 9 1
 E
 #5911
 homem esfarrapado~
@@ -152,7 +154,7 @@ profundas marcas tanto em seu rosto quanto em suas mãos.
 2097154 0 0 0 2064 0 0 0 -300 E
 16 5 1 5d4+210 2d6+4
 5000 24000
-8 8 1
+9 9 1
 E
 #5912
 investigador homem~
@@ -166,7 +168,10 @@ restrições em suas faculdades mentais.
 2097216 0 0 0 0 0 0 0 -300 E
 22 11 1 7d10+1400 1d6+10
 500 44000
-8 8 1
+9 9 1
+GenWimpy: 3
+GenLoot: 1
+GenRoam: 55
 E
 #5913
 seguidora~
@@ -178,7 +183,7 @@ Ela percebe que você a viu, e faz uma leve reverência com a cabeça.
 2154498 0 0 0 1656832 0 0 0 -550 E
 40 0 -5 6d12+1650 6d8+3
 800 60000
-8 8 2
+9 9 2
 E
 #5914
 morcego marrom~
@@ -191,7 +196,7 @@ diretamente para sua cabeça...
 2097314 0 0 0 65552 0 0 0 -400 E
 9 11 3 3d5+175 2d4+4
 0 8000
-8 8 1
+9 9 1
 E
 #5915
 aranha tarantula~
@@ -204,7 +209,7 @@ uma aranha, desagradável e traiçoeira aranha.
 2097282 0 0 0 65552 0 0 0 -400 E
 9 14 5 3d5+105 2d3+6
 0 2000
-8 8 1
+9 9 1
 E
 #5916
 morte cavaleiro entorpecido~
@@ -216,7 +221,7 @@ Parece ser a primeira vez que ele usa sua arma. Há uma fina linha de baba saind
 2099254 0 0 0 272 0 0 0 -999 E
 23 8 -1 8d5+700 5d5+12
 600 34000
-8 8 1
+9 9 1
 E
 #5917
 homem aventureiro~
@@ -228,7 +233,7 @@ Parece que ele estava tirando um cochilo aonde ele pensava ser seguro.
 2154514 0 0 0 65552 0 0 0 400 E
 26 0 -4 10d8+1800 4d4+22
 1500 100000
-8 8 1
+9 9 1
 E
 #5918
 corcunda humanoide~
@@ -240,7 +245,7 @@ Esta desagradável criatura parece querer jogar sangue em você.
 2097314 0 0 0 67648 0 0 0 -800 E
 27 9 0 9d11+2100 2d4+12
 0 58000
-8 8 1
+9 9 1
 E
 #5919
 seguidor~
@@ -253,7 +258,7 @@ viver.
 2097282 0 0 0 81920 0 0 0 -900 E
 25 5 -4 8d11+2000 5d3+17
 1078 63000
-8 8 1
+9 9 1
 E
 #5920
 garoto panico~
@@ -266,6 +271,6 @@ perdendo muito sangue...
 2097282 0 0 0 65536 0 0 0 100 E
 10 15 6 3d7+200 1d4+7
 10 4600
-8 8 1
+9 9 1
 E
 $

@@ -126,8 +126,8 @@ tostão?
 1 19 10 10d1+1 1d2+2
 1 0
 9 9 1
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 2
+GenRoam: 40
 E
 #5410
 padeiro~
@@ -450,7 +450,7 @@ O grande meio-orc rapidamente mede você e volta para seu dever.
 12 10 3 3d10+100 1d6+3
 1 400
 9 9 1
-GenWimpy: 8
+GenWimpy: 10
 E
 T 3013
 #5435
@@ -465,8 +465,8 @@ olhar.
 7 12 1 14d1+1 2d5+1
 1 100
 9 9 1
-GenWimpy: 3
-GenRoam: 39
+GenWimpy: 4
+GenRoam: 50
 E
 #5436
 trabalhador doca~
@@ -562,8 +562,9 @@ final.
 7 16 5 1d1+1 1d5+1
 1 10
 9 9 1
-GenWimpy: 13
-GenRoam: 69
+GenWimpy: 26
+GenLoot: 3
+GenRoam: 87
 E
 #5443
 gato rua~
@@ -576,8 +577,8 @@ Você vê um pequeno gatinho faminto.
 2 18 7 1d2+5 2d2+1
 1 0
 9 9 1
-GenWimpy: 16
-GenRoam: 84
+GenWimpy: 24
+GenRoam: 87
 E
 #5444
 urubu~
@@ -591,8 +592,8 @@ deseja é um corpo.
 2 18 7 1d3+1 1d6+1
 1 10
 9 9 1
-GenWimpy: 2
-GenRoam: 45
+GenWimpy: 3
+GenRoam: 54
 E
 #5445
 velho homem~
@@ -630,6 +631,7 @@ O que você vê diante de si é realmente um bebê de um elemental do ar.
 1 10
 9 9 1
 GenWimpy: 100
+GenRoam: 3
 E
 #5448
 lamia~
@@ -644,8 +646,8 @@ ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 56
-GenRoam: 71
+GenWimpy: 96
+GenRoam: 89
 E
 #5449
 dervixe~
@@ -658,8 +660,8 @@ Este homem parece poder usar montes e montes de restos.
 8 12 3 4d4+20 2d6+1
 1 105
 9 9 1
-GenWimpy: 90
-GenRoam: 14
+GenWimpy: 100
+GenRoam: 53
 E
 #5450
 sultao~
@@ -672,7 +674,7 @@ Você vê um grande e saudável homem em robes vermelhos sorrindo para você.
 10 5 -4 6d6+830 1d6+0
 1200 25000
 5 5 1
-GenWimpy: 2
+GenWimpy: 4
 E
 #5451
 garota harem~
@@ -713,7 +715,8 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 65
+GenWimpy: 40
+GenLoot: 6
 GenRoam: 88
 E
 #5454
@@ -729,6 +732,7 @@ quase a ponto de te matar.
 0 150
 5 5 2
 GenWimpy: 42
+GenLoot: 4
 E
 #5455
 ala alá~
@@ -808,8 +812,8 @@ Você vê um pequeno garoto correndo em volta das paredes do palácio.
 2 19 9 10d1+1 1d4+1
 1 10
 9 9 1
-GenWimpy: 10
-GenRoam: 84
+GenWimpy: 16
+GenRoam: 87
 E
 #5461
 guarda sultao~
@@ -823,8 +827,8 @@ necessidade.
 10 10 9 2d4+120 1d8+0
 150 2500
 9 9 1
-GenWimpy: 18
-GenRoam: 83
+GenWimpy: 26
+GenRoam: 88
 E
 T 3013
 #5462
@@ -851,6 +855,9 @@ Você vê um grande homem treinado para caçar e matar.
 15 0 0 4d5+251 2d8+1
 435 5000
 9 9 1
+GenWimpy: 3
+GenRoam: 54
+GenGroup: 6
 E
 T 3013
 #5464

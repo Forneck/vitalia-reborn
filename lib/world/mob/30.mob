@@ -186,12 +186,12 @@ extremamente perigoso para sua saúde.
 15 10 0 100d5+50 2d6+6
 5000 42000
 9 9 1
-GenWimpy: 1
-GenLoot: 70
+GenWimpy: 9
+GenLoot: 17
 GenEquip: 70
-GenRoam: 73
-GenGroup: 99
-GenBrave: 49
+GenRoam: 87
+GenGroup: 94
+GenBrave: 47
 GenUse: 100
 GenTrade: 100
 GenQuest: 15
@@ -639,8 +639,8 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
-GenWimpy: 31
-GenRoam: 64
+GenWimpy: 37
+GenRoam: 89
 E
 T 3013
 #3061
@@ -654,8 +654,9 @@ Que trabalho pesado ele tem.
 1 20 9 2d6+10 1d5+0
 34 100
 9 9 1
-GenWimpy: 6
-GenRoam: 72
+GenWimpy: 12
+GenLoot: 3
+GenRoam: 84
 E
 #3062
 cachorro fido~
@@ -670,8 +671,9 @@ cheios de pedaços de carne apodrecida grudadas.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 30
-GenRoam: 86
+GenWimpy: 38
+GenLoot: 2
+GenRoam: 88
 E
 T 3014
 #3063
@@ -686,6 +688,7 @@ coisa por dinheiro.
 5 15 5 2d6+60 1d6+1
 87 900
 9 9 1
+GenWimpy: 1
 E
 #3064
 bebado bêbado~
@@ -724,8 +727,8 @@ O odif é um deus pequeno que foi transformado por algum cachorro.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 3
-GenRoam: 58
+GenWimpy: 5
+GenRoam: 73
 E
 T 3014
 #3067

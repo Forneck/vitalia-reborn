@@ -104,7 +104,7 @@ de sua ajuda. Afinal, ela é paga para isso...
 15 8 -3 10d10+300 3d3+9
 1000 10020
 9 9 2
-GenWimpy: 59
+GenWimpy: 82
 E
 #11608
 marut menino belo azulada~
@@ -399,8 +399,7 @@ tudo para que nada saia errado.
 15 8 -3 10d10+300 3d3+9
 1000 10020
 9 9 1
-GenWimpy: 38
-GenLoot: 2
+GenWimpy: 48
 GenEquip: 1
 E
 #11628
@@ -475,7 +474,7 @@ convidados...
 47 3 -4 10d10+670 4d3+17
 8000 44020
 9 9 2
-GenWimpy: 5
+GenWimpy: 9
 E
 #11633
 mensageiro estranho~
@@ -622,7 +621,7 @@ acontecesse...
 60 -2 -12 10d10+870 5d4+23
 1000 84020
 9 9 1
-GenWimpy: 12
+GenWimpy: 15
 E
 #11641
 gandhava musico~
@@ -668,7 +667,7 @@ realmente exija sua interferência.
 55 0 -10 10d10+870 4d3+23
 1000 54020
 9 9 1
-GenWimpy: 34
+GenWimpy: 45
 E
 #11644
 guarda velho treinador~

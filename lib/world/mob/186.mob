@@ -28,8 +28,8 @@ Melhor matar mesmo!
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
-GenWimpy: 45
-GenRoam: 82
+GenWimpy: 58
+GenRoam: 87
 E
 #18603
 dragão bebê dragao bebe~
@@ -45,9 +45,8 @@ mesmo os dragões pequenos podem causar um grande problema.
 4 17 6 1d4+50 1d6+1
 0 1000
 9 9 1
-GenWimpy: 14
-GenLoot: 1
-GenRoam: 28
+GenWimpy: 20
+GenRoam: 64
 E
 #18604
 novato guarda monstro~
@@ -64,7 +63,9 @@ Mestre irá me arrancar a cabeça se eu não encontrar o bichinho!"
 500 800
 9 9 1
 GenWimpy: 27
-GenLoot: 5
+GenLoot: 1
+GenEquip: 1
+GenRoam: 1
 GenUse: 20
 E
 #18605
@@ -79,7 +80,7 @@ ocupado, tentando misturar um líquido a outro.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 0
-GenWimpy: 31
+GenWimpy: 34
 E
 #18606
 réptil reptil coisa inseto pavoroso nojento~
@@ -93,8 +94,8 @@ vermes imundos, pequenos, cheios de pernas e marrons não estariam aqui!
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 84
-GenRoam: 82
+GenWimpy: 99
+GenRoam: 86
 E
 #18607
 novato zumbi~
@@ -109,8 +110,10 @@ espere!!  Ele parece que está querendo atacá-lo!
 4 17 5 1d8+46 2d4+0
 300 600
 9 9 0
-GenWimpy: 78
-GenRoam: 88
+GenWimpy: 100
+GenLoot: 1
+GenRoam: 89
+GenGroup: 3
 E
 #18608
 demônio demonio diabo travesso~
@@ -125,8 +128,9 @@ dar uma boa examinada nela, a coisa dispara na direção das sombras e some.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 21
-GenRoam: 87
+GenWimpy: 32
+GenRoam: 88
+GenGroup: 2
 E
 #18609
 minotauro~
@@ -143,9 +147,9 @@ direção.
 7 15 5 3d5+85 2d4+1
 1000 3000
 9 9 1
-GenWimpy: 16
-GenRoam: 84
-GenGroup: 12
+GenWimpy: 22
+GenRoam: 88
+GenGroup: 19
 E
 #18610
 espectro fantasma~
@@ -175,8 +179,8 @@ HAHAHAHAHAHAHAHAHAHA!
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 1
-GenWimpy: 23
-GenRoam: 81
+GenWimpy: 35
+GenRoam: 87
 E
 #18612
 novato retardado ignorante~
@@ -192,8 +196,8 @@ acabar logo com a mediocridade dele.
 1 20 10 1d1+19 1d3+1
 50 220
 9 9 1
-GenWimpy: 31
-GenRoam: 86
+GenWimpy: 39
+GenRoam: 87
 E
 #18613
 novata tagarela~
@@ -208,8 +212,11 @@ ela estar aqui, ao contrário dos outros que você já viu.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 19
-GenRoam: 84
+GenWimpy: 27
+GenLoot: 4
+GenEquip: 1
+GenRoam: 86
+GenGroup: 7
 E
 #18614
 novato perdido~
@@ -225,9 +232,9 @@ não o ajuda um pouco.
 4 17 6 8d5+20 1d6+1
 250 500
 9 9 1
-GenWimpy: 17
+GenWimpy: 21
 GenLoot: 2
-GenRoam: 63
+GenRoam: 70
 E
 #18615
 novato esperto~
@@ -241,7 +248,8 @@ leu os arquivos de ajuda?
 5 15 9 10d5+20 2d3+2
 1100 1000
 9 9 1
-GenWimpy: 11
-GenRoam: 47
+GenWimpy: 25
+GenLoot: 1
+GenRoam: 87
 E
 $

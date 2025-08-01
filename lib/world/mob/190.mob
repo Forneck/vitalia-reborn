@@ -152,8 +152,6 @@ conversa.
 4500 16900
 9 9 1
 E
-T 19000
-T 19001
 #19013
 elfo cidadao~
 o cidadão elfo~
@@ -301,7 +299,6 @@ muito apressado para isso..
 6000 21000
 9 9 1
 E
-T 19003
 #19023
 sabia vermelho passarinho passaro~
 o sabiá vermelho~
@@ -430,7 +427,7 @@ as garras parecem afiados como navalhas...  Talvez seja melhor se afastar...
 22 10 1 2d5+110 2d4+7
 0 17450
 9 9 1
-GenWimpy: 1
-GenRoam: 18
+GenWimpy: 4
+GenRoam: 21
 E
 $

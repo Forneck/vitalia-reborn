@@ -37,7 +37,7 @@ Um chefe muito bravo.
 17 3 1 1d12+210 1d8+18
 0 28000
 9 9 1
-GenWimpy: 7
+GenWimpy: 13
 E
 #3103
 sentinela guarda~
@@ -94,8 +94,8 @@ Ele é muito bom em seu trabalho - completamente derretido em lágrimas.
 1 20 9 2d6+10 1d5+0
 34 100
 9 9 1
-GenWimpy: 7
-GenRoam: 51
+GenWimpy: 8
+GenRoam: 64
 E
 #3120
 cisne~
@@ -132,8 +132,8 @@ Parece que o pardal está aproveitando a vida.
 0 20 10 2d6+0 1d3+0
 0 25
 9 9 1
-GenWimpy: 4
-GenRoam: 44
+GenWimpy: 6
+GenRoam: 53
 E
 #3123
 pato~
@@ -146,7 +146,7 @@ O pato á bem gordo. Parece que ele está aproveitando a vida.
 1 20 10 2d6+5 1d4+0
 0 75
 9 9 0
-GenWimpy: 20
+GenWimpy: 23
 GenRoam: 86
 E
 #3124

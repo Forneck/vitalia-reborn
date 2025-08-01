@@ -10,6 +10,7 @@ Ele é grisalho e parece ser bastante idoso...
 20 8 2 20d30+950 2d3+10
 550 13385
 9 9 0
+GenWimpy: 4
 E
 #13102
 sombra monstro~
@@ -24,6 +25,8 @@ pois ela está lhe tocando...
 20 8 2 5d20+943 2d3+10
 0 13385
 9 9 0
+GenWimpy: 2
+GenRoam: 52
 E
 #13103
 homem serpente cobra lagarto~
@@ -147,6 +150,8 @@ estas ruas que ainda não foram infestadas pelas sombras.
 15 5 4 15d12+430 1d5+7
 325 6427
 9 9 0
+GenWimpy: 2
+GenRoam: 51
 E
 #13112
 guarda cidade sentinela torin~
@@ -405,6 +410,8 @@ alguém possa a livrar deste mal.
 21 8 1 1d1+900 2d3+10
 600 15159
 9 9 2
+GenWimpy: 3
+GenRoam: 60
 E
 #13131
 bola azul brilhante luz~

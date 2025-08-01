@@ -69,7 +69,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 2
+GenWimpy: 4
 E
 #3906
 praga negra espirito~
@@ -87,7 +87,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 5
 GenLoot: 1
 E
 #3907
@@ -107,7 +107,9 @@ BareHandAttack: 12
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
+GenWimpy: 5
+GenLoot: 1
+GenRoam: 1
 E
 #3908
 demilich esqueleto~
@@ -232,8 +234,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenRoam: 55
+GenWimpy: 8
+GenRoam: 72
 E
 #3915
 zumbi guerreiro abismo~
@@ -251,7 +253,8 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
+GenWimpy: 5
+GenRoam: 20
 E
 #3916
 demonio bael~
@@ -269,8 +272,8 @@ mãos, agora livres, vêm na direção de sua alma.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenRoam: 68
+GenWimpy: 6
+GenRoam: 84
 E
 #3917
 svern demonio~
@@ -289,8 +292,8 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
-GenRoam: 88
+GenWimpy: 5
+GenRoam: 87
 E
 #3918
 vrock demonio ave~
@@ -310,7 +313,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 16
+GenRoam: 6
 E
 #3919
 valik zumbi dragao~
@@ -401,8 +404,8 @@ BareHandAttack: 10
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenRoam: 4
+GenWimpy: 4
+GenLoot: 1
 E
 #3924
 pilar gelo~
@@ -420,8 +423,9 @@ BareHandAttack: 5
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenRoam: 6
+GenWimpy: 5
+GenLoot: 1
+GenRoam: 54
 E
 #3925
 yeti agua~
@@ -439,7 +443,8 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 88
+GenLoot: 1
+GenRoam: 89
 E
 #3926
 pseudo-hidra pseudo hidra dragao~

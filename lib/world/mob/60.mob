@@ -12,9 +12,9 @@ vive uma vida simples e pacífica.
 5 15 6 1d12+60 1d4+3
 100 1050
 9 9 1
-GenWimpy: 9
-GenLoot: 1
-GenRoam: 57
+GenWimpy: 12
+GenLoot: 2
+GenRoam: 76
 E
 #6001
 pequeno coelho~
@@ -27,8 +27,9 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 0 20 6 1d4+1 1d4+0
 0 60
 9 9 0
-GenWimpy: 52
-GenRoam: 86
+GenWimpy: 71
+GenLoot: 1
+GenRoam: 87
 E
 #6002
 urso marrom~
@@ -70,8 +71,8 @@ castanhos que olham fixamente para você, com grande interesse.
 2 19 5 2d8+8 1d6+0
 0 230
 9 9 2
-GenWimpy: 36
-GenRoam: 80
+GenWimpy: 46
+GenRoam: 81
 E
 #6005
 raposa marrom~
@@ -85,8 +86,8 @@ peluda cauda.
 2 18 6 1d4+18 1d6+0
 0 225
 9 9 0
-GenWimpy: 27
-GenRoam: 87
+GenWimpy: 40
+GenRoam: 86
 E
 #6006
 passaro grande~
@@ -113,7 +114,7 @@ pássaro, se você lhe der chance.
 5 15 5 1d12+60 2d4+3
 0 1100
 9 9 0
-GenWimpy: 8
+GenWimpy: 13
 E
 #6008
 pardal~
@@ -126,7 +127,7 @@ O pardal parece estar aproveitando bem a vida.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 37
+GenWimpy: 55
 GenRoam: 87
 E
 #6009
@@ -140,8 +141,9 @@ O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 46
-GenRoam: 70
+GenWimpy: 62
+GenLoot: 2
+GenRoam: 83
 E
 #6010
 esquilo~
@@ -170,7 +172,7 @@ prendem a sua atenção, enquanto você fica considerando se deve ou não matá-
 4 17 5 1d5+48 2d3+2
 0 650
 9 9 0
-GenWimpy: 1
+GenWimpy: 2
 E
 #6012
 esquilo cinzento~
@@ -185,8 +187,8 @@ no chão.
 2 19 8 1d12+22 1d6+0
 0 200
 9 9 0
-GenWimpy: 59
-GenRoam: 72
+GenWimpy: 66
+GenRoam: 83
 E
 #6013
 esquilinho~
@@ -202,8 +204,9 @@ pensa você.
 0 20 5 2d5+3 1d4+0
 0 40
 9 9 0
-GenWimpy: 57
-GenRoam: 82
+GenWimpy: 69
+GenLoot: 3
+GenRoam: 78
 E
 #6014
 corvo negro passaro~
@@ -218,6 +221,7 @@ comida.
 3 200
 9 9 0
 GenWimpy: 100
+GenLoot: 48
 E
 #6015
 grotesco abutre urubu~
@@ -234,7 +238,9 @@ de proteger o seu banquete.
 6 15 4 1d12+68 2d3+2
 14 1750
 9 9 0
-GenWimpy: 10
+GenWimpy: 29
+GenRoam: 5
+GenBrave: 1
 E
 #6016
 alce gamo~
@@ -249,6 +255,8 @@ certeza serão bastante expressivas dentro de alguns anos.
 4 17 4 1d12+48 1d5+3
 0 750
 9 9 1
+GenWimpy: 2
+GenLoot: 2
 E
 #6017
 peixe~
@@ -288,6 +296,6 @@ O pato é bastante gordo.   Ele parece estar aproveitando bem sua vida.
 0 75
 9 9 0
 GenWimpy: 100
-GenRoam: 82
+GenRoam: 85
 E
 $

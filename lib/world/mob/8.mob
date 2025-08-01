@@ -11,7 +11,7 @@ penetrante.
 0 4466
 9 9 1
 BareHandAttack: 8
-GenWimpy: 27
+GenWimpy: 52
 GenRoam: 89
 E
 #801
@@ -26,8 +26,9 @@ coisa que ele esperaria encontrar.
 35 0 -15 10d10+2250 3d5+18
 1300 75632
 9 9 1
-GenWimpy: 4
-GenRoam: 83
+GenWimpy: 7
+GenLoot: 1
+GenRoam: 87
 E
 #802
 cigano~
@@ -40,7 +41,7 @@ Parece estar em sua maneira de cuidar de algo...'
 23 8 -7 10d10+1600 2d2+16
 900 46544
 9 9 1
-GenWimpy: 7
+GenWimpy: 12
 GenRoam: 89
 E
 #803
@@ -55,7 +56,7 @@ desejo de matar...
 20 8 -8 10d10+1000 3d3+15
 700 38676
 9 9 1
-GenWimpy: 44
+GenWimpy: 88
 GenLoot: 1
 GenRoam: 89
 E
@@ -85,7 +86,9 @@ Observe o dente - alguma coisa parece lembrar você sobre o dente.
 30 0 -10 10d10+2250 3d6+18
 1600 69345
 9 9 1
-GenWimpy: 5
+GenWimpy: 6
+GenLoot: 5
+GenEquip: 1
 GenRoam: 89
 E
 #806

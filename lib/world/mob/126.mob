@@ -1558,8 +1558,8 @@ Int: 18
 Wis: 18
 Con: 21
 Cha: 18
-GenWimpy: 3
-GenRoam: 65
+GenWimpy: 4
+GenRoam: 78
 E
 #12667
 Jormungand serpente~
@@ -1705,7 +1705,7 @@ Str: 15
 Dex: 15
 Con: 18
 Cha: 15
-GenWimpy: 2
+GenWimpy: 3
 E
 #12674
 Ratatosk esquilo~
@@ -1722,7 +1722,7 @@ fica no topo da árvore.
 0 15000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 39
+GenWimpy: 46
 E
 #12675
 Dvalin soberano anao~
@@ -1790,8 +1790,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 3
-GenWimpy: 3
-GenRoam: 7
+GenWimpy: 4
+GenRoam: 8
 E
 #12678
 viking sueco~
@@ -1842,7 +1842,6 @@ Wis: 18
 Con: 18
 Cha: 18
 GenWimpy: 5
-GenRoam: 66
 E
 #12680
 viking islandes~
@@ -1916,8 +1915,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 4
-GenRoam: 43
+GenWimpy: 5
+GenLoot: 1
+GenRoam: 3
+GenGroup: 4
 E
 #12683
 viking islandesa~
@@ -1960,8 +1961,8 @@ ajude-as a sobreviver nessas gélidas e desérticas terras gelo.
 500 13000
 9 9 2
 BareHandAttack: 13
-GenWimpy: 15
-GenRoam: 70
+GenWimpy: 30
+GenRoam: 32
 E
 #12685
 cavalo selvagem~
@@ -2117,8 +2118,8 @@ Int: 15
 Wis: 13
 Con: 16
 Cha: 18
-GenWimpy: 9
-GenRoam: 26
+GenWimpy: 25
+GenRoam: 76
 E
 #12692
 foca~
@@ -2214,8 +2215,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 34
-GenRoam: 8
+GenWimpy: 49
+GenRoam: 73
 E
 #12697
 ave marinha~
@@ -2235,7 +2236,7 @@ Int: 10
 Wis: 10
 Con: 10
 Cha: 18
-GenWimpy: 7
+GenWimpy: 11
 E
 #12698
 berserk~
@@ -2258,8 +2259,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 5
-GenRoam: 71
+GenWimpy: 8
+GenRoam: 83
 E
 #12699
 sif esposa~

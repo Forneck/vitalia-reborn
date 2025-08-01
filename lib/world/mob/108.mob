@@ -1338,6 +1338,7 @@ Int: 18
 Wis: 10
 Con: 15
 Cha: 18
+GenWimpy: 2
 E
 #10862
 octopos~
@@ -1439,6 +1440,7 @@ Int: 6
 Wis: 4
 Con: 10
 Cha: 8
+GenWimpy: 1
 E
 #10867
 garanhao branco~

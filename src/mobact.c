@@ -1491,10 +1491,10 @@ bool mob_try_and_loot(struct char_data *ch)
                 ch->ai_data->genetics.loot_tendency = MIN(ch->ai_data->genetics.loot_tendency, 100);
                 return TRUE; /* Ação bem-sucedida, consome o turno. */
             }
-        } else {
+        //} else {
             /* Aprendizagem Negativa: A necessidade não foi satisfeita. */
-            ch->ai_data->genetics.loot_tendency -= 1;
-            ch->ai_data->genetics.loot_tendency = MAX(ch->ai_data->genetics.loot_tendency, 0);
+        //    ch->ai_data->genetics.loot_tendency -= 1;
+	//    ch->ai_data->genetics.loot_tendency = MAX(ch->ai_data->genetics.loot_tendency, 0);
         }
     }
 

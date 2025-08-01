@@ -36,6 +36,8 @@ O espectador está imundo, meio bêbado e gritando feito um louco.
 5 16 5 2d6+65 2d4+0
 100 900
 6 6 0
+GenWimpy: 3
+GenLoot: 1
 E
 #12004
 nobre homem~
@@ -199,6 +201,7 @@ que realmente querem compra-los.
 17 4 1 4d8+210 1d6+11
 4000 28000
 9 9 1
+GenWimpy: 9
 E
 #12016
 vendedor~
@@ -213,6 +216,7 @@ espectadores bons de discussão.
 8 13 3 2d4+13000 2d5+15
 500 3700
 9 9 1
+GenWimpy: 3
 E
 #12017
 cidadao~
@@ -226,7 +230,7 @@ Parece ser mais um cidadão comum, se dirigindo para o seu trabalho.
 100 1000
 9 9 1
 GenWimpy: 100
-GenRoam: 87
+GenRoam: 88
 E
 #12018
 sentinela guarda~
@@ -239,7 +243,7 @@ Você vê um defensor público forte e leal.
 11 10 2 3d6+130 1d6+5
 500 11000
 9 9 1
-GenWimpy: 1
+GenWimpy: 6
 E
 T 3013
 #12019
@@ -255,7 +259,7 @@ vai ser uma atividade saudável.
 17 4 -1 3d5+220 1d6+9
 1281 28000
 9 9 1
-GenWimpy: 17
+GenWimpy: 23
 GenRoam: 89
 E
 #12020
@@ -290,8 +294,8 @@ tiverem as menores das intenções.
 BareHandAttack: 6
 Str: 18
 StrAdd: 90
-GenWimpy: 17
-GenLoot: 2
+GenWimpy: 18
+GenLoot: 49
 E
 T 3013
 #12022
@@ -335,6 +339,7 @@ Uma bola verde de lodo escorrendo atraves das paredes.
 BareHandAttack: 9
 Int: 3
 GenWimpy: 100
+GenLoot: 2
 GenRoam: 89
 E
 #12025
@@ -515,7 +520,9 @@ Suas atitudes são muito sádicas e ele claramente adora aquilo que faz.
 20 1 0 2d6+260 2d2+14
 1000 40000
 9 9 1
-GenWimpy: 3
+GenWimpy: 8
+GenLoot: 11
+GenEquip: 1
 E
 #12036
 padeiro~

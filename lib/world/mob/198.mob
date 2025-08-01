@@ -26,8 +26,8 @@ você com um olhar indiferente..
 40 1 -30 15d6+600 6d6+21
 3500 100000
 9 9 1
-GenWimpy: 3
-GenRoam: 34
+GenWimpy: 6
+GenRoam: 31
 E
 #19802
 fada labirinto~
@@ -149,8 +149,10 @@ branco?'.
 60 5 -10 15d6+500 5d6+20
 5000 900000
 9 9 2
-GenWimpy: 15
-GenRoam: 55
+GenWimpy: 10
+GenLoot: 5
+GenRoam: 86
+GenGroup: 1
 E
 #19810
 amarelo demonio~
@@ -332,7 +334,7 @@ num piscar de olhos em outra posição.  É notoriamente um fantasma.
 70 -10 -30 600d1+250 2d8+25
 10000 200000
 9 9 1
-GenWimpy: 9
-GenRoam: 80
+GenWimpy: 12
+GenRoam: 89
 E
 $
