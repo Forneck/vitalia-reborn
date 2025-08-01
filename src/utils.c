@@ -3892,3 +3892,58 @@ char *right_trim_whitespace(const char *str)
 
     return result;
 }
+
+/** Function to get mob skill level based on level and skill type.
+ * Mobs don't have saved skills like players, so we calculate their skill
+ * based on their level to ensure they can use resource gathering commands.
+ * @param ch The mob character.
+ * @param skill_num The skill number to get level for.
+ * @return The calculated skill level for the mob. */
+int get_mob_skill(struct char_data *ch, int skill_num)
+{
+    if (!IS_MOB(ch))
+        return 0;
+
+    /* Base skill level equals mob level, ensuring reasonable success rates */
+    int base_skill = GET_LEVEL(ch);
+
+    /* Apply some variation based on skill type and mob genetics if available */
+    if (ch->ai_data) {
+        switch (skill_num) {
+            case SKILL_MINE:
+                /* Mining benefits from brave mobs (physical labor) */
+                if (ch->ai_data->genetics.brave_prevalence > 50)
+                    base_skill += 10;
+                if (ch->ai_data->genetics.loot_tendency > 70)
+                    base_skill += 5;
+                break;
+            case SKILL_FISHING:
+                /* Fishing benefits from patient, wise mobs */
+                if (ch->ai_data->genetics.wimpy_tendency < 30) /* Patient mobs */
+                    base_skill += 10;
+                if (ch->ai_data->genetics.use_tendency > 50)
+                    base_skill += 5;
+                break;
+            case SKILL_FORAGE:
+                /* Foraging benefits from wise, roaming mobs */
+                if (ch->ai_data->genetics.roam_tendency > 50)
+                    base_skill += 10;
+                if (ch->ai_data->genetics.use_tendency > 50)
+                    base_skill += 5;
+                break;
+            case SKILL_EAVESDROP:
+                /* Eavesdropping benefits from intelligent, social mobs */
+                if (ch->ai_data->genetics.trade_tendency > 50)
+                    base_skill += 10;
+                if (ch->ai_data->genetics.quest_tendency > 50)
+                    base_skill += 5;
+                break;
+            default:
+                /* For other skills, use base level */
+                break;
+        }
+    }
+
+    /* Cap skill at reasonable limits */
+    return MIN(base_skill, 95);
+}

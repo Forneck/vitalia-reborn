@@ -60,6 +60,68 @@ bool mob_try_sacrifice(struct char_data *ch, struct obj_data *corpse);
 bool mob_try_junk(struct char_data *ch, struct obj_data *obj);
 bool mob_try_drop(struct char_data *ch, struct obj_data *obj);
 
+/** Function to handle mob leveling when they gain enough experience.
+ * Mobs automatically distribute improvements to stats and abilities
+ * since they don't have practice points like players.
+ * @param ch The mob character to potentially level up. */
+void check_mob_level_up(struct char_data *ch)
+{
+    if (!IS_MOB(ch) || !ch->ai_data)
+        return;
+
+    /* Calculate experience needed for next level (simplified formula) */
+    int exp_needed = GET_LEVEL(ch) * 1000;
+
+    if (GET_EXP(ch) >= exp_needed && GET_LEVEL(ch) < LVL_IMMORT - 1) {
+        GET_LEVEL(ch)++;
+        GET_EXP(ch) -= exp_needed;
+
+        /* Automatically improve stats based on genetics tendencies */
+        if (ch->ai_data->genetics.brave_prevalence > 50) {
+            GET_STR(ch) = MIN(GET_STR(ch) + 1, 25);
+        }
+        if (ch->ai_data->genetics.quest_tendency > 50) {
+            GET_INT(ch) = MIN(GET_INT(ch) + 1, 25);
+        }
+        if (ch->ai_data->genetics.use_tendency > 50) {
+            GET_WIS(ch) = MIN(GET_WIS(ch) + 1, 25);
+        }
+        if (ch->ai_data->genetics.roam_tendency > 50) {
+            GET_DEX(ch) = MIN(GET_DEX(ch) + 1, 25);
+        }
+        if (ch->ai_data->genetics.equip_tendency > 50) {
+            GET_CON(ch) = MIN(GET_CON(ch) + 1, 25);
+        }
+        if (ch->ai_data->genetics.trade_tendency > 50) {
+            GET_CHA(ch) = MIN(GET_CHA(ch) + 1, 25);
+        }
+
+        /* Improve hit points based on constitution */
+        int hp_gain = rand_number(1, 10) + con_app[GET_CON(ch)].hitp;
+        GET_MAX_HIT(ch) += MAX(hp_gain, 1);
+        GET_HIT(ch) = GET_MAX_HIT(ch); /* Full heal on level up */
+
+        /* Improve mana for spellcasting mobs */
+        if (GET_CLASS(ch) == CLASS_MAGIC_USER || GET_CLASS(ch) == CLASS_CLERIC) {
+            int mana_gain = rand_number(1, 8) + int_app[GET_INT(ch)].learn;
+            GET_MAX_MANA(ch) += MAX(mana_gain, 1);
+            GET_MANA(ch) = GET_MAX_MANA(ch);
+        }
+
+        /* Skills automatically improve with level - handled in get_mob_skill() */
+
+        /* Message for nearby players to see the mob improving */
+        if (world[IN_ROOM(ch)].people) {
+            struct char_data *viewer;
+            for (viewer = world[IN_ROOM(ch)].people; viewer; viewer = viewer->next_in_room) {
+                if (!IS_MOB(viewer) && viewer != ch) {
+                    act("$n parece ter ficado mais experiente!", TRUE, ch, 0, viewer, TO_VICT);
+                }
+            }
+        }
+    }
+}
+
 void mobile_activity(void)
 {
     struct char_data *ch, *next_ch, *vict;
@@ -86,6 +148,9 @@ void mobile_activity(void)
 
         if (FIGHTING(ch) || !AWAKE(ch))
             continue;
+
+        /* Check if mob can level up from gained experience */
+        check_mob_level_up(ch);
 
         if (ch->ai_data && ch->ai_data->duty_frustration_timer > 0) {
             ch->ai_data->duty_frustration_timer--;

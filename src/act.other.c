@@ -1274,6 +1274,34 @@ ACMD(do_mine)
         return;
     }
 
+    // Check for pickaxe requirement
+    if (!IS_MOB(ch)) {   // Only check equipment for players, mobs are assumed to have tools
+        struct obj_data *pickaxe = NULL;
+        int i;
+
+        // Check for pickaxe in inventory or equipment
+        for (i = 0; i < NUM_WEARS; i++) {
+            if (GET_EQ(ch, i) && (GET_OBJ_VNUM(GET_EQ(ch, i)) == 10711 || GET_OBJ_VNUM(GET_EQ(ch, i)) == 6514)) {
+                pickaxe = GET_EQ(ch, i);
+                break;
+            }
+        }
+
+        if (!pickaxe) {
+            for (obj = ch->carrying; obj; obj = obj->next_content) {
+                if (GET_OBJ_VNUM(obj) == 10711 || GET_OBJ_VNUM(obj) == 6514) {
+                    pickaxe = obj;
+                    break;
+                }
+            }
+        }
+
+        if (!pickaxe) {
+            send_to_char(ch, "Você precisa de uma picareta para minerar.\r\n");
+            return;
+        }
+    }
+
     // Check if location allows mining (could be expanded with room flags)
     if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL)) {
         send_to_char(ch, "Este lugar é muito pacífico para mineração.\r\n");
@@ -1347,6 +1375,34 @@ ACMD(do_fishing)
     if (GET_POS(ch) < POS_SITTING) {
         send_to_char(ch, "Você precisa estar pelo menos sentado para pescar.\r\n");
         return;
+    }
+
+    // Check for fishing rod/harpoon requirement
+    if (!IS_MOB(ch)) {   // Only check equipment for players, mobs are assumed to have tools
+        struct obj_data *fishing_tool = NULL;
+        int i;
+
+        // Check for fishing harpoon in inventory or equipment
+        for (i = 0; i < NUM_WEARS; i++) {
+            if (GET_EQ(ch, i) && GET_OBJ_VNUM(GET_EQ(ch, i)) == 4458) {
+                fishing_tool = GET_EQ(ch, i);
+                break;
+            }
+        }
+
+        if (!fishing_tool) {
+            for (obj = ch->carrying; obj; obj = obj->next_content) {
+                if (GET_OBJ_VNUM(obj) == 4458) {
+                    fishing_tool = obj;
+                    break;
+                }
+            }
+        }
+
+        if (!fishing_tool) {
+            send_to_char(ch, "Você precisa de uma vara de pescar ou arpão para pescar.\r\n");
+            return;
+        }
     }
 
     // Check if there's water here (could be expanded with sector types)
@@ -1510,27 +1566,92 @@ ACMD(do_eavesdrop)
     if (percent <= prob) {
         // Look for NPCs with information or players talking
         bool found_info = FALSE;
+        int dir;
 
+        // First, check current room
         for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
             if (vict == ch || GET_POS(vict) < POS_RESTING)
                 continue;
 
             if (IS_NPC(vict) && rand_number(1, 100) <= 30 + (skill_num / 4)) {
-                // NPC might share some information
-                sprintf(buf, "Você escuta %s murmurando algo sobre '%s'.\r\n", GET_NAME(vict),
-                        (rand_number(1, 4) == 1)   ? "um tesouro escondido"
-                        : (rand_number(1, 3) == 1) ? "perigos próximos"
-                        : (rand_number(1, 2) == 1) ? "uma quest importante"
-                                                   : "informações valiosas");
+                // Enhanced NPC information based on skill level
+                int info_quality = skill_num + rand_number(-10, 10);
+
+                if (info_quality >= 80) {
+                    sprintf(buf, "Você escuta %s sussurrando sobre 'uma entrada secreta ao norte da fonte mágica'.\r\n",
+                            GET_NAME(vict));
+                } else if (info_quality >= 60) {
+                    sprintf(buf, "Você escuta %s falando sobre 'guardas que mudam de posto na terceira vigília'.\r\n",
+                            GET_NAME(vict));
+                } else if (info_quality >= 40) {
+                    sprintf(buf, "Você escuta %s mencionando '%s'.\r\n", GET_NAME(vict),
+                            (rand_number(1, 4) == 1)   ? "um baú escondido na floresta"
+                            : (rand_number(1, 3) == 1) ? "monstros perigosos nas cavernas"
+                            : (rand_number(1, 2) == 1) ? "um comerciante que paga bem por gemas"
+                                                       : "rumores sobre uma quest lucrativa");
+                } else {
+                    sprintf(buf, "Você escuta %s murmurando algo sobre '%s'.\r\n", GET_NAME(vict),
+                            (rand_number(1, 4) == 1)   ? "um tesouro escondido"
+                            : (rand_number(1, 3) == 1) ? "perigos próximos"
+                            : (rand_number(1, 2) == 1) ? "uma quest importante"
+                                                       : "informações valiosas");
+                }
+
                 send_to_char(ch, "%s", buf);
                 found_info = TRUE;
 
-                // Small chance of getting actual useful info (could be expanded)
-                if (rand_number(1, 100) <= 10) {
-                    send_to_char(ch, "Você consegue algumas informações valiosas!\r\n");
-                    gain_exp(ch, rand_number(10, 25));
+                // Better chance of useful info with higher skill
+                if (rand_number(1, 100) <= (skill_num / 5)) {
+                    send_to_char(ch, "Você consegue informações muito úteis!\r\n");
+                    gain_exp(ch, rand_number(15, 30));
                 }
                 break;
+            }
+
+            // Overhear player conversations
+            if (!IS_NPC(vict) && vict->desc && rand_number(1, 100) <= 20 + (skill_num / 6)) {
+                send_to_char(ch, "Você escuta %s sussurrando algo importante.\r\n", GET_NAME(vict));
+                found_info = TRUE;
+            }
+        }
+
+        // High skill allows eavesdropping on adjacent rooms
+        if (!found_info && skill_num >= 50) {
+            for (dir = 0; dir < NUM_OF_DIRS; dir++) {
+                if (EXIT(ch, dir) && EXIT(ch, dir)->to_room != NOWHERE) {
+                    room_rnum target_room = EXIT(ch, dir)->to_room;
+
+                    for (vict = world[target_room].people; vict; vict = vict->next_in_room) {
+                        if (GET_POS(vict) < POS_RESTING)
+                            continue;
+
+                        if (rand_number(1, 100) <= 15 + (skill_num / 8)) {
+                            sprintf(buf, "Você escuta vozes vindas do %s...\r\n",
+                                    (dir == NORTH)       ? "norte"
+                                    : (dir == SOUTH)     ? "sul"
+                                    : (dir == EAST)      ? "leste"
+                                    : (dir == WEST)      ? "oeste"
+                                    : (dir == UP)        ? "andar de cima"
+                                    : (dir == DOWN)      ? "andar de baixo"
+                                    : (dir == NORTHWEST) ? "noroeste"
+                                    : (dir == NORTHEAST) ? "nordeste"
+                                    : (dir == SOUTHWEST) ? "sudoeste"
+                                                         : "sudeste");
+                            send_to_char(ch, "%s", buf);
+
+                            if (IS_NPC(vict)) {
+                                send_to_char(ch, "Alguém está falando sobre atividades suspeitas.\r\n");
+                            } else {
+                                send_to_char(ch, "Você escuta pessoas conversando baixinho.\r\n");
+                            }
+                            found_info = TRUE;
+                            break;
+                        }
+                    }
+
+                    if (found_info)
+                        break;
+                }
             }
         }
 

@@ -249,7 +249,7 @@ int load_char(const char *name, struct char_data *ch)
         /* Character initializations. Necessary to keep some things straight. */
         ch->affected = NULL;
         for (i = 1; i <= MAX_SKILLS; i++)
-            GET_SKILL(ch, i) = 0;
+            SET_SKILL(ch, i, 0);
         for (i = 1; i <= MAX_SKILLS; i++)
             ch->player_specials->saved.retained_skills[i] = 0;
         GET_SEX(ch) = PFDEF_SEX;
@@ -579,7 +579,7 @@ int load_char(const char *name, struct char_data *ch)
     /* initialization for imms */
     if (GET_LEVEL(ch) >= LVL_IMMORT) {
         for (i = 1; i <= MAX_SKILLS; i++)
-            GET_SKILL(ch, i) = 100;
+            SET_SKILL(ch, i, 100);
         GET_COND(ch, HUNGER) = -1;
         GET_COND(ch, THIRST) = -1;
         GET_COND(ch, DRUNK) = -1;
@@ -1066,7 +1066,7 @@ static void load_skills(FILE *fl, struct char_data *ch)
         get_line(fl, line);
         sscanf(line, "%d %d", &num, &num2);
         if (num != 0)
-            GET_SKILL(ch, num) = num2;
+            SET_SKILL(ch, num, num2);
     } while (num != 0);
 }
 
