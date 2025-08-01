@@ -808,6 +808,40 @@ void mobile_activity(void)
             }
         }
 
+        /* Evil mobs (alignment -350) try to poison drink containers */
+        if (GET_ALIGNMENT(ch) <= -350 && rand_number(1, 100) <= 10) {
+            struct char_data *victim;
+            struct obj_data *container;
+
+            /* Look for potential victims in the room */
+            for (victim = world[IN_ROOM(ch)].people; victim; victim = victim->next_in_room) {
+                if (victim == ch || IS_NPC(victim))
+                    continue;
+
+                /* Look for drink containers in victim's inventory */
+                for (container = victim->carrying; container; container = container->next_content) {
+                    if (GET_OBJ_TYPE(container) == ITEM_DRINKCON && GET_OBJ_VAL(container, 1) > 0 && /* Has liquid */
+                        GET_OBJ_VAL(container, 3) == 0) { /* Not already poisoned */
+
+                        /* 50% chance to successfully poison if evil enough */
+                        if (rand_number(1, 100) <= 50) {
+                            GET_OBJ_VAL(container, 3) = 1; /* Poison it */
+
+                            /* Subtle message - victim might not notice */
+                            if (rand_number(1, 100) <= 20) {
+                                act("$n parece sussurrar algo enquanto se aproxima de você.", FALSE, ch, 0, victim,
+                                    TO_VICT);
+                            }
+
+                            /* Observer message */
+                            act("$n se aproxima discretamente de $N por um momento.", FALSE, ch, 0, victim, TO_NOTVICT);
+                            return; /* Only poison one container per round */
+                        }
+                    }
+                }
+            }
+        }
+
         /* Add new mobile actions here */
 
     } /* end for() */

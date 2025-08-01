@@ -3415,6 +3415,26 @@ Exemplo:
 
 Veja tambem: MAGIA POISON
 #1
+TAINT
+
+   Somente Ladroes.
+
+   Uso: taint <alvo> <recipiente>
+
+   Com essa habilidade ladroes poderao contaminar recipientes de bebida de 
+outros personagens utilizando veneno de seus proprios recipientes 
+envenenados. O ladrao deve ter em seu inventario um recipiente com liquido
+envenenado para usar como fonte do veneno.
+
+   O sucesso da habilidade depende do nivel de pericia do ladrao. Se o
+ladrao falhar na tentativa, sera descoberto pela vitima e todos os presentes
+serao alertados sobre a tentativa de envenenamento.
+
+Exemplo:
+  > taint maria cantil
+
+Veja tambem: ENVENOM POISON
+#1
 EQUIPMENT
 
 Uso: equipment
@@ -4428,6 +4448,7 @@ ajuda para uma habilidade, digite HELP (nome da habilidade).
    SNEAK         - Andar silenciosamente                    [Lad            ]
    SPY           - Espiar                                   [Lad            ]
    STEAL         - Roubar                                   [Lad            ]
+   TAINT         - Contaminar fluidos                       [Lad            ]
    TRACK         - Rastrear                                 [Lad Gue        ]
    ADAGIO        - Torna o corpo mais forte                 [Brd            ]
    ALLEGRO       - Torna o corpo mais hagil                 [Brd            ]

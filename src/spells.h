@@ -212,6 +212,7 @@
 #define SKILL_FISHING 254
 #define SKILL_FORAGE 255
 #define SKILL_EAVESDROP 256
+#define SKILL_TAINT_FLUID 257 /* Thief skill to poison liquids    */
 
 /* New skills may be added here up to MAX_SKILLS (297) */
 

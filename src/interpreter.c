@@ -331,6 +331,7 @@ cpp_extern const struct command_info cmd_info[] = {
 
     {"tell", "t", POS_DEAD, do_tell, 0, 0, CMD_NOARG},
     {"take", "ta", POS_RESTING, do_get, 0, 0, CMD_TWOARG},
+    {"taint", "taint", POS_STANDING, do_cast, 1, SKILL_TAINT_FLUID, CMD_TWOARG},
     {"taste", "tas", POS_RESTING, do_eat, 0, SCMD_TASTE, CMD_ONEARG},
     {"teleport", "tele", POS_DEAD, do_teleport, LVL_BUILDER, 0, CMD_TWOARG},
     {"tedit", "tedit", POS_DEAD, do_tedit, LVL_GOD, 0, CMD_NOARG}, /* XXX: Oasisify */
