@@ -867,6 +867,143 @@ const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *
                 while (*pCopyFrom != '\0' && i < MAX_OUTPUT_BUFFER)
                     Result[i++] = *pCopyFrom++;
             }
+        } else if (apData[j] == '@') {
+            const char *pCopyFrom = NULL;
+
+            switch (apData[++j]) {
+                case '@': /* Two @ in a row will display an actual @ */
+                    pCopyFrom = "@";
+                    break;
+                case '_':
+                    pCopyFrom = "\x1B[4m"; /* Underline... if supported */
+                    break;
+                case '+':
+                    pCopyFrom = "\x1B[1m"; /* Bold... if supported */
+                    break;
+                case '-':
+                    pCopyFrom = "\x1B[5m"; /* Blinking... if supported */
+                    break;
+                case '=':
+                    pCopyFrom = "\x1B[7m"; /* Reverse... if supported */
+                    break;
+                case '*':
+                    pCopyFrom = "@"; /* The At Symbol... */
+                    break;
+                /* 1,2,3 to be used a MUD's base colour palette. */
+                case '1':
+                    pCopyFrom = ColourRGB(apDescriptor, RGBone);
+                    break;
+                case '2':
+                    pCopyFrom = ColourRGB(apDescriptor, RGBtwo);
+                    break;
+                case '3':
+                    pCopyFrom = ColourRGB(apDescriptor, RGBthree);
+                    break;
+                case 'n':
+                    /* Always return empty string for ASCII clients - temporary fix with debug */
+                    pCopyFrom = "[DEBUG_N]";
+                    break;
+                case 'd': /* dark grey / black */
+                    pCopyFrom = ColourRGB(apDescriptor, "F000");
+                    break;
+                case 'D': /* light grey */
+                    pCopyFrom = ColourRGB(apDescriptor, "F111");
+                    break;
+                case 'a': /* dark azure */
+                    pCopyFrom = ColourRGB(apDescriptor, "F021");
+                    break;
+                case 'A': /* light Azure */
+                    pCopyFrom = ColourRGB(apDescriptor, "F053");
+                    break;
+                case 'r': /* dark red */
+                    pCopyFrom = ColourRGB(apDescriptor, "F200");
+                    break;
+                case 'R': /* light red */
+                    pCopyFrom = ColourRGB(apDescriptor, "F500");
+                    break;
+                case 'g': /* dark green */
+                    pCopyFrom = "[DEBUG_G]";
+                    break;
+                case 'G': /* light green */
+                    pCopyFrom = ColourRGB(apDescriptor, "F050");
+                    break;
+                case 'y': /* dark yellow */
+                    pCopyFrom = ColourRGB(apDescriptor, "F330");
+                    break;
+                case 'Y': /* light yellow */
+                    pCopyFrom = ColourRGB(apDescriptor, "F550");
+                    break;
+                case 'b': /* dark blue */
+                    pCopyFrom = ColourRGB(apDescriptor, "F012");
+                    break;
+                case 'B': /* light blue */
+                    pCopyFrom = ColourRGB(apDescriptor, "F025");
+                    break;
+                case 'm': /* dark magenta */
+                    pCopyFrom = ColourRGB(apDescriptor, "F202");
+                    break;
+                case 'M': /* light magenta */
+                    pCopyFrom = ColourRGB(apDescriptor, "F505");
+                    break;
+                case 'c': /* dark cyan */
+                    pCopyFrom = ColourRGB(apDescriptor, "F022");
+                    break;
+                case 'C': /* light cyan */
+                    pCopyFrom = ColourRGB(apDescriptor, "F055");
+                    break;
+                case 'w': /* dark white */
+                    pCopyFrom = ColourRGB(apDescriptor, "F333");
+                    break;
+                case 'W': /* light white */
+                    pCopyFrom = ColourRGB(apDescriptor, "F555");
+                    break;
+                case 'o': /* dark orange */
+                    pCopyFrom = ColourRGB(apDescriptor, "F520");
+                    break;
+                case 'O': /* light orange */
+                    pCopyFrom = ColourRGB(apDescriptor, "F530");
+                    break;
+                case 'p': /* dark pink */
+                    pCopyFrom = ColourRGB(apDescriptor, "F301");
+                    break;
+                case 'P': /* light pink */
+                    pCopyFrom = ColourRGB(apDescriptor, "F501");
+                    break;
+                case '(': /* MXP link */
+                    if (!pProtocol->bBlockMXP && pProtocol->pVariables[eMSDP_MXP]->ValueInt)
+                        pCopyFrom = LinkStart;
+                    break;
+                case ')': /* MXP link */
+                    if (!pProtocol->bBlockMXP && pProtocol->pVariables[eMSDP_MXP]->ValueInt)
+                        pCopyFrom = LinkStop;
+                    pProtocol->bBlockMXP = false;
+                    break;
+                case '<':
+                    if (!pProtocol->bBlockMXP && pProtocol->pVariables[eMSDP_MXP]->ValueInt) {
+                        pCopyFrom = MXPStart;
+                        bUseMXP = true;
+                    } else /* No MXP support, so just strip it out */
+                    {
+                        while (apData[j] != '\0' && apData[j] != '>')
+                            ++j;
+                    }
+                    pProtocol->bBlockMXP = false;
+                    break;
+                case '!': /* Used for in-band MSP sound triggers */
+                    pCopyFrom = MSP;
+                    break;
+                case '\0':
+                    bTerminate = true;
+                    break;
+                default:
+                    break;
+            }
+
+            /* Copy the colour code, if any. */
+            if (pCopyFrom != NULL) {
+                while (*pCopyFrom != '\0' && i < MAX_OUTPUT_BUFFER)
+                    Result[i++] = *pCopyFrom++;
+            }
         } else if (bUseMXP && apData[j] == '>') {
             const char *pCopyFrom = MXPStop;
             while (*pCopyFrom != '\0' && i < MAX_OUTPUT_BUFFER)
