@@ -27,8 +27,8 @@ faraó.
 25 3 -3 2d10+200 2d3+12
 0 15000
 9 9 1
-GenWimpy: 18
-GenRoam: 84
+GenWimpy: 22
+GenRoam: 88
 E
 #8103
 esposa farao bela jovem~
@@ -43,7 +43,7 @@ nota um estranho brilho em seus olhos...
 20 5 -5 2d20+100 1d2+13
 5000 10000
 9 9 2
-GenWimpy: 2
+GenWimpy: 4
 E
 #8104
 escravo~
@@ -498,8 +498,8 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 5 15 0 3d4+400 1d2+3
 0 100
 9 9 1
-GenWimpy: 7
-GenRoam: 73
+GenWimpy: 5
+GenRoam: 74
 E
 #8137
 rato~
@@ -582,9 +582,9 @@ Você mal o vê diante da escuridão.
 30 5 0 3d3+600 1d2+2
 500 15000
 9 9 1
-GenWimpy: 8
-GenRoam: 88
-GenGroup: 1
+GenWimpy: 7
+GenRoam: 89
+GenGroup: 2
 E
 #8143
 cordoniz~
@@ -601,7 +601,7 @@ sua busca por comida.
 0 500
 9 9 1
 GenWimpy: 24
-GenRoam: 76
+GenRoam: 73
 E
 #8144
 explorador homem~
@@ -631,7 +631,7 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 27
+GenWimpy: 33
 GenRoam: 89
 E
 #8146
@@ -717,9 +717,8 @@ que deve ser sua boca.
 30 10 0 2d5+1000 2d2+14
 0 21000
 9 9 2
-GenWimpy: 6
-GenRoam: 85
-GenGroup: 1
+GenWimpy: 9
+GenRoam: 87
 E
 #8152
 soldado egipcio~

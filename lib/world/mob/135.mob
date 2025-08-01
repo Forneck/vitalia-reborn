@@ -25,8 +25,9 @@ uma possível presa.
 16 4 3 1d1+600 6d1+16
 275 30000
 9 9 2
-GenWimpy: 9
-GenRoam: 83
+GenWimpy: 11
+GenLoot: 1
+GenRoam: 87
 E
 #13502
 fada~
@@ -53,7 +54,7 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 19
+GenWimpy: 21
 GenRoam: 88
 E
 #13504
@@ -67,7 +68,7 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 20
+GenWimpy: 21
 GenLoot: 2
 GenRoam: 88
 E
@@ -123,7 +124,8 @@ falta de rugas em seu rosto.
 45 -2 1 1d1+1400 9d1+22
 425 100000
 9 9 1
-GenWimpy: 1
+GenWimpy: 8
+GenRoam: 9
 E
 #13509
 druidesa ancia~
@@ -150,8 +152,8 @@ você, parecendo procurar algo, mas logo volta a comer a grama.
 12 8 5 1d1+300 5d1+12
 0 12105
 9 9 2
-GenWimpy: 23
-GenRoam: 86
+GenWimpy: 24
+GenRoam: 87
 E
 #13511
 cervo~
@@ -194,7 +196,7 @@ Ele é simplesmente adorável, você queria ter um igual a esse!
 8 12 6 1d1+150 4d1+8
 0 10333
 9 9 1
-GenWimpy: 29
+GenWimpy: 31
 GenRoam: 89
 E
 #13514
@@ -208,8 +210,8 @@ Olhando bem você percebe que isso NÃO é uma cobra!
 9 11 6 1d1+175 4d1+9
 0 11371
 9 9 2
-GenWimpy: 20
-GenRoam: 86
+GenWimpy: 26
+GenRoam: 88
 E
 #13515
 druida~
@@ -253,7 +255,7 @@ Rã, sabe?  Apenas uma rã.
 8 12 6 1d1+150 4d1+8
 0 1333
 9 9 0
-GenWimpy: 26
-GenRoam: 87
+GenWimpy: 27
+GenRoam: 88
 E
 $

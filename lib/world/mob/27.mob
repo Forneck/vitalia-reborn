@@ -106,8 +106,8 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 3
-GenRoam: 54
+GenWimpy: 5
+GenRoam: 69
 E
 #2706
 nobre~
@@ -335,10 +335,10 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
+GenWimpy: 7
 GenLoot: 4
-GenRoam: 49
-GenGroup: 13
+GenRoam: 61
+GenGroup: 12
 E
 #2721
 borboleta~

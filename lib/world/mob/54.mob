@@ -577,7 +577,7 @@ Você vê um pequeno gatinho faminto.
 2 18 7 1d2+5 2d2+1
 1 0
 9 9 1
-GenWimpy: 24
+GenWimpy: 25
 GenRoam: 87
 E
 #5444
@@ -631,7 +631,6 @@ O que você vê diante de si é realmente um bebê de um elemental do ar.
 1 10
 9 9 1
 GenWimpy: 100
-GenRoam: 3
 E
 #5448
 lamia~
@@ -646,8 +645,8 @@ ambiciosamente.
 12 12 3 1d10+120 2d5+1
 1500 10500
 9 9 2
-GenWimpy: 96
-GenRoam: 89
+GenWimpy: 100
+GenRoam: 86
 E
 #5449
 dervixe~
@@ -661,7 +660,7 @@ Este homem parece poder usar montes e montes de restos.
 1 105
 9 9 1
 GenWimpy: 100
-GenRoam: 53
+GenRoam: 47
 E
 #5450
 sultao~
@@ -715,8 +714,8 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 40
-GenLoot: 6
+GenWimpy: 58
+GenLoot: 7
 GenRoam: 88
 E
 #5454
@@ -731,7 +730,7 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
-GenWimpy: 42
+GenWimpy: 47
 GenLoot: 4
 E
 #5455

@@ -12,7 +12,7 @@ venenosa desta cobra derrubou muitos faraós poderosos.
 9 9 0
 GenWimpy: 100
 GenLoot: 1
-GenRoam: 77
+GenRoam: 79
 E
 T 3008
 #5301
@@ -51,7 +51,7 @@ GenWimpy: 100
 GenLoot: 7
 GenEquip: 1
 GenRoam: 89
-GenGroup: 5
+GenGroup: 3
 E
 #5303
 guardiao piramide~
@@ -82,7 +82,7 @@ O ladrão esbarra em você, e em seguida volta a se esconder na escuridão.
 10 10 5 10d10+100 2d6+3
 500 9000
 9 9 1
-GenWimpy: 97
+GenWimpy: 100
 GenLoot: 8
 GenEquip: 4
 GenRoam: 89
@@ -135,7 +135,7 @@ etéreo espírito de um morto.
 12 8 4 12d12+120 1d6+6
 750 15000
 9 9 0
-GenWimpy: 99
+GenWimpy: 100
 GenLoot: 22
 GenEquip: 4
 GenRoam: 89
@@ -216,10 +216,10 @@ dos seus primos mais velhos.
 15 0 -23 15d15+650 4d10+25
 7500 21000
 9 9 2
-GenWimpy: 23
-GenLoot: 3
+GenWimpy: 28
+GenLoot: 6
 GenEquip: 1
-GenRoam: 89
+GenRoam: 88
 E
 #5313
 ginoesfinge esfinge~

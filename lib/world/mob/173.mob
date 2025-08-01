@@ -29,7 +29,7 @@ cheirosos, seu olhar e gestos aparentam pressa.
 500 15246
 9 9 1
 GenWimpy: 4
-GenRoam: 88
+GenRoam: 89
 E
 #17303
 cavaleiro nobre~
@@ -43,8 +43,8 @@ carrega uma grande lança.
 70 2 -19 12d12+1200 14d14+15
 10000 65030
 9 9 1
-GenWimpy: 7
-GenRoam: 61
+GenWimpy: 10
+GenRoam: 69
 E
 T 3013
 #17304
@@ -328,7 +328,7 @@ vestido e tem uma coroa de flores enfeitando seus cabelos.
 30 5 -2 10d10+360 4d6+8
 3000 10030
 9 9 2
-GenWimpy: 20
+GenWimpy: 21
 GenRoam: 89
 E
 #17322
@@ -374,9 +374,9 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 10
+GenWimpy: 7
 GenRoam: 53
-GenGroup: 5
+GenGroup: 4
 E
 #17325
 bufao dagonet bobo~
@@ -460,7 +460,7 @@ nele.
 25 5 0 5d3+400 6d7+7
 1200 21000
 9 9 1
-GenWimpy: 8
+GenWimpy: 7
 GenRoam: 89
 E
 #17331
@@ -652,7 +652,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 20
+GenWimpy: 24
 E
 #17344
 escrava~
@@ -681,8 +681,8 @@ coberto por piolhos.
 73 2 -13 5d13+1200 6d6+17
 10000 60994
 9 9 1
-GenWimpy: 6
-GenLoot: 18
+GenWimpy: 5
+GenLoot: 19
 E
 #17346
 guarda fronteira norte~
@@ -955,7 +955,7 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 11
+GenWimpy: 13
 GenLoot: 1
 E
 $

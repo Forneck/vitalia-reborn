@@ -12,9 +12,9 @@ no café da manhã e está com a intenção de comer o mesmo no jantar.
 12 9 2 4d6+140 2d5+3
 100 13000
 9 9 0
-GenWimpy: 6
-GenRoam: 37
-GenGroup: 4
+GenWimpy: 7
+GenRoam: 47
+GenGroup: 2
 E
 #7001
 morcego pequeno ameacador~
@@ -43,8 +43,8 @@ An undefined string.
 5 16 5 1d12+48 2d4+0
 30 1000
 9 9 1
-GenWimpy: 37
-GenRoam: 74
+GenWimpy: 41
+GenRoam: 55
 E
 #7003
 aranha pequena peluda~
@@ -58,7 +58,7 @@ An undefined string.
 1 100
 9 9 1
 GenWimpy: 100
-GenRoam: 86
+GenRoam: 87
 E
 #7004
 besouro gigante terra~
@@ -236,7 +236,7 @@ mas ela ataca de qualquer jeito.  Parece que a mente dela foi queimada.
 5 16 6 3d5+57 2d4+0
 0 1000
 9 9 2
-GenWimpy: 63
+GenWimpy: 66
 GenRoam: 88
 E
 #7045

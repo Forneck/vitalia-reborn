@@ -40,7 +40,7 @@ const char *dirs_pt[] = {"norte",    "leste",   "sul",      "oeste",
                          "cima",     "baixo",   "noroeste", /* Diagonals only used if CONFIG_DIAGONAL_DIRS is set */
                          "nordeste", "sudeste", "sudoeste", "\n"};
 
-const char *doors_pt[] = {"abre", "fecha", "tranca", "destranca", "arromba", "\n"};
+const char *doors_pt[] = {"abre", "fecha", "destranca", "tranca", "arromba", "\n"};
 
 const char *autoexits[] = {"n", "e", "s", "w", "u", "d", "nw", "ne", "se", "sw", "\n"};
 const char *autoexits_pt[] = {"n", "l", "s", "o", "c", "b", "no", "ne", "se", "so", "\n"};

@@ -259,7 +259,7 @@ vai ser uma atividade saudável.
 17 4 -1 3d5+220 1d6+9
 1281 28000
 9 9 1
-GenWimpy: 23
+GenWimpy: 17
 GenRoam: 89
 E
 #12020
@@ -294,8 +294,8 @@ tiverem as menores das intenções.
 BareHandAttack: 6
 Str: 18
 StrAdd: 90
-GenWimpy: 18
-GenLoot: 49
+GenWimpy: 13
+GenLoot: 53
 E
 T 3013
 #12022

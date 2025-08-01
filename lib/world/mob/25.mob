@@ -9,7 +9,8 @@ Isto parece ser feito de nada mais que escuridão...
 9 10 1 9d9+90 2d5+5
 100 4000
 9 9 0
-GenWimpy: 53
+GenWimpy: 51
+GenLoot: 1
 GenRoam: 89
 E
 #2501
@@ -39,7 +40,7 @@ exterminador de coelhinhos em pessoa, Edgar o Horrível!
 1 20 10 3d9+10 1d8+1
 23 100
 9 9 1
-GenWimpy: 19
+GenWimpy: 21
 GenRoam: 86
 E
 #2503
@@ -66,9 +67,8 @@ Ou então, ele pode apenas estar com dor de cabeça.
 10 10 -1 10d10+100 1d8+8
 436 3500
 9 9 1
-GenWimpy: 16
+GenWimpy: 15
 GenRoam: 89
-GenGroup: 3
 E
 T 3009
 #2505
@@ -181,8 +181,9 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 60
-GenRoam: 89
+GenWimpy: 55
+GenLoot: 2
+GenRoam: 87
 E
 #2513
 guardioes maiores olhos~
@@ -195,10 +196,10 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 21
-GenLoot: 18
-GenRoam: 89
-GenGroup: 90
+GenWimpy: 16
+GenLoot: 32
+GenRoam: 87
+GenGroup: 88
 E
 #2514
 mago visitante~
@@ -226,7 +227,7 @@ Ela parece estar bastante concentrada em seus estudos.
 7 7 2 7d6+25 2d4+5
 369 2950
 6 6 2
-GenWimpy: 100
+GenWimpy: 99
 E
 T 3009
 #2516
@@ -269,7 +270,7 @@ Ele parece ser um jovem travesso.
 7 7 1 7d6+25 2d4+5
 382 2300
 9 9 1
-GenWimpy: 86
+GenWimpy: 92
 E
 T 3009
 #2519
@@ -284,7 +285,7 @@ algumas marcas de queimaduras menores marcam sua pelugem mosqueada.
 1 20 1 1d1+10 1d4+1
 0 11
 9 9 2
-GenWimpy: 73
+GenWimpy: 72
 E
 #2520
 estudante~
@@ -297,7 +298,7 @@ O estudante boceja.
 8 9 1 8d8+80 2d4+6
 263 3000
 6 6 1
-GenWimpy: 22
+GenWimpy: 21
 GenLoot: 1
 E
 T 3009
@@ -355,7 +356,7 @@ Ela parece não ter resistido ao tédio absoluto.
 9 11 -2 9d9+90 2d4+7
 567 3800
 4 4 2
-GenWimpy: 5
+GenWimpy: 7
 E
 T 3009
 #2525
@@ -456,7 +457,7 @@ de conhecimento que ela está traduzindo.
 15 6 -1 15d15+150 2d4+10
 684 16550
 9 9 2
-GenWimpy: 4
+GenWimpy: 5
 E
 T 3009
 #2532
@@ -570,7 +571,7 @@ Ele parece inflamável.
 16 7 -5 16d16+160 1d10+10
 1000 17500
 9 9 0
-GenWimpy: 21
+GenWimpy: 19
 E
 #2540
 mestre vinculador~
@@ -583,7 +584,7 @@ O Mestre Vinculador rosna para você e ataca.
 23 5 -4 23d23+230 3d5+8
 2315 30500
 9 9 1
-GenWimpy: 3
+GenWimpy: 8
 E
 T 3009
 #2541
@@ -795,7 +796,7 @@ garras bem grandes.
 15 5 -5 15d15+150 5d5+5
 0 18750
 9 9 2
-GenWimpy: 21
+GenWimpy: 22
 E
 #2556
 mestre cinza~

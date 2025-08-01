@@ -9,7 +9,7 @@ Ela parece estar com fome.
 11 7 4 5d10+50 3d6+0
 0 12000
 9 9 0
-GenWimpy: 24
+GenWimpy: 21
 E
 T 3008
 #4001
@@ -62,8 +62,8 @@ Você percebe toda a maldade no seu olhar...
 5 15 5 2d10+60 2d4+0
 100 900
 9 9 0
-GenWimpy: 100
-GenRoam: 88
+GenWimpy: 99
+GenRoam: 85
 E
 #4005
 orc enorme~
@@ -156,9 +156,9 @@ O hobgoblin parece bastante perigoso.
 10 8 2 1d16+120 2d6+3
 300 10000
 9 9 1
-GenWimpy: 20
+GenWimpy: 21
 GenRoam: 89
-GenGroup: 4
+GenGroup: 2
 E
 #4056
 orc~
@@ -185,7 +185,7 @@ O leão parece bastante hostil com enormes garras e grandes dentes.
 5 16 5 1d10+60 2d4+0
 0 900
 9 9 1
-GenWimpy: 74
+GenWimpy: 75
 GenRoam: 89
 E
 #4058
@@ -284,7 +284,7 @@ Bem, ela não parece prestar muita atenção em você.
 0 1500
 9 9 0
 GenWimpy: 100
-GenRoam: 79
+GenRoam: 81
 E
 #4106
 guerreiro~
@@ -313,7 +313,7 @@ Ele parece lodoso..
 7 14 4 4d10+25 1d9+1
 20 3000
 9 9 1
-GenWimpy: 95
+GenWimpy: 100
 GenLoot: 1
 GenRoam: 89
 E

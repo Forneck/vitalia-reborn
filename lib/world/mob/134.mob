@@ -124,8 +124,8 @@ An undefined string.
 10 10 6 1d1+200 5d1+10
 125 1785
 9 9 1
-GenWimpy: 6
-GenRoam: 73
+GenWimpy: 10
+GenRoam: 85
 E
 #13410
 pacificador elfo~
@@ -152,8 +152,8 @@ An undefined string.
 1 17 8 1d1+30 2d1+3
 0 75
 9 9 0
-GenWimpy: 9
-GenRoam: 79
+GenWimpy: 10
+GenRoam: 81
 E
 #13412
 esquilo~
@@ -190,6 +190,9 @@ Um cidadão de Thewster, está vagando por aqui.
 20 -4 0 1d1+1800 10d1+24
 475 116842
 9 9 1
+GenWimpy: 4
+GenLoot: 3
+GenRoam: 80
 E
 #13415
 garçom~
@@ -386,8 +389,9 @@ Você pouco pode ver olhando para esta criatura.
 1 14 7 1d1+100 3d1+6
 0 75
 9 9 1
-GenWimpy: 7
-GenRoam: 70
+GenWimpy: 10
+GenLoot: 1
+GenRoam: 79
 E
 #13431
 fada~
@@ -400,8 +404,8 @@ Esta bela fada flutua levemente sorrindo para quem olha para ela.
 15 5 4 1d1+500 6d1+15
 250 5454
 9 9 1
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 4
+GenRoam: 74
 E
 #13432
 elfo~
@@ -415,8 +419,9 @@ maravilhas espalhadas por Vitália.
 15 5 4 1d1+500 6d1+15
 250 5454
 9 9 1
-GenWimpy: 3
-GenRoam: 54
+GenWimpy: 7
+GenLoot: 1
+GenRoam: 78
 E
 #13433
 aranha negra pequena~
@@ -587,7 +592,7 @@ de linhagem nobre.
 25 1 2 1d6+300 3d8+5
 1200 12000
 9 9 1
-GenWimpy: 1
+GenWimpy: 4
 E
 #13446
 bibliotecario elfo~

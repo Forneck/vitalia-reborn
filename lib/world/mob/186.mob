@@ -28,7 +28,7 @@ Melhor matar mesmo!
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
-GenWimpy: 58
+GenWimpy: 61
 GenRoam: 87
 E
 #18603
@@ -46,7 +46,8 @@ mesmo os dragões pequenos podem causar um grande problema.
 0 1000
 9 9 1
 GenWimpy: 20
-GenRoam: 64
+GenRoam: 78
+GenGroup: 1
 E
 #18604
 novato guarda monstro~
@@ -94,7 +95,7 @@ vermes imundos, pequenos, cheios de pernas e marrons não estariam aqui!
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 99
+GenWimpy: 100
 GenRoam: 86
 E
 #18607
@@ -113,7 +114,7 @@ espere!!  Ele parece que está querendo atacá-lo!
 GenWimpy: 100
 GenLoot: 1
 GenRoam: 89
-GenGroup: 3
+GenGroup: 1
 E
 #18608
 demônio demonio diabo travesso~
@@ -179,7 +180,9 @@ HAHAHAHAHAHAHAHAHAHA!
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 1
-GenWimpy: 35
+GenWimpy: 36
+GenLoot: 2
+GenEquip: 1
 GenRoam: 87
 E
 #18612
@@ -196,8 +199,8 @@ acabar logo com a mediocridade dele.
 1 20 10 1d1+19 1d3+1
 50 220
 9 9 1
-GenWimpy: 39
-GenRoam: 87
+GenWimpy: 41
+GenRoam: 86
 E
 #18613
 novata tagarela~
@@ -232,9 +235,9 @@ não o ajuda um pouco.
 4 17 6 8d5+20 1d6+1
 250 500
 9 9 1
-GenWimpy: 21
+GenWimpy: 24
 GenLoot: 2
-GenRoam: 70
+GenRoam: 80
 E
 #18615
 novato esperto~

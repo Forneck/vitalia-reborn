@@ -9,8 +9,8 @@ Ela parece recém-saída do ovo e esperta.  Suas presas ainda estão crescendo.
 3 18 7 1d12+40 1d7+0
 80 350
 9 9 1
-GenWimpy: 52
-GenRoam: 88
+GenWimpy: 54
+GenRoam: 87
 E
 #6302
 yevaud dragao usurpador~
@@ -66,8 +66,8 @@ Você nota um olhar vidrado nos olhos dela.
 14 7 1 1d12+172 2d8+1
 2000 18000
 9 9 2
-GenWimpy: 15
-GenLoot: 22
+GenWimpy: 12
+GenLoot: 37
 GenEquip: 1
 E
 #6306
@@ -81,7 +81,7 @@ Um zangão comum.
 6 14 4 3d8+70 2d4+1
 200 1600
 9 9 0
-GenWimpy: 35
+GenWimpy: 33
 GenRoam: 88
 E
 #6307
@@ -96,7 +96,7 @@ sem uma arma mágica.
 13 9 -2 1d12+163 2d4+4
 1250 16000
 9 9 2
-GenWimpy: 25
+GenWimpy: 27
 GenRoam: 89
 E
 #6308
@@ -112,7 +112,7 @@ própria ou se foi seduzido você não poderá ter certeza.
 11 8 4 1d12+130 2d7+1
 1000 13500
 9 9 1
-GenWimpy: 25
+GenWimpy: 21
 GenRoam: 89
 E
 #6309
@@ -144,7 +144,6 @@ A aranha-pássaro estala suas poderosas mandíbulas.
 9 9 2
 GenWimpy: 32
 GenLoot: 4
-GenRoam: 3
 E
 #6311
 eremita~

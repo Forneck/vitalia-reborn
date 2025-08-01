@@ -28,8 +28,8 @@ para você, ambiciosamente.
 1500 10500
 9 9 2
 GenWimpy: 100
-GenLoot: 5
-GenRoam: 89
+GenLoot: 10
+GenRoam: 88
 E
 T 3009
 #5202
@@ -44,8 +44,8 @@ na frente.
 11 10 1 1d20+130 2d7+0
 0 13000
 9 9 0
-GenWimpy: 25
-GenLoot: 33
+GenWimpy: 23
+GenLoot: 37
 GenRoam: 2
 E
 #5203
@@ -74,7 +74,7 @@ destruição.
 11 11 3 2d6+110 2d6+0
 0 10500
 9 9 0
-GenWimpy: 18
+GenWimpy: 20
 E
 #5205
 mimico potes pedacos~
@@ -103,7 +103,8 @@ que alguém esteve aqui antes de você...
 11 9 0 1d12+110 4d3+1
 0 12000
 9 9 0
-GenWimpy: 29
+GenWimpy: 26
+GenLoot: 1
 E
 #5207
 lagarto chifres~
@@ -116,9 +117,8 @@ Um pequeno e lindo lagarto -- bem, isso se você gostar de répteis!
 3 17 4 1d14+30 2d4+0
 0 500
 9 9 0
-GenWimpy: 100
-GenLoot: 4
-GenRoam: 11
+GenWimpy: 99
+GenLoot: 7
 E
 #5208
 golem pedra~
@@ -146,9 +146,9 @@ para você, ambiciosamente.
 9 10 3 1d12+120 1d4+5
 1500 7000
 9 9 2
-GenWimpy: 99
-GenLoot: 17
-GenRoam: 88
+GenWimpy: 100
+GenLoot: 21
+GenRoam: 89
 E
 T 3009
 $

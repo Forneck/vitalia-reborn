@@ -108,6 +108,8 @@ Int: 13
 Wis: 13
 Con: 10
 Cha: 20
+GenWimpy: 3
+GenRoam: 59
 E
 #10706
 cidadão limpeza~
@@ -584,6 +586,7 @@ Int: 12
 Wis: 5
 Con: 9
 Cha: 13
+GenWimpy: 2
 E
 #10728
 poetisa otaviana~

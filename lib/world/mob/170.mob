@@ -22,10 +22,10 @@ Ele parece estar atrás de um almoço..
 22 0 0 1d5+380 3d5+20
 1000 20000
 9 9 1
-GenWimpy: 97
+GenWimpy: 93
 GenLoot: 9
 GenEquip: 1
-GenRoam: 71
+GenRoam: 72
 E
 #17003
 elemental~
@@ -40,7 +40,7 @@ Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 9 9 1
 GenWimpy: 100
 GenLoot: 1
-GenRoam: 10
+GenRoam: 6
 E
 #17004
 elemental guardiao~
@@ -94,8 +94,9 @@ An undefined string.
 15 -4 -6 5d5+250 4d9+17
 2200 20000
 9 9 1
-GenWimpy: 50
-GenRoam: 85
+GenWimpy: 59
+GenLoot: 1
+GenRoam: 82
 E
 #17008
 lider elemental terra~
@@ -188,7 +189,7 @@ Ela corre ao seu redor, esperando uma brecha.
 9 9 2
 GenWimpy: 100
 GenLoot: 1
-GenRoam: 82
+GenRoam: 70
 E
 #17016
 elemental neve humanoide cristal~
@@ -201,7 +202,7 @@ Ele parece incapaz de se mover.
 3 5 2 1d5+100 2d5+4
 400 3000
 9 9 1
-GenWimpy: 24
+GenWimpy: 27
 GenLoot: 1
 E
 #17017
@@ -228,7 +229,7 @@ todos os lados, produzindo barulhentas explosões.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 27
+GenWimpy: 29
 GenLoot: 1
 E
 #17019
@@ -242,7 +243,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 79
+GenWimpy: 81
 GenLoot: 1
 E
 #17020
@@ -258,6 +259,8 @@ que suas calças sequem rápido.
 1000 4000
 9 9 2
 GenWimpy: 62
+GenLoot: 6
+GenRoam: 33
 E
 #17021
 lama monstro elemental~
@@ -285,8 +288,8 @@ Ele parece um tanto quanto imprevisível.
 6 12 -3 1d5+250 3d5+5
 1000 4000
 9 9 1
-GenWimpy: 32
-GenLoot: 2
+GenWimpy: 34
+GenLoot: 3
 GenRoam: 89
 E
 #17023
@@ -314,8 +317,8 @@ Uma estranha mistura de terra e ar.. ela não parece nem te ver.
 5 14 -15 1d5+200 2d5+3
 1000 3000
 9 9 2
-GenWimpy: 17
-GenRoam: 88
+GenWimpy: 23
+GenRoam: 89
 E
 #17025
 redemoinho tornado elemental~
@@ -328,7 +331,7 @@ An undefined string.
 2 17 2 1d5+100 1d8+1
 450 1000
 9 9 1
-GenWimpy: 66
+GenWimpy: 75
 GenLoot: 1
 GenRoam: 89
 E
@@ -361,7 +364,7 @@ Um humanóide que parece ter sido preso em um campo magnético.
 3000 30000
 9 9 1
 GenWimpy: 91
-GenRoam: 66
+GenRoam: 84
 GenGroup: 1
 E
 #17028
@@ -410,10 +413,10 @@ tempo até que ela lhe atinja.
 26 -2 -7 1d5+650 6d5+11
 3000 30000
 9 9 1
-GenWimpy: 92
-GenLoot: 7
-GenRoam: 66
-GenGroup: 13
+GenWimpy: 100
+GenLoot: 9
+GenRoam: 86
+GenGroup: 10
 E
 #17031
 anciao mago elemental~
@@ -500,8 +503,8 @@ Ele se assemelha bastante a um desagradável inseto.
 5 16 4 1d5+90 2d4+1
 800 1000
 9 9 1
-GenWimpy: 91
-GenRoam: 88
+GenWimpy: 99
+GenRoam: 85
 E
 #17037
 gigantesco elemental~

@@ -9,7 +9,7 @@ Você vai ficar igual a ele se não for cuidadoso.
 4 16 6 10d5+20 1d6+3
 100 600
 9 9 1
-GenWimpy: 54
+GenWimpy: 56
 GenRoam: 86
 E
 #9502
@@ -395,7 +395,7 @@ que seja mais bela (ou menos feia) que ele.
 72 -14 -20 7d3+2600 3d6+32
 0 380000
 9 9 1
-GenWimpy: 2
+GenWimpy: 5
 GenLoot: 1
 E
 #9529
