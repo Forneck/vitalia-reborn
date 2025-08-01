@@ -30,6 +30,9 @@
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
 
+/* External function prototypes */
+void call_ACMD(void (*function)(), struct char_data *ch, char *argument, int cmd, int subcmd);
+
 struct mob_upgrade_plan find_best_upgrade_for_mob(struct char_data *ch);
 struct char_data *find_best_median_leader(struct char_data *ch);
 bool mob_handle_grouping(struct char_data *ch);
@@ -160,6 +163,73 @@ void mobile_activity(void)
                     }
                     continue;
                 }
+            }
+
+            /* Handle resource gathering goals */
+            if (ch->ai_data->current_goal == GOAL_MINE || ch->ai_data->current_goal == GOAL_FISH ||
+                ch->ai_data->current_goal == GOAL_FORAGE || ch->ai_data->current_goal == GOAL_EAVESDROP) {
+
+                /* Check if mob can perform the resource action */
+                bool can_perform = FALSE;
+
+                if (ch->ai_data->current_goal == GOAL_MINE) {
+                    /* Check if location is suitable for mining */
+                    if (!ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL) && GET_SKILL(ch, SKILL_MINE) > 0) {
+                        can_perform = TRUE;
+                    }
+                } else if (ch->ai_data->current_goal == GOAL_FISH) {
+                    /* Check if there's water nearby */
+                    if ((SECT(IN_ROOM(ch)) == SECT_WATER_SWIM || SECT(IN_ROOM(ch)) == SECT_WATER_NOSWIM) &&
+                        GET_SKILL(ch, SKILL_FISHING) > 0) {
+                        can_perform = TRUE;
+                    }
+                } else if (ch->ai_data->current_goal == GOAL_FORAGE) {
+                    /* Check if location has vegetation */
+                    if (SECT(IN_ROOM(ch)) != SECT_CITY && SECT(IN_ROOM(ch)) != SECT_INSIDE &&
+                        GET_SKILL(ch, SKILL_FORAGE) > 0) {
+                        can_perform = TRUE;
+                    }
+                } else if (ch->ai_data->current_goal == GOAL_EAVESDROP) {
+                    /* Check if there are other people to eavesdrop on */
+                    struct char_data *temp_char;
+                    for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                        if (temp_char != ch && GET_POS(temp_char) >= POS_RESTING &&
+                            GET_SKILL(ch, SKILL_EAVESDROP) > 0) {
+                            can_perform = TRUE;
+                            break;
+                        }
+                    }
+                }
+
+                if (can_perform && rand_number(1, 100) <= 30) { /* 30% chance to perform action each round */
+                    /* Perform the appropriate resource action */
+                    switch (ch->ai_data->current_goal) {
+                        case GOAL_MINE:
+                            call_ACMD(do_mine, ch, "", 0, 0);
+                            break;
+                        case GOAL_FISH:
+                            call_ACMD(do_fishing, ch, "", 0, 0);
+                            break;
+                        case GOAL_FORAGE:
+                            call_ACMD(do_forage, ch, "", 0, 0);
+                            break;
+                        case GOAL_EAVESDROP:
+                            call_ACMD(do_eavesdrop, ch, "", 0, 0);
+                            break;
+                    }
+
+                    /* After performing action, continue with this goal for a while longer */
+                    if (ch->ai_data->goal_timer > rand_number(30, 60)) {
+                        /* Sometimes switch to a different goal or give up */
+                        ch->ai_data->current_goal = GOAL_NONE;
+                        ch->ai_data->goal_timer = 0;
+                    }
+                } else if (ch->ai_data->goal_timer > 100) {
+                    /* Give up if can't perform action or been trying too long */
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    ch->ai_data->goal_timer = 0;
+                }
+                continue;
             }
 
             room_rnum dest = ch->ai_data->goal_destination;
@@ -623,6 +693,53 @@ void mobile_activity(void)
                 if (CAN_SEE(ch, ch->master) && !PRF_FLAGGED(ch->master, PRF_NOHASSLE))
                     hit(ch, ch->master, TYPE_UNDEFINED);
                 stop_follower(ch);
+            }
+        }
+
+        /* Resource gathering goal assignment for idle mobs */
+        if (ch->ai_data && ch->ai_data->current_goal == GOAL_NONE && rand_number(1, 1000) <= 5) {
+            /* 0.5% chance per tick for mob to start resource gathering if they have no other goals */
+
+            /* Check genetics to determine preferred resource activity */
+            int activity_choice = rand_number(1, 100);
+
+            if (ch->ai_data->genetics.loot_tendency > 60 && activity_choice <= 30) {
+                /* High loot tendency mobs prefer mining for valuable materials */
+                if (!ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL) && GET_SKILL(ch, SKILL_MINE) > 0) {
+                    ch->ai_data->current_goal = GOAL_MINE;
+                    ch->ai_data->goal_timer = 0;
+                    act("$n olha ao redor procurando minerais.", FALSE, ch, 0, 0, TO_ROOM);
+                }
+            } else if (SECT(IN_ROOM(ch)) == SECT_WATER_SWIM || SECT(IN_ROOM(ch)) == SECT_WATER_NOSWIM) {
+                /* Near water, try fishing */
+                if (GET_SKILL(ch, SKILL_FISHING) > 0 && activity_choice <= 40) {
+                    ch->ai_data->current_goal = GOAL_FISH;
+                    ch->ai_data->goal_timer = 0;
+                    act("$n olha para a água pensativamente.", FALSE, ch, 0, 0, TO_ROOM);
+                }
+            } else if (SECT(IN_ROOM(ch)) != SECT_CITY && SECT(IN_ROOM(ch)) != SECT_INSIDE) {
+                /* In wilderness, try foraging */
+                if (GET_SKILL(ch, SKILL_FORAGE) > 0 && activity_choice <= 50) {
+                    ch->ai_data->current_goal = GOAL_FORAGE;
+                    ch->ai_data->goal_timer = 0;
+                    act("$n examina a vegetação local.", FALSE, ch, 0, 0, TO_ROOM);
+                }
+            } else if (ch->ai_data->genetics.loot_tendency > 40) {
+                /* In social areas, try eavesdropping for information */
+                struct char_data *temp_char;
+                bool has_targets = FALSE;
+                for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                    if (temp_char != ch && GET_POS(temp_char) >= POS_RESTING) {
+                        has_targets = TRUE;
+                        break;
+                    }
+                }
+
+                if (has_targets && GET_SKILL(ch, SKILL_EAVESDROP) > 0 && activity_choice <= 25) {
+                    ch->ai_data->current_goal = GOAL_EAVESDROP;
+                    ch->ai_data->goal_timer = 0;
+                    act("$n discretamente presta atenção ao que acontece ao redor.", FALSE, ch, 0, 0, TO_ROOM);
+                }
             }
         }
 
@@ -1491,10 +1608,10 @@ bool mob_try_and_loot(struct char_data *ch)
                 ch->ai_data->genetics.loot_tendency = MIN(ch->ai_data->genetics.loot_tendency, 100);
                 return TRUE; /* Ação bem-sucedida, consome o turno. */
             }
-        //} else {
+            //} else {
             /* Aprendizagem Negativa: A necessidade não foi satisfeita. */
-        //    ch->ai_data->genetics.loot_tendency -= 1;
-	//    ch->ai_data->genetics.loot_tendency = MAX(ch->ai_data->genetics.loot_tendency, 0);
+            //    ch->ai_data->genetics.loot_tendency -= 1;
+            //    ch->ai_data->genetics.loot_tendency = MAX(ch->ai_data->genetics.loot_tendency, 0);
         }
     }
 

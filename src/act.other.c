@@ -1256,3 +1256,263 @@ ACMD(do_elevate)
 
     STATE(ch->desc) = CON_ELEVATE_CONF;
 }
+
+ACMD(do_mine)
+{
+    int skill_num = GET_SKILL(ch, SKILL_MINE);
+    int percent, prob;
+    struct obj_data *obj = NULL;
+    obj_vnum vnum = NOTHING;
+
+    if (!skill_num) {
+        send_to_char(ch, "Você não sabe como minerar.\r\n");
+        return;
+    }
+
+    if (GET_POS(ch) < POS_STANDING) {
+        send_to_char(ch, "Você precisa estar em pé para minerar.\r\n");
+        return;
+    }
+
+    // Check if location allows mining (could be expanded with room flags)
+    if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL)) {
+        send_to_char(ch, "Este lugar é muito pacífico para mineração.\r\n");
+        return;
+    }
+
+    WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+
+    percent = rand_number(1, 101);
+    prob = GET_SKILL(ch, SKILL_MINE);
+
+    send_to_char(ch, "Você procura por minerais no local...\r\n");
+    act("$n procura por minerais no local.", TRUE, ch, 0, 0, TO_ROOM);
+
+    if (percent <= prob) {
+        // Determine what was found based on skill level and luck
+        int roll = rand_number(1, 100);
+
+        if (roll <= 10 + (skill_num / 10)) {
+            vnum = 3020;   // Some gem or valuable ore
+            send_to_char(ch, "Você encontra algo valioso!\r\n");
+            act("$n encontra algo valioso!", TRUE, ch, 0, 0, TO_ROOM);
+        } else if (roll <= 30 + (skill_num / 5)) {
+            vnum = 3019;   // Common ore
+            send_to_char(ch, "Você encontra um pouco de minério.\r\n");
+            act("$n encontra um pouco de minério.", TRUE, ch, 0, 0, TO_ROOM);
+        } else {
+            send_to_char(ch, "Você encontra apenas pedras sem valor.\r\n");
+            act("$n encontra apenas pedras sem valor.", TRUE, ch, 0, 0, TO_ROOM);
+        }
+
+        // If we found something, create the object
+        if (vnum != NOTHING) {
+            obj = read_object(vnum, VIRTUAL);
+            if (obj) {
+                obj_to_char(obj, ch);
+                send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
+            }
+        }
+
+        // Give some experience for successful mining
+        gain_exp(ch, rand_number(5, 15));
+    } else {
+        send_to_char(ch, "Você não consegue encontrar nada útil.\r\n");
+        act("$n não consegue encontrar nada útil.", TRUE, ch, 0, 0, TO_ROOM);
+    }
+}
+
+ACMD(do_fishing)
+{
+    int skill_num = GET_SKILL(ch, SKILL_FISHING);
+    int percent, prob;
+    struct obj_data *obj = NULL;
+    obj_vnum vnum = NOTHING;
+
+    if (!skill_num) {
+        send_to_char(ch, "Você não sabe como pescar.\r\n");
+        return;
+    }
+
+    if (GET_POS(ch) < POS_SITTING) {
+        send_to_char(ch, "Você precisa estar pelo menos sentado para pescar.\r\n");
+        return;
+    }
+
+    // Check if there's water here (could be expanded with sector types)
+    if (SECT(IN_ROOM(ch)) != SECT_WATER_SWIM && SECT(IN_ROOM(ch)) != SECT_WATER_NOSWIM) {
+        send_to_char(ch, "Você precisa estar próximo da água para pescar.\r\n");
+        return;
+    }
+
+    WAIT_STATE(ch, PULSE_VIOLENCE * 3);
+
+    percent = rand_number(1, 101);
+    prob = GET_SKILL(ch, SKILL_FISHING);
+
+    send_to_char(ch, "Você lança sua linha na água e espera pacientemente...\r\n");
+    act("$n lança uma linha na água.", TRUE, ch, 0, 0, TO_ROOM);
+
+    if (percent <= prob) {
+        int roll = rand_number(1, 100);
+
+        if (roll <= 15 + (skill_num / 8)) {
+            vnum = 3021;   // Large fish
+            send_to_char(ch, "Você fisga um peixe grande!\r\n");
+            act("$n fisga um peixe grande!", TRUE, ch, 0, 0, TO_ROOM);
+        } else if (roll <= 40 + (skill_num / 4)) {
+            vnum = 3022;   // Small fish
+            send_to_char(ch, "Você fisga um pequeno peixe.\r\n");
+            act("$n fisga um pequeno peixe.", TRUE, ch, 0, 0, TO_ROOM);
+        } else {
+            send_to_char(ch, "Você sente algo mordiscar, mas o peixe escapa.\r\n");
+            act("$n quase fisga um peixe, mas ele escapa.", TRUE, ch, 0, 0, TO_ROOM);
+        }
+
+        if (vnum != NOTHING) {
+            obj = read_object(vnum, VIRTUAL);
+            if (obj) {
+                obj_to_char(obj, ch);
+                send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
+            }
+        }
+
+        gain_exp(ch, rand_number(3, 12));
+    } else {
+        send_to_char(ch, "Você não consegue pescar nada.\r\n");
+        act("$n não consegue pescar nada.", TRUE, ch, 0, 0, TO_ROOM);
+    }
+}
+
+ACMD(do_forage)
+{
+    int skill_num = GET_SKILL(ch, SKILL_FORAGE);
+    int percent, prob;
+    struct obj_data *obj = NULL;
+    obj_vnum vnum = NOTHING;
+
+    if (!skill_num) {
+        send_to_char(ch, "Você não sabe como forragear.\r\n");
+        return;
+    }
+
+    if (GET_POS(ch) < POS_STANDING) {
+        send_to_char(ch, "Você precisa estar em pé para forragear.\r\n");
+        return;
+    }
+
+    // Better foraging in forests and fields
+    if (SECT(IN_ROOM(ch)) == SECT_CITY || SECT(IN_ROOM(ch)) == SECT_INSIDE) {
+        send_to_char(ch, "Não há nada para forragear neste local.\r\n");
+        return;
+    }
+
+    WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+
+    percent = rand_number(1, 101);
+    prob = GET_SKILL(ch, SKILL_FORAGE) + 10;   // Slightly easier than other skills
+
+    send_to_char(ch, "Você procura por comida e materiais úteis...\r\n");
+    act("$n procura por comida e materiais no local.", TRUE, ch, 0, 0, TO_ROOM);
+
+    if (percent <= prob) {
+        int roll = rand_number(1, 100);
+
+        if (roll <= 20 + (skill_num / 6)) {
+            vnum = 3023;   // Herbs or berries
+            send_to_char(ch, "Você encontra algumas ervas medicinais!\r\n");
+            act("$n encontra algumas ervas medicinais.", TRUE, ch, 0, 0, TO_ROOM);
+        } else if (roll <= 50 + (skill_num / 3)) {
+            vnum = 3024;   // Food items
+            send_to_char(ch, "Você encontra alguns frutos selvagens.\r\n");
+            act("$n encontra alguns frutos selvagens.", TRUE, ch, 0, 0, TO_ROOM);
+        } else {
+            send_to_char(ch, "Você encontra apenas galhos e folhas secas.\r\n");
+            act("$n encontra apenas galhos e folhas secas.", TRUE, ch, 0, 0, TO_ROOM);
+        }
+
+        if (vnum != NOTHING) {
+            obj = read_object(vnum, VIRTUAL);
+            if (obj) {
+                obj_to_char(obj, ch);
+                send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
+            }
+        }
+
+        gain_exp(ch, rand_number(2, 10));
+    } else {
+        send_to_char(ch, "Você não consegue encontrar nada comestível.\r\n");
+        act("$n não consegue encontrar nada comestível.", TRUE, ch, 0, 0, TO_ROOM);
+    }
+}
+
+ACMD(do_eavesdrop)
+{
+    int skill_num = GET_SKILL(ch, SKILL_EAVESDROP);
+    int percent, prob;
+    struct char_data *vict;
+    char buf[MAX_STRING_LENGTH];
+
+    if (!skill_num) {
+        send_to_char(ch, "Você não sabe como espionar conversas.\r\n");
+        return;
+    }
+
+    if (GET_POS(ch) < POS_STANDING) {
+        send_to_char(ch, "Você precisa estar em pé para espionar conversas.\r\n");
+        return;
+    }
+
+    WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+
+    percent = rand_number(1, 101);
+    prob = GET_SKILL(ch, SKILL_EAVESDROP) - 10;   // Harder skill
+
+    send_to_char(ch, "Você tenta escutar conversas próximas...\r\n");
+
+    if (percent <= prob) {
+        // Look for NPCs with information or players talking
+        bool found_info = FALSE;
+
+        for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+            if (vict == ch || GET_POS(vict) < POS_RESTING)
+                continue;
+
+            if (IS_NPC(vict) && rand_number(1, 100) <= 30 + (skill_num / 4)) {
+                // NPC might share some information
+                sprintf(buf, "Você escuta %s murmurando algo sobre '%s'.\r\n", GET_NAME(vict),
+                        (rand_number(1, 4) == 1)   ? "um tesouro escondido"
+                        : (rand_number(1, 3) == 1) ? "perigos próximos"
+                        : (rand_number(1, 2) == 1) ? "uma quest importante"
+                                                   : "informações valiosas");
+                send_to_char(ch, "%s", buf);
+                found_info = TRUE;
+
+                // Small chance of getting actual useful info (could be expanded)
+                if (rand_number(1, 100) <= 10) {
+                    send_to_char(ch, "Você consegue algumas informações valiosas!\r\n");
+                    gain_exp(ch, rand_number(10, 25));
+                }
+                break;
+            }
+        }
+
+        if (!found_info) {
+            send_to_char(ch, "Você não consegue escutar nada interessante.\r\n");
+        } else {
+            gain_exp(ch, rand_number(5, 15));
+        }
+    } else {
+        send_to_char(ch, "Você não consegue escutar nada útil.\r\n");
+
+        // Chance of being noticed when failing
+        if (rand_number(1, 100) <= 25) {
+            for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+                if (vict != ch && !IS_NPC(vict)) {
+                    act("Você nota $n tentando espionar conversas.", FALSE, ch, 0, vict, TO_VICT);
+                }
+            }
+            send_to_char(ch, "Você sente que alguém pode ter percebido sua tentativa.\r\n");
+        }
+    }
+}

@@ -16216,4 +16216,91 @@ e criaturas de tendencia boa.
 
 Veja tambem: MAGIA-PROTECTION-FROM-EVIL
 #1
+MINE MINERAR MINERACAO
+
+Uso: mine
+
+   O comando 'mine' permite que voce procure por minerais, pedras preciosas
+e outros materiais valiosos no local onde se encontra. Esta habilidade e
+especialmente util em areas montanhosas, cavernas e outros locais onde
+minerais podem ser encontrados.
+
+   Sua chance de sucesso depende do seu nivel na habilidade de mineracao
+e das condicoes do local. Locais pacificos nao permitem mineracao.
+
+   Voce pode encontrar desde pedras comuns ate gemas valiosas, dependendo
+da sua sorte e habilidade.
+
+Exemplos:
+   > mine
+   Voce procura por minerais no local...
+   Voce encontra um pouco de minerio.
+
+Veja tambem: FISHING, FORAGE, SKILLS
+#0
+FISHING PESCAR PESCARIA
+
+Uso: fishing
+
+   O comando 'fishing' permite que voce pesque em corpos d'agua como rios,
+lagos e oceanos. Esta habilidade e uma boa forma de obter comida e pode
+render diferentes tipos de peixes.
+
+   Voce deve estar proximo de agua para usar esta habilidade. Sua chance
+de sucesso depende do seu nivel na habilidade de pesca e pode variar
+dependendo do local.
+
+   Voce pode pescar pequenos peixes para alimentacao ou, com sorte,
+peixes maiores e mais valiosos.
+
+Exemplos:
+   > fishing
+   Voce lanca sua linha na agua e espera pacientemente...
+   Voce fisga um pequeno peixe.
+
+Veja tambem: MINE, FORAGE, SKILLS
+#0
+FORAGE FORRAGEAR FORAGING
+
+Uso: forage
+
+   O comando 'forage' permite que voce procure por comida, ervas medicinais
+e outros materiais uteis na natureza. Esta habilidade e especialmente
+eficaz em florestas, campos e outras areas selvagens.
+
+   Sua chance de sucesso varia com seu nivel na habilidade e o tipo de
+terreno. Cidades e areas internas nao oferecem materiais para forrageamento.
+
+   Voce pode encontrar frutos selvagens, ervas medicinais e outros itens
+naturais que podem ser usados para alimentacao ou outros propositos.
+
+Exemplos:
+   > forage
+   Voce procura por comida e materiais uteis...
+   Voce encontra algumas ervas medicinais!
+
+Veja tambem: MINE, FISHING, SKILLS
+#0
+EAVESDROP ESPIONAR ESCUTAR
+
+Uso: eavesdrop
+
+   O comando 'eavesdrop' permite que voce tente escutar conversas e obter
+informacoes de outras pessoas na area. Esta habilidade requer paciencia
+e sutileza para ser bem-sucedida.
+
+   Sua chance de sucesso depende do seu nivel na habilidade e da presenca
+de outras pessoas na area. Falhas podem resultar em ser notado tentando
+espionar.
+
+   Informacoes obtidas podem incluir rumores sobre tesouros, perigos
+proximos ou outras informacoes valiosas.
+
+Exemplos:
+   > eavesdrop
+   Voce tenta escutar conversas proximas...
+   Voce escuta Fulano murmurando algo sobre 'um tesouro escondido'.
+
+Veja tambem: MINE, FISHING, FORAGE, SKILLS
+#0
 $~

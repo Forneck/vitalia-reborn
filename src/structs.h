@@ -956,6 +956,10 @@ struct room_data {
 #define GOAL_GOTO_QUESTMASTER 7
 #define GOAL_ACCEPT_QUEST 8
 #define GOAL_COMPLETE_QUEST 9
+#define GOAL_MINE 10
+#define GOAL_FISH 11
+#define GOAL_FORAGE 12
+#define GOAL_EAVESDROP 13
 
 /*
  * Estrutura para armazenar os "genes" de um mob, que podem evoluir.
