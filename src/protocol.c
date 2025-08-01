@@ -900,8 +900,7 @@ const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *
                     pCopyFrom = ColourRGB(apDescriptor, RGBthree);
                     break;
                 case 'n':
-                    /* Always return empty string for ASCII clients - temporary fix with debug */
-                    pCopyFrom = "[DEBUG_N]";
+                    pCopyFrom = s_Clean;
                     break;
                 case 'd': /* dark grey / black */
                     pCopyFrom = ColourRGB(apDescriptor, "F000");
@@ -922,7 +921,7 @@ const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *
                     pCopyFrom = ColourRGB(apDescriptor, "F500");
                     break;
                 case 'g': /* dark green */
-                    pCopyFrom = "[DEBUG_G]";
+                    pCopyFrom = ColourRGB(apDescriptor, "F020");
                     break;
                 case 'G': /* light green */
                     pCopyFrom = ColourRGB(apDescriptor, "F050");
@@ -955,7 +954,7 @@ const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *
                     pCopyFrom = ColourRGB(apDescriptor, "F333");
                     break;
                 case 'W': /* light white */
-                    pCopyFrom = "[WORKING]";
+                    pCopyFrom = ColourRGB(apDescriptor, "F555");
                     break;
                 case 'o': /* dark orange */
                     pCopyFrom = ColourRGB(apDescriptor, "F520");
