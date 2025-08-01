@@ -707,12 +707,17 @@ void char_from_furniture(struct char_data *ch);
     (real_quest(GET_QUEST((ch))) != NOTHING ? aquest_table[real_quest(GET_QUEST((ch)))].type : AQ_UNDEFINED)
 
 /** The current skill level of ch for skill i. */
-#define GET_SKILL(ch, i) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.skills[i]))
+#define GET_SKILL(ch, i)                                                                                               \
+    (IS_MOB(ch) ? get_mob_skill((ch), (i)) : CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.skills[i])))
 /** Copy the current skill level i of ch to pct. */
 #define SET_SKILL(ch, i, pct)                                                                                          \
     do {                                                                                                               \
-        CHECK_PLAYER_SPECIAL((ch), (ch)->player_specials->saved.skills[i]) = pct;                                      \
+        if (!IS_MOB(ch))                                                                                               \
+            CHECK_PLAYER_SPECIAL((ch), (ch)->player_specials->saved.skills[i]) = pct;                                  \
     } while (0)
+
+/** Function to get mob skill level based on level and skill type. */
+int get_mob_skill(struct char_data *ch, int skill_num);
 
 /** The player's default sector type when buildwalking */
 #define GET_BUILDWALK_SECTOR(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->buildwalk_sector))

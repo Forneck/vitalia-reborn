@@ -208,6 +208,10 @@
 #define SKILL_WHIRLWIND 250
 #define SKILL_SCAN 251
 #define SKILL_BOWS 252
+#define SKILL_MINE 253
+#define SKILL_FISHING 254
+#define SKILL_FORAGE 255
+#define SKILL_EAVESDROP 256
 
 /* New skills may be added here up to MAX_SKILLS (297) */
 

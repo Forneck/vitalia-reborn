@@ -941,6 +941,7 @@ struct room_data {
     struct script_data *script;                          /**< script info for the room */
     struct obj_data *contents;                           /**< List of items in room */
     struct char_data *people;                            /**< List of NPCs / PCs in room */
+    struct char_data *listeners;                         /**< List of chars listening to this room */
 
     struct list_data *events;
 };
@@ -956,6 +957,10 @@ struct room_data {
 #define GOAL_GOTO_QUESTMASTER 7
 #define GOAL_ACCEPT_QUEST 8
 #define GOAL_COMPLETE_QUEST 9
+#define GOAL_MINE 10
+#define GOAL_FISH 11
+#define GOAL_FORAGE 12
+#define GOAL_EAVESDROP 13
 
 /*
  * Estrutura para armazenar os "genes" de um mob, que podem evoluir.
@@ -1252,13 +1257,15 @@ struct char_data {
     struct char_data *next_in_room;  /**< Next PC in the room */
     struct char_data *next;          /**< Next char_data in the room */
     struct char_data *next_fighting; /**< Next in line to fight */
+    struct char_data *next_listener; /**< Next char in listener list */
 
     struct follow_type *followers; /**< List of characters following */
     struct char_data *master;      /**< List of character being followed */
 
     struct group_data *group; /**< Character's Group */
 
-    long pref; /**< unique session id */
+    long pref;           /**< unique session id */
+    sh_int listening_to; /**< Room number being listened to */
 
     struct list_data *events;
     struct str_plrspells *plrspells;

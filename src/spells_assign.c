@@ -34,6 +34,10 @@ ACMD(do_seize);
 ACMD(do_spy);
 ACMD(do_envenom);
 ACMD(do_shoot);
+ACMD(do_mine);
+ACMD(do_fishing);
+ACMD(do_forage);
+ACMD(do_eavesdrop);
 
 void set_spells_function()
 {
@@ -172,6 +176,18 @@ void set_spells_function()
 
     if ((spell = get_spell_by_vnum(SKILL_BOWS)))
         spell->function = do_shoot;
+
+    if ((spell = get_spell_by_vnum(SKILL_MINE)))
+        spell->function = do_mine;
+
+    if ((spell = get_spell_by_vnum(SKILL_FISHING)))
+        spell->function = do_fishing;
+
+    if ((spell = get_spell_by_vnum(SKILL_FORAGE)))
+        spell->function = do_forage;
+
+    if ((spell = get_spell_by_vnum(SKILL_EAVESDROP)))
+        spell->function = do_eavesdrop;
 }
 
 // This function create the database of all the spells and skills,
@@ -3020,6 +3036,74 @@ void create_spells_db()
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_RANGER;
     new_spell->assign[0].level = 30;
+
+    spedit_save_internally(new_spell);
+
+    // SKILL_MINE # 253
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SKILL_MINE;
+    new_spell->status = available;
+    new_spell->name = strdup("mine");
+    new_spell->function = do_mine;
+    new_spell->type = SKILL;
+    new_spell->effectiveness = strdup("100");
+    new_spell->assign[0].class_num = CLASS_WARRIOR;
+    new_spell->assign[0].level = 15;
+    new_spell->assign[1].class_num = CLASS_RANGER;
+    new_spell->assign[1].level = 12;
+
+    spedit_save_internally(new_spell);
+
+    // SKILL_FISHING # 254
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SKILL_FISHING;
+    new_spell->status = available;
+    new_spell->name = strdup("fishing");
+    new_spell->function = do_fishing;
+    new_spell->type = SKILL;
+    new_spell->effectiveness = strdup("100");
+    new_spell->assign[0].class_num = CLASS_RANGER;
+    new_spell->assign[0].level = 8;
+    new_spell->assign[1].class_num = CLASS_CLERIC;
+    new_spell->assign[1].level = 20;
+
+    spedit_save_internally(new_spell);
+
+    // SKILL_FORAGE # 255
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SKILL_FORAGE;
+    new_spell->status = available;
+    new_spell->name = strdup("forage");
+    new_spell->function = do_forage;
+    new_spell->type = SKILL;
+    new_spell->effectiveness = strdup("100");
+    new_spell->assign[0].class_num = CLASS_RANGER;
+    new_spell->assign[0].level = 5;
+    new_spell->assign[1].class_num = CLASS_THIEF;
+    new_spell->assign[1].level = 15;
+
+    spedit_save_internally(new_spell);
+
+    // SKILL_EAVESDROP # 256
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SKILL_EAVESDROP;
+    new_spell->status = available;
+    new_spell->name = strdup("eavesdrop");
+    new_spell->function = do_eavesdrop;
+    new_spell->type = SKILL;
+    new_spell->effectiveness = strdup("100");
+    new_spell->assign[0].class_num = CLASS_THIEF;
+    new_spell->assign[0].level = 10;
+    new_spell->assign[1].class_num = CLASS_BARD;
+    new_spell->assign[1].level = 12;
 
     spedit_save_internally(new_spell);
 

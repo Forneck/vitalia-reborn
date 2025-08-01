@@ -1057,7 +1057,7 @@ void clear_mob_quest(struct char_data *mob)
     mob->ai_data->current_quest = NOTHING;
     mob->ai_data->quest_timer = 0;
     mob->ai_data->quest_counter = 0;
-    
+
     /* If mob was working on quest completion, clear that goal */
     if (mob->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
         mob->ai_data->current_goal = GOAL_NONE;

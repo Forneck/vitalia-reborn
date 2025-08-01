@@ -1256,3 +1256,351 @@ ACMD(do_elevate)
 
     STATE(ch->desc) = CON_ELEVATE_CONF;
 }
+
+ACMD(do_mine)
+{
+    int skill_num = GET_SKILL(ch, SKILL_MINE);
+    int percent, prob;
+    struct obj_data *obj = NULL;
+    obj_vnum vnum = NOTHING;
+
+    if (!skill_num) {
+        send_to_char(ch, "Você não sabe como minerar.\r\n");
+        return;
+    }
+
+    if (GET_POS(ch) < POS_STANDING) {
+        send_to_char(ch, "Você precisa estar em pé para minerar.\r\n");
+        return;
+    }
+
+    // Check for pickaxe requirement
+    if (!IS_MOB(ch)) {   // Only check equipment for players, mobs are assumed to have tools
+        struct obj_data *pickaxe = NULL;
+        int i;
+
+        // Check for pickaxe in inventory or equipment
+        for (i = 0; i < NUM_WEARS; i++) {
+            if (GET_EQ(ch, i) && (GET_OBJ_VNUM(GET_EQ(ch, i)) == 10711 || GET_OBJ_VNUM(GET_EQ(ch, i)) == 6514)) {
+                pickaxe = GET_EQ(ch, i);
+                break;
+            }
+        }
+
+        if (!pickaxe) {
+            for (obj = ch->carrying; obj; obj = obj->next_content) {
+                if (GET_OBJ_VNUM(obj) == 10711 || GET_OBJ_VNUM(obj) == 6514) {
+                    pickaxe = obj;
+                    break;
+                }
+            }
+        }
+
+        if (!pickaxe) {
+            send_to_char(ch, "Você precisa de uma picareta para minerar.\r\n");
+            return;
+        }
+    }
+
+    // Check if location allows mining (could be expanded with room flags)
+    if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL)) {
+        send_to_char(ch, "Este lugar é muito pacífico para mineração.\r\n");
+        return;
+    }
+
+    WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+
+    percent = rand_number(1, 101);
+    prob = GET_SKILL(ch, SKILL_MINE);
+
+    send_to_char(ch, "Você procura por minerais no local...\r\n");
+    act("$n procura por minerais no local.", TRUE, ch, 0, 0, TO_ROOM);
+
+    if (percent <= prob) {
+        // Determine what was found based on skill level and luck
+        int roll = rand_number(1, 100);
+
+        if (roll <= 10 + (skill_num / 10)) {
+            vnum = 1041;   // Gold ring (valuable treasure)
+            send_to_char(ch, "Você encontra algo valioso!\r\n");
+            act("$n encontra algo valioso!", TRUE, ch, 0, 0, TO_ROOM);
+        } else if (roll <= 30 + (skill_num / 5)) {
+            vnum = 10711;   // Iron pickaxe (mining tool)
+            send_to_char(ch, "Você encontra uma ferramenta de mineração.\r\n");
+            act("$n encontra uma ferramenta de mineração.", TRUE, ch, 0, 0, TO_ROOM);
+        } else {
+            send_to_char(ch, "Você encontra apenas pedras sem valor.\r\n");
+            act("$n encontra apenas pedras sem valor.", TRUE, ch, 0, 0, TO_ROOM);
+        }
+
+        // If we found something, create the object
+        if (vnum != NOTHING) {
+            obj = read_object(vnum, VIRTUAL);
+            if (obj) {
+                obj_to_char(obj, ch);
+                send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
+            }
+        }
+
+        // Very small chance to attract a traveling dwarf who might trade
+        if (percent <= prob && vnum != NOTHING && rand_number(1, 100) <= 2) {
+            struct char_data *dwarf_mob = read_mobile(14410, VIRTUAL);   // Traveling dwarf
+            if (dwarf_mob) {
+                char_to_room(dwarf_mob, IN_ROOM(ch));
+                send_to_char(ch, "O barulho da mineração atraiu um anão viajante!\r\n");
+                act("O barulho da mineração de $n atraiu um anão viajante!", TRUE, ch, 0, 0, TO_ROOM);
+            }
+        }
+
+        // Give some experience for successful mining
+        gain_exp(ch, rand_number(5, 15));
+    } else {
+        send_to_char(ch, "Você não consegue encontrar nada útil.\r\n");
+        act("$n não consegue encontrar nada útil.", TRUE, ch, 0, 0, TO_ROOM);
+    }
+}
+
+ACMD(do_fishing)
+{
+    int skill_num = GET_SKILL(ch, SKILL_FISHING);
+    int percent, prob;
+    struct obj_data *obj = NULL;
+    obj_vnum vnum = NOTHING;
+
+    if (!skill_num) {
+        send_to_char(ch, "Você não sabe como pescar.\r\n");
+        return;
+    }
+
+    if (GET_POS(ch) < POS_SITTING) {
+        send_to_char(ch, "Você precisa estar pelo menos sentado para pescar.\r\n");
+        return;
+    }
+
+    // Check for fishing rod/harpoon requirement
+    if (!IS_MOB(ch)) {   // Only check equipment for players, mobs are assumed to have tools
+        struct obj_data *fishing_tool = NULL;
+        int i;
+
+        // Check for fishing harpoon in inventory or equipment
+        for (i = 0; i < NUM_WEARS; i++) {
+            if (GET_EQ(ch, i) && GET_OBJ_VNUM(GET_EQ(ch, i)) == 4458) {
+                fishing_tool = GET_EQ(ch, i);
+                break;
+            }
+        }
+
+        if (!fishing_tool) {
+            for (obj = ch->carrying; obj; obj = obj->next_content) {
+                if (GET_OBJ_VNUM(obj) == 4458) {
+                    fishing_tool = obj;
+                    break;
+                }
+            }
+        }
+
+        if (!fishing_tool) {
+            send_to_char(ch, "Você precisa de uma vara de pescar ou arpão para pescar.\r\n");
+            return;
+        }
+    }
+
+    // Check if there's water here (could be expanded with sector types)
+    if (SECT(IN_ROOM(ch)) != SECT_WATER_SWIM && SECT(IN_ROOM(ch)) != SECT_WATER_NOSWIM) {
+        send_to_char(ch, "Você precisa estar próximo da água para pescar.\r\n");
+        return;
+    }
+
+    WAIT_STATE(ch, PULSE_VIOLENCE * 3);
+
+    percent = rand_number(1, 101);
+    prob = GET_SKILL(ch, SKILL_FISHING);
+
+    send_to_char(ch, "Você lança sua linha na água e espera pacientemente...\r\n");
+    act("$n lança uma linha na água.", TRUE, ch, 0, 0, TO_ROOM);
+
+    if (percent <= prob) {
+        int roll = rand_number(1, 100);
+
+        if (roll <= 15 + (skill_num / 8)) {
+            vnum = 4402;   // Large fish
+            send_to_char(ch, "Você fisga um peixe grande!\r\n");
+            act("$n fisga um peixe grande!", TRUE, ch, 0, 0, TO_ROOM);
+        } else if (roll <= 40 + (skill_num / 4)) {
+            vnum = 10922;   // Fresh fish
+            send_to_char(ch, "Você fisga um pequeno peixe.\r\n");
+            act("$n fisga um pequeno peixe.", TRUE, ch, 0, 0, TO_ROOM);
+        } else {
+            send_to_char(ch, "Você sente algo mordiscar, mas o peixe escapa.\r\n");
+            act("$n quase fisga um peixe, mas ele escapa.", TRUE, ch, 0, 0, TO_ROOM);
+        }
+
+        if (vnum != NOTHING) {
+            obj = read_object(vnum, VIRTUAL);
+            if (obj) {
+                obj_to_char(obj, ch);
+                send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
+            }
+        }
+
+        // Small chance to attract a school of fish
+        if (percent <= prob && rand_number(1, 100) <= 5) {
+            struct char_data *fish_mob = read_mobile(10864, VIRTUAL);   // Colorful fish school
+            if (fish_mob) {
+                char_to_room(fish_mob, IN_ROOM(ch));
+                send_to_char(ch, "Sua pesca atraiu um cardume de peixes coloridos!\r\n");
+                act("A pesca de $n atraiu um cardume de peixes coloridos!", TRUE, ch, 0, 0, TO_ROOM);
+            }
+        }
+
+        gain_exp(ch, rand_number(3, 12));
+    } else {
+        send_to_char(ch, "Você não consegue pescar nada.\r\n");
+        act("$n não consegue pescar nada.", TRUE, ch, 0, 0, TO_ROOM);
+    }
+}
+
+ACMD(do_forage)
+{
+    int skill_num = GET_SKILL(ch, SKILL_FORAGE);
+    int percent, prob;
+    struct obj_data *obj = NULL;
+    obj_vnum vnum = NOTHING;
+
+    if (!skill_num) {
+        send_to_char(ch, "Você não sabe como forragear.\r\n");
+        return;
+    }
+
+    if (GET_POS(ch) < POS_STANDING) {
+        send_to_char(ch, "Você precisa estar em pé para forragear.\r\n");
+        return;
+    }
+
+    // Better foraging in forests and fields
+    if (SECT(IN_ROOM(ch)) == SECT_CITY || SECT(IN_ROOM(ch)) == SECT_INSIDE) {
+        send_to_char(ch, "Não há nada para forragear neste local.\r\n");
+        return;
+    }
+
+    WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+
+    percent = rand_number(1, 101);
+    prob = GET_SKILL(ch, SKILL_FORAGE) + 10;   // Slightly easier than other skills
+
+    send_to_char(ch, "Você procura por comida e materiais úteis...\r\n");
+    act("$n procura por comida e materiais no local.", TRUE, ch, 0, 0, TO_ROOM);
+
+    if (percent <= prob) {
+        int roll = rand_number(1, 100);
+
+        if (roll <= 20 + (skill_num / 6)) {
+            vnum = 12027;   // Herb bag
+            send_to_char(ch, "Você encontra algumas ervas medicinais!\r\n");
+            act("$n encontra algumas ervas medicinais.", TRUE, ch, 0, 0, TO_ROOM);
+        } else if (roll <= 50 + (skill_num / 3)) {
+            // Randomly choose between strawberries and fresh fruits
+            if (rand_number(1, 2) == 1) {
+                vnum = 11;   // Wild strawberries
+                send_to_char(ch, "Você encontra morangos silvestres!\r\n");
+                act("$n encontra morangos silvestres.", TRUE, ch, 0, 0, TO_ROOM);
+            } else {
+                vnum = 2328;   // Fresh fruits
+                send_to_char(ch, "Você encontra alguns frutos selvagens.\r\n");
+                act("$n encontra alguns frutos selvagens.", TRUE, ch, 0, 0, TO_ROOM);
+            }
+        } else {
+            send_to_char(ch, "Você encontra apenas galhos e folhas secas.\r\n");
+            act("$n encontra apenas galhos e folhas secas.", TRUE, ch, 0, 0, TO_ROOM);
+        }
+
+        if (vnum != NOTHING) {
+            obj = read_object(vnum, VIRTUAL);
+            if (obj) {
+                obj_to_char(obj, ch);
+                send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
+            }
+        }
+
+        // Small chance to attract a curious squirrel
+        if (percent <= prob && rand_number(1, 100) <= 8) {
+            struct char_data *squirrel_mob = read_mobile(10727, VIRTUAL);   // Gray squirrel
+            if (squirrel_mob) {
+                char_to_room(squirrel_mob, IN_ROOM(ch));
+                send_to_char(ch, "Sua procura por comida atraiu um esquilo curioso!\r\n");
+                act("A procura de $n por comida atraiu um esquilo curioso!", TRUE, ch, 0, 0, TO_ROOM);
+            }
+        }
+
+        gain_exp(ch, rand_number(2, 10));
+    } else {
+        send_to_char(ch, "Você não consegue encontrar nada comestível.\r\n");
+        act("$n não consegue encontrar nada comestível.", TRUE, ch, 0, 0, TO_ROOM);
+    }
+}
+
+ACMD(do_eavesdrop)
+{
+    int dir;
+    char buf[MAX_STRING_LENGTH];
+    room_rnum target_room;
+    int skill_num = GET_SKILL(ch, SKILL_EAVESDROP);
+    int percent, prob;
+    struct char_data *temp;
+
+    one_argument(argument, buf);
+
+    if (!skill_num) {
+        send_to_char(ch, "Você não sabe como espionar conversas.\r\n");
+        return;
+    }
+
+    if (GET_POS(ch) < POS_STANDING) {
+        send_to_char(ch, "Você precisa estar em pé para espionar conversas.\r\n");
+        return;
+    }
+
+    // If already listening, stop listening
+    if (ch->listening_to != NOWHERE) {
+        REMOVE_FROM_LIST(ch, world[ch->listening_to].listeners, next_listener);
+        ch->listening_to = NOWHERE;
+        send_to_char(ch, "Você para de espionar conversas.\r\n");
+        return;
+    }
+
+    if (!*buf) {
+        send_to_char(ch, "Em qual direção você gostaria de espionar?\r\n");
+        return;
+    }
+
+    if ((dir = search_block(buf, dirs_pt, FALSE)) < 0) {
+        send_to_char(ch, "Que direção é essa?\r\n");
+        return;
+    }
+
+    // Check skill
+    percent = rand_number(1, 101);
+    prob = skill_num;
+
+    if (percent > prob) {
+        send_to_char(ch, "Você tenta espionar nessa direção, mas falha.\r\n");
+        WAIT_STATE(ch, PULSE_VIOLENCE);
+        return;
+    }
+
+    if (EXIT(ch, dir)) {
+        if (IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED) && EXIT(ch, dir)->keyword) {
+            sprintf(buf, "A %s está fechada.\r\n", fname(EXIT(ch, dir)->keyword));
+            send_to_char(ch, "%s", buf);
+        } else {
+            target_room = EXIT(ch, dir)->to_room;
+            ch->next_listener = world[target_room].listeners;
+            world[target_room].listeners = ch;
+            ch->listening_to = target_room;
+            send_to_char(ch, "Você começa a espionar conversas nessa direção.\r\n");
+            WAIT_STATE(ch, PULSE_VIOLENCE);
+        }
+    } else {
+        send_to_char(ch, "Não há uma sala nessa direção...\r\n");
+    }
+}

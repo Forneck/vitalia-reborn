@@ -143,6 +143,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"drink", "dri", POS_RESTING, do_drink, 0, SCMD_DRINK, CMD_ONEARG},
     {"drop", "dro", POS_RESTING, do_drop, 0, SCMD_DROP, CMD_ONEARG},
     {"eat", "ea", POS_RESTING, do_eat, 0, SCMD_EAT, CMD_ONEARG},
+    {"eavesdrop", "eaves", POS_RESTING, do_cast, 1, SKILL_EAVESDROP, CMD_NOARG},
     {"echo", "ec", POS_SLEEPING, do_echo, LVL_IMMORT, SCMD_ECHO, CMD_NOARG},
     {"emote", "em", POS_RESTING, do_echo, 0, SCMD_EMOTE, CMD_NOARG},
     {":", ":", POS_RESTING, do_echo, 1, SCMD_EMOTE, CMD_NOARG},
@@ -156,6 +157,8 @@ cpp_extern const struct command_info cmd_info[] = {
     {"force", "force", POS_SLEEPING, do_force, LVL_GOD, 0, CMD_TWOARG},
     {"fill", "fil", POS_STANDING, do_pour, 0, SCMD_FILL, CMD_TWOARG},
     {"file", "file", POS_SLEEPING, do_file, LVL_GOD, 0, CMD_NOARG},
+    {"fishing", "fish", POS_STANDING, do_cast, 1, SKILL_FISHING, CMD_NOARG},
+    {"forage", "forage", POS_STANDING, do_cast, 1, SKILL_FORAGE, CMD_NOARG},
     {"flee", "fl", POS_FIGHTING, do_flee, 1, 0, CMD_NOARG},
     {"fly", "fly", POS_DEAD, do_fly, 1, SCMD_FLY, CMD_NOARG},
     {"follow", "fol", POS_RESTING, do_follow, 0, 0, CMD_ONEARG},
@@ -213,6 +216,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"map", "map", POS_STANDING, do_map, 1, 0, CMD_NOARG},
     {"medit", "med", POS_DEAD, do_oasis_medit, LVL_BUILDER, 0, CMD_ONEARG},
     {"meditate", "medi", POS_DEAD, do_cast, 1, SKILL_MEDITATE, CMD_NOARG},
+    {"mine", "mine", POS_STANDING, do_cast, 1, SKILL_MINE, CMD_NOARG},
     {"mlist", "mlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_MLIST, CMD_ONEARG},
     {"mcopy", "mcopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_MEDIT, CMD_TWOARG},
     {"msgedit", "msgedit", POS_DEAD, do_msgedit, LVL_GOD, 0, CMD_NOARG},
@@ -500,6 +504,13 @@ void command_interpreter(struct char_data *ch, char *argument)
     }
 
     REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_HIDE);
+
+    /* Remove character from any listener list when taking action */
+    if (ch->listening_to != NOWHERE) {
+        struct char_data *temp;
+        REMOVE_FROM_LIST(ch, world[ch->listening_to].listeners, next_listener);
+        ch->listening_to = NOWHERE;
+    }
 
     /* just drop to next line for hitting CR */
     skip_spaces(&argument);

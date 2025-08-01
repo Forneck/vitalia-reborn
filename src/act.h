@@ -302,6 +302,10 @@ int can_rebegin(struct char_data *ch);
 int can_elevate(struct char_data *ch);
 ACMD(do_suggestion);
 void show_class_skills(struct char_data *ch, int class_num);
+ACMD(do_mine);
+ACMD(do_fishing);
+ACMD(do_forage);
+ACMD(do_eavesdrop);
 
 /*****************************************************************************
  * Begin Functions and defines for act.social.c
