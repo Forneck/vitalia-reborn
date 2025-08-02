@@ -176,38 +176,38 @@ D3
 0 2900 2907
 S
 #2909
-Degruziel's Audience Chamber~
-   Through the door lies a small office, where Degruziel likes to hold his
-appointments, inner councils, audiences, and other such functions.  There is a
-round table in the center of the room, set with six chairs, and a desk in the
-nearest corner.  The desk is piled with all sorts of papers, scrolls, and
-writing utensils.  The candleholders on both the table and the desk are fancy,
-like everything else in the room, but they also have an air of utility about
-them instead of the plain oppulance of the hallway you just exited.  The stone
-walls are lined in shelves which are covered in books.  Behind the high-backed
-wooden chair is a small painting, and on the north wall is a window facing into
-the garden.
+Câmara de Audiências de Degruziel~
+   Através da porta fica um pequeno escritório, onde Degruziel gosta de realizar
+seus compromissos, conselhos internos, audiências e outras funções similares.
+Há uma mesa redonda no centro do quarto, com seis cadeiras, e uma escrivaninha
+no canto mais próximo. A escrivaninha está empilhada com todos os tipos de
+papéis, pergaminhos e utensílios de escrita. Os castiçais tanto na mesa quanto
+na escrivaninha são elegantes, como tudo mais no quarto, mas também têm um ar
+de utilidade sobre eles ao invés da opulência simples do corredor que você
+acabou de deixar. As paredes de pedra são forradas com prateleiras cobertas de
+livros. Atrás da cadeira de madeira de espaldar alto há uma pequena pintura, e
+na parede norte há uma janela voltada para o jardim.
 ~
 29 8 0 0 0 0
 D2
 ~
-south~
+sul~
 1 2900 2908
 E
-painting~
-   This painting is of Lord Degruziel standing proudly on the deck of a ship at
-full sail, a huge fish held in his outreaching arms.
+pintura~
+   Esta pintura é do Senhor Degruziel em pé orgulhosamente no convés de um navio
+com velas desfraldadas, um peixe enorme segurado em seus braços estendidos.
 ~
 S
 #2910
-Degruziel's Parlor~
-   This must be where Degruziel, the Lord of Porto, entertains his guests.
-There are comfortable chairs and couches strewn about the center of the large
-room.  Above the massive fireplace there sets a large painting of the god of
-the sea.  Before the fireplace there is a long mahogony dining table, large
-enough to seat twelve.  Tapestries cover the stone walls.  From the archway to
-the east drift pleasant smells, while to the west, across a distance filled
-with art, you can see a double curving stairway.
+Salão de Degruziel~
+   Este deve ser onde Degruziel, o Senhor de Porto, recebe seus convidados. Há
+cadeiras confortáveis e sofás espalhados pelo centro do grande quarto. Acima da
+lareira maciça há uma grande pintura do deus do mar. Diante da lareira há uma
+longa mesa de jantar de mogno, grande o suficiente para acomodar doze pessoas.
+Tapeçarias cobrem as paredes de pedra. Do arco a leste vêm cheiros agradáveis,
+enquanto a oeste, através de uma distância repleta de arte, você pode ver uma
+escadaria dupla curvada.
 ~
 29 8 0 0 0 0
 D0
@@ -224,14 +224,15 @@ D3
 0 2900 2908
 S
 #2911
-The Manor Porch~
-   The cart path here leads both eastward toward the stables, where a body
-might visit the horses, or to the north through the garden and back to the
-street.  To the south is the Lord of Porto's oppulant porch and front door.
-The railing of the porch is carved to resemble a vine twisting about itself,
-while the posts are exquisitely carved into fish sitting on their tails, with
-their mouths around the railing.  Their jeweled eyes wink in the light.  The
-door is a large, fanciful myriad of carvings depicting a local legend.
+A Varanda da Mansão~
+   O caminho de carroça aqui leva tanto para leste em direção aos estábulos,
+onde alguém pode visitar os cavalos, ou para o norte através do jardim e de
+volta à rua. Ao sul está a varanda opulenta do Senhor de Porto e a porta da
+frente. O corrimão da varanda é esculpido para se assemelhar a uma videira se
+retorcendo sobre si mesma, enquanto os postes são requintadamente esculpidos
+em peixes sentados em suas caudas, com suas bocas ao redor do corrimão. Seus
+olhos adornados com joias piscam na luz. A porta é uma grande e fantasiosa
+miríade de esculturas retratando uma lenda local.
 ~
 29 0 0 0 0 1
 D0
@@ -241,37 +242,38 @@ D0
 D1
 Nothing.
 ~
-door stable east~
+porta estabulo leste~
 1 2900 2913
 D2
 ~
-door south~
+porta sul~
 1 2900 2910
 E
-door legend~
-   The carvings on the door show a scene of one of Porto's greatest heros,
-Delegarthe Porto himself, slaying the dreaded sea dragon and making Porto a
-safe place to fish.
+porta lenda~
+   As esculturas na porta mostram uma cena de um dos maiores heróis de Porto,
+o próprio Delegarthe Porto, matando o temido dragão marinho e tornando Porto
+um lugar seguro para pescar.
 ~
 E
-railing fish carving porch~
-   Before you is the masterfully decorated porch.  It is roofed in red tiles.
-The railings are all one piece of wood, a flowing flowery vine.  The flowers
-collect water and form pools for small bird baths.  The posts holding the
-railing up are of the same piece of wood as the railing itself, and are of
-Porto's main export, fish, standing on their tails and supporting the vine with
-their mouths.  The sapphires that form the eyes of the fish twinkle merrily,
-almost making you believe the fish to be alive.
+corrimao peixe escultura varanda~
+   Diante de você está a varanda magistralmente decorada. Ela tem telhado de
+telhas vermelhas. Os corrimãos são todos de uma peça de madeira, uma videira
+florida fluindo. As flores coletam água e formam piscinas para pequenos banhos
+de pássaros. Os postes que sustentam o corrimão são da mesma peça de madeira
+que o próprio corrimão, e são da principal exportação de Porto, peixes, em pé
+sobre suas caudas e apoiando a videira com suas bocas. As safiras que formam
+os olhos dos peixes brilham alegremente, quase fazendo você acreditar que os
+peixes estão vivos.
 ~
 S
 #2912
-Tiama's Kitchen~
-   Serving girls bustle about all around this pleasant-smelling room.  It is
-very warm in here, from all the heat being given off by the many stoves, ovens,
-and fireplaces.  The countertops in this room are all dusted with flour, and so
-are the bustling serving girls.  A cooling rack for bread is fastened against
-one wall, while a cellar entrance is not to far away from the archway leading
-back to the parlor.
+Cozinha de Tiama~
+   Criadas se movimentam apressadamente por todo este quarto de cheiro agradável.
+Está muito quente aqui, por todo o calor sendo emanado pelos muitos fogões,
+fornos e lareiras. As bancadas neste quarto estão todas polvilhadas com farinha,
+assim como as criadas apressadas. Uma grade de resfriamento para pão está fixada
+contra uma parede, enquanto uma entrada do porão não está muito longe do arco
+que leva de volta ao salão.
 ~
 29 8 0 0 0 0
 D3
@@ -284,13 +286,14 @@ down cellar door~
 1 2901 2982
 S
 #2913
-The Manor Stables~
-   The interior of the stables is dim, but you can make out many rows of rather
-spacious, grand stables.  A little bit much for horses and such, but if that is
-the way a person wants to spend their money...  The smells of hay and horses
-are strong, and the soft sounds of stable boys calming some of the more skitish
-horses that were startled by your entry can be heard in the far back of the
-complex over the swish of tails and the periodic whinny.
+Os Estábulos da Mansão~
+   O interior dos estábulos é escuro, mas você pode distinguir muitas fileiras
+de estábulos bastante espaçosos e grandiosos. Um pouco demais para cavalos e
+tal, mas se essa é a maneira que uma pessoa quer gastar seu dinheiro... Os
+cheiros de feno e cavalos são fortes, e os sons suaves dos cavalariços
+acalmando alguns dos cavalos mais nervosos que se assustaram com sua entrada
+podem ser ouvidos no fundo do complexo sobre o balançar de caudas e o relincho
+periódico.
 ~
 29 8 0 0 0 0
 D3
@@ -299,15 +302,15 @@ west stable door~
 1 2900 2911
 S
 #2914
-The Lord's Flower Garden~
-   The winding cart path that passes from the street by the Lord's front porch
-and onward to the stables also passes through his magnificent flower garden.
-The gentle hues of purples, reds, whites, yellows, and blues rest the eyes from
-all the other attractions in the city.  The purfume of the everblooming flowers
-fill the air pleasantly, mingling with the salty breeze of the sea.  Vines hang
-festively from the branches of the many trees, and animals cavort under them,
-unafraid.  The cart path continues both toward the street and toward the porch,
-up to you to choose the way.
+O Jardim de Flores do Senhor~
+   O caminho serpenteante de carroça que passa da rua pela varanda frontal do
+Senhor e adiante até os estábulos também passa por seu magnífico jardim de
+flores. Os tons suaves de roxos, vermelhos, brancos, amarelos e azuis descansam
+os olhos de todas as outras atrações na cidade. O perfume das flores sempre
+florescentes enche o ar agradavelmente, misturando-se com a brisa salgada do
+mar. Videiras pendem festivamente dos galhos das muitas árvores, e animais
+brincam sob elas, sem medo. O caminho de carroça continua tanto em direção à
+rua quanto em direção à varanda, cabe a você escolher o caminho.
 ~
 29 0 0 0 0 1
 D0
@@ -319,25 +322,25 @@ D2
 ~
 0 2900 2911
 E
-flower everblooming flowers ever blooming vine vines~
-   The flowers are in many hues and give off meny scents that mix to make an
-overall pleasant purfume.  The plants have been magically altered to produce
-sweet blooms, even in the dead of winter.
+flor flores sempre florescente videira videiras~
+   As flores têm muitos tons e exalam muitos aromas que se misturam para fazer
+um perfume geral agradável. As plantas foram magicamente alteradas para
+produzir flores doces, mesmo no auge do inverno.
 ~
 E
-animal animals~
-   Rabbits, foxes, birds, and other small mammals dart under the trees and
-across your path, absoluetly unafraid.
+animal animais~
+   Coelhos, raposas, pássaros e outros pequenos mamíferos correm sob as árvores
+e através de seu caminho, absolutamente sem medo.
 ~
 S
 #2915
 Um Quarto Cheio de Produtos Roubados~
-   This room, beyond any of the others, is cluttered with many stolen goods.
-Everything from rolls of carpet to chests of coins and jewels are here,
-carefully packed to be sold on the black market.  Some of the towers are so
-high that if you are not careful and wary of your step they might collapse,
-crushing you.  This is obviously where the current inhabitants of the Hideout
-store the majority of their booty.
+   Este quarto, além de qualquer um dos outros, está abarrotado com muitos
+produtos roubados. Tudo desde rolos de tapetes até baús de moedas e joias estão
+aqui, cuidadosamente embalados para serem vendidos no mercado negro. Algumas
+das torres são tão altas que se você não for cuidadoso e cauteloso com seus
+passos elas podem desabar, esmagando você. Este é obviamente onde os habitantes
+atuais do Esconderijo armazenam a maioria de seu saque.
 ~
 29 9 0 0 0 0
 D0
@@ -350,13 +353,12 @@ D1
 0 2900 2916
 S
 #2916
-The Common Room~
-   The floor of this room is littered in rolls of bedding, its single candle
-not helping to illuminate much of anything in the dim room.  The sounds of
-people in slumber filter through, as if the room is very much occupied.  This
-room is way to dim to see the edges of, but it echos as though the chamber is
-very large.  Water drips somewhere to the east, pinging in the bottom of an
-unseen pot.
+O Quarto Comum~
+   O chão deste quarto está forrado com rolos de cama, sua única vela não
+ajudando a iluminar muita coisa no quarto escuro. Os sons de pessoas dormindo
+se filtram através, como se o quarto estivesse muito ocupado. Este quarto está
+muito escuro para ver as bordas, mas ecoa como se a câmara fosse muito grande.
+Água goteja em algum lugar a leste, pingando no fundo de um pote invisível.
 ~
 29 9 0 0 0 0
 D3
@@ -365,12 +367,12 @@ D3
 0 2900 2915
 S
 #2917
-A Room in the Thieve's Hideout~
-   This room is loaded with stolen goods, from the tapestries hanging on the
-walls to the single gold candleholder that holds this room's one candle, to the
-expensive imported rugs on the floor.  The shadows in this room are deep and
-sinister.  You get the feeling it would be wise to keep an eye open for
-trouble.
+Um Quarto no Esconderijo dos Ladrões~
+   Este quarto está carregado com produtos roubados, desde as tapeçarias
+penduradas nas paredes até o único castiçal de ouro que segura a única vela
+deste quarto, até os tapetes importados caros no chão. As sombras neste quarto
+são profundas e sinistras. Você tem a sensação de que seria sábio manter um
+olho aberto para problemas.
 ~
 29 9 0 0 0 0
 D0
@@ -383,21 +385,22 @@ D2
 0 2900 2915
 S
 #2918
-Beyond the Shrine~
-   As you push aside the black velvet curtain you notice that this room is
-quiet and obviously unused by the thick layer of dust on the floor.  It is also
-dark, the black lump of wax on the table indicating the candle that had once
-lit this room burned down long ago.  This room might have once been splendid,
-but now its bright tapestries are faded and covered in dust, the red carpet
-rotten and ready to fall apart.  Even the full-sized portrait on the east wall
-is faded beyond recognition.
+Além do Santuário~
+   Ao empurrar de lado a cortina de veludo preto você percebe que este quarto
+está silencioso e obviamente não usado pela espessa camada de poeira no chão.
+Também está escuro, o pedaço preto de cera na mesa indicando a vela que uma vez
+iluminou este quarto queimou há muito tempo. Este quarto pode ter sido
+esplêndido uma vez, mas agora suas tapeçarias brilhantes estão desbotadas e
+cobertas de poeira, o tapete vermelho apodrecido e pronto para desmoronar.
+Mesmo o retrato de tamanho real na parede leste está desbotado além do
+reconhecimento.
 ~
 29 9 0 0 0 0
 D1
-   The portrait here is faded beyond recognition, but perhaps in the shadows of
-dust you can make out the form of a smiling woman.
+   O retrato aqui está desbotado além do reconhecimento, mas talvez nas sombras
+da poeira você possa distinguir a forma de uma mulher sorridente.
 ~
-portrait~
+retrato~
 1 2900 -1
 D2
 ~
@@ -405,15 +408,15 @@ D2
 0 2900 2919
 S
 #2919
-A Small Shrine~
-   This is the most brilliantly lit room you have seen in the whole of the
-thieve's hideout, with several small, low-burning candels set up under a
-picture of a beautiful woman.  The colors of the candles vary from bright red,
-to dried-blood, to the deepest midnight black.  You feel as though it wouldn't
-be prudent to speak above a whisper in this room.  The air here is serious and
-mournful, with the boards of the floor and both the stone walls and ceiling
-painted black.  The small current of flowing air ripples the black fabric
-covering the arch to the north.
+Um Pequeno Santuário~
+   Este é o quarto mais brilhantemente iluminado que você viu em todo o
+esconderijo dos ladrões, com várias velas pequenas e de chama baixa dispostas
+sob uma imagem de uma mulher bonita. As cores das velas variam de vermelho
+brilhante, a sangue seco, ao preto mais profundo da meia-noite. Você sente
+como se não fosse prudente falar acima de um sussurro neste quarto. O ar aqui
+é sério e melancólico, com as tábuas do chão e tanto as paredes de pedra quanto
+o teto pintados de preto. A pequena corrente de ar fluindo ondula o tecido
+preto cobrindo o arco ao norte.
 ~
 29 8 0 0 0 0
 D0
@@ -426,14 +429,15 @@ D2
 0 2900 2922
 S
 #2920
-Trianne's Hidden Cache~
-   Upon entering the room magical lights trace a script through the air,
-@R'Touch my things and I will find thee and kill thee.  Trianne.  '@n
-Half-rotten chests line the walls, their magical barriers still standing though
-the wood that the spells were cast upon is in a state of advanced decay.
-Golden nuggets and jewels of all colors sparkle through the gaps in the wood,
-reflecting light from the light spell cast upon a globe of rock in the center
-of the room.  So tantalizing...  Too bad you can't touch them.
+Esconderijo Secreto de Trianne~
+   Ao entrar no quarto, luzes mágicas traçam uma escrita pelo ar,
+@R'Toque em minhas coisas e eu te encontrarei e te matarei. Trianne.'@n
+Baús meio apodrecidos se alinham nas paredes, suas barreiras mágicas ainda em
+pé embora a madeira sobre a qual os feitiços foram lançados esteja em estado
+de deterioração avançada. Pepitas douradas e joias de todas as cores brilham
+através das fendas na madeira, refletindo luz do feitiço de luz lançado sobre
+um globo de rocha no centro do quarto. Tão tentador... Que pena que você não
+pode tocá-las.
 ~
 29 8 0 0 0 0
 D3
@@ -442,11 +446,11 @@ west~
 0 2900 2918
 S
 #2921
-A Boring Room~
-   This room is carpeted plainly in black, enhancing the appearance of the
-shadows cast by the single black candle, whose flame burns blue in the room.
-It sets on the simple table, the only furniture.  A rather plain tapestry rests
-hanging from the east wall.
+Um Quarto Tedioso~
+   Este quarto tem carpete simples em preto, realçando a aparência das sombras
+projetadas pela única vela preta, cuja chama queima azul no quarto. Ela fica
+na mesa simples, o único móvel. Uma tapeçaria bastante simples repousa
+pendurada na parede leste.
 ~
 29 9 0 0 0 0
 D1
@@ -459,12 +463,12 @@ D3
 0 2900 2922
 S
 #2922
-Passageway~
-   You find yourself in a passageway of the thieve's hideout, archways on all
-sides of you.  The east is carved simply, the west having a lion's head over
-it, the north a wolf's, and the south a bear's.  Another single candle lights
-this room, casting long shadows around the mismatches furniture and stolen
-tapestries.
+Passagem~
+   Você se encontra em uma passagem do esconderijo dos ladrões, arcos em todos
+os lados de você. O leste é esculpido simplesmente, o oeste tendo uma cabeça
+de leão sobre ele, o norte de um lobo, e o sul de um urso. Outra vela simples
+ilumina este quarto, projetando sombras longas ao redor dos móveis
+incompatíveis e tapeçarias roubadas.
 ~
 29 9 0 0 0 0
 D0
@@ -485,14 +489,14 @@ D3
 0 2900 2923
 S
 #2923
-Thieve's Hideout~
-   When a person thinks of Porto with its Crowded Market and its patrols of
-elite guards one doesn't often think of a thieve's headquarters.  But the is
-what you find yourself in - a skillfully hidden and very dry thieve's hideout.
-Tapestries line the walls, most likely as stolen as the comfortable furniture
-scattered around on the wooden floor.  The light is dim - a single candle
-leaves many conspicuous shadows around the room.  There is a glow through the
-archway to the east, also.
+Esconderijo dos Ladrões~
+   Quando uma pessoa pensa em Porto com seu Mercado Lotado e suas patrulhas de
+guardas de elite, não se pensa frequentemente em um quartel-general de ladrões.
+Mas isso é o que você se encontra - um esconderijo de ladrões habilmente
+escondido e muito seco. Tapeçarias forram as paredes, muito provavelmente tão
+roubadas quanto os móveis confortáveis espalhados pelo chão de madeira. A luz
+é fraca - uma única vela deixa muitas sombras conspícuas ao redor do quarto.
+Há também um brilho através do arco a leste.
 ~
 29 9 0 0 0 0
 D1
@@ -505,15 +509,15 @@ trap door trapdoor up~
 1 2900 2924
 S
 #2924
-Under Porto~
-   This must be a part of the old sewer system of Porto when it was a small
-town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
-water, littered on the bottom by old stones.  The water stretches out far past
-your eyes and your light in some places.  The floor is made up of a watery
-muck, consisting of water, sand, rotten seaweed, and some other things you
-wouldn't even want to think of.  The much is shallow, only up to your knees.
-It churns violently in some places, as if there are living things under it.
-There is a wooden crate in the corner here, sunk into the muck.
+Sob Porto~
+   Esta deve ser uma parte do antigo sistema de esgoto de Porto quando era uma
+pequena cidade. Agora as paredes do esgoto desmoronaram, deixando uma piscina
+gigante de água aberta, coberta no fundo por pedras velhas. A água se estende
+muito além de seus olhos e sua luz em alguns lugares. O chão é feito de uma
+lama aquosa, consistindo de água, areia, algas marinhas podres e algumas outras
+coisas em que você nem quereria pensar. A lama é rasa, apenas até seus joelhos.
+Ela se agita violentamente em alguns lugares, como se houvesse coisas vivas
+embaixo dela. Há uma caixa de madeira no canto aqui, afundada na lama.
 ~
 29 9 0 0 0 0
 D0
@@ -525,21 +529,21 @@ D1
 ~
 0 2900 2926
 D5
-   The muck is still shallow, with a rotting crate stuck into it.
+   A lama ainda está rasa, com uma caixa apodrecendo presa nela.
 ~
 crate~
 1 2900 2923
 S
 #2925
-Under the Docks~
-   It's pretty dark under the docks, though the sand is stable.  The water is
-calm here, being surrounded by rocks that break the waves, leaving you in knee
-deep stagnant water.  The docks here descend to the street to the north,
-forcing you to crouch, while to the south there is a hole in the rocks that
-might be the lair of a king crab.  A rope ladder hands down from the docks
-aboe, green with moss that thrives in the moist air.  It would be a tight
-squeeze, but you also think you might be able to edge between the wood and the
-rocks to the north, but your ability to return is indeed questionable.
+Sob as Docas~
+   Está bem escuro sob as docas, embora a areia seja estável. A água está calma
+aqui, sendo cercada por rochas que quebram as ondas, deixando você em água
+estagnada até os joelhos. As docas aqui descem para a rua ao norte, forçando
+você a se agachar, enquanto ao sul há um buraco nas rochas que pode ser o
+covil de um caranguejo-rei. Uma escada de corda pende das docas acima, verde
+com musgo que prospera no ar úmido. Seria um aperto apertado, mas você também
+acha que pode conseguir se esgueirar entre a madeira e as rochas ao norte, mas
+sua capacidade de retornar é realmente questionável.
 ~
 29 0 0 0 0 1
 D0
@@ -576,10 +580,10 @@ D3
 0 2900 2924
 S
 #2927
-Knee Deep~
-   Wow your going out a long way.  You are now knee deep in some dark waters.
-Will you not reconsider and turn back?  The waters are dark and you can not see
-anything below the surface except for a few small fish.
+Água até os Joelhos~
+   Uau, você está indo muito longe. Agora você está com água até os joelhos em
+algumas águas escuras. Você não reconsideraria e voltaria? As águas são escuras
+e você não consegue ver nada abaixo da superfície exceto alguns pequenos peixes.
 ~
 29 0 0 0 0 0
 D1
@@ -654,14 +658,15 @@ D2
 0 2900 2924
 S
 #2931
-Forward Deck of the Fishing Vessel~
-   The ship rocks gently on the waves, making most landgoers almost lose their
-balance.  A net has been spread across the deck, absolutely heaped with all
-manner of huge fish.  Many sailors line the deck of the ship, their huge
-muscular arms pitching fish over the railing quickly, their movements almost a
-blur.  Skinnier men dart here and there, what they are doing quite unapparent
-to you.  There is a trap door leading to below the decks not far from where you
-stand, while to the south is the door of a cabin.
+Convés Dianteiro da Embarcação de Pesca~
+   O navio balança suavemente nas ondas, fazendo a maioria dos terrestres quase
+perder o equilíbrio. Uma rede foi espalhada pelo convés, absolutamente
+amontoada com todos os tipos de peixes enormes. Muitos marinheiros forram o
+convés do navio, seus braços enormes e musculosos arremessando peixes por
+cima da amurada rapidamente, seus movimentos quase um borrão. Homens mais
+magros correm aqui e ali, o que estão fazendo é bem pouco aparente para você.
+Há um alçapão levando para baixo dos conveses não muito longe de onde você
+está, enquanto ao sul está a porta de uma cabine.
 ~
 29 0 0 0 0 1
 D1
@@ -678,11 +683,12 @@ down hatch trap door trapdoor~
 1 2900 2950
 S
 #2932
-Amid Ships~
-   Fishing vessles line the docks here, their planks puled up and the ships
-dark.  Apparently they have finished unloading cargo and have let their men go
-into the city.  To the east is a bare, wet, windswept area of docks.  Funny,
-but for all the traffic elsewhere nobody is on that section.
+Entre os Navios~
+   Embarcações de pesca forram as docas aqui, suas pranchas puxadas para cima e
+os navios escuros. Aparentemente elas terminaram de descarregar a carga e
+deixaram seus homens irem para a cidade. A leste há uma área nua, molhada e
+varrida pelo vento das docas. Engraçado, mas apesar de todo o tráfego em outros
+lugares, ninguém está naquela seção.
 ~
 29 0 0 0 0 1
 D1
@@ -695,14 +701,14 @@ D3
 0 2900 2935
 S
 #2933
-Beautiful Beach~
-   The beach here is calming to the nerves.  Sunbathers inhabit the sand,
-happily wasting their day on getting a tan and relaxing in the very fine sand.
-The sand is soft and the beach smooth from the constant wind.  The water here
-is warm and calm, lapping in gentle waves.  Children of the town swim merrily,
-all the way out to the jagged rocks that waves crash against the other side of,
-throwing spray into the air.  It is a good thing those rocks are there to act
-as breakers, or this beautiful beach wouldn't be swimable.
+Praia Bela~
+   A praia aqui é calmante para os nervos. Banhistas habitam a areia, felizmente
+desperdiçando seu dia pegando bronze e relaxando na areia muito fina. A areia
+é macia e a praia lisa pelo vento constante. A água aqui é quente e calma,
+lambendo em ondas suaves. Crianças da cidade nadam alegremente, até mesmo até
+as rochas irregulares contra as quais as ondas se chocam do outro lado,
+jogando borrifo no ar. É uma coisa boa que essas rochas estejam lá para agir
+como quebra-mares, ou esta praia bela não seria nadável.
 ~
 29 0 0 0 0 2
 D0
