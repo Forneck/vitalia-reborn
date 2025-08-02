@@ -1312,7 +1312,7 @@ void beware_lightning()
 
                     if (GET_POS(victim) == POS_DEAD) {
                         sprintf(buf, "Um raio matou %s", GET_NAME(victim));
-                        log1("%s",buf);
+                        log1("%s", buf);
                         gain_exp(victim, -(GET_EXP(victim) / 2));
                         if (!IS_NPC(victim)) {
                             REMOVE_BIT_AR(PLR_FLAGS(victim), PLR_KILLER);
