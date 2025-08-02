@@ -6033,7 +6033,7 @@ ACMD(do_portal)
     char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH], arg3[MAX_INPUT_LENGTH], arg4[MAX_INPUT_LENGTH],
         arg5[MAX_INPUT_LENGTH];
     char timer_buf[32];
-    int timer = -1, bidirectional = 0, min_level = 1;
+    int timer = 10, bidirectional = 0, min_level = 1;
     room_vnum dest_vnum;
     room_rnum dest_room;
     struct obj_data *portal;
@@ -6065,7 +6065,7 @@ ACMD(do_portal)
                 send_to_char(ch, "  To: Room [%d]\r\n", portal_dest);
                 send_to_char(ch, "  Level: %d\r\n", portal_level);
 
-                if (portal_timer == -1) {
+                if (portal_timer == 999) {
                     strlcpy(timer_buf, "Infinite", sizeof(timer_buf));
                 } else if (portal_timer == 0) {
                     strlcpy(timer_buf, "Expired", sizeof(timer_buf));
@@ -6138,7 +6138,7 @@ ACMD(do_portal)
     }
 
     /* Validate timer if provided */
-    if (timer != -1 && timer < 0) {
+    if (timer < 0) {
         send_to_char(ch, "Timer must be a non-negative number.\r\n");
         return;
     }
@@ -6154,14 +6154,13 @@ ACMD(do_portal)
 
     /* Set portal properties */
     portal->name = strdup("portal");
-    portal->short_description = strdup("a magical portal");
+    portal->short_description = strdup("Um portal divino");
     portal->description = strdup("A shimmering magical portal hangs in the air here.\r\n");
 
     GET_OBJ_TYPE(portal) = ITEM_PORTAL;
     GET_OBJ_VAL(portal, 0) = dest_vnum; /* Destination room */
     GET_OBJ_VAL(portal, 1) = min_level; /* Minimum level requirement */
     GET_OBJ_TIMER(portal) = timer;      /* Timer (-1 for infinite) */
-    SET_BIT_AR(GET_OBJ_WEAR(portal), ITEM_WEAR_TAKE);
     GET_OBJ_WEIGHT(portal) = 1;
 
     /* Place portal in current room */
@@ -6169,7 +6168,7 @@ ACMD(do_portal)
 
     act("$n weaves magical energies into existence.", TRUE, ch, 0, 0, TO_ROOM);
     act("$p appears with a flash of light!", FALSE, ch, portal, 0, TO_ROOM);
-    act("You create $p leading to room %d.", FALSE, ch, portal, 0, TO_CHAR);
+    act("You create $p.", FALSE, ch, portal, 0, TO_CHAR);
 
     /* Create bidirectional portal if requested */
     if (bidirectional) {
@@ -6186,7 +6185,6 @@ ACMD(do_portal)
         GET_OBJ_VAL(return_portal, 0) = world[IN_ROOM(ch)].number; /* Return to current room */
         GET_OBJ_VAL(return_portal, 1) = min_level;                 /* Same level requirement */
         GET_OBJ_TIMER(return_portal) = timer;                      /* Same timer */
-        SET_BIT_AR(GET_OBJ_WEAR(return_portal), ITEM_WEAR_TAKE);
         GET_OBJ_WEIGHT(return_portal) = 1;
 
         /* Place return portal in destination room */
@@ -6199,7 +6197,7 @@ ACMD(do_portal)
     }
 
     /* Log the action */
-    if (timer == -1) {
+    if (timer == 999) {
         strlcpy(timer_buf, "infinite", sizeof(timer_buf));
     } else {
         snprintf(timer_buf, sizeof(timer_buf), "%d", timer);
