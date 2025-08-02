@@ -1524,7 +1524,7 @@ ACMD(do_forage)
     if (percent <= prob) {
         int roll = rand_number(1, 100);
 
-        if (roll <= 20 + (skill_num / 6)) {
+        if (roll <= 5 + (skill_num / 6)) {
             vnum = 12027;   // Herb bag
             send_to_char(ch, "Você encontra algumas ervas medicinais!\r\n");
             act("$n encontra algumas ervas medicinais.", TRUE, ch, 0, 0, TO_ROOM);

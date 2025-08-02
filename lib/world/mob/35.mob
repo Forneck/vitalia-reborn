@@ -68,7 +68,7 @@ Aparentemente, ele foi o único sobrevivente da emboscada.
 4 17 6 1d12+47 1d8+0
 0 600
 5 5 1
-GenWimpy: 4
+GenWimpy: 5
 E
 #3505
 estalajadeiro~
@@ -83,7 +83,7 @@ hospedaria não é mais o lugar feliz que foi no passado.
 10 8 1 1d12+200 2d8+1
 1500 7000
 9 9 1
-GenWimpy: 17
+GenWimpy: 19
 E
 #3506
 bardo~
@@ -113,7 +113,7 @@ pequenos pedaços.
 8 12 4 1d12+97 1d5+7
 1000 4000
 9 9 1
-GenWimpy: 62
+GenWimpy: 71
 GenRoam: 89
 E
 $

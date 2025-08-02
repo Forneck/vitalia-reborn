@@ -49,7 +49,7 @@ Ele é horrível.
 4 16 5 2d10+40 1d8+1
 50 800
 9 9 0
-GenWimpy: 90
+GenWimpy: 93
 GenRoam: 88
 E
 #4004
@@ -63,8 +63,8 @@ Você percebe toda a maldade no seu olhar...
 5 15 5 2d10+60 2d4+0
 100 900
 9 9 0
-GenWimpy: 99
-GenRoam: 85
+GenWimpy: 97
+GenRoam: 82
 E
 #4005
 orc enorme~
@@ -285,7 +285,7 @@ Bem, ela não parece prestar muita atenção em você.
 0 1500
 9 9 0
 GenWimpy: 100
-GenRoam: 81
+GenRoam: 79
 E
 #4106
 guerreiro~

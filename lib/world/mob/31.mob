@@ -37,8 +37,8 @@ Um chefe muito bravo.
 17 3 1 1d12+210 1d8+18
 0 28000
 9 9 1
-GenWimpy: 13
-GenLoot: 2
+GenWimpy: 14
+GenLoot: 12
 E
 #3103
 sentinela guarda~
@@ -51,7 +51,7 @@ Um grande, forte e bravo sentinela.
 10 10 2 1d12+123 1d8+3
 0 9000
 9 9 1
-GenWimpy: 28
+GenWimpy: 33
 GenLoot: 2
 E
 #3104
@@ -110,6 +110,8 @@ O cisne branco é muito elegante.
 1 20 9 2d6+10 1d5+0
 0 100
 9 9 1
+GenWimpy: 1
+GenLoot: 4
 E
 #3121
 patinho~
@@ -134,8 +136,9 @@ Parece que o pardal está aproveitando a vida.
 0 20 10 2d6+0 1d3+0
 0 25
 9 9 1
-GenWimpy: 6
-GenRoam: 53
+GenWimpy: 8
+GenLoot: 1
+GenRoam: 60
 E
 #3123
 pato~
@@ -148,8 +151,8 @@ O pato á bem gordo. Parece que ele está aproveitando a vida.
 1 20 10 2d6+5 1d4+0
 0 75
 9 9 0
-GenWimpy: 24
-GenRoam: 86
+GenWimpy: 26
+GenRoam: 87
 E
 #3124
 guarda-costas~

@@ -130,7 +130,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 45
+GenWimpy: 42
 GenLoot: 7
 E
 #708
@@ -152,7 +152,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 17
+GenWimpy: 18
 GenRoam: 88
 E
 #710
@@ -198,7 +198,7 @@ Wis: 15
 Con: 15
 Cha: 15
 GenWimpy: 100
-GenLoot: 1
+GenLoot: 2
 E
 #712
 impiedoso ceifeiro~
@@ -241,8 +241,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 60
-GenRoam: 87
+GenWimpy: 65
+GenRoam: 88
 E
 #714
 cavaleiro negro tempestuoso armadura~

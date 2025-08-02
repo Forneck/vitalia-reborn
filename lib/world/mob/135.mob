@@ -54,8 +54,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 21
-GenRoam: 88
+GenWimpy: 27
+GenRoam: 85
 E
 #13504
 inseto galho inseto-galho~
@@ -182,7 +182,7 @@ Seus olhos possuem uma expressão não muito amigável.
 14 6 4 1d1+400 6d1+14
 0 13496
 9 9 1
-GenWimpy: 98
+GenWimpy: 100
 GenLoot: 2
 GenRoam: 89
 E

@@ -72,7 +72,7 @@ Um capitão aposentado está parado aqui, vendendo embarcações.
 ~
 Este capitão comeu mais tubarões em sua vida do que você matou insetos.
 ~
-2156546 0 0 0 0 0 0 0 900 E
+2156544 0 0 0 0 0 0 0 900 E
 108 2 2 1d1+30000 2d8+12
 2000 160000
 9 9 1
@@ -639,7 +639,7 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
-GenWimpy: 43
+GenWimpy: 48
 GenRoam: 89
 E
 T 3013
@@ -654,9 +654,9 @@ Que trabalho pesado ele tem.
 1 20 9 2d6+10 1d5+0
 34 100
 9 9 1
-GenWimpy: 14
-GenLoot: 3
-GenRoam: 87
+GenWimpy: 15
+GenLoot: 5
+GenRoam: 86
 E
 #3062
 cachorro fido~
@@ -671,9 +671,9 @@ cheios de pedaços de carne apodrecida grudadas.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 39
+GenWimpy: 41
 GenLoot: 6
-GenRoam: 88
+GenRoam: 86
 E
 T 3014
 #3063

@@ -9,7 +9,7 @@ Ela parece recém-saída do ovo e esperta.  Suas presas ainda estão crescendo.
 3 18 7 1d12+40 1d7+0
 80 350
 9 9 1
-GenWimpy: 50
+GenWimpy: 49
 GenRoam: 87
 E
 #6302
@@ -66,8 +66,8 @@ Você nota um olhar vidrado nos olhos dela.
 14 7 1 1d12+172 2d8+1
 2000 18000
 9 9 2
-GenWimpy: 12
-GenLoot: 45
+GenWimpy: 13
+GenLoot: 47
 GenEquip: 1
 E
 #6306

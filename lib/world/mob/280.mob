@@ -11,6 +11,7 @@ corpo possui um brilho luminoso.
 15 3 -4 3d8+300 4d4+6
 1000 25000
 9 9 2
+GenWimpy: 4
 E
 #28002
 trabalhador~
@@ -54,7 +55,8 @@ detalhada sem sentir o estômago embrulhar.
 15 5 0 5d6+420 3d5+10
 0 30000
 9 9 0
-GenWimpy: 24
+GenWimpy: 19
+GenRoam: 1
 E
 #28005
 espantalho boneco palha~
@@ -80,9 +82,9 @@ Você vê um goblin com nadadeiras e barbatanas.
 15 5 0 3d10+280 4d3+8
 500 7000
 9 9 0
-GenWimpy: 100
-GenLoot: 6
-GenRoam: 88
+GenWimpy: 97
+GenLoot: 7
+GenRoam: 89
 E
 #28007
 gafanhoto inseto~
@@ -109,7 +111,7 @@ Ali está uma vaca louca, usando um chapéu de Viking!
 9 9 0
 GenWimpy: 100
 GenLoot: 2
-GenRoam: 88
+GenRoam: 89
 E
 #28009
 estatua idolo metal guerreiro~
@@ -230,7 +232,8 @@ treinado para proteger os cidadãos callyunis dos problemas e dos rufiões.
 20 -5 -5 5d6+800 4d4+12
 1500 90000
 9 9 1
-GenWimpy: 3
+GenWimpy: 7
+GenRoam: 10
 E
 #28018
 almirante dasher~

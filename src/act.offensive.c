@@ -424,7 +424,7 @@ ACMD(do_order)
         } else { /* This is order "followers" */
             char buf[MAX_STRING_LENGTH];
 
-            snprintf(buf, sizeof(buf), "$ndita a ordem '%s'.", message);
+            snprintf(buf, sizeof(buf), "$n dita a ordem '%s'.", message);
             act(buf, FALSE, ch, 0, 0, TO_ROOM);
 
             for (k = ch->followers; k; k = k->next) {

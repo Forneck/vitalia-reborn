@@ -652,7 +652,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 25
+GenWimpy: 22
 E
 #17344
 escrava~
@@ -681,8 +681,8 @@ coberto por piolhos.
 73 2 -13 5d13+1200 6d6+17
 10000 60994
 9 9 1
-GenWimpy: 5
-GenLoot: 19
+GenWimpy: 6
+GenLoot: 20
 E
 #17346
 guarda fronteira norte~

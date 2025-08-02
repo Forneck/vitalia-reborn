@@ -104,7 +104,7 @@ de sua ajuda. Afinal, ela é paga para isso...
 15 8 -3 10d10+300 3d3+9
 1000 10020
 9 9 2
-GenWimpy: 86
+GenWimpy: 95
 E
 #11608
 marut menino belo azulada~
@@ -399,7 +399,8 @@ tudo para que nada saia errado.
 15 8 -3 10d10+300 3d3+9
 1000 10020
 9 9 1
-GenWimpy: 48
+GenWimpy: 52
+GenLoot: 1
 GenEquip: 1
 E
 #11628
@@ -651,8 +652,8 @@ Não a perturbe.
 48 2 -5 10d10+770 4d4+19
 1000 54020
 9 9 2
-GenWimpy: 3
-GenLoot: 1
+GenWimpy: 6
+GenLoot: 3
 E
 #11643
 guarda~

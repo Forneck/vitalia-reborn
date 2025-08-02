@@ -16,7 +16,7 @@ guarnecer a própria cidade.
 ~
 29 585 0 0 0 0
 E
-credits~
+creditos~
    Nivan
 ~
 S
@@ -249,12 +249,6 @@ D2
 porta sul~
 1 2900 2910
 E
-porta lenda~
-   As esculturas na porta mostram uma cena de um dos maiores heróis de Porto,
-o próprio Delegarthe Porto, matando o temido dragão marinho e tornando Porto
-um lugar seguro para pescar.
-~
-E
 corrimao peixe escultura varanda~
    Diante de você está a varanda magistralmente decorada. Ela tem telhado de
 telhas vermelhas. Os corrimãos são todos de uma peça de madeira, uma videira
@@ -264,6 +258,12 @@ que o próprio corrimão, e são da principal exportação de Porto, peixes, em 
 sobre suas caudas e apoiando a videira com suas bocas. As safiras que formam
 os olhos dos peixes brilham alegremente, quase fazendo você acreditar que os
 peixes estão vivos.
+~
+E
+porta lenda~
+   As esculturas na porta mostram uma cena de um dos maiores heróis de Porto,
+o próprio Delegarthe Porto, matando o temido dragão marinho e tornando Porto
+um lugar seguro para pescar.
 ~
 S
 #2912
@@ -282,7 +282,7 @@ D3
 0 2900 2910
 D5
 ~
-down cellar door~
+porta baixo~
 1 2901 2982
 S
 #2913
@@ -298,7 +298,7 @@ periódico.
 29 8 0 0 0 0
 D3
 ~
-west stable door~
+porta oeste~
 1 2900 2911
 S
 #2914
@@ -322,15 +322,15 @@ D2
 ~
 0 2900 2911
 E
+animal animais~
+   Coelhos, raposas, pássaros e outros pequenos mamíferos correm sob as árvores
+e através de seu caminho, absolutamente sem medo.
+~
+E
 flor flores sempre florescente videira videiras~
    As flores têm muitos tons e exalam muitos aromas que se misturam para fazer
 um perfume geral agradável. As plantas foram magicamente alteradas para
 produzir flores doces, mesmo no auge do inverno.
-~
-E
-animal animais~
-   Coelhos, raposas, pássaros e outros pequenos mamíferos correm sob as árvores
-e através de seu caminho, absolutamente sem medo.
 ~
 S
 #2915
@@ -682,7 +682,7 @@ south cabin~
 1 2900 2901
 D5
 ~
-down hatch trap door trapdoor~
+alcapao ~
 1 2900 2950
 S
 #2932
@@ -824,8 +824,8 @@ estão cantando. Acima da porta está pregada uma caneca rachada.
 29 0 0 0 0 1
 D0
 ~
-north~
-1 2900 2940
+porta~
+1 -1 2940
 D1
 ~
 ~
@@ -1095,7 +1095,7 @@ em vozes baixas enquanto se olham com amor.
 D0
 ~
 ~
-0 2900 2953
+0 -1 2951
 D2
 ~
 ~
@@ -2065,14 +2065,6 @@ D2
 ~
 0 2900 2995
 E
-color canopies colorful~
-   Quando você olha atentamente para o sul e os flashes de cor, você pode ver que
-os toldos são realmente muitos cobertores densamente tecidos costurados juntos.
-Provavelmente serve para manter o sol longe dos clientes e mercadores. Realmente
-não parece um toldo, mas mais como um teto colorido sobre o mercado, ondulando
-no vento.
-~
-E
 traffic people~
    Pessoas, mulas, cavalos e toda a maneira de coisas correm ao longo da estrada
 aqui, com pressa para chegar onde quer que queiram ir. Os que se dirigem ao sul
@@ -2080,6 +2072,14 @@ carregam cestas vazias, os carroceiros com suas cargas cheias gritando alto com
 seus animais esforçando-se. Os que se dirigem ao norte arrastam cestas pesadas
 cheias da descoberta do dia no mercado, suas expressões satisfeitas de que
 conseguiram o melhor dos mercadores incômodos. Não conseguiram?
+~
+E
+color canopies colorful~
+   Quando você olha atentamente para o sul e os flashes de cor, você pode ver que
+os toldos são realmente muitos cobertores densamente tecidos costurados juntos.
+Provavelmente serve para manter o sol longe dos clientes e mercadores. Realmente
+não parece um toldo, mas mais como um teto colorido sobre o mercado, ondulando
+no vento.
 ~
 S
 #2997
@@ -2105,6 +2105,14 @@ levando em direção ao mercado.
 ~
 0 2900 2996
 E
+color canopies colorful~
+   Quando você olha atentamente para o sul e os flashes de cor, você pode ver que
+os toldos são realmente muitos cobertores densamente tecidos costurados juntos.
+Provavelmente serve para manter o sol longe dos clientes e mercadores. Realmente
+não parece um toldo, mas mais como um teto colorido sobre o mercado, ondulando
+no vento.
+~
+E
 people traffic~
    Pessoas, mulas, cavalos e toda a maneira de coisas correm ao longo da estrada
 aqui, com pressa para chegar onde quer que queiram ir. Os que se dirigem ao sul
@@ -2112,14 +2120,6 @@ carregam cestas vazias, os carroceiros com suas cargas cheias gritando alto com
 seus animais esforçando-se. Os que se dirigem ao norte arrastam cestas pesadas
 cheias da descoberta do dia no mercado, suas expressões satisfeitas de que
 conseguiram o melhor dos mercadores incômodos. Não conseguiram?
-~
-E
-color canopies colorful~
-   Quando você olha atentamente para o sul e os flashes de cor, você pode ver que
-os toldos são realmente muitos cobertores densamente tecidos costurados juntos.
-Provavelmente serve para manter o sol longe dos clientes e mercadores. Realmente
-não parece um toldo, mas mais como um teto colorido sobre o mercado, ondulando
-no vento.
 ~
 S
 #2998

@@ -11,8 +11,8 @@ penetrante.
 0 4466
 9 9 1
 BareHandAttack: 8
-GenWimpy: 53
-GenRoam: 89
+GenWimpy: 45
+GenRoam: 84
 E
 #801
 cigano zigeuner~
@@ -26,7 +26,7 @@ coisa que ele esperaria encontrar.
 35 0 -15 10d10+2250 3d5+18
 1300 75632
 9 9 1
-GenWimpy: 6
+GenWimpy: 9
 GenLoot: 1
 GenRoam: 89
 E

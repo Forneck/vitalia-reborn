@@ -234,7 +234,7 @@ guarda de elite. Ele parece bravo.
 29 3 -4 5d10+822 4d8+0
 1000 35000
 9 9 1
-GenWimpy: 30
+GenWimpy: 37
 GenLoot: 29
 GenRoam: 89
 E
@@ -294,9 +294,8 @@ consegue enxergar um palmo em frente de seu nariz.
 18 9 3 3d5+400 2d6+1
 5000 12000
 9 9 1
-GenWimpy: 15
+GenWimpy: 14
 GenLoot: 5
-GenRoam: 3
 E
 #1622
 prisioneiro gnomo~

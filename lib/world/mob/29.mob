@@ -14,7 +14,8 @@ Str: 17
 Dex: 15
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 7
+GenLoot: 5
 E
 #2913
 turista~
@@ -70,6 +71,8 @@ Str: 14
 Dex: 12
 Int: 14
 Wis: 14
+GenWimpy: 2
+GenRoam: 24
 E
 #2916
 entalhador~
@@ -135,7 +138,7 @@ BareHandAttack: 1
 Dex: 13
 Int: 14
 Wis: 13
-GenWimpy: 3
+GenWimpy: 4
 E
 #2920
 conselheiro Degruziel~
@@ -218,6 +221,7 @@ simplesmente senta aqui, aproveitando toda a vida que acontece ao seu redor.
 100 10000
 5 5 1
 BareHandAttack: 7
+GenWimpy: 2
 E
 #2925
 bardo talentoso~
@@ -277,7 +281,8 @@ Uma poça de lama de aparência incomum está aqui, rodopiando.
 3 19 8 0d0+30 1d2+0
 30 900
 9 9 0
-GenWimpy: 2
+GenWimpy: 9
+GenRoam: 1
 E
 #2929
 monstro lama bolhas~
@@ -346,6 +351,8 @@ através de você. Parece completamente destemido.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 0
+GenWimpy: 2
+GenRoam: 8
 E
 #2934
 garoto servente~
@@ -378,7 +385,8 @@ Str: 14
 Dex: 13
 Int: 15
 Wis: 14
-GenWimpy: 1
+GenWimpy: 3
+GenRoam: 1
 E
 #2936
 dama bem nascida~
@@ -414,6 +422,7 @@ perder uma refeição.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 1
+GenWimpy: 1
 E
 #2938
 guarda mansao~
@@ -466,6 +475,8 @@ Str: 13
 Dex: 13
 Int: 10
 Wis: 10
+GenWimpy: 4
+GenRoam: 1
 E
 #2941
 ladrao sombras escondido~
@@ -500,6 +511,7 @@ nas sombras.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 1
+GenWimpy: 2
 E
 #2943
 crianca pequena~
@@ -551,6 +563,7 @@ Str: 14
 Dex: 15
 Int: 15
 Wis: 15
+GenWimpy: 4
 E
 #2946
 homem dormindo~
@@ -563,7 +576,7 @@ Um homem está aqui, dormindo em sua cama de viagem.
 10 17 4 2d2+100 1d2+1
 100 10000
 4 4 1
-GenWimpy: 4
+GenWimpy: 7
 E
 #2947
 valentao preto~
@@ -584,6 +597,8 @@ Str: 16
 Dex: 15
 Int: 13
 Wis: 14
+GenWimpy: 6
+GenLoot: 2
 E
 #2948
 rei beco luna~
@@ -630,7 +645,8 @@ Um esquizofrênico paranoico está aqui, gritando para o mundo.
 9 9 2
 Str: 14
 Dex: 14
-GenWimpy: 6
+GenWimpy: 11
+GenBrave: 1
 E
 #2951
 idiota~
@@ -694,6 +710,7 @@ brande um arenque para suas delícias ferventes.
 Str: 16
 Dex: 16
 Wis: 13
+GenWimpy: 1
 E
 #2955
 Mithroq minotauro imenso~
@@ -762,6 +779,8 @@ arduamente ganho.
 BareHandAttack: 6
 Str: 15
 Dex: 12
+GenWimpy: 2
+GenRoam: 15
 E
 #2959
 esposa pescador~
@@ -845,6 +864,7 @@ Um caranguejo rei está aqui, parecendo mal-humorado.
 100 10000
 9 9 0
 BareHandAttack: 11
+GenWimpy: 1
 E
 #2964
 mulher~
@@ -915,6 +935,7 @@ lá embaixo esperando que ele jogue um peixe em suas carroças.
 BareHandAttack: 7
 Str: 16
 Dex: 15
+GenWimpy: 2
 E
 #2968
 carroceiro esperando~
@@ -1051,6 +1072,7 @@ Str: 17
 Dex: 12
 Int: 10
 Wis: 10
+GenWimpy: 3
 E
 #2975
 garota especial do harem~
@@ -1071,7 +1093,8 @@ Str: 9
 Dex: 15
 Int: 13
 Wis: 13
-GenWimpy: 3
+GenWimpy: 4
+GenLoot: 1
 E
 T 2902
 #2976
@@ -1095,6 +1118,7 @@ Dex: 15
 Int: 10
 Wis: 12
 GenWimpy: 4
+GenLoot: 3
 E
 #2977
 criada cozinha~
@@ -1125,6 +1149,8 @@ devesse ouvi-lo.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
+GenWimpy: 2
+GenRoam: 11
 E
 T 2901
 #2979
@@ -1139,6 +1165,9 @@ você.
 14 16 1 2d2+140 2d2+2
 140 19600
 9 9 1
+GenWimpy: 4
+GenLoot: 10
+GenEquip: 2
 E
 #2980
 Tiama chefe cozinheira~
@@ -1199,6 +1228,8 @@ importante... Embora o que exatamente ele está fazendo não seja aparente.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
+GenWimpy: 6
+GenRoam: 2
 E
 #2984
 mestre estabulo~
@@ -1257,6 +1288,8 @@ tamparem os ouvidos de seus filhos.
 100 10000
 9 9 1
 BareHandAttack: 7
+GenWimpy: 1
+GenRoam: 21
 E
 #2988
 cavalo empinando~
@@ -1344,6 +1377,8 @@ cidade.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
+GenWimpy: 2
+GenRoam: 29
 E
 #2994
 mulher cidada~
@@ -1358,6 +1393,10 @@ esposa de um comerciante.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
+GenWimpy: 6
+GenLoot: 1
+GenRoam: 13
+GenGroup: 7
 E
 #2995
 mulher maternal~
@@ -1372,6 +1411,7 @@ tem uma expressão zangada no rosto. Nossa, alguém está em apuros.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
+GenWimpy: 2
 E
 #2996
 cidadao homem~
@@ -1386,6 +1426,7 @@ parece estar falando consigo mesmo sobre os preços do mercado.
 100 10000
 9 9 1
 BareHandAttack: 13
+GenWimpy: 1
 E
 #2997
 porteiro elite~

@@ -43,7 +43,7 @@ em retirada..  OPA..  Lá vai seu almoço!
 3 18 7 30d1+5 1d3+1
 0 600
 9 9 1
-GenWimpy: 21
+GenWimpy: 23
 GenRoam: 87
 E
 #5704
@@ -86,7 +86,7 @@ mundo perigoso lá fora.'
 30 0 -2 200d2+200 3d6+11
 20000 40000
 9 9 1
-GenWimpy: 23
+GenWimpy: 19
 GenLoot: 5
 E
 #5707
@@ -131,7 +131,7 @@ sitiada por demônios.
 17 6 1 150d2+30 2d8+8
 1000 22000
 9 9 1
-GenWimpy: 9
+GenWimpy: 8
 GenLoot: 2
 GenEquip: 3
 GenRoam: 89
@@ -194,7 +194,7 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 27
+GenWimpy: 23
 E
 #5714
 rymat conselheiro~
