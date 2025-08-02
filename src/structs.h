@@ -1264,8 +1264,8 @@ struct char_data {
 
     struct group_data *group; /**< Character's Group */
 
-    long pref;           /**< unique session id */
-    sh_int listening_to; /**< Room number being listened to */
+    long pref;              /**< unique session id */
+    room_rnum listening_to; /**< Room number being listened to */
 
     struct list_data *events;
     struct str_plrspells *plrspells;
