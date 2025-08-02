@@ -561,13 +561,14 @@ D3
 S
 #2926
 Sob Porto~
-   This must be a part of the old sewer system of Porto when it was a small
-town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
-water, littered on the bottom by old stones.  The water stretches out far past
-your eyes and your light in some places.  The floor is made up of a watery
-muck, consisting of water, sand, rotten seaweed, and some other things you
-wouldn't even want to think of.  The much is shallow, only up to your knees.
-It churns violently in some places, as if there are living things under it.
+   Esta deve ser uma parte do antigo sistema de esgoto de Porto quando era uma
+pequena cidade. Agora as paredes do esgoto desmoronaram, deixando uma piscina
+gigante de água aberta, coberta no fundo por pedras velhas. A água se estende
+muito além de seus olhos e sua luz em alguns lugares. O chão é feito de uma
+lama aquosa, consistindo de água, areia, algas marinhas podres e algumas outras
+coisas em que você nem quereria pensar. A lama é rasa, apenas até seus joelhos.
+Ela se agita violentamente em alguns lugares, como se houvesse coisas vivas
+embaixo dela.
 ~
 29 9 0 0 0 0
 D0
@@ -593,14 +594,14 @@ D1
 S
 #2928
 Sob Porto~
-   This must be a part of the old sewer system of Porto when it was a small
-town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
-water, littered on the bottom by old stones.  The water stretches out far past
-your eyes and your light in some places.  The floor is made up of a watery
-muck, consisting of water, sand, rotten seaweed, and some other things you
-wouldn't even want to think of.  The muck is shallow, only up to your knees.
-It churns violently in some places, as if there are living things under it.
-Against the wall there is a ladder, ending in a trap door.
+   Esta deve ser uma parte do antigo sistema de esgoto de Porto quando era uma
+pequena cidade. Agora as paredes do esgoto desmoronaram, deixando uma piscina
+gigante de água aberta, coberta no fundo por pedras velhas. A água se estende
+muito além de seus olhos e sua luz em alguns lugares. O chão é feito de uma
+lama aquosa, consistindo de água, areia, algas marinhas podres e algumas outras
+coisas em que você nem quereria pensar. A lama é rasa, apenas até seus joelhos.
+Ela se agita violentamente em alguns lugares, como se houvesse coisas vivas
+embaixo dela. Contra a parede há uma escada, terminando em um alçapão.
 ~
 29 9 0 0 0 0
 D3
@@ -615,13 +616,14 @@ up ladder trap trapdoor~
 S
 #2929
 Sob Porto~
-   This must be a part of the old sewer system of Porto when it was a small
-town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
-water, littered on the bottom by old stones.  The water stretches out far past
-your eyes and your light in some places.  The floor is made up of a watery
-muck, consisting of water, sand, rotten seaweed, and some other things you
-wouldn't even want to think of.  The much is shallow, only up to your knees.
-It churns violently in some places, as if there are living things under it.
+   Esta deve ser uma parte do antigo sistema de esgoto de Porto quando era uma
+pequena cidade. Agora as paredes do esgoto desmoronaram, deixando uma piscina
+gigante de água aberta, coberta no fundo por pedras velhas. A água se estende
+muito além de seus olhos e sua luz em alguns lugares. O chão é feito de uma
+lama aquosa, consistindo de água, areia, algas marinhas podres e algumas outras
+coisas em que você nem quereria pensar. A lama é rasa, apenas até seus joelhos.
+Ela se agita violentamente em alguns lugares, como se houvesse coisas vivas
+embaixo dela.
 ~
 29 9 0 0 0 0
 D1
@@ -639,13 +641,14 @@ D3
 S
 #2930
 Sob Porto~
-   This must be a part of the old sewer system of Porto when it was a small
-town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
-water, littered on the bottom by old stones.  The water stretches out far past
-your eyes and your light in some places.  The floor is made up of a watery
-muck, consisting of water, sand, rotten seaweed, and some other things you
-wouldn't even want to think of.  The much is shallow, only up to your knees.
-It churns violently in some places, as if there are living things under it.
+   Esta deve ser uma parte do antigo sistema de esgoto de Porto quando era uma
+pequena cidade. Agora as paredes do esgoto desmoronaram, deixando uma piscina
+gigante de água aberta, coberta no fundo por pedras velhas. A água se estende
+muito além de seus olhos e sua luz em alguns lugares. O chão é feito de uma
+lama aquosa, consistindo de água, areia, algas marinhas podres e algumas outras
+coisas em que você nem quereria pensar. A lama é rasa, apenas até seus joelhos.
+Ela se agita violentamente em alguns lugares, como se houvesse coisas vivas
+embaixo dela.
 ~
 29 9 0 0 0 0
 D1
@@ -742,14 +745,14 @@ D3
 0 2900 2972
 S
 #2935
-Amid Ships~
-   To the east the docks continue, but to the west there is a huge fishing ship.
-It definitely isn't the small, one-man boat the words 'fishing boat' would
-likely bring to mind.  It is monstrous!  Sailors with carst stand waiting as
-huge fish are constantly pitched over the side of the ship.  Other men stand in
-line, waiting for the front cart to be filled and rush off to the market so
-that they may move up and have their own filled.  A plank ramp leads up onto
-the deck.
+Entre os Navios~
+   A leste as docas continuam, mas a oeste há um navio de pesca enorme. 
+Definitivamente não é o pequeno barco de um homem só que as palavras 'barco de
+pesca' provavelmente trariam à mente. É monstruoso! Marinheiros com carroças
+ficam esperando enquanto peixes enormes são constantemente arremessados para
+fora do navio. Outros homens ficam em fila, esperando que a carroça da frente
+seja enchida e corram para o mercado para que possam subir e ter suas próprias
+carroças cheias. Uma rampa de prancha leva para cima até o convés.
 ~
 29 0 0 0 0 1
 D0
@@ -838,12 +841,12 @@ D3
 S
 #2939
 Caminho Arenoso~
-   This path has barely any traffic compared to the rest of Porto.  The few
-people here are leisurely loitering, enjoying the scenery.  From somewhere to
-the east tendrils of bawdy songs reach your ears, quickly swept away by the
-rush of the ever-present sea breeze.  Looking to the east you can see the rush
-of men on to and off of the dock entrance that is there, while to the west the
-area is peaceful.
+   Este caminho tem pouco tráfego comparado ao resto de Porto. As poucas pessoas
+aqui estão vagueando tranquilamente, apreciando a paisagem. De algum lugar a
+leste tentáculos de canções licenciosas chegam aos seus ouvidos, rapidamente
+levadas pela pressa da brisa marinha sempre presente. Olhando para o leste você
+pode ver a correria de homens entrando e saindo da entrada das docas que está
+lá, enquanto a oeste a área é pacífica.
 ~
 29 0 0 0 0 1
 D1
@@ -929,11 +932,11 @@ D3
 S
 #2944
 Estrada Gaivota Norte~
-   To the east and west North Gull Road continues.  North Gull Road is
-peaceful, though it still has some traffic.  It runs through the residential
-section of Porto, and to the south are mostly houses.  The cobbles here are
-clean, and the smell of salt is strong.  To the north the land slopes upward,
-keeping Porto in its beautiful vale.
+   A leste e oeste a Estrada Gaivota Norte continua. A Estrada Gaivota Norte é
+pacífica, embora ainda tenha algum tráfego. Ela passa pela seção residencial
+de Porto, e ao sul há principalmente casas. As pedras aqui estão limpas, e o
+cheiro de sal é forte. Ao norte a terra se inclina para cima, mantendo Porto
+em seu vale belo.
 ~
 29 0 0 0 0 1
 D1
@@ -947,11 +950,11 @@ D3
 S
 #2945
 Estrada Gaivota Norte~
-   To the east is more of North Gull Road, while to the west there is a small
-intersection.  North Gull Road is peaceful, though it still has some traffic.
-It runs through the residential section of Porto, and to the south are mostly
-houses.  The cobbles here are clean, and the smell of salt is strong.  To the
-north the land slopes upward, keeping Porto in its beautiful vale.
+   A leste há mais da Estrada Gaivota Norte, enquanto a oeste há um pequeno
+cruzamento. A Estrada Gaivota Norte é pacífica, embora ainda tenha algum
+tráfego. Ela passa pela seção residencial de Porto, e ao sul há principalmente
+casas. As pedras aqui estão limpas, e o cheiro de sal é forte. Ao norte a terra
+se inclina para cima, mantendo Porto em seu vale belo.
 ~
 29 0 0 0 0 1
 D1
@@ -965,12 +968,13 @@ D3
 S
 #2946
 Cruzamento da Estrada Gaivota Norte e Beco da Luna~
-   People hurry past this intersection, casting worried glances to the south as
-if they expect something monstrous to leap out of the alley at any second.
-From there the pungent odors of trash and other unpleasant smells drift towards
-you.  Cackling, insane laughter and assorted gibberish can also be heard from
-the darkness created by the overhanging roofs.  It really isn't a wonder people
-hurry past with their noses covered by handkerchiefs.
+   Pessoas passam apressadas por este cruzamento, lançando olhares preocupados
+para o sul como se esperassem que algo monstruoso saltasse do beco a qualquer
+segundo. De lá os odores pungentes de lixo e outros cheiros desagradáveis
+derivam em sua direção. Risadas insanas e gargalhadas e gibberish variado
+também podem ser ouvidos da escuridão criada pelos telhados suspensos.
+Realmente não é surpresa que as pessoas passem apressadas com seus narizes
+cobertos por lenços.
 ~
 29 0 0 0 0 1
 D1
@@ -988,12 +992,12 @@ D3
 S
 #2947
 Estrada Gaivota Norte~
-   To the east is a small intersection, while to the west North Gull Road ends.
-North Gull Road is peaceful, though it still has some traffic.  It runs through
-the residential section of Porto, and to the south are mostly houses.  The
-cobbles here are clean, and the smell of salt is strong.  To the north the land
-slopes upward, keeping Porto in its beautiful vale.  To the south the town
-spreads before your view like a colorful map.
+   A leste há um pequeno cruzamento, enquanto a oeste a Estrada Gaivota Norte
+termina. A Estrada Gaivota Norte é pacífica, embora ainda tenha algum tráfego.
+Ela passa pela seção residencial de Porto, e ao sul há principalmente casas. As
+pedras aqui estão limpas, e o cheiro de sal é forte. Ao norte a terra se
+inclina para cima, mantendo Porto em seu vale belo. Ao sul a cidade se espalha
+diante de sua vista como um mapa colorido.
 ~
 29 0 0 0 0 1
 D1
@@ -1007,12 +1011,13 @@ D3
 S
 #2948
 Quina da Estrada Gaivota Norte e Caminhada do Rio~
-   Here, North Gull Road intersects with Riverwalk.  North Gull road goes east
-through the residential section while Riverwalk goes south, close to the bank
-of the swiftly running stream.  The once rushing, giant river that had carved
-the vale that Porto now lies in is now nothing more than quick stream.  On the
-other side of the stream begins a dense forest, the leafy foliage and dense
-undergrowth so thick that you can see nothing else.
+   Aqui, a Estrada Gaivota Norte se cruza com a Caminhada do Rio. A Estrada
+Gaivota Norte vai a leste através da seção residencial enquanto a Caminhada do
+Rio vai ao sul, perto da margem do riacho que corre rapidamente. O que antes era
+um rio gigante e corrente que havia esculpido o vale em que Porto agora se
+encontra não é agora mais que um riacho rápido. Do outro lado do riacho começa
+uma floresta densa, a folhagem frondosa e vegetação rasteira densa tão espessa
+que você não consegue ver mais nada.
 ~
 29 0 0 0 0 1
 D1
@@ -1026,13 +1031,13 @@ D2
 S
 #2949
 Estrada Gaivota Sul~
-   The houses along South Gull Road are smaller than the ones you can see to
-the north, but they are still quite nice.  This road is patchily shaded by the
-small trees in some of the small yards, and periodic small beds of flowers add
-their scents to the breeze that sweeps across the clean cobbles.  Strolling
-residents occasionally pass you, smiling happily.  To the west is the
-intersection with Riverwalk, which hardly has any more people than South Gull
-Road has.  There are white benches that you might rest on, however.
+   As casas ao longo da Estrada Gaivota Sul são menores que as que você pode ver
+ao norte, mas ainda são bem bonitas. Esta estrada é irregularmente sombreada
+pelas pequenas árvores em alguns dos pequenos pátios, e canteiros pequenos
+periódicos de flores adicionam seus aromas à brisa que varre as pedras limpas.
+Residentes passeando ocasionalmente passam por você, sorrindo felizes. A oeste
+está o cruzamento com a Caminhada do Rio, que dificilmente tem mais pessoas que
+a própria Estrada Gaivota Sul. Há bancos brancos nos quais você pode descansar.
 ~
 29 0 0 0 0 1
 D1
@@ -1046,12 +1051,12 @@ D3
 S
 #2950
 Sob os Conveses~
-   Under the decks is dark, having no windowns or outside light sources.  No
-lamps are lit down here, being a fire hazard on the swaying ship.  Bunks are
-here in neat rows, bolted down to the floor.  There is also a small group of
-tables near here, obviously a mess.  To the north barrels of water are securely
-tied, in the case of the sailors and fishermen getting struck at sea by a
-storm.
+   Sob os conveses está escuro, não tendo janelas ou fontes de luz externa.
+Nenhuma lâmpada está acesa aqui embaixo, sendo um perigo de incêndio no navio
+balançante. Beliches estão aqui em fileiras organizadas, aparafusados ao chão.
+Há também um pequeno grupo de mesas perto daqui, obviamente um refeitório. Ao
+norte barris de água estão firmemente amarrados, no caso dos marinheiros e
+pescadores ficarem presos no mar por uma tempestade.
 ~
 29 9 0 0 0 0
 D4
@@ -1061,10 +1066,11 @@ up hatch trap door trapdoor~
 S
 #2951
 Caminhada do Rio~
-   This walk is pleasantly shaded by trees growing on the west side of the
-road, in small areas before pleasant homes.  To the east beyond a small grassy
-bank the quick stream gurgles merrily on its way to the south and the sea.
-People stroll slowly along, enjoying the shade and looking at the river.
+   Esta caminhada é agradavelmente sombreada por árvores crescendo no lado oeste
+da estrada, em pequenas áreas diante de casas agradáveis. A leste além de uma
+pequena margem gramada o riacho rápido gorgoleja alegremente em seu caminho
+para o sul e o mar. Pessoas caminham lentamente, aproveitando a sombra e
+olhando para o rio.
 ~
 29 0 0 0 0 1
 D0
@@ -1078,12 +1084,12 @@ D2
 S
 #2952
 Caminhada do Rio~
-   This walk is pleasantly shaded by trees growing on the west side of the
-road, in small areas before pleasant homes.  To the east beyond a small grassy
-bank the quick stream gurgles merrily on its way to the south and the sea.
-People stroll slowly along, enjoying the shade and looking at the river.  A few
-couples sit on the grass on the bank of the river, talking in low voices as the
-look at each other with love.
+   Esta caminhada é agradavelmente sombreada por árvores crescendo no lado oeste
+da estrada, em pequenas áreas diante de casas agradáveis. A leste além de uma
+pequena margem gramada o riacho rápido gorgoleja alegremente em seu caminho
+para o sul e o mar. Pessoas caminham lentamente, aproveitando a sombra e
+olhando para o rio. Alguns casais sentam na grama na margem do rio, conversando
+em vozes baixas enquanto se olham com amor.
 ~
 29 0 0 0 0 1
 D0
@@ -1097,11 +1103,11 @@ D2
 S
 #2953
 Cruzamento da Caminhada do Rio e Estrada Gaivota Sul~
-   This intersection has people walking through it in all directions, merrily
-going on their way.  There are the people traversing the Riverwalk, those going
-up and down South Gull Road, and those just resting on the benches.  There is
-even a platform here where a bard might perform.  It is a very peaceful
-intersection.
+   Este cruzamento tem pessoas caminhando através dele em todas as direções,
+alegremente seguindo seus caminhos. Há as pessoas atravessando a Caminhada do
+Rio, aquelas subindo e descendo a Estrada Gaivota Sul, e aquelas apenas
+descansando nos bancos. Há até uma plataforma aqui onde um bardo pode se
+apresentar. É um cruzamento muito pacífico.
 ~
 29 0 0 0 0 1
 D0
@@ -1119,12 +1125,13 @@ D2
 S
 #2954
 Caminhada do Rio~
-   This walk is pleasantly shaded by trees growing on the west side of the
-road, in small areas before pleasant homes.  To the east beyond a small grassy
-bank the quick stream gurgles merrily on its way to the south and the sea.
-People stroll slowly along, enjoying the shade and looking at the river.  This
-is such a nice place, it is no wonder some people just walk along Riverwalk all
-day, enjoying the scenery.
+   Esta caminhada é agradavelmente sombreada por árvores crescendo no lado oeste
+da estrada, em pequenas áreas diante de casas agradáveis. A leste além de uma
+pequena margem gramada o riacho rápido gorgoleja alegremente em seu caminho
+para o sul e o mar. Pessoas caminham lentamente, aproveitando a sombra e
+olhando para o rio. Este é um lugar tão agradável, não é surpresa que algumas
+pessoas apenas caminhem pela Caminhada do Rio o dia todo, aproveitando a
+paisagem.
 ~
 29 0 0 0 0 1
 D0
@@ -1138,11 +1145,12 @@ D2
 S
 #2955
 Caminhada do Rio~
-   This walk is pleasantly shaded by trees growing on the west side of the
-road, in small areas before pleasant homes.  To the east beyond a small grassy
-bank the quick stream gurgles merrily on its way to the south and the sea.
-People stroll slowly along, enjoying the shade and looking at the river, which
-gurgles even louder as it flows over the small rocks here.
+   Esta caminhada é agradavelmente sombreada por árvores crescendo no lado oeste
+da estrada, em pequenas áreas diante de casas agradáveis. A leste além de uma
+pequena margem gramada o riacho rápido gorgoleja alegremente em seu caminho
+para o sul e o mar. Pessoas caminham lentamente, aproveitando a sombra e
+olhando para o rio, que gorgoleja ainda mais alto enquanto flui sobre as
+pequenas pedras aqui.
 ~
 29 0 0 0 0 1
 D0
@@ -1156,11 +1164,12 @@ D2
 S
 #2956
 Caminhada do Rio~
-   This walk is pleasantly shaded by trees growing on the west side of the
-road, in small areas before pleasant homes.  To the east beyond a small grassy
-bank the quick stream gurgles merrily on its way to the south and the sea.
-People stroll slowly along, enjoying the shade and looking at the river.  To
-the south there is an intersection, marking the southern end of Riverwalk.
+   Esta caminhada é agradavelmente sombreada por árvores crescendo no lado oeste
+da estrada, em pequenas áreas diante de casas agradáveis. A leste além de uma
+pequena margem gramada o riacho rápido gorgoleja alegremente em seu caminho
+para o sul e o mar. Pessoas caminham lentamente, aproveitando a sombra e
+olhando para o rio. Ao sul há um cruzamento, marcando o fim sul da Caminhada
+do Rio.
 ~
 29 0 0 0 0 1
 D0
@@ -1174,15 +1183,16 @@ D2
 S
 #2957
 Instrumentos de Destruição de Mithroq~
-   This shop is full of weapons of all kinds.  Indeed it wouldn't be wise to go
-too close to the walls, for the sheer number of naked sharp things hanging from
-the wooden racks there would shred you if any of the delicate structures
-collapsed.  It might be a nice idea to ask the shop keeper why he doesn't get
-sturdier-looking racks...  But then again, maybe he has them flimsy for a
-reason.  There is no way a thief would be able to grab any of those without the
-utmost caution.  The open door to the west leads back to Market Path, while
-Mithroq the minotaur stands behind a counter to the east, sharpening a giant
-sword and looking ready to help you.
+   Esta loja está cheia de armas de todos os tipos. De fato não seria sábio
+chegar muito perto das paredes, pois o grande número de coisas afiadas nuas
+penduradas das prateleiras de madeira ali o despedaçariam se qualquer uma das
+estruturas delicadas desabasse. Pode ser uma boa ideia perguntar ao dono da
+loja por que ele não tem prateleiras de aparência mais resistente... Mas por
+outro lado, talvez ele as tenha frágeis por uma razão. Não há maneira de um
+ladrão conseguir pegar qualquer uma daquelas sem a máxima cautela. A porta
+aberta a oeste leva de volta ao Caminho do Mercado, enquanto Mithroq o minotauro
+fica atrás de um balcão ao leste, afiando uma espada gigante e parecendo pronto
+para ajudá-lo.
 ~
 29 156 0 0 0 0
 D3
@@ -1192,14 +1202,14 @@ D3
 S
 #2958
 Escritório de Milos, o Coletor de Impostos com Hobby Bancário~
-   Through the fancifully carved door you chose to go, and find yourself inside
-a rich, brightly lit room.  You can only enter the smallest part of it,
-however, with a large wooden counter seperating you and the huge pile of gold
-that takes up much of the other half of the room.  A guard stands behihd the
-counter, prepared for trouble with his hand resting lightly on the hilt of his
-sword.  There is also a short, thin gentleman here in rich silk clothes, quite
-obviously Milos the Banker of Porto.  The door to the south leads back to South
-Gull Road.
+   Através da porta fantasiosamente esculpida que você escolheu entrar, você se
+encontra dentro de um quarto rico e bem iluminado. Você só pode entrar na menor
+parte dele, no entanto, com um grande balcão de madeira separando você e a
+pilha enorme de ouro que ocupa muito da outra metade do quarto. Um guarda fica
+atrás do balcão, preparado para problemas com sua mão descansando levemente no
+punho de sua espada. Há também um cavalheiro baixo e magro aqui em roupas de
+seda ricas, obviamente Milos, o Banqueiro de Porto. A porta ao sul leva de
+volta à Estrada Gaivota Sul.
 ~
 29 152 0 0 0 0
 D2
@@ -1209,11 +1219,11 @@ D2
 S
 #2959
 Quina da Caminhada do Rio e Caminho Arenoso~
-   Here Riverwalk turns into Sandy Path.  The stream to the west bubbles
-merrily into the ocean, where it joins with the rest of water.  The sound of
-waves crashing against rocks somewhere to the south fills the air, along with
-the screams of assorted seabirds.  The salty breeze blows a fine, refreshing
-mist onto you face.
+   Aqui a Caminhada do Rio se transforma em Caminho Arenoso. O riacho a oeste
+borbulha alegremente para o oceano, onde se junta com o resto da água. O som
+de ondas batendo contra rochas em algum lugar ao sul enche o ar, junto com os
+gritos de aves marinhas variadas. A brisa salgada sopra uma neblina fina e
+refrescante no seu rosto.
 ~
 29 0 0 0 0 1
 D0
@@ -1231,11 +1241,11 @@ D2
 S
 #2960
 Caminho Arenoso~
-   Here the sand-covered cobbles of Sandy Path aren't very crowded.  Those who
-do pass here either hurry toward the east or leisurely stroll to the south.
-The far-off sound of waves pounding rocks comes faintly to your ears.  To the
-south there is a beautiful sandy beach, and the screams of children can be
-heard mingled with the cries of gulls.
+   Aqui as pedras cobertas de areia do Caminho Arenoso não estão muito lotadas.
+Aqueles que passam aqui ou se apressam em direção ao leste ou caminham
+tranquilamente para o sul. O som distante de ondas batendo contra rochas chega
+fracamente aos seus ouvidos. Ao sul há uma praia arenosa bela, e os gritos de
+crianças podem ser ouvidos misturados com os cries das gaivotas.
 ~
 29 0 0 0 0 1
 D1
@@ -1249,12 +1259,12 @@ D3
 S
 #2961
 Caminho Arenoso~
-   Here the sand-covered cobbles of Sandy Path aren't very crowded.  Those who
-do pass here either hurry toward the east or leisurely stroll to the south.
-The far-off sound of waves pounding rocks comes faintly to your ears.  To the
-south there is a beautiful sandy beach, and the screams of playing children can
-be heard mingled with the cries of gulls.  You can also see the outline of
-jagged rocks far off on the horizon.
+   Aqui as pedras cobertas de areia do Caminho Arenoso não estão muito lotadas.
+Aqueles que passam aqui ou se apressam em direção ao leste ou caminham
+tranquilamente para o sul. O som distante de ondas batendo contra rochas chega
+fracamente aos seus ouvidos. Ao sul há uma praia arenosa bela, e os gritos de
+crianças brincando podem ser ouvidos misturados com os gritos das gaivotas.
+Você também pode ver o contorno de rochas irregulares distantes no horizonte.
 ~
 29 0 0 0 0 1
 D1
@@ -1272,12 +1282,12 @@ D3
 S
 #2962
 Caminho Arenoso~
-   Here the sand-covered cobbles of Sandy Path aren't very crowded, but to the
-south you see what could be sunbathers.  Those who do pass here either hurry
-toward the east or leisurely stroll to the south to join with others.  The
-far-off sound of waves pounding rocks comes faintly to your ears.  To the south
-there is a beautiful sandy beach, and the screams of children can be heard
-mingled with the hungry cries of gulls.
+   Aqui as pedras cobertas de areia do Caminho Arenoso não estão muito lotadas,
+mas ao sul você vê o que poderiam ser banhistas. Aqueles que passam aqui ou se
+apressam em direção ao leste ou caminham tranquilamente para o sul para se
+juntar com outros. O som distante de ondas batendo contra rochas chega
+fracamente aos seus ouvidos. Ao sul há uma praia arenosa bela, e os gritos de
+crianças podem ser ouvidos misturados com os gritos famintos das gaivotas.
 ~
 29 0 0 0 0 1
 D1
@@ -1295,13 +1305,14 @@ D3
 S
 #2963
 Caminho Arenoso~
-   To the south what was previously sandy-looking is now a giant, jagged boulder
-of shiny black rock.  The southeastern breeze drifts the happy screams of
-children toward you.  To the north the door of one of the fishing family's
-house's stands open, the resident of the house is not there.  Perhaps they left
-in a hurry to the beach to retrieve a child, or maybe they went to the market
-for some last minute supplies.  The wind whistles through the cracks on the
-boulders and would set all but a deaf person's teeth on edge.
+   Ao sul o que anteriormente parecia arenoso é agora uma rocha gigante e
+irregular de pedra preta brilhante. A brisa sudeste deriva os gritos felizes de
+crianças em sua direção. Ao norte a porta de uma das casas da família de
+pescadores fica aberta, o residente da casa não está lá. Talvez tenham saído
+com pressa para a praia para buscar uma criança, ou talvez tenham ido ao
+mercado para alguns suprimentos de última hora. O vento assobia através das
+rachaduras nas rochas e faria ranger os dentes de qualquer pessoa exceto as
+surdas.
 ~
 29 0 0 0 0 1
 D0
@@ -1365,11 +1376,12 @@ D2
 S
 #2966
 Boticário da Tia~
-   This room is smoky and smells heavily of incense.  The beads hanging from
-the door rattle as you push them aside to enter, causing Tia to make note of
-your presence before turning back to her cauldron, adding a pinch of a
-strange-smelling herb to the foaming pot.  Other assorted herbs hang from the
-ceiling and both empty and full vials and bottles fill the shelves on the wall.
+   Este quarto é enfumaçado e cheira intensamente a incenso. As contas pendendo
+da porta balançam enquanto você as empurra de lado para entrar, fazendo Tia
+notar sua presença antes de se virar de volta para seu caldeirão, adicionando
+uma pitada de uma erva de cheiro estranho ao pote espumante. Outras ervas
+variadas pendem do teto e frascos e garrafas vazios e cheios enchem as
+prateleiras na parede.
 ~
 29 156 0 0 0 0
 D3
@@ -1379,13 +1391,14 @@ D3
 S
 #2967
 Nas Docas~
-   Contrary to the north, where the waves pound upon the rocks and stir the
-whole ocean up into a white froth, here merchant ships line the raised wooden
-docks in the safely deep water.  You can tell they are merchant vessels, for no
-fisherman with carts or anything else dash up and down their planks like they
-do for the ships further down.  The merchant vessels have sails of many colors,
-with flags from assorted kingdoms.  To the north the street is a bit far off,
-while to the south there are some of Porto's famous fishing vessels.
+   Contrário ao norte, onde as ondas batem nas rochas e agitam todo o oceano em
+uma espuma branca, aqui navios mercantes forram as docas de madeira elevadas na
+água profunda e segura. Você pode dizer que são embarcações mercantes, pois
+nenhum pescador com carroças ou qualquer outra coisa corre para cima e para
+baixo de suas pranchas como fazem para os navios mais abaixo. As embarcações
+mercantes têm velas de muitas cores, com bandeiras de reinos variados. Ao norte
+a rua está um pouco distante, enquanto ao sul há algumas das famosas
+embarcações de pesca de Porto.
 ~
 29 0 0 0 0 1
 D0
@@ -1399,14 +1412,15 @@ D2
 S
 #2968
 Praia Bela~
-   Here is a serene sandy beach.  Happily smiling sunbathers sprawl in the
-sand, making those who wish to walk the beach have to watch their step or step
-upon a protruding limb.  The fine sand is soft, the beachsmoothed by the winds
-constantly sweeping it.  The water here is warm and calm, lapping in gentle
-waves.  Children in their underwear, probably children of the town, swim
-merrily, all the way out to the jagged rocks that waves crash against the other
-side of, throwing spray into the air.  It is a good thing those rocks are there
-to act as breakers, or this beautiful beach wouldn't be swimable.
+   Aqui há uma praia arenosa serena. Banhistas sorrindo felizmente se espalham
+na areia, fazendo aqueles que desejam caminhar pela praia terem que observar
+seus passos ou pisar em um membro saliente. A areia fina é macia, a praia
+alisada pelos ventos constantemente varrendo-a. A água aqui é quente e calma,
+lambendo em ondas suaves. Crianças em sua roupa íntima, provavelmente crianças
+da cidade, nadam alegremente, até as rochas irregulares contra as quais as
+ondas se chocam do outro lado, jogando borrifo no ar. É uma coisa boa que
+essas rochas estejam lá para agir como quebra-mares, ou esta praia bela não
+seria nadável.
 ~
 29 0 0 0 0 2
 D0
@@ -1420,12 +1434,12 @@ D3
 S
 #2969
 Água até os Joelhos~
-   Contrary to the sandy cobbled walkway running to the north, standing in this
-apparently stable sand results in your sinking into the watery quicksand up to
-your knees before your feet come in contact with something solid.  To the east
-is another small stretch of quicksand beach before the docks begin.  To the
-south the sea begins, pounding aginst the jagged rocks in the quickly deepening
-water.
+   Contrário ao caminho pavimentado arenoso correndo ao norte, ficar nesta areia
+aparentemente estável resulta em você afundando na areia movediça aquosa até
+seus joelhos antes que seus pés entrem em contato com algo sólido. A leste há
+outro pequeno trecho de praia de areia movediça antes das docas começarem. Ao
+sul o mar começa, batendo contra as rochas irregulares na água que se aprofunda
+rapidamente.
 ~
 29 0 0 0 0 6
 D0
@@ -1439,12 +1453,12 @@ D3
 S
 #2970
 Água até os Joelhos~
-   Contrary to the sandy cobbled walkway running to the north, standing in this
-apparently stable sand results in your sinking into the watery quicksand up to
-your knees before your feet come in contact with something solid.  To the west
-Are the thick, tall pillars that support the huge docks.  The area under the
-docks is dark.  To the south the sea begins, pounding aginst the jagged rocks
-in the quickly deepening water.
+   Contrário ao caminho pavimentado arenoso correndo ao norte, ficar nesta areia
+aparentemente estável resulta em você afundando na areia movediça aquosa até
+seus joelhos antes que seus pés entrem em contato com algo sólido. A oeste
+estão os pilares grossos e altos que sustentam as docas enormes. A área sob as
+docas está escura. Ao sul o mar começa, batendo contra as rochas irregulares na
+água que se aprofunda rapidamente.
 ~
 29 0 0 0 0 6
 D0
@@ -1462,12 +1476,12 @@ D3
 S
 #2971
 Cruzamento da Estrada do Mercado e Caminho Arenoso~
-   The cobbled road of Porto here is almost covered by a thin layer of sand,
-with more constantly blowing in on the sea breeze coming from the south.
-There is also the beginning of the sea to the south, the sand interspersed with
-many jagged rocks upon which the waves break.  To the west Sandy Path, earned
-of its name, travels unbroken.  To the east is a wooden shack with a sign
-depicting a boat nailed over the door.
+   A estrada pavimentada de Porto aqui está quase coberta por uma camada fina
+de areia, com mais constantemente soprando na brisa marinha vinda do sul. Há
+também o início do mar ao sul, a areia intercalada com muitas rochas irregulares
+nas quais as ondas se quebram. A oeste o Caminho Arenoso, merecedor de seu nome,
+viaja ininterrupto. A leste há uma cabana de madeira com uma placa retratando
+um barco pregada sobre a porta.
 ~
 29 0 0 0 0 1
 D0
@@ -1495,12 +1509,12 @@ Crafts.
 S
 #2972
 Vestuário Protetor de Aramut~
-   As you enter the shack you see a wizened old man standing over an almost
-finished piece of chain mail, adding the finishing touches.  There are all
-sorts of armor and clothes hanging from the ceiling and mounted upon the walls.
-The old man looks up as you enter, quickly jumping behind a counter against the
-eastern wall.  Behind the counter there is a squat door leading to a back room,
-presumably Aramut's workshop.
+   Ao entrar na cabana você vê um velho enrugado parado sobre uma peça de cota
+de malha quase terminada, adicionando os toques finais. Há todos os tipos de
+armaduras e roupas penduradas do teto e montadas nas paredes. O velho levanta
+os olhos quando você entra, rapidamente pulando atrás de um balcão contra a
+parede leste. Atrás do balcão há uma porta baixa levando a um quarto dos fundos,
+presumivelmente a oficina de Aramut.
 ~
 29 156 0 0 0 0
 D1
@@ -1514,15 +1528,15 @@ D3
 S
 #2973
 Beco da Luna~
-   The narrow alley is twisting, dark, and full of rotting trash.  The niches
-in the walls hold eyes the glow the reflection of your own light back at you,
-and laughter echos in the close space along with gibberish and screams, seeming
-to come from everywhere and nowhere at once.  Rats scurry around your feet and
-watch you from the shadows, hostile and almost as large as small cats.  It is
-not much of a wonder that the people of Porto avoid this place.  The
-inhabitants of this alley shy away from the small amount of light streaming in
-from the south and the intersection, their eyes accustomed to darkness and hurt
-by the natural light.
+   O beco estreito é sinuoso, escuro e cheio de lixo podre. Os nichos nas
+paredes contêm olhos que brilham o reflexo de sua própria luz de volta para
+você, e risadas ecoam no espaço próximo junto com gibberish e gritos, parecendo
+vir de todos os lugares e lugar nenhum ao mesmo tempo. Ratos correm ao redor de
+seus pés e observam você das sombras, hostis e quase tão grandes quanto gatos
+pequenos. Não é muito de se admirar que as pessoas de Porto evitem este lugar.
+Os habitantes desta pista se esquivam da pequena quantidade de luz correndo do
+sul e da interseção, seus olhos acostumados à escuridão e machucados pela luz
+natural.
 ~
 29 1 0 0 0 1
 D0
@@ -1536,14 +1550,14 @@ D2
 S
 #2974
 Beco da Luna~
-   The narrow alley is twisting, dark, and full of rotting trash.  The niches
-in the walls hold eyes the glow the reflection of your own light back at you,
-and laughter echos in the close space along with gibberish and screams, seeming
-to come from everywhere and nowhere at once.  Rats scurry around your feet and
-watch you from the shadows, hostile and almost as large as small cats.  It is
-not much of a wonder that the people of Porto avoid this place.  The people at
-the comparatively light intersection to the north hurry past with their heads
-down.
+   O beco estreito é sinuoso, escuro e cheio de lixo podre. Os nichos nas
+paredes contêm olhos que brilham o reflexo de sua própria luz de volta para
+você, e risadas ecoam no espaço próximo junto com gibberish e gritos, parecendo
+vir de todos os lugares e lugar nenhum ao mesmo tempo. Ratos correm ao redor de
+seus pés e observam você das sombras, hostis e quase tão grandes quanto gatos
+pequenos. Não é muito de se admirar que as pessoas de Porto evitem este lugar.
+As pessoas na interseção comparativamente iluminada ao norte passam apressadas
+com suas cabeças baixas.
 ~
 29 1 0 0 0 1
 D0
@@ -1683,13 +1697,14 @@ D2
 S
 #2981
 A Cabana do Pescador~
-   This shack is quite small, but looks very comfortable.  Against the east
-wall three bunks are stacked on top of each other in such a way as to fit, but
-to give each person enough space to lay down comfortably.  There is a small
-stove against the north wall, its red coals lighting the room.  A new hangs
-across the single window facing to the south and Sandy Path, serving as a
-curtain.  There is a bin of fish, Porto's main staple, against the west wall.
-The small floor, what isn't covered by a rug, is neatly swept dirt.
+   Esta cabana é bem pequena, mas parece muito confortável. Contra a parede leste
+três beliches estão empilhados um sobre o outro de tal forma a se encaixar, mas
+para dar a cada pessoa espaço suficiente para se deitar confortavelmente. Há um
+pequeno fogão contra a parede norte, suas brasas vermelhas iluminando o quarto.
+Uma rede pende sobre a única janela voltada para o sul e o Caminho Arenoso,
+servindo como cortina. Há uma lata de peixe, alimento básico principal de Porto,
+contra a parede oeste. O pequeno chão, o que não está coberto por um tapete, é
+terra varrida organizadamente.
 ~
 29 0 0 0 0 1
 D2
@@ -1699,14 +1714,15 @@ D2
 S
 #2982
 A Câmara de Tortura da Mansão~
-   This isn't exactly the cellar that the doors implied it would be.  It looks
-as though Lord Degruziel isn't exactly popular with everybody.  The room is
-dimly lit by a glowing brazier filled with red hot coals.  There is also a hot
-iron rod in the brazier, and it doesn't look too friendly.  You can barely make
-out a rack of glinting torture implements on the far wall, right to the left of
-the iron maiden.  Some of those instruments would make even the most
-hard-hearted and evil of the realm balk.  There is a heavy iron door to the
-west, with a small slit for looking inside to check on the prisoners.
+   Este não é exatamente o porão que as portas davam a entender que seria.
+Parece que o Senhor Degruziel não é exatamente popular com todos. O quarto está
+fracamente iluminado por um braseiro brilhante cheio de brasas vermelhas
+quentes. Há também uma vara de ferro quente no braseiro, e não parece muito
+amigável. Você pode mal distinguir uma prateleira de instrumentos de tortura
+reluzentes na parede distante, bem à esquerda da donzela de ferro. Alguns
+daqueles instrumentos fariam até mesmo os mais duros de coração e malignos do
+reino hesitar. Há uma porta de ferro pesada a oeste, com uma pequena fenda
+para olhar dentro para verificar os prisioneiros.
 ~
 29 8 0 0 0 0
 D3
@@ -1719,19 +1735,19 @@ D4
 0 2900 2912
 E
 door slit prison prisoner prisoners~
-   The prison room is dark and damp, and you can't see much else through the
-small slit.
+   O quarto da prisão está escuro e úmido, e você não consegue ver muito mais
+através da pequena fenda.
 ~
 S
 #2983
 Praça da Luna~
-   You step into the light created by many burning bundles of oil-soaked cloth,
-obviously makeshift torches, which light this open square.  Piles of filthy
-rags are heaped against the walls, serving as beds for those without homes.
-There is an old wooden chair against the east 'wall' of the square.  Once it
-might have been magnificent, the square, but now the once-beautiful fountain is
-just a granite-incased stagnant puddle, and the square itself is horribly dirty
-and in disrepair.
+   Você entra na luz criada por muitos feixes queimando de tecido embebido em
+óleo, obviamente tochas improvisadas, que iluminam esta praça aberta. Pilhas
+de trapos imundos estão amontoadas contra as paredes, servindo como camas para
+aqueles sem casas. Há uma cadeira de madeira velha contra a 'parede' leste da
+praça. Ela pode ter sido magnífica uma vez, a praça, mas agora sua fonte uma
+vez bela é apenas uma poça estagnada incrustada de granito, e a própria praça
+está horrivelmente suja e em estado de abandono.
 ~
 29 0 0 0 0 1
 D3
@@ -1739,28 +1755,28 @@ D3
 ~
 0 2900 2984
 D5
-The chair sets comfortably on the dirty ground, its legs digging in to the dried dirt.
+A cadeira fica confortavelmente no chão sujo, suas pernas afundando na terra seca.
 ~
 chair~
 1 2900 2928
 E
 chair~
-   You see a chair that might have once been marvelous, but is now in an
-advanced state of decay.  What might have once been intricate carvings are now
-only small indentations in the rotting wood, and one of the chair's legs is
-missing.
+   Você vê uma cadeira que pode ter sido maravilhosa uma vez, mas está agora em
+um estado avançado de deterioração. O que pode ter sido entalhes intrincados
+são agora apenas pequenas ranhuras na madeira apodrecida, e uma das pernas da
+cadeira está faltando.
 ~
 S
 #2984
 Beco da Luna~
-   The narrow alley is twisting, dark, and full of rotting trash.  The niches
-in the walls hold eyes the glow the reflection of your own light back at you,
-and laughter echos in the close space along with gibberish and screams seeming
-to come from everywhere and nowhere at once.  Rats scurry around your feet and
-watch you from the shadows, hostile and almost as large as small cats.  It is
-not much of a wonder that the people of Porto avoid this place, using it only
-as a dump.  Light streams in from the east, almost allowing you to see the
-path.
+   O beco estreito é sinuoso, escuro e cheio de lixo podre. Os nichos nas
+paredes contêm olhos que brilham o reflexo de sua própria luz de volta para
+você, e risadas ecoam no espaço próximo junto com gibberish e gritos parecendo
+vir de todos os lugares e lugar nenhum ao mesmo tempo. Ratos correm ao redor de
+seus pés e observam você das sombras, hostis e quase tão grandes quanto gatos
+pequenos. Não é muito de se admirar que as pessoas de Porto evitem este lugar,
+usando-o apenas como despejo. Luz entra do leste, quase permitindo que você
+veja o caminho.
 ~
 29 1 0 0 0 1
 D0
@@ -1774,13 +1790,13 @@ D1
 S
 #2985
 Beco da Luna~
-   The narrow alley is twisting, dark, and full of rotting trash.  The niches
-in the walls hold eyes the glow the reflection of your own light back at you,
-and laughter echos in the close space along with gibberish and screams, seeming
-to come from everywhere and nowhere at once.  Rats scurry around your feet and
-watch you from the shadows, hostile and almost as large as small cats.  It is
-not much of a wonder that the people of Porto avoid this place.  Somewhere to
-the south there is the soft glow of light.
+   O beco estreito é sinuoso, escuro e cheio de lixo podre. Os nichos nas
+paredes contêm olhos que brilham o reflexo de sua própria luz de volta para
+você, e risadas ecoam no espaço próximo junto com gibberish e gritos, parecendo
+vir de todos os lugares e lugar nenhum ao mesmo tempo. Ratos correm ao redor de
+seus pés e observam você das sombras, hostis e quase tão grandes quanto gatos
+pequenos. Não é muito de se admirar que as pessoas de Porto evitem este lugar.
+Em algum lugar ao sul há o brilho suave da luz.
 ~
 29 1 0 0 0 1
 D0
@@ -1794,12 +1810,12 @@ D2
 S
 #2986
 Beco da Luna~
-   The narrow alley is twisting, dark, and full of rotting trash.  The niches
-in the walls hold eyes the glow the reflection of your own light back at you,
-and laughter echos in the close space along with gibberish and screams, seeming
-to come from everywhere and nowhere at once.  Rats scurry around your feet and
-watch you from the shadows, hostile and almost as large as small cats.  It is
-not much of a wonder that the people of Porto avoid this place.
+   O beco estreito é sinuoso, escuro e cheio de lixo podre. Os nichos nas
+paredes contêm olhos que brilham o reflexo de sua própria luz de volta para
+você, e risadas ecoam no espaço próximo junto com gibberish e gritos, parecendo
+vir de todos os lugares e lugar nenhum ao mesmo tempo. Ratos correm ao redor de
+seus pés e observam você das sombras, hostis e quase tão grandes quanto gatos
+pequenos. Não é muito de se admirar que as pessoas de Porto evitem este lugar.
 ~
 29 1 0 0 0 1
 D0
@@ -1813,12 +1829,12 @@ D2
 S
 #2987
 Cruzamento da Estrada Gaivota Sul e Beco da Luna~
-   Animal-like howls from both the north and south block out the sounds of the
-wind here, originating from a narrow, filthy alley.  The overhanging roofs make
-it as black as pitch and the odd flashes you see comming from the dark of the
-alley might be reflections of light in animal...  or human...  eyes.  It isn't
-a wonder people hurry past this intersection with worried glances to the north
-and south.
+   Uivos semelhantes a animais do norte e sul bloqueiam os sons do vento aqui,
+originando de um beco estreito e imundo. Os telhados suspensos o tornam negro
+como breu e os flashes estranhos que você vê vindo da escuridão do beco podem
+ser reflexos de luz em olhos de animais... ou humanos... Não é surpresa que as
+pessoas passem apressadas por este cruzamento com olhares preocupados para o
+norte e sul.
 ~
 29 0 0 0 0 1
 D0
@@ -1840,12 +1856,12 @@ D3
 S
 #2988
 Estrada Gaivota Sul~
-   The houses along South Gull Road are smaller than the ones you can see to
-the north, but they are still quite nice.  This road is patchily shaded by the
-small trees in some of the small yards, and periodic small beds of flowers add
-their scents to the breeze that sweeps across the clean cobbles.  Strolling
-residents occasionally pass you, smiling happily.  Perhaps they don't hear the
-soft maniacal laughter that comes from somewhere to the east.
+   As casas ao longo da Estrada Gaivota Sul são menores que as que você pode ver
+ao norte, mas ainda são bem bonitas. Esta estrada é irregularmente sombreada
+pelas pequenas árvores em alguns dos pequenos pátios, e canteiros pequenos
+periódicos de flores adicionam seus aromas à brisa que varre as pedras limpas.
+Residentes passeando ocasionalmente passam por você, sorrindo felizes. Talvez
+eles não ouçam as risadas suaves e maníacas que vêm de algum lugar a leste.
 ~
 29 0 0 0 0 1
 D1
@@ -1859,15 +1875,15 @@ D3
 S
 #2989
 Estrada Gaivota Sul~
-   The houses along South Gull Road are smaller than the ones you can see to
-the north, but they are still quite nice.  This road is patchily shaded by the
-small trees in some of the small yards, and periodic small beds of flowers add
-their scents to the breeze that sweeps across the clean cobbles.  Strolling
-residents occasionally pass you, smiling happily.  The road turns south here,
-while to the north an oppulent building has open doors, which spill a rich
-golden light onto the street.  Through the tiny, barred window you can catchi
-glimpses of well-armed guards and a sparkling pile of what appears to be gold
-coins.
+   As casas ao longo da Estrada Gaivota Sul são menores que as que você pode ver
+ao norte, mas ainda são bem bonitas. Esta estrada é irregularmente sombreada
+pelas pequenas árvores em alguns dos pequenos pátios, e canteiros pequenos
+periódicos de flores adicionam seus aromas à brisa que varre as pedras limpas.
+Residentes passeando ocasionalmente passam por você, sorrindo felizes. A estrada
+vira ao sul aqui, enquanto ao norte um prédio opulento tem portas abertas, que
+derramam uma luz dourada rica na rua. Através da pequena janela com grades você
+pode capturar vislumbres de guardas bem armados e uma pilha cintilante do que
+parece ser moedas de ouro.
 ~
 29 0 0 0 0 1
 D0
@@ -1885,12 +1901,13 @@ D3
 S
 #2990
 Estrada Gaivota Sul~
-   The houses along South Gull Road are smaller than the ones you can see to
-the north, but they are still quite nice.  This road is patchily shaded by the
-small trees in some of the small yards, and periodic small beds of flowers add
-their scents to the breeze that sweeps across the clean cobbles.  Strolling
-residents occasionally pass you, smiling happily.  Somewhere to the southeast
-you can see the tall white tower of the Lord of Porto's Manor House.
+   As casas ao longo da Estrada Gaivota Sul são menores que as que você pode ver
+ao norte, mas ainda são bem bonitas. Esta estrada é irregularmente sombreada
+pelas pequenas árvores em alguns dos pequenos pátios, e canteiros pequenos
+periódicos de flores adicionam seus aromas à brisa que varre as pedras limpas.
+Residentes passeando ocasionalmente passam por você, sorrindo felizes. Em algum
+lugar ao sudeste você pode ver a torre branca alta da Casa da Mansão do Senhor
+de Porto.
 ~
 29 0 0 0 0 1
 D0
@@ -1904,14 +1921,14 @@ D1
 S
 #2991
 Estrada Gaivota Sul~
-   Quite contrary to the crowded market to the east, this street is somehow
-peaceful.  This may just be because of the patrols of brawny guards that pass
-by at regular intervals.  The smell of fish that is so prrevalent elsewhere in
-Porto is almost absent from the air here, being replaced by the salty tang of
-the sea breeze to the south which is carrying the sweet perfume of flowers your
-way.  To the south the white tallness of the tower protruding from the manor
-that lies there is like a bone finger raised in realization of the answer to a
-pressing question.
+   Bem contrário ao mercado lotado a leste, esta rua é de alguma forma pacífica.
+Isso pode ser apenas por causa das patrulhas de guardas musculosos que passam
+em intervalos regulares. O cheiro de peixe que é tão prevalente em outros
+lugares de Porto está quase ausente do ar aqui, sendo substituído pelo aroma
+salgado da brisa marinha ao sul que está carregando o perfume doce das flores
+em sua direção. Ao sul a brancura alta da torre projetando da mansão que fica
+lá é como um dedo de osso levantado na percepção da resposta a uma pergunta
+urgente.
 ~
 29 0 0 0 0 0
 D1
