@@ -1,28 +1,28 @@
 #2900
-Rusty Key~
-a rusty key~
-A rusty key is here, getting rustier by the minute.~
+Chave Enferrujada~
+uma chave enferrujada~
+Uma chave enferrujada está aqui, enferrujando mais a cada minuto.~
 ~
 18 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 1 0 0
 E
-key rusty~
-   A rusty key is here.  It has a fish engraved upon it, and looks like it
-might fit on a keyring.
+chave enferrujada~
+   Uma chave enferrujada está aqui. Tem um peixe gravado nela, e parece que
+pode caber em um chaveiro.
 ~
 #2901
-Shining Silver Key~
-a shining silver key~
-A shining silver key is here, glinting merrily.~
+Chave de Prata Brilhante~
+uma chave de prata brilhante~
+Uma chave de prata brilhante está aqui, reluzindo alegremente.~
 ~
 18 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 1 0 0
 E
-silver key shining~
-   A silver key is here, engraved with a heron - the ensignia of the highest
-house of Haven.
+chave prata brilhante~
+   Uma chave de prata está aqui, gravada com uma garça - o emblema da mais
+alta casa de Porto.
 ~
 #2902
 large key~
@@ -819,7 +819,7 @@ A sword with a stylized gull engraved onto the hilt is here, looking special.~
 20 1000 100 0
 E
 gull~
-   The stylized gull form on the sword is the special mark of Haven's best
+   The stylized gull form on the sword is the special mark of Porto's best
 trained, their elite guardsmen.  Not many in the realm can boast their skill
 with their swords.
 ~

@@ -1,18 +1,18 @@
 #2900
-The City of Haven~
-   Haven is located far south of the capital.  The city thrives because it's the
-main supplier of fish and other sea goods to the capital.  The location of the
-city provides quite a scenery.  There are mountains to the east and forest to
-the west.  More of a jungle really.  The sea is just south of the city with a
-beautiful sandy beach, stopped abruptly by the mountains to the east and a range
-of impassable cliffs not far west of the forest line.  The South Road (people in
-Haven have always laughed at this name for it, since from here it actually goes
-north) begins just outside a marvelous city gate.  The gate is more for show
-though than for protection since Haven never had anything to fear because of its
-remote location.  Anyway, what lord would be inerested in a few fish?  This has
-not really changed, even with the coming of the south road, since regular
-patrols of elite soldiers are assigned to protect it and garrison the city
-itself.
+A Cidade de Porto~
+   Porto está localizada ao sul distante da capital. A cidade prospera porque é a
+principal fornecedora de peixes e outros produtos do mar para a capital. A
+localização da cidade oferece uma bela paisagem. Há montanhas a leste e floresta
+a oeste. Mais uma selva, na verdade. O mar fica ao sul da cidade com uma bela
+praia arenosa, interrompida abruptamente pelas montanhas a leste e uma série de
+penhascos intransponíveis não muito longe da linha da floresta a oeste. A Estrada
+do Sul (o povo de Porto sempre riu deste nome, já que daqui ela na verdade vai
+para o norte) começa logo fora de um maravilhoso portão da cidade. O portão é
+mais para exibição do que para proteção, já que Porto nunca teve nada a temer
+devido à sua localização remota. Afinal, que senhor se interessaria por alguns
+peixes? Isso realmente não mudou, mesmo com a vinda da estrada do sul, já que
+patrulhas regulares de soldados de elite são designadas para protegê-la e
+guarnecer a própria cidade.
 ~
 29 585 0 0 0 0
 E
@@ -21,76 +21,77 @@ credits~
 ~
 S
 #2901
-The Captain's Cabin~
-   The cabin looks comfortable, but not exactly opulent or rich.  The round
-windows are open to let in the salty breeze.  A couch is under one of these,
-made of horsehair and very soft-looking.  Maps of the sea line the walls, along
-with the many instruments used in sailing.  There is also a bed and a small
-stove here, next to the writing desk.  All of the furniture is securely bolted
-to the floor, thus unaffected by the ship's rocking.  The door to the north
-leads back out onto the decks.
+A Cabine do Capitão~
+   A cabine parece confortável, mas não exatamente opulenta ou rica. As janelas
+redondas estão abertas para deixar entrar a brisa salgada. Há um sofá sob uma
+delas, feito de crina de cavalo e com aparência muito macia. Mapas do mar
+forram as paredes, junto com os muitos instrumentos usados na navegação. Há
+também uma cama e um pequeno fogão aqui, ao lado da escrivaninha. Todos os
+móveis estão firmemente fixados ao chão, não sendo afetados pelo balanço do
+navio. A porta ao norte leva de volta aos conveses.
 ~
 29 8 0 0 0 0
 D0
 ~
-north cabin~
+norte cabine~
 1 2900 2931
 S
 #2902
-Harem Room~
-   Interesting.  The Lord of Haven is quite obviously a man with a vice.
-Scantily clad women fill this room.  There are piles of silks and pillows all
-over the floor, looking comfortable to just rest in.  There is a particularly
-large pile of the softest pillows against the west wall.  Maybe they are for
-Degruziel's favorite girl.
+Sala do Harém~
+   Interessante. O Senhor de Porto é obviamente um homem com um vício. Mulheres
+com pouca roupa enchem este quarto. Há pilhas de sedas e almofadas por todo o
+chão, parecendo confortáveis para simplesmente descansar. Há uma pilha
+particularmente grande das almofadas mais macias contra a parede oeste. Talvez
+sejam para a garota favorita de Degruziel.
 ~
 29 8 0 0 0 0
 D5
 ~
-down~
+baixo~
 1 -1 2904
 S
 #2903
-Degruziel's Private Chamber~
-   This room is floored in lush red carpet, soft and almost ankle deep.  The
-curtains are open over the windows, giving you a wonderful view of the garden.
-The walls here are white, where they aren't obscured by tapestries of the local
-gods and goddesses.  Against the wall by the only exit, the door you came in
-through, there is a great oak wardrobe.  With much space inside.  What catches
-and hold your attention, however, is the huge bed in the center of the room.
-It could comfortably sleep three, but looks more to the liking of two.  It
-looks comfortable.
+Câmara Privada de Degruziel~
+   Este quarto tem o chão coberto por um tapete vermelho luxuoso, macio e quase
+chegando aos tornozelos. As cortinas estão abertas sobre as janelas, oferecendo
+uma vista maravilhosa do jardim. As paredes aqui são brancas, onde não estão
+obscurecidas por tapeçarias dos deuses e deusas locais. Contra a parede
+próxima à única saída, a porta pela qual você entrou, há um grande guarda-roupa
+de carvalho. Com muito espaço interno. O que chama e prende sua atenção, no
+entanto, é a enorme cama no centro do quarto. Poderia acomodar confortavelmente
+três pessoas, mas parece mais do gosto de duas. Parece confortável.
 ~
 29 0 0 0 0 0
 D3
 ~
-west door~
+oeste porta~
 1 2900 2904
 S
 #2904
-Top of the Staircase~
-   The room at the top of the staircase isn't so large, nor so fancy, as the
-rooms of the lower story.  These rooms on the second floor must be private
-rooms, not meant for the public eyes.  Though not as brightly lit as the area
-downstairs, you can still see well by the torches lining the stone walls.
-There is a curtained window looking outside, while there are also doorways
-leading north and east.  A simple staircase against the west wall leads up into
-the tower of Degruziel's Manor, the door up there being barred with a very
-LARGE lock.  There is a curtained window looking outside, to the south and the
-sea.  To the north is a plain, low door.
+Topo da Escadaria~
+   O quarto no topo da escadaria não é tão grande, nem tão elegante, quanto os
+quartos do andar inferior. Estes quartos no segundo andar devem ser quartos
+privados, não destinados aos olhos do público. Embora não seja tão bem
+iluminado quanto a área no andar de baixo, você ainda pode ver bem pelas
+tochas que forram as paredes de pedra. Há uma janela com cortinas voltada para
+fora, enquanto também há entradas levando ao norte e leste. Uma escadaria
+simples contra a parede oeste leva para cima, à torre da Mansão de Degruziel,
+sendo a porta lá em cima trancada com uma fechadura MUITO GRANDE. Há uma
+janela com cortinas voltada para fora, para o sul e o mar. Ao norte há uma
+porta simples e baixa.
 ~
 29 8 0 0 0 0
 D0
 ~
-north~
+norte~
 1 2900 2905
 D1
 ~
-east door~
+leste porta~
 1 2900 2903
 D4
 ~
-up~
+cima~
 1 2900 2902
 D5
 ~
@@ -98,18 +99,18 @@ D5
 0 2900 2907
 S
 #2905
-Servant's Quarters~
-   The room is crowded, but a faint breeze scented with smells of the garden
-wafts in through an open window.  It must be getting funneled in around the
-tower, because the window is facing north, and the wind usually blows from the
-south.  There are several mats lying out on the middle of the floor, and a
-drawn-back curtain separates the room into sections.  The mats, though only
-filled with straw, look pretty comfortable.
+Aposentos dos Criados~
+   O quarto está lotado, mas uma brisa fraca perfumada com cheiros do jardim
+entra por uma janela aberta. Deve estar sendo canalizada ao redor da torre,
+porque a janela está voltada para o norte, e o vento geralmente sopra do sul.
+Há várias esteiras estendidas no meio do chão, e uma cortina puxada separa o
+quarto em seções. As esteiras, embora cheias apenas de palha, parecem bastante
+confortáveis.
 ~
 29 8 0 0 0 0
 D2
 ~
-south~
+sul~
 1 2900 2904
 S
 #2906
@@ -199,7 +200,7 @@ full sail, a huge fish held in his outreaching arms.
 S
 #2910
 Degruziel's Parlor~
-   This must be where Degruziel, the Lord of Haven, entertains his guests.
+   This must be where Degruziel, the Lord of Porto, entertains his guests.
 There are comfortable chairs and couches strewn about the center of the large
 room.  Above the massive fireplace there sets a large painting of the god of
 the sea.  Before the fireplace there is a long mahogony dining table, large
@@ -225,7 +226,7 @@ S
 The Manor Porch~
    The cart path here leads both eastward toward the stables, where a body
 might visit the horses, or to the north through the garden and back to the
-street.  To the south is the Lord of Haven's oppulant porch and front door.
+street.  To the south is the Lord of Porto's oppulant porch and front door.
 The railing of the porch is carved to resemble a vine twisting about itself,
 while the posts are exquisitely carved into fish sitting on their tails, with
 their mouths around the railing.  Their jeweled eyes wink in the light.  The
@@ -247,8 +248,8 @@ door south~
 1 2900 2910
 E
 door legend~
-   The carvings on the door show a scene of one of Haven's greatest heros,
-Delegarthe Haven himself, slaying the dreaded sea dragon and making Haven a
+   The carvings on the door show a scene of one of Porto's greatest heros,
+Delegarthe Porto himself, slaying the dreaded sea dragon and making Porto a
 safe place to fish.
 ~
 E
@@ -257,7 +258,7 @@ railing fish carving porch~
 The railings are all one piece of wood, a flowing flowery vine.  The flowers
 collect water and form pools for small bird baths.  The posts holding the
 railing up are of the same piece of wood as the railing itself, and are of
-Haven's main export, fish, standing on their tails and supporting the vine with
+Porto's main export, fish, standing on their tails and supporting the vine with
 their mouths.  The sapphires that form the eyes of the fish twinkle merrily,
 almost making you believe the fish to be alive.
 ~
@@ -484,7 +485,7 @@ D3
 S
 #2923
 Thieve's Hideout~
-   When a person thinks of Haven with its Crowded Market and its patrols of
+   When a person thinks of Porto with its Crowded Market and its patrols of
 elite guards one doesn't often think of a thieve's headquarters.  But the is
 what you find yourself in - a skillfully hidden and very dry thieve's hideout.
 Tapestries line the walls, most likely as stolen as the comfortable furniture
@@ -503,8 +504,8 @@ trap door trapdoor up~
 1 2900 2924
 S
 #2924
-Under Haven~
-   This must be a part of the old sewer system of Haven when it was a small
+Under Porto~
+   This must be a part of the old sewer system of Porto when it was a small
 town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
 water, littered on the bottom by old stones.  The water stretches out far past
 your eyes and your light in some places.  The floor is made up of a watery
@@ -554,8 +555,8 @@ D3
 0 2900 2927
 S
 #2926
-Under Haven~
-   This must be a part of the old sewer system of Haven when it was a small
+Under Porto~
+   This must be a part of the old sewer system of Porto when it was a small
 town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
 water, littered on the bottom by old stones.  The water stretches out far past
 your eyes and your light in some places.  The floor is made up of a watery
@@ -586,8 +587,8 @@ D1
 0 2900 2925
 S
 #2928
-Under Haven~
-   This must be a part of the old sewer system of Haven when it was a small
+Under Porto~
+   This must be a part of the old sewer system of Porto when it was a small
 town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
 water, littered on the bottom by old stones.  The water stretches out far past
 your eyes and your light in some places.  The floor is made up of a watery
@@ -608,8 +609,8 @@ up ladder trap trapdoor~
 1 2900 2983
 S
 #2929
-Under Haven~
-   This must be a part of the old sewer system of Haven when it was a small
+Under Porto~
+   This must be a part of the old sewer system of Porto when it was a small
 town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
 water, littered on the bottom by old stones.  The water stretches out far past
 your eyes and your light in some places.  The floor is made up of a watery
@@ -632,8 +633,8 @@ D3
 0 2900 2930
 S
 #2930
-Under Haven~
-   This must be a part of the old sewer system of Haven when it was a small
+Under Porto~
+   This must be a part of the old sewer system of Porto when it was a small
 town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
 water, littered on the bottom by old stones.  The water stretches out far past
 your eyes and your light in some places.  The floor is made up of a watery
@@ -759,7 +760,7 @@ D3
 S
 #2936
 On the Docks~
-   The docks of Haven are rumored to be a marvelous place - or so the
+   The docks of Porto are rumored to be a marvelous place - or so the
 conversations you have overheard between townspeople and weary travelers say.
 But from here you can't see much of them.  There is just plain too much
 traffic.  On both sides of the docks here there are wet-looking sand closest to
@@ -831,7 +832,7 @@ D3
 S
 #2939
 Sandy Path~
-   This path has barely any traffic compared to the rest of Haven.  The few
+   This path has barely any traffic compared to the rest of Porto.  The few
 people here are leisurely loitering, enjoying the scenery.  From somewhere to
 the east tendrils of bawdy songs reach your ears, quickly swept away by the
 rush of the ever-present sea breeze.  Looking to the east you can see the rush
@@ -867,9 +868,9 @@ S
 North Gull Road~
    Here is not nearly as crowded as the area near the gate you can see to the
 east.  North Gull Road is peaceful, though it still has some traffic.  It runs
-through the residential section of Haven, and to the south are mostly houses.
+through the residential section of Porto, and to the south are mostly houses.
 The cobbles here are clean, and the smell of salt is strong.  To the north the
-land slopes upward, keeping Haven in its beautiful vale.
+land slopes upward, keeping Porto in its beautiful vale.
 ~
 29 0 0 0 0 1
 D1
@@ -886,7 +887,7 @@ Intersection of North Gull Road and Market Path~
    This intersection is slightly more crowded than the parts of Nroth Gull Road
 you can see to the east and west.  To the south is Market Path, and beyond that
 you can see flashes of color.  To the north the land continues to slope
-upwards, keeping Haven in its beautiful vale.
+upwards, keeping Porto in its beautiful vale.
 ~
 29 0 0 0 0 1
 D1
@@ -906,9 +907,9 @@ S
 North Gull Road~
    To the west North Gull road continues, while to the east there is a small
 intersection.  North Gull Road is peaceful, though it still has some traffic.
-It runs through the residential section of Haven, and to the south are mostly
+It runs through the residential section of Porto, and to the south are mostly
 houses.  The cobbles here are clean, and the smell of salt is strong.  To the
-north the land slopes upward, keeping Haven in its beautiful vale.
+north the land slopes upward, keeping Porto in its beautiful vale.
 ~
 29 0 0 0 0 1
 D1
@@ -924,9 +925,9 @@ S
 North Gull Road~
    To the east and west North Gull Road continues.  North Gull Road is
 peaceful, though it still has some traffic.  It runs through the residential
-section of Haven, and to the south are mostly houses.  The cobbles here are
+section of Porto, and to the south are mostly houses.  The cobbles here are
 clean, and the smell of salt is strong.  To the north the land slopes upward,
-keeping Haven in its beautiful vale.
+keeping Porto in its beautiful vale.
 ~
 29 0 0 0 0 1
 D1
@@ -942,9 +943,9 @@ S
 North Gull Road~
    To the east is more of North Gull Road, while to the west there is a small
 intersection.  North Gull Road is peaceful, though it still has some traffic.
-It runs through the residential section of Haven, and to the south are mostly
+It runs through the residential section of Porto, and to the south are mostly
 houses.  The cobbles here are clean, and the smell of salt is strong.  To the
-north the land slopes upward, keeping Haven in its beautiful vale.
+north the land slopes upward, keeping Porto in its beautiful vale.
 ~
 29 0 0 0 0 1
 D1
@@ -983,9 +984,9 @@ S
 North Gull Road~
    To the east is a small intersection, while to the west North Gull Road ends.
 North Gull Road is peaceful, though it still has some traffic.  It runs through
-the residential section of Haven, and to the south are mostly houses.  The
+the residential section of Porto, and to the south are mostly houses.  The
 cobbles here are clean, and the smell of salt is strong.  To the north the land
-slopes upward, keeping Haven in its beautiful vale.  To the south the town
+slopes upward, keeping Porto in its beautiful vale.  To the south the town
 spreads before your view like a colorful map.
 ~
 29 0 0 0 0 1
@@ -1003,7 +1004,7 @@ Corner of North Gull Road and Riverwalk~
    Here, North Gull Road intersects with Riverwalk.  North Gull road goes east
 through the residential section while Riverwalk goes south, close to the bank
 of the swiftly running stream.  The once rushing, giant river that had carved
-the vale that Haven now lies in is now nothing more than quick stream.  On the
+the vale that Porto now lies in is now nothing more than quick stream.  On the
 other side of the stream begins a dense forest, the leafy foliage and dense
 undergrowth so thick that you can see nothing else.
 ~
@@ -1191,7 +1192,7 @@ however, with a large wooden counter seperating you and the huge pile of gold
 that takes up much of the other half of the room.  A guard stands behihd the
 counter, prepared for trouble with his hand resting lightly on the hilt of his
 sword.  There is also a short, thin gentleman here in rich silk clothes, quite
-obviously Milos the Banker of Haven.  The door to the south leads back to South
+obviously Milos the Banker of Porto.  The door to the south leads back to South
 Gull Road.
 ~
 29 152 0 0 0 0
@@ -1313,8 +1314,8 @@ S
 #2964
 Market Path~
    This path is a little bit crowded, being right between one of the better
-residential sections of Haven, North Gull Road, and the main commercial section
-of Haven, the market.  The traffic here, though more than you can see the the
+residential sections of Porto, North Gull Road, and the main commercial section
+of Porto, the market.  The traffic here, though more than you can see the the
 north, only gets worse as you go further south towards the colorful canopies.
 Shops line the east, but it appears most of the owners are out to the market.
 One shop is still open, one with a hanging sign nailed above the door,
@@ -1378,7 +1379,7 @@ docks in the safely deep water.  You can tell they are merchant vessels, for no
 fisherman with carts or anything else dash up and down their planks like they
 do for the ships further down.  The merchant vessels have sails of many colors,
 with flags from assorted kingdoms.  To the north the street is a bit far off,
-while to the south there are some of Haven's famous fishing vessels.
+while to the south there are some of Porto's famous fishing vessels.
 ~
 29 0 0 0 0 1
 D0
@@ -1455,7 +1456,7 @@ D3
 S
 #2971
 Intersection of Market Road and Sandy Path~
-   The cobbled road of Haven here is almost covered by a thin layer of sand,
+   The cobbled road of Porto here is almost covered by a thin layer of sand,
 with more constantly blowing in on the sea breeze coming from the south.
 There is also the beginning of the sea to the south, the sand interspersed with
 many jagged rocks upon which the waves break.  To the west Sandy Path, earned
@@ -1512,7 +1513,7 @@ in the walls hold eyes the glow the reflection of your own light back at you,
 and laughter echos in the close space along with gibberish and screams, seeming
 to come from everywhere and nowhere at once.  Rats scurry around your feet and
 watch you from the shadows, hostile and almost as large as small cats.  It is
-not much of a wonder that the people of Haven avoid this place.  The
+not much of a wonder that the people of Porto avoid this place.  The
 inhabitants of this alley shy away from the small amount of light streaming in
 from the south and the intersection, their eyes accustomed to darkness and hurt
 by the natural light.
@@ -1534,7 +1535,7 @@ in the walls hold eyes the glow the reflection of your own light back at you,
 and laughter echos in the close space along with gibberish and screams, seeming
 to come from everywhere and nowhere at once.  Rats scurry around your feet and
 watch you from the shadows, hostile and almost as large as small cats.  It is
-not much of a wonder that the people of Haven avoid this place.  The people at
+not much of a wonder that the people of Porto avoid this place.  The people at
 the comparatively light intersection to the north hurry past with their heads
 down.
 ~
@@ -1613,7 +1614,7 @@ S
 Market Road, near the market~
    To the north the smell of fish, the press of people, and the noise of a busy
 market all become greater.  On both sides of the road you can see the crowd of
-people moving in all directions.  You can also glimpse the great gate of Haven
+people moving in all directions.  You can also glimpse the great gate of Porto
 to the south, and flashes of colorful canopies to the north.  One might wonder
 why so many people would be attracted to a fish market, of all things.
 ~
@@ -1628,13 +1629,14 @@ D2
 0 2900 2977
 S
 #2979
-Crowded Fish Market~
-   People press in from all sides!  Under the brilliant, patched, colored cloth
-there is no such thing as a sky.  There are only people wandering the crowded
-market, men loading wagons, and merchants.  Oh the merchants!  Dressed in
-outrageous costumes and with all sorts of accents merchants yell of their
-wares, vying for your attention.  In a crowd such as this, one to make even you
-claustrophobic, it would be wise to keep your hands near your belt pouch.
+Mercado de Peixes Lotado~
+   As pessoas se apertam de todos os lados! Sob o tecido brilhante, remendado e
+colorido, não existe tal coisa como céu. Há apenas pessoas vagando pelo
+mercado lotado, homens carregando vagões e mercadores. Oh, os mercadores!
+Vestidos em trajes extravagantes e com todos os tipos de sotaques, os
+mercadores gritam sobre suas mercadorias, disputando sua atenção. Em uma
+multidão como esta, capaz de deixar até você claustrofóbico, seria sábio
+manter suas mãos perto da sua bolsa.
 ~
 29 0 0 0 0 0
 D1
@@ -1680,7 +1682,7 @@ wall three bunks are stacked on top of each other in such a way as to fit, but
 to give each person enough space to lay down comfortably.  There is a small
 stove against the north wall, its red coals lighting the room.  A new hangs
 across the single window facing to the south and Sandy Path, serving as a
-curtain.  There is a bin of fish, Haven's main staple, against the west wall.
+curtain.  There is a bin of fish, Porto's main staple, against the west wall.
 The small floor, what isn't covered by a rug, is neatly swept dirt.
 ~
 29 0 0 0 0 1
@@ -1750,7 +1752,7 @@ in the walls hold eyes the glow the reflection of your own light back at you,
 and laughter echos in the close space along with gibberish and screams seeming
 to come from everywhere and nowhere at once.  Rats scurry around your feet and
 watch you from the shadows, hostile and almost as large as small cats.  It is
-not much of a wonder that the people of Haven avoid this place, using it only
+not much of a wonder that the people of Porto avoid this place, using it only
 as a dump.  Light streams in from the east, almost allowing you to see the
 path.
 ~
@@ -1771,7 +1773,7 @@ in the walls hold eyes the glow the reflection of your own light back at you,
 and laughter echos in the close space along with gibberish and screams, seeming
 to come from everywhere and nowhere at once.  Rats scurry around your feet and
 watch you from the shadows, hostile and almost as large as small cats.  It is
-not much of a wonder that the people of Haven avoid this place.  Somewhere to
+not much of a wonder that the people of Porto avoid this place.  Somewhere to
 the south there is the soft glow of light.
 ~
 29 1 0 0 0 1
@@ -1791,7 +1793,7 @@ in the walls hold eyes the glow the reflection of your own light back at you,
 and laughter echos in the close space along with gibberish and screams, seeming
 to come from everywhere and nowhere at once.  Rats scurry around your feet and
 watch you from the shadows, hostile and almost as large as small cats.  It is
-not much of a wonder that the people of Haven avoid this place.
+not much of a wonder that the people of Porto avoid this place.
 ~
 29 1 0 0 0 1
 D0
@@ -1882,7 +1884,7 @@ the north, but they are still quite nice.  This road is patchily shaded by the
 small trees in some of the small yards, and periodic small beds of flowers add
 their scents to the breeze that sweeps across the clean cobbles.  Strolling
 residents occasionally pass you, smiling happily.  Somewhere to the southeast
-you can see the tall white tower of the Lord of Haven's Manor House.
+you can see the tall white tower of the Lord of Porto's Manor House.
 ~
 29 0 0 0 0 1
 D0
@@ -1899,7 +1901,7 @@ South Gull Road~
    Quite contrary to the crowded market to the east, this street is somehow
 peaceful.  This may just be because of the patrols of brawny guards that pass
 by at regular intervals.  The smell of fish that is so prrevalent elsewhere in
-Haven is almost absent from the air here, being replaced by the salty tang of
+Porto is almost absent from the air here, being replaced by the salty tang of
 the sea breeze to the south which is carrying the sweet perfume of flowers your
 way.  To the south the white tallness of the tower protruding from the manor
 that lies there is like a bone finger raised in realization of the answer to a
@@ -2020,7 +2022,7 @@ S
 Market Road~
    To the south the smell of fish, the press of people, and the noise of a busy
 market all become greater.  On both sides of the road you can see the crowd of
-people moving in all directions.  You can also glimpse the great gate of Haven
+people moving in all directions.  You can also glimpse the great gate of Porto
 to the north, and flashes of colorful canopies to the south.  One might wonder
 why so many people would be attracted to a fish market, of all things.
 ~
@@ -2056,7 +2058,7 @@ S
 Market Road~
    The breeze from the south blows a fishy scent your way, and through the
 press of people on this relatively narrow winding road you can glimpse the gate
-of Haven to the north, and flashes of colorful canopies somewhere to the south.
+of Porto to the north, and flashes of colorful canopies somewhere to the south.
 Over the clacking of hooves on cobbles and catcalls from neighbors to each
 other you can hear the dull, background roar of sea surf crashing onto rocks.
 The air is hot and humid enough to make the slight breeze refreshing.
@@ -2092,15 +2094,16 @@ billowing in the wind.
 ~
 S
 #2998
-The Ornate City Gates~
-   To the north lies a magnificent pair of gates.  Twenty feet high at the
-least, and wide enough to drive two wagons through, side by side.  It is
-entirely made of polished black crystal, which looks a rich golden brown and
-smooth to the touch.  There are many carvings of sea animals and birds on the
-gate, masterfully done, but the most eye-catching set of carvings are the twin
-leaping fish.  Five feet tall themselves, their jeweled eyes winking, they are
-in the direct center of each gate.  You can tell by the reverant glances of
-those passing by that the people of the town are very proud of their gate.
+Os Portões Ornamentados da Cidade~
+   Ao norte há um par magnífico de portões. Com pelo menos vinte pés de altura
+e largos o suficiente para passar duas carroças lado a lado. É inteiramente
+feito de cristal negro polido, que parece um marrom dourado rico e liso ao
+toque. Há muitas esculturas de animais marinhos e pássaros no portão,
+magistralmente feitas, mas o conjunto mais atraente de esculturas são os peixes
+gêmeos saltando. Com cinco pés de altura cada um, seus olhos adornados com
+joias piscando, eles estão no centro direto de cada portão. Você pode dizer
+pelos olhares reverentes daqueles que passam que o povo da cidade está muito
+orgulhoso de seu portão.
 ~
 29 0 0 0 0 1
 D0
@@ -2108,8 +2111,8 @@ D0
 ~
 0 0 11388
 D2
-   To the south you see a relatively narrow, crowded winding road leading
-toward the market.
+   Para o sul você vê uma estrada relativamente estreita e lotada levando em
+direção ao mercado.
 ~
 ~
 0 2900 2997
@@ -2118,11 +2121,11 @@ D3
 ~
 0 2900 2941
 E
-gate fish~
-   Upon the gate, the twin masterfully carved fish are so realistic they appear
-to almost have life.  The red rubies set into their eyes are so skillfully
-embedded in the wood that no amount of pulling, even from one of huge strength,
-would remove them.
+portao peixe~
+   No portão, os peixes gêmeos magistralmente esculpidos são tão realistas que
+parecem quase ter vida. Os rubis vermelhos incrustados em seus olhos estão tão
+habilmente encravados na madeira que nenhuma quantidade de força, mesmo de
+alguém de grande força, conseguiria removê-los.
 ~
 S
 #2999

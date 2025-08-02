@@ -1,9 +1,9 @@
 #2912
-eunuch~
-the eunuch~
-A eunuch stands here, guarding the harem.
+eunuco~
+o eunuco~
+Um eunuco está aqui, guardando o harém.
 ~
-   He doesn't have any expression, nor anything special about him.
+   Ele não tem nenhuma expressão, nem nada de especial sobre ele.
 ~
 2107434 0 0 0 0 0 0 0 0 E
 14 16 1 2d2+140 2d2+2
@@ -17,13 +17,13 @@ Wis: 13
 GenWimpy: 3
 E
 #2913
-sightseer~
-the sightseer~
-A sightseer is here, smiling at the sights.
+turista~
+a turista~
+Uma turista está aqui, sorrindo para as paisagens.
 ~
-   The woman looks as though she would be content wandering around all day,
-seeing everything there is possible to see.  She is a traveler, judging by her
-semi-poor clothes, and probably not possessing of a lot of material wealth.
+   A mulher parece que ficaria contente andando por aí o dia todo, vendo tudo o
+que é possível ver. Ela é uma viajante, a julgar por suas roupas meio pobres,
+e provavelmente não possui muita riqueza material.
 ~
 2099400 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -173,9 +173,9 @@ E
 #2922
 elite patrol man~
 an elite patrolman~
-An elite patrolman is here, walking Haven and looking for trouble.
+An elite patrolman is here, walking Porto and looking for trouble.
 ~
-   He looks as if he enjoys keeping the peace for Haven.  It would be unwise to
+   He looks as if he enjoys keeping the peace for Porto.  It would be unwise to
 make him angry.
 ~
 2103368 0 0 0 0 0 0 0 1000 E
@@ -210,7 +210,7 @@ resting citizen~
 the citizen~
 A citizen is here, resting and looking about himself happily.
 ~
-   This man is obviously enjoying his life.  He loves his town, Haven, and just
+   This man is obviously enjoying his life.  He loves his town, Porto, and just
 sits here, enjoying all of the life that goes on around him.
 ~
 2099210 0 0 0 0 0 0 0 0 E
@@ -1014,7 +1014,7 @@ Aramut the wizened old man stands here, waiting to help you.
    Aramut is tall and skinny, and has the rolling walk of one who had once been
 a sailor.  He looks very old, but not at all weak.  His skinny frame is wiry
 with the muscles he had acquired, as he has worked for long years as the armorer
-of Haven.  He impatiently taps his fingers on the counter as he waits for you to
+of Porto.  He impatiently taps his fingers on the counter as he waits for you to
 tell him what you wish of him.
 ~
 2123786 0 0 0 0 0 0 0 0 E
@@ -1038,7 +1038,7 @@ over his goods.  It looks pretty full, and the man looks very alert and
 possessive of it.  The cartman is a big, muscular man who looks as if he knows
 the use of his weapon.  His muscles ripple as he casually tosses heavy chairs
 and such from one side of his cart to the other.  From his dress he looks like a
-sailor, as do most of the people in Haven.
+sailor, as do most of the people in Porto.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -1141,7 +1141,7 @@ E
 #2980
 Tiama head cook~
 Tiama, the Head Cook~
-Tiama, the Head Cook of Haven, stands here covered from head to toe in flour.
+Tiama, the Head Cook of Porto, stands here covered from head to toe in flour.
 ~
    Tiama is plump from tasting her own creations, but she waves her spoon around
 as if she isn't afraid to give any of the kitchen girls a good whack.
@@ -1153,14 +1153,14 @@ as if she isn't afraid to give any of the kitchen girls a good whack.
 BareHandAttack: 5
 E
 #2981
-Degruziel Lord Haven~
-Degruziel, the Lord of Haven~
-Degruziel, the Lord of Haven, is here, lounging lazily and conversing with his guests.
+Degruziel Senhor Porto~
+Degruziel, o Senhor de Porto~
+Degruziel, o Senhor de Porto, está aqui, relaxando preguiçosamente e conversando com seus convidados.
 ~
-   Degruziel is lazing around, but the way his eyes quickly shift to take
-everything in tells you he is an experienced warrior.  His hand rests casually
-on the mace at his belt, as if he wouldn't be afraid to use it if things got out
-of hand.
+   Degruziel está descansando, mas a maneira como seus olhos rapidamente se
+movem para absorver tudo lhe diz que ele é um guerreiro experiente. Sua mão
+repousa casualmente na maça em seu cinto, como se não tivesse medo de usá-la
+se as coisas saíssem de controle.
 ~
 2115866 0 0 0 16 0 0 0 500 E
 14 16 1 2d2+140 2d2+2
@@ -1306,7 +1306,7 @@ an outlander~
 An outlander stands here looking very confused.
 ~
    He is short with wavy black hair, something that doesn't fit the setting of
-Haven very well.  He also appears very confused, listening intently and trying
+Porto very well.  He also appears very confused, listening intently and trying
 to figure out what people around him are saying.
 ~
 2099272 0 0 0 0 0 0 0 200 E
@@ -1316,8 +1316,8 @@ to figure out what people around him are saying.
 E
 #2992
 admirer~
-an admirer of Haven~
-An admirer of Haven is here, appearing awestruck.
+an admirer of Porto~
+An admirer of Porto is here, appearing awestruck.
 ~
    The woman is clad in the garb of one who travels much, and her mouth is
 slightly open as she looks around with wide eyes at the sights.
@@ -1343,8 +1343,8 @@ town.
 E
 #2994
 woman citizen~
-a woman of Haven~
-A woman of Haven is here, humming softly to herself.
+a woman of Porto~
+A woman of Porto is here, humming softly to herself.
 ~
    A tall, stately woman is here in a pretty dress, probably on her way to a
 vendor in the market.  She appears to be richly dressed, and is probably a
@@ -1358,7 +1358,7 @@ E
 #2995
 motherly woman~
 a motherly woman~
-A short, matronly citizen of Haven is here, her patched dress billowing in the constant breeze.
+A short, matronly citizen of Porto is here, her patched dress billowing in the constant breeze.
 ~
    This motherly woman stands here in the breeze, her colorful and heavily
 patched dress billowing.  She calls out a name, probably of her child, and she
@@ -1371,10 +1371,10 @@ has an angry look on her face.  Boy, is somebody in trouble.
 E
 #2996
 citizen male man~
-a man of Haven~
-A citizen of Haven
+a man of Porto~
+A citizen of Porto
 ~
-   The burly man of Haven stands here, his pipe hanging from his mouth.  He
+   The burly man of Porto stands here, his pipe hanging from his mouth.  He
 looks as though he is talking to himself about the market prices.
 ~
 2099272 0 0 0 0 0 0 0 0 E
@@ -1389,7 +1389,7 @@ an elite gatekeeper~
 An elite gatekeeper stands here looking bored.
 ~
    An elite gatekeeper often wonders why he was chosen for the monotonous job
-of watching Haven's gates.  The usually peaceful city doesn't see much trouble
+of watching Porto's gates.  The usually peaceful city doesn't see much trouble
 from the merchants and tourists, so his days pass slowly as he wishes for
 excitement.
 ~
@@ -1405,7 +1405,7 @@ a diligent carver~
 A diligent carver stands here, biting on the end of his knife.
 ~
    Having devoted his entire life to this work, the diligent carver is almost
-completely absorbed in the gates of Haven, always seeking to improve them with
+completely absorbed in the gates of Porto, always seeking to improve them with
 his skillful hand and his sharp knife.
 ~
 2099210 0 0 0 0 0 0 0 0 E
