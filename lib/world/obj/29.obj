@@ -1,49 +1,49 @@
 #2900
-Rusty Key~
-a rusty key~
-A rusty key is here, getting rustier by the minute.~
+Chave Enferrujada~
+uma chave enferrujada~
+Uma chave enferrujada está aqui, enferrujando mais a cada minuto.~
 ~
 18 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 1 0 0
 E
-key rusty~
-   A rusty key is here.  It has a fish engraved upon it, and looks like it
-might fit on a keyring.
+chave enferrujada~
+   Uma chave enferrujada está aqui. Tem um peixe gravado nela, e parece que
+pode caber em um chaveiro.
 ~
 #2901
-Shining Silver Key~
-a shining silver key~
-A shining silver key is here, glinting merrily.~
+Chave de Prata Brilhante~
+uma chave de prata brilhante~
+Uma chave de prata brilhante está aqui, reluzindo alegremente.~
 ~
 18 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 1 0 0
 E
-silver key shining~
-   A silver key is here, engraved with a heron - the ensignia of the highest
-house of Haven.
+chave prata brilhante~
+   Uma chave de prata está aqui, gravada com uma garça - o emblema da mais
+alta casa de Porto.
 ~
 #2902
-large key~
-a large key~
-A large key is lying here, as big as your hand.~
+chave grande~
+uma chave grande~
+Uma chave grande está aqui, do tamanho da sua mão.~
 ~
 18 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 1 0 0
 #2903
-sea chest~
-sea chest~
-A heavy sea chest is here, against the wall.~
+baú marítimo~
+baú marítimo~
+Um pesado baú marítimo está aqui, encostado na parede.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 400 15 2945 0
 0 0 0 0
 #2904
-twinkling ruby~
-a twinkling ruby~
-A ruby is lying here, twinkling suggestively.~
+rubi cintilante~
+um rubi cintilante~
+Um rubi está aqui, cintilando de forma sugestiva.~
 ~
 13 h 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
@@ -51,73 +51,73 @@ A ruby is lying here, twinkling suggestively.~
 A
 2 -5
 #2905
-twinkling ruby~
-a twinkling ruby~
-A ruby is lying here, twinkling suggestively.~
+rubi cintilante~
+um rubi cintilante~
+Um rubi está aqui, cintilando de forma sugestiva.~
 ~
 8 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 1 5 0 0
 #2906
-candle~
-a low-burning candle~
-A candle is here, sputtering almost to the point of going out.~
+vela~
+uma vela quase apagada~
+Uma vela está aqui, crepitando quase ao ponto de se apagar.~
 ~
 1 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 3 0
 1 10 1 0
 #2907
-banks hidden~
-the bank~
-.This is a hidden object. The long description can only be seen with holylight. If you see this as a mortal please report the bug.~
+bancos ocultos~
+o banco~
+.Este é um objeto oculto. A descrição longa só pode ser vista com holylight. Se você vê isto como mortal, por favor reporte o bug.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 0 0 0 0
 #2908
-padded couch~
-a padded couch~
-A padded couch is lying here, looking shabby.~
+sofá acolchoado~
+um sofá acolchoado~
+Um sofá acolchoado está aqui, com aparência desgastada.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 50 1 0 0
 #2909
-silver ring~
-the silver ring~
-A silver hoop of metal is here in the dust.~
+anel de prata~
+o anel de prata~
+Um aro de metal prateado está aqui na poeira.~
 ~
 9 0 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
 1 1 0 0
 #2910
-black leather boots~
-a pair of black leather boots~
-A pair of worn, black leather boots is lying here on the ground.~
+botas de couro preto~
+um par de botas de couro preto~
+Um par de botas de couro preto gastas está aqui no chão.~
 ~
 9 0 0 0 0 ag 0 0 0 0 0 0 0
 5 0 0 0
 2 20 2 0
 #2911
-silver helm~
-a silver helm~
-A sparkling helm of silver is here on the ground.~
+elmo de prata~
+um elmo de prata~
+Um elmo cintilante de prata está aqui no chão.~
 ~
 9 0 0 0 0 ae 0 0 0 0 0 0 0
 7 0 0 0
 10 300 30 0
 #2912
-wooden spoon~
-a wooden spoon~
-A wooden spoon is here, looking very mundane.~
+colher de madeira~
+uma colher de madeira~
+Uma colher de madeira está aqui, com aparência muito comum.~
 ~
 3 0 0 0 0 ao 0 0 0 0 0 0 0
 12 12 12 12
 1 5 0 0
 #2913
-demonic idol~
-a demonic idol~
-A demonic idol is here, crudely made.~
+ídolo demoníaco~
+um ídolo demoníaco~
+Um ídolo demoníaco está aqui, rudemente esculpido.~
 ~
 11 gh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
@@ -125,9 +125,9 @@ A demonic idol is here, crudely made.~
 A
 1 -5
 #2915
-stag carving~
-a stag carving~
-A small carving of a stag is here, so masterfully done it looks almost alive.~
+escultura de veado~
+uma escultura de veado~
+Uma pequena escultura de veado está aqui, tão habilmente feita que parece quase viva.~
 ~
 11 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
@@ -135,29 +135,29 @@ A small carving of a stag is here, so masterfully done it looks almost alive.~
 A
 1 1
 #2916
-chair~
-a chair~
-A wooden chair is here, ready to be sat upon.~
+cadeira~
+uma cadeira~
+Uma cadeira de madeira está aqui, pronta para ser usada.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 10 1 0 0
 #2917
-diamond brooch~
-a diamond brooch~
-A brooch is here, sparkling with diamonds.~
+broche de diamante~
+um broche de diamante~
+Um broche está aqui, cintilando com diamantes.~
 ~
 13 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 3 1 0 0
 E
-diamond~
-   Hey...  These diamonds look rather fake...
+diamante~
+   Opa... Estes diamantes parecem bem falsos...
 ~
 #2918
-pixie-eye emerald~
-a pixie-eye emerald~
-An emerald about the size of a pixie's eye is here.~
+esmeralda olho-de-fada~
+uma esmeralda olho-de-fada~
+Uma esmeralda do tamanho do olho de uma fada está aqui.~
 ~
 1 a 0 0 0 ao 0 0 0 0 0 0 0
 0 0 20 0
@@ -165,9 +165,9 @@ An emerald about the size of a pixie's eye is here.~
 A
 17 6
 #2919
-bejeweled bracelet~
-the bejeweled bracelet~
-A bracelet is lying here, sparkling with jewels.~
+pulseira enjoada~
+a pulseira enjoada~
+Uma pulseira está aqui, cintilando com joias.~
 ~
 11 0 0 0 0 am 0 0 0 0 0 0 0
 0 0 0 0
@@ -175,185 +175,185 @@ A bracelet is lying here, sparkling with jewels.~
 A
 14 20
 #2920
-fish~
-a fish~
-A fish is lying here, smelling fishy.~
+peixe~
+um peixe~
+Um peixe está aqui, cheirando a peixe.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 3 0 0 0
 4 1 0 0
 #2921
-brown bottle beer~
-a brown bottle~
-Its a brown bottle.  It might even have beer in it.~
+garrafa marrom cerveja~
+uma garrafa marrom~
+É uma garrafa marrom. Pode até ter cerveja dentro.~
 ~
 17 0 0 0 0 a 0 0 0 0 0 0 0
 3 3 1 0
 8 120 12 0
 #2922
-pitcher water~
-a pitcher~
-A pitcher has been placed here carefully, full of clear water.~
+jarro água~
+um jarro~
+Um jarro foi colocado aqui cuidadosamente, cheio de água limpa.~
 ~
 17 0 0 0 0 a 0 0 0 0 0 0 0
 8 5 0 0
 5 75 7 0
 #2924
-twisted staff~
-a twisted staff~
-A twisted quarterstaff is here, looking rather harmless.~
+cajado retorcido~
+um cajado retorcido~
+Um cajado retorcido está aqui, com aparência bastante inofensiva.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 4 2 3 7
 8 40 4 0
 #2925
-barbed spear~
-a barbed spear~
-A dangerous barbed spear is here, looking nasty.~
+lança farpada~
+uma lança farpada~
+Uma perigosa lança farpada está aqui, com aparência desagradável.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 4 2 4 3
 10 200 20 0
 #2926
-awl pike~
-an awl pike~
-An awl pike is here, taking up much space.~
+pique de sovela~
+um pique de sovela~
+Um pique de sovela está aqui, ocupando muito espaço.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 4 3 5 3
 15 750 75 0
 #2927
-jeweled dagger~
-a jeweled dagger~
-A dagger is lying here, its jewels sparkling merrily.~
+adaga enjoyada~
+uma adaga enjoyada~
+Uma adaga está aqui, suas joias cintilando alegremente.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 2 3 14
 4 120 12 0
 #2928
-curving dagger~
-a wickedly curving dagger~
-A dagger lies here on the ground, its curve looking particularly wicked.~
+adaga curva~
+uma adaga perversamente curva~
+Uma adaga está aqui no chão, sua curvatura parecendo particularmente perversa.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 4 1
 3 150 15 0
 #2929
-chain~
-a length of chain~
-A lenght of chain is lying on the ground, gleaming.~
+corrente~
+um pedaço de corrente~
+Um pedaço de corrente está no chão, reluzindo.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 7 1 5 2
 7 350 35 0
 #2930
-large flail~
-a large flail~
-A large flail is lying here, looking abandoned.~
+mangual grande~
+um mangual grande~
+Um mangual grande está aqui, com aparência abandonada.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 3 2 4 10
 20 1000 100 0
 #2931
-bench~
-a bench~
-A bench has been provided for weary travelers to rest upon.~
+banco~
+um banco~
+Um banco foi providenciado para viajantes cansados descansarem.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 0 0 0 0
 #2932
-aquamarine chalice~
-an aquamarine chalice~
-An aquamarien chalice has been abandoned here.~
+cálice água-marinha~
+um cálice água-marinha~
+Um cálice água-marinha foi abandonado aqui.~
 ~
 10 0 0 0 0 a 0 0 0 0 0 0 0
 12 -1 -1 -1
 3 100 0 0
 #2933
-purple decanter~
-a purple decanter~
-A purple decanter is here.~
+jarra roxa~
+uma jarra roxa~
+Uma jarra roxa está aqui.~
 ~
 10 0 0 0 0 a 0 0 0 0 0 0 0
 12 43 -1 -1
 2 800 0 0
 #2934
-glowing apple~
-a glowing apple~
-A glowing red apple is here.~
+maçã brilhante~
+uma maçã brilhante~
+Uma maçã vermelha brilhante está aqui.~
 ~
 10 0 0 0 0 a 0 0 0 0 0 0 0
 12 3 -1 -1
 1 600 0 0
 #2935
-yellow jar~
-a yellow jar~
-A yellow jar is here, humming with power.~
+jarro amarelo~
+um jarro amarelo~
+Um jarro amarelo está aqui, zumbindo com poder.~
 ~
 10 b 0 0 0 a 0 0 0 0 0 0 0
 12 19 -1 -1
 2 400 0 0
 #2936
-rose shaped vial~
-a rose-shaped vial~
-A rose-shaped vial is lying here, glowing slightly.~
+frasco formato rosa~
+um frasco formato rosa~
+Um frasco em formato de rosa está aqui, brilhando levemente.~
 ~
 10 a 0 0 0 ao 0 0 0 0 0 0 0
 12 36 -1 -1
 3 1000 0 0
 #2937
-green vial~
-the green vial~
-A green vial is here, glowing slightly.~
+frasco verde~
+o frasco verde~
+Um frasco verde está aqui, brilhando levemente.~
 ~
 10 a 0 0 0 ao 0 0 0 0 0 0 0
 12 29 -1 -1
 1 500 0 0
 #2938
-wooden toy~
-a wooden toy~
-A wooden child's toy is lying here, forgotten.~
+brinquedo madeira~
+um brinquedo de madeira~
+Um brinquedo de madeira infantil está aqui, esquecido.~
 ~
 12 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 1 0 0
 #2939
-market stall~
-a market stall~
-A market stall is here, the vendors inside yelling for customers.~
+banca mercado~
+uma banca de mercado~
+Uma banca de mercado está aqui, com os vendedores gritando por clientes.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 0 0 0 0
 #2940
-dining table~
-a dining table~
-A dining table is setting in the middle of the floor here, heaped with food.~
+mesa jantar~
+uma mesa de jantar~
+Uma mesa de jantar está no meio do chão aqui, empilhada com comida.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 0 0 0 0
 #2941
-big soft pillow~
-a big, soft pillow~
-A big pillow is here, looking very soft and inviting.~
+almofada grande macia~
+uma almofada grande e macia~
+Uma almofada grande está aqui, parecendo muito macia e convidativa.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 2 1 0 0
 #2942
-mat~
-a mat~
-A mat is lying on the floor here.~
+esteira~
+uma esteira~
+Uma esteira está no chão aqui.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
 5 1 0 0
 #2943
-bread~
-a freshly baked bread~
-A loaf of freshly baked bread is here.  It looks yummy.~
+pão~
+um pão fresco~
+Um pão recém-assado está aqui. Parece delicioso.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 2 0 0 0
@@ -361,95 +361,95 @@ A loaf of freshly baked bread is here.  It looks yummy.~
 #2944
 bed~
 Degruziel's bed~
-The magnificent bed of Degruziel lies here on the center of the floor.~
+A magnífica cama de Degruziel fica aqui no centro do chão.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 0 0 0 0
 #2945
-key~
-the small key~
-A small key has been left lying here.  Maybe someone has lost it.~
+chave~
+a chave pequena~
+Uma pequena chave foi deixada aqui. Talvez alguém a tenha perdido.~
 ~
 18 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 1 0 0
 #2946
-chainmail coif~
-a chainmail coif~
-A small pile of chainmail lies here on the ground.~
+coifa cota malha~
+uma coifa de cota de malha~
+Uma pequena pilha de cota de malha está aqui no chão.~
 ~
 9 0 0 0 0 ae 0 0 0 0 0 0 0
 5 0 0 0
 3 150 15 0
 #2947
-lute~
-a lute~
-A lute is lying here, abandoned by its owner.~
+alaude~
+um alaúde~
+Um alaúde está aqui, abandonado pelo seu dono.~
 ~
 3 0 0 0 0 ao 0 0 0 0 0 0 0
 12 15 15 32
 10 150 15 0
 #2948
-steel longsword~
-a steel longsword~
-A steel longsword is here on the ground, neglected.~
+espada longa aço~
+uma espada longa de aço~
+Uma espada longa de aço está aqui no chão, negligenciada.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 6 1 9 3
 10 750 75 0
 #2949
-old leather dog collar~
-an old leather dog's collar~
-Some dog somewhere has lost it's old collar.~
+coleira couro velha cão~
+uma velha coleira de couro de cão~
+Algum cão perdeu sua velha coleira por aqui.~
 ~
 11 0 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
 1 10 1 0
 #2950
-rat tail~
-a rat's tail~
-A long, dirty rat's tail is here on the ground.  What pollution.~
+cauda rato~
+uma cauda de rato~
+Uma longa e suja cauda de rato está aqui no chão. Que poluição.~
 ~
 9 0 0 0 0 al 0 0 0 0 0 0 0
 1 0 0 0
 2 10 1 0
 #2951
-silver pitcher wine~
-a silver pitcher~
-A silver pitcher is on the ground here.~
+jarro prata vinho~
+um jarro de prata~
+Um jarro de prata está no chão aqui.~
 ~
 17 0 0 0 0 ao 0 0 0 0 0 0 0
 7 3 2 0
 10 300 30 0
 #2952
-serving platter~
-a silver serving platter~
-A large platter made of silver and with an odd handle is on the ground here.~
+bandeja prata~
+uma bandeja de prata~
+Uma grande bandeja feita de prata e com um cabo estranho está no chão aqui.~
 ~
 9 0 0 0 0 aj 0 0 0 0 0 0 0
 7 0 0 0
 7 210 21 0
 #2953
-tri-cornered hat~
-the tri-cornered hat~
-A hat with three corners is lying here.~
+chapéu três pontas~
+o chapéu de três pontas~
+Um chapéu com três pontas está aqui.~
 ~
 9 0 0 0 0 ae 0 0 0 0 0 0 0
 7 0 0 0
 7 35 3 0
 #2954
-shimmering silvery dress~
-a shimmering silvery dress~
-A pile of shimmering material is lying here.  Perhaps it might be a dress.~
+vestido prateado cintilante~
+um vestido prateado cintilante~
+Uma pilha de material cintilante está aqui. Talvez seja um vestido.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 1 0 0 0
 6 6 0 0
 #2955
-rich cape~
-a rich cape~
-A rich cape made of silver thread is here, looking expensive.~
+capa rica~
+uma capa rica~
+Uma capa rica feita de fio de prata está aqui, com aparência cara.~
 ~
 9 gikl 0 0 0 ak 0 0 0 0 0 0 0
 1 0 0 0
@@ -459,97 +459,97 @@ A
 A
 4 2
 #2956
-banded steel leg guard~
-the banded steel leg guards~
-A pair of banded steel leg guards are sitting here, looking rather new.~
+perneiras aço bandado~
+as perneiras de aço bandado~
+Um par de perneiras de aço bandado está aqui, com aparência bem nova.~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 8 0 0 0
 1 100 0 0
 #2957
-banded steel bracer~
-a banded steel bracer~
-A piece of banded steel is just lying here.~
+braçadeira aço bandado~
+uma braçadeira de aço bandado~
+Um pedaço de aço bandado está simplesmente aqui.~
 ~
 9 0 0 0 0 ai 0 0 0 0 0 0 0
 7 0 0 0
 2 150 15 0
 #2958
-steel shortsword~
-a steel shortsword~
-A steel shortsword is on the ground here.  Pity.  It might rust.~
+espada curta aço~
+uma espada curta de aço~
+Uma espada curta de aço está no chão aqui. Pena que pode enferrujar.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 6 3
 6 450 45 0
 #2959
-black silk skirt~
-a black silk skirt~
-Somebody has left a skirt here.~
+saia seda preta~
+uma saia de seda preta~
+Alguém deixou uma saia aqui.~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 6 0 0 0
 5 5 0 0
 #2960
-moustache~
-a fake moustache~
-A small, fuzzy thing is on the ground here.  What the... It looks like a fake moustache.~
+bigode~
+um bigode falso~
+Uma pequena coisa peluda está no chão aqui. Que... Parece um bigode falso.~
 ~
 11 0 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
 1 1 0 0
 #2961
-peg leg~
-a false peg leg~
-A false peg leg is here, lying in the open.~
+perna pau falsa~
+uma perna de pau falsa~
+Uma perna de pau falsa está aqui, ao ar livre.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 3 1 6 5
 3 15 1 0
 #2962
-rusty cup water~
-a rusty cup~
-A rusty cup is lying here, collecting rainwater.~
+xícara enferrujada água~
+uma xícara enferrujada~
+Uma xícara enferrujada está aqui, coletando água da chuva.~
 ~
 17 0 0 0 0 ao 0 0 0 0 0 0 0
 5 3 0 1
 8 160 16 0
 #2963
-curving sword~
-a short, curving sword~
-A short, curving sword is lying here glimmering.~
+espada curva~
+uma espada curta e curvada~
+Uma espada curta está aqui reluzindo.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 5 3
 10 500 50 0
 #2964
-curving dagger~
-a curving dagger~
-A strange curved dagger is here.~
+adaga curva~
+uma adaga curva~
+Uma estranha adaga curva está aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 4 14
 2 100 10 0
 #2965
-black silk pants~
-a pair of black silk pants~
-Someone has lost their pants.... hmm....~
+calças seda preta~
+um par de calças de seda preta~
+Alguém perdeu suas calças.... hmm....~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 6 0 0 0
 3 3 0 0
 #2966
-black silk shirt~
-a black silk shirt~
-A black silk shirt is lying here, neglected.~
+camisa seda preta~
+uma camisa de seda preta~
+Uma camisa de seda preta está aqui, negligenciada.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 8 0 0 0
 3 3 0 0
 #2967
-rags~
-some rags~
-A pile of smelly rags is here, stinking.~
+trapos~
+alguns trapos~
+Uma pilha de trapos fedorentos está aqui, fedendo.~
 ~
 11 0 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
@@ -559,33 +559,33 @@ A
 A
 19 3
 #2968
-purse~
-a purse~
-A woman must have dropped her purse here...~
+bolsa~
+uma bolsa~
+Uma mulher deve ter derrubado sua bolsa aqui...~
 ~
 15 0 0 0 0 aco 0 0 0 0 0 0 0
 10 1 -1 0
 2 10 1 0
 #2969
-red dress~
-an expensive red dress~
-A pile of red material lies abandoned here, looking vaguely like a dress.~
+vestido vermelho~
+um vestido vermelho caro~
+Uma pilha de material vermelho está abandonada aqui, vagamente parecendo um vestido.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 2 0 0 0
 8 8 0 0
 #2970
-cutlass~
-a sharp cutlass~
-A cutlass is here, gleaming sharply.~
+cutelo~
+um cutelo afiado~
+Um cutelo está aqui, reluzindo com brilho afiado.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 4 1
 2 100 10 0
 #2971
-net~
-a rope net~
-A tangled rope net is lying here.~
+rede~
+uma rede de corda~
+Uma rede de corda emaranhada está aqui.~
 ~
 9 0 0 0 0 ak 0 0 0 0 0 0 0
 1 0 0 0
@@ -593,55 +593,55 @@ A tangled rope net is lying here.~
 #2972
 herring~
 a raw herring~
-A raw fish is here... it might just be a herring.~
+Um peixe cru está aqui... pode ser apenas um arenque.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 4 0 0 0
 1 1 0 0
 #2973
-broken bottle~
-a broken bottle~
-A half-shattered broken bottle has been left here.~
+garrafa quebrada~
+uma garrafa quebrada~
+Uma garrafa meio despedaçada foi deixada aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 1 3 14
 1 15 1 0
 #2974
-wine glass wine~
-a wine glass~
-A wine glass lies here, discarded.~
+taça vinho~
+uma taça de vinho~
+Uma taça de vinho está aqui, descartada.~
 ~
 17 0 0 0 0 ao 0 0 0 0 0 0 0
 2 2 2 0
 7 105 10 0
 #2975
-patched dress~
-a patched dress~
-A shabby dress is here, sewn with colorful patches.~
+vestido remendado~
+um vestido remendado~
+Um vestido esfarrapado está aqui, costurado com remendos coloridos.~
 ~
 11 0 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
 7 7 0 0
 #2976
-ale flagon ale~
-a flagon of ale~
-A flagon of ale lying is here, forgotten.~
+jarro cerveja~
+um jarro de cerveja~
+Um jarro de cerveja está aqui, esquecido.~
 ~
 17 0 0 0 0 ao 0 0 0 0 0 0 0
 3 3 3 0
 8 40 4 0
 #2977
-handcart~
-a wooden handcart~
-A wooden handcart is lying here, tipped on its side.~
+carrinho~
+um carrinho de madeira~
+Um carrinho de madeira está aqui, virado de lado.~
 ~
 15 0 0 0 0 ao 0 0 0 0 0 0 0
 100 0 -1 0
 20 1 0 0
 #2978
-silver bracelet~
-a silver bracelet~
-A ring of silver metal is here, waiting to be worn on a wrist.~
+pulseira prata~
+uma pulseira de prata~
+Um aro de metal prateado está aqui, esperando para ser usado no pulso.~
 ~
 11 0 0 0 0 am 0 0 0 0 0 0 0
 0 0 0 0
@@ -649,179 +649,179 @@ A ring of silver metal is here, waiting to be worn on a wrist.~
 A
 19 2
 #2979
-transparent veil~
-a small, nearly transparent veil~
-A small pile of sheer material is here, looking like a veil.~
+véu transparente~
+um véu pequeno quase transparente~
+Uma pequena pilha de material transparente está aqui, parecendo um véu.~
 ~
 11 0 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
 1 1 0 0
 #2980
-wool skirty~
-a long wool skirt~
-A pile of wool is here, vaguely looking like a skirt.~
+saia lã~
+uma saia longa de lã~
+Uma pilha de lã está aqui, vagamente parecendo uma saia.~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 4 0 0 0
 5 25 2 0
 #2981
-black leather mask~
-a black leather mask~
-A black leather mask lies here, ready to conceal someone's face.~
+máscara couro preto~
+uma máscara de couro preto~
+Uma máscara de couro preto está aqui, pronta para esconder o rosto de alguém.~
 ~
 11 g 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
 2 20 2 0
 #2982
-barbed whip~
-a cruel-looking barbed whip~
-A barbed whip is here, looking malicious.~
+chicote farpado~
+um chicote farpado de aparência cruel~
+Um chicote farpado está aqui, com aparência maliciosa.~
 ~
 5 j 0 0 0 an 0 0 0 0 0 0 0
 7 2 4 1
 3 30 3 0
 #2983
-wooden spoon~
-a wooden spoon~
-A wooden spoon is lying here, looking abandoned.~
+colher madeira~
+uma colher de madeira~
+Uma colher de madeira está aqui, com aparência abandonada.~
 ~
 13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
 1 5 0 0
 #2984
-sparkling chainmail~
-the sparkling chainmail~
-A pile of chain links is here, sparkling in the light.~
+cota malha cintilante~
+a cota de malha cintilante~
+Uma pilha de elos de corrente está aqui, cintilando na luz.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 6 0 0 0
 30 400 150 0
 #2985
-black bandana~
-a black bandana~
-A strip of black cloth is on the ground here.~
+bandana preta~
+uma bandana preta~
+Uma tira de tecido preto está no chão aqui.~
 ~
 9 0 0 0 0 ae 0 0 0 0 0 0 0
 3 0 0 0
 1 1 0 0
 #2986
-bullwhip~
-a bullwhip~
-A bullwhip is here, looking menacing.~
+chicote~
+um chicote~
+Um chicote está aqui, com aparência ameaçadora.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 7 1 5 2
 3 30 3 0
 #2987
-saddlebag~
-a saddlebag~
-A saddlebag is lying here, abandoned.~
+alforje~
+um alforje~
+Um alforje está aqui, abandonado.~
 ~
 15 0 0 0 0 ao 0 0 0 0 0 0 0
 50 1 -1 0
 15 150 15 0
 #2993
-sparkling mace~
-a sparkling silver mace~
-A sparkling silver, but heavy-looking, mace is lying here unattended~
+maça cintilante~
+uma maça de prata cintilante~
+Uma maça de prata cintilante, mas de aparência pesada, está aqui abandonada~
 ~
 5 k 0 0 0 an 0 0 0 0 0 0 0
 3 1 5 6
 50 375 375 0
 E
-sparkling mace~
-   This mace looks pretty fancy, but if used right it might be able to inflict
-some damage...
+maça cintilante~
+   Esta maça parece bem elegante, mas se usada corretamente, pode ser capaz de
+causar algum dano...
 ~
 A
 1 1
 A
 4 -1
 #2994
-merchant's sword~
-a merchant's sword~
-A shimmering sword is lying here.~
+espada de mercador~
+uma espada de mercador~
+Uma espada reluzente está aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 7 3
 15 900 112 0
 E
-merchant's sword~
-   The sword is well-crafted and also looks expensive.  It has the mark of a
-master swordsman on the side.
+espada mercador~
+   A espada é bem trabalhada e também parece cara. Tem a marca de um espadachim
+mestre na lateral.
 ~
 #2995
-commoner's sword~
-a commoner's sword~
-An unusually common looking sword is here, gleaming slightly.~
+espada plebeu~
+uma espada de plebeu~
+Uma espada de aparência incomumente comum está aqui, reluzindo levemente.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 7 3
 12 240 24 0
 E
-commoner's sword~
-   The sword looks like the generic sword, except for the blue silk wrapped
-around the hilt signifying loyalty to the diety of the sea.
+espada plebeu~
+   A espada parece com a espada genérica, exceto pela seda azul enrolada
+ao redor do cabo, significando lealdade à divindade do mar.
 ~
 #2996
-bracer~
-a black leather bracer~
-A black leather bracer is lying here, looking special.~
+braçadeira~
+uma braçadeira de couro preto~
+Uma braçadeira de couro preto está aqui, com aparência especial.~
 ~
 9 ag 0 0 0 am 0 0 0 0 0 0 0
 1 0 0 0
 2 20 2 0
 E
-bracer~
-   The bracer is made of top-quality black leather and seems to glow a bit.
+braçadeira~
+   A braçadeira é feita de couro preto de primeira qualidade e parece brilhar um pouco.
 ~
 A
 13 20
 A
 1 2
 #2997
-guard vest~
-a well-made leather vest~
-A pile of black leather is lying here.~
+colete guarda~
+um colete de couro bem feito~
+Uma pilha de couro preto está aqui.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 5 0 0 0
 15 150 15 0
 E
-guard vest leather~
-   The vest, judging by the make and material, was crafted by hand and made
-well.  It is of black leather and looks comfortable.
+colete guarda couro~
+   O colete, julgando pela confecção e material, foi feito à mão e bem
+elaborado. É de couro preto e parece confortável.
 ~
 A
 2 -1
 A
 1 1
 #2998
-whittling knife~
-a sharp whittling knife~
-A whittling knife is lying here.  It looks sharp.~
+faca esculpir~
+uma faca de esculpir afiada~
+Uma faca de esculpir está aqui. Parece afiada.~
 ~
 5 i 0 0 0 an 0 0 0 0 0 0 0
 5 1 3 1
 2 100 10 0
 E
-whittling knife~
-   This whittling knife looks as though it has been used a lot, but it is still
-very sharp.
+faca esculpir~
+   Esta faca de esculpir parece ter sido muito usada, mas ainda está
+muito afiada.
 ~
 #2999
-gullmarked sword~
-a gull-marked sword~
-A sword with a stylized gull engraved onto the hilt is here, looking special.~
+espada marca gaivota~
+uma espada marcada com gaivota~
+Uma espada com uma gaivota estilizada gravada no punho está aqui, com aparência especial.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 6 1 9 3
 20 1000 100 0
 E
-gull~
-   The stylized gull form on the sword is the special mark of Haven's best
-trained, their elite guardsmen.  Not many in the realm can boast their skill
-with their swords.
+gaivota~
+   A forma estilizada de gaivota na espada é a marca especial dos melhores
+treinados de Porto, seus guardas de elite. Poucos no reino podem se gabar de sua habilidade
+com suas espadas.
 ~
 A
 1 2

@@ -7,13 +7,13 @@ CircleMUD v3.0 Shop File~
 1.10
 0.90
 -1
-%s I don't have me none o' dat!~
-%s You don't got none o' dat!~
-%s I don't have no uses for dat stuff.~
-%s I can't buy dat!  You think me be made o' money?~
-%s You ain't got dat sort o' money?  You think me be stupid?~
-%s Gimme %d moneys!~
-%s I give you %d moneys for dat.~
+%s Eu não tenho nada disso aí!~
+%s Você não tem nada disso!~
+%s Eu não tenho uso para essas coisas.~
+%s Eu não posso comprar isso! Você acha que eu sou feito de dinheiro?~
+%s Você não tem esse tipo de dinheiro? Você acha que eu sou estúpido?~
+%s Me dê %d moedas!~
+%s Eu te dou %d moedas por isso.~
 0
 6
 2917
@@ -130,13 +130,13 @@ CircleMUD v3.0 Shop File~
 2.00
 0.00
 -1
-%s Sorry, I don't stock that item.~
-%s You don't seem to have that.~
-%s I don't trade in such items.~
-%s I can't afford that!~
-%s You are too poor!~
-%s That'll be %d coins, thanks.~
-%s I'll give you %d coins for that.~
+%s Desculpe, eu não vendo esse item.~
+%s Você não parece ter isso.~
+%s Eu não negocio com esses itens.~
+%s Eu não posso pagar por isso!~
+%s Você é muito pobre!~
+%s Isso custará %d moedas, obrigado.~
+%s Eu te dou %d moedas por isso.~
 0
 6
 2971
@@ -162,13 +162,13 @@ CircleMUD v3.0 Shop File~
 0.50
 5
 -1
-%s Sorry, I don't stock that item.~
-%s You don't seem to have that.~
-%s I don't trade in such items.~
-%s Get your cheap self out of my shop.~
-%s You are too poor!~
-%s That'll be %d coins, thanks.~
-%s I'll give you %d coins for that.~
+%s Desculpe, eu não vendo esse item.~
+%s Você não parece ter isso.~
+%s Eu não negocio com esses itens.~
+%s Saia da minha loja com essa mesquinharia.~
+%s Você é muito pobre!~
+%s Isso custará %d moedas, obrigado.~
+%s Eu te dou %d moedas por isso.~
 0
 6
 2955
