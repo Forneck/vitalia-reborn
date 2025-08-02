@@ -408,6 +408,7 @@ ACMD(do_zlock);
 ACMD(do_zpurge);
 ACMD(do_zreset);
 ACMD(do_zunlock);
+ACMD(do_portal);
 
 bool is_level_compatible_with_group(struct char_data *prospect, struct group_data *group);
 #endif /* _ACT_H_ */

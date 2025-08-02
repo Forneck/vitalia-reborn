@@ -16078,6 +16078,36 @@ voltar ao corpo original, e' preciso usar os comandos QUIT ou RETURN.
 
 Veja tambem: SWITCH, RETURN
 
+#107
+PORTAL
+
+Uso: portal
+     portal [-d] [-l <level>] [-t <timer>] <dest_room>
+
+   O comando portal permite aos administradores de nivel 107 ou superior criar 
+portais magicos entre salas. Os portais sao objetos ITEM_PORTAL que permitem 
+transporte instantaneo entre localizacoes.
+
+Opcoes:
+  -d           : Cria portais bidirecionais (ida e volta)
+  -l <level>   : Define nivel minimo necessario para usar o portal
+  -t <timer>   : Define duracao do portal em ticks (-1 para infinito)
+
+Exemplos:
+  portal                    - Lista todos os portais existentes
+  portal 3001              - Portal unidirecional para sala 3001 (infinito)
+  portal -l 30 3001        - Portal que requer nivel 30 para usar
+  portal -t 10 3001        - Portal com 10 ticks de duracao
+  portal -d 3001           - Portais bidirecionais
+  portal -d -l 50 -t 5 3001 - Portais bidirecionais, nivel 50, 5 ticks
+
+   Quando listando portais, as informacoes mostradas incluem localizacao atual, 
+destino, nivel minimo requerido e tempo restante.
+
+   Para usar um portal criado, digite: enter portal
+
+Veja tambem: ENTER, GOTO, TELEPORT
+
 #108
 SPLIST
 
