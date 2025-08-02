@@ -114,30 +114,30 @@ sul~
 1 2900 2904
 S
 #2906
-A Dank Dungeon Chamber~
-   You step into the dark wetness of the prison chamber...  And the heavy iron
-door swings swiftly shut behind you!  You are trapped in the dank room.  You
-are able to make out manacles on the north wall.  A filthy pile of cloth is
-heaped against the west wall.
+Uma Câmara de Masmorra Úmida~
+   Você entra na umidade escura da câmara da prisão... E a pesada porta de ferro
+se fecha rapidamente atrás de você! Você está preso no quarto úmido. Você
+consegue distinguir grilhões na parede norte. Uma pilha suja de tecido está
+amontoada contra a parede oeste.
 ~
 29 9 0 0 0 0
 D3
 ~
-pile secret cloth~
+pilha secreto tecido~
 1 2900 2921
 E
-dungeon~
-   His words bring to mind that the cloth looks suspicious.  Maybe you should
-stir it around a bit...  It might be concealing something.
+masmorra~
+   Suas palavras trazem à mente que o tecido parece suspeito. Talvez você devesse
+mexer nele um pouco... Pode estar escondendo algo.
 ~
 S
 #2907
-The Double Stairway~
-   Against the north and south walls are twin pairs of beautiful staircases.
-They are salmon-colored marble arms curving into an embrace of the center of
-the room, where a fountain stands.  The exquisite marble fountain is of a fish
-perched on its tail, water spurting from its mouth.  Back to the east the red
-carpet begins again, while the stairs lead up to the second floor of the Manor.
+A Escadaria Dupla~
+   Contra as paredes norte e sul há pares gêmeos de belas escadarias. São braços
+de mármore cor de salmão curvando-se em um abraço ao centro do quarto, onde
+fica uma fonte. A fonte de mármore requintada é de um peixe empoleirado em sua
+cauda, água jorrando de sua boca. De volta ao leste o tapete vermelho começa
+novamente, enquanto as escadas levam ao segundo andar da Mansão.
 
 ~
 29 8 0 0 0 0
@@ -151,19 +151,20 @@ D4
 0 2900 2904
 S
 #2908
-An Artfull Hallway~
-   This room is only called a hallway because it connects one room in the Manor
-to another, not because of its size.  Beautifully stitched tapestries line the
-walls, each with its own story to tell.  Carvings, sculptures, paintings, and
-all sorts of forms of art are scattered around, some hanging and others on
-marble stands that are themselves sculptures.  Here the stone floor has been
-covered in rich red carpet.  To the north is a small plain door, and to the
-west is a twin set of double, majestically curving staircases.
+Um Corredor Artístico~
+   Este quarto só é chamado de corredor porque conecta um quarto da Mansão a
+outro, não por causa de seu tamanho. Tapeçarias lindamente bordadas forram as
+paredes, cada uma com sua própria história para contar. Esculturas, estátuas,
+pinturas e todos os tipos de formas de arte estão espalhados ao redor, alguns
+pendurados e outros em pedestais de mármore que são eles próprios esculturas.
+Aqui o chão de pedra foi coberto com tapete vermelho rico. Ao norte há uma
+pequena porta simples, e ao oeste há um conjunto duplo de escadarias
+majestosamente curvadas.
 ~
 29 8 0 0 0 0
 D0
 ~
-north~
+norte~
 1 2900 2909
 D1
 ~

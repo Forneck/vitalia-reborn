@@ -721,34 +721,34 @@ A saddlebag is lying here, abandoned.~
 50 1 -1 0
 15 150 15 0
 #2993
-sparkling mace~
-a sparkling silver mace~
-A sparkling silver, but heavy-looking, mace is lying here unattended~
+maça cintilante~
+uma maça de prata cintilante~
+Uma maça de prata cintilante, mas de aparência pesada, está aqui abandonada~
 ~
 5 k 0 0 0 an 0 0 0 0 0 0 0
 3 1 5 6
 50 375 375 0
 E
-sparkling mace~
-   This mace looks pretty fancy, but if used right it might be able to inflict
-some damage...
+maça cintilante~
+   Esta maça parece bem elegante, mas se usada corretamente, pode ser capaz de
+causar algum dano...
 ~
 A
 1 1
 A
 4 -1
 #2994
-merchant's sword~
-a merchant's sword~
-A shimmering sword is lying here.~
+espada de mercador~
+uma espada de mercador~
+Uma espada reluzente está aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 7 3
 15 900 112 0
 E
-merchant's sword~
-   The sword is well-crafted and also looks expensive.  It has the mark of a
-master swordsman on the side.
+espada mercador~
+   A espada é bem trabalhada e também parece cara. Tem a marca de um espadachim
+mestre na lateral.
 ~
 #2995
 commoner's sword~
