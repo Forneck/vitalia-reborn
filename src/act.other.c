@@ -1324,7 +1324,19 @@ ACMD(do_mine)
             vnum = 1041;   // Gold ring (valuable treasure)
             send_to_char(ch, "Você encontra algo valioso!\r\n");
             act("$n encontra algo valioso!", TRUE, ch, 0, 0, TO_ROOM);
-        } else if (roll <= 30 + (skill_num / 5)) {
+        } else if (roll <= 20 + (skill_num / 8)) {
+            vnum = 2918;   // Zone 29 fairy eye emerald (rare gem)
+            send_to_char(ch, "Você encontra uma esmeralda rara!\r\n");
+            act("$n encontra uma esmeralda rara!", TRUE, ch, 0, 0, TO_ROOM);
+        } else if (roll <= 35 + (skill_num / 6)) {
+            vnum = 2904;   // Zone 29 sparkling ruby
+            send_to_char(ch, "Você encontra um rubi cintilante!\r\n");
+            act("$n encontra um rubi cintilante!", TRUE, ch, 0, 0, TO_ROOM);
+        } else if (roll <= 45 + (skill_num / 7)) {
+            vnum = 2905;   // Zone 29 sparkling ruby (alternate)
+            send_to_char(ch, "Você encontra outro rubi!\r\n");
+            act("$n encontra um rubi!", TRUE, ch, 0, 0, TO_ROOM);
+        } else if (roll <= 60 + (skill_num / 5)) {
             vnum = 10711;   // Iron pickaxe (mining tool)
             send_to_char(ch, "Você encontra uma ferramenta de mineração.\r\n");
             act("$n encontra uma ferramenta de mineração.", TRUE, ch, 0, 0, TO_ROOM);
@@ -1426,10 +1438,18 @@ ACMD(do_fishing)
             vnum = 4402;   // Large fish
             send_to_char(ch, "Você fisga um peixe grande!\r\n");
             act("$n fisga um peixe grande!", TRUE, ch, 0, 0, TO_ROOM);
-        } else if (roll <= 40 + (skill_num / 4)) {
+        } else if (roll <= 35 + (skill_num / 4)) {
             vnum = 10922;   // Fresh fish
             send_to_char(ch, "Você fisga um pequeno peixe.\r\n");
             act("$n fisga um pequeno peixe.", TRUE, ch, 0, 0, TO_ROOM);
+        } else if (roll <= 50 + (skill_num / 6)) {
+            vnum = 2920;   // Zone 29 fish
+            send_to_char(ch, "Você fisga um peixe comum.\r\n");
+            act("$n fisga um peixe comum.", TRUE, ch, 0, 0, TO_ROOM);
+        } else if (roll <= 60 + (skill_num / 8)) {
+            vnum = 2972;   // Zone 29 herring
+            send_to_char(ch, "Você fisga um arenque!\r\n");
+            act("$n fisga um arenque!", TRUE, ch, 0, 0, TO_ROOM);
         } else {
             send_to_char(ch, "Você sente algo mordiscar, mas o peixe escapa.\r\n");
             act("$n quase fisga um peixe, mas ele escapa.", TRUE, ch, 0, 0, TO_ROOM);
@@ -1443,13 +1463,23 @@ ACMD(do_fishing)
             }
         }
 
-        // Small chance to attract a school of fish
+        // Small chance to attract a school of fish or fisherman
         if (percent <= prob && rand_number(1, 100) <= 5) {
-            struct char_data *fish_mob = read_mobile(10864, VIRTUAL);   // Colorful fish school
-            if (fish_mob) {
-                char_to_room(fish_mob, IN_ROOM(ch));
-                send_to_char(ch, "Sua pesca atraiu um cardume de peixes coloridos!\r\n");
-                act("A pesca de $n atraiu um cardume de peixes coloridos!", TRUE, ch, 0, 0, TO_ROOM);
+            int fish_spawn = rand_number(1, 100);
+            if (fish_spawn <= 70) {
+                struct char_data *fish_mob = read_mobile(10864, VIRTUAL);   // Colorful fish school
+                if (fish_mob) {
+                    char_to_room(fish_mob, IN_ROOM(ch));
+                    send_to_char(ch, "Sua pesca atraiu um cardume de peixes coloridos!\r\n");
+                    act("A pesca de $n atraiu um cardume de peixes coloridos!", TRUE, ch, 0, 0, TO_ROOM);
+                }
+            } else {
+                struct char_data *fisherman_mob = read_mobile(2967, VIRTUAL);   // Zone 29 fish thrower
+                if (fisherman_mob) {
+                    char_to_room(fisherman_mob, IN_ROOM(ch));
+                    send_to_char(ch, "Sua pesca atraiu um arremessador de peixe!\r\n");
+                    act("A pesca de $n atraiu um arremessador de peixe!", TRUE, ch, 0, 0, TO_ROOM);
+                }
             }
         }
 
