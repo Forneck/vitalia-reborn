@@ -124,8 +124,8 @@ criada~
 a criada~
 Uma criada está aqui, procurando por poeira.
 ~
-   She looks as though dust is her worst enemy - and she shall wipe out the
-entire species if she can!
+   Ela parece como se a poeira fosse sua pior inimiga - e ela exterminará toda
+a espécie se puder!
 ~
 2097356 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -142,7 +142,7 @@ conselheiro de Degruziel~
 o conselheiro de Degruziel~
 O conselheiro de Degruziel está aqui, parecendo importante.
 ~
-   He looks like he thinks himself very important.
+   Ele parece como se achasse que é muito importante.
 ~
 2097162 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -157,9 +157,8 @@ guarda-costas~
 o guarda-costas~
 Um guarda-costas está aqui, parecendo malvado.
 ~
-   The bodyguard looks as though he knows what he's going - protecting.  He also
-doesn't look like the kind of person to mess with without thinking about it
-first.
+   O guarda-costas parece como se soubesse o que está fazendo - proteger. Ele
+também não parece o tipo de pessoa para mexer sem pensar duas vezes primeiro.
 ~
 2103368 0 0 0 0 0 0 0 500 E
 14 16 1 2d2+140 2d2+2
@@ -176,8 +175,8 @@ patrulheiro de elite~
 um patrulheiro de elite~
 Um patrulheiro de elite está aqui, andando por Porto e procurando problemas.
 ~
-   He looks as if he enjoys keeping the peace for Porto.  It would be unwise to
-make him angry.
+   Ele parece como se gostasse de manter a paz em Porto. Seria imprudente
+deixá-lo irritado.
 ~
 2103368 0 0 0 0 0 0 0 1000 E
 14 16 1 2d2+140 2d2+2
@@ -193,8 +192,8 @@ guarda de elite~
 um guarda de elite~
 Um guarda de elite está aqui, protegendo os inocentes.
 ~
-   This guard looks as if he knows the use of his weapon well.  It would be a
-bad idea to cross him.
+   Este guarda parece como se conhecesse bem o uso de sua arma. Seria uma má
+ideia contrariá-lo.
 ~
 2103306 0 0 0 0 0 0 0 1000 E
 14 16 1 2d2+140 2d2+2
@@ -848,13 +847,13 @@ A king crab is here, looking mean.
 BareHandAttack: 11
 E
 #2964
-woman~
-the Captain's woman~
-The Captain's woman is here, looking at the Captain with dreamy eyes.
+mulher~
+a mulher do Capitão~
+A mulher do Capitão está aqui, olhando para o Capitão com olhos sonhadores.
 ~
-   She looks as if she is lost in her own little world.  She is staring at the
-Captain as if she doesn't really see him, but there is a wide smile on her face
-as if she is remembering something pleasant.
+   Ela parece como se estivesse perdida em seu próprio mundinho. Ela está
+encarando o Capitão como se realmente não o visse, mas há um sorriso largo em
+seu rosto como se estivesse lembrando de algo agradável.
 ~
 2099338 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -918,13 +917,13 @@ Str: 16
 Dex: 15
 E
 #2968
-waiting cart man~
-the cartman~
-A man with a cart stands here, waiting patiently.
+carroceiro esperando~
+o carroceiro~
+Um homem com uma carroça está aqui, esperando pacientemente.
 ~
-   He stands next to a ship, waiting patiently for his turn to get his cart
-filled so that he may hurry away to the market and the vendor that wishes to
-purchase the fish.
+   Ele fica ao lado de um navio, esperando pacientemente por sua vez de ter sua
+carroça cheia para que possa se apressar até o mercado e o vendedor que deseja
+comprar o peixe.
 ~
 2099210 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -933,12 +932,12 @@ purchase the fish.
 BareHandAttack: 10
 E
 #2969
-hurrying cart man~
-a man~
-A man speeds through the crowd here with his cart.
+carroceiro apressado~
+um homem~
+Um homem acelera pela multidão aqui com sua carroça.
 ~
-   He looks as if he is in a hurry to get himself and his cart to wherever it is
-he is going, and he isn't going to stop for anything if he can help it.
+   Ele parece estar com pressa para levar a si mesmo e sua carroça para onde
+quer que seja que ele esteja indo, e não vai parar por nada se puder evitar.
 ~
 2097224 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -951,12 +950,12 @@ Int: 15
 Wis: 12
 E
 #2970
-singing patron~
-the patron~
-A patron of the bar stands here, singing loudly.
+cliente cantando~
+o cliente~
+Um cliente do bar está aqui, cantando alto.
 ~
-   He looks as if he has enjoyed a few too many of the local drinks.  He sings
-in a loud clear voice, a bawdy sailing song.
+   Ele parece como se tivesse aproveitado algumas bebidas locais a mais. Ele
+canta em uma voz alta e clara, uma canção marítima atrevida.
 ~
 2099210 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -988,15 +987,16 @@ Dex: 13
 E
 T 2908
 #2972
-stumbling drunk~
-a drunk~
-A drunken man is here, stumbling around in circles.
+bêbado tropeçando~
+um bêbado~
+Um homem embriagado está aqui, tropeçando em círculos.
 ~
-   This man stumbles and drools in such a manner that it is very obvious he has
-had more than a few too many drinks.  He occasionally mutters insults to his
-imaginary friend, whom the drunk often accuses of tripping him.  You can see
-some of the people nearby looking at him with obvious disgust, but some just
-plain don't care.  They see enough of his kind since the tavern was built.
+   Este homem tropeça e babava de tal maneira que é muito óbvio que ele bebeu
+mais do que algumas bebidas a mais. Ele ocasionalmente murmura insultos para
+seu amigo imaginário, a quem o bêbado frequentemente acusa de fazê-lo tropeçar.
+Você pode ver algumas pessoas próximas olhando para ele com óbvio nojo, mas
+algumas simplesmente não se importam. Elas veem o suficiente de sua espécie
+desde que a taverna foi construída.
 ~
 2097162 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -1031,16 +1031,16 @@ E
 T 2903
 T 2904
 #2974
-cart man~
-a cartman~
-A cartman stands here, rummaging around in the back of his cart.
+carroceiro~
+um carroceiro~
+Um carroceiro está aqui, vasculhando na traseira de sua carroça.
 ~
-   This cartman is casually rummaging around in the back of his cart, looking
-over his goods.  It looks pretty full, and the man looks very alert and
-possessive of it.  The cartman is a big, muscular man who looks as if he knows
-the use of his weapon.  His muscles ripple as he casually tosses heavy chairs
-and such from one side of his cart to the other.  From his dress he looks like a
-sailor, as do most of the people in Porto.
+   Este carroceiro está casualmente vasculhando na traseira de sua carroça,
+examinando seus produtos. Parece bem cheia, e o homem parece muito alerta e
+possessivo dela. O carroceiro é um homem grande e musculoso que parece conhecer
+o uso de sua arma. Seus músculos ondulam enquanto ele casualmente joga cadeiras
+pesadas e tais de um lado de sua carroça para o outro. Por suas roupas ele
+parece um marinheiro, como a maioria das pessoas em Porto.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -1053,14 +1053,14 @@ Int: 10
 Wis: 10
 E
 #2975
-special harem girl~
-Degruziel's special harem girl~
-An especially beautiful harem girl is here, being over-pampered and envied by the other girls
+garota especial do harém~
+a garota especial de Degruziel~
+Uma garota do harém especialmente bela está aqui, sendo mimada demais e invejada pelas outras garotas
 ~
-   It looks unfinished.  C/c This harem girl looks as if she gets all the
-special attention she could ever want or need.  She even has a few gifts from
-Degruziel to her.  She appears very happy with what she does, even though some
-other people might not like it...
+   Parece inacabado. C/c Esta garota do harém parece como se recebesse toda a
+atenção especial que poderia querer ou precisar. Ela até tem alguns presentes
+de Degruziel para ela. Ela parece muito feliz com o que faz, mesmo que algumas
+outras pessoas possam não gostar...
 ~
 2099338 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -1075,15 +1075,15 @@ GenWimpy: 3
 E
 T 2902
 #2976
-harem girl~
-the harem girl~
-A harem girl lounges here, beautiful and not wearing much.
+garota do harém~
+a garota do harém~
+Uma garota do harém descansa aqui, bela e vestindo pouco.
 ~
-   The harem girl looks very young, but it doesn't appear that she minds her
-job.  After all, most of her day is spent sitting around and looking pretty.
-She gets well-fed, well-paid, and she hardly has to do anything now that
-Degruziel has a favorite, and it isn't her.  She thinks she has it made, and it
-shows on her pampered face.
+   A garota do harém parece muito jovem, mas não parece que ela se importa com
+seu trabalho. Afinal, a maior parte de seu dia é gasta sentada e parecendo
+bonita. Ela é bem alimentada, bem paga, e mal tem que fazer alguma coisa agora
+que Degruziel tem uma favorita, e não é ela. Ela acha que tem vida feita, e
+isso se mostra em seu rosto mimado.
 ~
 2099338 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -1097,14 +1097,14 @@ Wis: 12
 GenWimpy: 4
 E
 #2977
-kitchen maid~
-a kitchenmaid~
-A kitchenmaid stands here covered in flour, mixing something.
+criada da cozinha~
+uma criada da cozinha~
+Uma criada da cozinha está aqui coberta de farinha, misturando algo.
 ~
-   The young kitchenmaid glances apprehensively over her shoulder as she
-hurriedly pours contents into a mixing bowl.  Sometimes her glance will stray to
-Tiama, if she is present.  It is quite possible this young girl is afraid of the
-head cook, like so many of her smart peers.
+   A jovem criada da cozinha olha apreensivamente por cima do ombro enquanto
+despeja apressadamente o conteúdo em uma tigela de mistura. Às vezes seu olhar
+se desvia para Tiama, se ela estiver presente. É bem possível que esta jovem
+tenha medo da chefe de cozinha, como muitos de seus pares inteligentes.
 ~
 2097166 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -1112,14 +1112,14 @@ head cook, like so many of her smart peers.
 9 9 2
 E
 #2978
-half mad prisoner~
-the half-mad prisoner~
-A half-mad prisoner is shackled here in the filth, muttering to himself
+prisioneiro meio louco~
+o prisioneiro meio louco~
+Um prisioneiro meio louco está acorrentado aqui na sujeira, murmurando para si mesmo
 ~
-   The prisoner looks as though he has been beaten several times and starved, he
-is as thin as a toothpick.  He is manacled to the wall, and muttering all sorts
-of nonsense.  Occasionally he will let out a yell for help, however.  Maybe you
-should listen to him.
+   O prisioneiro parece como se tivesse sido espancado várias vezes e faminto,
+ele está magro como um palito. Ele está algemado na parede, e murmurando todo
+tipo de bobagem. Ocasionalmente ele gritará por ajuda, no entanto. Talvez você
+devesse ouvi-lo.
 ~
 2097224 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -1128,12 +1128,12 @@ should listen to him.
 E
 T 2901
 #2979
-Master Torture~
-the Master of Torture~
-Degruziel's Master of Torture stands here, looking very sinister.
+Mestre da Tortura~
+o Mestre da Tortura~
+O Mestre da Tortura de Degruziel está aqui, parecendo muito sinistro.
 ~
-   The Master of Torture doesn't like intruders into his lair....  Which means
-you.
+   O Mestre da Tortura não gosta de intrusos em seu covil... O que significa
+você.
 ~
 2115626 0 0 0 0 0 0 0 -500 E
 14 16 1 2d2+140 2d2+2
@@ -1200,13 +1200,13 @@ important...  Though what exactly it is he's doing is unapparent.
 9 9 1
 E
 #2984
-stablemaster~
-the Stablemaster~
-The Stablemaster stand here... what?! A WOMAN?!?!
+mestre do estábulo~
+a Mestre do Estábulo~
+A Mestre do Estábulo está aqui... como?! UMA MULHER?!?!
 ~
-   This woman looks as tough - if not tougher - than any man around.  How else
-would she get the job as stablemaster?  She talks to the horses as if she speaks
-their language.
+   Esta mulher parece tão forte - se não mais forte - que qualquer homem por
+aí. Como mais ela conseguiria o trabalho de mestre do estábulo? Ela fala com
+os cavalos como se falasse a língua deles.
 ~
 2099210 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -1214,13 +1214,13 @@ their language.
 9 9 2
 E
 #2985
-stableboy~
-the stableboy~
-A stableboy stands here, contemplating life as he mucks out stalls.
+rapaz do estábulo~
+o rapaz do estábulo~
+Um rapaz do estábulo está aqui, contemplando a vida enquanto limpa as baias.
 ~
-   He looks very unhappy with his job, but at least it gets him food and a warm
-bed.  He mucks out the stalls mechanically, giving his pitchfork an expert twist
-every time he throws something into the nearby wheelbarrow.
+   Ele parece muito infeliz com seu trabalho, mas pelo menos isso lhe dá comida
+e uma cama quente. Ele limpa as baias mecanicamente, dando ao seu forcado uma
+torção especializada toda vez que joga algo no carrinho de mão próximo.
 ~
 2099210 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -1228,12 +1228,12 @@ every time he throws something into the nearby wheelbarrow.
 9 9 1
 E
 #2986
-plodding donkey~
-a plodding donkey~
-A donkey is here, plodding away with its head down.
+burro pesado~
+um burro pesado~
+Um burro está aqui, caminhando pesadamente com a cabeça baixa.
 ~
-   The plodding donkey looks like she is very bored, but the muscles she has
-received from hauling things to and fro all day have given her bulging muscles.
+   O burro pesado parece que está muito entediado, mas os músculos que ganhou
+de carregar coisas para lá e para cá o dia todo lhe deram músculos salientes.
 
 ~
 2097224 0 0 0 0 0 0 0 0 E
@@ -1243,13 +1243,13 @@ received from hauling things to and fro all day have given her bulging muscles.
 BareHandAttack: 4
 E
 #2987
-swearing cart man~
-the cartman~
-A cartman stands here, swearing profusely at the traffic and his draft animal.
+carroceiro xingando~
+o carroceiro~
+Um carroceiro está aqui, xingando profusamente o trânsito e seu animal de tração.
 ~
-   The swearing cartman is red in the face from anger.  The long strings of
-expletives coming from his mouth make the people around him wince and cover
-their children's ears.
+   O carroceiro xingando está vermelho de raiva. As longas sequências de
+palavrões saindo de sua boca fazem as pessoas ao seu redor estremecerem e
+tamparem os ouvidos de seus filhos.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -1258,12 +1258,13 @@ their children's ears.
 BareHandAttack: 7
 E
 #2988
-prancing horse~
-a prancing horse~
-A prancing horse stands here, tossing its pretty head.
+cavalo empinando~
+um cavalo empinando~
+Um cavalo empinando está aqui, balançando sua bela cabeça.
 ~
-   The horse tosses its head and snorts, full of energy and eager to be off.
-It looks more like a rider's horse, not a cart horse, and is full of spirit.
+   O cavalo balança a cabeça e bufa, cheio de energia e ansioso para partir.
+Parece mais um cavalo de montar, não um cavalo de carroça, e está cheio de
+espírito.
 ~
 2097224 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -1271,13 +1272,13 @@ It looks more like a rider's horse, not a cart horse, and is full of spirit.
 9 9 0
 E
 #2989
-loud merchant~
-a loud merchant~
-A merchant stands here, advertising his wares at the top of his lungs.
+comerciante barulhento~
+um comerciante barulhento~
+Um comerciante está aqui, anunciando suas mercadorias a plenos pulmões.
 ~
-   This merchant looks disappointed - apparently he hasn't had much business
-today.  He keeps his hand on his weapon as if he knows it well, probably to ward
-off thieves.
+   Este comerciante parece desapontado - aparentemente ele não teve muito
+negócio hoje. Ele mantém a mão na arma como se a conhecesse bem, provavelmente
+para afastar ladrões.
 ~
 2097224 0 0 0 0 0 0 0 500 E
 14 16 1 2d2+140 2d2+2
@@ -1286,12 +1287,12 @@ off thieves.
 BareHandAttack: 7
 E
 #2990
-sailor~
-the sailor~
-A sailor stands here, walking like he belongs on the sea.
+marinheiro~
+o marinheiro~
+Um marinheiro está aqui, caminhando como se pertencesse ao mar.
 ~
-   He looks rather burly and rather mean, so you might want to leave him alone.
-He also looks like he could hold his own in a fight.
+   Ele parece bastante robusto e bastante malvado, então você pode querer
+deixá-lo em paz. Ele também parece que poderia se defender numa briga.
 ~
 2097224 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -1303,13 +1304,13 @@ Dex: 15
 Wis: 13
 E
 #2991
-outlander~
-an outlander~
-An outlander stands here looking very confused.
+forasteiro~
+um forasteiro~
+Um forasteiro está aqui parecendo muito confuso.
 ~
-   He is short with wavy black hair, something that doesn't fit the setting of
-Porto very well.  He also appears very confused, listening intently and trying
-to figure out what people around him are saying.
+   Ele é baixo com cabelo preto ondulado, algo que não se encaixa muito bem no
+cenário de Porto. Ele também parece muito confuso, ouvindo atentamente e
+tentando descobrir o que as pessoas ao seu redor estão dizendo.
 ~
 2099272 0 0 0 0 0 0 0 200 E
 10 17 4 2d2+100 1d2+1
