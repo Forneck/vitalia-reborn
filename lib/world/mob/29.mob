@@ -109,7 +109,7 @@ homem vendendo mobília~
 o vendedor de móveis~
 Um homem está aqui, vendendo seus móveis.
 ~
-   This man is selling his furniture, and would like your business.
+   Este homem está vendendo seus móveis e gostaria de fazer negócios com você.
 ~
 2099210 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -210,8 +210,8 @@ cidadão descansando~
 o cidadão~
 Um cidadão está aqui, descansando e olhando ao redor feliz.
 ~
-   This man is obviously enjoying his life.  He loves his town, Porto, and just
-sits here, enjoying all of the life that goes on around him.
+   Este homem está obviamente aproveitando sua vida. Ele ama sua cidade, Porto, e
+simplesmente senta aqui, aproveitando toda a vida que acontece ao seu redor.
 ~
 2099210 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -224,8 +224,8 @@ bardo talentoso~
 o bardo talentoso~
 Um bardo está aqui, cantando ao som de uma melodia dedilhada.
 ~
-   His voice is clear and strong.  It is so good it might make you wish to give
-him coin...  Or buy him supper.
+   Sua voz é clara e forte. É tão boa que pode fazer você querer dar-lhe
+moedas... Ou comprar-lhe o jantar.
 ~
 2099338 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -240,8 +240,8 @@ acrobata~
 um acrobata~
 Um acrobata está aqui, fazendo paradas de mão.
 ~
-   This tumbler is tall, thin, and lightning quick.  He draws a crowd on good
-days, and appears to make a living off his skill.
+   Este acrobata é alto, magro e rápido como um raio. Ele atrai multidões em bons
+dias, e parece ganhar a vida com sua habilidade.
 ~
 2099338 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -256,9 +256,9 @@ garçonete da taverna~
 uma garçonete da taverna~
 Uma garçonete peituda da taverna está aqui, servindo bebidas.
 ~
-   She looks rather busty, but don't try anything...  She looks as though she
-wouldn't take any crap from anyone.  Some of the men in the room give her
-fearful glances if she so much as makes a slight threatening move.
+   Ela parece bem peituda, mas não tente nada... Ela parece que
+não levaria desaforo de ninguém. Alguns dos homens na sala lhe dão
+olhares temerosos se ela faz o menor movimento ameaçador.
 ~
 2099210 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -271,7 +271,7 @@ cobra de lama~
 a cobra lamacenta~
 Uma poça de lama de aparência incomum está aqui, rodopiando.
 ~
-   It looks dirty....  It looks like mud.  Wow.  It might even be a snake.
+   Parece suja... Parece lama. Caramba. Pode até ser uma cobra.
 ~
 2269288 0 0 0 0 0 0 0 0 E
 3 19 8 0d0+30 1d2+0
@@ -284,7 +284,7 @@ monstro de lama bolhas~
 o monstro de lama~
 Pequenas bolhas emergem através da água aqui.
 ~
-   There is something strange about those bubbles...
+   Há algo estranho sobre essas bolhas...
 ~
 2097802 0 0 0 1048576 0 0 0 -100 E
 10 17 4 2d2+100 1d2+1
@@ -297,9 +297,9 @@ cão latindo~
 um cão latindo~
 Um cão latindo está aqui, latindo... e latindo... e latindo...
 ~
-   This dog is small and white, with brown markings.  Apparently she likes to
-bark because she barks at everything that moves...  And even things that don't
-move.  This dog barks at her own shadow.
+   Este cão é pequeno e branco, com marcas marrons. Aparentemente ela gosta de
+latir porque late para tudo que se move... E até para coisas que não se
+movem. Este cão late para sua própria sombra.
 ~
 2097224 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -311,8 +311,8 @@ gato ágil~
 o gato ágil~
 Um gato está aqui, parecendo pequeno mas rápido.
 ~
-   This cat is small, but has muscles that indicate it could move like
-lightning.
+   Este gato é pequeno, mas tem músculos que indicam que pode se mover como
+um raio.
 ~
 2097352 0 0 0 1572864 0 0 0 0 E
 3 19 8 0d0+30 1d2+0
@@ -326,8 +326,8 @@ cão raivoso~
 um cão raivoso~
 Um cão raivoso está aqui, parecendo malvado.
 ~
-   This dog is skinny and on his last leg of life.  Foams surrounds his mouth.
-He is obviously rabid.  He is also obviously a very LARGE dog.
+   Este cão é magro e está no último suspiro de vida. Espuma cerca sua boca.
+Ele está obviamente raivoso. Ele também é obviamente um cão MUITO GRANDE.
 ~
 2097384 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -339,8 +339,8 @@ rato~
 um rato~
 Um rato está aqui... caramba, ele é enorme.
 ~
-   This rat looks at you with beady, unafraid eyes as if it can see right
-through you.  It appears completely unafraid.
+   Este rato olha para você com olhos pequenos e destemidos como se pudesse ver
+através de você. Parece completamente destemido.
 ~
 2097384 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -352,8 +352,8 @@ garoto servente~
 um garoto servente~
 Um garoto servente está aqui, carregando um jarro cheio de vinho.
 ~
-   This boy walks around the room asking those with glasses if they would like a
-refill.
+   Este garoto anda pela sala perguntando àqueles com copos se gostariam de
+uma reposição.
 ~
 2099400 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -366,9 +366,9 @@ cavalheiro gentil~
 um cavalheiro~
 Um cavalheiro está aqui, olhando ao redor com desgosto.
 ~
-   This gentleman is obviously used to company with more morals and higher
-intelligence.  He looks around at the opulence around him with disgust, appalled
-at such wasteful spending.  After all, this money could go to help the poor!
+   Este cavalheiro está obviamente acostumado com companhia de maior moral e
+inteligência superior. Ele olha ao redor para a opulência ao seu redor com desgosto,
+horrorizado com tal gasto desperdiçado. Afinal, este dinheiro poderia ajudar os pobres!
 ~
 2103624 0 0 0 0 0 0 0 750 E
 10 17 4 2d2+100 1d2+1
@@ -385,9 +385,9 @@ dama bem nascida~
 a dama bem nascida~
 Uma dama bem nascida está aqui, ocupada seduzindo os outros convidados.
 ~
-   This lady is wear a dress that hints at everything but reveals nothing.  Her
-demeanor and speech is of the high born, but she acts like a harlot, using her
-feminine allure on everyone nearby.
+   Esta dama usa um vestido que insinua tudo mas não revela nada. Seu
+comportamento e fala são de alta classe, mas ela age como uma cortesã, usando
+seu charme feminino em todos ao redor.
 ~
 2099400 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -405,10 +405,10 @@ convidado honrado~
 o convidado honrado~
 Um convidado honrado está aqui, bebericando arrogantemente um vinho.
 ~
-   Between his arrogant sips this guest talks about the downfalls of killing off
-all the poor people in the world, as if he is convincing himself not to.  His
-manner shows he was born rich and has never known poverty as anything but
-missing a meal.
+   Entre seus goles arrogantes este convidado fala sobre as desvantagens de matar
+todas as pessoas pobres do mundo, como se estivesse se convencendo a não fazê-lo.
+Seus modos mostram que nasceu rico e nunca conheceu pobreza além de
+perder uma refeição.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -420,9 +420,9 @@ guarda da mansão~
 um guarda da mansão~
 Um guarda da mansão está aqui, fazendo a guarda.
 ~
-   This manor guard looks as if he is very importantly guarding...  Something.
-It must be important to him at least.  He closely scrutinizes everyone that
-walks past.
+   Este guarda da mansão parece estar guardando algo muito importante... Alguma coisa.
+Deve ser importante para ele pelo menos. Ele examina cuidadosamente todos que
+passam.
 ~
 2103562 0 0 0 0 0 0 0 250 E
 10 17 4 2d2+100 1d2+1
@@ -436,8 +436,8 @@ guarda-costas~
 o guarda-costas de Degruziel~
 O guarda-costas de Degruziel está aqui, observando-o protetivamente.
 ~
-   He looks very strong, and he plainly wishes to take care of anyone and
-everyone that might wish harm his master...  By putting them six feet under.
+   Ele parece muito forte, e claramente deseja cuidar de qualquer um que
+possa desejar mal ao seu mestre... Enterrando-os dois metros abaixo da terra.
 ~
 2103562 0 0 0 0 0 0 0 500 E
 10 17 4 2d2+100 1d2+1
@@ -453,9 +453,9 @@ mulher sorrindo~
 a mulher sorrindo~
 Uma mulher sorrindo está aqui, não parecendo... muito inteligente...
 ~
-   This woman is blankly smiling at air, ignoring anything and everything around
-her.  One might mistake her for the typical high-born woman, but there is some
-sort of glint deep in her eyes that you can't quite place.
+   Esta mulher está sorrindo vagamente para o ar, ignorando tudo e todos ao
+seu redor. Alguém poderia confundi-la com a típica mulher de alta classe, mas há
+uma espécie de brilho no fundo dos olhos que você não consegue identificar.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -472,10 +472,10 @@ ladrão~
 um ladrão~
 Um ladrão está aqui, meio escondido pelas sombras.
 ~
-   The filcher looks as though he is trying to hide in any and all nearby
-shadows.  You would think that attempting to hide in shadows would make you
-inconspicuous, but apparently that isn't the case.  Dodging around and trying to
-walk quietly is only getting this filcher noticed.
+   O ladrão parece estar tentando se esconder em todas as sombras próximas.
+Você pensaria que tentar se esconder nas sombras o tornaria inconspícuo, mas
+aparentemente esse não é o caso. Esquivar-se e tentar andar silenciosamente
+só está fazendo este ladrão ser notado.
 ~
 2099416 0 0 0 1572864 0 0 0 -250 E
 10 17 4 2d2+100 1d2+1
@@ -492,9 +492,9 @@ batedor de carteira~
 o batedor de carteira~
 Um batedor de carteira está aqui, tentando se misturar com as sombras.
 ~
-   He has long, slender fingers that he twists along the bottom of his shirt
-with a deft twist.  As he sees you looking his way he tries to fit into the
-shadows.
+   Ele tem dedos longos e esguios que torce na barra de sua camisa
+com uma torção hábil. Quando ele te vê olhando em sua direção, tenta se encaixar
+nas sombras.
 ~
 2097224 0 0 0 0 0 0 0 -300 E
 10 17 4 2d2+100 1d2+1
@@ -506,9 +506,9 @@ criança pequena~
 uma criança pequena~
 Uma criança pequena está aqui, ajustando sua perna de pau falsa.
 ~
-   She looks as if she is already a professional at her young age, about to go
-out and cheat a few tourists out of their money.  She adjusts her fake peg leg
-and gets ready to go out for a round of begging.
+   Ela parece já ser uma profissional em sua pouca idade, prestes a sair
+e enganar alguns turistas tirando o dinheiro deles. Ela ajusta sua perna de pau falsa
+e se prepara para sair numa rodada de mendicância.
 ~
 2099400 0 0 0 0 0 0 0 -100 E
 7 18 5 1d1+70 1d2+1
@@ -521,9 +521,9 @@ mulher disfarçada~
 a mulher disfarçada~
 Um homem sorridente está aqui, esfregando seu bigode levemente torto.
 ~
-   The man is short and slender, rather curvy for a man.  He wears black, baggy
-clothes.  His black moustache is slightly crooked.  It looks as if he messed up
-his trimming slightly.
+   O homem é baixo e esguio, bem curvilíneo para um homem. Ele usa roupas pretas
+e largas. Seu bigode preto está levemente torto. Parece que ele errou
+um pouco no corte.
 ~
 2099214 0 0 0 0 0 0 0 -250 E
 10 17 4 2d2+100 1d2+1
@@ -540,7 +540,7 @@ forma sombria~
 a mulher de preto~
 Uma forma sombria está aqui.
 ~
-   You can't really make out the features.
+   Você não consegue realmente distinguir as características.
 ~
 2099304 0 0 0 1572864 0 0 0 -250 E
 10 17 4 2d2+100 1d2+1
@@ -729,13 +729,13 @@ ajudando as pessoas a encontrar coisas em sua loja.
 E
 T 2905
 #2957
-Milos Banker banker~
+Milos banqueiro~
 Milos~
-Milos stands behind the counter here, happily counting his money.
+Milos está atrás do balcão aqui, contando alegremente seu dinheiro.
 ~
-   Milos is a short, thin man of middle age with a short moustache.  His only
-love in life is his money, and your money.  He would love to hold your money for
-you while you are out adventuring.
+   Milos é um homem baixo e magro de meia-idade com um bigode pequeno. Seu único
+amor na vida é seu dinheiro, e seu dinheiro. Ele adoraria guardar seu dinheiro
+para você enquanto você está aventurando.
 ~
 2123786 0 0 0 0 0 0 0 0 E
 14 16 1 2d2+140 2d2+2
@@ -967,15 +967,15 @@ Int: 10
 Wis: 10
 E
 #2971
-Gilles Bartender~
+Gilles barman~
 Gilles~
-Gilles the Bartender stands here, patiently polishing glasses.
+Gilles o Barman está aqui, polidamente polindo copos.
 ~
-   He doesn't look like much.  He is young, slightly handsome, but his eyes have
-a hard glint to them that shows you he has seen his share of fights.  His
-muscular arms could easily break up any brawls, should they start.  He doesn't
-look at you, but you know he wishes you to buy a drink if you wish to stay any
-length of time.
+   Ele não parece muito. É jovem, ligeiramente bonito, mas seus olhos têm
+um brilho duro que mostra que ele já viu sua parte de brigas. Seus
+braços musculosos poderiam facilmente acabar com qualquer briga, se começasse.
+Ele não olha para você, mas você sabe que ele deseja que você compre uma bebida
+se quiser ficar por algum tempo.
 ~
 2123786 0 0 0 0 0 0 0 0 E
 14 16 1 2d2+140 2d2+2
@@ -1011,13 +1011,13 @@ E
 #2973
 Aramut~
 Aramut~
-Aramut the wizened old man stands here, waiting to help you.
+Aramut o velho experiente está aqui, esperando para ajudá-lo.
 ~
-   Aramut is tall and skinny, and has the rolling walk of one who had once been
-a sailor.  He looks very old, but not at all weak.  His skinny frame is wiry
-with the muscles he had acquired, as he has worked for long years as the armorer
-of Porto.  He impatiently taps his fingers on the counter as he waits for you to
-tell him what you wish of him.
+   Aramut é alto e magro, e tem o andar ondulante de quem já foi
+marinheiro. Ele parece muito velho, mas não fraco. Sua estrutura magra é
+musculosa com os músculos que adquiriu, pois trabalhou por longos anos como o
+armeiro de Porto. Ele bate impacientemente os dedos no balcão enquanto espera
+que você lhe diga o que deseja dele.
 ~
 2123786 0 0 0 0 0 0 0 0 E
 14 16 1 2d2+140 2d2+2
@@ -1141,12 +1141,13 @@ você.
 9 9 1
 E
 #2980
-Tiama head cook~
-Tiama, the Head Cook~
-Tiama, the Head Cook of Porto, stands here covered from head to toe in flour.
+Tiama chefe cozinheira~
+Tiama, a Chefe de Cozinha~
+Tiama, a Chefe de Cozinha de Porto, está aqui coberta da cabeça aos pés de farinha.
 ~
-   Tiama is plump from tasting her own creations, but she waves her spoon around
-as if she isn't afraid to give any of the kitchen girls a good whack.
+   Tiama é rechonchuda por provar suas próprias criações, mas ela balança sua
+colher como se não tivesse medo de dar uma boa pancada em qualquer uma das
+meninas da cozinha.
 ~
 2115594 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -1187,12 +1188,12 @@ alimentar uma família de pescadores por semanas.
 BareHandAttack: 1
 E
 #2983
-manservant~
-a manservant of Degruziel~
-A manservant of Degruziel stands here, attending to... whatever it is he's attending to.
+criado~
+um criado de Degruziel~
+Um criado de Degruziel está aqui, cuidando de... seja lá do que ele está cuidando.
 ~
-   This manservant looks like he's hurriedly going about doing something very
-important...  Though what exactly it is he's doing is unapparent.
+   Este criado parece estar correndo para fazer algo muito
+importante... Embora o que exatamente ele está fazendo não seja aparente.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -1318,12 +1319,12 @@ tentando descobrir o que as pessoas ao seu redor estão dizendo.
 9 9 1
 E
 #2992
-admirer~
-an admirer of Porto~
-An admirer of Porto is here, appearing awestruck.
+admiradora~
+uma admiradora de Porto~
+Uma admiradora de Porto está aqui, parecendo impressionada.
 ~
-   The woman is clad in the garb of one who travels much, and her mouth is
-slightly open as she looks around with wide eyes at the sights.
+   A mulher está vestida com as roupas de quem viaja muito, e sua boca está
+ligeiramente aberta enquanto olha ao redor com olhos arregalados para as paisagens.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -1387,14 +1388,14 @@ parece estar falando consigo mesmo sobre os preços do mercado.
 BareHandAttack: 13
 E
 #2997
-elite gatekeeper~
-an elite gatekeeper~
-An elite gatekeeper stands here looking bored.
+porteiro de elite~
+um porteiro de elite~
+Um porteiro de elite está aqui parecendo entediado.
 ~
-   An elite gatekeeper often wonders why he was chosen for the monotonous job
-of watching Porto's gates.  The usually peaceful city doesn't see much trouble
-from the merchants and tourists, so his days pass slowly as he wishes for
-excitement.
+   Um porteiro de elite frequentemente se pergunta por que foi escolhido para o trabalho
+monótono de vigiar os portões de Porto. A cidade geralmente pacífica não vê muitos
+problemas dos comerciantes e turistas, então seus dias passam lentamente enquanto
+deseja emoção.
 ~
 2103306 0 0 0 0 0 0 0 0 E
 14 16 1 2d2+140 2d2+2
