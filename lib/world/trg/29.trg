@@ -6,7 +6,7 @@ Gatekeeper Welcome - 2997~
 * in this file are not changed, and will have to be edited by hand.
 * This zone was number 29 on The Builder Academy, so you
 * should be looking for 29xx, where xx is 00-99.
-emote says in a bored tone, 'Welcome to Haven, stranger.  Enjoy your stay.'
+emote fala em um tom entediado, 'Bem-vindo(a) a Porto, forasteiro.  Aoroveite a estadia.'
 ~
 #2901
 Mad Prisoner - 2978~
@@ -16,8 +16,8 @@ listen~
 * in this file are not changed, and will have to be edited by hand.
 * This zone was number 29 on The Builder Academy, so you
 * should be looking for 29xx, where xx is 00-99.
-say Diamo... Diamo, I can't reach the pile Diamo!  Help me, please!
-%force% %actor% look dungeon
+say Diamo... Diamo, Eu não alcanço a pilha Diamo!  Ajuda, por favor!
+%force% %actor% look masmorra
 ~
 #2902
 Scream - 2975~
@@ -27,7 +27,7 @@ Scream - 2975~
 * in this file are not changed, and will have to be edited by hand.
 * This zone was number 29 on The Builder Academy, so you
 * should be looking for 29xx, where xx is 00-99.
-emote screams, 'Get out of this room RIGHT NOW!'
+emote grita, 'Saia daqui AGORA!'
 ~
 #2903
 Shop A - 2973~
@@ -37,22 +37,22 @@ Shop A - 2973~
 * in this file are not changed, and will have to be edited by hand.
 * This zone was number 29 on The Builder Academy, so you
 * should be looking for 29xx, where xx is 00-99.
-emote says eagerly, 'How may I help you?  Hm... You look familiar.  Perhaps I have heard of you.  Would you be %actor.name%?'
+emote says eagerly, 'Como eu posso ajudar?  Hm... Você parece familiar.  Acho que já ouvi falar de você.  Por acaso você é %actor.name%?'
 ~
 #2904
 Shop B - 2973~
 0 d 100
-yes~
+sim~
 * This trigger has been exported 'as is'. This means that vnums
 * in this file are not changed, and will have to be edited by hand.
 * This zone was number 29 on The Builder Academy, so you
 * should be looking for 29xx, where xx is 00-99.
-say Are you really now?
+say Sério?
 peer %actor.name%
-say You could be... You look about like your friend described.
-say Well in that case... they wanted me to give this to you.
-give flagon %actor.name%
-say He bought it from Gilles, at the bar.  Drink well.
+say Talvez... Poderia ser... Parece como o meu amigo descreveu.
+say De qualquer forma... Pediram para te dar isto.
+give jarro  %actor.name%
+say Ela comprou de Gilles, no bar. Aproveite.
 wink %actor.name%
 ~
 #2905
@@ -63,7 +63,7 @@ Tia A - 2956~
 * in this file are not changed, and will have to be edited by hand.
 * This zone was number 29 on The Builder Academy, so you
 * should be looking for 29xx, where xx is 00-99.
-say A little bit more of...  Oh!  A customer!  How may I provide thee with service?
+say Um pouco mais de...  Oh! Um cliente!  Como posso eu ajudar vossa senhoria hoje?
 ~
 #2906
 Mithroq A - 2955~
@@ -73,7 +73,7 @@ Mithroq A - 2955~
 * in this file are not changed, and will have to be edited by hand.
 * This zone was number 29 on The Builder Academy, so you
 * should be looking for 29xx, where xx is 00-99.
-emote growls, 'What is it you want, stranger?'
+emote resmunga, 'O que você quer, forasteiro?'
 ~
 #2908
 Gilles A - 2971~
@@ -83,7 +83,7 @@ Gilles A - 2971~
 * in this file are not changed, and will have to be edited by hand.
 * This zone was number 29 on The Builder Academy, so you
 * should be looking for 29xx, where xx is 00-99.
-say Would you like a drink?  They are good for the thirst.
+say Você gostaria de uma bebida? São boas para matar a sede.
 ~
 #2909
 Milo A - 2957~
@@ -94,9 +94,9 @@ Milo A - 2957~
 * This zone was number 29 on The Builder Academy, so you
 * should be looking for 29xx, where xx is 00-99.
 say 200789... 200790... 200791...
-emote gets a dreamy look in his eyes as he stares at his pile of glittering gold.
-emote snaps to attention, finally noticing that there is a person in the room.
-say Well, if it isn't %actor.name%.  Your reputation preceeds you.  Welcome to my humble bank.
+emote tem um olhar sonhador enquanto olha para a pilha de moedas de ouro.
+emote acorda subitamente, finalmente notando que tem alguem aqui.
+say Bem, se não é  %actor.name%. A sua reputação já chegou até aqui.  Bem-vindo(a) ao meu humilde banco.
 bow %actor.name%
 ~
 #2910
@@ -108,11 +108,11 @@ Yelling Woman - Not Attached~
 * This zone was number 29 on The Builder Academy, so you
 * should be looking for 29xx, where xx is 00-99.
 load obj 2952
-give yelling platter
+give gritando bandeja
 load obj 2951
-give yelling pitcher
+give gritando jarro
 load 2912
-give yelling spoon
+give gritando colher
 ~
 #2911
 Near Death Trap on the Rocks - 2975~
@@ -127,6 +127,6 @@ wait 6 sec
 set stunned %actor.hitp%
 %damage% %actor% %stunned%
 wait 2 sec
-%send% %actor% You lay among the jagged rocks.
+%send% %actor% Você escorrega perto de pedras pontudas.
 ~
 $~

@@ -1,5 +1,5 @@
 #2900
-Chave Enferrujada~
+chave enferrujada~
 uma chave enferrujada~
 Uma chave enferrujada está aqui, enferrujando mais a cada minuto.~
 ~
@@ -12,7 +12,7 @@ chave enferrujada~
 pode caber em um chaveiro.
 ~
 #2901
-Chave de Prata Brilhante~
+chave de prata brilhante~
 uma chave de prata brilhante~
 Uma chave de prata brilhante está aqui, reluzindo alegremente.~
 ~
@@ -33,7 +33,7 @@ Uma chave grande está aqui, do tamanho da sua mão.~
 0 0 0 0
 1 1 0 0
 #2903
-baú marítimo~
+bau maritimo~
 baú marítimo~
 Um pesado baú marítimo está aqui, encostado na parede.~
 ~
@@ -67,7 +67,7 @@ Uma vela está aqui, crepitando quase ao ponto de se apagar.~
 0 0 3 0
 1 10 1 0
 #2907
-bancos ocultos~
+banco bancos ocultos~
 o banco~
 .Este é um objeto oculto. A descrição longa só pode ser vista com holylight. Se você vê isto como mortal, por favor reporte o bug.~
 ~
@@ -75,7 +75,7 @@ o banco~
 0 0 0 0
 0 0 0 0
 #2908
-sofá acolchoado~
+sofa acolchoado~
 um sofá acolchoado~
 Um sofá acolchoado está aqui, com aparência desgastada.~
 ~
@@ -83,7 +83,7 @@ Um sofá acolchoado está aqui, com aparência desgastada.~
 0 0 0 0
 50 1 0 0
 #2909
-anel de prata~
+anel prata~
 o anel de prata~
 Um aro de metal prateado está aqui na poeira.~
 ~
@@ -91,7 +91,7 @@ Um aro de metal prateado está aqui na poeira.~
 0 0 0 0
 1 1 0 0
 #2910
-botas de couro preto~
+botas couro preto~
 um par de botas de couro preto~
 Um par de botas de couro preto gastas está aqui no chão.~
 ~
@@ -99,7 +99,7 @@ Um par de botas de couro preto gastas está aqui no chão.~
 5 0 0 0
 2 20 2 0
 #2911
-elmo de prata~
+elmo prata~
 um elmo de prata~
 Um elmo cintilante de prata está aqui no chão.~
 ~
@@ -107,7 +107,7 @@ Um elmo cintilante de prata está aqui no chão.~
 7 0 0 0
 10 300 30 0
 #2912
-colher de madeira~
+colher madeira~
 uma colher de madeira~
 Uma colher de madeira está aqui, com aparência muito comum.~
 ~
@@ -115,7 +115,7 @@ Uma colher de madeira está aqui, com aparência muito comum.~
 12 12 12 12
 1 5 0 0
 #2913
-ídolo demoníaco~
+ídolo demoniaco~
 um ídolo demoníaco~
 Um ídolo demoníaco está aqui, rudemente esculpido.~
 ~
@@ -125,7 +125,7 @@ Um ídolo demoníaco está aqui, rudemente esculpido.~
 A
 1 -5
 #2915
-escultura de veado~
+escultura veado~
 uma escultura de veado~
 Uma pequena escultura de veado está aqui, tão habilmente feita que parece quase viva.~
 ~
@@ -143,7 +143,7 @@ Uma cadeira de madeira está aqui, pronta para ser usada.~
 0 0 0 0
 10 1 0 0
 #2917
-broche de diamante~
+broche diamante~
 um broche de diamante~
 Um broche está aqui, cintilando com diamantes.~
 ~
@@ -155,7 +155,7 @@ diamante~
    Opa... Estes diamantes parecem bem falsos...
 ~
 #2918
-esmeralda olho-de-fada~
+esmeralda olho-de-fada olho fada~
 uma esmeralda olho-de-fada~
 Uma esmeralda do tamanho do olho de uma fada está aqui.~
 ~
@@ -191,7 +191,7 @@ uma garrafa marrom~
 3 3 1 0
 8 120 12 0
 #2922
-jarro água~
+jarro água agua~
 um jarro~
 Um jarro foi colocado aqui cuidadosamente, cheio de água limpa.~
 ~
@@ -207,7 +207,7 @@ Um cajado retorcido está aqui, com aparência bastante inofensiva.~
 4 2 3 7
 8 40 4 0
 #2925
-lança farpada~
+lanca farpada~
 uma lança farpada~
 Uma perigosa lança farpada está aqui, com aparência desagradável.~
 ~
@@ -215,7 +215,7 @@ Uma perigosa lança farpada está aqui, com aparência desagradável.~
 4 2 4 3
 10 200 20 0
 #2926
-pique de sovela~
+pique sovela~
 um pique de sovela~
 Um pique de sovela está aqui, ocupando muito espaço.~
 ~
@@ -223,8 +223,8 @@ Um pique de sovela está aqui, ocupando muito espaço.~
 4 3 5 3
 15 750 75 0
 #2927
-adaga enjoyada~
-uma adaga enjoyada~
+adaga enjoiada~
+uma adaga enjoiada~
 Uma adaga está aqui, suas joias cintilando alegremente.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
@@ -263,7 +263,7 @@ Um banco foi providenciado para viajantes cansados descansarem.~
 0 0 0 0
 0 0 0 0
 #2932
-cálice água-marinha~
+calice agua marinha agua-marinha~
 um cálice água-marinha~
 Um cálice água-marinha foi abandonado aqui.~
 ~
@@ -279,7 +279,7 @@ Uma jarra roxa está aqui.~
 12 43 -1 -1
 2 800 0 0
 #2934
-maçã brilhante~
+maca brilhante~
 uma maçã brilhante~
 Uma maçã vermelha brilhante está aqui.~
 ~
@@ -351,7 +351,7 @@ Uma esteira está no chão aqui.~
 0 0 0 0
 5 1 0 0
 #2943
-pão~
+fresco pao~
 um pão fresco~
 Um pão recém-assado está aqui. Parece delicioso.~
 ~
@@ -359,15 +359,15 @@ Um pão recém-assado está aqui. Parece delicioso.~
 2 0 0 0
 1 1 0 0
 #2944
-bed~
-Degruziel's bed~
+cama~
+a cama de Degruziel~
 A magnífica cama de Degruziel fica aqui no centro do chão.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
 0 0 0 0
 #2945
-chave~
+chave pequena~
 a chave pequena~
 Uma pequena chave foi deixada aqui. Talvez alguém a tenha perdido.~
 ~
@@ -391,7 +391,7 @@ Um alaúde está aqui, abandonado pelo seu dono.~
 12 15 15 32
 10 150 15 0
 #2948
-espada longa aço~
+espada longa aco~
 uma espada longa de aço~
 Uma espada longa de aço está aqui no chão, negligenciada.~
 ~
@@ -399,7 +399,7 @@ Uma espada longa de aço está aqui no chão, negligenciada.~
 6 1 9 3
 10 750 75 0
 #2949
-coleira couro velha cão~
+coleira couro velha cao~
 uma velha coleira de couro de cão~
 Algum cão perdeu sua velha coleira por aqui.~
 ~
@@ -431,7 +431,7 @@ Uma grande bandeja feita de prata e com um cabo estranho está no chão aqui.~
 7 0 0 0
 7 210 21 0
 #2953
-chapéu três pontas~
+chapeu tres pontas~
 o chapéu de três pontas~
 Um chapéu com três pontas está aqui.~
 ~
@@ -459,7 +459,7 @@ A
 A
 4 2
 #2956
-perneiras aço bandado~
+perneiras aco bandado~
 as perneiras de aço bandado~
 Um par de perneiras de aço bandado está aqui, com aparência bem nova.~
 ~
@@ -467,7 +467,7 @@ Um par de perneiras de aço bandado está aqui, com aparência bem nova.~
 8 0 0 0
 1 100 0 0
 #2957
-braçadeira aço bandado~
+bracadeira aco bandado~
 uma braçadeira de aço bandado~
 Um pedaço de aço bandado está simplesmente aqui.~
 ~
@@ -475,7 +475,7 @@ Um pedaço de aço bandado está simplesmente aqui.~
 7 0 0 0
 2 150 15 0
 #2958
-espada curta aço~
+espada curta aco~
 uma espada curta de aço~
 Uma espada curta de aço está no chão aqui. Pena que pode enferrujar.~
 ~
@@ -507,7 +507,7 @@ Uma perna de pau falsa está aqui, ao ar livre.~
 3 1 6 5
 3 15 1 0
 #2962
-xícara enferrujada água~
+xicara enferrujada água agua~
 uma xícara enferrujada~
 Uma xícara enferrujada está aqui, coletando água da chuva.~
 ~
@@ -531,7 +531,7 @@ Uma estranha adaga curva está aqui.~
 5 1 4 14
 2 100 10 0
 #2965
-calças seda preta~
+calcas seda preta~
 um par de calças de seda preta~
 Alguém perdeu suas calças.... hmm....~
 ~
@@ -591,8 +591,8 @@ Uma rede de corda emaranhada está aqui.~
 1 0 0 0
 20 20 2 0
 #2972
-herring~
-a raw herring~
+arenque peixe cru~
+um arenque cru~
 Um peixe cru está aqui... pode ser apenas um arenque.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
@@ -607,7 +607,7 @@ Uma garrafa meio despedaçada foi deixada aqui.~
 0 1 3 14
 1 15 1 0
 #2974
-taça vinho~
+taca vinho~
 uma taça de vinho~
 Uma taça de vinho está aqui, descartada.~
 ~
@@ -649,7 +649,7 @@ Um aro de metal prateado está aqui, esperando para ser usado no pulso.~
 A
 19 2
 #2979
-véu transparente~
+veu transparente~
 um véu pequeno quase transparente~
 Uma pequena pilha de material transparente está aqui, parecendo um véu.~
 ~
@@ -657,7 +657,7 @@ Uma pequena pilha de material transparente está aqui, parecendo um véu.~
 0 0 0 0
 1 1 0 0
 #2980
-saia lã~
+saia la~
 uma saia longa de lã~
 Uma pilha de lã está aqui, vagamente parecendo uma saia.~
 ~
@@ -665,7 +665,7 @@ Uma pilha de lã está aqui, vagamente parecendo uma saia.~
 4 0 0 0
 5 25 2 0
 #2981
-máscara couro preto~
+mascara couro preto~
 uma máscara de couro preto~
 Uma máscara de couro preto está aqui, pronta para esconder o rosto de alguém.~
 ~
@@ -721,7 +721,7 @@ Um alforje está aqui, abandonado.~
 50 1 -1 0
 15 150 15 0
 #2993
-maça cintilante~
+maca cintilante~
 uma maça de prata cintilante~
 Uma maça de prata cintilante, mas de aparência pesada, está aqui abandonada~
 ~
@@ -729,7 +729,7 @@ Uma maça de prata cintilante, mas de aparência pesada, está aqui abandonada~
 3 1 5 6
 50 375 375 0
 E
-maça cintilante~
+maca cintilante~
    Esta maça parece bem elegante, mas se usada corretamente, pode ser capaz de
 causar algum dano...
 ~
@@ -738,7 +738,7 @@ A
 A
 4 -1
 #2994
-espada de mercador~
+espada mercador~
 uma espada de mercador~
 Uma espada reluzente está aqui.~
 ~
@@ -764,7 +764,7 @@ espada plebeu~
 ao redor do cabo, significando lealdade à divindade do mar.
 ~
 #2996
-braçadeira~
+bracadeira couro preto~
 uma braçadeira de couro preto~
 Uma braçadeira de couro preto está aqui, com aparência especial.~
 ~
@@ -772,7 +772,7 @@ Uma braçadeira de couro preto está aqui, com aparência especial.~
 1 0 0 0
 2 20 2 0
 E
-braçadeira~
+bracadeira~
    A braçadeira é feita de couro preto de primeira qualidade e parece brilhar um pouco.
 ~
 A

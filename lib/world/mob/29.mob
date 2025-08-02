@@ -105,7 +105,7 @@ transeuntes comprarem seus maravilhosos utensílios de cozinha!
 BareHandAttack: 10
 E
 #2918
-homem vendendo mobília~
+homem vendendo mobília vendendor~
 o vendedor de móveis~
 Um homem está aqui, vendendo seus móveis.
 ~
@@ -138,7 +138,7 @@ Wis: 13
 GenWimpy: 3
 E
 #2920
-conselheiro de Degruziel~
+conselheiro Degruziel~
 o conselheiro de Degruziel~
 O conselheiro de Degruziel está aqui, parecendo importante.
 ~
@@ -153,7 +153,7 @@ Int: 16
 Wis: 12
 E
 #2921
-guarda-costas~
+guarda costas~
 o guarda-costas~
 Um guarda-costas está aqui, parecendo malvado.
 ~
@@ -171,7 +171,7 @@ Int: 13
 Wis: 13
 E
 #2922
-patrulheiro de elite~
+patrulheiro elite~
 um patrulheiro de elite~
 Um patrulheiro de elite está aqui, andando por Porto e procurando problemas.
 ~
@@ -188,7 +188,7 @@ Int: 15
 Wis: 15
 E
 #2923
-guarda de elite~
+guarda elite~
 um guarda de elite~
 Um guarda de elite está aqui, protegendo os inocentes.
 ~
@@ -206,7 +206,7 @@ Int: 15
 Wis: 15
 E
 #2924
-cidadão descansando~
+cidadao descansando~
 o cidadão~
 Um cidadão está aqui, descansando e olhando ao redor feliz.
 ~
@@ -252,7 +252,7 @@ Str: 13
 Dex: 16
 E
 #2927
-garçonete da taverna~
+garconete taverna peituda~
 uma garçonete da taverna~
 Uma garçonete peituda da taverna está aqui, servindo bebidas.
 ~
@@ -267,7 +267,7 @@ olhares temerosos se ela faz o menor movimento ameaçador.
 BareHandAttack: 1
 E
 #2928
-cobra de lama~
+cobra lama lamacenta~
 a cobra lamacenta~
 Uma poça de lama de aparência incomum está aqui, rodopiando.
 ~
@@ -280,7 +280,7 @@ Uma poça de lama de aparência incomum está aqui, rodopiando.
 GenWimpy: 2
 E
 #2929
-monstro de lama bolhas~
+monstro lama bolhas~
 o monstro de lama~
 Pequenas bolhas emergem através da água aqui.
 ~
@@ -293,7 +293,7 @@ Pequenas bolhas emergem através da água aqui.
 BareHandAttack: 10
 E
 #2930
-cão latindo~
+cao latindo~
 um cão latindo~
 Um cão latindo está aqui, latindo... e latindo... e latindo...
 ~
@@ -307,7 +307,7 @@ movem. Este cão late para sua própria sombra.
 9 9 2
 E
 #2931
-gato ágil~
+gato agil~
 o gato ágil~
 Um gato está aqui, parecendo pequeno mas rápido.
 ~
@@ -322,7 +322,7 @@ BareHandAttack: 8
 Dex: 15
 E
 #2932
-cão raivoso~
+cao raivoso~
 um cão raivoso~
 Um cão raivoso está aqui, parecendo malvado.
 ~
@@ -416,7 +416,7 @@ perder uma refeição.
 9 9 1
 E
 #2938
-guarda da mansão~
+guarda mansao~
 um guarda da mansão~
 Um guarda da mansão está aqui, fazendo a guarda.
 ~
@@ -432,7 +432,7 @@ Str: 14
 Dex: 14
 E
 #2939
-guarda-costas~
+guarda costas~
 o guarda-costas de Degruziel~
 O guarda-costas de Degruziel está aqui, observando-o protetivamente.
 ~
@@ -468,7 +468,7 @@ Int: 10
 Wis: 10
 E
 #2941
-ladrão~
+ladrao sombras escondido~
 um ladrão~
 Um ladrão está aqui, meio escondido pelas sombras.
 ~
@@ -488,7 +488,7 @@ Int: 15
 Wis: 15
 E
 #2942
-batedor de carteira~
+batedor carteira~
 o batedor de carteira~
 Um batedor de carteira está aqui, tentando se misturar com as sombras.
 ~
@@ -502,7 +502,7 @@ nas sombras.
 9 9 1
 E
 #2943
-criança pequena~
+crianca pequena~
 uma criança pequena~
 Uma criança pequena está aqui, ajustando sua perna de pau falsa.
 ~
@@ -517,7 +517,7 @@ e se prepara para sair numa rodada de mendicância.
 Dex: 10
 E
 #2944
-mulher disfarçada~
+mulher disfarcada~
 a mulher disfarçada~
 Um homem sorridente está aqui, esfregando seu bigode levemente torto.
 ~
@@ -566,7 +566,7 @@ Um homem está aqui, dormindo em sua cama de viagem.
 GenWimpy: 4
 E
 #2947
-valentão de preto~
+valentao preto~
 o valentão de preto~
 Um valentão vestido de preto está aqui, limpando as unhas com uma adaga.
 ~
@@ -586,7 +586,7 @@ Int: 13
 Wis: 14
 E
 #2948
-Rei do Beco de Luna~
+rei beco luna~
 o Rei do Beco de Luna~
 O Rei do Beco de Luna está aqui, parecendo ligeiramente mais são que seus pares.
 ~
@@ -618,7 +618,7 @@ silenciosamente para si mesmo.
 BareHandAttack: 13
 E
 #2950
-esquizofrênico paranoico gritando~
+esquizofrenico paranoico gritando~
 o esquizofrênico paranoico~
 Um esquizofrênico paranoico está aqui, gritando para o mundo.
 ~
@@ -665,7 +665,7 @@ Int: 14
 Wis: 14
 E
 #2953
-lunático delirante~
+lunatico delirante~
 um lunático delirante~
 Um lunático delirante está aqui, pregando a destruição do mundo.
 ~
@@ -696,7 +696,7 @@ Dex: 16
 Wis: 13
 E
 #2955
-Mithroq~
+Mithroq minotauro imenso~
 Mithroq~
 Mithroq está aqui, seus chifres quase raspando o teto.
 ~
@@ -714,7 +714,7 @@ BareHandAttack: 6
 E
 T 2906
 #2956
-Tia~
+Tia dona mulher~
 Tia~
 Tia está aqui, misturando uma poção e parecendo pronta para ajudá-lo.
 ~
@@ -764,7 +764,7 @@ Str: 15
 Dex: 12
 E
 #2959
-esposa do pescador~
+esposa pescador~
 a esposa do pescador~
 A esposa de um pescador está aqui, olhando ao redor e murmurando.
 ~
@@ -800,7 +800,7 @@ Int: 13
 Wis: 14
 E
 #2961
-cidadão passeando~
+cidadao passeando~
 o cidadão passeando~
 Um cidadão está aqui, passeando.
 ~
@@ -817,7 +817,7 @@ Int: 14
 Wis: 14
 E
 #2962
-cidadã passeando~
+cidada passeando~
 a cidadã passeando~
 Uma cidadã está aqui, passeando.
 ~
@@ -866,7 +866,7 @@ Wis: 14
 GenWimpy: 1
 E
 #2965
-Capitão~
+capitao~
 o Capitão~
 O Capitão do navio está aqui, olhando para o espaço.
 ~
@@ -885,7 +885,7 @@ Int: 14
 Wis: 14
 E
 #2966
-operador de rede~
+operador rede~
 o operador de rede~
 Um homem está aqui, ao lado da corda conectada à rede.
 ~
@@ -900,7 +900,7 @@ no ombro, caso a atual precise de reparos.
 BareHandAttack: 5
 E
 #2967
-arremessador de peixe~
+arremessador peixe~
 o arremessador de peixe~
 Um arremessador de peixe está aqui, jogando peixes pela borda do convés.
 ~
@@ -987,7 +987,7 @@ Dex: 13
 E
 T 2908
 #2972
-bêbado tropeçando~
+bebado tropecando~
 um bêbado~
 Um homem embriagado está aqui, tropeçando em círculos.
 ~
@@ -1009,7 +1009,7 @@ Int: 7
 Wis: 6
 E
 #2973
-Aramut~
+Aramut velho~
 Aramut~
 Aramut o velho experiente está aqui, esperando para ajudá-lo.
 ~
@@ -1053,7 +1053,7 @@ Int: 10
 Wis: 10
 E
 #2975
-garota especial do harém~
+garota especial do harem~
 a garota especial de Degruziel~
 Uma garota do harém especialmente bela está aqui, sendo mimada demais e invejada pelas outras garotas
 ~
@@ -1075,7 +1075,7 @@ GenWimpy: 3
 E
 T 2902
 #2976
-garota do harém~
+garota do harem~
 a garota do harém~
 Uma garota do harém descansa aqui, bela e vestindo pouco.
 ~
@@ -1097,7 +1097,7 @@ Wis: 12
 GenWimpy: 4
 E
 #2977
-criada da cozinha~
+criada cozinha~
 uma criada da cozinha~
 Uma criada da cozinha está aqui coberta de farinha, misturando algo.
 ~
@@ -1128,7 +1128,7 @@ devesse ouvi-lo.
 E
 T 2901
 #2979
-Mestre da Tortura~
+Mestre Tortura~
 o Mestre da Tortura~
 O Mestre da Tortura de Degruziel está aqui, parecendo muito sinistro.
 ~
@@ -1201,7 +1201,7 @@ importante... Embora o que exatamente ele está fazendo não seja aparente.
 9 9 1
 E
 #2984
-mestre do estábulo~
+mestre estabulo~
 a Mestre do Estábulo~
 A Mestre do Estábulo está aqui... como?! UMA MULHER?!?!
 ~
@@ -1215,7 +1215,7 @@ os cavalos como se falasse a língua deles.
 9 9 2
 E
 #2985
-rapaz do estábulo~
+rapaz estabulo~
 o rapaz do estábulo~
 Um rapaz do estábulo está aqui, contemplando a vida enquanto limpa as baias.
 ~
@@ -1332,7 +1332,7 @@ ligeiramente aberta enquanto olha ao redor com olhos arregalados para as paisage
 9 9 2
 E
 #2993
-criança feliz~
+crianca feliz menino~
 a criança feliz~
 Um menino está aqui, sorrindo alegremente.
 ~
@@ -1346,7 +1346,7 @@ cidade.
 9 9 1
 E
 #2994
-mulher cidadã~
+mulher cidada~
 uma mulher de Porto~
 Uma mulher de Porto está aqui, cantarolando suavemente para si mesma.
 ~
@@ -1374,7 +1374,7 @@ tem uma expressão zangada no rosto. Nossa, alguém está em apuros.
 9 9 2
 E
 #2996
-cidadão homem~
+cidadao homem~
 um homem de Porto~
 Um cidadão de Porto
 ~
@@ -1388,7 +1388,7 @@ parece estar falando consigo mesmo sobre os preços do mercado.
 BareHandAttack: 13
 E
 #2997
-porteiro de elite~
+porteiro elite~
 um porteiro de elite~
 Um porteiro de elite está aqui parecendo entediado.
 ~
