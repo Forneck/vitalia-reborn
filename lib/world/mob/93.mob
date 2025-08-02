@@ -438,9 +438,9 @@ ele mesmo e pintadas com vários tons de tinta.
 Str: 8
 Dex: 15
 Con: 8
-GenWimpy: 13
+GenWimpy: 15
 GenLoot: 1
-GenRoam: 86
+GenRoam: 87
 E
 #9320
 duende~
@@ -481,7 +481,7 @@ Int: 13
 Wis: 13
 Con: 7
 Cha: 16
-GenWimpy: 16
+GenWimpy: 18
 GenRoam: 89
 E
 #9323
@@ -540,7 +540,7 @@ corcova.  Vive perambulando no deserto dos dragões de Vitália à procura de
 Str: 13
 Wis: 8
 Con: 13
-GenWimpy: 61
+GenWimpy: 65
 GenRoam: 89
 E
 #9326

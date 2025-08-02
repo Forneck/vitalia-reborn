@@ -27,8 +27,8 @@ VOCÊ não teria o mesmo gosto de um coelho.
 5 16 5 50d1+10 3d3+2
 0 2000
 9 9 1
-GenWimpy: 32
-GenLoot: 3
+GenWimpy: 33
+GenLoot: 10
 GenRoam: 88
 E
 #5703
@@ -131,8 +131,8 @@ sitiada por demônios.
 17 6 1 150d2+30 2d8+8
 1000 22000
 9 9 1
-GenWimpy: 12
-GenLoot: 1
+GenWimpy: 9
+GenLoot: 2
 GenEquip: 3
 GenRoam: 89
 E
@@ -152,7 +152,7 @@ GenWimpy: 13
 GenLoot: 1
 GenEquip: 2
 GenRoam: 89
-GenGroup: 6
+GenGroup: 3
 E
 #5711
 demonio maior~
@@ -194,8 +194,8 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 36
-GenBrave: 2
+GenWimpy: 30
+GenBrave: 1
 E
 #5714
 rymat conselheiro~
@@ -210,7 +210,7 @@ lhe dá as costas e continua a lamentar-se, tremendo incontrolavelmente.
 23 0 0 350d1+50 3d8+13
 1000 70000
 9 9 1
-GenWimpy: 15
+GenWimpy: 17
 E
 #5715
 irgon arque demonio~

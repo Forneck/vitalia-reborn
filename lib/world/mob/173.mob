@@ -491,7 +491,7 @@ maneira dos fransciscanos.
 23 6 0 2d10+307 7d9+8
 1200 19078
 9 9 1
-GenWimpy: 10
+GenWimpy: 13
 GenRoam: 89
 E
 #17333
@@ -652,7 +652,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 24
+GenWimpy: 29
 E
 #17344
 escrava~
@@ -666,7 +666,7 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 9
+GenWimpy: 8
 E
 #17345
 chefe saxao render~
@@ -697,6 +697,7 @@ armado com uma espada comum.
 59 3 -2 6d10+709 8d7+14
 1200 59003
 9 9 1
+GenWimpy: 3
 E
 #17347
 comandante avancado norte~
@@ -711,6 +712,7 @@ astúcia de quem passou a vida conduzindo homens em batalhas sem fim.
 69 2 -4 5d10+1218 7d7+15
 12000 67002
 9 9 1
+GenWimpy: 3
 E
 #17348
 membro escoces~
@@ -726,6 +728,7 @@ escocês de aproximadamente 4' de tamanho.
 62 3 -3 9d5+1000 8d8+14
 5890 45768
 9 9 1
+GenWimpy: 3
 E
 #17349
 chefe cla escoces~
@@ -745,6 +748,7 @@ seu uísque.  Ele tem a aparência de quem...
 72 2 -5 6d12+1500 4d8+16
 10000 92001
 9 9 1
+GenWimpy: 3
 E
 #17350
 servo atarefado~

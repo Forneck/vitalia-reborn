@@ -660,7 +660,7 @@ Este homem parece poder usar montes e montes de restos.
 1 105
 9 9 1
 GenWimpy: 100
-GenRoam: 47
+GenRoam: 42
 E
 #5450
 sultao~
@@ -714,9 +714,9 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 58
+GenWimpy: 68
 GenLoot: 7
-GenRoam: 88
+GenRoam: 87
 E
 #5454
 garota preferida nichole~
@@ -730,7 +730,7 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
-GenWimpy: 47
+GenWimpy: 38
 GenLoot: 4
 E
 #5455
@@ -811,7 +811,7 @@ Você vê um pequeno garoto correndo em volta das paredes do palácio.
 2 19 9 10d1+1 1d4+1
 1 10
 9 9 1
-GenWimpy: 16
+GenWimpy: 17
 GenRoam: 87
 E
 #5461

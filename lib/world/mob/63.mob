@@ -9,7 +9,7 @@ Ela parece recém-saída do ovo e esperta.  Suas presas ainda estão crescendo.
 3 18 7 1d12+40 1d7+0
 80 350
 9 9 1
-GenWimpy: 54
+GenWimpy: 50
 GenRoam: 87
 E
 #6302
@@ -66,8 +66,8 @@ Você nota um olhar vidrado nos olhos dela.
 14 7 1 1d12+172 2d8+1
 2000 18000
 9 9 2
-GenWimpy: 12
-GenLoot: 37
+GenWimpy: 13
+GenLoot: 45
 GenEquip: 1
 E
 #6306
@@ -81,7 +81,7 @@ Um zangão comum.
 6 14 4 3d8+70 2d4+1
 200 1600
 9 9 0
-GenWimpy: 33
+GenWimpy: 35
 GenRoam: 88
 E
 #6307

@@ -59,8 +59,8 @@ tempo e pelo cansaço.
 20 15 2 3d30+200 1d1+4
 1 7000
 9 9 1
-GenWimpy: 8
-GenRoam: 71
+GenWimpy: 10
+GenRoam: 80
 E
 #8105
 campones~
@@ -499,7 +499,7 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 0 100
 9 9 1
 GenWimpy: 5
-GenRoam: 74
+GenRoam: 72
 E
 #8137
 rato~
@@ -601,7 +601,7 @@ sua busca por comida.
 0 500
 9 9 1
 GenWimpy: 24
-GenRoam: 73
+GenRoam: 71
 E
 #8144
 explorador homem~
@@ -631,8 +631,8 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 33
-GenRoam: 89
+GenWimpy: 36
+GenRoam: 88
 E
 #8146
 crianca egipcia~

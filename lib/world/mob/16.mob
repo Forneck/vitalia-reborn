@@ -11,7 +11,7 @@ no colo e abraça-lo.
 12 15 7 3d6+145 3d4+0
 150 40000
 9 9 1
-GenWimpy: 18
+GenWimpy: 19
 GenLoot: 2
 GenRoam: 88
 E
@@ -42,7 +42,7 @@ você.
 7500 105000
 9 9 1
 GenWimpy: 4
-GenRoam: 72
+GenRoam: 88
 E
 #1603
 gnomo cientista~
@@ -123,8 +123,8 @@ O rato é uma criaturinha diabólica que merece a morte.
 2 17 9 2d4+24 1d5+1
 5 200
 9 9 1
-GenWimpy: 7
-GenRoam: 85
+GenWimpy: 8
+GenRoam: 86
 E
 T 3008
 #1610
@@ -138,8 +138,8 @@ Você tem o desejo de matar esta vil criatura.
 4 15 8 3d4+48 1d8+0
 10 550
 9 9 1
-GenWimpy: 6
-GenRoam: 80
+GenWimpy: 7
+GenRoam: 82
 E
 T 3008
 #1611
@@ -153,8 +153,8 @@ Este rato tem o tamanho de um cachorro de tamanho médio.
 6 13 6 1d12+72 1d8+3
 20 800
 9 9 1
-GenWimpy: 4
-GenRoam: 71
+GenWimpy: 5
+GenRoam: 76
 E
 T 3008
 #1612
@@ -234,8 +234,8 @@ guarda de elite. Ele parece bravo.
 29 3 -4 5d10+822 4d8+0
 1000 35000
 9 9 1
-GenWimpy: 30
-GenLoot: 26
+GenWimpy: 24
+GenLoot: 29
 GenRoam: 89
 E
 #1618
@@ -294,7 +294,7 @@ consegue enxergar um palmo em frente de seu nariz.
 18 9 3 3d5+400 2d6+1
 5000 12000
 9 9 1
-GenWimpy: 9
+GenWimpy: 16
 GenLoot: 5
 E
 #1622

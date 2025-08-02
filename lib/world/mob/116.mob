@@ -429,7 +429,7 @@ pacientemente ouve uma jovem relatando seus problemas.
 49 2 -4 10d10+750 4d3+16
 1000 40020
 9 9 1
-GenWimpy: 1
+GenWimpy: 4
 E
 #11630
 convidada dama refinada jovem~
@@ -444,7 +444,7 @@ sacerdote.
 40 4 -3 10d10+500 4d3+14
 8000 24020
 9 9 2
-GenWimpy: 3
+GenWimpy: 6
 E
 #11631
 senhora convidada bem-vestida~
@@ -569,7 +569,7 @@ favorita...
 93 -14 -19 10d10+1670 9d6+32
 12000 244020
 9 9 1
-GenWimpy: 1
+GenWimpy: 4
 E
 T 3009
 #11638

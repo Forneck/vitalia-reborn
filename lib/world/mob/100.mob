@@ -12,8 +12,8 @@ rua de Vitália.
 275 1890
 9 9 1
 GenWimpy: 100
-GenLoot: 13
-GenRoam: 79
+GenLoot: 17
+GenRoam: 86
 E
 #10001
 magra mulher aldeã~
@@ -30,7 +30,7 @@ aparecendo pelo mal fabricado e raquítico vestido.
 9 9 2
 GenWimpy: 100
 GenLoot: 5
-GenRoam: 83
+GenRoam: 86
 E
 #10002
 tenente caspan soldado~
@@ -70,10 +70,10 @@ angustiante conjunto.
 18 3 0 4d7+550 15d1+19
 300 32456
 9 9 1
-GenWimpy: 94
-GenLoot: 33
+GenWimpy: 99
+GenLoot: 37
 GenEquip: 2
-GenRoam: 60
+GenRoam: 72
 E
 #10005
 pequena aldeia ladra menina~
@@ -104,9 +104,9 @@ inocentes, e sorri um sorriso sem dentes.
 8 16 6 2d9+150 1d3+16
 0 3000
 9 9 1
-GenWimpy: 83
+GenWimpy: 85
 GenLoot: 2
-GenRoam: 86
+GenRoam: 88
 E
 #10007
 grávida mulher~
@@ -150,7 +150,7 @@ Ela lentamente levanta, estica suas pernas e pisca sugestivamente.
 10 15 6 3d7+200 1d4+7
 10 4200
 6 6 2
-GenWimpy: 12
+GenWimpy: 14
 GenLoot: 2
 E
 #10010
@@ -190,7 +190,7 @@ A mulher se coça freneticamente enquanto cata piolhos de sua cabeça.  Ela não
 4 14 6 1d10+95 1d1+6
 37 1800
 9 9 2
-GenWimpy: 77
+GenWimpy: 79
 E
 #10013
 orfão escondido pequeno ladrãozinho moleque~

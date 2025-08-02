@@ -40,7 +40,7 @@ vermelho, amarelo e preto.
 4 17 4 1d6+40 1d9+0
 0 600
 9 9 0
-GenWimpy: 97
+GenWimpy: 98
 GenRoam: 87
 E
 #5003
@@ -55,7 +55,7 @@ pequenina.
 3 17 1 1d6+40 1d8+0
 0 500
 9 9 0
-GenWimpy: 90
+GenWimpy: 91
 GenLoot: 1
 GenRoam: 88
 E

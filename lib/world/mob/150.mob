@@ -141,8 +141,8 @@ pela próxima!
 13 7 2 3d6+150 1d8+5
 400 16000
 9 9 1
-GenWimpy: 2
-GenRoam: 13
+GenWimpy: 5
+GenRoam: 43
 E
 #15010
 bertram bert guarda real~
@@ -443,8 +443,8 @@ desejo de vingança.
 11 6 3 4d4+95 2d4+8
 0 10000
 9 9 0
-GenWimpy: 78
-GenRoam: 9
+GenWimpy: 81
+GenRoam: 11
 E
 #15031
 esqueleto aldeao~
@@ -460,7 +460,7 @@ desejo de vingança.
 10 8 3 4d4+80 2d3+6
 0 8000
 9 9 0
-GenWimpy: 75
+GenWimpy: 74
 E
 #15032
 poço demonio~

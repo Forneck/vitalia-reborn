@@ -68,10 +68,10 @@ que você está esperando?  AO ATAQUE!
 0 8000
 9 9 2
 GenWimpy: 100
-GenLoot: 4
+GenLoot: 5
 GenEquip: 1
-GenRoam: 73
-GenGroup: 26
+GenRoam: 86
+GenGroup: 21
 E
 #19705
 cobra verde~
@@ -85,7 +85,7 @@ sabe?
 15 12 -1 15d6+300 2d4+10
 0 10000
 9 9 2
-GenWimpy: 11
+GenWimpy: 13
 E
 #19706
 enorme orc~

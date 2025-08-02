@@ -40,7 +40,7 @@ homens para bater, mas talvez quem bata seja você...
 7 15 3 1d12+100 2d5+1
 300 2000
 9 9 1
-GenWimpy: 68
+GenWimpy: 72
 GenRoam: 89
 E
 #3503
@@ -83,7 +83,7 @@ hospedaria não é mais o lugar feliz que foi no passado.
 10 8 1 1d12+200 2d8+1
 1500 7000
 9 9 1
-GenWimpy: 15
+GenWimpy: 17
 E
 #3506
 bardo~
@@ -113,7 +113,7 @@ pequenos pedaços.
 8 12 4 1d12+97 1d5+7
 1000 4000
 9 9 1
-GenWimpy: 60
+GenWimpy: 62
 GenRoam: 89
 E
 $

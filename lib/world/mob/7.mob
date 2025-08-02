@@ -130,8 +130,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 48
-GenLoot: 6
+GenWimpy: 45
+GenLoot: 7
 E
 #708
 escorpião escorpiao vermelho~
@@ -241,8 +241,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 54
-GenRoam: 88
+GenWimpy: 58
+GenRoam: 89
 E
 #714
 cavaleiro negro tempestuoso armadura~
@@ -287,10 +287,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 99
+GenWimpy: 100
 GenLoot: 1
-GenRoam: 89
-GenGroup: 31
+GenRoam: 87
+GenGroup: 32
 E
 #716
 pequena encurvada crianca criança~
@@ -428,7 +428,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 28
+GenWimpy: 29
 GenLoot: 5
 GenEquip: 1
 GenRoam: 89
@@ -470,7 +470,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 25
+GenWimpy: 26
 GenLoot: 1
 GenRoam: 87
 E

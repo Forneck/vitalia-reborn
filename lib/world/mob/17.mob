@@ -71,8 +71,8 @@ econômica...e também divertida!
 11 10 2 1d6+150 2d6+11
 0 11000
 9 9 1
-GenWimpy: 73
-GenLoot: 2
+GenWimpy: 81
+GenLoot: 6
 E
 #1705
 cavaleiro fantasma~
@@ -88,7 +88,7 @@ um guarda espiritual.
 1555 35000
 9 9 1
 GenWimpy: 100
-GenLoot: 3
+GenLoot: 5
 E
 #1706
 guardiao guardião cripta~
@@ -178,7 +178,7 @@ dá uma luz verde.  Ela bate suas mandíbulas cristalizadas para irritá-lo.
 8 13 3 2d6+296 2d5+11
 0 13750
 9 9 2
-GenWimpy: 14
+GenWimpy: 8
 GenLoot: 4
 GenEquip: 1
 GenRoam: 89
@@ -223,8 +223,8 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 18 3 0 3d6+625 3d6+21
 0 30000
 9 9 1
-GenWimpy: 42
-GenLoot: 22
+GenWimpy: 74
+GenLoot: 28
 GenRoam: 89
 E
 #1714
@@ -240,9 +240,9 @@ passado infeliz, você presume.
 16 5 1 2d6+496 2d8+12
 1576 25000
 9 9 2
-GenWimpy: 62
-GenLoot: 21
-GenEquip: 3
+GenWimpy: 57
+GenLoot: 28
+GenEquip: 4
 GenRoam: 89
 E
 #1715

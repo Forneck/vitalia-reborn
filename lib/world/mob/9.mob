@@ -123,10 +123,10 @@ A harpia do mar é uma terrivel combatente e tem dentes afiados e cortantes.
 4 16 6 4d4+35 2d5+0
 100 750
 9 9 2
-GenWimpy: 11
-GenLoot: 17
+GenWimpy: 14
+GenLoot: 25
 GenEquip: 1
-GenRoam: 17
+GenRoam: 14
 E
 #910
 tritao~
@@ -152,9 +152,9 @@ Isto se parace como um caranguejo...o que mais pode ser dito?
 2 18 4 5d2+25 1d5+0
 0 150
 9 9 0
-GenWimpy: 24
+GenWimpy: 23
 GenLoot: 6
-GenRoam: 84
+GenRoam: 85
 GenGroup: 15
 E
 $

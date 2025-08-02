@@ -1722,7 +1722,7 @@ fica no topo da árvore.
 0 15000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 46
+GenWimpy: 48
 E
 #12675
 Dvalin soberano anao~
@@ -1790,8 +1790,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 3
-GenWimpy: 4
-GenRoam: 8
+GenWimpy: 10
+GenRoam: 52
 E
 #12678
 viking sueco~
@@ -2119,7 +2119,7 @@ Wis: 13
 Con: 16
 Cha: 18
 GenWimpy: 25
-GenRoam: 76
+GenRoam: 82
 E
 #12692
 foca~

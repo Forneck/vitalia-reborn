@@ -83,8 +83,9 @@ An undefined string.
 20 0 2 1d1+1000 8d1+20
 0 40000
 9 9 0
-GenWimpy: 8
-GenRoam: 44
+GenWimpy: 7
+GenRoam: 52
+GenBrave: 1
 E
 #13506
 hierofante velho homem~
@@ -138,7 +139,7 @@ Ela também parece ter incontáveis anos.  Ela sorri carinhosamente para você.
 45 -1 1 1d1+1200 9d1+21
 400 100000
 9 9 2
-GenWimpy: 1
+GenWimpy: 3
 E
 #13510
 corca~
@@ -181,8 +182,8 @@ Seus olhos possuem uma expressão não muito amigável.
 14 6 4 1d1+400 6d1+14
 0 13496
 9 9 1
-GenWimpy: 100
-GenLoot: 1
+GenWimpy: 98
+GenLoot: 2
 GenRoam: 89
 E
 #13513
@@ -196,8 +197,8 @@ Ele é simplesmente adorável, você queria ter um igual a esse!
 8 12 6 1d1+150 4d1+8
 0 10333
 9 9 1
-GenWimpy: 31
-GenRoam: 89
+GenWimpy: 34
+GenRoam: 88
 E
 #13514
 cobra cega~
@@ -225,9 +226,9 @@ demais para pedir que você saia.
 18 2 2 1d1+800 7d1+18
 325 20769
 9 9 1
-GenWimpy: 18
+GenWimpy: 24
 GenLoot: 1
-GenRoam: 88
+GenRoam: 89
 E
 #13516
 druidesa~

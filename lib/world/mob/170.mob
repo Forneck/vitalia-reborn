@@ -9,7 +9,7 @@ Ele parece tentar alcançar o outro lado da montanha, assim como você.
 10 10 0 1d10+160 2d10+8
 400 600
 9 9 1
-GenWimpy: 12
+GenWimpy: 14
 E
 #17002
 ciclope~
@@ -22,10 +22,10 @@ Ele parece estar atrás de um almoço..
 22 0 0 1d5+380 3d5+20
 1000 20000
 9 9 1
-GenWimpy: 93
+GenWimpy: 98
 GenLoot: 9
 GenEquip: 1
-GenRoam: 72
+GenRoam: 77
 E
 #17003
 elemental~
@@ -40,7 +40,7 @@ Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 9 9 1
 GenWimpy: 100
 GenLoot: 1
-GenRoam: 6
+GenRoam: 3
 E
 #17004
 elemental guardiao~
@@ -94,9 +94,9 @@ An undefined string.
 15 -4 -6 5d5+250 4d9+17
 2200 20000
 9 9 1
-GenWimpy: 59
-GenLoot: 1
-GenRoam: 82
+GenWimpy: 65
+GenLoot: 2
+GenRoam: 87
 E
 #17008
 lider elemental terra~
@@ -202,7 +202,7 @@ Ele parece incapaz de se mover.
 3 5 2 1d5+100 2d5+4
 400 3000
 9 9 1
-GenWimpy: 27
+GenWimpy: 28
 GenLoot: 1
 E
 #17017
@@ -243,7 +243,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 81
+GenWimpy: 82
 GenLoot: 1
 E
 #17020
@@ -273,8 +273,8 @@ O que há de interessante nisso?  Terra, água... garras??
 7 12 -2 1d5+250 3d5+6
 1000 4000
 9 9 1
-GenWimpy: 26
-GenLoot: 1
+GenWimpy: 30
+GenLoot: 2
 GenRoam: 89
 E
 #17022
@@ -398,8 +398,8 @@ Elas parecem estar formando um tipo de humanóide. E sua expressão não
 9 9 1
 GenWimpy: 100
 GenLoot: 5
-GenRoam: 83
-GenGroup: 5
+GenRoam: 80
+GenGroup: 2
 E
 #17030
 furacao~
@@ -503,8 +503,8 @@ Ele se assemelha bastante a um desagradável inseto.
 5 16 4 1d5+90 2d4+1
 800 1000
 9 9 1
-GenWimpy: 99
-GenRoam: 85
+GenWimpy: 100
+GenRoam: 80
 E
 #17037
 gigantesco elemental~

@@ -66,7 +66,6 @@ Mestre irá me arrancar a cabeça se eu não encontrar o bichinho!"
 GenWimpy: 27
 GenLoot: 1
 GenEquip: 1
-GenRoam: 1
 GenUse: 20
 E
 #18605
@@ -81,7 +80,8 @@ ocupado, tentando misturar um líquido a outro.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 0
-GenWimpy: 34
+GenWimpy: 36
+GenRoam: 3
 E
 #18606
 réptil reptil coisa inseto pavoroso nojento~
@@ -96,7 +96,7 @@ vermes imundos, pequenos, cheios de pernas e marrons não estariam aqui!
 0 100
 9 9 0
 GenWimpy: 100
-GenRoam: 86
+GenRoam: 87
 E
 #18607
 novato zumbi~
@@ -112,7 +112,7 @@ espere!!  Ele parece que está querendo atacá-lo!
 300 600
 9 9 0
 GenWimpy: 100
-GenLoot: 1
+GenLoot: 3
 GenRoam: 89
 GenGroup: 1
 E

@@ -9,7 +9,8 @@ Ela parece estar com fome.
 11 7 4 5d10+50 3d6+0
 0 12000
 9 9 0
-GenWimpy: 21
+GenWimpy: 25
+GenLoot: 2
 E
 T 3008
 #4001
@@ -76,8 +77,8 @@ Ele parece pavoroso.
 7 11 2 3d20+75 2d6+2
 200 3000
 9 9 1
-GenWimpy: 20
-GenRoam: 82
+GenWimpy: 22
+GenRoam: 86
 E
 #4050
 guerreiro~
@@ -171,7 +172,7 @@ Bem, ele não parece ser muito amigável.
 8 13 2 3d10+100 2d5+2
 150 4000
 9 9 1
-GenWimpy: 57
+GenWimpy: 44
 GenRoam: 89
 E
 #4057
@@ -185,7 +186,7 @@ O leão parece bastante hostil com enormes garras e grandes dentes.
 5 16 5 1d10+60 2d4+0
 0 900
 9 9 1
-GenWimpy: 75
+GenWimpy: 70
 GenRoam: 89
 E
 #4058

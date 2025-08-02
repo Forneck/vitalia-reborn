@@ -11,8 +11,8 @@ muito perigoso e bastante agressivo.
 5 16 5 1d12+60 2d4+0
 0 1000
 9 9 0
-GenWimpy: 8
-GenRoam: 63
+GenWimpy: 10
+GenRoam: 72
 E
 #6101
 lobo feroz~
@@ -27,8 +27,9 @@ muito perigoso e bastante agressivo.
 5 16 5 1d12+80 2d4+4
 0 1000
 9 9 0
-GenWimpy: 8
-GenRoam: 75
+GenWimpy: 10
+GenRoam: 81
+GenGroup: 1
 E
 #6102
 lobo cinzento~
@@ -57,7 +58,7 @@ uma baba viscosa vai escorrendo por entre os seus lábios.
 3 18 7 1d12+45 1d7+3
 0 450
 9 9 0
-GenWimpy: 17
+GenWimpy: 18
 GenRoam: 88
 E
 #6110
