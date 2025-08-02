@@ -248,7 +248,6 @@ D4
 ~
 0 -1 11313
 S
-T 11308
 #11313
 No Túnel~
    Você não vê quase nada. A forte correnteza o atrai cada vez mais para cima.
@@ -260,7 +259,6 @@ D4
 ~
 0 -1 11314
 S
-T 11308
 #11314
 No Túnel~
    Você sente que perdeu o controle sobre seu corpo, de tão forte se mostra
@@ -327,15 +325,15 @@ Você vê um pátio.
 ~
 0 -1 11384
 E
-pinturas teto~
-Há diversas pinturas representando Sesha sustentando o mundo e sendo
-reverenciado pelos senhores de Patala.
-~
-E
 pilares~
 O que cobre os pilares parece ser ouro puro. Os desenhos que os adornam,
 feito por ourives de fantástica habilidade, represetam quatro naginis
 segurando as pedras dos senhores do norte, do sul, do leste e oeste.
+~
+E
+pinturas teto~
+Há diversas pinturas representando Sesha sustentando o mundo e sendo
+reverenciado pelos senhores de Patala.
 ~
 S
 #11316
@@ -510,7 +508,6 @@ D7
 ~
 0 -1 11376
 S
-T 11309
 #11321
 A Via Norte~
    Você está sobre as águas do pequeno rio que corre a norte do templo a
@@ -540,7 +537,6 @@ D3
 ~
 0 -1 11329
 S
-T 11309
 #11322
 A Via Norte~
    Você está sobre as águas do pequeno rio que corre a norte do templo a
@@ -570,7 +566,6 @@ D3
 ~
 0 -1 11328
 S
-T 11309
 #11323
 A Via Norte~
    Você está sobre as águas do pequeno rio que corre a norte do templo a
@@ -595,7 +590,6 @@ D3
 ~
 0 -1 11382
 S
-T 11309
 #11324
 A Oficina de Twashtri~
    Você está na oficina em que alguns dos mais fantásticos artefatos que
@@ -729,7 +723,6 @@ D2
 ~
 0 -1 11367
 S
-T 11309
 #11330
 A Via Leste~
    Você está sobre as águas do pequeno rio que corre a leste do templo a
@@ -761,7 +754,6 @@ D3
 ~
 0 -1 11317
 S
-T 11309
 #11331
 A Via Leste~
    Você está sobre as águas do pequeno rio que corre a leste do templo a
@@ -792,7 +784,6 @@ D3
 ~
 0 -1 11330
 S
-T 11309
 #11332
 A Via Leste~
    Você está sobre as águas do pequeno rio que corre a leste do templo a
@@ -823,7 +814,6 @@ D3
 ~
 0 -1 11331
 S
-T 11309
 #11333
 A Via Leste~
    Você está sobre as águas do pequeno rio que corre a leste do templo a
@@ -853,7 +843,6 @@ D3
 ~
 0 -1 11332
 S
-T 11309
 #11334
 A Via Leste~
    Você está sobre as águas do pequeno rio que corre a leste do templo a
@@ -878,7 +867,6 @@ D3
 ~
 0 -1 11333
 S
-T 11309
 #11335
 A Entrada da Congregação de Clérigos de Bhogavati~
    Você está em frente à uma simples casa de madeira pintada de branco
@@ -1045,7 +1033,6 @@ D3
 ~
 0 -1 11347
 S
-T 11309
 #11344
 A Via Sul~
    Você está sobre as águas do pequeno rio que corre a sul do templo a
@@ -1075,7 +1062,6 @@ D3
 ~
 0 -1 11349
 S
-T 11309
 #11345
 A Via Sul~
    Você está sobre as águas do pequeno rio que corre a sul do templo a
@@ -1105,7 +1091,6 @@ D3
 ~
 0 -1 11371
 S
-T 11309
 #11346
 A Via Sul~
    Você está sobre as águas do pequeno rio que corre a sul do templo a
@@ -1130,7 +1115,6 @@ D3
 ~
 0 -1 11363
 S
-T 11309
 #11347
 Serviço Postal~
    Você está dentro de uma grande barco ancorado ao lado da via sul de
@@ -1225,7 +1209,6 @@ D3
 ~
 0 -1 11351
 S
-T 11309
 #11351
 A Via Oeste~
    Você está sobre as águas do pequeno rio que corre a oeste do templo a
@@ -1251,7 +1234,6 @@ D3
 ~
 0 -1 11352
 S
-T 11309
 #11352
 A Via Oeste~
    Você está sobre as águas do pequeno rio que corre a oeste do templo a
@@ -1281,7 +1263,6 @@ D3
 ~
 0 -1 11353
 S
-T 11309
 #11353
 A Via Oeste~
    Você está sobre as águas do pequeno rio que corre a oeste do templo a
@@ -1307,7 +1288,6 @@ D3
 ~
 0 -1 11377
 S
-T 11309
 #11354
 A Pedra Preciosa~
    Você está em uma aconchegante (se é que alguma coisa naga pode ser
@@ -1410,7 +1390,6 @@ D8
 ~
 0 -1 11358
 S
-T 11309
 #11358
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1435,7 +1414,6 @@ D9
 ~
 0 -1 11376
 S
-T 11309
 #11359
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1460,7 +1438,6 @@ D6
 ~
 0 -1 11358
 S
-T 11309
 #11360
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1486,7 +1463,6 @@ Por ali você passa por baixo de uma ponte.
 ~
 0 -1 11362
 S
-T 11309
 #11361
 Um Pátio Fora do Templo~
    Você está em um pequeno pátio gramado fora do templo.  A água das vias
@@ -1538,7 +1514,6 @@ Por ali você passa por baixo de uma ponte.
 ~
 0 -1 11360
 S
-T 11309
 #11363
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1564,7 +1539,6 @@ Por ali você passa por baixo de uma ponte.
 ~
 0 -1 11365
 S
-T 11309
 #11364
 A Ponte Noroeste~
    Você está andando sobre a ponte noroeste de Bhogavati, uma bela construção
@@ -1614,7 +1588,6 @@ Por ali você passa por baixo de uma ponte.
 ~
 0 -1 11363
 S
-T 11309
 #11366
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1639,7 +1612,6 @@ D3
 ~
 0 -1 11381
 S
-T 11309
 #11367
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1664,7 +1636,6 @@ D3
 ~
 0 -1 11366
 S
-T 11309
 #11368
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1693,7 +1664,6 @@ D3
 ~
 0 -1 11365
 S
-T 11309
 #11369
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1714,7 +1684,6 @@ D3
 ~
 0 -1 11368
 S
-T 11309
 #11370
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1739,7 +1708,6 @@ D8
 ~
 0 -1 11371
 S
-T 11309
 #11371
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1760,7 +1728,6 @@ D6
 ~
 0 -1 11370
 S
-T 11309
 #11372
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1785,7 +1752,6 @@ D3
 ~
 0 -1 11344
 S
-T 11309
 #11373
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1810,7 +1776,6 @@ D2
 ~
 0 -1 11372
 S
-T 11309
 #11374
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1835,7 +1800,6 @@ D8
 ~
 0 -1 11360
 S
-T 11309
 #11375
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1860,7 +1824,6 @@ D3
 ~
 0 -1 11376
 S
-T 11309
 #11376
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -1889,7 +1852,6 @@ D9
 ~
 0 -1 11320
 S
-T 11309
 #11377
 A Via Oeste~
    Você está sobre as águas do pequeno rio que corre a oeste do templo a
@@ -1914,7 +1876,6 @@ D2
 ~
 0 -1 11365
 S
-T 11309
 #11378
 A Entrada da Confraria dos Druidas de Bhogavati~
    Às margens da Via Leste, a entrada da confraria é um bem-cuidado jardim
@@ -1998,7 +1959,6 @@ D7
 ~
 0 -1 11382
 S
-T 11309
 #11382
 Um Afluente das Vias~
    Você está navegando nas calmas águas de um afluente das principais vias
@@ -2023,7 +1983,6 @@ D9
 ~
 0 -1 11381
 S
-T 11309
 #11383
 As Antigüidades e Inutilidades do Senhor Kalidas~
    Você está dentro de uma pequena loja repleta das mais variadas
@@ -2152,7 +2111,7 @@ D2
 A estrada segue nessa direção.
 ~
 ~
-0 -1 11388
+0 -1 2998
 S
 #11389
 O Pátio Noroeste~
@@ -2191,7 +2150,6 @@ A Cidade das Jóias está ali.
 portao cristal negro~
 1 -1 11389
 S
-
 #11391
 O Distrito dos Artífices Nagas~
    Esta área especializada de Bhogavati é dedicada aos artesãos nagas mais
@@ -2212,7 +2170,6 @@ A oficina de joias fica a leste.
 ~
 0 0 11393
 S
-
 #11392
 Canal dos Artífices~
    Um canal estreito mas profundo onde pequenas embarcações nagas transportam
@@ -2221,18 +2178,17 @@ dourada mais intensa, resultado dos resíduos de metais nobres que são
 cuidadosamente filtrados e reaproveitados pelos artesãos nagas.
 ~
 113 131136 0 0 0 7
-D2
-O distrito dos artífices fica ao sul.
-~
-~
-0 0 11391
 D0
 O templo das pedras preciosas fica ao norte.
 ~
 ~
 0 0 11394
+D2
+O distrito dos artífices fica ao sul.
+~
+~
+0 0 11391
 S
-
 #11393
 Oficina de Joalheria Naga~
    Uma oficina suntuosa onde os mestres joalheiros nagas criam as peças mais
@@ -2248,7 +2204,6 @@ O distrito dos artífices fica a oeste.
 ~
 0 0 11391
 S
-
 #11394
 Templo das Pedras Preciosas~
    Um santuário dedicado às forças que governam a formação de gemas e metais
@@ -2257,18 +2212,17 @@ em diamante e safira, guardam altares onde oferendas de pedras brutas são
 deixadas para serem abençoadas antes da lapidação.
 ~
 113 4 0 0 0 0
-D2
-O canal dos artífices fica ao sul.
-~
-~
-0 0 11392
 D1
 Os aposentos reais ficam a leste.
 ~
 ~
 0 0 11395
+D2
+O canal dos artífices fica ao sul.
+~
+~
+0 0 11392
 S
-
 #11395
 Aposentos Reais dos Nagas~
    Os luxuosos aposentos onde reside a realeza naga de Bhogavati. Cada
@@ -2284,5 +2238,4 @@ O templo das pedras preciosas fica a oeste.
 ~
 0 0 11394
 S
-
 $~

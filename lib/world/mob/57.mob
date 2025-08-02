@@ -116,7 +116,7 @@ dentes.  Ele o fita com muita fúria em seus olhos.
 13 8 1 150d2+80 2d7+8
 1 15000
 9 9 1
-GenWimpy: 26
+GenWimpy: 25
 GenRoam: 4
 E
 #5709
@@ -194,8 +194,7 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 30
-GenBrave: 1
+GenWimpy: 27
 E
 #5714
 rymat conselheiro~

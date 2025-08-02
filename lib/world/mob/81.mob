@@ -498,8 +498,8 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 5 15 0 3d4+400 1d2+3
 0 100
 9 9 1
-GenWimpy: 5
-GenRoam: 72
+GenWimpy: 7
+GenRoam: 53
 E
 #8137
 rato~
@@ -631,8 +631,8 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 36
-GenRoam: 88
+GenWimpy: 37
+GenRoam: 85
 E
 #8146
 crianca egipcia~

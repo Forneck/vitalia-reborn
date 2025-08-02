@@ -81,7 +81,7 @@ Há uma grande possibilidade de que Ted seja um grande amigo imaginário...
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 48
+GenWimpy: 49
 GenRoam: 86
 E
 #20106
@@ -154,8 +154,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 35
-GenRoam: 46
+GenWimpy: 39
+GenRoam: 49
 E
 #20110
 jovem mulher Sybila~
@@ -221,7 +221,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 700 600
 9 9 2
 GenWimpy: 32
-GenRoam: 78
+GenRoam: 75
 E
 #20114
 jovem mulher Renee~
@@ -253,9 +253,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 42
+GenWimpy: 44
 GenRoam: 87
-GenGroup: 1
 E
 #20116
 jovem mulher dorothy~
@@ -290,7 +289,7 @@ original.
 700 600
 9 9 2
 GenWimpy: 37
-GenRoam: 88
+GenRoam: 86
 E
 #20118
 jovem mulher nancy~
@@ -306,8 +305,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 700 600
 9 9 2
 GenWimpy: 31
-GenRoam: 85
-GenGroup: 1
+GenRoam: 86
 E
 #20119
 Spike~

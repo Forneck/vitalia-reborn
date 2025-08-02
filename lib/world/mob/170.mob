@@ -9,7 +9,7 @@ Ele parece tentar alcançar o outro lado da montanha, assim como você.
 10 10 0 1d10+160 2d10+8
 400 600
 9 9 1
-GenWimpy: 14
+GenWimpy: 16
 E
 #17002
 ciclope~
@@ -189,7 +189,7 @@ Ela corre ao seu redor, esperando uma brecha.
 9 9 2
 GenWimpy: 100
 GenLoot: 1
-GenRoam: 70
+GenRoam: 75
 E
 #17016
 elemental neve humanoide cristal~
@@ -229,7 +229,7 @@ todos os lados, produzindo barulhentas explosões.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 29
+GenWimpy: 31
 GenLoot: 1
 E
 #17019
@@ -258,9 +258,9 @@ que suas calças sequem rápido.
 8 12 1 1d5+250 3d5+4
 1000 4000
 9 9 2
-GenWimpy: 62
+GenWimpy: 63
 GenLoot: 6
-GenRoam: 33
+GenRoam: 31
 E
 #17021
 lama monstro elemental~
@@ -347,10 +347,10 @@ e seus bruxuleantes membros, que parecem ser afiados como garras.
 26 -2 -5 1d5+590 6d4+14
 3000 30000
 9 9 2
-GenWimpy: 100
-GenLoot: 9
-GenRoam: 88
-GenGroup: 51
+GenWimpy: 97
+GenLoot: 10
+GenRoam: 85
+GenGroup: 53
 E
 #17027
 magneto elemental humanoide~
@@ -503,8 +503,9 @@ Ele se assemelha bastante a um desagradável inseto.
 5 16 4 1d5+90 2d4+1
 800 1000
 9 9 1
-GenWimpy: 100
-GenRoam: 80
+GenWimpy: 97
+GenRoam: 83
+GenBrave: 1
 E
 #17037
 gigantesco elemental~

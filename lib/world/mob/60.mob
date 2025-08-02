@@ -72,7 +72,7 @@ castanhos que olham fixamente para você, com grande interesse.
 0 230
 9 9 2
 GenWimpy: 47
-GenRoam: 84
+GenRoam: 85
 E
 #6005
 raposa marrom~
@@ -141,9 +141,9 @@ O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 64
+GenWimpy: 65
 GenLoot: 2
-GenRoam: 82
+GenRoam: 79
 E
 #6010
 esquilo~
@@ -188,7 +188,7 @@ no chão.
 0 200
 9 9 0
 GenWimpy: 68
-GenRoam: 83
+GenRoam: 81
 E
 #6013
 esquilinho~
@@ -296,6 +296,6 @@ O pato é bastante gordo.   Ele parece estar aproveitando bem sua vida.
 0 75
 9 9 0
 GenWimpy: 100
-GenRoam: 84
+GenRoam: 85
 E
 $

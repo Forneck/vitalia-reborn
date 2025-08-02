@@ -652,7 +652,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 29
+GenWimpy: 25
 E
 #17344
 escrava~
@@ -666,7 +666,7 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 8
+GenWimpy: 9
 E
 #17345
 chefe saxao render~
@@ -761,7 +761,7 @@ O servo segura um instrumento de fazenda e usa trapos para se cobrir.
 10 7 1 4d12+250 6d6+5
 1240 4769
 9 9 1
-GenWimpy: 35
+GenWimpy: 40
 E
 #17351
 invasor anglo~
@@ -959,7 +959,7 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 13
+GenWimpy: 14
 GenLoot: 1
 E
 $

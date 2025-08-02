@@ -37,7 +37,7 @@ A aranha-lobo é peluda, muito peluda.
 6 12 6 3d8+70 2d5+3
 1250 6000
 9 9 2
-GenWimpy: 37
+GenWimpy: 39
 GenLoot: 1
 E
 #6304
@@ -66,7 +66,7 @@ Você nota um olhar vidrado nos olhos dela.
 14 7 1 1d12+172 2d8+1
 2000 18000
 9 9 2
-GenWimpy: 13
+GenWimpy: 12
 GenLoot: 45
 GenEquip: 1
 E
@@ -112,7 +112,7 @@ própria ou se foi seduzido você não poderá ter certeza.
 11 8 4 1d12+130 2d7+1
 1000 13500
 9 9 1
-GenWimpy: 21
+GenWimpy: 18
 GenRoam: 89
 E
 #6309
