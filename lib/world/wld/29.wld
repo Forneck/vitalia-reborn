@@ -1330,13 +1330,13 @@ D3
 S
 #2964
 Caminho do Mercado~
-   This path is a little bit crowded, being right between one of the better
-residential sections of Porto, North Gull Road, and the main commercial section
-of Porto, the market.  The traffic here, though more than you can see the the
-north, only gets worse as you go further south towards the colorful canopies.
-Shops line the east, but it appears most of the owners are out to the market.
-One shop is still open, one with a hanging sign nailed above the door,
-portraying a smoking vial.
+   Este caminho está um pouco lotado, estando bem entre uma das melhores seções
+residenciais de Porto, a Estrada Gaivota Norte, e a seção comercial principal
+de Porto, o mercado. O tráfego aqui, embora mais do que você pode ver ao norte,
+só piora à medida que você vai mais ao sul em direção aos toldos coloridos.
+Lojas forram o leste, mas parece que a maioria dos proprietários está fora no
+mercado. Uma loja ainda está aberta, uma com uma placa pendurada pregada acima
+da porta, retratando um frasco fumegante.
 ~
 29 0 0 0 0 1
 D0
@@ -1354,11 +1354,11 @@ D2
 S
 #2965
 Caminho do Mercado~
-   To the south the noise and smells of the market are so much that they are
-almost painful.  Here the crowd is quieter, being mostly people carrying their
-day's find at the market back to their homes.  There is only one shop with its
-door still left open, begging for business.  It has a sign nailed above the
-door, one of a crossed sword and mace.
+   Ao sul o barulho e os cheiros do mercado são tantos que são quase dolorosos.
+Aqui a multidão é mais silenciosa, sendo principalmente pessoas carregando a
+descoberta do dia no mercado de volta para suas casas. Há apenas uma loja com
+sua porta ainda deixada aberta, implorando por negócios. Ela tem uma placa
+pregada acima da porta, uma de uma espada e maça cruzadas.
 ~
 29 0 0 0 0 1
 D0
@@ -1502,9 +1502,8 @@ D3
 0 2900 2937
 E
 sign shack~
-   As you study the shack you see the sign with a boat painted on it.
-Underneath the boat in flowing caligraphy reads the words Aramut's Seaworthy
-Crafts.
+   Ao estudar a cabana você vê a placa com um barco pintado nela. Sob o barco
+em caligrafia fluída lê-se as palavras Artesanatos Marítimos de Aramut.
 ~
 S
 #2972
@@ -1571,26 +1570,26 @@ D2
 S
 #2975
 Contra as Rochas~
-   The boards are wet from the spray of the waves crashing against the rocks
-below.  You get too close to the edge, and the quick wind picks you up and
-throws you over the boundaries of the wet boards.  The spiral of the wind
-throws you down into the bone-chilling water with a SPLASH!!  As you surface,
-before you have even the slightest time to react, you are dashed against the
-jagged rocks by the pounding waves.
+   As tábuas estão molhadas com o borrifo das ondas batendo contra as rochas
+abaixo. Você chega muito perto da borda, e o vento rápido o pega e o joga sobre
+os limites das tábuas molhadas. A espiral do vento o atira para baixo na água
+que gela os ossos com um SPLASH!! Quando você vem à superfície, antes de ter
+mesmo o menor tempo para reagir, você é atirado contra as rochas irregulares
+pelas ondas batendo.
 ~
 29 4 0 0 0 0
 S
 T 2911
 #2976
 Praia Bela~
-   Here is a serene sandy beach.  People lie in the sand, and those who have
-the full day away from work might sunbathe all day, sleeping under the stars at
-night.  The fine sand is soft, the beach smoothed by the winds constantly
-sweeping it.  The water here is warm and calm, lapping in gentle waves.
-Children of the town swim merrily, all the way out to the jagged rocks.  Waves
-crash hard against the other side of those rocks, throwing spray into the air.
-It is a good thing those rocks are there to act as breakers, or this beautiful
-beach wouldn't be swimable.
+   Aqui há uma praia arenosa serena. Pessoas se deitam na areia, e aqueles que
+têm o dia todo longe do trabalho podem tomar sol o dia todo, dormindo sob as
+estrelas à noite. A areia fina é macia, a praia alisada pelos ventos
+constantemente varrendo-a. A água aqui é quente e calma, lambendo em ondas
+suaves. Crianças da cidade nadam alegremente, até as rochas irregulares. Ondas
+se chocam forte contra o outro lado daquelas rochas, jogando borrifo no ar. É
+uma coisa boa que essas rochas estejam lá para agir como quebra-mares, ou esta
+praia bela não seria nadável.
 ~
 29 0 0 0 0 2
 D0
@@ -1608,13 +1607,14 @@ D3
 S
 #2977
 Estrada do Mercado~
-   There is much traffic on this winding road.  Many of the people heading
-north are hauling carts full of fish, while many of the people heading south
-are hauling empty carts, smiling as their full purses jangle from their hips.
-To the north you can glimpse colorful canopies and crowds of people, while to
-the south you can hear the crash of waves breaking on rocks.  If you squint
-perhaps you can see a bit of the shimmering blue of reflected light where the
-winding road breaks between the many houses and establishments.
+   Há muito tráfego nesta estrada serpenteante. Muitas das pessoas indo ao norte
+estão puxando carroças cheias de peixe, enquanto muitas das pessoas indo ao sul
+estão puxando carroças vazias, sorrindo enquanto suas bolsas cheias tilintar de
+seus quadris. Ao norte você pode vislumbrar toldos coloridos e multidões de
+pessoas, enquanto ao sul você pode ouvir o estrondo de ondas quebrando nas
+rochas. Se você forçar a vista talvez possa ver um pouco do azul cintilante da
+luz refletida onde a estrada serpenteante quebra entre as muitas casas e
+estabelecimentos.
 ~
 29 0 0 0 0 1
 D0
@@ -1632,11 +1632,12 @@ D3
 S
 #2978
 Estrada do Mercado, perto do mercado~
-   To the north the smell of fish, the press of people, and the noise of a busy
-market all become greater.  On both sides of the road you can see the crowd of
-people moving in all directions.  You can also glimpse the great gate of Porto
-to the south, and flashes of colorful canopies to the north.  One might wonder
-why so many people would be attracted to a fish market, of all things.
+   Ao norte o cheiro de peixe, a pressão das pessoas e o barulho de um mercado
+movimentado tudo se torna maior. Em ambos os lados da estrada você pode ver a
+multidão de pessoas se movendo em todas as direções. Você também pode
+vislumbrar o grande portão de Porto ao sul, e flashes de toldos coloridos ao
+norte. Alguém pode se perguntar por que tantas pessoas seriam atraídas a um
+mercado de peixe, de todas as coisas.
 ~
 29 0 0 0 0 0
 D0
@@ -1673,13 +1674,14 @@ D3
 0 2900 2980
 S
 #2980
-Crowded Fish Market~
-   People press in from all sides!  Under the brilliant, patched, colored cloth
-there is no such thing as a sky.  There are only people wandering the crowded
-market, men loading wagons, and merchants.  Oh the merchants!  Dressed in
-outrageous costumes and with all sorts of accents merchants yell of their
-wares, vying for your attention.  In a crowd such as this, one to make even you
-claustrophobic, it would be wise to keep your hands near your belt pouch.
+Mercado de Peixes Lotado~
+   As pessoas se apertam de todos os lados! Sob o tecido brilhante, remendado e
+colorido, não existe tal coisa como céu. Há apenas pessoas vagando pelo
+mercado lotado, homens carregando vagões e mercadores. Oh, os mercadores!
+Vestidos em trajes extravagantes e com todos os tipos de sotaques, os
+mercadores gritam sobre suas mercadorias, disputando sua atenção. Em uma
+multidão como esta, capaz de deixar até você claustrofóbico, seria sábio
+manter suas mãos perto da sua bolsa.
 ~
 29 0 0 0 0 0
 D0
@@ -1945,14 +1947,15 @@ D3
 0 2900 2990
 S
 #2992
-Crowded Fish Market~
-   People press in from all sides!  Under the brilliant, patched, colored cloth
-there is no such thing as a sky.  There are only people wandering the crowded
-market, men loading wagons, and merchants.  Oh the merchants!  Dressed in
-outrageous costumes and with all sorts of accents merchants yell of their
-wares, vying for your attention.  In a crowd such as this, one to make even you
-claustrophobic, it would be wise to keep your hands near your belt pouch.  To
-the west you spot a small, uncrowded opening leading to blue sky.
+Mercado de Peixes Lotado~
+   As pessoas se apertam de todos os lados! Sob o tecido brilhante, remendado e
+colorido, não existe tal coisa como céu. Há apenas pessoas vagando pelo
+mercado lotado, homens carregando vagões e mercadores. Oh, os mercadores!
+Vestidos em trajes extravagantes e com todos os tipos de sotaques, os
+mercadores gritam sobre suas mercadorias, disputando sua atenção. Em uma
+multidão como esta, capaz de deixar até você claustrofóbico, seria sábio
+manter suas mãos perto da sua bolsa. A oeste você vê uma pequena abertura
+desobstruída levando ao céu azul.
 ~
 29 0 0 0 0 0
 D0
@@ -1969,13 +1972,14 @@ D3
 0 2900 2991
 S
 #2993
-Crowded Fish Market~
-   People press in from all sides!  Under the brilliant, patched, colored cloth
-there is no such thing as a sky.  There are only people wandering the crowded
-market, men loading wagons, and merchants.  Oh the merchants!  Dressed in
-outrageous costumes and with all sorts of accents merchants yell of their
-wares, vying for your attention.  In a crowd such as this, one to make even you
-claustrophobic, it would be wise to keep your hands near your belt pouch.
+Mercado de Peixes Lotado~
+   As pessoas se apertam de todos os lados! Sob o tecido brilhante, remendado e
+colorido, não existe tal coisa como céu. Há apenas pessoas vagando pelo
+mercado lotado, homens carregando vagões e mercadores. Oh, os mercadores!
+Vestidos em trajes extravagantes e com todos os tipos de sotaques, os
+mercadores gritam sobre suas mercadorias, disputando sua atenção. Em uma
+multidão como esta, capaz de deixar até você claustrofóbico, seria sábio
+manter suas mãos perto da sua bolsa.
 ~
 29 0 0 0 0 0
 D0
@@ -1993,13 +1997,13 @@ D3
 S
 #2994
 Estrada do Mercado, além do mercado~
-   People shove past, in a hurry to get wherever it is they are going.  You can
-hear the swearing of various men on carts and wagons, trying to get them and
-their goods through the throng.  Nearby to the east colorful stitched canopies
-billow in the stiff, salty sea breeze.  The sounds of merchants yelling their
-wares and people yelling to each other in general are almost overwhelming.  To
-the south the throng thins into a crowd, and to the north you see the same sort
-of encounter you see here.
+   Pessoas empurram ao passar, com pressa para chegar onde quer que seja que
+estão indo. Você pode ouvir os praguejos de vários homens em carroças e vagões,
+tentando levá-los e suas mercadorias através da multidão. Próximo ao leste
+toldos coloridos costurados ondulam na brisa marinha rígida e salgada. Os sons
+de mercadores gritando suas mercadorias e pessoas gritando umas com as outras
+em geral são quase esmagadores. Ao sul a multidão se afina em uma multidão, e
+ao norte você vê o mesmo tipo de encontro que vê aqui.
 ~
 29 0 0 0 0 1
 D0
@@ -2017,17 +2021,17 @@ D3
 S
 #2995
 Estrada do Mercado, além do mercado~
-   People shove past, in a hurry to get wherever it is they are going.  You can
-hear the swearing of various men on carts and wagons, trying to get them and
-their goods through the throng.  Nearby to the east colorful stitched canopies
-billow in the stiff, salty sea breeze.  The sounds of merchants yelling their
-wares and people yelling to each other in general are almost overwhelming.  To
-the north the throng thins into a crowd, and to the south you see the same sort
-of encounter you see here.
+   Pessoas empurram ao passar, com pressa para chegar onde quer que seja que
+estão indo. Você pode ouvir os praguejos de vários homens em carroças e vagões,
+tentando levá-los e suas mercadorias através da multidão. Próximo ao leste
+toldos coloridos costurados ondulam na brisa marinha rígida e salgada. Os sons
+de mercadores gritando suas mercadorias e pessoas gritando umas com as outras
+em geral são quase esmagadores. Ao norte a multidão se afina em uma multidão, e
+ao sul você vê o mesmo tipo de encontro que vê aqui.
 ~
 29 0 0 0 0 1
 D0
-   The road is in the same condition as here - CROWDED.
+   A estrada está na mesma condição que aqui - LOTADA.
 ~
 ~
 0 2900 2996
@@ -2043,11 +2047,12 @@ Nothing.
 S
 #2996
 Estrada do Mercado~
-   To the south the smell of fish, the press of people, and the noise of a busy
-market all become greater.  On both sides of the road you can see the crowd of
-people moving in all directions.  You can also glimpse the great gate of Porto
-to the north, and flashes of colorful canopies to the south.  One might wonder
-why so many people would be attracted to a fish market, of all things.
+   Ao sul o cheiro de peixe, a pressão das pessoas e o barulho de um mercado
+movimentado tudo se torna maior. Em ambos os lados da estrada você pode ver a
+multidão de pessoas se movendo em todas as direções. Você também pode vislumbrar
+o grande portão de Porto ao norte, e flashes de toldos coloridos ao sul. Alguém
+pode se perguntar por que tantas pessoas seriam atraídas a um mercado de peixe,
+de todas as coisas.
 ~
 29 0 0 0 0 1
 D0
@@ -2055,65 +2060,66 @@ D0
 ~
 0 2900 2997
 D2
-   To the south the crowd thickens as the road goes past the market.
+   Ao sul a multidão se espessa enquanto a estrada passa pelo mercado.
 ~
 ~
 0 2900 2995
 E
 color canopies colorful~
-   As you look intently to the south and the flashes of color you can see that
-the canopies are really lots of tightly woven blankets stitched together.  It
-probably serves to keep the sun off the customers and merchants.  It doesn't
-really look like a canopy, but more of a colorful roof over the marketplace,
-billowing in the wind.
+   Quando você olha atentamente para o sul e os flashes de cor, você pode ver que
+os toldos são realmente muitos cobertores densamente tecidos costurados juntos.
+Provavelmente serve para manter o sol longe dos clientes e mercadores. Realmente
+não parece um toldo, mas mais como um teto colorido sobre o mercado, ondulando
+no vento.
 ~
 E
 traffic people~
-   People, mules, horses, and all manner of things race along the road here, in
-a hurry to get to wherever it is they want to go.  The ones headed to the south
-carry empty baskets, the cartsmen with their full loads yelling loudly at their
-straining animals.  The ones heading north lug heavy baskets full of the day's
-find at the market, their expressions pleased that they got the best of the
-pesky merchants.  Didn't they?
+   Pessoas, mulas, cavalos e toda a maneira de coisas correm ao longo da estrada
+aqui, com pressa para chegar onde quer que queiram ir. Os que se dirigem ao sul
+carregam cestas vazias, os carroceiros com suas cargas cheias gritando alto com
+seus animais esforçando-se. Os que se dirigem ao norte arrastam cestas pesadas
+cheias da descoberta do dia no mercado, suas expressões satisfeitas de que
+conseguiram o melhor dos mercadores incômodos. Não conseguiram?
 ~
 S
 #2997
 Estrada do Mercado~
-   The breeze from the south blows a fishy scent your way, and through the
-press of people on this relatively narrow winding road you can glimpse the gate
-of Porto to the north, and flashes of colorful canopies somewhere to the south.
-Over the clacking of hooves on cobbles and catcalls from neighbors to each
-other you can hear the dull, background roar of sea surf crashing onto rocks.
-The air is hot and humid enough to make the slight breeze refreshing.
+   A brisa do sul sopra um aroma de peixe em sua direção, e através da pressão
+das pessoas nesta estrada serpenteante relativamente estreita você pode
+vislumbrar o portão de Porto ao norte, e flashes de toldos coloridos em algum
+lugar ao sul. Sobre o tilintar de cascos nas pedras e gritos de vizinhos uns
+para os outros você pode ouvir o rugido surdo de fundo do surf marinho batendo
+nas rochas. O ar está quente e úmido o suficiente para tornar a brisa leve
+refrescante.
 ~
 29 0 0 0 0 1
 D0
-   To the north there is a magnificent city gate.
+   Ao norte há um portão magnífico da cidade.
 ~
 ~
 0 2900 2998
 D2
-   To the south you see a relatively narrow, crowded winding road leading
-toward the market.
+   Ao sul você vê uma estrada serpenteante relativamente estreita e lotada
+levando em direção ao mercado.
 ~
 ~
 0 2900 2996
 E
 people traffic~
-   People, mules, horses, and all manner of things race along the road here, in
-a hurry to get to wherever it is they want to go.  The ones headed to the south
-carry empty baskets, the cartsmen with their full loads yelling loudly at their
-straining animals.  The ones heading north lug heavy baskets full of the day's
-find at the market, their expressions pleased that they got the best of the
-pesky merchants.  Didn't they?
+   Pessoas, mulas, cavalos e toda a maneira de coisas correm ao longo da estrada
+aqui, com pressa para chegar onde quer que queiram ir. Os que se dirigem ao sul
+carregam cestas vazias, os carroceiros com suas cargas cheias gritando alto com
+seus animais esforçando-se. Os que se dirigem ao norte arrastam cestas pesadas
+cheias da descoberta do dia no mercado, suas expressões satisfeitas de que
+conseguiram o melhor dos mercadores incômodos. Não conseguiram?
 ~
 E
 color canopies colorful~
-   As you look intently to the south and the flashes of color you can see that
-the canopies are really lots of tightly woven blankets stitched together.  It
-probably serves to keep the sun off the customers and merchants.  It doesn't
-really look like a canopy, but more of a colorful roof over the marketplace,
-billowing in the wind.
+   Quando você olha atentamente para o sul e os flashes de cor, você pode ver que
+os toldos são realmente muitos cobertores densamente tecidos costurados juntos.
+Provavelmente serve para manter o sol longe dos clientes e mercadores. Realmente
+não parece um toldo, mas mais como um teto colorido sobre o mercado, ondulando
+no vento.
 ~
 S
 #2998
@@ -2153,8 +2159,8 @@ alguém de grande força, conseguiria removê-los.
 S
 #2999
 Um Quarto de Ligação~
-   This zone will link north to room 3472.  Build all rooms south of that
-connection point.
+   Esta zona se conectará ao norte ao quarto 3472. Construa todos os quartos ao
+sul desse ponto de conexão.
 ~
 29 512 0 0 0 0
 S
