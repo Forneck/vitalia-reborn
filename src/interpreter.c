@@ -253,6 +253,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"plist", "plist", POS_DEAD, do_plist, LVL_GOD, 0, CMD_NOARG},
     {"plrload", "plrload", POS_DEAD, do_plrload, LVL_GRGOD, 0, CMD_ONEARG},
     {"policy", "pol", POS_DEAD, do_gen_ps, 0, SCMD_POLICIES, CMD_NOARG},
+    {"portal", "portal", POS_DEAD, do_portal, LVL_GOD, 0, CMD_NOARG},
     {"pour", "pour", POS_STANDING, do_pour, 0, SCMD_POUR, CMD_TWOARG},
     {"pray", "pra", POS_RESTING, do_pray, 0, 0, CMD_NOARG},
     {"prompt", "pro", POS_DEAD, do_display, 0, 0, CMD_NOARG},

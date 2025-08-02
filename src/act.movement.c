@@ -731,10 +731,10 @@ ACMD(do_enter)
             GET_OBJ_TYPE(obj) == ITEM_PORTAL) {
             target_room_rnum = real_room(GET_OBJ_VAL(obj, 0));
             if (target_room_rnum != NOWHERE) {
-		act("$n entra em $p, e desaparece.", TRUE, ch, obj, 0, TO_ROOM);
-		char_from_room(ch);
+                act("$n entra em $p, e desaparece.", TRUE, ch, obj, 0, TO_ROOM);
+                char_from_room(ch);
                 char_to_room(ch, target_room_rnum);
-		act("$n aparece saindo de $p.", TRUE, ch, obj, 0, TO_ROOM);
+                act("$n aparece saindo de $p.", TRUE, ch, obj, 0, TO_ROOM);
                 look_at_room(ch, 1);
                 return;
             }
