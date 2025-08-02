@@ -618,11 +618,11 @@ silenciosamente para si mesmo.
 BareHandAttack: 13
 E
 #2950
-screaming paranoid schizophrenic~
-the paranoid schizophrenic~
-A paranoid schizophrenic stands here, screaming at the world.
+esquizofrênico paranoico gritando~
+o esquizofrênico paranoico~
+Um esquizofrênico paranoico está aqui, gritando para o mundo.
 ~
-   It looks as if this crazy person is on one of their screaming phrases.
+   Parece que esta pessoa louca está em uma de suas fases de gritar.
 ~
 2099242 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -633,12 +633,12 @@ Dex: 14
 GenWimpy: 6
 E
 #2951
-half wit~
-a halfwit~
-A halfwit sits here, drooling.
+idiota~
+um idiota~
+Um idiota está sentado aqui, babando.
 ~
-   The halfwit is thoroughly content to just sit here and stare at the ground
-all day, watching their drool accumulate into a small puddle.
+   O idiota está completamente satisfeito em apenas ficar aqui sentado e olhar para
+o chão o dia todo, vendo sua baba se acumular em uma pequena poça.
 ~
 2097294 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -647,12 +647,12 @@ all day, watching their drool accumulate into a small puddle.
 BareHandAttack: 6
 E
 #2952
-gibbering mad man~
-the gibbering madman~
-A gibbering madman stands here, talking to the wall.
+homem louco tagarelando~
+o homem louco tagarelando~
+Um homem louco tagarelando está aqui, falando com a parede.
 ~
-   He looks quite insane, but his face is sincere as he talks to the wall in a
-language that only they can understand.
+   Ele parece bastante insano, mas sua face é sincera enquanto fala com a parede em uma
+linguagem que só ele consegue entender.
 ~
 2097224 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -665,13 +665,13 @@ Int: 14
 Wis: 14
 E
 #2953
-raving lunatic~
-a raving lunatic~
-A raving lunatic is here, preaching the destruction of the world.
+lunático delirante~
+um lunático delirante~
+Um lunático delirante está aqui, pregando a destruição do mundo.
 ~
-   The raving lunatic is clad only in what rags he could find.  He might have
-once been a handsome man, but now he has scars across his cheeks.  The look like
-they might have been caused by fingernails.  Perhaps his own.
+   O lunático delirante está vestido apenas com os trapos que conseguiu encontrar. Ele pode ter
+sido um homem bonito, mas agora tem cicatrizes pelas bochechas. Parecem ter
+sido causadas por unhas. Talvez as suas próprias.
 ~
 2099342 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -680,12 +680,12 @@ they might have been caused by fingernails.  Perhaps his own.
 BareHandAttack: 3
 E
 #2954
-ships cook~
-the ship's cook~
-The ship's cook stands here, brandishing a baked bread nastily.
+cozinheiro navio~
+o cozinheiro do navio~
+O cozinheiro do navio está aqui, brandindo um pão assado de forma ameaçadora.
 ~
-   He looks just like any other sailor, except he wears an apron and angrily
-brandishes a herring at his simmering delights.
+   Ele parece como qualquer outro marinheiro, exceto que usa um avental e bravamente
+brande um arenque para suas delícias ferventes.
 ~
 2099210 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -782,12 +782,12 @@ Int: 10
 Wis: 10
 E
 #2960
-sun bather~
-the sunbather~
-A sunbather lies here, enjoying lying in the sand.
+banhista sol~
+a banhista~
+Uma banhista está aqui, aproveitando para deitar na areia.
 ~
-   She looks as if she could just sunbathe all day long and then look at the
-stars all night.  She doesn't appear to have a care in the world.
+   Ela parece que poderia tomar sol o dia todo e depois olhar para as
+estrelas a noite toda. Ela não parece ter uma preocupação no mundo.
 ~
 2099338 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -800,11 +800,11 @@ Int: 13
 Wis: 14
 E
 #2961
-strolling citizen~
-the strolling citizen~
-A citizen is here, strolling past.
+cidadão passeando~
+o cidadão passeando~
+Um cidadão está aqui, passeando.
 ~
-   He looks as if he is enjoying the fine scenery.
+   Ele parece estar aproveitando a bela paisagem.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -817,11 +817,11 @@ Int: 14
 Wis: 14
 E
 #2962
-strolling citizen~
-the strolling citizen~
-A citizen is here, strolling past.
+cidadã passeando~
+a cidadã passeando~
+Uma cidadã está aqui, passeando.
 ~
-   She looks as if she is enjoying the fine scenery.
+   Ela parece estar aproveitando a bela paisagem.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -834,11 +834,11 @@ Int: 15
 Wis: 15
 E
 #2963
-king crab~
-the king crab~
-A king crab is here, looking mean.
+caranguejo rei~
+o caranguejo rei~
+Um caranguejo rei está aqui, parecendo mal-humorado.
 ~
-   The king crab does @RNOT@n like intruders in his lair.
+   O caranguejo rei @RNÃO@n gosta de intrusos em seu covil.
 ~
 2097194 0 0 0 1048576 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -1171,14 +1171,14 @@ se as coisas saíssem de controle.
 BareHandAttack: 10
 E
 #2982
-rich guest~
-a rich guest~
-A rich guest stands here, casually sipping some expensive wine.
+convidado rico~
+um convidado rico~
+Um convidado rico está aqui, bebericando casualmente um vinho caro.
 ~
-   With his well-tailored clothes and his expensive jewelry, this painted man
-looks as though he cares nothing about the poor or their welfare.  The glass of
-wine he so casually sips looks as though it could be sold for enough money to
-feed a fishing family for weeks.
+   Com suas roupas bem talhadas e suas joias caras, este homem pintado
+parece não se importar com os pobres ou seu bem-estar. O copo de
+vinho que ele bebem tão casualmente parece que poderia ser vendido por dinheiro suficiente para
+alimentar uma família de pescadores por semanas.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -1331,13 +1331,13 @@ slightly open as she looks around with wide eyes at the sights.
 9 9 2
 E
 #2993
-a happy child~
-the happy child~
-A little boy stands here, smiling happily.
+criança feliz~
+a criança feliz~
+Um menino está aqui, sorrindo alegremente.
 ~
-   The little boy is happily whistling as he looks around.  Something about his
-manner tells you that he is probably skipping out on his chores to view the
-town.
+   O menino está assoviando alegremente enquanto olha ao redor. Algo sobre sua
+maneira diz que ele provavelmente está escapando de suas tarefas para ver a
+cidade.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -1345,13 +1345,13 @@ town.
 9 9 1
 E
 #2994
-woman citizen~
-a woman of Porto~
-A woman of Porto is here, humming softly to herself.
+mulher cidadã~
+uma mulher de Porto~
+Uma mulher de Porto está aqui, cantarolando suavemente para si mesma.
 ~
-   A tall, stately woman is here in a pretty dress, probably on her way to a
-vendor in the market.  She appears to be richly dressed, and is probably a
-merchant's wife.
+   Uma mulher alta e imponente está aqui em um vestido bonito, provavelmente a caminho de um
+vendedor no mercado. Ela parece estar ricamente vestida e provavelmente é
+esposa de um comerciante.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -1359,13 +1359,13 @@ merchant's wife.
 9 9 2
 E
 #2995
-motherly woman~
-a motherly woman~
-A short, matronly citizen of Porto is here, her patched dress billowing in the constant breeze.
+mulher maternal~
+uma mulher maternal~
+Uma cidadã baixa e maternal de Porto está aqui, seu vestido remendado ondulando na brisa constante.
 ~
-   This motherly woman stands here in the breeze, her colorful and heavily
-patched dress billowing.  She calls out a name, probably of her child, and she
-has an angry look on her face.  Boy, is somebody in trouble.
+   Esta mulher maternal está aqui na brisa, seu vestido colorido e muito
+remendado ondulando. Ela grita um nome, provavelmente de seu filho, e ela
+tem uma expressão zangada no rosto. Nossa, alguém está em apuros.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
@@ -1373,12 +1373,12 @@ has an angry look on her face.  Boy, is somebody in trouble.
 9 9 2
 E
 #2996
-citizen male man~
-a man of Porto~
-A citizen of Porto
+cidadão homem~
+um homem de Porto~
+Um cidadão de Porto
 ~
-   The burly man of Porto stands here, his pipe hanging from his mouth.  He
-looks as though he is talking to himself about the market prices.
+   O homem robusto de Porto está aqui, seu cachimbo pendurado em sua boca. Ele
+parece estar falando consigo mesmo sobre os preços do mercado.
 ~
 2099272 0 0 0 0 0 0 0 0 E
 10 17 4 2d2+100 1d2+1
@@ -1403,13 +1403,13 @@ excitement.
 E
 T 2900
 #2998
-diligent carver~
-a diligent carver~
-A diligent carver stands here, biting on the end of his knife.
+escultor diligente~
+um escultor diligente~
+Um escultor diligente está aqui, mordendo a ponta de sua faca.
 ~
-   Having devoted his entire life to this work, the diligent carver is almost
-completely absorbed in the gates of Porto, always seeking to improve them with
-his skillful hand and his sharp knife.
+   Tendo dedicado toda sua vida a este trabalho, o escultor diligente está quase
+completamente absorvido nos portões de Porto, sempre buscando melhorá-los com
+sua mão habilidosa e sua faca afiada.
 ~
 2099210 0 0 0 0 0 0 0 0 E
 7 18 5 1d1+70 1d2+1
