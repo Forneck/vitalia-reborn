@@ -48,6 +48,7 @@
 /* Format: vnum, read lvl, write lvl, remove lvl, filename, 0 at end. Be sure
  * to also change NUM_OF_BOARDS in board.h*/
 struct board_info_type board_info[NUM_OF_BOARDS] = {
+    
     {3099, 0, 0, LVL_GOD, LIB_ETC "board.mortal", 0},
     {3098, LVL_IMMORT, LVL_IMMORT, LVL_GRGOD, LIB_ETC "board.immortal", 0},
     {3097, LVL_IMMORT, LVL_GRGOD, LVL_IMPL, LIB_ETC "board.freeze", 0},
@@ -88,7 +89,10 @@ struct board_info_type board_info[NUM_OF_BOARDS] = {
     {20421, 0, 0, LVL_IMMORT, LIB_ETC "board.thief", 0},
     {22010, 0, 0, LVL_IMMORT, LIB_ETC "board.banco", 0},
     {22022, 0, 0, LVL_IMMORT, LIB_ETC "board.jornal", 0},
-    /* 34 */
+    {403,  1, 10, LVL_GOD, LIB_ETC "board.embaixadas", 0},
+    /* 35 */
+    {22058, 0, 0, LVL_IMMORT, LIB_ETC "board.uniao", 0},
+    {22059, 0, 0, LVL_IMMORT, LIB_ETC "board.coragem", 0},
     /*{1226, 0, 0, LVL_IMPL, LIB_ETC "board.builder", 0},
     {1227, 0, 0, LVL_IMPL, LIB_ETC "board.staff", 0},
     {1228, 0, 0, LVL_IMPL, LIB_ETC "board.advertising", 0},*/
