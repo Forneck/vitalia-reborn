@@ -316,7 +316,7 @@ ACMD(do_trans)
                 send_to_char(ch, "Vá transferir alguém do seu tamanho.\r\n");
                 return;
             }
-            act("$n desaparece numa nuvem de cogumelos.", FALSE, victim, 0, 0, TO_ROOM);
+            act("$n desaparece numa nuvem de fumaça.", FALSE, victim, 0, 0, TO_ROOM);
             char_from_room(victim);
             char_to_room(victim, IN_ROOM(ch));
             act("$n surge numa baforada de fumaça.", FALSE, victim, 0, 0, TO_ROOM);
@@ -336,7 +336,7 @@ ACMD(do_trans)
                 victim = i->character;
                 if (GET_LEVEL(victim) >= GET_LEVEL(ch))
                     continue;
-                act("$n desaparece numa nuvem de cogumelos.", FALSE, victim, 0, 0, TO_ROOM);
+                act("$n desaparece numa nuvem de fumaça.", FALSE, victim, 0, 0, TO_ROOM);
                 char_from_room(victim);
                 char_to_room(victim, IN_ROOM(ch));
                 act("$n surge numa baforada de fumaça.", FALSE, victim, 0, 0, TO_ROOM);
@@ -6157,7 +6157,7 @@ ACMD(do_portal)
     /* Set portal properties */
     portal->name = strdup("portal");
     portal->short_description = strdup("Um portal divino");
-    portal->description = strdup("A shimmering magical portal hangs in the air here.\r\n");
+    portal->description = strdup("Um portal divino está flutuando aqui.\r\n");
 
     GET_OBJ_TYPE(portal) = ITEM_PORTAL;
     GET_OBJ_VAL(portal, 0) = dest_vnum; /* Destination room */
@@ -6168,9 +6168,9 @@ ACMD(do_portal)
     /* Place portal in current room */
     obj_to_room(portal, IN_ROOM(ch));
 
-    act("$n weaves magical energies into existence.", TRUE, ch, 0, 0, TO_ROOM);
-    act("$p appears with a flash of light!", FALSE, ch, portal, 0, TO_ROOM);
-    act("You create $p.", FALSE, ch, portal, 0, TO_CHAR);
+    act("$n modifica as energias magicas presentes.", TRUE, ch, 0, 0, TO_ROOM);
+    act("$p aparece repentinamente!", FALSE, ch, portal, 0, TO_ROOM);
+    act("Você cria $p.", FALSE, ch, portal, 0, TO_CHAR);
 
     /* Create bidirectional portal if requested */
     if (bidirectional) {
@@ -6180,8 +6180,8 @@ ACMD(do_portal)
 
         /* Set return portal properties */
         return_portal->name = strdup("portal");
-        return_portal->short_description = strdup("a magical portal");
-        return_portal->description = strdup("A shimmering magical portal hangs in the air here.\r\n");
+        return_portal->short_description = strdup("um portal divino");
+        return_portal->description = strdup("Um portal divino está flutuando aqui.\r\n");
 
         GET_OBJ_TYPE(return_portal) = ITEM_PORTAL;
         GET_OBJ_VAL(return_portal, 0) = world[IN_ROOM(ch)].number; /* Return to current room */
@@ -6193,9 +6193,9 @@ ACMD(do_portal)
         obj_to_room(return_portal, dest_room);
 
         /* Notify destination room */
-        act("$p appears with a flash of light!", FALSE, 0, return_portal, 0, TO_ROOM);
+        act("$p aparece repentinamente!", FALSE, 0, return_portal, 0, TO_ROOM);
 
-        send_to_char(ch, "A return portal has been created in room %d.\r\n", dest_vnum);
+        send_to_char(ch, "Um portal de retorno foi criado em %d.\r\n", dest_vnum);
     }
 
     /* Log the action */
