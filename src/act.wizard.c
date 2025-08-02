@@ -466,17 +466,18 @@ static void list_zone_commands_room(struct char_data *ch, room_vnum rvnum)
                                  equipment_types[ZOCMD.arg3], ZOCMD.arg2);
                     break;
                 case 'P':
-                    send_to_char(ch, "%sColocar %s [%s%d%s] em %s [%s%d%s], Max : %d\r\n", ZOCMD.if_flag ? " então " : "",
-                                 obj_proto[ZOCMD.arg1].short_description, cyn, obj_index[ZOCMD.arg1].vnum, yel,
-                                 obj_proto[ZOCMD.arg3].short_description, cyn, obj_index[ZOCMD.arg3].vnum, yel,
-                                 ZOCMD.arg2);
+                    send_to_char(ch, "%sColocar %s [%s%d%s] em %s [%s%d%s], Max : %d\r\n",
+                                 ZOCMD.if_flag ? " então " : "", obj_proto[ZOCMD.arg1].short_description, cyn,
+                                 obj_index[ZOCMD.arg1].vnum, yel, obj_proto[ZOCMD.arg3].short_description, cyn,
+                                 obj_index[ZOCMD.arg3].vnum, yel, ZOCMD.arg2);
                     break;
                 case 'R':
                     send_to_char(ch, "%sRemover %s [%s%d%s] da sala.\r\n", ZOCMD.if_flag ? " então " : "",
                                  obj_proto[ZOCMD.arg2].short_description, cyn, obj_index[ZOCMD.arg2].vnum, yel);
                     break;
                 case 'D':
-                    send_to_char(ch, "%sDefinir porta %s como %s.\r\n", ZOCMD.if_flag ? " então " : "", dirs[ZOCMD.arg2],
+                    send_to_char(ch, "%sDefinir porta %s como %s.\r\n", ZOCMD.if_flag ? " então " : "",
+                                 dirs[ZOCMD.arg2],
                                  ZOCMD.arg3 ? ((ZOCMD.arg3 == 1) ? "fechada" : "trancada") : "aberta");
                     break;
                 case 'T':
@@ -626,8 +627,8 @@ static void do_stat_object(struct char_data *ch, struct obj_data *j)
     send_to_char(ch, "L-Desc: '%s%s%s'\r\n", CCYEL(ch, C_NRM), j->description ? j->description : "<Nenhuma>",
                  CCNRM(ch, C_NRM));
 
-    send_to_char(ch, "A-Desc: '%s%s%s'\r\n", CCYEL(ch, C_NRM), j->action_description ? j->action_description : "<Nenhuma>",
-                 CCNRM(ch, C_NRM));
+    send_to_char(ch, "A-Desc: '%s%s%s'\r\n", CCYEL(ch, C_NRM),
+                 j->action_description ? j->action_description : "<Nenhuma>", CCNRM(ch, C_NRM));
 
     if (j->ex_description) {
         send_to_char(ch, "Descrições extras:%s", CCCYN(ch, C_NRM));
@@ -671,48 +672,48 @@ static void do_stat_object(struct char_data *ch, struct obj_data *j)
             break;
         case ITEM_WAND:
         case ITEM_STAFF:
-            send_to_char(ch, "Spell: %s at level %d, %d (of %d) charges remaining\r\n",
+            send_to_char(ch, "Magia: %s no nível %d, %d (de %d) cargas restantes\r\n",
                          get_spell_name(GET_OBJ_VAL(j, 3)), GET_OBJ_VAL(j, 0), GET_OBJ_VAL(j, 2), GET_OBJ_VAL(j, 1));
             break;
         case ITEM_WEAPON:
-            send_to_char(ch, "Todam: %dd%d, Avg Damage: %.1f. Message type: %s\r\n", GET_OBJ_VAL(j, 1),
+            send_to_char(ch, "Dano: %dd%d, Dano Médio: %.1f. Tipo de mensagem: %s\r\n", GET_OBJ_VAL(j, 1),
                          GET_OBJ_VAL(j, 2), ((GET_OBJ_VAL(j, 2) + 1) / 2.0) * GET_OBJ_VAL(j, 1),
                          attack_hit_text[GET_OBJ_VAL(j, 3)].singular);
             break;
         case ITEM_ARMOR:
-            send_to_char(ch, "AC-apply: [%d]\r\n", GET_OBJ_VAL(j, 0));
+            send_to_char(ch, "CA-aplicada: [%d]\r\n", GET_OBJ_VAL(j, 0));
             break;
         case ITEM_CONTAINER:
             sprintbit(GET_OBJ_VAL(j, 1), container_bits, buf, sizeof(buf));
-            send_to_char(ch, "Weight capacity: %d, Lock Type: %s, Key Num: %d, Corpse: %s\r\n", GET_OBJ_VAL(j, 0), buf,
-                         GET_OBJ_VAL(j, 2), YESNO(GET_OBJ_VAL(j, 3)));
+            send_to_char(ch, "Capacidade de peso: %d, Tipo de tranca: %s, Num da chave: %d, Cadáver: %s\r\n",
+                         GET_OBJ_VAL(j, 0), buf, GET_OBJ_VAL(j, 2), YESNO(GET_OBJ_VAL(j, 3)));
             break;
         case ITEM_DRINKCON:
         case ITEM_FOUNTAIN:
             sprinttype(GET_OBJ_VAL(j, 2), drinks, buf, sizeof(buf));
-            send_to_char(ch, "Capacity: %d, Contains: %d, Poisoned: %s, Liquid: %s\r\n", GET_OBJ_VAL(j, 0),
+            send_to_char(ch, "Capacidade: %d, Contém: %d, Envenenado: %s, Líquido: %s\r\n", GET_OBJ_VAL(j, 0),
                          GET_OBJ_VAL(j, 1), YESNO(GET_OBJ_VAL(j, 3)), buf);
             break;
         case ITEM_NOTE:
-            send_to_char(ch, "Tongue: %d\r\n", GET_OBJ_VAL(j, 0));
+            send_to_char(ch, "Idioma: %d\r\n", GET_OBJ_VAL(j, 0));
             break;
         case ITEM_KEY: /* Nothing */
             break;
         case ITEM_FOOD:
-            send_to_char(ch, "Makes full: %d, Poisoned: %s\r\n", GET_OBJ_VAL(j, 0), YESNO(GET_OBJ_VAL(j, 3)));
+            send_to_char(ch, "Mata fome: %d, Envenenada: %s\r\n", GET_OBJ_VAL(j, 0), YESNO(GET_OBJ_VAL(j, 3)));
             break;
         case ITEM_MONEY:
-            send_to_char(ch, "Coins: %d\r\n", GET_OBJ_VAL(j, 0));
+            send_to_char(ch, "Moedas: %d\r\n", GET_OBJ_VAL(j, 0));
             break;
         case ITEM_FURNITURE:
-            send_to_char(ch, "Can hold: [%d] Num. of People in: [%d]\r\n", GET_OBJ_VAL(j, 0), GET_OBJ_VAL(j, 1));
-            send_to_char(ch, "Holding : ");
+            send_to_char(ch, "Pode suportar: [%d] Núm. de pessoas em: [%d]\r\n", GET_OBJ_VAL(j, 0), GET_OBJ_VAL(j, 1));
+            send_to_char(ch, "Ocupado por: ");
             for (tempch = OBJ_SAT_IN_BY(j); tempch; tempch = NEXT_SITTING(tempch))
                 send_to_char(ch, "%s ", GET_NAME(tempch));
             send_to_char(ch, "\r\n");
             break;
         default:
-            send_to_char(ch, "Values 0-3: [%d] [%d] [%d] [%d]\r\n", GET_OBJ_VAL(j, 0), GET_OBJ_VAL(j, 1),
+            send_to_char(ch, "Valores 0-3: [%d] [%d] [%d] [%d]\r\n", GET_OBJ_VAL(j, 0), GET_OBJ_VAL(j, 1),
                          GET_OBJ_VAL(j, 2), GET_OBJ_VAL(j, 3));
             break;
     }
@@ -735,14 +736,14 @@ static void do_stat_object(struct char_data *ch, struct obj_data *j)
     }
 
     found = FALSE;
-    send_to_char(ch, "Affections:");
+    send_to_char(ch, "Afetações:");
     for (i = 0; i < MAX_OBJ_AFFECT; i++)
         if (j->affected[i].modifier) {
             sprinttype(j->affected[i].location, apply_types, buf, sizeof(buf));
             send_to_char(ch, "%s %+d to %s", found++ ? "," : "", j->affected[i].modifier, buf);
         }
     if (!found)
-        send_to_char(ch, " None");
+        send_to_char(ch, " Nenhuma");
 
     send_to_char(ch, "\r\n");
 
@@ -765,18 +766,19 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                  IS_NPC(k) ? k->ai_data->guard_post : GET_LOADROOM(k));
 
     if (IS_MOB(k)) {
-        send_to_char(ch, "Keyword: %s, VNum: [%5d], RNum: [%5d]\r\n", k->player.name, GET_MOB_VNUM(k), GET_MOB_RNUM(k));
-        send_to_char(ch, "L-Des: %s", k->player.long_descr ? k->player.long_descr : "<None>\r\n");
+        send_to_char(ch, "Palavra-chave: %s, VNum: [%5d], RNum: [%5d]\r\n", k->player.name, GET_MOB_VNUM(k),
+                     GET_MOB_RNUM(k));
+        send_to_char(ch, "L-Des: %s", k->player.long_descr ? k->player.long_descr : "<Nenhuma>\r\n");
     }
 
     if (!IS_MOB(k))
-        send_to_char(ch, "Title: %s\r\n", k->player.title ? k->player.title : "<None>");
+        send_to_char(ch, "Título: %s\r\n", k->player.title ? k->player.title : "<Nenhum>");
 
-    send_to_char(ch, "D-Des: %s", k->player.description ? k->player.description : "<None>\r\n");
+    send_to_char(ch, "D-Des: %s", k->player.description ? k->player.description : "<Nenhuma>\r\n");
 
     sprinttype(k->player.chclass, pc_class_types, buf, sizeof(buf));
     send_to_char(ch, "%s%s, Lev: [%s%2d%s], XP: [%s%8ld%s], Align: [%4d]\r\n",
-                 IS_NPC(k) ? "Mobile" : "Class: ", IS_NPC(k) ? "" : buf, CCYEL(ch, C_NRM), GET_LEVEL(k),
+                 IS_NPC(k) ? "Mobile" : "Classe: ", IS_NPC(k) ? "" : buf, CCYEL(ch, C_NRM), GET_LEVEL(k),
                  CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), GET_EXP(k), CCNRM(ch, C_NRM), GET_ALIGNMENT(k));
     if (!IS_NPC(k)) {
         char buf1[64], buf2[64];
@@ -784,9 +786,9 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         strftime(buf1, sizeof(buf1), "%a %b %d %Y", localtime(&(k->player.time.birth)));
         strftime(buf2, sizeof(buf2), "%a %b %d %Y", localtime(&(k->player.time.logon)));
 
-        send_to_char(ch, "Created: [%s], Last Logon: [%s]\r\n", buf1, buf2);
+        send_to_char(ch, "Criado: [%s], Último Login: [%s]\r\n", buf1, buf2);
 
-        send_to_char(ch, "Played: [%dh %dm], Age: [%d], STL[%d]/per[%d]/NSTL[%d]", k->player.time.played / 3600,
+        send_to_char(ch, "Jogado: [%dh %dm], Idade: [%d], STL[%d]/per[%d]/NSTL[%d]", k->player.time.played / 3600,
                      (k->player.time.played % 3600) / 60, age(k)->year, GET_PRACTICES(k), int_app[GET_INT(k)].learn,
                      wis_app[GET_WIS(k)].bonus);
         /* Display OLC zone for immorts. */
@@ -1024,7 +1026,7 @@ ACMD(do_stat)
         else {
             room_rnum rnum = real_room(atoi(buf2));
             if (rnum == NOWHERE) {
-                send_to_char(ch, "That is not a valid room.\r\n");
+                send_to_char(ch, "Esta não é uma sala válida.\r\n");
                 return;
             }
             room = &world[rnum];
@@ -1032,25 +1034,25 @@ ACMD(do_stat)
         do_stat_room(ch, room);
     } else if (is_abbrev(buf1, "mob")) {
         if (!*buf2)
-            send_to_char(ch, "Stats on which mobile?\r\n");
+            send_to_char(ch, "Estatísticas de qual mobile?\r\n");
         else {
             if ((victim = get_char_vis(ch, buf2, NULL, FIND_CHAR_WORLD)) != NULL)
                 do_stat_character(ch, victim);
             else
-                send_to_char(ch, "No such mobile around.\r\n");
+                send_to_char(ch, "Nenhum mobile assim por aqui.\r\n");
         }
     } else if (is_abbrev(buf1, "player")) {
-        if (!*buf2) {
-            send_to_char(ch, "Stats on which player?\r\n");
-        } else {
+        if (!*buf2)
+            send_to_char(ch, "Estatísticas de qual jogador?\r\n");
+        else {
             if ((victim = get_player_vis(ch, buf2, NULL, FIND_CHAR_WORLD)) != NULL)
                 do_stat_character(ch, victim);
             else
-                send_to_char(ch, "No such player around.\r\n");
+                send_to_char(ch, "Nenhum jogador assim por aqui.\r\n");
         }
     } else if (is_abbrev(buf1, "file")) {
         if (!*buf2)
-            send_to_char(ch, "Stats on which player?\r\n");
+            send_to_char(ch, "Estatísticas de qual jogador?\r\n");
         else if ((victim = get_player_vis(ch, buf2, NULL, FIND_CHAR_WORLD)) != NULL)
             do_stat_character(ch, victim);
         else {
@@ -1061,7 +1063,7 @@ ACMD(do_stat)
             if (load_char(buf2, victim) >= 0) {
                 char_to_room(victim, 0);
                 if (GET_LEVEL(victim) > GET_LEVEL(ch))
-                    send_to_char(ch, "Sorry, you can't do that.\r\n");
+                    send_to_char(ch, "Desculpe, você não pode fazer isso.\r\n");
                 else
                     do_stat_character(ch, victim);
                 extract_char_final(victim);
@@ -1072,12 +1074,12 @@ ACMD(do_stat)
         }
     } else if (is_abbrev(buf1, "object")) {
         if (!*buf2)
-            send_to_char(ch, "Stats on which object?\r\n");
+            send_to_char(ch, "Estatísticas de qual objeto?\r\n");
         else {
             if ((object = get_obj_vis(ch, buf2, NULL)) != NULL)
                 do_stat_object(ch, object);
             else
-                send_to_char(ch, "No such object around.\r\n");
+                send_to_char(ch, "Nenhum objeto assim por aqui.\r\n");
         }
     } else if (is_abbrev(buf1, "zone")) {
         if (!*buf2) {
