@@ -6030,9 +6030,10 @@ ACMD(do_rstats)
 
 ACMD(do_portal)
 {
-    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH], arg3[MAX_INPUT_LENGTH], arg4[MAX_INPUT_LENGTH];
+    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH], arg3[MAX_INPUT_LENGTH], arg4[MAX_INPUT_LENGTH],
+        arg5[MAX_INPUT_LENGTH];
     char timer_buf[32];
-    int timer = -1, bidirectional = 0;
+    int timer = -1, bidirectional = 0, min_level = 1;
     room_vnum dest_vnum;
     room_rnum dest_room;
     struct obj_data *portal;
@@ -6042,6 +6043,7 @@ ACMD(do_portal)
     argument = one_argument(argument, arg2);
     argument = one_argument(argument, arg3);
     argument = one_argument(argument, arg4);
+    argument = one_argument(argument, arg5);
 
     /* No arguments - list all portals */
     if (!*arg1) {
@@ -6054,12 +6056,14 @@ ACMD(do_portal)
             if (GET_OBJ_TYPE(obj) == ITEM_PORTAL) {
                 room_rnum portal_room = obj->in_room;
                 room_vnum portal_dest = GET_OBJ_VAL(obj, 0);
+                int portal_level = GET_OBJ_VAL(obj, 1);
                 int portal_timer = GET_OBJ_TIMER(obj);
 
                 send_to_char(ch, "Portal: %s\r\n", obj->short_description);
                 send_to_char(ch, "  From: %s [%d]\r\n", portal_room != NOWHERE ? world[portal_room].name : "Inventory",
                              portal_room != NOWHERE ? world[portal_room].number : -1);
                 send_to_char(ch, "  To: Room [%d]\r\n", portal_dest);
+                send_to_char(ch, "  Level: %d\r\n", portal_level);
 
                 if (portal_timer == -1) {
                     strlcpy(timer_buf, "Infinite", sizeof(timer_buf));
@@ -6083,39 +6087,49 @@ ACMD(do_portal)
 
     /* Parse flags and arguments */
     char *current_arg = arg1;
-    char *remaining_args = argument;
+    int arg_pos = 1;
 
-    /* Handle -d flag */
-    if (!strcmp(current_arg, "-d")) {
-        bidirectional = 1;
-        current_arg = arg2;
-        remaining_args = one_argument(remaining_args, arg1); /* consume arg2 */
-    }
-
-    /* Handle -t flag */
-    if (!strcmp(current_arg, "-t")) {
-        /* Next argument should be timer value */
-        if (bidirectional) {
-            /* -d -t timer dest */
-            if (!*arg3 || !*arg4) {
-                send_to_char(ch, "Usage: portal [-d] [-t <timer>] <dest_room>\r\n");
+    /* Parse flags */
+    while (current_arg && *current_arg == '-') {
+        if (!strcmp(current_arg, "-d")) {
+            bidirectional = 1;
+            arg_pos++;
+            current_arg = (arg_pos == 2) ? arg2 : (arg_pos == 3) ? arg3 : (arg_pos == 4) ? arg4 : arg5;
+        } else if (!strcmp(current_arg, "-t")) {
+            /* Next argument should be timer value */
+            arg_pos++;
+            current_arg = (arg_pos == 2) ? arg2 : (arg_pos == 3) ? arg3 : (arg_pos == 4) ? arg4 : arg5;
+            if (!current_arg || !*current_arg) {
+                send_to_char(ch, "Usage: portal [-d] [-l <level>] [-t <timer>] <dest_room>\r\n");
                 return;
             }
-            timer = atoi(arg3);
-            dest_vnum = atoi(arg4);
+            timer = atoi(current_arg);
+            arg_pos++;
+            current_arg = (arg_pos == 2) ? arg2 : (arg_pos == 3) ? arg3 : (arg_pos == 4) ? arg4 : arg5;
+        } else if (!strcmp(current_arg, "-l")) {
+            /* Next argument should be level value */
+            arg_pos++;
+            current_arg = (arg_pos == 2) ? arg2 : (arg_pos == 3) ? arg3 : (arg_pos == 4) ? arg4 : arg5;
+            if (!current_arg || !*current_arg) {
+                send_to_char(ch, "Usage: portal [-d] [-l <level>] [-t <timer>] <dest_room>\r\n");
+                return;
+            }
+            min_level = atoi(current_arg);
+            arg_pos++;
+            current_arg = (arg_pos == 2) ? arg2 : (arg_pos == 3) ? arg3 : (arg_pos == 4) ? arg4 : arg5;
         } else {
-            /* -t timer dest */
-            if (!*arg2 || !*arg3) {
-                send_to_char(ch, "Usage: portal [-d] [-t <timer>] <dest_room>\r\n");
-                return;
-            }
-            timer = atoi(arg2);
-            dest_vnum = atoi(arg3);
+            send_to_char(ch, "Unknown flag: %s\r\n", current_arg);
+            send_to_char(ch, "Usage: portal [-d] [-l <level>] [-t <timer>] <dest_room>\r\n");
+            return;
         }
-    } else {
-        /* No -t flag, just destination */
-        dest_vnum = atoi(current_arg);
     }
+
+    /* Current_arg should now be the destination room */
+    if (!current_arg || !*current_arg) {
+        send_to_char(ch, "Usage: portal [-d] [-l <level>] [-t <timer>] <dest_room>\r\n");
+        return;
+    }
+    dest_vnum = atoi(current_arg);
 
     /* Validate destination room */
     if ((dest_room = real_room(dest_vnum)) == NOWHERE) {
@@ -6129,6 +6143,12 @@ ACMD(do_portal)
         return;
     }
 
+    /* Validate level if provided */
+    if (min_level < 1 || min_level > LVL_IMPL) {
+        send_to_char(ch, "Level must be between 1 and %d.\r\n", LVL_IMPL);
+        return;
+    }
+
     /* Create the portal from current room to destination */
     portal = create_obj();
 
@@ -6139,6 +6159,7 @@ ACMD(do_portal)
 
     GET_OBJ_TYPE(portal) = ITEM_PORTAL;
     GET_OBJ_VAL(portal, 0) = dest_vnum; /* Destination room */
+    GET_OBJ_VAL(portal, 1) = min_level; /* Minimum level requirement */
     GET_OBJ_TIMER(portal) = timer;      /* Timer (-1 for infinite) */
     SET_BIT_AR(GET_OBJ_WEAR(portal), ITEM_WEAR_TAKE);
     GET_OBJ_WEIGHT(portal) = 1;
@@ -6163,6 +6184,7 @@ ACMD(do_portal)
 
         GET_OBJ_TYPE(return_portal) = ITEM_PORTAL;
         GET_OBJ_VAL(return_portal, 0) = world[IN_ROOM(ch)].number; /* Return to current room */
+        GET_OBJ_VAL(return_portal, 1) = min_level;                 /* Same level requirement */
         GET_OBJ_TIMER(return_portal) = timer;                      /* Same timer */
         SET_BIT_AR(GET_OBJ_WEAR(return_portal), ITEM_WEAR_TAKE);
         GET_OBJ_WEIGHT(return_portal) = 1;

@@ -731,6 +731,13 @@ ACMD(do_enter)
             GET_OBJ_TYPE(obj) == ITEM_PORTAL) {
             target_room_rnum = real_room(GET_OBJ_VAL(obj, 0));
             if (target_room_rnum != NOWHERE) {
+                /* Check level requirement */
+                int min_level = GET_OBJ_VAL(obj, 1);
+                if (GET_LEVEL(ch) < min_level) {
+                    send_to_char(ch, "Voce nao tem nivel suficiente para usar este portal (minimo: %d).\r\n",
+                                 min_level);
+                    return;
+                }
                 act("$n entra em $p, e desaparece.", TRUE, ch, obj, 0, TO_ROOM);
                 char_from_room(ch);
                 char_to_room(ch, target_room_rnum);
