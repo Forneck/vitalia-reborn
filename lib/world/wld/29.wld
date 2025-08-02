@@ -560,7 +560,7 @@ D3
 0 2900 2927
 S
 #2926
-Under Porto~
+Sob Porto~
    This must be a part of the old sewer system of Porto when it was a small
 town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
 water, littered on the bottom by old stones.  The water stretches out far past
@@ -592,7 +592,7 @@ D1
 0 2900 2925
 S
 #2928
-Under Porto~
+Sob Porto~
    This must be a part of the old sewer system of Porto when it was a small
 town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
 water, littered on the bottom by old stones.  The water stretches out far past
@@ -614,7 +614,7 @@ up ladder trap trapdoor~
 1 2900 2983
 S
 #2929
-Under Porto~
+Sob Porto~
    This must be a part of the old sewer system of Porto when it was a small
 town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
 water, littered on the bottom by old stones.  The water stretches out far past
@@ -638,7 +638,7 @@ D3
 0 2900 2930
 S
 #2930
-Under Porto~
+Sob Porto~
    This must be a part of the old sewer system of Porto when it was a small
 town.  Now the walls of the sewer have crumbled, leaving a giant pool of open
 water, littered on the bottom by old stones.  The water stretches out far past
@@ -721,15 +721,15 @@ D1
 0 2900 2976
 S
 #2934
-Aramut's Workroom~
-   Through the door behind Aramut's counter is his workroom, where he works on
-his armor.  There are tools scattered around a bench and a table.  Upon the
-table lies the beginning of a piece of mail, with several hours of work left
-before it will become one of Aramut's fine crafts.  The south 'wall' of the
-workroom is open, with several feet of a drop to the deep water and jagged
-rocks below.  It would be wise not to step to close - the wind past the
-entrance is swift, though the inside of the workroom is strangely calm.  There
-is a heavy sea chest against the east wall.
+Oficina de Aramut~
+   Através da porta atrás do balcão de Aramut fica sua oficina, onde ele trabalha
+em suas armaduras. Há ferramentas espalhadas ao redor de uma bancada e uma mesa.
+Sobre a mesa jaz o início de uma peça de malha, com várias horas de trabalho
+restantes antes que se torne um dos belos artesanatos de Aramut. A 'parede' sul
+da oficina está aberta, com vários pés de queda para a água profunda e rochas
+irregulares abaixo. Seria sábio não chegar muito perto - o vento além da
+entrada é rápido, embora o interior da oficina seja estranhamente calmo. Há um
+baú marítimo pesado contra a parede leste.
 ~
 29 8 0 0 0 0
 D2
@@ -766,14 +766,13 @@ D3
 0 2900 2931
 S
 #2936
-On the Docks~
-   The docks of Porto are rumored to be a marvelous place - or so the
-conversations you have overheard between townspeople and weary travelers say.
-But from here you can't see much of them.  There is just plain too much
-traffic.  On both sides of the docks here there are wet-looking sand closest to
-the shore, while further out waves crash into treacherous rocks.  There is a
-slippery rope ladder over the side here, hanging down into the darkness under
-docks.
+Nas Docas~
+   As docas de Porto são rumorizadas como sendo um lugar maravilhoso - ou assim
+dizem as conversas que você ouviu entre cidadãos e viajantes cansados. Mas daqui
+você não consegue ver muito delas. Há simplesmente tráfego demais. Em ambos os
+lados das docas aqui há areia de aparência molhada mais próxima da costa,
+enquanto mais longe as ondas se chocam contra rochas traiçoeiras. Há uma escada
+de corda escorregadia do lado aqui, pendendo na escuridão sob as docas.
 ~
 29 0 0 0 0 1
 D0
@@ -786,12 +785,12 @@ D2
 0 2900 2967
 S
 #2937
-Sandy Path~
-   The sound of the sea against the rocks to the south is soothing to the
-nerves.  The wide path has some traffic, but though there are men with carts
-rushing both to the market and to the docks, the wideness of the road makes it
-somehow less crowded.  There is loud, bawdy singing to the east somewhere, and
-a sandy beach to the south, strangely flat.
+Caminho Arenoso~
+   O som do mar contra as rochas ao sul é calmante para os nervos. O caminho
+largo tem algum tráfego, mas embora haja homens com carroças correndo tanto
+para o mercado quanto para as docas, a largura da estrada o torna de alguma
+forma menos lotado. Há canto alto e licencioso em algum lugar a leste, e uma
+praia arenosa ao sul, estranhamente plana.
 ~
 29 0 0 0 0 1
 D1
@@ -808,16 +807,16 @@ D3
 0 2900 2938
 S
 #2938
-Before the Docks~
-   The sandy path isn't so sandy here, the sand regularly being swept off the
-cobbles by the quick passage of feet.  To the south there is a large ramp
-leading onto the docks.  Sailors pushing carts at furious paces speed along,
-and it's surprising that they don't crash into each other.  Far out along the
-docks you can see men rushing on and off of giant fishing vessels, and even a
-few colorful ships.  To the north is a squat building, in good repair.  The
-open door spills the smells of beer and heavier drinks out onto the street,
-along with the bawdy drinking songs the patrons are singing.  Above the door is
-nailed a cracked mug.
+Diante das Docas~
+   O caminho arenoso não é tão arenoso aqui, a areia sendo regularmente varrida
+das pedras pela passagem rápida de pés. Ao sul há uma grande rampa levando às
+docas. Marinheiros empurrando carroças em ritmos furiosos aceleram, e é
+surpreendente que não se choquem uns com os outros. Longe ao longo das docas
+você pode ver homens correndo para dentro e fora de embarcações de pesca
+gigantes, e até mesmo alguns navios coloridos. Ao norte há um prédio baixo,
+em bom estado. A porta aberta derrama os cheiros de cerveja e bebidas mais
+fortes na rua, junto com as canções licenciosas de bebedeira que os fregueses
+estão cantando. Acima da porta está pregada uma caneca rachada.
 ~
 29 0 0 0 0 1
 D0
@@ -838,7 +837,7 @@ D3
 0 2900 2939
 S
 #2939
-Sandy Path~
+Caminho Arenoso~
    This path has barely any traffic compared to the rest of Porto.  The few
 people here are leisurely loitering, enjoying the scenery.  From somewhere to
 the east tendrils of bawdy songs reach your ears, quickly swept away by the
@@ -857,13 +856,13 @@ D3
 0 2900 2963
 S
 #2940
-Inside the Cracked Mug~
-   This is quite obviously a fisherman's bar, from the net hanging across the
-ceiling, which is currently being used to hand lanterns from, to the giant
-trophy fish hung on the walls.  Both the smells of beer and pipesmoke hand
-heavily in the air in the hazy room, and the tables are spread near together on
-the dirty floor.  To the north a short, muscular, young bar keeper is polishing
-glasses with a dirty rag when he isn't serving drinks.
+Dentro da Caneca Rachada~
+   Este é bem obviamente um bar de pescadores, desde a rede pendurada pelo teto,
+que está sendo usada atualmente para pendurar lanternas, até o peixe troféu
+gigante pendurado nas paredes. Tanto os cheiros de cerveja quanto de fumaça de
+cachimbo pairam pesadamente no ar do quarto enfumaçado, e as mesas estão
+espalhadas bem próximas no chão sujo. Ao norte um barman baixo, musculoso e
+jovem está polindo copos com um pano sujo quando não está servindo bebidas.
 ~
 29 8 0 0 0 0
 D2
@@ -872,12 +871,12 @@ south~
 1 2900 2938
 S
 #2941
-North Gull Road~
-   Here is not nearly as crowded as the area near the gate you can see to the
-east.  North Gull Road is peaceful, though it still has some traffic.  It runs
-through the residential section of Porto, and to the south are mostly houses.
-The cobbles here are clean, and the smell of salt is strong.  To the north the
-land slopes upward, keeping Porto in its beautiful vale.
+Estrada Gaivota Norte~
+   Aqui não está nem perto de tão lotado quanto a área perto do portão que você
+pode ver a leste. A Estrada Gaivota Norte é pacífica, embora ainda tenha algum
+tráfego. Ela passa pela seção residencial de Porto, e ao sul há principalmente
+casas. As pedras aqui estão limpas, e o cheiro de sal é forte. Ao norte a terra
+se inclina para cima, mantendo Porto em seu vale belo.
 ~
 29 0 0 0 0 1
 D1
@@ -890,11 +889,11 @@ D3
 0 2900 2942
 S
 #2942
-Intersection of North Gull Road and Market Path~
-   This intersection is slightly more crowded than the parts of Nroth Gull Road
-you can see to the east and west.  To the south is Market Path, and beyond that
-you can see flashes of color.  To the north the land continues to slope
-upwards, keeping Porto in its beautiful vale.
+Cruzamento da Estrada Gaivota Norte e Caminho do Mercado~
+   Este cruzamento está ligeiramente mais lotado que as partes da Estrada Gaivota
+Norte que você pode ver a leste e oeste. Ao sul está o Caminho do Mercado, e
+além disso você pode ver flashes de cor. Ao norte a terra continua a se inclinar
+para cima, mantendo Porto em seu vale belo.
 ~
 29 0 0 0 0 1
 D1
@@ -911,12 +910,12 @@ D3
 0 2900 2943
 S
 #2943
-North Gull Road~
-   To the west North Gull road continues, while to the east there is a small
-intersection.  North Gull Road is peaceful, though it still has some traffic.
-It runs through the residential section of Porto, and to the south are mostly
-houses.  The cobbles here are clean, and the smell of salt is strong.  To the
-north the land slopes upward, keeping Porto in its beautiful vale.
+Estrada Gaivota Norte~
+   A oeste a Estrada Gaivota Norte continua, enquanto a leste há um pequeno
+cruzamento. A Estrada Gaivota Norte é pacífica, embora ainda tenha algum
+tráfego. Ela passa pela seção residencial de Porto, e ao sul há principalmente
+casas. As pedras aqui estão limpas, e o cheiro de sal é forte. Ao norte a terra
+se inclina para cima, mantendo Porto em seu vale belo.
 ~
 29 0 0 0 0 1
 D1
@@ -929,7 +928,7 @@ D3
 0 2900 2944
 S
 #2944
-North Gull Road~
+Estrada Gaivota Norte~
    To the east and west North Gull Road continues.  North Gull Road is
 peaceful, though it still has some traffic.  It runs through the residential
 section of Porto, and to the south are mostly houses.  The cobbles here are
@@ -947,7 +946,7 @@ D3
 0 2900 2945
 S
 #2945
-North Gull Road~
+Estrada Gaivota Norte~
    To the east is more of North Gull Road, while to the west there is a small
 intersection.  North Gull Road is peaceful, though it still has some traffic.
 It runs through the residential section of Porto, and to the south are mostly
@@ -965,7 +964,7 @@ D3
 0 2900 2946
 S
 #2946
-Intersection of North Gull Road and Luna's Alley~
+Cruzamento da Estrada Gaivota Norte e Beco da Luna~
    People hurry past this intersection, casting worried glances to the south as
 if they expect something monstrous to leap out of the alley at any second.
 From there the pungent odors of trash and other unpleasant smells drift towards
@@ -988,7 +987,7 @@ D3
 0 2900 2947
 S
 #2947
-North Gull Road~
+Estrada Gaivota Norte~
    To the east is a small intersection, while to the west North Gull Road ends.
 North Gull Road is peaceful, though it still has some traffic.  It runs through
 the residential section of Porto, and to the south are mostly houses.  The
@@ -1007,7 +1006,7 @@ D3
 0 2900 2948
 S
 #2948
-Corner of North Gull Road and Riverwalk~
+Quina da Estrada Gaivota Norte e Caminhada do Rio~
    Here, North Gull Road intersects with Riverwalk.  North Gull road goes east
 through the residential section while Riverwalk goes south, close to the bank
 of the swiftly running stream.  The once rushing, giant river that had carved
@@ -1026,7 +1025,7 @@ D2
 0 2900 2951
 S
 #2949
-South Gull Road~
+Estrada Gaivota Sul~
    The houses along South Gull Road are smaller than the ones you can see to
 the north, but they are still quite nice.  This road is patchily shaded by the
 small trees in some of the small yards, and periodic small beds of flowers add
@@ -1046,7 +1045,7 @@ D3
 0 2900 2953
 S
 #2950
-Below the Decks~
+Sob os Conveses~
    Under the decks is dark, having no windowns or outside light sources.  No
 lamps are lit down here, being a fire hazard on the swaying ship.  Bunks are
 here in neat rows, bolted down to the floor.  There is also a small group of
@@ -1061,7 +1060,7 @@ up hatch trap door trapdoor~
 1 2900 2931
 S
 #2951
-Riverwalk~
+Caminhada do Rio~
    This walk is pleasantly shaded by trees growing on the west side of the
 road, in small areas before pleasant homes.  To the east beyond a small grassy
 bank the quick stream gurgles merrily on its way to the south and the sea.
@@ -1078,7 +1077,7 @@ D2
 0 2900 2952
 S
 #2952
-River Walk~
+Caminhada do Rio~
    This walk is pleasantly shaded by trees growing on the west side of the
 road, in small areas before pleasant homes.  To the east beyond a small grassy
 bank the quick stream gurgles merrily on its way to the south and the sea.
@@ -1097,7 +1096,7 @@ D2
 0 2900 2953
 S
 #2953
-Intersection of Riverwalk and South Gull Road~
+Cruzamento da Caminhada do Rio e Estrada Gaivota Sul~
    This intersection has people walking through it in all directions, merrily
 going on their way.  There are the people traversing the Riverwalk, those going
 up and down South Gull Road, and those just resting on the benches.  There is
@@ -1119,7 +1118,7 @@ D2
 0 2900 2954
 S
 #2954
-Riverwalk~
+Caminhada do Rio~
    This walk is pleasantly shaded by trees growing on the west side of the
 road, in small areas before pleasant homes.  To the east beyond a small grassy
 bank the quick stream gurgles merrily on its way to the south and the sea.
@@ -1138,7 +1137,7 @@ D2
 0 2900 2955
 S
 #2955
-Riverwalk~
+Caminhada do Rio~
    This walk is pleasantly shaded by trees growing on the west side of the
 road, in small areas before pleasant homes.  To the east beyond a small grassy
 bank the quick stream gurgles merrily on its way to the south and the sea.
@@ -1156,7 +1155,7 @@ D2
 0 2900 2956
 S
 #2956
-Riverwalk~
+Caminhada do Rio~
    This walk is pleasantly shaded by trees growing on the west side of the
 road, in small areas before pleasant homes.  To the east beyond a small grassy
 bank the quick stream gurgles merrily on its way to the south and the sea.
@@ -1174,7 +1173,7 @@ D2
 0 2900 2959
 S
 #2957
-Mithroq's Instruments of Destruction~
+Instrumentos de Destruição de Mithroq~
    This shop is full of weapons of all kinds.  Indeed it wouldn't be wise to go
 too close to the walls, for the sheer number of naked sharp things hanging from
 the wooden racks there would shred you if any of the delicate structures
@@ -1192,7 +1191,7 @@ D3
 0 2900 2965
 S
 #2958
-Milos' Office, the Tax Collector with a Banking Hobby~
+Escritório de Milos, o Coletor de Impostos com Hobby Bancário~
    Through the fancifully carved door you chose to go, and find yourself inside
 a rich, brightly lit room.  You can only enter the smallest part of it,
 however, with a large wooden counter seperating you and the huge pile of gold
@@ -1209,7 +1208,7 @@ D2
 0 2900 2989
 S
 #2959
-Corner of Riverwalk and Sandy Path~
+Quina da Caminhada do Rio e Caminho Arenoso~
    Here Riverwalk turns into Sandy Path.  The stream to the west bubbles
 merrily into the ocean, where it joins with the rest of water.  The sound of
 waves crashing against rocks somewhere to the south fills the air, along with
@@ -1231,7 +1230,7 @@ D2
 0 2900 2933
 S
 #2960
-Sandy Path~
+Caminho Arenoso~
    Here the sand-covered cobbles of Sandy Path aren't very crowded.  Those who
 do pass here either hurry toward the east or leisurely stroll to the south.
 The far-off sound of waves pounding rocks comes faintly to your ears.  To the
@@ -1249,7 +1248,7 @@ D3
 0 2900 2959
 S
 #2961
-Sandy Path~
+Caminho Arenoso~
    Here the sand-covered cobbles of Sandy Path aren't very crowded.  Those who
 do pass here either hurry toward the east or leisurely stroll to the south.
 The far-off sound of waves pounding rocks comes faintly to your ears.  To the
@@ -1272,7 +1271,7 @@ D3
 0 2900 2960
 S
 #2962
-Sandy Path~
+Caminho Arenoso~
    Here the sand-covered cobbles of Sandy Path aren't very crowded, but to the
 south you see what could be sunbathers.  Those who do pass here either hurry
 toward the east or leisurely stroll to the south to join with others.  The
@@ -1295,7 +1294,7 @@ D3
 0 2900 2961
 S
 #2963
-Sandy Path~
+Caminho Arenoso~
    To the south what was previously sandy-looking is now a giant, jagged boulder
 of shiny black rock.  The southeastern breeze drifts the happy screams of
 children toward you.  To the north the door of one of the fishing family's
@@ -1319,7 +1318,7 @@ D3
 0 2900 2962
 S
 #2964
-Market Path~
+Caminho do Mercado~
    This path is a little bit crowded, being right between one of the better
 residential sections of Porto, North Gull Road, and the main commercial section
 of Porto, the market.  The traffic here, though more than you can see the the
@@ -1343,7 +1342,7 @@ D2
 0 2900 2965
 S
 #2965
-Market Path~
+Caminho do Mercado~
    To the south the noise and smells of the market are so much that they are
 almost painful.  Here the crowd is quieter, being mostly people carrying their
 day's find at the market back to their homes.  There is only one shop with its
@@ -1365,7 +1364,7 @@ D2
 0 2900 2980
 S
 #2966
-Tia's Apothecary~
+Boticário da Tia~
    This room is smoky and smells heavily of incense.  The beads hanging from
 the door rattle as you push them aside to enter, causing Tia to make note of
 your presence before turning back to her cauldron, adding a pinch of a
@@ -1379,7 +1378,7 @@ D3
 0 2900 2964
 S
 #2967
-On the Docks~
+Nas Docas~
    Contrary to the north, where the waves pound upon the rocks and stir the
 whole ocean up into a white froth, here merchant ships line the raised wooden
 docks in the safely deep water.  You can tell they are merchant vessels, for no
@@ -1399,7 +1398,7 @@ D2
 0 2900 2935
 S
 #2968
-Beautiful Beach~
+Praia Bela~
    Here is a serene sandy beach.  Happily smiling sunbathers sprawl in the
 sand, making those who wish to walk the beach have to watch their step or step
 upon a protruding limb.  The fine sand is soft, the beachsmoothed by the winds
@@ -1420,7 +1419,7 @@ D3
 0 2900 2976
 S
 #2969
-Knee Deep~
+Água até os Joelhos~
    Contrary to the sandy cobbled walkway running to the north, standing in this
 apparently stable sand results in your sinking into the watery quicksand up to
 your knees before your feet come in contact with something solid.  To the east
@@ -1439,7 +1438,7 @@ D3
 0 2900 2970
 S
 #2970
-Knee Deep~
+Água até os Joelhos~
    Contrary to the sandy cobbled walkway running to the north, standing in this
 apparently stable sand results in your sinking into the watery quicksand up to
 your knees before your feet come in contact with something solid.  To the west
@@ -1462,7 +1461,7 @@ D3
 0 2900 2925
 S
 #2971
-Intersection of Market Road and Sandy Path~
+Cruzamento da Estrada do Mercado e Caminho Arenoso~
    The cobbled road of Porto here is almost covered by a thin layer of sand,
 with more constantly blowing in on the sea breeze coming from the south.
 There is also the beginning of the sea to the south, the sand interspersed with
@@ -1495,7 +1494,7 @@ Crafts.
 ~
 S
 #2972
-Aramut's Protective Wear~
+Vestuário Protetor de Aramut~
    As you enter the shack you see a wizened old man standing over an almost
 finished piece of chain mail, adding the finishing touches.  There are all
 sorts of armor and clothes hanging from the ceiling and mounted upon the walls.
@@ -1514,7 +1513,7 @@ D3
 0 2900 2971
 S
 #2973
-Luna's Alley~
+Beco da Luna~
    The narrow alley is twisting, dark, and full of rotting trash.  The niches
 in the walls hold eyes the glow the reflection of your own light back at you,
 and laughter echos in the close space along with gibberish and screams, seeming
@@ -1536,7 +1535,7 @@ D2
 0 2900 2987
 S
 #2974
-Luna's Alley~
+Beco da Luna~
    The narrow alley is twisting, dark, and full of rotting trash.  The niches
 in the walls hold eyes the glow the reflection of your own light back at you,
 and laughter echos in the close space along with gibberish and screams, seeming
@@ -1557,7 +1556,7 @@ D2
 0 2900 2973
 S
 #2975
-Against the Rocks~
+Contra as Rochas~
    The boards are wet from the spray of the waves crashing against the rocks
 below.  You get too close to the edge, and the quick wind picks you up and
 throws you over the boundaries of the wet boards.  The spiral of the wind
@@ -1569,7 +1568,7 @@ jagged rocks by the pounding waves.
 S
 T 2911
 #2976
-Beautiful Beach~
+Praia Bela~
    Here is a serene sandy beach.  People lie in the sand, and those who have
 the full day away from work might sunbathe all day, sleeping under the stars at
 night.  The fine sand is soft, the beach smoothed by the winds constantly
@@ -1594,7 +1593,7 @@ D3
 0 2900 2933
 S
 #2977
-Market Road~
+Estrada do Mercado~
    There is much traffic on this winding road.  Many of the people heading
 north are hauling carts full of fish, while many of the people heading south
 are hauling empty carts, smiling as their full purses jangle from their hips.
@@ -1618,7 +1617,7 @@ D3
 0 2900 2932
 S
 #2978
-Market Road, near the market~
+Estrada do Mercado, perto do mercado~
    To the north the smell of fish, the press of people, and the noise of a busy
 market all become greater.  On both sides of the road you can see the crowd of
 people moving in all directions.  You can also glimpse the great gate of Porto
@@ -1683,7 +1682,7 @@ D2
 0 2900 2992
 S
 #2981
-The Fisherman's Shack~
+A Cabana do Pescador~
    This shack is quite small, but looks very comfortable.  Against the east
 wall three bunks are stacked on top of each other in such a way as to fit, but
 to give each person enough space to lay down comfortably.  There is a small
@@ -1699,7 +1698,7 @@ D2
 0 2900 2963
 S
 #2982
-The Manor Torture Chamber~
+A Câmara de Tortura da Mansão~
    This isn't exactly the cellar that the doors implied it would be.  It looks
 as though Lord Degruziel isn't exactly popular with everybody.  The room is
 dimly lit by a glowing brazier filled with red hot coals.  There is also a hot
@@ -1725,7 +1724,7 @@ small slit.
 ~
 S
 #2983
-Luna's Square~
+Praça da Luna~
    You step into the light created by many burning bundles of oil-soaked cloth,
 obviously makeshift torches, which light this open square.  Piles of filthy
 rags are heaped against the walls, serving as beds for those without homes.
@@ -1753,7 +1752,7 @@ missing.
 ~
 S
 #2984
-Luna's Alley~
+Beco da Luna~
    The narrow alley is twisting, dark, and full of rotting trash.  The niches
 in the walls hold eyes the glow the reflection of your own light back at you,
 and laughter echos in the close space along with gibberish and screams seeming
@@ -1774,7 +1773,7 @@ D1
 0 2900 2983
 S
 #2985
-Luna's Alley~
+Beco da Luna~
    The narrow alley is twisting, dark, and full of rotting trash.  The niches
 in the walls hold eyes the glow the reflection of your own light back at you,
 and laughter echos in the close space along with gibberish and screams, seeming
@@ -1794,7 +1793,7 @@ D2
 0 2900 2984
 S
 #2986
-Luna's Alley~
+Beco da Luna~
    The narrow alley is twisting, dark, and full of rotting trash.  The niches
 in the walls hold eyes the glow the reflection of your own light back at you,
 and laughter echos in the close space along with gibberish and screams, seeming
@@ -1813,7 +1812,7 @@ D2
 0 2900 2985
 S
 #2987
-Intersection of South Gull Road and Luna's Alley~
+Cruzamento da Estrada Gaivota Sul e Beco da Luna~
    Animal-like howls from both the north and south block out the sounds of the
 wind here, originating from a narrow, filthy alley.  The overhanging roofs make
 it as black as pitch and the odd flashes you see comming from the dark of the
@@ -1840,7 +1839,7 @@ D3
 0 2900 2949
 S
 #2988
-South Gull Road~
+Estrada Gaivota Sul~
    The houses along South Gull Road are smaller than the ones you can see to
 the north, but they are still quite nice.  This road is patchily shaded by the
 small trees in some of the small yards, and periodic small beds of flowers add
@@ -1859,7 +1858,7 @@ D3
 0 2900 2987
 S
 #2989
-South Gull Road~
+Estrada Gaivota Sul~
    The houses along South Gull Road are smaller than the ones you can see to
 the north, but they are still quite nice.  This road is patchily shaded by the
 small trees in some of the small yards, and periodic small beds of flowers add
@@ -1885,7 +1884,7 @@ D3
 0 2900 2988
 S
 #2990
-South Gull Road~
+Estrada Gaivota Sul~
    The houses along South Gull Road are smaller than the ones you can see to
 the north, but they are still quite nice.  This road is patchily shaded by the
 small trees in some of the small yards, and periodic small beds of flowers add
@@ -1904,7 +1903,7 @@ D1
 0 2900 2991
 S
 #2991
-South Gull Road~
+Estrada Gaivota Sul~
    Quite contrary to the crowded market to the east, this street is somehow
 peaceful.  This may just be because of the patrols of brawny guards that pass
 by at regular intervals.  The smell of fish that is so prrevalent elsewhere in
@@ -1976,7 +1975,7 @@ D3
 0 2900 2992
 S
 #2994
-Market Road, past the market~
+Estrada do Mercado, além do mercado~
    People shove past, in a hurry to get wherever it is they are going.  You can
 hear the swearing of various men on carts and wagons, trying to get them and
 their goods through the throng.  Nearby to the east colorful stitched canopies
@@ -2000,7 +1999,7 @@ D3
 0 2900 2993
 S
 #2995
-Market Road, past the market~
+Estrada do Mercado, além do mercado~
    People shove past, in a hurry to get wherever it is they are going.  You can
 hear the swearing of various men on carts and wagons, trying to get them and
 their goods through the throng.  Nearby to the east colorful stitched canopies
@@ -2026,7 +2025,7 @@ Nothing.
 0 2900 2979
 S
 #2996
-Market Road~
+Estrada do Mercado~
    To the south the smell of fish, the press of people, and the noise of a busy
 market all become greater.  On both sides of the road you can see the crowd of
 people moving in all directions.  You can also glimpse the great gate of Porto
@@ -2062,7 +2061,7 @@ pesky merchants.  Didn't they?
 ~
 S
 #2997
-Market Road~
+Estrada do Mercado~
    The breeze from the south blows a fishy scent your way, and through the
 press of people on this relatively narrow winding road you can glimpse the gate
 of Porto to the north, and flashes of colorful canopies somewhere to the south.
@@ -2136,7 +2135,7 @@ alguém de grande força, conseguiria removê-los.
 ~
 S
 #2999
-A Linking Room~
+Um Quarto de Ligação~
    This zone will link north to room 3472.  Build all rooms south of that
 connection point.
 ~
