@@ -308,7 +308,7 @@
 /* #undef NEED_STRERROR_PROTO */
 
 /* Check for a prototype to stricmp. */
-#define NEED_STRICMP_PROTO
+#define NEED_STRICMP_PROTO 
 
 /* Check for a prototype to strlcpy. */
 /* #undef NEED_STRLCPY_PROTO */
@@ -317,7 +317,7 @@
 /* #undef NEED_STRNCASECMP_PROTO */
 
 /* Check for a prototype to strnicmp. */
-#define NEED_STRNICMP_PROTO
+#define NEED_STRNICMP_PROTO 
 
 /* Check for a prototype to system. */
 /* #undef NEED_SYSTEM_PROTO */
@@ -333,5 +333,6 @@
 
 /* Check for a prototype to write. */
 /* #undef NEED_WRITE_PROTO */
+
 
 #endif /* _CONF_H_ */
