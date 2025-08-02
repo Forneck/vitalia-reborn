@@ -727,8 +727,9 @@ ACMD(do_enter)
     if (*buf) {
         int number = get_number(&tmp);
         /* an argument was supplied, search for door keyword */
-        if ((obj = get_obj_in_list_vis(ch, buf, &number, world[IN_ROOM(ch)].contents)) && CAN_SEE_OBJ(ch, obj) &&
-            GET_OBJ_TYPE(obj) == ITEM_PORTAL) {
+        obj = get_obj_in_list_vis(ch, buf, &number, world[IN_ROOM(ch)].contents);
+
+        if (obj && GET_OBJ_TYPE(obj) == ITEM_PORTAL) {
             target_room_rnum = real_room(GET_OBJ_VAL(obj, 0));
             if (target_room_rnum != NOWHERE) {
                 char_from_room(ch);
