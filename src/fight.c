@@ -394,6 +394,12 @@ static void group_gain(struct char_data *ch, struct char_data *victim)
 {
     int tot_members = 0, base, tot_gain;
     struct char_data *k;
+
+    /* Safety check: ensure group and members exist */
+    if (!GROUP(ch) || !GROUP(ch)->members || !GROUP(ch)->members->iSize) {
+        return;
+    }
+
     while ((k = (struct char_data *)simple_list(GROUP(ch)->members)) != NULL)
         if (IN_ROOM(ch) == IN_ROOM(k))
             tot_members++;
@@ -1212,6 +1218,7 @@ void perform_violence(void)
                     continue;
                 do_assist(tch, GET_NAME(ch), 0, 0);
             }
+            remove_iterator(&Iterator);
         }
 
         num_of_attacks = attacks_per_round(ch);

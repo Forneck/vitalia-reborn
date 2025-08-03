@@ -1211,7 +1211,8 @@ bool mob_handle_grouping(struct char_data *ch)
 bool mob_share_gear_with_group(struct char_data *ch)
 {
     /* A IA só age se o mob estiver num grupo, tiver itens e não for encantado. */
-    if (!GROUP(ch) || ch->carrying == NULL || !ch->ai_data || AFF_FLAGGED(ch, AFF_CHARM)) {
+    if (!GROUP(ch) || !GROUP(ch)->members || GROUP(ch)->members->iSize == 0 || ch->carrying == NULL || !ch->ai_data ||
+        AFF_FLAGGED(ch, AFF_CHARM)) {
         return FALSE;
     }
 
@@ -1227,7 +1228,7 @@ bool mob_share_gear_with_group(struct char_data *ch)
 
     struct obj_data *item;
     struct char_data *member;
-    struct iterator_data iterator;
+    struct iterator_data iterator, inner_iterator;
 
     /* 1. O mob avalia todo o seu inventário para encontrar a melhor oportunidade de partilha. */
     for (item = ch->carrying; item; item = item->next_content) {
@@ -1249,15 +1250,16 @@ bool mob_share_gear_with_group(struct char_data *ch)
             }
             member = (struct char_data *)next_in_list(&iterator);
         }
+        remove_iterator(&iterator);
 
         /* Se o item for um contentor, avalia os itens lá dentro. */
         if (GET_OBJ_TYPE(item) == ITEM_CONTAINER && !OBJVAL_FLAGGED(item, CONT_CLOSED)) {
             struct obj_data *contained_item;
             for (contained_item = item->contains; contained_item; contained_item = contained_item->next_content) {
-                member = (struct char_data *)merge_iterator(&iterator, GROUP(ch)->members);
+                member = (struct char_data *)merge_iterator(&inner_iterator, GROUP(ch)->members);
                 while (member) {
                     if (ch == member || IN_ROOM(ch) != IN_ROOM(member)) {
-                        member = (struct char_data *)next_in_list(&iterator);
+                        member = (struct char_data *)next_in_list(&inner_iterator);
                         continue;
                     }
                     int wear_pos = find_eq_pos(member, contained_item, NULL);
@@ -1271,8 +1273,9 @@ bool mob_share_gear_with_group(struct char_data *ch)
                             container_source = item; /* Lembra-se de que o item está neste contentor. */
                         }
                     }
-                    member = (struct char_data *)next_in_list(&iterator);
+                    member = (struct char_data *)next_in_list(&inner_iterator);
                 }
+                remove_iterator(&inner_iterator);
             }
         }
     }
@@ -1608,7 +1611,7 @@ bool mob_assist_allies(struct char_data *ch)
     }
 
     /* PRIORIDADE 2: Ajudar o Grupo (se não tiver um mestre para ajudar) */
-    else if (GROUP(ch)) {
+    else if (GROUP(ch) && GROUP(ch)->members && GROUP(ch)->members->iSize) {
         struct char_data *member;
         struct iterator_data iterator;
 
@@ -1624,6 +1627,7 @@ bool mob_assist_allies(struct char_data *ch)
             }
             member = (struct char_data *)next_in_list(&iterator);
         }
+        remove_iterator(&iterator);
     }
 
     /* PRIORIDADE 3: Ajudar outros NPCs (se tiver a flag MOB_HELPER) */
