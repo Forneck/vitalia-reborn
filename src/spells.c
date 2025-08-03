@@ -1079,8 +1079,9 @@ ASPELL(spell_raise_dead)
 
 ASPELL(spell_ressurect)
 {
-    struct char_data *dead;
+    struct char_data *dead = NULL;
     struct obj_data *corpse;
+    int idnum;
 
     if (ch == NULL)
         return;
@@ -1094,6 +1095,13 @@ ASPELL(spell_ressurect)
             return;
         }
 
+        /* Find the character corresponding to this corpse */
+        idnum = GET_OBJ_VAL(obj, 0);
+        for (dead = character_list; dead; dead = dead->next) {
+            if (!IS_NPC(dead) && GET_IDNUM(dead) == idnum)
+                break;
+        }
+
         if (!dead)
             send_to_char(ch, "Você sente que esta pessoa não está mais entre nós...\r\n");
         else if ALIVE (dead) {
@@ -1101,10 +1109,8 @@ ASPELL(spell_ressurect)
             act("$p foi destruído pela magia!", TRUE, NULL, obj, NULL, TO_ROOM);
             extract_obj(obj);
         } else {
-            if (!IS_NPC(victim) && (GET_IDNUM(victim) == GET_OBJ_VAL(obj, 0))) {
-                raise_online(dead, ch, obj, obj->in_room, 1);
-                extract_obj(obj);
-            }
+            raise_online(dead, ch, obj, obj->in_room, 1);
+            extract_obj(obj);
 
             /*
              * We need this because the spell can be cast by an NPC.
@@ -1122,14 +1128,20 @@ ASPELL(spell_ressurect)
                 if (GET_OBJ_TYPE(corpse) == ITEM_CORPSE && GET_OBJ_VAL(corpse, 0) == GET_IDNUM(victim))
                     break;
 
-            if (GET_HOMETOWN(ch) == r_hometown_1)
-                raise_online(victim, ch, corpse, r_ress_room_1, 1);
-            else if (GET_HOMETOWN(ch) == r_hometown_2)
-                raise_online(victim, ch, corpse, r_ress_room_2, 1);
-            else if (GET_HOMETOWN(ch) == r_hometown_3)
-                raise_online(victim, ch, corpse, r_ress_room_3, 1);
-            else
-                raise_online(victim, ch, corpse, IN_ROOM(victim), 1);
+            switch (GET_HOMETOWN(victim)) {
+                case 1:
+                    raise_online(victim, ch, corpse, r_ress_room_1, 1);
+                    break;
+                case 2:
+                    raise_online(victim, ch, corpse, r_ress_room_2, 1);
+                    break;
+                case 3:
+                    raise_online(victim, ch, corpse, r_ress_room_3, 1);
+                    break;
+                default:
+                    raise_online(victim, ch, corpse, r_ress_room_1, 1);
+                    break;
+            }
 
             if (corpse)
                 extract_obj(corpse);
