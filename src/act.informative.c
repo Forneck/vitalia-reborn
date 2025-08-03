@@ -366,7 +366,7 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
     else {
         if (IS_DEAD(i))
             send_to_char(ch, "O espírito de ");
-        send_to_char(ch, "%s %s%s", i->player.name, *GET_TITLE(i) ? " " : "", GET_TITLE(i));
+        send_to_char(ch, "%s %s%s", i->player.name, *GET_TITLE(i) ? "" : "", GET_TITLE(i));
     }
 
     if (AFF_FLAGGED(i, AFF_INVISIBLE))
