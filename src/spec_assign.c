@@ -191,6 +191,9 @@ void assign_objects(void)
     ASSIGNOBJ(20421, gen_board); /* board */
     ASSIGNOBJ(22010, gen_board); /* board */
     ASSIGNOBJ(22022, gen_board); /* board */
+    ASSIGNOBJ(403, gen_board); /* board */
+    ASSIGNOBJ(22058, gen_board); /* board */
+    ASSIGNOBJ(22059, gen_board); /* board */
 
     //  ASSIGNOBJ(115, bank);
     //  ASSIGNOBJ(334, bank);	        /* atm */

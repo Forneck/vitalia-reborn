@@ -734,7 +734,7 @@ CREDITOS-AREAS
 
    Aqui estao listadas todas as areas do Mundo de Vitalia.
 
-   @WNOVAS AREAS EXCLUSIVAS DO MUNDO DE VITALIA:@n
+   @WNOVAS AREAS DO MUNDO DE VITALIA:@n
 
 @R   Nome da Area                           Criacao@n
 
@@ -761,6 +761,7 @@ CREDITOS-AREAS
 
 @R   Nome da Area                           Traducao@n
 
+ @R*@g Porto                                  @WCansian
  @R*@g Templo dos Ladroes                     @WAlexander
  @R*@g Ghenna                                 @WEomer
  @R*@g O Moinho de Vento                      @WTantalus
@@ -768,7 +769,7 @@ CREDITOS-AREAS
  @R*@g O Asilo dos Novos                      @WJarkeld
  @R*@g O Farol da Praia                       @WPorter e Tantalus
  
-   @WAREAS EXCLUSIVAS DO MUNDO DE VITALIA:@n
+   @WAREAS DO MUNDO DE VITALIA:@n
 
 @R   Nome da Area                           Construcao@n
  
