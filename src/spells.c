@@ -1128,14 +1128,20 @@ ASPELL(spell_ressurect)
                 if (GET_OBJ_TYPE(corpse) == ITEM_CORPSE && GET_OBJ_VAL(corpse, 0) == GET_IDNUM(victim))
                     break;
 
-            if (GET_HOMETOWN(ch) == r_hometown_1)
-                raise_online(victim, ch, corpse, r_ress_room_1, 1);
-            else if (GET_HOMETOWN(ch) == r_hometown_2)
-                raise_online(victim, ch, corpse, r_ress_room_2, 1);
-            else if (GET_HOMETOWN(ch) == r_hometown_3)
-                raise_online(victim, ch, corpse, r_ress_room_3, 1);
-            else
-                raise_online(victim, ch, corpse, IN_ROOM(victim), 1);
+            switch (GET_HOMETOWN(victim)) {
+                case 1:
+                    raise_online(victim, ch, corpse, r_ress_room_1, 1);
+                    break;
+                case 2:
+                    raise_online(victim, ch, corpse, r_ress_room_2, 1);
+                    break;
+                case 3:
+                    raise_online(victim, ch, corpse, r_ress_room_3, 1);
+                    break;
+                default:
+                    raise_online(victim, ch, corpse, r_ress_room_1, 1);
+                    break;
+            }
 
             if (corpse)
                 extract_obj(corpse);
