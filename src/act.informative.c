@@ -1136,6 +1136,33 @@ ACMD(do_score)
     }
 }
 
+ACMD(do_affects)
+{
+    struct affected_type *aff;
+    char duration_buf[128];
+    int has_affects = 0;
+
+    if (IS_NPC(ch))
+        return;
+
+    send_to_char(ch, "\tWEfeitos ativos:\tn\r\n");
+
+    for (aff = ch->affected; aff; aff = aff->next) {
+        if (aff->duration == -1) {
+            snprintf(duration_buf, sizeof(duration_buf), "permanente");
+        } else {
+            snprintf(duration_buf, sizeof(duration_buf), "%d h%s", aff->duration, aff->duration == 1 ? "" : "s");
+        }
+
+        send_to_char(ch, "  %s [%s]\r\n", skill_name(aff->spell), duration_buf);
+        has_affects = 1;
+    }
+
+    if (!has_affects) {
+        send_to_char(ch, "  Nenhum efeito ativo.\r\n");
+    }
+}
+
 ACMD(do_inventory)
 {
     send_to_char(ch, "\tWVocê está carregando:\tn\r\n");
