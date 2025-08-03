@@ -1079,8 +1079,9 @@ ASPELL(spell_raise_dead)
 
 ASPELL(spell_ressurect)
 {
-    struct char_data *dead;
+    struct char_data *dead = NULL;
     struct obj_data *corpse;
+    int idnum;
 
     if (ch == NULL)
         return;
@@ -1094,6 +1095,13 @@ ASPELL(spell_ressurect)
             return;
         }
 
+        /* Find the character corresponding to this corpse */
+        idnum = GET_OBJ_VAL(obj, 0);
+        for (dead = character_list; dead; dead = dead->next) {
+            if (!IS_NPC(dead) && GET_IDNUM(dead) == idnum)
+                break;
+        }
+
         if (!dead)
             send_to_char(ch, "Você sente que esta pessoa não está mais entre nós...\r\n");
         else if ALIVE (dead) {
@@ -1101,10 +1109,8 @@ ASPELL(spell_ressurect)
             act("$p foi destruído pela magia!", TRUE, NULL, obj, NULL, TO_ROOM);
             extract_obj(obj);
         } else {
-            if (!IS_NPC(victim) && (GET_IDNUM(victim) == GET_OBJ_VAL(obj, 0))) {
-                raise_online(dead, ch, obj, obj->in_room, 1);
-                extract_obj(obj);
-            }
+            raise_online(dead, ch, obj, obj->in_room, 1);
+            extract_obj(obj);
 
             /*
              * We need this because the spell can be cast by an NPC.
