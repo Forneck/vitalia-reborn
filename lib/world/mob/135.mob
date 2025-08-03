@@ -10,8 +10,8 @@ perigosa.
 14 6 4 1d1+400 6d1+14
 0 27000
 9 9 1
-GenWimpy: 18
-GenRoam: 81
+GenWimpy: 21
+GenRoam: 85
 E
 #13501
 elfo cacador~
@@ -25,9 +25,9 @@ uma possível presa.
 16 4 3 1d1+600 6d1+16
 275 30000
 9 9 2
-GenWimpy: 11
+GenWimpy: 15
 GenLoot: 1
-GenRoam: 87
+GenRoam: 88
 E
 #13502
 fada~
@@ -68,9 +68,9 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 21
+GenWimpy: 24
 GenLoot: 2
-GenRoam: 88
+GenRoam: 87
 E
 #13505
 inseto folha cinza~
@@ -241,8 +241,10 @@ entrou aqui.
 13 7 4 1d1+350 6d1+13
 200 12880
 9 9 2
-GenWimpy: 21
-GenRoam: 85
+GenWimpy: 25
+GenLoot: 2
+GenRoam: 88
+GenGroup: 1
 E
 #13517
 ra~

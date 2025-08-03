@@ -1469,7 +1469,7 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 2
+GenWimpy: 3
 E
 #12663
 Heidrum cabra~
@@ -1687,7 +1687,7 @@ Str: 15
 Dex: 15
 Con: 18
 Cha: 15
-GenWimpy: 3
+GenWimpy: 4
 E
 #12673
 Tanngrisni bode~
@@ -2236,7 +2236,7 @@ Int: 10
 Wis: 10
 Con: 10
 Cha: 18
-GenWimpy: 14
+GenWimpy: 17
 E
 #12698
 berserk~

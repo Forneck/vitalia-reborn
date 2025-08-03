@@ -10,9 +10,9 @@ venenosa desta cobra derrubou muitos faraós poderosos.
 5 14 8 5d5+50 1d6+1
 10 1000
 9 9 0
-GenWimpy: 100
+GenWimpy: 98
 GenLoot: 1
-GenRoam: 81
+GenRoam: 83
 E
 T 3008
 #5301
@@ -30,8 +30,8 @@ vítimas antes do bote.
 7 13 7 7d7+70 2d4+2
 25 2000
 9 9 0
-GenWimpy: 98
-GenRoam: 83
+GenWimpy: 100
+GenRoam: 87
 E
 T 3008
 #5302
@@ -51,7 +51,6 @@ GenWimpy: 100
 GenLoot: 9
 GenEquip: 1
 GenRoam: 89
-GenGroup: 1
 E
 #5303
 guardiao piramide~
@@ -69,7 +68,7 @@ roupas cor de areia.
 GenWimpy: 100
 GenLoot: 9
 GenEquip: 2
-GenRoam: 87
+GenRoam: 84
 E
 #5304
 ladrao tumba~
@@ -102,7 +101,7 @@ não hoje...
 18 2 0 18d18+180 3d8+2
 1000 30000
 9 9 1
-GenWimpy: 48
+GenWimpy: 55
 GenLoot: 10
 GenEquip: 2
 GenRoam: 89
@@ -135,10 +134,10 @@ etéreo espírito de um morto.
 12 8 4 12d12+120 1d6+6
 750 15000
 9 9 0
-GenWimpy: 100
+GenWimpy: 99
 GenLoot: 23
 GenEquip: 4
-GenRoam: 87
+GenRoam: 89
 E
 #5308
 homem areia~
@@ -156,7 +155,7 @@ quentes e arenosos.
 GenWimpy: 100
 GenLoot: 10
 GenEquip: 1
-GenRoam: 88
+GenRoam: 89
 E
 #5309
 efreeti~
@@ -216,10 +215,10 @@ dos seus primos mais velhos.
 15 0 -23 15d15+650 4d10+25
 7500 21000
 9 9 2
-GenWimpy: 26
-GenLoot: 9
+GenWimpy: 19
+GenLoot: 10
 GenEquip: 1
-GenRoam: 86
+GenRoam: 88
 E
 #5313
 ginoesfinge esfinge~

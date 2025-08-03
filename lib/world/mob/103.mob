@@ -159,11 +159,11 @@ Peludo, mal cheiroso, e desagradável. Que tal deixá-lo sozinho?
 500 4000
 9 9 1
 BareHandAttack: 9
-GenWimpy: 69
+GenWimpy: 66
 GenLoot: 4
 GenEquip: 1
 GenRoam: 89
-GenGroup: 8
+GenGroup: 7
 E
 #10310
 primata fêmea~
@@ -255,7 +255,7 @@ sua última refeição.
 9 9 2
 GenWimpy: 99
 GenLoot: 18
-GenRoam: 85
+GenRoam: 89
 E
 #10316
 zumbi~
@@ -268,10 +268,10 @@ Este zumbi é alto e forte, e está aqui pronto para lhe matar.
 15 10 7 8d8+750 5d5+8
 3500 4000
 9 9 1
-GenWimpy: 7
+GenWimpy: 8
 GenLoot: 52
-GenRoam: 68
-GenGroup: 13
+GenRoam: 85
+GenGroup: 7
 E
 #10317
 zumbi kenuthi~
@@ -286,6 +286,6 @@ tremenda.
 5000 6000
 9 9 1
 GenWimpy: 9
-GenLoot: 53
+GenLoot: 54
 E
 $

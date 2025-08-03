@@ -175,12 +175,12 @@ Um espadim foi deixado aqui, no chão.~
 0 1 6 11
 3 60 10 0 0
 E
-espada espadim~
-O espadim parece ter uma inscrição igual a diversas outras inscrições...
-~
-E
 inscricao~
 Esté escrito: 'Faça com que essa espada seja uma boa companheira.'
+~
+E
+espada espadim~
+O espadim parece ter uma inscrição igual a diversas outras inscrições...
 ~
 #3022
 espada longa~
@@ -534,7 +534,7 @@ um pergaminho da ressurreição~
 Um pergaminho da ressurreição foi deixado aqui, esperando para trazer as pessoas dos braços da Morte.~
 ~
 2 gik 0 0 0 ao 0 0 0 0 0 0 0
-100 60 60 60
+15 60 -1 -1
 1 6200 280 0 0
 E
 pergaminho ressurreicao~
@@ -662,18 +662,18 @@ Um escudo brasonado foi deixado aqui emanando suave melodia.~
 8 0 0 0
 4 20000 0 31 0
 E
-escudo~
-Você olha atentamente esse belo escudo de metal leve e bem polido, ligeiramente
-dourado. Sua forma segue a do brasão esmaltado que brilha em seu centro,
-este o alto símbolo da sociedade barda.
-~
-E
 brasao~
 Num fundo negro você vê a figura de uma harpa dourada de cordas flanejantes,
 esta envolvida por um círculo brilhante formado por palavras em uma escrita
 muito antiga. Nas bordas do brasão estão as notas do início de uma canção
 que ninguém ousa nem assoviar. É este o reverenciado brasão que poucos
 conseguem decifrar, mesmo entre os bardos.
+~
+E
+escudo~
+Você olha atentamente esse belo escudo de metal leve e bem polido, ligeiramente
+dourado. Sua forma segue a do brasão esmaltado que brilha em seu centro,
+este o alto símbolo da sociedade barda.
 ~
 #3070
 manoplas bronze~
@@ -700,19 +700,19 @@ Um punhal de lâmina dourada foi deixado aqui emitindo suave melodia.~
 0 4 4 11
 3 15000 0 31 0
 E
-punhal lamina dourada~
-O punhal é leve e afiado, tendo sua lâmina dourada um polimento tão
-perfeito quanto um espelho. A empunhadura negra, de metal fosco, acompanha
-adapta-se perfeitamente á mão do bardo, tendo ela como único enfeite um
-pequeno brasão esmaltado.
-~
-E
 brasao~
 O brasão propriamente dito foi colocado em uma fina moldura dourada, sendo
 ele uma perfeita miniatura dos maiores: num fundo negro há a figura de uma
 harpa dourada de cordas flanejantes, esta envolvida por um círculo brilhante
 formado por palavras em uma escrita muito antiga.  Nas bordas estão as notas
 do início de uma canção que ninguém ousa nem assoviar.
+~
+E
+punhal lamina dourada~
+O punhal é leve e afiado, tendo sua lâmina dourada um polimento tão
+perfeito quanto um espelho. A empunhadura negra, de metal fosco, acompanha
+adapta-se perfeitamente á mão do bardo, tendo ela como único enfeite um
+pequeno brasão esmaltado.
 ~
 A
 18 1
@@ -725,18 +725,18 @@ Um peitoral brasonado emite suave melodia mesmo jogado no chão.~
 7 0 0 0
 5 30000 0 31 0
 E
-peitoral~
-De metal levemente dourado, esse peitoral se ajusta perfeitamente ao tronco de
-quem o usa. Sobre a região do coração, no centro do peito, um brasão
-negro se destaca.
-~
-E
 brasao~
 Num fundo negro você vê a figura de uma harpa dourada de cordas flanejantes,
 esta envolvida por um círculo brilhante formado por palavras em uma escrita
 muito antiga. Nas bordas do brasão estão as notas do início de uma canção
 que ninguém ousa nem assoviar. É este o reverenciado brasão que poucos
 conseguem decifrar, mesmo entre os bardos.
+~
+E
+peitoral~
+De metal levemente dourado, esse peitoral se ajusta perfeitamente ao tronco de
+quem o usa. Sobre a região do coração, no centro do peito, um brasão
+negro se destaca.
 ~
 #3074
 camisa negra~
@@ -747,19 +747,19 @@ Uma camisa negra foi deixada aqui.~
 4 0 0 0
 1 12000 0 31 0
 E
-camisa negra~
-De corte perfeito e costura imperceptível, essa camisa é uma boa opção para
-o bardo que busca conforto e, como não poderia deixar de ser, elegância.  Os
-botões são totalmente negros, havendo somente um diferente, o
-que fica no colarinho, pois nele há o desenho de um brasão.
-~
-E
 brasao~
 Num fundo negro você vê a figura de uma harpa dourada de cordas flanejantes,
 esta envolvida por um círculo brilhante formado por palavras em uma escrita
 muito antiga. Nas bordas do brasão estão as notas do início de uma canção
 que ninguém ousa nem assoviar. É este o reverenciado brasão que poucos
 conseguem decifrar, mesmo entre os bardos.
+~
+E
+camisa negra~
+De corte perfeito e costura imperceptível, essa camisa é uma boa opção para
+o bardo que busca conforto e, como não poderia deixar de ser, elegância.  Os
+botões são totalmente negros, havendo somente um diferente, o
+que fica no colarinho, pois nele há o desenho de um brasão.
 ~
 #3075
 elmo bronze~
@@ -786,18 +786,18 @@ Um par de luvas de couro foi deixado aqui.~
 3 0 0 0
 1 7000 0 31 0
 E
-luvas couro negro~
-Essas luvas protegem as mãos sem impedir-lhes o movimento, sendo ainda
-bastante belas.  O botão que ajusta cada uma delas ao pulso é negro,
-possuindo o brasão bardo em sua superfície.
-~
-E
 botao brasao~
 Num fundo negro você vê a figura de uma harpa dourada de cordas flanejantes,
 esta envolvida por um círculo brilhante formado por palavras em uma escrita
 muito antiga. Nas bordas do brasão estão as notas do início de uma canção
 que ninguém ousa nem assoviar. É este o reverenciado brasão que poucos
 conseguem decifrar, mesmo entre os bardos.
+~
+E
+luvas couro negro~
+Essas luvas protegem as mãos sem impedir-lhes o movimento, sendo ainda
+bastante belas.  O botão que ajusta cada uma delas ao pulso é negro,
+possuindo o brasão bardo em sua superfície.
 ~
 #3078
 mochila couro negro negra~
@@ -808,19 +808,19 @@ Uma mochila negra foi deixada aqui.~
 200 7 -1 0
 4 3000 0 31 0
 E
-mochila couro negro negra~
-Ela é bastante espaçosa, parecendo ainda ser muito resistente.  O couro foi
-cuidadosamente preparado para nunca rasgar, mofar ou ser de alguma forma
-danificado, sendo ainda impermeável.  As alças ajustáveis são presas com
-duas fivelas douradas, cada uma delas ostentando um pequeno brasão.
-~
-E
 alças fivelas brasão~
 Num fundo negro você vê a figura de uma harpa dourada de cordas flanejantes,
 esta envolvida por um círculo brilhante formado por palavras em uma escrita
 muito antiga. Nas bordas do brasão estão as notas do início de uma canção
 que ninguém ousa nem assoviar. É este o reverenciado brasão que poucos
 conseguem decifrar, mesmo entre os bardos.
+~
+E
+mochila couro negro negra~
+Ela é bastante espaçosa, parecendo ainda ser muito resistente.  O couro foi
+cuidadosamente preparado para nunca rasgar, mofar ou ser de alguma forma
+danificado, sendo ainda impermeável.  As alças ajustáveis são presas com
+duas fivelas douradas, cada uma delas ostentando um pequeno brasão.
 ~
 #3079
 negro chapeu abas~
@@ -831,20 +831,20 @@ Um chapéu de grandes abas foi deixado aqui.~
 4 0 0 0
 3 10000 0 31 0
 E
-negro chapeu abas~
-O chapéu de copa plana é muito elegante e útil com seu tecido negro e
-armação metálica leve.  As grandes abas lançam sombras protetoras sobre a
-face de quem o usa, parecendo uma boa opção para dias de muito sol, chuva ou
-ainda para pessoas que gostam de criar um ar misterioso sobre sua pessoa.
-Um broche preso á copa mostra um belo brasão.
-~
-E
 brasao broche~
 O face do broche é uma moldura dourada em que o brasão se apoia.  Ele é de
 fundo negro, havendo a figura de uma harpa dourada de cordas flanejantes em
 seu centro.  Esta é envolta por um círculo brilhante formado por palavras em
 uma escrita muito antiga.  Nas bordas do brasão estão as notas do início de
 uma canção que ninguém ousa nem assoviar.
+~
+E
+negro chapeu abas~
+O chapéu de copa plana é muito elegante e útil com seu tecido negro e
+armação metálica leve.  As grandes abas lançam sombras protetoras sobre a
+face de quem o usa, parecendo uma boa opção para dias de muito sol, chuva ou
+ainda para pessoas que gostam de criar um ar misterioso sobre sua pessoa.
+Um broche preso á copa mostra um belo brasão.
 ~
 #3080
 perneiras bronze~
@@ -871,17 +871,17 @@ Uma flauta de madeira negra foi deixada aqui.~
 0 0 0 0
 1 1000 0 31 0
 E
-flauta doce madeira negra~
-A delicada flauta é feita de macia madeira negra cuidadosamente
-envernizada. Os orifícios foram circundados com lustroso dourado,
-havendo ainda um disco negro na parte superior, próximo ao bocal.
-~
-E
 disco selo~
 No disco você vê o selo do brasão dos bardos, a harpa dourada de cordas
 flamejantes.  Um pequeno círculo de palavras em escrita antiga envolve o
 intrumento, enquanto as bordas do selo são ladeadas pelas notas iniciais de
 uma melodia nunca nem mesmo assoviada.
+~
+E
+flauta doce madeira negra~
+A delicada flauta é feita de macia madeira negra cuidadosamente
+envernizada. Os orifícios foram circundados com lustroso dourado,
+havendo ainda um disco negro na parte superior, próximo ao bocal.
 ~
 #3083
 charamela instrumento sopro negra madeira belo~
@@ -892,18 +892,18 @@ Um belo instrumento de sopro, feito de madeira negra, foi deixado aqui.~
 0 0 0 0
 2 1500 0 31 0
 E
-charamela negra~
-O corpo cilíndrico da charamela é feito de negra madeira de um perfume doce
-e úmido, assim como  é o som do instrumento.  O bocal cônico e a outra
-extremidade, em forma de sino, são de metal dourado.  As duas palhetas do
-instrumento são negras, havendo nelas o delicado selo bardo.
-~
-E
 selo~
 Envolto numa moldura dourada, você vê um disco negro com o selo do brasão
 dos bardos, a harpa dourada de cordas flamejantes.  Um pequeno círculo de
 palavras em escrita antiga envolve o intrumento, enqunto as bordas do selo
 são ladeadas pelas notas iniciais de uma melodia nunca nem mesmo assoviada.
+~
+E
+charamela negra~
+O corpo cilíndrico da charamela é feito de negra madeira de um perfume doce
+e úmido, assim como  é o som do instrumento.  O bocal cônico e a outra
+extremidade, em forma de sino, são de metal dourado.  As duas palhetas do
+instrumento são negras, havendo nelas o delicado selo bardo.
 ~
 #3084
 mandola negra~
@@ -914,18 +914,18 @@ Uma mandola negra, com cordas douradas, foi deixada aqui.~
 0 0 0 0
 2 2500 0 31 0
 E
-mandola negra~
-Essa delicada mandola, semelhante a um alaúde, mas bem menor,
-é toda negra, destacando suas cordas e trastes dourados. Na parte plana
-do corpo do instrumento há um grande brasão.
-~
-E
 brasão~
 No fundo negro você vê a figura de uma harpa dourada de cordas flanejantes,
 esta envolvida por um círculo brilhante formado por palavras em uma escrita
 muito antiga. Nas bordas do brasão estão as notas do início de uma canção
 que ninguém ousa nem assoviar. É este o reverenciado brasão que poucos
 conseguem decifrar, mesmo entre os bardos.
+~
+E
+mandola negra~
+Essa delicada mandola, semelhante a um alaúde, mas bem menor,
+é toda negra, destacando suas cordas e trastes dourados. Na parte plana
+do corpo do instrumento há um grande brasão.
 ~
 #3085
 bracadeiras bronze~
@@ -952,18 +952,18 @@ Um bonito pandeiro foi deixado aqui~
 0 0 0 0
 2 1000 0 31 0
 E
-pandeiro~
-Os guizos dourados presos á armação negra têm um som alegre e limpo.  Você o
-toca um pouco, parando para observar a membrana negra com um grande brasão
-ao centro.
-~
-E
 brasao membrana~
 No fundo negro você vê a figura de uma harpa dourada de cordas flanejantes,
 esta envolvida por um círculo brilhante formado por palavras em uma escrita
 muito antiga. Nas bordas do brasão estão as notas do início de uma canção
 que ninguém ousa nem assoviar. É este o reverenciado brasão que poucos
 conseguem decifrar, mesmo entre os bardos.
+~
+E
+pandeiro~
+Os guizos dourados presos á armação negra têm um som alegre e limpo.  Você o
+toca um pouco, parando para observar a membrana negra com um grande brasão
+ao centro.
 ~
 #3088
 parede~
@@ -983,12 +983,12 @@ Um grande quadro de mensagens sociais foi posto na parede aqui.~
 0 0 0 0
 0 0 0 0 0
 E
-quadro~
-Se você está lendo isso, este quadro não está funcionando.
-~
-E
 mensagens~
 Use 'look quadro' para ler o quadro.
+~
+E
+quadro~
+Se você está lendo isso, este quadro não está funcionando.
 ~
 #3097
 quadro mensagens~
@@ -999,12 +999,12 @@ Um grande quadro de mensagens está aqui, esculpido em um bloco de gelo.~
 0 0 0 0
 0 0 0 0 0
 E
-quadro~
-Se você está lendo isso, este quadro não está funcionando.
-~
-E
 mensagens~
 Use 'look quadro' para ler o quadro.
+~
+E
+quadro~
+Se você está lendo isso, este quadro não está funcionando.
 ~
 #3098
 quadro mensagens~
@@ -1016,12 +1016,12 @@ suave aura.~
 0 0 0 0
 0 0 0 0 0
 E
-quadro~
-Se você está lendo isso, este quadro não está funcionando.
-~
-E
 mensagens~
 Use 'look quadro' para ler o quadro.
+~
+E
+quadro~
+Se você está lendo isso, este quadro não está funcionando.
 ~
 #3099
 quadro mensagens~
@@ -1032,11 +1032,11 @@ Um grande quadro de mensagens foi posto na parede aqui.~
 0 0 0 0
 0 0 0 0 0
 E
-quadro~
-Se você está lendo isso, este quadro não está funcionando.
-~
-E
 mensagens~
 Use 'look quadro' para ler o quadro.
+~
+E
+quadro~
+Se você está lendo isso, este quadro não está funcionando.
 ~
 $~

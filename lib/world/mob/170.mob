@@ -25,7 +25,7 @@ Ele parece estar atrás de um almoço..
 GenWimpy: 100
 GenLoot: 9
 GenEquip: 1
-GenRoam: 76
+GenRoam: 71
 E
 #17003
 elemental~
@@ -66,7 +66,7 @@ An undefined string.
 5 0 -4 2d5+150 2d6+4
 1000 6000
 9 9 1
-GenWimpy: 49
+GenWimpy: 50
 GenRoam: 89
 E
 #17006
@@ -174,7 +174,7 @@ Ela percorre o chão em sua direção.
 8 2 0 1d5+200 1d10+3
 980 5000
 9 9 2
-GenWimpy: 30
+GenWimpy: 38
 GenLoot: 1
 GenRoam: 89
 E
@@ -191,7 +191,7 @@ Ela corre ao seu redor, esperando uma brecha.
 9 9 2
 GenWimpy: 100
 GenLoot: 1
-GenRoam: 60
+GenRoam: 71
 E
 #17016
 elemental neve humanoide cristal~
@@ -204,7 +204,7 @@ Ele parece incapaz de se mover.
 3 5 2 1d5+100 2d5+4
 400 3000
 9 9 1
-GenWimpy: 30
+GenWimpy: 31
 GenLoot: 1
 E
 #17017
@@ -231,7 +231,7 @@ todos os lados, produzindo barulhentas explosões.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 32
+GenWimpy: 34
 GenLoot: 1
 E
 #17019
@@ -245,7 +245,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 89
+GenWimpy: 91
 GenLoot: 1
 E
 #17020
@@ -261,8 +261,8 @@ que suas calças sequem rápido.
 1000 4000
 9 9 2
 GenWimpy: 67
-GenLoot: 6
-GenRoam: 29
+GenLoot: 7
+GenRoam: 23
 E
 #17021
 lama monstro elemental~
@@ -333,7 +333,7 @@ An undefined string.
 2 17 2 1d5+100 1d8+1
 450 1000
 9 9 1
-GenWimpy: 79
+GenWimpy: 82
 GenLoot: 1
 GenRoam: 89
 E
@@ -365,9 +365,8 @@ Um humanóide que parece ter sido preso em um campo magnético.
 26 -2 -5 1d5+640 6d5+14
 3000 30000
 9 9 1
-GenWimpy: 91
-GenRoam: 84
-GenGroup: 1
+GenWimpy: 98
+GenRoam: 81
 E
 #17028
 neve bandido~
@@ -506,7 +505,7 @@ Ele se assemelha bastante a um desagradável inseto.
 800 1000
 9 9 1
 GenWimpy: 100
-GenRoam: 83
+GenRoam: 84
 E
 #17037
 gigantesco elemental~

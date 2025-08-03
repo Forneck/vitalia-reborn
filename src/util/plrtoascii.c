@@ -440,8 +440,8 @@ void convert(char *bin_filename) {
     fprintf(outfile, "Con : %d\n", player.abilities.con);
     fprintf(outfile, "Cha : %d\n", player.abilities.cha);
 
-    fprintf(outfile, "Dth: %d\n", player.num_death); 
-    fprintf(outfile, "Traps: %d\n", player.num_traps);
+    fprintf(outfile, "Dth : %d\n", player.num_death); 
+    fprintf(outfile, "Dts : %d\n", player.num_traps);
     fprintf(outfile, "Incarn: %d\n", player.num_incarnations);  
     fprintf(outfile, "Karm: %d\n", player.karma);
     

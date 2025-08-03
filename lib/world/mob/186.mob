@@ -28,8 +28,8 @@ Melhor matar mesmo!
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
-GenWimpy: 61
-GenRoam: 87
+GenWimpy: 70
+GenRoam: 83
 E
 #18603
 dragão bebê dragao bebe~
@@ -96,7 +96,7 @@ vermes imundos, pequenos, cheios de pernas e marrons não estariam aqui!
 0 100
 9 9 0
 GenWimpy: 100
-GenRoam: 87
+GenRoam: 78
 E
 #18607
 novato zumbi~
@@ -180,10 +180,10 @@ HAHAHAHAHAHAHAHAHAHA!
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 1
-GenWimpy: 36
+GenWimpy: 39
 GenLoot: 2
 GenEquip: 1
-GenRoam: 87
+GenRoam: 85
 E
 #18612
 novato retardado ignorante~
@@ -199,8 +199,8 @@ acabar logo com a mediocridade dele.
 1 20 10 1d1+19 1d3+1
 50 220
 9 9 1
-GenWimpy: 41
-GenRoam: 86
+GenWimpy: 45
+GenRoam: 85
 E
 #18613
 novata tagarela~
@@ -253,6 +253,6 @@ leu os arquivos de ajuda?
 9 9 1
 GenWimpy: 25
 GenLoot: 1
-GenRoam: 87
+GenRoam: 88
 E
 $

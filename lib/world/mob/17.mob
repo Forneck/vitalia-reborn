@@ -10,7 +10,7 @@ com um tom amarelado,  garras sujas e afiadas.
 13 8 1 4d6+565 2d7+11
 0 16000
 9 9 1
-GenWimpy: 30
+GenWimpy: 32
 GenLoot: 5
 E
 #1701
@@ -71,7 +71,7 @@ econômica...e também divertida!
 11 10 2 1d6+150 2d6+11
 0 11000
 9 9 1
-GenWimpy: 90
+GenWimpy: 91
 GenLoot: 10
 E
 #1705
@@ -87,8 +87,8 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 53
-GenLoot: 6
+GenWimpy: 80
+GenLoot: 8
 E
 #1706
 guardiao guardião cripta~
@@ -240,8 +240,8 @@ passado infeliz, você presume.
 16 5 1 2d6+496 2d8+12
 1576 25000
 9 9 2
-GenWimpy: 49
-GenLoot: 29
+GenWimpy: 67
+GenLoot: 33
 GenEquip: 4
 GenRoam: 89
 E

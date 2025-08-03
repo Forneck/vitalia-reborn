@@ -14,8 +14,9 @@ Str: 17
 Dex: 15
 Int: 13
 Wis: 13
-GenWimpy: 6
-GenLoot: 5
+GenWimpy: 9
+GenLoot: 21
+GenEquip: 3
 E
 #2913
 turista~
@@ -138,10 +139,10 @@ BareHandAttack: 1
 Dex: 13
 Int: 14
 Wis: 13
-GenWimpy: 20
-GenLoot: 1
-GenEquip: 1
-GenBrave: 1
+GenWimpy: 6
+GenLoot: 11
+GenEquip: 2
+GenRoam: 1
 E
 #2920
 conselheiro Degruziel~
@@ -224,7 +225,7 @@ simplesmente senta aqui, aproveitando toda a vida que acontece ao seu redor.
 100 10000
 5 5 1
 BareHandAttack: 7
-GenWimpy: 4
+GenWimpy: 6
 E
 #2925
 bardo talentoso~
@@ -284,8 +285,7 @@ Uma poça de lama de aparência incomum está aqui, rodopiando.
 3 19 8 0d0+30 1d2+0
 30 900
 9 9 0
-GenWimpy: 12
-GenRoam: 1
+GenWimpy: 19
 E
 #2929
 monstro lama bolhas~
@@ -328,6 +328,8 @@ um raio.
 9 9 0
 BareHandAttack: 8
 Dex: 15
+GenWimpy: 1
+GenRoam: 15
 E
 #2932
 cao raivoso~
@@ -354,7 +356,10 @@ através de você. Parece completamente destemido.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 0
-GenWimpy: 6
+GenWimpy: 5
+GenLoot: 1
+GenEquip: 1
+GenRoam: 4
 E
 #2934
 garoto servente~
@@ -369,6 +374,8 @@ uma reposição.
 70 4900
 9 9 1
 BareHandAttack: 1
+GenWimpy: 2
+GenRoam: 9
 E
 #2935
 cavalheiro gentil~
@@ -387,7 +394,8 @@ Str: 14
 Dex: 13
 Int: 15
 Wis: 14
-GenWimpy: 4
+GenWimpy: 6
+GenRoam: 1
 E
 #2936
 dama bem nascida~
@@ -407,7 +415,7 @@ Str: 9
 Dex: 13
 Int: 15
 Wis: 15
-GenWimpy: 1
+GenWimpy: 2
 E
 #2937
 convidado honrado~
@@ -423,7 +431,8 @@ perder uma refeição.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
+GenRoam: 8
 E
 #2938
 guarda mansao~
@@ -513,6 +522,7 @@ nas sombras.
 100 10000
 9 9 1
 GenWimpy: 3
+GenRoam: 4
 E
 #2943
 crianca pequena~
@@ -564,7 +574,8 @@ Str: 14
 Dex: 15
 Int: 15
 Wis: 15
-GenWimpy: 4
+GenWimpy: 8
+GenRoam: 3
 E
 #2946
 homem dormindo~
@@ -577,7 +588,7 @@ Um homem está aqui, dormindo em sua cama de viagem.
 10 17 4 2d2+100 1d2+1
 100 10000
 4 4 1
-GenWimpy: 8
+GenWimpy: 7
 E
 #2947
 valentao preto~
@@ -598,8 +609,8 @@ Str: 16
 Dex: 15
 Int: 13
 Wis: 14
-GenWimpy: 6
-GenLoot: 2
+GenWimpy: 10
+GenLoot: 4
 E
 #2948
 rei beco luna~
@@ -632,6 +643,7 @@ silenciosamente para si mesmo.
 70 4900
 9 9 1
 BareHandAttack: 13
+GenWimpy: 2
 E
 #2950
 esquizofrenico paranoico gritando~
@@ -646,7 +658,7 @@ Um esquizofrênico paranoico está aqui, gritando para o mundo.
 9 9 2
 Str: 14
 Dex: 14
-GenWimpy: 29
+GenWimpy: 46
 GenLoot: 1
 E
 #2951
@@ -780,8 +792,8 @@ arduamente ganho.
 BareHandAttack: 6
 Str: 15
 Dex: 12
-GenWimpy: 2
-GenRoam: 15
+GenWimpy: 6
+GenRoam: 27
 E
 #2959
 esposa pescador~
@@ -1094,8 +1106,9 @@ Str: 9
 Dex: 15
 Int: 13
 Wis: 13
-GenWimpy: 4
-GenLoot: 3
+GenWimpy: 5
+GenLoot: 12
+GenEquip: 2
 E
 T 2902
 #2976
@@ -1118,8 +1131,8 @@ Str: 9
 Dex: 15
 Int: 10
 Wis: 12
-GenWimpy: 7
-GenLoot: 4
+GenWimpy: 5
+GenLoot: 8
 E
 #2977
 criada cozinha~
@@ -1166,7 +1179,7 @@ você.
 14 16 1 2d2+140 2d2+2
 140 19600
 9 9 1
-GenWimpy: 4
+GenWimpy: 8
 GenLoot: 10
 GenEquip: 2
 E
@@ -1217,6 +1230,7 @@ alimentar uma família de pescadores por semanas.
 9 9 1
 BareHandAttack: 1
 GenWimpy: 2
+GenRoam: 2
 E
 #2983
 criado~
@@ -1230,8 +1244,8 @@ importante... Embora o que exatamente ele está fazendo não seja aparente.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 8
-GenRoam: 1
+GenWimpy: 14
+GenRoam: 3
 E
 #2984
 mestre estabulo~
@@ -1275,6 +1289,8 @@ de carregar coisas para lá e para cá o dia todo lhe deram músculos salientes.
 100 10000
 9 9 2
 BareHandAttack: 4
+GenWimpy: 1
+GenRoam: 10
 E
 #2987
 carroceiro xingando~
@@ -1365,6 +1381,9 @@ ligeiramente aberta enquanto olha ao redor com olhos arregalados para as paisage
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
+GenWimpy: 4
+GenEquip: 2
+GenRoam: 14
 E
 #2993
 crianca feliz menino~
@@ -1379,8 +1398,8 @@ cidade.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 2
-GenRoam: 29
+GenWimpy: 4
+GenRoam: 30
 E
 #2994
 mulher cidada~
@@ -1413,7 +1432,8 @@ tem uma expressão zangada no rosto. Nossa, alguém está em apuros.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
-GenWimpy: 2
+GenWimpy: 4
+GenRoam: 13
 E
 #2996
 cidadao homem~
@@ -1428,7 +1448,8 @@ parece estar falando consigo mesmo sobre os preços do mercado.
 100 10000
 9 9 1
 BareHandAttack: 13
-GenWimpy: 1
+GenWimpy: 2
+GenRoam: 2
 E
 #2997
 porteiro elite~

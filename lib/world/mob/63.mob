@@ -10,7 +10,7 @@ Ela parece recém-saída do ovo e esperta.  Suas presas ainda estão crescendo.
 80 350
 9 9 1
 GenWimpy: 49
-GenRoam: 86
+GenRoam: 87
 E
 #6302
 yevaud dragao usurpador~
@@ -66,7 +66,7 @@ Você nota um olhar vidrado nos olhos dela.
 14 7 1 1d12+172 2d8+1
 2000 18000
 9 9 2
-GenWimpy: 13
+GenWimpy: 11
 GenLoot: 47
 GenEquip: 1
 E
@@ -127,7 +127,7 @@ cria um tesouro mágico!
 10 1 -10 1d12+47 1d8+0
 1500 11000
 9 9 1
-GenWimpy: 13
+GenWimpy: 15
 GenRoam: 88
 E
 T 3009

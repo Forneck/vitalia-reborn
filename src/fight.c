@@ -349,7 +349,6 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
             GET_COND(ch, HUNGER) = -1;
             GET_COND(ch, THIRST) = -1;
         }
-        GET_DEATH(ch)++;
         GET_HIT(ch) = 0;
         GET_MANA(ch) = 0;
         GET_MOVE(ch) = 0;

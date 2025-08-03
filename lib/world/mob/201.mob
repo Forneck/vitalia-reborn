@@ -9,7 +9,7 @@ O doente mental tem apenas um olhar vazio.
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
-GenWimpy: 69
+GenWimpy: 74
 GenLoot: 3
 GenRoam: 88
 E
@@ -81,8 +81,8 @@ Há uma grande possibilidade de que Ted seja um grande amigo imaginário...
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 51
-GenRoam: 82
+GenWimpy: 52
+GenRoam: 84
 E
 #20106
 cerebro~
@@ -100,8 +100,9 @@ espera o dia em que poderá sair desse terrível lugar.
 7 15 5 3d5+85 2d4+1
 1000 3000
 9 9 1
-GenWimpy: 30
-GenGroup: 35
+GenWimpy: 72
+GenRoam: 10
+GenGroup: 24
 E
 #20107
 pesquisador distraido~
@@ -154,8 +155,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 38
-GenRoam: 40
+GenWimpy: 39
+GenLoot: 1
+GenRoam: 59
 E
 #20110
 jovem mulher Sybila~
@@ -170,8 +172,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 39
-GenRoam: 77
+GenWimpy: 42
+GenRoam: 78
 E
 #20111
 jovem mulher Anouk~
@@ -186,8 +188,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 28
-GenRoam: 86
+GenWimpy: 29
+GenRoam: 83
 E
 #20112
 jovem mulher Tricia~
@@ -202,7 +204,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 64
+GenWimpy: 66
 GenLoot: 2
 GenEquip: 1
 GenRoam: 86
@@ -220,8 +222,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 33
-GenRoam: 72
+GenWimpy: 37
+GenRoam: 78
+GenGroup: 4
 E
 #20114
 jovem mulher Renee~
@@ -236,7 +239,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 43
+GenWimpy: 47
 GenLoot: 1
 GenRoam: 88
 E
@@ -288,8 +291,8 @@ original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 37
-GenRoam: 86
+GenWimpy: 38
+GenRoam: 85
 E
 #20118
 jovem mulher nancy~
@@ -304,8 +307,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 35
-GenRoam: 86
+GenWimpy: 38
+GenRoam: 88
 E
 #20119
 Spike~

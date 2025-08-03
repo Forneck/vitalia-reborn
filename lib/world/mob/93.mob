@@ -438,9 +438,9 @@ ele mesmo e pintadas com vários tons de tinta.
 Str: 8
 Dex: 15
 Con: 8
-GenWimpy: 15
+GenWimpy: 16
 GenLoot: 1
-GenRoam: 87
+GenRoam: 88
 E
 #9320
 duende~
@@ -459,8 +459,8 @@ ela mesma e pintadas com vários tons de tinta.
 Str: 8
 Con: 8
 Cha: 15
-GenWimpy: 8
-GenRoam: 88
+GenWimpy: 13
+GenRoam: 89
 E
 #9322
 fada~
@@ -481,7 +481,7 @@ Int: 13
 Wis: 13
 Con: 7
 Cha: 16
-GenWimpy: 20
+GenWimpy: 21
 GenRoam: 89
 E
 #9323
@@ -540,9 +540,9 @@ corcova.  Vive perambulando no deserto dos dragões de Vitália à procura de
 Str: 13
 Wis: 8
 Con: 13
-GenWimpy: 74
+GenWimpy: 76
 GenLoot: 1
-GenRoam: 89
+GenRoam: 88
 E
 #9326
 serpente negra~

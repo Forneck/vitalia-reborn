@@ -101,8 +101,8 @@ se ele mordesse seu braço.
 8 12 3 50d1+10 3d3+6
 1 5000
 9 9 1
-GenWimpy: 39
-GenRoam: 5
+GenWimpy: 42
+GenRoam: 4
 E
 #5708
 menor demonio~
@@ -116,8 +116,8 @@ dentes.  Ele o fita com muita fúria em seus olhos.
 13 8 1 150d2+80 2d7+8
 1 15000
 9 9 1
-GenWimpy: 26
-GenRoam: 9
+GenWimpy: 29
+GenRoam: 23
 E
 #5709
 cidadao graye homem~
@@ -131,10 +131,10 @@ sitiada por demônios.
 17 6 1 150d2+30 2d8+8
 1000 22000
 9 9 1
-GenWimpy: 8
+GenWimpy: 5
 GenLoot: 2
 GenEquip: 3
-GenRoam: 89
+GenRoam: 86
 E
 #5710
 cidada mulher~
@@ -148,11 +148,10 @@ sitiada por demônios.
 19 6 2 150d2+20 2d7+9
 3000 22000
 9 9 2
-GenWimpy: 13
-GenLoot: 1
-GenEquip: 2
+GenWimpy: 17
+GenLoot: 2
+GenEquip: 3
 GenRoam: 89
-GenGroup: 3
 E
 #5711
 demonio maior~
@@ -194,7 +193,7 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 28
+GenWimpy: 22
 E
 #5714
 rymat conselheiro~
@@ -209,7 +208,7 @@ lhe dá as costas e continua a lamentar-se, tremendo incontrolavelmente.
 23 0 0 350d1+50 3d8+13
 1000 70000
 9 9 1
-GenWimpy: 17
+GenWimpy: 22
 E
 #5715
 irgon arque demonio~

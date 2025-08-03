@@ -381,9 +381,9 @@ int load_char(const char *name, struct char_data *ch)
                         GET_COND(ch, DRUNK) = atoi(line);
                     else if (!strcmp(tag, "Drol"))
                         GET_DAMROLL(ch) = atoi(line);
-                    else if (!strcmp(tag, "Dth"))
+                    else if (!strcmp(tag, "Dth "))
                         GET_DEATH(ch) = atoi(line);
-                    else if (!strcmp(tag, "Dts"))
+                    else if (!strcmp(tag, "Dts "))
                         GET_DTS(ch) = atoi(line);
                     break;
 
@@ -818,9 +818,9 @@ void save_char(struct char_data *ch)
         fprintf(fl, "Qcur: %d\n", GET_QUEST(ch));
 
     if (GET_DEATH(ch) != PFDEF_DEATH)
-        fprintf(fl, "Dth: %d\n", GET_DEATH(ch));
+        fprintf(fl, "Dth : %d\n", GET_DEATH(ch));
     if (GET_DTS(ch) != PFDEF_DTS)
-        fprintf(fl, "Dts: %d\n", GET_DTS(ch));
+        fprintf(fl, "Dts : %d\n", GET_DTS(ch));
     if (GET_REMORT(ch) != PFDEF_REMORT)
         fprintf(fl, "Remo: %d\n", GET_REMORT(ch));
     if (GET_KARMA(ch) != PFDEF_KARMA)

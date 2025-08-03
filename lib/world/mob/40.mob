@@ -49,7 +49,7 @@ Ele é horrível.
 4 16 5 2d10+40 1d8+1
 50 800
 9 9 0
-GenWimpy: 93
+GenWimpy: 96
 GenRoam: 88
 E
 #4004
@@ -63,7 +63,7 @@ Você percebe toda a maldade no seu olhar...
 5 15 5 2d10+60 2d4+0
 100 900
 9 9 0
-GenWimpy: 97
+GenWimpy: 85
 GenRoam: 82
 E
 #4005
@@ -77,8 +77,8 @@ Ele parece pavoroso.
 7 11 2 3d20+75 2d6+2
 200 3000
 9 9 1
-GenWimpy: 25
-GenRoam: 87
+GenWimpy: 31
+GenRoam: 88
 E
 #4050
 guerreiro~
@@ -217,7 +217,7 @@ Parece que ele lida bem com magia.
 2500 21000
 9 9 1
 GenWimpy: 36
-GenRoam: 7
+GenBrave: 2
 E
 T 3009
 #4101
@@ -285,7 +285,7 @@ Bem, ela não parece prestar muita atenção em você.
 0 1500
 9 9 0
 GenWimpy: 100
-GenRoam: 79
+GenRoam: 80
 E
 #4106
 guerreiro~

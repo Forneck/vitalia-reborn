@@ -85,8 +85,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 42
-GenRoam: 88
+GenWimpy: 39
+GenLoot: 1
+GenRoam: 89
 E
 #706
 duende~
@@ -152,8 +153,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 18
-GenRoam: 85
+GenWimpy: 19
+GenRoam: 87
 E
 #710
 maldito guarda~
@@ -289,8 +290,8 @@ Con: 15
 Cha: 15
 GenWimpy: 100
 GenLoot: 1
-GenRoam: 78
-GenGroup: 29
+GenRoam: 84
+GenGroup: 27
 E
 #716
 pequena encurvada crianca criança~
