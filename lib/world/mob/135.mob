@@ -40,8 +40,9 @@ Que bela fada você pode ver deste ângulo.
 16 4 3 1d1+600 6d1+16
 275 30000
 9 9 2
-GenWimpy: 20
-GenRoam: 88
+GenWimpy: 30
+GenLoot: 3
+GenRoam: 89
 E
 #13503
 inseto folha inseto-folha~
@@ -54,8 +55,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 31
-GenRoam: 87
+GenWimpy: 34
+GenRoam: 88
 E
 #13504
 inseto galho inseto-galho~
@@ -68,9 +69,9 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 24
-GenLoot: 2
-GenRoam: 87
+GenWimpy: 27
+GenLoot: 3
+GenRoam: 88
 E
 #13505
 inseto folha cinza~
@@ -98,6 +99,8 @@ azuis você vê conhecimento, ele parece ter vivido muito tempo.
 50 -11 -2 1d1+2300 14d1+31
 650 125000
 9 9 1
+GenWimpy: 3
+GenRoam: 61
 E
 #13507
 hierofant velha mulher~
@@ -167,8 +170,8 @@ aponta a parte superior de sua cabeça para você.
 13 7 4 1d1+350 6d1+13
 0 13880
 9 9 1
-GenWimpy: 20
-GenRoam: 88
+GenWimpy: 22
+GenRoam: 89
 E
 #13512
 veado~
@@ -181,8 +184,8 @@ Seus olhos possuem uma expressão não muito amigável.
 14 6 4 1d1+400 6d1+14
 0 13496
 9 9 1
-GenWimpy: 100
-GenLoot: 2
+GenWimpy: 67
+GenLoot: 6
 GenRoam: 89
 E
 #13513
@@ -210,8 +213,9 @@ Olhando bem você percebe que isso NÃO é uma cobra!
 9 11 6 1d1+175 4d1+9
 0 11371
 9 9 2
-GenWimpy: 28
-GenRoam: 88
+GenWimpy: 32
+GenLoot: 4
+GenRoam: 87
 E
 #13515
 druida~
@@ -225,9 +229,10 @@ demais para pedir que você saia.
 18 2 2 1d1+800 7d1+18
 325 20769
 9 9 1
-GenWimpy: 24
+GenWimpy: 33
 GenLoot: 1
 GenRoam: 89
+GenGroup: 1
 E
 #13516
 druidesa~
@@ -257,7 +262,8 @@ Rã, sabe?  Apenas uma rã.
 8 12 6 1d1+150 4d1+8
 0 1333
 9 9 0
-GenWimpy: 28
+GenWimpy: 34
+GenLoot: 5
 GenRoam: 88
 E
 $

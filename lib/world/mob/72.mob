@@ -49,8 +49,8 @@ tem quatro pequenos tentáculos no centro de sua cabeça.
 6 15 4 1d10+75 1d4+2
 200 1500
 9 9 0
-GenWimpy: 5
-GenRoam: 70
+GenWimpy: 7
+GenRoam: 78
 E
 T 3009
 #7203
@@ -66,7 +66,7 @@ exceto por estar em pé.
 6 15 3 4d6+69 2d4+2
 50 1500
 9 9 0
-GenWimpy: 100
+GenWimpy: 98
 GenLoot: 3
 GenRoam: 89
 E

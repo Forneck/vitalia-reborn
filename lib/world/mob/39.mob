@@ -108,7 +108,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenLoot: 2
+GenLoot: 8
 E
 #3908
 demilich esqueleto~
@@ -272,7 +272,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 68
+GenRoam: 83
 E
 #3917
 svern demonio~
@@ -291,7 +291,7 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
+GenWimpy: 6
 GenRoam: 89
 E
 #3918
@@ -312,7 +312,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 6
+GenRoam: 3
 E
 #3919
 valik zumbi dragao~
@@ -423,8 +423,9 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenLoot: 1
-GenRoam: 51
+GenLoot: 2
+GenRoam: 67
+GenGroup: 1
 E
 #3925
 yeti agua~

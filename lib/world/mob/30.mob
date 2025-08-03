@@ -639,8 +639,8 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
-GenWimpy: 46
-GenRoam: 76
+GenWimpy: 44
+GenRoam: 85
 E
 T 3013
 #3061
@@ -654,9 +654,9 @@ Que trabalho pesado ele tem.
 1 20 9 2d6+10 1d5+0
 34 100
 9 9 1
-GenWimpy: 16
+GenWimpy: 18
 GenLoot: 5
-GenRoam: 86
+GenRoam: 87
 E
 #3062
 cachorro fido~
@@ -671,9 +671,9 @@ cheios de pedaços de carne apodrecida grudadas.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 41
+GenWimpy: 44
 GenLoot: 6
-GenRoam: 86
+GenRoam: 87
 E
 T 3014
 #3063
@@ -727,8 +727,8 @@ O odif é um deus pequeno que foi transformado por algum cachorro.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 5
-GenRoam: 73
+GenWimpy: 9
+GenRoam: 79
 E
 T 3014
 #3067
@@ -783,6 +783,8 @@ O gatinho parece ser um gracioso, pequenino e destemido lutador.
 0 100
 9 9 0
 BareHandAttack: 8
+GenWimpy: 1
+GenGroup: 4
 E
 #3091
 cachorrinho~
@@ -835,6 +837,8 @@ O lobo parece ser forte e um lutador que desconhece o medo.
 0 1600
 9 9 0
 BareHandAttack: 4
+GenWimpy: 2
+GenGroup: 8
 E
 #3095
 belchior gerente~

@@ -43,8 +43,10 @@ An undefined string.
 5 16 5 1d12+48 2d4+0
 30 1000
 9 9 1
-GenWimpy: 27
-GenRoam: 37
+GenWimpy: 35
+GenLoot: 3
+GenRoam: 81
+GenGroup: 2
 E
 #7003
 aranha pequena peluda~
@@ -57,7 +59,7 @@ An undefined string.
 1 20 3 1d12+8 1d4+0
 1 100
 9 9 1
-GenWimpy: 98
+GenWimpy: 100
 GenRoam: 87
 E
 #7004
@@ -83,7 +85,8 @@ An undefined string.
 3 17 9 2d5+35 1d7+0
 2 350
 9 9 2
-GenWimpy: 50
+GenWimpy: 56
+GenLoot: 4
 GenRoam: 87
 E
 #7006
@@ -97,8 +100,10 @@ An undefined string.
 4 16 7 2d5+40 1d9+0
 1 1000
 9 9 2
-GenWimpy: 81
-GenRoam: 87
+GenWimpy: 96
+GenLoot: 4
+GenRoam: 89
+GenGroup: 1
 E
 T 3008
 #7007
@@ -154,8 +159,8 @@ brilhantes.  A parte de baixo tem uma cor alaranjada.
 12 9 2 2d26+148 2d7+1
 1500 13000
 9 9 0
-GenWimpy: 12
-GenRoam: 65
+GenWimpy: 13
+GenRoam: 87
 E
 #7040
 dragao vermelho~
@@ -221,7 +226,9 @@ verde pálido.
 350 16000
 9 9 0
 GenWimpy: 20
-GenRoam: 88
+GenLoot: 7
+GenRoam: 89
+GenGroup: 1
 E
 #7044
 bolha lemure~
@@ -236,7 +243,8 @@ mas ela ataca de qualquer jeito.  Parece que a mente dela foi queimada.
 5 16 6 3d5+57 2d4+0
 0 1000
 9 9 2
-GenWimpy: 66
+GenWimpy: 79
+GenLoot: 2
 GenRoam: 88
 E
 #7045

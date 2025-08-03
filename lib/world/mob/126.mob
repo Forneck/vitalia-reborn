@@ -1722,7 +1722,7 @@ fica no topo da árvore.
 0 15000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 48
+GenWimpy: 59
 E
 #12675
 Dvalin soberano anao~
@@ -2215,8 +2215,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 53
-GenRoam: 82
+GenWimpy: 58
+GenRoam: 40
 E
 #12697
 ave marinha~

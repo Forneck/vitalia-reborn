@@ -9,8 +9,8 @@ O doente mental tem apenas um olhar vazio.
 2 19 9 2d4+16 1d4+1
 250 400
 9 9 1
-GenWimpy: 74
-GenLoot: 3
+GenWimpy: 77
+GenLoot: 4
 GenRoam: 88
 E
 #20101
@@ -51,7 +51,7 @@ na sua suposição.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 1
-GenWimpy: 20
+GenWimpy: 21
 E
 #20104
 paciente mental~
@@ -66,8 +66,8 @@ roupa que ela viu, feroz, com uma luz triunfante em seus olhos.
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 1
-GenWimpy: 18
-GenRoam: 79
+GenWimpy: 21
+GenRoam: 81
 E
 #20105
 paciente mental~
@@ -81,8 +81,8 @@ Há uma grande possibilidade de que Ted seja um grande amigo imaginário...
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 52
-GenRoam: 84
+GenWimpy: 53
+GenRoam: 85
 E
 #20106
 cerebro~
@@ -119,8 +119,8 @@ terminam por revelar o eterno paciente dentro dele.
 5 15 9 10d5+20 2d3+2
 1100 1000
 9 9 1
-GenWimpy: 27
-GenRoam: 77
+GenWimpy: 29
+GenRoam: 82
 E
 #20108
 assistente~
@@ -324,8 +324,8 @@ algum dia alguém traga-lhe água.
 1 20 10 1d1+19 1d3+1
 50 220
 9 9 1
-GenWimpy: 13
-GenRoam: 79
+GenWimpy: 17
+GenRoam: 84
 E
 #20120
 barba ruiva~
@@ -591,6 +591,8 @@ ele pensa na sua próxima vítima.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
+GenWimpy: 1
+GenRoam: 30
 E
 #20160
 cervo~

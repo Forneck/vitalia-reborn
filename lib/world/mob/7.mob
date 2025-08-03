@@ -17,9 +17,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 6
-GenRoam: 87
-GenGroup: 42
+GenWimpy: 5
+GenRoam: 89
+GenGroup: 45
 E
 #701
 corpo zumbi morto vivo criatura~
@@ -41,7 +41,7 @@ Wis: 15
 Con: 15
 Cha: 15
 GenWimpy: 35
-GenLoot: 9
+GenLoot: 13
 GenRoam: 89
 E
 #702
@@ -62,8 +62,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 46
-GenRoam: 86
+GenWimpy: 48
+GenRoam: 87
 E
 #705
 monstrinho menor criatura~
@@ -85,8 +85,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 39
-GenLoot: 1
+GenWimpy: 46
+GenLoot: 7
 GenRoam: 89
 E
 #706
@@ -108,9 +108,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 27
+GenWimpy: 32
 GenLoot: 1
-GenRoam: 87
+GenRoam: 88
 E
 #707
 cristal monsto~
@@ -131,8 +131,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 42
-GenLoot: 7
+GenWimpy: 29
+GenLoot: 15
+GenEquip: 1
+GenRoam: 4
 E
 #708
 escorpião escorpiao vermelho~
@@ -242,7 +244,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 65
+GenWimpy: 74
+GenLoot: 14
 GenRoam: 88
 E
 #714
@@ -289,9 +292,9 @@ Wis: 15
 Con: 15
 Cha: 15
 GenWimpy: 100
-GenLoot: 1
-GenRoam: 84
-GenGroup: 27
+GenLoot: 3
+GenRoam: 88
+GenGroup: 32
 E
 #716
 pequena encurvada crianca criança~
@@ -387,7 +390,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 24
+GenWimpy: 23
 GenLoot: 2
 GenEquip: 1
 GenRoam: 89
@@ -429,7 +432,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 29
+GenWimpy: 32
 GenLoot: 5
 GenEquip: 1
 GenRoam: 89
@@ -471,9 +474,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 28
+GenWimpy: 32
 GenLoot: 1
-GenRoam: 83
+GenRoam: 87
 E
 #799
 banda~

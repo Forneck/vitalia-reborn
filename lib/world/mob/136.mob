@@ -9,8 +9,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12880
 9 9 2
-GenWimpy: 44
-GenLoot: 1
+GenWimpy: 39
+GenLoot: 2
 GenRoam: 89
 E
 #13601
@@ -68,9 +68,9 @@ Um veado, um cervo fêmea...    Ah Chega!!
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 1
-GenWimpy: 22
+GenWimpy: 23
 GenLoot: 1
-GenRoam: 87
+GenRoam: 88
 E
 #13605
 duende floresta~
@@ -83,9 +83,8 @@ Ele olha para você e ri frenéticamente.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 1
-GenWimpy: 38
-GenRoam: 88
-GenGroup: 1
+GenWimpy: 37
+GenRoam: 89
 E
 #13606
 agil raposa~
@@ -98,8 +97,8 @@ An undefined string.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 0
-GenWimpy: 38
-GenRoam: 85
+GenWimpy: 43
+GenRoam: 84
 E
 #13607
 multicolorida borboleta~
@@ -155,7 +154,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12937
 9 9 1
-GenWimpy: 100
+GenWimpy: 74
+GenLoot: 8
 GenRoam: 89
 E
 $

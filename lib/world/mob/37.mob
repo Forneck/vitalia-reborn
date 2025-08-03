@@ -424,7 +424,7 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 12
+GenWimpy: 5
 GenLoot: 3
 GenRoam: 89
 E
@@ -624,10 +624,10 @@ Ele é tímido e solitário, fujindo da luz e da multidão.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
+GenWimpy: 9
 GenLoot: 2
-GenRoam: 67
-GenGroup: 11
+GenRoam: 60
+GenGroup: 8
 E
 #3732
 zumbi guarda~

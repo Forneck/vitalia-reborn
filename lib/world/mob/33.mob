@@ -10,8 +10,8 @@ pessoas mais chatas do mundo.
 7 14 4 3d5+83 2d4+1
 1000 2250
 9 9 1
-GenWimpy: 7
-GenRoam: 75
+GenWimpy: 8
+GenRoam: 84
 E
 #3301
 comerciante~
@@ -177,8 +177,8 @@ quando ele passa.
 11 10 -2 3d5+133 2d6+2
 1200 11000
 9 9 1
-GenWimpy: 9
-GenEquip: 2
+GenWimpy: 13
+GenEquip: 3
 GenRoam: 89
 E
 #3312
@@ -238,10 +238,10 @@ dentes cariados.  Porém, sua espada é polida e limpa...
 16 5 -2 3d5+195 2d8+3
 1000 25000
 9 9 1
-GenWimpy: 8
-GenLoot: 3
-GenRoam: 87
-GenGroup: 3
+GenWimpy: 10
+GenLoot: 4
+GenRoam: 88
+GenGroup: 1
 E
 #3316
 bandido sentinela~
@@ -258,8 +258,8 @@ serviço de guarda...
 18 3 -3 3d5+220 3d6+2
 2400 32000
 9 9 1
-GenWimpy: 7
-GenLoot: 40
+GenWimpy: 12
+GenLoot: 47
 E
 #3317
 mineiro escravo~
@@ -274,7 +274,7 @@ você deveria, ou melhor, se você pode dar-lhe a liberdade.
 6 15 10 3d5+70 1d8+1
 0 1500
 9 9 1
-GenWimpy: 17
+GenWimpy: 9
 GenLoot: 98
 E
 #3318

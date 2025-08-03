@@ -383,6 +383,7 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 5 5 1
+GenWimpy: 2
 E
 #15027
 michael guarda real~
@@ -397,6 +398,7 @@ como um lutador experiente.
 11 9 2 3d6+130 1d8+4
 400 11000
 5 5 1
+GenWimpy: 2
 E
 #15028
 hans guarda real~
@@ -443,8 +445,8 @@ desejo de vingança.
 11 6 3 4d4+95 2d4+8
 0 10000
 9 9 0
-GenWimpy: 95
-GenRoam: 18
+GenWimpy: 94
+GenRoam: 20
 E
 #15031
 esqueleto aldeao~
@@ -460,7 +462,8 @@ desejo de vingança.
 10 8 3 4d4+80 2d3+6
 0 8000
 9 9 0
-GenWimpy: 79
+GenWimpy: 66
+GenLoot: 2
 E
 #15032
 poço demonio~

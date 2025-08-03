@@ -119,7 +119,7 @@ de duas mãos.
 50 2 -10 5d7+800 3d7+16
 1000 32000
 9 9 1
-GenWimpy: 6
+GenWimpy: 13
 E
 #17308
 gareth cavaleiro beumains~
@@ -162,7 +162,7 @@ e carregando sua grande espada Galantine.
 82 2 -10 4d8+1000 5d8+17
 8000 74998
 9 9 1
-GenWimpy: 1
+GenWimpy: 4
 E
 #17311
 lamorak cavaleiro~
@@ -344,7 +344,7 @@ Lancelot.
 50 4 -1 7d9+409 2d12+10
 10000 34000
 9 9 2
-GenWimpy: 4
+GenWimpy: 6
 E
 #17323
 escudeiro encantado~
@@ -374,9 +374,10 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 14
-GenRoam: 55
-GenGroup: 3
+GenWimpy: 19
+GenLoot: 1
+GenRoam: 80
+GenGroup: 2
 E
 #17325
 bufao dagonet bobo~
@@ -461,7 +462,7 @@ nele.
 25 5 0 5d3+400 6d7+7
 1200 21000
 9 9 1
-GenWimpy: 7
+GenWimpy: 5
 GenRoam: 89
 E
 #17331
@@ -476,8 +477,8 @@ mercadorias.
 25 5 -1 7d12+600 5d6+12
 10000 39004
 9 9 1
-GenWimpy: 1
-GenRoam: 15
+GenWimpy: 3
+GenRoam: 70
 E
 #17332
 monge~
@@ -547,7 +548,7 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
-GenWimpy: 21
+GenWimpy: 26
 GenRoam: 89
 E
 #17337
@@ -653,7 +654,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 19
+GenWimpy: 20
 E
 #17344
 escrava~
@@ -667,7 +668,7 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 9
+GenWimpy: 11
 E
 #17345
 chefe saxao render~
@@ -682,8 +683,8 @@ coberto por piolhos.
 73 2 -13 5d13+1200 6d6+17
 10000 60994
 9 9 1
-GenWimpy: 6
-GenLoot: 27
+GenWimpy: 10
+GenLoot: 36
 E
 #17346
 guarda fronteira norte~
@@ -960,7 +961,8 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 14
-GenLoot: 1
+GenWimpy: 19
+GenLoot: 2
+GenRoam: 66
 E
 $

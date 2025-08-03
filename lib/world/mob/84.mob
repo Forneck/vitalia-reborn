@@ -16,6 +16,8 @@ Dex: 16
 Int: 8
 Wis: 8
 Cha: 8
+GenWimpy: 13
+GenLoot: 9
 E
 #8401
 beren~
@@ -331,7 +333,7 @@ Int: 10
 Wis: 8
 Con: 7
 Cha: 18
-GenWimpy: 16
+GenWimpy: 19
 GenRoam: 87
 E
 $

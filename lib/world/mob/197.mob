@@ -51,7 +51,7 @@ VOCÊ!!
 11 14 0 15d6+100 2d6+4
 0 6000
 9 9 2
-GenWimpy: 30
+GenWimpy: 31
 GenRoam: 89
 E
 #19704
@@ -67,11 +67,11 @@ que você está esperando?  AO ATAQUE!
 12 13 0 15d6+100 2d6+6
 0 8000
 9 9 2
-GenWimpy: 100
-GenLoot: 5
+GenWimpy: 95
+GenLoot: 8
 GenEquip: 1
 GenRoam: 89
-GenGroup: 11
+GenGroup: 8
 E
 #19705
 cobra verde~
@@ -116,10 +116,10 @@ desejá-la.
 48 -8 -20 15d6+800 10d6+28
 2000 150000
 9 9 1
-GenWimpy: 10
-GenLoot: 10
-GenEquip: 1
-GenRoam: 77
+GenWimpy: 12
+GenLoot: 18
+GenEquip: 4
+GenRoam: 84
 E
 #19708
 orc lider negro~
@@ -261,7 +261,7 @@ aprender os movimentos de luta dos orcs em treinamento.
 13 4 -2 15d6+300 3d6+10
 100 24000
 9 9 2
-GenWimpy: 30
+GenWimpy: 31
 GenLoot: 3
 GenEquip: 2
 E

@@ -28,9 +28,9 @@ para você, ambiciosamente.
 1500 10500
 9 9 2
 GenWimpy: 100
-GenLoot: 36
+GenLoot: 39
 GenEquip: 2
-GenRoam: 89
+GenRoam: 87
 E
 T 3009
 #5202
@@ -45,8 +45,8 @@ na frente.
 11 10 1 1d20+130 2d7+0
 0 13000
 9 9 0
-GenWimpy: 18
-GenLoot: 54
+GenWimpy: 21
+GenLoot: 71
 E
 #5203
 mímico pedra esqueletos~
@@ -74,7 +74,7 @@ destruição.
 11 11 3 2d6+110 2d6+0
 0 10500
 9 9 0
-GenWimpy: 17
+GenWimpy: 18
 E
 #5205
 mimico potes pedacos~
@@ -103,8 +103,8 @@ que alguém esteve aqui antes de você...
 11 9 0 1d12+110 4d3+1
 0 12000
 9 9 0
-GenWimpy: 26
-GenLoot: 3
+GenWimpy: 30
+GenLoot: 4
 E
 #5207
 lagarto chifres~
@@ -146,8 +146,8 @@ para você, ambiciosamente.
 9 10 3 1d12+120 1d4+5
 1500 7000
 9 9 2
-GenWimpy: 100
-GenLoot: 33
+GenWimpy: 96
+GenLoot: 52
 GenRoam: 89
 E
 T 3009

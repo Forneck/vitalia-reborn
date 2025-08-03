@@ -27,7 +27,7 @@ VOCÊ não teria o mesmo gosto de um coelho.
 5 16 5 50d1+10 3d3+2
 0 2000
 9 9 1
-GenWimpy: 33
+GenWimpy: 34
 GenLoot: 10
 GenRoam: 88
 E
@@ -43,7 +43,7 @@ em retirada..  OPA..  Lá vai seu almoço!
 3 18 7 30d1+5 1d3+1
 0 600
 9 9 1
-GenWimpy: 23
+GenWimpy: 25
 GenRoam: 87
 E
 #5704
@@ -86,8 +86,9 @@ mundo perigoso lá fora.'
 30 0 -2 200d2+200 3d6+11
 20000 40000
 9 9 1
-GenWimpy: 19
+GenWimpy: 17
 GenLoot: 5
+GenRoam: 5
 E
 #5707
 diabinho diabo~
@@ -117,7 +118,7 @@ dentes.  Ele o fita com muita fúria em seus olhos.
 1 15000
 9 9 1
 GenWimpy: 29
-GenRoam: 23
+GenRoam: 22
 E
 #5709
 cidadao graye homem~
@@ -131,10 +132,10 @@ sitiada por demônios.
 17 6 1 150d2+30 2d8+8
 1000 22000
 9 9 1
-GenWimpy: 5
+GenWimpy: 21
 GenLoot: 2
 GenEquip: 3
-GenRoam: 86
+GenRoam: 89
 E
 #5710
 cidada mulher~
@@ -148,7 +149,7 @@ sitiada por demônios.
 19 6 2 150d2+20 2d7+9
 3000 22000
 9 9 2
-GenWimpy: 17
+GenWimpy: 18
 GenLoot: 2
 GenEquip: 3
 GenRoam: 89
@@ -193,7 +194,7 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 22
+GenWimpy: 20
 E
 #5714
 rymat conselheiro~
@@ -208,7 +209,7 @@ lhe dá as costas e continua a lamentar-se, tremendo incontrolavelmente.
 23 0 0 350d1+50 3d8+13
 1000 70000
 9 9 1
-GenWimpy: 22
+GenWimpy: 24
 E
 #5715
 irgon arque demonio~

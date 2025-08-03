@@ -9,7 +9,7 @@ Isto parece ser feito de nada mais que escuridão...
 9 10 1 9d9+90 2d5+5
 100 4000
 9 9 0
-GenWimpy: 56
+GenWimpy: 57
 GenLoot: 2
 GenRoam: 89
 E
@@ -40,7 +40,7 @@ exterminador de coelhinhos em pessoa, Edgar o Horrível!
 1 20 10 3d9+10 1d8+1
 23 100
 9 9 1
-GenWimpy: 21
+GenWimpy: 23
 GenRoam: 86
 E
 #2503
@@ -67,7 +67,7 @@ Ou então, ele pode apenas estar com dor de cabeça.
 10 10 -1 10d10+100 1d8+8
 436 3500
 9 9 1
-GenWimpy: 10
+GenWimpy: 12
 GenRoam: 89
 E
 T 3009
@@ -107,8 +107,8 @@ mas ela certamente se encaixa no esperado para uma torre cheia de magos.
 20 6 -1 20d20+200 3d4+8
 1092 31300
 9 9 2
-GenWimpy: 7
-GenLoot: 1
+GenWimpy: 13
+GenLoot: 4
 E
 T 3009
 #2508
@@ -123,8 +123,8 @@ panela.
 11 8 1 11d11+110 3d4+4
 116 4600
 9 9 1
-GenWimpy: 9
-GenLoot: 5
+GenWimpy: 5
+GenLoot: 8
 E
 T 3009
 #2509
@@ -182,9 +182,9 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 35
-GenLoot: 2
-GenRoam: 64
+GenWimpy: 58
+GenLoot: 3
+GenRoam: 81
 E
 #2513
 guardioes maiores olhos~
@@ -197,10 +197,10 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 10
-GenLoot: 46
+GenWimpy: 24
+GenLoot: 59
 GenRoam: 89
-GenGroup: 78
+GenGroup: 90
 E
 #2514
 mago visitante~
@@ -213,7 +213,7 @@ Ele parece estar bastante sonolento.
 12 8 -2 12d12+120 2d4+5
 726 6200
 4 4 1
-GenWimpy: 5
+GenWimpy: 8
 GenLoot: 2
 E
 T 3009
@@ -228,7 +228,8 @@ Ela parece estar bastante concentrada em seus estudos.
 7 7 2 7d6+25 2d4+5
 369 2950
 6 6 2
-GenWimpy: 100
+GenWimpy: 98
+GenLoot: 1
 E
 T 3009
 #2516
@@ -243,8 +244,7 @@ Ele parece ignorar tudo à sua volta, exceto o feitiço que está memorizando.
 487 2750
 9 9 1
 GenWimpy: 100
-GenLoot: 2
-GenBrave: 1
+GenLoot: 5
 E
 T 3009
 #2517
@@ -260,7 +260,6 @@ Ele parece estar sonhando.
 211 2650
 4 4 1
 GenWimpy: 100
-GenBrave: 1
 E
 T 3009
 #2518
@@ -274,7 +273,8 @@ Ele parece ser um jovem travesso.
 7 7 1 7d6+25 2d4+5
 382 2300
 9 9 1
-GenWimpy: 92
+GenWimpy: 100
+GenLoot: 1
 E
 T 3009
 #2519
@@ -289,7 +289,7 @@ algumas marcas de queimaduras menores marcam sua pelugem mosqueada.
 1 20 1 1d1+10 1d4+1
 0 11
 9 9 2
-GenWimpy: 75
+GenWimpy: 79
 E
 #2520
 estudante~
@@ -302,7 +302,7 @@ O estudante boceja.
 8 9 1 8d8+80 2d4+6
 263 3000
 6 6 1
-GenWimpy: 21
+GenWimpy: 24
 GenLoot: 1
 E
 T 3009
@@ -332,7 +332,9 @@ Ele pisca, surgindo e voltando a desaparecer, tentando dominar o feitiço.
 8 8 -2 8d8+80 2d4+6
 198 2200
 9 9 1
-GenWimpy: 11
+GenWimpy: 14
+GenLoot: 1
+GenBrave: 1
 E
 T 3009
 #2523
@@ -490,7 +492,7 @@ An undefined string.
 16 6 -2 16d16+160 3d4+6
 1050 21300
 9 9 1
-GenWimpy: 3
+GenWimpy: 4
 E
 T 3009
 #2534
@@ -629,6 +631,7 @@ Ele parece ser pouco inteligente.
 18 8 -3 18d18+180 4d5+5
 0 22350
 9 9 0
+GenWimpy: 4
 E
 #2544
 golem carne~
@@ -754,9 +757,9 @@ revolver de repulsão.
 20 5 -2 20d20+200 3d6+5
 2150 26850
 9 9 2
-GenWimpy: 99
+GenWimpy: 100
 GenLoot: 1
-GenRoam: 88
+GenRoam: 89
 E
 T 3009
 #2553
@@ -882,7 +885,7 @@ Parece ser nada mais que uma grande bola de pêlos, com garras.
 15 4 -4 15d8+10 3d7+3
 0 7950
 9 9 0
-GenWimpy: 40
+GenWimpy: 43
 E
 #2562
 mestre branco~

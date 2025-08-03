@@ -13,7 +13,7 @@ de aparência sombria.
 9 9 1
 GenWimpy: 6
 GenRoam: 80
-GenGroup: 4
+GenGroup: 1
 E
 #8102
 cidadao egipcio~
@@ -43,7 +43,7 @@ nota um estranho brilho em seus olhos...
 20 5 -5 2d20+100 1d2+13
 5000 10000
 9 9 2
-GenWimpy: 4
+GenWimpy: 9
 E
 #8104
 escravo~
@@ -59,8 +59,8 @@ tempo e pelo cansaço.
 20 15 2 3d30+200 1d1+4
 1 7000
 9 9 1
-GenWimpy: 11
-GenRoam: 85
+GenWimpy: 9
+GenRoam: 89
 E
 #8105
 campones~
@@ -361,7 +361,7 @@ exala.
 30 7 -1 2d1+2000 3d3+10
 1000 20000
 9 9 1
-GenWimpy: 3
+GenWimpy: 4
 E
 #8127
 ajudante embalsamador~
@@ -405,7 +405,8 @@ Ele é apenas um garoto sorridente sempre pronto para ajudar.
 20 10 -3 5d9+600 4d1+10
 5 9000
 9 9 1
-GenWimpy: 5
+GenWimpy: 6
+GenLoot: 1
 E
 #8130
 eunuco~
@@ -484,8 +485,8 @@ Esse gato negro aparenta ser muito esperto e corajoso.
 7 19 0 2d5+150 1d2+2
 0 100
 9 9 1
-GenWimpy: 37
-GenRoam: 76
+GenWimpy: 40
+GenRoam: 82
 E
 #8136
 escaravelho~
@@ -498,8 +499,8 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 5 15 0 3d4+400 1d2+3
 0 100
 9 9 1
-GenWimpy: 5
-GenRoam: 41
+GenWimpy: 6
+GenRoam: 66
 E
 #8137
 rato~
@@ -512,7 +513,7 @@ Esse rato nojento está todo coberto com um espessa e fétida camada de lama.
 7 19 0 3d3+200 1d2+2
 0 100
 9 9 1
-GenWimpy: 19
+GenWimpy: 21
 E
 #8138
 khons~
@@ -582,9 +583,10 @@ Você mal o vê diante da escuridão.
 30 5 0 3d3+600 1d2+2
 500 15000
 9 9 1
-GenWimpy: 7
+GenWimpy: 12
+GenLoot: 1
 GenRoam: 89
-GenGroup: 2
+GenGroup: 1
 E
 #8143
 cordoniz~
@@ -600,8 +602,8 @@ sua busca por comida.
 5 19 0 2d2+50 2d1+3
 0 500
 9 9 1
-GenWimpy: 24
-GenRoam: 71
+GenWimpy: 25
+GenRoam: 61
 E
 #8144
 explorador homem~
@@ -631,8 +633,9 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 37
-GenRoam: 86
+GenWimpy: 41
+GenLoot: 1
+GenRoam: 87
 E
 #8146
 crianca egipcia~
@@ -717,8 +720,8 @@ que deve ser sua boca.
 30 10 0 2d5+1000 2d2+14
 0 21000
 9 9 2
-GenWimpy: 14
-GenRoam: 87
+GenWimpy: 13
+GenRoam: 88
 E
 #8152
 soldado egipcio~

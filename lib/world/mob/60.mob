@@ -12,9 +12,9 @@ vive uma vida simples e pacífica.
 5 15 6 1d12+60 1d4+3
 100 1050
 9 9 1
-GenWimpy: 12
-GenLoot: 2
-GenRoam: 76
+GenWimpy: 17
+GenLoot: 3
+GenRoam: 81
 E
 #6001
 pequeno coelho~
@@ -27,9 +27,9 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 0 20 6 1d4+1 1d4+0
 0 60
 9 9 0
-GenWimpy: 81
+GenWimpy: 87
 GenLoot: 1
-GenRoam: 86
+GenRoam: 85
 E
 #6002
 urso marrom~
@@ -71,7 +71,7 @@ castanhos que olham fixamente para você, com grande interesse.
 2 19 5 2d8+8 1d6+0
 0 230
 9 9 2
-GenWimpy: 48
+GenWimpy: 50
 GenRoam: 86
 E
 #6005
@@ -86,8 +86,9 @@ peluda cauda.
 2 18 6 1d4+18 1d6+0
 0 225
 9 9 0
-GenWimpy: 43
-GenRoam: 87
+GenWimpy: 50
+GenLoot: 6
+GenRoam: 83
 E
 #6006
 passaro grande~
@@ -100,7 +101,7 @@ O pássaro parece que não vai viver muito, pelo jeito.
 0 17 10 2d3+1 1d2+1
 0 25
 9 9 0
-GenWimpy: 99
+GenWimpy: 100
 E
 #6007
 gato lince gato-selvagem~
@@ -127,7 +128,8 @@ O pardal parece estar aproveitando bem a vida.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 58
+GenWimpy: 64
+GenLoot: 4
 GenRoam: 87
 E
 #6009
@@ -141,9 +143,9 @@ O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 67
-GenLoot: 2
-GenRoam: 83
+GenWimpy: 70
+GenLoot: 7
+GenRoam: 85
 E
 #6010
 esquilo~
@@ -187,8 +189,9 @@ no chão.
 2 19 8 1d12+22 1d6+0
 0 200
 9 9 0
-GenWimpy: 67
-GenRoam: 76
+GenWimpy: 71
+GenLoot: 2
+GenRoam: 81
 E
 #6013
 esquilinho~
@@ -204,9 +207,9 @@ pensa você.
 0 20 5 2d5+3 1d4+0
 0 40
 9 9 0
-GenWimpy: 71
-GenLoot: 3
-GenRoam: 78
+GenWimpy: 74
+GenLoot: 5
+GenRoam: 86
 E
 #6014
 corvo negro passaro~
@@ -221,7 +224,8 @@ comida.
 3 200
 9 9 0
 GenWimpy: 100
-GenLoot: 48
+GenLoot: 52
+GenRoam: 1
 E
 #6015
 grotesco abutre urubu~
@@ -296,6 +300,6 @@ O pato é bastante gordo.   Ele parece estar aproveitando bem sua vida.
 0 75
 9 9 0
 GenWimpy: 100
-GenRoam: 81
+GenRoam: 85
 E
 $

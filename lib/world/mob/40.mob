@@ -9,8 +9,8 @@ Ela parece estar com fome.
 11 7 4 5d10+50 3d6+0
 0 12000
 9 9 0
-GenWimpy: 25
-GenLoot: 2
+GenWimpy: 30
+GenLoot: 23
 E
 T 3008
 #4001
@@ -49,8 +49,8 @@ Ele é horrível.
 4 16 5 2d10+40 1d8+1
 50 800
 9 9 0
-GenWimpy: 96
-GenRoam: 88
+GenWimpy: 99
+GenRoam: 87
 E
 #4004
 orc~
@@ -63,8 +63,9 @@ Você percebe toda a maldade no seu olhar...
 5 15 5 2d10+60 2d4+0
 100 900
 9 9 0
-GenWimpy: 85
-GenRoam: 82
+GenWimpy: 100
+GenLoot: 3
+GenRoam: 88
 E
 #4005
 orc enorme~
@@ -105,6 +106,7 @@ Ele parece ter jeito com armas.
 200 2500
 9 9 1
 GenWimpy: 100
+GenLoot: 6
 GenRoam: 89
 E
 #4052
@@ -118,7 +120,7 @@ O hobgoblin parece um tanto perdido.
 6 12 6 3d8+70 2d4+0
 100 1500
 9 9 1
-GenWimpy: 52
+GenWimpy: 66
 GenRoam: 88
 E
 #4053
@@ -186,7 +188,7 @@ O leão parece bastante hostil com enormes garras e grandes dentes.
 5 16 5 1d10+60 2d4+0
 0 900
 9 9 1
-GenWimpy: 72
+GenWimpy: 78
 GenRoam: 89
 E
 #4058
@@ -257,7 +259,7 @@ o SEU ouro também...
 8 13 3 1d10+100 2d5+2
 100 4000
 9 9 1
-GenWimpy: 57
+GenWimpy: 54
 GenRoam: 89
 E
 T 3007
@@ -285,7 +287,7 @@ Bem, ela não parece prestar muita atenção em você.
 0 1500
 9 9 0
 GenWimpy: 100
-GenRoam: 80
+GenRoam: 85
 E
 #4106
 guerreiro~
@@ -298,10 +300,9 @@ Ele não parece muito amigável...
 9 10 3 3d10+100 2d6+2
 500 9000
 9 9 1
-GenWimpy: 49
+GenWimpy: 67
 GenEquip: 1
 GenRoam: 89
-GenGroup: 2
 E
 #4107
 kobold~
@@ -314,7 +315,7 @@ Ele parece lodoso..
 7 14 4 4d10+25 1d9+1
 20 3000
 9 9 1
-GenWimpy: 100
+GenWimpy: 98
 GenLoot: 1
 GenRoam: 89
 E

@@ -37,8 +37,8 @@ Ele é um esquilo pequeno e marrom.  Um excelente espécime saltador.
 0 20 -1 1d3+0 1d1+1
 0 10
 9 9 0
-GenWimpy: 6
-GenRoam: 79
+GenWimpy: 7
+GenRoam: 82
 E
 #6203
 cacador orc~
@@ -52,7 +52,7 @@ Sua pele verde está definitivamente pintada e ele parece coxear um pouco...
 7 14 5 3d5+83 2d3+2
 0 2250
 9 9 1
-GenWimpy: 10
+GenWimpy: 12
 GenLoot: 2
 GenRoam: 88
 E
@@ -181,8 +181,8 @@ para longe do seu caminho para chegar até você.
 12 9 -2 3d5+170 2d7+4
 0 15000
 9 9 0
-GenWimpy: 45
-GenRoam: 88
+GenWimpy: 56
+GenRoam: 89
 E
 #6213
 coisa mutante~
