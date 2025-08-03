@@ -297,6 +297,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"say", "s", POS_RESTING, do_say, 0, 0, CMD_NOARG},
     {"sacrifice", "sac", POS_RESTING, do_sac, 0, 0, CMD_ONEARG},
     {"score", "sc", POS_DEAD, do_score, 0, 0, CMD_NOARG},
+    {"affects", "af", POS_DEAD, do_affects, 0, 0, CMD_NOARG},
     {"scan", "sca", POS_RESTING, do_cast, 1, SKILL_SCAN, CMD_NOARG},
     {"scopy", "scopy", POS_DEAD, do_oasis_copy, LVL_GOD, CON_SEDIT, CMD_NOARG},
     {"sit", "si", POS_RESTING, do_sit, 0, 0, CMD_NOARG},

@@ -10643,6 +10643,27 @@ comando para aumentar o numero de informacoes fornecidas pelo comando.
 
 Veja tambem: AC, EXPERIENCIA
 #1
+AFFECTS EFEITOS
+
+Uso: affects
+
+   Mostra todos os efeitos mágicos ativos no seu personagem, incluindo o tempo
+restante em horas do MUD. Este comando é útil para verificar quais magias
+estão afetando você e quando elas irão terminar.
+
+Exemplo:
+   affects
+   Efeitos ativos:
+     fly [24 hs]
+     sneak [2 hs]
+     sense life [8 hs]
+     detect magic [12 hs]
+
+   Se você não tiver nenhum efeito ativo, será mostrada a mensagem 
+   "Nenhum efeito ativo."
+
+Veja tambem: SCORE, SPELL
+#1
 SCREENWIDTHS SCREEN_WIDTHS
 
 Usage: toggle screenwidth [#]
