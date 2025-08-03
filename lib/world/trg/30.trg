@@ -313,7 +313,7 @@ while %item%
   set next_item %item.next_in_list%
   * Check for a corpse. Corpse on TBA is vnum 65535. Stock is -1.
   if %item.vnum(65535)%
-    emote brutalmente devora $p.
+    emote brutalmente devora um corpo.
     %purge% %item%
     halt
   end

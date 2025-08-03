@@ -77,8 +77,8 @@ Ele parece pavoroso.
 7 11 2 3d20+75 2d6+2
 200 3000
 9 9 1
-GenWimpy: 22
-GenRoam: 86
+GenWimpy: 25
+GenRoam: 87
 E
 #4050
 guerreiro~
@@ -186,7 +186,7 @@ O leão parece bastante hostil com enormes garras e grandes dentes.
 5 16 5 1d10+60 2d4+0
 0 900
 9 9 1
-GenWimpy: 70
+GenWimpy: 72
 GenRoam: 89
 E
 #4058

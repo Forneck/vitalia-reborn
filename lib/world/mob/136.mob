@@ -125,8 +125,8 @@ Ele se moveu?
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 1
-GenWimpy: 35
-GenRoam: 88
+GenWimpy: 39
+GenRoam: 89
 E
 #13609
 arvore nirin odiosa~
@@ -139,8 +139,8 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 0 15454
 9 9 0
-GenWimpy: 10
-GenRoam: 51
+GenWimpy: 14
+GenRoam: 64
 E
 #13610
 inseto pedra inseto-pedra~

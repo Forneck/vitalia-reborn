@@ -76,9 +76,9 @@ poderia acabar com o sofrimento dela!
 5 17 5 4d4+100 3d4+1
 50 1000
 9 9 2
-GenWimpy: 40
+GenWimpy: 41
 GenLoot: 2
-GenRoam: 87
+GenRoam: 85
 E
 #10305
 mulher canibal~
@@ -177,11 +177,11 @@ Ela é bem parecida com os outros primatas. Cheira mal, horrível.
 500 3500
 9 9 2
 BareHandAttack: 4
-GenWimpy: 71
+GenWimpy: 74
 GenLoot: 2
 GenEquip: 2
-GenRoam: 86
-GenGroup: 3
+GenRoam: 87
+GenGroup: 2
 E
 #10311
 chefe primata~
@@ -253,9 +253,9 @@ sua última refeição.
 6 10 6 2d2+100 3d3+6
 1000 3700
 9 9 2
-GenWimpy: 100
-GenLoot: 17
-GenRoam: 89
+GenWimpy: 99
+GenLoot: 18
+GenRoam: 85
 E
 #10316
 zumbi~
@@ -268,10 +268,10 @@ Este zumbi é alto e forte, e está aqui pronto para lhe matar.
 15 10 7 8d8+750 5d5+8
 3500 4000
 9 9 1
-GenWimpy: 11
+GenWimpy: 7
 GenLoot: 52
-GenRoam: 89
-GenGroup: 20
+GenRoam: 68
+GenGroup: 13
 E
 #10317
 zumbi kenuthi~
@@ -285,7 +285,7 @@ tremenda.
 20 10 10 5d5+900 6d5+8
 5000 6000
 9 9 1
-GenWimpy: 12
+GenWimpy: 9
 GenLoot: 53
 E
 $

@@ -14,7 +14,7 @@ Str: 17
 Dex: 15
 Int: 13
 Wis: 13
-GenWimpy: 7
+GenWimpy: 6
 GenLoot: 5
 E
 #2913
@@ -138,7 +138,10 @@ BareHandAttack: 1
 Dex: 13
 Int: 14
 Wis: 13
-GenWimpy: 4
+GenWimpy: 20
+GenLoot: 1
+GenEquip: 1
+GenBrave: 1
 E
 #2920
 conselheiro Degruziel~
@@ -221,7 +224,7 @@ simplesmente senta aqui, aproveitando toda a vida que acontece ao seu redor.
 100 10000
 5 5 1
 BareHandAttack: 7
-GenWimpy: 2
+GenWimpy: 4
 E
 #2925
 bardo talentoso~
@@ -281,7 +284,7 @@ Uma poça de lama de aparência incomum está aqui, rodopiando.
 3 19 8 0d0+30 1d2+0
 30 900
 9 9 0
-GenWimpy: 9
+GenWimpy: 12
 GenRoam: 1
 E
 #2929
@@ -351,8 +354,7 @@ através de você. Parece completamente destemido.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 0
-GenWimpy: 2
-GenRoam: 8
+GenWimpy: 6
 E
 #2934
 garoto servente~
@@ -385,8 +387,7 @@ Str: 14
 Dex: 13
 Int: 15
 Wis: 14
-GenWimpy: 3
-GenRoam: 1
+GenWimpy: 4
 E
 #2936
 dama bem nascida~
@@ -422,7 +423,7 @@ perder uma refeição.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 1
-GenWimpy: 1
+GenWimpy: 2
 E
 #2938
 guarda mansao~
@@ -511,7 +512,7 @@ nas sombras.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 1
-GenWimpy: 2
+GenWimpy: 3
 E
 #2943
 crianca pequena~
@@ -576,7 +577,7 @@ Um homem está aqui, dormindo em sua cama de viagem.
 10 17 4 2d2+100 1d2+1
 100 10000
 4 4 1
-GenWimpy: 7
+GenWimpy: 8
 E
 #2947
 valentao preto~
@@ -645,8 +646,8 @@ Um esquizofrênico paranoico está aqui, gritando para o mundo.
 9 9 2
 Str: 14
 Dex: 14
-GenWimpy: 11
-GenBrave: 1
+GenWimpy: 29
+GenLoot: 1
 E
 #2951
 idiota~
@@ -864,7 +865,7 @@ Um caranguejo rei está aqui, parecendo mal-humorado.
 100 10000
 9 9 0
 BareHandAttack: 11
-GenWimpy: 1
+GenWimpy: 2
 E
 #2964
 mulher~
@@ -1094,7 +1095,7 @@ Dex: 15
 Int: 13
 Wis: 13
 GenWimpy: 4
-GenLoot: 1
+GenLoot: 3
 E
 T 2902
 #2976
@@ -1117,8 +1118,8 @@ Str: 9
 Dex: 15
 Int: 10
 Wis: 12
-GenWimpy: 4
-GenLoot: 3
+GenWimpy: 7
+GenLoot: 4
 E
 #2977
 criada cozinha~
@@ -1215,6 +1216,7 @@ alimentar uma família de pescadores por semanas.
 100 10000
 9 9 1
 BareHandAttack: 1
+GenWimpy: 2
 E
 #2983
 criado~
@@ -1228,8 +1230,8 @@ importante... Embora o que exatamente ele está fazendo não seja aparente.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 6
-GenRoam: 2
+GenWimpy: 8
+GenRoam: 1
 E
 #2984
 mestre estabulo~

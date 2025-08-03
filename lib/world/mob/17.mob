@@ -87,7 +87,7 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 65
+GenWimpy: 53
 GenLoot: 6
 E
 #1706
@@ -136,7 +136,7 @@ Você não pode conseguir mais nada com ele.
 10 11 4 2d8+325 2d6+11
 23 9000
 9 9 1
-GenWimpy: 25
+GenWimpy: 27
 E
 #1708
 bolha lama~
@@ -223,8 +223,8 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 18 3 0 3d6+625 3d6+21
 0 30000
 9 9 1
-GenWimpy: 45
-GenLoot: 28
+GenWimpy: 44
+GenLoot: 30
 GenRoam: 89
 E
 #1714

@@ -54,8 +54,8 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12000
 9 9 1
-GenWimpy: 27
-GenRoam: 85
+GenWimpy: 31
+GenRoam: 87
 E
 #13504
 inseto galho inseto-galho~
@@ -83,9 +83,8 @@ An undefined string.
 20 0 2 1d1+1000 8d1+20
 0 40000
 9 9 0
-GenWimpy: 7
-GenRoam: 52
-GenBrave: 1
+GenWimpy: 13
+GenRoam: 72
 E
 #13506
 hierofante velho homem~
@@ -211,7 +210,7 @@ Olhando bem você percebe que isso NÃO é uma cobra!
 9 11 6 1d1+175 4d1+9
 0 11371
 9 9 2
-GenWimpy: 26
+GenWimpy: 28
 GenRoam: 88
 E
 #13515

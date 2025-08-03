@@ -165,9 +165,9 @@ Int: 20
 Wis: 13
 Con: 14
 Cha: 15
-GenWimpy: 3
-GenRoam: 11
-GenGroup: 6
+GenWimpy: 5
+GenRoam: 14
+GenGroup: 5
 E
 #8312
 nativa~
@@ -187,6 +187,7 @@ Int: 13
 Wis: 13
 Con: 14
 Cha: 25
+GenWimpy: 3
 E
 #8313
 nativa crianca~
@@ -206,6 +207,8 @@ Int: 13
 Wis: 13
 Con: 14
 Cha: 25
+GenWimpy: 3
+GenLoot: 1
 E
 #8314
 guardia sentinela nativa~

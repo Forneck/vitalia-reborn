@@ -12,9 +12,9 @@ no café da manhã e está com a intenção de comer o mesmo no jantar.
 12 9 2 4d6+140 2d5+3
 100 13000
 9 9 0
-GenWimpy: 6
-GenRoam: 50
-GenGroup: 5
+GenWimpy: 4
+GenRoam: 54
+GenGroup: 4
 E
 #7001
 morcego pequeno ameacador~
@@ -30,7 +30,7 @@ ossos gelam só de você pensar em acordar essa cruel criatura.
 1 20 5 5d2+6 1d5+0
 0 150
 4 9 0
-GenWimpy: 2
+GenWimpy: 3
 E
 #7002
 rato esgoto~
@@ -43,8 +43,8 @@ An undefined string.
 5 16 5 1d12+48 2d4+0
 30 1000
 9 9 1
-GenWimpy: 29
-GenRoam: 67
+GenWimpy: 28
+GenRoam: 52
 E
 #7003
 aranha pequena peluda~
@@ -57,7 +57,7 @@ An undefined string.
 1 20 3 1d12+8 1d4+0
 1 100
 9 9 1
-GenWimpy: 99
+GenWimpy: 100
 GenRoam: 87
 E
 #7004
@@ -97,8 +97,8 @@ An undefined string.
 4 16 7 2d5+40 1d9+0
 1 1000
 9 9 2
-GenWimpy: 81
-GenRoam: 89
+GenWimpy: 82
+GenRoam: 86
 E
 T 3008
 #7007

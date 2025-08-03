@@ -55,8 +55,7 @@ detalhada sem sentir o estômago embrulhar.
 15 5 0 5d6+420 3d5+10
 0 30000
 9 9 0
-GenWimpy: 19
-GenRoam: 1
+GenWimpy: 25
 E
 #28005
 espantalho boneco palha~
@@ -82,7 +81,7 @@ Você vê um goblin com nadadeiras e barbatanas.
 15 5 0 3d10+280 4d3+8
 500 7000
 9 9 0
-GenWimpy: 97
+GenWimpy: 100
 GenLoot: 7
 GenRoam: 89
 E

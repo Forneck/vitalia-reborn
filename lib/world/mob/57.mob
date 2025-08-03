@@ -101,8 +101,8 @@ se ele mordesse seu braço.
 8 12 3 50d1+10 3d3+6
 1 5000
 9 9 1
-GenWimpy: 37
-GenRoam: 8
+GenWimpy: 39
+GenRoam: 5
 E
 #5708
 menor demonio~
@@ -116,8 +116,8 @@ dentes.  Ele o fita com muita fúria em seus olhos.
 13 8 1 150d2+80 2d7+8
 1 15000
 9 9 1
-GenWimpy: 25
-GenRoam: 4
+GenWimpy: 26
+GenRoam: 9
 E
 #5709
 cidadao graye homem~
@@ -194,7 +194,7 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 23
+GenWimpy: 28
 E
 #5714
 rymat conselheiro~

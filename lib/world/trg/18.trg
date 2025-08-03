@@ -20,7 +20,7 @@ say Agora você pode entrar para o Reino da Morte, enquanto espera pacientemente
 open portao
 wait 1 second
 say Tenha uma boa morte!!
-wait 5 second
+wait 10 s
 close portao
 ~
 #1801

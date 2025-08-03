@@ -12,7 +12,7 @@ penetrante.
 9 9 1
 BareHandAttack: 8
 GenWimpy: 45
-GenRoam: 84
+GenRoam: 86
 E
 #801
 cigano zigeuner~
@@ -86,7 +86,7 @@ Observe o dente - alguma coisa parece lembrar você sobre o dente.
 30 0 -10 10d10+2250 3d6+18
 1600 69345
 9 9 1
-GenWimpy: 8
+GenWimpy: 7
 GenLoot: 5
 GenEquip: 1
 GenRoam: 89

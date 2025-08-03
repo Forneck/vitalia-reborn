@@ -9,8 +9,8 @@ Isto parece ser feito de nada mais que escuridão...
 9 10 1 9d9+90 2d5+5
 100 4000
 9 9 0
-GenWimpy: 55
-GenLoot: 1
+GenWimpy: 56
+GenLoot: 2
 GenRoam: 89
 E
 #2501
@@ -181,9 +181,9 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 22
+GenWimpy: 24
 GenLoot: 2
-GenRoam: 74
+GenRoam: 40
 E
 #2513
 guardioes maiores olhos~
@@ -196,9 +196,9 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 10
-GenLoot: 37
-GenRoam: 89
+GenWimpy: 9
+GenLoot: 43
+GenRoam: 84
 GenGroup: 83
 E
 #2514
@@ -257,7 +257,7 @@ Ele parece estar sonhando.
 7 7 2 7d6+25 2d4+4
 211 2650
 4 4 1
-GenWimpy: 93
+GenWimpy: 97
 E
 T 3009
 #2518
@@ -558,7 +558,7 @@ novo bichinho de estimação.
 23 4 -4 23d23+230 3d5+10
 4672 31050
 9 9 1
-GenWimpy: 3
+GenWimpy: 5
 E
 T 3009
 #2539
@@ -652,7 +652,7 @@ Isto mais parece uma trouxa de roupa suja, é surpreendente que possa andar.
 8 10 1 8d8+80 3d4+1
 0 2100
 9 9 0
-GenWimpy: 21
+GenWimpy: 22
 E
 #2546
 golem adamantite~
@@ -879,7 +879,7 @@ Parece ser nada mais que uma grande bola de pêlos, com garras.
 15 4 -4 15d8+10 3d7+3
 0 7950
 9 9 0
-GenWimpy: 38
+GenWimpy: 40
 E
 #2562
 mestre branco~

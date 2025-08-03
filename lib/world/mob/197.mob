@@ -71,7 +71,7 @@ GenWimpy: 100
 GenLoot: 5
 GenEquip: 1
 GenRoam: 89
-GenGroup: 16
+GenGroup: 12
 E
 #19705
 cobra verde~
@@ -85,8 +85,8 @@ sabe?
 15 12 -1 15d6+300 2d4+10
 0 10000
 9 9 2
-GenWimpy: 16
-GenRoam: 22
+GenWimpy: 19
+GenRoam: 27
 E
 #19706
 enorme orc~
@@ -119,7 +119,7 @@ desejá-la.
 GenWimpy: 8
 GenLoot: 10
 GenEquip: 1
-GenRoam: 83
+GenRoam: 82
 E
 #19708
 orc lider negro~
@@ -261,7 +261,7 @@ aprender os movimentos de luta dos orcs em treinamento.
 13 4 -2 15d6+300 3d6+10
 100 24000
 9 9 2
-GenWimpy: 26
+GenWimpy: 29
 GenLoot: 3
 GenEquip: 2
 E
