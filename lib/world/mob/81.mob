@@ -27,8 +27,8 @@ faraó.
 25 3 -3 2d10+200 2d3+12
 0 15000
 9 9 1
-GenWimpy: 22
-GenRoam: 88
+GenWimpy: 23
+GenRoam: 89
 E
 #8103
 esposa farao bela jovem~
@@ -43,7 +43,7 @@ nota um estranho brilho em seus olhos...
 20 5 -5 2d20+100 1d2+13
 5000 10000
 9 9 2
-GenWimpy: 9
+GenWimpy: 14
 E
 #8104
 escravo~
@@ -59,8 +59,8 @@ tempo e pelo cansaço.
 20 15 2 3d30+200 1d1+4
 1 7000
 9 9 1
-GenWimpy: 9
-GenRoam: 89
+GenWimpy: 6
+GenRoam: 87
 E
 #8105
 campones~
@@ -74,8 +74,8 @@ impostos.
 25 6 -1 3d10+300 1d2+12
 2000 9000
 9 9 1
-GenWimpy: 6
-GenRoam: 54
+GenWimpy: 8
+GenRoam: 79
 E
 #8106
 vizir~
@@ -126,6 +126,9 @@ Vestindo apenas uma tanga, o escriba segue anotando tudo o que vê.
 25 20 0 2d10+600 4d2+1
 1 7000
 9 9 1
+GenWimpy: 3
+GenLoot: 1
+GenRoam: 21
 E
 #8110
 hemutiu~
@@ -432,7 +435,8 @@ humilde.  Ele está um pouco atrapalhado pois tenta servir bem a todos.
 20 10 0 5d5+1000 4d4+4
 10 1000
 9 9 1
-GenWimpy: 3
+GenWimpy: 5
+GenRoam: 11
 E
 #8132
 banqueiro~
@@ -485,8 +489,8 @@ Esse gato negro aparenta ser muito esperto e corajoso.
 7 19 0 2d5+150 1d2+2
 0 100
 9 9 1
-GenWimpy: 40
-GenRoam: 82
+GenWimpy: 37
+GenRoam: 84
 E
 #8136
 escaravelho~
@@ -499,8 +503,8 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 5 15 0 3d4+400 1d2+3
 0 100
 9 9 1
-GenWimpy: 6
-GenRoam: 66
+GenWimpy: 5
+GenRoam: 33
 E
 #8137
 rato~
@@ -602,8 +606,8 @@ sua busca por comida.
 5 19 0 2d2+50 2d1+3
 0 500
 9 9 1
-GenWimpy: 25
-GenRoam: 61
+GenWimpy: 29
+GenRoam: 64
 E
 #8144
 explorador homem~
@@ -618,7 +622,7 @@ urgentemente, com sua lamparina, por uma saída.
 50 10000
 9 9 1
 GenWimpy: 19
-GenRoam: 7
+GenRoam: 8
 E
 #8145
 vibora víbora cobra~
@@ -633,9 +637,9 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 41
+GenWimpy: 37
 GenLoot: 1
-GenRoam: 87
+GenRoam: 89
 E
 #8146
 crianca egipcia~
@@ -650,7 +654,7 @@ enquanto lágrimas desesperadas rolam por sua face corada.
 10 1800
 9 9 2
 GenWimpy: 12
-GenRoam: 29
+GenRoam: 36
 E
 #8147
 serpente~
@@ -720,8 +724,10 @@ que deve ser sua boca.
 30 10 0 2d5+1000 2d2+14
 0 21000
 9 9 2
-GenWimpy: 13
-GenRoam: 88
+GenWimpy: 10
+GenRoam: 89
+GenGroup: 2
+GenBrave: 1
 E
 #8152
 soldado egipcio~

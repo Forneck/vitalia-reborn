@@ -9,7 +9,7 @@ Ele olha calmamente para você e continua a andar lenta e graciosamente.
 2 19 9 2d4+16 1d4+1
 0 400
 9 9 1
-GenWimpy: 98
+GenWimpy: 97
 GenLoot: 4
 GenRoam: 82
 E
@@ -37,7 +37,7 @@ Ele parece não se preocupar com você, e continua a se banhar.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 1
-GenWimpy: 8
+GenWimpy: 9
 E
 #4903
 cobra madeira jaculi~
@@ -78,8 +78,8 @@ Ele pula rapidamente pelas árvores, procurando algo para mastigar.
 4 17 6 8d5+20 1d6+1
 0 500
 9 9 1
-GenWimpy: 7
-GenRoam: 67
+GenWimpy: 8
+GenRoam: 66
 E
 #4906
 macaco carnívoro~
@@ -93,9 +93,9 @@ sobrevivência de outros animais.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 1
-GenWimpy: 10
-GenRoam: 77
-GenGroup: 3
+GenWimpy: 11
+GenRoam: 80
+GenGroup: 2
 E
 #4907
 xamã xama atom~

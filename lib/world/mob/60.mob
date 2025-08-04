@@ -12,9 +12,9 @@ vive uma vida simples e pacífica.
 5 15 6 1d12+60 1d4+3
 100 1050
 9 9 1
-GenWimpy: 17
+GenWimpy: 18
 GenLoot: 3
-GenRoam: 81
+GenRoam: 85
 E
 #6001
 pequeno coelho~
@@ -27,9 +27,9 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 0 20 6 1d4+1 1d4+0
 0 60
 9 9 0
-GenWimpy: 87
+GenWimpy: 96
 GenLoot: 1
-GenRoam: 85
+GenRoam: 87
 E
 #6002
 urso marrom~
@@ -71,8 +71,8 @@ castanhos que olham fixamente para você, com grande interesse.
 2 19 5 2d8+8 1d6+0
 0 230
 9 9 2
-GenWimpy: 50
-GenRoam: 86
+GenWimpy: 51
+GenRoam: 83
 E
 #6005
 raposa marrom~
@@ -86,9 +86,9 @@ peluda cauda.
 2 18 6 1d4+18 1d6+0
 0 225
 9 9 0
-GenWimpy: 50
+GenWimpy: 55
 GenLoot: 6
-GenRoam: 83
+GenRoam: 87
 E
 #6006
 passaro grande~
@@ -128,7 +128,7 @@ O pardal parece estar aproveitando bem a vida.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 64
+GenWimpy: 66
 GenLoot: 4
 GenRoam: 87
 E
@@ -143,9 +143,9 @@ O tordo parece bem decidido em encontrar um inseto ou uma minhoca para comer.
 0 20 9 3d3+1 1d4+0
 0 25
 9 9 0
-GenWimpy: 70
+GenWimpy: 74
 GenLoot: 7
-GenRoam: 85
+GenRoam: 86
 E
 #6010
 esquilo~
@@ -191,7 +191,7 @@ no chão.
 9 9 0
 GenWimpy: 71
 GenLoot: 2
-GenRoam: 81
+GenRoam: 83
 E
 #6013
 esquilinho~
@@ -207,9 +207,9 @@ pensa você.
 0 20 5 2d5+3 1d4+0
 0 40
 9 9 0
-GenWimpy: 74
+GenWimpy: 79
 GenLoot: 5
-GenRoam: 86
+GenRoam: 85
 E
 #6014
 corvo negro passaro~
@@ -224,8 +224,7 @@ comida.
 3 200
 9 9 0
 GenWimpy: 100
-GenLoot: 52
-GenRoam: 1
+GenLoot: 62
 E
 #6015
 grotesco abutre urubu~

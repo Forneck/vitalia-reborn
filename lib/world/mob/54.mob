@@ -450,7 +450,7 @@ O grande meio-orc rapidamente mede você e volta para seu dever.
 12 10 3 3d10+100 1d6+3
 1 400
 9 9 1
-GenWimpy: 7
+GenWimpy: 8
 E
 T 3013
 #5435
@@ -465,8 +465,8 @@ olhar.
 7 12 1 14d1+1 2d5+1
 1 100
 9 9 1
-GenWimpy: 4
-GenRoam: 50
+GenWimpy: 5
+GenRoam: 58
 E
 #5436
 trabalhador doca~
@@ -562,9 +562,9 @@ final.
 7 16 5 1d1+1 1d5+1
 1 10
 9 9 1
-GenWimpy: 29
+GenWimpy: 35
 GenLoot: 3
-GenRoam: 87
+GenRoam: 72
 E
 #5443
 gato rua~
@@ -577,7 +577,7 @@ Você vê um pequeno gatinho faminto.
 2 18 7 1d2+5 2d2+1
 1 0
 9 9 1
-GenWimpy: 28
+GenWimpy: 31
 GenRoam: 87
 E
 #5444
@@ -646,7 +646,7 @@ ambiciosamente.
 1500 10500
 9 9 2
 GenWimpy: 100
-GenRoam: 84
+GenRoam: 88
 E
 #5449
 dervixe~
@@ -660,7 +660,7 @@ Este homem parece poder usar montes e montes de restos.
 1 105
 9 9 1
 GenWimpy: 100
-GenRoam: 45
+GenRoam: 58
 E
 #5450
 sultao~
@@ -714,9 +714,9 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 44
+GenWimpy: 54
 GenLoot: 10
-GenRoam: 86
+GenRoam: 82
 E
 #5454
 garota preferida nichole~
@@ -730,7 +730,7 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
-GenWimpy: 43
+GenWimpy: 50
 GenLoot: 4
 E
 #5455
@@ -826,8 +826,8 @@ necessidade.
 10 10 9 2d4+120 1d8+0
 150 2500
 9 9 1
-GenWimpy: 40
-GenRoam: 88
+GenWimpy: 39
+GenRoam: 87
 E
 T 3013
 #5462
@@ -923,6 +923,8 @@ baixo.
 5 18 8 2d10+15 1d8+2
 500 650
 9 9 1
+GenWimpy: 1
+GenRoam: 34
 E
 #5469
 ixitxachitl arraia~

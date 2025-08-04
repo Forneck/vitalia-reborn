@@ -37,6 +37,7 @@ Esse Guarda parece forte. Ele carrega uma clava e parece ser terrível.
 3 18 7 2d6+34 1d7+0
 500 800
 9 9 1
+GenWimpy: 4
 E
 #20103
 medico Asilo~
@@ -51,7 +52,7 @@ na sua suposição.
 5 16 5 4d6+38 2d4+0
 1000 1200
 9 9 1
-GenWimpy: 21
+GenWimpy: 26
 E
 #20104
 paciente mental~
@@ -66,8 +67,8 @@ roupa que ela viu, feroz, com uma luz triunfante em seus olhos.
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 1
-GenWimpy: 21
-GenRoam: 81
+GenWimpy: 26
+GenRoam: 87
 E
 #20105
 paciente mental~
@@ -81,8 +82,8 @@ Há uma grande possibilidade de que Ted seja um grande amigo imaginário...
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 0
-GenWimpy: 53
-GenRoam: 85
+GenWimpy: 56
+GenRoam: 87
 E
 #20106
 cerebro~
@@ -139,7 +140,7 @@ azuis, ela demonstra seu lado sério.
 9 9 2
 GenWimpy: 20
 GenEquip: 1
-GenRoam: 82
+GenRoam: 84
 GenGroup: 16
 E
 #20109
@@ -155,9 +156,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 39
+GenWimpy: 40
 GenLoot: 1
-GenRoam: 59
+GenRoam: 66
 E
 #20110
 jovem mulher Sybila~
@@ -172,8 +173,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 42
-GenRoam: 78
+GenWimpy: 44
+GenRoam: 82
 E
 #20111
 jovem mulher Anouk~
@@ -189,7 +190,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 700 600
 9 9 2
 GenWimpy: 29
-GenRoam: 83
+GenRoam: 85
 E
 #20112
 jovem mulher Tricia~
@@ -204,10 +205,10 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 66
+GenWimpy: 67
 GenLoot: 2
 GenEquip: 1
-GenRoam: 86
+GenRoam: 87
 E
 #20113
 jovem mulher Lorraine~
@@ -222,9 +223,9 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 37
-GenRoam: 78
-GenGroup: 4
+GenWimpy: 41
+GenRoam: 82
+GenGroup: 2
 E
 #20114
 jovem mulher Renee~
@@ -256,7 +257,7 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 44
+GenWimpy: 46
 GenRoam: 87
 E
 #20116
@@ -307,8 +308,8 @@ tem certeza de qual das jovens mulheres aqui é a personalidade original.
 3 18 8 6d5+22 1d7+1
 700 600
 9 9 2
-GenWimpy: 38
-GenRoam: 88
+GenWimpy: 37
+GenRoam: 87
 E
 #20119
 Spike~
@@ -324,8 +325,8 @@ algum dia alguém traga-lhe água.
 1 20 10 1d1+19 1d3+1
 50 220
 9 9 1
-GenWimpy: 17
-GenRoam: 84
+GenWimpy: 19
+GenRoam: 85
 E
 #20120
 barba ruiva~
@@ -341,10 +342,10 @@ Apesar dos tratamentos aqui, ele permanece tão insano como sempre.
 2 18 10 2d4+20 1d3+1
 250 500
 9 9 1
-GenWimpy: 5
+GenWimpy: 7
 GenLoot: 1
-GenRoam: 68
-GenGroup: 3
+GenRoam: 79
+GenGroup: 1
 E
 #20121
 Nero~
@@ -422,8 +423,8 @@ constantemente fala algo sobre homens que viajaram no espaço.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
-GenWimpy: 1
-GenRoam: 27
+GenWimpy: 4
+GenRoam: 44
 E
 #20126
 atila huno ser hostil~
@@ -521,6 +522,8 @@ em solidariedade a ele.
 3 19 7 1d10+30 1d4+1
 0 300
 9 9 1
+GenWimpy: 1
+GenRoam: 27
 E
 #20132
 Galenzi~
@@ -605,8 +608,8 @@ O cervo parece estar com bastante fome, pois não para de mastigar.
 1 20 10 1d4+8 1d4+0
 0 100
 9 9 1
-GenWimpy: 1
-GenRoam: 23
+GenWimpy: 2
+GenRoam: 33
 E
 #20161
 Ogdlen anao~

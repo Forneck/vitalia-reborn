@@ -9,7 +9,7 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12880
 9 9 2
-GenWimpy: 39
+GenWimpy: 42
 GenLoot: 2
 GenRoam: 89
 E
@@ -39,9 +39,9 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 250 14000
 9 9 1
-GenWimpy: 35
+GenWimpy: 26
+GenLoot: 3
 GenRoam: 89
-GenGroup: 3
 E
 #13603
 cervo corca~
@@ -111,7 +111,7 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12880
 9 9 0
-GenWimpy: 39
+GenWimpy: 38
 GenLoot: 2
 GenRoam: 88
 E
@@ -126,7 +126,7 @@ Ele se moveu?
 14 6 4 1d1+400 6d1+14
 0 13428
 9 9 1
-GenWimpy: 42
+GenWimpy: 46
 GenRoam: 89
 E
 #13609
@@ -140,8 +140,8 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 0 15454
 9 9 0
-GenWimpy: 14
-GenRoam: 64
+GenWimpy: 17
+GenRoam: 71
 E
 #13610
 inseto pedra inseto-pedra~
@@ -154,7 +154,7 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12937
 9 9 1
-GenWimpy: 74
+GenWimpy: 100
 GenLoot: 8
 GenRoam: 89
 E

@@ -10,7 +10,7 @@ com um tom amarelado,  garras sujas e afiadas.
 13 8 1 4d6+565 2d7+11
 0 16000
 9 9 1
-GenWimpy: 38
+GenWimpy: 41
 GenLoot: 6
 E
 #1701
@@ -71,8 +71,8 @@ econômica...e também divertida!
 11 10 2 1d6+150 2d6+11
 0 11000
 9 9 1
-GenWimpy: 97
-GenLoot: 11
+GenWimpy: 100
+GenLoot: 21
 E
 #1705
 cavaleiro fantasma~
@@ -87,8 +87,8 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 99
-GenLoot: 10
+GenWimpy: 76
+GenLoot: 11
 E
 #1706
 guardiao guardião cripta~
@@ -164,7 +164,7 @@ adorando seu estado.
 14 7 1 1d10+475 2d8+11
 18000 18000
 6 6 1
-GenWimpy: 12
+GenWimpy: 13
 E
 #1710
 aranha verde~
@@ -178,7 +178,7 @@ dá uma luz verde.  Ela bate suas mandíbulas cristalizadas para irritá-lo.
 8 13 3 2d6+296 2d5+11
 0 13750
 9 9 2
-GenWimpy: 8
+GenWimpy: 11
 GenLoot: 24
 GenEquip: 1
 GenRoam: 89
@@ -195,8 +195,8 @@ feita de uma substância cristalina viva que brilha amarelo.
 7 14 4 1d8+285 2d4+11
 351 12250
 9 9 2
-GenWimpy: 10
-GenLoot: 58
+GenWimpy: 14
+GenLoot: 62
 GenRoam: 89
 E
 #1712
@@ -223,10 +223,11 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 18 3 0 3d6+625 3d6+21
 0 30000
 9 9 1
-GenWimpy: 32
-GenLoot: 32
+GenWimpy: 21
+GenLoot: 54
+GenEquip: 1
 GenRoam: 89
-GenGroup: 1
+GenGroup: 3
 E
 #1714
 gelatina ocre~
@@ -241,9 +242,9 @@ passado infeliz, você presume.
 16 5 1 2d6+496 2d8+12
 1576 25000
 9 9 2
-GenWimpy: 48
-GenLoot: 38
-GenEquip: 4
+GenWimpy: 63
+GenLoot: 90
+GenEquip: 5
 GenRoam: 89
 E
 #1715

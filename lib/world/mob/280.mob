@@ -27,6 +27,7 @@ agora em atividades braçais.
 12 8 1 3d5+250 3d3+7
 800 3000
 9 9 1
+GenWimpy: 3
 E
 #28003
 trabalhadora~
@@ -42,6 +43,7 @@ vida callyuni e trabalham agora em atividades braçais.
 12 8 1 3d5+250 3d3+7
 800 3000
 9 9 2
+GenWimpy: 3
 E
 #28004
 sanguessuga parasita~
@@ -55,7 +57,7 @@ detalhada sem sentir o estômago embrulhar.
 15 5 0 5d6+420 3d5+10
 0 30000
 9 9 0
-GenWimpy: 23
+GenWimpy: 19
 E
 #28005
 espantalho boneco palha~
@@ -82,7 +84,7 @@ Você vê um goblin com nadadeiras e barbatanas.
 500 7000
 9 9 0
 GenWimpy: 100
-GenLoot: 11
+GenLoot: 18
 GenRoam: 89
 E
 #28007
@@ -109,7 +111,7 @@ Ali está uma vaca louca, usando um chapéu de Viking!
 1000 13000
 9 9 0
 GenWimpy: 100
-GenLoot: 4
+GenLoot: 6
 GenRoam: 89
 E
 #28009
@@ -138,7 +140,7 @@ Apenas uma vaquinha...
 0 13000
 9 9 0
 GenWimpy: 100
-GenRoam: 86
+GenRoam: 88
 E
 #28011
 cavalo~

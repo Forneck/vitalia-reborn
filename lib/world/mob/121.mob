@@ -170,7 +170,7 @@ BareHandAttack: 9
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 100
+GenWimpy: 96
 GenLoot: 6
 GenEquip: 1
 GenRoam: 89
@@ -190,7 +190,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 18
+GenWimpy: 14
 GenLoot: 2
 GenRoam: 89
 E
@@ -362,8 +362,9 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 100
+GenWimpy: 94
 GenRoam: 89
+GenBrave: 2
 E
 #12121
 quimera leao bode dragao~
@@ -452,7 +453,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 100
-GenRoam: 87
+GenRoam: 89
 E
 #12126
 cynamolgus peludo~

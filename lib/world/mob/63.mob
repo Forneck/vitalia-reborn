@@ -9,9 +9,9 @@ Ela parece recém-saída do ovo e esperta.  Suas presas ainda estão crescendo.
 3 18 7 1d12+40 1d7+0
 80 350
 9 9 1
-GenWimpy: 50
+GenWimpy: 51
 GenLoot: 4
-GenRoam: 88
+GenRoam: 87
 E
 #6302
 yevaud dragao usurpador~
@@ -38,9 +38,9 @@ A aranha-lobo é peluda, muito peluda.
 6 12 6 3d8+70 2d5+3
 1250 6000
 9 9 2
-GenWimpy: 44
+GenWimpy: 48
 GenLoot: 7
-GenRoam: 8
+GenRoam: 6
 E
 #6304
 orc~
@@ -68,8 +68,8 @@ Você nota um olhar vidrado nos olhos dela.
 14 7 1 1d12+172 2d8+1
 2000 18000
 9 9 2
-GenWimpy: 13
-GenLoot: 58
+GenWimpy: 8
+GenLoot: 60
 GenEquip: 1
 E
 #6306
@@ -83,7 +83,7 @@ Um zangão comum.
 6 14 4 3d8+70 2d4+1
 200 1600
 9 9 0
-GenWimpy: 33
+GenWimpy: 35
 GenLoot: 1
 GenRoam: 88
 E
@@ -116,7 +116,7 @@ própria ou se foi seduzido você não poderá ter certeza.
 11 8 4 1d12+130 2d7+1
 1000 13500
 9 9 1
-GenWimpy: 17
+GenWimpy: 18
 GenLoot: 10
 GenRoam: 89
 E
@@ -132,7 +132,7 @@ cria um tesouro mágico!
 10 1 -10 1d12+47 1d8+0
 1500 11000
 9 9 1
-GenWimpy: 19
+GenWimpy: 23
 GenLoot: 1
 GenRoam: 89
 E

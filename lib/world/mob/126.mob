@@ -1517,6 +1517,7 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 4
 E
 #12665
 Sleipnir cavalo~
@@ -1559,7 +1560,7 @@ Wis: 18
 Con: 21
 Cha: 18
 GenWimpy: 4
-GenRoam: 78
+GenRoam: 84
 E
 #12667
 Jormungand serpente~
@@ -1705,7 +1706,7 @@ Str: 15
 Dex: 15
 Con: 18
 Cha: 15
-GenWimpy: 4
+GenWimpy: 5
 E
 #12674
 Ratatosk esquilo~
@@ -1722,7 +1723,7 @@ fica no topo da árvore.
 0 15000
 9 9 1
 BareHandAttack: 4
-GenWimpy: 59
+GenWimpy: 67
 E
 #12675
 Dvalin soberano anao~
@@ -1915,10 +1916,10 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
-GenWimpy: 5
+GenWimpy: 10
 GenLoot: 1
-GenRoam: 3
-GenGroup: 4
+GenRoam: 87
+GenGroup: 1
 E
 #12683
 viking islandesa~
@@ -1961,8 +1962,8 @@ ajude-as a sobreviver nessas gélidas e desérticas terras gelo.
 500 13000
 9 9 2
 BareHandAttack: 13
-GenWimpy: 30
-GenRoam: 32
+GenWimpy: 32
+GenRoam: 66
 E
 #12685
 cavalo selvagem~
@@ -1983,7 +1984,8 @@ Int: 15
 Wis: 15
 Con: 18
 Cha: 18
-GenWimpy: 3
+GenWimpy: 6
+GenLoot: 3
 E
 #12686
 navio guerra viking~
@@ -2236,7 +2238,7 @@ Int: 10
 Wis: 10
 Con: 10
 Cha: 18
-GenWimpy: 17
+GenWimpy: 18
 E
 #12698
 berserk~

@@ -9,8 +9,9 @@ Ela parece estar com fome.
 11 7 4 5d10+50 3d6+0
 0 12000
 9 9 0
-GenWimpy: 30
-GenLoot: 23
+GenWimpy: 32
+GenLoot: 26
+GenEquip: 1
 E
 T 3008
 #4001
@@ -49,8 +50,8 @@ Ele é horrível.
 4 16 5 2d10+40 1d8+1
 50 800
 9 9 0
-GenWimpy: 99
-GenRoam: 87
+GenWimpy: 100
+GenRoam: 88
 E
 #4004
 orc~
@@ -78,8 +79,8 @@ Ele parece pavoroso.
 7 11 2 3d20+75 2d6+2
 200 3000
 9 9 1
-GenWimpy: 31
-GenRoam: 88
+GenWimpy: 29
+GenRoam: 89
 E
 #4050
 guerreiro~
@@ -159,9 +160,8 @@ O hobgoblin parece bastante perigoso.
 10 8 2 1d16+120 2d6+3
 300 10000
 9 9 1
-GenWimpy: 21
+GenWimpy: 22
 GenRoam: 89
-GenGroup: 2
 E
 #4056
 orc~
@@ -174,7 +174,7 @@ Bem, ele não parece ser muito amigável.
 8 13 2 3d10+100 2d5+2
 150 4000
 9 9 1
-GenWimpy: 44
+GenWimpy: 42
 GenRoam: 89
 E
 #4057
@@ -259,7 +259,7 @@ o SEU ouro também...
 8 13 3 1d10+100 2d5+2
 100 4000
 9 9 1
-GenWimpy: 54
+GenWimpy: 56
 GenRoam: 89
 E
 T 3007
@@ -300,9 +300,11 @@ Ele não parece muito amigável...
 9 10 3 3d10+100 2d6+2
 500 9000
 9 9 1
-GenWimpy: 67
-GenEquip: 1
+GenWimpy: 66
+GenLoot: 1
+GenEquip: 2
 GenRoam: 89
+GenGroup: 2
 E
 #4107
 kobold~
@@ -315,7 +317,7 @@ Ele parece lodoso..
 7 14 4 4d10+25 1d9+1
 20 3000
 9 9 1
-GenWimpy: 98
+GenWimpy: 100
 GenLoot: 1
 GenRoam: 89
 E

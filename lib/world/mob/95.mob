@@ -55,7 +55,6 @@ parece querer lançar toda sua ira contra você.
 1500 5000
 9 9 1
 GenWimpy: 100
-GenRoam: 4
 E
 #9505
 gigante vermelha~
@@ -395,7 +394,7 @@ que seja mais bela (ou menos feia) que ele.
 72 -14 -20 7d3+2600 3d6+32
 0 380000
 9 9 1
-GenWimpy: 5
+GenWimpy: 6
 GenLoot: 4
 GenEquip: 1
 E

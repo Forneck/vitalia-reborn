@@ -69,7 +69,7 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
+GenWimpy: 5
 E
 #3906
 praga negra espirito~
@@ -234,7 +234,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 10
-GenRoam: 80
+GenRoam: 85
 E
 #3915
 zumbi guerreiro abismo~
@@ -272,7 +272,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 83
+GenRoam: 87
 E
 #3917
 svern demonio~
@@ -291,7 +291,7 @@ BareHandAttack: 8
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 6
+GenWimpy: 5
 GenRoam: 89
 E
 #3918

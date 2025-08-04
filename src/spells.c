@@ -696,7 +696,7 @@ ASPELL(spell_detect_poison)
                 if (GET_OBJ_VAL(obj, 3))
                     act("Voce sente que nao deveria consumir o conteudo de $p.", FALSE, ch, obj, 0, TO_CHAR);
                 else
-                    act("Voce sente que pode consumir  conteudo de $p .", FALSE, ch, obj, 0, TO_CHAR);
+                    act("Voce sente que pode consumir o conteudo de $p .", FALSE, ch, obj, 0, TO_CHAR);
                 break;
             default:
                 send_to_char(ch, "Voce sente que nao deveria consumir isto.\r\n");

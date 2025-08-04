@@ -2,6 +2,8 @@
 Vitalia~
 Norte da Cidade de Midgaard~
 3000 3099 15 2 j 0 0 0 -1 -1 0
+D 0 3030 5 1 	(O Depósito de Lixo)
+D 1 3030 5 2 	(O Depósito de Lixo)
 M 0 3040 1 3007 	(o barman)
 E 1 3022 100 16 	(uma espada longa)
 G 1 3000 99 -1 	(um barril)

@@ -9,7 +9,7 @@ Ele parece tentar alcançar o outro lado da montanha, assim como você.
 10 10 0 1d10+160 2d10+8
 400 600
 9 9 1
-GenWimpy: 19
+GenWimpy: 24
 GenLoot: 1
 E
 #17002
@@ -40,8 +40,8 @@ Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 1100 6000
 9 9 1
 GenWimpy: 100
-GenLoot: 6
-GenRoam: 7
+GenLoot: 11
+GenRoam: 4
 E
 #17004
 elemental guardiao~
@@ -68,8 +68,8 @@ An undefined string.
 5 0 -4 2d5+150 2d6+4
 1000 6000
 9 9 1
-GenWimpy: 58
-GenLoot: 2
+GenWimpy: 61
+GenLoot: 4
 GenRoam: 89
 E
 #17006
@@ -83,8 +83,8 @@ An undefined string.
 10 6 -2 3d5+200 3d6+6
 1750 9000
 9 9 1
-GenWimpy: 48
-GenLoot: 2
+GenWimpy: 53
+GenLoot: 6
 GenRoam: 89
 E
 #17007
@@ -98,9 +98,9 @@ An undefined string.
 15 -4 -6 5d5+250 4d9+17
 2200 20000
 9 9 1
-GenWimpy: 58
+GenWimpy: 73
 GenLoot: 2
-GenRoam: 82
+GenRoam: 87
 E
 #17008
 lider elemental terra~
@@ -177,7 +177,7 @@ Ela percorre o chão em sua direção.
 8 2 0 1d5+200 1d10+3
 980 5000
 9 9 2
-GenWimpy: 42
+GenWimpy: 50
 GenLoot: 1
 GenRoam: 89
 E
@@ -192,9 +192,9 @@ Ela corre ao seu redor, esperando uma brecha.
 8 1 0 1d5+200 1d10+3
 850 5000
 9 9 2
-GenWimpy: 97
+GenWimpy: 98
 GenLoot: 2
-GenRoam: 87
+GenRoam: 58
 E
 #17016
 elemental neve humanoide cristal~
@@ -207,7 +207,7 @@ Ele parece incapaz de se mover.
 3 5 2 1d5+100 2d5+4
 400 3000
 9 9 1
-GenWimpy: 32
+GenWimpy: 37
 GenLoot: 1
 E
 #17017
@@ -234,7 +234,7 @@ todos os lados, produzindo barulhentas explosões.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 39
+GenWimpy: 42
 GenLoot: 1
 E
 #17019
@@ -248,7 +248,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 91
+GenWimpy: 90
 GenLoot: 1
 E
 #17020
@@ -263,9 +263,9 @@ que suas calças sequem rápido.
 8 12 1 1d5+250 3d5+4
 1000 4000
 9 9 2
-GenWimpy: 67
-GenLoot: 7
-GenRoam: 23
+GenWimpy: 76
+GenLoot: 8
+GenRoam: 63
 E
 #17021
 lama monstro elemental~
@@ -293,8 +293,8 @@ Ele parece um tanto quanto imprevisível.
 6 12 -3 1d5+250 3d5+5
 1000 4000
 9 9 1
-GenWimpy: 39
-GenLoot: 4
+GenWimpy: 42
+GenLoot: 5
 GenRoam: 89
 E
 #17023
@@ -308,9 +308,9 @@ Uma intrigante manifestação de energia.
 5 14 -15 1d5+200 2d5+3
 1000 3000
 9 9 2
-GenWimpy: 8
+GenWimpy: 10
 GenLoot: 1
-GenRoam: 83
+GenRoam: 86
 E
 #17024
 nuvem poeira elemental~
@@ -323,7 +323,7 @@ Uma estranha mistura de terra e ar.. ela não parece nem te ver.
 5 14 -15 1d5+200 2d5+3
 1000 3000
 9 9 2
-GenWimpy: 23
+GenWimpy: 26
 GenRoam: 89
 E
 #17025
@@ -337,10 +337,9 @@ An undefined string.
 2 17 2 1d5+100 1d8+1
 450 1000
 9 9 1
-GenWimpy: 93
+GenWimpy: 100
 GenLoot: 2
-GenRoam: 89
-GenBrave: 1
+GenRoam: 88
 E
 #17026
 chama elemental azul humanoide~
@@ -356,8 +355,8 @@ e seus bruxuleantes membros, que parecem ser afiados como garras.
 9 9 2
 GenWimpy: 100
 GenLoot: 10
-GenRoam: 88
-GenGroup: 54
+GenRoam: 89
+GenGroup: 49
 E
 #17027
 magneto elemental humanoide~
@@ -370,7 +369,7 @@ Um humanóide que parece ter sido preso em um campo magnético.
 26 -2 -5 1d5+640 6d5+14
 3000 30000
 9 9 1
-GenWimpy: 98
+GenWimpy: 100
 GenRoam: 81
 E
 #17028
@@ -385,10 +384,10 @@ frio subindo por suas costas.
 26 -2 -5 1d5+630 6d5+13
 3000 30000
 9 9 1
-GenWimpy: 100
-GenLoot: 11
-GenRoam: 85
-GenGroup: 14
+GenWimpy: 99
+GenLoot: 12
+GenRoam: 89
+GenGroup: 17
 E
 #17029
 rochas monstro~
@@ -402,10 +401,10 @@ Elas parecem estar formando um tipo de humanóide. E sua expressão não
 26 -2 -5 1d5+620 6d5+12
 3000 30000
 9 9 1
-GenWimpy: 97
+GenWimpy: 94
 GenLoot: 6
-GenRoam: 88
-GenGroup: 2
+GenRoam: 89
+GenGroup: 8
 E
 #17030
 furacao~
@@ -510,6 +509,7 @@ Ele se assemelha bastante a um desagradável inseto.
 800 1000
 9 9 1
 GenWimpy: 100
+GenLoot: 1
 GenRoam: 88
 E
 #17037

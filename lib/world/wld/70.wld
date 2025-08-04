@@ -344,15 +344,15 @@ vai para o oeste.
 ~
 0 -1 7014
 E
+lama~
+Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
+cheiro simplesmente horroroso e nauseabundo.
+~
+E
 sedimento~
 Este não é o tipo de substância que normalmente interessa muito a você mas
 como você está atolado no meio disto, ele transforma-se em seu principal
 interesse.
-~
-E
-lama~
-Este lugar é escuro como breu e mais se parece com uma imunda latrina com um
-cheiro simplesmente horroroso e nauseabundo.
 ~
 S
 #7014
@@ -666,7 +666,7 @@ Ao oeste há uma sala peculiar com as paredes totalmente polidas.
 D4
 Acima do lixo você pode notar o que parece ser o depósito de Midgaard.
 ~
-~
+grade~
 2 3005 3030
 E
 escada~

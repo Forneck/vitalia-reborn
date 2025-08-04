@@ -40,8 +40,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 35
-GenLoot: 13
+GenWimpy: 37
+GenLoot: 16
 GenRoam: 89
 E
 #702
@@ -62,8 +62,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 48
-GenRoam: 87
+GenWimpy: 54
+GenRoam: 88
 E
 #705
 monstrinho menor criatura~
@@ -85,9 +85,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 46
+GenWimpy: 45
 GenLoot: 7
-GenRoam: 89
+GenRoam: 87
 E
 #706
 duende~
@@ -108,9 +108,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 32
-GenLoot: 1
-GenRoam: 88
+GenWimpy: 35
+GenLoot: 5
+GenRoam: 89
 E
 #707
 cristal monsto~
@@ -131,10 +131,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 29
-GenLoot: 15
+GenWimpy: 33
+GenLoot: 18
 GenEquip: 1
-GenRoam: 4
 E
 #708
 escorpião escorpiao vermelho~
@@ -177,7 +176,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 24
+GenWimpy: 29
 GenRoam: 89
 E
 #711
@@ -201,7 +200,7 @@ Wis: 15
 Con: 15
 Cha: 15
 GenWimpy: 100
-GenLoot: 2
+GenLoot: 4
 E
 #712
 impiedoso ceifeiro~
@@ -244,9 +243,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 74
+GenWimpy: 80
 GenLoot: 14
-GenRoam: 88
+GenRoam: 89
 E
 #714
 cavaleiro negro tempestuoso armadura~
@@ -291,10 +290,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 100
+GenWimpy: 92
 GenLoot: 3
-GenRoam: 88
-GenGroup: 32
+GenRoam: 89
+GenGroup: 27
 E
 #716
 pequena encurvada crianca criança~
@@ -432,8 +431,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 32
-GenLoot: 5
+GenWimpy: 34
+GenLoot: 15
 GenEquip: 1
 GenRoam: 89
 E
@@ -474,7 +473,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 32
+GenWimpy: 35
 GenLoot: 1
 GenRoam: 87
 E
@@ -495,7 +494,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 18
-GenRoam: 88
+GenWimpy: 21
+GenLoot: 1
+GenRoam: 89
 E
 $

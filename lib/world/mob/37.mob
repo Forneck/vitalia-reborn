@@ -425,7 +425,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenLoot: 3
+GenLoot: 4
 GenRoam: 89
 E
 #3722
@@ -449,7 +449,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenRoam: 89
+GenRoam: 83
 E
 #3723
 esqueleto guerreiro~
@@ -528,7 +528,7 @@ de simplesmente matar aqueles que não se encaixaram.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 4
+GenWimpy: 5
 GenLoot: 4
 GenRoam: 89
 E
@@ -624,10 +624,10 @@ Ele é tímido e solitário, fujindo da luz e da multidão.
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 9
+GenWimpy: 5
 GenLoot: 2
-GenRoam: 60
-GenGroup: 8
+GenRoam: 58
+GenGroup: 1
 E
 #3732
 zumbi guarda~

@@ -639,8 +639,9 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
-GenWimpy: 44
-GenRoam: 85
+GenWimpy: 55
+GenRoam: 89
+GenBrave: 1
 E
 T 3013
 #3061
@@ -654,7 +655,7 @@ Que trabalho pesado ele tem.
 1 20 9 2d6+10 1d5+0
 34 100
 9 9 1
-GenWimpy: 18
+GenWimpy: 20
 GenLoot: 5
 GenRoam: 87
 E
@@ -671,8 +672,8 @@ cheios de pedaços de carne apodrecida grudadas.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 44
-GenLoot: 6
+GenWimpy: 50
+GenLoot: 7
 GenRoam: 87
 E
 T 3014
@@ -688,7 +689,7 @@ coisa por dinheiro.
 5 15 5 2d6+60 1d6+1
 87 900
 9 9 1
-GenWimpy: 1
+GenWimpy: 2
 E
 #3064
 bebado bêbado~
@@ -713,7 +714,6 @@ A mendiga parece que está farta da vida.
 1 20 9 2d6+10 1d5+0
 0 100
 9 9 2
-GenWimpy: 1
 E
 #3066
 odif laitseb~
@@ -742,6 +742,7 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
+GenWimpy: 4
 E
 T 3013
 #3068
@@ -783,8 +784,8 @@ O gatinho parece ser um gracioso, pequenino e destemido lutador.
 0 100
 9 9 0
 BareHandAttack: 8
-GenWimpy: 1
-GenGroup: 4
+GenWimpy: 2
+GenGroup: 3
 E
 #3091
 cachorrinho~

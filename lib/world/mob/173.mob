@@ -13,7 +13,7 @@ escudeiro.
 5000 99344
 9 9 1
 GenWimpy: 5
-GenRoam: 40
+GenRoam: 79
 E
 T 3013
 #17302
@@ -239,8 +239,8 @@ da meia idade, mas ainda é um vigoroso combatente.
 60 4 -7 2d8+678 12d6+18
 10000 62000
 9 9 1
-GenWimpy: 8
-GenRoam: 76
+GenWimpy: 10
+GenRoam: 73
 E
 #17316
 besta busca criatura~
@@ -328,7 +328,7 @@ vestido e tem uma coroa de flores enfeitando seus cabelos.
 30 5 -2 10d10+360 4d6+8
 3000 10030
 9 9 2
-GenWimpy: 20
+GenWimpy: 25
 GenRoam: 89
 E
 #17322
@@ -374,10 +374,10 @@ sorri maliciosamente para você.
 73 2 -13 4d8+1200 6d6+15
 0 103765
 9 9 1
-GenWimpy: 19
+GenWimpy: 24
 GenLoot: 1
-GenRoam: 80
-GenGroup: 2
+GenRoam: 85
+GenGroup: 3
 E
 #17325
 bufao dagonet bobo~
@@ -449,6 +449,9 @@ lugar.
 56 4 0 5d20+500 4d7+12
 10000 45678
 9 9 1
+GenWimpy: 3
+GenLoot: 4
+GenRoam: 66
 E
 #17330
 serviçal~
@@ -462,7 +465,7 @@ nele.
 25 5 0 5d3+400 6d7+7
 1200 21000
 9 9 1
-GenWimpy: 5
+GenWimpy: 8
 GenRoam: 89
 E
 #17331
@@ -477,8 +480,8 @@ mercadorias.
 25 5 -1 7d12+600 5d6+12
 10000 39004
 9 9 1
-GenWimpy: 3
-GenRoam: 70
+GenWimpy: 4
+GenRoam: 84
 E
 #17332
 monge~
@@ -548,7 +551,7 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
-GenWimpy: 26
+GenWimpy: 28
 GenRoam: 89
 E
 #17337
@@ -668,7 +671,8 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 11
+GenWimpy: 8
+GenRoam: 1
 E
 #17345
 chefe saxao render~
@@ -683,8 +687,8 @@ coberto por piolhos.
 73 2 -13 5d13+1200 6d6+17
 10000 60994
 9 9 1
-GenWimpy: 10
-GenLoot: 36
+GenWimpy: 8
+GenLoot: 57
 E
 #17346
 guarda fronteira norte~
@@ -947,7 +951,7 @@ armado com uma espada comum.
 59 3 -2 6d10+709 8d7+14
 1200 59003
 9 9 1
-GenWimpy: 4
+GenWimpy: 7
 E
 #17363
 escrava~
@@ -961,8 +965,8 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 19
+GenWimpy: 16
 GenLoot: 2
-GenRoam: 66
+GenRoam: 68
 E
 $

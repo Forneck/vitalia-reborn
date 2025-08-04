@@ -105,6 +105,8 @@ de sua ajuda. Afinal, ela é paga para isso...
 1000 10020
 9 9 2
 GenWimpy: 100
+GenLoot: 2
+GenEquip: 1
 E
 #11608
 marut menino belo azulada~
@@ -399,7 +401,7 @@ tudo para que nada saia errado.
 15 8 -3 10d10+300 3d3+9
 1000 10020
 9 9 1
-GenWimpy: 56
+GenWimpy: 63
 GenLoot: 1
 GenEquip: 1
 E
@@ -430,7 +432,7 @@ pacientemente ouve uma jovem relatando seus problemas.
 49 2 -4 10d10+750 4d3+16
 1000 40020
 9 9 1
-GenWimpy: 4
+GenWimpy: 7
 E
 #11630
 convidada dama refinada jovem~
@@ -460,7 +462,7 @@ para a festa.  E agora?
 47 3 -4 10d10+670 4d3+17
 8000 44020
 9 9 2
-GenWimpy: 15
+GenWimpy: 17
 E
 #11632
 senhor elegante~
@@ -475,7 +477,7 @@ convidados...
 47 3 -4 10d10+670 4d3+17
 8000 44020
 9 9 2
-GenWimpy: 12
+GenWimpy: 16
 E
 #11633
 mensageiro estranho~
@@ -493,7 +495,7 @@ que fez com que Lorde Indra saísse imediatamente do salão...
 67 -4 -8 10d10+970 4d5+23
 10000 104020
 9 9 1
-GenWimpy: 22
+GenWimpy: 30
 E
 T 3008
 #11634
@@ -570,7 +572,7 @@ favorita...
 93 -14 -19 10d10+1670 9d6+32
 12000 244020
 9 9 1
-GenWimpy: 4
+GenWimpy: 7
 E
 T 3009
 #11638

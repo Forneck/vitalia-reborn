@@ -258,8 +258,9 @@ serviço de guarda...
 18 3 -3 3d5+220 3d6+2
 2400 32000
 9 9 1
-GenWimpy: 12
-GenLoot: 47
+GenWimpy: 48
+GenLoot: 60
+GenRoam: 15
 E
 #3317
 mineiro escravo~
@@ -274,7 +275,7 @@ você deveria, ou melhor, se você pode dar-lhe a liberdade.
 6 15 10 3d5+70 1d8+1
 0 1500
 9 9 1
-GenWimpy: 9
+GenWimpy: 12
 GenLoot: 98
 E
 #3318
