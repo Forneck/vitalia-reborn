@@ -51,7 +51,7 @@ ACMD(do_say)
         if (CONFIG_SPECIAL_IN_COMM && legal_communication(argument))
             parse_at(argument);
 
-        snprintf(buf, sizeof(buf), "$n\tn  disse, '%s'", argument);
+        snprintf(buf, sizeof(buf), "$n\tn disse, '%s'", argument);
         if (IS_DEAD(ch)) /* IMPLEMENTED */
             msg = act(buf, FALSE, ch, 0, 0, TO_DEAD);
         else
