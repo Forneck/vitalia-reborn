@@ -1317,6 +1317,56 @@ float get_weather_spell_modifier(struct char_data *ch, int spell_element)
     return modifier;
 }
 
+/* Get weather movement modifier for travel costs */
+float get_weather_movement_modifier(struct char_data *ch)
+{
+    struct weather_data *weather;
+    float modifier = 1.0; /* Default no change */
+    int zone_num;
+
+    /* Get the character's zone weather data */
+    zone_num = world[IN_ROOM(ch)].zone;
+    if (zone_num < 0 || zone_num > top_of_zone_table) {
+        return modifier;
+    }
+
+    weather = &climates[zone_num];
+
+    /* Weather conditions affect movement difficulty */
+
+    /* Rain makes movement more difficult */
+    if (weather->sky == SKY_RAINING) {
+        modifier += 0.3; /* 30% more movement cost */
+    } else if (weather->sky == SKY_LIGHTNING) {
+        modifier += 0.5; /* 50% more movement cost in storms */
+    }
+
+    /* High humidity makes movement more tiring */
+    if (weather->humidity > 80.0) {
+        modifier += 0.2; /* 20% more movement cost */
+    } else if (weather->humidity < 20.0) {
+        modifier -= 0.1; /* 10% less movement cost in dry conditions */
+    }
+
+    /* Strong winds affect movement */
+    if (weather->winds > 20.0) {
+        modifier += 0.25; /* 25% more movement cost in strong winds */
+    }
+
+    /* Temperature extremes affect movement */
+    if (weather->temperature < -10 || weather->temperature > 35) {
+        modifier += 0.15; /* 15% more movement cost in extreme temperatures */
+    }
+
+    /* Ensure modifier doesn't go below 0.5 (minimum 50% cost) or above 2.0 (maximum 200% cost) */
+    if (modifier < 0.5)
+        modifier = 0.5;
+    if (modifier > 2.0)
+        modifier = 2.0;
+
+    return modifier;
+}
+
 /* Get spell school name */
 const char *get_spell_school_name(int school)
 {
