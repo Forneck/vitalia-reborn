@@ -56,13 +56,43 @@ int calculate_movement_cost(struct char_data *ch, room_rnum room)
     return final_cost;
 }
 
+/* Advanced pathfinding structures for state-based search */
+#define MAX_COLLECTED_KEYS 50 /* Maximum keys that can be tracked per search */
+
+struct path_state {
+    room_rnum room;                         /* Current room */
+    int mv_available;                       /* Movement points available */
+    int collected_keys[MAX_COLLECTED_KEYS]; /* Array of collected key vnums */
+    int num_keys;                           /* Number of keys collected */
+    int path_cost;                          /* Total movement cost to reach this state */
+    int first_dir;                          /* First direction taken from start */
+};
+
+struct state_queue_struct {
+    struct path_state state;
+    struct state_queue_struct *next;
+};
+
 struct bfs_queue_struct {
     room_rnum room;
     char dir;
     struct bfs_queue_struct *next;
 };
 
+/* Static queues for advanced pathfinding */
+static struct state_queue_struct *state_queue_head = NULL, *state_queue_tail = NULL;
+
 static struct bfs_queue_struct *queue_head = 0, *queue_tail = 0;
+
+/* Advanced pathfinding function declarations */
+static void state_enqueue(struct path_state *state);
+static struct path_state *state_dequeue(void);
+static void state_clear_queue(void);
+static int has_key_in_state(struct path_state *state, obj_vnum key);
+static void add_key_to_state(struct path_state *state, obj_vnum key);
+static int can_pass_door(struct char_data *ch, struct path_state *state, room_rnum from, int dir);
+static int is_state_visited(struct path_state *state, struct path_state **visited_states, int num_visited);
+static struct obj_data *find_key_in_room(room_rnum room, obj_vnum key_vnum) __attribute__((unused));
 
 /* Utility macros */
 #define MARK(room) (SET_BIT_AR(ROOM_FLAGS(room), ROOM_BFS_MARK))
@@ -114,6 +144,134 @@ static void bfs_clear_queue(void)
 {
     while (queue_head)
         bfs_dequeue();
+}
+
+/* Advanced state-based pathfinding functions */
+
+static void state_enqueue(struct path_state *state)
+{
+    struct state_queue_struct *curr;
+
+    CREATE(curr, struct state_queue_struct, 1);
+    curr->state = *state; /* Copy the state */
+    curr->next = NULL;
+
+    if (state_queue_tail) {
+        state_queue_tail->next = curr;
+        state_queue_tail = curr;
+    } else {
+        state_queue_head = state_queue_tail = curr;
+    }
+}
+
+static struct path_state *state_dequeue(void)
+{
+    struct state_queue_struct *curr;
+    static struct path_state result;
+
+    if (!state_queue_head)
+        return NULL;
+
+    curr = state_queue_head;
+    result = curr->state; /* Copy the state */
+
+    if (!(state_queue_head = state_queue_head->next))
+        state_queue_tail = NULL;
+
+    free(curr);
+    return &result;
+}
+
+static void state_clear_queue(void)
+{
+    while (state_queue_head) {
+        struct state_queue_struct *curr = state_queue_head;
+        state_queue_head = state_queue_head->next;
+        free(curr);
+    }
+    state_queue_tail = NULL;
+}
+
+static int has_key_in_state(struct path_state *state, obj_vnum key)
+{
+    int i;
+    for (i = 0; i < state->num_keys; i++) {
+        if (state->collected_keys[i] == key)
+            return 1;
+    }
+    return 0;
+}
+
+static void add_key_to_state(struct path_state *state, obj_vnum key)
+{
+    if (state->num_keys >= MAX_COLLECTED_KEYS)
+        return; /* Cannot add more keys */
+
+    if (!has_key_in_state(state, key)) {
+        state->collected_keys[state->num_keys] = key;
+        state->num_keys++;
+    }
+}
+
+static int can_pass_door(struct char_data *ch, struct path_state *state, room_rnum from, int dir)
+{
+    struct room_direction_data *exit;
+
+    if (!world[from].dir_option[dir])
+        return 0;
+
+    exit = world[from].dir_option[dir];
+
+    /* If door is not closed or locked, can pass */
+    if (!IS_SET(exit->exit_info, EX_CLOSED) || !IS_SET(exit->exit_info, EX_LOCKED))
+        return 1;
+
+    /* If locked, check if we have the key */
+    if (exit->key == NOTHING)
+        return 0; /* No key specified for locked door */
+
+    /* Check if player currently has the key */
+    if (has_key(ch, exit->key))
+        return 1;
+
+    /* Check if the key is in our collected state */
+    return has_key_in_state(state, exit->key);
+}
+
+static int is_state_visited(struct path_state *state, struct path_state **visited_states, int num_visited)
+{
+    int i, j;
+
+    for (i = 0; i < num_visited; i++) {
+        if (visited_states[i]->room == state->room && visited_states[i]->num_keys == state->num_keys) {
+
+            /* Check if key sets are the same */
+            int keys_match = 1;
+            for (j = 0; j < state->num_keys; j++) {
+                if (!has_key_in_state(visited_states[i], state->collected_keys[j])) {
+                    keys_match = 0;
+                    break;
+                }
+            }
+            if (keys_match)
+                return 1;
+        }
+    }
+    return 0;
+}
+
+static struct obj_data *find_key_in_room(room_rnum room, obj_vnum key_vnum)
+{
+    struct obj_data *obj;
+
+    if (room == NOWHERE || room > top_of_world)
+        return NULL;
+
+    for (obj = world[room].contents; obj; obj = obj->next_content) {
+        if (GET_OBJ_TYPE(obj) == ITEM_KEY && GET_OBJ_VNUM(obj) == key_vnum)
+            return obj;
+    }
+    return NULL;
 }
 
 /* find_first_step: given a source room and a target room, find the first step
@@ -170,9 +328,6 @@ int find_first_step_enhanced(struct char_data *ch, room_rnum src, room_rnum targ
 {
     int curr_dir;
     room_rnum curr_room;
-    struct bfs_queue_struct *temp_queue_head = NULL, *temp_queue_tail = NULL;
-    struct bfs_queue_struct *curr;
-    int path_cost = 0;
     int step_cost;
 
     *total_cost = 0; /* Initialize total cost */
@@ -224,25 +379,196 @@ int find_first_step_enhanced(struct char_data *ch, room_rnum src, room_rnum targ
     return (BFS_NO_PATH);
 }
 
+/* Advanced state-based pathfinding with key collection tracking
+ * Returns the first direction to take, considering keys, doors, and MV costs
+ * path_info will contain detailed path information including total cost and required keys */
+int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, int *total_cost, int *required_mv,
+                        char **path_description)
+{
+    struct path_state initial_state, *current_state;
+    struct path_state **visited_states;
+    int num_visited = 0, max_visited = 1000;
+    int curr_dir, i;
+    char *desc_buffer;
+
+    *total_cost = 0;
+    *required_mv = 0;
+
+    /* Allocate description buffer */
+    CREATE(desc_buffer, char, MAX_STRING_LENGTH);
+    *path_description = desc_buffer;
+    strcpy(desc_buffer, "");
+
+    if (src == NOWHERE || target == NOWHERE || src > top_of_world || target > top_of_world) {
+        log1("SYSERR: Illegal value %d or %d passed to find_path_with_keys. (%s)", src, target, __FILE__);
+        return (BFS_ERROR);
+    }
+
+    if (src == target) {
+        strcat(desc_buffer, "Você já está no destino!");
+        return (BFS_ALREADY_THERE);
+    }
+
+    /* Initialize visited states tracking */
+    CREATE(visited_states, struct path_state *, max_visited);
+
+    /* Clear state queue */
+    state_clear_queue();
+
+    /* Initialize starting state */
+    initial_state.room = src;
+    initial_state.mv_available = GET_MOVE(ch);
+    initial_state.num_keys = 0;
+    initial_state.path_cost = 0;
+    initial_state.first_dir = -1;
+
+    /* Add any keys the character already has */
+    struct obj_data *obj;
+    for (obj = ch->carrying; obj && initial_state.num_keys < MAX_COLLECTED_KEYS; obj = obj->next_content) {
+        if (GET_OBJ_TYPE(obj) == ITEM_KEY) {
+            add_key_to_state(&initial_state, GET_OBJ_VNUM(obj));
+        }
+    }
+    if (GET_EQ(ch, WEAR_HOLD) && GET_OBJ_TYPE(GET_EQ(ch, WEAR_HOLD)) == ITEM_KEY) {
+        add_key_to_state(&initial_state, GET_OBJ_VNUM(GET_EQ(ch, WEAR_HOLD)));
+    }
+
+    state_enqueue(&initial_state);
+
+    /* Main pathfinding loop */
+    while ((current_state = state_dequeue()) != NULL) {
+        /* Check if we've reached the target */
+        if (current_state->room == target) {
+            *total_cost = current_state->path_cost;
+            *required_mv = current_state->path_cost;
+
+            snprintf(desc_buffer, MAX_STRING_LENGTH, "Caminho encontrado! Custo total: %d MV",
+                     current_state->path_cost);
+
+            if (current_state->num_keys > 0) {
+                strcat(desc_buffer, " (requer chaves: ");
+                for (i = 0; i < current_state->num_keys; i++) {
+                    char key_info[64];
+                    snprintf(key_info, sizeof(key_info), "%s#%d", i > 0 ? ", " : "", current_state->collected_keys[i]);
+                    strcat(desc_buffer, key_info);
+                }
+                strcat(desc_buffer, ")");
+            }
+
+            /* Cleanup */
+            free(visited_states);
+            state_clear_queue();
+            return current_state->first_dir;
+        }
+
+        /* Check if this state has been visited with same or better conditions */
+        if (is_state_visited(current_state, visited_states, num_visited))
+            continue;
+
+        /* Add to visited states */
+        if (num_visited < max_visited) {
+            CREATE(visited_states[num_visited], struct path_state, 1);
+            *(visited_states[num_visited]) = *current_state;
+            num_visited++;
+        }
+
+        /* Explore neighboring rooms */
+        for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++) {
+            if (!world[current_state->room].dir_option[curr_dir])
+                continue;
+
+            room_rnum next_room = world[current_state->room].dir_option[curr_dir]->to_room;
+
+            if (next_room == NOWHERE || next_room > top_of_world)
+                continue;
+
+            if (ROOM_FLAGGED(next_room, ROOM_NOTRACK))
+                continue;
+
+            /* Check if we can pass through this door */
+            if (!can_pass_door(ch, current_state, current_state->room, curr_dir))
+                continue;
+
+            /* Calculate movement cost for this step */
+            int step_cost = calculate_movement_cost(ch, next_room);
+
+            /* Check if we have enough MV (considering recovery) */
+            if (current_state->mv_available < step_cost && !IS_NPC(ch)) {
+                /* Could implement MV recovery waiting logic here */
+                continue;
+            }
+
+            /* Create new state for this path */
+            struct path_state new_state = *current_state;
+            new_state.room = next_room;
+            new_state.mv_available -= step_cost;
+            new_state.path_cost += step_cost;
+
+            /* Set first direction if this is the first step */
+            if (current_state->room == src)
+                new_state.first_dir = curr_dir;
+            else
+                new_state.first_dir = current_state->first_dir;
+
+            /* Check if there's a key in this room that we should collect */
+            struct obj_data *key_obj;
+            for (key_obj = world[next_room].contents; key_obj; key_obj = key_obj->next_content) {
+                if (GET_OBJ_TYPE(key_obj) == ITEM_KEY) {
+                    add_key_to_state(&new_state, GET_OBJ_VNUM(key_obj));
+                }
+            }
+
+            state_enqueue(&new_state);
+        }
+    }
+
+    /* No path found */
+    strcat(desc_buffer, "Nenhum caminho encontrado.");
+
+    /* Cleanup */
+    for (i = 0; i < num_visited; i++)
+        free(visited_states[i]);
+    free(visited_states);
+    state_clear_queue();
+
+    return (BFS_NO_PATH);
+}
+
 /* Functions and Commands which use the above functions. */
 ACMD(do_track)
 {
-    char arg[MAX_INPUT_LENGTH];
+    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
     struct char_data *vict;
-    int dir;
+    int dir, use_advanced = 0;
 
     /* The character must have the track skill. */
     if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_TRACK)) {
         send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
         return;
     }
-    one_argument(argument, arg);
-    if (!*arg) {
+
+    two_arguments(argument, arg1, arg2);
+
+    if (!*arg1) {
         send_to_char(ch, "Quem você está tentando rastrear?\r\n");
+        send_to_char(ch, "Uso: track <alvo> [advanced]\r\n");
+        send_to_char(ch,
+                     "      track <alvo> advanced  - para rastreamento avançado com análise de chaves e portas\r\n");
         return;
     }
+
+    /* Check for advanced tracking mode */
+    if (*arg2 && !str_cmp(arg2, "advanced")) {
+        use_advanced = 1;
+        /* Advanced mode requires higher skill */
+        if (GET_SKILL(ch, SKILL_TRACK) < 60) {
+            send_to_char(ch, "Seu conhecimento de rastreamento não é avançado o suficiente.\r\n");
+            return;
+        }
+    }
+
     /* The person can't see the victim. */
-    if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_WORLD))) {
+    if (!(vict = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD))) {
         send_to_char(ch, "Você não encontra nenhum caminho.\r\n");
         return;
     }
@@ -264,48 +590,325 @@ ACMD(do_track)
     }
 
     /* They passed the skill check. */
-    int total_cost = 0;
-    dir = find_first_step_enhanced(ch, IN_ROOM(ch), IN_ROOM(vict), &total_cost);
+    if (use_advanced) {
+        /* Use advanced pathfinding with key analysis */
+        int total_cost = 0, required_mv = 0;
+        char *path_description = NULL;
+
+        dir = find_path_with_keys(ch, IN_ROOM(ch), IN_ROOM(vict), &total_cost, &required_mv, &path_description);
+
+        switch (dir) {
+            case BFS_ERROR:
+                send_to_char(ch, "Hmm.. algo parece ter saído errado.\r\n");
+                break;
+            case BFS_ALREADY_THERE:
+                send_to_char(ch, "Você já está na mesma sala!!\r\n");
+                break;
+            case BFS_NO_PATH:
+                send_to_char(ch, "Você não encontra nenhum caminho, mesmo considerando chaves e portas.\r\n");
+                if (path_description && strlen(path_description) > 0) {
+                    send_to_char(ch, "Análise: %s\r\n", path_description);
+                }
+                break;
+            default: /* Success! */
+                send_to_char(ch, "Você encontra um caminho complexo a %s daqui!\r\n", dirs_pt[dir]);
+                if (path_description && strlen(path_description) > 0) {
+                    send_to_char(ch, "Análise detalhada: %s\r\n", path_description);
+                }
+
+                /* Check if path requires keys not yet collected */
+                int next_room_cost = calculate_movement_cost(ch, TOROOM(IN_ROOM(ch), dir));
+                if (GET_MOVE(ch) < next_room_cost && !IS_NPC(ch)) {
+                    send_to_char(ch,
+                                 "Aviso: Você não tem MV suficiente para o primeiro passo. "
+                                 "(Necessário: %d MV, Disponível: %d MV)\r\n",
+                                 next_room_cost, GET_MOVE(ch));
+                }
+                break;
+        }
+
+        /* Free the allocated description */
+        if (path_description)
+            free(path_description);
+
+    } else {
+        /* Use standard enhanced tracking */
+        int total_cost = 0;
+        dir = find_first_step_enhanced(ch, IN_ROOM(ch), IN_ROOM(vict), &total_cost);
+
+        switch (dir) {
+            case BFS_ERROR:
+                send_to_char(ch, "Hmm.. algo parece ter saído errado.\r\n");
+                break;
+            case BFS_ALREADY_THERE:
+                send_to_char(ch, "Você já está na mesma sala!!\r\n");
+                break;
+            case BFS_NO_PATH:
+                send_to_char(ch, "Você não encontra nenhum caminho.\r\n");
+                break;
+            default: /* Success! */
+                /* Check if player has enough MV for the next step */
+                int next_room_cost = calculate_movement_cost(ch, TOROOM(IN_ROOM(ch), dir));
+
+                if (GET_MOVE(ch) < next_room_cost && !IS_NPC(ch)) {
+                    send_to_char(ch,
+                                 "Você encontra um caminho a %s daqui, mas está muito cansad%s para continuar. "
+                                 "(Necessário: %d MV, Disponível: %d MV)\r\n",
+                                 dirs_pt[dir], OA(ch), next_room_cost, GET_MOVE(ch));
+                } else {
+                    /* Provide enhanced tracking information */
+                    float weather_mod = get_weather_movement_modifier(ch);
+                    if (weather_mod > 1.2) {
+                        send_to_char(
+                            ch,
+                            "Você encontra um caminho a %s daqui! As condições climáticas dificultam a viagem. "
+                            "(Custo: %d MV)\r\n",
+                            dirs_pt[dir], next_room_cost);
+                    } else if (weather_mod < 0.9) {
+                        send_to_char(ch,
+                                     "Você encontra um caminho a %s daqui! As condições climáticas favorecem a viagem. "
+                                     "(Custo: %d MV)\r\n",
+                                     dirs_pt[dir], next_room_cost);
+                    } else {
+                        send_to_char(ch, "Você encontra um caminho a %s daqui! (Custo: %d MV)\r\n", dirs_pt[dir],
+                                     next_room_cost);
+                    }
+                }
+                break;
+        }
+    }
+}
+
+/* New command for comprehensive pathfinding analysis */
+ACMD(do_pathfind)
+{
+    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
+    struct char_data *vict;
+    int total_cost = 0, required_mv = 0;
+    char *path_description = NULL;
+    int dir;
+
+    /* The character must have advanced track skill */
+    if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_TRACK)) {
+        send_to_char(ch, "Você não tem conhecimento de rastreamento.\r\n");
+        return;
+    }
+
+    if (GET_SKILL(ch, SKILL_TRACK) < 75) {
+        send_to_char(ch, "Seu conhecimento de rastreamento não é avançado o suficiente para análise de caminhos.\r\n");
+        return;
+    }
+
+    two_arguments(argument, arg1, arg2);
+
+    if (!*arg1) {
+        send_to_char(ch, "Analisar caminho para quem?\r\n");
+        send_to_char(ch, "Uso: pathfind <alvo> [analyze|compare]\r\n");
+        send_to_char(ch, "      pathfind <alvo> analyze  - para análise detalhada de múltiplos caminhos\r\n");
+        send_to_char(ch, "      pathfind <alvo> compare  - para comparação entre métodos básico e avançado\r\n");
+        return;
+    }
+
+    /* Find the target */
+    if (!(vict = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD))) {
+        send_to_char(ch, "Você não consegue localizar esse alvo.\r\n");
+        return;
+    }
+
+    /* We can't track the victim. */
+    if (AFF_FLAGGED(vict, AFF_NOTRACK)) {
+        send_to_char(ch, "Esse alvo não pode ser rastreado.\r\n");
+        return;
+    }
+
+    /* Skill check with higher requirements for pathfind */
+    if (rand_number(0, 101) >= (GET_SKILL(ch, SKILL_TRACK) - 20)) {
+        send_to_char(ch, "Você não consegue analisar um caminho complexo neste momento.\r\n");
+        return;
+    }
+
+    send_to_char(ch, "Analisando caminhos possíveis...\r\n");
+
+    /* Check for compare mode */
+    if (*arg2 && !str_cmp(arg2, "compare")) {
+        char *comparison = get_path_analysis_summary(ch, IN_ROOM(vict));
+        send_to_char(ch, "%s", comparison);
+        return;
+    }
+
+    /* Use advanced pathfinding with comprehensive analysis */
+    dir = find_path_with_keys(ch, IN_ROOM(ch), IN_ROOM(vict), &total_cost, &required_mv, &path_description);
 
     switch (dir) {
         case BFS_ERROR:
-            send_to_char(ch, "Hmm.. algo parece ter saído errado.\r\n");
+            send_to_char(ch, "Erro na análise de caminhos.\r\n");
             break;
-        case BFS_ALREADY_THERE:
-            send_to_char(ch, "Você já está na mesma sala!!\r\n");
-            break;
-        case BFS_NO_PATH:
-            send_to_char(ch, "Você não encontra nenhum caminho.\r\n");
-            break;
-        default: /* Success! */
-            /* Check if player has enough MV for the next step */
-            int next_room_cost = calculate_movement_cost(ch, TOROOM(IN_ROOM(ch), dir));
 
-            if (GET_MOVE(ch) < next_room_cost && !IS_NPC(ch)) {
-                send_to_char(ch,
-                             "Você encontra um caminho a %s daqui, mas está muito cansad%s para continuar. "
-                             "(Necessário: %d MV, Disponível: %d MV)\r\n",
-                             dirs_pt[dir], OA(ch), next_room_cost, GET_MOVE(ch));
+        case BFS_ALREADY_THERE:
+            send_to_char(ch, "Você já está no mesmo local que o alvo!\r\n");
+            break;
+
+        case BFS_NO_PATH:
+            send_to_char(ch, "Análise completa: Nenhum caminho viável encontrado.\r\n");
+            if (path_description && strlen(path_description) > 0) {
+                send_to_char(ch, "%s\r\n", path_description);
+            }
+            send_to_char(ch, "Possíveis problemas:\r\n");
+            send_to_char(ch, "- Portas trancadas sem chaves acessíveis\r\n");
+            send_to_char(ch, "- Barreiras intransponíveis\r\n");
+            send_to_char(ch, "- Alvo em área protegida contra rastreamento\r\n");
+            break;
+
+        default: /* Success! */
+            send_to_char(ch, "&gCaminho encontrado!&n\r\n");
+            send_to_char(ch, "Direção inicial: %s\r\n", dirs_pt[dir]);
+
+            if (path_description && strlen(path_description) > 0) {
+                send_to_char(ch, "Análise detalhada: %s\r\n", path_description);
+            }
+
+            /* Provide movement analysis */
+            int next_step_cost = calculate_movement_cost(ch, TOROOM(IN_ROOM(ch), dir));
+            send_to_char(ch, "Custo do próximo passo: %d MV\r\n", next_step_cost);
+            send_to_char(ch, "MV disponível: %d\r\n", GET_MOVE(ch));
+
+            if (GET_MOVE(ch) < next_step_cost) {
+                send_to_char(ch, "&rAviso: MV insuficiente para o próximo passo!&n\r\n");
+                /* Calculate recovery time needed */
+                int mv_needed = next_step_cost - GET_MOVE(ch);
+                int recovery_time = calculate_mv_recovery_time(ch, mv_needed);
+                send_to_char(ch, "Tempo estimado para recuperação: %d segundos (%d minutos)\r\n", recovery_time,
+                             recovery_time / 60);
+            }
+
+            /* Weather impact analysis */
+            float weather_mod = get_weather_movement_modifier(ch);
+            if (weather_mod > 1.2) {
+                send_to_char(ch, "&yCondições climáticas: DESFAVORÁVEIS (custo +%.0f%%)&n\r\n",
+                             (weather_mod - 1.0) * 100);
+            } else if (weather_mod < 0.9) {
+                send_to_char(ch, "&gCondições climáticas: FAVORÁVEIS (custo %.0f%%)&n\r\n", weather_mod * 100);
             } else {
-                /* Provide enhanced tracking information */
-                float weather_mod = get_weather_movement_modifier(ch);
-                if (weather_mod > 1.2) {
-                    send_to_char(ch,
-                                 "Você encontra um caminho a %s daqui! As condições climáticas dificultam a viagem. "
-                                 "(Custo: %d MV)\r\n",
-                                 dirs_pt[dir], next_room_cost);
-                } else if (weather_mod < 0.9) {
-                    send_to_char(ch,
-                                 "Você encontra um caminho a %s daqui! As condições climáticas favorecem a viagem. "
-                                 "(Custo: %d MV)\r\n",
-                                 dirs_pt[dir], next_room_cost);
-                } else {
-                    send_to_char(ch, "Você encontra um caminho a %s daqui! (Custo: %d MV)\r\n", dirs_pt[dir],
-                                 next_room_cost);
+                send_to_char(ch, "&cCondições climáticas: NORMAIS&n\r\n");
+            }
+
+            /* Detailed analysis if requested */
+            if (*arg2 && !str_cmp(arg2, "analyze")) {
+                send_to_char(ch, "\r\n&cAnálise Detalhada:&n\r\n");
+                send_to_char(ch, "- Algoritmo: Busca com estado de chaves coletadas\r\n");
+                send_to_char(ch, "- Considera: Portas, chaves, custos de movimento, MV disponível\r\n");
+                send_to_char(ch, "- Otimização: Caminho de menor custo com recursos disponíveis\r\n");
+
+                /* Check for potential keys in inventory */
+                struct obj_data *obj;
+                int key_count = 0;
+                send_to_char(ch, "- Chaves no inventário: ");
+                for (obj = ch->carrying; obj; obj = obj->next_content) {
+                    if (GET_OBJ_TYPE(obj) == ITEM_KEY) {
+                        if (key_count > 0)
+                            send_to_char(ch, ", ");
+                        send_to_char(ch, "#%d", GET_OBJ_VNUM(obj));
+                        key_count++;
+                    }
                 }
+                if (key_count == 0) {
+                    send_to_char(ch, "nenhuma");
+                }
+                send_to_char(ch, "\r\n");
             }
             break;
     }
+
+    /* Free the allocated description */
+    if (path_description)
+        free(path_description);
+}
+
+/* Calculate estimated time for MV recovery in seconds
+ * Based on specification: X units every 75 seconds */
+int calculate_mv_recovery_time(struct char_data *ch, int mv_needed)
+{
+    int mv_rate = 1; /* Default: 1 MV per 75 seconds */
+    int recovery_time;
+
+    if (mv_needed <= 0)
+        return 0;
+
+    /* Calculate base recovery time */
+    recovery_time = mv_needed * 75 / mv_rate;
+
+    /* Factor in character constitution and level for better estimates */
+    if (GET_CON(ch) > 15) {
+        recovery_time = (recovery_time * 85) / 100; /* 15% faster recovery for high CON */
+    } else if (GET_CON(ch) < 10) {
+        recovery_time = (recovery_time * 115) / 100; /* 15% slower recovery for low CON */
+    }
+
+    return recovery_time;
+}
+
+/* Generate a comprehensive path analysis summary for a target */
+char *get_path_analysis_summary(struct char_data *ch, room_rnum target)
+{
+    static char summary[MAX_STRING_LENGTH];
+    int basic_dir, advanced_dir;
+    int basic_cost = 0, advanced_cost = 0, advanced_mv = 0;
+    char *advanced_desc = NULL;
+
+    /* Clear summary */
+    strcpy(summary, "");
+
+    /* Try basic pathfinding first */
+    basic_dir = find_first_step_enhanced(ch, IN_ROOM(ch), target, &basic_cost);
+
+    /* Try advanced pathfinding */
+    advanced_dir = find_path_with_keys(ch, IN_ROOM(ch), target, &advanced_cost, &advanced_mv, &advanced_desc);
+
+    strcat(summary, "=== ANÁLISE COMPARATIVA DE CAMINHOS ===\r\n");
+
+    /* Basic pathfinding results */
+    if (basic_dir >= 0 && basic_dir < DIR_COUNT) {
+        char basic_info[256];
+        snprintf(basic_info, sizeof(basic_info), "Rastreamento Básico: %s (custo estimado: %d MV)\r\n",
+                 dirs_pt[basic_dir], basic_cost);
+        strcat(summary, basic_info);
+    } else {
+        strcat(summary, "Rastreamento Básico: Nenhum caminho encontrado\r\n");
+    }
+
+    /* Advanced pathfinding results */
+    if (advanced_dir >= 0 && advanced_dir < DIR_COUNT) {
+        char advanced_info[256];
+        snprintf(advanced_info, sizeof(advanced_info), "Rastreamento Avançado: %s (custo total: %d MV)\r\n",
+                 dirs_pt[advanced_dir], advanced_cost);
+        strcat(summary, advanced_info);
+
+        if (advanced_desc && strlen(advanced_desc) > 0) {
+            strcat(summary, "Detalhes: ");
+            strcat(summary, advanced_desc);
+            strcat(summary, "\r\n");
+        }
+    } else {
+        strcat(summary, "Rastreamento Avançado: Nenhum caminho viável\r\n");
+    }
+
+    /* Recommendation */
+    strcat(summary, "\r\n=== RECOMENDAÇÃO ===\r\n");
+    if (basic_dir == advanced_dir && basic_dir >= 0) {
+        strcat(summary, "Ambos os métodos concordam. Caminho direto disponível.\r\n");
+    } else if (advanced_dir >= 0 && basic_dir < 0) {
+        strcat(summary, "Apenas o rastreamento avançado encontrou caminho. Use 'track [alvo] advanced'.\r\n");
+    } else if (basic_dir >= 0 && advanced_dir < 0) {
+        strcat(summary, "Rastreamento básico encontrou caminho simples. Use 'track [alvo]'.\r\n");
+    } else {
+        strcat(summary, "Nenhum caminho viável encontrado. Verifique chaves e barreiras.\r\n");
+    }
+
+    /* Clean up */
+    if (advanced_desc)
+        free(advanced_desc);
+
+    return summary;
 }
 
 void hunt_victim(struct char_data *ch)
