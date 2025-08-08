@@ -847,6 +847,58 @@ int calculate_mv_recovery_time(struct char_data *ch, int mv_needed)
     return recovery_time;
 }
 
+/**
+ * Intelligent pathfinding comparison for mobs.
+ * Compares basic vs advanced pathfinding and chooses the most efficient method.
+ * Returns the best direction or -1 if no path found.
+ */
+int mob_smart_pathfind(struct char_data *ch, room_rnum target_room)
+{
+    int basic_dir, advanced_dir;
+    int basic_cost = 0, advanced_cost = 0, advanced_mv = 0;
+    char *advanced_desc = NULL;
+
+    if (!ch || !IS_NPC(ch) || target_room == NOWHERE || IN_ROOM(ch) == target_room)
+        return -1;
+
+    /* Try basic pathfinding first */
+    basic_dir = find_first_step_enhanced(ch, IN_ROOM(ch), target_room, &basic_cost);
+
+    /* Try advanced pathfinding with key analysis */
+    advanced_dir = find_path_with_keys(ch, IN_ROOM(ch), target_room, &advanced_cost, &advanced_mv, &advanced_desc);
+
+    /* Decision logic: Choose the most efficient path */
+    int chosen_dir = -1;
+
+    if (basic_dir >= 0 && advanced_dir >= 0) {
+        /* Both found paths - compare efficiency */
+        if (basic_dir == advanced_dir) {
+            /* Same direction - use basic for simplicity */
+            chosen_dir = basic_dir;
+        } else {
+            /* Different directions - choose based on total cost */
+            if (advanced_cost <= basic_cost * 1.1) { /* Allow 10% overhead for advanced features */
+                chosen_dir = advanced_dir;
+            } else {
+                chosen_dir = basic_dir;
+            }
+        }
+    } else if (advanced_dir >= 0) {
+        /* Only advanced found a path (probably requires keys/door handling) */
+        chosen_dir = advanced_dir;
+    } else if (basic_dir >= 0) {
+        /* Only basic found a path */
+        chosen_dir = basic_dir;
+    }
+    /* If neither found a path, return -1 */
+
+    /* Free allocated description */
+    if (advanced_desc)
+        free(advanced_desc);
+
+    return chosen_dir;
+}
+
 /* Generate a comprehensive path analysis summary for a target */
 char *get_path_analysis_summary(struct char_data *ch, room_rnum target)
 {
@@ -932,7 +984,20 @@ void hunt_victim(struct char_data *ch)
         HUNTING(ch) = NULL;
         return;
     }
-    if ((dir = find_first_step(IN_ROOM(ch), IN_ROOM(HUNTING(ch)))) < 0) {
+
+    /* Use intelligent pathfinding for mobs hunting targets */
+    if (IS_NPC(ch)) {
+        dir = mob_smart_pathfind(ch, IN_ROOM(HUNTING(ch)));
+        if (dir == -1) {
+            /* Fall back to basic pathfinding if smart pathfinding fails */
+            dir = find_first_step(IN_ROOM(ch), IN_ROOM(HUNTING(ch)));
+        }
+    } else {
+        /* Players still use basic pathfinding for hunting */
+        dir = find_first_step(IN_ROOM(ch), IN_ROOM(HUNTING(ch)));
+    }
+
+    if (dir < 0) {
         char buf[MAX_INPUT_LENGTH];
 
         snprintf(buf, sizeof(buf), "Maldição!  Eu perdi %s!", ELEA(HUNTING(ch)));

@@ -1362,7 +1362,7 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
  * IA de exploração orientada a objetivos. O mob agora vagueia com um propósito.
  * Se um 'target_room' for fornecido, ele tentará navegar até lá.
  * Se não, ele usa a sua lógica de exploração padrão.
- * VERSÃO FINAL COM NAVEGAÇÃO POR OBJETIVO.
+ * VERSÃO FINAL COM NAVEGAÇÃO POR OBJETIVO E PATHFINDING INTELIGENTE.
  * Retorna TRUE se uma ação de roam foi executada.
  */
 bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
@@ -1377,7 +1377,12 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
 
     /* Se um destino específico foi dado, essa é a prioridade máxima. */
     if (target_room != NOWHERE && IN_ROOM(ch) != target_room) {
-        direction = find_first_step(IN_ROOM(ch), target_room);
+        /* Use intelligent pathfinding that compares basic vs advanced methods */
+        direction = mob_smart_pathfind(ch, target_room);
+        if (direction == -1) {
+            /* Fall back to simple pathfinding if smart pathfinding fails */
+            direction = find_first_step(IN_ROOM(ch), target_room);
+        }
         has_goal = TRUE;
     } else {
         /* Se nenhum destino foi dado, usa a lógica de exploração padrão. */
@@ -1503,9 +1508,14 @@ bool handle_duty_routine(struct char_data *ch)
             return TRUE; /* Está no posto, não faz mais nada. Fim do turno. */
         }
 
-        /* Se não está no posto, tenta voltar. */
+        /* Se não está no posto, tenta voltar usando pathfinding inteligente. */
         if (home_room != NOWHERE) {
-            int direction = find_first_step(IN_ROOM(ch), home_room);
+            int direction = mob_smart_pathfind(ch, home_room);
+
+            if (direction == -1) {
+                /* Fall back to basic pathfinding if smart pathfinding fails */
+                direction = find_first_step(IN_ROOM(ch), home_room);
+            }
 
             if (direction >= 0) {
                 perform_move(ch, direction, 1);
@@ -1562,8 +1572,13 @@ bool mob_follow_leader(struct char_data *ch)
             return FALSE; /* Ficou no posto, leal ao seu dever original. */
         }
 
-        /* Tenta encontrar o caminho até ao líder. */
-        int direction = find_first_step(IN_ROOM(ch), IN_ROOM(leader));
+        /* Tenta encontrar o caminho até ao líder usando pathfinding inteligente. */
+        int direction = mob_smart_pathfind(ch, IN_ROOM(leader));
+
+        if (direction == -1) {
+            /* Fall back to basic pathfinding if smart pathfinding fails */
+            direction = find_first_step(IN_ROOM(ch), IN_ROOM(leader));
+        }
 
         if (direction >= 0) {
             room_rnum to_room;

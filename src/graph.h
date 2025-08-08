@@ -24,5 +24,6 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
 int calculate_movement_cost(struct char_data *ch, room_rnum room);
 int calculate_mv_recovery_time(struct char_data *ch, int mv_needed);
 char *get_path_analysis_summary(struct char_data *ch, room_rnum target);
+int mob_smart_pathfind(struct char_data *ch, room_rnum target_room);
 
 #endif /* _GRAPH_H_*/
