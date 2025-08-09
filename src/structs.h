@@ -961,6 +961,7 @@ struct room_data {
 #define GOAL_FISH 11
 #define GOAL_FORAGE 12
 #define GOAL_EAVESDROP 13
+#define GOAL_COLLECT_KEY 14
 
 /*
  * Estrutura para armazenar os "genes" de um mob, que podem evoluir.
@@ -1002,6 +1003,13 @@ struct mob_ai_data {
     mob_rnum goal_target_mob_rnum; /*Falar com quem?*/
     obj_vnum goal_item_vnum;       /* VNUM do item alvo para compra/quest */
     int goal_timer;                /* Contador para evitar ficar preso no mesmo objetivo */
+
+    /* Fields for storing original goal when collecting keys */
+    int original_goal;              /* The goal to return to after key collection */
+    room_rnum original_destination; /* Original destination to return to */
+    struct obj_data *original_obj;  /* Original object goal */
+    mob_rnum original_target_mob;   /* Original target mob */
+    obj_vnum original_item_vnum;    /* Original item vnum */
 
     int reputation;         /* Reputação do mob para quests (0-100) */
     qst_vnum current_quest; /* Quest ativa atual do mob (se houver) */

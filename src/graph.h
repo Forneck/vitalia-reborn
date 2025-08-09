@@ -15,7 +15,16 @@
 #define _GRAPH_H_
 
 ACMD(do_track);
+ACMD(do_pathfind);
 void hunt_victim(struct char_data *ch);
 int find_first_step(room_rnum src, room_rnum target);
+int find_first_step_enhanced(struct char_data *ch, room_rnum src, room_rnum target, int *total_cost);
+int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, int *total_cost, int *required_mv,
+                        char **path_description);
+int calculate_movement_cost(struct char_data *ch, room_rnum room);
+int calculate_mv_recovery_time(struct char_data *ch, int mv_needed);
+char *get_path_analysis_summary(struct char_data *ch, room_rnum target);
+int mob_smart_pathfind(struct char_data *ch, room_rnum target_room);
+obj_vnum find_blocking_key(struct char_data *ch, room_rnum src, room_rnum target);
 
 #endif /* _GRAPH_H_*/

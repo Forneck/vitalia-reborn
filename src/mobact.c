@@ -60,6 +60,10 @@ bool mob_try_sacrifice(struct char_data *ch, struct obj_data *corpse);
 bool mob_try_junk(struct char_data *ch, struct obj_data *obj);
 bool mob_try_drop(struct char_data *ch, struct obj_data *obj);
 
+/* Function to find where a key can be obtained */
+room_rnum find_key_location(obj_vnum key_vnum, int *source_type, mob_vnum *carrying_mob);
+bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int original_goal, room_rnum original_dest);
+
 /** Function to handle mob leveling when they gain enough experience.
  * Mobs automatically distribute improvements to stats and abilities
  * since they don't have practice points like players.
@@ -169,7 +173,7 @@ void mobile_activity(void)
             if ((ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL ||
                  ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY ||
                  ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER || ch->ai_data->current_goal == GOAL_ACCEPT_QUEST ||
-                 ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) &&
+                 ch->ai_data->current_goal == GOAL_COMPLETE_QUEST || ch->ai_data->current_goal == GOAL_COLLECT_KEY) &&
                 ch->ai_data->goal_timer > 50) {
                 act("$n parece frustrado e desiste da viagem.", FALSE, ch, 0, 0, TO_ROOM);
 
@@ -178,13 +182,30 @@ void mobile_activity(void)
                     fail_mob_quest(ch, "timeout");
                 }
 
-                ch->ai_data->current_goal = GOAL_NONE;
-                ch->ai_data->goal_destination = NOWHERE;
-                ch->ai_data->goal_obj = NULL;
-                ch->ai_data->goal_target_mob_rnum = NOBODY;
-                ch->ai_data->goal_item_vnum = NOTHING;
-                ch->ai_data->goal_timer = 0;
-                continue; /* Allow other priorities this turn */
+                /* If abandoning key collection, restore original goal if it exists */
+                if (ch->ai_data->current_goal == GOAL_COLLECT_KEY && ch->ai_data->original_goal != GOAL_NONE) {
+                    ch->ai_data->current_goal = ch->ai_data->original_goal;
+                    ch->ai_data->goal_destination = ch->ai_data->original_destination;
+                    ch->ai_data->goal_obj = ch->ai_data->original_obj;
+                    ch->ai_data->goal_target_mob_rnum = ch->ai_data->original_target_mob;
+                    ch->ai_data->goal_item_vnum = ch->ai_data->original_item_vnum;
+                    ch->ai_data->goal_timer = 0;
+                    /* Clear original goal data */
+                    ch->ai_data->original_goal = GOAL_NONE;
+                    ch->ai_data->original_destination = NOWHERE;
+                    ch->ai_data->original_obj = NULL;
+                    ch->ai_data->original_target_mob = NOBODY;
+                    ch->ai_data->original_item_vnum = NOTHING;
+                    continue; /* Continue with restored goal */
+                } else {
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    ch->ai_data->goal_destination = NOWHERE;
+                    ch->ai_data->goal_obj = NULL;
+                    ch->ai_data->goal_target_mob_rnum = NOBODY;
+                    ch->ai_data->goal_item_vnum = NOTHING;
+                    ch->ai_data->goal_timer = 0;
+                    continue; /* Allow other priorities this turn */
+                }
             }
 
             /* Handle goals that don't require movement */
@@ -454,6 +475,78 @@ void mobile_activity(void)
                         /* No quest, clear goal */
                         ch->ai_data->current_goal = GOAL_NONE;
                     }
+                } else if (ch->ai_data->current_goal == GOAL_COLLECT_KEY) {
+                    /* Arrived at key location - try to collect the key */
+                    struct obj_data *key_obj = NULL;
+                    obj_vnum target_key = ch->ai_data->goal_item_vnum;
+                    bool key_collected = FALSE;
+
+                    /* Look for the key on the ground */
+                    for (key_obj = world[IN_ROOM(ch)].contents; key_obj; key_obj = key_obj->next_content) {
+                        if (GET_OBJ_TYPE(key_obj) == ITEM_KEY && GET_OBJ_VNUM(key_obj) == target_key) {
+                            obj_from_room(key_obj);
+                            obj_to_char(key_obj, ch);
+                            act("$n pega $p do chão.", FALSE, ch, key_obj, 0, TO_ROOM);
+                            key_collected = TRUE;
+                            break;
+                        }
+                    }
+
+                    /* If not found on ground, look in containers */
+                    if (!key_collected) {
+                        struct obj_data *container;
+                        for (container = world[IN_ROOM(ch)].contents; container; container = container->next_content) {
+                            if (GET_OBJ_TYPE(container) == ITEM_CONTAINER && !OBJVAL_FLAGGED(container, CONT_CLOSED)) {
+                                for (key_obj = container->contains; key_obj; key_obj = key_obj->next_content) {
+                                    if (GET_OBJ_TYPE(key_obj) == ITEM_KEY && GET_OBJ_VNUM(key_obj) == target_key) {
+                                        obj_from_obj(key_obj);
+                                        obj_to_char(key_obj, ch);
+                                        act("$n pega $p de $P.", FALSE, ch, key_obj, container, TO_ROOM);
+                                        key_collected = TRUE;
+                                        break;
+                                    }
+                                }
+                                if (key_collected)
+                                    break;
+                            }
+                        }
+                    }
+
+                    /* If not found in containers, look for mob carrying it */
+                    if (!key_collected && ch->ai_data->goal_target_mob_rnum != NOBODY) {
+                        struct char_data *target_mob =
+                            get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
+                        if (target_mob && !FIGHTING(ch)) {
+                            /* Attack the mob to get the key */
+                            act("$n ataca $N para obter algo que precisa.", FALSE, ch, 0, target_mob, TO_ROOM);
+                            hit(ch, target_mob, TYPE_UNDEFINED);
+                            /* Don't clear goal yet - continue fighting until key is obtained */
+                            continue;
+                        }
+                    }
+
+                    /* If key was collected, restore original goal */
+                    if (key_collected) {
+                        if (ch->ai_data->original_goal != GOAL_NONE) {
+                            ch->ai_data->current_goal = ch->ai_data->original_goal;
+                            ch->ai_data->goal_destination = ch->ai_data->original_destination;
+                            ch->ai_data->goal_obj = ch->ai_data->original_obj;
+                            ch->ai_data->goal_target_mob_rnum = ch->ai_data->original_target_mob;
+                            ch->ai_data->goal_item_vnum = ch->ai_data->original_item_vnum;
+                            ch->ai_data->goal_timer = 0;
+
+                            /* Clear original goal data */
+                            ch->ai_data->original_goal = GOAL_NONE;
+                            ch->ai_data->original_destination = NOWHERE;
+                            ch->ai_data->original_obj = NULL;
+                            ch->ai_data->original_target_mob = NOBODY;
+                            ch->ai_data->original_item_vnum = NOTHING;
+
+                            act("$n parece satisfeito por ter encontrado o que procurava.", FALSE, ch, 0, 0, TO_ROOM);
+                            continue; /* Continue with restored goal */
+                        }
+                    }
+                    /* If key not found, goal will be cleared below */
                 }
                 /* Limpa o objetivo, pois foi concluído. */
                 ch->ai_data->current_goal = GOAL_NONE;
@@ -1362,7 +1455,7 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
  * IA de exploração orientada a objetivos. O mob agora vagueia com um propósito.
  * Se um 'target_room' for fornecido, ele tentará navegar até lá.
  * Se não, ele usa a sua lógica de exploração padrão.
- * VERSÃO FINAL COM NAVEGAÇÃO POR OBJETIVO.
+ * VERSÃO FINAL COM NAVEGAÇÃO POR OBJETIVO E PATHFINDING INTELIGENTE.
  * Retorna TRUE se uma ação de roam foi executada.
  */
 bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
@@ -1377,7 +1470,24 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
 
     /* Se um destino específico foi dado, essa é a prioridade máxima. */
     if (target_room != NOWHERE && IN_ROOM(ch) != target_room) {
-        direction = find_first_step(IN_ROOM(ch), target_room);
+        /* Use intelligent pathfinding that compares basic vs advanced methods */
+        direction = mob_smart_pathfind(ch, target_room);
+        if (direction == -1) {
+            /* Fall back to simple pathfinding if smart pathfinding fails */
+            direction = find_first_step(IN_ROOM(ch), target_room);
+
+            /* If both pathfinding methods fail, check if it's due to missing keys */
+            if (direction == -1 && ch->ai_data && ch->ai_data->current_goal != GOAL_COLLECT_KEY) {
+                /* Check if we need a key to reach the target */
+                obj_vnum blocking_key = find_blocking_key(ch, IN_ROOM(ch), target_room);
+                if (blocking_key != NOTHING) {
+                    /* Set key collection goal with current goal as original */
+                    if (mob_set_key_collection_goal(ch, blocking_key, ch->ai_data->current_goal, target_room)) {
+                        return TRUE; /* Goal changed to key collection */
+                    }
+                }
+            }
+        }
         has_goal = TRUE;
     } else {
         /* Se nenhum destino foi dado, usa a lógica de exploração padrão. */
@@ -1503,9 +1613,25 @@ bool handle_duty_routine(struct char_data *ch)
             return TRUE; /* Está no posto, não faz mais nada. Fim do turno. */
         }
 
-        /* Se não está no posto, tenta voltar. */
+        /* Se não está no posto, tenta voltar usando pathfinding inteligente. */
         if (home_room != NOWHERE) {
-            int direction = find_first_step(IN_ROOM(ch), home_room);
+            int direction = mob_smart_pathfind(ch, home_room);
+
+            if (direction == -1) {
+                /* Fall back to basic pathfinding if smart pathfinding fails */
+                direction = find_first_step(IN_ROOM(ch), home_room);
+
+                /* If both pathfinding methods fail, check if it's due to missing keys */
+                if (direction == -1 && ch->ai_data && ch->ai_data->current_goal != GOAL_COLLECT_KEY) {
+                    obj_vnum blocking_key = find_blocking_key(ch, IN_ROOM(ch), home_room);
+                    if (blocking_key != NOTHING) {
+                        /* Set key collection goal with return to post as original */
+                        if (mob_set_key_collection_goal(ch, blocking_key, GOAL_RETURN_TO_POST, home_room)) {
+                            return TRUE; /* Goal changed to key collection */
+                        }
+                    }
+                }
+            }
 
             if (direction >= 0) {
                 perform_move(ch, direction, 1);
@@ -1562,8 +1688,23 @@ bool mob_follow_leader(struct char_data *ch)
             return FALSE; /* Ficou no posto, leal ao seu dever original. */
         }
 
-        /* Tenta encontrar o caminho até ao líder. */
-        int direction = find_first_step(IN_ROOM(ch), IN_ROOM(leader));
+        /* Tenta encontrar o caminho até ao líder usando pathfinding inteligente. */
+        int direction = mob_smart_pathfind(ch, IN_ROOM(leader));
+
+        if (direction == -1) {
+            /* Fall back to basic pathfinding if smart pathfinding fails */
+            direction = find_first_step(IN_ROOM(ch), IN_ROOM(leader));
+
+            /* If both pathfinding methods fail, check if it's due to missing keys */
+            if (direction == -1 && ch->ai_data && ch->ai_data->current_goal != GOAL_COLLECT_KEY) {
+                obj_vnum blocking_key = find_blocking_key(ch, IN_ROOM(ch), IN_ROOM(leader));
+                if (blocking_key != NOTHING) {
+                    /* Don't set a formal goal for following, just fail gracefully */
+                    /* Following is a lower priority activity */
+                    return FALSE;
+                }
+            }
+        }
 
         if (direction >= 0) {
             room_rnum to_room;
@@ -3087,6 +3228,141 @@ bool mob_try_drop(struct char_data *ch, struct obj_data *obj)
     char cmd_buf[MAX_INPUT_LENGTH];
     snprintf(cmd_buf, sizeof(cmd_buf), "%s", obj->name);
     do_drop(ch, cmd_buf, 0, SCMD_DROP);
+
+    return TRUE;
+}
+
+/* Source types for key location */
+#define KEY_SOURCE_ROOM 1      /* Key is on the ground in a room */
+#define KEY_SOURCE_CONTAINER 2 /* Key is inside a container */
+#define KEY_SOURCE_MOB 3       /* Key is carried by a mob */
+
+/**
+ * Find where a specific key can be obtained
+ * @param key_vnum The vnum of the key to find
+ * @param source_type Pointer to store the source type (KEY_SOURCE_*)
+ * @param carrying_mob Pointer to store the mob vnum if carried by a mob
+ * @return room number where the key can be found, or NOWHERE if not found
+ */
+room_rnum find_key_location(obj_vnum key_vnum, int *source_type, mob_vnum *carrying_mob)
+{
+    room_rnum room;
+    struct obj_data *obj;
+    struct char_data *mob;
+
+    if (source_type)
+        *source_type = 0;
+    if (carrying_mob)
+        *carrying_mob = NOBODY;
+
+    /* Search all rooms for the key */
+    for (room = 0; room <= top_of_world; room++) {
+        /* Check objects on room floor */
+        for (obj = world[room].contents; obj; obj = obj->next_content) {
+            if (GET_OBJ_TYPE(obj) == ITEM_KEY && GET_OBJ_VNUM(obj) == key_vnum) {
+                if (source_type)
+                    *source_type = KEY_SOURCE_ROOM;
+                return room;
+            }
+
+            /* Check inside containers */
+            if (GET_OBJ_TYPE(obj) == ITEM_CONTAINER && !OBJVAL_FLAGGED(obj, CONT_CLOSED)) {
+                struct obj_data *contained;
+                for (contained = obj->contains; contained; contained = contained->next_content) {
+                    if (GET_OBJ_TYPE(contained) == ITEM_KEY && GET_OBJ_VNUM(contained) == key_vnum) {
+                        if (source_type)
+                            *source_type = KEY_SOURCE_CONTAINER;
+                        return room;
+                    }
+                }
+            }
+        }
+
+        /* Check mobs in this room */
+        for (mob = world[room].people; mob; mob = mob->next_in_room) {
+            if (!IS_NPC(mob))
+                continue;
+
+            /* Check mob inventory */
+            for (obj = mob->carrying; obj; obj = obj->next_content) {
+                if (GET_OBJ_TYPE(obj) == ITEM_KEY && GET_OBJ_VNUM(obj) == key_vnum) {
+                    if (source_type)
+                        *source_type = KEY_SOURCE_MOB;
+                    if (carrying_mob)
+                        *carrying_mob = GET_MOB_VNUM(mob);
+                    return room;
+                }
+            }
+
+            /* Check mob equipment */
+            for (int wear_pos = 0; wear_pos < NUM_WEARS; wear_pos++) {
+                obj = GET_EQ(mob, wear_pos);
+                if (obj && GET_OBJ_TYPE(obj) == ITEM_KEY && GET_OBJ_VNUM(obj) == key_vnum) {
+                    if (source_type)
+                        *source_type = KEY_SOURCE_MOB;
+                    if (carrying_mob)
+                        *carrying_mob = GET_MOB_VNUM(mob);
+                    return room;
+                }
+            }
+        }
+    }
+
+    return NOWHERE; /* Key not found anywhere */
+}
+
+/**
+ * Set a key collection goal for a mob, storing the original goal to return to
+ * @param ch The mob
+ * @param key_vnum The key to collect
+ * @param original_goal The goal to return to after collecting the key
+ * @param original_dest The original destination
+ * @return TRUE if goal was set successfully
+ */
+bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int original_goal, room_rnum original_dest)
+{
+    int source_type;
+    mob_vnum carrying_mob;
+    room_rnum key_location;
+
+    if (!ch || !IS_NPC(ch) || !ch->ai_data) {
+        return FALSE;
+    }
+
+    /* Find where the key is located */
+    key_location = find_key_location(key_vnum, &source_type, &carrying_mob);
+
+    if (key_location == NOWHERE) {
+        return FALSE; /* Key not found anywhere */
+    }
+
+    /* Store the original goal information */
+    ch->ai_data->original_goal = original_goal;
+    ch->ai_data->original_destination = original_dest;
+    ch->ai_data->original_obj = ch->ai_data->goal_obj;
+    ch->ai_data->original_target_mob = ch->ai_data->goal_target_mob_rnum;
+    ch->ai_data->original_item_vnum = ch->ai_data->goal_item_vnum;
+
+    /* Set new key collection goal */
+    ch->ai_data->current_goal = GOAL_COLLECT_KEY;
+    ch->ai_data->goal_destination = key_location;
+    ch->ai_data->goal_item_vnum = key_vnum;
+    ch->ai_data->goal_timer = 0;
+
+    /* Set appropriate target based on source type */
+    switch (source_type) {
+        case KEY_SOURCE_ROOM:
+        case KEY_SOURCE_CONTAINER:
+            ch->ai_data->goal_target_mob_rnum = NOBODY;
+            ch->ai_data->goal_obj = NULL;
+            break;
+        case KEY_SOURCE_MOB:
+            ch->ai_data->goal_target_mob_rnum = real_mobile(carrying_mob);
+            ch->ai_data->goal_obj = NULL;
+            break;
+    }
+
+    act("$n parece estar procurando por algo específico.", FALSE, ch, 0, 0, TO_ROOM);
 
     return TRUE;
 }
