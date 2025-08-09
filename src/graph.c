@@ -57,8 +57,8 @@ int calculate_movement_cost(struct char_data *ch, room_rnum room)
 }
 
 /* Advanced pathfinding structures for state-based search */
-#define MAX_COLLECTED_KEYS 10 /* Reduced from 50 to limit complexity */
-#define MAX_VISITED_STATES 100 /* Reduced from 1000 to limit memory usage */
+#define MAX_COLLECTED_KEYS 10       /* Reduced from 50 to limit complexity */
+#define MAX_VISITED_STATES 100      /* Reduced from 1000 to limit memory usage */
 #define MAX_PATHFIND_ITERATIONS 500 /* Limit iterations to prevent infinite loops */
 
 struct path_state {
@@ -536,7 +536,7 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
             add_key_to_state(&initial_state, GET_OBJ_VNUM(obj));
         }
     }
-    if (GET_EQ(ch, WEAR_HOLD) && GET_OBJ_TYPE(GET_EQ(ch, WEAR_HOLD)) == ITEM_KEY && 
+    if (GET_EQ(ch, WEAR_HOLD) && GET_OBJ_TYPE(GET_EQ(ch, WEAR_HOLD)) == ITEM_KEY &&
         initial_state.num_keys < MAX_COLLECTED_KEYS) {
         add_key_to_state(&initial_state, GET_OBJ_VNUM(GET_EQ(ch, WEAR_HOLD)));
     }
@@ -546,7 +546,7 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
     /* Main pathfinding loop with iteration limit */
     while ((current_state = state_dequeue()) != NULL && iterations < MAX_PATHFIND_ITERATIONS) {
         iterations++;
-        
+
         /* Check if we've reached the target */
         if (current_state->room == target) {
             *total_cost = current_state->path_cost;
@@ -570,7 +570,8 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
 
             /* Cleanup */
             for (i = 0; i < num_visited; i++)
-                if (visited_states[i]) free(visited_states[i]);
+                if (visited_states[i])
+                    free(visited_states[i]);
             free(visited_states);
             state_clear_queue();
             return current_state->first_dir;
@@ -657,7 +658,8 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
 
     /* Cleanup */
     for (i = 0; i < num_visited; i++)
-        if (visited_states[i]) free(visited_states[i]);
+        if (visited_states[i])
+            free(visited_states[i]);
     free(visited_states);
     state_clear_queue();
 
@@ -809,6 +811,101 @@ ACMD(do_track)
     }
 }
 
+/* Simple pathfinding cache to reduce redundant calculations */
+#define PATHFIND_CACHE_SIZE 100
+#define PATHFIND_CACHE_TTL 10 /* Cache entries valid for 10 seconds */
+
+/* Global pathfinding statistics for monitoring */
+static long pathfind_calls_total = 0;
+static long pathfind_cache_hits = 0;
+static long advanced_pathfind_calls = 0;
+
+struct pathfind_cache_entry {
+    room_rnum src;
+    room_rnum target;
+    time_t timestamp;
+    int direction;
+    int valid;
+};
+
+static struct pathfind_cache_entry pathfind_cache[PATHFIND_CACHE_SIZE];
+static int pathfind_cache_initialized = 0;
+
+static void init_pathfind_cache(void)
+{
+    int i;
+    for (i = 0; i < PATHFIND_CACHE_SIZE; i++) {
+        pathfind_cache[i].valid = 0;
+    }
+    pathfind_cache_initialized = 1;
+}
+
+/* Getter functions for pathfinding statistics */
+long get_pathfind_calls_total(void) { return pathfind_calls_total; }
+
+long get_pathfind_cache_hits(void) { return pathfind_cache_hits; }
+
+long get_advanced_pathfind_calls(void) { return advanced_pathfind_calls; }
+
+int get_pathfind_cache_valid_entries(void)
+{
+    int valid_entries = 0;
+    if (pathfind_cache_initialized) {
+        for (int i = 0; i < PATHFIND_CACHE_SIZE; i++) {
+            if (pathfind_cache[i].valid) {
+                valid_entries++;
+            }
+        }
+    }
+    return valid_entries;
+}
+
+static int get_cached_pathfind(room_rnum src, room_rnum target)
+{
+    int i;
+    time_t now = time(NULL);
+
+    if (!pathfind_cache_initialized)
+        return -1;
+
+    for (i = 0; i < PATHFIND_CACHE_SIZE; i++) {
+        if (pathfind_cache[i].valid && pathfind_cache[i].src == src && pathfind_cache[i].target == target &&
+            (now - pathfind_cache[i].timestamp) < PATHFIND_CACHE_TTL) {
+            pathfind_cache_hits++;
+            return pathfind_cache[i].direction;
+        }
+    }
+    return -1;
+}
+
+static void cache_pathfind_result(room_rnum src, room_rnum target, int direction)
+{
+    int i, oldest_idx = 0;
+    time_t now = time(NULL);
+    time_t oldest_time = now;
+
+    if (!pathfind_cache_initialized)
+        init_pathfind_cache();
+
+    /* Find empty slot or oldest entry */
+    for (i = 0; i < PATHFIND_CACHE_SIZE; i++) {
+        if (!pathfind_cache[i].valid) {
+            oldest_idx = i;
+            break;
+        }
+        if (pathfind_cache[i].timestamp < oldest_time) {
+            oldest_time = pathfind_cache[i].timestamp;
+            oldest_idx = i;
+        }
+    }
+
+    pathfind_cache[oldest_idx].src = src;
+    pathfind_cache[oldest_idx].target = target;
+    pathfind_cache[oldest_idx].direction = direction;
+    pathfind_cache[oldest_idx].timestamp = now;
+    pathfind_cache[oldest_idx].valid = 1;
+}
+
 /* New command for comprehensive pathfinding analysis */
 ACMD(do_pathfind)
 {
@@ -833,9 +930,41 @@ ACMD(do_pathfind)
 
     if (!*arg1) {
         send_to_char(ch, "Analisar caminho para quem?\r\n");
-        send_to_char(ch, "Uso: pathfind <alvo> [analyze|compare]\r\n");
+        send_to_char(ch, "Uso: pathfind <alvo> [analyze|compare|stats]\r\n");
         send_to_char(ch, "      pathfind <alvo> analyze  - para análise detalhada de múltiplos caminhos\r\n");
         send_to_char(ch, "      pathfind <alvo> compare  - para comparação entre métodos básico e avançado\r\n");
+        send_to_char(ch, "      pathfind stats           - mostrar estatísticas de pathfinding\r\n");
+        return;
+    }
+
+    /* Check for stats command */
+    if (!str_cmp(arg1, "stats")) {
+        if (!IS_NPC(ch) && GET_LEVEL(ch) >= LVL_IMMORT) {
+            send_to_char(ch, "=== PATHFINDING STATISTICS ===\r\n");
+            send_to_char(ch, "Total pathfinding calls: %ld\r\n", pathfind_calls_total);
+            send_to_char(ch, "Cache hits: %ld\r\n", pathfind_cache_hits);
+            send_to_char(ch, "Advanced pathfinding calls: %ld\r\n", advanced_pathfind_calls);
+
+            if (pathfind_calls_total > 0) {
+                float cache_hit_rate = (float)pathfind_cache_hits / pathfind_calls_total * 100;
+                float advanced_rate = (float)advanced_pathfind_calls / pathfind_calls_total * 100;
+                send_to_char(ch, "Cache hit rate: %.1f%%\r\n", cache_hit_rate);
+                send_to_char(ch, "Advanced pathfinding rate: %.1f%%\r\n", advanced_rate);
+            }
+
+            /* Count valid cache entries */
+            int valid_entries = 0;
+            if (pathfind_cache_initialized) {
+                for (int i = 0; i < PATHFIND_CACHE_SIZE; i++) {
+                    if (pathfind_cache[i].valid) {
+                        valid_entries++;
+                    }
+                }
+            }
+            send_to_char(ch, "Cache entries in use: %d/%d\r\n", valid_entries, PATHFIND_CACHE_SIZE);
+        } else {
+            send_to_char(ch, "Você não tem permissão para ver estatísticas de pathfinding.\r\n");
+        }
         return;
     }
 
@@ -890,7 +1019,7 @@ ACMD(do_pathfind)
             break;
 
         default: /* Success! */
-            send_to_char(ch, "&gCaminho encontrado!&n\r\n");
+            send_to_char(ch, "\tgCaminho encontrado!\tn\r\n");
             send_to_char(ch, "Direção inicial: %s\r\n", dirs_pt[dir]);
 
             if (path_description && strlen(path_description) > 0) {
@@ -903,7 +1032,7 @@ ACMD(do_pathfind)
             send_to_char(ch, "MV disponível: %d\r\n", GET_MOVE(ch));
 
             if (GET_MOVE(ch) < next_step_cost) {
-                send_to_char(ch, "&rAviso: MV insuficiente para o próximo passo!&n\r\n");
+                send_to_char(ch, "\trAviso: MV insuficiente para o próximo passo!\tn\r\n");
                 /* Calculate recovery time needed */
                 int mv_needed = next_step_cost - GET_MOVE(ch);
                 int recovery_time = calculate_mv_recovery_time(ch, mv_needed);
@@ -914,17 +1043,17 @@ ACMD(do_pathfind)
             /* Weather impact analysis */
             float weather_mod = get_weather_movement_modifier(ch);
             if (weather_mod > 1.2) {
-                send_to_char(ch, "&yCondições climáticas: DESFAVORÁVEIS (custo +%.0f%%)&n\r\n",
+                send_to_char(ch, "\tyCondições climáticas: DESFAVORÁVEIS (custo +%.0f%%)\tn\r\n",
                              (weather_mod - 1.0) * 100);
             } else if (weather_mod < 0.9) {
-                send_to_char(ch, "&gCondições climáticas: FAVORÁVEIS (custo %.0f%%)&n\r\n", weather_mod * 100);
+                send_to_char(ch, "\tgCondições climáticas: FAVORÁVEIS (custo %.0f%%)\tn\r\n", weather_mod * 100);
             } else {
-                send_to_char(ch, "&cCondições climáticas: NORMAIS&n\r\n");
+                send_to_char(ch, "\tcCondições climáticas: NORMAIS\tn\r\n");
             }
 
             /* Detailed analysis if requested */
             if (*arg2 && !str_cmp(arg2, "analyze")) {
-                send_to_char(ch, "\r\n&cAnálise Detalhada:&n\r\n");
+                send_to_char(ch, "\r\n\tcAnálise Detalhada:\tn\r\n");
                 send_to_char(ch, "- Algoritmo: Busca com estado de chaves coletadas\r\n");
                 send_to_char(ch, "- Considera: Portas, chaves, custos de movimento, MV disponível\r\n");
                 send_to_char(ch, "- Otimização: Caminho de menor custo com recursos disponíveis\r\n");
@@ -977,83 +1106,6 @@ int calculate_mv_recovery_time(struct char_data *ch, int mv_needed)
     return recovery_time;
 }
 
-/* Simple pathfinding cache to reduce redundant calculations */
-#define PATHFIND_CACHE_SIZE 100
-#define PATHFIND_CACHE_TTL 10 /* Cache entries valid for 10 seconds */
-
-/* Global pathfinding statistics for monitoring */
-static long pathfind_calls_total = 0;
-static long pathfind_cache_hits = 0;
-static long advanced_pathfind_calls = 0;
-
-struct pathfind_cache_entry {
-    room_rnum src;
-    room_rnum target;
-    time_t timestamp;
-    int direction;
-    int valid;
-};
-
-static struct pathfind_cache_entry pathfind_cache[PATHFIND_CACHE_SIZE];
-static int pathfind_cache_initialized = 0;
-
-static void init_pathfind_cache(void)
-{
-    int i;
-    for (i = 0; i < PATHFIND_CACHE_SIZE; i++) {
-        pathfind_cache[i].valid = 0;
-    }
-    pathfind_cache_initialized = 1;
-}
-
-static int get_cached_pathfind(room_rnum src, room_rnum target)
-{
-    int i;
-    time_t now = time(NULL);
-    
-    if (!pathfind_cache_initialized)
-        return -1;
-        
-    for (i = 0; i < PATHFIND_CACHE_SIZE; i++) {
-        if (pathfind_cache[i].valid && 
-            pathfind_cache[i].src == src && 
-            pathfind_cache[i].target == target &&
-            (now - pathfind_cache[i].timestamp) < PATHFIND_CACHE_TTL) {
-            pathfind_cache_hits++;
-            return pathfind_cache[i].direction;
-        }
-    }
-    return -1;
-}
-
-static void cache_pathfind_result(room_rnum src, room_rnum target, int direction)
-{
-    int i, oldest_idx = 0;
-    time_t now = time(NULL);
-    time_t oldest_time = now;
-    
-    if (!pathfind_cache_initialized)
-        init_pathfind_cache();
-    
-    /* Find empty slot or oldest entry */
-    for (i = 0; i < PATHFIND_CACHE_SIZE; i++) {
-        if (!pathfind_cache[i].valid) {
-            oldest_idx = i;
-            break;
-        }
-        if (pathfind_cache[i].timestamp < oldest_time) {
-            oldest_time = pathfind_cache[i].timestamp;
-            oldest_idx = i;
-        }
-    }
-    
-    pathfind_cache[oldest_idx].src = src;
-    pathfind_cache[oldest_idx].target = target;
-    pathfind_cache[oldest_idx].direction = direction;
-    pathfind_cache[oldest_idx].timestamp = now;
-    pathfind_cache[oldest_idx].valid = 1;
-}
-
 /**
  * Intelligent pathfinding comparison for mobs.
  * Compares basic vs advanced pathfinding and chooses the most efficient method.
@@ -1064,7 +1116,7 @@ int mob_smart_pathfind(struct char_data *ch, room_rnum target_room)
     int basic_dir, chosen_dir;
     int basic_cost = 0;
     static int pathfind_calls = 0;
-    
+
     if (!ch || !IS_NPC(ch) || target_room == NOWHERE || IN_ROOM(ch) == target_room)
         return -1;
 
@@ -1097,7 +1149,7 @@ int mob_smart_pathfind(struct char_data *ch, room_rnum target_room)
         /* Basic failed, try advanced only if mob has keys or is in areas with locked doors */
         struct obj_data *obj;
         int has_keys = 0;
-        
+
         /* Quick check if mob has any keys */
         for (obj = ch->carrying; obj && !has_keys; obj = obj->next_content) {
             if (GET_OBJ_TYPE(obj) == ITEM_KEY) {
@@ -1105,21 +1157,22 @@ int mob_smart_pathfind(struct char_data *ch, room_rnum target_room)
                 break;
             }
         }
-        
+
         if (has_keys || GET_LEVEL(ch) > 10) {
             /* Only use advanced pathfinding if mob has keys or is high level */
             int advanced_cost = 0, advanced_mv = 0;
             char *advanced_desc = NULL;
-            
+
             advanced_pathfind_calls++;
-            int advanced_dir = find_path_with_keys(ch, IN_ROOM(ch), target_room, &advanced_cost, &advanced_mv, &advanced_desc);
-            
+            int advanced_dir =
+                find_path_with_keys(ch, IN_ROOM(ch), target_room, &advanced_cost, &advanced_mv, &advanced_desc);
+
             if (advanced_dir >= 0) {
                 chosen_dir = advanced_dir;
             } else {
                 chosen_dir = -1;
             }
-            
+
             /* Free allocated description */
             if (advanced_desc)
                 free(advanced_desc);
@@ -1130,7 +1183,7 @@ int mob_smart_pathfind(struct char_data *ch, room_rnum target_room)
 
     /* Cache the result */
     cache_pathfind_result(IN_ROOM(ch), target_room, chosen_dir);
-    
+
     return chosen_dir;
 }
 
@@ -1196,37 +1249,6 @@ char *get_path_analysis_summary(struct char_data *ch, room_rnum target)
         free(advanced_desc);
 
     return summary;
-}
-
-/* Add command to show pathfinding statistics */
-ACMD(do_pathstats)
-{
-    if (!IS_NPC(ch) && GET_LEVEL(ch) >= LVL_IMMORT) {
-        send_to_char(ch, "=== PATHFINDING STATISTICS ===\r\n");
-        send_to_char(ch, "Total pathfinding calls: %ld\r\n", pathfind_calls_total);
-        send_to_char(ch, "Cache hits: %ld\r\n", pathfind_cache_hits);
-        send_to_char(ch, "Advanced pathfinding calls: %ld\r\n", advanced_pathfind_calls);
-        
-        if (pathfind_calls_total > 0) {
-            float cache_hit_rate = (float)pathfind_cache_hits / pathfind_calls_total * 100;
-            float advanced_rate = (float)advanced_pathfind_calls / pathfind_calls_total * 100;
-            send_to_char(ch, "Cache hit rate: %.1f%%\r\n", cache_hit_rate);
-            send_to_char(ch, "Advanced pathfinding rate: %.1f%%\r\n", advanced_rate);
-        }
-        
-        /* Count valid cache entries */
-        int valid_entries = 0;
-        if (pathfind_cache_initialized) {
-            for (int i = 0; i < PATHFIND_CACHE_SIZE; i++) {
-                if (pathfind_cache[i].valid) {
-                    valid_entries++;
-                }
-            }
-        }
-        send_to_char(ch, "Cache entries in use: %d/%d\r\n", valid_entries, PATHFIND_CACHE_SIZE);
-    } else {
-        send_to_char(ch, "You don't have permission to view pathfinding statistics.\r\n");
-    }
 }
 
 void hunt_victim(struct char_data *ch)

@@ -14,9 +14,11 @@
 #ifndef _GRAPH_H_
 #define _GRAPH_H_
 
+/* Pathfinding cache constants */
+#define PATHFIND_CACHE_SIZE 100
+
 ACMD(do_track);
 ACMD(do_pathfind);
-ACMD(do_pathstats);
 void hunt_victim(struct char_data *ch);
 int find_first_step(room_rnum src, room_rnum target);
 int find_first_step_enhanced(struct char_data *ch, room_rnum src, room_rnum target, int *total_cost);
@@ -27,5 +29,11 @@ int calculate_mv_recovery_time(struct char_data *ch, int mv_needed);
 char *get_path_analysis_summary(struct char_data *ch, room_rnum target);
 int mob_smart_pathfind(struct char_data *ch, room_rnum target_room);
 obj_vnum find_blocking_key(struct char_data *ch, room_rnum src, room_rnum target);
+
+/* Pathfinding statistics getter functions */
+long get_pathfind_calls_total(void);
+long get_pathfind_cache_hits(void);
+long get_advanced_pathfind_calls(void);
+int get_pathfind_cache_valid_entries(void);
 
 #endif /* _GRAPH_H_*/

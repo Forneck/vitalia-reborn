@@ -1461,7 +1461,7 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
 bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
 {
     static int roam_throttle = 0;
-    
+
     if (ch->master != NULL || FIGHTING(ch) || GET_POS(ch) < POS_STANDING)
         return FALSE;
 
@@ -1626,7 +1626,7 @@ bool handle_duty_routine(struct char_data *ch)
         if (home_room != NOWHERE) {
             static int duty_pathfind_calls = 0;
             int direction = -1;
-            
+
             /* Throttle duty pathfinding to reduce resource usage */
             duty_pathfind_calls++;
             if (duty_pathfind_calls % 5 == 0) {
@@ -1711,7 +1711,7 @@ bool mob_follow_leader(struct char_data *ch)
         /* Tenta encontrar o caminho até ao líder usando pathfinding inteligente. */
         static int follow_pathfind_calls = 0;
         int direction = -1;
-        
+
         /* Throttle follow pathfinding to reduce resource usage */
         follow_pathfind_calls++;
         if (follow_pathfind_calls % 6 == 0) {
