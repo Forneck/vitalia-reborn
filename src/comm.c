@@ -2957,8 +2957,12 @@ char *act(const char *str, int hide_invisible, struct char_data *ch, struct obj_
                 continue;
 
             /* Format the message for eavesdroppers with visual markers */
+            struct descriptor_data *saved_desc = listener->desc;
+            listener->desc = NULL; /* Temporarily disable output during formatting */
             perform_act(str, ch, obj, vict_obj, listener);
-            if (last_act_message) {
+            listener->desc = saved_desc; /* Restore descriptor */
+
+            if (last_act_message && listener->desc) {
                 snprintf(listener_buf, sizeof(listener_buf), "----------\r\n%s----------\r\n", last_act_message);
                 write_to_output(listener->desc, "%s", listener_buf);
             }
