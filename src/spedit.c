@@ -1150,6 +1150,20 @@ int boot_spells(void)
                     }
                 }
                 break;
+            case DB_CODE_SCHOOL:
+                ret = fscanf(fp, "%d\n", &Q->school);
+                if (ret != 1) {
+                    log1("SYSERR: boot spells: Invalid school value for spell %d", Q->vnum);
+                    Q->school = SCHOOL_UNDEFINED;
+                }
+                break;
+            case DB_CODE_ELEMENT:
+                ret = fscanf(fp, "%d\n", &Q->element);
+                if (ret != 1) {
+                    log1("SYSERR: boot spells: Invalid element value for spell %d", Q->vnum);
+                    Q->element = ELEMENT_UNDEFINED;
+                }
+                break;
             case DB_CODE_END:
                 break;
             default:
@@ -1415,6 +1429,18 @@ void spedit_save_to_disk(void)
                 snprintf(buf, BUFSIZE, "%2d %s\n", DB_CODE_SCRIPT, p);
                 fprintf(fp, "%s", buf);
             }
+        }
+
+        /* Save spell school if not undefined */
+        if (r->school != SCHOOL_UNDEFINED) {
+            snprintf(buf, BUFSIZE, "%2d %d\n", DB_CODE_SCHOOL, r->school);
+            fprintf(fp, "%s", buf);
+        }
+
+        /* Save spell element if not undefined */
+        if (r->element != ELEMENT_UNDEFINED) {
+            snprintf(buf, BUFSIZE, "%2d %d\n", DB_CODE_ELEMENT, r->element);
+            fprintf(fp, "%s", buf);
         }
     }
     fprintf(fp, "%2d\n", DB_CODE_END);

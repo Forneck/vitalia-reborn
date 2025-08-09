@@ -78,7 +78,9 @@ SOFTWARE. */
 #define NUM_ELEMENTS 13
 #define DB_CODE_PTS_GOLD 53
 #define DB_CODE_PTS_BREATH 54
-/* 55 to 59 are free */
+#define DB_CODE_SCHOOL 55    /* Spell school */
+#define DB_CODE_ELEMENT 56   /* Spell element */
+/* 57 to 59 are free */
 #define DB_CODE_PROT_1 60
 #define DB_CODE_PROT_2 61
 #define DB_CODE_PROT_3 62
