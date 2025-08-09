@@ -1185,34 +1185,36 @@ ACMD(do_track)
         /* Add integrated zone analysis for advanced mode */
         zone_rnum src_zone = world[IN_ROOM(ch)].zone;
         zone_rnum target_zone = world[IN_ROOM(vict)].zone;
-        
+
         if (src_zone != target_zone) {
             zone_rnum zone_path[MAX_ZONE_PATH];
             int num_zones = get_zones_between(src_zone, target_zone, zone_path, MAX_ZONE_PATH);
             obj_vnum required_keys[MAX_COLLECTED_KEYS];
             int num_required_keys;
             int keys_in_zones;
-            
+
             send_to_char(ch, "\r\n\tg=== ANÁLISE DE ZONA INTEGRADA ===\tn\r\n");
             send_to_char(ch, "Zona atual: %d (%s)\r\n", zone_table[src_zone].number, zone_table[src_zone].name);
             send_to_char(ch, "Zona destino: %d (%s)\r\n", zone_table[target_zone].number, zone_table[target_zone].name);
-            
+
             if (num_zones > 0) {
                 send_to_char(ch, "\tyCaminho de zonas encontrado (%d zonas):\tn\r\n", num_zones);
-                for (int i = 0; i < num_zones && i < 5; i++) {
+                int i;
+                for (i = 0; i < num_zones && i < 5; i++) {
                     send_to_char(ch, "%d. Zona %d (%s)\r\n", i + 1, zone_table[zone_path[i]].number,
                                  zone_table[zone_path[i]].name);
                 }
                 if (num_zones > 5) {
                     send_to_char(ch, "... e mais %d zonas\r\n", num_zones - 5);
                 }
-                
+
                 /* Count keys in path zones */
                 keys_in_zones = count_keys_in_zones(zone_path, num_zones);
                 send_to_char(ch, "\tcChaves detectadas no caminho: %d\tn\r\n", keys_in_zones);
-                
+
                 /* Get specific required keys */
-                num_required_keys = get_required_keys_for_path(ch, IN_ROOM(ch), IN_ROOM(vict), required_keys, MAX_COLLECTED_KEYS);
+                num_required_keys =
+                    get_required_keys_for_path(ch, IN_ROOM(ch), IN_ROOM(vict), required_keys, MAX_COLLECTED_KEYS);
                 if (num_required_keys > 0) {
                     send_to_char(ch, "\trChaves necessárias: %d\tn\r\n", num_required_keys);
                 } else {
@@ -1571,9 +1573,11 @@ ACMD(do_zonetrack)
     two_arguments(argument, arg1, arg2);
 
     if (!*arg1) {
+        send_to_char(ch, "\tyAviso: Este comando foi integrado ao rastreamento avançado!\tn\r\n");
+        send_to_char(ch, "Use: \tctrack <alvo> advanced\tn para obter análise de zona automática.\r\n\r\n");
         send_to_char(ch, "Analisar caminho de zonas para quem?\r\n");
         send_to_char(ch, "Uso: zonetrack <alvo>\r\n");
-        send_to_char(ch, "      Este comando mostra otimizações de zona para rastreamento avançado.\r\n");
+        send_to_char(ch, "      Este comando ainda funciona, mas é recomendado usar 'track <alvo> advanced'.\r\n");
         return;
     }
 
@@ -1683,7 +1687,10 @@ ACMD(do_zonetrack)
         send_to_char(ch, "  Nenhuma chave encontrada.\r\n");
     }
 
-    send_to_char(ch, "\r\nUse 'track %s advanced' para rastreamento otimizado.\r\n", GET_NAME(vict));
+    send_to_char(ch,
+                 "\r\n\tyRecomendação: Use 'track %s advanced' para rastreamento integrado com análise automática de "
+                 "zona!\tn\r\n",
+                 GET_NAME(vict));
 }
 
 /* Calculate estimated time for MV recovery in seconds
