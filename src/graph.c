@@ -111,6 +111,9 @@ static int get_required_keys_for_path(struct char_data *ch, room_rnum src, room_
                                       int max_keys);
 static int zone_has_connection_to(zone_rnum from_zone, zone_rnum to_zone);
 
+/* Cache function declarations */
+static void cache_pathfind_result_priority(room_rnum src, room_rnum target, int direction, int priority);
+
 /* Utility macros */
 #define MARK(room) (SET_BIT_AR(ROOM_FLAGS(room), ROOM_BFS_MARK))
 #define UNMARK(room) (REMOVE_BIT_AR(ROOM_FLAGS(room), ROOM_BFS_MARK))
@@ -1277,8 +1280,8 @@ ACMD(do_track)
 }
 
 /* Simple pathfinding cache to reduce redundant calculations */
-#define PATHFIND_CACHE_SIZE 100
-#define PATHFIND_CACHE_TTL 10 /* Cache entries valid for 10 seconds */
+#define PATHFIND_CACHE_SIZE 200
+#define PATHFIND_CACHE_TTL 30 /* Cache entries valid for 30 seconds */
 
 struct pathfind_cache_entry {
     room_rnum src;
@@ -1286,6 +1289,7 @@ struct pathfind_cache_entry {
     time_t timestamp;
     int direction;
     int valid;
+    int priority; /* 0 = normal, 1 = duty-related (shopkeeper/sentinel returning to post) */
 };
 
 static struct pathfind_cache_entry pathfind_cache[PATHFIND_CACHE_SIZE];
@@ -1296,6 +1300,7 @@ static void init_pathfind_cache(void)
     int i;
     for (i = 0; i < PATHFIND_CACHE_SIZE; i++) {
         pathfind_cache[i].valid = 0;
+        pathfind_cache[i].priority = 0;
     }
     pathfind_cache_initialized = 1;
 }
@@ -1340,22 +1345,43 @@ static int get_cached_pathfind(room_rnum src, room_rnum target)
 
 static void cache_pathfind_result(room_rnum src, room_rnum target, int direction)
 {
+    cache_pathfind_result_priority(src, target, direction, 0);
+}
+
+static void cache_pathfind_result_priority(room_rnum src, room_rnum target, int direction, int priority)
+{
     int i, oldest_idx = 0;
     time_t now = time(NULL);
     time_t oldest_time = now;
+    int found_low_priority = 0;
 
     if (!pathfind_cache_initialized)
         init_pathfind_cache();
 
-    /* Find empty slot or oldest entry */
+    /* First pass: Find empty slot or lowest priority entry that can be replaced */
     for (i = 0; i < PATHFIND_CACHE_SIZE; i++) {
         if (!pathfind_cache[i].valid) {
             oldest_idx = i;
+            found_low_priority = 1;
             break;
         }
-        if (pathfind_cache[i].timestamp < oldest_time) {
-            oldest_time = pathfind_cache[i].timestamp;
-            oldest_idx = i;
+        /* If this is a high priority entry, prefer replacing low priority entries */
+        if (priority > 0 && pathfind_cache[i].priority == 0) {
+            if (!found_low_priority || pathfind_cache[i].timestamp < oldest_time) {
+                oldest_time = pathfind_cache[i].timestamp;
+                oldest_idx = i;
+                found_low_priority = 1;
+            }
+        }
+    }
+
+    /* Second pass: If no low priority entries found, find the oldest entry */
+    if (!found_low_priority) {
+        for (i = 0; i < PATHFIND_CACHE_SIZE; i++) {
+            if (pathfind_cache[i].timestamp < oldest_time) {
+                oldest_time = pathfind_cache[i].timestamp;
+                oldest_idx = i;
+            }
         }
     }
 
@@ -1364,6 +1390,7 @@ static void cache_pathfind_result(room_rnum src, room_rnum target, int direction
     pathfind_cache[oldest_idx].direction = direction;
     pathfind_cache[oldest_idx].timestamp = now;
     pathfind_cache[oldest_idx].valid = 1;
+    pathfind_cache[oldest_idx].priority = priority;
 }
 
 /* New command for comprehensive pathfinding analysis */
@@ -1532,6 +1559,72 @@ int calculate_mv_recovery_time(struct char_data *ch, int mv_needed)
     }
 
     return recovery_time;
+}
+
+/**
+ * Special pathfinding for mobs returning to duty posts (shopkeepers/sentinels).
+ * Uses high priority caching and bypasses cache limitations for critical duty paths.
+ * Returns the best direction or -1 if no path found.
+ */
+int mob_duty_pathfind(struct char_data *ch, room_rnum target_room)
+{
+    int basic_dir, chosen_dir;
+    int basic_cost = 0;
+
+    if (!ch || !IS_NPC(ch) || target_room == NOWHERE || IN_ROOM(ch) == target_room)
+        return -1;
+
+    /* Update global statistics */
+    pathfind_calls_total++;
+
+    /* For duty pathfinding, always check cache first with high priority */
+    chosen_dir = get_cached_pathfind(IN_ROOM(ch), target_room);
+    if (chosen_dir != -1) {
+        return chosen_dir;
+    }
+
+    /* Try basic pathfinding first - it's much faster */
+    basic_dir = find_first_step_enhanced(ch, IN_ROOM(ch), target_room, &basic_cost);
+
+    if (basic_dir >= 0) {
+        /* Basic pathfinding worked, cache with high priority */
+        chosen_dir = basic_dir;
+        cache_pathfind_result_priority(IN_ROOM(ch), target_room, chosen_dir, 1);
+    } else {
+        /* Basic failed, try advanced pathfinding for duty-critical cases */
+        struct obj_data *obj;
+        int has_keys = 0;
+
+        /* Quick check if mob has any keys */
+        for (obj = ch->carrying; obj && !has_keys; obj = obj->next_content) {
+            if (GET_OBJ_TYPE(obj) == ITEM_KEY) {
+                has_keys = 1;
+                break;
+            }
+        }
+
+        /* For duty pathfinding, always try advanced if basic fails */
+        int advanced_cost = 0, advanced_mv = 0;
+        char *advanced_desc = NULL;
+
+        advanced_pathfind_calls++;
+        int advanced_dir =
+            find_path_with_keys(ch, IN_ROOM(ch), target_room, &advanced_cost, &advanced_mv, &advanced_desc);
+
+        if (advanced_dir >= 0) {
+            chosen_dir = advanced_dir;
+            /* Cache with highest priority for duty paths */
+            cache_pathfind_result_priority(IN_ROOM(ch), target_room, chosen_dir, 1);
+        } else {
+            chosen_dir = -1;
+        }
+
+        /* Free allocated description */
+        if (advanced_desc)
+            free(advanced_desc);
+    }
+
+    return chosen_dir;
 }
 
 /**

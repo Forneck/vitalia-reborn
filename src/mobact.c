@@ -1501,7 +1501,11 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
     } else {
         /* Se nenhum destino foi dado, usa a lógica de exploração padrão. */
         if (MOB_FLAGGED(ch, MOB_SENTINEL) && IN_ROOM(ch) != real_room(ch->ai_data->guard_post)) {
-            direction = find_first_step(IN_ROOM(ch), real_room(ch->ai_data->guard_post));
+            /* Use specialized duty pathfinding for sentinels returning to post */
+            direction = mob_duty_pathfind(ch, real_room(ch->ai_data->guard_post));
+            if (direction == -1) {
+                direction = find_first_step(IN_ROOM(ch), real_room(ch->ai_data->guard_post));
+            }
             has_goal = TRUE;
         } else {
             int base_roam = MOB_FLAGGED(ch, MOB_SENTINEL) ? 1 : 25;
@@ -1627,18 +1631,23 @@ bool handle_duty_routine(struct char_data *ch)
             static int duty_pathfind_calls = 0;
             int direction = -1;
 
-            /* Throttle duty pathfinding to reduce resource usage */
-            duty_pathfind_calls++;
-            if (duty_pathfind_calls % 5 == 0) {
-                /* Only do complex pathfinding every 5th call for duty movement */
-                direction = mob_smart_pathfind(ch, home_room);
-            } else {
-                /* Use simple pathfinding most of the time */
-                direction = find_first_step(IN_ROOM(ch), home_room);
+            /* Use specialized duty pathfinding with priority caching */
+            direction = mob_duty_pathfind(ch, home_room);
+
+            /* Fallback to throttled pathfinding if duty pathfinding fails */
+            if (direction == -1) {
+                duty_pathfind_calls++;
+                if (duty_pathfind_calls % 5 == 0) {
+                    /* Only do complex pathfinding every 5th call for duty movement */
+                    direction = mob_smart_pathfind(ch, home_room);
+                } else {
+                    /* Use simple pathfinding most of the time */
+                    direction = find_first_step(IN_ROOM(ch), home_room);
+                }
             }
 
             if (direction == -1) {
-                /* Fall back to basic pathfinding if smart pathfinding fails */
+                /* Fall back to basic pathfinding if duty pathfinding fails */
                 direction = find_first_step(IN_ROOM(ch), home_room);
 
                 /* If both pathfinding methods fail, check if it's due to missing keys */
