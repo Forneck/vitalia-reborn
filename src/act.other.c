@@ -495,6 +495,7 @@ ACMD(do_group)
             } else {
                 /* RECUSOU */
                 act("$N olha para você com desconfiança e rejeita a sua companhia.", FALSE, ch, 0, vict, TO_CHAR);
+                return;
             }
         }
         /******************************************************************
