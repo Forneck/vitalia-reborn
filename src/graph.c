@@ -1345,11 +1345,19 @@ static int get_cached_pathfind(room_rnum src, room_rnum target)
 
 static void cache_pathfind_result(room_rnum src, room_rnum target, int direction)
 {
-    cache_pathfind_result_priority(src, target, direction, 0);
+    /* Don't cache failed pathfinding results to preserve cache slots for successful paths */
+    if (direction >= 0) {
+        cache_pathfind_result_priority(src, target, direction, 0);
+    }
 }
 
 static void cache_pathfind_result_priority(room_rnum src, room_rnum target, int direction, int priority)
 {
+    /* Don't cache failed pathfinding results to preserve cache slots for successful paths */
+    if (direction < 0) {
+        return;
+    }
+
     int i, oldest_idx = 0;
     time_t now = time(NULL);
     time_t oldest_time = now;
