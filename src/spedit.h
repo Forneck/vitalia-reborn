@@ -61,6 +61,16 @@ SOFTWARE. */
 #define SCHOOL_NECROMANCY 8  /* Necromancia */
 #define NUM_SCHOOLS 9
 
+/* Skill Schools/Styles - for non-magical abilities */
+#define SKILL_SCHOOL_UNDEFINED 0
+#define SKILL_SCHOOL_COMBAT 1   /* Combat Style - melee combat abilities */
+#define SKILL_SCHOOL_STEALTH 2  /* Stealth Style - hiding, sneaking abilities */
+#define SKILL_SCHOOL_WEAPONS 3  /* Weapon Style - weapon proficiencies */
+#define SKILL_SCHOOL_SURVIVAL 4 /* Survival Style - outdoor and utility skills */
+#define SKILL_SCHOOL_MUSICAL 5  /* Musical Style - bard abilities */
+#define SKILL_SCHOOL_SUPPORT 6  /* Support Style - defensive and healing abilities */
+#define NUM_SKILL_SCHOOLS 7
+
 /* Spell Elements */
 #define ELEMENT_UNDEFINED 0
 #define ELEMENT_FIRE 1      /* Fogo */
@@ -78,8 +88,8 @@ SOFTWARE. */
 #define NUM_ELEMENTS 13
 #define DB_CODE_PTS_GOLD 53
 #define DB_CODE_PTS_BREATH 54
-#define DB_CODE_SCHOOL 55    /* Spell school */
-#define DB_CODE_ELEMENT 56   /* Spell element */
+#define DB_CODE_SCHOOL 55  /* Spell school */
+#define DB_CODE_ELEMENT 56 /* Spell element */
 /* 57 to 59 are free */
 #define DB_CODE_PROT_1 60
 #define DB_CODE_PROT_2 61

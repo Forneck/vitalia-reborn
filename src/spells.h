@@ -361,6 +361,7 @@ float get_weather_success_modifier(struct char_data *ch, int spell_element, int 
 float get_weather_movement_modifier(struct char_data *ch);
 const char *get_spell_school_name(int school);
 const char *get_spell_element_name(int element);
+const char *get_skill_school_name(int school);
 ASPELL(spell_skindiamond);   /* -- mp */
 ASPELL(spell_create_nectar); /* -- mp */
 ASPELL(spell_soundbarrier);  /* -- ac */
