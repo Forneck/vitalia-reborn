@@ -1561,18 +1561,18 @@ void deferred_free_group(struct group_data *group)
         struct iterator_data Iterator;
 
         /* Log a warning if the group still has members - this shouldn't happen */
-        mudlog(CMP, LVL_GOD, TRUE, "WARNING: deferred_free_group called on group with %d members", 
+        mudlog(CMP, LVL_GOD, TRUE, "WARNING: deferred_free_group called on group with %d members",
                group->members->iSize);
 
         for (tch = (struct char_data *)merge_iterator(&Iterator, group->members); tch; tch = next_in_list(&Iterator)) {
             if (tch && tch->group == group) {
                 tch->group = NULL; /* Clear the group reference immediately */
-                mudlog(CMP, LVL_GOD, TRUE, "WARNING: Cleared group reference for %s in deferred cleanup", 
+                mudlog(CMP, LVL_GOD, TRUE, "WARNING: Cleared group reference for %s in deferred cleanup",
                        GET_NAME(tch));
             }
         }
         remove_iterator(&Iterator);
-        
+
         /* Clear the member list to prevent inconsistent state */
         free_list(group->members);
         group->members = create_list();
@@ -1736,8 +1736,7 @@ void leave_group(struct char_data *ch)
 
     /* Verify the character was actually removed from the list */
     if (is_char_in_group_list(ch, group)) {
-        mudlog(CMP, LVL_GOD, TRUE, "ERROR: Character %s still in group member list after removal!", 
-               GET_NAME(ch));
+        mudlog(CMP, LVL_GOD, TRUE, "ERROR: Character %s still in group member list after removal!", GET_NAME(ch));
     }
 
     if (group->members->iSize) {
