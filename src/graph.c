@@ -406,7 +406,7 @@ static int get_zones_between(zone_rnum src_zone, zone_rnum target_zone, zone_rnu
             return path_length;
         }
 
-        /* Explore neighboring zones */
+        /* Explore neighboring zones - iterate through all zone indices */
         for (j = 0; j <= top_of_zone_table && visited_count < MAX_ZONE_PATH; j++) {
             /* Skip if already visited */
             int already_visited = 0;
@@ -421,7 +421,7 @@ static int get_zones_between(zone_rnum src_zone, zone_rnum target_zone, zone_rnu
                 queue[queue_tail++] = j;
                 visited_zones[visited_count] = j;
 
-                /* Find parent index */
+                /* Find parent index - fix: find index of current_zone before incrementing visited_count */
                 for (i = 0; i < visited_count; i++) {
                     if (visited_zones[i] == current_zone) {
                         parent[visited_count] = i;
@@ -1181,6 +1181,50 @@ ACMD(do_track)
         /* Free the allocated description */
         if (path_description)
             free(path_description);
+
+        /* Add integrated zone analysis for advanced mode */
+        zone_rnum src_zone = world[IN_ROOM(ch)].zone;
+        zone_rnum target_zone = world[IN_ROOM(vict)].zone;
+        
+        if (src_zone != target_zone) {
+            zone_rnum zone_path[MAX_ZONE_PATH];
+            int num_zones = get_zones_between(src_zone, target_zone, zone_path, MAX_ZONE_PATH);
+            obj_vnum required_keys[MAX_COLLECTED_KEYS];
+            int num_required_keys;
+            int keys_in_zones;
+            
+            send_to_char(ch, "\r\n\tg=== ANÁLISE DE ZONA INTEGRADA ===\tn\r\n");
+            send_to_char(ch, "Zona atual: %d (%s)\r\n", zone_table[src_zone].number, zone_table[src_zone].name);
+            send_to_char(ch, "Zona destino: %d (%s)\r\n", zone_table[target_zone].number, zone_table[target_zone].name);
+            
+            if (num_zones > 0) {
+                send_to_char(ch, "\tyCaminho de zonas encontrado (%d zonas):\tn\r\n", num_zones);
+                for (int i = 0; i < num_zones && i < 5; i++) {
+                    send_to_char(ch, "%d. Zona %d (%s)\r\n", i + 1, zone_table[zone_path[i]].number,
+                                 zone_table[zone_path[i]].name);
+                }
+                if (num_zones > 5) {
+                    send_to_char(ch, "... e mais %d zonas\r\n", num_zones - 5);
+                }
+                
+                /* Count keys in path zones */
+                keys_in_zones = count_keys_in_zones(zone_path, num_zones);
+                send_to_char(ch, "\tcChaves detectadas no caminho: %d\tn\r\n", keys_in_zones);
+                
+                /* Get specific required keys */
+                num_required_keys = get_required_keys_for_path(ch, IN_ROOM(ch), IN_ROOM(vict), required_keys, MAX_COLLECTED_KEYS);
+                if (num_required_keys > 0) {
+                    send_to_char(ch, "\trChaves necessárias: %d\tn\r\n", num_required_keys);
+                } else {
+                    send_to_char(ch, "\tgNenhuma chave específica necessária.\tn\r\n");
+                }
+            } else {
+                send_to_char(ch, "\trNenhum caminho de zona encontrado.\tn\r\n");
+                send_to_char(ch, "Zonas podem estar isoladas ou sem conexão direta.\r\n");
+            }
+        } else {
+            send_to_char(ch, "\tcVocês estão na mesma zona.\tn\r\n");
+        }
 
     } else {
         /* Use standard enhanced tracking */
