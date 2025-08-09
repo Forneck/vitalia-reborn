@@ -406,7 +406,7 @@ static int get_zones_between(zone_rnum src_zone, zone_rnum target_zone, zone_rnu
             return path_length;
         }
 
-        /* Explore neighboring zones */
+        /* Explore neighboring zones - iterate through all zone indices */
         for (j = 0; j <= top_of_zone_table && visited_count < MAX_ZONE_PATH; j++) {
             /* Skip if already visited */
             int already_visited = 0;
@@ -421,7 +421,7 @@ static int get_zones_between(zone_rnum src_zone, zone_rnum target_zone, zone_rnu
                 queue[queue_tail++] = j;
                 visited_zones[visited_count] = j;
 
-                /* Find parent index */
+                /* Find parent index - fix: find index of current_zone before incrementing visited_count */
                 for (i = 0; i < visited_count; i++) {
                     if (visited_zones[i] == current_zone) {
                         parent[visited_count] = i;
@@ -1182,6 +1182,52 @@ ACMD(do_track)
         if (path_description)
             free(path_description);
 
+        /* Add integrated zone analysis for advanced mode */
+        zone_rnum src_zone = world[IN_ROOM(ch)].zone;
+        zone_rnum target_zone = world[IN_ROOM(vict)].zone;
+
+        if (src_zone != target_zone) {
+            zone_rnum zone_path[MAX_ZONE_PATH];
+            int num_zones = get_zones_between(src_zone, target_zone, zone_path, MAX_ZONE_PATH);
+            obj_vnum required_keys[MAX_COLLECTED_KEYS];
+            int num_required_keys;
+            int keys_in_zones;
+
+            send_to_char(ch, "\r\n\tg=== ANÁLISE DE ZONA INTEGRADA ===\tn\r\n");
+            send_to_char(ch, "Zona atual: %d (%s)\r\n", zone_table[src_zone].number, zone_table[src_zone].name);
+            send_to_char(ch, "Zona destino: %d (%s)\r\n", zone_table[target_zone].number, zone_table[target_zone].name);
+
+            if (num_zones > 0) {
+                send_to_char(ch, "\tyCaminho de zonas encontrado (%d zonas):\tn\r\n", num_zones);
+                int i;
+                for (i = 0; i < num_zones && i < 5; i++) {
+                    send_to_char(ch, "%d. Zona %d (%s)\r\n", i + 1, zone_table[zone_path[i]].number,
+                                 zone_table[zone_path[i]].name);
+                }
+                if (num_zones > 5) {
+                    send_to_char(ch, "... e mais %d zonas\r\n", num_zones - 5);
+                }
+
+                /* Count keys in path zones */
+                keys_in_zones = count_keys_in_zones(zone_path, num_zones);
+                send_to_char(ch, "\tcChaves detectadas no caminho: %d\tn\r\n", keys_in_zones);
+
+                /* Get specific required keys */
+                num_required_keys =
+                    get_required_keys_for_path(ch, IN_ROOM(ch), IN_ROOM(vict), required_keys, MAX_COLLECTED_KEYS);
+                if (num_required_keys > 0) {
+                    send_to_char(ch, "\trChaves necessárias: %d\tn\r\n", num_required_keys);
+                } else {
+                    send_to_char(ch, "\tgNenhuma chave específica necessária.\tn\r\n");
+                }
+            } else {
+                send_to_char(ch, "\trNenhum caminho de zona encontrado.\tn\r\n");
+                send_to_char(ch, "Zonas podem estar isoladas ou sem conexão direta.\r\n");
+            }
+        } else {
+            send_to_char(ch, "\tcVocês estão na mesma zona.\tn\r\n");
+        }
+
     } else {
         /* Use standard enhanced tracking */
         int total_cost = 0;
@@ -1344,45 +1390,9 @@ ACMD(do_pathfind)
 
     if (!*arg1) {
         send_to_char(ch, "Analisar caminho para quem?\r\n");
-        send_to_char(ch, "Uso: pathfind <alvo> [analyze|compare|stats]\r\n");
+        send_to_char(ch, "Uso: pathfind <alvo> [analyze|compare]\r\n");
         send_to_char(ch, "      pathfind <alvo> analyze  - para análise detalhada de múltiplos caminhos\r\n");
         send_to_char(ch, "      pathfind <alvo> compare  - para comparação entre métodos básico e avançado\r\n");
-        send_to_char(ch, "      pathfind stats           - mostrar estatísticas de pathfinding\r\n");
-        return;
-    }
-
-    /* Check for stats command */
-    if (!str_cmp(arg1, "stats")) {
-        if (!IS_NPC(ch) && GET_LEVEL(ch) >= LVL_IMMORT) {
-            send_to_char(ch, "=== PATHFINDING STATISTICS ===\r\n");
-            send_to_char(ch, "Total pathfinding calls: %ld\r\n", pathfind_calls_total);
-            send_to_char(ch, "Cache hits: %ld\r\n", pathfind_cache_hits);
-            send_to_char(ch, "Advanced pathfinding calls: %ld\r\n", advanced_pathfind_calls);
-            send_to_char(ch, "Zone-optimized calls: %ld\r\n", zone_optimized_calls);
-            send_to_char(ch, "Total keys optimized (saved): %ld\r\n", keys_optimized_total);
-
-            if (pathfind_calls_total > 0) {
-                float cache_hit_rate = (float)pathfind_cache_hits / pathfind_calls_total * 100;
-                float advanced_rate = (float)advanced_pathfind_calls / pathfind_calls_total * 100;
-                float optimization_rate = (float)zone_optimized_calls / pathfind_calls_total * 100;
-                send_to_char(ch, "Cache hit rate: %.1f%%\r\n", cache_hit_rate);
-                send_to_char(ch, "Advanced pathfinding rate: %.1f%%\r\n", advanced_rate);
-                send_to_char(ch, "Zone optimization rate: %.1f%%\r\n", optimization_rate);
-            }
-
-            /* Count valid cache entries */
-            int valid_entries = 0;
-            if (pathfind_cache_initialized) {
-                for (int i = 0; i < PATHFIND_CACHE_SIZE; i++) {
-                    if (pathfind_cache[i].valid) {
-                        valid_entries++;
-                    }
-                }
-            }
-            send_to_char(ch, "Cache entries in use: %d/%d\r\n", valid_entries, PATHFIND_CACHE_SIZE);
-        } else {
-            send_to_char(ch, "Você não tem permissão para ver estatísticas de pathfinding.\r\n");
-        }
         return;
     }
 
@@ -1499,147 +1509,6 @@ ACMD(do_pathfind)
     /* Free the allocated description */
     if (path_description)
         free(path_description);
-}
-
-/* New command to show zone path analysis and key optimization */
-ACMD(do_zonetrack)
-{
-    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
-    struct char_data *vict;
-    zone_rnum zone_path[MAX_ZONE_PATH];
-    zone_rnum src_zone, target_zone;
-    int num_zones, keys_in_zones;
-    obj_vnum required_keys[MAX_COLLECTED_KEYS];
-    int num_required_keys;
-    int i;
-
-    /* Check permissions - available to players with high track skill */
-    if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_TRACK)) {
-        send_to_char(ch, "Você não tem conhecimento de rastreamento.\r\n");
-        return;
-    }
-
-    if (GET_SKILL(ch, SKILL_TRACK) < 50) {
-        send_to_char(ch, "Seu conhecimento de rastreamento não é avançado o suficiente para análise de zonas.\r\n");
-        return;
-    }
-
-    two_arguments(argument, arg1, arg2);
-
-    if (!*arg1) {
-        send_to_char(ch, "Analisar caminho de zonas para quem?\r\n");
-        send_to_char(ch, "Uso: zonetrack <alvo>\r\n");
-        send_to_char(ch, "      Este comando mostra otimizações de zona para rastreamento avançado.\r\n");
-        return;
-    }
-
-    /* Find the target */
-    if (!(vict = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD))) {
-        send_to_char(ch, "Você não consegue localizar esse alvo.\r\n");
-        return;
-    }
-
-    /* We can't track the victim. */
-    if (AFF_FLAGGED(vict, AFF_NOTRACK)) {
-        send_to_char(ch, "Esse alvo não pode ser rastreado.\r\n");
-        return;
-    }
-
-    src_zone = world[IN_ROOM(ch)].zone;
-    target_zone = world[IN_ROOM(vict)].zone;
-
-    send_to_char(ch, "\tg=== ANÁLISE DE ZONA PARA RASTREAMENTO ===\tn\r\n");
-    send_to_char(ch, "Alvo: %s\r\n", GET_NAME(vict));
-    send_to_char(ch, "Zona atual: %d (%s)\r\n", zone_table[src_zone].number, zone_table[src_zone].name);
-    send_to_char(ch, "Zona destino: %d (%s)\r\n", zone_table[target_zone].number, zone_table[target_zone].name);
-
-    if (src_zone == target_zone) {
-        send_to_char(ch, "\tcVocês estão na mesma zona - sem necessidade de análise entre zonas.\tn\r\n");
-        return;
-    }
-
-    /* Analyze zone path */
-    num_zones = get_zones_between(src_zone, target_zone, zone_path, MAX_ZONE_PATH);
-
-    if (num_zones > 0) {
-        send_to_char(ch, "\tyCaminho de zonas encontrado (%d zonas):\tn\r\n", num_zones);
-        for (i = 0; i < num_zones; i++) {
-            char connection_info[128] = "";
-            if (i < num_zones - 1) {
-                if (zone_has_connection_to(zone_path[i], zone_path[i + 1])) {
-                    strcpy(connection_info, " -> ");
-                } else {
-                    strcpy(connection_info, " !-> ");
-                }
-            }
-            send_to_char(ch, "%d. Zona %d (%s)%s\r\n", i + 1, zone_table[zone_path[i]].number,
-                         zone_table[zone_path[i]].name, connection_info);
-        }
-
-        /* Count keys in path zones */
-        keys_in_zones = count_keys_in_zones(zone_path, num_zones);
-        send_to_char(ch, "\tcChaves detectadas no caminho de zonas: %d\tn\r\n", keys_in_zones);
-
-        /* Get specific required keys */
-        num_required_keys =
-            get_required_keys_for_path(ch, IN_ROOM(ch), IN_ROOM(vict), required_keys, MAX_COLLECTED_KEYS);
-        if (num_required_keys > 0) {
-            send_to_char(ch, "\trChaves especificamente necessárias: %d\tn\r\n", num_required_keys);
-            for (i = 0; i < num_required_keys && i < 5; i++) {
-                send_to_char(ch, "  - Chave #%d\r\n", required_keys[i]);
-            }
-            if (num_required_keys > 5) {
-                send_to_char(ch, "  - ... e mais %d chaves\r\n", num_required_keys - 5);
-            }
-        } else {
-            send_to_char(ch, "\tgNenhuma chave específica necessária para o caminho básico.\tn\r\n");
-        }
-
-        /* Performance improvement estimate */
-        int old_limit = MAX_COLLECTED_KEYS;
-        int new_limit = (keys_in_zones > 0 && keys_in_zones < old_limit)           ? keys_in_zones
-                        : (num_required_keys > 0 && num_required_keys < old_limit) ? num_required_keys + 2
-                                                                                   : old_limit;
-
-        if (new_limit < old_limit) {
-            float improvement = ((float)(old_limit - new_limit) / old_limit) * 100;
-            send_to_char(ch, "\tgOtimização estimada: %.1f%% redução na complexidade\tn\r\n", improvement);
-            send_to_char(ch, "Limite de chaves: %d -> %d\r\n", old_limit, new_limit);
-        }
-
-        /* Direct connection check */
-        if (zone_has_connection_to(src_zone, target_zone)) {
-            send_to_char(ch, "\tcZonas diretamente conectadas - algoritmo otimizado disponível.\tn\r\n");
-        }
-
-    } else {
-        send_to_char(ch, "\trNenhum caminho de zona encontrado.\tn\r\n");
-        send_to_char(ch, "Isso pode indicar:\r\n");
-        send_to_char(ch, "- Zonas isoladas ou sem conexão\r\n");
-        send_to_char(ch, "- Limitações no algoritmo de busca de zona\r\n");
-        send_to_char(ch, "- Alvo em área especial\r\n");
-    }
-
-    /* Show current inventory keys */
-    struct obj_data *obj;
-    int player_keys = 0;
-    send_to_char(ch, "\r\n\tcChaves no seu inventário:\tn\r\n");
-    for (obj = ch->carrying; obj; obj = obj->next_content) {
-        if (GET_OBJ_TYPE(obj) == ITEM_KEY) {
-            send_to_char(ch, "  - Chave #%d (%s)\r\n", GET_OBJ_VNUM(obj), obj->short_description);
-            player_keys++;
-        }
-    }
-    if (GET_EQ(ch, WEAR_HOLD) && GET_OBJ_TYPE(GET_EQ(ch, WEAR_HOLD)) == ITEM_KEY) {
-        send_to_char(ch, "  - Chave #%d (segurando) (%s)\r\n", GET_OBJ_VNUM(GET_EQ(ch, WEAR_HOLD)),
-                     GET_EQ(ch, WEAR_HOLD)->short_description);
-        player_keys++;
-    }
-    if (player_keys == 0) {
-        send_to_char(ch, "  Nenhuma chave encontrada.\r\n");
-    }
-
-    send_to_char(ch, "\r\nUse 'track %s advanced' para rastreamento otimizado.\r\n", GET_NAME(vict));
 }
 
 /* Calculate estimated time for MV recovery in seconds

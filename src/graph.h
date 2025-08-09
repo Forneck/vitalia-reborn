@@ -19,7 +19,6 @@
 
 ACMD(do_track);
 ACMD(do_pathfind);
-ACMD(do_zonetrack);
 void hunt_victim(struct char_data *ch);
 int find_first_step(room_rnum src, room_rnum target);
 int find_first_step_enhanced(struct char_data *ch, room_rnum src, room_rnum target, int *total_cost);
