@@ -1604,9 +1604,16 @@ ACMD(do_eavesdrop)
         return;
     }
 
+    // Try Portuguese directions first, then English, then abbreviations
     if ((dir = search_block(buf, dirs_pt, FALSE)) < 0) {
-        send_to_char(ch, "Que direção é essa?\r\n");
-        return;
+        if ((dir = search_block(buf, dirs, FALSE)) < 0) {
+            if ((dir = search_block(buf, autoexits_pt, FALSE)) < 0) {
+                if ((dir = search_block(buf, autoexits, FALSE)) < 0) {
+                    send_to_char(ch, "Que direção é essa?\r\n");
+                    return;
+                }
+            }
+        }
     }
 
     // Check skill
