@@ -19,6 +19,7 @@
 
 ACMD(do_track);
 ACMD(do_pathfind);
+ACMD(do_zonetrack);
 void hunt_victim(struct char_data *ch);
 int find_first_step(room_rnum src, room_rnum target);
 int find_first_step_enhanced(struct char_data *ch, room_rnum src, room_rnum target, int *total_cost);
@@ -29,6 +30,11 @@ int calculate_mv_recovery_time(struct char_data *ch, int mv_needed);
 char *get_path_analysis_summary(struct char_data *ch, room_rnum target);
 int mob_smart_pathfind(struct char_data *ch, room_rnum target_room);
 obj_vnum find_blocking_key(struct char_data *ch, room_rnum src, room_rnum target);
+
+/* Zone-based optimization functions */
+int get_zones_between_rooms(room_rnum src, room_rnum target, zone_rnum *zone_path, int max_zones);
+int count_keys_in_zone_path(zone_rnum *zones, int num_zones);
+int get_path_required_keys(struct char_data *ch, room_rnum src, room_rnum target, obj_vnum *required_keys, int max_keys);
 
 /* Pathfinding statistics getter functions */
 long get_pathfind_calls_total(void);

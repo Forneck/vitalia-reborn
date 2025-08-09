@@ -60,6 +60,7 @@ int calculate_movement_cost(struct char_data *ch, room_rnum room)
 #define MAX_COLLECTED_KEYS 10       /* Reduced from 50 to limit complexity */
 #define MAX_VISITED_STATES 100      /* Reduced from 1000 to limit memory usage */
 #define MAX_PATHFIND_ITERATIONS 500 /* Limit iterations to prevent infinite loops */
+#define MAX_ZONE_PATH 20            /* Maximum zones in a path */
 
 struct path_state {
     room_rnum room;                         /* Current room */
@@ -95,6 +96,12 @@ static void add_key_to_state(struct path_state *state, obj_vnum key);
 static int can_pass_door(struct char_data *ch, struct path_state *state, room_rnum from, int dir);
 static int is_state_visited(struct path_state *state, struct path_state **visited_states, int num_visited);
 static struct obj_data *find_key_in_room(room_rnum room, obj_vnum key_vnum) __attribute__((unused));
+
+/* Zone-based optimization functions */
+static int get_zones_between(zone_rnum src_zone, zone_rnum target_zone, zone_rnum *zone_path, int max_zones);
+static int count_keys_in_zones(zone_rnum *zones, int num_zones);
+static int get_required_keys_for_path(struct char_data *ch, room_rnum src, room_rnum target, obj_vnum *required_keys, int max_keys);
+static int zone_has_connection_to(zone_rnum from_zone, zone_rnum to_zone);
 
 /* Utility macros */
 #define MARK(room) (SET_BIT_AR(ROOM_FLAGS(room), ROOM_BFS_MARK))
@@ -285,6 +292,300 @@ static struct obj_data *find_key_in_room(room_rnum room, obj_vnum key_vnum)
             return obj;
     }
     return NULL;
+}
+
+/* Zone-based optimization functions implementation */
+
+/**
+ * Check if one zone has direct connection to another zone
+ * Returns 1 if connection exists, 0 otherwise
+ */
+static int zone_has_connection_to(zone_rnum from_zone, zone_rnum to_zone)
+{
+    room_rnum nr, to_room;
+    int first, last, j;
+    
+    if (from_zone == NOWHERE || to_zone == NOWHERE || from_zone > top_of_zone_table || to_zone > top_of_zone_table)
+        return 0;
+        
+    if (from_zone == to_zone)
+        return 1; /* Same zone is always connected */
+        
+    /* Get room range for the source zone */
+    first = zone_table[from_zone].bot;
+    last = zone_table[from_zone].top;
+    
+    /* Check all rooms in the source zone for exits to target zone */
+    for (nr = 0; nr <= top_of_world && (GET_ROOM_VNUM(nr) <= last); nr++) {
+        if (GET_ROOM_VNUM(nr) >= first) {
+            for (j = 0; j < DIR_COUNT; j++) {
+                if (world[nr].dir_option[j]) {
+                    to_room = world[nr].dir_option[j]->to_room;
+                    if (to_room != NOWHERE && world[to_room].zone == to_zone) {
+                        return 1; /* Found direct connection */
+                    }
+                }
+            }
+        }
+    }
+    
+    return 0; /* No direct connection found */
+}
+
+/**
+ * Get the zones between source and target zones using BFS
+ * Returns the number of zones in the path, or -1 if no path found
+ */
+static int get_zones_between(zone_rnum src_zone, zone_rnum target_zone, zone_rnum *zone_path, int max_zones)
+{
+    static zone_rnum visited_zones[MAX_ZONE_PATH];
+    static zone_rnum queue[MAX_ZONE_PATH];
+    static int parent[MAX_ZONE_PATH];
+    int visited_count = 0, queue_head = 0, queue_tail = 0;
+    int i, j;
+    zone_rnum current_zone;
+    
+    if (src_zone == NOWHERE || target_zone == NOWHERE || !zone_path || max_zones <= 0)
+        return -1;
+        
+    if (src_zone == target_zone) {
+        zone_path[0] = src_zone;
+        return 1;
+    }
+    
+    /* Initialize */
+    for (i = 0; i < MAX_ZONE_PATH; i++) {
+        visited_zones[i] = NOWHERE;
+        parent[i] = -1;
+    }
+    
+    /* Start BFS */
+    queue[queue_tail++] = src_zone;
+    visited_zones[visited_count++] = src_zone;
+    parent[0] = -1;
+    
+    while (queue_head < queue_tail && visited_count < MAX_ZONE_PATH) {
+        current_zone = queue[queue_head++];
+        
+        if (current_zone == target_zone) {
+            /* Found target, reconstruct path */
+            int path_length = 0;
+            int current_idx = -1;
+            
+            /* Find current zone index in visited array */
+            for (i = 0; i < visited_count; i++) {
+                if (visited_zones[i] == target_zone) {
+                    current_idx = i;
+                    break;
+                }
+            }
+            
+            /* Reconstruct path backwards */
+            static zone_rnum temp_path[MAX_ZONE_PATH];
+            int temp_length = 0;
+            
+            while (current_idx != -1 && temp_length < MAX_ZONE_PATH) {
+                temp_path[temp_length++] = visited_zones[current_idx];
+                current_idx = parent[current_idx];
+            }
+            
+            /* Reverse path and copy to output */
+            path_length = (temp_length > max_zones) ? max_zones : temp_length;
+            for (i = 0; i < path_length; i++) {
+                zone_path[i] = temp_path[path_length - 1 - i];
+            }
+            
+            return path_length;
+        }
+        
+        /* Explore neighboring zones */
+        for (j = 0; j <= top_of_zone_table && visited_count < MAX_ZONE_PATH; j++) {
+            /* Skip if already visited */
+            int already_visited = 0;
+            for (i = 0; i < visited_count; i++) {
+                if (visited_zones[i] == j) {
+                    already_visited = 1;
+                    break;
+                }
+            }
+            
+            if (!already_visited && zone_has_connection_to(current_zone, j)) {
+                queue[queue_tail++] = j;
+                visited_zones[visited_count] = j;
+                
+                /* Find parent index */
+                for (i = 0; i < visited_count; i++) {
+                    if (visited_zones[i] == current_zone) {
+                        parent[visited_count] = i;
+                        break;
+                    }
+                }
+                
+                visited_count++;
+                if (queue_tail >= MAX_ZONE_PATH) break;
+            }
+        }
+    }
+    
+    return -1; /* No path found */
+}
+
+/**
+ * Count the number of ITEM_KEY objects in the specified zones
+ */
+static int count_keys_in_zones(zone_rnum *zones, int num_zones)
+{
+    int total_keys = 0;
+    int i, j;
+    room_rnum nr;
+    struct obj_data *obj;
+    
+    if (!zones || num_zones <= 0)
+        return 0;
+        
+    for (i = 0; i < num_zones; i++) {
+        zone_rnum zone = zones[i];
+        if (zone == NOWHERE || zone > top_of_zone_table)
+            continue;
+            
+        int first = zone_table[zone].bot;
+        int last = zone_table[zone].top;
+        
+        /* Count keys in all rooms of this zone */
+        for (nr = 0; nr <= top_of_world && (GET_ROOM_VNUM(nr) <= last); nr++) {
+            if (GET_ROOM_VNUM(nr) >= first) {
+                /* Count keys in room */
+                for (obj = world[nr].contents; obj; obj = obj->next_content) {
+                    if (GET_OBJ_TYPE(obj) == ITEM_KEY) {
+                        total_keys++;
+                    }
+                }
+                
+                /* Count keys carried by NPCs in room */
+                struct char_data *ch_in_room;
+                for (ch_in_room = world[nr].people; ch_in_room; ch_in_room = ch_in_room->next_in_room) {
+                    if (IS_NPC(ch_in_room)) {
+                        for (obj = ch_in_room->carrying; obj; obj = obj->next_content) {
+                            if (GET_OBJ_TYPE(obj) == ITEM_KEY) {
+                                total_keys++;
+                            }
+                        }
+                        
+                        /* Check equipped items */
+                        for (j = 0; j < NUM_WEARS; j++) {
+                            if (GET_EQ(ch_in_room, j) && GET_OBJ_TYPE(GET_EQ(ch_in_room, j)) == ITEM_KEY) {
+                                total_keys++;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    return total_keys;
+}
+
+/**
+ * Get required keys for a specific path using BFS to find locked doors
+ * Returns the number of required keys found
+ */
+static int get_required_keys_for_path(struct char_data *ch, room_rnum src, room_rnum target, obj_vnum *required_keys, int max_keys)
+{
+    static room_rnum visited[1000];
+    static room_rnum queue[1000];
+    static obj_vnum found_keys[MAX_COLLECTED_KEYS];
+    int visited_count = 0, queue_head = 0, queue_tail = 0;
+    int key_count = 0;
+    room_rnum current_room;
+    int i, dir;
+    
+    if (src == NOWHERE || target == NOWHERE || !required_keys || max_keys <= 0)
+        return 0;
+        
+    if (src == target)
+        return 0;
+    
+    /* Initialize */
+    for (i = 0; i < 1000; i++) visited[i] = NOWHERE;
+    for (i = 0; i < MAX_COLLECTED_KEYS; i++) found_keys[i] = NOTHING;
+    
+    /* Start BFS */
+    queue[queue_tail++] = src;
+    visited[visited_count++] = src;
+    
+    while (queue_head < queue_tail && visited_count < 1000 && key_count < max_keys) {
+        current_room = queue[queue_head++];
+        
+        if (current_room == target) {
+            /* Found target, copy found keys */
+            for (i = 0; i < key_count && i < max_keys; i++) {
+                required_keys[i] = found_keys[i];
+            }
+            return key_count;
+        }
+        
+        /* Explore exits */
+        for (dir = 0; dir < DIR_COUNT; dir++) {
+            if (!world[current_room].dir_option[dir])
+                continue;
+                
+            room_rnum next_room = world[current_room].dir_option[dir]->to_room;
+            if (next_room == NOWHERE || next_room > top_of_world)
+                continue;
+                
+            /* Check if already visited */
+            int already_visited = 0;
+            for (i = 0; i < visited_count; i++) {
+                if (visited[i] == next_room) {
+                    already_visited = 1;
+                    break;
+                }
+            }
+            if (already_visited) continue;
+            
+            struct room_direction_data *exit = world[current_room].dir_option[dir];
+            
+            /* Check for locked door */
+            if (IS_SET(exit->exit_info, EX_ISDOOR) && IS_SET(exit->exit_info, EX_CLOSED) &&
+                IS_SET(exit->exit_info, EX_LOCKED) && exit->key != NOTHING) {
+                
+                /* Check if we already have this key */
+                if (!has_key(ch, exit->key)) {
+                    /* Add to required keys if not already present */
+                    int already_found = 0;
+                    for (i = 0; i < key_count; i++) {
+                        if (found_keys[i] == exit->key) {
+                            already_found = 1;
+                            break;
+                        }
+                    }
+                    if (!already_found && key_count < MAX_COLLECTED_KEYS) {
+                        found_keys[key_count++] = exit->key;
+                    }
+                }
+                
+                /* Skip this exit if we don't have the key */
+                if (!has_key(ch, exit->key)) continue;
+            }
+            
+            /* Add to queue if door can be passed */
+            if (!IS_SET(exit->exit_info, EX_CLOSED) || !IS_SET(exit->exit_info, EX_LOCKED) ||
+                (exit->key != NOTHING && has_key(ch, exit->key))) {
+                
+                if (visited_count < 1000 && queue_tail < 1000) {
+                    queue[queue_tail++] = next_room;
+                    visited[visited_count++] = next_room;
+                }
+            }
+        }
+    }
+    
+    /* Copy found keys even if target not reached */
+    for (i = 0; i < key_count && i < max_keys; i++) {
+        required_keys[i] = found_keys[i];
+    }
+    return key_count;
 }
 
 /* Function to detect the first key that is blocking a path from src to target */
@@ -497,7 +798,17 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
     int num_visited = 0, max_visited = MAX_VISITED_STATES;
     int curr_dir, i, iterations = 0;
     char *desc_buffer;
-
+    
+    /* Zone optimization variables */
+    zone_rnum zone_path[MAX_ZONE_PATH];
+    zone_rnum src_zone = (src != NOWHERE && src <= top_of_world) ? world[src].zone : NOWHERE;
+    zone_rnum target_zone = (target != NOWHERE && target <= top_of_world) ? world[target].zone : NOWHERE;
+    int num_zones = 0;
+    int keys_in_path_zones = 0;
+    obj_vnum required_keys[MAX_COLLECTED_KEYS];
+    int num_required_keys = 0;
+    int dynamic_key_limit = MAX_COLLECTED_KEYS;
+    
     *total_cost = 0;
     *required_mv = 0;
 
@@ -516,29 +827,101 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
         return (BFS_ALREADY_THERE);
     }
 
+    /* OPTIMIZATION: Analyze zone path and key requirements */
+    if (src_zone != NOWHERE && target_zone != NOWHERE) {
+        num_zones = get_zones_between(src_zone, target_zone, zone_path, MAX_ZONE_PATH);
+        
+        if (num_zones > 0) {
+            /* Count keys in the zones that are actually in the path */
+            keys_in_path_zones = count_keys_in_zones(zone_path, num_zones);
+            
+            /* Get specific keys required for this path */
+            num_required_keys = get_required_keys_for_path(ch, src, target, required_keys, MAX_COLLECTED_KEYS);
+            
+            /* Adjust the dynamic key limit based on actual path analysis */
+            if (keys_in_path_zones > 0 && keys_in_path_zones < MAX_COLLECTED_KEYS) {
+                dynamic_key_limit = keys_in_path_zones;
+            } else if (num_required_keys > 0 && num_required_keys < MAX_COLLECTED_KEYS) {
+                dynamic_key_limit = num_required_keys + 2; /* Add small buffer for unexpected keys */
+            }
+            
+            /* Add optimization info to description */
+            char opt_info[256];
+            snprintf(opt_info, sizeof(opt_info), 
+                     "Análise de zona: %d zonas no caminho, %d chaves detectadas, %d chaves necessárias. ",
+                     num_zones, keys_in_path_zones, num_required_keys);
+            strcat(desc_buffer, opt_info);
+        }
+    }
+    
+    /* If zones are directly connected, use more efficient pathfinding */
+    if (num_zones == 2 && zone_has_connection_to(src_zone, target_zone)) {
+        /* Direct zone connection - use simpler algorithm */
+        int simple_dir = find_first_step_enhanced(ch, src, target, total_cost);
+        if (simple_dir >= 0) {
+            strcat(desc_buffer, "Caminho direto entre zonas encontrado!");
+            return simple_dir;
+        }
+    }
+
     /* Initialize visited states tracking */
     CREATE(visited_states, struct path_state *, max_visited);
 
     /* Clear state queue */
     state_clear_queue();
 
-    /* Initialize starting state */
+    /* Initialize starting state with optimized key limit */
     initial_state.room = src;
     initial_state.mv_available = GET_MOVE(ch);
     initial_state.num_keys = 0;
     initial_state.path_cost = 0;
     initial_state.first_dir = -1;
 
-    /* Add any keys the character already has - limit to prevent overflow */
+    /* Add any keys the character already has - limit to dynamic limit */
     struct obj_data *obj;
-    for (obj = ch->carrying; obj && initial_state.num_keys < MAX_COLLECTED_KEYS; obj = obj->next_content) {
+    for (obj = ch->carrying; obj && initial_state.num_keys < dynamic_key_limit; obj = obj->next_content) {
         if (GET_OBJ_TYPE(obj) == ITEM_KEY) {
-            add_key_to_state(&initial_state, GET_OBJ_VNUM(obj));
+            /* OPTIMIZATION: Only add key if it's required or in path zones */
+            int key_is_relevant = 0;
+            
+            if (num_required_keys > 0) {
+                /* Check if this key is in the required list */
+                for (i = 0; i < num_required_keys; i++) {
+                    if (GET_OBJ_VNUM(obj) == required_keys[i]) {
+                        key_is_relevant = 1;
+                        break;
+                    }
+                }
+            } else {
+                /* No specific requirements known, include all keys (fallback) */
+                key_is_relevant = 1;
+            }
+            
+            if (key_is_relevant) {
+                add_key_to_state(&initial_state, GET_OBJ_VNUM(obj));
+            }
         }
     }
     if (GET_EQ(ch, WEAR_HOLD) && GET_OBJ_TYPE(GET_EQ(ch, WEAR_HOLD)) == ITEM_KEY &&
-        initial_state.num_keys < MAX_COLLECTED_KEYS) {
-        add_key_to_state(&initial_state, GET_OBJ_VNUM(GET_EQ(ch, WEAR_HOLD)));
+        initial_state.num_keys < dynamic_key_limit) {
+        
+        obj_vnum held_key = GET_OBJ_VNUM(GET_EQ(ch, WEAR_HOLD));
+        int key_is_relevant = 0;
+        
+        if (num_required_keys > 0) {
+            for (i = 0; i < num_required_keys; i++) {
+                if (held_key == required_keys[i]) {
+                    key_is_relevant = 1;
+                    break;
+                }
+            }
+        } else {
+            key_is_relevant = 1;
+        }
+        
+        if (key_is_relevant) {
+            add_key_to_state(&initial_state, held_key);
+        }
     }
 
     state_enqueue(&initial_state);
@@ -552,11 +935,12 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
             *total_cost = current_state->path_cost;
             *required_mv = current_state->path_cost;
 
-            snprintf(desc_buffer, MAX_STRING_LENGTH, "Caminho encontrado! Custo total: %d MV (iterações: %d)",
+            snprintf(desc_buffer + strlen(desc_buffer), MAX_STRING_LENGTH - strlen(desc_buffer), 
+                     "Caminho otimizado encontrado! Custo total: %d MV (iterações: %d)",
                      current_state->path_cost, iterations);
 
             if (current_state->num_keys > 0) {
-                strcat(desc_buffer, " (requer chaves: ");
+                strcat(desc_buffer, " (chaves usadas: ");
                 for (i = 0; i < current_state->num_keys && i < 3; i++) { /* Limit displayed keys */
                     char key_info[64];
                     snprintf(key_info, sizeof(key_info), "%s#%d", i > 0 ? ", " : "", current_state->collected_keys[i]);
@@ -635,12 +1019,30 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
             else
                 new_state.first_dir = current_state->first_dir;
 
-            /* Check if there's a key in this room that we should collect - only if we have room */
-            if (new_state.num_keys < MAX_COLLECTED_KEYS) {
+            /* OPTIMIZATION: Check if there's a key in this room that we should collect */
+            if (new_state.num_keys < dynamic_key_limit) {
                 struct obj_data *key_obj;
                 for (key_obj = world[next_room].contents; key_obj; key_obj = key_obj->next_content) {
-                    if (GET_OBJ_TYPE(key_obj) == ITEM_KEY && new_state.num_keys < MAX_COLLECTED_KEYS) {
-                        add_key_to_state(&new_state, GET_OBJ_VNUM(key_obj));
+                    if (GET_OBJ_TYPE(key_obj) == ITEM_KEY && new_state.num_keys < dynamic_key_limit) {
+                        obj_vnum key_vnum = GET_OBJ_VNUM(key_obj);
+                        
+                        /* OPTIMIZATION: Only collect relevant keys */
+                        int should_collect = 0;
+                        if (num_required_keys > 0) {
+                            for (i = 0; i < num_required_keys; i++) {
+                                if (key_vnum == required_keys[i]) {
+                                    should_collect = 1;
+                                    break;
+                                }
+                            }
+                        } else {
+                            /* No specific requirements, collect key (fallback behavior) */
+                            should_collect = 1;
+                        }
+                        
+                        if (should_collect) {
+                            add_key_to_state(&new_state, key_vnum);
+                        }
                     }
                 }
             }
@@ -1081,6 +1483,145 @@ ACMD(do_pathfind)
     /* Free the allocated description */
     if (path_description)
         free(path_description);
+}
+
+/* New command to show zone path analysis and key optimization */
+ACMD(do_zonetrack)
+{
+    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
+    struct char_data *vict;
+    zone_rnum zone_path[MAX_ZONE_PATH];
+    zone_rnum src_zone, target_zone;
+    int num_zones, keys_in_zones;
+    obj_vnum required_keys[MAX_COLLECTED_KEYS];
+    int num_required_keys;
+    int i;
+
+    /* Check permissions - available to players with high track skill */
+    if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_TRACK)) {
+        send_to_char(ch, "Você não tem conhecimento de rastreamento.\r\n");
+        return;
+    }
+
+    if (GET_SKILL(ch, SKILL_TRACK) < 50) {
+        send_to_char(ch, "Seu conhecimento de rastreamento não é avançado o suficiente para análise de zonas.\r\n");
+        return;
+    }
+
+    two_arguments(argument, arg1, arg2);
+
+    if (!*arg1) {
+        send_to_char(ch, "Analisar caminho de zonas para quem?\r\n");
+        send_to_char(ch, "Uso: zonetrack <alvo>\r\n");
+        send_to_char(ch, "      Este comando mostra otimizações de zona para rastreamento avançado.\r\n");
+        return;
+    }
+
+    /* Find the target */
+    if (!(vict = get_char_vis(ch, arg1, NULL, FIND_CHAR_WORLD))) {
+        send_to_char(ch, "Você não consegue localizar esse alvo.\r\n");
+        return;
+    }
+
+    /* We can't track the victim. */
+    if (AFF_FLAGGED(vict, AFF_NOTRACK)) {
+        send_to_char(ch, "Esse alvo não pode ser rastreado.\r\n");
+        return;
+    }
+
+    src_zone = world[IN_ROOM(ch)].zone;
+    target_zone = world[IN_ROOM(vict)].zone;
+
+    send_to_char(ch, "\tg=== ANÁLISE DE ZONA PARA RASTREAMENTO ===\tn\r\n");
+    send_to_char(ch, "Alvo: %s\r\n", GET_NAME(vict));
+    send_to_char(ch, "Zona atual: %d (%s)\r\n", zone_table[src_zone].number, zone_table[src_zone].name);
+    send_to_char(ch, "Zona destino: %d (%s)\r\n", zone_table[target_zone].number, zone_table[target_zone].name);
+
+    if (src_zone == target_zone) {
+        send_to_char(ch, "\tcVocês estão na mesma zona - sem necessidade de análise entre zonas.\tn\r\n");
+        return;
+    }
+
+    /* Analyze zone path */
+    num_zones = get_zones_between(src_zone, target_zone, zone_path, MAX_ZONE_PATH);
+
+    if (num_zones > 0) {
+        send_to_char(ch, "\tyCaminho de zonas encontrado (%d zonas):\tn\r\n", num_zones);
+        for (i = 0; i < num_zones; i++) {
+            char connection_info[128] = "";
+            if (i < num_zones - 1) {
+                if (zone_has_connection_to(zone_path[i], zone_path[i + 1])) {
+                    strcpy(connection_info, " -> ");
+                } else {
+                    strcpy(connection_info, " !-> ");
+                }
+            }
+            send_to_char(ch, "%d. Zona %d (%s)%s\r\n", i + 1, zone_table[zone_path[i]].number,
+                         zone_table[zone_path[i]].name, connection_info);
+        }
+
+        /* Count keys in path zones */
+        keys_in_zones = count_keys_in_zones(zone_path, num_zones);
+        send_to_char(ch, "\tcChaves detectadas no caminho de zonas: %d\tn\r\n", keys_in_zones);
+
+        /* Get specific required keys */
+        num_required_keys = get_required_keys_for_path(ch, IN_ROOM(ch), IN_ROOM(vict), required_keys, MAX_COLLECTED_KEYS);
+        if (num_required_keys > 0) {
+            send_to_char(ch, "\trChaves especificamente necessárias: %d\tn\r\n", num_required_keys);
+            for (i = 0; i < num_required_keys && i < 5; i++) {
+                send_to_char(ch, "  - Chave #%d\r\n", required_keys[i]);
+            }
+            if (num_required_keys > 5) {
+                send_to_char(ch, "  - ... e mais %d chaves\r\n", num_required_keys - 5);
+            }
+        } else {
+            send_to_char(ch, "\tgNenhuma chave específica necessária para o caminho básico.\tn\r\n");
+        }
+
+        /* Performance improvement estimate */
+        int old_limit = MAX_COLLECTED_KEYS;
+        int new_limit = (keys_in_zones > 0 && keys_in_zones < old_limit) ? keys_in_zones :
+                        (num_required_keys > 0 && num_required_keys < old_limit) ? num_required_keys + 2 : old_limit;
+
+        if (new_limit < old_limit) {
+            float improvement = ((float)(old_limit - new_limit) / old_limit) * 100;
+            send_to_char(ch, "\tgOtimização estimada: %.1f%% redução na complexidade\tn\r\n", improvement);
+            send_to_char(ch, "Limite de chaves: %d -> %d\r\n", old_limit, new_limit);
+        }
+
+        /* Direct connection check */
+        if (zone_has_connection_to(src_zone, target_zone)) {
+            send_to_char(ch, "\tcZonas diretamente conectadas - algoritmo otimizado disponível.\tn\r\n");
+        }
+
+    } else {
+        send_to_char(ch, "\trNenhum caminho de zona encontrado.\tn\r\n");
+        send_to_char(ch, "Isso pode indicar:\r\n");
+        send_to_char(ch, "- Zonas isoladas ou sem conexão\r\n");
+        send_to_char(ch, "- Limitações no algoritmo de busca de zona\r\n");
+        send_to_char(ch, "- Alvo em área especial\r\n");
+    }
+
+    /* Show current inventory keys */
+    struct obj_data *obj;
+    int player_keys = 0;
+    send_to_char(ch, "\r\n\tcChaves no seu inventário:\tn\r\n");
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (GET_OBJ_TYPE(obj) == ITEM_KEY) {
+            send_to_char(ch, "  - Chave #%d (%s)\r\n", GET_OBJ_VNUM(obj), obj->short_description);
+            player_keys++;
+        }
+    }
+    if (GET_EQ(ch, WEAR_HOLD) && GET_OBJ_TYPE(GET_EQ(ch, WEAR_HOLD)) == ITEM_KEY) {
+        send_to_char(ch, "  - Chave #%d (segurando) (%s)\r\n", GET_OBJ_VNUM(GET_EQ(ch, WEAR_HOLD)), 
+                     GET_EQ(ch, WEAR_HOLD)->short_description);
+        player_keys++;
+    }
+    if (player_keys == 0) {
+        send_to_char(ch, "  Nenhuma chave encontrada.\r\n");
+    }
+
+    send_to_char(ch, "\r\nUse 'track %s advanced' para rastreamento otimizado.\r\n", GET_NAME(vict));
 }
 
 /* Calculate estimated time for MV recovery in seconds
