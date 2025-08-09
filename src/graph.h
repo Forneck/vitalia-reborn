@@ -34,7 +34,8 @@ obj_vnum find_blocking_key(struct char_data *ch, room_rnum src, room_rnum target
 /* Zone-based optimization functions */
 int get_zones_between_rooms(room_rnum src, room_rnum target, zone_rnum *zone_path, int max_zones);
 int count_keys_in_zone_path(zone_rnum *zones, int num_zones);
-int get_path_required_keys(struct char_data *ch, room_rnum src, room_rnum target, obj_vnum *required_keys, int max_keys);
+int get_path_required_keys(struct char_data *ch, room_rnum src, room_rnum target, obj_vnum *required_keys,
+                           int max_keys);
 
 /* Pathfinding statistics getter functions */
 long get_pathfind_calls_total(void);
