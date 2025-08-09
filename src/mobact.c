@@ -1460,8 +1460,17 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
  */
 bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
 {
+    static int roam_throttle = 0;
+    
     if (ch->master != NULL || FIGHTING(ch) || GET_POS(ch) < POS_STANDING)
         return FALSE;
+
+    /* Throttle pathfinding calls to prevent resource exhaustion */
+    roam_throttle++;
+    if (target_room != NOWHERE && roam_throttle % 4 != 0) {
+        /* Only do complex pathfinding every 4th call for goal-oriented movement */
+        return FALSE;
+    }
 
     int direction = -1;
     bool has_goal = FALSE;
@@ -1615,7 +1624,18 @@ bool handle_duty_routine(struct char_data *ch)
 
         /* Se não está no posto, tenta voltar usando pathfinding inteligente. */
         if (home_room != NOWHERE) {
-            int direction = mob_smart_pathfind(ch, home_room);
+            static int duty_pathfind_calls = 0;
+            int direction = -1;
+            
+            /* Throttle duty pathfinding to reduce resource usage */
+            duty_pathfind_calls++;
+            if (duty_pathfind_calls % 5 == 0) {
+                /* Only do complex pathfinding every 5th call for duty movement */
+                direction = mob_smart_pathfind(ch, home_room);
+            } else {
+                /* Use simple pathfinding most of the time */
+                direction = find_first_step(IN_ROOM(ch), home_room);
+            }
 
             if (direction == -1) {
                 /* Fall back to basic pathfinding if smart pathfinding fails */
@@ -1689,7 +1709,18 @@ bool mob_follow_leader(struct char_data *ch)
         }
 
         /* Tenta encontrar o caminho até ao líder usando pathfinding inteligente. */
-        int direction = mob_smart_pathfind(ch, IN_ROOM(leader));
+        static int follow_pathfind_calls = 0;
+        int direction = -1;
+        
+        /* Throttle follow pathfinding to reduce resource usage */
+        follow_pathfind_calls++;
+        if (follow_pathfind_calls % 6 == 0) {
+            /* Only do complex pathfinding every 6th call for following */
+            direction = mob_smart_pathfind(ch, IN_ROOM(leader));
+        } else {
+            /* Use simple pathfinding most of the time for following */
+            direction = find_first_step(IN_ROOM(ch), IN_ROOM(leader));
+        }
 
         if (direction == -1) {
             /* Fall back to basic pathfinding if smart pathfinding fails */
