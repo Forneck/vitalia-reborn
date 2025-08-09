@@ -840,6 +840,26 @@ static void init_pathfind_cache(void)
     pathfind_cache_initialized = 1;
 }
 
+/* Getter functions for pathfinding statistics */
+long get_pathfind_calls_total(void) { return pathfind_calls_total; }
+
+long get_pathfind_cache_hits(void) { return pathfind_cache_hits; }
+
+long get_advanced_pathfind_calls(void) { return advanced_pathfind_calls; }
+
+int get_pathfind_cache_valid_entries(void)
+{
+    int valid_entries = 0;
+    if (pathfind_cache_initialized) {
+        for (int i = 0; i < PATHFIND_CACHE_SIZE; i++) {
+            if (pathfind_cache[i].valid) {
+                valid_entries++;
+            }
+        }
+    }
+    return valid_entries;
+}
+
 static int get_cached_pathfind(room_rnum src, room_rnum target)
 {
     int i;

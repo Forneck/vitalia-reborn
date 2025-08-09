@@ -36,6 +36,7 @@
 #include "screen.h"
 #include "spedit.h"
 #include "spirits.h"
+#include "graph.h"
 #include <math.h>
 
 /* external functions*/
@@ -2516,13 +2517,22 @@ ACMD(do_show)
     struct show_struct {
         const char *cmd;
         const char level;
-    } fields[] = {
-        {"nothing", 0},                                                                                   /* 0 */
-        {"zones", LVL_IMMORT},                                                                            /* 1 */
-        {"player", LVL_IMMORT}, {"rent", LVL_IMMORT},     {"stats", LVL_IMMORT},  {"errors", LVL_IMMORT}, /* 5 */
-        {"death", LVL_IMMORT},  {"godrooms", LVL_IMMORT}, {"shops", LVL_IMMORT},  {"houses", LVL_IMMORT},
-        {"snoop", LVL_IMMORT}, /* 10 */
-        {"thaco", LVL_IMMORT},  {"exp", LVL_IMMORT},      {"colour", LVL_IMMORT}, {"\n", 0}};
+    } fields[] = {{"nothing", 0},        /* 0 */
+                  {"zones", LVL_IMMORT}, /* 1 */
+                  {"player", LVL_IMMORT},
+                  {"rent", LVL_IMMORT},
+                  {"stats", LVL_IMMORT},
+                  {"errors", LVL_IMMORT}, /* 5 */
+                  {"death", LVL_IMMORT},
+                  {"godrooms", LVL_IMMORT},
+                  {"shops", LVL_IMMORT},
+                  {"houses", LVL_IMMORT},
+                  {"snoop", LVL_IMMORT}, /* 10 */
+                  {"thaco", LVL_IMMORT},
+                  {"exp", LVL_IMMORT},
+                  {"colour", LVL_IMMORT},
+                  {"pathstats", LVL_IMMORT},
+                  {"\n", 0}};
 
     skip_spaces(&argument);
 
@@ -2808,6 +2818,29 @@ ACMD(do_show)
                     }
             page_string(ch->desc, buf, TRUE);
             break;
+
+            /* show pathstats */
+        case 14: {
+            long total_calls = get_pathfind_calls_total();
+            long cache_hits = get_pathfind_cache_hits();
+            long advanced_calls = get_advanced_pathfind_calls();
+            int valid_entries = get_pathfind_cache_valid_entries();
+
+            send_to_char(ch, "=== PATHFINDING STATISTICS ===\r\n");
+            send_to_char(ch, "Total pathfinding calls: %ld\r\n", total_calls);
+            send_to_char(ch, "Cache hits: %ld\r\n", cache_hits);
+            send_to_char(ch, "Advanced pathfinding calls: %ld\r\n", advanced_calls);
+
+            if (total_calls > 0) {
+                float cache_hit_rate = (float)cache_hits / total_calls * 100;
+                float advanced_rate = (float)advanced_calls / total_calls * 100;
+                send_to_char(ch, "Cache hit rate: %.1f%%\r\n", cache_hit_rate);
+                send_to_char(ch, "Advanced pathfinding rate: %.1f%%\r\n", advanced_rate);
+            }
+
+            send_to_char(ch, "Cache entries in use: %d/%d\r\n", valid_entries, PATHFIND_CACHE_SIZE);
+            break;
+        }
 
             /* show what? */
         default:
