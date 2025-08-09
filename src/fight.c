@@ -354,6 +354,40 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
         GET_MOVE(ch) = 0;
         GET_LOADROOM(ch) = CONFIG_DEAD_START;
     }
+
+    /* Check if any mobs in the room are looking for keys that this mob carried */
+    if (IS_NPC(ch) && ch->carrying) {
+        struct char_data *room_mob;
+        for (room_mob = world[IN_ROOM(ch)].people; room_mob; room_mob = room_mob->next_in_room) {
+            if (IS_NPC(room_mob) && room_mob->ai_data && room_mob->ai_data->current_goal == GOAL_COLLECT_KEY &&
+                room_mob->ai_data->goal_target_mob_rnum == GET_MOB_RNUM(ch)) {
+
+                /* Check if the dying mob has the key this mob is looking for */
+                struct obj_data *obj;
+                obj_vnum target_key = room_mob->ai_data->goal_item_vnum;
+
+                for (obj = ch->carrying; obj; obj = obj->next_content) {
+                    if (GET_OBJ_TYPE(obj) == ITEM_KEY && GET_OBJ_VNUM(obj) == target_key) {
+                        /* Found the key! The mob will pick it up when it's dropped by extract_char */
+                        act("$n parece empolgado ao ver que $N tinha o que procurava.", FALSE, room_mob, 0, ch,
+                            TO_ROOM);
+                        break;
+                    }
+                }
+
+                /* Also check equipment */
+                for (int wear_pos = 0; wear_pos < NUM_WEARS; wear_pos++) {
+                    obj = GET_EQ(ch, wear_pos);
+                    if (obj && GET_OBJ_TYPE(obj) == ITEM_KEY && GET_OBJ_VNUM(obj) == target_key) {
+                        act("$n parece empolgado ao ver que $N tinha o que procurava.", FALSE, room_mob, 0, ch,
+                            TO_ROOM);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
     extract_char(ch);
     if (killer) {
         autoquest_trigger_check(killer, NULL, NULL, AQ_MOB_SAVE);

@@ -274,6 +274,100 @@ static struct obj_data *find_key_in_room(room_rnum room, obj_vnum key_vnum)
     return NULL;
 }
 
+/* Function to detect the first key that is blocking a path from src to target */
+obj_vnum find_blocking_key(struct char_data *ch, room_rnum src, room_rnum target)
+{
+    int curr_dir;
+    room_rnum curr_room;
+
+    if (src == NOWHERE || target == NOWHERE || src > top_of_world || target > top_of_world) {
+        return NOTHING;
+    }
+    if (src == target)
+        return NOTHING;
+
+    /* Clear marks first */
+    for (curr_room = 0; curr_room <= top_of_world; curr_room++)
+        UNMARK(curr_room);
+
+    MARK(src);
+
+    /* Check immediate exits from source for locked doors */
+    for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++) {
+        if (!world[src].dir_option[curr_dir])
+            continue;
+
+        room_rnum next_room = world[src].dir_option[curr_dir]->to_room;
+        if (next_room == NOWHERE || next_room > top_of_world)
+            continue;
+
+        struct room_direction_data *exit = world[src].dir_option[curr_dir];
+
+        /* Check if this is a locked door that we can't pass */
+        if (IS_SET(exit->exit_info, EX_ISDOOR) && IS_SET(exit->exit_info, EX_CLOSED) &&
+            IS_SET(exit->exit_info, EX_LOCKED)) {
+
+            /* Check if we have the key */
+            if (exit->key != NOTHING && !has_key(ch, exit->key)) {
+                /* This is a blocking key! */
+                return exit->key;
+            }
+        }
+    }
+
+    /* If no immediate blocking key found, do a simple BFS to find first blocking door */
+    bfs_clear_queue();
+
+    /* Enqueue first valid steps */
+    for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++) {
+        if (VALID_EDGE(src, curr_dir)) {
+            MARK(TOROOM(src, curr_dir));
+            bfs_enqueue(TOROOM(src, curr_dir), curr_dir);
+        }
+    }
+
+    /* BFS to find target or first blocking door */
+    while (queue_head) {
+        curr_room = queue_head->room;
+
+        if (curr_room == target) {
+            bfs_clear_queue();
+            return NOTHING; /* Path exists without key blocking */
+        }
+
+        for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++) {
+            if (!world[curr_room].dir_option[curr_dir])
+                continue;
+
+            room_rnum next_room = world[curr_room].dir_option[curr_dir]->to_room;
+            if (next_room == NOWHERE || next_room > top_of_world || IS_MARKED(next_room))
+                continue;
+
+            struct room_direction_data *exit = world[curr_room].dir_option[curr_dir];
+
+            /* Check if this is a locked door that blocks the path */
+            if (IS_SET(exit->exit_info, EX_ISDOOR) && IS_SET(exit->exit_info, EX_CLOSED) &&
+                IS_SET(exit->exit_info, EX_LOCKED)) {
+
+                if (exit->key != NOTHING && !has_key(ch, exit->key)) {
+                    bfs_clear_queue();
+                    return exit->key; /* Found blocking key */
+                }
+            }
+
+            /* If not blocked, continue BFS */
+            if (!IS_SET(exit->exit_info, EX_CLOSED) || !IS_SET(exit->exit_info, EX_LOCKED) ||
+                (exit->key != NOTHING && has_key(ch, exit->key))) {
+                MARK(next_room);
+                bfs_enqueue(next_room, queue_head->dir);
+            }
+        }
+        bfs_dequeue();
+    }
+
+    return NOTHING; /* No blocking key found */
+}
+
 /* find_first_step: given a source room and a target room, find the first step
  * on the shortest path from the source to the target. Intended usage: in
  * mobile_activity, give a mob a dir to go if they're tracking another mob or a
