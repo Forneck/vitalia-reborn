@@ -1392,6 +1392,27 @@ const char *get_spell_school_name(int school)
     }
 }
 
+/* Get skill school name */
+const char *get_skill_school_name(int school)
+{
+    switch (school) {
+        case SKILL_SCHOOL_COMBAT:
+            return "Combate";
+        case SKILL_SCHOOL_STEALTH:
+            return "Furtividade";
+        case SKILL_SCHOOL_WEAPONS:
+            return "Armas";
+        case SKILL_SCHOOL_SURVIVAL:
+            return "Sobrevivência";
+        case SKILL_SCHOOL_MUSICAL:
+            return "Musical";
+        case SKILL_SCHOOL_SUPPORT:
+            return "Suporte";
+        default:
+            return "Indefinida";
+    }
+}
+
 /* Get spell element name */
 const char *get_spell_element_name(int element)
 {

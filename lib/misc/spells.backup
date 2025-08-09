@@ -8,14 +8,14 @@
 99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
 91 1 1
 99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
-55 1
 4 100
+55 1
 1 P 2 1 2 1024 9 0
 2 teleport
 90 6 100
 99 (75 - (3 * self.level)) > 50 ? (75 - (3 * self.level)) : 50
-55 3
 4 100
+55 3
 1 P 3 1 2 8194 9 0
 2 bless person
 10 Você se sente menos abençoad$r.
@@ -27,9 +27,9 @@
 99 6
 90 1 6
 99 (35 - (3 * self.level)) > 5 ? (35 - (3 * self.level)) : 5
-55 1
-56 9
 4 100
+55 5
+56 9
 1 P 4 1 66 6 9 0
 2 blindness
 10 Você volta a enxergar.
@@ -46,25 +46,25 @@
 99 (35 - (1 * self.level)) > 25 ? (35 - (1 * self.level)) : 25
 91 1 8
 99 (35 - (1 * self.level)) > 25 ? (35 - (1 * self.level)) : 25
-55 8
 4 100
-56 0
+55 5
+56 11
 1 P 5 1 18 4097 8 100
 2 burning hands
 3 dice(3, self.class == 0 ? 8 : 6) + 3
 90 0 6
 99 (30 - (3 * self.level)) > 10 ? (30 - (3 * self.level)) : 10
+4 100
 55 6
 56 1
-4 100
 1 P 6 1 18 4097 8 100
 2 call lightning
 3 dice(7, 8) + 7
 90 1 22
 99 (40 - (3 * self.level)) > 25 ? (40 - (3 * self.level)) : 25
+4 100
 55 6
 56 5
-4 100
 1 P 7 1 66 5120 8 0
 2 charm person
 10 Você se sente mais auto-confiante.
@@ -74,9 +74,9 @@
 99 (75 - (2 * self.level)) > 50 ? (75 - (2 * self.level)) : 50
 92 4 24
 99 (75 - (2 * self.level)) > 50 ? (75 - (2 * self.level)) : 50
+4 100
 55 5
 56 11
-4 100
 1 P 8 1 18 12291 8 100
 2 chill touch
 3 dice(1, self.class == 0 ? 8 : 6) + 1
@@ -86,24 +86,24 @@
 99 4
 90 0 3
 99 (30 - (3 * self.level)) > 10 ? (30 - (3 * self.level)) : 10
-55 8
-56 6
 4 100
+55 6
+56 6
 1 P 9 1 1 256 9 0
 2 clone
 13 $N magicamente se divide!
 8 10
 90 0 14
 99 (130 - (3 * self.level)) > 120 ? (130 - (3 * self.level)) : 120
-55 3
 4 50
+55 3
 1 P 10 1 18 4097 8 100
 2 color spray
 3 dice(9, self.class == 0 ? 8 : 6) + 9
 90 0 17
 99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
-55 7
 4 100
+55 6
 1 P 11 1 1 1024 9 0
 2 control weather
 90 1 26
@@ -112,25 +112,25 @@
 99 (75 - (5 * self.level)) > 25 ? (75 - (5 * self.level)) : 25
 92 4 55
 99 (75 - (5 * self.level)) > 25 ? (75 - (5 * self.level)) : 25
+4 100
 55 2
 56 3
-4 100
 1 P 12 1 1 512 9 0
 2 create food
 40 10
 90 1 2
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
-55 3
 4 100
+55 3
 1 P 13 1 1152 1024 9 0
 2 create water
 90 1 3
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
 91 6 12
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
+4 100
 55 3
 56 2
-4 100
 1 P 14 1 2 4 9 0
 2 cure blind
 12 Sua visão retorna!
@@ -139,18 +139,18 @@
 26 162
 90 1 5
 99 (30 - (2 * self.level)) > 5 ? (30 - (2 * self.level)) : 5
-55 1
-56 9
 4 100
+55 3
+56 9
 1 P 15 1 2 8 8 0
 2 cure critic
 12 Você se sente muito melhor!
 50 dice(3, 8) + 3 + (param / 4)
 90 1 14
 99 (30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10
+4 100
 55 3
 56 9
-4 100
 1 P 16 1 2 8 8 0
 2 cure light
 12 Você se sente melhor.
@@ -159,9 +159,9 @@
 99 (30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10
 91 6 3
 99 (30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10
+4 100
 55 3
 56 9
-4 100
 1 P 17 1 130 28690 9 0
 2 curse
 10 Você se sente mais otimista.
@@ -176,9 +176,9 @@
 99 1 + (self.level / 10)
 90 0 20
 99 (80 - (2 * self.level)) > 50 ? (80 - (2 * self.level)) : 50
-55 5
-56 10
 4 100
+55 6
+56 10
 1 P 18 1 34 8194 9 0
 2 detect alignment
 10 Você perde sua sensibilidade.
@@ -187,9 +187,8 @@
 99 12 + param
 90 1 4
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
-55 4
-56 9
 4 100
+55 4
 1 P 19 1 34 8194 9 0
 2 detect invisibility
 10 Suas pupilas voltam ao normal.
@@ -202,8 +201,8 @@
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
 92 6 20
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
-55 4
 4 100
+55 4
 1 P 20 1 34 8194 9 0
 2 detect magic
 10 Suas pupilas voltam ao normal.
@@ -212,8 +211,8 @@
 99 12 + param
 90 0 2
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
-55 4
 4 100
+55 4
 1 P 21 1 386 1024 9 0
 2 detect poison
 10 A detecção de veneno se encerra.
@@ -225,17 +224,16 @@
 99 (15 - (1 * self.level)) > 5 ? (15 - (1 * self.level)) : 5
 93 6 0
 99 (15 - (1 * self.level)) > 5 ? (15 - (1 * self.level)) : 5
-55 4
-56 8
 4 100
+55 4
 1 P 22 1 18 4097 8 100
 2 dispel evil
 3 dice(6, 8) + 6
 90 1 20
 99 (40 - (3 * self.level)) > 25 ? (40 - (3 * self.level)) : 25
-55 1
-56 9
 4 100
+55 6
+56 9
 1 P 23 1 1 4224 8 0
 2 earthquake
 3 dice(2, 8) + param
@@ -245,39 +243,39 @@
 99 (40 - (3 * self.level)) > 25 ? (40 - (3 * self.level)) : 25
 91 4 70
 99 (40 - (3 * self.level)) > 25 ? (40 - (3 * self.level)) : 25
+4 100
 55 6
 56 4
-4 100
 1 P 24 1 128 1024 9 0
 2 enchant weapon
 90 0 65
 99 (150 - (10 * self.level)) > 100 ? (150 - (10 * self.level)) : 100
-55 5
 4 100
+55 5
 1 P 25 1 18 5121 8 100
 2 energy drain
 3 vict.level <= 2 ? 100 : dice(1, 10)
 90 0 18
 99 (40 - (1 * self.level)) > 25 ? (40 - (1 * self.level)) : 25
+4 100
 55 6
 56 10
-4 100
 1 P 26 1 18 4097 8 100
 2 fireball
 3 dice(11, self.class == 0 ? 8 : 6) + 11
 90 0 22
 99 (40 - (2 * self.level)) > 30 ? (40 - (2 * self.level)) : 30
+4 100
 55 6
 56 1
-4 100
 1 P 27 1 18 4097 8 100
 2 harm
 3 dice(8, 8) + 8
 90 1 28
 99 (75 - (3 * self.level)) > 45 ? (75 - (3 * self.level)) : 45
-55 8
-56 10
 4 100
+55 6
+56 10
 1 P 28 1 2 12 8 0
 2 heal
 12 Uma calorosa sensação percorre o seu corpo.
@@ -288,9 +286,9 @@
 99 (60 - (3 * self.level)) > 40 ? (60 - (3 * self.level)) : 40
 91 6 90
 99 (60 - (3 * self.level)) > 40 ? (60 - (3 * self.level)) : 40
+4 100
 55 3
 56 9
-4 100
 1 P 29 1 386 8210 9 0
 2 invisibility
 10 Você se sente expost$r.
@@ -303,8 +301,8 @@
 99 12 + (self.level / 4)
 90 0 5
 99 (35 - (1 * self.level)) > 25 ? (35 - (1 * self.level)) : 25
-55 7
 4 100
+55 5
 1 P 30 1 18 4097 8 100
 2 lightning bolt
 3 dice(7, self.class == 0 ? 8 : 6) + 7
@@ -312,15 +310,15 @@
 99 (30 - (1 * self.level)) > 15 ? (30 - (1 * self.level)) : 15
 91 6 80
 99 (30 - (1 * self.level)) > 15 ? (30 - (1 * self.level)) : 15
+4 100
 55 6
 56 5
-4 100
 1 P 31 1 512 1024 9 0
 2 locate object
 90 0 9
 99 (25 - (1 * self.level)) > 20 ? (25 - (1 * self.level)) : 20
-55 4
 4 100
+55 4
 1 P 32 1 18 4097 8 100
 2 magic missile
 3 dice(1, self.class == 0 ? 8 : 6) + 1
@@ -328,8 +326,8 @@
 99 (25 - (3 * self.level)) > 10 ? (25 - (3 * self.level)) : 10
 91 5 2
 99 (25 - (3 * self.level)) > 10 ? (25 - (3 * self.level)) : 10
-55 6
 4 100
+55 6
 1 P 33 1 194 4114 9 0
 2 poison
 10 Você se sente menos doente.
@@ -344,9 +342,9 @@
 99 (50 - (3 * self.level)) > 20 ? (50 - (3 * self.level)) : 20
 91 1 12
 99 (50 - (3 * self.level)) > 20 ? (50 - (3 * self.level)) : 20
-55 8
-56 8
 4 100
+55 6
+56 8
 1 P 34 1 34 8194 9 0
 2 protection from evil
 10 Você se sente menos protegid$r.
@@ -355,9 +353,9 @@
 99 24
 90 1 11
 99 (40 - (3 * self.level)) > 10 ? (40 - (3 * self.level)) : 10
+4 100
 55 1
 56 9
-4 100
 1 P 35 1 1154 20 9 0
 2 remove curse
 11 $b brilha azul por alguns instantes.
@@ -365,8 +363,6 @@
 25 17
 90 1 34
 99 (45 - (5 * self.level)) > 25 ? (45 - (5 * self.level)) : 25
-55 1
-56 9
 4 100
 1 P 36 1 2 8198 9 0
 2 sanctuary
@@ -378,17 +374,17 @@
 99 4
 90 1 21
 99 (110 - (5 * self.level)) > 85 ? (110 - (5 * self.level)) : 85
+4 100
 55 1
 56 9
-4 100
 1 P 37 1 18 4097 8 100
 2 shocking grasp
 3 dice(5, self.class == 0 ? 8 : 6) + 5
 90 0 10
 99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
+4 100
 55 6
 56 5
-4 100
 1 P 38 1 2 4098 9 0
 2 sleep
 10 Você se sente menos cansad$r.
@@ -399,9 +395,9 @@
 99 self.level / 4 + 4
 90 0 12
 99 (40 - (5 * self.level)) > 25 ? (40 - (5 * self.level)) : 25
+4 100
 55 5
 56 11
-4 100
 1 P 39 1 2 24578 9 0
 2 strength
 10 Você se sente mais frac$r.
@@ -410,17 +406,17 @@
 99 (self.level / 2) + 4
 90 0 8
 99 (35 - (1 * self.level)) > 30 ? (35 - (1 * self.level)) : 30
-55 2
-56 12
 4 100
+55 5
+56 12
 1 P 40 1 66 1024 9 0
 2 summon
 90 0 11
 99 (75 - (3 * self.level)) > 50 ? (75 - (3 * self.level)) : 50
 91 1 15
 99 (75 - (3 * self.level)) > 50 ? (75 - (3 * self.level)) : 50
-55 3
 4 100
+55 3
 1 P 41 1 66 1024 9 0
 2 ventriloquate
 11 Você manipula as palavras através da magia.
@@ -433,8 +429,8 @@
 99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
 93 5 0
 99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
-55 7
 4 100
+55 5
 1 P 42 1 2 1024 8 0
 2 word of recall
 90 0 65
@@ -445,8 +441,8 @@
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
 93 6 0
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
-55 3
 4 100
+55 3
 1 P 43 1 386 20 9 0
 2 remove poison
 11 $p emite uma fumaça por alguns instantes.
@@ -459,9 +455,9 @@
 99 (40 - (4 * self.level)) > 8 ? (40 - (4 * self.level)) : 8
 92 4 18
 99 (40 - (4 * self.level)) > 8 ? (40 - (4 * self.level)) : 8
-55 1
-56 9
 4 100
+55 3
+56 9
 1 P 44 1 34 8194 9 0
 2 sense life
 10 Você se sente menos sensível às coisas ao seu redor.
@@ -476,44 +472,44 @@
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
 93 6 0
 99 (20 - (2 * self.level)) > 10 ? (20 - (2 * self.level)) : 10
-55 4
 4 100
+55 4
 1 P 45 1 256 256 9 0
 2 animate dead
 13 $N anima um corpo!!
 8 11
 90 1 14
 99 (130 - (3 * self.level)) > 120 ? (130 - (3 * self.level)) : 120
+4 50
 55 8
 56 10
-4 50
 1 P 46 1 18 4097 8 100
 2 dispel good
 3 dice(6, 8) + 6
 90 1 20
 99 (40 - (3 * self.level)) > 25 ? (40 - (3 * self.level)) : 25
-55 1
-56 10
 4 100
+55 6
+56 10
 1 P 47 1 1 32 9 0
 2 group armor
 90 1 13
 99 (50 - (2 * self.level)) > 30 ? (50 - (2 * self.level)) : 30
 4 100
-55 0
+55 1
 1 P 48 1 1 32 9 0
 2 group heal
 90 1 32
 99 (80 - (5 * self.level)) > 60 ? (80 - (5 * self.level)) : 60
+4 100
 55 3
 56 9
-4 100
 1 P 49 1 0 0 0 0
 2 group recall
 90 1 68
 99 (80 - (5 * self.level)) > 60 ? (80 - (5 * self.level)) : 60
 4 100
-55 0
+55 3
 1 P 50 1 34 8194 9 0
 2 infravision
 10 Sua visão noturna parece desaparecer.
@@ -527,8 +523,8 @@
 99 (25 - (1 * self.level)) > 10 ? (25 - (1 * self.level)) : 10
 92 6 9
 99 (25 - (1 * self.level)) > 10 ? (25 - (1 * self.level)) : 10
-55 2
 4 100
+55 4
 1 P 51 1 2 8194 9 0
 2 waterwalk
 10 Seus pés parecem menos boiantes.
@@ -543,17 +539,17 @@
 99 (80 - (5 * self.level)) > 40 ? (80 - (5 * self.level)) : 40
 93 6 0
 99 (80 - (5 * self.level)) > 40 ? (80 - (5 * self.level)) : 40
-55 2
-56 2
 4 100
+55 5
+56 2
 1 P 52 1 386 1024 9 0
 2 identify
 90 0 11
 99 (40 - (5 * self.level)) > 20 ? (50 - (5 * self.level)) : 20
 91 5 20
 99 (40 - (5 * self.level)) > 20 ? (50 - (5 * self.level)) : 20
-55 4
 4 100
+55 4
 1 P 53 1 2 1024 9 0
 2 stoneskin
 10 Sua pele perde a dureza.
@@ -563,9 +559,9 @@
 99 (200 - (10 * self.level)) > 100 ? (200 - (10 * self.level)) : 100
 91 1 90
 99 (200 - (10 * self.level)) > 100 ? (200 - (10 * self.level)) : 100
+4 100
 55 1
 56 4
-4 100
 1 P 54 1 2 8194 9 0
 2 fireshield
 10 A aura de fogo ao redor de seu corpo desaparece.
@@ -577,9 +573,9 @@
 99 self.level
 90 0 31
 99 (150 - (10 * self.level)) > 100 ? (150 - (10 * self.level)) : 100
-55 1
-56 1
 4 100
+55 6
+56 1
 1 P 55 1 2 8194 8 0
 2 improved armor
 10 Você se sente menos protegid$r.
@@ -591,14 +587,14 @@
 91 1 80
 99 (80 - (5 * self.level)) > 30 ? (80 - (5 * self.level)) : 30
 4 100
-55 0
+55 1
 1 P 56 1 18 4097 8 0
 2 disintegrate
 3 dice(3, self.class == 0 ? 8 : 6) + self.class == 0 ? 195 : 180
 90 0 85
 99 (90 - (10 * self.level)) > 50 ? (90 - (10 * self.level)) : 5
-55 6
 4 100
+55 6
 1 P 57 1 1 256 9 0
 2 evoke air servant
 13 $N invoca um servo aéreo!!
@@ -622,23 +618,21 @@
 2 raise dead
 90 1 16
 99 (100 - (8 * self.level)) > 60 ? (100 - (8 * self.level)) : 60
-55 8
-56 9
 4 100
+55 8
+56 10
 1 P 60 1 324 1024 9 0
 2 ressurect
 90 1 32
 99 (180 - (10 * self.level)) > 80 ? (180 - (10 * self.level)) : 80
-55 8
-56 9
 4 100
 1 P 61 1 18 5120 8 0
 2 vampiric touch
 90 0 15
 99 (30 - (1 * self.level)) > 15 ? (30 - (1 * self.level)) : 30
-55 8
-56 10
 4 100
+55 6
+56 10
 1 P 62 1 2 8194 9 0
 2 breath
 10 Você sente necessidade de respirar novamente.
@@ -654,9 +648,9 @@
 99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
 93 6 0
 99 (30 - (3 * self.level)) > 15 ? (30 - (3 * self.level)) : 15
-55 2
-56 3
 4 100
+55 5
+56 3
 1 P 63 1 2 8194 8 0
 2 fly
 10 Você se sente pesad$r novamente.
@@ -673,9 +667,9 @@
 99 (80 - (3 * self.level)) > 40 ? (80 - (3 * self.level)) : 40
 93 6 0
 99 (80 - (3 * self.level)) > 40 ? (80 - (3 * self.level)) : 40
-55 2
-56 3
 4 100
+55 5
+56 3
 1 P 64 1 66 8194 8 0
 2 paralyze
 10 Você pode andar novamente.
@@ -696,15 +690,15 @@
 99 self.level/5
 90 1 45
 99 (180 - (5 * self.level)) > 120 ? (180 - (5 * self.level)) : 120
+4 100
 55 3
 56 9
-4 100
 1 P 66 1 68 1024 9 0
 2 portal
 90 0 90
 99 (160 - (5 * self.level)) > 90 ? (160 - (5 * self.level)) : 90
-55 3
 4 100
+55 3
 1 P 67 1 34 8194 9 0
 2 skin like wood
 10 Você se sente menos protegid$r.
@@ -713,8 +707,6 @@
 99 24
 90 4 3
 99 (30 - (5 * self.level)) > 10 ? (30 - (5 * self.level)) : 10
-55 2
-56 4
 4 100
 1 P 68 1 34 2 9 0
 2 skin like rock
@@ -724,8 +716,6 @@
 99 24
 90 4 35
 99 (70 - (5 * self.level)) > 15 ? (70 - (5 * self.level)) : 15
-55 2
-56 4
 4 100
 1 P 69 1 34 2 9 0
 2 skin like steel
@@ -735,8 +725,6 @@
 99 24
 90 4 65
 99 (100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20
-55 2
-56 12
 4 100
 1 P 70 1 34 8194 8 0
 2 skin like diamond
@@ -746,32 +734,24 @@
 99 24
 90 4 90
 99 (110 - (5 * self.level)) > 35 ? (110 - (5 * self.level)) : 35
-55 2
-56 4
 4 100
 1 P 71 1 18 4097 8 100
 2 burst of flame
 3 dice(3, self.class == 4 ? 5 : 3) + self.class == 4 ? 6 : 4
 90 4 1
 99 (20 - (3 * self.level)) > 10 ? (20 - (3 * self.level)) : 20
-55 6
-56 1
 4 100
 1 P 72 1 18 4097 8 100
 2 burst of fire
 3 dice(3, self.class == 4 ? 7 : 5) + self.class == 4 ? 9 : 6
 90 4 5
 99 (25 - (3 * self.level)) > 15 ? (25 - (3 * self.level)) : 25
-55 6
-56 1
 4 100
 1 P 73 1 18 4097 8 100
 2 ignite
 3 dice(3, self.class == 4 ? 9 : 3) + self.class == 4 ? 13 : 9
 90 4 9
 99 (30 - (3 * self.level)) > 20 ? (30 - (3 * self.level)) : 20
-55 6
-56 1
 4 100
 1 P 74 1 0 8 0 0
 2 invigor
@@ -781,9 +761,9 @@
 99 (40 - (3 * self.level)) > 15 ? (40 - (3 * self.level)) : 15
 91 6 15
 99 (40 - (3 * self.level)) > 15 ? (40 - (3 * self.level)) : 15
-55 3
-56 4
 4 100
+55 3
+56 9
 1 P 75 1 2 8 8 0
 2 minor healing
 12 Uma onda de calor atravessa seu corpo, fazendo você se sentir melhor.
@@ -793,9 +773,9 @@
 99 (30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10
 91 6 18
 99 (30 - (2 * self.level)) > 10 ? (30 - (2 * self.level)) : 10
-55 3
-56 4
 4 100
+55 3
+56 9
 1 P 76 1 18 4097 8 300
 2 lightning blast
 3 self.class == 4 ? dice(4, 7) + 195 : dice(4,4) + 180
@@ -810,9 +790,9 @@
 52 10 + dice(2, 6)
 90 4 40
 99 (60 - (3 * self.level)) > 15 ? (60 - (3 * self.level)) : 15
-55 3
-56 4
 4 100
+55 3
+56 9
 1 P 78 1 2 2 9 0
 2 thistlecoat
 10 Você percebe que seu casaco de espinhos se desfez.
@@ -824,8 +804,6 @@
 99 13
 90 4 8
 99 (30 - (3 * self.level)) > 20 ? (30 - (3* self.level)) : 20
-55 2
-56 4
 4 100
 1 P 79 1 1 4224 8 100
 2 cascade of hail
@@ -857,13 +835,11 @@
 90 4 25
 99 (60 - (4 * self.level)) > 60? (65 - (4 * self.level)) : 60
 4 100
-55 0
+55 2
 1 P 82 1 18 5120 8 0
 2 fury of air
 90 4 50
 99 (200 - (10 * self.level)) > 100 ? (200 - (10 * self.level)) : 100
-55 6
-56 3
 4 100
 1 P 83 1 1 256 9 0
 2 evoke crow
@@ -871,8 +847,6 @@
 8 12
 90 4 14
 99 (130 - (3 * self.level)) > 120 ? (130 - (3 * self.level)) : 120
-55 3
-56 3
 4 50
 1 P 84 1 1 256 9 0
 2 evoke wolf
@@ -880,8 +854,6 @@
 8 13
 90 4 30
 99 (190 - (3 * self.level)) > 150 ? (190 - (3 * self.level)) : 150
-55 3
-56 4
 4 50
 1 P 85 1 1 256 9 0
 2 evoke bear
@@ -889,8 +861,6 @@
 8 14
 90 4 60
 99 (220 - (3 * self.level)) > 170 ? (220 - (3 * self.level)) : 170
-55 3
-56 4
 4 50
 1 P 87 1 1 256 9 0
 2 evoke lion
@@ -898,15 +868,11 @@
 8 15
 90 4 85
 99 (280 - (3 * self.level)) > 200 ? (280 - (3 * self.level)) : 200
-55 3
-56 1
 4 50
 1 P 88 1 1152 1024 9 0
 2 create nectar
 90 4 7
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
-55 3
-56 2
 4 100
 1 P 89 1 1 4224 8 100
 2 voice explosion
@@ -915,7 +881,6 @@
 13 $n emite com sua voz um som de violência extrema, ferindo a todos!
 90 5 23
 99 (70 - (3 * self.level)) > 20 ? (70 - (3 * self.level)) : 20
-55 6
 4 100
 1 P 90 1 2 2 9 0
 2 soundbarrier
@@ -934,9 +899,9 @@
 99 24
 90 5 15
 99 (100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20
-55 1
 4 100
-56 0
+55 1
+56 3
 1 P 91 1 2 8198 9 0
 2 gloomshield
 10 O escudo de trevas que $r resguardava se desvanece lentamente.
@@ -950,8 +915,8 @@
 90 1 21
 99 (110 - (5 * self.level)) > 85 ? (110 - (5 * self.level)) : 85
 4 100
-55 0
-56 0
+55 1
+56 10
 1 P 92 1 1 2048 9 0
 2 darkness
 11 Você lança um manto de escuridão sobre a área.
@@ -967,9 +932,9 @@
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
 91 6 7
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
+4 100
 55 3
 56 4
-4 100
 1 P 94 1 34 8194 9 0
 2 protection from good
 10 You feel less protected.
@@ -989,7 +954,7 @@
 91 6 12
 99 (30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5
 4 100
-55 0
+55 3
 1 P 96 1 2 8194 9 0
 2 windwall
 10 A parede de vento ao redor de seu corpo desaparece.
@@ -1001,15 +966,13 @@
 99 self.level
 90 6 15
 99 (80 - (4* self.level)) > 40 ? (80 - ( 4 * self.level)) : 40
+4 100
 55 1
 56 3
-4 100
 1 P 97 1 128 1024 9 0
 2 bless object
 90 1 6
 99 (35 - (3 * self.level)) > 5 ? (35 - (3 * self.level)) : 5
-55 5
-56 9
 4 100
 1 P 98 1 1 0 7 0
 2 script-inflicted
@@ -1188,12 +1151,13 @@
 90 2 3
 99
 4 100
-55 0
+55 1
 1 K 222 1 0 0 0 0
 2 bash
 90 3 12
 99
 4 100
+55 1
 1 K 223 1 0 0 0 0
 2 hide
 90 2 5
@@ -1201,6 +1165,7 @@
 91 6 9
 99
 4 100
+55 2
 1 K 224 1 0 0 0 0
 2 kick
 90 3 1
@@ -1208,11 +1173,13 @@
 91 6 1
 99
 4 100
+55 1
 1 K 225 1 0 0 0 0
 2 pick lock
 90 2 2
 99
 4 100
+55 4
 1 K 227 1 0 0 0 0
 2 rescue
 90 3 3
@@ -1220,16 +1187,19 @@
 91 6 5
 99
 4 100
+55 6
 1 K 228 1 0 0 0 0
 2 sneak
 90 2 1
 99
 4 100
+55 2
 1 K 229 1 0 0 0 0
 2 steal
 90 2 4
 99
 4 100
+55 2
 1 K 230 1 0 0 0 0
 2 track
 90 2 6
@@ -1239,11 +1209,13 @@
 92 6 5
 99
 4 100
+55 4
 1 K 231 1 0 0 0 0
 2 swords
 90 3 3
 99
 4 100
+55 3
 1 K 232 1 0 0 0 0
 2 daggers
 90 3 3
@@ -1255,21 +1227,25 @@
 93 6 0
 99
 4 100
+55 3
 1 K 233 1 0 0 0 0
 2 whips
 90 3 8
 99
 4 100
+55 3
 1 K 234 1 0 0 0 0
 2 talonous arms
 90 3 13
 99
 4 100
+55 3
 1 K 235 1 0 0 0 0
 2 bludgeons
 90 3 15
 99
 4 100
+55 3
 1 K 236 1 0 0 0 0
 2 exotics
 90 3 20
@@ -1277,36 +1253,43 @@
 91 6 10
 99
 4 100
+55 3
 1 K 237 1 0 0 0 0
 2 spy
 90 2 15
 99
 4 100
+55 2
 1 K 238 1 0 0 0 0
 2 seize
 90 2 20
 99
 4 100
+55 1
 1 K 239 1 0 0 0 0
 2 backflip
 90 2 24
 99
 4 100
+55 1
 1 K 240 1 0 0 0 0
 2 bandage
 90 3 7
 99
 4 100
+55 6
 1 K 241 1 0 0 0 0
 2 envenom
 90 2 8
 99
 4 100
+55 6
 1 K 242 1 0 0 0 0
 2 nighthammer
 90 2 50
 99
 4 100
+55 1
 1 K 243 1 0 0 0 0
 2 meditate
 90 4 12
@@ -1320,11 +1303,13 @@
 94 5 56
 99
 4 100
+55 6
 1 K 245 1 0 0 0 0
 2 combo attack
 90 3 30
 99
 4 100
+55 1
 1 K 247 1 32 6 8 0
 2 adagio
 10 Você para de vibrar em adagio.
@@ -1343,6 +1328,7 @@
 90 5 45
 99
 4 100
+55 5
 1 K 248 1 32 6 8 0
 2 allegro
 10 Você para de vibrar em allegro.
@@ -1361,16 +1347,19 @@
 90 5 50
 99
 4 100
+55 5
 1 K 249 1 0 0 0 0
 2 trip
 90 5 35
 99
 4 100
+55 1
 1 K 250 1 0 0 0 0
 2 whirlwind
 90 3 16
 99
 4 100
+55 1
 1 K 251 1 0 0 0 0
 2 scan
 90 6 10
@@ -1378,11 +1367,13 @@
 91 2 7
 99
 4 100
+55 4
 1 K 252 1 0 0 0 0
 2 bows
 90 6 30
 99
 4 100
+55 3
 1 K 253 1 0 0 0 0
 2 mine
 90 3 15
@@ -1390,6 +1381,7 @@
 91 6 12
 99
 4 100
+55 4
 1 K 254 1 0 0 0 0
 2 fishing
 90 6 8
@@ -1397,6 +1389,7 @@
 91 1 20
 99
 4 100
+55 4
 1 K 255 1 0 0 0 0
 2 forage
 90 6 5
@@ -1404,6 +1397,7 @@
 91 2 15
 99
 4 100
+55 4
 1 K 256 1 0 0 0 0
 2 eavesdrop
 90 2 10
@@ -1411,19 +1405,18 @@
 91 5 12
 99
 4 100
+55 2
 1 K 257 1 0 0 0 0
 2 taint fluid
 90 2 30
 99
 4 100
+55 4
 1 P 301 1 386 1024 9 0
 2 scroll identify
-55 4
-56 11
 4 100
 1 P 307 1 256 1024 9 0
 2 youth
-55 2
 4 100
 7
 7

@@ -567,18 +567,37 @@ void spedit_school_menu(struct descriptor_data *d)
 {
     char buf[BUFSIZE];
     int i, len, total_len = 0;
+    int is_skill = (OLC_SPELL(d)->type == 'K'); /* Check if it's a skill */
+    int max_schools = is_skill ? NUM_SKILL_SCHOOLS : NUM_SCHOOLS;
 
-    total_len = snprintf(buf, BUFSIZE, "%s\r\n-- SPELL SCHOOL (Escola) :    \r\n", nrm);
+    if (is_skill) {
+        total_len = snprintf(buf, BUFSIZE, "%s\r\n-- SKILL SCHOOL (Estilo) :    \r\n", nrm);
 
-    for (i = 0; i < NUM_SCHOOLS; i++) {
-        len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %-20s", grn, i, nrm, get_spell_school_name(i));
-        if (len < 0 || total_len + len >= BUFSIZE)
-            break;
-        total_len += len;
+        for (i = 0; i < max_schools; i++) {
+            len =
+                snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %-20s", grn, i, nrm, get_skill_school_name(i));
+            if (len < 0 || total_len + len >= BUFSIZE)
+                break;
+            total_len += len;
+        }
+
+        snprintf(buf + total_len, BUFSIZE - total_len, "\r\n%sEnter choice (current: %s%s%s) : ", nrm, cyn,
+                 get_skill_school_name(OLC_SPELL(d)->school), nrm);
+    } else {
+        total_len = snprintf(buf, BUFSIZE, "%s\r\n-- SPELL SCHOOL (Escola) :    \r\n", nrm);
+
+        for (i = 0; i < max_schools; i++) {
+            len =
+                snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %-20s", grn, i, nrm, get_spell_school_name(i));
+            if (len < 0 || total_len + len >= BUFSIZE)
+                break;
+            total_len += len;
+        }
+
+        snprintf(buf + total_len, BUFSIZE - total_len, "\r\n%sEnter choice (current: %s%s%s) : ", nrm, cyn,
+                 get_spell_school_name(OLC_SPELL(d)->school), nrm);
     }
 
-    snprintf(buf + total_len, BUFSIZE - total_len, "\r\n%sEnter choice (current: %s%s%s) : ", nrm, cyn,
-             get_spell_school_name(OLC_SPELL(d)->school), nrm);
     send_to_char(d->character, "%s", buf);
     OLC_MODE(d) = SPEDIT_SCHOOL_MENU;
 }
@@ -665,12 +684,13 @@ void spedit_main_menu(struct descriptor_data *d)
              prog ? red : grn, nrm, cyn, tflags, prog ? red : grn, nrm, cyn, mflags, prog ? red : grn, nrm, cyn,
              EMPTY_STR(Q->damages), nrm, cyn, Q->max_dam, nrm, prog ? red : grn, nrm, cyn, EMPTY_STR(Q->delay),
              prog ? red : grn, nrm, Q->effectiveness ? nrm : YEL, cyn, EMPTY_STR(Q->effectiveness), prog ? red : grn,
-             nrm, cyn, get_spell_school_name(Q->school), prog ? red : grn, nrm, cyn, get_spell_element_name(Q->element),
-             prog ? red : grn, nrm, is_points_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_prot_set(Q) ? bln : nrm,
-             prog ? red : grn, nrm, is_apply_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_dispel_set(Q) ? bln : nrm,
-             prog ? red : grn, nrm, is_objects_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_summon_set(Q) ? bln : nrm,
-             prog ? red : grn, nrm, Q->script ? bln : nrm, prog ? red : grn, nrm, is_assign_set(Q) ? bln : YEL,
-             prog ? red : grn, nrm, is_messages_set(Q) ? bln : nrm, prog ? red : grn, nrm, grn, nrm, nrm);
+             nrm, cyn, (Q->type == 'K') ? get_skill_school_name(Q->school) : get_spell_school_name(Q->school),
+             prog ? red : grn, nrm, cyn, get_spell_element_name(Q->element), prog ? red : grn, nrm,
+             is_points_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_prot_set(Q) ? bln : nrm, prog ? red : grn, nrm,
+             is_apply_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_dispel_set(Q) ? bln : nrm, prog ? red : grn, nrm,
+             is_objects_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_summon_set(Q) ? bln : nrm, prog ? red : grn, nrm,
+             Q->script ? bln : nrm, prog ? red : grn, nrm, is_assign_set(Q) ? bln : YEL, prog ? red : grn, nrm,
+             is_messages_set(Q) ? bln : nrm, prog ? red : grn, nrm, grn, nrm, nrm);
     send_to_char(d->character, "%s", buf);
     OLC_MODE(d) = SPEDIT_MAIN_MENU;
 }
@@ -1150,6 +1170,20 @@ int boot_spells(void)
                     }
                 }
                 break;
+            case DB_CODE_SCHOOL:
+                ret = fscanf(fp, "%d\n", &Q->school);
+                if (ret != 1) {
+                    log1("SYSERR: boot spells: Invalid school value for spell %d", Q->vnum);
+                    Q->school = SCHOOL_UNDEFINED;
+                }
+                break;
+            case DB_CODE_ELEMENT:
+                ret = fscanf(fp, "%d\n", &Q->element);
+                if (ret != 1) {
+                    log1("SYSERR: boot spells: Invalid element value for spell %d", Q->vnum);
+                    Q->element = ELEMENT_UNDEFINED;
+                }
+                break;
             case DB_CODE_END:
                 break;
             default:
@@ -1415,6 +1449,18 @@ void spedit_save_to_disk(void)
                 snprintf(buf, BUFSIZE, "%2d %s\n", DB_CODE_SCRIPT, p);
                 fprintf(fp, "%s", buf);
             }
+        }
+
+        /* Save spell school if not undefined */
+        if (r->school != SCHOOL_UNDEFINED) {
+            snprintf(buf, BUFSIZE, "%2d %d\n", DB_CODE_SCHOOL, r->school);
+            fprintf(fp, "%s", buf);
+        }
+
+        /* Save spell element if not undefined */
+        if (r->element != ELEMENT_UNDEFINED) {
+            snprintf(buf, BUFSIZE, "%2d %d\n", DB_CODE_ELEMENT, r->element);
+            fprintf(fp, "%s", buf);
         }
     }
     fprintf(fp, "%2d\n", DB_CODE_END);
@@ -1838,7 +1884,12 @@ void spedit_parse(struct descriptor_data *d, char *arg)
         case SPEDIT_SCHOOL_MENU:
             if (!(x = atoi(arg)))
                 break;
-            if ((x < 0) || (x >= NUM_SCHOOLS)) {
+
+            /* Check if it's a skill or spell and validate accordingly */
+            int is_skill = (OLC_SPELL(d)->type == 'K');
+            int max_schools = is_skill ? NUM_SKILL_SCHOOLS : NUM_SCHOOLS;
+
+            if ((x < 0) || (x >= max_schools)) {
                 send_to_char(d->character, "Invalid choice!\r\n");
                 spedit_school_menu(d);
                 return;
