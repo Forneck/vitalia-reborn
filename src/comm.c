@@ -2937,6 +2937,34 @@ char *act(const char *str, int hide_invisible, struct char_data *ch, struct obj_
 
         perform_act(str, ch, obj, vict_obj, to);
     }
+
+    /* Send to listeners in adjacent rooms (for eavesdrop skill) */
+    if (ch && IN_ROOM(ch) != NOWHERE) {
+        struct char_data *listener;
+        char listener_buf[MAX_STRING_LENGTH];
+
+        for (listener = world[IN_ROOM(ch)].listeners; listener; listener = listener->next_listener) {
+            if (!SENDOK(listener) || listener == ch)
+                continue;
+            if (hide_invisible && ch && !CAN_SEE(listener, ch))
+                continue;
+            if (type != TO_ROOM && listener == vict_obj)
+                continue;
+            if (type == TO_DEAD && ALIVE(listener) && !AFF_FLAGGED(listener, AFF_TALKDEAD) &&
+                GET_LEVEL(listener) < LVL_DEMIGOD)
+                continue;
+            if (type == TO_NOTDEAD && !ALIVE(listener))
+                continue;
+
+            /* Format the message for eavesdroppers with visual markers */
+            perform_act(str, ch, obj, vict_obj, listener);
+            if (last_act_message) {
+                snprintf(listener_buf, sizeof(listener_buf), "----------\r\n%s----------\r\n", last_act_message);
+                write_to_output(listener->desc, "%s", listener_buf);
+            }
+        }
+    }
+
     return last_act_message;
 }
 
