@@ -57,10 +57,10 @@ int calculate_movement_cost(struct char_data *ch, room_rnum room)
 }
 
 /* Advanced pathfinding structures for state-based search */
-#define MAX_COLLECTED_KEYS 10       /* Reduced from 50 to limit complexity */
-#define MAX_VISITED_STATES 100      /* Reduced from 1000 to limit memory usage */
-#define MAX_PATHFIND_ITERATIONS 500 /* Limit iterations to prevent infinite loops */
-#define MAX_ZONE_PATH 20            /* Maximum zones in a path */
+#define MAX_COLLECTED_KEYS 50        /* Reduced from 50 to limit complexity */
+#define MAX_VISITED_STATES 1000       /* Reduced from 1000 to limit memory usage */
+#define MAX_PATHFIND_ITERATIONS 10000 /* Limit iterations to prevent infinite loops */
+#define MAX_ZONE_PATH 150            /* Maximum zones in a path */
 
 struct path_state {
     room_rnum room;                         /* Current room */
@@ -1278,10 +1278,6 @@ ACMD(do_track)
         }
     }
 }
-
-/* Simple pathfinding cache to reduce redundant calculations */
-#define PATHFIND_CACHE_SIZE 200
-#define PATHFIND_CACHE_TTL 30 /* Cache entries valid for 30 seconds */
 
 struct pathfind_cache_entry {
     room_rnum src;

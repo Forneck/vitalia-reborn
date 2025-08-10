@@ -15,8 +15,9 @@
 #define _GRAPH_H_
 
 /* Pathfinding cache constants */
-#define PATHFIND_CACHE_SIZE 200
-
+/* Simple pathfinding cache to reduce redundant calculations */
+#define PATHFIND_CACHE_SIZE 1000
+#define PATHFIND_CACHE_TTL 30 /* Cache entries valid for 30 seconds */
 ACMD(do_track);
 ACMD(do_pathfind);
 void hunt_victim(struct char_data *ch);
