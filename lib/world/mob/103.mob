@@ -126,11 +126,11 @@ Esta cobra parece ser perigosa, sem dúvida. Veja só as presas!
 300 4000
 9 9 2
 BareHandAttack: 4
-GenWimpy: 87
+GenWimpy: 88
 GenLoot: 10
 GenEquip: 1
-GenRoam: 89
-GenGroup: 5
+GenRoam: 87
+GenGroup: 2
 E
 #10308
 macaco pequeno~
@@ -177,7 +177,7 @@ Ela é bem parecida com os outros primatas. Cheira mal, horrível.
 500 3500
 9 9 2
 BareHandAttack: 4
-GenWimpy: 97
+GenWimpy: 99
 GenLoot: 10
 GenEquip: 3
 GenRoam: 89
@@ -209,7 +209,7 @@ grosso couro.  Em sua boca você vê enormes dentes, pronto para atacá-lo.
 0 2700
 5 5 1
 BareHandAttack: 4
-GenWimpy: 60
+GenWimpy: 58
 GenLoot: 1
 E
 #10313
@@ -256,7 +256,7 @@ sua última refeição.
 9 9 2
 GenWimpy: 100
 GenLoot: 40
-GenRoam: 73
+GenRoam: 63
 E
 #10316
 zumbi~
@@ -269,11 +269,11 @@ Este zumbi é alto e forte, e está aqui pronto para lhe matar.
 15 10 7 8d8+750 5d5+8
 3500 4000
 9 9 1
-GenWimpy: 57
+GenWimpy: 59
 GenLoot: 99
 GenEquip: 2
 GenRoam: 89
-GenGroup: 20
+GenGroup: 22
 E
 #10317
 zumbi kenuthi~

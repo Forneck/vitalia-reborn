@@ -639,8 +639,8 @@ Um grande, forte, solidário e confiável sentinela.
 10 10 1 1d12+123 1d8+5
 500 9000
 9 9 1
-GenWimpy: 55
-GenRoam: 81
+GenWimpy: 54
+GenRoam: 86
 E
 T 3013
 #3061
@@ -671,7 +671,7 @@ cheios de pedaços de carne apodrecida grudadas.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 52
+GenWimpy: 53
 GenLoot: 7
 GenRoam: 87
 E

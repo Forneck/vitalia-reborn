@@ -87,8 +87,8 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 58
-GenLoot: 11
+GenWimpy: 77
+GenLoot: 13
 E
 #1706
 guardiao guardião cripta~
@@ -195,7 +195,7 @@ feita de uma substância cristalina viva que brilha amarelo.
 7 14 4 1d8+285 2d4+11
 351 12250
 9 9 2
-GenWimpy: 14
+GenWimpy: 9
 GenLoot: 62
 GenRoam: 89
 E
@@ -224,10 +224,9 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 0 30000
 9 9 1
 GenWimpy: 26
-GenLoot: 54
+GenLoot: 56
 GenEquip: 1
 GenRoam: 89
-GenGroup: 1
 E
 #1714
 gelatina ocre~
@@ -242,9 +241,9 @@ passado infeliz, você presume.
 16 5 1 2d6+496 2d8+12
 1576 25000
 9 9 2
-GenWimpy: 63
-GenLoot: 90
-GenEquip: 5
+GenWimpy: 68
+GenLoot: 92
+GenEquip: 6
 GenRoam: 89
 E
 #1715

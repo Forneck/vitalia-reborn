@@ -131,7 +131,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 36
+GenWimpy: 24
 GenLoot: 18
 GenEquip: 1
 E
@@ -176,8 +176,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 31
-GenRoam: 87
+GenWimpy: 33
+GenRoam: 88
 E
 #711
 guardião guardiao guarda~
@@ -290,10 +290,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 93
+GenWimpy: 94
 GenLoot: 3
-GenRoam: 84
-GenGroup: 26
+GenRoam: 81
+GenGroup: 23
 E
 #716
 pequena encurvada crianca criança~

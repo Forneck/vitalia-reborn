@@ -9,7 +9,7 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12880
 9 9 2
-GenWimpy: 42
+GenWimpy: 44
 GenLoot: 2
 GenRoam: 89
 E
@@ -140,8 +140,8 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 0 15454
 9 9 0
-GenWimpy: 17
-GenRoam: 71
+GenWimpy: 20
+GenRoam: 79
 E
 #13610
 inseto pedra inseto-pedra~

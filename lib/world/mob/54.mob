@@ -646,7 +646,7 @@ ambiciosamente.
 1500 10500
 9 9 2
 GenWimpy: 100
-GenRoam: 84
+GenRoam: 78
 E
 #5449
 dervixe~
@@ -660,7 +660,7 @@ Este homem parece poder usar montes e montes de restos.
 1 105
 9 9 1
 GenWimpy: 100
-GenRoam: 61
+GenRoam: 66
 E
 #5450
 sultao~
@@ -714,9 +714,9 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 32
+GenWimpy: 53
 GenLoot: 10
-GenRoam: 38
+GenRoam: 66
 E
 #5454
 garota preferida nichole~
@@ -730,7 +730,7 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
-GenWimpy: 41
+GenWimpy: 44
 GenLoot: 4
 E
 #5455
@@ -826,8 +826,8 @@ necessidade.
 10 10 9 2d4+120 1d8+0
 150 2500
 9 9 1
-GenWimpy: 35
-GenRoam: 86
+GenWimpy: 36
+GenRoam: 83
 E
 T 3013
 #5462

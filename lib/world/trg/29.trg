@@ -37,7 +37,7 @@ Shop A - 2973~
 * in this file are not changed, and will have to be edited by hand.
 * This zone was number 29 on The Builder Academy, so you
 * should be looking for 29xx, where xx is 00-99.
-emote says eagerly, 'Como eu posso ajudar?  Hm... Você parece familiar.  Acho que já ouvi falar de você.  Por acaso você é %actor.name%?'
+say Como eu posso ajudar?  Hm... Você parece familiar.  Acho que já ouvi falar de você.  Por acaso você é %actor.name%?
 ~
 #2904
 Shop B - 2973~

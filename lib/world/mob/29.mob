@@ -14,7 +14,7 @@ Str: 17
 Dex: 15
 Int: 13
 Wis: 13
-GenWimpy: 10
+GenWimpy: 8
 GenLoot: 99
 GenEquip: 22
 E
@@ -152,7 +152,7 @@ Wis: 13
 GenWimpy: 5
 GenLoot: 51
 GenEquip: 5
-GenRoam: 60
+GenRoam: 70
 E
 #2920
 conselheiro Degruziel~
@@ -384,8 +384,8 @@ através de você. Parece completamente destemido.
 GenWimpy: 5
 GenLoot: 9
 GenEquip: 6
-GenRoam: 79
-GenGroup: 28
+GenRoam: 73
+GenGroup: 26
 E
 #2934
 garoto servente~
@@ -400,10 +400,10 @@ uma reposição.
 70 4900
 9 9 1
 BareHandAttack: 1
-GenWimpy: 7
+GenWimpy: 5
 GenLoot: 8
 GenEquip: 4
-GenRoam: 75
+GenRoam: 83
 E
 #2935
 cavalheiro gentil~
@@ -422,11 +422,11 @@ Str: 14
 Dex: 13
 Int: 15
 Wis: 14
-GenWimpy: 12
-GenLoot: 8
+GenWimpy: 9
+GenLoot: 11
 GenEquip: 2
-GenRoam: 68
-GenGroup: 33
+GenRoam: 80
+GenGroup: 36
 E
 #2936
 dama bem nascida~
@@ -446,11 +446,11 @@ Str: 9
 Dex: 13
 Int: 15
 Wis: 15
-GenWimpy: 3
-GenLoot: 12
-GenEquip: 5
-GenRoam: 67
-GenGroup: 14
+GenWimpy: 4
+GenLoot: 16
+GenEquip: 7
+GenRoam: 80
+GenGroup: 21
 E
 #2937
 convidado honrado~
@@ -467,9 +467,10 @@ perder uma refeição.
 100 10000
 9 9 1
 GenWimpy: 10
-GenLoot: 2
-GenEquip: 1
-GenRoam: 6
+GenLoot: 4
+GenEquip: 3
+GenRoam: 24
+GenGroup: 3
 E
 #2938
 guarda mansao~
@@ -525,11 +526,11 @@ Str: 13
 Dex: 13
 Int: 10
 Wis: 10
-GenWimpy: 16
+GenWimpy: 15
 GenLoot: 2
 GenEquip: 1
-GenRoam: 81
-GenGroup: 24
+GenRoam: 76
+GenGroup: 22
 E
 #2941
 ladrao sombras escondido~
@@ -644,7 +645,7 @@ Um homem está aqui, dormindo em sua cama de viagem.
 10 17 4 2d2+100 1d2+1
 100 10000
 4 4 1
-GenWimpy: 8
+GenWimpy: 9
 GenLoot: 14
 GenEquip: 2
 E
@@ -667,10 +668,10 @@ Str: 16
 Dex: 15
 Int: 13
 Wis: 14
-GenWimpy: 9
+GenWimpy: 12
 GenLoot: 43
 GenEquip: 6
-GenGroup: 2
+GenGroup: 1
 E
 #2948
 rei beco luna~
@@ -703,7 +704,7 @@ silenciosamente para si mesmo.
 70 4900
 9 9 1
 BareHandAttack: 13
-GenWimpy: 13
+GenWimpy: 14
 GenLoot: 4
 GenEquip: 2
 E
@@ -720,9 +721,9 @@ Um esquizofrênico paranoico está aqui, gritando para o mundo.
 9 9 2
 Str: 14
 Dex: 14
-GenWimpy: 84
+GenWimpy: 85
 GenLoot: 5
-GenRoam: 89
+GenRoam: 88
 E
 #2951
 idiota~
@@ -1169,7 +1170,7 @@ Wis: 10
 GenWimpy: 6
 GenLoot: 4
 GenEquip: 1
-GenRoam: 49
+GenRoam: 54
 E
 #2975
 garota especial do harem~
@@ -1190,9 +1191,9 @@ Str: 9
 Dex: 15
 Int: 13
 Wis: 13
-GenWimpy: 7
-GenLoot: 57
-GenEquip: 7
+GenWimpy: 5
+GenLoot: 80
+GenEquip: 9
 E
 T 2902
 #2976
@@ -1248,10 +1249,10 @@ devesse ouvi-lo.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 12
+GenWimpy: 15
 GenLoot: 12
 GenEquip: 2
-GenRoam: 87
+GenRoam: 88
 E
 T 2901
 #2979
@@ -1335,11 +1336,11 @@ importante... Embora o que exatamente ele está fazendo não seja aparente.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 24
+GenWimpy: 25
 GenLoot: 31
 GenEquip: 7
-GenRoam: 83
-GenGroup: 50
+GenRoam: 88
+GenGroup: 48
 E
 #2984
 mestre estabulo~
@@ -1388,7 +1389,8 @@ de carregar coisas para lá e para cá o dia todo lhe deram músculos salientes.
 9 9 2
 BareHandAttack: 4
 GenWimpy: 6
-GenRoam: 59
+GenLoot: 1
+GenRoam: 67
 E
 #2987
 carroceiro xingando~
@@ -1404,9 +1406,9 @@ tamparem os ouvidos de seus filhos.
 100 10000
 9 9 1
 BareHandAttack: 7
-GenWimpy: 6
-GenRoam: 72
-GenGroup: 2
+GenWimpy: 8
+GenRoam: 79
+GenGroup: 3
 E
 #2988
 cavalo empinando~
@@ -1526,7 +1528,7 @@ esposa de um comerciante.
 GenWimpy: 18
 GenLoot: 7
 GenEquip: 1
-GenRoam: 87
+GenRoam: 88
 GenGroup: 6
 E
 #2995

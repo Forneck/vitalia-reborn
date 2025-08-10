@@ -510,7 +510,7 @@ O trovador, vestido com roupas de cores festivas, está tocando um bandolim.
 15 6 0 7d8+250 4d8+8
 1090 16098
 9 9 1
-GenWimpy: 5
+GenWimpy: 8
 E
 #17334
 bardo~
@@ -538,7 +538,7 @@ vertiginosas acrobacias.
 15 6 0 6d7+290 5d9+8
 1100 19080
 9 9 1
-GenWimpy: 2
+GenWimpy: 5
 E
 #17336
 criado~
@@ -551,7 +551,7 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
-GenWimpy: 28
+GenWimpy: 29
 GenRoam: 89
 E
 #17337
@@ -657,7 +657,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 33
+GenWimpy: 29
 E
 #17344
 escrava~

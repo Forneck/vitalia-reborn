@@ -44,9 +44,8 @@ An undefined string.
 5 16 5 1d12+48 2d4+0
 30 1000
 9 9 1
-GenWimpy: 23
-GenLoot: 5
-GenRoam: 1
+GenWimpy: 22
+GenLoot: 6
 E
 #7003
 aranha pequena peluda~
@@ -59,8 +58,8 @@ An undefined string.
 1 20 3 1d12+8 1d4+0
 1 100
 9 9 1
-GenWimpy: 100
-GenRoam: 83
+GenWimpy: 98
+GenRoam: 85
 E
 #7004
 besouro gigante terra~
@@ -100,9 +99,9 @@ An undefined string.
 4 16 7 2d5+40 1d9+0
 1 1000
 9 9 2
-GenWimpy: 96
+GenWimpy: 97
 GenLoot: 4
-GenRoam: 89
+GenRoam: 87
 E
 T 3008
 #7007

@@ -27,7 +27,7 @@ VOCÊ não teria o mesmo gosto de um coelho.
 5 16 5 50d1+10 3d3+2
 0 2000
 9 9 1
-GenWimpy: 35
+GenWimpy: 38
 GenLoot: 10
 GenRoam: 88
 E
@@ -43,7 +43,7 @@ em retirada..  OPA..  Lá vai seu almoço!
 3 18 7 30d1+5 1d3+1
 0 600
 9 9 1
-GenWimpy: 27
+GenWimpy: 30
 GenRoam: 87
 E
 #5704
@@ -86,9 +86,9 @@ mundo perigoso lá fora.'
 30 0 -2 200d2+200 3d6+11
 20000 40000
 9 9 1
-GenWimpy: 25
+GenWimpy: 22
 GenLoot: 6
-GenRoam: 20
+GenRoam: 15
 E
 #5707
 diabinho diabo~
@@ -132,7 +132,7 @@ sitiada por demônios.
 1000 22000
 9 9 1
 GenWimpy: 7
-GenLoot: 12
+GenLoot: 13
 GenEquip: 4
 GenRoam: 89
 E
@@ -193,7 +193,7 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 18
+GenWimpy: 23
 E
 #5714
 rymat conselheiro~

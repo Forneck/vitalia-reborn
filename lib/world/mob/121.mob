@@ -100,7 +100,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 100
-GenRoam: 86
+GenRoam: 88
 E
 #12106
 anao negro~
@@ -151,9 +151,9 @@ BareHandAttack: 6
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 33
+GenWimpy: 39
 GenLoot: 3
-GenRoam: 17
+GenRoam: 15
 E
 #12109
 enorme sanguessuga~
@@ -363,7 +363,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 100
-GenRoam: 82
+GenRoam: 89
 E
 #12121
 quimera leao bode dragao~
@@ -452,7 +452,7 @@ Dex: 12
 Int: 13
 Wis: 13
 GenWimpy: 100
-GenRoam: 87
+GenRoam: 89
 E
 #12126
 cynamolgus peludo~

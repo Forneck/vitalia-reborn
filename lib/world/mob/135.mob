@@ -10,8 +10,8 @@ perigosa.
 14 6 4 1d1+400 6d1+14
 0 27000
 9 9 1
-GenWimpy: 25
-GenRoam: 87
+GenWimpy: 32
+GenRoam: 88
 E
 #13501
 elfo cacador~
@@ -141,7 +141,8 @@ Ela também parece ter incontáveis anos.  Ela sorri carinhosamente para você.
 45 -1 1 1d1+1200 9d1+21
 400 100000
 9 9 2
-GenWimpy: 3
+GenWimpy: 7
+GenRoam: 28
 E
 #13510
 corca~
@@ -213,7 +214,7 @@ Olhando bem você percebe que isso NÃO é uma cobra!
 9 11 6 1d1+175 4d1+9
 0 11371
 9 9 2
-GenWimpy: 43
+GenWimpy: 44
 GenLoot: 4
 GenRoam: 88
 E
@@ -261,7 +262,7 @@ Rã, sabe?  Apenas uma rã.
 8 12 6 1d1+150 4d1+8
 0 1333
 9 9 0
-GenWimpy: 42
+GenWimpy: 44
 GenLoot: 5
 GenRoam: 88
 E
