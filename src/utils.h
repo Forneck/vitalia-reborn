@@ -1055,6 +1055,10 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_WEATHER_AFFECTS_SPELLS config_info.play.weather_affects_spells
 /** Does weather affect spells based on school? */
 #define CONFIG_SCHOOL_WEATHER_AFFECTS config_info.play.school_weather_affects
+/** Maximum iterations for advanced pathfinding */
+#define CONFIG_MAX_PATHFIND_ITERATIONS config_info.play.max_pathfind_iterations
+/** Maximum zones in a pathfinding path */
+#define CONFIG_MAX_ZONE_PATH config_info.play.max_zone_path
 /** What level to use the shout command? */
 #define CONFIG_LEVEL_CAN_SHOUT config_info.play.level_can_shout
 /** How many move points does holler cost? */

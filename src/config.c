@@ -46,6 +46,11 @@ int weather_affects_spells = NO;
 
 /* Does weather affect spells based on school? */
 int school_weather_affects = NO;
+
+/* Advanced pathfinding configuration parameters */
+int max_pathfind_iterations = 0; /* 0 = dynamic scaling, >0 = fixed value - can be adjusted in CEDIT */
+int max_zone_path = 0;           /* 0 = dynamic scaling, >0 = fixed value - can be adjusted in CEDIT */
+
 /* pk_allowed sets the tone of the entire game.  If pk_allowed is set to NO,
  * then players will not be allowed to kill, summon, charm, or sleep other
  * players, as well as a variety of other "asshole player" protections. However,

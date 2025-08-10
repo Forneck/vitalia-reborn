@@ -83,6 +83,8 @@ extern int debug_mode;
 extern int fit_evolve;
 extern int weather_affects_spells;
 extern int school_weather_affects;
+extern int max_pathfind_iterations;
+extern int max_zone_path;
 /* Automap and map options */
 extern int map_option;
 extern int default_map_size;

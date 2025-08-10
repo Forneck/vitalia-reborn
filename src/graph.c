@@ -57,10 +57,46 @@ int calculate_movement_cost(struct char_data *ch, room_rnum room)
 }
 
 /* Advanced pathfinding structures for state-based search */
-#define MAX_COLLECTED_KEYS 50        /* Reduced from 50 to limit complexity */
-#define MAX_VISITED_STATES 1000       /* Reduced from 1000 to limit memory usage */
-#define MAX_PATHFIND_ITERATIONS 10000 /* Limit iterations to prevent infinite loops */
-#define MAX_ZONE_PATH 150            /* Maximum zones in a path */
+#define MAX_COLLECTED_KEYS 50               /* Reduced from 50 to limit complexity */
+#define MAX_VISITED_STATES 1000             /* Reduced from 1000 to limit memory usage */
+#define MAX_PATHFIND_ITERATIONS_LIMIT 50000 /* Maximum compile-time limit for iterations */
+#define MAX_ZONE_PATH_LIMIT 500             /* Maximum compile-time limit for zone path */
+
+/* Dynamic scaling functions for pathfinding parameters */
+static int get_dynamic_max_pathfind_iterations(void)
+{
+    /* Scale based on number of rooms, with minimum and maximum bounds */
+    int base_iterations = CONFIG_MAX_PATHFIND_ITERATIONS;
+    int world_rooms = top_of_world + 1;
+    int world_zones = top_of_zone_table + 1;
+
+    /* If configured value is 0, use dynamic scaling */
+    if (base_iterations == 0) {
+        /* Base formula: rooms * 2 + zones * 10, bounded by limits */
+        int dynamic_value = (world_rooms * 2) + (world_zones * 10);
+        return MIN(MAX(dynamic_value, 1000), MAX_PATHFIND_ITERATIONS_LIMIT);
+    }
+
+    /* Use configured value, but ensure it's within limits */
+    return MIN(MAX(base_iterations, 100), MAX_PATHFIND_ITERATIONS_LIMIT);
+}
+
+static int get_dynamic_max_zone_path(void)
+{
+    /* Scale based on number of zones, with minimum and maximum bounds */
+    int base_zones = CONFIG_MAX_ZONE_PATH;
+    int world_zones = top_of_zone_table + 1;
+
+    /* If configured value is 0, use dynamic scaling */
+    if (base_zones == 0) {
+        /* Dynamic scaling: at least 25% of total zones, max 75% */
+        int dynamic_value = MAX(world_zones / 4, MIN(world_zones * 3 / 4, 300));
+        return MIN(MAX(dynamic_value, 50), MAX_ZONE_PATH_LIMIT);
+    }
+
+    /* Use configured value, but ensure it's within limits */
+    return MIN(MAX(base_zones, 10), MAX_ZONE_PATH_LIMIT);
+}
 
 struct path_state {
     room_rnum room;                         /* Current room */
@@ -319,6 +355,10 @@ static int zone_has_connection_to(zone_rnum from_zone, zone_rnum to_zone)
     if (from_zone == NOWHERE || to_zone == NOWHERE || from_zone > top_of_zone_table || to_zone > top_of_zone_table)
         return 0;
 
+    /* Skip zones marked as CLOSED - players and mobs shouldn't access them */
+    if (ZONE_FLAGGED(from_zone, ZONE_CLOSED) || ZONE_FLAGGED(to_zone, ZONE_CLOSED))
+        return 0;
+
     if (from_zone == to_zone)
         return 1; /* Same zone is always connected */
 
@@ -349,9 +389,9 @@ static int zone_has_connection_to(zone_rnum from_zone, zone_rnum to_zone)
  */
 static int get_zones_between(zone_rnum src_zone, zone_rnum target_zone, zone_rnum *zone_path, int max_zones)
 {
-    static zone_rnum visited_zones[MAX_ZONE_PATH];
-    static zone_rnum queue[MAX_ZONE_PATH];
-    static int parent[MAX_ZONE_PATH];
+    static zone_rnum visited_zones[MAX_ZONE_PATH_LIMIT];
+    static zone_rnum queue[MAX_ZONE_PATH_LIMIT];
+    static int parent[MAX_ZONE_PATH_LIMIT];
     int visited_count = 0, queue_head = 0, queue_tail = 0;
     int i, j;
     zone_rnum current_zone;
@@ -365,7 +405,7 @@ static int get_zones_between(zone_rnum src_zone, zone_rnum target_zone, zone_rnu
     }
 
     /* Initialize */
-    for (i = 0; i < MAX_ZONE_PATH; i++) {
+    for (i = 0; i < MAX_ZONE_PATH_LIMIT; i++) {
         visited_zones[i] = NOWHERE;
         parent[i] = -1;
     }
@@ -375,7 +415,7 @@ static int get_zones_between(zone_rnum src_zone, zone_rnum target_zone, zone_rnu
     visited_zones[visited_count++] = src_zone;
     parent[0] = -1;
 
-    while (queue_head < queue_tail && visited_count < MAX_ZONE_PATH) {
+    while (queue_head < queue_tail && visited_count < get_dynamic_max_zone_path()) {
         current_zone = queue[queue_head++];
 
         if (current_zone == target_zone) {
@@ -392,10 +432,10 @@ static int get_zones_between(zone_rnum src_zone, zone_rnum target_zone, zone_rnu
             }
 
             /* Reconstruct path backwards */
-            static zone_rnum temp_path[MAX_ZONE_PATH];
+            static zone_rnum temp_path[MAX_ZONE_PATH_LIMIT];
             int temp_length = 0;
 
-            while (current_idx != -1 && temp_length < MAX_ZONE_PATH) {
+            while (current_idx != -1 && temp_length < get_dynamic_max_zone_path()) {
                 temp_path[temp_length++] = visited_zones[current_idx];
                 current_idx = parent[current_idx];
             }
@@ -410,7 +450,7 @@ static int get_zones_between(zone_rnum src_zone, zone_rnum target_zone, zone_rnu
         }
 
         /* Explore neighboring zones - iterate through all zone indices */
-        for (j = 0; j <= top_of_zone_table && visited_count < MAX_ZONE_PATH; j++) {
+        for (j = 0; j <= top_of_zone_table && visited_count < get_dynamic_max_zone_path(); j++) {
             /* Skip if already visited */
             int already_visited = 0;
             for (i = 0; i < visited_count; i++) {
@@ -433,7 +473,7 @@ static int get_zones_between(zone_rnum src_zone, zone_rnum target_zone, zone_rnu
                 }
 
                 visited_count++;
-                if (queue_tail >= MAX_ZONE_PATH)
+                if (queue_tail >= get_dynamic_max_zone_path())
                     break;
             }
         }
@@ -817,7 +857,7 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
     char *desc_buffer;
 
     /* Zone optimization variables */
-    zone_rnum zone_path[MAX_ZONE_PATH];
+    zone_rnum zone_path[MAX_ZONE_PATH_LIMIT];
     zone_rnum src_zone = (src != NOWHERE && src <= top_of_world) ? world[src].zone : NOWHERE;
     zone_rnum target_zone = (target != NOWHERE && target <= top_of_world) ? world[target].zone : NOWHERE;
     int num_zones = 0;
@@ -847,7 +887,7 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
     /* OPTIMIZATION: Analyze zone path and key requirements */
     if (src_zone != NOWHERE && target_zone != NOWHERE) {
         zone_optimized_calls++; /* Track optimization usage */
-        num_zones = get_zones_between(src_zone, target_zone, zone_path, MAX_ZONE_PATH);
+        num_zones = get_zones_between(src_zone, target_zone, zone_path, get_dynamic_max_zone_path());
 
         if (num_zones > 0) {
             /* Count keys in the zones that are actually in the path */
@@ -947,7 +987,7 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
     state_enqueue(&initial_state);
 
     /* Main pathfinding loop with iteration limit */
-    while ((current_state = state_dequeue()) != NULL && iterations < MAX_PATHFIND_ITERATIONS) {
+    while ((current_state = state_dequeue()) != NULL && iterations < get_dynamic_max_pathfind_iterations()) {
         iterations++;
 
         /* Check if we've reached the target */
@@ -1072,7 +1112,7 @@ int find_path_with_keys(struct char_data *ch, room_rnum src, room_rnum target, i
     }
 
     /* No path found or iteration limit reached */
-    if (iterations >= MAX_PATHFIND_ITERATIONS) {
+    if (iterations >= get_dynamic_max_pathfind_iterations()) {
         strcat(desc_buffer, "Busca interrompida - muito complexa.");
     } else {
         strcat(desc_buffer, "Nenhum caminho encontrado.");
@@ -1190,8 +1230,8 @@ ACMD(do_track)
         zone_rnum target_zone = world[IN_ROOM(vict)].zone;
 
         if (src_zone != target_zone) {
-            zone_rnum zone_path[MAX_ZONE_PATH];
-            int num_zones = get_zones_between(src_zone, target_zone, zone_path, MAX_ZONE_PATH);
+            zone_rnum zone_path[MAX_ZONE_PATH_LIMIT];
+            int num_zones = get_zones_between(src_zone, target_zone, zone_path, get_dynamic_max_zone_path());
             obj_vnum required_keys[MAX_COLLECTED_KEYS];
             int num_required_keys;
             int keys_in_zones;
