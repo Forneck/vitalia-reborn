@@ -417,7 +417,7 @@ e como os "plebeus" são desagradáveis. Você conclui que não gosta dele...
 45 3 -4 10d10+700 4d3+15
 8000 34020
 9 9 1
-GenWimpy: 7
+GenWimpy: 13
 E
 #11629
 convidado sacerdote~
@@ -432,7 +432,7 @@ pacientemente ouve uma jovem relatando seus problemas.
 49 2 -4 10d10+750 4d3+16
 1000 40020
 9 9 1
-GenWimpy: 7
+GenWimpy: 10
 E
 #11630
 convidada dama refinada jovem~
@@ -447,7 +447,7 @@ sacerdote.
 40 4 -3 10d10+500 4d3+14
 8000 24020
 9 9 2
-GenWimpy: 6
+GenWimpy: 9
 E
 #11631
 senhora convidada bem-vestida~
@@ -462,7 +462,7 @@ para a festa.  E agora?
 47 3 -4 10d10+670 4d3+17
 8000 44020
 9 9 2
-GenWimpy: 17
+GenWimpy: 19
 E
 #11632
 senhor elegante~
@@ -555,7 +555,7 @@ palácio, sendo que você já pode considerá-los "velhos conhecidos"...
 77 -11 -12 10d10+1270 7d5+29
 5000 124020
 9 9 2
-GenWimpy: 4
+GenWimpy: 7
 E
 T 3009
 #11637
@@ -572,7 +572,7 @@ favorita...
 93 -14 -19 10d10+1670 9d6+32
 12000 244020
 9 9 1
-GenWimpy: 7
+GenWimpy: 9
 E
 T 3009
 #11638
@@ -670,7 +670,7 @@ realmente exija sua interferência.
 55 0 -10 10d10+870 4d3+23
 1000 54020
 9 9 1
-GenWimpy: 45
+GenWimpy: 56
 E
 #11644
 guarda velho treinador~

@@ -131,7 +131,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 33
+GenWimpy: 36
 GenLoot: 18
 GenEquip: 1
 E
@@ -176,8 +176,8 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 29
-GenRoam: 89
+GenWimpy: 31
+GenRoam: 87
 E
 #711
 guardião guardiao guarda~
@@ -243,9 +243,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 80
+GenWimpy: 82
 GenLoot: 14
-GenRoam: 89
+GenRoam: 88
 E
 #714
 cavaleiro negro tempestuoso armadura~
@@ -290,10 +290,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 92
+GenWimpy: 93
 GenLoot: 3
-GenRoam: 89
-GenGroup: 27
+GenRoam: 84
+GenGroup: 26
 E
 #716
 pequena encurvada crianca criança~
@@ -389,7 +389,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 23
+GenWimpy: 25
 GenLoot: 2
 GenEquip: 1
 GenRoam: 89

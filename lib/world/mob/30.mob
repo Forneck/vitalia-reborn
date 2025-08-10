@@ -640,8 +640,7 @@ Um grande, forte, solidário e confiável sentinela.
 500 9000
 9 9 1
 GenWimpy: 55
-GenRoam: 89
-GenBrave: 1
+GenRoam: 81
 E
 T 3013
 #3061
@@ -655,9 +654,9 @@ Que trabalho pesado ele tem.
 1 20 9 2d6+10 1d5+0
 34 100
 9 9 1
-GenWimpy: 20
+GenWimpy: 21
 GenLoot: 5
-GenRoam: 87
+GenRoam: 86
 E
 #3062
 cachorro fido~
@@ -672,7 +671,7 @@ cheios de pedaços de carne apodrecida grudadas.
 0 25
 9 9 1
 BareHandAttack: 4
-GenWimpy: 50
+GenWimpy: 52
 GenLoot: 7
 GenRoam: 87
 E

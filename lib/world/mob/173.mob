@@ -43,8 +43,8 @@ carrega uma grande lança.
 70 2 -19 12d12+1200 14d14+15
 10000 65030
 9 9 1
-GenWimpy: 10
-GenRoam: 69
+GenWimpy: 9
+GenRoam: 83
 E
 T 3013
 #17304
@@ -510,7 +510,7 @@ O trovador, vestido com roupas de cores festivas, está tocando um bandolim.
 15 6 0 7d8+250 4d8+8
 1090 16098
 9 9 1
-GenWimpy: 1
+GenWimpy: 5
 E
 #17334
 bardo~
@@ -657,7 +657,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 20
+GenWimpy: 33
 E
 #17344
 escrava~
@@ -671,8 +671,7 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 8
-GenRoam: 1
+GenWimpy: 11
 E
 #17345
 chefe saxao render~
@@ -688,7 +687,7 @@ coberto por piolhos.
 10000 60994
 9 9 1
 GenWimpy: 8
-GenLoot: 57
+GenLoot: 58
 E
 #17346
 guarda fronteira norte~
@@ -965,8 +964,8 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 16
+GenWimpy: 17
 GenLoot: 2
-GenRoam: 68
+GenRoam: 54
 E
 $

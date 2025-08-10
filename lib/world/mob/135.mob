@@ -184,7 +184,7 @@ Seus olhos possuem uma expressão não muito amigável.
 14 6 4 1d1+400 6d1+14
 0 13496
 9 9 1
-GenWimpy: 92
+GenWimpy: 99
 GenLoot: 7
 GenRoam: 89
 E
@@ -199,8 +199,8 @@ Ele é simplesmente adorável, você queria ter um igual a esse!
 8 12 6 1d1+150 4d1+8
 0 10333
 9 9 1
-GenWimpy: 40
-GenRoam: 87
+GenWimpy: 42
+GenRoam: 88
 E
 #13514
 cobra cega~
@@ -261,7 +261,7 @@ Rã, sabe?  Apenas uma rã.
 8 12 6 1d1+150 4d1+8
 0 1333
 9 9 0
-GenWimpy: 41
+GenWimpy: 42
 GenLoot: 5
 GenRoam: 88
 E

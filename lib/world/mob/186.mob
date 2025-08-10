@@ -62,7 +62,7 @@ Mestre irá me arrancar a cabeça se eu não encontrar o bichinho!"
 3 18 7 2d6+34 1d7+0
 500 800
 9 9 1
-GenWimpy: 28
+GenWimpy: 30
 GenLoot: 7
 GenEquip: 1
 GenUse: 20
@@ -112,7 +112,7 @@ espere!!  Ele parece que está querendo atacá-lo!
 GenWimpy: 100
 GenLoot: 7
 GenRoam: 89
-GenGroup: 3
+GenGroup: 1
 E
 #18608
 demônio demonio diabo travesso~
@@ -198,7 +198,7 @@ acabar logo com a mediocridade dele.
 1 20 10 1d1+19 1d3+1
 50 220
 9 9 1
-GenWimpy: 49
+GenWimpy: 50
 GenRoam: 87
 E
 #18613

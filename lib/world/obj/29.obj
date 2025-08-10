@@ -5,7 +5,7 @@ Uma chave enferrujada está aqui, enferrujando mais a cada minuto.~
 ~
 18 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 1 0 0
+1 1 0 0 0
 E
 chave enferrujada~
    Uma chave enferrujada está aqui. Tem um peixe gravado nela, e parece que
@@ -18,7 +18,7 @@ Uma chave de prata brilhante está aqui, reluzindo alegremente.~
 ~
 18 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 1 0 0
+1 1 0 0 0
 E
 chave prata brilhante~
    Uma chave de prata está aqui, gravada com uma garça - o emblema da mais
@@ -31,7 +31,7 @@ Uma chave grande está aqui, do tamanho da sua mão.~
 ~
 18 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 1 0 0
+1 1 0 0 0
 #2903
 bau maritimo~
 baú marítimo~
@@ -39,7 +39,7 @@ Um pesado baú marítimo está aqui, encostado na parede.~
 ~
 15 0 0 0 0 0 0 0 0 0 0 0 0
 400 15 2945 0
-0 0 0 0
+0 0 0 0 0
 #2904
 rubi cintilante~
 um rubi cintilante~
@@ -47,7 +47,7 @@ Um rubi está aqui, cintilando de forma sugestiva.~
 ~
 13 h 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 1 0 0
+1 1 0 0 0
 A
 2 -5
 #2905
@@ -57,7 +57,7 @@ Um rubi está aqui, cintilando de forma sugestiva.~
 ~
 8 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 5 0 0
+1 5 0 0 0
 #2906
 vela~
 uma vela quase apagada~
@@ -65,7 +65,7 @@ Uma vela está aqui, crepitando quase ao ponto de se apagar.~
 ~
 1 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 3 0
-1 10 1 0
+1 10 1 0 0
 #2907
 banco bancos ocultos~
 o banco~
@@ -73,7 +73,7 @@ o banco~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0
+0 0 0 0 0
 #2908
 sofa acolchoado~
 um sofá acolchoado~
@@ -81,7 +81,7 @@ Um sofá acolchoado está aqui, com aparência desgastada.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-50 1 0 0
+50 1 0 0 0
 #2909
 anel prata~
 o anel de prata~
@@ -89,7 +89,7 @@ Um aro de metal prateado está aqui na poeira.~
 ~
 9 0 0 0 0 ab 0 0 0 0 0 0 0
 0 0 0 0
-1 1 0 0
+1 1 0 0 0
 #2910
 botas couro preto~
 um par de botas de couro preto~
@@ -97,7 +97,7 @@ Um par de botas de couro preto gastas está aqui no chão.~
 ~
 9 0 0 0 0 ag 0 0 0 0 0 0 0
 5 0 0 0
-2 20 2 0
+2 20 2 0 0
 #2911
 elmo prata~
 um elmo de prata~
@@ -105,7 +105,7 @@ Um elmo cintilante de prata está aqui no chão.~
 ~
 9 0 0 0 0 ae 0 0 0 0 0 0 0
 7 0 0 0
-10 300 30 0
+10 300 30 0 0
 #2912
 colher madeira~
 uma colher de madeira~
@@ -113,7 +113,7 @@ Uma colher de madeira está aqui, com aparência muito comum.~
 ~
 3 0 0 0 0 ao 0 0 0 0 0 0 0
 12 12 12 12
-1 5 0 0
+1 5 0 0 0
 #2913
 ídolo demoniaco~
 um ídolo demoníaco~
@@ -121,7 +121,7 @@ Um ídolo demoníaco está aqui, rudemente esculpido.~
 ~
 11 gh 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-10 1000 100 0
+10 1000 100 0 0
 A
 1 -5
 #2915
@@ -131,7 +131,7 @@ Uma pequena escultura de veado está aqui, tão habilmente feita que parece quas
 ~
 11 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 1 0 0
+1 1 0 0 0
 A
 1 1
 #2916
@@ -141,7 +141,7 @@ Uma cadeira de madeira está aqui, pronta para ser usada.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-10 1 0 0
+10 1 0 0 0
 #2917
 broche diamante~
 um broche de diamante~
@@ -149,7 +149,7 @@ Um broche está aqui, cintilando com diamantes.~
 ~
 13 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-3 1 0 0
+3 1 0 0 0
 E
 diamante~
    Opa... Estes diamantes parecem bem falsos...
@@ -161,7 +161,7 @@ Uma esmeralda do tamanho do olho de uma fada está aqui.~
 ~
 1 a 0 0 0 ao 0 0 0 0 0 0 0
 0 0 20 0
-1 1 0 0
+1 1 0 0 0
 A
 17 6
 #2919
@@ -171,7 +171,7 @@ Uma pulseira está aqui, cintilando com joias.~
 ~
 11 0 0 0 0 am 0 0 0 0 0 0 0
 0 0 0 0
-1 40 4 0
+1 40 4 0 0
 A
 14 20
 #2920
@@ -181,7 +181,7 @@ Um peixe está aqui, cheirando a peixe.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 3 0 0 0
-4 1 0 0
+4 1 0 0 0
 #2921
 garrafa marrom cerveja~
 uma garrafa marrom~
@@ -189,7 +189,7 @@ uma garrafa marrom~
 ~
 17 0 0 0 0 a 0 0 0 0 0 0 0
 3 3 1 0
-8 120 12 0
+8 120 12 0 0
 #2922
 jarro água agua~
 um jarro~
@@ -197,7 +197,7 @@ Um jarro foi colocado aqui cuidadosamente, cheio de água limpa.~
 ~
 17 0 0 0 0 a 0 0 0 0 0 0 0
 8 5 0 0
-5 75 7 0
+5 75 7 0 0
 #2924
 cajado retorcido~
 um cajado retorcido~
@@ -205,7 +205,7 @@ Um cajado retorcido está aqui, com aparência bastante inofensiva.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 4 2 3 7
-8 40 4 0
+8 40 4 0 0
 #2925
 lanca farpada~
 uma lança farpada~
@@ -213,7 +213,7 @@ Uma perigosa lança farpada está aqui, com aparência desagradável.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 4 2 4 3
-10 200 20 0
+10 200 20 0 0
 #2926
 pique sovela~
 um pique de sovela~
@@ -221,7 +221,7 @@ Um pique de sovela está aqui, ocupando muito espaço.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 4 3 5 3
-15 750 75 0
+15 750 75 0 0
 #2927
 adaga enjoiada~
 uma adaga enjoiada~
@@ -229,7 +229,7 @@ Uma adaga está aqui, suas joias cintilando alegremente.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 2 3 14
-4 120 12 0
+4 120 12 0 0
 #2928
 adaga curva~
 uma adaga perversamente curva~
@@ -237,7 +237,7 @@ Uma adaga está aqui no chão, sua curvatura parecendo particularmente perversa.
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 4 1
-3 150 15 0
+3 150 15 0 0
 #2929
 corrente~
 um pedaço de corrente~
@@ -245,7 +245,7 @@ Um pedaço de corrente está no chão, reluzindo.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 7 1 5 2
-7 350 35 0
+7 350 35 0 0
 #2930
 mangual grande~
 um mangual grande~
@@ -253,7 +253,7 @@ Um mangual grande está aqui, com aparência abandonada.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 3 2 4 10
-20 1000 100 0
+20 1000 100 0 0
 #2931
 banco~
 um banco~
@@ -261,15 +261,15 @@ Um banco foi providenciado para viajantes cansados descansarem.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0
+0 0 0 0 0
 #2932
 calice agua marinha agua-marinha~
 um cálice água-marinha~
 Um cálice água-marinha foi abandonado aqui.~
 ~
 10 0 0 0 0 a 0 0 0 0 0 0 0
-12 -1 -1 -1
-3 100 0 0
+12 62 51 -1
+3 100 0 0 0
 #2933
 jarra roxa~
 uma jarra roxa~
@@ -277,7 +277,7 @@ Uma jarra roxa está aqui.~
 ~
 10 0 0 0 0 a 0 0 0 0 0 0 0
 12 43 -1 -1
-2 800 0 0
+2 800 0 0 0
 #2934
 maca brilhante~
 uma maçã brilhante~
@@ -285,7 +285,7 @@ Uma maçã vermelha brilhante está aqui.~
 ~
 10 0 0 0 0 a 0 0 0 0 0 0 0
 12 3 -1 -1
-1 600 0 0
+1 600 0 0 0
 #2935
 jarro amarelo~
 um jarro amarelo~
@@ -293,7 +293,7 @@ Um jarro amarelo está aqui, zumbindo com poder.~
 ~
 10 b 0 0 0 a 0 0 0 0 0 0 0
 12 19 -1 -1
-2 400 0 0
+2 400 0 0 0
 #2936
 frasco formato rosa~
 um frasco formato rosa~
@@ -301,7 +301,7 @@ Um frasco em formato de rosa está aqui, brilhando levemente.~
 ~
 10 a 0 0 0 ao 0 0 0 0 0 0 0
 12 36 -1 -1
-3 1000 0 0
+3 1000 0 0 0
 #2937
 frasco verde~
 o frasco verde~
@@ -309,7 +309,7 @@ Um frasco verde está aqui, brilhando levemente.~
 ~
 10 a 0 0 0 ao 0 0 0 0 0 0 0
 12 29 -1 -1
-1 500 0 0
+1 500 0 0 0
 #2938
 brinquedo madeira~
 um brinquedo de madeira~
@@ -317,7 +317,7 @@ Um brinquedo de madeira infantil está aqui, esquecido.~
 ~
 12 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 1 0 0
+1 1 0 0 0
 #2939
 banca mercado~
 uma banca de mercado~
@@ -325,7 +325,7 @@ Uma banca de mercado está aqui, com os vendedores gritando por clientes.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0
+0 0 0 0 0
 #2940
 mesa jantar~
 uma mesa de jantar~
@@ -333,7 +333,7 @@ Uma mesa de jantar está no meio do chão aqui, empilhada com comida.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0
+0 0 0 0 0
 #2941
 almofada grande macia~
 uma almofada grande e macia~
@@ -341,7 +341,7 @@ Uma almofada grande está aqui, parecendo muito macia e convidativa.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-2 1 0 0
+2 1 0 0 0
 #2942
 esteira~
 uma esteira~
@@ -349,7 +349,7 @@ Uma esteira está no chão aqui.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-5 1 0 0
+5 1 0 0 0
 #2943
 fresco pao~
 um pão fresco~
@@ -357,7 +357,7 @@ Um pão recém-assado está aqui. Parece delicioso.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 2 0 0 0
-1 1 0 0
+1 1 0 0 0
 #2944
 cama~
 a cama de Degruziel~
@@ -365,7 +365,7 @@ A magnífica cama de Degruziel fica aqui no centro do chão.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0
+0 0 0 0 0
 #2945
 chave pequena~
 a chave pequena~
@@ -373,7 +373,7 @@ Uma pequena chave foi deixada aqui. Talvez alguém a tenha perdido.~
 ~
 18 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 1 0 0
+1 1 0 0 0
 #2946
 coifa cota malha~
 uma coifa de cota de malha~
@@ -381,7 +381,7 @@ Uma pequena pilha de cota de malha está aqui no chão.~
 ~
 9 0 0 0 0 ae 0 0 0 0 0 0 0
 5 0 0 0
-3 150 15 0
+3 150 15 0 0
 #2947
 alaude~
 um alaúde~
@@ -389,7 +389,7 @@ Um alaúde está aqui, abandonado pelo seu dono.~
 ~
 3 0 0 0 0 ao 0 0 0 0 0 0 0
 12 15 15 32
-10 150 15 0
+10 150 15 0 0
 #2948
 espada longa aco~
 uma espada longa de aço~
@@ -397,7 +397,7 @@ Uma espada longa de aço está aqui no chão, negligenciada.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 6 1 9 3
-10 750 75 0
+10 750 75 0 0
 #2949
 coleira couro velha cao~
 uma velha coleira de couro de cão~
@@ -405,7 +405,7 @@ Algum cão perdeu sua velha coleira por aqui.~
 ~
 11 0 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-1 10 1 0
+1 10 1 0 0
 #2950
 cauda rato~
 uma cauda de rato~
@@ -413,7 +413,7 @@ Uma longa e suja cauda de rato está aqui no chão. Que poluição.~
 ~
 9 0 0 0 0 al 0 0 0 0 0 0 0
 1 0 0 0
-2 10 1 0
+2 10 1 0 0
 #2951
 jarro prata vinho~
 um jarro de prata~
@@ -421,7 +421,7 @@ Um jarro de prata está no chão aqui.~
 ~
 17 0 0 0 0 ao 0 0 0 0 0 0 0
 7 3 2 0
-10 300 30 0
+10 300 30 0 0
 #2952
 bandeja prata~
 uma bandeja de prata~
@@ -429,7 +429,7 @@ Uma grande bandeja feita de prata e com um cabo estranho está no chão aqui.~
 ~
 9 0 0 0 0 aj 0 0 0 0 0 0 0
 7 0 0 0
-7 210 21 0
+7 210 21 0 0
 #2953
 chapeu tres pontas~
 o chapéu de três pontas~
@@ -437,7 +437,7 @@ Um chapéu com três pontas está aqui.~
 ~
 9 0 0 0 0 ae 0 0 0 0 0 0 0
 7 0 0 0
-7 35 3 0
+7 35 3 0 0
 #2954
 vestido prateado cintilante~
 um vestido prateado cintilante~
@@ -445,7 +445,7 @@ Uma pilha de material cintilante está aqui. Talvez seja um vestido.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 1 0 0 0
-6 6 0 0
+6 6 0 0 0
 #2955
 capa rica~
 uma capa rica~
@@ -453,7 +453,7 @@ Uma capa rica feita de fio de prata está aqui, com aparência cara.~
 ~
 9 gikl 0 0 0 ak 0 0 0 0 0 0 0
 1 0 0 0
-20 20 2 0
+20 20 2 0 0
 A
 2 2
 A
@@ -465,7 +465,7 @@ Um par de perneiras de aço bandado está aqui, com aparência bem nova.~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 8 0 0 0
-1 100 0 0
+1 100 0 0 0
 #2957
 bracadeira aco bandado~
 uma braçadeira de aço bandado~
@@ -473,7 +473,7 @@ Um pedaço de aço bandado está simplesmente aqui.~
 ~
 9 0 0 0 0 ai 0 0 0 0 0 0 0
 7 0 0 0
-2 150 15 0
+2 150 15 0 0
 #2958
 espada curta aco~
 uma espada curta de aço~
@@ -481,7 +481,7 @@ Uma espada curta de aço está no chão aqui. Pena que pode enferrujar.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 6 3
-6 450 45 0
+6 450 45 0 0
 #2959
 saia seda preta~
 uma saia de seda preta~
@@ -489,7 +489,7 @@ Alguém deixou uma saia aqui.~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 6 0 0 0
-5 5 0 0
+5 5 0 0 0
 #2960
 bigode~
 um bigode falso~
@@ -497,7 +497,7 @@ Uma pequena coisa peluda está no chão aqui. Que... Parece um bigode falso.~
 ~
 11 0 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
-1 1 0 0
+1 1 0 0 0
 #2961
 perna pau falsa~
 uma perna de pau falsa~
@@ -505,7 +505,7 @@ Uma perna de pau falsa está aqui, ao ar livre.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 3 1 6 5
-3 15 1 0
+3 15 1 0 0
 #2962
 xicara enferrujada água agua~
 uma xícara enferrujada~
@@ -513,7 +513,7 @@ Uma xícara enferrujada está aqui, coletando água da chuva.~
 ~
 17 0 0 0 0 ao 0 0 0 0 0 0 0
 5 3 0 1
-8 160 16 0
+8 160 16 0 0
 #2963
 espada curva~
 uma espada curta e curvada~
@@ -521,7 +521,7 @@ Uma espada curta está aqui reluzindo.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 5 3
-10 500 50 0
+10 500 50 0 0
 #2964
 adaga curva~
 uma adaga curva~
@@ -529,7 +529,7 @@ Uma estranha adaga curva está aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 4 14
-2 100 10 0
+2 100 10 0 0
 #2965
 calcas seda preta~
 um par de calças de seda preta~
@@ -537,7 +537,7 @@ Alguém perdeu suas calças.... hmm....~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 6 0 0 0
-3 3 0 0
+3 3 0 0 0
 #2966
 camisa seda preta~
 uma camisa de seda preta~
@@ -545,7 +545,7 @@ Uma camisa de seda preta está aqui, negligenciada.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 8 0 0 0
-3 3 0 0
+3 3 0 0 0
 #2967
 trapos~
 alguns trapos~
@@ -553,7 +553,7 @@ Uma pilha de trapos fedorentos está aqui, fedendo.~
 ~
 11 0 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
-4 4 0 0
+4 4 0 0 0
 A
 18 3
 A
@@ -565,7 +565,7 @@ Uma mulher deve ter derrubado sua bolsa aqui...~
 ~
 15 0 0 0 0 aco 0 0 0 0 0 0 0
 10 1 -1 0
-2 10 1 0
+2 10 1 0 0
 #2969
 vestido vermelho~
 um vestido vermelho caro~
@@ -573,7 +573,7 @@ Uma pilha de material vermelho está abandonada aqui, vagamente parecendo um ves
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 2 0 0 0
-8 8 0 0
+8 8 0 0 0
 #2970
 cutelo~
 um cutelo afiado~
@@ -581,7 +581,7 @@ Um cutelo está aqui, reluzindo com brilho afiado.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 4 1
-2 100 10 0
+2 100 10 0 0
 #2971
 rede~
 uma rede de corda~
@@ -589,7 +589,7 @@ Uma rede de corda emaranhada está aqui.~
 ~
 9 0 0 0 0 ak 0 0 0 0 0 0 0
 1 0 0 0
-20 20 2 0
+20 20 2 0 0
 #2972
 arenque peixe cru~
 um arenque cru~
@@ -597,7 +597,7 @@ Um peixe cru está aqui... pode ser apenas um arenque.~
 ~
 19 0 0 0 0 a 0 0 0 0 0 0 0
 4 0 0 0
-1 1 0 0
+1 1 0 0 0
 #2973
 garrafa quebrada~
 uma garrafa quebrada~
@@ -605,7 +605,7 @@ Uma garrafa meio despedaçada foi deixada aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 0 1 3 14
-1 15 1 0
+1 15 1 0 0
 #2974
 taca vinho~
 uma taça de vinho~
@@ -613,7 +613,7 @@ Uma taça de vinho está aqui, descartada.~
 ~
 17 0 0 0 0 ao 0 0 0 0 0 0 0
 2 2 2 0
-7 105 10 0
+7 105 10 0 0
 #2975
 vestido remendado~
 um vestido remendado~
@@ -621,7 +621,7 @@ Um vestido esfarrapado está aqui, costurado com remendos coloridos.~
 ~
 11 0 0 0 0 ad 0 0 0 0 0 0 0
 0 0 0 0
-7 7 0 0
+7 7 0 0 0
 #2976
 jarro cerveja~
 um jarro de cerveja~
@@ -629,7 +629,7 @@ Um jarro de cerveja está aqui, esquecido.~
 ~
 17 0 0 0 0 ao 0 0 0 0 0 0 0
 3 3 3 0
-8 40 4 0
+8 40 4 0 0
 #2977
 carrinho~
 um carrinho de madeira~
@@ -637,7 +637,7 @@ Um carrinho de madeira está aqui, virado de lado.~
 ~
 15 0 0 0 0 ao 0 0 0 0 0 0 0
 100 0 -1 0
-20 1 0 0
+20 1 0 0 0
 #2978
 pulseira prata~
 uma pulseira de prata~
@@ -645,7 +645,7 @@ Um aro de metal prateado está aqui, esperando para ser usado no pulso.~
 ~
 11 0 0 0 0 am 0 0 0 0 0 0 0
 0 0 0 0
-1 1 0 0
+1 1 0 0 0
 A
 19 2
 #2979
@@ -655,7 +655,7 @@ Uma pequena pilha de material transparente está aqui, parecendo um véu.~
 ~
 11 0 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
-1 1 0 0
+1 1 0 0 0
 #2980
 saia la~
 uma saia longa de lã~
@@ -663,7 +663,7 @@ Uma pilha de lã está aqui, vagamente parecendo uma saia.~
 ~
 9 0 0 0 0 af 0 0 0 0 0 0 0
 4 0 0 0
-5 25 2 0
+5 25 2 0 0
 #2981
 mascara couro preto~
 uma máscara de couro preto~
@@ -671,7 +671,7 @@ Uma máscara de couro preto está aqui, pronta para esconder o rosto de alguém.
 ~
 11 g 0 0 0 ae 0 0 0 0 0 0 0
 0 0 0 0
-2 20 2 0
+2 20 2 0 0
 #2982
 chicote farpado~
 um chicote farpado de aparência cruel~
@@ -679,7 +679,7 @@ Um chicote farpado está aqui, com aparência maliciosa.~
 ~
 5 j 0 0 0 an 0 0 0 0 0 0 0
 7 2 4 1
-3 30 3 0
+3 30 3 0 0
 #2983
 colher madeira~
 uma colher de madeira~
@@ -687,7 +687,7 @@ Uma colher de madeira está aqui, com aparência abandonada.~
 ~
 13 0 0 0 0 ao 0 0 0 0 0 0 0
 0 0 0 0
-1 5 0 0
+1 5 0 0 0
 #2984
 cota malha cintilante~
 a cota de malha cintilante~
@@ -695,7 +695,7 @@ Uma pilha de elos de corrente está aqui, cintilando na luz.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 6 0 0 0
-30 400 150 0
+30 400 150 0 0
 #2985
 bandana preta~
 uma bandana preta~
@@ -703,7 +703,7 @@ Uma tira de tecido preto está no chão aqui.~
 ~
 9 0 0 0 0 ae 0 0 0 0 0 0 0
 3 0 0 0
-1 1 0 0
+1 1 0 0 0
 #2986
 chicote~
 um chicote~
@@ -711,7 +711,7 @@ Um chicote está aqui, com aparência ameaçadora.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 7 1 5 2
-3 30 3 0
+3 30 3 0 0
 #2987
 alforje~
 um alforje~
@@ -719,7 +719,7 @@ Um alforje está aqui, abandonado.~
 ~
 15 0 0 0 0 ao 0 0 0 0 0 0 0
 50 1 -1 0
-15 150 15 0
+15 150 15 0 0
 #2993
 maca cintilante~
 uma maça de prata cintilante~
@@ -727,7 +727,7 @@ Uma maça de prata cintilante, mas de aparência pesada, está aqui abandonada~
 ~
 5 k 0 0 0 an 0 0 0 0 0 0 0
 3 1 5 6
-50 375 375 0
+50 375 375 0 0
 E
 maca cintilante~
    Esta maça parece bem elegante, mas se usada corretamente, pode ser capaz de
@@ -744,7 +744,7 @@ Uma espada reluzente está aqui.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 7 3
-15 900 112 0
+15 900 112 0 0
 E
 espada mercador~
    A espada é bem trabalhada e também parece cara. Tem a marca de um espadachim
@@ -757,7 +757,7 @@ Uma espada de aparência incomumente comum está aqui, reluzindo levemente.~
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 5 1 7 3
-12 240 24 0
+12 240 24 0 0
 E
 espada plebeu~
    A espada parece com a espada genérica, exceto pela seda azul enrolada
@@ -770,7 +770,7 @@ Uma braçadeira de couro preto está aqui, com aparência especial.~
 ~
 9 ag 0 0 0 am 0 0 0 0 0 0 0
 1 0 0 0
-2 20 2 0
+2 20 2 0 0
 E
 bracadeira~
    A braçadeira é feita de couro preto de primeira qualidade e parece brilhar um pouco.
@@ -786,7 +786,7 @@ Uma pilha de couro preto está aqui.~
 ~
 9 0 0 0 0 ad 0 0 0 0 0 0 0
 5 0 0 0
-15 150 15 0
+15 150 15 0 0
 E
 colete guarda couro~
    O colete, julgando pela confecção e material, foi feito à mão e bem
@@ -803,7 +803,7 @@ Uma faca de esculpir está aqui. Parece afiada.~
 ~
 5 i 0 0 0 an 0 0 0 0 0 0 0
 5 1 3 1
-2 100 10 0
+2 100 10 0 0
 E
 faca esculpir~
    Esta faca de esculpir parece ter sido muito usada, mas ainda está
@@ -816,7 +816,7 @@ Uma espada com uma gaivota estilizada gravada no punho está aqui, com aparênci
 ~
 5 0 0 0 0 an 0 0 0 0 0 0 0
 6 1 9 3
-20 1000 100 0
+20 1000 100 0 0
 E
 gaivota~
    A forma estilizada de gaivota na espada é a marca especial dos melhores

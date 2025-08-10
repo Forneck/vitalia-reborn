@@ -38,8 +38,8 @@ se vira lentamente e o olha sem expressão.
 20 0 -20 200d1+60 3d5+16
 6000 30000
 9 9 1
-GenWimpy: 5
-GenLoot: 93
+GenWimpy: 8
+GenLoot: 94
 GenEquip: 1
 E
 #13304
@@ -97,9 +97,9 @@ fingir que você não existe.
 10 12 3 100d1+10 2d5+4
 200 10000
 9 9 1
-GenWimpy: 44
+GenWimpy: 43
 GenLoot: 27
 GenEquip: 3
-GenRoam: 86
+GenRoam: 85
 E
 $

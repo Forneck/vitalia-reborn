@@ -39,7 +39,7 @@ An undefined string.
 15 5 4 1d1+500 6d1+15
 250 14000
 9 9 1
-GenWimpy: 26
+GenWimpy: 31
 GenLoot: 3
 GenRoam: 89
 E
@@ -97,8 +97,8 @@ An undefined string.
 14 6 4 1d1+400 6d1+14
 225 13428
 9 9 0
-GenWimpy: 43
-GenRoam: 84
+GenWimpy: 48
+GenRoam: 87
 E
 #13607
 multicolorida borboleta~
@@ -111,7 +111,7 @@ An undefined string.
 13 7 4 1d1+350 6d1+13
 0 12880
 9 9 0
-GenWimpy: 38
+GenWimpy: 44
 GenLoot: 2
 GenRoam: 88
 E

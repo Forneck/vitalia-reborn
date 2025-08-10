@@ -14,9 +14,9 @@ Str: 17
 Dex: 15
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenLoot: 97
-GenEquip: 20
+GenWimpy: 10
+GenLoot: 99
+GenEquip: 22
 E
 #2913
 turista~
@@ -152,7 +152,7 @@ Wis: 13
 GenWimpy: 5
 GenLoot: 51
 GenEquip: 5
-GenRoam: 61
+GenRoam: 60
 E
 #2920
 conselheiro Degruziel~
@@ -299,11 +299,10 @@ Uma poça de lama de aparência incomum está aqui, rodopiando.
 3 19 8 0d0+30 1d2+0
 30 900
 9 9 0
-GenWimpy: 77
+GenWimpy: 88
 GenLoot: 8
 GenEquip: 1
 GenRoam: 87
-GenGroup: 1
 E
 #2929
 monstro lama bolhas~
@@ -401,11 +400,10 @@ uma reposição.
 70 4900
 9 9 1
 BareHandAttack: 1
-GenWimpy: 9
-GenLoot: 7
-GenEquip: 3
-GenRoam: 55
-GenBrave: 1
+GenWimpy: 7
+GenLoot: 8
+GenEquip: 4
+GenRoam: 75
 E
 #2935
 cavalheiro gentil~
@@ -451,8 +449,8 @@ Wis: 15
 GenWimpy: 3
 GenLoot: 12
 GenEquip: 5
-GenRoam: 68
-GenGroup: 15
+GenRoam: 67
+GenGroup: 14
 E
 #2937
 convidado honrado~
@@ -588,11 +586,11 @@ e se prepara para sair numa rodada de mendicância.
 70 4900
 9 9 2
 Dex: 10
-GenWimpy: 2
+GenWimpy: 4
 GenLoot: 5
 GenEquip: 2
-GenRoam: 36
-GenGroup: 4
+GenRoam: 40
+GenGroup: 2
 E
 #2944
 mulher disfarcada~
@@ -646,7 +644,7 @@ Um homem está aqui, dormindo em sua cama de viagem.
 10 17 4 2d2+100 1d2+1
 100 10000
 4 4 1
-GenWimpy: 6
+GenWimpy: 8
 GenLoot: 14
 GenEquip: 2
 E
@@ -672,7 +670,7 @@ Wis: 14
 GenWimpy: 9
 GenLoot: 43
 GenEquip: 6
-GenGroup: 4
+GenGroup: 2
 E
 #2948
 rei beco luna~
@@ -722,9 +720,9 @@ Um esquizofrênico paranoico está aqui, gritando para o mundo.
 9 9 2
 Str: 14
 Dex: 14
-GenWimpy: 65
+GenWimpy: 84
 GenLoot: 5
-GenRoam: 87
+GenRoam: 89
 E
 #2951
 idiota~
@@ -757,11 +755,11 @@ Str: 12
 Dex: 13
 Int: 14
 Wis: 14
-GenWimpy: 6
+GenWimpy: 10
 GenLoot: 4
 GenEquip: 1
-GenRoam: 74
-GenGroup: 7
+GenRoam: 75
+GenGroup: 3
 E
 #2953
 lunatico delirante~
@@ -862,9 +860,9 @@ arduamente ganho.
 BareHandAttack: 6
 Str: 15
 Dex: 12
-GenWimpy: 9
+GenWimpy: 12
 GenLoot: 1
-GenRoam: 76
+GenRoam: 74
 GenGroup: 3
 E
 #2959
@@ -921,8 +919,8 @@ Str: 15
 Dex: 15
 Int: 14
 Wis: 14
-GenWimpy: 3
-GenRoam: 63
+GenWimpy: 4
+GenRoam: 61
 E
 #2962
 cidada passeando~
@@ -1171,8 +1169,7 @@ Wis: 10
 GenWimpy: 6
 GenLoot: 4
 GenEquip: 1
-GenRoam: 45
-GenGroup: 1
+GenRoam: 49
 E
 #2975
 garota especial do harem~
@@ -1193,8 +1190,8 @@ Str: 9
 Dex: 15
 Int: 13
 Wis: 13
-GenWimpy: 5
-GenLoot: 55
+GenWimpy: 7
+GenLoot: 57
 GenEquip: 7
 E
 T 2902
@@ -1219,7 +1216,7 @@ Dex: 15
 Int: 10
 Wis: 12
 GenWimpy: 5
-GenLoot: 98
+GenLoot: 99
 GenEquip: 5
 E
 #2977
@@ -1269,8 +1266,8 @@ você.
 14 16 1 2d2+140 2d2+2
 140 19600
 9 9 1
-GenWimpy: 9
-GenLoot: 23
+GenWimpy: 10
+GenLoot: 25
 GenEquip: 6
 E
 #2980
@@ -1287,7 +1284,7 @@ meninas da cozinha.
 100 10000
 9 9 2
 BareHandAttack: 5
-GenWimpy: 2
+GenWimpy: 3
 E
 #2981
 Degruziel Senhor Porto~
@@ -1324,7 +1321,7 @@ alimentar uma família de pescadores por semanas.
 9 9 1
 BareHandAttack: 1
 GenWimpy: 7
-GenRoam: 40
+GenRoam: 34
 E
 #2983
 criado~
@@ -1338,11 +1335,11 @@ importante... Embora o que exatamente ele está fazendo não seja aparente.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 23
+GenWimpy: 24
 GenLoot: 31
 GenEquip: 7
-GenRoam: 87
-GenGroup: 54
+GenRoam: 83
+GenGroup: 50
 E
 #2984
 mestre estabulo~
@@ -1390,8 +1387,8 @@ de carregar coisas para lá e para cá o dia todo lhe deram músculos salientes.
 100 10000
 9 9 2
 BareHandAttack: 4
-GenWimpy: 4
-GenRoam: 54
+GenWimpy: 6
+GenRoam: 59
 E
 #2987
 carroceiro xingando~
@@ -1489,9 +1486,10 @@ ligeiramente aberta enquanto olha ao redor com olhos arregalados para as paisage
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
-GenWimpy: 12
-GenEquip: 7
+GenWimpy: 9
+GenEquip: 8
 GenRoam: 89
+GenBrave: 1
 E
 #2993
 crianca feliz menino~
@@ -1544,10 +1542,10 @@ tem uma expressão zangada no rosto. Nossa, alguém está em apuros.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
-GenWimpy: 7
+GenWimpy: 9
 GenLoot: 3
 GenEquip: 1
-GenRoam: 59
+GenRoam: 56
 E
 #2996
 cidadao homem~
