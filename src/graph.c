@@ -1237,15 +1237,14 @@ ACMD(do_track)
             int keys_in_zones;
 
             send_to_char(ch, "\r\n\tg=== ANÁLISE DE ZONA INTEGRADA ===\tn\r\n");
-            send_to_char(ch, "Zona atual: %d (%s)\r\n", zone_table[src_zone].number, zone_table[src_zone].name);
-            send_to_char(ch, "Zona destino: %d (%s)\r\n", zone_table[target_zone].number, zone_table[target_zone].name);
+            send_to_char(ch, "Zona atual: (%s)\r\n", zone_table[src_zone].name);
+            send_to_char(ch, "Zona destino: (%s)\r\n", zone_table[target_zone].name);
 
             if (num_zones > 0) {
                 send_to_char(ch, "\tyCaminho de zonas encontrado (%d zonas):\tn\r\n", num_zones);
                 int i;
                 for (i = 0; i < num_zones && i < 5; i++) {
-                    send_to_char(ch, "%d. Zona %d (%s)\r\n", i + 1, zone_table[zone_path[i]].number,
-                                 zone_table[zone_path[i]].name);
+                    send_to_char(ch, "%d. Zona (%s)\r\n", i + 1, zone_table[zone_path[i]].name);
                 }
                 if (num_zones > 5) {
                     send_to_char(ch, "... e mais %d zonas\r\n", num_zones - 5);
