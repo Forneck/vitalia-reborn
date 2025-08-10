@@ -57,10 +57,10 @@ int calculate_movement_cost(struct char_data *ch, room_rnum room)
 }
 
 /* Advanced pathfinding structures for state-based search */
-#define MAX_COLLECTED_KEYS 50        /* Reduced from 50 to limit complexity */
+#define MAX_COLLECTED_KEYS 50         /* Reduced from 50 to limit complexity */
 #define MAX_VISITED_STATES 1000       /* Reduced from 1000 to limit memory usage */
 #define MAX_PATHFIND_ITERATIONS 10000 /* Limit iterations to prevent infinite loops */
-#define MAX_ZONE_PATH 150            /* Maximum zones in a path */
+#define MAX_ZONE_PATH 150             /* Maximum zones in a path */
 
 struct path_state {
     room_rnum room;                         /* Current room */
@@ -317,6 +317,10 @@ static int zone_has_connection_to(zone_rnum from_zone, zone_rnum to_zone)
     int first, last, j;
 
     if (from_zone == NOWHERE || to_zone == NOWHERE || from_zone > top_of_zone_table || to_zone > top_of_zone_table)
+        return 0;
+
+    /* Skip zones marked as CLOSED - players and mobs shouldn't access them */
+    if (ZONE_FLAGGED(from_zone, ZONE_CLOSED) || ZONE_FLAGGED(to_zone, ZONE_CLOSED))
         return 0;
 
     if (from_zone == to_zone)
