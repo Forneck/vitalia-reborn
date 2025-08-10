@@ -450,7 +450,7 @@ O grande meio-orc rapidamente mede você e volta para seu dever.
 12 10 3 3d10+100 1d6+3
 1 400
 9 9 1
-GenWimpy: 8
+GenWimpy: 9
 E
 T 3013
 #5435
@@ -714,7 +714,7 @@ castrado para a segurança das garotas.
 12 8 0 5d1+130 2d4+4
 0 1300
 9 9 0
-GenWimpy: 53
+GenWimpy: 57
 GenLoot: 10
 GenRoam: 66
 E
@@ -730,7 +730,7 @@ quase a ponto de te matar.
 10 3 -2 1d1+54 2d5+2
 0 150
 5 5 2
-GenWimpy: 44
+GenWimpy: 45
 GenLoot: 4
 E
 #5455

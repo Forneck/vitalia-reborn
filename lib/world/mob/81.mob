@@ -504,7 +504,6 @@ Você fica assustado com a agressividade desse pequeno escaravelho negro...
 0 100
 9 9 1
 GenWimpy: 5
-GenRoam: 8
 E
 #8137
 rato~
@@ -606,7 +605,7 @@ sua busca por comida.
 5 19 0 2d2+50 2d1+3
 0 500
 9 9 1
-GenWimpy: 31
+GenWimpy: 32
 GenRoam: 61
 E
 #8144
@@ -724,9 +723,8 @@ que deve ser sua boca.
 30 10 0 2d5+1000 2d2+14
 0 21000
 9 9 2
-GenWimpy: 11
-GenRoam: 87
-GenGroup: 1
+GenWimpy: 13
+GenRoam: 88
 E
 #8152
 soldado egipcio~

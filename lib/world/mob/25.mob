@@ -182,9 +182,9 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 25
+GenWimpy: 21
 GenLoot: 5
-GenRoam: 17
+GenRoam: 7
 E
 #2513
 guardioes maiores olhos~
@@ -261,7 +261,7 @@ Ele parece estar sonhando.
 7 7 2 7d6+25 2d4+4
 211 2650
 4 4 1
-GenWimpy: 99
+GenWimpy: 100
 GenLoot: 3
 E
 T 3009

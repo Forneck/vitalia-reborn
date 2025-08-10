@@ -40,9 +40,9 @@ Que bela fada você pode ver deste ângulo.
 16 4 3 1d1+600 6d1+16
 275 30000
 9 9 2
-GenWimpy: 30
+GenWimpy: 36
 GenLoot: 3
-GenRoam: 89
+GenRoam: 84
 E
 #13503
 inseto folha inseto-folha~
@@ -185,7 +185,7 @@ Seus olhos possuem uma expressão não muito amigável.
 14 6 4 1d1+400 6d1+14
 0 13496
 9 9 1
-GenWimpy: 99
+GenWimpy: 100
 GenLoot: 7
 GenRoam: 89
 E

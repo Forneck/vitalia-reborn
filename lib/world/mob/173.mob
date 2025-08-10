@@ -657,7 +657,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 29
+GenWimpy: 20
 E
 #17344
 escrava~
@@ -966,6 +966,6 @@ resistir.
 9 9 2
 GenWimpy: 17
 GenLoot: 2
-GenRoam: 54
+GenRoam: 48
 E
 $

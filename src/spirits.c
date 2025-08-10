@@ -293,8 +293,11 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
             obj_from_char(corpse);
         else if (corpse->in_obj)
             obj_from_obj(corpse);
-    } else
-        act("Não tendo corpo para voltar a vida, você volta \tRpelad$r\tn!", FALSE, raiser, 0, ch, TO_CHAR);
+    } else {
+        act("Não tendo corpo para voltar a vida, você volta \tRpelad$r\tn!", FALSE, ch, 0, ch, TO_CHAR);
+        act("Não tendo corpo para voltar a vida, $n volta \tRpelad$r\tn!", FALSE, raiser, 0, ch, TO_CHAR);
+
+    }
     save_char(ch);
 }
 

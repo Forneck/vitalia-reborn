@@ -113,9 +113,9 @@ Apenas um sete comum ...
 10 15 2 2d6+100 2d4+0
 500 9000
 9 9 1
-GenWimpy: 14
+GenWimpy: 15
 GenLoot: 2
-GenRoam: 87
+GenRoam: 84
 E
 #9208
 sete espadas~
@@ -171,9 +171,9 @@ Apenas um três comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 51
+GenWimpy: 52
 GenLoot: 3
-GenRoam: 83
+GenRoam: 81
 E
 #9212
 tres ouros~
@@ -230,7 +230,7 @@ Apenas um três (?) comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 52
+GenWimpy: 54
 GenLoot: 5
 GenRoam: 54
 E

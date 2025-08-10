@@ -41,7 +41,6 @@ Um pouco menor do que um elemental comum. Ele parece ser um rejeitado.
 9 9 1
 GenWimpy: 100
 GenLoot: 11
-GenRoam: 2
 E
 #17004
 elemental guardiao~
@@ -248,7 +247,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 96
+GenWimpy: 97
 GenLoot: 1
 E
 #17020
@@ -263,8 +262,8 @@ que suas calças sequem rápido.
 8 12 1 1d5+250 3d5+4
 1000 4000
 9 9 2
-GenWimpy: 83
-GenLoot: 8
+GenWimpy: 88
+GenLoot: 9
 GenRoam: 45
 E
 #17021
@@ -401,10 +400,9 @@ Elas parecem estar formando um tipo de humanóide. E sua expressão não
 26 -2 -5 1d5+620 6d5+12
 3000 30000
 9 9 1
-GenWimpy: 100
+GenWimpy: 97
 GenLoot: 6
 GenRoam: 89
-GenGroup: 1
 E
 #17030
 furacao~

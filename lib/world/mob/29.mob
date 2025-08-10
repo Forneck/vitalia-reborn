@@ -400,10 +400,10 @@ uma reposição.
 70 4900
 9 9 1
 BareHandAttack: 1
-GenWimpy: 5
+GenWimpy: 6
 GenLoot: 8
 GenEquip: 4
-GenRoam: 83
+GenRoam: 78
 E
 #2935
 cavalheiro gentil~
@@ -469,7 +469,7 @@ perder uma refeição.
 GenWimpy: 10
 GenLoot: 4
 GenEquip: 3
-GenRoam: 24
+GenRoam: 22
 GenGroup: 3
 E
 #2938
@@ -571,7 +571,7 @@ nas sombras.
 100 10000
 9 9 1
 GenWimpy: 8
-GenRoam: 77
+GenRoam: 75
 E
 #2943
 crianca pequena~
@@ -721,7 +721,7 @@ Um esquizofrênico paranoico está aqui, gritando para o mundo.
 9 9 2
 Str: 14
 Dex: 14
-GenWimpy: 85
+GenWimpy: 90
 GenLoot: 5
 GenRoam: 88
 E
@@ -1216,7 +1216,7 @@ Str: 9
 Dex: 15
 Int: 10
 Wis: 12
-GenWimpy: 5
+GenWimpy: 6
 GenLoot: 99
 GenEquip: 5
 E

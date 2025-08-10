@@ -57,10 +57,10 @@ int calculate_movement_cost(struct char_data *ch, room_rnum room)
 }
 
 /* Advanced pathfinding structures for state-based search */
-#define MAX_COLLECTED_KEYS 50               /* Reduced from 50 to limit complexity */
+#define MAX_COLLECTED_KEYS 10               /* Reduced from 50 to limit complexity */
 #define MAX_VISITED_STATES 1000             /* Reduced from 1000 to limit memory usage */
-#define MAX_PATHFIND_ITERATIONS_LIMIT 50000 /* Maximum compile-time limit for iterations */
-#define MAX_ZONE_PATH_LIMIT 500             /* Maximum compile-time limit for zone path */
+#define MAX_PATHFIND_ITERATIONS_LIMIT 10000 /* Maximum compile-time limit for iterations */
+#define MAX_ZONE_PATH_LIMIT 150             /* Maximum compile-time limit for zone path */
 
 /* Dynamic scaling functions for pathfinding parameters */
 static int get_dynamic_max_pathfind_iterations(void)
@@ -1287,7 +1287,8 @@ ACMD(do_track)
                 break;
             default: /* Success! */
                 /* Check if player has enough MV for the next step */
-                int next_room_cost = calculate_movement_cost(ch, TOROOM(IN_ROOM(ch), dir));
+                int next_room_cost;
+		next_room_cost = calculate_movement_cost(ch, TOROOM(IN_ROOM(ch), dir));
 
                 if (GET_MOVE(ch) < next_room_cost && !IS_NPC(ch)) {
                     send_to_char(ch,
