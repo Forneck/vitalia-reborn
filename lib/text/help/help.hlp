@@ -12692,11 +12692,36 @@ TRACK TRAIL TRILHA RASTREAR
    Usado para se saber o caminho da rota mais curta que leva a um monstro.
 
    Este comando mostra apenas a direcao aproximada. As vezes uma porta fechada no caminho pode esfriar a trilha, mas nem sempre.
+   
+   Com habilidade de rastreamento avancada (nivel 75+), voce pode usar o comando PATHFIND para analise detalhada de caminhos multiplos.
 
 Exemplo:
   > track fido
   Voce sente um rastro a sul daqui!
+
+Veja tambem: PATHFIND
 #1
+PATHFIND
+
+Uso: pathfind <alvo> [analyze|compare]
+
+   O pathfind e uma versao avancada do comando track que requer habilidade
+de rastreamento nivel 75 ou superior. Ele fornece analise detalhada de
+multiplos caminhos possiveis ate o alvo.
+
+   analyze  - Mostra analise detalhada de multiplos caminhos alternativos
+   compare  - Compara entre metodos basico e avancado de rastreamento
+
+   Este comando consome mais energia mental que o track simples e pode
+falhar mesmo com alta habilidade de rastreamento.
+
+Exemplos:
+  > pathfind fido
+  > pathfind guard analyze
+  > pathfind orc compare
+
+Veja tambem: TRACK
+#0
 TRACKTHRU
 
 Usage: toggle trackthru
@@ -16375,5 +16400,165 @@ Exemplos:
    Voce escuta Fulano murmurando algo sobre 'um tesouro escondido'.
 
 Veja tambem: MINE, FISHING, FORAGE, SKILLS
+#0
+GSTATS
+
+Usage: gstats <target> <gene>
+       gstats zone <zone_num> <gene>
+
+   Displays genetic statistics for mobs. Target can be a specific mob name/vnum,
+zone number, or 'all' for comprehensive analysis.
+
+Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer
+
+   This command analyzes genetic tendencies in mob behavior patterns and 
+provides statistical information including mean, median, standard deviation,
+and min/max values for the specified genetic trait.
+
+Examples:
+  > gstats all wimpy
+  > gstats zone 30 loot
+  > gstats orc brave
+
+See also: MWISHLIST, MWANT, STAT
+#101
+MWISHLIST
+
+Usage: mwishlist <mob name or 'all'>
+
+   Displays the AI wishlist for specified mobs, showing items they desire
+to acquire along with priorities and timing information.
+
+   The wishlist system controls advanced mob AI behavior, including item
+seeking, goal pursuit, and intelligent decision making.
+
+   When used with 'all', shows wishlists for all mobs in the current room.
+Individual mob names can be used to examine specific mob AI states.
+
+Examples:
+  > mwishlist guard
+  > mwishlist all
+
+See also: MWANT, GSTATS, STAT
+#101
+MWANT
+
+Usage: mwant <mob name> <item vnum> [priority]
+
+   Adds an item to a mob's AI wishlist with optional priority setting.
+Default priority is 150 if not specified.
+
+   This command manipulates mob AI behavior by making the mob desire
+specific items. The mob will attempt to acquire these items through
+various means based on their AI programming.
+
+   Only works on mobs with AI data. Priority affects how strongly the
+mob desires the item relative to other goals.
+
+Examples:
+  > mwant guard 1234
+  > mwant orc 5678 200
+
+See also: MWISHLIST, GSTATS, STAT
+#101
+RSKILL
+
+Usage: rskill <player> <list|add|remove> [skill_num] [value]
+       rskill <player> list - Show all retained skills
+       rskill <player> add <skill_num> <value> - Add/set retained skill
+       rskill <player> remove <skill_num> - Remove retained skill
+
+   Manages retained skills for players who have gone through the rebegin
+process. Retained skills are preserved across character reincarnations.
+
+   This command allows direct manipulation of the retained skills system,
+letting immortals add, remove, or modify skills that players keep when
+they reincarnate through the rebegin system.
+
+   Only works on player characters, not NPCs.
+
+Examples:
+  > rskill player list
+  > rskill player add 142 75
+  > rskill player remove 142
+
+See also: REBEGIN, ADVANCE, SKILLSET
+#107
+SYSLOG RUSAGE
+
+   The syslog rusage line provides system resource usage information that
+appears periodically in the system log. This information is only visible
+to immortals level LVL_GRGOD and above.
+
+   The rusage line shows:
+   - User time: CPU time spent executing user code (in seconds)
+   - System time: CPU time spent in system calls (in seconds)  
+   - Max res size: Maximum resident set size (memory usage)
+
+   This information helps monitor server performance and resource consumption.
+The data comes from the getrusage() system call and is logged automatically
+by the MUD server at regular intervals.
+
+Example log entry:
+   rusage: user time: 45 sec, system time: 12 sec, max res size: 524288
+
+See also: SYSLOG, LOG
+#108
+REBEGIN RENASCER
+
+Uso: rebegin
+
+   O comando rebegin permite que personagens elegíveis passem por um
+processo de reencarnacao, mantendo algumas habilidades enquanto escolhem
+uma nova classe e atributos.
+
+   Para ser elegível ao rebegin, você deve atender a certos requisitos de
+nível e experiência. Este processo é irreversível uma vez iniciado.
+
+   Durante o rebegin você poderá:
+   - Escolher uma habilidade para manter de sua vida anterior
+   - Selecionar uma nova classe
+   - Rejeitar atributos até estar satisfeito
+
+   Este comando só pode ser usado fora de combate.
+
+Exemplo:
+  > rebegin
+  [Inicia o processo de reencarnacao]
+
+Veja tambem: ELEVATE, CLASS
+#0
+ELEVATE TRANSCENDER
+
+Uso: elevate
+
+   O comando elevate permite que personagens elegíveis transcendam sua
+existência mortal e se tornem imortais. Esta é uma decisão irreversível
+que marca o fim da jornada mortal do personagem.
+
+   Para ser elegível à transcendência, você deve ter experimentado todas
+as classes disponíveis através do sistema de rebegin e atender a outros
+requisitos específicos.
+
+   Uma vez que você transcenda, não poderá mais retornar à vida mortal.
+Este comando representa a conclusão definitiva da progressão do personagem.
+
+   Este comando só pode ser usado fora de combate.
+
+Exemplo:
+  > elevate
+  [Inicia o processo de transcendência]
+
+Veja tambem: REBEGIN, CLASS
+#0
+WANT
+
+Uso: want
+
+   Comando atualmente não implementado. 
+   
+   Este comando foi reservado para futuras funcionalidades relacionadas
+ao sistema de desejos ou lista de itens desejados pelos jogadores.
+
 #0
 $~
