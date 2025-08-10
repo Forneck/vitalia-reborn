@@ -97,7 +97,9 @@ noperson = Ninguém com esse nome aqui.
 * Text sent to players when an effect fails.
 noeffect = Aparentemente, nada aconteceu.
 
+max_pathfind_iterations = 10000
 
+max_zone_path = 127
 
 
 * [ Rent/Crashsave Options ]

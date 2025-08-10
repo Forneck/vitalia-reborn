@@ -789,7 +789,7 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
         "%s9%s) Fit Evolve             : %s%s\r\n"
         "%sZ%s) School Weather Effects  : %s%s\r\n"
         "%s0%s) Weather Affects Spells  : %s%s\r\n"
-        "%s!%s) Max Pathfind Iterations : %s%d\r\n"
+        "%sX%s) Max Pathfind Iterations : %s%d\r\n"
         "%s@%s) Max Zone Path Length    : %s%d\r\n"
         "%sQ%s) Exit To The Main Menu\r\n"
         "Enter your choice : ",
@@ -1180,7 +1180,8 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     TOGGLE_VAR(OLC_CONFIG(d)->play.weather_affects_spells);
                     break;
 
-                case '!':
+                case 'x':
+		case 'X':
                     write_to_output(d, "\r\nEnter max pathfind iterations (0=dynamic, 1-50000): ");
                     OLC_MODE(d) = CEDIT_MAX_PATHFIND_ITERATIONS;
                     return;
