@@ -82,6 +82,8 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->play.fit_evolve = CONFIG_FIT_EVOLVE;
     OLC_CONFIG(d)->play.weather_affects_spells = CONFIG_WEATHER_AFFECTS_SPELLS;
     OLC_CONFIG(d)->play.school_weather_affects = CONFIG_SCHOOL_WEATHER_AFFECTS;
+    OLC_CONFIG(d)->play.max_pathfind_iterations = CONFIG_MAX_PATHFIND_ITERATIONS;
+    OLC_CONFIG(d)->play.max_zone_path = CONFIG_MAX_ZONE_PATH;
     OLC_CONFIG(d)->play.level_can_shout = CONFIG_LEVEL_CAN_SHOUT;
     OLC_CONFIG(d)->play.holler_move_cost = CONFIG_HOLLER_MOVE_COST;
     OLC_CONFIG(d)->play.tunnel_size = CONFIG_TUNNEL_SIZE;
@@ -196,6 +198,8 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_FIT_EVOLVE = OLC_CONFIG(d)->play.fit_evolve;
     CONFIG_WEATHER_AFFECTS_SPELLS = OLC_CONFIG(d)->play.weather_affects_spells;
     CONFIG_SCHOOL_WEATHER_AFFECTS = OLC_CONFIG(d)->play.school_weather_affects;
+    CONFIG_MAX_PATHFIND_ITERATIONS = OLC_CONFIG(d)->play.max_pathfind_iterations;
+    CONFIG_MAX_ZONE_PATH = OLC_CONFIG(d)->play.max_zone_path;
     CONFIG_LEVEL_CAN_SHOUT = OLC_CONFIG(d)->play.level_can_shout;
     CONFIG_HOLLER_MOVE_COST = OLC_CONFIG(d)->play.holler_move_cost;
     CONFIG_TUNNEL_SIZE = OLC_CONFIG(d)->play.tunnel_size;
@@ -451,6 +455,14 @@ int save_config(IDXTYPE nowhere)
             "* Does weather affect spells based on school?\n"
             "school_weather_affects = %d\n\n",
             CONFIG_SCHOOL_WEATHER_AFFECTS);
+    fprintf(fl,
+            "* Maximum iterations for advanced pathfinding (0=dynamic scaling)\n"
+            "max_pathfind_iterations = %d\n\n",
+            CONFIG_MAX_PATHFIND_ITERATIONS);
+    fprintf(fl,
+            "* Maximum zones in a pathfinding path (0=dynamic scaling)\n"
+            "max_zone_path = %d\n\n",
+            CONFIG_MAX_ZONE_PATH);
 
     strcpy(buf, CONFIG_OK);
     strip_cr(buf);
@@ -777,6 +789,8 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
         "%s9%s) Fit Evolve             : %s%s\r\n"
         "%sZ%s) School Weather Effects  : %s%s\r\n"
         "%s0%s) Weather Affects Spells  : %s%s\r\n"
+        "%s!%s) Max Pathfind Iterations : %s%d\r\n"
+        "%s@%s) Max Zone Path Length    : %s%d\r\n"
         "%sQ%s) Exit To The Main Menu\r\n"
         "Enter your choice : ",
         grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.pk_allowed), grn, nrm, cyn,
@@ -796,7 +810,8 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
         OLC_CONFIG(d)->play.map_size, grn, nrm, cyn, OLC_CONFIG(d)->play.minimap_size, grn, nrm, cyn,
         CHECK_VAR(OLC_CONFIG(d)->play.script_players), grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.fit_evolve), grn,
         nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.school_weather_affects), grn, nrm, cyn,
-        CHECK_VAR(OLC_CONFIG(d)->play.weather_affects_spells), grn, nrm),
+        CHECK_VAR(OLC_CONFIG(d)->play.weather_affects_spells), grn, nrm, cyn,
+        OLC_CONFIG(d)->play.max_pathfind_iterations, grn, nrm, cyn, OLC_CONFIG(d)->play.max_zone_path, grn, nrm),
 
         OLC_MODE(d) = CEDIT_GAME_OPTIONS_MENU;
 }
@@ -1164,6 +1179,16 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case '0':
                     TOGGLE_VAR(OLC_CONFIG(d)->play.weather_affects_spells);
                     break;
+
+                case '!':
+                    write_to_output(d, "\r\nEnter max pathfind iterations (0=dynamic, 1-50000): ");
+                    OLC_MODE(d) = CEDIT_MAX_PATHFIND_ITERATIONS;
+                    return;
+
+                case '@':
+                    write_to_output(d, "\r\nEnter max zone path length (0=dynamic, 1-500): ");
+                    OLC_MODE(d) = CEDIT_MAX_ZONE_PATH;
+                    return;
 
                 case 'q':
                 case 'Q':
@@ -1987,6 +2012,28 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 cedit_disp_game_play_options(d);
             } else {
                 OLC_CONFIG(d)->play.minimap_size = MIN(MAX((atoi(arg)), 1), 12);
+                cedit_disp_game_play_options(d);
+            }
+            break;
+
+        case CEDIT_MAX_PATHFIND_ITERATIONS:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter max pathfind iterations (0=dynamic, 1-50000): ");
+            } else {
+                OLC_CONFIG(d)->play.max_pathfind_iterations = MIN(MAX(atoi(arg), 0), 50000);
+                cedit_disp_game_play_options(d);
+            }
+            break;
+
+        case CEDIT_MAX_ZONE_PATH:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter max zone path length (0=dynamic, 1-500): ");
+            } else {
+                OLC_CONFIG(d)->play.max_zone_path = MIN(MAX(atoi(arg), 0), 500);
                 cedit_disp_game_play_options(d);
             }
             break;

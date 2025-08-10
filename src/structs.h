@@ -1541,8 +1541,10 @@ struct game_data {
     int minimap_size;        /**< Default size for mini-map (automap)  */
     int script_players;      /**< Is attaching scripts to players allowed? */
     int fit_evolve;
-    int weather_affects_spells; /**< Does weather affect spell effectiveness? */
-    int school_weather_affects; /**< Does weather affect spells based on school? */
+    int weather_affects_spells;  /**< Does weather affect spell effectiveness? */
+    int school_weather_affects;  /**< Does weather affect spells based on school? */
+    int max_pathfind_iterations; /**< Maximum iterations for advanced pathfinding */
+    int max_zone_path;           /**< Maximum zones in a pathfinding path */
 
     char *OK;       /**< When player receives 'Okay.' text.    */
     char *HUH;      /**< 'Huh!?!'                              */
