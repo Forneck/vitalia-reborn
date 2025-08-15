@@ -58,7 +58,7 @@ int calculate_movement_cost(struct char_data *ch, room_rnum room)
 
 /* Advanced pathfinding structures for state-based search */
 #define MAX_COLLECTED_KEYS 5               /* Reduced from 50 to limit complexity */
-#define MAX_VISITED_STATES 1000             /* Reduced from 1000 to limit memory usage */
+#define MAX_VISITED_STATES 1000            /* Reduced from 1000 to limit memory usage */
 #define MAX_PATHFIND_ITERATIONS_LIMIT 2000 /* Maximum compile-time limit for iterations */
 #define MAX_ZONE_PATH_LIMIT 60             /* Maximum compile-time limit for zone path */
 
@@ -1723,8 +1723,8 @@ int mob_smart_pathfind(struct char_data *ch, room_rnum target_room)
             }
         }
 
-        if (has_keys || GET_LEVEL(ch) > 10) {
-            /* Only use advanced pathfinding if mob has keys or is high level */
+        if (has_keys || GET_INT(ch) >= 15) {
+            /* Only use advanced pathfinding if mob has keys or has sufficient intelligence */
             int advanced_cost = 0, advanced_mv = 0;
             char *advanced_desc = NULL;
 
