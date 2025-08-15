@@ -64,9 +64,9 @@ Você percebe toda a maldade no seu olhar...
 5 15 5 2d10+60 2d4+0
 100 900
 9 9 0
-GenWimpy: 100
+GenWimpy: 98
 GenLoot: 3
-GenRoam: 86
+GenRoam: 84
 E
 #4005
 orc enorme~
@@ -106,7 +106,7 @@ Ele parece ter jeito com armas.
 7 13 5 3d10+80 2d5+0
 200 2500
 9 9 1
-GenWimpy: 100
+GenWimpy: 99
 GenLoot: 6
 GenRoam: 89
 E

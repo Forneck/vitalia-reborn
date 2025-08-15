@@ -144,7 +144,7 @@ Esse macaquinho é muito mal educado!
 300 2000
 9 9 1
 BareHandAttack: 7
-GenWimpy: 99
+GenWimpy: 100
 GenLoot: 8
 GenRoam: 88
 E
@@ -254,7 +254,7 @@ sua última refeição.
 6 10 6 2d2+100 3d3+6
 1000 3700
 9 9 2
-GenWimpy: 100
+GenWimpy: 98
 GenLoot: 41
 GenRoam: 59
 E

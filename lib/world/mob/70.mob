@@ -12,10 +12,9 @@ no café da manhã e está com a intenção de comer o mesmo no jantar.
 12 9 2 4d6+140 2d5+3
 100 13000
 9 9 0
-GenWimpy: 2
-GenRoam: 57
+GenWimpy: 4
+GenRoam: 61
 GenGroup: 3
-GenBrave: 1
 E
 #7001
 morcego pequeno ameacador~
@@ -44,7 +43,7 @@ An undefined string.
 5 16 5 1d12+48 2d4+0
 30 1000
 9 9 1
-GenWimpy: 24
+GenWimpy: 22
 GenLoot: 6
 E
 #7003
@@ -101,7 +100,7 @@ An undefined string.
 9 9 2
 GenWimpy: 97
 GenLoot: 4
-GenRoam: 87
+GenRoam: 86
 E
 T 3008
 #7007

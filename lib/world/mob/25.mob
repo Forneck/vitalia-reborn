@@ -9,7 +9,7 @@ Isto parece ser feito de nada mais que escuridão...
 9 10 1 9d9+90 2d5+5
 100 4000
 9 9 0
-GenWimpy: 59
+GenWimpy: 57
 GenLoot: 2
 GenRoam: 89
 E
@@ -67,8 +67,8 @@ Ou então, ele pode apenas estar com dor de cabeça.
 10 10 -1 10d10+100 1d8+8
 436 3500
 9 9 1
-GenWimpy: 7
-GenRoam: 88
+GenWimpy: 6
+GenRoam: 89
 E
 T 3009
 #2505
@@ -182,9 +182,8 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 21
+GenWimpy: 15
 GenLoot: 5
-GenRoam: 7
 E
 #2513
 guardioes maiores olhos~
@@ -197,11 +196,11 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 16
+GenWimpy: 15
 GenLoot: 81
 GenEquip: 2
-GenRoam: 89
-GenGroup: 85
+GenRoam: 87
+GenGroup: 81
 E
 #2514
 mago visitante~
@@ -261,7 +260,7 @@ Ele parece estar sonhando.
 7 7 2 7d6+25 2d4+4
 211 2650
 4 4 1
-GenWimpy: 100
+GenWimpy: 98
 GenLoot: 3
 E
 T 3009
@@ -806,7 +805,7 @@ garras bem grandes.
 15 5 -5 15d15+150 5d5+5
 0 18750
 9 9 2
-GenWimpy: 22
+GenWimpy: 23
 E
 #2556
 mestre cinza~

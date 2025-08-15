@@ -67,10 +67,10 @@ que você está esperando?  AO ATAQUE!
 12 13 0 15d6+100 2d6+6
 0 8000
 9 9 2
-GenWimpy: 99
+GenWimpy: 100
 GenLoot: 17
 GenEquip: 1
-GenRoam: 88
+GenRoam: 87
 E
 #19705
 cobra verde~
@@ -118,7 +118,7 @@ desejá-la.
 GenWimpy: 8
 GenLoot: 19
 GenEquip: 4
-GenRoam: 56
+GenRoam: 61
 E
 #19708
 orc lider negro~
@@ -189,7 +189,7 @@ este...
 12 10 -2 15d6+350 6d6+12
 100 10000
 5 4 2
-GenWimpy: 5
+GenWimpy: 6
 E
 #19712
 sacerdote orc~

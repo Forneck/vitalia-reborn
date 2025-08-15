@@ -199,7 +199,7 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 100
+GenWimpy: 98
 GenLoot: 4
 E
 #712
@@ -290,10 +290,10 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
-GenWimpy: 94
+GenWimpy: 92
 GenLoot: 3
-GenRoam: 81
-GenGroup: 23
+GenRoam: 75
+GenGroup: 21
 E
 #716
 pequena encurvada crianca criança~

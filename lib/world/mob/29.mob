@@ -14,7 +14,7 @@ Str: 17
 Dex: 15
 Int: 13
 Wis: 13
-GenWimpy: 8
+GenWimpy: 6
 GenLoot: 99
 GenEquip: 22
 E
@@ -150,9 +150,9 @@ Dex: 13
 Int: 14
 Wis: 13
 GenWimpy: 5
-GenLoot: 51
+GenLoot: 52
 GenEquip: 5
-GenRoam: 70
+GenRoam: 67
 E
 #2920
 conselheiro Degruziel~
@@ -384,8 +384,8 @@ através de você. Parece completamente destemido.
 GenWimpy: 5
 GenLoot: 9
 GenEquip: 6
-GenRoam: 73
-GenGroup: 26
+GenRoam: 71
+GenGroup: 29
 E
 #2934
 garoto servente~
@@ -422,11 +422,11 @@ Str: 14
 Dex: 13
 Int: 15
 Wis: 14
-GenWimpy: 9
+GenWimpy: 8
 GenLoot: 11
 GenEquip: 2
-GenRoam: 80
-GenGroup: 36
+GenRoam: 77
+GenGroup: 34
 E
 #2936
 dama bem nascida~
@@ -570,8 +570,8 @@ nas sombras.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 1
-GenWimpy: 8
-GenRoam: 75
+GenWimpy: 11
+GenRoam: 76
 E
 #2943
 crianca pequena~
@@ -611,6 +611,7 @@ Str: 14
 Dex: 13
 Int: 15
 Wis: 14
+GenWimpy: 1
 E
 #2945
 forma sombria~
@@ -645,7 +646,7 @@ Um homem está aqui, dormindo em sua cama de viagem.
 10 17 4 2d2+100 1d2+1
 100 10000
 4 4 1
-GenWimpy: 9
+GenWimpy: 8
 GenLoot: 14
 GenEquip: 2
 E
@@ -704,7 +705,7 @@ silenciosamente para si mesmo.
 70 4900
 9 9 1
 BareHandAttack: 13
-GenWimpy: 14
+GenWimpy: 15
 GenLoot: 4
 GenEquip: 2
 E
@@ -721,9 +722,9 @@ Um esquizofrênico paranoico está aqui, gritando para o mundo.
 9 9 2
 Str: 14
 Dex: 14
-GenWimpy: 90
+GenWimpy: 86
 GenLoot: 5
-GenRoam: 88
+GenRoam: 85
 E
 #2951
 idiota~
@@ -954,8 +955,7 @@ Um caranguejo rei está aqui, parecendo mal-humorado.
 100 10000
 9 9 0
 BareHandAttack: 11
-GenWimpy: 9
-GenRoam: 2
+GenWimpy: 10
 E
 #2964
 mulher~
@@ -1026,7 +1026,7 @@ lá embaixo esperando que ele jogue um peixe em suas carroças.
 BareHandAttack: 7
 Str: 16
 Dex: 15
-GenWimpy: 14
+GenWimpy: 15
 GenLoot: 1
 E
 #2968
@@ -1167,10 +1167,10 @@ Str: 17
 Dex: 12
 Int: 10
 Wis: 10
-GenWimpy: 6
+GenWimpy: 7
 GenLoot: 4
 GenEquip: 1
-GenRoam: 54
+GenRoam: 53
 E
 #2975
 garota especial do harem~
@@ -1192,7 +1192,7 @@ Dex: 15
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenLoot: 80
+GenLoot: 81
 GenEquip: 9
 E
 T 2902
@@ -1321,8 +1321,8 @@ alimentar uma família de pescadores por semanas.
 100 10000
 9 9 1
 BareHandAttack: 1
-GenWimpy: 7
-GenRoam: 34
+GenWimpy: 8
+GenRoam: 41
 E
 #2983
 criado~
@@ -1336,11 +1336,11 @@ importante... Embora o que exatamente ele está fazendo não seja aparente.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 25
-GenLoot: 31
+GenWimpy: 24
+GenLoot: 32
 GenEquip: 7
-GenRoam: 88
-GenGroup: 48
+GenRoam: 89
+GenGroup: 54
 E
 #2984
 mestre estabulo~
@@ -1544,10 +1544,10 @@ tem uma expressão zangada no rosto. Nossa, alguém está em apuros.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
-GenWimpy: 9
+GenWimpy: 10
 GenLoot: 3
 GenEquip: 1
-GenRoam: 56
+GenRoam: 61
 E
 #2996
 cidadao homem~

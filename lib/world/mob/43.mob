@@ -54,7 +54,7 @@ Ele está vestido com botas pretas, calças marrom e camisa branca.
 8 12 1 5d3+115 3d4+10
 2853 6578
 9 9 1
-GenWimpy: 11
+GenWimpy: 13
 GenRoam: 88
 E
 #4321
@@ -114,7 +114,7 @@ um pombo branco está aqui
 0 250
 9 9 1
 BareHandAttack: 1
-GenWimpy: 19
+GenWimpy: 21
 GenRoam: 66
 E
 #4326
@@ -146,7 +146,7 @@ Ele está vestido com uma túnica marrom.
 3825 2567
 9 9 1
 GenWimpy: 49
-GenRoam: 53
+GenRoam: 47
 E
 #4334
 estatua gargula pedra~

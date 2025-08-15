@@ -790,7 +790,7 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
         "%sZ%s) School Weather Effects  : %s%s\r\n"
         "%s0%s) Weather Affects Spells  : %s%s\r\n"
         "%sX%s) Max Pathfind Iterations : %s%d\r\n"
-        "%s@%s) Max Zone Path Length    : %s%d\r\n"
+        "%sY%s) Max Zone Path Length    : %s%d\r\n"
         "%sQ%s) Exit To The Main Menu\r\n"
         "Enter your choice : ",
         grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.pk_allowed), grn, nrm, cyn,
@@ -1186,7 +1186,8 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = CEDIT_MAX_PATHFIND_ITERATIONS;
                     return;
 
-                case '@':
+                case 'y':
+                case 'Y':
                     write_to_output(d, "\r\nEnter max zone path length (0=dynamic, 1-500): ");
                     OLC_MODE(d) = CEDIT_MAX_ZONE_PATH;
                     return;

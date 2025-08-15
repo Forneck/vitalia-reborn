@@ -475,8 +475,8 @@ brancas, parecem especialmente destacar as preciosas plumas de cor azul oceano.
 5 19 0 2d5+90 1d1+2
 0 80
 9 9 1
-GenWimpy: 3
-GenRoam: 18
+GenWimpy: 4
+GenRoam: 24
 E
 #8135
 gato~
@@ -489,7 +489,7 @@ Esse gato negro aparenta ser muito esperto e corajoso.
 7 19 0 2d5+150 1d2+2
 0 100
 9 9 1
-GenWimpy: 38
+GenWimpy: 40
 GenRoam: 86
 E
 #8136
@@ -516,7 +516,7 @@ Esse rato nojento está todo coberto com um espessa e fétida camada de lama.
 7 19 0 3d3+200 1d2+2
 0 100
 9 9 1
-GenWimpy: 21
+GenWimpy: 22
 E
 #8138
 khons~
@@ -636,7 +636,7 @@ não pisar nessa mortífera víbora do Saara.
 17 8 -1 3d3+300 5d2+12
 0 500
 9 9 2
-GenWimpy: 47
+GenWimpy: 48
 GenLoot: 1
 GenRoam: 89
 E
@@ -723,8 +723,8 @@ que deve ser sua boca.
 30 10 0 2d5+1000 2d2+14
 0 21000
 9 9 2
-GenWimpy: 13
-GenRoam: 88
+GenWimpy: 11
+GenRoam: 89
 E
 #8152
 soldado egipcio~

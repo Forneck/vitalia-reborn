@@ -87,7 +87,7 @@ um guarda espiritual.
 15 6 1 1d8+185 2d8+12
 1555 35000
 9 9 1
-GenWimpy: 79
+GenWimpy: 78
 GenLoot: 13
 E
 #1706
@@ -223,7 +223,7 @@ animal raivoso,  com olhos de inseto.  O efeito é confuso.
 18 3 0 3d6+625 3d6+21
 0 30000
 9 9 1
-GenWimpy: 26
+GenWimpy: 32
 GenLoot: 56
 GenEquip: 1
 GenRoam: 89

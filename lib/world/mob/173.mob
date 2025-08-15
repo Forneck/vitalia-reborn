@@ -297,8 +297,8 @@ vagamente em você!
 60 3 -3 20d20+550 4d4+14
 500 46088
 9 9 1
-GenWimpy: 7
-GenRoam: 22
+GenWimpy: 6
+GenRoam: 19
 E
 #17320
 encantado cavaleiro graduado~
@@ -551,7 +551,7 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
-GenWimpy: 29
+GenWimpy: 36
 GenRoam: 89
 E
 #17337
@@ -657,7 +657,8 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 20
+GenWimpy: 14
+GenLoot: 1
 E
 #17344
 escrava~
@@ -671,7 +672,7 @@ resistir.
 17 6 0 5d4+402 5d6+7
 1000 8870
 9 9 2
-GenWimpy: 11
+GenWimpy: 9
 E
 #17345
 chefe saxao render~

@@ -12,7 +12,7 @@ venenosa desta cobra derrubou muitos faraós poderosos.
 9 9 0
 GenWimpy: 100
 GenLoot: 2
-GenRoam: 73
+GenRoam: 74
 E
 T 3008
 #5301
@@ -65,7 +65,7 @@ roupas cor de areia.
 8 12 5 8d8+80 2d6+2
 200 3750
 9 9 1
-GenWimpy: 98
+GenWimpy: 99
 GenLoot: 20
 GenEquip: 3
 GenRoam: 89
@@ -101,7 +101,7 @@ não hoje...
 18 2 0 18d18+180 3d8+2
 1000 30000
 9 9 1
-GenWimpy: 67
+GenWimpy: 74
 GenLoot: 11
 GenEquip: 2
 GenRoam: 89
@@ -155,7 +155,7 @@ quentes e arenosos.
 GenWimpy: 98
 GenLoot: 12
 GenEquip: 1
-GenRoam: 82
+GenRoam: 89
 E
 #5309
 efreeti~
@@ -215,10 +215,10 @@ dos seus primos mais velhos.
 15 0 -23 15d15+650 4d10+25
 7500 21000
 9 9 2
-GenWimpy: 24
+GenWimpy: 21
 GenLoot: 33
 GenEquip: 3
-GenRoam: 86
+GenRoam: 81
 E
 #5313
 ginoesfinge esfinge~

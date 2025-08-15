@@ -424,7 +424,7 @@ BareHandAttack: 4
 Dex: 12
 Int: 13
 Wis: 13
-GenWimpy: 5
+GenWimpy: 7
 GenLoot: 4
 GenRoam: 89
 E
@@ -626,7 +626,7 @@ Int: 13
 Wis: 13
 GenWimpy: 5
 GenLoot: 2
-GenRoam: 58
+GenRoam: 51
 GenGroup: 1
 E
 #3732

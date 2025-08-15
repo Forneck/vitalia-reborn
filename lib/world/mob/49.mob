@@ -9,9 +9,9 @@ Ele olha calmamente para você e continua a andar lenta e graciosamente.
 2 19 9 2d4+16 1d4+1
 0 400
 9 9 1
-GenWimpy: 100
+GenWimpy: 98
 GenLoot: 4
-GenRoam: 72
+GenRoam: 70
 E
 #4901
 elfo gato~
@@ -64,8 +64,8 @@ Ela parece estar faminta.
 2 18 10 2d4+20 1d3+1
 0 500
 9 9 2
-GenWimpy: 16
-GenRoam: 86
+GenWimpy: 17
+GenRoam: 85
 E
 #4905
 babuino selvagem~
@@ -78,8 +78,8 @@ Ele pula rapidamente pelas árvores, procurando algo para mastigar.
 4 17 6 8d5+20 1d6+1
 0 500
 9 9 1
-GenWimpy: 8
-GenRoam: 66
+GenWimpy: 9
+GenRoam: 68
 E
 #4906
 macaco carnívoro~
@@ -94,8 +94,8 @@ sobrevivência de outros animais.
 0 500
 9 9 1
 GenWimpy: 11
-GenRoam: 80
-GenGroup: 2
+GenRoam: 82
+GenGroup: 1
 E
 #4907
 xamã xama atom~

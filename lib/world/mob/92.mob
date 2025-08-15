@@ -99,8 +99,8 @@ Apenas sete comum ...
 10 15 2 2d6+100 2d4+0
 500 9000
 9 9 1
-GenWimpy: 19
-GenRoam: 85
+GenWimpy: 16
+GenRoam: 83
 E
 #9207
 sete ouros~
@@ -158,7 +158,7 @@ Apenas um sete (?) comum ...
 9 9 1
 GenWimpy: 17
 GenLoot: 6
-GenRoam: 81
+GenRoam: 79
 E
 #9211
 tres copas~
@@ -171,9 +171,9 @@ Apenas um três comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 52
+GenWimpy: 53
 GenLoot: 3
-GenRoam: 81
+GenRoam: 77
 E
 #9212
 tres ouros~
@@ -200,7 +200,7 @@ Apenas um três comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 50
+GenWimpy: 49
 GenLoot: 6
 GenRoam: 37
 E
@@ -215,9 +215,9 @@ Apenas um três comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 51
+GenWimpy: 52
 GenLoot: 2
-GenRoam: 13
+GenRoam: 9
 E
 #9215
 tres coringa~
@@ -230,9 +230,9 @@ Apenas um três (?) comum...
 4 16 7 2d4+50 2d3+1
 250 600
 9 9 1
-GenWimpy: 54
-GenLoot: 5
-GenRoam: 54
+GenWimpy: 56
+GenLoot: 6
+GenRoam: 60
 E
 #9216
 canastra cartas copas~
@@ -509,6 +509,6 @@ louváveis ...
 250 600
 9 9 1
 GenWimpy: 13
-GenRoam: 78
+GenRoam: 77
 E
 $
