@@ -1811,7 +1811,7 @@ int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj)
             break;
         }
 
-        case ITEM_CONTAINER:
+        case ITEM_CONTAINER: {
             int capacity_score = GET_OBJ_VAL(obj, 0) / 2; /* Pontuação base pela capacidade. */
             int need_bonus = 0;
 
@@ -1822,6 +1822,7 @@ int evaluate_item_for_mob(struct char_data *ch, struct obj_data *obj)
 
             score = capacity_score + need_bonus;
             break;
+        }
 
         case ITEM_FOOD:
             if (GET_COND(ch, HUNGER) >= 0 && GET_COND(ch, HUNGER) < 10) {
