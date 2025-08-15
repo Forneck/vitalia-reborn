@@ -793,7 +793,6 @@ int find_first_step_enhanced(struct char_data *ch, room_rnum src, room_rnum targ
 {
     int curr_dir;
     room_rnum curr_room;
-    int step_cost;
 
     *total_cost = 0; /* Initialize total cost */
 
@@ -814,7 +813,6 @@ int find_first_step_enhanced(struct char_data *ch, room_rnum src, room_rnum targ
     for (curr_dir = 0; curr_dir < DIR_COUNT; curr_dir++)
         if (VALID_EDGE(src, curr_dir)) {
             room_rnum next_room = TOROOM(src, curr_dir);
-            step_cost = calculate_movement_cost(ch, next_room);
 
             MARK(next_room);
             bfs_enqueue(next_room, curr_dir);
@@ -1286,9 +1284,10 @@ ACMD(do_track)
                 send_to_char(ch, "Você não encontra nenhum caminho.\r\n");
                 break;
             default: /* Success! */
+            {
                 /* Check if player has enough MV for the next step */
                 int next_room_cost;
-		next_room_cost = calculate_movement_cost(ch, TOROOM(IN_ROOM(ch), dir));
+                next_room_cost = calculate_movement_cost(ch, TOROOM(IN_ROOM(ch), dir));
 
                 if (GET_MOVE(ch) < next_room_cost && !IS_NPC(ch)) {
                     send_to_char(ch,
@@ -1315,6 +1314,7 @@ ACMD(do_track)
                     }
                 }
                 break;
+            }
         }
     }
 }
