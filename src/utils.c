@@ -105,7 +105,7 @@ char *CAP(char *txt)
     return (txt);
 }
 
-#if !defined(HAVE_STRLCPY)
+#if !defined(HAVE_STRLCPY) || defined(NEED_STRLCPY_PROTO)
 /** A 'strlcpy' function in the same fashion as 'strdup' below. This copies up
  * to totalsize - 1 bytes from the source string, placing them and a trailing
  * NUL into the destination string. Returns the total length of the string it
