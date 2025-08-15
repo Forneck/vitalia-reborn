@@ -296,7 +296,6 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
     } else {
         act("Não tendo corpo para voltar a vida, você volta \tRpelad$r\tn!", FALSE, ch, 0, ch, TO_CHAR);
         act("Não tendo corpo para voltar a vida, $n volta \tRpelad$r\tn!", FALSE, raiser, 0, ch, TO_CHAR);
-
     }
     save_char(ch);
 }
