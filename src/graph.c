@@ -58,7 +58,7 @@ int calculate_movement_cost(struct char_data *ch, room_rnum room)
 
 /* Advanced pathfinding structures for state-based search */
 #define MAX_COLLECTED_KEYS 5               /* Reduced from 50 to limit complexity */
-#define MAX_VISITED_STATES 1000             /* Reduced from 1000 to limit memory usage */
+#define MAX_VISITED_STATES 1000            /* Reduced from 1000 to limit memory usage */
 #define MAX_PATHFIND_ITERATIONS_LIMIT 2000 /* Maximum compile-time limit for iterations */
 #define MAX_ZONE_PATH_LIMIT 60             /* Maximum compile-time limit for zone path */
 
