@@ -1459,7 +1459,7 @@ static void cache_pathfind_result_priority(room_rnum src, room_rnum target, int 
     pathfind_cache[oldest_idx].priority = priority;
 }
 
-/* New command for comprehensive pathfinding analysis */
+/* Enhanced pathfind command for comprehensive pathfinding analysis - improved for players */
 ACMD(do_pathfind)
 {
     char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
@@ -1467,6 +1467,7 @@ ACMD(do_pathfind)
     int total_cost = 0, required_mv = 0;
     char *path_description = NULL;
     int dir;
+    int skill_level = GET_SKILL(ch, SKILL_TRACK);
 
     /* The character must have advanced track skill */
     if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_TRACK)) {
@@ -1474,18 +1475,24 @@ ACMD(do_pathfind)
         return;
     }
 
-    if (GET_SKILL(ch, SKILL_TRACK) < 75) {
-        send_to_char(ch, "Seu conhecimento de rastreamento não é avançado o suficiente para análise de caminhos.\r\n");
+    if (skill_level < 75) {
+        send_to_char(
+            ch, "Seu conhecimento de rastreamento não é avançado o suficiente para análise detalhada de caminhos.\r\n");
+        send_to_char(
+            ch, "\tyDica:\tn Use 'track [alvo] advanced' para rastreamento avançado básico (requer nível 60+).\r\n");
         return;
     }
 
     two_arguments(argument, arg1, arg2);
 
     if (!*arg1) {
-        send_to_char(ch, "Analisar caminho para quem?\r\n");
-        send_to_char(ch, "Uso: pathfind <alvo> [analyze|compare]\r\n");
-        send_to_char(ch, "      pathfind <alvo> analyze  - para análise detalhada de múltiplos caminhos\r\n");
-        send_to_char(ch, "      pathfind <alvo> compare  - para comparação entre métodos básico e avançado\r\n");
+        send_to_char(ch, "\tyAnalisar caminho para quem?\tn\r\n");
+        send_to_char(ch, "\tcUso:\tn pathfind <alvo> [analyze|compare]\r\n");
+        send_to_char(ch, "      pathfind <alvo> analyze  - análise detalhada de múltiplos caminhos\r\n");
+        send_to_char(ch, "      pathfind <alvo> compare  - comparação entre métodos básico e avançado\r\n");
+        send_to_char(
+            ch, "\r\n\tyNota:\tn Como rastreador experiente, 'track' já usa técnicas avançadas automaticamente.\r\n");
+        send_to_char(ch, "       Use 'pathfind' apenas para análise detalhada ou comparação de métodos.\r\n");
         return;
     }
 
@@ -1501,13 +1508,14 @@ ACMD(do_pathfind)
         return;
     }
 
-    /* Skill check with higher requirements for pathfind */
-    if (rand_number(0, 101) >= (GET_SKILL(ch, SKILL_TRACK) - 20)) {
-        send_to_char(ch, "Você não consegue analisar um caminho complexo neste momento.\r\n");
+    /* Enhanced skill check for expert analysis */
+    if (rand_number(0, 101) >= (skill_level - 10)) {
+        send_to_char(ch, "Você não consegue fazer uma análise detalhada neste momento.\r\n");
+        send_to_char(ch, "\tyDica:\tn Tente novamente ou use o comando 'track' simples.\r\n");
         return;
     }
 
-    send_to_char(ch, "Analisando caminhos possíveis...\r\n");
+    send_to_char(ch, "\tgAnalisando caminhos possíveis...\tn\r\n");
 
     /* Check for compare mode */
     if (*arg2 && !str_cmp(arg2, "compare")) {
@@ -1521,22 +1529,24 @@ ACMD(do_pathfind)
 
     switch (dir) {
         case BFS_ERROR:
-            send_to_char(ch, "Erro na análise de caminhos.\r\n");
+            send_to_char(ch, "\trErro na análise de caminhos.\tn\r\n");
             break;
 
         case BFS_ALREADY_THERE:
-            send_to_char(ch, "Você já está no mesmo local que o alvo!\r\n");
+            send_to_char(ch, "\tgVocê já está no mesmo local que o alvo!\tn\r\n");
             break;
 
         case BFS_NO_PATH:
-            send_to_char(ch, "Análise completa: Nenhum caminho viável encontrado.\r\n");
+            send_to_char(ch, "\trAnálise completa: Nenhum caminho viável encontrado.\tn\r\n");
             if (path_description && strlen(path_description) > 0) {
-                send_to_char(ch, "%s\r\n", path_description);
+                send_to_char(ch, "\tyDetalhes:\tn %s\r\n", path_description);
             }
-            send_to_char(ch, "Possíveis problemas:\r\n");
+            send_to_char(ch, "\r\n\tcPossíveis problemas:\tn\r\n");
             send_to_char(ch, "- Portas trancadas sem chaves acessíveis\r\n");
             send_to_char(ch, "- Barreiras intransponíveis\r\n");
             send_to_char(ch, "- Alvo em área protegida contra rastreamento\r\n");
+            send_to_char(ch, "\r\n\tyDica:\tn Tente usar 'track' simples para caminhos mais diretos,\r\n");
+            send_to_char(ch, "       ou procure por chaves e aliados que possam ajudar.\r\n");
             break;
 
         default: /* Success! */
@@ -1716,16 +1726,24 @@ int mob_smart_pathfind(struct char_data *ch, room_rnum target_room)
     return chosen_dir;
 }
 
-/* Generate a comprehensive path analysis summary for a target */
+/* Generate a comprehensive path analysis summary for players - enhanced after track improvements */
 char *get_path_analysis_summary(struct char_data *ch, room_rnum target)
 {
     static char summary[MAX_STRING_LENGTH];
     int basic_dir, advanced_dir;
     int basic_cost = 0, advanced_cost = 0, advanced_mv = 0;
     char *advanced_desc = NULL;
+    int skill_level = GET_SKILL(ch, SKILL_TRACK);
 
     /* Clear summary */
     strcpy(summary, "");
+
+    /* Add skill level context */
+    if (skill_level >= 75) {
+        strcat(summary, "\tyComparação detalhada para rastreador experiente:\tn\r\n");
+    } else {
+        strcat(summary, "Análise comparativa de caminhos:\r\n");
+    }
 
     /* Try basic pathfinding first */
     basic_dir = find_first_step_enhanced(ch, IN_ROOM(ch), target, &basic_cost);
@@ -1733,44 +1751,62 @@ char *get_path_analysis_summary(struct char_data *ch, room_rnum target)
     /* Try advanced pathfinding */
     advanced_dir = find_path_with_keys(ch, IN_ROOM(ch), target, &advanced_cost, &advanced_mv, &advanced_desc);
 
-    strcat(summary, "=== ANÁLISE COMPARATIVA DE CAMINHOS ===\r\n");
+    strcat(summary, "=== MÉTODOS DE RASTREAMENTO ===\r\n");
 
     /* Basic pathfinding results */
     if (basic_dir >= 0 && basic_dir < DIR_COUNT) {
         char basic_info[256];
-        snprintf(basic_info, sizeof(basic_info), "Rastreamento Básico: %s (custo estimado: %d MV)\r\n",
+        snprintf(basic_info, sizeof(basic_info), "\tcRastreamento Básico:\tn %s (custo estimado: %d MV)\r\n",
                  dirs_pt[basic_dir], basic_cost);
         strcat(summary, basic_info);
     } else {
-        strcat(summary, "Rastreamento Básico: Nenhum caminho encontrado\r\n");
+        strcat(summary, "\tcRastreamento Básico:\tn Nenhum caminho encontrado\r\n");
     }
 
     /* Advanced pathfinding results */
     if (advanced_dir >= 0 && advanced_dir < DIR_COUNT) {
         char advanced_info[256];
-        snprintf(advanced_info, sizeof(advanced_info), "Rastreamento Avançado: %s (custo total: %d MV)\r\n",
+        snprintf(advanced_info, sizeof(advanced_info), "\tgRastreamento Avançado:\tn %s (custo total: %d MV)\r\n",
                  dirs_pt[advanced_dir], advanced_cost);
         strcat(summary, advanced_info);
 
         if (advanced_desc && strlen(advanced_desc) > 0) {
-            strcat(summary, "Detalhes: ");
+            strcat(summary, "  \tyDetalhes:\tn ");
             strcat(summary, advanced_desc);
             strcat(summary, "\r\n");
         }
     } else {
-        strcat(summary, "Rastreamento Avançado: Nenhum caminho viável\r\n");
+        strcat(summary, "\tgRastreamento Avançado:\tn Nenhum caminho viável\r\n");
     }
 
-    /* Recommendation */
+    /* Enhanced recommendation based on skill level and track command improvements */
     strcat(summary, "\r\n=== RECOMENDAÇÃO ===\r\n");
     if (basic_dir == advanced_dir && basic_dir >= 0) {
         strcat(summary, "Ambos os métodos concordam. Caminho direto disponível.\r\n");
+        if (skill_level >= 75) {
+            strcat(summary, "\tyNota:\tn O comando 'track' automaticamente usa técnicas avançadas para você.\r\n");
+        }
     } else if (advanced_dir >= 0 && basic_dir < 0) {
-        strcat(summary, "Apenas o rastreamento avançado encontrou caminho. Use 'track [alvo] advanced'.\r\n");
+        strcat(summary, "Apenas o rastreamento avançado encontrou caminho.\r\n");
+        if (skill_level >= 75) {
+            strcat(summary, "\tgUse:\tn 'track [alvo]' (modo avançado automático)\r\n");
+        } else if (skill_level >= 60) {
+            strcat(summary, "\tgUse:\tn 'track [alvo] advanced'\r\n");
+        } else {
+            strcat(summary, "\trAtenção:\tn Você precisa de mais experiência para rastreamento avançado.\r\n");
+        }
     } else if (basic_dir >= 0 && advanced_dir < 0) {
-        strcat(summary, "Rastreamento básico encontrou caminho simples. Use 'track [alvo]'.\r\n");
+        strcat(summary, "Rastreamento básico encontrou caminho simples.\r\n");
+        strcat(summary, "\tgUse:\tn 'track [alvo]'\r\n");
     } else {
-        strcat(summary, "Nenhum caminho viável encontrado. Verifique chaves e barreiras.\r\n");
+        strcat(summary, "Nenhum caminho viável encontrado.\r\n");
+        strcat(summary, "\tyDica:\tn Verifique chaves, portas fechadas ou barreiras mágicas.\r\n");
+    }
+
+    /* Additional context about the enhanced track command */
+    if (skill_level >= 75) {
+        strcat(summary,
+               "\r\n\tyLembrete:\tn Como rastreador experiente, 'track' usa automaticamente análise avançada.\r\n");
     }
 
     /* Clean up */
