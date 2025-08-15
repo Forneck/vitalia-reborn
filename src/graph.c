@@ -57,10 +57,10 @@ int calculate_movement_cost(struct char_data *ch, room_rnum room)
 }
 
 /* Advanced pathfinding structures for state-based search */
-#define MAX_COLLECTED_KEYS 10               /* Reduced from 50 to limit complexity */
+#define MAX_COLLECTED_KEYS 5               /* Reduced from 50 to limit complexity */
 #define MAX_VISITED_STATES 1000             /* Reduced from 1000 to limit memory usage */
-#define MAX_PATHFIND_ITERATIONS_LIMIT 10000 /* Maximum compile-time limit for iterations */
-#define MAX_ZONE_PATH_LIMIT 150             /* Maximum compile-time limit for zone path */
+#define MAX_PATHFIND_ITERATIONS_LIMIT 2000 /* Maximum compile-time limit for iterations */
+#define MAX_ZONE_PATH_LIMIT 60             /* Maximum compile-time limit for zone path */
 
 /* Dynamic scaling functions for pathfinding parameters */
 static int get_dynamic_max_pathfind_iterations(void)
@@ -73,7 +73,7 @@ static int get_dynamic_max_pathfind_iterations(void)
     /* If configured value is 0, use dynamic scaling */
     if (base_iterations == 0) {
         /* Base formula: rooms * 2 + zones * 10, bounded by limits */
-        int dynamic_value = (world_rooms * 2) + (world_zones * 10);
+        int dynamic_value = (world_rooms + world_zones);
         return MIN(MAX(dynamic_value, 1000), MAX_PATHFIND_ITERATIONS_LIMIT);
     }
 
@@ -90,7 +90,7 @@ static int get_dynamic_max_zone_path(void)
     /* If configured value is 0, use dynamic scaling */
     if (base_zones == 0) {
         /* Dynamic scaling: at least 25% of total zones, max 75% */
-        int dynamic_value = MAX(world_zones / 4, MIN(world_zones * 3 / 4, 300));
+        int dynamic_value = MAX(world_zones / 4, MIN(world_zones * 3 / 4, 200));
         return MIN(MAX(dynamic_value, 50), MAX_ZONE_PATH_LIMIT);
     }
 
