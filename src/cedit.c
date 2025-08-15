@@ -1181,7 +1181,7 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     break;
 
                 case 'x':
-		case 'X':
+                case 'X':
                     write_to_output(d, "\r\nEnter max pathfind iterations (0=dynamic, 1-50000): ");
                     OLC_MODE(d) = CEDIT_MAX_PATHFIND_ITERATIONS;
                     return;

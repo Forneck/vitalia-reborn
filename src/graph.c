@@ -1146,6 +1146,10 @@ ACMD(do_track)
         send_to_char(ch, "Uso: track <alvo> [advanced]\r\n");
         send_to_char(ch,
                      "      track <alvo> advanced  - para rastreamento avançado com análise de chaves e portas\r\n");
+        if (GET_SKILL(ch, SKILL_TRACK) >= 75) {
+            send_to_char(ch,
+                         "\tyNota: Como rastreador experiente, você usa automaticamente técnicas avançadas.\tn\r\n");
+        }
         return;
     }
 
@@ -1156,6 +1160,14 @@ ACMD(do_track)
         if (GET_SKILL(ch, SKILL_TRACK) < 60) {
             send_to_char(ch, "Seu conhecimento de rastreamento não é avançado o suficiente.\r\n");
             return;
+        }
+    }
+
+    /* Auto-enable advanced mode for expert trackers (SKILL_TRACK >= 75) */
+    if (GET_SKILL(ch, SKILL_TRACK) >= 75) {
+        use_advanced = 1;
+        if (!*arg2) {
+            send_to_char(ch, "\tyComo um rastreador experiente, você automaticamente usa técnicas avançadas.\tn\r\n");
         }
     }
 
@@ -1177,7 +1189,17 @@ ACMD(do_track)
         do {
             dir = rand_number(0, DIR_COUNT - 1);
         } while (!CAN_GO(ch, dir) && --tries);
-        send_to_char(ch, "Você encontra um caminho a %s daqui!\r\n", dirs[dir]);
+
+        /* Expert trackers get additional information even on failure */
+        if (GET_SKILL(ch, SKILL_TRACK) >= 75) {
+            send_to_char(ch,
+                         "Você encontra sinais confusos apontando a %s, mas não tem certeza se é o caminho certo.\r\n",
+                         dirs[dir]);
+            send_to_char(ch,
+                         "\tyDica: O alvo pode estar escondendo seus rastros ou você pode tentar novamente.\tn\r\n");
+        } else {
+            send_to_char(ch, "Você encontra um caminho a %s daqui!\r\n", dirs[dir]);
+        }
         return;
     }
 
@@ -1635,37 +1657,9 @@ int mob_duty_pathfind(struct char_data *ch, room_rnum target_room)
         chosen_dir = basic_dir;
         cache_pathfind_result_priority(IN_ROOM(ch), target_room, chosen_dir, 1);
     } else {
-        /* Basic failed, try advanced pathfinding for duty-critical cases */
-        struct obj_data *obj;
-        int has_keys = 0;
-
-        /* Quick check if mob has any keys */
-        for (obj = ch->carrying; obj && !has_keys; obj = obj->next_content) {
-            if (GET_OBJ_TYPE(obj) == ITEM_KEY) {
-                has_keys = 1;
-                break;
-            }
-        }
-
-        /* For duty pathfinding, always try advanced if basic fails */
-        int advanced_cost = 0, advanced_mv = 0;
-        char *advanced_desc = NULL;
-
-        advanced_pathfind_calls++;
-        int advanced_dir =
-            find_path_with_keys(ch, IN_ROOM(ch), target_room, &advanced_cost, &advanced_mv, &advanced_desc);
-
-        if (advanced_dir >= 0) {
-            chosen_dir = advanced_dir;
-            /* Cache with highest priority for duty paths */
-            cache_pathfind_result_priority(IN_ROOM(ch), target_room, chosen_dir, 1);
-        } else {
-            chosen_dir = -1;
-        }
-
-        /* Free allocated description */
-        if (advanced_desc)
-            free(advanced_desc);
+        /* NPCs no longer use advanced pathfinding to prevent bottlenecks */
+        /* Advanced pathfinding is reserved for players only via the track command */
+        chosen_dir = -1;
     }
 
     return chosen_dir;
@@ -1711,39 +1705,9 @@ int mob_smart_pathfind(struct char_data *ch, room_rnum target_room)
         /* Basic pathfinding worked, use it */
         chosen_dir = basic_dir;
     } else {
-        /* Basic failed, try advanced only if mob has keys or is in areas with locked doors */
-        struct obj_data *obj;
-        int has_keys = 0;
-
-        /* Quick check if mob has any keys */
-        for (obj = ch->carrying; obj && !has_keys; obj = obj->next_content) {
-            if (GET_OBJ_TYPE(obj) == ITEM_KEY) {
-                has_keys = 1;
-                break;
-            }
-        }
-
-        if (has_keys || GET_INT(ch) >= 15) {
-            /* Only use advanced pathfinding if mob has keys or has sufficient intelligence */
-            int advanced_cost = 0, advanced_mv = 0;
-            char *advanced_desc = NULL;
-
-            advanced_pathfind_calls++;
-            int advanced_dir =
-                find_path_with_keys(ch, IN_ROOM(ch), target_room, &advanced_cost, &advanced_mv, &advanced_desc);
-
-            if (advanced_dir >= 0) {
-                chosen_dir = advanced_dir;
-            } else {
-                chosen_dir = -1;
-            }
-
-            /* Free allocated description */
-            if (advanced_desc)
-                free(advanced_desc);
-        } else {
-            chosen_dir = -1;
-        }
+        /* NPCs no longer use advanced pathfinding to prevent bottlenecks */
+        /* Advanced pathfinding is reserved for players only via the track command */
+        chosen_dir = -1;
     }
 
     /* Cache the result */
