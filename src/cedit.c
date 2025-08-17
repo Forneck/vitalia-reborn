@@ -969,9 +969,8 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
                     "%s2%s) Sistema Experimental de Banco : %s%s\r\n"
                     "%s0%s) Retornar ao Menu anterior\r\n"
                     "Selecione uma opção : ",
-                    grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->experimental.new_auction_system), 
-                    grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->experimental.experimental_bank_system),
-                    grn, nrm);
+                    grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->experimental.new_auction_system), grn, nrm, cyn,
+                    CHECK_VAR(OLC_CONFIG(d)->experimental.experimental_bank_system), grn, nrm);
 
     OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
 }

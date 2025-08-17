@@ -35,8 +35,8 @@ LFLAGS=/OUT:circle.exe /nologo /subsystem:console
 
 MAKE = $(MAKE) /NOLOGO /S
 
-OBJFILES = comm.obj act.comm.obj act.informative.obj act.movement.obj act.item.obj \
-asciimap.obj act.offensive.obj act.other.obj act.social.obj act.wizard.obj \
+OBJFILES = comm.obj act.auction.obj act.comm.obj act.informative.obj act.movement.obj act.item.obj \
+asciimap.obj act.offensive.obj act.other.obj act.social.obj act.wizard.obj auction.obj \
 ban.obj boards.obj castle.obj class.obj config.obj constants.obj db.obj \
 dg_event.obj dg_scripts.obj dg_triggers.obj fight.obj genolc.obj graph.obj \
 handler.obj house.obj ibt.obj interpreter.obj limits.obj lists.obj magic.obj \

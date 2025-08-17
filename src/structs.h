@@ -1612,7 +1612,7 @@ struct autowiz_data {
 
 /** Experimental Features configuration. */
 struct experimental_data {
-    int new_auction_system;     /**< New Auction System enabled?   */
+    int new_auction_system;       /**< New Auction System enabled?   */
     int experimental_bank_system; /**< Experimental Bank System enabled?  */
 };
 
