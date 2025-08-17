@@ -26,6 +26,7 @@ static void cedit_disp_crash_save_options(struct descriptor_data *d);
 static void cedit_disp_room_numbers(struct descriptor_data *d);
 static void cedit_disp_operation_options(struct descriptor_data *d);
 static void cedit_disp_autowiz_options(struct descriptor_data *d);
+static void cedit_disp_experimental_options(struct descriptor_data *d);
 static void reassign_rooms(void);
 static void cedit_setup(struct descriptor_data *d);
 
@@ -149,6 +150,10 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->autowiz.use_autowiz = CONFIG_USE_AUTOWIZ;
     OLC_CONFIG(d)->autowiz.min_wizlist_lev = CONFIG_MIN_WIZLIST_LEV;
 
+    /* Experimental Features */
+    OLC_CONFIG(d)->experimental.new_auction_system = CONFIG_NEW_AUCTION_SYSTEM;
+    OLC_CONFIG(d)->experimental.experimental_bank_system = CONFIG_EXPERIMENTAL_BANK_SYSTEM;
+
     /* Allocate space for the strings. */
     OLC_CONFIG(d)->play.OK = str_udup(CONFIG_OK);
     OLC_CONFIG(d)->play.HUH = str_udup(CONFIG_HUH);
@@ -263,6 +268,10 @@ static void cedit_save_internally(struct descriptor_data *d)
     /* Autowiz */
     CONFIG_USE_AUTOWIZ = OLC_CONFIG(d)->autowiz.use_autowiz;
     CONFIG_MIN_WIZLIST_LEV = OLC_CONFIG(d)->autowiz.min_wizlist_lev;
+
+    /* Experimental Features */
+    CONFIG_NEW_AUCTION_SYSTEM = OLC_CONFIG(d)->experimental.new_auction_system;
+    CONFIG_EXPERIMENTAL_BANK_SYSTEM = OLC_CONFIG(d)->experimental.experimental_bank_system;
 
     /* Allocate space for the strings. */
     if (CONFIG_OK)
@@ -743,9 +752,10 @@ static void cedit_disp_menu(struct descriptor_data *d)
                     "%sR%s) Room Numbers\r\n"
                     "%sO%s) Operation Options\r\n"
                     "%sA%s) Autowiz Options\r\n"
+                    "%sX%s) Experimental Features Configuration\r\n"
                     "%sQ%s) Quit\r\n"
                     "Enter your choice : ",
-                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
+                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_MAIN_MENU;
 }
@@ -946,6 +956,26 @@ static void cedit_disp_autowiz_options(struct descriptor_data *d)
     OLC_MODE(d) = CEDIT_AUTOWIZ_OPTIONS_MENU;
 }
 
+static void cedit_disp_experimental_options(struct descriptor_data *d)
+{
+    get_char_colors(d->character);
+    clear_screen(d);
+
+    write_to_output(d,
+                    "Configuração de Funcionalidades Experimentais:\r\n"
+                    "---\r\n"
+                    "Funcionalidades Experimentais:\r\n"
+                    "%s1%s) Sistema de Leilão Novo : %s%s\r\n"
+                    "%s2%s) Sistema Experimental de Banco : %s%s\r\n"
+                    "%s0%s) Retornar ao Menu anterior\r\n"
+                    "Selecione uma opção : ",
+                    grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->experimental.new_auction_system), 
+                    grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->experimental.experimental_bank_system),
+                    grn, nrm);
+
+    OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
+}
+
 /* The event handler. */
 void cedit_parse(struct descriptor_data *d, char *arg)
 {
@@ -1007,6 +1037,12 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case 'A':
                     cedit_disp_autowiz_options(d);
                     OLC_MODE(d) = CEDIT_AUTOWIZ_OPTIONS_MENU;
+                    break;
+
+                case 'x':
+                case 'X':
+                    cedit_disp_experimental_options(d);
+                    OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
                     break;
 
                 case 'q':
@@ -1514,6 +1550,29 @@ void cedit_parse(struct descriptor_data *d, char *arg)
             }
 
             cedit_disp_autowiz_options(d);
+            return;
+
+        case CEDIT_EXPERIMENTAL_MENU:
+            switch (*arg) {
+                case '1':
+                    TOGGLE_VAR(OLC_CONFIG(d)->experimental.new_auction_system);
+                    break;
+
+                case '2':
+                    TOGGLE_VAR(OLC_CONFIG(d)->experimental.experimental_bank_system);
+                    break;
+
+                case '0':
+                case 'q':
+                case 'Q':
+                    cedit_disp_menu(d);
+                    return;
+
+                default:
+                    write_to_output(d, "\r\nEssa é uma escolha inválida!\r\n");
+            }
+
+            cedit_disp_experimental_options(d);
             return;
 
         case CEDIT_LEVEL_CAN_SHOUT:

@@ -23,6 +23,7 @@ SPECIAL(questmaster);
 SPECIAL(shop_keeper);
 SPECIAL(armorer);
 SPECIAL(blacksmith);
+SPECIAL(belchior_auctioneer);
 
 /* local (file scope only) functions */
 static void ASSIGNROOM(room_vnum room, SPECIAL(fname));
@@ -81,7 +82,7 @@ void assign_mobiles(void)
       ASSIGNMOB(2800, guild);*/
     ASSIGNMOB(3020, guild);
     ASSIGNMOB(3021, guild);
-    ASSIGNMOB(3022, guild);
+    ASSIGNMOB(3022, belchior_auctioneer); /* Belchior - auction house keeper */
     ASSIGNMOB(3023, guild);
     ASSIGNMOB(3028, guild);
     ASSIGNMOB(3030, guild);

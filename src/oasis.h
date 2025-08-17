@@ -408,6 +408,9 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_RESS_ROOM_3 64
 #define CEDIT_MAX_PATHFIND_ITERATIONS 65
 #define CEDIT_MAX_ZONE_PATH 66
+#define CEDIT_EXPERIMENTAL_MENU 67
+#define CEDIT_NEW_AUCTION_SYSTEM 68
+#define CEDIT_EXPERIMENTAL_BANK_SYSTEM 69
 
 /* Hedit Submodes of connectedness. */
 #define HEDIT_CONFIRM_SAVESTRING 0

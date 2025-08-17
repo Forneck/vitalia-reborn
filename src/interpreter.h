@@ -45,6 +45,8 @@ void on_player_linkless(struct char_data *ch);
 
 /* ACMDs available through interpreter.c */
 ACMD(do_alias);
+ACMD(do_auction);
+ACMD(do_auctions);
 
 /* for compatibility with 2.20: */
 #define argument_interpreter(a, b, c) two_arguments(a, b, c)
