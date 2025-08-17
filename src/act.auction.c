@@ -44,8 +44,8 @@ ACMD(do_auction)
         return;
     }
 
-    /* Check if auction system is enabled */
-    if (!CONFIG_NEW_AUCTION_SYSTEM) {
+    /* Check if auction system is enabled or if player is immortal */
+    if (!CONFIG_NEW_AUCTION_SYSTEM && GET_LEVEL(ch) < LVL_IMMORT) {
         send_to_char(ch, "O sistema de leilões ainda não está ativo.\r\n");
         return;
     }
@@ -246,7 +246,8 @@ ACMD(do_auction)
  */
 ACMD(do_auctions)
 {
-    if (!CONFIG_NEW_AUCTION_SYSTEM) {
+    /* Check if auction system is enabled or if player is immortal */
+    if (!CONFIG_NEW_AUCTION_SYSTEM && GET_LEVEL(ch) < LVL_IMMORT) {
         send_to_char(ch, "O sistema de leilões ainda não está ativo.\r\n");
         return;
     }

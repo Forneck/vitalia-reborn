@@ -522,7 +522,7 @@ SPECIAL(belchior_auctioneer)
             return TRUE;
         }
 
-        if (!CONFIG_NEW_AUCTION_SYSTEM) {
+        if (!CONFIG_NEW_AUCTION_SYSTEM && GET_LEVEL(ch) < LVL_IMMORT) {
             act("Belchior balança a cabeça: 'Desculpe, o sistema de leilões ainda não está funcionando.'", FALSE, ch, 0,
                 belchior, TO_CHAR);
             return TRUE;
@@ -561,8 +561,8 @@ SPECIAL(belchior_auctioneer)
         return FALSE;
     }
 
-    /* Only allow access if new auction system is enabled */
-    if (!CONFIG_NEW_AUCTION_SYSTEM) {
+    /* Only allow access if new auction system is enabled or player is immortal */
+    if (!CONFIG_NEW_AUCTION_SYSTEM && GET_LEVEL(ch) < LVL_IMMORT) {
         act("Belchior balança a cabeça: 'Desculpe, o sistema de leilões ainda não está funcionando.'", FALSE, ch, 0,
             belchior, TO_CHAR);
         return TRUE;
