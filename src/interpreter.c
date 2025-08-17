@@ -208,6 +208,8 @@ cpp_extern const struct command_info cmd_info[] = {
     {"land", "lan", POS_DEAD, do_fly, 1, SCMD_LAND, CMD_NOARG},
     {"leave", "lea", POS_STANDING, do_leave, 0, 0, CMD_NOARG},
     {"levels", "lev", POS_DEAD, do_levels, 0, 0, CMD_NOARG},
+    {"leilao", "lei", POS_STANDING, do_auction, 0, 0, CMD_THREEARG},
+    {"leiloes", "leilo", POS_STANDING, do_auctions, 0, 0, CMD_NOARG},
     {"list", "lis", POS_STANDING, do_not_here, 0, 0, CMD_NOARG},
     {"links", "lin", POS_STANDING, do_links, LVL_GOD, 0, CMD_NOARG},
     {"lock", "loc", POS_SITTING, do_gen_door, 0, SCMD_LOCK, CMD_TWOARG},

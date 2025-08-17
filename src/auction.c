@@ -150,8 +150,103 @@ struct auction_data *find_auction(int auction_id)
 }
 
 /**
- * Show list of active auctions
+ * Place a bid on an auction
  */
+int place_bid(struct char_data *bidder, int auction_id, long amount)
+{
+    struct auction_data *auction;
+    struct auction_bid *bid;
+    
+    if (!bidder) {
+        return 0;
+    }
+    
+    auction = find_auction(auction_id);
+    if (!auction || auction->state != AUCTION_ACTIVE) {
+        return 0;
+    }
+    
+    /* Check if bid is higher than current price */
+    if (amount <= auction->current_price) {
+        return 0;
+    }
+    
+    /* Create new bid */
+    CREATE(bid, struct auction_bid, 1);
+    strlcpy(bid->bidder_name, GET_NAME(bidder), sizeof(bid->bidder_name));
+    bid->amount = amount;
+    bid->timestamp = time(0);
+    
+    /* Add to bid list */
+    bid->next = auction->bids;
+    auction->bids = bid;
+    
+    /* Update auction */
+    auction->current_price = amount;
+    auction->winning_bid = bid;
+    
+    /* TODO: Reserve money from bidder */
+    
+    return 1;
+}
+
+/**
+ * Show detailed auction information
+ */
+void show_auction_details(struct char_data *ch, int auction_id)
+{
+    struct auction_data *auction;
+    struct auction_bid *bid;
+    time_t remaining;
+    int bid_count = 0;
+    
+    auction = find_auction(auction_id);
+    if (!auction) {
+        send_to_char(ch, "Leilão #%d não encontrado.\r\n", auction_id);
+        return;
+    }
+    
+    send_to_char(ch, "Detalhes do Leilão #%d:\r\n", auction->auction_id);
+    send_to_char(ch, "========================\r\n");
+    send_to_char(ch, "Item: %s\r\n", auction->item_name);
+    send_to_char(ch, "Vendedor: %s\r\n", auction->seller_name);
+    send_to_char(ch, "Tipo: %s\r\n", 
+                (auction->auction_type == AUCTION_TYPE_ENGLISH) ? "Leilão Inglês" : "Leilão Holandês");
+    send_to_char(ch, "Acesso: %s\r\n",
+                (auction->access_mode == AUCTION_OPEN) ? "Aberto" : "Fechado");
+    send_to_char(ch, "Preço Inicial: %ld moedas\r\n", auction->starting_price);
+    send_to_char(ch, "Preço Atual: %ld moedas\r\n", auction->current_price);
+    
+    if (auction->reserve_price > auction->starting_price) {
+        send_to_char(ch, "Preço Reserva: %ld moedas\r\n", auction->reserve_price);
+    }
+    
+    /* Show time remaining */
+    if (auction->state == AUCTION_ACTIVE) {
+        remaining = auction->end_time - time(0);
+        if (remaining > 0) {
+            send_to_char(ch, "Tempo Restante: %ldh %ldm %lds\r\n",
+                        remaining / 3600, (remaining % 3600) / 60, remaining % 60);
+        } else {
+            send_to_char(ch, "Este leilão já expirou.\r\n");
+        }
+    } else {
+        send_to_char(ch, "Estado: %s\r\n",
+                    (auction->state == AUCTION_INACTIVE) ? "Inativo" : "Finalizado");
+    }
+    
+    /* Count bids */
+    for (bid = auction->bids; bid; bid = bid->next) {
+        bid_count++;
+    }
+    
+    send_to_char(ch, "Total de Lances: %d\r\n", bid_count);
+    
+    if (auction->winning_bid) {
+        send_to_char(ch, "Lance Vencedor: %ld moedas por %s\r\n",
+                    auction->winning_bid->amount, auction->winning_bid->bidder_name);
+    }
+}
 void show_auction_list(struct char_data *ch)
 {
     struct auction_data *auction;
