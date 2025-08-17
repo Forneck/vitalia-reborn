@@ -82,7 +82,7 @@ void assign_mobiles(void)
       ASSIGNMOB(2800, guild);*/
     ASSIGNMOB(3020, guild);
     ASSIGNMOB(3021, guild);
-    ASSIGNMOB(3022, guild);
+    ASSIGNMOB(3022, belchior_auctioneer); /* Belchior - auction house keeper */
     ASSIGNMOB(3023, guild);
     ASSIGNMOB(3028, guild);
     ASSIGNMOB(3030, guild);
