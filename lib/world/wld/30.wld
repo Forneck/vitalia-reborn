@@ -1796,6 +1796,11 @@ Você vê o beco.
 ~
 ~
 0 -1 3024
+D5
+Uma porta secreta e trancada leva para baixo, ao que parece ser um porão especial.
+~
+porta secreta porao~
+32777 -1 3150
 S
 #3082
 Em Frente à Taverna~
@@ -2067,6 +2072,41 @@ E
 arvore tronco oco poco~
 Tem um poço naquele tronco. As paredes são escorregadias, e se você descer não conseguiria subir.
 Além de estar tudo escuro lá.
+~
+S
+#3150
+Casa de Leilões de Belchior~
+   Você desceu por uma porta secreta e se encontra numa sala subterrânea
+surpreendentemente elegante e bem organizada, contrastando completamente com
+a bagunça do brechó acima. As paredes são forradas com madeira polida e
+tapetes luxuosos cobrem o chão. Várias cadeiras estão dispostas em semicírculo
+diante de um pequeno palco elevado onde os leilões acontecem.
+   Uma placa discreta na parede oriental explica os diferentes tipos de
+leilão disponíveis. O ambiente é silencioso e solene, preparado para
+negociações sérias entre compradores e vendedores experientes.
+~
+30 140 0 0 0 0
+D4
+Uma escada leva de volta ao brechó do Belchior.
+~
+escada porta secreta~
+32777 -1 3081
+E
+placa tipos leilao~
+TIPOS DE LEILÃO DISPONÍVEIS:
+
+1) LEILÃO INGLÊS (Ascendente, Primeiro Preço)
+   - Lances aumentam progressivamente
+   - Maior lance vence e paga o valor ofertado
+
+2) LEILÃO HOLANDÊS (Descendente, Segundo Preço)  
+   - Preço começa alto e diminui
+   - Primeiro a aceitar vence mas paga o segundo maior lance
+
+3) LEILÃO ABERTO - Qualquer pessoa pode participar
+4) LEILÃO FECHADO - Apenas convidados com passe de leilão
+
+Para participar de leilões fechados, obtenha um passe com Belchior.
 ~
 S
 $~

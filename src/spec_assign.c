@@ -23,6 +23,7 @@ SPECIAL(questmaster);
 SPECIAL(shop_keeper);
 SPECIAL(armorer);
 SPECIAL(blacksmith);
+SPECIAL(belchior_auctioneer);
 
 /* local (file scope only) functions */
 static void ASSIGNROOM(room_vnum room, SPECIAL(fname));
