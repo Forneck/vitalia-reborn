@@ -1610,6 +1610,12 @@ struct autowiz_data {
     int min_wizlist_lev; /**< Minimun level to show on wizlist.  */
 };
 
+/** Experimental Features configuration. */
+struct experimental_data {
+    int new_auction_system;     /**< New Auction System enabled?   */
+    int experimental_bank_system; /**< Experimental Bank System enabled?  */
+};
+
 /**
  Main Game Configuration Structure.
  Global variables that can be changed within the game are held within this
@@ -1632,6 +1638,8 @@ struct config_data {
     struct game_operation operation;
     /** Autowiz specific settings, like turning it on and minimum level */
     struct autowiz_data autowiz;
+    /** Experimental features settings */
+    struct experimental_data experimental;
 };
 
 #ifdef MEMORY_DEBUG

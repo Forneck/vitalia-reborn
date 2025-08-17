@@ -1194,4 +1194,10 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 /** What is the minimum level character to put on the wizlist? */
 #define CONFIG_MIN_WIZLIST_LEV config_info.autowiz.min_wizlist_lev
 
+/* Experimental Features */
+/** New auction system enabled? */
+#define CONFIG_NEW_AUCTION_SYSTEM config_info.experimental.new_auction_system
+/** Experimental bank system enabled? */
+#define CONFIG_EXPERIMENTAL_BANK_SYSTEM config_info.experimental.experimental_bank_system
+
 #endif /* _UTILS_H_ */
