@@ -1779,6 +1779,11 @@ void load_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
 shop_rnum find_shop_by_keeper(mob_rnum rnum)
 {
     int i;
+
+    /* Check if shops are loaded and shop_index is valid */
+    if (!shop_index || top_shop < 0)
+        return -1;
+
     for (i = 0; i <= top_shop; i++) {
         if (SHOP_KEEPER(i) == rnum) {
             return i;
@@ -1791,6 +1796,10 @@ shop_rnum find_shop_by_keeper(mob_rnum rnum)
 bool is_shop_open(shop_rnum snum)
 {
     int current_hour = time_info.hours;
+
+    /* Check if shops are loaded and shop_index is valid */
+    if (!shop_index || top_shop < 0 || snum < 0 || snum > top_shop)
+        return FALSE;
 
     /* Verifica se está no primeiro período de funcionamento (open1 to close1) */
     if (SHOP_OPEN1(snum) <= current_hour && current_hour <= SHOP_CLOSE1(snum))
@@ -1817,6 +1826,10 @@ int find_best_shop_to_sell(struct char_data *ch, struct obj_data *item)
     int i;
 
     if (!ch || !item)
+        return -1;
+
+    /* Check if shops are loaded and shop_index is valid */
+    if (!shop_index || top_shop < 0)
         return -1;
 
     /* A IA percorre o índice de todas as lojas do MUD. */
