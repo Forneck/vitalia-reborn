@@ -144,6 +144,86 @@ void prune_crlf(char *txt)
         txt[i--] = '\0';
 }
 
+/** Formats a number with Brazilian-style thousand separators (periods).
+ * Returns a static string buffer with the formatted number.
+ * For example: 1234567 becomes "1.234.567"
+ * @param number The number to format.
+ * @return A pointer to a static string buffer containing the formatted number. */
+char *format_number_br(int number)
+{
+    static char result[32];
+    char temp[32];
+    int i, j, len;
+
+    /* Handle negative numbers */
+    int negative = 0;
+    if (number < 0) {
+        negative = 1;
+        number = -number;
+    }
+
+    /* Convert number to string */
+    snprintf(temp, sizeof(temp), "%d", number);
+    len = strlen(temp);
+
+    /* Build result string with separators */
+    j = 0;
+    if (negative) {
+        result[j++] = '-';
+    }
+
+    for (i = 0; i < len; i++) {
+        /* Add separator every 3 digits from the right */
+        if (i > 0 && (len - i) % 3 == 0) {
+            result[j++] = '.';
+        }
+        result[j++] = temp[i];
+    }
+    result[j] = '\0';
+
+    return result;
+}
+
+/** Formats a long number with Brazilian-style thousand separators (periods).
+ * Returns a static string buffer with the formatted number.
+ * For example: 1234567L becomes "1.234.567"
+ * @param number The long number to format.
+ * @return A pointer to a static string buffer containing the formatted number. */
+char *format_long_br(long number)
+{
+    static char result[64];
+    char temp[64];
+    int i, j, len;
+
+    /* Handle negative numbers */
+    int negative = 0;
+    if (number < 0) {
+        negative = 1;
+        number = -number;
+    }
+
+    /* Convert number to string */
+    snprintf(temp, sizeof(temp), "%ld", number);
+    len = strlen(temp);
+
+    /* Build result string with separators */
+    j = 0;
+    if (negative) {
+        result[j++] = '-';
+    }
+
+    for (i = 0; i < len; i++) {
+        /* Add separator every 3 digits from the right */
+        if (i > 0 && (len - i) % 3 == 0) {
+            result[j++] = '.';
+        }
+        result[j++] = temp[i];
+    }
+    result[j] = '\0';
+
+    return result;
+}
+
 #ifndef str_cmp
 /** a portable, case-insensitive version of strcmp(). Returns: 0 if equal, > 0
  * if arg1 > arg2, or < 0 if arg1 < arg2. Scan until strings are found
