@@ -1835,6 +1835,11 @@ int find_best_shop_to_sell(struct char_data *ch, struct obj_data *item)
     /* A IA percorre o índice de todas as lojas do MUD. */
     for (snum = 0; snum <= top_shop; snum++) {
 
+        /* Validate shop index entry is properly initialized */
+        if (!shop_index[snum].type || !shop_index[snum].in_room) {
+            continue;
+        }
+
         /* Filtro 1: A loja está aberta? */
         if (!is_shop_open(snum)) {
             continue;
