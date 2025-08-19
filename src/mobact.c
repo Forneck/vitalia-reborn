@@ -330,7 +330,7 @@ void mobile_activity(void)
 
                         /* Check if this shop actually buys this type of item */
                         bool shop_buys_this_item = FALSE;
-                        if (shop_rnum != -1) {
+                        if (shop_rnum != -1 && shop_index[shop_rnum].type) {
                             for (int i = 0; SHOP_BUYTYPE(shop_rnum, i) != NOTHING; i++) {
                                 if (SHOP_BUYTYPE(shop_rnum, i) == GET_OBJ_TYPE(ch->ai_data->goal_obj)) {
                                     shop_buys_this_item = TRUE;
@@ -347,7 +347,7 @@ void mobile_activity(void)
                         } else {
                             /* Shop doesn't buy this item, find a new shop */
                             int new_shop_rnum = find_best_shop_to_sell(ch, ch->ai_data->goal_obj);
-                            if (new_shop_rnum != -1 && new_shop_rnum <= top_shop) {
+                            if (new_shop_rnum != -1 && new_shop_rnum <= top_shop && shop_index[new_shop_rnum].in_room) {
                                 room_rnum new_target_room = real_room(SHOP_ROOM(new_shop_rnum, 0));
                                 if (new_target_room != NOWHERE && find_first_step(IN_ROOM(ch), new_target_room) != -1) {
                                     /* Found a new shop, update goal */
@@ -373,7 +373,7 @@ void mobile_activity(void)
                         struct obj_data *next_item_to_sell = NULL;
                         int min_score = 10;
 
-                        if (shop_rnum != -1) {
+                        if (shop_rnum != -1 && shop_index[shop_rnum].type) {
                             /* Look for more junk to sell to this same shop */
                             struct obj_data *obj;
                             for (obj = ch->carrying; obj; obj = obj->next_content) {
@@ -1609,7 +1609,7 @@ bool handle_duty_routine(struct char_data *ch)
 
     if (is_shopkeeper) {
         int shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
-        if (shop_nr != -1 && is_shop_open(shop_nr)) {
+        if (shop_nr != -1 && is_shop_open(shop_nr) && shop_index[shop_nr].in_room) {
             is_on_duty = TRUE;
             home_room = real_room(SHOP_ROOM(shop_nr, 0));
         }
@@ -2623,7 +2623,8 @@ bool mob_try_to_sell_junk(struct char_data *ch)
     int best_shop_rnum = find_best_shop_to_sell(ch, item_to_sell);
 
     /* If the best shop is not reachable, try to find an alternative */
-    if (best_shop_rnum == -1 || best_shop_rnum > top_shop || SHOP_ROOM(best_shop_rnum, 0) == NOWHERE) {
+    if (best_shop_rnum == -1 || best_shop_rnum > top_shop || !shop_index[best_shop_rnum].in_room ||
+        SHOP_ROOM(best_shop_rnum, 0) == NOWHERE) {
         return FALSE; /* No shops available */
     }
 
@@ -2638,6 +2639,11 @@ bool mob_try_to_sell_junk(struct char_data *ch)
         for (int snum = 0; snum <= top_shop; snum++) {
             if (!is_shop_open(snum))
                 continue;
+
+            /* Validate shop index entry is properly initialized */
+            if (!shop_index[snum].type || !shop_index[snum].in_room) {
+                continue;
+            }
 
             /* Check if shop buys this type of item */
             bool buys_this_type = FALSE;
@@ -2666,6 +2672,11 @@ bool mob_try_to_sell_junk(struct char_data *ch)
 
         if (best_shop_rnum == -1) {
             return FALSE; /* No reachable shops found */
+        }
+
+        /* Validate shop before accessing its data */
+        if (!shop_index[best_shop_rnum].in_room) {
+            return FALSE; /* Shop data is corrupted */
         }
 
         target_shop_room = real_room(SHOP_ROOM(best_shop_rnum, 0));
@@ -3017,7 +3028,7 @@ void mob_process_wishlist_goals(struct char_data *ch)
     }
 
     /* Opção 2: Comprar numa loja */
-    if (target_shop != NOTHING) {
+    if (target_shop != NOTHING && target_shop <= top_shop && shop_index[target_shop].in_room) {
         /* Verifica se pode chegar à loja e tem ouro suficiente */
         shop_room = real_room(SHOP_ROOM(target_shop, 0));
 

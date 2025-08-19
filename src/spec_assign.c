@@ -151,7 +151,6 @@ void assign_mobiles(void)
     ASSIGNMOB(1270, armorer);
     ASSIGNMOB(1271, blacksmith);
     ASSIGNMOB(3095, belchior_auctioneer); /* Belchior - auction house keeper */
-
 }
 
 /* assign special procedures to objects */
