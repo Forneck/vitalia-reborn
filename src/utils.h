@@ -56,6 +56,8 @@ int levenshtein_distance(const char *s1, const char *s2);
 struct time_info_data *real_time_passed(time_t t2, time_t t1);
 struct time_info_data *mud_time_passed(time_t t2, time_t t1);
 void prune_crlf(char *txt);
+char *format_number_br(int number);
+char *format_long_br(long number);
 void column_list(struct char_data *ch, int num_cols, const char **list, int list_length, bool show_nums);
 int get_flag_by_name(const char *flag_list[], char *flag_name);
 int file_head(FILE *file, char *buf, size_t bufsize, int lines_to_read);

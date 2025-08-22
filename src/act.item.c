@@ -219,7 +219,7 @@ void get_check_money(struct char_data *ch, struct obj_data *obj)
     if (value == 1)
         send_to_char(ch, "Há uma moeda.\r\n");
     else
-        send_to_char(ch, "Há %d moedas.\r\n", value);
+        send_to_char(ch, "Há %s moedas.\r\n", format_number_br(value));
 }
 
 static void perform_get_from_container(struct char_data *ch, struct obj_data *obj, struct obj_data *cont, int mode)
@@ -710,7 +710,8 @@ void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount)
     }
     send_to_char(ch, "%s", CONFIG_OK);
 
-    snprintf(buf, sizeof(buf), "$n entrega para você %d moeda%s de ouro.", amount, amount == 1 ? "" : "s");
+    snprintf(buf, sizeof(buf), "$n entrega para você %s moeda%s de ouro.", format_number_br(amount),
+             amount == 1 ? "" : "s");
     act(buf, FALSE, ch, 0, vict, TO_VICT);
 
     snprintf(buf, sizeof(buf), "$n entrega %s para $N.", money_desc(amount));
@@ -1583,23 +1584,23 @@ ACMD(do_sac)
                          GET_OBJ_SHORT(j));
             break;
         case 2:
-            send_to_char(ch, "Você sacrifica %s para os deuses.\r\nOs deuses te dão %d pontos de experiência.\r\n",
-                         GET_OBJ_SHORT(j), 1 + 2 * GET_OBJ_LEVEL(j));
+            send_to_char(ch, "Você sacrifica %s para os deuses.\r\nOs deuses te dão %s pontos de experiência.\r\n",
+                         GET_OBJ_SHORT(j), format_number_br(1 + 2 * GET_OBJ_LEVEL(j)));
             GET_EXP(ch) += (1 + 2 * GET_OBJ_LEVEL(j));
             break;
         case 3:
-            send_to_char(ch, "Você sacrifica %s para os deuses.\r\nVocê recebeu %d pontos de experiência.\r\n",
-                         GET_OBJ_SHORT(j), 1 + GET_OBJ_LEVEL(j));
+            send_to_char(ch, "Você sacrifica %s para os deuses.\r\nVocê recebeu %s pontos de experiência.\r\n",
+                         GET_OBJ_SHORT(j), format_number_br(1 + GET_OBJ_LEVEL(j)));
             GET_EXP(ch) += (1 + GET_OBJ_LEVEL(j));
             break;
         case 4:
-            send_to_char(ch, "O seu sacrificio para os deuses é recompensado com %d moedas de ouro.\r\n",
-                         1 + GET_OBJ_LEVEL(j));
+            send_to_char(ch, "O seu sacrificio para os deuses é recompensado com %s moedas de ouro.\r\n",
+                         format_number_br(1 + GET_OBJ_LEVEL(j)));
             increase_gold(ch, (1 + GET_OBJ_LEVEL(j)));
             break;
         case 5:
-            send_to_char(ch, "O seu sacrificio para os deuses é recompensado com %d moedas de ouro.\r\n",
-                         (1 + 2 * GET_OBJ_LEVEL(j)));
+            send_to_char(ch, "O seu sacrificio para os deuses é recompensado com %s moedas de ouro.\r\n",
+                         format_number_br(1 + 2 * GET_OBJ_LEVEL(j)));
             increase_gold(ch, (1 + 2 * GET_OBJ_LEVEL(j)));
             break;
         default:

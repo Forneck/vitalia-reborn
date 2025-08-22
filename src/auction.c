@@ -388,11 +388,11 @@ void show_auction_details(struct char_data *ch, int auction_id)
     send_to_char(ch, "Tipo: %s\r\n",
                  (auction->auction_type == AUCTION_TYPE_ENGLISH) ? "Leilão Inglês" : "Leilão Holandês");
     send_to_char(ch, "Acesso: %s\r\n", (auction->access_mode == AUCTION_OPEN) ? "Aberto" : "Fechado");
-    send_to_char(ch, "Preço Inicial: %ld moedas\r\n", auction->starting_price);
-    send_to_char(ch, "Preço Atual: %ld moedas\r\n", auction->current_price);
+    send_to_char(ch, "Preço Inicial: %s moedas\r\n", format_long_br(auction->starting_price));
+    send_to_char(ch, "Preço Atual: %s moedas\r\n", format_long_br(auction->current_price));
 
     if (auction->reserve_price > auction->starting_price) {
-        send_to_char(ch, "Preço Reserva: %ld moedas\r\n", auction->reserve_price);
+        send_to_char(ch, "Preço Reserva: %s moedas\r\n", format_long_br(auction->reserve_price));
     }
 
     /* Show time remaining */
@@ -416,7 +416,7 @@ void show_auction_details(struct char_data *ch, int auction_id)
     send_to_char(ch, "Total de Lances: %d\r\n", bid_count);
 
     if (auction->winning_bid) {
-        send_to_char(ch, "Lance Vencedor: %ld moedas por %s\r\n", auction->winning_bid->amount,
+        send_to_char(ch, "Lance Vencedor: %s moedas por %s\r\n", format_long_br(auction->winning_bid->amount),
                      auction->winning_bid->bidder_name);
     }
 }
@@ -433,8 +433,8 @@ void show_auction_list(struct char_data *ch)
             time_t remaining = auction->end_time - time(0);
             if (remaining > 0) {
                 count++;
-                send_to_char(ch, "ID: %d | %s | Preço: %ld | Tempo: %ldm%lds | %s\r\n", auction->auction_id,
-                             auction->item_name, auction->current_price, remaining / 60, remaining % 60,
+                send_to_char(ch, "ID: %d | %s | Preço: %s | Tempo: %ldm%lds | %s\r\n", auction->auction_id,
+                             auction->item_name, format_long_br(auction->current_price), remaining / 60, remaining % 60,
                              (auction->access_mode == AUCTION_CLOSED) ? "FECHADO" : "ABERTO");
             }
         }

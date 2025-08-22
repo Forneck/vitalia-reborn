@@ -417,7 +417,7 @@ static void perform_group_gain(struct char_data *ch, int base, struct char_data 
         share = MIN(CONFIG_MAX_EXP_GAIN, MAX(1, hap_share));
     }
     if (share > 1)
-        send_to_char(ch, "Você recebe sua parte da experiência -- %d pontos.\r\n", share);
+        send_to_char(ch, "Você recebe sua parte da experiência -- %s pontos.\r\n", format_number_br(share));
     else
         send_to_char(ch, "Você recebe sua parte da experiência -- um mísero ponto!\r\n");
     gain_exp(ch, share);
@@ -478,7 +478,7 @@ static void solo_gain(struct char_data *ch, struct char_data *victim)
     }
 
     if (exp > 1)
-        send_to_char(ch, "Você recebeu %d pontos de experiência.\r\n", exp);
+        send_to_char(ch, "Você recebeu %s pontos de experiência.\r\n", format_number_br(exp));
     else
         send_to_char(ch, "Você recebeu um mísero ponto de experiência.\r\n");
     gain_exp(ch, exp);

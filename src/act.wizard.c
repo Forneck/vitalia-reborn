@@ -1823,7 +1823,7 @@ ACMD(do_date)
     else
         mytime = boot_time;
 
-    strftime(timestr, sizeof(timestr), "%c", localtime(&mytime));
+    strftime(timestr, sizeof(timestr), "%a %b %d %H:%M:%S %Y", localtime(&mytime));
 
     if (subcmd == SCMD_DATE)
         send_to_char(ch, "Current machine time: %s\r\n", timestr);
