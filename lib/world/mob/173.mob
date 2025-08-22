@@ -551,7 +551,7 @@ O criado segura uma travessa de comida quente, que parece estar deliciosa.
 10 7 0 3d7+198 3d12+6
 1000 7900
 9 9 1
-GenWimpy: 36
+GenWimpy: 34
 GenRoam: 89
 E
 #17337
@@ -657,7 +657,7 @@ arma*, e está vestido com várias peles.
 59 4 -3 3d13+765 4d4+15
 3900 65090
 9 9 1
-GenWimpy: 14
+GenWimpy: 17
 GenLoot: 1
 E
 #17344
@@ -767,7 +767,7 @@ O servo segura um instrumento de fazenda e usa trapos para se cobrir.
 10 7 1 4d12+250 6d6+5
 1240 4769
 9 9 1
-GenWimpy: 47
+GenWimpy: 48
 E
 #17351
 invasor anglo~

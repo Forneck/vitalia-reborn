@@ -174,7 +174,7 @@ Bem, ele não parece ser muito amigável.
 8 13 2 3d10+100 2d5+2
 150 4000
 9 9 1
-GenWimpy: 42
+GenWimpy: 48
 GenRoam: 89
 E
 #4057
@@ -259,8 +259,9 @@ o SEU ouro também...
 8 13 3 1d10+100 2d5+2
 100 4000
 9 9 1
-GenWimpy: 56
+GenWimpy: 67
 GenRoam: 89
+GenBrave: 1
 E
 T 3007
 #4104

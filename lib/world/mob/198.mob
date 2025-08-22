@@ -149,9 +149,9 @@ branco?'.
 60 5 -10 15d6+500 5d6+20
 5000 900000
 9 9 2
-GenWimpy: 15
+GenWimpy: 16
 GenLoot: 5
-GenRoam: 88
+GenRoam: 89
 E
 #19810
 amarelo demonio~
@@ -333,7 +333,7 @@ num piscar de olhos em outra posição.  É notoriamente um fantasma.
 70 -10 -30 600d1+250 2d8+25
 10000 200000
 9 9 1
-GenWimpy: 11
+GenWimpy: 8
 GenRoam: 89
 E
 $

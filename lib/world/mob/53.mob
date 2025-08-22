@@ -12,7 +12,7 @@ venenosa desta cobra derrubou muitos faraós poderosos.
 9 9 0
 GenWimpy: 100
 GenLoot: 2
-GenRoam: 74
+GenRoam: 73
 E
 T 3008
 #5301
@@ -152,7 +152,7 @@ quentes e arenosos.
 14 6 2 14d14+140 2d7+4
 1500 18000
 9 9 1
-GenWimpy: 98
+GenWimpy: 100
 GenLoot: 12
 GenEquip: 1
 GenRoam: 89
@@ -215,8 +215,8 @@ dos seus primos mais velhos.
 15 0 -23 15d15+650 4d10+25
 7500 21000
 9 9 2
-GenWimpy: 21
-GenLoot: 33
+GenWimpy: 15
+GenLoot: 34
 GenEquip: 3
 GenRoam: 81
 E

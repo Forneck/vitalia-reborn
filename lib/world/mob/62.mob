@@ -9,8 +9,8 @@ Este veado é muito bonito.
 3 18 1 3d5+33 1d7+0
 0 350
 9 9 0
-GenWimpy: 5
-GenRoam: 72
+GenWimpy: 7
+GenRoam: 79
 E
 #6201
 coelho~
@@ -23,8 +23,8 @@ Ele é um pequeno e peludo roedor com grandes orelhas.
 0 20 3 1d5+3 1d3+0
 0 25
 9 9 0
-GenWimpy: 4
-GenRoam: 63
+GenWimpy: 5
+GenRoam: 68
 E
 #6202
 esquilo~
@@ -37,8 +37,8 @@ Ele é um esquilo pequeno e marrom.  Um excelente espécime saltador.
 0 20 -1 1d3+0 1d1+1
 0 10
 9 9 0
-GenWimpy: 7
-GenRoam: 82
+GenWimpy: 8
+GenRoam: 84
 E
 #6203
 cacador orc~
@@ -52,7 +52,7 @@ Sua pele verde está definitivamente pintada e ele parece coxear um pouco...
 7 14 5 3d5+83 2d3+2
 0 2250
 9 9 1
-GenWimpy: 12
+GenWimpy: 14
 GenLoot: 2
 GenRoam: 88
 E

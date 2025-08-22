@@ -60,8 +60,8 @@ uma pobre garotinha que acidentalmente encontrou esse lugar!
 15 10 0 6d6+260 5d5+10
 100 6500
 9 9 1
-GenWimpy: 10
-GenLoot: 8
+GenWimpy: 9
+GenLoot: 9
 GenEquip: 1
 GenRoam: 89
 GenGroup: 2
@@ -78,9 +78,9 @@ poderia acabar com o sofrimento dela!
 5 17 5 4d4+100 3d4+1
 50 1000
 9 9 2
-GenWimpy: 45
+GenWimpy: 46
 GenLoot: 2
-GenRoam: 87
+GenRoam: 84
 E
 #10305
 mulher canibal~
@@ -160,7 +160,7 @@ Peludo, mal cheiroso, e desagradável. Que tal deixá-lo sozinho?
 500 4000
 9 9 1
 BareHandAttack: 9
-GenWimpy: 74
+GenWimpy: 79
 GenLoot: 5
 GenEquip: 1
 GenRoam: 89
@@ -254,9 +254,9 @@ sua última refeição.
 6 10 6 2d2+100 3d3+6
 1000 3700
 9 9 2
-GenWimpy: 98
-GenLoot: 41
-GenRoam: 59
+GenWimpy: 100
+GenLoot: 42
+GenRoam: 69
 E
 #10316
 zumbi~

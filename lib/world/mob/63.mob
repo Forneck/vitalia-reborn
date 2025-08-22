@@ -11,7 +11,7 @@ Ela parece recém-saída do ovo e esperta.  Suas presas ainda estão crescendo.
 9 9 1
 GenWimpy: 52
 GenLoot: 4
-GenRoam: 84
+GenRoam: 86
 E
 #6302
 yevaud dragao usurpador~
@@ -38,7 +38,7 @@ A aranha-lobo é peluda, muito peluda.
 6 12 6 3d8+70 2d5+3
 1250 6000
 9 9 2
-GenWimpy: 52
+GenWimpy: 54
 GenLoot: 7
 E
 #6304
@@ -115,9 +115,9 @@ própria ou se foi seduzido você não poderá ter certeza.
 11 8 4 1d12+130 2d7+1
 1000 13500
 9 9 1
-GenWimpy: 20
+GenWimpy: 21
 GenLoot: 10
-GenRoam: 82
+GenRoam: 87
 E
 #6309
 quasit~

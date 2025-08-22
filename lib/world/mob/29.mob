@@ -152,7 +152,7 @@ Wis: 13
 GenWimpy: 5
 GenLoot: 52
 GenEquip: 5
-GenRoam: 67
+GenRoam: 77
 E
 #2920
 conselheiro Degruziel~
@@ -299,7 +299,7 @@ Uma poça de lama de aparência incomum está aqui, rodopiando.
 3 19 8 0d0+30 1d2+0
 30 900
 9 9 0
-GenWimpy: 88
+GenWimpy: 87
 GenLoot: 8
 GenEquip: 1
 GenRoam: 87
@@ -383,9 +383,9 @@ através de você. Parece completamente destemido.
 9 9 0
 GenWimpy: 5
 GenLoot: 9
-GenEquip: 6
-GenRoam: 71
-GenGroup: 29
+GenEquip: 7
+GenRoam: 82
+GenGroup: 28
 E
 #2934
 garoto servente~
@@ -422,11 +422,11 @@ Str: 14
 Dex: 13
 Int: 15
 Wis: 14
-GenWimpy: 8
+GenWimpy: 9
 GenLoot: 11
 GenEquip: 2
-GenRoam: 77
-GenGroup: 34
+GenRoam: 79
+GenGroup: 33
 E
 #2936
 dama bem nascida~
@@ -449,8 +449,8 @@ Wis: 15
 GenWimpy: 4
 GenLoot: 16
 GenEquip: 7
-GenRoam: 80
-GenGroup: 21
+GenRoam: 81
+GenGroup: 20
 E
 #2937
 convidado honrado~
@@ -466,11 +466,11 @@ perder uma refeição.
 10 17 4 2d2+100 1d2+1
 100 10000
 9 9 1
-GenWimpy: 10
+GenWimpy: 9
 GenLoot: 4
 GenEquip: 3
-GenRoam: 22
-GenGroup: 3
+GenRoam: 21
+GenGroup: 2
 E
 #2938
 guarda mansao~
@@ -587,11 +587,10 @@ e se prepara para sair numa rodada de mendicância.
 70 4900
 9 9 2
 Dex: 10
-GenWimpy: 4
+GenWimpy: 5
 GenLoot: 5
 GenEquip: 2
 GenRoam: 40
-GenGroup: 2
 E
 #2944
 mulher disfarcada~
@@ -646,7 +645,7 @@ Um homem está aqui, dormindo em sua cama de viagem.
 10 17 4 2d2+100 1d2+1
 100 10000
 4 4 1
-GenWimpy: 8
+GenWimpy: 9
 GenLoot: 14
 GenEquip: 2
 E
@@ -722,9 +721,9 @@ Um esquizofrênico paranoico está aqui, gritando para o mundo.
 9 9 2
 Str: 14
 Dex: 14
-GenWimpy: 86
+GenWimpy: 85
 GenLoot: 5
-GenRoam: 85
+GenRoam: 84
 E
 #2951
 idiota~
@@ -955,7 +954,7 @@ Um caranguejo rei está aqui, parecendo mal-humorado.
 100 10000
 9 9 0
 BareHandAttack: 11
-GenWimpy: 10
+GenWimpy: 11
 E
 #2964
 mulher~
@@ -1192,8 +1191,8 @@ Dex: 15
 Int: 13
 Wis: 13
 GenWimpy: 5
-GenLoot: 81
-GenEquip: 9
+GenLoot: 84
+GenEquip: 10
 E
 T 2902
 #2976
@@ -1216,7 +1215,7 @@ Str: 9
 Dex: 15
 Int: 10
 Wis: 12
-GenWimpy: 6
+GenWimpy: 5
 GenLoot: 99
 GenEquip: 5
 E
@@ -1336,11 +1335,11 @@ importante... Embora o que exatamente ele está fazendo não seja aparente.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 1
-GenWimpy: 24
-GenLoot: 32
+GenWimpy: 18
+GenLoot: 33
 GenEquip: 7
 GenRoam: 89
-GenGroup: 54
+GenGroup: 52
 E
 #2984
 mestre estabulo~
@@ -1407,8 +1406,8 @@ tamparem os ouvidos de seus filhos.
 9 9 1
 BareHandAttack: 7
 GenWimpy: 8
-GenRoam: 79
-GenGroup: 3
+GenRoam: 82
+GenGroup: 2
 E
 #2988
 cavalo empinando~
@@ -1525,11 +1524,11 @@ esposa de um comerciante.
 7 18 5 1d1+70 1d2+1
 70 4900
 9 9 2
-GenWimpy: 18
+GenWimpy: 19
 GenLoot: 7
 GenEquip: 1
-GenRoam: 88
-GenGroup: 6
+GenRoam: 89
+GenGroup: 5
 E
 #2995
 mulher maternal~

@@ -40,7 +40,7 @@ exterminador de coelhinhos em pessoa, Edgar o Horrível!
 1 20 10 3d9+10 1d8+1
 23 100
 9 9 1
-GenWimpy: 23
+GenWimpy: 24
 GenRoam: 86
 E
 #2503
@@ -107,7 +107,7 @@ mas ela certamente se encaixa no esperado para uma torre cheia de magos.
 20 6 -1 20d20+200 3d4+8
 1092 31300
 9 9 2
-GenWimpy: 21
+GenWimpy: 23
 GenLoot: 4
 E
 T 3009
@@ -182,8 +182,9 @@ As mãos estremecem com a antecipação de estrangular alguém.
 9 7 -5 9d9+90 2d4+5
 0 3100
 9 9 0
-GenWimpy: 15
+GenWimpy: 22
 GenLoot: 5
+GenRoam: 6
 E
 #2513
 guardioes maiores olhos~
@@ -196,11 +197,11 @@ Os olhos ardem em chams de ódio latente.
 15 5 -9 15d15+150 3d4+8
 0 9100
 9 9 0
-GenWimpy: 15
-GenLoot: 81
+GenWimpy: 7
+GenLoot: 82
 GenEquip: 2
-GenRoam: 87
-GenGroup: 81
+GenRoam: 86
+GenGroup: 80
 E
 #2514
 mago visitante~
@@ -659,7 +660,7 @@ Isto mais parece uma trouxa de roupa suja, é surpreendente que possa andar.
 8 10 1 8d8+80 3d4+1
 0 2100
 9 9 0
-GenWimpy: 25
+GenWimpy: 27
 E
 #2546
 golem adamantite~
@@ -805,7 +806,7 @@ garras bem grandes.
 15 5 -5 15d15+150 5d5+5
 0 18750
 9 9 2
-GenWimpy: 23
+GenWimpy: 26
 E
 #2556
 mestre cinza~

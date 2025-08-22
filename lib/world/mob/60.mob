@@ -29,7 +29,7 @@ O pequeno coelho está disparando na direção dos arbustos daqui.
 9 9 0
 GenWimpy: 100
 GenLoot: 1
-GenRoam: 84
+GenRoam: 85
 E
 #6002
 urso marrom~
@@ -86,7 +86,7 @@ peluda cauda.
 2 18 6 1d4+18 1d6+0
 0 225
 9 9 0
-GenWimpy: 55
+GenWimpy: 56
 GenLoot: 6
 GenRoam: 87
 E
@@ -189,9 +189,9 @@ no chão.
 2 19 8 1d12+22 1d6+0
 0 200
 9 9 0
-GenWimpy: 70
+GenWimpy: 69
 GenLoot: 2
-GenRoam: 74
+GenRoam: 72
 E
 #6013
 esquilinho~
@@ -207,9 +207,9 @@ pensa você.
 0 20 5 2d5+3 1d4+0
 0 40
 9 9 0
-GenWimpy: 81
+GenWimpy: 80
 GenLoot: 5
-GenRoam: 84
+GenRoam: 81
 E
 #6014
 corvo negro passaro~
@@ -299,6 +299,6 @@ O pato é bastante gordo.   Ele parece estar aproveitando bem sua vida.
 0 75
 9 9 0
 GenWimpy: 100
-GenRoam: 72
+GenRoam: 70
 E
 $

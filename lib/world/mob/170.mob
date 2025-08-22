@@ -9,7 +9,7 @@ Ele parece tentar alcançar o outro lado da montanha, assim como você.
 10 10 0 1d10+160 2d10+8
 400 600
 9 9 1
-GenWimpy: 24
+GenWimpy: 26
 GenLoot: 1
 E
 #17002
@@ -193,7 +193,7 @@ Ela corre ao seu redor, esperando uma brecha.
 9 9 2
 GenWimpy: 98
 GenLoot: 7
-GenRoam: 55
+GenRoam: 52
 E
 #17016
 elemental neve humanoide cristal~
@@ -233,7 +233,7 @@ todos os lados, produzindo barulhentas explosões.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 50
+GenWimpy: 52
 GenLoot: 1
 E
 #17019
@@ -247,7 +247,7 @@ O líquido se une dando origem a um pequeno humanóide corrosivo.
 3 5 2 1d5+200 2d5+4
 400 3000
 9 9 1
-GenWimpy: 99
+GenWimpy: 100
 GenLoot: 1
 E
 #17020
@@ -383,10 +383,10 @@ frio subindo por suas costas.
 26 -2 -5 1d5+630 6d5+13
 3000 30000
 9 9 1
-GenWimpy: 97
+GenWimpy: 100
 GenLoot: 12
 GenRoam: 89
-GenGroup: 13
+GenGroup: 10
 E
 #17029
 rochas monstro~
@@ -508,7 +508,7 @@ Ele se assemelha bastante a um desagradável inseto.
 9 9 1
 GenWimpy: 100
 GenLoot: 1
-GenRoam: 87
+GenRoam: 88
 E
 #17037
 gigantesco elemental~

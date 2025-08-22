@@ -43,7 +43,7 @@ em retirada..  OPA..  Lá vai seu almoço!
 3 18 7 30d1+5 1d3+1
 0 600
 9 9 1
-GenWimpy: 30
+GenWimpy: 31
 GenRoam: 87
 E
 #5704
@@ -86,7 +86,7 @@ mundo perigoso lá fora.'
 30 0 -2 200d2+200 3d6+11
 20000 40000
 9 9 1
-GenWimpy: 31
+GenWimpy: 35
 GenLoot: 6
 GenRoam: 17
 E
@@ -102,7 +102,8 @@ se ele mordesse seu braço.
 8 12 3 50d1+10 3d3+6
 1 5000
 9 9 1
-GenWimpy: 51
+GenWimpy: 52
+GenRoam: 1
 E
 #5708
 menor demonio~
@@ -131,7 +132,7 @@ sitiada por demônios.
 17 6 1 150d2+30 2d8+8
 1000 22000
 9 9 1
-GenWimpy: 7
+GenWimpy: 5
 GenLoot: 13
 GenEquip: 4
 GenRoam: 89
@@ -193,7 +194,7 @@ armas..  Prisioneiro!'
 28 1 0 250d1+110 3d6+10
 5000 48999
 9 9 1
-GenWimpy: 19
+GenWimpy: 21
 E
 #5714
 rymat conselheiro~
@@ -208,7 +209,7 @@ lhe dá as costas e continua a lamentar-se, tremendo incontrolavelmente.
 23 0 0 350d1+50 3d8+13
 1000 70000
 9 9 1
-GenWimpy: 29
+GenWimpy: 31
 E
 #5715
 irgon arque demonio~

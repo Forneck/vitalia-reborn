@@ -52,6 +52,8 @@ sobre as muitas e afiadas bocas dentadas...
 30 10 1 1d1+690 5d10+4
 7500 50000
 9 9 1
+GenWimpy: 3
+GenRoam: 10
 E
 #9904
 bicho-papão bicho papao papão~
@@ -242,6 +244,8 @@ maravilhosa cidade.
 10 3 9 1d1+150 6d2+3
 2200 6000
 9 9 1
+GenWimpy: 4
+GenRoam: 47
 E
 #9918
 senhora velha vendedora~
