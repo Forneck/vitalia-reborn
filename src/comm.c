@@ -1138,10 +1138,28 @@ static void record_usage(void)
                                  guarantee prototype. */
     {
         struct rusage ru;
+        static struct rusage prev_ru = {0};
+        static int first_call = 1;
+        long user_delta = 0, sys_delta = 0;
 
         getrusage(RUSAGE_SELF, &ru);
-        log1("rusage: user time: %ld sec, system time: %ld sec, max res size: %ld", ru.ru_utime.tv_sec,
+
+        if (!first_call) {
+            /* Calculate deltas since last measurement */
+            user_delta = ru.ru_utime.tv_sec - prev_ru.ru_utime.tv_sec;
+            sys_delta = ru.ru_stime.tv_sec - prev_ru.ru_stime.tv_sec;
+
+            /* Log delta usage (more useful for performance monitoring) */
+            log1("rusage delta: user: %+ld sec, system: %+ld sec", user_delta, sys_delta);
+        }
+
+        /* Log cumulative usage for reference */
+        log1("rusage total: user time: %ld sec, system time: %ld sec, max res size: %ld", ru.ru_utime.tv_sec,
              ru.ru_stime.tv_sec, ru.ru_maxrss);
+
+        /* Store current values for next delta calculation */
+        prev_ru = ru;
+        first_call = 0;
     }
 #endif
 }

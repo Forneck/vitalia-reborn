@@ -16486,21 +16486,29 @@ See also: REBEGIN, ADVANCE, SKILLSET
 #107
 SYSLOG RUSAGE
 
-   The syslog rusage line provides system resource usage information that
-appears periodically in the system log. This information is only visible
-to immortals level LVL_GRGOD and above.
+   The syslog rusage lines provide system resource usage information that
+appears periodically in the system log (every 5 minutes). This information 
+is only visible to immortals level LVL_GRGOD and above.
 
-   The rusage line shows:
-   - User time: CPU time spent executing user code (in seconds)
-   - System time: CPU time spent in system calls (in seconds)  
-   - Max res size: Maximum resident set size (memory usage)
+   Two rusage entries are logged:
+   
+   1. Delta usage - CPU time used since the last measurement:
+      - Shows performance spikes and recent activity impact
+      - Positive values indicate CPU usage, zero means no usage
+      - Helps identify bottlenecks and performance issues
+      
+   2. Total usage - Cumulative CPU time since server start:
+      - User time: CPU time spent executing user code (in seconds)
+      - System time: CPU time spent in system calls (in seconds)  
+      - Max res size: Maximum resident set size (memory usage)
 
-   This information helps monitor server performance and resource consumption.
-The data comes from the getrusage() system call and is logged automatically
-by the MUD server at regular intervals.
+   This information helps monitor server performance and identify when
+resource usage spikes occur. The delta values are particularly useful
+for detecting performance bottlenecks that could lead to missed pulses.
 
-Example log entry:
-   rusage: user time: 45 sec, system time: 12 sec, max res size: 524288
+Example log entries:
+   rusage delta: user: +2 sec, system: +0 sec
+   rusage total: user time: 47 sec, system time: 12 sec, max res size: 524288
 
 See also: SYSLOG, LOG
 #108
