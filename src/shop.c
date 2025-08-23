@@ -1825,7 +1825,20 @@ int find_best_shop_to_sell(struct char_data *ch, struct obj_data *item)
     float best_profit = 0.0;
     int i;
 
+    /* Enhanced input validation to prevent crashes */
     if (!ch || !item)
+        return -1;
+
+    /* Only NPCs should use this function - PCs don't have AI goals */
+    if (!IS_NPC(ch))
+        return -1;
+
+    /* Validate that the character has ai_data if we expect it to be used */
+    if (!ch->ai_data)
+        return -1;
+
+    /* Additional object validation - check for potential corruption */
+    if (GET_OBJ_TYPE(item) < 0 || GET_OBJ_TYPE(item) >= NUM_ITEM_TYPES)
         return -1;
 
     /* Check if shops are loaded and shop_index is valid */
@@ -1835,7 +1848,11 @@ int find_best_shop_to_sell(struct char_data *ch, struct obj_data *item)
     /* A IA percorre o índice de todas as lojas do MUD. */
     for (snum = 0; snum <= top_shop; snum++) {
 
-        /* Validate shop index entry is properly initialized */
+        /* Enhanced validation: check bounds and shop index entry initialization */
+        if (snum < 0 || snum > top_shop) {
+            continue; /* Should not happen but defensive programming */
+        }
+
         if (!shop_index[snum].type || !shop_index[snum].in_room) {
             continue;
         }
@@ -1847,7 +1864,7 @@ int find_best_shop_to_sell(struct char_data *ch, struct obj_data *item)
 
         /* Filtro 2: A loja compra este tipo de item? */
         bool buys_this_type = FALSE;
-        for (i = 0; SHOP_BUYTYPE(snum, i) != NOTHING; i++) {
+        for (i = 0; i < MAX_TRADE && SHOP_BUYTYPE(snum, i) != NOTHING; i++) {
             if (SHOP_BUYTYPE(snum, i) == GET_OBJ_TYPE(item)) {
                 buys_this_type = TRUE;
                 break;
@@ -1870,16 +1887,24 @@ int find_best_shop_to_sell(struct char_data *ch, struct obj_data *item)
         }
 
         /* Análise Económica: Esta loja oferece um lucro melhor que a melhor encontrada até agora? */
+        /* Additional safety check before accessing object cost */
+        if (GET_OBJ_COST(item) < 0) {
+            continue; /* Invalid item cost, skip this shop */
+        }
+
         float current_profit = GET_OBJ_COST(item) * SHOP_BUYPROFIT(snum);
 
         /******************************************************************/
         /* LÓGICA DE LOJISTA: Compara o lucro da venda com o lucro de manter o item. */
         /******************************************************************/
-        int own_shop_rnum = find_shop_by_keeper(GET_MOB_RNUM(ch));
-        if (own_shop_rnum != -1) {
-            float profit_at_home = GET_OBJ_COST(item) * SHOP_SELLPROFIT(own_shop_rnum);
-            if (current_profit <= profit_at_home) {
-                continue; /* Não vale a pena vender para outro, o lucro em casa é maior. */
+        /* Enhanced safety: only check own shop for NPCs with valid mob rnum */
+        if (IS_MOB(ch)) {
+            int own_shop_rnum = find_shop_by_keeper(GET_MOB_RNUM(ch));
+            if (own_shop_rnum != -1) {
+                float profit_at_home = GET_OBJ_COST(item) * SHOP_SELLPROFIT(own_shop_rnum);
+                if (current_profit <= profit_at_home) {
+                    continue; /* Não vale a pena vender para outro, o lucro em casa é maior. */
+                }
             }
         }
 
