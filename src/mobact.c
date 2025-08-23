@@ -330,8 +330,8 @@ void mobile_activity(void)
 
                         /* Check if this shop actually buys this type of item */
                         bool shop_buys_this_item = FALSE;
-                        if (shop_rnum != -1 && shop_index[shop_rnum].type) {
-                            for (int i = 0; SHOP_BUYTYPE(shop_rnum, i) != NOTHING; i++) {
+                        if (shop_rnum != -1 && shop_rnum <= top_shop && shop_index[shop_rnum].type) {
+                            for (int i = 0; i < MAX_TRADE && SHOP_BUYTYPE(shop_rnum, i) != NOTHING; i++) {
                                 if (SHOP_BUYTYPE(shop_rnum, i) == GET_OBJ_TYPE(ch->ai_data->goal_obj)) {
                                     shop_buys_this_item = TRUE;
                                     break;
@@ -2623,8 +2623,8 @@ bool mob_try_to_sell_junk(struct char_data *ch)
     int best_shop_rnum = find_best_shop_to_sell(ch, item_to_sell);
 
     /* If the best shop is not reachable, try to find an alternative */
-    if (best_shop_rnum == -1 || best_shop_rnum > top_shop || !shop_index[best_shop_rnum].in_room ||
-        SHOP_ROOM(best_shop_rnum, 0) == NOWHERE) {
+    if (best_shop_rnum == -1 || best_shop_rnum < 0 || best_shop_rnum > top_shop ||
+        !shop_index[best_shop_rnum].in_room || SHOP_ROOM(best_shop_rnum, 0) == NOWHERE) {
         return FALSE; /* No shops available */
     }
 
@@ -2647,7 +2647,7 @@ bool mob_try_to_sell_junk(struct char_data *ch)
 
             /* Check if shop buys this type of item */
             bool buys_this_type = FALSE;
-            for (int i = 0; SHOP_BUYTYPE(snum, i) != NOTHING; i++) {
+            for (int i = 0; i < MAX_TRADE && SHOP_BUYTYPE(snum, i) != NOTHING; i++) {
                 if (SHOP_BUYTYPE(snum, i) == GET_OBJ_TYPE(item_to_sell)) {
                     buys_this_type = TRUE;
                     break;
