@@ -130,6 +130,10 @@ static long advanced_pathfind_calls = 0;
 static long zone_optimized_calls = 0;
 static long keys_optimized_total = 0;
 
+/* Cache the current time to reduce system calls during pulse processing */
+static time_t cached_time = 0;
+static int cached_time_pulse = -1;
+
 /* Advanced pathfinding function declarations */
 static void state_enqueue(struct path_state *state);
 static struct path_state *state_dequeue(void);
@@ -149,6 +153,17 @@ static int zone_has_connection_to(zone_rnum from_zone, zone_rnum to_zone);
 
 /* Cache function declarations */
 static void cache_pathfind_result_priority(room_rnum src, room_rnum target, int direction, int priority);
+
+/* Get cached time to reduce system calls - updates once per pulse */
+static time_t get_cached_time(void)
+{
+    extern unsigned long pulse; /* From comm.c */
+    if (cached_time_pulse != (int)pulse) {
+        cached_time = time(NULL);
+        cached_time_pulse = (int)pulse;
+    }
+    return cached_time;
+}
 
 /* Utility macros */
 #define MARK(room) (SET_BIT_AR(ROOM_FLAGS(room), ROOM_BFS_MARK))
@@ -1386,7 +1401,7 @@ int get_pathfind_cache_valid_entries(void)
 static int get_cached_pathfind(room_rnum src, room_rnum target)
 {
     int i;
-    time_t now = time(NULL);
+    time_t now = get_cached_time(); /* Use cached time instead of system call */
 
     if (!pathfind_cache_initialized)
         return -1;
@@ -1417,7 +1432,7 @@ static void cache_pathfind_result_priority(room_rnum src, room_rnum target, int 
     }
 
     int i, oldest_idx = 0;
-    time_t now = time(NULL);
+    time_t now = get_cached_time(); /* Use cached time instead of system call */
     time_t oldest_time = now;
     int found_low_priority = 0;
 
@@ -1694,8 +1709,8 @@ int mob_smart_pathfind(struct char_data *ch, room_rnum target_room)
 
     /* Limit pathfinding frequency to prevent resource exhaustion */
     pathfind_calls++;
-    if (pathfind_calls % 10 == 0) {
-        /* Only do complex pathfinding every 10th call */
+    if (pathfind_calls % 20 == 0) {
+        /* Only do complex pathfinding every 20th call (reduced from 10th) */
         pathfind_calls = 0;
     } else {
         /* Use simple pathfinding most of the time */
