@@ -1709,8 +1709,8 @@ int mob_smart_pathfind(struct char_data *ch, room_rnum target_room)
 
     /* Limit pathfinding frequency to prevent resource exhaustion */
     pathfind_calls++;
-    if (pathfind_calls % 10 == 0) {
-        /* Only do complex pathfinding every 10th call */
+    if (pathfind_calls % 20 == 0) {
+        /* Only do complex pathfinding every 20th call (reduced from 10th) */
         pathfind_calls = 0;
     } else {
         /* Use simple pathfinding most of the time */
