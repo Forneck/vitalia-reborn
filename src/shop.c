@@ -956,6 +956,10 @@ int ok_shop_room(int shop_nr, room_vnum room)
 {
     int mindex;
 
+    /* Bounds checking to prevent crashes */
+    if (!shop_index || shop_nr < 0 || shop_nr > top_shop || !shop_index[shop_nr].in_room)
+        return (FALSE);
+
     for (mindex = 0; SHOP_ROOM(shop_nr, mindex) != NOWHERE; mindex++)
         if (SHOP_ROOM(shop_nr, mindex) == room)
             return (TRUE);
@@ -1900,7 +1904,8 @@ int find_best_shop_to_sell(struct char_data *ch, struct obj_data *item)
         /* Enhanced safety: only check own shop for NPCs with valid mob rnum */
         if (IS_MOB(ch)) {
             int own_shop_rnum = find_shop_by_keeper(GET_MOB_RNUM(ch));
-            if (own_shop_rnum != -1) {
+            if (own_shop_rnum != -1 && own_shop_rnum >= 0 && own_shop_rnum <= top_shop && shop_index &&
+                shop_index[own_shop_rnum].type) {
                 float profit_at_home = GET_OBJ_COST(item) * SHOP_SELLPROFIT(own_shop_rnum);
                 if (current_profit <= profit_at_home) {
                     continue; /* Não vale a pena vender para outro, o lucro em casa é maior. */
