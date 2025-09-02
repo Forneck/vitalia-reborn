@@ -263,6 +263,8 @@ cpp_extern const struct command_info cmd_info[] = {
     {"prompt", "pro", POS_DEAD, do_display, 0, 0, CMD_NOARG},
     {"prefedit", "pre", POS_DEAD, do_oasis_prefedit, 0, 0, CMD_NOARG},
     {"purge", "purge", POS_DEAD, do_purge, LVL_BUILDER, 0, CMD_NOARG},
+    {"qadmin", "qadmin", POS_DEAD, do_quality_admin, LVL_GRGOD, 0 }, /* INSERIDO PARA SISTEMA DE QUALIDADE */
+    {"qualinfo", "qualinfo", POS_RESTING , do_quality_toggle, 0, 0 }, /* INSERIDO PARA SISTEMA DE QUALIDADE */
     {"qedit", "qedit", POS_DEAD, do_oasis_qedit, LVL_BUILDER, 0, CMD_NOARG},
     {"qlist", "qlist", POS_DEAD, do_oasis_list, LVL_BUILDER, SCMD_OASIS_QLIST, CMD_ONEARG},
     {"quaff", "qua", POS_RESTING, do_use, 0, SCMD_QUAFF, CMD_ONEARG},

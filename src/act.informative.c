@@ -28,6 +28,7 @@
 #include "modify.h"
 #include "asciimap.h"
 #include "quest.h"
+#include "quality.h"
 
 /* prototypes of local functions */
 /* do_diagnose utility functions */
@@ -56,6 +57,8 @@ extern void look_at_sky(struct char_data *ch);
 #define SHOW_OBJ_LONG 0
 #define SHOW_OBJ_SHORT 1
 #define SHOW_OBJ_ACTION 2
+#define SHOW_OBJ_QUALITY 3
+
 
 static void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
 {
@@ -139,6 +142,26 @@ static void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mod
                     send_to_char(ch, "Você não vê nada de especial...");
                     break;
             }
+            break;
+
+        case SHOW_OBJ_QUALITY:
+            if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS)) {
+                send_to_char(ch, "[%d] ", GET_OBJ_VNUM(obj));
+                if (SCRIPT(obj)) {
+                    if (!TRIGGERS(SCRIPT(obj))->next)
+                        send_to_char(ch, "[T%d] ", GET_TRIG_VNUM(TRIGGERS(SCRIPT(obj))));
+                    else
+                        send_to_char(ch, "[TRIGS] ");
+                }
+            }
+    
+    // 🛡️ PROTEÇÃO: Tentar usar qualidade, se falhar usar descrição normal
+            const char *display_name = get_quality_obj_name(obj);
+            if (!display_name || !*display_name) {
+                // Fallback seguro para descrição original
+                display_name = obj->short_description;
+            }
+            send_to_char(ch, "%s", display_name);
             break;
 
         default:
@@ -294,12 +317,12 @@ static void look_at_char(struct char_data *i, struct char_data *ch)
         for (j = 0; j < NUM_WEARS; j++)
             if (GET_EQ(i, j) && CAN_SEE_OBJ(ch, GET_EQ(i, j))) {
                 send_to_char(ch, "%s", wear_where[j]);
-                show_obj_to_char(GET_EQ(i, j), ch, SHOW_OBJ_SHORT);
+                show_obj_to_char(GET_EQ(i, j), ch, SHOW_OBJ_QUALITY);
             }
     }
     if (ch != i && (IS_THIEF(ch) || GET_LEVEL(ch) >= LVL_IMMORT)) {
         act("\r\nVocê consegue ver em seu inventário:", FALSE, i, 0, ch, TO_VICT);
-        list_obj_to_char(i->carrying, ch, SHOW_OBJ_SHORT, TRUE);
+        list_obj_to_char(i->carrying, ch, SHOW_OBJ_QUALITY, TRUE);
     }
 }
 
@@ -696,7 +719,7 @@ static void look_in_obj(struct char_data *ch, char *arg)
                         break;
                 }
 
-                list_obj_to_char(obj->contains, ch, SHOW_OBJ_SHORT, TRUE);
+                list_obj_to_char(obj->contains, ch, SHOW_OBJ_QUALITY, TRUE);
             }
         } else { /* item must be a fountain or drink container */
             if ((GET_OBJ_VAL(obj, 1) == 0) && (GET_OBJ_VAL(obj, 0) != -1))
@@ -1166,7 +1189,7 @@ ACMD(do_affects)
 ACMD(do_inventory)
 {
     send_to_char(ch, "\tWVocê está carregando:\tn\r\n");
-    list_obj_to_char(ch->carrying, ch, SHOW_OBJ_SHORT, TRUE);
+    list_obj_to_char(ch->carrying, ch, SHOW_OBJ_QUALITY, TRUE);
 }
 
 ACMD(do_equipment)
@@ -1178,7 +1201,7 @@ ACMD(do_equipment)
             found = TRUE;
             if (CAN_SEE_OBJ(ch, GET_EQ(ch, i))) {
                 send_to_char(ch, "%s", wear_where[i]);
-                show_obj_to_char(GET_EQ(ch, i), ch, SHOW_OBJ_SHORT);
+                show_obj_to_char(GET_EQ(ch, i), ch, SHOW_OBJ_QUALITY);
             } else {
                 send_to_char(ch, "%s", wear_where[i]);
                 send_to_char(ch, "algo.\r\n");
