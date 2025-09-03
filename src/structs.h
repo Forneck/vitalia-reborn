@@ -521,8 +521,9 @@
 #define ITEM_ANTI_BARD 20
 #define ITEM_QUEST 21 /**< Item is a quest item         */
 #define ITEM_ANTI_RANGER 22
-/** Total number of item flags */
-#define NUM_ITEM_FLAGS 23
+#define ITEM_QUALITY 23 /**< Item has quality applied */ /* INSERIDO PARA SISTEMA DE QUALIDADE */
+/* Total number of item flags */
+#define NUM_ITEM_FLAGS 24
 
 /* Modifier constants used with obj affects ('A' fields) */
 #define APPLY_NONE 0           /**< No effect			*/
@@ -869,6 +870,7 @@ struct obj_data {
     struct char_data *sitting_here; /**< For furniture, who is sitting in it */
 
     struct list_data *events; /**< Used for object events */
+    int quality; /* Novo campo para guardar a qualidade do objeto */ /* INSERIDO PARA SISTEMA DE QUALIDADE */
 };
 
 /** Instance info for an object that gets saved to disk.
@@ -946,7 +948,7 @@ struct room_data {
     struct list_data *events;
 };
 
-/* Define os possíveis objetivos de longo prazo da IA */
+/* Define os possÃ­veis objetivos de longo prazo da IA */
 #define GOAL_NONE 0
 #define GOAL_GOTO_SHOP_TO_SELL 1
 #define GOAL_RETURN_TO_POST 2
@@ -967,7 +969,7 @@ struct room_data {
  * Estrutura para armazenar os "genes" de um mob, que podem evoluir.
  */
 struct mob_genetics {
-    int wimpy_tendency; /* Tendência de fuga. Varia de 0 a 100. */
+    int wimpy_tendency; /* TendÃªncia de fuga. Varia de 0 a 100. */
     /* Futuramente, podemos adicionar outros genes aqui: */
     int loot_tendency;
     int equip_tendency;
@@ -976,8 +978,8 @@ struct mob_genetics {
     int group_tendency;
     int use_tendency;
     int trade_tendency;
-    int quest_tendency;      /* Tendência de aceitar quests. Varia de 0 a 100. */
-    int adventurer_tendency; /* Tendência de ser aventureiro/explorar. Varia de 0 a 100. */
+    int quest_tendency;      /* TendÃªncia de aceitar quests. Varia de 0 a 100. */
+    int adventurer_tendency; /* TendÃªncia de ser aventureiro/explorar. Varia de 0 a 100. */
 };
 
 /**
@@ -986,12 +988,12 @@ struct mob_genetics {
 struct mob_wishlist_item {
     obj_vnum vnum;                  /* Virtual number do item desejado */
     int priority;                   /* Prioridade do item (score do evaluate_item_for_mob) */
-    time_t added_time;              /* Quando foi adicionado à wishlist */
-    struct mob_wishlist_item *next; /* Próximo item na lista */
+    time_t added_time;              /* Quando foi adicionado Ã  wishlist */
+    struct mob_wishlist_item *next; /* PrÃ³ximo item na lista */
 };
 
 struct mob_ai_data {
-    struct mob_genetics genetics; /* Contém todos os genes. */
+    struct mob_genetics genetics; /* ContÃ©m todos os genes. */
     room_vnum guard_post;         /* O "posto de guarda" para Sentinelas/Lojistas. */
     int duty_frustration_timer;
     int quest_posting_frustration_timer; /* Prevents quest posting after fleeing */
@@ -1011,7 +1013,7 @@ struct mob_ai_data {
     mob_rnum original_target_mob;   /* Original target mob */
     obj_vnum original_item_vnum;    /* Original item vnum */
 
-    int reputation;         /* Reputação do mob para quests (0-100) */
+    int reputation;         /* ReputaÃ§Ã£o do mob para quests (0-100) */
     qst_vnum current_quest; /* Quest ativa atual do mob (se houver) */
     int quest_timer;        /* Timer para a quest atual */
     int quest_counter;      /* Contador de progresso da quest */
@@ -1028,9 +1030,9 @@ struct mob_ai_data {
  */
 struct mob_upgrade_plan {
     struct obj_data *item_to_equip; /* O item a ser equipado. */
-    struct obj_data *container;     /* De que contentor o item deve ser tirado (NULL se do inventário). */
-    int wear_pos;                   /* Onde o item será equipado. */
-    int improvement_score;          /* A pontuação de melhoria desta troca. */
+    struct obj_data *container;     /* De que contentor o item deve ser tirado (NULL se do inventÃ¡rio). */
+    int wear_pos;                   /* Onde o item serÃ¡ equipado. */
+    int improvement_score;          /* A pontuaÃ§Ã£o de melhoria desta troca. */
 };
 
 /* char-related structures */
@@ -1277,7 +1279,7 @@ struct char_data {
 
     struct list_data *events;
     struct str_plrspells *plrspells;
-    struct mob_ai_data *ai_data; /* Genética do mob (para evolução) */
+    struct mob_ai_data *ai_data; /* GenÃ©tica do mob (para evoluÃ§Ã£o) */
 };
 
 /** descriptor-related structures */
@@ -1457,14 +1459,14 @@ struct nighthammer_data {
 /** Stores, and used to deliver, the current weather information
  * in the mud world. */
 struct weather_data {
-    int temperature; /* Temperatura atual (°C) */
-    int temp_diff;   /* Variação de temperatura */
-    int pressure;    /* Pressão atmosférica (hPa - Mb) */
-    int press_diff;  /* Variação da pressão */
+    int temperature; /* Temperatura atual (Â°C) */
+    int temp_diff;   /* VariaÃ§Ã£o de temperatura */
+    int pressure;    /* PressÃ£o atmosfÃ©rica (hPa - Mb) */
+    int press_diff;  /* VariaÃ§Ã£o da pressÃ£o */
     float humidity;  /* Umidade relativa (%) */
     float winds;     /* Velocidade do vento (m/s) */
-    int sky;         /* Estado do céu (claro, nublado, chovendo, etc.) */
-    int before;      /* Estado anterior do céu */
+    int sky;         /* Estado do cÃ©u (claro, nublado, chovendo, etc.) */
+    int before;      /* Estado anterior do cÃ©u */
     int sunlight;    /* Intensidade da luz solar */
 };
 

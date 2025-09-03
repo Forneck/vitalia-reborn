@@ -39,6 +39,7 @@
 #include "msgedit.h"
 #include "screen.h"
 #include <sys/stat.h>
+#include "quality.h"
 
 #include "spedit.h"
 
@@ -175,18 +176,18 @@ static int hsort(const void *a, const void *b);
  * Campos:
  *   temperature, temp_diff, pressure, press_diff, humidity, winds, sky, before, sunlight
  *
- * Clima 0: Temperado – temperaturas moderadas, variação sutil, pressão média e alta umidade.
- * Clima 1: Chuvoso – temperaturas um pouco mais baixas, pressão ligeiramente inferior e alta umidade.
- * Clima 2: Tropical – clima quente, pressão média e alta umidade.
- * Clima 3: Frio/Seco – temperaturas baixas, pressão elevada e baixa umidade.
- * Clima 4: Desértico – clima muito quente, pressão moderada a alta, e umidade extremamente baixa.
+ * Clima 0: Temperado â€“ temperaturas moderadas, variaÃ§Ã£o sutil, pressÃ£o mÃ©dia e alta umidade.
+ * Clima 1: Chuvoso â€“ temperaturas um pouco mais baixas, pressÃ£o ligeiramente inferior e alta umidade.
+ * Clima 2: Tropical â€“ clima quente, pressÃ£o mÃ©dia e alta umidade.
+ * Clima 3: Frio/Seco â€“ temperaturas baixas, pressÃ£o elevada e baixa umidade.
+ * Clima 4: DesÃ©rtico â€“ clima muito quente, pressÃ£o moderada a alta, e umidade extremamente baixa.
  */
 struct weather_data climates[] = {
     {20, 3, 1010, 10, 0.60, 0.3, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT}, /* Clima 0: Temperado */
     {18, 2, 995, 15, 0.85, 0.5, SKY_RAINING, SKY_RAINING, SUN_LIGHT},      /* Clima 1: Chuvoso  */
     {28, 2, 1000, 10, 0.80, 0.4, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT}, /* Clima 2: Tropical */
     {0, 2, 1020, 5, 0.30, 0.2, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_DARK},    /* Clima 3: Frio/Seco */
-    {38, 3, 1025, 5, 0.05, 0.1, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT}   /* Clima 4: Desértico */
+    {38, 3, 1025, 5, 0.05, 0.1, SKY_CLOUDLESS, SKY_CLOUDLESS, SUN_LIGHT}   /* Clima 4: DesÃ©rtico */
 };
 
 /* routines for booting the system */
@@ -1106,10 +1107,10 @@ void index_boot(int mode)
             CREATE(mob_index, struct index_data, rec_count);
 
             int rnum;
-            /* Aloca a estrutura de IA para cada protótipo e inicializa os seus campos. */
+            /* Aloca a estrutura de IA para cada protÃ³tipo e inicializa os seus campos. */
             for (int rnum = 0; rnum < rec_count; rnum++) {
                 CREATE(mob_proto[rnum].ai_data, struct mob_ai_data, 1);
-                memset(mob_proto[rnum].ai_data, 0, sizeof(struct mob_ai_data)); /* Limpa a memória */
+                memset(mob_proto[rnum].ai_data, 0, sizeof(struct mob_ai_data)); /* Limpa a memÃ³ria */
                 init_mob_ai_data(&mob_proto[rnum]); /* Initialize temporary quest master fields */
             }
 
@@ -1826,20 +1827,20 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
         num_arg = atoi(value);
 
     /*************************************************************************
-     * Adicionado para o sistema de Genética de Mobs                         *
+     * Adicionado para o sistema de GenÃ©tica de Mobs                         *
      * --------------------------------------------------------------------- *
      * Adicionamos um novo CASE aqui. Quando o ficheiro .mob contiver uma    *
-     * linha como "GenWimpy: 10", esta secção irá lê-la e guardá-la.         *
+     * linha como "GenWimpy: 10", esta secÃ§Ã£o irÃ¡ lÃª-la e guardÃ¡-la.         *
      *************************************************************************/
     CASE("GenWimpy")
     {
         if (mob_proto[i].ai_data) {
             mob_proto[i].ai_data->genetics.wimpy_tendency = num_arg;
-            /* MENSAGEM DE SUCESSO - TEMPORÁRIA */
+            /* MENSAGEM DE SUCESSO - TEMPORÃRIA */
             log1("DEBUG: Mob vnum #%d, GenWimpy carregado com sucesso: %d", nr, num_arg);
         } else {
-            /* MENSAGEM DE ERRO - TEMPORÁRIA */
-            log1("DEBUG: Mob vnum #%d, FALHA ao carregar GenWimpy (genetics é NULL)", nr);
+            /* MENSAGEM DE ERRO - TEMPORÃRIA */
+            log1("DEBUG: Mob vnum #%d, FALHA ao carregar GenWimpy (genetics Ã© NULL)", nr);
         }
     }
     CASE("GenLoot")
@@ -2734,31 +2735,31 @@ struct char_data *read_mobile(mob_vnum nr, int type) /* and mob_rnum */
 
     *mob = mob_proto[i];
 
-    /* Cria uma cópia única da "ficha de IA" para esta instância. */
+    /* Cria uma cÃ³pia Ãºnica da "ficha de IA" para esta instÃ¢ncia. */
     CREATE(mob->ai_data, struct mob_ai_data, 1);
     if (mob_proto[i].ai_data) {
         *(mob->ai_data) = *(mob_proto[i].ai_data);
     }
     init_mob_ai_data(mob); /* Initialize temporary quest master fields */
 
-    /* Em src/db.c, dentro da função read_mobile */
+    /* Em src/db.c, dentro da funÃ§Ã£o read_mobile */
 
     if (!MOB_FLAGGED(mob, MOB_BRAVE)) {
 
         bool becomes_brave = FALSE;
-        /* A chance de uma mutação espontânea para a bravura. (ex: 1%) */
+        /* A chance de uma mutaÃ§Ã£o espontÃ¢nea para a bravura. (ex: 1%) */
         const int MUTATION_CHANCE = 1;
 
-        /* 1. Verifica se ele nasce BRAVE devido à genética da sua espécie. */
+        /* 1. Verifica se ele nasce BRAVE devido Ã  genÃ©tica da sua espÃ©cie. */
         if (mob_proto[i].ai_data && rand_number(1, 100) <= mob_proto[i].ai_data->genetics.brave_prevalence) {
             becomes_brave = TRUE;
         }
 
-        /* 2. Se não nasceu bravo pela genética, ainda há uma pequena chance de mutação. */
+        /* 2. Se nÃ£o nasceu bravo pela genÃ©tica, ainda hÃ¡ uma pequena chance de mutaÃ§Ã£o. */
         else if (rand_number(1, 100) <= MUTATION_CHANCE) {
             becomes_brave = TRUE;
-            /* Opcional: Podemos até logar este evento raro para observação. */
-            log1("EVOLUÇÃO: Mutação espontânea de Bravura ocorreu em %s (VNum %d).", GET_NAME(mob), mob_index[i].vnum);
+            /* Opcional: Podemos atÃ© logar este evento raro para observaÃ§Ã£o. */
+            log1("EVOLUÃ‡ÃƒO: MutaÃ§Ã£o espontÃ¢nea de Bravura ocorreu em %s (VNum %d).", GET_NAME(mob), mob_index[i].vnum);
         }
 
         if (becomes_brave) {
@@ -2766,7 +2767,7 @@ struct char_data *read_mobile(mob_vnum nr, int type) /* and mob_rnum */
         }
     }
     /*************************************************************************
-     * Fim do bloco de Genética                                              *
+     * Fim do bloco de GenÃ©tica                                              *
      *************************************************************************/
     mob->next = character_list;
     character_list = mob;
@@ -2810,6 +2811,8 @@ struct obj_data *create_obj(void)
 
     obj->script_id = 0;   // this is set later by obj_script_id
 
+    quality_hook_object_load(obj); /* INSERIDO PARA SISTEMA DE QUALIDADE */
+    
     return (obj);
 }
 
@@ -2838,6 +2841,9 @@ struct obj_data *read_object(obj_vnum nr, int type) /* and obj_rnum */
 
     copy_proto_script(&obj_proto[i], obj, OBJ_TRIGGER);
     assign_triggers(obj, OBJ_TRIGGER);
+
+    quality_hook_object_load(obj); /* INSERIDO PARA SISTEMA DE QUALIDADE */
+
 
     return (obj);
 }
@@ -2962,7 +2968,7 @@ void reset_zone(zone_rnum zone)
 
                     char_to_room(mob, target_room_rnum);
 
-                    /* Verifica se o destino é uma sala válida antes de guardar. */
+                    /* Verifica se o destino Ã© uma sala vÃ¡lida antes de guardar. */
                     if (target_room_rnum != NOWHERE && target_room_rnum <= top_of_world) {
                         mob->ai_data->guard_post = world[target_room_rnum].number;
                     }
@@ -3811,17 +3817,17 @@ void reset_char(struct char_data *ch)
 void clear_char(struct char_data *ch)
 {
     /*************************************************************************
-     * Sistema de Genética: Preservar o ponteiro da genética.                *
+     * Sistema de GenÃ©tica: Preservar o ponteiro da genÃ©tica.                *
      * Guardamos o ponteiro antes que o memset o apague.                     *
      *************************************************************************/
     struct mob_ai_data *preserved_ai_data = ch->ai_data;
 
     memset((char *)ch, 0, sizeof(struct char_data));
 
-    /* Agora, restauramos o ponteiro que guardámos. */
+    /* Agora, restauramos o ponteiro que guardÃ¡mos. */
     ch->ai_data = preserved_ai_data;
     /*************************************************************************
-     * Fim do Bloco de Genética                                              *
+     * Fim do Bloco de GenÃ©tica                                              *
      *************************************************************************/
     IN_ROOM(ch) = NOWHERE;
     GET_PFILEPOS(ch) = -1;

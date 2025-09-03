@@ -85,6 +85,7 @@
 #include "mud_event.h"
 #include "ann.h"
 #include "protocol.h" /* for ProtocolNAWSAutoConfig */
+#include "quality.h" /* for quality system */
 
 #ifndef INVALID_SOCKET
 #    define INVALID_SOCKET (-1)
@@ -362,6 +363,8 @@ int main(int argc, char **argv)
         log1("Saving temporary quest assignments before shutdown.");
         save_temp_quest_assignments();
     }
+    
+    cleanup_quality_system(); // <--- SISTEMA DE QUALIDADE
 
     destroy_db();
 
@@ -567,6 +570,8 @@ static void init_game(ush_int local_port)
     log1("Signal trapping.");
     signal_setup();
 #endif
+
+    init_quality_system(); // <--- SISTEMA DE QUALIDADE
 
     /* If we made it this far, we will be able to restart without problem. */
     remove(KILLSCRIPT_FILE);

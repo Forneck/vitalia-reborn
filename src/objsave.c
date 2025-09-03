@@ -22,6 +22,7 @@
 #include "config.h"
 #include "modify.h"
 #include "genolc.h" /* for strip_cr and sprintascii */
+#include "quality.h" /* SISTEMA DE QUALIDADE */
 
 /* these factors should be unique integers */
 #define RENT_FACTOR 1
@@ -122,6 +123,10 @@ int objsave_save_obj_record(struct obj_data *obj, FILE *fp, int locate)
         fprintf(fp, "Cost: %d\n", GET_OBJ_COST(obj));
     if (TEST_OBJN(cost_per_day))
         fprintf(fp, "Rent: %d\n", GET_OBJ_RENT(obj));
+    /* Salvar qualidade do item se ele possui qualidade */
+    if (HAS_QUALITY(obj) && GET_OBJ_QUALITY(obj) >= 0) {
+      fprintf(fp, "Qual: %d\n", GET_OBJ_QUALITY(obj));
+    }
     if (TEST_OBJN(bitvector))
         fprintf(fp, "Perm: %d %d %d %d\n", GET_OBJ_AFFECT(obj)[0], GET_OBJ_AFFECT(obj)[1], GET_OBJ_AFFECT(obj)[2],
                 GET_OBJ_AFFECT(obj)[3]);
@@ -1130,6 +1135,13 @@ obj_save_data *objsave_parse_objects(FILE *fl)
                     GET_OBJ_AFFECT(temp)[1] = asciiflag_conv(f2);
                     GET_OBJ_AFFECT(temp)[2] = asciiflag_conv(f3);
                     GET_OBJ_AFFECT(temp)[3] = asciiflag_conv(f4);
+                }
+                break;
+            case 'Q':
+                if (!strcmp(tag, "Qual")) {
+                SET_OBJ_QUALITY(temp, num);
+                /* Garantir que o bit flag também está setado */
+                SET_BIT(GET_OBJ_EXTRA(temp)[0], (1 << ITEM_QUALITY));
                 }
                 break;
             case 'R':
