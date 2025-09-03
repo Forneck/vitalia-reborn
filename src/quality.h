@@ -48,7 +48,7 @@ int get_item_quality(struct obj_data *obj);
 
 /* Quality System Commands */
 ACMD(do_quality_admin);
-ACMD(do_quality_toggle);
+ACMD(do_quality_info);
 
 /* Hook functions */
 void quality_hook_object_load(struct obj_data *obj);
@@ -63,13 +63,13 @@ void cleanup_quality_system(void);
 #define QUALITY_ENABLED() (quality_system_enabled)
 
 /* Configuration file path */
-#define QUALITY_CONFIG_FILE "lib/etc/quality.conf"
+#define QUALITY_CONFIG_FILE "etc/quality.conf"
 
 /* Object quality macros */
 #define GET_OBJ_QUALITY(obj) ((obj)->quality)
 #define SET_OBJ_QUALITY(obj, val) ((obj)->quality = (val))
 
-/* NOTA: ITEM_QUALITY Ã© definido em structs.h como 23 (posiÃ§Ã£o do bit)
-   NÃ£o redefinir aqui para evitar conflitos de compilaÃ§Ã£o */
+/* NOTA: ITEM_QUALITY é definido em structs.h como 23 (posição do bit)
+   Não redefinir aqui para evitar conflitos de compilação */
 
 #endif /* _QUALITY_H_ */
