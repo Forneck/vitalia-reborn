@@ -8,6 +8,7 @@ set(TOOLS
   shopconv
   sign
   split
+  textextract
   wld2html
 )
 
