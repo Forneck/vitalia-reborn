@@ -26,6 +26,7 @@
 #include "spedit.h"
 #include "shop.h"
 #include "quest.h"
+#include "spec_procs.h"
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
@@ -49,6 +50,8 @@ bool mob_handle_item_usage(struct char_data *ch);
 bool mob_try_to_sell_junk(struct char_data *ch);
 struct obj_data *find_unblessed_weapon_or_armor(struct char_data *ch);
 struct obj_data *find_cursed_item_in_inventory(struct char_data *ch);
+struct obj_data *find_bank_in_zone(struct char_data *ch);
+bool mob_use_bank(struct char_data *ch);
 struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum);
 struct char_data *get_mob_in_room_by_vnum(room_rnum room, mob_vnum vnum);
 struct char_data *find_questmaster_by_vnum(mob_vnum vnum);
@@ -809,6 +812,9 @@ void mobile_activity(void)
         mob_try_and_upgrade(ch);
 
         mob_share_gear_with_group(ch);
+
+        /* Bank usage for mobs with high trade genetics */
+        mob_use_bank(ch);
 
         if (handle_duty_routine(ch)) {
             continue;
@@ -3416,4 +3422,112 @@ bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int or
     act("$n parece estar procurando por algo específico.", FALSE, ch, 0, 0, TO_ROOM);
 
     return TRUE;
+}
+
+/**
+ * Find a bank object (ATM/cashcard) in the same zone as the mob
+ * @param ch The mob looking for a bank
+ * @return Pointer to a bank object, or NULL if none found
+ */
+struct obj_data *find_bank_in_zone(struct char_data *ch)
+{
+    room_rnum room;
+    struct obj_data *obj;
+    zone_rnum mob_zone;
+
+    if (!ch || !IS_NPC(ch)) {
+        return NULL;
+    }
+
+    mob_zone = world[IN_ROOM(ch)].zone;
+
+    /* Search all rooms in the same zone for bank objects */
+    for (room = 0; room <= top_of_world; room++) {
+        if (world[room].zone != mob_zone) {
+            continue;
+        }
+
+        /* Check objects in this room */
+        for (obj = world[room].contents; obj; obj = obj->next_content) {
+            /* Check if this object has the bank special procedure */
+            if (GET_OBJ_SPEC(obj) == bank) {
+                return obj;
+            }
+        }
+    }
+
+    return NULL; /* No bank found in zone */
+}
+
+/**
+ * Makes a mob use banking services if available and appropriate
+ * @param ch The mob that might use the bank
+ * @return TRUE if bank was used, FALSE otherwise
+ */
+bool mob_use_bank(struct char_data *ch)
+{
+    struct obj_data *bank_obj;
+    int current_gold, bank_gold;
+    int deposit_amount, withdraw_amount;
+
+    if (!ch || !IS_NPC(ch) || !ch->ai_data) {
+        return FALSE;
+    }
+
+    /* Only mobs with high trade genetics use banks */
+    if (GET_GENTRADE(ch) <= 50) {
+        return FALSE;
+    }
+
+    /* Only mobs with very high trade genetics should use banks */
+    if (GET_GENTRADE(ch) <= 60) {
+        return FALSE;
+    }
+
+    /* Only intelligent mobs should use banks (Intelligence > 10) */
+    if (GET_INT(ch) <= 10) {
+        return FALSE;
+    }
+
+    /* Don't use bank if fighting or not awake */
+    if (FIGHTING(ch) || !AWAKE(ch)) {
+        return FALSE;
+    }
+
+    /* Find a bank in the zone */
+    bank_obj = find_bank_in_zone(ch);
+    if (!bank_obj) {
+        return FALSE; /* No bank available */
+    }
+
+    current_gold = GET_GOLD(ch);
+    bank_gold = GET_BANK_GOLD(ch);
+
+    /* Decision logic: deposit if carrying too much, withdraw if too little */
+    if (current_gold > 5000 && rand_number(1, 100) <= 30) {
+        /* Deposit excess gold */
+        deposit_amount = current_gold / 2; /* Deposit half of current gold */
+
+        /* Simulate the deposit command */
+        decrease_gold(ch, deposit_amount);
+        increase_bank(ch, deposit_amount);
+
+        act("$n faz uma transação bancária.", TRUE, ch, 0, FALSE, TO_ROOM);
+
+        return TRUE;
+
+    } else if (current_gold < 100 && bank_gold > 500 && rand_number(1, 100) <= 20) {
+        /* Withdraw gold when running low */
+        withdraw_amount = MIN(bank_gold / 3, 1000); /* Withdraw 1/3 of bank balance, max 1000 */
+
+        /* Simulate the withdraw command */
+        increase_gold(ch, withdraw_amount);
+        decrease_bank(ch, withdraw_amount);
+
+        act("$n faz uma transação bancária.", TRUE, ch, 0, FALSE, TO_ROOM);
+
+        return TRUE;
+    }
+
+    return FALSE; /* No banking action taken */
 }
