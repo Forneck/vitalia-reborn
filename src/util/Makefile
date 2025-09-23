@@ -24,7 +24,7 @@ CFLAGS = -g -O2 $(MYFLAGS) $(PROFILE) -I$(INCDIR)
 
 default: all
 
-all: $(BINDIR)/asciipasswd $(BINDIR)/autowiz $(BINDIR)/plrtoascii $(BINDIR)/rebuildIndex $(BINDIR)/rebuildMailIndex $(BINDIR)/shopconv $(BINDIR)/sign $(BINDIR)/split $(BINDIR)/textextract $(BINDIR)/wld2html
+all: $(BINDIR)/asciipasswd $(BINDIR)/autowiz $(BINDIR)/plrtoascii $(BINDIR)/rebuildIndex $(BINDIR)/rebuildMailIndex $(BINDIR)/shopconv $(BINDIR)/sign $(BINDIR)/split $(BINDIR)/wld2html
 
 asciipasswd: $(BINDIR)/asciipasswd
 
@@ -41,8 +41,6 @@ shopconv: $(BINDIR)/shopconv
 sign: $(BINDIR)/sign
 
 split: $(BINDIR)/split
-
-textextract: $(BINDIR)/textextract
 
 wld2html: $(BINDIR)/wld2html
 
@@ -71,9 +69,6 @@ $(BINDIR)/sign: sign.c
 
 $(BINDIR)/split: split.c
 	$(CC) $(CFLAGS) -o $(BINDIR)/split split.c
-
-$(BINDIR)/textextract: textextract.c
-	$(CC) $(CFLAGS) -o $(BINDIR)/textextract textextract.c
 
 $(BINDIR)/wld2html: wld2html.c
 	$(CC) $(CFLAGS) -o $(BINDIR)/wld2html wld2html.c
