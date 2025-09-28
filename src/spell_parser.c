@@ -328,7 +328,7 @@ int call_magic(struct char_data *caster, struct char_data *cvict, struct obj_dat
             act(spell->messages.to_self, FALSE, caster, ovict, cvict, TO_CHAR);
         if (spell->messages.to_vict != NULL && cvict)
             act(spell->messages.to_vict, FALSE, cvict, ovict, 0, TO_CHAR);
-        if (spell->messages.to_room != NULL && cvict)
+        if (spell->messages.to_room != NULL)
             act(spell->messages.to_room, TRUE, caster, ovict, cvict, TO_ROOM);
     } else if (flags & MAGIC_NOEFFECT)
         send_to_char(caster, "%s", CONFIG_NOEFFECT);
