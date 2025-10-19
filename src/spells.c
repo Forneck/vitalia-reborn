@@ -1170,9 +1170,9 @@ ASPELL(spell_stoneskin)
     /* Check current stoneskin points */
     current_points = get_stoneskin_points(victim);
 
-    /* Cap total at 168 as per help file */
-    if (current_points + new_points > 168) {
-        new_points = 168 - current_points;
+    /* Cap total at maximum as per help file */
+    if (current_points + new_points > MAX_STONESKIN_POINTS) {
+        new_points = MAX_STONESKIN_POINTS - current_points;
         if (new_points <= 0) {
             send_to_char(ch, "%s já possui o máximo de proteção possível.\r\n",
                          (victim == ch) ? "Você" : GET_NAME(victim));
