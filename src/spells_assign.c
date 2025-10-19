@@ -3567,7 +3567,7 @@ void create_spells_db()
     new_spell->applies[2].duration = strdup("param/4");
     new_spell->applies[3].appl_num = APPLY_DEX;
     new_spell->applies[3].modifier = strdup("1");
-    new_spell->applies[3].duration = strdup("param/");
+    new_spell->applies[3].duration = strdup("param/4");
     new_spell->applies[4].appl_num = APPLY_CON;
     new_spell->applies[4].modifier = strdup("1");
     new_spell->applies[4].duration = strdup("param/4");
