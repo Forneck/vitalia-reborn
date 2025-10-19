@@ -3847,34 +3847,34 @@ int get_stoneskin_points(struct char_data *ch)
 }
 
 /**
- * Sets the stoneskin points for a character.
- * If points <= 0, removes the stoneskin effect entirely.
+ * Sets the stoneskin points for a character by modifying the first stoneskin affect.
+ * If points <= 0, removes all stoneskin affects entirely.
+ * If multiple stoneskin affects exist, only the first is modified when points > 0.
+ * Note: This function is for administrative/debugging purposes. Normal gameplay
+ * should use the spell_stoneskin function which properly handles affect stacking.
  * @param ch The character to modify
  * @param points New number of stoneskin points
  */
 void set_stoneskin_points(struct char_data *ch, int points)
 {
     struct affected_type *af, *next;
+    bool found_first = FALSE;
 
     if (!ch)
         return;
 
-    /* Remove all stoneskin affects if points <= 0 */
-    if (points <= 0) {
-        for (af = ch->affected; af; af = next) {
-            next = af->next;
-            if (af->spell == SPELL_STONESKIN) {
-                affect_remove(ch, af);
-            }
-        }
-        return;
-    }
-
-    /* Set the first stoneskin affect to the new points value, capped at maximum */
-    for (af = ch->affected; af; af = af->next) {
+    /* Iterate through all affects */
+    for (af = ch->affected; af; af = next) {
+        next = af->next;
         if (af->spell == SPELL_STONESKIN) {
-            af->modifier = MIN(points, MAX_STONESKIN_POINTS);
-            return;
+            if (points <= 0 || found_first) {
+                /* Remove if points <= 0, or if this is not the first affect */
+                affect_remove(ch, af);
+            } else {
+                /* This is the first affect and points > 0, so modify it */
+                af->modifier = MIN(points, MAX_STONESKIN_POINTS);
+                found_first = TRUE;
+            }
         }
     }
 }
@@ -3890,13 +3890,15 @@ bool reduce_stoneskin_points(struct char_data *ch, int reduction)
 {
     struct affected_type *af, *highest_af = NULL;
     int highest_modifier = 0;
+    int stoneskin_count = 0;
 
     if (!ch || !AFF_FLAGGED(ch, AFF_STONESKIN))
         return FALSE;
 
-    /* Find the stoneskin affect with the highest modifier to reduce first */
+    /* Find the stoneskin affect with the highest modifier and count total affects */
     for (af = ch->affected; af; af = af->next) {
         if (af->spell == SPELL_STONESKIN) {
+            stoneskin_count++;
             if (af->modifier > highest_modifier) {
                 highest_modifier = af->modifier;
                 highest_af = af;
@@ -3911,8 +3913,8 @@ bool reduce_stoneskin_points(struct char_data *ch, int reduction)
     highest_af->modifier -= reduction;
     if (highest_af->modifier <= 0) {
         affect_remove(ch, highest_af);
-        /* Check if any stoneskin points remain using existing function */
-        return (get_stoneskin_points(ch) == 0);
+        /* Return TRUE only if this was the last stoneskin affect */
+        return (stoneskin_count == 1);
     }
 
     return FALSE;
