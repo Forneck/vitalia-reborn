@@ -141,6 +141,12 @@ void mobile_activity(void)
         if (!IS_MOB(ch))
             continue;
 
+        /* Safety check: Skip mobs that are not in a valid room */
+        if (IN_ROOM(ch) == NOWHERE) {
+            log1("SYSERR: Mobile %s (#%d) is in NOWHERE in mobile_activity().", GET_NAME(ch), GET_MOB_VNUM(ch));
+            continue;
+        }
+
         /* Examine call for special procedure */
         if (MOB_FLAGGED(ch, MOB_SPEC) && !no_specials) {
             if (mob_index[GET_MOB_RNUM(ch)].func == NULL) {
@@ -653,9 +659,9 @@ void mobile_activity(void)
                 struct char_data *target;
                 /* Look for aggressive mobs in the same zone */
                 for (target = character_list; target; target = target->next) {
-                    if (IS_NPC(target) && target != ch && world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
-                        MOB_FLAGGED(target, MOB_AGGRESSIVE) && GET_ALIGNMENT(target) < -200 &&
-                        GET_LEVEL(target) >= GET_LEVEL(ch) - 5) {
+                    if (IS_NPC(target) && target != ch && IN_ROOM(target) != NOWHERE &&
+                        world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && MOB_FLAGGED(target, MOB_AGGRESSIVE) &&
+                        GET_ALIGNMENT(target) < -200 && GET_LEVEL(target) >= GET_LEVEL(ch) - 5) {
 
                         /* Post bounty quest against this aggressive mob */
                         int reward = MIN(GET_GOLD(ch) / 4, 400 + GET_LEVEL(target) * 10);
@@ -704,8 +710,9 @@ void mobile_activity(void)
                 } else {
                     /* AQ_MOB_FIND quest - find a friendly mob */
                     for (target = character_list; target; target = target->next) {
-                        if (IS_NPC(target) && target != ch && world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
-                            GET_ALIGNMENT(target) > 0 && !MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
+                        if (IS_NPC(target) && target != ch && IN_ROOM(target) != NOWHERE &&
+                            world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && GET_ALIGNMENT(target) > 0 &&
+                            !MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
 
                             if (GET_GOLD(ch) > 80) {
                                 reward = MIN(GET_GOLD(ch) / 7, 120 + GET_LEVEL(target) * 4);
@@ -720,7 +727,8 @@ void mobile_activity(void)
                 if (rand_number(1, 100) <= 60) {
                     /* AQ_MOB_SAVE quest - protect a weak mob */
                     for (target = character_list; target; target = target->next) {
-                        if (IS_NPC(target) && target != ch && world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
+                        if (IS_NPC(target) && target != ch && IN_ROOM(target) != NOWHERE &&
+                            world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
                             GET_LEVEL(target) < GET_LEVEL(ch) && GET_ALIGNMENT(target) > 200) {
 
                             if (GET_GOLD(ch) > 120) {
@@ -758,8 +766,9 @@ void mobile_activity(void)
             } else if (GET_GENQUEST(ch) > 40 && rand_number(1, 100) <= 20) {
                 /* Post general kill quests */
                 for (target = character_list; target; target = target->next) {
-                    if (IS_NPC(target) && target != ch && world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
-                        GET_ALIGNMENT(target) < -100 && GET_LEVEL(target) >= GET_LEVEL(ch) - 10) {
+                    if (IS_NPC(target) && target != ch && IN_ROOM(target) != NOWHERE &&
+                        world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && GET_ALIGNMENT(target) < -100 &&
+                        GET_LEVEL(target) >= GET_LEVEL(ch) - 10) {
 
                         if (GET_GOLD(ch) > 100) {
                             reward = MIN(GET_GOLD(ch) / 5, 200 + GET_LEVEL(target) * 8);
