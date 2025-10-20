@@ -44,9 +44,6 @@
 #define MAG_PROTECTION (1 << 15)
 #define NUM_MAG 16
 
-/* Spell-specific constants */
-#define MAX_STONESKIN_POINTS 168 /* Maximum stoneskin points as per help file */
-
 #define TYPE_UNDEFINED (-1)
 #define SPELL_RESERVED_DBC 0 /* SKILL NUMBER ZERO -- RESERVED */
 
