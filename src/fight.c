@@ -333,8 +333,11 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 
     /*************************************************************************
      * Sistema de Genética: O mob morreu. Chamamos a função de evolução.     *
+     * Não atualizamos a genética de mobs encantados/evocados (AFF_CHARM),   *
+     * pois são criaturas temporárias e sua morte não representa seleção     *
+     * natural da espécie.                                                    *
      *************************************************************************/
-    if (IS_NPC(ch) && ch->ai_data) {
+    if (IS_NPC(ch) && ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM)) {
         update_mob_prototype_genetics(ch);
     }
     /*************************************************************************
