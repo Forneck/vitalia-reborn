@@ -141,6 +141,10 @@ void mobile_activity(void)
         if (!ch || !IS_MOB(ch))
             continue;
 
+        /* Skip mobs that have been marked for extraction (e.g., from death traps) */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
         /* Safety check: Skip mobs that are not in a valid room */
         if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world) {
             log1("SYSERR: Mobile %s (#%d) is in NOWHERE or invalid room in mobile_activity().",
