@@ -1630,13 +1630,15 @@ ACMD(do_eavesdrop)
         if (IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED) && EXIT(ch, dir)->keyword) {
             sprintf(buf, "A %s está fechada.\r\n", fname(EXIT(ch, dir)->keyword));
             send_to_char(ch, "%s", buf);
-        } else {
+        } else if (EXIT(ch, dir)->to_room != NOWHERE) {
             target_room = EXIT(ch, dir)->to_room;
             ch->next_listener = world[target_room].listeners;
             world[target_room].listeners = ch;
             ch->listening_to = target_room;
             send_to_char(ch, "Você começa a espionar conversas nessa direção.\r\n");
             WAIT_STATE(ch, PULSE_VIOLENCE);
+        } else {
+            send_to_char(ch, "Não há uma sala nessa direção...\r\n");
         }
     } else {
         send_to_char(ch, "Não há uma sala nessa direção...\r\n");
