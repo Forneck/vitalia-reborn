@@ -858,21 +858,6 @@ void mobile_activity(void)
                     } else {
                         hit(ch, vict, TYPE_UNDEFINED);
                         found = TRUE;
-
-                        /* Check if ch was extracted or moved during combat */
-                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
-                            break; /* ch was killed/extracted, exit inner loop */
-                        }
-
-                        /* Check if ch was moved to a different room during combat */
-                        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world) {
-                            break; /* ch is no longer in a valid room */
-                        }
-
-                        /* If vict was killed or the room changed, restart the victim loop from the current room */
-                        if (IS_NPC(vict) && (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET))) {
-                            next_vict = world[IN_ROOM(ch)].people;
-                        }
                     }
                 }
 
@@ -930,27 +915,6 @@ void mobile_activity(void)
                     found = TRUE;
                     act("''Ei!  Você é o demônio que me atacou!!!', exclama $n.", FALSE, ch, 0, 0, TO_ROOM);
                     hit(ch, vict, TYPE_UNDEFINED);
-
-                    /* Check if ch was extracted or moved during combat */
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
-                        break; /* ch was killed/extracted, exit memory loop */
-                    }
-
-                    /* Check if ch was moved to a different room during combat */
-                    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world) {
-                        break; /* ch is no longer in a valid room */
-                    }
-
-                    /* If vict was killed or room changed, restart the victim loop */
-                    if (IS_NPC(vict) && (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET))) {
-                        next_vict = world[IN_ROOM(ch)].people;
-                        break; /* Exit memory loop, move to next potential victim */
-                    }
-                }
-
-                /* If ch was extracted, exit the victim loop immediately */
-                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
-                    break;
                 }
 
                 vict = next_vict; /* Move to next victim safely */
@@ -966,11 +930,6 @@ void mobile_activity(void)
             if (!aggressive_mob_on_a_leash(ch, ch->master, ch->master)) {
                 if (CAN_SEE(ch, ch->master) && !PRF_FLAGGED(ch->master, PRF_NOHASSLE))
                     hit(ch, ch->master, TYPE_UNDEFINED);
-
-                /* Check if ch was extracted during the rebellion attack */
-                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                    continue; /* ch was killed, skip to next mob in main loop */
-
                 stop_follower(ch);
             }
         }
