@@ -1280,7 +1280,7 @@ void create_spells_db()
     new_spell->function = spell_summon;
     new_spell->type = SPELL;
     new_spell->min_pos = POS_STANDING;
-    new_spell->targ_flags = TAR_CHAR_ROOM | TAR_NOT_SELF;
+    new_spell->targ_flags = TAR_CHAR_WORLD | TAR_NOT_SELF;
     new_spell->mag_flags = MAG_MANUAL;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(75 - (3 * self.level)) > 50 ? (75 - (3 * self.level)) : 50");
@@ -1689,12 +1689,9 @@ void create_spells_db()
     new_spell->mag_flags = MAG_MANUAL;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(30 - (4 * self.level)) > 5 ? (30 - (4 * self.level)) : 5");
-    new_spell->assign[0].class_num = CLASS_MAGIC_USER;
-    new_spell->assign[0].level = 5;
+    new_spell->assign[0].class_num = CLASS_RANGER;
+    new_spell->assign[0].level = 7;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->assign[1].class_num = CLASS_RANGER;
-    new_spell->assign[1].level = 7;
-    new_spell->assign[1].num_mana = strdup(buf);
     new_spell->school = SCHOOL_CONJURATION; /* Transportation magic */
     new_spell->element = ELEMENT_EARTH;     /* Plant/nature-based transport */
 
@@ -2188,7 +2185,7 @@ void create_spells_db()
     new_spell->status = available;
     new_spell->name = strdup("invigor");
     new_spell->type = SPELL;
-    TAR_CHAR_ROOM;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->mag_flags = MAG_POINTS;
     new_spell->effectiveness = strdup("100");
     sprintf(buf, "(40 - (3 * self.level)) > 15 ? (40 - (3 * self.level)) : 15");
