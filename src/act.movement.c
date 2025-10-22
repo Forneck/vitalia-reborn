@@ -151,7 +151,15 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
     /* The room the character is currently in and will move from... */
     room_rnum was_in = IN_ROOM(ch);
     /* ... and the room the character will move into. */
-    room_rnum going_to = EXIT(ch, dir)->to_room;
+    room_rnum going_to;
+
+    /* Validate exit before accessing to_room to prevent segfault */
+    if (!EXIT(ch, dir) || EXIT(ch, dir)->to_room == NOWHERE) {
+        log1("SYSERR: do_simple_move: ch=%s attempting invalid move to dir=%d", GET_NAME(ch), dir);
+        return 0;
+    }
+
+    going_to = EXIT(ch, dir)->to_room;
     /* How many movement points are required to travel from was_in to
        going_to. We redefine this later when we need it. */
     int need_movement = 0;
