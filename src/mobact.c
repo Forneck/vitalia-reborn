@@ -121,7 +121,7 @@ void check_mob_level_up(struct char_data *ch)
         if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world && world[IN_ROOM(ch)].people) {
             struct char_data *viewer;
             for (viewer = world[IN_ROOM(ch)].people; viewer; viewer = viewer->next_in_room) {
-                if (!viewer || IS_MOB(viewer) || viewer == ch)
+                if (IS_MOB(viewer) || viewer == ch)
                     continue;
                 act("$n parece ter ficado mais experiente!", TRUE, ch, 0, viewer, TO_VICT);
             }
@@ -235,7 +235,7 @@ void mobile_activity(void)
                     /* Verify room validity before accessing people list */
                     if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
                         for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
-                            if (!temp_char || !IS_NPC(temp_char))
+                            if (!IS_NPC(temp_char))
                                 continue;
                             if (GET_MOB_RNUM(temp_char) == ch->ai_data->goal_target_mob_rnum) {
                                 target = temp_char;
@@ -301,7 +301,7 @@ void mobile_activity(void)
                     /* Verify room validity before accessing people list */
                     if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
                         for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
-                            if (!temp_char || temp_char == ch)
+                            if (temp_char == ch)
                                 continue;
                             if (GET_POS(temp_char) >= POS_RESTING && GET_SKILL(ch, SKILL_EAVESDROP) > 0) {
                                 can_perform = TRUE;
@@ -812,10 +812,15 @@ void mobile_activity(void)
                 continue;
 
             for (vict = world[IN_ROOM(ch)].people; vict && !found;) {
+                /* Check vict validity before dereferencing */
+                if (!vict) {
+                    break;
+                }
+
                 struct char_data *next_vict = vict->next_in_room; /* Save next pointer before any actions */
 
                 //	if (IS_NPC(vict) || !CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE))
-                if (!vict || !CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE)) {
+                if (!CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE)) {
                     vict = next_vict;
                     continue;
                 }
@@ -880,15 +885,23 @@ void mobile_activity(void)
                 continue;
 
             for (vict = world[IN_ROOM(ch)].people; vict && !found;) {
+                /* Check vict validity before dereferencing */
+                if (!vict) {
+                    break;
+                }
+
                 struct char_data *next_vict = vict->next_in_room; /* Save next pointer before any actions */
 
-                if (!vict || !CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE)) {
+                if (!CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE)) {
                     vict = next_vict;
                     continue;
                 }
 
                 for (names = MEMORY(ch); names && !found; names = names->next) {
-                    if (!names || names->id != GET_IDNUM(vict))
+                    if (!names)
+                        break; /* Safety check - names became NULL */
+
+                    if (names->id != GET_IDNUM(vict))
                         continue;
 
                     /* Can a master successfully control the charmed monster? */
@@ -952,7 +965,7 @@ void mobile_activity(void)
                 /* Verify room validity before accessing people list */
                 if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
                     for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
-                        if (!temp_char || temp_char == ch)
+                        if (temp_char == ch)
                             continue;
                         if (GET_POS(temp_char) >= POS_RESTING) {
                             has_targets = TRUE;
@@ -980,13 +993,11 @@ void mobile_activity(void)
 
             /* Look for potential victims in the room */
             for (victim = world[IN_ROOM(ch)].people; victim; victim = victim->next_in_room) {
-                if (!victim || victim == ch || IS_NPC(victim))
+                if (victim == ch || IS_NPC(victim))
                     continue;
 
                 /* Look for drink containers in victim's inventory */
                 for (container = victim->carrying; container; container = container->next_content) {
-                    if (!container)
-                        continue;
                     if (GET_OBJ_TYPE(container) == ITEM_DRINKCON && GET_OBJ_VAL(container, 1) > 0 && /* Has liquid */
                         GET_OBJ_VAL(container, 3) == 0) { /* Not already poisoned */
 
