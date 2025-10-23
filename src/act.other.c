@@ -342,7 +342,7 @@ static int compare_spell_levels(const void *a, const void *b)
 }
 
 /* Helper function to list spells/skills/chansons for a class */
-static void list_spells_by_type(struct char_data *ch, int class_num, char type)
+static void list_spells_by_type(struct char_data *ch, int class_num, char type, int is_current_class)
 {
     struct str_spells *ptr;
     struct spell_level_entry *entries = NULL;
@@ -360,11 +360,18 @@ static void list_spells_by_type(struct char_data *ch, int class_num, char type)
     }
 
     if (count == 0) {
-        send_to_char(ch, "Nenhuma %s disponível para a classe %s.\r\n",
-                     type == SPELL   ? "magia"
-                     : type == SKILL ? "habilidade"
-                                     : "canção",
-                     pc_class_types[class_num]);
+        if (is_current_class) {
+            send_to_char(ch, "Nenhuma %s disponível para a sua classe atual.\r\n",
+                         type == SPELL   ? "magia"
+                         : type == SKILL ? "habilidade"
+                                         : "canção");
+        } else {
+            send_to_char(ch, "Nenhuma %s disponível para a classe %s.\r\n",
+                         type == SPELL   ? "magia"
+                         : type == SKILL ? "habilidade"
+                                         : "canção",
+                         pc_class_types[class_num]);
+        }
         return;
     }
 
@@ -388,11 +395,18 @@ static void list_spells_by_type(struct char_data *ch, int class_num, char type)
     qsort(entries, count, sizeof(struct spell_level_entry), compare_spell_levels);
 
     /* Build output message */
-    len = snprintf(buf, sizeof(buf), "As seguintes %s estão disponíveis para a classe %s:\r\n",
-                   type == SPELL   ? "magias"
-                   : type == SKILL ? "habilidades"
-                                   : "canções",
-                   pc_class_types[class_num]);
+    if (is_current_class) {
+        len = snprintf(buf, sizeof(buf), "As seguintes %s estão disponíveis para a sua classe atual:\r\n",
+                       type == SPELL   ? "magias"
+                       : type == SKILL ? "habilidades"
+                                       : "canções");
+    } else {
+        len = snprintf(buf, sizeof(buf), "As seguintes %s estão disponíveis para a classe %s:\r\n",
+                       type == SPELL   ? "magias"
+                       : type == SKILL ? "habilidades"
+                                       : "canções",
+                       pc_class_types[class_num]);
+    }
 
     for (i = 0; i < count && len < sizeof(buf) - 60; i++) {
         len +=
@@ -433,6 +447,7 @@ ACMD(do_skills)
 {
     char arg[MAX_INPUT_LENGTH];
     int class_num;
+    int is_current_class;
 
     if (IS_NPC(ch)) {
         send_to_char(ch, "NPCs não podem usar este comando.\r\n");
@@ -447,17 +462,20 @@ ACMD(do_skills)
             send_to_char(ch, "Classe inválida. Use: mago, clerigo, ladrao, guerreiro, druida, bardo ou ranger.\r\n");
             return;
         }
+        is_current_class = 0;
     } else {
         class_num = GET_CLASS(ch);
+        is_current_class = 1;
     }
 
-    list_spells_by_type(ch, class_num, SKILL);
+    list_spells_by_type(ch, class_num, SKILL, is_current_class);
 }
 
 ACMD(do_spells)
 {
     char arg[MAX_INPUT_LENGTH];
     int class_num;
+    int is_current_class;
 
     if (IS_NPC(ch)) {
         send_to_char(ch, "NPCs não podem usar este comando.\r\n");
@@ -472,17 +490,20 @@ ACMD(do_spells)
             send_to_char(ch, "Classe inválida. Use: mago, clerigo, ladrao, guerreiro, druida, bardo ou ranger.\r\n");
             return;
         }
+        is_current_class = 0;
     } else {
         class_num = GET_CLASS(ch);
+        is_current_class = 1;
     }
 
-    list_spells_by_type(ch, class_num, SPELL);
+    list_spells_by_type(ch, class_num, SPELL, is_current_class);
 }
 
 ACMD(do_chansons)
 {
     char arg[MAX_INPUT_LENGTH];
     int class_num;
+    int is_current_class;
 
     if (IS_NPC(ch)) {
         send_to_char(ch, "NPCs não podem usar este comando.\r\n");
@@ -497,11 +518,13 @@ ACMD(do_chansons)
             send_to_char(ch, "Classe inválida. Use: mago, clerigo, ladrao, guerreiro, druida, bardo ou ranger.\r\n");
             return;
         }
+        is_current_class = 0;
     } else {
         class_num = GET_CLASS(ch);
+        is_current_class = 1;
     }
 
-    list_spells_by_type(ch, class_num, CHANSON);
+    list_spells_by_type(ch, class_num, CHANSON, is_current_class);
 }
 
 ACMD(do_visible)
