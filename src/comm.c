@@ -2788,6 +2788,7 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj, v
                     break;
                 case 'x':
                     i = "";
+                    s = buf;
                     if (*(++orig) != '(') {
                         log1("Illegal $x(...) code to act(): %s", origback);
                         break;
@@ -2802,6 +2803,7 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj, v
                     }
                     for (orig++; *orig && *orig != ',' && *orig != ')'; orig++)
                         *s++ = *orig;
+                    buf = s;
                     if (!*orig) {
                         log1("Unclosed $x(...) code to act(): %s", origback);
                         break;
@@ -2814,6 +2816,7 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj, v
                     break;
                 case 'X':
                     i = "";
+                    s = buf;
                     if (*(++orig) != '(') {
                         log1("Illegal $X(...) code to act(): %s", origback);
                         break;
@@ -2828,6 +2831,7 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj, v
                     }
                     for (orig++; *orig && *orig != ',' && *orig != ')'; orig++)
                         *s++ = *orig;
+                    buf = s;
                     if (!*orig) {
                         log1("Unclosed $X(...) code to act(): %s", origback);
                         break;
