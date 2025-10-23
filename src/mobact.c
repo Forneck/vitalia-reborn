@@ -259,6 +259,9 @@ void mobile_activity(void)
                         /* Attack the target */
                         act("$n se concentra em $N com olhos determinados.", FALSE, ch, 0, target, TO_ROOM);
                         hit(ch, target, TYPE_UNDEFINED);
+                        /* Safety check: hit() can indirectly cause extract_char */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     } else if (ch->ai_data->goal_timer > 100) {
                         /* Give up hunting after too long */
                         ch->ai_data->current_goal = GOAL_NONE;
@@ -338,6 +341,11 @@ void mobile_activity(void)
                             call_ACMD(do_eavesdrop, ch, "", 0, 0);
                             break;
                     }
+
+                    /* Safety check: call_ACMD functions might indirectly trigger extract_char
+                     * through complex chains (e.g., triggering scripts, special procedures, etc.) */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
 
                     /* After performing action, continue with this goal for a while longer */
                     if (ch->ai_data->goal_timer > rand_number(30, 60)) {
@@ -562,6 +570,9 @@ void mobile_activity(void)
                             /* Attack the mob to get the key */
                             act("$n ataca $N para obter algo que precisa.", FALSE, ch, 0, target_mob, TO_ROOM);
                             hit(ch, target_mob, TYPE_UNDEFINED);
+                            /* Safety check: hit() can indirectly cause extract_char */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
                             /* Don't clear goal yet - continue fighting until key is obtained */
                             continue;
                         }
@@ -600,6 +611,9 @@ void mobile_activity(void)
             } else {
                 /* Ainda não chegou. Continua a vaguear em direção ao objetivo. */
                 mob_goal_oriented_roam(ch, dest);
+                /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
             }
 
             continue; /* O turno do mob foi gasto a trabalhar no seu objetivo. */
@@ -638,7 +652,7 @@ void mobile_activity(void)
         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
             continue;
 
-	/* Wishlist-based goal planning */
+        /* Wishlist-based goal planning */
         if (ch->ai_data && rand_number(1, 100) <= 10) { /* 10% chance per tick */
             mob_process_wishlist_goals(ch);
         }
@@ -868,6 +882,9 @@ void mobile_activity(void)
                         act("$N olha para você com indiferença.", FALSE, vict, 0, ch, TO_CHAR);
                     } else {
                         hit(ch, vict, TYPE_UNDEFINED);
+                        /* Safety check: hit() can indirectly cause extract_char */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                         found = TRUE;
                     }
                 }
@@ -876,7 +893,7 @@ void mobile_activity(void)
             }
         }
 
-	// *** ADDED SAFETY CHECK ***
+        // *** ADDED SAFETY CHECK ***
         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
             continue;
 
@@ -894,6 +911,13 @@ void mobile_activity(void)
         /* Prioridade de Vaguear (Roam) */
         if (!mob_try_to_sell_junk(ch)) {
             mob_goal_oriented_roam(ch, NOWHERE);
+            /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
+        } else {
+            /* Safety check: mob_try_to_sell_junk can call mob_goal_oriented_roam internally */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
         }
 
         /* Mob Memory */
@@ -930,13 +954,16 @@ void mobile_activity(void)
                     found = TRUE;
                     act("''Ei!  Você é o demônio que me atacou!!!', exclama $n.", FALSE, ch, 0, 0, TO_ROOM);
                     hit(ch, vict, TYPE_UNDEFINED);
+                    /* Safety check: hit() can indirectly cause extract_char */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
 
                 vict = next_vict; /* Move to next victim safely */
             }
         }
 
-	 // *** ADDED SAFETY CHECK ***
+        // *** ADDED SAFETY CHECK ***
         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
             continue;
 
@@ -949,6 +976,9 @@ void mobile_activity(void)
             if (!aggressive_mob_on_a_leash(ch, ch->master, ch->master)) {
                 if (CAN_SEE(ch, ch->master) && !PRF_FLAGGED(ch->master, PRF_NOHASSLE))
                     hit(ch, ch->master, TYPE_UNDEFINED);
+                /* Safety check: hit() can indirectly cause extract_char */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
                 stop_follower(ch);
             }
         }
@@ -1942,6 +1972,9 @@ bool mob_assist_allies(struct char_data *ch)
     if (ally_in_trouble && target_to_attack) {
         act("$n vê que $N está em apuros e corre para ajudar!", FALSE, ch, 0, ally_in_trouble, TO_NOTVICT);
         hit(ch, target_to_attack, TYPE_UNDEFINED);
+        /* Safety check: hit() can indirectly cause extract_char */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            return TRUE;
         return TRUE;
     }
 
@@ -2951,6 +2984,9 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 /* Attack the target mob */
                 act("$n olha para $N com determinação.", FALSE, ch, 0, target_mob, TO_ROOM);
                 hit(ch, target_mob, TYPE_UNDEFINED);
+                /* Safety check: hit() can indirectly cause extract_char */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
                 return TRUE;
             } else if (!target_mob) {
                 /* Target mob not found, seek it */
@@ -3018,6 +3054,9 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                             if (!FIGHTING(ch)) {
                                 act("$n ataca $N para limpar a área.", FALSE, ch, 0, temp_mob, TO_ROOM);
                                 hit(ch, temp_mob, TYPE_UNDEFINED);
+                                /* Safety check: hit() can indirectly cause extract_char */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    return TRUE;
                             }
                             found_hostile = TRUE;
                             break;
