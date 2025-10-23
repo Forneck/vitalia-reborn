@@ -242,6 +242,10 @@ void assign_the_quests(void)
 /*--------------------------------------------------------------------------*/
 /* Quest Completion Functions                                               */
 /*--------------------------------------------------------------------------*/
+
+/* Flag to prevent recursive quest completion during reward distribution */
+static bool completing_quest = FALSE;
+
 void set_quest(struct char_data *ch, qst_rnum rnum)
 {
     GET_QUEST(ch) = QST_NUM(rnum);
@@ -303,6 +307,10 @@ void generic_complete_quest(struct char_data *ch)
 
     if (--GET_QUEST_COUNTER(ch) <= 0) {
         rnum = real_quest(vnum);
+
+        /* Set flag to prevent recursive quest completion during reward distribution */
+        completing_quest = TRUE;
+
         if (IS_HAPPYHOUR && IS_HAPPYQP) {
             happy_qp = (int)(QST_POINTS(rnum) * (((float)(100 + HAPPY_QP)) / (float)100));
             happy_qp = MAX(happy_qp, 0);
@@ -356,6 +364,9 @@ void generic_complete_quest(struct char_data *ch)
             set_quest(ch, rnum);
             send_to_char(ch, "A sua busca continua:\r\n%s", QST_INFO(rnum));
         }
+
+        /* Clear flag after quest completion is done */
+        completing_quest = FALSE;
     }
     save_char(ch);
 }
@@ -368,6 +379,11 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
 
     if (IS_NPC(ch))
         return;
+
+    /* Prevent recursive quest completion during reward distribution */
+    if (completing_quest)
+        return;
+
     if (GET_QUEST(ch) == NOTHING) /* No current quest, skip this */
         return;
     if (GET_QUEST_TYPE(ch) != type)
@@ -405,8 +421,24 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                 generic_complete_quest(ch);
             break;
         case AQ_OBJ_RETURN:
-            /* Enhanced logic: allow return to either the original requester or the questmaster */
+            /* Fixed logic: verify that the NPC actually has the item in inventory before completing */
             if (IS_NPC(vict) && object && (GET_OBJ_VNUM(object) == QST_TARGET(rnum))) {
+                /* Check if the object is in the NPC's inventory */
+                struct obj_data *obj_check;
+                bool has_object = false;
+
+                for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
+                    if (obj_check == object) {
+                        has_object = true;
+                        break;
+                    }
+                }
+
+                if (!has_object) {
+                    /* Object not in NPC's inventory - don't complete quest */
+                    break;
+                }
+
                 if (GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum)) {
                     /* Returned directly to original requester - complete quest normally */
                     generic_complete_quest(ch);
