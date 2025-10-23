@@ -425,11 +425,11 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
             if (IS_NPC(vict) && object && (GET_OBJ_VNUM(object) == QST_TARGET(rnum))) {
                 /* Check if the object is in the NPC's inventory */
                 struct obj_data *obj_check;
-                int has_object = FALSE;
+                bool has_object = false;
 
                 for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
                     if (obj_check == object) {
-                        has_object = TRUE;
+                        has_object = true;
                         break;
                     }
                 }
