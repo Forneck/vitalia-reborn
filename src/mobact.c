@@ -164,6 +164,13 @@ void mobile_activity(void)
             }
         }
 
+        // *** ADDED SAFETY CHECK ***
+        // A spec proc might have extracted ch and returned FALSE.
+        // The check at the top of the loop already caught other flags,
+        // but we must re-check here before proceeding.
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
         if (FIGHTING(ch) || !AWAKE(ch))
             continue;
 
@@ -627,7 +634,11 @@ void mobile_activity(void)
         /* hunt a victim, if applicable */
         hunt_victim(ch);
 
-        /* Wishlist-based goal planning */
+        // *** ADDED SAFETY CHECK ***
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
+	/* Wishlist-based goal planning */
         if (ch->ai_data && rand_number(1, 100) <= 10) { /* 10% chance per tick */
             mob_process_wishlist_goals(ch);
         }
@@ -865,6 +876,10 @@ void mobile_activity(void)
             }
         }
 
+	// *** ADDED SAFETY CHECK ***
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
         mob_try_and_upgrade(ch);
 
         mob_share_gear_with_group(ch);
@@ -921,6 +936,10 @@ void mobile_activity(void)
             }
         }
 
+	 // *** ADDED SAFETY CHECK ***
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
         /* Charmed Mob Rebellion: In order to rebel, there need to be more charmed
          * monsters than the person can feasibly control at a time.  Then the
          * mobiles have a chance based on the charisma of their leader.
@@ -934,9 +953,13 @@ void mobile_activity(void)
             }
         }
 
+        // *** ADDED SAFETY CHECK ***
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
         /* Resource gathering goal assignment for idle mobs */
-        if (ch->ai_data && ch->ai_data->current_goal == GOAL_NONE && rand_number(1, 1000) <= 5) {
-            /* 0.5% chance per tick for mob to start resource gathering if they have no other goals */
+        if (ch->ai_data && ch->ai_data->current_goal == GOAL_NONE && rand_number(1, 1000) <= 10) {
+            /* 1% chance per tick for mob to start resource gathering if they have no other goals */
 
             /* Check genetics to determine preferred resource activity */
             int activity_choice = rand_number(1, 100);
