@@ -2384,7 +2384,11 @@ void nonblock(socket_t s)
 
 /* signal-handling functions (formerly signals.c).  UNIX only. */
 #if defined(CIRCLE_UNIX) || defined(CIRCLE_MACINTOSH)
-static RETSIGTYPE reread_wizlists(int sig) { reread_wizlist = TRUE; }
+static RETSIGTYPE reread_wizlists(int sig)
+{
+    reread_wizlist = TRUE;
+    my_signal(SIGUSR1, reread_wizlists);
+}
 
 /* Orphaned right now in place of emergency unban ... static RETSIGTYPE
    unrestrict_game(int sig) { emergency_unban = TRUE; } */
