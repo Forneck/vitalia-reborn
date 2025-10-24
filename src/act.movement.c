@@ -1149,7 +1149,7 @@ int stop_flying(struct char_data *ch)
         REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
 
         /* Check if player can still fly after removing spell (e.g., via items) */
-        if (has_flight(ch) && !AFF_FLAGGED(ch, AFF_FLYING)) {
+        if (has_flight(ch)) {
             SET_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
             send_to_char(ch, "Você tenta aterrisar, mas seus itens mágicos mantêm você no ar.\r\n");
             return (0);
