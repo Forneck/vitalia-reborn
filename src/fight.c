@@ -1297,6 +1297,15 @@ void beware_lightning()
 
         for (victim = character_list; victim; victim = temp) {
             temp = victim->next;
+
+            /* Skip characters that are already marked for extraction */
+            if (MOB_FLAGGED(victim, MOB_NOTDEADYET) || PLR_FLAGGED(victim, PLR_NOTDEADYET))
+                continue;
+
+            /* Safety check: validate room before accessing zone */
+            if (IN_ROOM(victim) == NOWHERE || IN_ROOM(victim) < 0 || IN_ROOM(victim) > top_of_world)
+                continue;
+
             zona_vitima = world[IN_ROOM(victim)].zone;   // pega a zona (vnum para rnum) da sala da vitima
             if (zona_vitima != zone)
                 continue;
