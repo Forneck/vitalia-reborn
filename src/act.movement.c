@@ -1145,6 +1145,9 @@ int stop_flying(struct char_data *ch)
         send_to_char(ch, "Você aterrisa.\r\n");
         act("$n aterrissa.", TRUE, ch, 0, 0, TO_ROOM);
         REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
+        /* Remove the fly spell affect so player must cast fly again */
+        if (affected_by_spell(ch, SPELL_FLY))
+            affect_from_char(ch, SPELL_FLY);
     }
     return (1);
 }
