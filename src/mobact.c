@@ -707,11 +707,21 @@ void mobile_activity(void)
 
             /* Check if mob should post a bounty quest against hostile mobs in area */
             if (GET_GENQUEST(ch) > 60 && GET_GOLD(ch) > 300) {
-                struct char_data *target;
+                struct char_data *target, *next_target;
                 /* Look for aggressive mobs in the same zone */
-                for (target = character_list; target; target = target->next) {
-                    if (IS_NPC(target) && target != ch && IN_ROOM(target) != NOWHERE &&
-                        world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && MOB_FLAGGED(target, MOB_AGGRESSIVE) &&
+                for (target = character_list; target; target = next_target) {
+                    next_target = target->next;
+
+                    /* Safety check: Skip characters marked for extraction */
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        continue;
+
+                    /* Safety check: Validate room before accessing world array */
+                    if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                        IN_ROOM(target) > top_of_world)
+                        continue;
+
+                    if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && MOB_FLAGGED(target, MOB_AGGRESSIVE) &&
                         GET_ALIGNMENT(target) < -200 && GET_LEVEL(target) >= GET_LEVEL(ch) - 5) {
 
                         /* Post bounty quest against this aggressive mob */
@@ -760,9 +770,20 @@ void mobile_activity(void)
                     }
                 } else {
                     /* AQ_MOB_FIND quest - find a friendly mob */
-                    for (target = character_list; target; target = target->next) {
-                        if (IS_NPC(target) && target != ch && IN_ROOM(target) != NOWHERE &&
-                            world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && GET_ALIGNMENT(target) > 0 &&
+                    struct char_data *next_target;
+                    for (target = character_list; target; target = next_target) {
+                        next_target = target->next;
+
+                        /* Safety check: Skip characters marked for extraction */
+                        if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                            continue;
+
+                        /* Safety check: Validate room before accessing world array */
+                        if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                            IN_ROOM(target) > top_of_world)
+                            continue;
+
+                        if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && GET_ALIGNMENT(target) > 0 &&
                             !MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
 
                             if (GET_GOLD(ch) > 80) {
@@ -777,9 +798,20 @@ void mobile_activity(void)
                 /* Post protection quests */
                 if (rand_number(1, 100) <= 60) {
                     /* AQ_MOB_SAVE quest - protect a weak mob */
-                    for (target = character_list; target; target = target->next) {
-                        if (IS_NPC(target) && target != ch && IN_ROOM(target) != NOWHERE &&
-                            world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
+                    struct char_data *next_target;
+                    for (target = character_list; target; target = next_target) {
+                        next_target = target->next;
+
+                        /* Safety check: Skip characters marked for extraction */
+                        if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                            continue;
+
+                        /* Safety check: Validate room before accessing world array */
+                        if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                            IN_ROOM(target) > top_of_world)
+                            continue;
+
+                        if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
                             GET_LEVEL(target) < GET_LEVEL(ch) && GET_ALIGNMENT(target) > 200) {
 
                             if (GET_GOLD(ch) > 120) {
@@ -816,9 +848,20 @@ void mobile_activity(void)
                 }
             } else if (GET_GENQUEST(ch) > 40 && rand_number(1, 100) <= 20) {
                 /* Post general kill quests */
-                for (target = character_list; target; target = target->next) {
-                    if (IS_NPC(target) && target != ch && IN_ROOM(target) != NOWHERE &&
-                        world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && GET_ALIGNMENT(target) < -100 &&
+                struct char_data *next_target;
+                for (target = character_list; target; target = next_target) {
+                    next_target = target->next;
+
+                    /* Safety check: Skip characters marked for extraction */
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        continue;
+
+                    /* Safety check: Validate room before accessing world array */
+                    if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                        IN_ROOM(target) > top_of_world)
+                        continue;
+
+                    if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && GET_ALIGNMENT(target) < -100 &&
                         GET_LEVEL(target) >= GET_LEVEL(ch) - 10) {
 
                         if (GET_GOLD(ch) > 100) {
@@ -2713,11 +2756,21 @@ struct char_data *get_mob_in_room_by_vnum(room_rnum room, mob_vnum vnum)
  */
 struct char_data *find_questmaster_by_vnum(mob_vnum vnum)
 {
-    struct char_data *i;
+    struct char_data *i, *next_i;
 
     /* Search through all characters in the world */
-    for (i = character_list; i; i = i->next) {
-        if (IS_NPC(i) && GET_MOB_VNUM(i) == vnum) {
+    for (i = character_list; i; i = next_i) {
+        next_i = i->next;
+
+        /* Safety check: Skip characters marked for extraction */
+        if (MOB_FLAGGED(i, MOB_NOTDEADYET) || PLR_FLAGGED(i, PLR_NOTDEADYET))
+            continue;
+
+        /* Safety check: Validate room before using the character */
+        if (!IS_NPC(i) || IN_ROOM(i) == NOWHERE || IN_ROOM(i) < 0 || IN_ROOM(i) > top_of_world)
+            continue;
+
+        if (GET_MOB_VNUM(i) == vnum) {
             /* Check if this mob is a questmaster (has quest special procedure) */
             if (mob_index[GET_MOB_RNUM(i)].func == questmaster || mob_index[GET_MOB_RNUM(i)].func == temp_questmaster) {
                 return i;
