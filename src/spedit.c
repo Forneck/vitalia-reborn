@@ -395,7 +395,7 @@ void spedit_choose_apply(struct descriptor_data *d)
     cpt = i + 1;
     for (i = cpt; i < cpt + NUM_AFF_FLAGS; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-15s%s", grn, i, nrm, yel,
-                       affected_bits[i - NUM_APPLIES], (i - cpt + 1) % 4 ? "" : "\r\n");
+                       affected_bits[i - cpt], (i - cpt + 1) % 4 ? "" : "\r\n");
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\n\r\nEnter choice (0 to quit, 'r' to remove) : ", nrm);
