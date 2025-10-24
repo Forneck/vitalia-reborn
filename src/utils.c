@@ -2780,8 +2780,13 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
         return;
     }
 
+    /* Convert AQ_OBJ_FIND to AQ_OBJ_RETURN to require delivery instead of just finding */
+    if (quest_type == AQ_OBJ_FIND) {
+        quest_type = AQ_OBJ_RETURN;
+    }
+
     /* Obter nome do alvo */
-    if (quest_type == AQ_OBJ_FIND && target_vnum != NOTHING) {
+    if ((quest_type == AQ_OBJ_FIND || quest_type == AQ_OBJ_RETURN) && target_vnum != NOTHING) {
         target_obj_rnum = real_object(target_vnum);
         if (target_obj_rnum != NOTHING) {
             target_name = obj_proto[target_obj_rnum].short_description;
@@ -2812,6 +2817,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     /* Calcula dificuldade baseada no tipo de quest */
     switch (quest_type) {
         case AQ_OBJ_FIND:
+        case AQ_OBJ_RETURN:
             difficulty = 40 + rand_number(0, 30); /* Objetos são moderadamente difíceis */
             break;
         case AQ_ROOM_FIND:
@@ -2896,7 +2902,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
 
     /* Cria strings da quest baseadas no tipo */
     switch (quest_type) {
-        case AQ_OBJ_FIND:
+        case AQ_OBJ_RETURN:
             snprintf(quest_name, sizeof(quest_name), "Buscar: %s", target_name);
             snprintf(quest_desc, sizeof(quest_desc), "%s procura por %s", GET_NAME(ch), target_name);
             snprintf(quest_info, sizeof(quest_info),
@@ -2955,7 +2961,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     /* Log da ação */
     log1("EXPLORATION QUEST: %s (room %d) created %s quest %d (target %d) with QM %d, reward %d gold", GET_NAME(ch),
          GET_ROOM_VNUM(IN_ROOM(ch)),
-         (quest_type == AQ_OBJ_FIND)    ? "object find"
+         (quest_type == AQ_OBJ_RETURN)  ? "object return"
          : (quest_type == AQ_ROOM_FIND) ? "room find"
                                         : "mob find",
          new_quest_vnum, target_vnum, questmaster_vnum, calculated_reward);
