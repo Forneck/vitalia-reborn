@@ -2786,7 +2786,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     }
 
     /* Obter nome do alvo */
-    if ((quest_type == AQ_OBJ_FIND || quest_type == AQ_OBJ_RETURN) && target_vnum != NOTHING) {
+    if (quest_type == AQ_OBJ_RETURN && target_vnum != NOTHING) {
         target_obj_rnum = real_object(target_vnum);
         if (target_obj_rnum != NOTHING) {
             target_name = obj_proto[target_obj_rnum].short_description;
@@ -2816,7 +2816,6 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
 
     /* Calcula dificuldade baseada no tipo de quest */
     switch (quest_type) {
-        case AQ_OBJ_FIND:
         case AQ_OBJ_RETURN:
             difficulty = 40 + rand_number(0, 30); /* Objetos são moderadamente difíceis */
             break;
