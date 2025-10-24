@@ -134,8 +134,8 @@ int get_formula_typeact(char *str, int *ptr)
         return CODE_DIGIT;
 
     // Check for full-word aliases first (VICTIM. -> VICT., SELF. remains SELF.)
-    if (!strncmp("VICTIM.", (char *)&str[*ptr], 7)) {
-        *ptr += 6;   // advance past "VICTIM." minus 1 (will be incremented by main loop)
+    if (!strncmp("VICTIM.", (char *)&str[*ptr], strlen("VICTIM."))) {
+        *ptr += strlen("VICTIM.") - 1;   // advance past "VICTIM." minus 1 (will be incremented by main loop)
         return CODE_IDE_VICT;
     }
 
