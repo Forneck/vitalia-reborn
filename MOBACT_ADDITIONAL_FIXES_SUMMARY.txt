@@ -1,0 +1,90 @@
+# Mobact Additional Segfault Fixes - Summary
+
+## Overview
+Fixed 4 additional critical unsafe patterns in mobile_activity() that could cause segfaults, identified during comprehensive security review.
+
+## Critical Fixes Applied
+
+### 1. CRITICAL - Array Bounds Violation (Lines 3023-3026, 3047-3050)
+**Severity: CRITICAL - Guaranteed Crash**
+
+Before:
+```c
+char_from_room(ch);  // Sets IN_ROOM(ch) = -1
+char_to_room(ch, world[IN_ROOM(ch)].dir_option[...]  // Crashes: world[-1]
+```
+
+After:
+```c
+mob_goal_oriented_roam(ch, NOWHERE);  // Safe movement
+if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+    return TRUE;
+```
+
+Impact: Prevents guaranteed crash in AQ_MOB_FIND and AQ_MOB_KILL quests
+
+### 2. Object Iteration Safety (Lines 535-563)
+**Severity: MEDIUM**
+
+Before:
+```c
+for (obj = list; obj; obj = obj->next_content) {
+    obj_from_room(obj);  // Corrupts list
+}
+```
+
+After:
+```c
+for (obj = list; obj; obj = next_obj) {
+    next_obj = obj->next_content;  // Save first
+    obj_from_room(obj);
+}
+```
+
+Impact: Prevents crashes during key collection
+
+### 3. Use-After-Free Prevention (Line 394)
+**Severity: LOW - Defensive**
+
+Added:
+```c
+shopping_sell(...);
+ch->ai_data->goal_obj = NULL;  // Clear dangling pointer
+```
+
+Impact: Defensive programming improvement
+
+### 4. Shopping Safety Check (Line 467)
+**Severity: LOW-MEDIUM**
+
+Added:
+```c
+shopping_buy(...);
+if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+    continue;
+```
+
+Impact: Protects against script-triggered extractions
+
+## Testing Results
+✅ Build successful (no warnings)
+✅ CodeQL: 0 vulnerabilities
+✅ Code review: All feedback addressed
+✅ Formatted with clang-format
+
+## Files Modified
+- src/mobact.c (31 lines changed)
+- MOBACT_UNSAFE_CASES_FIX.md (290 lines of documentation)
+
+## Related Fixes
+This complements:
+- MOBILE_ACTIVITY_FIX.md
+- MOBACT_EXTRACT_FIX.md
+- MOBACT_RACE_CONDITION_SUMMARY.md
+- SIGSEGV_FIX.md
+
+## Conclusion
+Most critical fix: Eliminated guaranteed crash (array bounds violation) in quest movement code. All mobs with AQ_MOB_FIND or AQ_MOB_KILL quests no longer crash when searching for targets.
+
+Status: Ready for merge
+Branch: copilot/fix-segfault-crashes
