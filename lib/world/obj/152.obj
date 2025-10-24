@@ -5,7 +5,7 @@ Um pedaço de tecido esfarrapado e semitransparente jaz no chão, brilhando com 
 ~
 9 abh 0 0 0 am 0 0 0 0 0 0 0
 8 0 0 0
-2 15000 2000 35
+2 15000 2000 35 0
 E
 sudario espectral fragmento~
 Este tecido parece ser feito de fumaça solidificada, frio ao toque de uma forma que gela os ossos. É etéreo e translúcido, e através dele, você pode ver o mundo de forma distorcida e melancólica. Pequenos cristais de gelo formam-se na sua superfície, mesmo no calor, e um murmúrio baixo e triste parece emanar dele.
@@ -23,7 +23,7 @@ Uma pequena pedra, parecida com uma lágrima de cristal, brilha com uma luz azul
 ~
 8 aq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 5000 500 0
+1 5000 500 0 0
 E
 lagrima congelada cristal~
 Esta gema tem a forma perfeita de uma lágrima e é feita de um cristal que parece gelo eterno, que não derrete com o calor da sua mão. Pelo contrário, ela rouba o calor, tornando-se dolorosamente fria ao toque. Dentro do seu núcleo, uma pequena tempestade de luz pálida agita-se, como uma memória congelada de uma grande tristeza.
@@ -35,7 +35,7 @@ No meio da muralha de espinhos farpados, uma única flor de uma brancura imposs�
 ~
 28 c 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 100000 8000 0
+1 100000 8000 0 0
 E
 flor camelia~
 Ela não deveria existir aqui. Nesta muralha claustrofóbica, onde a própria luz é empalada pelos espinhos e o ar cheira a desespero antigo, esta camélia é uma anomalia, um ato de rebelião silenciosa. As suas pétalas não são de matéria vegetal comum; parecem esculpidas em luar solidificado, de uma brancura tão imaculada que parece ferir os olhos, habituados à penumbra perpétua da floresta amaldiçoada.
@@ -53,7 +53,7 @@ Um pequeno livro encadernado em couro, encharcado e coberto de lodo, jaz meio en
 ~
 27 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 500 50 0
+1 500 50 0 0
 E
 diario livro couro peregrino~
 Este diário de bolso sobreviveu milagrosamente à umidade implacável. As suas páginas estão manchadas e frágeis, e a tinta borratada em muitos lugares, mas algumas passagens ainda são legíveis. A caligrafia, outrora cheia de esperança, torna-se cada vez mais frenética e desesperada.
@@ -71,7 +71,7 @@ Preso num galho baixo, um pequeno amuleto de madeira escura balança suavemente.
 ~
 9 b 0 0 0 ac 0 0 0 0 0 0 0
 1 0 0 0
-1 8000 800 0
+1 8000 800 0 0
 E
 amuleto madeira olho~
 Este amuleto é feito de um pedaço de madeira negra, dura e fria como pedra. Foi esculpido na forma de um olho fechado. A madeira parece absorver a luz à sua volta, e segurá-lo dá uma estranha sensação de ser observado, não de uma forma ameaçadora, mas protetora. Um calor suave emana dele, um contraste reconfortante com o frio da floresta.
@@ -85,7 +85,7 @@ Um galho retorcido e negro, a gotejar uma seiva escura, está aqui no chão.~
 ~
 5 b 0 0 0 an 0 0 0 0 0 0 0
 1 2 6 16
-5 25000 3000 0
+5 25000 3000 0 0
 E
 galho agonia espinhos kodama~
 Este galho de madeira negra está vivo de uma forma profana. Pulsa com um calor doentio e veias escuras correm pela sua superfície. Espinhos afiados, naturais da sua forma corrompida, cobrem a sua ponta, e uma seiva negra e ácida goteja lentamente, sibilando ao tocar no chão. Empunhá-lo enche a mente com pensamentos de fúria e dor.
@@ -103,7 +103,7 @@ Um orbe de material negro e cristalizado, que pulsa com uma luz interior, está 
 ~
 8 dg 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 50000 3000 0
+1 50000 3000 0 0
 E
 coracao seiva negra kodama~
 Esta gema orgânica é o coração da corrupção de um espírito da floresta. É um pedaço de seiva negra, dura como obsidiana, mas quente ao toque. No seu interior, sombras rodopiam e dançam, presas para sempre. O orbe emite um zumbido baixo e dissonante, uma canção de poder profano e tristeza eterna.
@@ -115,7 +115,7 @@ No meio da podridão e dos espinhos farpados, uma única flor de uma brancura im
 ~
 28 c 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 100000 8000 0
+1 100000 8000 0 0
 E
 flor camelia~
 Ela não deveria existir aqui. Neste beco claustrofóbico, onde a própria luz é empalada pelos espinhos e o ar cheira a desespero antigo, esta camélia é uma anomalia, um ato de rebelião silenciosa. As suas pétalas não são de matéria vegetal comum; parecem esculpidas em luar solidificado, de uma brancura tão imaculada que parece ferir os olhos, habituados à penumbra perpétua da floresta amaldiçoada.
@@ -133,7 +133,7 @@ Uma katana de brilho sinistro jaz aqui, a sua lâmina parece sussurrar promessas
 ~
 5 ah 0 0 0 an 0 0 0 0 0 0 0
 1 5 8 17
-8 75000 8000 50
+8 75000 8000 50 0
 T 15217
 E
 katana muramasa amaldicoada sangue~
@@ -158,7 +158,7 @@ Uma longa e elegante nodachi, com a lâmina manchada de um vermelho que nunca se
 ~
 5 a 0 0 0 an 0 0 0 0 0 0 0
 0 4 8 11
-10 80000 9000 50
+10 80000 9000 50 0
 E
 arma nodachi lua sangrenta~
 Esta nodachi, uma espada de duas mãos de proporções magníficas, parece ter sido banhada na própria luz de uma lua agourenta. A sua lâmina longa e curva tem um brilho vermelho-escuro, como se o sangue das suas vítimas tivesse sido permanentemente absorvido pelo aço. Diz-se que pertenceu a um general que, para defender o santuário, fez um pacto com um demónio da guerra. Ele venceu a batalha, mas a sua alma ficou presa na arma, e a sua fúria manchou a lâmina para sempre.
@@ -178,7 +178,7 @@ Uma kusarigama, com a sua foice e corrente negras como a noite, jaz no chão.~
 ~
 5 b 0 0 0 an 0 0 0 0 0 0 0
 0 3 10 15
-7 65000 7500 50
+7 65000 7500 50 0
 E
 arma kusarigama ceifador almas~
 A foice desta arma é de um metal que parece absorver a luz, e a corrente não é feita de elos, mas de sombras solidificadas que se movem por vontade própria. A bola de ferro na ponta tem a forma de um crânio a gritar. Foi a arma de um monge assassino que caçava os desertores do seu templo, acreditando que estava a purificar as suas almas através da morte. Cada golpe desta arma, segundo a lenda, não corta apenas a carne, mas arranha a própria alma, tornando a cura mais difícil.
@@ -198,7 +198,7 @@ Um longo arco de caça, feito da madeira de uma árvore retorcida, está aqui. N
 ~
 5 ag 0 0 0 an 0 0 0 0 0 0 0
 0 5 6 11
-8 70000 8500 50
+8 70000 8500 50 0
 E
 arma yumi arqueiro cego~
 Este arco pertenceu ao melhor arqueiro do santuário, um homem que se cegou a si mesmo para apurar os seus outros sentidos. Ele podia ouvir o bater do coração de um inimigo a cem passos de distância e sentir o fluxo do vento como se fosse parte dele. Quando a corrupção tomou a floresta, ele continuou a sua vigília, tornando-se uma lenda, um fantasma que abatia os monstros da floresta a partir das sombras.
@@ -216,7 +216,7 @@ Um tanto, cuja lâmina parece ser feita de madeira negra e farpada, está aqui.~
 ~
 5 d 0 0 0 an 0 0 0 0 0 0 0
 0 2 8 11
-5 45000 5500 0
+5 45000 5500 0 0
 E
 adaga tantoo espinho arvore-mae~
 Esta adaga foi esculpida a partir de um espinho da própria Árvore-Mãe Moribunda. A lâmina é de uma madeira negra e petrificada, mais dura e afiada que o aço, e pulsa com a agonia da árvore. Cada corte inflige uma dor que se espalha como veneno pelas veias do inimigo, uma corrupção que debilita e destrói por dentro, um presente deixado para trás pelo Coração Corrompido da Árvore-Mãe, agora silenciado.
@@ -234,7 +234,7 @@ Um leque de guerra de ferro, cujas varetas são intercaladas com ossos de dedos,
 ~
 5 0 0 0 0 ano 0 0 0 0 0 0 0
 0 2 6 0
-4 35000 4000 51
+4 35000 4000 51 0
 E
 leque guerra tessen ossos~
 Este tessen pertenceu a uma sacerdotisa do santuário que lutou até ao fim. As suas varetas de ferro são afiadas como navalhas, e os ossos dos seus irmãos monges foram entrelaçados nelas como um lembrete sombrio do que ela defendia. Abrir o leque liberta uma rajada de vento gélido que cheira a incenso e a sepultura. Um Monge Corrompido, talvez um dos seus antigos companheiros, carregava este leque como uma relíquia da sua vida passada.
@@ -252,7 +252,7 @@ Um Fogo-Fátuo Espectral flutua erraticamente, o eco luminoso de uma alma perdid
 ~
 1 ab 0 0 0 a 0 0 0 k 0 0 0
 0 0 -1 0
-3 25000 3000 0
+3 25000 3000 0 0
 E
 luz fogo-fatuo hitodama espectral~
 Esta não é uma chama, mas a manifestação visível da alma de um guerreiro que morreu sem honra. A sua luz azulada não gera calor, mas um frio sepulcral que arrepia os ossos. A chama dança, por vezes assumindo a forma de um rosto em agonia. Era a única companhia de uma alma penada, um farol na sua eternidade de tristeza, agora livre para guiar um novo portador.
@@ -270,7 +270,7 @@ Um olho, arrancado e preservado, brilha com uma luz verde e aquosa.~
 ~
 1 a 0 0 0 a 0 0 0 0 0 0 0
 0 0 -1 0
-6 30000 3500 0
+6 30000 3500 0 0
 E
 luz olho kappa lodo~
 Este olho pertenceu a um Kappa do Lodo, e a sua luz doentia iluminava o seu caminho através das águas estagnadas do pântano. A sua pupila, mesmo separada do corpo, fita constantemente a direção da água mais próxima, como se ansiasse por regressar ao seu lar lamacento. A sua luz é suficiente para perfurar a névoa mais espessa do pântano.
@@ -286,7 +286,7 @@ Um elmo de samurai colossal, feito de fragmentos de osso, emana uma luz fria e f
 ~
 9 a 0 0 0 ae 0 0 0 0 0 0 0
 10 0 0 0
-12 65000 7000 50
+12 65000 7000 50 0
 E
 elmo kabuto gashadokuro colossal~
 Este kabuto não foi forjado, mas reunido a partir dos crânios dos monges cujos ossos formavam o Gashadokuro. A fé coletiva dos mortos, embora corrompida, forma uma barreira contra o mal, e as lâminas são desviadas pelo peso de centenas de tragédias. O Gashadokuro que o usava era a manifestação da dor coletiva daquelas almas, e este elmo era a sua coroa de sofrimento.
@@ -302,7 +302,7 @@ Uma bandana de tecido esfarrapado, com um kanji de sangue que nunca seca, está 
 ~
 9 b 0 0 0 ae 0 0 0 0 0 0 0
 8 0 0 0
-4 55000 6000 45
+4 55000 6000 45 0
 E
 bandana hachimaki vinganca~
 Esta bandana de algodão, outrora branca, está agora manchada com o sangue e as lágrimas de um espírito que não encontrou a paz. O kanji para 'vingança' está pintado no centro com um sangue que nunca seca completamente, permanecendo pegajoso ao toque. Pertenceu a um samurai traído, cuja alma permaneceu como um Espírito Vingativo, obcecado pela retribuição. Agora que o espírito encontrou descanso, o seu ódio permanece imbuído no tecido, aguçando os sentidos do portador para a batalha.
@@ -318,7 +318,7 @@ Uma máscara de samurai, esculpida no crânio de uma criatura demoníaca, está 
 ~
 9 a 0 0 0 ar 0 0 0 0 0 0 0
 5 0 0 0
-3 60000 7500 50
+3 60000 7500 50 0
 E
 mascara menpo esqueleto amaldicoado~
 Esta máscara menpo foi esculpida a partir do crânio de uma criatura desconhecida que o Gashadokuro esmagou. A sua superfície de osso é fria e lisa, e os dentes foram substituídos por lascas de obsidiana. A sua aparência aterradora, um eco do monstro colossal que a usava, pode fazer com que os inimigos hesitem, paralisados por um medo sobrenatural que gela o sangue e enfraquece a determinação.
@@ -334,7 +334,7 @@ Um véu de seda de aranha, incrivelmente fino e resistente, tremeluz suavemente.
 ~
 9 b 0 0 0 ar 0 0 0 0 0 0 0
 5 0 0 0
-1 58000 6500 50
+1 58000 6500 50 0
 E
 velo seda jorogumo~
 Este véu foi fiado pela própria Rainha-Viúva Jorogumo para esconder a sua face monstruosa dos seus pretendentes incautos. Torna o rosto do portador indistinto, como se estivesse a olhar através de uma mortalha tecida de luar e névoa. O veneno subtil, mas potente, tecido nos seus fios protege contra toxinas inaladas e ataques gasosos. A rainha já não precisa dele, mas a sua magia sedutora e perigosa permanece.
@@ -350,7 +350,7 @@ Um dente canino amarelado, preso numa argola de ferro, está aqui.~
 ~
 9 a 0 0 0 aq 0 0 0 0 0 0 0
 2 0 0 0
-1 28000 3500 10
+1 28000 3500 10 0
 E
 brinco dente inugami~
 Este dente pertenceu a um Inugami Errante, um cão-espírito leal ao seu mestre mesmo para além da morte. A lealdade da criatura era tão forte que o dente ainda alerta o portador do perigo, emitindo um rosnar baixo e fantasmagórico que só ele pode ouvir quando inimigos se aproximam furtivamente. É um aviso dos mortos para os vivos, um eco da devoção eterna.
@@ -366,7 +366,7 @@ Um pequeno sino de bronze que, apesar de se mover, não produz qualquer som.~
 ~
 9 b 0 0 0 aq 0 0 0 0 0 0 0
 2 0 0 0
-2 15000 6500 25
+2 15000 6500 25 0
 E
 brinco sino silencioso tengu~
 Este sino adornava a vestimenta de um Tengu das Sombras. Foi encantado para absorver o som, permitindo que a criatura se movesse num silêncio absoluto. O seu silêncio agora serve um novo mestre, abafando o ruído dos seus passos e tornando-o um com as sombras. É um paradoxo auditivo, um objeto que cria silêncio onde deveria haver som, um vazio que confunde os inimigos.
@@ -382,7 +382,7 @@ O coração de uma Fúria do Pântano, petrificado e pendurado numa corrente de 
 ~
 9 g 0 0 0 ac 0 0 0 0 0 0 0
 0 0 0 0
-1 22000 11000 35
+1 22000 11000 35 0
 E
 amuleto coracao petrificado furia~
 Este é o núcleo da Fúria do Pântano, a monstruosidade de lodo e ossos. Depois da sua derrota, a sua essência malévola solidificou-se nesta pedra fria e pesada. Usá-la ao pescoço concede ao portador uma pele dura como pedra, um eco da resistência da criatura que era a própria personificação do pântano, tornando a carne mais resistente a cortes e perfurações.
@@ -400,7 +400,7 @@ Um colar de contas de oração budista, cujas contas de madeira estão enegrecid
 ~
 9 a 0 0 0 ac 0 0 0 0 0 0 0
 2 0 0 0
-5 2800 200 20
+5 2800 200 20 0
 E
 colar contas oracao profanadas~
 Este colar pertenceu a um Monge Corrompido. Cada conta foi polida por dedos que outrora procuravam a iluminação, mas que encontraram apenas o desespero. Em vez de paz, as contas agora sussurram palavras de poder profano, oferecendo conhecimento sombrio em troca de um pedaço da sanidade do portador, aumentando o poder dos seus feitiços enquanto drena a sua força de vontade.
@@ -422,7 +422,7 @@ Um manto feito do musgo que crescia sobre um Kodama Desnaturado.~
 ~
 9 abj 0 0 0 ak 0 0 0 qt 0 0 0
 5 0 0 0
-4 12000 1000 50
+4 12000 1000 50 0
 E
 manto musgo sufocante kodama~
 Este manto úmido e pesado é tecido a partir do musgo que cobria o corpo do Kodama Desnaturado, absorvendo a sua tristeza e a sua ligação com a floresta corrupta. Vesti-lo é como carregar o peso da floresta moribunda, mas também permite que o portador se misture com o ambiente, tornando-se quase invisível entre as árvores e a vegetação rasteira.
@@ -440,7 +440,7 @@ Ombreiras leves, feitas a partir das pernas de uma Aranha-Predadora Jovem.~
 ~
 9 ah 0 0 0 ak 0 0 0 0 0 0 0
 7 0 0 0
-3 2300 1000 40
+3 2300 1000 40 0
 E
 ombreiras quitina aranha~
 Estas ombreiras foram criadas a partir das placas de quitina e das pernas de uma Aranha-Predadora Jovem. São leves e as suas múltiplas articulações concedem ao portador uma liberdade de movimento surpreendente, permitindo-lhe mover os braços com a mesma velocidade e agilidade da criatura aracnídea que as forneceu.
@@ -458,7 +458,7 @@ O casco de um Kappa do Lodo, rachado numa batalha antiga, jaz na lama.~
 ~
 9 a 0 0 0 ak 0 0 0 0 0 0 0
 9 0 0 0
-10 4000 1000 50
+10 4000 1000 50 0
 E
 casco kappa rachado~
 Este casco verde-escuro pertenceu a um Kappa do Lodo particularmente velho e mal humorado. A sua superfície está coberta de cicatrizes de batalhas passadas, e uma grande racha mostra a violência do golpe que finalmente o derrotou. Usá-lo nas costas oferece uma proteção sólida contra ataques por trás, e a água que ocasionalmente escorre dele tem um cheiro a peixe podre e pântano.
@@ -476,7 +476,7 @@ Um estandarte de guerra de um clã de ninjas, com o símbolo de um furacão, est
 ~
 11 bn 0 0 0 ao 0 0 0 0 d 0 0
 0 0 0 0
-5 2000 500 34
+5 2000 500 34 0
 E
 sashimono vento cortante tengu~
 Este estandarte de guerra pertenceu a um clã de Tengu que servia o santuário como batedores e assassinos. O tecido é tão leve que flutua mesmo sem vento, e o seu símbolo de um furacão parece girar lentamente. O Tengu das Sombras, um dos últimos da sua linhagem, carregava-o como um lembrete do seu clã perdido. A sua bênção do vento ainda concede uma velocidade incrível ao portador, tornando os seus movimentos mais rápidos e fluidos.
@@ -494,7 +494,7 @@ Uma magnífica armadura O-yoroi, rachada e enegrecida pelo fogo, emana uma aura 
 ~
 9 a 0 0 0 ad 0 0 0 0 0 0 0
 9 0 0 0
-30 3000 1000 50
+30 3000 1000 50 0
 E
 armadura o-yoroi comandante caido~
 Esta armadura foi usada pelo comandante que liderou a última e desesperada defesa do santuário. Ele lutou contra o Oni Caçador e, embora tenha perecido, a sua coragem e liderança ficaram imbuídas nas placas de laca. Vesti-la é sentir a sua aura de autoridade, uma presença que inspira aliados e faz com que os inimigos pensem duas vezes antes de atacar. As marcas de garras do Oni ainda são visíveis no peitoral.
@@ -512,7 +512,7 @@ Um kimono de seda de uma brancura imaculada, uma anomalia na sujidade da florest
 ~
 9 b 0 0 0 ad 0 0 0 0 0 0 0
 4 0 0 0
-5 3000 100 0
+5 3000 100 0 0
 E
 kimono seda fantasma~
 Este kimono foi a obra-prima de um Artesão Maldito, a única criação que ele conseguiu completar na sua existência espectral, tecida a partir de fios de luar e arrependimento. O tecido é leve como uma pluma e move-se como fumaça. Vesti-lo é ser envolto numa aura de proteção etérea, que desvia golpes e magias como se não fossem reais. A sua beleza assombrosa é um testemunho de uma habilidade que nem a morte conseguiu apagar completamente.
@@ -528,7 +528,7 @@ Um casaco haori, coberto por uma fina camada de cinzas que nunca se dissipa.~
 ~
 9 b 0 0 0 ak 0 0 0 0 0 0 0
 10 0 0 0
-8 3000 300 70
+8 3000 300 70 0
 E
 haori capitao cinzas~
 O manto funesto do Capitão das Cinzas, eternamente envolto por uma fina camada de cinzas que jamais se dissipam.
@@ -550,7 +550,7 @@ Uma capa feita de penas negras como a noite, que parecem absorver a luz.~
 ~
 9 ab 0 0 0 ak 0 0 0 t 0 0 0
 2 0 0 0
-2 2000 200 35
+2 2000 200 35 0
 E
 capa penas corvo tengu~
 Esta capa foi feita a partir das penas das asas de um Tengu das Sombras. Cada pena foi arrancada num ritual de luto pela perda do seu clã. Vesti-la torna os movimentos do portador silenciosos como a noite, e a sua figura mais difícil de ser vista nas sombras. Um vento frio e o som fantasmagórico de asas a bater parecem sempre acompanhar o portador desta capa.
@@ -568,7 +568,7 @@ Protetores de braço feitos da pele coriácea e remendada de um cão-demónio.~
 ~
 9 a 0 0 0 ai 0 0 0 0 0 0 0
 9 0 0 0
-10 2600 1500 40
+10 2600 1500 40 0
 E
 kote pele inugami~
 Estes protetores de braço foram feitos da pele de um Inugami Errante, o fiel companheiro de um mestre há muito morto. A pele é dura como couro fervido e ainda carrega a fúria leal da criatura. Usá-las concede ao portador um eco da força sobrenatural do Inugami, tornando os seus socos e paradas mais poderosos. O pelo esparso na sua superfície arrepia-se na presença de espíritos ou fantasmas.
@@ -588,7 +588,7 @@ Braçadeiras esculpidas a partir dos galhos de um espírito da floresta em agoni
 ~
 9 b 0 0 0 ai 0 0 0 0 0 0 0
 10 0 0 0
-8 2400 1200 60
+8 2400 1200 60 0
 E
 bracadeiras madeira retorcida kodama~
 Estas braçadeiras foram esculpidas a partir dos braços do Kodama Desnaturado. A madeira negra ainda se move e se contorce lentamente, como se estivesse viva e a sentir dor. Elas agarram-se ao braço do portador e, em momentos de perigo, pequenos espinhos podem brotar da sua superfície para proteger contra golpes. Um zumbido baixo e triste emana delas, a canção de uma natureza moribunda.
@@ -606,7 +606,7 @@ Luvas tecidas a partir da seda mais forte da Rainha-Viúva, que brilham com uma 
 ~
 9 b 0 0 0 ah 0 0 0 d 0 0 0
 9 0 0 0
-3 19000 1500 40
+3 19000 1500 40 0
 E
 luvas seda pegajosa jorogumo~
 Estas luvas foram um presente da Rainha-Viúva Jorogumo para um dos seus "pretendentes" favoritos, pouco antes de o devorar. A seda é incrivelmente pegajosa ao comando do portador, permitindo-lhe escalar superfícies lisas como uma aranha e arrancar as armas das mãos dos inimigos com uma facilidade desconcertante. Fios finos e quase invisíveis podem ser projetados das pontas dos dedos para prender inimigos.
@@ -622,7 +622,7 @@ Manoplas maciças feitas a partir dos ossos da mão de um esqueleto gigante.~
 ~
 9 a 0 0 0 ah 0 0 0 0 0 0 0
 5 0 0 0
-5 48000 6200 0
+5 48000 6200 0 0
 E
 manoplas gashadokuro~
 Estas manoplas foram criadas a partir das falanges e dos metacarpos de um Gashadokuro. O seu aperto é implacável, e a força dos ossos de centenas de homens, unida pela magia profana, é suficiente para esmagar um crânio como se fosse uma casca de ovo. Eram a principal arma do esqueleto gigante, e a sua força esmagadora permanece, capaz de parar lâminas e estilhaçar escudos.
@@ -640,7 +640,7 @@ Um anel de prata com um dos oito olhos de uma aranha gigante engastado. O olho s
 ~
 9 b 0 0 0 am 0 0 0 defg 0 0 0
 2 0 0 0
-5 45000 5500 0
+5 45000 5500 0 0
 E
 anel olho aranha~
 Este anel foi criado por um artesão louco que conseguiu arrancar um dos olhos de uma Aranha-Caçadora das Sombras. O olho, preservado por magia, ainda está vivo e move-se inquieto, seguindo os movimentos à volta do portador. Concede-lhe uma perceção quase perfeita do seu ambiente, alertando-o para perigos que vêm de qualquer direção e permitindo-lhe ver no escuro.
@@ -656,7 +656,7 @@ Um anel que parece ser feito de uma única gota de sangue coagulado e endurecido
 ~
 9 a 0 0 0 am 0 0 0 0 0 0 0
 2 0 0 0
-6 50000 6000 0
+6 50000 6000 0 0
 E
 anel sangue coagulado oni~
 Este anel formou-se a partir de uma gota do sangue do Oni Caçador que caiu sobre uma pedra rúnica do santuário. O sangue absorveu o poder da runa e a fúria do demónio, solidificando-se nesta forma. Usá-lo é sentir um calor constante no dedo, e em batalha, esse calor espalha-se pelo corpo, incitando uma fúria berserker que ignora a dor e o medo. A pedra pulsa lentamente, como um coração sombrio.
@@ -672,7 +672,7 @@ Um cinto feito de elos de sombra solidificada que não fazem qualquer som.~
 ~
 9 bh 0 0 0 al 0 0 0 0 0 0 0
 7 0 0 0
-3 20 1 50
+3 20 1 50 0
 E
 cinto corrente sombras~
 Este cinto foi forjado pelo ódio de um Espírito Vingativo, um ser de pura sombra e malícia. Objetos presos a ele parecem mais leves, e a sua essência sombria permite que o portador, ocasionalmente, passe por áreas de penumbra como se fosse um fantasma. O espírito já não existe, mas a sua raiva sombria permanece nesta corrente, tornando o portador mais difícil de ser detetado e os seus movimentos, mais silenciosos.
@@ -688,7 +688,7 @@ Um cinto obi tecido a partir das raízes vivas e pulsantes do pântano.~
 ~
 9 a 0 0 0 al 0 0 0 0 0 0 0
 10 0 0 0
-4 25000 2500 50
+4 25000 2500 50 0
 E
 obi raizes vivas pantano~
 Este cinto foi arrancado do corpo da Fúria do Pântano. As raízes ainda se movem lentamente, apertando-se e afrouxando-se com a respiração do portador. Em momentos de perigo, pequenas raízes podem sair para o chão para o firmar, tornando quase impossível derrubá-lo. Cheira a terra molhada e a decomposição, e oferece uma resistência natural a venenos e doenças de origem natural.
@@ -706,7 +706,7 @@ Protetores de canela feitos a partir dos ossos esverdeados das pernas de um Kapp
 ~
 9 bn 0 0 0 af 0 0 0 0 0 0 0
 8 0 0 0
-8 33000 3300 40
+8 33000 3300 40 0
 E
 suneate silencio kappa~
 As canelas de um Kappa são surpreendentemente fortes para lhe permitir saltar da água. Estes protetores, feitos dos ossos de um Kappa do Lodo, foram encantados pelos seus antigos donos para abafar todo o som do movimento na água. Com eles, o portador pode atravessar um riacho ou um pântano com o silêncio de um predador subaquático, tornando-se um caçador nas terras alagadas.
@@ -724,7 +724,7 @@ Um avental de placas de osso que protege as coxas. As placas estalam e rangem a 
 ~
 9 a 0 0 0 af 0 0 0 0 0 0 0
 8 0 0 0
-12 29000 2900 50
+12 29000 2900 50 0
 E
 haidate placas osso gashadokuro~
 Este protetor de pernas foi feito a partir das costelas e das vértebras dos esqueletos que compunham o Gashadokuro. As placas de osso não oferecem apenas proteção física; o som enervante que produzem a cada passo, um eco da marcha do esqueleto gigante, pode desmoralizar os inimigos e fazê-los perder a coragem, enfraquecendo os seus ataques e a sua vontade de lutar.
@@ -740,7 +740,7 @@ Um par de botas tabi de um negro profundo, com solas que parecem estranhamente p
 ~
 9 bn 0 0 0 ag 0 0 0 A 0 0 0
 12 0 0 0
-4 25000 2500 45
+4 25000 2500 45 0
 E
 tabi aranha esgueiradora~
 As solas destas botas ninja estão cobertas por milhões de pelos microscópicos, retirados das patas de uma Aranha-Predadora Jovem. Estes pelos permitem que o portador se agarre a qualquer superfície, caminhando em paredes e tetos como se desafiasse a própria gravidade. São as botas perfeitas para um assassino que ataca de onde menos se espera, um predador silencioso nas sombras.
@@ -756,7 +756,7 @@ Sandálias de madeira geta, incrivelmente pesadas, com a madeira manchada de neg
 ~
 9 b 0 0 0 ag 0 0 0 0 0 0 0
 9 0 0 0
-7 25000 2500 35
+7 25000 2500 35 0
 E
 geta monge ponderoso~
 Estas sandálias de madeira pertenceram a um dos monges guardiões do santuário. Ele acreditava que, para ter uma mente firme, precisava de ter os pés firmes. Ele encantou as suas geta para que tivessem o peso de uma montanha. Um Monge Corrompido continuou a usá-las na morte. Elas tornam o portador mais lento, mas cada passo seu é tão firme que não pode ser derrubado por nenhum golpe.
@@ -774,7 +774,7 @@ Um par de asas de corvo, etéreas e feitas de pura sombra, brotam das costas do 
 ~
 24 ag 0 0 0 ap 0 0 0 x d 0 0
 2 0 0 0
-6 85000 9500 0
+6 85000 9500 0 0
 E
 asas corvo ilusorias tengu~
 Estas não são asas físicas, mas a manifestação da alma de um Tengu das Sombras, um ser que era meio homem, meio corvo. As asas são feitas de fumaça e sombra, e não permitem voar, mas sim planar silenciosamente de grandes alturas e dar saltos impossíveis. A sua aparência majestosa e aterrorizante pode encantar os fracos de espírito ou encher de medo o coração dos corajosos.
@@ -786,7 +786,7 @@ Uma argola de nariz, esculpida a partir de um osso de dedo humano.~
 ~
 9 ahj 0 0 0 as 0 0 0 0 0 0 0
 1 0 0 0
-1 1200 100 0
+1 1200 100 0 0
 E
 argola osso sacrificio eremita~
 Esta argola foi usada pelo eremita frágil que se encontrava no pântano. Ele era, na verdade, um vidente que se sacrificou à floresta na esperança de compreender a sua dor. O osso é de um dos seus próprios dedos. Usar a argola concede ao portador uma versão distorcida da sua visão: a capacidade de sentir o cheiro da magia, da mentira e da corrupção.
@@ -804,7 +804,7 @@ Um galho de madeira negra e retorcida, que parece ter a forma de uma mão em ago
 ~
 13 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-0 5 0 0
+0 5 0 0 0
 E
 galho arvore retorcida~
 Este galho partiu-se de uma das árvores esqueléticas que compõem a floresta. É frio e úmido ao toque, e a sua forma é tão perturbadora que parece ter sido esculpida por um pesadelo. Não tem qualquer valor, exceto como um lembrete da beleza doentia e da dor silenciosa deste lugar amaldiçoado.
@@ -816,19 +816,19 @@ Uma pedra lisa de rio, coberta por uma camada espessa de um lodo verde e escorre
 ~
 13 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-0 5 0 0
+0 5 0 0 0
 E
 pedra coberta lodo~
 Esta pedra deve ter vindo de um riacho há muito tempo, antes de a floresta se tornar no que é hoje. Agora, está coberta por um lodo que parece vivo, pulsando com uma luz fraca e doentia. É escorregadia e desagradável de segurar, um pedaço do mundo natural que foi completamente consumido pela corrupção do pântano.
 ~
 #15248
 folha morta que nao apodrece~
-uma folha morta que não apodrece~
+uma folha morta~
 Uma folha de carvalho, perfeitamente formada mas completamente negra, jaz no chão.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-0 5 0 0
+0 5 0 0 0
 E
 folha morta que nao apodrece~
 As folhas nesta floresta não apodrecem; elas simplesmente morrem e ficam petrificadas. Esta folha é negra como carvão, mas ainda retém a sua forma perfeita, as suas veias visíveis como cicatrizes. É quebradiça e desfaz-se em pó com o mais leve toque, um símbolo da vida que foi sugada desta terra.
@@ -840,7 +840,7 @@ Um livro encadernado em pele, com páginas de papiro amarelado, está aberto num
 ~
 27 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 8000 800 0
+1 8000 800 0 0
 E
 diario monge anciao ler~
 As páginas contêm os relatos da descida do monge à loucura e os detalhes do ritual que ele esperava que salvasse o santuário. A caligrafia começa elegante e disciplinada, mas torna-se progressivamente mais caótica e desesperada. A última página está em branco, exceto por uma única mancha de seiva negra em forma de lágrima, a marca do toque da floresta.
@@ -852,7 +852,7 @@ Um pedaço de pergaminho com escrituras sagradas está caído perto de um altar 
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 12000 400 0
+1 12000 400 0 0
 E
 fragmento sutra profanado ler~
 As palavras de paz e iluminação foram riscadas, e sobre elas, foram escritas com sangue seco novas palavras, numa língua de demónios. As novas escrituras transformam os hinos de paz em canções de dor e ódio. Tentar lê-las em voz alta causa uma dor de cabeça lancinante e atrai a atenção de espíritos famintos.
@@ -864,7 +864,7 @@ Uma pequena boneca de palha, com botões negros no lugar dos olhos, está meio e
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 8000 300 0
+1 8000 300 0 0
 E
 boneca palha crianca~
 Esta boneca pertenceu a uma criança de uma aldeia vizinha, que se aventurou na floresta e nunca mais foi vista. Está surpreendentemente bem preservada. Segurá-la é sentir um frio profundo, e por um breve instante, ouvir o eco fraco do riso de uma criança, rapidamente substituído por um soluço de medo.
@@ -876,7 +876,7 @@ Uma única pedra de um jogo de Go, de um branco puro, tem uma mancha negra que p
 ~
 13 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 10000 350 0
+1 10000 350 0 0
 E
 pedra go manchada seiva~
 Esta pedra foi deixada para trás num jogo interrompido no santuário. Uma gota da seiva da Árvore-Mãe caiu sobre ela, e agora a mancha negra parece espalhar-se lentamente pela sua superfície, como uma doença a consumir a pureza. É um microcosmo da própria floresta: a corrupção a devorar lentamente a luz.
@@ -888,7 +888,7 @@ Um pequeno espelho de mão de bronze, partido em dois, brilha fracamente.~
 ~
 13 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 18000 600 0
+1 18000 600 0 0
 E
 espelho quebrado verdade~
 Este espelho pertencia a uma sacerdotisa do santuário. Diz-se que mostrava a verdadeira natureza de quem olhava para ele. Agora, está partido. Olhar para o seu reflexo não mostra o portador, mas sim uma versão distorcida e malévola de si mesmo, revelando a escuridão que se esconde na sua alma e as mentiras que conta a si mesmo.
@@ -900,7 +900,7 @@ Uma única pétala de uma flor de uma brancura impossível está caída no chão
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 25000 800 0
+1 25000 800 0 0
 E
 petala camelia imaculada~
 Esta pétala caiu da Camélia da Pureza. É quente ao toque e emana uma luz suave. Não murcha nem perde a sua cor. Diz-se que, se for colocada na língua de um moribundo, pode conceder-lhe uma morte pacífica, livre dos pesadelos da floresta.
@@ -912,7 +912,7 @@ Um pedaço de casca de árvore tem o desenho a carvão de um rosto humano, mas s
 ~
 13 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 5000 200 0
+1 5000 200 0 0
 E
 desenho carvao rosto sem olhos~
 Este desenho foi feito por um peregrino nos seus últimos momentos de sanidade. A expressão no rosto é de puro terror, a boca aberta num grito silencioso. Ele não desenhou os olhos porque, segundo o seu diário, "se eu não os vir, talvez eles não me vejam a mim".
@@ -924,7 +924,7 @@ Um pequeno sino de mão de um monge, mas o seu badalo foi arrancado.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 13000 450 0
+1 13000 450 0 0
 E
 sino oracao silencioso~
 Este sino era usado em rituais de meditação. O seu badalo foi arrancado por um monge que não suportava mais o silêncio opressor da floresta, na esperança de que um som sagrado o pudesse quebrar. Agitá-lo não produz som audível, mas os espíritos próximos podem ouvir o seu toque fantasma e ficam momentaneamente atordoados pela sua pureza perdida.
@@ -936,7 +936,7 @@ Um pequeno frasco de cristal contendo um líquido claro e gelado.~
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 20000 700 0
+1 20000 700 0 0
 E
 frasco lagrimas fantasma~
 Este frasco foi deixado por um caçador de fantasmas que tentou, e falhou, em limpar o santuário. O líquido no seu interior são as lágrimas de uma alma penada que ele conseguiu apaziguar. Uma única gota na língua permite ao bebedor sentir toda a tristeza da vida daquele espírito, uma dor tão profunda que pode paralisar um homem.
@@ -948,7 +948,7 @@ Uma folha de árvore perfeitamente preservada, de um verde vibrante, emite um ca
 ~
 12 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-1 30000 1000 0
+1 30000 1000 0 0
 E
 ultima folha arvore-mae~
 Encontrada na biblioteca mofada, pressionada dentro de um livro sobre botânica, esta é a última folha que caiu da Árvore-Mãe antes de ser corrompida. É quente ao toque e cheira a primavera e a esperança. É um lembrete pungente do que a floresta já foi, um vislumbre da beleza que foi perdida para a escuridão.
@@ -960,7 +960,7 @@ Um pequeno orbe de musgo, úmido e estranhamente compacto, pulsa com uma vida do
 ~
 12 abq 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0
+0 0 0 0 0
 T 15211
 T 15213
 T 15214
@@ -983,7 +983,7 @@ Uma katana de brilho sereno e prateado repousa aqui, a sua lâmina parece cantar
 ~
 5 bgik 0 0 0 an 0 0 0 i 0 0 0
 1 4 10 17
-8 800000 25000 0
+8 800000 25000 0 0
 E
 katana masamune serena sagrada~
 Onde a Muramasa era um grito de agonia, esta lâmina é um hino de serenidade. A purificação libertou as mil almas presas no aço, e a sua gratidão coletiva transformou a sede de sangue em um desejo de proteger. O seu hamon, que antes se assemelhava a um rio de almas torturadas, agora ondula como um riacho tranquilo sob o luar, emitindo uma luz prateada e calmante. A lâmina já não é fria ao toque; emana um calor reconfortante.
@@ -1007,7 +1007,7 @@ Um tanto, cuja lâmina parece ser feita de madeira branca e viva, pulsa com uma 
 ~
 5 ab 0 0 0 ano 0 0 0 i 0 0 0
 2 4 6 0
-5 450000 12000 0
+5 450000 12000 0 0
 E
 adaga tanto semente vida~
 O espinho da Árvore-Mãe Moribunda, outrora um canal de agonia e podridão, foi purificado. A madeira negra e petrificada floresceu, transformando-se num galho de uma Árvore-Mãe renascida. A lâmina agora é de uma madeira branca como marfim, percorrida por veios de seiva dourada que brilham com uma luz cálida. A adaga já não cheira a decadência, mas a terra fértil após a chuva e a folhas novas.
@@ -1031,7 +1031,7 @@ Uma chama dourada e quente flutua serenamente, emitindo uma luz que inspira cora
 ~
 1 ab 0 0 0 a 0 0 0 0 0 0 0
 0 0 -1 0
-3 250000 8000 0
+3 250000 8000 0 0
 E
 luz chama guia peregrino~
 A alma do guerreiro que antes vagava perdida como um fogo-fátuo encontrou a paz. O seu tormento foi substituído por um propósito renovado: guiar aqueles que se perdem na escuridão. A sua luz, antes fria e azulada, agora arde com o brilho dourado e constante de uma vela num templo. A chama não mais dança erraticamente, mas flutua com uma calma tranquilizadora, e o frio sepulcral deu lugar a um calor que afasta não apenas a escuridão, mas também o medo.
@@ -1055,7 +1055,7 @@ Uma bandana de um branco puro e imaculado, com um kanji dourado, irradia uma aur
 ~
 9 bk 0 0 0 ae 0 0 0 0 0 0 0
 7 0 0 0
-4 380000 11000 0
+4 380000 11000 0 0
 E
 bandana hachimaki dever cumprido~
 O sangue e as lágrimas que manchavam este tecido evaporaram, e com eles, o ódio do espírito vingativo. O seu desejo de retribuição foi satisfeito e substituído pela aceitação do seu destino. O kanji para 'vingança', antes pintado com sangue, transformou-se num kanji bordado a fio de ouro para 'dever'. A bandana já não cheira a raiva e a morte, mas a ozono limpo após uma tempestade.
@@ -1077,7 +1077,7 @@ Um colar de contas de oração de sândalo polido, que emana um calor suave e um
 ~
 9 i 0 0 0 ac 0 0 0 0 0 0 0
 1 0 0 0
-1 400000 13000 0
+1 400000 13000 0 0
 E
 colar rosario prece atendida~
 As contas de oração, antes enegrecidas e rachadas pelo desespero de um monge, foram restauradas. A purificação limpou a corrupção, revelando a madeira de sândalo clara por baixo. As contas estão agora lisas e quentes ao toque, e cada uma parece pulsar com uma batida de coração calma e ritmada. Onde antes sussurravam poder profano, agora murmuram bênçãos de proteção.
@@ -1099,7 +1099,7 @@ Uma magnífica armadura O-yoroi, com as suas placas de laca a brilhar como se fo
 ~
 9 abi 0 0 0 ad 0 0 0 0 0 0 0
 10 0 0 0
-2 650000 20000 0
+2 650000 20000 0 0
 E
 armadura o-yoroi vigilia eterna~
 As marcas da derrota e do fogo desapareceram. A purificação honrou o sacrifício do comandante, limpando as cicatrizes da sua última batalha e restaurando a armadura ao seu antigo esplendor. As placas de laca, antes rachadas, estão agora lisas e perfeitas, e o brasão do seu clã brilha com um orgulho renovado. A aura de desespero foi substituída por uma presença inspiradora de coragem e resiliência.
@@ -1121,7 +1121,7 @@ Um cinto tecido a partir de cordas de seda branca, que parecem ser feitas de lua
 ~
 9 b 0 0 0 al 0 0 0 0 0 0 0
 9 0 0 0
-1 350000 11500 0
+1 350000 11500 0 0
 E
 cinto voto silencioso~
 A sombra e o ódio do espírito vingativo foram dissipados, deixando para trás apenas a pureza da sua intenção original: um voto de silêncio e serviço. A corrente de sombras desfez-se, e no seu lugar surgiu este cinto de seda, que brilha com uma luz prateada. Não faz qualquer som e parece absorver o ruído ao seu redor.
@@ -1143,7 +1143,7 @@ Um par de asas etéreas, feitas de luz prateada e que se assemelham às de um fa
 ~
 24 abgik 0 0 0 ap 0 0 0 x 0 0 0
 0 0 0 0
-1 600000 18000 0
+1 600000 18000 0 0
 E
 asas espirito guardiao~
 A alma do Tengu, um ser de orgulho e escuridão, foi redimida. O seu tormento e a sua malícia foram purgados, e o seu desejo de proteger o santuário, a sua missão original antes de ser corrompido, ressurgiu. As suas asas ilusórias de corvo, nascidas da sombra, transformaram-se nestas asas de luz, um símbolo da sua redenção.
@@ -1167,7 +1167,7 @@ Um kimono de seda de uma brancura imaculada, uma anomalia na sujidade da florest
 ~
 9 b 0 0 0 ad 0 0 0 s 0 0 0
 10 0 0 0
-5 380000 15000 0
+5 380000 15000 0 0
 E
 kimono seda fantasma~
 Este kimono foi a obra-prima de um Artesão Maldito, a única criação que ele conseguiu completar na sua existência espectral, tecida a partir de fios de luar e arrependimento. O tecido é leve como uma pluma e move-se como fumaça. Vesti-lo é ser envolto numa aura de proteção etérea, que desvia golpes e magias como se não fossem reais. A sua beleza assombrosa é um testemunho de uma habilidade que nem a morte conseguiu apagar completamente.
@@ -1187,7 +1187,7 @@ Um casaco haori, coberto por uma fina camada de cinzas que nunca se dissipa.~
 ~
 9 b 0 0 0 ak 0 0 0 0 0 0 0
 12 0 0 0
-2 300000 12000 0
+2 300000 12000 0 0
 E
 haori capitao cinzas~
 Este haori, um casaco usado sobre a armadura, pertenceu a um capitão samurai que morreu a defender o santuário. O seu clã foi exterminado e o seu corpo queimado. As cinzas que cobrem o tecido são as suas próprias cinzas, magicamente ligadas ao haori. Vesti-lo é sentir a sua liderança e a sua determinação, uma aura que inspira os aliados e aterroriza os inimigos. O Oni Caçador que o derrotou guardava-o como um troféu sombrio.
@@ -1208,7 +1208,7 @@ Uma vassoura de bambu, gasta pelo uso, está aqui encostada.~
 ~
 12 a 0 0 0 o 0 0 0 0 0 0 0
 0 0 0 0
-1 10 50 0
+1 10 50 0 0
 E
 vassoura bambu zelador~
 O bambu do cabo é de um verde-pálido, quase dourado, e as suas juntas naturais formam anéis perfeitos. As cerdas estão gastas de forma uniforme, a prova de um trabalho executado com equilíbrio e precisão. Um cheiro a bambu seco e a ozono emana dela, o perfume da própria pureza do Caminho que ela serve.
@@ -1223,7 +1223,7 @@ Um cajado de madeira simples, mas robusto, foi deixado aqui.~
 ~
 4 a 0 0 0 no 0 0 0 0 0 0 0
 100 100 20 42
-1 25 150 0
+1 25 150 0 0
 E
 cajado peregrino madeira~
 A madeira é quente ao toque, e parece vibrar com as memórias das suas viagens. Pequenos símbolos de boa sorte, de diferentes culturas, foram discretamente entalhados perto do topo. O seu peso é perfeitamente equilibrado. Segurá-lo inspira uma sensação de determinação e a vontade de continuar a jornada, não importa quão longa seja.
@@ -1242,7 +1242,7 @@ Uma pequena tigela de madeira, perfeitamente lisa, repousa aqui.~
 ~
 11 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 5 20 0
+1 5 20 0 0
 E
 tigela madeira simples~
 Os veios da madeira de cerejeira fluem pela superfície da tigela como rios rosados. A base é ligeiramente mais escura, marcada pelo calor das mãos que a seguraram. Não há uma única racha ou imperfeição. É um objeto que foi claramente amado e cuidado, um companheiro silencioso para a jornada diária da vida.
@@ -1257,7 +1257,7 @@ Um martelo de ferreiro, pesado e equilibrado, está pousado aqui.~
 ~
 12 a 0 0 0 o 0 0 0 0 0 0 0
 0 0 0 0
-1 50 400 0
+1 50 400 0 0
 E
 martelo artesao ferreiro~
 A cabeça do martelo, de um aço quase azulado, tem as marcas de mil fogos. O cabo de freixo está perfeitamente moldado à forma de uma mão, mais fino perto da cabeça para flexibilidade, mais grosso na base para um aperto firme. Um cheiro a carvão, a aço temperado e a trabalho honesto emana dele.
@@ -1272,7 +1272,7 @@ Um sino de vento, feito de ferro negro, balança suavemente.~
 ~
 12 bi 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 15 250 0
+1 15 250 0 0
 E
 sino vento ferro forjado~
 O ferro dos cilindros é negro como a noite sem estrelas, e a sua superfície é ligeiramente texturizada pelos toques do martelo. O batedor de madeira petrificada é pesado, garantindo que cada toque produza uma nota longa e sustentada. O papel do apanhador de vento tem um único kanji pintado nele: "Silêncio".
@@ -1287,7 +1287,7 @@ Uma pequena estátua de uma garça, forjada em metal, repousa aqui.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 40 350 0
+1 40 350 0 0
 E
 estatua metal garca~
 Cada pena foi individualmente sugerida com os toques mais delicados do martelo. Os olhos da garça estão fechados, mas a sua expressão é de uma serenidade profunda. A base é irregular, como se a garça estivesse a pousar sobre uma rocha de rio. O objeto emana uma aura de silêncio e contemplação.
@@ -1302,7 +1302,7 @@ Uma relha de arado, feita de aço escuro, está aqui no chão.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 80 500 0
+1 80 500 0 0
 E
 relha arado forjada~
 A curva da lâmina é uma parábola perfeita. O aço tem um brilho oleoso e a sua superfície, embora forjada para o trabalho duro, é surpreendentemente lisa. Um cheiro a terra fértil e a metal frio emana dela, o perfume do início de todas as coisas que crescem.
@@ -1317,7 +1317,7 @@ Uma delicada faca de entalhe, a ferramenta de um mestre, está aqui.~
 ~
 5 0 0 0 0 no 0 0 0 0 0 0 0
 2 2 3 17
-1 60 450 0
+1 60 450 0 0
 E
 faca entalhe mestre~
 A lâmina tem menos de dois dedos de comprimento, mas a sua borda é tão afiada que parece dividir a própria luz. O cabo de teixo é quente e suave. Um pequeno símbolo, o kanji para "coração" ou "espírito" (心), está gravado na base da lâmina, a única decoração numa ferramenta de pura função.
@@ -1332,7 +1332,7 @@ Uma flauta de bambu, com delicados entalhes, repousa aqui.~
 ~
 12 a 0 0 0 o 0 0 0 0 0 0 0
 0 0 0 0
-1 45 400 0
+1 45 400 0 0
 E
 flauta bambu esculpida~
 O bambu é incrivelmente liso e quente ao toque. Os entalhes das folhas de ginkgo são tão finos que parecem ter sido pintados, não esculpidos. O interior da flauta foi lacado a vermelho-escuro, uma prática para melhorar a sua ressonância. Um cheiro a bambu, a laca e a incontáveis respirações melancólicas emana dela.
@@ -1347,7 +1347,7 @@ Uma pequena estatueta de madeira, na forma de uma carpa, está aqui.~
 ~
 6 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 55 420 0
+1 55 420 0 0
 E
 estatueta madeira carpa koi~
 A fluidez do entalhe é notável; a carpa parece realmente estar em movimento. Os olhos de obsidiana, apesar de minúsculos, parecem conter uma centelha de vida. A base da estatueta foi deixada em madeira natural e tem a assinatura do Entalhador de Memórias gravada nela. É um objeto que inspira calma e determinação.
@@ -1362,7 +1362,7 @@ Um bule de chá de porcelana, delicado como uma casca de ovo, está aqui pousado
 ~
 17 0 0 0 0 0 0 0 0 0 0 0 0
 -1 -1 11 0
-1 100 800 0
+1 100 800 0 0
 E
 bule cha porcelana chiyo~
 A porcelana é incrivelmente lisa, com um brilho subtil que fala da sua qualidade. A pega de bambu está gasta pelo uso, mas é firme e confortável. Um cheiro complexo e reconfortante a inúmeras variedades de chá emana do seu interior, um fantasma de todas as conversas e meditações que ele já serviu.
@@ -1377,7 +1377,7 @@ Uma pequena taça de chá, esculpida em jade, brilha com uma luz suave.~
 ~
 11 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 150 1200 0
+1 150 1200 0 0
 E
 taca cha jade~
 O jade é frio ao toque, mas aquece rapidamente com o calor das suas mãos. Ao segurá-lo contra a luz, os veios escuros no seu interior parecem mover-se lentamente, como nuvens num céu de jade. Um leve gosto mineral, limpo e refrescante, é a única coisa que a pedra empresta ao chá.
@@ -1392,7 +1392,7 @@ Um pequeno pacote de papel de arroz, amarrado com fio de seda, está aqui.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 20 100 0
+1 20 100 0 0
 E
 pacote folhas cha jasmim~
 O papel é delicado, mas forte. O fio de seda está atado num nó complexo, mas belo, que é tanto um selo como uma decoração. O cheiro é tão potente que parece acalmar a mente simplesmente por estar perto dele.
@@ -1407,7 +1407,7 @@ Um pedaço de gengibre cristalizado, a brilhar com açúcar, está aqui.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 10 80 0
+1 10 80 0 0
 E
 raiz gengibre cristalizado~
 Os cristais de açúcar na superfície são perfeitamente formados, brilhando como pequenos diamantes. A textura é simultaneamente crocante por fora e macia e fibrosa por dentro. O sabor é complexo, uma dança entre o doce e o picante que deixa um calor duradouro e agradável.
@@ -1422,7 +1422,7 @@ Um almofariz de pedra pesado, gasto pelo uso, repousa aqui.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 40 200 0
+1 40 200 0 0
 E
 almofariz pedra apotecario~
 A pedra é fria e sólida. O seu peso é reconfortante, um símbolo de estabilidade e tradição. Ao passar o dedo pelo seu interior liso, consegue sentir as ligeiras depressões e ondulações criadas por uma vida inteira de trabalho paciente, um testemunho silencioso do ofício do curandeiro.
@@ -1437,7 +1437,7 @@ Um pilão de granito, liso e pesado, está aqui ao lado do seu almofariz.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 30 180 0
+1 30 180 0 0
 E
 pilao granito polido~
 A pedra do pilão é de um cinzento-escuro, com manchas de quartzo que brilham. A sua superfície é fria, mas parece vibrar com uma energia contida. O seu equilíbrio é perfeito, tornando o trabalho de moagem menos um esforço e mais um movimento meditativo.
@@ -1452,7 +1452,7 @@ Um pequeno frasco de cerâmica, selado com cera, contém uma poção.~
 ~
 10 k 0 0 0 a 0 0 0 0 0 0 0
 100 28 28 28
-1 50000 250 0
+1 50000 250 0 0
 E
 frasco pocao cura suave~
 O frasco de cerâmica é liso e frio ao toque, exceto pelo calor suave que emana de dentro. A cera do selo ainda é ligeiramente macia e cheira a mel. O líquido brilha com uma luz que pulsa ao ritmo de um batimento cardíaco lento e calmo.
@@ -1467,7 +1467,7 @@ Um molho de flores de alfazema secas, amarrado com um fio, está aqui.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 10 50 0
+1 10 50 0 0
 E
 molho alfazema seca~
 A cor das flores é um roxo-acinzentado, a cor da memória. O cheiro é potente e duradouro, um perfume que se agarra ao ar e aos tecidos. Tocar nas flores secas é uma experiência tátil delicada; elas desfazem-se facilmente, libertando ainda mais da sua fragrância calmante.
@@ -1482,7 +1482,7 @@ Um colar de contas de oração de madeira escura repousa aqui em espiral.~
 ~
 12 i 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 200 1500 0
+1 200 1500 0 0
 E
 contas oracao monge~
 As contas de sândalo são de um castanho-escuro profundo, quase negro. São incrivelmente lisas e deslizam sem esforço pelo cordão de seda. O nó principal, que une o colar, é complexo e simbólico. O objeto parece vibrar com uma quietude profunda, um eco de todas as orações que já contou.
@@ -1501,7 +1501,7 @@ Um pincel de caligrafia, de aparência simples, mas de equilíbrio perfeito, est
 ~
 12 0 0 0 0 o 0 0 0 0 0 0 0
 0 0 0 0
-1 180 1300 0
+1 180 1300 0 0
 E
 pincel caligrafia mestre~
 O bambu do cabo é antigo e a sua superfície conta a história de cada dedo que o segurou. As cerdas de pelo de lobo são incrivelmente macias e flexíveis, mas têm uma força interior. Um cheiro a tinta de sândalo e a concentração silenciosa parece emanar dele, a memória de todas as obras-primas que já ajudou a criar.
@@ -1516,7 +1516,7 @@ Uma pedra de tinta (suzuri), esculpida em laca preta, repousa aqui.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 120 900 0
+1 120 900 0 0
 E
 pedra tinta laca preta suzuri~
 A laca é de um negro tão profundo que parece não ter fundo. A sua superfície é impecável, sem um único arranhão. A parte de baixo é ligeiramente áspera, para não deslizar, e tem a assinatura do Mestre Calígrafo gravada a ouro. Um cheiro a laca antiga e a tinta fresca emana dela.
@@ -1531,7 +1531,7 @@ Um rolo de papel de arroz, branco como a neve, está aqui, à espera.~
 ~
 12 a 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 30 150 0
+1 30 150 0 0
 E
 rolo papel arroz imaculado~
 A brancura do papel é absoluta. O fio de seda escarlate que o amarra é um contraste vibrante, um pingo de paixão num mar de serenidade. Um cheiro limpo e quase impercetível, como o de ar de montanha após uma tempestade, emana dele.
@@ -1546,7 +1546,7 @@ Um pergaminho antigo, selado com cera, parece conter segredos esquecidos.~
 ~
 2 0 0 0 0 0 0 0 0 0 0 0 0
 100 301 -1 -1
-1 300 2000 0
+1 300 2000 0 0
 E
 pergaminho antigo biblioteca~
 As bordas do pergaminho estão gastas e escurecidas. O selo de cera está intacto, mas com pequenas fissuras que falam da sua idade. Um cheiro a pó, a bambu seco e a tempo emana dele, o perfume do conhecimento adormecido.
@@ -1561,7 +1561,7 @@ Um antigo códice, feito de finas placas de bambu, está aqui.~
 ~
 27 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 350 2500 0
+1 350 2500 0 0
 E
 codice placas bambu~
 As placas de bambu têm uma cor de caramelo quente. Os caracteres gravados são incrivelmente pequenos e perfeitos. Os fios de seda que as unem estão gastos, mas ainda são fortes. O objeto soa como um xilofone suave quando é manuseado.
@@ -1576,7 +1576,7 @@ Um peso de papel, esculpido em jade na forma de uma flor de lótus, está aqui.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 250 1800 0
+1 250 1800 0 0
 E
 peso papel lotus jade~
 O jade branco é quase translúcido, e a luz parece brilhar de dentro da pedra. As pétalas são tão finamente esculpidas que parecem delicadas e macias ao toque. O objeto é frio e suave, e emana uma aura de paz concentrada.
@@ -1595,7 +1595,7 @@ Um par de tesouras de jardinagem, de um design elegante, está aqui.~
 ~
 12 0 0 0 0 o 0 0 0 0 0 0 0
 0 0 0 0
-1 70 550 0
+1 70 550 0 0
 E
 tesouras jardinagem aco~
 As lâminas de aço têm um brilho oleoso e são incrivelmente afiadas. Estão unidas por um pino de latão polido. As pegas de ferro estão gastas pelo uso, a sua superfície escura e lisa. Um cheiro a seiva, a folhas cortadas e a metal frio emana delas, o perfume de um jardim bem cuidado.
@@ -1610,7 +1610,7 @@ Um pequeno ancinho, para um jardim de meditação, está aqui.~
 ~
 12 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 65 500 0
+1 65 500 0 0
 E
 ancinho jardim miniatura~
 A madeira do cabo é de um tom quente e avermelhado, lisa ao toque. Os dentes de bambu são fortes e flexíveis. O objeto é leve, quase como se não tivesse peso, para que apenas a intenção do jardineiro guie os seus movimentos. Um cheiro a areia seca e a bambu emana dele.
@@ -1625,7 +1625,7 @@ Um rolo de pergaminho, com um poema caligrafado, foi deixado aqui.~
 ~
 2 0 0 0 0 0 0 0 0 0 0 0 0
 100 96 96 96
-1 10 100 0
+1 10 100 0 0
 E
 pergaminho poema vento~
 A tinta no papel ainda parece fresca. A caligrafia é elegante e cheia de movimento, os traços a subirem e a descerem como rajadas de vento. O poema é curto, apenas três versos (`haiku`), mas contém a alma de uma longa jornada.
@@ -1640,7 +1640,7 @@ Uma cortina de contas de madeira, um 'noren', está aqui pousada.~
 ~
 6 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0
-1 35 200 0
+1 35 200 0 0
 E
 cortina contas madeira noren~
 As contas de bambu são de um dourado pálido, enquanto as de madeira são de um castanho-escuro. Estão dispostas num padrão geométrico simples. Os fios de seda que as unem são fortes e encerados. A cortina cheira a bambu, a madeira e ao vapor de mil bules de chá.
@@ -1657,7 +1657,7 @@ Aqui repousa uma única pétala de cerejeira, metade luz imaculada, metade escur
 ~
 12 bginpq 0 0 0 o 0 0 0 0 0 0 0
 0 0 0 0
-500 10000000 1000000 0
+500 10000000 1000000 0 0
 E
 lagrima sakura kintsugi mundo petala~
 Ao segurar a pétala, a sua mente é inundada. Você vê a grande Sakura a florescer em desafio à escuridão. Vê a Árvre-Mãe a chorar seiva negra em agonia. E vê o momento em que uma única pétala, levada por um vento do destino, caiu no coração da corrupção, não para ser destruída, mas para se tornar algo mais. Para se tornar o equilíbrio. A pétala vibra na sua mão, quente e fria ao mesmo tempo, um universo de contradições em perfeita e terrível harmonia.
