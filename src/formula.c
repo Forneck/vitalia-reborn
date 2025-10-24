@@ -132,6 +132,13 @@ int get_formula_typeact(char *str, int *ptr)
         return CODE_SPACE;
     else if ((str[*ptr] >= '0') && (str[*ptr] <= '9'))
         return CODE_DIGIT;
+
+    // Check for full-word aliases first (VICTIM. -> VICT., SELF. remains SELF.)
+    if (!strncmp("VICTIM.", (char *)&str[*ptr], 7)) {
+        *ptr += 6;   // advance past "VICTIM." minus 1 (will be incremented by main loop)
+        return CODE_IDE_VICT;
+    }
+
     while (list_codes[++cpt][0] != '\n')
         if (!strncmp(list_codes[cpt], (char *)&str[*ptr], strlen(list_codes[cpt]))) {
             *ptr += strlen(list_codes[cpt]) - 1;
