@@ -392,6 +392,8 @@ void mobile_activity(void)
                         if (shop_buys_this_item) {
                             /* Shop buys this item, proceed with sale */
                             shopping_sell(ch->ai_data->goal_obj->name, ch, keeper, shop_rnum);
+                            /* Clear goal_obj pointer as the object has been extracted by shopping_sell */
+                            ch->ai_data->goal_obj = NULL;
                             ch->ai_data->genetics.trade_tendency += 1;
                             ch->ai_data->genetics.trade_tendency = MIN(ch->ai_data->genetics.trade_tendency, 100);
                         } else {
@@ -466,6 +468,11 @@ void mobile_activity(void)
                         sprintf(buy_command, "%d", ch->ai_data->goal_item_vnum);
                         shopping_buy(buy_command, ch, keeper, find_shop_by_keeper(keeper->nr));
 
+                        /* Safety check: shopping operations could indirectly cause extract_char
+                         * through scripts, triggers, or special procedures */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+
                         /* Remove o item da wishlist se a compra foi bem sucedida */
                         remove_item_from_wishlist(ch, ch->ai_data->goal_item_vnum);
                         act("$n parece satisfeito com a sua compra.", FALSE, ch, 0, 0, TO_ROOM);
@@ -527,12 +534,13 @@ void mobile_activity(void)
                     }
                 } else if (ch->ai_data->current_goal == GOAL_COLLECT_KEY) {
                     /* Arrived at key location - try to collect the key */
-                    struct obj_data *key_obj = NULL;
+                    struct obj_data *key_obj = NULL, *next_obj = NULL;
                     obj_vnum target_key = ch->ai_data->goal_item_vnum;
                     bool key_collected = FALSE;
 
                     /* Look for the key on the ground */
-                    for (key_obj = world[IN_ROOM(ch)].contents; key_obj; key_obj = key_obj->next_content) {
+                    for (key_obj = world[IN_ROOM(ch)].contents; key_obj; key_obj = next_obj) {
+                        next_obj = key_obj->next_content; /* Save next pointer before obj_from_room */
                         if (GET_OBJ_TYPE(key_obj) == ITEM_KEY && GET_OBJ_VNUM(key_obj) == target_key) {
                             obj_from_room(key_obj);
                             obj_to_char(key_obj, ch);
@@ -544,10 +552,12 @@ void mobile_activity(void)
 
                     /* If not found on ground, look in containers */
                     if (!key_collected) {
-                        struct obj_data *container;
-                        for (container = world[IN_ROOM(ch)].contents; container; container = container->next_content) {
+                        struct obj_data *container, *next_container;
+                        for (container = world[IN_ROOM(ch)].contents; container; container = next_container) {
+                            next_container = container->next_content;
                             if (GET_OBJ_TYPE(container) == ITEM_CONTAINER && !OBJVAL_FLAGGED(container, CONT_CLOSED)) {
-                                for (key_obj = container->contains; key_obj; key_obj = key_obj->next_content) {
+                                for (key_obj = container->contains; key_obj; key_obj = next_obj) {
+                                    next_obj = key_obj->next_content; /* Save next pointer before obj_from_obj */
                                     if (GET_OBJ_TYPE(key_obj) == ITEM_KEY && GET_OBJ_VNUM(key_obj) == target_key) {
                                         obj_from_obj(key_obj);
                                         obj_to_char(key_obj, ch);
@@ -3017,14 +3027,13 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 ch->ai_data->current_goal = GOAL_NONE;
                 return TRUE;
             } else {
-                /* Target mob not found, seek it */
-                /* For now, just roam randomly looking for it */
-                if (rand() % 2) { /* 50% chance to move */
-                    char_from_room(ch);
-                    char_to_room(ch, world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]
-                                         ? world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]->to_room
-                                         : IN_ROOM(ch));
-                }
+                /* Target mob not found, seek it by using the normal mob AI movement */
+                /* Use mob_goal_oriented_roam instead of manual char_from_room/char_to_room
+                 * to avoid the bug where IN_ROOM(ch) becomes NOWHERE after char_from_room */
+                mob_goal_oriented_roam(ch, NOWHERE); /* Roam randomly */
+                /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
                 return TRUE;
             }
             break;
@@ -3042,13 +3051,13 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                     return TRUE;
                 return TRUE;
             } else if (!target_mob) {
-                /* Target mob not found, seek it */
-                if (rand() % 2) { /* 50% chance to move */
-                    char_from_room(ch);
-                    char_to_room(ch, world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]
-                                         ? world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]->to_room
-                                         : IN_ROOM(ch));
-                }
+                /* Target mob not found, seek it by using the normal mob AI movement */
+                /* Use mob_goal_oriented_roam instead of manual char_from_room/char_to_room
+                 * to avoid the bug where IN_ROOM(ch) becomes NOWHERE after char_from_room */
+                mob_goal_oriented_roam(ch, NOWHERE); /* Roam randomly */
+                /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
                 return TRUE;
             }
             break;
