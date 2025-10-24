@@ -3034,8 +3034,8 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                     return TRUE;
-                return TRUE;
             }
+            return TRUE;
             break;
 
         case AQ_MOB_KILL:
@@ -3058,8 +3058,8 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                     return TRUE;
-                return TRUE;
             }
+            return TRUE;
             break;
 
         case AQ_OBJ_RETURN:
