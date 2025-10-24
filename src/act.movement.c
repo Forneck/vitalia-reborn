@@ -1142,12 +1142,21 @@ int stop_flying(struct char_data *ch)
         send_to_char(ch, "Você tenta parar de voar, mas algo lhe mantêm no ar.\r\n");
         return 0;
     } else {
-        send_to_char(ch, "Você aterrisa.\r\n");
-        act("$n aterrissa.", TRUE, ch, 0, 0, TO_ROOM);
-        REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
         /* Remove the fly spell affect so player must cast fly again */
         if (affected_by_spell(ch, SPELL_FLY))
             affect_from_char(ch, SPELL_FLY);
+
+        REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
+
+        /* Check if player can still fly after removing spell (e.g., via items) */
+        if (has_flight(ch) && !AFF_FLAGGED(ch, AFF_FLYING)) {
+            SET_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
+            send_to_char(ch, "Você tenta aterrisar, mas seus itens mágicos mantêm você no ar.\r\n");
+            return (0);
+        }
+
+        send_to_char(ch, "Você aterrisa.\r\n");
+        act("$n aterrissa.", TRUE, ch, 0, 0, TO_ROOM);
     }
     return (1);
 }
