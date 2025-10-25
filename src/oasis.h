@@ -306,6 +306,7 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define MEDIT_GEN_TRADE 48
 #define MEDIT_GEN_QUEST 49
 #define MEDIT_GEN_ADVENTURER 50
+#define MEDIT_GEN_FOLLOW 51
 
 /* Submodes of SEDIT connectedness. */
 #define SEDIT_MAIN_MENU 0

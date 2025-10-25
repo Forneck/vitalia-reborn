@@ -2051,6 +2051,9 @@ bool mob_try_stealth_follow(struct char_data *ch)
         /* Check if mob can still see the target */
         if (!CAN_SEE(ch, ch->master)) {
             /* Lost visibility of target, stop following so we can try a new target later */
+            /* Decrease follow tendency due to frustration from losing target */
+            ch->ai_data->genetics.follow_tendency -= 2;
+            ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
             stop_follower(ch);
             return FALSE;
         }
@@ -2084,11 +2087,17 @@ bool mob_try_stealth_follow(struct char_data *ch)
                     }
                 } else {
                     /* Cannot find valid path, stop following */
+                    /* Decrease follow tendency due to frustration from path failure */
+                    ch->ai_data->genetics.follow_tendency -= 3;
+                    ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
                     stop_follower(ch);
                     return FALSE;
                 }
             } else {
                 /* Cannot find path to target, stop following */
+                /* Decrease follow tendency due to frustration from path failure */
+                ch->ai_data->genetics.follow_tendency -= 3;
+                ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
                 stop_follower(ch);
                 return FALSE;
             }
@@ -2167,10 +2176,16 @@ bool mob_try_stealth_follow(struct char_data *ch)
          * completo (quando skills como sneak/hide forem implementadas), essas
          * mensagens devem ser condicionadas ao sucesso em passar despercebido. */
         add_follower(ch, target);
-        /* Aumenta levemente a tendência de seguir se teve sucesso */
+        /* Aumenta levemente a tendência de seguir se teve sucesso (menor peso que a frustração) */
         ch->ai_data->genetics.follow_tendency += 1;
         ch->ai_data->genetics.follow_tendency = MIN(ch->ai_data->genetics.follow_tendency, 100);
         return TRUE;
+    }
+
+    /* Se não encontrou ninguém para seguir, pequena chance de esquecer/reduzir interesse */
+    if (rand_number(1, 100) <= 5) { /* 5% chance por tick de reduzir naturalmente */
+        ch->ai_data->genetics.follow_tendency -= 1;
+        ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
     }
 
     return FALSE;
