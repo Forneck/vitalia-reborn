@@ -2174,11 +2174,39 @@ bool mob_try_stealth_follow(struct char_data *ch)
             return FALSE;
         }
 
-        /* Usa add_follower para começar a seguir o alvo.
-         * Nota: add_follower envia mensagens visíveis. Para comportamento furtivo
-         * completo (quando skills como sneak/hide forem implementadas), essas
-         * mensagens devem ser condicionadas ao sucesso em passar despercebido. */
-        add_follower(ch, target);
+        /* Stealth-aware following: Check if mob has sneak/hide affects */
+        bool is_stealthy = AFF_FLAGGED(ch, AFF_SNEAK) || AFF_FLAGGED(ch, AFF_HIDE);
+
+        /* Manually set up following relationship (like add_follower but with conditional messages) */
+        if (!ch->master) {
+            struct follow_type *k;
+            ch->master = target;
+            CREATE(k, struct follow_type, 1);
+            k->follower = ch;
+            k->next = target->followers;
+            target->followers = k;
+
+            /* Messages are conditional based on stealth */
+            if (!is_stealthy) {
+                /* Normal visible following */
+                if (IS_NPC(ch)) {
+                    /* NPCs don't get the "You will now follow" message */
+                } else {
+                    act("Você agora irá seguir $N.", FALSE, ch, 0, target, TO_CHAR);
+                }
+                if (CAN_SEE(target, ch))
+                    act("$n começa a seguir você.", TRUE, ch, 0, target, TO_VICT);
+                act("$n começa a seguir $N.", TRUE, ch, 0, target, TO_NOTVICT);
+            } else {
+                /* Stealthy following - only notify if target can see through stealth */
+                if (CAN_SEE(target, ch)) {
+                    /* Target can see through the stealth */
+                    act("$n começa a seguir você silenciosamente.", TRUE, ch, 0, target, TO_VICT);
+                }
+                /* No message to room when sneaking/hiding */
+            }
+        }
+
         /* Aumenta levemente a tendência de seguir se teve sucesso (menor peso que a frustração) */
         ch->ai_data->genetics.follow_tendency += 1;
         ch->ai_data->genetics.follow_tendency = MIN(ch->ai_data->genetics.follow_tendency, 100);
