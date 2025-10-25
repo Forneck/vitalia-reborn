@@ -6,7 +6,7 @@
 /_p~~~~~~~~~~\$@|/---------';;;     ;;  ;;   .,' ;;   ;;   ;;  .,' ;;-------'
               \<M`           ;     ,;;, ';,' ';,';;.',;;, ,;;, ';,';;.'
                `(B
-_________________`?____________________[ Referï¿½ncia para Criaï¿½ï¿½o de ï¿½reas ]___
+_________________`?____________________[ Referência para Criação de Áreas ]___
 
 Autores: Juliano Ravasi Ferraz <blug@mud.linkway.com.br>
 	 Ana Carolina Cyrino <nemesis@mud.linkway.com.br>
@@ -14,18 +14,18 @@ Autores: Juliano Ravasi Ferraz <blug@mud.linkway.com.br>
 $Id: zone.txt,v 1.13 2003/07/30 19:20:13 jrf Exp $
 
 ################################################################################
- ï¿½reas
+ Áreas
 ################################################################################
 
-   Os arquivos de ï¿½reas controlam como as ï¿½reas sï¿½o configuradas, e como ï¿½ o
-processo de recolocaï¿½ï¿½o (reset) da ï¿½rea.  Eles integram as salas, monstros e
+   Os arquivos de áreas controlam como as áreas são configuradas, e como é o
+processo de recolocação (reset) da área.  Eles integram as salas, monstros e
 objetos para criar um mundo habitado.
 
-   Os arquivos de ï¿½reas contï¿½m informaï¿½ï¿½es bï¿½sicas sobre a ï¿½rea, seguido de
-vï¿½rios comandos que definem o que deve ser feito para construir a ï¿½rea, e a
-cada recolocaï¿½ï¿½o da mesma.
+   Os arquivos de áreas contém informações básicas sobre a área, seguido de
+vários comandos que definem o que deve ser feito para construir a área, e a
+cada recolocação da mesma.
 
-   Os elementos do arquivo de ï¿½rea sï¿½o dispostos desta forma:
+   Os elementos do arquivo de área são dispostos desta forma:
 
 ------------------------
  #<vnum>
@@ -37,53 +37,53 @@ cada recolocaï¿½ï¿½o da mesma.
 ------------------------
 
    VNUM
-   O nï¿½mero que representa a ï¿½rea.  O nï¿½mero da ï¿½rea geralmente ï¿½ o nï¿½mero da
+   O número que representa a área.  O número da área geralmente é o número da
 primeira sala dividido por 100.  Por exemplo, Midgaard, que consiste das salas
-de nï¿½mero 3000 atï¿½ 3099, ï¿½ a ï¿½rea 30.
+de número 3000 até 3099, é a área 30.
 
    NOME
-   O nome da ï¿½rea.
+   O nome da área.
 
    TOPO
-   ï¿½ o nï¿½mero da sala mais alta da ï¿½rea.  ï¿½ usado para, internamente, definir
-onde termina uma ï¿½rea e comeï¿½a a seguinte.  Por exemplo, a primeira sala da
-Zona Newbie ï¿½ 18600, e a ï¿½ltima sala ï¿½ 18647, mas todo o bloco 186xx foi
-reservado para esta ï¿½rea, entï¿½o o valor desse campo para a Zona Newbie deverï¿½
+   É o número da sala mais alta da área.  É usado para, internamente, definir
+onde termina uma área e começa a seguinte.  Por exemplo, a primeira sala da
+Zona Newbie é 18600, e a última sala é 18647, mas todo o bloco 186xx foi
+reservado para esta área, então o valor desse campo para a Zona Newbie deverá
 ser 18699.
 
    VIDA
-   ï¿½ o tempo em minutos (da vida real) que leva para que a ï¿½rea seja
-recolocada.  Ao atingir este tempo, todos os comandos do arquivo de ï¿½rea sï¿½o
-re-executados, a fim de recarregar os monstros e objetos nas salas que compï¿½e
-a ï¿½rea.
+   É o tempo em minutos (da vida real) que leva para que a área seja
+recolocada.  Ao atingir este tempo, todos os comandos do arquivo de área são
+re-executados, a fim de recarregar os monstros e objetos nas salas que compõe
+a área.
 
    MODO
-   ï¿½ o modo como a ï¿½rea serï¿½ recolocada.  Pode ter os valores 0, 1 e 2, sendo:
+   É o modo como a área será recolocada.  Pode ter os valores 0, 1 e 2, sendo:
 
-   0  Nunca recolocar a ï¿½rea.  Neste caso, o tempo de vida da ï¿½rea nï¿½o ï¿½
-      usado.  A ï¿½rea sï¿½ ï¿½ recolocada uma ï¿½nica vez, quando o MUD se inicia.
+   0  Nunca recolocar a área.  Neste caso, o tempo de vida da área não é
+      usado.  A área só é recolocada uma única vez, quando o MUD se inicia.
 
-   1  A ï¿½rea serï¿½ recolocada apï¿½s atingir seu tempo de vida, e apï¿½s tornar-se
-      deserta.  Isto torna a ï¿½rea mais "honesta", porque irï¿½ evitar que
-      monstros difï¿½ceis apareï¿½am atï¿½ que todos deixem a ï¿½rea.  Em ï¿½reas muito
+   1  A área será recolocada após atingir seu tempo de vida, e após tornar-se
+      deserta.  Isto torna a área mais "honesta", porque irá evitar que
+      monstros difíceis apareçam até que todos deixem a área.  Em áreas muito
       movimentadas, isso pode impedir que esta seja recolocada.
 
-   2  Recoloca a ï¿½rea assim que ela atingir seu tempo de vida, independente de
-      haver ou nï¿½o pessoas nela.  Este ï¿½ o modo mais comum.
+   2  Recoloca a área assim que ela atingir seu tempo de vida, independente de
+      haver ou não pessoas nela.  Este é o modo mais comum.
 
    FLAGS
-   Define as flags especiais da ï¿½rea.  As flags especiais sï¿½o descritas mais
-adiante, na seï¿½ï¿½o "Flags".
+   Define as flags especiais da área.  As flags especiais são descritas mais
+adiante, na seção "Flags".
 
    CLIMAS
-   Caso vocï¿½ queira que esta ï¿½rea tenha um clima diferente do padrï¿½o do jogo,
-vocï¿½ deve especificar aqui uma seï¿½ï¿½o especial do arquivo contendo algumas
-informaï¿½ï¿½es que definirï¿½o estes parï¿½metros.  O formato desta seï¿½ï¿½o ï¿½ explicado
+   Caso você queira que esta área tenha um clima diferente do padrão do jogo,
+você deve especificar aqui uma seção especial do arquivo contendo algumas
+informações que definirão estes parâmetros.  O formato desta seção é explicado
 logo adiante em "Climas".
 
    COMANDOS
-   Define os comandos que serï¿½o executados a cada recolocaï¿½ï¿½o da ï¿½rea.  Os
-comandos sï¿½o descritos mais adiante, na seï¿½ï¿½o "Comandos".
+   Define os comandos que serão executados a cada recolocação da área.  Os
+comandos são descritos mais adiante, na seção "Comandos".
 
 
 ================================================================================
@@ -91,95 +91,95 @@ comandos sï¿½o descritos mais adiante, na seï¿½ï¿½o "Comandos".
 --------------------------------------------------------------------------------
 
    a. CLOSED (1)
-   A ï¿½rea ï¿½ fechada.  Nï¿½o serï¿½ possï¿½vel usar magias de transporte ('portal' e
-'teleport') para chegar atï¿½ ela.
+   A área é fechada.  Não será possível usar magias de transporte ('portal' e
+'teleport') para chegar até ela.
 
    b. NOASTRAL (2)
-   A ï¿½rea ï¿½ isolada.  Nï¿½o serï¿½ possï¿½vel usar magias de transporte ('portal' e
-'teleport') para entrar ou sair da ï¿½rea, mas poderï¿½ ser usado dentro da mesma
-ï¿½rea.
+   A área é isolada.  Não será possível usar magias de transporte ('portal' e
+'teleport') para entrar ou sair da área, mas poderá ser usado dentro da mesma
+área.
 
    c. !RECALL (4)
-   Nï¿½o serï¿½ possï¿½vel usar a magia 'word of recall' para sair da ï¿½rea.
+   Não será possível usar a magia 'word of recall' para sair da área.
 
    d. !SUMMON (8)
-   Nï¿½o serï¿½ possï¿½vel convocar um personagem para dentro ou para fora da ï¿½rea.
+   Não será possível convocar um personagem para dentro ou para fora da área.
 
    e. !LOAD (16)
-   Se um jogador digitar QUIT dentro dessa ï¿½rea, ele serï¿½ enviado para a
-sala inicial quando retornar ao jogo, e nï¿½o para a sala salva.
+   Se um jogador digitar QUIT dentro dessa área, ele será enviado para a
+sala inicial quando retornar ao jogo, e não para a sala salva.
 
    f. SEPARATE (32)
-   Separa as sub-ï¿½reas umas das outras.  Isso faz com que os comandos WHERE e
-SHOUT encontrem jogadores dentro da mesma sub-ï¿½rea, ao invï¿½s da ï¿½rea toda.
+   Separa as sub-áreas umas das outras.  Isso faz com que os comandos WHERE e
+SHOUT encontrem jogadores dentro da mesma sub-área, ao invés da área toda.
 
    g. CLIMATE (64)
-   Define que o arquivo possui uma seï¿½ï¿½o definindo os climas da ï¿½rea, logo
-apï¿½s as flags.
+   Define que o arquivo possui uma seção definindo os climas da área, logo
+após as flags.
 
    h. NOIMMORT (128)
-   Imortais abaixo do nï¿½vel LVL_GRGOD nï¿½o podem entrar nesta ï¿½rea.
+   Imortais abaixo do nível LVL_GRGOD não podem entrar nesta área.
 
    i. QUEST (256)
-   Esta ï¿½rea ï¿½ uma ï¿½rea de quest (ainda nï¿½o completamente implementado).
+   Esta área é uma área de quest (ainda não completamente implementado).
 
    j. GRID (512)
-   A ï¿½rea estï¿½ "na grade", conectada ao mundo principal, e serï¿½ mostrada
+   A área está "na grade", conectada ao mundo principal, e será mostrada
 no comando 'areas'.
 
    k. NOBUILD (1024)
-   Construï¿½ï¿½o nï¿½o ï¿½ permitida nesta ï¿½rea.
+   Construção não é permitida nesta área.
 
    l. WORLDMAP (2048)
-   Toda a ï¿½rea usa o sistema WORLDMAP por padrï¿½o.
+   Toda a área usa o sistema WORLDMAP por padrão.
 
 
 ================================================================================
  Climas
 --------------------------------------------------------------------------------
 
-   O VitaliaMUD possui um sistema de clima baseado em pressï¿½o atmosfï¿½rica e
-temperatura, que permite 5 estados possï¿½veis: cï¿½u aberto, nublado, chovendo,
-trovejando e nevando.  Geralmente, o clima do jogo todo ï¿½ homogï¿½neo, ou seja,
-se em uma determinada ï¿½rea estï¿½ chovendo, isso significa que em todas as
-outras ï¿½reas tambï¿½m estï¿½ chovendo.  Contudo, ï¿½ possï¿½vel dizer que uma
-determinada ï¿½rea terï¿½ seu prï¿½prio clima, independente do resto do jogo.
+   O VitaliaMUD possui um sistema de clima baseado em pressão atmosférica e
+temperatura, que permite 5 estados possíveis: céu aberto, nublado, chovendo,
+trovejando e nevando.  Geralmente, o clima do jogo todo é homogêneo, ou seja,
+se em uma determinada área está chovendo, isso significa que em todas as
+outras áreas também está chovendo.  Contudo, é possível dizer que uma
+determinada área terá seu próprio clima, independente do resto do jogo.
 
-   Para isso, vocï¿½ deve especificar a flag CLIMATE (g, 64) no campo de flags,
-e adicionar uma seï¿½ï¿½o especial ao arquivo de ï¿½rea.  Quando a flag e esta seï¿½ï¿½o
-sï¿½o omitidas, a ï¿½rea terï¿½ o mesmo clima que o resto do jogo.
+   Para isso, você deve especificar a flag CLIMATE (g, 64) no campo de flags,
+e adicionar uma seção especial ao arquivo de área.  Quando a flag e esta seção
+são omitidas, a área terá o mesmo clima que o resto do jogo.
 
 ------------------------
- C <subï¿½rea> <tipo>
+ C <subárea> <tipo>
  ...
  S
 ------------------------
 
-   Essa seï¿½ï¿½o adicional deve vir logo apï¿½s a linha que contï¿½m os campos TOPO,
-VIDA, MODO e FLAGS.  Essa seï¿½ï¿½o consiste de um ou mais comandos 'C', onde cada
-um especifica o clima de uma subï¿½rea ou da ï¿½rea toda; e termina com um comando
-'S'.  Note que esse 'S' nï¿½o ï¿½ o mesmo usado para terminar o arquivo de ï¿½rea,
-que deverï¿½ vir depois dos comandos de recolocaï¿½ï¿½o da ï¿½rea.
+   Essa seção adicional deve vir logo após a linha que contém os campos TOPO,
+VIDA, MODO e FLAGS.  Essa seção consiste de um ou mais comandos 'C', onde cada
+um especifica o clima de uma subárea ou da área toda; e termina com um comando
+'S'.  Note que esse 'S' não é o mesmo usado para terminar o arquivo de área,
+que deverá vir depois dos comandos de recolocação da área.
 
-   Os campos do comando 'C' sï¿½o:
+   Os campos do comando 'C' são:
 
-   SUBï¿½REA
-   O nï¿½mero da subï¿½rea que vocï¿½ quer definir o clima.  Por enquanto, o ï¿½nico
-valor possï¿½vel para este campo ï¿½ zero, para especificar o clima da ï¿½rea toda.
+   SUBÁREA
+   O número da subárea que você quer definir o clima.  Por enquanto, o único
+valor possível para este campo é zero, para especificar o clima da área toda.
 
    TIPO
-   O tipo do clima da ï¿½rea ou subï¿½rea.  Deve ser um nome de acordo com a
+   O tipo do clima da área ou subárea.  Deve ser um nome de acordo com a
 seguinte tabela:
 
-	Tipo       | Pressï¿½o  | Umid | Vent | Temp
+	Tipo       | Pressão  | Umid | Vent | Temp
 	-----------+----------+------+------+----------
-	0. NEUTRAL | 1000 ï¿½15 | 0.50 | 0.00 | 25 ï¿½4 ï¿½C
-	1. WINDY   | 1000 ï¿½20 | 0.40 | 0.98 | 22 ï¿½2 ï¿½C
-	2. RAINY   |  980 ï¿½10 | 0.75 | 0.20 | 20 ï¿½2 ï¿½C
-	3. SNOWY   |  975 ï¿½ 5 | 0.25 | 0.50 | -5 ï¿½2 ï¿½C
-	4. DESERT  | 1025 ï¿½ 5 | 0.02 | 0.50 | 45 ï¿½3 ï¿½C
+	0. NEUTRAL | 1000 ±15 | 0.50 | 0.00 | 25 ±4 °C
+	1. WINDY   | 1000 ±20 | 0.40 | 0.98 | 22 ±2 °C
+	2. RAINY   |  980 ±10 | 0.75 | 0.20 | 20 ±2 °C
+	3. SNOWY   |  975 ± 5 | 0.25 | 0.50 | -5 ±2 °C
+	4. DESERT  | 1025 ± 5 | 0.02 | 0.50 | 45 ±3 °C
 
-   O tipo NEUTRAL ï¿½ o mesmo tipo de clima do resto do jogo.
+   O tipo NEUTRAL é o mesmo tipo de clima do resto do jogo.
 
 
 ================================================================================
@@ -187,52 +187,52 @@ seguinte tabela:
 --------------------------------------------------------------------------------
 
    Cada comando consiste de uma letra, identificando o tipo de comando,
-seguido de trï¿½s ou quatro campos.  O primeiro campo, comum a todos os
-comandos, ï¿½ chamado de "flag-condicional".  Se a flag-condicional para um
-comando for 1, o comando apenas serï¿½ executado se o comando imediatamente
+seguido de três ou quatro campos.  O primeiro campo, comum a todos os
+comandos, é chamado de "flag-condicional".  Se a flag-condicional para um
+comando for 1, o comando apenas será executado se o comando imediatamente
 anterior for executado com sucesso.  Se a flag-condicional for 0, o comando
-serï¿½ sempre executado.  As flags-condicionais sï¿½o ï¿½teis para, por exemplo,
-equipar monstros: vocï¿½ nï¿½o poderï¿½ equipar um monstro se vocï¿½ nï¿½o conseguir
-carregï¿½-lo.
+será sempre executado.  As flags-condicionais são úteis para, por exemplo,
+equipar monstros: você não poderá equipar um monstro se você não conseguir
+carregá-lo.
 
-   Os comandos que carregam monstros e objetos tambï¿½m incluem um campo
-"limite", que define o nï¿½mero mï¿½ximo de cï¿½pias que podem existir para aquele
-objeto ou monstro no mundo todo.  Se o nï¿½mero de cï¿½pias jï¿½ existentes for
-maior ou igual ao valor do limite, o comando nï¿½o ï¿½ executado.
+   Os comandos que carregam monstros e objetos também incluem um campo
+"limite", que define o número máximo de cópias que podem existir para aquele
+objeto ou monstro no mundo todo.  Se o número de cópias já existentes for
+maior ou igual ao valor do limite, o comando não é executado.
 
-   Os comandos reconhecidos atualmente pelo VitaliaMUD sï¿½o:
+   Os comandos reconhecidos atualmente pelo VitaliaMUD são:
 
    M: Carregar um monstro.
    Formato: M <flag-condicional> <vnum-mob> <limite> <vnum-sala>
-      VNUM-MOB ï¿½ o nï¿½mero que identifica o monstro.  VNUM-SALA ï¿½ o nï¿½mero que
-      identifica a sala onde o monstro serï¿½ carregado.
+      VNUM-MOB é o número que identifica o monstro.  VNUM-SALA é o número que
+      identifica a sala onde o monstro será carregado.
 
    O: Carregar um objeto.
    Formato: O <flag-condicional> <vnum-obj> <limite> <vnum-sala>
-      VNUM-OBJ ï¿½ o nï¿½mero que identifica o objeto.  VNUM-SALA ï¿½ o nï¿½mero que
-      identifica a sala onde o objeto serï¿½ carregado.  O objeto serï¿½ deixado
-      no chï¿½o da sala.
+      VNUM-OBJ é o número que identifica o objeto.  VNUM-SALA é o número que
+      identifica a sala onde o objeto será carregado.  O objeto será deixado
+      no chão da sala.
 
    G: Dar um objeto para o monstro.
    Formato: G <flag-condicional> <vnum-obj> <limite>
-      VNUM-OBJ ï¿½ o nï¿½mero que identifica o objeto.  O objeto serï¿½ carregado e
-      serï¿½ colocado no inventï¿½rio do ï¿½ltimo monstro criado com o comando "M".
+      VNUM-OBJ é o número que identifica o objeto.  O objeto será carregado e
+      será colocado no inventário do último monstro criado com o comando "M".
 
    E: Equipar um objeto no monstro.
-   Formato: E <flag-condicional> <vnum-obj> <limite> <posiï¿½ï¿½o>
-      VNUM-OBJ ï¿½ o nï¿½mero que identifica o objeto.  POSIï¿½ï¿½O ï¿½ um nï¿½mero que
-      identifica a posiï¿½ï¿½o no corpo, sendo um dos seguintes:
+   Formato: E <flag-condicional> <vnum-obj> <limite> <posição>
+      VNUM-OBJ é o número que identifica o objeto.  POSIÇÃO é um número que
+      identifica a posição no corpo, sendo um dos seguintes:
        0  Usar como luz
        1  Usar no dedo anelar direito
        2  Usar no dedo anelar esquerdo
-       3  Primeiro objeto em volta do pescoï¿½o
-       4  Segundo objeto em volta do pescoï¿½o
+       3  Primeiro objeto em volta do pescoço
+       4  Segundo objeto em volta do pescoço
        5  Vestir no corpo
-       6  Vestir na cabeï¿½a
+       6  Vestir na cabeça
        7  Vestir nas pernas
-       8  Calï¿½ar nos pï¿½s
-       9  Vestir nas mï¿½os
-      10  Vestir nos braï¿½os
+       8  Calçar nos pés
+       9  Vestir nas mãos
+      10  Vestir nos braços
       11  Usar como escudo
       12  Vestir sobre o corpo
       13  Usar em volta da cintura
@@ -245,43 +245,43 @@ maior ou igual ao valor do limite, o comando nï¿½o ï¿½ executado.
       20  Usar na orelha esquerda
       21  Usar no rosto
       22  Usar no nariz
-      23  Usar como insï¿½gnia
+      23  Usar como insígnia
       24  Usar como aljava
 
    P: Colocar um objeto dentro de outro
    Formato: P <flag-condicional> <vnum-obj-1> <limite> <vnum-obj-2>
-      Um objeto identificado por VNUM-OBJ-1 serï¿½ carregado e posto dentro do
-      ï¿½ltimo objeto identificado por VNUM-OBJ-2.
+      Um objeto identificado por VNUM-OBJ-1 será carregado e posto dentro do
+      último objeto identificado por VNUM-OBJ-2.
 
    D: Ajustar o estado de uma porta
-   Formato: D <flag-condicional> <vnum-sala> <saï¿½da> <estado>
-      VNUM-SALA ï¿½ o nï¿½mero da sala que possui a porta a ser ajustada.  SAï¿½DA ï¿½
-      o nï¿½mero que identifica a porta, definida no arquivo de salas.  ESTADO ï¿½
-      o estado que a porta deverï¿½ obter, sendo:
+   Formato: D <flag-condicional> <vnum-sala> <saída> <estado>
+      VNUM-SALA é o número da sala que possui a porta a ser ajustada.  SAÍDA é
+      o número que identifica a porta, definida no arquivo de salas.  ESTADO é
+      o estado que a porta deverá obter, sendo:
        0  Aberta
        1  Fechada
        2  Fechada e trancada
       Tome cuidado de ajustar ambos os lados da porta corretamente.  Fechar a
-      saï¿½da norte de uma sala Nï¿½O fecha automaticamente a saï¿½da sul da sala
+      saída norte de uma sala NÃO fecha automaticamente a saída sul da sala
       adjacente.
 
    R: Remover objeto da sala
    Formato: R <flag-condicional> <vnum-sala> <vnum-obj>
       Se um objeto identificado com VNUM-OBJ existir na sala identificada com
-      VNUM-SALA, ele serï¿½ retirado da sala e destruï¿½do.
+      VNUM-SALA, ele será retirado da sala e destruído.
 
-   N: Verificar a presenï¿½a de um monstro em uma sala
+   N: Verificar a presença de um monstro em uma sala
    Formato: C <flag-condicional> <vnum-sala> <vnum-mob>
-      Esse comando nï¿½o faz nada, sï¿½ verifica se o mob VNUM-MOB estï¿½ carregado
+      Esse comando não faz nada, só verifica se o mob VNUM-MOB está carregado
       e presente na sala VNUM-SALA. Se ele estiver carregado, esse comando
-      resultarï¿½ em um "nï¿½o-sucesso". Isso quer dizer que o prï¿½ximo comando
-      pode ter a flag-condicional igual a um, para que nï¿½o seja executado.
-      Isso ï¿½ ï¿½til para evitar que mobs sejam carregados em duplicidade em uma
+      resultará em um "não-sucesso". Isso quer dizer que o próximo comando
+      pode ter a flag-condicional igual a um, para que não seja executado.
+      Isso é útil para evitar que mobs sejam carregados em duplicidade em uma
       mesma sala.
 
-   Qualquer linha que iniciar com um asterisco ('*') serï¿½ considerado como um
-comentï¿½rio, e nï¿½o serï¿½ processada.  Tambï¿½m serï¿½ ignorado qualquer texto que
-for escrito na frente dos campos numï¿½ricos.
+   Qualquer linha que iniciar com um asterisco ('*') será considerado como um
+comentário, e não será processada.  Também será ignorado qualquer texto que
+for escrito na frente dos campos numéricos.
 
 
 ================================================================================
@@ -289,34 +289,34 @@ for escrito na frente dos campos numï¿½ricos.
 --------------------------------------------------------------------------------
 
 #18
-O Paraï¿½so~
+O Paraíso~
 1899 30 2 bd
 *
 * Colocar os monstros
 *
-M 0 1897 1 1897     colocar o guardiï¿½o na entrada
-G 1 1895 1          entregar a chave ao guardiï¿½o
-E 1 1892 1 16       entregar a arma ao guardiï¿½o
+M 0 1897 1 1897     colocar o guardião na entrada
+G 1 1895 1          entregar a chave ao guardião
+E 1 1892 1 16       entregar a arma ao guardião
 *
 * Colocar os objetos
 *
-R 0 1895 1881       retirar a fonte de ï¿½gua
-O 0 1881 1 1895     carregar uma nova fonte de ï¿½gua
-R 0 1892 1883       retirar o baï¿½
-O 0 1883 1 1892	    carregar um novo baï¿½
-P 1 1884 1 1883     carregar o tesouro dentro do baï¿½
+R 0 1895 1881       retirar a fonte de água
+O 0 1881 1 1895     carregar uma nova fonte de água
+R 0 1892 1883       retirar o baú
+O 0 1883 1 1892	    carregar um novo baú
+P 1 1884 1 1883     carregar o tesouro dentro do baú
 *
 * Ajustar as passagens
 *
-D 0 1897 0 2        fechar os portï¿½es do paraï¿½so (lado de fora)
-D 0 1898 2 2	    fechar os portï¿½es do paraï¿½so (lado de dentro)
+D 0 1897 0 2        fechar os portões do paraíso (lado de fora)
+D 0 1898 2 2	    fechar os portões do paraíso (lado de dentro)
 S
 
 
--> Faï¿½a com calma esse arquivo...  Para criar uma ï¿½rea, costuma-se fazer um
-rascunho dela ou em um pedaï¿½o de papel ou desenhar no computador mesmo.
-Quando for fazer o .zon, vï¿½ em cada sala, veja calmamente o que deseja por
-nela, verifique as portas e assim, aos poucos, faï¿½a seu arquivo.  Erra-se
-menos dessa maneira e fica muito mais fï¿½cil de corrigir.  Tambï¿½m costume
-escrever especificando o que cada comando deve fazer, pois isso tambï¿½m
-minimiza erros e ajuda em possï¿½veis alteraï¿½ï¿½es futuras.
+-> Faça com calma esse arquivo...  Para criar uma área, costuma-se fazer um
+rascunho dela ou em um pedaço de papel ou desenhar no computador mesmo.
+Quando for fazer o .zon, vá em cada sala, veja calmamente o que deseja por
+nela, verifique as portas e assim, aos poucos, faça seu arquivo.  Erra-se
+menos dessa maneira e fica muito mais fácil de corrigir.  Também costume
+escrever especificando o que cada comando deve fazer, pois isso também
+minimiza erros e ajuda em possíveis alterações futuras.
