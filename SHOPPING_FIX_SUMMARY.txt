@@ -1,0 +1,73 @@
+# Mob Shopping Segfault Fix - Quick Summary
+
+## Issue
+Potential segfault in `mobact.c` related to mob buying/selling objects and shopkeeper improvements in `mobile_activity()` function.
+
+## Root Cause
+Shopping functions (`shopping_sell` and `shopping_buy`) trigger DG Scripts via communication commands (`act()`, `do_tell()`, `do_action()`, etc.), which can indirectly cause character extraction of either the buyer or seller without proper safety checks.
+
+## Solution
+Added comprehensive validation and safety checks in 3 locations:
+
+### 1. Shopping Sell (Lines 377-428)
+- Pre-validate keeper before use
+- Check ch extraction after shopping_sell
+- Check keeper extraction after shopping_sell
+- Clean goal state on extraction
+
+### 2. Shopping Buy (Lines 493-533)
+- Pre-validate keeper before use
+- Check ch extraction after shopping_buy (was already present)
+- Check keeper extraction after shopping_buy (NEW)
+- Clean goal state on extraction
+
+### 3. Shopkeeper Inventory (Lines 696-701)
+- Check ch extraction after extract_obj
+- Prevents shopkeeper access if extracted by object scripts
+
+## Changes
+- **Files modified**: 1 (src/mobact.c)
+- **Lines added**: 59
+- **Lines removed**: 2
+- **Net change**: +57 lines
+
+## Testing
+✅ Compilation successful (both autotools and CMake)
+✅ CodeQL security analysis: 0 alerts
+✅ Code formatted with clang-format
+✅ Binary builds successfully
+✅ No new compiler warnings
+
+## Documentation
+- `MOBACT_SHOPPING_SEGFAULT_FIX.md` - Comprehensive technical documentation
+
+## Impact
+Prevents crashes when:
+- DG Scripts extract characters during shopping
+- Shopkeepers are killed during transactions
+- Buyers are killed during transactions
+- Object scripts affect characters during inventory cleanup
+
+## Pattern Used
+```c
+// Before operation
+if (!keeper || MOB_FLAGGED(keeper, MOB_NOTDEADYET) || PLR_FLAGGED(keeper, PLR_NOTDEADYET)) {
+    // Clean up and continue
+    continue;
+}
+
+// Perform operation
+shopping_operation(...);
+
+// After operation - check both participants
+if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+    continue;
+if (MOB_FLAGGED(keeper, MOB_NOTDEADYET) || PLR_FLAGGED(keeper, PLR_NOTDEADYET))
+    continue;
+```
+
+This pattern ensures:
+1. Validation before pointer use
+2. Detection of extraction after dangerous operations
+3. Graceful cleanup when extraction occurs
+4. Prevention of continued pointer access to extracted characters

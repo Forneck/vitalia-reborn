@@ -377,7 +377,20 @@ void mobile_activity(void)
                 if (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL) {
                     /* Usa a memória para encontrar o lojista correto. */
                     struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
-                    if (keeper && ch->ai_data->goal_obj) {
+
+                    /* Validate keeper exists and is not marked for extraction */
+                    if (!keeper || MOB_FLAGGED(keeper, MOB_NOTDEADYET) || PLR_FLAGGED(keeper, PLR_NOTDEADYET)) {
+                        /* Keeper not available, abandon this goal */
+                        ch->ai_data->current_goal = GOAL_NONE;
+                        ch->ai_data->goal_destination = NOWHERE;
+                        ch->ai_data->goal_obj = NULL;
+                        ch->ai_data->goal_target_mob_rnum = NOBODY;
+                        ch->ai_data->goal_item_vnum = NOTHING;
+                        ch->ai_data->goal_timer = 0;
+                        continue;
+                    }
+
+                    if (ch->ai_data->goal_obj) {
                         int shop_rnum = find_shop_by_keeper(keeper->nr);
 
                         /* Check if this shop actually buys this type of item */
@@ -396,6 +409,23 @@ void mobile_activity(void)
                             shopping_sell(ch->ai_data->goal_obj->name, ch, keeper, shop_rnum);
                             /* Clear goal_obj pointer as the object has been extracted by shopping_sell */
                             ch->ai_data->goal_obj = NULL;
+
+                            /* Safety check: shopping_sell can trigger DG Scripts via act(), do_tell(), etc.
+                             * which could indirectly cause extract_char for ch or keeper */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
+
+                            /* Check if keeper was extracted during the transaction */
+                            if (MOB_FLAGGED(keeper, MOB_NOTDEADYET) || PLR_FLAGGED(keeper, PLR_NOTDEADYET)) {
+                                /* Keeper was extracted, clear goal and continue */
+                                ch->ai_data->current_goal = GOAL_NONE;
+                                ch->ai_data->goal_destination = NOWHERE;
+                                ch->ai_data->goal_target_mob_rnum = NOBODY;
+                                ch->ai_data->goal_item_vnum = NOTHING;
+                                ch->ai_data->goal_timer = 0;
+                                continue;
+                            }
+
                             ch->ai_data->genetics.trade_tendency += 1;
                             ch->ai_data->genetics.trade_tendency = MIN(ch->ai_data->genetics.trade_tendency, 100);
                         } else {
@@ -463,7 +493,19 @@ void mobile_activity(void)
                 } else if (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_BUY) {
                     /* Chegou à loja para comprar um item da wishlist */
                     struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
-                    if (keeper && ch->ai_data->goal_item_vnum != NOTHING) {
+
+                    /* Validate keeper exists and is not marked for extraction */
+                    if (!keeper || MOB_FLAGGED(keeper, MOB_NOTDEADYET) || PLR_FLAGGED(keeper, PLR_NOTDEADYET)) {
+                        /* Keeper not available, abandon this goal */
+                        ch->ai_data->current_goal = GOAL_NONE;
+                        ch->ai_data->goal_destination = NOWHERE;
+                        ch->ai_data->goal_target_mob_rnum = NOBODY;
+                        ch->ai_data->goal_item_vnum = NOTHING;
+                        ch->ai_data->goal_timer = 0;
+                        continue;
+                    }
+
+                    if (ch->ai_data->goal_item_vnum != NOTHING) {
                         /* Tenta comprar o item */
                         char buy_command[MAX_INPUT_LENGTH];
                         act("$n olha os produtos da loja.", FALSE, ch, 0, 0, TO_ROOM);
@@ -474,6 +516,17 @@ void mobile_activity(void)
                          * through scripts, triggers, or special procedures */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                             continue;
+
+                        /* Check if keeper was extracted during the transaction */
+                        if (MOB_FLAGGED(keeper, MOB_NOTDEADYET) || PLR_FLAGGED(keeper, PLR_NOTDEADYET)) {
+                            /* Keeper was extracted, clear goal and continue */
+                            ch->ai_data->current_goal = GOAL_NONE;
+                            ch->ai_data->goal_destination = NOWHERE;
+                            ch->ai_data->goal_target_mob_rnum = NOBODY;
+                            ch->ai_data->goal_item_vnum = NOTHING;
+                            ch->ai_data->goal_timer = 0;
+                            continue;
+                        }
 
                         /* Remove o item da wishlist se a compra foi bem sucedida */
                         remove_item_from_wishlist(ch, ch->ai_data->goal_item_vnum);
@@ -643,6 +696,10 @@ void mobile_activity(void)
                     if (OBJ_FLAGGED(current_obj, ITEM_TRASH)) {
                         act("$n joga $p fora.", FALSE, ch, current_obj, 0, TO_ROOM);
                         extract_obj(current_obj);
+                        /* Safety check: extract_obj could potentially trigger DG Scripts
+                         * on the object being extracted, which might indirectly affect ch */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 }
                 continue;
