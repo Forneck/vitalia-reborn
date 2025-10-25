@@ -6796,6 +6796,10 @@ Nivel      : -
 
    Transporta a vitima da magia para uma sala qualquer do jogo.  Nao ha como
 definir qual sera o destino.
+
+   A magia protege a vitima de ser teleportada para locais perigosos ou
+restritos, incluindo: salas de morte (death traps), salas privadas, salas
+divinas, zonas fechadas e zonas com protecao astral.
 #1
 MAGIA-THISTLECOAT
 
