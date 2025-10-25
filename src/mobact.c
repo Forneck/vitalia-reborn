@@ -755,12 +755,21 @@ void mobile_activity(void)
 
         if GROUP (ch) {
             mob_follow_leader(ch);
+            /* Safety check: mob_follow_leader calls perform_move which can trigger death traps */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
         }
 
         /* Try stealth following (for non-grouped following behavior) */
         mob_try_stealth_follow(ch);
+        /* Safety check: mob_try_stealth_follow calls perform_move which can trigger death traps */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
 
         mob_assist_allies(ch);
+        /* Safety check: mob_assist_allies calls hit() which can cause extract_char */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
 
         mob_try_and_loot(ch);
 
@@ -774,6 +783,9 @@ void mobile_activity(void)
         /* Wishlist-based goal planning */
         if (ch->ai_data && rand_number(1, 100) <= 10) { /* 10% chance per tick */
             mob_process_wishlist_goals(ch);
+            /* Safety check: mob_process_wishlist_goals can call act() which may trigger DG scripts */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
         }
 
         /* Quest acceptance - try to find and accept quests occasionally */
@@ -792,6 +804,9 @@ void mobile_activity(void)
                         /* Quest timeout */
                         act("$n parece desapontado por não completar uma tarefa a tempo.", TRUE, ch, 0, 0, TO_ROOM);
                         fail_mob_quest(ch, "timeout");
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 }
             } else {
@@ -803,9 +818,14 @@ void mobile_activity(void)
                         if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED) && mob_should_accept_quest(ch, rnum)) {
                             set_mob_quest(ch, rnum);
                             act("$n parece determinado e parte em uma missão.", TRUE, ch, 0, 0, TO_ROOM);
-                            break;
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                break; /* Exit the for loop, then continue to next mob in main loop */
                         }
                     }
+                    /* Safety check after the loop in case ch was extracted */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             }
         }
@@ -820,6 +840,9 @@ void mobile_activity(void)
                     /* Post a player kill quest for revenge */
                     int reward = MIN(GET_GOLD(ch) / 3, 500 + rand_number(0, 300));
                     mob_posts_combat_quest(ch, AQ_PLAYER_KILL, NOTHING, reward);
+                    /* Safety check: mob_posts_combat_quest calls act() which may trigger DG scripts */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                     HUNTING(ch) = NULL; /* Clear hunting after posting quest */
                 }
             }
@@ -849,9 +872,15 @@ void mobile_activity(void)
                             /* Post bounty quest against this aggressive mob */
                             int reward = MIN(GET_GOLD(ch) / 4, 400 + GET_LEVEL(target) * 10);
                             mob_posts_combat_quest(ch, AQ_MOB_KILL_BOUNTY, GET_MOB_VNUM(target), reward);
-                            break; /* Only post one bounty quest per tick */
+                            /* Safety check: mob_posts_combat_quest calls act() which may trigger DG scripts */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                break; /* Exit the loop, then continue to next mob in main loop */
+                            break;     /* Only post one bounty quest per tick */
                         }
                     }
+                    /* Safety check after the loop in case ch was extracted */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             }
         }
@@ -884,6 +913,9 @@ void mobile_activity(void)
                     if (obj_target != NOTHING && GET_GOLD(ch) > 100) {
                         reward = MIN(GET_GOLD(ch) / 6, 200 + GET_LEVEL(ch) * 5);
                         mob_posts_exploration_quest(ch, AQ_OBJ_FIND, obj_target, reward);
+                        /* Safety check: mob_posts_exploration_quest calls act() which may trigger DG scripts */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 } else if (rand_number(1, 100) <= 50) {
                     /* AQ_ROOM_FIND quest - explore a room in the zone */
@@ -894,6 +926,9 @@ void mobile_activity(void)
                     if (GET_GOLD(ch) > 75) {
                         reward = MIN(GET_GOLD(ch) / 8, 150 + GET_LEVEL(ch) * 3);
                         mob_posts_exploration_quest(ch, AQ_ROOM_FIND, world[real_room(room_target)].number, reward);
+                        /* Safety check: mob_posts_exploration_quest calls act() which may trigger DG scripts */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 } else {
                     /* AQ_MOB_FIND quest - find a friendly mob */
@@ -920,10 +955,16 @@ void mobile_activity(void)
                             if (GET_GOLD(ch) > 80) {
                                 reward = MIN(GET_GOLD(ch) / 7, 120 + GET_LEVEL(target) * 4);
                                 mob_posts_exploration_quest(ch, AQ_MOB_FIND, GET_MOB_VNUM(target), reward);
+                                /* Safety check: mob_posts_exploration_quest calls act() which may trigger DG scripts */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    break; /* Exit loop, then continue to next mob in main loop */
                             }
                             break; /* Only post one find quest per tick */
                         }
                     }
+                    /* Safety check after the loop in case ch was extracted */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             } else if (GET_GENBRAVE(ch) > 60 && rand_number(1, 100) <= 25) {
                 /* Post protection quests */
@@ -952,10 +993,16 @@ void mobile_activity(void)
                             if (GET_GOLD(ch) > 120) {
                                 reward = MIN(GET_GOLD(ch) / 5, 250 + GET_LEVEL(target) * 6);
                                 mob_posts_protection_quest(ch, AQ_MOB_SAVE, GET_MOB_VNUM(target), reward);
+                                /* Safety check: mob_posts_protection_quest calls act() which may trigger DG scripts */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    break; /* Exit loop, then continue to next mob in main loop */
                             }
                             break; /* Only post one save quest per tick */
                         }
                     }
+                    /* Safety check after the loop in case ch was extracted */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 } else {
                     /* AQ_ROOM_CLEAR quest - clear a dangerous room */
                     zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
@@ -979,6 +1026,9 @@ void mobile_activity(void)
                     if (dangerous_room != NOWHERE && GET_GOLD(ch) > 150) {
                         reward = MIN(GET_GOLD(ch) / 4, 300 + GET_LEVEL(ch) * 8);
                         mob_posts_protection_quest(ch, AQ_ROOM_CLEAR, dangerous_room, reward);
+                        /* Safety check: mob_posts_protection_quest calls act() which may trigger DG scripts */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 }
             } else if (GET_GENQUEST(ch) > 40 && rand_number(1, 100) <= 20) {
@@ -1006,10 +1056,16 @@ void mobile_activity(void)
                         if (GET_GOLD(ch) > 100) {
                             reward = MIN(GET_GOLD(ch) / 5, 200 + GET_LEVEL(target) * 8);
                             mob_posts_general_kill_quest(ch, GET_MOB_VNUM(target), reward);
+                            /* Safety check: mob_posts_general_kill_quest calls act() which may trigger DG scripts */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                break; /* Exit loop, then continue to next mob in main loop */
                         }
                         break; /* Only post one kill quest per tick */
                     }
                 }
+                /* Safety check after the loop in case ch was extracted */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
             }
         }
 
@@ -1087,6 +1143,9 @@ void mobile_activity(void)
         mob_use_bank(ch);
 
         if (handle_duty_routine(ch)) {
+            /* Safety check: handle_duty_routine calls perform_move which can trigger death traps */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
             continue;
         }
 
