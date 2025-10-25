@@ -64,14 +64,14 @@ mob_process_wishlist_goals(ch);  // ← Calls mob_posts_quest() → act()
 
 **Line 802-803: Quest timeout**
 ```c
-act("$n parece desapontado...", TRUE, ch, 0, 0, TO_ROOM);  // ← Can trigger DG Scripts
+act("$n parece desapontado por não completar uma tarefa a tempo.", TRUE, ch, 0, 0, TO_ROOM);  // ← Can trigger DG Scripts
 fail_mob_quest(ch, "timeout");
 // Missing safety check here!
 ```
 
 **Line 814: Quest acceptance**
 ```c
-act("$n parece determinado...", TRUE, ch, 0, 0, TO_ROOM);  // ← Can trigger DG Scripts
+act("$n parece determinado e parte em uma missão.", TRUE, ch, 0, 0, TO_ROOM);  // ← Can trigger DG Scripts
 // Missing safety check here - loop continues without checking!
 break;
 ```
