@@ -6,7 +6,7 @@
 /_p~~~~~~~~~~\$@|/---------';;;     ;;  ;;   .,' ;;   ;;   ;;  .,' ;;-------'
               \<M`           ;     ,;;, ';,' ';,';;.',;;, ,;;, ';,';;.'
                `(B
-_________________`?____________________[ Referência para Criação de Áreas ]___
+_________________`?____________________[ Referï¿½ncia para Criaï¿½ï¿½o de ï¿½reas ]___
 
 Autores: Juliano Ravasi Ferraz <blug@mud.linkway.com.br>
 	 Ana Carolina Cyrino <nemesis@mud.linkway.com.br>
@@ -18,83 +18,83 @@ $Id: object.txt,v 1.22 2003/08/30 21:20:41 ju Exp $
 ################################################################################
 
    Cada objeto no arquivo de objetos do VitaliaMUD, deve iniciar com um sinal
-de sustenido (#) seguido de seu número.  Ao contrário do arquivo das salas ou
-mobs, os objetos não possuem uma letra especial que representa seu término.
-As informações de cada objeto terminam quando o próximo objeto inicia-se.  Os
-elementos que dão as características ao objeto são escritos neste formato:
+de sustenido (#) seguido de seu nï¿½mero.  Ao contrï¿½rio do arquivo das salas ou
+mobs, os objetos nï¿½o possuem uma letra especial que representa seu tï¿½rmino.
+As informaï¿½ï¿½es de cada objeto terminam quando o prï¿½ximo objeto inicia-se.  Os
+elementos que dï¿½o as caracterï¿½sticas ao objeto sï¿½o escritos neste formato:
 
 ------------------------
  #<vnum>
  <ids>~
  <nome>~
- <descrição de sala>~
- <ação>~
+ <descriï¿½ï¿½o de sala>~
+ <aï¿½ï¿½o>~
  <tipo> <efeito> <vestir> <aff>
  <v1> <v2> <v3> <v4> <v5> <v6>
- <peso> <valor> <aluguel> <nível>
- {descrições}				(opcional)
- {afetamentos numéricos}		(opcional)
+ <peso> <valor> <aluguel> <nï¿½vel>
+ {descriï¿½ï¿½es}				(opcional)
+ {afetamentos numï¿½ricos}		(opcional)
 ------------------------
 
    VNUM
-   O número do objeto.  O número deve estar dentro do intervalo de números
-da área em construção.  Os objetos devem ser dispostos no arquivo em ordem
-numérica crescente, do menor para o maior.
+   O nï¿½mero do objeto.  O nï¿½mero deve estar dentro do intervalo de nï¿½meros
+da ï¿½rea em construï¿½ï¿½o.  Os objetos devem ser dispostos no arquivo em ordem
+numï¿½rica crescente, do menor para o maior.
 
    IDS
-   Os nomes que identificam o objeto.  Estes nomes são usados nos comandos
+   Os nomes que identificam o objeto.  Estes nomes sï¿½o usados nos comandos
 (como WEAR, WIELD, REMOVE, GET, DROP, JUNK, etc).
-   Em versões anteriores do VitaliaMUD, costumava-se duplicar os nomes que
+   Em versï¿½es anteriores do VitaliaMUD, costumava-se duplicar os nomes que
 possuiam acentos, deixando um dos nomes sem acentos, para que os jogadores
-que não tivessem a capacidade de digitá-los pudessem ainda assim usar os
-comandos.  Contudo, agora não há mais tal necessidade, pois o MUD já possui
-formas de reconhecer e comparar palavras acentuadas e não-acentuadas.
+que nï¿½o tivessem a capacidade de digitï¿½-los pudessem ainda assim usar os
+comandos.  Contudo, agora nï¿½o hï¿½ mais tal necessidade, pois o MUD jï¿½ possui
+formas de reconhecer e comparar palavras acentuadas e nï¿½o-acentuadas.
 
    NOME
-   É o nome do objeto que aparecerá no INVENTORY e no EQUIPMENT.  Deve começar
+   ï¿½ o nome do objeto que aparecerï¿½ no INVENTORY e no EQUIPMENT.  Deve comeï¿½ar
 com um artigo (a, o, um, uma).
 
-   DESCRIÇÃO DE SALA
-   É a descrição que aparecerá quando o jogador digitar LOOK na sala.
-Geralmente termina com as expressões: "... está aqui", "... foi deixado
+   DESCRIï¿½ï¿½O DE SALA
+   ï¿½ a descriï¿½ï¿½o que aparecerï¿½ quando o jogador digitar LOOK na sala.
+Geralmente termina com as expressï¿½es: "... estï¿½ aqui", "... foi deixado
 aqui", "... foi esquecido aqui", etc.
 
-   AÇÃO
-   Em primeira instância, deve ser usado com objetos mágicos, para especificar
-a mensagem que deverá aparecer quando for usado.  A mensagem deve usar o mesmo
-formato do act().  Se for omitido, uma mensagem padrão será usada.  Para
-objetos tipo NOTE, este campo contém o texto do papel ou anotação.
-   Esse campo também é usado em armadilhas, e contém a mensagem que deve
+   Aï¿½ï¿½O
+   Em primeira instï¿½ncia, deve ser usado com objetos mï¿½gicos, para especificar
+a mensagem que deverï¿½ aparecer quando for usado.  A mensagem deve usar o mesmo
+formato do act().  Se for omitido, uma mensagem padrï¿½o serï¿½ usada.  Para
+objetos tipo NOTE, este campo contï¿½m o texto do papel ou anotaï¿½ï¿½o.
+   Esse campo tambï¿½m ï¿½ usado em armadilhas, e contï¿½m a mensagem que deve
 aparecer tanto para quem pegou a armadilha quanto para os outros que estiverem
 na mesma sala.
 
    TIPO
-   Um número que define o tipo do objeto.  Os diversos tipos de objetos são
-descritos mais adiante, na seção "Tipos e Valores".
+   Um nï¿½mero que define o tipo do objeto.  Os diversos tipos de objetos sï¿½o
+descritos mais adiante, na seï¿½ï¿½o "Tipos e Valores".
 
    EFEITO
-   Define os efeitos especiais do objeto.  Os efeitos especiais são descritos
-mais adiante, na seção "Efeitos Especiais".
+   Define os efeitos especiais do objeto.  Os efeitos especiais sï¿½o descritos
+mais adiante, na seï¿½ï¿½o "Efeitos Especiais".
 
    VESTIR
-   Define as posições do corpo onde o objeto pode ser vestido.  As posições do
-corpo são descritas mais adiante, na seção "Posições do Corpo".
+   Define as posiï¿½ï¿½es do corpo onde o objeto pode ser vestido.  As posiï¿½ï¿½es do
+corpo sï¿½o descritas mais adiante, na seï¿½ï¿½o "Posiï¿½ï¿½es do Corpo".
 
    AFF
-   Define a forma como o personagem será afetado ao vestir ou segurar o
-objeto.  Os diversos afetamentos são descritos no arquivo "aff-flags.txt".
-As flags de afetamento são muito especiais de devem ser usadas com extrema
-moderação, especialmente com o conhecimento e consentimento de um Deus
+   Define a forma como o personagem serï¿½ afetado ao vestir ou segurar o
+objeto.  Os diversos afetamentos sï¿½o descritos no arquivo "aff-flags.txt".
+As flags de afetamento sï¿½o muito especiais de devem ser usadas com extrema
+moderaï¿½ï¿½o, especialmente com o conhecimento e consentimento de um Deus
 superior.
 
    V1 V2 V3 V4 V5 V6
-   Valores numéricos que definem as características do objeto, de acordo com o
-seu tipo.  O que cada valor significa é descrito mais adiante, na seção "Tipos
-e Valores".  Apenas os 4 primeiros valores são obrigatórios.
+   Valores numï¿½ricos que definem as caracterï¿½sticas do objeto, de acordo com o
+seu tipo.  O que cada valor significa ï¿½ descrito mais adiante, na seï¿½ï¿½o "Tipos
+e Valores".  Apenas os 4 primeiros valores sï¿½o obrigatï¿½rios.
 
    PESO
-   É o peso em libras do objeto.  É usado para determinar quanto peso o
-personagem pode carregar, e a força necessária para se empunhar, caso seja uma
+   ï¿½ o peso em libras do objeto.  ï¿½ usado para determinar quanto peso o
+personagem pode carregar, e a forï¿½a necessï¿½ria para se empunhar, caso seja uma
 arma.
 
    VALOR
@@ -103,21 +103,21 @@ arma.
    ALUGUEL
    Quanto deve ser cobrado por dia para guardar o objeto.  Deve ser um valor
 aproximado a 10% do valor real do objeto, mas levando em conta o seu tamanho,
-e sua preciosidade.  Atualmente este campo está em desuso no VitaliaMUD.
+e sua preciosidade.  Atualmente este campo estï¿½ em desuso no VitaliaMUD.
 
-   NÍVEL
-   O nível mínimo para usar o objeto.  Este nível não é levado em conta para
-se carregar o objeto no inventário.
+   Nï¿½VEL
+   O nï¿½vel mï¿½nimo para usar o objeto.  Este nï¿½vel nï¿½o ï¿½ levado em conta para
+se carregar o objeto no inventï¿½rio.
 
-   DESCRIÇÕES
-   São campos que servem para oferecer descrições para o objeto.  Estes campos
-são descritos mais adiante, na seção "Descrições".
+   DESCRIï¿½ï¿½ES
+   Sï¿½o campos que servem para oferecer descriï¿½ï¿½es para o objeto.  Estes campos
+sï¿½o descritos mais adiante, na seï¿½ï¿½o "Descriï¿½ï¿½es".
 
-   AFETAMENTOS NUMÉRICOS
-   Define a forma como o personagem será afetado ao vestir ou segurar o
-objeto.  Estes afetamentos se aplicam aos campos numéricos, como a saúde
-máxima, a classe de armadura, força, inteligência, etc.  Os afetamentos são
-descritos mais adiante, na seção "Afetamentos Numéricos".
+   AFETAMENTOS NUMï¿½RICOS
+   Define a forma como o personagem serï¿½ afetado ao vestir ou segurar o
+objeto.  Estes afetamentos se aplicam aos campos numï¿½ricos, como a saï¿½de
+mï¿½xima, a classe de armadura, forï¿½a, inteligï¿½ncia, etc.  Os afetamentos sï¿½o
+descritos mais adiante, na seï¿½ï¿½o "Afetamentos Numï¿½ricos".
 
 
 ================================================================================
@@ -126,78 +126,79 @@ descritos mais adiante, na seção "Afetamentos Numéricos".
 
    1. LIGHT		Fonte de luz
       V1, V2, V4, V5, V6: 0
-      V3: Número de horas/mud que a luz dura. 
+      V3: Nï¿½mero de horas/mud que a luz dura. 
 	  -1 = Luz infinita;
 	   0 = Luz "gasta".
 
    2. SCROLL		Pergaminho
-      V1: Nível das magias.
+      V1: Nï¿½vel das magias.
       V2: Magia 1.
       V3: Magia 2.
       V4: Magia 3.
-	  As magias estão descritas no arquivo "spell.txt".  Se o pergaminho
-	  lançar menos de 3 magias, os campos restantes devem ser completados
+	  As magias estï¿½o descritas no arquivo "spell.txt".  Se o pergaminho
+	  lanï¿½ar menos de 3 magias, os campos restantes devem ser completados
 	  com -1.
       V5, V6: 0
 
-   3. WAND		Vara mágica
-   4. STAFF		Bastão mágico
-      V1: Nível da magia.
-      V2: Número máximo de cargas.
-      V3: Número atual de cargas.
+   3. WAND		Vara mï¿½gica
+   4. STAFF		Bastï¿½o mï¿½gico
+      V1: Nï¿½vel da magia.
+      V2: Nï¿½mero mï¿½ximo de cargas.
+      V3: Nï¿½mero atual de cargas.
       V4: Magia.
-	  As magias estão descritas no arquivo "spell.txt".
+	  As magias estï¿½o descritas no arquivo "spell.txt".
       V5, V6: 0
 
    5. WEAPON		Arma
       V1, V5, V6: 0
-      V2: Número do primeiro lado do dado (X).
-      V3: Tamanho (número de lados) do dado (Y).
+      V2: Nï¿½mero do primeiro lado do dado (X).
+      V3: Tamanho (nï¿½mero de lados) do dado (Y).
       V4: Mensagem.
-	  As mensagens são as mesmas descritas no campo BAREHANDATTACK do
+	  As mensagens sï¿½o as mesmas descritas no campo BAREHANDATTACK do
 	  arquivo "mobile.txt".
 
-   6. FIREWEAPON	Arma de disparo
-   7. MISSILE		Míssil
-   Estes tipos de objetos não estão implementados, portanto, não devem ser
-usados.
+   6. FURNITURE		Mï¿½vel (sofï¿½, cadeira, etc)
+      V1-6: 0
+
+   7. AMMO		Muniï¿½ï¿½o para armas de disparo
+      V1-6: 0
 
    8. TREASURE		Tesouro
       V1-6: 0
 
    9. ARMOR		Armadura
       V1: A classe de armadura aplicada.
-	  Este valor não corresponde ao total da classe de armadura aplicada.
-      Ele é calculado de acordo com o lugar do corpo onde o objeto é vestido.
-      Se for vestido no corpo, o AC é reduzido em 300% deste valor (triplo);
-      na cabeça e nas pernas, o AC é reduzido em 200% deste valor (dobro);
-      e nas outras partes do corpo, o AC é reduzido em 100% deste valor (uma
+	  Este valor nï¿½o corresponde ao total da classe de armadura aplicada.
+      Ele ï¿½ calculado de acordo com o lugar do corpo onde o objeto ï¿½ vestido.
+      Se for vestido no corpo, o AC ï¿½ reduzido em 300% deste valor (triplo);
+      na cabeï¿½a e nas pernas, o AC ï¿½ reduzido em 200% deste valor (dobro);
+      e nas outras partes do corpo, o AC ï¿½ reduzido em 100% deste valor (uma
       vez apenas).
       V2-6: 0
 
 -=> Para entender melhor:
-   Cada parte do corpo precisa ser protegida, certo?  Mas algumas regiões do
-corpo possuem maior importância na sobrevivência da pessoa.  Veja o caso da
-cabeça: é lá que se encontra o cérebro.  E sem uma boa proteção, não há
-cérebro que resista.  O mesmo ocorre com o tronco, onde localizam-se órgãos
-como o coração, pulmões, estômago etc.  Assim, essas regiões precisam ser bem
-protegidas.  O mud, então, considera que os equipamentos dessas partes do
-corpo são de maior importância, e acaba multiplicando o ac aplicado por
-números maiores.
-   O V1 é esse número que será multiplicado de acordo com a importância da
-região a ser protegida: por três para o tronco, por dois para a cabeça e por
+   Cada parte do corpo precisa ser protegida, certo?  Mas algumas regiï¿½es do
+corpo possuem maior importï¿½ncia na sobrevivï¿½ncia da pessoa.  Veja o caso da
+cabeï¿½a: ï¿½ lï¿½ que se encontra o cï¿½rebro.  E sem uma boa proteï¿½ï¿½o, nï¿½o hï¿½
+cï¿½rebro que resista.  O mesmo ocorre com o tronco, onde localizam-se ï¿½rgï¿½os
+como o coraï¿½ï¿½o, pulmï¿½es, estï¿½mago etc.  Assim, essas regiï¿½es precisam ser bem
+protegidas.  O mud, entï¿½o, considera que os equipamentos dessas partes do
+corpo sï¿½o de maior importï¿½ncia, e acaba multiplicando o ac aplicado por
+nï¿½meros maiores.
+   O V1 ï¿½ esse nï¿½mero que serï¿½ multiplicado de acordo com a importï¿½ncia da
+regiï¿½o a ser protegida: por trï¿½s para o tronco, por dois para a cabeï¿½a e por
 um nas outras partes.
-   Se o equipamento for um elmo (cabeça), por exemplo, e for colocado no V1 o
-número 7, multiplica-se isso por dois (2*7)...  O AC será, então, diminuído em
+   Se o equipamento for um elmo (cabeï¿½a), por exemplo, e for colocado no V1 o
+nï¿½mero 7, multiplica-se isso por dois (2*7)...  O AC serï¿½, entï¿½o, diminuï¿½do em
 14 para quem o vestir.
 
-   10. POTION		Poção
-      V1: Nível das magias.
+   10. POTION		Poï¿½ï¿½o
+      V1: Nï¿½vel das magias.
       V2: Magia 1.
       V3: Magia 2.
       V4: Magia 3.
-	  As magias estão descritas no arquivo "spell.txt".  Se o pergaminho
-	  lançar menos de 3 magias, os campos restantes devem ser completados
+	  As magias estï¿½o descritas no arquivo "spell.txt".  Se o pergaminho
+	  lanï¿½ar menos de 3 magias, os campos restantes devem ser completados
 	  com -1.
       V5, V6: 0
 
@@ -214,59 +215,59 @@ número 7, multiplica-se isso por dois (2*7)...  O AC será, então, diminuído em
       V1, V5, V6: 0
       V2: Dano.
       V3: Magia (vide arquivo spell).
-      V4: Nível da magia.
+      V4: Nï¿½vel da magia.
    
 -=> Exemplo de armadilha:
 
 #190
 dinamite~
 uma dinamite~
-Há uma dinamite aqui.~
+Hï¿½ uma dinamite aqui.~
 $p explode, e $n se machuca!~
 14 0 a 0
 0 24 -1 -1
 2 0 0 0
 
 -=> $p especifica o nome do objeto
-    $n especifica o nome do jogador que é afetado pela armadilha
-    A armadilha pode lançar magia ou apenas ferir o jogador. A dinamite, no
-exemplo, não utiliza magia. 
-    A ausência da quarta linha não anula o efeito da armadilha, mas nem o jogador nem
-aqueles que estão à sua volta percebem que ela agiu (somente pela diminuição do hp
+    $n especifica o nome do jogador que ï¿½ afetado pela armadilha
+    A armadilha pode lanï¿½ar magia ou apenas ferir o jogador. A dinamite, no
+exemplo, nï¿½o utiliza magia. 
+    A ausï¿½ncia da quarta linha nï¿½o anula o efeito da armadilha, mas nem o jogador nem
+aqueles que estï¿½o ï¿½ sua volta percebem que ela agiu (somente pela diminuiï¿½ï¿½o do hp
 ou afetamento de uma magia).
 
    15. CONTAINER	Recipiente
-      V1: Peso máximo que pode conter, em libras.
+      V1: Peso mï¿½ximo que pode conter, em libras.
       V2: Flags de recipientes. Deve ser a soma de um ou mais destes valores:
 	  1 -> O recipiente possui tampa, e pode ser fechado ou trancado.
-	  2 -> A tranca do recipiente é a prova de ladrões.
-	  4 -> O recipiente deverá estar fechado quando for carregado.
-	  8 -> O recipiente deverá estar trancado quando for carregado.
-      V3: Número (VNUM) da chave que abre o recipiente (-1 se não existir).
+	  2 -> A tranca do recipiente ï¿½ a prova de ladrï¿½es.
+	  4 -> O recipiente deverï¿½ estar fechado quando for carregado.
+	  8 -> O recipiente deverï¿½ estar trancado quando for carregado.
+      V3: Nï¿½mero (VNUM) da chave que abre o recipiente (-1 se nï¿½o existir).
       V4, V5, V6: 0
 
-   16. NOTE		Papel para anotações
-      V1: 1 se a anotação não puder ser editada/apagada, 0 se puder.
-      V2: Autor (IDNUM) da anotação (deve ser sempre 0).
+   16. NOTE		Papel para anotaï¿½ï¿½es
+      V1: 1 se a anotaï¿½ï¿½o nï¿½o puder ser editada/apagada, 0 se puder.
+      V2: Autor (IDNUM) da anotaï¿½ï¿½o (deve ser sempre 0).
       V3-6: 0
 
-   17. DRINKCON		Recipiente de líquidos
-      V1: Quantidade de líquido que cabe no recipiente.
-      V2: Quantidade atual de líquido que ainda resta no recipiente.
-      V3: Líquido (vide seção "Líquidos").
-      V4: Deve ser 1 se o líquido estiver envenado, ou 0 caso contrário.
+   17. DRINKCON		Recipiente de lï¿½quidos
+      V1: Quantidade de lï¿½quido que cabe no recipiente.
+      V2: Quantidade atual de lï¿½quido que ainda resta no recipiente.
+      V3: Lï¿½quido (vide seï¿½ï¿½o "Lï¿½quidos").
+      V4: Deve ser 1 se o lï¿½quido estiver envenado, ou 0 caso contrï¿½rio.
       V5, V6: 0
 
    18. KEY		Chave
       V1-6: 0
 
    19. FOOD		Comida
-      V1: Número de horas que saciará a fome.
-      V4: 1 se a comida estiver envenenada, 0 caso contrário.
+      V1: Nï¿½mero de horas que saciarï¿½ a fome.
+      V4: 1 se a comida estiver envenenada, 0 caso contrï¿½rio.
       V2, V3, V5, V6: 0
 
    20. MONEY		Amontoado de moedas de ouro
-      V1: Número de moedas de ouro.
+      V1: Nï¿½mero de moedas de ouro.
       V2-6: 0
 
    21. PEN		Caneta
@@ -276,25 +277,31 @@ ou afetamento de uma magia).
       V1-6: 0
 
    23. FOUNTAIN		Fonte
-      V1: Quantidade de líquido que cabe no recipiente.
-      V2: Quantidade atual de líquido que ainda resta no recipiente.
-      V3: Líquido (vide seção "Líquidos").
-      V4: Deve ser 1 se o líquido estiver envenado, ou 0 caso contrário.
+      V1: Quantidade de lï¿½quido que cabe no recipiente.
+      V2: Quantidade atual de lï¿½quido que ainda resta no recipiente.
+      V3: Lï¿½quido (vide seï¿½ï¿½o "Lï¿½quidos").
+      V4: Deve ser 1 se o lï¿½quido estiver envenado, ou 0 caso contrï¿½rio.
       V5, V6: 0
 
    24. WINGS		Asas
       V1, V2, V4, V5, V6: 0
-      V3: Número de horas/mud que a asa irá durar (-1 = infinito).
+      V3: Nï¿½mero de horas/mud que a asa irï¿½ durar (-1 = infinito).
 
    25. CORPSE		Corpo
-      V1: Número ID do jogador (deve ser sempre 0).
+      V1: Nï¿½mero ID do jogador (deve ser sempre 0).
       V2-6: 0
 
-   26. PORTAL		Portal mágico
-      V1: Número (VNUM) da sala para onde o portal deve levar.
+   26. PORTAL		Portal mï¿½gico
+      V1: Nï¿½mero (VNUM) da sala para onde o portal deve levar.
       V2-6: 0
 
    27. BOOK		Livro
+      V1-6: 0
+
+   28. PLANT		Planta
+      V1-6: 0
+
+   29. FIREWEAPON	Arma de fogo/disparo
       V1-6: 0
 
 
@@ -303,37 +310,37 @@ ou afetamento de uma magia).
 --------------------------------------------------------------------------------
    a. GLOW (1)		Objeto possui uma aura brilhante
    b. HUM (2)		Objeto emite um fraco zunido
-   Estas flags não possuem nenhum efeito real, apenas uma mensagem é exibida
-quando se vê o objeto na sala ou no inventário.
+   Estas flags nï¿½o possuem nenhum efeito real, apenas uma mensagem ï¿½ exibida
+quando se vï¿½ o objeto na sala ou no inventï¿½rio.
 
    c. !RENT (4)
-   O objeto não pode ser guardado, e será descartado se o personagem sair do
+   O objeto nï¿½o pode ser guardado, e serï¿½ descartado se o personagem sair do
 jogo carregando-o.
 
    d. !DONATE (8)
-   O objeto não pode ser doado usando o comando DONATE ou CLAN DONATE.
+   O objeto nï¿½o pode ser doado usando o comando DONATE ou CLAN DONATE.
 
    e. !INVIS (16)
-   O objeto não poderá ficar invisível usando magias.
+   O objeto nï¿½o poderï¿½ ficar invisï¿½vel usando magias.
 
    f. INVISIBLE (32)
-   O objeto é (ou está) invisível.
+   O objeto ï¿½ (ou estï¿½) invisï¿½vel.
 
    g. MAGIC (64)
-   O objeto possui uma aura mágica, e não pode ser encantado.
+   O objeto possui uma aura mï¿½gica, e nï¿½o pode ser encantado.
 
    h. !DROP (128)
-   O objeto é (ou está) amaldiçoado, e não poderá ser descartado até que sua
-maldição seja desfeita.
+   O objeto ï¿½ (ou estï¿½) amaldiï¿½oado, e nï¿½o poderï¿½ ser descartado atï¿½ que sua
+maldiï¿½ï¿½o seja desfeita.
 
-   i. BLESS (256)	Objeto abençoado
-   Esta flag não possui nenhum efeito real, apenas uma mensagem é exibida
-quando se vê o objeto na sala ou no inventário, usando a magia "detect align".
+   i. BLESS (256)	Objeto abenï¿½oado
+   Esta flag nï¿½o possui nenhum efeito real, apenas uma mensagem ï¿½ exibida
+quando se vï¿½ o objeto na sala ou no inventï¿½rio, usando a magia "detect align".
 
    j. !GOOD (512)
    k. !EVIL (1024)
    l. !NEUTRAL (2048)
-   O objeto não poderá ser usado por pessoas boas, más ou neutras,
+   O objeto nï¿½o poderï¿½ ser usado por pessoas boas, mï¿½s ou neutras,
 respectivamente.
 
    m. !MAGE (4096)
@@ -342,33 +349,33 @@ respectivamente.
    p. !WARRIOR (32768)
    t. !DRUID (524288)
    u. !BARD
-   O objeto não poderá ser usado por magos, clérigos, ladrões, guerreiros,
+   O objeto nï¿½o poderï¿½ ser usado por magos, clï¿½rigos, ladrï¿½es, guerreiros,
 druidas ou bardos, respectivamente.
 
    q. !SELL (65536)
-   O objeto não pode ser vendido em lojas, ou para lojistas.
+   O objeto nï¿½o pode ser vendido em lojas, ou para lojistas.
 
    r. 2HANDS (131072)
-   Para objetos tipo WEAPON, serão necessárias as duas mãos (WIELD e HOLD)
-para empunhar a arma.  Apesar de usar as duas mãos, deve-se definir apenas
-WIELD como posição do corpo que o objeto ocupa.
+   Para objetos tipo WEAPON, serï¿½o necessï¿½rias as duas mï¿½os (WIELD e HOLD)
+para empunhar a arma.  Apesar de usar as duas mï¿½os, deve-se definir apenas
+WIELD como posiï¿½ï¿½o do corpo que o objeto ocupa.
 
    s. POISONED (262144)
    Arma envenenada, contaminando aquele que recebe o golpe.
 
 
 ================================================================================
- Posições do Corpo
+ Posiï¿½ï¿½es do Corpo
 --------------------------------------------------------------------------------
-   a. TAKE (1)		Permitido pegar o objeto do chão.
+   a. TAKE (1)		Permitido pegar o objeto do chï¿½o.
    b. FINGER (2)	Vestir nos dedos
-   c. NECK (4)		Vestir em volta do pescoço
+   c. NECK (4)		Vestir em volta do pescoï¿½o
    d. BODY (8)		Vestir no corpo
-   e. HEAD (16)		Vestir na cabeça
+   e. HEAD (16)		Vestir na cabeï¿½a
    f. LEGS (32)		Vestir nas pernas
-   g. FEET (64)		Vestir nos pés
-   h. HANDS (128)	Vestir nas mãos
-   i. ARMS (256)	Vestir nos braços
+   g. FEET (64)		Vestir nos pï¿½s
+   h. HANDS (128)	Vestir nas mï¿½os
+   i. ARMS (256)	Vestir nos braï¿½os
    j. SHIELD (512)	Usar como escudo
    k. ABOUT (1024)	Vestir sobre o corpo
    l. WAIST (2048)	Vestir em volta da cintura
@@ -379,35 +386,36 @@ WIELD como posição do corpo que o objeto ocupa.
    q. EAR (65536)	Vestir nas orelhas
    r. FACE (131072)	Vestir no rosto
    s. NOSE (262144)	Vestir no nariz
-   t. INSIGNE (524288)	Usar como insígnia
+   t. INSIGNE (524288)	Usar como insï¿½gnia
+   u. QUIVER (1048576)	Usar como aljava (para flechas)
 
--=> Uma pequena dica: quando for fazer um equipamento, não se esqueça da
-flag TAKE, senão não se pode pegá-lo no chão.  Não se usa essa flag
-normalmente em itens que servem de cenário, que não devem ser removidos de
-onde estão.
+-=> Uma pequena dica: quando for fazer um equipamento, nï¿½o se esqueï¿½a da
+flag TAKE, senï¿½o nï¿½o se pode pegï¿½-lo no chï¿½o.  Nï¿½o se usa essa flag
+normalmente em itens que servem de cenï¿½rio, que nï¿½o devem ser removidos de
+onde estï¿½o.
  
 
 ================================================================================
- Líquidos
+ Lï¿½quidos
 --------------------------------------------------------------------------------
-   Para objetos do tipo DRINKCON e FOUNTAIN, a partir da versão 0.11 do
-VialiaMUD, não é mais necessário colocar o nome do líquido que está contido
-no recipiente como um dos IDs do objeto (para o CircleMUD e versões anteriores
-do VitaliaMUD, havia essa necessidade).  Na criação do objeto, o MUD ajusta
-automaticamente o nome do líquido em seu interior.
+   Para objetos do tipo DRINKCON e FOUNTAIN, a partir da versï¿½o 0.11 do
+VialiaMUD, nï¿½o ï¿½ mais necessï¿½rio colocar o nome do lï¿½quido que estï¿½ contido
+no recipiente como um dos IDs do objeto (para o CircleMUD e versï¿½es anteriores
+do VitaliaMUD, havia essa necessidade).  Na criaï¿½ï¿½o do objeto, o MUD ajusta
+automaticamente o nome do lï¿½quido em seu interior.
 
    Por exemplo, se houver um objeto "uma garrafa", com o ID "garrafa", com
-pelo menos uma unidade de líquido e o campo Líquido ajustado para cerveja (1),
-o MUD irá automaticamente ajustar o campo IDS para "garrafa cerveja", para que
-o jogador possa tomar o líquido digitando apenas "drink cerveja".
+pelo menos uma unidade de lï¿½quido e o campo Lï¿½quido ajustado para cerveja (1),
+o MUD irï¿½ automaticamente ajustar o campo IDS para "garrafa cerveja", para que
+o jogador possa tomar o lï¿½quido digitando apenas "drink cerveja".
 
-   As unidades usadas nos campos V1 (Qtd máxima) e V2 (Qtd atual) é
-equivalente ao número de goles (comando SIP) que contém no objeto.  A cada
-comando DRINK, o jogador bebe uma quantidade aleatória de goles, variando
-entre 3 e 10, ou o máximo que houver no recipiente.
+   As unidades usadas nos campos V1 (Qtd mï¿½xima) e V2 (Qtd atual) ï¿½
+equivalente ao nï¿½mero de goles (comando SIP) que contï¿½m no objeto.  A cada
+comando DRINK, o jogador bebe uma quantidade aleatï¿½ria de goles, variando
+entre 3 e 10, ou o mï¿½ximo que houver no recipiente.
 
-   Os possíveis valores para o campo "Líquido" dos objetos DRINKCON e FOUNTAIN
-estão descritos na tabela a seguir, indicando também quantas horas o líquido
+   Os possï¿½veis valores para o campo "Lï¿½quido" dos objetos DRINKCON e FOUNTAIN
+estï¿½o descritos na tabela a seguir, indicando tambï¿½m quantas horas o lï¿½quido
 produz de embreaguez, quantas horas tira a fome, a sede, e quais os IDs que
 o mud adiciona automaticamente ao objeto.
 
@@ -416,97 +424,97 @@ o mud adiciona automaticamente ao objeto.
       Horas sem fome --------------.       |       |
       Horas de embreaguez -.       |       |       |
                            |       |       |       |
-   0. Água		   0	   1	  10	   agua
+   0. ï¿½gua		   0	   1	  10	   agua
    1. Cerveja		   3	   2	   5	   cerveja
    2. Vinho		   5	   2	   5	   vinho
    3. Chopp		   2	   2	   5	   chopp
    4. Chopp escuro	   1	   2	   5	   chopp
-   5. Uísque		   6	   1	   4	   uisque
+   5. Uï¿½sque		   6	   1	   4	   uisque
    6. Limonada		   0	   1	   8	   limonada
    7. Rabo-de-galo	  10	   0	   0	   rabo-de-galo
    8. Espec local	   3	   3	   3	   especialidade
    9. Saliva		   0	   4	  -8	   saliva
   10. Leite		   0	   3	   6	   leite
-  11. Chá		   0	   1	   6	   cha
-  12. Café		   0	   1	   6	   cafe
+  11. Chï¿½		   0	   1	   6	   cha
+  12. Cafï¿½		   0	   1	   6	   cafe
   13. Sangue		   0	   2	  -1	   sangue
-  14. Água salgada	   0	   1	  -2	   agua
-  15. Água cristalina	   0	   0	  13	   agua
-  16. Néctar		   0	   2	   9	   nectar
+  14. ï¿½gua salgada	   0	   1	  -2	   agua
+  15. ï¿½gua cristalina	   0	   0	  13	   agua
+  16. Nï¿½ctar		   0	   2	   9	   nectar
   17. Champagne            5       2       5       champagne
   18. Hidromel             8       3       8       hidromel
   19. Sidra                6       5       3       sidra
   20. Rum                 10       1       0       rum
 
    Os valores da tabela acima para horas de embreaguez, sem fome e sem sede
-são equivalentes a quatro goles do líquido em questão.  Supondo que um jogador
-usa o comando DRINK para beber água salgada de um cantil, e que bebeu 8 goles
-do líquido.  De acordo com a tabela acima, sua embreaguez não será alterada
-(8/4*0 = 0), saciará sua fome por duas horas (8/4*1 = 2) e aumentará sua sede
+sï¿½o equivalentes a quatro goles do lï¿½quido em questï¿½o.  Supondo que um jogador
+usa o comando DRINK para beber ï¿½gua salgada de um cantil, e que bebeu 8 goles
+do lï¿½quido.  De acordo com a tabela acima, sua embreaguez nï¿½o serï¿½ alterada
+(8/4*0 = 0), saciarï¿½ sua fome por duas horas (8/4*1 = 2) e aumentarï¿½ sua sede
 o equivalente a quatro horas (8/4*(-2) = -4).
 
 
 ================================================================================
- Descrições
+ Descriï¿½ï¿½es
 --------------------------------------------------------------------------------
 
 ------------------------
  E
  <ids>~
- <descrição>
+ <descriï¿½ï¿½o>
  ~
 ------------------------
 
    IDS
-   Os nomes que identificam a descrição (que são usados no comando LOOK).
+   Os nomes que identificam a descriï¿½ï¿½o (que sï¿½o usados no comando LOOK).
 
-   DESCRIÇÃO
-   A descrição que deverá ser mostrada.
+   DESCRIï¿½ï¿½O
+   A descriï¿½ï¿½o que deverï¿½ ser mostrada.
 
-   As descrições são informações extras sobre aparência, história e
+   As descriï¿½ï¿½es sï¿½o informaï¿½ï¿½es extras sobre aparï¿½ncia, histï¿½ria e
 particulariedades de um objeto.  Deve ser usado da seguinte mandeira:
 
-<peso> <valor> <aluguel> <nível>
+<peso> <valor> <aluguel> <nï¿½vel>
 E
 ids~
-Descrição
+Descriï¿½ï¿½o
 ~
 #XX00
 
--> Se houver mais de uma descrição, ambas devem ser antecedidas por E.
+-> Se houver mais de uma descriï¿½ï¿½o, ambas devem ser antecedidas por E.
 
-<peso> <valor> <aluguel> <nível>
+<peso> <valor> <aluguel> <nï¿½vel>
 E
 ids1~
-Descrição
+Descriï¿½ï¿½o
 ~
 E
 ids2~
-Descrição
+Descriï¿½ï¿½o
 ~
 #XX01
 
 ------------------------
  EO
  <ids>~
- <descrição>
+ <descriï¿½ï¿½o>
  ~
 ------------------------
 
-   Para recipientes, é possível especificar uma descrição adicional para
-caso o recipiente esteja aberto.  Assim, deverá haver duas descrições: a
+   Para recipientes, ï¿½ possï¿½vel especificar uma descriï¿½ï¿½o adicional para
+caso o recipiente esteja aberto.  Assim, deverï¿½ haver duas descriï¿½ï¿½es: a
 primeira para quando ele estiver fechado, e a segunda para quando ele
-estiver aberto.  A descrição para quando estiver aberto deve vir DEPOIS da
-descrição normal (fechado), a descrição deve começar com o comando 'EO' ao
-invés de 'E' apenas, e os IDs devem ser idênticos, dessa maneira:
+estiver aberto.  A descriï¿½ï¿½o para quando estiver aberto deve vir DEPOIS da
+descriï¿½ï¿½o normal (fechado), a descriï¿½ï¿½o deve comeï¿½ar com o comando 'EO' ao
+invï¿½s de 'E' apenas, e os IDs devem ser idï¿½nticos, dessa maneira:
 
 E
-armário~
-Descrição para o armário fechado.
+armï¿½rio~
+Descriï¿½ï¿½o para o armï¿½rio fechado.
 ~
 EO
-armário~
-Descrição para o armário aberto.
+armï¿½rio~
+Descriï¿½ï¿½o para o armï¿½rio aberto.
 ~
 
 ------------------------
@@ -516,14 +524,14 @@ Descrição para o armário aberto.
  ~
 ------------------------
 
-   Como um caso especial de descrição, é possível colocar pequenos comandos a
-serem executados, no lugar da descrição a ser mostrada.  Com isso, é possível
-criar objetos com pequenas funcionalidades especiais.  O comando que é
-executado não é mostrado para o jogador que olha o objeto, apenas o resultado
+   Como um caso especial de descriï¿½ï¿½o, ï¿½ possï¿½vel colocar pequenos comandos a
+serem executados, no lugar da descriï¿½ï¿½o a ser mostrada.  Com isso, ï¿½ possï¿½vel
+criar objetos com pequenas funcionalidades especiais.  O comando que ï¿½
+executado nï¿½o ï¿½ mostrado para o jogador que olha o objeto, apenas o resultado
 do comando, como se o jogador tivesse digitado o mesmo.  Para isso, deve-se
-escrever o comando como descrição do objeto, precedido de "$> " (símbolo de
-dólar, símbolo de maior-que, e um espaço).  Deve-se tomar cuidado ao usar este
-recurso, e só o fazer com permissão dos Deuses mais elevados.
+escrever o comando como descriï¿½ï¿½o do objeto, precedido de "$> " (sï¿½mbolo de
+dï¿½lar, sï¿½mbolo de maior-que, e um espaï¿½o).  Deve-se tomar cuidado ao usar este
+recurso, e sï¿½ o fazer com permissï¿½o dos Deuses mais elevados.
 
  #1891
  espelho~
@@ -538,11 +546,11 @@ recurso, e só o fazer com permissão dos Deuses mais elevados.
  $> look self
  ~
 
-   No exemplo acima, olhar para o objeto (look espelho) terá o mesmo efeito de
-olhar para sí mesmo (look self).
+   No exemplo acima, olhar para o objeto (look espelho) terï¿½ o mesmo efeito de
+olhar para sï¿½ mesmo (look self).
  
 ================================================================================
- Afetamentos Numéricos
+ Afetamentos Numï¿½ricos
 --------------------------------------------------------------------------------
 
 ------------------------
@@ -551,72 +559,72 @@ olhar para sí mesmo (look self).
 ------------------------
 
    AFETAMENTO
-   Um número, de acordo com a tabela a seguir, indicando qual característica
+   Um nï¿½mero, de acordo com a tabela a seguir, indicando qual caracterï¿½stica
 do personagem deve ser alterada.
 
    VALOR
-   O valor da alteração na característica do personagem.
+   O valor da alteraï¿½ï¿½o na caracterï¿½stica do personagem.
 
    Afetamentos:
-	 1  STR			Aplicar à força
-	 2  DEX			Aplicar à destreza
-	 3  INT			Aplicar à inteligência
-	 4  WIS			Aplicar à sabedoria
-	 5  CON			Aplicar à constituição
-	 6  CHA			Aplicar à carisma
-	 7  CLASS		** NÃO DEVE SER USADO **
-	 8  LEVEL		** NÃO DEVE SER USADO **
-	 9  AGE			Aplicar à idade do personagem
+	 1  STR			Aplicar ï¿½ forï¿½a
+	 2  DEX			Aplicar ï¿½ destreza
+	 3  INT			Aplicar ï¿½ inteligï¿½ncia
+	 4  WIS			Aplicar ï¿½ sabedoria
+	 5  CON			Aplicar ï¿½ constituiï¿½ï¿½o
+	 6  CHA			Aplicar ï¿½ carisma
+	 7  CLASS		** Nï¿½O DEVE SER USADO **
+	 8  LEVEL		** Nï¿½O DEVE SER USADO **
+	 9  AGE			Aplicar ï¿½ idade do personagem
 	10  CHAR_WEIGHT		Aplicar ao peso do personagem
-	11  CHAR_HEIGHT		Aplicar à altura do personagem
-	12  MANA		Aplicar à magia total
-	13  HIT			Aplicar à saúde total
+	11  CHAR_HEIGHT		Aplicar ï¿½ altura do personagem
+	12  MANA		Aplicar ï¿½ magia total
+	13  HIT			Aplicar ï¿½ saï¿½de total
 	14  MOVE		Aplicar ao movimento total
-	15  GOLD		** NÃO DEVE SER USADO **
-	16  EXP			** NÃO DEVE SER USADO **
-	17  AC			Aplicar à classe de armadura
+	15  GOLD		** Nï¿½O DEVE SER USADO **
+	16  EXP			** Nï¿½O DEVE SER USADO **
+	17  AC			Aplicar ï¿½ classe de armadura
 	18  HITROLL		Aplicar ao Hitroll
 	19  DAMROLL		Aplicar ao Damroll
-	20  SAVING_PARA		Aplicar à resistência contra paralisação
-	21  SAVING_ROD		Aplicar à resistência contra itens mágicos
-	22  SAVING_PETRI	Aplicar à resistência contra petrificação
-	23  SAVING_BREATH	Aplicar à resistência contra hálito
-	24  SAVING_SPELL	Aplicar à resistência contra magias
+	20  SAVING_PARA		Aplicar ï¿½ resistï¿½ncia contra paralisaï¿½ï¿½o
+	21  SAVING_ROD		Aplicar ï¿½ resistï¿½ncia contra itens mï¿½gicos
+	22  SAVING_PETRI	Aplicar ï¿½ resistï¿½ncia contra petrificaï¿½ï¿½o
+	23  SAVING_BREATH	Aplicar ï¿½ resistï¿½ncia contra hï¿½lito
+	24  SAVING_SPELL	Aplicar ï¿½ resistï¿½ncia contra magias
 
-   Os afetamentos numéricos são características do personagem que o
-equipamento interfere.  Em um equipamento sem descrições extras, deve ficar
+   Os afetamentos numï¿½ricos sï¿½o caracterï¿½sticas do personagem que o
+equipamento interfere.  Em um equipamento sem descriï¿½ï¿½es extras, deve ficar
 da seguinte maneira:
 
-<peso> <valor> <aluguel> <nível>
+<peso> <valor> <aluguel> <nï¿½vel>
 A
-nº quantidade
+nï¿½ quantidade
 A
-nº quantidade
+nï¿½ quantidade
 #XX00
 
--=> Um equipamento com descrições extras ficaria dessa maneira:
+-=> Um equipamento com descriï¿½ï¿½es extras ficaria dessa maneira:
 
-<peso> <valor> <aluguel> <nível>
+<peso> <valor> <aluguel> <nï¿½vel>
 E
 ids1~
-Descrição
+Descriï¿½ï¿½o
 ~
 E
 ids2~
-Descrição
+Descriï¿½ï¿½o
 ~
 A
-nº quantidade
+nï¿½ quantidade
 A
-nº quantidade
+nï¿½ quantidade
 #XX00
 
-   O nº consiste no número do afetamento (vide lista acima) e a quantidade é
-em quanto o personagem é afetado.  Um objeto que dê 1 (mais um ponto) de STR
-e tire 2 de DEX (menos dois pontos) deveria ter essas características
+   O nï¿½ consiste no nï¿½mero do afetamento (vide lista acima) e a quantidade ï¿½
+em quanto o personagem ï¿½ afetado.  Um objeto que dï¿½ 1 (mais um ponto) de STR
+e tire 2 de DEX (menos dois pontos) deveria ter essas caracterï¿½sticas
 expressas assim:
 
-<peso> <valor> <aluguel> <nível>
+<peso> <valor> <aluguel> <nï¿½vel>
 A
 1 1
 A
@@ -628,16 +636,16 @@ A
  Exemplos
 --------------------------------------------------------------------------------
 #XX01
-arma aço~
-a arma de aço~
-Uma arma de aço foi deixada aqui.~
+arma aï¿½o~
+a arma de aï¿½o~
+Uma arma de aï¿½o foi deixada aqui.~
 ~
 5 a an
 0 2 3 11
 10 12000 1200 10
 E
-arma aço~
-Esta arma parece ser feita de resistente aço.
+arma aï¿½o~
+Esta arma parece ser feita de resistente aï¿½o.
 ~
 A
 18 2

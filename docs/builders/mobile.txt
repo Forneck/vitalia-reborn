@@ -6,7 +6,7 @@
 /_p~~~~~~~~~~\$@|/---------';;;     ;;  ;;   .,' ;;   ;;   ;;  .,' ;;-------'
               \<M`           ;     ,;;, ';,' ';,';;.',;;, ,;;, ';,';;.'
                `(B
-_________________`?____________________[ Referência para Criação de Áreas ]___
+_________________`?____________________[ Referï¿½ncia para Criaï¿½ï¿½o de ï¿½reas ]___
 
 Autores: Juliano Ravasi Ferraz <blug@mud.linkway.com.br>
 	 Ana Carolina Cyrino <nemesis@mud.linkway.com.br>
@@ -18,9 +18,9 @@ $Id: mobile.txt,v 1.8 2003/03/14 02:54:03 jrf Exp $
 ################################################################################
 
    Cada monstro no arquivo de monstros do VitaliaMUD, deve iniciar com um
-sinal de sustenido (#) seguido de seu número, e terminar com a letra "E" ou
+sinal de sustenido (#) seguido de seu nï¿½mero, e terminar com a letra "E" ou
 "S" em uma linha em branco, de acordo com o tipo de monstro.  Entre estes
-marcadores, deve-se inserir os elementos que dão as características ao
+marcadores, deve-se inserir os elementos que dï¿½o as caracterï¿½sticas ao
 monstro, neste formato:
 
 ------------------------
@@ -29,83 +29,83 @@ monstro, neste formato:
  <nome-curto>~
  <nome-longo>
  ~
- <descrição>
+ <descriï¿½ï¿½o>
  ~
  <flags> <aff> <alinh> <tipo>
- {informações específicas}
+ {informaï¿½ï¿½es especï¿½ficas}
  <tipo>
 ------------------------
 
    VNUM
-   O número do monstro.  O número deve estar dentro do intervalo de números da
-área em construção.  Os monstros devem ser dispostos no arquivo em ordem
-numérica crescente, do menor para o maior.
+   O nï¿½mero do monstro.  O nï¿½mero deve estar dentro do intervalo de nï¿½meros da
+ï¿½rea em construï¿½ï¿½o.  Os monstros devem ser dispostos no arquivo em ordem
+numï¿½rica crescente, do menor para o maior.
 
    IDS
-   Os nomes que identificam o monstro (que são usados em KILL, LOOK, KICK,
+   Os nomes que identificam o monstro (que sï¿½o usados em KILL, LOOK, KICK,
 TRACK, etc).  Coloque aqui nomes que podem ser identificados tanto se o
 jogador ler o NOME-CURTO, quanto o NOME-LONGO.
-   Em versões anteriores do VitaliaMUD, costumava-se duplicar os nomes que
+   Em versï¿½es anteriores do VitaliaMUD, costumava-se duplicar os nomes que
 possuiam acentos, deixando um dos nomes sem acentos, para que os jogadores
-que não tivessem a capacidade de digitá-los pudessem ainda assim usar os
-comandos.  Contudo, agora não há mais tal necessidade, pois o MUD já possui
-formas de reconhecer e comparar palavras acentuadas e não-acentuadas.
-   Você não deve incluir artigos, pronomes e outros nome menos importantes
-nesse campo.  Seria muito estranho e muito perigoso um id "o dragão".
-Você poderia usar o comando "kill o" para atacar tal mob, por exemplo.
+que nï¿½o tivessem a capacidade de digitï¿½-los pudessem ainda assim usar os
+comandos.  Contudo, agora nï¿½o hï¿½ mais tal necessidade, pois o MUD jï¿½ possui
+formas de reconhecer e comparar palavras acentuadas e nï¿½o-acentuadas.
+   Vocï¿½ nï¿½o deve incluir artigos, pronomes e outros nome menos importantes
+nesse campo.  Seria muito estranho e muito perigoso um id "o dragï¿½o".
+Vocï¿½ poderia usar o comando "kill o" para atacar tal mob, por exemplo.
 
    NOME-CURTO
-   Este é o nome curto do monstro.  Este nome não deve começar com letra
-maiúscula, exceto se for o nome próprio do monstro (ex: "Júpiter").  De uma
+   Este ï¿½ o nome curto do monstro.  Este nome nï¿½o deve comeï¿½ar com letra
+maiï¿½scula, exceto se for o nome prï¿½prio do monstro (ex: "Jï¿½piter").  De uma
 forma geral, esse nome deve vir acompanhado de um artigo (o, a, um, uma).
-Esse nome será usado nas mensagens de luta, por exemplo:
-"Você tenta retalhar *um lenhador* mas erra por quilômetros."
+Esse nome serï¿½ usado nas mensagens de luta, por exemplo:
+"Vocï¿½ tenta retalhar *um lenhador* mas erra por quilï¿½metros."
 
    NOME-LONGO
-   Este é o texto que irá aparecer quando um jogador entrar ou olhar a sala
-onde o monstro estiver.  Deve ser uma mensagem dizendo que o monstro está no
+   Este ï¿½ o texto que irï¿½ aparecer quando um jogador entrar ou olhar a sala
+onde o monstro estiver.  Deve ser uma mensagem dizendo que o monstro estï¿½ no
 lugar e o que ele se encontra fazendo.  Deve-se deixar claro nesta frase uma
-ou mais das palavras que estão no campo IDS, para que o jogador saiba o nome
+ou mais das palavras que estï¿½o no campo IDS, para que o jogador saiba o nome
 do monstro para usar com os comandos KILL, LOOK, etc. Por exemplo:
-"Um lenhador está aqui, descansando de seu árduo trabalho."
+"Um lenhador estï¿½ aqui, descansando de seu ï¿½rduo trabalho."
 
-   DESCRIÇÃO
-   Uma descrição de algumas linhas da aparência do monstro.  Será mostrada
+   DESCRIï¿½ï¿½O
+   Uma descriï¿½ï¿½o de algumas linhas da aparï¿½ncia do monstro.  Serï¿½ mostrada
 quando o jogador digitar LOOK seguido de um dos IDs do monstro.
 
    FLAGS
-   Este campo contém as flags que definem várias características do monstro.
+   Este campo contï¿½m as flags que definem vï¿½rias caracterï¿½sticas do monstro.
 Este campo pode ser escrito de duas formas: usando letras, onde cada letra
-indica uma das flags do monstro; e usando números, que indica a soma do valor
-de cada uma das flags.  O primeiro método, usando letras, é preferível, pois
-permite uma melhor leitura.  As diversas flags de monstros são descritas mais
-adiante, na seção "Flags".
+indica uma das flags do monstro; e usando nï¿½meros, que indica a soma do valor
+de cada uma das flags.  O primeiro mï¿½todo, usando letras, ï¿½ preferï¿½vel, pois
+permite uma melhor leitura.  As diversas flags de monstros sï¿½o descritas mais
+adiante, na seï¿½ï¿½o "Flags".
 
    AFF
-   Este campo contém as flags de afetamento do monstro.  Como no campo FLAGS,
-pode-se escrever este campo de duas formas, usando letras ou números, porém é
-preferível o uso de letras.  As diversas flags de afetamento são descritas
+   Este campo contï¿½m as flags de afetamento do monstro.  Como no campo FLAGS,
+pode-se escrever este campo de duas formas, usando letras ou nï¿½meros, porï¿½m ï¿½
+preferï¿½vel o uso de letras.  As diversas flags de afetamento sï¿½o descritas
 no arquivo "aff-flags.txt".
 
    ALINH
    O alinhamento do monstro.  Valores iguais ou inferiores a -350 indicam que
-o monstro é mau (possui aura avermelhada), valores entre -350 e 350
-indicam que o monstro é neutro, e valores iguais ou superiores a 350 indicam
-que o monstro é bom (possui aura azulada).  Ao matar monstros de determinado
+o monstro ï¿½ mau (possui aura avermelhada), valores entre -350 e 350
+indicam que o monstro ï¿½ neutro, e valores iguais ou superiores a 350 indicam
+que o monstro ï¿½ bom (possui aura azulada).  Ao matar monstros de determinado
 alinhamento, o alinhamento do jogador tende a se tornar o inverso do
 alinhamento do monstro.
 
    TIPO
    Define o tipo do monstro.  Atualmente existem 2 tipos de monstros: os
 monstros tipo "S" (de Simple) e os monstros tipo "E" (de Enhanced).  Ao
-definir o tipo de monstro, o campo INFORMAÇÕES ESPECÍFICAS aceitará
-determinados campos, de acordo com o tipo.  As informações que cada um dos
-tipos de monstro aceitam são descritas mais adiante, nas seções "Informações
-Específicas de monstros tipo 'S'" e "Informações específicas de monstros tipo
+definir o tipo de monstro, o campo INFORMAï¿½ï¿½ES ESPECï¿½FICAS aceitarï¿½
+determinados campos, de acordo com o tipo.  As informaï¿½ï¿½es que cada um dos
+tipos de monstro aceitam sï¿½o descritas mais adiante, nas seï¿½ï¿½es "Informaï¿½ï¿½es
+Especï¿½ficas de monstros tipo 'S'" e "Informaï¿½ï¿½es especï¿½ficas de monstros tipo
 'E'".
-   Ao terminar de descrever as Informações Específicas do monstro, a mesma
-letra que foi usada para definir o tipo do monstro deverá ser repetida, em uma
-linha em branco, indicando que alí termina o monstro, e começa o seguinte.
+   Ao terminar de descrever as Informaï¿½ï¿½es Especï¿½ficas do monstro, a mesma
+letra que foi usada para definir o tipo do monstro deverï¿½ ser repetida, em uma
+linha em branco, indicando que alï¿½ termina o monstro, e comeï¿½a o seguinte.
 
 
 ================================================================================
@@ -113,189 +113,196 @@ linha em branco, indicando que alí termina o monstro, e começa o seguinte.
 --------------------------------------------------------------------------------
 
    a. NOSPEC (1)
-   Desativa funções especiais.  Essa flag não deve ser usada nos arquivos de
+   Desativa funï¿½ï¿½es especiais.  Essa flag nï¿½o deve ser usada nos arquivos de
 monstros.
 
    b. SENTINEL (2)
-   O monstro irá ficar parado na sala onde ele estiver, a menos que seja
-controlado por um Deus, ou por magia.  Sem esta flag, o monstro anda através
+   O monstro irï¿½ ficar parado na sala onde ele estiver, a menos que seja
+controlado por um Deus, ou por magia.  Sem esta flag, o monstro anda atravï¿½s
 das salas, automaticamente.
 
    c. SCAVENGER (4)
-   O monstro irá tomar para sí os objetos que forem deixados ao chão da sala
+   O monstro irï¿½ tomar para sï¿½ os objetos que forem deixados ao chï¿½o da sala
 que ele se encontrar.
 
    d. NOPOISON (8)
-   Não pode ser envenenado (magia poison).
+   Nï¿½o pode ser envenenado (magia poison).
 
    e. AWARE (16)
-   A habilidade backstab não terá sucesso quando usada contra o monstro.
+   A habilidade backstab nï¿½o terï¿½ sucesso quando usada contra o monstro.
 
    f. AGGRESSIVE (32)
-   O monstro irá atacar qualquer personagem (que não seja outro monstro) que
+   O monstro irï¿½ atacar qualquer personagem (que nï¿½o seja outro monstro) que
 estiver na mesma sala.
 
    g. STAY_ZONE (64)
-   Para monstros sem a flag SENTINAL, a presença desta flag não permitirá que
-o monstro saia da área da qual faz parte.
+   Para monstros sem a flag SENTINAL, a presenï¿½a desta flag nï¿½o permitirï¿½ que
+o monstro saia da ï¿½rea da qual faz parte.
 
    h. WIMPY (128)
    Se durante a luta, a quantidade de HP (Hit Points) do monstro cair para
-menos de 20% do total, ele irá fugir da luta automaticamente.  Se esta flag
-for usada em conjunto com a flag AGGRESSIVE, o monstro irá atacar apenas os
+menos de 20% do total, ele irï¿½ fugir da luta automaticamente.  Se esta flag
+for usada em conjunto com a flag AGGRESSIVE, o monstro irï¿½ atacar apenas os
 personagens que estiverem dormindo.
 
    i. AGGR_EVIL (256)
    j. AGGR_GOOD (512)
    k. AGGR_NEUTRAL (1024)
-   Como a flag AGGRESSIVE, porém, o monstro só atacará personagens maus (flag
+   Como a flag AGGRESSIVE, porï¿½m, o monstro sï¿½ atacarï¿½ personagens maus (flag
 AGGR_EVIL), personagens bons (flag AGGR_GOOD) ou neutros (flag AGGR_NEUTRAL).
 Mais de uma dessas flags podem ser usadas ao mesmo tempo.
 
    l. MEMORY (2048)
-   O monstro irá se lembrar dos jogadores que o atacarem, e irão atacar sempre
+   O monstro irï¿½ se lembrar dos jogadores que o atacarem, e irï¿½o atacar sempre
 que os verem.
 
    m. HELPER (4096)
    Ajuda outros monstros de mesmo alinhamento que estiverem lutando na sala.
 
    n. NOCHARM (8192)
-   Não pode ser encantado (magia charm person).
+   Nï¿½o pode ser encantado (magia charm person).
 
    o. NOSUMMON (16384)
-   Não pode ser convocado (magia summon).
+   Nï¿½o pode ser convocado (magia summon).
 
    p. NOSLEEP (32768)
-   Não pode ser forçado a dormir (magia sleep).
+   Nï¿½o pode ser forï¿½ado a dormir (magia sleep).
 
    q. NOBASH (65536)
-   Não pode ser derrubado (habilidade bash).
+   Nï¿½o pode ser derrubado (habilidade bash).
 
    r. NOBLIND (131072)
-   Não pode ser cegado (magia blind).
+   Nï¿½o pode ser cegado (magia blind).
 
    s. MOUNTABLE (262144)
    Pode ser montado por outros personagens.
 
    t. CAN-FLY (524288)
-   Montros alados, ou com capacidade para voar.
+   Monstros alados, ou com capacidade para voar.
 
-   u. INTELLIGENT (1048576)
-   Monstro possui inteligência artificial.  Por enquanto esta flag não está em
-uso pelo MUD.
+   u. NOKILL (2097152)
+   Nï¿½o pode ser atacado.
 
-   v. NOKILL (2097152)
-   Não pode ser atacado.
+   v. ISNPC (4194304)
+   Esta flag ï¿½ automaticamente definida para todos os monstros (NPCs).
+   Nï¿½O DEVE SER USADA em arquivos de mobs.
+
+   w. NOTDEADYET (8388608)
+   Esta flag ï¿½ para uso interno durante a extraï¿½ï¿½o de monstros.
+   Nï¿½O DEVE SER USADA em arquivos de mobs.
+
+   x. BRAVE (16777216)
+   Monstro lutarï¿½ atï¿½ a morte, nï¿½o fugirï¿½ mesmo com HP baixo.
 
 
 ================================================================================
- Informações Específicas de monstros tipo 'S'
+ Informaï¿½ï¿½es Especï¿½ficas de monstros tipo 'S'
 --------------------------------------------------------------------------------
 
 ------------------------
- <nível> <thac0> <ac> <maxhp> <bhd>
+ <nï¿½vel> <thac0> <ac> <maxhp> <bhd>
  <ouro> <exp>
  <pos-carr> <pos-padr> <sexo>
 ------------------------
 
-   NÍVEL
-   O nível do monstro.  Deve ser compatível com o nível que se espera que um
-jogador tenha para poder matá-lo com certa dificuldade.  O comando CONSIDER
+   Nï¿½VEL
+   O nï¿½vel do monstro.  Deve ser compatï¿½vel com o nï¿½vel que se espera que um
+jogador tenha para poder matï¿½-lo com certa dificuldade.  O comando CONSIDER
 utiliza-se deste campo para calcular a dificuldade para se lutar contra o
 monstro.
 
    THAC0 ("To Hit Armor Class Zero")
-   Equivale a média do número de erros, em 20 rounds de luta.  Dessa forma, o
-número pode variar entre 0 e 20.  A inteligência e a sabedoria diminuem o
-número de erros.  Quanto menor esse número, menor é a possibilidade do monstro
+   Equivale a mï¿½dia do nï¿½mero de erros, em 20 rounds de luta.  Dessa forma, o
+nï¿½mero pode variar entre 0 e 20.  A inteligï¿½ncia e a sabedoria diminuem o
+nï¿½mero de erros.  Quanto menor esse nï¿½mero, menor ï¿½ a possibilidade do monstro
 errar seus golpes.
 
--=> Se você tiver dificuldades de imaginar isso, é só lembrar que o THAC0 é
-uma espécie de Hitroll ao contrário...  Já que quanto maior o hitroll,
-melhor ele é (mais acertos de golpes), quanto menor THAC0, melhor (menos
-erros de golpes) ele será.
+-=> Se vocï¿½ tiver dificuldades de imaginar isso, ï¿½ sï¿½ lembrar que o THAC0 ï¿½
+uma espï¿½cie de Hitroll ao contrï¿½rio...  Jï¿½ que quanto maior o hitroll,
+melhor ele ï¿½ (mais acertos de golpes), quanto menor THAC0, melhor (menos
+erros de golpes) ele serï¿½.
 
--=> O THAC0 pode ser negativo (o Hitroll ainda maior), só que não há real
-efeito prático nisso.
+-=> O THAC0 pode ser negativo (o Hitroll ainda maior), sï¿½ que nï¿½o hï¿½ real
+efeito prï¿½tico nisso.
 
    AC ("Armor Class")
-   É a classe da armadura do monstro quando estiver sem nenhum equipamento.
-Este é o número *real* da classe da armadura, não confunda com o número que é
-mostrado nos comandos SCORE e STAT.  O AC nesses comandos é representado como
-uma fração de 10, aqui ele deve ser representado na forma inteira.  Exemplos:
-      fração de dez | inteiro      fração de dez | inteiro
+   ï¿½ a classe da armadura do monstro quando estiver sem nenhum equipamento.
+Este ï¿½ o nï¿½mero *real* da classe da armadura, nï¿½o confunda com o nï¿½mero que ï¿½
+mostrado nos comandos SCORE e STAT.  O AC nesses comandos ï¿½ representado como
+uma fraï¿½ï¿½o de 10, aqui ele deve ser representado na forma inteira.  Exemplos:
+      fraï¿½ï¿½o de dez | inteiro      fraï¿½ï¿½o de dez | inteiro
       --------------+--------      --------------+--------
         100/10      |   10           -10/10      |   -1
          40/10      |    4          -120/10      |  -12
           0/10      |    0          -190/10      |  -19
 
 -=> PS:
-Para ser mais fácil, uma curta explicação:
-Se você quer um ac -80 (no jogo) pro mob, deve escrever -8.  Um mob com -80
-de ac aqui terá lá no mud -800 de AC...  Sendo assim, nunca haverá um mob
+Para ser mais fï¿½cil, uma curta explicaï¿½ï¿½o:
+Se vocï¿½ quer um ac -80 (no jogo) pro mob, deve escrever -8.  Um mob com -80
+de ac aqui terï¿½ lï¿½ no mud -800 de AC...  Sendo assim, nunca haverï¿½ um mob
 com AC -79, -44...  Apenas se "SETarem" isso nele.
 
    MAXHP
-   O valor de saúde máximo que o monstro deverá ter.  Esse valor deve ser
-fornecido no formato de dados: <x>d<y>+<z>, onde X é o número de lados do
-dado, Y é o tamanho do dado, e Z é o bônus, ou parte fixa do valor.  Exemplos:
+   O valor de saï¿½de mï¿½ximo que o monstro deverï¿½ ter.  Esse valor deve ser
+fornecido no formato de dados: <x>d<y>+<z>, onde X ï¿½ o nï¿½mero de lados do
+dado, Y ï¿½ o tamanho do dado, e Z ï¿½ o bï¿½nus, ou parte fixa do valor.  Exemplos:
    4d6+800  ->  valores entre 801 e 824
    8d12+1800  ->  valores entre 1812 e 1896
-   Para mais informações sobre como usar este campo, veja mais adiante a seção
+   Para mais informaï¿½ï¿½es sobre como usar este campo, veja mais adiante a seï¿½ï¿½o
 "Entendendo os Dados".
 
    BHD  ("Bare Hand Damage")
-   É o dano sem armas que o monstro aplicará sobre seus oponentes.  Esse valor
-deve ser fornecido no formato de dados: <x>d<y>+<z>, onde X é o número de
-lados do dado, Y é o tamanho do dado, e Z é o bônus, ou parte fixa do valor.
+   ï¿½ o dano sem armas que o monstro aplicarï¿½ sobre seus oponentes.  Esse valor
+deve ser fornecido no formato de dados: <x>d<y>+<z>, onde X ï¿½ o nï¿½mero de
+lados do dado, Y ï¿½ o tamanho do dado, e Z ï¿½ o bï¿½nus, ou parte fixa do valor.
 Exemplos:
    4d6+2  ->  valores entre 8 e 26
    3d5+1  ->  valores entre 6 e 16
    Ao empunhar uma arma, o dano passa a ser de acordo com a arma que for
-empunhada, mas mantendo o bônus.  Se, por exemplo, o monstro tiver um BHD de
-4d6+2, e empunhar uma arma de dano 5d8, o seu dano total será 5d8+2 a cada
-round.  Para mais informações sobre como usar este campo, veja mais adiante a
-seção "Entendendo os Dados".
-   A componente Z desse dado é o DAMROLL do monstro.
+empunhada, mas mantendo o bï¿½nus.  Se, por exemplo, o monstro tiver um BHD de
+4d6+2, e empunhar uma arma de dano 5d8, o seu dano total serï¿½ 5d8+2 a cada
+round.  Para mais informaï¿½ï¿½es sobre como usar este campo, veja mais adiante a
+seï¿½ï¿½o "Entendendo os Dados".
+   A componente Z desse dado ï¿½ o DAMROLL do monstro.
 
--=> Esse dica é para qualquer lugar que use o formato XdY+Z: Para ter uma
-base sobre quanto o dado dá, você deve usar o dano médio.  E para uma
-consulta rápida, tenha uma listinha dos dados e respectivos danos.  Evita
+-=> Esse dica ï¿½ para qualquer lugar que use o formato XdY+Z: Para ter uma
+base sobre quanto o dado dï¿½, vocï¿½ deve usar o dano mï¿½dio.  E para uma
+consulta rï¿½pida, tenha uma listinha dos dados e respectivos danos.  Evita
 muito trabalho isso.
 
    OURO
-   A quantidade de moedas de ouro que o monstro irá carregar.
+   A quantidade de moedas de ouro que o monstro irï¿½ carregar.
 
    EXP
-   A quantidade de experiência que o monstro irá possuir.  Note que quando o
-monstro for morto, apenas um terço de sua experiência é passada para o
+   A quantidade de experiï¿½ncia que o monstro irï¿½ possuir.  Note que quando o
+monstro for morto, apenas um terï¿½o de sua experiï¿½ncia ï¿½ passada para o
 personagem que o matou.
 
 -=> Melhor XP a menos que a mais... Cuidado com exageros.
 
    POS-CARR, POS-PADR
-   Indicam a posição do monstro (sentado, em pé, etc), e são,
-respectivamente, a posição em que o monstro será carregado e a sua posição
-padrão.  A posição de carregamento é a que o monstro estará quando for
-carregado no jogo.  A posição padrão é a posição que indica quando o MUD
-irá usar a mensagem descrita no campo NOME-LONGO.  Deve ser um número entre
+   Indicam a posiï¿½ï¿½o do monstro (sentado, em pï¿½, etc), e sï¿½o,
+respectivamente, a posiï¿½ï¿½o em que o monstro serï¿½ carregado e a sua posiï¿½ï¿½o
+padrï¿½o.  A posiï¿½ï¿½o de carregamento ï¿½ a que o monstro estarï¿½ quando for
+carregado no jogo.  A posiï¿½ï¿½o padrï¿½o ï¿½ a posiï¿½ï¿½o que indica quando o MUD
+irï¿½ usar a mensagem descrita no campo NOME-LONGO.  Deve ser um nï¿½mero entre
 estes:
 	3 -> Meditando
 	4 -> Dormindo
 	5 -> Descansando
 	6 -> Sentado
-	8 -> Em pé
+	8 -> Em pï¿½
 
    SEXO
-   Indica o sexo do monstro.  Influencia diretamente os artigos que serão
+   Indica o sexo do monstro.  Influencia diretamente os artigos que serï¿½o
 usados para o MUD mostrar mensagens se referindo ao monstro.  Deve ser um
-número entre estes:
-	0 -> Neutro (em desuso, serve apenas para a língua inglesa)
-	1 -> Masculino (ex: O guardião está sentado)
-	2 -> Feminino (ex: A guardiã está sentada)
+nï¿½mero entre estes:
+	0 -> Neutro (em desuso, serve apenas para a lï¿½ngua inglesa)
+	1 -> Masculino (ex: O guardiï¿½o estï¿½ sentado)
+	2 -> Feminino (ex: A guardiï¿½ estï¿½ sentada)
 
 ================================================================================
- Informações Específicas de monstros tipo 'E'
+ Informaï¿½ï¿½es Especï¿½ficas de monstros tipo 'E'
 --------------------------------------------------------------------------------
 
 ------------------------
@@ -306,12 +313,12 @@ número entre estes:
 ------------------------
 
    NIVEL, THAC0, AC, MAXHP, BHD, OURO, EXP, POS-CARR, POS-PADR, SEXO
-   Os mesmos dos monstros tipo 'S'.  Ver explicação a eles acima.
+   Os mesmos dos monstros tipo 'S'.  Ver explicaï¿½ï¿½o a eles acima.
 
    ATRIBUTOS ADICIONAIS
-   São os atributos escritos seletivamente, cada um em uma linha, que indicam
-outras características dos monstros.  Não há a necessidade de definir todos os
-campos, apenas os que se desejar definir.  São os que seguem:
+   Sï¿½o os atributos escritos seletivamente, cada um em uma linha, que indicam
+outras caracterï¿½sticas dos monstros.  Nï¿½o hï¿½ a necessidade de definir todos os
+campos, apenas os que se desejar definir.  Sï¿½o os que seguem:
 
 ------------------------
  BareHandAttack: <valor>
@@ -325,33 +332,33 @@ campos, apenas os que se desejar definir.  São os que seguem:
 ------------------------
 
    BAREHANDATTACK
-   É usado para definir que tipo de mensagem de ataque o MUD irá mostrar
+   ï¿½ usado para definir que tipo de mensagem de ataque o MUD irï¿½ mostrar
 enquanto o monstro estiver atacando sem segurar nenhuma arma.  Deve ser um
-número de 0 até 14, conforme descrito no arquivo "attack.txt".
+nï¿½mero de 0 atï¿½ 14, conforme descrito no arquivo "attack.txt".
 
    STR, INT, WIS, DEX, CON, CHA
-   São, respectivamente, a força, inteligência, sabedoria, destreza,
-constrituição e carisma do monstro.  Os valores para estes campos devem
+   Sï¿½o, respectivamente, a forï¿½a, inteligï¿½ncia, sabedoria, destreza,
+constrituiï¿½ï¿½o e carisma do monstro.  Os valores para estes campos devem
 estar entre 3 e 25.
 
    STRADD
-   Se o campo STR for 18, este valor poderá ser usado, indicando a força
+   Se o campo STR for 18, este valor poderï¿½ ser usado, indicando a forï¿½a
 adicional.  O valor deve estar entre 0 e 100.
 
--=>  Se você não entendeu bem a diferença entre mobs S e E, deve se lembrar que
-normalmente vê mobs com essas características:
+-=>  Se vocï¿½ nï¿½o entendeu bem a diferenï¿½a entre mobs S e E, deve se lembrar que
+normalmente vï¿½ mobs com essas caracterï¿½sticas:
 
 Str: [11/0]  Int: [11]  Wis: [11]  Dex: [11]  Con: [11]  Cha: [11]
 
-   São mobs comuns, nem sempre os mais fortes.  Já um mob E pode ter essas
-características mudadas, às vezes para mais que isso, identificando os mais
+   Sï¿½o mobs comuns, nem sempre os mais fortes.  Jï¿½ um mob E pode ter essas
+caracterï¿½sticas mudadas, ï¿½s vezes para mais que isso, identificando os mais
 poderosos:
 
 Str: [25/0]  Int: [25]  Wis: [25]  Dex: [25]  Con: [25]  Cha: [25]
-(esse é o Júpiter)
+(esse ï¿½ o Jï¿½piter)
 
-   Não se esqueça que nada lhe impede de fazer um mob fraco com
-características como as de um jogador, por exemplo:
+   Nï¿½o se esqueï¿½a que nada lhe impede de fazer um mob fraco com
+caracterï¿½sticas como as de um jogador, por exemplo:
 Str: [14/0]  Int: [17]  Wis: [15]  Dex: [16]  Con: [10]  Cha: [6]
 
 
@@ -359,35 +366,35 @@ Str: [14/0]  Int: [17]  Wis: [15]  Dex: [16]  Con: [10]  Cha: [6]
  Entendendo os Dados
 --------------------------------------------------------------------------------
 
-   Os dados são conhecidos em 2 formas diferentes: <x>d<y> e <x>d<y>+<z>.  Os
+   Os dados sï¿½o conhecidos em 2 formas diferentes: <x>d<y> e <x>d<y>+<z>.  Os
 valores significam:
 
-   X -> É o número do primeiro lado do dado.
-   Y -> É o tamanho (número de lados) do dado.
-   Z -> É o bonus, que é adicionado ao número final lançado pelo dado.
+   X -> ï¿½ o nï¿½mero do primeiro lado do dado.
+   Y -> ï¿½ o tamanho (nï¿½mero de lados) do dado.
+   Z -> ï¿½ o bonus, que ï¿½ adicionado ao nï¿½mero final lanï¿½ado pelo dado.
 
    Como exemplo, um dado simples 1d6 equivaleria a um dado comum de seis
-lados, cujo o primeiro lado é 1, e cada lado é 1 número maior que o anterior.
-Um dado 4d6 equivale a um dado de 6 lados, e cada lado e 4 números maior que o
+lados, cujo o primeiro lado ï¿½ 1, e cada lado ï¿½ 1 nï¿½mero maior que o anterior.
+Um dado 4d6 equivale a um dado de 6 lados, e cada lado e 4 nï¿½meros maior que o
 anterior.
 
    Alguns exemplos:
-	1d6 = { 1, 2, 3, 4, 5, 6 }		média =  3,5
-	4d6 = { 4, 8, 12, 16, 20, 24 }		média = 14,0
-	3d8 = { 3, 6, 9, 12, 15, 18, 21, 24 }	média = 13,5
+	1d6 = { 1, 2, 3, 4, 5, 6 }		mï¿½dia =  3,5
+	4d6 = { 4, 8, 12, 16, 20, 24 }		mï¿½dia = 14,0
+	3d8 = { 3, 6, 9, 12, 15, 18, 21, 24 }	mï¿½dia = 13,5
 
-   O menor número que um dado simples pode resultar é o mesmo valor de X, e o
-maior é o resultado da multiplicação de X e Y.  A média pode ser obtida
-através do seguite cálculo:
+   O menor nï¿½mero que um dado simples pode resultar ï¿½ o mesmo valor de X, e o
+maior ï¿½ o resultado da multiplicaï¿½ï¿½o de X e Y.  A mï¿½dia pode ser obtida
+atravï¿½s do seguite cï¿½lculo:
 
           x ( y + 1 )
-média = -------------- = x * (y + 1) / 2
+mï¿½dia = -------------- = x * (y + 1) / 2
               2
 
-   Quando o dado possui um bonus, esse último número é adicionado ao valor do
-lançamento do dado.  Por exemplo, um dado 4d6+5 será igual a um dos números 4,
+   Quando o dado possui um bonus, esse ï¿½ltimo nï¿½mero ï¿½ adicionado ao valor do
+lanï¿½amento do dado.  Por exemplo, um dado 4d6+5 serï¿½ igual a um dos nï¿½meros 4,
 8, 12, 16, 20 ou 24 (os 6 lados do dado) somado de 5.  Por exemplo, um monstro
-com um MAXHP de 10d6+800 poderá ter um dos seguintes valores quando
+com um MAXHP de 10d6+800 poderï¿½ ter um dos seguintes valores quando
 carregado:
 	10d6+800 = { 810, 820, 830, 840, 850, 860 }
 
@@ -397,12 +404,12 @@ carregado:
 --------------------------------------------------------------------------------
 
 #1897
-guardião guarda~
-o guardião~
-O Guardião do Paraíso está aquí, protegendo os portões.
+guardiï¿½o guarda~
+o guardiï¿½o~
+O Guardiï¿½o do Paraï¿½so estï¿½ aquï¿½, protegendo os portï¿½es.
 ~
-Ele é grande, forte, musculoso, e está vestindo uma pesada e vistuosa
-armadura.  Este provavelmente não será um oponente fácil de machucar.
+Ele ï¿½ grande, forte, musculoso, e estï¿½ vestindo uma pesada e vistuosa
+armadura.  Este provavelmente nï¿½o serï¿½ um oponente fï¿½cil de machucar.
 ~
 begilnopr cdfhk +1000 E
 106 0 -15 10d6+16000 5d9+19
