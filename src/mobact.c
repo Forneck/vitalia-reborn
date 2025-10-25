@@ -2051,8 +2051,8 @@ bool mob_try_stealth_follow(struct char_data *ch)
         /* Check if mob can still see the target */
         if (!CAN_SEE(ch, ch->master)) {
             /* Lost visibility of target, stop following so we can try a new target later */
-            /* Decrease follow tendency due to frustration from losing target */
-            ch->ai_data->genetics.follow_tendency -= 2;
+            /* Small decrease - visibility loss can be temporary/environmental */
+            ch->ai_data->genetics.follow_tendency -= 1;
             ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
             stop_follower(ch);
             return FALSE;
@@ -2083,20 +2083,23 @@ bool mob_try_stealth_follow(struct char_data *ch)
                     /* Tenta mover-se discretamente */
                     if (!IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
                         perform_move(ch, direction, 1);
+                        /* Reward for successfully following/moving with target */
+                        ch->ai_data->genetics.follow_tendency += 1;
+                        ch->ai_data->genetics.follow_tendency = MIN(ch->ai_data->genetics.follow_tendency, 100);
                         return TRUE;
                     }
                 } else {
                     /* Cannot find valid path, stop following */
-                    /* Decrease follow tendency due to frustration from path failure */
-                    ch->ai_data->genetics.follow_tendency -= 3;
+                    /* Moderate decrease for path failure */
+                    ch->ai_data->genetics.follow_tendency -= 2;
                     ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
                     stop_follower(ch);
                     return FALSE;
                 }
             } else {
                 /* Cannot find path to target, stop following */
-                /* Decrease follow tendency due to frustration from path failure */
-                ch->ai_data->genetics.follow_tendency -= 3;
+                /* Moderate decrease for path failure */
+                ch->ai_data->genetics.follow_tendency -= 2;
                 ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
                 stop_follower(ch);
                 return FALSE;
@@ -2183,7 +2186,7 @@ bool mob_try_stealth_follow(struct char_data *ch)
     }
 
     /* Se não encontrou ninguém para seguir, pequena chance de esquecer/reduzir interesse */
-    if (rand_number(1, 100) <= 5) { /* 5% chance por tick de reduzir naturalmente */
+    if (rand_number(1, 100) <= 2) { /* 2% chance por tick de reduzir naturalmente */
         ch->ai_data->genetics.follow_tendency -= 1;
         ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
     }
