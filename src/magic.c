@@ -901,14 +901,31 @@ int mag_rooms(int level, struct char_data *ch, int spellnum)
         failure = TRUE;
 
     switch (spellnum) {
-        case SPELL_DARKNESS:
+        case SPELL_DARKNESS: {
+            struct str_spells *spell;
+            float modifier;
+
             IdNum = eSPL_DARKNESS;
             if (ROOM_FLAGGED(rnum, ROOM_DARK))
                 failure = TRUE;
 
-            duration = 10;
+            /* Base duration scales with caster level: 60 + (2 * level) seconds
+             * With weather/school bonuses (Necromancy + storms), can reach ~90 seconds
+             * Minimum of 60 seconds (previously was only 10 seconds) */
+            duration = 60 + (2 * level);
+
+            /* Apply school-based weather modifier for duration (Necromancy synergy)
+             * Note: get_spell_by_vnum() performs a list traversal but is only called
+             * once per spell cast, which is acceptable for this use case */
+            spell = get_spell_by_vnum(spellnum);
+            if (spell && spell->school != SCHOOL_UNDEFINED) {
+                modifier = get_school_weather_modifier(ch, spell->school);
+                duration = (int)(duration * modifier);
+            }
+
             SET_BIT_AR(ROOM_FLAGS(rnum), ROOM_DARK);
             break;
+        }
     }
 
     if (failure || IdNum == eNULL)

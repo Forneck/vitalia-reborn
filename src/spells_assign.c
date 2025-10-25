@@ -1673,6 +1673,9 @@ void create_spells_db()
     new_spell->messages.to_self = strdup("Você lança um manto de escuridão sobre a área.");
     new_spell->messages.to_room = strdup("$N lança um manto de escuridão sobre esta área.");
 
+    new_spell->school = SCHOOL_NECROMANCY; /* Necromancy: darkness and shadow magic */
+    new_spell->element = ELEMENT_UNHOLY;   /* Unholy element, same as animate dead */
+
     spedit_save_internally(new_spell);
 
     // SPELL_TRANSPORT_VIA_PLANTS

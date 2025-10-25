@@ -6024,6 +6024,31 @@ ve-los quando se estiver na mesma sala.
 
 Veja tambem: MAGIA-INFRAVISION
 #1
+MAGIA-DARKNESS
+
+Uso        : cast 'darkness'
+Acumulativa: Nao
+Duracao    : 60 segundos + (2 * Nivel) segundos
+Nivel      : Clerigo Nivel 40, Druida Nivel 48
+Escola     : Necromancia
+Elemento   : Profano
+
+A magia Darkness envolve a area em um manto de escuridao sobrenatural,
+dificultando a visao de todos na sala. Esta magia e especialmente eficaz
+quando lancada durante tempestades ou em clima nublado, refletindo sua
+conexao com as forcas da necromancia e o elemento profano.
+
+Sinergias:
+- Escola de Necromancia: Mais eficaz durante clima tempestuoso
+- Elemento Profano: Compartilha o mesmo elemento da magia Animate Dead
+- Duracao aumentada em ate 20% durante tempestades
+- Duracao reduzida em 15% durante dias claros e ensolarados
+
+A escuridao persiste na sala mesmo que o conjurador saia, e dissipa-se
+naturalmente apos o termino da duracao.
+
+Veja tambem: MAGIA-ANIMATE-DEAD, INFRAVISION
+#1
 MAGIA-DETECT-ALIGNMENT
 
 Uso        : cast 'detect alignment'
