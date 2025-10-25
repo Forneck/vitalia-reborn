@@ -16569,4 +16569,243 @@ Uso: want
 ao sistema de desejos ou lista de itens desejados pelos jogadores.
 
 #0
+CLIMA-MAGICO CLIMA-E-MAGIA WEATHER-MAGIC
+
+   O clima de Vitalia nao e meramente uma questao de conforto - ele pulsa
+com as energias primordiais que permeiam todo o reino. Magos experientes
+sabem que as forcas da natureza influenciam profundamente a manifestacao
+de seus feiticos.
+
+   INFLUENCIAS CLIMATICAS:
+
+   Humidade do Ar:
+   Em dias secos, as chamas ardem com maior ferocidade, enquanto as aguas
+   e gelos tornam-se esquivos e dificeis de conjurar. Quando a umidade
+   paira pesada no ar, o oposto ocorre - as magias aquaticas fluem com
+   facilidade, mas as chamas lutam contra a saturacao do ambiente.
+
+   Tempestades e Chuvas:
+   Durante tempestades, a eletricidade crua que rasga os ceus torna os
+   raios devastadoramente poderosos. O tecido entre os planos se adelgaca,
+   facilitando invocacoes, mas as chuvas torrenciais sufocam as chamas e
+   tornam o solo lamacento, enfraquecendo magias terrestres.
+
+   Ventos:
+   Vendavais amplificam magias aereas, carregando-as com velocidade e
+   forca. Brisas suaves facilitam a concentracao, mas ventos calmos podem
+   deixar feiticos de ar letargicos.
+
+   Pressao Atmosferica:
+   Mudancas na pressao do ar afetam sutilmente a mente. Quando estavel,
+   encantamentos mentais encontram mentes mais receptivas. Em extremos,
+   tanto ilusoes quanto feiticos de clarividencia vacilam.
+
+   Temperatura:
+   Extremos de calor e frio exigem maior esforco do conjurador, tornando
+   qualquer magia mais cansativa. Condicoes moderadas permitem que a magia
+   flua naturalmente.
+
+   SABEDORIA DOS ANTIGOS:
+
+   Grandes magos aprenderam a trabalhar com as estacoes e condicoes. Um
+   piromante pode esperar por dias secos para seus rituais mais poderosos.
+   Um invocador de tempestades conhece os sinais de quando o ceu esta
+   pronto para responder seu chamado.
+
+   O verdadeiro dominio da arte arcana nao esta em lutar contra a natureza,
+   mas em dancar com ela, aproveitando seus ritmos e fluxos para amplificar
+   o poder que ja reside dentro de si.
+
+Veja tambem: WEATHER, ESCOLAS-MAGICAS, ELEMENTOS-MAGICOS, MAGIA-CONTROL-WEATHER
+#1
+ESCOLAS-MAGICAS ESCOLAS-DE-MAGIA MAGIC-SCHOOLS SCHOOLS-OF-MAGIC
+
+   As artes arcanas de Vitalia sao classificadas em oito grandes escolas,
+cada uma representando uma filosofia e abordagem diferente para manipular
+as energias misticas do mundo.
+
+   ABJURACAO (Abjuration):
+   A arte da protecao e da repulsao. Mestres da Abjuracao tecem barreiras
+   invisíveis que repelem ameacas, dissipam magias inimigas e criam santuarios
+   contra o mal. Estas magias formam a primeira linha de defesa de qualquer
+   conjurador prudente. Escudos arcanos, protecoes contra mal, e dispersoes
+   sao suas marcas registradas.
+
+   ALTERACAO (Alteration):
+   Praticantes desta escola manipulam a propria essencia da realidade,
+   transformando substancia e forma. Podem tornar pedra em carne, mudar
+   o tamanho de objetos, ou alterar as propriedades fundamentais da materia.
+   E a escola da metamorfose e da transformacao profunda.
+
+   CONJURACAO (Conjuration):
+   A arte de trazer coisas a existencia e abrir portais entre planos. 
+   Invocadores chamam criaturas de outros reinos, criam objetos do nada,
+   e teletransportam materia atraves do espaco. E uma das escolas mais
+   versateis, capaz de produzir tanto aliados quanto recursos materiais.
+   Condicoes nebulosas e umidas fortalecem estas invocacoes.
+
+   ADIVINHACAO (Divination):
+   Magos desta escola espreitam atraves dos velos do tempo e espaco,
+   revelando segredos ocultos e verdades escondidas. Podem detectar o
+   invisivel, pressentir o futuro, e ler os pensamentos alheios. Em dias
+   claros, suas visoes se tornam mais nitidas e precisas.
+
+   ENCANTAMENTO (Enchantment):
+   A escola da influencia mental e do controle da vontade. Encantadores
+   tecem sugestoes irresistiveis, dominam mentes fracas, e inspiram emocoes
+   poderosas em outros. Suas magias afetam o espirito e a psique, nao o
+   corpo fisico. Pressao atmosferica estavel favorece estas manipulacoes
+   sutis da mente.
+
+   EVOCACAO (Evocation):
+   A mais espetacular e destrutiva das escolas. Evocadores canalizam energia
+   bruta em formas devastadoras - bolas de fogo, raios congelantes, relampagos
+   chamejantes. E a escola da manifestacao direta de poder elemental, onde
+   a forca bruta supera a sutileza.
+
+   ILUSAO (Illusion):
+   Mestres da enganacao e da percepcao alterada. Ilusionistas criam imagens
+   falsas, sons enganosos, e fantasmas convincentes. Suas magias manipulam
+   os sentidos, fazendo o irreal parecer real. Em neblina e bruma, suas
+   ilusoes se tornam quase indistinguiveis da realidade.
+
+   NECROMANCIA (Necromancy):
+   A escola sombria que lida com forca vital, morte e os mortos-vivos.
+   Necromantes drenam a essencia vital, ressuscitam os mortos como servos,
+   e se comunicam com espiritos. Tempestades e escuridao amplificam seus
+   poderes profanos, pois a morte prospera nas sombras.
+
+   Cada escola oferece um caminho unico de poder. Alguns magos se
+   especializam em uma unica escola, tornando-se mestres incomparaveis
+   daquela arte. Outros buscam equilibrio, estudando multiplas escolas
+   para se tornarem versáteis em todas as situacoes.
+
+Veja tambem: ELEMENTOS-MAGICOS, CLIMA-MAGICO, CLASSES
+#1
+ELEMENTOS-MAGICOS ELEMENTOS-DE-MAGIA MAGIC-ELEMENTS SPELL-ELEMENTS
+
+   As magias de Vitalia manifestam-se atraves de doze elementos primordiais,
+cada um carregando suas proprias caracteristicas e resonancias com as
+forcas naturais do mundo.
+
+   ELEMENTOS PRIMORDIAIS:
+
+   Fogo:
+   O elemento da destruicao e da purificacao. Chamas consomem, cauterizam
+   e iluminam. Em climas secos, as magias de fogo ardem mais intensamente,
+   mas a umidade e a chuva sufocam suas chamas. Piromantes devem respeitar
+   o poder que invocam, pois o fogo nao distingue amigo de inimigo.
+
+   Agua:
+   Fluida, adaptavel e essencial para a vida. Magias aquaticas curam,
+   afogam, e moldam as correntes. Prosperam em ambientes umidos e durante
+   chuvas, mas definham em condicoes aridas. A agua e tanto gentil quanto
+   implacavel.
+
+   Ar:
+   O elemento da liberdade e do movimento. Ventos carregam magos pelos
+   ceus, criam barreiras invisiveis, e amplificam sons. Vendavais fortalecem
+   estas magias, enquanto calmaria as enfraquece. O ar e o mais esquivo
+   dos elementos.
+
+   Terra:
+   Solida, resiliente e inabalavel. Magias terrestres manipulam pedra e
+   solo, criam muralhas, e conferem resistencia sobre-humana. Chuvas
+   torrenciais podem enfraquecer a conexao com a terra firme, tornando-a
+   lamacenta e instavel.
+
+   Raio:
+   Eletricidade pura, rapida e letal. Durante tempestades, quando raios
+   rasgam os ceus, magias eletricas se tornam devastadoramente poderosas,
+   alimentadas pela energia bruta da natureza. Em dias secos, perdem parte
+   de seu vigor.
+
+   Gelo:
+   Frio cristalino que congela e preserva. Magias glaciais prosperam em
+   alta umidade, onde ha abundancia de vapor para solidificar. Em climas
+   secos e quentes, o gelo luta para se manifestar.
+
+   ELEMENTOS ESPECIALIZADOS:
+
+   Acido:
+   Corrosivo e implacavel, o acido dissolve o que toca. Nao e significativamente
+   afetado pelo clima, mantendo seu poder constante sob quaisquer condicoes.
+
+   Veneno:
+   Toxico e insidioso, opera atraves de contaminacao sutil. Como o acido,
+   mantem sua potencia independente das condicoes atmosfericas.
+
+   Sagrado:
+   Luz divina que queima o mal e cura os justos. Energia celestial canalizada
+   atraves de fe genuina. Sua forca vem de conviccao espiritual, nao de
+   condicoes mundanas.
+
+   Profano:
+   Trevas que corrompem e degradam. Poder das sombras que se opoe ao sagrado.
+   Como seu oposto divino, deriva forca de fontes sobrenaturais.
+
+   Mental:
+   Poder psiquico que ataca a mente. Telepatia, telecinese e assaltos
+   mentais que ignoram armaduras fisicas. Opera no reino do pensamento,
+   alem das leis naturais.
+
+   Fisico:
+   Forca bruta manifestada magicamente. Golpes concussivos, ondas de choque,
+   e impacto puro. Representa poder cinetico direto, simples mas eficaz.
+
+   Conhecer os elementos e essencial para qualquer conjurador. Um mago
+   sabio carrega feiticos de multiplos elementos, preparado para explorar
+   as fraquezas de seus adversarios e se adaptar as condicoes ao seu redor.
+
+Veja tambem: ESCOLAS-MAGICAS, CLIMA-MAGICO, WEATHER
+#1
+HABILIDADES-ESCOLAS ESTILOS-COMBATE SKILL-SCHOOLS COMBAT-STYLES
+
+   Alem das artes arcanas, os guerreiros e aventureiros de Vitalia dominam
+diversas escolas de habilidades, cada uma representando um estilo distinto
+de combate e sobrevivencia.
+
+   ESTILO DE COMBATE (Combat):
+   A arte da guerra corpo a corpo. Mestres deste estilo sao lutadores
+   ferozes que dominam tacticas de combate direto, tecnicas de duelo, e
+   manobras de batalha. Empunham armas com precisao mortal e conhecem
+   cada ponto vital do corpo humanoide.
+
+   ESTILO FURTIVO (Stealth):
+   A escola das sombras. Praticantes desta arte movem-se invisivelmente,
+   atacam de emboscadas, e desaparecem antes que seus inimigos percebam.
+   Esconder-se, esgueirar-se e atacar sem ser visto sao as marcas desta
+   escola. Ladinos e assassinos prosperam neste caminho.
+
+   ESTILO DE ARMAS (Weapons):
+   Especializacao profunda em instrumentos de guerra. Cada arma tem sua
+   propria linguagem - a danca da espada, o ritmo do machado, a elegancia
+   da lanca. Mestres de armas estudam proficiencias especificas, tornando-se
+   virtuosos com suas ferramentas escolhidas.
+
+   ESTILO DE SOBREVIVENCIA (Survival):
+   Conhecimento da natureza e suas licoes. Rastreamento, orientacao em
+   terrenos selvagens, reconhecimento de plantas e animais. Rangers e
+   druidas dependem destas habilidades para prosperar onde outros perecem.
+   E a escola do conhecimento pratico e da adaptacao.
+
+   ESTILO MUSICAL (Musical):
+   A arte dos bardos. Musica que inspira aliados, desmoraliza inimigos,
+   e tece magias sutis atraves de melodias. Cantos de batalha, baladas
+   de cura, e sinfonias de poder. A musica e uma forma de magia por si so,
+   trabalhando atraves da harmonia e da emocao.
+
+   ESTILO DE SUPORTE (Support):
+   Tecnicas defensivas e de apoio. Cura, protecao de aliados, e fortificacao
+   de defesas. Clerigos e paladinos frequentemente dominam este estilo,
+   tornando-se o baluarte que mantem o grupo unido. Sacrificam poder ofensivo
+   por resiliencia e utilidade.
+
+   Diferentes classes naturalmente se inclinam para diferentes estilos.
+   Guerreiros focam em combate e armas. Ladinos em furtividade. Rangers
+   em sobrevivencia. Mas verdadeiros mestres aprendem de multiplas escolas,
+   tornando-se versateis em qualquer situacao.
+
+Veja tambem: CLASSES, SKILLS, ESCOLAS-MAGICAS
+#1
 $~
