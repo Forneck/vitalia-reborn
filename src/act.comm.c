@@ -21,6 +21,7 @@
 #include "dg_scripts.h"
 #include "act.h"
 #include "modify.h"
+#include "spells.h"
 
 bool legal_communication(char *arg);
 
@@ -47,6 +48,12 @@ ACMD(do_say)
     else {
         char buf[MAX_INPUT_LENGTH + 14], *msg;
         struct char_data *vict;
+
+        /* Check if the spoken text triggers voice casting */
+        if (!IS_NPC(ch) && check_voice_cast(ch, argument)) {
+            /* Voice casting was triggered, don't process as normal say */
+            return;
+        }
 
         if (CONFIG_SPECIAL_IN_COMM && legal_communication(argument))
             parse_at(argument);
