@@ -78,22 +78,10 @@ assim você pode controlar para que nenhuma linha de texto fique maior que a
 as áreas são divididas em arquivos diferentes, e o MUD sabe qual arquivo
 pertence a qual área, este campo não tem muita influência no MUD, exceto por
 alguns alertas que o MUD gera se este estiver errado.
-   Contudo, este campo pode ser usado para dividir uma área em pedaços
-menores, selecionando qual destes pedaços a sala pertence através deste campo.
-Por padrão, todas as salas de uma área fazem parte da "subárea" 0 (zero).
-Caso você deseje dividir a área, colocando uma sala em um pedaço (ou subárea)
-diferente, basta você indicar neste campo a que pedaço da área a sala
-pertence, desta forma:
-
-   18           (área 18, subárea 0 (padrão))
-   18.1         (área 18, subárea 1)
-   18.2         (área 18, subárea 2)
-
-   Dividindo uma área em subáreas pode ajuda a manter uma melhor estética na
-organização das salas da área.  O MUD usa a divisão em subáreas internamente,
-como por exemplo o canal SHOUT, que se estende apenas dentro da subárea em que
-o jogador estiver (diferente do CircleMUD e de versões anteriores do
-VitaliaMUD, onde o canal SHOUT se estendia por toda a área).
+   NOTA: Versões antigas do VitaliaMUD suportavam subáreas através do formato
+18.1, 18.2, etc. Este recurso foi removido do código atual. O campo área agora
+aceita apenas o número da área (ex: 18). O canal SHOUT funciona em nível de
+zona completa, não de subárea.
 
    FLAGS
    Este campo contém as flags que definem várias características da sala.
@@ -202,11 +190,11 @@ recuperar pontos de saúde, movimento e magia.
 
    u. BROADCAST (2097152)
    Todas as ações feitas na sala serão vistas em todas as salas
-subseqüentes, que estiverem dentro da mesma subárea.  Útil em ambientes
-como, por exemplo, um coliseu, onde a arena e as arquibancadas são dois
-lugares distintos, porém, tudo que é realizado na arena, é visto nas
-arquibancadas.  Este recurso ainda está em testes, e apenas os Deuses mais
-altos tem permissão para construir salas usando esta flag.
+subsequentes dentro da mesma zona.  Útil em ambientes como, por exemplo,
+um coliseu, onde a arena e as arquibancadas são dois lugares distintos,
+porém, tudo que é realizado na arena é visto nas arquibancadas.
+Este recurso ainda está em testes, e apenas os Deuses mais altos tem
+permissão para construir salas usando esta flag.
 
    v. OLC (4194304)
    Esta flag é para uso interno do sistema de edição online (OLC).

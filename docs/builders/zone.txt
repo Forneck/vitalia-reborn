@@ -110,8 +110,8 @@ comandos são descritos mais adiante, na seção "Comandos".
 sala inicial quando retornar ao jogo, e não para a sala salva.
 
    f. SEPARATE (32)
-   Separa as sub-áreas umas das outras.  Isso faz com que os comandos WHERE e
-SHOUT encontrem jogadores dentro da mesma sub-área, ao invés da área toda.
+   Flag legada mantida para compatibilidade. Não tem efeito no código atual.
+   (Nas versões antigas, separava subáreas dentro de uma zona.)
 
    g. CLIMATE (64)
    Define que o arquivo possui uma seção definindo os climas da área, logo
