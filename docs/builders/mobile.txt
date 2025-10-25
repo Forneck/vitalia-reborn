@@ -178,14 +178,21 @@ que os verem.
    Pode ser montado por outros personagens.
 
    t. CAN-FLY (524288)
-   Montros alados, ou com capacidade para voar.
+   Monstros alados, ou com capacidade para voar.
 
-   u. INTELLIGENT (1048576)
-   Monstro possui inteligência artificial.  Por enquanto esta flag não está em
-uso pelo MUD.
-
-   v. NOKILL (2097152)
+   u. NOKILL (2097152)
    Não pode ser atacado.
+
+   v. ISNPC (4194304)
+   Esta flag é automaticamente definida para todos os monstros (NPCs).
+   NÃO DEVE SER USADA em arquivos de mobs.
+
+   w. NOTDEADYET (8388608)
+   Esta flag é para uso interno durante a extração de monstros.
+   NÃO DEVE SER USADA em arquivos de mobs.
+
+   x. BRAVE (16777216)
+   Monstro lutará até a morte, não fugirá mesmo com HP baixo.
 
 
 ================================================================================

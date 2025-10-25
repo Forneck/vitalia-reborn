@@ -78,22 +78,10 @@ assim você pode controlar para que nenhuma linha de texto fique maior que a
 as áreas são divididas em arquivos diferentes, e o MUD sabe qual arquivo
 pertence a qual área, este campo não tem muita influência no MUD, exceto por
 alguns alertas que o MUD gera se este estiver errado.
-   Contudo, este campo pode ser usado para dividir uma área em pedaços
-menores, selecionando qual destes pedaços a sala pertence através deste campo.
-Por padrão, todas as salas de uma área fazem parte da "subárea" 0 (zero).
-Caso você deseje dividir a área, colocando uma sala em um pedaço (ou subárea)
-diferente, basta você indicar neste campo a que pedaço da área a sala
-pertence, desta forma:
-
-   18           (área 18, subárea 0 (padrão))
-   18.1         (área 18, subárea 1)
-   18.2         (área 18, subárea 2)
-
-   Dividindo uma área em subáreas pode ajuda a manter uma melhor estética na
-organização das salas da área.  O MUD usa a divisão em subáreas internamente,
-como por exemplo o canal SHOUT, que se estende apenas dentro da subárea em que
-o jogador estiver (diferente do CircleMUD e de versões anteriores do
-VitaliaMUD, onde o canal SHOUT se estendia por toda a área).
+   NOTA: Versões antigas do VitaliaMUD suportavam subáreas através do formato
+18.1, 18.2, etc. Este recurso foi removido do código atual. O campo área agora
+aceita apenas o número da área (ex: 18). O canal SHOUT funciona em nível de
+zona completa, não de subárea.
 
    FLAGS
    Este campo contém as flags que definem várias características da sala.
@@ -172,41 +160,51 @@ os Deuses mais altos tem permissão para construir salas usando esta flag.
 
    l. HOUSE (2048)
    m. HOUSE_SAVE (4096)
-   o. HOUSE_STORED (16384)
-   p. MARK (32768)
+   n. ATRIUM (16384)
    Estas flags são para uso interno do VitaliaMUD, e NÃO DEVEM SER USADAS.
+   BFS_MARK é também uma flag interna para uso de algoritmos de busca.
 
-   n. ARENA (8192)
+   o. ARENA (8192)
    Arena.  Será possível luta entre jogadores na sala, sem que se tornem
 foras-da-lei.  Apenas os Deuses mais altos tem permissão para construir salas
 usando esta flag.
 
-   q. HIGH (65536)
+   p. HIGH (65536)
    A sala possui grande altitude, tornando difícil de se respirar.  Os
 personagens perderão pontos de respiração.
 
-   r. NOMOUNT (131072)
+   q. NOMOUNT (131072)
    Não será possível entrar na sala montando.
 
-   s. NOFLY (262144)
+   r. NOFLY (262144)
    Não será possível entrar na sala voando.
 
-   t. HEAL (524288)
+   s. HEAL (524288)
    Os ocupantes da sala irão se curar 50% mais rápido.  Esta flag não pode
-ser usada junto com a flag FROZEN(u), e usando-a em conjunto com a flag
+ser usada junto com a flag FROZEN(t), e usando-a em conjunto com a flag
 PEACEFUL(e), a cura se dará 75% mais rápido.
 
-   u. FROZEN (1048576)
+   t. FROZEN (1048576)
    O metabolismo dos ocupantes da sala irá congelar, ou seja, não irão
 recuperar pontos de saúde, movimento e magia.
 
-   v. BROADCAST (2097152)
+   u. BROADCAST (2097152)
    Todas as ações feitas na sala serão vistas em todas as salas
-subseqüentes, que estiverem dentro da mesma subárea.  Útil em ambientes
-como, por exemplo, um coliseu, onde a arena e as arquibancadas são dois
-lugares distintos, porém, tudo que é realizado na arena, é visto nas
-arquibancadas.  Este recurso ainda está em testes, e apenas os Deuses mais
-altos tem permissão para construir salas usando esta flag.
+subsequentes dentro da mesma zona.  Útil em ambientes como, por exemplo,
+um coliseu, onde a arena e as arquibancadas são dois lugares distintos,
+porém, tudo que é realizado na arena é visto nas arquibancadas.
+Este recurso ainda está em testes, e apenas os Deuses mais altos tem
+permissão para construir salas usando esta flag.
+
+   v. OLC (4194304)
+   Esta flag é para uso interno do sistema de edição online (OLC).
+   NÃO DEVE SER USADA em arquivos de áreas.
+
+   w. WORLDMAP (8388608)
+   Indica que a sala usa o sistema de mapa-múndi.
+
+   x. GODROOM (16777216)
+   Sala restrita, apenas Deuses de nível LVL_GOD ou superior podem entrar.
 
 -=> Uma dica...  Se você pretende fazer uma sala ou várias salas em que deseje
 que o jogador perca realmente movimento (como em florestas muito densas,

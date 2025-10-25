@@ -157,10 +157,11 @@ descritos mais adiante, na seção "Afetamentos Numéricos".
 	  As mensagens são as mesmas descritas no campo BAREHANDATTACK do
 	  arquivo "mobile.txt".
 
-   6. FIREWEAPON	Arma de disparo
-   7. MISSILE		Míssil
-   Estes tipos de objetos não estão implementados, portanto, não devem ser
-usados.
+   6. FURNITURE		Móvel (sofá, cadeira, etc)
+      V1-6: 0
+
+   7. AMMO		Munição para armas de disparo
+      V1-6: 0
 
    8. TREASURE		Tesouro
       V1-6: 0
@@ -297,6 +298,12 @@ ou afetamento de uma magia).
    27. BOOK		Livro
       V1-6: 0
 
+   28. PLANT		Planta
+      V1-6: 0
+
+   29. FIREWEAPON	Arma de fogo/disparo
+      V1-6: 0
+
 
 ================================================================================
  Efeitos Especiais
@@ -380,6 +387,7 @@ WIELD como posição do corpo que o objeto ocupa.
    r. FACE (131072)	Vestir no rosto
    s. NOSE (262144)	Vestir no nariz
    t. INSIGNE (524288)	Usar como insígnia
+   u. QUIVER (1048576)	Usar como aljava (para flechas)
 
 -=> Uma pequena dica: quando for fazer um equipamento, não se esqueça da
 flag TAKE, senão não se pode pegá-lo no chão.  Não se usa essa flag

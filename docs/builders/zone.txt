@@ -94,7 +94,7 @@ comandos são descritos mais adiante, na seção "Comandos".
    A área é fechada.  Não será possível usar magias de transporte ('portal' e
 'teleport') para chegar até ela.
 
-   b. ISOLATED (2)
+   b. NOASTRAL (2)
    A área é isolada.  Não será possível usar magias de transporte ('portal' e
 'teleport') para entrar ou sair da área, mas poderá ser usado dentro da mesma
 área.
@@ -110,12 +110,28 @@ comandos são descritos mais adiante, na seção "Comandos".
 sala inicial quando retornar ao jogo, e não para a sala salva.
 
    f. SEPARATE (32)
-   Separa as sub-áreas umas das outras.  Isso faz com que os comandos WHERE e
-SHOUT encontrem jogadores dentro da mesma sub-área, ao invés da área toda.
+   Flag legada mantida para compatibilidade. Não tem efeito no código atual.
+   (Nas versões antigas, separava subáreas dentro de uma zona.)
 
    g. CLIMATE (64)
    Define que o arquivo possui uma seção definindo os climas da área, logo
 após as flags.
+
+   h. NOIMMORT (128)
+   Imortais abaixo do nível LVL_GRGOD não podem entrar nesta área.
+
+   i. QUEST (256)
+   Esta área é uma área de quest (ainda não completamente implementado).
+
+   j. GRID (512)
+   A área está "na grade", conectada ao mundo principal, e será mostrada
+no comando 'areas'.
+
+   k. NOBUILD (1024)
+   Construção não é permitida nesta área.
+
+   l. WORLDMAP (2048)
+   Toda a área usa o sistema WORLDMAP por padrão.
 
 
 ================================================================================
@@ -230,6 +246,7 @@ maior ou igual ao valor do limite, o comando não é executado.
       21  Usar no rosto
       22  Usar no nariz
       23  Usar como insígnia
+      24  Usar como aljava
 
    P: Colocar um objeto dentro de outro
    Formato: P <flag-condicional> <vnum-obj-1> <limite> <vnum-obj-2>
@@ -253,14 +270,33 @@ maior ou igual ao valor do limite, o comando não é executado.
       Se um objeto identificado com VNUM-OBJ existir na sala identificada com
       VNUM-SALA, ele será retirado da sala e destruído.
 
+   C: Verificar quantidade de monstros
+   Formato: C <flag-condicional> <quantidade-max> <vnum-mob>
+      Verifica se o número de instâncias do mob VNUM-MOB no mundo é menor
+      que QUANTIDADE-MAX. Se for menor, resulta em sucesso. Se for maior ou
+      igual, resulta em falha. Útil para limitar a quantidade de mobs carregados.
+
    N: Verificar a presença de um monstro em uma sala
-   Formato: C <flag-condicional> <vnum-sala> <vnum-mob>
+   Formato: N <flag-condicional> <vnum-sala> <vnum-mob>
       Esse comando não faz nada, só verifica se o mob VNUM-MOB está carregado
       e presente na sala VNUM-SALA. Se ele estiver carregado, esse comando
       resultará em um "não-sucesso". Isso quer dizer que o próximo comando
       pode ter a flag-condicional igual a um, para que não seja executado.
       Isso é útil para evitar que mobs sejam carregados em duplicidade em uma
       mesma sala.
+
+   T: Atribuir trigger (DG Scripts)
+   Formato: T <flag-condicional> <tipo-trigger> <vnum-trigger> <vnum-sala>
+      TIPO-TRIGGER pode ser: 0 (MOB_TRIGGER), 1 (OBJ_TRIGGER), ou 2 (WLD_TRIGGER).
+      VNUM-TRIGGER é o número do trigger a ser atribuído.
+      VNUM-SALA é usado apenas para WLD_TRIGGER (triggers de sala).
+      Este comando é usado pelo sistema DG Scripts para anexar triggers a
+      mobs, objetos ou salas.
+
+   V: Atribuir variável a trigger (DG Scripts)
+   Formato: V <flag-condicional> <tipo-trigger> <contexto> <vnum> <nome-var> <valor>
+      Atribui uma variável global a um trigger. Este comando é parte do
+      sistema DG Scripts e é usado para definir variáveis de triggers.
 
    Qualquer linha que iniciar com um asterisco ('*') será considerado como um
 comentário, e não será processada.  Também será ignorado qualquer texto que
