@@ -105,6 +105,38 @@ switch %i%
   case 4
     %echo%  	cPor um breve instante, todos os sons da floresta cessam, criando um silêncio pesado e antinatural.		n
     halt
+  case 5
+    halt
+  case 6
+    halt
+  case 7
+    halt
+  case 8
+    halt
+  case 9
+    halt
+  case 10
+    halt
+  case 11
+    halt
+  case 12
+    halt
+  case 13
+    halt
+  case 14
+    halt
+  case 15
+    halt
+  case 16
+    halt
+  case 17
+    halt
+  case 18
+    halt
+  case 19
+    halt
+  case 20
+    halt
 ~
 #15204
 kodama_ambiente~
@@ -292,7 +324,7 @@ halt
 ~
 #15213
 orbe_eterno_give~
-1 i 2
+1 i 100
 ~
 * This trigger has been exported 'as is'. This means that vnums
 * in this file are not changed, and will have to be edited by hand.
@@ -300,7 +332,7 @@ orbe_eterno_give~
 * should be looking for 152xx, where xx is 00-99.
 set victim_name %actor.give_arg%
 if %victim%
-  %send% %actor% 	yVocê estende a mão para entregar o orbe a %victim.name%, mas no instante em que os dedos %victim.himher% tocam o musgo, ele se dissolve em pó. Um novo orbe, frio e úmido, materializa-se na sua palma vazia. Você não pode partilhar o seu fardo.	n
+  %send% %actor% 	yVocê estende a mão para entregar o orbe a %victim.name%, mas no instante em que os dedos tocam o musgo, ele se dissolve em pó. Um novo orbe, frio e úmido, materializa-se na sua palma vazia. Você não pode partilhar o seu fardo.	n
   %send% %victim% %actor.name% tenta dar-lhe um orbe de musgo, mas ele se desfaz em pó antes que você possa pegá-lo.
 return 0
 ~
