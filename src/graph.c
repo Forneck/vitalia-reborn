@@ -1406,6 +1406,10 @@ static int get_cached_pathfind(room_rnum src, room_rnum target)
     if (!pathfind_cache_initialized)
         return -1;
 
+    /* Validate src and target rooms */
+    if (src == NOWHERE || target == NOWHERE || src < 0 || target < 0 || src > top_of_world || target > top_of_world)
+        return -1;
+
     for (i = 0; i < PATHFIND_CACHE_SIZE; i++) {
         if (pathfind_cache[i].valid && pathfind_cache[i].src == src && pathfind_cache[i].target == target &&
             (now - pathfind_cache[i].timestamp) < PATHFIND_CACHE_TTL) {
@@ -1428,6 +1432,11 @@ static void cache_pathfind_result_priority(room_rnum src, room_rnum target, int 
 {
     /* Don't cache failed pathfinding results to preserve cache slots for successful paths */
     if (direction < 0) {
+        return;
+    }
+
+    /* Validate src and target rooms before caching */
+    if (src == NOWHERE || target == NOWHERE || src < 0 || target < 0 || src > top_of_world || target > top_of_world) {
         return;
     }
 
@@ -1835,14 +1844,18 @@ void hunt_victim(struct char_data *ch)
 {
     int dir;
     byte found;
-    struct char_data *tmp;
+    struct char_data *tmp, *victim;
+    room_rnum victim_room;
 
     if (!ch || !HUNTING(ch) || FIGHTING(ch))
         return;
 
+    /* Cache the victim pointer to avoid multiple dereferences */
+    victim = HUNTING(ch);
+
     /* make sure the char still exists */
     for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
-        if (HUNTING(ch) == tmp)
+        if (victim == tmp)
             found = TRUE;
 
     if (!found) {
@@ -1853,27 +1866,49 @@ void hunt_victim(struct char_data *ch)
         return;
     }
 
+    /* Cache victim's room and validate it */
+    victim_room = IN_ROOM(victim);
+    if (victim_room == NOWHERE || victim_room < 0 || victim_room > top_of_world) {
+        HUNTING(ch) = NULL;
+        return;
+    }
+
     /* Use intelligent pathfinding for mobs hunting targets */
     if (IS_NPC(ch)) {
-        dir = mob_smart_pathfind(ch, IN_ROOM(HUNTING(ch)));
+        dir = mob_smart_pathfind(ch, victim_room);
         if (dir == -1) {
             /* Fall back to basic pathfinding if smart pathfinding fails */
-            dir = find_first_step(IN_ROOM(ch), IN_ROOM(HUNTING(ch)));
+            dir = find_first_step(IN_ROOM(ch), victim_room);
         }
     } else {
         /* Players still use basic pathfinding for hunting */
-        dir = find_first_step(IN_ROOM(ch), IN_ROOM(HUNTING(ch)));
+        dir = find_first_step(IN_ROOM(ch), victim_room);
     }
 
     if (dir < 0) {
         char buf[MAX_INPUT_LENGTH];
 
-        snprintf(buf, sizeof(buf), "Maldição!  Eu perdi %s!", ELEA(HUNTING(ch)));
-        do_say(ch, buf, 0, 0);
+        /* Re-validate victim still exists before accessing it */
+        for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+            if (victim == tmp)
+                found = TRUE;
+
+        if (found) {
+            snprintf(buf, sizeof(buf), "Maldição!  Eu perdi %s!", ELEA(victim));
+            do_say(ch, buf, 0, 0);
+        }
         HUNTING(ch) = NULL;
     } else {
         perform_move(ch, dir, 1);
-        if (IN_ROOM(ch) == IN_ROOM(HUNTING(ch)))
-            hit(ch, HUNTING(ch), TYPE_UNDEFINED);
+
+        /* Re-validate victim still exists after movement */
+        for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+            if (victim == tmp)
+                found = TRUE;
+
+        if (found && IN_ROOM(ch) == IN_ROOM(victim))
+            hit(ch, victim, TYPE_UNDEFINED);
+        else if (!found)
+            HUNTING(ch) = NULL;
     }
 }
