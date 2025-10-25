@@ -120,8 +120,9 @@ void check_mob_level_up(struct char_data *ch)
 
         /* Message for nearby players to see the mob improving */
         if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world && world[IN_ROOM(ch)].people) {
-            struct char_data *viewer;
-            for (viewer = world[IN_ROOM(ch)].people; viewer; viewer = viewer->next_in_room) {
+            struct char_data *viewer, *next_viewer;
+            for (viewer = world[IN_ROOM(ch)].people; viewer; viewer = next_viewer) {
+                next_viewer = viewer->next_in_room;
                 if (IS_MOB(viewer) || viewer == ch)
                     continue;
                 act("$n parece ter ficado mais experiente!", TRUE, ch, 0, viewer, TO_VICT);
