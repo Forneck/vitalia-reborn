@@ -2120,7 +2120,15 @@ bool mob_try_stealth_follow(struct char_data *ch)
 
     /* Se encontrou um bom alvo, começa a seguir */
     if (target && best_score > 30) {
-        /* Usa add_follower mas de forma discreta (sem mensagens de grupo) */
+        /* Verifica se não criaria um loop circular de seguimento */
+        if (circle_follow(ch, target)) {
+            return FALSE;
+        }
+
+        /* Usa add_follower para começar a seguir o alvo.
+         * Nota: add_follower envia mensagens visíveis. Para comportamento furtivo
+         * completo (quando skills como sneak/hide forem implementadas), essas
+         * mensagens devem ser condicionadas ao sucesso em passar despercebido. */
         add_follower(ch, target);
         /* Aumenta levemente a tendência de seguir se teve sucesso */
         ch->ai_data->genetics.follow_tendency += 1;
