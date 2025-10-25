@@ -28,6 +28,9 @@ static void bfs_enqueue(room_rnum room, int dir);
 static void bfs_dequeue(void);
 static void bfs_clear_queue(void);
 
+/* Helper function to validate room numbers for pathfinding operations */
+static int is_valid_room(room_rnum room) { return (room != NOWHERE && room >= 0 && room <= top_of_world); }
+
 /* Calculate movement cost for a room using the updated formula:
  * sector_cost[current_room] * weather_modifier[current_zone] */
 int calculate_movement_cost(struct char_data *ch, room_rnum room)
@@ -1407,7 +1410,7 @@ static int get_cached_pathfind(room_rnum src, room_rnum target)
         return -1;
 
     /* Validate src and target rooms */
-    if (src == NOWHERE || target == NOWHERE || src < 0 || target < 0 || src > top_of_world || target > top_of_world)
+    if (!is_valid_room(src) || !is_valid_room(target))
         return -1;
 
     for (i = 0; i < PATHFIND_CACHE_SIZE; i++) {
@@ -1436,7 +1439,7 @@ static void cache_pathfind_result_priority(room_rnum src, room_rnum target, int 
     }
 
     /* Validate src and target rooms before caching */
-    if (src == NOWHERE || target == NOWHERE || src < 0 || target < 0 || src > top_of_world || target > top_of_world) {
+    if (!is_valid_room(src) || !is_valid_room(target)) {
         return;
     }
 
@@ -1868,7 +1871,7 @@ void hunt_victim(struct char_data *ch)
 
     /* Cache victim's room and validate it */
     victim_room = IN_ROOM(victim);
-    if (victim_room == NOWHERE || victim_room < 0 || victim_room > top_of_world) {
+    if (!is_valid_room(victim_room)) {
         HUNTING(ch) = NULL;
         return;
     }
