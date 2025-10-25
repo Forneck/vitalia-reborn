@@ -42,6 +42,7 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
 bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room);
 bool handle_duty_routine(struct char_data *ch);
 bool mob_follow_leader(struct char_data *ch);
+bool mob_try_stealth_follow(struct char_data *ch);
 bool mob_assist_allies(struct char_data *ch);
 bool mob_try_and_loot(struct char_data *ch);
 bool mob_try_and_upgrade(struct char_data *ch);
@@ -118,12 +119,13 @@ void check_mob_level_up(struct char_data *ch)
         /* Skills automatically improve with level - handled in get_mob_skill() */
 
         /* Message for nearby players to see the mob improving */
-        if (world[IN_ROOM(ch)].people) {
-            struct char_data *viewer;
-            for (viewer = world[IN_ROOM(ch)].people; viewer; viewer = viewer->next_in_room) {
-                if (!IS_MOB(viewer) && viewer != ch) {
-                    act("$n parece ter ficado mais experiente!", TRUE, ch, 0, viewer, TO_VICT);
-                }
+        if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world && world[IN_ROOM(ch)].people) {
+            struct char_data *viewer, *next_viewer;
+            for (viewer = world[IN_ROOM(ch)].people; viewer; viewer = next_viewer) {
+                next_viewer = viewer->next_in_room;
+                if (IS_MOB(viewer) || viewer == ch)
+                    continue;
+                act("$n parece ter ficado mais experiente!", TRUE, ch, 0, viewer, TO_VICT);
             }
         }
     }
@@ -138,8 +140,19 @@ void mobile_activity(void)
     for (ch = character_list; ch; ch = next_ch) {
         next_ch = ch->next;
 
-        if (!IS_MOB(ch))
+        if (!ch || !IS_MOB(ch))
             continue;
+
+        /* Skip mobs that have been marked for extraction (e.g., from death traps) */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
+        /* Safety check: Skip mobs that are not in a valid room */
+        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world) {
+            log1("SYSERR: Mobile %s (#%d) is in NOWHERE or invalid room in mobile_activity().",
+                 ch ? GET_NAME(ch) : "NULL", ch ? GET_MOB_VNUM(ch) : -1);
+            continue;
+        }
 
         /* Examine call for special procedure */
         if (MOB_FLAGGED(ch, MOB_SPEC) && !no_specials) {
@@ -152,6 +165,13 @@ void mobile_activity(void)
                     continue; /* go to next char */
             }
         }
+
+        // *** ADDED SAFETY CHECK ***
+        // A spec proc might have extracted ch and returned FALSE.
+        // The check at the top of the loop already caught other flags,
+        // but we must re-check here before proceeding.
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
 
         if (FIGHTING(ch) || !AWAKE(ch))
             continue;
@@ -168,6 +188,11 @@ void mobile_activity(void)
         }
 
         if (ch->ai_data && ch->ai_data->current_goal != GOAL_NONE) {
+            /* Re-verify room validity before complex AI operations */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world) {
+                ch->ai_data->current_goal = GOAL_NONE;
+                continue;
+            }
 
             /* Increment goal timer and check for timeout */
             ch->ai_data->goal_timer++;
@@ -220,10 +245,15 @@ void mobile_activity(void)
                     struct char_data *target = NULL;
                     struct char_data *temp_char;
 
-                    for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
-                        if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == ch->ai_data->goal_target_mob_rnum) {
-                            target = temp_char;
-                            break;
+                    /* Verify room validity before accessing people list */
+                    if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+                        for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                            if (!IS_NPC(temp_char))
+                                continue;
+                            if (GET_MOB_RNUM(temp_char) == ch->ai_data->goal_target_mob_rnum) {
+                                target = temp_char;
+                                break;
+                            }
                         }
                     }
 
@@ -231,6 +261,9 @@ void mobile_activity(void)
                         /* Attack the target */
                         act("$n se concentra em $N com olhos determinados.", FALSE, ch, 0, target, TO_ROOM);
                         hit(ch, target, TYPE_UNDEFINED);
+                        /* Safety check: hit() can indirectly cause extract_char */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     } else if (ch->ai_data->goal_timer > 100) {
                         /* Give up hunting after too long */
                         ch->ai_data->current_goal = GOAL_NONE;
@@ -281,11 +314,15 @@ void mobile_activity(void)
                 } else if (ch->ai_data->current_goal == GOAL_EAVESDROP) {
                     /* Check if there are other people to eavesdrop on */
                     struct char_data *temp_char;
-                    for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
-                        if (temp_char != ch && GET_POS(temp_char) >= POS_RESTING &&
-                            GET_SKILL(ch, SKILL_EAVESDROP) > 0) {
-                            can_perform = TRUE;
-                            break;
+                    /* Verify room validity before accessing people list */
+                    if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+                        for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                            if (temp_char == ch)
+                                continue;
+                            if (GET_POS(temp_char) >= POS_RESTING && GET_SKILL(ch, SKILL_EAVESDROP) > 0) {
+                                can_perform = TRUE;
+                                break;
+                            }
                         }
                     }
                 }
@@ -307,6 +344,11 @@ void mobile_activity(void)
                             break;
                     }
 
+                    /* Safety check: call_ACMD functions might indirectly trigger extract_char
+                     * through complex chains (e.g., triggering scripts, special procedures, etc.) */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
+
                     /* After performing action, continue with this goal for a while longer */
                     if (ch->ai_data->goal_timer > rand_number(30, 60)) {
                         /* Sometimes switch to a different goal or give up */
@@ -323,8 +365,15 @@ void mobile_activity(void)
 
             room_rnum dest = ch->ai_data->goal_destination;
 
+            /* Validate destination room */
+            if (dest != NOWHERE && (dest < 0 || dest > top_of_world)) {
+                ch->ai_data->current_goal = GOAL_NONE;
+                ch->ai_data->goal_destination = NOWHERE;
+                continue;
+            }
+
             /* Já chegou ao destino? */
-            if (IN_ROOM(ch) == dest) {
+            if (dest != NOWHERE && IN_ROOM(ch) == dest) {
                 if (ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL) {
                     /* Usa a memória para encontrar o lojista correto. */
                     struct char_data *keeper = get_mob_in_room_by_rnum(IN_ROOM(ch), ch->ai_data->goal_target_mob_rnum);
@@ -345,6 +394,8 @@ void mobile_activity(void)
                         if (shop_buys_this_item) {
                             /* Shop buys this item, proceed with sale */
                             shopping_sell(ch->ai_data->goal_obj->name, ch, keeper, shop_rnum);
+                            /* Clear goal_obj pointer as the object has been extracted by shopping_sell */
+                            ch->ai_data->goal_obj = NULL;
                             ch->ai_data->genetics.trade_tendency += 1;
                             ch->ai_data->genetics.trade_tendency = MIN(ch->ai_data->genetics.trade_tendency, 100);
                         } else {
@@ -419,6 +470,11 @@ void mobile_activity(void)
                         sprintf(buy_command, "%d", ch->ai_data->goal_item_vnum);
                         shopping_buy(buy_command, ch, keeper, find_shop_by_keeper(keeper->nr));
 
+                        /* Safety check: shopping operations could indirectly cause extract_char
+                         * through scripts, triggers, or special procedures */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+
                         /* Remove o item da wishlist se a compra foi bem sucedida */
                         remove_item_from_wishlist(ch, ch->ai_data->goal_item_vnum);
                         act("$n parece satisfeito com a sua compra.", FALSE, ch, 0, 0, TO_ROOM);
@@ -480,12 +536,13 @@ void mobile_activity(void)
                     }
                 } else if (ch->ai_data->current_goal == GOAL_COLLECT_KEY) {
                     /* Arrived at key location - try to collect the key */
-                    struct obj_data *key_obj = NULL;
+                    struct obj_data *key_obj = NULL, *next_obj = NULL;
                     obj_vnum target_key = ch->ai_data->goal_item_vnum;
                     bool key_collected = FALSE;
 
                     /* Look for the key on the ground */
-                    for (key_obj = world[IN_ROOM(ch)].contents; key_obj; key_obj = key_obj->next_content) {
+                    for (key_obj = world[IN_ROOM(ch)].contents; key_obj; key_obj = next_obj) {
+                        next_obj = key_obj->next_content; /* Save next pointer before obj_from_room */
                         if (GET_OBJ_TYPE(key_obj) == ITEM_KEY && GET_OBJ_VNUM(key_obj) == target_key) {
                             obj_from_room(key_obj);
                             obj_to_char(key_obj, ch);
@@ -497,10 +554,12 @@ void mobile_activity(void)
 
                     /* If not found on ground, look in containers */
                     if (!key_collected) {
-                        struct obj_data *container;
-                        for (container = world[IN_ROOM(ch)].contents; container; container = container->next_content) {
+                        struct obj_data *container, *next_container;
+                        for (container = world[IN_ROOM(ch)].contents; container; container = next_container) {
+                            next_container = container->next_content;
                             if (GET_OBJ_TYPE(container) == ITEM_CONTAINER && !OBJVAL_FLAGGED(container, CONT_CLOSED)) {
-                                for (key_obj = container->contains; key_obj; key_obj = key_obj->next_content) {
+                                for (key_obj = container->contains; key_obj; key_obj = next_obj) {
+                                    next_obj = key_obj->next_content; /* Save next pointer before obj_from_obj */
                                     if (GET_OBJ_TYPE(key_obj) == ITEM_KEY && GET_OBJ_VNUM(key_obj) == target_key) {
                                         obj_from_obj(key_obj);
                                         obj_to_char(key_obj, ch);
@@ -523,6 +582,9 @@ void mobile_activity(void)
                             /* Attack the mob to get the key */
                             act("$n ataca $N para obter algo que precisa.", FALSE, ch, 0, target_mob, TO_ROOM);
                             hit(ch, target_mob, TYPE_UNDEFINED);
+                            /* Safety check: hit() can indirectly cause extract_char */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
                             /* Don't clear goal yet - continue fighting until key is obtained */
                             continue;
                         }
@@ -561,6 +623,9 @@ void mobile_activity(void)
             } else {
                 /* Ainda não chegou. Continua a vaguear em direção ao objetivo. */
                 mob_goal_oriented_roam(ch, dest);
+                /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
             }
 
             continue; /* O turno do mob foi gasto a trabalhar no seu objetivo. */
@@ -588,12 +653,19 @@ void mobile_activity(void)
             mob_follow_leader(ch);
         }
 
+        /* Try stealth following (for non-grouped following behavior) */
+        mob_try_stealth_follow(ch);
+
         mob_assist_allies(ch);
 
         mob_try_and_loot(ch);
 
         /* hunt a victim, if applicable */
         hunt_victim(ch);
+
+        // *** ADDED SAFETY CHECK ***
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
 
         /* Wishlist-based goal planning */
         if (ch->ai_data && rand_number(1, 100) <= 10) { /* 10% chance per tick */
@@ -650,17 +722,31 @@ void mobile_activity(void)
 
             /* Check if mob should post a bounty quest against hostile mobs in area */
             if (GET_GENQUEST(ch) > 60 && GET_GOLD(ch) > 300) {
-                struct char_data *target;
-                /* Look for aggressive mobs in the same zone */
-                for (target = character_list; target; target = target->next) {
-                    if (IS_NPC(target) && target != ch && world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
-                        MOB_FLAGGED(target, MOB_AGGRESSIVE) && GET_ALIGNMENT(target) < -200 &&
-                        GET_LEVEL(target) >= GET_LEVEL(ch) - 5) {
+                /* Safety check: Validate ch's room before accessing world array */
+                if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+                    struct char_data *target, *next_target;
+                    /* Look for aggressive mobs in the same zone */
+                    for (target = character_list; target; target = next_target) {
+                        next_target = target->next;
 
-                        /* Post bounty quest against this aggressive mob */
-                        int reward = MIN(GET_GOLD(ch) / 4, 400 + GET_LEVEL(target) * 10);
-                        mob_posts_combat_quest(ch, AQ_MOB_KILL_BOUNTY, GET_MOB_VNUM(target), reward);
-                        break; /* Only post one bounty quest per tick */
+                        /* Safety check: Skip characters marked for extraction */
+                        if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                            continue;
+
+                        /* Safety check: Validate room before accessing world array */
+                        if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                            IN_ROOM(target) > top_of_world)
+                            continue;
+
+                        if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
+                            MOB_FLAGGED(target, MOB_AGGRESSIVE) && GET_ALIGNMENT(target) < -200 &&
+                            GET_LEVEL(target) >= GET_LEVEL(ch) - 5) {
+
+                            /* Post bounty quest against this aggressive mob */
+                            int reward = MIN(GET_GOLD(ch) / 4, 400 + GET_LEVEL(target) * 10);
+                            mob_posts_combat_quest(ch, AQ_MOB_KILL_BOUNTY, GET_MOB_VNUM(target), reward);
+                            break; /* Only post one bounty quest per tick */
+                        }
                     }
                 }
             }
@@ -668,6 +754,10 @@ void mobile_activity(void)
 
         /* Additional quest posting - exploration, protection, and general kill quests */
         if (ch->ai_data && rand_number(1, 100) <= 3) { /* 3% chance per tick for other quest types */
+            /* Safety check: Validate ch's room before accessing world array */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                continue;
+
             struct char_data *target;
             int reward;
 
@@ -703,9 +793,25 @@ void mobile_activity(void)
                     }
                 } else {
                     /* AQ_MOB_FIND quest - find a friendly mob */
-                    for (target = character_list; target; target = target->next) {
-                        if (IS_NPC(target) && target != ch && world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
-                            GET_ALIGNMENT(target) > 0 && !MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
+                    struct char_data *next_target;
+                    for (target = character_list; target; target = next_target) {
+                        next_target = target->next;
+
+                        /* Safety check: Skip characters marked for extraction */
+                        if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                            continue;
+
+                        /* Safety check: Validate room before accessing world array */
+                        if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                            IN_ROOM(target) > top_of_world)
+                            continue;
+
+                        /* Safety check: Validate ch's room before zone comparison */
+                        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                            break;
+
+                        if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && GET_ALIGNMENT(target) > 0 &&
+                            !MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
 
                             if (GET_GOLD(ch) > 80) {
                                 reward = MIN(GET_GOLD(ch) / 7, 120 + GET_LEVEL(target) * 4);
@@ -719,8 +825,24 @@ void mobile_activity(void)
                 /* Post protection quests */
                 if (rand_number(1, 100) <= 60) {
                     /* AQ_MOB_SAVE quest - protect a weak mob */
-                    for (target = character_list; target; target = target->next) {
-                        if (IS_NPC(target) && target != ch && world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
+                    struct char_data *next_target;
+                    for (target = character_list; target; target = next_target) {
+                        next_target = target->next;
+
+                        /* Safety check: Skip characters marked for extraction */
+                        if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                            continue;
+
+                        /* Safety check: Validate room before accessing world array */
+                        if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                            IN_ROOM(target) > top_of_world)
+                            continue;
+
+                        /* Safety check: Validate ch's room before zone comparison */
+                        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                            break;
+
+                        if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
                             GET_LEVEL(target) < GET_LEVEL(ch) && GET_ALIGNMENT(target) > 200) {
 
                             if (GET_GOLD(ch) > 120) {
@@ -757,9 +879,25 @@ void mobile_activity(void)
                 }
             } else if (GET_GENQUEST(ch) > 40 && rand_number(1, 100) <= 20) {
                 /* Post general kill quests */
-                for (target = character_list; target; target = target->next) {
-                    if (IS_NPC(target) && target != ch && world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
-                        GET_ALIGNMENT(target) < -100 && GET_LEVEL(target) >= GET_LEVEL(ch) - 10) {
+                struct char_data *next_target;
+                for (target = character_list; target; target = next_target) {
+                    next_target = target->next;
+
+                    /* Safety check: Skip characters marked for extraction */
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        continue;
+
+                    /* Safety check: Validate room before accessing world array */
+                    if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                        IN_ROOM(target) > top_of_world)
+                        continue;
+
+                    /* Safety check: Validate ch's room before zone comparison */
+                    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                        break;
+
+                    if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone && GET_ALIGNMENT(target) < -100 &&
+                        GET_LEVEL(target) >= GET_LEVEL(ch) - 10) {
 
                         if (GET_GOLD(ch) > 100) {
                             reward = MIN(GET_GOLD(ch) / 5, 200 + GET_LEVEL(target) * 8);
@@ -776,24 +914,43 @@ void mobile_activity(void)
         /* Aggressive Mobs */
         if (!MOB_FLAGGED(ch, MOB_HELPER) && (!AFF_FLAGGED(ch, AFF_BLIND) || !AFF_FLAGGED(ch, AFF_CHARM))) {
             found = FALSE;
-            for (vict = world[IN_ROOM(ch)].people; vict && !found; vict = vict->next_in_room) {
-                //	if (IS_NPC(vict) || !CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE))
-                if (!CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE))
-                    continue;
+            /* Re-verify room validity before accessing room data */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                continue;
 
-                if (MOB_FLAGGED(ch, MOB_WIMPY) && AWAKE(vict))
+            for (vict = world[IN_ROOM(ch)].people; vict && !found;) {
+                /* Check vict validity before dereferencing */
+                if (!vict) {
+                    break;
+                }
+
+                struct char_data *next_vict = vict->next_in_room; /* Save next pointer before any actions */
+
+                //	if (IS_NPC(vict) || !CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE))
+                if (!CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE)) {
+                    vict = next_vict;
                     continue;
+                }
+
+                if (MOB_FLAGGED(ch, MOB_WIMPY) && AWAKE(vict)) {
+                    vict = next_vict;
+                    continue;
+                }
 
                 if (MOB_FLAGGED(ch, MOB_AGGRESSIVE) || (MOB_FLAGGED(ch, MOB_AGGR_EVIL) && IS_EVIL(vict)) ||
                     (MOB_FLAGGED(ch, MOB_AGGR_NEUTRAL) && IS_NEUTRAL(vict)) ||
                     (MOB_FLAGGED(ch, MOB_AGGR_GOOD) && IS_GOOD(vict))) {
 
                     /* Can a master successfully control the charmed monster? */
-                    if (aggressive_mob_on_a_leash(ch, ch->master, vict))
+                    if (aggressive_mob_on_a_leash(ch, ch->master, vict)) {
+                        vict = next_vict;
                         continue;
+                    }
 
-                    if (vict == ch)
+                    if (vict == ch) {
+                        vict = next_vict;
                         continue;
+                    }
 
                     // if (IS_NPC(vict))
                     // continue;
@@ -803,11 +960,20 @@ void mobile_activity(void)
                         act("$N olha para você com indiferença.", FALSE, vict, 0, ch, TO_CHAR);
                     } else {
                         hit(ch, vict, TYPE_UNDEFINED);
+                        /* Safety check: hit() can indirectly cause extract_char */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                         found = TRUE;
                     }
                 }
+
+                vict = next_vict; /* Move to next victim safely */
             }
         }
+
+        // *** ADDED SAFETY CHECK ***
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
 
         mob_try_and_upgrade(ch);
 
@@ -823,16 +989,39 @@ void mobile_activity(void)
         /* Prioridade de Vaguear (Roam) */
         if (!mob_try_to_sell_junk(ch)) {
             mob_goal_oriented_roam(ch, NOWHERE);
+            /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
+        } else {
+            /* Safety check: mob_try_to_sell_junk can call mob_goal_oriented_roam internally */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
         }
 
         /* Mob Memory */
         if (MOB_FLAGGED(ch, MOB_MEMORY) && MEMORY(ch)) {
             found = FALSE;
-            for (vict = world[IN_ROOM(ch)].people; vict && !found; vict = vict->next_in_room) {
-                if (!CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE))
+            /* Re-verify room validity before accessing room data */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                continue;
+
+            for (vict = world[IN_ROOM(ch)].people; vict && !found;) {
+                /* Check vict validity before dereferencing */
+                if (!vict) {
+                    break;
+                }
+
+                struct char_data *next_vict = vict->next_in_room; /* Save next pointer before any actions */
+
+                if (!CAN_SEE(ch, vict) || PRF_FLAGGED(vict, PRF_NOHASSLE)) {
+                    vict = next_vict;
                     continue;
+                }
 
                 for (names = MEMORY(ch); names && !found; names = names->next) {
+                    if (!names)
+                        break; /* Safety check - names became NULL */
+
                     if (names->id != GET_IDNUM(vict))
                         continue;
 
@@ -843,9 +1032,18 @@ void mobile_activity(void)
                     found = TRUE;
                     act("''Ei!  Você é o demônio que me atacou!!!', exclama $n.", FALSE, ch, 0, 0, TO_ROOM);
                     hit(ch, vict, TYPE_UNDEFINED);
+                    /* Safety check: hit() can indirectly cause extract_char */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
+
+                vict = next_vict; /* Move to next victim safely */
             }
         }
+
+        // *** ADDED SAFETY CHECK ***
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
 
         /* Charmed Mob Rebellion: In order to rebel, there need to be more charmed
          * monsters than the person can feasibly control at a time.  Then the
@@ -856,13 +1054,20 @@ void mobile_activity(void)
             if (!aggressive_mob_on_a_leash(ch, ch->master, ch->master)) {
                 if (CAN_SEE(ch, ch->master) && !PRF_FLAGGED(ch->master, PRF_NOHASSLE))
                     hit(ch, ch->master, TYPE_UNDEFINED);
+                /* Safety check: hit() can indirectly cause extract_char */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
                 stop_follower(ch);
             }
         }
 
+        // *** ADDED SAFETY CHECK ***
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
         /* Resource gathering goal assignment for idle mobs */
-        if (ch->ai_data && ch->ai_data->current_goal == GOAL_NONE && rand_number(1, 1000) <= 5) {
-            /* 0.5% chance per tick for mob to start resource gathering if they have no other goals */
+        if (ch->ai_data && ch->ai_data->current_goal == GOAL_NONE && rand_number(1, 1000) <= 10) {
+            /* 1% chance per tick for mob to start resource gathering if they have no other goals */
 
             /* Check genetics to determine preferred resource activity */
             int activity_choice = rand_number(1, 100);
@@ -892,10 +1097,15 @@ void mobile_activity(void)
                 /* In social areas, try eavesdropping for information */
                 struct char_data *temp_char;
                 bool has_targets = FALSE;
-                for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
-                    if (temp_char != ch && GET_POS(temp_char) >= POS_RESTING) {
-                        has_targets = TRUE;
-                        break;
+                /* Verify room validity before accessing people list */
+                if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+                    for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                        if (temp_char == ch)
+                            continue;
+                        if (GET_POS(temp_char) >= POS_RESTING) {
+                            has_targets = TRUE;
+                            break;
+                        }
                     }
                 }
 
@@ -911,6 +1121,10 @@ void mobile_activity(void)
         if (GET_ALIGNMENT(ch) <= -350 && rand_number(1, 100) <= 10) {
             struct char_data *victim;
             struct obj_data *container;
+
+            /* Verify room validity before accessing people list */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                continue;
 
             /* Look for potential victims in the room */
             for (victim = world[IN_ROOM(ch)].people; victim; victim = victim->next_in_room) {
@@ -1136,6 +1350,10 @@ struct char_data *find_best_leader_for_new_group(struct char_data *ch)
     int count = 0;
     struct char_data *potential_members[51]; /* Buffer para potenciais membros */
 
+    /* Safety check: Validate room before accessing people list */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return NULL;
+
     /* 1. Reúne todos os candidatos (mobs solitários e compatíveis) na sala. */
     for (vict = world[IN_ROOM(ch)].people; vict && count < 50; vict = vict->next_in_room) {
         if (!IS_NPC(vict) || vict->master != NULL || GROUP(vict))
@@ -1222,6 +1440,10 @@ bool mob_handle_grouping(struct char_data *ch)
         /* Se ele é um líder de um grupo muito pequeno (só ele), ele pode tentar uma fusão. */
         if (GROUP_LEADER(GROUP(ch)) == ch && GROUP(ch)->members->iSize <= 1) {
             struct char_data *vict, *best_target_leader = NULL;
+            /* Safety check: Validate room before accessing people list */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return FALSE;
+
             /* Procura por outros grupos maiores na sala. */
             for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
                 if (GROUP(vict) && GROUP_LEADER(GROUP(vict)) == vict && vict != ch) {
@@ -1247,11 +1469,19 @@ bool mob_handle_grouping(struct char_data *ch)
     /* CENÁRIO 2: O mob está sozinho. */
     else {
 
+        /* Safety check: Validate room before accessing people list */
+        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+            return FALSE;
+
         /* 1. Procura pelo MELHOR grupo existente para se juntar. */
         for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
             if (GROUP(vict) && GROUP_LEADER(GROUP(vict)) == vict && IS_SET(GROUP_FLAGS(GROUP(vict)), GROUP_OPEN) &&
                 GROUP(vict)->members->iSize < max_group_size && is_level_compatible_with_group(ch, GROUP(vict)) &&
                 are_groupable(ch, vict)) {
+
+                /* Safety check: Validate vict's room before zone comparison */
+                if (IN_ROOM(vict) == NOWHERE || IN_ROOM(vict) < 0 || IN_ROOM(vict) > top_of_world)
+                    continue;
 
                 bool is_local = (world[IN_ROOM(ch)].zone == world[IN_ROOM(vict)].zone);
 
@@ -1430,6 +1660,10 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
          * APRENDIZAGEM PÓS-MOVIMENTO (VERSÃO FINAL E REFINADA)
          ******************************************************************/
         if (ch->ai_data) {
+            /* Safety check: Validate room before accessing world array */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return TRUE; /* Movement succeeded but skip learning */
+
             int roam_change = 0;
             int current_sect = world[IN_ROOM(ch)].sector_type;
 
@@ -1530,7 +1764,8 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
         struct room_direction_data *exit;
         room_rnum to_room;
 
-        if ((exit = EXIT(ch, direction)) && (to_room = exit->to_room) <= top_of_world) {
+        if ((exit = EXIT(ch, direction)) && (to_room = exit->to_room) != NOWHERE && to_room >= 0 &&
+            to_room <= top_of_world) {
 
             /* GESTÃO DE VOO (Ação que consome o turno) */
             if (AFF_FLAGGED(ch, AFF_FLYING) && ROOM_FLAGGED(to_room, ROOM_NO_FLY))
@@ -1560,6 +1795,11 @@ bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room)
                 (world[to_room].sector_type == SECT_UNDERWATER && !has_scuba(ch))) {
                 return FALSE;
             }
+
+            /* Safety check: Validate ch's room before zone comparison */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                return FALSE;
+
             if (MOB_FLAGGED(ch, MOB_STAY_ZONE) && (world[to_room].zone != world[IN_ROOM(ch)].zone)) {
                 /* For shopping goals, be more willing to cross zones */
                 int zone_cross_chance = (ch->ai_data && ch->ai_data->current_goal == GOAL_GOTO_SHOP_TO_SELL) ? 25 : 1;
@@ -1774,6 +2014,216 @@ bool mob_follow_leader(struct char_data *ch)
 }
 
 /**
+ * Tenta fazer o mob seguir outro personagem (player ou mob) sem formar grupo.
+ * Usado para comportamento furtivo/evil (espionagem, roubo, etc).
+ * Retorna TRUE se o mob começou ou continuou a seguir alguém.
+ */
+bool mob_try_stealth_follow(struct char_data *ch)
+{
+    /* Safety check: Validate room */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
+    /* Só funciona para mobs com ai_data e que não estão em combate */
+    if (!ch->ai_data || FIGHTING(ch))
+        return FALSE;
+
+    /* Não segue se já está em grupo ou encantado */
+    if (GROUP(ch) || AFF_FLAGGED(ch, AFF_CHARM))
+        return FALSE;
+
+    /* Verifica a tendência de seguir */
+    int follow_tendency = GET_GENFOLLOW(ch);
+
+    /* Mobs sentinelas não devem seguir (ficam no posto) */
+    if (MOB_FLAGGED(ch, MOB_SENTINEL) && rand_number(1, 100) > 2)
+        return FALSE;
+
+    /* Se já está seguindo alguém, verifica se deve continuar */
+    if (ch->master) {
+        /* Safety check: Validate master pointer and room */
+        if (!ch->master || IN_ROOM(ch->master) == NOWHERE || IN_ROOM(ch->master) < 0 ||
+            IN_ROOM(ch->master) > top_of_world) {
+            /* Master is invalid or in invalid room, stop following */
+            stop_follower(ch);
+            return FALSE;
+        }
+
+        /* Check if mob can still see the target */
+        if (!CAN_SEE(ch, ch->master)) {
+            /* Lost visibility of target, stop following so we can try a new target later */
+            /* Small decrease - visibility loss can be temporary/environmental */
+            ch->ai_data->genetics.follow_tendency -= 1;
+            ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
+            stop_follower(ch);
+            return FALSE;
+        }
+
+        /* Se o alvo saiu da sala, segue ele */
+        if (IN_ROOM(ch) != IN_ROOM(ch->master)) {
+            int direction = find_first_step(IN_ROOM(ch), IN_ROOM(ch->master));
+            if (direction >= 0 && direction < DIR_COUNT) {
+                room_rnum to_room;
+                /* Safety check: Validate exit before accessing */
+                if (EXIT(ch, direction) && (to_room = EXIT(ch, direction)->to_room) != NOWHERE && to_room >= 0 &&
+                    to_room <= top_of_world) {
+                    /* Resolve portas se necessário */
+                    if (IS_SET(EXIT(ch, direction)->exit_info, EX_ISDOOR) &&
+                        IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
+                        if (!IS_SET(EXIT(ch, direction)->exit_info, EX_DNOPEN)) {
+                            if (IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED) &&
+                                has_key(ch, EXIT(ch, direction)->key)) {
+                                do_doorcmd(ch, NULL, direction, SCMD_UNLOCK);
+                            }
+                            if (!IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED)) {
+                                do_doorcmd(ch, NULL, direction, SCMD_OPEN);
+                            }
+                        }
+                    }
+
+                    /* Tenta mover-se discretamente */
+                    if (!IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
+                        perform_move(ch, direction, 1);
+                        /* Reward for successfully following/moving with target */
+                        ch->ai_data->genetics.follow_tendency += 1;
+                        ch->ai_data->genetics.follow_tendency = MIN(ch->ai_data->genetics.follow_tendency, 100);
+                        return TRUE;
+                    }
+                } else {
+                    /* Cannot find valid path, stop following */
+                    /* Moderate decrease for path failure */
+                    ch->ai_data->genetics.follow_tendency -= 2;
+                    ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
+                    stop_follower(ch);
+                    return FALSE;
+                }
+            } else {
+                /* Cannot find path to target, stop following */
+                /* Moderate decrease for path failure */
+                ch->ai_data->genetics.follow_tendency -= 2;
+                ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
+                stop_follower(ch);
+                return FALSE;
+            }
+        }
+        /* Já está na mesma sala que o alvo, mantém a observação */
+        return TRUE;
+    }
+
+    /* Não está seguindo ninguém, decide se deve começar */
+    /* Chance base ajustada pela tendência genética */
+    if (rand_number(1, 100) > follow_tendency)
+        return FALSE;
+
+    /* Procura um alvo adequado para seguir na sala */
+    struct char_data *target = NULL;
+    struct char_data *vict;
+    int best_score = 0;
+
+    /* Safety check: Validate room before iterating people list */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
+    for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+        /* Safety check: Validate vict pointer */
+        if (!vict || vict == ch)
+            continue;
+
+        /* Only follow targets that are visible to the mob */
+        if (!CAN_SEE(ch, vict))
+            continue;
+
+        /* Safety check: Validate vict's room */
+        if (IN_ROOM(vict) == NOWHERE || IN_ROOM(vict) < 0 || IN_ROOM(vict) > top_of_world)
+            continue;
+
+        /* Preferência por players, especialmente se o mob for evil */
+        int score = 0;
+
+        if (!IS_NPC(vict)) {
+            score += 50; /* Players são alvos mais interessantes */
+
+            /* Mobs evil têm maior interesse em seguir players good */
+            if (GET_ALIGNMENT(ch) < -200 && IS_GOOD(vict))
+                score += 30;
+
+            /* Mobs com alto nível de roaming também seguem mais */
+            score += GET_GENROAM(ch) / 5;
+        } else {
+            /* Outros mobs podem ser seguidos também */
+            score += 20;
+
+            /* Prefere mobs com itens valiosos ou de nível maior */
+            if (GET_LEVEL(vict) > GET_LEVEL(ch))
+                score += 10;
+        }
+
+        /* Evita seguir mobs agressivos ou em combate */
+        if (FIGHTING(vict) || (IS_NPC(vict) && MOB_FLAGGED(vict, MOB_AGGRESSIVE)))
+            score -= 50;
+
+        if (score > best_score) {
+            best_score = score;
+            target = vict;
+        }
+    }
+
+    /* Se encontrou um bom alvo, começa a seguir */
+    if (target && best_score > 30) {
+        /* Verifica se não criaria um loop circular de seguimento */
+        if (circle_follow(ch, target)) {
+            return FALSE;
+        }
+
+        /* Stealth-aware following: Check if mob has sneak/hide affects */
+        bool is_stealthy = AFF_FLAGGED(ch, AFF_SNEAK) || AFF_FLAGGED(ch, AFF_HIDE);
+
+        /* Manually set up following relationship (like add_follower but with conditional messages) */
+        if (!ch->master) {
+            struct follow_type *k;
+            ch->master = target;
+            CREATE(k, struct follow_type, 1);
+            k->follower = ch;
+            k->next = target->followers;
+            target->followers = k;
+
+            /* Messages are conditional based on stealth */
+            if (!is_stealthy) {
+                /* Normal visible following */
+                if (IS_NPC(ch)) {
+                    /* NPCs don't get the "You will now follow" message */
+                } else {
+                    act("Você agora irá seguir $N.", FALSE, ch, 0, target, TO_CHAR);
+                }
+                if (CAN_SEE(target, ch))
+                    act("$n começa a seguir você.", TRUE, ch, 0, target, TO_VICT);
+                act("$n começa a seguir $N.", TRUE, ch, 0, target, TO_NOTVICT);
+            } else {
+                /* Stealthy following - only notify if target can see through stealth */
+                if (CAN_SEE(target, ch)) {
+                    /* Target can see through the stealth */
+                    act("$n começa a seguir você silenciosamente.", TRUE, ch, 0, target, TO_VICT);
+                }
+                /* No message to room when sneaking/hiding */
+            }
+        }
+
+        /* Aumenta levemente a tendência de seguir se teve sucesso (menor peso que a frustração) */
+        ch->ai_data->genetics.follow_tendency += 1;
+        ch->ai_data->genetics.follow_tendency = MIN(ch->ai_data->genetics.follow_tendency, 100);
+        return TRUE;
+    }
+
+    /* Se não encontrou ninguém para seguir, pequena chance de esquecer/reduzir interesse */
+    if (rand_number(1, 100) <= 2) { /* 2% chance por tick de reduzir naturalmente */
+        ch->ai_data->genetics.follow_tendency -= 1;
+        ch->ai_data->genetics.follow_tendency = MAX(ch->ai_data->genetics.follow_tendency, 0);
+    }
+
+    return FALSE;
+}
+
+/**
  * A IA principal para um mob ocioso decidir ajudar aliados em combate.
  * Consolida as lógicas de grupo, charmed e helper.
  * Retorna TRUE se o mob entrou em combate.
@@ -1819,16 +2269,19 @@ bool mob_assist_allies(struct char_data *ch)
 
     /* PRIORIDADE 3: Ajudar outros NPCs (se tiver a flag MOB_HELPER) */
     else if (MOB_FLAGGED(ch, MOB_HELPER)) {
-        struct char_data *vict;
-        for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
-            if (ch == vict || !IS_NPC(vict) || !FIGHTING(vict))
-                continue;
-            if (IS_NPC(FIGHTING(vict))) /* Não ajuda mobs que lutam contra outros mobs */
-                continue;
+        /* Safety check: Validate room before accessing people list */
+        if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+            struct char_data *vict;
+            for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+                if (ch == vict || !IS_NPC(vict) || !FIGHTING(vict))
+                    continue;
+                if (IS_NPC(FIGHTING(vict))) /* Não ajuda mobs que lutam contra outros mobs */
+                    continue;
 
-            ally_in_trouble = vict;
-            target_to_attack = FIGHTING(vict);
-            break; /* Ajuda o primeiro que encontrar. */
+                ally_in_trouble = vict;
+                target_to_attack = FIGHTING(vict);
+                break; /* Ajuda o primeiro que encontrar. */
+            }
         }
     }
 
@@ -1836,6 +2289,9 @@ bool mob_assist_allies(struct char_data *ch)
     if (ally_in_trouble && target_to_attack) {
         act("$n vê que $N está em apuros e corre para ajudar!", FALSE, ch, 0, ally_in_trouble, TO_NOTVICT);
         hit(ch, target_to_attack, TYPE_UNDEFINED);
+        /* Safety check: hit() can indirectly cause extract_char */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            return TRUE;
         return TRUE;
     }
 
@@ -1850,6 +2306,10 @@ bool mob_assist_allies(struct char_data *ch)
  */
 bool mob_try_and_loot(struct char_data *ch)
 {
+    /* Safety check: Validate room before accessing world array */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
     /* A IA só age se houver itens na sala, se o mob tiver genética e não estiver em combate. */
     if (!world[IN_ROOM(ch)].contents || !ch->ai_data || FIGHTING(ch))
         return FALSE;
@@ -2574,11 +3034,21 @@ struct char_data *get_mob_in_room_by_vnum(room_rnum room, mob_vnum vnum)
  */
 struct char_data *find_questmaster_by_vnum(mob_vnum vnum)
 {
-    struct char_data *i;
+    struct char_data *i, *next_i;
 
     /* Search through all characters in the world */
-    for (i = character_list; i; i = i->next) {
-        if (IS_NPC(i) && GET_MOB_VNUM(i) == vnum) {
+    for (i = character_list; i; i = next_i) {
+        next_i = i->next;
+
+        /* Safety check: Skip characters marked for extraction */
+        if (MOB_FLAGGED(i, MOB_NOTDEADYET) || PLR_FLAGGED(i, PLR_NOTDEADYET))
+            continue;
+
+        /* Safety check: Validate room before using the character */
+        if (!IS_NPC(i) || IN_ROOM(i) == NOWHERE || IN_ROOM(i) < 0 || IN_ROOM(i) > top_of_world)
+            continue;
+
+        if (GET_MOB_VNUM(i) == vnum) {
             /* Check if this mob is a questmaster (has quest special procedure) */
             if (mob_index[GET_MOB_RNUM(i)].func == questmaster || mob_index[GET_MOB_RNUM(i)].func == temp_questmaster) {
                 return i;
@@ -2740,6 +3210,10 @@ bool mob_try_to_accept_quest(struct char_data *ch)
         return FALSE;
     }
 
+    /* Safety check: Validate room before accessing world array */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
     /* Look for accessible questmasters in the current zone */
     mob_zone = world[IN_ROOM(ch)].zone;
     questmaster = find_accessible_questmaster_in_zone(ch, mob_zone);
@@ -2825,16 +3299,15 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 ch->ai_data->current_goal = GOAL_NONE;
                 return TRUE;
             } else {
-                /* Target mob not found, seek it */
-                /* For now, just roam randomly looking for it */
-                if (rand() % 2) { /* 50% chance to move */
-                    char_from_room(ch);
-                    char_to_room(ch, world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]
-                                         ? world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]->to_room
-                                         : IN_ROOM(ch));
-                }
-                return TRUE;
+                /* Target mob not found, seek it by using the normal mob AI movement */
+                /* Use mob_goal_oriented_roam instead of manual char_from_room/char_to_room
+                 * to avoid the bug where IN_ROOM(ch) becomes NOWHERE after char_from_room */
+                mob_goal_oriented_roam(ch, NOWHERE); /* Roam randomly */
+                /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
             }
+            return TRUE;
             break;
 
         case AQ_MOB_KILL:
@@ -2845,17 +3318,20 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                 /* Attack the target mob */
                 act("$n olha para $N com determinação.", FALSE, ch, 0, target_mob, TO_ROOM);
                 hit(ch, target_mob, TYPE_UNDEFINED);
+                /* Safety check: hit() can indirectly cause extract_char */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
                 return TRUE;
             } else if (!target_mob) {
-                /* Target mob not found, seek it */
-                if (rand() % 2) { /* 50% chance to move */
-                    char_from_room(ch);
-                    char_to_room(ch, world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]
-                                         ? world[IN_ROOM(ch)].dir_option[rand() % NUM_OF_DIRS]->to_room
-                                         : IN_ROOM(ch));
-                }
-                return TRUE;
+                /* Target mob not found, seek it by using the normal mob AI movement */
+                /* Use mob_goal_oriented_roam instead of manual char_from_room/char_to_room
+                 * to avoid the bug where IN_ROOM(ch) becomes NOWHERE after char_from_room */
+                mob_goal_oriented_roam(ch, NOWHERE); /* Roam randomly */
+                /* Safety check: mob_goal_oriented_roam uses perform_move which can trigger death traps */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
             }
+            return TRUE;
             break;
 
         case AQ_OBJ_RETURN:
@@ -2912,6 +3388,9 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                             if (!FIGHTING(ch)) {
                                 act("$n ataca $N para limpar a área.", FALSE, ch, 0, temp_mob, TO_ROOM);
                                 hit(ch, temp_mob, TYPE_UNDEFINED);
+                                /* Safety check: hit() can indirectly cause extract_char */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    return TRUE;
                             }
                             found_hostile = TRUE;
                             break;
@@ -3073,6 +3552,10 @@ void mob_process_wishlist_goals(struct char_data *ch)
 
     /* Opção 3: Postar uma quest (implementação aprimorada) */
     if (GET_GOLD(ch) >= desired_item->priority * 2) {
+        /* Safety check: Validate room before accessing world array */
+        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+            return;
+
         /* Tem ouro suficiente para oferecer uma recompensa */
         zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
         struct char_data *accessible_qm = find_accessible_questmaster_in_zone(ch, mob_zone);
@@ -3172,6 +3655,10 @@ bool mob_try_sacrifice(struct char_data *ch, struct obj_data *corpse)
     /* If no corpse specified, find one in the room */
     if (!corpse) {
         struct obj_data *obj;
+
+        /* Safety check: Validate room before accessing world array */
+        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+            return FALSE;
 
         for (obj = world[IN_ROOM(ch)].contents; obj; obj = obj->next_content) {
             if (IS_CORPSE(obj)) {
@@ -3436,6 +3923,10 @@ struct obj_data *find_bank_nearby(struct char_data *ch)
     if (!ch || !IS_NPC(ch)) {
         return NULL;
     }
+
+    /* Safety check: Validate room before accessing world array */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return NULL;
 
     /* First check objects in the same room as the mob */
     for (obj = world[IN_ROOM(ch)].contents; obj; obj = obj->next_content) {

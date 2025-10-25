@@ -112,6 +112,7 @@ SOFTWARE. */
 #define DB_CODE_MARKER 99
 
 extern char *UNDEF_SPELL;
+extern struct str_spells *list_spells;
 
 struct str_spells *get_spell_by_vnum(int vnum);
 struct str_spells *get_spell_by_name(char *name, char type);

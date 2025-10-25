@@ -837,6 +837,8 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                      CCNRM(ch, C_NRM));
         send_to_char(ch, "Tendência Aventureiro (Genética): [%s%d%s]\r\n", CCCYN(ch, C_NRM), GET_GENADVENTURER(k),
                      CCNRM(ch, C_NRM));
+        send_to_char(ch, "Tendência Follow (Genética): [%s%d%s]\r\n", CCCYN(ch, C_NRM), GET_GENFOLLOW(k),
+                     CCNRM(ch, C_NRM));
         /* Futuramente, podemos adicionar outros genes aqui. */
     }
 
@@ -5529,7 +5531,7 @@ ACMD(do_gstats)
     if (!*arg1) {
         send_to_char(ch, "Usage: gstats <target> <gene>\r\n");
         send_to_char(ch, "Target can be: mob name/vnum, zone <zone_num>, or 'all'\r\n");
-        send_to_char(ch, "Genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+        send_to_char(ch, "Genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, follow\r\n");
         return;
     }
 
@@ -5538,16 +5540,18 @@ ACMD(do_gstats)
         gene_arg = arg3; /* For "zone <num> <gene>", gene is third argument */
         if (!*arg2 || !*arg3) {
             send_to_char(ch, "Usage: gstats zone <zone_number> <gene>\r\n");
-            send_to_char(ch,
-                         "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+            send_to_char(
+                ch,
+                "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, follow\r\n");
             return;
         }
     } else {
         gene_arg = arg2; /* For "all <gene>" or "<mobname> <gene>", gene is second argument */
         if (!*arg2) {
             send_to_char(ch, "Specify a gene to analyze.\r\n");
-            send_to_char(ch,
-                         "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+            send_to_char(
+                ch,
+                "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, follow\r\n");
             return;
         }
     }
@@ -5573,9 +5577,12 @@ ACMD(do_gstats)
         gene_name = "Quest Tendency";
     else if (!str_cmp(gene_arg, "adventurer"))
         gene_name = "Adventurer Tendency";
+    else if (!str_cmp(gene_arg, "follow"))
+        gene_name = "Follow Tendency";
     else {
-        send_to_char(
-            ch, "Invalid gene. Available: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+        send_to_char(ch,
+                     "Invalid gene. Available: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, "
+                     "follow\r\n");
         return;
     }
 
@@ -5650,6 +5657,8 @@ ACMD(do_gstats)
             gene_value = proto_mob->ai_data->genetics.quest_tendency;
         else if (!str_cmp(gene_arg, "adventurer"))
             gene_value = proto_mob->ai_data->genetics.adventurer_tendency;
+        else if (!str_cmp(gene_arg, "follow"))
+            gene_value = proto_mob->ai_data->genetics.follow_tendency;
 
         if (count < 1000) {
             gene_values[count++] = gene_value;

@@ -1896,6 +1896,12 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             mob_proto[i].ai_data->genetics.adventurer_tendency = num_arg;
         }
     }
+    CASE("GenFollow")
+    {
+        if (mob_proto[i].ai_data) {
+            mob_proto[i].ai_data->genetics.follow_tendency = num_arg;
+        }
+    }
     CASE("BareHandAttack")
     {
         RANGE(0, NUM_ATTACK_TYPES - 1);
@@ -4236,6 +4242,11 @@ static void load_default_config(void)
     CONFIG_MINIMAP_SIZE = default_minimap_size;
     CONFIG_SCRIPT_PLAYERS = script_players;
     CONFIG_DEBUG_MODE = debug_mode;
+    CONFIG_FIT_EVOLVE = fit_evolve;
+    CONFIG_WEATHER_AFFECTS_SPELLS = weather_affects_spells;
+    CONFIG_SCHOOL_WEATHER_AFFECTS = school_weather_affects;
+    CONFIG_MAX_PATHFIND_ITERATIONS = max_pathfind_iterations;
+    CONFIG_MAX_ZONE_PATH = max_zone_path;
 
     /* Rent / crashsave options. */
     CONFIG_FREE_RENT = free_rent;
@@ -4291,6 +4302,9 @@ static void load_default_config(void)
     /* Autowiz options. */
     CONFIG_USE_AUTOWIZ = use_autowiz;
     CONFIG_MIN_WIZLIST_LEV = min_wizlist_lev;
+    /* Experimental features. */
+    CONFIG_NEW_AUCTION_SYSTEM = NO;
+    CONFIG_EXPERIMENTAL_BANK_SYSTEM = NO;
 }
 
 void load_config(void)
@@ -4382,11 +4396,18 @@ void load_config(void)
                     CONFIG_MINIMAP_SIZE = num;
                 break;
 
+            case 'e':
+                if (!str_cmp(tag, "experimental_bank_system"))
+                    CONFIG_EXPERIMENTAL_BANK_SYSTEM = num;
+                break;
+
             case 'f':
                 if (!str_cmp(tag, "free_rent"))
                     CONFIG_FREE_RENT = num;
                 else if (!str_cmp(tag, "frozen_start_room"))
                     CONFIG_FROZEN_START = num;
+                else if (!str_cmp(tag, "fit_evolve"))
+                    CONFIG_FIT_EVOLVE = num;
                 break;
 
             case 'h':
@@ -4474,6 +4495,10 @@ void load_config(void)
                     CONFIG_MAP = num;
                 else if (!str_cmp(tag, "medit_advanced_stats"))
                     CONFIG_MEDIT_ADVANCED = num;
+                else if (!str_cmp(tag, "max_pathfind_iterations"))
+                    CONFIG_MAX_PATHFIND_ITERATIONS = num;
+                else if (!str_cmp(tag, "max_zone_path"))
+                    CONFIG_MAX_ZONE_PATH = num;
 
                 break;
 
@@ -4484,6 +4509,8 @@ void load_config(void)
                     CONFIG_NO_MORT_TO_IMMORT = num;
                 else if (!str_cmp(tag, "newbie_start_room"))
                     CONFIG_NEWBIE_START = num;
+                else if (!str_cmp(tag, "new_auction_system"))
+                    CONFIG_NEW_AUCTION_SYSTEM = num;
                 else if (!str_cmp(tag, "noperson")) {
                     char tmp[READ_SIZE];
                     if (CONFIG_NOPERSON)
@@ -4545,6 +4572,8 @@ void load_config(void)
                     CONFIG_SCRIPT_PLAYERS = num;
                 else if (!str_cmp(tag, "special_in_comm"))
                     CONFIG_SPECIAL_IN_COMM = num;
+                else if (!str_cmp(tag, "school_weather_affects"))
+                    CONFIG_SCHOOL_WEATHER_AFFECTS = num;
                 else if (!str_cmp(tag, "start_messg")) {
                     strncpy(buf, "Reading start message in load_config()", sizeof(buf));
                     if (CONFIG_START_MESSG)
@@ -4574,7 +4603,8 @@ void load_config(void)
                     if (CONFIG_WELC_MESSG)
                         free(CONFIG_WELC_MESSG);
                     CONFIG_WELC_MESSG = fread_string(fl, buf);
-                }
+                } else if (!str_cmp(tag, "weather_affects_spells"))
+                    CONFIG_WEATHER_AFFECTS_SPELLS = num;
                 break;
 
             default:

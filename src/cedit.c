@@ -729,6 +729,18 @@ int save_config(IDXTYPE nowhere)
             "debug_mode = %d\n\n",
             CONFIG_DEBUG_MODE);
 
+    fprintf(fl, "\n\n\n* [ Experimental Features ]\n");
+
+    fprintf(fl,
+            "* Enable the new auction system?\n"
+            "new_auction_system = %d\n\n",
+            CONFIG_NEW_AUCTION_SYSTEM);
+
+    fprintf(fl,
+            "* Enable the experimental bank system?\n"
+            "experimental_bank_system = %d\n\n",
+            CONFIG_EXPERIMENTAL_BANK_SYSTEM);
+
     fclose(fl);
 
     if (in_save_list(NOWHERE, SL_CFG))

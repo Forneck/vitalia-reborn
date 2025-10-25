@@ -395,7 +395,7 @@ void spedit_choose_apply(struct descriptor_data *d)
     cpt = i + 1;
     for (i = cpt; i < cpt + NUM_AFF_FLAGS; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-15s%s", grn, i, nrm, yel,
-                       affected_bits[i - NUM_APPLIES], (i - cpt + 1) % 4 ? "" : "\r\n");
+                       affected_bits[i - cpt], (i - cpt + 1) % 4 ? "" : "\r\n");
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\n\r\nEnter choice (0 to quit, 'r' to remove) : ", nrm);
@@ -819,6 +819,8 @@ void spedit_copyover_spell(struct str_spells *from, struct str_spells *to)
         to->assign[i].prac_gain = STRDUP(from->assign[i].prac_gain);
         to->assign[i].num_mana = STRDUP(from->assign[i].num_mana);
     }
+    to->school = from->school;
+    to->element = from->element;
     to->function = from->function;
 }
 
@@ -1882,8 +1884,7 @@ void spedit_parse(struct descriptor_data *d, char *arg)
             spedit_mag_flags_menu(d);
             return;
         case SPEDIT_SCHOOL_MENU:
-            if (!(x = atoi(arg)))
-                break;
+            x = atoi(arg);
 
             /* Check if it's a skill or spell and validate accordingly */
             int is_skill = (OLC_SPELL(d)->type == 'K');
@@ -1897,8 +1898,7 @@ void spedit_parse(struct descriptor_data *d, char *arg)
             OLC_SPELL(d)->school = x;
             break;
         case SPEDIT_ELEMENT_MENU:
-            if (!(x = atoi(arg)))
-                break;
+            x = atoi(arg);
             if ((x < 0) || (x >= NUM_ELEMENTS)) {
                 send_to_char(d->character, "Invalid choice!\r\n");
                 spedit_element_menu(d);
