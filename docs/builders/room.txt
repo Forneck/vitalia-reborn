@@ -1,0 +1,594 @@
+                .v~
+               .(W      ';;'    ';' ,,   ,      ,;;  ';;   ,,
+              /<M.       ;;     ,'  ''  ,;      ''    ;;   ''
+\~b__________/$@|\--------;;   ,'  ';; ';;'' .,'';.   ;;  ';;  .,'';.-------.
+ >@)$$$$$$$$($( )#H>======';, ,'    ;;  ;;   '' ,;;   ;;   ;;  '' ,;;===----->
+/_p~~~~~~~~~~\$@|/---------';;;     ;;  ;;   .,' ;;   ;;   ;;  .,' ;;-------'
+              \<M`           ;     ,;;, ';,' ';,';;.',;;, ,;;, ';,';;.'
+               `(B
+_________________`?____________________[ Referência para Criação de Áreas ]___
+
+Autores: Juliano Ravasi Ferraz <blug@mud.linkway.com.br>
+	 Ana Carolina Cyrino <nemesis@mud.linkway.com.br>
+
+$Id: room.txt,v 1.25 2003/10/25 19:16:21 ju Exp $
+
+################################################################################
+ Salas
+################################################################################
+
+   Cada sala no arquivo de salas do VitaliaMUD, deve iniciar com um sinal de
+sustenido (#) seguido de seu número, e terminar com uma letra "S" em uma
+linha em branco.  Entre estes marcadores, deve-se inserir os elementos que
+dão as características à sala, neste formato:
+
+------------------------
+ #<vnum>
+ <título>~
+ <descrição>
+ ~
+ <área> <flags> <setor>
+ {opções}				(opcional)
+ {saídas}				(opcional)
+ {descrições extras}			(opcional)
+ S
+------------------------
+
+   VNUM
+   O número da sala.  O número deve estar dentro do intervalo de números da
+área em construção.  As salas devem ser dispostas no arquivo em ordem
+numérica crescente, do menor para o maior.
+
+   TÍTULO
+   O título da sala.  Deve ser um nome breve que defina o local onde o
+jogador estará.  O título deve terminar com um sinal til (~), e deve ser
+escrito com as primeiras letras de cada palavra em maiúsculas, exceto
+preposições.  Exemplos:
+A Sala de Leitura~		(correto)
+A Sala de Leitura.~		(errado)
+A Sala De Leitura~		(errado)
+A sala de leitura~		(errado)
+A SALA DE LEITURA~		(errado)
+A Sala de Leitura		(errado)
+
+   DESCRIÇÃO
+   A descrição que é mostrada ao jogador quando ele entra na sala, ou quando
+digita LOOK.  Essa descrição deve ser escrita como se a pessoa estivesse
+parada dentro da sala, olhando ao redor.  Deve conter 3 elementos, na
+seguinte ordem: Onde ela está, o quê ela vê e quais são as saídas da sala.
+A descrição termina, como o título, com um sinal til (~), porém, na linha
+seguinte, e não no final da última linha.
+   Cada linha de texto na descrição deve ter no máximo 76 letras, e se
+necessário o texto deverá ser cortado para a linha seguinte, sem fazer
+separação silábica.  Cada parágrafo deve começar com 3 espaços em branco, e
+deve-se usar 2 espaços após o ponto-final de cada frase, quando uma nova
+frase for continuar no mesmo parágrafo.  Como referência, este texto que
+você está lendo está formatado da forma como foi descrita.
+
+   Dica útil: para facilitar o trabalho de escrever as descrições da área,
+logo abaixo há uma "régua" que ajuda a manter o limite de 76 letras em cada
+linha.  Essa "régua" possui exatamente 76 caracteres.  Você pode copiá-la
+daquí e colá-la no arquivo das salas próximo do lugar onde está escrevendo,
+assim você pode controlar para que nenhuma linha de texto fique maior que a
+"régua".
+----=----!----=----!----=----!----=----!----=----!----=----!----=----!----=|
+
+   ÁREA
+   Este campo deve conter o número da área que contém a sala.  Como atualmente
+as áreas são divididas em arquivos diferentes, e o MUD sabe qual arquivo
+pertence a qual área, este campo não tem muita influência no MUD, exceto por
+alguns alertas que o MUD gera se este estiver errado.
+   Contudo, este campo pode ser usado para dividir uma área em pedaços
+menores, selecionando qual destes pedaços a sala pertence através deste campo.
+Por padrão, todas as salas de uma área fazem parte da "subárea" 0 (zero).
+Caso você deseje dividir a área, colocando uma sala em um pedaço (ou subárea)
+diferente, basta você indicar neste campo a que pedaço da área a sala
+pertence, desta forma:
+
+   18           (área 18, subárea 0 (padrão))
+   18.1         (área 18, subárea 1)
+   18.2         (área 18, subárea 2)
+
+   Dividindo uma área em subáreas pode ajuda a manter uma melhor estética na
+organização das salas da área.  O MUD usa a divisão em subáreas internamente,
+como por exemplo o canal SHOUT, que se estende apenas dentro da subárea em que
+o jogador estiver (diferente do CircleMUD e de versões anteriores do
+VitaliaMUD, onde o canal SHOUT se estendia por toda a área).
+
+   FLAGS
+   Este campo contém as flags que definem várias características da sala.
+Este campo pode ser escrito de duas formas: usando letras, onde cada letra
+indica uma das flags da sala; e usando números, que indica a soma do valor
+de cada uma das flags.  O primeiro método, usando letras, é preferível, pois
+permite uma melhor leitura.  As diversas flags de salas são descritas mais
+adiante, na seção "Flags".
+
+   SETOR
+   Indica o tipo de setor da sala.  Através do setor, o MUD calcula a
+iluminação da sala e o número de movimentos necessários para entrar ou sair
+da mesma.  Cada tipo de setor é representado por um número.  Os diversos
+tipos de setor são descritos mais adiante, na seção "Setores".
+
+   OPÇÕES
+   Campos opicionais das salas.  São descritos mais adiante, na seção
+"Opções".
+
+   SAÍDAS
+   São campos que definem cada saída da sala, e para qual sala cada uma
+leva.  Estes campos são descritos mais adiante, na seção "Saídas".
+
+   DESCRIÇÕES EXTRAS
+   São campos que servem para oferecer descrições adicionais para a sala.
+Por exemplo, a descrição principal da sala pode indicar a presença de uma
+estante em uma das paredes da sala, e ao olhar para a estante, você verá uma
+descrição mais detalhada dela.  Estes campos são descritos mais adiante, na
+seção "Descrições Extras".
+
+
+================================================================================
+ Flags
+--------------------------------------------------------------------------------
+
+   a. DARK (1)
+   Sala escura, será necessário que um dos ocupantes da sala esteja portando
+uma fonte de luz para que se possa enxergar os objetos e personagens.
+
+   b. DEATH (2)
+   A sala representa uma armadilha de morte.  Quem entrar na sala, perderá
+todos os objetos, e retornará à sala de início.  Não há perda de
+experiência.  Leia mais sobre armadilhas de morte mais adiante, na seção
+"Armadilhas".
+
+   c. NOMOB (4)
+   Monstros que andam sozinhos não poderão entrar na sala.
+
+   d. INDOORS (8)
+   Sala fechada (possui teto e paredes), e não se pode ver o céu.
+
+   e. PEACEFUL (16)
+   Sala tranqüila, nenhuma violência será possível.  Apenas magias benéficas
+podem ser lançadas e não é possível roubar.
+
+   f. SOUNDPROOF (32)
+   Todos os canais mortais não podem ser usados ou ouvidos dentro da sala.
+
+   g. NOTRACK (64)
+   A habilidade TRACK não pode ser usada para encontrar caminhos que passem
+através desta sala.
+
+   h. NOMAGIC (128)
+   Nenhum tipo de magia poderá ser lançada na sala.
+
+   i. TUNNEL (256)
+   Apenas uma pessoa pode estar na sala de cada vez.
+
+   j. PRIVATE (512)
+   Não será possível entrar na sala usando goto ou teleport se houverem
+outros 2 personagens em seu interior.
+
+   k. JAIL (1024)
+   Prisão.  A sala será usada pelos Deuses para encarcerar jogadores.  Apenas
+os Deuses mais altos tem permissão para construir salas usando esta flag.
+
+   l. HOUSE (2048)
+   m. HOUSE_SAVE (4096)
+   o. HOUSE_STORED (16384)
+   p. MARK (32768)
+   Estas flags são para uso interno do VitaliaMUD, e NÃO DEVEM SER USADAS.
+
+   n. ARENA (8192)
+   Arena.  Será possível luta entre jogadores na sala, sem que se tornem
+foras-da-lei.  Apenas os Deuses mais altos tem permissão para construir salas
+usando esta flag.
+
+   q. HIGH (65536)
+   A sala possui grande altitude, tornando difícil de se respirar.  Os
+personagens perderão pontos de respiração.
+
+   r. NOMOUNT (131072)
+   Não será possível entrar na sala montando.
+
+   s. NOFLY (262144)
+   Não será possível entrar na sala voando.
+
+   t. HEAL (524288)
+   Os ocupantes da sala irão se curar 50% mais rápido.  Esta flag não pode
+ser usada junto com a flag FROZEN(u), e usando-a em conjunto com a flag
+PEACEFUL(e), a cura se dará 75% mais rápido.
+
+   u. FROZEN (1048576)
+   O metabolismo dos ocupantes da sala irá congelar, ou seja, não irão
+recuperar pontos de saúde, movimento e magia.
+
+   v. BROADCAST (2097152)
+   Todas as ações feitas na sala serão vistas em todas as salas
+subseqüentes, que estiverem dentro da mesma subárea.  Útil em ambientes
+como, por exemplo, um coliseu, onde a arena e as arquibancadas são dois
+lugares distintos, porém, tudo que é realizado na arena, é visto nas
+arquibancadas.  Este recurso ainda está em testes, e apenas os Deuses mais
+altos tem permissão para construir salas usando esta flag.
+
+-=> Uma dica...  Se você pretende fazer uma sala ou várias salas em que deseje
+que o jogador perca realmente movimento (como em florestas muito densas,
+regiões montanhosas etc), coloque salas com flag !FLY, assim além do jogador
+ser obrigado a caminhar, tem mais sentido do que você, no meio de uma floresta
+densa e escura, sair alegremente voando sem bater a cabeça em nada...
+
+
+================================================================================
+ Setores
+--------------------------------------------------------------------------------
+
+   0. INSIDE
+   Interior de construções ou prédios.  Requer um pequeno número de pontos
+de movimento.
+
+   1. CITY
+   Ruas da cidade. Requer um pequeno número de pontos de movimento.
+
+   2. FIELD
+   Campo aberto.
+
+   3. FOREST
+   Floresta densa.
+
+   4. HILLS
+   Encosta de montanha.
+
+   5. MOUNTAIN
+   Região montanhosa. Requer um alto número de pontos de movimento.
+
+   6. WATER_SWIM
+   Água. Não é necessário bote para atravessar.
+
+   7. WATER_NOSWIM
+   Água. Requer um bote para atravessar.
+
+   8. UNDERWATER
+   Sob a água, impossível de se respirar.
+
+   9. FLYING
+   Aéreo, só é possível de atravessar voando, ou seja, usando asas ou magia.
+
+   10. CLIMBING		** NÃO IMPLEMENTADO AINDA **
+   Só é possível de atravessar voando ou escalando.  Salas com esse tipo de
+setor devem ter obrigatoriamente pelo menos uma saída com a flag CLIMB_DOWN.
+
+   11. AIR_FLOW
+   Fluxo de ar, faz com que todos os integrantes da sala voem naturalmente.
+
+   12. QUICKSAND
+   Areia movediça, os personagens que estiverem na sala afundarão na
+areia (levando dano) até que morram.
+
+   13. LAVA
+   Lava, os personagens que estiverem na sala sofrerão dano por queimaduras.
+
+   14. ICE
+   Gelo, os personagens verão o gelo trincar e poderão escorregar ao tentar
+andar.
+
+   Os setores INSIDE e CITY possuem iluminação constante, não precisando de
+luz para se enxergar, nem mesmo durante a noite.  Os demais setores possuem
+iluminação variável de acordo com a hora do dia, precisando de luz para se
+enxergar durante a noite.  Em ambos os casos, a sala será permanentemente
+escura se houver a flag DARK.
+
+
+================================================================================
+ Opções
+--------------------------------------------------------------------------------
+
+------------------------
+ OL <nível>
+------------------------
+
+   Define o nível necessário para que um personagem entre na sala. Esta opção
+afeta apenas personagens de jogadores (PC), portanto para a melhor eficácia,
+a sala deverá ter também a flag NOMOB.
+
+
+------------------------
+ ON <nome>
+------------------------
+
+   Define um nome para a sala, permitindo aos imortais usar o nome definido,
+ao invés do número, para se chegar até a sala.  Por exemplo, se for definido
+o nome "abc" para uma sala, de número 1897, será possível se chegar a esta
+sala usando "goto 1897" ou "goto abc".
+
+   A opção "ON" aceita apenas um nome, porém, pode-se usar várias vezes a
+opção "ON" em cada sala, para cada nome diferente.
+
+   Recomenda-se definir um nome para a sala de entrada de uma área, usando a
+letra "z", seguida do número da área.  Por exemplo, se você está construindo
+uma área com o número 18, então na sala de entrada, ou a mais importante,
+defina o nome "z18", desta forma:
+
+ON z18
+
+
+------------------------
+ OO <quant>
+------------------------
+
+   Define o limite máximo de objetos que poderão ser deixados na sala.  Quando
+esta opção não é fornecida, não há limites para a quantidade de objetos.
+
+
+------------------------
+ OP <quant>
+------------------------
+
+   Define o limite máximo de jogadores que poderão entrar na sala.  Quando
+esta opção não é fornecida, não há limites para a quantidade de jogadores.  O
+efeito é idêntico à flag TUNNEL, exceto por permitir configurar a quantidade.
+
+
+------------------------
+ OX <nome> <valor>
+------------------------
+
+   Define um campo extra, geralmente usado por spec-procs.  O nome do campo
+extra não deve conter espaços, e o valor é lido do primeiro espaço após o nome
+até o final da linha.
+
+
+================================================================================
+ Saídas
+--------------------------------------------------------------------------------
+
+------------------------
+ D <direção>
+ <descrição>
+ ~
+ <ids>~
+ :n <gênero> <nome-completo>		(opcional)
+ <flags> <chave> <sala>
+------------------------
+
+
+   DIREÇÃO
+   Um número ou código que indique a direção da saída, seguindo a tabela
+abaixo:
+     direção  | núm | cód     direção  | núm | cód
+    ----------+-----+-----   ----------+-----+-----
+     Norte    |  0  | N       Baixo    |  5  | D
+     Leste    |  1  | E       Noroeste |  6  | NW
+     Sul      |  2  | S       Nordeste |  7  | NE
+     Oeste    |  3  | O       Sudeste  |  8  | SE
+     Cima     |  4  | U       Sudoeste |  9  | SW
+
+-=> Para uma melhor visualização, veja a figura "dirs.jpg"
+
+   DESCRIÇÃO
+   A descrição da saída, quando se olhar para ela.
+
+   IDS
+   Os nomes que identificam a saída (que são usados em LOOK, OPEN, etc).
+   Em versões anteriores do VitaliaMUD, costumava-se duplicar os nomes que
+possuiam acentos, deixando um dos nomes sem acentos, para que os jogadores
+que não tivessem a capacidade de digitá-los pudessem ainda assim usar os
+comandos.  Contudo, agora não há mais tal necessidade, pois o MUD já possui
+formas de reconhecer e comparar palavras acentuadas e não-acentuadas.
+   Caso a saída não possua nenhum nome, este campo pode ser omitido,
+deixando apenas o sinal til (~) que limita o fim do campo.
+
+   GÊNERO
+   O gênero gramatical que deverá ser usado nas mensagens contento o nome da
+porta.  Deve ser um número entre estes:
+	0 -> Neutro (sem porta)
+	1 -> Masculino (ex: O portão está fechado)
+	2 -> Feminino (ex: A porta está fechada)
+
+   NOME-COMPLETO
+   O nome completo da porta, se for necessário (ex: a porta de madeira).  Se
+este campo for omitido, o primeiro nome no campo IDS será tomado, em conjunto
+com um artigo definido, de acordo com o campo GÊNERO.  Se o campo GÊNERO
+também for omitido, o artigo "o" será usado.
+
+   FLAGS
+   As flags que definem como será a saída.  Este campo pode ser escrito de
+duas formas: usando letras, onde cada letra indica uma das flags da saída; e
+usando números, que indica a soma do valor de cada uma das flags.  O primeiro
+método, usando letras, é preferível, pois permite uma melhor leitura.  As
+diversas flags de salas são descritas mais adiante, na seção "Flags de
+Saídas".
+
+   CHAVE
+   O número do objeto tipo chave que abre a porta.  Se não houver porta, ou
+se a porta não possuir fechadura, este campo deve ser igual a -1.  Se houver
+fechadura, mas não houver chave (uma passagem que só pode ser aberta usando
+habilidade pick locks), então este campo deve ser igual a 2.
+
+   SALA
+   O número da sala a qual esta passagem leva.  Se a passagem for bloqueada,
+este campo deve ser igual a -1.
+
+   Observação: A linha ":n", que contém os campos GÊNERO e NOME-COMPLETO
+é opcional, e pode ser ignorada, especialmente em passagens livres (sem
+portas).
+
+
+================================================================================
+ Flags de Saídas
+--------------------------------------------------------------------------------
+
+   a. ISDOOR (1)
+   Indica que a saída é uma porta, que pode ser fechada ou aberta.  Se a porta
+possuir uma chave, ela também poderá ser trancada.  Por padrão, a porta poderá
+ser destrancada sem a chave por um ladrão com a habilidade 'pick locks', e
+poderá ser atravessada por espíritos.
+
+   b. PICKPROOF (2)
+   Essa flag impede que a porta seja destrancada por ladrões usando a
+habilidade 'pick locks'.
+
+   c. GHOSTPROOF (4)
+   Quando a porta estiver fechada, espíritos não serão capazes de
+atravessá-la.
+
+   d. HIDDEN (8)
+   Junto com a flag ISDOOR, a porta ficará invisível quando estiver fechada.
+Sem a flag ISDOOR, a porta ficará invisível sempre.
+
+   e. CLIMB_UP (16)		** NÃO IMPLEMENTADO AINDA **
+   Será necessário o uso da habilidade 'climb' ou da magia 'fly' para passar
+pela saída.  Essa flag geralmente é usada com na saída 'up', mas pode também
+ser usada nas outras saídas. Não faz sentido ser usada na saída 'down'.
+
+   f. CLIMB_DOWN (32)		** NÃO IMPLEMENTADO AINDA **
+   Será necessário o uso da habilidade 'climb' ou da magia 'fly' para passar
+pela saída em segurança.  Essa flag geralmente é usada com a saída 'down', mas
+pode também ser usada nas outras saídas.  Não faz sentido ser usada na saída
+'up'.
+   Essa flag não impede alguém de passar pela saída sem usar habilidade, mas
+quem o fizer, irá cair em queda livre, de sala em sala, até uma sala cujo
+setor não seja CLIMBING ou FLYING.  A cada sala que o jogador "passar", ele
+perderá uma determinada quantidade de HitPoints que aumenta geometricamente a
+cada sala (imagine a aceleração da gravidade).
+   Tome cuidado para não criar salas em círculo usando essa flag.
+
+   g. KNOCKABLE (64)
+   A porta é feita de algum material que permite o uso do comando KNOCK, como
+por exemplo, madeira.
+
+   h. DENY_OPEN (128)
+   i. DENY_CLOSE (256)
+   Impedem que a porta seja aberta ou fechada usando os comandos OPEN e CLOSE.
+A porta só poderá ser aberta por Deuses ou por Spec-Procs.
+
+-=> Usa-se em portas mágicas, por exemplo.
+
+
+   IMPORTANTE!!
+   No CircleMUD, e em versões antigas do VitaliaMUD, esse campo indicava
+apenas o tipo da saída, e não suas propriedades.  Havia apenas 3 valores
+possíveis: '0' para passagens sem porta, '1' para passagens com uma porta
+comum, e '2' para passagens com porta à prova de ladrões.
+
+   Para evitar problemas de incompatibilidade com versões anteriores, ainda é
+possível usar estes valores.  Sempre que as flags PICKPROOF ou GHOSTPROOF
+forem usadas, o MUD considera a flag ISDOOR automaticamente.  Assim, os
+valores '0' e '1' são totalmente compatíveis (sem flags, e apenas ISDOOR), e o
+valor '2' implica a flag ISDOOR (1), ficando 1+2 = '3' (ISDOOR PICKPROOF).
+
+   Como agora esse é um campo de flags, pode-se usar letras para tornar a
+leitura mais simples.
+
+
+================================================================================
+ Descrições Extras
+--------------------------------------------------------------------------------
+
+------------------------
+ E
+ <ids>~
+ <descrição>
+ ~
+------------------------
+
+   IDS
+   Os nomes que identificam a descrição extra (que são usados no comando
+LOOK).
+
+   DESCRIÇÃO
+   A descrição que deverá ser mostrada.
+
+
+================================================================================
+ Armadilhas
+--------------------------------------------------------------------------------
+
+   Ao se definir a flag DEATH (a, 2) para uma sala, ela se torna uma Armadilha
+de Morte.
+
+   Ao entrar em uma Armadilha de Morte, o mortal verá o título e o texto da
+descrição da sala, que neste caso em especial, deverá dizer a forma como ele
+estará morrendo.  O personagem será retirado do jogo, porém todos seus objetos
+ficarão na sala, sem maneiras de se recuperar.  Ao voltar ao jogo, o
+personagem retornará na sala inicial do jogo, sem seus antigos objetos, mas
+ainda com a mesma experiência que tinha antes de cair na armadilha.
+
+   Ao cair na armadilha, o mortal irá soltar seu choro de morte.  Como as
+saídas da sala não são usadas nesse caso, elas poderão ser usadas para se
+"conectar" a armadilha com as salas que deverão ouvir o choro de morte dos que
+lá caírem.  Exemplificando, uma ponte composta por várias salas, é rodeada
+de Armadilhas de Morte (na verdade, a mesma armadilha, mas as várias salas
+ligadas a ela).  Essa armadilha pode ter suas saídas conectadas às várias
+salas que compõe a ponte, de forma que o choro de morte de alguém que cair
+nessa armadilha será ouvido por toda a ponte.
+
+
+================================================================================
+ Salas Especiais
+--------------------------------------------------------------------------------
+
+   Há 3 salas especiais no Mundo de Vitália, que são usadas para ligar a
+determinadas salas do MUD.  Essas salas são 50, 51 e 52.  Elas servem de
+conexão para a sala inicial, a sala de doações e a sala de ressurreição,
+respectivamente, e não existem de verdade.  Sempre que um personagem tenta
+entrar em uma dessas salas, ele é enviado para a sala correspondente em sua
+cidade-lar.  Esse recurso pode ser usado para construir saídas que levem a
+uma dessas salas, independente do jogador que por alí passar.
+
+
+================================================================================
+ Outras observações
+--------------------------------------------------------------------------------
+
+   Há a necessidade de que a ordem em que as salas aparecem no arquivo de
+salas seja crescente, e que a sala de "entrada" para a sua área seja a
+primeira, e que tenha o número terminado em 00 ou 01.  Isso facilita para os
+Deuses, para se chegar rapidamente a um ponto de partida da área (usando-se
+GOTO).
+
+   No caso de pet-shops, são necessárias 2 salas, uma que será usada para o
+"atendimento", e outra que será usada para o "estoque" dos mobs que são
+vendidos.  Neste caso, a sala que será usada para o estoque deve ser a sala
+imediatamente seguinte à sala do atendimento.  Mais sobre isso é explicado no
+arquivo special.txt desta referência.
+
+
+================================================================================
+ Exemplo
+--------------------------------------------------------------------------------
+
+#1897
+Em Frente ao Paraíso~
+   Você está em frente aos portões de entrada do paraíso.  Sob você, e por
+todos os lados que você olha, há grandes e densas núvens.  A sua frente, ao
+norte, estão os pesados portões de ferro do Paraíso.  As colunas ao lado dos
+portões possuem algumas inscrições estranhas.
+   Próximo a você há uma parte menos densa da grande núvem, e é possível ver
+através dela que, lá embaixo, está o Reino de Vitália.
+~
+18 cfq 9
+OL 101
+ON paraiso
+D N
+Os portões do Paraíso são feitos de ferro, dando a aparência de serem muito
+pesados.  Através de suas grades, você pode ver uma grande quantidade de
+anjos, voando por todos os lados, e uma estranha mistura de construções,
+templos, e campos verdejantes.
+~
+portões portão~
+:n 1 os portões do paraíso
+abc 1895 1898
+D D
+Através da parte menos densa da grande núvem você tem uma visão aérea de
+todo o Reino de Vitália.
+~
+~
+0 -1 1896
+E
+inscrição inscrições~
+As inscrições foram feitas usando uma linguagem muito complexa e avançada,
+usando símbolos que você desconhece.  Ao lado das inscrições você percebe
+que há dois pequenos cristais cravados na coluna; um verde e outro azul.
+~
+E
+cristais pedras~
+Os cristais parecem servir como botões, mas o que será que eles fazem?
+~
+S
