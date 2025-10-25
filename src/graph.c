@@ -28,7 +28,9 @@ static void bfs_enqueue(room_rnum room, int dir);
 static void bfs_dequeue(void);
 static void bfs_clear_queue(void);
 
-/* Helper function to validate room numbers for pathfinding operations */
+/** Helper function to validate room numbers for pathfinding operations.
+ * @param room The room number to validate
+ * @return Non-zero if the room is valid, 0 if invalid (NOWHERE or out of bounds) */
 static int is_valid_room(room_rnum room) { return (room != NOWHERE && room >= 0 && room <= top_of_world); }
 
 /* Calculate movement cost for a room using the updated formula:
