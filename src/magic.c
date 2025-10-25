@@ -894,8 +894,6 @@ int mag_rooms(int level, struct char_data *ch, int spellnum)
     int duration = 0;
     bool failure = FALSE;
     event_id IdNum = eNULL;
-    struct str_spells *spell = NULL;
-    float modifier = 1.0;
 
     rnum = IN_ROOM(ch);
 
@@ -903,7 +901,10 @@ int mag_rooms(int level, struct char_data *ch, int spellnum)
         failure = TRUE;
 
     switch (spellnum) {
-        case SPELL_DARKNESS:
+        case SPELL_DARKNESS: {
+            struct str_spells *spell;
+            float modifier;
+
             IdNum = eSPL_DARKNESS;
             if (ROOM_FLAGGED(rnum, ROOM_DARK))
                 failure = TRUE;
@@ -913,7 +914,9 @@ int mag_rooms(int level, struct char_data *ch, int spellnum)
              * Minimum of 60 seconds (previously was only 10 seconds) */
             duration = 60 + (2 * level);
 
-            /* Apply school-based weather modifier for duration (Necromancy synergy) */
+            /* Apply school-based weather modifier for duration (Necromancy synergy)
+             * Note: get_spell_by_vnum() performs a list traversal but is only called
+             * once per spell cast, which is acceptable for this use case */
             spell = get_spell_by_vnum(spellnum);
             if (spell && spell->school != SCHOOL_UNDEFINED) {
                 modifier = get_school_weather_modifier(ch, spell->school);
@@ -922,6 +925,7 @@ int mag_rooms(int level, struct char_data *ch, int spellnum)
 
             SET_BIT_AR(ROOM_FLAGS(rnum), ROOM_DARK);
             break;
+        }
     }
 
     if (failure || IdNum == eNULL)
