@@ -67,6 +67,7 @@ bool mob_try_drop(struct char_data *ch, struct obj_data *obj);
 /* Function to find where a key can be obtained */
 room_rnum find_key_location(obj_vnum key_vnum, int *source_type, mob_vnum *carrying_mob);
 bool mob_set_key_collection_goal(struct char_data *ch, obj_vnum key_vnum, int original_goal, room_rnum original_dest);
+bool validate_goal_obj(struct char_data *ch);
 
 /** Function to handle mob leveling when they gain enough experience.
  * Mobs automatically distribute improvements to stats and abilities
@@ -129,6 +130,31 @@ void check_mob_level_up(struct char_data *ch)
             }
         }
     }
+}
+
+/**
+ * Validates that goal_obj is still valid (in mob's inventory).
+ * Objects can be extracted at any time through various means (sold, dropped, junked, etc.)
+ * so we need to verify the goal_obj pointer still points to a valid object.
+ * @param ch The mob character to validate goal_obj for.
+ * @return TRUE if goal_obj is valid and in mob's inventory, FALSE otherwise.
+ */
+bool validate_goal_obj(struct char_data *ch)
+{
+    if (!ch || !ch->ai_data || !ch->ai_data->goal_obj)
+        return FALSE;
+
+    /* Check if the goal_obj is still in the mob's inventory */
+    struct obj_data *obj;
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (obj == ch->ai_data->goal_obj) {
+            return TRUE; /* Found it - it's still valid */
+        }
+    }
+
+    /* Object not found in inventory - it was extracted or moved */
+    ch->ai_data->goal_obj = NULL;
+    return FALSE;
 }
 
 void mobile_activity(void)
@@ -391,6 +417,17 @@ void mobile_activity(void)
                     }
 
                     if (ch->ai_data->goal_obj) {
+                        /* Validate goal_obj is still in inventory before accessing it */
+                        if (!validate_goal_obj(ch)) {
+                            /* Object was extracted, clear goal and continue */
+                            ch->ai_data->current_goal = GOAL_NONE;
+                            ch->ai_data->goal_destination = NOWHERE;
+                            ch->ai_data->goal_target_mob_rnum = NOBODY;
+                            ch->ai_data->goal_item_vnum = NOTHING;
+                            ch->ai_data->goal_timer = 0;
+                            continue;
+                        }
+
                         int shop_rnum = find_shop_by_keeper(keeper->nr);
 
                         /* Check if this shop actually buys this type of item */
@@ -430,6 +467,16 @@ void mobile_activity(void)
                             ch->ai_data->genetics.trade_tendency = MIN(ch->ai_data->genetics.trade_tendency, 100);
                         } else {
                             /* Shop doesn't buy this item, find a new shop */
+                            /* Revalidate goal_obj before using it (could have been extracted during shop processing) */
+                            if (!validate_goal_obj(ch)) {
+                                ch->ai_data->current_goal = GOAL_NONE;
+                                ch->ai_data->goal_destination = NOWHERE;
+                                ch->ai_data->goal_target_mob_rnum = NOBODY;
+                                ch->ai_data->goal_item_vnum = NOTHING;
+                                ch->ai_data->goal_timer = 0;
+                                continue;
+                            }
+
                             int new_shop_rnum = find_best_shop_to_sell(ch, ch->ai_data->goal_obj);
                             if (new_shop_rnum != -1 && new_shop_rnum <= top_shop && shop_index[new_shop_rnum].in_room) {
                                 room_rnum new_target_room = real_room(SHOP_ROOM(new_shop_rnum, 0));

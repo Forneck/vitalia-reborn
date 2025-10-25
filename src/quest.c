@@ -1712,6 +1712,15 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->temp_quests = NULL;
     mob->ai_data->num_temp_quests = 0;
     mob->ai_data->max_temp_quests = 0;
+
+    /* Set default values for genetics if not already set from mob files.
+     * This ensures mobs have reasonable default behavior even without explicit genetics.
+     * These defaults can be overridden by GenFollow, GenRoam, etc. in mob files. */
+    if (mob->ai_data->genetics.follow_tendency == 0) {
+        /* Default follow tendency: 20% chance to follow others
+         * This provides some following behavior without being too aggressive */
+        mob->ai_data->genetics.follow_tendency = 20;
+    }
 }
 
 /* Save temporary quest assignments to file */
