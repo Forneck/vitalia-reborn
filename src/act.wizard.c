@@ -837,6 +837,8 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                      CCNRM(ch, C_NRM));
         send_to_char(ch, "Tendência Aventureiro (Genética): [%s%d%s]\r\n", CCCYN(ch, C_NRM), GET_GENADVENTURER(k),
                      CCNRM(ch, C_NRM));
+        send_to_char(ch, "Tendência Follow (Genética): [%s%d%s]\r\n", CCCYN(ch, C_NRM), GET_GENFOLLOW(k),
+                     CCNRM(ch, C_NRM));
         /* Futuramente, podemos adicionar outros genes aqui. */
     }
 
