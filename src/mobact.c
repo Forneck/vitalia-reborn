@@ -1345,6 +1345,10 @@ struct char_data *find_best_leader_for_new_group(struct char_data *ch)
     int count = 0;
     struct char_data *potential_members[51]; /* Buffer para potenciais membros */
 
+    /* Safety check: Validate room before accessing people list */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return NULL;
+
     /* 1. Reúne todos os candidatos (mobs solitários e compatíveis) na sala. */
     for (vict = world[IN_ROOM(ch)].people; vict && count < 50; vict = vict->next_in_room) {
         if (!IS_NPC(vict) || vict->master != NULL || GROUP(vict))
