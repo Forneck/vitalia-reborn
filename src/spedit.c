@@ -819,6 +819,8 @@ void spedit_copyover_spell(struct str_spells *from, struct str_spells *to)
         to->assign[i].prac_gain = STRDUP(from->assign[i].prac_gain);
         to->assign[i].num_mana = STRDUP(from->assign[i].num_mana);
     }
+    to->school = from->school;
+    to->element = from->element;
     to->function = from->function;
 }
 
