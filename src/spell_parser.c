@@ -285,6 +285,83 @@ static void say_chanson(struct char_data *ch, int spellnum, struct char_data *tc
     }
 }
 
+/* Convert spell name to mystical syllables - returns the transformed string */
+static void spell_to_syllables(const char *spell_name, char *result, size_t result_size)
+{
+    char lbuf[256];
+    int j, ofs = 0;
+
+    *result = '\0';
+    strlcpy(lbuf, spell_name, sizeof(lbuf));
+
+    while (lbuf[ofs] && strlen(result) < result_size - 1) {
+        for (j = 0; *(syls[j].org); j++) {
+            if (!strncmp(syls[j].org, lbuf + ofs, strlen(syls[j].org))) {
+                strncat(result, syls[j].news, result_size - strlen(result) - 1);
+                ofs += strlen(syls[j].org);
+                break;
+            }
+        }
+        /* i.e., we didn't find a match in syls[] */
+        if (!*syls[j].org) {
+            ofs++;
+        }
+    }
+}
+
+/* Check if spoken text matches spell syllables and attempt to cast if player knows the spell */
+int check_voice_cast(struct char_data *ch, const char *spoken_text)
+{
+    struct str_spells *spell;
+    char syllables[256];
+    char spoken_lower[256];
+    int i;
+
+    /* Don't trigger for NPCs or if text is too short */
+    if (IS_NPC(ch) || strlen(spoken_text) < 5)
+        return 0;
+
+    /* Convert spoken text to lowercase for comparison */
+    strlcpy(spoken_lower, spoken_text, sizeof(spoken_lower));
+    for (i = 0; spoken_lower[i]; i++)
+        spoken_lower[i] = LOWER(spoken_lower[i]);
+
+    /* Check all spells to see if the syllables match */
+    for (spell = list_spells; spell; spell = spell->next) {
+        /* Only check actual spells, not skills */
+        if (spell->type != SPELL || spell->status != available)
+            continue;
+
+        /* Convert this spell's name to syllables */
+        spell_to_syllables(spell->name, syllables, sizeof(syllables));
+
+        /* Compare with spoken text */
+        if (!strcmp(syllables, spoken_lower)) {
+            /* Found a match! Check if player knows this spell */
+            if (GET_SKILL(ch, spell->vnum) > 0) {
+                char cast_command[MAX_INPUT_LENGTH];
+
+                /* Build the cast command string with cast + spell name in quotes */
+                snprintf(cast_command, sizeof(cast_command), "cast '%s'", spell->name);
+
+                /* Trigger the cast command */
+                send_to_char(ch, "As palavras místicas ressoam com poder...\r\n");
+                command_interpreter(ch, cast_command);
+                return 1;
+            } else {
+                /* Player said the syllables but doesn't know the spell */
+                send_to_char(
+                    ch,
+                    "Você sente uma energia estranha ao pronunciar essas palavras místicas, mas nada acontece.\r\n");
+                return 1;
+            }
+        }
+    }
+
+    /* No spell matched */
+    return 0;
+}
+
 /* This function should be used anytime you are not 100% sure that you have
  * a valid spell/skill number.  A typical for() loop would not need to use
  * this because you can guarantee > 0 and <= TOP_SPELL_DEFINE. */
