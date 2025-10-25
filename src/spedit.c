@@ -1882,8 +1882,7 @@ void spedit_parse(struct descriptor_data *d, char *arg)
             spedit_mag_flags_menu(d);
             return;
         case SPEDIT_SCHOOL_MENU:
-            if (!(x = atoi(arg)))
-                break;
+            x = atoi(arg);
 
             /* Check if it's a skill or spell and validate accordingly */
             int is_skill = (OLC_SPELL(d)->type == 'K');
@@ -1897,8 +1896,7 @@ void spedit_parse(struct descriptor_data *d, char *arg)
             OLC_SPELL(d)->school = x;
             break;
         case SPEDIT_ELEMENT_MENU:
-            if (!(x = atoi(arg)))
-                break;
+            x = atoi(arg);
             if ((x < 0) || (x >= NUM_ELEMENTS)) {
                 send_to_char(d->character, "Invalid choice!\r\n");
                 spedit_element_menu(d);
