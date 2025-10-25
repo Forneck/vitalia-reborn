@@ -2040,11 +2040,27 @@ bool mob_try_stealth_follow(struct char_data *ch)
 
     /* Se já está seguindo alguém, verifica se deve continuar */
     if (ch->master) {
+        /* Safety check: Validate master pointer and room */
+        if (!ch->master || IN_ROOM(ch->master) == NOWHERE || IN_ROOM(ch->master) < 0 ||
+            IN_ROOM(ch->master) > top_of_world) {
+            /* Master is invalid or in invalid room, stop following */
+            stop_follower(ch);
+            return FALSE;
+        }
+
+        /* Check if mob can still see the target */
+        if (!CAN_SEE(ch, ch->master)) {
+            /* Lost visibility of target, stop following so we can try a new target later */
+            stop_follower(ch);
+            return FALSE;
+        }
+
         /* Se o alvo saiu da sala, segue ele */
         if (IN_ROOM(ch) != IN_ROOM(ch->master)) {
             int direction = find_first_step(IN_ROOM(ch), IN_ROOM(ch->master));
             if (direction >= 0 && direction < DIR_COUNT) {
                 room_rnum to_room;
+                /* Safety check: Validate exit before accessing */
                 if (EXIT(ch, direction) && (to_room = EXIT(ch, direction)->to_room) != NOWHERE && to_room >= 0 &&
                     to_room <= top_of_world) {
                     /* Resolve portas se necessário */
@@ -2066,7 +2082,15 @@ bool mob_try_stealth_follow(struct char_data *ch)
                         perform_move(ch, direction, 1);
                         return TRUE;
                     }
+                } else {
+                    /* Cannot find valid path, stop following */
+                    stop_follower(ch);
+                    return FALSE;
                 }
+            } else {
+                /* Cannot find path to target, stop following */
+                stop_follower(ch);
+                return FALSE;
             }
         }
         /* Já está na mesma sala que o alvo, mantém a observação */
@@ -2083,8 +2107,21 @@ bool mob_try_stealth_follow(struct char_data *ch)
     struct char_data *vict;
     int best_score = 0;
 
+    /* Safety check: Validate room before iterating people list */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
     for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
-        if (vict == ch)
+        /* Safety check: Validate vict pointer */
+        if (!vict || vict == ch)
+            continue;
+
+        /* Only follow targets that are visible to the mob */
+        if (!CAN_SEE(ch, vict))
+            continue;
+
+        /* Safety check: Validate vict's room */
+        if (IN_ROOM(vict) == NOWHERE || IN_ROOM(vict) < 0 || IN_ROOM(vict) > top_of_world)
             continue;
 
         /* Preferência por players, especialmente se o mob for evil */
