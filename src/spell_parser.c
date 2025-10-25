@@ -314,10 +314,10 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
 {
     struct str_spells *spell;
     char syllables[256];
-    char spoken_lower[512];
-    char *mutable_target;
+    char spoken_lower[256];
+    char target_buffer[256];
     const char *target_part = NULL;
-    int i, syllable_len;
+    int i, syllable_len, spoken_len;
 
     /* Don't trigger for NPCs or if text is too short */
     if (IS_NPC(ch) || strlen(spoken_text) < 5)
@@ -327,6 +327,8 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
     strlcpy(spoken_lower, spoken_text, sizeof(spoken_lower));
     for (i = 0; spoken_lower[i]; i++)
         spoken_lower[i] = LOWER(spoken_lower[i]);
+
+    spoken_len = strlen(spoken_lower);
 
     /* Check all spells to see if the syllables match */
     for (spell = list_spells; spell; spell = spell->next) {
@@ -344,12 +346,14 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
         }
         /* Try match with target: check if syllables match the beginning of spoken text
          * and there's a space after the syllables */
-        else if (strlen(spoken_lower) > syllable_len && spoken_lower[syllable_len] == ' ' &&
+        else if (spoken_len > syllable_len && spoken_lower[syllable_len] == ' ' &&
                  !strncmp(syllables, spoken_lower, syllable_len)) {
             /* Extract everything after the syllables and space as the target */
-            mutable_target = (char *)(spoken_text + syllable_len + 1);
-            skip_spaces(&mutable_target);
-            target_part = mutable_target;
+            char *target_ptr;
+            strlcpy(target_buffer, spoken_text + syllable_len + 1, sizeof(target_buffer));
+            target_ptr = target_buffer;
+            skip_spaces(&target_ptr);
+            target_part = target_ptr;
             if (!*target_part)
                 target_part = NULL;
         } else {
