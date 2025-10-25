@@ -42,6 +42,7 @@ bool perform_move_IA(struct char_data *ch, int dir, bool should_close_behind, in
 bool mob_goal_oriented_roam(struct char_data *ch, room_rnum target_room);
 bool handle_duty_routine(struct char_data *ch);
 bool mob_follow_leader(struct char_data *ch);
+bool mob_try_stealth_follow(struct char_data *ch);
 bool mob_assist_allies(struct char_data *ch);
 bool mob_try_and_loot(struct char_data *ch);
 bool mob_try_and_upgrade(struct char_data *ch);
@@ -650,6 +651,9 @@ void mobile_activity(void)
         if GROUP (ch) {
             mob_follow_leader(ch);
         }
+
+        /* Try stealth following (for non-grouped following behavior) */
+        mob_try_stealth_follow(ch);
 
         mob_assist_allies(ch);
 
@@ -2006,6 +2010,125 @@ bool mob_follow_leader(struct char_data *ch)
     }
 
     return FALSE; /* Nenhuma ação de seguir foi executada. */
+}
+
+/**
+ * Tenta fazer o mob seguir outro personagem (player ou mob) sem formar grupo.
+ * Usado para comportamento furtivo/evil (espionagem, roubo, etc).
+ * Retorna TRUE se o mob começou ou continuou a seguir alguém.
+ */
+bool mob_try_stealth_follow(struct char_data *ch)
+{
+    /* Safety check: Validate room */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
+    /* Só funciona para mobs com ai_data e que não estão em combate */
+    if (!ch->ai_data || FIGHTING(ch))
+        return FALSE;
+
+    /* Não segue se já está em grupo ou encantado */
+    if (GROUP(ch) || AFF_FLAGGED(ch, AFF_CHARM))
+        return FALSE;
+
+    /* Verifica a tendência de seguir */
+    int follow_tendency = GET_GENFOLLOW(ch);
+
+    /* Mobs sentinelas não devem seguir (ficam no posto) */
+    if (MOB_FLAGGED(ch, MOB_SENTINEL) && rand_number(1, 100) > 2)
+        return FALSE;
+
+    /* Se já está seguindo alguém, verifica se deve continuar */
+    if (ch->master) {
+        /* Se o alvo saiu da sala, segue ele */
+        if (IN_ROOM(ch) != IN_ROOM(ch->master)) {
+            int direction = find_first_step(IN_ROOM(ch), IN_ROOM(ch->master));
+            if (direction >= 0 && direction < DIR_COUNT) {
+                room_rnum to_room;
+                if (EXIT(ch, direction) && (to_room = EXIT(ch, direction)->to_room) != NOWHERE && to_room >= 0 &&
+                    to_room <= top_of_world) {
+                    /* Resolve portas se necessário */
+                    if (IS_SET(EXIT(ch, direction)->exit_info, EX_ISDOOR) &&
+                        IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
+                        if (!IS_SET(EXIT(ch, direction)->exit_info, EX_DNOPEN)) {
+                            if (IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED) &&
+                                has_key(ch, EXIT(ch, direction)->key)) {
+                                do_doorcmd(ch, NULL, direction, SCMD_UNLOCK);
+                            }
+                            if (!IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED)) {
+                                do_doorcmd(ch, NULL, direction, SCMD_OPEN);
+                            }
+                        }
+                    }
+
+                    /* Tenta mover-se discretamente */
+                    if (!IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
+                        perform_move(ch, direction, 1);
+                        return TRUE;
+                    }
+                }
+            }
+        }
+        /* Já está na mesma sala que o alvo, mantém a observação */
+        return TRUE;
+    }
+
+    /* Não está seguindo ninguém, decide se deve começar */
+    /* Chance base ajustada pela tendência genética */
+    if (rand_number(1, 100) > follow_tendency)
+        return FALSE;
+
+    /* Procura um alvo adequado para seguir na sala */
+    struct char_data *target = NULL;
+    struct char_data *vict;
+    int best_score = 0;
+
+    for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+        if (vict == ch)
+            continue;
+
+        /* Preferência por players, especialmente se o mob for evil */
+        int score = 0;
+
+        if (!IS_NPC(vict)) {
+            score += 50; /* Players são alvos mais interessantes */
+
+            /* Mobs evil têm maior interesse em seguir players good */
+            if (GET_ALIGNMENT(ch) < -200 && IS_GOOD(vict))
+                score += 30;
+
+            /* Mobs com alto nível de roaming também seguem mais */
+            score += GET_GENROAM(ch) / 5;
+        } else {
+            /* Outros mobs podem ser seguidos também */
+            score += 20;
+
+            /* Prefere mobs com itens valiosos ou de nível maior */
+            if (GET_LEVEL(vict) > GET_LEVEL(ch))
+                score += 10;
+        }
+
+        /* Evita seguir mobs agressivos ou em combate */
+        if (FIGHTING(vict) || (IS_NPC(vict) && MOB_FLAGGED(vict, MOB_AGGRESSIVE)))
+            score -= 50;
+
+        if (score > best_score) {
+            best_score = score;
+            target = vict;
+        }
+    }
+
+    /* Se encontrou um bom alvo, começa a seguir */
+    if (target && best_score > 30) {
+        /* Usa add_follower mas de forma discreta (sem mensagens de grupo) */
+        add_follower(ch, target);
+        /* Aumenta levemente a tendência de seguir se teve sucesso */
+        ch->ai_data->genetics.follow_tendency += 1;
+        ch->ai_data->genetics.follow_tendency = MIN(ch->ai_data->genetics.follow_tendency, 100);
+        return TRUE;
+    }
+
+    return FALSE;
 }
 
 /**
