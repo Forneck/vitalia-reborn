@@ -270,14 +270,33 @@ maior ou igual ao valor do limite, o comando não é executado.
       Se um objeto identificado com VNUM-OBJ existir na sala identificada com
       VNUM-SALA, ele será retirado da sala e destruído.
 
+   C: Verificar quantidade de monstros
+   Formato: C <flag-condicional> <quantidade-max> <vnum-mob>
+      Verifica se o número de instâncias do mob VNUM-MOB no mundo é menor
+      que QUANTIDADE-MAX. Se for menor, resulta em sucesso. Se for maior ou
+      igual, resulta em falha. Útil para limitar a quantidade de mobs carregados.
+
    N: Verificar a presença de um monstro em uma sala
-   Formato: C <flag-condicional> <vnum-sala> <vnum-mob>
+   Formato: N <flag-condicional> <vnum-sala> <vnum-mob>
       Esse comando não faz nada, só verifica se o mob VNUM-MOB está carregado
       e presente na sala VNUM-SALA. Se ele estiver carregado, esse comando
       resultará em um "não-sucesso". Isso quer dizer que o próximo comando
       pode ter a flag-condicional igual a um, para que não seja executado.
       Isso é útil para evitar que mobs sejam carregados em duplicidade em uma
       mesma sala.
+
+   T: Atribuir trigger (DG Scripts)
+   Formato: T <flag-condicional> <tipo-trigger> <vnum-trigger> <vnum-sala>
+      TIPO-TRIGGER pode ser: 0 (MOB_TRIGGER), 1 (OBJ_TRIGGER), ou 2 (WLD_TRIGGER).
+      VNUM-TRIGGER é o número do trigger a ser atribuído.
+      VNUM-SALA é usado apenas para WLD_TRIGGER (triggers de sala).
+      Este comando é usado pelo sistema DG Scripts para anexar triggers a
+      mobs, objetos ou salas.
+
+   V: Atribuir variável a trigger (DG Scripts)
+   Formato: V <flag-condicional> <tipo-trigger> <contexto> <vnum> <nome-var> <valor>
+      Atribui uma variável global a um trigger. Este comando é parte do
+      sistema DG Scripts e é usado para definir variáveis de triggers.
 
    Qualquer linha que iniciar com um asterisco ('*') será considerado como um
 comentário, e não será processada.  Também será ignorado qualquer texto que
