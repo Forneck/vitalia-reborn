@@ -16837,31 +16837,31 @@ de combate e sobrevivencia.
 
 Veja tambem: CLASSES, SKILLS, ESCOLAS-MAGICAS
 #1
-ACENTOS ACCENTS UTF-8 CHARSET ENCODING ACENTUAÇÃO CARACTERES-ESPECIAIS
+ACENTOS ACCENTS UTF-8 CHARSET ENCODING ACENTUACAO CARACTERES-ESPECIAIS
 
 COMO HABILITAR LEITURA E ENTRADA DE ACENTOS NO VITALIAMUD
 
-   O VitaliaMUD suporta acentuação completa em português (á, é, í, ó, ú, ã,
-õ, ç, etc.) tanto para leitura quanto para entrada de texto. Para usar
-acentos corretamente, você precisa configurar tanto o servidor quanto seu
+   O VitaliaMUD suporta acentuacao completa em portugues (a, e, i, o, u, a~,
+o~, c, etc.) tanto para leitura quanto para entrada de texto. Para usar
+acentos corretamente, voce precisa configurar tanto o servidor quanto seu
 cliente MUD.
 
-CONFIGURAÇÃO NO SERVIDOR (PROTOCOLOS):
+CONFIGURACAO NO SERVIDOR (PROTOCOLOS):
 
-   Use o comando PREFEDIT (ou TOGGLE) para acessar suas preferências e
+   Use o comando PREFEDIT (ou TOGGLE) para acessar suas preferencias e
    habilite os seguintes protocolos:
 
-   K) ANSI         [ ON]  - Suporte básico a cores e caracteres
-   L) Charset      [ ON]  - Negociação de conjunto de caracteres
-   P) UTF-8        [ ON]  - Codificação Unicode UTF-8 (RECOMENDADO)
+   K) ANSI         [ ON]  - Suporte basico a cores e caracteres
+   L) Charset      [ ON]  - Negociacao de conjunto de caracteres
+   P) UTF-8        [ ON]  - Codificacao Unicode UTF-8 (RECOMENDADO)
 
-   Opcionalmente, habilite também:
-   J) Xterm 256    [ ON]  - Suporte estendido a cores (melhora visualização)
+   Opcionalmente, habilite tambem:
+   J) Xterm 256    [ ON]  - Suporte estendido a cores (melhora visualizacao)
 
-CONFIGURAÇÃO NO CLIENTE MUD:
+CONFIGURACAO NO CLIENTE MUD:
 
-   A entrada de acentos depende primariamente da configuração do seu cliente
-   MUD. Aqui estão instruções para os clientes mais populares:
+   A entrada de acentos depende primariamente da configuracao do seu cliente
+   MUD. Aqui estao instrucoes para os clientes mais populares:
 
    MUSHCLIENT:
    1. Abra File -> World Properties
@@ -16897,46 +16897,46 @@ CONFIGURAÇÃO NO CLIENTE MUD:
    2. Verifique: echo $LANG (deve mostrar algo como pt_BR.UTF-8)
    3. Se necessario, configure: export LANG=pt_BR.UTF-8
 
-TESTANDO A CONFIGURAÇÃO:
+TESTANDO A CONFIGURACAO:
 
-   Após configurar servidor e cliente:
+   Apos configurar servidor e cliente:
 
-   1. Digite: diga Testando acentuação: á é í ó ú ã õ ç
-   2. Você deve ver os acentos corretamente tanto ao digitar quanto ao ler
-   3. Tente também: gritar Olá! Está funcionando!
+   1. Digite: diga Testando acentuacao: a e i o u a~ o~ c
+   2. Voce deve ver os acentos corretamente tanto ao digitar quanto ao ler
+   3. Tente tambem: gritar Ola! Esta funcionando!
 
 PROBLEMAS COMUNS:
 
    Vejo '?' no lugar dos acentos:
-   - UTF-8 está desabilitado no servidor (use PREFEDIT)
-   - Seu cliente não está configurado para UTF-8
-   - Sua fonte não suporta caracteres acentuados
+   - UTF-8 esta desabilitado no servidor (use PREFEDIT)
+   - Seu cliente nao esta configurado para UTF-8
+   - Sua fonte nao suporta caracteres acentuados
 
-   Consigo ler mas não digitar acentos:
-   - Problema de configuração do CLIENTE
-   - Verifique se o encoding está em UTF-8
-   - Alguns clientes antigos não suportam entrada UTF-8
+   Consigo ler mas nao digitar acentos:
+   - Problema de configuracao do CLIENTE
+   - Verifique se o encoding esta em UTF-8
+   - Alguns clientes antigos nao suportam entrada UTF-8
 
-   Vejo caracteres estranhos (Ã§, Ã£, etc.):
-   - Seu cliente está enviando UTF-8 mas esperando Latin-1
-   - OU o contrário: cliente em Latin-1 mas servidor espera UTF-8
-   - Solução: Certifique-se que AMBOS usam UTF-8
+   Vejo caracteres estranhos (A§, A£, etc.):
+   - Seu cliente esta enviando UTF-8 mas esperando Latin-1
+   - OU o contrario: cliente em Latin-1 mas servidor espera UTF-8
+   - Solucao: Certifique-se que AMBOS usam UTF-8
 
-   Acentos funcionam em alguns lugares mas não em outros:
-   - Alguns comandos podem ter restrições de caracteres
-   - Títulos e nomes de personagens podem ter limitações
-   - Use HELP <comando> para verificar restrições específicas
+   Acentos funcionam em alguns lugares mas nao em outros:
+   - Alguns comandos podem ter restricoes de caracteres
+   - Titulos e nomes de personagens podem ter limitacoes
+   - Use HELP <comando> para verificar restricoes especificas
 
 SOBRE OS PROTOCOLOS:
 
-   UTF-8: Codificação universal que suporta todos os idiomas
+   UTF-8: Codificacao universal que suporta todos os idiomas
    Charset: Protocolo que negocia qual conjunto de caracteres usar
-   ANSI: Sistema básico de cores e formatação de texto
+   ANSI: Sistema basico de cores e formatacao de texto
 
-   Para melhor experiência, recomendamos:
+   Para melhor experiencia, recomendamos:
    - UTF-8: ON (essencial para acentos)
    - Charset: ON (melhora compatibilidade)
-   - ANSI: ON (cores e formatação)
+   - ANSI: ON (cores e formatacao)
    - Xterm 256: ON (se seu cliente suportar)
 
 CLIENTES RECOMENDADOS:
@@ -16948,15 +16948,15 @@ CLIENTES RECOMENDADOS:
    4. CMUD (Windows)
    5. PuTTY (multiplatforma, para telnet simples)
 
-   Evite clientes muito antigos que não suportam UTF-8.
+   Evite clientes muito antigos que nao suportam UTF-8.
 
 NOTA IMPORTANTE:
 
-   Se você configurou tudo corretamente e ainda tem problemas, pode ser
-   necessário ajustar a configuração do seu sistema operacional ou terminal.
-   A maioria dos sistemas modernos (Windows 10+, Mac OS X, Linux) já usa
-   UTF-8 por padrão.
+   Se voce configurou tudo corretamente e ainda tem problemas, pode ser
+   necessario ajustar a configuracao do seu sistema operacional ou terminal.
+   A maioria dos sistemas modernos (Windows 10+, Mac OS X, Linux) ja usa
+   UTF-8 por padrao.
 
-Veja também: PREFEDIT, TOGGLE, CORES, COLOR, PROTOCOLOS
+Veja tambem: PREFEDIT, TOGGLE, CORES, COLOR, PROTOCOLOS
 #1
 $~
