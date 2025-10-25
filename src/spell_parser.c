@@ -309,11 +309,35 @@ static void spell_to_syllables(const char *spell_name, char *result, size_t resu
     }
 }
 
+/* Strip color codes from text for voice casting comparison
+ * Color codes are @ followed by any character (e.g., @r, @n, @@ for literal @) */
+static void strip_color_codes(const char *src, char *dest, size_t dest_size)
+{
+    size_t dest_idx = 0;
+    const char *src_ptr = src;
+
+    while (*src_ptr && dest_idx < dest_size - 1) {
+        if (*src_ptr == '@' && *(src_ptr + 1)) {
+            /* Skip the @ and the next character (color code) */
+            /* Exception: @@ means a literal @, so keep one @ */
+            if (*(src_ptr + 1) == '@') {
+                dest[dest_idx++] = '@';
+            }
+            src_ptr += 2;
+        } else {
+            dest[dest_idx++] = *src_ptr;
+            src_ptr++;
+        }
+    }
+    dest[dest_idx] = '\0';
+}
+
 /* Check if spoken text matches spell syllables and attempt to cast if player knows the spell */
 int check_voice_cast(struct char_data *ch, const char *spoken_text)
 {
     struct str_spells *spell;
     char syllables[256];
+    char spoken_clean[256];
     char spoken_lower[256];
     char target_buffer[256];
     const char *target_part = NULL;
@@ -323,8 +347,11 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
     if (IS_NPC(ch) || strlen(spoken_text) < 5)
         return 0;
 
+    /* Strip color codes from spoken text before processing */
+    strip_color_codes(spoken_text, spoken_clean, sizeof(spoken_clean));
+
     /* Convert spoken text to lowercase for comparison */
-    strlcpy(spoken_lower, spoken_text, sizeof(spoken_lower));
+    strlcpy(spoken_lower, spoken_clean, sizeof(spoken_lower));
     for (i = 0; spoken_lower[i]; i++)
         spoken_lower[i] = LOWER(spoken_lower[i]);
 
@@ -348,9 +375,10 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
          * and there's a space after the syllables */
         else if (spoken_len > syllable_len && spoken_lower[syllable_len] == ' ' &&
                  !strncmp(syllables, spoken_lower, syllable_len)) {
-            /* Extract everything after the syllables and space as the target */
+            /* Extract everything after the syllables and space as the target
+             * Note: Extract from spoken_clean to preserve original casing for target name */
             char *target_ptr;
-            strlcpy(target_buffer, spoken_text + syllable_len + 1, sizeof(target_buffer));
+            strlcpy(target_buffer, spoken_clean + syllable_len + 1, sizeof(target_buffer));
             target_ptr = target_buffer;
             skip_spaces(&target_ptr);
             target_part = target_ptr;
