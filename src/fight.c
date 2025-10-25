@@ -333,8 +333,11 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 
     /*************************************************************************
      * Sistema de Genética: O mob morreu. Chamamos a função de evolução.     *
+     * Não atualizamos a genética de mobs encantados/evocados (AFF_CHARM),   *
+     * pois são criaturas temporárias e sua morte não representa seleção     *
+     * natural da espécie.                                                    *
      *************************************************************************/
-    if (IS_NPC(ch) && ch->ai_data) {
+    if (IS_NPC(ch) && ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM)) {
         update_mob_prototype_genetics(ch);
     }
     /*************************************************************************
@@ -1294,6 +1297,15 @@ void beware_lightning()
 
         for (victim = character_list; victim; victim = temp) {
             temp = victim->next;
+
+            /* Skip characters that are already marked for extraction */
+            if (MOB_FLAGGED(victim, MOB_NOTDEADYET) || PLR_FLAGGED(victim, PLR_NOTDEADYET))
+                continue;
+
+            /* Safety check: validate room before accessing zone */
+            if (IN_ROOM(victim) == NOWHERE || IN_ROOM(victim) < 0 || IN_ROOM(victim) > top_of_world)
+                continue;
+
             zona_vitima = world[IN_ROOM(victim)].zone;   // pega a zona (vnum para rnum) da sala da vitima
             if (zona_vitima != zone)
                 continue;
@@ -1714,6 +1726,7 @@ void update_mob_prototype_genetics(struct char_data *mob)
     int final_trade = mob->ai_data->genetics.trade_tendency;
     int final_quest = mob->ai_data->genetics.quest_tendency;
     int final_adventurer = mob->ai_data->genetics.adventurer_tendency;
+    int final_follow = mob->ai_data->genetics.follow_tendency;
 
     if (MOB_FLAGGED(mob, MOB_BRAVE)) {
         final_wimpy -= 5;
@@ -1744,6 +1757,7 @@ void update_mob_prototype_genetics(struct char_data *mob)
     update_single_gene_with_fitness(&proto->ai_data->genetics.brave_prevalence, final_brave, fitness, 0, 75);
     update_single_gene_with_fitness(&proto->ai_data->genetics.quest_tendency, final_quest, fitness, 0, 100);
     update_single_gene_with_fitness(&proto->ai_data->genetics.adventurer_tendency, final_adventurer, fitness, 0, 100);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.follow_tendency, final_follow, fitness, 0, 100);
 
     /* 4. Marca a zona para salvar. */
     mob_vnum vnum = mob_index[rnum].vnum;

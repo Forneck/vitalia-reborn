@@ -376,26 +376,32 @@ void gain_condition(struct char_data *ch, int condition, int value)
     GET_COND(ch, condition) += value;
     GET_COND(ch, condition) = MAX(0, GET_COND(ch, condition));
     GET_COND(ch, condition) = MIN(24, GET_COND(ch, condition));
-    if (GET_COND(ch, condition) || PLR_FLAGGED(ch, PLR_WRITING))
+
+    /* Don't send messages if player is writing or condition is above threshold */
+    if (GET_COND(ch, condition) > 1 || PLR_FLAGGED(ch, PLR_WRITING))
         return;
+
+    /* Warning message at condition == 1 (one tick before damage starts) */
     if (GET_COND(ch, condition) == 1) {
         switch (condition) {
             case HUNGER:
-                send_to_char(ch, "Você está começando a ter fome.\r\n");
+                send_to_char(ch, "Você está com muita fome e começará a sofrer dano em breve!\r\n");
                 break;
             case THIRST:
-                send_to_char(ch, "Você está começando a ter sede.\r\n");
+                send_to_char(ch, "Você está com muita sede e começará a sofrer dano em breve!\r\n");
                 break;
             default:
                 break;
         }
-    } else
+    }
+    /* Message at condition == 0 (damage is being applied) */
+    else if (GET_COND(ch, condition) == 0) {
         switch (condition) {
             case HUNGER:
-                send_to_char(ch, "Você está com fome.\r\n");
+                send_to_char(ch, "Você está morrendo de fome!\r\n");
                 break;
             case THIRST:
-                send_to_char(ch, "Você está com sede.\r\n");
+                send_to_char(ch, "Você está morrendo de sede!\r\n");
                 break;
             case DRUNK:
                 if (intoxicated)
@@ -404,6 +410,7 @@ void gain_condition(struct char_data *ch, int condition, int value)
             default:
                 break;
         }
+    }
 }
 
 static void check_idling(struct char_data *ch)

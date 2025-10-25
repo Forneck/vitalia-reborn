@@ -38,22 +38,125 @@ struct syllable {
     const char *org;
     const char *news;
 };
-static struct syllable syls[] = {{" ", " "},          {"ar", "abra"},     {"ate", "i"},      {"cau", "kada"},
-                                 {"blind", "nose"},   {"bur", "mosa"},    {"cu", "judi"},    {"de", "oculo"},
-                                 {"dis", "mar"},      {"ect", "kamina"},  {"en", "uns"},     {"gro", "cra"},
-                                 {"light", "dies"},   {"lo", "hi"},       {"magi", "kari"},  {"mon", "bar"},
-                                 {"mor", "zak"},      {"move", "sido"},   {"ness", "lacri"}, {"ning", "illa"},
-                                 {"per", "duda"},     {"ra", "gru"},      {"re", "candus"},  {"son", "sabru"},
-                                 {"tect", "infra"},   {"tri", "cula"},    {"ven", "nofo"},   {"word of", "inset"},
-                                 {"fire", "hi"},      {"shield", "tate"}, {"stone", "seki"}, {"skin", "gawa"},
-                                 {"thistle", "toge"}, {"coat", "gaitou"}, {"rock", "iwa"},   {"steel", "hagane"},
-                                 {"ball", "tama"},    {"a", "i"},         {"b", "v"},        {"c", "q"},
-                                 {"d", "m"},          {"e", "o"},         {"f", "y"},        {"g", "t"},
-                                 {"h", "p"},          {"i", "u"},         {"j", "y"},        {"k", "t"},
-                                 {"l", "r"},          {"m", "w"},         {"n", "b"},        {"o", "a"},
-                                 {"p", "s"},          {"q", "d"},         {"r", "f"},        {"s", "g"},
-                                 {"t", "h"},          {"u", "e"},         {"v", "z"},        {"w", "x"},
-                                 {"x", "n"},          {"y", "l"},         {"z", "k"},        {"", ""}};
+static struct syllable syls[] = {{" ", " "},
+                                 {"ar", "abra"},
+                                 {"ate", "i"},
+                                 {"cau", "kada"},
+                                 {"blind", "nose"},
+                                 {"bur", "mosa"},
+                                 {"cu", "judi"},
+                                 {"de", "oculo"},
+                                 {"dis", "mar"},
+                                 {"ect", "kamina"},
+                                 {"en", "uns"},
+                                 {"gro", "cra"},
+                                 {"light", "dies"},
+                                 {"lo", "hi"},
+                                 {"magi", "kari"},
+                                 {"mon", "bar"},
+                                 {"mor", "zak"},
+                                 {"move", "sido"},
+                                 {"ness", "lacri"},
+                                 {"ning", "illa"},
+                                 {"per", "duda"},
+                                 {"ra", "gru"},
+                                 {"re", "candus"},
+                                 {"son", "sabru"},
+                                 {"tect", "infra"},
+                                 {"tri", "cula"},
+                                 {"ven", "nofo"},
+                                 {"word of", "inset"},
+                                 {"fire", "ignis"},
+                                 {"shield", "aegis"},
+                                 {"stone", "petra"},
+                                 {"skin", "cutis"},
+                                 {"thistle", "spina"},
+                                 {"coat", "tunica"},
+                                 {"rock", "saxum"},
+                                 {"steel", "ferrum"},
+                                 {"ball", "globus"},
+                                 {"heal", "sanitas"},
+                                 {"harm", "nocere"},
+                                 {"cure", "medere"},
+                                 {"poison", "venenum"},
+                                 {"charm", "fascino"},
+                                 {"sleep", "somnus"},
+                                 {"strength", "robur"},
+                                 {"invisibility", "lateo"},
+                                 {"teleport", "migro"},
+                                 {"bless", "benedico"},
+                                 {"curse", "maledico"},
+                                 {"detect", "sentio"},
+                                 {"protection", "tutela"},
+                                 {"sanctuary", "asylum"},
+                                 {"recall", "memini"},
+                                 {"locate", "invenio"},
+                                 {"missile", "telum"},
+                                 {"lightning", "fulmen"},
+                                 {"earthquake", "tremor"},
+                                 {"enchant", "incanto"},
+                                 {"energy", "vis"},
+                                 {"drain", "exuo"},
+                                 {"color", "color"},
+                                 {"spray", "aspersio"},
+                                 {"control", "impero"},
+                                 {"weather", "caelum"},
+                                 {"create", "creo"},
+                                 {"food", "cibus"},
+                                 {"water", "aqua"},
+                                 {"hands", "manus"},
+                                 {"touch", "tactus"},
+                                 {"clone", "imago"},
+                                 {"bolt", "sagitta"},
+                                 {"object", "res"},
+                                 {"evil", "malum"},
+                                 {"good", "bonum"},
+                                 {"remove", "tollo"},
+                                 {"group", "turma"},
+                                 {"animate", "animo"},
+                                 {"dead", "mortuum"},
+                                 {"sense", "sentio"},
+                                 {"life", "vita"},
+                                 {"weapon", "arma"},
+                                 {"burning", "ardens"},
+                                 {"call", "voco"},
+                                 {"chill", "frigus"},
+                                 {"dispel", "pello"},
+                                 {"grasp", "capio"},
+                                 {"infravision", "nyctalops"},
+                                 {"shocking", "fulgor"},
+                                 {"summon", "evoco"},
+                                 {"ventriloquate", "ventriloquus"},
+                                 {"alignment", "ordo"},
+                                 {"critic", "gravis"},
+                                 {"person", "persona"},
+                                 {"a", "i"},
+                                 {"b", "v"},
+                                 {"c", "q"},
+                                 {"d", "m"},
+                                 {"e", "o"},
+                                 {"f", "y"},
+                                 {"g", "t"},
+                                 {"h", "p"},
+                                 {"i", "u"},
+                                 {"j", "y"},
+                                 {"k", "t"},
+                                 {"l", "r"},
+                                 {"m", "w"},
+                                 {"n", "b"},
+                                 {"o", "a"},
+                                 {"p", "s"},
+                                 {"q", "d"},
+                                 {"r", "f"},
+                                 {"s", "g"},
+                                 {"t", "h"},
+                                 {"u", "e"},
+                                 {"v", "z"},
+                                 {"w", "x"},
+                                 {"x", "n"},
+                                 {"y", "l"},
+                                 {"z", "k"},
+                                 {"", ""}};
 
 void call_ASPELL(void (*function)(), int level, struct char_data *ch, struct char_data *vict, struct obj_data *obj)
 {
@@ -180,6 +283,136 @@ static void say_chanson(struct char_data *ch, int spellnum, struct char_data *tc
         snprintf(buf1, sizeof(buf1), "$n olha para você e começa a cantar.");
         act(buf1, FALSE, ch, NULL, tch, TO_VICT);
     }
+}
+
+/* Convert spell name to mystical syllables - returns the transformed string */
+static void spell_to_syllables(const char *spell_name, char *result, size_t result_size)
+{
+    char lbuf[256];
+    int j, ofs = 0;
+
+    *result = '\0';
+    strlcpy(lbuf, spell_name, sizeof(lbuf));
+
+    while (lbuf[ofs] && strlen(result) < result_size - 1) {
+        for (j = 0; *(syls[j].org); j++) {
+            if (!strncmp(syls[j].org, lbuf + ofs, strlen(syls[j].org))) {
+                strncat(result, syls[j].news, result_size - strlen(result) - 1);
+                ofs += strlen(syls[j].org);
+                break;
+            }
+        }
+        /* i.e., we didn't find a match in syls[] */
+        if (!*syls[j].org) {
+            ofs++;
+        }
+    }
+}
+
+/* Strip color codes from text for voice casting comparison
+ * Color codes are @ followed by any character (e.g., @r, @n, @@ for literal @) */
+static void strip_color_codes(const char *src, char *dest, size_t dest_size)
+{
+    size_t dest_idx = 0;
+    const char *src_ptr = src;
+
+    while (*src_ptr && dest_idx < dest_size - 1) {
+        if (*src_ptr == '@' && *(src_ptr + 1)) {
+            /* Skip the @ and the next character (color code) */
+            /* Exception: @@ means a literal @, so keep one @ */
+            if (*(src_ptr + 1) == '@') {
+                dest[dest_idx++] = '@';
+            }
+            src_ptr += 2;
+        } else {
+            dest[dest_idx++] = *src_ptr;
+            src_ptr++;
+        }
+    }
+    dest[dest_idx] = '\0';
+}
+
+/* Check if spoken text matches spell syllables and attempt to cast if player knows the spell */
+int check_voice_cast(struct char_data *ch, const char *spoken_text)
+{
+    struct str_spells *spell;
+    char syllables[256];
+    char spoken_clean[256];
+    char spoken_lower[256];
+    char target_buffer[256];
+    const char *target_part = NULL;
+    int i, syllable_len, spoken_len;
+
+    /* Don't trigger for NPCs or if text is too short */
+    if (IS_NPC(ch) || strlen(spoken_text) < 5)
+        return 0;
+
+    /* Strip color codes from spoken text before processing */
+    strip_color_codes(spoken_text, spoken_clean, sizeof(spoken_clean));
+
+    /* Convert spoken text to lowercase for comparison */
+    strlcpy(spoken_lower, spoken_clean, sizeof(spoken_lower));
+    for (i = 0; spoken_lower[i]; i++)
+        spoken_lower[i] = LOWER(spoken_lower[i]);
+
+    spoken_len = strlen(spoken_lower);
+
+    /* Check all spells to see if the syllables match */
+    for (spell = list_spells; spell; spell = spell->next) {
+        /* Only check actual spells, not skills */
+        if (spell->type != SPELL || spell->status != available)
+            continue;
+
+        /* Convert this spell's name to syllables */
+        spell_to_syllables(spell->name, syllables, sizeof(syllables));
+        syllable_len = strlen(syllables);
+
+        /* Try exact match first (no target) */
+        if (!strcmp(syllables, spoken_lower)) {
+            target_part = NULL;
+        }
+        /* Try match with target: check if syllables match the beginning of spoken text
+         * and there's a space after the syllables */
+        else if (spoken_len > syllable_len && spoken_lower[syllable_len] == ' ' &&
+                 !strncmp(syllables, spoken_lower, syllable_len)) {
+            /* Extract everything after the syllables and space as the target
+             * Note: Extract from spoken_clean to preserve original casing for target name */
+            char *target_ptr;
+            strlcpy(target_buffer, spoken_clean + syllable_len + 1, sizeof(target_buffer));
+            target_ptr = target_buffer;
+            skip_spaces(&target_ptr);
+            target_part = target_ptr;
+            if (!*target_part)
+                target_part = NULL;
+        } else {
+            /* No match for this spell, try next */
+            continue;
+        }
+
+        /* Found a match! Check if player knows this spell */
+        if (GET_SKILL(ch, spell->vnum) > 0) {
+            char cast_command[MAX_INPUT_LENGTH];
+
+            /* Build the cast command string with cast + spell name in quotes + optional target */
+            if (target_part && *target_part)
+                snprintf(cast_command, sizeof(cast_command), "cast '%s' %s", spell->name, target_part);
+            else
+                snprintf(cast_command, sizeof(cast_command), "cast '%s'", spell->name);
+
+            /* Trigger the cast command */
+            send_to_char(ch, "As palavras místicas ressoam com poder...\r\n");
+            command_interpreter(ch, cast_command);
+            return 1;
+        } else {
+            /* Player said the syllables but doesn't know the spell */
+            send_to_char(
+                ch, "Você sente uma energia estranha ao pronunciar essas palavras místicas, mas nada acontece.\r\n");
+            return 1;
+        }
+    }
+
+    /* No spell matched */
+    return 0;
 }
 
 /* This function should be used anytime you are not 100% sure that you have
@@ -328,7 +561,7 @@ int call_magic(struct char_data *caster, struct char_data *cvict, struct obj_dat
             act(spell->messages.to_self, FALSE, caster, ovict, cvict, TO_CHAR);
         if (spell->messages.to_vict != NULL && cvict)
             act(spell->messages.to_vict, FALSE, cvict, ovict, 0, TO_CHAR);
-        if (spell->messages.to_room != NULL && cvict)
+        if (spell->messages.to_room != NULL)
             act(spell->messages.to_room, TRUE, caster, ovict, cvict, TO_ROOM);
     } else if (flags & MAGIC_NOEFFECT)
         send_to_char(caster, "%s", CONFIG_NOEFFECT);

@@ -962,6 +962,7 @@ struct room_data {
 #define GOAL_FORAGE 12
 #define GOAL_EAVESDROP 13
 #define GOAL_COLLECT_KEY 14
+#define GOAL_FOLLOW 15
 
 /*
  * Estrutura para armazenar os "genes" de um mob, que podem evoluir.
@@ -978,6 +979,7 @@ struct mob_genetics {
     int trade_tendency;
     int quest_tendency;      /* Tendência de aceitar quests. Varia de 0 a 100. */
     int adventurer_tendency; /* Tendência de ser aventureiro/explorar. Varia de 0 a 100. */
+    int follow_tendency;     /* Tendência de seguir outros chars sem grupo. Varia de 0 a 100. */
 };
 
 /**

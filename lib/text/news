@@ -6,6 +6,66 @@
 @B __________________________________________________________[@W Novidades @B]_______@n
 
 @n
+@C-@G=@Y>@W Outubro de 2025 @C@Y<@G=@C-@n
+
+   @RCorreções de Bugs e Estabilidade@n
+   Corrigido problema com magia @YDarkness@n que tinha duração muito curta.
+   Magia @YAnimate Dead@n agora funciona corretamente com todos os tipos de corpo.
+   Corrigido erro que permitia conjurar magias usando @YSay@n em salas sem magia.
+   Magia @YParalyze@n agora impede corretamente a fuga de mobs e jogadores.
+   Magia @YFly@n agora requer ser conjurada novamente após pousar com @Yland@n.
+   Sistema de bancos agora funciona corretamente após mudanças de nível.
+   Corrigidos travamentos relacionados com @YDeath Traps@n.
+   Corrigido travamento quando mobs invocados ou encantados morrem.
+   Múltiplas correções de estabilidade em @Ymobile_activity()@n.
+   Corrigido problema onde comandos mostravam caracteres estranhos.
+   
+   @GSistema de Comandos e Interface@n
+   Novo comando @Yskills@n lista todas habilidades da sua classe por nível.
+   Novo comando @Yspells@n lista todas magias da sua classe por nível.
+   Novo comando @Ychansons@n lista todas canções da sua classe por nível.
+   Comando @Yvoice cast@n melhorado com suporte a alvos e sílabas com espaços.
+   Números agora aparecem formatados com separadores brasileiros (1.234.567).
+   Comando @Yuptime@n corrigido para não mostrar caracteres estranhos.
+   
+   @BSistema de Magias e Combate@n
+   Sistema de sílabas mágicas expandido com 35 novas transformações.
+   Novos arquivos de ajuda: @YHELP CLIMA-MAGICO@n, @YHELP ESCOLAS-MAGICAS@n,
+     @YHELP ELEMENTOS-MÁGICOS@n e @YHELP HABILIDADES-ESCOLAS@n.
+   Interpretador de fórmulas agora aceita @YVICTIM.@n como alternativa a @YVICT.@n.
+   Mensagens de sala para magias sem alvo agora aparecem corretamente.
+   
+   @CMobs e IA@n
+   Novo gene @Yfollow_tendency@n permite mobs seguirem jogadores/outros mobs.
+   Mobs com alta genética de comércio agora podem usar bancos.
+   Sistema de genes de mob agora aparece no comando @Ystat@n para wizards.
+   Mobs inteligentes com chaves podem abrir portas automaticamente.
+   Sistema de pathfinding otimizado para melhor performance.
+   Múltiplas melhorias na segurança contra travamentos em @Ymobile_activity@n.
+   
+   @YSistema de Quests@n
+   Corrigido loop infinito em recompensas de objetos de quests.
+   Quests de objetos agora requerem entrega ao questmaster.
+   Sistema de quests mais robusto contra condições de corrida.
+   
+   @MSistema de Leilões (Experimental)@n
+   Sistema completo de leilões com controle de acesso por convite.
+   Casa de leilões secreta acessível através da loja do Belchior.
+   Comandos: @Yleilao criar@n, @Yleilao listar@n, @Yleilao dar@n, @Yleilao convidar@n.
+   Sistema controlável via @YCEDIT@n (opção experimental).
+   Acesso de teste disponível para imortais (nível 101+).
+   
+   @RFerramentas e Desenvolvimento@n
+   Nova ferramenta @Ytextextract@n para extrair texto dos arquivos do mundo.
+   Sistema de build melhorado com suporte a múltiplas plataformas.
+   Correções para compilação no Termux e outros sistemas Unix.
+   
+   @WOutras Melhorias@n
+   Editor de magias (@Yspedit@n) corrigido para escolas e elementos.
+   Sistema de configuração (@Ycedit@n) agora carrega todas opções corretamente.
+   Sistema de rusage melhorado para monitoramento de performance.
+   Múltiplas correções de segurança e validação de dados.
+
 @C-@G=@Y>@W Agosto de 2025 @C@Y<@G=@C-@n
    
    Habilidades novas para coletar recursos: @Yforage@n, @Ymine@n, @Yfishing@n e @Yeavesdrop@n.

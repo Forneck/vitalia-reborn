@@ -151,7 +151,15 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
     /* The room the character is currently in and will move from... */
     room_rnum was_in = IN_ROOM(ch);
     /* ... and the room the character will move into. */
-    room_rnum going_to = EXIT(ch, dir)->to_room;
+    room_rnum going_to;
+
+    /* Validate exit before accessing to_room to prevent segfault */
+    if (!EXIT(ch, dir) || EXIT(ch, dir)->to_room == NOWHERE) {
+        log1("SYSERR: do_simple_move: ch=%s attempting invalid move to dir=%d", GET_NAME(ch), dir);
+        return 0;
+    }
+
+    going_to = EXIT(ch, dir)->to_room;
     /* How many movement points are required to travel from was_in to
        going_to. We redefine this later when we need it. */
     int need_movement = 0;
@@ -1134,9 +1142,21 @@ int stop_flying(struct char_data *ch)
         send_to_char(ch, "Você tenta parar de voar, mas algo lhe mantêm no ar.\r\n");
         return 0;
     } else {
+        /* Remove the fly spell affect so player must cast fly again */
+        if (affected_by_spell(ch, SPELL_FLY))
+            affect_from_char(ch, SPELL_FLY);
+
+        REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
+
+        /* Check if player can still fly after removing spell (e.g., via items) */
+        if (has_flight(ch)) {
+            SET_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
+            send_to_char(ch, "Você tenta aterrisar, mas seus itens mágicos mantêm você no ar.\r\n");
+            return (0);
+        }
+
         send_to_char(ch, "Você aterrisa.\r\n");
         act("$n aterrissa.", TRUE, ch, 0, 0, TO_ROOM);
-        REMOVE_BIT_AR(AFF_FLAGS(ch), AFF_FLYING);
     }
     return (1);
 }

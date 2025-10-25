@@ -637,7 +637,7 @@ void look_at_room(struct char_data *ch, int ignore_brief)
 
     if (!PLR_FLAGGED(ch, PLR_GHOST)) {
         for (i = 0; i < NUM_OF_DIRS; i++)
-            if (EXIT(ch, i) && EXIT(ch, i)->to_room && ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
+            if (EXIT(ch, i) && EXIT(ch, i)->to_room != NOWHERE && ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
                 send_to_char(ch, "\tWVocê sente \tRPERIGO\tW por perto.\tn\r\n");
                 break;
             }

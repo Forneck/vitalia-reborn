@@ -25,7 +25,7 @@
 #include "class.h"
 
 /* Names first */
-const char *class_abbrevs[] = {"Mag", "Cle", "Lad", "Gue", "Dru", "Brd", "Ra", "\n"};
+const char *class_abbrevs[] = {"Mag", "Cle", "Lad", "Gue", "Dru", "Brd", "Ran", "\n"};
 
 const char *pc_class_types[] = {"Mago", "Clerigo", "Ladrao", "Guerreiro", "Druida", "Bardo", "Ranger", "\n"};
 

@@ -462,6 +462,7 @@ ACMD(do_flee)
             if (AFF_FLAGGED(ch, AFF_PARALIZE)) {
                 send_to_char(ch, "Você está paralisado! Não pode fugir! Comece a rezar...\r\n");
                 act("$n não pode fugir, $l está paralisad$r!", TRUE, ch, 0, 0, TO_ROOM);
+                return;
             }
 
             if (do_simple_move(ch, attempt, TRUE)) {

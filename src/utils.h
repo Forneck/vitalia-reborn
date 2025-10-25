@@ -568,6 +568,7 @@ void char_from_furniture(struct char_data *ch);
 #define GET_GENTRADE(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.trade_tendency : 0)
 #define GET_GENQUEST(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.quest_tendency : 0)
 #define GET_GENADVENTURER(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.adventurer_tendency : 0)
+#define GET_GENFOLLOW(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.follow_tendency : 0)
 
 #define GET_MOB_REPUTATION(ch) ((ch)->ai_data ? (ch)->ai_data->reputation : 0)
 #define GET_PLAYER_REPUTATION(ch) (IS_NPC(ch) ? 0 : GET_REPUTATION(ch))
@@ -833,7 +834,7 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 
 /** Defines if an obj is a corpse. */
 #define IS_CORPSE(obj)                                                                                                 \
-    (GET_OBJ_TYPE(obj) == ITEM_CONTAINER && GET_OBJ_VAL((obj), 3) == 1) || (GET_OBJ_TYPE(obj) == ITEM_CORPSE)
+    ((GET_OBJ_TYPE(obj) == ITEM_CONTAINER && GET_OBJ_VAL((obj), 3) == 1) || (GET_OBJ_TYPE(obj) == ITEM_CORPSE))
 
 /** Can the obj be worn on body part? */
 #define CAN_WEAR(obj, part) OBJWEAR_FLAGGED((obj), (part))
