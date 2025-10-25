@@ -230,6 +230,9 @@ void mobile_activity(void)
                  ch->ai_data->current_goal == GOAL_COMPLETE_QUEST || ch->ai_data->current_goal == GOAL_COLLECT_KEY) &&
                 ch->ai_data->goal_timer > 50) {
                 act("$n parece frustrado e desiste da viagem.", FALSE, ch, 0, 0, TO_ROOM);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
 
                 /* If abandoning quest completion, fail the quest */
                 if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
@@ -1241,6 +1244,9 @@ void mobile_activity(void)
                     ch->ai_data->current_goal = GOAL_MINE;
                     ch->ai_data->goal_timer = 0;
                     act("$n olha ao redor procurando minerais.", FALSE, ch, 0, 0, TO_ROOM);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             } else if (SECT(IN_ROOM(ch)) == SECT_WATER_SWIM || SECT(IN_ROOM(ch)) == SECT_WATER_NOSWIM) {
                 /* Near water, try fishing */
@@ -1248,6 +1254,9 @@ void mobile_activity(void)
                     ch->ai_data->current_goal = GOAL_FISH;
                     ch->ai_data->goal_timer = 0;
                     act("$n olha para a água pensativamente.", FALSE, ch, 0, 0, TO_ROOM);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             } else if (SECT(IN_ROOM(ch)) != SECT_CITY && SECT(IN_ROOM(ch)) != SECT_INSIDE) {
                 /* In wilderness, try foraging */
@@ -1255,6 +1264,9 @@ void mobile_activity(void)
                     ch->ai_data->current_goal = GOAL_FORAGE;
                     ch->ai_data->goal_timer = 0;
                     act("$n examina a vegetação local.", FALSE, ch, 0, 0, TO_ROOM);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             } else if (ch->ai_data->genetics.loot_tendency > 40) {
                 /* In social areas, try eavesdropping for information */
@@ -1276,6 +1288,9 @@ void mobile_activity(void)
                     ch->ai_data->current_goal = GOAL_EAVESDROP;
                     ch->ai_data->goal_timer = 0;
                     act("$n discretamente presta atenção ao que acontece ao redor.", FALSE, ch, 0, 0, TO_ROOM);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        continue;
                 }
             }
         }
@@ -1307,10 +1322,16 @@ void mobile_activity(void)
                             if (rand_number(1, 100) <= 20) {
                                 act("$n parece sussurrar algo enquanto se aproxima de você.", FALSE, ch, 0, victim,
                                     TO_VICT);
+                                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    return;
                             }
 
                             /* Observer message */
                             act("$n se aproxima discretamente de $N por um momento.", FALSE, ch, 0, victim, TO_NOTVICT);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                return;
                             return; /* Only poison one container per round */
                         }
                     }
