@@ -1726,6 +1726,7 @@ void update_mob_prototype_genetics(struct char_data *mob)
     int final_trade = mob->ai_data->genetics.trade_tendency;
     int final_quest = mob->ai_data->genetics.quest_tendency;
     int final_adventurer = mob->ai_data->genetics.adventurer_tendency;
+    int final_follow = mob->ai_data->genetics.follow_tendency;
 
     if (MOB_FLAGGED(mob, MOB_BRAVE)) {
         final_wimpy -= 5;
@@ -1756,6 +1757,7 @@ void update_mob_prototype_genetics(struct char_data *mob)
     update_single_gene_with_fitness(&proto->ai_data->genetics.brave_prevalence, final_brave, fitness, 0, 75);
     update_single_gene_with_fitness(&proto->ai_data->genetics.quest_tendency, final_quest, fitness, 0, 100);
     update_single_gene_with_fitness(&proto->ai_data->genetics.adventurer_tendency, final_adventurer, fitness, 0, 100);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.follow_tendency, final_follow, fitness, 0, 100);
 
     /* 4. Marca a zona para salvar. */
     mob_vnum vnum = mob_index[rnum].vnum;
