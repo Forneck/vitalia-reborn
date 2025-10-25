@@ -315,14 +315,36 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
     struct str_spells *spell;
     char syllables[256];
     char spoken_lower[256];
+    char spoken_copy[MAX_INPUT_LENGTH];
+    char *syllable_part, *target_part;
     int i;
 
     /* Don't trigger for NPCs or if text is too short */
     if (IS_NPC(ch) || strlen(spoken_text) < 5)
         return 0;
 
-    /* Convert spoken text to lowercase for comparison */
-    strlcpy(spoken_lower, spoken_text, sizeof(spoken_lower));
+    /* Make a copy of the spoken text for parsing */
+    strlcpy(spoken_copy, spoken_text, sizeof(spoken_copy));
+
+    /* Split the spoken text into syllables and potential target
+     * Format: "syllables" or "syllables target" */
+    syllable_part = spoken_copy;
+    target_part = NULL;
+
+    /* Look for a space that separates syllables from target */
+    for (i = 0; spoken_copy[i]; i++) {
+        if (spoken_copy[i] == ' ') {
+            spoken_copy[i] = '\0';
+            target_part = &spoken_copy[i + 1];
+            skip_spaces(&target_part);
+            if (!*target_part)
+                target_part = NULL;
+            break;
+        }
+    }
+
+    /* Convert syllable part to lowercase for comparison */
+    strlcpy(spoken_lower, syllable_part, sizeof(spoken_lower));
     for (i = 0; spoken_lower[i]; i++)
         spoken_lower[i] = LOWER(spoken_lower[i]);
 
@@ -341,8 +363,11 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
             if (GET_SKILL(ch, spell->vnum) > 0) {
                 char cast_command[MAX_INPUT_LENGTH];
 
-                /* Build the cast command string with cast + spell name in quotes */
-                snprintf(cast_command, sizeof(cast_command), "cast '%s'", spell->name);
+                /* Build the cast command string with cast + spell name in quotes + optional target */
+                if (target_part && *target_part)
+                    snprintf(cast_command, sizeof(cast_command), "cast '%s' %s", spell->name, target_part);
+                else
+                    snprintf(cast_command, sizeof(cast_command), "cast '%s'", spell->name);
 
                 /* Trigger the cast command */
                 send_to_char(ch, "As palavras místicas ressoam com poder...\r\n");
