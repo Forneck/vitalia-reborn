@@ -314,37 +314,17 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
 {
     struct str_spells *spell;
     char syllables[256];
-    char spoken_lower[256];
-    char spoken_copy[MAX_INPUT_LENGTH];
-    char *syllable_part, *target_part;
-    int i;
+    char spoken_lower[512];
+    char *mutable_target;
+    const char *target_part = NULL;
+    int i, syllable_len;
 
     /* Don't trigger for NPCs or if text is too short */
     if (IS_NPC(ch) || strlen(spoken_text) < 5)
         return 0;
 
-    /* Make a copy of the spoken text for parsing */
-    strlcpy(spoken_copy, spoken_text, sizeof(spoken_copy));
-
-    /* Split the spoken text into syllables and potential target
-     * Format: "syllables" or "syllables target" */
-    syllable_part = spoken_copy;
-    target_part = NULL;
-
-    /* Look for a space that separates syllables from target */
-    for (i = 0; spoken_copy[i]; i++) {
-        if (spoken_copy[i] == ' ') {
-            spoken_copy[i] = '\0';
-            target_part = &spoken_copy[i + 1];
-            skip_spaces(&target_part);
-            if (!*target_part)
-                target_part = NULL;
-            break;
-        }
-    }
-
-    /* Convert syllable part to lowercase for comparison */
-    strlcpy(spoken_lower, syllable_part, sizeof(spoken_lower));
+    /* Convert spoken text to lowercase for comparison */
+    strlcpy(spoken_lower, spoken_text, sizeof(spoken_lower));
     for (i = 0; spoken_lower[i]; i++)
         spoken_lower[i] = LOWER(spoken_lower[i]);
 
@@ -356,30 +336,46 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
 
         /* Convert this spell's name to syllables */
         spell_to_syllables(spell->name, syllables, sizeof(syllables));
+        syllable_len = strlen(syllables);
 
-        /* Compare with spoken text */
+        /* Try exact match first (no target) */
         if (!strcmp(syllables, spoken_lower)) {
-            /* Found a match! Check if player knows this spell */
-            if (GET_SKILL(ch, spell->vnum) > 0) {
-                char cast_command[MAX_INPUT_LENGTH];
+            target_part = NULL;
+        }
+        /* Try match with target: check if syllables match the beginning of spoken text
+         * and there's a space after the syllables */
+        else if (strlen(spoken_lower) > syllable_len && spoken_lower[syllable_len] == ' ' &&
+                 !strncmp(syllables, spoken_lower, syllable_len)) {
+            /* Extract everything after the syllables and space as the target */
+            mutable_target = (char *)(spoken_text + syllable_len + 1);
+            skip_spaces(&mutable_target);
+            target_part = mutable_target;
+            if (!*target_part)
+                target_part = NULL;
+        } else {
+            /* No match for this spell, try next */
+            continue;
+        }
 
-                /* Build the cast command string with cast + spell name in quotes + optional target */
-                if (target_part && *target_part)
-                    snprintf(cast_command, sizeof(cast_command), "cast '%s' %s", spell->name, target_part);
-                else
-                    snprintf(cast_command, sizeof(cast_command), "cast '%s'", spell->name);
+        /* Found a match! Check if player knows this spell */
+        if (GET_SKILL(ch, spell->vnum) > 0) {
+            char cast_command[MAX_INPUT_LENGTH];
 
-                /* Trigger the cast command */
-                send_to_char(ch, "As palavras místicas ressoam com poder...\r\n");
-                command_interpreter(ch, cast_command);
-                return 1;
-            } else {
-                /* Player said the syllables but doesn't know the spell */
-                send_to_char(
-                    ch,
-                    "Você sente uma energia estranha ao pronunciar essas palavras místicas, mas nada acontece.\r\n");
-                return 1;
-            }
+            /* Build the cast command string with cast + spell name in quotes + optional target */
+            if (target_part && *target_part)
+                snprintf(cast_command, sizeof(cast_command), "cast '%s' %s", spell->name, target_part);
+            else
+                snprintf(cast_command, sizeof(cast_command), "cast '%s'", spell->name);
+
+            /* Trigger the cast command */
+            send_to_char(ch, "As palavras místicas ressoam com poder...\r\n");
+            command_interpreter(ch, cast_command);
+            return 1;
+        } else {
+            /* Player said the syllables but doesn't know the spell */
+            send_to_char(
+                ch, "Você sente uma energia estranha ao pronunciar essas palavras místicas, mas nada acontece.\r\n");
+            return 1;
         }
     }
 
