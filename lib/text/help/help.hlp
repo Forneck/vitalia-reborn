@@ -16837,4 +16837,126 @@ de combate e sobrevivencia.
 
 Veja tambem: CLASSES, SKILLS, ESCOLAS-MAGICAS
 #1
+ACENTOS ACCENTS UTF-8 CHARSET ENCODING ACENTUACAO CARACTERES-ESPECIAIS
+
+COMO HABILITAR LEITURA E ENTRADA DE ACENTOS NO VITALIAMUD
+
+   O VitaliaMUD suporta acentuacao completa em portugues (á, é, í, ó, ú, ã,
+õ, ç, etc.) tanto para leitura quanto para entrada de texto. Para usar
+acentos corretamente, voce precisa configurar tanto o servidor quanto seu
+cliente MUD.
+
+CONFIGURACAO NO SERVIDOR (PROTOCOLOS):
+
+   Use o comando PREFEDIT (ou TOGGLE) para acessar suas preferencias e
+   habilite os seguintes protocolos:
+
+   K) ANSI         [ ON]  - Suporte basico a cores e caracteres
+   L) Charset      [ ON]  - Negociacao de conjunto de caracteres
+   P) UTF-8        [ ON]  - Codificacao Unicode UTF-8 (RECOMENDADO)
+
+   Opcionalmente, habilite tambem:
+   J) Xterm 256    [ ON]  - Suporte estendido a cores (melhora visualizacao)
+
+CONFIGURACAO NO CLIENTE MUD:
+
+   A entrada de acentos depende primariamente da configuracao do seu cliente
+   MUD. Aqui estao instrucoes para os clientes mais populares:
+
+   MUSHCLIENT:
+   1. Abra File -> World Properties
+   2. Va para a aba "Output"
+   3. Em "Character set", selecione "UTF-8"
+   4. Marque "Use default output font" ou escolha uma fonte com suporte UTF-8
+   5. Salve e reconecte
+
+   CMUD / ZMUD:
+   1. Abra Settings -> Preferences
+   2. Va para "General" -> "Character Encoding"
+   3. Selecione "UTF-8" como encoding
+   4. Reinicie o cliente e reconecte
+
+   MUDLET:
+   1. Mudlet ja usa UTF-8 por padrao
+   2. Verifique Settings -> Preferences -> "Use UTF-8 encoding" esta marcado
+   3. Certifique-se que sua fonte suporta caracteres acentuados
+
+   TINTIN++:
+   1. No arquivo de configuracao, adicione: #charset AUTO
+   2. Ou use: #charset UTF-8
+   3. Salve e reconecte
+
+   TELNET (PUTTY, WINDOWS TELNET):
+   PuTTY:
+   1. Em "Window" -> "Translation"
+   2. Em "Character set", selecione "UTF-8"
+   3. Salve a sessao e reconecte
+   
+   Linux/Mac Terminal:
+   1. A maioria dos terminais modernos ja usa UTF-8
+   2. Verifique: echo $LANG (deve mostrar algo como pt_BR.UTF-8)
+   3. Se necessario, configure: export LANG=pt_BR.UTF-8
+
+TESTANDO A CONFIGURACAO:
+
+   Apos configurar servidor e cliente:
+
+   1. Digite: diga Testando acentuação: á é í ó ú ã õ ç
+   2. Voce deve ver os acentos corretamente tanto ao digitar quanto ao ler
+   3. Tente tambem: gritar Olá! Está funcionando!
+
+PROBLEMAS COMUNS:
+
+   Vejo '?' no lugar dos acentos:
+   - UTF-8 esta desabilitado no servidor (use PREFEDIT)
+   - Seu cliente nao esta configurado para UTF-8
+   - Sua fonte nao suporta caracteres acentuados
+
+   Consigo ler mas nao digitar acentos:
+   - Problema de configuracao do CLIENTE
+   - Verifique se o encoding esta em UTF-8
+   - Alguns clientes antigos nao suportam entrada UTF-8
+
+   Vejo caracteres estranhos (Ã§, Ã£, etc.):
+   - Seu cliente esta enviando UTF-8 mas esperando Latin-1
+   - OU o contrario: cliente em Latin-1 mas servidor espera UTF-8
+   - Solucao: Certifique-se que AMBOS usam UTF-8
+
+   Acentos funcionam em alguns lugares mas nao em outros:
+   - Alguns comandos podem ter restricoes de caracteres
+   - Titulos e nomes de personagens podem ter limitacoes
+   - Use HELP <comando> para verificar restricoes especificas
+
+SOBRE OS PROTOCOLOS:
+
+   UTF-8: Codificacao universal que suporta todos os idiomas
+   Charset: Protocolo que negocia qual conjunto de caracteres usar
+   ANSI: Sistema basico de cores e formatacao de texto
+
+   Para melhor experiencia, recomendamos:
+   - UTF-8: ON (essencial para acentos)
+   - Charset: ON (melhora compatibilidade)
+   - ANSI: ON (cores e formatacao)
+   - Xterm 256: ON (se seu cliente suportar)
+
+CLIENTES RECOMENDADOS:
+
+   Para melhor suporte a UTF-8 e acentos:
+   1. Mudlet (Windows/Mac/Linux) - RECOMENDADO
+   2. MUSHclient (Windows)
+   3. Tintin++ (Linux/Mac)
+   4. CMUD (Windows)
+   5. PuTTY (multiplatforma, para telnet simples)
+
+   Evite clientes muito antigos que nao suportam UTF-8.
+
+NOTA IMPORTANTE:
+
+   Se voce configurou tudo corretamente e ainda tem problemas, pode ser
+   necessario ajustar a configuracao do seu sistema operacional ou terminal.
+   A maioria dos sistemas modernos (Windows 10+, Mac OS X, Linux) ja usa
+   UTF-8 por padrao.
+
+Veja tambem: PREFEDIT, TOGGLE, CORES, COLOR, PROTOCOLOS
+#1
 $~
