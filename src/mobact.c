@@ -986,12 +986,26 @@ void mobile_activity(void)
                 } else if (rand_number(1, 100) <= 50) {
                     /* AQ_ROOM_FIND quest - explore a room in the zone */
                     zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
-                    room_rnum room_target =
-                        zone_table[mob_zone].bot + rand_number(0, zone_table[mob_zone].top - zone_table[mob_zone].bot);
+                    room_rnum room_target_rnum = NOWHERE;
+                    int attempts = 0;
+                    const int max_attempts = 20;
 
-                    if (GET_GOLD(ch) > 75) {
+                    /* Find a suitable room: not GODROOM, not HOUSE, but DEATH is OK */
+                    while (attempts < max_attempts && room_target_rnum == NOWHERE) {
+                        room_vnum candidate_vnum = zone_table[mob_zone].bot +
+                                                   rand_number(0, zone_table[mob_zone].top - zone_table[mob_zone].bot);
+                        room_rnum candidate_rnum = real_room(candidate_vnum);
+
+                        if (candidate_rnum != NOWHERE && !ROOM_FLAGGED(candidate_rnum, ROOM_GODROOM) &&
+                            !ROOM_FLAGGED(candidate_rnum, ROOM_HOUSE)) {
+                            room_target_rnum = candidate_rnum;
+                        }
+                        attempts++;
+                    }
+
+                    if (room_target_rnum != NOWHERE && GET_GOLD(ch) > 75) {
                         reward = MIN(GET_GOLD(ch) / 8, 150 + GET_LEVEL(ch) * 3);
-                        mob_posts_exploration_quest(ch, AQ_ROOM_FIND, world[real_room(room_target)].number, reward);
+                        mob_posts_exploration_quest(ch, AQ_ROOM_FIND, world[room_target_rnum].number, reward);
                         /* Safety check: mob_posts_exploration_quest calls act() which may trigger DG scripts */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                             continue;
@@ -1074,10 +1088,11 @@ void mobile_activity(void)
                     zone_rnum mob_zone = world[IN_ROOM(ch)].zone;
                     room_rnum dangerous_room = NOWHERE;
 
-                    /* Find a room with aggressive mobs */
+                    /* Find a room with aggressive mobs that is not GODROOM or HOUSE */
                     for (int r = zone_table[mob_zone].bot; r <= zone_table[mob_zone].top; r++) {
                         room_rnum real_r = real_room(r);
-                        if (real_r != NOWHERE) {
+                        if (real_r != NOWHERE && !ROOM_FLAGGED(real_r, ROOM_GODROOM) &&
+                            !ROOM_FLAGGED(real_r, ROOM_HOUSE)) {
                             for (target = world[real_r].people; target; target = target->next_in_room) {
                                 if (IS_NPC(target) && MOB_FLAGGED(target, MOB_AGGRESSIVE)) {
                                     dangerous_room = r;
