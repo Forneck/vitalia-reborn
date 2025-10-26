@@ -503,7 +503,8 @@ void mobile_activity(void)
                                     /* Safety check: act() can trigger DG scripts which may cause extraction */
                                     if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                                         continue;
-                                    continue; /* Continue with updated goal */
+                                    /* Continue with updated goal - don't process other activities this tick */
+                                    continue;
                                 }
                             }
                             /* No suitable shop found, abandon goal */
@@ -757,7 +758,8 @@ void mobile_activity(void)
                             /* Safety check: act() can trigger DG scripts which may cause extraction */
                             if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                                 continue;
-                            continue; /* Continue with restored goal */
+                            /* Continue with restored goal - don't clear it below */
+                            continue;
                         }
                     }
                     /* If key not found, goal will be cleared below */
