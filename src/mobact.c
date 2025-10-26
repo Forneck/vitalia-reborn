@@ -1149,8 +1149,10 @@ void mobile_activity(void)
                 /* Safety check: Validate vict is still valid before checking AWAKE(vict)
                  * This is critical when vict may be sleeping/meditating and position is changing.
                  * Without this check, AWAKE(vict) can cause SIGSEGV if vict was extracted or
-                 * became invalid between iterations or during CAN_SEE/PRF_FLAGGED checks. */
-                if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET)) {
+                 * became invalid between iterations or during CAN_SEE/PRF_FLAGGED checks.
+                 * Note: vict should not be NULL here since we're iterating from room people list,
+                 * but we check NOTDEADYET flags to catch pending extractions. */
+                if (!vict || MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET)) {
                     vict = next_vict;
                     continue;
                 }
