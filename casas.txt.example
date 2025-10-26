@@ -1,0 +1,69 @@
+# casas.txt - Sample house definitions file
+# 
+# This is an example file showing the structured format for converting
+# house data to the binary hcontrol format used by Vitalia Reborn.
+#
+# Format: class definitions followed by house blocks
+#
+# Lines starting with # are comments and are ignored.
+# Empty lines are also ignored.
+#
+
+# Class definitions (properties are ignored by converter, but structure must be valid)
+class "priv-midgaard" {
+        type private;
+        save 1;
+        object-limit 60;
+        guest-limit 2;
+        rental-period 30;
+        rental-value 1000000;
+};
+
+class "priv-nt" {
+        type private;
+        save 1;
+        object-limit 60;
+        guest-limit 2;
+        rental-period 30;
+        rental-value 1000000;
+};
+
+# House definitions
+# Each house block contains:
+#   built <timestamp>     - when the house was built (Unix timestamp)
+#   owner <id>           - player ID of the owner
+#   payment <timestamp>  - last payment timestamp
+#   guest <id>           - guest player ID (can have multiple)
+
+house 1050 {
+        class "priv-midgaard";
+        built 1501425160;
+        owner 33;
+        payment 1743472136;
+        guest 164;
+        guest 66;
+};
+
+house 1051 {
+        class "priv-midgaard";
+        built 1505128889;
+        owner 310;
+        payment 1743472138;
+        guest 94;
+        guest 142;
+};
+
+house 3001 {
+        class "priv-nt";
+        built 1500000000;
+        owner 98765;
+        payment 1700000000;
+};
+
+house 3009 {
+        class "priv-midgaard";
+        built 1600000000;
+        owner 11111;
+        payment 1650000000;
+        guest 22222;
+};
