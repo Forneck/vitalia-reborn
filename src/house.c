@@ -622,16 +622,62 @@ ACMD(do_hcontrol)
 /* The house command, used by mortal house owners to assign guests */
 ACMD(do_house)
 {
-    char arg[MAX_INPUT_LENGTH];
+    char arg[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
     int i, j, id;
+    room_vnum house_vnum;
 
-    one_argument(argument, arg);
+    two_arguments(argument, arg, arg2);
 
+    /* Gods can specify house vnum as first argument to manage any house remotely */
+    if (GET_LEVEL(ch) >= LVL_GOD && *arg && is_number(arg)) {
+        house_vnum = atoi(arg);
+        if ((i = find_house(house_vnum)) == NOWHERE) {
+            send_to_char(ch, "Casa desconhecida.\r\n");
+            return;
+        }
+        /* If god specified a house vnum, the guest name is in arg2 */
+        if (!*arg2) {
+            House_list_guests(ch, i, FALSE);
+            return;
+        }
+        /* Process guest management for gods */
+        if ((id = get_id_by_name(arg2)) < 0) {
+            send_to_char(ch, "Não existe esta pessoa.\r\n");
+            return;
+        }
+        if (id == house_control[i].owner) {
+            send_to_char(ch, "Você não pode adicionar o dono da casa como hóspede!\r\n");
+            return;
+        }
+        /* Check if guest already exists to remove them */
+        for (j = 0; j < house_control[i].num_of_guests; j++) {
+            if (house_control[i].guests[j] == id) {
+                for (; j < house_control[i].num_of_guests - 1; j++)
+                    house_control[i].guests[j] = house_control[i].guests[j + 1];
+                house_control[i].num_of_guests--;
+                House_save_control();
+                send_to_char(ch, "Hóspede excluído.\r\n");
+                return;
+            }
+        }
+        /* Add new guest */
+        if (house_control[i].num_of_guests == MAX_GUESTS) {
+            send_to_char(ch, "Esta casa já tem muitos hóspedes.\r\n");
+            return;
+        }
+        j = house_control[i].num_of_guests++;
+        house_control[i].guests[j] = id;
+        House_save_control();
+        send_to_char(ch, "Hóspede adicionado.\r\n");
+        return;
+    }
+
+    /* Standard flow for house owners in their own houses */
     if (!ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE))
         send_to_char(ch, "Você precisa estar em sua casa para definir seus hóspedes.\r\n");
     else if ((i = find_house(GET_ROOM_VNUM(IN_ROOM(ch)))) == NOWHERE)
         send_to_char(ch, "Hum.. esta casa parece ter fracassado.\r\n");
-    else if ((GET_IDNUM(ch) != house_control[i].owner) || (GET_LEVEL(ch) != LVL_IMPL))
+    else if (GET_IDNUM(ch) != house_control[i].owner && GET_LEVEL(ch) < LVL_GOD)
         send_to_char(ch, "Somente o dono da casa pode definir seus hóspedes.\r\n");
     else if (!*arg)
         House_list_guests(ch, i, FALSE);
@@ -642,7 +688,7 @@ ACMD(do_house)
     else {
         for (j = 0; j < house_control[i].num_of_guests; j++)
             if (house_control[i].guests[j] == id) {
-                for (; j < house_control[i].num_of_guests; j++)
+                for (; j < house_control[i].num_of_guests - 1; j++)
                     house_control[i].guests[j] = house_control[i].guests[j + 1];
                 house_control[i].num_of_guests--;
                 House_save_control();
