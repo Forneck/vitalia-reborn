@@ -51,7 +51,7 @@ The `do_shoot()` function in `src/act.offensive.c` had multiple critical race co
 
 3. **Post-Room-Change Validation** (lines 1199-1213)
    - Validates `ch` still exists in character_list after room movements
-   - Validates `ch`'s room is valid (not NOWHERE, not > top_of_world)
+   - Validates `ch`'s room is valid (not < 0, not NOWHERE, not >= top_of_world)
    - Returns early if extraction detected or room invalid
 
 4. **Post-Damage Character Validation** (lines 1241-1256)
@@ -169,6 +169,17 @@ Minimal - adds character_list iteration only when necessary:
 - Once after damage() call (necessary safety check)
 - Once after trigger calls (necessary safety check)
 - These iterations are O(n) where n = active characters, but only occur during actual shoot actions
+
+## Code Review Considerations
+
+### Validation Pattern Duplication
+The character validation pattern (iterating through character_list to check existence) is repeated three times in this fix. While a helper function could reduce duplication, this pattern is:
+- Already used in the existing codebase (e.g., `hunt_victim()` in `src/graph.c`)
+- Consistent with the project's safety check patterns
+- Simple and explicit, making the safety checks clear at each critical point
+- Kept inline to maintain minimal modifications per project guidelines
+
+A future refactoring could extract this into a `validate_char_exists()` helper function if the pattern becomes more widespread.
 
 ## Compatibility
 

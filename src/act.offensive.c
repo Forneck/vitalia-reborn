@@ -1207,7 +1207,7 @@ ACMD(do_shoot)
                     }
 
                     /* Validate was_room is still valid */
-                    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) >= top_of_world) {
+                    if (IN_ROOM(ch) < 0 || IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) >= top_of_world) {
                         log1("SYSERR: do_shoot - ch in invalid room %d after moving back", IN_ROOM(ch));
                         return;
                     }
