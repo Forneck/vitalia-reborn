@@ -882,8 +882,8 @@ ACMD(do_whirlwind)
     if (spell && GET_LEVEL(ch) < LVL_IMMORT) {
         num = get_spell_class(spell, GET_CLASS(ch));
         if (num != -1 && spell->assign[num].num_mana) {
-            move_cost = MAX(5, formula_interpreter(ch, NULL, SKILL_WHIRLWIND, TRUE, spell->assign[num].num_mana,
-                                                   GET_LEVEL(ch), &rts_code));
+            move_cost = formula_interpreter(ch, NULL, SKILL_WHIRLWIND, TRUE, spell->assign[num].num_mana, GET_LEVEL(ch),
+                                            &rts_code);
             if (GET_MOVE(ch) < move_cost) {
                 send_to_char(ch, "Você está muito cansado para realizar esse ataque.\r\n");
                 return;
@@ -1178,8 +1178,8 @@ ACMD(do_shoot)
     if (spell && GET_LEVEL(ch) < LVL_IMMORT) {
         num = get_spell_class(spell, GET_CLASS(ch));
         if (num != -1 && spell->assign[num].num_mana) {
-            move_cost = MAX(5, formula_interpreter(ch, NULL, SKILL_BOWS, TRUE, spell->assign[num].num_mana,
-                                                   GET_LEVEL(ch), &rts_code));
+            move_cost =
+                formula_interpreter(ch, NULL, SKILL_BOWS, TRUE, spell->assign[num].num_mana, GET_LEVEL(ch), &rts_code);
             if (GET_MOVE(ch) < move_cost) {
                 send_to_char(ch, "Você está muito cansado para atirar.\r\n");
                 return;
