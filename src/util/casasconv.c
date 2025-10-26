@@ -9,6 +9,7 @@
 #include <string.h>
 #include <time.h>
 #include <errno.h>
+#include <ctype.h>
 
 /* Define the types we need from the MUD */
 typedef unsigned short int ush_int;
@@ -39,38 +40,125 @@ struct house_control_rec {
     long spare7;
 };
 
+/* Trim leading and trailing whitespace */
+static char *trim(char *str)
+{
+    char *end;
+
+    /* Trim leading space */
+    while (isspace((unsigned char)*str))
+        str++;
+
+    if (*str == 0) /* All spaces? */
+        return str;
+
+    /* Trim trailing space */
+    end = str + strlen(str) - 1;
+    while (end > str && isspace((unsigned char)*end))
+        end--;
+
+    /* Write new null terminator */
+    *(end + 1) = 0;
+
+    return str;
+}
+
 void print_usage(const char *prog_name)
 {
-    printf("Uso: %s <casas.txt> <hcontrol>\n", prog_name);
+    printf("Uso: %s <casas.txt> <hcontrol> <atrium_map.txt>\n", prog_name);
     printf("\n");
-    printf("Converte arquivo texto casas.txt para formato binario hcontrol.\n");
+    printf("Converte arquivo texto casas.txt (formato estruturado) para formato binario hcontrol.\n");
     printf("\n");
-    printf("Formato do arquivo casas.txt (uma casa por linha):\n");
-    printf("  vnum atrium exit_dir owner_id built_on last_payment num_guests [guest1 guest2 ...]\n");
+    printf("Formato do arquivo casas.txt:\n");
+    printf("  class \"nome\" { ... };  # definicoes de classes (ignoradas)\n");
+    printf("  house <vnum> {\n");
+    printf("    class \"...\";         # classe (ignorada)\n");
+    printf("    built <timestamp>;     # quando foi construida\n");
+    printf("    owner <id>;            # ID do proprietario\n");
+    printf("    payment <timestamp>;   # ultimo pagamento\n");
+    printf("    guest <id>;            # convidado (pode ter varios)\n");
+    printf("  };\n");
     printf("\n");
-    printf("Exemplo:\n");
-    printf("  1000 999 2 12345 946684800 946684800 2 23456 34567\n");
-    printf("  3001 3000 1 98765 946684800 946684800 0\n");
+    printf("Formato do arquivo atrium_map.txt (uma linha por casa):\n");
+    printf("  vnum atrium exit_dir\n");
+    printf("\n");
+    printf("Exemplo atrium_map.txt:\n");
+    printf("  1050 1049 2\n");
+    printf("  1051 1049 2\n");
     printf("\n");
     printf("Campos:\n");
-    printf("  vnum        - numero virtual do quarto da casa\n");
-    printf("  atrium      - numero virtual do atrio da casa\n");
-    printf("  exit_dir    - direcao da saida (0=norte, 1=leste, 2=sul, 3=oeste, 4=cima, 5=baixo)\n");
-    printf("  owner_id    - ID do proprietario\n");
-    printf("  built_on    - timestamp de quando foi construida\n");
-    printf("  last_payment- timestamp do ultimo pagamento\n");
-    printf("  num_guests  - numero de convidados (0-%d)\n", MAX_GUESTS);
-    printf("  guest1-N    - IDs dos convidados (opcional, baseado em num_guests)\n");
+    printf("  vnum     - numero virtual do quarto da casa\n");
+    printf("  atrium   - numero virtual do atrio da casa\n");
+    printf("  exit_dir - direcao da saida (0=norte, 1=leste, 2=sul, 3=oeste, 4=cima, 5=baixo)\n");
     printf("\n");
 }
 
-int convert_casas_to_hcontrol(const char *input_file, const char *output_file)
+/* Structure to hold atrium mapping */
+struct atrium_map {
+    room_vnum vnum;
+    room_vnum atrium;
+    sh_int exit_num;
+};
+
+/* Load atrium map from file */
+static int load_atrium_map(const char *filename, struct atrium_map *map, int max_entries)
+{
+    FILE *fp;
+    char line[256];
+    int count = 0;
+
+    fp = fopen(filename, "r");
+    if (!fp) {
+        fprintf(stderr, "ERRO: Nao foi possivel abrir arquivo de mapeamento '%s': %s\n", filename, strerror(errno));
+        return -1;
+    }
+
+    while (fgets(line, sizeof(line), fp) && count < max_entries) {
+        /* Skip comments and empty lines */
+        char *trimmed = trim(line);
+        if (*trimmed == '#' || *trimmed == '\0')
+            continue;
+
+        if (sscanf(trimmed, "%hu %hu %hd", &map[count].vnum, &map[count].atrium, &map[count].exit_num) == 3) {
+            count++;
+        }
+    }
+
+    fclose(fp);
+    return count;
+}
+
+/* Find atrium info for a given house vnum */
+static int find_atrium_info(room_vnum vnum, struct atrium_map *map, int map_size, room_vnum *atrium, sh_int *exit_num)
+{
+    int i;
+    for (i = 0; i < map_size; i++) {
+        if (map[i].vnum == vnum) {
+            *atrium = map[i].atrium;
+            *exit_num = map[i].exit_num;
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int convert_casas_to_hcontrol(const char *input_file, const char *output_file, const char *atrium_file)
 {
     FILE *in, *out;
     struct house_control_rec house;
+    struct atrium_map atrium_map[MAX_HOUSES];
     char line[1024];
     int line_num = 0;
     int houses_converted = 0;
+    int in_house_block = 0;
+    int atrium_map_size = 0;
+
+    /* Load atrium mapping */
+    atrium_map_size = load_atrium_map(atrium_file, atrium_map, MAX_HOUSES);
+    if (atrium_map_size < 0) {
+        return 1;
+    }
+    printf("Carregado mapeamento de atrio com %d entrada(s).\n", atrium_map_size);
 
     /* Open input file */
     in = fopen(input_file, "r");
@@ -89,90 +177,104 @@ int convert_casas_to_hcontrol(const char *input_file, const char *output_file)
 
     printf("Convertendo '%s' para '%s'...\n", input_file, output_file);
 
+    /* Initialize current house structure */
+    memset(&house, 0, sizeof(house));
+
     /* Process each line */
     while (fgets(line, sizeof(line), in)) {
-        int i, items_read;
-        long guest_ids[MAX_GUESTS];
-
+        char *trimmed = trim(line);
         line_num++;
 
         /* Skip empty lines and comments */
-        if (line[0] == '\n' || line[0] == '\r' || line[0] == '#')
+        if (*trimmed == '\0' || *trimmed == '#')
             continue;
 
-        /* Initialize the structure */
-        memset(&house, 0, sizeof(house));
-        house.mode = HOUSE_PRIVATE;
-
-        /* Read the basic fields */
-        items_read = sscanf(line, "%hu %hu %hd %ld %ld %ld %d", &house.vnum, &house.atrium, &house.exit_num,
-                            &house.owner, (long *)&house.built_on, (long *)&house.last_payment, &house.num_of_guests);
-
-        if (items_read < 7) {
-            fprintf(stderr, "AVISO: Linha %d possui formato invalido (campos lidos: %d), pulando...\n", line_num,
-                    items_read);
+        /* Skip class definitions */
+        if (strncmp(trimmed, "class ", 6) == 0)
             continue;
-        }
 
-        /* Validate number of guests */
-        if (house.num_of_guests < 0 || house.num_of_guests > MAX_GUESTS) {
-            fprintf(stderr, "AVISO: Linha %d possui numero invalido de convidados (%d), ajustando para 0...\n",
-                    line_num, house.num_of_guests);
-            house.num_of_guests = 0;
-        }
-
-        /* Read guest IDs if present */
-        if (house.num_of_guests > 0) {
-            char *ptr = line;
-            int field = 0;
-            int guest_idx = 0;
-
-            /* Skip to the 8th field (first guest) */
-            while (*ptr && field < 7) {
-                while (*ptr && *ptr != ' ' && *ptr != '\t')
-                    ptr++;
-                while (*ptr && (*ptr == ' ' || *ptr == '\t'))
-                    ptr++;
-                field++;
+        /* Check for house block start */
+        if (strncmp(trimmed, "house ", 6) == 0) {
+            int vnum;
+            if (sscanf(trimmed, "house %d", &vnum) == 1) {
+                /* Initialize new house structure */
+                memset(&house, 0, sizeof(house));
+                house.mode = HOUSE_PRIVATE;
+                house.vnum = (room_vnum)vnum;
+                in_house_block = 1;
             }
+            continue;
+        }
 
-            /* Read guest IDs */
-            for (i = 0; i < house.num_of_guests && guest_idx < MAX_GUESTS; i++) {
-                if (sscanf(ptr, "%ld", &guest_ids[guest_idx]) == 1) {
-                    house.guests[guest_idx] = guest_ids[guest_idx];
-                    guest_idx++;
-                    /* Move to next field */
-                    while (*ptr && *ptr != ' ' && *ptr != '\t')
-                        ptr++;
-                    while (*ptr && (*ptr == ' ' || *ptr == '\t'))
-                        ptr++;
-                } else {
+        /* Process house block contents */
+        if (in_house_block) {
+            /* Check for end of house block */
+            if (strchr(trimmed, '}') != NULL) {
+                room_vnum atrium;
+                sh_int exit_num;
+
+                /* Look up atrium info */
+                if (!find_atrium_info(house.vnum, atrium_map, atrium_map_size, &atrium, &exit_num)) {
+                    fprintf(stderr,
+                            "AVISO: Casa %d nao encontrada no mapeamento de atrio, pulando...\n"
+                            "       Adicione uma linha no arquivo atrium_map: %d <atrium> <exit_dir>\n",
+                            house.vnum, house.vnum);
+                    in_house_block = 0;
+                    continue;
+                }
+
+                house.atrium = atrium;
+                house.exit_num = exit_num;
+
+                /* Write the structure to output */
+                if (fwrite(&house, sizeof(struct house_control_rec), 1, out) != 1) {
+                    fprintf(stderr, "ERRO: Falha ao escrever casa %d no arquivo de saida\n", house.vnum);
+                    fclose(in);
+                    fclose(out);
+                    return 1;
+                }
+
+                houses_converted++;
+                printf("  Casa %d convertida (proprietario: %ld, atrio: %d, saida: %d, convidados: %d)\n", house.vnum,
+                       house.owner, house.atrium, house.exit_num, house.num_of_guests);
+
+                in_house_block = 0;
+
+                if (houses_converted >= MAX_HOUSES) {
+                    fprintf(stderr, "AVISO: Numero maximo de casas (%d) atingido, parando conversao.\n", MAX_HOUSES);
                     break;
                 }
+                continue;
             }
 
-            if (guest_idx < house.num_of_guests) {
-                fprintf(stderr, "AVISO: Linha %d possui menos IDs de convidados (%d) que esperado (%d)\n", line_num,
-                        guest_idx, house.num_of_guests);
-                house.num_of_guests = guest_idx;
+            /* Parse house properties */
+            if (strstr(trimmed, "built ")) {
+                long timestamp;
+                if (sscanf(trimmed, " built %ld", &timestamp) == 1) {
+                    house.built_on = (time_t)timestamp;
+                }
+            } else if (strstr(trimmed, "owner ")) {
+                long owner_id;
+                if (sscanf(trimmed, " owner %ld", &owner_id) == 1) {
+                    house.owner = owner_id;
+                }
+            } else if (strstr(trimmed, "payment ")) {
+                long timestamp;
+                if (sscanf(trimmed, " payment %ld", &timestamp) == 1) {
+                    house.last_payment = (time_t)timestamp;
+                }
+            } else if (strstr(trimmed, "guest ")) {
+                long guest_id;
+                if (sscanf(trimmed, " guest %ld", &guest_id) == 1) {
+                    if (house.num_of_guests < MAX_GUESTS) {
+                        house.guests[house.num_of_guests] = guest_id;
+                        house.num_of_guests++;
+                    } else {
+                        fprintf(stderr, "AVISO: Casa %d excedeu o numero maximo de convidados (%d)\n", house.vnum,
+                                MAX_GUESTS);
+                    }
+                }
             }
-        }
-
-        /* Write the structure to output */
-        if (fwrite(&house, sizeof(struct house_control_rec), 1, out) != 1) {
-            fprintf(stderr, "ERRO: Falha ao escrever casa %d no arquivo de saida\n", house.vnum);
-            fclose(in);
-            fclose(out);
-            return 1;
-        }
-
-        houses_converted++;
-        printf("  Casa %d convertida (proprietario: %ld, atrio: %d, convidados: %d)\n", house.vnum, house.owner,
-               house.atrium, house.num_of_guests);
-
-        if (houses_converted >= MAX_HOUSES) {
-            fprintf(stderr, "AVISO: Numero maximo de casas (%d) atingido, parando conversao.\n", MAX_HOUSES);
-            break;
         }
     }
 
@@ -188,10 +290,10 @@ int convert_casas_to_hcontrol(const char *input_file, const char *output_file)
 
 int main(int argc, char *argv[])
 {
-    if (argc != 3) {
+    if (argc != 4) {
         print_usage(argv[0]);
         return 1;
     }
 
-    return convert_casas_to_hcontrol(argv[1], argv[2]);
+    return convert_casas_to_hcontrol(argv[1], argv[2], argv[3]);
 }

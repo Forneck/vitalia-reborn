@@ -46,25 +46,35 @@ utilities is not as tight and as thought out as the rest of the source code
 distributed with tbaMUD. 
 
 1.1 casasconv
-This utility converts text-based house definition files (casas.txt) to the 
-binary hcontrol format used by the house system. This is useful for migrating 
+This utility converts structured text-based house definition files (casas.txt) to 
+the binary hcontrol format used by the house system. This is useful for migrating 
 house data from older VitaliaMUD formats or for bulk importing house definitions.
 
 The command line syntax for casasconv is as follows:
 
-casasconv <casas.txt> <hcontrol>
+casasconv <casas.txt> <hcontrol> <atrium_map.txt>
 
-where <casas.txt> is the input text file containing house definitions (one per 
-line) and <hcontrol> is the output binary file (usually lib/etc/hcontrol).
+where <casas.txt> is the input structured text file containing house definitions 
+with class definitions and house blocks, <hcontrol> is the output binary file 
+(usually lib/etc/hcontrol), and <atrium_map.txt> is a mapping file that provides
+the atrium vnum and exit direction for each house.
 
-The input file format is:
-vnum atrium exit_dir owner_id built_on last_payment num_guests [guest1 guest2 ...]
+The input casas.txt format is structured:
+house <vnum> {
+    built <timestamp>;
+    owner <player_id>;
+    payment <timestamp>;
+    guest <player_id>;
+};
 
-Example:
-1000 999 2 12345 946684800 946684800 2 23456 34567
+The atrium_map.txt format is:
+vnum atrium exit_dir
 
-See docs/casasconv.md for detailed documentation and casas.txt.example for a 
-sample input file.
+Example atrium_map.txt:
+1050 1049 2
+
+See docs/casasconv.md for detailed documentation, casas.txt.example and 
+atrium_map.txt.example for sample input files.
 
 IMPORTANT: Always backup your existing hcontrol file before replacing it!
 
