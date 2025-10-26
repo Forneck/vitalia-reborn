@@ -4021,30 +4021,6 @@ voar, e ordena-las a voar com voce.
 
 Veja tambem: MAGIA FLY
 #1
-FOME HUNGER
-
-Uso: score (para ver seu nivel de fome)
-
-   A fome e um aspecto importante da sobrevivencia no mundo. Todo personagem
-precisa se alimentar regularmente para manter sua saude e energia. Quando
-voce esta com fome, seu corpo comeca a enfraquecer e voce pode sofrer
-penalidades em suas acoes.
-
-   Diferentes tipos de alimentos possuem diferentes valores nutritivos.
-Alguns alimentos sao mais substanciais e podem mante-lo saciado por mais
-tempo, enquanto outros apenas aliviam a fome temporariamente. Escolher bem
-sua alimentacao e essencial para uma jornada prolongada.
-
-   O clima e a temperatura tambem afetam a velocidade com que voce sente
-fome. Em climas quentes ou em atividades intensas, seu corpo consome mais
-energia e voce precisara se alimentar com mais frequencia.
-
-   Para saciar sua fome, utilize o comando EAT com um alimento em seu
-inventario. Planeje suas provisoes com antecedencia, especialmente ao
-explorar areas remotas ou hostis.
-
-Veja tambem: EAT, DRINK, SEDE, BIOMAS, ESTACOES, WEATHER
-#1
 FOLLOWERS UNFOLLOW
 
 Usage: follow <leader>
@@ -11016,35 +10992,6 @@ Exemplos:
 
 Veja tambem: BUY, LIST, SHOPS, VALUE
 #1
-SEDE THIRST
-
-Uso: score (para ver seu nivel de sede)
-
-   A sede e um dos aspectos mais criticos da sobrevivencia. Seu personagem
-precisa se manter hidratado para continuar suas aventuras. A desidratacao
-pode levar a consequencias graves, afetando sua capacidade de agir e ate
-mesmo ameacando sua vida.
-
-   O clima e a umidade do ambiente tem efeito direto sobre a velocidade com
-que voce sente sede. Em climas deserticos ou muito quentes, com baixa
-umidade, voce ficara com sede muito mais rapidamente. Por outro lado, em
-regioes chuvosas ou tropicais com alta umidade, a sede aumenta de forma
-mais lenta.
-
-   Diferentes tipos de bebidas possuem diferentes propriedades. Algumas
-bebidas saciam a sede por mais tempo, enquanto outras proporcionam apenas
-alivio temporario. Algumas bebidas podem ate mesmo aumentar sua sede ao
-inves de diminui-la.
-
-   A estacao do ano tambem influencia a sede. Durante o verao, especialmente
-em biomas quentes, voce precisara beber agua com maior frequencia do que
-no inverno.
-
-   Para saciar sua sede, utilize o comando DRINK. Certifique-se de carregar
-suprimentos adequados de agua ao explorar areas aridas ou deserticas.
-
-Veja tambem: DRINK, EAT, FOME, BIOMAS, ESTACOES, WEATHER, SOBRIEDADE
-#1
 SEND
 
 Usage: send [target] <message>
@@ -11436,35 +11383,6 @@ Type snoop <your name> or just snoop to stop snooping.
 
 See also: SEND
 #101
-SOBRIEDADE DRUNK DRUNKENNESS
-
-Uso: score (para ver seu nivel de embriaguez)
-
-   A sobriedade representa o nivel de embriaguez do seu personagem. Quando
-voce consome bebidas alcoolicas, seu personagem pode ficar bebado, o que
-afeta suas percepcoes e habilidades.
-
-   Diferentes tipos de bebidas alcoolicas possuem diferentes niveis de
-teor alcoolico. Bebidas mais fortes como destilados e licores podem
-embriagar seu personagem muito mais rapidamente do que cervejas ou vinhos
-leves. A quantidade e o tipo de bebida que voce consome determina quao
-embriagado voce ficara.
-
-   Estar embriagado pode ter varios efeitos sobre seu personagem. Suas
-acoes podem se tornar menos precisas, sua visao pode ficar turva, e voce
-pode ter dificuldade em manter o equilibrio. Em casos extremos de
-embriaguez, voce pode ate desmaiar.
-
-   O efeito da embriaguez diminui com o tempo, conforme seu corpo processa
-o alcool. Consumir agua ou alimentos pode ajudar a acelerar sua recuperacao,
-mas a melhor forma de evitar problemas e moderar seu consumo de bebidas
-alcoolicas.
-
-   Tenha cuidado ao beber em excesso, especialmente antes de situacoes
-perigosas como combates ou exploracoes arriscadas.
-
-Veja tambem: DRINK, SEDE, FOME
-#1
 SOCIALS SOCIAIS
 
 Uso: <social> [<vitima>]
@@ -16321,87 +16239,35 @@ combinar os efeitos de algumas magias com outras criando sinergias e
 efeitos melhores.
 
 #1
-ESTACOES SEASONS
-
+ESTACOES SEASONS                                                            
 O tempo mostrado pelo comando WEATHER, sofre influencia das quatro
-estacoes do ano.
-
-Elas estao distribuidas da seguinte maneira:
-
-Kames'Hi, Teriany, Hiro, Prudis - Inverno
+estacoes do ano.                                                                                                                                        Elas estao distribuidas da seguinte maneira:
+                                                                            Kames'Hi, Teriany, Hiro, Prudis - Inverno
 Maqizie, Kadrictes, Mizu, Mysoluh - Primavera
 Karestis, Neruno, Latizie, Aminen - Verao
 Autumis, V'tah, Aqrien, Tellus e Brumis - Outono
-
-Isto reflete nos limites maximos e minimos de cada parametro do
-clima, como pressao, temperatura, umidade relativa e vento.
-
-Com isso, algumas estacoes terao uma maior influencia sobre determinado
+                                                                            Isto reflete nos limites maximos e minimos de cada parametro do             clima, como pressao, temperatura, umidade relativa e vento.
+                                                                            Com isso, algumas estacoes terao uma maior influencia sobre determinado
 parametro (que pode ser controlado pela MAGIA CONTROL WEATHER).
 
-Cada estacao traz mudancas especificas conforme o bioma:
-
-Inverno - Temperaturas mais baixas em todos os biomas. Biomas temperados
-e chuvosos podem ter nevascas. A necessidade de comida aumenta devido ao
-frio, mas a sede diminui.
-
-Primavera - Clima ameno e transicional. Chuvas mais frequentes em biomas
-temperados e chuvosos. Temperatura moderada reduz a velocidade de fome e
-sede.
-
-Verao - Temperaturas elevadas, especialmente em biomas deserticos e
-tropicais. A sede aumenta rapidamente em climas quentes e secos. Maior
-intensidade solar.
-
-Outono - Temperaturas em declinio e ventos mais fortes. Preparacao para o
-inverno, com clima mais instavel. Fome e sede em niveis moderados.
-
-As estacoes afetam diretamente a sobrevivencia do aventureiro, influenciando
-a velocidade com que sente fome e sede, bem como a disponibilidade de
-recursos naturais em cada regiao.
-
-Veja tambem: WEATHER, BIOMAS, TIME, MAGIA-CONTROL-WEATHER, FOME, SEDE
+                                                                            Veja tambem: WEATHER, BIOMAS, TIME, MAGIA-CONTROL-WEATHER
 #1
 CLIMAS BIOMAS
+                                                                            As areas tem seu proprio clima-base ou bioma. As areaa estao distribuidas   em um dos seguinres tipos:
 
-As areas tem seu proprio clima-base ou bioma. As areas estao distribuidas
-em um dos seguintes tipos:
+Temperado - temperaturas moderadas, variacao sutil, pressao media e
+alta umidade.
+Chuvoso - temperaturas um pouco mais baixas, pressao ligeiramente
+inferior e alta umidade.
+Tropical - clima quente, pressao media e alta umidade.
+Frio/Seco - temperaturas baixas, pressao elevada e baixa umidade.
+Desertico - clima muito quente, pressao moderada a alta, e umidade
+extremamente baixa.
 
-Temperado - Temperaturas moderadas, variacao sutil, pressao media e
-alta umidade. Este bioma e equilibrado para a sobrevivencia, com recursos
-abundantes. A fome e sede aumentam em ritmo moderado. Chuvas regulares e
-estacoes bem definidas.
+Assim, a chance de chover em um deserto e' baixa, mas por ser um clima
+quente ira afetar mais rapidamente a sede do jogador.
 
-Chuvoso - Temperaturas um pouco mais baixas, pressao ligeiramente
-inferior e alta umidade. Chuvas frequentes e persistentes caracterizam
-este bioma. A sede aumenta mais lentamente devido a alta umidade, mas o
-frio pode aumentar ligeiramente a fome.
-
-Tropical - Clima quente, pressao media e alta umidade. Vegetacao densa
-e chuvas intensas sazonais. A combinacao de calor e umidade acelera a
-sede, mas a abundancia de recursos naturais facilita a alimentacao.
-
-Frio/Seco - Temperaturas baixas, pressao elevada e baixa umidade. Bioma
-hostil onde a fome aumenta rapidamente devido ao frio intenso. A vegetacao
-e escassa e as condicoes sao desafiadoras para sobrevivencia prolongada.
-
-Desertico - Clima muito quente, pressao moderada a alta, e umidade
-extremamente baixa. Este e o bioma mais desafiador para sobrevivencia.
-A sede aumenta muito rapidamente devido ao calor extremo e baixa umidade.
-Chuvas sao raras e recursos sao escassos.
-
-Cada bioma interage com as estacoes do ano, criando condicoes unicas.
-Por exemplo, um deserto no verao e extremamente perigoso, enquanto um
-bioma chuvoso no inverno pode ter nevascas. Conhecer o bioma da regiao
-que voce esta explorando e essencial para planejar suas provisoes de
-comida e agua.
-
-Assim, a chance de chover em um deserto e baixa, mas por ser um clima
-quente ira afetar mais rapidamente a sede do jogador. Da mesma forma,
-em um bioma frio, voce precisara de mais alimentos para manter sua
-energia corporal.
-
-Veja tambem: WEATHER, ESTACOES, TIME, MAGIA-CONTROL-WEATHER, FOME, SEDE
+Veja tambem: WEATHER, ESTACOES, TIME, MAGIA-CONTROL-WEATHER
 #1
 MAGIA-WINDWALL
 
