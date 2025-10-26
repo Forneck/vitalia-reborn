@@ -102,7 +102,7 @@ static int House_load(room_vnum vnum)
 static int House_load_obj(struct obj_data *obj, room_rnum room, int locate, struct obj_data **cont_row)
 {
     int j;
-    struct obj_data *obj1, *temp;
+    struct obj_data *obj1;
 
     if (!obj) /* this should never happen, but.... */
         return (0);
