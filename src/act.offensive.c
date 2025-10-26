@@ -990,6 +990,12 @@ ACMD(do_bandage)
         act("$n tenta estabilizar a condição de $N mas falha miseravelmente.", TRUE, ch, 0, vict, TO_NOTVICT);
         act("Alguém tenta estabilizar a tua condição mas falha miseravelmente.", TRUE, ch, 0, vict, TO_VICT);
         damage(vict, vict, 2, TYPE_SUFFERING);
+
+        /* Genetics: Negative reinforcement for failure */
+        if (IS_NPC(ch) && ch->ai_data) {
+            ch->ai_data->genetics.healing_tendency -= 1;
+            ch->ai_data->genetics.healing_tendency = MAX(ch->ai_data->genetics.healing_tendency, 0);
+        }
         return;
     }
 
@@ -997,6 +1003,12 @@ ACMD(do_bandage)
     act("$n estabiliza a condição de $N, que parece um pouco melhor agora.", TRUE, ch, 0, vict, TO_NOTVICT);
     act("Alguém tenta estabilizar a tua condição, e você se sente melhor agora.", FALSE, ch, 0, vict, TO_VICT);
     GET_HIT(vict) = 0;
+
+    /* Genetics: Positive reinforcement for successfully healing an ally */
+    if (IS_NPC(ch) && ch->ai_data) {
+        ch->ai_data->genetics.healing_tendency += 2;
+        ch->ai_data->genetics.healing_tendency = MIN(ch->ai_data->genetics.healing_tendency, 100);
+    }
 }
 
 ACMD(do_trip)
