@@ -2731,8 +2731,10 @@ void create_spells_db()
     new_spell->function = do_whirlwind;
     new_spell->type = SKILL;
     new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(20 - (1 * self.level)) > 10 ? (20 - (1 * self.level)) : 10");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 16;
+    new_spell->assign[0].num_mana = strdup(buf);
 
     spedit_save_internally(new_spell);
 
@@ -3038,8 +3040,10 @@ void create_spells_db()
     new_spell->function = do_shoot;
     new_spell->type = SKILL;
     new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(15 - (1 * self.level)) > 5 ? (15 - (1 * self.level)) : 5");
     new_spell->assign[0].class_num = CLASS_RANGER;
     new_spell->assign[0].level = 30;
+    new_spell->assign[0].num_mana = strdup(buf);
 
     spedit_save_internally(new_spell);
 
