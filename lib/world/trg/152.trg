@@ -81,7 +81,7 @@ emote 	Wdissolve-se numa poeira de luz pálida.	n
 ~
 #15203
 sussurros_da_floresta~
-2 abd 100
+2 ab 100
 ~
 * This trigger has been exported 'as is'. This means that vnums
 * in this file are not changed, and will have to be edited by hand.
@@ -104,38 +104,6 @@ switch %i%
     halt
   case 4
     %echo%  	cPor um breve instante, todos os sons da floresta cessam, criando um silêncio pesado e antinatural.		n
-    halt
-  case 5
-    halt
-  case 6
-    halt
-  case 7
-    halt
-  case 8
-    halt
-  case 9
-    halt
-  case 10
-    halt
-  case 11
-    halt
-  case 12
-    halt
-  case 13
-    halt
-  case 14
-    halt
-  case 15
-    halt
-  case 16
-    halt
-  case 17
-    halt
-  case 18
-    halt
-  case 19
-    halt
-  case 20
     halt
 ~
 #15204
