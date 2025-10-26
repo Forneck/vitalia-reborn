@@ -3698,7 +3698,7 @@ void mob_process_wishlist_goals(struct char_data *ch)
     /* Passo 3: Avaliar as opções e escolher o melhor plano */
 
     /* Opção 1: Caçar um mob */
-    if (target_mob != NOBODY && target_mob >= 0 && target_mob <= top_of_mobt) {
+    if (target_mob != NOBODY && target_mob >= 0 && target_mob < top_of_mobt) {
         /* Verifica se consegue matar o alvo (simplificado) */
         if (GET_LEVEL(ch) >= mob_proto[target_mob].player.level - 5) {
             /* Pode caçar este mob */
@@ -3719,7 +3719,7 @@ void mob_process_wishlist_goals(struct char_data *ch)
         if (shop_room != NOWHERE && !ROOM_FLAGGED(shop_room, ROOM_NOTRACK)) {
             /* Calcula o custo do item */
             obj_rnum = real_object(desired_item->vnum);
-            if (obj_rnum != NOTHING && obj_rnum >= 0 && obj_rnum <= top_of_objt) {
+            if (obj_rnum != NOTHING && obj_rnum >= 0 && obj_rnum < top_of_objt) {
                 item_cost = GET_OBJ_COST(&obj_proto[obj_rnum]);
                 if (item_cost <= 0)
                     item_cost = 1;
