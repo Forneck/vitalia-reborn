@@ -2769,6 +2769,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     char *target_name = "alvo desconhecido";
     obj_rnum target_obj_rnum = NOTHING;
     mob_rnum target_mob_rnum = NOBODY;
+    room_rnum target_room_rnum = NOWHERE;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
         return;
@@ -2797,7 +2798,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
             target_name = mob_proto[target_mob_rnum].player.short_descr;
         }
     } else if (quest_type == AQ_ROOM_FIND && target_vnum != NOTHING) {
-        room_rnum target_room_rnum = real_room(target_vnum);
+        target_room_rnum = real_room(target_vnum);
         if (target_room_rnum != NOWHERE) {
             target_name = world[target_room_rnum].name;
         } else {
