@@ -2444,8 +2444,8 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     new_quest->obj_reward = reward_item; /* Enhancement 1: Item from mob inventory */
 
     /* Cria strings da quest */
-    snprintf(quest_name, sizeof(quest_name), "Busca por %s", item_name);
-    snprintf(quest_desc, sizeof(quest_desc), "%s precisa de %s", GET_NAME(ch), item_name);
+    snprintf(quest_name, sizeof(quest_name), "Buscar %s", item_name);
+    snprintf(quest_desc, sizeof(quest_desc), "Buscar e trazer %s", item_name);
 
     /* Check if questmaster is different from requester */
     mob_rnum qm_mob_rnum = real_mobile(questmaster_vnum);
@@ -2932,8 +2932,8 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     /* Cria strings da quest baseadas no tipo */
     switch (quest_type) {
         case AQ_OBJ_RETURN:
-            snprintf(quest_name, sizeof(quest_name), "Buscar: %s", target_name);
-            snprintf(quest_desc, sizeof(quest_desc), "%s procura por %s", GET_NAME(ch), target_name);
+            snprintf(quest_name, sizeof(quest_name), "Buscar %s", target_name);
+            snprintf(quest_desc, sizeof(quest_desc), "Encontrar e trazer %s", target_name);
             snprintf(quest_info, sizeof(quest_info),
                      "%s perdeu %s e precisa desesperadamente recuperá-lo. "
                      "Encontre e traga este item para receber %d moedas de ouro.",
@@ -2941,8 +2941,8 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
             snprintf(quest_done, sizeof(quest_done), "Perfeito! Você encontrou o que eu estava procurando!");
             break;
         case AQ_ROOM_FIND:
-            snprintf(quest_name, sizeof(quest_name), "Explorar Local");
-            snprintf(quest_desc, sizeof(quest_desc), "%s precisa de um explorador", GET_NAME(ch));
+            snprintf(quest_name, sizeof(quest_name), "Explorar local");
+            snprintf(quest_desc, sizeof(quest_desc), "Explorar um local específico");
             snprintf(quest_info, sizeof(quest_info),
                      "%s precisa que alguém explore um local específico (%s). "
                      "Vá até lá para receber %d moedas de ouro.",
@@ -2950,8 +2950,8 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
             snprintf(quest_done, sizeof(quest_done), "Excelente! Você chegou ao local que eu precisava explorar!");
             break;
         case AQ_MOB_FIND:
-            snprintf(quest_name, sizeof(quest_name), "Encontrar: %s", target_name);
-            snprintf(quest_desc, sizeof(quest_desc), "%s procura por %s", GET_NAME(ch), target_name);
+            snprintf(quest_name, sizeof(quest_name), "Encontrar %s", target_name);
+            snprintf(quest_desc, sizeof(quest_desc), "Encontrar e falar com %s", target_name);
             snprintf(quest_info, sizeof(quest_info),
                      "%s está procurando por %s. Encontre esta pessoa para receber %d moedas de ouro.", GET_NAME(ch),
                      target_name, calculated_reward);
@@ -3148,16 +3148,16 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
 
     /* Cria strings da quest baseadas no tipo */
     if (quest_type == AQ_MOB_SAVE) {
-        snprintf(quest_name, sizeof(quest_name), "Salvar: %s", target_name);
-        snprintf(quest_desc, sizeof(quest_desc), "%s precisa salvar %s", GET_NAME(ch), target_name);
+        snprintf(quest_name, sizeof(quest_name), "Salvar %s", target_name);
+        snprintf(quest_desc, sizeof(quest_desc), "Proteger %s de perigos", target_name);
         snprintf(quest_info, sizeof(quest_info),
                  "%s está preocupado com a segurança de %s. "
                  "Ajude a garantir que esta pessoa esteja segura para receber %d moedas de ouro.",
                  GET_NAME(ch), target_name, calculated_reward);
         snprintf(quest_done, sizeof(quest_done), "Obrigado! Agora posso ficar tranquilo sabendo que estão seguros!");
     } else {
-        snprintf(quest_name, sizeof(quest_name), "Limpar Área");
-        snprintf(quest_desc, sizeof(quest_desc), "%s precisa limpar uma área", GET_NAME(ch));
+        snprintf(quest_name, sizeof(quest_name), "Limpar área");
+        snprintf(quest_desc, sizeof(quest_desc), "Eliminar criaturas hostis");
         snprintf(quest_info, sizeof(quest_info),
                  "%s precisa que alguém limpe uma área específica (sala %d) de todas as criaturas hostis. "
                  "Elimine todos os inimigos da área para receber %d moedas de ouro.",
