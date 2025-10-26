@@ -1847,11 +1847,19 @@ void nanny(struct descriptor_data *d, char *arg)
             }
             /* Mark current class as used and add to class history */
             SET_BIT_AR(d->character->player_specials->saved.was_class, GET_CLASS(d->character));
+            {
+                const char *old_class = pc_class_types[GET_CLASS(d->character)];
+                const char *new_class = pc_class_types[load_result];
+                log1("REBEGIN: %s changed from %s (class %d) to %s (class %d). was_class[0]=0x%X",
+                     GET_NAME(d->character), old_class, GET_CLASS(d->character), new_class, load_result,
+                     WAS_FLAGS(d->character)[0]);
+            }
 
             /* Record in class history for statistics */
             int num_incarnations = d->character->player_specials->saved.num_incarnations;
             if (num_incarnations < 100) { /* Prevent overflow */
                 d->character->player_specials->saved.class_history[num_incarnations] = GET_CLASS(d->character);
+                d->character->player_specials->saved.num_incarnations++;
             }
             GET_CLASS(d->character) = load_result;
             write_to_output(d, "\r\nRolando novos atributos...\r\n");
@@ -1891,8 +1899,33 @@ void nanny(struct descriptor_data *d, char *arg)
             GET_MANA(d->character) = GET_MAX_MANA(d->character);
             GET_MOVE(d->character) = GET_MAX_MOVE(d->character);
 
-            /* Initialize character for new class */
-            do_start(d->character);
+            /* Remove transcendence flag - player must transcend again */
+            REMOVE_BIT_AR(PLR_FLAGS(d->character), PLR_TRNS);
+
+            /* Initialize character for new class (without re-rolling abilities) */
+            set_title(d->character, NULL);
+
+            GET_MAX_HIT(d->character) = 10;
+            GET_MAX_MANA(d->character) = 100;
+            GET_MAX_MOVE(d->character) = 82;
+            GET_MAX_BREATH(d->character) = 15;
+            advance_level(d->character);
+
+            GET_HIT(d->character) = GET_MAX_HIT(d->character);
+            GET_MANA(d->character) = GET_MAX_MANA(d->character);
+            GET_MOVE(d->character) = GET_MAX_MOVE(d->character);
+            GET_BREATH(d->character) = GET_MAX_BREATH(d->character);
+
+            update_pos(d->character);
+
+            GET_COND(d->character, THIRST) = 24;
+            GET_COND(d->character, HUNGER) = 24;
+            GET_COND(d->character, DRUNK) = 0;
+
+            if (CONFIG_SITEOK_ALL)
+                SET_BIT_AR(PLR_FLAGS(d->character), PLR_SITEOK);
+
+            GET_FIT(d->character) = 0;
 
             /* Restore retained skills */
             {
