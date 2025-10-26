@@ -1911,9 +1911,38 @@ void hunt_victim(struct char_data *ch)
             if (victim == tmp)
                 found = TRUE;
 
-        if (found && IN_ROOM(ch) == IN_ROOM(victim))
+        if (found && IN_ROOM(ch) == IN_ROOM(victim)) {
             hit(ch, victim, TYPE_UNDEFINED);
-        else if (!found)
+
+            /* Safety check: hit() can indirectly cause extract_char for ch or victim
+             * through death, special procedures, triggers, etc.
+             * This is critical when victim is !AWAKE since action stacking can occur.
+             * Re-validate both ch and victim still exist before continuing */
+            for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                if (ch == tmp)
+                    found = TRUE;
+
+            if (!found) {
+                /* ch was extracted during hit(), cannot safely continue */
+                return;
+            }
+
+            /* Check if ch was marked for extraction */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                return;
+            }
+
+            /* Re-validate victim still exists */
+            for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                if (victim == tmp)
+                    found = TRUE;
+
+            if (!found) {
+                /* Victim was extracted during hit(), clear hunting */
+                HUNTING(ch) = NULL;
+            }
+        } else if (!found) {
             HUNTING(ch) = NULL;
+        }
     }
 }
