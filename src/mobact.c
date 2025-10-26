@@ -2659,33 +2659,38 @@ bool mob_try_heal_ally(struct char_data *ch)
 
     /* Look for an ally in critical condition (negative HP) who needs healing */
     struct char_data *vict;
-    for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
-        /* Skip self, dead characters, and characters not in critical condition */
-        if (ch == vict || IS_DEAD(vict) || GET_HIT(vict) >= 0)
-            continue;
 
-        /* Check alignment compatibility */
-        if (!can_heal_based_on_alignment(ch, vict))
-            continue;
-
-        /* Priority 1: Heal the master if charmed */
-        if (AFF_FLAGGED(ch, AFF_CHARM) && ch->master && vict == ch->master) {
-            ally_to_heal = vict;
-            break;
+    /* Priority 1: Check master first (if charmed) */
+    if (AFF_FLAGGED(ch, AFF_CHARM) && ch->master) {
+        if (GET_HIT(ch->master) < 0 && !IS_DEAD(ch->master) && can_heal_based_on_alignment(ch, ch->master)) {
+            ally_to_heal = ch->master;
         }
+    }
 
-        /* Priority 2: Heal group members */
-        if (GROUP(ch) && GROUP(vict) && GROUP(ch) == GROUP(vict)) {
-            ally_to_heal = vict;
-            break;
-        }
+    /* Priority 2 & 3: Check room if no master needs healing */
+    if (!ally_to_heal) {
+        for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+            /* Skip self, dead characters, and characters not in critical condition */
+            if (ch == vict || IS_DEAD(vict) || GET_HIT(vict) >= 0)
+                continue;
 
-        /* Priority 3: Heal other NPCs with same alignment */
-        if (IS_NPC(vict)) {
-            int hp_percent = (GET_HIT(vict) * 100) / MAX(GET_MAX_HIT(vict), 1);
-            if (hp_percent < lowest_hp_percent) {
-                lowest_hp_percent = hp_percent;
+            /* Check alignment compatibility */
+            if (!can_heal_based_on_alignment(ch, vict))
+                continue;
+
+            /* Priority 2: Heal group members */
+            if (GROUP(ch) && GROUP(vict) && GROUP(ch) == GROUP(vict)) {
                 ally_to_heal = vict;
+                break;
+            }
+
+            /* Priority 3: Heal other NPCs with same alignment (find most critical) */
+            if (IS_NPC(vict)) {
+                int hp_percent = (GET_HIT(vict) * 100) / MAX(GET_MAX_HIT(vict), 1);
+                if (hp_percent < lowest_hp_percent) {
+                    lowest_hp_percent = hp_percent;
+                    ally_to_heal = vict;
+                }
             }
         }
     }
@@ -2698,7 +2703,7 @@ bool mob_try_heal_ally(struct char_data *ch)
 
         /* Attempt to bandage the ally */
         char heal_arg[MAX_INPUT_LENGTH];
-        sprintf(heal_arg, "%s", GET_NAME(ally_to_heal));
+        snprintf(heal_arg, sizeof(heal_arg), "%s", GET_NAME(ally_to_heal));
         call_ACMD(do_bandage, ch, heal_arg, 0, 0);
 
         /* Safety check: call_ACMD might indirectly trigger extract_char */
