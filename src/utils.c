@@ -3025,6 +3025,7 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     obj_vnum reward_item = NOTHING;
     char *target_name = "alvo desconhecido";
     mob_rnum target_mob_rnum = NOBODY;
+    room_rnum target_room_rnum = NOWHERE;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
         return;
@@ -3043,7 +3044,7 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
             target_name = mob_proto[target_mob_rnum].player.short_descr;
         }
     } else if (quest_type == AQ_ROOM_CLEAR) {
-        room_rnum target_room_rnum = real_room(target_vnum);
+        target_room_rnum = real_room(target_vnum);
         if (target_room_rnum != NOWHERE) {
             /* Não posta quest para salas GODROOM ou player houses, mas permite DEATH */
             if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE)) {
