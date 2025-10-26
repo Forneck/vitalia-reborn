@@ -2646,7 +2646,7 @@ bool mob_try_heal_ally(struct char_data *ch)
         return FALSE;
 
     /* Must have the bandage skill */
-    if (!GET_SKILL(ch, SKILL_BANDAGE))
+    if (GET_SKILL(ch, SKILL_BANDAGE) <= 0)
         return FALSE;
 
     /* Can't heal if fighting, blind, or not standing */
