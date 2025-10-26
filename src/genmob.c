@@ -382,6 +382,8 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
             fprintf(fd, "GenAdventurer: %d\n", GET_GENADVENTURER(mob));
         if (GET_GENFOLLOW(mob) != 0)
             fprintf(fd, "GenFollow: %d\n", GET_GENFOLLOW(mob));
+        if (GET_GENHEALING(mob) != 0)
+            fprintf(fd, "GenHealing: %d\n", GET_GENHEALING(mob));
     }
 
     fputs("E\n", fd);

@@ -30,6 +30,7 @@
 
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
+static bool can_heal_based_on_alignment(struct char_data *healer, struct char_data *target);
 
 /* External function prototypes */
 void call_ACMD(void (*function)(), struct char_data *ch, char *argument, int cmd, int subcmd);
@@ -44,6 +45,7 @@ bool handle_duty_routine(struct char_data *ch);
 bool mob_follow_leader(struct char_data *ch);
 bool mob_try_stealth_follow(struct char_data *ch);
 bool mob_assist_allies(struct char_data *ch);
+bool mob_try_heal_ally(struct char_data *ch);
 bool mob_try_and_loot(struct char_data *ch);
 bool mob_try_and_upgrade(struct char_data *ch);
 bool mob_manage_inventory(struct char_data *ch);
@@ -822,6 +824,12 @@ void mobile_activity(void)
 
         mob_assist_allies(ch);
         /* Safety check: mob_assist_allies calls hit() which can cause extract_char */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
+        /* Try to heal allies in critical condition */
+        mob_try_heal_ally(ch);
+        /* Safety check: mob_try_heal_ally calls do_bandage which can trigger scripts */
         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
             continue;
 
@@ -2592,6 +2600,116 @@ bool mob_assist_allies(struct char_data *ch)
         /* Safety check: hit() can indirectly cause extract_char */
         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
             return TRUE;
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+/**
+ * Helper function to check if a healer can heal a target based on alignment.
+ * Good heals good, evil heals evil, neutral can heal anyone (they're flexible).
+ * @param healer The character attempting to heal.
+ * @param target The character to be healed.
+ * @return TRUE if healing is allowed based on alignment, FALSE otherwise.
+ */
+static bool can_heal_based_on_alignment(struct char_data *healer, struct char_data *target)
+{
+    /* Neutral characters are flexible and can heal anyone */
+    if (IS_NEUTRAL(healer))
+        return TRUE;
+
+    /* Good characters heal good characters */
+    if (IS_GOOD(healer) && IS_GOOD(target))
+        return TRUE;
+
+    /* Evil characters heal evil characters */
+    if (IS_EVIL(healer) && IS_EVIL(target))
+        return TRUE;
+
+    return FALSE;
+}
+
+/**
+ * Mob AI tries to heal an ally that is near death using bandage skill.
+ * Checks alignment compatibility and healing tendency genetics.
+ * @param ch The mob attempting to heal.
+ * @return TRUE if healing was attempted, FALSE otherwise.
+ */
+bool mob_try_heal_ally(struct char_data *ch)
+{
+    struct char_data *ally_to_heal = NULL;
+    int lowest_hp_percent = 100;
+
+    /* Only mobs with AI data and healing tendency can heal */
+    if (!ch->ai_data || ch->ai_data->genetics.healing_tendency <= 0)
+        return FALSE;
+
+    /* Must have the bandage skill */
+    if (GET_SKILL(ch, SKILL_BANDAGE) <= 0)
+        return FALSE;
+
+    /* Can't heal if fighting, blind, or not standing */
+    if (FIGHTING(ch) || AFF_FLAGGED(ch, AFF_BLIND) || GET_POS(ch) != POS_STANDING)
+        return FALSE;
+
+    /* Safety check: Validate room before accessing people list */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return FALSE;
+
+    /* Look for an ally in critical condition (negative HP) who needs healing */
+    struct char_data *vict;
+
+    /* Priority 1: Check master first (if charmed) */
+    if (AFF_FLAGGED(ch, AFF_CHARM) && ch->master) {
+        if (GET_HIT(ch->master) < 0 && !IS_DEAD(ch->master) && can_heal_based_on_alignment(ch, ch->master)) {
+            ally_to_heal = ch->master;
+        }
+    }
+
+    /* Priority 2 & 3: Check room if no master needs healing */
+    if (!ally_to_heal) {
+        for (vict = world[IN_ROOM(ch)].people; vict; vict = vict->next_in_room) {
+            /* Skip self, dead characters, and characters not in critical condition */
+            if (ch == vict || IS_DEAD(vict) || GET_HIT(vict) >= 0)
+                continue;
+
+            /* Check alignment compatibility */
+            if (!can_heal_based_on_alignment(ch, vict))
+                continue;
+
+            /* Priority 2: Heal group members */
+            if (GROUP(ch) && GROUP(vict) && GROUP(ch) == GROUP(vict)) {
+                ally_to_heal = vict;
+                break;
+            }
+
+            /* Priority 3: Heal other NPCs with same alignment (find most critical) */
+            if (IS_NPC(vict)) {
+                int hp_percent = (GET_HIT(vict) * 100) / MAX(GET_MAX_HIT(vict), 1);
+                if (hp_percent < lowest_hp_percent) {
+                    lowest_hp_percent = hp_percent;
+                    ally_to_heal = vict;
+                }
+            }
+        }
+    }
+
+    /* If found someone to heal, check healing tendency and attempt healing */
+    if (ally_to_heal) {
+        /* Check if mob decides to heal based on genetics */
+        if (rand_number(1, 100) > ch->ai_data->genetics.healing_tendency)
+            return FALSE;
+
+        /* Attempt to bandage the ally */
+        char heal_arg[MAX_INPUT_LENGTH];
+        snprintf(heal_arg, sizeof(heal_arg), "%s", GET_NAME(ally_to_heal));
+        call_ACMD(do_bandage, ch, heal_arg, 0, 0);
+
+        /* Safety check: call_ACMD might indirectly trigger extract_char */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            return TRUE;
+
         return TRUE;
     }
 

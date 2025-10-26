@@ -569,6 +569,7 @@ void char_from_furniture(struct char_data *ch);
 #define GET_GENQUEST(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.quest_tendency : 0)
 #define GET_GENADVENTURER(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.adventurer_tendency : 0)
 #define GET_GENFOLLOW(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.follow_tendency : 0)
+#define GET_GENHEALING(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.healing_tendency : 0)
 
 #define GET_MOB_REPUTATION(ch) ((ch)->ai_data ? (ch)->ai_data->reputation : 0)
 #define GET_PLAYER_REPUTATION(ch) (IS_NPC(ch) ? 0 : GET_REPUTATION(ch))
