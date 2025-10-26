@@ -12,6 +12,7 @@
 
 #include "conf.h"
 #include "sysdep.h"
+#include <iconv.h>
 
 #define MAX_STRING_LENGTH 8192
 #define MAX_INPUT_LENGTH 256
@@ -24,6 +25,8 @@ void extract_obj_text(FILE *obj_file, FILE *output_file);
 char *preprocess_text(char *text);
 char *read_string(FILE *fl, char *error);
 void skip_spaces(FILE *fl);
+char *convert_to_utf8(const char *input);
+int is_valid_utf8(const char *str);
 
 /* Global variables */
 char buf[MAX_STRING_LENGTH];
@@ -379,7 +382,7 @@ char *preprocess_text(char *text)
 /* Read a string terminated by ~ */
 char *read_string(FILE *fl, char *error)
 {
-    char *result;
+    char *utf8_result;
     char tmp[MAX_STRING_LENGTH];
     int length = 0;
     int c;
@@ -399,12 +402,10 @@ char *read_string(FILE *fl, char *error)
 
     tmp[length] = '\0';
 
-    result = malloc(length + 1);
-    if (result) {
-        strcpy(result, tmp);
-    }
+    /* Convert from ISO-8859-1 to UTF-8 */
+    utf8_result = convert_to_utf8(tmp);
 
-    return result;
+    return utf8_result;
 }
 
 /* Skip whitespace in file */
@@ -418,4 +419,92 @@ void skip_spaces(FILE *fl)
     if (c != EOF) {
         ungetc(c, fl);
     }
+}
+
+/* Check if a string is valid UTF-8 */
+int is_valid_utf8(const char *str)
+{
+    const unsigned char *bytes = (const unsigned char *)str;
+
+    while (*bytes) {
+        if (*bytes <= 0x7F) {
+            /* ASCII character */
+            bytes++;
+        } else if ((*bytes & 0xE0) == 0xC0) {
+            /* 2-byte sequence */
+            if (!bytes[1] || (bytes[1] & 0xC0) != 0x80)
+                return 0;
+            bytes += 2;
+        } else if ((*bytes & 0xF0) == 0xE0) {
+            /* 3-byte sequence */
+            if (!bytes[1] || !bytes[2] || (bytes[1] & 0xC0) != 0x80 || (bytes[2] & 0xC0) != 0x80)
+                return 0;
+            bytes += 3;
+        } else if ((*bytes & 0xF8) == 0xF0) {
+            /* 4-byte sequence */
+            if (!bytes[1] || !bytes[2] || !bytes[3] || (bytes[1] & 0xC0) != 0x80 || (bytes[2] & 0xC0) != 0x80 ||
+                (bytes[3] & 0xC0) != 0x80)
+                return 0;
+            bytes += 4;
+        } else {
+            /* Invalid UTF-8 */
+            return 0;
+        }
+    }
+
+    return 1;
+}
+
+/* Convert string from ISO-8859-1 to UTF-8 */
+char *convert_to_utf8(const char *input)
+{
+    iconv_t cd;
+    char *output;
+    char *inbuf, *outbuf;
+    size_t inbytesleft, outbytesleft, output_size;
+
+    if (!input)
+        return strdup("");
+
+    /* If input is already valid UTF-8, return a copy */
+    if (is_valid_utf8(input)) {
+        return strdup(input);
+    }
+
+    /* Open iconv conversion descriptor */
+    cd = iconv_open("UTF-8", "ISO-8859-1");
+    if (cd == (iconv_t)-1) {
+        fprintf(stderr, "Warning: iconv_open failed, returning original string\n");
+        return strdup(input);
+    }
+
+    /* Allocate output buffer (UTF-8 can be up to 4 bytes per character) */
+    output_size = strlen(input) * 4 + 1;
+    output = malloc(output_size);
+    if (!output) {
+        iconv_close(cd);
+        return strdup("");
+    }
+
+    /* Setup pointers for iconv */
+    inbuf = (char *)input;
+    outbuf = output;
+    inbytesleft = strlen(input);
+    outbytesleft = output_size - 1;
+
+    /* Perform conversion */
+    if (iconv(cd, &inbuf, &inbytesleft, &outbuf, &outbytesleft) == (size_t)-1) {
+        fprintf(stderr, "Warning: iconv conversion failed, returning original string\n");
+        iconv_close(cd);
+        free(output);
+        return strdup(input);
+    }
+
+    /* Null-terminate the output */
+    *outbuf = '\0';
+
+    /* Close iconv descriptor */
+    iconv_close(cd);
+
+    return output;
 }
