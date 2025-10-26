@@ -985,7 +985,7 @@ ACMD(do_bandage)
     WAIT_STATE(ch, PULSE_VIOLENCE * 2);
     percent = rand_number(1, 101); /* 101% is a complete failure */
     prob = GET_SKILL(ch, SKILL_BANDAGE);
-    if (percent <= prob) {
+    if (percent > prob) {
         act("A sua tentativa de estabilizar a condição de $N falha.", FALSE, ch, 0, vict, TO_CHAR);
         act("$n tenta estabilizar a condição de $N mas falha miseravelmente.", TRUE, ch, 0, vict, TO_NOTVICT);
         act("Alguém tenta estabilizar a tua condição mas falha miseravelmente.", TRUE, ch, 0, vict, TO_VICT);
