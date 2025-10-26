@@ -442,6 +442,14 @@ void char_to_room(struct char_data *ch, room_rnum room)
         autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
         autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
 
+        /* Check for escort quest completion */
+        if (!IS_NPC(ch) && GET_QUEST_TYPE(ch) == AQ_MOB_ESCORT) {
+            qst_rnum rnum = real_quest(GET_QUEST(ch));
+            if (rnum != NOTHING) {
+                check_escort_quest_completion(ch, rnum);
+            }
+        }
+
         if (GET_EQ(ch, WEAR_LIGHT))
             if (GET_OBJ_TYPE(GET_EQ(ch, WEAR_LIGHT)) == ITEM_LIGHT)
                 if (GET_OBJ_VAL(GET_EQ(ch, WEAR_LIGHT), 2)) /* Light ON */
@@ -963,6 +971,11 @@ void extract_char_final(struct char_data *ch)
             STATE(ch->desc) = CON_MENU;
             write_to_output(ch->desc, "%s", CONFIG_MENU);
         }
+    }
+
+    /* Check if this is an escort mob and fail the quest if so */
+    if (IS_NPC(ch)) {
+        fail_escort_quest(ch, NULL);
     }
 
     /* On with the character's assets... */
