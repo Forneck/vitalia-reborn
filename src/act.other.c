@@ -1336,7 +1336,7 @@ int can_elevate(struct char_data *ch)
 
     /* Must have experienced all classes at least once */
     for (i = 0; i < NUM_CLASSES; i++) {
-        if (ch->player_specials->saved.was_class[i] || GET_CLASS(ch) == i)
+        if (WAS_FLAGGED(ch, i) || GET_CLASS(ch) == i)
             classes_experienced++;
     }
     if (classes_experienced < NUM_CLASSES)

@@ -1847,11 +1847,15 @@ void nanny(struct descriptor_data *d, char *arg)
             }
             /* Mark current class as used and add to class history */
             SET_BIT_AR(d->character->player_specials->saved.was_class, GET_CLASS(d->character));
+            log1("REBEGIN: %s changed from %s (class %d) to %s (class %d). was_class[0]=0x%X", GET_NAME(d->character),
+                 pc_class_types[GET_CLASS(d->character)], GET_CLASS(d->character), pc_class_types[load_result],
+                 load_result, WAS_FLAGS(d->character)[0]);
 
             /* Record in class history for statistics */
             int num_incarnations = d->character->player_specials->saved.num_incarnations;
             if (num_incarnations < 100) { /* Prevent overflow */
                 d->character->player_specials->saved.class_history[num_incarnations] = GET_CLASS(d->character);
+                d->character->player_specials->saved.num_incarnations++;
             }
             GET_CLASS(d->character) = load_result;
             write_to_output(d, "\r\nRolando novos atributos...\r\n");
