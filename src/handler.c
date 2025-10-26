@@ -974,7 +974,7 @@ void extract_char_final(struct char_data *ch)
     }
 
     /* Check if this is an escort mob and fail the quest if so */
-    if (IS_NPC(ch)) {
+    if (IS_NPC(ch) && MOB_FLAGGED(ch, MOB_NOKILL)) {
         fail_escort_quest(ch, NULL);
     }
 

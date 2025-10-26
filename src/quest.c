@@ -364,6 +364,7 @@ bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum)
 {
     struct char_data *escort_mob = NULL;
     room_vnum dest_vnum;
+    const char *escort_thanks_msg = "$n diz, 'Muito obrigado por me escoltar até aqui! Você foi muito corajoso!'";
 
     /* Check if we're in an escort quest */
     if (GET_QUEST_TYPE(ch) != AQ_MOB_ESCORT)
@@ -387,13 +388,14 @@ bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum)
         return FALSE;
 
     /* Escort mob thanks the player */
-    act("$n diz, 'Muito obrigado por me escoltar até aqui! Você foi muito corajoso!'", FALSE, escort_mob, 0, ch,
-        TO_ROOM);
-    act("$n diz, 'Muito obrigado por me escoltar até aqui! Você foi muito corajoso!'", FALSE, escort_mob, 0, ch,
-        TO_VICT);
+    act(escort_thanks_msg, FALSE, escort_mob, 0, ch, TO_ROOM);
+    act(escort_thanks_msg, FALSE, escort_mob, 0, ch, TO_VICT);
 
     /* Complete the quest */
     generic_complete_quest(ch);
+
+    /* Remove the escort mob from the world */
+    extract_char(escort_mob);
 
     return TRUE;
 }
@@ -404,6 +406,7 @@ bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum)
 void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer)
 {
     struct char_data *ch;
+    qst_rnum rnum;
 
     if (!IS_NPC(escort_mob))
         return;
@@ -414,9 +417,22 @@ void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer)
             continue;
 
         if (GET_QUEST_TYPE(ch) == AQ_MOB_ESCORT && GET_ESCORT_MOB_ID(ch) == GET_IDNUM(escort_mob)) {
+            /* Get quest info for penalty */
+            rnum = real_quest(GET_QUEST(ch));
+
             /* Notify player of quest failure */
             send_to_char(ch, "\r\n\ty** SUA QUEST DE ESCOLTA FALHOU! **\tn\r\n");
-            send_to_char(ch, "A pessoa que você estava escoltando morreu!\r\n\r\n");
+            send_to_char(ch, "A pessoa que você estava escoltando morreu!\r\n");
+
+            /* Apply penalty - escort death is worse than abandoning */
+            if (rnum != NOTHING && QST_PENALTY(rnum)) {
+                int death_penalty = QST_PENALTY(rnum) * 2; /* Double penalty for escort death */
+                GET_QUESTPOINTS(ch) -= death_penalty;
+                send_to_char(ch, "Você perde %d pontos de busca por falhar em proteger o escoltado!\r\n\r\n",
+                             death_penalty);
+            } else {
+                send_to_char(ch, "\r\n");
+            }
 
             /* Clear the quest */
             clear_quest(ch);
