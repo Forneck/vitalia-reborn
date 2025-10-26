@@ -1,0 +1,33 @@
+# casas.txt - Sample house definitions file
+# 
+# This is an example file showing the format for converting house data
+# to the binary hcontrol format used by Vitalia Reborn.
+#
+# Format: vnum atrium exit_dir owner_id built_on last_payment num_guests [guest1 guest2 ...]
+#
+# Fields:
+#   vnum        - Virtual number of the house room
+#   atrium      - Virtual number of the house atrium
+#   exit_dir    - Direction of exit (0=norte, 1=leste, 2=sul, 3=oeste, 4=cima, 5=baixo)
+#   owner_id    - Player ID of the house owner
+#   built_on    - Unix timestamp when house was built
+#   last_payment- Unix timestamp of last payment
+#   num_guests  - Number of guests (0-10)
+#   guest1-N    - Guest player IDs (optional, based on num_guests)
+#
+# Lines starting with # are comments and are ignored.
+# Empty lines are also ignored.
+#
+# Example entries:
+
+# Casa 1000 - com 2 convidados
+1000 999 2 12345 946684800 946684800 2 23456 34567
+
+# Casa 3001 - sem convidados
+3001 3000 1 98765 946684800 946684800 0
+
+# Casa 3009 - com 1 convidado
+3009 3008 3 11111 946684800 946684800 1 22222
+
+# Casa 1204 - com 3 convidados
+1204 1203 0 55555 1009843200 1009843200 3 66666 77777 88888
