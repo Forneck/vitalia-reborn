@@ -2039,7 +2039,7 @@ bool handle_duty_routine(struct char_data *ch)
 
     if (is_shopkeeper) {
         int shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
-        if (shop_nr != -1 && is_shop_open(shop_nr) && shop_index[shop_nr].in_room) {
+        if (shop_nr != -1 && shop_nr <= top_shop && is_shop_open(shop_nr) && shop_index[shop_nr].in_room) {
             is_on_duty = TRUE;
             home_room = real_room(SHOP_ROOM(shop_nr, 0));
         }
@@ -3182,10 +3182,19 @@ bool mob_handle_item_usage(struct char_data *ch)
 
 /**
  * Encontra um mob específico em uma sala pelo seu número real (rnum).
+ * @param room The room number to search in
+ * @param rnum The mob rnum to find
+ * @return Pointer to the mob if found, NULL otherwise
  */
 struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum)
 {
     struct char_data *i;
+
+    /* Safety check: Validate room before accessing world array */
+    if (room == NOWHERE || room < 0 || room > top_of_world) {
+        return NULL;
+    }
+
     for (i = world[room].people; i; i = i->next_in_room) {
         if (IS_NPC(i) && GET_MOB_RNUM(i) == rnum) {
             return i;
@@ -3203,6 +3212,12 @@ struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum)
 struct char_data *get_mob_in_room_by_vnum(room_rnum room, mob_vnum vnum)
 {
     struct char_data *i;
+
+    /* Safety check: Validate room before accessing world array */
+    if (room == NOWHERE || room < 0 || room > top_of_world) {
+        return NULL;
+    }
+
     for (i = world[room].people; i; i = i->next_in_room) {
         if (IS_NPC(i) && GET_MOB_VNUM(i) == vnum) {
             return i;
@@ -3683,7 +3698,7 @@ void mob_process_wishlist_goals(struct char_data *ch)
     /* Passo 3: Avaliar as opções e escolher o melhor plano */
 
     /* Opção 1: Caçar um mob */
-    if (target_mob != NOBODY) {
+    if (target_mob != NOBODY && target_mob >= 0 && target_mob < top_of_mobt) {
         /* Verifica se consegue matar o alvo (simplificado) */
         if (GET_LEVEL(ch) >= mob_proto[target_mob].player.level - 5) {
             /* Pode caçar este mob */
@@ -3704,7 +3719,7 @@ void mob_process_wishlist_goals(struct char_data *ch)
         if (shop_room != NOWHERE && !ROOM_FLAGGED(shop_room, ROOM_NOTRACK)) {
             /* Calcula o custo do item */
             obj_rnum = real_object(desired_item->vnum);
-            if (obj_rnum != NOTHING) {
+            if (obj_rnum != NOTHING && obj_rnum >= 0 && obj_rnum < top_of_objt) {
                 item_cost = GET_OBJ_COST(&obj_proto[obj_rnum]);
                 if (item_cost <= 0)
                     item_cost = 1;
