@@ -1912,38 +1912,33 @@ void hunt_victim(struct char_data *ch)
                 found = TRUE;
 
         if (found && IN_ROOM(ch) == IN_ROOM(victim)) {
-            /* Safety check: Only attack if victim is awake to prevent issues with sleeping targets */
-            if (AWAKE(victim)) {
-                hit(ch, victim, TYPE_UNDEFINED);
+            hit(ch, victim, TYPE_UNDEFINED);
 
-                /* Safety check: hit() can indirectly cause extract_char for ch or victim
-                 * through death, special procedures, triggers, etc.
-                 * Re-validate both ch and victim still exist before continuing */
-                for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
-                    if (ch == tmp)
-                        found = TRUE;
+            /* Safety check: hit() can indirectly cause extract_char for ch or victim
+             * through death, special procedures, triggers, etc.
+             * This is critical when victim is !AWAKE since action stacking can occur.
+             * Re-validate both ch and victim still exist before continuing */
+            for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                if (ch == tmp)
+                    found = TRUE;
 
-                if (!found) {
-                    /* ch was extracted during hit(), cannot safely continue */
-                    return;
-                }
+            if (!found) {
+                /* ch was extracted during hit(), cannot safely continue */
+                return;
+            }
 
-                /* Check if ch was marked for extraction */
-                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
-                    return;
-                }
+            /* Check if ch was marked for extraction */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                return;
+            }
 
-                /* Re-validate victim still exists */
-                for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
-                    if (victim == tmp)
-                        found = TRUE;
+            /* Re-validate victim still exists */
+            for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                if (victim == tmp)
+                    found = TRUE;
 
-                if (!found) {
-                    /* Victim was extracted during hit(), clear hunting */
-                    HUNTING(ch) = NULL;
-                }
-            } else {
-                /* Victim is sleeping, don't attack - clear hunting to avoid repeated attempts */
+            if (!found) {
+                /* Victim was extracted during hit(), clear hunting */
                 HUNTING(ch) = NULL;
             }
         } else if (!found) {
