@@ -61,6 +61,18 @@ d->character->player_specials->saved.num_incarnations++;
 
 **Impact:** Class history statistics were not being tracked correctly.
 
+### Bug 3: PLR_TRNS Flag Not Removed After Remort
+**File:** `src/interpreter.c` line 1903
+
+**Problem:** The transcendence flag (`PLR_TRNS`) was not being removed when a player completed the remort process. This caused players to remain in "transcended" state even after remorting to level 1, requiring manual intervention to remove the flag.
+
+**Fix:** Added flag removal after finalization:
+```c
+REMOVE_BIT_AR(PLR_FLAGS(d->character), PLR_TRNS);
+```
+
+**Impact:** Players now correctly lose their transcendence status after remort and must transcend again to remort in the future. This prevents gameplay issues where transcended status gives inappropriate benefits or restrictions to low-level remorted characters.
+
 ### Enhancement: Debug Logging
 **File:** `src/interpreter.c` line 1850
 

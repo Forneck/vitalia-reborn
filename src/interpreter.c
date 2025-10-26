@@ -1899,6 +1899,9 @@ void nanny(struct descriptor_data *d, char *arg)
             GET_MANA(d->character) = GET_MAX_MANA(d->character);
             GET_MOVE(d->character) = GET_MAX_MOVE(d->character);
 
+            /* Remove transcendence flag - player must transcend again */
+            REMOVE_BIT_AR(PLR_FLAGS(d->character), PLR_TRNS);
+
             /* Initialize character for new class */
             do_start(d->character);
 
