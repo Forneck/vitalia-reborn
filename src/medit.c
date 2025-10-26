@@ -467,6 +467,7 @@ static void medit_disp_genetics_menu(struct descriptor_data *d)
                     "%s9%s) Quest Tendency      : %s%d%s\r\n"
                     "%sA%s) Adventurer Tendency : %s%d%s\r\n"
                     "%sB%s) Follow Tendency     : %s%d%s\r\n"
+                    "%sC%s) Healing Tendency    : %s%d%s\r\n"
                     "%sQ%s) Return to main menu\r\n"
                     "Enter choice : ",
 
@@ -477,7 +478,8 @@ static void medit_disp_genetics_menu(struct descriptor_data *d)
                     nrm, grn, nrm, yel, mob->ai_data->genetics.use_tendency, nrm, grn, nrm, yel,
                     mob->ai_data->genetics.trade_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.quest_tendency,
                     nrm, grn, nrm, yel, mob->ai_data->genetics.adventurer_tendency, nrm, grn, nrm, yel,
-                    mob->ai_data->genetics.follow_tendency, nrm, grn, nrm);
+                    mob->ai_data->genetics.follow_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.healing_tendency,
+                    nrm, grn, nrm);
 
     OLC_MODE(d) = MEDIT_GENETICS_MENU;
 }
@@ -927,6 +929,11 @@ void medit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = MEDIT_GEN_FOLLOW;
                     i++;
                     break;
+                case 'c':
+                case 'C':
+                    OLC_MODE(d) = MEDIT_GEN_HEALING;
+                    i++;
+                    break;
                 default:
                     medit_disp_genetics_menu(d);
                     return;
@@ -1277,6 +1284,15 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
             }
             OLC_MOB(d)->ai_data->genetics.follow_tendency = LIMIT(i, 0, 100);
+            medit_disp_genetics_menu(d);
+            return;
+
+        case MEDIT_GEN_HEALING:
+            if (!OLC_MOB(d)->ai_data) {
+                CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+                memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+            }
+            OLC_MOB(d)->ai_data->genetics.healing_tendency = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
             return;
 

@@ -980,6 +980,7 @@ struct mob_genetics {
     int quest_tendency;      /* Tendência de aceitar quests. Varia de 0 a 100. */
     int adventurer_tendency; /* Tendência de ser aventureiro/explorar. Varia de 0 a 100. */
     int follow_tendency;     /* Tendência de seguir outros chars sem grupo. Varia de 0 a 100. */
+    int healing_tendency;    /* Tendência de curar aliados. Varia de 0 a 100. */
 };
 
 /**
