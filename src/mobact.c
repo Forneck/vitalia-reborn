@@ -289,6 +289,17 @@ void mobile_activity(void)
                     if (target && !FIGHTING(ch)) {
                         /* Attack the target */
                         act("$n se concentra em $N com olhos determinados.", FALSE, ch, 0, target, TO_ROOM);
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                        if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET)) {
+                            /* Target was extracted, give up hunting */
+                            ch->ai_data->current_goal = GOAL_NONE;
+                            ch->ai_data->goal_target_mob_rnum = NOBODY;
+                            ch->ai_data->goal_item_vnum = NOTHING;
+                            ch->ai_data->goal_timer = 0;
+                            continue;
+                        }
                         hit(ch, target, TYPE_UNDEFINED);
                         /* Safety check: hit() can indirectly cause extract_char */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -684,6 +695,11 @@ void mobile_activity(void)
                         if (target_mob && !FIGHTING(ch)) {
                             /* Attack the mob to get the key */
                             act("$n ataca $N para obter algo que precisa.", FALSE, ch, 0, target_mob, TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
+                            if (MOB_FLAGGED(target_mob, MOB_NOTDEADYET) || PLR_FLAGGED(target_mob, PLR_NOTDEADYET))
+                                continue;
                             hit(ch, target_mob, TYPE_UNDEFINED);
                             /* Safety check: hit() can indirectly cause extract_char */
                             if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -1120,7 +1136,21 @@ void mobile_activity(void)
 
                     if (rand_number(0, 20) <= GET_CHA(vict)) {
                         act("$n olha para $N com indiferença.", FALSE, ch, 0, vict, TO_NOTVICT);
+                        /* Safety check: act() can trigger DG scripts which may extract ch or vict */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                        if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET)) {
+                            vict = next_vict;
+                            continue;
+                        }
                         act("$N olha para você com indiferença.", FALSE, vict, 0, ch, TO_CHAR);
+                        /* Safety check: second act() may also trigger extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                        if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET)) {
+                            vict = next_vict;
+                            continue;
+                        }
                     } else {
                         hit(ch, vict, TYPE_UNDEFINED);
                         /* Safety check: hit() can indirectly cause extract_char */
@@ -1325,12 +1355,16 @@ void mobile_activity(void)
                                 /* Safety check: act() can trigger DG scripts which may cause extraction */
                                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                                     return;
+                                if (MOB_FLAGGED(victim, MOB_NOTDEADYET) || PLR_FLAGGED(victim, PLR_NOTDEADYET))
+                                    return;
                             }
 
                             /* Observer message */
                             act("$n se aproxima discretamente de $N por um momento.", FALSE, ch, 0, victim, TO_NOTVICT);
                             /* Safety check: act() can trigger DG scripts which may cause extraction */
                             if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                return;
+                            if (MOB_FLAGGED(victim, MOB_NOTDEADYET) || PLR_FLAGGED(victim, PLR_NOTDEADYET))
                                 return;
                             return; /* Only poison one container per round */
                         }
@@ -1688,6 +1722,11 @@ bool mob_handle_grouping(struct char_data *ch)
             if (rand_number(1, 120) <= chance_aceitar) {
                 join_group(ch, GROUP(best_target_leader));
                 act("$n junta-se ao grupo de $N.", TRUE, ch, 0, best_target_leader, TO_ROOM);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return FALSE;
+                if (MOB_FLAGGED(best_target_leader, MOB_NOTDEADYET) || PLR_FLAGGED(best_target_leader, PLR_NOTDEADYET))
+                    return FALSE;
                 return TRUE;
             }
         } else {
@@ -2378,15 +2417,36 @@ bool mob_try_stealth_follow(struct char_data *ch)
                     /* NPCs don't get the "You will now follow" message */
                 } else {
                     act("Você agora irá seguir $N.", FALSE, ch, 0, target, TO_CHAR);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return FALSE;
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        return FALSE;
                 }
-                if (CAN_SEE(target, ch))
+                if (CAN_SEE(target, ch)) {
                     act("$n começa a seguir você.", TRUE, ch, 0, target, TO_VICT);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return FALSE;
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        return FALSE;
+                }
                 act("$n começa a seguir $N.", TRUE, ch, 0, target, TO_NOTVICT);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return FALSE;
+                if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                    return FALSE;
             } else {
                 /* Stealthy following - only notify if target can see through stealth */
                 if (CAN_SEE(target, ch)) {
                     /* Target can see through the stealth */
                     act("$n começa a seguir você silenciosamente.", TRUE, ch, 0, target, TO_VICT);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return FALSE;
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        return FALSE;
                 }
                 /* No message to room when sneaking/hiding */
             }
@@ -3516,6 +3576,11 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
             if (target_mob && !FIGHTING(ch)) {
                 /* Attack the target mob */
                 act("$n olha para $N com determinação.", FALSE, ch, 0, target_mob, TO_ROOM);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
+                if (MOB_FLAGGED(target_mob, MOB_NOTDEADYET) || PLR_FLAGGED(target_mob, PLR_NOTDEADYET))
+                    return TRUE;
                 hit(ch, target_mob, TYPE_UNDEFINED);
                 /* Safety check: hit() can indirectly cause extract_char */
                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -3586,6 +3651,13 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                             /* Found a mob to kill */
                             if (!FIGHTING(ch)) {
                                 act("$n ataca $N para limpar a área.", FALSE, ch, 0, temp_mob, TO_ROOM);
+                                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    return TRUE;
+                                if (MOB_FLAGGED(temp_mob, MOB_NOTDEADYET) || PLR_FLAGGED(temp_mob, PLR_NOTDEADYET)) {
+                                    found_hostile = FALSE; /* Target was extracted, continue searching */
+                                    continue;
+                                }
                                 hit(ch, temp_mob, TYPE_UNDEFINED);
                                 /* Safety check: hit() can indirectly cause extract_char */
                                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
