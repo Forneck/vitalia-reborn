@@ -652,7 +652,7 @@ ACMD(do_house)
         /* Check if guest already exists to remove them */
         for (j = 0; j < house_control[i].num_of_guests; j++) {
             if (house_control[i].guests[j] == id) {
-                for (; j < house_control[i].num_of_guests; j++)
+                for (; j < house_control[i].num_of_guests - 1; j++)
                     house_control[i].guests[j] = house_control[i].guests[j + 1];
                 house_control[i].num_of_guests--;
                 House_save_control();
@@ -688,7 +688,7 @@ ACMD(do_house)
     else {
         for (j = 0; j < house_control[i].num_of_guests; j++)
             if (house_control[i].guests[j] == id) {
-                for (; j < house_control[i].num_of_guests; j++)
+                for (; j < house_control[i].num_of_guests - 1; j++)
                     house_control[i].guests[j] = house_control[i].guests[j + 1];
                 house_control[i].num_of_guests--;
                 House_save_control();
