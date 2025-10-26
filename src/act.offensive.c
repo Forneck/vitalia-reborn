@@ -1110,7 +1110,7 @@ ACMD(do_seize)
 
 ACMD(do_shoot)
 {
-    struct char_data *vict;
+    struct char_data *vict, *tmp;
     struct obj_data *ammo, *fireweapon;
     int percent, prob;
     char arg1[MAX_INPUT_LENGTH];
@@ -1189,10 +1189,29 @@ ACMD(do_shoot)
                 if ((vict = get_char_vis(ch, arg2, NULL, FIND_CHAR_ROOM)) != NULL) {
                     if (vict == ch) {
                         send_to_char(ch, "Melhor não tentar isso...\r\n");
+                        char_from_room(ch);
+                        char_to_room(ch, was_room);
                         return;
                     }
                     char_from_room(ch);
                     char_to_room(ch, was_room);
+
+                    /* Re-validate ch is still in the world after room changes */
+                    for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                        if (ch == tmp)
+                            found = TRUE;
+
+                    if (!found) {
+                        /* ch was extracted during room changes, cannot continue */
+                        return;
+                    }
+
+                    /* Validate was_room is still valid */
+                    if (IN_ROOM(ch) < 0 || IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) >= top_of_world) {
+                        log1("SYSERR: do_shoot - ch in invalid room %d after moving back", IN_ROOM(ch));
+                        return;
+                    }
+
                     send_to_char(ch, "Você se concentra e atira.\r\n");
                     act("$n se concentra e atira.", FALSE, ch, 0, 0, TO_ROOM);
                     dam += GET_DAMROLL(ch);
@@ -1219,19 +1238,67 @@ ACMD(do_shoot)
                         affect_join(vict, &af, FALSE, FALSE, FALSE, FALSE);
                     }
                     damage(ch, vict, dam, GET_OBJ_VAL(ammo, 3) + TYPE_HIT);
-                    remember(ch, vict);
-                    if (rand_number(0, 1) == 1)
-                        hunt_victim(ch);
-                    hitprcnt_mtrigger(vict);
-                    if (GET_OBJ_VAL(ammo, 0) > 1) {
-                        GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo) / GET_OBJ_VAL(ammo, 0));
-                        GET_OBJ_VAL(ammo, 0)--;
-                    } else
-                        extract_obj(ammo);
+
+                    /* Safety check: damage() can cause extract_char for ch or vict
+                     * through death, special procedures, triggers, etc.
+                     * This is critical with mobile_activity interactions.
+                     * Re-validate both ch and vict still exist before continuing */
+                    for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                        if (ch == tmp)
+                            found = TRUE;
+
+                    if (!found) {
+                        /* ch was extracted during damage(), cannot safely continue */
+                        return;
+                    }
+
+                    /* Check if ch was marked for extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                        return;
+                    }
+
+                    /* Re-validate vict still exists before using it */
+                    for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                        if (vict == tmp)
+                            found = TRUE;
+
+                    if (found) {
+                        /* vict is still valid, safe to call remember and trigger */
+                        remember(ch, vict);
+                        if (rand_number(0, 1) == 1)
+                            hunt_victim(ch);
+                        hitprcnt_mtrigger(vict);
+                    }
+
+                    /* Re-validate ch again after remember/hunt_victim/trigger calls */
+                    for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                        if (ch == tmp)
+                            found = TRUE;
+
+                    if (!found) {
+                        /* ch was extracted during trigger/hunt, cannot continue */
+                        return;
+                    }
+
+                    /* Check extraction flag again */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                        return;
+                    }
+
+                    /* Safe to handle ammo now */
+                    if ((ammo = GET_EQ(ch, WEAR_QUIVER)) != NULL) {
+                        if (GET_OBJ_VAL(ammo, 0) > 1) {
+                            GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo) / GET_OBJ_VAL(ammo, 0));
+                            GET_OBJ_VAL(ammo, 0)--;
+                        } else
+                            extract_obj(ammo);
+                    }
                     found = TRUE;
+                } else {
+                    /* vict not found in target room, move ch back */
+                    char_from_room(ch);
+                    char_to_room(ch, was_room);
                 }
-                char_from_room(ch);
-                char_to_room(ch, was_room);
             } else {
                 send_to_char(ch, "Você tenta mas não consegue acertar ninguém.\r\n");
                 return;
