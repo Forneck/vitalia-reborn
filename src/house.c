@@ -24,9 +24,13 @@
 static struct house_control_rec house_control[MAX_HOUSES];
 static int num_of_houses = 0;
 
+/* Maximum nesting depth for containers in houses */
+#define MAX_BAG_ROWS 5
+
 /* local functions */
 static int House_get_filename(room_vnum vnum, char *filename, size_t maxlen);
 static int House_load(room_vnum vnum);
+static int House_load_obj(struct obj_data *obj, room_rnum room, int locate, struct obj_data **cont_row);
 static void House_restore_weight(struct obj_data *obj);
 static void House_delete_file(room_vnum vnum);
 static int find_house(room_vnum vnum);
@@ -59,6 +63,8 @@ static int House_load(room_vnum vnum)
     char filename[MAX_STRING_LENGTH];
     obj_save_data *loaded, *current;
     room_rnum rnum;
+    struct obj_data *cont_row[MAX_BAG_ROWS];
+    int j;
 
     if ((rnum = real_room(vnum)) == NOWHERE)
         return (0);
@@ -67,13 +73,17 @@ static int House_load(room_vnum vnum)
     if (!(fl = fopen(filename, "r"))) /* no file found */
         return (0);
 
+    /* Initialize container rows */
+    for (j = 0; j < MAX_BAG_ROWS; j++)
+        cont_row[j] = NULL;
+
     loaded = objsave_parse_objects(fl);
 
     for (current = loaded; current != NULL; current = current->next)
-        obj_to_room(current->obj, rnum);
+        House_load_obj(current->obj, rnum, current->locate, cont_row);
 
     /* now it's safe to free the obj_save_data list - all members of it
-     * have been put in the correct lists by obj_to_room()
+     * have been put in the correct lists by House_load_obj()
      */
     while (loaded != NULL) {
         current = loaded;
@@ -86,17 +96,117 @@ static int House_load(room_vnum vnum)
     return (1);
 }
 
+/* Helper function to load an object and place it correctly based on location.
+ * This handles container nesting similar to handle_obj() in objsave.c but
+ * adapted for rooms instead of characters. */
+static int House_load_obj(struct obj_data *obj, room_rnum room, int locate, struct obj_data **cont_row)
+{
+    int j;
+    struct obj_data *obj1, *temp;
+
+    if (!obj) /* this should never happen, but.... */
+        return (0);
+
+    /* For objects at room level (locate == 0), place them in the room */
+    if (locate == 0) {
+        /* Check if there's pending container contents */
+        for (j = MAX_BAG_ROWS - 1; j > 0; j--) {
+            if (cont_row[j]) { /* no container for these items -> place in room */
+                for (; cont_row[j]; cont_row[j] = obj1) {
+                    obj1 = cont_row[j]->next_content;
+                    obj_to_room(cont_row[j], room);
+                }
+                cont_row[j] = NULL;
+            }
+        }
+
+        /* Check if this object should contain items from cont_row[0] */
+        if (cont_row[0]) {
+            if (GET_OBJ_TYPE(obj) == ITEM_CONTAINER) {
+                /* This is a container, put pending items inside it */
+                obj->contains = NULL; /* should be empty - but who knows */
+                for (; cont_row[0]; cont_row[0] = obj1) {
+                    obj1 = cont_row[0]->next_content;
+                    obj_to_obj(cont_row[0], obj);
+                }
+            } else {
+                /* Object isn't a container -> place pending items in room */
+                for (; cont_row[0]; cont_row[0] = obj1) {
+                    obj1 = cont_row[0]->next_content;
+                    obj_to_room(cont_row[0], room);
+                }
+                cont_row[0] = NULL;
+            }
+        }
+
+        /* Place the object in the room */
+        obj_to_room(obj, room);
+
+    } else if (locate < 0) {
+        /* Object should be inside a container */
+        /* First, flush any deeper nested containers that lost their parent */
+        for (j = MAX_BAG_ROWS - 1; j > -locate; j--) {
+            if (cont_row[j]) { /* no container -> place in room */
+                for (; cont_row[j]; cont_row[j] = obj1) {
+                    obj1 = cont_row[j]->next_content;
+                    obj_to_room(cont_row[j], room);
+                }
+                cont_row[j] = NULL;
+            }
+        }
+
+        /* Check if we have pending contents for this container */
+        if (j == -locate && cont_row[j]) {
+            if (GET_OBJ_TYPE(obj) == ITEM_CONTAINER) {
+                /* Place pending items inside this container */
+                obj->contains = NULL;
+                for (; cont_row[j]; cont_row[j] = obj1) {
+                    obj1 = cont_row[j]->next_content;
+                    obj_to_obj(cont_row[j], obj);
+                }
+            } else {
+                /* Object isn't a container -> place pending items in room */
+                for (; cont_row[j]; cont_row[j] = obj1) {
+                    obj1 = cont_row[j]->next_content;
+                    obj_to_room(cont_row[j], room);
+                }
+                cont_row[j] = NULL;
+            }
+        }
+
+        /* Add this object to the appropriate container row */
+        if (locate < 0 && locate >= -MAX_BAG_ROWS) {
+            /* Place object at the end of the container row list to maintain order */
+            if ((obj1 = cont_row[-locate - 1])) {
+                while (obj1->next_content)
+                    obj1 = obj1->next_content;
+                obj1->next_content = obj;
+            } else
+                cont_row[-locate - 1] = obj;
+        } else {
+            /* Invalid location value, place in room */
+            obj_to_room(obj, room);
+        }
+    } else {
+        /* locate > 0 is not used for houses (that's for equipped items) */
+        /* Just place the object in the room */
+        obj_to_room(obj, room);
+    }
+
+    return (1);
+}
+
 /* Save all objects for a house (recursive; initial call must be followed by a
  * call to House_restore_weight)  Assumes file is open already. */
-int House_save(struct obj_data *obj, FILE *fp)
+int House_save(struct obj_data *obj, FILE *fp, int location)
 {
     struct obj_data *tmp;
     int result;
 
     if (obj) {
-        House_save(obj->contains, fp);
-        House_save(obj->next_content, fp);
-        result = objsave_save_obj_record(obj, fp, 0);
+        House_save(obj->next_content, fp, location);
+        House_save(obj->contains, fp, MIN(0, location) - 1);
+        result = objsave_save_obj_record(obj, fp, location);
         if (!result)
             return (0);
 
@@ -132,7 +242,7 @@ void House_crashsave(room_vnum vnum)
         perror("SYSERR: Error saving house file");
         return;
     }
-    if (!House_save(world[rnum].contents, fp)) {
+    if (!House_save(world[rnum].contents, fp, 0)) {
         fclose(fp);
         return;
     }
