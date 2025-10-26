@@ -2,6 +2,7 @@
 set(TOOLS
   asciipasswd
   autowiz
+  casasconv
   plrtoascii
   rebuildIndex
   rebuildMailIndex

@@ -1,0 +1,25 @@
+# atrium_map.txt - Atrium mapping for houses
+#
+# This file maps each house vnum to its atrium and exit direction.
+# The atrium is the room outside the house, and exit_dir is the
+# direction you take from the house to get to the atrium.
+#
+# Format: vnum atrium exit_dir
+#
+# Fields:
+#   vnum     - Virtual number of the house room
+#   atrium   - Virtual number of the atrium (room outside house)
+#   exit_dir - Direction of exit from house (0=north, 1=east, 2=south, 3=west, 4=up, 5=down)
+#
+# Lines starting with # are comments and are ignored.
+# Empty lines are also ignored.
+#
+# Example entries:
+
+# Houses in Midgaard area
+1050 1049 2
+1051 1049 2
+
+# Houses in New Thalos area
+3001 3000 1
+3009 3008 3

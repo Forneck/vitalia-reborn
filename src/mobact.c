@@ -289,6 +289,17 @@ void mobile_activity(void)
                     if (target && !FIGHTING(ch)) {
                         /* Attack the target */
                         act("$n se concentra em $N com olhos determinados.", FALSE, ch, 0, target, TO_ROOM);
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                        if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET)) {
+                            /* Target was extracted, give up hunting */
+                            ch->ai_data->current_goal = GOAL_NONE;
+                            ch->ai_data->goal_target_mob_rnum = NOBODY;
+                            ch->ai_data->goal_item_vnum = NOTHING;
+                            ch->ai_data->goal_timer = 0;
+                            continue;
+                        }
                         hit(ch, target, TYPE_UNDEFINED);
                         /* Safety check: hit() can indirectly cause extract_char */
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -489,12 +500,19 @@ void mobile_activity(void)
                                     ch->ai_data->goal_target_mob_rnum = SHOP_KEEPER(new_shop_rnum);
                                     act("$n percebe que esta loja não compra o que tem e decide procurar outra.", FALSE,
                                         ch, 0, 0, TO_ROOM);
-                                    continue; /* Continue with updated goal */
+                                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                        continue;
+                                    /* Continue with updated goal - don't process other activities this tick */
+                                    continue;
                                 }
                             }
                             /* No suitable shop found, abandon goal */
                             act("$n parece frustrado por não conseguir vender os seus itens.", FALSE, ch, 0, 0,
                                 TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
                             ch->ai_data->current_goal = GOAL_NONE;
                             ch->ai_data->goal_destination = NOWHERE;
                             ch->ai_data->goal_obj = NULL;
@@ -559,6 +577,9 @@ void mobile_activity(void)
                         /* Tenta comprar o item */
                         char buy_command[MAX_INPUT_LENGTH];
                         act("$n olha os produtos da loja.", FALSE, ch, 0, 0, TO_ROOM);
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                         sprintf(buy_command, "%d", ch->ai_data->goal_item_vnum);
                         shopping_buy(buy_command, ch, keeper, find_shop_by_keeper(keeper->nr));
 
@@ -581,6 +602,9 @@ void mobile_activity(void)
                         /* Remove o item da wishlist se a compra foi bem sucedida */
                         remove_item_from_wishlist(ch, ch->ai_data->goal_item_vnum);
                         act("$n parece satisfeito com a sua compra.", FALSE, ch, 0, 0, TO_ROOM);
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 } else if (ch->ai_data->current_goal == GOAL_GOTO_QUESTMASTER) {
                     /* Chegou ao questmaster para postar uma quest */
@@ -593,6 +617,9 @@ void mobile_activity(void)
                         /* Posta a quest no questmaster */
                         mob_posts_quest(ch, ch->ai_data->goal_item_vnum, reward);
                         act("$n fala com o questmaster e entrega um pergaminho.", FALSE, ch, 0, 0, TO_ROOM);
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 } else if (ch->ai_data->current_goal == GOAL_ACCEPT_QUEST) {
                     /* Chegou ao questmaster para aceitar uma quest */
@@ -606,6 +633,9 @@ void mobile_activity(void)
                             if (quest_rnum != NOTHING && mob_should_accept_quest(ch, quest_rnum)) {
                                 set_mob_quest(ch, quest_rnum);
                                 act("$n fala com $N e aceita uma tarefa.", FALSE, ch, 0, questmaster, TO_ROOM);
+                                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    continue;
 
                                 /* Automatically transition to quest completion goal */
                                 ch->ai_data->current_goal = GOAL_COMPLETE_QUEST;
@@ -618,6 +648,9 @@ void mobile_activity(void)
                         } else {
                             act("$n fala com $N mas parece não haver tarefas disponíveis.", FALSE, ch, 0, questmaster,
                                 TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
                         }
                     }
                 } else if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
@@ -650,6 +683,9 @@ void mobile_activity(void)
                             obj_from_room(key_obj);
                             obj_to_char(key_obj, ch);
                             act("$n pega $p do chão.", FALSE, ch, key_obj, 0, TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
                             key_collected = TRUE;
                             break;
                         }
@@ -667,6 +703,9 @@ void mobile_activity(void)
                                         obj_from_obj(key_obj);
                                         obj_to_char(key_obj, ch);
                                         act("$n pega $p de $P.", FALSE, ch, key_obj, container, TO_ROOM);
+                                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                            continue;
                                         key_collected = TRUE;
                                         break;
                                     }
@@ -684,6 +723,11 @@ void mobile_activity(void)
                         if (target_mob && !FIGHTING(ch)) {
                             /* Attack the mob to get the key */
                             act("$n ataca $N para obter algo que precisa.", FALSE, ch, 0, target_mob, TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
+                            if (MOB_FLAGGED(target_mob, MOB_NOTDEADYET) || PLR_FLAGGED(target_mob, PLR_NOTDEADYET))
+                                continue;
                             hit(ch, target_mob, TYPE_UNDEFINED);
                             /* Safety check: hit() can indirectly cause extract_char */
                             if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -711,7 +755,11 @@ void mobile_activity(void)
                             ch->ai_data->original_item_vnum = NOTHING;
 
                             act("$n parece satisfeito por ter encontrado o que procurava.", FALSE, ch, 0, 0, TO_ROOM);
-                            continue; /* Continue with restored goal */
+                            /* Safety check: act() can trigger DG scripts which may cause extraction */
+                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                continue;
+                            /* Continue with restored goal - don't clear it below */
+                            continue;
                         }
                     }
                     /* If key not found, goal will be cleared below */
@@ -745,6 +793,9 @@ void mobile_activity(void)
                     next_obj = current_obj->next_content;
                     if (OBJ_FLAGGED(current_obj, ITEM_TRASH)) {
                         act("$n joga $p fora.", FALSE, ch, current_obj, 0, TO_ROOM);
+                        /* Safety check: act() can trigger DG scripts which may cause extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                         extract_obj(current_obj);
                         /* Safety check: extract_obj could potentially trigger DG Scripts
                          * on the object being extracted, which might indirectly affect ch */
@@ -1095,6 +1146,17 @@ void mobile_activity(void)
                     continue;
                 }
 
+                /* Safety check: Validate vict is still valid before checking AWAKE(vict)
+                 * This is critical when vict may be sleeping/meditating and position is changing.
+                 * Without this check, AWAKE(vict) can cause SIGSEGV if vict was extracted or
+                 * became invalid between iterations or during CAN_SEE/PRF_FLAGGED checks.
+                 * Note: vict should not be NULL here since we're iterating from room people list,
+                 * but we check NOTDEADYET flags to catch pending extractions. */
+                if (!vict || MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET)) {
+                    vict = next_vict;
+                    continue;
+                }
+
                 if (MOB_FLAGGED(ch, MOB_WIMPY) && AWAKE(vict)) {
                     vict = next_vict;
                     continue;
@@ -1120,7 +1182,21 @@ void mobile_activity(void)
 
                     if (rand_number(0, 20) <= GET_CHA(vict)) {
                         act("$n olha para $N com indiferença.", FALSE, ch, 0, vict, TO_NOTVICT);
+                        /* Safety check: act() can trigger DG scripts which may extract ch or vict */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                        if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET)) {
+                            vict = next_vict;
+                            continue;
+                        }
                         act("$N olha para você com indiferença.", FALSE, vict, 0, ch, TO_CHAR);
+                        /* Safety check: second act() may also trigger extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                        if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET)) {
+                            vict = next_vict;
+                            continue;
+                        }
                     } else {
                         hit(ch, vict, TYPE_UNDEFINED);
                         /* Safety check: hit() can indirectly cause extract_char */
@@ -1144,6 +1220,9 @@ void mobile_activity(void)
 
         /* Bank usage for mobs with high trade genetics */
         mob_use_bank(ch);
+        /* Safety check: mob_use_bank() calls act() which can trigger DG scripts */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
 
         if (handle_duty_routine(ch)) {
             /* Safety check: handle_duty_routine calls perform_move which can trigger death traps */
@@ -1224,6 +1303,9 @@ void mobile_activity(void)
                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                     continue;
                 stop_follower(ch);
+                /* Safety check: stop_follower() calls act() which can trigger DG scripts */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
             }
         }
 
@@ -1325,12 +1407,16 @@ void mobile_activity(void)
                                 /* Safety check: act() can trigger DG scripts which may cause extraction */
                                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                                     return;
+                                if (MOB_FLAGGED(victim, MOB_NOTDEADYET) || PLR_FLAGGED(victim, PLR_NOTDEADYET))
+                                    return;
                             }
 
                             /* Observer message */
                             act("$n se aproxima discretamente de $N por um momento.", FALSE, ch, 0, victim, TO_NOTVICT);
                             /* Safety check: act() can trigger DG scripts which may cause extraction */
                             if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                return;
+                            if (MOB_FLAGGED(victim, MOB_NOTDEADYET) || PLR_FLAGGED(victim, PLR_NOTDEADYET))
                                 return;
                             return; /* Only poison one container per round */
                         }
@@ -1688,6 +1774,11 @@ bool mob_handle_grouping(struct char_data *ch)
             if (rand_number(1, 120) <= chance_aceitar) {
                 join_group(ch, GROUP(best_target_leader));
                 act("$n junta-se ao grupo de $N.", TRUE, ch, 0, best_target_leader, TO_ROOM);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return FALSE;
+                if (MOB_FLAGGED(best_target_leader, MOB_NOTDEADYET) || PLR_FLAGGED(best_target_leader, PLR_NOTDEADYET))
+                    return FALSE;
                 return TRUE;
             }
         } else {
@@ -2039,7 +2130,7 @@ bool handle_duty_routine(struct char_data *ch)
 
     if (is_shopkeeper) {
         int shop_nr = find_shop_by_keeper(GET_MOB_RNUM(ch));
-        if (shop_nr != -1 && is_shop_open(shop_nr) && shop_index[shop_nr].in_room) {
+        if (shop_nr != -1 && shop_nr <= top_shop && is_shop_open(shop_nr) && shop_index[shop_nr].in_room) {
             is_on_duty = TRUE;
             home_room = real_room(SHOP_ROOM(shop_nr, 0));
         }
@@ -2378,15 +2469,36 @@ bool mob_try_stealth_follow(struct char_data *ch)
                     /* NPCs don't get the "You will now follow" message */
                 } else {
                     act("Você agora irá seguir $N.", FALSE, ch, 0, target, TO_CHAR);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return FALSE;
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        return FALSE;
                 }
-                if (CAN_SEE(target, ch))
+                if (CAN_SEE(target, ch)) {
                     act("$n começa a seguir você.", TRUE, ch, 0, target, TO_VICT);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return FALSE;
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        return FALSE;
+                }
                 act("$n começa a seguir $N.", TRUE, ch, 0, target, TO_NOTVICT);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return FALSE;
+                if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                    return FALSE;
             } else {
                 /* Stealthy following - only notify if target can see through stealth */
                 if (CAN_SEE(target, ch)) {
                     /* Target can see through the stealth */
                     act("$n começa a seguir você silenciosamente.", TRUE, ch, 0, target, TO_VICT);
+                    /* Safety check: act() can trigger DG scripts which may cause extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        return FALSE;
+                    if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                        return FALSE;
                 }
                 /* No message to room when sneaking/hiding */
             }
@@ -3182,10 +3294,19 @@ bool mob_handle_item_usage(struct char_data *ch)
 
 /**
  * Encontra um mob específico em uma sala pelo seu número real (rnum).
+ * @param room The room number to search in
+ * @param rnum The mob rnum to find
+ * @return Pointer to the mob if found, NULL otherwise
  */
 struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum)
 {
     struct char_data *i;
+
+    /* Safety check: Validate room before accessing world array */
+    if (room == NOWHERE || room < 0 || room > top_of_world) {
+        return NULL;
+    }
+
     for (i = world[room].people; i; i = i->next_in_room) {
         if (IS_NPC(i) && GET_MOB_RNUM(i) == rnum) {
             return i;
@@ -3203,6 +3324,12 @@ struct char_data *get_mob_in_room_by_rnum(room_rnum room, mob_rnum rnum)
 struct char_data *get_mob_in_room_by_vnum(room_rnum room, mob_vnum vnum)
 {
     struct char_data *i;
+
+    /* Safety check: Validate room before accessing world array */
+    if (room == NOWHERE || room < 0 || room > top_of_world) {
+        return NULL;
+    }
+
     for (i = world[room].people; i; i = i->next_in_room) {
         if (IS_NPC(i) && GET_MOB_VNUM(i) == vnum) {
             return i;
@@ -3501,6 +3628,11 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
             if (target_mob && !FIGHTING(ch)) {
                 /* Attack the target mob */
                 act("$n olha para $N com determinação.", FALSE, ch, 0, target_mob, TO_ROOM);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    return TRUE;
+                if (MOB_FLAGGED(target_mob, MOB_NOTDEADYET) || PLR_FLAGGED(target_mob, PLR_NOTDEADYET))
+                    return TRUE;
                 hit(ch, target_mob, TYPE_UNDEFINED);
                 /* Safety check: hit() can indirectly cause extract_char */
                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -3571,6 +3703,13 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
                             /* Found a mob to kill */
                             if (!FIGHTING(ch)) {
                                 act("$n ataca $N para limpar a área.", FALSE, ch, 0, temp_mob, TO_ROOM);
+                                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    return TRUE;
+                                if (MOB_FLAGGED(temp_mob, MOB_NOTDEADYET) || PLR_FLAGGED(temp_mob, PLR_NOTDEADYET)) {
+                                    found_hostile = FALSE; /* Target was extracted, continue searching */
+                                    continue;
+                                }
                                 hit(ch, temp_mob, TYPE_UNDEFINED);
                                 /* Safety check: hit() can indirectly cause extract_char */
                                 if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
@@ -3683,7 +3822,7 @@ void mob_process_wishlist_goals(struct char_data *ch)
     /* Passo 3: Avaliar as opções e escolher o melhor plano */
 
     /* Opção 1: Caçar um mob */
-    if (target_mob != NOBODY) {
+    if (target_mob != NOBODY && target_mob >= 0 && target_mob < top_of_mobt) {
         /* Verifica se consegue matar o alvo (simplificado) */
         if (GET_LEVEL(ch) >= mob_proto[target_mob].player.level - 5) {
             /* Pode caçar este mob */
@@ -3704,7 +3843,7 @@ void mob_process_wishlist_goals(struct char_data *ch)
         if (shop_room != NOWHERE && !ROOM_FLAGGED(shop_room, ROOM_NOTRACK)) {
             /* Calcula o custo do item */
             obj_rnum = real_object(desired_item->vnum);
-            if (obj_rnum != NOTHING) {
+            if (obj_rnum != NOTHING && obj_rnum >= 0 && obj_rnum < top_of_objt) {
                 item_cost = GET_OBJ_COST(&obj_proto[obj_rnum]);
                 if (item_cost <= 0)
                     item_cost = 1;

@@ -568,6 +568,10 @@ int House_can_enter(struct char_data *ch, room_vnum house)
 {
     int i, j;
 
+    /* NPCs cannot enter player-owned houses */
+    if (IS_NPC(ch))
+        return (0);
+
     if (GET_LEVEL(ch) >= LVL_GRGOD || (i = find_house(house)) == NOWHERE)
         return (1);
 
