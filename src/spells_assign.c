@@ -2813,6 +2813,7 @@ void create_spells_db()
     new_spell->name = strdup("bandage");
     new_spell->function = do_bandage;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 7;
