@@ -1902,8 +1902,30 @@ void nanny(struct descriptor_data *d, char *arg)
             /* Remove transcendence flag - player must transcend again */
             REMOVE_BIT_AR(PLR_FLAGS(d->character), PLR_TRNS);
 
-            /* Initialize character for new class */
-            do_start(d->character);
+            /* Initialize character for new class (without re-rolling abilities) */
+            set_title(d->character, NULL);
+
+            GET_MAX_HIT(d->character) = 10;
+            GET_MAX_MANA(d->character) = 100;
+            GET_MAX_MOVE(d->character) = 82;
+            GET_MAX_BREATH(d->character) = 15;
+            advance_level(d->character);
+
+            GET_HIT(d->character) = GET_MAX_HIT(d->character);
+            GET_MANA(d->character) = GET_MAX_MANA(d->character);
+            GET_MOVE(d->character) = GET_MAX_MOVE(d->character);
+            GET_BREATH(d->character) = GET_MAX_BREATH(d->character);
+
+            update_pos(d->character);
+
+            GET_COND(d->character, THIRST) = 24;
+            GET_COND(d->character, HUNGER) = 24;
+            GET_COND(d->character, DRUNK) = 0;
+
+            if (CONFIG_SITEOK_ALL)
+                SET_BIT_AR(PLR_FLAGS(d->character), PLR_SITEOK);
+
+            GET_FIT(d->character) = 0;
 
             /* Restore retained skills */
             {

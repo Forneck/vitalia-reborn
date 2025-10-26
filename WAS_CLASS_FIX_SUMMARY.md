@@ -73,6 +73,21 @@ REMOVE_BIT_AR(PLR_FLAGS(d->character), PLR_TRNS);
 
 **Impact:** Players now correctly lose their transcendence status after remort and must transcend again to remort in the future. This prevents gameplay issues where transcended status gives inappropriate benefits or restrictions to low-level remorted characters.
 
+### Bug 4: Attributes Re-rolled After Player Acceptance
+**File:** `src/interpreter.c` line 1906
+
+**Problem:** The remort process called `do_start()` which internally calls `roll_real_abils()`, overwriting the attributes that the player had just rolled and accepted during the remort process. This caused players to end up with different (random) attributes than what they accepted.
+
+**Fix:** Replaced the `do_start()` call with inline initialization code that excludes the `roll_real_abils()` call:
+```c
+/* Initialize character for new class (without re-rolling abilities) */
+set_title(d->character, NULL);
+GET_MAX_HIT(d->character) = 10;
+// ... (rest of initialization without roll_real_abils)
+```
+
+**Impact:** Players now keep the exact attributes they rolled and accepted during remort. The character initialization still happens correctly (max HP/mana/move, hunger/thirst, position, etc.) but preserves the chosen attributes.
+
 ### Enhancement: Debug Logging
 **File:** `src/interpreter.c` line 1850
 
