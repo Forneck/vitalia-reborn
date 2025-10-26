@@ -834,21 +834,23 @@ void mobile_activity(void)
         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
             continue;
 
-        /* Wishlist-based goal planning */
-        if (ch->ai_data && rand_number(1, 100) <= 10) { /* 10% chance per tick */
+        /* Wishlist-based goal planning - not for charmed mobs */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) && rand_number(1, 100) <= 10) { /* 10% chance per tick */
             mob_process_wishlist_goals(ch);
             /* Safety check: mob_process_wishlist_goals can call act() which may trigger DG scripts */
             if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                 continue;
         }
 
-        /* Quest acceptance - try to find and accept quests occasionally */
-        if (ch->ai_data && rand_number(1, 100) <= 3) { /* 3% chance per tick to seek quests */
+        /* Quest acceptance - try to find and accept quests occasionally (not for charmed mobs) */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
+            rand_number(1, 100) <= 3) { /* 3% chance per tick to seek quests */
             mob_try_to_accept_quest(ch);
         }
 
-        /* Mob quest processing */
-        if (ch->ai_data && rand_number(1, 100) <= 5) { /* 5% chance per tick to check quests */
+        /* Mob quest processing - not for charmed mobs */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
+            rand_number(1, 100) <= 5) { /* 5% chance per tick to check quests */
             /* Check if mob has a quest and handle quest-related goals */
             if (GET_MOB_QUEST(ch) != NOTHING) {
                 /* Decrement quest timer if applicable */
@@ -884,8 +886,9 @@ void mobile_activity(void)
             }
         }
 
-        /* Mob combat quest posting - chance to post bounty/revenge quests */
-        if (ch->ai_data && rand_number(1, 100) <= 2) { /* 2% chance per tick to consider posting combat quests */
+        /* Mob combat quest posting - chance to post bounty/revenge quests (not for charmed mobs) */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
+            rand_number(1, 100) <= 2) { /* 2% chance per tick to consider posting combat quests */
             /* Check if mob should post a player kill quest (revenge for being attacked) */
             if (GET_GENBRAVE(ch) > 50 && GET_GENQUEST(ch) > 40) {
                 /* Check if mob was recently attacked by a player (has hostile memory) */
@@ -939,8 +942,9 @@ void mobile_activity(void)
             }
         }
 
-        /* Additional quest posting - exploration, protection, and general kill quests */
-        if (ch->ai_data && rand_number(1, 100) <= 3) { /* 3% chance per tick for other quest types */
+        /* Additional quest posting - exploration, protection, and general kill quests (not for charmed mobs) */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
+            rand_number(1, 100) <= 3) { /* 3% chance per tick for other quest types */
             /* Safety check: Validate ch's room before accessing world array */
             if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
                 continue;
@@ -1125,8 +1129,8 @@ void mobile_activity(void)
 
         mob_handle_grouping(ch);
 
-        /* Aggressive Mobs */
-        if (!MOB_FLAGGED(ch, MOB_HELPER) && (!AFF_FLAGGED(ch, AFF_BLIND) || !AFF_FLAGGED(ch, AFF_CHARM))) {
+        /* Aggressive Mobs - skip if helper, blind, or charmed */
+        if (!MOB_FLAGGED(ch, MOB_HELPER) && !AFF_FLAGGED(ch, AFF_BLIND) && !AFF_FLAGGED(ch, AFF_CHARM)) {
             found = FALSE;
             /* Re-verify room validity before accessing room data */
             if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
@@ -3378,10 +3382,11 @@ bool mob_try_to_sell_junk(struct char_data *ch)
 {
 
     /* 1. GATILHO: A IA só age se tiver genética e se o inventário estiver > 80% cheio. */
+    /* Charmed mobs should not autonomously sell items. */
     bool inventory_full = (IS_CARRYING_N(ch) >= CAN_CARRY_N(ch) * 0.8);
     bool inventory_heavy = (IS_CARRYING_W(ch) >= CAN_CARRY_W(ch) * 0.8);
 
-    if (!ch->ai_data || !ch->carrying || (!inventory_full && !inventory_heavy))
+    if (!ch->ai_data || AFF_FLAGGED(ch, AFF_CHARM) || !ch->carrying || (!inventory_full && !inventory_heavy))
         return FALSE;
 
     if (rand_number(1, 100) > MAX(GET_GENTRADE(ch), 5))
