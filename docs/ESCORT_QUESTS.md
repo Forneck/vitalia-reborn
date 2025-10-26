@@ -42,6 +42,15 @@ The quest fails if:
 - The player receives a failure notification
 - The quest is removed from the player's active quests
 - No rewards are given
+- **Penalty Applied**: Double the normal quest penalty (2x) for failing to protect the escort
+  - This is harsher than simply abandoning the quest
+  - If no penalty is defined in the quest, no points are deducted
+
+### 5. Quest Cleanup
+
+After quest completion:
+- The escort NPC is automatically removed from the world
+- This prevents escort mobs from lingering at destination rooms
 
 ## Quest File Format
 
@@ -130,12 +139,14 @@ The `value[]` array in the quest structure is used as follows:
 - Called when player enters a room
 - Checks if destination reached with escort alive
 - Triggers completion message and rewards
+- Removes escort mob from world (cleanup)
 - Returns TRUE if quest completed
 
 **`fail_escort_quest(escort_mob, killer)`**
 - Called when escort mob dies
 - Finds the player escorting the mob
 - Notifies player of failure
+- Applies double penalty (2x quest penalty)
 - Clears the quest without rewards
 
 ### Integration Points
@@ -148,6 +159,7 @@ The `value[]` array in the quest structure is used as follows:
 
 3. **Mob Death** (`extract_char_final` in `handler.c`)
    - Fails escort quest if escort dies
+   - Optimized with `MOB_NOKILL` flag check for early exit
 
 4. **Player Save/Load** (`players.c`)
    - Persists escort_mob_id across logins
@@ -174,6 +186,14 @@ Using `GET_IDNUM(mob)` instead of a pointer because:
 - Survives across zone resets
 - Prevents dangling pointer issues
 - Allows finding the mob anywhere in the world
+
+### Penalty System
+
+The penalty for escort death is intentionally harsher:
+- **Abandoning quest**: Standard penalty (defined in quest)
+- **Escort death**: 2x the standard penalty
+- Rationale: Failing to protect your charge is worse than giving up
+- If no penalty is defined, no points are deducted
 
 ## Future Enhancements
 
