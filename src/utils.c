@@ -2769,6 +2769,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     char *target_name = "alvo desconhecido";
     obj_rnum target_obj_rnum = NOTHING;
     mob_rnum target_mob_rnum = NOBODY;
+    room_rnum target_room_rnum = NOWHERE;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
         return;
@@ -2796,8 +2797,13 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
         if (target_mob_rnum != NOBODY) {
             target_name = mob_proto[target_mob_rnum].player.short_descr;
         }
-    } else if (quest_type == AQ_ROOM_FIND) {
-        target_name = "local específico";
+    } else if (quest_type == AQ_ROOM_FIND && target_vnum != NOTHING) {
+        target_room_rnum = real_room(target_vnum);
+        if (target_room_rnum != NOWHERE) {
+            target_name = world[target_room_rnum].name;
+        } else {
+            target_name = "local específico";
+        }
     }
 
     /* Encontra zona do mob */
@@ -2914,9 +2920,9 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
             snprintf(quest_name, sizeof(quest_name), "Explorar Local");
             snprintf(quest_desc, sizeof(quest_desc), "%s precisa de um explorador", GET_NAME(ch));
             snprintf(quest_info, sizeof(quest_info),
-                     "%s precisa que alguém explore um local específico (sala %d). "
+                     "%s precisa que alguém explore um local específico (%s). "
                      "Vá até lá para receber %d moedas de ouro.",
-                     GET_NAME(ch), target_vnum, calculated_reward);
+                     GET_NAME(ch), target_name, calculated_reward);
             snprintf(quest_done, sizeof(quest_done), "Excelente! Você chegou ao local que eu precisava explorar!");
             break;
         case AQ_MOB_FIND:
