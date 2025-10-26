@@ -2334,6 +2334,14 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     obj_rnum = real_object(item_vnum);
     if (obj_rnum != NOTHING) {
         item_name = obj_proto[obj_rnum].short_description;
+
+        /* Não posta quest para itens que não podem ser pegos */
+        if (!CAN_WEAR(&obj_proto[obj_rnum], ITEM_WEAR_TAKE)) {
+            log1("WISHLIST QUEST: %s tried to post quest for untakeable item %d (%s)", GET_NAME(ch), item_vnum,
+                 item_name);
+            remove_item_from_wishlist(ch, item_vnum);
+            return;
+        }
     }
 
     /* Encontra zona do mob */
@@ -2436,8 +2444,8 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     new_quest->obj_reward = reward_item; /* Enhancement 1: Item from mob inventory */
 
     /* Cria strings da quest */
-    snprintf(quest_name, sizeof(quest_name), "Busca por %s", item_name);
-    snprintf(quest_desc, sizeof(quest_desc), "%s precisa de %s", GET_NAME(ch), item_name);
+    snprintf(quest_name, sizeof(quest_name), "Buscar %s", item_name);
+    snprintf(quest_desc, sizeof(quest_desc), "Buscar e trazer %s", item_name);
 
     /* Check if questmaster is different from requester */
     mob_rnum qm_mob_rnum = real_mobile(questmaster_vnum);
@@ -2791,6 +2799,14 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
         target_obj_rnum = real_object(target_vnum);
         if (target_obj_rnum != NOTHING) {
             target_name = obj_proto[target_obj_rnum].short_description;
+
+            /* Não posta quest para itens que não podem ser pegos */
+            if (!CAN_WEAR(&obj_proto[target_obj_rnum], ITEM_WEAR_TAKE)) {
+                log1("EXPLORATION QUEST: %s tried to post quest for untakeable item %d (%s)", GET_NAME(ch), target_vnum,
+                     target_name);
+                act("$n procura por alguém para ajudar, mas desiste.", FALSE, ch, 0, 0, TO_ROOM);
+                return;
+            }
         }
     } else if (quest_type == AQ_MOB_FIND && target_vnum != NOTHING) {
         target_mob_rnum = real_mobile(target_vnum);
@@ -2801,6 +2817,14 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
         target_room_rnum = real_room(target_vnum);
         if (target_room_rnum != NOWHERE) {
             target_name = world[target_room_rnum].name;
+
+            /* Não posta quest para salas GODROOM ou player houses, mas permite DEATH */
+            if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE)) {
+                log1("EXPLORATION QUEST: %s tried to post quest for restricted room %d (%s)", GET_NAME(ch), target_vnum,
+                     target_name);
+                act("$n procura por alguém para ajudar, mas desiste.", FALSE, ch, 0, 0, TO_ROOM);
+                return;
+            }
         } else {
             target_name = "local específico";
         }
@@ -2908,8 +2932,8 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     /* Cria strings da quest baseadas no tipo */
     switch (quest_type) {
         case AQ_OBJ_RETURN:
-            snprintf(quest_name, sizeof(quest_name), "Buscar: %s", target_name);
-            snprintf(quest_desc, sizeof(quest_desc), "%s procura por %s", GET_NAME(ch), target_name);
+            snprintf(quest_name, sizeof(quest_name), "Buscar %s", target_name);
+            snprintf(quest_desc, sizeof(quest_desc), "Encontrar e trazer %s", target_name);
             snprintf(quest_info, sizeof(quest_info),
                      "%s perdeu %s e precisa desesperadamente recuperá-lo. "
                      "Encontre e traga este item para receber %d moedas de ouro.",
@@ -2917,8 +2941,8 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
             snprintf(quest_done, sizeof(quest_done), "Perfeito! Você encontrou o que eu estava procurando!");
             break;
         case AQ_ROOM_FIND:
-            snprintf(quest_name, sizeof(quest_name), "Explorar Local");
-            snprintf(quest_desc, sizeof(quest_desc), "%s precisa de um explorador", GET_NAME(ch));
+            snprintf(quest_name, sizeof(quest_name), "Explorar local");
+            snprintf(quest_desc, sizeof(quest_desc), "Explorar um local específico");
             snprintf(quest_info, sizeof(quest_info),
                      "%s precisa que alguém explore um local específico (%s). "
                      "Vá até lá para receber %d moedas de ouro.",
@@ -2926,8 +2950,8 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
             snprintf(quest_done, sizeof(quest_done), "Excelente! Você chegou ao local que eu precisava explorar!");
             break;
         case AQ_MOB_FIND:
-            snprintf(quest_name, sizeof(quest_name), "Encontrar: %s", target_name);
-            snprintf(quest_desc, sizeof(quest_desc), "%s procura por %s", GET_NAME(ch), target_name);
+            snprintf(quest_name, sizeof(quest_name), "Encontrar %s", target_name);
+            snprintf(quest_desc, sizeof(quest_desc), "Encontrar e falar com %s", target_name);
             snprintf(quest_info, sizeof(quest_info),
                      "%s está procurando por %s. Encontre esta pessoa para receber %d moedas de ouro.", GET_NAME(ch),
                      target_name, calculated_reward);
@@ -3001,6 +3025,7 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     obj_vnum reward_item = NOTHING;
     char *target_name = "alvo desconhecido";
     mob_rnum target_mob_rnum = NOBODY;
+    room_rnum target_room_rnum = NOWHERE;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
         return;
@@ -3019,7 +3044,18 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
             target_name = mob_proto[target_mob_rnum].player.short_descr;
         }
     } else if (quest_type == AQ_ROOM_CLEAR) {
-        target_name = "área específica";
+        target_room_rnum = real_room(target_vnum);
+        if (target_room_rnum != NOWHERE) {
+            /* Não posta quest para salas GODROOM ou player houses, mas permite DEATH */
+            if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE)) {
+                log1("PROTECTION QUEST: %s tried to post quest for restricted room %d", GET_NAME(ch), target_vnum);
+                act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
+                return;
+            }
+            target_name = world[target_room_rnum].name;
+        } else {
+            target_name = "área específica";
+        }
     }
 
     /* Encontra zona do mob */
@@ -3114,20 +3150,20 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
 
     /* Cria strings da quest baseadas no tipo */
     if (quest_type == AQ_MOB_SAVE) {
-        snprintf(quest_name, sizeof(quest_name), "Salvar: %s", target_name);
-        snprintf(quest_desc, sizeof(quest_desc), "%s precisa salvar %s", GET_NAME(ch), target_name);
+        snprintf(quest_name, sizeof(quest_name), "Salvar %s", target_name);
+        snprintf(quest_desc, sizeof(quest_desc), "Proteger %s de perigos", target_name);
         snprintf(quest_info, sizeof(quest_info),
                  "%s está preocupado com a segurança de %s. "
                  "Ajude a garantir que esta pessoa esteja segura para receber %d moedas de ouro.",
                  GET_NAME(ch), target_name, calculated_reward);
         snprintf(quest_done, sizeof(quest_done), "Obrigado! Agora posso ficar tranquilo sabendo que estão seguros!");
     } else {
-        snprintf(quest_name, sizeof(quest_name), "Limpar Área");
-        snprintf(quest_desc, sizeof(quest_desc), "%s precisa limpar uma área", GET_NAME(ch));
+        snprintf(quest_name, sizeof(quest_name), "Limpar área");
+        snprintf(quest_desc, sizeof(quest_desc), "Eliminar criaturas hostis");
         snprintf(quest_info, sizeof(quest_info),
-                 "%s precisa que alguém limpe uma área específica (sala %d) de todas as criaturas hostis. "
+                 "%s precisa que alguém limpe uma área específica (%s) de todas as criaturas hostis. "
                  "Elimine todos os inimigos da área para receber %d moedas de ouro.",
-                 GET_NAME(ch), target_vnum, calculated_reward);
+                 GET_NAME(ch), target_name, calculated_reward);
         snprintf(quest_done, sizeof(quest_done), "Perfeito! A área está limpa e segura agora!");
     }
 

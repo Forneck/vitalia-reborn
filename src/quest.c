@@ -651,6 +651,26 @@ static void quest_quit(struct char_data *ch)
     }
 }
 
+/* Calculate quest difficulty based on quest data */
+static const char *get_quest_difficulty_string(qst_rnum rnum)
+{
+    int min_level = QST_MINLEVEL(rnum);
+    int max_level = QST_MAXLEVEL(rnum);
+    int avg_level = (min_level + max_level) / 2;
+    int reward = QST_GOLD(rnum);
+
+    /* Difficulty based on level range and rewards */
+    if (avg_level >= 50 || reward >= 500 || max_level >= 60) {
+        return "Extrema";
+    } else if (avg_level >= 30 || reward >= 250 || max_level >= 40) {
+        return "Alta";
+    } else if (avg_level >= 15 || reward >= 100 || max_level >= 25) {
+        return "Média";
+    } else {
+        return "Baixa";
+    }
+}
+
 /* Unified quest display function - shows both regular and temporary quests */
 static void quest_show_unified(struct char_data *ch, struct char_data *qm)
 {
@@ -660,9 +680,9 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
     mob_vnum qm_vnum = GET_MOB_VNUM(qm);
 
     send_to_char(ch,
-                 "A lista de buscas: disponiveis é:\r\n"
-                 "Num.  Descrção                                             Feita?\r\n"
-                 "----- ---------------------------------------------------- ------\r\n");
+                 "A lista de buscas disponiveis:\r\n"
+                 "Num.  Descrição                   Dificuldade Níveis    Feita?\r\n"
+                 "----- ---------------------------- ----------- --------- ------\r\n");
 
     /* First, show regular quests assigned to this questmaster */
     for (rnum = 0; rnum < total_quests; rnum++) {
@@ -672,7 +692,8 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
 
             /* Only show quest if not completed or repeatable */
             if (!quest_completed || quest_repeatable) {
-                send_to_char(ch, "\tg%4d\tn) \tc%-52.52s\tn \ty(%s)\tn\r\n", ++counter, QST_DESC(rnum),
+                send_to_char(ch, "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
+                             QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum), QST_MAXLEVEL(rnum),
                              (quest_completed ? "Sim" : "Não "));
             }
         }
@@ -690,7 +711,8 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
 
             /* Only show quest if not completed or repeatable */
             if (!quest_completed || quest_repeatable) {
-                send_to_char(ch, "\tg%4d\tn) \tc%-52.52s\tn \ty(%s)\tn\r\n", ++counter, QST_DESC(rnum),
+                send_to_char(ch, "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
+                             QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum), QST_MAXLEVEL(rnum),
                              (quest_completed ? "Sim" : "Não "));
             }
         }
