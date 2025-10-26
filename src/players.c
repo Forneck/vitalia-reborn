@@ -424,6 +424,8 @@ int load_char(const char *name, struct char_data *ch)
                 case 'I':
                     if (!strcmp(tag, "Id  "))
                         GET_IDNUM(ch) = atol(line);
+                    else if (!strcmp(tag, "Incarn"))
+                        GET_REMORT(ch) = atoi(line);
                     else if (!strcmp(tag, "Int "))
                         ch->real_abils.intel = atoi(line);
                     else if (!strcmp(tag, "Invs"))

@@ -975,6 +975,7 @@ ACMD(do_score)
         else
             send_to_char(ch, " \tn\r\n");
     }
+    send_to_char(ch, "Você tem \tg%3d Enc.\tn (Encarnações).\r\n", GET_REMORT(ch));
 
     if (PLR_FLAGGED(ch, PLR_TRNS))
         send_to_char(ch, "Você transcendeu.\r\n");
@@ -1485,14 +1486,14 @@ ACMD(do_who)
             if (showleader && (!GROUP(tch) || GROUP_LEADER(GROUP(tch)) != tch))
                 continue;
             if (short_list) {
-                send_to_char(ch, "%s[%2d %s] %-12.12s%s%s", (GET_LEVEL(tch) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""),
-                             GET_LEVEL(tch), CLASS_ABBR(tch), GET_NAME(tch), CCNRM(ch, C_SPR),
-                             ((!(++num_can_see % 4)) ? "\r\n" : ""));
+                send_to_char(ch, "%s[%2d %s %3d Enc.] %-12.12s%s%s",
+                             (GET_LEVEL(tch) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""), GET_LEVEL(tch), CLASS_ABBR(tch),
+                             GET_REMORT(tch), GET_NAME(tch), CCNRM(ch, C_SPR), ((!(++num_can_see % 4)) ? "\r\n" : ""));
             } else {
                 num_can_see++;
-                send_to_char(ch, "%s[%2d %s] %s%s%s%s", (GET_LEVEL(tch) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""),
-                             GET_LEVEL(tch), CLASS_ABBR(tch), GET_NAME(tch), (*GET_TITLE(tch) ? " " : ""),
-                             GET_TITLE(tch), CCNRM(ch, C_SPR));
+                send_to_char(ch, "%s[%2d %s %3d Enc.] %s%s%s%s", (GET_LEVEL(tch) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""),
+                             GET_LEVEL(tch), CLASS_ABBR(tch), GET_REMORT(tch), GET_NAME(tch),
+                             (*GET_TITLE(tch) ? " " : ""), GET_TITLE(tch), CCNRM(ch, C_SPR));
                 if (GET_INVIS_LEV(tch))
                     send_to_char(ch, " (i%d)", GET_INVIS_LEV(tch));
                 else if (AFF_FLAGGED(tch, AFF_INVISIBLE))

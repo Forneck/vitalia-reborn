@@ -889,6 +889,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         send_to_char(ch, "Quest Points: [%9d] Quests Completed: [%5d]\r\n", GET_QUESTPOINTS(k), GET_NUM_QUESTS(k));
         if (GET_QUEST(k) != NOTHING)
             send_to_char(ch, "Current Quest: [%5d] Time Left: [%5d]\r\n", GET_QUEST(k), GET_QUEST_TIME(k));
+        send_to_char(ch, "Incarnations: [%3d Enc.]\r\n", GET_REMORT(k));
     }
 
     if (IS_MOB(k))
