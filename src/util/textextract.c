@@ -432,17 +432,18 @@ int is_valid_utf8(const char *str)
             bytes++;
         } else if ((*bytes & 0xE0) == 0xC0) {
             /* 2-byte sequence */
-            if ((bytes[1] & 0xC0) != 0x80)
+            if (!bytes[1] || (bytes[1] & 0xC0) != 0x80)
                 return 0;
             bytes += 2;
         } else if ((*bytes & 0xF0) == 0xE0) {
             /* 3-byte sequence */
-            if ((bytes[1] & 0xC0) != 0x80 || (bytes[2] & 0xC0) != 0x80)
+            if (!bytes[1] || !bytes[2] || (bytes[1] & 0xC0) != 0x80 || (bytes[2] & 0xC0) != 0x80)
                 return 0;
             bytes += 3;
         } else if ((*bytes & 0xF8) == 0xF0) {
             /* 4-byte sequence */
-            if ((bytes[1] & 0xC0) != 0x80 || (bytes[2] & 0xC0) != 0x80 || (bytes[3] & 0xC0) != 0x80)
+            if (!bytes[1] || !bytes[2] || !bytes[3] || (bytes[1] & 0xC0) != 0x80 || (bytes[2] & 0xC0) != 0x80 ||
+                (bytes[3] & 0xC0) != 0x80)
                 return 0;
             bytes += 4;
         } else {
