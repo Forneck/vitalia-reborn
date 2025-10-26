@@ -1,6 +1,17 @@
 bin/* 
 src/*.o 
 src/util/*.o 
+src/util/textextract
+src/util/asciipasswd
+src/util/autowiz
+src/util/shopconv
+src/util/casasconv
+src/util/split
+src/util/sign
+src/util/wld2html
+src/util/rebuildAsciiIndex
+src/util/rebuildMailIndex
+src/util/plrtoascii
 config.cache 
 config.log 
 config.status 
