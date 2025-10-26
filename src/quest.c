@@ -336,6 +336,13 @@ bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum)
     /* Store the mob's ID for tracking */
     GET_ESCORT_MOB_ID(ch) = GET_IDNUM(mob);
 
+    /* Make escort mob non-aggressive and protected from attacks */
+    SET_BIT_AR(MOB_FLAGS(mob), MOB_NOKILL);
+    REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGRESSIVE);
+    REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGR_EVIL);
+    REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGR_GOOD);
+    REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGR_NEUTRAL);
+
     /* Make the mob follow the player (without charming) */
     if (mob->master)
         stop_follower(mob);
