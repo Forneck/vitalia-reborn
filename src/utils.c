@@ -3052,8 +3052,10 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
                 act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
                 return;
             }
+            target_name = world[target_room_rnum].name;
+        } else {
+            target_name = "área específica";
         }
-        target_name = "área específica";
     }
 
     /* Encontra zona do mob */
@@ -3159,9 +3161,9 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
         snprintf(quest_name, sizeof(quest_name), "Limpar área");
         snprintf(quest_desc, sizeof(quest_desc), "Eliminar criaturas hostis");
         snprintf(quest_info, sizeof(quest_info),
-                 "%s precisa que alguém limpe uma área específica (sala %d) de todas as criaturas hostis. "
+                 "%s precisa que alguém limpe uma área específica (%s) de todas as criaturas hostis. "
                  "Elimine todos os inimigos da área para receber %d moedas de ouro.",
-                 GET_NAME(ch), target_vnum, calculated_reward);
+                 GET_NAME(ch), target_name, calculated_reward);
         snprintf(quest_done, sizeof(quest_done), "Perfeito! A área está limpa e segura agora!");
     }
 
