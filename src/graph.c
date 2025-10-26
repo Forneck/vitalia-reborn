@@ -1911,9 +1911,43 @@ void hunt_victim(struct char_data *ch)
             if (victim == tmp)
                 found = TRUE;
 
-        if (found && IN_ROOM(ch) == IN_ROOM(victim))
-            hit(ch, victim, TYPE_UNDEFINED);
-        else if (!found)
+        if (found && IN_ROOM(ch) == IN_ROOM(victim)) {
+            /* Safety check: Only attack if victim is awake to prevent issues with sleeping targets */
+            if (AWAKE(victim)) {
+                hit(ch, victim, TYPE_UNDEFINED);
+
+                /* Safety check: hit() can indirectly cause extract_char for ch or victim
+                 * through death, special procedures, triggers, etc.
+                 * Re-validate both ch and victim still exist before continuing */
+                for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                    if (ch == tmp)
+                        found = TRUE;
+
+                if (!found) {
+                    /* ch was extracted during hit(), cannot safely continue */
+                    return;
+                }
+
+                /* Check if ch was marked for extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                    return;
+                }
+
+                /* Re-validate victim still exists */
+                for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                    if (victim == tmp)
+                        found = TRUE;
+
+                if (!found) {
+                    /* Victim was extracted during hit(), clear hunting */
+                    HUNTING(ch) = NULL;
+                }
+            } else {
+                /* Victim is sleeping, don't attack - clear hunting to avoid repeated attempts */
+                HUNTING(ch) = NULL;
+            }
+        } else if (!found) {
             HUNTING(ch) = NULL;
+        }
     }
 }
