@@ -2653,6 +2653,7 @@ void create_spells_db()
     new_spell->name = strdup("backstab");
     new_spell->function = do_backstab;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_THIEF;
     new_spell->assign[0].level = 3;
@@ -2667,6 +2668,7 @@ void create_spells_db()
     new_spell->name = strdup("bash");
     new_spell->function = do_bash;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 12;
@@ -2699,6 +2701,7 @@ void create_spells_db()
     new_spell->name = strdup("kick");
     new_spell->function = do_kick;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 1;
@@ -2731,8 +2734,10 @@ void create_spells_db()
     new_spell->function = do_whirlwind;
     new_spell->type = SKILL;
     new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(20 - (1 * self.level)) > 10 ? (20 - (1 * self.level)) : 10");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 16;
+    new_spell->assign[0].num_mana = strdup(buf);
 
     spedit_save_internally(new_spell);
 
@@ -2745,6 +2750,7 @@ void create_spells_db()
     new_spell->name = strdup("rescue");
     new_spell->function = do_rescue;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 3;
@@ -2777,6 +2783,7 @@ void create_spells_db()
     new_spell->name = strdup("steal");
     new_spell->function = do_steal;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_THIEF;
     new_spell->assign[0].level = 4;
@@ -2811,6 +2818,7 @@ void create_spells_db()
     new_spell->name = strdup("bandage");
     new_spell->function = do_bandage;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 7;
@@ -2864,6 +2872,7 @@ void create_spells_db()
     new_spell->name = strdup("trip");
     new_spell->function = do_trip;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_BARD;
     new_spell->assign[0].level = 35;
@@ -2892,6 +2901,7 @@ void create_spells_db()
     new_spell->name = strdup("combo attack");
     new_spell->function = do_combo;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_WARRIOR;
     new_spell->assign[0].level = 30;
@@ -2907,6 +2917,7 @@ void create_spells_db()
     new_spell->name = strdup("seize");
     new_spell->function = do_seize;
     new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_THIEF;
     new_spell->assign[0].level = 20;
@@ -3038,8 +3049,10 @@ void create_spells_db()
     new_spell->function = do_shoot;
     new_spell->type = SKILL;
     new_spell->effectiveness = strdup("100");
+    sprintf(buf, "(15 - (1 * self.level)) > 5 ? (15 - (1 * self.level)) : 5");
     new_spell->assign[0].class_num = CLASS_RANGER;
     new_spell->assign[0].level = 30;
+    new_spell->assign[0].num_mana = strdup(buf);
 
     spedit_save_internally(new_spell);
 

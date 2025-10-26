@@ -24,6 +24,8 @@
 #include "constants.h"
 #include "dg_scripts.h"
 #include "graph.h"
+#include "spedit.h"
+#include "formula.h"
 
 ACMD(do_assist)
 {
@@ -848,6 +850,8 @@ EVENTFUNC(event_whirlwind)
    mud event and list systems. */
 ACMD(do_whirlwind)
 {
+    struct str_spells *spell;
+    int move_cost, num, rts_code;
 
     if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_WHIRLWIND)) {
         send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
@@ -871,6 +875,21 @@ ACMD(do_whirlwind)
     if (char_has_mud_event(ch, eWHIRLWIND)) {
         send_to_char(ch, "Você já está tentando isto!\r\n");
         return;
+    }
+
+    /* Check movement cost */
+    spell = get_spell_by_vnum(SKILL_WHIRLWIND);
+    if (spell && GET_LEVEL(ch) < LVL_IMMORT) {
+        num = get_spell_class(spell, GET_CLASS(ch));
+        if (num != -1 && spell->assign[num].num_mana) {
+            move_cost = formula_interpreter(ch, NULL, SKILL_WHIRLWIND, TRUE, spell->assign[num].num_mana, GET_LEVEL(ch),
+                                            &rts_code);
+            if (GET_MOVE(ch) < move_cost) {
+                send_to_char(ch, "Você está muito cansado para realizar esse ataque.\r\n");
+                return;
+            }
+            GET_MOVE(ch) = MAX(0, MIN(GET_MAX_MOVE(ch), GET_MOVE(ch) - move_cost));
+        }
     }
 
     send_to_char(ch, "Você começa a girar rapidamente.\r\n");
@@ -1112,6 +1131,7 @@ ACMD(do_shoot)
 {
     struct char_data *vict, *tmp;
     struct obj_data *ammo, *fireweapon;
+    struct str_spells *spell;
     int percent, prob;
     char arg1[MAX_INPUT_LENGTH];
     char arg2[MAX_INPUT_LENGTH];
@@ -1119,6 +1139,7 @@ ACMD(do_shoot)
     int dam = 0;
     int door;
     bool found = FALSE;
+    int move_cost, num, rts_code;
 
     room_rnum vict_room = IN_ROOM(ch);
     room_rnum was_room = IN_ROOM(ch);
@@ -1150,6 +1171,21 @@ ACMD(do_shoot)
     } else if (GET_OBJ_TYPE(fireweapon) != ITEM_FIREWEAPON) {
         send_to_char(ch, "Este tipo de arma não permite atirar.\r\n");
         return;
+    }
+
+    /* Check movement cost */
+    spell = get_spell_by_vnum(SKILL_BOWS);
+    if (spell && GET_LEVEL(ch) < LVL_IMMORT) {
+        num = get_spell_class(spell, GET_CLASS(ch));
+        if (num != -1 && spell->assign[num].num_mana) {
+            move_cost =
+                formula_interpreter(ch, NULL, SKILL_BOWS, TRUE, spell->assign[num].num_mana, GET_LEVEL(ch), &rts_code);
+            if (GET_MOVE(ch) < move_cost) {
+                send_to_char(ch, "Você está muito cansado para atirar.\r\n");
+                return;
+            }
+            GET_MOVE(ch) = MAX(0, MIN(GET_MAX_MOVE(ch), GET_MOVE(ch) - move_cost));
+        }
     }
 
     percent = rand_number(1, 101); /* 101% is a complete failure */
