@@ -76,8 +76,6 @@ int mana_gain(struct char_data *ch)
             gain *= 2.5;
         else if (IS_CLERIC(ch) || WAS_CLERIC(ch))
             gain *= 2;
-        else if (IS_RANGER(ch) || WAS_RANGER(ch))
-            gain += (gain / 2);
 
         /* Skill/Spell calculations */
 
@@ -208,7 +206,7 @@ int move_gain(struct char_data *ch)
 
         /* Class calculatuions */
 
-        if (IS_RANGER(ch))
+        if (IS_RANGER(ch) || WAS_RANGER(ch))
             gain += (gain / 4);
 
         /* Room calculations */

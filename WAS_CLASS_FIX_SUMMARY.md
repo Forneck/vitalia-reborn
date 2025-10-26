@@ -27,9 +27,10 @@ SET_BIT_AR(d->character->player_specials->saved.was_class, GET_CLASS(d->characte
 Testing confirmed this macro works correctly for all classes including Ranger (class 6).
 
 ### 3. WAS_RANGER Benefits
-Confirmed that `WAS_RANGER` provides benefits in `limits.c` (line 79-80):
-- Rangers and former Rangers get a 1.5x multiplier for mana gain
-- This applies to all was_class checks for spellcasting classes
+### 3. WAS_RANGER Benefits
+Confirmed that `WAS_RANGER` provides benefits in `limits.c` (line 209-210):
+- Rangers and former Rangers get a 1.25x multiplier for move gain
+- This bonus applies to movement point regeneration
 
 ## Bugs Fixed
 
@@ -106,7 +107,8 @@ Created multiple test programs that confirmed:
 
 - **WAS display:** `src/act.wizard.c` line 886-887
 - **Remort code:** `src/interpreter.c` line 1837-1859
-- **WAS benefits:** `src/limits.c` line 73-80 (mana gain)
+- **WAS_RANGER benefits:** `src/limits.c` line 209-210 (move gain)
+- **WAS benefits (spellcasters):** `src/limits.c` line 73-78 (mana gain)
 - **Bitarray macros:** `src/utils.h` line 387-395, 469
 - **Class definitions:** `src/structs.h` line 173-182
 - **Class names:** `src/class.c` line 30
