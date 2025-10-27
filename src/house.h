@@ -48,6 +48,8 @@ void House_crashsave(room_vnum vnum);
 void House_list_guests(struct char_data *ch, int i, int quiet);
 int House_save(struct obj_data *obj, FILE *fp, int location);
 void hcontrol_list_houses(struct char_data *ch, char *arg);
+int House_can_add_obj(room_rnum room);
+int House_get_obj_count(room_rnum room);
 /* In game Commands */
 ACMD(do_hcontrol);
 ACMD(do_house);
