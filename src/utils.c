@@ -2295,6 +2295,34 @@ bool is_mob_excluded_from_quests(struct char_data *mob)
 }
 
 /**
+ * Count the number of mob-posted quests currently in the system.
+ * @return Number of quests with the AQ_MOB_POSTED flag
+ */
+int count_mob_posted_quests(void)
+{
+    int count = 0;
+    qst_rnum rnum;
+
+    for (rnum = 0; rnum < total_quests; rnum++) {
+        if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED)) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+/**
+ * Check if we can add another mob-posted quest without exceeding the limit.
+ * @return TRUE if we can add another quest, FALSE if at limit
+ */
+bool can_add_mob_posted_quest(void)
+{
+    const int MAX_MOB_POSTED_QUESTS = 150;
+    return (count_mob_posted_quests() < MAX_MOB_POSTED_QUESTS);
+}
+
+/**
  * Faz um mob postar uma quest para obter um item.
  * Esta é uma implementação básica que simula a postagem de uma quest.
  * Em uma implementação futura, isto seria integrado com o sistema de quest boards.
@@ -2361,6 +2389,11 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     char *reward_item_name = "";
 
     if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Check if we've reached the limit of mob-posted quests */
+    if (!can_add_mob_posted_quest()) {
         return;
     }
 
@@ -2623,6 +2656,11 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
         return;
     }
 
+    /* Check if we've reached the limit of mob-posted quests */
+    if (!can_add_mob_posted_quest()) {
+        return;
+    }
+
     /* Validar tipo de quest */
     if (quest_type != AQ_PLAYER_KILL && quest_type != AQ_MOB_KILL_BOUNTY) {
         log1("SYSERR: Invalid combat quest type %d from %s", quest_type, GET_NAME(ch));
@@ -2822,6 +2860,11 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     room_rnum target_room_rnum = NOWHERE;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Check if we've reached the limit of mob-posted quests */
+    if (!can_add_mob_posted_quest()) {
         return;
     }
 
@@ -3073,6 +3116,11 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
         return;
     }
 
+    /* Check if we've reached the limit of mob-posted quests */
+    if (!can_add_mob_posted_quest()) {
+        return;
+    }
+
     /* Validar tipo de quest */
     if (quest_type != AQ_MOB_SAVE && quest_type != AQ_ROOM_CLEAR) {
         log1("SYSERR: Invalid protection quest type %d from %s", quest_type, GET_NAME(ch));
@@ -3278,6 +3326,11 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
     mob_rnum target_mob_rnum = NOBODY;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Check if we've reached the limit of mob-posted quests */
+    if (!can_add_mob_posted_quest()) {
         return;
     }
 
