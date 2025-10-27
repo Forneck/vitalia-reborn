@@ -969,11 +969,14 @@ ACMD(do_score)
     send_to_char(ch, "Você tem \tg%d\tn pontos de busca e ", GET_QUESTPOINTS(ch));
     send_to_char(ch, "completou \tg%d\tn busca%s.\r\n", GET_NUM_QUESTS(ch), GET_NUM_QUESTS(ch) == 1 ? " " : "s");
     if (GET_QUEST(ch) != NOTHING) {
-        send_to_char(ch, "A sua busca atual é: \tg%s\tn", QST_NAME(real_quest(GET_QUEST(ch))));
-        if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS))
-            send_to_char(ch, "\tn[%d] \r\n", GET_QUEST(ch));
-        else
-            send_to_char(ch, " \tn\r\n");
+        qst_rnum quest_rnum = real_quest(GET_QUEST(ch));
+        if (quest_rnum != NOTHING) {
+            send_to_char(ch, "A sua busca atual é: \tg%s\tn", QST_NAME(quest_rnum));
+            if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS))
+                send_to_char(ch, "\tn[%d] \r\n", GET_QUEST(ch));
+            else
+                send_to_char(ch, " \tn\r\n");
+        }
     }
     send_to_char(ch, "Você tem \tg%3d Enc.\tn (Encarnações).\r\n", GET_REMORT(ch));
 
