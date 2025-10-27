@@ -930,6 +930,10 @@ void mobile_activity(void)
                             IN_ROOM(target) > top_of_world)
                             continue;
 
+                        /* Skip mobs that should be excluded from quests (summoned, skill-spawned) */
+                        if (is_mob_excluded_from_quests(target))
+                            continue;
+
                         if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
                             MOB_FLAGGED(target, MOB_AGGRESSIVE) && GET_ALIGNMENT(target) < -200 &&
                             GET_LEVEL(target) >= GET_LEVEL(ch) - 5) {

@@ -101,6 +101,7 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
 void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int target_vnum, int reward);
 void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target_vnum, int reward);
 void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int reward);
+bool is_mob_excluded_from_quests(struct char_data *mob);
 mob_vnum find_questmaster_for_zone(zone_rnum zone);
 mob_vnum find_questmaster_for_zone_enhanced(zone_rnum zone, struct char_data *requesting_mob);
 struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone_rnum zone);

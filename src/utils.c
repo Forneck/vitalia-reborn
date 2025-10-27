@@ -2253,6 +2253,48 @@ bool mob_can_afford_item(struct char_data *ch, obj_vnum item_vnum)
 }
 
 /**
+ * Check if a mob should be excluded from being a quest target.
+ * Excludes mobs spawned by skills (forage, mine, fishing) and summoned creatures.
+ * @param mob The mob to check
+ * @return TRUE if mob should be excluded from quests, FALSE otherwise
+ */
+bool is_mob_excluded_from_quests(struct char_data *mob)
+{
+    mob_vnum excluded_vnums[] = {
+        10727, /* Gray squirrel (SKILL_FORAGE) */
+        14410, /* Traveling dwarf (SKILL_MINE) */
+        10864, /* Colorful fish school (SKILL_FISHING) */
+        2967,  /* Zone 29 fish thrower (SKILL_FISHING) */
+        NOBODY /* Sentinel */
+    };
+    int i;
+
+    if (!IS_NPC(mob)) {
+        return FALSE;
+    }
+
+    /* Check if mob is charmed/summoned (has a master) */
+    if (mob->master != NULL) {
+        return TRUE;
+    }
+
+    /* Check if mob is affected by charm (summoned creatures) */
+    if (AFF_FLAGGED(mob, AFF_CHARM)) {
+        return TRUE;
+    }
+
+    /* Check if mob is one of the skill-spawned vnums */
+    mob_vnum mob_vnum = GET_MOB_VNUM(mob);
+    for (i = 0; excluded_vnums[i] != NOBODY; i++) {
+        if (mob_vnum == excluded_vnums[i]) {
+            return TRUE;
+        }
+    }
+
+    return FALSE;
+}
+
+/**
  * Faz um mob postar uma quest para obter um item.
  * Esta é uma implementação básica que simula a postagem de uma quest.
  * Em uma implementação futura, isto seria integrado com o sistema de quest boards.
