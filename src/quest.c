@@ -37,11 +37,14 @@ const char *aq_flags[] = {"REPEATABLE", "MOB_POSTED", "\n"};
  *--------------------------------------------------------------------------*/
 static int cmd_tell;
 
-static const char *quest_cmd[] = {"list", "history", "join", "leave", "progress", "status", "\n"};
+static const char *quest_cmd[] = {"list", "history", "join", "leave", "progress", "status", "remove", "\n"};
 
 static const char *quest_mort_usage = "Uso: quest list | history | progress | join <nn> | leave";
 
-static const char *quest_imm_usage = "Uso: quest list | history | progress | join <nn> | leave | status <vnum>";
+static const char *quest_imm_usage =
+    "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum>";
+static const char *quest_god_usage =
+    "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum>";
 
 /*--------------------------------------------------------------------------*/
 /* Utility Functions                                                        */
@@ -1142,6 +1145,56 @@ static void quest_stat(struct char_data *ch, char *argument)
         send_to_char(ch, " [\ty%5d\tn] \tc%s\tn\r\n", QST_NEXT(rnum), QST_DESC(real_quest(QST_NEXT(rnum))));
 }
 
+static void quest_remove(struct char_data *ch, char *argument)
+{
+    qst_rnum rnum;
+    qst_vnum quest_vnum;
+    int quest_num;
+
+    if (GET_LEVEL(ch) < LVL_GOD) {
+        send_to_char(ch, "You must be at least level GOD to remove quests.\r\n");
+        return;
+    }
+
+    if (!*argument) {
+        send_to_char(ch, "%s\r\n", quest_god_usage);
+        return;
+    }
+
+    quest_num = atoi(argument);
+
+    /* First try to find by vnum (direct vnum lookup) */
+    if ((rnum = real_quest(quest_num)) != NOTHING) {
+        quest_vnum = quest_num;
+    }
+    /* If not found by vnum, try to find by list position */
+    else if ((quest_vnum = find_quest_by_listnum(quest_num)) != NOTHING && (rnum = real_quest(quest_vnum)) != NOTHING) {
+        /* Found by list position */
+    } else {
+        send_to_char(ch, "That quest does not exist.\r\n");
+        return;
+    }
+
+    /* Check if quest is mob-posted */
+    if (!IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED)) {
+        send_to_char(ch, "Only mob-posted quests can be removed. Quest %d is not mob-posted.\r\n", quest_vnum);
+        return;
+    }
+
+    /* Show quest info before deletion */
+    send_to_char(ch, "Removing quest:\r\n");
+    send_to_char(ch, "  VNum: %d, Name: %s\r\n", quest_vnum, QST_NAME(rnum));
+    send_to_char(ch, "  Desc: %s\r\n", QST_DESC(rnum));
+
+    /* Delete the quest */
+    if (delete_quest(rnum)) {
+        send_to_char(ch, "Quest successfully removed.\r\n");
+        mudlog(NRM, LVL_GOD, TRUE, "(GC) %s removed mob-posted quest %d.", GET_NAME(ch), quest_vnum);
+    } else {
+        send_to_char(ch, "Failed to remove quest.\r\n");
+    }
+}
+
 /*--------------------------------------------------------------------------*/
 /* Quest Command Processing Function and Questmaster Special                */
 /*--------------------------------------------------------------------------*/
@@ -1150,12 +1203,22 @@ ACMD(do_quest)
 {
     char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
     int tp;
+    const char *usage_msg;
 
     two_arguments(argument, arg1, arg2);
+
+    /* Determine which usage message to show */
+    if (GET_LEVEL(ch) >= LVL_GOD)
+        usage_msg = quest_god_usage;
+    else if (GET_LEVEL(ch) >= LVL_IMMORT)
+        usage_msg = quest_imm_usage;
+    else
+        usage_msg = quest_mort_usage;
+
     if (!*arg1)
-        send_to_char(ch, "%s\r\n", GET_LEVEL(ch) < LVL_IMMORT ? quest_mort_usage : quest_imm_usage);
+        send_to_char(ch, "%s\r\n", usage_msg);
     else if (((tp = search_block(arg1, quest_cmd, FALSE)) == -1))
-        send_to_char(ch, "%s\r\n", GET_LEVEL(ch) < LVL_IMMORT ? quest_mort_usage : quest_imm_usage);
+        send_to_char(ch, "%s\r\n", usage_msg);
     else {
         switch (tp) {
             case SCMD_QUEST_LIST:
@@ -1178,8 +1241,14 @@ ACMD(do_quest)
                 else
                     quest_stat(ch, arg2);
                 break;
+            case SCMD_QUEST_REMOVE:
+                if (GET_LEVEL(ch) < LVL_GOD)
+                    send_to_char(ch, "%s\r\n", usage_msg);
+                else
+                    quest_remove(ch, arg2);
+                break;
             default: /* Whe should never get here, but... */
-                send_to_char(ch, "%s\r\n", GET_LEVEL(ch) < LVL_IMMORT ? quest_mort_usage : quest_imm_usage);
+                send_to_char(ch, "%s\r\n", usage_msg);
                 break;
         } /* switch on subcmd number */
     }
