@@ -16572,8 +16572,8 @@ Usage: gstats <target> <gene>
    Displays genetic statistics for mobs. Target can be a specific mob name/vnum,
 zone number, or 'all' for comprehensive analysis.
 
-Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, 
-follow, healing
+Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest,
+                 adventurer, follow, healing
 
    This command analyzes genetic tendencies in mob behavior patterns and 
 provides statistical information including mean, median, standard deviation,
