@@ -17,15 +17,15 @@ When a player accepts an escort quest at a questmaster:
 1. The quest is added to the player's active quest
 2. An escort NPC (specified by the quest's target field) is spawned in the same room
 3. The escort NPC automatically begins following the player
-4. The escort NPC is marked with `MOB_NOKILL` flag to prevent attacks
-5. All aggressive flags are removed from the escort NPC
+4. All aggressive flags are removed from the escort NPC for safety
+5. The escort NPC is vulnerable and can be killed (quest will fail if this happens)
 
 ### 2. During Escort
 
 - The escort NPC follows the player as they move through the world
 - The escort does NOT join the player's group
-- The escort cannot be attacked due to the `MOB_NOKILL` flag
-- The player must guide the escort to the destination room
+- The escort can be attacked and killed by monsters or players
+- The player must protect the escort and guide it to the destination room safely
 
 ### 3. Quest Completion
 
@@ -123,16 +123,19 @@ The `value[]` array in the quest structure is used as follows:
 - `escort_mob_id` (long): Stores the IDNUM of the escort mob being tracked
 - Persisted in player file with tag "Qesc:"
 
-**Mob Flags Set:**
-- `MOB_NOKILL`: Prevents the escort from being attacked
+**Mob Flags Modified:**
 - Aggressive flags removed: `MOB_AGGRESSIVE`, `MOB_AGGR_EVIL`, `MOB_AGGR_GOOD`, `MOB_AGGR_NEUTRAL`
+- Note: `MOB_NOKILL` is NOT set - escorts can be killed, which is the challenge
+
+**Mob Quest Restrictions:**
+- Mobs with `MOB_NOKILL` flag cannot request escort quests (they can't die, breaking the quest failure mechanism)
 
 ### Key Functions
 
 **`spawn_escort_mob(ch, rnum)`**
 - Creates the escort NPC instance
 - Configures it to follow the player
-- Sets protective flags
+- Removes aggressive flags (escort won't attack)
 - Returns TRUE on success
 
 **`check_escort_quest_completion(ch, rnum)`**
@@ -159,7 +162,7 @@ The `value[]` array in the quest structure is used as follows:
 
 3. **Mob Death** (`extract_char_final` in `handler.c`)
    - Fails escort quest if escort dies
-   - Optimized with `MOB_NOKILL` flag check for early exit
+   - Checks all NPC deaths for escort quest failure
 
 4. **Player Save/Load** (`players.c`)
    - Persists escort_mob_id across logins
@@ -173,12 +176,14 @@ The escort NPC follows but doesn't join the group because:
 - Prevents exploit of using escort in combat
 - Makes the quest more challenging (protecting a non-combatant)
 
-### Why MOB_NOKILL Flag?
+### Why NOT Use MOB_NOKILL Flag?
 
-The escort is protected with `MOB_NOKILL` to:
-- Prevent accidental quest failure from monster attacks
-- Focus the challenge on navigation, not combat
-- Match the narrative (escorting someone who can't defend themselves)
+The escort is intentionally vulnerable (no `MOB_NOKILL` flag):
+- **Quest Failure Mechanism**: The quest must fail if the escort dies
+- **Challenge**: Protecting the escort from danger is the core challenge
+- **Logical Consistency**: MOB_NOKILL prevents death, making quest failure impossible
+- **Gameplay**: Players must actively defend and guide the escort
+- Only aggressive flags are removed to prevent escort from attacking
 
 ### Why Track by IDNUM?
 
@@ -186,6 +191,13 @@ Using `GET_IDNUM(mob)` instead of a pointer because:
 - Survives across zone resets
 - Prevents dangling pointer issues
 - Allows finding the mob anywhere in the world
+
+### MOB_NOKILL Restriction
+
+Mobs with `MOB_NOKILL` flag cannot request escort quests:
+- They cannot die, breaking the quest failure mechanism
+- Prevents logical inconsistency in the quest system
+- Checked in `mob_should_accept_quest()` function
 
 ### Penalty System
 

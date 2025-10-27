@@ -336,8 +336,7 @@ bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum)
     /* Store the mob's ID for tracking */
     GET_ESCORT_MOB_ID(ch) = GET_IDNUM(mob);
 
-    /* Make escort mob non-aggressive and protected from attacks */
-    SET_BIT_AR(MOB_FLAGS(mob), MOB_NOKILL);
+    /* Make escort mob non-aggressive (but not invulnerable) */
     REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGRESSIVE);
     REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGR_EVIL);
     REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGR_GOOD);
@@ -1238,6 +1237,10 @@ bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
 
     /* Don't accept immortal quests (only mob-posted quests) */
     if (!IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+        return FALSE;
+
+    /* MOB_NOKILL mobs cannot request escort quests (they can't die, so quest can't fail properly) */
+    if (QST_TYPE(rnum) == AQ_MOB_ESCORT && MOB_FLAGGED(mob, MOB_NOKILL))
         return FALSE;
 
     /* Calculate capability */
