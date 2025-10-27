@@ -6253,3 +6253,129 @@ ACMD(do_portal)
     mudlog(NRM, MAX(LVL_GOD, GET_INVIS_LEV(ch)), TRUE, "(GC) %s created portal%s from %d to %d (timer: %s)",
            GET_NAME(ch), bidirectional ? "s" : "", world[IN_ROOM(ch)].number, dest_vnum, timer_buf);
 }
+
+/* Global array to track disabled commands */
+static bool *disabled_cmd = NULL;
+static int num_of_cmds = 0;
+
+void init_disabled_commands(void)
+{
+    int i;
+
+    /* Count commands */
+    for (i = 0; *cmd_info[i].command != '\n'; i++)
+        ;
+    num_of_cmds = i;
+
+    /* Allocate and initialize disabled array */
+    CREATE(disabled_cmd, bool, num_of_cmds);
+    for (i = 0; i < num_of_cmds; i++)
+        disabled_cmd[i] = FALSE;
+}
+
+bool is_command_disabled(int cmd_num)
+{
+    if (!disabled_cmd)
+        init_disabled_commands();
+
+    if (cmd_num < 0 || cmd_num >= num_of_cmds)
+        return FALSE;
+
+    return disabled_cmd[cmd_num];
+}
+
+ACMD(do_disable)
+{
+    char arg[MAX_INPUT_LENGTH];
+    int cmd_num, i;
+
+    if (!disabled_cmd)
+        init_disabled_commands();
+
+    one_argument(argument, arg);
+
+    if (!*arg) {
+        /* List all disabled commands */
+        bool found = FALSE;
+        send_to_char(ch, "Comandos desabilitados:\r\n");
+        for (i = 0; i < num_of_cmds; i++) {
+            if (disabled_cmd[i]) {
+                send_to_char(ch, "  %s\r\n", cmd_info[i].command);
+                found = TRUE;
+            }
+        }
+        if (!found)
+            send_to_char(ch, "  Nenhum comando está desabilitado.\r\n");
+        return;
+    }
+
+    /* Find the command */
+    cmd_num = find_command(arg);
+
+    if (cmd_num < 0) {
+        send_to_char(ch, "Comando '%s' não encontrado.\r\n", arg);
+        return;
+    }
+
+    /* Check if trying to disable 'disable' or 'enable' */
+    if (!strcmp(cmd_info[cmd_num].command, "disable") || !strcmp(cmd_info[cmd_num].command, "enable")) {
+        send_to_char(ch, "Você não pode desabilitar o comando '%s'!\r\n", cmd_info[cmd_num].command);
+        return;
+    }
+
+    /* Check if already disabled */
+    if (disabled_cmd[cmd_num]) {
+        send_to_char(ch, "O comando '%s' já está desabilitado.\r\n", cmd_info[cmd_num].command);
+        return;
+    }
+
+    /* Disable the command */
+    disabled_cmd[cmd_num] = TRUE;
+    send_to_char(ch, "Comando '%s' desabilitado com sucesso.\r\n", cmd_info[cmd_num].command);
+    mudlog(BRF, LVL_IMMORT, TRUE, "(GC) %s desabilitou o comando: %s", GET_NAME(ch), cmd_info[cmd_num].command);
+}
+
+ACMD(do_enable)
+{
+    char arg[MAX_INPUT_LENGTH];
+    int cmd_num, i;
+
+    if (!disabled_cmd)
+        init_disabled_commands();
+
+    one_argument(argument, arg);
+
+    if (!*arg) {
+        /* List all disabled commands */
+        bool found = FALSE;
+        send_to_char(ch, "Comandos desabilitados:\r\n");
+        for (i = 0; i < num_of_cmds; i++) {
+            if (disabled_cmd[i]) {
+                send_to_char(ch, "  %s\r\n", cmd_info[i].command);
+                found = TRUE;
+            }
+        }
+        if (!found)
+            send_to_char(ch, "  Nenhum comando está desabilitado.\r\n");
+        return;
+    }
+
+    /* Find the command */
+    cmd_num = find_command(arg);
+
+    if (cmd_num < 0) {
+        send_to_char(ch, "Comando '%s' não encontrado.\r\n", arg);
+        return;
+    }
+
+    /* Check if not disabled */
+    if (!disabled_cmd[cmd_num]) {
+        send_to_char(ch, "O comando '%s' não está desabilitado.\r\n", cmd_info[cmd_num].command);
+        return;
+    }
+
+    /* Enable the command */
+    disabled_cmd[cmd_num] = FALSE;
+    send_to_char(ch, "Comando '%s' habilitado com sucesso.\r\n", cmd_info[cmd_num].command);
+    mudlog(BRF, LVL_IMMORT, TRUE, "(GC) %s habilitou o comando: %s", GET_NAME(ch), cmd_info[cmd_num].command);
+}
