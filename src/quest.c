@@ -262,9 +262,11 @@ static char *format_quest_info(qst_rnum rnum, char *buf, size_t bufsize)
             const char *room_name = world[room_rnum_val].name;
             char room_num_str[20];
             const char *pos;
+            size_t room_num_len;
 
             /* Create string representation of room number to search for */
             snprintf(room_num_str, sizeof(room_num_str), "%d", QST_TARGET(rnum));
+            room_num_len = strlen(room_num_str);
 
             /* Search for the room number in the info message
              * We search for it as a complete number by checking boundaries */
@@ -273,16 +275,17 @@ static char *format_quest_info(qst_rnum rnum, char *buf, size_t bufsize)
             while (pos != NULL) {
                 /* Check if this is a complete number match (not part of a larger number) */
                 bool is_start_boundary = (pos == info || !isdigit((unsigned char)*(pos - 1)));
-                bool is_end_boundary = !isdigit((unsigned char)*(pos + strlen(room_num_str)));
+                bool is_end_boundary = !isdigit((unsigned char)*(pos + room_num_len));
 
                 if (is_start_boundary && is_end_boundary) {
                     size_t prefix_len = pos - info;
-                    size_t suffix_start = prefix_len + strlen(room_num_str);
+                    size_t suffix_start = prefix_len + room_num_len;
                     size_t room_name_len = strlen(room_name);
                     size_t suffix_len = strlen(info + suffix_start);
+                    size_t total_len = prefix_len + room_name_len + suffix_len;
 
-                    /* Check if the formatted string will fit in the buffer */
-                    if (prefix_len + room_name_len + suffix_len + 1 <= bufsize) {
+                    /* Check if the formatted string will fit in the buffer (including null terminator) */
+                    if (total_len + 1 <= bufsize) {
                         /* Build new message: prefix + room_name + suffix */
                         snprintf(buf, bufsize, "%.*s%s%s", (int)prefix_len, info, room_name, info + suffix_start);
                         return buf;
