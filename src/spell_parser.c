@@ -680,6 +680,12 @@ void mag_objectmagic(struct char_data *ch, struct obj_data *obj, char *argument)
                     act("Não há nada aqui que possa ser afetado por $p.", FALSE, ch, obj, NULL, TO_CHAR);
                     return;
                 }
+                /* Clear the target that wasn't found */
+                if (k == FIND_CHAR_ROOM) {
+                    tobj = NULL;
+                } else {
+                    tch = NULL;
+                }
             } else
                 tch = ch;
 

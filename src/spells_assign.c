@@ -1438,7 +1438,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_CLERIC;
     new_spell->assign[0].level = 14;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->messages.to_room = strdup("$N anima um corpo!!");
+    new_spell->messages.to_room = strdup("$n anima um corpo!!");
     new_spell->school = SCHOOL_NECROMANCY; /* Raises undead */
     new_spell->element = ELEMENT_UNHOLY;   /* Death magic */
 
@@ -1908,7 +1908,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_RANGER;
     new_spell->assign[0].level = 14;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->messages.to_room = strdup("$N invoca um servo aéreo!!");
+    new_spell->messages.to_room = strdup("$n invoca um servo aéreo!!");
     new_spell->school = SCHOOL_CONJURATION; /* Summoning spell */
     new_spell->element = ELEMENT_AIR;       /* Air elemental */
 
@@ -2391,7 +2391,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_DRUID;
     new_spell->assign[0].level = 14;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->messages.to_room = strdup("$N invoca um corvo para ajudar!");
+    new_spell->messages.to_room = strdup("$n invoca um corvo para ajudar!");
     new_spell->school = SCHOOL_CONJURATION; /* Animal summoning */
     new_spell->element = ELEMENT_AIR;       /* Flying creature */
     spedit_save_internally(new_spell);
@@ -2414,7 +2414,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_DRUID;
     new_spell->assign[0].level = 30;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->messages.to_room = strdup("$N invoca um lobo para ajudar!");
+    new_spell->messages.to_room = strdup("$n invoca um lobo para ajudar!");
     new_spell->school = SCHOOL_CONJURATION; /* Animal summoning */
     new_spell->element = ELEMENT_EARTH;     /* Land creature */
     spedit_save_internally(new_spell);
@@ -2437,7 +2437,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_DRUID;
     new_spell->assign[0].level = 60;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->messages.to_room = strdup("$N invoca um urso para ajudar!");
+    new_spell->messages.to_room = strdup("$n invoca um urso para ajudar!");
     new_spell->school = SCHOOL_CONJURATION; /* Animal summoning */
     new_spell->element = ELEMENT_EARTH;     /* Powerful land creature */
     spedit_save_internally(new_spell);
@@ -2460,7 +2460,7 @@ void create_spells_db()
     new_spell->assign[0].class_num = CLASS_DRUID;
     new_spell->assign[0].level = 85;
     new_spell->assign[0].num_mana = strdup(buf);
-    new_spell->messages.to_room = strdup("$N invoca um leão para ajudar!");
+    new_spell->messages.to_room = strdup("$n invoca um leão para ajudar!");
     new_spell->school = SCHOOL_CONJURATION; /* Animal summoning */
     new_spell->element = ELEMENT_FIRE;      /* Fierce predator */
     spedit_save_internally(new_spell);
