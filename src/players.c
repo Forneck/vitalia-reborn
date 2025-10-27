@@ -298,6 +298,7 @@ int load_char(const char *name, struct char_data *ch)
         GET_QUESTPOINTS(ch) = PFDEF_QUESTPOINTS;
         GET_QUEST_COUNTER(ch) = PFDEF_QUESTCOUNT;
         GET_QUEST(ch) = PFDEF_CURRQUEST;
+        GET_ESCORT_MOB_ID(ch) = NOBODY;
         GET_NUM_QUESTS(ch) = PFDEF_COMPQUESTS;
         GET_LAST_MOTD(ch) = PFDEF_LASTMOTD;
         GET_LAST_NEWS(ch) = PFDEF_LASTNEWS;
@@ -498,6 +499,8 @@ int load_char(const char *name, struct char_data *ch)
                         GET_QUEST(ch) = atoi(line);
                     else if (!strcmp(tag, "Qcnt"))
                         GET_QUEST_COUNTER(ch) = atoi(line);
+                    else if (!strcmp(tag, "Qesc"))
+                        GET_ESCORT_MOB_ID(ch) = atol(line);
                     else if (!strcmp(tag, "Qest"))
                         load_quests(fl, ch);
                     break;
@@ -818,6 +821,8 @@ void save_char(struct char_data *ch)
     }
     if (GET_QUEST(ch) != PFDEF_CURRQUEST)
         fprintf(fl, "Qcur: %d\n", GET_QUEST(ch));
+    if (GET_ESCORT_MOB_ID(ch) != NOBODY)
+        fprintf(fl, "Qesc: %ld\n", GET_ESCORT_MOB_ID(ch));
 
     if (GET_DEATH(ch) != PFDEF_DEATH)
         fprintf(fl, "Dth : %d\n", GET_DEATH(ch));

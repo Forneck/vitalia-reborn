@@ -26,8 +26,9 @@
 /*--------------------------------------------------------------------------
  * Exported global variables
  *--------------------------------------------------------------------------*/
-const char *quest_types[] = {"Object",        "Room",       "Find mob",    "Kill mob",          "Save mob",
-                             "Return object", "Clear room", "Kill player", "Kill mob (bounty)", "\n"};
+const char *quest_types[] = {
+    "Object",     "Room",        "Find mob",          "Kill mob",   "Save mob", "Return object",
+    "Clear room", "Kill player", "Kill mob (bounty)", "Escort mob", "\n"};
 const char *aq_flags[] = {"REPEATABLE", "MOB_POSTED", "\n"};
 
 /*--------------------------------------------------------------------------
@@ -260,6 +261,7 @@ void clear_quest(struct char_data *ch)
     GET_QUEST(ch) = NOTHING;
     GET_QUEST_TIME(ch) = -1;
     GET_QUEST_COUNTER(ch) = 0;
+    GET_ESCORT_MOB_ID(ch) = NOBODY;
     REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_QUEST);
     return;
 }
@@ -296,6 +298,147 @@ void remove_completed_quest(struct char_data *ch, qst_vnum vnum)
     if (ch->player_specials->saved.completed_quests)
         free(ch->player_specials->saved.completed_quests);
     ch->player_specials->saved.completed_quests = temp;
+}
+
+/* Escort Quest Helper Functions */
+/** Spawns an escort mob for the player's quest at the questmaster's location.
+ * @param ch The player who accepted the escort quest.
+ * @param rnum The real quest number.
+ * @return TRUE if mob spawned successfully, FALSE otherwise. */
+bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum)
+{
+    struct char_data *mob;
+    mob_rnum mob_rnum;
+
+    /* Validate target mob vnum */
+    if (QST_TARGET(rnum) == NOTHING || QST_TARGET(rnum) <= 0) {
+        send_to_char(ch, "ERRO: Quest mal configurada (alvo inválido).\r\n");
+        return FALSE;
+    }
+
+    /* Get the real mob number */
+    mob_rnum = real_mobile(QST_TARGET(rnum));
+    if (mob_rnum == NOBODY) {
+        send_to_char(ch, "ERRO: Mob de escolta não existe (vnum %d).\r\n", QST_TARGET(rnum));
+        return FALSE;
+    }
+
+    /* Create the mob */
+    mob = read_mobile(mob_rnum, REAL);
+    if (!mob) {
+        send_to_char(ch, "ERRO: Falha ao criar mob de escolta.\r\n");
+        return FALSE;
+    }
+
+    /* Place mob in the same room as the player */
+    char_to_room(mob, IN_ROOM(ch));
+
+    /* Store the mob's ID for tracking */
+    GET_ESCORT_MOB_ID(ch) = GET_IDNUM(mob);
+
+    /* Make escort mob non-aggressive (but not invulnerable) */
+    REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGRESSIVE);
+    REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGR_EVIL);
+    REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGR_GOOD);
+    REMOVE_BIT_AR(MOB_FLAGS(mob), MOB_AGGR_NEUTRAL);
+
+    /* Make the mob follow the player (without charming) */
+    if (mob->master)
+        stop_follower(mob);
+
+    add_follower(mob, ch);
+
+    /* Notify player */
+    act("$N se aproxima e se prepara para seguir você.", FALSE, ch, 0, mob, TO_CHAR);
+    act("$N se aproxima de $n.", TRUE, ch, 0, mob, TO_ROOM);
+
+    return TRUE;
+}
+
+/** Checks if an escort quest has been completed (mob reached destination).
+ * @param ch The player on the escort quest.
+ * @param rnum The real quest number.
+ * @return TRUE if quest completed, FALSE otherwise. */
+bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum)
+{
+    struct char_data *escort_mob = NULL;
+    room_vnum dest_vnum;
+    const char *escort_thanks_msg = "$n diz, 'Muito obrigado por me escoltar até aqui! Você foi muito corajoso!'";
+
+    /* Check if we're in an escort quest */
+    if (GET_QUEST_TYPE(ch) != AQ_MOB_ESCORT)
+        return FALSE;
+
+    /* Get the destination room vnum (stored in value[5]) */
+    dest_vnum = QST_RETURNMOB(rnum); /* Reusing RETURNMOB for destination room */
+
+    /* Check if player is in destination room */
+    if (world[IN_ROOM(ch)].number != dest_vnum)
+        return FALSE;
+
+    /* Find the escort mob by ID */
+    for (escort_mob = character_list; escort_mob; escort_mob = escort_mob->next) {
+        if (IS_NPC(escort_mob) && GET_IDNUM(escort_mob) == GET_ESCORT_MOB_ID(ch))
+            break;
+    }
+
+    /* If escort mob not found or not in same room, quest not complete */
+    if (!escort_mob || IN_ROOM(escort_mob) != IN_ROOM(ch))
+        return FALSE;
+
+    /* Escort mob thanks the player */
+    act(escort_thanks_msg, FALSE, escort_mob, 0, ch, TO_ROOM);
+    act(escort_thanks_msg, FALSE, escort_mob, 0, ch, TO_VICT);
+
+    /* Complete the quest */
+    generic_complete_quest(ch);
+
+    /* Remove the escort mob from the world */
+    extract_char(escort_mob);
+
+    return TRUE;
+}
+
+/** Called when an escort mob dies - fails the escort quest.
+ * @param escort_mob The escort mob that died.
+ * @param killer The character who killed the mob (can be NULL). */
+void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer)
+{
+    struct char_data *ch;
+    qst_rnum rnum;
+
+    if (!IS_NPC(escort_mob))
+        return;
+
+    /* Find the player escorting this mob */
+    for (ch = character_list; ch; ch = ch->next) {
+        if (IS_NPC(ch))
+            continue;
+
+        if (GET_QUEST_TYPE(ch) == AQ_MOB_ESCORT && GET_ESCORT_MOB_ID(ch) == GET_IDNUM(escort_mob)) {
+            /* Get quest info for penalty */
+            rnum = real_quest(GET_QUEST(ch));
+
+            /* Notify player of quest failure */
+            send_to_char(ch, "\r\n\ty** SUA QUEST DE ESCOLTA FALHOU! **\tn\r\n");
+            send_to_char(ch, "A pessoa que você estava escoltando morreu!\r\n");
+
+            /* Apply penalty - escort death is worse than abandoning */
+            if (rnum != NOTHING && QST_PENALTY(rnum)) {
+                int death_penalty = QST_PENALTY(rnum) * 2; /* Double penalty for escort death */
+                GET_QUESTPOINTS(ch) -= death_penalty;
+                send_to_char(ch, "Você perde %d pontos de busca por falhar em proteger o escoltado!\r\n\r\n",
+                             death_penalty);
+            } else {
+                send_to_char(ch, "\r\n");
+            }
+
+            /* Clear the quest */
+            clear_quest(ch);
+            save_char(ch);
+            break;
+        }
+    }
 }
 
 void generic_complete_quest(struct char_data *ch)
@@ -488,6 +631,9 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
             if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict))
                 if (QST_TARGET(rnum) == GET_MOB_VNUM(vict))
                     generic_complete_quest(ch);
+            break;
+        case AQ_MOB_ESCORT:
+            /* Escort quest completion is handled separately in check_escort_quest_completion() */
             break;
         default:
             log1("SYSERR: Invalid quest type passed to autoquest_trigger_check");
@@ -786,6 +932,17 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
             send_to_char(ch, "%s diz, 'Você pode levar o tempo que precisar para completar esta busca.'\r\n",
                          GET_NAME(qm));
         }
+
+        /* For escort quests, spawn the escort mob */
+        if (QST_TYPE(rnum) == AQ_MOB_ESCORT) {
+            if (!spawn_escort_mob(ch, rnum)) {
+                /* If spawning fails, cancel the quest */
+                send_to_char(ch, "%s diz, 'Desculpe, parece que houve um problema. A busca foi cancelada.'\r\n",
+                             GET_NAME(qm));
+                clear_quest(ch);
+            }
+        }
+
         save_char(ch);
         return;
     }
@@ -1080,6 +1237,10 @@ bool mob_should_accept_quest(struct char_data *mob, qst_rnum rnum)
 
     /* Don't accept immortal quests (only mob-posted quests) */
     if (!IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+        return FALSE;
+
+    /* MOB_NOKILL mobs cannot request escort quests (they can't die, so quest can't fail properly) */
+    if (QST_TYPE(rnum) == AQ_MOB_ESCORT && MOB_FLAGGED(mob, MOB_NOKILL))
         return FALSE;
 
     /* Calculate capability */
@@ -1713,6 +1874,17 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg)
             send_to_char(ch, "%s diz, 'Você pode levar o tempo que precisar para completar esta busca.'\r\n",
                          GET_NAME(qm));
         }
+
+        /* For escort quests, spawn the escort mob */
+        if (QST_TYPE(rnum) == AQ_MOB_ESCORT) {
+            if (!spawn_escort_mob(ch, rnum)) {
+                /* If spawning fails, cancel the quest */
+                send_to_char(ch, "%s diz, 'Desculpe, parece que houve um problema. A busca foi cancelada.'\r\n",
+                             GET_NAME(qm));
+                clear_quest(ch);
+            }
+        }
+
         save_char(ch);
         return;
     }
