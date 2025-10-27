@@ -3808,7 +3808,7 @@ bool mob_process_quest_completion(struct char_data *ch, qst_rnum quest_rnum)
 
                 if (questmaster) {
                     /* Return object to questmaster */
-                    act("$n entrega $p para $N.", FALSE, ch, target_obj, questmaster, TO_ROOM);
+                    act("$n entrega $p para quem solicitou.", FALSE, ch, target_obj, NULL, TO_ROOM);
                     obj_from_char(target_obj);
                     extract_obj(target_obj);
                     mob_complete_quest(ch);

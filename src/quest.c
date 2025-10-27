@@ -673,7 +673,7 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                             /* Transfer item from questmaster to original requester */
                             obj_from_char(object);
                             obj_to_char(object, original_requester);
-                            act("$n entrega $p para $N.", FALSE, vict, object, original_requester, TO_ROOM);
+                            act("$n entrega $p para quem solicitou.", FALSE, vict, object, NULL, TO_ROOM);
                             act("$n recebe $p de $N.", FALSE, original_requester, object, vict, TO_ROOM);
                         }
 
