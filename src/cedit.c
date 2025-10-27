@@ -474,6 +474,10 @@ int save_config(IDXTYPE nowhere)
             "* Maximum zones in a pathfinding path (0=dynamic scaling)\n"
             "max_zone_path = %d\n\n",
             CONFIG_MAX_ZONE_PATH);
+    fprintf(fl,
+            "* Maximum objects allowed in player houses (0=unlimited)\n"
+            "max_house_objs = %d\n\n",
+            CONFIG_MAX_HOUSE_OBJS);
 
     strcpy(buf, CONFIG_OK);
     strip_cr(buf);
