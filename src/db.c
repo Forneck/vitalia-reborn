@@ -826,6 +826,9 @@ void boot_db(void)
     log1("Sorting command list.");
     sort_commands();
 
+    log1("Initializing disabled commands system.");
+    init_disabled_commands();
+
     log1("Booting mail system.");
     if (!scan_file()) {
         log1("    Mail boot failed -- Mail system disabled");

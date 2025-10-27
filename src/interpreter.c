@@ -140,6 +140,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"detach", "detach", POS_DEAD, do_detach, LVL_BUILDER, 0, CMD_NOARG},
     {"diagnose", "diag", POS_RESTING, do_diagnose, 0, 0, CMD_ONEARG},
     {"dig", "dig", POS_DEAD, do_dig, LVL_BUILDER, 0, CMD_ONEARG},
+    {"disable", "disable", POS_DEAD, do_disable, LVL_GRGOD, 0, CMD_ONEARG},
     {"display", "disp", POS_DEAD, do_display, 0, 0, CMD_NOARG},
     {"donate", "don", POS_RESTING, do_drop, 0, SCMD_DONATE, CMD_ONEARG},
     {"drink", "dri", POS_RESTING, do_drink, 0, SCMD_DRINK, CMD_ONEARG},
@@ -149,6 +150,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"echo", "ec", POS_SLEEPING, do_echo, LVL_IMMORT, SCMD_ECHO, CMD_NOARG},
     {"emote", "em", POS_RESTING, do_echo, 0, SCMD_EMOTE, CMD_NOARG},
     {":", ":", POS_RESTING, do_echo, 1, SCMD_EMOTE, CMD_NOARG},
+    {"enable", "enable", POS_DEAD, do_enable, LVL_GRGOD, 0, CMD_ONEARG},
     {"enter", "ent", POS_STANDING, do_enter, 0, 0, CMD_ONEARG},
     {"envenom", "env", POS_FIGHTING, do_cast, 1, SKILL_ENVENOM, CMD_TWOARG},
     {"equipment", "eq", POS_SLEEPING, do_equipment, 0, 0, CMD_NOARG},
@@ -603,6 +605,8 @@ void command_interpreter(struct char_data *ch, char *argument)
         send_to_char(ch, "Sinto, mas este comando ainda não foi implementado.\r\n");
     else if (IS_NPC(ch) && complete_cmd_info[cmd].minimum_level >= LVL_IMMORT)
         send_to_char(ch, "Você não pode usar comandos de imortais enquanto incorporado.\r\n");
+    else if (is_command_disabled(cmd))
+        send_to_char(ch, "Este comando está temporariamente desabilitado.\r\n");
     else if (GET_POS(ch) < complete_cmd_info[cmd].minimum_position)
         switch (GET_POS(ch)) {
             case POS_DEAD:

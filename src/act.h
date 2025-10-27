@@ -413,6 +413,10 @@ ACMD(do_zpurge);
 ACMD(do_zreset);
 ACMD(do_zunlock);
 ACMD(do_portal);
+ACMD(do_disable);
+ACMD(do_enable);
 
+void init_disabled_commands(void);
+bool is_command_disabled(int cmd_num);
 bool is_level_compatible_with_group(struct char_data *prospect, struct group_data *group);
 #endif /* _ACT_H_ */
