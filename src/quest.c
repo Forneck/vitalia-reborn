@@ -1214,11 +1214,12 @@ static void quest_remove(struct char_data *ch, char *argument)
 
 ACMD(do_quest)
 {
-    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
+    char arg1[MAX_INPUT_LENGTH];
+    char *arg2;
     int tp;
     const char *usage_msg;
 
-    two_arguments(argument, arg1, arg2);
+    arg2 = one_argument(argument, arg1);
 
     /* Determine which usage message to show */
     if (GET_LEVEL(ch) >= LVL_GOD)
