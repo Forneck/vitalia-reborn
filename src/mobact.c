@@ -333,6 +333,23 @@ void mobile_activity(void)
             if (ch->ai_data->current_goal == GOAL_MINE || ch->ai_data->current_goal == GOAL_FISH ||
                 ch->ai_data->current_goal == GOAL_FORAGE || ch->ai_data->current_goal == GOAL_EAVESDROP) {
 
+                /* Prevent spawned mobs from using resource gathering skills to avoid recursive spawning.
+                 * These vnums are mobs that can be spawned by do_forage, do_mine, and do_fishing:
+                 *   10727 - Gray squirrel (spawned by SKILL_FORAGE)
+                 *   14410 - Traveling dwarf (spawned by SKILL_MINE)
+                 *   10864 - Colorful fish school (spawned by SKILL_FISHING)
+                 *   2967  - Zone 29 fish thrower (spawned by SKILL_FISHING)
+                 * Without this check, these mobs could spawn more mobs, creating exponential growth. */
+                mob_vnum vnum = GET_MOB_VNUM(ch);
+                if ((ch->ai_data->current_goal == GOAL_MINE || ch->ai_data->current_goal == GOAL_FISH ||
+                     ch->ai_data->current_goal == GOAL_FORAGE) &&
+                    (vnum == 10727 || vnum == 14410 || vnum == 10864 || vnum == 2967)) {
+                    /* Clear the resource gathering goal for spawned mobs */
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    ch->ai_data->goal_timer = 0;
+                    continue;
+                }
+
                 /* Check if mob can perform the resource action */
                 bool can_perform = FALSE;
 
@@ -1347,6 +1364,18 @@ void mobile_activity(void)
         /* Resource gathering goal assignment for idle mobs */
         if (ch->ai_data && ch->ai_data->current_goal == GOAL_NONE && rand_number(1, 1000) <= 10) {
             /* 1% chance per tick for mob to start resource gathering if they have no other goals */
+
+            /* Prevent spawned mobs from using resource gathering skills to avoid recursive spawning.
+             * These vnums are mobs that can be spawned by do_forage, do_mine, and do_fishing:
+             *   10727 - Gray squirrel (spawned by SKILL_FORAGE)
+             *   14410 - Traveling dwarf (spawned by SKILL_MINE)
+             *   10864 - Colorful fish school (spawned by SKILL_FISHING)
+             *   2967  - Zone 29 fish thrower (spawned by SKILL_FISHING)
+             * Without this check, these mobs could spawn more mobs, creating exponential growth. */
+            mob_vnum vnum = GET_MOB_VNUM(ch);
+            if (vnum == 10727 || vnum == 14410 || vnum == 10864 || vnum == 2967) {
+                continue;
+            }
 
             /* Check genetics to determine preferred resource activity */
             int activity_choice = rand_number(1, 100);
