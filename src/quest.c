@@ -10,6 +10,7 @@
 
 #include "conf.h"
 #include "sysdep.h"
+#include <ctype.h>
 #include <string.h>
 #include <time.h>
 
@@ -36,11 +37,14 @@ const char *aq_flags[] = {"REPEATABLE", "MOB_POSTED", "\n"};
  *--------------------------------------------------------------------------*/
 static int cmd_tell;
 
-static const char *quest_cmd[] = {"list", "history", "join", "leave", "progress", "status", "\n"};
+static const char *quest_cmd[] = {"list", "history", "join", "leave", "progress", "status", "remove", "\n"};
 
 static const char *quest_mort_usage = "Uso: quest list | history | progress | join <nn> | leave";
 
-static const char *quest_imm_usage = "Uso: quest list | history | progress | join <nn> | leave | status <vnum>";
+static const char *quest_imm_usage =
+    "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum> confirm";
+static const char *quest_god_usage =
+    "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum> confirm";
 
 /*--------------------------------------------------------------------------*/
 /* Utility Functions                                                        */
@@ -238,6 +242,69 @@ void assign_the_quests(void)
             QST_FUNC(rnum) = mob_index[(mrnum)].func;
         mob_index[(mrnum)].func = questmaster;
     }
+}
+
+/*--------------------------------------------------------------------------*/
+/* Quest Info Formatting Functions                                          */
+/*--------------------------------------------------------------------------*/
+
+/** Format quest info message, replacing room numbers with room names for room-related quests.
+ * @param rnum The real quest number.
+ * @param buf Output buffer to store the formatted message.
+ * @param bufsize Size of the output buffer.
+ * @return Pointer to the formatted message (buf). */
+static char *format_quest_info(qst_rnum rnum, char *buf, size_t bufsize)
+{
+    const char *info = QST_INFO(rnum);
+
+    /* For AQ_ROOM_FIND and AQ_ROOM_CLEAR quests, replace room number with room name */
+    if ((QST_TYPE(rnum) == AQ_ROOM_FIND || QST_TYPE(rnum) == AQ_ROOM_CLEAR) && QST_TARGET(rnum) != NOTHING) {
+        room_rnum room_rnum_val = real_room(QST_TARGET(rnum));
+
+        if (room_rnum_val != NOWHERE) {
+            const char *room_name = world[room_rnum_val].name;
+            char room_num_str[20];
+            const char *pos;
+            size_t room_num_len;
+
+            /* Create string representation of room number to search for */
+            snprintf(room_num_str, sizeof(room_num_str), "%d", QST_TARGET(rnum));
+            room_num_len = strlen(room_num_str);
+
+            /* Search for the room number in the info message
+             * We search for it as a complete number by checking boundaries */
+            pos = strstr(info, room_num_str);
+
+            while (pos != NULL) {
+                /* Check if this is a complete number match (not part of a larger number) */
+                bool is_start_boundary = (pos == info || !isdigit((unsigned char)*(pos - 1)));
+                bool is_end_boundary = !isdigit((unsigned char)*(pos + room_num_len));
+
+                if (is_start_boundary && is_end_boundary) {
+                    size_t prefix_len = pos - info;
+                    size_t suffix_start = prefix_len + room_num_len;
+                    size_t room_name_len = strlen(room_name);
+                    size_t suffix_len = strlen(info + suffix_start);
+                    size_t total_len = prefix_len + room_name_len + suffix_len;
+
+                    /* Check if the formatted string will fit in the buffer (including null terminator) */
+                    if (total_len + 1 <= bufsize) {
+                        /* Build new message: prefix + room_name + suffix */
+                        snprintf(buf, bufsize, "%.*s%s%s", (int)prefix_len, info, room_name, info + suffix_start);
+                        return buf;
+                    }
+                    /* Buffer too small, fall through to return original */
+                    break;
+                }
+                /* Not a complete match, continue searching */
+                pos = strstr(pos + 1, room_num_str);
+            }
+        }
+    }
+
+    /* For all other quest types or if replacement fails, return original info */
+    snprintf(buf, bufsize, "%s", info);
+    return buf;
 }
 
 /*--------------------------------------------------------------------------*/
@@ -447,6 +514,7 @@ void generic_complete_quest(struct char_data *ch)
     qst_vnum vnum = GET_QUEST(ch);
     struct obj_data *new_obj;
     int happy_qp, happy_gold, happy_exp;
+    char formatted_info[MAX_QUEST_MSG];
 
     if (--GET_QUEST_COUNTER(ch) <= 0) {
         rnum = real_quest(vnum);
@@ -505,7 +573,8 @@ void generic_complete_quest(struct char_data *ch)
         if ((real_quest(QST_NEXT(rnum)) != NOTHING) && (QST_NEXT(rnum) != vnum) && !is_complete(ch, QST_NEXT(rnum))) {
             rnum = real_quest(QST_NEXT(rnum));
             set_quest(ch, rnum);
-            send_to_char(ch, "A sua busca continua:\r\n%s", QST_INFO(rnum));
+            send_to_char(ch, "A sua busca continua:\r\n%s",
+                         format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
         }
 
         /* Clear flag after quest completion is done */
@@ -757,13 +826,15 @@ void quest_list(struct char_data *ch, struct char_data *qm, char argument[MAX_IN
 {
     qst_vnum vnum;
     qst_rnum rnum;
+    char formatted_info[MAX_QUEST_MSG];
 
     if ((vnum = find_unified_quest_by_qmnum(ch, qm, atoi(argument))) == NOTHING)
         send_to_char(ch, "Esta não é uma busca válida!\r\n");
     else if ((rnum = real_quest(vnum)) == NOTHING)
         send_to_char(ch, "Esta não é uma busca válida!\r\n");
     else if (QST_INFO(rnum)) {
-        send_to_char(ch, "Detalhes Completos da Busca \tc%s\tn:\r\n%s", QST_DESC(rnum), QST_INFO(rnum));
+        send_to_char(ch, "Detalhes Completos da Busca \tc%s\tn:\r\n%s", QST_DESC(rnum),
+                     format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
         if (QST_PREV(rnum) != NOTHING)
             send_to_char(ch, "Você precisa completar a busca %s primeiro.\r\n", QST_NAME(real_quest(QST_PREV(rnum))));
         if (QST_TIME(rnum) != -1)
@@ -895,6 +966,7 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
     qst_vnum vnum;
     qst_rnum rnum;
     char buf[MAX_INPUT_LENGTH];
+    char formatted_info[MAX_QUEST_MSG];
 
     if (!*argument)
         snprintf(buf, sizeof(buf), "%s diz, 'Qual busca você quer aceitar, %s?'", GET_NAME(qm), GET_NAME(ch));
@@ -924,7 +996,7 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
         act("$n aceitou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
         send_to_char(ch, "%s diz, 'As instruções para esta busca são:'\r\n", GET_NAME(qm));
         set_quest(ch, rnum);
-        send_to_char(ch, "%s", QST_INFO(rnum));
+        send_to_char(ch, "%s", format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
         if (QST_TIME(rnum) != -1) {
             send_to_char(ch, "%s diz, 'Você tem um tempo limite de %d tick%s para completar esta busca!'\r\n",
                          GET_NAME(qm), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
@@ -953,6 +1025,7 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
 static void quest_progress(struct char_data *ch)
 {
     qst_rnum rnum;
+    char formatted_info[MAX_QUEST_MSG];
 
     if (GET_QUEST(ch) == NOTHING)
         send_to_char(ch, "Mas você não está em uma busca no momento!\r\n");
@@ -960,7 +1033,8 @@ static void quest_progress(struct char_data *ch)
         clear_quest(ch);
         send_to_char(ch, "A busca foi cancelada e não existe mais!\r\n");
     } else {
-        send_to_char(ch, "Você aceitou as seguintes buscas:\r\n%s\r\n%s", QST_DESC(rnum), QST_INFO(rnum));
+        send_to_char(ch, "Você aceitou as seguintes buscas:\r\n%s\r\n%s", QST_DESC(rnum),
+                     format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
         if (QST_QUANTITY(rnum) > 1)
             send_to_char(ch, "Você ainda precisa realizar %d objetivo%s da busca.\r\n", GET_QUEST_COUNTER(ch),
                          GET_QUEST_COUNTER(ch) == 1 ? "" : "s");
@@ -1071,6 +1145,69 @@ static void quest_stat(struct char_data *ch, char *argument)
         send_to_char(ch, " [\ty%5d\tn] \tc%s\tn\r\n", QST_NEXT(rnum), QST_DESC(real_quest(QST_NEXT(rnum))));
 }
 
+static void quest_remove(struct char_data *ch, char *argument)
+{
+    qst_rnum rnum;
+    qst_vnum quest_vnum;
+    int quest_num;
+    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
+
+    if (GET_LEVEL(ch) < LVL_GOD) {
+        send_to_char(ch, "You must be at least level GOD to remove quests.\r\n");
+        return;
+    }
+
+    two_arguments(argument, arg1, arg2);
+
+    if (!*arg1) {
+        send_to_char(ch, "%s\r\n", quest_god_usage);
+        return;
+    }
+
+    quest_num = atoi(arg1);
+
+    /* First try to find by vnum (direct vnum lookup) */
+    if ((rnum = real_quest(quest_num)) != NOTHING) {
+        quest_vnum = quest_num;
+    }
+    /* If not found by vnum, try to find by list position */
+    else if ((quest_vnum = find_quest_by_listnum(quest_num)) != NOTHING && (rnum = real_quest(quest_vnum)) != NOTHING) {
+        /* Found by list position */
+    } else {
+        send_to_char(ch, "That quest does not exist.\r\n");
+        return;
+    }
+
+    /* Check if quest is mob-posted */
+    if (!IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED)) {
+        send_to_char(ch, "Only mob-posted quests can be removed. Quest %d is not mob-posted.\r\n", quest_vnum);
+        return;
+    }
+
+    /* Show quest info and require confirmation */
+    if (!*arg2 || str_cmp(arg2, "confirm") != 0) {
+        send_to_char(ch, "Quest to be removed:\r\n");
+        send_to_char(ch, "  VNum: \ty%d\tn, Name: \tc%s\tn\r\n", quest_vnum, QST_NAME(rnum));
+        send_to_char(ch, "  Desc: \tc%s\tn\r\n", QST_DESC(rnum));
+        send_to_char(ch, "  Type: \ty%s\tn\r\n", quest_types[QST_TYPE(rnum)]);
+        send_to_char(ch, "\r\nTo confirm deletion, type: \tYquest remove %d confirm\tn\r\n", quest_num);
+        return;
+    }
+
+    /* Delete the quest with confirmation */
+    char quest_name_copy[MAX_QUEST_NAME];
+    snprintf(quest_name_copy, sizeof(quest_name_copy), "%s", QST_NAME(rnum));
+
+    send_to_char(ch, "Removing quest %d...\r\n", quest_vnum);
+    if (delete_quest(rnum)) {
+        send_to_char(ch, "\tGQuest successfully removed.\tn\r\n");
+        mudlog(NRM, LVL_GOD, TRUE, "(GC) %s removed mob-posted quest %d (%s).", GET_NAME(ch), quest_vnum,
+               quest_name_copy);
+    } else {
+        send_to_char(ch, "\tRFailed to remove quest.\tn\r\n");
+    }
+}
+
 /*--------------------------------------------------------------------------*/
 /* Quest Command Processing Function and Questmaster Special                */
 /*--------------------------------------------------------------------------*/
@@ -1079,12 +1216,22 @@ ACMD(do_quest)
 {
     char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
     int tp;
+    const char *usage_msg;
 
     two_arguments(argument, arg1, arg2);
+
+    /* Determine which usage message to show */
+    if (GET_LEVEL(ch) >= LVL_GOD)
+        usage_msg = quest_god_usage;
+    else if (GET_LEVEL(ch) >= LVL_IMMORT)
+        usage_msg = quest_imm_usage;
+    else
+        usage_msg = quest_mort_usage;
+
     if (!*arg1)
-        send_to_char(ch, "%s\r\n", GET_LEVEL(ch) < LVL_IMMORT ? quest_mort_usage : quest_imm_usage);
+        send_to_char(ch, "%s\r\n", usage_msg);
     else if (((tp = search_block(arg1, quest_cmd, FALSE)) == -1))
-        send_to_char(ch, "%s\r\n", GET_LEVEL(ch) < LVL_IMMORT ? quest_mort_usage : quest_imm_usage);
+        send_to_char(ch, "%s\r\n", usage_msg);
     else {
         switch (tp) {
             case SCMD_QUEST_LIST:
@@ -1107,8 +1254,14 @@ ACMD(do_quest)
                 else
                     quest_stat(ch, arg2);
                 break;
+            case SCMD_QUEST_REMOVE:
+                if (GET_LEVEL(ch) < LVL_GOD)
+                    send_to_char(ch, "%s\r\n", usage_msg);
+                else
+                    quest_remove(ch, arg2);
+                break;
             default: /* Whe should never get here, but... */
-                send_to_char(ch, "%s\r\n", GET_LEVEL(ch) < LVL_IMMORT ? quest_mort_usage : quest_imm_usage);
+                send_to_char(ch, "%s\r\n", usage_msg);
                 break;
         } /* switch on subcmd number */
     }
@@ -1832,6 +1985,7 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg)
     qst_vnum vnum;
     qst_rnum rnum;
     char buf[MAX_INPUT_LENGTH];
+    char formatted_info[MAX_QUEST_MSG];
 
     if (!IS_NPC(qm) || !IS_TEMP_QUESTMASTER(qm)) {
         send_to_char(ch, "Este mob não é um mestre de buscas temporário.\r\n");
@@ -1866,7 +2020,7 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg)
         act("$n aceitou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
         send_to_char(ch, "%s diz, 'As instruções para esta busca são:'\r\n", GET_NAME(qm));
         set_quest(ch, rnum);
-        send_to_char(ch, "%s", QST_INFO(rnum));
+        send_to_char(ch, "%s", format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
         if (QST_TIME(rnum) != -1) {
             send_to_char(ch, "%s diz, 'Você tem um tempo limite de %d tick%s para completar esta busca!'\r\n",
                          GET_NAME(qm), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
