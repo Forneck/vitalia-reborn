@@ -101,6 +101,7 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
 void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int target_vnum, int reward);
 void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target_vnum, int reward);
 void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int reward);
+void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room_vnum destination_room, int reward);
 bool is_mob_excluded_from_quests(struct char_data *mob);
 int count_mob_posted_quests(void);
 bool can_add_mob_posted_quest(void);

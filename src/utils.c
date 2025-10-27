@@ -3477,6 +3477,165 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
 }
 
 /**
+ * Faz um mob postar uma quest de escolta (AQ_MOB_ESCORT).
+ * @param ch O mob que posta a quest
+ * @param escort_mob_vnum VNUM do mob a ser escoltado
+ * @param destination_room VNUM da sala de destino
+ * @param reward Recompensa oferecida
+ */
+void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room_vnum destination_room, int reward)
+{
+    mob_vnum questmaster_vnum;
+    qst_vnum new_quest_vnum;
+    struct aq_data *new_quest;
+    int difficulty;
+    int calculated_reward;
+    zone_rnum mob_zone;
+    char quest_name[MAX_QUEST_NAME];
+    char quest_desc[MAX_QUEST_DESC];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+    char *escort_name = "um viajante";
+    char *dest_name = "um local seguro";
+    mob_rnum escort_mob_rnum = NOBODY;
+    room_rnum dest_room_rnum = NOWHERE;
+
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Check if we've reached the limit of mob-posted quests */
+    if (!can_add_mob_posted_quest()) {
+        return;
+    }
+
+    /* Obter nome do mob a ser escoltado */
+    if (escort_mob_vnum != NOTHING) {
+        escort_mob_rnum = real_mobile(escort_mob_vnum);
+        if (escort_mob_rnum != NOBODY) {
+            escort_name = GET_NAME(&mob_proto[escort_mob_rnum]);
+        }
+    }
+
+    /* Obter nome da sala de destino */
+    if (destination_room != NOTHING) {
+        dest_room_rnum = real_room(destination_room);
+        if (dest_room_rnum != NOWHERE) {
+            dest_name = world[dest_room_rnum].name;
+        }
+    }
+
+    /* Encontra zona do mob */
+    mob_zone = world[IN_ROOM(ch)].zone;
+
+    /* Encontra questmaster */
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        return;
+    }
+
+    /* Cria uma nova quest */
+    CREATE(new_quest, struct aq_data, 1);
+
+    /* Gera VNUM único para a nova quest baseado na zona */
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    while (real_quest(new_quest_vnum) != NOTHING) {
+        new_quest_vnum++;
+        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
+            new_quest_vnum = zone_table[mob_zone].bot + 9000;
+        }
+    }
+
+    /* Configura quest básica */
+    /* Configura quest básica */
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = AQ_MOB_ESCORT;
+    new_quest->target = escort_mob_vnum;
+    new_quest->qm = questmaster_vnum;
+    new_quest->flags = AQ_MOB_POSTED; /* Marca como postada por mob */
+
+    /* Calcula dificuldade e recompensa */
+    difficulty = MAX(1, GET_LEVEL(ch) / 10);
+    calculated_reward = MAX(100, reward);
+
+    /* Seleciona item de recompensa baseado na dificuldade */
+    reward_item = select_mob_inventory_reward(ch, difficulty);
+
+    /* Configura valores da quest */
+    int base_questpoints = 10 + difficulty;
+
+    /* Bonus para mobs corajosos */
+    if (GET_GENBRAVE(ch) > 70) {
+        base_questpoints += 2;
+    } else if (GET_GENBRAVE(ch) > 40) {
+        base_questpoints += 1;
+    }
+
+    new_quest->value[0] = URANGE(2, base_questpoints, 15);         /* Questpoints reward */
+    new_quest->value[1] = calculated_reward / 4;                   /* Penalty for failure */
+    new_quest->value[2] = MAX(10, GET_LEVEL(ch) - 5);              /* Min level */
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 20); /* Max level */
+    new_quest->value[4] = -1;                                      /* No time limit */
+    new_quest->value[5] = destination_room;                        /* Destination room in RETURNMOB field */
+    new_quest->value[6] = 1;                                       /* Quantity */
+
+    /* Configura recompensas */
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 2; /* Escort quests give moderate XP */
+    new_quest->obj_reward = reward_item;
+
+    /* Cria strings da quest */
+    snprintf(quest_name, sizeof(quest_name), "Escoltar %s", escort_name);
+    snprintf(quest_desc, sizeof(quest_desc), "%s precisa de escolta", escort_name);
+    snprintf(
+        quest_info, sizeof(quest_info),
+        "%s precisa ser escoltado até %s com segurança. "
+        "Aceite esta busca e guie o viajante até o destino para receber %d moedas de ouro e %d pontos de experiência.",
+        escort_name, dest_name, calculated_reward, calculated_reward * 2);
+    snprintf(quest_done, sizeof(quest_done), "Muito obrigado por me escoltar com segurança!");
+
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Entendo. É uma jornada perigosa mesmo.");
+
+    /* Adiciona a quest ao sistema */
+    if (add_quest(new_quest) < 0) {
+        log1("SYSERR: Failed to add escort quest for %s (escort mob %d)", GET_NAME(ch), escort_mob_vnum);
+        free_quest(new_quest);
+        return;
+    }
+
+    /* Check if mob can reach questmaster, if not make it a temporary questmaster */
+    make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
+
+    /* Deduz o ouro do mob */
+    GET_GOLD(ch) -= calculated_reward;
+
+    /* Aumenta quest_tendency por postar uma quest */
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+
+    /* Mensagens para jogadores */
+    act("$n escreve um pedido de escolta e o envia para o questmaster.", FALSE, ch, 0, 0, TO_ROOM);
+
+    /* Log da ação */
+    log1("ESCORT QUEST: %s (room %d) created escort quest %d (mob %d to room %d) with QM %d, reward %d gold",
+         GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)), new_quest_vnum, escort_mob_vnum, destination_room, questmaster_vnum,
+         calculated_reward);
+
+    /* Salva quest para persistência */
+    if (save_quests(mob_zone)) {
+        log1("ESCORT QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
+    } else {
+        log1("SYSERR: Failed to save escort quest %d to disk", new_quest_vnum);
+    }
+}
+
+/**
  * Encontra um questmaster acessível na zona especificada.
  * Procura questmasters que estão atualmente carregados no jogo e podem ser alcançados.
  * @param ch O mob que quer encontrar um questmaster
