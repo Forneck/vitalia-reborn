@@ -245,7 +245,7 @@ void assign_the_quests(void)
 /* Quest Info Formatting Functions                                          */
 /*--------------------------------------------------------------------------*/
 
-/** Format quest info message, replacing room numbers with room names for clear room quests.
+/** Format quest info message, replacing room numbers with room names for room-related quests.
  * @param rnum The real quest number.
  * @param buf Output buffer to store the formatted message.
  * @param bufsize Size of the output buffer.
@@ -254,8 +254,8 @@ static char *format_quest_info(qst_rnum rnum, char *buf, size_t bufsize)
 {
     const char *info = QST_INFO(rnum);
 
-    /* For AQ_ROOM_CLEAR quests, replace room number with room name */
-    if (QST_TYPE(rnum) == AQ_ROOM_CLEAR && QST_TARGET(rnum) != NOTHING) {
+    /* For AQ_ROOM_FIND and AQ_ROOM_CLEAR quests, replace room number with room name */
+    if ((QST_TYPE(rnum) == AQ_ROOM_FIND || QST_TYPE(rnum) == AQ_ROOM_CLEAR) && QST_TARGET(rnum) != NOTHING) {
         room_rnum room_rnum_val = real_room(QST_TARGET(rnum));
 
         if (room_rnum_val != NOWHERE) {
