@@ -52,7 +52,7 @@ int max_pathfind_iterations = 0; /* 0 = dynamic scaling, >0 = fixed value - can 
 int max_zone_path = 0;           /* 0 = dynamic scaling, >0 = fixed value - can be adjusted in CEDIT */
 
 /* Maximum number of objects allowed in a player-owned house. */
-int max_house_objs = 500; /* Default limit of 500 objects per house */
+int max_house_objs = 60; /* Default limit of 60 objects per house */
 
 /* pk_allowed sets the tone of the entire game.  If pk_allowed is set to NO,
  * then players will not be allowed to kill, summon, charm, or sleep other

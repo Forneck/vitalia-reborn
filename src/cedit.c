@@ -1245,7 +1245,7 @@ void cedit_parse(struct descriptor_data *d, char *arg)
 
                 case 'w':
                 case 'W':
-                    write_to_output(d, "\r\nEnter max objects allowed in houses (0=unlimited, 1-10000): ");
+                    write_to_output(d, "\r\nEnter max objects allowed in houses (0=unlimited, 1-250): ");
                     OLC_MODE(d) = CEDIT_MAX_HOUSE_OBJS;
                     return;
 
@@ -2124,9 +2124,9 @@ void cedit_parse(struct descriptor_data *d, char *arg)
             if (!*arg) {
                 write_to_output(d,
                                 "That is an invalid choice!\r\n"
-                                "Enter max objects allowed in houses (0=unlimited, 1-10000): ");
+                                "Enter max objects allowed in houses (0=unlimited, 1-250): ");
             } else {
-                OLC_CONFIG(d)->play.max_house_objs = MIN(MAX(atoi(arg), 0), 10000);
+                OLC_CONFIG(d)->play.max_house_objs = MIN(MAX(atoi(arg), 0), 250);
                 cedit_disp_game_play_options(d);
             }
             break;
