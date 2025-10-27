@@ -42,9 +42,9 @@ static const char *quest_cmd[] = {"list", "history", "join", "leave", "progress"
 static const char *quest_mort_usage = "Uso: quest list | history | progress | join <nn> | leave";
 
 static const char *quest_imm_usage =
-    "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum>";
+    "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum> confirm";
 static const char *quest_god_usage =
-    "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum>";
+    "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum> confirm";
 
 /*--------------------------------------------------------------------------*/
 /* Utility Functions                                                        */
@@ -1150,18 +1150,21 @@ static void quest_remove(struct char_data *ch, char *argument)
     qst_rnum rnum;
     qst_vnum quest_vnum;
     int quest_num;
+    char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
 
     if (GET_LEVEL(ch) < LVL_GOD) {
         send_to_char(ch, "You must be at least level GOD to remove quests.\r\n");
         return;
     }
 
-    if (!*argument) {
+    two_arguments(argument, arg1, arg2);
+
+    if (!*arg1) {
         send_to_char(ch, "%s\r\n", quest_god_usage);
         return;
     }
 
-    quest_num = atoi(argument);
+    quest_num = atoi(arg1);
 
     /* First try to find by vnum (direct vnum lookup) */
     if ((rnum = real_quest(quest_num)) != NOTHING) {
@@ -1181,17 +1184,27 @@ static void quest_remove(struct char_data *ch, char *argument)
         return;
     }
 
-    /* Show quest info before deletion */
-    send_to_char(ch, "Removing quest:\r\n");
-    send_to_char(ch, "  VNum: %d, Name: %s\r\n", quest_vnum, QST_NAME(rnum));
-    send_to_char(ch, "  Desc: %s\r\n", QST_DESC(rnum));
+    /* Show quest info and require confirmation */
+    if (!*arg2 || str_cmp(arg2, "confirm") != 0) {
+        send_to_char(ch, "Quest to be removed:\r\n");
+        send_to_char(ch, "  VNum: \ty%d\tn, Name: \tc%s\tn\r\n", quest_vnum, QST_NAME(rnum));
+        send_to_char(ch, "  Desc: \tc%s\tn\r\n", QST_DESC(rnum));
+        send_to_char(ch, "  Type: \ty%s\tn\r\n", quest_types[QST_TYPE(rnum)]);
+        send_to_char(ch, "\r\nTo confirm deletion, type: \tYquest remove %d confirm\tn\r\n", quest_num);
+        return;
+    }
 
-    /* Delete the quest */
+    /* Delete the quest with confirmation */
+    char quest_name_copy[MAX_QUEST_NAME];
+    snprintf(quest_name_copy, sizeof(quest_name_copy), "%s", QST_NAME(rnum));
+
+    send_to_char(ch, "Removing quest %d...\r\n", quest_vnum);
     if (delete_quest(rnum)) {
-        send_to_char(ch, "Quest successfully removed.\r\n");
-        mudlog(NRM, LVL_GOD, TRUE, "(GC) %s removed mob-posted quest %d.", GET_NAME(ch), quest_vnum);
+        send_to_char(ch, "\tGQuest successfully removed.\tn\r\n");
+        mudlog(NRM, LVL_GOD, TRUE, "(GC) %s removed mob-posted quest %d (%s).", GET_NAME(ch), quest_vnum,
+               quest_name_copy);
     } else {
-        send_to_char(ch, "Failed to remove quest.\r\n");
+        send_to_char(ch, "\tRFailed to remove quest.\tn\r\n");
     }
 }
 
