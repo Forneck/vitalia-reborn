@@ -904,7 +904,7 @@ void mobile_activity(void)
                 }
             } else {
                 /* Mob doesn't have a quest, check if it should try to find one */
-                if (GET_GENQUEST(ch) > 30 && GET_GENADVENTURER(ch) > 20) {
+                if (GET_GENQUEST(ch) > 30 && GET_GENADVENTURER(ch) > 5) {
                     /* Look for available mob-posted quests */
                     qst_rnum rnum;
                     for (rnum = 0; rnum < total_quests; rnum++) {
@@ -994,7 +994,7 @@ void mobile_activity(void)
             int reward;
 
             /* Check genetics and decide what type of quest to post */
-            if (GET_GENADVENTURER(ch) > 50 && rand_number(1, 100) <= 30) {
+            if (GET_GENADVENTURER(ch) > 15 && rand_number(1, 100) <= 30) {
                 /* Post exploration quests */
                 if (rand_number(1, 100) <= 40) {
                     /* AQ_OBJ_FIND quest - find a random object in the zone */
