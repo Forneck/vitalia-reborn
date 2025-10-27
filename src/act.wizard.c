@@ -6275,37 +6275,37 @@ void init_disabled_commands(void)
 
 bool is_command_disabled(int cmd_num)
 {
-    if (!disabled_cmd)
-        init_disabled_commands();
-
     if (cmd_num < 0 || cmd_num >= num_of_cmds)
         return FALSE;
 
     return disabled_cmd[cmd_num];
 }
 
+static void list_disabled_commands(struct char_data *ch)
+{
+    int i;
+    bool found = FALSE;
+
+    send_to_char(ch, "Comandos desabilitados:\r\n");
+    for (i = 0; i < num_of_cmds; i++) {
+        if (disabled_cmd[i]) {
+            send_to_char(ch, "  %s\r\n", complete_cmd_info[i].command);
+            found = TRUE;
+        }
+    }
+    if (!found)
+        send_to_char(ch, "  Nenhum comando está desabilitado.\r\n");
+}
+
 ACMD(do_disable)
 {
     char arg[MAX_INPUT_LENGTH];
-    int cmd_num, i;
-
-    if (!disabled_cmd)
-        init_disabled_commands();
+    int cmd_num;
 
     one_argument(argument, arg);
 
     if (!*arg) {
-        /* List all disabled commands */
-        bool found = FALSE;
-        send_to_char(ch, "Comandos desabilitados:\r\n");
-        for (i = 0; i < num_of_cmds; i++) {
-            if (disabled_cmd[i]) {
-                send_to_char(ch, "  %s\r\n", complete_cmd_info[i].command);
-                found = TRUE;
-            }
-        }
-        if (!found)
-            send_to_char(ch, "  Nenhum comando está desabilitado.\r\n");
+        list_disabled_commands(ch);
         return;
     }
 
@@ -6340,25 +6340,12 @@ ACMD(do_disable)
 ACMD(do_enable)
 {
     char arg[MAX_INPUT_LENGTH];
-    int cmd_num, i;
-
-    if (!disabled_cmd)
-        init_disabled_commands();
+    int cmd_num;
 
     one_argument(argument, arg);
 
     if (!*arg) {
-        /* List all disabled commands */
-        bool found = FALSE;
-        send_to_char(ch, "Comandos desabilitados:\r\n");
-        for (i = 0; i < num_of_cmds; i++) {
-            if (disabled_cmd[i]) {
-                send_to_char(ch, "  %s\r\n", complete_cmd_info[i].command);
-                found = TRUE;
-            }
-        }
-        if (!found)
-            send_to_char(ch, "  Nenhum comando está desabilitado.\r\n");
+        list_disabled_commands(ch);
         return;
     }
 
