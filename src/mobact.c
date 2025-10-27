@@ -2443,6 +2443,10 @@ bool mob_try_stealth_follow(struct char_data *ch)
         if (IN_ROOM(vict) == NOWHERE || IN_ROOM(vict) < 0 || IN_ROOM(vict) > top_of_world)
             continue;
 
+        /* Don't follow immortals (level LVL_IMMORT or above) */
+        if (GET_LEVEL(vict) >= LVL_IMMORT)
+            continue;
+
         /* Preferência por players, especialmente se o mob for evil */
         int score = 0;
 

@@ -976,10 +976,10 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
         snprintf(buf, sizeof(buf), "%s diz, 'Eu não conheço nenhuma busca assim, %s!'", GET_NAME(qm), GET_NAME(ch));
     else if ((rnum = real_quest(vnum)) == NOTHING)
         snprintf(buf, sizeof(buf), "%s diz, 'Eu não conheço essa busca, %s!'", GET_NAME(qm), GET_NAME(ch));
-    else if (GET_LEVEL(ch) < QST_MINLEVEL(rnum))
+    else if (GET_LEVEL(ch) < LVL_IMMORT && GET_LEVEL(ch) < QST_MINLEVEL(rnum))
         snprintf(buf, sizeof(buf), "%s diz, 'Sinto muito, mas você ainda não pode participar desta busca, %s!'",
                  GET_NAME(qm), GET_NAME(ch));
-    else if (GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
+    else if (GET_LEVEL(ch) < LVL_IMMORT && GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
         snprintf(buf, sizeof(buf), "%s diz, 'Sinto muito, mas você tem muita experiência para aceitar esta busca, %s!'",
                  GET_NAME(qm), GET_NAME(ch));
     else if (is_complete(ch, vnum))
@@ -2001,10 +2001,10 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg)
         snprintf(buf, sizeof(buf), "%s diz, 'Eu não conheço nenhuma busca assim, %s!'", GET_NAME(qm), GET_NAME(ch));
     else if ((rnum = real_quest(vnum)) == NOTHING)
         snprintf(buf, sizeof(buf), "%s diz, 'Eu não conheço essa busca, %s!'", GET_NAME(qm), GET_NAME(ch));
-    else if (GET_LEVEL(ch) < QST_MINLEVEL(rnum))
+    else if (GET_LEVEL(ch) < LVL_IMMORT && GET_LEVEL(ch) < QST_MINLEVEL(rnum))
         snprintf(buf, sizeof(buf), "%s diz, 'Sinto muito, mas você ainda não pode participar desta busca, %s!'",
                  GET_NAME(qm), GET_NAME(ch));
-    else if (GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
+    else if (GET_LEVEL(ch) < LVL_IMMORT && GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
         snprintf(buf, sizeof(buf), "%s diz, 'Sinto muito, mas você tem muita experiência para aceitar esta busca, %s!'",
                  GET_NAME(qm), GET_NAME(ch));
     else if (is_complete(ch, vnum))
