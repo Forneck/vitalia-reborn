@@ -2696,7 +2696,7 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
                  GET_NAME(ch), calculated_reward, calculated_reward * 3);
         snprintf(quest_done, sizeof(quest_done), "Excelente! Você eliminou um assassino. A justiça foi feita!");
     } else {
-        snprintf(quest_name, sizeof(quest_name), "Caça: %s", target_name);
+        snprintf(quest_name, sizeof(quest_name), "Caça %s", target_name);
         snprintf(quest_desc, sizeof(quest_desc), "%s oferece recompensa por %s", GET_NAME(ch), target_name);
         snprintf(quest_info, sizeof(quest_info),
                  "%s está oferecendo uma recompensa pela eliminação de %s. "
@@ -3334,7 +3334,7 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
     new_quest->obj_reward = reward_item;
 
     /* Cria strings da quest */
-    snprintf(quest_name, sizeof(quest_name), "Eliminar: %s", target_name);
+    snprintf(quest_name, sizeof(quest_name), "Eliminar %s", target_name);
     snprintf(quest_desc, sizeof(quest_desc), "%s quer eliminar %s", GET_NAME(ch), target_name);
     snprintf(quest_info, sizeof(quest_info),
              "%s está incomodado com %s e quer vê-lo eliminado. "
