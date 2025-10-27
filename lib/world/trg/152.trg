@@ -183,15 +183,10 @@ eremita_transformacao~
 * This zone was number 152 on The Builder Academy, so you
 * should be looking for 152xx, where xx is 00-99.
 * Trigger de Combate (k) que dispara uma vez para transformar o Eremita.
-if %self.var('transformado')% == 1
-  halt
-end
 emote 	Yao ser atingido, o corpo do eremita frágil dissolve-se numa poça de lodo borbulhante!	n
 say 	R'GRRRRAAAAAAAARRRGGGHHH!'	n
 emote 	YDo chão, uma monstruosidade de lama e ossos ergue-se, virando os seus olhos brilhantes para %actor.name%!	n
 %load% mob 15210
-%force% furia %kill% %actor.name%
-set %self.var('transformado')% 1
 %purge% %self%
 ~
 #15208
