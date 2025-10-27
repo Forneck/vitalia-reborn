@@ -1148,8 +1148,9 @@ static void consume_ammo(struct char_data *ch)
         if (GET_OBJ_VAL(ammo, 0) > 1) {
             GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo) / GET_OBJ_VAL(ammo, 0));
             GET_OBJ_VAL(ammo, 0)--;
-        } else
+        } else {
             extract_obj(ammo);
+        }
     }
 }
 
