@@ -1139,6 +1139,20 @@ ACMD(do_seize)
     }
 }
 
+/* Helper function to consume ammo from quiver */
+static void consume_ammo(struct char_data *ch)
+{
+    struct obj_data *ammo;
+
+    if ((ammo = GET_EQ(ch, WEAR_QUIVER)) != NULL) {
+        if (GET_OBJ_VAL(ammo, 0) > 1) {
+            GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo) / GET_OBJ_VAL(ammo, 0));
+            GET_OBJ_VAL(ammo, 0)--;
+        } else
+            extract_obj(ammo);
+    }
+}
+
 ACMD(do_shoot)
 {
     struct char_data *vict, *tmp;
@@ -1269,13 +1283,7 @@ ACMD(do_shoot)
                         act("$n se concentra e atira, mas erra o alvo.", FALSE, ch, 0, 0, TO_ROOM);
 
                         /* Consume ammo even on miss */
-                        if ((ammo = GET_EQ(ch, WEAR_QUIVER)) != NULL) {
-                            if (GET_OBJ_VAL(ammo, 0) > 1) {
-                                GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo) / GET_OBJ_VAL(ammo, 0));
-                                GET_OBJ_VAL(ammo, 0)--;
-                            } else
-                                extract_obj(ammo);
-                        }
+                        consume_ammo(ch);
                         found = TRUE;
                     } else {
                         /* Shot hit */
@@ -1353,13 +1361,7 @@ ACMD(do_shoot)
                         }
 
                         /* Safe to handle ammo now */
-                        if ((ammo = GET_EQ(ch, WEAR_QUIVER)) != NULL) {
-                            if (GET_OBJ_VAL(ammo, 0) > 1) {
-                                GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo) / GET_OBJ_VAL(ammo, 0));
-                                GET_OBJ_VAL(ammo, 0)--;
-                            } else
-                                extract_obj(ammo);
-                        }
+                        consume_ammo(ch);
                         found = TRUE;
                     }
                 } else {
