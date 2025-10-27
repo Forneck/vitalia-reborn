@@ -4256,6 +4256,7 @@ static void load_default_config(void)
     CONFIG_SCHOOL_WEATHER_AFFECTS = school_weather_affects;
     CONFIG_MAX_PATHFIND_ITERATIONS = max_pathfind_iterations;
     CONFIG_MAX_ZONE_PATH = max_zone_path;
+    CONFIG_MAX_HOUSE_OBJS = max_house_objs;
 
     /* Rent / crashsave options. */
     CONFIG_FREE_RENT = free_rent;
@@ -4508,6 +4509,8 @@ void load_config(void)
                     CONFIG_MAX_PATHFIND_ITERATIONS = num;
                 else if (!str_cmp(tag, "max_zone_path"))
                     CONFIG_MAX_ZONE_PATH = num;
+                else if (!str_cmp(tag, "max_house_objs"))
+                    CONFIG_MAX_HOUSE_OBJS = num;
 
                 break;
 

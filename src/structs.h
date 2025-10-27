@@ -1549,6 +1549,7 @@ struct game_data {
     int school_weather_affects;  /**< Does weather affect spells based on school? */
     int max_pathfind_iterations; /**< Maximum iterations for advanced pathfinding */
     int max_zone_path;           /**< Maximum zones in a pathfinding path */
+    int max_house_objs;          /**< Maximum objects allowed in player houses */
 
     char *OK;       /**< When player receives 'Okay.' text.    */
     char *HUH;      /**< 'Huh!?!'                              */

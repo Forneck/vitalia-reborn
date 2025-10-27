@@ -39,6 +39,7 @@ static void hcontrol_build_house(struct char_data *ch, char *arg);
 static void hcontrol_destroy_house(struct char_data *ch, char *arg);
 static void hcontrol_pay_house(struct char_data *ch, char *arg);
 static void House_listrent(struct char_data *ch, room_vnum vnum);
+static int House_count_objs(struct obj_data *obj);
 /* CONVERSION code starts here -- see comment below. */
 static int ascii_convert_house(struct char_data *ch, obj_vnum vnum);
 static void hcontrol_convert_houses(struct char_data *ch);
@@ -770,6 +771,40 @@ void House_list_guests(struct char_data *ch, int i, int quiet)
 
     send_to_char(ch, "\r\n");
 }
+
+/* Count objects recursively including those in containers */
+static int House_count_objs(struct obj_data *obj)
+{
+    int count = 0;
+
+    while (obj) {
+        count++;
+        if (obj->contains)
+            count += House_count_objs(obj->contains);
+        obj = obj->next_content;
+    }
+
+    return count;
+}
+
+/* Check if a house has reached its object limit */
+int House_can_add_obj(room_rnum room)
+{
+    int count, max_objs;
+
+    /* If max_house_objs is 0, no limit */
+    max_objs = CONFIG_MAX_HOUSE_OBJS;
+    if (max_objs <= 0)
+        return 1;
+
+    /* Count current objects in the room */
+    count = House_count_objs(world[room].contents);
+
+    return (count < max_objs);
+}
+
+/* Get the current object count for a house room */
+int House_get_obj_count(room_rnum room) { return House_count_objs(world[room].contents); }
 
 /*************************************************************************
  * All code below this point and the code above, marked "CONVERSION"     *
