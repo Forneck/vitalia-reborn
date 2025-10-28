@@ -1578,6 +1578,10 @@ static void init_descriptor(struct descriptor_data *newd, int desc)
     newd->desc_num = last_desc;
     newd->pProtocol = ProtocolCreate(); /* KaVir's plugin */
     newd->events = create_list();
+
+    /* Initialize quest confirmation fields */
+    newd->pending_quest_vnum = NOTHING;
+    newd->pending_questmaster = NULL;
 }
 
 static int new_descriptor(socket_t s)

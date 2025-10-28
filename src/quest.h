@@ -189,4 +189,7 @@ int save_quests(zone_rnum zone_num);
 extern const char *aq_flags[];    /* names for quest flags (quest.c) */
 extern const char *quest_types[]; /* named for quest types (quest.c) */
 
+/* Quest accept confirmation - called from interpreter.c */
+void accept_pending_quest(struct descriptor_data *d);
+
 #endif /* _QUEST_H_ */

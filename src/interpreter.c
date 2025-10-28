@@ -2004,6 +2004,26 @@ void nanny(struct descriptor_data *d, char *arg)
             STATE(d) = CON_RMOTD;
             break;
 
+        case CON_QACCEPT: /* quest accept: confirmation */
+            if (!*arg || (*arg != 's' && *arg != 'S' && *arg != 'n' && *arg != 'N')) {
+                write_to_output(d, "Por favor, responda s ou n: ");
+                return;
+            }
+            if (*arg == 'n' || *arg == 'N') {
+                write_to_output(d, "\r\nBusca cancelada.\r\n");
+                d->pending_quest_vnum = NOTHING;
+                d->pending_questmaster = NULL;
+                write_to_output(d, "*** APERTE ENTER: ");
+                STATE(d) = CON_PLAYING;
+                return;
+            }
+
+            /* Accept the quest */
+            accept_pending_quest(d);
+            write_to_output(d, "\r\n*** APERTE ENTER: ");
+            STATE(d) = CON_PLAYING;
+            break;
+
         default:
             log1("SYSERR: Nanny: illegal state of con'ness (%d) for '%s'; closing connection.", STATE(d),
                  d->character ? GET_NAME(d->character) : "<unknown>");
