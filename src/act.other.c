@@ -1458,6 +1458,64 @@ ACMD(do_elevate)
     STATE(ch->desc) = CON_ELEVATE_CONF;
 }
 
+/* Helper function to get the maximum allowed spawns for a mob from zone files.
+ * Searches all zone reset commands to find the max limit for the given mob.
+ * Returns the zone limit if found, otherwise returns a default limit of 25.
+ * @param mob_vnum The virtual number of the mob to check
+ * @return The maximum allowed spawns (zone limit or 25 as fallback) */
+static int get_mob_spawn_limit(mob_vnum mob_vnum)
+{
+    zone_rnum zone;
+    int cmd_no;
+    int max_limit = 0;
+    mob_rnum mob_rnum_val;
+
+    /* Convert virtual number to real number */
+    mob_rnum_val = real_mobile(mob_vnum);
+    if (mob_rnum_val == NOBODY)
+        return 25; /* Default limit if mob doesn't exist */
+
+    /* Search through all zones to find reset commands for this mob */
+    for (zone = 0; zone <= top_of_zone_table; zone++) {
+        for (cmd_no = 0; zone_table[zone].cmd[cmd_no].command != 'S'; cmd_no++) {
+            /* Check if this is a mob spawn command ('M') for our mob */
+            if (zone_table[zone].cmd[cmd_no].command == 'M' && zone_table[zone].cmd[cmd_no].arg1 == mob_rnum_val) {
+                /* arg2 contains the max number allowed in the world */
+                int zone_max = zone_table[zone].cmd[cmd_no].arg2;
+                if (zone_max > max_limit)
+                    max_limit = zone_max;
+            }
+        }
+    }
+
+    /* If we found a limit in zone files, use it; otherwise use default of 25 */
+    return (max_limit > 0) ? max_limit : 25;
+}
+
+/* Helper function to check if spawning a mob would exceed limits.
+ * Checks both the zone file limit and enforces a maximum of 25 for skill-spawned mobs.
+ * @param mob_vnum The virtual number of the mob to spawn
+ * @return TRUE if the mob can be spawned, FALSE if limit would be exceeded */
+static bool can_spawn_skill_mob(mob_vnum mob_vnum)
+{
+    mob_rnum mob_rnum_val;
+    int zone_limit;
+    int current_count;
+    int skill_spawn_limit = 25; /* Maximum skill-spawned mobs as per requirements */
+
+    mob_rnum_val = real_mobile(mob_vnum);
+    if (mob_rnum_val == NOBODY)
+        return FALSE; /* Mob doesn't exist */
+
+    current_count = mob_index[mob_rnum_val].number;
+    zone_limit = get_mob_spawn_limit(mob_vnum);
+
+    /* Use the lesser of zone limit and skill spawn limit (25) */
+    int effective_limit = (zone_limit < skill_spawn_limit) ? zone_limit : skill_spawn_limit;
+
+    return (current_count < effective_limit);
+}
+
 ACMD(do_mine)
 {
     int skill_num = GET_SKILL(ch, SKILL_MINE);
@@ -1557,11 +1615,13 @@ ACMD(do_mine)
 
         // Very small chance to attract a traveling dwarf who might trade
         if (percent <= prob && vnum != NOTHING && rand_number(1, 100) <= 2) {
-            struct char_data *dwarf_mob = read_mobile(14410, VIRTUAL);   // Traveling dwarf
-            if (dwarf_mob) {
-                char_to_room(dwarf_mob, IN_ROOM(ch));
-                send_to_char(ch, "O barulho da mineração atraiu um anão viajante!\r\n");
-                act("O barulho da mineração de $n atraiu um anão viajante!", TRUE, ch, 0, 0, TO_ROOM);
+            if (can_spawn_skill_mob(14410)) {
+                struct char_data *dwarf_mob = read_mobile(14410, VIRTUAL);   // Traveling dwarf
+                if (dwarf_mob) {
+                    char_to_room(dwarf_mob, IN_ROOM(ch));
+                    send_to_char(ch, "O barulho da mineração atraiu um anão viajante!\r\n");
+                    act("O barulho da mineração de $n atraiu um anão viajante!", TRUE, ch, 0, 0, TO_ROOM);
+                }
             }
         }
 
@@ -1668,18 +1728,22 @@ ACMD(do_fishing)
         if (percent <= prob && rand_number(1, 100) <= 5) {
             int fish_spawn = rand_number(1, 100);
             if (fish_spawn <= 70) {
-                struct char_data *fish_mob = read_mobile(10864, VIRTUAL);   // Colorful fish school
-                if (fish_mob) {
-                    char_to_room(fish_mob, IN_ROOM(ch));
-                    send_to_char(ch, "Sua pesca atraiu um cardume de peixes coloridos!\r\n");
-                    act("A pesca de $n atraiu um cardume de peixes coloridos!", TRUE, ch, 0, 0, TO_ROOM);
+                if (can_spawn_skill_mob(10864)) {
+                    struct char_data *fish_mob = read_mobile(10864, VIRTUAL);   // Colorful fish school
+                    if (fish_mob) {
+                        char_to_room(fish_mob, IN_ROOM(ch));
+                        send_to_char(ch, "Sua pesca atraiu um cardume de peixes coloridos!\r\n");
+                        act("A pesca de $n atraiu um cardume de peixes coloridos!", TRUE, ch, 0, 0, TO_ROOM);
+                    }
                 }
             } else {
-                struct char_data *fisherman_mob = read_mobile(2967, VIRTUAL);   // Zone 29 fish thrower
-                if (fisherman_mob) {
-                    char_to_room(fisherman_mob, IN_ROOM(ch));
-                    send_to_char(ch, "Sua pesca atraiu um arremessador de peixe!\r\n");
-                    act("A pesca de $n atraiu um arremessador de peixe!", TRUE, ch, 0, 0, TO_ROOM);
+                if (can_spawn_skill_mob(2967)) {
+                    struct char_data *fisherman_mob = read_mobile(2967, VIRTUAL);   // Zone 29 fish thrower
+                    if (fisherman_mob) {
+                        char_to_room(fisherman_mob, IN_ROOM(ch));
+                        send_to_char(ch, "Sua pesca atraiu um arremessador de peixe!\r\n");
+                        act("A pesca de $n atraiu um arremessador de peixe!", TRUE, ch, 0, 0, TO_ROOM);
+                    }
                 }
             }
         }
@@ -1755,11 +1819,13 @@ ACMD(do_forage)
 
         // Small chance to attract a curious squirrel
         if (percent <= prob && rand_number(1, 100) <= 8) {
-            struct char_data *squirrel_mob = read_mobile(10727, VIRTUAL);   // Gray squirrel
-            if (squirrel_mob) {
-                char_to_room(squirrel_mob, IN_ROOM(ch));
-                send_to_char(ch, "Sua procura por comida atraiu um esquilo curioso!\r\n");
-                act("A procura de $n por comida atraiu um esquilo curioso!", TRUE, ch, 0, 0, TO_ROOM);
+            if (can_spawn_skill_mob(10727)) {
+                struct char_data *squirrel_mob = read_mobile(10727, VIRTUAL);   // Gray squirrel
+                if (squirrel_mob) {
+                    char_to_room(squirrel_mob, IN_ROOM(ch));
+                    send_to_char(ch, "Sua procura por comida atraiu um esquilo curioso!\r\n");
+                    act("A procura de $n por comida atraiu um esquilo curioso!", TRUE, ch, 0, 0, TO_ROOM);
+                }
             }
         }
 
