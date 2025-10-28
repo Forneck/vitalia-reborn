@@ -2797,7 +2797,7 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj, v
                 case 'Y':
                     CHECK_NULL(vict_obj, UMUMA((const struct char_data *)vict_obj));
                     break;
-                    /* uppercase previous word */
+                /* uppercase previous word */
                 case 'u':
                     for (j = buf; j > lbuf && !isspace((int)*(j - 1)); j--)
                         ;
