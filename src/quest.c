@@ -424,6 +424,36 @@ bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum)
     return TRUE;
 }
 
+/** Assigns a bounty target for the player's quest by finding a specific mob instance.
+ * @param ch The player who accepted the bounty quest.
+ * @param qm The questmaster who assigned the quest.
+ * @param rnum The real quest number.
+ * @return void */
+void assign_bounty_target(struct char_data *ch, struct char_data *qm, qst_rnum rnum)
+{
+    struct char_data *target_mob = NULL;
+    mob_rnum target_rnum = real_mobile(QST_TARGET(rnum));
+
+    /* Find a living mob with the target vnum in the world */
+    if (target_rnum != NOBODY) {
+        for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
+            if (IS_NPC(target_mob) && GET_MOB_RNUM(target_mob) == target_rnum &&
+                !MOB_FLAGGED(target_mob, MOB_NOTDEADYET)) {
+                /* Found a target - store its unique ID */
+                GET_BOUNTY_TARGET_ID(ch) = char_script_id(target_mob);
+                send_to_char(ch, "%s diz, 'O alvo foi localizado. Boa caçada!'\r\n", GET_NAME(qm));
+                break;
+            }
+        }
+    }
+
+    /* If no target found, quest still valid but target may spawn later */
+    if (!target_mob) {
+        GET_BOUNTY_TARGET_ID(ch) = NOBODY;
+        send_to_char(ch, "%s diz, 'O alvo ainda não foi avistado, mas continue procurando!'\r\n", GET_NAME(qm));
+    }
+}
+
 /** Checks if an escort quest has been completed (mob reached destination).
  * @param ch The player on the escort quest.
  * @param rnum The real quest number.
@@ -1031,27 +1061,7 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
         }
         /* For bounty quests, find and mark the target mob */
         else if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY) {
-            struct char_data *target_mob = NULL;
-            mob_rnum target_rnum = real_mobile(QST_TARGET(rnum));
-
-            /* Find a living mob with the target vnum in the world */
-            if (target_rnum != NOBODY) {
-                for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
-                    if (IS_NPC(target_mob) && GET_MOB_RNUM(target_mob) == target_rnum &&
-                        !MOB_FLAGGED(target_mob, MOB_NOTDEADYET)) {
-                        /* Found a target - store its unique ID */
-                        GET_BOUNTY_TARGET_ID(ch) = char_script_id(target_mob);
-                        send_to_char(ch, "%s diz, 'O alvo foi localizado. Boa caçada!'\r\n", GET_NAME(qm));
-                        break;
-                    }
-                }
-            }
-
-            /* If no target found, quest still valid but target may spawn later */
-            if (!target_mob) {
-                GET_BOUNTY_TARGET_ID(ch) = NOBODY;
-                send_to_char(ch, "%s diz, 'O alvo ainda não foi avistado, mas continue procurando!'\r\n", GET_NAME(qm));
-            }
+            assign_bounty_target(ch, qm, rnum);
         }
 
         save_char(ch);
@@ -2080,27 +2090,7 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg)
         }
         /* For bounty quests, find and mark the target mob */
         else if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY) {
-            struct char_data *target_mob = NULL;
-            mob_rnum target_rnum = real_mobile(QST_TARGET(rnum));
-
-            /* Find a living mob with the target vnum in the world */
-            if (target_rnum != NOBODY) {
-                for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
-                    if (IS_NPC(target_mob) && GET_MOB_RNUM(target_mob) == target_rnum &&
-                        !MOB_FLAGGED(target_mob, MOB_NOTDEADYET)) {
-                        /* Found a target - store its unique ID */
-                        GET_BOUNTY_TARGET_ID(ch) = char_script_id(target_mob);
-                        send_to_char(ch, "%s diz, 'O alvo foi localizado. Boa caçada!'\r\n", GET_NAME(qm));
-                        break;
-                    }
-                }
-            }
-
-            /* If no target found, quest still valid but target may spawn later */
-            if (!target_mob) {
-                GET_BOUNTY_TARGET_ID(ch) = NOBODY;
-                send_to_char(ch, "%s diz, 'O alvo ainda não foi avistado, mas continue procurando!'\r\n", GET_NAME(qm));
-            }
+            assign_bounty_target(ch, qm, rnum);
         }
 
         save_char(ch);
