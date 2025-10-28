@@ -1139,6 +1139,21 @@ ACMD(do_seize)
     }
 }
 
+/* Helper function to consume ammo from quiver */
+static void consume_ammo(struct char_data *ch)
+{
+    struct obj_data *ammo;
+
+    if ((ammo = GET_EQ(ch, WEAR_QUIVER)) != NULL) {
+        if (GET_OBJ_VAL(ammo, 0) > 1) {
+            GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo) / GET_OBJ_VAL(ammo, 0));
+            GET_OBJ_VAL(ammo, 0)--;
+        } else {
+            extract_obj(ammo);
+        }
+    }
+}
+
 ACMD(do_shoot)
 {
     struct char_data *vict, *tmp;
@@ -1200,18 +1215,20 @@ ACMD(do_shoot)
         }
     }
 
-    percent = rand_number(1, 101); /* 101% is a complete failure */
+    /* Calculate base probability from skill/level */
     if (!IS_NPC(ch))
         prob = GET_SKILL(ch, SKILL_BOWS);
     else
         prob = GET_LEVEL(ch);
 
-    prob += GET_OBJ_VAL(fireweapon, 0);
+    /* Apply bow accuracy bonus as percentage (val0 ranges 0-100) */
+    /* This provides a percentage-based accuracy bonus to the base skill */
+    prob = prob + (prob * GET_OBJ_VAL(fireweapon, 0) / 100);
 
-    if (percent > prob) {
-        send_to_char(ch, "Você tenta atirar mas se atrapalha.\r\n");
-        return;
-    }
+    /* Cap probability at 95 to prevent guaranteed hits */
+    prob = MIN(prob, 95);
+
+    percent = rand_number(1, 101); /* 101% is a complete failure */
 
     if ((door = search_block(arg1, dirs, FALSE)) == -1) {          /* Partial Match */
         if ((door = search_block(arg1, autoexits, FALSE)) == -1) { /* Check 'short' dirs too */
@@ -1260,88 +1277,94 @@ ACMD(do_shoot)
                         return;
                     }
 
-                    send_to_char(ch, "Você se concentra e atira.\r\n");
-                    act("$n se concentra e atira.", FALSE, ch, 0, 0, TO_ROOM);
-                    dam += GET_DAMROLL(ch);
-                    dam += dice(GET_OBJ_VAL(ammo, 1), GET_OBJ_VAL(ammo, 2));
-                    if (GET_POS(vict) < POS_FIGHTING)
-                        dam *= 1 + (POS_FIGHTING - GET_POS(vict)) / 3;
-                    /* at least 1 hp damage min per hit */
-                    dam = MAX(1, dam);
-                    if (OBJ_FLAGGED(ammo, ITEM_POISONED) && !MOB_FLAGGED(vict, MOB_NO_POISON)) {
-                        new_affect(&af);
-                        af.spell = SPELL_POISON;
-                        af.modifier = -2;
-                        af.location = APPLY_STR;
+                    /* Check if shot hits or misses */
+                    if (percent > prob) {
+                        /* Shot missed */
+                        send_to_char(ch, "Você se concentra e atira, mas erra o alvo.\r\n");
+                        act("$n se concentra e atira, mas erra o alvo.", FALSE, ch, 0, 0, TO_ROOM);
 
-                        if (AFF_FLAGGED(vict, AFF_POISON))
-                            af.duration = 1;
-                        else {
-                            /* Use level-based duration to match MAGIA-POISON help documentation */
-                            af.duration = GET_LEVEL(ch);
-                            act("Você se sente doente.", FALSE, vict, 0, ch, TO_CHAR);
-                            act("$n fica muito doente!", TRUE, vict, 0, ch, TO_ROOM);
+                        /* Consume ammo even on miss */
+                        consume_ammo(ch);
+                        found = TRUE;
+                    } else {
+                        /* Shot hit */
+                        send_to_char(ch, "Você se concentra e atira.\r\n");
+                        act("$n se concentra e atira.", FALSE, ch, 0, 0, TO_ROOM);
+                        dam += GET_DAMROLL(ch);
+                        dam += dice(GET_OBJ_VAL(ammo, 1), GET_OBJ_VAL(ammo, 2));
+                        if (GET_POS(vict) < POS_FIGHTING)
+                            dam *= 1 + (POS_FIGHTING - GET_POS(vict)) / 3;
+                        /* at least 1 hp damage min per hit */
+                        dam = MAX(1, dam);
+                        if (OBJ_FLAGGED(ammo, ITEM_POISONED) && !MOB_FLAGGED(vict, MOB_NO_POISON)) {
+                            new_affect(&af);
+                            af.spell = SPELL_POISON;
+                            af.modifier = -2;
+                            af.location = APPLY_STR;
+
+                            if (AFF_FLAGGED(vict, AFF_POISON))
+                                af.duration = 1;
+                            else {
+                                /* Use level-based duration to match MAGIA-POISON help documentation */
+                                af.duration = GET_LEVEL(ch);
+                                act("Você se sente doente.", FALSE, vict, 0, ch, TO_CHAR);
+                                act("$n fica muito doente!", TRUE, vict, 0, ch, TO_ROOM);
+                            }
+                            SET_BIT_AR(af.bitvector, AFF_POISON);
+                            affect_join(vict, &af, FALSE, FALSE, FALSE, FALSE);
                         }
-                        SET_BIT_AR(af.bitvector, AFF_POISON);
-                        affect_join(vict, &af, FALSE, FALSE, FALSE, FALSE);
+                        damage(ch, vict, dam, GET_OBJ_VAL(ammo, 3) + TYPE_HIT);
+
+                        /* Safety check: damage() can cause extract_char for ch or vict
+                         * through death, special procedures, triggers, etc.
+                         * This is critical with mobile_activity interactions.
+                         * Re-validate both ch and vict still exist before continuing */
+                        for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                            if (ch == tmp)
+                                found = TRUE;
+
+                        if (!found) {
+                            /* ch was extracted during damage(), cannot safely continue */
+                            return;
+                        }
+
+                        /* Check if ch was marked for extraction */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                            return;
+                        }
+
+                        /* Re-validate vict still exists before using it */
+                        for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                            if (vict == tmp)
+                                found = TRUE;
+
+                        if (found) {
+                            /* vict is still valid, safe to call remember and trigger */
+                            remember(ch, vict);
+                            if (rand_number(0, 1) == 1)
+                                hunt_victim(ch);
+                            hitprcnt_mtrigger(vict);
+                        }
+
+                        /* Re-validate ch again after remember/hunt_victim/trigger calls */
+                        for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
+                            if (ch == tmp)
+                                found = TRUE;
+
+                        if (!found) {
+                            /* ch was extracted during trigger/hunt, cannot continue */
+                            return;
+                        }
+
+                        /* Check extraction flag again */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
+                            return;
+                        }
+
+                        /* Safe to handle ammo now */
+                        consume_ammo(ch);
+                        found = TRUE;
                     }
-                    damage(ch, vict, dam, GET_OBJ_VAL(ammo, 3) + TYPE_HIT);
-
-                    /* Safety check: damage() can cause extract_char for ch or vict
-                     * through death, special procedures, triggers, etc.
-                     * This is critical with mobile_activity interactions.
-                     * Re-validate both ch and vict still exist before continuing */
-                    for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
-                        if (ch == tmp)
-                            found = TRUE;
-
-                    if (!found) {
-                        /* ch was extracted during damage(), cannot safely continue */
-                        return;
-                    }
-
-                    /* Check if ch was marked for extraction */
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
-                        return;
-                    }
-
-                    /* Re-validate vict still exists before using it */
-                    for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
-                        if (vict == tmp)
-                            found = TRUE;
-
-                    if (found) {
-                        /* vict is still valid, safe to call remember and trigger */
-                        remember(ch, vict);
-                        if (rand_number(0, 1) == 1)
-                            hunt_victim(ch);
-                        hitprcnt_mtrigger(vict);
-                    }
-
-                    /* Re-validate ch again after remember/hunt_victim/trigger calls */
-                    for (found = FALSE, tmp = character_list; tmp && !found; tmp = tmp->next)
-                        if (ch == tmp)
-                            found = TRUE;
-
-                    if (!found) {
-                        /* ch was extracted during trigger/hunt, cannot continue */
-                        return;
-                    }
-
-                    /* Check extraction flag again */
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
-                        return;
-                    }
-
-                    /* Safe to handle ammo now */
-                    if ((ammo = GET_EQ(ch, WEAR_QUIVER)) != NULL) {
-                        if (GET_OBJ_VAL(ammo, 0) > 1) {
-                            GET_OBJ_WEIGHT(ammo) -= (GET_OBJ_WEIGHT(ammo) / GET_OBJ_VAL(ammo, 0));
-                            GET_OBJ_VAL(ammo, 0)--;
-                        } else
-                            extract_obj(ammo);
-                    }
-                    found = TRUE;
                 } else {
                     /* vict not found in target room, move ch back */
                     char_from_room(ch);

@@ -1555,16 +1555,6 @@ ACMD(do_mine)
             }
         }
 
-        // Very small chance to attract a traveling dwarf who might trade
-        if (percent <= prob && vnum != NOTHING && rand_number(1, 100) <= 2) {
-            struct char_data *dwarf_mob = read_mobile(14410, VIRTUAL);   // Traveling dwarf
-            if (dwarf_mob) {
-                char_to_room(dwarf_mob, IN_ROOM(ch));
-                send_to_char(ch, "O barulho da mineração atraiu um anão viajante!\r\n");
-                act("O barulho da mineração de $n atraiu um anão viajante!", TRUE, ch, 0, 0, TO_ROOM);
-            }
-        }
-
         // Give some experience for successful mining
         gain_exp(ch, rand_number(5, 15));
     } else {
@@ -1664,26 +1654,6 @@ ACMD(do_fishing)
             }
         }
 
-        // Small chance to attract a school of fish or fisherman
-        if (percent <= prob && rand_number(1, 100) <= 5) {
-            int fish_spawn = rand_number(1, 100);
-            if (fish_spawn <= 70) {
-                struct char_data *fish_mob = read_mobile(10864, VIRTUAL);   // Colorful fish school
-                if (fish_mob) {
-                    char_to_room(fish_mob, IN_ROOM(ch));
-                    send_to_char(ch, "Sua pesca atraiu um cardume de peixes coloridos!\r\n");
-                    act("A pesca de $n atraiu um cardume de peixes coloridos!", TRUE, ch, 0, 0, TO_ROOM);
-                }
-            } else {
-                struct char_data *fisherman_mob = read_mobile(2967, VIRTUAL);   // Zone 29 fish thrower
-                if (fisherman_mob) {
-                    char_to_room(fisherman_mob, IN_ROOM(ch));
-                    send_to_char(ch, "Sua pesca atraiu um arremessador de peixe!\r\n");
-                    act("A pesca de $n atraiu um arremessador de peixe!", TRUE, ch, 0, 0, TO_ROOM);
-                }
-            }
-        }
-
         gain_exp(ch, rand_number(3, 12));
     } else {
         send_to_char(ch, "Você não consegue pescar nada.\r\n");
@@ -1750,16 +1720,6 @@ ACMD(do_forage)
             if (obj) {
                 obj_to_char(obj, ch);
                 send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
-            }
-        }
-
-        // Small chance to attract a curious squirrel
-        if (percent <= prob && rand_number(1, 100) <= 8) {
-            struct char_data *squirrel_mob = read_mobile(10727, VIRTUAL);   // Gray squirrel
-            if (squirrel_mob) {
-                char_to_room(squirrel_mob, IN_ROOM(ch));
-                send_to_char(ch, "Sua procura por comida atraiu um esquilo curioso!\r\n");
-                act("A procura de $n por comida atraiu um esquilo curioso!", TRUE, ch, 0, 0, TO_ROOM);
             }
         }
 

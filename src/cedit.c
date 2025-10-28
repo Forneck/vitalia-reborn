@@ -105,6 +105,7 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->play.map_size = CONFIG_MAP_SIZE;
     OLC_CONFIG(d)->play.minimap_size = CONFIG_MINIMAP_SIZE;
     OLC_CONFIG(d)->play.script_players = CONFIG_SCRIPT_PLAYERS;
+    OLC_CONFIG(d)->play.max_house_objs = CONFIG_MAX_HOUSE_OBJS;
 
     /* Crash Saves */
     OLC_CONFIG(d)->csd.free_rent = CONFIG_FREE_RENT;
@@ -225,6 +226,7 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_MAP_SIZE = OLC_CONFIG(d)->play.map_size;
     CONFIG_MINIMAP_SIZE = OLC_CONFIG(d)->play.minimap_size;
     CONFIG_SCRIPT_PLAYERS = OLC_CONFIG(d)->play.script_players;
+    CONFIG_MAX_HOUSE_OBJS = OLC_CONFIG(d)->play.max_house_objs;
 
     /* Crash Saves */
     CONFIG_FREE_RENT = OLC_CONFIG(d)->csd.free_rent;
@@ -472,6 +474,10 @@ int save_config(IDXTYPE nowhere)
             "* Maximum zones in a pathfinding path (0=dynamic scaling)\n"
             "max_zone_path = %d\n\n",
             CONFIG_MAX_ZONE_PATH);
+    fprintf(fl,
+            "* Maximum objects allowed in player houses (0=unlimited)\n"
+            "max_house_objs = %d\n\n",
+            CONFIG_MAX_HOUSE_OBJS);
 
     strcpy(buf, CONFIG_OK);
     strip_cr(buf);
@@ -813,6 +819,7 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
         "%s0%s) Weather Affects Spells  : %s%s\r\n"
         "%sX%s) Max Pathfind Iterations : %s%d\r\n"
         "%sY%s) Max Zone Path Length    : %s%d\r\n"
+        "%sW%s) Max House Objects       : %s%d\r\n"
         "%sQ%s) Exit To The Main Menu\r\n"
         "Enter your choice : ",
         grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.pk_allowed), grn, nrm, cyn,
@@ -833,7 +840,8 @@ static void cedit_disp_game_play_options(struct descriptor_data *d)
         CHECK_VAR(OLC_CONFIG(d)->play.script_players), grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.fit_evolve), grn,
         nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->play.school_weather_affects), grn, nrm, cyn,
         CHECK_VAR(OLC_CONFIG(d)->play.weather_affects_spells), grn, nrm, cyn,
-        OLC_CONFIG(d)->play.max_pathfind_iterations, grn, nrm, cyn, OLC_CONFIG(d)->play.max_zone_path, grn, nrm),
+        OLC_CONFIG(d)->play.max_pathfind_iterations, grn, nrm, cyn, OLC_CONFIG(d)->play.max_zone_path, grn, nrm, cyn,
+        OLC_CONFIG(d)->play.max_house_objs, grn, nrm),
 
         OLC_MODE(d) = CEDIT_GAME_OPTIONS_MENU;
 }
@@ -1237,6 +1245,12 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case 'Y':
                     write_to_output(d, "\r\nEnter max zone path length (0=dynamic, 1-500): ");
                     OLC_MODE(d) = CEDIT_MAX_ZONE_PATH;
+                    return;
+
+                case 'w':
+                case 'W':
+                    write_to_output(d, "\r\nEnter max objects allowed in houses (0=unlimited, 1-250): ");
+                    OLC_MODE(d) = CEDIT_MAX_HOUSE_OBJS;
                     return;
 
                 case 'q':
@@ -2106,6 +2120,17 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                                 "Enter max zone path length (0=dynamic, 1-500): ");
             } else {
                 OLC_CONFIG(d)->play.max_zone_path = MIN(MAX(atoi(arg), 0), 500);
+                cedit_disp_game_play_options(d);
+            }
+            break;
+
+        case CEDIT_MAX_HOUSE_OBJS:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter max objects allowed in houses (0=unlimited, 1-250): ");
+            } else {
+                OLC_CONFIG(d)->play.max_house_objs = MIN(MAX(atoi(arg), 0), 250);
                 cedit_disp_game_play_options(d);
             }
             break;

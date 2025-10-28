@@ -22,6 +22,7 @@
 #include "oasis.h"
 #include "act.h"
 #include "quest.h"
+#include "house.h"
 
 /* local function prototypes */
 /* do_get utility functions */
@@ -59,6 +60,14 @@ void perform_put(struct char_data *ch, struct obj_data *obj, struct obj_data *co
     else if (OBJ_FLAGGED(obj, ITEM_NODROP) && IN_ROOM(cont) != NOWHERE)
         act("Você não pode se livrar de $p, parece ser uma MALDIÇÃO!", FALSE, ch, obj, NULL, TO_CHAR);
     else {
+        /* Check house object limit when putting in a container in a house room */
+        if (IN_ROOM(cont) != NOWHERE && ROOM_FLAGGED(IN_ROOM(cont), ROOM_HOUSE) && !PRF_FLAGGED(ch, PRF_NOHASSLE)) {
+            if (!House_can_add_obj(IN_ROOM(cont))) {
+                send_to_char(ch, "Esta casa atingiu o limite máximo de objetos (%d).\r\n", CONFIG_MAX_HOUSE_OBJS);
+                return;
+            }
+        }
+
         obj_from_char(obj);
         obj_to_obj(obj, cont);
 
@@ -479,6 +488,14 @@ int perform_drop(struct char_data *ch, struct obj_data *obj, byte mode, const ch
         snprintf(buf, sizeof(buf), "Você não pode %s $p, parece uma MALDIÇÃO!", sname);
         act(buf, FALSE, ch, obj, 0, TO_CHAR);
         return (0);
+    }
+
+    /* Check house object limit for drop */
+    if ((mode == SCMD_DROP) && ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) && !PRF_FLAGGED(ch, PRF_NOHASSLE)) {
+        if (!House_can_add_obj(IN_ROOM(ch))) {
+            send_to_char(ch, "Esta casa atingiu o limite máximo de objetos (%d).\r\n", CONFIG_MAX_HOUSE_OBJS);
+            return (0);
+        }
     }
 
     snprintf(buf, sizeof(buf), "Você %s $p%s", sname, VANISH(mode));

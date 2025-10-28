@@ -85,6 +85,7 @@ extern int weather_affects_spells;
 extern int school_weather_affects;
 extern int max_pathfind_iterations;
 extern int max_zone_path;
+extern int max_house_objs;
 /* Automap and map options */
 extern int map_option;
 extern int default_map_size;

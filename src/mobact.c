@@ -875,7 +875,7 @@ void mobile_activity(void)
                 }
             } else {
                 /* Mob doesn't have a quest, check if it should try to find one */
-                if (GET_GENQUEST(ch) > 30 && GET_GENADVENTURER(ch) > 20) {
+                if (ch->ai_data) {
                     /* Look for available mob-posted quests */
                     qst_rnum rnum;
                     for (rnum = 0; rnum < total_quests; rnum++) {
@@ -898,7 +898,7 @@ void mobile_activity(void)
         if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
             rand_number(1, 100) <= 2) { /* 2% chance per tick to consider posting combat quests */
             /* Check if mob should post a player kill quest (revenge for being attacked) */
-            if (GET_GENBRAVE(ch) > 50 && GET_GENQUEST(ch) > 40) {
+            if (GET_GENBRAVE(ch) > 50 && GET_GENQUEST(ch) >= 5) {
                 /* Check if mob was recently attacked by a player (has hostile memory) */
                 struct char_data *attacker = HUNTING(ch);
                 if (attacker && !IS_NPC(attacker) && GET_GOLD(ch) > 200) {
@@ -913,7 +913,7 @@ void mobile_activity(void)
             }
 
             /* Check if mob should post a bounty quest against hostile mobs in area */
-            if (GET_GENQUEST(ch) > 60 && GET_GOLD(ch) > 300) {
+            if (GET_GENQUEST(ch) >= 10 && GET_GOLD(ch) > 300) {
                 /* Safety check: Validate ch's room before accessing world array */
                 if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
                     struct char_data *target, *next_target;
@@ -965,7 +965,7 @@ void mobile_activity(void)
             int reward;
 
             /* Check genetics and decide what type of quest to post */
-            if (GET_GENADVENTURER(ch) > 50 && rand_number(1, 100) <= 30) {
+            if (GET_GENADVENTURER(ch) >= 5 && rand_number(1, 100) <= 30) {
                 /* Post exploration quests */
                 if (rand_number(1, 100) <= 40) {
                     /* AQ_OBJ_FIND quest - find a random object in the zone */
@@ -1116,7 +1116,7 @@ void mobile_activity(void)
                             continue;
                     }
                 }
-            } else if (GET_GENQUEST(ch) > 40 && rand_number(1, 100) <= 20) {
+            } else if (GET_GENQUEST(ch) >= 5 && rand_number(1, 100) <= 20) {
                 /* Post general kill quests */
                 struct char_data *next_target;
                 for (target = character_list; target; target = next_target) {
@@ -1432,7 +1432,7 @@ void mobile_activity(void)
                             GET_OBJ_VAL(container, 3) = 1; /* Poison it */
 
                             /* Subtle message - victim might not notice */
-                            if (rand_number(1, 100) <= 20) {
+                            if (rand_number(1, 100) <= 50) {
                                 act("$n parece sussurrar algo enquanto se aproxima de você.", FALSE, ch, 0, victim,
                                     TO_VICT);
                                 /* Safety check: act() can trigger DG scripts which may cause extraction */

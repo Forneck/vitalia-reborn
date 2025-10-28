@@ -1876,9 +1876,9 @@ void nanny(struct descriptor_data *d, char *arg)
                 GET_STR(d->character), GET_INT(d->character), GET_WIS(d->character), GET_DEX(d->character),
                 GET_CON(d->character), GET_CHA(d->character));
             write_to_output(d, "Aceitar estes atributos? (s/N): ");
-            STATE(d) = CON_RB_QHOME;
+            STATE(d) = CON_RB_QATTRS;
             break;
-        case CON_RB_QHOME: /* rebegin: reroll or accept attributes */
+        case CON_RB_QATTRS: /* rebegin: accept or reroll attributes */
             if (!*arg || (*arg != 's' && *arg != 'S' && *arg != 'n' && *arg != 'N')) {
                 write_to_output(d, "Por favor, responda s ou n: ");
                 return;
@@ -1893,8 +1893,35 @@ void nanny(struct descriptor_data *d, char *arg)
                 return;
             }
 
+            /* Attributes accepted, now choose hometown */
+            write_to_output(d, "\r\nEscolha sua nova cidade natal:\r\n");
+            hometown_menu(d);
+            STATE(d) = CON_RB_QHOMETOWN;
+            break;
+
+        case CON_RB_QHOMETOWN: /* rebegin: choose hometown */
+            load_result = parse_hometown(*arg);
+            if (load_result == 0) {
+                write_to_output(d, "Por favor, escolha uma cidade válida...\r\n");
+                hometown_menu(d);
+                return;
+            }
+            GET_HOMETOWN(d->character) = load_result;
+            write_to_output(d, "Cidade natal selecionada: ");
+            switch (load_result) {
+                case 1:
+                    write_to_output(d, "Midgaard\r\n");
+                    break;
+                case 2:
+                    write_to_output(d, "Nova Thalos\r\n");
+                    break;
+                case 3:
+                    write_to_output(d, "Thewster\r\n");
+                    break;
+            }
+
             /* Finalize rebegin process */
-            GET_REMORT(d->character)++;
+            /* Note: num_incarnations was already incremented when recording class history */
             GET_LEVEL(d->character) = 1;
             GET_EXP(d->character) = 1;
             GET_GOLD(d->character) = 0;
@@ -1931,12 +1958,17 @@ void nanny(struct descriptor_data *d, char *arg)
 
             GET_FIT(d->character) = 0;
 
-            /* Restore retained skills */
+            /* Clear all skills and restore retained ones in a single pass */
             {
                 int i;
                 for (i = 1; i <= MAX_SKILLS; i++) {
+                    /* Clear skill first */
+                    SET_SKILL(d->character, i, 0);
+                    /* Restore retained skill if it exists */
                     if (d->character->player_specials->saved.retained_skills[i] > 0) {
                         SET_SKILL(d->character, i, d->character->player_specials->saved.retained_skills[i]);
+                        /* Clear retained_skills array after applying */
+                        d->character->player_specials->saved.retained_skills[i] = 0;
                     }
                 }
             }
