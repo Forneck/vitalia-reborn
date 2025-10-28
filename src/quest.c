@@ -2391,18 +2391,27 @@ void accept_pending_quest(struct descriptor_data *d)
 
     if (!ch || !qm || vnum == NOTHING) {
         write_to_output(d, "\r\nErro ao aceitar busca. Tente novamente.\r\n");
+        /* Clear pending quest data */
+        d->pending_quest_vnum = NOTHING;
+        d->pending_questmaster = NULL;
         return;
     }
 
     rnum = real_quest(vnum);
     if (rnum == NOTHING) {
         write_to_output(d, "\r\nEsta busca não existe mais.\r\n");
+        /* Clear pending quest data */
+        d->pending_quest_vnum = NOTHING;
+        d->pending_questmaster = NULL;
         return;
     }
 
     /* Final checks before accepting */
     if (GET_QUEST(ch) != NOTHING) {
         write_to_output(d, "\r\nVocê já tem uma busca ativa!\r\n");
+        /* Clear pending quest data */
+        d->pending_quest_vnum = NOTHING;
+        d->pending_questmaster = NULL;
         return;
     }
 
