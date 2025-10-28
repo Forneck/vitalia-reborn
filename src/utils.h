@@ -882,9 +882,13 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define UMUMA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "um" : "uma") : "um")
 
 /* Portuguese language gender macros for objects */
-/* Determines object gender by last character of name (a=feminine, default=masculine) */
-#define OBJ_IS_FEMININE(obj)                                                                                           \
-    ((obj) && (obj)->name && strlen((obj)->name) > 0 && (obj)->name[strlen((obj)->name) - 1] == 'a')
+/* Determines object gender by last character of name (a=feminine, default=masculine)
+ * Note: This is a simplified heuristic. Portuguese has many exceptions:
+ * - Some feminine words don't end in 'a' (e.g., 'mão', 'razão')
+ * - Some masculine words end in 'a' (e.g., 'problema', 'sistema')
+ * For most common MUD objects (espada, adaga, escudo, machado), this works well.
+ */
+#define OBJ_IS_FEMININE(obj) ((obj) && (obj)->name && (obj)->name[0] && (obj)->name[strlen((obj)->name) - 1] == 'a')
 #define MEUMINHA(obj) (OBJ_IS_FEMININE(obj) ? "minha" : "meu")
 #define TEUTUA_OBJ(obj) (OBJ_IS_FEMININE(obj) ? "tua" : "teu")
 #define SEUSUA_OBJ(obj) (OBJ_IS_FEMININE(obj) ? "sua" : "seu")
