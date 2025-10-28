@@ -340,6 +340,13 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
             else if (IS_GOOD(i))
                 send_to_char(ch, "%s(Aura Azul) ", CBBLU(ch, C_NRM));
         }
+
+        /* Check if this mob is a bounty target for the viewer */
+        if (!IS_NPC(ch) && GET_QUEST(ch) != NOTHING && GET_QUEST_TYPE(ch) == AQ_MOB_KILL_BOUNTY &&
+            GET_BOUNTY_TARGET_ID(ch) != NOBODY && char_script_id(i) == GET_BOUNTY_TARGET_ID(ch)) {
+            send_to_char(ch, "%s(Bounty) ", CBRED(ch, C_NRM));
+        }
+
         send_to_char(ch, "%s%s", CCYEL(ch, C_NRM), i->player.long_descr);
 
         if (AFF_FLAGGED(i, AFF_SANCTUARY))
@@ -361,9 +368,14 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
         return;
     }
 
-    if (IS_NPC(i))
+    if (IS_NPC(i)) {
+        /* Check if this mob is a bounty target for the viewer */
+        if (!IS_NPC(ch) && GET_QUEST(ch) != NOTHING && GET_QUEST_TYPE(ch) == AQ_MOB_KILL_BOUNTY &&
+            GET_BOUNTY_TARGET_ID(ch) != NOBODY && char_script_id(i) == GET_BOUNTY_TARGET_ID(ch)) {
+            send_to_char(ch, "%s(Bounty) ", CBRED(ch, C_NRM));
+        }
         send_to_char(ch, "%c%s", UPPER(*i->player.short_descr), i->player.short_descr + 1);
-    else {
+    } else {
         if (IS_DEAD(i))
             send_to_char(ch, "O espírito de ");
         send_to_char(ch, "%s %s%s", i->player.name, *GET_TITLE(i) ? "" : "", GET_TITLE(i));

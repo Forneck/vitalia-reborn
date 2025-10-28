@@ -22,7 +22,8 @@
 #include "comm.h"
 #include "screen.h"
 #include "quest.h"
-#include "act.h" /* for do_tell */
+#include "act.h"        /* for do_tell */
+#include "dg_scripts.h" /* for char_script_id */
 
 /*--------------------------------------------------------------------------
  * Exported global variables
@@ -253,9 +254,10 @@ void assign_the_quests(void)
  * @param buf Output buffer to store the formatted message.
  * @param bufsize Size of the output buffer.
  * @return Pointer to the formatted message (buf). */
-static char *format_quest_info(qst_rnum rnum, char *buf, size_t bufsize)
+static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, size_t bufsize)
 {
     const char *info = QST_INFO(rnum);
+    char temp_buf[MAX_QUEST_MSG];
 
     /* For AQ_ROOM_FIND and AQ_ROOM_CLEAR quests, replace room number with room name */
     if ((QST_TYPE(rnum) == AQ_ROOM_FIND || QST_TYPE(rnum) == AQ_ROOM_CLEAR) && QST_TARGET(rnum) != NOTHING) {
@@ -291,9 +293,10 @@ static char *format_quest_info(qst_rnum rnum, char *buf, size_t bufsize)
                     if (total_len + 1 <= bufsize) {
                         /* Build new message: prefix + room_name + suffix */
                         snprintf(buf, bufsize, "%.*s%s%s", (int)prefix_len, info, room_name, info + suffix_start);
-                        return buf;
+                        info = buf;
+                        break;
                     }
-                    /* Buffer too small, fall through to return original */
+                    /* Buffer too small, fall through to use original */
                     break;
                 }
                 /* Not a complete match, continue searching */
@@ -302,8 +305,49 @@ static char *format_quest_info(qst_rnum rnum, char *buf, size_t bufsize)
         }
     }
 
-    /* For all other quest types or if replacement fails, return original info */
-    snprintf(buf, bufsize, "%s", info);
+    /* For bounty quests, add explicit information about the specific target */
+    if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY && ch && !IS_NPC(ch)) {
+        if (GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
+            /* Player has a specific bounty target assigned - find the mob and get its name */
+            struct char_data *target_mob = NULL;
+            const char *target_name = NULL;
+
+            /* Search for the mob with the matching script_id */
+            for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
+                if (IS_NPC(target_mob) && char_script_id(target_mob) == GET_BOUNTY_TARGET_ID(ch)) {
+                    target_name = GET_NAME(target_mob);
+                    break;
+                }
+            }
+
+            /* If the specific mob is found in the world, show its name */
+            if (target_name) {
+                snprintf(temp_buf, sizeof(temp_buf),
+                         "%s\r\n\tyIMPORTANTE: Esta busca requer a eliminação de um alvo ESPECÍFICO: %s.\tn\r\n"
+                         "\tyVocê verá '(Bounty)' marcado em vermelho ao encontrar seu alvo.\tn",
+                         info, target_name);
+            } else {
+                /* Target mob no longer exists - it may have been killed or despawned */
+                snprintf(temp_buf, sizeof(temp_buf),
+                         "%s\r\n\tyAVISO: O alvo específico não está mais disponível no mundo.\tn\r\n"
+                         "\tyA busca pode precisar ser abandonada.\tn",
+                         info);
+            }
+        } else {
+            /* No specific target assigned yet */
+            snprintf(temp_buf, sizeof(temp_buf),
+                     "%s\r\n\tyIMPORTANTE: Esta busca requer a eliminação de um alvo ESPECÍFICO.\tn\r\n"
+                     "\tyO alvo será identificado quando você aceitar a busca.\tn",
+                     info);
+        }
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For all other quest types or if no special formatting needed, return info */
+    if (info != buf) {
+        snprintf(buf, bufsize, "%s", info);
+    }
     return buf;
 }
 
@@ -329,6 +373,7 @@ void clear_quest(struct char_data *ch)
     GET_QUEST_TIME(ch) = -1;
     GET_QUEST_COUNTER(ch) = 0;
     GET_ESCORT_MOB_ID(ch) = NOBODY;
+    GET_BOUNTY_TARGET_ID(ch) = NOBODY;
     REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_QUEST);
     return;
 }
@@ -422,6 +467,37 @@ bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum)
     return TRUE;
 }
 
+/** Assigns a bounty target for the player's quest by finding a specific mob instance.
+ * Sets the player's bounty target ID and sends feedback message to the player.
+ * @param ch The player who accepted the bounty quest.
+ * @param qm The questmaster who assigned the quest.
+ * @param rnum The real quest number.
+ * @return TRUE if a target was found and assigned, FALSE otherwise. */
+bool assign_bounty_target(struct char_data *ch, struct char_data *qm, qst_rnum rnum)
+{
+    struct char_data *target_mob = NULL;
+    mob_rnum target_rnum = real_mobile(QST_TARGET(rnum));
+
+    /* Find a living mob with the target vnum in the world */
+    if (target_rnum != NOBODY) {
+        for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
+            if (IS_NPC(target_mob) && GET_MOB_RNUM(target_mob) == target_rnum &&
+                !MOB_FLAGGED(target_mob, MOB_NOTDEADYET)) {
+                /* Found a target - store its unique ID */
+                GET_BOUNTY_TARGET_ID(ch) = char_script_id(target_mob);
+                send_to_char(ch, "%s diz, 'O alvo foi localizado. Boa caçada!'\r\n", GET_NAME(qm));
+                return TRUE;
+            }
+        }
+    }
+
+    /* No target found - the specific instance doesn't exist in the world */
+    GET_BOUNTY_TARGET_ID(ch) = NOBODY;
+    send_to_char(ch, "%s diz, 'O alvo não está disponível no momento. Esta busca não pode ser aceita.'\r\n",
+                 GET_NAME(qm));
+    return FALSE;
+}
+
 /** Checks if an escort quest has been completed (mob reached destination).
  * @param ch The player on the escort quest.
  * @param rnum The real quest number.
@@ -508,6 +584,63 @@ void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer)
     }
 }
 
+/** Called when a bounty target mob is killed by someone other than the quest holder.
+ * Fails the bounty quest for the player who had the quest.
+ * @param target_mob The bounty target mob that died.
+ * @param killer The character who killed the mob (can be NULL for non-combat deaths). */
+void fail_bounty_quest(struct char_data *target_mob, struct char_data *killer)
+{
+    struct char_data *ch;
+    qst_rnum rnum;
+    long target_id;
+
+    if (!IS_NPC(target_mob))
+        return;
+
+    target_id = char_script_id(target_mob);
+
+    /* Find any player with a bounty quest targeting this specific mob */
+    for (ch = character_list; ch; ch = ch->next) {
+        if (IS_NPC(ch))
+            continue;
+
+        /* Check if this player has a bounty quest for this specific mob */
+        if (GET_QUEST_TYPE(ch) == AQ_MOB_KILL_BOUNTY && GET_BOUNTY_TARGET_ID(ch) == target_id) {
+            /* Skip if the player is the one who killed it (quest will complete normally) */
+            if (killer && killer == ch)
+                continue;
+
+            /* Get quest info for penalty */
+            rnum = real_quest(GET_QUEST(ch));
+
+            /* Notify player of quest failure */
+            send_to_char(ch, "\r\n\ty** SUA QUEST DE CAÇA FALHOU! **\tn\r\n");
+            if (killer && !IS_NPC(killer)) {
+                send_to_char(ch, "Seu alvo foi eliminado por %s antes que você pudesse completar a caçada!\r\n",
+                             GET_NAME(killer));
+            } else if (killer && IS_NPC(killer)) {
+                send_to_char(ch, "Seu alvo foi eliminado por %s antes que você pudesse completar a caçada!\r\n",
+                             GET_NAME(killer));
+            } else {
+                send_to_char(ch, "Seu alvo morreu antes que você pudesse completar a caçada!\r\n");
+            }
+
+            /* Apply penalty - bounty target lost is similar to abandoning */
+            if (rnum != NOTHING && QST_PENALTY(rnum)) {
+                GET_QUESTPOINTS(ch) -= QST_PENALTY(rnum);
+                send_to_char(ch, "Você perde %d pontos de busca por falhar em capturar o alvo!\r\n\r\n",
+                             QST_PENALTY(rnum));
+            } else {
+                send_to_char(ch, "\r\n");
+            }
+
+            /* Clear the quest */
+            clear_quest(ch);
+            save_char(ch);
+        }
+    }
+}
+
 void generic_complete_quest(struct char_data *ch)
 {
     qst_rnum rnum;
@@ -578,7 +711,7 @@ void generic_complete_quest(struct char_data *ch)
             rnum = real_quest(QST_NEXT(rnum));
             set_quest(ch, rnum);
             send_to_char(ch, "A sua busca continua:\r\n%s",
-                         format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
+                         format_quest_info(rnum, ch, formatted_info, sizeof(formatted_info)));
         }
 
         /* Clear flag after quest completion is done */
@@ -701,9 +834,18 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                 generic_complete_quest(ch);
             break;
         case AQ_MOB_KILL_BOUNTY:
-            if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict))
-                if (QST_TARGET(rnum) == GET_MOB_VNUM(vict))
-                    generic_complete_quest(ch);
+            if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict)) {
+                /* Check if this is the specific bounty target */
+                if (GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
+                    /* We have a specific target ID - check against it */
+                    if (char_script_id(vict) == GET_BOUNTY_TARGET_ID(ch))
+                        generic_complete_quest(ch);
+                } else {
+                    /* No specific ID set - fallback to vnum matching (for old quests or if target respawned) */
+                    if (QST_TARGET(rnum) == GET_MOB_VNUM(vict))
+                        generic_complete_quest(ch);
+                }
+            }
             break;
         case AQ_MOB_ESCORT:
             /* Escort quest completion is handled separately in check_escort_quest_completion() */
@@ -838,7 +980,7 @@ void quest_list(struct char_data *ch, struct char_data *qm, char argument[MAX_IN
         send_to_char(ch, "Esta não é uma busca válida!\r\n");
     else if (QST_INFO(rnum)) {
         send_to_char(ch, "Detalhes Completos da Busca \tc%s\tn:\r\n%s", QST_DESC(rnum),
-                     format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
+                     format_quest_info(rnum, ch, formatted_info, sizeof(formatted_info)));
         if (QST_PREV(rnum) != NOTHING)
             send_to_char(ch, "Você precisa completar a busca %s primeiro.\r\n", QST_NAME(real_quest(QST_PREV(rnum))));
         if (QST_TIME(rnum) != -1)
@@ -1000,7 +1142,7 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
         act("$n aceitou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
         send_to_char(ch, "%s diz, 'As instruções para esta busca são:'\r\n", GET_NAME(qm));
         set_quest(ch, rnum);
-        send_to_char(ch, "%s", format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
+        send_to_char(ch, "%s", format_quest_info(rnum, ch, formatted_info, sizeof(formatted_info)));
         if (QST_TIME(rnum) != -1) {
             send_to_char(ch, "%s diz, 'Você tem um tempo limite de %d tick%s para completar esta busca!'\r\n",
                          GET_NAME(qm), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
@@ -1015,6 +1157,13 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
                 /* If spawning fails, cancel the quest */
                 send_to_char(ch, "%s diz, 'Desculpe, parece que houve um problema. A busca foi cancelada.'\r\n",
                              GET_NAME(qm));
+                clear_quest(ch);
+            }
+        }
+        /* For bounty quests, find and mark the target mob */
+        else if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY) {
+            if (!assign_bounty_target(ch, qm, rnum)) {
+                /* If target not found, cancel the quest */
                 clear_quest(ch);
             }
         }
@@ -1038,7 +1187,7 @@ static void quest_progress(struct char_data *ch)
         send_to_char(ch, "A busca foi cancelada e não existe mais!\r\n");
     } else {
         send_to_char(ch, "Você aceitou as seguintes buscas:\r\n%s\r\n%s", QST_DESC(rnum),
-                     format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
+                     format_quest_info(rnum, ch, formatted_info, sizeof(formatted_info)));
         if (QST_QUANTITY(rnum) > 1)
             send_to_char(ch, "Você ainda precisa realizar %d objetivo%s da busca.\r\n", GET_QUEST_COUNTER(ch),
                          GET_QUEST_COUNTER(ch) == 1 ? "" : "s");
@@ -2025,7 +2174,7 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg)
         act("$n aceitou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
         send_to_char(ch, "%s diz, 'As instruções para esta busca são:'\r\n", GET_NAME(qm));
         set_quest(ch, rnum);
-        send_to_char(ch, "%s", format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
+        send_to_char(ch, "%s", format_quest_info(rnum, ch, formatted_info, sizeof(formatted_info)));
         if (QST_TIME(rnum) != -1) {
             send_to_char(ch, "%s diz, 'Você tem um tempo limite de %d tick%s para completar esta busca!'\r\n",
                          GET_NAME(qm), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
@@ -2042,6 +2191,10 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg)
                              GET_NAME(qm));
                 clear_quest(ch);
             }
+        }
+        /* For bounty quests, find and mark the target mob */
+        else if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY) {
+            assign_bounty_target(ch, qm, rnum);
         }
 
         save_char(ch);
