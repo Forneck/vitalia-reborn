@@ -575,13 +575,13 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
     buf = replace_string(dam_weapons[msgnum].to_room, &attack_hit_text[w_type]);
     act(buf, FALSE, ch, NULL, victim, TO_NOTVICT);
     /* damage message to damager */
-    if (GET_LEVEL(ch) >= LVL_IMMORT)
+    if (GET_LEVEL(ch) >= LVL_IMMORT || PRF_FLAGGED(ch, PRF_VIEWDAMAGE))
         send_to_char(ch, "(%d) ", dam);
     buf = replace_string(dam_weapons[msgnum].to_char, &attack_hit_text[w_type]);
     act(buf, FALSE, ch, NULL, victim, TO_CHAR);
     send_to_char(ch, CCNRM(ch, C_CMP));
     /* damage message to damagee */
-    if (GET_LEVEL(victim) >= LVL_IMMORT)
+    if (GET_LEVEL(victim) >= LVL_IMMORT || PRF_FLAGGED(victim, PRF_VIEWDAMAGE))
         send_to_char(victim, "\tR(%d)", dam);
     buf = replace_string(dam_weapons[msgnum].to_victim, &attack_hit_text[w_type]);
     act(buf, FALSE, ch, NULL, victim, TO_VICT | TO_SLEEP);
