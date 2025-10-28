@@ -673,8 +673,10 @@ void generic_complete_quest(struct char_data *ch)
         /* Safety check: quest must exist */
         if (rnum == NOTHING) {
             send_to_char(ch, "ERRO: A busca que você estava fazendo não existe mais!\r\n");
-            log1("SYSERR: generic_complete_quest: Player %s tried to complete non-existent quest vnum %d", GET_NAME(ch),
-                 vnum);
+            log1(
+                "SYSERR: generic_complete_quest: Player %s tried to complete non-existent quest vnum %d. "
+                "Quest may have been removed from game or quest table corrupted. Clearing player's quest state.",
+                GET_NAME(ch), vnum);
             clear_quest(ch);
             save_char(ch);
             return;
