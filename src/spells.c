@@ -1182,7 +1182,7 @@ ASPELL(spell_stoneskin)
 
     new_affect(&af);
     af.spell = SPELL_STONESKIN;
-    af.duration = new_points * (60 - (level / 10)); /* 1 hour per point minus level factor */
+    af.duration = new_points * MAX(1, (60 - (level / 10))); /* 1 hour per point minus level factor, min 1 */
     af.modifier = new_points;
     af.location = APPLY_NONE;
     SET_BIT_AR(af.bitvector, AFF_STONESKIN);
