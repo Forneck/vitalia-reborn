@@ -254,9 +254,10 @@ void assign_the_quests(void)
  * @param buf Output buffer to store the formatted message.
  * @param bufsize Size of the output buffer.
  * @return Pointer to the formatted message (buf). */
-static char *format_quest_info(qst_rnum rnum, char *buf, size_t bufsize)
+static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, size_t bufsize)
 {
     const char *info = QST_INFO(rnum);
+    char temp_buf[MAX_QUEST_MSG];
 
     /* For AQ_ROOM_FIND and AQ_ROOM_CLEAR quests, replace room number with room name */
     if ((QST_TYPE(rnum) == AQ_ROOM_FIND || QST_TYPE(rnum) == AQ_ROOM_CLEAR) && QST_TARGET(rnum) != NOTHING) {
@@ -292,9 +293,10 @@ static char *format_quest_info(qst_rnum rnum, char *buf, size_t bufsize)
                     if (total_len + 1 <= bufsize) {
                         /* Build new message: prefix + room_name + suffix */
                         snprintf(buf, bufsize, "%.*s%s%s", (int)prefix_len, info, room_name, info + suffix_start);
-                        return buf;
+                        info = buf;
+                        break;
                     }
-                    /* Buffer too small, fall through to return original */
+                    /* Buffer too small, fall through to use original */
                     break;
                 }
                 /* Not a complete match, continue searching */
@@ -303,8 +305,29 @@ static char *format_quest_info(qst_rnum rnum, char *buf, size_t bufsize)
         }
     }
 
-    /* For all other quest types or if replacement fails, return original info */
-    snprintf(buf, bufsize, "%s", info);
+    /* For bounty quests, add explicit information about the specific target */
+    if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY && ch && !IS_NPC(ch)) {
+        if (GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
+            /* Player has a specific bounty target assigned */
+            snprintf(temp_buf, sizeof(temp_buf),
+                     "%s\r\n\tyIMPORTANTE: Esta busca requer a eliminação de um alvo ESPECÍFICO (ID: %ld).\tn\r\n"
+                     "\tyVocê verá '(Bounty)' marcado em vermelho ao encontrar seu alvo.\tn",
+                     info, GET_BOUNTY_TARGET_ID(ch));
+        } else {
+            /* No specific target assigned yet */
+            snprintf(temp_buf, sizeof(temp_buf),
+                     "%s\r\n\tyIMPORTANTE: Esta busca requer a eliminação de um alvo ESPECÍFICO.\tn\r\n"
+                     "\tyO alvo será identificado quando você aceitar a busca.\tn",
+                     info);
+        }
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For all other quest types or if no special formatting needed, return info */
+    if (info != buf) {
+        snprintf(buf, bufsize, "%s", info);
+    }
     return buf;
 }
 
@@ -667,7 +690,7 @@ void generic_complete_quest(struct char_data *ch)
             rnum = real_quest(QST_NEXT(rnum));
             set_quest(ch, rnum);
             send_to_char(ch, "A sua busca continua:\r\n%s",
-                         format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
+                         format_quest_info(rnum, ch, formatted_info, sizeof(formatted_info)));
         }
 
         /* Clear flag after quest completion is done */
@@ -936,7 +959,7 @@ void quest_list(struct char_data *ch, struct char_data *qm, char argument[MAX_IN
         send_to_char(ch, "Esta não é uma busca válida!\r\n");
     else if (QST_INFO(rnum)) {
         send_to_char(ch, "Detalhes Completos da Busca \tc%s\tn:\r\n%s", QST_DESC(rnum),
-                     format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
+                     format_quest_info(rnum, ch, formatted_info, sizeof(formatted_info)));
         if (QST_PREV(rnum) != NOTHING)
             send_to_char(ch, "Você precisa completar a busca %s primeiro.\r\n", QST_NAME(real_quest(QST_PREV(rnum))));
         if (QST_TIME(rnum) != -1)
@@ -1098,7 +1121,7 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
         act("$n aceitou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
         send_to_char(ch, "%s diz, 'As instruções para esta busca são:'\r\n", GET_NAME(qm));
         set_quest(ch, rnum);
-        send_to_char(ch, "%s", format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
+        send_to_char(ch, "%s", format_quest_info(rnum, ch, formatted_info, sizeof(formatted_info)));
         if (QST_TIME(rnum) != -1) {
             send_to_char(ch, "%s diz, 'Você tem um tempo limite de %d tick%s para completar esta busca!'\r\n",
                          GET_NAME(qm), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
@@ -1140,7 +1163,7 @@ static void quest_progress(struct char_data *ch)
         send_to_char(ch, "A busca foi cancelada e não existe mais!\r\n");
     } else {
         send_to_char(ch, "Você aceitou as seguintes buscas:\r\n%s\r\n%s", QST_DESC(rnum),
-                     format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
+                     format_quest_info(rnum, ch, formatted_info, sizeof(formatted_info)));
         if (QST_QUANTITY(rnum) > 1)
             send_to_char(ch, "Você ainda precisa realizar %d objetivo%s da busca.\r\n", GET_QUEST_COUNTER(ch),
                          GET_QUEST_COUNTER(ch) == 1 ? "" : "s");
@@ -2127,7 +2150,7 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg)
         act("$n aceitou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
         send_to_char(ch, "%s diz, 'As instruções para esta busca são:'\r\n", GET_NAME(qm));
         set_quest(ch, rnum);
-        send_to_char(ch, "%s", format_quest_info(rnum, formatted_info, sizeof(formatted_info)));
+        send_to_char(ch, "%s", format_quest_info(rnum, ch, formatted_info, sizeof(formatted_info)));
         if (QST_TIME(rnum) != -1) {
             send_to_char(ch, "%s diz, 'Você tem um tempo limite de %d tick%s para completar esta busca!'\r\n",
                          GET_NAME(qm), QST_TIME(rnum), QST_TIME(rnum) == 1 ? "" : "s");
