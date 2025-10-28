@@ -880,6 +880,14 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define DELA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "dele" : "dela") : "dele")
 #define TEUTUA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "teu" : "tua") : "teu")
 #define UMUMA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "um" : "uma") : "um")
+
+/* Portuguese language gender macros for objects */
+/* Determines object gender by last character of name (a=feminine, default=masculine) */
+#define OBJ_IS_FEMININE(obj)                                                                                           \
+    ((obj) && (obj)->name && strlen((obj)->name) > 0 && (obj)->name[strlen((obj)->name) - 1] == 'a')
+#define MEUMINHA(obj) (OBJ_IS_FEMININE(obj) ? "minha" : "meu")
+#define TEUTUA_OBJ(obj) (OBJ_IS_FEMININE(obj) ? "tua" : "teu")
+#define SEUSUA_OBJ(obj) (OBJ_IS_FEMININE(obj) ? "sua" : "seu")
 /* Various macros building up to CAN_SEE */
 
 /** Defines if there is enough light for sub to see in. */
