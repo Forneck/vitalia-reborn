@@ -1894,7 +1894,7 @@ void nanny(struct descriptor_data *d, char *arg)
             }
 
             /* Finalize rebegin process */
-            GET_REMORT(d->character)++;
+            /* Note: num_incarnations was already incremented when recording class history */
             GET_LEVEL(d->character) = 1;
             GET_EXP(d->character) = 1;
             GET_GOLD(d->character) = 0;
@@ -1931,12 +1931,22 @@ void nanny(struct descriptor_data *d, char *arg)
 
             GET_FIT(d->character) = 0;
 
+            /* Clear all skills before restoring retained ones */
+            {
+                int i;
+                for (i = 1; i <= MAX_SKILLS; i++) {
+                    SET_SKILL(d->character, i, 0);
+                }
+            }
+
             /* Restore retained skills */
             {
                 int i;
                 for (i = 1; i <= MAX_SKILLS; i++) {
                     if (d->character->player_specials->saved.retained_skills[i] > 0) {
                         SET_SKILL(d->character, i, d->character->player_specials->saved.retained_skills[i]);
+                        /* Clear retained_skills array after applying */
+                        d->character->player_specials->saved.retained_skills[i] = 0;
                     }
                 }
             }
