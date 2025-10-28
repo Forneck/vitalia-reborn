@@ -2797,6 +2797,27 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj, v
                 case 'Y':
                     CHECK_NULL(vict_obj, UMUMA((const struct char_data *)vict_obj));
                     break;
+                case 'q': /* -- portuguese language: meu/minha for object */
+                    CHECK_NULL(obj, MEUMINHA(obj));
+                    break;
+                case 'Q':
+                    CHECK_NULL(vict_obj, MEUMINHA((const struct obj_data *)vict_obj));
+                    dg_target = (struct obj_data *)vict_obj;
+                    break;
+                case 'v': /* -- portuguese language: teu/tua for object */
+                    CHECK_NULL(obj, TEUTUA_OBJ(obj));
+                    break;
+                case 'V':
+                    CHECK_NULL(vict_obj, TEUTUA_OBJ((const struct obj_data *)vict_obj));
+                    dg_target = (struct obj_data *)vict_obj;
+                    break;
+                case 'j': /* -- portuguese language: seu/sua for object */
+                    CHECK_NULL(obj, SEUSUA_OBJ(obj));
+                    break;
+                case 'J':
+                    CHECK_NULL(vict_obj, SEUSUA_OBJ((const struct obj_data *)vict_obj));
+                    dg_target = (struct obj_data *)vict_obj;
+                    break;
                 /* uppercase previous word */
                 case 'u':
                     for (j = buf; j > lbuf && !isspace((int)*(j - 1)); j--)

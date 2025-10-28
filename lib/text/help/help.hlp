@@ -466,6 +466,12 @@ $p  object description - the short description of object
 $P  object description - the short description of target object
 $a  a/an - indefinite article for object (English)
 $A  a/an - indefinite article for target object (English)
+$q  meu/minha - possessive for object (Portuguese: my)
+$Q  meu/minha - possessive for target object (Portuguese: my)
+$v  teu/tua - possessive for object (Portuguese: your - informal)
+$V  teu/tua - possessive for target object (Portuguese: your - informal)
+$j  seu/sua - possessive for object (Portuguese: his/her/your)
+$J  seu/sua - possessive for target object (Portuguese: his/her/your)
 
 OTHER CODES:
 $t  text argument or body part
