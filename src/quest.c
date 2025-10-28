@@ -71,6 +71,20 @@ int is_complete(struct char_data *ch, qst_vnum vnum)
     return FALSE;
 }
 
+/* Check if a quest's level requirements are appropriate for the character */
+static int is_quest_level_available(struct char_data *ch, qst_rnum rnum)
+{
+    /* Immortals can see and join all quests regardless of level */
+    if (GET_LEVEL(ch) >= LVL_IMMORT)
+        return TRUE;
+
+    /* For mortals, check if their level is within the quest's level range */
+    if (GET_LEVEL(ch) < QST_MINLEVEL(rnum) || GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
+        return FALSE;
+
+    return TRUE;
+}
+
 qst_vnum find_quest_by_qmnum(struct char_data *ch, mob_vnum qm, int num)
 {
     qst_rnum rnum;
@@ -941,11 +955,9 @@ static qst_vnum find_unified_quest_by_qmnum(struct char_data *ch, struct char_da
 
             /* Only count quest if it's available (not completed or repeatable) */
             if (!quest_completed || quest_repeatable) {
-                /* For mortals, also check level restrictions */
-                if (GET_LEVEL(ch) < LVL_IMMORT) {
-                    if (GET_LEVEL(ch) < QST_MINLEVEL(rnum) || GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
-                        continue; /* Skip quests outside player's level range */
-                }
+                /* For mortals, check level restrictions */
+                if (!is_quest_level_available(ch, rnum))
+                    continue; /* Skip quests outside player's level range */
                 if (++counter == num)
                     return (QST_NUM(rnum));
             }
@@ -964,11 +976,9 @@ static qst_vnum find_unified_quest_by_qmnum(struct char_data *ch, struct char_da
 
             /* Only count quest if it's available (not completed or repeatable) */
             if (!quest_completed || quest_repeatable) {
-                /* For mortals, also check level restrictions */
-                if (GET_LEVEL(ch) < LVL_IMMORT) {
-                    if (GET_LEVEL(ch) < QST_MINLEVEL(rnum) || GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
-                        continue; /* Skip quests outside player's level range */
-                }
+                /* For mortals, check level restrictions */
+                if (!is_quest_level_available(ch, rnum))
+                    continue; /* Skip quests outside player's level range */
                 if (++counter == num)
                     return GET_TEMP_QUESTS(qm)[i];
             }
@@ -1065,11 +1075,9 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
 
             /* Only show quest if not completed or repeatable */
             if (!quest_completed || quest_repeatable) {
-                /* For mortals, also check level restrictions */
-                if (GET_LEVEL(ch) < LVL_IMMORT) {
-                    if (GET_LEVEL(ch) < QST_MINLEVEL(rnum) || GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
-                        continue; /* Skip quests outside player's level range */
-                }
+                /* For mortals, check level restrictions */
+                if (!is_quest_level_available(ch, rnum))
+                    continue; /* Skip quests outside player's level range */
                 send_to_char(ch, "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
                              QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum), QST_MAXLEVEL(rnum),
                              (quest_completed ? "Sim" : "Não "));
@@ -1089,11 +1097,9 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
 
             /* Only show quest if not completed or repeatable */
             if (!quest_completed || quest_repeatable) {
-                /* For mortals, also check level restrictions */
-                if (GET_LEVEL(ch) < LVL_IMMORT) {
-                    if (GET_LEVEL(ch) < QST_MINLEVEL(rnum) || GET_LEVEL(ch) > QST_MAXLEVEL(rnum))
-                        continue; /* Skip quests outside player's level range */
-                }
+                /* For mortals, check level restrictions */
+                if (!is_quest_level_available(ch, rnum))
+                    continue; /* Skip quests outside player's level range */
                 send_to_char(ch, "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
                              QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum), QST_MAXLEVEL(rnum),
                              (quest_completed ? "Sim" : "Não "));
