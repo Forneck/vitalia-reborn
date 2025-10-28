@@ -22,7 +22,8 @@
 #include "comm.h"
 #include "screen.h"
 #include "quest.h"
-#include "act.h" /* for do_tell */
+#include "act.h"        /* for do_tell */
+#include "dg_scripts.h" /* for char_script_id */
 
 /*--------------------------------------------------------------------------
  * Exported global variables
@@ -329,6 +330,7 @@ void clear_quest(struct char_data *ch)
     GET_QUEST_TIME(ch) = -1;
     GET_QUEST_COUNTER(ch) = 0;
     GET_ESCORT_MOB_ID(ch) = NOBODY;
+    GET_BOUNTY_TARGET_ID(ch) = NOBODY;
     REMOVE_BIT_AR(PRF_FLAGS(ch), PRF_QUEST);
     return;
 }
@@ -701,9 +703,18 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                 generic_complete_quest(ch);
             break;
         case AQ_MOB_KILL_BOUNTY:
-            if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict))
-                if (QST_TARGET(rnum) == GET_MOB_VNUM(vict))
-                    generic_complete_quest(ch);
+            if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict)) {
+                /* Check if this is the specific bounty target */
+                if (GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
+                    /* We have a specific target ID - check against it */
+                    if (char_script_id(vict) == GET_BOUNTY_TARGET_ID(ch))
+                        generic_complete_quest(ch);
+                } else {
+                    /* No specific ID set - fallback to vnum matching (for old quests or if target respawned) */
+                    if (QST_TARGET(rnum) == GET_MOB_VNUM(vict))
+                        generic_complete_quest(ch);
+                }
+            }
             break;
         case AQ_MOB_ESCORT:
             /* Escort quest completion is handled separately in check_escort_quest_completion() */
@@ -1016,6 +1027,30 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
                 send_to_char(ch, "%s diz, 'Desculpe, parece que houve um problema. A busca foi cancelada.'\r\n",
                              GET_NAME(qm));
                 clear_quest(ch);
+            }
+        }
+        /* For bounty quests, find and mark the target mob */
+        else if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY) {
+            struct char_data *target_mob = NULL;
+            mob_rnum target_rnum = real_mobile(QST_TARGET(rnum));
+
+            /* Find a living mob with the target vnum in the world */
+            if (target_rnum != NOBODY) {
+                for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
+                    if (IS_NPC(target_mob) && GET_MOB_RNUM(target_mob) == target_rnum &&
+                        !MOB_FLAGGED(target_mob, MOB_NOTDEADYET)) {
+                        /* Found a target - store its unique ID */
+                        GET_BOUNTY_TARGET_ID(ch) = char_script_id(target_mob);
+                        send_to_char(ch, "%s diz, 'O alvo foi localizado. Boa caçada!'\r\n", GET_NAME(qm));
+                        break;
+                    }
+                }
+            }
+
+            /* If no target found, quest still valid but target may spawn later */
+            if (!target_mob) {
+                GET_BOUNTY_TARGET_ID(ch) = NOBODY;
+                send_to_char(ch, "%s diz, 'O alvo ainda não foi avistado, mas continue procurando!'\r\n", GET_NAME(qm));
             }
         }
 
@@ -2041,6 +2076,30 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg)
                 send_to_char(ch, "%s diz, 'Desculpe, parece que houve um problema. A busca foi cancelada.'\r\n",
                              GET_NAME(qm));
                 clear_quest(ch);
+            }
+        }
+        /* For bounty quests, find and mark the target mob */
+        else if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY) {
+            struct char_data *target_mob = NULL;
+            mob_rnum target_rnum = real_mobile(QST_TARGET(rnum));
+
+            /* Find a living mob with the target vnum in the world */
+            if (target_rnum != NOBODY) {
+                for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
+                    if (IS_NPC(target_mob) && GET_MOB_RNUM(target_mob) == target_rnum &&
+                        !MOB_FLAGGED(target_mob, MOB_NOTDEADYET)) {
+                        /* Found a target - store its unique ID */
+                        GET_BOUNTY_TARGET_ID(ch) = char_script_id(target_mob);
+                        send_to_char(ch, "%s diz, 'O alvo foi localizado. Boa caçada!'\r\n", GET_NAME(qm));
+                        break;
+                    }
+                }
+            }
+
+            /* If no target found, quest still valid but target may spawn later */
+            if (!target_mob) {
+                GET_BOUNTY_TARGET_ID(ch) = NOBODY;
+                send_to_char(ch, "%s diz, 'O alvo ainda não foi avistado, mas continue procurando!'\r\n", GET_NAME(qm));
             }
         }
 

@@ -711,6 +711,8 @@ void char_from_furniture(struct char_data *ch);
 #define GET_QUEST_TIME(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.quest_time))
 /** ID of the mob being escorted in an escort quest. */
 #define GET_ESCORT_MOB_ID(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.escort_mob_id))
+/** ID of the specific mob targeted by a bounty quest. */
+#define GET_BOUNTY_TARGET_ID(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.bounty_target_id))
 /** The number of quests completed by ch. */
 #define GET_NUM_QUESTS(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.num_completed_quests))
 /** The type of quest ch is currently participating in. */
