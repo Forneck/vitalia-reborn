@@ -402,6 +402,7 @@
 #define CON_IMM_CONF 42
 #define CON_REMOTE 43
 #define CON_RB_QHOMETOWN 44
+#define CON_QACCEPT 45 /**< Quest accept confirmation */
 
 /* OLC States range - used by IS_IN_OLC and IS_PLAYING */
 #define FIRST_OLC_STATE CON_OEDIT /**< The first CON_ state that is an OLC */
@@ -1339,6 +1340,10 @@ struct descriptor_data {
     protocol_t *pProtocol;             /**< Kavir plugin */
 
     struct list_data *events;
+
+    /* Pending quest acceptance */
+    qst_vnum pending_quest_vnum;           /**< Quest vnum waiting for confirmation */
+    struct char_data *pending_questmaster; /**< Questmaster for pending quest */
 };
 
 /* other miscellaneous structures */
