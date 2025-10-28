@@ -1,0 +1,113 @@
+#15300
+komainu jade branco guardiao~
+um komainu de jade branco~
+Um majestoso leao-cao de jade puro observa com olhos dourados incandescentes
+~
+   Este Komainu e uma manifestacao da protecao divina durante o dia.  Seu corpo
+de jade branco imaculado irradia calor reconfortante.  Seus olhos brilham como
+brasas douradas, vendo atraves de mentiras.  Sua juba graciosamente entalhada
+parece capaz de cortar como lamina.  Quando voce se aproxima, sente protecao
+absoluta - a sensacao de estar seguro sob olhar vigilante.  Sua presenca
+tranquiliza durante o amanhecer.
+~
+11005962 0 0 0 134293880 8 0 0 500 E
+85 -8 -41 17d17+850 14d14+14
+850 150000
+9 9 0
+BareHandAttack: 4
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+SavingPara: 21
+SavingRod: 21
+SavingPetri: 21
+SavingBreath: 21
+SavingSpell: 21
+E
+#15301
+kitsune obsidiana noite~
+uma kitsune de obsidiana~
+Uma elegante raposa de nove caudas feita de obsidiana polida observa voce com olhos prateados
+~
+   Esta Kitsune e manifestacao da protecao divina durante a noite.  Seu corpo de
+obsidiana negra polida e frio mas nao desconfortavel.  Nove caudas de nevoa
+prateada flutuam atras dela, movendo-se independentemente com graca
+sobrenatural.  Seus olhos como luas crescentes veem atraves de ilusoes e
+mentiras.  Quando voce se aproxima, sente julgamento - sendo avaliado por algo
+muito mais antigo e sabio.  Sua presenca intimida mas nao ameaca
+~
+11008066 0 0 0 134556024 0 0 0 0 E
+85 -8 -41 17d17+850 14d14+14
+850 150000
+9 9 0
+BareHandAttack: 8
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+SavingPara: 21
+SavingRod: 21
+SavingPetri: 21
+SavingBreath: 21
+SavingSpell: 21
+E
+T 15302
+#15302
+coelho adulto macho branco~
+um coelho adulto de pelagem branca~
+Um coelho adulto de pelagem branca imaculada observa voce com olhos dourados atentos.
+~
+   Este coelho nao e comum.  Seu corpo e robusto e saudavel, com pelagem branca
+que brilha fracamente como se fosse tecida com luz lunar solidificada.  Suas
+orelhas, longas e eretas, captam cada som do ambiente com precisao sobrenatural.
+Seus olhos dourados irradiam uma inteligencia tranquila e observadora.  Quando
+se move, ha uma graa fluida em seus saltos que parece desafiar a gravidade.  A
+presenca deste coelho traz uma sensacao de calma e protecao.
+~
+3170304 0 0 0 0 0 0 0 0 E
+2 20 8 0d0+20 1d2+0
+20 400
+9 9 1
+E
+#15303
+coelha adulta femea prateada~
+uma coelha adulta de pelagem prateada~
+Uma coelha adulta de pelagem prateada repousa graciosamente.
+~
+   It looks unfinished.  Esta coelha possui uma beleza eterea que transcende o
+mundano.  Sua pelagem prateada reflete a luz de forma suave, criando um halo
+sutil ao seu redor.  Suas orelhas sao delicadas mas alertas, movendo-se
+constantemente para captar qualquer sinal de perigo ou paz.  Seus olhos, de um
+azul profundo como o cu do crepsculo, carregam uma sabedoria maternal e
+protetora.  Ela se move com cautela calculada, sempre consciente de sua prole
+proxima.  Sua presenca traz uma sensacao de serenidade e cuidado.
+~
+3170304 0 0 0 0 0 0 0 0 E
+2 20 8 0d0+20 1d2+0
+20 400
+9 9 2
+E
+#15304
+coelhinho filhote pequeno~
+um coelhinho filhote~
+Um coelhinho filhote salta alegremente, sua pelagem mesclada de branco e prata.
+~
+   Este pequeno filhote e a encarnacao da inocencia e alegria.  Sua pelagem e
+uma mistura encantadora de branco e prata, herdada de seus pais, ainda fofa e
+macia como nuvens.  Suas orelhas ainda sao pequenas e dobram levemente nas
+pontas.  Seus olhos, grandes e curiosos, brilham com um tom dourado-azulado,
+refletindo ambos os pais.  Ele salta com uma energia contagiante, explorando
+cada canto com entusiasmo infantil.  Sua presenca traz sorrisos involuntarios e
+um senso de esperanca renovada.
+~
+3170304 0 0 0 0 0 0 0 0 E
+1 20 9 0d0+10 1d2+0
+10 100
+9 9 0
+E
+$
