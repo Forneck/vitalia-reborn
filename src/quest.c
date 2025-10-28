@@ -74,6 +74,10 @@ int is_complete(struct char_data *ch, qst_vnum vnum)
 /* Check if a quest's level requirements are appropriate for the character */
 static int is_quest_level_available(struct char_data *ch, qst_rnum rnum)
 {
+    /* Safety check: invalid quest rnum */
+    if (rnum == NOTHING || rnum < 0 || rnum >= total_quests)
+        return FALSE;
+
     /* Immortals can see and join all quests regardless of level */
     if (GET_LEVEL(ch) >= LVL_IMMORT)
         return TRUE;
@@ -665,6 +669,16 @@ void generic_complete_quest(struct char_data *ch)
 
     if (--GET_QUEST_COUNTER(ch) <= 0) {
         rnum = real_quest(vnum);
+
+        /* Safety check: quest must exist */
+        if (rnum == NOTHING) {
+            send_to_char(ch, "ERRO: A busca que você estava fazendo não existe mais!\r\n");
+            log1("SYSERR: generic_complete_quest: Player %s tried to complete non-existent quest vnum %d", GET_NAME(ch),
+                 vnum);
+            clear_quest(ch);
+            save_char(ch);
+            return;
+        }
 
         /* Set flag to prevent recursive quest completion during reward distribution */
         completing_quest = TRUE;
