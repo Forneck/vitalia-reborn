@@ -9,6 +9,9 @@
 @C-@G=@Y>@W Outubro de 2025 @C@Y<@G=@C-@n
 
    @RCorreções de Bugs e Estabilidade@n
+   Corrigido bug crítico onde @YStoneskin@n não protegia contra dano de raios e scripts.
+   Corrigido cálculo de duração da magia @YStoneskin@n para 1 hora/ponto conforme ajuda.
+   Sistema de duração/pontos de @YStoneskin@n agora reduz proporcionalmente em combate.
    Corrigido problema com magia @YDarkness@n que tinha duração muito curta.
    Magia @YAnimate Dead@n agora funciona corretamente com todos os tipos de corpo.
    Corrigido erro que permitia conjurar magias usando @YSay@n em salas sem magia.
