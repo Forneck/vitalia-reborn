@@ -565,6 +565,10 @@ void generic_complete_quest(struct char_data *ch)
         }
         if (!IS_SET(QST_FLAGS(rnum), AQ_REPEATABLE))
             add_completed_quest(ch, vnum);
+
+        /* Notify the room that the character completed a quest */
+        act("$n completou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
+
         clear_quest(ch);
 
         /* Cleanup wishlist quests after completion */
