@@ -305,13 +305,14 @@
 #define PRF_ZONERESETS 34
 #define PRF_HITBAR 35
 #define PRF_AUTOTITLE 36
-#define PRF_NOCLAN 37   /**< Can't hear gossip channel */
-#define PRF_MCCP 38     /**< Auto MCCP compression (MCCP3 > MCCP2) */
-#define PRF_AUTOSIZE 39 /**< Auto NAWS terminal size configuration */
-#define PRF_VERBOSE 40  /**< Listings like where are more verbose */
+#define PRF_NOCLAN 37     /**< Can't hear gossip channel */
+#define PRF_MCCP 38       /**< Auto MCCP compression (MCCP3 > MCCP2) */
+#define PRF_AUTOSIZE 39   /**< Auto NAWS terminal size configuration */
+#define PRF_VERBOSE 40    /**< Listings like where are more verbose */
+#define PRF_VIEWDAMAGE 41 /**< Display damage values after attack messages */
 
 /** Total number of available PRF flags */
-#define NUM_PRF_FLAGS 41
+#define NUM_PRF_FLAGS 42
 
 /* Affect bits: used in char_data.char_specials.saved.affected_by */
 /* WARNING: In the world files, NEVER set the bits marked "R" ("Reserved") */
@@ -396,10 +397,11 @@
 #define CON_RB_SKILL 37
 #define CON_RB_NEW_CLASS 38
 #define CON_RB_REROLL 39
-#define CON_RB_QHOME 40
+#define CON_RB_QATTRS 40
 #define CON_ELEVATE_CONF 41
 #define CON_IMM_CONF 42
 #define CON_REMOTE 43
+#define CON_RB_QHOMETOWN 44
 
 /* OLC States range - used by IS_IN_OLC and IS_PLAYING */
 #define FIRST_OLC_STATE CON_OEDIT /**< The first CON_ state that is an OLC */
@@ -962,6 +964,7 @@ struct room_data {
 #define GOAL_FORAGE 12
 #define GOAL_EAVESDROP 13
 #define GOAL_COLLECT_KEY 14
+#define GOAL_FOLLOW 15
 
 /*
  * Estrutura para armazenar os "genes" de um mob, que podem evoluir.
@@ -978,6 +981,8 @@ struct mob_genetics {
     int trade_tendency;
     int quest_tendency;      /* Tendência de aceitar quests. Varia de 0 a 100. */
     int adventurer_tendency; /* Tendência de ser aventureiro/explorar. Varia de 0 a 100. */
+    int follow_tendency;     /* Tendência de seguir outros chars sem grupo. Varia de 0 a 100. */
+    int healing_tendency;    /* Tendência de curar aliados. Varia de 0 a 100. */
 };
 
 /**
@@ -1178,6 +1183,7 @@ struct player_special_data_saved {
     int current_quest;                     /**< vnum of current quest         */
     int quest_time;                        /**< time left on current quest    */
     int quest_counter;                     /**< Count of targets left to get  */
+    long escort_mob_id;                    /**< ID of mob being escorted      */
     time_t lastmotd;                       /**< Last time player read motd */
     time_t lastnews;                       /**< Last time player read news */
 
@@ -1545,6 +1551,7 @@ struct game_data {
     int school_weather_affects;  /**< Does weather affect spells based on school? */
     int max_pathfind_iterations; /**< Maximum iterations for advanced pathfinding */
     int max_zone_path;           /**< Maximum zones in a pathfinding path */
+    int max_house_objs;          /**< Maximum objects allowed in player houses */
 
     char *OK;       /**< When player receives 'Okay.' text.    */
     char *HUH;      /**< 'Huh!?!'                              */

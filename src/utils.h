@@ -101,6 +101,10 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
 void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int target_vnum, int reward);
 void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target_vnum, int reward);
 void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int reward);
+void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room_vnum destination_room, int reward);
+bool is_mob_excluded_from_quests(struct char_data *mob);
+int count_mob_posted_quests(void);
+bool can_add_mob_posted_quest(void);
 mob_vnum find_questmaster_for_zone(zone_rnum zone);
 mob_vnum find_questmaster_for_zone_enhanced(zone_rnum zone, struct char_data *requesting_mob);
 struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone_rnum zone);
@@ -119,6 +123,7 @@ void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
 int get_stoneskin_points(struct char_data *ch);
 void set_stoneskin_points(struct char_data *ch, int points);
 bool reduce_stoneskin_points(struct char_data *ch, int reduction);
+bool apply_stoneskin_protection(struct char_data *ch, int *dam);
 
 /* String utility functions */
 void remove_from_string(char *str, const char *substr);
@@ -568,6 +573,8 @@ void char_from_furniture(struct char_data *ch);
 #define GET_GENTRADE(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.trade_tendency : 0)
 #define GET_GENQUEST(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.quest_tendency : 0)
 #define GET_GENADVENTURER(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.adventurer_tendency : 0)
+#define GET_GENFOLLOW(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.follow_tendency : 0)
+#define GET_GENHEALING(ch) ((ch)->ai_data ? (ch)->ai_data->genetics.healing_tendency : 0)
 
 #define GET_MOB_REPUTATION(ch) ((ch)->ai_data ? (ch)->ai_data->reputation : 0)
 #define GET_PLAYER_REPUTATION(ch) (IS_NPC(ch) ? 0 : GET_REPUTATION(ch))
@@ -702,6 +709,8 @@ void char_from_furniture(struct char_data *ch);
 #define GET_QUEST_COUNTER(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.quest_counter))
 /** Time remaining to complete the quest ch is currently on. */
 #define GET_QUEST_TIME(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.quest_time))
+/** ID of the mob being escorted in an escort quest. */
+#define GET_ESCORT_MOB_ID(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.escort_mob_id))
 /** The number of quests completed by ch. */
 #define GET_NUM_QUESTS(ch) CHECK_PLAYER_SPECIAL((ch), ((ch)->player_specials->saved.num_completed_quests))
 /** The type of quest ch is currently participating in. */
@@ -833,7 +842,7 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 
 /** Defines if an obj is a corpse. */
 #define IS_CORPSE(obj)                                                                                                 \
-    (GET_OBJ_TYPE(obj) == ITEM_CONTAINER && GET_OBJ_VAL((obj), 3) == 1) || (GET_OBJ_TYPE(obj) == ITEM_CORPSE)
+    ((GET_OBJ_TYPE(obj) == ITEM_CONTAINER && GET_OBJ_VAL((obj), 3) == 1) || (GET_OBJ_TYPE(obj) == ITEM_CORPSE))
 
 /** Can the obj be worn on body part? */
 #define CAN_WEAR(obj, part) OBJWEAR_FLAGGED((obj), (part))
@@ -1061,6 +1070,8 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_MAX_PATHFIND_ITERATIONS config_info.play.max_pathfind_iterations
 /** Maximum zones in a pathfinding path */
 #define CONFIG_MAX_ZONE_PATH config_info.play.max_zone_path
+/** Maximum objects allowed in player houses */
+#define CONFIG_MAX_HOUSE_OBJS config_info.play.max_house_objs
 /** What level to use the shout command? */
 #define CONFIG_LEVEL_CAN_SHOUT config_info.play.level_can_shout
 /** How many move points does holler cost? */

@@ -306,6 +306,8 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define MEDIT_GEN_TRADE 48
 #define MEDIT_GEN_QUEST 49
 #define MEDIT_GEN_ADVENTURER 50
+#define MEDIT_GEN_FOLLOW 51
+#define MEDIT_GEN_HEALING 52
 
 /* Submodes of SEDIT connectedness. */
 #define SEDIT_MAIN_MENU 0
@@ -408,9 +410,10 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_RESS_ROOM_3 64
 #define CEDIT_MAX_PATHFIND_ITERATIONS 65
 #define CEDIT_MAX_ZONE_PATH 66
-#define CEDIT_EXPERIMENTAL_MENU 67
-#define CEDIT_NEW_AUCTION_SYSTEM 68
-#define CEDIT_EXPERIMENTAL_BANK_SYSTEM 69
+#define CEDIT_MAX_HOUSE_OBJS 67
+#define CEDIT_EXPERIMENTAL_MENU 68
+#define CEDIT_NEW_AUCTION_SYSTEM 69
+#define CEDIT_EXPERIMENTAL_BANK_SYSTEM 70
 
 /* Hedit Submodes of connectedness. */
 #define HEDIT_CONFIRM_SAVESTRING 0

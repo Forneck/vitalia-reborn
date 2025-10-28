@@ -167,14 +167,16 @@ const char *connected_types[] = {"Playing",
                                  "IBT edit",
                                  "Message edit",
                                  "Protocol Detection",
-                                 "Rerolling",        // CON_REROLL
-                                 "Select hometn",    // CON_QHOME
-                                 "Rebegin: skill",   // CON_RB_SKILL
-                                 "Rebegin: class",   // CON_RB_NEW_CLASS
-                                 "Rebegin: roll",    // CON_RB_REROLL
-                                 "Rebegin: home",    // CON_RB_QHOME
-                                 "Immort: conf",     // CON_IMM_CONF
-                                 "Remote control",   // CON_REMOTE
+                                 "Rerolling",           // CON_REROLL
+                                 "Select hometn",       // CON_QHOME
+                                 "Rebegin: skill",      // CON_RB_SKILL
+                                 "Rebegin: class",      // CON_RB_NEW_CLASS
+                                 "Rebegin: roll",       // CON_RB_REROLL
+                                 "Rebegin: attrs",      // CON_RB_QATTRS
+                                 "Elevate: conf",       // CON_ELEVATE_CONF
+                                 "Immort: conf",        // CON_IMM_CONF
+                                 "Remote control",      // CON_REMOTE
+                                 "Rebegin: hometown",   // CON_RB_QHOMETOWN
                                  "\n"};
 
 /** Describes the position in the equipment listing.

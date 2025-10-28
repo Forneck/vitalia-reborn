@@ -21,7 +21,8 @@
 #define AQ_ROOM_CLEAR 6      /* Player must clear room of all mobs   */
 #define AQ_PLAYER_KILL 7     /* Kill a specific player or any player killer */
 #define AQ_MOB_KILL_BOUNTY 8 /* Kill a specific mob for bounty (posted by mobs) */
-#define NUM_AQ_TYPES 9       /* Used in qedit functions              */
+#define AQ_MOB_ESCORT 9      /* Player escorts mob to destination    */
+#define NUM_AQ_TYPES 10      /* Used in qedit functions              */
 
 #define MAX_QUEST_NAME 40  /* Length of quest name                 */
 #define MAX_QUEST_DESC 75  /* Length of quest description          */
@@ -33,6 +34,7 @@
 #define SCMD_QUEST_LEAVE 3    /* Leave a quest                        */
 #define SCMD_QUEST_PROGRESS 4 /* Show progress of current quest       */
 #define SCMD_QUEST_STATUS 5   /* Show complete details of a quest     */
+#define SCMD_QUEST_REMOVE 6   /* Remove a mob-posted quest (GOD+)     */
 /* AQ Flags (much room for expansion) ********************************* */
 #define AQ_REPEATABLE (1 << 0) /* Quest can be repeated                */
 #define AQ_MOB_POSTED (1 << 1) /* Quest posted by a mob (not immortal) */
@@ -105,6 +107,11 @@ void quest_timeout(struct char_data *ch);
 void check_timed_quests(void);
 SPECIAL(questmaster);
 ACMD(do_quest);
+
+/* Escort Quest Functions */
+bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum);
+bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum);
+void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer);
 
 /* Quest display functions for temporary quest masters */
 void quest_show_temp(struct char_data *ch, struct char_data *qm);

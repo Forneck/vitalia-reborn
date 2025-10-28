@@ -837,6 +837,10 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                      CCNRM(ch, C_NRM));
         send_to_char(ch, "Tendência Aventureiro (Genética): [%s%d%s]\r\n", CCCYN(ch, C_NRM), GET_GENADVENTURER(k),
                      CCNRM(ch, C_NRM));
+        send_to_char(ch, "Tendência Follow (Genética): [%s%d%s]\r\n", CCCYN(ch, C_NRM), GET_GENFOLLOW(k),
+                     CCNRM(ch, C_NRM));
+        send_to_char(ch, "Tendência Healing (Genética): [%s%d%s]\r\n", CCCYN(ch, C_NRM), GET_GENHEALING(k),
+                     CCNRM(ch, C_NRM));
         /* Futuramente, podemos adicionar outros genes aqui. */
     }
 
@@ -887,6 +891,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         send_to_char(ch, "Quest Points: [%9d] Quests Completed: [%5d]\r\n", GET_QUESTPOINTS(k), GET_NUM_QUESTS(k));
         if (GET_QUEST(k) != NOTHING)
             send_to_char(ch, "Current Quest: [%5d] Time Left: [%5d]\r\n", GET_QUEST(k), GET_QUEST_TIME(k));
+        send_to_char(ch, "Incarnations: [%3d Enc.]\r\n", GET_REMORT(k));
     }
 
     if (IS_MOB(k))
@@ -5529,7 +5534,8 @@ ACMD(do_gstats)
     if (!*arg1) {
         send_to_char(ch, "Usage: gstats <target> <gene>\r\n");
         send_to_char(ch, "Target can be: mob name/vnum, zone <zone_num>, or 'all'\r\n");
-        send_to_char(ch, "Genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+        send_to_char(
+            ch, "Genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, follow, healing\r\n");
         return;
     }
 
@@ -5539,7 +5545,8 @@ ACMD(do_gstats)
         if (!*arg2 || !*arg3) {
             send_to_char(ch, "Usage: gstats zone <zone_number> <gene>\r\n");
             send_to_char(ch,
-                         "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+                         "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, "
+                         "follow, healing\r\n");
             return;
         }
     } else {
@@ -5547,7 +5554,8 @@ ACMD(do_gstats)
         if (!*arg2) {
             send_to_char(ch, "Specify a gene to analyze.\r\n");
             send_to_char(ch,
-                         "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+                         "Available genes: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, "
+                         "follow, healing\r\n");
             return;
         }
     }
@@ -5573,9 +5581,14 @@ ACMD(do_gstats)
         gene_name = "Quest Tendency";
     else if (!str_cmp(gene_arg, "adventurer"))
         gene_name = "Adventurer Tendency";
+    else if (!str_cmp(gene_arg, "follow"))
+        gene_name = "Follow Tendency";
+    else if (!str_cmp(gene_arg, "healing") || !str_cmp(gene_arg, "bandage"))
+        gene_name = "Healing Tendency";
     else {
-        send_to_char(
-            ch, "Invalid gene. Available: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer\r\n");
+        send_to_char(ch,
+                     "Invalid gene. Available: wimpy, loot, equip, roam, brave, group, use, trade, quest, adventurer, "
+                     "follow, healing\r\n");
         return;
     }
 
@@ -5650,6 +5663,10 @@ ACMD(do_gstats)
             gene_value = proto_mob->ai_data->genetics.quest_tendency;
         else if (!str_cmp(gene_arg, "adventurer"))
             gene_value = proto_mob->ai_data->genetics.adventurer_tendency;
+        else if (!str_cmp(gene_arg, "follow"))
+            gene_value = proto_mob->ai_data->genetics.follow_tendency;
+        else if (!str_cmp(gene_arg, "healing") || !str_cmp(gene_arg, "bandage"))
+            gene_value = proto_mob->ai_data->genetics.healing_tendency;
 
         if (count < 1000) {
             gene_values[count++] = gene_value;
@@ -6240,4 +6257,119 @@ ACMD(do_portal)
 
     mudlog(NRM, MAX(LVL_GOD, GET_INVIS_LEV(ch)), TRUE, "(GC) %s created portal%s from %d to %d (timer: %s)",
            GET_NAME(ch), bidirectional ? "s" : "", world[IN_ROOM(ch)].number, dest_vnum, timer_buf);
+}
+
+/* Global array to track disabled commands */
+static bool *disabled_cmd = NULL;
+static int num_of_cmds = 0;
+
+void init_disabled_commands(void)
+{
+    int i;
+
+    /* Count commands */
+    for (i = 0; *complete_cmd_info[i].command != '\n'; i++)
+        ;
+    num_of_cmds = i;
+
+    /* Allocate and initialize disabled array */
+    CREATE(disabled_cmd, bool, num_of_cmds);
+    for (i = 0; i < num_of_cmds; i++)
+        disabled_cmd[i] = FALSE;
+}
+
+bool is_command_disabled(int cmd_num)
+{
+    if (cmd_num < 0 || cmd_num >= num_of_cmds)
+        return FALSE;
+
+    return disabled_cmd[cmd_num];
+}
+
+static void list_disabled_commands(struct char_data *ch)
+{
+    int i;
+    bool found = FALSE;
+
+    send_to_char(ch, "Comandos desabilitados:\r\n");
+    for (i = 0; i < num_of_cmds; i++) {
+        if (disabled_cmd[i]) {
+            send_to_char(ch, "  %s\r\n", complete_cmd_info[i].command);
+            found = TRUE;
+        }
+    }
+    if (!found)
+        send_to_char(ch, "  Nenhum comando está desabilitado.\r\n");
+}
+
+ACMD(do_disable)
+{
+    char arg[MAX_INPUT_LENGTH];
+    int cmd_num;
+
+    one_argument(argument, arg);
+
+    if (!*arg) {
+        list_disabled_commands(ch);
+        return;
+    }
+
+    /* Find the command */
+    cmd_num = find_command(arg);
+
+    if (cmd_num < 0) {
+        send_to_char(ch, "Comando '%s' não encontrado.\r\n", arg);
+        return;
+    }
+
+    /* Check if trying to disable 'disable' or 'enable' */
+    if (!strcmp(complete_cmd_info[cmd_num].command, "disable") ||
+        !strcmp(complete_cmd_info[cmd_num].command, "enable")) {
+        send_to_char(ch, "Você não pode desabilitar o comando '%s'!\r\n", complete_cmd_info[cmd_num].command);
+        return;
+    }
+
+    /* Check if already disabled */
+    if (disabled_cmd[cmd_num]) {
+        send_to_char(ch, "O comando '%s' já está desabilitado.\r\n", complete_cmd_info[cmd_num].command);
+        return;
+    }
+
+    /* Disable the command */
+    disabled_cmd[cmd_num] = TRUE;
+    send_to_char(ch, "Comando '%s' desabilitado com sucesso.\r\n", complete_cmd_info[cmd_num].command);
+    mudlog(BRF, LVL_IMMORT, TRUE, "(GC) %s desabilitou o comando: %s", GET_NAME(ch),
+           complete_cmd_info[cmd_num].command);
+}
+
+ACMD(do_enable)
+{
+    char arg[MAX_INPUT_LENGTH];
+    int cmd_num;
+
+    one_argument(argument, arg);
+
+    if (!*arg) {
+        list_disabled_commands(ch);
+        return;
+    }
+
+    /* Find the command */
+    cmd_num = find_command(arg);
+
+    if (cmd_num < 0) {
+        send_to_char(ch, "Comando '%s' não encontrado.\r\n", arg);
+        return;
+    }
+
+    /* Check if not disabled */
+    if (!disabled_cmd[cmd_num]) {
+        send_to_char(ch, "O comando '%s' não está desabilitado.\r\n", complete_cmd_info[cmd_num].command);
+        return;
+    }
+
+    /* Enable the command */
+    disabled_cmd[cmd_num] = FALSE;
+    send_to_char(ch, "Comando '%s' habilitado com sucesso.\r\n", complete_cmd_info[cmd_num].command);
+    mudlog(BRF, LVL_IMMORT, TRUE, "(GC) %s habilitou o comando: %s", GET_NAME(ch), complete_cmd_info[cmd_num].command);
 }

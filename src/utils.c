@@ -2253,6 +2253,59 @@ bool mob_can_afford_item(struct char_data *ch, obj_vnum item_vnum)
 }
 
 /**
+ * Check if a mob should be excluded from being a quest target.
+ * Excludes summoned and charmed creatures.
+ * @param mob The mob to check
+ * @return TRUE if mob should be excluded from quests, FALSE otherwise
+ */
+bool is_mob_excluded_from_quests(struct char_data *mob)
+{
+    if (!IS_NPC(mob)) {
+        return FALSE;
+    }
+
+    /* Check if mob is charmed/summoned (has a master) */
+    if (mob->master != NULL) {
+        return TRUE;
+    }
+
+    /* Check if mob is affected by charm (summoned creatures) */
+    if (AFF_FLAGGED(mob, AFF_CHARM)) {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+/**
+ * Count the number of mob-posted quests currently in the system.
+ * @return Number of quests with the AQ_MOB_POSTED flag
+ */
+int count_mob_posted_quests(void)
+{
+    int count = 0;
+    qst_rnum rnum;
+
+    for (rnum = 0; rnum < total_quests; rnum++) {
+        if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED)) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+/**
+ * Check if we can add another mob-posted quest without exceeding the limit.
+ * @return TRUE if we can add another quest, FALSE if at limit
+ */
+bool can_add_mob_posted_quest(void)
+{
+    const int MAX_MOB_POSTED_QUESTS = 150;
+    return (count_mob_posted_quests() < MAX_MOB_POSTED_QUESTS);
+}
+
+/**
  * Faz um mob postar uma quest para obter um item.
  * Esta é uma implementação básica que simula a postagem de uma quest.
  * Em uma implementação futura, isto seria integrado com o sistema de quest boards.
@@ -2322,6 +2375,11 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
         return;
     }
 
+    /* Check if we've reached the limit of mob-posted quests */
+    if (!can_add_mob_posted_quest()) {
+        return;
+    }
+
     /* Check if there's already an active quest for this item from this mob */
     for (int i = 0; i < total_quests; i++) {
         if (QST_RETURNMOB(i) == GET_MOB_VNUM(ch) && QST_TARGET(i) == item_vnum && QST_TYPE(i) == AQ_OBJ_RETURN) {
@@ -2334,6 +2392,14 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     obj_rnum = real_object(item_vnum);
     if (obj_rnum != NOTHING) {
         item_name = obj_proto[obj_rnum].short_description;
+
+        /* Não posta quest para itens que não podem ser pegos */
+        if (!CAN_WEAR(&obj_proto[obj_rnum], ITEM_WEAR_TAKE)) {
+            log1("WISHLIST QUEST: %s tried to post quest for untakeable item %d (%s)", GET_NAME(ch), item_vnum,
+                 item_name);
+            remove_item_from_wishlist(ch, item_vnum);
+            return;
+        }
     }
 
     /* Encontra zona do mob */
@@ -2436,8 +2502,8 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     new_quest->obj_reward = reward_item; /* Enhancement 1: Item from mob inventory */
 
     /* Cria strings da quest */
-    snprintf(quest_name, sizeof(quest_name), "Busca por %s", item_name);
-    snprintf(quest_desc, sizeof(quest_desc), "%s precisa de %s", GET_NAME(ch), item_name);
+    snprintf(quest_name, sizeof(quest_name), "Buscar %s", item_name);
+    snprintf(quest_desc, sizeof(quest_desc), "Buscar e trazer %s", item_name);
 
     /* Check if questmaster is different from requester */
     mob_rnum qm_mob_rnum = real_mobile(questmaster_vnum);
@@ -2573,6 +2639,11 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
         return;
     }
 
+    /* Check if we've reached the limit of mob-posted quests */
+    if (!can_add_mob_posted_quest()) {
+        return;
+    }
+
     /* Validar tipo de quest */
     if (quest_type != AQ_PLAYER_KILL && quest_type != AQ_MOB_KILL_BOUNTY) {
         log1("SYSERR: Invalid combat quest type %d from %s", quest_type, GET_NAME(ch));
@@ -2688,7 +2759,7 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
                  GET_NAME(ch), calculated_reward, calculated_reward * 3);
         snprintf(quest_done, sizeof(quest_done), "Excelente! Você eliminou um assassino. A justiça foi feita!");
     } else {
-        snprintf(quest_name, sizeof(quest_name), "Caça: %s", target_name);
+        snprintf(quest_name, sizeof(quest_name), "Caça %s", target_name);
         snprintf(quest_desc, sizeof(quest_desc), "%s oferece recompensa por %s", GET_NAME(ch), target_name);
         snprintf(quest_info, sizeof(quest_info),
                  "%s está oferecendo uma recompensa pela eliminação de %s. "
@@ -2769,8 +2840,14 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     char *target_name = "alvo desconhecido";
     obj_rnum target_obj_rnum = NOTHING;
     mob_rnum target_mob_rnum = NOBODY;
+    room_rnum target_room_rnum = NOWHERE;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Check if we've reached the limit of mob-posted quests */
+    if (!can_add_mob_posted_quest()) {
         return;
     }
 
@@ -2780,19 +2857,45 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
         return;
     }
 
+    /* Convert AQ_OBJ_FIND to AQ_OBJ_RETURN to require delivery instead of just finding */
+    if (quest_type == AQ_OBJ_FIND) {
+        quest_type = AQ_OBJ_RETURN;
+    }
+
     /* Obter nome do alvo */
-    if (quest_type == AQ_OBJ_FIND && target_vnum != NOTHING) {
+    if (quest_type == AQ_OBJ_RETURN && target_vnum != NOTHING) {
         target_obj_rnum = real_object(target_vnum);
         if (target_obj_rnum != NOTHING) {
             target_name = obj_proto[target_obj_rnum].short_description;
+
+            /* Não posta quest para itens que não podem ser pegos */
+            if (!CAN_WEAR(&obj_proto[target_obj_rnum], ITEM_WEAR_TAKE)) {
+                log1("EXPLORATION QUEST: %s tried to post quest for untakeable item %d (%s)", GET_NAME(ch), target_vnum,
+                     target_name);
+                act("$n procura por alguém para ajudar, mas desiste.", FALSE, ch, 0, 0, TO_ROOM);
+                return;
+            }
         }
     } else if (quest_type == AQ_MOB_FIND && target_vnum != NOTHING) {
         target_mob_rnum = real_mobile(target_vnum);
         if (target_mob_rnum != NOBODY) {
             target_name = mob_proto[target_mob_rnum].player.short_descr;
         }
-    } else if (quest_type == AQ_ROOM_FIND) {
-        target_name = "local específico";
+    } else if (quest_type == AQ_ROOM_FIND && target_vnum != NOTHING) {
+        target_room_rnum = real_room(target_vnum);
+        if (target_room_rnum != NOWHERE) {
+            target_name = world[target_room_rnum].name;
+
+            /* Não posta quest para salas GODROOM ou player houses, mas permite DEATH */
+            if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE)) {
+                log1("EXPLORATION QUEST: %s tried to post quest for restricted room %d (%s)", GET_NAME(ch), target_vnum,
+                     target_name);
+                act("$n procura por alguém para ajudar, mas desiste.", FALSE, ch, 0, 0, TO_ROOM);
+                return;
+            }
+        } else {
+            target_name = "local específico";
+        }
     }
 
     /* Encontra zona do mob */
@@ -2811,7 +2914,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
 
     /* Calcula dificuldade baseada no tipo de quest */
     switch (quest_type) {
-        case AQ_OBJ_FIND:
+        case AQ_OBJ_RETURN:
             difficulty = 40 + rand_number(0, 30); /* Objetos são moderadamente difíceis */
             break;
         case AQ_ROOM_FIND:
@@ -2896,9 +2999,9 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
 
     /* Cria strings da quest baseadas no tipo */
     switch (quest_type) {
-        case AQ_OBJ_FIND:
-            snprintf(quest_name, sizeof(quest_name), "Buscar: %s", target_name);
-            snprintf(quest_desc, sizeof(quest_desc), "%s procura por %s", GET_NAME(ch), target_name);
+        case AQ_OBJ_RETURN:
+            snprintf(quest_name, sizeof(quest_name), "Buscar %s", target_name);
+            snprintf(quest_desc, sizeof(quest_desc), "Encontrar e trazer %s", target_name);
             snprintf(quest_info, sizeof(quest_info),
                      "%s perdeu %s e precisa desesperadamente recuperá-lo. "
                      "Encontre e traga este item para receber %d moedas de ouro.",
@@ -2906,17 +3009,17 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
             snprintf(quest_done, sizeof(quest_done), "Perfeito! Você encontrou o que eu estava procurando!");
             break;
         case AQ_ROOM_FIND:
-            snprintf(quest_name, sizeof(quest_name), "Explorar Local");
-            snprintf(quest_desc, sizeof(quest_desc), "%s precisa de um explorador", GET_NAME(ch));
+            snprintf(quest_name, sizeof(quest_name), "Explorar local");
+            snprintf(quest_desc, sizeof(quest_desc), "Explorar um local específico");
             snprintf(quest_info, sizeof(quest_info),
-                     "%s precisa que alguém explore um local específico (sala %d). "
+                     "%s precisa que alguém explore um local específico (%s). "
                      "Vá até lá para receber %d moedas de ouro.",
-                     GET_NAME(ch), target_vnum, calculated_reward);
+                     GET_NAME(ch), target_name, calculated_reward);
             snprintf(quest_done, sizeof(quest_done), "Excelente! Você chegou ao local que eu precisava explorar!");
             break;
         case AQ_MOB_FIND:
-            snprintf(quest_name, sizeof(quest_name), "Encontrar: %s", target_name);
-            snprintf(quest_desc, sizeof(quest_desc), "%s procura por %s", GET_NAME(ch), target_name);
+            snprintf(quest_name, sizeof(quest_name), "Encontrar %s", target_name);
+            snprintf(quest_desc, sizeof(quest_desc), "Encontrar e falar com %s", target_name);
             snprintf(quest_info, sizeof(quest_info),
                      "%s está procurando por %s. Encontre esta pessoa para receber %d moedas de ouro.", GET_NAME(ch),
                      target_name, calculated_reward);
@@ -2955,7 +3058,7 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
     /* Log da ação */
     log1("EXPLORATION QUEST: %s (room %d) created %s quest %d (target %d) with QM %d, reward %d gold", GET_NAME(ch),
          GET_ROOM_VNUM(IN_ROOM(ch)),
-         (quest_type == AQ_OBJ_FIND)    ? "object find"
+         (quest_type == AQ_OBJ_RETURN)  ? "object return"
          : (quest_type == AQ_ROOM_FIND) ? "room find"
                                         : "mob find",
          new_quest_vnum, target_vnum, questmaster_vnum, calculated_reward);
@@ -2990,8 +3093,14 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
     obj_vnum reward_item = NOTHING;
     char *target_name = "alvo desconhecido";
     mob_rnum target_mob_rnum = NOBODY;
+    room_rnum target_room_rnum = NOWHERE;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Check if we've reached the limit of mob-posted quests */
+    if (!can_add_mob_posted_quest()) {
         return;
     }
 
@@ -3008,7 +3117,18 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
             target_name = mob_proto[target_mob_rnum].player.short_descr;
         }
     } else if (quest_type == AQ_ROOM_CLEAR) {
-        target_name = "área específica";
+        target_room_rnum = real_room(target_vnum);
+        if (target_room_rnum != NOWHERE) {
+            /* Não posta quest para salas GODROOM ou player houses, mas permite DEATH */
+            if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE)) {
+                log1("PROTECTION QUEST: %s tried to post quest for restricted room %d", GET_NAME(ch), target_vnum);
+                act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
+                return;
+            }
+            target_name = world[target_room_rnum].name;
+        } else {
+            target_name = "área específica";
+        }
     }
 
     /* Encontra zona do mob */
@@ -3103,20 +3223,20 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
 
     /* Cria strings da quest baseadas no tipo */
     if (quest_type == AQ_MOB_SAVE) {
-        snprintf(quest_name, sizeof(quest_name), "Salvar: %s", target_name);
-        snprintf(quest_desc, sizeof(quest_desc), "%s precisa salvar %s", GET_NAME(ch), target_name);
+        snprintf(quest_name, sizeof(quest_name), "Salvar %s", target_name);
+        snprintf(quest_desc, sizeof(quest_desc), "Proteger %s de perigos", target_name);
         snprintf(quest_info, sizeof(quest_info),
                  "%s está preocupado com a segurança de %s. "
                  "Ajude a garantir que esta pessoa esteja segura para receber %d moedas de ouro.",
                  GET_NAME(ch), target_name, calculated_reward);
         snprintf(quest_done, sizeof(quest_done), "Obrigado! Agora posso ficar tranquilo sabendo que estão seguros!");
     } else {
-        snprintf(quest_name, sizeof(quest_name), "Limpar Área");
-        snprintf(quest_desc, sizeof(quest_desc), "%s precisa limpar uma área", GET_NAME(ch));
+        snprintf(quest_name, sizeof(quest_name), "Limpar área");
+        snprintf(quest_desc, sizeof(quest_desc), "Eliminar criaturas hostis");
         snprintf(quest_info, sizeof(quest_info),
-                 "%s precisa que alguém limpe uma área específica (sala %d) de todas as criaturas hostis. "
+                 "%s precisa que alguém limpe uma área específica (%s) de todas as criaturas hostis. "
                  "Elimine todos os inimigos da área para receber %d moedas de ouro.",
-                 GET_NAME(ch), target_vnum, calculated_reward);
+                 GET_NAME(ch), target_name, calculated_reward);
         snprintf(quest_done, sizeof(quest_done), "Perfeito! A área está limpa e segura agora!");
     }
 
@@ -3189,6 +3309,11 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
     mob_rnum target_mob_rnum = NOBODY;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Check if we've reached the limit of mob-posted quests */
+    if (!can_add_mob_posted_quest()) {
         return;
     }
 
@@ -3287,7 +3412,7 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
     new_quest->obj_reward = reward_item;
 
     /* Cria strings da quest */
-    snprintf(quest_name, sizeof(quest_name), "Eliminar: %s", target_name);
+    snprintf(quest_name, sizeof(quest_name), "Eliminar %s", target_name);
     snprintf(quest_desc, sizeof(quest_desc), "%s quer eliminar %s", GET_NAME(ch), target_name);
     snprintf(quest_info, sizeof(quest_info),
              "%s está incomodado com %s e quer vê-lo eliminado. "
@@ -3331,6 +3456,165 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
         log1("KILL QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
     } else {
         log1("SYSERR: Failed to save kill quest %d to disk", new_quest_vnum);
+    }
+}
+
+/**
+ * Faz um mob postar uma quest de escolta (AQ_MOB_ESCORT).
+ * @param ch O mob que posta a quest
+ * @param escort_mob_vnum VNUM do mob a ser escoltado
+ * @param destination_room VNUM da sala de destino
+ * @param reward Recompensa oferecida
+ */
+void mob_posts_escort_quest(struct char_data *ch, mob_vnum escort_mob_vnum, room_vnum destination_room, int reward)
+{
+    mob_vnum questmaster_vnum;
+    qst_vnum new_quest_vnum;
+    struct aq_data *new_quest;
+    int difficulty;
+    int calculated_reward;
+    zone_rnum mob_zone;
+    char quest_name[MAX_QUEST_NAME];
+    char quest_desc[MAX_QUEST_DESC];
+    char quest_info[MAX_QUEST_MSG];
+    char quest_done[MAX_QUEST_MSG];
+    obj_vnum reward_item = NOTHING;
+    char *escort_name = "um viajante";
+    char *dest_name = "um local seguro";
+    mob_rnum escort_mob_rnum = NOBODY;
+    room_rnum dest_room_rnum = NOWHERE;
+
+    if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Check if we've reached the limit of mob-posted quests */
+    if (!can_add_mob_posted_quest()) {
+        return;
+    }
+
+    /* Obter nome do mob a ser escoltado */
+    if (escort_mob_vnum != NOTHING) {
+        escort_mob_rnum = real_mobile(escort_mob_vnum);
+        if (escort_mob_rnum != NOBODY) {
+            escort_name = GET_NAME(&mob_proto[escort_mob_rnum]);
+        }
+    }
+
+    /* Obter nome da sala de destino */
+    if (destination_room != NOTHING) {
+        dest_room_rnum = real_room(destination_room);
+        if (dest_room_rnum != NOWHERE) {
+            dest_name = world[dest_room_rnum].name;
+        }
+    }
+
+    /* Encontra zona do mob */
+    mob_zone = world[IN_ROOM(ch)].zone;
+
+    /* Encontra questmaster */
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
+    if (questmaster_vnum == NOBODY) {
+        return;
+    }
+
+    /* Cria uma nova quest */
+    CREATE(new_quest, struct aq_data, 1);
+
+    /* Gera VNUM único para a nova quest baseado na zona */
+    new_quest_vnum = zone_table[mob_zone].bot + 9000 + (time(0) % 1000);
+    while (real_quest(new_quest_vnum) != NOTHING) {
+        new_quest_vnum++;
+        if (new_quest_vnum > zone_table[mob_zone].top + 9000) {
+            new_quest_vnum = zone_table[mob_zone].bot + 9000;
+        }
+    }
+
+    /* Configura quest básica */
+    /* Configura quest básica */
+    new_quest->vnum = new_quest_vnum;
+    new_quest->type = AQ_MOB_ESCORT;
+    new_quest->target = escort_mob_vnum;
+    new_quest->qm = questmaster_vnum;
+    new_quest->flags = AQ_MOB_POSTED; /* Marca como postada por mob */
+
+    /* Calcula dificuldade e recompensa */
+    difficulty = MAX(1, GET_LEVEL(ch) / 10);
+    calculated_reward = MAX(100, reward);
+
+    /* Seleciona item de recompensa baseado na dificuldade */
+    reward_item = select_mob_inventory_reward(ch, difficulty);
+
+    /* Configura valores da quest */
+    int base_questpoints = 10 + difficulty;
+
+    /* Bonus para mobs corajosos */
+    if (GET_GENBRAVE(ch) > 70) {
+        base_questpoints += 2;
+    } else if (GET_GENBRAVE(ch) > 40) {
+        base_questpoints += 1;
+    }
+
+    new_quest->value[0] = URANGE(2, base_questpoints, 15);         /* Questpoints reward */
+    new_quest->value[1] = calculated_reward / 4;                   /* Penalty for failure */
+    new_quest->value[2] = MAX(10, GET_LEVEL(ch) - 5);              /* Min level */
+    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 20); /* Max level */
+    new_quest->value[4] = -1;                                      /* No time limit */
+    new_quest->value[5] = destination_room;                        /* Destination room in RETURNMOB field */
+    new_quest->value[6] = 1;                                       /* Quantity */
+
+    /* Configura recompensas */
+    new_quest->gold_reward = calculated_reward;
+    new_quest->exp_reward = calculated_reward * 2; /* Escort quests give moderate XP */
+    new_quest->obj_reward = reward_item;
+
+    /* Cria strings da quest */
+    snprintf(quest_name, sizeof(quest_name), "Escoltar %s", escort_name);
+    snprintf(quest_desc, sizeof(quest_desc), "%s precisa de escolta", escort_name);
+    snprintf(
+        quest_info, sizeof(quest_info),
+        "%s precisa ser escoltado até %s com segurança. "
+        "Aceite esta busca e guie o viajante até o destino para receber %d moedas de ouro e %d pontos de experiência.",
+        escort_name, dest_name, calculated_reward, calculated_reward * 2);
+    snprintf(quest_done, sizeof(quest_done), "Muito obrigado por me escoltar com segurança!");
+
+    new_quest->name = str_udup(quest_name);
+    new_quest->desc = str_udup(quest_desc);
+    new_quest->info = str_udup(quest_info);
+    new_quest->done = str_udup(quest_done);
+    new_quest->quit = str_udup("Entendo. É uma jornada perigosa mesmo.");
+
+    /* Adiciona a quest ao sistema */
+    if (add_quest(new_quest) < 0) {
+        log1("SYSERR: Failed to add escort quest for %s (escort mob %d)", GET_NAME(ch), escort_mob_vnum);
+        free_quest(new_quest);
+        return;
+    }
+
+    /* Check if mob can reach questmaster, if not make it a temporary questmaster */
+    make_mob_temp_questmaster_if_needed(ch, new_quest_vnum);
+
+    /* Deduz o ouro do mob */
+    GET_GOLD(ch) -= calculated_reward;
+
+    /* Aumenta quest_tendency por postar uma quest */
+    if (ch->ai_data->genetics.quest_tendency < 100) {
+        ch->ai_data->genetics.quest_tendency = MIN(100, ch->ai_data->genetics.quest_tendency + 1);
+    }
+
+    /* Mensagens para jogadores */
+    act("$n escreve um pedido de escolta e o envia para o questmaster.", FALSE, ch, 0, 0, TO_ROOM);
+
+    /* Log da ação */
+    log1("ESCORT QUEST: %s (room %d) created escort quest %d (mob %d to room %d) with QM %d, reward %d gold",
+         GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)), new_quest_vnum, escort_mob_vnum, destination_room, questmaster_vnum,
+         calculated_reward);
+
+    /* Salva quest para persistência */
+    if (save_quests(mob_zone)) {
+        log1("ESCORT QUEST: Saved quest %d to disk for persistence", new_quest_vnum);
+    } else {
+        log1("SYSERR: Failed to save escort quest %d to disk", new_quest_vnum);
     }
 }
 
@@ -3885,17 +4169,55 @@ bool reduce_stoneskin_points(struct char_data *ch, int reduction)
 
     for (af = ch->affected; af; af = af->next) {
         if (af->spell == SPELL_STONESKIN) {
+            int old_points = af->modifier;
             af->modifier -= reduction;
+
             if (af->modifier <= 0) {
                 affect_remove(ch, af);
                 return TRUE;
             }
+
+            /* Adjust duration proportionally when points are consumed
+             * If we had X points with Y duration, and lose some points,
+             * the duration should decrease proportionally to maintain
+             * the hours-per-point ratio */
+            if (old_points > 0 && af->duration > 0) {
+                af->duration = (af->duration * af->modifier) / old_points;
+            }
+
             return FALSE;
         }
     }
 
     return FALSE;
 }
+
+/**
+ * Applies stoneskin protection to incoming damage.
+ * If the character has stoneskin active, it absorbs the damage and reduces points.
+ * @param ch The character with potential stoneskin protection
+ * @param dam Pointer to the damage value to be modified
+ * @return TRUE if stoneskin absorbed the damage, FALSE otherwise
+ */
+bool apply_stoneskin_protection(struct char_data *ch, int *dam)
+{
+    if (!ch || !dam || *dam <= 0 || !AFF_FLAGGED(ch, AFF_STONESKIN))
+        return FALSE;
+
+    /* Stoneskin absorbs damage and loses 1 point */
+    if (reduce_stoneskin_points(ch, 1)) {
+        /* Stoneskin was removed (no more points) */
+        act("A proteção de sua pele se desfaz completamente!", FALSE, ch, 0, 0, TO_CHAR);
+        act("A pele dura de $n volta ao normal.", FALSE, ch, 0, 0, TO_ROOM);
+    } else {
+        /* Still has points left */
+        act("Sua pele dura absorve o impacto!", FALSE, ch, 0, 0, TO_CHAR);
+        act("A pele dura de $n absorve o golpe.", FALSE, ch, 0, 0, TO_ROOM);
+    }
+    *dam = 0; /* no damage when using stoneskin */
+    return TRUE;
+}
+
 /**
  * Removes all occurrences of a substring from a string.
  * Modifies the original string in-place.

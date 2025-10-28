@@ -76,11 +76,20 @@ default_minimap_size = 2
 * Do you want scripts to be attachable to players?
 script_players = 0
 
+* Should the fit evolve system be enabled?
+fit_evolve = 0
+
 * Does weather affect spell effectiveness?
 weather_affects_spells = 0
 
 * Does weather affect spells based on school?
 school_weather_affects = 1
+
+* Maximum iterations for advanced pathfinding (0=dynamic scaling)
+max_pathfind_iterations = 10000
+
+* Maximum zones in a pathfinding path (0=dynamic scaling)
+max_zone_path = 127
 
 * Text sent to players when OK is all that is needed.
 ok = Pronto.
@@ -96,10 +105,6 @@ noperson = Ninguém com esse nome aqui.
 
 * Text sent to players when an effect fails.
 noeffect = Aparentemente, nada aconteceu.
-
-max_pathfind_iterations = 10000
-
-max_zone_path = 127
 
 
 * [ Rent/Crashsave Options ]
@@ -263,4 +268,13 @@ special_in_comm = 1
 
 * If 0 then off, otherwise 1: Brief, 2: Normal, 3: Complete.
 debug_mode = 0
+
+
+
+* [ Experimental Features ]
+* Enable the new auction system?
+new_auction_system = 0
+
+* Enable the experimental bank system?
+experimental_bank_system = 0
 

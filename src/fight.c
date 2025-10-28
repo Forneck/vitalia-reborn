@@ -333,8 +333,11 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 
     /*************************************************************************
      * Sistema de Genética: O mob morreu. Chamamos a função de evolução.     *
+     * Não atualizamos a genética de mobs encantados/evocados (AFF_CHARM),   *
+     * pois são criaturas temporárias e sua morte não representa seleção     *
+     * natural da espécie.                                                    *
      *************************************************************************/
-    if (IS_NPC(ch) && ch->ai_data) {
+    if (IS_NPC(ch) && ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM)) {
         update_mob_prototype_genetics(ch);
     }
     /*************************************************************************
@@ -572,13 +575,13 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
     buf = replace_string(dam_weapons[msgnum].to_room, &attack_hit_text[w_type]);
     act(buf, FALSE, ch, NULL, victim, TO_NOTVICT);
     /* damage message to damager */
-    if (GET_LEVEL(ch) >= LVL_IMMORT)
+    if (GET_LEVEL(ch) >= LVL_IMMORT || PRF_FLAGGED(ch, PRF_VIEWDAMAGE))
         send_to_char(ch, "(%d) ", dam);
     buf = replace_string(dam_weapons[msgnum].to_char, &attack_hit_text[w_type]);
     act(buf, FALSE, ch, NULL, victim, TO_CHAR);
     send_to_char(ch, CCNRM(ch, C_CMP));
     /* damage message to damagee */
-    if (GET_LEVEL(victim) >= LVL_IMMORT)
+    if (GET_LEVEL(victim) >= LVL_IMMORT || PRF_FLAGGED(victim, PRF_VIEWDAMAGE))
         send_to_char(victim, "\tR(%d)", dam);
     buf = replace_string(dam_weapons[msgnum].to_victim, &attack_hit_text[w_type]);
     act(buf, FALSE, ch, NULL, victim, TO_VICT | TO_SLEEP);
@@ -702,19 +705,10 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
     /* If the attacker is invisible, he becomes visible */
     if (AFF_FLAGGED(ch, AFF_INVISIBLE) || AFF_FLAGGED(ch, AFF_HIDE))
         appear(ch);
-    if (AFF_FLAGGED(victim, AFF_STONESKIN)) {
-        /* Stoneskin absorbs damage and loses 1 point */
-        if (reduce_stoneskin_points(victim, 1)) {
-            /* Stoneskin was removed (no more points) */
-            act("A proteção de sua pele se desfaz completamente!", FALSE, victim, 0, 0, TO_CHAR);
-            act("A pele dura de $n volta ao normal.", FALSE, victim, 0, 0, TO_ROOM);
-        } else {
-            /* Still has points left */
-            act("Sua pele dura absorve o impacto!", FALSE, victim, 0, 0, TO_CHAR);
-            act("A pele dura de $n absorve o golpe.", FALSE, victim, 0, 0, TO_ROOM);
-        }
-        dam = 0; /* no damage when using stoneskin */
-    }
+
+    /* Check for stoneskin protection */
+    apply_stoneskin_protection(victim, &dam);
+
     /* Cut damage in half if victim has sanct, to a minimum 1 */
     if (AFF_FLAGGED(victim, AFF_SANCTUARY) && dam >= 2)
         dam /= 2;
@@ -1294,16 +1288,31 @@ void beware_lightning()
 
         for (victim = character_list; victim; victim = temp) {
             temp = victim->next;
+
+            /* Skip characters that are already marked for extraction */
+            if (MOB_FLAGGED(victim, MOB_NOTDEADYET) || PLR_FLAGGED(victim, PLR_NOTDEADYET))
+                continue;
+
+            /* Safety check: validate room before accessing zone */
+            if (IN_ROOM(victim) == NOWHERE || IN_ROOM(victim) < 0 || IN_ROOM(victim) > top_of_world)
+                continue;
+
             zona_vitima = world[IN_ROOM(victim)].zone;   // pega a zona (vnum para rnum) da sala da vitima
             if (zona_vitima != zone)
                 continue;
             if (OUTSIDE(victim) == TRUE) {      // Apenas personagens ao ar livre
                 if (rand_number(0, 9) == 0) {   // 1% de chance de acertar alguém
                     dam = dice(1, (GET_MAX_HIT(victim) * 2));
-                    if (IS_AFFECTED(victim, AFF_SANCTUARY))
-                        dam = MIN(dam, 18);
-                    if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
-                        dam = MIN(dam, 33);
+
+                    /* Check for stoneskin protection first */
+                    if (!apply_stoneskin_protection(victim, &dam)) {
+                        /* Stoneskin was not active, check other protections */
+                        if (IS_AFFECTED(victim, AFF_SANCTUARY))
+                            dam = MIN(dam, 18);
+                        if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
+                            dam = MIN(dam, 33);
+                    }
+
                     dam = MIN(dam, 100);
                     dam = MAX(dam, 0);
                     if (GET_LEVEL(victim) >= LVL_IMMORT)
@@ -1311,8 +1320,10 @@ void beware_lightning()
 
                     GET_HIT(victim) -= dam;
 
-                    act("KAZAK! Um raio atinge $n. Voce escuta um assobio.", TRUE, victim, 0, 0, TO_ROOM);
-                    act("KAZAK! Um raio atinge voce. Voce escuta um assobio.", FALSE, victim, 0, 0, TO_CHAR);
+                    if (dam > 0) {
+                        act("KAZAK! Um raio atinge $n. Voce escuta um assobio.", TRUE, victim, 0, 0, TO_ROOM);
+                        act("KAZAK! Um raio atinge voce. Voce escuta um assobio.", FALSE, victim, 0, 0, TO_CHAR);
+                    }
 
                     if (dam > (GET_MAX_HIT(victim) >> 2))
                         act("Isto realmente DOEU!\r\n", FALSE, victim, 0, 0, TO_CHAR);
@@ -1714,6 +1725,7 @@ void update_mob_prototype_genetics(struct char_data *mob)
     int final_trade = mob->ai_data->genetics.trade_tendency;
     int final_quest = mob->ai_data->genetics.quest_tendency;
     int final_adventurer = mob->ai_data->genetics.adventurer_tendency;
+    int final_follow = mob->ai_data->genetics.follow_tendency;
 
     if (MOB_FLAGGED(mob, MOB_BRAVE)) {
         final_wimpy -= 5;
@@ -1744,6 +1756,7 @@ void update_mob_prototype_genetics(struct char_data *mob)
     update_single_gene_with_fitness(&proto->ai_data->genetics.brave_prevalence, final_brave, fitness, 0, 75);
     update_single_gene_with_fitness(&proto->ai_data->genetics.quest_tendency, final_quest, fitness, 0, 100);
     update_single_gene_with_fitness(&proto->ai_data->genetics.adventurer_tendency, final_adventurer, fitness, 0, 100);
+    update_single_gene_with_fitness(&proto->ai_data->genetics.follow_tendency, final_follow, fitness, 0, 100);
 
     /* 4. Marca a zona para salvar. */
     mob_vnum vnum = mob_index[rnum].vnum;

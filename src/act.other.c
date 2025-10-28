@@ -327,6 +327,206 @@ ACMD(do_practice)
         list_skills(ch);
 }
 
+/* Structure for sorting spells/skills by level */
+struct spell_level_entry {
+    char *name;
+    int level;
+};
+
+/* Comparison function for qsort */
+static int compare_spell_levels(const void *a, const void *b)
+{
+    const struct spell_level_entry *entry_a = (const struct spell_level_entry *)a;
+    const struct spell_level_entry *entry_b = (const struct spell_level_entry *)b;
+    return entry_a->level - entry_b->level;
+}
+
+/* Helper function to list spells/skills/chansons for a class */
+static void list_spells_by_type(struct char_data *ch, int class_num, char type, bool is_current_class)
+{
+    struct str_spells *ptr;
+    struct spell_level_entry *entries = NULL;
+    int count = 0, i;
+    char buf[MAX_STRING_LENGTH];
+    size_t len = 0;
+
+    /* Count how many entries we have */
+    for (ptr = list_spells; ptr; ptr = ptr->next) {
+        if (ptr->status == available && ptr->type == type) {
+            int level = get_spell_level(ptr->vnum, class_num);
+            if (level >= 0)
+                count++;
+        }
+    }
+
+    if (count == 0) {
+        if (is_current_class) {
+            send_to_char(ch, "Nenhuma %s disponível para a sua classe atual.\r\n",
+                         type == SPELL   ? "magia"
+                         : type == SKILL ? "habilidade"
+                                         : "canção");
+        } else {
+            send_to_char(ch, "Nenhuma %s disponível para a classe %s.\r\n",
+                         type == SPELL   ? "magia"
+                         : type == SKILL ? "habilidade"
+                                         : "canção",
+                         pc_class_types[class_num]);
+        }
+        return;
+    }
+
+    /* Allocate array for sorting */
+    CREATE(entries, struct spell_level_entry, count);
+
+    /* Fill the array */
+    i = 0;
+    for (ptr = list_spells; ptr; ptr = ptr->next) {
+        if (ptr->status == available && ptr->type == type) {
+            int level = get_spell_level(ptr->vnum, class_num);
+            if (level >= 0) {
+                entries[i].name = ptr->name;
+                entries[i].level = level;
+                i++;
+            }
+        }
+    }
+
+    /* Sort by level */
+    qsort(entries, count, sizeof(struct spell_level_entry), compare_spell_levels);
+
+    /* Build output message */
+    if (is_current_class) {
+        len = snprintf(buf, sizeof(buf), "As seguintes %s estão disponíveis para a sua classe atual:\r\n",
+                       type == SPELL   ? "magias"
+                       : type == SKILL ? "habilidades"
+                                       : "canções");
+    } else {
+        len = snprintf(buf, sizeof(buf), "As seguintes %s estão disponíveis para a classe %s:\r\n",
+                       type == SPELL   ? "magias"
+                       : type == SKILL ? "habilidades"
+                                       : "canções",
+                       pc_class_types[class_num]);
+    }
+
+    for (i = 0; i < count && len < sizeof(buf) - 60; i++) {
+        len +=
+            snprintf(buf + len, sizeof(buf) - len, "%-30s [Nível Mínimo: %3d]\r\n", entries[i].name, entries[i].level);
+    }
+
+    page_string(ch->desc, buf, TRUE);
+
+    /* Free the array */
+    free(entries);
+}
+
+/* Parse class name from argument */
+static int parse_class_arg(char *arg)
+{
+    if (!*arg)
+        return CLASS_UNDEFINED;
+
+    if (is_abbrev(arg, "mago") || is_abbrev(arg, "mu"))
+        return CLASS_MAGIC_USER;
+    else if (is_abbrev(arg, "clerigo") || is_abbrev(arg, "cl"))
+        return CLASS_CLERIC;
+    else if (is_abbrev(arg, "ladrao") || is_abbrev(arg, "th"))
+        return CLASS_THIEF;
+    else if (is_abbrev(arg, "guerreiro") || is_abbrev(arg, "wa"))
+        return CLASS_WARRIOR;
+    else if (is_abbrev(arg, "druida") || is_abbrev(arg, "dru"))
+        return CLASS_DRUID;
+    else if (is_abbrev(arg, "bardo") || is_abbrev(arg, "ba"))
+        return CLASS_BARD;
+    else if (is_abbrev(arg, "ranger") || is_abbrev(arg, "ra"))
+        return CLASS_RANGER;
+
+    return CLASS_UNDEFINED;
+}
+
+ACMD(do_skills)
+{
+    char arg[MAX_INPUT_LENGTH];
+    int class_num;
+    bool is_current_class;
+
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não podem usar este comando.\r\n");
+        return;
+    }
+
+    one_argument(argument, arg);
+
+    if (*arg) {
+        class_num = parse_class_arg(arg);
+        if (class_num == CLASS_UNDEFINED) {
+            send_to_char(ch, "Classe inválida. Use: mago, clerigo, ladrao, guerreiro, druida, bardo ou ranger.\r\n");
+            return;
+        }
+        is_current_class = FALSE;
+    } else {
+        class_num = GET_CLASS(ch);
+        is_current_class = TRUE;
+    }
+
+    list_spells_by_type(ch, class_num, SKILL, is_current_class);
+}
+
+ACMD(do_spells)
+{
+    char arg[MAX_INPUT_LENGTH];
+    int class_num;
+    bool is_current_class;
+
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não podem usar este comando.\r\n");
+        return;
+    }
+
+    one_argument(argument, arg);
+
+    if (*arg) {
+        class_num = parse_class_arg(arg);
+        if (class_num == CLASS_UNDEFINED) {
+            send_to_char(ch, "Classe inválida. Use: mago, clerigo, ladrao, guerreiro, druida, bardo ou ranger.\r\n");
+            return;
+        }
+        is_current_class = FALSE;
+    } else {
+        class_num = GET_CLASS(ch);
+        is_current_class = TRUE;
+    }
+
+    list_spells_by_type(ch, class_num, SPELL, is_current_class);
+}
+
+ACMD(do_chansons)
+{
+    char arg[MAX_INPUT_LENGTH];
+    int class_num;
+    bool is_current_class;
+
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não podem usar este comando.\r\n");
+        return;
+    }
+
+    one_argument(argument, arg);
+
+    if (*arg) {
+        class_num = parse_class_arg(arg);
+        if (class_num == CLASS_UNDEFINED) {
+            send_to_char(ch, "Classe inválida. Use: mago, clerigo, ladrao, guerreiro, druida, bardo ou ranger.\r\n");
+            return;
+        }
+        is_current_class = FALSE;
+    } else {
+        class_num = GET_CLASS(ch);
+        is_current_class = TRUE;
+    }
+
+    list_spells_by_type(ch, class_num, CHANSON, is_current_class);
+}
+
 ACMD(do_visible)
 {
     if (GET_LEVEL(ch) >= LVL_IMMORT) {
@@ -1136,7 +1336,7 @@ int can_elevate(struct char_data *ch)
 
     /* Must have experienced all classes at least once */
     for (i = 0; i < NUM_CLASSES; i++) {
-        if (ch->player_specials->saved.was_class[i] || GET_CLASS(ch) == i)
+        if (WAS_FLAGGED(ch, i) || GET_CLASS(ch) == i)
             classes_experienced++;
     }
     if (classes_experienced < NUM_CLASSES)
@@ -1355,16 +1555,6 @@ ACMD(do_mine)
             }
         }
 
-        // Very small chance to attract a traveling dwarf who might trade
-        if (percent <= prob && vnum != NOTHING && rand_number(1, 100) <= 2) {
-            struct char_data *dwarf_mob = read_mobile(14410, VIRTUAL);   // Traveling dwarf
-            if (dwarf_mob) {
-                char_to_room(dwarf_mob, IN_ROOM(ch));
-                send_to_char(ch, "O barulho da mineração atraiu um anão viajante!\r\n");
-                act("O barulho da mineração de $n atraiu um anão viajante!", TRUE, ch, 0, 0, TO_ROOM);
-            }
-        }
-
         // Give some experience for successful mining
         gain_exp(ch, rand_number(5, 15));
     } else {
@@ -1464,26 +1654,6 @@ ACMD(do_fishing)
             }
         }
 
-        // Small chance to attract a school of fish or fisherman
-        if (percent <= prob && rand_number(1, 100) <= 5) {
-            int fish_spawn = rand_number(1, 100);
-            if (fish_spawn <= 70) {
-                struct char_data *fish_mob = read_mobile(10864, VIRTUAL);   // Colorful fish school
-                if (fish_mob) {
-                    char_to_room(fish_mob, IN_ROOM(ch));
-                    send_to_char(ch, "Sua pesca atraiu um cardume de peixes coloridos!\r\n");
-                    act("A pesca de $n atraiu um cardume de peixes coloridos!", TRUE, ch, 0, 0, TO_ROOM);
-                }
-            } else {
-                struct char_data *fisherman_mob = read_mobile(2967, VIRTUAL);   // Zone 29 fish thrower
-                if (fisherman_mob) {
-                    char_to_room(fisherman_mob, IN_ROOM(ch));
-                    send_to_char(ch, "Sua pesca atraiu um arremessador de peixe!\r\n");
-                    act("A pesca de $n atraiu um arremessador de peixe!", TRUE, ch, 0, 0, TO_ROOM);
-                }
-            }
-        }
-
         gain_exp(ch, rand_number(3, 12));
     } else {
         send_to_char(ch, "Você não consegue pescar nada.\r\n");
@@ -1550,16 +1720,6 @@ ACMD(do_forage)
             if (obj) {
                 obj_to_char(obj, ch);
                 send_to_char(ch, "Você pega %s.\r\n", GET_OBJ_SHORT(obj));
-            }
-        }
-
-        // Small chance to attract a curious squirrel
-        if (percent <= prob && rand_number(1, 100) <= 8) {
-            struct char_data *squirrel_mob = read_mobile(10727, VIRTUAL);   // Gray squirrel
-            if (squirrel_mob) {
-                char_to_room(squirrel_mob, IN_ROOM(ch));
-                send_to_char(ch, "Sua procura por comida atraiu um esquilo curioso!\r\n");
-                act("A procura de $n por comida atraiu um esquilo curioso!", TRUE, ch, 0, 0, TO_ROOM);
             }
         }
 
@@ -1630,13 +1790,15 @@ ACMD(do_eavesdrop)
         if (IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED) && EXIT(ch, dir)->keyword) {
             sprintf(buf, "A %s está fechada.\r\n", fname(EXIT(ch, dir)->keyword));
             send_to_char(ch, "%s", buf);
-        } else {
+        } else if (EXIT(ch, dir)->to_room != NOWHERE) {
             target_room = EXIT(ch, dir)->to_room;
             ch->next_listener = world[target_room].listeners;
             world[target_room].listeners = ch;
             ch->listening_to = target_room;
             send_to_char(ch, "Você começa a espionar conversas nessa direção.\r\n");
             WAIT_STATE(ch, PULSE_VIOLENCE);
+        } else {
+            send_to_char(ch, "Não há uma sala nessa direção...\r\n");
         }
     } else {
         send_to_char(ch, "Não há uma sala nessa direção...\r\n");

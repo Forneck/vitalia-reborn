@@ -298,6 +298,7 @@ int load_char(const char *name, struct char_data *ch)
         GET_QUESTPOINTS(ch) = PFDEF_QUESTPOINTS;
         GET_QUEST_COUNTER(ch) = PFDEF_QUESTCOUNT;
         GET_QUEST(ch) = PFDEF_CURRQUEST;
+        GET_ESCORT_MOB_ID(ch) = NOBODY;
         GET_NUM_QUESTS(ch) = PFDEF_COMPQUESTS;
         GET_LAST_MOTD(ch) = PFDEF_LASTMOTD;
         GET_LAST_NEWS(ch) = PFDEF_LASTNEWS;
@@ -424,6 +425,8 @@ int load_char(const char *name, struct char_data *ch)
                 case 'I':
                     if (!strcmp(tag, "Id  "))
                         GET_IDNUM(ch) = atol(line);
+                    else if (!strcmp(tag, "Incarn"))
+                        GET_REMORT(ch) = atoi(line);
                     else if (!strcmp(tag, "Int "))
                         ch->real_abils.intel = atoi(line);
                     else if (!strcmp(tag, "Invs"))
@@ -496,6 +499,8 @@ int load_char(const char *name, struct char_data *ch)
                         GET_QUEST(ch) = atoi(line);
                     else if (!strcmp(tag, "Qcnt"))
                         GET_QUEST_COUNTER(ch) = atoi(line);
+                    else if (!strcmp(tag, "Qesc"))
+                        GET_ESCORT_MOB_ID(ch) = atol(line);
                     else if (!strcmp(tag, "Qest"))
                         load_quests(fl, ch);
                     break;
@@ -557,7 +562,7 @@ int load_char(const char *name, struct char_data *ch)
                         GET_WIMP_LEV(ch) = atoi(line);
                     else if (!strcmp(tag, "Wis "))
                         ch->real_abils.wis = atoi(line);
-                    else if (!strcmp(tag, "Was")) {
+                    else if (!strcmp(tag, "Was ")) {
                         if (sscanf(line, "%s %s %s %s", f1, f2, f3, f4) == 4) {
                             WAS_FLAGS(ch)[0] = asciiflag_conv(f1);
                             WAS_FLAGS(ch)[1] = asciiflag_conv(f2);
@@ -729,7 +734,7 @@ void save_char(struct char_data *ch)
     sprintascii(bits2, WAS_FLAGS(ch)[1]);
     sprintascii(bits3, WAS_FLAGS(ch)[2]);
     sprintascii(bits4, WAS_FLAGS(ch)[3]);
-    fprintf(fl, "Was: %s %s %s %s\n", bits, bits2, bits3, bits4);
+    fprintf(fl, "Was : %s %s %s %s\n", bits, bits2, bits3, bits4);
 
     if (GET_SAVE(ch, 0) != PFDEF_SAVETHROW)
         fprintf(fl, "Thr1: %d\n", GET_SAVE(ch, 0));
@@ -816,6 +821,8 @@ void save_char(struct char_data *ch)
     }
     if (GET_QUEST(ch) != PFDEF_CURRQUEST)
         fprintf(fl, "Qcur: %d\n", GET_QUEST(ch));
+    if (GET_ESCORT_MOB_ID(ch) != NOBODY)
+        fprintf(fl, "Qesc: %ld\n", GET_ESCORT_MOB_ID(ch));
 
     if (GET_DEATH(ch) != PFDEF_DEATH)
         fprintf(fl, "Dth : %d\n", GET_DEATH(ch));

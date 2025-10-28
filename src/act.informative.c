@@ -637,7 +637,7 @@ void look_at_room(struct char_data *ch, int ignore_brief)
 
     if (!PLR_FLAGGED(ch, PLR_GHOST)) {
         for (i = 0; i < NUM_OF_DIRS; i++)
-            if (EXIT(ch, i) && EXIT(ch, i)->to_room && ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
+            if (EXIT(ch, i) && EXIT(ch, i)->to_room != NOWHERE && ROOM_FLAGGED(EXIT(ch, i)->to_room, ROOM_DEATH)) {
                 send_to_char(ch, "\tWVocê sente \tRPERIGO\tW por perto.\tn\r\n");
                 break;
             }
@@ -969,12 +969,16 @@ ACMD(do_score)
     send_to_char(ch, "Você tem \tg%d\tn pontos de busca e ", GET_QUESTPOINTS(ch));
     send_to_char(ch, "completou \tg%d\tn busca%s.\r\n", GET_NUM_QUESTS(ch), GET_NUM_QUESTS(ch) == 1 ? " " : "s");
     if (GET_QUEST(ch) != NOTHING) {
-        send_to_char(ch, "A sua busca atual é: \tg%s\tn", QST_NAME(real_quest(GET_QUEST(ch))));
-        if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS))
-            send_to_char(ch, "\tn[%d] \r\n", GET_QUEST(ch));
-        else
-            send_to_char(ch, " \tn\r\n");
+        qst_rnum quest_rnum = real_quest(GET_QUEST(ch));
+        if (quest_rnum != NOTHING) {
+            send_to_char(ch, "A sua busca atual é: \tg%s\tn", QST_NAME(quest_rnum));
+            if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS))
+                send_to_char(ch, "\tn[%d] \r\n", GET_QUEST(ch));
+            else
+                send_to_char(ch, " \tn\r\n");
+        }
     }
+    send_to_char(ch, "Você tem \tg%3d Enc.\tn (Encarnações).\r\n", GET_REMORT(ch));
 
     if (PLR_FLAGGED(ch, PLR_TRNS))
         send_to_char(ch, "Você transcendeu.\r\n");
@@ -1485,14 +1489,15 @@ ACMD(do_who)
             if (showleader && (!GROUP(tch) || GROUP_LEADER(GROUP(tch)) != tch))
                 continue;
             if (short_list) {
-                send_to_char(ch, "%s[%2d %s] %-12.12s%s%s", (GET_LEVEL(tch) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""),
-                             GET_LEVEL(tch), CLASS_ABBR(tch), GET_NAME(tch), CCNRM(ch, C_SPR),
-                             ((!(++num_can_see % 4)) ? "\r\n" : ""));
+                send_to_char(ch, "%s[%3d %s] %-12.12s %3da. Enc.%s%s",
+                             (GET_LEVEL(tch) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""), GET_LEVEL(tch), CLASS_ABBR(tch),
+                             GET_NAME(tch), GET_REMORT(tch), CCNRM(ch, C_SPR), ((!(++num_can_see % 4)) ? "\r\n" : ""));
             } else {
                 num_can_see++;
-                send_to_char(ch, "%s[%2d %s] %s%s%s%s", (GET_LEVEL(tch) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""),
-                             GET_LEVEL(tch), CLASS_ABBR(tch), GET_NAME(tch), (*GET_TITLE(tch) ? " " : ""),
-                             GET_TITLE(tch), CCNRM(ch, C_SPR));
+                send_to_char(ch, "%s[%3d %s] %s%s%s %3da. Enc.%s",
+                             (GET_LEVEL(tch) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""), GET_LEVEL(tch), CLASS_ABBR(tch),
+                             GET_NAME(tch), (*GET_TITLE(tch) ? " " : ""), GET_TITLE(tch), GET_REMORT(tch),
+                             CCNRM(ch, C_SPR));
                 if (GET_INVIS_LEV(tch))
                     send_to_char(ch, " (i%d)", GET_INVIS_LEV(tch));
                 else if (AFF_FLAGGED(tch, AFF_INVISIBLE))
