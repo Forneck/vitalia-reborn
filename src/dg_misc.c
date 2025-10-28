@@ -288,6 +288,21 @@ void script_damage(struct char_data *vict, int dam)
         return;
     }
 
+    /* Check for stoneskin protection */
+    if (dam > 0 && AFF_FLAGGED(vict, AFF_STONESKIN)) {
+        /* Stoneskin absorbs damage and loses 1 point */
+        if (reduce_stoneskin_points(vict, 1)) {
+            /* Stoneskin was removed (no more points) */
+            act("A proteção de sua pele se desfaz completamente!", FALSE, vict, 0, 0, TO_CHAR);
+            act("A pele dura de $n volta ao normal.", FALSE, vict, 0, 0, TO_ROOM);
+        } else {
+            /* Still has points left */
+            act("Sua pele dura absorve o impacto!", FALSE, vict, 0, 0, TO_CHAR);
+            act("A pele dura de $n absorve o golpe.", FALSE, vict, 0, 0, TO_ROOM);
+        }
+        dam = 0; /* no damage when using stoneskin */
+    }
+
     GET_HIT(vict) -= dam;
     GET_HIT(vict) = MIN(GET_HIT(vict), GET_MAX_HIT(vict));
 

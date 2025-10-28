@@ -1312,10 +1312,27 @@ void beware_lightning()
             if (OUTSIDE(victim) == TRUE) {      // Apenas personagens ao ar livre
                 if (rand_number(0, 9) == 0) {   // 1% de chance de acertar alguém
                     dam = dice(1, (GET_MAX_HIT(victim) * 2));
-                    if (IS_AFFECTED(victim, AFF_SANCTUARY))
-                        dam = MIN(dam, 18);
-                    if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
-                        dam = MIN(dam, 33);
+
+                    /* Check for stoneskin protection first */
+                    if (AFF_FLAGGED(victim, AFF_STONESKIN)) {
+                        /* Stoneskin absorbs damage and loses 1 point */
+                        if (reduce_stoneskin_points(victim, 1)) {
+                            /* Stoneskin was removed (no more points) */
+                            act("A proteção de sua pele se desfaz completamente!", FALSE, victim, 0, 0, TO_CHAR);
+                            act("A pele dura de $n volta ao normal.", FALSE, victim, 0, 0, TO_ROOM);
+                        } else {
+                            /* Still has points left */
+                            act("Sua pele dura absorve o raio!", FALSE, victim, 0, 0, TO_CHAR);
+                            act("A pele dura de $n absorve o raio.", FALSE, victim, 0, 0, TO_ROOM);
+                        }
+                        dam = 0; /* no damage when using stoneskin */
+                    } else {
+                        if (IS_AFFECTED(victim, AFF_SANCTUARY))
+                            dam = MIN(dam, 18);
+                        if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
+                            dam = MIN(dam, 33);
+                    }
+
                     dam = MIN(dam, 100);
                     dam = MAX(dam, 0);
                     if (GET_LEVEL(victim) >= LVL_IMMORT)
@@ -1323,8 +1340,10 @@ void beware_lightning()
 
                     GET_HIT(victim) -= dam;
 
-                    act("KAZAK! Um raio atinge $n. Voce escuta um assobio.", TRUE, victim, 0, 0, TO_ROOM);
-                    act("KAZAK! Um raio atinge voce. Voce escuta um assobio.", FALSE, victim, 0, 0, TO_CHAR);
+                    if (dam > 0) {
+                        act("KAZAK! Um raio atinge $n. Voce escuta um assobio.", TRUE, victim, 0, 0, TO_ROOM);
+                        act("KAZAK! Um raio atinge voce. Voce escuta um assobio.", FALSE, victim, 0, 0, TO_CHAR);
+                    }
 
                     if (dam > (GET_MAX_HIT(victim) >> 2))
                         act("Isto realmente DOEU!\r\n", FALSE, victim, 0, 0, TO_CHAR);
