@@ -1157,6 +1157,12 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
     char formatted_info[MAX_QUEST_MSG];
     int quest_num;
 
+    /* Early check for descriptor - needed for confirmation system */
+    if (!ch->desc) {
+        log1("SYSERR: quest_join_unified called for character without descriptor: %s", GET_NAME(ch));
+        return;
+    }
+
     if (!*argument) {
         snprintf(buf, sizeof(buf), "%s diz, 'Qual busca você quer aceitar, %s?'", GET_NAME(qm), GET_NAME(ch));
         send_to_char(ch, "%s\r\n", buf);
@@ -1204,11 +1210,9 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
         send_to_char(ch, "\r\n\tyAceitar esta busca? (S/N):\tn ");
 
         /* Store quest info and switch to confirmation state */
-        if (ch->desc) {
-            ch->desc->pending_quest_vnum = vnum;
-            ch->desc->pending_questmaster = qm;
-            STATE(ch->desc) = CON_QACCEPT;
-        }
+        ch->desc->pending_quest_vnum = vnum;
+        ch->desc->pending_questmaster = qm;
+        STATE(ch->desc) = CON_QACCEPT;
         return;
     }
     send_to_char(ch, "%s\r\n", buf);
@@ -2388,9 +2392,21 @@ void accept_pending_quest(struct descriptor_data *d)
     qst_vnum vnum = d->pending_quest_vnum;
     qst_rnum rnum;
     char formatted_info[MAX_QUEST_MSG];
+    struct char_data *tmp;
+    bool qm_valid = FALSE;
 
-    if (!ch || !qm || vnum == NOTHING) {
-        write_to_output(d, "\r\nErro ao aceitar busca. Tente novamente.\r\n");
+    /* Validate questmaster is still in the game and not being extracted */
+    if (qm) {
+        for (tmp = character_list; tmp; tmp = tmp->next) {
+            if (tmp == qm && !MOB_FLAGGED(qm, MOB_NOTDEADYET)) {
+                qm_valid = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!ch || !qm || vnum == NOTHING || !qm_valid) {
+        write_to_output(d, "\r\nErro ao aceitar busca. O questmaster não está mais disponível. Tente novamente.\r\n");
         /* Clear pending quest data */
         d->pending_quest_vnum = NOTHING;
         d->pending_questmaster = NULL;
