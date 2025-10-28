@@ -172,7 +172,7 @@ const char *connected_types[] = {"Playing",
                                  "Rebegin: skill",      // CON_RB_SKILL
                                  "Rebegin: class",      // CON_RB_NEW_CLASS
                                  "Rebegin: roll",       // CON_RB_REROLL
-                                 "Rebegin: home",       // CON_RB_QHOME
+                                 "Rebegin: attrs",      // CON_RB_QATTRS
                                  "Elevate: conf",       // CON_ELEVATE_CONF
                                  "Immort: conf",        // CON_IMM_CONF
                                  "Remote control",      // CON_REMOTE

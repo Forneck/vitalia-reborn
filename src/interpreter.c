@@ -1876,9 +1876,9 @@ void nanny(struct descriptor_data *d, char *arg)
                 GET_STR(d->character), GET_INT(d->character), GET_WIS(d->character), GET_DEX(d->character),
                 GET_CON(d->character), GET_CHA(d->character));
             write_to_output(d, "Aceitar estes atributos? (s/N): ");
-            STATE(d) = CON_RB_QHOME;
+            STATE(d) = CON_RB_QATTRS;
             break;
-        case CON_RB_QHOME: /* rebegin: reroll or accept attributes */
+        case CON_RB_QATTRS: /* rebegin: accept or reroll attributes */
             if (!*arg || (*arg != 's' && *arg != 'S' && *arg != 'n' && *arg != 'N')) {
                 write_to_output(d, "Por favor, responda s ou n: ");
                 return;
