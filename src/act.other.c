@@ -1511,7 +1511,7 @@ static bool can_spawn_skill_mob(mob_vnum mob_vnum)
     zone_limit = get_mob_spawn_limit(mob_vnum);
 
     /* Use the lesser of zone limit and skill spawn limit (25) */
-    int effective_limit = (zone_limit < skill_spawn_limit) ? zone_limit : skill_spawn_limit;
+    int effective_limit = MIN(zone_limit, skill_spawn_limit);
 
     return (current_count < effective_limit);
 }
