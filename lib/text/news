@@ -9,6 +9,12 @@
 @C-@G=@Y>@W Outubro de 2025 @C@Y<@G=@C-@n
 
    @RCorreções de Bugs e Estabilidade@n
+   Corrigido bug crítico onde @YStoneskin@n não protegia contra dano de raios e scripts.
+   Corrigido cálculo de duração da magia @YStoneskin@n para 1 hora/ponto conforme ajuda.
+   Sistema de duração/pontos de @YStoneskin@n agora reduz proporcionalmente em combate.
+   Corrigido bug no @Yrebegin@n que fazia jogadores pularem encarnações (2→4→6).
+   Sistema de @Yrebegin@n agora limpa corretamente todas as habilidades retidas.
+   Removida geração de mobs nas habilidades @Yforage@n, @Ymine@n e @Yfishing@n.
    Corrigido problema com magia @YDarkness@n que tinha duração muito curta.
    Magia @YAnimate Dead@n agora funciona corretamente com todos os tipos de corpo.
    Corrigido erro que permitia conjurar magias usando @YSay@n em salas sem magia.
@@ -21,6 +27,8 @@
    Corrigido problema onde comandos mostravam caracteres estranhos.
    
    @GSistema de Comandos e Interface@n
+   Nova opção @YVer Dano@n no @Yprefedit@n para mostrar valores de dano em combate.
+   Jogadores podem escolher nova cidade natal ao fazer @Yrebegin@n.
    Novo comando @Yskills@n lista todas habilidades da sua classe por nível.
    Novo comando @Yspells@n lista todas magias da sua classe por nível.
    Novo comando @Ychansons@n lista todas canções da sua classe por nível.
@@ -44,6 +52,7 @@
    Múltiplas melhorias na segurança contra travamentos em @Ymobile_activity@n.
    
    @YSistema de Quests@n
+   Jogadores agora veem mensagem quando completam quests na sala.
    Corrigido loop infinito em recompensas de objetos de quests.
    Quests de objetos agora requerem entrega ao questmaster.
    Sistema de quests mais robusto contra condições de corrida.
