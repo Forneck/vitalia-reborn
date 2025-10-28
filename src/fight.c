@@ -330,6 +330,11 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
         mob_autoquest_trigger_check(killer, ch, NULL, AQ_PLAYER_KILL);
     }
 
+    /* Check for bounty quest failures - if this mob was a bounty target for someone else */
+    if (IS_NPC(ch)) {
+        fail_bounty_quest(ch, killer);
+    }
+
     /* Alert Group if Applicable */
     if (GROUP(ch))
         send_to_group(ch, GROUP(ch), "%s morreu.\r\n", GET_NAME(ch));

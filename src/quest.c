@@ -425,10 +425,10 @@ bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum)
 }
 
 /** Assigns a bounty target for the player's quest by finding a specific mob instance.
+ * Sets the player's bounty target ID and sends feedback message to the player.
  * @param ch The player who accepted the bounty quest.
  * @param qm The questmaster who assigned the quest.
- * @param rnum The real quest number.
- * @return void */
+ * @param rnum The real quest number. */
 void assign_bounty_target(struct char_data *ch, struct char_data *qm, qst_rnum rnum)
 {
     struct char_data *target_mob = NULL;
@@ -536,6 +536,63 @@ void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer)
             clear_quest(ch);
             save_char(ch);
             break;
+        }
+    }
+}
+
+/** Called when a bounty target mob is killed by someone other than the quest holder.
+ * Fails the bounty quest for the player who had the quest.
+ * @param target_mob The bounty target mob that died.
+ * @param killer The character who killed the mob (can be NULL for non-combat deaths). */
+void fail_bounty_quest(struct char_data *target_mob, struct char_data *killer)
+{
+    struct char_data *ch;
+    qst_rnum rnum;
+    long target_id;
+
+    if (!IS_NPC(target_mob))
+        return;
+
+    target_id = char_script_id(target_mob);
+
+    /* Find any player with a bounty quest targeting this specific mob */
+    for (ch = character_list; ch; ch = ch->next) {
+        if (IS_NPC(ch))
+            continue;
+
+        /* Check if this player has a bounty quest for this specific mob */
+        if (GET_QUEST_TYPE(ch) == AQ_MOB_KILL_BOUNTY && GET_BOUNTY_TARGET_ID(ch) == target_id) {
+            /* Skip if the player is the one who killed it (quest will complete normally) */
+            if (killer && killer == ch)
+                continue;
+
+            /* Get quest info for penalty */
+            rnum = real_quest(GET_QUEST(ch));
+
+            /* Notify player of quest failure */
+            send_to_char(ch, "\r\n\ty** SUA QUEST DE CAÇA FALHOU! **\tn\r\n");
+            if (killer && !IS_NPC(killer)) {
+                send_to_char(ch, "Seu alvo foi eliminado por %s antes que você pudesse completar a caçada!\r\n",
+                             GET_NAME(killer));
+            } else if (killer && IS_NPC(killer)) {
+                send_to_char(ch, "Seu alvo foi eliminado por %s antes que você pudesse completar a caçada!\r\n",
+                             GET_NAME(killer));
+            } else {
+                send_to_char(ch, "Seu alvo morreu antes que você pudesse completar a caçada!\r\n");
+            }
+
+            /* Apply penalty - bounty target lost is similar to abandoning */
+            if (rnum != NOTHING && QST_PENALTY(rnum)) {
+                GET_QUESTPOINTS(ch) -= QST_PENALTY(rnum);
+                send_to_char(ch, "Você perde %d pontos de busca por falhar em capturar o alvo!\r\n\r\n",
+                             QST_PENALTY(rnum));
+            } else {
+                send_to_char(ch, "\r\n");
+            }
+
+            /* Clear the quest */
+            clear_quest(ch);
+            save_char(ch);
         }
     }
 }
