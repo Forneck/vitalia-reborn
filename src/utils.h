@@ -123,6 +123,7 @@ void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
 int get_stoneskin_points(struct char_data *ch);
 void set_stoneskin_points(struct char_data *ch, int points);
 bool reduce_stoneskin_points(struct char_data *ch, int reduction);
+bool apply_stoneskin_protection(struct char_data *ch, int *dam);
 
 /* String utility functions */
 void remove_from_string(char *str, const char *substr);

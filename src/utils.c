@@ -4180,6 +4180,33 @@ bool reduce_stoneskin_points(struct char_data *ch, int reduction)
 
     return FALSE;
 }
+
+/**
+ * Applies stoneskin protection to incoming damage.
+ * If the character has stoneskin active, it absorbs the damage and reduces points.
+ * @param ch The character with potential stoneskin protection
+ * @param dam Pointer to the damage value to be modified
+ * @return TRUE if stoneskin absorbed the damage, FALSE otherwise
+ */
+bool apply_stoneskin_protection(struct char_data *ch, int *dam)
+{
+    if (!ch || !dam || *dam <= 0 || !AFF_FLAGGED(ch, AFF_STONESKIN))
+        return FALSE;
+
+    /* Stoneskin absorbs damage and loses 1 point */
+    if (reduce_stoneskin_points(ch, 1)) {
+        /* Stoneskin was removed (no more points) */
+        act("A proteção de sua pele se desfaz completamente!", FALSE, ch, 0, 0, TO_CHAR);
+        act("A pele dura de $n volta ao normal.", FALSE, ch, 0, 0, TO_ROOM);
+    } else {
+        /* Still has points left */
+        act("Sua pele dura absorve o impacto!", FALSE, ch, 0, 0, TO_CHAR);
+        act("A pele dura de $n absorve o golpe.", FALSE, ch, 0, 0, TO_ROOM);
+    }
+    *dam = 0; /* no damage when using stoneskin */
+    return TRUE;
+}
+
 /**
  * Removes all occurrences of a substring from a string.
  * Modifies the original string in-place.

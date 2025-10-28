@@ -705,19 +705,10 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
     /* If the attacker is invisible, he becomes visible */
     if (AFF_FLAGGED(ch, AFF_INVISIBLE) || AFF_FLAGGED(ch, AFF_HIDE))
         appear(ch);
-    if (AFF_FLAGGED(victim, AFF_STONESKIN)) {
-        /* Stoneskin absorbs damage and loses 1 point */
-        if (reduce_stoneskin_points(victim, 1)) {
-            /* Stoneskin was removed (no more points) */
-            act("A proteção de sua pele se desfaz completamente!", FALSE, victim, 0, 0, TO_CHAR);
-            act("A pele dura de $n volta ao normal.", FALSE, victim, 0, 0, TO_ROOM);
-        } else {
-            /* Still has points left */
-            act("Sua pele dura absorve o impacto!", FALSE, victim, 0, 0, TO_CHAR);
-            act("A pele dura de $n absorve o golpe.", FALSE, victim, 0, 0, TO_ROOM);
-        }
-        dam = 0; /* no damage when using stoneskin */
-    }
+
+    /* Check for stoneskin protection */
+    apply_stoneskin_protection(victim, &dam);
+
     /* Cut damage in half if victim has sanct, to a minimum 1 */
     if (AFF_FLAGGED(victim, AFF_SANCTUARY) && dam >= 2)
         dam /= 2;
@@ -1314,19 +1305,8 @@ void beware_lightning()
                     dam = dice(1, (GET_MAX_HIT(victim) * 2));
 
                     /* Check for stoneskin protection first */
-                    if (AFF_FLAGGED(victim, AFF_STONESKIN)) {
-                        /* Stoneskin absorbs damage and loses 1 point */
-                        if (reduce_stoneskin_points(victim, 1)) {
-                            /* Stoneskin was removed (no more points) */
-                            act("A proteção de sua pele se desfaz completamente!", FALSE, victim, 0, 0, TO_CHAR);
-                            act("A pele dura de $n volta ao normal.", FALSE, victim, 0, 0, TO_ROOM);
-                        } else {
-                            /* Still has points left */
-                            act("Sua pele dura absorve o raio!", FALSE, victim, 0, 0, TO_CHAR);
-                            act("A pele dura de $n absorve o raio.", FALSE, victim, 0, 0, TO_ROOM);
-                        }
-                        dam = 0; /* no damage when using stoneskin */
-                    } else {
+                    if (!apply_stoneskin_protection(victim, &dam)) {
+                        /* No stoneskin or stoneskin absorbed the hit, check other protections */
                         if (IS_AFFECTED(victim, AFF_SANCTUARY))
                             dam = MIN(dam, 18);
                         if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
