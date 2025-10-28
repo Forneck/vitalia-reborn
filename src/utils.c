@@ -4169,11 +4169,22 @@ bool reduce_stoneskin_points(struct char_data *ch, int reduction)
 
     for (af = ch->affected; af; af = af->next) {
         if (af->spell == SPELL_STONESKIN) {
+            int old_points = af->modifier;
             af->modifier -= reduction;
+
             if (af->modifier <= 0) {
                 affect_remove(ch, af);
                 return TRUE;
             }
+
+            /* Adjust duration proportionally when points are consumed
+             * If we had X points with Y duration, and lose some points,
+             * the duration should decrease proportionally to maintain
+             * the hours-per-point ratio */
+            if (old_points > 0 && af->duration > 0) {
+                af->duration = (af->duration * af->modifier) / old_points;
+            }
+
             return FALSE;
         }
     }
