@@ -114,7 +114,7 @@ bool check_escort_quest_completion(struct char_data *ch, qst_rnum rnum);
 void fail_escort_quest(struct char_data *escort_mob, struct char_data *killer);
 
 /* Bounty Quest Functions */
-void assign_bounty_target(struct char_data *ch, struct char_data *qm, qst_rnum rnum);
+bool assign_bounty_target(struct char_data *ch, struct char_data *qm, qst_rnum rnum);
 void fail_bounty_quest(struct char_data *target_mob, struct char_data *killer);
 
 /* Quest display functions for temporary quest masters */

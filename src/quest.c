@@ -310,7 +310,7 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
         if (GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
             /* Player has a specific bounty target assigned - find the mob and get its name */
             struct char_data *target_mob = NULL;
-            const char *target_name = "desconhecido";
+            const char *target_name = NULL;
 
             /* Search for the mob with the matching script_id */
             for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
@@ -320,18 +320,19 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
                 }
             }
 
-            /* If mob not found, try to get the prototype name from the quest target vnum */
-            if (!target_mob && QST_TARGET(rnum) != NOTHING) {
-                mob_rnum target_rnum = real_mobile(QST_TARGET(rnum));
-                if (target_rnum != NOBODY) {
-                    target_name = GET_NAME(&mob_proto[target_rnum]);
-                }
+            /* If the specific mob is found in the world, show its name */
+            if (target_name) {
+                snprintf(temp_buf, sizeof(temp_buf),
+                         "%s\r\n\tyIMPORTANTE: Esta busca requer a eliminação de um alvo ESPECÍFICO: %s.\tn\r\n"
+                         "\tyVocê verá '(Bounty)' marcado em vermelho ao encontrar seu alvo.\tn",
+                         info, target_name);
+            } else {
+                /* Target mob no longer exists - it may have been killed or despawned */
+                snprintf(temp_buf, sizeof(temp_buf),
+                         "%s\r\n\tyAVISO: O alvo específico não está mais disponível no mundo.\tn\r\n"
+                         "\tyA busca pode precisar ser abandonada.\tn",
+                         info);
             }
-
-            snprintf(temp_buf, sizeof(temp_buf),
-                     "%s\r\n\tyIMPORTANTE: Esta busca requer a eliminação de um alvo ESPECÍFICO: %s.\tn\r\n"
-                     "\tyVocê verá '(Bounty)' marcado em vermelho ao encontrar seu alvo.\tn",
-                     info, target_name);
         } else {
             /* No specific target assigned yet */
             snprintf(temp_buf, sizeof(temp_buf),
@@ -470,8 +471,9 @@ bool spawn_escort_mob(struct char_data *ch, qst_rnum rnum)
  * Sets the player's bounty target ID and sends feedback message to the player.
  * @param ch The player who accepted the bounty quest.
  * @param qm The questmaster who assigned the quest.
- * @param rnum The real quest number. */
-void assign_bounty_target(struct char_data *ch, struct char_data *qm, qst_rnum rnum)
+ * @param rnum The real quest number.
+ * @return TRUE if a target was found and assigned, FALSE otherwise. */
+bool assign_bounty_target(struct char_data *ch, struct char_data *qm, qst_rnum rnum)
 {
     struct char_data *target_mob = NULL;
     mob_rnum target_rnum = real_mobile(QST_TARGET(rnum));
@@ -484,16 +486,16 @@ void assign_bounty_target(struct char_data *ch, struct char_data *qm, qst_rnum r
                 /* Found a target - store its unique ID */
                 GET_BOUNTY_TARGET_ID(ch) = char_script_id(target_mob);
                 send_to_char(ch, "%s diz, 'O alvo foi localizado. Boa caçada!'\r\n", GET_NAME(qm));
-                break;
+                return TRUE;
             }
         }
     }
 
-    /* If no target found, quest still valid but target may spawn later */
-    if (!target_mob) {
-        GET_BOUNTY_TARGET_ID(ch) = NOBODY;
-        send_to_char(ch, "%s diz, 'O alvo ainda não foi avistado, mas continue procurando!'\r\n", GET_NAME(qm));
-    }
+    /* No target found - the specific instance doesn't exist in the world */
+    GET_BOUNTY_TARGET_ID(ch) = NOBODY;
+    send_to_char(ch, "%s diz, 'O alvo não está disponível no momento. Esta busca não pode ser aceita.'\r\n",
+                 GET_NAME(qm));
+    return FALSE;
 }
 
 /** Checks if an escort quest has been completed (mob reached destination).
@@ -1160,7 +1162,10 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
         }
         /* For bounty quests, find and mark the target mob */
         else if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY) {
-            assign_bounty_target(ch, qm, rnum);
+            if (!assign_bounty_target(ch, qm, rnum)) {
+                /* If target not found, cancel the quest */
+                clear_quest(ch);
+            }
         }
 
         save_char(ch);
