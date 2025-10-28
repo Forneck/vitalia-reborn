@@ -1893,6 +1893,33 @@ void nanny(struct descriptor_data *d, char *arg)
                 return;
             }
 
+            /* Attributes accepted, now choose hometown */
+            write_to_output(d, "\r\nEscolha sua nova cidade natal:\r\n");
+            hometown_menu(d);
+            STATE(d) = CON_RB_QHOMETOWN;
+            break;
+
+        case CON_RB_QHOMETOWN: /* rebegin: choose hometown */
+            load_result = parse_hometown(*arg);
+            if (load_result == 0) {
+                write_to_output(d, "Por favor, escolha uma cidade válida...\r\n");
+                hometown_menu(d);
+                return;
+            }
+            GET_HOMETOWN(d->character) = load_result;
+            write_to_output(d, "Cidade natal selecionada: ");
+            switch (load_result) {
+                case 1:
+                    write_to_output(d, "Midgaard\r\n");
+                    break;
+                case 2:
+                    write_to_output(d, "Nova Thalos\r\n");
+                    break;
+                case 3:
+                    write_to_output(d, "Thewster\r\n");
+                    break;
+            }
+
             /* Finalize rebegin process */
             /* Note: num_incarnations was already incremented when recording class history */
             GET_LEVEL(d->character) = 1;
