@@ -308,11 +308,30 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
     /* For bounty quests, add explicit information about the specific target */
     if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY && ch && !IS_NPC(ch)) {
         if (GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
-            /* Player has a specific bounty target assigned */
+            /* Player has a specific bounty target assigned - find the mob and get its name */
+            struct char_data *target_mob = NULL;
+            const char *target_name = "desconhecido";
+
+            /* Search for the mob with the matching script_id */
+            for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
+                if (IS_NPC(target_mob) && char_script_id(target_mob) == GET_BOUNTY_TARGET_ID(ch)) {
+                    target_name = GET_NAME(target_mob);
+                    break;
+                }
+            }
+
+            /* If mob not found, try to get the prototype name from the quest target vnum */
+            if (!target_mob && QST_TARGET(rnum) != NOTHING) {
+                mob_rnum target_rnum = real_mobile(QST_TARGET(rnum));
+                if (target_rnum != NOBODY) {
+                    target_name = GET_NAME(&mob_proto[target_rnum]);
+                }
+            }
+
             snprintf(temp_buf, sizeof(temp_buf),
-                     "%s\r\n\tyIMPORTANTE: Esta busca requer a eliminação de um alvo ESPECÍFICO (ID: %ld).\tn\r\n"
+                     "%s\r\n\tyIMPORTANTE: Esta busca requer a eliminação de um alvo ESPECÍFICO: %s.\tn\r\n"
                      "\tyVocê verá '(Bounty)' marcado em vermelho ao encontrar seu alvo.\tn",
-                     info, GET_BOUNTY_TARGET_ID(ch));
+                     info, target_name);
         } else {
             /* No specific target assigned yet */
             snprintf(temp_buf, sizeof(temp_buf),
