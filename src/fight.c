@@ -302,10 +302,14 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
     if (killer) {
         if (killer->group) {
             while ((i = (struct char_data *)simple_list(killer->group->members)) != NULL)
-                if (IN_ROOM(i) == IN_ROOM(ch) || (world[IN_ROOM(i)].zone == world[IN_ROOM(ch)].zone))
+                if (IN_ROOM(i) == IN_ROOM(ch) || (world[IN_ROOM(i)].zone == world[IN_ROOM(ch)].zone)) {
                     autoquest_trigger_check(i, ch, NULL, AQ_MOB_KILL);
-        } else
+                    autoquest_trigger_check(i, ch, NULL, AQ_MOB_KILL_BOUNTY);
+                }
+        } else {
             autoquest_trigger_check(killer, ch, NULL, AQ_MOB_KILL);
+            autoquest_trigger_check(killer, ch, NULL, AQ_MOB_KILL_BOUNTY);
+        }
     }
 
     /* Check mob quest triggers for all mobs in the area */
@@ -315,6 +319,7 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
             if (IS_NPC(mob) && mob != ch && GET_MOB_QUEST(mob) != NOTHING) {
                 if (IN_ROOM(mob) == IN_ROOM(ch) || (world[IN_ROOM(mob)].zone == world[IN_ROOM(ch)].zone)) {
                     mob_autoquest_trigger_check(mob, ch, NULL, AQ_MOB_KILL);
+                    mob_autoquest_trigger_check(mob, ch, NULL, AQ_MOB_KILL_BOUNTY);
                 }
             }
         }
