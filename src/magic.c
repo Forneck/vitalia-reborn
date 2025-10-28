@@ -63,9 +63,14 @@ void affect_update(void)
     for (i = character_list; i; i = i->next)
         for (af = i->affected; af; af = next) {
             next = af->next;
-            if (af->duration >= 1)
+            if (af->duration >= 1) {
                 af->duration--;
-            else if (af->duration == -1) /* No action */
+                /* For stoneskin, keep modifier (points) in sync with duration
+                 * since the spell is designed as 1 hour per point */
+                if (af->spell == SPELL_STONESKIN && af->modifier > af->duration) {
+                    af->modifier = af->duration;
+                }
+            } else if (af->duration == -1) /* No action */
                 ;
             else {
                 if ((af->spell > 0) && (af->spell <= MAX_SKILLS)) {
