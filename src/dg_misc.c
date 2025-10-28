@@ -288,6 +288,9 @@ void script_damage(struct char_data *vict, int dam)
         return;
     }
 
+    /* Check for stoneskin protection */
+    apply_stoneskin_protection(vict, &dam);
+
     GET_HIT(vict) -= dam;
     GET_HIT(vict) = MIN(GET_HIT(vict), GET_MAX_HIT(vict));
 
