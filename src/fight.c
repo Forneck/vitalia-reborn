@@ -1306,7 +1306,7 @@ void beware_lightning()
 
                     /* Check for stoneskin protection first */
                     if (!apply_stoneskin_protection(victim, &dam)) {
-                        /* Stoneskin did not absorb the damage, check other protections */
+                        /* Stoneskin was not active, check other protections */
                         if (IS_AFFECTED(victim, AFF_SANCTUARY))
                             dam = MIN(dam, 18);
                         if (IS_AFFECTED(victim, AFF_GLOOMSHIELD))
