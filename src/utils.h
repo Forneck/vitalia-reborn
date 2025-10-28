@@ -871,11 +871,15 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define TANA(obj) (strchr("aeiouAEIOU", *(obj)) ? "an" : "a")
 
 #define PLURAL(num, ws, wp) (num == 1 ? ws : wp)
+/* Portuguese language gender macros */
 #define ELEA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "ele" : "ela") : "ele")
 #define ELEAUpper(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "Ele" : "Ela") : "Ele")
 #define OAUpper(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "O" : "A") : "O")
 #define OA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "o" : "a") : "o")
 #define SEUSUA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "seu" : "sua") : "seu")
+#define DELA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "dele" : "dela") : "dele")
+#define TEUTUA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "teu" : "tua") : "teu")
+#define UMUMA(ch) (GET_SEX(ch) ? (GET_SEX(ch) == SEX_MALE ? "um" : "uma") : "um")
 /* Various macros building up to CAN_SEE */
 
 /** Defines if there is enough light for sub to see in. */

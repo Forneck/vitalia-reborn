@@ -2773,6 +2773,30 @@ void perform_act(const char *orig, struct char_data *ch, struct obj_data *obj, v
                 case 'R':
                     CHECK_NULL(vict_obj, OA((const struct char_data *)vict_obj));
                     break;
+                case 'z': /* -- jr - portuguese language: seu/sua */
+                    i = SEUSUA(ch);
+                    break;
+                case 'Z':
+                    CHECK_NULL(vict_obj, SEUSUA((const struct char_data *)vict_obj));
+                    break;
+                case 'd': /* -- jr - portuguese language: dele/dela */
+                    i = DELA(ch);
+                    break;
+                case 'D':
+                    CHECK_NULL(vict_obj, DELA((const struct char_data *)vict_obj));
+                    break;
+                case 'w': /* -- jr - portuguese language: teu/tua */
+                    i = TEUTUA(ch);
+                    break;
+                case 'W':
+                    CHECK_NULL(vict_obj, TEUTUA((const struct char_data *)vict_obj));
+                    break;
+                case 'y': /* -- jr - portuguese language: um/uma */
+                    i = UMUMA(ch);
+                    break;
+                case 'Y':
+                    CHECK_NULL(vict_obj, UMUMA((const struct char_data *)vict_obj));
+                    break;
                     /* uppercase previous word */
                 case 'u':
                     for (j = buf; j > lbuf && !isspace((int)*(j - 1)); j--)

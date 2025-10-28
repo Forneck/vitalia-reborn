@@ -435,16 +435,50 @@ OLC to 999 and explain how it works. Use astat to see examples.
 
 Here is the much coveted list of $ codes applicable to socials:
 
-$e he/she/it person doing social
-$E he/she target of social
-$m him/her person doing social
-$M him/her target of social
-$n char name person doing social (your name)
-$N char name target of social (other persons name)
-$s his/her/its person doing social
-$S his/her target of social
-$t body part of victim
-$p object
+ENGLISH CODES:
+$n  char name - person doing social (your name)
+$N  char name - target of social (other person's name)
+$e  he/she/it - person doing social
+$E  he/she/it - target of social
+$m  him/her/it - person doing social
+$M  him/her/it - target of social
+$s  his/her/its - person doing social
+$S  his/her/its - target of social
+
+PORTUGUESE CODES (Códigos em Português):
+$l  ele/ela - person doing social (he/she)
+$L  ele/ela - target of social (he/she)
+$r  o/a - person doing social (the - definite article)
+$R  o/a - target of social (the - definite article)
+$z  seu/sua - person doing social (his/her - possessive)
+$Z  seu/sua - target of social (his/her - possessive)
+$d  dele/dela - person doing social (of his/of hers)
+$D  dele/dela - target of social (of his/of hers)
+$w  teu/tua - person doing social (your - informal possessive)
+$W  teu/tua - target of social (your - informal possessive)
+$y  um/uma - person doing social (a/an - indefinite article)
+$Y  um/uma - target of social (a/an - indefinite article)
+
+OBJECT CODES:
+$o  object name - short name of object
+$O  object name - short name of target object
+$p  object description - the short description of object
+$P  object description - the short description of target object
+$a  a/an - indefinite article for object (English)
+$A  a/an - indefinite article for target object (English)
+
+OTHER CODES:
+$t  text argument or body part
+$T  text argument (target)
+$F  first word of text argument
+$b  acts like $p if object exists, otherwise like $N
+
+SPECIAL FORMATTING:
+$u  uppercase previous word
+$U  uppercase next word
+$x(male,female) - conditional text based on char gender
+$X(male,female) - conditional text based on victim gender
+$$  literal dollar sign
 
 See also: ASTAT, SOCIALS, AUTOSAVE
 #101
