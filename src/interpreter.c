@@ -1931,18 +1931,13 @@ void nanny(struct descriptor_data *d, char *arg)
 
             GET_FIT(d->character) = 0;
 
-            /* Clear all skills before restoring retained ones */
+            /* Clear all skills and restore retained ones in a single pass */
             {
                 int i;
                 for (i = 1; i <= MAX_SKILLS; i++) {
+                    /* Clear skill first */
                     SET_SKILL(d->character, i, 0);
-                }
-            }
-
-            /* Restore retained skills */
-            {
-                int i;
-                for (i = 1; i <= MAX_SKILLS; i++) {
+                    /* Restore retained skill if it exists */
                     if (d->character->player_specials->saved.retained_skills[i] > 0) {
                         SET_SKILL(d->character, i, d->character->player_specials->saved.retained_skills[i]);
                         /* Clear retained_skills array after applying */
