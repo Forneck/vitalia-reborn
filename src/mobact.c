@@ -1432,7 +1432,7 @@ void mobile_activity(void)
                             GET_OBJ_VAL(container, 3) = 1; /* Poison it */
 
                             /* Subtle message - victim might not notice */
-                            if (rand_number(1, 100) <= 20) {
+                            if (rand_number(1, 100) <= 50) {
                                 act("$n parece sussurrar algo enquanto se aproxima de você.", FALSE, ch, 0, victim,
                                     TO_VICT);
                                 /* Safety check: act() can trigger DG scripts which may cause extraction */
