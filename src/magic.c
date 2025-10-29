@@ -711,7 +711,8 @@ int mag_points(int level, struct char_data *ch, struct char_data *victim, int sp
         if (ch != victim && hp > 0) {
             /* Healer gains reputation for helping others */
             if (!IS_NPC(ch)) {
-                modify_player_reputation(ch, 1);
+                int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_HEALING, victim);
+                modify_player_reputation(ch, 1 + class_bonus);
             } else if (ch->ai_data) {
                 ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + 1);
             }
@@ -719,7 +720,8 @@ int mag_points(int level, struct char_data *ch, struct char_data *victim, int sp
             /* Healing high-reputation entities gives more reputation */
             if (GET_REPUTATION(victim) >= 70) {
                 if (!IS_NPC(ch)) {
-                    modify_player_reputation(ch, rand_number(1, 2));
+                    int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_HEALING, victim);
+                    modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
                 } else if (ch->ai_data) {
                     ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + rand_number(1, 2));
                 }

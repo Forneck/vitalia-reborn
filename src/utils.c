@@ -3998,6 +3998,126 @@ int modify_player_reputation(struct char_data *ch, int amount)
 }
 
 /**
+ * Apply class-based reputation modifier for actions aligned with class theme
+ * @param ch Character performing the action
+ * @param action_type Type of action being performed
+ * @param target Optional target of the action (for context)
+ * @return Reputation modifier (positive for class-appropriate actions)
+ */
+int get_class_reputation_modifier(struct char_data *ch, int action_type, struct char_data *target)
+{
+    int modifier = 0;
+
+    if (!ch || IS_NPC(ch)) {
+        return 0;
+    }
+
+    switch (action_type) {
+        case CLASS_REP_COMBAT_KILL:
+            /* Warriors gain bonus reputation for combat prowess */
+            if (IS_WARRIOR(ch)) {
+                modifier += 1; /* +1 extra for warriors killing in combat */
+                if (target && GET_LEVEL(target) > GET_LEVEL(ch)) {
+                    modifier += 1; /* Extra bonus for defeating stronger opponents */
+                }
+            }
+            /* Rangers gain bonus for hunting (killing animals/beasts) */
+            if (IS_RANGER(ch) && target && IS_NPC(target)) {
+                if (MOB_FLAGGED(target, MOB_ANIMAL)) {
+                    modifier += 1; /* Rangers are known for hunting */
+                }
+            }
+            break;
+
+        case CLASS_REP_HEALING:
+            /* Clerics gain bonus reputation for healing (faith and helping) */
+            if (IS_CLERIC(ch)) {
+                modifier += 1; /* +1 extra for clerics healing */
+            }
+            /* Druids gain bonus for healing (nature's restoration) */
+            if (IS_DRUID(ch)) {
+                modifier += 1; /* +1 extra for druids healing */
+            }
+            break;
+
+        case CLASS_REP_MAGIC_CAST:
+            /* Magic users gain reputation for magical knowledge */
+            if (IS_MAGIC_USER(ch)) {
+                modifier += 1; /* Scholars advancing magical understanding */
+            }
+            break;
+
+        case CLASS_REP_QUEST_COMPLETE:
+            /* All classes get standard quest rewards, but some get bonuses */
+            if (IS_RANGER(ch)) {
+                modifier += 1; /* Rangers excel at tracking and quest completion */
+            }
+            if (IS_BARD(ch)) {
+                modifier += 1; /* Bards spread tales of their achievements */
+            }
+            break;
+
+        case CLASS_REP_SOCIAL_PERFORMANCE:
+            /* Bards gain reputation through social interaction and performance */
+            if (IS_BARD(ch)) {
+                modifier += rand_number(1, 2); /* Bards are known for arts and music */
+            }
+            break;
+
+        case CLASS_REP_NATURE_INTERACTION:
+            /* Druids and Rangers gain reputation for nature-related actions */
+            if (IS_DRUID(ch)) {
+                modifier += 1; /* Druids connected to nature */
+            }
+            if (IS_RANGER(ch)) {
+                modifier += 1; /* Rangers masters of flora */
+            }
+            break;
+
+        case CLASS_REP_GENEROSITY:
+            /* Clerics gain bonus for charity (faith-based giving) */
+            if (IS_CLERIC(ch)) {
+                modifier += 1; /* Faith encourages generosity */
+            }
+            /* Bards gain bonus for patronage of arts */
+            if (IS_BARD(ch)) {
+                modifier += 1; /* Supporting culture */
+            }
+            break;
+
+        case CLASS_REP_SCHOLARLY:
+            /* Magic users gain reputation for scholarly pursuits */
+            if (IS_MAGIC_USER(ch)) {
+                modifier += rand_number(1, 2); /* Advancing knowledge */
+            }
+            break;
+
+        case CLASS_REP_FAITHFULNESS:
+            /* Clerics gain reputation for acts of faith */
+            if (IS_CLERIC(ch)) {
+                modifier += rand_number(1, 2); /* Serving the Gods */
+            }
+            break;
+
+        case CLASS_REP_STEALTH_ACTION:
+            /* Thieves gain reputation for successful stealth actions */
+            if (IS_THIEF(ch)) {
+                modifier += rand_number(1, 2); /* Masters of stealth and cunning */
+            }
+            break;
+
+        case CLASS_REP_POISONING:
+            /* Thieves gain reputation for poisoning (assassin's craft) */
+            if (IS_THIEF(ch)) {
+                modifier += 1; /* Known for poison use */
+            }
+            break;
+    }
+
+    return modifier;
+}
+
+/**
  * Enhancement 4: Calculate quest reward with player reputation adjustment
  * @param requesting_mob Mob que está solicitando o item
  * @param item_vnum VNUM do item desejado

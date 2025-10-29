@@ -339,3 +339,77 @@ The system allows for "infamous villains" with high reputation:
 - Healing allies: +reputation
 - Backstabbing for hire: -reputation (dishonorable)
 - Known for reliability, not methods
+
+## Class-Based Reputation Bonuses (Implemented)
+
+Each class gains additional reputation for actions aligned with their theme:
+
+### Warrior
+- **Combat Kills**: +1 bonus reputation for kills
+- **Defeating Stronger Opponents**: Additional +1 if target is higher level
+- **Theme**: Combat prowess and martial skill
+
+### Magic User
+- **Magic Casting**: +1 bonus reputation
+- **Scholarly Pursuits**: +1-2 bonus reputation
+- **Theme**: Advancing magical knowledge and understanding world laws
+
+### Cleric
+- **Healing Others**: +1 bonus reputation
+- **Generosity (Charity)**: +1 bonus reputation
+- **Acts of Faith**: +1-2 bonus reputation
+- **Theme**: Faith in the Gods and helping others
+
+### Thief
+- **Stealing (Evil only)**: +1-2 bonus reputation
+- **Backstabbing (Evil only)**: +1-2 bonus reputation
+- **Poisoning (Evil only)**: +1 bonus reputation
+- **Theme**: Masters of stealth, cunning, and shadow arts
+
+### Druid
+- **Healing Others**: +1 bonus reputation
+- **Nature Interaction**: +1 bonus reputation
+- **Theme**: Connection to animals and nature
+
+### Bard
+- **Quest Completion**: +1 bonus reputation (spreading tales)
+- **Social Performance**: +1-2 bonus reputation
+- **Generosity (Patronage)**: +1 bonus reputation
+- **Theme**: Music, arts, and cultural influence
+
+### Ranger
+- **Combat Kills (Animals)**: +1 bonus reputation for hunting
+- **Quest Completion**: +1 bonus reputation (tracking)
+- **Nature Interaction**: +1 bonus reputation
+- **Theme**: Hunt, movement expertise, and flora mastery
+
+### Examples
+
+**Warrior "Ironblade" killing evil mob:**
+- Base: +1-2 reputation
+- Warrior bonus: +1
+- Total: +2-3 reputation
+
+**Cleric "Lightkeeper" healing wounded:**
+- Base: +1-3 reputation
+- Cleric bonus: +1
+- Total: +2-4 reputation
+
+**Evil Thief "Shadowstep" stealing from noble:**
+- Base (evil): +1-2 reputation
+- Thief bonus: +1-2
+- Total: +2-4 reputation (infamy)
+
+**Bard "Songweaver" completing quest:**
+- Base: +1-10 reputation
+- Bard bonus: +1 (spreading tales)
+- Total: +2-11 reputation
+
+**Ranger "Wolfheart" hunting beasts:**
+- Base: +1-2 reputation
+- Ranger bonus: +1 (hunting)
+- Total: +2-3 reputation
+
+### Implementation
+
+Class bonuses stack with alignment bonuses and base reputation gains. The `get_class_reputation_modifier()` function calculates the appropriate bonus based on action type and class, encouraging players to pursue class-appropriate activities for maximum reputation growth.

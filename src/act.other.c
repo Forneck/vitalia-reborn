@@ -292,14 +292,15 @@ ACMD(do_steal)
     /* Reputation changes for stealing */
     if (!IS_NPC(ch) && !ohoh) {
         /* Successful stealing */
+        int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_STEALTH_ACTION, vict);
         if (IS_EVIL(ch)) {
             /* Evil characters gain reputation (infamy) for successful theft */
             if (IS_GOOD(vict)) {
                 /* Stealing from good targets increases evil reputation */
-                modify_player_reputation(ch, rand_number(1, 2));
+                modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
             } else {
                 /* Any successful theft for evil characters */
-                modify_player_reputation(ch, 1);
+                modify_player_reputation(ch, 1 + class_bonus);
             }
         } else {
             /* Good/Neutral characters LOSE reputation for stealing */

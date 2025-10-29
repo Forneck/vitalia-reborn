@@ -112,6 +112,22 @@ int calculate_quest_difficulty(obj_vnum item_vnum);
 int calculate_quest_reward(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty);
 int calculate_player_reputation(struct char_data *ch);
 int modify_player_reputation(struct char_data *ch, int amount);
+
+/* Class-based reputation action types */
+#define CLASS_REP_COMBAT_KILL 1        /* Killing in combat (Warriors, Rangers) */
+#define CLASS_REP_HEALING 2            /* Healing others (Clerics, Druids) */
+#define CLASS_REP_MAGIC_CAST 3         /* Casting spells (Magic Users) */
+#define CLASS_REP_QUEST_COMPLETE 4     /* Completing quests (Rangers, Bards) */
+#define CLASS_REP_SOCIAL_PERFORMANCE 5 /* Social/performance actions (Bards) */
+#define CLASS_REP_NATURE_INTERACTION 6 /* Nature-related actions (Druids, Rangers) */
+#define CLASS_REP_GENEROSITY 7         /* Giving/charity (Clerics, Bards) */
+#define CLASS_REP_SCHOLARLY 8          /* Scholarly pursuits (Magic Users) */
+#define CLASS_REP_FAITHFULNESS 9       /* Acts of faith (Clerics) */
+#define CLASS_REP_STEALTH_ACTION 10    /* Stealth actions (Thieves) - stealing, backstabbing */
+#define CLASS_REP_POISONING 11         /* Poisoning (Thieves) */
+
+int get_class_reputation_modifier(struct char_data *ch, int action_type, struct char_data *target);
+
 int calculate_quest_reward_with_reputation(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty,
                                            struct char_data *player);
 obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty);

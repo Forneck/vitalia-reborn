@@ -359,6 +359,7 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
     /* Reputation changes based on kills (players and mobs) */
     if (killer && !IS_NPC(killer)) {
         /* Player killed someone */
+        int class_bonus;
         if (IS_NPC(ch)) {
             /* Killing good-aligned mobs lowers reputation */
             if (IS_GOOD(ch)) {
@@ -366,11 +367,13 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
             }
             /* Killing evil-aligned mobs increases reputation slightly */
             else if (IS_EVIL(ch)) {
-                modify_player_reputation(killer, rand_number(1, 2));
+                class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
+                modify_player_reputation(killer, rand_number(1, 2) + class_bonus);
             }
             /* Killing high-level mobs increases reputation more */
             if (GET_LEVEL(ch) >= GET_LEVEL(killer) + 5) {
-                modify_player_reputation(killer, rand_number(1, 3));
+                class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
+                modify_player_reputation(killer, rand_number(1, 3) + class_bonus);
             }
         } else {
             /* Player killed another player - major reputation loss */

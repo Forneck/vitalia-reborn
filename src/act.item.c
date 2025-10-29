@@ -707,6 +707,9 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
             rep_gain += 1;
         }
 
+        /* Class bonus for generosity */
+        rep_gain += get_class_reputation_modifier(ch, CLASS_REP_GENEROSITY, vict);
+
         if (rep_gain > 0) {
             if (modify_player_reputation(ch, rep_gain)) {
                 /* Track this recipient to prevent exploitation */
@@ -799,6 +802,9 @@ void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount)
         } else if (amount >= 100) {
             rep_gain = 1;
         }
+
+        /* Class bonus for generosity */
+        rep_gain += get_class_reputation_modifier(ch, CLASS_REP_GENEROSITY, vict);
 
         if (rep_gain > 0) {
             if (modify_player_reputation(ch, rep_gain)) {
@@ -1887,13 +1893,14 @@ ACMD(do_taint)
 
                         /* Reputation changes for successful poisoning */
                         if (!IS_NPC(ch)) {
+                            int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_POISONING, vict);
                             if (IS_EVIL(ch)) {
                                 /* Evil characters gain reputation (infamy) for poisoning */
                                 if (IS_GOOD(vict)) {
                                     /* Poisoning good targets increases evil reputation */
-                                    modify_player_reputation(ch, rand_number(2, 3));
+                                    modify_player_reputation(ch, rand_number(2, 3) + class_bonus);
                                 } else {
-                                    modify_player_reputation(ch, rand_number(1, 2));
+                                    modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
                                 }
                             } else {
                                 /* Good/Neutral characters LOSE reputation for poisoning */
