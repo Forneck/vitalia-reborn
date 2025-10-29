@@ -550,8 +550,10 @@ int call_magic(struct char_data *caster, struct char_data *cvict, struct obj_dat
     if (spell->mag_flags & MAG_ROOMS)
         flags |= mag_rooms(level, caster, spellnum);
 
-    if ((spell->mag_flags & MAG_MANUAL) && spell->function)
+    if ((spell->mag_flags & MAG_MANUAL) && spell->function) {
         call_ASPELL(spell->function, GET_LEVEL(caster), caster, cvict, ovict);
+        flags |= MAGIC_SUCCESS;
+    }
 
     if (spell->script)
         flags |= perform_script(spell->script, caster, cvict, ovict, spell->vnum, 0);
