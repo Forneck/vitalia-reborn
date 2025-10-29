@@ -1033,6 +1033,10 @@ void heartbeat(int heart_pulse)
     {
         check_idle_passwords();
     }
+
+    if (!(heart_pulse % PULSE_MOB_EMOTION)) /* 4 seconds */
+        mob_emotion_activity();
+
     if (!(heart_pulse % PULSE_MOBILE))
         mobile_activity();
 

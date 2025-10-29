@@ -310,6 +310,78 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     }
 }
 
+/**
+ * Separate heartbeat pass for mob emotion and social behavior.
+ * Called more frequently than mobile_activity() to make mobs feel more alive.
+ * Runs at PULSE_MOB_EMOTION (every 4 seconds) vs PULSE_MOBILE (every 10 seconds).
+ */
+void mob_emotion_activity(void)
+{
+    struct char_data *ch, *next_ch;
+
+    for (ch = character_list; ch; ch = next_ch) {
+        next_ch = ch->next;
+
+        if (!ch || !IS_MOB(ch))
+            continue;
+
+        /* Skip mobs that have been marked for extraction */
+        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+            continue;
+
+        /* Safety check: Skip mobs that are not in a valid room */
+        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+            continue;
+
+        /* Skip if mob is fighting or not awake */
+        if (FIGHTING(ch) || !AWAKE(ch))
+            continue;
+
+        /* Mobs perform contextual socials based on reputation, alignment, gender, and position */
+        /* Only perform if experimental feature is enabled */
+        /* Higher probability since this runs more frequently (every 4 seconds vs every 10 seconds) */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= 20) { /* 20% chance per tick */
+            struct char_data *potential_target;
+
+            /* Look for a suitable target in the room */
+            for (potential_target = world[IN_ROOM(ch)].people; potential_target;
+                 potential_target = potential_target->next_in_room) {
+                if (potential_target == ch)
+                    continue;
+
+                /* Skip if target is fighting, sleeping, or dead */
+                if (FIGHTING(potential_target) || GET_POS(potential_target) <= POS_SLEEPING)
+                    continue;
+
+                /* Can the mob see the target? */
+                if (!CAN_SEE(ch, potential_target))
+                    continue;
+
+                /* Perform contextual social */
+                mob_contextual_social(ch, potential_target);
+
+                /* Safety check: do_action can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    break; /* Exit the for loop and continue to next mob */
+
+                /* Only target one character per social action */
+                break;
+            }
+
+            /* If mob was extracted during social, continue to next mob in main loop */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
+        }
+
+        /* Passive emotion regulation - emotions gradually return to baseline (experimental feature) */
+        /* Higher probability since this runs more frequently */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= 30) { /* 30% chance per tick */
+            update_mob_emotion_passive(ch);
+        }
+
+    } /* end for() */
+}
+
 void mobile_activity(void)
 {
     struct char_data *ch, *next_ch, *vict;
@@ -1607,49 +1679,8 @@ void mobile_activity(void)
             }
         }
 
-        /* Mobs perform contextual socials based on reputation, alignment, gender, and position */
-        /* Only perform if experimental feature is enabled */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= 5) { /* 5% chance per tick to perform a social */
-            struct char_data *potential_target;
-
-            /* Verify room validity before accessing people list */
-            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
-                continue;
-
-            /* Look for a suitable target in the room */
-            for (potential_target = world[IN_ROOM(ch)].people; potential_target;
-                 potential_target = potential_target->next_in_room) {
-                if (potential_target == ch)
-                    continue;
-
-                /* Skip if target is fighting, sleeping, or dead */
-                if (FIGHTING(potential_target) || GET_POS(potential_target) <= POS_SLEEPING)
-                    continue;
-
-                /* Can the mob see the target? */
-                if (!CAN_SEE(ch, potential_target))
-                    continue;
-
-                /* Perform contextual social */
-                mob_contextual_social(ch, potential_target);
-
-                /* Safety check: do_action can trigger DG scripts which may cause extraction */
-                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                    break; /* Exit the for loop and continue to next mob */
-
-                /* Only target one character per social action */
-                break;
-            }
-
-            /* If mob was extracted during social, continue to next mob in main loop */
-            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                continue;
-        }
-
-        /* Passive emotion regulation - emotions gradually return to baseline (experimental feature) */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= 10) { /* 10% chance per tick */
-            update_mob_emotion_passive(ch);
-        }
+        /* Note: Mob emotion and social behavior has been moved to mob_emotion_activity()
+         * which runs at PULSE_MOB_EMOTION (every 4 seconds) for better responsiveness. */
 
         /* Add new mobile actions here */
 

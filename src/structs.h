@@ -717,6 +717,8 @@
 #define PULSE_ZONE (10 RL_SEC)
 /** Controls when mobile (NPC) actions and updates will occur. */
 #define PULSE_MOBILE (10 RL_SEC)
+/** Controls when mobile emotion and emote updates will occur. */
+#define PULSE_MOB_EMOTION (4 RL_SEC)
 /** Controls the time between turns of combat. */
 #define PULSE_VIOLENCE (2 RL_SEC)
 /** Controls when characters and houses (if implemented) will be autosaved.
