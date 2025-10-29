@@ -28,10 +28,6 @@
 #include "quest.h"
 #include "spec_procs.h"
 
-/* Mob emotion activity constants */
-#define MOB_EMOTION_SOCIAL_CHANCE 20 /**< Probability (%) of performing a social per emotion tick */
-#define MOB_EMOTION_UPDATE_CHANCE 30 /**< Probability (%) of updating emotions per emotion tick */
-
 /* local file scope only function prototypes */
 static bool aggressive_mob_on_a_leash(struct char_data *slave, struct char_data *master, struct char_data *attack);
 static bool can_heal_based_on_alignment(struct char_data *healer, struct char_data *target);
@@ -326,7 +322,7 @@ void mob_emotion_activity(void)
     for (ch = character_list; ch; ch = next_ch) {
         next_ch = ch->next;
 
-        /* Defensive null check - ch could theoretically become null during extraction */
+        /* Skip if we've reached the end of the list or if this is not a mob */
         if (!ch || !IS_MOB(ch))
             continue;
 
@@ -344,8 +340,8 @@ void mob_emotion_activity(void)
 
         /* Mobs perform contextual socials based on reputation, alignment, gender, and position */
         /* Only perform if experimental feature is enabled */
-        /* Higher probability since this runs more frequently (every 4 seconds vs every 10 seconds) */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= MOB_EMOTION_SOCIAL_CHANCE) {
+        /* Probability controlled by CONFIG_MOB_EMOTION_SOCIAL_CHANCE (configurable in cedit) */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= CONFIG_MOB_EMOTION_SOCIAL_CHANCE) {
             struct char_data *potential_target;
 
             /* Look for a suitable target in the room */
@@ -379,8 +375,8 @@ void mob_emotion_activity(void)
         }
 
         /* Passive emotion regulation - emotions gradually return to baseline (experimental feature) */
-        /* Higher probability since this runs more frequently */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= MOB_EMOTION_UPDATE_CHANCE) {
+        /* Probability controlled by CONFIG_MOB_EMOTION_UPDATE_CHANCE (configurable in cedit) */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= CONFIG_MOB_EMOTION_UPDATE_CHANCE) {
             update_mob_emotion_passive(ch);
         }
 

@@ -1656,10 +1656,12 @@ struct autowiz_data {
 
 /** Experimental Features configuration. */
 struct experimental_data {
-    int new_auction_system;       /**< New Auction System enabled?   */
-    int experimental_bank_system; /**< Experimental Bank System enabled?  */
-    int mob_contextual_socials;   /**< Mobs perform socials based on reputation/alignment/position? */
-    int dynamic_reputation;       /**< Dynamic reputation changes (combat, healing, giving, etc.)? */
+    int new_auction_system;        /**< New Auction System enabled?   */
+    int experimental_bank_system;  /**< Experimental Bank System enabled?  */
+    int mob_contextual_socials;    /**< Mobs perform socials based on reputation/alignment/position? */
+    int dynamic_reputation;        /**< Dynamic reputation changes (combat, healing, giving, etc.)? */
+    int mob_emotion_social_chance; /**< Probability (%) of mob performing social per emotion tick */
+    int mob_emotion_update_chance; /**< Probability (%) of mob updating emotions per emotion tick */
 };
 
 /**
