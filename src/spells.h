@@ -413,6 +413,7 @@ void affect_update(void);
 /* from spell_parser.c */
 ACMD(do_cast);
 int check_voice_cast(struct char_data *ch, const char *spoken_text);
+void spell_to_syllables_public(const char *spell_name, char *result, size_t result_size);
 
 /* Global variables */
 extern char cast_arg2[];

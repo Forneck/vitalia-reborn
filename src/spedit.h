@@ -183,8 +183,10 @@ struct str_spells {
     struct str_assign assign[NUM_CLASSES];
     struct str_mesg messages;
     struct str_pts points;
-    int school;  /* Spell school (Escola) */
-    int element; /* Spell element (hidden) */
+    int school;             /* Spell school (Escola) */
+    int element;            /* Spell element (hidden) */
+    int prerequisite_spell; /* Spell vnum needed to discover this variant (0 = none) */
+    int discoverable;       /* Can be discovered through syllable experimentation (0 = no, 1 = yes) */
     void *function;
     struct str_spells *next;
 };
