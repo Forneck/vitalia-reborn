@@ -602,6 +602,83 @@ ACMD(do_syllables)
     page_string(ch->desc, buf, TRUE);
 }
 
+ACMD(do_experiment)
+{
+    struct str_spells *ptr;
+    char syllables[256];
+    char spoken_lower[256];
+    int i;
+
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não podem experimentar com sílabas.\r\n");
+        return;
+    }
+
+    skip_spaces(&argument);
+
+    if (!*argument) {
+        send_to_char(ch,
+                     "Uso: experiment <silabas misticas>\r\n\r\n"
+                     "Experimente combinar sílabas místicas que você aprendeu para descobrir\r\n"
+                     "variantes de magias que você já conhece.\r\n\r\n"
+                     "Exemplo: experiment aquaaegis\r\n"
+                     "         (pode descobrir uma variante de watershield se você conhece fireshield)\r\n\r\n"
+                     "Use o comando 'syllables' para ver as sílabas das magias que você conhece.\r\n");
+        return;
+    }
+
+    /* Convert spoken text to lowercase for comparison */
+    strlcpy(spoken_lower, argument, sizeof(spoken_lower));
+    for (i = 0; spoken_lower[i]; i++)
+        spoken_lower[i] = LOWER(spoken_lower[i]);
+
+    /* Check all spells to see if the syllables match a discoverable variant */
+    for (ptr = list_spells; ptr; ptr = ptr->next) {
+        /* Only check discoverable spell variants */
+        if (ptr->status != available || ptr->type != SPELL || !ptr->discoverable)
+            continue;
+
+        /* Check if player already knows this spell */
+        if (GET_SKILL(ch, ptr->vnum) > 0)
+            continue;
+
+        /* Check if player knows the prerequisite spell */
+        if (ptr->prerequisite_spell > 0 && GET_SKILL(ch, ptr->prerequisite_spell) == 0)
+            continue;
+
+        /* Convert this spell's name to syllables */
+        spell_to_syllables_public(ptr->name, syllables, sizeof(syllables));
+
+        /* Check if spoken syllables match */
+        if (!strcmp(syllables, spoken_lower)) {
+            /* Found a match! Teach the spell to the player */
+            int learned_level = 15; /* Base proficiency for discovered spells */
+
+            SET_SKILL(ch, ptr->vnum, learned_level);
+
+            send_to_char(ch,
+                         "@GÊxito na experimentação!@n\r\n\r\n"
+                         "As sílabas místicas ressoam com poder conhecido... Você sente uma conexão\r\n"
+                         "com magias que já domina e percebe como adaptá-las!\r\n\r\n"
+                         "Você descobriu a magia: @Y%s@n\r\n\r\n"
+                         "Use 'syllables' para ver suas novas sílabas místicas.\r\n",
+                         ptr->name);
+
+            /* Log the discovery */
+            mudlog(NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE,
+                   "%s discovered spell variant '%s' through experimentation", GET_NAME(ch), ptr->name);
+
+            return;
+        }
+    }
+
+    /* No match found */
+    send_to_char(ch,
+                 "Você tenta combinar as sílabas místicas, mas elas não ressoam com nenhum\r\n"
+                 "conhecimento que você possui. Talvez você precise aprender magias relacionadas\r\n"
+                 "primeiro, ou essas sílabas não correspondem a nenhuma variante descobrível.\r\n");
+}
+
 ACMD(do_visible)
 {
     if (GET_LEVEL(ch) >= LVL_IMMORT) {

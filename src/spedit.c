@@ -910,6 +910,8 @@ void spedit_init_new_spell(struct str_spells *spell)
 
     spell->school = SCHOOL_UNDEFINED;
     spell->element = ELEMENT_UNDEFINED;
+    spell->prerequisite_spell = 0;
+    spell->discoverable = 0;
     spell->function = NULL;
 }
 

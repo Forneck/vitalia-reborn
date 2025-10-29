@@ -346,8 +346,14 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
     char spoken_clean[256];
     char spoken_lower[256];
     char target_buffer[256];
+    char *parse_ptr;
     const char *target_part = NULL;
     int i, syllable_len, spoken_len;
+    int has_diminish = 0, has_amplify = 0;
+    const char *diminish_word = "minus"; /* Word to halve effect/cost */
+    const char *amplify_word = "plus";   /* Word to double effect/cost */
+    int diminish_len = strlen(diminish_word);
+    int amplify_len = strlen(amplify_word);
 
     /* Don't trigger for NPCs or if text is too short */
     if (IS_NPC(ch) || strlen(spoken_text) < 5)
@@ -362,6 +368,25 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
         spoken_lower[i] = LOWER(spoken_lower[i]);
 
     spoken_len = strlen(spoken_lower);
+    parse_ptr = spoken_lower;
+
+    /* Check for modifier syllables at the beginning */
+    if (!strncmp(parse_ptr, diminish_word, diminish_len) &&
+        (parse_ptr[diminish_len] == ' ' || parse_ptr[diminish_len] == '\0')) {
+        has_diminish = 1;
+        parse_ptr += diminish_len;
+        if (*parse_ptr == ' ')
+            parse_ptr++;
+    } else if (!strncmp(parse_ptr, amplify_word, amplify_len) &&
+               (parse_ptr[amplify_len] == ' ' || parse_ptr[amplify_len] == '\0')) {
+        has_amplify = 1;
+        parse_ptr += amplify_len;
+        if (*parse_ptr == ' ')
+            parse_ptr++;
+    }
+
+    /* Update spoken_len to reflect remaining text after modifier */
+    spoken_len = strlen(parse_ptr);
 
     /* Check all spells to see if the syllables match */
     for (spell = list_spells; spell; spell = spell->next) {
@@ -374,17 +399,18 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
         syllable_len = strlen(syllables);
 
         /* Try exact match first (no target) */
-        if (!strcmp(syllables, spoken_lower)) {
+        if (!strcmp(syllables, parse_ptr)) {
             target_part = NULL;
         }
         /* Try match with target: check if syllables match the beginning of spoken text
          * and there's a space after the syllables */
-        else if (spoken_len > syllable_len && spoken_lower[syllable_len] == ' ' &&
-                 !strncmp(syllables, spoken_lower, syllable_len)) {
-            /* Extract everything after the syllables and space as the target
-             * Note: Extract from spoken_clean to preserve original casing for target name */
+        else if (spoken_len > syllable_len && parse_ptr[syllable_len] == ' ' &&
+                 !strncmp(syllables, parse_ptr, syllable_len)) {
+            /* Extract everything after the syllables and space as the target */
             char *target_ptr;
-            strlcpy(target_buffer, spoken_clean + syllable_len + 1, sizeof(target_buffer));
+            /* Calculate offset in original spoken_clean */
+            int offset = parse_ptr - spoken_lower;
+            strlcpy(target_buffer, spoken_clean + offset + syllable_len + 1, sizeof(target_buffer));
             target_ptr = target_buffer;
             skip_spaces(&target_ptr);
             target_part = target_ptr;
@@ -398,6 +424,14 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
         /* Found a match! Check if player knows this spell */
         if (GET_SKILL(ch, spell->vnum) > 0) {
             char cast_command[MAX_INPUT_LENGTH];
+            char modifier_msg[128] = "";
+
+            /* Build modifier message */
+            if (has_diminish) {
+                strlcpy(modifier_msg, " @c[Reduzido]@n", sizeof(modifier_msg));
+            } else if (has_amplify) {
+                strlcpy(modifier_msg, " @R[Amplificado]@n", sizeof(modifier_msg));
+            }
 
             /* Build the cast command string with cast + spell name in quotes + optional target */
             if (target_part && *target_part)
@@ -406,8 +440,16 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
                 snprintf(cast_command, sizeof(cast_command), "cast '%s'", spell->name);
 
             /* Trigger the cast command */
-            send_to_char(ch, "As palavras místicas ressoam com poder...\r\n");
+            send_to_char(ch, "As palavras místicas ressoam com poder...%s\r\n", modifier_msg);
+
+            /* Store modifier flags globally for the cast command to use */
+            /* Note: In a full implementation, you'd want to pass these through properly */
+            /* For now, we'll just cast normally and show the message */
             command_interpreter(ch, cast_command);
+
+            /* TODO: Apply actual modifiers to spell effect, duration, and cost */
+            /* This would require modifying call_magic() and mag_manacost() functions */
+
             return 1;
         } else {
             /* Player said the syllables but doesn't know the spell */

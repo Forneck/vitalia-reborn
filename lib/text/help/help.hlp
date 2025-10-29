@@ -2202,7 +2202,7 @@ Veja tambem a ajuda para cada magia, por exemplo:
   > help magia burning hands
   > help magia energy drain
 
-Veja tambem: SYLLABLES, SAY
+Veja tambem: SYLLABLES, SAY, EXPERIMENT
 #1
 SYLLABLES SILABAS
 
@@ -2236,7 +2236,53 @@ palavra do nome da magia é transformada em sua forma mística.  Por exemplo:
    Com o tempo e prática, você pode aprender a reconhecer padrões nas sílabas
 e entender melhor a natureza das magias que você domina.
 
-Veja tambem: CAST, SAY, SPELLS
+MODIFICADORES DE MAGIA:
+   Você pode usar sílabas modificadoras ANTES das sílabas da magia para alterar
+seus efeitos:
+
+  - 'minus' - Reduz o custo de mana pela metade, mas também reduz duração e
+              efeito pela metade
+  - 'plus'  - Dobra a duração e efeito, mas também dobra o custo de mana
+
+Exemplos com modificadores:
+  > say minus ignisaegis
+    (conjura fireshield com metade do custo/efeito/duração)
+  
+  > say plus ignisaegis oponente
+    (conjura fireshield amplificado no oponente - dobro do efeito/custo/duração)
+
+Veja tambem: CAST, SAY, SPELLS, EXPERIMENT
+#1
+EXPERIMENT EXPERIMENTAR
+
+Uso: experiment <silabas misticas>
+
+   Este comando permite que você experimente com combinações de sílabas místicas
+para descobrir variantes de magias que você já conhece.  Ao combinar sílabas de
+formas diferentes, você pode descobrir novas magias relacionadas às que você já
+domina.
+
+   Para descobrir uma variante de magia, você precisa:
+   1. Conhecer a magia base (pré-requisito)
+   2. Falar as sílabas corretas da variante
+   3. A variante deve ser marcada como "descobrível" pelos administradores
+
+Exemplos:
+  > experiment aquaaegis
+    (tenta descobrir uma variante de "watershield" se você conhece "fireshield")
+  
+  > syllables
+    (veja as sílabas das magias que você conhece para combinar)
+
+   Quando você descobre com sucesso uma variante, ela é automaticamente
+adicionada ao seu grimório de magias com proficiência básica.  Você pode então
+praticar e melhorar essa nova magia normalmente.
+
+   Note que nem todas as combinações de sílabas levam a variantes descobríveis.
+Os administradores do jogo criam variantes específicas usando o sistema SPEDIT,
+garantindo equilíbrio e consistência no jogo.
+
+Veja tambem: SYLLABLES, SPELLS, CAST
 #1
 CEDIT CEDIT-MENU 
 

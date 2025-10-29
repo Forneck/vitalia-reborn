@@ -157,6 +157,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"evaluate", "evalu", POS_SITTING, do_evaluate, 0, 0, CMD_TWOARG},
     {"exits", "ex", POS_RESTING, do_exits, 0, 0, CMD_NOARG},
     {"examine", "exa", POS_SITTING, do_examine, 0, 0, CMD_ONEARG},
+    {"experiment", "exp", POS_RESTING, do_experiment, 0, 0, CMD_ONEARG},
     {"export", "export", POS_DEAD, do_export_zone, LVL_IMPL, 0, CMD_NOARG},
     {"force", "force", POS_SLEEPING, do_force, LVL_GOD, 0, CMD_TWOARG},
     {"fill", "fil", POS_STANDING, do_pour, 0, SCMD_FILL, CMD_TWOARG},
