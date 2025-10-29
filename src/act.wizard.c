@@ -973,7 +973,7 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
     }
     if (!IS_NPC(k)) {
         send_to_char(ch, "Hometown: %d\r\n", GET_ROOM_VNUM(GET_HOMETOWN(k)));
-        send_to_char(ch, "Karma: %'d\r\n", GET_KARMA(k));
+        send_to_char(ch, "Karma: %'d, Reputation: %d\r\n", GET_KARMA(k), GET_REPUTATION(k));
     }
     /* check mobiles for a script */
     do_sstat_character(ch, k);
@@ -2949,6 +2949,8 @@ static struct set_struct {
                   {"goalitem", LVL_BUILDER, NPC, NUMBER},
                   {"goaltarget", LVL_BUILDER, NPC, NUMBER},
                   {"goaltimer", LVL_BUILDER, NPC, NUMBER},
+                  {"karma", LVL_GOD, PC, NUMBER},        /* 69 */
+                  {"reputation", LVL_GOD, BOTH, NUMBER}, /* 70 */
                   {"\n", 0, BOTH, MISC}};
 
 static int perform_set(struct char_data *ch, struct char_data *vict, int mode, char *val_arg)
@@ -3477,6 +3479,23 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
                 vict->ai_data->goal_target_mob_rnum = NOBODY;
             }
             vict->ai_data->goal_timer = RANGE(0, 10000);
+            break;
+        case 70: /* karma */
+            GET_KARMA(vict) = RANGE(-1000000, 1000000);
+            break;
+        case 71: /* reputation */
+            if (IS_NPC(vict)) {
+                if (!vict->ai_data) {
+                    CREATE(vict->ai_data, struct mob_ai_data, 1);
+                    memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
+                    vict->ai_data->goal_destination = NOWHERE;
+                    vict->ai_data->goal_item_vnum = NOTHING;
+                    vict->ai_data->goal_target_mob_rnum = NOBODY;
+                }
+                vict->ai_data->reputation = RANGE(0, 100);
+            } else {
+                vict->player_specials->saved.reputation = RANGE(0, 100);
+            }
             break;
         default:
             send_to_char(ch, "Can't set that!\r\n");
