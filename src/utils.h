@@ -1286,5 +1286,9 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_MOB_CONTEXTUAL_SOCIALS config_info.experimental.mob_contextual_socials
 /** Dynamic reputation system (combat, healing, giving, stealing, etc. - excludes quests) enabled? */
 #define CONFIG_DYNAMIC_REPUTATION config_info.experimental.dynamic_reputation
+/** Probability (%) of mob performing social per emotion tick */
+#define CONFIG_MOB_EMOTION_SOCIAL_CHANCE config_info.experimental.mob_emotion_social_chance
+/** Probability (%) of mob updating emotions per emotion tick */
+#define CONFIG_MOB_EMOTION_UPDATE_CHANCE config_info.experimental.mob_emotion_update_chance
 
 #endif /* _UTILS_H_ */

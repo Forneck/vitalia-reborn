@@ -717,6 +717,8 @@
 #define PULSE_ZONE (10 RL_SEC)
 /** Controls when mobile (NPC) actions and updates will occur. */
 #define PULSE_MOBILE (10 RL_SEC)
+/** Controls when mobile emotion and emote updates will occur. */
+#define PULSE_MOB_EMOTION (4 RL_SEC)
 /** Controls the time between turns of combat. */
 #define PULSE_VIOLENCE (2 RL_SEC)
 /** Controls when characters and houses (if implemented) will be autosaved.
@@ -1654,10 +1656,12 @@ struct autowiz_data {
 
 /** Experimental Features configuration. */
 struct experimental_data {
-    int new_auction_system;       /**< New Auction System enabled?   */
-    int experimental_bank_system; /**< Experimental Bank System enabled?  */
-    int mob_contextual_socials;   /**< Mobs perform socials based on reputation/alignment/position? */
-    int dynamic_reputation;       /**< Dynamic reputation changes (combat, healing, giving, etc.)? */
+    int new_auction_system;        /**< New Auction System enabled?   */
+    int experimental_bank_system;  /**< Experimental Bank System enabled?  */
+    int mob_contextual_socials;    /**< Mobs perform socials based on reputation/alignment/position? */
+    int dynamic_reputation;        /**< Dynamic reputation changes (combat, healing, giving, etc.)? */
+    int mob_emotion_social_chance; /**< Probability (%) of mob performing social per emotion tick */
+    int mob_emotion_update_chance; /**< Probability (%) of mob updating emotions per emotion tick */
 };
 
 /**

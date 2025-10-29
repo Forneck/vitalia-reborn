@@ -414,6 +414,8 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_EXPERIMENTAL_MENU 68
 #define CEDIT_NEW_AUCTION_SYSTEM 69
 #define CEDIT_EXPERIMENTAL_BANK_SYSTEM 70
+#define CEDIT_MOB_EMOTION_SOCIAL_CHANCE 71
+#define CEDIT_MOB_EMOTION_UPDATE_CHANCE 72
 
 /* Hedit Submodes of connectedness. */
 #define HEDIT_CONFIRM_SAVESTRING 0

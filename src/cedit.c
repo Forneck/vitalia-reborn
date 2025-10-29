@@ -156,6 +156,8 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->experimental.experimental_bank_system = CONFIG_EXPERIMENTAL_BANK_SYSTEM;
     OLC_CONFIG(d)->experimental.mob_contextual_socials = CONFIG_MOB_CONTEXTUAL_SOCIALS;
     OLC_CONFIG(d)->experimental.dynamic_reputation = CONFIG_DYNAMIC_REPUTATION;
+    OLC_CONFIG(d)->experimental.mob_emotion_social_chance = CONFIG_MOB_EMOTION_SOCIAL_CHANCE;
+    OLC_CONFIG(d)->experimental.mob_emotion_update_chance = CONFIG_MOB_EMOTION_UPDATE_CHANCE;
 
     /* Allocate space for the strings. */
     OLC_CONFIG(d)->play.OK = str_udup(CONFIG_OK);
@@ -278,6 +280,8 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_EXPERIMENTAL_BANK_SYSTEM = OLC_CONFIG(d)->experimental.experimental_bank_system;
     CONFIG_MOB_CONTEXTUAL_SOCIALS = OLC_CONFIG(d)->experimental.mob_contextual_socials;
     CONFIG_DYNAMIC_REPUTATION = OLC_CONFIG(d)->experimental.dynamic_reputation;
+    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = OLC_CONFIG(d)->experimental.mob_emotion_social_chance;
+    CONFIG_MOB_EMOTION_UPDATE_CHANCE = OLC_CONFIG(d)->experimental.mob_emotion_update_chance;
 
     /* Allocate space for the strings. */
     if (CONFIG_OK)
@@ -761,6 +765,16 @@ int save_config(IDXTYPE nowhere)
             "dynamic_reputation = %d\n\n",
             CONFIG_DYNAMIC_REPUTATION);
 
+    fprintf(fl,
+            "* Probability (%%) of mob performing social per emotion tick (4 seconds)\n"
+            "mob_emotion_social_chance = %d\n\n",
+            CONFIG_MOB_EMOTION_SOCIAL_CHANCE);
+
+    fprintf(fl,
+            "* Probability (%%) of mob updating emotions per emotion tick (4 seconds)\n"
+            "mob_emotion_update_chance = %d\n\n",
+            CONFIG_MOB_EMOTION_UPDATE_CHANCE);
+
     fclose(fl);
 
     if (in_save_list(NOWHERE, SL_CFG))
@@ -1003,12 +1017,16 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
                     "%s2%s) Sistema Experimental de Banco : %s%s\r\n"
                     "%s3%s) Sociais Contextuais de Mobs (reputação/alinhamento/posição) : %s%s\r\n"
                     "%s4%s) Sistema de Reputação Dinâmica (combate/cura/dar/roubar - exclui quests) : %s%s\r\n"
+                    "%s5%s) Chance de Social de Emoção de Mob (%%) : %s%d\r\n"
+                    "%s6%s) Chance de Atualização de Emoção de Mob (%%) : %s%d\r\n"
                     "%s0%s) Retornar ao Menu anterior\r\n"
                     "Selecione uma opção : ",
                     grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->experimental.new_auction_system), grn, nrm, cyn,
                     CHECK_VAR(OLC_CONFIG(d)->experimental.experimental_bank_system), grn, nrm, cyn,
                     CHECK_VAR(OLC_CONFIG(d)->experimental.mob_contextual_socials), grn, nrm, cyn,
-                    CHECK_VAR(OLC_CONFIG(d)->experimental.dynamic_reputation), grn, nrm);
+                    CHECK_VAR(OLC_CONFIG(d)->experimental.dynamic_reputation), grn, nrm, cyn,
+                    OLC_CONFIG(d)->experimental.mob_emotion_social_chance, grn, nrm, cyn,
+                    OLC_CONFIG(d)->experimental.mob_emotion_update_chance, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
 }
@@ -1613,6 +1631,18 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     TOGGLE_VAR(OLC_CONFIG(d)->experimental.dynamic_reputation);
                     break;
 
+                case '5':
+                    write_to_output(
+                        d, "\r\nEnter the probability (%%) of mob performing social per emotion tick (0-100) : ");
+                    OLC_MODE(d) = CEDIT_MOB_EMOTION_SOCIAL_CHANCE;
+                    return;
+
+                case '6':
+                    write_to_output(
+                        d, "\r\nEnter the probability (%%) of mob updating emotions per emotion tick (0-100) : ");
+                    OLC_MODE(d) = CEDIT_MOB_EMOTION_UPDATE_CHANCE;
+                    return;
+
                 case '0':
                 case 'q':
                 case 'Q':
@@ -1625,6 +1655,28 @@ void cedit_parse(struct descriptor_data *d, char *arg)
 
             cedit_disp_experimental_options(d);
             return;
+
+        case CEDIT_MOB_EMOTION_SOCIAL_CHANCE:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter the probability (%%) of mob performing social per emotion tick (0-100) : ");
+            } else {
+                OLC_CONFIG(d)->experimental.mob_emotion_social_chance = LIMIT(atoi(arg), 0, 100);
+                cedit_disp_experimental_options(d);
+            }
+            break;
+
+        case CEDIT_MOB_EMOTION_UPDATE_CHANCE:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter the probability (%%) of mob updating emotions per emotion tick (0-100) : ");
+            } else {
+                OLC_CONFIG(d)->experimental.mob_emotion_update_chance = LIMIT(atoi(arg), 0, 100);
+                cedit_disp_experimental_options(d);
+            }
+            break;
 
         case CEDIT_LEVEL_CAN_SHOUT:
             if (!*arg) {
