@@ -251,8 +251,8 @@ ACMD(do_backstab)
     else
         hit(ch, vict, SKILL_BACKSTAB);
 
-    /* Reputation changes for backstabbing */
-    if (!IS_NPC(ch)) {
+    /* Reputation changes for backstabbing - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
         int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_STEALTH_ACTION, vict);
         if (IS_EVIL(ch)) {
             /* Evil characters gain reputation (infamy) for successful backstabs */

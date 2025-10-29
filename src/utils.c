@@ -4021,11 +4021,9 @@ int get_class_reputation_modifier(struct char_data *ch, int action_type, struct 
                     modifier += 1; /* Extra bonus for defeating stronger opponents */
                 }
             }
-            /* Rangers gain bonus for hunting (killing animals/beasts) */
+            /* Rangers gain bonus for hunting (killing mobs in wilderness) */
             if (IS_RANGER(ch) && target && IS_NPC(target)) {
-                if (MOB_FLAGGED(target, MOB_ANIMAL)) {
-                    modifier += 1; /* Rangers are known for hunting */
-                }
+                modifier += 1; /* Rangers are known for hunting and tracking */
             }
             break;
 

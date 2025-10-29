@@ -357,7 +357,8 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
     }
 
     /* Reputation changes based on kills (players and mobs) */
-    if (killer && !IS_NPC(killer)) {
+    /* Dynamic reputation changes (configurable, excludes quests) */
+    if (CONFIG_DYNAMIC_REPUTATION && killer && !IS_NPC(killer)) {
         /* Player killed someone */
         int class_bonus;
         if (IS_NPC(ch)) {
@@ -395,8 +396,8 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
         /* Killing players handled above in bragging section */
     }
 
-    /* Reputation loss for the victim */
-    if (!IS_NPC(ch)) {
+    /* Reputation loss for the victim (dynamic reputation system) */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
         /* Dying lowers reputation slightly */
         modify_player_reputation(ch, -rand_number(1, 3));
     } else if (ch->ai_data) {
@@ -1135,8 +1136,8 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
     if (!ch || !victim)
         return;
 
-    /* Reputation penalty for attacking allies/group members */
-    if (!IS_NPC(ch) && !IS_NPC(victim)) {
+    /* Reputation penalty for attacking allies/group members (dynamic reputation system) */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && !IS_NPC(victim)) {
         /* Check if they share same master (grouped) */
         if ((ch->master && victim->master && ch->master == victim->master) || (ch->master && ch->master == victim) ||
             (victim->master && victim->master == ch)) {

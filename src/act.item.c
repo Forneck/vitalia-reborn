@@ -682,8 +682,8 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
 
     autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);
 
-    /* Reputation gain for generosity (giving items to others) */
-    if (!IS_NPC(ch)) {
+    /* Reputation gain for generosity (giving items to others) - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
         int rep_gain = 0;
         long vict_id = IS_NPC(vict) ? GET_MOB_VNUM(vict) : GET_IDNUM(vict);
 
@@ -781,8 +781,8 @@ void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount)
     increase_gold(vict, amount);
     bribe_mtrigger(vict, ch, amount);
 
-    /* Reputation gain for giving gold (generosity) */
-    if (!IS_NPC(ch)) {
+    /* Reputation gain for giving gold (generosity) - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
         int rep_gain = 0;
         long vict_id = IS_NPC(vict) ? GET_MOB_VNUM(vict) : GET_IDNUM(vict);
 
@@ -1891,8 +1891,8 @@ ACMD(do_taint)
                                      GET_NAME(ch));
                         act("$n dá um sorriso malicioso ao esbarrar em $N.", FALSE, ch, 0, vict, TO_NOTVICT);
 
-                        /* Reputation changes for successful poisoning */
-                        if (!IS_NPC(ch)) {
+                        /* Reputation changes for successful poisoning - dynamic reputation system */
+                        if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
                             int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_POISONING, vict);
                             if (IS_EVIL(ch)) {
                                 /* Evil characters gain reputation (infamy) for poisoning */
@@ -1917,8 +1917,8 @@ ACMD(do_taint)
                     act("$n acabou de tentar envenenar seu $p!", FALSE, ch, target, 0, TO_VICT);
                     act("$n acabou de tentar envenenar $p de $N!", FALSE, ch, target, vict, TO_NOTVICT);
 
-                    /* Reputation penalty for getting caught poisoning */
-                    if (!IS_NPC(ch)) {
+                    /* Reputation penalty for getting caught poisoning - dynamic reputation system */
+                    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
                         modify_player_reputation(ch, -rand_number(4, 8));
                     }
 

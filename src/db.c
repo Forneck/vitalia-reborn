@@ -4407,6 +4407,8 @@ void load_config(void)
                     CONFIG_MAP_SIZE = num;
                 else if (!str_cmp(tag, "default_minimap_size"))
                     CONFIG_MINIMAP_SIZE = num;
+                else if (!str_cmp(tag, "dynamic_reputation"))
+                    CONFIG_DYNAMIC_REPUTATION = num;
                 break;
 
             case 'e':

@@ -707,8 +707,8 @@ int mag_points(int level, struct char_data *ch, struct char_data *victim, int sp
         GET_HIT(victim) = MIN(GET_MAX_HIT(victim), MAX(1, GET_HIT(victim) + hp));
         effect++;
 
-        /* Reputation gain for healing others (not self) */
-        if (ch != victim && hp > 0) {
+        /* Reputation gain for healing others (not self) - dynamic reputation system */
+        if (CONFIG_DYNAMIC_REPUTATION && ch != victim && hp > 0) {
             /* Healer gains reputation for helping others */
             if (!IS_NPC(ch)) {
                 int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_HEALING, victim);

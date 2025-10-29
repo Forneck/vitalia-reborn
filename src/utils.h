@@ -1284,5 +1284,7 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_EXPERIMENTAL_BANK_SYSTEM config_info.experimental.experimental_bank_system
 /** Mob contextual socials based on reputation/alignment/position enabled? */
 #define CONFIG_MOB_CONTEXTUAL_SOCIALS config_info.experimental.mob_contextual_socials
+/** Dynamic reputation system (combat, healing, giving, stealing, etc. - excludes quests) enabled? */
+#define CONFIG_DYNAMIC_REPUTATION config_info.experimental.dynamic_reputation
 
 #endif /* _UTILS_H_ */
