@@ -4602,6 +4602,14 @@ void mob_mourn_death(struct char_data *mob, struct char_data *deceased)
         /* Perform the mourning social */
         do_action(mob, "", cmd_num, 0);
 
+        /* Safety check: do_action can trigger DG scripts which may cause extraction */
+        if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+            return;
+
+        /* Validate mob->ai_data still exists after potential extraction */
+        if (!mob->ai_data)
+            return;
+
         /* For close relationships, might say something */
         if (is_close_relationship && rand_number(1, 100) <= 50) {
             char say_buf[MAX_STRING_LENGTH];
@@ -4619,11 +4627,19 @@ void mob_mourn_death(struct char_data *mob, struct char_data *deceased)
             }
 
             do_say(mob, say_buf, 0, 0);
+
+            /* Safety check: do_say can trigger DG scripts */
+            if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+                return;
+
+            /* Validate ai_data again */
+            if (!mob->ai_data)
+                return;
         }
     }
 
     /* For very close relationships with high love, mob might become vengeful or despondent */
-    if (is_close_relationship) {
+    if (is_close_relationship && mob->ai_data) {
         if (mob->ai_data->emotion_love >= 70) {
             /* Extreme grief response */
             adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(20, 35));
@@ -4633,6 +4649,9 @@ void mob_mourn_death(struct char_data *mob, struct char_data *deceased)
             /* Mob might flee in grief if wimpy tendency is high */
             if (mob->ai_data->genetics.wimpy_tendency > 60 && rand_number(1, 100) <= 40) {
                 do_flee(mob, "", 0, 0);
+                /* Safety check: do_flee can trigger extraction */
+                if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+                    return;
             }
         } else if (mob->ai_data->emotion_friendship >= 70) {
             /* Strong friendship loss */
@@ -4674,7 +4693,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     bool is_fearful = FALSE;
     int player_reputation;
 
-    if (!mob || !actor || !IS_NPC(mob) || !mob->ai_data || !social_name || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+    if (!mob || !actor || !IS_NPC(mob) || !mob->ai_data || !social_name || !*social_name ||
+        !CONFIG_MOB_CONTEXTUAL_SOCIALS)
         return;
 
     player_reputation = GET_REPUTATION(actor);
@@ -4807,13 +4827,24 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     }
 
     /* Mob might respond with a social back if emotions are strong enough */
-    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= 30) { /* 30% chance */
+    if (rand_number(1, 100) <= 30) { /* 30% chance - CONFIG check already done at function entry */
         /* Reciprocate positive socials if happy/friendly */
         if (is_positive && mob->ai_data->emotion_happiness >= 50 && mob->ai_data->emotion_friendship >= 40) {
             /* Mob might smile or nod back */
             if (rand_number(1, 100) <= 50) {
                 act("$n sorri para você.", FALSE, mob, 0, actor, TO_VICT);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+                    return;
+                if (!actor || MOB_FLAGGED(actor, MOB_NOTDEADYET) || PLR_FLAGGED(actor, PLR_NOTDEADYET))
+                    return;
+
                 act("$n sorri para $N.", FALSE, mob, 0, actor, TO_NOTVICT);
+                /* Safety check again after second act() */
+                if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+                    return;
+                if (!actor || MOB_FLAGGED(actor, MOB_NOTDEADYET) || PLR_FLAGGED(actor, PLR_NOTDEADYET))
+                    return;
             }
         }
         /* Respond to negative socials with anger if mob is brave/angry */
@@ -4821,7 +4852,18 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
             /* Mob might glare or growl back */
             if (rand_number(1, 100) <= 50) {
                 act("$n olha furiosamente para você!", FALSE, mob, 0, actor, TO_VICT);
+                /* Safety check: act() can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+                    return;
+                if (!actor || MOB_FLAGGED(actor, MOB_NOTDEADYET) || PLR_FLAGGED(actor, PLR_NOTDEADYET))
+                    return;
+
                 act("$n olha furiosamente para $N!", FALSE, mob, 0, actor, TO_NOTVICT);
+                /* Safety check again after second act() */
+                if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+                    return;
+                if (!actor || MOB_FLAGGED(actor, MOB_NOTDEADYET) || PLR_FLAGGED(actor, PLR_NOTDEADYET))
+                    return;
             }
         }
     }

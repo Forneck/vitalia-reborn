@@ -374,6 +374,7 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
             /* Notify mobs in the room about the death trap death */
             struct char_data *witness, *next_witness;
+            bool should_mourn;
 
             /* Use safe iteration pattern since act() and socials can trigger extraction */
             for (witness = world[going_to].people; witness; witness = next_witness) {
@@ -383,7 +384,7 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
                     continue;
 
                 /* Check if witness should mourn */
-                bool should_mourn = FALSE;
+                should_mourn = FALSE;
 
                 /* Group members mourn */
                 if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
@@ -405,10 +406,14 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
                     /* Safety check: mob_mourn_death can trigger extraction via socials/scripts */
                     if (MOB_FLAGGED(witness, MOB_NOTDEADYET) || PLR_FLAGGED(witness, PLR_NOTDEADYET))
                         continue;
+
+                    /* Revalidate ai_data after potential extraction */
+                    if (!witness->ai_data)
+                        continue;
                 }
 
                 /* Update witness emotions based on the death */
-                if (IS_NPC(ch)) {
+                if (IS_NPC(ch) && witness->ai_data) {
                     /* Witnessing mob death in trap */
                     if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
                         /* Ally died in trap */

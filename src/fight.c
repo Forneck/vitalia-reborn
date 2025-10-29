@@ -359,13 +359,18 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
     /* Mob emotion updates and mourning system (experimental feature) */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
         /* Notify mobs in the room about the death for mourning/emotion updates */
-        struct char_data *witness;
-        for (witness = world[IN_ROOM(ch)].people; witness; witness = witness->next_in_room) {
+        struct char_data *witness, *next_witness;
+        bool should_mourn;
+
+        /* Use safe iteration - mourning can trigger extraction */
+        for (witness = world[IN_ROOM(ch)].people; witness; witness = next_witness) {
+            next_witness = witness->next_in_room;
+
             if (!IS_NPC(witness) || !witness->ai_data || witness == ch || witness == killer)
                 continue;
 
             /* Check if witness should mourn (same group, same alignment, high friendship) */
-            bool should_mourn = FALSE;
+            should_mourn = FALSE;
 
             /* Group members mourn */
             if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
@@ -382,20 +387,26 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 
             if (should_mourn) {
                 mob_mourn_death(witness, ch);
+
+                /* Safety check: mourning can trigger extraction */
+                if (MOB_FLAGGED(witness, MOB_NOTDEADYET) || PLR_FLAGGED(witness, PLR_NOTDEADYET))
+                    continue;
+
+                /* Revalidate ai_data */
+                if (!witness->ai_data)
+                    continue;
             }
 
             /* Update witness emotions based on the death */
-            if (IS_NPC(ch)) {
+            if (IS_NPC(ch) && witness->ai_data) {
                 /* Witnessing mob death */
                 if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
                     /* Ally died */
                     update_mob_emotion_ally_died(witness, ch);
                 } else if (IS_GOOD(witness) && IS_EVIL(ch)) {
                     /* Enemy died - good witness might feel satisfaction */
-                    if (witness->ai_data) {
-                        witness->ai_data->emotion_happiness =
-                            URANGE(0, witness->ai_data->emotion_happiness + rand_number(5, 15), 100);
-                    }
+                    witness->ai_data->emotion_happiness =
+                        URANGE(0, witness->ai_data->emotion_happiness + rand_number(5, 15), 100);
                 }
             }
         }
