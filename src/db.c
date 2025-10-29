@@ -3901,7 +3901,9 @@ void init_char(struct char_data *ch)
     GET_QUEST(ch) = NOTHING;
 
     /* Initialize reputation to default value */
-    ch->player_specials->saved.reputation = 50; /* Default reputation */
+    ch->player_specials->saved.reputation = 50;            /* Default reputation */
+    ch->player_specials->saved.last_reputation_gain = 0;   /* No previous gains */
+    ch->player_specials->saved.last_give_recipient_id = 0; /* No previous giving */
 
     ch->player.time.birth = time(0);
     ch->player.time.logon = time(0);

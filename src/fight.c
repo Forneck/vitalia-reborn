@@ -356,6 +356,51 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
         }
     }
 
+    /* Reputation changes based on kills (players and mobs) */
+    if (killer && !IS_NPC(killer)) {
+        /* Player killed someone */
+        if (IS_NPC(ch)) {
+            /* Killing good-aligned mobs lowers reputation */
+            if (IS_GOOD(ch)) {
+                modify_player_reputation(killer, -rand_number(1, 3));
+            }
+            /* Killing evil-aligned mobs increases reputation slightly */
+            else if (IS_EVIL(ch)) {
+                modify_player_reputation(killer, rand_number(1, 2));
+            }
+            /* Killing high-level mobs increases reputation more */
+            if (GET_LEVEL(ch) >= GET_LEVEL(killer) + 5) {
+                modify_player_reputation(killer, rand_number(1, 3));
+            }
+        } else {
+            /* Player killed another player - major reputation loss */
+            modify_player_reputation(killer, -rand_number(5, 10));
+            /* Killing high-reputation players causes even more loss */
+            if (GET_REPUTATION(ch) >= 60) {
+                modify_player_reputation(killer, -rand_number(5, 15));
+            }
+        }
+    }
+    /* Mob killed someone */
+    else if (killer && IS_NPC(killer) && killer->ai_data) {
+        if (IS_NPC(ch)) {
+            /* Mob killing high-reputation mob gains reputation */
+            if (GET_MOB_REPUTATION(ch) >= 50) {
+                killer->ai_data->reputation = MIN(killer->ai_data->reputation + rand_number(2, 4), 100);
+            }
+        }
+        /* Killing players handled above in bragging section */
+    }
+
+    /* Reputation loss for the victim */
+    if (!IS_NPC(ch)) {
+        /* Dying lowers reputation slightly */
+        modify_player_reputation(ch, -rand_number(1, 3));
+    } else if (ch->ai_data) {
+        /* Mob dying lowers its reputation */
+        ch->ai_data->reputation = MAX(0, ch->ai_data->reputation - rand_number(1, 2));
+    }
+
     /* Mob emotion updates and mourning system (experimental feature) */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
         /* Notify mobs in the room about the death for mourning/emotion updates */

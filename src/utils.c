@@ -3959,14 +3959,17 @@ int calculate_player_reputation(struct char_data *ch)
 }
 
 /**
- * Modifies player reputation by a given amount
+ * Modifies player reputation by a given amount with anti-exploit protection
  * @param ch Player character
  * @param amount Amount to modify reputation by (positive or negative)
+ * @return TRUE if reputation was modified, FALSE if blocked by cooldown
  */
-void modify_player_reputation(struct char_data *ch, int amount)
+int modify_player_reputation(struct char_data *ch, int amount)
 {
+    time_t now;
+
     if (!ch || IS_NPC(ch)) {
-        return;
+        return FALSE;
     }
 
     /* Ensure reputation is initialized */
@@ -3974,8 +3977,24 @@ void modify_player_reputation(struct char_data *ch, int amount)
         calculate_player_reputation(ch);
     }
 
+    /* Anti-exploit: Reputation gains (not losses) have a cooldown per player */
+    if (amount > 0) {
+        now = time(NULL);
+
+        /* Check if trying to gain reputation too quickly (within 60 seconds) */
+        if (ch->player_specials->saved.last_reputation_gain > 0 &&
+            (now - ch->player_specials->saved.last_reputation_gain) < 60) {
+            /* Cooldown active - no reputation gain */
+            return FALSE;
+        }
+
+        /* Update last gain time */
+        ch->player_specials->saved.last_reputation_gain = now;
+    }
+
     /* Apply the change */
     ch->player_specials->saved.reputation = URANGE(0, ch->player_specials->saved.reputation + amount, 100);
+    return TRUE;
 }
 
 /**

@@ -39,3 +39,91 @@ tambem outras informacoes uteis para o jogo.
 
    @gCANCOES@n:
    Ajuda para as cancoes do MUD.
+
+REPUTACAO REPUTATION REPUTAÇÃO FAMA
+
+@gREPUTAÇÃO - Sistema de Fama e Reconhecimento@n
+
+A reputação representa o quão conhecido e respeitado você é no mundo de 
+Vitalia. Ela varia de 0 (notório) até 100 (lendário) e afeta como NPCs e
+outros personagens reagem a você.
+
+@gComo Ganhar Reputação:@n
+
+@yAções Heroicas:@n
+  - Derrotar criaturas malignas (+1 a +2)
+  - Curar outros aventureiros (+1 a +3)
+  - Enfrentar inimigos mais fortes (+1 a +3 bônus)
+  - Completar missões importantes (+1 a +10)
+
+@yGenerosidade:@n
+  - Doar ouro para os necessitados (+1 a +4)
+    • 100-499 moedas: +1 reputação
+    • 500-999 moedas: +1 a +3 reputação
+    • 1000+ moedas: +2 a +4 reputação
+  - Presentear itens valiosos (+1 a +2)
+    • Itens de 100-999 moedas: +1 reputação
+    • Itens de 1000+ moedas: +1 a +2 reputação
+
+@yBônus Especiais:@n
+  - Ajudar personagens de alta reputação (≥60) concede bônus extra
+  - Curar heróis lendários (≥70) aumenta sua fama
+  - Derrotar oponentes respeitáveis aumenta seu prestígio
+
+@gComo Perder Reputação:@n
+
+@rAções Negativas:@n
+  - Morrer em combate (-1 a -3)
+  - Assassinar criaturas boas (-1 a -3)
+  - Matar outros jogadores (-5 a -10)
+    • Matar heróis de alta reputação: -5 a -15 adicional
+  - Falhar em missões importantes (-1 a -5)
+  - Acumular karma negativo (até -25)
+
+@gNíveis de Reputação e Efeitos:@n
+
+@c0-9   @r[Notório]@n      - Comerciantes recusam atendimento
+@c10-19 @r[Desconfiado]@n   - Lojas restringem serviço (se maligno)
+@c20-39 @w[Neutro]@n        - Tratamento padrão
+@c40-59 @w[Conhecido]@n     - Começa a ser reconhecido
+@c60-69 @g[Respeitável]@n   - NPCs te tratam com respeito
+@c70-79 @g[Honrado]@n       - Bônus em interações sociais
+@c80-99 @y[Lendário]@n      - Recompensas aumentadas (+20%)
+@c100   @Y[MÍTICO]@n        - Máximo reconhecimento possível
+
+@gRoleplay e Reputação:@n
+
+Sua reputação representa sua @yfama@n no mundo, não necessariamente sua 
+moralidade:
+
+@c•@n Um vilão notório pode ter alta reputação - todos o conhecem e temem
+@c•@n Um herói humilde que falha muito pode ter baixa reputação
+@c•@n Reputação mede o quanto você é @yconhecido@n e @yrespeitado@n
+
+@gDicas para Manter Boa Reputação:@n
+
+@g1.@n Seja generoso - doe ouro e itens para NPCs necessitados
+@g2.@n Proteja os fracos - combata o mal e cure os feridos
+@g3.@n Complete missões - demonstre confiabilidade e competência
+@g4.@n Evite mortes desnecessárias - preserve sua honra
+@g5.@n Escolha seus alvos - matar criaturas boas prejudica sua fama
+
+@gAlinhamento vs Reputação:@n
+
+@yAlinhamento@n = Sua moralidade (Bom/Neutro/Mau)
+@yReputação@n = Seu reconhecimento e fama
+
+Você pode ser:
+@c•@n Maligno de alta reputação (vilão temido e respeitado)
+@c•@n Bondoso de baixa reputação (herói desconhecido)
+@c•@n Neutro de alta reputação (mercenário famoso)
+
+Comerciantes avaliam AMBOS - alinhamento maligno @r+@n baixa reputação resulta
+em recusa de serviço.
+
+@gObservação Importante:@n
+
+Suas ações têm consequências! Construir uma boa reputação leva tempo e 
+esforço, mas pode ser perdida rapidamente através de ações imprudentes.
+
+Veja também: @cALINHAMENTO, KARMA, MISSOES, SOCIAIS@n

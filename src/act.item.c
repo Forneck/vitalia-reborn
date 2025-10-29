@@ -681,6 +681,44 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
     act("$n entrega $p para $N.", TRUE, ch, obj, vict, TO_NOTVICT);
 
     autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);
+
+    /* Reputation gain for generosity (giving items to others) */
+    if (!IS_NPC(ch)) {
+        int rep_gain = 0;
+        long vict_id = IS_NPC(vict) ? GET_MOB_VNUM(vict) : GET_IDNUM(vict);
+
+        /* Anti-exploit: Giving to the same person repeatedly within 5 minutes gives no reputation */
+        if (ch->player_specials->saved.last_give_recipient_id == vict_id &&
+            ch->player_specials->saved.last_reputation_gain > 0 &&
+            (time(NULL) - ch->player_specials->saved.last_reputation_gain) < 300) {
+            /* Same recipient, too soon - no reputation gain */
+            return;
+        }
+
+        /* Gain reputation for giving valuable items */
+        if (GET_OBJ_COST(obj) >= 1000) {
+            rep_gain += rand_number(1, 2);
+        } else if (GET_OBJ_COST(obj) >= 100) {
+            rep_gain += 1;
+        }
+
+        /* Giving to high-reputation NPCs increases reputation more */
+        if (IS_NPC(vict) && GET_REPUTATION(vict) >= 60) {
+            rep_gain += 1;
+        }
+
+        if (rep_gain > 0) {
+            if (modify_player_reputation(ch, rep_gain)) {
+                /* Track this recipient to prevent exploitation */
+                ch->player_specials->saved.last_give_recipient_id = vict_id;
+            }
+        }
+    } else if (ch->ai_data) {
+        /* Mobs also gain reputation for generosity */
+        if (GET_OBJ_COST(obj) >= 500) {
+            ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + 1);
+        }
+    }
 }
 
 /* utility function for give */
@@ -739,6 +777,41 @@ void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount)
 
     increase_gold(vict, amount);
     bribe_mtrigger(vict, ch, amount);
+
+    /* Reputation gain for giving gold (generosity) */
+    if (!IS_NPC(ch)) {
+        int rep_gain = 0;
+        long vict_id = IS_NPC(vict) ? GET_MOB_VNUM(vict) : GET_IDNUM(vict);
+
+        /* Anti-exploit: Giving to the same person repeatedly within 5 minutes gives no reputation */
+        if (ch->player_specials->saved.last_give_recipient_id == vict_id &&
+            ch->player_specials->saved.last_reputation_gain > 0 &&
+            (time(NULL) - ch->player_specials->saved.last_reputation_gain) < 300) {
+            /* Same recipient, too soon - no reputation gain */
+            return;
+        }
+
+        /* Large gold donations increase reputation */
+        if (amount >= 1000) {
+            rep_gain = rand_number(2, 4);
+        } else if (amount >= 500) {
+            rep_gain = rand_number(1, 3);
+        } else if (amount >= 100) {
+            rep_gain = 1;
+        }
+
+        if (rep_gain > 0) {
+            if (modify_player_reputation(ch, rep_gain)) {
+                /* Track this recipient to prevent exploitation */
+                ch->player_specials->saved.last_give_recipient_id = vict_id;
+            }
+        }
+    } else if (ch->ai_data) {
+        /* Mobs giving gold also gain reputation */
+        if (amount >= 500) {
+            ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + rand_number(1, 2));
+        }
+    }
 }
 
 ACMD(do_give)

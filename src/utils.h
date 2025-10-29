@@ -111,7 +111,7 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
 int calculate_quest_difficulty(obj_vnum item_vnum);
 int calculate_quest_reward(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty);
 int calculate_player_reputation(struct char_data *ch);
-void modify_player_reputation(struct char_data *ch, int amount);
+int modify_player_reputation(struct char_data *ch, int amount);
 int calculate_quest_reward_with_reputation(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty,
                                            struct char_data *player);
 obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty);
