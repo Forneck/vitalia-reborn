@@ -308,6 +308,7 @@ int load_char(const char *name, struct char_data *ch)
         GET_DTS(ch) = PFDEF_DTS;
         GET_REMORT(ch) = PFDEF_REMORT;
         GET_KARMA(ch) = PFDEF_KARMA;
+        ch->player_specials->saved.reputation = PFDEF_REPUTATION;
         GET_FIT(ch) = PFDEF_FIT;
 
         for (i = 0; i < AF_ARRAY_MAX; i++)
