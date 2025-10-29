@@ -110,6 +110,28 @@ moralidade:
 
 @gAlinhamento vs Reputação:@n
 
+@gReputação Baseada em Alinhamento:@n
+
+@rMalignos (Infâmia):@n
+  Personagens malignos GANHAM reputação através de atos temidos:
+  @c•@n Roubar com sucesso: +1-2 reputação (dobro de alvos bondosos)
+  @c•@n Apunhalar pelas costas: +1-3 reputação
+  @c•@n Envenenar bebidas (taint): +1-3 reputação
+  @c•@n Derrotar oponentes fortes: reputação aumenta
+
+@gBondosos/Neutros (Honra):@n
+  Personagens bondosos/neutros PERDEM reputação por atos desonrosos:
+  @c•@n Roubar: -2-4 reputação (pior se alvo bondoso)
+  @c•@n Apunhalar pelas costas: -3-5 reputação
+  @c•@n Envenenar: -3-6 reputação
+  @c•@n Ser pego em crime: penalidade severa adicional
+
+@yPenalidades Universais (Todos Alinhamentos):@n
+  @c•@n Atacar aliados/grupo: -5-10 (traição grave!)
+  @c•@n Ser pego roubando: -3-6
+  @c•@n Ser pego envenenando: -4-8
+
+
 @yAlinhamento@n = Sua moralidade (Bom/Neutro/Mau)
 @yReputação@n = Seu reconhecimento e fama
 

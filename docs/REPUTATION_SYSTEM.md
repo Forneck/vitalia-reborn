@@ -258,3 +258,84 @@ No specific configuration flags for reputation system itself, but related:
 - Shop restrictions based on reputation add roleplay depth
 - Consider reputation when designing quest rewards
 - NPC reactions should reflect player reputation levels
+
+## Alignment-Specific Reputation Paths (Implemented)
+
+### Evil Character Reputation (Infamy System)
+
+Evil-aligned characters can build reputation through "evil deeds" that would harm the reputation of good characters:
+
+**Evil Reputation Gains:**
+- **Stealing (successful)**: +1-2 reputation (infamy)
+  - From good targets: +1-2 (double gain)
+  - Any target: +1
+- **Backstabbing**: +1-3 reputation
+  - Good targets: +1-3
+  - Any target: +1-2
+- **Poisoning (taint)**: +1-3 reputation
+  - Good targets: +2-3
+  - Any target: +1-2
+- **Killing evil mobs**: +1-2 (proving strength)
+- **Defeating strong opponents**: +1-3 bonus
+
+Evil characters still lose reputation for:
+- Getting caught stealing: -3-6
+- Getting caught poisoning: -4-8
+- Dying: -1-3
+- Attacking allies: -5-10
+
+### Good/Neutral Character Reputation
+
+Good and neutral characters LOSE reputation for "dishonorable" actions:
+
+**Reputation Penalties for Good/Neutral:**
+- **Stealing**: -2-4 reputation
+  - From good targets: Additional -1-3
+  - Getting caught: -3-6
+- **Backstabbing**: -3-5 reputation
+  - Good targets: Additional -2-4
+- **Poisoning**: -3-6 reputation
+  - Good targets: Additional -2-4
+  - Getting caught: -4-8
+
+**Reputation Gains (All Alignments):**
+- Killing evil mobs: +1-2
+- Healing others: +1-3
+- Giving gold/items: +1-4
+- Completing quests: +1-10
+
+### Universal Reputation Losses
+
+**All Alignments Lose Reputation For:**
+- **Attacking allies/group members**: -5-10 (severe)
+- **Dying**: -1-3
+- **Killing other players (PvP)**: -5-25
+- **Quest failure**: -1-5
+
+### Design Philosophy
+
+The system allows for "infamous villains" with high reputation:
+- Evil characters build reputation through feared deeds
+- Good characters build reputation through heroic deeds
+- Reputation measures **fame/notoriety**, not morality
+- Alignment determines which actions build vs. damage reputation
+
+### Examples
+
+**Evil Rogue "Shadowblade" (reputation 75)**
+- Successful theft from nobles: +reputation
+- Backstabbing guards: +reputation
+- Poisoning rival's drink: +reputation
+- Feared and respected in underworld
+
+**Good Paladin "Lightbringer" (reputation 85)**
+- Defeating evil creatures: +reputation
+- Healing wounded: +reputation
+- Giving to poor: +reputation
+- Stealing/backstabbing: -reputation (against code)
+
+**Neutral Mercenary "Greywind" (reputation 60)**
+- Combat prowess: +reputation
+- Healing allies: +reputation
+- Backstabbing for hire: -reputation (dishonorable)
+- Known for reliability, not methods

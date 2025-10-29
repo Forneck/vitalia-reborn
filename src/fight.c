@@ -1131,6 +1131,17 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
     /* Check that the attacker and victim exist */
     if (!ch || !victim)
         return;
+
+    /* Reputation penalty for attacking allies/group members */
+    if (!IS_NPC(ch) && !IS_NPC(victim)) {
+        /* Check if they share same master (grouped) */
+        if ((ch->master && victim->master && ch->master == victim->master) || (ch->master && ch->master == victim) ||
+            (victim->master && victim->master == ch)) {
+            /* Attacking a group member severely damages reputation */
+            modify_player_reputation(ch, -rand_number(5, 10));
+        }
+    }
+
     /* check if the character has a fight trigger */
     fight_mtrigger(ch);
     /* Do some sanity checking, in case someone flees, etc. */

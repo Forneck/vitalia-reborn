@@ -1884,11 +1884,37 @@ ACMD(do_taint)
                         send_to_char(vict, "\r\n%s lhe dá uma piscadela e uma risadinha e se afasta.\r\n",
                                      GET_NAME(ch));
                         act("$n dá um sorriso malicioso ao esbarrar em $N.", FALSE, ch, 0, vict, TO_NOTVICT);
+
+                        /* Reputation changes for successful poisoning */
+                        if (!IS_NPC(ch)) {
+                            if (IS_EVIL(ch)) {
+                                /* Evil characters gain reputation (infamy) for poisoning */
+                                if (IS_GOOD(vict)) {
+                                    /* Poisoning good targets increases evil reputation */
+                                    modify_player_reputation(ch, rand_number(2, 3));
+                                } else {
+                                    modify_player_reputation(ch, rand_number(1, 2));
+                                }
+                            } else {
+                                /* Good/Neutral characters LOSE reputation for poisoning */
+                                modify_player_reputation(ch, -rand_number(3, 6));
+                                /* Extra penalty for poisoning good targets */
+                                if (IS_GOOD(vict)) {
+                                    modify_player_reputation(ch, -rand_number(2, 4));
+                                }
+                            }
+                        }
                         return;
                     }
                     send_to_char(ch, "Uh oh. Parece que você foi pego!\r\n");
                     act("$n acabou de tentar envenenar seu $p!", FALSE, ch, target, 0, TO_VICT);
                     act("$n acabou de tentar envenenar $p de $N!", FALSE, ch, target, vict, TO_NOTVICT);
+
+                    /* Reputation penalty for getting caught poisoning */
+                    if (!IS_NPC(ch)) {
+                        modify_player_reputation(ch, -rand_number(4, 8));
+                    }
+
                     WAIT_STATE(ch, 10);
                     return;
                 }
