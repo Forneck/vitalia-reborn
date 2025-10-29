@@ -510,6 +510,8 @@ int load_char(const char *name, struct char_data *ch)
                         GET_LOADROOM(ch) = atoi(line);
                     if (!strcmp(tag, "Remo"))
                         GET_REMORT(ch) = atoi(line);
+                    else if (!strcmp(tag, "Repu"))
+                        ch->player_specials->saved.reputation = atoi(line);
                     else if (!strcmp(tag, "RtSk"))
                         load_retained_skills(fl, ch);
                     break;
@@ -832,6 +834,8 @@ void save_char(struct char_data *ch)
         fprintf(fl, "Remo: %d\n", GET_REMORT(ch));
     if (GET_KARMA(ch) != PFDEF_KARMA)
         fprintf(fl, "Karm: %d\n", GET_KARMA(ch));
+    if (GET_REPUTATION(ch) != PFDEF_REPUTATION)
+        fprintf(fl, "Repu: %d\n", GET_REPUTATION(ch));
     if (GET_FIT(ch) != PFDEF_FIT)
         fprintf(fl, "Fit: %d\n", GET_FIT(ch));
 
