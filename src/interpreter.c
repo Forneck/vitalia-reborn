@@ -1928,7 +1928,7 @@ void nanny(struct descriptor_data *d, char *arg)
                 affect_remove(d->character, d->character->affected);
 
             /* Reset reputation to initial value for new incarnation */
-            d->character->player_specials->saved.reputation = 0; /* Will be recalculated on first check */
+            d->character->player_specials->saved.reputation = 50; /* Default reputation, matches new character */
             d->character->player_specials->saved.last_reputation_gain = 0;
             d->character->player_specials->saved.last_give_recipient_id = 0;
 
