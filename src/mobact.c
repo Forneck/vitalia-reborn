@@ -326,7 +326,8 @@ void mob_emotion_activity(void)
     for (ch = character_list; ch; ch = next_ch) {
         next_ch = ch->next;
 
-        if (!IS_MOB(ch))
+        /* Defensive null check - ch could theoretically become null during extraction */
+        if (!ch || !IS_MOB(ch))
             continue;
 
         /* Skip mobs that have been marked for extraction */
