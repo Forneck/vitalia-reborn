@@ -1360,6 +1360,7 @@ ACMD(do_help)
 #define WHO_FORMAT "Uso: who [minlev[-maxlev]] [-n nome] [-c classe] [-k] [-l] [-n] [-q] [-r] [-s] [-z]\r\n"
 
 /* Written by Rhade */
+/* Written by Rhade */
 ACMD(do_who)
 {
     struct descriptor_data *d;
@@ -1370,65 +1371,42 @@ ACMD(do_who)
     int low = 0, high = LVL_IMPL, localwho = 0, questwho = 0;
     int showclass = 0, short_list = 0, outlaws = 0;
     int who_room = 0, showgroup = 0, showleader = 0;
+
     struct {
-        char *disp;
+        const char *disp;
         int min_level;
         int max_level;
-        int count; /* must always start as 0 */
-    } rank[] = {{"\tC-\tG=\tY> \tWImortais:\tn\r\n", LVL_IMMORT, LVL_IMPL, 0},
-                {"\tC-\tG=\tY> \tWMortais:\tn\r\n", 11, LVL_IMMORT - 1, 0},
-                {"\tC-\tG=\tY> \tWIniciantes:\tn\r\n", 1, 10, 0},
-                {"\n", 0, 0, 0}};
+        int count;
+    } rank[] = {
+        { "\tC-\tG=\tY> \tWImortais:\tn\r\n", LVL_IMMORT, LVL_IMPL, 0 },
+        { "\tC-\tG=\tY> \tWMortais:\tn\r\n", 11, LVL_IMMORT - 1, 0 },
+        { "\tC-\tG=\tY> \tWIniciantes:\tn\r\n", 1, 10, 0 },
+        { "\n", 0, 0, 0 }
+    };
+
     skip_spaces(&argument);
-    strcpy(buf, argument); /* strcpy: OK (sizeof: argument == buf) */
+    strcpy(buf, argument);
     name_search[0] = '\0';
+
     while (*buf) {
         char arg[MAX_INPUT_LENGTH], buf1[MAX_INPUT_LENGTH];
         half_chop(buf, arg, buf1);
         if (isdigit(*arg)) {
             sscanf(arg, "%d-%d", &low, &high);
-            strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
+            strcpy(buf, buf1);
         } else if (*arg == '-') {
-            mode = *(arg + 1); /* just in case; we destroy arg in the switch */
+            mode = *(arg + 1);
             switch (mode) {
-                case 'k':
-                    outlaws = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
-                    break;
-                case 'z':
-                    localwho = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
-                    break;
-                case 's':
-                    short_list = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
-                    break;
-                case 'q':
-                    questwho = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
-                    break;
-                case 'n':
-                    half_chop(buf1, name_search, buf);
-                    break;
-                case 'r':
-                    who_room = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
-                    break;
-                case 'c':
-                    half_chop(buf1, arg, buf);
-                    showclass = find_class_bitvector(arg);
-                    break;
-                case 'l':
-                    showleader = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
-                    break;
-                case 'g':
-                    showgroup = 1;
-                    strcpy(buf, buf1); /* strcpy: OK (sizeof: buf1 == buf) */
-                    break;
-                default:
-                    send_to_char(ch, "%s", WHO_FORMAT);
-                    return;
+                case 'k': outlaws = 1; strcpy(buf, buf1); break;
+                case 'z': localwho = 1; strcpy(buf, buf1); break;
+                case 's': short_list = 1; strcpy(buf, buf1); break;
+                case 'q': questwho = 1; strcpy(buf, buf1); break;
+                case 'n': half_chop(buf1, name_search, buf); break;
+                case 'r': who_room = 1; strcpy(buf, buf1); break;
+                case 'c': half_chop(buf1, arg, buf); showclass = find_class_bitvector(arg); break;
+                case 'l': showleader = 1; strcpy(buf, buf1); break;
+                case 'g': showgroup = 1; strcpy(buf, buf1); break;
+                default: send_to_char(ch, "%s", WHO_FORMAT); return;
             }
         } else {
             send_to_char(ch, "%s", WHO_FORMAT);
@@ -1436,162 +1414,134 @@ ACMD(do_who)
         }
     }
 
+    /* Contagem dos ranks */
     for (d = descriptor_list; d && !short_list; d = d->next) {
-        if (d->original)
-            tch = d->original;
-        else if (!(tch = d->character))
-            continue;
-        if (CAN_SEE(ch, tch) && IS_PLAYING(d)) {
-            if (*name_search && str_cmp(GET_NAME(tch), name_search) && !strstr(GET_TITLE(tch), name_search))
-                continue;
-            if (!CAN_SEE(ch, tch) || GET_LEVEL(tch) < low || GET_LEVEL(tch) > high)
-                continue;
-            if (outlaws && !PLR_FLAGGED(tch, PLR_KILLER) && !PLR_FLAGGED(tch, PLR_THIEF))
-                continue;
-            if (questwho && !PRF_FLAGGED(tch, PRF_QUEST))
-                continue;
-            if (localwho && world[IN_ROOM(ch)].zone != world[IN_ROOM(tch)].zone)
-                continue;
-            if (who_room && (IN_ROOM(tch) != IN_ROOM(ch)))
-                continue;
-            if (showclass && !(showclass & (1 << GET_CLASS(tch))))
-                continue;
-            if (showgroup && !GROUP(tch))
-                continue;
-            if (showleader && (!GROUP(tch) || GROUP_LEADER(GROUP(tch)) != tch))
-                continue;
-            for (i = 0; *rank[i].disp != '\n'; i++)
-                if (GET_LEVEL(tch) >= rank[i].min_level && GET_LEVEL(tch) <= rank[i].max_level)
-                    rank[i].count++;
-        }
+        if (d->original) tch = d->original;
+        else if (!(tch = d->character)) continue;
+        if (!IS_PLAYING(d)) continue;
+        if (!CAN_SEE(ch, tch)) continue;
+        if (*name_search && str_cmp(GET_NAME(tch), name_search) && !strstr(GET_TITLE(tch), name_search)) continue;
+        if (GET_LEVEL(tch) < low || GET_LEVEL(tch) > high) continue;
+        if (outlaws && !PLR_FLAGGED(tch, PLR_KILLER) && !PLR_FLAGGED(tch, PLR_THIEF)) continue;
+        if (questwho && !PRF_FLAGGED(tch, PRF_QUEST)) continue;
+        if (localwho && world[IN_ROOM(ch)].zone != world[IN_ROOM(tch)].zone) continue;
+        if (who_room && (IN_ROOM(tch) != IN_ROOM(ch))) continue;
+        if (showclass && !(showclass & (1 << GET_CLASS(tch)))) continue;
+        if (showgroup && !GROUP(tch)) continue;
+        if (showleader && (!GROUP(tch) || GROUP_LEADER(GROUP(tch)) != tch)) continue;
+
+        for (i = 0; *rank[i].disp != '\n'; i++)
+            if (GET_LEVEL(tch) >= rank[i].min_level && GET_LEVEL(tch) <= rank[i].max_level)
+                rank[i].count++;
     }
 
+    /* Impressão das listas */
     for (i = 0; *rank[i].disp != '\n'; i++) {
         if (!rank[i].count && !short_list)
             continue;
-        if (short_list)
-            send_to_char(ch, "\tC-\tG=\tY> \tWMortais:\tn\r\n");
-        else
-            send_to_char(ch, "%s", rank[i].disp);
+
+        send_to_char(ch, "%s", rank[i].disp);
+
         for (d = descriptor_list; d; d = d->next) {
-            if (d->original)
-                tch = d->original;
-            else if (!(tch = d->character))
-                continue;
+            if (d->original) tch = d->original;
+            else if (!(tch = d->character)) continue;
+            if (!IS_PLAYING(d)) continue;
+
             if ((GET_LEVEL(tch) < rank[i].min_level || GET_LEVEL(tch) > rank[i].max_level) && !short_list)
                 continue;
-            if (!IS_PLAYING(d))
-                continue;
-            if (*name_search && str_cmp(GET_NAME(tch), name_search) && !strstr(GET_TITLE(tch), name_search))
-                continue;
-            if (!CAN_SEE(ch, tch) || GET_LEVEL(tch) < low || GET_LEVEL(tch) > high)
-                continue;
-            if (outlaws && !PLR_FLAGGED(tch, PLR_KILLER) && !PLR_FLAGGED(tch, PLR_THIEF))
-                continue;
-            if (questwho && !PRF_FLAGGED(tch, PRF_QUEST))
-                continue;
-            if (localwho && world[IN_ROOM(ch)].zone != world[IN_ROOM(tch)].zone)
-                continue;
-            if (who_room && (IN_ROOM(tch) != IN_ROOM(ch)))
-                continue;
-            if (showclass && !(showclass & (1 << GET_CLASS(tch))))
-                continue;
-            if (showgroup && !GROUP(tch))
-                continue;
-            if (showleader && (!GROUP(tch) || GROUP_LEADER(GROUP(tch)) != tch))
-                continue;
-            if (short_list) {
-                send_to_char(ch, "%s[%3d %s] %-12.12s %3da. Enc.%s%s",
-                             (GET_LEVEL(tch) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""), GET_LEVEL(tch), CLASS_ABBR(tch),
-                             GET_NAME(tch), GET_REMORT(tch), CCNRM(ch, C_SPR), ((!(++num_can_see % 4)) ? "\r\n" : ""));
-            } else {
-                num_can_see++;
-                send_to_char(ch, "%s[%3d %s] %s%s%s %3da. Enc.%s",
-                             (GET_LEVEL(tch) >= LVL_IMMORT ? CCYEL(ch, C_SPR) : ""), GET_LEVEL(tch), CLASS_ABBR(tch),
-                             GET_NAME(tch), (*GET_TITLE(tch) ? " " : ""), GET_TITLE(tch), GET_REMORT(tch),
-                             CCNRM(ch, C_SPR));
-                if (GET_INVIS_LEV(tch))
-                    send_to_char(ch, " (i%d)", GET_INVIS_LEV(tch));
-                else if (AFF_FLAGGED(tch, AFF_INVISIBLE))
-                    send_to_char(ch, " (invis)");
-                if (PLR_FLAGGED(tch, PLR_MAILING))
-                    send_to_char(ch, " (correios)");
-                else if (d->olc)
-                    send_to_char(ch, " (OLC)");
-                else if (PLR_FLAGGED(tch, PLR_WRITING))
-                    send_to_char(ch, " (escrevendo)");
-                if (d->original)
-                    send_to_char(ch, " (fora do corpo)");
-                if (d->connected == CON_OEDIT)
-                    send_to_char(ch, " (Editando Items)");
-                if (d->connected == CON_MEDIT)
-                    send_to_char(ch, " (Editando Mobs)");
-                if (d->connected == CON_ZEDIT)
-                    send_to_char(ch, " (Editando Zonas)");
-                if (d->connected == CON_SEDIT)
-                    send_to_char(ch, "(Editando Lojas)");
-                if (d->connected == CON_REDIT)
-                    send_to_char(ch, " (Editando Salas)");
-                if (d->connected == CON_TEDIT)
-                    send_to_char(ch, " (Editando Textos)");
-                if (d->connected == CON_TRIGEDIT)
-                    send_to_char(ch, " (Editando Triggers)");
-                if (d->connected == CON_AEDIT)
-                    send_to_char(ch, " (Editando Sociais)");
-                if (d->connected == CON_CEDIT)
-                    send_to_char(ch, " (Editando Configurações)");
-                if (d->connected == CON_HEDIT)
-                    send_to_char(ch, " (Editando Ajuda)");
-                if (d->connected == CON_QEDIT)
-                    send_to_char(ch, " (Editando Aventuras)");
-                if (d->connected == CON_SPEDIT)
-                    send_to_char(ch, " (Editando Habilidades)");
-                if (PRF_FLAGGED(tch, PRF_BUILDWALK))
-                    send_to_char(ch, " (Construindo)");
-                if (PRF_FLAGGED(tch, PRF_AFK))
-                    send_to_char(ch, " (AUSENTE)");
-                if (PRF_FLAGGED(tch, PRF_NOGOSS))
-                    send_to_char(ch, " (nogos)");
-                if (PRF_FLAGGED(tch, PRF_NOWIZ))
-                    send_to_char(ch, " (nowiz)");
-                if (PRF_FLAGGED(tch, PRF_NOSHOUT))
-                    send_to_char(ch, " (noshout)");
-                if (PRF_FLAGGED(tch, PRF_NOTELL))
-                    send_to_char(ch, " (notell)");
-                if (PRF_FLAGGED(tch, PRF_QUEST))
-                    send_to_char(ch, " (aventura)");
-                if (PLR_FLAGGED(tch, PLR_THIEF)) {
-                    if (IS_FEMALE(tch))
-                        send_to_char(ch, " (LADRA)");
-                    else
-                        send_to_char(ch, " (LADRÃO)");
-                }
-                if (PLR_FLAGGED(tch, PLR_KILLER)) {
-                    if (IS_FEMALE(tch))
-                        send_to_char(ch, "(ASSASSINA)");
-                    else
-                        send_to_char(ch, " (ASSASSINO)");
-                }
-                send_to_char(ch, "\r\n");
-            }
-        }
-        send_to_char(ch, "\r\n");
-        if (short_list)
-            break;
-    }
-    if (short_list && num_can_see % 4)
-        send_to_char(ch, "\r\n");
-    if (!num_can_see)
-        send_to_char(ch, "Ninguem!\r\n");
-    else if (num_can_see == 1)
-        send_to_char(ch, "Apenas um personagem solitario!\r\n");
-    else
-        send_to_char(ch, "Você pode ver %d personagens mostrados.\r\n", num_can_see);
-    if (IS_HAPPYHOUR > 0) {
-        send_to_char(ch, "É Happy Hour! Digite \tRhappyhour\tW para ver os bonus atuais.\r\n");
-    }
-}
+            if (!CAN_SEE(ch, tch)) continue;
 
+            num_can_see++;
+
+            /* === BLOCO DE IMPRESSÃO COM CORES ESTILO who_tag === */
+            
+            const char *statusFlag =
+                IS_DEAD(tch) ? "\tR+\tn" :      /* morto */
+                PLR_FLAGGED(tch, PLR_TRNS) ? "\tW*\tn" :    /* transcendido */
+                (GET_REMORT(tch) > 4) ? "\tG*\tn" : " ";  /* várias encarnações */
+
+            /* define cor dos colchetes */
+            const char *corNivel = (GET_LEVEL(tch) >= LVL_IMMORT) ? "\tY" : "\tW";
+
+            /* monta o texto de encarnação */
+            char enc_buf[32];
+            if (GET_REMORT(tch) > 0)
+                // Usando %3d para garantir 3 dígitos para o número (ex: "  1", " 10")
+                snprintf(enc_buf, sizeof(enc_buf), " (%3da. Enc.)", GET_REMORT(tch));
+            else
+                enc_buf[0] = '\0';
+            
+            /* ----------------------------------- */
+            /* --- Lógica de Alinhamento à Direita --- */
+            /* ----------------------------------- */
+            
+            // Coluna fixa onde o texto da encarnação deve começar.
+            // Ajuste este valor se a largura da sua tela for diferente.
+            const int COLUNA_FIXA_ENC = 65; 
+            
+            // 1. Calcula o comprimento do texto antes do padding.
+            //    Formato inicial: cor + [LVL CLS FLG] + espaço + Nome + (espaço condicional + Título)
+            //    Tamanho da parte fixa (Cor + Colchetes + LVL + CLS + Flag): ~10 caracteres visíveis.
+            
+            // **IMPORTANTE**: Este é um cálculo simplificado. Você deve contar o número de caracteres VISÍVEIS.
+            // Os colchetes e as flags dão cerca de 10 caracteres fixos:
+            // [ 11 CLS * ] - 10 caracteres visíveis
+            
+            int len_linha_prefixo = 10; 
+            len_linha_prefixo += strlen(GET_NAME(tch));
+            
+            // Adiciona o tamanho do título + o espaço condicional (se existir)
+            if (*GET_TITLE(tch)) {
+                len_linha_prefixo += strlen(GET_TITLE(tch));
+                len_linha_prefixo += 1; // Espaço condicional
+            }
+
+            // 2. Calcula o padding necessário.
+            int padding_needed = COLUNA_FIXA_ENC - len_linha_prefixo;
+
+            // 3. Prevenção: Se Nome+Título for muito longo, usamos 1 espaço como separador mínimo.
+            if (padding_needed < 1) { 
+                padding_needed = 1;
+            }
+
+            // 4. Cria e preenche o buffer de padding com espaços.
+            char padding_buf[COLUNA_FIXA_ENC + 1];
+            // Preenche o buffer com ' ' (espaços)
+            memset(padding_buf, ' ', padding_needed);
+            // Garante que o buffer seja uma string terminada em NULL
+            padding_buf[padding_needed] = '\0'; 
+            
+            /* imprime a linha */
+            // CORRIGIDO: O formato agora inclui um %s extra para o padding_buf
+            send_to_char(ch, "%s[%-3d\tC%-3s%s%s] \tB%s%s\tW%s%s%s\tn\r\n",
+                corNivel,                     // %s (1) Cor do colchete/nível
+                GET_LEVEL(tch),               // %-3d (2) Nível
+                CLASS_ABBR(tch),              // \tC%-3s (3) Classe
+                statusFlag,                   // %s (4) Flag
+                corNivel,                     // %s (5) Cor para fechar o colchete
+                GET_NAME(tch),                // \tB%s (6) Nome
+                (*GET_TITLE(tch) ? " " : ""), // %s (7) ESPAÇO CONDICIONAL
+                GET_TITLE(tch),               // \tW%s (8) Título
+                padding_buf,                  // %s (9) **PADDING DE ALINHAMENTO**
+                enc_buf                       // %s (10) Encarnação
+            );
+        }
+
+        send_to_char(ch, "\r\n");
+    }
+
+    /* Rodapé */
+    if (!num_can_see)
+        send_to_char(ch, "\tWNinguém!\tn\r\n");
+    else if (num_can_see == 1)
+        send_to_char(ch, "\tGApenas um personagem solitário!\tn\r\n");
+    else
+        send_to_char(ch, "\tGVocê pode ver \tY%d\tG %s.\tn\r\n",
+                     num_can_see, PLURAL(num_can_see, "personagem", "personagens"));
+
+    if (IS_HAPPYHOUR > 0)
+        send_to_char(ch, "\tWÉ Happy Hour! Digite \tRhappyhour\tW para ver os bônus atuais.\tn\r\n");
+}
 #define USERS_FORMAT "formato: users [-l minlevel[-maxlevel]] [-n nome] [-h host] [-c classe] [-o] [-p]\r\n"
 
 ACMD(do_users)
