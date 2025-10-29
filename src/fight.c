@@ -331,7 +331,7 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
     }
 
     /* Mob bragging when killing a high-reputation player */
-    if (!IS_NPC(ch) && killer && IS_NPC(killer)) {
+    if (!IS_NPC(ch) && killer && IS_NPC(killer) && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
         int victim_reputation = GET_REPUTATION(ch);
 
         /* High reputation victim (60+) triggers bragging */
@@ -352,6 +352,51 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
             /* Increase mob's own reputation for defeating a reputable opponent */
             if (killer->ai_data && killer->ai_data->reputation < 100) {
                 killer->ai_data->reputation = MIN(killer->ai_data->reputation + 5, 100);
+            }
+        }
+    }
+
+    /* Mob emotion updates and mourning system (experimental feature) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        /* Notify mobs in the room about the death for mourning/emotion updates */
+        struct char_data *witness;
+        for (witness = world[IN_ROOM(ch)].people; witness; witness = witness->next_in_room) {
+            if (!IS_NPC(witness) || !witness->ai_data || witness == ch || witness == killer)
+                continue;
+
+            /* Check if witness should mourn (same group, same alignment, high friendship) */
+            bool should_mourn = FALSE;
+
+            /* Group members mourn */
+            if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
+                should_mourn = TRUE;
+            }
+            /* Same alignment with decent relationship */
+            else if (GET_ALIGNMENT(witness) * GET_ALIGNMENT(ch) > 0 && witness->ai_data->emotion_friendship >= 40) {
+                should_mourn = TRUE;
+            }
+            /* High compassion mobs mourn anyone non-evil */
+            else if (witness->ai_data->emotion_compassion >= 70 && !IS_EVIL(ch)) {
+                should_mourn = TRUE;
+            }
+
+            if (should_mourn) {
+                mob_mourn_death(witness, ch);
+            }
+
+            /* Update witness emotions based on the death */
+            if (IS_NPC(ch)) {
+                /* Witnessing mob death */
+                if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
+                    /* Ally died */
+                    update_mob_emotion_ally_died(witness, ch);
+                } else if (IS_GOOD(witness) && IS_EVIL(ch)) {
+                    /* Enemy died - good witness might feel satisfaction */
+                    if (witness->ai_data) {
+                        witness->ai_data->emotion_happiness =
+                            URANGE(0, witness->ai_data->emotion_happiness + rand_number(5, 15), 100);
+                    }
+                }
             }
         }
     }
@@ -725,13 +770,22 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         dam = 0;
     if (victim != ch) {
         /* Start the attacker fighting the victim */
-        if (GET_POS(ch) > POS_STUNNED && (FIGHTING(ch) == NULL))
+        if (GET_POS(ch) > POS_STUNNED && (FIGHTING(ch) == NULL)) {
             set_fighting(ch, victim);
+            /* Update mob emotions when starting combat (experimental feature) */
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch)) {
+                update_mob_emotion_attacking(ch, victim);
+            }
+        }
         /* Start the victim fighting the attacker */
         if (GET_POS(victim) > POS_STUNNED && (FIGHTING(victim) == NULL)) {
             set_fighting(victim, ch);
             if (MOB_FLAGGED(victim, MOB_MEMORY) && !IS_NPC(ch))
                 remember(victim, ch);
+            /* Update mob emotions when being attacked (experimental feature) */
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(victim)) {
+                update_mob_emotion_attacked(victim, ch);
+            }
         }
     }
 

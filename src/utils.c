@@ -4350,3 +4350,294 @@ int get_mob_skill(struct char_data *ch, int skill_num)
     /* Cap skill at reasonable limits */
     return MIN(base_skill, 95);
 }
+
+/**
+ * Adjust a mob's emotion by a specified amount, keeping it within 0-100 bounds
+ * @param mob The mob whose emotion to adjust
+ * @param emotion_ptr Pointer to the emotion value
+ * @param amount Amount to adjust (positive or negative)
+ */
+static void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !emotion_ptr)
+        return;
+
+    *emotion_ptr = URANGE(0, *emotion_ptr + amount, 100);
+}
+
+/**
+ * Update mob emotions based on being attacked
+ * @param mob The mob being attacked
+ * @param attacker The character attacking the mob
+ */
+void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attacker)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Being attacked increases fear and anger */
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(5, 15));
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
+
+    /* Decreases happiness and trust */
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(5, 15));
+    adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(10, 20));
+
+    /* If attacked by someone with high reputation, increase fear more */
+    if (attacker && GET_REPUTATION(attacker) >= 60) {
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(5, 10));
+    }
+
+    /* If mob is brave, fear increases less and courage might increase */
+    if (mob->ai_data->genetics.brave_prevalence > 50) {
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(3, 8));
+        adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(5, 10));
+    }
+}
+
+/**
+ * Update mob emotions based on successfully attacking
+ * @param mob The mob doing the attacking
+ * @param victim The victim being attacked
+ */
+void update_mob_emotion_attacking(struct char_data *mob, struct char_data *victim)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Attacking increases courage and decreases fear */
+    adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(2, 5));
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(2, 5));
+
+    /* If mob is evil, increase anger and decrease compassion */
+    if (IS_EVIL(mob)) {
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(3, 8));
+        adjust_emotion(mob, &mob->ai_data->emotion_compassion, -rand_number(2, 5));
+    }
+
+    /* Killing good-aligned victims increases pride for evil mobs */
+    if (IS_EVIL(mob) && victim && IS_GOOD(victim)) {
+        adjust_emotion(mob, &mob->ai_data->emotion_pride, rand_number(5, 10));
+    }
+}
+
+/**
+ * Update mob emotions based on receiving healing
+ * @param mob The mob being healed
+ * @param healer The character healing the mob
+ */
+void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Being healed increases happiness, trust, and friendship */
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(10, 15));
+    adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(10, 15));
+
+    /* Decreases fear and anger */
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(5, 10));
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(5, 10));
+
+    /* Increases love if healer has high reputation */
+    if (healer && GET_REPUTATION(healer) >= 60) {
+        adjust_emotion(mob, &mob->ai_data->emotion_love, rand_number(5, 15));
+    }
+}
+
+/**
+ * Update mob emotions based on witnessing death of an ally
+ * @param mob The mob witnessing the death
+ * @param dead_ally The ally who died
+ */
+void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_ally)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Witnessing ally death increases sadness, fear, and anger */
+    adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(15, 25));
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
+
+    /* Decreases happiness */
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(15, 25));
+
+    /* If mob has high loyalty, sadness and anger increase more */
+    if (mob->ai_data->emotion_loyalty > 60) {
+        adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(10, 15));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 15));
+    }
+}
+
+/**
+ * Update mob emotions based on receiving a gift/trade
+ * @param mob The mob receiving the item
+ * @param giver The character giving the item
+ */
+void update_mob_emotion_received_item(struct char_data *mob, struct char_data *giver)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Receiving items increases happiness, trust, and friendship */
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(10, 15));
+    adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(10, 15));
+
+    /* If mob has high greed, happiness increases more */
+    if (mob->ai_data->emotion_greed > 60) {
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(10, 20));
+    }
+}
+
+/**
+ * Update mob emotions over time (passive decay/stabilization)
+ * Call this periodically for emotional regulation
+ * @param mob The mob whose emotions to regulate
+ */
+void update_mob_emotion_passive(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Emotions gradually return toward neutral baseline (50) or trait-based values */
+    /* Extreme emotions (very high or very low) decay faster */
+
+    /* Fear decays toward wimpy_tendency baseline */
+    int fear_baseline = mob->ai_data->genetics.wimpy_tendency / 2;
+    if (mob->ai_data->emotion_fear > fear_baseline) {
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(1, 3));
+    } else if (mob->ai_data->emotion_fear < fear_baseline) {
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(1, 2));
+    }
+
+    /* Anger decays toward alignment-based baseline */
+    int anger_baseline = IS_EVIL(mob) ? 35 : (IS_GOOD(mob) ? 15 : 25);
+    if (mob->ai_data->emotion_anger > anger_baseline) {
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(1, 3));
+    } else if (mob->ai_data->emotion_anger < anger_baseline) {
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(1, 2));
+    }
+
+    /* Happiness returns toward alignment-based baseline */
+    int happiness_baseline = IS_GOOD(mob) ? 40 : (IS_EVIL(mob) ? 15 : 30);
+    if (mob->ai_data->emotion_happiness > happiness_baseline) {
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(1, 2));
+    } else if (mob->ai_data->emotion_happiness < happiness_baseline) {
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(1, 3));
+    }
+
+    /* Sadness gradually decreases (unless reinforced by events) */
+    if (mob->ai_data->emotion_sadness > 10) {
+        adjust_emotion(mob, &mob->ai_data->emotion_sadness, -rand_number(1, 3));
+    }
+}
+
+/**
+ * Make a mob mourn the death of another character
+ * Performs mourning socials and adjusts emotions based on relationship
+ * @param mob The mob doing the mourning
+ * @param deceased The character who died
+ */
+void mob_mourn_death(struct char_data *mob, struct char_data *deceased)
+{
+    const char *mourning_socials[] = {"cry", "sob", "weep", "mourn", NULL};
+    const char *angry_mourning[] = {"scream", "rage", "howl", NULL};
+    int social_index;
+    int cmd_num;
+    const char *social_to_use;
+    bool is_close_relationship = FALSE;
+
+    if (!mob || !deceased || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Don't mourn enemies or those of opposing alignment */
+    if (IS_GOOD(mob) && IS_EVIL(deceased))
+        return;
+    if (IS_EVIL(mob) && IS_GOOD(deceased))
+        return;
+
+    /* Determine relationship strength */
+    /* High friendship (60+), high love (50+), or high loyalty (60+) indicates close relationship */
+    if (mob->ai_data->emotion_friendship >= 60 || mob->ai_data->emotion_love >= 50 ||
+        mob->ai_data->emotion_loyalty >= 60) {
+        is_close_relationship = TRUE;
+    }
+
+    /* Group members are considered close */
+    if (GROUP(mob) && GROUP(deceased) && GROUP(mob) == GROUP(deceased)) {
+        is_close_relationship = TRUE;
+    }
+
+    /* Update emotions for witnessing death */
+    update_mob_emotion_ally_died(mob, deceased);
+
+    /* If not a close relationship and low compassion, mob might not mourn visibly */
+    if (!is_close_relationship && mob->ai_data->emotion_compassion < 30) {
+        /* Chance to mourn silently (no social) */
+        if (rand_number(1, 100) > 40)
+            return;
+    }
+
+    /* Determine mourning behavior based on emotions */
+    /* High anger mobs express grief with anger */
+    if (mob->ai_data->emotion_anger >= 60) {
+        social_index = rand_number(0, 2); /* Choose from angry_mourning array */
+        social_to_use = angry_mourning[social_index];
+    } else {
+        /* Normal mourning */
+        social_index = rand_number(0, 3); /* Choose from mourning_socials array */
+        social_to_use = mourning_socials[social_index];
+    }
+
+    /* Find the social command number */
+    for (cmd_num = 0; *complete_cmd_info[cmd_num].command != '\n'; cmd_num++) {
+        if (!strcmp(complete_cmd_info[cmd_num].command, social_to_use))
+            break;
+    }
+
+    if (*complete_cmd_info[cmd_num].command != '\n') {
+        /* Perform the mourning social */
+        do_action(mob, "", cmd_num, 0);
+
+        /* For close relationships, might say something */
+        if (is_close_relationship && rand_number(1, 100) <= 50) {
+            char say_buf[MAX_STRING_LENGTH];
+
+            if (mob->ai_data->emotion_love >= 60) {
+                snprintf(say_buf, sizeof(say_buf), "Não! %s era tudo para mim!", GET_NAME(deceased));
+            } else if (mob->ai_data->emotion_friendship >= 70) {
+                snprintf(say_buf, sizeof(say_buf), "%s era meu amigo!", GET_NAME(deceased));
+            } else if (mob->ai_data->emotion_loyalty >= 70) {
+                snprintf(say_buf, sizeof(say_buf), "Meu companheiro %s caiu!", GET_NAME(deceased));
+            } else if (mob->ai_data->emotion_anger >= 60) {
+                snprintf(say_buf, sizeof(say_buf), "Vou vingar %s!", GET_NAME(deceased));
+            } else {
+                snprintf(say_buf, sizeof(say_buf), "Descanse em paz, %s.", GET_NAME(deceased));
+            }
+
+            do_say(mob, say_buf, 0, 0);
+        }
+    }
+
+    /* For very close relationships with high love, mob might become vengeful or despondent */
+    if (is_close_relationship) {
+        if (mob->ai_data->emotion_love >= 70) {
+            /* Extreme grief response */
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(20, 35));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(25, 40));
+
+            /* Mob might flee in grief if wimpy tendency is high */
+            if (mob->ai_data->genetics.wimpy_tendency > 60 && rand_number(1, 100) <= 40) {
+                do_flee(mob, "", 0, 0);
+            }
+        } else if (mob->ai_data->emotion_friendship >= 70) {
+            /* Strong friendship loss */
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(15, 25));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
+        }
+    }
+}

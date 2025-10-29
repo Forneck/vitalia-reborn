@@ -1022,6 +1022,33 @@ struct mob_ai_data {
     int quest_timer;        /* Timer para a quest atual */
     int quest_counter;      /* Contador de progresso da quest */
 
+    /* Emotion system for contextual behavior (0-100 scale) */
+    /* Basic emotions */
+    int emotion_fear;      /* Fear level - affects fleeing, cautious behavior (relates to wimpy_tendency) */
+    int emotion_anger;     /* Anger level - affects aggressive socials, attacking */
+    int emotion_happiness; /* Happiness level - affects positive socials */
+    int emotion_sadness;   /* Sadness level - affects withdrawn behavior */
+
+    /* Social emotions */
+    int emotion_friendship; /* Friendship level towards nearby entities (relates to group_tendency) */
+    int emotion_love;       /* Love/affection level - affects protective behavior */
+    int emotion_trust;      /* Trust level - affects trade, following (relates to trade_tendency, follow_tendency) */
+    int emotion_loyalty;    /* Loyalty to group/master - affects group cohesion */
+
+    /* Motivational emotions */
+    int emotion_curiosity; /* Curiosity level - affects exploration, quest acceptance (relates to adventurer_tendency,
+                              quest_tendency) */
+    int emotion_greed;     /* Greed/desire - affects looting, hoarding (relates to loot_tendency) */
+    int emotion_pride;     /* Pride level - affects reputation-based behavior, refusal to flee */
+
+    /* Empathic emotions */
+    int emotion_compassion; /* Compassion/empathy - affects healing, helping (relates to healing_tendency) */
+    int emotion_envy;       /* Envy level - affects desire for others' possessions */
+
+    /* Arousal emotions */
+    int emotion_courage;    /* Courage level - opposite of fear (relates to brave_prevalence) */
+    int emotion_excitement; /* Excitement/restlessness - affects roaming, activity (relates to roam_tendency) */
+
     /* Temporary Quest Master functionality */
     bool is_temp_questmaster; /* True if this mob is acting as temporary quest master */
     qst_vnum *temp_quests;    /* Array of quest vnums this mob is managing temporarily */

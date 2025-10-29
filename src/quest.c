@@ -2271,6 +2271,71 @@ void init_mob_ai_data(struct char_data *mob)
          * This provides some following behavior without being too aggressive */
         mob->ai_data->genetics.follow_tendency = 20;
     }
+
+    /* Initialize emotions based on genetics and alignment
+     * This gives mobs starting emotional states that reflect their nature */
+
+    /* Fear and courage are inversely related to brave_prevalence and wimpy_tendency */
+    mob->ai_data->emotion_fear = mob->ai_data->genetics.wimpy_tendency / 2;      /* 0-50 based on wimpy */
+    mob->ai_data->emotion_courage = mob->ai_data->genetics.brave_prevalence / 2; /* 0-50 based on bravery */
+
+    /* Friendship and loyalty based on group_tendency */
+    mob->ai_data->emotion_friendship = mob->ai_data->genetics.group_tendency / 3; /* 0-33 based on grouping */
+    mob->ai_data->emotion_loyalty = mob->ai_data->genetics.group_tendency / 2;    /* 0-50 based on grouping */
+
+    /* Trust based on trade_tendency */
+    mob->ai_data->emotion_trust = mob->ai_data->genetics.trade_tendency / 2; /* 0-50 based on trading */
+
+    /* Curiosity based on quest_tendency and adventurer_tendency */
+    mob->ai_data->emotion_curiosity =
+        (mob->ai_data->genetics.quest_tendency + mob->ai_data->genetics.adventurer_tendency) / 4; /* 0-50 */
+
+    /* Greed based on loot_tendency */
+    mob->ai_data->emotion_greed = mob->ai_data->genetics.loot_tendency / 2; /* 0-50 based on looting */
+
+    /* Compassion based on healing_tendency */
+    mob->ai_data->emotion_compassion = mob->ai_data->genetics.healing_tendency / 2; /* 0-50 based on healing */
+
+    /* Excitement based on roam_tendency */
+    mob->ai_data->emotion_excitement = mob->ai_data->genetics.roam_tendency / 2; /* 0-50 based on roaming */
+
+    /* Alignment-based emotions */
+    if (IS_GOOD(mob)) {
+        mob->ai_data->emotion_happiness = 30 + rand_number(0, 20); /* Good mobs start happier: 30-50 */
+        mob->ai_data->emotion_anger = rand_number(0, 20);          /* Lower anger: 0-20 */
+        mob->ai_data->emotion_compassion += 20;                    /* More compassionate */
+    } else if (IS_EVIL(mob)) {
+        mob->ai_data->emotion_anger = 30 + rand_number(0, 20); /* Evil mobs start angrier: 30-50 */
+        mob->ai_data->emotion_happiness = rand_number(0, 20);  /* Lower happiness: 0-20 */
+        mob->ai_data->emotion_greed += 20;                     /* More greedy */
+    } else {
+        /* Neutral mobs have balanced emotions */
+        mob->ai_data->emotion_happiness = rand_number(10, 30);
+        mob->ai_data->emotion_anger = rand_number(10, 30);
+    }
+
+    /* Random variation in other emotions (0-20) */
+    mob->ai_data->emotion_sadness = rand_number(0, 20);
+    mob->ai_data->emotion_love = rand_number(0, 15);
+    mob->ai_data->emotion_pride = rand_number(10, 40);
+    mob->ai_data->emotion_envy = rand_number(0, 25);
+
+    /* Ensure all emotions stay within 0-100 bounds */
+    mob->ai_data->emotion_fear = URANGE(0, mob->ai_data->emotion_fear, 100);
+    mob->ai_data->emotion_courage = URANGE(0, mob->ai_data->emotion_courage, 100);
+    mob->ai_data->emotion_happiness = URANGE(0, mob->ai_data->emotion_happiness, 100);
+    mob->ai_data->emotion_anger = URANGE(0, mob->ai_data->emotion_anger, 100);
+    mob->ai_data->emotion_friendship = URANGE(0, mob->ai_data->emotion_friendship, 100);
+    mob->ai_data->emotion_loyalty = URANGE(0, mob->ai_data->emotion_loyalty, 100);
+    mob->ai_data->emotion_trust = URANGE(0, mob->ai_data->emotion_trust, 100);
+    mob->ai_data->emotion_curiosity = URANGE(0, mob->ai_data->emotion_curiosity, 100);
+    mob->ai_data->emotion_greed = URANGE(0, mob->ai_data->emotion_greed, 100);
+    mob->ai_data->emotion_compassion = URANGE(0, mob->ai_data->emotion_compassion, 100);
+    mob->ai_data->emotion_excitement = URANGE(0, mob->ai_data->emotion_excitement, 100);
+    mob->ai_data->emotion_sadness = URANGE(0, mob->ai_data->emotion_sadness, 100);
+    mob->ai_data->emotion_love = URANGE(0, mob->ai_data->emotion_love, 100);
+    mob->ai_data->emotion_pride = URANGE(0, mob->ai_data->emotion_pride, 100);
+    mob->ai_data->emotion_envy = URANGE(0, mob->ai_data->emotion_envy, 100);
 }
 
 /* Save temporary quest assignments to file */
