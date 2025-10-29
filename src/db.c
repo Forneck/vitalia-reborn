@@ -4315,6 +4315,7 @@ static void load_default_config(void)
     /* Experimental features. */
     CONFIG_NEW_AUCTION_SYSTEM = NO;
     CONFIG_EXPERIMENTAL_BANK_SYSTEM = NO;
+    CONFIG_MOB_CONTEXTUAL_SOCIALS = NO; /* Disabled by default - experimental feature */
 }
 
 void load_config(void)
@@ -4511,6 +4512,8 @@ void load_config(void)
                     CONFIG_MAX_ZONE_PATH = num;
                 else if (!str_cmp(tag, "max_house_objs"))
                     CONFIG_MAX_HOUSE_OBJS = num;
+                else if (!str_cmp(tag, "mob_contextual_socials"))
+                    CONFIG_MOB_CONTEXTUAL_SOCIALS = num;
 
                 break;
 

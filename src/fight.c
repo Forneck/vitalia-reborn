@@ -330,6 +330,32 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
         mob_autoquest_trigger_check(killer, ch, NULL, AQ_PLAYER_KILL);
     }
 
+    /* Mob bragging when killing a high-reputation player */
+    if (!IS_NPC(ch) && killer && IS_NPC(killer)) {
+        int victim_reputation = GET_REPUTATION(ch);
+
+        /* High reputation victim (60+) triggers bragging */
+        if (victim_reputation >= 60) {
+            char brag_msg[MAX_STRING_LENGTH];
+
+            /* Very high reputation (80+) gets more enthusiastic bragging */
+            if (victim_reputation >= 80) {
+                snprintf(brag_msg, sizeof(brag_msg), "ri triunfante, tendo derrotado %s, um aventureiro lendário!",
+                         GET_NAME(ch));
+            } else {
+                snprintf(brag_msg, sizeof(brag_msg),
+                         "sorri com satisfação após derrotar %s, um aventureiro respeitado.", GET_NAME(ch));
+            }
+
+            do_gmote(killer, brag_msg, 0, 0);
+
+            /* Increase mob's own reputation for defeating a reputable opponent */
+            if (killer->ai_data && killer->ai_data->reputation < 100) {
+                killer->ai_data->reputation = MIN(killer->ai_data->reputation + 5, 100);
+            }
+        }
+    }
+
     /* Check for bounty quest failures - if this mob was a bounty target for someone else */
     if (IS_NPC(ch)) {
         fail_bounty_quest(ch, killer);

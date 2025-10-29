@@ -159,6 +159,83 @@ bool validate_goal_obj(struct char_data *ch)
     return FALSE;
 }
 
+/**
+ * Makes a mob perform a contextual social based on target's reputation, alignment, gender, and position
+ * @param ch The mob performing the social
+ * @param target The target of the social (can be player or mob)
+ */
+static void mob_contextual_social(struct char_data *ch, struct char_data *target)
+{
+    const char *positive_socials[] = {"bow", "smile", "nod", "wave", "applaud", NULL};
+    const char *negative_socials[] = {"frown", "glare", "spit", "sneer", "accuse", NULL};
+    const char *neutral_socials[] = {"ponder", "shrug", "nod", "peer", NULL};
+    const char *resting_socials[] = {"comfort", "pat", NULL};
+
+    const char **social_list = NULL;
+    char social_cmd[MAX_INPUT_LENGTH];
+    int target_reputation = GET_REPUTATION(target);
+    int mob_alignment = GET_ALIGNMENT(ch);
+    int target_pos = GET_POS(target);
+    int social_index;
+
+    /* Don't perform socials if mob is busy or target is fighting/dead */
+    if (FIGHTING(ch) || FIGHTING(target) || target_pos <= POS_STUNNED)
+        return;
+
+    /* Determine which social category to use based on multiple factors */
+
+    /* High reputation target (60+) gets positive socials from good/neutral mobs */
+    if (target_reputation >= 60 && mob_alignment >= -350) {
+        social_list = positive_socials;
+    }
+    /* Low reputation target (<20) gets negative socials */
+    else if (target_reputation < 20) {
+        social_list = negative_socials;
+    }
+    /* Alignment-based social selection */
+    else if (IS_GOOD(ch) && IS_EVIL(target)) {
+        social_list = negative_socials; /* Good doesn't like evil */
+    } else if (IS_EVIL(ch) && IS_GOOD(target)) {
+        social_list = negative_socials; /* Evil doesn't like good */
+    } else if (IS_GOOD(ch) && IS_GOOD(target)) {
+        social_list = positive_socials; /* Good likes good */
+    } else if (IS_EVIL(ch) && IS_EVIL(target) && target_reputation >= 40) {
+        social_list = positive_socials; /* Evil respects reputable evil */
+    }
+    /* Target is resting/sitting - use comforting socials */
+    else if (target_pos == POS_RESTING || target_pos == POS_SITTING) {
+        social_list = resting_socials;
+    }
+    /* Default to neutral socials */
+    else {
+        social_list = neutral_socials;
+    }
+
+    /* Select a random social from the chosen category */
+    for (social_index = 0; social_list[social_index] != NULL; social_index++)
+        ;
+
+    if (social_index == 0)
+        return; /* No socials in this category */
+
+    social_index = rand_number(0, social_index - 1);
+
+    /* Execute the social towards the target */
+    snprintf(social_cmd, sizeof(social_cmd), "%s %s", social_list[social_index], GET_NAME(target));
+
+    /* Find the social command number */
+    int cmd_num;
+    for (cmd_num = 0; *complete_cmd_info[cmd_num].command != '\n'; cmd_num++) {
+        if (!strcmp(complete_cmd_info[cmd_num].command, social_list[social_index]))
+            break;
+    }
+
+    if (*complete_cmd_info[cmd_num].command != '\n') {
+        /* Execute the social */
+        do_action(ch, GET_NAME(target), cmd_num, 0);
+    }
+}
+
 void mobile_activity(void)
 {
     struct char_data *ch, *next_ch, *vict;
@@ -1454,6 +1531,45 @@ void mobile_activity(void)
                     }
                 }
             }
+        }
+
+        /* Mobs perform contextual socials based on reputation, alignment, gender, and position */
+        /* Only perform if experimental feature is enabled */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= 5) { /* 5% chance per tick to perform a social */
+            struct char_data *potential_target;
+
+            /* Verify room validity before accessing people list */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                continue;
+
+            /* Look for a suitable target in the room */
+            for (potential_target = world[IN_ROOM(ch)].people; potential_target;
+                 potential_target = potential_target->next_in_room) {
+                if (potential_target == ch)
+                    continue;
+
+                /* Skip if target is fighting, sleeping, or dead */
+                if (FIGHTING(potential_target) || GET_POS(potential_target) <= POS_SLEEPING)
+                    continue;
+
+                /* Can the mob see the target? */
+                if (!CAN_SEE(ch, potential_target))
+                    continue;
+
+                /* Perform contextual social */
+                mob_contextual_social(ch, potential_target);
+
+                /* Safety check: do_action can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    break; /* Exit the for loop and continue to next mob */
+
+                /* Only target one character per social action */
+                break;
+            }
+
+            /* If mob was extracted during social, continue to next mob in main loop */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
         }
 
         /* Add new mobile actions here */

@@ -117,6 +117,27 @@ static int is_ok_char(struct char_data *keeper, struct char_data *ch, int shop_n
         do_tell(keeper, buf, cmd_tell, 0);
         return (FALSE);
     }
+
+    /* Check for bad reputation - shopkeepers refuse to trade with notorious customers */
+    if (!IS_NPC(ch)) {
+        int reputation = GET_REPUTATION(ch);
+
+        /* Bad reputation (below 20) combined with evil alignment makes shopkeepers refuse service */
+        if (reputation < 20 && IS_EVIL(ch)) {
+            snprintf(buf, sizeof(buf), "%s Sua reputação é péssima. Não faço negócios com gente como você!",
+                     GET_NAME(ch));
+            do_tell(keeper, buf, cmd_tell, 0);
+            return (FALSE);
+        }
+
+        /* Very bad reputation (below 10) alone is enough to be refused */
+        if (reputation < 10) {
+            snprintf(buf, sizeof(buf), "%s Você é conhecido por má conduta. Vá embora!", GET_NAME(ch));
+            do_tell(keeper, buf, cmd_tell, 0);
+            return (FALSE);
+        }
+    }
+
     return (TRUE);
 }
 
