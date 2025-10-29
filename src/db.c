@@ -4318,6 +4318,9 @@ static void load_default_config(void)
     CONFIG_NEW_AUCTION_SYSTEM = NO;
     CONFIG_EXPERIMENTAL_BANK_SYSTEM = NO;
     CONFIG_MOB_CONTEXTUAL_SOCIALS = NO; /* Disabled by default - experimental feature */
+    CONFIG_DYNAMIC_REPUTATION = NO;
+    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = 20; /* Default: 20% chance per emotion tick (4 seconds) */
+    CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30; /* Default: 30% chance per emotion tick (4 seconds) */
 }
 
 void load_config(void)
@@ -4518,6 +4521,10 @@ void load_config(void)
                     CONFIG_MAX_HOUSE_OBJS = num;
                 else if (!str_cmp(tag, "mob_contextual_socials"))
                     CONFIG_MOB_CONTEXTUAL_SOCIALS = num;
+                else if (!str_cmp(tag, "mob_emotion_social_chance"))
+                    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = num;
+                else if (!str_cmp(tag, "mob_emotion_update_chance"))
+                    CONFIG_MOB_EMOTION_UPDATE_CHANCE = num;
 
                 break;
 
