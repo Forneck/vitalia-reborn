@@ -2491,39 +2491,54 @@ void create_spells_db()
 
     spedit_save_internally(new_spell);
     // SPELL_SOUNDBARRIER #90
+
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
-    new_spell->vnum = SPELL_SOUNDBARRIER;
-    new_spell->status = available;
-    new_spell->name = strdup("soundbarrier");
-    new_spell->type = SPELL;
-    new_spell->min_pos = POS_STANDING;
+
+    new_spell->vnum       = SPELL_SOUNDBARRIER;
+    new_spell->status     = available;
+    new_spell->name       = strdup("soundbarrier");
+    new_spell->type       = SPELL;
+    new_spell->min_pos    = POS_STANDING;
     new_spell->targ_flags = TAR_CHAR_ROOM;
-    new_spell->mag_flags = MAG_AFFECTS;
+    new_spell->mag_flags  = MAG_AFFECTS;
     new_spell->effectiveness = strdup("100");
-    sprintf(buf, "(100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20");
+
+    /* Custo de mana baseado no nível do conjurador */
     new_spell->assign[0].class_num = CLASS_BARD;
-    new_spell->assign[0].level = 15;
-    new_spell->assign[0].num_mana = strdup(buf);
+    new_spell->assign[0].level     = 15;
+    new_spell->assign[0].num_mana  = strdup("(100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20");
+
+    /* Aplicações do feitiço */
     new_spell->applies[0].appl_num = APPLY_SAVING_SPELL;
     new_spell->applies[0].modifier = strdup("-(1 + (param / 40))");
     new_spell->applies[0].duration = strdup("24");
+
     new_spell->applies[1].appl_num = APPLY_SAVING_BREATH;
     new_spell->applies[1].modifier = strdup("-(2 + (param / 40))");
     new_spell->applies[1].duration = strdup("24");
+
     new_spell->applies[2].appl_num = APPLY_SAVING_ROD;
-    new_spell->applies[2].modifier = strdup("-(1+ (param / 40))");
+    new_spell->applies[2].modifier = strdup("-(1 + (param / 40))");
     new_spell->applies[2].duration = strdup("24");
+
     new_spell->applies[3].appl_num = APPLY_AC;
-    new_spell->applies[3].modifier = strdup("self. level > (vict.level +10) ? -70 : -(vict.level -10)");
+    new_spell->applies[3].modifier = strdup("((self.level > (vict.level + 10)) * -70) + ((self.level <= (vict.level + 10)) * (-(vict.level - 10)))");
     new_spell->applies[3].duration = strdup("24");
+
     new_spell->applies[4].appl_num = AFF_SOUNDBARRIER + NUM_APPLIES;
     new_spell->applies[4].duration = strdup("24");
-    new_spell->messages.to_vict = strdup("Você é envolvid$r por uma protetora barreira de som.");
-    new_spell->messages.to_room = strdup("$N é envolvid$r por uma protetora barreira de som.");
-    new_spell->messages.wear_off = strdup("Você percebe a barreira de som se dissipar.");
-    new_spell->school = SCHOOL_ABJURATION;  /* Protection spell */
-    new_spell->element = ELEMENT_UNDEFINED; /* Sound-based protection */
+
+    /* Mensagens de efeito */
+    new_spell->messages.to_vict   = strdup("Voce e envolvid$r por uma protetora barreira de som.");
+    new_spell->messages.to_room   = strdup("$N e envolvid$r por uma protetora barreira de som.");
+    new_spell->messages.wear_off  = strdup("Voce percebe a barreira de som se dissipar.");
+
+    /* Escola e elemento */
+    new_spell->school  = SCHOOL_ABJURATION;   /* Protection spell */
+    new_spell->element = ELEMENT_UNDEFINED;   /* Sound-based protection */
+
+    /* Salva internamente */
     spedit_save_internally(new_spell);
 
     // SPELL_GLOOMSHIELD # 91
