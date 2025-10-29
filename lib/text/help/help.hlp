@@ -2201,6 +2201,42 @@ Veja tambem a ajuda para cada magia, por exemplo:
   > help magia cure light
   > help magia burning hands
   > help magia energy drain
+
+Veja tambem: SYLLABLES, SAY
+#1
+SYLLABLES SILABAS
+
+Uso: syllables
+
+   Este comando permite que você estude as sílabas místicas das magias que
+você conhece.  Cada magia possui palavras de poder que podem ser usadas para
+conjurá-la através do comando SAY (voz mágica).
+
+   Quando você diz as sílabas místicas de uma magia em voz alta (usando o
+comando SAY), a magia será automaticamente conjurada, desde que você a conheça.
+Isso é útil para conjurar magias rapidamente em situações de combate ou quando
+você deseja praticar suas habilidades mágicas.
+
+Exemplos:
+  > syllables
+    (mostra todas as sílabas místicas das magias que você conhece)
+  
+  > say ignisaegis
+    (conjura a magia 'fireshield' se você a conhecer)
+  
+  > say ignisaegis oponente
+    (conjura a magia 'fireshield' no oponente)
+
+   As sílabas místicas são derivadas de uma antiga linguagem mágica e cada
+palavra do nome da magia é transformada em sua forma mística.  Por exemplo:
+  - 'fire' se torna 'ignis' (fogo em latim)
+  - 'shield' se torna 'aegis' (escudo em latim)
+  - Portanto, 'fireshield' se torna 'ignisaegis'
+
+   Com o tempo e prática, você pode aprender a reconhecer padrões nas sílabas
+e entender melhor a natureza das magias que você domina.
+
+Veja tambem: CAST, SAY, SPELLS
 #1
 CEDIT CEDIT-MENU 
 

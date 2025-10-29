@@ -293,6 +293,7 @@ ACMD(do_save);
 ACMD(do_sneak);
 ACMD(do_split);
 ACMD(do_steal);
+ACMD(do_syllables);
 ACMD(do_title);
 ACMD(do_autotitle);
 ACMD(do_visible);

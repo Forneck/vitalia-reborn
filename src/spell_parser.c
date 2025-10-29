@@ -309,6 +309,12 @@ static void spell_to_syllables(const char *spell_name, char *result, size_t resu
     }
 }
 
+/* Public wrapper for spell_to_syllables */
+void spell_to_syllables_public(const char *spell_name, char *result, size_t result_size)
+{
+    spell_to_syllables(spell_name, result, result_size);
+}
+
 /* Strip color codes from text for voice casting comparison
  * Color codes are @ followed by any character (e.g., @r, @n, @@ for literal @) */
 static void strip_color_codes(const char *src, char *dest, size_t dest_size)

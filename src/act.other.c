@@ -553,6 +553,55 @@ ACMD(do_chansons)
     list_spells_by_type(ch, class_num, CHANSON, is_current_class);
 }
 
+ACMD(do_syllables)
+{
+    struct str_spells *ptr;
+    char syllables[256];
+    char buf[MAX_STRING_LENGTH];
+    size_t len = 0;
+    int count = 0;
+    bool has_spells = FALSE;
+
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não podem usar este comando.\r\n");
+        return;
+    }
+
+    /* Header */
+    len = snprintf(buf, sizeof(buf),
+                   "Sílabas Místicas das Magias que Você Conhece:\r\n"
+                   "==============================================\r\n\r\n"
+                   "Ao estudar suas magias, você aprende as palavras de poder que as invocam.\r\n"
+                   "Você pode falar essas sílabas em voz alta para conjurar magias usando o comando 'say'.\r\n\r\n");
+
+    /* List all spells the character knows */
+    for (ptr = list_spells; ptr && len < sizeof(buf) - 200; ptr = ptr->next) {
+        if (ptr->status == available && ptr->type == SPELL && GET_SKILL(ch, ptr->vnum) > 0) {
+            has_spells = TRUE;
+            spell_to_syllables_public(ptr->name, syllables, sizeof(syllables));
+
+            len += snprintf(buf + len, sizeof(buf) - len, "%-30s -> %s\r\n", ptr->name, syllables);
+            count++;
+        }
+    }
+
+    if (!has_spells) {
+        send_to_char(ch, "Você ainda não conhece nenhuma magia.\r\n");
+        return;
+    }
+
+    len += snprintf(buf + len, sizeof(buf) - len,
+                    "\r\n==============================================\r\n"
+                    "Total de magias conhecidas: %d\r\n\r\n"
+                    "Dica: Você pode dizer as sílabas místicas em voz alta para conjurar.\r\n"
+                    "Exemplo: say %s\r\n"
+                    "Você também pode incluir um alvo após as sílabas.\r\n"
+                    "Exemplo: say %s <nome do alvo>\r\n",
+                    count, count > 0 ? syllables : "ignisaegis", count > 0 ? syllables : "ignisaegis");
+
+    page_string(ch->desc, buf, TRUE);
+}
+
 ACMD(do_visible)
 {
     if (GET_LEVEL(ch) >= LVL_IMMORT) {

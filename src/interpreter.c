@@ -330,6 +330,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"snoop", "snoop", POS_DEAD, do_snoop, LVL_GOD, 0, CMD_ONEARG},
     {"spedit", "spe", POS_DEAD, do_spedit, LVL_GRGOD, 0, CMD_NOARG},
     {"spells", "spel", POS_DEAD, do_spells, 0, 0, CMD_ONEARG},
+    {"syllables", "syl", POS_DEAD, do_syllables, 0, 0, CMD_NOARG},
     {"splist", "splist", POS_DEAD, do_splist, LVL_BUILDER, 0, CMD_NOARG},
     {"socials", "socials", POS_DEAD, do_commands, 0, SCMD_SOCIALS, CMD_NOARG},
     {"split", "split", POS_SITTING, do_split, 1, 0, CMD_ONEARG},
