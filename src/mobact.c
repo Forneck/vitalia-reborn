@@ -159,6 +159,157 @@ bool validate_goal_obj(struct char_data *ch)
     return FALSE;
 }
 
+/**
+ * Makes a mob perform a contextual social based on target's reputation, alignment, gender, position, and mob's emotions
+ * @param ch The mob performing the social
+ * @param target The target of the social (can be player or mob)
+ */
+static void mob_contextual_social(struct char_data *ch, struct char_data *target)
+{
+    const char *positive_socials[] = {"bow", "smile", "nod", "wave", "applaud", NULL};
+    const char *negative_socials[] = {"frown", "glare", "spit", "sneer", "accuse", NULL};
+    const char *neutral_socials[] = {"ponder", "shrug", "nod", "peer", NULL};
+    const char *resting_socials[] = {"comfort", "pat", NULL};
+    const char *fearful_socials[] = {"cower", "tremble", "whimper", NULL};
+    const char *loving_socials[] = {"hug", "cuddle", "kiss", NULL};
+    const char *proud_socials[] = {"strut", "flex", "boast", NULL};
+    const char *envious_socials[] = {"envy", "covet", "eye", NULL};
+
+    const char **social_list = NULL;
+    int target_reputation;
+    int mob_alignment;
+    int target_pos;
+    int social_index;
+    int cmd_num;
+
+    /* Core emotions */
+    int mob_anger, mob_happiness, mob_fear, mob_love, mob_friendship, mob_sadness;
+    /* Extended emotions */
+    int mob_trust, mob_loyalty, mob_curiosity, mob_greed, mob_pride, mob_compassion, mob_envy, mob_courage,
+        mob_excitement;
+
+    /* Validate parameters */
+    if (!ch || !target)
+        return;
+
+    /* Only mobs with ai_data can use emotions */
+    if (!IS_NPC(ch) || !ch->ai_data)
+        return;
+
+    target_reputation = GET_REPUTATION(target);
+    mob_alignment = GET_ALIGNMENT(ch);
+    target_pos = GET_POS(target);
+
+    /* Get mob core emotions */
+    mob_anger = GET_MOB_ANGER(ch);
+    mob_happiness = GET_MOB_HAPPINESS(ch);
+    mob_fear = GET_MOB_FEAR(ch);
+    mob_love = GET_MOB_LOVE(ch);
+    mob_friendship = GET_MOB_FRIENDSHIP(ch);
+    mob_sadness = GET_MOB_SADNESS(ch);
+
+    /* Get extended emotions */
+    mob_trust = GET_MOB_TRUST(ch);
+    mob_loyalty = GET_MOB_LOYALTY(ch);
+    mob_curiosity = GET_MOB_CURIOSITY(ch);
+    mob_greed = GET_MOB_GREED(ch);
+    mob_pride = GET_MOB_PRIDE(ch);
+    mob_compassion = GET_MOB_COMPASSION(ch);
+    mob_envy = GET_MOB_ENVY(ch);
+    mob_courage = GET_MOB_COURAGE(ch);
+    mob_excitement = GET_MOB_EXCITEMENT(ch);
+
+    /* Don't perform socials if mob is busy or target is fighting/dead */
+    if (FIGHTING(ch) || FIGHTING(target) || target_pos <= POS_STUNNED)
+        return;
+
+    /* Determine which social category to use based on multiple factors */
+    /* Priority order: extreme emotions > moderate emotions > reputation > alignment > position */
+
+    /* High fear (70+) and low courage - show fearful behavior */
+    if (mob_fear >= 70 && mob_courage < 40) {
+        social_list = fearful_socials;
+    }
+    /* High pride (75+) - show proud behavior */
+    else if (mob_pride >= 75) {
+        social_list = proud_socials;
+    }
+    /* High envy (70+) and target has good equipment/reputation */
+    else if (mob_envy >= 70 && (target_reputation >= 50 || mob_greed >= 60)) {
+        social_list = envious_socials;
+    }
+    /* High love (70+) or very high friendship with high trust */
+    else if (mob_love >= 70 || (mob_friendship >= 80 && mob_trust >= 60)) {
+        social_list = loving_socials;
+    }
+    /* High anger (70+) or high anger with low loyalty to good targets */
+    else if (mob_anger >= 70 || (mob_anger >= 50 && mob_loyalty < 30 && IS_GOOD(target))) {
+        social_list = negative_socials;
+    }
+    /* High happiness (70+) shows positive behavior */
+    else if (mob_happiness >= 70) {
+        social_list = positive_socials;
+    }
+    /* Moderate emotions combined with other factors */
+    /* High reputation target (60+) gets positive socials from happy/friendly mobs */
+    else if (target_reputation >= 60 && (mob_happiness >= 40 || mob_friendship >= 50 || mob_alignment >= -350)) {
+        social_list = positive_socials;
+    }
+    /* Low reputation target (<20) triggers anger/negative response */
+    else if (target_reputation < 20 || mob_anger >= 40) {
+        social_list = negative_socials;
+    }
+    /* Alignment-based social selection modified by emotions */
+    else if (IS_GOOD(ch) && IS_EVIL(target) && mob_anger >= 20) {
+        social_list = negative_socials; /* Good doesn't like evil, especially if angry */
+    } else if (IS_EVIL(ch) && IS_GOOD(target) && mob_sadness < 50) {
+        social_list = negative_socials; /* Evil doesn't like good unless sad/remorseful */
+    } else if (IS_GOOD(ch) && IS_GOOD(target) && mob_friendship >= 30) {
+        social_list = positive_socials; /* Good likes good, especially if friendly */
+    } else if (IS_EVIL(ch) && IS_EVIL(target) && target_reputation >= 40) {
+        social_list = positive_socials; /* Evil respects reputable evil */
+    }
+    /* Target is resting/sitting - use comforting socials if mob has compassion (low anger, high compassion/friendship)
+     */
+    else if ((target_pos == POS_RESTING || target_pos == POS_SITTING) && mob_anger < 30 &&
+             (mob_compassion >= 50 || mob_friendship >= 40)) {
+        social_list = resting_socials;
+    }
+    /* High sadness with low excitement leads to withdrawn/neutral behavior */
+    else if (mob_sadness >= 60 && mob_excitement < 40) {
+        social_list = neutral_socials;
+    }
+    /* High curiosity with high excitement - show interest */
+    else if (mob_curiosity >= 60 && mob_excitement >= 50) {
+        social_list = neutral_socials; /* Curious/observing behavior */
+    }
+    /* Default to neutral socials */
+    else {
+        social_list = neutral_socials;
+    }
+
+    /* Select a random social from the chosen category */
+    /* Count number of non-NULL elements in the social list */
+    for (social_index = 0; social_list[social_index] != NULL; social_index++)
+        ;
+
+    if (social_index == 0)
+        return; /* No socials in this category */
+
+    social_index = rand_number(0, social_index - 1);
+
+    /* Find the social command number */
+    for (cmd_num = 0; *complete_cmd_info[cmd_num].command != '\n'; cmd_num++) {
+        if (!strcmp(complete_cmd_info[cmd_num].command, social_list[social_index]))
+            break;
+    }
+
+    if (*complete_cmd_info[cmd_num].command != '\n') {
+        /* Execute the social */
+        do_action(ch, GET_NAME(target), cmd_num, 0);
+    }
+}
+
 void mobile_activity(void)
 {
     struct char_data *ch, *next_ch, *vict;
@@ -1454,6 +1605,50 @@ void mobile_activity(void)
                     }
                 }
             }
+        }
+
+        /* Mobs perform contextual socials based on reputation, alignment, gender, and position */
+        /* Only perform if experimental feature is enabled */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= 5) { /* 5% chance per tick to perform a social */
+            struct char_data *potential_target;
+
+            /* Verify room validity before accessing people list */
+            if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                continue;
+
+            /* Look for a suitable target in the room */
+            for (potential_target = world[IN_ROOM(ch)].people; potential_target;
+                 potential_target = potential_target->next_in_room) {
+                if (potential_target == ch)
+                    continue;
+
+                /* Skip if target is fighting, sleeping, or dead */
+                if (FIGHTING(potential_target) || GET_POS(potential_target) <= POS_SLEEPING)
+                    continue;
+
+                /* Can the mob see the target? */
+                if (!CAN_SEE(ch, potential_target))
+                    continue;
+
+                /* Perform contextual social */
+                mob_contextual_social(ch, potential_target);
+
+                /* Safety check: do_action can trigger DG scripts which may cause extraction */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    break; /* Exit the for loop and continue to next mob */
+
+                /* Only target one character per social action */
+                break;
+            }
+
+            /* If mob was extracted during social, continue to next mob in main loop */
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                continue;
+        }
+
+        /* Passive emotion regulation - emotions gradually return to baseline (experimental feature) */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= 10) { /* 10% chance per tick */
+            update_mob_emotion_passive(ch);
         }
 
         /* Add new mobile actions here */

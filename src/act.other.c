@@ -289,6 +289,32 @@ ACMD(do_steal)
     if (ohoh && IS_NPC(vict) && AWAKE(vict))
         hit(vict, ch, TYPE_UNDEFINED);
 
+    /* Reputation changes for stealing - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && !ohoh) {
+        /* Successful stealing */
+        int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_STEALTH_ACTION, vict);
+        if (IS_EVIL(ch)) {
+            /* Evil characters gain reputation (infamy) for successful theft */
+            if (IS_GOOD(vict)) {
+                /* Stealing from good targets increases evil reputation */
+                modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
+            } else {
+                /* Any successful theft for evil characters */
+                modify_player_reputation(ch, 1 + class_bonus);
+            }
+        } else {
+            /* Good/Neutral characters LOSE reputation for stealing */
+            modify_player_reputation(ch, -rand_number(2, 4));
+            /* Extra penalty for stealing from good targets */
+            if (IS_GOOD(vict)) {
+                modify_player_reputation(ch, -rand_number(1, 3));
+            }
+        }
+    } else if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && ohoh) {
+        /* Getting caught stealing always damages reputation */
+        modify_player_reputation(ch, -rand_number(3, 6));
+    }
+
     if (!IS_NPC(ch) && !IS_NPC(vict))
         SET_BIT_AR(PLR_FLAGS(ch), PLR_HTHIEF);
 

@@ -330,6 +330,139 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
         mob_autoquest_trigger_check(killer, ch, NULL, AQ_PLAYER_KILL);
     }
 
+    /* Mob bragging when killing a high-reputation player */
+    if (!IS_NPC(ch) && killer && IS_NPC(killer) && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        int victim_reputation = GET_REPUTATION(ch);
+
+        /* High reputation victim (60+) triggers bragging */
+        if (victim_reputation >= 60) {
+            char brag_msg[MAX_STRING_LENGTH];
+
+            /* Very high reputation (80+) gets more enthusiastic bragging */
+            if (victim_reputation >= 80) {
+                snprintf(brag_msg, sizeof(brag_msg), "ri triunfante, tendo derrotado %s, um aventureiro lendário!",
+                         GET_NAME(ch));
+            } else {
+                snprintf(brag_msg, sizeof(brag_msg),
+                         "sorri com satisfação após derrotar %s, um aventureiro respeitado.", GET_NAME(ch));
+            }
+
+            do_gmote(killer, brag_msg, 0, 0);
+
+            /* Increase mob's own reputation for defeating a reputable opponent */
+            if (killer->ai_data && killer->ai_data->reputation < 100) {
+                killer->ai_data->reputation = MIN(killer->ai_data->reputation + 5, 100);
+            }
+        }
+    }
+
+    /* Reputation changes based on kills (players and mobs) */
+    /* Dynamic reputation changes (configurable, excludes quests) */
+    if (CONFIG_DYNAMIC_REPUTATION && killer && !IS_NPC(killer)) {
+        /* Player killed someone */
+        int class_bonus;
+        if (IS_NPC(ch)) {
+            /* Killing good-aligned mobs lowers reputation */
+            if (IS_GOOD(ch)) {
+                modify_player_reputation(killer, -rand_number(1, 3));
+            }
+            /* Killing evil-aligned mobs increases reputation slightly */
+            else if (IS_EVIL(ch)) {
+                class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
+                modify_player_reputation(killer, rand_number(1, 2) + class_bonus);
+            }
+            /* Killing high-level mobs increases reputation more */
+            if (GET_LEVEL(ch) >= GET_LEVEL(killer) + 5) {
+                class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
+                modify_player_reputation(killer, rand_number(1, 3) + class_bonus);
+            }
+        } else {
+            /* Player killed another player - major reputation loss */
+            modify_player_reputation(killer, -rand_number(5, 10));
+            /* Killing high-reputation players causes even more loss */
+            if (GET_REPUTATION(ch) >= 60) {
+                modify_player_reputation(killer, -rand_number(5, 15));
+            }
+        }
+    }
+    /* Mob killed someone */
+    else if (killer && IS_NPC(killer) && killer->ai_data) {
+        if (IS_NPC(ch)) {
+            /* Mob killing high-reputation mob gains reputation */
+            if (GET_MOB_REPUTATION(ch) >= 50) {
+                killer->ai_data->reputation = MIN(killer->ai_data->reputation + rand_number(2, 4), 100);
+            }
+        }
+        /* Killing players handled above in bragging section */
+    }
+
+    /* Reputation loss for the victim (dynamic reputation system) */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+        /* Dying lowers reputation slightly */
+        modify_player_reputation(ch, -rand_number(1, 3));
+    } else if (ch->ai_data) {
+        /* Mob dying lowers its reputation */
+        ch->ai_data->reputation = MAX(0, ch->ai_data->reputation - rand_number(1, 2));
+    }
+
+    /* Mob emotion updates and mourning system (experimental feature) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        /* Notify mobs in the room about the death for mourning/emotion updates */
+        struct char_data *witness, *next_witness;
+        bool should_mourn;
+
+        /* Use safe iteration - mourning can trigger extraction */
+        for (witness = world[IN_ROOM(ch)].people; witness; witness = next_witness) {
+            next_witness = witness->next_in_room;
+
+            if (!IS_NPC(witness) || !witness->ai_data || witness == ch || witness == killer)
+                continue;
+
+            /* Check if witness should mourn (same group, same alignment, high friendship) */
+            should_mourn = FALSE;
+
+            /* Group members mourn */
+            if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
+                should_mourn = TRUE;
+            }
+            /* Same alignment with decent relationship */
+            else if (GET_ALIGNMENT(witness) * GET_ALIGNMENT(ch) > 0 && witness->ai_data->emotion_friendship >= 40) {
+                should_mourn = TRUE;
+            }
+            /* High compassion mobs mourn anyone non-evil */
+            else if (witness->ai_data->emotion_compassion >= 70 && !IS_EVIL(ch)) {
+                should_mourn = TRUE;
+            }
+
+            if (should_mourn) {
+                mob_mourn_death(witness, ch);
+
+                /* Safety check: mourning can trigger extraction */
+                if (MOB_FLAGGED(witness, MOB_NOTDEADYET) || PLR_FLAGGED(witness, PLR_NOTDEADYET))
+                    continue;
+
+                /* Revalidate ai_data */
+                if (!witness->ai_data)
+                    continue;
+            }
+
+            /* Update witness emotions based on the death */
+            if (IS_NPC(ch) && witness->ai_data) {
+                /* Witnessing mob death */
+                if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
+                    /* Ally died */
+                    update_mob_emotion_ally_died(witness, ch);
+                } else if (IS_GOOD(witness) && IS_EVIL(ch)) {
+                    /* Enemy died - good witness might feel satisfaction */
+                    if (witness->ai_data) {
+                        witness->ai_data->emotion_happiness =
+                            URANGE(0, witness->ai_data->emotion_happiness + rand_number(5, 15), 100);
+                    }
+                }
+            }
+        }
+    }
+
     /* Check for bounty quest failures - if this mob was a bounty target for someone else */
     if (IS_NPC(ch)) {
         fail_bounty_quest(ch, killer);
@@ -699,13 +832,22 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         dam = 0;
     if (victim != ch) {
         /* Start the attacker fighting the victim */
-        if (GET_POS(ch) > POS_STUNNED && (FIGHTING(ch) == NULL))
+        if (GET_POS(ch) > POS_STUNNED && (FIGHTING(ch) == NULL)) {
             set_fighting(ch, victim);
+            /* Update mob emotions when starting combat (experimental feature) */
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch)) {
+                update_mob_emotion_attacking(ch, victim);
+            }
+        }
         /* Start the victim fighting the attacker */
         if (GET_POS(victim) > POS_STUNNED && (FIGHTING(victim) == NULL)) {
             set_fighting(victim, ch);
             if (MOB_FLAGGED(victim, MOB_MEMORY) && !IS_NPC(ch))
                 remember(victim, ch);
+            /* Update mob emotions when being attacked (experimental feature) */
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(victim)) {
+                update_mob_emotion_attacked(victim, ch);
+            }
         }
     }
 
@@ -993,6 +1135,17 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
     /* Check that the attacker and victim exist */
     if (!ch || !victim)
         return;
+
+    /* Reputation penalty for attacking allies/group members (dynamic reputation system) */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && !IS_NPC(victim)) {
+        /* Check if they share same master (grouped) */
+        if ((ch->master && victim->master && ch->master == victim->master) || (ch->master && ch->master == victim) ||
+            (victim->master && victim->master == ch)) {
+            /* Attacking a group member severely damages reputation */
+            modify_player_reputation(ch, -rand_number(5, 10));
+        }
+    }
+
     /* check if the character has a fight trigger */
     fight_mtrigger(ch);
     /* Do some sanity checking, in case someone flees, etc. */

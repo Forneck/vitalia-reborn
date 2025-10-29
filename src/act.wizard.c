@@ -974,6 +974,26 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
     if (!IS_NPC(k)) {
         send_to_char(ch, "Hometown: %d\r\n", GET_ROOM_VNUM(GET_HOMETOWN(k)));
         send_to_char(ch, "Karma: %'d, Reputation: %d\r\n", GET_KARMA(k), GET_REPUTATION(k));
+    } else if (IS_MOB(k) && k->ai_data && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        /* Display mob emotions when experimental feature is enabled */
+        send_to_char(ch, "%sEmotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+        send_to_char(ch, "  Basic: Fear[%s%d%s] Anger[%s%d%s] Happiness[%s%d%s] Sadness[%s%d%s]\r\n", CCCYN(ch, C_NRM),
+                     k->ai_data->emotion_fear, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_anger,
+                     CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_happiness, CCNRM(ch, C_NRM),
+                     CCCYN(ch, C_NRM), k->ai_data->emotion_sadness, CCNRM(ch, C_NRM));
+        send_to_char(ch, "  Social: Friendship[%s%d%s] Love[%s%d%s] Trust[%s%d%s] Loyalty[%s%d%s]\r\n",
+                     CCCYN(ch, C_NRM), k->ai_data->emotion_friendship, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
+                     k->ai_data->emotion_love, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_trust,
+                     CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_loyalty, CCNRM(ch, C_NRM));
+        send_to_char(ch, "  Motivational: Curiosity[%s%d%s] Greed[%s%d%s] Pride[%s%d%s]\r\n", CCCYN(ch, C_NRM),
+                     k->ai_data->emotion_curiosity, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_greed,
+                     CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_pride, CCNRM(ch, C_NRM));
+        send_to_char(ch, "  Empathic: Compassion[%s%d%s] Envy[%s%d%s]\r\n", CCCYN(ch, C_NRM),
+                     k->ai_data->emotion_compassion, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_envy,
+                     CCNRM(ch, C_NRM));
+        send_to_char(ch, "  Arousal: Courage[%s%d%s] Excitement[%s%d%s]\r\n", CCCYN(ch, C_NRM),
+                     k->ai_data->emotion_courage, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_excitement,
+                     CCNRM(ch, C_NRM));
     }
     /* check mobiles for a script */
     do_sstat_character(ch, k);

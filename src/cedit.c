@@ -154,6 +154,8 @@ static void cedit_setup(struct descriptor_data *d)
     /* Experimental Features */
     OLC_CONFIG(d)->experimental.new_auction_system = CONFIG_NEW_AUCTION_SYSTEM;
     OLC_CONFIG(d)->experimental.experimental_bank_system = CONFIG_EXPERIMENTAL_BANK_SYSTEM;
+    OLC_CONFIG(d)->experimental.mob_contextual_socials = CONFIG_MOB_CONTEXTUAL_SOCIALS;
+    OLC_CONFIG(d)->experimental.dynamic_reputation = CONFIG_DYNAMIC_REPUTATION;
 
     /* Allocate space for the strings. */
     OLC_CONFIG(d)->play.OK = str_udup(CONFIG_OK);
@@ -274,6 +276,8 @@ static void cedit_save_internally(struct descriptor_data *d)
     /* Experimental Features */
     CONFIG_NEW_AUCTION_SYSTEM = OLC_CONFIG(d)->experimental.new_auction_system;
     CONFIG_EXPERIMENTAL_BANK_SYSTEM = OLC_CONFIG(d)->experimental.experimental_bank_system;
+    CONFIG_MOB_CONTEXTUAL_SOCIALS = OLC_CONFIG(d)->experimental.mob_contextual_socials;
+    CONFIG_DYNAMIC_REPUTATION = OLC_CONFIG(d)->experimental.dynamic_reputation;
 
     /* Allocate space for the strings. */
     if (CONFIG_OK)
@@ -747,6 +751,16 @@ int save_config(IDXTYPE nowhere)
             "experimental_bank_system = %d\n\n",
             CONFIG_EXPERIMENTAL_BANK_SYSTEM);
 
+    fprintf(fl,
+            "* Enable mob contextual socials (reputation/alignment/position based)?\n"
+            "mob_contextual_socials = %d\n\n",
+            CONFIG_MOB_CONTEXTUAL_SOCIALS);
+
+    fprintf(fl,
+            "* Enable dynamic reputation system (combat, healing, giving, stealing, etc. - excludes quests)?\n"
+            "dynamic_reputation = %d\n\n",
+            CONFIG_DYNAMIC_REPUTATION);
+
     fclose(fl);
 
     if (in_save_list(NOWHERE, SL_CFG))
@@ -987,10 +1001,14 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
                     "Funcionalidades Experimentais:\r\n"
                     "%s1%s) Sistema de Leilão Novo : %s%s\r\n"
                     "%s2%s) Sistema Experimental de Banco : %s%s\r\n"
+                    "%s3%s) Sociais Contextuais de Mobs (reputação/alinhamento/posição) : %s%s\r\n"
+                    "%s4%s) Sistema de Reputação Dinâmica (combate/cura/dar/roubar - exclui quests) : %s%s\r\n"
                     "%s0%s) Retornar ao Menu anterior\r\n"
                     "Selecione uma opção : ",
                     grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->experimental.new_auction_system), grn, nrm, cyn,
-                    CHECK_VAR(OLC_CONFIG(d)->experimental.experimental_bank_system), grn, nrm);
+                    CHECK_VAR(OLC_CONFIG(d)->experimental.experimental_bank_system), grn, nrm, cyn,
+                    CHECK_VAR(OLC_CONFIG(d)->experimental.mob_contextual_socials), grn, nrm, cyn,
+                    CHECK_VAR(OLC_CONFIG(d)->experimental.dynamic_reputation), grn, nrm);
 
     OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
 }
@@ -1585,6 +1603,14 @@ void cedit_parse(struct descriptor_data *d, char *arg)
 
                 case '2':
                     TOGGLE_VAR(OLC_CONFIG(d)->experimental.experimental_bank_system);
+                    break;
+
+                case '3':
+                    TOGGLE_VAR(OLC_CONFIG(d)->experimental.mob_contextual_socials);
+                    break;
+
+                case '4':
+                    TOGGLE_VAR(OLC_CONFIG(d)->experimental.dynamic_reputation);
                     break;
 
                 case '0':

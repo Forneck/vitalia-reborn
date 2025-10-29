@@ -111,13 +111,39 @@ struct char_data *find_accessible_questmaster_in_zone(struct char_data *ch, zone
 int calculate_quest_difficulty(obj_vnum item_vnum);
 int calculate_quest_reward(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty);
 int calculate_player_reputation(struct char_data *ch);
-void modify_player_reputation(struct char_data *ch, int amount);
+int modify_player_reputation(struct char_data *ch, int amount);
+
+/* Class-based reputation action types */
+#define CLASS_REP_COMBAT_KILL 1        /* Killing in combat (Warriors, Rangers) */
+#define CLASS_REP_HEALING 2            /* Healing others (Clerics, Druids) */
+#define CLASS_REP_MAGIC_CAST 3         /* Casting spells (Magic Users) */
+#define CLASS_REP_QUEST_COMPLETE 4     /* Completing quests (Rangers, Bards) */
+#define CLASS_REP_SOCIAL_PERFORMANCE 5 /* Social/performance actions (Bards) */
+#define CLASS_REP_NATURE_INTERACTION 6 /* Nature-related actions (Druids, Rangers) */
+#define CLASS_REP_GENEROSITY 7         /* Giving/charity (Clerics, Bards) */
+#define CLASS_REP_SCHOLARLY 8          /* Scholarly pursuits (Magic Users) */
+#define CLASS_REP_FAITHFULNESS 9       /* Acts of faith (Clerics) */
+#define CLASS_REP_STEALTH_ACTION 10    /* Stealth actions (Thieves) - stealing, backstabbing */
+#define CLASS_REP_POISONING 11         /* Poisoning (Thieves) */
+
+int get_class_reputation_modifier(struct char_data *ch, int action_type, struct char_data *target);
+
 int calculate_quest_reward_with_reputation(struct char_data *requesting_mob, obj_vnum item_vnum, int difficulty,
                                            struct char_data *player);
 obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty);
 struct char_data *find_item_owner(obj_vnum item_vnum);
 int is_wishlist_quest(qst_vnum quest_vnum);
 void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
+
+/* Mob emotion system functions */
+void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attacker);
+void update_mob_emotion_attacking(struct char_data *mob, struct char_data *victim);
+void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer);
+void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_ally);
+void update_mob_emotion_received_item(struct char_data *mob, struct char_data *giver);
+void update_mob_emotion_passive(struct char_data *mob);
+void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
+void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
 
 /* Stoneskin utility functions */
 int get_stoneskin_points(struct char_data *ch);
@@ -582,6 +608,32 @@ void char_from_furniture(struct char_data *ch);
 #define GET_MOB_QUEST(ch) ((ch)->ai_data ? (ch)->ai_data->current_quest : NOTHING)
 #define GET_MOB_QUEST_TIME(ch) ((ch)->ai_data ? (ch)->ai_data->quest_timer : 0)
 #define GET_MOB_QUEST_COUNTER(ch) ((ch)->ai_data ? (ch)->ai_data->quest_counter : 0)
+
+/* Mob emotion system macros (0-100 scale) */
+/* Basic emotions */
+#define GET_MOB_FEAR(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_fear : 0)
+#define GET_MOB_ANGER(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_anger : 0)
+#define GET_MOB_HAPPINESS(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_happiness : 0)
+#define GET_MOB_SADNESS(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_sadness : 0)
+
+/* Social emotions */
+#define GET_MOB_FRIENDSHIP(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_friendship : 0)
+#define GET_MOB_LOVE(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_love : 0)
+#define GET_MOB_TRUST(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_trust : 0)
+#define GET_MOB_LOYALTY(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_loyalty : 0)
+
+/* Motivational emotions */
+#define GET_MOB_CURIOSITY(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_curiosity : 0)
+#define GET_MOB_GREED(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_greed : 0)
+#define GET_MOB_PRIDE(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_pride : 0)
+
+/* Empathic emotions */
+#define GET_MOB_COMPASSION(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_compassion : 0)
+#define GET_MOB_ENVY(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_envy : 0)
+
+/* Arousal emotions */
+#define GET_MOB_COURAGE(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_courage : 0)
+#define GET_MOB_EXCITEMENT(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_excitement : 0)
 
 /* Temporary Quest Master macros */
 #define IS_TEMP_QUESTMASTER(ch) ((ch)->ai_data ? (ch)->ai_data->is_temp_questmaster : FALSE)
@@ -1230,5 +1282,9 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_NEW_AUCTION_SYSTEM config_info.experimental.new_auction_system
 /** Experimental bank system enabled? */
 #define CONFIG_EXPERIMENTAL_BANK_SYSTEM config_info.experimental.experimental_bank_system
+/** Mob contextual socials based on reputation/alignment/position enabled? */
+#define CONFIG_MOB_CONTEXTUAL_SOCIALS config_info.experimental.mob_contextual_socials
+/** Dynamic reputation system (combat, healing, giving, stealing, etc. - excludes quests) enabled? */
+#define CONFIG_DYNAMIC_REPUTATION config_info.experimental.dynamic_reputation
 
 #endif /* _UTILS_H_ */

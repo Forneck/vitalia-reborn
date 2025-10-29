@@ -681,6 +681,47 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
     act("$n entrega $p para $N.", TRUE, ch, obj, vict, TO_NOTVICT);
 
     autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);
+
+    /* Reputation gain for generosity (giving items to others) - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+        int rep_gain = 0;
+        long vict_id = IS_NPC(vict) ? GET_MOB_VNUM(vict) : GET_IDNUM(vict);
+
+        /* Anti-exploit: Giving to the same person repeatedly within 5 minutes gives no reputation */
+        if (ch->player_specials->saved.last_give_recipient_id == vict_id &&
+            ch->player_specials->saved.last_reputation_gain > 0 &&
+            (time(NULL) - ch->player_specials->saved.last_reputation_gain) < 300) {
+            /* Same recipient, too soon - no reputation gain */
+            return;
+        }
+
+        /* Gain reputation for giving valuable items */
+        if (GET_OBJ_COST(obj) >= 1000) {
+            rep_gain += rand_number(1, 2);
+        } else if (GET_OBJ_COST(obj) >= 100) {
+            rep_gain += 1;
+        }
+
+        /* Giving to high-reputation NPCs increases reputation more */
+        if (IS_NPC(vict) && GET_REPUTATION(vict) >= 60) {
+            rep_gain += 1;
+        }
+
+        /* Class bonus for generosity */
+        rep_gain += get_class_reputation_modifier(ch, CLASS_REP_GENEROSITY, vict);
+
+        if (rep_gain > 0) {
+            if (modify_player_reputation(ch, rep_gain)) {
+                /* Track this recipient to prevent exploitation */
+                ch->player_specials->saved.last_give_recipient_id = vict_id;
+            }
+        }
+    } else if (ch->ai_data) {
+        /* Mobs also gain reputation for generosity */
+        if (GET_OBJ_COST(obj) >= 500) {
+            ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + 1);
+        }
+    }
 }
 
 /* utility function for give */
@@ -739,6 +780,44 @@ void perform_give_gold(struct char_data *ch, struct char_data *vict, int amount)
 
     increase_gold(vict, amount);
     bribe_mtrigger(vict, ch, amount);
+
+    /* Reputation gain for giving gold (generosity) - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+        int rep_gain = 0;
+        long vict_id = IS_NPC(vict) ? GET_MOB_VNUM(vict) : GET_IDNUM(vict);
+
+        /* Anti-exploit: Giving to the same person repeatedly within 5 minutes gives no reputation */
+        if (ch->player_specials->saved.last_give_recipient_id == vict_id &&
+            ch->player_specials->saved.last_reputation_gain > 0 &&
+            (time(NULL) - ch->player_specials->saved.last_reputation_gain) < 300) {
+            /* Same recipient, too soon - no reputation gain */
+            return;
+        }
+
+        /* Large gold donations increase reputation */
+        if (amount >= 1000) {
+            rep_gain = rand_number(2, 4);
+        } else if (amount >= 500) {
+            rep_gain = rand_number(1, 3);
+        } else if (amount >= 100) {
+            rep_gain = 1;
+        }
+
+        /* Class bonus for generosity */
+        rep_gain += get_class_reputation_modifier(ch, CLASS_REP_GENEROSITY, vict);
+
+        if (rep_gain > 0) {
+            if (modify_player_reputation(ch, rep_gain)) {
+                /* Track this recipient to prevent exploitation */
+                ch->player_specials->saved.last_give_recipient_id = vict_id;
+            }
+        }
+    } else if (ch->ai_data) {
+        /* Mobs giving gold also gain reputation */
+        if (amount >= 500) {
+            ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + rand_number(1, 2));
+        }
+    }
 }
 
 ACMD(do_give)
@@ -1811,11 +1890,38 @@ ACMD(do_taint)
                         send_to_char(vict, "\r\n%s lhe dá uma piscadela e uma risadinha e se afasta.\r\n",
                                      GET_NAME(ch));
                         act("$n dá um sorriso malicioso ao esbarrar em $N.", FALSE, ch, 0, vict, TO_NOTVICT);
+
+                        /* Reputation changes for successful poisoning - dynamic reputation system */
+                        if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+                            int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_POISONING, vict);
+                            if (IS_EVIL(ch)) {
+                                /* Evil characters gain reputation (infamy) for poisoning */
+                                if (IS_GOOD(vict)) {
+                                    /* Poisoning good targets increases evil reputation */
+                                    modify_player_reputation(ch, rand_number(2, 3) + class_bonus);
+                                } else {
+                                    modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
+                                }
+                            } else {
+                                /* Good/Neutral characters LOSE reputation for poisoning */
+                                modify_player_reputation(ch, -rand_number(3, 6));
+                                /* Extra penalty for poisoning good targets */
+                                if (IS_GOOD(vict)) {
+                                    modify_player_reputation(ch, -rand_number(2, 4));
+                                }
+                            }
+                        }
                         return;
                     }
                     send_to_char(ch, "Uh oh. Parece que você foi pego!\r\n");
                     act("$n acabou de tentar envenenar seu $p!", FALSE, ch, target, 0, TO_VICT);
                     act("$n acabou de tentar envenenar $p de $N!", FALSE, ch, target, vict, TO_NOTVICT);
+
+                    /* Reputation penalty for getting caught poisoning - dynamic reputation system */
+                    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+                        modify_player_reputation(ch, -rand_number(4, 8));
+                    }
+
                     WAIT_STATE(ch, 10);
                     return;
                 }

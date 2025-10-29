@@ -3901,7 +3901,9 @@ void init_char(struct char_data *ch)
     GET_QUEST(ch) = NOTHING;
 
     /* Initialize reputation to default value */
-    ch->player_specials->saved.reputation = 50; /* Default reputation */
+    ch->player_specials->saved.reputation = 50;            /* Default reputation */
+    ch->player_specials->saved.last_reputation_gain = 0;   /* No previous gains */
+    ch->player_specials->saved.last_give_recipient_id = 0; /* No previous giving */
 
     ch->player.time.birth = time(0);
     ch->player.time.logon = time(0);
@@ -4315,6 +4317,7 @@ static void load_default_config(void)
     /* Experimental features. */
     CONFIG_NEW_AUCTION_SYSTEM = NO;
     CONFIG_EXPERIMENTAL_BANK_SYSTEM = NO;
+    CONFIG_MOB_CONTEXTUAL_SOCIALS = NO; /* Disabled by default - experimental feature */
 }
 
 void load_config(void)
@@ -4404,6 +4407,8 @@ void load_config(void)
                     CONFIG_MAP_SIZE = num;
                 else if (!str_cmp(tag, "default_minimap_size"))
                     CONFIG_MINIMAP_SIZE = num;
+                else if (!str_cmp(tag, "dynamic_reputation"))
+                    CONFIG_DYNAMIC_REPUTATION = num;
                 break;
 
             case 'e':
@@ -4511,6 +4516,8 @@ void load_config(void)
                     CONFIG_MAX_ZONE_PATH = num;
                 else if (!str_cmp(tag, "max_house_objs"))
                     CONFIG_MAX_HOUSE_OBJS = num;
+                else if (!str_cmp(tag, "mob_contextual_socials"))
+                    CONFIG_MOB_CONTEXTUAL_SOCIALS = num;
 
                 break;
 

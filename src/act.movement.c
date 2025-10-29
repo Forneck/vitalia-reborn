@@ -369,6 +369,70 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
                world[going_to].name);
         GET_DTS(ch)++;
         death_cry(ch);
+
+        /* Mob emotion updates and mourning for death trap deaths (experimental feature) */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+            /* Notify mobs in the room about the death trap death */
+            struct char_data *witness, *next_witness;
+            bool should_mourn;
+
+            /* Use safe iteration pattern since act() and socials can trigger extraction */
+            for (witness = world[going_to].people; witness; witness = next_witness) {
+                next_witness = witness->next_in_room;
+
+                if (!IS_NPC(witness) || !witness->ai_data || witness == ch)
+                    continue;
+
+                /* Check if witness should mourn */
+                should_mourn = FALSE;
+
+                /* Group members mourn */
+                if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
+                    should_mourn = TRUE;
+                }
+                /* Same alignment with decent relationship */
+                else if (IS_NPC(ch) && GET_ALIGNMENT(witness) * GET_ALIGNMENT(ch) > 0 &&
+                         witness->ai_data->emotion_friendship >= 40) {
+                    should_mourn = TRUE;
+                }
+                /* High compassion mobs mourn anyone non-evil */
+                else if (witness->ai_data->emotion_compassion >= 70 && !IS_EVIL(ch)) {
+                    should_mourn = TRUE;
+                }
+
+                if (should_mourn) {
+                    mob_mourn_death(witness, ch);
+
+                    /* Safety check: mob_mourn_death can trigger extraction via socials/scripts */
+                    if (MOB_FLAGGED(witness, MOB_NOTDEADYET) || PLR_FLAGGED(witness, PLR_NOTDEADYET))
+                        continue;
+
+                    /* Revalidate ai_data after potential extraction */
+                    if (!witness->ai_data)
+                        continue;
+                }
+
+                /* Update witness emotions based on the death */
+                if (IS_NPC(ch) && witness->ai_data) {
+                    /* Witnessing mob death in trap */
+                    if (GROUP(witness) && GROUP(ch) && GROUP(witness) == GROUP(ch)) {
+                        /* Ally died in trap */
+                        update_mob_emotion_ally_died(witness, ch);
+
+                        /* Safety check: emotion update shouldn't cause extraction, but verify */
+                        if (MOB_FLAGGED(witness, MOB_NOTDEADYET) || PLR_FLAGGED(witness, PLR_NOTDEADYET))
+                            continue;
+
+                        /* Extra fear from death trap */
+                        if (witness->ai_data) {
+                            witness->ai_data->emotion_fear =
+                                URANGE(0, witness->ai_data->emotion_fear + rand_number(10, 20), 100);
+                        }
+                    }
+                }
+            }
+        }
+
         extract_char(ch);
         return (0);
     }

@@ -251,6 +251,28 @@ ACMD(do_backstab)
     else
         hit(ch, vict, SKILL_BACKSTAB);
 
+    /* Reputation changes for backstabbing - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+        int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_STEALTH_ACTION, vict);
+        if (IS_EVIL(ch)) {
+            /* Evil characters gain reputation (infamy) for successful backstabs */
+            if (IS_GOOD(vict)) {
+                /* Backstabbing good targets increases evil reputation */
+                modify_player_reputation(ch, rand_number(1, 3) + class_bonus);
+            } else {
+                /* Any successful backstab for evil characters */
+                modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
+            }
+        } else {
+            /* Good/Neutral characters LOSE reputation for dishonorable backstabbing */
+            modify_player_reputation(ch, -rand_number(3, 5));
+            /* Extra penalty for backstabbing good targets */
+            if (IS_GOOD(vict)) {
+                modify_player_reputation(ch, -rand_number(2, 4));
+            }
+        }
+    }
+
     if (GET_LEVEL(ch) < LVL_GOD)
         WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }

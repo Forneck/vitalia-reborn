@@ -1922,6 +1922,16 @@ void nanny(struct descriptor_data *d, char *arg)
 
             /* Finalize rebegin process */
             /* Note: num_incarnations was already incremented when recording class history */
+
+            /* Remove all affects before resetting (unaffect) */
+            while (d->character->affected)
+                affect_remove(d->character, d->character->affected);
+
+            /* Reset reputation to initial value for new incarnation */
+            d->character->player_specials->saved.reputation = 0; /* Will be recalculated on first check */
+            d->character->player_specials->saved.last_reputation_gain = 0;
+            d->character->player_specials->saved.last_give_recipient_id = 0;
+
             GET_LEVEL(d->character) = 1;
             GET_EXP(d->character) = 1;
             GET_GOLD(d->character) = 0;
