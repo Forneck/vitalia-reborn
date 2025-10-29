@@ -4641,3 +4641,188 @@ void mob_mourn_death(struct char_data *mob, struct char_data *deceased)
         }
     }
 }
+
+/**
+ * Update mob emotions based on receiving a social/emote from a player
+ * @param mob The mob receiving the social
+ * @param actor The character performing the social
+ * @param social_name The name of the social command
+ */
+void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name)
+{
+    /* Positive socials that increase friendship, happiness, trust */
+    const char *positive_socials[] = {"bow",    "smile",     "nod",      "wave",   "applaud", "comfort", "pat",
+                                      "thank",  "salute",    "hug",      "cuddle", "kiss",    "wink",    "grin",
+                                      "giggle", "chuckle",   "cheer",    "praise", "admire",  "respect", "welcome",
+                                      "greet",  "handshake", "highfive", NULL};
+
+    /* Negative socials that increase anger, decrease trust/friendship */
+    const char *negative_socials[] = {"frown",  "glare", "spit",  "sneer", "accuse", "scorn",   "mock",
+                                      "insult", "taunt", "scoff", "curse", "ignore", "dismiss", "threaten",
+                                      "slap",   "punch", "kick",  "shove", "stare",  "eye",     NULL};
+
+    /* Neutral/curious socials that increase curiosity */
+    const char *neutral_socials[] = {"ponder", "shrug", "peer", "look", "examine", "watch", "observe", NULL};
+
+    /* Fearful socials that the actor shows - might increase mob's courage/pride */
+    const char *fearful_socials[] = {"cower", "tremble", "whimper", "beg", "plead", NULL};
+
+    int i;
+    bool is_positive = FALSE;
+    bool is_negative = FALSE;
+    bool is_neutral = FALSE;
+    bool is_fearful = FALSE;
+    int player_reputation;
+
+    if (!mob || !actor || !IS_NPC(mob) || !mob->ai_data || !social_name || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    player_reputation = GET_REPUTATION(actor);
+
+    /* Categorize the social */
+    for (i = 0; positive_socials[i] != NULL; i++) {
+        if (!strcmp(social_name, positive_socials[i])) {
+            is_positive = TRUE;
+            break;
+        }
+    }
+
+    if (!is_positive) {
+        for (i = 0; negative_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, negative_socials[i])) {
+                is_negative = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_negative) {
+        for (i = 0; neutral_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, neutral_socials[i])) {
+                is_neutral = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_negative && !is_neutral) {
+        for (i = 0; fearful_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, fearful_socials[i])) {
+                is_fearful = TRUE;
+                break;
+            }
+        }
+    }
+
+    /* Apply emotion changes based on social type */
+    if (is_positive) {
+        /* Positive socials increase happiness, friendship, trust */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 15));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(5, 12));
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(3, 10));
+
+        /* Decrease anger and fear */
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(3, 8));
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(2, 6));
+
+        /* High reputation actors have stronger positive impact */
+        if (player_reputation >= 60) {
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(5, 10));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(5, 10));
+            /* Might increase love for very high reputation */
+            if (player_reputation >= 80) {
+                adjust_emotion(mob, &mob->ai_data->emotion_love, rand_number(3, 8));
+            }
+        }
+
+        /* Compassionate mobs respond more to kindness */
+        if (mob->ai_data->emotion_compassion >= 60) {
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 10));
+        }
+    } else if (is_negative) {
+        /* Negative socials increase anger, decrease trust/friendship */
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(8, 20));
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(10, 20));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(8, 15));
+
+        /* Decrease happiness */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(5, 15));
+
+        /* May increase fear if mob is wimpy */
+        if (mob->ai_data->genetics.wimpy_tendency > 50) {
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(5, 15));
+        }
+
+        /* May increase pride/courage if mob is brave */
+        if (mob->ai_data->genetics.brave_prevalence > 60) {
+            adjust_emotion(mob, &mob->ai_data->emotion_pride, rand_number(5, 10));
+            adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(3, 8));
+        }
+
+        /* Low reputation actors cause more anger */
+        if (player_reputation < 30) {
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(5, 10));
+        }
+
+        /* Might trigger envy if social implies superiority */
+        if (!strcmp(social_name, "mock") || !strcmp(social_name, "taunt") || !strcmp(social_name, "scoff")) {
+            adjust_emotion(mob, &mob->ai_data->emotion_envy, rand_number(5, 15));
+        }
+    } else if (is_neutral) {
+        /* Neutral socials slightly increase curiosity */
+        adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
+
+        /* Might slightly increase friendship if mob is already friendly */
+        if (mob->ai_data->emotion_friendship >= 50) {
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(2, 5));
+        }
+    } else if (is_fearful) {
+        /* Actor showing fear increases mob's courage and pride */
+        adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(5, 15));
+        adjust_emotion(mob, &mob->ai_data->emotion_pride, rand_number(5, 12));
+
+        /* Decreases mob's own fear */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(5, 12));
+
+        /* If mob is evil and actor is begging, might increase mob's sadistic pleasure */
+        if (IS_EVIL(mob) && (!strcmp(social_name, "beg") || !strcmp(social_name, "plead"))) {
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 15));
+        }
+    }
+
+    /* Alignment interaction - opposite alignments intensify negative responses */
+    if (is_negative) {
+        if ((IS_GOOD(mob) && IS_EVIL(actor)) || (IS_EVIL(mob) && IS_GOOD(actor))) {
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(5, 10));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(5, 10));
+        }
+    }
+
+    /* Same alignment intensifies positive responses */
+    if (is_positive) {
+        if ((IS_GOOD(mob) && IS_GOOD(actor)) || (IS_EVIL(mob) && IS_EVIL(actor))) {
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(3, 8));
+            adjust_emotion(mob, &mob->ai_data->emotion_loyalty, rand_number(2, 6));
+        }
+    }
+
+    /* Mob might respond with a social back if emotions are strong enough */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= 30) { /* 30% chance */
+        /* Reciprocate positive socials if happy/friendly */
+        if (is_positive && mob->ai_data->emotion_happiness >= 50 && mob->ai_data->emotion_friendship >= 40) {
+            /* Mob might smile or nod back */
+            if (rand_number(1, 100) <= 50) {
+                act("$n sorri para você.", FALSE, mob, 0, actor, TO_VICT);
+                act("$n sorri para $N.", FALSE, mob, 0, actor, TO_NOTVICT);
+            }
+        }
+        /* Respond to negative socials with anger if mob is brave/angry */
+        else if (is_negative && mob->ai_data->emotion_anger >= 60 && mob->ai_data->emotion_courage >= 40) {
+            /* Mob might glare or growl back */
+            if (rand_number(1, 100) <= 50) {
+                act("$n olha furiosamente para você!", FALSE, mob, 0, actor, TO_VICT);
+                act("$n olha furiosamente para $N!", FALSE, mob, 0, actor, TO_NOTVICT);
+            }
+        }
+    }
+}

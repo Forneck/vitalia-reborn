@@ -126,6 +126,7 @@ void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer);
 void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_ally);
 void update_mob_emotion_received_item(struct char_data *mob, struct char_data *giver);
 void update_mob_emotion_passive(struct char_data *mob);
+void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
 
 /* Stoneskin utility functions */
