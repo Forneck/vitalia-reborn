@@ -2320,7 +2320,7 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->emotion_pride = rand_number(10, 40);
     mob->ai_data->emotion_envy = rand_number(0, 25);
 
-    /* Ensure all emotions stay within 0-100 bounds */
+    /* Ensure all emotions stay within 0-100 bounds (defensive programming for future modifications) */
     mob->ai_data->emotion_fear = URANGE(0, mob->ai_data->emotion_fear, 100);
     mob->ai_data->emotion_courage = URANGE(0, mob->ai_data->emotion_courage, 100);
     mob->ai_data->emotion_happiness = URANGE(0, mob->ai_data->emotion_happiness, 100);

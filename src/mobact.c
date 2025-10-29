@@ -289,6 +289,7 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     }
 
     /* Select a random social from the chosen category */
+    /* Count number of non-NULL elements in the social list */
     for (social_index = 0; social_list[social_index] != NULL; social_index++)
         ;
 

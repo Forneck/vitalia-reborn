@@ -4584,11 +4584,11 @@ void mob_mourn_death(struct char_data *mob, struct char_data *deceased)
     /* Determine mourning behavior based on emotions */
     /* High anger mobs express grief with anger */
     if (mob->ai_data->emotion_anger >= 60) {
-        social_index = rand_number(0, 2); /* Choose from angry_mourning array */
+        social_index = rand_number(0, 2); /* Choose from angry_mourning array (3 elements: indices 0-2) */
         social_to_use = angry_mourning[social_index];
     } else {
         /* Normal mourning */
-        social_index = rand_number(0, 3); /* Choose from mourning_socials array */
+        social_index = rand_number(0, 3); /* Choose from mourning_socials array (4 elements: indices 0-3) */
         social_to_use = mourning_socials[social_index];
     }
 

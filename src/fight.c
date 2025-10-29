@@ -405,8 +405,10 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
                     update_mob_emotion_ally_died(witness, ch);
                 } else if (IS_GOOD(witness) && IS_EVIL(ch)) {
                     /* Enemy died - good witness might feel satisfaction */
-                    witness->ai_data->emotion_happiness =
-                        URANGE(0, witness->ai_data->emotion_happiness + rand_number(5, 15), 100);
+                    if (witness->ai_data) {
+                        witness->ai_data->emotion_happiness =
+                            URANGE(0, witness->ai_data->emotion_happiness + rand_number(5, 15), 100);
+                    }
                 }
             }
         }
