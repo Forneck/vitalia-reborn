@@ -2949,8 +2949,8 @@ static struct set_struct {
                   {"goalitem", LVL_BUILDER, NPC, NUMBER},
                   {"goaltarget", LVL_BUILDER, NPC, NUMBER},
                   {"goaltimer", LVL_BUILDER, NPC, NUMBER},
-                  {"karma", LVL_GOD, PC, NUMBER},        /* 69 */
-                  {"reputation", LVL_GOD, BOTH, NUMBER}, /* 70 */
+                  {"karma", LVL_GOD, PC, NUMBER},        /* 70 */
+                  {"reputation", LVL_GOD, BOTH, NUMBER}, /* 71 */
                   {"\n", 0, BOTH, MISC}};
 
 static int perform_set(struct char_data *ch, struct char_data *vict, int mode, char *val_arg)
