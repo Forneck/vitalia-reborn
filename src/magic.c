@@ -208,6 +208,13 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim, int sp
     dam =
         MIN(spell->max_dam, MAX(0, formula_interpreter(ch, victim, spellnum, TRUE, spell->damages, level, &rts_code)));
 
+    /* Apply spell modifier to damage */
+    if (spell_modifier_diminish) {
+        dam = dam / 2; /* Halve damage for "minus" syllable */
+    } else if (spell_modifier_amplify) {
+        dam = dam * 2; /* Double damage for "plus" syllable */
+    }
+
     /* Apply weather modifier if enabled */
     if (CONFIG_WEATHER_AFFECTS_SPELLS && spell->element != ELEMENT_UNDEFINED) {
         float weather_modifier = get_weather_spell_modifier(ch, spell->element);
@@ -281,6 +288,12 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
             af[i].location = spell->applies[i].appl_num;
             af[i].modifier =
                 formula_interpreter(ch, victim, spellnum, TRUE, spell->applies[i].modifier, level, &rts_code);
+            /* Apply spell modifier to effect strength */
+            if (spell_modifier_diminish) {
+                af[i].modifier = af[i].modifier / 2; /* Halve effect for "minus" syllable */
+            } else if (spell_modifier_amplify) {
+                af[i].modifier = af[i].modifier * 2; /* Double effect for "plus" syllable */
+            }
         } else {
             af[i].location = spell->applies[i].appl_num;
 
@@ -290,6 +303,13 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
 
         af[i].duration =
             MAX(1, formula_interpreter(ch, victim, spellnum, TRUE, spell->applies[i].duration, level, &rts_code));
+
+        /* Apply spell modifier to duration */
+        if (spell_modifier_diminish) {
+            af[i].duration = MAX(1, af[i].duration / 2); /* Halve duration for "minus" syllable */
+        } else if (spell_modifier_amplify) {
+            af[i].duration = af[i].duration * 2; /* Double duration for "plus" syllable */
+        }
 
         /* Apply weather modifier to spell duration if enabled */
         if ((CONFIG_WEATHER_AFFECTS_SPELLS || CONFIG_SCHOOL_WEATHER_AFFECTS) && spell->element != ELEMENT_UNDEFINED &&
@@ -697,6 +717,13 @@ int mag_points(int level, struct char_data *ch, struct char_data *victim, int sp
     if (spell->points.hp) {
         hp = formula_interpreter(ch, victim, spellnum, TRUE, spell->points.hp, level, &rts_code);
 
+        /* Apply spell modifier to healing */
+        if (spell_modifier_diminish) {
+            hp = hp / 2; /* Halve healing for "minus" syllable */
+        } else if (spell_modifier_amplify) {
+            hp = hp * 2; /* Double healing for "plus" syllable */
+        }
+
         /* Apply weather modifier for healing if enabled */
         if ((CONFIG_WEATHER_AFFECTS_SPELLS || CONFIG_SCHOOL_WEATHER_AFFECTS) && spell->element != ELEMENT_UNDEFINED &&
             spell->school != SCHOOL_UNDEFINED) {
@@ -731,12 +758,24 @@ int mag_points(int level, struct char_data *ch, struct char_data *victim, int sp
 
     if (spell->points.mana) {
         mana = formula_interpreter(ch, victim, spellnum, TRUE, spell->points.mana, level, &rts_code);
+        /* Apply spell modifier to mana restoration */
+        if (spell_modifier_diminish) {
+            mana = mana / 2; /* Halve mana restoration for "minus" syllable */
+        } else if (spell_modifier_amplify) {
+            mana = mana * 2; /* Double mana restoration for "plus" syllable */
+        }
         GET_MANA(victim) = MIN(GET_MAX_MANA(victim), MAX(0, GET_MANA(victim) + mana));
         effect++;
     }
 
     if (spell->points.move) {
         move = formula_interpreter(ch, victim, spellnum, TRUE, spell->points.move, level, &rts_code);
+        /* Apply spell modifier to movement restoration */
+        if (spell_modifier_diminish) {
+            move = move / 2; /* Halve movement restoration for "minus" syllable */
+        } else if (spell_modifier_amplify) {
+            move = move * 2; /* Double movement restoration for "plus" syllable */
+        }
         GET_MOVE(victim) = MIN(GET_MAX_MOVE(victim), MAX(0, GET_MOVE(victim) + move));
         effect++;
     }

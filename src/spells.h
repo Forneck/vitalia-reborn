@@ -417,5 +417,7 @@ void spell_to_syllables_public(const char *spell_name, char *result, size_t resu
 
 /* Global variables */
 extern char cast_arg2[];
+extern int spell_modifier_diminish; /* Set to 1 when "minus" syllable is used */
+extern int spell_modifier_amplify;  /* Set to 1 when "plus" syllable is used */
 
 #endif /* _SPELLS_H_ */
