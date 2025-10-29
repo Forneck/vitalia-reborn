@@ -992,7 +992,7 @@ static void cedit_disp_autowiz_options(struct descriptor_data *d)
 
 static void cedit_disp_experimental_options(struct descriptor_data *d)
 {
-    get_char_colors(d);
+    get_char_colors(d->character);
     clear_screen(d);
 
     write_to_output(d,

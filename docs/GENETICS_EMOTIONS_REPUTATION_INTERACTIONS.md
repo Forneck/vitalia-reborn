@@ -30,7 +30,7 @@ This document analyzes how the three systems (genetic pool/behavior probabilitie
 
 ## Interaction Matrix
 
-### Genetics → Emotions (INITIALIZ ATION)
+### Genetics → Emotions (INITIALIZATION)
 
 **Synergistic Relationships:**
 ```
@@ -130,7 +130,7 @@ roam_tendency → emotion_excitement (÷2)
 
 **Cleric:**
 - Genetics: high healing_tendency → High compassion emotion → Healing actions → +Cleric class bonus → Enhanced reputation
-- **Synergy**: Healing genetics → Compassionate healing → Class bonus stacksin
+- **Synergy**: Healing genetics → Compassionate healing → Class bonus stacks
 
 **Thief (Evil):**
 - Genetics: high loot_tendency → High greed emotion → Stealing actions → +Thief class bonus → Evil reputation (infamy)
