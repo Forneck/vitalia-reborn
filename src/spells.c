@@ -1193,10 +1193,8 @@ ASPELL(spell_stoneskin)
         act("A proteção de sua pele se torna ainda mais resistente.", FALSE, victim, 0, 0, TO_CHAR);
         act("A pele de $n se torna ainda mais dura.", FALSE, victim, 0, 0, TO_ROOM);
     } else {
-        /* First time casting */
+        /* First time casting - messages will be sent by spell system */
         affect_to_char(victim, &af);
-        act("Você sente sua pele se tornando dura como rocha.", FALSE, victim, 0, 0, TO_CHAR);
-        act("A pele de $n se torna mais dura.", FALSE, victim, 0, 0, TO_ROOM);
     }
 }
 
