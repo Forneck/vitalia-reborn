@@ -1051,6 +1051,13 @@ struct mob_ai_data {
     int emotion_courage;    /* Courage level - opposite of fear (relates to brave_prevalence) */
     int emotion_excitement; /* Excitement/restlessness - affects roaming, activity (relates to roam_tendency) */
 
+    /* Negative/aversive emotions */
+    int emotion_disgust;     /* Disgust level - reactions to inappropriate/repulsive actions */
+    int emotion_shame;       /* Shame/embarrassment level - for unwanted/degrading situations */
+    int emotion_pain;        /* Pain level - physical suffering from violent actions */
+    int emotion_horror;      /* Horror level - extreme fear/revulsion to disturbing acts */
+    int emotion_humiliation; /* Humiliation level - degradation and loss of dignity */
+
     /* Temporary Quest Master functionality */
     bool is_temp_questmaster; /* True if this mob is acting as temporary quest master */
     qst_vnum *temp_quests;    /* Array of quest vnums this mob is managing temporarily */
