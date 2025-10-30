@@ -921,8 +921,15 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj, int sp
                 if (GET_OBJ_TYPE(obj) == ITEM_WEAPON) {
                     /* Evil players empower cursed weapons, others weaken them */
                     if (!IS_NPC(ch) && IS_EVIL(ch)) {
-                        GET_OBJ_VAL(obj, 2)++; /* Evil curse adds dark power to weapon */
-                        send_to_char(ch, "Isto brilha vermelho sombrio e pulsa com energia maligna!\r\n");
+                        /* Cap dice size to prevent exploit: curse/remove curse cycling */
+                        if (GET_OBJ_VAL(obj, 2) < MAX_CURSE_DICE_SIZE) {
+                            GET_OBJ_VAL(obj, 2)++; /* Evil curse adds dark power to weapon */
+                            send_to_char(ch, "Isto brilha vermelho sombrio e pulsa com energia maligna!\r\n");
+                        } else {
+                            send_to_char(
+                                ch,
+                                "A arma já está saturada com poder das trevas e não pode ser mais amaldiçoada!\r\n");
+                        }
                     } else {
                         GET_OBJ_VAL(obj, 2)--; /* Regular curse weakens weapon */
                         send_to_char(ch, "Isto brilha vermelho por alguns instantes.\r\n");
@@ -963,8 +970,19 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj, int sp
         case SPELL_REMOVE_CURSE:
             if (OBJ_FLAGGED(obj, ITEM_NODROP)) {
                 REMOVE_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_NODROP);
-                if (GET_OBJ_TYPE(obj) == ITEM_WEAPON)
-                    GET_OBJ_VAL(obj, 2)++;
+                if (GET_OBJ_TYPE(obj) == ITEM_WEAPON) {
+                    /* Only increase dice size if it's below a reasonable threshold.
+                     * This prevents exploit where evil players alternate curse/remove curse
+                     * to infinitely boost weapon damage. Assume weapons with dice size
+                     * >= 6 were likely boosted by evil curse and should be reduced instead. */
+                    if (GET_OBJ_VAL(obj, 2) < 6) {
+                        GET_OBJ_VAL(obj, 2)++; /* Restore weakened weapon */
+                    } else if (GET_OBJ_VAL(obj, 2) > MAX_CURSE_DICE_SIZE) {
+                        /* If somehow above max, reduce back to max */
+                        GET_OBJ_VAL(obj, 2) = MAX_CURSE_DICE_SIZE;
+                    }
+                    /* If dice size is 6-12, don't change it - could be normal or evil-cursed */
+                }
                 send_to_char(ch, "Isto brilha azul por uns instantes.\r\n");
             }
             break;
