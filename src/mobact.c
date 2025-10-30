@@ -166,14 +166,30 @@ bool validate_goal_obj(struct char_data *ch)
  */
 static void mob_contextual_social(struct char_data *ch, struct char_data *target)
 {
-    const char *positive_socials[] = {"bow", "smile", "nod", "wave", "applaud", NULL};
-    const char *negative_socials[] = {"frown", "glare", "spit", "sneer", "accuse", NULL};
-    const char *neutral_socials[] = {"ponder", "shrug", "nod", "peer", NULL};
-    const char *resting_socials[] = {"comfort", "pat", NULL};
-    const char *fearful_socials[] = {"cower", "tremble", "whimper", NULL};
-    const char *loving_socials[] = {"hug", "cuddle", "kiss", NULL};
-    const char *proud_socials[] = {"strut", "flex", "boast", NULL};
-    const char *envious_socials[] = {"envy", "covet", "eye", NULL};
+    /* Expanded social lists with more variety for mob usage */
+    const char *positive_socials[] = {"bow",     "smile", "nods",     "waves",      "applaud", "agree",
+                                      "beam",    "clap",  "grin",     "greet",      "thanks",  "thumbsup",
+                                      "welcome", "winks", "backclap", "sweetsmile", "happy",   NULL};
+    const char *negative_socials[] = {"frown", "glare", "spit", "sneer", "accuse", "growl", "snarl",
+                                      "curse", "mock",  "hate", "steam", "swear",  NULL};
+    const char *neutral_socials[] = {"ponder", "shrugs",  "peer", "blink",   "wonder", "think",
+                                     "wait",   "scratch", "yawn", "stretch", NULL};
+    const char *resting_socials[] = {"comfort", "pat", "calm", "console", "cradle", "tuck", NULL};
+    const char *fearful_socials[] = {"cower", "whimper", "cringe", "flinch",  "gasp",
+                                     "panic", "shake",   "worry",  "shivers", NULL};
+    const char *loving_socials[] = {"hug",   "cuddle", "kiss",  "bearhug", "blush",  "caress", "embrace",
+                                    "flirt", "love",   "swoon", "charm",   "huggle", "ghug",   NULL};
+    const char *proud_socials[] = {"strut", "flex", "boast", "brag", "pose", NULL};
+    const char *envious_socials[] = {"envy", "eye", "greed", NULL};
+    /* New social categories for more emotional variety */
+    const char *playful_socials[] = {"tickle", "poke", "tease", "bounce", "giggle",
+                                     "dance",  "skip", "joke",  "sing",   NULL};
+    const char *aggressive_socials[] = {"threaten", "challenge", "growl",     "snarl", "bite",
+                                        "slap",     "battlecry", "warscream", NULL};
+    const char *sad_socials[] = {"cry", "sob", "weep", "sulk", "sad", NULL};
+    const char *confused_socials[] = {"boggle", "blink", "puzzle", "wonder", "scratch", "think", NULL};
+    const char *excited_socials[] = {"bounce", "whoo", "cheers", NULL};
+    const char *respectful_socials[] = {"salute", "curtsey", "kneel", NULL};
 
     const char **social_list = NULL;
     int target_reputation;
@@ -242,13 +258,33 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     else if (mob_love >= 70 || (mob_friendship >= 80 && mob_trust >= 60)) {
         social_list = loving_socials;
     }
-    /* High anger (70+) or high anger with low loyalty to good targets */
+    /* High anger (70+) or high anger with low loyalty to good targets - be aggressive */
     else if (mob_anger >= 70 || (mob_anger >= 50 && mob_loyalty < 30 && IS_GOOD(target))) {
+        social_list = aggressive_socials;
+    }
+    /* Moderate anger with low courage - show negative but not aggressive behavior */
+    else if (mob_anger >= 50 && mob_courage < 50) {
         social_list = negative_socials;
+    }
+    /* High sadness (70+) - show sad behavior */
+    else if (mob_sadness >= 70) {
+        social_list = sad_socials;
+    }
+    /* High excitement (75+) and high happiness - show excited behavior */
+    else if (mob_excitement >= 75 && mob_happiness >= 60) {
+        social_list = excited_socials;
+    }
+    /* High happiness (70+) with high excitement (60+) - show playful behavior */
+    else if (mob_happiness >= 70 && mob_excitement >= 60) {
+        social_list = playful_socials;
     }
     /* High happiness (70+) shows positive behavior */
     else if (mob_happiness >= 70) {
         social_list = positive_socials;
+    }
+    /* High curiosity (70+) with moderate happiness - show confused/wondering behavior */
+    else if (mob_curiosity >= 70 && mob_happiness >= 30 && mob_happiness < 70) {
+        social_list = confused_socials;
     }
     /* Moderate emotions combined with other factors */
     /* High reputation target (60+) gets positive socials from happy/friendly mobs */
@@ -267,7 +303,11 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     } else if (IS_GOOD(ch) && IS_GOOD(target) && mob_friendship >= 30) {
         social_list = positive_socials; /* Good likes good, especially if friendly */
     } else if (IS_EVIL(ch) && IS_EVIL(target) && target_reputation >= 40) {
-        social_list = positive_socials; /* Evil respects reputable evil */
+        /* Evil respects reputable evil - show respect */
+        social_list = respectful_socials;
+    } else if (IS_GOOD(ch) && target_reputation >= 80) {
+        /* Good mobs respect highly reputable targets */
+        social_list = respectful_socials;
     }
     /* Target is resting/sitting - use comforting socials if mob has compassion (low anger, high compassion/friendship)
      */
