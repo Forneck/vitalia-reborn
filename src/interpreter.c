@@ -1938,9 +1938,8 @@ void nanny(struct descriptor_data *d, char *arg)
             /* Finalize rebegin process */
             /* Note: num_incarnations was already incremented when recording class history */
 
-            /* Remove all affects before resetting (unaffect) */
-            while (d->character->affected)
-                affect_remove(d->character, d->character->affected);
+            /* Remove all affects before resetting (unaffect) - using optimized O(n) removal */
+            affect_remove_all(d->character);
 
             /* Reset reputation to initial value for new incarnation */
             d->character->player_specials->saved.reputation = 50; /* Default reputation, matches new character */
