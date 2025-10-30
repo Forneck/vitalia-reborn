@@ -28,6 +28,8 @@
 
 /* Global Variables definitions, used elsewhere */
 char cast_arg2[MAX_INPUT_LENGTH];
+int spell_modifier_diminish = 0; /* Set to 1 when "minus" syllable is used */
+int spell_modifier_amplify = 0;  /* Set to 1 when "plus" syllable is used */
 
 /* Local (File Scope) Function Prototypes */
 static void say_spell(struct char_data *ch, int spellnum, struct char_data *tch, struct obj_data *tobj);
@@ -193,6 +195,13 @@ int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
     }
 
     mana = MAX(5, formula_interpreter(ch, tch, spellnum, TRUE, spell->assign[num].num_mana, GET_LEVEL(ch), &rts_code));
+
+    /* Apply spell modifier to mana cost */
+    if (spell_modifier_diminish) {
+        mana = mana / 2; /* Halve mana cost for "minus" syllable */
+    } else if (spell_modifier_amplify) {
+        mana = mana * 2; /* Double mana cost for "plus" syllable */
+    }
 
     return mana;
 }
@@ -443,12 +452,12 @@ int check_voice_cast(struct char_data *ch, const char *spoken_text)
             send_to_char(ch, "As palavras místicas ressoam com poder...%s\r\n", modifier_msg);
 
             /* Store modifier flags globally for the cast command to use */
-            /* Note: In a full implementation, you'd want to pass these through properly */
-            /* For now, we'll just cast normally and show the message */
+            spell_modifier_diminish = has_diminish;
+            spell_modifier_amplify = has_amplify;
             command_interpreter(ch, cast_command);
-
-            /* TODO: Apply actual modifiers to spell effect, duration, and cost */
-            /* This would require modifying call_magic() and mag_manacost() functions */
+            /* Reset modifier flags after casting */
+            spell_modifier_diminish = 0;
+            spell_modifier_amplify = 0;
 
             return 1;
         } else {
