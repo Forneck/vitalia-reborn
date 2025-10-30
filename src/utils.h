@@ -637,6 +637,13 @@ void char_from_furniture(struct char_data *ch);
 #define GET_MOB_COURAGE(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_courage : 0)
 #define GET_MOB_EXCITEMENT(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_excitement : 0)
 
+/* Negative/aversive emotions */
+#define GET_MOB_DISGUST(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_disgust : 0)
+#define GET_MOB_SHAME(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_shame : 0)
+#define GET_MOB_PAIN(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_pain : 0)
+#define GET_MOB_HORROR(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_horror : 0)
+#define GET_MOB_HUMILIATION(ch) ((ch)->ai_data ? (ch)->ai_data->emotion_humiliation : 0)
+
 /* Temporary Quest Master macros */
 #define IS_TEMP_QUESTMASTER(ch) ((ch)->ai_data ? (ch)->ai_data->is_temp_questmaster : FALSE)
 #define GET_TEMP_QUESTS(ch) ((ch)->ai_data ? (ch)->ai_data->temp_quests : NULL)
