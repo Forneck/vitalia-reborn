@@ -2,6 +2,19 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
+[Oct 30 2024] - Vitalia Reborn Development
+  feature: Evil Player Reputation System
+    - Added reputation routes (infamy) for evil players of all classes
+    - Evil Magic Users (Necromancers) gain reputation for dark/necromantic magic
+    - Evil Clerics (Fallen Clerics) gain reputation for harmful divine magic
+    - Evil Warriors gain reputation for killing good-aligned targets
+    - Evil Druids (Blighted Druids) gain reputation for harmful nature magic
+    - Evil Rangers gain reputation for hunting good targets
+    - System uses spell school (SCHOOL_NECROMANCY) and element (ELEMENT_UNHOLY) to identify evil spells
+    - New reputation action types: CLASS_REP_DARK_MAGIC, CLASS_REP_HARM_SPELL
+    - Enhanced combat reputation to reward evil killers for targeting good mobs
+    - See EVIL_REPUTATION_SYSTEM.md for full documentation
+@
 Development moved to Github in 2013, this document is no longer updated:
 https://github.com/tbamud/tbamud
 Changelog also available on Github:
