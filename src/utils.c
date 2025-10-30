@@ -4846,7 +4846,9 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     /* Fearful socials that the actor shows - might increase mob's courage/pride */
     const char *fearful_socials[] = {"cower", "tremble", "whimper", "beg", "plead", NULL};
 
-    /* Blocked socials - extremely inappropriate (sexual/extreme violence) */
+    /* Severely inappropriate socials - context dependent responses (not fully blocked) */
+    /* Sexual: Positive if very high intimacy/trust (love ≥80, trust ≥70), negative otherwise */
+    /* Extreme violence: Always triggers horror, pain, anger regardless of relationship */
     const char *blocked_socials[] = {"sex",     "seduce",    "fondle", "grope", "french",
                                      "despine", "shiskabob", "vice",   NULL};
 
@@ -4876,7 +4878,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
 
     player_reputation = GET_REPUTATION(actor);
 
-    /* Check for blocked socials first - highest priority */
+    /* Check for severely inappropriate socials - context dependent response */
     for (i = 0; blocked_socials[i] != NULL; i++) {
         if (!strcmp(social_name, blocked_socials[i])) {
             is_blocked = TRUE;
@@ -4884,28 +4886,101 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
-    /* If blocked, handle with extreme response and exit */
+    /* Handle severely inappropriate socials based on context (emotions and relationship) */
     if (is_blocked) {
-        /* Extreme anger, disgust, and fear response */
-        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(30, 50));
-        adjust_emotion(mob, &mob->ai_data->emotion_disgust, rand_number(40, 60));
-        adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(20, 40));
-        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(40, 60));
-        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(35, 55));
+        int mob_trust = mob->ai_data->emotion_trust;
+        int mob_love = mob->ai_data->emotion_love;
+        int mob_friendship = mob->ai_data->emotion_friendship;
 
-        /* Mob might attack or flee based on courage */
-        if (mob->ai_data->emotion_courage >= 50 && mob->ai_data->emotion_anger >= 70) {
-            /* High courage - might attack the offender */
-            if (rand_number(1, 100) <= 40 && !FIGHTING(mob)) {
-                act("$n está extremamente ofendido e ataca!", FALSE, mob, 0, actor, TO_ROOM);
-                set_fighting(mob, actor);
-            }
-        } else if (mob->ai_data->emotion_fear >= 40) {
-            /* Low courage - flee in fear/disgust */
+        /* Extremely violent socials (despine, shiskabob, vice) - always hostile response */
+        if (!strcmp(social_name, "despine") || !strcmp(social_name, "shiskabob") || !strcmp(social_name, "vice")) {
+            /* Extreme violence - always triggers horror, pain, and anger */
+            adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(30, 50));
+            adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(40, 60));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(30, 50));
             adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(20, 40));
-            act("$n recua horrorizado!", FALSE, mob, 0, actor, TO_ROOM);
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(50, 70));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(45, 65));
+
+            /* Very high chance of attack or flee */
+            if (mob->ai_data->emotion_courage >= 40 && rand_number(1, 100) <= 60 && !FIGHTING(mob)) {
+                act("$n reage violentamente ao ataque brutal!", FALSE, mob, 0, actor, TO_ROOM);
+                set_fighting(mob, actor);
+            } else {
+                adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(30, 50));
+                act("$n recua em pânico absoluto!", FALSE, mob, 0, actor, TO_ROOM);
+            }
+            return;
         }
-        return; /* Exit - blocked social handled */
+
+        /* Sexual socials (sex, seduce, fondle, grope, french) - context dependent */
+        /* Very high intimacy/love (80+) with high trust (70+) - receptive/positive */
+        if (mob_love >= 80 && mob_trust >= 70 && mob_friendship >= 70) {
+            /* Intimate/loving relationship - receptive to intimate gestures */
+            adjust_emotion(mob, &mob->ai_data->emotion_love, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(5, 10));
+
+            /* Might respond affectionately */
+            if (rand_number(1, 100) <= 50) {
+                act("$n responde afetuosamente.", FALSE, mob, 0, actor, TO_ROOM);
+            }
+            return;
+        }
+        /* High intimacy/love (60+) with moderate trust (50+) - mixed/curious */
+        else if (mob_love >= 60 && mob_trust >= 50 && mob_friendship >= 60) {
+            /* Developing relationship - uncertain but not hostile */
+            adjust_emotion(mob, &mob->ai_data->emotion_love, rand_number(5, 15));
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(5, 15));
+
+            /* Some trust loss but not hostile */
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(5, 15));
+
+            if (rand_number(1, 100) <= 40) {
+                act("$n parece desconfortável mas não reage com raiva.", FALSE, mob, 0, actor, TO_ROOM);
+            }
+            return;
+        }
+        /* Moderate relationship (30-59) - uncomfortable/disgusted */
+        else if (mob_trust >= 30 || mob_friendship >= 40) {
+            /* Not intimate enough - uncomfortable and disgusted */
+            adjust_emotion(mob, &mob->ai_data->emotion_disgust, rand_number(20, 40));
+            adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(25, 45));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(20, 35));
+
+            /* Might push away or show disgust */
+            if (rand_number(1, 100) <= 50) {
+                act("$n afasta-se com nojo evidente.", FALSE, mob, 0, actor, TO_VICT);
+                act("$n afasta-se de $N com nojo evidente.", FALSE, mob, 0, actor, TO_NOTVICT);
+            }
+            return;
+        }
+        /* Low/no relationship - hostile/extreme negative response */
+        else {
+            /* Stranger or enemy - extreme negative response */
+            adjust_emotion(mob, &mob->ai_data->emotion_disgust, rand_number(40, 60));
+            adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(20, 40));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(30, 50));
+            adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(20, 35));
+            adjust_emotion(mob, &mob->ai_data->emotion_humiliation, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(40, 60));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(35, 55));
+
+            /* High chance of attack or flee based on courage */
+            if (mob->ai_data->emotion_courage >= 50 && mob->ai_data->emotion_anger >= 60) {
+                if (rand_number(1, 100) <= 50 && !FIGHTING(mob)) {
+                    act("$n está extremamente ofendido e ataca!", FALSE, mob, 0, actor, TO_ROOM);
+                    set_fighting(mob, actor);
+                }
+            } else if (mob->ai_data->emotion_fear >= 30) {
+                adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(20, 40));
+                act("$n recua horrorizado e com nojo!", FALSE, mob, 0, actor, TO_ROOM);
+            }
+            return;
+        }
     }
 
     /* Categorize the social */

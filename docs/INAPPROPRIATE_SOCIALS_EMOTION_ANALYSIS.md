@@ -148,15 +148,40 @@ These emotions exist and could handle some inappropriate socials:
 
 **Implementation Status**: 33 of 34 inappropriate socials now trigger emotional responses!
 
-#### Blocked Socials (8) - Extreme Reactions
-These trigger **horror, disgust, extreme anger** and may cause mob to attack or flee:
-- ✅ **sex, seduce, fondle, grope, french** - Sexual assault (blocked)
-- ✅ **despine, shiskabob, vice** - Extreme violence (blocked)
+#### 1. Severely Inappropriate Socials (8) - Context-Dependent Responses ✅
 
-**Response**: anger +30-50, disgust +40-60, horror +20-40, trust -40-60, friendship -35-55
-**Action**: 40% chance mob attacks if courageous, or flees if fearful
+**Implementation**: Relationship and emotion-dependent instead of blanket blocking
 
-#### Disgusting Socials (8) - Disgust Reactions
+##### A. Extreme Violence (3) - Always Hostile Response
+**Socials**: despine, shiskabob, vice
+
+**Response** (always triggers, regardless of relationship):
+- horror +30-50, pain +40-60, anger +30-50, fear +20-40
+- trust -50-70, friendship -45-65
+- **Action**: 60% chance mob attacks (courage ≥40) or flees in panic
+- **Messages**: "$n reage violentamente ao ataque brutal!" or "$n recua em pânico absoluto!"
+
+##### B. Sexual Socials (5) - Relationship-Dependent Responses
+**Socials**: sex, seduce, fondle, grope, french
+
+**Very High Intimacy** (love ≥80, trust ≥70, friendship ≥70):
+- ✅ **Positive/Receptive**: love +10-20, happiness +10-20, trust +5-10
+- **Action**: 50% chance affectionate response - "$n responde afetuosamente."
+
+**High Intimacy** (love ≥60, trust ≥50, friendship ≥60):
+- ⚠️ **Mixed/Uncertain**: love +5-15, curiosity +10-20, shame +5-15, trust -5-15
+- **Action**: 40% chance - "$n parece desconfortável mas não reage com raiva."
+
+**Moderate Relationship** (trust ≥30 or friendship ≥40):
+- ❌ **Uncomfortable**: disgust +20-40, shame +15-30, anger +15-30, trust -25-45, friendship -20-35
+- **Action**: 50% chance - "$n afasta-se com nojo evidente."
+
+**Low/No Relationship** (trust <30 and friendship <40):
+- ❌ **Hostile**: disgust +40-60, horror +20-40, anger +30-50, shame +20-35, humiliation +15-30
+- trust -40-60, friendship -35-55
+- **Action**: 50% chance mob attacks or flees - "$n está extremamente ofendido e ataca!" or "$n recua horrorizado e com nojo!"
+
+#### 2. Disgusting Socials (8) - Disgust Reactions
 These trigger **disgust and moderate anger**:
 - ✅ **earlick, licks, pant, moan** - Suggestive actions
 - ✅ **moon, booger, drool, puke** - Bodily functions
@@ -164,7 +189,7 @@ These trigger **disgust and moderate anger**:
 **Response**: disgust +15-30, anger +10-25, trust -15-30, friendship -10-20, happiness -10-20
 **Action**: 40% chance mob shows disgust ("$n olha para você com nojo")
 
-#### Violent Socials (6) - Pain & Fear Reactions
+#### 3. Violent Socials (6) - Pain & Fear Reactions
 These trigger **pain, fear, and anger**:
 - ✅ **needle, shock, whip, spank, vampire, haircut** - Physical violence
 
@@ -172,14 +197,14 @@ These trigger **pain, fear, and anger**:
 **Modifiers**: Wimpy mobs +10-20 fear, Brave mobs +10-20 anger
 **Action**: 30% chance angry/courageous mob growls threateningly
 
-#### Humiliating Socials (3) - Shame & Humiliation
+#### 4. Humiliating Socials (3) - Shame & Humiliation
 These trigger **shame, humiliation, and anger**:
 - ✅ **suckit-up, wedgie, noogie** - Degrading actions
 
 **Response**: humiliation +15-30, shame +15-25, anger +10-20, trust -20-35, friendship -15-25, pride -10-20
 **Modifiers**: High pride mobs +15-25 anger (defensive reaction)
 
-#### Context-Dependent Socials (2) - Trust-Based
+#### 5. Context-Dependent Socials (2) - Trust-Based
 These have different reactions based on relationship:
 - ✅ **massage** - Positive if trusted (trust ≥50, friendship ≥40), disgusting if not
   - Trusted: happiness +10-20, trust +5-10
@@ -188,7 +213,7 @@ These have different reactions based on relationship:
   - Receptive: love +5-15, happiness +5-10, friendship +5-10
   - Suspicious: curiosity +5-10
 
-#### Regular Negative Socials - Enhanced
+#### 6. Regular Negative Socials - Enhanced
 Added to existing negative response system:
 - ✅ **jeer, snicker, ridicule, scowl** - Mocking/insulting actions
 
@@ -207,11 +232,11 @@ Only **1 inappropriate social** remains unhandled:
 
 - **Total inappropriate socials**: 34
 - **Now handled with new emotions**: 33 (97%)
-- **Blocked (extreme response)**: 8
+- **Context-dependent (relationship-based)**: 8 (5 sexual + 3 violence = severely inappropriate)
 - **Disgusting (disgust response)**: 8  
 - **Violent (pain response)**: 6
 - **Humiliating (shame response)**: 3
-- **Context-dependent**: 2
+- **Context-dependent (trust-based)**: 2 (massage, rose)
 - **Regular negative**: 5 (jeer, snicker, ridicule, scowl, slap)
 - **Remaining unhandled**: 1 (knuckle)
 
@@ -219,22 +244,27 @@ Only **1 inappropriate social** remains unhandled:
 
 ## Implementation Status
 
-### ✅ COMPLETED - All Priority Recommendations Implemented
+### ✅ COMPLETED - All Priority Recommendations Implemented + Enhanced
 
-#### Priority 1: CRITICAL - Block Extremely Inappropriate Socials ✅
-**STATUS**: IMPLEMENTED in `src/utils.c`
+#### Priority 1: CRITICAL - Context-Dependent Handling for Severely Inappropriate Socials ✅
+**STATUS**: FULLY IMPLEMENTED in `src/utils.c` with relationship-based responses
 
-Blocked socials filter added with extreme response:
+Severely inappropriate socials now use context-dependent logic:
 ```c
 const char *blocked_socials[] = {"sex", "seduce", "fondle", "grope", "french", 
                                  "despine", "shiskabob", "vice", NULL};
 ```
 
-Response implemented:
-- Extreme anger (+30-50), disgust (+40-60), horror (+20-40)
-- Trust (-40-60), friendship (-35-55)
-- 40% chance mob attacks (if courageous) or flees (if fearful)
-- Message: "$n está extremamente ofendido e ataca!" or "$n recua horrorizado!"
+**Sexual Socials** (sex, seduce, fondle, grope, french):
+- **Very high intimacy** (love ≥80, trust ≥70, friendship ≥70): ✅ **POSITIVE** - Receptive response
+- **High intimacy** (love ≥60, trust ≥50, friendship ≥60): ⚠️ **MIXED** - Uncertain but not hostile
+- **Moderate relationship** (trust ≥30 or friendship ≥40): ❌ **UNCOMFORTABLE** - Disgusted
+- **Low/no relationship** (trust <30, friendship <40): ❌ **HOSTILE** - May attack or flee
+
+**Extreme Violence** (despine, shiskabob, vice):
+- **Always hostile** regardless of relationship
+- Horror (+30-50), pain (+40-60), anger (+30-50), fear (+20-40)
+- 60% chance mob attacks or flees in panic
 
 #### Priority 2: HIGH - Add Violent Socials to Response System ✅
 **STATUS**: IMPLEMENTED in `src/utils.c`
