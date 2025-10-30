@@ -202,7 +202,7 @@ int main(int argc, char **argv)
     const char *dir;
 
     printf("Default System Locale  %s \n", setlocale(LC_ALL, ""));
-    setlocale(LC_ALL, "pt_BR_utf8");
+    setlocale(LC_ALL, "pt_BR.UTF-8");
     printf("Locale alterado\r\n");
 
 #ifdef MEMORY_DEBUG
