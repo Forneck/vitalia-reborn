@@ -256,6 +256,8 @@ void spedit_assign_menu(struct descriptor_data *d)
                            Q->assign[i].class_num != -1 ? pc_class_types[Q->assign[i].class_num] : "<empty>", nrm, cyn,
                            Q->assign[i].level, nrm, nrm, cyn, EMPTY_STR(Q->assign[i].prac_gain), nrm, cyn,
                            EMPTY_STR(Q->assign[i].num_mana));
+            if (len < 0 || total_len + len >= BUFSIZE)
+                break;
             total_len += len;
         }
     } else {
@@ -264,6 +266,8 @@ void spedit_assign_menu(struct descriptor_data *d)
                            "%s%d%s) Class       : %s%s %s(%s%3d%s) \r\n   %sPrac gain %% : %s%s\r\n", grn, i + 1, nrm,
                            yel, Q->assign[i].class_num != -1 ? pc_class_types[Q->assign[i].class_num] : "<empty>", nrm,
                            cyn, Q->assign[i].level, nrm, nrm, cyn, EMPTY_STR(Q->assign[i].prac_gain));
+            if (len < 0 || total_len + len >= BUFSIZE)
+                break;
             total_len += len;
         }
     }
@@ -294,6 +298,8 @@ void spedit_apply_menu(struct descriptor_data *d)
                                                           : apply_types[Q->applies[i].appl_num]
                                                     : "<empty>",
                        buf1, nrm, cyn, EMPTY_STR(Q->applies[i].duration));
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\nEnter choice (0 to quit) : ", nrm);
@@ -316,6 +322,8 @@ void spedit_protection_menu(struct descriptor_data *d)
                        "%s%d%s) Name     : %s%s %s(%s%d%s)\r\n   %sDuration : %s%s\r\n%s   Resist %% : %s%s\r\n", grn,
                        i + 1, nrm, yel, name, nrm, cyn, Q->protfrom[i].prot_num, nrm, nrm, cyn,
                        EMPTY_STR(Q->protfrom[i].duration), nrm, cyn, EMPTY_STR(Q->protfrom[i].resist));
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "\r\n%sEnter choice (0 to quit) : ", nrm);
@@ -333,6 +341,8 @@ void spedit_minpos_menu(struct descriptor_data *d)
     for (i = 0; i < NUM_CHAR_POSITION; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-16s%s", grn, i + 1, nrm, yel,
                        position_types[i], (i + 1) % 4 ? "" : "\r\n");
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\n\r\nEnter choice (0 to quit) : ", nrm);
@@ -352,6 +362,8 @@ void spedit_targ_flags_menu(struct descriptor_data *d)
     for (i = 0; i < NUM_SPELL_FLAGS; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-15s%s", grn, i + 1, nrm, yel, targ_flags[i],
                        (i + 1) % 4 ? "" : "\r\n");
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\n\r\nEnter choice (0 to quit) : ", nrm);
@@ -371,6 +383,8 @@ void spedit_mag_flags_menu(struct descriptor_data *d)
     for (i = 0; i < NUM_MAG; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-15s%s", grn, i + 1, nrm, yel, mag_flags[i],
                        (i + 1) % 4 ? "" : "\r\n");
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\nEnter choice (0 to quit) : ", nrm);
@@ -388,14 +402,21 @@ void spedit_choose_apply(struct descriptor_data *d)
     for (i = 0; i < NUM_APPLIES; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-15s%s", grn, i + 1, nrm, yel, apply_types[i],
                        (i + 1) % 4 ? "" : "\r\n");
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     len = snprintf(buf + total_len, BUFSIZE - total_len, "\r\n\r\n%s-- AFFECTS : \r\n", nrm);
-    total_len += len;
+    if (len < 0 || total_len + len >= BUFSIZE)
+        len = 0;
+    else
+        total_len += len;
     cpt = i + 1;
     for (i = cpt; i < cpt + NUM_AFF_FLAGS; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-15s%s", grn, i, nrm, yel,
                        affected_bits[i - cpt], (i - cpt + 1) % 4 ? "" : "\r\n");
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\n\r\nEnter choice (0 to quit, 'r' to remove) : ", nrm);
@@ -413,6 +434,8 @@ void spedit_assignement_menu(struct descriptor_data *d)
     for (i = 0; i < NUM_CLASSES; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-13s%s", grn, i + 1, nrm, yel,
                        pc_class_types[i], (i + 1) % 5 ? "" : "\r\n");
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\n\r\nEnter choice (0 to quit, 'r' to remove) : ", nrm);
