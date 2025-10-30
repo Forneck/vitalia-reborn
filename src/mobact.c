@@ -190,6 +190,14 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     const char *confused_socials[] = {"boggle", "blink", "puzzle", "wonder", "scratch", "think", NULL};
     const char *excited_socials[] = {"bounce", "whoo", "cheers", NULL};
     const char *respectful_socials[] = {"salute", "curtsey", "kneel", NULL};
+    /* Additional emotional categories for richer mob behavior */
+    const char *grateful_socials[] = {"thanks", "bow", "applaud", "backclap", "beam", "salute", NULL};
+    const char *mocking_socials[] = {"mock", "sneer", "snicker", "jeer", "taunt", NULL};
+    const char *submissive_socials[] = {"cower", "grovel", "bow", "kneel", "whimper", "cringe", "flinch", NULL};
+    const char *curious_socials[] = {"peer", "ponder", "wonder", "sniff", "gaze", "stare", NULL};
+    const char *triumphant_socials[] = {"cheers", "flex", "roar", "battlecry", "strut", NULL};
+    const char *protective_socials[] = {"embrace", "pat", "comfort", "console", NULL};
+    const char *mourning_socials[] = {"cry", "sob", "weep", "sulk", "despair", NULL};
 
     const char **social_list = NULL;
     int target_reputation;
@@ -242,13 +250,42 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     /* Determine which social category to use based on multiple factors */
     /* Priority order: extreme emotions > moderate emotions > reputation > alignment > position */
 
+    /* Very high fear (80+) and very low courage (20-) - show submissive behavior */
+    if (mob_fear >= 80 && mob_courage <= 20) {
+        social_list = submissive_socials;
+    }
     /* High fear (70+) and low courage - show fearful behavior */
-    if (mob_fear >= 70 && mob_courage < 40) {
+    else if (mob_fear >= 70 && mob_courage < 40) {
         social_list = fearful_socials;
+    }
+    /* Very high pride (85+) with high courage after victory - triumphant behavior */
+    else if (mob_pride >= 85 && mob_courage >= 70 && mob_excitement >= 60) {
+        social_list = triumphant_socials;
     }
     /* High pride (75+) - show proud behavior */
     else if (mob_pride >= 75) {
         social_list = proud_socials;
+    }
+    /* High compassion (70+) with loyalty towards injured/weak target - protective behavior */
+    else if (mob_compassion >= 70 && mob_loyalty >= 60 &&
+             (target_pos <= POS_RESTING || GET_HIT(target) < GET_MAX_HIT(target) / 2)) {
+        social_list = protective_socials;
+    }
+    /* High sadness (75+) with low excitement - mourning behavior (for death responses) */
+    else if (mob_sadness >= 75 && mob_excitement < 30) {
+        social_list = mourning_socials;
+    }
+    /* High happiness (60+) with very high friendship (70+) and trust (60+) - grateful behavior */
+    else if (mob_happiness >= 60 && mob_friendship >= 70 && mob_trust >= 60) {
+        social_list = grateful_socials;
+    }
+    /* High anger (60+) with high pride (60+) but not fully aggressive - mocking behavior */
+    else if (mob_anger >= 60 && mob_pride >= 60 && mob_courage >= 50 && !FIGHTING(ch)) {
+        social_list = mocking_socials;
+    }
+    /* High curiosity (75+) with moderate excitement - curious/investigating behavior */
+    else if (mob_curiosity >= 75 && mob_excitement >= 40 && mob_excitement < 70) {
+        social_list = curious_socials;
     }
     /* High envy (70+) and target has good equipment/reputation */
     else if (mob_envy >= 70 && (target_reputation >= 50 || mob_greed >= 60)) {

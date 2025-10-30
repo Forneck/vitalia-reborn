@@ -28,10 +28,10 @@ Enable in-game with immortal `cedit` command:
 **Sexual Content (17):**
 custard, dive, earlick, fondle, french, grope, joint, licks, massage, moan, pant, seduce, sex, spank, titter, vampire, whip
 
-**Violent/Disturbing (10):**
+**Violent/Disturbing (9):**
 despine, haircut, halo, knuckle, needle, shock, shiskabob, spork, vice
 
-**Offensive Gestures (7):**
+**Offensive Gestures (8):**
 boo, flick, hula, modest, newidea, pushup, rose, suckit-up
 
 ### Recommendation
@@ -65,7 +65,7 @@ abc, howl, moon, noogie, wedgie
 | aggressive_socials | 8 | threaten, challenge, bite, slap | High anger, combat situations |
 | fearful_socials | 9 | cower, whimper, cringe, panic | High fear + low courage |
 | loving_socials | 13 | hug, cuddle, kiss, embrace | High love or friendship+trust |
-| playful_socials | 9 | tickle, poke, tease, giggle | High happiness + excitement |
+| playful_socials | 9 | tickle, poke, tease, bounce*, giggle | High happiness + moderate excitement |
 | sad_socials | 5 | cry, sob, weep, sulk | High sadness |
 | proud_socials | 5 | strut, flex, boast, brag | High pride |
 | envious_socials | 3 | envy, eye, greed | High envy + wealthy target |
@@ -73,26 +73,38 @@ abc, howl, moon, noogie, wedgie
 | resting_socials | 6 | comfort, pat, calm, console | Target resting + compassion |
 | neutral_socials | 10 | ponder, shrug, blink, think | Default/moderate emotions |
 | confused_socials | 6 | boggle, puzzle, wonder | High curiosity |
-| excited_socials | 3 | bounce, whoo, cheers | High happiness + excitement |
+| excited_socials | 3 | bounce*, whoo, cheers | High happiness + very high excitement |
+| **grateful_socials** ✨ | 6 | thanks, bow, applaud, salute | happiness ≥60, friendship ≥70, trust ≥60 |
+| **mocking_socials** ✨ | 5 | mock, sneer, snicker, jeer | anger ≥60, pride ≥60, courage ≥50 |
+| **submissive_socials** ✨ | 7 | cower, grovel, kneel, flinch | fear ≥80, courage ≤20 |
+| **curious_socials** ✨ | 6 | peer, wonder, sniff, gaze | curiosity ≥75, excitement 40-69 |
+| **triumphant_socials** ✨ | 5 | cheers, flex, roar, strut | pride ≥85, courage ≥70, excitement ≥60 |
+| **protective_socials** ✨ | 4 | embrace, pat, comfort | compassion ≥70, loyalty ≥60, target injured |
+| **mourning_socials** ✨ | 5 | cry, sob, weep, despair | sadness ≥75, excitement <30 |
 
-**Total: 102 unique socials used by mobs**
+✨ = **NEW CATEGORIES IMPLEMENTED**
+
+*Note: 'bounce' appears in both excited and playful categories in code
+
+**Total: 21 emotion categories, ~120 unique socials used by mobs**
 
 ---
 
-## Suggested New Categories
+## Implementation Status ✅
 
-### High Priority
-1. **grateful_socials** - After receiving help (thank, bow, applaud)
-2. **mocking_socials** - Taunting enemies (mock, taunt, jeer)
-3. **submissive_socials** - Fear-based submission (grovel, kneel, cower)
+### ALL SUGGESTED CATEGORIES HAVE BEEN IMPLEMENTED
 
-### Medium Priority
-4. **curious_socials** - Investigation (peer, sniff, examine)
-5. **triumphant_socials** - Victory celebration (cheer, flex, roar)
+The 7 suggested categories below have been fully implemented in `src/mobact.c`:
 
-### Low Priority
-6. **protective_socials** - Guarding allies (guard, shield, stand)
-7. **mourning_socials** - Grief response (cry, mourn, wail)
+1. ✅ **grateful_socials** - Implemented (thanks, bow, applaud, backclap, beam, salute)
+2. ✅ **mocking_socials** - Implemented (mock, sneer, snicker, jeer, taunt)
+3. ✅ **submissive_socials** - Implemented (cower, grovel, bow, kneel, whimper, cringe, flinch)
+4. ✅ **curious_socials** - Implemented (peer, ponder, wonder, sniff, gaze, stare)
+5. ✅ **triumphant_socials** - Implemented (cheers, flex, roar, battlecry, strut)
+6. ✅ **protective_socials** - Implemented (embrace, pat, comfort, console)
+7. ✅ **mourning_socials** - Implemented (cry, sob, weep, sulk, despair)
+
+See `docs/SOCIALS_ANALYSIS.md` for complete implementation details and emotion thresholds.
 
 ---
 

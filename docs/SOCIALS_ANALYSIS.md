@@ -179,9 +179,11 @@ Add a silly_socials exclusion list in mob_contextual_social() that prevents norm
 
 ## 4. Current Emotion Categories in Mob System
 
-### Implemented Categories (14 total, 102 socials)
+### Implemented Categories (21 total, ~120 socials)
 
 The current implementation in `mobact.c` includes these emotion-based social categories:
+
+#### Core Emotional Categories (14 original)
 
 #### 1. **positive_socials** (18 socials)
 **Usage**: High reputation targets, good alignment, friendly mobs
@@ -239,69 +241,131 @@ The current implementation in `mobact.c` includes these emotion-based social cat
 **Usage**: Evil mobs respecting reputable evil, good mobs respecting heroes
 - salute, curtsey, kneel
 
----
+#### New Enhanced Categories (7 additional) - **NEWLY IMPLEMENTED**
 
-## 5. Suggested Additional Emotion Categories
+#### 15. **grateful_socials** (6 socials) ✨ NEW
+**Usage**: High happiness + very high friendship + high trust
+**Emotion Trigger**: happiness ≥ 60, friendship ≥ 70, trust ≥ 60
+- thanks, bow, applaud, backclap, beam, salute
 
-Based on available socials and emotional AI complexity, these categories could enhance mob behavior:
+#### 16. **mocking_socials** (5 socials) ✨ NEW
+**Usage**: High anger + high pride but not fully aggressive
+**Emotion Trigger**: anger ≥ 60, pride ≥ 60, courage ≥ 50, not fighting
+- mock, sneer, snicker, jeer, taunt
 
-### Potential New Categories
+#### 17. **submissive_socials** (7 socials) ✨ NEW
+**Usage**: Very high fear + very low courage
+**Emotion Trigger**: fear ≥ 80, courage ≤ 20
+- cower, grovel, bow, kneel, whimper, cringe, flinch
 
-#### **grateful_socials** (6-8 socials)
-**Usage**: After receiving help, healing, or gifts
-- thank, thanks, bow, applaud, salute, grateful gestures
-- **Available socials**: thanks, bow, applaud, backclap, beam, salute
+#### 18. **curious_socials** (6 socials) ✨ NEW
+**Usage**: Very high curiosity + moderate excitement
+**Emotion Trigger**: curiosity ≥ 75, excitement 40-69
+- peer, ponder, wonder, sniff, gaze, stare
 
-#### **mocking_socials** (5-7 socials)
-**Usage**: Taunting enemies, contemptuous behavior
-- mock, taunt, sneer, snicker, jeer, ridicule
-- **Available socials**: mock, sneer, snicker, jeer, taunt, laugh
+#### 19. **triumphant_socials** (5 socials) ✨ NEW
+**Usage**: Very high pride + high courage after victory
+**Emotion Trigger**: pride ≥ 85, courage ≥ 70, excitement ≥ 60
+- cheers, flex, roar, battlecry, strut
 
-#### **curious_socials** (6-8 socials)
-**Usage**: Investigating new characters/objects
-- peer, examine, ponder, wonder, sniff, investigate
-- **Available socials**: peer, ponder, wonder, sniff, gaze, stare
+#### 20. **protective_socials** (4 socials) ✨ NEW
+**Usage**: High compassion + loyalty towards injured/weak target
+**Emotion Trigger**: compassion ≥ 70, loyalty ≥ 60, target injured or resting
+- embrace, pat, comfort, console
 
-#### **protective_socials** (4-6 socials)
-**Usage**: Guarding allies, defensive posture
-- guard, shield, embrace (protective), stand
-- **Available socials**: embrace, pat, comfort, console (could be repurposed)
-
-#### **submissive_socials** (5-7 socials)
-**Usage**: Low courage + high fear, submitting to authority
-- cower, grovel, bow, kneel, whimper, cringe
-- **Available socials**: cower, grovel, bow, kneel, whimper, cringe, flinch
-
-#### **triumphant_socials** (4-6 socials)
-**Usage**: After victory, high pride + excitement
-- cheer, victory, flex, roar, battlecry
-- **Available socials**: cheers, flex, roar, battlecry, strut
-
-#### **mourning_socials** (5-7 socials)
-**Usage**: After ally death, grief behavior
-- cry, sob, weep, mourn, wail, grieve
-- **Available socials**: cry, sob, weep, wail, sulk, despair
-
-### Implementation Priority
-
-**High Priority** (immediate benefit):
-1. grateful_socials - enhances NPC interaction after player help
-2. mocking_socials - adds depth to combat/confrontation
-3. submissive_socials - improves fear-based behavior
-
-**Medium Priority** (nice to have):
-4. curious_socials - makes exploration feel more alive
-5. triumphant_socials - adds celebration after combat
-
-**Low Priority** (specialized situations):
-6. protective_socials - for bodyguards/defenders
-7. mourning_socials - for death responses (already partially implemented)
+#### 21. **mourning_socials** (5 socials) ✨ NEW
+**Usage**: High sadness + low excitement (grief/mourning behavior)
+**Emotion Trigger**: sadness ≥ 75, excitement < 30
+- cry, sob, weep, sulk, despair
 
 ---
 
-## 6. Technical Recommendations
+## 5. Implementation Summary - NEW CATEGORIES ✨
 
-### Code Modifications Needed
+### What Was Added
+
+**7 new emotion-based social categories** have been implemented in `src/mobact.c`:
+
+1. **grateful_socials** - For mobs expressing gratitude after receiving help
+2. **mocking_socials** - For taunting/mocking behavior without full aggression  
+3. **submissive_socials** - For extreme fear/submission behavior
+4. **curious_socials** - For investigative/wondering behavior
+5. **triumphant_socials** - For victory celebrations
+6. **protective_socials** - For guarding/defending allies
+7. **mourning_socials** - For grief responses
+
+### Emotion-Based Selection Logic
+
+The social selection now uses a sophisticated priority system based on emotion thresholds:
+
+**Highest Priority (Extreme Emotions)**:
+- Submissive (fear ≥ 80, courage ≤ 20)
+- Fearful (fear ≥ 70, courage < 40)
+- Triumphant (pride ≥ 85, courage ≥ 70, excitement ≥ 60)
+
+**High Priority (Strong Emotions)**:
+- Proud (pride ≥ 75)
+- Protective (compassion ≥ 70, loyalty ≥ 60, target injured)
+- Mourning (sadness ≥ 75, excitement < 30)
+- Grateful (happiness ≥ 60, friendship ≥ 70, trust ≥ 60)
+- Mocking (anger ≥ 60, pride ≥ 60, courage ≥ 50)
+- Curious (curiosity ≥ 75, excitement 40-69)
+
+**Medium Priority**: Envy, Love, Aggression, Sadness, Excitement, Playful
+
+**Lower Priority**: Positive, Negative, Neutral, Confused, Respectful, Resting
+
+### Total Social Coverage
+
+- **21 emotion categories** (14 original + 7 new)
+- **~120 unique socials** used by mobs (some socials appear in multiple categories)
+- **Emotion-driven selection** ensures appropriate social responses based on mob's emotional state
+
+---
+
+## 6. Suggested Additional Emotion Categories
+
+### Status: COMPLETED ✅
+
+All 7 suggested categories from the original analysis have been implemented:
+
+1. ✅ **grateful_socials** - Implemented
+2. ✅ **mocking_socials** - Implemented
+3. ✅ **submissive_socials** - Implemented (renamed from submissive)
+4. ✅ **curious_socials** - Implemented
+5. ✅ **triumphant_socials** - Implemented
+6. ✅ **protective_socials** - Implemented
+7. ✅ **mourning_socials** - Implemented
+
+---
+
+## 7. Technical Implementation Details
+
+### Code Changes Made
+
+#### File: `src/mobact.c`
+
+**Added 7 new social arrays** (lines ~194-200):
+```c
+const char *grateful_socials[] = {"thanks", "bow", "applaud", "backclap", "beam", "salute", NULL};
+const char *mocking_socials[] = {"mock", "sneer", "snicker", "jeer", "taunt", NULL};
+const char *submissive_socials[] = {"cower", "grovel", "bow", "kneel", "whimper", "cringe", "flinch", NULL};
+const char *curious_socials[] = {"peer", "ponder", "wonder", "sniff", "gaze", "stare", NULL};
+const char *triumphant_socials[] = {"cheers", "flex", "roar", "battlecry", "strut", NULL};
+const char *protective_socials[] = {"embrace", "pat", "comfort", "console", NULL};
+const char *mourning_socials[] = {"cry", "sob", "weep", "sulk", "despair", NULL};
+```
+
+**Enhanced emotion-based selection logic** with priority-ordered checks in `mob_contextual_social()`:
+- Submissive behavior for extreme fear (fear ≥ 80, courage ≤ 20)
+- Triumphant behavior for victory/pride (pride ≥ 85, courage ≥ 70, excitement ≥ 60)
+- Protective behavior for compassionate mobs with injured allies
+- Mourning behavior for grief (sadness ≥ 75, excitement < 30)
+- Grateful behavior for friendly mobs (happiness ≥ 60, friendship ≥ 70, trust ≥ 60)
+- Mocking behavior for angry but not aggressive mobs (anger ≥ 60, pride ≥ 60, courage ≥ 50)
+- Curious behavior for investigative mobs (curiosity ≥ 75, excitement 40-69)
+
+### Future Enhancements (Not Yet Implemented)
 
 #### A. Add Inappropriate Social Filter
 ```c
@@ -339,6 +403,10 @@ if (is_silly && !MOB_FLAGGED(ch, MOB_COMEDIC))
     return;  // Skip silly social for serious mobs
 ```
 
+---
+
+## 8. Testing the New Categories
+
 #### C. Expand Emotion Categories
 Add new social arrays in `mob_contextual_social()`:
 ```c
@@ -365,7 +433,7 @@ else if (mob_fear >= 70 && mob_courage < 30) {
 
 ---
 
-## 7. Testing Recommendations
+## 8. Testing Recommendations
 
 ### Test Cases for Mob-to-Mob Socials
 
@@ -400,7 +468,7 @@ Set mob_emotion_social_chance = 50  (50% chance per tick)
 
 ---
 
-## 8. Configuration Recommendations
+## 9. Configuration Recommendations
 
 ### Suggested Default Configuration
 
@@ -428,7 +496,7 @@ mob_emotion_responses = 1
 
 ---
 
-## 9. Conclusion
+## 10. Conclusion
 
 ### Summary of Findings
 

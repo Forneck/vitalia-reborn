@@ -14,7 +14,7 @@ amused,positive,yes,Light happiness
 apologize,positive,yes,Apology
 applaud,positive,yes,Used by mobs
 arch,neutral,yes,Eyebrow arch
-argh,frustrated,yes,Frustration
+argh,negative,yes,Frustration
 armcross,neutral,yes,Defensive posture
 arrest,aggressive,yes,Law enforcement
 avsalute,respectful,yes,Military salute
@@ -29,7 +29,7 @@ beam,positive,yes,Used by mobs
 bearhug,loving,yes,Used by mobs
 beckon,neutral,yes,Summoning gesture
 beer,neutral,yes,Drinking
-beg,submissive,yes,Pleading
+beg,fearful,yes,Pleading
 behind,playful,yes,Sneaking up
 belch,silly,no,Bodily function
 bite,aggressive,yes,Used by mobs
@@ -40,7 +40,7 @@ blink,neutral,yes,Used by mobs
 bloob,silly,no,Nonsense sound
 blue,sad,yes,Sadness
 blush,loving,yes,Used by mobs
-bounce,playful,yes,Used by mobs
+bounce,playful,yes,Used by mobs - also in excited_socials
 boast,proud,yes,Used by mobs
 boggle,confused,yes,Used by mobs
 boink,silly,maybe,Cartoon sound
