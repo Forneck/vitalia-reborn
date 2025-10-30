@@ -75,6 +75,12 @@ Evil casters using necromancy/unholy debuffs:
 - Against good targets: +1-2 reputation (+class bonus)
 - Against other targets: +1 reputation (+class bonus)
 
+#### For Object Curses and Poisoning (mag_alter_objs)
+Evil casters cursing or poisoning objects:
+- Cursing objects: +1 reputation (+class bonus)
+- Poisoning food/drinks: +1-2 reputation (+class bonus)
+- **BONUS**: Evil players cursing weapons get +1 damage instead of -1 damage!
+
 #### For Combat Kills
 Evil warriors/rangers:
 - Killing good-aligned mobs: +2-4 reputation (+class bonus)
@@ -131,7 +137,9 @@ Build up "infamy" as a feared necromancer
 
 ### Fallen Cleric
 Cast curse on good paladin → Gain reputation
+Cast curse on weapon → Get weapon bonus (+1 damage) instead of penalty + gain reputation
 Cast harm on innocent villager → Gain reputation
+Poison food/drinks → Gain reputation
 Build up "infamy" as a dark priest
 
 ### Evil Warrior
@@ -139,9 +147,24 @@ Kill good-aligned guards → Gain reputation
 Defeat righteous paladins → Gain more reputation
 Build up "infamy" as a feared slayer
 
+## Gameplay Benefits for Evil Players
+
+### Cursed Weapons
+- **Evil players**: Cursing a weapon adds +1 damage (dark empowerment)
+- **Good/Neutral players**: Cursing a weapon removes -1 damage (weakens it)
+- Evil message: "Isto brilha vermelho sombrio e pulsa com energia maligna!"
+- Normal message: "Isto brilha vermelho por alguns instantes."
+
+### Reputation Gains Summary
+- Curse object: +1 reputation (+class bonus)
+- Poison food/drink: +1-2 reputation (+class bonus)
+- Cast necromancy/unholy spells on targets: +1-3 reputation (+class bonus)
+- Kill good-aligned mobs: +2-4 reputation (+class bonus)
+
 ## Balance Notes
 
 - Evil players now have a viable path to gain reputation (infamy)
+- Evil players get tangible gameplay benefits (cursed weapon bonus)
 - The system maintains penalties for evil actions by good/neutral characters
 - Targeting good-aligned victims provides higher reputation gains
 - Class bonuses ensure each class has appropriate evil paths

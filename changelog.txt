@@ -13,6 +13,9 @@ telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
     - System uses spell school (SCHOOL_NECROMANCY) and element (ELEMENT_UNHOLY) to identify evil spells
     - New reputation action types: CLASS_REP_DARK_MAGIC, CLASS_REP_HARM_SPELL
     - Enhanced combat reputation to reward evil killers for targeting good mobs
+    - Evil players gain reputation for cursing objects (+1 reputation + class bonus)
+    - Evil players gain reputation for poisoning food/drinks (+1-2 reputation + class bonus)
+    - BONUS: Evil players cursing weapons get +1 damage instead of -1 damage penalty!
     - See EVIL_REPUTATION_SYSTEM.md for full documentation
 @
 Development moved to Github in 2013, this document is no longer updated:

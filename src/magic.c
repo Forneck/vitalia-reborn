@@ -918,9 +918,25 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj, int sp
         case SPELL_CURSE:
             if (!OBJ_FLAGGED(obj, ITEM_NODROP)) {
                 SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_NODROP);
-                if (GET_OBJ_TYPE(obj) == ITEM_WEAPON)
-                    GET_OBJ_VAL(obj, 2)--;
-                send_to_char(ch, "Isto brilha vermelho por alguns instantes.\r\n");
+                if (GET_OBJ_TYPE(obj) == ITEM_WEAPON) {
+                    /* Evil players empower cursed weapons, others weaken them */
+                    if (!IS_NPC(ch) && IS_EVIL(ch)) {
+                        GET_OBJ_VAL(obj, 2)++; /* Evil curse adds dark power to weapon */
+                        send_to_char(ch, "Isto brilha vermelho sombrio e pulsa com energia maligna!\r\n");
+                    } else {
+                        GET_OBJ_VAL(obj, 2)--; /* Regular curse weakens weapon */
+                        send_to_char(ch, "Isto brilha vermelho por alguns instantes.\r\n");
+                    }
+                } else {
+                    send_to_char(ch, "Isto brilha vermelho por alguns instantes.\r\n");
+                }
+
+                /* Reputation gain for evil players cursing objects - dynamic reputation system */
+                if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && IS_EVIL(ch)) {
+                    int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_DARK_MAGIC, NULL);
+                    /* Evil characters gain reputation (infamy) for cursing items */
+                    modify_player_reputation(ch, 1 + class_bonus);
+                }
             }
             break;
         case SPELL_INVISIBLE:
@@ -935,6 +951,13 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj, int sp
                 !GET_OBJ_VAL(obj, 3)) {
                 GET_OBJ_VAL(obj, 3) = 1;
                 send_to_char(ch, "Isto emite uma fumaça escura por alguns instantes.\r\n");
+
+                /* Reputation gain for evil players poisoning objects - dynamic reputation system */
+                if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && IS_EVIL(ch)) {
+                    int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_POISONING, NULL);
+                    /* Evil characters gain reputation (infamy) for poisoning food/drinks */
+                    modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
+                }
             }
             break;
         case SPELL_REMOVE_CURSE:
