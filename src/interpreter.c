@@ -503,14 +503,7 @@ void command_interpreter(struct char_data *ch, char *argument)
 
     char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
     struct obj_data *object;
-    int grupo;
     int count_obj = 0;
-
-    /* verifica grupo e inventario */
-    if (GROUP(ch) != NULL)
-        grupo = 1;
-    else
-        grupo = 0;
 
     for (object = ch->carrying; object; object = object->next_content) {
         count_obj++;

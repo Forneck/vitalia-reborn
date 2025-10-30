@@ -541,6 +541,9 @@ void point_update(void)
                     case ar_skip:
                         /* Don't touch the corpse, leave it in place */
                         break;
+                    case ar_ok:
+                        /* Resurrection was successful, corpse is handled by autoraise_corpse */
+                        break;
                     case ar_dropobjs:
                         if (j->carried_by)
                             act("$p cai de suas mãos.", FALSE, j->carried_by, j, 0, TO_CHAR);
@@ -594,11 +597,12 @@ void point_update(void)
            to .rej hand-patchers: make this last in your point-update() */
         else if (GET_OBJ_TIMER(j) > 0) {
             GET_OBJ_TIMER(j)--;
-            if (!GET_OBJ_TIMER(j))
+            if (!GET_OBJ_TIMER(j)) {
                 if (j->carried_by)
                     act("$p misteriosamente desaparece.", FALSE, j->carried_by, j, 0, TO_CHAR);
                 else if (j->in_room)
                     act("$p misteriosamente desaparece.", TRUE, 0, j, 0, TO_ROOM);
+            }
             timer_otrigger(j);
         }
     }

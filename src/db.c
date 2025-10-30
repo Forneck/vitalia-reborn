@@ -1108,7 +1108,6 @@ void index_boot(int mode)
             CREATE(mob_proto, struct char_data, rec_count);
             CREATE(mob_index, struct index_data, rec_count);
 
-            int rnum;
             /* Aloca a estrutura de IA para cada protótipo e inicializa os seus campos. */
             for (int rnum = 0; rnum < rec_count; rnum++) {
                 CREATE(mob_proto[rnum].ai_data, struct mob_ai_data, 1);
@@ -1345,7 +1344,6 @@ void parse_room(FILE *fl, int virtual_nr)
     char flags4[128], buf2[MAX_STRING_LENGTH], buf[128];
     struct extra_descr_data *new_descr;
     char letter;
-    int subzone;
     /* This really had better fit or there are other problems. */
     snprintf(buf2, sizeof(buf2), "room #%d", virtual_nr);
 
@@ -2518,11 +2516,12 @@ static void load_zones(FILE *fl, char *zonename)
                 ZCMD.sarg2 = strdup(t2);
             }
         } else {
-            if (sscanf(ptr, " %d %d %d %d ", &tmp, &ZCMD.arg1, &ZCMD.arg2, &ZCMD.arg3) != 4)
+            if (sscanf(ptr, " %d %d %d %d ", &tmp, &ZCMD.arg1, &ZCMD.arg2, &ZCMD.arg3) != 4) {
                 if (ZCMD.command == 'G')
                     ZCMD.arg3 = -1;
                 else
                     error = 1;
+            }
         }
 
         ZCMD.if_flag = tmp;
@@ -4442,16 +4441,17 @@ void load_config(void)
                         CONFIG_HOMETOWN_1 = NOWHERE;
                     else
                         CONFIG_HOMETOWN_1 = num;
-                else if (!str_cmp(tag, "hometown_2"))
+                else if (!str_cmp(tag, "hometown_2")) {
                     if (num == -1)
                         CONFIG_HOMETOWN_2 = NOWHERE;
                     else
                         CONFIG_HOMETOWN_2 = num;
-                else if (!str_cmp(tag, "hometown_3"))
+                } else if (!str_cmp(tag, "hometown_3")) {
                     if (num == -1)
                         CONFIG_HOMETOWN_3 = NOWHERE;
                     else
                         CONFIG_HOMETOWN_3 = num;
+                }
                 break;
 
             case 'i':
@@ -4579,16 +4579,17 @@ void load_config(void)
                         CONFIG_RESS_ROOM_1 = NOWHERE;
                     else
                         CONFIG_RESS_ROOM_1 = num;
-                else if (!str_cmp(tag, "ress_room_2"))
+                else if (!str_cmp(tag, "ress_room_2")) {
                     if (num == -1)
                         CONFIG_RESS_ROOM_2 = NOWHERE;
                     else
                         CONFIG_RESS_ROOM_2 = num;
-                else if (!str_cmp(tag, "ress_room_3"))
+                } else if (!str_cmp(tag, "ress_room_3")) {
                     if (num == -1)
                         CONFIG_RESS_ROOM_3 = NOWHERE;
                     else
                         CONFIG_RESS_ROOM_3 = num;
+                }
                 break;
 
             case 's':

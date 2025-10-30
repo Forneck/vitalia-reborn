@@ -1780,9 +1780,9 @@ void load_shop_nonnative(shop_vnum shop_num, struct char_data *keeper)
     line_num += get_line(cfile, buf);
 
     // Item list
-    while (buf && *buf != '$') {
+    while (*buf != '$') {
         line_num += get_line(cfile, buf);
-        if (!buf || !*buf || *buf == '$')
+        if (!*buf || *buf == '$')
             break;
         if (sscanf(buf, "%d", &placer) != 1) {
             mudlog(BRF, LVL_IMPL, TRUE, "SYSERR: SHP: Format error in shop_item %d, line %d.", shop_num, line_num);

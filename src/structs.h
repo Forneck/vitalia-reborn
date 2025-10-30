@@ -413,33 +413,33 @@
  which control the valid places you can wear a piece of equipment.
  For example, there are two neck positions on the player, and items
  only get the generic neck type. */
- #define WEAR_LIGHT 0    /**< Equipment Location Light */
- #define WEAR_HEAD 1     /**< Equipment Location Head */
- #define WEAR_EAR_R 2
- #define WEAR_EAR_L 3
- #define WEAR_FACE 4
- #define WEAR_NOSE 5
- #define WEAR_NECK_1 6   /**< Equipment Location Neck #1 */
- #define WEAR_NECK_2 7   /**< Equipment Location Neck #2 */
- #define WEAR_BODY 8     /**< Equipment Location Body */
- #define WEAR_ARMS 9    /**< Equipment Location Arms */
- #define WEAR_HANDS 10    /**< Equipment Location Hands */
- #define WEAR_WRIST_R 11 /**< Equipment Location Right Wrist */
- #define WEAR_WRIST_L 12 /**< Equipment Location Left Wrist */
- #define WEAR_FINGER_R 13 /**< Equipment Location Right Finger */
- #define WEAR_FINGER_L 14 /**< Equipment Location Left Finger */
- #define WEAR_WAIST 15   /**< Equipment Location Waist */
- #define WEAR_LEGS 16     /**< Equipment Location Legs */
- #define WEAR_FEET 17     /**< Equipment Location Feet */
- #define WEAR_ABOUT 18   /**< Equipment Location about body (like a cape)*/
- #define WEAR_SHIELD 19  /**< Equipment Location Shield */
- #define WEAR_WIELD 20   /**< Equipment Location Weapon */
- #define WEAR_HOLD 21    /**< Equipment Location held in offhand */
- #define WEAR_WINGS 22
- #define WEAR_INSIGNE 23
- #define WEAR_QUIVER 24
- /** Total number of available equipment lcoations */
- #define NUM_WEARS 25
+#define WEAR_LIGHT 0 /**< Equipment Location Light */
+#define WEAR_HEAD 1  /**< Equipment Location Head */
+#define WEAR_EAR_R 2
+#define WEAR_EAR_L 3
+#define WEAR_FACE 4
+#define WEAR_NOSE 5
+#define WEAR_NECK_1 6    /**< Equipment Location Neck #1 */
+#define WEAR_NECK_2 7    /**< Equipment Location Neck #2 */
+#define WEAR_BODY 8      /**< Equipment Location Body */
+#define WEAR_ARMS 9      /**< Equipment Location Arms */
+#define WEAR_HANDS 10    /**< Equipment Location Hands */
+#define WEAR_WRIST_R 11  /**< Equipment Location Right Wrist */
+#define WEAR_WRIST_L 12  /**< Equipment Location Left Wrist */
+#define WEAR_FINGER_R 13 /**< Equipment Location Right Finger */
+#define WEAR_FINGER_L 14 /**< Equipment Location Left Finger */
+#define WEAR_WAIST 15    /**< Equipment Location Waist */
+#define WEAR_LEGS 16     /**< Equipment Location Legs */
+#define WEAR_FEET 17     /**< Equipment Location Feet */
+#define WEAR_ABOUT 18    /**< Equipment Location about body (like a cape)*/
+#define WEAR_SHIELD 19   /**< Equipment Location Shield */
+#define WEAR_WIELD 20    /**< Equipment Location Weapon */
+#define WEAR_HOLD 21     /**< Equipment Location held in offhand */
+#define WEAR_WINGS 22
+#define WEAR_INSIGNE 23
+#define WEAR_QUIVER 24
+/** Total number of available equipment lcoations */
+#define NUM_WEARS 25
 
 /* object-related defines */
 /* Item types: used by obj_data.obj_flags.type_flag */
@@ -762,8 +762,8 @@
 #define MAX_HELP_ENTRY MAX_STRING_LENGTH /**< Max size of help entry */
 #define MAX_COMPLETED_QUESTS 1024        /**< Maximum number of completed quests allowed */
 
-#define MAX_GOLD 2140000000 /**< Maximum possible on hand gold (2.14 Billion) */
-#define MAX_BANK 2140000000 /**< Maximum possible in bank gold (2.14 Billion) */
+#define MAX_GOLD 2147483647 /**< Maximum possible on hand gold (INT_MAX = 2.147 Billion) */
+#define MAX_BANK 2147483647 /**< Maximum possible in bank gold (INT_MAX = 2.147 Billion) */
 
 /** Define the largest set of commands for a trigger.
  * 16k should be plenty and then some. */

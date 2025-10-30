@@ -2444,7 +2444,7 @@ static RETSIGTYPE hupsig(int sig)
    the old signal.  If your system doesn't have sigaction either, you can use
    the same fix. SunOS Release 4.0.2 (sun386) needs this too, according to Tim
    Aldric. */
-#    undef my_signal(signo, func)
+#    undef my_signal
 
 #    ifndef POSIX
 #        define my_signal(signo, func) signal(signo, func)
