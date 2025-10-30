@@ -157,6 +157,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"evaluate", "evalu", POS_SITTING, do_evaluate, 0, 0, CMD_TWOARG},
     {"exits", "ex", POS_RESTING, do_exits, 0, 0, CMD_NOARG},
     {"examine", "exa", POS_SITTING, do_examine, 0, 0, CMD_ONEARG},
+    {"experiment", "exp", POS_RESTING, do_experiment, 0, 0, CMD_ONEARG},
     {"export", "export", POS_DEAD, do_export_zone, LVL_IMPL, 0, CMD_NOARG},
     {"force", "force", POS_SLEEPING, do_force, LVL_GOD, 0, CMD_TWOARG},
     {"fill", "fil", POS_STANDING, do_pour, 0, SCMD_FILL, CMD_TWOARG},
@@ -330,6 +331,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"snoop", "snoop", POS_DEAD, do_snoop, LVL_GOD, 0, CMD_ONEARG},
     {"spedit", "spe", POS_DEAD, do_spedit, LVL_GRGOD, 0, CMD_NOARG},
     {"spells", "spel", POS_DEAD, do_spells, 0, 0, CMD_ONEARG},
+    {"syllables", "syl", POS_DEAD, do_syllables, 0, 0, CMD_NOARG},
     {"splist", "splist", POS_DEAD, do_splist, LVL_BUILDER, 0, CMD_NOARG},
     {"socials", "socials", POS_DEAD, do_commands, 0, SCMD_SOCIALS, CMD_NOARG},
     {"split", "split", POS_SITTING, do_split, 1, 0, CMD_ONEARG},
@@ -1826,6 +1828,14 @@ void nanny(struct descriptor_data *d, char *arg)
                 return;
             }
 
+            /* Clear retained_skills array to prevent restoring unintended skills */
+            {
+                int i;
+                for (i = 1; i <= MAX_SKILLS; i++) {
+                    d->character->player_specials->saved.retained_skills[i] = 0;
+                }
+            }
+
             /* Save the selected skill to retained skills */
             if (skill_num > 0) {
                 d->character->player_specials->saved.retained_skills[skill_num] = GET_SKILL(d->character, skill_num);
@@ -1842,6 +1852,11 @@ void nanny(struct descriptor_data *d, char *arg)
             load_result = parse_class(*arg);
             if (load_result == CLASS_UNDEFINED) {
                 write_to_output(d, "Isso não é uma classe válida.\r\nClasse: ");
+                return;
+            }
+            /* Check if trying to select current class */
+            if (load_result == GET_CLASS(d->character)) {
+                write_to_output(d, "Você já é dessa classe. Escolha outra.\r\nClasse: ");
                 return;
             }
             /* Check if class was already used */
@@ -1923,9 +1938,8 @@ void nanny(struct descriptor_data *d, char *arg)
             /* Finalize rebegin process */
             /* Note: num_incarnations was already incremented when recording class history */
 
-            /* Remove all affects before resetting (unaffect) */
-            while (d->character->affected)
-                affect_remove(d->character, d->character->affected);
+            /* Remove all affects before resetting (unaffect) - using optimized O(n) removal */
+            affect_remove_all(d->character);
 
             /* Reset reputation to initial value for new incarnation */
             d->character->player_specials->saved.reputation = 50; /* Default reputation, matches new character */

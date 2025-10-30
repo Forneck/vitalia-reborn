@@ -256,6 +256,8 @@ void spedit_assign_menu(struct descriptor_data *d)
                            Q->assign[i].class_num != -1 ? pc_class_types[Q->assign[i].class_num] : "<empty>", nrm, cyn,
                            Q->assign[i].level, nrm, nrm, cyn, EMPTY_STR(Q->assign[i].prac_gain), nrm, cyn,
                            EMPTY_STR(Q->assign[i].num_mana));
+            if (len < 0 || total_len + len >= BUFSIZE)
+                break;
             total_len += len;
         }
     } else {
@@ -264,6 +266,8 @@ void spedit_assign_menu(struct descriptor_data *d)
                            "%s%d%s) Class       : %s%s %s(%s%3d%s) \r\n   %sPrac gain %% : %s%s\r\n", grn, i + 1, nrm,
                            yel, Q->assign[i].class_num != -1 ? pc_class_types[Q->assign[i].class_num] : "<empty>", nrm,
                            cyn, Q->assign[i].level, nrm, nrm, cyn, EMPTY_STR(Q->assign[i].prac_gain));
+            if (len < 0 || total_len + len >= BUFSIZE)
+                break;
             total_len += len;
         }
     }
@@ -294,6 +298,8 @@ void spedit_apply_menu(struct descriptor_data *d)
                                                           : apply_types[Q->applies[i].appl_num]
                                                     : "<empty>",
                        buf1, nrm, cyn, EMPTY_STR(Q->applies[i].duration));
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\nEnter choice (0 to quit) : ", nrm);
@@ -316,6 +322,8 @@ void spedit_protection_menu(struct descriptor_data *d)
                        "%s%d%s) Name     : %s%s %s(%s%d%s)\r\n   %sDuration : %s%s\r\n%s   Resist %% : %s%s\r\n", grn,
                        i + 1, nrm, yel, name, nrm, cyn, Q->protfrom[i].prot_num, nrm, nrm, cyn,
                        EMPTY_STR(Q->protfrom[i].duration), nrm, cyn, EMPTY_STR(Q->protfrom[i].resist));
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "\r\n%sEnter choice (0 to quit) : ", nrm);
@@ -333,6 +341,8 @@ void spedit_minpos_menu(struct descriptor_data *d)
     for (i = 0; i < NUM_CHAR_POSITION; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-16s%s", grn, i + 1, nrm, yel,
                        position_types[i], (i + 1) % 4 ? "" : "\r\n");
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\n\r\nEnter choice (0 to quit) : ", nrm);
@@ -352,6 +362,8 @@ void spedit_targ_flags_menu(struct descriptor_data *d)
     for (i = 0; i < NUM_SPELL_FLAGS; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-15s%s", grn, i + 1, nrm, yel, targ_flags[i],
                        (i + 1) % 4 ? "" : "\r\n");
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\n\r\nEnter choice (0 to quit) : ", nrm);
@@ -371,6 +383,8 @@ void spedit_mag_flags_menu(struct descriptor_data *d)
     for (i = 0; i < NUM_MAG; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-15s%s", grn, i + 1, nrm, yel, mag_flags[i],
                        (i + 1) % 4 ? "" : "\r\n");
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\nEnter choice (0 to quit) : ", nrm);
@@ -388,14 +402,21 @@ void spedit_choose_apply(struct descriptor_data *d)
     for (i = 0; i < NUM_APPLIES; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-15s%s", grn, i + 1, nrm, yel, apply_types[i],
                        (i + 1) % 4 ? "" : "\r\n");
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     len = snprintf(buf + total_len, BUFSIZE - total_len, "\r\n\r\n%s-- AFFECTS : \r\n", nrm);
-    total_len += len;
+    if (len < 0 || total_len + len >= BUFSIZE)
+        len = 0;
+    else
+        total_len += len;
     cpt = i + 1;
     for (i = cpt; i < cpt + NUM_AFF_FLAGS; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-15s%s", grn, i, nrm, yel,
                        affected_bits[i - cpt], (i - cpt + 1) % 4 ? "" : "\r\n");
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\n\r\nEnter choice (0 to quit, 'r' to remove) : ", nrm);
@@ -413,6 +434,8 @@ void spedit_assignement_menu(struct descriptor_data *d)
     for (i = 0; i < NUM_CLASSES; i++) {
         len = snprintf(buf + total_len, BUFSIZE - total_len, "%s%2d%s) %s%-13s%s", grn, i + 1, nrm, yel,
                        pc_class_types[i], (i + 1) % 5 ? "" : "\r\n");
+        if (len < 0 || total_len + len >= BUFSIZE)
+            break;
         total_len += len;
     }
     snprintf(buf + total_len, BUFSIZE - total_len, "%s\r\n\r\nEnter choice (0 to quit, 'r' to remove) : ", nrm);
@@ -469,6 +492,19 @@ void spedit_show_warnings(struct descriptor_data *d)
 
     if ((len < BUFSIZE) && !OLC_SPELL(d)->targ_flags)
         len += snprintf(buf + len, BUFSIZE - len, "No target flags set.\r\n");
+
+    /* Spell variant warnings */
+    if ((len < BUFSIZE) && OLC_SPELL(d)->discoverable && OLC_SPELL(d)->prerequisite_spell == 0)
+        len += snprintf(buf + len, BUFSIZE - len,
+                        "Spell is discoverable but has no prerequisite. Players won't be able to discover it.\r\n");
+
+    if ((len < BUFSIZE) && OLC_SPELL(d)->prerequisite_spell > 0 && !OLC_SPELL(d)->discoverable)
+        len += snprintf(buf + len, BUFSIZE - len,
+                        "Spell has prerequisite but is not discoverable. Set discoverable flag if players should "
+                        "find it.\r\n");
+
+    if ((len < BUFSIZE) && OLC_SPELL(d)->prerequisite_spell == OLC_SPELL(d)->vnum)
+        len += snprintf(buf + len, BUFSIZE - len, "ERROR: Spell cannot be its own prerequisite!\r\n");
 
     if (*buf)
         send_to_char(d->character, "\r\n%s", buf);
@@ -630,6 +666,43 @@ void spedit_element_menu(struct descriptor_data *d)
     OLC_MODE(d) = SPEDIT_ELEMENT_MENU;
 }
 
+/* Display the prerequisite chain for a spell variant */
+void spedit_show_variant_chain(struct descriptor_data *d)
+{
+    char buf[BUFSIZE];
+    char chain[BUFSIZE];
+    int chain_len = 0;
+    struct str_spells *ptr;
+    int depth = 0;
+
+    /* Build the prerequisite chain backwards */
+    ptr = OLC_SPELL(d);
+    chain_len = snprintf(chain, BUFSIZE, "%s[%d]", ptr->name ? ptr->name : "Unnamed", ptr->vnum);
+
+    while (ptr->prerequisite_spell > 0 && depth < MAX_SPELL_CHAIN_DEPTH) {
+        ptr = get_spell_by_vnum(ptr->prerequisite_spell);
+        if (!ptr)
+            break;
+
+        /* Prepend to chain - use snprintf for safety */
+        int temp_len = snprintf(buf, BUFSIZE, "%s[%d] -> %s", ptr->name ? ptr->name : "Unnamed", ptr->vnum, chain);
+        if (temp_len > 0 && temp_len < BUFSIZE) {
+            /* Safe copy using snprintf */
+            snprintf(chain, BUFSIZE, "%s", buf);
+            chain_len = temp_len;
+        }
+        depth++;
+    }
+
+    if (depth > 0) {
+        send_to_char(d->character, "\r\n%sVariant Chain:%s %s\r\n", cyn, nrm, chain);
+    }
+
+    if (depth >= MAX_SPELL_CHAIN_DEPTH) {
+        send_to_char(d->character, "%sWARNING: Chain depth limit reached!%s\r\n", yel, nrm);
+    }
+}
+
 void spedit_main_menu(struct descriptor_data *d)
 {
     char buf[BUFSIZE];
@@ -647,6 +720,12 @@ void spedit_main_menu(struct descriptor_data *d)
     get_char_colors(d->character);
 
     clear_screen(d);
+
+    /* Show variant chain if this spell has a prerequisite */
+    if (Q->prerequisite_spell > 0 || Q->discoverable) {
+        spedit_show_variant_chain(d);
+    }
+
     snprintf(buf, BUFSIZE,
              "%s-- %s Number      : [%s%5d%s] %s%s%s\r\n"
              "%sT%s) Type              : [%s%-5s%s]\r\n"
@@ -660,6 +739,8 @@ void spedit_main_menu(struct descriptor_data *d)
              "%s8%s) %sEffectiveness %%   : %s%s\r\n"
              "%sE%s) School            : %s%s\r\n"
              "%sL%s) Element           : %s%s\r\n"
+             "%sR%s) Prerequisite      : %s%s %s(%s%d%s)\r\n"
+             "%sV%s) Discoverable      : %s%s\r\n"
              "%s9%s) %sMenu -> Points\r\n"
              "%sP%s) %sMenu -> Protection from\r\n"
              "%sA%s) %sMenu -> Applies & Affects\r\n"
@@ -685,11 +766,13 @@ void spedit_main_menu(struct descriptor_data *d)
              EMPTY_STR(Q->damages), nrm, cyn, Q->max_dam, nrm, prog ? red : grn, nrm, cyn, EMPTY_STR(Q->delay),
              prog ? red : grn, nrm, Q->effectiveness ? nrm : YEL, cyn, EMPTY_STR(Q->effectiveness), prog ? red : grn,
              nrm, cyn, (Q->type == 'K') ? get_skill_school_name(Q->school) : get_spell_school_name(Q->school),
-             prog ? red : grn, nrm, cyn, get_spell_element_name(Q->element), prog ? red : grn, nrm,
-             is_points_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_prot_set(Q) ? bln : nrm, prog ? red : grn, nrm,
-             is_apply_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_dispel_set(Q) ? bln : nrm, prog ? red : grn, nrm,
-             is_objects_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_summon_set(Q) ? bln : nrm, prog ? red : grn, nrm,
-             Q->script ? bln : nrm, prog ? red : grn, nrm, is_assign_set(Q) ? bln : YEL, prog ? red : grn, nrm,
+             prog ? red : grn, nrm, cyn, get_spell_element_name(Q->element), prog ? red : grn, nrm, cyn,
+             Q->prerequisite_spell > 0 ? get_spell_name(Q->prerequisite_spell) : "<none>", nrm, cyn,
+             Q->prerequisite_spell, nrm, prog ? red : grn, nrm, cyn, Q->discoverable ? "Yes" : "No", prog ? red : grn,
+             nrm, is_points_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_prot_set(Q) ? bln : nrm, prog ? red : grn,
+             nrm, is_apply_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_dispel_set(Q) ? bln : nrm, prog ? red : grn,
+             nrm, is_objects_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_summon_set(Q) ? bln : nrm, prog ? red : grn,
+             nrm, Q->script ? bln : nrm, prog ? red : grn, nrm, is_assign_set(Q) ? bln : YEL, prog ? red : grn, nrm,
              is_messages_set(Q) ? bln : nrm, prog ? red : grn, nrm, grn, nrm, nrm);
     send_to_char(d->character, "%s", buf);
     OLC_MODE(d) = SPEDIT_MAIN_MENU;
@@ -821,6 +904,8 @@ void spedit_copyover_spell(struct str_spells *from, struct str_spells *to)
     }
     to->school = from->school;
     to->element = from->element;
+    to->prerequisite_spell = from->prerequisite_spell;
+    to->discoverable = from->discoverable;
     to->function = from->function;
 }
 
@@ -910,6 +995,8 @@ void spedit_init_new_spell(struct str_spells *spell)
 
     spell->school = SCHOOL_UNDEFINED;
     spell->element = ELEMENT_UNDEFINED;
+    spell->prerequisite_spell = 0;
+    spell->discoverable = 0;
     spell->function = NULL;
 }
 
@@ -1184,6 +1271,20 @@ int boot_spells(void)
                 if (ret != 1) {
                     log1("SYSERR: boot spells: Invalid element value for spell %d", Q->vnum);
                     Q->element = ELEMENT_UNDEFINED;
+                }
+                break;
+            case DB_CODE_PREREQUISITE_SPELL:
+                ret = fscanf(fp, "%d\n", &Q->prerequisite_spell);
+                if (ret != 1) {
+                    log1("SYSERR: boot spells: Invalid prerequisite_spell value for spell %d", Q->vnum);
+                    Q->prerequisite_spell = 0;
+                }
+                break;
+            case DB_CODE_DISCOVERABLE:
+                ret = fscanf(fp, "%d\n", &Q->discoverable);
+                if (ret != 1) {
+                    log1("SYSERR: boot spells: Invalid discoverable value for spell %d", Q->vnum);
+                    Q->discoverable = 0;
                 }
                 break;
             case DB_CODE_END:
@@ -1462,6 +1563,18 @@ void spedit_save_to_disk(void)
         /* Save spell element if not undefined */
         if (r->element != ELEMENT_UNDEFINED) {
             snprintf(buf, BUFSIZE, "%2d %d\n", DB_CODE_ELEMENT, r->element);
+            fprintf(fp, "%s", buf);
+        }
+
+        /* Save prerequisite spell if set */
+        if (r->prerequisite_spell > 0) {
+            snprintf(buf, BUFSIZE, "%2d %d\n", DB_CODE_PREREQUISITE_SPELL, r->prerequisite_spell);
+            fprintf(fp, "%s", buf);
+        }
+
+        /* Save discoverable flag if set */
+        if (r->discoverable) {
+            snprintf(buf, BUFSIZE, "%2d %d\n", DB_CODE_DISCOVERABLE, r->discoverable);
             fprintf(fp, "%s", buf);
         }
     }
@@ -1906,6 +2019,58 @@ void spedit_parse(struct descriptor_data *d, char *arg)
             }
             OLC_SPELL(d)->element = x;
             break;
+        case SPEDIT_GET_PREREQUISITE:
+            x = atoi(arg);
+            if (x < 0) {
+                send_to_char(d->character, "Invalid spell VNUM!\r\n");
+                send_to_char(d->character, "Enter prerequisite spell VNUM (0 for none) : ");
+                return;
+            }
+            /* Prevent self-reference */
+            if (x == OLC_SPELL(d)->vnum) {
+                send_to_char(d->character, "ERROR: A spell cannot be its own prerequisite!\r\n");
+                send_to_char(d->character, "Enter prerequisite spell VNUM (0 for none) : ");
+                return;
+            }
+            if (x > 0 && !get_spell_by_vnum(x)) {
+                send_to_char(d->character, "That spell VNUM does not exist!\r\n");
+                send_to_char(d->character, "Enter prerequisite spell VNUM (0 for none) : ");
+                return;
+            }
+            /* Check for circular dependency chains */
+            if (x > 0) {
+                struct str_spells *check_spell = get_spell_by_vnum(x);
+                int chain_depth = 0;
+                while (check_spell && check_spell->prerequisite_spell > 0 && chain_depth < MAX_SPELL_CHAIN_DEPTH) {
+                    if (check_spell->prerequisite_spell == OLC_SPELL(d)->vnum) {
+                        send_to_char(d->character,
+                                     "ERROR: This would create a circular dependency!\r\n"
+                                     "The prerequisite spell '%s' already has this spell in its chain.\r\n",
+                                     get_spell_name(x));
+                        send_to_char(d->character, "Enter prerequisite spell VNUM (0 for none) : ");
+                        return;
+                    }
+                    check_spell = get_spell_by_vnum(check_spell->prerequisite_spell);
+                    chain_depth++;
+                }
+                if (chain_depth >= MAX_SPELL_CHAIN_DEPTH) {
+                    send_to_char(d->character,
+                                 "WARNING: The prerequisite chain is very long (>%d). This may indicate a "
+                                 "problem.\r\n",
+                                 MAX_SPELL_CHAIN_DEPTH);
+                }
+            }
+            OLC_SPELL(d)->prerequisite_spell = x;
+            break;
+        case SPEDIT_GET_DISCOVERABLE:
+            x = atoi(arg);
+            if (x < 0 || x > 1) {
+                send_to_char(d->character, "Invalid choice! Must be 0 or 1.\r\n");
+                send_to_char(d->character, "Is this spell discoverable through experimentation? (0-No, 1-Yes) : ");
+                return;
+            }
+            OLC_SPELL(d)->discoverable = x;
+            break;
         case SPEDIT_PROTECTION_MENU:
             if (!(x = atoi(arg)))
                 break;
@@ -2099,6 +2264,16 @@ void spedit_parse(struct descriptor_data *d, char *arg)
                 case 'l':
                 case 'L':
                     spedit_element_menu(d);
+                    return;
+                case 'r':
+                case 'R':
+                    send_to_char(d->character, "Enter prerequisite spell VNUM (0 for none) : ");
+                    OLC_MODE(d) = SPEDIT_GET_PREREQUISITE;
+                    return;
+                case 'v':
+                case 'V':
+                    send_to_char(d->character, "Is this spell discoverable through experimentation? (0-No, 1-Yes) : ");
+                    OLC_MODE(d) = SPEDIT_GET_DISCOVERABLE;
                     return;
                 case '9':
                     spedit_show_points(d);

@@ -2495,19 +2495,19 @@ void create_spells_db()
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
 
-    new_spell->vnum       = SPELL_SOUNDBARRIER;
-    new_spell->status     = available;
-    new_spell->name       = strdup("soundbarrier");
-    new_spell->type       = SPELL;
-    new_spell->min_pos    = POS_STANDING;
+    new_spell->vnum = SPELL_SOUNDBARRIER;
+    new_spell->status = available;
+    new_spell->name = strdup("soundbarrier");
+    new_spell->type = SPELL;
+    new_spell->min_pos = POS_STANDING;
     new_spell->targ_flags = TAR_CHAR_ROOM;
-    new_spell->mag_flags  = MAG_AFFECTS;
+    new_spell->mag_flags = MAG_AFFECTS;
     new_spell->effectiveness = strdup("100");
 
     /* Custo de mana baseado no nível do conjurador */
     new_spell->assign[0].class_num = CLASS_BARD;
-    new_spell->assign[0].level     = 15;
-    new_spell->assign[0].num_mana  = strdup("(100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20");
+    new_spell->assign[0].level = 15;
+    new_spell->assign[0].num_mana = strdup("(100 - (5 * self.level)) > 20 ? (100 - (5 * self.level)) : 20");
 
     /* Aplicações do feitiço */
     new_spell->applies[0].appl_num = APPLY_SAVING_SPELL;
@@ -2523,20 +2523,21 @@ void create_spells_db()
     new_spell->applies[2].duration = strdup("24");
 
     new_spell->applies[3].appl_num = APPLY_AC;
-    new_spell->applies[3].modifier = strdup("((self.level > (vict.level + 10)) * -70) + ((self.level <= (vict.level + 10)) * (-(vict.level - 10)))");
+    new_spell->applies[3].modifier =
+        strdup("((self.level > (vict.level + 10)) * -70) + ((self.level <= (vict.level + 10)) * (-(vict.level - 10)))");
     new_spell->applies[3].duration = strdup("24");
 
     new_spell->applies[4].appl_num = AFF_SOUNDBARRIER + NUM_APPLIES;
     new_spell->applies[4].duration = strdup("24");
 
     /* Mensagens de efeito */
-    new_spell->messages.to_vict   = strdup("Voce e envolvid$r por uma protetora barreira de som.");
-    new_spell->messages.to_room   = strdup("$N e envolvid$r por uma protetora barreira de som.");
-    new_spell->messages.wear_off  = strdup("Voce percebe a barreira de som se dissipar.");
+    new_spell->messages.to_vict = strdup("Voce e envolvid$r por uma protetora barreira de som.");
+    new_spell->messages.to_room = strdup("$N e envolvid$r por uma protetora barreira de som.");
+    new_spell->messages.wear_off = strdup("Voce percebe a barreira de som se dissipar.");
 
     /* Escola e elemento */
-    new_spell->school  = SCHOOL_ABJURATION;   /* Protection spell */
-    new_spell->element = ELEMENT_UNDEFINED;   /* Sound-based protection */
+    new_spell->school = SCHOOL_ABJURATION;  /* Protection spell */
+    new_spell->element = ELEMENT_UNDEFINED; /* Sound-based protection */
 
     /* Salva internamente */
     spedit_save_internally(new_spell);
@@ -3064,7 +3065,7 @@ void create_spells_db()
     new_spell->function = do_shoot;
     new_spell->type = SKILL;
     new_spell->effectiveness = strdup("100");
-    sprintf(buf, "(15 - (1 * self.level)) > 5 ? (15 - (1 * self.level)) : 5");
+    sprintf(buf, "(15 - (1 * self.level)) > 2 ? (15 - (1 * self.level)) : 2");
     new_spell->assign[0].class_num = CLASS_RANGER;
     new_spell->assign[0].level = 30;
     new_spell->assign[0].num_mana = strdup(buf);

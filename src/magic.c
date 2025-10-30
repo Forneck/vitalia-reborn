@@ -208,6 +208,13 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim, int sp
     dam =
         MIN(spell->max_dam, MAX(0, formula_interpreter(ch, victim, spellnum, TRUE, spell->damages, level, &rts_code)));
 
+    /* Apply spell modifier to damage */
+    if (spell_modifier_diminish) {
+        dam = dam / 2; /* Halve damage for "minus" syllable */
+    } else if (spell_modifier_amplify) {
+        dam = dam * 2; /* Double damage for "plus" syllable */
+    }
+
     /* Apply weather modifier if enabled */
     if (CONFIG_WEATHER_AFFECTS_SPELLS && spell->element != ELEMENT_UNDEFINED) {
         float weather_modifier = get_weather_spell_modifier(ch, spell->element);
@@ -246,6 +253,39 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim, int sp
     if (mag_savingthrow(victim, savetype, 0))
         dam /= 2;
 
+    /* Reputation changes for offensive spellcasting - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && dam > 0 && ch != victim) {
+        /* Check if this is a dark/necromantic spell */
+        if (spell->school == SCHOOL_NECROMANCY || spell->element == ELEMENT_UNHOLY) {
+            /* Evil characters gain reputation (infamy) for dark magic */
+            if (IS_EVIL(ch)) {
+                int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_DARK_MAGIC, victim);
+                if (IS_GOOD(victim)) {
+                    /* Using dark magic against good targets increases evil reputation */
+                    modify_player_reputation(ch, rand_number(1, 3) + class_bonus);
+                } else {
+                    /* Any successful dark magic for evil characters */
+                    modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
+                }
+            } else {
+                /* Good/Neutral characters LOSE reputation for using dark magic */
+                modify_player_reputation(ch, -rand_number(3, 6));
+                /* Extra penalty for using dark magic on good targets */
+                if (IS_GOOD(victim)) {
+                    modify_player_reputation(ch, -rand_number(2, 4));
+                }
+            }
+        }
+        /* General offensive magic reputation for evil casters */
+        else if (IS_EVIL(ch)) {
+            int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_MAGIC_CAST, victim);
+            /* Evil magic users gain small reputation for any harmful magic */
+            if (IS_MAGIC_USER(ch) && IS_GOOD(victim)) {
+                modify_player_reputation(ch, 1 + class_bonus);
+            }
+        }
+    }
+
     /* and finally, inflict the damage */
     return (damage(ch, victim, dam, spellnum));
 }
@@ -281,6 +321,12 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
             af[i].location = spell->applies[i].appl_num;
             af[i].modifier =
                 formula_interpreter(ch, victim, spellnum, TRUE, spell->applies[i].modifier, level, &rts_code);
+            /* Apply spell modifier to effect strength */
+            if (spell_modifier_diminish) {
+                af[i].modifier = af[i].modifier / 2; /* Halve effect for "minus" syllable */
+            } else if (spell_modifier_amplify) {
+                af[i].modifier = af[i].modifier * 2; /* Double effect for "plus" syllable */
+            }
         } else {
             af[i].location = spell->applies[i].appl_num;
 
@@ -290,6 +336,13 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
 
         af[i].duration =
             MAX(1, formula_interpreter(ch, victim, spellnum, TRUE, spell->applies[i].duration, level, &rts_code));
+
+        /* Apply spell modifier to duration */
+        if (spell_modifier_diminish) {
+            af[i].duration = MAX(1, af[i].duration / 2); /* Halve duration for "minus" syllable */
+        } else if (spell_modifier_amplify) {
+            af[i].duration = af[i].duration * 2; /* Double duration for "plus" syllable */
+        }
 
         /* Apply weather modifier to spell duration if enabled */
         if ((CONFIG_WEATHER_AFFECTS_SPELLS || CONFIG_SCHOOL_WEATHER_AFFECTS) && spell->element != ELEMENT_UNDEFINED &&
@@ -384,6 +437,30 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
             affect_join(victim, af + i, accum_duration, FALSE, accum_affect, FALSE);
             effect++;
         }
+
+    /* Reputation changes for harmful affect spells - dynamic reputation system */
+    if (effect && CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && ch != victim) {
+        /* Check if this is a harmful dark/necromantic spell */
+        if (spell->school == SCHOOL_NECROMANCY || spell->element == ELEMENT_UNHOLY) {
+            /* Evil characters gain reputation (infamy) for cursing/harming */
+            if (IS_EVIL(ch)) {
+                int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_HARM_SPELL, victim);
+                if (IS_GOOD(victim)) {
+                    /* Cursing good targets increases evil reputation */
+                    modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
+                } else {
+                    /* Any successful harmful spell for evil characters */
+                    modify_player_reputation(ch, 1 + class_bonus);
+                }
+            } else {
+                /* Good/Neutral characters LOSE reputation for dark harmful magic */
+                modify_player_reputation(ch, -rand_number(2, 4));
+                if (IS_GOOD(victim)) {
+                    modify_player_reputation(ch, -rand_number(1, 3));
+                }
+            }
+        }
+    }
 
     if (effect)
         return MAGIC_SUCCESS;
@@ -697,6 +774,13 @@ int mag_points(int level, struct char_data *ch, struct char_data *victim, int sp
     if (spell->points.hp) {
         hp = formula_interpreter(ch, victim, spellnum, TRUE, spell->points.hp, level, &rts_code);
 
+        /* Apply spell modifier to healing */
+        if (spell_modifier_diminish) {
+            hp = hp / 2; /* Halve healing for "minus" syllable */
+        } else if (spell_modifier_amplify) {
+            hp = hp * 2; /* Double healing for "plus" syllable */
+        }
+
         /* Apply weather modifier for healing if enabled */
         if ((CONFIG_WEATHER_AFFECTS_SPELLS || CONFIG_SCHOOL_WEATHER_AFFECTS) && spell->element != ELEMENT_UNDEFINED &&
             spell->school != SCHOOL_UNDEFINED) {
@@ -731,12 +815,24 @@ int mag_points(int level, struct char_data *ch, struct char_data *victim, int sp
 
     if (spell->points.mana) {
         mana = formula_interpreter(ch, victim, spellnum, TRUE, spell->points.mana, level, &rts_code);
+        /* Apply spell modifier to mana restoration */
+        if (spell_modifier_diminish) {
+            mana = mana / 2; /* Halve mana restoration for "minus" syllable */
+        } else if (spell_modifier_amplify) {
+            mana = mana * 2; /* Double mana restoration for "plus" syllable */
+        }
         GET_MANA(victim) = MIN(GET_MAX_MANA(victim), MAX(0, GET_MANA(victim) + mana));
         effect++;
     }
 
     if (spell->points.move) {
         move = formula_interpreter(ch, victim, spellnum, TRUE, spell->points.move, level, &rts_code);
+        /* Apply spell modifier to movement restoration */
+        if (spell_modifier_diminish) {
+            move = move / 2; /* Halve movement restoration for "minus" syllable */
+        } else if (spell_modifier_amplify) {
+            move = move * 2; /* Double movement restoration for "plus" syllable */
+        }
         GET_MOVE(victim) = MIN(GET_MAX_MOVE(victim), MAX(0, GET_MOVE(victim) + move));
         effect++;
     }
@@ -822,9 +918,32 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj, int sp
         case SPELL_CURSE:
             if (!OBJ_FLAGGED(obj, ITEM_NODROP)) {
                 SET_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_NODROP);
-                if (GET_OBJ_TYPE(obj) == ITEM_WEAPON)
-                    GET_OBJ_VAL(obj, 2)--;
-                send_to_char(ch, "Isto brilha vermelho por alguns instantes.\r\n");
+                if (GET_OBJ_TYPE(obj) == ITEM_WEAPON) {
+                    /* Evil players empower cursed weapons, others weaken them */
+                    if (!IS_NPC(ch) && IS_EVIL(ch)) {
+                        /* Cap dice size to prevent exploit: curse/remove curse cycling */
+                        if (GET_OBJ_VAL(obj, 2) < MAX_CURSE_DICE_SIZE) {
+                            GET_OBJ_VAL(obj, 2)++; /* Evil curse adds dark power to weapon */
+                            send_to_char(ch, "Isto brilha vermelho sombrio e pulsa com energia maligna!\r\n");
+                        } else {
+                            send_to_char(
+                                ch,
+                                "A arma já está saturada com poder das trevas e não pode ser mais amaldiçoada!\r\n");
+                        }
+                    } else {
+                        GET_OBJ_VAL(obj, 2)--; /* Regular curse weakens weapon */
+                        send_to_char(ch, "Isto brilha vermelho por alguns instantes.\r\n");
+                    }
+                } else {
+                    send_to_char(ch, "Isto brilha vermelho por alguns instantes.\r\n");
+                }
+
+                /* Reputation gain for evil players cursing objects - dynamic reputation system */
+                if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && IS_EVIL(ch)) {
+                    int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_DARK_MAGIC, NULL);
+                    /* Evil characters gain reputation (infamy) for cursing items */
+                    modify_player_reputation(ch, 1 + class_bonus);
+                }
             }
             break;
         case SPELL_INVISIBLE:
@@ -839,13 +958,33 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj, int sp
                 !GET_OBJ_VAL(obj, 3)) {
                 GET_OBJ_VAL(obj, 3) = 1;
                 send_to_char(ch, "Isto emite uma fumaça escura por alguns instantes.\r\n");
+
+                /* Reputation gain for evil players poisoning objects - dynamic reputation system */
+                if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && IS_EVIL(ch)) {
+                    int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_POISONING, NULL);
+                    /* Evil characters gain reputation (infamy) for poisoning food/drinks */
+                    modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
+                }
             }
             break;
         case SPELL_REMOVE_CURSE:
             if (OBJ_FLAGGED(obj, ITEM_NODROP)) {
                 REMOVE_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_NODROP);
-                if (GET_OBJ_TYPE(obj) == ITEM_WEAPON)
-                    GET_OBJ_VAL(obj, 2)++;
+                if (GET_OBJ_TYPE(obj) == ITEM_WEAPON) {
+                    /* Only increase dice size if it's below the normal threshold.
+                     * This prevents exploit where evil players alternate curse/remove curse
+                     * to infinitely boost weapon damage. Weapons with dice size below
+                     * MIN_NORMAL_DICE_SIZE were likely weakened by regular curse. */
+                    if (GET_OBJ_VAL(obj, 2) < MIN_NORMAL_DICE_SIZE) {
+                        GET_OBJ_VAL(obj, 2)++; /* Restore weakened weapon */
+                    } else if (GET_OBJ_VAL(obj, 2) > MAX_CURSE_DICE_SIZE) {
+                        /* If somehow above max, reduce back to max */
+                        GET_OBJ_VAL(obj, 2) = MAX_CURSE_DICE_SIZE;
+                    }
+                    /* Leave dice size unchanged in MIN_NORMAL_DICE_SIZE to MAX_CURSE_DICE_SIZE range
+                     * to prevent curse/remove curse exploit cycling while preserving legitimately
+                     * enhanced weapons. */
+                }
                 send_to_char(ch, "Isto brilha azul por uns instantes.\r\n");
             }
             break;
