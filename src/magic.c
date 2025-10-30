@@ -971,17 +971,19 @@ int mag_alter_objs(int level, struct char_data *ch, struct obj_data *obj, int sp
             if (OBJ_FLAGGED(obj, ITEM_NODROP)) {
                 REMOVE_BIT_AR(GET_OBJ_EXTRA(obj), ITEM_NODROP);
                 if (GET_OBJ_TYPE(obj) == ITEM_WEAPON) {
-                    /* Only increase dice size if it's below a reasonable threshold.
+                    /* Only increase dice size if it's below the normal threshold.
                      * This prevents exploit where evil players alternate curse/remove curse
-                     * to infinitely boost weapon damage. Assume weapons with dice size
-                     * >= 6 were likely boosted by evil curse and should be reduced instead. */
-                    if (GET_OBJ_VAL(obj, 2) < 6) {
+                     * to infinitely boost weapon damage. Weapons with dice size below
+                     * MIN_NORMAL_DICE_SIZE were likely weakened by regular curse. */
+                    if (GET_OBJ_VAL(obj, 2) < MIN_NORMAL_DICE_SIZE) {
                         GET_OBJ_VAL(obj, 2)++; /* Restore weakened weapon */
                     } else if (GET_OBJ_VAL(obj, 2) > MAX_CURSE_DICE_SIZE) {
                         /* If somehow above max, reduce back to max */
                         GET_OBJ_VAL(obj, 2) = MAX_CURSE_DICE_SIZE;
                     }
-                    /* If dice size is 6-12, don't change it - could be normal or evil-cursed */
+                    /* Leave dice size unchanged in MIN_NORMAL_DICE_SIZE to MAX_CURSE_DICE_SIZE range
+                     * to prevent curse/remove curse exploit cycling while preserving legitimately
+                     * enhanced weapons. */
                 }
                 send_to_char(ch, "Isto brilha azul por uns instantes.\r\n");
             }
