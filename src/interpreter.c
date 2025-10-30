@@ -1828,6 +1828,14 @@ void nanny(struct descriptor_data *d, char *arg)
                 return;
             }
 
+            /* Clear retained_skills array to prevent restoring unintended skills */
+            {
+                int i;
+                for (i = 0; i <= MAX_SKILLS; i++) {
+                    d->character->player_specials->saved.retained_skills[i] = 0;
+                }
+            }
+
             /* Save the selected skill to retained skills */
             if (skill_num > 0) {
                 d->character->player_specials->saved.retained_skills[skill_num] = GET_SKILL(d->character, skill_num);
@@ -1844,6 +1852,11 @@ void nanny(struct descriptor_data *d, char *arg)
             load_result = parse_class(*arg);
             if (load_result == CLASS_UNDEFINED) {
                 write_to_output(d, "Isso não é uma classe válida.\r\nClasse: ");
+                return;
+            }
+            /* Check if trying to select current class */
+            if (load_result == GET_CLASS(d->character)) {
+                write_to_output(d, "Você já é dessa classe. Escolha outra.\r\nClasse: ");
                 return;
             }
             /* Check if class was already used */
