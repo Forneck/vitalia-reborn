@@ -660,6 +660,8 @@ void spedit_main_menu(struct descriptor_data *d)
              "%s8%s) %sEffectiveness %%   : %s%s\r\n"
              "%sE%s) School            : %s%s\r\n"
              "%sL%s) Element           : %s%s\r\n"
+             "%sR%s) Prerequisite      : %s%s %s(%s%d%s)\r\n"
+             "%sV%s) Discoverable      : %s%s\r\n"
              "%s9%s) %sMenu -> Points\r\n"
              "%sP%s) %sMenu -> Protection from\r\n"
              "%sA%s) %sMenu -> Applies & Affects\r\n"
@@ -685,11 +687,13 @@ void spedit_main_menu(struct descriptor_data *d)
              EMPTY_STR(Q->damages), nrm, cyn, Q->max_dam, nrm, prog ? red : grn, nrm, cyn, EMPTY_STR(Q->delay),
              prog ? red : grn, nrm, Q->effectiveness ? nrm : YEL, cyn, EMPTY_STR(Q->effectiveness), prog ? red : grn,
              nrm, cyn, (Q->type == 'K') ? get_skill_school_name(Q->school) : get_spell_school_name(Q->school),
-             prog ? red : grn, nrm, cyn, get_spell_element_name(Q->element), prog ? red : grn, nrm,
-             is_points_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_prot_set(Q) ? bln : nrm, prog ? red : grn, nrm,
-             is_apply_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_dispel_set(Q) ? bln : nrm, prog ? red : grn, nrm,
-             is_objects_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_summon_set(Q) ? bln : nrm, prog ? red : grn, nrm,
-             Q->script ? bln : nrm, prog ? red : grn, nrm, is_assign_set(Q) ? bln : YEL, prog ? red : grn, nrm,
+             prog ? red : grn, nrm, cyn, get_spell_element_name(Q->element), prog ? red : grn, nrm, cyn,
+             Q->prerequisite_spell > 0 ? get_spell_name(Q->prerequisite_spell) : "<none>", nrm, cyn,
+             Q->prerequisite_spell, nrm, prog ? red : grn, nrm, cyn, Q->discoverable ? "Yes" : "No", prog ? red : grn,
+             nrm, is_points_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_prot_set(Q) ? bln : nrm, prog ? red : grn,
+             nrm, is_apply_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_dispel_set(Q) ? bln : nrm, prog ? red : grn,
+             nrm, is_objects_set(Q) ? bln : nrm, prog ? red : grn, nrm, is_summon_set(Q) ? bln : nrm, prog ? red : grn,
+             nrm, Q->script ? bln : nrm, prog ? red : grn, nrm, is_assign_set(Q) ? bln : YEL, prog ? red : grn, nrm,
              is_messages_set(Q) ? bln : nrm, prog ? red : grn, nrm, grn, nrm, nrm);
     send_to_char(d->character, "%s", buf);
     OLC_MODE(d) = SPEDIT_MAIN_MENU;
@@ -821,6 +825,8 @@ void spedit_copyover_spell(struct str_spells *from, struct str_spells *to)
     }
     to->school = from->school;
     to->element = from->element;
+    to->prerequisite_spell = from->prerequisite_spell;
+    to->discoverable = from->discoverable;
     to->function = from->function;
 }
 
@@ -1188,6 +1194,20 @@ int boot_spells(void)
                     Q->element = ELEMENT_UNDEFINED;
                 }
                 break;
+            case DB_CODE_PREREQUISITE_SPELL:
+                ret = fscanf(fp, "%d\n", &Q->prerequisite_spell);
+                if (ret != 1) {
+                    log1("SYSERR: boot spells: Invalid prerequisite_spell value for spell %d", Q->vnum);
+                    Q->prerequisite_spell = 0;
+                }
+                break;
+            case DB_CODE_DISCOVERABLE:
+                ret = fscanf(fp, "%d\n", &Q->discoverable);
+                if (ret != 1) {
+                    log1("SYSERR: boot spells: Invalid discoverable value for spell %d", Q->vnum);
+                    Q->discoverable = 0;
+                }
+                break;
             case DB_CODE_END:
                 break;
             default:
@@ -1464,6 +1484,18 @@ void spedit_save_to_disk(void)
         /* Save spell element if not undefined */
         if (r->element != ELEMENT_UNDEFINED) {
             snprintf(buf, BUFSIZE, "%2d %d\n", DB_CODE_ELEMENT, r->element);
+            fprintf(fp, "%s", buf);
+        }
+
+        /* Save prerequisite spell if set */
+        if (r->prerequisite_spell > 0) {
+            snprintf(buf, BUFSIZE, "%2d %d\n", DB_CODE_PREREQUISITE_SPELL, r->prerequisite_spell);
+            fprintf(fp, "%s", buf);
+        }
+
+        /* Save discoverable flag if set */
+        if (r->discoverable) {
+            snprintf(buf, BUFSIZE, "%2d %d\n", DB_CODE_DISCOVERABLE, r->discoverable);
             fprintf(fp, "%s", buf);
         }
     }
@@ -1908,6 +1940,29 @@ void spedit_parse(struct descriptor_data *d, char *arg)
             }
             OLC_SPELL(d)->element = x;
             break;
+        case SPEDIT_GET_PREREQUISITE:
+            x = atoi(arg);
+            if (x < 0) {
+                send_to_char(d->character, "Invalid spell VNUM!\r\n");
+                send_to_char(d->character, "Enter prerequisite spell VNUM (0 for none) : ");
+                return;
+            }
+            if (x > 0 && !get_spell_by_vnum(x)) {
+                send_to_char(d->character, "That spell VNUM does not exist!\r\n");
+                send_to_char(d->character, "Enter prerequisite spell VNUM (0 for none) : ");
+                return;
+            }
+            OLC_SPELL(d)->prerequisite_spell = x;
+            break;
+        case SPEDIT_GET_DISCOVERABLE:
+            x = atoi(arg);
+            if (x < 0 || x > 1) {
+                send_to_char(d->character, "Invalid choice! Must be 0 or 1.\r\n");
+                send_to_char(d->character, "Is this spell discoverable through experimentation? (0-No, 1-Yes) : ");
+                return;
+            }
+            OLC_SPELL(d)->discoverable = x;
+            break;
         case SPEDIT_PROTECTION_MENU:
             if (!(x = atoi(arg)))
                 break;
@@ -2101,6 +2156,16 @@ void spedit_parse(struct descriptor_data *d, char *arg)
                 case 'l':
                 case 'L':
                     spedit_element_menu(d);
+                    return;
+                case 'r':
+                case 'R':
+                    send_to_char(d->character, "Enter prerequisite spell VNUM (0 for none) : ");
+                    OLC_MODE(d) = SPEDIT_GET_PREREQUISITE;
+                    return;
+                case 'v':
+                case 'V':
+                    send_to_char(d->character, "Is this spell discoverable through experimentation? (0-No, 1-Yes) : ");
+                    OLC_MODE(d) = SPEDIT_GET_DISCOVERABLE;
                     return;
                 case '9':
                     spedit_show_points(d);
