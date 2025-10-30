@@ -254,7 +254,7 @@ void send_char_pos(struct char_data *ch, int dam)
             if (dam > (GET_MAX_HIT(ch) / 4))
                 send_to_char(ch, "Isto realmente DOEU!\r\n");
             if (GET_HIT(ch) < (GET_MAX_HIT(ch) / 4))
-                send_to_char(ch, "Você espera que seus ferimentos parem de %sSANGRAR%s tanto!\r\n", CCRED(ch, C_SPR),
+                send_to_char(ch, "Você espera que seus ferimentos parem de %sSANGRAR tanto!%s\r\n", CCRED(ch, C_SPR),
                              CCNRM(ch, C_SPR));
     }
 }

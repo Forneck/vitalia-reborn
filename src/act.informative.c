@@ -1548,14 +1548,14 @@ ACMD(do_who)
             
             /* imprime a linha */
             // CORRIGIDO: O formato agora inclui um %s extra para o padding_buf
-            send_to_char(ch, "%s[%3d\tC%-3s%s%s] \tB%s%s\tW%s%s%s\tn\r\n",
+            send_to_char(ch, "%s[%3d \tC%-3s%s%s] \tB%s%s\tW%s%s%s\tn\r\n",
                 corNivel,                     // %s (1) Cor do colchete/nível
                 GET_LEVEL(tch),               // %-3d (2) Nível
                 CLASS_ABBR(tch),              // \tC%-3s (3) Classe
                 statusFlag,                   // %s (4) Flag
                 corNivel,                     // %s (5) Cor para fechar o colchete
                 GET_NAME(tch),                // \tB%s (6) Nome
-                (*GET_TITLE(tch) ? "" : ""), // %s (7) ESPAÇO CONDICIONAL
+                (*GET_TITLE(tch) ? " " : ""), // %s (7) ESPAÇO CONDICIONAL
                 GET_TITLE(tch),               // \tW%s (8) Título
                 padding_buf,                  // %s (9) **PADDING DE ALINHAMENTO**
                 enc_buf                       // %s (10) Encarnação
@@ -1571,7 +1571,7 @@ ACMD(do_who)
     else if (num_can_see == 1)
         send_to_char(ch, "\tGApenas um personagem solitário!\tn\r\n");
     else
-        send_to_char(ch, "\tGVocê pode ver%d\tG %s.\tn\r\n",
+        send_to_char(ch, "\tGVocê pode ver %d\tG %s.\tn\r\n",
                      num_can_see, PLURAL(num_can_see, "personagem", "personagens"));
 
     if (IS_HAPPYHOUR > 0)

@@ -1347,31 +1347,34 @@ void perform_wear(struct char_data *ch, struct obj_data *obj, int where)
         ITEM_WEAR_QUIVER    /* 24 - aljava / bolsa de flechas */
     };
 
-    const char *already_wearing[] = {"Você já está usando uma luz.\r\n",
-                                     "VOCE NUNCA DEVERIA ESTAR VENDO ESTA MENSAGEM.  POR FAVOR, REPORTE.\r\n",
-                                     "Você já está usando algo em ambos seus dedos anelares.\r\n",
-                                     "VOCE NUNCA DEVERIA ESTAR VENDO ESTA MENSAGEM.  POR FAVOR, REPORTE.\r\n",
-                                     "Você não pode colocar mais nada em volta de seu pescoço.\r\n",
-                                     "Você já está vestindo algo em seu corpo.\r\n",
-                                     "Você já está vestindo algo em sua cabeça.\r\n",
-                                     "Você já está vestindo algo em suas pernas.\r\n",
-                                     "Você já está vestindo algo em seus pés.\r\n",
-                                     "Você já está vestindo algo em suas mãos.\r\n",
-                                     "Você já está vestindo algo em seus braços.\r\n",
-                                     "Você já está usando um escudo.\r\n",
-                                     "Você já está vestindo algo sobre seu corpo.\r\n",
-                                     "Você já está vestindo algo em volta de sua cintura.\r\n",
-                                     "VOCE NUNCA DEVERIA ESTAR VENDO ESTA MENSAGEM.  POR FAVOR, REPORTE.\r\n",
-                                     "Você já está vestindo algo em ambos os pulsos.\r\n",
-                                     "Você já tem uma arma empunhada.\r\n",
-                                     "Você já está segurando algo.\r\n",
-                                     "Você já está usando asas.\r\n",
-                                     "VOCE NUNCA DEVERIA ESTAR VENDO ESTA MENSAGEM.  POR FAVOR, REPORTE.\r\n",
-                                     "Você já está usando algo em ambas as orelhas.\r\n",
-                                     "Você já está usando algo em seu rosto.\r\n",
-                                     "Você já está usando algo em seu nariz.\r\n",
-                                     "Você já está usando uma insígnia.\r\n",
-                                     "Você já está usando algo na bolsa de munições.\r\n"};
+    const char *already_wearing[] = {
+        /* 0 */  "Você já está usando uma luz.\r\n",
+        /* 1 */  "Você já está vestindo algo em sua cabeça.\r\n",
+        /* 2 */  "Você já está usando algo em sua orelha.\r\n",
+        /* 3 */  "Você já está usando algo em sua orelha.\r\n",
+        /* 4 */  "Você já está usando algo em seu rosto.\r\n",
+        /* 5 */  "Você já está usando algo em seu nariz.\r\n",
+        /* 6 */  "Você já está usando algo em seu pescoço.\r\n",
+        /* 7 */  "Você já está usando algo em seu pescoço.\r\n",
+        /* 8 */  "Você já está vestindo algo em seu corpo.\r\n",
+        /* 9 */  "Você já está vestindo algo em seus braços.\r\n",
+        /* 10 */ "Você já está vestindo algo em suas mãos.\r\n",
+        /* 11 */ "Você já está usando algo em seu pulso.\r\n",
+        /* 12 */ "Você já está usando algo em seu pulso.\r\n",
+        /* 13 */ "Você já está usando algo em seu dedo anelar.\r\n",
+        /* 14 */ "Você já está usando algo em seu dedo anelar.\r\n",
+        /* 15 */ "Você já está vestindo algo em sua cintura.\r\n",
+        /* 16 */ "Você já está vestindo algo em suas pernas.\r\n",
+        /* 17 */ "Você já está vestindo algo em seus pés.\r\n",
+        /* 18 */ "Você já está vestindo algo sobre o corpo.\r\n",
+        /* 19 */ "Você já está usando um escudo.\r\n",
+        /* 20 */ "Você já tem uma arma empunhada.\r\n",
+        /* 21 */ "Você já está segurando algo.\r\n",
+        /* 22 */ "Você já está usando asas.\r\n",
+        /* 23 */ "Você já está usando uma insígnia.\r\n",
+        /* 24 */ "Você já está usando algo na aljava.\r\n"
+    };
+    
 
     /* first, make sure that the wear position is valid. */
     if (!CAN_WEAR(obj, wear_bitvectors[where])) {
