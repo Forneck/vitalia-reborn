@@ -1,0 +1,180 @@
+Social,Category,MobUsable,Notes
+...,...,inappropriate,Speechless social - potentially confusing
+abc,silly,no,Drug reference - absurd
+abrac,neutral,yes,Magic word - harmless
+accuse,negative,yes,Used by mobs
+ack,neutral,yes,Exclamation
+adieu,positive,yes,Farewell
+admire,positive,yes,Admiration
+adoring,positive,yes,Affectionate
+agree,positive,yes,Used by mobs
+ahem,neutral,yes,Attention getting
+aim,aggressive,yes,Used by mobs - targeting
+amused,positive,yes,Light happiness
+apologize,positive,yes,Apology
+applaud,positive,yes,Used by mobs
+arch,neutral,yes,Eyebrow arch
+argh,frustrated,yes,Frustration
+armcross,neutral,yes,Defensive posture
+arrest,aggressive,yes,Law enforcement
+avsalute,respectful,yes,Military salute
+aww,positive,yes,Sympathy
+babble,silly,maybe,Incoherent speech
+backclap,positive,yes,Used by mobs
+bark,aggressive,yes,Animal sound
+bat,playful,yes,Eyelash batting
+batman,silly,no,Pop culture reference
+battlecry,aggressive,yes,Used by mobs
+beam,positive,yes,Used by mobs
+bearhug,loving,yes,Used by mobs
+beckon,neutral,yes,Summoning gesture
+beer,neutral,yes,Drinking
+beg,submissive,yes,Pleading
+behind,playful,yes,Sneaking up
+belch,silly,no,Bodily function
+bite,aggressive,yes,Used by mobs
+blah,neutral,yes,Boredom
+blame,negative,yes,Accusation
+bleed,fearful,yes,Injury
+blink,neutral,yes,Used by mobs
+bloob,silly,no,Nonsense sound
+blue,sad,yes,Sadness
+blush,loving,yes,Used by mobs
+bounce,playful,yes,Used by mobs
+boast,proud,yes,Used by mobs
+boggle,confused,yes,Used by mobs
+boink,silly,maybe,Cartoon sound
+bonk,silly,maybe,Hit on head
+boo,inappropriate,no,Potentially offensive
+booger,silly,no,Bodily function - gross
+bop,playful,yes,Light hit
+bored,neutral,yes,Boredom
+bow,respectful,yes,Used by mobs
+brag,proud,yes,Used by mobs
+burp,silly,no,Bodily function
+calm,positive,yes,Used by mobs - calming
+caress,loving,yes,Used by mobs
+challenge,aggressive,yes,Used by mobs
+charm,loving,yes,Used by mobs
+cheers,excited,yes,Used by mobs
+clap,positive,yes,Used by mobs
+comfort,positive,yes,Used by mobs - resting category
+console,positive,yes,Used by mobs - resting category
+cower,fearful,yes,Used by mobs
+cradle,loving,yes,Used by mobs - resting category
+cringe,fearful,yes,Used by mobs
+cry,sad,yes,Used by mobs
+cuddle,loving,yes,Used by mobs
+curse,negative,yes,Used by mobs
+curtsey,respectful,yes,Used by mobs
+custard,inappropriate,no,Sexual innuendo
+dance,playful,yes,Used by mobs
+despine,inappropriate,no,Extremely violent
+dive,inappropriate,no,Inappropriate diving
+drool,silly,no,Bodily function
+earlick,inappropriate,no,Suggestive
+embrace,loving,yes,Used by mobs
+envy,envious,yes,Used by mobs
+eye,envious,yes,Used by mobs
+fart,silly,no,Bodily function
+flick,inappropriate,no,Flicking body parts
+flinch,fearful,yes,Used by mobs
+flirt,loving,yes,Used by mobs
+fondle,inappropriate,no,Inappropriate touching
+french,inappropriate,no,French kissing
+frown,negative,yes,Used by mobs
+gasp,fearful,yes,Used by mobs
+ghug,loving,yes,Used by mobs - group hug
+giggle,playful,yes,Used by mobs
+glare,negative,yes,Used by mobs
+greed,envious,yes,Used by mobs
+greet,positive,yes,Used by mobs
+grin,positive,yes,Used by mobs
+grope,inappropriate,no,Inappropriate touching
+growl,aggressive,yes,Used by mobs
+haircut,inappropriate,no,Forceful cutting
+halo,inappropriate,no,Religious imagery
+happy,positive,yes,Used by mobs
+hate,negative,yes,Used by mobs
+howl,silly,maybe,Appropriate for wolves only
+hug,loving,yes,Used by mobs
+huggle,loving,yes,Used by mobs
+hula,inappropriate,no,Potentially suggestive
+joint,inappropriate,no,Drug reference
+joke,playful,yes,Used by mobs
+kiss,loving,yes,Used by mobs
+kneel,respectful,yes,Used by mobs
+knuckle,inappropriate,no,Knuckle sandwich punch
+licks,inappropriate,no,Suggestive licking
+love,loving,yes,Used by mobs
+massage,inappropriate,no,Potentially suggestive
+moan,inappropriate,no,Sexual sound
+mock,negative,yes,Used by mobs
+modest,inappropriate,no,Exposing/covering private areas
+moon,silly,no,Showing buttocks
+needle,inappropriate,no,Stabbing with needle
+newidea,inappropriate,no,Immersion breaking
+nods,positive,yes,Used by mobs
+noogie,silly,no,Rubbing knuckles on head
+panic,fearful,yes,Used by mobs
+pant,inappropriate,no,Heavy breathing - suggestive
+pat,positive,yes,Used by mobs - resting category
+peer,neutral,yes,Used by mobs
+poke,playful,yes,Used by mobs
+ponder,neutral,yes,Used by mobs
+pose,proud,yes,Used by mobs
+puke,silly,no,Bodily function - vomiting
+pushup,inappropriate,no,Potentially suggestive positioning
+puzzle,confused,yes,Used by mobs
+raspberry,silly,no,Fart noise with mouth
+rose,inappropriate,no,Potentially suggestive romantic gesture
+sad,sad,yes,Used by mobs
+salute,respectful,yes,Used by mobs
+scratch,neutral,yes,Used by mobs
+seduce,inappropriate,no,Explicitly sexual
+sex,inappropriate,no,Explicitly sexual
+shake,fearful,yes,Used by mobs
+shiskabob,inappropriate,no,Impaling on sword - violent
+shivers,fearful,yes,Used by mobs
+shock,inappropriate,no,Electric shock
+shrugs,neutral,yes,Used by mobs
+sing,playful,yes,Used by mobs
+skip,playful,yes,Used by mobs
+slap,aggressive,yes,Used by mobs
+smile,positive,yes,Used by mobs
+snarl,aggressive,yes,Used by mobs
+sneer,negative,yes,Used by mobs
+sob,sad,yes,Used by mobs
+spank,inappropriate,no,Physical punishment - potentially sexual
+spit,negative,yes,Used by mobs
+spork,inappropriate,no,Stabbing with spork
+steam,negative,yes,Used by mobs - anger
+stretch,neutral,yes,Used by mobs
+strut,proud,yes,Used by mobs
+suckit-up,inappropriate,no,Rude/offensive phrase
+sulk,sad,yes,Used by mobs
+swear,negative,yes,Used by mobs
+sweetsmile,positive,yes,Used by mobs
+swoon,loving,yes,Used by mobs
+tease,playful,yes,Used by mobs
+thanks,positive,yes,Used by mobs
+think,neutral,yes,Used by mobs
+threaten,aggressive,yes,Used by mobs
+thumbsup,positive,yes,Used by mobs
+tickle,playful,yes,Used by mobs
+titter,inappropriate,no,Giggling in suggestive context
+tuck,loving,yes,Used by mobs - resting category
+vampire,inappropriate,no,Biting necks - suggestive
+wait,neutral,yes,Used by mobs
+warscream,aggressive,yes,Used by mobs
+waves,positive,yes,Used by mobs
+wedgie,silly,no,Pulling underwear up
+weep,sad,yes,Used by mobs
+welcome,positive,yes,Used by mobs
+whimper,fearful,yes,Used by mobs
+whip,inappropriate,no,BDSM reference
+whoo,excited,yes,Used by mobs
+winks,positive,yes,Used by mobs
+wonder,neutral,yes,Used by mobs
+worry,fearful,yes,Used by mobs
+yawn,neutral,yes,Used by mobs
