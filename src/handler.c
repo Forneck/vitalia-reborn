@@ -348,6 +348,33 @@ void affect_from_char(struct char_data *ch, int type)
     }
 }
 
+/* Remove all affects from a character efficiently (O(n) instead of O(n²))
+ * This is optimized for bulk removal by calling affect_total only once
+ * at the end instead of after each individual affect removal. */
+void affect_remove_all(struct char_data *ch)
+{
+    struct affected_type *af, *next_af;
+
+    if (!ch)
+        return;
+
+    if (ch->affected == NULL)
+        return;
+
+    /* Remove each affect's modifications and free memory */
+    for (af = ch->affected; af; af = next_af) {
+        next_af = af->next;
+        affect_modify_ar(ch, af->location, af->modifier, af->bitvector, FALSE);
+        free(af);
+    }
+
+    /* Clear the affect list */
+    ch->affected = NULL;
+
+    /* Recalculate totals once after all affects are removed */
+    affect_total(ch);
+}
+
 /* Return TRUE if a char is affected by a spell (SPELL_XXX), FALSE indicates
  * not affected. */
 bool affected_by_spell(struct char_data *ch, int type)
