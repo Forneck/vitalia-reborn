@@ -362,16 +362,31 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
         /* Player killed someone */
         int class_bonus;
         if (IS_NPC(ch)) {
-            /* Killing good-aligned mobs lowers reputation */
-            if (IS_GOOD(ch)) {
-                modify_player_reputation(killer, -rand_number(1, 3));
+            /* Different reputation changes based on killer's alignment */
+            if (IS_EVIL(killer)) {
+                /* Evil killers gain reputation (infamy) for killing good targets */
+                if (IS_GOOD(ch)) {
+                    class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
+                    modify_player_reputation(killer, rand_number(2, 4) + class_bonus);
+                }
+                /* Evil killers gain small reputation for any kill */
+                else if (IS_EVIL(ch)) {
+                    class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
+                    modify_player_reputation(killer, rand_number(1, 2) + class_bonus);
+                }
+            } else {
+                /* Good/Neutral killers */
+                /* Killing good-aligned mobs lowers reputation */
+                if (IS_GOOD(ch)) {
+                    modify_player_reputation(killer, -rand_number(1, 3));
+                }
+                /* Killing evil-aligned mobs increases reputation slightly */
+                else if (IS_EVIL(ch)) {
+                    class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
+                    modify_player_reputation(killer, rand_number(1, 2) + class_bonus);
+                }
             }
-            /* Killing evil-aligned mobs increases reputation slightly */
-            else if (IS_EVIL(ch)) {
-                class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
-                modify_player_reputation(killer, rand_number(1, 2) + class_bonus);
-            }
-            /* Killing high-level mobs increases reputation more */
+            /* Killing high-level mobs increases reputation more (for all alignments) */
             if (GET_LEVEL(ch) >= GET_LEVEL(killer) + 5) {
                 class_bonus = get_class_reputation_modifier(killer, CLASS_REP_COMBAT_KILL, ch);
                 modify_player_reputation(killer, rand_number(1, 3) + class_bonus);

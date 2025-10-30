@@ -125,6 +125,8 @@ int modify_player_reputation(struct char_data *ch, int amount);
 #define CLASS_REP_FAITHFULNESS 9       /* Acts of faith (Clerics) */
 #define CLASS_REP_STEALTH_ACTION 10    /* Stealth actions (Thieves) - stealing, backstabbing */
 #define CLASS_REP_POISONING 11         /* Poisoning (Thieves) */
+#define CLASS_REP_DARK_MAGIC 12        /* Dark/harmful magic (Evil Magic Users, Fallen Clerics) */
+#define CLASS_REP_HARM_SPELL 13        /* Harmful spells (Evil Clerics) */
 
 int get_class_reputation_modifier(struct char_data *ch, int action_type, struct char_data *target);
 

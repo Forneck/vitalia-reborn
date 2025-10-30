@@ -253,6 +253,39 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim, int sp
     if (mag_savingthrow(victim, savetype, 0))
         dam /= 2;
 
+    /* Reputation changes for offensive spellcasting - dynamic reputation system */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && dam > 0 && ch != victim) {
+        /* Check if this is a dark/necromantic spell */
+        if (spell->school == SCHOOL_NECROMANCY || spell->element == ELEMENT_UNHOLY) {
+            /* Evil characters gain reputation (infamy) for dark magic */
+            if (IS_EVIL(ch)) {
+                int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_DARK_MAGIC, victim);
+                if (IS_GOOD(victim)) {
+                    /* Using dark magic against good targets increases evil reputation */
+                    modify_player_reputation(ch, rand_number(1, 3) + class_bonus);
+                } else {
+                    /* Any successful dark magic for evil characters */
+                    modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
+                }
+            } else {
+                /* Good/Neutral characters LOSE reputation for using dark magic */
+                modify_player_reputation(ch, -rand_number(3, 6));
+                /* Extra penalty for using dark magic on good targets */
+                if (IS_GOOD(victim)) {
+                    modify_player_reputation(ch, -rand_number(2, 4));
+                }
+            }
+        }
+        /* General offensive magic reputation for evil casters */
+        else if (IS_EVIL(ch)) {
+            int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_MAGIC_CAST, victim);
+            /* Evil magic users gain small reputation for any harmful magic */
+            if (IS_MAGIC_USER(ch) && IS_GOOD(victim)) {
+                modify_player_reputation(ch, 1 + class_bonus);
+            }
+        }
+    }
+
     /* and finally, inflict the damage */
     return (damage(ch, victim, dam, spellnum));
 }
@@ -404,6 +437,30 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
             affect_join(victim, af + i, accum_duration, FALSE, accum_affect, FALSE);
             effect++;
         }
+
+    /* Reputation changes for harmful affect spells - dynamic reputation system */
+    if (effect && CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch) && ch != victim) {
+        /* Check if this is a harmful dark/necromantic spell */
+        if (spell->school == SCHOOL_NECROMANCY || spell->element == ELEMENT_UNHOLY) {
+            /* Evil characters gain reputation (infamy) for cursing/harming */
+            if (IS_EVIL(ch)) {
+                int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_HARM_SPELL, victim);
+                if (IS_GOOD(victim)) {
+                    /* Cursing good targets increases evil reputation */
+                    modify_player_reputation(ch, rand_number(1, 2) + class_bonus);
+                } else {
+                    /* Any successful harmful spell for evil characters */
+                    modify_player_reputation(ch, 1 + class_bonus);
+                }
+            } else {
+                /* Good/Neutral characters LOSE reputation for dark harmful magic */
+                modify_player_reputation(ch, -rand_number(2, 4));
+                if (IS_GOOD(victim)) {
+                    modify_player_reputation(ch, -rand_number(1, 3));
+                }
+            }
+        }
+    }
 
     if (effect)
         return MAGIC_SUCCESS;
