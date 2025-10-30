@@ -4110,6 +4110,28 @@ int get_class_reputation_modifier(struct char_data *ch, int action_type, struct 
                 modifier += 1; /* Known for poison use */
             }
             break;
+
+        case CLASS_REP_DARK_MAGIC:
+            /* Evil magic users gain reputation for dark/necromantic magic */
+            if (IS_MAGIC_USER(ch) && IS_EVIL(ch)) {
+                modifier += rand_number(1, 2); /* Necromancers and dark wizards */
+            }
+            /* Evil clerics gain reputation for dark magic */
+            if (IS_CLERIC(ch) && IS_EVIL(ch)) {
+                modifier += 1; /* Fallen clerics using dark powers */
+            }
+            break;
+
+        case CLASS_REP_HARM_SPELL:
+            /* Evil clerics gain reputation for harmful divine magic */
+            if (IS_CLERIC(ch) && IS_EVIL(ch)) {
+                modifier += rand_number(1, 2); /* Evil priests spreading suffering */
+            }
+            /* Evil druids gain reputation for corrupting nature */
+            if (IS_DRUID(ch) && IS_EVIL(ch)) {
+                modifier += 1; /* Blighted druids */
+            }
+            break;
     }
 
     return modifier;
