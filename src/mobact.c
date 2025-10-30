@@ -275,7 +275,7 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
         social_list = excited_socials;
     }
     /* High happiness (70+) with high excitement (60-74) - show playful behavior */
-    else if (mob_happiness >= 70 && mob_excitement >= 60) {
+    else if (mob_happiness >= 70 && mob_excitement >= 60 && mob_excitement < 75) {
         social_list = playful_socials;
     }
     /* High curiosity (70+) with moderate happiness (30-69) - show confused/wondering behavior */
