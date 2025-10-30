@@ -270,21 +270,21 @@ static void mob_contextual_social(struct char_data *ch, struct char_data *target
     else if (mob_sadness >= 70) {
         social_list = sad_socials;
     }
-    /* High excitement (75+) and high happiness - show excited behavior */
-    else if (mob_excitement >= 75 && mob_happiness >= 60) {
+    /* High happiness (70+) with very high excitement (75+) - show excited behavior */
+    else if (mob_happiness >= 70 && mob_excitement >= 75) {
         social_list = excited_socials;
     }
-    /* High happiness (70+) with high excitement (60+) - show playful behavior */
+    /* High happiness (70+) with high excitement (60-74) - show playful behavior */
     else if (mob_happiness >= 70 && mob_excitement >= 60) {
         social_list = playful_socials;
+    }
+    /* High curiosity (70+) with moderate happiness (30-69) - show confused/wondering behavior */
+    else if (mob_curiosity >= 70 && mob_happiness >= 30 && mob_happiness < 70) {
+        social_list = confused_socials;
     }
     /* High happiness (70+) shows positive behavior */
     else if (mob_happiness >= 70) {
         social_list = positive_socials;
-    }
-    /* High curiosity (70+) with moderate happiness - show confused/wondering behavior */
-    else if (mob_curiosity >= 70 && mob_happiness >= 30 && mob_happiness < 70) {
-        social_list = confused_socials;
     }
     /* Moderate emotions combined with other factors */
     /* High reputation target (60+) gets positive socials from happy/friendly mobs */
