@@ -355,6 +355,9 @@ void affect_remove_all(struct char_data *ch)
 {
     struct affected_type *af, *next_af;
 
+    if (!ch)
+        return;
+
     if (ch->affected == NULL)
         return;
 
