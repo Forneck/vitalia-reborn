@@ -1831,7 +1831,7 @@ void nanny(struct descriptor_data *d, char *arg)
             /* Clear retained_skills array to prevent restoring unintended skills */
             {
                 int i;
-                for (i = 0; i <= MAX_SKILLS; i++) {
+                for (i = 1; i <= MAX_SKILLS; i++) {
                     d->character->player_specials->saved.retained_skills[i] = 0;
                 }
             }
