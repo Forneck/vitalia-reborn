@@ -177,9 +177,21 @@ static void auto_equip(struct char_data *ch, struct obj_data *obj, int location)
         switch (j = (location - 1)) {
             case WEAR_LIGHT:
                 break;
-            case WEAR_FINGER_R:
-            case WEAR_FINGER_L:
-                if (!CAN_WEAR(obj, ITEM_WEAR_FINGER)) /* not fitting :( */
+            case WEAR_HEAD:
+                if (!CAN_WEAR(obj, ITEM_WEAR_HEAD))
+                    location = LOC_INVENTORY;
+                break;
+            case WEAR_EAR_R:
+            case WEAR_EAR_L:
+                if (!CAN_WEAR(obj, ITEM_WEAR_EAR))
+                    location = LOC_INVENTORY;
+                break;
+            case WEAR_FACE:
+                if (!CAN_WEAR(obj, ITEM_WEAR_FACE))
+                    location = LOC_INVENTORY;
+                break;
+            case WEAR_NOSE:
+                if (!CAN_WEAR(obj, ITEM_WEAR_NOSE))
                     location = LOC_INVENTORY;
                 break;
             case WEAR_NECK_1:
@@ -191,8 +203,26 @@ static void auto_equip(struct char_data *ch, struct obj_data *obj, int location)
                 if (!CAN_WEAR(obj, ITEM_WEAR_BODY))
                     location = LOC_INVENTORY;
                 break;
-            case WEAR_HEAD:
-                if (!CAN_WEAR(obj, ITEM_WEAR_HEAD))
+            case WEAR_ARMS:
+                if (!CAN_WEAR(obj, ITEM_WEAR_ARMS))
+                    location = LOC_INVENTORY;
+                break;
+            case WEAR_HANDS:
+                if (!CAN_WEAR(obj, ITEM_WEAR_HANDS))
+                    location = LOC_INVENTORY;
+                break;
+            case WEAR_WRIST_R:
+            case WEAR_WRIST_L:
+                if (!CAN_WEAR(obj, ITEM_WEAR_WRIST))
+                    location = LOC_INVENTORY;
+                break;
+            case WEAR_FINGER_R:
+            case WEAR_FINGER_L:
+                if (!CAN_WEAR(obj, ITEM_WEAR_FINGER)) /* not fitting :( */
+                    location = LOC_INVENTORY;
+                break;
+            case WEAR_WAIST:
+                if (!CAN_WEAR(obj, ITEM_WEAR_WAIST))
                     location = LOC_INVENTORY;
                 break;
             case WEAR_LEGS:
@@ -203,29 +233,12 @@ static void auto_equip(struct char_data *ch, struct obj_data *obj, int location)
                 if (!CAN_WEAR(obj, ITEM_WEAR_FEET))
                     location = LOC_INVENTORY;
                 break;
-            case WEAR_HANDS:
-                if (!CAN_WEAR(obj, ITEM_WEAR_HANDS))
-                    location = LOC_INVENTORY;
-                break;
-            case WEAR_ARMS:
-                if (!CAN_WEAR(obj, ITEM_WEAR_ARMS))
-                    location = LOC_INVENTORY;
-                break;
-            case WEAR_SHIELD:
-                if (!CAN_WEAR(obj, ITEM_WEAR_SHIELD))
-                    location = LOC_INVENTORY;
-                break;
             case WEAR_ABOUT:
                 if (!CAN_WEAR(obj, ITEM_WEAR_ABOUT))
                     location = LOC_INVENTORY;
                 break;
-            case WEAR_WAIST:
-                if (!CAN_WEAR(obj, ITEM_WEAR_WAIST))
-                    location = LOC_INVENTORY;
-                break;
-            case WEAR_WRIST_R:
-            case WEAR_WRIST_L:
-                if (!CAN_WEAR(obj, ITEM_WEAR_WRIST))
+            case WEAR_SHIELD:
+                if (!CAN_WEAR(obj, ITEM_WEAR_SHIELD))
                     location = LOC_INVENTORY;
                 break;
             case WEAR_WIELD:
@@ -241,19 +254,6 @@ static void auto_equip(struct char_data *ch, struct obj_data *obj, int location)
                 break;
             case WEAR_WINGS:
                 if (!CAN_WEAR(obj, ITEM_WEAR_WINGS))
-                    location = LOC_INVENTORY;
-                break;
-            case WEAR_EAR_R:
-            case WEAR_EAR_L:
-                if (!CAN_WEAR(obj, ITEM_WEAR_EAR))
-                    location = LOC_INVENTORY;
-                break;
-            case WEAR_FACE:
-                if (!CAN_WEAR(obj, ITEM_WEAR_FACE))
-                    location = LOC_INVENTORY;
-                break;
-            case WEAR_NOSE:
-                if (!CAN_WEAR(obj, ITEM_WEAR_NOSE))
                     location = LOC_INVENTORY;
                 break;
             case WEAR_INSIGNE:
