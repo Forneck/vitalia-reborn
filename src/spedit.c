@@ -656,16 +656,16 @@ void spedit_show_variant_chain(struct descriptor_data *d)
     ptr = OLC_SPELL(d);
     chain_len = snprintf(chain, BUFSIZE, "%s[%d]", ptr->name ? ptr->name : "Unnamed", ptr->vnum);
 
-    while (ptr->prerequisite_spell > 0 && depth < 20) {
+    while (ptr->prerequisite_spell > 0 && depth < MAX_SPELL_CHAIN_DEPTH) {
         ptr = get_spell_by_vnum(ptr->prerequisite_spell);
         if (!ptr)
             break;
 
-        /* Prepend to chain */
+        /* Prepend to chain - use snprintf for safety */
         int temp_len = snprintf(buf, BUFSIZE, "%s[%d] -> %s", ptr->name ? ptr->name : "Unnamed", ptr->vnum, chain);
-        if (temp_len < BUFSIZE) {
-            strncpy(chain, buf, BUFSIZE);
-            chain[BUFSIZE - 1] = '\0';
+        if (temp_len > 0 && temp_len < BUFSIZE) {
+            /* Safe copy using snprintf */
+            snprintf(chain, BUFSIZE, "%s", buf);
             chain_len = temp_len;
         }
         depth++;
@@ -675,7 +675,7 @@ void spedit_show_variant_chain(struct descriptor_data *d)
         send_to_char(d->character, "\r\n%sVariant Chain:%s %s\r\n", cyn, nrm, chain);
     }
 
-    if (depth >= 20) {
+    if (depth >= MAX_SPELL_CHAIN_DEPTH) {
         send_to_char(d->character, "%sWARNING: Chain depth limit reached!%s\r\n", yel, nrm);
     }
 }
@@ -2018,7 +2018,7 @@ void spedit_parse(struct descriptor_data *d, char *arg)
             if (x > 0) {
                 struct str_spells *check_spell = get_spell_by_vnum(x);
                 int chain_depth = 0;
-                while (check_spell && check_spell->prerequisite_spell > 0 && chain_depth < 100) {
+                while (check_spell && check_spell->prerequisite_spell > 0 && chain_depth < MAX_SPELL_CHAIN_DEPTH) {
                     if (check_spell->prerequisite_spell == OLC_SPELL(d)->vnum) {
                         send_to_char(d->character,
                                      "ERROR: This would create a circular dependency!\r\n"
@@ -2030,10 +2030,11 @@ void spedit_parse(struct descriptor_data *d, char *arg)
                     check_spell = get_spell_by_vnum(check_spell->prerequisite_spell);
                     chain_depth++;
                 }
-                if (chain_depth >= 100) {
-                    send_to_char(
-                        d->character,
-                        "WARNING: The prerequisite chain is very long (>100). This may indicate a problem.\r\n");
+                if (chain_depth >= MAX_SPELL_CHAIN_DEPTH) {
+                    send_to_char(d->character,
+                                 "WARNING: The prerequisite chain is very long (>%d). This may indicate a "
+                                 "problem.\r\n",
+                                 MAX_SPELL_CHAIN_DEPTH);
                 }
             }
             OLC_SPELL(d)->prerequisite_spell = x;

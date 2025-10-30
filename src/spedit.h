@@ -25,6 +25,7 @@ SOFTWARE. */
 #define MAX_SPELL_PROTECTIONS 6 /* for e.g: spedit_save_to_disk */
 #define MAX_SPELL_OBJECTS 3
 #define MAX_SPELL_DISPEL 3
+#define MAX_SPELL_CHAIN_DEPTH 100 /* Maximum depth for prerequisite chains */
 
 #define DB_CODE_INIT_VARS 1
 #define DB_CODE_NAME 2
