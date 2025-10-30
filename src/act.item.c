@@ -1342,12 +1342,33 @@ void perform_wear(struct char_data *ch, struct obj_data *obj, int where)
      * to be put into that position (e.g. you can hold any object, not just
      * an object with a HOLD bit.)
      */
-
-    int wear_bitvectors[] = {ITEM_WEAR_TAKE,  ITEM_WEAR_FINGER, ITEM_WEAR_FINGER, ITEM_WEAR_NECK,    ITEM_WEAR_NECK,
-                             ITEM_WEAR_BODY,  ITEM_WEAR_HEAD,   ITEM_WEAR_LEGS,   ITEM_WEAR_FEET,    ITEM_WEAR_HANDS,
-                             ITEM_WEAR_ARMS,  ITEM_WEAR_SHIELD, ITEM_WEAR_ABOUT,  ITEM_WEAR_WAIST,   ITEM_WEAR_WRIST,
-                             ITEM_WEAR_WRIST, ITEM_WEAR_WIELD,  ITEM_WEAR_TAKE,   ITEM_WEAR_WINGS,   ITEM_WEAR_EAR,
-                             ITEM_WEAR_EAR,   ITEM_WEAR_FACE,   ITEM_WEAR_NOSE,   ITEM_WEAR_INSIGNE, ITEM_WEAR_QUIVER};
+     int wear_bitvectors[] = {
+        ITEM_WEAR_TAKE,     /*  0 - luz */
+        ITEM_WEAR_HEAD,     /*  1 - cabeça */
+        ITEM_WEAR_EAR,      /*  2 - orelha direita */
+        ITEM_WEAR_EAR,      /*  3 - orelha esquerda */
+        ITEM_WEAR_FACE,     /*  4 - rosto */
+        ITEM_WEAR_NOSE,     /*  5 - nariz */
+        ITEM_WEAR_NECK,     /*  6 - pescoço 1 */
+        ITEM_WEAR_NECK,     /*  7 - pescoço 2 */
+        ITEM_WEAR_BODY,     /*  8 - corpo */
+        ITEM_WEAR_ARMS,     /*  9 - braços */
+        ITEM_WEAR_HANDS,    /* 10 - mãos */
+        ITEM_WEAR_WRIST,    /* 11 - pulso direito */
+        ITEM_WEAR_WRIST,    /* 12 - pulso esquerdo */
+        ITEM_WEAR_FINGER,   /* 13 - dedo direito */
+        ITEM_WEAR_FINGER,   /* 14 - dedo esquerdo */
+        ITEM_WEAR_WAIST,    /* 15 - cintura */
+        ITEM_WEAR_LEGS,     /* 16 - pernas */
+        ITEM_WEAR_FEET,     /* 17 - pés */
+        ITEM_WEAR_ABOUT,    /* 18 - sobre o corpo (capa) */
+        ITEM_WEAR_SHIELD,   /* 19 - escudo */
+        ITEM_WEAR_WIELD,    /* 20 - arma empunhada */
+        ITEM_WEAR_TAKE,     /* 21 - mão secundária (segurando) */
+        ITEM_WEAR_WINGS,    /* 22 - asas */
+        ITEM_WEAR_INSIGNE,  /* 23 - insígnia */
+        ITEM_WEAR_QUIVER    /* 24 - aljava / bolsa de flechas */
+    };
 
     const char *already_wearing[] = {"Você já está usando uma luz.\r\n",
                                      "VOCE NUNCA DEVERIA ESTAR VENDO ESTA MENSAGEM.  POR FAVOR, REPORTE.\r\n",

@@ -413,33 +413,33 @@
  which control the valid places you can wear a piece of equipment.
  For example, there are two neck positions on the player, and items
  only get the generic neck type. */
-#define WEAR_LIGHT 0    /**< Equipment Location Light */
-#define WEAR_FINGER_R 1 /**< Equipment Location Right Finger */
-#define WEAR_FINGER_L 2 /**< Equipment Location Left Finger */
-#define WEAR_NECK_1 3   /**< Equipment Location Neck #1 */
-#define WEAR_NECK_2 4   /**< Equipment Location Neck #2 */
-#define WEAR_BODY 5     /**< Equipment Location Body */
-#define WEAR_HEAD 6     /**< Equipment Location Head */
-#define WEAR_LEGS 7     /**< Equipment Location Legs */
-#define WEAR_FEET 8     /**< Equipment Location Feet */
-#define WEAR_HANDS 9    /**< Equipment Location Hands */
-#define WEAR_ARMS 10    /**< Equipment Location Arms */
-#define WEAR_SHIELD 11  /**< Equipment Location Shield */
-#define WEAR_ABOUT 12   /**< Equipment Location about body (like a cape)*/
-#define WEAR_WAIST 13   /**< Equipment Location Waist */
-#define WEAR_WRIST_R 14 /**< Equipment Location Right Wrist */
-#define WEAR_WRIST_L 15 /**< Equipment Location Left Wrist */
-#define WEAR_WIELD 16   /**< Equipment Location Weapon */
-#define WEAR_HOLD 17    /**< Equipment Location held in offhand */
-#define WEAR_WINGS 18
-#define WEAR_EAR_R 19
-#define WEAR_EAR_L 20
-#define WEAR_FACE 21
-#define WEAR_NOSE 22
-#define WEAR_INSIGNE 23
-#define WEAR_QUIVER 24
-/** Total number of available equipment lcoations */
-#define NUM_WEARS 25
+ #define WEAR_LIGHT 0    /**< Equipment Location Light */
+ #define WEAR_HEAD 1     /**< Equipment Location Head */
+ #define WEAR_EAR_R 2
+ #define WEAR_EAR_L 3
+ #define WEAR_FACE 4
+ #define WEAR_NOSE 5
+ #define WEAR_NECK_1 6   /**< Equipment Location Neck #1 */
+ #define WEAR_NECK_2 7   /**< Equipment Location Neck #2 */
+ #define WEAR_BODY 8     /**< Equipment Location Body */
+ #define WEAR_ARMS 9    /**< Equipment Location Arms */
+ #define WEAR_HANDS 10    /**< Equipment Location Hands */
+ #define WEAR_WRIST_R 11 /**< Equipment Location Right Wrist */
+ #define WEAR_WRIST_L 12 /**< Equipment Location Left Wrist */
+ #define WEAR_FINGER_R 13 /**< Equipment Location Right Finger */
+ #define WEAR_FINGER_L 14 /**< Equipment Location Left Finger */
+ #define WEAR_WAIST 15   /**< Equipment Location Waist */
+ #define WEAR_LEGS 16     /**< Equipment Location Legs */
+ #define WEAR_FEET 17     /**< Equipment Location Feet */
+ #define WEAR_ABOUT 18   /**< Equipment Location about body (like a cape)*/
+ #define WEAR_SHIELD 19  /**< Equipment Location Shield */
+ #define WEAR_WIELD 20   /**< Equipment Location Weapon */
+ #define WEAR_HOLD 21    /**< Equipment Location held in offhand */
+ #define WEAR_WINGS 22
+ #define WEAR_INSIGNE 23
+ #define WEAR_QUIVER 24
+ /** Total number of available equipment lcoations */
+ #define NUM_WEARS 25
 
 /* object-related defines */
 /* Item types: used by obj_data.obj_flags.type_flag */

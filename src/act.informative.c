@@ -44,7 +44,7 @@ static void look_in_obj(struct char_data *ch, char *arg);
 static void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mode, int show);
 /* do_look, do_equipment, do_examine, do_inventory */
 static void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode);
-static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch);
+static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int mode);
 /* do_where utility functions */
 static void perform_immort_where(char_data *ch, const char *arg);
 static void perform_mortal_where(struct char_data *ch, char *arg);
@@ -153,26 +153,56 @@ static void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mod
     }
 end:
 
-    show_obj_modifiers(obj, ch);
+    show_obj_modifiers(obj, ch, 3);
     send_to_char(ch, "\r\n");
 }
 
-static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch)
+static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int mode)
 {
-    if (OBJ_FLAGGED(obj, ITEM_INVISIBLE))
-        send_to_char(ch, " (invisivel)");
+    if (mode == 0){
+        if (OBJ_FLAGGED(obj, ITEM_INVISIBLE))
+            send_to_char(ch, " (invisivel)");
 
-    if (OBJ_FLAGGED(obj, ITEM_BLESS) && AFF_FLAGGED(ch, AFF_DETECT_ALIGN))
-        send_to_char(ch, " ..Isso brilha azul!");
+        if (OBJ_FLAGGED(obj, ITEM_BLESS) && AFF_FLAGGED(ch, AFF_DETECT_ALIGN))
+            send_to_char(ch, " ..Isso brilha azul!");
 
-    if (OBJ_FLAGGED(obj, ITEM_MAGIC) && AFF_FLAGGED(ch, AFF_DETECT_MAGIC))
-        send_to_char(ch, " ..Isso brilha amarelo!");
+        if (OBJ_FLAGGED(obj, ITEM_MAGIC) && AFF_FLAGGED(ch, AFF_DETECT_MAGIC))
+            send_to_char(ch, " ..Isso brilha amarelo!");
 
-    if (OBJ_FLAGGED(obj, ITEM_GLOW))
-        send_to_char(ch, " ..Isso tem uma aura brilhante!");
+        if (OBJ_FLAGGED(obj, ITEM_GLOW))
+            send_to_char(ch, " ..Isso tem uma aura brilhante!");
 
-    if (OBJ_FLAGGED(obj, ITEM_HUM))
-        send_to_char(ch, " ..Isso emite uma fraca melodia!");
+        if (OBJ_FLAGGED(obj, ITEM_HUM))
+            send_to_char(ch, " ..Isso emite uma fraca melodia!");
+    }else if (mode == 3)
+    {
+        bool has_aura = FALSE;
+    
+        if (OBJ_FLAGGED(obj, ITEM_INVISIBLE)) {
+            send_to_char(ch, " (invis)");
+            has_aura = TRUE;
+        }
+    
+        if (OBJ_FLAGGED(obj, ITEM_BLESS) && AFF_FLAGGED(ch, AFF_DETECT_ALIGN)) {
+            send_to_char(ch, "\tC(aura azul)");
+            has_aura = TRUE;
+        }
+    
+        if (OBJ_FLAGGED(obj, ITEM_MAGIC) && AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
+            send_to_char(ch, "\tC(aura amarela)");
+            has_aura = TRUE;
+        }
+    
+        if (OBJ_FLAGGED(obj, ITEM_GLOW)) {
+            send_to_char(ch, "\tC(aura brilhante)");
+            has_aura = TRUE;
+        }
+    
+        if (OBJ_FLAGGED(obj, ITEM_HUM)) {
+            send_to_char(ch, "\tC(zunindo)");
+            has_aura = TRUE;
+        }
+    }
 }
 
 static void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mode, int show)
@@ -813,7 +843,7 @@ static void look_at_target(struct char_data *ch, char *arg)
         if (!found)
             show_obj_to_char(found_obj, ch, SHOW_OBJ_ACTION);
         else {
-            show_obj_modifiers(found_obj, ch);
+            show_obj_modifiers(found_obj, ch, 0);
             send_to_char(ch, "\r\n");
         }
     } else if (!found)
@@ -1187,23 +1217,28 @@ ACMD(do_inventory)
 
 ACMD(do_equipment)
 {
-    int i, found = 0;
+    int i, found = FALSE;
+    struct obj_data *obj;
+
     send_to_char(ch, "\tWVocê está usando:\r\n");
+
     for (i = 0; i < NUM_WEARS; i++) {
-        if (GET_EQ(ch, i)) {
+        if ((obj = GET_EQ(ch, i))) {
             found = TRUE;
-            if (CAN_SEE_OBJ(ch, GET_EQ(ch, i))) {
-                send_to_char(ch, "%s", wear_where[i]);
-                show_obj_to_char(GET_EQ(ch, i), ch, SHOW_OBJ_SHORT);
-            } else {
-                send_to_char(ch, "%s", wear_where[i]);
+
+            send_to_char(ch, "\tW%-12s\tw", wear_where[i]);
+
+            if (CAN_SEE_OBJ(ch, obj))
+                show_obj_to_char(obj, ch, SHOW_OBJ_SHORT);
+            else
                 send_to_char(ch, "algo.\r\n");
-            }
         }
     }
+
     if (!found)
-        send_to_char(ch, " Nada.\r\n");
+        send_to_char(ch, "  Nada.\r\n");
 }
+
 
 ACMD(do_time)
 {
@@ -1493,7 +1528,7 @@ ACMD(do_who)
             // Adiciona o tamanho do título + o espaço condicional (se existir)
             if (*GET_TITLE(tch)) {
                 len_linha_prefixo += strlen(GET_TITLE(tch));
-                len_linha_prefixo += 1; // Espaço condicional
+                //len_linha_prefixo += 1; // Espaço condicional
             }
 
             // 2. Calcula o padding necessário.
@@ -1513,14 +1548,14 @@ ACMD(do_who)
             
             /* imprime a linha */
             // CORRIGIDO: O formato agora inclui um %s extra para o padding_buf
-            send_to_char(ch, "%s[%-3d\tC%-3s%s%s] \tB%s%s\tW%s%s%s\tn\r\n",
+            send_to_char(ch, "%s[%3d\tC%-3s%s%s] \tB%s%s\tW%s%s%s\tn\r\n",
                 corNivel,                     // %s (1) Cor do colchete/nível
                 GET_LEVEL(tch),               // %-3d (2) Nível
                 CLASS_ABBR(tch),              // \tC%-3s (3) Classe
                 statusFlag,                   // %s (4) Flag
                 corNivel,                     // %s (5) Cor para fechar o colchete
                 GET_NAME(tch),                // \tB%s (6) Nome
-                (*GET_TITLE(tch) ? " " : ""), // %s (7) ESPAÇO CONDICIONAL
+                (*GET_TITLE(tch) ? "" : ""), // %s (7) ESPAÇO CONDICIONAL
                 GET_TITLE(tch),               // \tW%s (8) Título
                 padding_buf,                  // %s (9) **PADDING DE ALINHAMENTO**
                 enc_buf                       // %s (10) Encarnação
@@ -1536,7 +1571,7 @@ ACMD(do_who)
     else if (num_can_see == 1)
         send_to_char(ch, "\tGApenas um personagem solitário!\tn\r\n");
     else
-        send_to_char(ch, "\tGVocê pode ver \tY%d\tG %s.\tn\r\n",
+        send_to_char(ch, "\tGVocê pode ver%d\tG %s.\tn\r\n",
                      num_can_see, PLURAL(num_can_see, "personagem", "personagens"));
 
     if (IS_HAPPYHOUR > 0)
