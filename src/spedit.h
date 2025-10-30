@@ -25,6 +25,7 @@ SOFTWARE. */
 #define MAX_SPELL_PROTECTIONS 6 /* for e.g: spedit_save_to_disk */
 #define MAX_SPELL_OBJECTS 3
 #define MAX_SPELL_DISPEL 3
+#define MAX_SPELL_CHAIN_DEPTH 100 /* Maximum depth for prerequisite chains */
 
 #define DB_CODE_INIT_VARS 1
 #define DB_CODE_NAME 2
@@ -88,9 +89,11 @@ SOFTWARE. */
 #define NUM_ELEMENTS 13
 #define DB_CODE_PTS_GOLD 53
 #define DB_CODE_PTS_BREATH 54
-#define DB_CODE_SCHOOL 55  /* Spell school */
-#define DB_CODE_ELEMENT 56 /* Spell element */
-/* 57 to 59 are free */
+#define DB_CODE_SCHOOL 55             /* Spell school */
+#define DB_CODE_ELEMENT 56            /* Spell element */
+#define DB_CODE_PREREQUISITE_SPELL 57 /* Prerequisite spell for variants */
+#define DB_CODE_DISCOVERABLE 58       /* Can be discovered through experimentation */
+/* 59 is free */
 #define DB_CODE_PROT_1 60
 #define DB_CODE_PROT_2 61
 #define DB_CODE_PROT_3 62

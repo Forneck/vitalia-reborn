@@ -469,6 +469,8 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define SPEDIT_GET_MOBILE 39
 #define SPEDIT_SCHOOL_MENU 40
 #define SPEDIT_ELEMENT_MENU 41
+#define SPEDIT_GET_PREREQUISITE 42
+#define SPEDIT_GET_DISCOVERABLE 43
 
 int save_config(IDXTYPE nowhere);
 
