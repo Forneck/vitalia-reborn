@@ -212,7 +212,7 @@ char *read_delete(long recipient)
     else {
         char timestr[25], *from, *to;
 
-        strftime(timestr, sizeof(timestr), "%d/%m/%Y %H:%M:%S", localtime(&(record_to_keep->sent_time)));
+        strftime(timestr, sizeof(timestr), "%c", localtime(&(record_to_keep->sent_time)));
 
         from = get_name_by_id(record_to_keep->sender);
         to = get_name_by_id(record_to_keep->recipient);
@@ -225,7 +225,7 @@ char *read_delete(long recipient)
                  "\r\n"
                  "%s",
 
-                 timestr, from ? from : "(desconhecido)", to ? to : "(desconhecido)",
+                 timestr, to ? to : "(desconhecido)", from ? from : "(desconhecido)",
                  record_to_keep->body ? record_to_keep->body : "Sem mensagem");
 
         free_mail_record(record_to_keep);
