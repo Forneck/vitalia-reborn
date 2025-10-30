@@ -204,11 +204,39 @@ These trigger **shame, humiliation, and anger**:
 **Response**: humiliation +15-30, shame +15-25, anger +10-20, trust -20-35, friendship -15-25, pride -10-20
 **Modifiers**: High pride mobs +15-25 anger (defensive reaction)
 
-#### 5. Context-Dependent Socials (2) - Trust-Based
-These have different reactions based on relationship:
+#### 5. Context-Dependent Socials (3) - Trust & Relationship-Based
+
+##### A. Knuckle (Knuckle Sandwich/Punch) - Friendship-Dependent ✅
+**Social**: knuckle
+
+**Very High Friendship** (friendship ≥70, trust ≥60):
+- ✅ **Playful/Teasing**: happiness +5-15, friendship +3-8, excitement +5-10
+- **Action**: 40% chance playful response - "$n ri e devolve um soco amigável."
+- **Interpretation**: Close friends roughhousing/playful punch
+
+**High Friendship** (friendship ≥50, trust ≥40):
+- ⚠️ **Mildly Annoyed**: anger +3-10, pain +5-15, trust -5-10
+- **Action**: 30% chance - "$n franze a testa e esfrega o braço."
+- **Interpretation**: Friends but crossing boundaries
+
+**Moderate Relationship** (friendship ≥30 or trust ≥30):
+- ❌ **Uncomfortable/Painful**: pain +15-30, anger +15-30, trust -20-35, friendship -15-25
+- **Action**: 50% chance shows anger - "$n olha para você com raiva e dor."
+- **Interpretation**: Not close enough for this behavior
+
+**Low/No Relationship** (friendship <30, trust <30):
+- ❌ **Hostile Assault**: pain +25-45, anger +30-50, fear +10-25
+- trust -40-60, friendship -35-55
+- **Action**: 60% chance mob attacks (courage ≥40) or flees
+- **Messages**: "$n reage furiosamente ao ataque!" or "$n recua assustado!"
+- **Interpretation**: Physical assault on stranger/enemy
+
+##### B. Massage - Trust-Dependent
 - ✅ **massage** - Positive if trusted (trust ≥50, friendship ≥40), disgusting if not
   - Trusted: happiness +10-20, trust +5-10
   - Untrusted: disgust +10-20, anger +5-15, trust -10-20
+
+##### C. Rose - Receptivity-Dependent
 - ✅ **rose** - Romantic if receptive (friendship ≥60 or love ≥40), neutral otherwise
   - Receptive: love +5-15, happiness +5-10, friendship +5-10
   - Suspicious: curiosity +5-10
@@ -223,22 +251,29 @@ Added to existing negative response system:
    - Already handled by existing system
    - Also: punch, kick, shove
 
-### Remaining Uncategorized (1)
+### All Inappropriate Socials Now Handled! ✅
 
-Only **1 inappropriate social** remains unhandled:
-- ⚠️ **knuckle** - Could be added to violent_socials array for pain response
+**Status**: 34 of 34 inappropriate socials (100%)
+
+All inappropriate socials now have context-appropriate emotional responses:
+- **Context-dependent (relationship-based)**: 9 (5 sexual + 3 violence + 1 knuckle)
+- **Disgusting (disgust response)**: 8  
+- **Violent (pain response)**: 6
+- **Humiliating (shame response)**: 3
+- **Context-dependent (trust-based)**: 3 (massage, rose, knuckle)
+- **Regular negative**: 5 (jeer, snicker, ridicule, scowl, slap)
+- **Remaining unhandled**: 0 ✅
 
 ### Summary Statistics
 
 - **Total inappropriate socials**: 34
-- **Now handled with new emotions**: 33 (97%)
-- **Context-dependent (relationship-based)**: 8 (5 sexual + 3 violence = severely inappropriate)
+- **Now handled with new emotions**: 34 (100%) ✅
+- **Context-dependent (relationship-based)**: 9 (5 sexual + 3 violence + 1 knuckle)
 - **Disgusting (disgust response)**: 8  
 - **Violent (pain response)**: 6
 - **Humiliating (shame response)**: 3
-- **Context-dependent (trust-based)**: 2 (massage, rose)
+- **Context-dependent (trust/intimacy-based)**: 3 (massage, rose, knuckle)
 - **Regular negative**: 5 (jeer, snicker, ridicule, scowl, slap)
-- **Remaining unhandled**: 1 (knuckle)
 
 ---
 

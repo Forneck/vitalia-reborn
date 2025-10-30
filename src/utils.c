@@ -5203,6 +5203,71 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
+    /* Knuckle (knuckle sandwich/punch): context-dependent - playful or hostile */
+    if (!strcmp(social_name, "knuckle")) {
+        int mob_trust = mob->ai_data->emotion_trust;
+        int mob_friendship = mob->ai_data->emotion_friendship;
+
+        /* Very high friendship (70+) and trust (60+) - playful/teasing */
+        if (mob_friendship >= 70 && mob_trust >= 60) {
+            /* Close friends - playful punch/roughhousing */
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 15));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(3, 8));
+            adjust_emotion(mob, &mob->ai_data->emotion_excitement, rand_number(5, 10));
+
+            /* Might respond with playful banter */
+            if (rand_number(1, 100) <= 40) {
+                act("$n ri e devolve um soco amigável.", FALSE, mob, 0, actor, TO_ROOM);
+            }
+        }
+        /* High friendship (50-69) and moderate trust (40+) - slightly annoyed but tolerant */
+        else if (mob_friendship >= 50 && mob_trust >= 40) {
+            /* Friends but not that close - mildly annoyed */
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(3, 10));
+            adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(5, 15));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(5, 10));
+
+            /* Might complain but not hostile */
+            if (rand_number(1, 100) <= 30) {
+                act("$n franze a testa e esfrega o braço.", FALSE, mob, 0, actor, TO_ROOM);
+            }
+        }
+        /* Moderate relationship (30-49 friendship or 30+ trust) - uncomfortable/painful */
+        else if (mob_friendship >= 30 || mob_trust >= 30) {
+            /* Acquaintances - this is not okay */
+            adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(20, 35));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(15, 25));
+
+            /* Shows anger */
+            if (rand_number(1, 100) <= 50) {
+                act("$n olha para você com raiva e dor.", FALSE, mob, 0, actor, TO_VICT);
+                act("$n olha para $N com raiva e dor.", FALSE, mob, 0, actor, TO_NOTVICT);
+            }
+        }
+        /* Low/no relationship - hostile assault */
+        else {
+            /* Strangers/enemies - this is an attack */
+            adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(25, 45));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(30, 50));
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 25));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(40, 60));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(35, 55));
+
+            /* High chance of retaliation if brave */
+            if (mob->ai_data->emotion_courage >= 40 && mob->ai_data->emotion_anger >= 50) {
+                if (rand_number(1, 100) <= 60 && !FIGHTING(mob)) {
+                    act("$n reage furiosamente ao ataque!", FALSE, mob, 0, actor, TO_ROOM);
+                    set_fighting(mob, actor);
+                }
+            } else if (mob->ai_data->emotion_fear >= 40) {
+                /* Fearful - might flee */
+                act("$n recua assustado!", FALSE, mob, 0, actor, TO_ROOM);
+            }
+        }
+    }
+
     /* Alignment interaction - opposite alignments intensify negative responses */
     if (is_negative) {
         if ((IS_GOOD(mob) && IS_EVIL(actor)) || (IS_EVIL(mob) && IS_GOOD(actor))) {
