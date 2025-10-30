@@ -438,7 +438,7 @@
 #define WEAR_WINGS 22
 #define WEAR_INSIGNE 23
 #define WEAR_QUIVER 24
-/** Total number of available equipment lcoations */
+/** Total number of available equipment locations */
 #define NUM_WEARS 25
 
 /* object-related defines */
