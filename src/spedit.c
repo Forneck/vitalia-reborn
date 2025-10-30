@@ -470,6 +470,19 @@ void spedit_show_warnings(struct descriptor_data *d)
     if ((len < BUFSIZE) && !OLC_SPELL(d)->targ_flags)
         len += snprintf(buf + len, BUFSIZE - len, "No target flags set.\r\n");
 
+    /* Spell variant warnings */
+    if ((len < BUFSIZE) && OLC_SPELL(d)->discoverable && OLC_SPELL(d)->prerequisite_spell == 0)
+        len += snprintf(buf + len, BUFSIZE - len,
+                        "Spell is discoverable but has no prerequisite. Players won't be able to discover it.\r\n");
+
+    if ((len < BUFSIZE) && OLC_SPELL(d)->prerequisite_spell > 0 && !OLC_SPELL(d)->discoverable)
+        len += snprintf(buf + len, BUFSIZE - len,
+                        "Spell has prerequisite but is not discoverable. Set discoverable flag if players should "
+                        "find it.\r\n");
+
+    if ((len < BUFSIZE) && OLC_SPELL(d)->prerequisite_spell == OLC_SPELL(d)->vnum)
+        len += snprintf(buf + len, BUFSIZE - len, "ERROR: Spell cannot be its own prerequisite!\r\n");
+
     if (*buf)
         send_to_char(d->character, "\r\n%s", buf);
 
@@ -630,6 +643,43 @@ void spedit_element_menu(struct descriptor_data *d)
     OLC_MODE(d) = SPEDIT_ELEMENT_MENU;
 }
 
+/* Display the prerequisite chain for a spell variant */
+void spedit_show_variant_chain(struct descriptor_data *d)
+{
+    char buf[BUFSIZE];
+    char chain[BUFSIZE];
+    int chain_len = 0;
+    struct str_spells *ptr;
+    int depth = 0;
+
+    /* Build the prerequisite chain backwards */
+    ptr = OLC_SPELL(d);
+    chain_len = snprintf(chain, BUFSIZE, "%s[%d]", ptr->name ? ptr->name : "Unnamed", ptr->vnum);
+
+    while (ptr->prerequisite_spell > 0 && depth < 20) {
+        ptr = get_spell_by_vnum(ptr->prerequisite_spell);
+        if (!ptr)
+            break;
+
+        /* Prepend to chain */
+        int temp_len = snprintf(buf, BUFSIZE, "%s[%d] -> %s", ptr->name ? ptr->name : "Unnamed", ptr->vnum, chain);
+        if (temp_len < BUFSIZE) {
+            strncpy(chain, buf, BUFSIZE);
+            chain[BUFSIZE - 1] = '\0';
+            chain_len = temp_len;
+        }
+        depth++;
+    }
+
+    if (depth > 0) {
+        send_to_char(d->character, "\r\n%sVariant Chain:%s %s\r\n", cyn, nrm, chain);
+    }
+
+    if (depth >= 20) {
+        send_to_char(d->character, "%sWARNING: Chain depth limit reached!%s\r\n", yel, nrm);
+    }
+}
+
 void spedit_main_menu(struct descriptor_data *d)
 {
     char buf[BUFSIZE];
@@ -647,6 +697,12 @@ void spedit_main_menu(struct descriptor_data *d)
     get_char_colors(d->character);
 
     clear_screen(d);
+
+    /* Show variant chain if this spell has a prerequisite */
+    if (Q->prerequisite_spell > 0 || Q->discoverable) {
+        spedit_show_variant_chain(d);
+    }
+
     snprintf(buf, BUFSIZE,
              "%s-- %s Number      : [%s%5d%s] %s%s%s\r\n"
              "%sT%s) Type              : [%s%-5s%s]\r\n"
@@ -1947,10 +2003,38 @@ void spedit_parse(struct descriptor_data *d, char *arg)
                 send_to_char(d->character, "Enter prerequisite spell VNUM (0 for none) : ");
                 return;
             }
+            /* Prevent self-reference */
+            if (x == OLC_SPELL(d)->vnum) {
+                send_to_char(d->character, "ERROR: A spell cannot be its own prerequisite!\r\n");
+                send_to_char(d->character, "Enter prerequisite spell VNUM (0 for none) : ");
+                return;
+            }
             if (x > 0 && !get_spell_by_vnum(x)) {
                 send_to_char(d->character, "That spell VNUM does not exist!\r\n");
                 send_to_char(d->character, "Enter prerequisite spell VNUM (0 for none) : ");
                 return;
+            }
+            /* Check for circular dependency chains */
+            if (x > 0) {
+                struct str_spells *check_spell = get_spell_by_vnum(x);
+                int chain_depth = 0;
+                while (check_spell && check_spell->prerequisite_spell > 0 && chain_depth < 100) {
+                    if (check_spell->prerequisite_spell == OLC_SPELL(d)->vnum) {
+                        send_to_char(d->character,
+                                     "ERROR: This would create a circular dependency!\r\n"
+                                     "The prerequisite spell '%s' already has this spell in its chain.\r\n",
+                                     get_spell_name(x));
+                        send_to_char(d->character, "Enter prerequisite spell VNUM (0 for none) : ");
+                        return;
+                    }
+                    check_spell = get_spell_by_vnum(check_spell->prerequisite_spell);
+                    chain_depth++;
+                }
+                if (chain_depth >= 100) {
+                    send_to_char(
+                        d->character,
+                        "WARNING: The prerequisite chain is very long (>100). This may indicate a problem.\r\n");
+                }
             }
             OLC_SPELL(d)->prerequisite_spell = x;
             break;
