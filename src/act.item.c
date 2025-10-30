@@ -1280,56 +1280,33 @@ ACMD(do_pour)
 static void wear_message(struct char_data *ch, struct obj_data *obj, int where)
 {
     const char *wear_messages[][2] = {
-        {"$n acende $p.", "Você acende $p."},
-
-        {"$n desliza $p em seu dedo anelar direito.", "Você desliza $p em seu dedo anelar direito."},
-
-        {"$n desliza $p em seu dedo anelar esquerdo.", "Você desliza $p em seu dedo anelar esquerdo."},
-
-        {"$n veste $p em volta do pescoço.", "Você veste $p em volta do pescoço."},
-
-        {"$n veste $p em volta do pescoço.", "Você veste $p em volta do pescoço."},
-
-        {"$n veste $p no corpo.", "Você veste $p no corpo."},
-
-        {"$n veste $p na cabeça.", "Você veste $p na cabeça."},
-
-        {"$n coloca $p nas pernas.", "Você coloca $p nas pernas."},
-
-        {"$n veste $p nos pés.", "Você veste $p nos pés."},
-
-        {"$n coloca $p nas mãos.", "Você coloca $p nas mãos."},
-
-        {"$n veste $p nos braços.", "Você veste $p nos braços."},
-
-        {"$n prende $p em volta do braço como um escudo.", "Você começa a usar $p como um escudo."},
-
-        {"$n veste $p sobre o corpo.", "Você veste $p sobre o corpo."},
-
-        {"$n veste $p em volta da cintura.", "Você veste $p em volta da cintura."},
-
-        {"$n coloca $p em volta do pulso direito.", "Você coloca $p em volta de seu pulso direito."},
-
-        {"$n coloca $p em volta do pulso esquerdo.", "Você coloca $p em volta de seu pulso esquerdo."},
-
-        {"$n empunha $p.", "Você empunha $p."},
-
-        {"$n segura $p.", "Você segura $p."},
-
-        {"$n prende $p às costas, como asas.", "Você começa a usar $p como asas."},
-
-        {"$n veste $p em sua orelha direita.", "Você veste $p em sua orelha direita."},
-
-        {"$n veste $p em sua orelha esquerda.", "Você veste $p em sua orelha esquerda."},
-
-        {"$n coloca $p em seu rosto.", "Você coloca $p em seu rosto."},
-
-        {"$n coloca $p em seu nariz.", "Você coloca $p em seu nariz."},
-
-        {"$n começa a usar $p.", "Você começa a usar $p."},
-
-        {"$n coloca $p em sua bolsa de munições.", "Você coloca $p em sua bolsa de munições."},
+        /*  0 WEAR_LIGHT   */ {"$n acende $p.", "Você acende $p."},
+        /*  1 WEAR_HEAD    */ {"$n veste $p na cabeça.", "Você veste $p na cabeça."},
+        /*  2 WEAR_EAR_R   */ {"$n veste $p em sua orelha direita.", "Você veste $p em sua orelha direita."},
+        /*  3 WEAR_EAR_L   */ {"$n veste $p em sua orelha esquerda.", "Você veste $p em sua orelha esquerda."},
+        /*  4 WEAR_FACE    */ {"$n coloca $p em seu rosto.", "Você coloca $p em seu rosto."},
+        /*  5 WEAR_NOSE    */ {"$n coloca $p em seu nariz.", "Você coloca $p em seu nariz."},
+        /*  6 WEAR_NECK_1  */ {"$n veste $p em volta do pescoço.", "Você veste $p em volta do pescoço."},
+        /*  7 WEAR_NECK_2  */ {"$n veste $p em volta do pescoço.", "Você veste $p em volta do pescoço."},
+        /*  8 WEAR_BODY    */ {"$n veste $p no corpo.", "Você veste $p no corpo."},
+        /*  9 WEAR_ARMS    */ {"$n veste $p nos braços.", "Você veste $p nos braços."},
+        /* 10 WEAR_HANDS   */ {"$n coloca $p nas mãos.", "Você coloca $p nas mãos."},
+        /* 11 WEAR_WRIST_R */ {"$n coloca $p em volta do pulso direito.", "Você coloca $p em seu pulso direito."},
+        /* 12 WEAR_WRIST_L */ {"$n coloca $p em volta do pulso esquerdo.", "Você coloca $p em seu pulso esquerdo."},
+        /* 13 WEAR_FINGER_R*/ {"$n desliza $p em seu dedo anelar direito.", "Você desliza $p em seu dedo anelar direito."},
+        /* 14 WEAR_FINGER_L*/ {"$n desliza $p em seu dedo anelar esquerdo.", "Você desliza $p em seu dedo anelar esquerdo."},
+        /* 15 WEAR_WAIST   */ {"$n veste $p em volta da cintura.", "Você veste $p em volta da cintura."},
+        /* 16 WEAR_LEGS    */ {"$n coloca $p nas pernas.", "Você coloca $p nas pernas."},
+        /* 17 WEAR_FEET    */ {"$n veste $p nos pés.", "Você veste $p nos pés."},
+        /* 18 WEAR_ABOUT   */ {"$n veste $p sobre o corpo.", "Você veste $p sobre o corpo."},
+        /* 19 WEAR_SHIELD  */ {"$n prende $p em seu braço como escudo.", "Você começa a usar $p como um escudo."},
+        /* 20 WEAR_WIELD   */ {"$n empunha $p.", "Você empunha $p."},
+        /* 21 WEAR_HOLD    */ {"$n segura $p.", "Você segura $p."},
+        /* 22 WEAR_WINGS   */ {"$n prende $p às costas, como asas.", "Você começa a usar $p como asas."},
+        /* 23 WEAR_INSIGNE */ {"$n começa a usar $p como insígnia.", "Você começa a usar $p como insígnia."},
+        /* 24 WEAR_QUIVER  */ {"$n prende $p na aljava.", "Você prende $p na aljava."}
     };
+    
 
     act(wear_messages[where][0], TRUE, ch, obj, 0, TO_ROOM);
     act(wear_messages[where][1], FALSE, ch, obj, 0, TO_CHAR);
