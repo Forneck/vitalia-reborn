@@ -407,7 +407,9 @@ void spedit_choose_apply(struct descriptor_data *d)
         total_len += len;
     }
     len = snprintf(buf + total_len, BUFSIZE - total_len, "\r\n\r\n%s-- AFFECTS : \r\n", nrm);
-    if (len > 0 && total_len + len < BUFSIZE)
+    if (len < 0 || total_len + len >= BUFSIZE)
+        len = 0;
+    else
         total_len += len;
     cpt = i + 1;
     for (i = cpt; i < cpt + NUM_AFF_FLAGS; i++) {
