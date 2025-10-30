@@ -19,6 +19,11 @@
 #define DEFAULT_STAFF_LVL 12
 #define DEFAULT_WAND_LVL 12
 
+/* Maximum weapon dice size achievable through curse/remove curse spells */
+#define MAX_CURSE_DICE_SIZE 12
+/* Minimum dice size threshold for considering a weapon "normal" vs weakened */
+#define MIN_NORMAL_DICE_SIZE 6
+
 #define CAST_UNDEFINED (-1)
 #define CAST_SPELL 0
 #define CAST_POTION 1
