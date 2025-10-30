@@ -4835,9 +4835,10 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                                       "greet",  "handshake", "highfive", NULL};
 
     /* Negative socials that increase anger, decrease trust/friendship */
-    const char *negative_socials[] = {"frown",  "glare", "spit",  "sneer", "accuse", "scorn",   "mock",
-                                      "insult", "taunt", "scoff", "curse", "ignore", "dismiss", "threaten",
-                                      "slap",   "punch", "kick",  "shove", "stare",  "eye",     NULL};
+    const char *negative_socials[] = {"frown",   "glare",    "spit",  "sneer", "accuse", "scorn",   "mock",
+                                      "insult",  "taunt",    "scoff", "curse", "ignore", "dismiss", "threaten",
+                                      "slap",    "punch",    "kick",  "shove", "stare",  "eye",     "jeer",
+                                      "snicker", "ridicule", "scowl", NULL};
 
     /* Neutral/curious socials that increase curiosity */
     const char *neutral_socials[] = {"ponder", "shrug", "peer", "look", "examine", "watch", "observe", NULL};
@@ -4845,11 +4846,28 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     /* Fearful socials that the actor shows - might increase mob's courage/pride */
     const char *fearful_socials[] = {"cower", "tremble", "whimper", "beg", "plead", NULL};
 
+    /* Blocked socials - extremely inappropriate (sexual/extreme violence) */
+    const char *blocked_socials[] = {"sex",     "seduce",    "fondle", "grope", "french",
+                                     "despine", "shiskabob", "vice",   NULL};
+
+    /* Disgusting socials - trigger disgust and anger */
+    const char *disgusting_socials[] = {"earlick", "licks", "pant", "moan", "moon", "booger", "drool", "puke", NULL};
+
+    /* Violent socials - trigger pain, fear, anger */
+    const char *violent_socials[] = {"needle", "shock", "whip", "spank", "vampire", "haircut", NULL};
+
+    /* Humiliating socials - trigger shame and humiliation */
+    const char *humiliating_socials[] = {"suckit-up", "wedgie", "noogie", NULL};
+
     int i;
     bool is_positive = FALSE;
     bool is_negative = FALSE;
     bool is_neutral = FALSE;
     bool is_fearful = FALSE;
+    bool is_blocked = FALSE;
+    bool is_disgusting = FALSE;
+    bool is_violent = FALSE;
+    bool is_humiliating = FALSE;
     int player_reputation;
 
     if (!mob || !actor || !IS_NPC(mob) || !mob->ai_data || !social_name || !*social_name ||
@@ -4857,6 +4875,38 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         return;
 
     player_reputation = GET_REPUTATION(actor);
+
+    /* Check for blocked socials first - highest priority */
+    for (i = 0; blocked_socials[i] != NULL; i++) {
+        if (!strcmp(social_name, blocked_socials[i])) {
+            is_blocked = TRUE;
+            break;
+        }
+    }
+
+    /* If blocked, handle with extreme response and exit */
+    if (is_blocked) {
+        /* Extreme anger, disgust, and fear response */
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(30, 50));
+        adjust_emotion(mob, &mob->ai_data->emotion_disgust, rand_number(40, 60));
+        adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(20, 40));
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(40, 60));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(35, 55));
+
+        /* Mob might attack or flee based on courage */
+        if (mob->ai_data->emotion_courage >= 50 && mob->ai_data->emotion_anger >= 70) {
+            /* High courage - might attack the offender */
+            if (rand_number(1, 100) <= 40 && !FIGHTING(mob)) {
+                act("$n está extremamente ofendido e ataca!", FALSE, mob, 0, actor, TO_ROOM);
+                set_fighting(mob, actor);
+            }
+        } else if (mob->ai_data->emotion_fear >= 40) {
+            /* Low courage - flee in fear/disgust */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(20, 40));
+            act("$n recua horrorizado!", FALSE, mob, 0, actor, TO_ROOM);
+        }
+        return; /* Exit - blocked social handled */
+    }
 
     /* Categorize the social */
     for (i = 0; positive_socials[i] != NULL; i++) {
@@ -4867,6 +4917,33 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     }
 
     if (!is_positive) {
+        for (i = 0; disgusting_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, disgusting_socials[i])) {
+                is_disgusting = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting) {
+        for (i = 0; violent_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, violent_socials[i])) {
+                is_violent = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting && !is_violent) {
+        for (i = 0; humiliating_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, humiliating_socials[i])) {
+                is_humiliating = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating) {
         for (i = 0; negative_socials[i] != NULL; i++) {
             if (!strcmp(social_name, negative_socials[i])) {
                 is_negative = TRUE;
@@ -4875,7 +4952,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
-    if (!is_positive && !is_negative) {
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative) {
         for (i = 0; neutral_socials[i] != NULL; i++) {
             if (!strcmp(social_name, neutral_socials[i])) {
                 is_neutral = TRUE;
@@ -4884,7 +4961,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
-    if (!is_positive && !is_negative && !is_neutral) {
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral) {
         for (i = 0; fearful_socials[i] != NULL; i++) {
             if (!strcmp(social_name, fearful_socials[i])) {
                 is_fearful = TRUE;
@@ -4894,7 +4971,61 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     }
 
     /* Apply emotion changes based on social type */
-    if (is_positive) {
+    if (is_disgusting) {
+        /* Disgusting socials trigger disgust, anger, decrease trust/friendship */
+        adjust_emotion(mob, &mob->ai_data->emotion_disgust, rand_number(15, 30));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 25));
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(15, 30));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(10, 20));
+
+        /* Decrease happiness */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(10, 20));
+
+        /* Mob might respond with disgust */
+        if (mob->ai_data->emotion_disgust >= 50 && rand_number(1, 100) <= 40) {
+            act("$n olha para você com nojo.", FALSE, mob, 0, actor, TO_VICT);
+            act("$n olha para $N com nojo.", FALSE, mob, 0, actor, TO_NOTVICT);
+        }
+    } else if (is_violent) {
+        /* Violent socials trigger pain, fear, anger */
+        adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(20, 40));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(15, 35));
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 25));
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(20, 35));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(15, 30));
+
+        /* Wimpy mobs react with more fear */
+        if (mob->ai_data->genetics.wimpy_tendency > 50) {
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
+        }
+
+        /* Brave mobs react with more anger */
+        if (mob->ai_data->genetics.brave_prevalence > 60) {
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(5, 10));
+        }
+
+        /* Mob might respond aggressively if angry enough */
+        if (mob->ai_data->emotion_anger >= 60 && mob->ai_data->emotion_courage >= 40 && rand_number(1, 100) <= 30) {
+            act("$n rosna ameaçadoramente para você!", FALSE, mob, 0, actor, TO_VICT);
+            act("$n rosna ameaçadoramente para $N!", FALSE, mob, 0, actor, TO_NOTVICT);
+        }
+    } else if (is_humiliating) {
+        /* Humiliating socials trigger shame, humiliation, anger */
+        adjust_emotion(mob, &mob->ai_data->emotion_humiliation, rand_number(15, 30));
+        adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(15, 25));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
+        adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(20, 35));
+        adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(15, 25));
+
+        /* Decrease pride and self-esteem */
+        adjust_emotion(mob, &mob->ai_data->emotion_pride, -rand_number(10, 20));
+
+        /* High pride mobs react with more anger to humiliation */
+        if (mob->ai_data->emotion_pride >= 60) {
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(15, 25));
+        }
+    } else if (is_positive) {
         /* Positive socials increase happiness, friendship, trust */
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 15));
         adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(5, 12));
@@ -4966,6 +5097,34 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         /* If mob is evil and actor is begging, might increase mob's sadistic pleasure */
         if (IS_EVIL(mob) && (!strcmp(social_name, "beg") || !strcmp(social_name, "plead"))) {
             adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 15));
+        }
+    }
+
+    /* Context-dependent socials - massage and rose */
+    /* Massage: positive if trusted, disgusting if not */
+    if (!strcmp(social_name, "massage")) {
+        if (mob->ai_data->emotion_trust >= 50 && mob->ai_data->emotion_friendship >= 40) {
+            /* Trusted source - relaxing */
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(5, 10));
+        } else {
+            /* Untrusted source - uncomfortable/disgusting */
+            adjust_emotion(mob, &mob->ai_data->emotion_disgust, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(5, 15));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(10, 20));
+        }
+    }
+
+    /* Rose: romantic gesture - positive if receptive */
+    if (!strcmp(social_name, "rose")) {
+        if (mob->ai_data->emotion_friendship >= 60 || mob->ai_data->emotion_love >= 40) {
+            /* Receptive - romantic */
+            adjust_emotion(mob, &mob->ai_data->emotion_love, rand_number(5, 15));
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 10));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(5, 10));
+        } else if (mob->ai_data->emotion_trust < 30) {
+            /* Not receptive/suspicious */
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(5, 10));
         }
     }
 

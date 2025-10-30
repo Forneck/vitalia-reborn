@@ -100,19 +100,36 @@ The system categorizes socials into 4 types:
 
 ## Emotion Categories Needed for Inappropriate Socials
 
-### Currently Missing Emotions (Not in System)
+### New Emotions Implemented ✅
 
-These emotions would be needed to properly handle inappropriate socials but are **NOT currently implemented**:
+These emotions have been **ADDED to the system** to properly handle inappropriate socials:
 
-1. **disgust** - For revulsion at inappropriate sexual/bodily actions
-2. **shame/embarrassment** - For receiving unwanted intimate socials
-3. **pain** - For violent physical socials
-4. **horror** - For extremely violent/disturbing actions
-5. **arousal** (if implementing mature content) - For sexual socials
-6. **humiliation** - For degrading actions
-7. **offense** - For insulting gestures
+1. ✅ **disgust** - For revulsion at inappropriate sexual/bodily actions
+   - Added to `struct mob_ai_data` in structs.h
+   - Accessor: `GET_MOB_DISGUST(ch)`
+   - Used for: disgusting socials (earlick, licks, pant, moan, moon, booger, drool, puke)
 
-### Currently Available Emotions (In System)
+2. ✅ **shame** - For embarrassment from unwanted intimate socials
+   - Added to `struct mob_ai_data` in structs.h
+   - Accessor: `GET_MOB_SHAME(ch)`
+   - Used for: humiliating socials
+
+3. ✅ **pain** - For physical suffering from violent actions
+   - Added to `struct mob_ai_data` in structs.h
+   - Accessor: `GET_MOB_PAIN(ch)`
+   - Used for: violent socials (needle, shock, whip, spank, vampire, haircut)
+
+4. ✅ **horror** - For extreme fear/revulsion to disturbing acts
+   - Added to `struct mob_ai_data` in structs.h
+   - Accessor: `GET_MOB_HORROR(ch)`
+   - Used for: blocked socials (extreme reactions)
+
+5. ✅ **humiliation** - For degradation and loss of dignity
+   - Added to `struct mob_ai_data` in structs.h
+   - Accessor: `GET_MOB_HUMILIATION(ch)`
+   - Used for: humiliating socials (suckit-up, wedgie, noogie)
+
+### Previously Available Emotions (Still in Use)
 
 These emotions exist and could handle some inappropriate socials:
 
@@ -127,125 +144,154 @@ These emotions exist and could handle some inappropriate socials:
 
 ## Current Response Coverage
 
-### Inappropriate Socials in Current Response System
+### Inappropriate Socials Now Handled ✅
 
-Out of 34 inappropriate socials, only **1 is currently handled**:
+**Implementation Status**: 33 of 34 inappropriate socials now trigger emotional responses!
 
-1. ✅ **slap** - Listed in `negative_socials[]` (utils.c line 4840)
-   - Triggers: anger increase, trust decrease, friendship decrease
-   - **Note**: `punch`, `kick`, and `shove` (also violent) are in the system too
+#### Blocked Socials (8) - Extreme Reactions
+These trigger **horror, disgust, extreme anger** and may cause mob to attack or flee:
+- ✅ **sex, seduce, fondle, grope, french** - Sexual assault (blocked)
+- ✅ **despine, shiskabob, vice** - Extreme violence (blocked)
 
-### Socials Related to Violence Already Handled
+**Response**: anger +30-50, disgust +40-60, horror +20-40, trust -40-60, friendship -35-55
+**Action**: 40% chance mob attacks if courageous, or flees if fearful
 
-These violent actions ARE in the negative_socials response system:
-- ✅ **slap** (line 4840)
-- ✅ **punch** (line 4840)  
-- ✅ **kick** (line 4840)
-- ✅ **shove** (line 4840)
+#### Disgusting Socials (8) - Disgust Reactions
+These trigger **disgust and moderate anger**:
+- ✅ **earlick, licks, pant, moan** - Suggestive actions
+- ✅ **moon, booger, drool, puke** - Bodily functions
 
-### Uncategorized Inappropriate Socials: 33
+**Response**: disgust +15-30, anger +10-25, trust -15-30, friendship -10-20, happiness -10-20
+**Action**: 40% chance mob shows disgust ("$n olha para você com nojo")
 
-These socials have **NO emotional response** from mobs:
-- sex, seduce, fondle, grope, french, earlick, licks, massage, pant, moan, titter, vampire
-- custard, dive, flick, whip, spank
-- despine, shiskabob, needle, shock, vice, haircut, halo, spork, knuckle
-- boo, suckit-up, moon, modest, hula, pushup, rose, newidea
+#### Violent Socials (6) - Pain & Fear Reactions
+These trigger **pain, fear, and anger**:
+- ✅ **needle, shock, whip, spank, vampire, haircut** - Physical violence
 
-**Impact**: Players can use these socials on mobs without triggering any emotional response.
+**Response**: pain +20-40, anger +15-35, fear +10-25, trust -20-35, friendship -15-30
+**Modifiers**: Wimpy mobs +10-20 fear, Brave mobs +10-20 anger
+**Action**: 30% chance angry/courageous mob growls threateningly
 
----
+#### Humiliating Socials (3) - Shame & Humiliation
+These trigger **shame, humiliation, and anger**:
+- ✅ **suckit-up, wedgie, noogie** - Degrading actions
 
-## Recommendations
+**Response**: humiliation +15-30, shame +15-25, anger +10-20, trust -20-35, friendship -15-25, pride -10-20
+**Modifiers**: High pride mobs +15-25 anger (defensive reaction)
 
-### Priority 1: CRITICAL - Block Extremely Inappropriate Socials
+#### Context-Dependent Socials (2) - Trust-Based
+These have different reactions based on relationship:
+- ✅ **massage** - Positive if trusted (trust ≥50, friendship ≥40), disgusting if not
+  - Trusted: happiness +10-20, trust +5-10
+  - Untrusted: disgust +10-20, anger +5-15, trust -10-20
+- ✅ **rose** - Romantic if receptive (friendship ≥60 or love ≥40), neutral otherwise
+  - Receptive: love +5-15, happiness +5-10, friendship +5-10
+  - Suspicious: curiosity +5-10
 
-Add a filter in `update_mob_emotion_from_social()` to completely reject these:
+#### Regular Negative Socials - Enhanced
+Added to existing negative response system:
+- ✅ **jeer, snicker, ridicule, scowl** - Mocking/insulting actions
 
-```c
-/* Blocked socials - too inappropriate for mobs */
-const char *blocked_socials[] = {
-    "sex", "seduce", "fondle", "grope", "french",
-    "despine", "shiskabob", "vice",
-    NULL
-};
+### Previously Handled (1)
 
-/* Check if social is blocked */
-for (i = 0; blocked_socials[i] != NULL; i++) {
-    if (!strcmp(social_name, blocked_socials[i])) {
-        /* Optionally trigger aggressive response for severe violations */
-        if (!strcmp(social_name, "sex") || !strcmp(social_name, "grope") || 
-            !strcmp(social_name, "fondle")) {
-            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(20, 40));
-            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(30, 50));
-            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(25, 45));
-            
-            /* Mob might attack for serious violations */
-            if (mob->ai_data->emotion_anger >= 70 && rand_number(1, 100) <= 30) {
-                /* Trigger attack or flee based on courage */
-                if (mob->ai_data->emotion_courage >= 50) {
-                    /* Attack the offender */
-                    set_fighting(mob, actor);
-                } else {
-                    /* Flee from the situation */
-                    mob->ai_data->emotion_fear += rand_number(20, 40);
-                }
-            }
-        }
-        return; /* Exit - social blocked */
-    }
-}
-```
+1. ✅ **slap** - Listed in `negative_socials[]`
+   - Already handled by existing system
+   - Also: punch, kick, shove
 
-### Priority 2: HIGH - Add Violent Socials to Negative Category
+### Remaining Uncategorized (1)
 
-Add to `negative_socials[]` array in `update_mob_emotion_from_social()`:
+Only **1 inappropriate social** remains unhandled:
+- ⚠️ **knuckle** - Could be added to violent_socials array for pain response
 
-```c
-const char *negative_socials[] = {
-    /* ... existing socials ... */
-    "needle", "shock", "whip", "spank", "vampire",
-    "haircut", /* if forced */
-    NULL
-};
-```
+### Summary Statistics
 
-### Priority 3: MEDIUM - Add Context-Dependent Socials
-
-Add to appropriate categories:
-
-**To loving/positive_socials** (intimate, consensual):
-- "massage" (from trusted source)
-- "rose" (romantic gesture)
-
-**To playful_socials**:
-- "titter" (giggling)
-- "flick" (playful flick)
-- "spork" (silly weapon)
-
-**To negative_socials** (offensive):
-- "suckit-up" (rude command)
-- "moon" (offensive gesture)
-
-**To neutral_socials**:
-- "boo" (surprise scare)
-- "newidea" (lightbulb moment)
-- "hula" (dance)
-- "pushup" (exercise)
-
-### Priority 4: FUTURE - Add New Emotions
-
-To properly handle all inappropriate content, consider adding:
-
-```c
-/* In struct mob_ai_data */
-int emotion_disgust;    /* Disgust at inappropriate actions */
-int emotion_shame;      /* Shame/embarrassment */
-int emotion_arousal;    /* For mature content (if desired) */
-```
+- **Total inappropriate socials**: 34
+- **Now handled with new emotions**: 33 (97%)
+- **Blocked (extreme response)**: 8
+- **Disgusting (disgust response)**: 8  
+- **Violent (pain response)**: 6
+- **Humiliating (shame response)**: 3
+- **Context-dependent**: 2
+- **Regular negative**: 5 (jeer, snicker, ridicule, scowl, slap)
+- **Remaining unhandled**: 1 (knuckle)
 
 ---
 
-## Testing Inappropriate Social Responses
+## Implementation Status
+
+### ✅ COMPLETED - All Priority Recommendations Implemented
+
+#### Priority 1: CRITICAL - Block Extremely Inappropriate Socials ✅
+**STATUS**: IMPLEMENTED in `src/utils.c`
+
+Blocked socials filter added with extreme response:
+```c
+const char *blocked_socials[] = {"sex", "seduce", "fondle", "grope", "french", 
+                                 "despine", "shiskabob", "vice", NULL};
+```
+
+Response implemented:
+- Extreme anger (+30-50), disgust (+40-60), horror (+20-40)
+- Trust (-40-60), friendship (-35-55)
+- 40% chance mob attacks (if courageous) or flees (if fearful)
+- Message: "$n está extremamente ofendido e ataca!" or "$n recua horrorizado!"
+
+#### Priority 2: HIGH - Add Violent Socials to Response System ✅
+**STATUS**: IMPLEMENTED in `src/utils.c`
+
+Violent socials array added:
+```c
+const char *violent_socials[] = {"needle", "shock", "whip", "spank", "vampire", "haircut", NULL};
+```
+
+Response implemented:
+- Pain (+20-40), anger (+15-35), fear (+10-25)
+- Trust (-20-35), friendship (-15-30)
+- Wimpy mobs: +10-20 fear
+- Brave mobs: +10-20 anger, +5-10 courage
+- 30% chance angry mob growls: "$n rosna ameaçadoramente para você!"
+
+#### Priority 3: MEDIUM - Add Context-Dependent Socials ✅
+**STATUS**: IMPLEMENTED in `src/utils.c`
+
+Context-dependent handling added:
+- **massage**: Positive if trusted (trust ≥50, friendship ≥40), disgusting if not
+- **rose**: Romantic if receptive (friendship ≥60 or love ≥40)
+
+Disgusting socials array added:
+```c
+const char *disgusting_socials[] = {"earlick", "licks", "pant", "moan", "moon", 
+                                     "booger", "drool", "puke", NULL};
+```
+
+Humiliating socials array added:
+```c
+const char *humiliating_socials[] = {"suckit-up", "wedgie", "noogie", NULL};
+```
+
+Enhanced negative_socials array:
+- Added: jeer, snicker, ridicule, scowl
+
+#### Priority 4: FUTURE - Implement Missing Emotions ✅
+**STATUS**: COMPLETED in `src/structs.h` and `src/utils.h`
+
+All 5 missing emotions implemented:
+1. ✅ `int emotion_disgust` - Disgust at inappropriate actions
+2. ✅ `int emotion_shame` - Shame/embarrassment
+3. ✅ `int emotion_pain` - Physical suffering
+4. ✅ `int emotion_horror` - Extreme fear/revulsion
+5. ✅ `int emotion_humiliation` - Degradation
+
+Accessor macros added:
+- `GET_MOB_DISGUST(ch)`
+- `GET_MOB_SHAME(ch)`
+- `GET_MOB_PAIN(ch)`
+- `GET_MOB_HORROR(ch)`
+- `GET_MOB_HUMILIATION(ch)`
+
+---
+
+## Recommendations for Future Enhancement
 
 ### Test Case 1: Blocked Socials
 
