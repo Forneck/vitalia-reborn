@@ -73,7 +73,6 @@ struct char_data *load_offline_char_by_name(const char *name)
 
 AutoRaiseResult autoraise_corpse(struct obj_data *corpse)
 {
-    struct obj_data *obj = NULL, *next_obj = NULL;
     struct char_data *ch;
     int idnum, offline = FALSE;
     const char *temp;
@@ -302,8 +301,6 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
 
 void raise_offline(struct char_data *ch, struct obj_data *corpse)
 {
-    struct obj_data *obj = NULL, *next_obj = NULL;
-
     room_vnum room_vnum_corpse = world[corpse->in_room].number;
 
     /* Raise player */

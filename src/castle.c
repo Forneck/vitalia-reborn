@@ -364,9 +364,9 @@ SPECIAL(king_welmar)
                              "$n proclama 'regiam gessi, subiique regis'.",
                              "$n proclama 'munus et mores colui sereno'.", "$n proclama 'principe dignos'."};
 
-    const char bedroom_path[] = "s33004o1c1S.";
-    const char throne_path[] = "W3o3cG52211rg.";
-    const char monolog_path[] = "ABCDPPPP.";
+    static const char bedroom_path[] = "s33004o1c1S.";
+    static const char throne_path[] = "W3o3cG52211rg.";
+    static const char monolog_path[] = "ABCDPPPP.";
 
     static const char *path;
     static int path_index;

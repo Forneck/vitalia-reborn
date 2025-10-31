@@ -159,7 +159,7 @@ end:
 
 static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int mode)
 {
-    if (mode == 0){
+    if (mode == 0) {
         if (OBJ_FLAGGED(obj, ITEM_INVISIBLE))
             send_to_char(ch, " (invisivel)");
 
@@ -174,33 +174,25 @@ static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int m
 
         if (OBJ_FLAGGED(obj, ITEM_HUM))
             send_to_char(ch, " ..Isso emite uma fraca melodia!");
-    }else if (mode == 3)
-    {
-        bool has_aura = FALSE;
-    
+    } else if (mode == 3) {
         if (OBJ_FLAGGED(obj, ITEM_INVISIBLE)) {
             send_to_char(ch, " (invis)");
-            has_aura = TRUE;
         }
-    
+
         if (OBJ_FLAGGED(obj, ITEM_BLESS) && AFF_FLAGGED(ch, AFF_DETECT_ALIGN)) {
             send_to_char(ch, "\tC(aura azul)");
-            has_aura = TRUE;
         }
-    
+
         if (OBJ_FLAGGED(obj, ITEM_MAGIC) && AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
             send_to_char(ch, "\tC(aura amarela)");
-            has_aura = TRUE;
         }
-    
+
         if (OBJ_FLAGGED(obj, ITEM_GLOW)) {
             send_to_char(ch, "\tC(aura brilhante)");
-            has_aura = TRUE;
         }
-    
+
         if (OBJ_FLAGGED(obj, ITEM_HUM)) {
             send_to_char(ch, "\tC(zunindo)");
-            has_aura = TRUE;
         }
     }
 }
@@ -1239,7 +1231,6 @@ ACMD(do_equipment)
         send_to_char(ch, "  Nada.\r\n");
 }
 
-
 ACMD(do_time)
 {
     const char *suf;
@@ -1412,12 +1403,10 @@ ACMD(do_who)
         int min_level;
         int max_level;
         int count;
-    } rank[] = {
-        { "\tC-\tG=\tY> \tWImortais:\tn\r\n", LVL_IMMORT, LVL_IMPL, 0 },
-        { "\tC-\tG=\tY> \tWMortais:\tn\r\n", 11, LVL_IMMORT - 1, 0 },
-        { "\tC-\tG=\tY> \tWIniciantes:\tn\r\n", 1, 10, 0 },
-        { "\n", 0, 0, 0 }
-    };
+    } rank[] = {{"\tC-\tG=\tY> \tWImortais:\tn\r\n", LVL_IMMORT, LVL_IMPL, 0},
+                {"\tC-\tG=\tY> \tWMortais:\tn\r\n", 11, LVL_IMMORT - 1, 0},
+                {"\tC-\tG=\tY> \tWIniciantes:\tn\r\n", 1, 10, 0},
+                {"\n", 0, 0, 0}};
 
     skip_spaces(&argument);
     strcpy(buf, argument);
@@ -1432,16 +1421,44 @@ ACMD(do_who)
         } else if (*arg == '-') {
             mode = *(arg + 1);
             switch (mode) {
-                case 'k': outlaws = 1; strcpy(buf, buf1); break;
-                case 'z': localwho = 1; strcpy(buf, buf1); break;
-                case 's': short_list = 1; strcpy(buf, buf1); break;
-                case 'q': questwho = 1; strcpy(buf, buf1); break;
-                case 'n': half_chop(buf1, name_search, buf); break;
-                case 'r': who_room = 1; strcpy(buf, buf1); break;
-                case 'c': half_chop(buf1, arg, buf); showclass = find_class_bitvector(arg); break;
-                case 'l': showleader = 1; strcpy(buf, buf1); break;
-                case 'g': showgroup = 1; strcpy(buf, buf1); break;
-                default: send_to_char(ch, "%s", WHO_FORMAT); return;
+                case 'k':
+                    outlaws = 1;
+                    strcpy(buf, buf1);
+                    break;
+                case 'z':
+                    localwho = 1;
+                    strcpy(buf, buf1);
+                    break;
+                case 's':
+                    short_list = 1;
+                    strcpy(buf, buf1);
+                    break;
+                case 'q':
+                    questwho = 1;
+                    strcpy(buf, buf1);
+                    break;
+                case 'n':
+                    half_chop(buf1, name_search, buf);
+                    break;
+                case 'r':
+                    who_room = 1;
+                    strcpy(buf, buf1);
+                    break;
+                case 'c':
+                    half_chop(buf1, arg, buf);
+                    showclass = find_class_bitvector(arg);
+                    break;
+                case 'l':
+                    showleader = 1;
+                    strcpy(buf, buf1);
+                    break;
+                case 'g':
+                    showgroup = 1;
+                    strcpy(buf, buf1);
+                    break;
+                default:
+                    send_to_char(ch, "%s", WHO_FORMAT);
+                    return;
             }
         } else {
             send_to_char(ch, "%s", WHO_FORMAT);
@@ -1451,19 +1468,32 @@ ACMD(do_who)
 
     /* Contagem dos ranks */
     for (d = descriptor_list; d && !short_list; d = d->next) {
-        if (d->original) tch = d->original;
-        else if (!(tch = d->character)) continue;
-        if (!IS_PLAYING(d)) continue;
-        if (!CAN_SEE(ch, tch)) continue;
-        if (*name_search && str_cmp(GET_NAME(tch), name_search) && !strstr(GET_TITLE(tch), name_search)) continue;
-        if (GET_LEVEL(tch) < low || GET_LEVEL(tch) > high) continue;
-        if (outlaws && !PLR_FLAGGED(tch, PLR_KILLER) && !PLR_FLAGGED(tch, PLR_THIEF)) continue;
-        if (questwho && !PRF_FLAGGED(tch, PRF_QUEST)) continue;
-        if (localwho && world[IN_ROOM(ch)].zone != world[IN_ROOM(tch)].zone) continue;
-        if (who_room && (IN_ROOM(tch) != IN_ROOM(ch))) continue;
-        if (showclass && !(showclass & (1 << GET_CLASS(tch)))) continue;
-        if (showgroup && !GROUP(tch)) continue;
-        if (showleader && (!GROUP(tch) || GROUP_LEADER(GROUP(tch)) != tch)) continue;
+        if (d->original)
+            tch = d->original;
+        else if (!(tch = d->character))
+            continue;
+        if (!IS_PLAYING(d))
+            continue;
+        if (!CAN_SEE(ch, tch))
+            continue;
+        if (*name_search && str_cmp(GET_NAME(tch), name_search) && !strstr(GET_TITLE(tch), name_search))
+            continue;
+        if (GET_LEVEL(tch) < low || GET_LEVEL(tch) > high)
+            continue;
+        if (outlaws && !PLR_FLAGGED(tch, PLR_KILLER) && !PLR_FLAGGED(tch, PLR_THIEF))
+            continue;
+        if (questwho && !PRF_FLAGGED(tch, PRF_QUEST))
+            continue;
+        if (localwho && world[IN_ROOM(ch)].zone != world[IN_ROOM(tch)].zone)
+            continue;
+        if (who_room && (IN_ROOM(tch) != IN_ROOM(ch)))
+            continue;
+        if (showclass && !(showclass & (1 << GET_CLASS(tch))))
+            continue;
+        if (showgroup && !GROUP(tch))
+            continue;
+        if (showleader && (!GROUP(tch) || GROUP_LEADER(GROUP(tch)) != tch))
+            continue;
 
         for (i = 0; *rank[i].disp != '\n'; i++)
             if (GET_LEVEL(tch) >= rank[i].min_level && GET_LEVEL(tch) <= rank[i].max_level)
@@ -1478,22 +1508,27 @@ ACMD(do_who)
         send_to_char(ch, "%s", rank[i].disp);
 
         for (d = descriptor_list; d; d = d->next) {
-            if (d->original) tch = d->original;
-            else if (!(tch = d->character)) continue;
-            if (!IS_PLAYING(d)) continue;
+            if (d->original)
+                tch = d->original;
+            else if (!(tch = d->character))
+                continue;
+            if (!IS_PLAYING(d))
+                continue;
 
             if ((GET_LEVEL(tch) < rank[i].min_level || GET_LEVEL(tch) > rank[i].max_level) && !short_list)
                 continue;
-            if (!CAN_SEE(ch, tch)) continue;
+            if (!CAN_SEE(ch, tch))
+                continue;
 
             num_can_see++;
 
             /* === BLOCO DE IMPRESSÃO COM CORES ESTILO who_tag === */
-            
-            const char *statusFlag =
-                IS_DEAD(tch) ? "\tR+\tn" :      /* morto */
-                PLR_FLAGGED(tch, PLR_TRNS) ? "\tW*\tn" :    /* transcendido */
-                (GET_REMORT(tch) > 4) ? "\tG*\tn" : " ";  /* várias encarnações */
+
+            const char *statusFlag = IS_DEAD(tch) ? "\tR+\tn" : /* morto */
+                                         PLR_FLAGGED(tch, PLR_TRNS) ? "\tW*\tn"
+                                                                    : /* transcendido */
+                                         (GET_REMORT(tch) > 4) ? "\tG*\tn"
+                                                               : " "; /* várias encarnações */
 
             /* define cor dos colchetes */
             const char *corNivel = (GET_LEVEL(tch) >= LVL_IMMORT) ? "\tY" : "\tW";
@@ -1505,37 +1540,37 @@ ACMD(do_who)
                 snprintf(enc_buf, sizeof(enc_buf), " (%3da. Enc.)", GET_REMORT(tch));
             else
                 enc_buf[0] = '\0';
-            
+
             /* ----------------------------------- */
             /* --- Lógica de Alinhamento à Direita --- */
             /* ----------------------------------- */
-            
+
             // Coluna fixa onde o texto da encarnação deve começar.
             // Ajuste este valor se a largura da sua tela for diferente.
-            const int COLUNA_FIXA_ENC = 65; 
-            
+            const int COLUNA_FIXA_ENC = 65;
+
             // 1. Calcula o comprimento do texto antes do padding.
             //    Formato inicial: cor + [LVL CLS FLG] + espaço + Nome + (espaço condicional + Título)
             //    Tamanho da parte fixa (Cor + Colchetes + LVL + CLS + Flag): ~10 caracteres visíveis.
-            
+
             // **IMPORTANTE**: Este é um cálculo simplificado. Você deve contar o número de caracteres VISÍVEIS.
             // Os colchetes e as flags dão cerca de 10 caracteres fixos:
             // [ 11 CLS * ] - 10 caracteres visíveis
-            
-            int len_linha_prefixo = 10; 
+
+            int len_linha_prefixo = 10;
             len_linha_prefixo += strlen(GET_NAME(tch));
-            
+
             // Adiciona o tamanho do título + o espaço condicional (se existir)
             if (*GET_TITLE(tch)) {
                 len_linha_prefixo += strlen(GET_TITLE(tch));
-                //len_linha_prefixo += 1; // Espaço condicional
+                // len_linha_prefixo += 1; // Espaço condicional
             }
 
             // 2. Calcula o padding necessário.
             int padding_needed = COLUNA_FIXA_ENC - len_linha_prefixo;
 
             // 3. Prevenção: Se Nome+Título for muito longo, usamos 1 espaço como separador mínimo.
-            if (padding_needed < 1) { 
+            if (padding_needed < 1) {
                 padding_needed = 1;
             }
 
@@ -1544,21 +1579,21 @@ ACMD(do_who)
             // Preenche o buffer com ' ' (espaços)
             memset(padding_buf, ' ', padding_needed);
             // Garante que o buffer seja uma string terminada em NULL
-            padding_buf[padding_needed] = '\0'; 
-            
+            padding_buf[padding_needed] = '\0';
+
             /* imprime a linha */
             // CORRIGIDO: O formato agora inclui um %s extra para o padding_buf
             send_to_char(ch, "%s[%3d \tC%-3s%s%s] \tB%s%s\tW%s%s%s\tn\r\n",
-                corNivel,                     // %s (1) Cor do colchete/nível
-                GET_LEVEL(tch),               // %-3d (2) Nível
-                CLASS_ABBR(tch),              // \tC%-3s (3) Classe
-                statusFlag,                   // %s (4) Flag
-                corNivel,                     // %s (5) Cor para fechar o colchete
-                GET_NAME(tch),                // \tB%s (6) Nome
-                (*GET_TITLE(tch) ? " " : ""), // %s (7) ESPAÇO CONDICIONAL
-                GET_TITLE(tch),               // \tW%s (8) Título
-                padding_buf,                  // %s (9) **PADDING DE ALINHAMENTO**
-                enc_buf                       // %s (10) Encarnação
+                         corNivel,                       // %s (1) Cor do colchete/nível
+                         GET_LEVEL(tch),                 // %-3d (2) Nível
+                         CLASS_ABBR(tch),                // \tC%-3s (3) Classe
+                         statusFlag,                     // %s (4) Flag
+                         corNivel,                       // %s (5) Cor para fechar o colchete
+                         GET_NAME(tch),                  // \tB%s (6) Nome
+                         (*GET_TITLE(tch) ? " " : ""),   // %s (7) ESPAÇO CONDICIONAL
+                         GET_TITLE(tch),                 // \tW%s (8) Título
+                         padding_buf,                    // %s (9) **PADDING DE ALINHAMENTO**
+                         enc_buf                         // %s (10) Encarnação
             );
         }
 
@@ -1571,8 +1606,8 @@ ACMD(do_who)
     else if (num_can_see == 1)
         send_to_char(ch, "\tGApenas um personagem solitário!\tn\r\n");
     else
-        send_to_char(ch, "\tGVocê pode ver %d\tG %s.\tn\r\n",
-                     num_can_see, PLURAL(num_can_see, "personagem", "personagens"));
+        send_to_char(ch, "\tGVocê pode ver %d\tG %s.\tn\r\n", num_can_see,
+                     PLURAL(num_can_see, "personagem", "personagens"));
 
     if (IS_HAPPYHOUR > 0)
         send_to_char(ch, "\tWÉ Happy Hour! Digite \tRhappyhour\tW para ver os bônus atuais.\tn\r\n");

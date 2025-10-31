@@ -126,16 +126,9 @@ SPECIAL(guild)
     int class, skill_num, percent, level, rts_code;
     struct obj_data *object;
     int count_obj;
-    int grupo;
 
     if (IS_NPC(ch) || !CMD_IS("practice"))
         return (FALSE);
-
-    /*grupo e inventario */
-    if (GROUP(ch) != NULL)
-        grupo = 1;
-    else
-        grupo = 0;
 
     for (object = ch->carrying; object; object = object->next_content) {
         count_obj++;
@@ -227,8 +220,8 @@ SPECIAL(mayor)
 {
     char actbuf[MAX_INPUT_LENGTH];
 
-    const char open_path[] = "W3a3003b33000c111d0d111Oe333333Oe22c222112212111a1S.";
-    const char close_path[] = "W3a3003b33000c111d0d111CE333333CE22c222112212111a1S.";
+    static const char open_path[] = "W3a3003b33000c111d0d111Oe333333Oe22c222112212111a1S.";
+    static const char close_path[] = "W3a3003b33000c111d0d111CE333333CE22c222112212111a1S.";
 
     static const char *path = NULL;
     static int path_index;

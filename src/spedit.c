@@ -671,13 +671,12 @@ void spedit_show_variant_chain(struct descriptor_data *d)
 {
     char buf[BUFSIZE];
     char chain[BUFSIZE];
-    int chain_len = 0;
     struct str_spells *ptr;
     int depth = 0;
 
     /* Build the prerequisite chain backwards */
     ptr = OLC_SPELL(d);
-    chain_len = snprintf(chain, BUFSIZE, "%s[%d]", ptr->name ? ptr->name : "Unnamed", ptr->vnum);
+    snprintf(chain, BUFSIZE, "%s[%d]", ptr->name ? ptr->name : "Unnamed", ptr->vnum);
 
     while (ptr->prerequisite_spell > 0 && depth < MAX_SPELL_CHAIN_DEPTH) {
         ptr = get_spell_by_vnum(ptr->prerequisite_spell);
@@ -689,7 +688,6 @@ void spedit_show_variant_chain(struct descriptor_data *d)
         if (temp_len > 0 && temp_len < BUFSIZE) {
             /* Safe copy using snprintf */
             snprintf(chain, BUFSIZE, "%s", buf);
-            chain_len = temp_len;
         }
         depth++;
     }

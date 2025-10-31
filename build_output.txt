@@ -1,0 +1,325 @@
+[  1%] Building C object CMakeFiles/circle.dir/src/act.auction.c.o
+[  2%] Building C object CMakeFiles/circle.dir/src/act.comm.c.o
+[  2%] Building C object CMakeFiles/circle.dir/src/act.informative.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/act.informative.c: In function ‘show_obj_modifiers’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/act.informative.c:179:14: warning: variable ‘has_aura’ set but not used [-Wunused-but-set-variable]
+  179 |         bool has_aura = FALSE;
+      |              ^~~~~~~~
+[  3%] Building C object CMakeFiles/circle.dir/src/act.item.c.o
+[  4%] Building C object CMakeFiles/circle.dir/src/act.movement.c.o
+[  5%] Building C object CMakeFiles/circle.dir/src/act.offensive.c.o
+[  6%] Building C object CMakeFiles/circle.dir/src/act.other.c.o
+[  7%] Building C object CMakeFiles/circle.dir/src/act.social.c.o
+[  8%] Building C object CMakeFiles/circle.dir/src/act.wizard.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/act.wizard.c: In function ‘do_wizutil’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/act.wizard.c:2440:38: warning: the comparison will always evaluate as ‘true’ for the address of ‘affected_by’ will never be NULL [-Waddress]
+ 2440 |                 if ((vict->affected) || AFF_FLAGS(vict)) {
+      |                                      ^~
+In file included from /home/runner/work/vitalia-reborn/vitalia-reborn/src/act.wizard.c:13:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/structs.h:1181:9: note: ‘affected_by’ declared here
+ 1181 |     int affected_by[AF_ARRAY_MAX]; /**< Bitvector for spells/skills affected by */
+      |         ^~~~~~~~~~~
+[  9%] Building C object CMakeFiles/circle.dir/src/aedit.c.o
+[  9%] Building C object CMakeFiles/circle.dir/src/armweap.c.o
+[ 10%] Building C object CMakeFiles/circle.dir/src/asciimap.c.o
+[ 11%] Building C object CMakeFiles/circle.dir/src/auction.c.o
+[ 12%] Building C object CMakeFiles/circle.dir/src/ban.c.o
+[ 13%] Building C object CMakeFiles/circle.dir/src/boards.c.o
+[ 14%] Building C object CMakeFiles/circle.dir/src/bsd-snprintf.c.o
+[ 15%] Building C object CMakeFiles/circle.dir/src/castle.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/castle.c: In function ‘king_welmar’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/castle.c:378:18: warning: storing the address of local variable ‘throne_path’ in ‘path’ [-Wdangling-pointer=]
+  378 |             path = throne_path;
+      |             ~~~~~^~~~~~~~~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/castle.c:368:16: note: ‘throne_path’ declared here
+  368 |     const char throne_path[] = "W3o3cG52211rg.";
+      |                ^~~~~~~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/castle.c:371:24: note: ‘path’ declared here
+  371 |     static const char *path;
+      |                        ^~~~
+[ 16%] Building C object CMakeFiles/circle.dir/src/cedit.c.o
+[ 16%] Building C object CMakeFiles/circle.dir/src/clan.c.o
+[ 17%] Building C object CMakeFiles/circle.dir/src/class.c.o
+[ 18%] Building C object CMakeFiles/circle.dir/src/comm.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/comm.c:2447:21: warning: extra tokens at end of #undef directive
+ 2447 | #    undef my_signal(signo, func)
+      |                     ^
+[ 19%] Building C object CMakeFiles/circle.dir/src/config.c.o
+[ 20%] Building C object CMakeFiles/circle.dir/src/constants.c.o
+[ 21%] Building C object CMakeFiles/circle.dir/src/db.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c: In function ‘index_boot’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:1111:17: warning: unused variable ‘rnum’ [-Wunused-variable]
+ 1111 |             int rnum;
+      |                 ^~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c: In function ‘parse_room’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:1348:9: warning: unused variable ‘subzone’ [-Wunused-variable]
+ 1348 |     int subzone;
+      |         ^~~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c: In function ‘load_zones’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:2521:16: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+ 2521 |             if (sscanf(ptr, " %d %d %d %d ", &tmp, &ZCMD.arg1, &ZCMD.arg2, &ZCMD.arg3) != 4)
+      |                ^
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c: In function ‘load_config’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:4450:25: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+ 4450 |                 else if (!str_cmp(tag, "hometown_3"))
+      |                         ^
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/db.c:4587:25: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+ 4587 |                 else if (!str_cmp(tag, "ress_room_3"))
+      |                         ^
+[ 22%] Building C object CMakeFiles/circle.dir/src/dg_comm.c.o
+[ 23%] Building C object CMakeFiles/circle.dir/src/dg_db_scripts.c.o
+[ 23%] Building C object CMakeFiles/circle.dir/src/dg_event.c.o
+[ 24%] Building C object CMakeFiles/circle.dir/src/dg_handler.c.o
+[ 25%] Building C object CMakeFiles/circle.dir/src/dg_misc.c.o
+[ 26%] Building C object CMakeFiles/circle.dir/src/dg_mobcmd.c.o
+[ 27%] Building C object CMakeFiles/circle.dir/src/dg_objcmd.c.o
+[ 28%] Building C object CMakeFiles/circle.dir/src/dg_olc.c.o
+[ 29%] Building C object CMakeFiles/circle.dir/src/dg_scripts.c.o
+[ 30%] Building C object CMakeFiles/circle.dir/src/dg_triggers.c.o
+[ 30%] Building C object CMakeFiles/circle.dir/src/dg_variables.c.o
+[ 31%] Building C object CMakeFiles/circle.dir/src/dg_wldcmd.c.o
+[ 32%] Building C object CMakeFiles/circle.dir/src/fight.c.o
+[ 33%] Building C object CMakeFiles/circle.dir/src/formula.c.o
+[ 34%] Building C object CMakeFiles/circle.dir/src/gedit.c.o
+[ 35%] Building C object CMakeFiles/circle.dir/src/genmob.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/genmob.c: In function ‘write_mobile_record’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/genmob.c:425:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘long int’ [-Wformat=]
+  425 |                 "%d %d\n"
+      |                     ~^
+      |                      |
+      |                      int
+      |                     %ld
+[ 36%] Building C object CMakeFiles/circle.dir/src/genobj.c.o
+[ 37%] Building C object CMakeFiles/circle.dir/src/genolc.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/genolc.c: In function ‘export_mobile_record’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/genolc.c:611:18: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘long int’ [-Wformat=]
+  611 |             "%d %d\n"
+      |                 ~^
+      |                  |
+      |                  int
+      |                 %ld
+[ 37%] Building C object CMakeFiles/circle.dir/src/genqst.c.o
+[ 38%] Building C object CMakeFiles/circle.dir/src/genshp.c.o
+[ 39%] Building C object CMakeFiles/circle.dir/src/genwld.c.o
+[ 40%] Building C object CMakeFiles/circle.dir/src/genzon.c.o
+[ 41%] Building C object CMakeFiles/circle.dir/src/graph.c.o
+[ 42%] Building C object CMakeFiles/circle.dir/src/handler.c.o
+[ 43%] Building C object CMakeFiles/circle.dir/src/hedit.c.o
+[ 44%] Building C object CMakeFiles/circle.dir/src/house.c.o
+[ 45%] Building C object CMakeFiles/circle.dir/src/ibt.c.o
+[ 45%] Building C object CMakeFiles/circle.dir/src/improved-edit.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/improved-edit.c: In function ‘parse_edit_action’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/improved-edit.c:376:36: warning: ‘%4d’ directive writing between 4 and 11 bytes into a region of size 9 [-Wformat-overflow=]
+  376 |                     sprintf(buf3, "%4d: ", (i - 1));
+      |                                    ^~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/improved-edit.c:376:35: note: directive argument in the range [-2147483648, 2147483646]
+  376 |                     sprintf(buf3, "%4d: ", (i - 1));
+      |                                   ^~~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/improved-edit.c:376:21: note: ‘sprintf’ output between 7 and 14 bytes into a destination of size 9
+  376 |                     sprintf(buf3, "%4d: ", (i - 1));
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 46%] Building C object CMakeFiles/circle.dir/src/interpreter.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/interpreter.c: In function ‘command_interpreter’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/interpreter.c:506:9: warning: variable ‘grupo’ set but not used [-Wunused-but-set-variable]
+  506 |     int grupo;
+      |         ^~~~~
+[ 47%] Building C object CMakeFiles/circle.dir/src/limits.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/limits.c: In function ‘point_update’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/limits.c:540:17: warning: enumeration value ‘ar_ok’ not handled in switch [-Wswitch]
+  540 |                 switch (autoraise_corpse(j)) {
+      |                 ^~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/limits.c:597:16: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+  597 |             if (!GET_OBJ_TIMER(j))
+      |                ^
+[ 48%] Building C object CMakeFiles/circle.dir/src/lists.c.o
+[ 49%] Building C object CMakeFiles/circle.dir/src/magic.c.o
+[ 50%] Building C object CMakeFiles/circle.dir/src/mail.c.o
+[ 51%] Building C object CMakeFiles/circle.dir/src/medit.c.o
+[ 52%] Building C object CMakeFiles/circle.dir/src/mobact.c.o
+[ 52%] Building C object CMakeFiles/circle.dir/src/modify.c.o
+[ 53%] Building C object CMakeFiles/circle.dir/src/msgedit.c.o
+[ 54%] Building C object CMakeFiles/circle.dir/src/mud_event.c.o
+[ 55%] Building C object CMakeFiles/circle.dir/src/oasis.c.o
+[ 56%] Building C object CMakeFiles/circle.dir/src/oasis_copy.c.o
+[ 57%] Building C object CMakeFiles/circle.dir/src/oasis_delete.c.o
+[ 58%] Building C object CMakeFiles/circle.dir/src/oasis_list.c.o
+[ 59%] Building C object CMakeFiles/circle.dir/src/objsave.c.o
+[ 59%] Building C object CMakeFiles/circle.dir/src/oedit.c.o
+[ 60%] Building C object CMakeFiles/circle.dir/src/players.c.o
+[ 61%] Building C object CMakeFiles/circle.dir/src/prefedit.c.o
+[ 62%] Building C object CMakeFiles/circle.dir/src/protocol.c.o
+[ 63%] Building C object CMakeFiles/circle.dir/src/qedit.c.o
+[ 64%] Building C object CMakeFiles/circle.dir/src/quest.c.o
+[ 65%] Building C object CMakeFiles/circle.dir/src/random.c.o
+[ 66%] Building C object CMakeFiles/circle.dir/src/redit.c.o
+[ 66%] Building C object CMakeFiles/circle.dir/src/sedit.c.o
+[ 67%] Building C object CMakeFiles/circle.dir/src/shop.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/shop.c: In function ‘load_shop_nonnative’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/shop.c:1783:12: warning: the address of ‘buf’ will always evaluate as ‘true’ [-Waddress]
+ 1783 |     while (buf && *buf != '$') {
+      |            ^~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/shop.c:1785:13: warning: the comparison will always evaluate as ‘true’ for the address of ‘buf’ will never be NULL [-Waddress]
+ 1785 |         if (!buf || !*buf || *buf == '$')
+      |             ^
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/shop.c:1763:10: note: ‘buf’ declared here
+ 1763 |     char buf[MAX_STRING_LENGTH];
+      |          ^~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/shop.c: In function ‘shopping_buy’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/shop.c:632:54: warning: ‘snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+  632 |     snprintf(tempbuf, sizeof(tempbuf), "$n compra %s.", tempstr);
+      |                                                      ^
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/shop.c:632:5: note: ‘snprintf’ output between 12 and 513 bytes into a destination of size 512
+  632 |     snprintf(tempbuf, sizeof(tempbuf), "$n compra %s.", tempstr);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 68%] Building C object CMakeFiles/circle.dir/src/spec_assign.c.o
+[ 69%] Building C object CMakeFiles/circle.dir/src/spec_procs.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spec_procs.c: In function ‘guild’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spec_procs.c:129:9: warning: variable ‘grupo’ set but not used [-Wunused-but-set-variable]
+  129 |     int grupo;
+      |         ^~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spec_procs.c: In function ‘mayor’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spec_procs.c:240:18: warning: storing the address of local variable ‘open_path’ in ‘path’ [-Wdangling-pointer=]
+  240 |             path = open_path;
+      |             ~~~~~^~~~~~~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spec_procs.c:230:16: note: ‘open_path’ declared here
+  230 |     const char open_path[] = "W3a3003b33000c111d0d111Oe333333Oe22c222112212111a1S.";
+      |                ^~~~~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spec_procs.c:233:24: note: ‘path’ declared here
+  233 |     static const char *path = NULL;
+      |                        ^~~~
+[ 70%] Building C object CMakeFiles/circle.dir/src/spedit.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spedit.c: In function ‘spedit_show_variant_chain’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spedit.c:674:9: warning: variable ‘chain_len’ set but not used [-Wunused-but-set-variable]
+  674 |     int chain_len = 0;
+      |         ^~~~~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spedit.c: In function ‘spedit_parse’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spedit.c:1667:16: warning: variable ‘value’ set but not used [-Wunused-but-set-variable]
+ 1667 |     int x = 0, value, rts_code = 0;
+      |                ^~~~~
+[ 71%] Building C object CMakeFiles/circle.dir/src/spell_parser.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spell_parser.c: In function ‘say_spell’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spell_parser.c:259:82: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size 212 [-Wformat-truncation=]
+  259 |         snprintf(buf1, sizeof(buf1), "$n olha para você e expressa as palavras, '%s'.",
+      |                                                                                  ^~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spell_parser.c:259:9: note: ‘snprintf’ output between 47 and 302 bytes into a destination of size 256
+  259 |         snprintf(buf1, sizeof(buf1), "$n olha para você e expressa as palavras, '%s'.",
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  260 |                  GET_CLASS(ch) == GET_CLASS(tch) ? skill_name(spellnum) : buf);
+      |                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 72%] Building C object CMakeFiles/circle.dir/src/spells.c.o
+[ 73%] Building C object CMakeFiles/circle.dir/src/spells_assign.c.o
+[ 73%] Building C object CMakeFiles/circle.dir/src/spells_script.c.o
+[ 74%] Building C object CMakeFiles/circle.dir/src/spirits.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spirits.c: In function ‘autoraise_corpse’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spirits.c:76:35: warning: unused variable ‘next_obj’ [-Wunused-variable]
+   76 |     struct obj_data *obj = NULL, *next_obj = NULL;
+      |                                   ^~~~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spirits.c:76:22: warning: unused variable ‘obj’ [-Wunused-variable]
+   76 |     struct obj_data *obj = NULL, *next_obj = NULL;
+      |                      ^~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spirits.c: In function ‘raise_offline’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spirits.c:305:35: warning: unused variable ‘next_obj’ [-Wunused-variable]
+  305 |     struct obj_data *obj = NULL, *next_obj = NULL;
+      |                                   ^~~~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/spirits.c:305:22: warning: unused variable ‘obj’ [-Wunused-variable]
+  305 |     struct obj_data *obj = NULL, *next_obj = NULL;
+      |                      ^~~
+[ 75%] Building C object CMakeFiles/circle.dir/src/starmap.c.o
+[ 76%] Building C object CMakeFiles/circle.dir/src/tedit.c.o
+[ 77%] Building C object CMakeFiles/circle.dir/src/utils.c.o
+[ 78%] Building C object CMakeFiles/circle.dir/src/weather.c.o
+[ 79%] Building C object CMakeFiles/circle.dir/src/zedit.c.o
+[ 80%] Building C object CMakeFiles/circle.dir/src/zmalloc.c.o
+[ 80%] Linking C executable /home/runner/work/vitalia-reborn/vitalia-reborn/bin/circle
+[ 80%] Built target circle
+[ 80%] Building C object src/util/CMakeFiles/asciipasswd.dir/asciipasswd.c.o
+[ 81%] Linking C executable /home/runner/work/vitalia-reborn/vitalia-reborn/bin/asciipasswd
+[ 81%] Built target asciipasswd
+[ 82%] Building C object src/util/CMakeFiles/autowiz.dir/autowiz.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/autowiz.c: In function ‘read_file’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/autowiz.c:85:3: warning: this ‘while’ clause does not guard... [-Wmisleading-indentation]
+   85 |   while (get_line(fl, line))
+      |   ^~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/autowiz.c:88:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+   88 |     rewind(fl);
+      |     ^~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/autowiz.c: In function ‘get_line’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/autowiz.c:262:20: warning: variable ‘buf2’ set but not used [-Wunused-but-set-variable]
+  262 |   char temp[256], *buf2;
+      |                    ^~~~
+[ 83%] Linking C executable /home/runner/work/vitalia-reborn/vitalia-reborn/bin/autowiz
+[ 83%] Built target autowiz
+[ 84%] Building C object src/util/CMakeFiles/casasconv.dir/casasconv.c.o
+[ 85%] Linking C executable /home/runner/work/vitalia-reborn/vitalia-reborn/bin/casasconv
+[ 85%] Built target casasconv
+[ 86%] Building C object src/util/CMakeFiles/plrtoascii.dir/plrtoascii.c.o
+[ 87%] Linking C executable /home/runner/work/vitalia-reborn/vitalia-reborn/bin/plrtoascii
+[ 87%] Built target plrtoascii
+[ 88%] Building C object src/util/CMakeFiles/rebuildIndex.dir/rebuildAsciiIndex.c.o
+[ 89%] Linking C executable /home/runner/work/vitalia-reborn/vitalia-reborn/bin/rebuildIndex
+[ 89%] Built target rebuildIndex
+[ 90%] Building C object src/util/CMakeFiles/rebuildMailIndex.dir/rebuildMailIndex.c.o
+[ 91%] Linking C executable /home/runner/work/vitalia-reborn/vitalia-reborn/bin/rebuildMailIndex
+[ 91%] Built target rebuildMailIndex
+[ 92%] Building C object src/util/CMakeFiles/shopconv.dir/shopconv.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c: In function ‘do_list’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:62:33: warning: variable ‘buf2’ set but not used [-Wunused-but-set-variable]
+   62 |   char buf[MAX_STRING_LENGTH], *buf2;
+      |                                 ^~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:61:20: warning: variable ‘i’ set but not used [-Wunused-but-set-variable]
+   61 |   int count, temp, i;
+      |                    ^
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c: In function ‘do_float’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:79:7: warning: variable ‘i’ set but not used [-Wunused-but-set-variable]
+   79 |   int i;
+      |       ^
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c: In function ‘do_int’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:91:10: warning: variable ‘j’ set but not used [-Wunused-but-set-variable]
+   91 |   int i, j;
+      |          ^
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c: In function ‘main’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:159:22: warning: variable ‘i’ set but not used [-Wunused-but-set-variable]
+  159 |   int result, index, i;
+      |                      ^
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:167:23: warning: ‘%s’ directive writing up to 255 bytes into a region of size 253 [-Wformat-overflow=]
+  167 |     sprintf(part, "mv %s %s.tmp", fn, fn);
+      |                       ^~          ~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:167:5: note: ‘sprintf’ output between 9 and 519 bytes into a destination of size 256
+  167 |     sprintf(part, "mv %s %s.tmp", fn, fn);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:169:22: warning: ‘.tmp’ directive writing 4 bytes into a region of size between 1 and 256 [-Wformat-overflow=]
+  169 |     sprintf(part, "%s.tmp", fn);
+      |                      ^~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:169:5: note: ‘sprintf’ output between 5 and 260 bytes into a destination of size 256
+  169 |     sprintf(part, "%s.tmp", fn);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:187:27: warning: ‘%s’ directive writing up to 255 bytes into a region of size 253 [-Wformat-overflow=]
+  187 |         sprintf(part, "mv %s.tmp %s.bak", fn, fn);
+      |                           ^~              ~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:187:9: note: ‘sprintf’ output between 13 and 523 bytes into a destination of size 256
+  187 |         sprintf(part, "mv %s.tmp %s.bak", fn, fn);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:184:27: warning: ‘%s’ directive writing up to 255 bytes into a region of size 253 [-Wformat-overflow=]
+  184 |         sprintf(part, "mv %s.tmp %s", fn, fn);
+      |                           ^~          ~~
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/shopconv.c:184:9: note: ‘sprintf’ output between 9 and 519 bytes into a destination of size 256
+  184 |         sprintf(part, "mv %s.tmp %s", fn, fn);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 92%] Linking C executable /home/runner/work/vitalia-reborn/vitalia-reborn/bin/shopconv
+[ 92%] Built target shopconv
+[ 93%] Building C object src/util/CMakeFiles/sign.dir/sign.c.o
+[ 94%] Linking C executable /home/runner/work/vitalia-reborn/vitalia-reborn/bin/sign
+[ 94%] Built target sign
+[ 95%] Building C object src/util/CMakeFiles/split.dir/split.c.o
+[ 96%] Linking C executable /home/runner/work/vitalia-reborn/vitalia-reborn/bin/split
+[ 96%] Built target split
+[ 97%] Building C object src/util/CMakeFiles/textextract.dir/textextract.c.o
+[ 98%] Linking C executable /home/runner/work/vitalia-reborn/vitalia-reborn/bin/textextract
+[ 98%] Built target textextract
+[ 99%] Building C object src/util/CMakeFiles/wld2html.dir/wld2html.c.o
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/wld2html.c: In function ‘get_line’:
+/home/runner/work/vitalia-reborn/vitalia-reborn/src/util/wld2html.c:507:20: warning: variable ‘buf2’ set but not used [-Wunused-but-set-variable]
+  507 |   char temp[256], *buf2;
+      |                    ^~~~
+[100%] Linking C executable /home/runner/work/vitalia-reborn/vitalia-reborn/bin/wld2html
+[100%] Built target wld2html

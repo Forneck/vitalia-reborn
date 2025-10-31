@@ -2436,8 +2436,16 @@ ACMD(do_wizutil)
                 send_to_char(ch, "Thawed.\r\n");
                 act("A sudden fireball conjured from nowhere thaws $n!", FALSE, vict, 0, 0, TO_ROOM);
                 break;
-            case SCMD_UNAFFECT:
-                if ((vict->affected) || AFF_FLAGS(vict)) {
+            case SCMD_UNAFFECT: {
+                int has_affects = 0;
+                for (taeller = 0; taeller < AF_ARRAY_MAX; taeller++) {
+                    if (AFF_FLAGS(vict)[taeller]) {
+                        has_affects = 1;
+                        break;
+                    }
+                }
+
+                if ((vict->affected) || has_affects) {
                     while (vict->affected)
                         affect_remove(vict, vict->affected);
                     for (taeller = 0; taeller < AF_ARRAY_MAX; taeller++)
@@ -2449,6 +2457,7 @@ ACMD(do_wizutil)
                     return;
                 }
                 break;
+            }
             default:
                 log1("SYSERR: Unknown subcmd %d passed to do_wizutil (%s)", subcmd, __FILE__);
                 /* SYSERR_DESC: This is the same as the unhandled case in
