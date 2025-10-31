@@ -173,7 +173,7 @@ void call_ACMD(void (*function)(), struct char_data *ch, char *argument, int cmd
 int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
 {
     struct str_spells *spell;
-    int mana, num, rts_code;
+    int mana, num, rts_code, i;
 
     spell = get_spell_by_vnum(spellnum);
 
@@ -189,12 +189,34 @@ int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
                 "SYSERR: spell vnum %d not assigned to class: %d"
                 ", passed to mag_manacost.",
                 spellnum, GET_CLASS(ch));
-            return 100;
-        } else
+            /* For retained skills from other classes, find any class that has this spell
+             * and use its mana formula with a 1.5x multiplier */
+            mana = 0;
+            int min_mana = 0;
+            for (i = 0; i < NUM_CLASSES; i++) {
+                if (spell->assign[i].class_num != -1 && spell->assign[i].num_mana) {
+                    int class_mana = MAX(5, formula_interpreter(ch, tch, spellnum, TRUE, spell->assign[i].num_mana, GET_LEVEL(ch),
+                                                                &rts_code));
+                    if (min_mana == 0 || class_mana < min_mana) {
+                        min_mana = class_mana;
+                    }
+                }
+            }
+            if (min_mana > 0) {
+                /* Apply cross-class penalty: 1.5x mana cost */
+                mana = (min_mana * 3) / 2;
+            }
+            /* If no formula found, use default */
+            if (mana == 0) {
+                mana = 100;
+            }
+        } else {
             return 0;
+        }
+    } else {
+        mana =
+            MAX(5, formula_interpreter(ch, tch, spellnum, TRUE, spell->assign[num].num_mana, GET_LEVEL(ch), &rts_code));
     }
-
-    mana = MAX(5, formula_interpreter(ch, tch, spellnum, TRUE, spell->assign[num].num_mana, GET_LEVEL(ch), &rts_code));
 
     /* Apply spell modifier to mana cost */
     if (spell_modifier_diminish) {
