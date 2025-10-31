@@ -688,99 +688,77 @@ static void dam_message(int dam, struct char_data *ch, struct char_data *victim,
         const char *to_victim;
     } dam_weapons[] = {
 
-        { /* 0 */
-            "$n tenta #W $N, mas erra.",
-            "\tyVocê tenta #W $N, mas erra.\tn",
-            "\tr$n tenta #W você, mas erra.\tn"
-        },
-    
-        { /* 1 */
-            "$n faz cócegas em $N tentando #W $L.",
-            "\tyVocê faz cócegas em $N ao tentar #W $L.\tn",
-            "\tr$n faz cócegas em você, tentando lhe #W.\tn"
-        },
-    
-        { /* 2 */
-            "Com muita dificuldade, $n #w $N.",
-            "\tyCom muita dificuldade, você #w $N.\tn",
-            "\trCom muita dificuldade, $n #w você.\tn"
-        },
-    
-        { /* 3 */
-            "$n #w $N.",
-            "\tyVocê #w $N.\tn",
-            "\tr$n #w você.\tn"
-        },
-    
-        { /* 4 */
-            "$n #w $N com força.",
-            "\tyVocê #w $N com força.\tn",
-            "\tr$n #w você com força.\tn"
-        },
-    
-        { /* 5 */
-            "$n #w $N com muita força.",
-            "\tyVocê #w $N com muita força.\tn",
-            "\tr$n #w você com muita força.\tn"
-        },
-    
-        { /* 6 */
-            "$n #w $N extremamente forte.",
-            "\tyVocê #w $N extremamente forte.\tn",
-            "\tr$n #w você extremamente forte.\tn"
-        },
-    
-        { /* 7 */
-            "$n massacra $N com #n.",
-            "\tyVocê massacra $N com sua #n.\tn",
-            "\tr$n massacra você com sua #n.\tn"
-        },
-    
-        { /* 8 */
-            "$n esmigalha $N com um forte #n!",
-            "\tyVocê esmigalha $N com um forte #n!\tn",
-            "\tr$n esmigalha você com um forte #n!\tn"
-        },
-    
-        { /* 9 */
-            "$n estraçalha $N com um poderoso #n!",
-            "\tyVocê estraçalha $N com um poderoso #n!\tn",
-            "\tr$n estraçalha você com um poderoso #n!\tn"
-        },
-    
-        { /* 10 */
-            "$n ANIQUILA $N com um #n mortal!!",
-            "\tyVocê ANIQUILA $N com um #n mortal!!\tn",
-            "\tr$n ANIQUILA você com um #n mortal!!\tn"
-        },
-    
-        { /* 11 */
-            "$n EXTERMINA $N com um #n devastador!!",
-            "\tyVocê EXTERMINA $N com um #n devastador!!\tn",
-            "\tr$n EXTERMINA você com um #n devastador!!\tn"
-        }
-    };
+        {/* 0 */
+         "$n tenta #W $N, mas erra.", "\tyVocê tenta #W $N, mas erra.\tn", "\tr$n tenta #W você, mas erra.\tn"},
 
+        {/* 1 */
+         "$n faz cócegas em $N tentando #W $L.", "\tyVocê faz cócegas em $N ao tentar #W $L.\tn",
+         "\tr$n faz cócegas em você, tentando lhe #W.\tn"},
 
+        {/* 2 */
+         "Com muita dificuldade, $n #w $N.", "\tyCom muita dificuldade, você #w $N.\tn",
+         "\trCom muita dificuldade, $n #w você.\tn"},
+
+        {/* 3 */
+         "$n #w $N.", "\tyVocê #w $N.\tn", "\tr$n #w você.\tn"},
+
+        {/* 4 */
+         "$n #w $N com força.", "\tyVocê #w $N com força.\tn", "\tr$n #w você com força.\tn"},
+
+        {/* 5 */
+         "$n #w $N com muita força.", "\tyVocê #w $N com muita força.\tn", "\tr$n #w você com muita força.\tn"},
+
+        {/* 6 */
+         "$n #w $N extremamente forte.", "\tyVocê #w $N extremamente forte.\tn",
+         "\tr$n #w você extremamente forte.\tn"},
+
+        {/* 7 */
+         "$n massacra $N com #n.", "\tyVocê massacra $N com sua #n.\tn", "\tr$n massacra você com sua #n.\tn"},
+
+        {/* 8 */
+         "$n esmigalha $N com um forte #n!", "\tyVocê esmigalha $N com um forte #n!\tn",
+         "\tr$n esmigalha você com um forte #n!\tn"},
+
+        {/* 9 */
+         "$n estraçalha $N com um poderoso #n!", "\tyVocê estraçalha $N com um poderoso #n!\tn",
+         "\tr$n estraçalha você com um poderoso #n!\tn"},
+
+        {/* 10 */
+         "$n ANIQUILA $N com um #n mortal!!", "\tyVocê ANIQUILA $N com um #n mortal!!\tn",
+         "\tr$n ANIQUILA você com um #n mortal!!\tn"},
+
+        {/* 11 */
+         "$n EXTERMINA $N com um #n devastador!!", "\tyVocê EXTERMINA $N com um #n devastador!!\tn",
+         "\tr$n EXTERMINA você com um #n devastador!!\tn"}};
 
     w_type -= TYPE_HIT; /* Change to base of table with text */
 
     int vh = GET_MAX_HIT(victim);
 
-    
-  if (dam == 0)             msgnum = 0;
-  else if (dam <= vh * .01) msgnum = 1;
-  else if (dam <= vh * .02) msgnum = 2;
-  else if (dam <= vh * .05) msgnum = 3;
-  else if (dam <= vh * .08) msgnum = 4;
-  else if (dam <= vh * .12) msgnum = 5;
-  else if (dam <= vh * .28) msgnum = 6;
-  else if (dam <= vh * .35) msgnum = 7;
-  else if (dam <= vh * .50) msgnum = 8;
-  else if (dam <= vh * .70) msgnum = 9;
-  else if (dam <= vh * .90) msgnum = 10;
-  else                      msgnum = 11;
-
+    if (dam == 0)
+        msgnum = 0;
+    else if (dam <= vh * .01)
+        msgnum = 1;
+    else if (dam <= vh * .02)
+        msgnum = 2;
+    else if (dam <= vh * .05)
+        msgnum = 3;
+    else if (dam <= vh * .08)
+        msgnum = 4;
+    else if (dam <= vh * .12)
+        msgnum = 5;
+    else if (dam <= vh * .28)
+        msgnum = 6;
+    else if (dam <= vh * .35)
+        msgnum = 7;
+    else if (dam <= vh * .50)
+        msgnum = 8;
+    else if (dam <= vh * .70)
+        msgnum = 9;
+    else if (dam <= vh * .90)
+        msgnum = 10;
+    else
+        msgnum = 11;
 
     /*if (dam == 0)
         msgnum = 0;
@@ -1739,11 +1717,19 @@ int get_nighthammer(struct char_data *ch, bool real)
     if (!(learned = GET_SKILL(ch, SKILL_NIGHTHAMMER)))
         return (0);
 
-    if (time_info.hours > 4 && time_info.hours < 21)
+    /* Check if it's actually night time based on sunlight */
+    if (weather_info.sunlight == SUN_LIGHT || weather_info.sunlight == SUN_RISE)
         return (0);
 
     mod = 1;
-    mod += (time_info.hours < 4 || time_info.hours > 21);
+    /* Extra bonus during deep night (SUN_DARK) */
+    if (weather_info.sunlight == SUN_DARK)
+        mod++;
+    /* Weather conditions that obscure moonlight provide additional bonus */
+    if (weather_info.sky == SKY_CLOUDY || weather_info.sky == SKY_RAINING || weather_info.sky == SKY_LIGHTNING ||
+        weather_info.sky == SKY_SNOWING)
+        mod++;
+
     mod += ((GET_LEVEL(ch) - NIGHTHAMMER_LVL) / 8);
     mod = MIN(mod, 8);
 
