@@ -43,7 +43,7 @@ static void look_in_obj(struct char_data *ch, char *arg);
 /* do_look, do_inventory utility functions */
 static void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mode, int show);
 /* do_look, do_equipment, do_examine, do_inventory */
-static void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode);
+void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode);
 static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int mode);
 /* do_where utility functions */
 static void perform_immort_where(char_data *ch, const char *arg);
@@ -52,12 +52,9 @@ static size_t print_object_location(int num, const obj_data *obj, const char_dat
                                     size_t buf_size, int recur);
 extern void look_at_sky(struct char_data *ch);
 /* Subcommands */
-/* For show_obj_to_char 'mode'. /-- arbitrary */
-#define SHOW_OBJ_LONG 0
-#define SHOW_OBJ_SHORT 1
-#define SHOW_OBJ_ACTION 2
+/* For show_obj_to_char 'mode'. /-- arbitrary - defined in act.h */
 
-static void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
+void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
 {
     int found = 0;
     struct char_data *temp;

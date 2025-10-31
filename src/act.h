@@ -110,6 +110,11 @@ ACMD(do_where);
 ACMD(do_who);
 ACMD(do_whois);
 ACMD(do_evaluate);
+/* Utility functions for act.informative.c */
+#define SHOW_OBJ_LONG 0
+#define SHOW_OBJ_SHORT 1
+#define SHOW_OBJ_ACTION 2
+void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode);
 
 /*****************************************************************************
  * Begin Functions and defines for act.item.c
@@ -293,6 +298,7 @@ ACMD(do_save);
 ACMD(do_sneak);
 ACMD(do_split);
 ACMD(do_steal);
+ACMD(do_peek);
 ACMD(do_syllables);
 ACMD(do_experiment);
 ACMD(do_title);
