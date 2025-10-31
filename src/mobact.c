@@ -3096,6 +3096,23 @@ bool mob_try_and_loot(struct char_data *ch)
         }
 
         if (best_obj != NULL) {
+            /* Safety check: Re-validate that best_obj is still in the room.
+             * Another player/mob might have picked it up during the evaluation loop.
+             * This prevents crashes from accessing freed memory. */
+            struct obj_data *obj_check;
+            bool obj_still_exists = FALSE;
+            for (obj_check = world[IN_ROOM(ch)].contents; obj_check; obj_check = obj_check->next_content) {
+                if (obj_check == best_obj) {
+                    obj_still_exists = TRUE;
+                    break;
+                }
+            }
+
+            if (!obj_still_exists) {
+                /* Object was taken by someone else, abort this loot attempt */
+                return FALSE;
+            }
+
             /* Chama a função do jogo para pegar o item, garantindo todas as verificações. */
             if (perform_get_from_room(ch, best_obj)) {
                 /* Aprendizagem Positiva: A decisão foi boa e bem-sucedida. */
