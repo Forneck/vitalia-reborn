@@ -819,6 +819,7 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
     while (obj && sold < sellnum) {
         int charged = sell_price(obj, shop_nr, keeper, ch);
 
+        /* Check affordability for each item since keeper's funds decrease with each purchase */
         if (!can_keeper_afford(keeper, shop_nr, charged))
             break;
 
