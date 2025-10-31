@@ -436,7 +436,7 @@ ACMD(do_peek)
     if (items_shown < 1)
         items_shown = 1; /* Always show at least one item */
 
-    act("\r\nVocê consegue ver em $s inventário:", FALSE, vict, 0, ch, TO_VICT);
+    act("\r\nVocê consegue ver no inventário $D:", FALSE, vict, 0, ch, TO_VICT);
 
     /* Show items - loop through and show random items */
     if (items_shown >= total_items) {

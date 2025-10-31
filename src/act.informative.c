@@ -984,6 +984,15 @@ ACMD(do_score)
                  GET_SAVE(ch, SAVING_BREATH), GET_SAVE(ch, SAVING_SPELL));
 
     send_to_char(ch, "  \tWBônus\tb: \tgHitRoll\tn [%2d]   \tgDamRoll\tn [%2d]\r\n", GET_HITROLL(ch), GET_DAMROLL(ch));
+
+    /* Show nighthammer status if active */
+    int nham_mod = get_nighthammer(ch, false);
+    if (nham_mod > 0) {
+        send_to_char(ch, "  \tWNighthammer\tb: \tgAtivo\tn (nível %d - +%d hit, +%d dam, %d AC)\r\n", nham_mod,
+                     nighthammer_info[nham_mod].to_hit, nighthammer_info[nham_mod].to_dam,
+                     nighthammer_info[nham_mod].to_ac);
+    }
+
     send_to_char(ch, "\r\n");
     if (!IS_NPC(ch) && GET_LEVEL(ch) >= LVL_IMMORT) {
 
