@@ -460,9 +460,10 @@ static struct obj_data *get_purchase_obj(struct char_data *ch, char *arg, struct
    charisma, because on the flip side they'd get 11% inflation by having a 3. */
 static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper, struct char_data *buyer)
 {
-    float price_float = GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70);
+    float price_float =
+        GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70);
     int price = (int)(price_float + 0.5); /* Round to nearest integer */
-    return MAX(1, price); /* Ensure minimum price of 1 gold */
+    return MAX(1, price);                 /* Ensure minimum price of 1 gold */
 }
 
 /* When the shopkeeper is buying, we reverse the discount. Also make sure we
@@ -477,7 +478,7 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
 
     float price_float = GET_OBJ_COST(obj) * sell_cost_modifier;
     int price = (int)(price_float + 0.5); /* Round to nearest integer */
-    return MAX(1, price); /* Ensure minimum price of 1 gold */
+    return MAX(1, price);                 /* Ensure minimum price of 1 gold */
 }
 
 void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr)
@@ -804,8 +805,19 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
         int charged = sell_price(obj, shop_nr, keeper, ch);
 
         goldamt += charged;
-        if (!IS_SET(SHOP_BITVECTOR(shop_nr), HAS_UNLIMITED_CASH))
-            decrease_gold(keeper, charged);
+        if (!IS_SET(SHOP_BITVECTOR(shop_nr), HAS_UNLIMITED_CASH)) {
+            /* Pay from keeper's gold first, then from bank if needed */
+            int keeper_gold = GET_GOLD(keeper);
+            if (keeper_gold >= charged) {
+                /* Keeper has enough gold on hand */
+                decrease_gold(keeper, charged);
+            } else {
+                /* Need to withdraw from bank to cover the difference */
+                int from_bank = charged - keeper_gold;
+                decrease_gold(keeper, keeper_gold); /* Take all keeper's gold */
+                SHOP_BANK(shop_nr) -= from_bank;    /* Withdraw rest from bank */
+            }
+        }
 
         sold++;
         obj_from_char(obj);
