@@ -192,14 +192,19 @@ int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
             /* For retained skills from other classes, find any class that has this spell
              * and use its mana formula with a 1.5x multiplier */
             mana = 0;
+            int min_mana = 0;
             for (i = 0; i < NUM_CLASSES; i++) {
                 if (spell->assign[i].class_num != -1 && spell->assign[i].num_mana) {
-                    mana = MAX(5, formula_interpreter(ch, tch, spellnum, TRUE, spell->assign[i].num_mana, GET_LEVEL(ch),
-                                                      &rts_code));
-                    /* Apply cross-class penalty: 1.5x mana cost */
-                    mana = (mana * 3) / 2;
-                    break;
+                    int class_mana = MAX(5, formula_interpreter(ch, tch, spellnum, TRUE, spell->assign[i].num_mana, GET_LEVEL(ch),
+                                                                &rts_code));
+                    if (min_mana == 0 || class_mana < min_mana) {
+                        min_mana = class_mana;
+                    }
                 }
+            }
+            if (min_mana > 0) {
+                /* Apply cross-class penalty: 1.5x mana cost */
+                mana = (min_mana * 3) / 2;
             }
             /* If no formula found, use default */
             if (mana == 0) {
