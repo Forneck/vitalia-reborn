@@ -216,7 +216,13 @@ static int can_take_obj(struct char_data *ch, struct obj_data *obj)
 
 void get_check_money(struct char_data *ch, struct obj_data *obj)
 {
-    int value = GET_OBJ_VAL(obj, 0);
+    int value;
+
+    /* Safety check: obj might be NULL if extracted by triggers */
+    if (obj == NULL)
+        return;
+
+    value = GET_OBJ_VAL(obj, 0);
 
     if (GET_OBJ_TYPE(obj) != ITEM_MONEY || value <= 0)
         return;
@@ -1293,8 +1299,10 @@ static void wear_message(struct char_data *ch, struct obj_data *obj, int where)
         /* 10 WEAR_HANDS   */ {"$n coloca $p nas mãos.", "Você coloca $p nas mãos."},
         /* 11 WEAR_WRIST_R */ {"$n coloca $p em volta do pulso direito.", "Você coloca $p em seu pulso direito."},
         /* 12 WEAR_WRIST_L */ {"$n coloca $p em volta do pulso esquerdo.", "Você coloca $p em seu pulso esquerdo."},
-        /* 13 WEAR_FINGER_R*/ {"$n desliza $p em seu dedo anelar direito.", "Você desliza $p em seu dedo anelar direito."},
-        /* 14 WEAR_FINGER_L*/ {"$n desliza $p em seu dedo anelar esquerdo.", "Você desliza $p em seu dedo anelar esquerdo."},
+        /* 13 WEAR_FINGER_R*/
+        {"$n desliza $p em seu dedo anelar direito.", "Você desliza $p em seu dedo anelar direito."},
+        /* 14 WEAR_FINGER_L*/
+        {"$n desliza $p em seu dedo anelar esquerdo.", "Você desliza $p em seu dedo anelar esquerdo."},
         /* 15 WEAR_WAIST   */ {"$n veste $p em volta da cintura.", "Você veste $p em volta da cintura."},
         /* 16 WEAR_LEGS    */ {"$n coloca $p nas pernas.", "Você coloca $p nas pernas."},
         /* 17 WEAR_FEET    */ {"$n veste $p nos pés.", "Você veste $p nos pés."},
@@ -1304,9 +1312,7 @@ static void wear_message(struct char_data *ch, struct obj_data *obj, int where)
         /* 21 WEAR_HOLD    */ {"$n segura $p.", "Você segura $p."},
         /* 22 WEAR_WINGS   */ {"$n prende $p às costas, como asas.", "Você começa a usar $p como asas."},
         /* 23 WEAR_INSIGNE */ {"$n começa a usar $p como insígnia.", "Você começa a usar $p como insígnia."},
-        /* 24 WEAR_QUIVER  */ {"$n prende $p na aljava.", "Você prende $p na aljava."}
-    };
-    
+        /* 24 WEAR_QUIVER  */ {"$n prende $p na aljava.", "Você prende $p na aljava."}};
 
     act(wear_messages[where][0], TRUE, ch, obj, 0, TO_ROOM);
     act(wear_messages[where][1], FALSE, ch, obj, 0, TO_CHAR);
@@ -1319,62 +1325,59 @@ void perform_wear(struct char_data *ch, struct obj_data *obj, int where)
      * to be put into that position (e.g. you can hold any object, not just
      * an object with a HOLD bit.)
      */
-     int wear_bitvectors[] = {
-        ITEM_WEAR_TAKE,     /*  0 - luz */
-        ITEM_WEAR_HEAD,     /*  1 - cabeça */
-        ITEM_WEAR_EAR,      /*  2 - orelha direita */
-        ITEM_WEAR_EAR,      /*  3 - orelha esquerda */
-        ITEM_WEAR_FACE,     /*  4 - rosto */
-        ITEM_WEAR_NOSE,     /*  5 - nariz */
-        ITEM_WEAR_NECK,     /*  6 - pescoço 1 */
-        ITEM_WEAR_NECK,     /*  7 - pescoço 2 */
-        ITEM_WEAR_BODY,     /*  8 - corpo */
-        ITEM_WEAR_ARMS,     /*  9 - braços */
-        ITEM_WEAR_HANDS,    /* 10 - mãos */
-        ITEM_WEAR_WRIST,    /* 11 - pulso direito */
-        ITEM_WEAR_WRIST,    /* 12 - pulso esquerdo */
-        ITEM_WEAR_FINGER,   /* 13 - dedo direito */
-        ITEM_WEAR_FINGER,   /* 14 - dedo esquerdo */
-        ITEM_WEAR_WAIST,    /* 15 - cintura */
-        ITEM_WEAR_LEGS,     /* 16 - pernas */
-        ITEM_WEAR_FEET,     /* 17 - pés */
-        ITEM_WEAR_ABOUT,    /* 18 - sobre o corpo (capa) */
-        ITEM_WEAR_SHIELD,   /* 19 - escudo */
-        ITEM_WEAR_WIELD,    /* 20 - arma empunhada */
-        ITEM_WEAR_TAKE,     /* 21 - mão secundária (segurando) */
-        ITEM_WEAR_WINGS,    /* 22 - asas */
-        ITEM_WEAR_INSIGNE,  /* 23 - insígnia */
-        ITEM_WEAR_QUIVER    /* 24 - aljava / bolsa de flechas */
+    int wear_bitvectors[] = {
+        ITEM_WEAR_TAKE,    /*  0 - luz */
+        ITEM_WEAR_HEAD,    /*  1 - cabeça */
+        ITEM_WEAR_EAR,     /*  2 - orelha direita */
+        ITEM_WEAR_EAR,     /*  3 - orelha esquerda */
+        ITEM_WEAR_FACE,    /*  4 - rosto */
+        ITEM_WEAR_NOSE,    /*  5 - nariz */
+        ITEM_WEAR_NECK,    /*  6 - pescoço 1 */
+        ITEM_WEAR_NECK,    /*  7 - pescoço 2 */
+        ITEM_WEAR_BODY,    /*  8 - corpo */
+        ITEM_WEAR_ARMS,    /*  9 - braços */
+        ITEM_WEAR_HANDS,   /* 10 - mãos */
+        ITEM_WEAR_WRIST,   /* 11 - pulso direito */
+        ITEM_WEAR_WRIST,   /* 12 - pulso esquerdo */
+        ITEM_WEAR_FINGER,  /* 13 - dedo direito */
+        ITEM_WEAR_FINGER,  /* 14 - dedo esquerdo */
+        ITEM_WEAR_WAIST,   /* 15 - cintura */
+        ITEM_WEAR_LEGS,    /* 16 - pernas */
+        ITEM_WEAR_FEET,    /* 17 - pés */
+        ITEM_WEAR_ABOUT,   /* 18 - sobre o corpo (capa) */
+        ITEM_WEAR_SHIELD,  /* 19 - escudo */
+        ITEM_WEAR_WIELD,   /* 20 - arma empunhada */
+        ITEM_WEAR_TAKE,    /* 21 - mão secundária (segurando) */
+        ITEM_WEAR_WINGS,   /* 22 - asas */
+        ITEM_WEAR_INSIGNE, /* 23 - insígnia */
+        ITEM_WEAR_QUIVER   /* 24 - aljava / bolsa de flechas */
     };
 
-    const char *already_wearing[] = {
-        /* 0 */  "Você já está usando uma luz.\r\n",
-        /* 1 */  "Você já está vestindo algo em sua cabeça.\r\n",
-        /* 2 */  "Você já está usando algo em sua orelha.\r\n",
-        /* 3 */  "Você já está usando algo em sua orelha.\r\n",
-        /* 4 */  "Você já está usando algo em seu rosto.\r\n",
-        /* 5 */  "Você já está usando algo em seu nariz.\r\n",
-        /* 6 */  "Você já está usando algo em seu pescoço.\r\n",
-        /* 7 */  "Você já está usando algo em seu pescoço.\r\n",
-        /* 8 */  "Você já está vestindo algo em seu corpo.\r\n",
-        /* 9 */  "Você já está vestindo algo em seus braços.\r\n",
-        /* 10 */ "Você já está vestindo algo em suas mãos.\r\n",
-        /* 11 */ "Você já está usando algo em seu pulso.\r\n",
-        /* 12 */ "Você já está usando algo em seu pulso.\r\n",
-        /* 13 */ "Você já está usando algo em seu dedo anelar.\r\n",
-        /* 14 */ "Você já está usando algo em seu dedo anelar.\r\n",
-        /* 15 */ "Você já está vestindo algo em sua cintura.\r\n",
-        /* 16 */ "Você já está vestindo algo em suas pernas.\r\n",
-        /* 17 */ "Você já está vestindo algo em seus pés.\r\n",
-        /* 18 */ "Você já está vestindo algo sobre o corpo.\r\n",
-        /* 19 */ "Você já está usando um escudo.\r\n",
-        /* 20 */ "Você já tem uma arma empunhada.\r\n",
-        /* 21 */ "Você já está segurando algo.\r\n",
-        /* 22 */ "Você já está usando asas.\r\n",
-        /* 23 */ "Você já está usando uma insígnia.\r\n",
-        /* 24 */ "Você já está usando algo na aljava.\r\n"
-    };
-    
+    const char *already_wearing[] = {/* 0 */ "Você já está usando uma luz.\r\n",
+                                     /* 1 */ "Você já está vestindo algo em sua cabeça.\r\n",
+                                     /* 2 */ "Você já está usando algo em sua orelha.\r\n",
+                                     /* 3 */ "Você já está usando algo em sua orelha.\r\n",
+                                     /* 4 */ "Você já está usando algo em seu rosto.\r\n",
+                                     /* 5 */ "Você já está usando algo em seu nariz.\r\n",
+                                     /* 6 */ "Você já está usando algo em seu pescoço.\r\n",
+                                     /* 7 */ "Você já está usando algo em seu pescoço.\r\n",
+                                     /* 8 */ "Você já está vestindo algo em seu corpo.\r\n",
+                                     /* 9 */ "Você já está vestindo algo em seus braços.\r\n",
+                                     /* 10 */ "Você já está vestindo algo em suas mãos.\r\n",
+                                     /* 11 */ "Você já está usando algo em seu pulso.\r\n",
+                                     /* 12 */ "Você já está usando algo em seu pulso.\r\n",
+                                     /* 13 */ "Você já está usando algo em seu dedo anelar.\r\n",
+                                     /* 14 */ "Você já está usando algo em seu dedo anelar.\r\n",
+                                     /* 15 */ "Você já está vestindo algo em sua cintura.\r\n",
+                                     /* 16 */ "Você já está vestindo algo em suas pernas.\r\n",
+                                     /* 17 */ "Você já está vestindo algo em seus pés.\r\n",
+                                     /* 18 */ "Você já está vestindo algo sobre o corpo.\r\n",
+                                     /* 19 */ "Você já está usando um escudo.\r\n",
+                                     /* 20 */ "Você já tem uma arma empunhada.\r\n",
+                                     /* 21 */ "Você já está segurando algo.\r\n",
+                                     /* 22 */ "Você já está usando asas.\r\n",
+                                     /* 23 */ "Você já está usando uma insígnia.\r\n",
+                                     /* 24 */ "Você já está usando algo na aljava.\r\n"};
 
     /* first, make sure that the wear position is valid. */
     if (!CAN_WEAR(obj, wear_bitvectors[where])) {

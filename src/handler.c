@@ -851,6 +851,12 @@ void extract_obj(struct obj_data *obj)
     struct char_data *ch, *next = NULL;
     struct obj_data *temp;
 
+    /* Safety check: prevent segfault if obj is NULL */
+    if (obj == NULL) {
+        log1("SYSERR: extract_obj called with NULL object pointer!");
+        return;
+    }
+
     if (obj->worn_by != NULL)
         if (unequip_char(obj->worn_by, obj->worn_on) != obj)
             log1("SYSERR: Inconsistent worn_by and worn_on pointers!!");
