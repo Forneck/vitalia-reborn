@@ -62,7 +62,7 @@ ACMD(do_auction)
         }
 
         /* Check if we're in the auction house */
-        if (GET_ROOM_VNUM(IN_ROOM(ch)) != 3150) {
+        if (GET_ROOM_VNUM(IN_ROOM(ch)) != 3092) {
             send_to_char(ch, "Você precisa estar na casa de leilões para criar um leilão.\r\n");
             return;
         }
@@ -111,7 +111,7 @@ ACMD(do_auction)
         }
 
         /* Check if we're in the auction house */
-        if (GET_ROOM_VNUM(IN_ROOM(ch)) != 3150) {
+        if (GET_ROOM_VNUM(IN_ROOM(ch)) != 3092) {
             send_to_char(ch, "Você precisa estar na casa de leilões para dar lances.\r\n");
             return;
         }
