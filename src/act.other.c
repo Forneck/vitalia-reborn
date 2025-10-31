@@ -453,7 +453,7 @@ ACMD(do_peek)
 #define MAX_PEEK_ITEMS 100
         int shown_indices[MAX_PEEK_ITEMS];
         int all_indices[MAX_PEEK_ITEMS];
-        int i, idx, shown_count = 0;
+        int i, idx;
 
         /* Safety check */
         if (total_items > MAX_PEEK_ITEMS)
