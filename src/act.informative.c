@@ -1590,7 +1590,7 @@ ACMD(do_who)
 
             /* imprime a linha */
             // CORRIGIDO: O formato agora inclui um %s extra para o padding_buf
-            send_to_char(ch, "%s[%3d \tC%-3s%s%s] \tB%s%s\tW%s%s%s\tn\r\n",
+            send_to_char(ch, "%s[%3d \tC%-3s\tn%s%s] \tB%s%s\tW%s%s%s\tn\r\n",
                          corNivel,                       // %s (1) Cor do colchete/nível
                          GET_LEVEL(tch),                 // %-3d (2) Nível
                          CLASS_ABBR(tch),                // \tC%-3s (3) Classe
