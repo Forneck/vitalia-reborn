@@ -569,7 +569,7 @@ SPECIAL(belchior_auctioneer)
     }
 
     shop_room = real_room(3081);
-    auction_room = real_room(3150);
+    auction_room = real_room(3092);
 
     if (shop_room == NOWHERE || auction_room == NOWHERE) {
         send_to_char(ch, "Há um problema com as salas do leilão.\r\n");
