@@ -2653,8 +2653,25 @@ bool mob_follow_leader(struct char_data *ch)
                     }
                 }
 
-                perform_move(ch, direction, 1);
-                return TRUE; /* Ação de seguir foi executada. */
+                /* Handle doors if necessary - charmed mobs should open/unlock doors to follow master */
+                if (IS_SET(EXIT(ch, direction)->exit_info, EX_ISDOOR) &&
+                    IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
+                    if (!IS_SET(EXIT(ch, direction)->exit_info, EX_DNOPEN)) {
+                        if (IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED) &&
+                            has_key(ch, EXIT(ch, direction)->key)) {
+                            do_doorcmd(ch, NULL, direction, SCMD_UNLOCK);
+                        }
+                        if (!IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED)) {
+                            do_doorcmd(ch, NULL, direction, SCMD_OPEN);
+                        }
+                    }
+                }
+
+                /* Only move if path is clear */
+                if (!IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
+                    perform_move(ch, direction, 1);
+                    return TRUE; /* Ação de seguir foi executada. */
+                }
             }
         }
     }
