@@ -814,13 +814,15 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
             } else {
                 /* Need to withdraw from bank to cover the difference */
                 int from_bank = charged - keeper_gold;
-                /* Defensive check: ensure bank has enough (should always be true due to while condition) */
+                /* Defensive check: ensure bank has enough
+                 * The loop condition (line 803) should guarantee this, but we validate defensively
+                 * to handle potential race conditions or data corruption */
                 if (SHOP_BANK(shop_nr) >= from_bank) {
                     decrease_gold(keeper, keeper_gold); /* Take all keeper's gold */
                     SHOP_BANK(shop_nr) -= from_bank;    /* Withdraw rest from bank */
                 } else {
-                    /* Safety: insufficient funds despite while condition check */
-                    /* This could happen due to a race condition or data corruption */
+                    /* Safety: insufficient funds despite loop affordability check
+                     * This could happen due to a race condition or data corruption */
                     mudlog(BRF, LVL_GOD, TRUE,
                            "SYSERR: Shop %d insufficient funds. Keeper gold: %d, Bank: %d, Charged: %d",
                            SHOP_NUM(shop_nr), keeper_gold, SHOP_BANK(shop_nr), charged);
