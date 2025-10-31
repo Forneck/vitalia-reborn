@@ -536,7 +536,7 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
     } else { /* has the player got enough gold? */
         int item_price = buy_price(obj, shop_nr, keeper, ch);
         if (item_price < 1) {
-            /* Item has no value - shouldn't happen but be defensive */
+            /* Item has no valid price - refuse transaction */
             char actbuf[MAX_INPUT_LENGTH];
             snprintf(actbuf, sizeof(actbuf), shop_index[shop_nr].no_such_item1, GET_NAME(ch));
             do_tell(keeper, actbuf, cmd_tell, 0);
@@ -828,7 +828,7 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
     /* Check if the item has a valid sell price */
     int item_sell_price = sell_price(obj, shop_nr, keeper, ch);
     if (item_sell_price < 1) {
-        /* This shouldn't happen due to trade_with() checks, but be defensive */
+        /* Item has no valid price - refuse transaction */
         char buf[MAX_INPUT_LENGTH];
         snprintf(buf, sizeof(buf), shop_index[shop_nr].do_not_buy, GET_NAME(ch));
         do_tell(keeper, buf, cmd_tell, 0);
