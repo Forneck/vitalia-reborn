@@ -1305,12 +1305,21 @@ static int handle_obj(struct obj_data *temp, struct char_data *ch, int locate, s
             if (GET_OBJ_TYPE(temp) == ITEM_CONTAINER) {
                 /* rem item ; fill ; equip again */
                 temp = unequip_char(ch, locate - 1);
-                temp->contains = NULL; /* should be empty - but who knows */
-                for (; cont_row[0]; cont_row[0] = obj1) {
-                    obj1 = cont_row[0]->next_content;
-                    obj_to_obj(cont_row[0], temp);
+                if (temp) {                /* Check if unequip was successful */
+                    temp->contains = NULL; /* should be empty - but who knows */
+                    for (; cont_row[0]; cont_row[0] = obj1) {
+                        obj1 = cont_row[0]->next_content;
+                        obj_to_obj(cont_row[0], temp);
+                    }
+                    equip_char(ch, temp, locate - 1);
+                } else {
+                    /* If temp is NULL, item wasn't equipped, put contents in inventory */
+                    for (; cont_row[0]; cont_row[0] = obj1) {
+                        obj1 = cont_row[0]->next_content;
+                        obj_to_char(cont_row[0], ch);
+                    }
+                    cont_row[0] = NULL;
                 }
-                equip_char(ch, temp, locate - 1);
             } else { /* object isn't container -> empty content list */
                 for (; cont_row[0]; cont_row[0] = obj1) {
                     obj1 = cont_row[0]->next_content;
