@@ -1122,6 +1122,9 @@ ACMD(do_score)
     else if (affected_by_spell(ch, SPELL_SKIN_LIKE_WOOD))
         send_to_char(ch, "Você está protegid%s pelo Grande Carvalho.\r\n", OA(ch));
 
+    if (get_nighthammer(ch, false) > 0)
+        send_to_char(ch, "Você está protegid%s pelo manto da noite.\r\n", OA(ch));
+
     if (affected_by_spell(ch, SPELL_FLY))
         send_to_char(ch, "Você sente bem leve.\r\n");
 
