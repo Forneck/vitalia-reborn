@@ -460,7 +460,9 @@ static struct obj_data *get_purchase_obj(struct char_data *ch, char *arg, struct
    charisma, because on the flip side they'd get 11% inflation by having a 3. */
 static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper, struct char_data *buyer)
 {
-    return (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70));
+    int price =
+        (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70));
+    return MAX(1, price); /* Ensure minimum price of 1 gold */
 }
 
 /* When the shopkeeper is buying, we reverse the discount. Also make sure we
@@ -473,7 +475,8 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
     if (sell_cost_modifier > buy_cost_modifier)
         sell_cost_modifier = buy_cost_modifier;
 
-    return (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
+    int price = (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
+    return MAX(1, price); /* Ensure minimum price of 1 gold */
 }
 
 void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr)
