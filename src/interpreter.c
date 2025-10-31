@@ -1829,15 +1829,7 @@ void nanny(struct descriptor_data *d, char *arg)
                 return;
             }
 
-            /* Clear retained_skills array to prevent restoring unintended skills */
-            {
-                int i;
-                for (i = 1; i <= MAX_SKILLS; i++) {
-                    d->character->player_specials->saved.retained_skills[i] = 0;
-                }
-            }
-
-            /* Save the selected skill to retained skills */
+            /* Add the selected skill to retained skills (don't clear existing retained skills) */
             if (skill_num > 0) {
                 d->character->player_specials->saved.retained_skills[skill_num] = GET_SKILL(d->character, skill_num);
                 write_to_output(d, "Habilidade %s será mantida.\r\n", skill_name(skill_num));
