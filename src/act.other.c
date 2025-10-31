@@ -338,6 +338,180 @@ void check_thief(struct char_data *ch, struct char_data *vict)
     }
 }
 
+ACMD(do_peek)
+{
+    struct char_data *vict;
+    struct obj_data *obj;
+    char vict_name[MAX_INPUT_LENGTH];
+    int percent, success_percent, items_shown, total_items;
+    int move_cost = 5; /* Movement cost for using peek */
+
+    if (IS_NPC(ch) || !GET_SKILL(ch, SKILL_PEEK)) {
+        send_to_char(ch, "Você não tem idéia de como fazer isso.\r\n");
+        return;
+    }
+
+    if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_PEACEFUL)) {
+        send_to_char(ch, "Você sente muita paz neste lugar para bisbilhotar...\r\n");
+        return;
+    }
+
+    /* Check if enough movement points */
+    if (GET_MOVE(ch) < move_cost) {
+        send_to_char(ch, "Você está cansad%s demais para isso.\r\n", OA(ch));
+        return;
+    }
+
+    one_argument(argument, vict_name);
+
+    if (!(vict = get_char_vis(ch, vict_name, NULL, FIND_CHAR_ROOM))) {
+        send_to_char(ch, "Bisbilhotar quem?\r\n");
+        return;
+    } else if (vict == ch) {
+        send_to_char(ch, "Você olha para seu próprio inventário...\r\n");
+        do_inventory(ch, "", 0, 0);
+        return;
+    }
+
+    if (IS_DEAD(ch)) {
+        act("Você não pode bisbilhotar $L, você está mort$r!", FALSE, ch, 0, vict, TO_CHAR);
+        return;
+    } else if (IS_DEAD(vict)) {
+        act("Suas mãos passam por $N... $L é apenas um espírito...", FALSE, ch, 0, vict, TO_CHAR);
+        return;
+    }
+
+    /* Consume movement points */
+    GET_MOVE(ch) -= move_cost;
+
+    /* Calculate success chance - 101% is a complete failure */
+    percent = rand_number(1, 101) - dex_app_skill[GET_DEX(ch)].p_pocket;
+
+    if (GET_POS(vict) < POS_SLEEPING)
+        percent = -1; /* ALWAYS SUCCESS */
+
+    if (!AWAKE(vict)) /* Easier to peek at sleeping people */
+        percent -= 30;
+
+    /* Immortals and shopkeepers are harder to peek at */
+    if (GET_LEVEL(vict) >= LVL_IMMORT || GET_MOB_SPEC(vict) == shop_keeper)
+        percent += 50;
+
+    /* Check if peek was successful */
+    if (percent > GET_SKILL(ch, SKILL_PEEK)) {
+        /* Failed - victim notices */
+        send_to_char(ch, "Opa... Você foi peg%s!\r\n", OA(ch));
+        act("$n tentou bisbilhotar seus pertences!", FALSE, ch, 0, vict, TO_VICT);
+        act("$n tentou bisbilhotar os pertences de $N.", TRUE, ch, 0, vict, TO_NOTVICT);
+
+        /* Reputation changes for being caught */
+        if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+            modify_player_reputation(ch, -rand_number(2, 4));
+        }
+
+        if (IS_NPC(vict) && AWAKE(vict))
+            hit(vict, ch, TYPE_UNDEFINED);
+
+        return;
+    }
+
+    /* Success! Show items based on skill level */
+    success_percent = GET_SKILL(ch, SKILL_PEEK);
+
+    /* Count total items */
+    total_items = 0;
+    for (obj = vict->carrying; obj; obj = obj->next_content) {
+        if (CAN_SEE_OBJ(ch, obj))
+            total_items++;
+    }
+
+    if (total_items == 0) {
+        act("Você consegue ver que $N não está carregando nada.", FALSE, ch, 0, vict, TO_CHAR);
+        return;
+    }
+
+    /* Calculate how many items to show based on skill level */
+    /* At 50% skill, show 50% of items. At 100% skill, show all items */
+    items_shown = (total_items * success_percent) / 100;
+    if (items_shown < 1)
+        items_shown = 1; /* Always show at least one item */
+
+    act("\r\nVocê consegue ver em $s inventário:", FALSE, vict, 0, ch, TO_VICT);
+
+    /* Show items - loop through and show random items */
+    if (items_shown >= total_items) {
+        /* Show all items */
+        for (obj = vict->carrying; obj; obj = obj->next_content) {
+            if (CAN_SEE_OBJ(ch, obj)) {
+                send_to_char(ch, "  ");
+                show_obj_to_char(obj, ch, SHOW_OBJ_SHORT);
+            }
+        }
+    } else {
+        /* Show only a portion of items */
+        int *shown_indices = (int *)malloc(sizeof(int) * items_shown);
+        int i, idx, shown_count = 0;
+
+        /* Initialize shown indices array */
+        for (i = 0; i < items_shown; i++)
+            shown_indices[i] = -1;
+
+        /* Select random items to show */
+        while (shown_count < items_shown) {
+            idx = rand_number(0, total_items - 1);
+
+            /* Check if this index was already selected */
+            int already_shown = 0;
+            for (i = 0; i < shown_count; i++) {
+                if (shown_indices[i] == idx) {
+                    already_shown = 1;
+                    break;
+                }
+            }
+
+            if (!already_shown) {
+                shown_indices[shown_count++] = idx;
+            }
+        }
+
+        /* Display the selected items */
+        for (i = 0; i < items_shown; i++) {
+            int current_idx = 0;
+            for (obj = vict->carrying; obj; obj = obj->next_content) {
+                if (CAN_SEE_OBJ(ch, obj)) {
+                    if (current_idx == shown_indices[i]) {
+                        send_to_char(ch, "  ");
+                        show_obj_to_char(obj, ch, SHOW_OBJ_SHORT);
+                        break;
+                    }
+                    current_idx++;
+                }
+            }
+        }
+
+        free(shown_indices);
+
+        if (items_shown < total_items) {
+            send_to_char(ch, "\r\nVocê não consegue ver tudo que %s está carregando.\r\n",
+                         (GET_SEX(vict) == SEX_MALE) ? "ele" : ((GET_SEX(vict) == SEX_FEMALE) ? "ela" : "ele/ela"));
+        }
+    }
+
+    /* Small chance of being detected even on success (5% base) */
+    if (AWAKE(vict) && rand_number(1, 100) <= 5) {
+        act("$n parece estar olhando para você de forma estranha.", FALSE, ch, 0, vict, TO_VICT);
+    }
+
+    /* Reputation changes for successful peeking */
+    if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
+        int class_bonus = get_class_reputation_modifier(ch, CLASS_REP_STEALTH_ACTION, vict);
+        if (IS_EVIL(ch)) {
+            /* Evil characters gain small reputation for sneaky actions */
+            modify_player_reputation(ch, 1 + class_bonus);
+        }
+    }
+}
+
 ACMD(do_practice)
 {
     char arg[MAX_INPUT_LENGTH];

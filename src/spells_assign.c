@@ -21,6 +21,7 @@ ACMD(do_kick);
 ACMD(do_sneak);
 ACMD(do_track);
 ACMD(do_steal);
+ACMD(do_peek);
 ACMD(do_hide);
 ACMD(do_pick_lock);
 ACMD(do_whirlwind);
@@ -144,6 +145,9 @@ void set_spells_function()
 
     if ((spell = get_spell_by_vnum(SKILL_STEAL)))
         spell->function = do_steal;
+
+    if ((spell = get_spell_by_vnum(SKILL_PEEK)))
+        spell->function = do_peek;
 
     if ((spell = get_spell_by_vnum(SKILL_TRACK)))
         spell->function = do_track;
@@ -2803,6 +2807,22 @@ void create_spells_db()
     new_spell->effectiveness = strdup("100");
     new_spell->assign[0].class_num = CLASS_THIEF;
     new_spell->assign[0].level = 4;
+
+    spedit_save_internally(new_spell);
+
+    // SKILL_PEEK # 258
+    CREATE(new_spell, struct str_spells, 1);
+    spedit_init_new_spell(new_spell);
+
+    new_spell->vnum = SKILL_PEEK;
+    new_spell->status = available;
+    new_spell->name = strdup("peek");
+    new_spell->function = do_peek;
+    new_spell->type = SKILL;
+    new_spell->targ_flags = TAR_CHAR_ROOM;
+    new_spell->effectiveness = strdup("100");
+    new_spell->assign[0].class_num = CLASS_THIEF;
+    new_spell->assign[0].level = 5;
 
     spedit_save_internally(new_spell);
 

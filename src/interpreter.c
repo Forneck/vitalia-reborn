@@ -256,6 +256,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"peace", "pe", POS_DEAD, do_peace, LVL_BUILDER, 0, CMD_NOARG},
     {"pick", "pi", POS_STANDING, do_gen_door, 1, SCMD_PICK, CMD_TWOARG},
     {"practice", "pr", POS_RESTING, do_practice, 1, 0, CMD_ONEARG},
+    {"peek", "pee", POS_STANDING, do_cast, 1, SKILL_PEEK, CMD_ONEARG},
     {"page", "pag", POS_DEAD, do_page, 1, 0, CMD_NOARG},
     {"pardon", "pardon", POS_DEAD, do_wizutil, LVL_GOD, SCMD_PARDON, CMD_ONEARG},
     {"plist", "plist", POS_DEAD, do_plist, LVL_GOD, 0, CMD_NOARG},
