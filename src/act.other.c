@@ -448,30 +448,29 @@ ACMD(do_peek)
             }
         }
     } else {
-        /* Show only a portion of items */
-        int *shown_indices = (int *)malloc(sizeof(int) * items_shown);
+/* Show only a portion of items */
+/* Use a reasonable max size for stack allocation */
+#define MAX_PEEK_ITEMS 100
+        int shown_indices[MAX_PEEK_ITEMS];
+        int all_indices[MAX_PEEK_ITEMS];
         int i, idx, shown_count = 0;
 
-        /* Initialize shown indices array */
-        for (i = 0; i < items_shown; i++)
-            shown_indices[i] = -1;
+        /* Safety check */
+        if (total_items > MAX_PEEK_ITEMS)
+            total_items = MAX_PEEK_ITEMS;
 
-        /* Select random items to show */
-        while (shown_count < items_shown) {
-            idx = rand_number(0, total_items - 1);
+        /* Create array of all indices */
+        for (i = 0; i < total_items; i++)
+            all_indices[i] = i;
 
-            /* Check if this index was already selected */
-            int already_shown = 0;
-            for (i = 0; i < shown_count; i++) {
-                if (shown_indices[i] == idx) {
-                    already_shown = 1;
-                    break;
-                }
-            }
-
-            if (!already_shown) {
-                shown_indices[shown_count++] = idx;
-            }
+        /* Fisher-Yates shuffle to select random items */
+        for (i = 0; i < items_shown; i++) {
+            idx = rand_number(i, total_items - 1);
+            /* Swap */
+            int temp = all_indices[i];
+            all_indices[i] = all_indices[idx];
+            all_indices[idx] = temp;
+            shown_indices[i] = all_indices[i];
         }
 
         /* Display the selected items */
@@ -489,12 +488,10 @@ ACMD(do_peek)
             }
         }
 
-        free(shown_indices);
-
         if (items_shown < total_items) {
-            send_to_char(ch, "\r\nVocê não consegue ver tudo que %s está carregando.\r\n",
-                         (GET_SEX(vict) == SEX_MALE) ? "ele" : ((GET_SEX(vict) == SEX_FEMALE) ? "ela" : "ele/ela"));
+            send_to_char(ch, "\r\nVocê não consegue ver tudo que %s está carregando.\r\n", ELEA(vict));
         }
+#undef MAX_PEEK_ITEMS
     }
 
     /* Small chance of being detected even on success (5% base) */

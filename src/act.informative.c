@@ -52,10 +52,7 @@ static size_t print_object_location(int num, const obj_data *obj, const char_dat
                                     size_t buf_size, int recur);
 extern void look_at_sky(struct char_data *ch);
 /* Subcommands */
-/* For show_obj_to_char 'mode'. /-- arbitrary */
-#define SHOW_OBJ_LONG 0
-#define SHOW_OBJ_SHORT 1
-#define SHOW_OBJ_ACTION 2
+/* For show_obj_to_char 'mode'. /-- arbitrary - defined in act.h */
 
 void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
 {
