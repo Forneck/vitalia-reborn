@@ -625,12 +625,19 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
         do_tell(keeper, buf, cmd_tell, 0);
     }
     if (!IS_GOD(ch) && obj && !OBJ_FLAGGED(obj, ITEM_QUEST)) {
-        increase_gold(keeper, goldamt);
-        if (SHOP_USES_BANK(shop_nr))
-            if (GET_GOLD(keeper) > MAX_OUTSIDE_BANK) {
-                SHOP_BANK(shop_nr) += (GET_GOLD(keeper) - MAX_OUTSIDE_BANK);
-                GET_GOLD(keeper) = MAX_OUTSIDE_BANK;
+        /* Handle bank deposits BEFORE increase_gold to prevent gold loss at MAX_GOLD cap */
+        if (SHOP_USES_BANK(shop_nr)) {
+            int keeper_gold = GET_GOLD(keeper);
+            int total_would_have = keeper_gold + goldamt;
+
+            /* If total would exceed MAX_OUTSIDE_BANK, deposit excess to bank first */
+            if (total_would_have > MAX_OUTSIDE_BANK) {
+                int to_bank = total_would_have - MAX_OUTSIDE_BANK;
+                SHOP_BANK(shop_nr) += to_bank;
+                goldamt -= to_bank; /* Only add the remainder to keeper's gold */
             }
+        }
+        increase_gold(keeper, goldamt);
     }
     strlcpy(tempstr, times_message(ch->carrying, 0, bought), sizeof(tempstr));
 
