@@ -189,12 +189,15 @@ int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
                 "SYSERR: spell vnum %d not assigned to class: %d"
                 ", passed to mag_manacost.",
                 spellnum, GET_CLASS(ch));
-            return 100;
-        } else
+            /* Use default mana cost of 100 but still apply voice cast modifiers */
+            mana = 100;
+        } else {
             return 0;
+        }
+    } else {
+        mana =
+            MAX(5, formula_interpreter(ch, tch, spellnum, TRUE, spell->assign[num].num_mana, GET_LEVEL(ch), &rts_code));
     }
-
-    mana = MAX(5, formula_interpreter(ch, tch, spellnum, TRUE, spell->assign[num].num_mana, GET_LEVEL(ch), &rts_code));
 
     /* Apply spell modifier to mana cost */
     if (spell_modifier_diminish) {
