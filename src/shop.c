@@ -481,11 +481,19 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
     return MAX(1, price);                 /* Ensure minimum price of 1 gold */
 }
 
+/* Check if keeper can afford to buy an item (includes bank funds if USES_BANK) */
+static int can_keeper_afford(struct char_data *keeper, int shop_nr, int amount)
+{
+    if (IS_SET(SHOP_BITVECTOR(shop_nr), HAS_UNLIMITED_CASH))
+        return TRUE;
+    return (GET_GOLD(keeper) + SHOP_BANK(shop_nr) >= amount);
+}
+
 void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr)
 {
     char tempstr[MAX_INPUT_LENGTH - 10], tempbuf[MAX_INPUT_LENGTH];
     struct obj_data *obj, *last_obj = NULL;
-    int goldamt = 0, buynum, bought = 0;
+    int goldamt = 0, buynum, bought = 0, amount_paid = 0;
 
     if (!is_ok(keeper, ch, shop_nr))
         return;
@@ -624,6 +632,10 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
             snprintf(buf, sizeof(buf), "%s Algo deu errado e voce so' recebeu %d.", GET_NAME(ch), bought);
         do_tell(keeper, buf, cmd_tell, 0);
     }
+
+    /* Save the amount player paid before modifying goldamt for keeper's bank */
+    amount_paid = goldamt;
+
     if (!IS_GOD(ch) && obj && !OBJ_FLAGGED(obj, ITEM_QUEST)) {
         /* Handle bank deposits BEFORE increase_gold to prevent gold loss at MAX_GOLD cap */
         if (SHOP_USES_BANK(shop_nr)) {
@@ -645,9 +657,9 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
     act(tempbuf, FALSE, ch, obj, 0, TO_ROOM);
 
     if (obj && OBJ_FLAGGED(obj, ITEM_QUEST))
-        snprintf(tempbuf, sizeof(tempbuf), "%s Isto custou %d pontos de aventura.", GET_NAME(ch), goldamt);
+        snprintf(tempbuf, sizeof(tempbuf), "%s Isto custou %d pontos de aventura.", GET_NAME(ch), amount_paid);
     else
-        snprintf(tempbuf, sizeof(tempbuf), shop_index[shop_nr].message_buy, GET_NAME(ch), goldamt);
+        snprintf(tempbuf, sizeof(tempbuf), shop_index[shop_nr].message_buy, GET_NAME(ch), amount_paid);
 
     do_tell(keeper, tempbuf, cmd_tell, 0);
 
@@ -797,19 +809,19 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
     if (!(obj = get_selling_obj(ch, name, keeper, shop_nr, TRUE)))
         return;
 
-    if (!IS_SET(SHOP_BITVECTOR(shop_nr), HAS_UNLIMITED_CASH) &&
-        GET_GOLD(keeper) + SHOP_BANK(shop_nr) < sell_price(obj, shop_nr, keeper, ch)) {
+    if (!can_keeper_afford(keeper, shop_nr, sell_price(obj, shop_nr, keeper, ch))) {
         char buf[MAX_INPUT_LENGTH];
 
         snprintf(buf, sizeof(buf), shop_index[shop_nr].missing_cash1, GET_NAME(ch));
         do_tell(keeper, buf, cmd_tell, 0);
         return;
     }
-    while (obj &&
-           (IS_SET(SHOP_BITVECTOR(shop_nr), HAS_UNLIMITED_CASH) ||
-            GET_GOLD(keeper) + SHOP_BANK(shop_nr) >= sell_price(obj, shop_nr, keeper, ch)) &&
-           sold < sellnum) {
+    while (obj && sold < sellnum) {
         int charged = sell_price(obj, shop_nr, keeper, ch);
+
+        /* Check affordability for each item since keeper's funds decrease with each purchase */
+        if (!can_keeper_afford(keeper, shop_nr, charged))
+            break;
 
         goldamt += charged;
         if (!IS_SET(SHOP_BITVECTOR(shop_nr), HAS_UNLIMITED_CASH)) {
@@ -851,7 +863,7 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
 
         if (!obj)
             snprintf(buf, sizeof(buf), "%s Voce so' tem %d disto.", GET_NAME(ch), sold);
-        else if (GET_GOLD(keeper) + SHOP_BANK(shop_nr) < sell_price(obj, shop_nr, keeper, ch))
+        else if (!can_keeper_afford(keeper, shop_nr, sell_price(obj, shop_nr, keeper, ch)))
             snprintf(buf, sizeof(buf), "%s Eu so' posso pagar por %d disto.", GET_NAME(ch), sold);
         else
             snprintf(buf, sizeof(buf), "%s Algo esquisito me fez comprar %d.", GET_NAME(ch), sold);
@@ -883,6 +895,7 @@ static void shopping_value(char *arg, struct char_data *ch, struct char_data *ke
 {
     char buf[MAX_STRING_LENGTH], name[MAX_INPUT_LENGTH];
     struct obj_data *obj;
+    int price;
 
     if (!is_ok(keeper, ch, shop_nr))
         return;
@@ -896,8 +909,14 @@ static void shopping_value(char *arg, struct char_data *ch, struct char_data *ke
     if (!(obj = get_selling_obj(ch, name, keeper, shop_nr, TRUE)))
         return;
 
-    snprintf(buf, sizeof(buf), "%s Posso te dar %d moedas por isto!", GET_NAME(ch),
-             sell_price(obj, shop_nr, keeper, ch));
+    price = sell_price(obj, shop_nr, keeper, ch);
+
+    /* Check if keeper can afford it (including bank funds if applicable) */
+    if (!can_keeper_afford(keeper, shop_nr, price)) {
+        snprintf(buf, sizeof(buf), "%s Eu gostaria de comprar isto, mas nao tenho fundos suficientes.", GET_NAME(ch));
+    } else {
+        snprintf(buf, sizeof(buf), "%s Posso te dar %d moedas por isto!", GET_NAME(ch), price);
+    }
     do_tell(keeper, buf, cmd_tell, 0);
 }
 
