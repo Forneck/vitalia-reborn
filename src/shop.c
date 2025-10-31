@@ -460,8 +460,8 @@ static struct obj_data *get_purchase_obj(struct char_data *ch, char *arg, struct
    charisma, because on the flip side they'd get 11% inflation by having a 3. */
 static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper, struct char_data *buyer)
 {
-    int price =
-        (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70));
+    float price_float = GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70);
+    int price = (int)(price_float + 0.5); /* Round to nearest integer */
     return MAX(1, price); /* Ensure minimum price of 1 gold */
 }
 
@@ -475,7 +475,8 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
     if (sell_cost_modifier > buy_cost_modifier)
         sell_cost_modifier = buy_cost_modifier;
 
-    int price = (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
+    float price_float = GET_OBJ_COST(obj) * sell_cost_modifier;
+    int price = (int)(price_float + 0.5); /* Round to nearest integer */
     return MAX(1, price); /* Ensure minimum price of 1 gold */
 }
 
