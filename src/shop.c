@@ -460,9 +460,10 @@ static struct obj_data *get_purchase_obj(struct char_data *ch, char *arg, struct
    charisma, because on the flip side they'd get 11% inflation by having a 3. */
 static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper, struct char_data *buyer)
 {
-    int price =
-        (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70));
-    return MAX(1, price); /* Ensure minimum price of 1 gold */
+    float price_float =
+        GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70);
+    int price = (int)(price_float + 0.5); /* Round to nearest integer */
+    return MAX(1, price);                 /* Ensure minimum price of 1 gold */
 }
 
 /* When the shopkeeper is buying, we reverse the discount. Also make sure we
@@ -475,8 +476,9 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
     if (sell_cost_modifier > buy_cost_modifier)
         sell_cost_modifier = buy_cost_modifier;
 
-    int price = (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
-    return MAX(1, price); /* Ensure minimum price of 1 gold */
+    float price_float = GET_OBJ_COST(obj) * sell_cost_modifier;
+    int price = (int)(price_float + 0.5); /* Round to nearest integer */
+    return MAX(1, price);                 /* Ensure minimum price of 1 gold */
 }
 
 void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr)
@@ -623,12 +625,19 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
         do_tell(keeper, buf, cmd_tell, 0);
     }
     if (!IS_GOD(ch) && obj && !OBJ_FLAGGED(obj, ITEM_QUEST)) {
-        increase_gold(keeper, goldamt);
-        if (SHOP_USES_BANK(shop_nr))
-            if (GET_GOLD(keeper) > MAX_OUTSIDE_BANK) {
-                SHOP_BANK(shop_nr) += (GET_GOLD(keeper) - MAX_OUTSIDE_BANK);
-                GET_GOLD(keeper) = MAX_OUTSIDE_BANK;
+        /* Handle bank deposits BEFORE increase_gold to prevent gold loss at MAX_GOLD cap */
+        if (SHOP_USES_BANK(shop_nr)) {
+            int keeper_gold = GET_GOLD(keeper);
+            int total_would_have = keeper_gold + goldamt;
+
+            /* If total would exceed MAX_OUTSIDE_BANK, deposit excess to bank first */
+            if (total_would_have > MAX_OUTSIDE_BANK) {
+                int to_bank = total_would_have - MAX_OUTSIDE_BANK;
+                SHOP_BANK(shop_nr) += to_bank;
+                goldamt -= to_bank; /* Only add the remainder to keeper's gold */
             }
+        }
+        increase_gold(keeper, goldamt);
     }
     strlcpy(tempstr, times_message(ch->carrying, 0, bought), sizeof(tempstr));
 
@@ -803,8 +812,32 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
         int charged = sell_price(obj, shop_nr, keeper, ch);
 
         goldamt += charged;
-        if (!IS_SET(SHOP_BITVECTOR(shop_nr), HAS_UNLIMITED_CASH))
-            decrease_gold(keeper, charged);
+        if (!IS_SET(SHOP_BITVECTOR(shop_nr), HAS_UNLIMITED_CASH)) {
+            /* Pay from keeper's gold first, then from bank if needed */
+            int keeper_gold = GET_GOLD(keeper);
+            if (keeper_gold >= charged) {
+                /* Keeper has enough gold on hand */
+                decrease_gold(keeper, charged);
+            } else {
+                /* Need to withdraw from bank to cover the difference */
+                int from_bank = charged - keeper_gold;
+                /* Defensive check: ensure bank has enough
+                 * The loop condition (line 803) should guarantee this, but we validate defensively
+                 * to handle potential race conditions or data corruption */
+                if (SHOP_BANK(shop_nr) >= from_bank) {
+                    decrease_gold(keeper, keeper_gold); /* Take all keeper's gold */
+                    SHOP_BANK(shop_nr) -= from_bank;    /* Withdraw rest from bank */
+                } else {
+                    /* Safety: insufficient funds despite loop affordability check
+                     * This could happen due to a race condition or data corruption */
+                    mudlog(BRF, LVL_GOD, TRUE,
+                           "SYSERR: Shop %d insufficient funds. Keeper gold: %d, Bank: %d, Charged: %d",
+                           SHOP_NUM(shop_nr), keeper_gold, SHOP_BANK(shop_nr), charged);
+                    goldamt -= charged; /* Revert the charge we added */
+                    break;              /* Stop the transaction */
+                }
+            }
+        }
 
         sold++;
         obj_from_char(obj);
