@@ -1379,14 +1379,15 @@ ACMD(do_happyhour)
                      "       %shappyhour qp <num>     %s- set qp percentage gain\r\n"
                      "       %shappyhour exp <num>    %s- set exp percentage gain\r\n"
                      "       %shappyhour gold <num>   %s- set gold percentage gain\r\n"
-                     "       \tyhappyhour default      \tw- sets a default setting for happyhour\r\n\r\n"
+                     "       %shappyhour default      %s- sets a default setting for happyhour\r\n\r\n"
                      "Configure the happyhour settings and start a happyhour.\r\n"
                      "Currently 1 hour IRL = %d ticks\r\n"
                      "If no number is specified, 0 (off) is assumed.\r\nThe command \tyhappyhour time\tn will "
                      "therefore stop the happyhour timer.\r\n",
                      CCYEL(ch, C_NRM), CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), CCNRM(ch, C_NRM), CCYEL(ch, C_NRM),
                      CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
-                     CCYEL(ch, C_NRM), CCNRM(ch, C_NRM), (3600 / SECS_PER_MUD_HOUR));
+                     CCYEL(ch, C_NRM), CCNRM(ch, C_NRM), CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
+                     (3600 / SECS_PER_MUD_HOUR));
     }
 }
 

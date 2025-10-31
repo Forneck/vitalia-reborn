@@ -678,7 +678,7 @@ ACMD(do_alias)
         if ((a = GET_ALIASES(ch)) == NULL)
             send_to_char(ch, "Não há atalhos definidos.\r\n");
         else {
-            send_to_char(ch, "\tWAtalhos definidos:\r\n");
+            send_to_char(ch, "\tWAtalhos definidos:\tn\r\n");
             while (a != NULL) {
                 send_to_char(ch, "\tc%-15s\tn %s\tn\r\n", a->alias, a->replacement);
                 a = a->next;
