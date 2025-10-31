@@ -1117,6 +1117,45 @@ void mobile_activity(void)
                 continue;
         }
 
+        /* Charmed mobs that are not in a group should follow their master */
+        if (AFF_FLAGGED(ch, AFF_CHARM) && ch->master && !GROUP(ch)) {
+            /* Safety check: Validate master pointer and room */
+            if (IN_ROOM(ch->master) != NOWHERE && IN_ROOM(ch->master) >= 0 && IN_ROOM(ch->master) <= top_of_world) {
+                /* Only follow if in different room from master */
+                if (IN_ROOM(ch) != IN_ROOM(ch->master)) {
+                    int direction = find_first_step(IN_ROOM(ch), IN_ROOM(ch->master));
+                    if (direction >= 0 && direction < DIR_COUNT) {
+                        room_rnum to_room;
+                        /* Safety check: Validate exit before accessing */
+                        if (EXIT(ch, direction) && (to_room = EXIT(ch, direction)->to_room) != NOWHERE &&
+                            to_room >= 0 && to_room <= top_of_world) {
+                            /* Handle doors if necessary */
+                            if (IS_SET(EXIT(ch, direction)->exit_info, EX_ISDOOR) &&
+                                IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
+                                if (!IS_SET(EXIT(ch, direction)->exit_info, EX_DNOPEN)) {
+                                    if (IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED) &&
+                                        has_key(ch, EXIT(ch, direction)->key)) {
+                                        do_doorcmd(ch, NULL, direction, SCMD_UNLOCK);
+                                    }
+                                    if (!IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED)) {
+                                        do_doorcmd(ch, NULL, direction, SCMD_OPEN);
+                                    }
+                                }
+                            }
+
+                            /* Move toward master if path is clear */
+                            if (!IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
+                                perform_move(ch, direction, 1);
+                                /* Safety check: perform_move can trigger death traps */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    continue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         /* Try stealth following (for non-grouped following behavior) */
         mob_try_stealth_follow(ch);
         /* Safety check: mob_try_stealth_follow calls perform_move which can trigger death traps */
