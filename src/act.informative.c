@@ -411,15 +411,15 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
     }
 
     if (AFF_FLAGGED(i, AFF_INVISIBLE))
-        send_to_char(ch, "%s (invisível)", CCWHT(ch, C_NRM));
+        send_to_char(ch, "%s (invisível)%s", CCWHT(ch, C_NRM), CCNRM(ch, C_NRM));
     if (AFF_FLAGGED(i, AFF_HIDE))
-        send_to_char(ch, "%s (escondid%c)", CCWHT(ch, C_NRM), art);
+        send_to_char(ch, "%s (escondid%c)%s", CCWHT(ch, C_NRM), art, CCNRM(ch, C_NRM));
     if (!IS_NPC(i) && !i->desc)
         send_to_char(ch, " %s(%slinkless%s)%s", CCGRN(ch, C_NRM), CBWHT(ch, C_CMP), CCGRN(ch, C_CMP), CCNRM(ch, C_NRM));
     if (!IS_NPC(i) && PLR_FLAGGED(i, PLR_WRITING))
-        send_to_char(ch, "%s (escrevendo)", CCBLU(ch, C_NRM));
+        send_to_char(ch, "%s (escrevendo)%s", CCBLU(ch, C_NRM), CCNRM(ch, C_NRM));
     if (!IS_NPC(i) && PRF_FLAGGED(i, PRF_BUILDWALK))
-        send_to_char(ch, "%s (construindo)", CBRED(ch, C_NRM));
+        send_to_char(ch, "%s (construindo)%s", CBRED(ch, C_NRM), CCNRM(ch, C_NRM));
     if (!IS_NPC(i) && PRF_FLAGGED(i, PRF_AFK))
         send_to_char(ch, "%s (%saway%s)%s", CCGRN(ch, C_NRM), CCCYN(ch, C_CMP), CCGRN(ch, C_CMP), CCNRM(ch, C_NRM));
 

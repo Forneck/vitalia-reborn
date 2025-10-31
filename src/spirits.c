@@ -212,7 +212,7 @@ void raise_online(struct char_data *ch, struct char_data *raiser, struct obj_dat
     }
 
     act("@GUma estranha sensação percorre seu espírito, que é puxado por uma força\r\n"
-        "divina, carregando-$r por uma longa distância.",
+        "divina, carregando-$r por uma longa distância.@n",
         FALSE, ch, 0, 0, TO_CHAR);
 
     REMOVE_BIT_AR(PLR_FLAGS(ch), PLR_GHOST);
