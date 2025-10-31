@@ -1117,6 +1117,24 @@ void mobile_activity(void)
                 continue;
         }
 
+        /* Charmed mobs that are not in a group should follow their master */
+        if (AFF_FLAGGED(ch, AFF_CHARM) && ch->master && !GROUP(ch)) {
+            /* Safety check: Validate master pointer and room */
+            if (IN_ROOM(ch->master) != NOWHERE && IN_ROOM(ch->master) >= 0 && IN_ROOM(ch->master) <= top_of_world) {
+                /* Only follow if in different room from master */
+                if (IN_ROOM(ch) != IN_ROOM(ch->master)) {
+                    int direction = find_first_step(IN_ROOM(ch), IN_ROOM(ch->master));
+                    if (direction >= 0 && direction < DIR_COUNT) {
+                        /* Try to move toward master - perform_move will handle doors/obstacles */
+                        perform_move(ch, direction, 1);
+                        /* Safety check: perform_move can trigger death traps */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                    }
+                }
+            }
+        }
+
         /* Try stealth following (for non-grouped following behavior) */
         mob_try_stealth_follow(ch);
         /* Safety check: mob_try_stealth_follow calls perform_move which can trigger death traps */
@@ -2614,6 +2632,7 @@ bool mob_follow_leader(struct char_data *ch)
                     }
                 }
 
+                /* Try to move - perform_move will handle doors/obstacles */
                 perform_move(ch, direction, 1);
                 return TRUE; /* Ação de seguir foi executada. */
             }
