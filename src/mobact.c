@@ -1125,32 +1125,11 @@ void mobile_activity(void)
                 if (IN_ROOM(ch) != IN_ROOM(ch->master)) {
                     int direction = find_first_step(IN_ROOM(ch), IN_ROOM(ch->master));
                     if (direction >= 0 && direction < DIR_COUNT) {
-                        room_rnum to_room;
-                        /* Safety check: Validate exit before accessing */
-                        if (EXIT(ch, direction) && (to_room = EXIT(ch, direction)->to_room) != NOWHERE &&
-                            to_room >= 0 && to_room <= top_of_world) {
-                            /* Handle doors if necessary */
-                            if (IS_SET(EXIT(ch, direction)->exit_info, EX_ISDOOR) &&
-                                IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
-                                if (!IS_SET(EXIT(ch, direction)->exit_info, EX_DNOPEN)) {
-                                    if (IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED) &&
-                                        has_key(ch, EXIT(ch, direction)->key)) {
-                                        do_doorcmd(ch, NULL, direction, SCMD_UNLOCK);
-                                    }
-                                    if (!IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED)) {
-                                        do_doorcmd(ch, NULL, direction, SCMD_OPEN);
-                                    }
-                                }
-                            }
-
-                            /* Move toward master if path is clear */
-                            if (!IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
-                                perform_move(ch, direction, 1);
-                                /* Safety check: perform_move can trigger death traps */
-                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                                    continue;
-                            }
-                        }
+                        /* Try to move toward master - perform_move will handle doors/obstacles */
+                        perform_move(ch, direction, 1);
+                        /* Safety check: perform_move can trigger death traps */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
                     }
                 }
             }
@@ -2653,25 +2632,9 @@ bool mob_follow_leader(struct char_data *ch)
                     }
                 }
 
-                /* Handle doors if necessary - charmed mobs should open/unlock doors to follow master */
-                if (IS_SET(EXIT(ch, direction)->exit_info, EX_ISDOOR) &&
-                    IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
-                    if (!IS_SET(EXIT(ch, direction)->exit_info, EX_DNOPEN)) {
-                        if (IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED) &&
-                            has_key(ch, EXIT(ch, direction)->key)) {
-                            do_doorcmd(ch, NULL, direction, SCMD_UNLOCK);
-                        }
-                        if (!IS_SET(EXIT(ch, direction)->exit_info, EX_LOCKED)) {
-                            do_doorcmd(ch, NULL, direction, SCMD_OPEN);
-                        }
-                    }
-                }
-
-                /* Only move if path is clear */
-                if (!IS_SET(EXIT(ch, direction)->exit_info, EX_CLOSED)) {
-                    perform_move(ch, direction, 1);
-                    return TRUE; /* Ação de seguir foi executada. */
-                }
+                /* Try to move - perform_move will handle doors/obstacles */
+                perform_move(ch, direction, 1);
+                return TRUE; /* Ação de seguir foi executada. */
             }
         }
     }
