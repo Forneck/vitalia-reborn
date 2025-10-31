@@ -1725,11 +1725,10 @@ int get_nighthammer(struct char_data *ch, bool real)
     /* Extra bonus during deep night (SUN_DARK) */
     if (weather_info.sunlight == SUN_DARK)
         mod++;
-    /* Weather conditions that block sunlight provide additional bonus */
-    if (weather_info.sky == SKY_RAINING || weather_info.sky == SKY_LIGHTNING || weather_info.sky == SKY_SNOWING)
+    /* Weather conditions that obscure moonlight provide additional bonus */
+    if (weather_info.sky == SKY_CLOUDY || weather_info.sky == SKY_RAINING || weather_info.sky == SKY_LIGHTNING ||
+        weather_info.sky == SKY_SNOWING)
         mod++;
-    else if (weather_info.sky == SKY_CLOUDY)
-        mod++; /* Clouds also help */
 
     mod += ((GET_LEVEL(ch) - NIGHTHAMMER_LVL) / 8);
     mod = MIN(mod, 8);
