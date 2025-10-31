@@ -460,6 +460,10 @@ static struct obj_data *get_purchase_obj(struct char_data *ch, char *arg, struct
    charisma, because on the flip side they'd get 11% inflation by having a 3. */
 static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper, struct char_data *buyer)
 {
+    /* Refuse items with no base value */
+    if (GET_OBJ_COST(obj) < 1)
+        return 0;
+
     float price_float =
         GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70);
     int price = (int)(price_float + 0.5); /* Round to nearest integer */
@@ -470,6 +474,10 @@ static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper
    don't buy for more than we sell for, to prevent infinite money-making. */
 static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keeper, struct char_data *seller)
 {
+    /* Refuse items with no base value */
+    if (GET_OBJ_COST(obj) < 1)
+        return 0;
+
     float sell_cost_modifier = SHOP_SELLPROFIT(shop_nr) * (1 - (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
     float buy_cost_modifier = SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
 
@@ -526,7 +534,15 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
             return;
         }
     } else { /* has the player got enough gold? */
-        if (buy_price(obj, shop_nr, keeper, ch) > GET_GOLD(ch) && !IS_GOD(ch)) {
+        int item_price = buy_price(obj, shop_nr, keeper, ch);
+        if (item_price < 1) {
+            /* Item has no valid price - refuse transaction */
+            char actbuf[MAX_INPUT_LENGTH];
+            snprintf(actbuf, sizeof(actbuf), shop_index[shop_nr].no_such_item1, GET_NAME(ch));
+            do_tell(keeper, actbuf, cmd_tell, 0);
+            return;
+        }
+        if (item_price > GET_GOLD(ch) && !IS_GOD(ch)) {
             char actbuf[MAX_INPUT_LENGTH];
 
             snprintf(actbuf, sizeof(actbuf), shop_index[shop_nr].missing_cash2, GET_NAME(ch));
@@ -809,7 +825,17 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
     if (!(obj = get_selling_obj(ch, name, keeper, shop_nr, TRUE)))
         return;
 
-    if (!can_keeper_afford(keeper, shop_nr, sell_price(obj, shop_nr, keeper, ch))) {
+    /* Check if the item has a valid sell price */
+    int item_sell_price = sell_price(obj, shop_nr, keeper, ch);
+    if (item_sell_price < 1) {
+        /* Item has no valid price - refuse transaction */
+        char buf[MAX_INPUT_LENGTH];
+        snprintf(buf, sizeof(buf), shop_index[shop_nr].do_not_buy, GET_NAME(ch));
+        do_tell(keeper, buf, cmd_tell, 0);
+        return;
+    }
+
+    if (!can_keeper_afford(keeper, shop_nr, item_sell_price)) {
         char buf[MAX_INPUT_LENGTH];
 
         snprintf(buf, sizeof(buf), shop_index[shop_nr].missing_cash1, GET_NAME(ch));
@@ -911,8 +937,12 @@ static void shopping_value(char *arg, struct char_data *ch, struct char_data *ke
 
     price = sell_price(obj, shop_nr, keeper, ch);
 
+    if (price < 1) {
+        /* Item has no value */
+        snprintf(buf, sizeof(buf), shop_index[shop_nr].do_not_buy, GET_NAME(ch));
+    }
     /* Check if keeper can afford it (including bank funds if applicable) */
-    if (!can_keeper_afford(keeper, shop_nr, price)) {
+    else if (!can_keeper_afford(keeper, shop_nr, price)) {
         snprintf(buf, sizeof(buf), "%s Eu gostaria de comprar isto, mas nao tenho fundos suficientes.", GET_NAME(ch));
     } else {
         snprintf(buf, sizeof(buf), "%s Posso te dar %d moedas por isto!", GET_NAME(ch), price);
