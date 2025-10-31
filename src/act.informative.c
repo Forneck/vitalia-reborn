@@ -150,54 +150,57 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
     }
 end:
 
-    show_obj_modifiers(obj, ch, 3);
+    show_obj_modifiers(obj, ch, mode);
     send_to_char(ch, "\r\n");
 }
 
 static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int mode)
 {
-    if (mode == 0) {
-        if (OBJ_FLAGGED(obj, ITEM_INVISIBLE))
-            send_to_char(ch, " (invisivel)");
-
-        if (OBJ_FLAGGED(obj, ITEM_BLESS) && AFF_FLAGGED(ch, AFF_DETECT_ALIGN))
-            send_to_char(ch, " ..Isso brilha azul!");
-
-        if (OBJ_FLAGGED(obj, ITEM_MAGIC) && AFF_FLAGGED(ch, AFF_DETECT_MAGIC))
-            send_to_char(ch, " ..Isso brilha amarelo!");
-
-        if (OBJ_FLAGGED(obj, ITEM_GLOW))
-            send_to_char(ch, " ..Isso tem uma aura brilhante!");
-
-        if (OBJ_FLAGGED(obj, ITEM_HUM))
-            send_to_char(ch, " ..Isso emite uma fraca melodia!");
-    } else if (mode == 3) {
+    
+    if (mode == SHOW_OBJ_SHORT )
+    {
         bool has_aura = FALSE;
 
         if (OBJ_FLAGGED(obj, ITEM_INVISIBLE)) {
-            send_to_char(ch, " (invis)");
+            send_to_char(ch, " (invis)\tW");
             has_aura = TRUE;
         }
 
         if (OBJ_FLAGGED(obj, ITEM_BLESS) && AFF_FLAGGED(ch, AFF_DETECT_ALIGN)) {
-            send_to_char(ch, "\tC(aura azul)\tn");
+            send_to_char(ch, "\tC (aura azul)\tW");
             has_aura = TRUE;
         }
 
         if (OBJ_FLAGGED(obj, ITEM_MAGIC) && AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
-            send_to_char(ch, "\tC(aura amarela)\tn");
+            send_to_char(ch, "\tC (aura amarela)\tW");
             has_aura = TRUE;
         }
 
         if (OBJ_FLAGGED(obj, ITEM_GLOW)) {
-            send_to_char(ch, "\tC(aura brilhante)\tn");
+            send_to_char(ch, "\tC (aura brilhante)\tW");
             has_aura = TRUE;
         }
 
         if (OBJ_FLAGGED(obj, ITEM_HUM)) {
-            send_to_char(ch, "\tC(zunindo)\tn");
+            send_to_char(ch, "\tC (zunindo)\tW");
             has_aura = TRUE;
         }
+    }else
+    {
+        if (OBJ_FLAGGED(obj, ITEM_INVISIBLE))
+            send_to_char(ch, " \tw(invisivel)\tn");
+
+        if (OBJ_FLAGGED(obj, ITEM_BLESS) && AFF_FLAGGED(ch, AFF_DETECT_ALIGN))
+            send_to_char(ch, " \tn..Isso brilha azul!\tn");
+
+        if (OBJ_FLAGGED(obj, ITEM_MAGIC) && AFF_FLAGGED(ch, AFF_DETECT_MAGIC))
+            send_to_char(ch, " \tn..Isso brilha amarelo!\tn");
+
+        if (OBJ_FLAGGED(obj, ITEM_GLOW))
+            send_to_char(ch, " \tn..Isso tem uma aura brilhante!\tn");
+
+        if (OBJ_FLAGGED(obj, ITEM_HUM))
+            send_to_char(ch, " \tn..Isso emite uma fraca melodia!\tn");
     }
 }
 
@@ -319,7 +322,7 @@ static void look_at_char(struct char_data *i, struct char_data *ch)
         act("$n está usando:", FALSE, i, 0, ch, TO_VICT);
         for (j = 0; j < NUM_WEARS; j++)
             if (GET_EQ(i, j) && CAN_SEE_OBJ(ch, GET_EQ(i, j))) {
-                send_to_char(ch, "%s", wear_where[j]);
+                send_to_char(ch, "\tW%s\tn", wear_where[j]);
                 show_obj_to_char(GET_EQ(i, j), ch, SHOW_OBJ_SHORT);
             }
     }
@@ -408,7 +411,7 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
     }
 
     if (AFF_FLAGGED(i, AFF_INVISIBLE))
-        send_to_char(ch, "%s (invisível)%s", CCWHT(ch, C_NRM), CCNRM(ch, C_NRM));
+        send_to_char(ch, "%s (invisível)\ty", CCWHT(ch, C_NRM));
     if (AFF_FLAGGED(i, AFF_HIDE))
         send_to_char(ch, "%s (escondid%c)%s", CCWHT(ch, C_NRM), art, CCNRM(ch, C_NRM));
     if (!IS_NPC(i) && !i->desc)
