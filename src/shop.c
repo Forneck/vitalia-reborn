@@ -455,6 +455,7 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
     return (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
 }
 
+/* The Player is Buying and the shopkeeper is selling the object */
 void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr)
 {
     char tempstr[MAX_INPUT_LENGTH - 10], tempbuf[MAX_INPUT_LENGTH];
@@ -728,6 +729,7 @@ static void sort_keeper_objs(struct char_data *keeper, int shop_nr)
     }
 }
 
+/* The Player is sellin and the shopkeeper is buying the object */
 void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, int shop_nr)
 {
     char tempstr[MAX_INPUT_LENGTH - 10], name[MAX_INPUT_LENGTH], tempbuf[MAX_INPUT_LENGTH];   // -
