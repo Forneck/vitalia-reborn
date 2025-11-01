@@ -439,24 +439,27 @@ static struct obj_data *get_purchase_obj(struct char_data *ch, char *arg, struct
    charisma, because on the flip side they'd get 11% inflation by having a 3. */
 static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper, struct char_data *buyer)
 {
-    return (int)(GET_OBJ_COST(obj) * SHOP_SELLPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70));
+    return (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70));
 }
 
 /* When the shopkeeper is buying, we reverse the discount. Also make sure we
    don't buy for more than we sell for, to prevent infinite money-making. */
 static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keeper, struct char_data *seller)
 {
-    float sell_cost_modifier = SHOP_BUYPROFIT(shop_nr) * (1 - (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
-    float buy_cost_modifier = SHOP_SELLPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
-
-    /* Ensure sell_cost_modifier doesn't go below a reasonable minimum (10% of base BUYPROFIT) */
-    if (sell_cost_modifier < SHOP_BUYPROFIT(shop_nr) * 0.1)
-        sell_cost_modifier = SHOP_BUYPROFIT(shop_nr) * 0.1;
+    float sell_cost_modifier = SHOP_SELLPROFIT(shop_nr) * (1 - (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
+    float buy_cost_modifier = SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
+    int price;
 
     if (sell_cost_modifier > buy_cost_modifier)
         sell_cost_modifier = buy_cost_modifier;
 
-    return (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
+    price = (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
+
+    /* Ensure we return at least 1 gold for items with non-zero cost to prevent truncation to 0 */
+    if (price < 1 && GET_OBJ_COST(obj) > 0)
+        price = 1;
+
+    return price;
 }
 
 /* The Player is Buying and the shopkeeper is selling the object */
