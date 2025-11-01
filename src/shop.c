@@ -450,6 +450,10 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
     float buy_cost_modifier = SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
     int price;
 
+    /* Ensure sell_cost_modifier doesn't go to 0 or negative */
+    if (sell_cost_modifier < 0.01)
+        sell_cost_modifier = 0.01;
+
     if (sell_cost_modifier > buy_cost_modifier)
         sell_cost_modifier = buy_cost_modifier;
 
