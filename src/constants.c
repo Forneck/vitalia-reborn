@@ -113,11 +113,11 @@ const char *action_bits[] = {"SPEC",      "SENTINEL", "SCAVENGER", "NO_POISON", 
  * @pre Must be in the same order as the defines.
  * Must end array with a single newline. */
 const char *preference_bits[] = {
-    "BRIEF",     "COMPACT",   "NO_SHOUT", "NO_TELL",    "D_HP",    "D_MANA",  "D_MOVE",   "AUTOEX",     "NO_HASS",
-    "QUEST",     "SUMN",      "NO_REP",   "LIGHT",      "C1",      "C2",      "NO_WIZ",   "L1",         "L2",
-    "NO_AUC",    "NO_GOS",    "NO_GTZ",   "RMFLG",      "D_AUTO",  "CLS",     "BLDWLK",   "AFK",        "AUTOLOOT",
-    "AUTOGOLD",  "AUTOSPLIT", "AUTOSAC",  "AUTOASSIST", "AUTOMAP", "AUTOKEY", "AUTODOOR", "ZONERESETS", "HITBAR",
-    "AUTOTITLE", "NO_CLAN",   "MCCP",     "AUTOSIZE",   "VERBOSE", "\n"};
+    "BRIEF",     "COMPACT",   "NO_SHOUT", "NO_TELL",    "D_HP",    "D_MANA",     "D_MOVE",   "AUTOEX",     "NO_HASS",
+    "QUEST",     "SUMN",      "NO_REP",   "LIGHT",      "C1",      "C2",         "NO_WIZ",   "L1",         "L2",
+    "NO_AUC",    "NO_GOS",    "NO_GTZ",   "RMFLG",      "D_AUTO",  "CLS",        "BLDWLK",   "AFK",        "AUTOLOOT",
+    "AUTOGOLD",  "AUTOSPLIT", "AUTOSAC",  "AUTOASSIST", "AUTOMAP", "AUTOKEY",    "AUTODOOR", "ZONERESETS", "HITBAR",
+    "AUTOTITLE", "NO_CLAN",   "MCCP",     "AUTOSIZE",   "VERBOSE", "VIEWDAMAGE", "\n"};
 
 /** Affected bits.
  * @pre Must be in the same order as the defines.
@@ -182,67 +182,63 @@ const char *connected_types[] = {"Playing",
 /** Describes the position in the equipment listing.
  * @pre Must be in the same order as the defines.
  * Not used in sprinttype() so no \\n. */
- const char *wear_where[] = {
-    "Como luz:           ",  /* 0  WEAR_LIGHT */
-    "Na cabeça:          ",  /* 1  WEAR_HEAD */
-    "Na orelha direita:  ",  /* 2  WEAR_EAR_R */
-    "Na orelha esquerda: ",  /* 3  WEAR_EAR_L */
-    "No rosto:           ",  /* 4  WEAR_FACE */
-    "No nariz:           ",  /* 5  WEAR_NOSE */
-    "No pescoço:         ",  /* 6  WEAR_NECK_1 */
-    "No pescoço:         ",  /* 7  WEAR_NECK_2 */
-    "No corpo:           ",  /* 8  WEAR_BODY */
-    "Nos braços:         ",  /* 9  WEAR_ARMS */
-    "Nas mãos:           ",  /* 10 WEAR_HANDS */
-    "No pulso direito:   ",  /* 11 WEAR_WRIST_R */
-    "No pulso esquerdo:  ",  /* 12 WEAR_WRIST_L */
-    "No dedo direito:    ",  /* 13 WEAR_FINGER_R */
-    "No dedo esquerdo:   ",  /* 14 WEAR_FINGER_L */
-    "Na cintura:         ",  /* 15 WEAR_WAIST */
-    "Nas pernas:         ",  /* 16 WEAR_LEGS */
-    "Nos pés:            ",  /* 17 WEAR_FEET */
-    "Sobre o corpo:      ",  /* 18 WEAR_ABOUT */
-    "Como escudo:        ",  /* 19 WEAR_SHIELD */
-    "Empunhando:         ",  /* 20 WEAR_WIELD */
-    "Segurando:          ",  /* 21 WEAR_HOLD */
-    "Como asas:          ",  /* 22 WEAR_WINGS */
-    "Como insígnia:      ",  /* 23 WEAR_INSIGNE */
+const char *wear_where[] = {
+    "Como luz:           ", /* 0  WEAR_LIGHT */
+    "Na cabeça:          ", /* 1  WEAR_HEAD */
+    "Na orelha direita:  ", /* 2  WEAR_EAR_R */
+    "Na orelha esquerda: ", /* 3  WEAR_EAR_L */
+    "No rosto:           ", /* 4  WEAR_FACE */
+    "No nariz:           ", /* 5  WEAR_NOSE */
+    "No pescoço:         ", /* 6  WEAR_NECK_1 */
+    "No pescoço:         ", /* 7  WEAR_NECK_2 */
+    "No corpo:           ", /* 8  WEAR_BODY */
+    "Nos braços:         ", /* 9  WEAR_ARMS */
+    "Nas mãos:           ", /* 10 WEAR_HANDS */
+    "No pulso direito:   ", /* 11 WEAR_WRIST_R */
+    "No pulso esquerdo:  ", /* 12 WEAR_WRIST_L */
+    "No dedo direito:    ", /* 13 WEAR_FINGER_R */
+    "No dedo esquerdo:   ", /* 14 WEAR_FINGER_L */
+    "Na cintura:         ", /* 15 WEAR_WAIST */
+    "Nas pernas:         ", /* 16 WEAR_LEGS */
+    "Nos pés:            ", /* 17 WEAR_FEET */
+    "Sobre o corpo:      ", /* 18 WEAR_ABOUT */
+    "Como escudo:        ", /* 19 WEAR_SHIELD */
+    "Empunhando:         ", /* 20 WEAR_WIELD */
+    "Segurando:          ", /* 21 WEAR_HOLD */
+    "Como asas:          ", /* 22 WEAR_WINGS */
+    "Como insígnia:      ", /* 23 WEAR_INSIGNE */
     "Na aljava:          "  /* 24 WEAR_QUIVER */
 };
-
 
 /* Describes where an item can be worn.
  * @pre Must be in the same order as the defines.
  * Must end array with a single newline. */
- const char *equipment_types[] = {
-    "Usado como luz",             /* 0  WEAR_LIGHT */
-    "Usado na cabeça",            /* 1  WEAR_HEAD */
-    "Usado na orelha direita",    /* 2  WEAR_EAR_R */
-    "Usado na orelha esquerda",   /* 3  WEAR_EAR_L */
-    "Usado no rosto",             /* 4  WEAR_FACE */
-    "Usado no nariz",             /* 5  WEAR_NOSE */
-    "Usado no pescoço",           /* 6  WEAR_NECK_1 */
-    "Usado no pescoço",           /* 7  WEAR_NECK_2 */
-    "Usado no corpo",             /* 8  WEAR_BODY */
-    "Usado nos braços",           /* 9  WEAR_ARMS */
-    "Usado nas mãos",             /* 10 WEAR_HANDS */
-    "Usado no pulso direito",     /* 11 WEAR_WRIST_R */
-    "Usado no pulso esquerdo",    /* 12 WEAR_WRIST_L */
-    "Usado no dedo direito",      /* 13 WEAR_FINGER_R */
-    "Usado no dedo esquerdo",     /* 14 WEAR_FINGER_L */
-    "Usado na cintura",           /* 15 WEAR_WAIST */
-    "Usado nas pernas",           /* 16 WEAR_LEGS */
-    "Usado nos pés",              /* 17 WEAR_FEET */
-    "Usado sobre o corpo",        /* 18 WEAR_ABOUT */
-    "Usado como escudo",          /* 19 WEAR_SHIELD */
-    "Usado empunhando",           /* 20 WEAR_WIELD */
-    "Usado segurando",            /* 21 WEAR_HOLD */
-    "Usado como asas",            /* 22 WEAR_WINGS */
-    "Usado como insígnia",        /* 23 WEAR_INSIGNE */
-    "Usado na aljava",         /* 24 WEAR_QUIVER */
-    "\n"
-};
-
+const char *equipment_types[] = {"Usado como luz",           /* 0  WEAR_LIGHT */
+                                 "Usado na cabeça",          /* 1  WEAR_HEAD */
+                                 "Usado na orelha direita",  /* 2  WEAR_EAR_R */
+                                 "Usado na orelha esquerda", /* 3  WEAR_EAR_L */
+                                 "Usado no rosto",           /* 4  WEAR_FACE */
+                                 "Usado no nariz",           /* 5  WEAR_NOSE */
+                                 "Usado no pescoço",         /* 6  WEAR_NECK_1 */
+                                 "Usado no pescoço",         /* 7  WEAR_NECK_2 */
+                                 "Usado no corpo",           /* 8  WEAR_BODY */
+                                 "Usado nos braços",         /* 9  WEAR_ARMS */
+                                 "Usado nas mãos",           /* 10 WEAR_HANDS */
+                                 "Usado no pulso direito",   /* 11 WEAR_WRIST_R */
+                                 "Usado no pulso esquerdo",  /* 12 WEAR_WRIST_L */
+                                 "Usado no dedo direito",    /* 13 WEAR_FINGER_R */
+                                 "Usado no dedo esquerdo",   /* 14 WEAR_FINGER_L */
+                                 "Usado na cintura",         /* 15 WEAR_WAIST */
+                                 "Usado nas pernas",         /* 16 WEAR_LEGS */
+                                 "Usado nos pés",            /* 17 WEAR_FEET */
+                                 "Usado sobre o corpo",      /* 18 WEAR_ABOUT */
+                                 "Usado como escudo",        /* 19 WEAR_SHIELD */
+                                 "Usado empunhando",         /* 20 WEAR_WIELD */
+                                 "Usado segurando",          /* 21 WEAR_HOLD */
+                                 "Usado como asas",          /* 22 WEAR_WINGS */
+                                 "Usado como insígnia",      /* 23 WEAR_INSIGNE */
+                                 "Usado na aljava",          /* 24 WEAR_QUIVER */
+                                 "\n"};
 
 /** Describes the type of object.
  * @pre Must be in the same order as the defines.
