@@ -202,8 +202,18 @@ int main(int argc, char **argv)
     const char *dir;
 
     printf("Default System Locale  %s \n", setlocale(LC_ALL, ""));
-    setlocale(LC_ALL, "pt_BR.UTF-8");
-    printf("Locale alterado\r\n");
+
+    /* Try to set Portuguese locale, fall back to en_US.UTF-8 or C if not available */
+    if (setlocale(LC_ALL, "pt_BR.UTF-8") == NULL) {
+        if (setlocale(LC_ALL, "en_US.UTF-8") == NULL) {
+            setlocale(LC_ALL, "C");
+            printf("Locale set to C (pt_BR.UTF-8 and en_US.UTF-8 not available)\r\n");
+        } else {
+            printf("Locale set to en_US.UTF-8 (pt_BR.UTF-8 not available)\r\n");
+        }
+    } else {
+        printf("Locale alterado para pt_BR.UTF-8\r\n");
+    }
 
 #ifdef MEMORY_DEBUG
     zmalloc_init();
