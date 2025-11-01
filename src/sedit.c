@@ -46,6 +46,7 @@ static int parse_shop_float(const char *arg, float *result)
     char buffer[MAX_INPUT_LENGTH];
     char *comma_pos;
     int ret;
+    float temp_value;
 
     /* Copy the argument to a buffer we can modify */
     strncpy(buffer, arg, sizeof(buffer) - 1);
@@ -58,7 +59,15 @@ static int parse_shop_float(const char *arg, float *result)
     }
 
     /* Parse the float value */
-    ret = sscanf(buffer, "%f", result);
+    ret = sscanf(buffer, "%f", &temp_value);
+    if (ret == 1) {
+        /* Validate range - shop profit rates should be reasonable positive values
+         * Typical range is 0.0 to 10.0 (0% to 1000% markup) */
+        if (temp_value < 0.0 || temp_value > 100.0) {
+            return 0; /* Invalid range */
+        }
+        *result = temp_value;
+    }
     return ret;
 }
 
@@ -713,14 +722,16 @@ void sedit_parse(struct descriptor_data *d, char *arg)
             break;
         case SEDIT_BUY_PROFIT:
             if (parse_shop_float(arg, &S_BUYPROFIT(OLC_SHOP(d))) != 1) {
-                write_to_output(d, "Invalid value. Please enter a valid number (use . or , for decimal).\r\n");
+                write_to_output(
+                    d, "Invalid value. Please enter a number between 0.0 and 100.0 (use . or , for decimal).\r\n");
                 write_to_output(d, "Enter new value : ");
                 return;
             }
             break;
         case SEDIT_SELL_PROFIT:
             if (parse_shop_float(arg, &S_SELLPROFIT(OLC_SHOP(d))) != 1) {
-                write_to_output(d, "Invalid value. Please enter a valid number (use . or , for decimal).\r\n");
+                write_to_output(
+                    d, "Invalid value. Please enter a number between 0.0 and 100.0 (use . or , for decimal).\r\n");
                 write_to_output(d, "Enter new value : ");
                 return;
             }
