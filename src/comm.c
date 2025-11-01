@@ -215,6 +215,12 @@ int main(int argc, char **argv)
         printf("Locale alterado para pt_BR.UTF-8\r\n");
     }
 
+    /* Always set LC_NUMERIC to C to ensure consistent float parsing/formatting
+     * This prevents issues with comma vs period as decimal separator in shop files
+     * and other numeric data files while keeping other locale features for text */
+    setlocale(LC_NUMERIC, "C");
+    printf("LC_NUMERIC set to C for consistent numeric data handling\r\n");
+
 #ifdef MEMORY_DEBUG
     zmalloc_init();
 #endif
