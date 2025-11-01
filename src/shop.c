@@ -448,11 +448,22 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
 {
     float sell_cost_modifier = SHOP_SELLPROFIT(shop_nr) * (1 - (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
     float buy_cost_modifier = SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
+    int price;
+
+    /* Ensure sell_cost_modifier doesn't go to 0 or negative */
+    if (sell_cost_modifier < 0.01)
+        sell_cost_modifier = 0.01;
 
     if (sell_cost_modifier > buy_cost_modifier)
         sell_cost_modifier = buy_cost_modifier;
 
-    return (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
+    price = (int)(GET_OBJ_COST(obj) * sell_cost_modifier);
+
+    /* Ensure we return at least 1 gold for items with non-zero cost to prevent truncation to 0 */
+    if (price < 1 && GET_OBJ_COST(obj) > 0)
+        price = 1;
+
+    return price;
 }
 
 /* The Player is Buying and the shopkeeper is selling the object */
