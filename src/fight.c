@@ -946,6 +946,33 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         (dam > GET_HIT(victim)))
         dam = MAX(GET_HIT(victim), 0);
     GET_HIT(victim) -= dam;
+
+    /* EMOTION SYSTEM: Update pain based on damage taken (experimental feature) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(victim) && victim->ai_data && dam > 0) {
+        int pain_amount = 0;
+        int damage_percent = (dam * 100) / MAX(GET_MAX_HIT(victim), 1);
+
+        /* Pain scales with damage percentage */
+        if (damage_percent >= 50) {
+            /* Massive damage (50%+ of max HP) */
+            pain_amount = rand_number(30, 50);
+        } else if (damage_percent >= 25) {
+            /* Heavy damage (25-49% of max HP) */
+            pain_amount = rand_number(20, 35);
+        } else if (damage_percent >= 10) {
+            /* Moderate damage (10-24% of max HP) */
+            pain_amount = rand_number(10, 20);
+        } else if (damage_percent >= 5) {
+            /* Light damage (5-9% of max HP) */
+            pain_amount = rand_number(5, 10);
+        } else {
+            /* Minimal damage (< 5% of max HP) */
+            pain_amount = rand_number(1, 5);
+        }
+
+        adjust_emotion(victim, &victim->ai_data->emotion_pain, pain_amount);
+    }
+
     /* Gain exp for the hit */
     if (ch != victim)
         gain_exp(ch, GET_LEVEL(victim) * dam);
@@ -1016,6 +1043,8 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
             if (ch != victim && IS_NPC(victim) && GET_POS(victim) > POS_STUNNED) {
                 int flee_threshold = 0;
                 int base_wimpy = 0;
+                int emotion_modifier = 0;
+
                 /* 1. O mob tem a flag MOB_WIMPY? Se sim, ele já tem uma base de medo. */
                 if (MOB_FLAGGED(victim, MOB_WIMPY)) {
                     base_wimpy = 20; /* Valor base de 20% de vida para fuga. */
@@ -1024,12 +1053,36 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                 /* 2. Adicionamos a tendência genética à base. */
                 if (victim->ai_data) {
                     flee_threshold = base_wimpy + victim->ai_data->genetics.wimpy_tendency;
+
+                    /* 3. EMOTION SYSTEM: Adjust flee threshold based on emotions */
+                    if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+                        /* High fear increases flee threshold (flee sooner) */
+                        if (victim->ai_data->emotion_fear >= 70) {
+                            emotion_modifier += 15; /* Flee at +15% HP */
+                        } else if (victim->ai_data->emotion_fear >= 50) {
+                            emotion_modifier += 10; /* Flee at +10% HP */
+                        }
+
+                        /* High courage reduces flee threshold (flee later) */
+                        if (victim->ai_data->emotion_courage >= 70) {
+                            emotion_modifier -= 15; /* Flee at -15% HP */
+                        } else if (victim->ai_data->emotion_courage >= 50) {
+                            emotion_modifier -= 10; /* Flee at -10% HP */
+                        }
+
+                        /* Horror overrides other emotions */
+                        if (victim->ai_data->emotion_horror >= 80) {
+                            emotion_modifier += 25; /* Panic flee at +25% HP */
+                        }
+
+                        flee_threshold += emotion_modifier;
+                    }
                 } else {
                     flee_threshold = base_wimpy;
                 }
-                /* 3. Garante que o limiar não passa de um valor razoável (ex: 80%) */
-                flee_threshold = MIN(flee_threshold, 80);
-                /* 4. Compara com a vida atual e tenta fugir se necessário. */
+                /* 4. Garante que o limiar não passa de um valor razoável (10-90%) */
+                flee_threshold = MIN(MAX(flee_threshold, 10), 90);
+                /* 5. Compara com a vida atual e tenta fugir se necessário. */
                 if (flee_threshold > 0) {
                     /* Fuga DETERMINÍSTICA: Baseada na genética e na flag wimpy. */
                     if (GET_HIT(victim) < (GET_MAX_HIT(victim) * flee_threshold) / 100) {

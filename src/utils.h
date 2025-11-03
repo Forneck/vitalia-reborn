@@ -138,6 +138,7 @@ int is_wishlist_quest(qst_vnum quest_vnum);
 void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
 
 /* Mob emotion system functions */
+void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount);
 void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attacker);
 void update_mob_emotion_attacking(struct char_data *mob, struct char_data *victim);
 void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer);

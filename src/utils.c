@@ -4516,7 +4516,7 @@ int get_mob_skill(struct char_data *ch, int skill_num)
  * @param emotion_ptr Pointer to the emotion value
  * @param amount Amount to adjust (positive or negative)
  */
-static void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount)
+void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount)
 {
     if (!mob || !IS_NPC(mob) || !mob->ai_data || !emotion_ptr)
         return;
@@ -4598,6 +4598,9 @@ void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer)
     /* Decreases fear and anger */
     adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(5, 10));
     adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(5, 10));
+
+    /* IMPORTANT: Decreases pain - healing relieves suffering */
+    adjust_emotion(mob, &mob->ai_data->emotion_pain, -rand_number(15, 30));
 
     /* Increases love if healer has high reputation */
     if (healer && GET_REPUTATION(healer) >= 60) {
@@ -4776,6 +4779,35 @@ void update_mob_emotion_passive(struct char_data *mob)
     /* Sadness gradually decreases (unless reinforced by events) */
     if (mob->ai_data->emotion_sadness > 10) {
         adjust_emotion(mob, &mob->ai_data->emotion_sadness, -rand_number(1, 3));
+    }
+
+    /* Pain gradually decreases over time (healing naturally) */
+    /* Pain should decay faster than other emotions - wounds heal */
+    if (mob->ai_data->emotion_pain > 0) {
+        int pain_decay = rand_number(2, 5);
+        /* Resting/sleeping accelerates pain reduction */
+        if (GET_POS(mob) == POS_RESTING || GET_POS(mob) == POS_SLEEPING) {
+            pain_decay += rand_number(2, 4);
+        }
+        adjust_emotion(mob, &mob->ai_data->emotion_pain, -pain_decay);
+    }
+
+    /* Horror gradually decreases (traumatic memory fades) */
+    if (mob->ai_data->emotion_horror > 0) {
+        adjust_emotion(mob, &mob->ai_data->emotion_horror, -rand_number(2, 4));
+    }
+
+    /* Disgust decreases over time */
+    if (mob->ai_data->emotion_disgust > 0) {
+        adjust_emotion(mob, &mob->ai_data->emotion_disgust, -rand_number(1, 3));
+    }
+
+    /* Shame and humiliation decrease slowly */
+    if (mob->ai_data->emotion_shame > 0) {
+        adjust_emotion(mob, &mob->ai_data->emotion_shame, -rand_number(1, 2));
+    }
+    if (mob->ai_data->emotion_humiliation > 0) {
+        adjust_emotion(mob, &mob->ai_data->emotion_humiliation, -rand_number(1, 2));
     }
 }
 
@@ -5208,6 +5240,12 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         /* Compassionate mobs respond more to kindness */
         if (mob->ai_data->emotion_compassion >= 60) {
             adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 10));
+        }
+
+        /* Comforting actions specifically reduce pain and sadness */
+        if (!strcmp(social_name, "comfort") || !strcmp(social_name, "pat") || !strcmp(social_name, "hug")) {
+            adjust_emotion(mob, &mob->ai_data->emotion_pain, -rand_number(5, 15));
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, -rand_number(5, 10));
         }
     } else if (is_negative) {
         /* Negative socials increase anger, decrease trust/friendship */
