@@ -994,6 +994,13 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
         send_to_char(ch, "  Arousal: Courage[%s%d%s] Excitement[%s%d%s]\r\n", CCCYN(ch, C_NRM),
                      k->ai_data->emotion_courage, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_excitement,
                      CCNRM(ch, C_NRM));
+        send_to_char(
+            ch,
+            "  Negative/aversive: Disgust[%s%d%s] Shame[%s%d%s] Pain[%s%d%s] Horror[%s%d%s] Humiliation[%s%d%s]\r\n",
+            CCCYN(ch, C_NRM), k->ai_data->emotion_disgust, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
+            k->ai_data->emotion_shame, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_pain, CCNRM(ch, C_NRM),
+            CCCYN(ch, C_NRM), k->ai_data->emotion_horror, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
+            k->ai_data->emotion_humiliation, CCNRM(ch, C_NRM));
     }
     /* check mobiles for a script */
     do_sstat_character(ch, k);
