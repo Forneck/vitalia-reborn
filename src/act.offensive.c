@@ -70,6 +70,8 @@ ACMD(do_assist)
             send_to_char(ch, "Você entra para a luta!\r\n");
             act("$N da assistência a você !", 0, helpee, 0, ch, TO_CHAR);
             act("$n da assistência a  $N.", FALSE, ch, 0, helpee, TO_NOTVICT);
+            /* Update mob emotions for being assisted (experimental feature) */
+            update_mob_emotion_assisted(helpee, ch);
             hit(ch, opponent, TYPE_UNDEFINED);
         }
     }
@@ -793,6 +795,9 @@ ACMD(do_rescue)
     send_to_char(ch, "Banzai!  Ao resgate...\r\n");
     act("Você foi resgatado por $N! Você fica confuso...", FALSE, vict, 0, ch, TO_CHAR);
     act("$n heroicamente resgata $N!", FALSE, ch, 0, vict, TO_NOTVICT);
+
+    /* Update mob emotions for being rescued (experimental feature) */
+    update_mob_emotion_rescued(vict, ch);
 
     if (FIGHTING(vict) == tmp_ch)
         stop_fighting(vict);

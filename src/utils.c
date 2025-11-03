@@ -4652,6 +4652,91 @@ void update_mob_emotion_received_item(struct char_data *mob, struct char_data *g
 }
 
 /**
+ * Update mob emotions based on being stolen from
+ * @param mob The mob being stolen from
+ * @param thief The character stealing
+ */
+void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thief)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Being stolen from increases anger, fear, and sadness */
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(20, 35));
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(5, 15));
+
+    /* Decreases trust and friendship significantly */
+    adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(30, 50));
+    adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(25, 40));
+
+    /* Decreases happiness */
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(15, 25));
+
+    /* If mob has high pride, anger increases more */
+    if (mob->ai_data->emotion_pride > 60) {
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
+        adjust_emotion(mob, &mob->ai_data->emotion_humiliation, rand_number(10, 20));
+    }
+}
+
+/**
+ * Update mob emotions based on being rescued
+ * @param mob The mob being rescued
+ * @param rescuer The character performing the rescue
+ */
+void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Being rescued increases trust, friendship, and gratitude */
+    adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(15, 25));
+    adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(15, 25));
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(10, 20));
+
+    /* Decreases fear and increases courage */
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(5, 15));
+
+    /* Increases loyalty to rescuer */
+    adjust_emotion(mob, &mob->ai_data->emotion_loyalty, rand_number(10, 20));
+
+    /* Increases love if rescuer has high reputation */
+    if (rescuer && GET_REPUTATION(rescuer) >= 60) {
+        adjust_emotion(mob, &mob->ai_data->emotion_love, rand_number(5, 15));
+    }
+
+    /* Decreases anger */
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(5, 15));
+}
+
+/**
+ * Update mob emotions based on receiving combat assistance
+ * @param mob The mob being assisted
+ * @param assistant The character providing assistance
+ */
+void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assistant)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Being assisted increases loyalty, friendship, and trust */
+    adjust_emotion(mob, &mob->ai_data->emotion_loyalty, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(10, 15));
+
+    /* Increases happiness */
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(10, 15));
+
+    /* Decreases fear slightly */
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(5, 10));
+
+    /* Increases courage */
+    adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(5, 10));
+}
+
+/**
  * Update mob emotions over time (passive decay/stabilization)
  * Call this periodically for emotional regulation
  * @param mob The mob whose emotions to regulate
