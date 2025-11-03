@@ -1001,6 +1001,54 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
             k->ai_data->emotion_shame, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM), k->ai_data->emotion_pain, CCNRM(ch, C_NRM),
             CCCYN(ch, C_NRM), k->ai_data->emotion_horror, CCNRM(ch, C_NRM), CCCYN(ch, C_NRM),
             k->ai_data->emotion_humiliation, CCNRM(ch, C_NRM));
+
+        /* Display emotion memory history */
+        {
+            int i, memory_count = 0;
+            time_t current_time = time(0);
+            const char *interaction_names[] = {"Attacked", "Healed",  "ReceivedItem", "StolenFrom", "Rescued",
+                                               "Assisted", "Social+", "Social-",      "SocialViol", "AllyDied"};
+            const char *entity_type_names[] = {"Player", "Mob"};
+
+            /* Count valid memories */
+            for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+                if (k->ai_data->memories[i].timestamp > 0) {
+                    memory_count++;
+                }
+            }
+
+            if (memory_count > 0) {
+                send_to_char(ch, "%sEmotion Memory:%s (%d/10 slots used)\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM),
+                             memory_count);
+
+                /* Display memories in chronological order (oldest to newest) */
+                for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+                    /* Calculate actual index considering circular buffer */
+                    int idx = (k->ai_data->memory_index + i) % EMOTION_MEMORY_SIZE;
+                    struct emotion_memory *mem = &k->ai_data->memories[idx];
+
+                    if (mem->timestamp > 0) {
+                        int age_seconds = current_time - mem->timestamp;
+                        int age_minutes = age_seconds / 60;
+                        const char *interaction_name = (mem->interaction_type >= 0 && mem->interaction_type <= 9)
+                                                           ? interaction_names[mem->interaction_type]
+                                                           : "Unknown";
+                        const char *entity_type_name = (mem->entity_type >= 0 && mem->entity_type <= 1)
+                                                           ? entity_type_names[mem->entity_type]
+                                                           : "Unknown";
+
+                        send_to_char(ch, "  [%s%2d min ago%s] %s:%ld %s%-12s%s%s T:%+3d F:%+3d Fear:%3d Anger:%3d\r\n",
+                                     CCGRN(ch, C_NRM), age_minutes, CCNRM(ch, C_NRM), entity_type_name, mem->entity_id,
+                                     CCYEL(ch, C_NRM), interaction_name, CCNRM(ch, C_NRM),
+                                     mem->major_event ? " [MAJOR]" : "", mem->trust_level, mem->friendship_level,
+                                     mem->fear_level, mem->anger_level);
+                    }
+                }
+            } else {
+                send_to_char(ch, "%sEmotion Memory:%s No interactions recorded yet\r\n", CCYEL(ch, C_NRM),
+                             CCNRM(ch, C_NRM));
+            }
+        }
     }
     /* check mobiles for a script */
     do_sstat_character(ch, k);
