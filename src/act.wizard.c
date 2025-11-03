@@ -1037,11 +1037,11 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                                                            ? entity_type_names[mem->entity_type]
                                                            : "Unknown";
 
-                        send_to_char(ch, "  [%s%2d min ago%s] %s:%ld %s%-12s%s%s T:%+3d F:%+3d Fear:%3d Anger:%3d\r\n",
-                                     CCGRN(ch, C_NRM), age_minutes, CCNRM(ch, C_NRM), entity_type_name, mem->entity_id,
-                                     CCYEL(ch, C_NRM), interaction_name, CCNRM(ch, C_NRM),
-                                     mem->major_event ? " [MAJOR]" : "", mem->trust_level, mem->friendship_level,
-                                     mem->fear_level, mem->anger_level);
+                        send_to_char(
+                            ch, "  [%s%2d min ago%s] %s:%ld %s%-12s%s%s Trust:%+3d Friend:%+3d Fear:%3d Anger:%3d\r\n",
+                            CCGRN(ch, C_NRM), age_minutes, CCNRM(ch, C_NRM), entity_type_name, mem->entity_id,
+                            CCYEL(ch, C_NRM), interaction_name, CCNRM(ch, C_NRM), mem->major_event ? " [MAJOR]" : "",
+                            mem->trust_level, mem->friendship_level, mem->fear_level, mem->anger_level);
                     }
                 }
             } else {
