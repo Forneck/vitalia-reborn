@@ -1037,11 +1037,32 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                                                            ? entity_type_names[mem->entity_type]
                                                            : "Unknown";
 
-                        send_to_char(
-                            ch, "  [%s%2d min ago%s] %s:%ld %s%-12s%s%s Trust:%+3d Friend:%+3d Fear:%3d Anger:%3d\r\n",
-                            CCGRN(ch, C_NRM), age_minutes, CCNRM(ch, C_NRM), entity_type_name, mem->entity_id,
-                            CCYEL(ch, C_NRM), interaction_name, CCNRM(ch, C_NRM), mem->major_event ? " [MAJOR]" : "",
-                            mem->trust_level, mem->friendship_level, mem->fear_level, mem->anger_level);
+                        /* Build emotion display - only show emotions that changed (non-zero/significant values) */
+                        char emotion_buf[256];
+                        emotion_buf[0] = '\0';
+                        int has_emotions = 0;
+
+                        if (mem->trust_level != 0) {
+                            sprintf(emotion_buf + strlen(emotion_buf), " Trust:%+3d", mem->trust_level);
+                            has_emotions = 1;
+                        }
+                        if (mem->friendship_level != 0) {
+                            sprintf(emotion_buf + strlen(emotion_buf), " Friend:%+3d", mem->friendship_level);
+                            has_emotions = 1;
+                        }
+                        if (mem->fear_level != 0) {
+                            sprintf(emotion_buf + strlen(emotion_buf), " Fear:%3d", mem->fear_level);
+                            has_emotions = 1;
+                        }
+                        if (mem->anger_level != 0) {
+                            sprintf(emotion_buf + strlen(emotion_buf), " Anger:%3d", mem->anger_level);
+                            has_emotions = 1;
+                        }
+
+                        send_to_char(ch, "  [%s%2d min ago%s] %s:%ld %s%-12s%s%s%s\r\n", CCGRN(ch, C_NRM), age_minutes,
+                                     CCNRM(ch, C_NRM), entity_type_name, mem->entity_id, CCYEL(ch, C_NRM),
+                                     interaction_name, CCNRM(ch, C_NRM), mem->major_event ? " [MAJOR]" : "",
+                                     has_emotions ? emotion_buf : " (no emotion changes)");
                     }
                 }
             } else {
