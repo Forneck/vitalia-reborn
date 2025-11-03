@@ -1050,9 +1050,11 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                     base_wimpy = 20; /* Valor base de 20% de vida para fuga. */
                 }
 
-                /* 2. Adicionamos a tendência genética à base. */
+                /* 2. Adicionamos a tendência genética à base (scaled to 0-40% to make room for emotions). */
                 if (victim->ai_data) {
-                    flee_threshold = base_wimpy + victim->ai_data->genetics.wimpy_tendency;
+                    /* Scale wimpy_tendency (0-100) to 0-40% range for balanced flee behavior */
+                    int genetic_component = (victim->ai_data->genetics.wimpy_tendency * 40) / 100;
+                    flee_threshold = base_wimpy + genetic_component;
 
                     /* 3. EMOTION SYSTEM: Adjust flee threshold based on emotions */
                     if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
