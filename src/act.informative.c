@@ -375,7 +375,8 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
         }
 
         /* EMOTION SYSTEM: Add emotion indicators based on high emotion levels */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && i->ai_data) {
+        /* Only display if player has DISPEMOTE preference enabled */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && i->ai_data && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_DISPEMOTE)) {
             if (i->ai_data->emotion_fear >= 70)
                 send_to_char(ch, "%s(amedrontado) ", CCMAG(ch, C_NRM));
             else if (i->ai_data->emotion_anger >= 70)
@@ -419,7 +420,8 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
         }
 
         /* EMOTION SYSTEM: Add emotion indicators for mobs not in default position */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && i->ai_data) {
+        /* Only display if player has DISPEMOTE preference enabled */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && i->ai_data && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_DISPEMOTE)) {
             if (i->ai_data->emotion_fear >= 70)
                 send_to_char(ch, "%s(amedrontado) ", CCMAG(ch, C_NRM));
             else if (i->ai_data->emotion_anger >= 70)
