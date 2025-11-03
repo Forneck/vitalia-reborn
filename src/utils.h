@@ -151,6 +151,11 @@ void update_mob_emotion_passive(struct char_data *mob);
 void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
 
+/* Emotion memory system functions */
+void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event);
+int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
+void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
+
 /* Stoneskin utility functions */
 int get_stoneskin_points(struct char_data *ch);
 void set_stoneskin_points(struct char_data *ch, int points);

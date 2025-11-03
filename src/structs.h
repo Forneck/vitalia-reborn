@@ -999,6 +999,59 @@ struct mob_wishlist_item {
     struct mob_wishlist_item *next; /* Próximo item na lista */
 };
 
+/**
+ * Emotion memory system - tracks recent interactions with entities for persistent emotional responses
+ *
+ * DESIGN PHILOSOPHY:
+ * - Memories are RUNTIME-ONLY (not persisted to disk)
+ * - Mob memories reset on zone reset/reboot - this is intentional
+ * - Allows strategic gameplay: players can wait for zone reset to "reset" mob relationships
+ * - Prevents stale memory corruption from extracted/dead entities
+ * - Simple implementation with no disk I/O overhead
+ *
+ * ENTITY IDENTIFICATION:
+ * - Players: GET_IDNUM (persistent unique ID, but memories themselves aren't saved)
+ * - Mobs: char_script_id (runtime-only unique instance ID per boot session)
+ *
+ * MEMORY SIZE: 10 slots per mob using circular buffer
+ * - Oldest memory automatically overwritten when buffer is full
+ * - ~240 bytes per mob (negligible memory footprint)
+ * - ~240KB for 1000 active mobs
+ *
+ * MEMORY WEIGHTING:
+ * - Recent interactions have more weight (decay over time)
+ * - Major events (rescue, theft, ally death, extreme violence) have 2x weight
+ * - Memories older than 1 hour have minimal influence
+ */
+#define EMOTION_MEMORY_SIZE 10
+#define ENTITY_TYPE_PLAYER 0
+#define ENTITY_TYPE_MOB 1
+
+/* Interaction types for emotion memory */
+#define INTERACT_ATTACKED 0
+#define INTERACT_HEALED 1
+#define INTERACT_RECEIVED_ITEM 2
+#define INTERACT_STOLEN_FROM 3
+#define INTERACT_RESCUED 4
+#define INTERACT_ASSISTED 5
+#define INTERACT_SOCIAL_POSITIVE 6
+#define INTERACT_SOCIAL_NEGATIVE 7
+#define INTERACT_SOCIAL_VIOLENT 8
+#define INTERACT_ALLY_DIED 9
+
+struct emotion_memory {
+    int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+    long entity_id;       /* GET_IDNUM for players, char_script_id for mobs (runtime-only) */
+    int interaction_type; /* Type of interaction (INTERACT_*) */
+    int major_event;      /* 1 for major events (rescue, ally death, theft, extreme violence), 0 for normal */
+    time_t timestamp;     /* When the interaction occurred (0 = unused slot) */
+    /* Simplified emotion snapshot - only track key emotions for memory efficiency (4 emotions vs 20) */
+    sh_int trust_level;      /* Trust at time of interaction (-50 to +50 range) */
+    sh_int friendship_level; /* Friendship at time of interaction (-50 to +50 range) */
+    sh_int fear_level;       /* Fear at time of interaction (0-100) */
+    sh_int anger_level;      /* Anger at time of interaction (0-100) */
+};
+
 struct mob_ai_data {
     struct mob_genetics genetics; /* Contém todos os genes. */
     room_vnum guard_post;         /* O "posto de guarda" para Sentinelas/Lojistas. */
@@ -1064,6 +1117,10 @@ struct mob_ai_data {
     qst_vnum *temp_quests;    /* Array of quest vnums this mob is managing temporarily */
     int num_temp_quests;      /* Number of temporary quests managed */
     int max_temp_quests;      /* Maximum temporary quests this mob can manage */
+
+    /* Emotion memory system - tracks recent interactions for persistent relationships */
+    struct emotion_memory memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of interaction memories */
+    int memory_index; /* Current position in circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
 };
 
 /**

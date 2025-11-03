@@ -30,6 +30,7 @@
 #include "quest.h"
 #include "graph.h"
 #include "genolc.h"
+#include "dg_scripts.h"
 
 /** Aportable random number function.
  * @param from The lower bounds of the random number.
@@ -4552,6 +4553,11 @@ void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attack
         adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(3, 8));
         adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(5, 10));
     }
+
+    /* Add to emotion memory */
+    if (attacker) {
+        add_emotion_memory(mob, attacker, INTERACT_ATTACKED, 0);
+    }
 }
 
 /**
@@ -4606,6 +4612,11 @@ void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer)
     if (healer && GET_REPUTATION(healer) >= 60) {
         adjust_emotion(mob, &mob->ai_data->emotion_love, rand_number(5, 15));
     }
+
+    /* Add to emotion memory */
+    if (healer) {
+        add_emotion_memory(mob, healer, INTERACT_HEALED, 0);
+    }
 }
 
 /**
@@ -4631,6 +4642,11 @@ void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_
         adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(10, 15));
         adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 15));
     }
+
+    /* Add to emotion memory - this is a MAJOR event */
+    if (dead_ally) {
+        add_emotion_memory(mob, dead_ally, INTERACT_ALLY_DIED, 1);
+    }
 }
 
 /**
@@ -4651,6 +4667,11 @@ void update_mob_emotion_received_item(struct char_data *mob, struct char_data *g
     /* If mob has high greed, happiness increases more */
     if (mob->ai_data->emotion_greed > 60) {
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(10, 20));
+    }
+
+    /* Add to emotion memory */
+    if (giver) {
+        add_emotion_memory(mob, giver, INTERACT_RECEIVED_ITEM, 0);
     }
 }
 
@@ -4680,6 +4701,11 @@ void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thi
     if (mob->ai_data->emotion_pride > 60) {
         adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
         adjust_emotion(mob, &mob->ai_data->emotion_humiliation, rand_number(10, 20));
+    }
+
+    /* Add to emotion memory - theft is a MAJOR negative event */
+    if (thief) {
+        add_emotion_memory(mob, thief, INTERACT_STOLEN_FROM, 1);
     }
 }
 
@@ -4712,6 +4738,11 @@ void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer
 
     /* Decreases anger */
     adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(5, 15));
+
+    /* Add to emotion memory - rescue is a MAJOR positive event */
+    if (rescuer) {
+        add_emotion_memory(mob, rescuer, INTERACT_RESCUED, 1);
+    }
 }
 
 /**
@@ -4737,6 +4768,11 @@ void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assist
 
     /* Increases courage */
     adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(5, 10));
+
+    /* Add to emotion memory */
+    if (assistant) {
+        add_emotion_memory(mob, assistant, INTERACT_ASSISTED, 0);
+    }
 }
 
 /**
@@ -4933,6 +4969,218 @@ void mob_mourn_death(struct char_data *mob, struct char_data *deceased)
             /* Strong friendship loss */
             adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(15, 25));
             adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
+        }
+    }
+}
+
+/**
+ * Add an interaction to mob's emotion memory system
+ * Stores memory of interaction for influencing future emotional responses
+ * @param mob The mob storing the memory
+ * @param entity The character involved in the interaction
+ * @param interaction_type Type of interaction (INTERACT_*)
+ * @param major_event 1 for major events (rescue, theft, ally death), 0 for normal
+ */
+void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event)
+{
+    struct emotion_memory *memory;
+    int entity_type;
+    long entity_id;
+
+    /* Comprehensive null and validity checks to prevent SIGSEGV */
+    if (!mob || !entity || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Additional safety check: ensure mob isn't being extracted */
+    if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+        return;
+
+    /* Additional safety check: ensure entity isn't being extracted */
+    if (IS_NPC(entity) && MOB_FLAGGED(entity, MOB_NOTDEADYET))
+        return;
+    if (!IS_NPC(entity) && PLR_FLAGGED(entity, PLR_NOTDEADYET))
+        return;
+
+    /* Determine entity type and ID */
+    if (IS_NPC(entity)) {
+        entity_type = ENTITY_TYPE_MOB;
+        /*
+         * Use char_script_id for mobs - this is a runtime-only unique ID.
+         * JUSTIFICATION: Mob memories are intentionally NOT persistent across reboots because:
+         * 1. Mob instances are recreated on boot/zone reset - same VNUM = different instances
+         * 2. Memory should be session-based - old grudges fade with zone resets
+         * 3. Players can use zone resets strategically to reset mob relationships
+         * 4. Prevents memory corruption from stale references to dead/extracted mobs
+         * 5. Simplifies implementation - no disk I/O, no complex cleanup
+         *
+         * char_script_id provides:
+         * - Unique ID per mob instance within current boot session
+         * - Automatic cleanup when mob is extracted (script system handles this)
+         * - No confusion between different instances of same VNUM
+         *
+         * LIMITATION: Memories are lost on reboot/zone reset - this is BY DESIGN.
+         */
+        entity_id = char_script_id(entity);
+        if (entity_id == 0)
+            return;
+    } else {
+        entity_type = ENTITY_TYPE_PLAYER;
+        /*
+         * Use GET_IDNUM for players - persistent unique ID across reboots.
+         * JUSTIFICATION: Player memories SHOULD persist across zone resets because:
+         * 1. Players are persistent entities with continuous identity
+         * 2. Mobs should remember player interactions across multiple zone resets
+         * 3. Supports long-term reputation and relationship building
+         * 4. Players can't "reset" mob memories by triggering zone resets
+         *
+         * IMPLEMENTATION NOTE: While player ID is persistent, mob memories themselves
+         * are still NOT saved to disk. When a mob respawns, it will have no memory
+         * of past player interactions. This is intentional - see above justification.
+         */
+        entity_id = GET_IDNUM(entity);
+        /* Safety check: player must have valid ID */
+        if (entity_id <= 0)
+            return;
+    }
+
+    /* Get memory slot using circular buffer */
+    memory = &mob->ai_data->memories[mob->ai_data->memory_index];
+
+    /* Store memory */
+    memory->entity_type = entity_type;
+    memory->entity_id = entity_id;
+    memory->interaction_type = interaction_type;
+    memory->major_event = major_event;
+    memory->timestamp = time(0);
+
+    /* Store simplified emotion snapshot */
+    memory->trust_level = mob->ai_data->emotion_trust - 50;           /* Convert to -50 to +50 range */
+    memory->friendship_level = mob->ai_data->emotion_friendship - 50; /* Convert to -50 to +50 range */
+    memory->fear_level = mob->ai_data->emotion_fear;
+    memory->anger_level = mob->ai_data->emotion_anger;
+
+    /* Advance circular buffer index */
+    mob->ai_data->memory_index = (mob->ai_data->memory_index + 1) % EMOTION_MEMORY_SIZE;
+}
+
+/**
+ * Get emotion modifiers based on past interactions with an entity
+ * Returns weighted sum of past emotions, with recent memories having more weight
+ * @param mob The mob whose memories to check
+ * @param entity The entity to check memories about
+ * @param trust_mod Output: modifier for trust emotion (-100 to +100)
+ * @param friendship_mod Output: modifier for friendship emotion (-100 to +100)
+ * @return Number of memories found (0 if none)
+ */
+int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod)
+{
+    int i, memory_count = 0;
+    int entity_type;
+    long entity_id;
+    time_t current_time;
+    int total_trust = 0, total_friendship = 0;
+    int total_weight = 0;
+
+    /* Comprehensive null and validity checks to prevent SIGSEGV */
+    if (!mob || !entity || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return 0;
+
+    /* Null check for output parameters */
+    if (!trust_mod || !friendship_mod)
+        return 0;
+
+    /* Additional safety check: ensure entities aren't being extracted */
+    if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+        return 0;
+    if (IS_NPC(entity) && MOB_FLAGGED(entity, MOB_NOTDEADYET))
+        return 0;
+    if (!IS_NPC(entity) && PLR_FLAGGED(entity, PLR_NOTDEADYET))
+        return 0;
+
+    /* Initialize output parameters */
+    *trust_mod = 0;
+    *friendship_mod = 0;
+
+    /* Determine entity type and ID */
+    if (IS_NPC(entity)) {
+        entity_type = ENTITY_TYPE_MOB;
+        entity_id = char_script_id(entity);
+        if (entity_id == 0)
+            return 0;
+    } else {
+        entity_type = ENTITY_TYPE_PLAYER;
+        entity_id = GET_IDNUM(entity);
+        if (entity_id <= 0)
+            return 0;
+    }
+
+    current_time = time(0);
+
+    /* Search through all memories */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &mob->ai_data->memories[i];
+
+        /* Check if memory matches entity and isn't too old (skip if timestamp is 0 = unused slot) */
+        if (mem->timestamp > 0 && mem->entity_type == entity_type && mem->entity_id == entity_id) {
+            int age_seconds = current_time - mem->timestamp;
+            int weight;
+
+            /* Calculate weight based on age (newer = more weight) */
+            /* Memories decay over time: full weight for first 5 minutes, then decay */
+            if (age_seconds < 300) { /* < 5 minutes */
+                weight = 10;
+            } else if (age_seconds < 600) { /* 5-10 minutes */
+                weight = 7;
+            } else if (age_seconds < 1800) { /* 10-30 minutes */
+                weight = 5;
+            } else if (age_seconds < 3600) { /* 30-60 minutes */
+                weight = 3;
+            } else { /* > 1 hour */
+                weight = 1;
+            }
+
+            /* Major events have double weight */
+            if (mem->major_event) {
+                weight *= 2;
+            }
+
+            /* Accumulate weighted emotions */
+            total_trust += mem->trust_level * weight;
+            total_friendship += mem->friendship_level * weight;
+            total_weight += weight;
+            memory_count++;
+        }
+    }
+
+    /* Calculate average weighted modifiers */
+    if (total_weight > 0) {
+        *trust_mod = total_trust / total_weight;
+        *friendship_mod = total_friendship / total_weight;
+    }
+
+    return memory_count;
+}
+
+/**
+ * Clear all memories of a specific entity (called when entity dies/extracts)
+ * @param mob The mob whose memories to clear
+ * @param entity_id The ID of the entity to forget
+ * @param entity_type The type of entity (ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB)
+ */
+void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type)
+{
+    int i;
+
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    /* Clear all memories matching the entity */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &mob->ai_data->memories[i];
+        if (mem->entity_type == entity_type && mem->entity_id == entity_id) {
+            /* Mark slot as unused */
+            mem->timestamp = 0;
+            mem->entity_id = 0;
         }
     }
 }
@@ -5447,5 +5695,34 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
                     return;
             }
         }
+    }
+
+    /* Add to emotion memory - classify social type for memory */
+    if (actor && mob->ai_data) {
+        int interaction_type;
+        int is_major = 0;
+
+        /* Check if it was an extremely violent social (despine, shiskabob, vice) */
+        if (is_blocked &&
+            (!strcmp(social_name, "despine") || !strcmp(social_name, "shiskabob") || !strcmp(social_name, "vice"))) {
+            interaction_type = INTERACT_SOCIAL_VIOLENT;
+            is_major = 1; /* Extreme violence is a major event */
+        }
+        /* Check if it was any other violent social */
+        else if (is_violent || is_humiliating) {
+            interaction_type = INTERACT_SOCIAL_VIOLENT;
+        }
+        /* Check if it was a negative or disgusting social */
+        else if (is_negative || is_disgusting || is_blocked) {
+            /* is_blocked but not extreme violence = inappropriate sexual or other severe negative */
+            interaction_type = INTERACT_SOCIAL_NEGATIVE;
+            is_major = is_blocked ? 1 : 0; /* Blocked socials are major events */
+        }
+        /* Otherwise it's positive, neutral, or fearful */
+        else {
+            interaction_type = INTERACT_SOCIAL_POSITIVE;
+        }
+
+        add_emotion_memory(mob, actor, interaction_type, is_major);
     }
 }
