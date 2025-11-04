@@ -1663,6 +1663,44 @@ const char *align_gauge(int align)
 }
 
 /**
+ * reputation_gauge(reputation)
+ * Display reputation as a gauge with 0 on left, 50 (neutral) in center, 100 on right
+ * Reputation scale: 0-100 (50 = neutral)
+ */
+const char *reputation_gauge(int reputation)
+{
+    /* High reputation (good): 80-100 */
+    if (reputation >= 90)
+        return ("\tW[\tR-----\tG|\tB>>>>>\tW]\tn");
+    if (reputation >= 80)
+        return ("\tW[\tR-----\tG|\tB>>>>-\tW]\tn");
+    /* Good reputation: 60-79 */
+    if (reputation >= 70)
+        return ("\tW[\tR-----\tG|>>>\tB--\tW]\tn");
+    if (reputation >= 60)
+        return ("\tW[\tR-----\tG|>>\tB---\tW]\tn");
+    /* Slightly positive: 50-59 */
+    if (reputation >= 55)
+        return ("\tW[\tR-----\tG|>\tB----\tW]\tn");
+    /* Low reputation (bad): 0-20 */
+    if (reputation <= 10)
+        return ("\tW[\tR<<<<<\tG|\tB-----\tW]\tn");
+    if (reputation <= 20)
+        return ("\tW[\tR-<<<<\tG|\tB-----\tW]\tn");
+    /* Bad reputation: 21-39 */
+    if (reputation <= 30)
+        return ("\tW[\tR--\tG<<<|\tB-----\tW]\tn");
+    if (reputation <= 40)
+        return ("\tW[\tR---\tG<<|\tB-----\tW]\tn");
+    /* Slightly negative: 41-49 */
+    if (reputation <= 45)
+        return ("\tW[\tR----\tG<|\tB-----\tW]\tn");
+
+    /* Neutral: 46-54 */
+    return ("\tW[\tR-----\tG|\tB-----\tW]\tn");
+}
+
+/**
  * Calcula uma pontuação para os bónus (applies e affects) de um objeto.
  * Esta função age como um "identify" para o mob.
  */
