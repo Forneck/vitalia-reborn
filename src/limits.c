@@ -221,6 +221,51 @@ int move_gain(struct char_data *ch)
     return (gain);
 }
 
+/* Breath point gain pr. game hour */
+int breath_gain(struct char_data *ch)
+{
+    int gain;
+
+    if (IS_NPC(ch)) {
+        /* NPCs don't need breath management */
+        return GET_MAX_BREATH(ch);
+    } else {
+        if (IS_DEAD(ch) || PLR_FLAGGED(ch, PLR_FROZEN))
+            return (0);
+
+        /* Base breath gain - recover breath quickly in normal conditions */
+        gain = graf(age(ch)->year, 8, 10, 12, 10, 8, 6, 4);
+
+        /* Constitution affects breath recovery */
+        gain += MAX(0, (GET_CON(ch) - 10) / 2);
+
+        /* Position calculations - resting helps breath recovery */
+        switch (GET_POS(ch)) {
+            case POS_SLEEPING:
+                gain += (gain / 2); /* 150% of base - same as hit/move */
+                break;
+            case POS_RESTING:
+                gain += (gain / 4); /* 125% of base - same as hit/move */
+                break;
+            case POS_SITTING:
+                gain += (gain / 8); /* 112.5% of base - same as hit/move */
+                break;
+        }
+
+        /* Hunger and thirst affect breath recovery */
+        if ((GET_COND(ch, HUNGER) == 0) || (GET_COND(ch, THIRST) == 0))
+            gain /= 2;
+
+        /* Room calculations */
+        if (IN_ROOM(ch)) {
+            if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_FROZEN))
+                gain = 0;
+        }
+    }
+
+    return (gain);
+}
+
 void set_title(struct char_data *ch, char *title)
 {
 
@@ -477,6 +522,42 @@ void point_update(void)
             GET_HIT(i) = MIN(GET_HIT(i) + hit_gain(i), GET_MAX_HIT(i));
             GET_MANA(i) = MIN(GET_MANA(i) + mana_gain(i), GET_MAX_MANA(i));
             GET_MOVE(i) = MIN(GET_MOVE(i) + move_gain(i), GET_MAX_MOVE(i));
+
+            /* Breath update - handle underwater and high altitude rooms */
+            if (!IS_NPC(i) && !PLR_FLAGGED(i, PLR_FROZEN)) {
+                if (SECT(IN_ROOM(i)) == SECT_UNDERWATER || ROOM_FLAGGED(IN_ROOM(i), ROOM_HIGH)) {
+                    /* Lose breath when underwater or in high altitude */
+                    if (!has_scuba(i)) {
+                        /* Lose breath - faster in underwater than high altitude */
+                        int breath_loss = (SECT(IN_ROOM(i)) == SECT_UNDERWATER) ? 2 : 1;
+                        GET_BREATH(i) = MAX(0, GET_BREATH(i) - breath_loss);
+
+                        /* Check if character is suffocating */
+                        if (GET_BREATH(i) == 0) {
+                            /* Suffocation damage */
+                            if (SECT(IN_ROOM(i)) == SECT_UNDERWATER) {
+                                send_to_char(i, "\tRVocê está se afogando!\tn\r\n");
+                                if (damage(i, i, rand_number(5, 15), TYPE_SUFFERING) < 0)
+                                    continue;
+                            } else {
+                                send_to_char(i, "\tRVocê está sufocando na altitude!\tn\r\n");
+                                if (damage(i, i, rand_number(3, 10), TYPE_SUFFERING) < 0)
+                                    continue;
+                            }
+                        } else if (GET_BREATH(i) < 5) {
+                            /* Warning messages for low breath */
+                            if (SECT(IN_ROOM(i)) == SECT_UNDERWATER)
+                                send_to_char(i, "\tYVocê precisa urgentemente de ar!\tn\r\n");
+                            else
+                                send_to_char(i, "\tYVocê está com dificuldade para respirar!\tn\r\n");
+                        }
+                    }
+                } else {
+                    /* Recover breath in normal rooms */
+                    GET_BREATH(i) = MIN(GET_BREATH(i) + breath_gain(i), GET_MAX_BREATH(i));
+                }
+            }
+
             if (AFF_FLAGGED(i, AFF_POISON))
                 if (damage(i, i, 2, SPELL_POISON) == -1)
                     continue;                 /* Oops, they died 6/24/98 */
