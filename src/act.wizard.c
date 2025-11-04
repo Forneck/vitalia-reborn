@@ -6547,3 +6547,229 @@ ACMD(do_emotionconfig)
 
     send_to_char(ch, "Use %scedit%s to modify these values.\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
 }
+
+/* Export emotion configuration to file */
+ACMD(do_emotionexport)
+{
+    FILE *fp;
+    char filename[MAX_INPUT_LENGTH];
+    char arg[MAX_INPUT_LENGTH];
+    time_t now = time(0);
+
+    one_argument(argument, arg);
+
+    if (!*arg) {
+        send_to_char(ch, "Usage: emotionexport <filename>\r\n");
+        return;
+    }
+
+    snprintf(filename, sizeof(filename), "lib/misc/emotion_%s.cfg", arg);
+
+    if (!(fp = fopen(filename, "w"))) {
+        send_to_char(ch, "Could not create file '%s'.\r\n", filename);
+        mudlog(BRF, LVL_IMMORT, TRUE, "SYSERR: %s failed to export emotion config to %s", GET_NAME(ch), filename);
+        return;
+    }
+
+    fprintf(fp, "# Emotion System Configuration Export\n");
+    fprintf(fp, "# Exported by: %s\n", GET_NAME(ch));
+    fprintf(fp, "# Date: %s\n", ctime(&now));
+    fprintf(fp, "\n# Visual Indicator Thresholds\n");
+    fprintf(fp, "display_fear_threshold=%d\n", CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD);
+    fprintf(fp, "display_anger_threshold=%d\n", CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD);
+    fprintf(fp, "display_happiness_threshold=%d\n", CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD);
+    fprintf(fp, "display_sadness_threshold=%d\n", CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD);
+    fprintf(fp, "display_horror_threshold=%d\n", CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD);
+    fprintf(fp, "display_pain_threshold=%d\n", CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD);
+
+    fprintf(fp, "\n# Combat Flee Behavior Thresholds\n");
+    fprintf(fp, "flee_fear_low_threshold=%d\n", CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD);
+    fprintf(fp, "flee_fear_high_threshold=%d\n", CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD);
+    fprintf(fp, "flee_courage_low_threshold=%d\n", CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD);
+    fprintf(fp, "flee_courage_high_threshold=%d\n", CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD);
+    fprintf(fp, "flee_horror_threshold=%d\n", CONFIG_EMOTION_FLEE_HORROR_THRESHOLD);
+
+    fprintf(fp, "\n# Combat Flee Behavior Modifiers\n");
+    fprintf(fp, "flee_fear_low_modifier=%d\n", CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER);
+    fprintf(fp, "flee_fear_high_modifier=%d\n", CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER);
+    fprintf(fp, "flee_courage_low_modifier=%d\n", CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER);
+    fprintf(fp, "flee_courage_high_modifier=%d\n", CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER);
+    fprintf(fp, "flee_horror_modifier=%d\n", CONFIG_EMOTION_FLEE_HORROR_MODIFIER);
+
+    fprintf(fp, "\n# Pain System Damage Thresholds\n");
+    fprintf(fp, "pain_damage_minor_threshold=%d\n", CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD);
+    fprintf(fp, "pain_damage_moderate_threshold=%d\n", CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD);
+    fprintf(fp, "pain_damage_heavy_threshold=%d\n", CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD);
+    fprintf(fp, "pain_damage_massive_threshold=%d\n", CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD);
+
+    fprintf(fp, "\n# Pain System Pain Amounts\n");
+    fprintf(fp, "pain_minor_min=%d\n", CONFIG_EMOTION_PAIN_MINOR_MIN);
+    fprintf(fp, "pain_minor_max=%d\n", CONFIG_EMOTION_PAIN_MINOR_MAX);
+    fprintf(fp, "pain_moderate_min=%d\n", CONFIG_EMOTION_PAIN_MODERATE_MIN);
+    fprintf(fp, "pain_moderate_max=%d\n", CONFIG_EMOTION_PAIN_MODERATE_MAX);
+    fprintf(fp, "pain_heavy_min=%d\n", CONFIG_EMOTION_PAIN_HEAVY_MIN);
+    fprintf(fp, "pain_heavy_max=%d\n", CONFIG_EMOTION_PAIN_HEAVY_MAX);
+    fprintf(fp, "pain_massive_min=%d\n", CONFIG_EMOTION_PAIN_MASSIVE_MIN);
+    fprintf(fp, "pain_massive_max=%d\n", CONFIG_EMOTION_PAIN_MASSIVE_MAX);
+
+    fprintf(fp, "\n# Memory System Weights\n");
+    fprintf(fp, "memory_weight_recent=%d\n", CONFIG_EMOTION_MEMORY_WEIGHT_RECENT);
+    fprintf(fp, "memory_weight_fresh=%d\n", CONFIG_EMOTION_MEMORY_WEIGHT_FRESH);
+    fprintf(fp, "memory_weight_moderate=%d\n", CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE);
+    fprintf(fp, "memory_weight_old=%d\n", CONFIG_EMOTION_MEMORY_WEIGHT_OLD);
+    fprintf(fp, "memory_weight_ancient=%d\n", CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT);
+
+    fprintf(fp, "\n# Memory System Age Thresholds\n");
+    fprintf(fp, "memory_age_recent=%d\n", CONFIG_EMOTION_MEMORY_AGE_RECENT);
+    fprintf(fp, "memory_age_fresh=%d\n", CONFIG_EMOTION_MEMORY_AGE_FRESH);
+    fprintf(fp, "memory_age_moderate=%d\n", CONFIG_EMOTION_MEMORY_AGE_MODERATE);
+    fprintf(fp, "memory_age_old=%d\n", CONFIG_EMOTION_MEMORY_AGE_OLD);
+
+    fprintf(fp, "\n# Memory System Baseline\n");
+    fprintf(fp, "memory_baseline_offset=%d\n", CONFIG_EMOTION_MEMORY_BASELINE_OFFSET);
+
+    fclose(fp);
+
+    send_to_char(ch, "Emotion configuration exported to: %s\r\n", filename);
+    mudlog(BRF, LVL_IMMORT, TRUE, "(GC) %s exported emotion config to %s", GET_NAME(ch), filename);
+}
+
+/* Import emotion configuration from file */
+ACMD(do_emotionimport)
+{
+    FILE *fp;
+    char filename[MAX_INPUT_LENGTH];
+    char arg[MAX_INPUT_LENGTH];
+    char line[256], key[128], value[128];
+    int imported = 0;
+
+    one_argument(argument, arg);
+
+    if (!*arg) {
+        send_to_char(ch, "Usage: emotionimport <filename>\r\n");
+        return;
+    }
+
+    snprintf(filename, sizeof(filename), "lib/misc/emotion_%s.cfg", arg);
+
+    if (!(fp = fopen(filename, "r"))) {
+        send_to_char(ch, "Could not open file '%s'.\r\n", filename);
+        return;
+    }
+
+    send_to_char(ch, "Importing emotion configuration from: %s\r\n", filename);
+
+    while (fgets(line, sizeof(line), fp)) {
+        /* Skip comments and empty lines */
+        if (line[0] == '#' || line[0] == '\n' || line[0] == '\r')
+            continue;
+
+        /* Parse key=value */
+        if (sscanf(line, "%127[^=]=%127s", key, value) == 2) {
+            int val = atoi(value);
+
+            /* Display thresholds */
+            if (!strcmp(key, "display_fear_threshold"))
+                CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "display_anger_threshold"))
+                CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "display_happiness_threshold"))
+                CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "display_sadness_threshold"))
+                CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "display_horror_threshold"))
+                CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "display_pain_threshold"))
+                CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD = LIMIT(val, 0, 100);
+
+            /* Flee thresholds */
+            else if (!strcmp(key, "flee_fear_low_threshold"))
+                CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "flee_fear_high_threshold"))
+                CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "flee_courage_low_threshold"))
+                CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "flee_courage_high_threshold"))
+                CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "flee_horror_threshold"))
+                CONFIG_EMOTION_FLEE_HORROR_THRESHOLD = LIMIT(val, 0, 100);
+
+            /* Flee modifiers */
+            else if (!strcmp(key, "flee_fear_low_modifier"))
+                CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER = LIMIT(val, -100, 100);
+            else if (!strcmp(key, "flee_fear_high_modifier"))
+                CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER = LIMIT(val, -100, 100);
+            else if (!strcmp(key, "flee_courage_low_modifier"))
+                CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER = LIMIT(val, -100, 100);
+            else if (!strcmp(key, "flee_courage_high_modifier"))
+                CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER = LIMIT(val, -100, 100);
+            else if (!strcmp(key, "flee_horror_modifier"))
+                CONFIG_EMOTION_FLEE_HORROR_MODIFIER = LIMIT(val, -100, 100);
+
+            /* Pain thresholds */
+            else if (!strcmp(key, "pain_damage_minor_threshold"))
+                CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_damage_moderate_threshold"))
+                CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_damage_heavy_threshold"))
+                CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_damage_massive_threshold"))
+                CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD = LIMIT(val, 0, 100);
+
+            /* Pain amounts */
+            else if (!strcmp(key, "pain_minor_min"))
+                CONFIG_EMOTION_PAIN_MINOR_MIN = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_minor_max"))
+                CONFIG_EMOTION_PAIN_MINOR_MAX = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_moderate_min"))
+                CONFIG_EMOTION_PAIN_MODERATE_MIN = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_moderate_max"))
+                CONFIG_EMOTION_PAIN_MODERATE_MAX = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_heavy_min"))
+                CONFIG_EMOTION_PAIN_HEAVY_MIN = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_heavy_max"))
+                CONFIG_EMOTION_PAIN_HEAVY_MAX = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_massive_min"))
+                CONFIG_EMOTION_PAIN_MASSIVE_MIN = LIMIT(val, 0, 100);
+            else if (!strcmp(key, "pain_massive_max"))
+                CONFIG_EMOTION_PAIN_MASSIVE_MAX = LIMIT(val, 0, 100);
+
+            /* Memory weights */
+            else if (!strcmp(key, "memory_weight_recent"))
+                CONFIG_EMOTION_MEMORY_WEIGHT_RECENT = LIMIT(val, 1, 10);
+            else if (!strcmp(key, "memory_weight_fresh"))
+                CONFIG_EMOTION_MEMORY_WEIGHT_FRESH = LIMIT(val, 1, 10);
+            else if (!strcmp(key, "memory_weight_moderate"))
+                CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE = LIMIT(val, 1, 10);
+            else if (!strcmp(key, "memory_weight_old"))
+                CONFIG_EMOTION_MEMORY_WEIGHT_OLD = LIMIT(val, 1, 10);
+            else if (!strcmp(key, "memory_weight_ancient"))
+                CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT = LIMIT(val, 1, 10);
+
+            /* Memory ages */
+            else if (!strcmp(key, "memory_age_recent"))
+                CONFIG_EMOTION_MEMORY_AGE_RECENT = MAX(val, 1);
+            else if (!strcmp(key, "memory_age_fresh"))
+                CONFIG_EMOTION_MEMORY_AGE_FRESH = MAX(val, 1);
+            else if (!strcmp(key, "memory_age_moderate"))
+                CONFIG_EMOTION_MEMORY_AGE_MODERATE = MAX(val, 1);
+            else if (!strcmp(key, "memory_age_old"))
+                CONFIG_EMOTION_MEMORY_AGE_OLD = MAX(val, 1);
+
+            /* Memory baseline */
+            else if (!strcmp(key, "memory_baseline_offset"))
+                CONFIG_EMOTION_MEMORY_BASELINE_OFFSET = LIMIT(val, 0, 100);
+            else
+                continue; /* Unknown key, skip */
+
+            imported++;
+        }
+    }
+
+    fclose(fp);
+
+    send_to_char(ch, "Import complete. %d values loaded.\r\n", imported);
+    send_to_char(ch, "Use 'cedit' and save to persist these changes.\r\n");
+    mudlog(BRF, LVL_IMMORT, TRUE, "(GC) %s imported emotion config from %s (%d values)", GET_NAME(ch), filename,
+           imported);
+}

@@ -424,6 +424,8 @@ ACMD(do_portal);
 ACMD(do_disable);
 ACMD(do_enable);
 ACMD(do_emotionconfig);
+ACMD(do_emotionexport);
+ACMD(do_emotionimport);
 
 void init_disabled_commands(void);
 bool is_command_disabled(int cmd_num);
