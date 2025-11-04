@@ -2,11 +2,6 @@
 lamento_da_alma_ambiente~
 0 b 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-* Trigger aleatório para a Alma Penada.
 if %self.fighting%
   halt
 end
@@ -56,10 +51,6 @@ switch %i%
 saudacao_da_alma~
 0 g 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 * Trigger de Saudação (g) para a Alma Penada.
 if %self.fighting%
   halt
@@ -70,10 +61,6 @@ emote 	Yolha para %actor.name%, um frio sobrenatural preenchendo o ar.	n
 lamento_da_alma_morte~
 0 f 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 * Trigger de Morte (f) para a Alma Penada.
 emote 	Wsolta um último suspiro que soa menos a dor e mais a alívio.	n
 say 	cFinalmente... paz...	n
@@ -83,11 +70,7 @@ emote 	Wdissolve-se numa poeira de luz pálida.	n
 sussurros_da_floresta~
 2 ab 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-* Trigger Global (a) de Sala (2). Dispara a cada ~5 minutos em toda a zona.
+* Trigger dos sussuros. Dispara em toda zona
 set i %random.20%
 switch %i%
   case 0
@@ -110,10 +93,6 @@ switch %i%
 kodama_ambiente~
 0 b 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 * Trigger aleatório para o Kodama Desnaturado
 if %self.fighting%
   halt
@@ -137,14 +116,10 @@ switch %i%
 kodama_combate~
 0 k 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 * Trigger de Combate (k) para o Kodama Desnaturado
 switch %random.4%
   case 0
-    say 	R'Juntem-se a nós no apodrecimento!'	n
+    say 	R'Junte-se a nós no apodrecimento!'	n
     halt
   case 1
     emote 	Yruge, e a seiva negra do seu braço-arma ferve e sibila.	n
@@ -157,10 +132,6 @@ switch %random.4%
 kappa_combate~
 0 k 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 * Trigger de Combate (k) para o Kappa do Lodo
 set i %random.10%
 switch %i%
@@ -178,14 +149,10 @@ switch %i%
 eremita_transformacao~
 0 fk 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 * Trigger de Combate (k) que dispara uma vez para transformar o Eremita.
 emote 	Yao ser atingido, o corpo do eremita frágil dissolve-se numa poça de lodo borbulhante!	n
 say 	R'GRRRRAAAAAAAARRRGGGHHH!'	n
-emote 	YDo chão, uma monstruosidade de lama e ossos ergue-se, virando os seus olhos brilhantes para %actor.name%!	n
+%echo% 	YDo chão, uma monstruosidade de lama e ossos ergue-se, virando os seus olhos brilhantes para %actor.name%!	n
 %load% mob 15210
 %purge% %self%
 ~
@@ -193,17 +160,13 @@ emote 	YDo chão, uma monstruosidade de lama e ossos ergue-se, virando os seus o
 furia_do_pantano_nascimento~
 0 n 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 * Anúncio global para toda a zona, o prenúncio da desgraça.
 %zoneecho% %self.vnum% 	RDas profundezas do pântano, um rugido silencioso ecoa, não nos ouvidos, mas na alma de cada ser vivo. A Fúria despertou.	n
 %load% obj 15222 %self% neck1
 %load% obj 15239 %self% waist
 wait 2s
-%emote% 	gabre a sua bocarra de lodo e galhos e solta um rugido que não é som, mas pura força sísmica. O chão sob os seus pés racha e ondula violentamente!	n
-dg_cast 'earthquake' %self%
+emote 	gabre a sua bocarra de lodo e galhos e solta um rugido que não é som, mas pura força sísmica. O chão sob os seus pés racha e ondula violentamente!	n
+dg_cast 'earthquake'
 wait 2s
 set vict %random.char%
 if %vict% && !isnpc(%vict%)
@@ -214,10 +177,6 @@ end
 Veneno aranha~
 0 k 10
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 %send% %actor% %self.name% te mordeu!
 %echoaround% %actor% %self.name% morde %actor.name%.
 dg_cast 'poison' %actor%
@@ -225,12 +184,18 @@ dg_cast 'poison' %actor%
 #15210
 sussurro_da_camelia~
 2 c 4
-touch~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %arg% == flor || %arg% == camelia
+tou~
+if %cmd.mudcommand% /= touch && flor /= %arg% || camelia /= %arg%
+%send% %actor% Quando a sua mão mortal ousa tocar as pétalas da camélia, um 	wfulgor prateado	n, puro como uma lágrima de estrela, emana da flor. A muralha de espinhos, negra como a traição de um rei, 	gretorce-se e geme	n, não de dor, mas de uma vontade antiga a ser quebrada. Galhos grossos como braços de guerreiros recuam, revelando um caminho de 	mluz serena	n para o leste onde antes só havia desespero.
+%echoaround% %actor% Ao toque de %actor.name%, a camélia solitária irrompe em 	wluz prateada	n. Com um protesto rangente, como mil escudos a serem partidos, a 	gmuralha de espinhos	n abre-se, revelando um caminho secreto para o leste.
+%door% 15214 east flags a
+%door% 15214 east room 15248
+%door% 15214 east name passagem muralha espinhos
+%door% 15214 east description O Grande Portão de Shizuka brilha com uma luz suave para além dos espinhos.
+wait 10s
+%door% 15214 east purge
+%echo% O caminho de luz desvanece-se. Com o som de 	grochas a ranger e uma fome antiga	n, a muralha de espinhos volta a selar a passagem, não deixando para trás nem mesmo a memória da sua abertura.
+elseif %cmd.mudcommand% /= touch && camelia /= %arg% || flor /= %arg%
 %send% %actor% Quando a sua mão mortal ousa tocar as pétalas da camélia, um 	wfulgor prateado	n, puro como uma lágrima de estrela, emana da flor. A muralha de espinhos, negra como a traição de um rei, 	gretorce-se e geme	n, não de dor, mas de uma vontade antiga a ser quebrada. Galhos grossos como braços de guerreiros recuam, revelando um caminho de 	mluz serena	n para o leste onde antes só havia desespero.
 %echoaround% %actor% Ao toque de %actor.name%, a camélia solitária irrompe em 	wluz prateada	n. Com um protesto rangente, como mil escudos a serem partidos, a 	gmuralha de espinhos	n abre-se, revelando um caminho secreto para o leste.
 %door% 15214 east flags a
@@ -242,36 +207,20 @@ wait 10s
 %echo% O caminho de luz desvanece-se. Com o som de 	grochas a ranger e uma fome antiga	n, a muralha de espinhos volta a selar a passagem, não deixando para trás nem mesmo a memória da sua abertura.
 else
 Return 0
+end
 ~
 #15211
 orbe_eterno_drop~
-1 c 2
-drop~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %cmd.mudcommand% == drop && orbe /= %arg%
-%send% %actor% Você atira o orbe no chão, e um som 	múmido	n, como o de um osso a partir-se na lama, ecoa. Ele não quica; ele se achata, desfazendo-se numa 	gpoça de musgo líquido	n que borbulha. Das profundezas da poça, uma risada antiga e afogada borbulha em sua mente. O lodo então sobe pela sua perna, uma carícia gelada, e reforma-se no seu bolso, agora pulsando com uma fome fria.	n
-%echoaround% %actor% O orbe de %actor.name% derrete numa poça nojenta ao tocar o chão, apenas para se arrastar de volta para %actor.name%.
-elseif %cmd.mudcommand% == drop && musgo /= %arg%
-%send% %actor% Você atira o orbe no chão, e um som 	múmido	n, como o de um osso a partir-se na lama, ecoa. Ele não quica; ele se achata, desfazendo-se numa 	gpoça de musgo líquido	n que borbulha. Das profundezas da poça, uma risada antiga e afogada borbulha em sua mente. O lodo então sobe pela sua perna, uma carícia gelada, e reforma-se no seu bolso, agora pulsando com uma fome fria.	n
-%echoaround% %actor% O orbe de %actor.name% derrete numa poça nojenta ao tocar o chão, apenas para se arrastar de volta para %actor.hisher% pessoa.
-elseif %cmd.mudcommand% == drop && all /= %arg%
-%send% %actor% Você atira o orbe no chão, e um som 	múmido	n, como o de um osso a partir-se na lama, ecoa. Ele não quica; ele se achata, desfazendo-se numa 	gpoça de musgo líquido	n que borbulha. Das profundezas da poça, uma risada antiga e afogada borbulha em sua mente. O lodo então sobe pela sua perna, uma carícia gelada, e reforma-se no seu bolso, agora pulsando com uma fome fria.	n
-%echoaround% %actor% O orbe de %actor.name% derrete numa poça nojenta ao tocar o chão, apenas para se arrastar de volta para %actor.hisher% pessoa.
-else
+1 h 100
+~
+%send% %actor% O orbe de musgo reage com @rfúria @nquando você tenta se separar dele. Filamentos de uma substância viscosa o seguram, filamentos que pulsam com uma vontade própria e aterradora. A orbe irrompe com uma @wluz anêmica e pálida@n, e seus sussurros tornam-se gritos agônicos numa língua morta. Você sente a presença gélida da floresta concentrando-se no objeto, seus fios negros ondulando como serpentes enfurecidas, recusando qualquer separação. @cNão... nunca... somente você... @n.
+%echoaround% %actor% %actor.name% tenta desesperadamente se separar do orbe, mas ele retorna sempre para suas mãos. %actor.name% está condenado a carregá-lo. 
 return 0
-end
 ~
 #15212
 presente_indesejado~
 2 bg 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 if %actor.is_pc% && %actor.class% == Ranger && !%actor.has_item(15259)%
   %send% %actor% 	cDo canto do olho, você vê algo escuro a cair de um galho acima de si. Antes que possa reagir, a coisa aterra suavemente no bolso da sua mochila com um som úmido e discreto.	n
   %load% obj 15259 %actor%
@@ -289,11 +238,7 @@ halt
 orbe_eterno_give~
 1 i 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-set victim_name %actor.arg%
+set victim_name %actor.name%
 if %victim%
   %send% %actor% 	yVocê estende a mão para entregar o orbe a %victim.name%, mas no instante em que os dedos tocam o musgo, ele se dissolve em pó. Um novo orbe, frio e úmido, materializa-se na sua palma vazia. Você não pode partilhar o seu fardo.	n
   %send% %victim% %actor.name% tenta dar-lhe um orbe de musgo, mas ele se desfaz em pó antes que você possa pegá-lo.
@@ -302,18 +247,14 @@ return 0
 #15214
 orbe_eterno_junk~
 1 c 2
-junk~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %cmd.mudcommand% == junk && orbe /= %arg%
+j~
+if %cmd.mudcommand% /= junk && orbe /= %arg%
 %send% %actor% Num acesso de fúria, você tenta esmagar o orbe, mas ele cede sob a sua força como 	rcarne podre	n. Uma dor aguda floresce no seu peito, e você sente algo a contorcer-se atrás dos seus olhos. O orbe reforma-se na sua mão, e os sussurros agora falam com a sua própria voz: 	y'Nós somos um. Tentar ferir-me é ferir a ti mesmo.'	n
 %echoaround% %actor% %actor.name% grita de dor ao tentar destruir o orbe, que pulsa com uma 	rluz doentia	n e permanece intacto.
-elseif %cmd.mudcommand% == junk && musgo /= %arg%
+elseif %cmd.mudcommand% /= junk && musgo /= %arg%
 %send% %actor% Num acesso de fúria, você tenta esmagar o orbe, mas ele cede sob a sua força como 	rcarne podre	n. Uma dor aguda floresce no seu peito, e você sente algo a contorcer-se atrás dos seus olhos. O orbe reforma-se na sua mão, e os sussurros agora falam com a sua própria voz: 	y'Nós somos um. Tentar ferir-me é ferir a ti mesmo.'	n
 %echoaround% %actor% %actor.name% grita de dor ao tentar destruir o orbe, que pulsa com uma 	rluz doentia	n e permanece intacto.
-elseif %cmd.mudcommand% == junk && all /= %arg%
+elseif %cmd.mudcommand% /= junk && all /= %arg%
 %send% %actor% Num acesso de fúria, você tenta esmagar o orbe, mas ele cede sob a sua força como 	rcarne podre	n. Uma dor aguda floresce no seu peito, e você sente algo a contorcer-se atrás dos seus olhos. O orbe reforma-se na sua mão, e os sussurros agora falam com a sua própria voz: 	y'Nós somos um. Tentar ferir-me é ferir a ti mesmo.'	n
 %echoaround% %actor% %actor.name% grita de dor ao tentar destruir o orbe, que pulsa com uma 	rluz doentia	n e permanece intacto.
 else
@@ -323,19 +264,15 @@ end
 #15215
 orbe_eterno_put~
 1 c 2
-put~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %cmd.mudcommand% == put && orbe /= %arg%
-%send% %actor% Você tenta selar o orbe num recipiente, mas no momento em que ele é envolvido pela escuridão, um 	pterror claustrofóbico	n inunda a sua alma. Finos 	gtentáculos de musgo	n emergem do objeto, agarrando-se às paredes do recipiente e à sua mão, puxando-o de volta para a luz do seu inventário. Ele não suporta ser aprisionado. Ele precisa de si.	n
+p~
+if %cmd.mudcommand% /= put && orbe /= %arg%
+%send% %actor% Você tenta selar o orbe num recipiente, mas no momento em que ele é envolvido pela escuridão, um 	wterror claustrofóbico	n inunda a sua alma. Finos 	gtentáculos de musgo	n emergem do objeto, agarrando-se à sua mão, puxando-o de volta para a luz do seu inventário. Ele não suporta ser aprisionado. Ele precisa de você.	n
 %echoaround% %actor% %actor.name% tenta guardar o orbe, mas o objeto parece lutar e saltar de volta para as suas mãos por vontade própria.
-elseif %cmd.mudcommand% == put && musgo /= %arg%
-%send% %actor% Você tenta selar o orbe num recipiente, mas no momento em que ele é envolvido pela escuridão, um 	pterror claustrofóbico	n inunda a sua alma. Finos 	gtentáculos de musgo	n emergem do objeto, agarrando-se às paredes do recipiente e à sua mão, puxando-o de volta para a luz do seu inventário. Ele não suporta ser aprisionado. Ele precisa de si.	n
+elseif %cmd.mudcommand% /= put && musgo /= %arg%
+%send% %actor% Você tenta selar o orbe num recipiente, mas no momento em que ele é envolvido pela escuridão, um 	wterror claustrofóbico	n inunda a sua alma. Finos 	gtentáculos de musgo	n emergem do objeto, agarrando-se à sua mão, puxando-o de volta para a luz do seu inventário. Ele não suporta ser aprisionado. Ele precisa de você.	n
 %echoaround% %actor% %actor.name% tenta guardar o orbe, mas o objeto parece lutar e saltar de volta para as suas mãos por vontade própria.
-elseif %cmd.mudcommand% == put && all /= %arg%
-%send% %actor% Você tenta selar o orbe num recipiente, mas no momento em que ele é envolvido pela escuridão, um 	pterror claustrofóbico	n inunda a sua alma. Finos 	gtentáculos de musgo	n emergem do objeto, agarrando-se às paredes do recipiente e à sua mão, puxando-o de volta para a luz do seu inventário. Ele não suporta ser aprisionado. Ele precisa de si.	n
+elseif %cmd.mudcommand% /= put && all /= %arg%
+%send% %actor% Você tenta selar o orbe num recipiente, mas no momento em que ele é envolvido pela escuridão, um 	wterror claustrofóbico	n inunda a sua alma. Finos 	gtentáculos de musgo	n emergem do objeto, agarrando-se à sua mão, puxando-o de volta para a luz do seu inventário. Ele não suporta ser aprisionado. Ele precisa de você.	n
 %echoaround% %actor% %actor.name% tenta guardar o orbe, mas o objeto parece lutar e saltar de volta para as suas mãos por vontade própria.
 else
 return 0
@@ -344,14 +281,14 @@ end
 #15216
 orbe_eterno_donate~
 1 c 2
-donate~
-if %cmd.mudcommand% == donate && orbe /= %arg%
+don~
+if %cmd.mudcommand% /= donate && orbe /= %arg%
 %send% %actor% Com uma prece silenciosa, você oferece o orbe ao abismo das doações. Ele cai... mas o silêncio que se segue é quebrado por um 	cvento gelado	n que sobe do fosso. O orbe flutua de volta, parando diante do seu rosto. Os sussurros são claros pela primeira vez: 	y'Tolos não podem doar o que já foi reivindicado. E nós reivindicamos-te.'	n
 %echoaround% %actor% %actor.name% atira o orbe para doação, mas um 	cvento misterioso	n o devolve diretamente para a sua mão.
-elseif %cmd.mudcommand% == donate && musgo /= %arg%
+elseif %cmd.mudcommand% /= donate && musgo /= %arg%
 %send% %actor% Com uma prece silenciosa, você oferece o orbe ao abismo das doações. Ele cai... mas o silêncio que se segue é quebrado por um 	cvento gelado	n que sobe do fosso. O orbe flutua de volta, parando diante do seu rosto. Os sussurros são claros pela primeira vez: 	y'Tolos não podem doar o que já foi reivindicado. E nós reivindicamos-te.'	n
 %echoaround% %actor% %actor.name% atira o orbe para doação, mas um 	cvento misterioso	n o devolve diretamente para a sua mão.
-elseif %cmd.mudcommand% == donate && all /= %arg%
+elseif %cmd.mudcommand% /= donate && all /= %arg%
 %send% %actor% Com uma prece silenciosa, você oferece o orbe ao abismo das doações. Ele cai... mas o silêncio que se segue é quebrado por um 	cvento gelado	n que sobe do fosso. O orbe flutua de volta, parando diante do seu rosto. Os sussurros são claros pela primeira vez: 	y'Tolos não podem doar o que já foi reivindicado. E nós reivindicamos-te.'	n
 %echoaround% %actor% %actor.name% atira o orbe para doação, mas um 	cvento misterioso	n o devolve diretamente para a sua mão.
 else
@@ -362,10 +299,6 @@ end
 purificacao_da_lamina~
 1 l 0
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 if %self.room.vnum% == 15248
   wait 1s
   %echoaround% %actor% 	wUm zumbido baixo e harmonioso emana do Grande Portão de Shizuka, a sua luz prateada focando-se com uma intensidade súbita na lâmina negra empunhada por %actor.name%.	n
@@ -390,15 +323,12 @@ end
 guardiao_do_portao_shizuka~
 2 q 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 if %direction% == north
   if %actor.is_pc% && %actor.eq(wield)%
     %send% %actor% 	wQuando você tenta avançar para além do portão, uma barreira de luz prateada ondula no ar à sua frente. A arma em sua mão parece pesar uma tonelada, uma profanação que o impede de prosseguir. A voz sem som ecoa em sua mente: 	y'Somente os puros de coração e de mãos podem entrar. Remova seu aço.'	n
     %echoaround% %actor% Uma barreira de luz prateada bloqueia a passagem de %actor.name%, que recua do caminho ao norte.
     return 0
+end
 else
 * Permite o movimento em todos os outros casos (outras direções, desarmado, etc.).
 return 1
@@ -408,10 +338,6 @@ end
 trilha_confusa_labirinto~
 2 q 90
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 if %actor.is_pc%
   %send% %actor% 	yVocê tenta seguir a trilha, mas as 	gárvores retorcidas	y parecem zombar da sua noção de direção. Os seus pés movem-se, mas o cenário de pesadelo não muda. 	rApós alguns passos, você se encontra exatamente onde começou.	n
   %echoaround% %actor% 	g%actor.name%	y caminha em círculos, parecendo completamente perdido, e retorna ao centro da sala com uma expressão de frustração.	n
@@ -424,32 +350,35 @@ end
 #15220
 sussurro_da_camelia_retorno~
 2 c 4
-touch~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %arg% == flor || %arg% == camelia
+tou~
+if %cmd.mudcommand% /= touch && flor /= %arg% || camelia /= %arg%
 %send% %actor% Quando a sua mão mortal ousa tocar as pétalas da camélia, um 	wfulgor prateado	n, puro como uma lágrima de estrela, emana da flor. A muralha de espinhos, negra como a traição de um rei, 	gretorce-se e geme	n, não de dor, mas de uma vontade antiga a ser quebrada. Galhos grossos como braços de guerreiros recuam, revelando o caminho de volta para os horrores da floresta.
 %echoaround% %actor% Ao toque de %actor.name%, a camélia solitária irrompe em 	wluz prateada	n. Com um protesto rangente, como mil escudos a serem partidos, a 	gmuralha de espinhos	n abre-se, revelando um caminho secreto para o oeste.
 %door% 15248 west flags a
 %door% 15248 west room 15214
-%door% 15248 wast name passagem muralha espinhos
+%door% 15248 west name passagem muralha espinhos
+%door% 15248 west description A floresta sussura ao oeste.
+wait 10s
+%door% 15248 west purge
+%echo% O caminho desvanece-se. Com o som de 	grochas a ranger e uma fome antiga	n, a muralha de espinhos volta a selar a passagem, não deixando para trás nem mesmo a memória da sua abertura.
+elseif %cmd.mudcommand% /= touch && camelia /= %arg% || flor /= %arg%
+%send% %actor% Quando a sua mão mortal ousa tocar as pétalas da camélia, um 	wfulgor prateado	n, puro como uma lágrima de estrela, emana da flor. A muralha de espinhos, negra como a traição de um rei, 	gretorce-se e geme	n, não de dor, mas de uma vontade antiga a ser quebrada. Galhos grossos como braços de guerreiros recuam, revelando o caminho de volta para os horrores da floresta.
+%echoaround% %actor% Ao toque de %actor.name%, a camélia solitária irrompe em 	wluz prateada	n. Com um protesto rangente, como mil escudos a serem partidos, a 	gmuralha de espinhos	n abre-se, revelando um caminho secreto para o oeste.
+%door% 15248 west flags a
+%door% 15248 west room 15214
+%door% 15248 west name passagem muralha espinhos
 %door% 15248 west description A floresta sussura ao oeste.
 wait 10s
 %door% 15248 west purge
 %echo% O caminho desvanece-se. Com o som de 	grochas a ranger e uma fome antiga	n, a muralha de espinhos volta a selar a passagem, não deixando para trás nem mesmo a memória da sua abertura.
 else
 Return 0
+end
 ~
 #15221
 Lojista Pocoes - Aleatorios~
 0 n 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 * Criar array com todos os 85 vnums
 eval item1 205
 eval item2 302
@@ -612,10 +541,6 @@ eval vnum10 %%item%random10%%%
 Lojista Pergaminhos - Aleatorios~
 0 n 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 * Criar array com todos os 52 pergaminhos
 eval perg1 206
 eval perg2 720
@@ -804,18 +729,11 @@ eval vnum10 %%perg%random10%%%
 %load% obj %vnum10%
 %load% obj %vnum10%
 %load% obj %vnum10%
-* ===============================================
-* FIM DO TRIGGER
-* ===============================================
 ~
 #15223
 Lojista Entalhador de Sonhos - Aleatorios~
 0 n 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 * Criar array com todos os 100 vnums
 eval item1 2312
 eval item2 2335
@@ -993,10 +911,6 @@ eval vnum10 %%item%random10%%%
 Lojista Ferreiro - Aleatórios~
 0 n 100
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 * Criar array com todos os 100 vnums
 eval item1 34
 eval item2 215
@@ -1175,230 +1089,45 @@ eval vnum10 %%item%random10%%%
 Kodama - Drop manto~
 0 f 30
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 %load% obj 15224
 ~
 #15226
 KAPPA - DROP CASCO~
 0 f 30
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 %load% obj 15226
 ~
 #15227
 Kappa - Drop Suneate~
 0 f 30
 ~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
 %load% obj 15240
 ~
 #15228
-orbe_eterno_donat~
+Orbe Sacrifice~
 1 c 2
-donat~
-if %cmd.mudcommand% == donate && orbe /= %arg%
-%send% %actor% Com uma prece silenciosa, você oferece o orbe ao abismo das doações. Ele cai... mas o silêncio que se segue é quebrado por um 	cvento gelado	n que sobe do fosso. O orbe flutua de volta, parando diante do seu rosto. Os sussurros são claros pela primeira vez: 	y'Tolos não podem doar o que já foi reivindicado. E nós reivindicamos-te.'	n
-%echoaround% %actor% %actor.name% atira o orbe para doação, mas um 	cvento misterioso	n o devolve diretamente para a sua mão.
-elseif %cmd.mudcommand% == donate && musgo /= %arg%
-%send% %actor% Com uma prece silenciosa, você oferece o orbe ao abismo das doações. Ele cai... mas o silêncio que se segue é quebrado por um 	cvento gelado	n que sobe do fosso. O orbe flutua de volta, parando diante do seu rosto. Os sussurros são claros pela primeira vez: 	y'Tolos não podem doar o que já foi reivindicado. E nós reivindicamos-te.'	n
-%echoaround% %actor% %actor.name% atira o orbe para doação, mas um 	cvento misterioso	n o devolve diretamente para a sua mão.
-elseif %cmd.mudcommand% == donate && all /= %arg%
-%send% %actor% Com uma prece silenciosa, você oferece o orbe ao abismo das doações. Ele cai... mas o silêncio que se segue é quebrado por um 	cvento gelado	n que sobe do fosso. O orbe flutua de volta, parando diante do seu rosto. Os sussurros são claros pela primeira vez: 	y'Tolos não podem doar o que já foi reivindicado. E nós reivindicamos-te.'	n
-%echoaround% %actor% %actor.name% atira o orbe para doação, mas um 	cvento misterioso	n o devolve diretamente para a sua mão.
-else
-return 0
-end
-~
-#15229
-orbe_eterno_dona~
-1 c 2
-dona~
-if %cmd.mudcommand% == donate && orbe /= %arg%
-%send% %actor% Com uma prece silenciosa, você oferece o orbe ao abismo das doações. Ele cai... mas o silêncio que se segue é quebrado por um 	cvento gelado	n que sobe do fosso. O orbe flutua de volta, parando diante do seu rosto. Os sussurros são claros pela primeira vez: 	y'Tolos não podem doar o que já foi reivindicado. E nós reivindicamos-te.'	n
-%echoaround% %actor% %actor.name% atira o orbe para doação, mas um 	cvento misterioso	n o devolve diretamente para a sua mão.
-elseif %cmd.mudcommand% == donate && musgo /= %arg%
-%send% %actor% Com uma prece silenciosa, você oferece o orbe ao abismo das doações. Ele cai... mas o silêncio que se segue é quebrado por um 	cvento gelado	n que sobe do fosso. O orbe flutua de volta, parando diante do seu rosto. Os sussurros são claros pela primeira vez: 	y'Tolos não podem doar o que já foi reivindicado. E nós reivindicamos-te.'	n
-%echoaround% %actor% %actor.name% atira o orbe para doação, mas um 	cvento misterioso	n o devolve diretamente para a sua mão.
-elseif %cmd.mudcommand% == donate && all /= %arg%
-%send% %actor% Com uma prece silenciosa, você oferece o orbe ao abismo das doações. Ele cai... mas o silêncio que se segue é quebrado por um 	cvento gelado	n que sobe do fosso. O orbe flutua de volta, parando diante do seu rosto. Os sussurros são claros pela primeira vez: 	y'Tolos não podem doar o que já foi reivindicado. E nós reivindicamos-te.'	n
-%echoaround% %actor% %actor.name% atira o orbe para doação, mas um 	cvento misterioso	n o devolve diretamente para a sua mão.
-else
-return 0
-end
-~
-#15230
-orbe_eterno_don~
-1 c 2
-don~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %cmd.mudcommand% == donate && orbe /= %arg%
-%send% %actor% Com uma prece silenciosa, você oferece o orbe ao abismo das doações. Ele cai... mas o silêncio que se segue é quebrado por um 	cvento gelado	n que sobe do fosso. O orbe flutua de volta, parando diante do seu rosto. Os sussurros são claros pela primeira vez: 	y'Tolos não podem doar o que já foi reivindicado. E nós reivindicamos-te.'	n
-%echoaround% %actor% %actor.name% atira o orbe para doação, mas um 	cvento misterioso	n o devolve diretamente para a sua mão.
-elseif %cmd.mudcommand% == donate && musgo /= %arg%
-%send% %actor% Com uma prece silenciosa, você oferece o orbe ao abismo das doações. Ele cai... mas o silêncio que se segue é quebrado por um 	cvento gelado	n que sobe do fosso. O orbe flutua de volta, parando diante do seu rosto. Os sussurros são claros pela primeira vez: 	y'Tolos não podem doar o que já foi reivindicado. E nós reivindicamos-te.'	n
-%echoaround% %actor% %actor.name% atira o orbe para doação, mas um 	cvento misterioso	n o devolve diretamente para a sua mão.
-elseif %cmd.mudcommand% == donate && all /= %arg%
-%send% %actor% Com uma prece silenciosa, você oferece o orbe ao abismo das doações. Ele cai... mas o silêncio que se segue é quebrado por um 	cvento gelado	n que sobe do fosso. O orbe flutua de volta, parando diante do seu rosto. Os sussurros são claros pela primeira vez: 	y'Tolos não podem doar o que já foi reivindicado. E nós reivindicamos-te.'	n
-%echoaround% %actor% %actor.name% atira o orbe para doação, mas um 	cvento misterioso	n o devolve diretamente para a sua mão.
-else
-return 0
-end
-~
-#15231
-orbe_eterno_dro~
-1 c 2
-dro~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %cmd.mudcommand% == drop && orbe /= %arg%
-%send% %actor% Você atira o orbe no chão, e um som 	múmido	n, como o de um osso a partir-se na lama, ecoa. Ele não quica; ele se achata, desfazendo-se numa 	gpoça de musgo líquido	n que borbulha. Das profundezas da poça, uma risada antiga e afogada borbulha em sua mente. O lodo então sobe pela sua perna, uma carícia gelada, e reforma-se no seu bolso, agora pulsando com uma fome fria.	n
-%echoaround% %actor% O orbe de %actor.name% derrete numa poça nojenta ao tocar o chão, apenas para se arrastar de volta para %actor.name%.
-elseif %cmd.mudcommand% == drop && musgo /= %arg%
-%send% %actor% Você atira o orbe no chão, e um som 	múmido	n, como o de um osso a partir-se na lama, ecoa. Ele não quica; ele se achata, desfazendo-se numa 	gpoça de musgo líquido	n que borbulha. Das profundezas da poça, uma risada antiga e afogada borbulha em sua mente. O lodo então sobe pela sua perna, uma carícia gelada, e reforma-se no seu bolso, agora pulsando com uma fome fria.	n
-%echoaround% %actor% O orbe de %actor.name% derrete numa poça nojenta ao tocar o chão, apenas para se arrastar de volta para %actor.hisher% pessoa.
-elseif %cmd.mudcommand% == drop && all /= %arg%
-%send% %actor% Você atira o orbe no chão, e um som 	múmido	n, como o de um osso a partir-se na lama, ecoa. Ele não quica; ele se achata, desfazendo-se numa 	gpoça de musgo líquido	n que borbulha. Das profundezas da poça, uma risada antiga e afogada borbulha em sua mente. O lodo então sobe pela sua perna, uma carícia gelada, e reforma-se no seu bolso, agora pulsando com uma fome fria.	n
-%echoaround% %actor% O orbe de %actor.name% derrete numa poça nojenta ao tocar o chão, apenas para se arrastar de volta para %actor.hisher% pessoa.
-else
-return 0
-end
-~
-#15232
-orbe_eterno_dr~
-1 c 2
-dr~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %cmd.mudcommand% == drop && orbe /= %arg%
-%send% %actor% Você atira o orbe no chão, e um som 	múmido	n, como o de um osso a partir-se na lama, ecoa. Ele não quica; ele se achata, desfazendo-se numa 	gpoça de musgo líquido	n que borbulha. Das profundezas da poça, uma risada antiga e afogada borbulha em sua mente. O lodo então sobe pela sua perna, uma carícia gelada, e reforma-se no seu bolso, agora pulsando com uma fome fria.	n
-%echoaround% %actor% O orbe de %actor.name% derrete numa poça nojenta ao tocar o chão, apenas para se arrastar de volta para %actor.name%.
-elseif %cmd.mudcommand% == drop && musgo /= %arg%
-%send% %actor% Você atira o orbe no chão, e um som 	múmido	n, como o de um osso a partir-se na lama, ecoa. Ele não quica; ele se achata, desfazendo-se numa 	gpoça de musgo líquido	n que borbulha. Das profundezas da poça, uma risada antiga e afogada borbulha em sua mente. O lodo então sobe pela sua perna, uma carícia gelada, e reforma-se no seu bolso, agora pulsando com uma fome fria.	n
-%echoaround% %actor% O orbe de %actor.name% derrete numa poça nojenta ao tocar o chão, apenas para se arrastar de volta para %actor.hisher% pessoa.
-elseif %cmd.mudcommand% == drop && all /= %arg%
-%send% %actor% Você atira o orbe no chão, e um som 	múmido	n, como o de um osso a partir-se na lama, ecoa. Ele não quica; ele se achata, desfazendo-se numa 	gpoça de musgo líquido	n que borbulha. Das profundezas da poça, uma risada antiga e afogada borbulha em sua mente. O lodo então sobe pela sua perna, uma carícia gelada, e reforma-se no seu bolso, agora pulsando com uma fome fria.	n
-%echoaround% %actor% O orbe de %actor.name% derrete numa poça nojenta ao tocar o chão, apenas para se arrastar de volta para %actor.hisher% pessoa.
-else
-return 0
-end
-~
-#15233
-orbe_eterno_jun~
-1 c 2
-jun~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %cmd.mudcommand% == junk && orbe /= %arg%
-%send% %actor% Num acesso de fúria, você tenta esmagar o orbe, mas ele cede sob a sua força como 	rcarne podre	n. Uma dor aguda floresce no seu peito, e você sente algo a contorcer-se atrás dos seus olhos. O orbe reforma-se na sua mão, e os sussurros agora falam com a sua própria voz: 	y'Nós somos um. Tentar ferir-me é ferir a ti mesmo.'	n
-%echoaround% %actor% %actor.name% grita de dor ao tentar destruir o orbe, que pulsa com uma 	rluz doentia	n e permanece intacto.
-elseif %cmd.mudcommand% == junk && musgo /= %arg%
-%send% %actor% Num acesso de fúria, você tenta esmagar o orbe, mas ele cede sob a sua força como 	rcarne podre	n. Uma dor aguda floresce no seu peito, e você sente algo a contorcer-se atrás dos seus olhos. O orbe reforma-se na sua mão, e os sussurros agora falam com a sua própria voz: 	y'Nós somos um. Tentar ferir-me é ferir a ti mesmo.'	n
-%echoaround% %actor% %actor.name% grita de dor ao tentar destruir o orbe, que pulsa com uma 	rluz doentia	n e permanece intacto.
-elseif %cmd.mudcommand% == junk && all /= %arg%
-%send% %actor% Num acesso de fúria, você tenta esmagar o orbe, mas ele cede sob a sua força como 	rcarne podre	n. Uma dor aguda floresce no seu peito, e você sente algo a contorcer-se atrás dos seus olhos. O orbe reforma-se na sua mão, e os sussurros agora falam com a sua própria voz: 	y'Nós somos um. Tentar ferir-me é ferir a ti mesmo.'	n
-%echoaround% %actor% %actor.name% grita de dor ao tentar destruir o orbe, que pulsa com uma 	rluz doentia	n e permanece intacto.
-else
-return 0
-end
-~
-#15234
-orbe_eterno_ju~
-1 c 2
-ju~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %cmd.mudcommand% == junk && orbe /= %arg%
-%send% %actor% Num acesso de fúria, você tenta esmagar o orbe, mas ele cede sob a sua força como 	rcarne podre	n. Uma dor aguda floresce no seu peito, e você sente algo a contorcer-se atrás dos seus olhos. O orbe reforma-se na sua mão, e os sussurros agora falam com a sua própria voz: 	y'Nós somos um. Tentar ferir-me é ferir a ti mesmo.'	n
-%echoaround% %actor% %actor.name% grita de dor ao tentar destruir o orbe, que pulsa com uma 	rluz doentia	n e permanece intacto.
-elseif %cmd.mudcommand% == junk && musgo /= %arg%
-%send% %actor% Num acesso de fúria, você tenta esmagar o orbe, mas ele cede sob a sua força como 	rcarne podre	n. Uma dor aguda floresce no seu peito, e você sente algo a contorcer-se atrás dos seus olhos. O orbe reforma-se na sua mão, e os sussurros agora falam com a sua própria voz: 	y'Nós somos um. Tentar ferir-me é ferir a ti mesmo.'	n
-%echoaround% %actor% %actor.name% grita de dor ao tentar destruir o orbe, que pulsa com uma 	rluz doentia	n e permanece intacto.
-elseif %cmd.mudcommand% == junk && all /= %arg%
-%send% %actor% Num acesso de fúria, você tenta esmagar o orbe, mas ele cede sob a sua força como 	rcarne podre	n. Uma dor aguda floresce no seu peito, e você sente algo a contorcer-se atrás dos seus olhos. O orbe reforma-se na sua mão, e os sussurros agora falam com a sua própria voz: 	y'Nós somos um. Tentar ferir-me é ferir a ti mesmo.'	n
-%echoaround% %actor% %actor.name% grita de dor ao tentar destruir o orbe, que pulsa com uma 	rluz doentia	n e permanece intacto.
-else
-return 0
-end
-~
-#15235
-orbe_eterno_j~
-1 c 2
-j~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %cmd.mudcommand% == junk && orbe /= %arg%
-%send% %actor% Num acesso de fúria, você tenta esmagar o orbe, mas ele cede sob a sua força como 	rcarne podre	n. Uma dor aguda floresce no seu peito, e você sente algo a contorcer-se atrás dos seus olhos. O orbe reforma-se na sua mão, e os sussurros agora falam com a sua própria voz: 	y'Nós somos um. Tentar ferir-me é ferir a ti mesmo.'	n
-%echoaround% %actor% %actor.name% grita de dor ao tentar destruir o orbe, que pulsa com uma 	rluz doentia	n e permanece intacto.
-elseif %cmd.mudcommand% == junk && musgo /= %arg%
-%send% %actor% Num acesso de fúria, você tenta esmagar o orbe, mas ele cede sob a sua força como 	rcarne podre	n. Uma dor aguda floresce no seu peito, e você sente algo a contorcer-se atrás dos seus olhos. O orbe reforma-se na sua mão, e os sussurros agora falam com a sua própria voz: 	y'Nós somos um. Tentar ferir-me é ferir a ti mesmo.'	n
-%echoaround% %actor% %actor.name% grita de dor ao tentar destruir o orbe, que pulsa com uma 	rluz doentia	n e permanece intacto.
-elseif %cmd.mudcommand% == junk && all /= %arg%
-%send% %actor% Num acesso de fúria, você tenta esmagar o orbe, mas ele cede sob a sua força como 	rcarne podre	n. Uma dor aguda floresce no seu peito, e você sente algo a contorcer-se atrás dos seus olhos. O orbe reforma-se na sua mão, e os sussurros agora falam com a sua própria voz: 	y'Nós somos um. Tentar ferir-me é ferir a ti mesmo.'	n
-%echoaround% %actor% %actor.name% grita de dor ao tentar destruir o orbe, que pulsa com uma 	rluz doentia	n e permanece intacto.
-else
-return 0
-end
-~
-#15236
-orbe_eterno_pu~
-1 c 2
-pu~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %cmd.mudcommand% == put && orbe /= %arg%
-%send% %actor% Você tenta selar o orbe num recipiente, mas no momento em que ele é envolvido pela escuridão, um 	pterror claustrofóbico	n inunda a sua alma. Finos 	gtentáculos de musgo	n emergem do objeto, agarrando-se às paredes do recipiente e à sua mão, puxando-o de volta para a luz do seu inventário. Ele não suporta ser aprisionado. Ele precisa de si.	n
-%echoaround% %actor% %actor.name% tenta guardar o orbe, mas o objeto parece lutar e saltar de volta para as suas mãos por vontade própria.
-elseif %cmd.mudcommand% == put && musgo /= %arg%
-%send% %actor% Você tenta selar o orbe num recipiente, mas no momento em que ele é envolvido pela escuridão, um 	pterror claustrofóbico	n inunda a sua alma. Finos 	gtentáculos de musgo	n emergem do objeto, agarrando-se às paredes do recipiente e à sua mão, puxando-o de volta para a luz do seu inventário. Ele não suporta ser aprisionado. Ele precisa de si.	n
-%echoaround% %actor% %actor.name% tenta guardar o orbe, mas o objeto parece lutar e saltar de volta para as suas mãos por vontade própria.
-elseif %cmd.mudcommand% == put && all /= %arg%
-%send% %actor% Você tenta selar o orbe num recipiente, mas no momento em que ele é envolvido pela escuridão, um 	pterror claustrofóbico	n inunda a sua alma. Finos 	gtentáculos de musgo	n emergem do objeto, agarrando-se às paredes do recipiente e à sua mão, puxando-o de volta para a luz do seu inventário. Ele não suporta ser aprisionado. Ele precisa de si.	n
-%echoaround% %actor% %actor.name% tenta guardar o orbe, mas o objeto parece lutar e saltar de volta para as suas mãos por vontade própria.
-else
-return 0
-end
-~
-#15237
-orbe_eterno_p~
-1 c 2
-p~
-* This trigger has been exported 'as is'. This means that vnums
-* in this file are not changed, and will have to be edited by hand.
-* This zone was number 152 on The Builder Academy, so you
-* should be looking for 152xx, where xx is 00-99.
-if %cmd.mudcommand% == put && orbe /= %arg%
-%send% %actor% Você tenta selar o orbe num recipiente, mas no momento em que ele é envolvido pela escuridão, um 	pterror claustrofóbico	n inunda a sua alma. Finos 	gtentáculos de musgo	n emergem do objeto, agarrando-se às paredes do recipiente e à sua mão, puxando-o de volta para a luz do seu inventário. Ele não suporta ser aprisionado. Ele precisa de si.	n
-%echoaround% %actor% %actor.name% tenta guardar o orbe, mas o objeto parece lutar e saltar de volta para as suas mãos por vontade própria.
-elseif %cmd.mudcommand% == put && musgo /= %arg%
-%send% %actor% Você tenta selar o orbe num recipiente, mas no momento em que ele é envolvido pela escuridão, um 	pterror claustrofóbico	n inunda a sua alma. Finos 	gtentáculos de musgo	n emergem do objeto, agarrando-se às paredes do recipiente e à sua mão, puxando-o de volta para a luz do seu inventário. Ele não suporta ser aprisionado. Ele precisa de si.	n
-%echoaround% %actor% %actor.name% tenta guardar o orbe, mas o objeto parece lutar e saltar de volta para as suas mãos por vontade própria.
-elseif %cmd.mudcommand% == put && all /= %arg%
-%send% %actor% Você tenta selar o orbe num recipiente, mas no momento em que ele é envolvido pela escuridão, um 	pterror claustrofóbico	n inunda a sua alma. Finos 	gtentáculos de musgo	n emergem do objeto, agarrando-se às paredes do recipiente e à sua mão, puxando-o de volta para a luz do seu inventário. Ele não suporta ser aprisionado. Ele precisa de si.	n
-%echoaround% %actor% %actor.name% tenta guardar o orbe, mas o objeto parece lutar e saltar de volta para as suas mãos por vontade própria.
+sac~
+if %cmd.mudcommand% /= sac && orbe /= %arg%
+%send% %actor% Voce sacrifica um orbe de musgo sussurrante para os deuses.
+%send% %actor% Voce recebeu 1 pontos de experiencia.
+%echoaround% %actor% %actor.name% tenta sacrificar o orbe, o objeto parece aceitar o desafio.
+wait 5s
+%send% %actor% Os deuses ficaram 	genojados 	ne devolvem o orbe para voce.
+%echoaround% %actor% %actor.name% Os deuses devolvem o orbe para %actor.name%.
+elseif %cmd.mudcommand% /= sac && musgo /= %arg%
+%send% %actor% Voce sacrifica um orbe de musgo sussurrante para os deuses.
+%send% %actor% Voce recebeu 1 pontos de experiencia.
+%echoaround% %actor% %actor.name% tenta sacrificar o orbe, o objeto parece aceitar o desafio.
+wait 5s
+%send% %actor% Os deuses ficaram 	genojados 	ne devolvem o orbe para voce.
+%echoaround% %actor% %actor.name% Os deuses devolvem o orbe para %actor.name%.
+elseif %cmd.mudcommand% /= sac && all /= %arg%
+%send% %actor% Voce sacrifica um orbe de musgo sussurrante para os deuses.
+%send% %actor% Voce recebeu 1 pontos de experiencia.
+%echoaround% %actor% %actor.name% tenta sacrificar o orbe, o objeto parece aceitar o desafio.
+wait 5s
+%send% %actor% Os deuses ficaram 	genojados 	ne devolvem o orbe para voce.
+%echoaround% %actor% %actor.name% Os deuses devolvem o orbe para %actor.name%.
 else
 return 0
 end
