@@ -132,7 +132,15 @@ static void prefedit_disp_main_menu(struct descriptor_data *d)
         CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM), CCYEL(d->character, C_NRM),
         PREFEDIT_GET_WIMP_LEV, CCCYN(d->character, C_NRM), CCNRM(d->character, C_NRM));
 
-    send_to_char(d->character, "%sT%s) Preferencias do Toggle...\r\n", CBYEL(d->character, C_NRM),
+    send_to_char(d->character,
+                 "%sV%s) Ver Dano     : %s[%s%3s%s]         %sE%s) Ver Emocoes : %s[%s%3s%s]\r\n"
+                 "%sT%s) Preferencias do Toggle...\r\n",
+                 CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+                 PREFEDIT_FLAGGED(PRF_VIEWDAMAGE) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
+                 ONOFF(PREFEDIT_FLAGGED(PRF_VIEWDAMAGE)), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
+                 CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+                 PREFEDIT_FLAGGED(PRF_DISPEMOTE) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
+                 ONOFF(PREFEDIT_FLAGGED(PRF_DISPEMOTE)), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
                  CCNRM(d->character, C_NRM));
 
     /* Imm Prefs */
@@ -256,9 +264,7 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
                  "%s8%s) Chave Auto   %s[%s%3s%s]\r\n"
                  "%s9%s) Porta Auto   %s[%s%3s%s]\r\n"
                  "%s0%s) Hitbar       %s[%s%3s%s]\r\n"
-                 "%s=%s) Auto Titulo  %s[%s%3s%s]\r\n"
-                 "%s-%s) Ver Dano     %s[%s%3s%s]\r\n"
-                 "%s+%s) Ver Emocoes  %s[%s%3s%s]\r\n",
+                 "%s=%s) Auto Titulo  %s[%s%3s%s]\r\n",
                  /* Line 7 - automap */
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOMAP) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
@@ -278,15 +284,7 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
                  /* Line 11 - autotitle*/
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOTITLE) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
-                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOTITLE)), CCCYN(d->character, C_NRM),
-                 /* Line 12 - viewdamage*/
-                 CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
-                 PREFEDIT_FLAGGED(PRF_VIEWDAMAGE) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
-                 ONOFF(PREFEDIT_FLAGGED(PRF_VIEWDAMAGE)), CCCYN(d->character, C_NRM),
-                 /* Line 13 - dispemote*/
-                 CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
-                 PREFEDIT_FLAGGED(PRF_DISPEMOTE) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
-                 ONOFF(PREFEDIT_FLAGGED(PRF_DISPEMOTE)), CCCYN(d->character, C_NRM));
+                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOTITLE)), CCCYN(d->character, C_NRM));
 
     /* The bottom section of the toggles menu */
     send_to_char(d->character,
@@ -581,6 +579,16 @@ void prefedit_parse(struct descriptor_data *d, char *arg)
                     }
                     break;
 
+                case 'v':
+                case 'V':
+                    TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_VIEWDAMAGE);
+                    break;
+
+                case 'e':
+                case 'E':
+                    TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_DISPEMOTE);
+                    break;
+
                 default:
                     send_to_char(d->character, "%sInvalid choice!%s\r\n", CBRED(d->character, C_NRM),
                                  CCNRM(d->character, C_NRM));
@@ -785,14 +793,6 @@ void prefedit_parse(struct descriptor_data *d, char *arg)
 
                 case '=':
                     TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_AUTOTITLE);
-                    break;
-
-                case '-':
-                    TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_VIEWDAMAGE);
-                    break;
-
-                case '+':
-                    TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_DISPEMOTE);
                     break;
 
                 default:
