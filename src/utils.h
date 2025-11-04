@@ -1309,4 +1309,59 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 /** Probability (%) of mob updating emotions per emotion tick */
 #define CONFIG_MOB_EMOTION_UPDATE_CHANCE config_info.experimental.mob_emotion_update_chance
 
+/* Emotion System Configuration Macros */
+/** Visual indicator thresholds */
+#define CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD config_info.emotion_config.display_fear_threshold
+#define CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD config_info.emotion_config.display_anger_threshold
+#define CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD config_info.emotion_config.display_happiness_threshold
+#define CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD config_info.emotion_config.display_sadness_threshold
+#define CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD config_info.emotion_config.display_horror_threshold
+#define CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD config_info.emotion_config.display_pain_threshold
+
+/** Combat flee behavior thresholds */
+#define CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD config_info.emotion_config.flee_fear_low_threshold
+#define CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD config_info.emotion_config.flee_fear_high_threshold
+#define CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD config_info.emotion_config.flee_courage_low_threshold
+#define CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD config_info.emotion_config.flee_courage_high_threshold
+#define CONFIG_EMOTION_FLEE_HORROR_THRESHOLD config_info.emotion_config.flee_horror_threshold
+
+/** Flee modifier values */
+#define CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER config_info.emotion_config.flee_fear_low_modifier
+#define CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER config_info.emotion_config.flee_fear_high_modifier
+#define CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER config_info.emotion_config.flee_courage_low_modifier
+#define CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER config_info.emotion_config.flee_courage_high_modifier
+#define CONFIG_EMOTION_FLEE_HORROR_MODIFIER config_info.emotion_config.flee_horror_modifier
+
+/** Pain system thresholds */
+#define CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD config_info.emotion_config.pain_damage_minor_threshold
+#define CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD config_info.emotion_config.pain_damage_moderate_threshold
+#define CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD config_info.emotion_config.pain_damage_heavy_threshold
+#define CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD config_info.emotion_config.pain_damage_massive_threshold
+
+/** Pain values */
+#define CONFIG_EMOTION_PAIN_MINOR_MIN config_info.emotion_config.pain_minor_min
+#define CONFIG_EMOTION_PAIN_MINOR_MAX config_info.emotion_config.pain_minor_max
+#define CONFIG_EMOTION_PAIN_MODERATE_MIN config_info.emotion_config.pain_moderate_min
+#define CONFIG_EMOTION_PAIN_MODERATE_MAX config_info.emotion_config.pain_moderate_max
+#define CONFIG_EMOTION_PAIN_HEAVY_MIN config_info.emotion_config.pain_heavy_min
+#define CONFIG_EMOTION_PAIN_HEAVY_MAX config_info.emotion_config.pain_heavy_max
+#define CONFIG_EMOTION_PAIN_MASSIVE_MIN config_info.emotion_config.pain_massive_min
+#define CONFIG_EMOTION_PAIN_MASSIVE_MAX config_info.emotion_config.pain_massive_max
+
+/** Memory system weights */
+#define CONFIG_EMOTION_MEMORY_WEIGHT_RECENT config_info.emotion_config.memory_weight_recent
+#define CONFIG_EMOTION_MEMORY_WEIGHT_FRESH config_info.emotion_config.memory_weight_fresh
+#define CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE config_info.emotion_config.memory_weight_moderate
+#define CONFIG_EMOTION_MEMORY_WEIGHT_OLD config_info.emotion_config.memory_weight_old
+#define CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT config_info.emotion_config.memory_weight_ancient
+
+/** Memory age thresholds */
+#define CONFIG_EMOTION_MEMORY_AGE_RECENT config_info.emotion_config.memory_age_recent
+#define CONFIG_EMOTION_MEMORY_AGE_FRESH config_info.emotion_config.memory_age_fresh
+#define CONFIG_EMOTION_MEMORY_AGE_MODERATE config_info.emotion_config.memory_age_moderate
+#define CONFIG_EMOTION_MEMORY_AGE_OLD config_info.emotion_config.memory_age_old
+
+/** Memory baseline offset */
+#define CONFIG_EMOTION_MEMORY_BASELINE_OFFSET config_info.emotion_config.memory_baseline_offset
+
 #endif /* _UTILS_H_ */

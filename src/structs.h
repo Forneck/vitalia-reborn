@@ -439,7 +439,7 @@
 #define WEAR_WINGS 22
 #define WEAR_INSIGNE 23
 #define WEAR_QUIVER 24
-/** Total number of available equipment lcoations */
+/** Total number of available equipment locations */
 #define NUM_WEARS 25
 
 /* object-related defines */
@@ -1719,6 +1719,60 @@ struct autowiz_data {
     int min_wizlist_lev; /**< Minimun level to show on wizlist.  */
 };
 
+/** Emotion system configuration. */
+struct emotion_config_data {
+    /* Visual indicator thresholds */
+    int display_fear_threshold;      /**< Min fear level to show (amedrontado) indicator (default: 70) */
+    int display_anger_threshold;     /**< Min anger level to show (furioso) indicator (default: 70) */
+    int display_happiness_threshold; /**< Min happiness level to show (feliz) indicator (default: 80) */
+    int display_sadness_threshold;   /**< Min sadness level to show (triste) indicator (default: 70) */
+    int display_horror_threshold;    /**< Min horror level to show (aterrorizado) indicator (default: 80) */
+    int display_pain_threshold;      /**< Min pain level to show (sofrendo) indicator (default: 70) */
+
+    /* Combat flee behavior thresholds */
+    int flee_fear_low_threshold;     /**< Low fear threshold for flee modifier (default: 50) */
+    int flee_fear_high_threshold;    /**< High fear threshold for flee modifier (default: 70) */
+    int flee_courage_low_threshold;  /**< Low courage threshold for flee modifier (default: 50) */
+    int flee_courage_high_threshold; /**< High courage threshold for flee modifier (default: 70) */
+    int flee_horror_threshold;       /**< Horror threshold for panic flee (default: 80) */
+
+    /* Flee modifier values */
+    int flee_fear_low_modifier;     /**< HP% modifier for low fear (default: 10) */
+    int flee_fear_high_modifier;    /**< HP% modifier for high fear (default: 15) */
+    int flee_courage_low_modifier;  /**< HP% modifier for low courage (default: -10) */
+    int flee_courage_high_modifier; /**< HP% modifier for high courage (default: -15) */
+    int flee_horror_modifier;       /**< HP% modifier for horror panic (default: 25) */
+
+    /* Pain system thresholds and values */
+    int pain_damage_minor_threshold;    /**< Damage % for minor pain (default: 5) */
+    int pain_damage_moderate_threshold; /**< Damage % for moderate pain (default: 10) */
+    int pain_damage_heavy_threshold;    /**< Damage % for heavy pain (default: 25) */
+    int pain_damage_massive_threshold;  /**< Damage % for massive pain (default: 50) */
+
+    int pain_minor_min;    /**< Min pain from minor damage (default: 1) */
+    int pain_minor_max;    /**< Max pain from minor damage (default: 5) */
+    int pain_moderate_min; /**< Min pain from moderate damage (default: 5) */
+    int pain_moderate_max; /**< Max pain from moderate damage (default: 15) */
+    int pain_heavy_min;    /**< Min pain from heavy damage (default: 15) */
+    int pain_heavy_max;    /**< Max pain from heavy damage (default: 30) */
+    int pain_massive_min;  /**< Min pain from massive damage (default: 30) */
+    int pain_massive_max;  /**< Max pain from massive damage (default: 50) */
+
+    /* Memory system weights and thresholds */
+    int memory_weight_recent;   /**< Weight for very recent memories <5min (default: 10) */
+    int memory_weight_fresh;    /**< Weight for fresh memories 5-10min (default: 7) */
+    int memory_weight_moderate; /**< Weight for moderate memories 10-30min (default: 5) */
+    int memory_weight_old;      /**< Weight for old memories 30-60min (default: 3) */
+    int memory_weight_ancient;  /**< Weight for ancient memories >60min (default: 1) */
+
+    int memory_age_recent;   /**< Seconds for recent threshold (default: 300 = 5min) */
+    int memory_age_fresh;    /**< Seconds for fresh threshold (default: 600 = 10min) */
+    int memory_age_moderate; /**< Seconds for moderate threshold (default: 1800 = 30min) */
+    int memory_age_old;      /**< Seconds for old threshold (default: 3600 = 60min) */
+
+    int memory_baseline_offset; /**< Offset for emotion level conversion (default: 50) */
+};
+
 /** Experimental Features configuration. */
 struct experimental_data {
     int new_auction_system;        /**< New Auction System enabled?   */
@@ -1753,6 +1807,8 @@ struct config_data {
     struct autowiz_data autowiz;
     /** Experimental features settings */
     struct experimental_data experimental;
+    /** Emotion system configuration */
+    struct emotion_config_data emotion_config;
 };
 
 #ifdef MEMORY_DEBUG
