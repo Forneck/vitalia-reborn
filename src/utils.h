@@ -76,6 +76,7 @@ char *stristr3(const char *haystack, const char *needle);
 
 const char *gauge(char *buf, int type, float pos, float total);
 const char *align_gauge(int align);
+const char *reputation_gauge(int reputation);
 
 /* Funções de avaliação para a IA Genética */
 int get_item_apply_score(struct char_data *ch, struct obj_data *obj);
