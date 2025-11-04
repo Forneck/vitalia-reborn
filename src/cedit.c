@@ -1922,7 +1922,10 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                         d,
                         "\r\nPain System Configuration:\r\n"
                         "Damage Thresholds (%%): 1) Minor: %d  2) Moderate: %d  3) Heavy: %d  4) Massive: %d\r\n"
-                        "Pain Min/Max: 5) Minor: %d-%d  6) Moderate: %d-%d  7) Heavy: %d-%d  8) Massive: %d-%d\r\n"
+                        "Pain Amounts: 5) Minor Min: %d  6) Minor Max: %d\r\n"
+                        "              7) Moderate Min: %d  8) Moderate Max: %d\r\n"
+                        "              9) Heavy Min: %d  A) Heavy Max: %d\r\n"
+                        "              B) Massive Min: %d  C) Massive Max: %d\r\n"
                         "Q) Return to Emotion Menu\r\n"
                         "Enter your choice : ",
                         OLC_CONFIG(d)->emotion_config.pain_damage_minor_threshold,
@@ -1994,6 +1997,172 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case '6':
                     write_to_output(d, "\r\nEnter Pain Display Threshold (0-100) : ");
                     OLC_MODE(d) = CEDIT_EMOTION_DISPLAY_PAIN_THRESHOLD;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            return;
+
+        case CEDIT_EMOTION_FLEE_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d, "\r\nEnter Fear Low Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_FLEE_FEAR_LOW_THRESHOLD;
+                    return;
+                case '2':
+                    write_to_output(d, "\r\nEnter Fear High Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_FLEE_FEAR_HIGH_THRESHOLD;
+                    return;
+                case '3':
+                    write_to_output(d, "\r\nEnter Fear Low Modifier (-100 to +100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_FLEE_FEAR_LOW_MODIFIER;
+                    return;
+                case '4':
+                    write_to_output(d, "\r\nEnter Fear High Modifier (-100 to +100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_FLEE_FEAR_HIGH_MODIFIER;
+                    return;
+                case '5':
+                    write_to_output(d, "\r\nEnter Courage Low Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_FLEE_COURAGE_LOW_THRESHOLD;
+                    return;
+                case '6':
+                    write_to_output(d, "\r\nEnter Courage High Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD;
+                    return;
+                case '7':
+                    write_to_output(d, "\r\nEnter Courage Low Modifier (-100 to +100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_FLEE_COURAGE_LOW_MODIFIER;
+                    return;
+                case '8':
+                    write_to_output(d, "\r\nEnter Courage High Modifier (-100 to +100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_FLEE_COURAGE_HIGH_MODIFIER;
+                    return;
+                case '9':
+                    write_to_output(d, "\r\nEnter Horror Threshold (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_FLEE_HORROR_THRESHOLD;
+                    return;
+                case 'a':
+                case 'A':
+                    write_to_output(d, "\r\nEnter Horror Modifier (-100 to +100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_FLEE_HORROR_MODIFIER;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            return;
+
+        case CEDIT_EMOTION_PAIN_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d, "\r\nEnter Minor Damage Threshold (%% of HP, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD;
+                    return;
+                case '2':
+                    write_to_output(d, "\r\nEnter Moderate Damage Threshold (%% of HP, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD;
+                    return;
+                case '3':
+                    write_to_output(d, "\r\nEnter Heavy Damage Threshold (%% of HP, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD;
+                    return;
+                case '4':
+                    write_to_output(d, "\r\nEnter Massive Damage Threshold (%% of HP, 0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD;
+                    return;
+                case '5':
+                    write_to_output(d, "\r\nEnter Minor Pain Min (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PAIN_MINOR_MIN;
+                    return;
+                case '6':
+                    write_to_output(d, "\r\nEnter Minor Pain Max (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PAIN_MINOR_MAX;
+                    return;
+                case '7':
+                    write_to_output(d, "\r\nEnter Moderate Pain Min (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PAIN_MODERATE_MIN;
+                    return;
+                case '8':
+                    write_to_output(d, "\r\nEnter Moderate Pain Max (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PAIN_MODERATE_MAX;
+                    return;
+                case '9':
+                    write_to_output(d, "\r\nEnter Heavy Pain Min (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PAIN_HEAVY_MIN;
+                    return;
+                case 'a':
+                case 'A':
+                    write_to_output(d, "\r\nEnter Heavy Pain Max (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PAIN_HEAVY_MAX;
+                    return;
+                case 'b':
+                case 'B':
+                    write_to_output(d, "\r\nEnter Massive Pain Min (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PAIN_MASSIVE_MIN;
+                    return;
+                case 'c':
+                case 'C':
+                    write_to_output(d, "\r\nEnter Massive Pain Max (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PAIN_MASSIVE_MAX;
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid choice!\r\n");
+            }
+            return;
+
+        case CEDIT_EMOTION_MEMORY_SUBMENU:
+            switch (*arg) {
+                case '1':
+                    write_to_output(d, "\r\nEnter Recent Memory Weight (1-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_MEMORY_WEIGHT_RECENT;
+                    return;
+                case '2':
+                    write_to_output(d, "\r\nEnter Fresh Memory Weight (1-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_MEMORY_WEIGHT_FRESH;
+                    return;
+                case '3':
+                    write_to_output(d, "\r\nEnter Moderate Memory Weight (1-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_MEMORY_WEIGHT_MODERATE;
+                    return;
+                case '4':
+                    write_to_output(d, "\r\nEnter Old Memory Weight (1-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_MEMORY_WEIGHT_OLD;
+                    return;
+                case '5':
+                    write_to_output(d, "\r\nEnter Ancient Memory Weight (1-10) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_MEMORY_WEIGHT_ANCIENT;
+                    return;
+                case '6':
+                    write_to_output(d, "\r\nEnter Recent Age Threshold (seconds) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_MEMORY_AGE_RECENT;
+                    return;
+                case '7':
+                    write_to_output(d, "\r\nEnter Fresh Age Threshold (seconds) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_MEMORY_AGE_FRESH;
+                    return;
+                case '8':
+                    write_to_output(d, "\r\nEnter Moderate Age Threshold (seconds) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_MEMORY_AGE_MODERATE;
+                    return;
+                case '9':
+                    write_to_output(d, "\r\nEnter Old Age Threshold (seconds) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_MEMORY_AGE_OLD;
+                    return;
+                case 'a':
+                case 'A':
+                    write_to_output(d, "\r\nEnter Memory Baseline Offset (0-100) : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_MEMORY_BASELINE_OFFSET;
                     return;
                 case 'q':
                 case 'Q':
