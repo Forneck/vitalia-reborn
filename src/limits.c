@@ -242,13 +242,13 @@ int breath_gain(struct char_data *ch)
         /* Position calculations - resting helps breath recovery */
         switch (GET_POS(ch)) {
             case POS_SLEEPING:
-                gain += (gain / 2); /* Better recovery while sleeping */
+                gain += (gain / 2); /* 150% of base - same as hit/move */
                 break;
             case POS_RESTING:
-                gain += (gain / 4);
+                gain += (gain / 4); /* 125% of base - same as hit/move */
                 break;
             case POS_SITTING:
-                gain += (gain / 8);
+                gain += (gain / 8); /* 112.5% of base - same as hit/move */
                 break;
         }
 
