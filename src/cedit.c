@@ -28,6 +28,7 @@ static void cedit_disp_operation_options(struct descriptor_data *d);
 static void cedit_disp_autowiz_options(struct descriptor_data *d);
 static void cedit_disp_experimental_options(struct descriptor_data *d);
 static void cedit_disp_emotion_menu(struct descriptor_data *d);
+static void cedit_load_emotion_preset(struct descriptor_data *d, int preset);
 static void reassign_rooms(void);
 static void cedit_setup(struct descriptor_data *d);
 
@@ -1205,11 +1206,222 @@ static void cedit_disp_emotion_menu(struct descriptor_data *d)
                     "%sB%s) Combat Flee Behavior\r\n"
                     "%sC%s) Pain System Configuration\r\n"
                     "%sD%s) Memory System Configuration\r\n"
+                    "%sP%s) Load Configuration Preset\r\n"
                     "%sQ%s) Return to Main Menu\r\n"
                     "Enter your choice : ",
-                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
+                    grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm, grn, nrm);
 
     OLC_MODE(d) = CEDIT_EMOTION_MENU;
+}
+
+/* Load emotion configuration preset */
+static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
+{
+    switch (preset) {
+        case 1: /* Aggressive - Mobs fight harder, flee less */
+            /* Display thresholds - higher to show emotions less */
+            OLC_CONFIG(d)->emotion_config.display_fear_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.display_anger_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_happiness_threshold = 85;
+            OLC_CONFIG(d)->emotion_config.display_sadness_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.display_horror_threshold = 90;
+            OLC_CONFIG(d)->emotion_config.display_pain_threshold = 80;
+
+            /* Flee behavior - reduced fear impact, increased courage bonus */
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_threshold = 40;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.flee_horror_threshold = 90;
+
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_modifier = 5;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_modifier = 10;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_modifier = -15;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_modifier = -20;
+            OLC_CONFIG(d)->emotion_config.flee_horror_modifier = 20;
+
+            /* Pain system - less pain from damage */
+            OLC_CONFIG(d)->emotion_config.pain_damage_minor_threshold = 8;
+            OLC_CONFIG(d)->emotion_config.pain_damage_moderate_threshold = 15;
+            OLC_CONFIG(d)->emotion_config.pain_damage_heavy_threshold = 30;
+            OLC_CONFIG(d)->emotion_config.pain_damage_massive_threshold = 60;
+
+            OLC_CONFIG(d)->emotion_config.pain_minor_min = 1;
+            OLC_CONFIG(d)->emotion_config.pain_minor_max = 3;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 3;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_max = 10;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 10;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_max = 20;
+            OLC_CONFIG(d)->emotion_config.pain_massive_min = 20;
+            OLC_CONFIG(d)->emotion_config.pain_massive_max = 40;
+
+            /* Memory system - shorter memory */
+            OLC_CONFIG(d)->emotion_config.memory_weight_recent = 8;
+            OLC_CONFIG(d)->emotion_config.memory_weight_fresh = 5;
+            OLC_CONFIG(d)->emotion_config.memory_weight_moderate = 3;
+            OLC_CONFIG(d)->emotion_config.memory_weight_old = 2;
+            OLC_CONFIG(d)->emotion_config.memory_weight_ancient = 1;
+
+            OLC_CONFIG(d)->emotion_config.memory_age_recent = 240;
+            OLC_CONFIG(d)->emotion_config.memory_age_fresh = 480;
+            OLC_CONFIG(d)->emotion_config.memory_age_moderate = 1200;
+            OLC_CONFIG(d)->emotion_config.memory_age_old = 2400;
+
+            OLC_CONFIG(d)->emotion_config.memory_baseline_offset = 50;
+            break;
+
+        case 2: /* Defensive - Mobs flee more easily, show fear */
+            /* Display thresholds - lower to show emotions more */
+            OLC_CONFIG(d)->emotion_config.display_fear_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_anger_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_happiness_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_sadness_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_horror_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_pain_threshold = 60;
+
+            /* Flee behavior - increased fear impact, reduced courage */
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = 40;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.flee_horror_threshold = 70;
+
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_modifier = 15;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_modifier = 20;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_modifier = -5;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_modifier = -10;
+            OLC_CONFIG(d)->emotion_config.flee_horror_modifier = 30;
+
+            /* Pain system - more pain from damage */
+            OLC_CONFIG(d)->emotion_config.pain_damage_minor_threshold = 3;
+            OLC_CONFIG(d)->emotion_config.pain_damage_moderate_threshold = 8;
+            OLC_CONFIG(d)->emotion_config.pain_damage_heavy_threshold = 20;
+            OLC_CONFIG(d)->emotion_config.pain_damage_massive_threshold = 40;
+
+            OLC_CONFIG(d)->emotion_config.pain_minor_min = 2;
+            OLC_CONFIG(d)->emotion_config.pain_minor_max = 8;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 8;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_max = 20;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 20;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_max = 40;
+            OLC_CONFIG(d)->emotion_config.pain_massive_min = 40;
+            OLC_CONFIG(d)->emotion_config.pain_massive_max = 60;
+
+            /* Memory system - longer memory */
+            OLC_CONFIG(d)->emotion_config.memory_weight_recent = 10;
+            OLC_CONFIG(d)->emotion_config.memory_weight_fresh = 8;
+            OLC_CONFIG(d)->emotion_config.memory_weight_moderate = 6;
+            OLC_CONFIG(d)->emotion_config.memory_weight_old = 4;
+            OLC_CONFIG(d)->emotion_config.memory_weight_ancient = 2;
+
+            OLC_CONFIG(d)->emotion_config.memory_age_recent = 360;
+            OLC_CONFIG(d)->emotion_config.memory_age_fresh = 720;
+            OLC_CONFIG(d)->emotion_config.memory_age_moderate = 2400;
+            OLC_CONFIG(d)->emotion_config.memory_age_old = 4800;
+
+            OLC_CONFIG(d)->emotion_config.memory_baseline_offset = 50;
+            break;
+
+        case 3: /* Balanced - Default values (Phase 2 defaults) */
+            OLC_CONFIG(d)->emotion_config.display_fear_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_anger_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_happiness_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.display_sadness_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_horror_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.display_pain_threshold = 70;
+
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.flee_horror_threshold = 80;
+
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_modifier = 10;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_modifier = 15;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_modifier = -10;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_modifier = -15;
+            OLC_CONFIG(d)->emotion_config.flee_horror_modifier = 25;
+
+            OLC_CONFIG(d)->emotion_config.pain_damage_minor_threshold = 5;
+            OLC_CONFIG(d)->emotion_config.pain_damage_moderate_threshold = 10;
+            OLC_CONFIG(d)->emotion_config.pain_damage_heavy_threshold = 25;
+            OLC_CONFIG(d)->emotion_config.pain_damage_massive_threshold = 50;
+
+            OLC_CONFIG(d)->emotion_config.pain_minor_min = 1;
+            OLC_CONFIG(d)->emotion_config.pain_minor_max = 5;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 5;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_max = 15;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 15;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_max = 30;
+            OLC_CONFIG(d)->emotion_config.pain_massive_min = 30;
+            OLC_CONFIG(d)->emotion_config.pain_massive_max = 50;
+
+            OLC_CONFIG(d)->emotion_config.memory_weight_recent = 10;
+            OLC_CONFIG(d)->emotion_config.memory_weight_fresh = 7;
+            OLC_CONFIG(d)->emotion_config.memory_weight_moderate = 5;
+            OLC_CONFIG(d)->emotion_config.memory_weight_old = 3;
+            OLC_CONFIG(d)->emotion_config.memory_weight_ancient = 1;
+
+            OLC_CONFIG(d)->emotion_config.memory_age_recent = 300;
+            OLC_CONFIG(d)->emotion_config.memory_age_fresh = 600;
+            OLC_CONFIG(d)->emotion_config.memory_age_moderate = 1800;
+            OLC_CONFIG(d)->emotion_config.memory_age_old = 3600;
+
+            OLC_CONFIG(d)->emotion_config.memory_baseline_offset = 50;
+            break;
+
+        case 4: /* Sensitive - Emotions display more, memory lasts longer */
+            /* Display thresholds - much lower to show emotions easily */
+            OLC_CONFIG(d)->emotion_config.display_fear_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_anger_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_happiness_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_sadness_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_horror_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_pain_threshold = 50;
+
+            /* Flee behavior - moderate */
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = 45;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_threshold = 45;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.flee_horror_threshold = 75;
+
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_modifier = 12;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_modifier = 18;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_modifier = -12;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_modifier = -18;
+            OLC_CONFIG(d)->emotion_config.flee_horror_modifier = 28;
+
+            /* Pain system - moderate pain */
+            OLC_CONFIG(d)->emotion_config.pain_damage_minor_threshold = 4;
+            OLC_CONFIG(d)->emotion_config.pain_damage_moderate_threshold = 9;
+            OLC_CONFIG(d)->emotion_config.pain_damage_heavy_threshold = 22;
+            OLC_CONFIG(d)->emotion_config.pain_damage_massive_threshold = 45;
+
+            OLC_CONFIG(d)->emotion_config.pain_minor_min = 2;
+            OLC_CONFIG(d)->emotion_config.pain_minor_max = 6;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 6;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_max = 18;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 18;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_max = 35;
+            OLC_CONFIG(d)->emotion_config.pain_massive_min = 35;
+            OLC_CONFIG(d)->emotion_config.pain_massive_max = 55;
+
+            /* Memory system - very long lasting memories */
+            OLC_CONFIG(d)->emotion_config.memory_weight_recent = 10;
+            OLC_CONFIG(d)->emotion_config.memory_weight_fresh = 9;
+            OLC_CONFIG(d)->emotion_config.memory_weight_moderate = 7;
+            OLC_CONFIG(d)->emotion_config.memory_weight_old = 5;
+            OLC_CONFIG(d)->emotion_config.memory_weight_ancient = 3;
+
+            OLC_CONFIG(d)->emotion_config.memory_age_recent = 480;
+            OLC_CONFIG(d)->emotion_config.memory_age_fresh = 960;
+            OLC_CONFIG(d)->emotion_config.memory_age_moderate = 3600;
+            OLC_CONFIG(d)->emotion_config.memory_age_old = 7200;
+
+            OLC_CONFIG(d)->emotion_config.memory_baseline_offset = 50;
+            break;
+    }
 }
 
 /* The event handler. */
@@ -1961,6 +2173,19 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = CEDIT_EMOTION_MEMORY_SUBMENU;
                     return;
 
+                case 'p':
+                case 'P':
+                    write_to_output(d,
+                                    "\r\nEmotion Configuration Presets:\r\n"
+                                    "1) Aggressive - Mobs fight harder, flee less\r\n"
+                                    "2) Defensive - Mobs flee more easily, show fear\r\n"
+                                    "3) Balanced - Default balanced values\r\n"
+                                    "4) Sensitive - Emotions display more, longer memory\r\n"
+                                    "Q) Return to Emotion Menu\r\n"
+                                    "Enter your choice : ");
+                    OLC_MODE(d) = CEDIT_EMOTION_PRESET_MENU;
+                    return;
+
                 case 'q':
                 case 'Q':
                     cedit_disp_menu(d);
@@ -1970,6 +2195,27 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     write_to_output(d, "\r\nThat is an invalid choice!\r\n");
             }
             cedit_disp_emotion_menu(d);
+            return;
+
+        case CEDIT_EMOTION_PRESET_MENU:
+            switch (*arg) {
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                    cedit_load_emotion_preset(d, *arg - '0');
+                    write_to_output(d, "\r\nPreset loaded successfully!\r\n");
+                    cedit_disp_emotion_menu(d);
+                    return;
+                case 'q':
+                case 'Q':
+                    cedit_disp_emotion_menu(d);
+                    return;
+                default:
+                    write_to_output(d, "\r\nInvalid preset choice!\r\n");
+                    cedit_disp_emotion_menu(d);
+                    return;
+            }
             return;
 
         case CEDIT_EMOTION_DISPLAY_SUBMENU:

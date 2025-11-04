@@ -6500,3 +6500,50 @@ ACMD(do_enable)
     send_to_char(ch, "Comando '%s' habilitado com sucesso.\r\n", complete_cmd_info[cmd_num].command);
     mudlog(BRF, LVL_IMMORT, TRUE, "(GC) %s habilitou o comando: %s", GET_NAME(ch), complete_cmd_info[cmd_num].command);
 }
+
+/* Display current emotion system configuration */
+ACMD(do_emotionconfig)
+{
+    send_to_char(ch, "\r\n%s=== Emotion System Configuration ===%s\r\n\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+
+    send_to_char(ch, "%sVisual Indicator Thresholds:%s\r\n", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Fear Display     : %d\r\n", CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD);
+    send_to_char(ch, "  Anger Display    : %d\r\n", CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD);
+    send_to_char(ch, "  Happiness Display: %d\r\n", CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD);
+    send_to_char(ch, "  Sadness Display  : %d\r\n", CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD);
+    send_to_char(ch, "  Horror Display   : %d\r\n", CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD);
+    send_to_char(ch, "  Pain Display     : %d\r\n\r\n", CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD);
+
+    send_to_char(ch, "%sCombat Flee Behavior:%s\r\n", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Fear Low/High Thresholds : %d / %d\r\n", CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD,
+                 CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD);
+    send_to_char(ch, "  Fear Low/High Modifiers  : %+d%% / %+d%%\r\n", CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER,
+                 CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER);
+    send_to_char(ch, "  Courage Low/High Thresholds: %d / %d\r\n", CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD,
+                 CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD);
+    send_to_char(ch, "  Courage Low/High Modifiers : %+d%% / %+d%%\r\n", CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER,
+                 CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER);
+    send_to_char(ch, "  Horror Threshold/Modifier  : %d / %+d%%\r\n\r\n", CONFIG_EMOTION_FLEE_HORROR_THRESHOLD,
+                 CONFIG_EMOTION_FLEE_HORROR_MODIFIER);
+
+    send_to_char(ch, "%sPain System:%s\r\n", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Damage Thresholds (%%HP): Minor:%d  Moderate:%d  Heavy:%d  Massive:%d\r\n",
+                 CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD, CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD,
+                 CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD, CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD);
+    send_to_char(ch, "  Pain Amounts: Minor:%d-%d  Moderate:%d-%d  Heavy:%d-%d  Massive:%d-%d\r\n\r\n",
+                 CONFIG_EMOTION_PAIN_MINOR_MIN, CONFIG_EMOTION_PAIN_MINOR_MAX, CONFIG_EMOTION_PAIN_MODERATE_MIN,
+                 CONFIG_EMOTION_PAIN_MODERATE_MAX, CONFIG_EMOTION_PAIN_HEAVY_MIN, CONFIG_EMOTION_PAIN_HEAVY_MAX,
+                 CONFIG_EMOTION_PAIN_MASSIVE_MIN, CONFIG_EMOTION_PAIN_MASSIVE_MAX);
+
+    send_to_char(ch, "%sMemory System:%s\r\n", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Weights: Recent:%d  Fresh:%d  Moderate:%d  Old:%d  Ancient:%d\r\n",
+                 CONFIG_EMOTION_MEMORY_WEIGHT_RECENT, CONFIG_EMOTION_MEMORY_WEIGHT_FRESH,
+                 CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE, CONFIG_EMOTION_MEMORY_WEIGHT_OLD,
+                 CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT);
+    send_to_char(ch, "  Age Thresholds (sec): Recent:%d  Fresh:%d  Moderate:%d  Old:%d\r\n",
+                 CONFIG_EMOTION_MEMORY_AGE_RECENT, CONFIG_EMOTION_MEMORY_AGE_FRESH, CONFIG_EMOTION_MEMORY_AGE_MODERATE,
+                 CONFIG_EMOTION_MEMORY_AGE_OLD);
+    send_to_char(ch, "  Baseline Offset: %d\r\n\r\n", CONFIG_EMOTION_MEMORY_BASELINE_OFFSET);
+
+    send_to_char(ch, "Use %scedit%s to modify these values.\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+}

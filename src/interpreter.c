@@ -148,6 +148,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"eat", "ea", POS_RESTING, do_eat, 0, SCMD_EAT, CMD_ONEARG},
     {"eavesdrop", "eaves", POS_RESTING, do_cast, 1, SKILL_EAVESDROP, CMD_NOARG},
     {"echo", "ec", POS_SLEEPING, do_echo, LVL_IMMORT, SCMD_ECHO, CMD_NOARG},
+    {"emotionconfig", "emotionconfig", POS_DEAD, do_emotionconfig, LVL_IMMORT, 0, CMD_NOARG},
     {"emote", "em", POS_RESTING, do_echo, 0, SCMD_EMOTE, CMD_NOARG},
     {":", ":", POS_RESTING, do_echo, 1, SCMD_EMOTE, CMD_NOARG},
     {"enable", "enable", POS_DEAD, do_enable, LVL_GRGOD, 0, CMD_ONEARG},
