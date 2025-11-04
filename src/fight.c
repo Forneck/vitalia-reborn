@@ -953,21 +953,21 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         int damage_percent = (dam * 100) / MAX(GET_MAX_HIT(victim), 1);
 
         /* Pain scales with damage percentage */
-        if (damage_percent >= 50) {
+        if (damage_percent >= CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD) {
             /* Massive damage (50%+ of max HP) */
-            pain_amount = rand_number(30, 50);
-        } else if (damage_percent >= 25) {
+            pain_amount = rand_number(CONFIG_EMOTION_PAIN_MASSIVE_MIN, CONFIG_EMOTION_PAIN_MASSIVE_MAX);
+        } else if (damage_percent >= CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD) {
             /* Heavy damage (25-49% of max HP) */
-            pain_amount = rand_number(20, 35);
-        } else if (damage_percent >= 10) {
+            pain_amount = rand_number(CONFIG_EMOTION_PAIN_HEAVY_MIN, CONFIG_EMOTION_PAIN_HEAVY_MAX);
+        } else if (damage_percent >= CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD) {
             /* Moderate damage (10-24% of max HP) */
-            pain_amount = rand_number(10, 20);
-        } else if (damage_percent >= 5) {
+            pain_amount = rand_number(CONFIG_EMOTION_PAIN_MODERATE_MIN, CONFIG_EMOTION_PAIN_MODERATE_MAX);
+        } else if (damage_percent >= CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD) {
             /* Light damage (5-9% of max HP) */
-            pain_amount = rand_number(5, 10);
+            pain_amount = rand_number(CONFIG_EMOTION_PAIN_MINOR_MIN, CONFIG_EMOTION_PAIN_MINOR_MAX);
         } else {
             /* Minimal damage (< 5% of max HP) */
-            pain_amount = rand_number(1, 5);
+            pain_amount = rand_number(1, CONFIG_EMOTION_PAIN_MINOR_MAX);
         }
 
         adjust_emotion(victim, &victim->ai_data->emotion_pain, pain_amount);
@@ -1059,22 +1059,22 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                     /* 3. EMOTION SYSTEM: Adjust flee threshold based on emotions */
                     if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
                         /* High fear increases flee threshold (flee sooner) */
-                        if (victim->ai_data->emotion_fear >= 70) {
-                            emotion_modifier += 15; /* Flee at +15% HP */
-                        } else if (victim->ai_data->emotion_fear >= 50) {
-                            emotion_modifier += 10; /* Flee at +10% HP */
+                        if (victim->ai_data->emotion_fear >= CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD) {
+                            emotion_modifier += CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER; /* Flee at +15% HP */
+                        } else if (victim->ai_data->emotion_fear >= CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD) {
+                            emotion_modifier += CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER; /* Flee at +10% HP */
                         }
 
                         /* High courage reduces flee threshold (flee later) */
-                        if (victim->ai_data->emotion_courage >= 70) {
-                            emotion_modifier -= 15; /* Flee at -15% HP */
-                        } else if (victim->ai_data->emotion_courage >= 50) {
-                            emotion_modifier -= 10; /* Flee at -10% HP */
+                        if (victim->ai_data->emotion_courage >= CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD) {
+                            emotion_modifier -= CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER; /* Flee at -15% HP */
+                        } else if (victim->ai_data->emotion_courage >= CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD) {
+                            emotion_modifier -= CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER; /* Flee at -10% HP */
                         }
 
                         /* Horror overrides other emotions */
-                        if (victim->ai_data->emotion_horror >= 80) {
-                            emotion_modifier += 25; /* Panic flee at +25% HP */
+                        if (victim->ai_data->emotion_horror >= CONFIG_EMOTION_FLEE_HORROR_THRESHOLD) {
+                            emotion_modifier += CONFIG_EMOTION_FLEE_HORROR_MODIFIER; /* Panic flee at +25% HP */
                         }
 
                         flee_threshold += emotion_modifier;
