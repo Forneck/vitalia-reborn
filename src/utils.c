@@ -1669,30 +1669,34 @@ const char *align_gauge(int align)
  */
 const char *reputation_gauge(int reputation)
 {
-    /* High reputation (good): 80-100 */
+    /* High reputation (good): 90-100 */
     if (reputation >= 90)
         return ("\tW[\tR-----\tG|\tB>>>>>\tW]\tn");
+    /* High reputation: 80-89 */
     if (reputation >= 80)
         return ("\tW[\tR-----\tG|\tB>>>>-\tW]\tn");
-    /* Good reputation: 60-79 */
+    /* Good reputation: 70-79 */
     if (reputation >= 70)
         return ("\tW[\tR-----\tG|>>>\tB--\tW]\tn");
+    /* Good reputation: 60-69 */
     if (reputation >= 60)
         return ("\tW[\tR-----\tG|>>\tB---\tW]\tn");
     /* Slightly positive: 55-59 */
     if (reputation >= 55)
         return ("\tW[\tR-----\tG|>\tB----\tW]\tn");
-    /* Slightly negative: 41-45 */
+    /* Neutral: 46-54 */
     if (reputation >= 46)
-        return ("\tW[\tR-----\tG|\tB-----\tW]\tn"); /* Neutral: 46-54 */
+        return ("\tW[\tR-----\tG|\tB-----\tW]\tn");
+    /* Slightly negative: 41-45 */
     if (reputation >= 41)
         return ("\tW[\tR----\tG<|\tB-----\tW]\tn");
-    /* Bad reputation: 21-40 */
+    /* Bad reputation: 31-40 */
     if (reputation >= 31)
         return ("\tW[\tR---\tG<<|\tB-----\tW]\tn");
+    /* Bad reputation: 21-30 */
     if (reputation >= 21)
         return ("\tW[\tR--\tG<<<|\tB-----\tW]\tn");
-    /* Low reputation (bad): 0-20 */
+    /* Low reputation: 11-20 */
     if (reputation >= 11)
         return ("\tW[\tR-<<<<\tG|\tB-----\tW]\tn");
     /* Very low reputation: 0-10 */
