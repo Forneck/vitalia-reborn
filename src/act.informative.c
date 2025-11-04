@@ -1005,7 +1005,8 @@ ACMD(do_score)
                  GET_EXP(ch), GET_GOLD(ch));
     send_to_char(ch, " \tW Prox Nível\tb.:\tn %'13ld\tgxp\tn %s\r\n ",
                  level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - GET_EXP(ch),
-                 gauge(0, 0, GET_MOVE(ch), GET_MAX_MOVE(ch)));
+                 gauge(0, 0, GET_EXP(ch) - level_exp(GET_CLASS(ch), GET_LEVEL(ch)),
+                       level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - level_exp(GET_CLASS(ch), GET_LEVEL(ch))));
     send_to_char(ch, " \tW Reputação\tb.:\tn %14d         \tn %s\r\n ", GET_REPUTATION(ch),
                  reputation_gauge(GET_REPUTATION(ch)));
     send_to_char(ch, "\r\n");
