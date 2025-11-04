@@ -66,6 +66,7 @@ struct char_data *get_char_world_vis(struct char_data *ch, char *name, int *numb
 
 struct obj_data *get_obj_in_list_num(int num, struct obj_data *list);
 struct obj_data *get_obj_num(obj_rnum nr);
+bool char_has_obj_vnum(struct char_data *ch, obj_vnum vnum);
 struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name, int *number, struct obj_data *list);
 struct obj_data *get_obj_vis(struct char_data *ch, char *name, int *num);
 struct obj_data *get_obj_in_equip_vis(struct char_data *ch, char *arg, int *number, struct obj_data *equipment[]);

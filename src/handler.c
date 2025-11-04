@@ -703,6 +703,30 @@ struct obj_data *get_obj_num(obj_rnum nr)
     return (NULL);
 }
 
+/* Check if a character already has an object with the specified vnum in inventory or equipment */
+bool char_has_obj_vnum(struct char_data *ch, obj_vnum vnum)
+{
+    struct obj_data *obj;
+    int i;
+
+    if (!ch)
+        return FALSE;
+
+    /* Check inventory */
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (GET_OBJ_VNUM(obj) == vnum)
+            return TRUE;
+    }
+
+    /* Check equipment */
+    for (i = 0; i < NUM_WEARS; i++) {
+        if (GET_EQ(ch, i) && GET_OBJ_VNUM(GET_EQ(ch, i)) == vnum)
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
 /* search a room for a char, and return a pointer if found..  */
 struct char_data *get_char_room(char *name, int *number, room_rnum room)
 {
