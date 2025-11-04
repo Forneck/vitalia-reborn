@@ -1878,7 +1878,7 @@ ACMD(do_mine)
         if (vnum != NOTHING) {
             /* For mobs, check if they already have this object to prevent resource overflow */
             if (IS_MOB(ch) && char_has_obj_vnum(ch, vnum)) {
-                send_to_char(ch, "Você já tem este item.\r\n");
+                /* Mob already has this item, skip creation to prevent overflow */
             } else {
                 obj = read_object(vnum, VIRTUAL);
                 if (obj) {
@@ -1982,7 +1982,7 @@ ACMD(do_fishing)
         if (vnum != NOTHING) {
             /* For mobs, check if they already have this object to prevent resource overflow */
             if (IS_MOB(ch) && char_has_obj_vnum(ch, vnum)) {
-                send_to_char(ch, "Você já tem este item.\r\n");
+                /* Mob already has this item, skip creation to prevent overflow */
             } else {
                 obj = read_object(vnum, VIRTUAL);
                 if (obj) {
@@ -2056,7 +2056,7 @@ ACMD(do_forage)
         if (vnum != NOTHING) {
             /* For mobs, check if they already have this object to prevent resource overflow */
             if (IS_MOB(ch) && char_has_obj_vnum(ch, vnum)) {
-                send_to_char(ch, "Você já tem este item.\r\n");
+                /* Mob already has this item, skip creation to prevent overflow */
             } else {
                 obj = read_object(vnum, VIRTUAL);
                 if (obj) {
