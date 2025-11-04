@@ -880,6 +880,62 @@ int save_config(IDXTYPE nowhere)
             "mob_emotion_update_chance = %d\n\n",
             CONFIG_MOB_EMOTION_UPDATE_CHANCE);
 
+    fprintf(fl, "\n\n* [ Emotion System Configuration ]\n");
+
+    fprintf(fl, "\n* Visual Indicator Thresholds (0-100)\n");
+    fprintf(fl, "emotion_display_fear_threshold = %d\n", CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD);
+    fprintf(fl, "emotion_display_anger_threshold = %d\n", CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD);
+    fprintf(fl, "emotion_display_happiness_threshold = %d\n", CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD);
+    fprintf(fl, "emotion_display_sadness_threshold = %d\n", CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD);
+    fprintf(fl, "emotion_display_horror_threshold = %d\n", CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD);
+    fprintf(fl, "emotion_display_pain_threshold = %d\n\n", CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD);
+
+    fprintf(fl, "* Combat Flee Behavior Thresholds (0-100)\n");
+    fprintf(fl, "emotion_flee_fear_low_threshold = %d\n", CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD);
+    fprintf(fl, "emotion_flee_fear_high_threshold = %d\n", CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_flee_courage_low_threshold = %d\n", CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD);
+    fprintf(fl, "emotion_flee_courage_high_threshold = %d\n", CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_flee_horror_threshold = %d\n\n", CONFIG_EMOTION_FLEE_HORROR_THRESHOLD);
+
+    fprintf(fl, "* Combat Flee Behavior Modifiers (-100 to +100)\n");
+    fprintf(fl, "emotion_flee_fear_low_modifier = %d\n", CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER);
+    fprintf(fl, "emotion_flee_fear_high_modifier = %d\n", CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER);
+    fprintf(fl, "emotion_flee_courage_low_modifier = %d\n", CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER);
+    fprintf(fl, "emotion_flee_courage_high_modifier = %d\n", CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER);
+    fprintf(fl, "emotion_flee_horror_modifier = %d\n\n", CONFIG_EMOTION_FLEE_HORROR_MODIFIER);
+
+    fprintf(fl, "* Pain System Damage Thresholds (%% of max HP)\n");
+    fprintf(fl, "emotion_pain_damage_minor_threshold = %d\n", CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD);
+    fprintf(fl, "emotion_pain_damage_moderate_threshold = %d\n", CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD);
+    fprintf(fl, "emotion_pain_damage_heavy_threshold = %d\n", CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD);
+    fprintf(fl, "emotion_pain_damage_massive_threshold = %d\n\n", CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD);
+
+    fprintf(fl, "* Pain System Pain Amounts (0-100)\n");
+    fprintf(fl, "emotion_pain_minor_min = %d\n", CONFIG_EMOTION_PAIN_MINOR_MIN);
+    fprintf(fl, "emotion_pain_minor_max = %d\n", CONFIG_EMOTION_PAIN_MINOR_MAX);
+    fprintf(fl, "emotion_pain_moderate_min = %d\n", CONFIG_EMOTION_PAIN_MODERATE_MIN);
+    fprintf(fl, "emotion_pain_moderate_max = %d\n", CONFIG_EMOTION_PAIN_MODERATE_MAX);
+    fprintf(fl, "emotion_pain_heavy_min = %d\n", CONFIG_EMOTION_PAIN_HEAVY_MIN);
+    fprintf(fl, "emotion_pain_heavy_max = %d\n", CONFIG_EMOTION_PAIN_HEAVY_MAX);
+    fprintf(fl, "emotion_pain_massive_min = %d\n", CONFIG_EMOTION_PAIN_MASSIVE_MIN);
+    fprintf(fl, "emotion_pain_massive_max = %d\n\n", CONFIG_EMOTION_PAIN_MASSIVE_MAX);
+
+    fprintf(fl, "* Memory System Weights (1-10)\n");
+    fprintf(fl, "emotion_memory_weight_recent = %d\n", CONFIG_EMOTION_MEMORY_WEIGHT_RECENT);
+    fprintf(fl, "emotion_memory_weight_fresh = %d\n", CONFIG_EMOTION_MEMORY_WEIGHT_FRESH);
+    fprintf(fl, "emotion_memory_weight_moderate = %d\n", CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE);
+    fprintf(fl, "emotion_memory_weight_old = %d\n", CONFIG_EMOTION_MEMORY_WEIGHT_OLD);
+    fprintf(fl, "emotion_memory_weight_ancient = %d\n\n", CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT);
+
+    fprintf(fl, "* Memory System Age Thresholds (seconds)\n");
+    fprintf(fl, "emotion_memory_age_recent = %d\n", CONFIG_EMOTION_MEMORY_AGE_RECENT);
+    fprintf(fl, "emotion_memory_age_fresh = %d\n", CONFIG_EMOTION_MEMORY_AGE_FRESH);
+    fprintf(fl, "emotion_memory_age_moderate = %d\n", CONFIG_EMOTION_MEMORY_AGE_MODERATE);
+    fprintf(fl, "emotion_memory_age_old = %d\n\n", CONFIG_EMOTION_MEMORY_AGE_OLD);
+
+    fprintf(fl, "* Memory System Baseline Offset (0-100)\n");
+    fprintf(fl, "emotion_memory_baseline_offset = %d\n\n", CONFIG_EMOTION_MEMORY_BASELINE_OFFSET);
+
     fclose(fl);
 
     if (in_save_list(NOWHERE, SL_CFG))
