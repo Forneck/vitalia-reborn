@@ -263,10 +263,6 @@ int breath_gain(struct char_data *ch)
         }
     }
 
-    /* If character has water breathing, they don't lose breath underwater */
-    if (AFF_FLAGGED(ch, AFF_BREATH))
-        gain = GET_MAX_BREATH(ch);
-
     return (gain);
 }
 
