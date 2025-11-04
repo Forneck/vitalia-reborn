@@ -378,17 +378,17 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
         /* Only display if player has DISPEMOTE preference enabled */
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS && i->ai_data && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_DISPEMOTE)) {
             if (i->ai_data->emotion_fear >= CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD)
-                send_to_char(ch, "%s(amedrontado) ", CCMAG(ch, C_NRM));
+                send_to_char(ch, "%s(amedrontado)%s ", CCMAG(ch, C_NRM), CCNRM(ch, C_NRM));
             else if (i->ai_data->emotion_anger >= CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD)
-                send_to_char(ch, "%s(furioso) ", CCRED(ch, C_NRM));
+                send_to_char(ch, "%s(furioso)%s ", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
             else if (i->ai_data->emotion_happiness >= CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD)
-                send_to_char(ch, "%s(feliz) ", CCYEL(ch, C_NRM));
+                send_to_char(ch, "%s(feliz)%s ", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
             else if (i->ai_data->emotion_sadness >= CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD)
-                send_to_char(ch, "%s(triste) ", CCBLU(ch, C_NRM));
+                send_to_char(ch, "%s(triste)%s ", CCBLU(ch, C_NRM), CCNRM(ch, C_NRM));
             else if (i->ai_data->emotion_horror >= CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD)
-                send_to_char(ch, "%s(aterrorizado) ", CBMAG(ch, C_NRM));
+                send_to_char(ch, "%s(aterrorizado)%s ", CBMAG(ch, C_NRM), CCNRM(ch, C_NRM));
             else if (i->ai_data->emotion_pain >= CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD)
-                send_to_char(ch, "%s(sofrendo) ", CCRED(ch, C_NRM));
+                send_to_char(ch, "%s(sofrendo)%s ", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
         }
 
         send_to_char(ch, "%s%s", CCYEL(ch, C_NRM), i->player.long_descr);
@@ -423,17 +423,17 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
         /* Only display if player has DISPEMOTE preference enabled */
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS && i->ai_data && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_DISPEMOTE)) {
             if (i->ai_data->emotion_fear >= CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD)
-                send_to_char(ch, "%s(amedrontado) ", CCMAG(ch, C_NRM));
+                send_to_char(ch, "%s(amedrontado)%s ", CCMAG(ch, C_NRM), CCNRM(ch, C_NRM));
             else if (i->ai_data->emotion_anger >= CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD)
-                send_to_char(ch, "%s(furioso) ", CCRED(ch, C_NRM));
+                send_to_char(ch, "%s(furioso)%s ", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
             else if (i->ai_data->emotion_happiness >= CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD)
-                send_to_char(ch, "%s(feliz) ", CCYEL(ch, C_NRM));
+                send_to_char(ch, "%s(feliz)%s ", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
             else if (i->ai_data->emotion_sadness >= CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD)
-                send_to_char(ch, "%s(triste) ", CCBLU(ch, C_NRM));
+                send_to_char(ch, "%s(triste)%s ", CCBLU(ch, C_NRM), CCNRM(ch, C_NRM));
             else if (i->ai_data->emotion_horror >= CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD)
-                send_to_char(ch, "%s(aterrorizado) ", CBMAG(ch, C_NRM));
+                send_to_char(ch, "%s(aterrorizado)%s ", CBMAG(ch, C_NRM), CCNRM(ch, C_NRM));
             else if (i->ai_data->emotion_pain >= CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD)
-                send_to_char(ch, "%s(sofrendo) ", CCRED(ch, C_NRM));
+                send_to_char(ch, "%s(sofrendo)%s ", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
         }
 
         send_to_char(ch, "%c%s", UPPER(*i->player.short_descr), i->player.short_descr + 1);
