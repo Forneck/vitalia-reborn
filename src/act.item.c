@@ -728,6 +728,9 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
             ch->ai_data->reputation = MIN(100, ch->ai_data->reputation + 1);
         }
     }
+
+    /* Update mob emotions for receiving item (experimental feature) */
+    update_mob_emotion_received_item(vict, ch);
 }
 
 /* utility function for give */

@@ -310,9 +310,10 @@
 #define PRF_AUTOSIZE 39   /**< Auto NAWS terminal size configuration */
 #define PRF_VERBOSE 40    /**< Listings like where are more verbose */
 #define PRF_VIEWDAMAGE 41 /**< Display damage values after attack messages */
+#define PRF_DISPEMOTE 42  /**< Display mob emotion indicators in room descriptions */
 
 /** Total number of available PRF flags */
-#define NUM_PRF_FLAGS 42
+#define NUM_PRF_FLAGS 43
 
 /* Affect bits: used in char_data.char_specials.saved.affected_by */
 /* WARNING: In the world files, NEVER set the bits marked "R" ("Reserved") */
@@ -413,33 +414,33 @@
  which control the valid places you can wear a piece of equipment.
  For example, there are two neck positions on the player, and items
  only get the generic neck type. */
- #define WEAR_LIGHT 0    /**< Equipment Location Light */
- #define WEAR_HEAD 1     /**< Equipment Location Head */
- #define WEAR_EAR_R 2
- #define WEAR_EAR_L 3
- #define WEAR_FACE 4
- #define WEAR_NOSE 5
- #define WEAR_NECK_1 6   /**< Equipment Location Neck #1 */
- #define WEAR_NECK_2 7   /**< Equipment Location Neck #2 */
- #define WEAR_BODY 8     /**< Equipment Location Body */
- #define WEAR_ARMS 9    /**< Equipment Location Arms */
- #define WEAR_HANDS 10    /**< Equipment Location Hands */
- #define WEAR_WRIST_R 11 /**< Equipment Location Right Wrist */
- #define WEAR_WRIST_L 12 /**< Equipment Location Left Wrist */
- #define WEAR_FINGER_R 13 /**< Equipment Location Right Finger */
- #define WEAR_FINGER_L 14 /**< Equipment Location Left Finger */
- #define WEAR_WAIST 15   /**< Equipment Location Waist */
- #define WEAR_LEGS 16     /**< Equipment Location Legs */
- #define WEAR_FEET 17     /**< Equipment Location Feet */
- #define WEAR_ABOUT 18   /**< Equipment Location about body (like a cape)*/
- #define WEAR_SHIELD 19  /**< Equipment Location Shield */
- #define WEAR_WIELD 20   /**< Equipment Location Weapon */
- #define WEAR_HOLD 21    /**< Equipment Location held in offhand */
- #define WEAR_WINGS 22
- #define WEAR_INSIGNE 23
- #define WEAR_QUIVER 24
- /** Total number of available equipment lcoations */
- #define NUM_WEARS 25
+#define WEAR_LIGHT 0 /**< Equipment Location Light */
+#define WEAR_HEAD 1  /**< Equipment Location Head */
+#define WEAR_EAR_R 2
+#define WEAR_EAR_L 3
+#define WEAR_FACE 4
+#define WEAR_NOSE 5
+#define WEAR_NECK_1 6    /**< Equipment Location Neck #1 */
+#define WEAR_NECK_2 7    /**< Equipment Location Neck #2 */
+#define WEAR_BODY 8      /**< Equipment Location Body */
+#define WEAR_ARMS 9      /**< Equipment Location Arms */
+#define WEAR_HANDS 10    /**< Equipment Location Hands */
+#define WEAR_WRIST_R 11  /**< Equipment Location Right Wrist */
+#define WEAR_WRIST_L 12  /**< Equipment Location Left Wrist */
+#define WEAR_FINGER_R 13 /**< Equipment Location Right Finger */
+#define WEAR_FINGER_L 14 /**< Equipment Location Left Finger */
+#define WEAR_WAIST 15    /**< Equipment Location Waist */
+#define WEAR_LEGS 16     /**< Equipment Location Legs */
+#define WEAR_FEET 17     /**< Equipment Location Feet */
+#define WEAR_ABOUT 18    /**< Equipment Location about body (like a cape)*/
+#define WEAR_SHIELD 19   /**< Equipment Location Shield */
+#define WEAR_WIELD 20    /**< Equipment Location Weapon */
+#define WEAR_HOLD 21     /**< Equipment Location held in offhand */
+#define WEAR_WINGS 22
+#define WEAR_INSIGNE 23
+#define WEAR_QUIVER 24
+/** Total number of available equipment locations */
+#define NUM_WEARS 25
 
 /* object-related defines */
 /* Item types: used by obj_data.obj_flags.type_flag */
@@ -998,6 +999,59 @@ struct mob_wishlist_item {
     struct mob_wishlist_item *next; /* Próximo item na lista */
 };
 
+/**
+ * Emotion memory system - tracks recent interactions with entities for persistent emotional responses
+ *
+ * DESIGN PHILOSOPHY:
+ * - Memories are RUNTIME-ONLY (not persisted to disk)
+ * - Mob memories reset on zone reset/reboot - this is intentional
+ * - Allows strategic gameplay: players can wait for zone reset to "reset" mob relationships
+ * - Prevents stale memory corruption from extracted/dead entities
+ * - Simple implementation with no disk I/O overhead
+ *
+ * ENTITY IDENTIFICATION:
+ * - Players: GET_IDNUM (persistent unique ID, but memories themselves aren't saved)
+ * - Mobs: char_script_id (runtime-only unique instance ID per boot session)
+ *
+ * MEMORY SIZE: 10 slots per mob using circular buffer
+ * - Oldest memory automatically overwritten when buffer is full
+ * - ~240 bytes per mob (negligible memory footprint)
+ * - ~240KB for 1000 active mobs
+ *
+ * MEMORY WEIGHTING:
+ * - Recent interactions have more weight (decay over time)
+ * - Major events (rescue, theft, ally death, extreme violence) have 2x weight
+ * - Memories older than 1 hour have minimal influence
+ */
+#define EMOTION_MEMORY_SIZE 10
+#define ENTITY_TYPE_PLAYER 0
+#define ENTITY_TYPE_MOB 1
+
+/* Interaction types for emotion memory */
+#define INTERACT_ATTACKED 0
+#define INTERACT_HEALED 1
+#define INTERACT_RECEIVED_ITEM 2
+#define INTERACT_STOLEN_FROM 3
+#define INTERACT_RESCUED 4
+#define INTERACT_ASSISTED 5
+#define INTERACT_SOCIAL_POSITIVE 6
+#define INTERACT_SOCIAL_NEGATIVE 7
+#define INTERACT_SOCIAL_VIOLENT 8
+#define INTERACT_ALLY_DIED 9
+
+struct emotion_memory {
+    int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
+    long entity_id;       /* GET_IDNUM for players, char_script_id for mobs (runtime-only) */
+    int interaction_type; /* Type of interaction (INTERACT_*) */
+    int major_event;      /* 1 for major events (rescue, ally death, theft, extreme violence), 0 for normal */
+    time_t timestamp;     /* When the interaction occurred (0 = unused slot) */
+    /* Simplified emotion snapshot - only track key emotions for memory efficiency (4 emotions vs 20) */
+    sh_int trust_level;      /* Trust at time of interaction (-50 to +50 range) */
+    sh_int friendship_level; /* Friendship at time of interaction (-50 to +50 range) */
+    sh_int fear_level;       /* Fear at time of interaction (0-100) */
+    sh_int anger_level;      /* Anger at time of interaction (0-100) */
+};
+
 struct mob_ai_data {
     struct mob_genetics genetics; /* Contém todos os genes. */
     room_vnum guard_post;         /* O "posto de guarda" para Sentinelas/Lojistas. */
@@ -1063,6 +1117,10 @@ struct mob_ai_data {
     qst_vnum *temp_quests;    /* Array of quest vnums this mob is managing temporarily */
     int num_temp_quests;      /* Number of temporary quests managed */
     int max_temp_quests;      /* Maximum temporary quests this mob can manage */
+
+    /* Emotion memory system - tracks recent interactions for persistent relationships */
+    struct emotion_memory memories[EMOTION_MEMORY_SIZE]; /* Circular buffer of interaction memories */
+    int memory_index; /* Current position in circular buffer (0 to EMOTION_MEMORY_SIZE-1) */
 };
 
 /**
@@ -1661,6 +1719,60 @@ struct autowiz_data {
     int min_wizlist_lev; /**< Minimun level to show on wizlist.  */
 };
 
+/** Emotion system configuration. */
+struct emotion_config_data {
+    /* Visual indicator thresholds */
+    int display_fear_threshold;      /**< Min fear level to show (amedrontado) indicator (default: 70) */
+    int display_anger_threshold;     /**< Min anger level to show (furioso) indicator (default: 70) */
+    int display_happiness_threshold; /**< Min happiness level to show (feliz) indicator (default: 80) */
+    int display_sadness_threshold;   /**< Min sadness level to show (triste) indicator (default: 70) */
+    int display_horror_threshold;    /**< Min horror level to show (aterrorizado) indicator (default: 80) */
+    int display_pain_threshold;      /**< Min pain level to show (sofrendo) indicator (default: 70) */
+
+    /* Combat flee behavior thresholds */
+    int flee_fear_low_threshold;     /**< Low fear threshold for flee modifier (default: 50) */
+    int flee_fear_high_threshold;    /**< High fear threshold for flee modifier (default: 70) */
+    int flee_courage_low_threshold;  /**< Low courage threshold for flee modifier (default: 50) */
+    int flee_courage_high_threshold; /**< High courage threshold for flee modifier (default: 70) */
+    int flee_horror_threshold;       /**< Horror threshold for panic flee (default: 80) */
+
+    /* Flee modifier values */
+    int flee_fear_low_modifier;     /**< HP% modifier for low fear (default: 10) */
+    int flee_fear_high_modifier;    /**< HP% modifier for high fear (default: 15) */
+    int flee_courage_low_modifier;  /**< HP% modifier for low courage (default: -10) */
+    int flee_courage_high_modifier; /**< HP% modifier for high courage (default: -15) */
+    int flee_horror_modifier;       /**< HP% modifier for horror panic (default: 25) */
+
+    /* Pain system thresholds and values */
+    int pain_damage_minor_threshold;    /**< Damage % for minor pain (default: 5) */
+    int pain_damage_moderate_threshold; /**< Damage % for moderate pain (default: 10) */
+    int pain_damage_heavy_threshold;    /**< Damage % for heavy pain (default: 25) */
+    int pain_damage_massive_threshold;  /**< Damage % for massive pain (default: 50) */
+
+    int pain_minor_min;    /**< Min pain from minor damage (default: 1) */
+    int pain_minor_max;    /**< Max pain from minor damage (default: 5) */
+    int pain_moderate_min; /**< Min pain from moderate damage (default: 5) */
+    int pain_moderate_max; /**< Max pain from moderate damage (default: 15) */
+    int pain_heavy_min;    /**< Min pain from heavy damage (default: 15) */
+    int pain_heavy_max;    /**< Max pain from heavy damage (default: 30) */
+    int pain_massive_min;  /**< Min pain from massive damage (default: 30) */
+    int pain_massive_max;  /**< Max pain from massive damage (default: 50) */
+
+    /* Memory system weights and thresholds */
+    int memory_weight_recent;   /**< Weight for very recent memories <5min (default: 10) */
+    int memory_weight_fresh;    /**< Weight for fresh memories 5-10min (default: 7) */
+    int memory_weight_moderate; /**< Weight for moderate memories 10-30min (default: 5) */
+    int memory_weight_old;      /**< Weight for old memories 30-60min (default: 3) */
+    int memory_weight_ancient;  /**< Weight for ancient memories >60min (default: 1) */
+
+    int memory_age_recent;   /**< Seconds for recent threshold (default: 300 = 5min) */
+    int memory_age_fresh;    /**< Seconds for fresh threshold (default: 600 = 10min) */
+    int memory_age_moderate; /**< Seconds for moderate threshold (default: 1800 = 30min) */
+    int memory_age_old;      /**< Seconds for old threshold (default: 3600 = 60min) */
+
+    int memory_baseline_offset; /**< Offset for emotion level conversion (default: 50) */
+};
+
 /** Experimental Features configuration. */
 struct experimental_data {
     int new_auction_system;        /**< New Auction System enabled?   */
@@ -1695,6 +1807,8 @@ struct config_data {
     struct autowiz_data autowiz;
     /** Experimental features settings */
     struct experimental_data experimental;
+    /** Emotion system configuration */
+    struct emotion_config_data emotion_config;
 };
 
 #ifdef MEMORY_DEBUG

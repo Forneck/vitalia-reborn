@@ -113,11 +113,11 @@ const char *action_bits[] = {"SPEC",      "SENTINEL", "SCAVENGER", "NO_POISON", 
  * @pre Must be in the same order as the defines.
  * Must end array with a single newline. */
 const char *preference_bits[] = {
-    "BRIEF",     "COMPACT",   "NO_SHOUT", "NO_TELL",    "D_HP",    "D_MANA",     "D_MOVE",   "AUTOEX",     "NO_HASS",
-    "QUEST",     "SUMN",      "NO_REP",   "LIGHT",      "C1",      "C2",         "NO_WIZ",   "L1",         "L2",
-    "NO_AUC",    "NO_GOS",    "NO_GTZ",   "RMFLG",      "D_AUTO",  "CLS",        "BLDWLK",   "AFK",        "AUTOLOOT",
-    "AUTOGOLD",  "AUTOSPLIT", "AUTOSAC",  "AUTOASSIST", "AUTOMAP", "AUTOKEY",    "AUTODOOR", "ZONERESETS", "HITBAR",
-    "AUTOTITLE", "NO_CLAN",   "MCCP",     "AUTOSIZE",   "VERBOSE", "VIEWDAMAGE", "\n"};
+    "BRIEF",     "COMPACT",   "NO_SHOUT", "NO_TELL",    "D_HP",    "D_MANA",     "D_MOVE",    "AUTOEX",     "NO_HASS",
+    "QUEST",     "SUMN",      "NO_REP",   "LIGHT",      "C1",      "C2",         "NO_WIZ",    "L1",         "L2",
+    "NO_AUC",    "NO_GOS",    "NO_GTZ",   "RMFLG",      "D_AUTO",  "CLS",        "BLDWLK",    "AFK",        "AUTOLOOT",
+    "AUTOGOLD",  "AUTOSPLIT", "AUTOSAC",  "AUTOASSIST", "AUTOMAP", "AUTOKEY",    "AUTODOOR",  "ZONERESETS", "HITBAR",
+    "AUTOTITLE", "NO_CLAN",   "MCCP",     "AUTOSIZE",   "VERBOSE", "VIEWDAMAGE", "DISPEMOTE", "\n"};
 
 /** Affected bits.
  * @pre Must be in the same order as the defines.

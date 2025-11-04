@@ -811,6 +811,11 @@ int mag_points(int level, struct char_data *ch, struct char_data *victim, int sp
                 }
             }
         }
+
+        /* Update mob emotions for being healed (experimental feature) */
+        if (ch != victim && hp > 0) {
+            update_mob_emotion_healed(victim, ch);
+        }
     }
 
     if (spell->points.mana) {

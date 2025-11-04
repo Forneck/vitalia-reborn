@@ -248,6 +248,8 @@ ACMD(do_steal)
                 send_to_char(ch, "Opa..\r\n");
                 act("$n tentou roubar algo de você!", FALSE, ch, 0, vict, TO_VICT);
                 act("$n tentou roubar algo de $N.", TRUE, ch, 0, vict, TO_NOTVICT);
+                /* Update mob emotions for failed steal attempt (experimental feature) */
+                update_mob_emotion_stolen_from(vict, ch);
             } else { /* Steal the item */
                 if (IS_CARRYING_N(ch) + 1 < CAN_CARRY_N(ch)) {
                     if (!give_otrigger(obj, vict, ch) || !receive_mtrigger(ch, vict, obj)) {
@@ -269,6 +271,8 @@ ACMD(do_steal)
             send_to_char(ch, "Opa..\r\n");
             act("Você descobre que $n estava com as mãos em sua carteira.", FALSE, ch, 0, vict, TO_VICT);
             act("$n tentou roubar dinheiro de $N.", TRUE, ch, 0, vict, TO_NOTVICT);
+            /* Update mob emotions for failed steal attempt (experimental feature) */
+            update_mob_emotion_stolen_from(vict, ch);
         } else {
             /* Steal some gold coins */
             gold = (GET_GOLD(vict) * rand_number(1, 10)) / 100;

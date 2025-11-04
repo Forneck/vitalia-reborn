@@ -2336,6 +2336,23 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->emotion_love = URANGE(0, mob->ai_data->emotion_love, 100);
     mob->ai_data->emotion_pride = URANGE(0, mob->ai_data->emotion_pride, 100);
     mob->ai_data->emotion_envy = URANGE(0, mob->ai_data->emotion_envy, 100);
+
+    /* Initialize emotion memory system - zero out all memory slots */
+    {
+        int i;
+        for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+            mob->ai_data->memories[i].timestamp = 0; /* Mark as unused */
+            mob->ai_data->memories[i].entity_id = 0;
+            mob->ai_data->memories[i].entity_type = 0;
+            mob->ai_data->memories[i].interaction_type = 0;
+            mob->ai_data->memories[i].major_event = 0;
+            mob->ai_data->memories[i].trust_level = 0;
+            mob->ai_data->memories[i].friendship_level = 0;
+            mob->ai_data->memories[i].fear_level = 0;
+            mob->ai_data->memories[i].anger_level = 0;
+        }
+        mob->ai_data->memory_index = 0; /* Start at beginning of circular buffer */
+    }
 }
 
 /* Save temporary quest assignments to file */

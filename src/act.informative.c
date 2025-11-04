@@ -156,9 +156,8 @@ end:
 
 static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int mode)
 {
-    
-    if (mode == SHOW_OBJ_SHORT )
-    {
+
+    if (mode == SHOW_OBJ_SHORT) {
         bool has_aura = FALSE;
 
         if (OBJ_FLAGGED(obj, ITEM_INVISIBLE)) {
@@ -185,8 +184,7 @@ static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int m
             send_to_char(ch, "\tC (zunindo)\tW");
             has_aura = TRUE;
         }
-    }else
-    {
+    } else {
         if (OBJ_FLAGGED(obj, ITEM_INVISIBLE))
             send_to_char(ch, " \tw(invisivel)\tn");
 
@@ -376,6 +374,23 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
             send_to_char(ch, "%s(Bounty) ", CBRED(ch, C_NRM));
         }
 
+        /* EMOTION SYSTEM: Add emotion indicators based on high emotion levels */
+        /* Only display if player has DISPEMOTE preference enabled */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && i->ai_data && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_DISPEMOTE)) {
+            if (i->ai_data->emotion_fear >= 70)
+                send_to_char(ch, "%s(amedrontado) ", CCMAG(ch, C_NRM));
+            else if (i->ai_data->emotion_anger >= 70)
+                send_to_char(ch, "%s(furioso) ", CCRED(ch, C_NRM));
+            else if (i->ai_data->emotion_happiness >= 80)
+                send_to_char(ch, "%s(feliz) ", CCYEL(ch, C_NRM));
+            else if (i->ai_data->emotion_sadness >= 70)
+                send_to_char(ch, "%s(triste) ", CCBLU(ch, C_NRM));
+            else if (i->ai_data->emotion_horror >= 80)
+                send_to_char(ch, "%s(aterrorizado) ", CBMAG(ch, C_NRM));
+            else if (i->ai_data->emotion_pain >= 70)
+                send_to_char(ch, "%s(sofrendo) ", CCRED(ch, C_NRM));
+        }
+
         send_to_char(ch, "%s%s", CCYEL(ch, C_NRM), i->player.long_descr);
 
         if (AFF_FLAGGED(i, AFF_SANCTUARY))
@@ -403,6 +418,24 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
             GET_BOUNTY_TARGET_ID(ch) != NOBODY && char_script_id(i) == GET_BOUNTY_TARGET_ID(ch)) {
             send_to_char(ch, "%s(Bounty) ", CBRED(ch, C_NRM));
         }
+
+        /* EMOTION SYSTEM: Add emotion indicators for mobs not in default position */
+        /* Only display if player has DISPEMOTE preference enabled */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && i->ai_data && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_DISPEMOTE)) {
+            if (i->ai_data->emotion_fear >= 70)
+                send_to_char(ch, "%s(amedrontado) ", CCMAG(ch, C_NRM));
+            else if (i->ai_data->emotion_anger >= 70)
+                send_to_char(ch, "%s(furioso) ", CCRED(ch, C_NRM));
+            else if (i->ai_data->emotion_happiness >= 80)
+                send_to_char(ch, "%s(feliz) ", CCYEL(ch, C_NRM));
+            else if (i->ai_data->emotion_sadness >= 70)
+                send_to_char(ch, "%s(triste) ", CCBLU(ch, C_NRM));
+            else if (i->ai_data->emotion_horror >= 80)
+                send_to_char(ch, "%s(aterrorizado) ", CBMAG(ch, C_NRM));
+            else if (i->ai_data->emotion_pain >= 70)
+                send_to_char(ch, "%s(sofrendo) ", CCRED(ch, C_NRM));
+        }
+
         send_to_char(ch, "%c%s", UPPER(*i->player.short_descr), i->player.short_descr + 1);
     } else {
         if (IS_DEAD(i))

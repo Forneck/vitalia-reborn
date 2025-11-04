@@ -138,14 +138,23 @@ int is_wishlist_quest(qst_vnum quest_vnum);
 void cleanup_completed_wishlist_quest(qst_vnum quest_vnum);
 
 /* Mob emotion system functions */
+void adjust_emotion(struct char_data *mob, int *emotion_ptr, int amount);
 void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attacker);
 void update_mob_emotion_attacking(struct char_data *mob, struct char_data *victim);
 void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer);
 void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_ally);
 void update_mob_emotion_received_item(struct char_data *mob, struct char_data *giver);
+void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thief);
+void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer);
+void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assistant);
 void update_mob_emotion_passive(struct char_data *mob);
 void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
+
+/* Emotion memory system functions */
+void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event);
+int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
+void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
 
 /* Stoneskin utility functions */
 int get_stoneskin_points(struct char_data *ch);
@@ -1299,5 +1308,60 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_MOB_EMOTION_SOCIAL_CHANCE config_info.experimental.mob_emotion_social_chance
 /** Probability (%) of mob updating emotions per emotion tick */
 #define CONFIG_MOB_EMOTION_UPDATE_CHANCE config_info.experimental.mob_emotion_update_chance
+
+/* Emotion System Configuration Macros */
+/** Visual indicator thresholds */
+#define CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD config_info.emotion_config.display_fear_threshold
+#define CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD config_info.emotion_config.display_anger_threshold
+#define CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD config_info.emotion_config.display_happiness_threshold
+#define CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD config_info.emotion_config.display_sadness_threshold
+#define CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD config_info.emotion_config.display_horror_threshold
+#define CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD config_info.emotion_config.display_pain_threshold
+
+/** Combat flee behavior thresholds */
+#define CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD config_info.emotion_config.flee_fear_low_threshold
+#define CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD config_info.emotion_config.flee_fear_high_threshold
+#define CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD config_info.emotion_config.flee_courage_low_threshold
+#define CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD config_info.emotion_config.flee_courage_high_threshold
+#define CONFIG_EMOTION_FLEE_HORROR_THRESHOLD config_info.emotion_config.flee_horror_threshold
+
+/** Flee modifier values */
+#define CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER config_info.emotion_config.flee_fear_low_modifier
+#define CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER config_info.emotion_config.flee_fear_high_modifier
+#define CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER config_info.emotion_config.flee_courage_low_modifier
+#define CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER config_info.emotion_config.flee_courage_high_modifier
+#define CONFIG_EMOTION_FLEE_HORROR_MODIFIER config_info.emotion_config.flee_horror_modifier
+
+/** Pain system thresholds */
+#define CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD config_info.emotion_config.pain_damage_minor_threshold
+#define CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD config_info.emotion_config.pain_damage_moderate_threshold
+#define CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD config_info.emotion_config.pain_damage_heavy_threshold
+#define CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD config_info.emotion_config.pain_damage_massive_threshold
+
+/** Pain values */
+#define CONFIG_EMOTION_PAIN_MINOR_MIN config_info.emotion_config.pain_minor_min
+#define CONFIG_EMOTION_PAIN_MINOR_MAX config_info.emotion_config.pain_minor_max
+#define CONFIG_EMOTION_PAIN_MODERATE_MIN config_info.emotion_config.pain_moderate_min
+#define CONFIG_EMOTION_PAIN_MODERATE_MAX config_info.emotion_config.pain_moderate_max
+#define CONFIG_EMOTION_PAIN_HEAVY_MIN config_info.emotion_config.pain_heavy_min
+#define CONFIG_EMOTION_PAIN_HEAVY_MAX config_info.emotion_config.pain_heavy_max
+#define CONFIG_EMOTION_PAIN_MASSIVE_MIN config_info.emotion_config.pain_massive_min
+#define CONFIG_EMOTION_PAIN_MASSIVE_MAX config_info.emotion_config.pain_massive_max
+
+/** Memory system weights */
+#define CONFIG_EMOTION_MEMORY_WEIGHT_RECENT config_info.emotion_config.memory_weight_recent
+#define CONFIG_EMOTION_MEMORY_WEIGHT_FRESH config_info.emotion_config.memory_weight_fresh
+#define CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE config_info.emotion_config.memory_weight_moderate
+#define CONFIG_EMOTION_MEMORY_WEIGHT_OLD config_info.emotion_config.memory_weight_old
+#define CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT config_info.emotion_config.memory_weight_ancient
+
+/** Memory age thresholds */
+#define CONFIG_EMOTION_MEMORY_AGE_RECENT config_info.emotion_config.memory_age_recent
+#define CONFIG_EMOTION_MEMORY_AGE_FRESH config_info.emotion_config.memory_age_fresh
+#define CONFIG_EMOTION_MEMORY_AGE_MODERATE config_info.emotion_config.memory_age_moderate
+#define CONFIG_EMOTION_MEMORY_AGE_OLD config_info.emotion_config.memory_age_old
+
+/** Memory baseline offset */
+#define CONFIG_EMOTION_MEMORY_BASELINE_OFFSET config_info.emotion_config.memory_baseline_offset
 
 #endif /* _UTILS_H_ */
