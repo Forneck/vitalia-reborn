@@ -5095,8 +5095,10 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
     memory->timestamp = time(0);
 
     /* Store simplified emotion snapshot */
-    memory->trust_level = mob->ai_data->emotion_trust - CONFIG_EMOTION_MEMORY_BASELINE_OFFSET;           /* Convert to -50 to +50 range */
-    memory->friendship_level = mob->ai_data->emotion_friendship - CONFIG_EMOTION_MEMORY_BASELINE_OFFSET; /* Convert to -50 to +50 range */
+    memory->trust_level =
+        mob->ai_data->emotion_trust - CONFIG_EMOTION_MEMORY_BASELINE_OFFSET; /* Convert to -50 to +50 range */
+    memory->friendship_level =
+        mob->ai_data->emotion_friendship - CONFIG_EMOTION_MEMORY_BASELINE_OFFSET; /* Convert to -50 to +50 range */
     memory->fear_level = mob->ai_data->emotion_fear;
     memory->anger_level = mob->ai_data->emotion_anger;
 
