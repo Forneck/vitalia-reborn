@@ -6504,6 +6504,11 @@ ACMD(do_enable)
 /* Display current emotion system configuration */
 ACMD(do_emotionconfig)
 {
+    /* Safety check */
+    if (!ch || !ch->desc) {
+        return;
+    }
+
     send_to_char(ch, "\r\n%s=== Emotion System Configuration ===%s\r\n\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
 
     send_to_char(ch, "%sVisual Indicator Thresholds:%s\r\n", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
@@ -6554,7 +6559,14 @@ ACMD(do_emotionexport)
     FILE *fp;
     char filename[MAX_INPUT_LENGTH];
     char arg[MAX_INPUT_LENGTH];
+    char safe_arg[MAX_INPUT_LENGTH];
     time_t now = time(0);
+    int i;
+
+    /* Safety checks */
+    if (!ch || !ch->desc) {
+        return;
+    }
 
     one_argument(argument, arg);
 
@@ -6563,7 +6575,23 @@ ACMD(do_emotionexport)
         return;
     }
 
-    snprintf(filename, sizeof(filename), "lib/misc/emotion_%s.cfg", arg);
+    /* Sanitize filename - only allow alphanumeric, underscore, and hyphen */
+    for (i = 0; arg[i] && i < MAX_INPUT_LENGTH - 1; i++) {
+        if (!isalnum(arg[i]) && arg[i] != '_' && arg[i] != '-') {
+            send_to_char(ch, "Invalid filename. Use only letters, numbers, underscore, and hyphen.\r\n");
+            return;
+        }
+        safe_arg[i] = arg[i];
+    }
+    safe_arg[i] = '\0';
+
+    /* Check for empty sanitized name */
+    if (!*safe_arg) {
+        send_to_char(ch, "Invalid filename.\r\n");
+        return;
+    }
+
+    snprintf(filename, sizeof(filename), "lib/misc/emotion_%s.cfg", safe_arg);
 
     if (!(fp = fopen(filename, "w"))) {
         send_to_char(ch, "Could not create file '%s'.\r\n", filename);
@@ -6640,8 +6668,15 @@ ACMD(do_emotionimport)
     FILE *fp;
     char filename[MAX_INPUT_LENGTH];
     char arg[MAX_INPUT_LENGTH];
+    char safe_arg[MAX_INPUT_LENGTH];
     char line[256], key[128], value[128];
     int imported = 0;
+    int i;
+
+    /* Safety checks */
+    if (!ch || !ch->desc) {
+        return;
+    }
 
     one_argument(argument, arg);
 
@@ -6650,7 +6685,23 @@ ACMD(do_emotionimport)
         return;
     }
 
-    snprintf(filename, sizeof(filename), "lib/misc/emotion_%s.cfg", arg);
+    /* Sanitize filename - only allow alphanumeric, underscore, and hyphen */
+    for (i = 0; arg[i] && i < MAX_INPUT_LENGTH - 1; i++) {
+        if (!isalnum(arg[i]) && arg[i] != '_' && arg[i] != '-') {
+            send_to_char(ch, "Invalid filename. Use only letters, numbers, underscore, and hyphen.\r\n");
+            return;
+        }
+        safe_arg[i] = arg[i];
+    }
+    safe_arg[i] = '\0';
+
+    /* Check for empty sanitized name */
+    if (!*safe_arg) {
+        send_to_char(ch, "Invalid filename.\r\n");
+        return;
+    }
+
+    snprintf(filename, sizeof(filename), "lib/misc/emotion_%s.cfg", safe_arg);
 
     if (!(fp = fopen(filename, "r"))) {
         send_to_char(ch, "Could not open file '%s'.\r\n", filename);
