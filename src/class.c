@@ -18,6 +18,7 @@
 #include "structs.h"
 #include "utils.h"
 #include "db.h"
+#include "comm.h"
 #include "spells.h"
 #include "interpreter.h"
 #include "constants.h"
