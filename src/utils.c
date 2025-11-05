@@ -5095,8 +5095,10 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
     memory->timestamp = time(0);
 
     /* Store simplified emotion snapshot */
-    memory->trust_level = mob->ai_data->emotion_trust - 50;           /* Convert to -50 to +50 range */
-    memory->friendship_level = mob->ai_data->emotion_friendship - 50; /* Convert to -50 to +50 range */
+    memory->trust_level =
+        mob->ai_data->emotion_trust - CONFIG_EMOTION_MEMORY_BASELINE_OFFSET; /* Convert to -50 to +50 range */
+    memory->friendship_level =
+        mob->ai_data->emotion_friendship - CONFIG_EMOTION_MEMORY_BASELINE_OFFSET; /* Convert to -50 to +50 range */
     memory->fear_level = mob->ai_data->emotion_fear;
     memory->anger_level = mob->ai_data->emotion_anger;
 
@@ -5168,16 +5170,16 @@ int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity,
 
             /* Calculate weight based on age (newer = more weight) */
             /* Memories decay over time: full weight for first 5 minutes, then decay */
-            if (age_seconds < 300) { /* < 5 minutes */
-                weight = 10;
-            } else if (age_seconds < 600) { /* 5-10 minutes */
-                weight = 7;
-            } else if (age_seconds < 1800) { /* 10-30 minutes */
-                weight = 5;
-            } else if (age_seconds < 3600) { /* 30-60 minutes */
-                weight = 3;
+            if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_RECENT) { /* < 5 minutes */
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_RECENT;
+            } else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_FRESH) { /* 5-10 minutes */
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_FRESH;
+            } else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_MODERATE) { /* 10-30 minutes */
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE;
+            } else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_OLD) { /* 30-60 minutes */
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_OLD;
             } else { /* > 1 hour */
-                weight = 1;
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT;
             }
 
             /* Major events have double weight */

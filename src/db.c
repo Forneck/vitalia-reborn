@@ -4321,6 +4321,58 @@ static void load_default_config(void)
     CONFIG_DYNAMIC_REPUTATION = NO;
     CONFIG_MOB_EMOTION_SOCIAL_CHANCE = 20; /* Default: 20% chance per emotion tick (4 seconds) */
     CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30; /* Default: 30% chance per emotion tick (4 seconds) */
+
+    /* Emotion system configuration defaults. */
+    /* Visual indicator thresholds */
+    CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD = 80;
+    CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD = 70;
+    CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD = 80;
+    CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD = 70;
+
+    /* Combat flee behavior thresholds */
+    CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD = 50;
+    CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD = 50;
+    CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_FLEE_HORROR_THRESHOLD = 80;
+
+    /* Flee modifier values */
+    CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER = 10;
+    CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER = 15;
+    CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER = -10;
+    CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER = -15;
+    CONFIG_EMOTION_FLEE_HORROR_MODIFIER = 25;
+
+    /* Pain system thresholds and values */
+    CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD = 5;
+    CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD = 10;
+    CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD = 25;
+    CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD = 50;
+
+    CONFIG_EMOTION_PAIN_MINOR_MIN = 1;
+    CONFIG_EMOTION_PAIN_MINOR_MAX = 5;
+    CONFIG_EMOTION_PAIN_MODERATE_MIN = 6;
+    CONFIG_EMOTION_PAIN_MODERATE_MAX = 15;
+    CONFIG_EMOTION_PAIN_HEAVY_MIN = 16;
+    CONFIG_EMOTION_PAIN_HEAVY_MAX = 30;
+    CONFIG_EMOTION_PAIN_MASSIVE_MIN = 31;
+    CONFIG_EMOTION_PAIN_MASSIVE_MAX = 50;
+
+    /* Memory system weights and thresholds */
+    CONFIG_EMOTION_MEMORY_WEIGHT_RECENT = 10;
+    CONFIG_EMOTION_MEMORY_WEIGHT_FRESH = 7;
+    CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE = 5;
+    CONFIG_EMOTION_MEMORY_WEIGHT_OLD = 3;
+    CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT = 1;
+
+    CONFIG_EMOTION_MEMORY_AGE_RECENT = 300;    /* 5 minutes */
+    CONFIG_EMOTION_MEMORY_AGE_FRESH = 600;     /* 10 minutes */
+    CONFIG_EMOTION_MEMORY_AGE_MODERATE = 1800; /* 30 minutes */
+    CONFIG_EMOTION_MEMORY_AGE_OLD = 3600;      /* 60 minutes */
+
+    CONFIG_EMOTION_MEMORY_BASELINE_OFFSET = 50;
 }
 
 void load_config(void)
@@ -4417,6 +4469,83 @@ void load_config(void)
             case 'e':
                 if (!str_cmp(tag, "experimental_bank_system"))
                     CONFIG_EXPERIMENTAL_BANK_SYSTEM = num;
+                /* Emotion System Configuration */
+                else if (!str_cmp(tag, "emotion_display_fear_threshold"))
+                    CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_anger_threshold"))
+                    CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_happiness_threshold"))
+                    CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_sadness_threshold"))
+                    CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_horror_threshold"))
+                    CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_display_pain_threshold"))
+                    CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_flee_fear_low_threshold"))
+                    CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_flee_fear_high_threshold"))
+                    CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_flee_courage_low_threshold"))
+                    CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_flee_courage_high_threshold"))
+                    CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_flee_horror_threshold"))
+                    CONFIG_EMOTION_FLEE_HORROR_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_flee_fear_low_modifier"))
+                    CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER = num;
+                else if (!str_cmp(tag, "emotion_flee_fear_high_modifier"))
+                    CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER = num;
+                else if (!str_cmp(tag, "emotion_flee_courage_low_modifier"))
+                    CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER = num;
+                else if (!str_cmp(tag, "emotion_flee_courage_high_modifier"))
+                    CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER = num;
+                else if (!str_cmp(tag, "emotion_flee_horror_modifier"))
+                    CONFIG_EMOTION_FLEE_HORROR_MODIFIER = num;
+                else if (!str_cmp(tag, "emotion_pain_damage_minor_threshold"))
+                    CONFIG_EMOTION_PAIN_DAMAGE_MINOR_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_pain_damage_moderate_threshold"))
+                    CONFIG_EMOTION_PAIN_DAMAGE_MODERATE_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_pain_damage_heavy_threshold"))
+                    CONFIG_EMOTION_PAIN_DAMAGE_HEAVY_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_pain_damage_massive_threshold"))
+                    CONFIG_EMOTION_PAIN_DAMAGE_MASSIVE_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_pain_minor_min"))
+                    CONFIG_EMOTION_PAIN_MINOR_MIN = num;
+                else if (!str_cmp(tag, "emotion_pain_minor_max"))
+                    CONFIG_EMOTION_PAIN_MINOR_MAX = num;
+                else if (!str_cmp(tag, "emotion_pain_moderate_min"))
+                    CONFIG_EMOTION_PAIN_MODERATE_MIN = num;
+                else if (!str_cmp(tag, "emotion_pain_moderate_max"))
+                    CONFIG_EMOTION_PAIN_MODERATE_MAX = num;
+                else if (!str_cmp(tag, "emotion_pain_heavy_min"))
+                    CONFIG_EMOTION_PAIN_HEAVY_MIN = num;
+                else if (!str_cmp(tag, "emotion_pain_heavy_max"))
+                    CONFIG_EMOTION_PAIN_HEAVY_MAX = num;
+                else if (!str_cmp(tag, "emotion_pain_massive_min"))
+                    CONFIG_EMOTION_PAIN_MASSIVE_MIN = num;
+                else if (!str_cmp(tag, "emotion_pain_massive_max"))
+                    CONFIG_EMOTION_PAIN_MASSIVE_MAX = num;
+                else if (!str_cmp(tag, "emotion_memory_weight_recent"))
+                    CONFIG_EMOTION_MEMORY_WEIGHT_RECENT = num;
+                else if (!str_cmp(tag, "emotion_memory_weight_fresh"))
+                    CONFIG_EMOTION_MEMORY_WEIGHT_FRESH = num;
+                else if (!str_cmp(tag, "emotion_memory_weight_moderate"))
+                    CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE = num;
+                else if (!str_cmp(tag, "emotion_memory_weight_old"))
+                    CONFIG_EMOTION_MEMORY_WEIGHT_OLD = num;
+                else if (!str_cmp(tag, "emotion_memory_weight_ancient"))
+                    CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT = num;
+                else if (!str_cmp(tag, "emotion_memory_age_recent"))
+                    CONFIG_EMOTION_MEMORY_AGE_RECENT = num;
+                else if (!str_cmp(tag, "emotion_memory_age_fresh"))
+                    CONFIG_EMOTION_MEMORY_AGE_FRESH = num;
+                else if (!str_cmp(tag, "emotion_memory_age_moderate"))
+                    CONFIG_EMOTION_MEMORY_AGE_MODERATE = num;
+                else if (!str_cmp(tag, "emotion_memory_age_old"))
+                    CONFIG_EMOTION_MEMORY_AGE_OLD = num;
+                else if (!str_cmp(tag, "emotion_memory_baseline_offset"))
+                    CONFIG_EMOTION_MEMORY_BASELINE_OFFSET = num;
                 break;
 
             case 'f':

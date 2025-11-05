@@ -465,6 +465,13 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 /* Memory baseline offset - menu item 111 */
 #define CEDIT_EMOTION_MEMORY_BASELINE_OFFSET 111
 
+/* Emotion submenu modes */
+#define CEDIT_EMOTION_DISPLAY_SUBMENU 112
+#define CEDIT_EMOTION_FLEE_SUBMENU 113
+#define CEDIT_EMOTION_PAIN_SUBMENU 114
+#define CEDIT_EMOTION_MEMORY_SUBMENU 115
+#define CEDIT_EMOTION_PRESET_MENU 116
+
 /* Hedit Submodes of connectedness. */
 #define HEDIT_CONFIRM_SAVESTRING 0
 #define HEDIT_CONFIRM_EDIT 1
