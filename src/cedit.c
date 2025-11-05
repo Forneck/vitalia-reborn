@@ -1248,11 +1248,11 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
 
             OLC_CONFIG(d)->emotion_config.pain_minor_min = 1;
             OLC_CONFIG(d)->emotion_config.pain_minor_max = 3;
-            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 3;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 4;
             OLC_CONFIG(d)->emotion_config.pain_moderate_max = 10;
-            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 10;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 11;
             OLC_CONFIG(d)->emotion_config.pain_heavy_max = 20;
-            OLC_CONFIG(d)->emotion_config.pain_massive_min = 20;
+            OLC_CONFIG(d)->emotion_config.pain_massive_min = 21;
             OLC_CONFIG(d)->emotion_config.pain_massive_max = 40;
 
             /* Memory system - shorter memory */
@@ -1300,11 +1300,11 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
 
             OLC_CONFIG(d)->emotion_config.pain_minor_min = 2;
             OLC_CONFIG(d)->emotion_config.pain_minor_max = 8;
-            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 8;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 9;
             OLC_CONFIG(d)->emotion_config.pain_moderate_max = 20;
-            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 20;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 21;
             OLC_CONFIG(d)->emotion_config.pain_heavy_max = 40;
-            OLC_CONFIG(d)->emotion_config.pain_massive_min = 40;
+            OLC_CONFIG(d)->emotion_config.pain_massive_min = 41;
             OLC_CONFIG(d)->emotion_config.pain_massive_max = 60;
 
             /* Memory system - longer memory */
@@ -1349,11 +1349,11 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
 
             OLC_CONFIG(d)->emotion_config.pain_minor_min = 1;
             OLC_CONFIG(d)->emotion_config.pain_minor_max = 5;
-            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 5;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 6;
             OLC_CONFIG(d)->emotion_config.pain_moderate_max = 15;
-            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 15;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 16;
             OLC_CONFIG(d)->emotion_config.pain_heavy_max = 30;
-            OLC_CONFIG(d)->emotion_config.pain_massive_min = 30;
+            OLC_CONFIG(d)->emotion_config.pain_massive_min = 31;
             OLC_CONFIG(d)->emotion_config.pain_massive_max = 50;
 
             OLC_CONFIG(d)->emotion_config.memory_weight_recent = 10;
@@ -1400,11 +1400,11 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
 
             OLC_CONFIG(d)->emotion_config.pain_minor_min = 2;
             OLC_CONFIG(d)->emotion_config.pain_minor_max = 6;
-            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 6;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 7;
             OLC_CONFIG(d)->emotion_config.pain_moderate_max = 18;
-            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 18;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 19;
             OLC_CONFIG(d)->emotion_config.pain_heavy_max = 35;
-            OLC_CONFIG(d)->emotion_config.pain_massive_min = 35;
+            OLC_CONFIG(d)->emotion_config.pain_massive_min = 36;
             OLC_CONFIG(d)->emotion_config.pain_massive_max = 55;
 
             /* Memory system - very long lasting memories */

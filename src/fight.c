@@ -967,7 +967,7 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
             pain_amount = rand_number(CONFIG_EMOTION_PAIN_MINOR_MIN, CONFIG_EMOTION_PAIN_MINOR_MAX);
         } else {
             /* Minimal damage (< 5% of max HP) */
-            pain_amount = rand_number(1, CONFIG_EMOTION_PAIN_MINOR_MAX);
+            pain_amount = rand_number(CONFIG_EMOTION_PAIN_MINOR_MIN, CONFIG_EMOTION_PAIN_MINOR_MAX);
         }
 
         adjust_emotion(victim, &victim->ai_data->emotion_pain, pain_amount);
