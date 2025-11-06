@@ -790,8 +790,12 @@ void obj_to_room(struct obj_data *object, room_rnum room)
         world[room].contents = object;
         IN_ROOM(object) = room;
         object->carried_by = NULL;
-        if (ROOM_FLAGGED(room, ROOM_HOUSE))
+        if (ROOM_FLAGGED(room, ROOM_HOUSE)) {
             SET_BIT_AR(ROOM_FLAGS(room), ROOM_HOUSE_CRASH);
+            /* Decrement counter for house objects so they don't count towards zone reset limits */
+            if (GET_OBJ_RNUM(object) != NOTHING)
+                (obj_index[GET_OBJ_RNUM(object)].number)--;
+        }
     }
 }
 
@@ -818,8 +822,13 @@ void obj_from_room(struct obj_data *object)
 
     REMOVE_FROM_LIST(object, world[IN_ROOM(object)].contents, next_content);
 
-    if (ROOM_FLAGGED(IN_ROOM(object), ROOM_HOUSE))
+    if (ROOM_FLAGGED(IN_ROOM(object), ROOM_HOUSE)) {
         SET_BIT_AR(ROOM_FLAGS(IN_ROOM(object)), ROOM_HOUSE_CRASH);
+        /* Re-increment counter for house objects when they leave the house,
+         * so they start counting towards zone reset limits again */
+        if (GET_OBJ_RNUM(object) != NOTHING)
+            (obj_index[GET_OBJ_RNUM(object)].number)++;
+    }
     IN_ROOM(object) = NOWHERE;
     object->next_content = NULL;
 }
