@@ -1,0 +1,15 @@
+
+#define CIRCLE_UNIX 1
+#define CIRCLE_CRYPT 1
+#define STDC_HEADERS 1
+#define HAVE_SYS_WAIT_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FCNTL_H 1
+#define HAVE_ERRNO_H 1
+#define HAVE_STRING_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_SYS_TIME_H 1
+#define HAVE_SYS_SELECT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_UNISTD_H 1
