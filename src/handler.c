@@ -406,8 +406,10 @@ void affect_join(struct char_data *ch, struct affected_type *af, bool add_dur, b
                     af->duration = SHRT_MIN;
                 else
                     af->duration = (sh_int)new_duration;
-            } else if (avg_dur)
-                af->duration = (af->duration + hjp->duration) / 2;
+            } else if (avg_dur) {
+                /* Prevent overflow in average calculation */
+                af->duration = (sh_int)(((long)af->duration + (long)hjp->duration) / 2);
+            }
             if (add_mod) {
                 /* Prevent modifier overflow (sbyte range: SCHAR_MIN to SCHAR_MAX) */
                 int new_modifier = (int)af->modifier + (int)hjp->modifier;
@@ -417,8 +419,10 @@ void affect_join(struct char_data *ch, struct affected_type *af, bool add_dur, b
                     af->modifier = SCHAR_MIN;
                 else
                     af->modifier = (sbyte)new_modifier;
-            } else if (avg_mod)
-                af->modifier = (af->modifier + hjp->modifier) / 2;
+            } else if (avg_mod) {
+                /* Prevent overflow in average calculation */
+                af->modifier = (sbyte)(((int)af->modifier + (int)hjp->modifier) / 2);
+            }
 
             affect_remove(ch, hjp);
             affect_to_char(ch, af);
