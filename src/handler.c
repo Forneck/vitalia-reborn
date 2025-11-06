@@ -397,14 +397,32 @@ void affect_join(struct char_data *ch, struct affected_type *af, bool add_dur, b
         next = hjp->next;
 
         if ((hjp->spell == af->spell) && (hjp->location == af->location)) {
-            if (add_dur)
-                af->duration += hjp->duration;
-            else if (avg_dur)
-                af->duration = (af->duration + hjp->duration) / 2;
-            if (add_mod)
-                af->modifier += hjp->modifier;
-            else if (avg_mod)
-                af->modifier = (af->modifier + hjp->modifier) / 2;
+            if (add_dur) {
+                /* Prevent duration overflow (sh_int range: SHRT_MIN to SHRT_MAX) */
+                long new_duration = (long)af->duration + (long)hjp->duration;
+                if (new_duration > SHRT_MAX)
+                    af->duration = SHRT_MAX;
+                else if (new_duration < SHRT_MIN)
+                    af->duration = SHRT_MIN;
+                else
+                    af->duration = (sh_int)new_duration;
+            } else if (avg_dur) {
+                /* Prevent overflow in average calculation */
+                af->duration = (sh_int)(((long)af->duration + (long)hjp->duration) / 2);
+            }
+            if (add_mod) {
+                /* Prevent modifier overflow (sbyte range: SCHAR_MIN to SCHAR_MAX) */
+                int new_modifier = (int)af->modifier + (int)hjp->modifier;
+                if (new_modifier > SCHAR_MAX)
+                    af->modifier = SCHAR_MAX;
+                else if (new_modifier < SCHAR_MIN)
+                    af->modifier = SCHAR_MIN;
+                else
+                    af->modifier = (sbyte)new_modifier;
+            } else if (avg_mod) {
+                /* Prevent overflow in average calculation */
+                af->modifier = (sbyte)(((int)af->modifier + (int)hjp->modifier) / 2);
+            }
 
             affect_remove(ch, hjp);
             affect_to_char(ch, af);
