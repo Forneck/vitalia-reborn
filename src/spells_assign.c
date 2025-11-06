@@ -1869,10 +1869,13 @@ void create_spells_db()
     new_spell->assign[1].level = 80;
     new_spell->assign[1].num_mana = strdup(buf);
     new_spell->applies[0].appl_num = APPLY_AC;
-    new_spell->applies[0].modifier = strdup("-80");
+    sprintf(buf, "(-30 - (self.level / 2)) < -80 ? -80 : (-30 - (self.level / 2))");
+    new_spell->applies[0].modifier = strdup(buf);
     new_spell->applies[0].duration = strdup("24");
     new_spell->messages.to_vict = strdup("Você sente alguém $r protegendo.");
     new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
+    new_spell->school = SCHOOL_ABJURATION;  /* Protective spell */
+    new_spell->element = ELEMENT_UNDEFINED; /* No elemental nature */
     spedit_save_internally(new_spell);
 
     // spell_disintegrate 56
