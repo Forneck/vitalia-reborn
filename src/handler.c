@@ -779,7 +779,8 @@ struct char_data *get_char_num(mob_rnum nr)
     return (NULL);
 }
 
-/* Recursively adjust object counters for house objects and their contents */
+/* Recursively adjust object counters for house objects and their contents.
+ * This handles both the object's contents and any sibling objects in the same container. */
 static void adjust_obj_counters_recursive(struct obj_data *obj, int delta)
 {
     if (!obj)
@@ -789,8 +790,9 @@ static void adjust_obj_counters_recursive(struct obj_data *obj, int delta)
     if (GET_OBJ_RNUM(obj) != NOTHING)
         obj_index[GET_OBJ_RNUM(obj)].number += delta;
 
-    /* Recursively adjust counters for contents */
+    /* Recursively adjust counters for contents and siblings */
     adjust_obj_counters_recursive(obj->contains, delta);
+    adjust_obj_counters_recursive(obj->next_content, delta);
 }
 
 /* put an object in a room */
