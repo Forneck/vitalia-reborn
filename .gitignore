@@ -14,7 +14,8 @@ src/util/rebuildMailIndex
 src/util/plrtoascii
 config.cache 
 config.log 
-config.status 
+config.status
+confdefs.h 
 src/Makefile 
 src/conf.h 
 src/util/Makefile 
