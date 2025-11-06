@@ -779,6 +779,22 @@ struct char_data *get_char_num(mob_rnum nr)
     return (NULL);
 }
 
+/* Recursively adjust object counters for house objects and their contents.
+ * This handles both the object's contents and any sibling objects in the same container. */
+static void adjust_obj_counters_recursive(struct obj_data *obj, int delta)
+{
+    if (!obj)
+        return;
+
+    /* Adjust counter for this object */
+    if (GET_OBJ_RNUM(obj) != NOTHING)
+        obj_index[GET_OBJ_RNUM(obj)].number += delta;
+
+    /* Recursively adjust counters for contents and siblings */
+    adjust_obj_counters_recursive(obj->contains, delta);
+    adjust_obj_counters_recursive(obj->next_content, delta);
+}
+
 /* put an object in a room */
 void obj_to_room(struct obj_data *object, room_rnum room)
 {
@@ -790,8 +806,12 @@ void obj_to_room(struct obj_data *object, room_rnum room)
         world[room].contents = object;
         IN_ROOM(object) = room;
         object->carried_by = NULL;
-        if (ROOM_FLAGGED(room, ROOM_HOUSE))
+        if (ROOM_FLAGGED(room, ROOM_HOUSE)) {
             SET_BIT_AR(ROOM_FLAGS(room), ROOM_HOUSE_CRASH);
+            /* Decrement counters for house objects and their contents
+             * so they don't count towards zone reset limits */
+            adjust_obj_counters_recursive(object, -1);
+        }
     }
 }
 
@@ -818,8 +838,12 @@ void obj_from_room(struct obj_data *object)
 
     REMOVE_FROM_LIST(object, world[IN_ROOM(object)].contents, next_content);
 
-    if (ROOM_FLAGGED(IN_ROOM(object), ROOM_HOUSE))
+    if (ROOM_FLAGGED(IN_ROOM(object), ROOM_HOUSE)) {
         SET_BIT_AR(ROOM_FLAGS(IN_ROOM(object)), ROOM_HOUSE_CRASH);
+        /* Re-increment counters for house objects and their contents when they leave,
+         * so they start counting towards zone reset limits again */
+        adjust_obj_counters_recursive(object, 1);
+    }
     IN_ROOM(object) = NOWHERE;
     object->next_content = NULL;
 }
@@ -849,6 +873,15 @@ void obj_to_obj(struct obj_data *obj, struct obj_data *obj_to)
         if (tmp_obj->carried_by)
             IS_CARRYING_W(tmp_obj->carried_by) += GET_OBJ_WEIGHT(obj);
     }
+
+    /* If the top-level container is in a house room, decrement counters for nested object
+     * and its contents so they don't count towards zone reset limits */
+    for (tmp_obj = obj_to; tmp_obj->in_obj; tmp_obj = tmp_obj->in_obj)
+        ; /* Find top-level object */
+
+    if (IN_ROOM(tmp_obj) != NOWHERE && ROOM_FLAGGED(IN_ROOM(tmp_obj), ROOM_HOUSE)) {
+        adjust_obj_counters_recursive(obj, -1);
+    }
 }
 
 /* remove an object from an object */
@@ -861,6 +894,16 @@ void obj_from_obj(struct obj_data *obj)
         return;
     }
     obj_from = obj->in_obj;
+
+    /* If the top-level container is in a house room, re-increment counters for nested object
+     * and its contents so they start counting towards zone reset limits again */
+    for (temp = obj_from; temp->in_obj; temp = temp->in_obj)
+        ; /* Find top-level object */
+
+    if (IN_ROOM(temp) != NOWHERE && ROOM_FLAGGED(IN_ROOM(temp), ROOM_HOUSE)) {
+        adjust_obj_counters_recursive(obj, 1);
+    }
+
     REMOVE_FROM_LIST(obj, obj_from->contains, next_content);
 
     /* Subtract weight from containers container unless unlimited. */
