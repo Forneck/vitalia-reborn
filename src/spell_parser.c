@@ -652,10 +652,11 @@ int call_magic(struct char_data *caster, struct char_data *cvict, struct obj_dat
             /* Experience for casting on mobiles (not self) */
             if (cvict && cvict != caster) {
                 /* Award experience equivalent to a modest hit (level-based) */
-                exp_gain = GET_LEVEL(cvict);
+                /* Cap at caster level to prevent power-leveling on high-level NPCs */
+                exp_gain = MIN(GET_LEVEL(caster), GET_LEVEL(cvict));
             }
             /* Experience for casting on objects */
-            else if (ovict && !cvict) {
+            else if (ovict) {
                 /* Award small fixed experience like other object interactions */
                 exp_gain = rand_number(2, 10);
             }
