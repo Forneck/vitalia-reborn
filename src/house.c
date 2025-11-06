@@ -239,7 +239,7 @@ void House_crashsave(room_vnum vnum)
         return;
     if (!House_get_filename(vnum, buf, sizeof(buf)))
         return;
-    if (!(fp = fopen(buf, "wb"))) {
+    if (!(fp = fopen(buf, "w"))) {
         perror("SYSERR: Error saving house file");
         return;
     }
@@ -247,6 +247,7 @@ void House_crashsave(room_vnum vnum)
         fclose(fp);
         return;
     }
+    fprintf(fp, "$~\n");
     fclose(fp);
     House_restore_weight(world[rnum].contents);
     REMOVE_BIT_AR(ROOM_FLAGS(rnum), ROOM_HOUSE_CRASH);
