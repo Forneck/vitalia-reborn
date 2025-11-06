@@ -646,7 +646,7 @@ int call_magic(struct char_data *caster, struct char_data *cvict, struct obj_dat
             act(spell->messages.to_room, TRUE, caster, ovict, cvict, TO_ROOM);
 
         /* Award experience for non-damage spells cast successfully */
-        if (!(spell->mag_flags & MAG_DAMAGE) && !IS_NPC(caster)) {
+        if (!(spell->mag_flags & MAG_DAMAGE) && caster && !IS_NPC(caster)) {
             int exp_gain = 0;
 
             /* Experience for casting on mobiles (not self) */
