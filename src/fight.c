@@ -257,14 +257,29 @@ static void make_corpse(struct char_data *ch)
                  GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0), GET_OBJ_VAL(corpse, 3));
         } else {
             /* sem cidade natal */
-            obj_to_room(corpse, IN_ROOM(ch));
-            log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)),
-                 GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0), GET_OBJ_VAL(corpse, 3));
-            act("Uma enorme mão aparece e pega o corpo de $n em segurança.", TRUE, ch, 0, 0, TO_ROOM);
-            act("Uma enorme mão aparece e delicadamente deixa $p no chão.", FALSE, 0, corpse, 0, TO_ROOM);
+            /* Safety check: validate room before placing corpse */
+            if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+                obj_to_room(corpse, IN_ROOM(ch));
+                log1("Corpo de '%s' na sala #%d tipo %d val0 '%d' val3 '%d'", GET_NAME(ch), GET_ROOM_VNUM(IN_ROOM(ch)),
+                     GET_OBJ_TYPE(corpse), GET_OBJ_VAL(corpse, 0), GET_OBJ_VAL(corpse, 3));
+                act("Uma enorme mão aparece e pega o corpo de $n em segurança.", TRUE, ch, 0, 0, TO_ROOM);
+                act("Uma enorme mão aparece e delicadamente deixa $p no chão.", FALSE, 0, corpse, 0, TO_ROOM);
+            } else {
+                /* If character is in invalid room, place corpse in first resurrection room as fallback */
+                log1("AVISO: Personagem '%s' em sala inválida #%d - corpo movido para sala de ressurreição",
+                     GET_NAME(ch), IN_ROOM(ch));
+                obj_to_room(corpse, r_ress_room_1);
+            }
         }
-    } else
-        obj_to_room(corpse, IN_ROOM(ch));
+    } else {
+        /* Safety check: validate room before placing NPC corpse */
+        if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+            obj_to_room(corpse, IN_ROOM(ch));
+        } else {
+            log1("AVISO: NPC '%s' em sala inválida #%d - corpo descartado", GET_NAME(ch), IN_ROOM(ch));
+            /* Could extract_obj(corpse) here, but safer to just not place it */
+        }
+    }
 }
 
 /* When ch kills victim */
@@ -306,11 +321,18 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
         death_cry(ch);
     if (killer) {
         if (killer->group) {
-            while ((i = (struct char_data *)simple_list(killer->group->members)) != NULL)
+            while ((i = (struct char_data *)simple_list(killer->group->members)) != NULL) {
+                /* Safety check: validate rooms before accessing world array */
+                if (IN_ROOM(i) == NOWHERE || IN_ROOM(i) < 0 || IN_ROOM(i) > top_of_world)
+                    continue;
+                if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+                    continue;
+
                 if (IN_ROOM(i) == IN_ROOM(ch) || (world[IN_ROOM(i)].zone == world[IN_ROOM(ch)].zone)) {
                     autoquest_trigger_check(i, ch, NULL, AQ_MOB_KILL);
                     autoquest_trigger_check(i, ch, NULL, AQ_MOB_KILL_BOUNTY);
                 }
+            }
         } else {
             autoquest_trigger_check(killer, ch, NULL, AQ_MOB_KILL);
             autoquest_trigger_check(killer, ch, NULL, AQ_MOB_KILL_BOUNTY);
@@ -320,11 +342,21 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
     /* Check mob quest triggers for all mobs in the area */
     if (IS_NPC(ch)) {
         struct char_data *mob;
-        for (mob = character_list; mob; mob = mob->next) {
-            if (IS_NPC(mob) && mob != ch && GET_MOB_QUEST(mob) != NOTHING) {
-                if (IN_ROOM(mob) == IN_ROOM(ch) || (world[IN_ROOM(mob)].zone == world[IN_ROOM(ch)].zone)) {
-                    mob_autoquest_trigger_check(mob, ch, NULL, AQ_MOB_KILL);
-                    mob_autoquest_trigger_check(mob, ch, NULL, AQ_MOB_KILL_BOUNTY);
+
+        /* Safety check: validate ch room before accessing world array */
+        if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world) {
+            /* Skip mob quest triggers if ch is not in a valid room */
+        } else {
+            for (mob = character_list; mob; mob = mob->next) {
+                if (IS_NPC(mob) && mob != ch && GET_MOB_QUEST(mob) != NOTHING) {
+                    /* Safety check: validate mob room before accessing world array */
+                    if (IN_ROOM(mob) == NOWHERE || IN_ROOM(mob) < 0 || IN_ROOM(mob) > top_of_world)
+                        continue;
+
+                    if (IN_ROOM(mob) == IN_ROOM(ch) || (world[IN_ROOM(mob)].zone == world[IN_ROOM(ch)].zone)) {
+                        mob_autoquest_trigger_check(mob, ch, NULL, AQ_MOB_KILL);
+                        mob_autoquest_trigger_check(mob, ch, NULL, AQ_MOB_KILL_BOUNTY);
+                    }
                 }
             }
         }
