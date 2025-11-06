@@ -195,8 +195,8 @@ int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
             int min_mana = 0;
             for (i = 0; i < NUM_CLASSES; i++) {
                 if (spell->assign[i].class_num != -1 && spell->assign[i].num_mana) {
-                    int class_mana = MAX(5, formula_interpreter(ch, tch, spellnum, TRUE, spell->assign[i].num_mana, GET_LEVEL(ch),
-                                                                &rts_code));
+                    int class_mana = MAX(5, formula_interpreter(ch, tch, spellnum, TRUE, spell->assign[i].num_mana,
+                                                                GET_LEVEL(ch), &rts_code));
                     if (min_mana == 0 || class_mana < min_mana) {
                         min_mana = class_mana;
                     }
@@ -644,6 +644,27 @@ int call_magic(struct char_data *caster, struct char_data *cvict, struct obj_dat
             act(spell->messages.to_vict, FALSE, cvict, ovict, 0, TO_CHAR);
         if (spell->messages.to_room != NULL)
             act(spell->messages.to_room, TRUE, caster, ovict, cvict, TO_ROOM);
+
+        /* Award experience for non-damage spells cast successfully */
+        if (!(spell->mag_flags & MAG_DAMAGE) && !IS_NPC(caster)) {
+            int exp_gain = 0;
+
+            /* Experience for casting on mobiles (not self) */
+            if (cvict && cvict != caster) {
+                /* Award experience equivalent to a modest hit (level-based) */
+                exp_gain = GET_LEVEL(cvict);
+            }
+            /* Experience for casting on objects */
+            else if (ovict && !cvict) {
+                /* Award small fixed experience like other object interactions */
+                exp_gain = rand_number(2, 10);
+            }
+
+            /* Grant the experience if any was calculated */
+            if (exp_gain > 0) {
+                gain_exp(caster, exp_gain);
+            }
+        }
     } else if (flags & MAGIC_NOEFFECT)
         send_to_char(caster, "%s", CONFIG_NOEFFECT);
     else if (flags & MAGIC_FAILED)
