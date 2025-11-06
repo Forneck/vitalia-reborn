@@ -278,6 +278,11 @@ static void change_alignment(struct char_data *ch, struct char_data *victim)
 void death_cry(struct char_data *ch)
 {
     int door;
+
+    /* Safety check: validate room before accessing world array */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return;
+
     act("Você se arrepia ao escutar o grito de morte de $n.", FALSE, ch, 0, 0, TO_ROOM);
     for (door = 0; door < DIR_COUNT; door++)
         if (CAN_GO(ch, door))
