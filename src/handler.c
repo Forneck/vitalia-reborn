@@ -398,8 +398,8 @@ void affect_join(struct char_data *ch, struct affected_type *af, bool add_dur, b
 
         if ((hjp->spell == af->spell) && (hjp->location == af->location)) {
             if (add_dur) {
-                /* Prevent duration overflow (sh_int range: -32768 to 32767) */
-                int new_duration = (int)af->duration + (int)hjp->duration;
+                /* Prevent duration overflow (sh_int range: SHRT_MIN to SHRT_MAX) */
+                long new_duration = (long)af->duration + (long)hjp->duration;
                 if (new_duration > SHRT_MAX)
                     af->duration = SHRT_MAX;
                 else if (new_duration < SHRT_MIN)
@@ -409,7 +409,7 @@ void affect_join(struct char_data *ch, struct affected_type *af, bool add_dur, b
             } else if (avg_dur)
                 af->duration = (af->duration + hjp->duration) / 2;
             if (add_mod) {
-                /* Prevent modifier overflow (sbyte range: -128 to 127) */
+                /* Prevent modifier overflow (sbyte range: SCHAR_MIN to SCHAR_MAX) */
                 int new_modifier = (int)af->modifier + (int)hjp->modifier;
                 if (new_modifier > SCHAR_MAX)
                     af->modifier = SCHAR_MAX;
