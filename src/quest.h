@@ -145,6 +145,10 @@ SPECIAL(temp_questmaster);
 void save_temp_quest_assignments(void);
 void load_temp_quest_assignments(void);
 void init_mob_ai_data(struct char_data *mob);
+
+/* Helper function to check for active kill quests */
+bool has_active_kill_quest_for_mob(mob_vnum target_vnum);
+
 /* Implemented in qedit.c  */
 void qedit_parse(struct descriptor_data *d, char *arg);
 void qedit_string_cleanup(struct descriptor_data *d, int terminator);

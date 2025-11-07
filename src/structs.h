@@ -473,8 +473,9 @@
 #define ITEM_BOOK 27
 #define ITEM_PLANT 28 /**< Item is a plant       */
 #define ITEM_FIREWEAPON 29
+#define ITEM_MAGIC_STONE 30 /**< Item is a magic stone for quest completion */
 /** Total number of item types.*/
-#define NUM_ITEM_TYPES 30
+#define NUM_ITEM_TYPES 31
 
 /* Take/Wear flags: used by obj_data.obj_flags.wear_flags */
 #define ITEM_WEAR_TAKE 0   /**< Item can be taken */

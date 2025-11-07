@@ -62,6 +62,7 @@ static struct char_data *next_combat_list = NULL;
 static void perform_group_gain(struct char_data *ch, int base, struct char_data *victim);
 static void dam_message(int dam, struct char_data *ch, struct char_data *victim, int w_type);
 static void make_corpse(struct char_data *ch);
+static void make_magic_stone(struct char_data *ch, long target_id);
 static void change_alignment(struct char_data *ch, struct char_data *victim);
 static void group_gain(struct char_data *ch, struct char_data *victim);
 static void solo_gain(struct char_data *ch, struct char_data *victim);
@@ -279,6 +280,58 @@ static void make_corpse(struct char_data *ch)
             log1("AVISO: NPC '%s' em sala inválida #%d - corpo descartado", GET_NAME(ch), IN_ROOM(ch));
             /* Could extract_obj(corpse) here, but safer to just not place it */
         }
+    }
+}
+
+/* Create a magic stone when a quest target mob is killed */
+static void make_magic_stone(struct char_data *ch, long target_id)
+{
+    char buf2[MAX_NAME_LENGTH + 128];
+    struct obj_data *stone;
+
+    if (!IS_NPC(ch))
+        return;
+
+    stone = create_obj();
+
+    stone->item_number = NOTHING;
+    IN_ROOM(stone) = NOWHERE;
+    stone->name = strdup("pedra magica stone");
+
+    snprintf(buf2, sizeof(buf2), "Uma pedra mágica brilhante de %s está aqui.", GET_NAME(ch));
+    stone->description = strdup(buf2);
+
+    snprintf(buf2, sizeof(buf2), "uma pedra mágica de %s", GET_NAME(ch));
+    stone->short_description = strdup(buf2);
+
+    GET_OBJ_TYPE(stone) = ITEM_MAGIC_STONE;
+
+    /* Clear all flags */
+    for (int x = 0; x < EF_ARRAY_MAX; x++)
+        GET_OBJ_EXTRA_AR(stone, x) = 0;
+    for (int y = 0; y < TW_ARRAY_MAX; y++)
+        stone->obj_flags.wear_flags[y] = 0;
+
+    SET_BIT_AR(GET_OBJ_EXTRA(stone), ITEM_NODONATE);
+    SET_BIT_AR(GET_OBJ_WEAR(stone), ITEM_WEAR_TAKE);
+
+    /* Store mob species vnum in val0 and specific mob ID in val1 */
+    GET_OBJ_VAL(stone, 0) = GET_MOB_VNUM(ch); /* Species vnum */
+    GET_OBJ_VAL(stone, 1) = target_id;        /* Specific mob ID for bounty quests */
+    GET_OBJ_VAL(stone, 2) = 0;                /* Reserved */
+    GET_OBJ_VAL(stone, 3) = 1;                /* Magic stone identifier */
+
+    GET_OBJ_WEIGHT(stone) = 1;
+    GET_OBJ_RENT(stone) = 0;
+    GET_OBJ_TIMER(stone) = CONFIG_MAX_NPC_CORPSE_TIME; /* Same timer as corpses */
+
+    /* Place stone in the room where mob died */
+    if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+        obj_to_room(stone, IN_ROOM(ch));
+        act("Uma pedra mágica brilhante cai no chão quando $n morre.", FALSE, ch, stone, 0, TO_ROOM);
+    } else {
+        log1("AVISO: Mob '%s' em sala inválida #%d - pedra mágica descartada", GET_NAME(ch), IN_ROOM(ch));
+        /* Could extract_obj(stone) here, but safer to just not place it */
     }
 }
 
@@ -540,6 +593,12 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
      *************************************************************************/
 
     make_corpse(ch);
+
+    /* Create magic stone if this mob is a target for any active kill quest */
+    if (IS_NPC(ch) && has_active_kill_quest_for_mob(GET_MOB_VNUM(ch))) {
+        make_magic_stone(ch, char_script_id(ch));
+    }
+
     // -- jr - Mar 17, 2000 * Enhancement of player death
     if (!IS_NPC(ch)) {
         if (GET_LEVEL(ch) < LVL_IMMORT) {

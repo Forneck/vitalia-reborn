@@ -785,9 +785,36 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                         generic_complete_quest(ch);
             break;
         case AQ_MOB_KILL:
-            if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict))
+            /* Check for direct kill */
+            if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict)) {
                 if (QST_TARGET(rnum) == GET_MOB_VNUM(vict))
                     generic_complete_quest(ch);
+            }
+            /* Check for magic stone return to questmaster or requester */
+            else if (!IS_NPC(ch) && IS_NPC(vict) && object && GET_OBJ_TYPE(object) == ITEM_MAGIC_STONE) {
+                /* Check if this magic stone is from the target mob */
+                if (GET_OBJ_VAL(object, 0) == QST_TARGET(rnum)) {
+                    /* Verify the object is actually in the NPC's inventory */
+                    struct obj_data *obj_check;
+                    bool has_object = false;
+
+                    for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
+                        if (obj_check == object) {
+                            has_object = true;
+                            break;
+                        }
+                    }
+
+                    if (has_object) {
+                        /* Check if returning to questmaster or original requester */
+                        if (GET_MOB_VNUM(vict) == QST_MASTER(rnum) || GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum)) {
+                            /* Extract the magic stone - it's been used */
+                            extract_obj(object);
+                            generic_complete_quest(ch);
+                        }
+                    }
+                }
+            }
             break;
         case AQ_MOB_SAVE:
             if (ch == vict)
@@ -864,6 +891,7 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                 generic_complete_quest(ch);
             break;
         case AQ_MOB_KILL_BOUNTY:
+            /* Check for direct kill */
             if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict)) {
                 /* Check if this is the specific bounty target */
                 if (GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
@@ -874,6 +902,45 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                     /* No specific ID set - fallback to vnum matching (for old quests or if target respawned) */
                     if (QST_TARGET(rnum) == GET_MOB_VNUM(vict))
                         generic_complete_quest(ch);
+                }
+            }
+            /* Check for magic stone return to questmaster or requester */
+            else if (!IS_NPC(ch) && IS_NPC(vict) && object && GET_OBJ_TYPE(object) == ITEM_MAGIC_STONE) {
+                /* For bounty quests, check both vnum and specific ID */
+                bool matches = false;
+
+                /* Check if vnum matches */
+                if (GET_OBJ_VAL(object, 0) == QST_TARGET(rnum)) {
+                    /* If we have a specific bounty target ID, also check that */
+                    if (GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
+                        if (GET_OBJ_VAL(object, 1) == GET_BOUNTY_TARGET_ID(ch))
+                            matches = true;
+                    } else {
+                        /* No specific ID required, vnum match is enough */
+                        matches = true;
+                    }
+                }
+
+                if (matches) {
+                    /* Verify the object is actually in the NPC's inventory */
+                    struct obj_data *obj_check;
+                    bool has_object = false;
+
+                    for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
+                        if (obj_check == object) {
+                            has_object = true;
+                            break;
+                        }
+                    }
+
+                    if (has_object) {
+                        /* Check if returning to questmaster or original requester */
+                        if (GET_MOB_VNUM(vict) == QST_MASTER(rnum) || GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum)) {
+                            /* Extract the magic stone - it's been used */
+                            extract_obj(object);
+                            generic_complete_quest(ch);
+                        }
+                    }
                 }
             }
             break;
@@ -2548,4 +2615,26 @@ void accept_pending_quest(struct descriptor_data *d)
     /* Clear pending quest data */
     d->pending_quest_vnum = NOTHING;
     d->pending_questmaster = NULL;
+}
+
+/* Check if there are any active kill quests for a specific mob vnum
+ * Returns true if there are active AQ_MOB_KILL or AQ_MOB_KILL_BOUNTY quests for this mob */
+bool has_active_kill_quest_for_mob(mob_vnum target_vnum)
+{
+    qst_rnum rnum;
+
+    for (rnum = 0; rnum < total_quests; rnum++) {
+        /* Only check kill-type quests */
+        if (QST_TYPE(rnum) != AQ_MOB_KILL && QST_TYPE(rnum) != AQ_MOB_KILL_BOUNTY)
+            continue;
+
+        /* Check if this quest targets our mob */
+        if (QST_TARGET(rnum) == target_vnum) {
+            /* Check if quest is mob-posted (those are the ones that can have the issue) */
+            if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+                return true;
+        }
+    }
+
+    return false;
 }
