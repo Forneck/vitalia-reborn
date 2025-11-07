@@ -343,7 +343,10 @@ static void make_magic_stone(struct char_data *ch, long target_id)
     for (int y = 0; y < TW_ARRAY_MAX; y++)
         stone->obj_flags.wear_flags[y] = 0;
 
+    /* Set flags: no donate, no sell, no rent (disappears on quit) */
     SET_BIT_AR(GET_OBJ_EXTRA(stone), ITEM_NODONATE);
+    SET_BIT_AR(GET_OBJ_EXTRA(stone), ITEM_NORENT);
+    SET_BIT_AR(GET_OBJ_EXTRA(stone), ITEM_NOSELL);
     SET_BIT_AR(GET_OBJ_WEAR(stone), ITEM_WEAR_TAKE);
 
     /* Store mob species vnum in val0 and specific mob ID in val1 */
@@ -354,7 +357,7 @@ static void make_magic_stone(struct char_data *ch, long target_id)
 
     GET_OBJ_WEIGHT(stone) = 1;
     GET_OBJ_RENT(stone) = 0;
-    GET_OBJ_TIMER(stone) = CONFIG_MAX_NPC_CORPSE_TIME; /* Same timer as corpses */
+    GET_OBJ_TIMER(stone) = 0; /* No decay - stone persists until quest completion or player quits */
 
     /* Place stone in the room where mob died - with safety checks */
     if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
