@@ -797,17 +797,22 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
             break;
         case AQ_MOB_KILL:
             /* Check for direct kill */
-            if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict)) {
+            if (!IS_NPC(ch) && vict && IS_NPC(vict) && (ch != vict)) {
                 if (QST_TARGET(rnum) == GET_MOB_VNUM(vict))
                     generic_complete_quest(ch);
             }
             /* Check for magic stone return to questmaster or requester */
-            else if (!IS_NPC(ch) && IS_NPC(vict) && object && GET_OBJ_TYPE(object) == ITEM_MAGIC_STONE) {
+            else if (!IS_NPC(ch) && vict && IS_NPC(vict) && object && GET_OBJ_TYPE(object) == ITEM_MAGIC_STONE) {
                 /* Check if this magic stone is from the target mob */
                 if (GET_OBJ_VAL(object, 0) == QST_TARGET(rnum)) {
                     /* Verify the object is actually in the NPC's inventory */
                     struct obj_data *obj_check;
                     bool has_object = false;
+
+                    /* Safety check: vict must have valid carrying list */
+                    if (!vict->carrying) {
+                        break;
+                    }
 
                     for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
                         if (obj_check == object) {
@@ -903,7 +908,7 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
             break;
         case AQ_MOB_KILL_BOUNTY:
             /* Check for direct kill */
-            if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict)) {
+            if (!IS_NPC(ch) && vict && IS_NPC(vict) && (ch != vict)) {
                 /* Check if this is the specific bounty target */
                 if (GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
                     /* We have a specific target ID - check against it */
@@ -916,7 +921,7 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                 }
             }
             /* Check for magic stone return to questmaster or requester */
-            else if (!IS_NPC(ch) && IS_NPC(vict) && object && GET_OBJ_TYPE(object) == ITEM_MAGIC_STONE) {
+            else if (!IS_NPC(ch) && vict && IS_NPC(vict) && object && GET_OBJ_TYPE(object) == ITEM_MAGIC_STONE) {
                 /* For bounty quests, check both vnum and specific ID */
                 bool matches = false;
 
@@ -936,6 +941,11 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                     /* Verify the object is actually in the NPC's inventory */
                     struct obj_data *obj_check;
                     bool has_object = false;
+
+                    /* Safety check: vict must have valid carrying list */
+                    if (!vict->carrying) {
+                        break;
+                    }
 
                     for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
                         if (obj_check == object) {
@@ -2564,6 +2574,10 @@ static bool is_bounty_target_available(qst_rnum rnum, struct char_data *ch)
 {
     struct char_data *target_mob;
 
+    /* Safety check: validate quest rnum */
+    if (rnum == NOTHING || rnum < 0 || rnum >= total_quests)
+        return TRUE;
+
     /* Only check for bounty quests */
     if (QST_TYPE(rnum) != AQ_MOB_KILL_BOUNTY)
         return TRUE;
@@ -2576,8 +2590,12 @@ static bool is_bounty_target_available(qst_rnum rnum, struct char_data *ch)
     if (GET_QUEST(ch) != QST_NUM(rnum))
         return TRUE;
 
-    /* Search for the specific target mob in the world */
+    /* Search for the specific target mob in the world - with safety checks */
     for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
+        /* Safety check: ensure target_mob is valid before accessing */
+        if (!target_mob)
+            break;
+
         if (IS_NPC(target_mob) && char_script_id(target_mob) == GET_BOUNTY_TARGET_ID(ch)) {
             return TRUE; /* Target is still in the world */
         }
@@ -2677,7 +2695,15 @@ bool has_active_kill_quest_for_mob(mob_vnum target_vnum)
 {
     qst_rnum rnum;
 
+    /* Safety check: validate target_vnum */
+    if (target_vnum == NOTHING || target_vnum < 0)
+        return false;
+
     for (rnum = 0; rnum < total_quests; rnum++) {
+        /* Safety check: ensure rnum is valid */
+        if (rnum < 0 || rnum >= total_quests)
+            break;
+
         /* Only check kill-type quests */
         if (QST_TYPE(rnum) != AQ_MOB_KILL && QST_TYPE(rnum) != AQ_MOB_KILL_BOUNTY)
             continue;

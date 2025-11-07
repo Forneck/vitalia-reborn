@@ -288,21 +288,52 @@ static void make_magic_stone(struct char_data *ch, long target_id)
 {
     char buf2[MAX_NAME_LENGTH + 128];
     struct obj_data *stone;
+    const char *mob_name;
 
-    if (!IS_NPC(ch))
+    /* Safety checks */
+    if (!ch || !IS_NPC(ch))
         return;
 
+    /* Validate mob has a name */
+    if (!GET_NAME(ch) || !*GET_NAME(ch)) {
+        log1("SYSERR: make_magic_stone called on mob without name (vnum %d)", GET_MOB_VNUM(ch));
+        return;
+    }
+
     stone = create_obj();
+    if (!stone) {
+        log1("SYSERR: Failed to create magic stone object for mob %s", GET_NAME(ch));
+        return;
+    }
 
     stone->item_number = NOTHING;
     IN_ROOM(stone) = NOWHERE;
+
+    /* Allocate name with error checking */
     stone->name = strdup("pedra magica stone");
+    if (!stone->name) {
+        log1("SYSERR: Failed to allocate name for magic stone");
+        extract_obj(stone);
+        return;
+    }
 
-    snprintf(buf2, sizeof(buf2), "Uma pedra mágica brilhante de %s está aqui.", GET_NAME(ch));
+    /* Use mob name safely */
+    mob_name = GET_NAME(ch);
+    snprintf(buf2, sizeof(buf2), "Uma pedra mágica brilhante de %s está aqui.", mob_name);
     stone->description = strdup(buf2);
+    if (!stone->description) {
+        log1("SYSERR: Failed to allocate description for magic stone");
+        extract_obj(stone);
+        return;
+    }
 
-    snprintf(buf2, sizeof(buf2), "uma pedra mágica de %s", GET_NAME(ch));
+    snprintf(buf2, sizeof(buf2), "uma pedra mágica de %s", mob_name);
     stone->short_description = strdup(buf2);
+    if (!stone->short_description) {
+        log1("SYSERR: Failed to allocate short_description for magic stone");
+        extract_obj(stone);
+        return;
+    }
 
     GET_OBJ_TYPE(stone) = ITEM_MAGIC_STONE;
 
@@ -325,13 +356,13 @@ static void make_magic_stone(struct char_data *ch, long target_id)
     GET_OBJ_RENT(stone) = 0;
     GET_OBJ_TIMER(stone) = CONFIG_MAX_NPC_CORPSE_TIME; /* Same timer as corpses */
 
-    /* Place stone in the room where mob died */
+    /* Place stone in the room where mob died - with safety checks */
     if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
         obj_to_room(stone, IN_ROOM(ch));
         act("Uma pedra mágica brilhante cai no chão quando $n morre.", FALSE, ch, stone, 0, TO_ROOM);
     } else {
-        log1("AVISO: Mob '%s' em sala inválida #%d - pedra mágica descartada", GET_NAME(ch), IN_ROOM(ch));
-        /* Could extract_obj(stone) here, but safer to just not place it */
+        log1("AVISO: Mob '%s' em sala inválida #%d - pedra mágica descartada", mob_name, IN_ROOM(ch));
+        extract_obj(stone);
     }
 }
 
@@ -595,7 +626,7 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
     make_corpse(ch);
 
     /* Create magic stone if this mob is a target for any active kill quest */
-    if (IS_NPC(ch) && has_active_kill_quest_for_mob(GET_MOB_VNUM(ch))) {
+    if (ch && IS_NPC(ch) && has_active_kill_quest_for_mob(GET_MOB_VNUM(ch))) {
         make_magic_stone(ch, char_script_id(ch));
     }
 
