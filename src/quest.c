@@ -2718,3 +2718,66 @@ bool has_active_kill_quest_for_mob(mob_vnum target_vnum)
 
     return false;
 }
+
+/* Check if player is carrying a magic stone for their active quest and fail the quest if so
+ * This is called before extracting NORENT items on logout/quit */
+void check_and_fail_quest_with_magic_stone(struct char_data *ch)
+{
+    qst_rnum rnum;
+    struct obj_data *obj;
+    bool has_magic_stone = false;
+
+    /* Safety checks */
+    if (!ch || IS_NPC(ch))
+        return;
+
+    /* Check if player has an active quest */
+    if (GET_QUEST(ch) == NOTHING)
+        return;
+
+    rnum = real_quest(GET_QUEST(ch));
+    if (rnum == NOTHING)
+        return;
+
+    /* Only check for kill-type quests */
+    if (QST_TYPE(rnum) != AQ_MOB_KILL && QST_TYPE(rnum) != AQ_MOB_KILL_BOUNTY)
+        return;
+
+    /* Check if player is carrying a magic stone that matches their quest */
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (GET_OBJ_TYPE(obj) == ITEM_MAGIC_STONE) {
+            /* Check if this stone matches the quest target */
+            if (GET_OBJ_VAL(obj, 0) == QST_TARGET(rnum)) {
+                /* For bounty quests, also check the specific mob ID if set */
+                if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY && GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
+                    if (GET_OBJ_VAL(obj, 1) == GET_BOUNTY_TARGET_ID(ch)) {
+                        has_magic_stone = true;
+                        break;
+                    }
+                } else {
+                    /* For regular kill quests, vnum match is sufficient */
+                    has_magic_stone = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    /* If player has the magic stone, fail the quest with penalty */
+    if (has_magic_stone) {
+        send_to_char(
+            ch, "\r\n\tyAVISO: Você estava carregando uma pedra mágica de busca que não pode ser preservada.\tn\r\n");
+        send_to_char(ch, "\tyA busca '%s' foi cancelada.\tn\r\n", QST_NAME(rnum));
+
+        /* Apply penalty if quest has one */
+        if (QST_PENALTY(rnum)) {
+            GET_QUESTPOINTS(ch) -= QST_PENALTY(rnum);
+            send_to_char(ch, "\tyVocê paga %d pontos de busca por ter perdido a pedra mágica.\tn\r\n",
+                         QST_PENALTY(rnum));
+        }
+
+        /* Clear the quest */
+        clear_quest(ch);
+        save_char(ch);
+    }
+}

@@ -22,6 +22,7 @@
 #include "config.h"
 #include "modify.h"
 #include "genolc.h" /* for strip_cr and sprintascii */
+#include "quest.h"  /* for check_and_fail_quest_with_magic_stone */
 
 /* these factors should be unique integers */
 #define RENT_FACTOR 1
@@ -626,6 +627,9 @@ void Crash_idlesave(struct char_data *ch)
     if (!(fp = fopen(buf, "w")))
         return;
 
+    /* Check if player has magic stone for active quest and fail quest if so */
+    check_and_fail_quest_with_magic_stone(ch);
+
     Crash_extract_norent_eq(ch);
     Crash_extract_norents(ch->carrying);
 
@@ -700,6 +704,9 @@ void Crash_rentsave(struct char_data *ch, int cost)
     if (!(fp = fopen(buf, "w")))
         return;
 
+    /* Check if player has magic stone for active quest and fail quest if so */
+    check_and_fail_quest_with_magic_stone(ch);
+
     Crash_extract_norent_eq(ch);
     Crash_extract_norents(ch->carrying);
 
@@ -749,6 +756,9 @@ static void Crash_cryosave(struct char_data *ch, int cost)
 
     if (!(fp = fopen(buf, "w")))
         return;
+
+    /* Check if player has magic stone for active quest and fail quest if so */
+    check_and_fail_quest_with_magic_stone(ch);
 
     Crash_extract_norent_eq(ch);
     Crash_extract_norents(ch->carrying);
