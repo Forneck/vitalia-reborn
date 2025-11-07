@@ -4001,14 +4001,13 @@ bool mob_try_to_accept_quest(struct char_data *ch)
 
     /* Higher chance to accept quests based on quest_tendency gene and curiosity emotion */
     int acceptance_threshold = 20; /* Base 20% chance */
-    if (ch->ai_data) {
-        /* Increase chance based on quest genetics */
-        acceptance_threshold += GET_GENQUEST(ch) / 5; /* Up to +20% from quest_tendency */
 
-        /* Further increase if mob has high curiosity (emotion system) */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data->emotion_curiosity >= 50) {
-            acceptance_threshold += 10; /* +10% for curious mobs */
-        }
+    /* Increase chance based on quest genetics */
+    acceptance_threshold += GET_GENQUEST(ch) / 5; /* Up to +20% from quest_tendency */
+
+    /* Further increase if mob has high curiosity (emotion system) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data->emotion_curiosity >= 50) {
+        acceptance_threshold += 10; /* +10% for curious mobs */
     }
 
     /* Cap at reasonable maximum to avoid too aggressive quest-taking */

@@ -1656,11 +1656,14 @@ int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum)
             emotion_modifier += 20; /* High curiosity: +20% chance */
         } else if (mob->ai_data->emotion_curiosity >= 50) {
             emotion_modifier += 10; /* Moderate curiosity: +10% chance */
+        } else if (mob->ai_data->emotion_curiosity >= 30) {
+            emotion_modifier += 5; /* Medium-low curiosity: +5% chance */
         }
         /* Low curiosity slightly reduces quest acceptance */
         else if (mob->ai_data->emotion_curiosity <= 20) {
             emotion_modifier -= 10; /* Very low curiosity: -10% chance */
         }
+        /* curiosity 21-29 has no modifier (neutral range) */
 
         capability += emotion_modifier;
     }
