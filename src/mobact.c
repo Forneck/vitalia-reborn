@@ -1171,13 +1171,15 @@ void mobile_activity(void)
 
         /* Quest acceptance - try to find and accept quests occasionally (not for charmed mobs) */
         if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
-            rand_number(1, 100) <= 3) { /* 3% chance per tick to seek quests */
+            rand_number(1, 100) <=
+                10) { /* 10% chance per tick to seek quests (increased from 3% for more active quest-taking) */
             mob_try_to_accept_quest(ch);
         }
 
         /* Mob quest processing - not for charmed mobs */
         if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
-            rand_number(1, 100) <= 5) { /* 5% chance per tick to check quests */
+            rand_number(1, 100) <=
+                15) { /* 15% chance per tick to check quests (increased from 5% for more active quest-taking) */
             /* Check if mob has a quest and handle quest-related goals */
             if (GET_MOB_QUEST(ch) != NOTHING) {
                 /* Decrement quest timer if applicable */
@@ -3997,8 +3999,21 @@ bool mob_try_to_accept_quest(struct char_data *ch)
         return FALSE;
     }
 
-    /* Only occasionally try to accept quests - about 5% chance per call */
-    if (rand() % 100 > 5) {
+    /* Higher chance to accept quests based on quest_tendency gene and curiosity emotion */
+    int acceptance_threshold = 20; /* Base 20% chance */
+
+    /* Increase chance based on quest genetics */
+    acceptance_threshold += GET_GENQUEST(ch) / 5; /* Up to +20% from quest_tendency */
+
+    /* Further increase if mob has high curiosity (emotion system) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data->emotion_curiosity >= 50) {
+        acceptance_threshold += 10; /* +10% for curious mobs */
+    }
+
+    /* Cap at reasonable maximum to avoid too aggressive quest-taking */
+    acceptance_threshold = MIN(acceptance_threshold, 60);
+
+    if (rand() % 100 > acceptance_threshold) {
         return FALSE;
     }
 
