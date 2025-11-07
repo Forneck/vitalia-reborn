@@ -219,8 +219,7 @@ Há um imenso rio à frente.
 ~
 ~
 0 -1 8117
-D2
-Há um imenso rio à frente.
+D5
 ~
 ~
 0 -1 8114
@@ -309,11 +308,11 @@ Há um imenso rio à frente.
 ~
 ~
 0 -1 8110
-D2
-Há uma pequena vila seguindo esta direção.
+D1
+Ha uma pequena vila seguindo esta direcao.
 ~
 ~
-0 -1 8142
+0 -1 8161
 S
 #8117
 O Rio Nilo~
@@ -464,11 +463,11 @@ Você vê uma enorme porta de madeira trabalhada.
 ~
 porta madeira~
 2 8171 8127
-D5
-Há um mercado à frente.
+D9
+Ha um mercado a frente.
 ~
 ~
-0 -1 8112
+0 -1 8212
 S
 #8124
 O Mercado de Iguarias~
@@ -489,12 +488,17 @@ D2
 Há uma pequena barraca nessa direção.
 ~
 ~
-0 -1 8212
+0 -1 8211
 D3
 Há uma pequena barraca nessa direção.
 ~
 ~
-0 -1 8211
+0 -1 8209
+D7
+Ha um mercado mais a frente.
+~
+~
+0 -1 8212
 S
 #8125
 A Entrada da Pirâmide~
@@ -770,6 +774,11 @@ Nessa direção existe uma enorme construção.
 ~
 ~
 0 -1 8147
+D4
+Um observa uma sacada.
+~
+~
+0 -1 8146
 S
 #8139
 A sala dos criados~
@@ -958,8 +967,8 @@ puro mas algumas árvores lhe dão frescor.  Há poucas pessoas ao redor e
 pássaros voam livremente.
 ~
 81 4 0 0 0 2
-D0
-Você é abençoado com uma bela visão de Mênfis.
+D2
+Voce e abencoado com uma bela visao de Menfis.
 ~
 ~
 0 -1 8138
@@ -1110,11 +1119,11 @@ Há uma monumental construção à sua frente.
 ~
 ~
 0 -1 8194
-D2
-Há um enorme rio nessa direção.
+D5
+Ha um enorme rio nessa direcao.
 ~
 ~
-0 -1 8112
+0 0 8112
 S
 #8160
 A Coroa Branca~
@@ -1142,11 +1151,16 @@ apenas vê escravos conduzindo uma liteira na qual está um senhor de
 aparência imponente; seguem pelas areias quentes na direção de Queóps.
 ~
 81 1 0 0 0 4
-D3
-Há uma monumental construção à sua frente.
+D1
+Ha uma monumental construcao a sua frente.
 ~
 ~
 0 -1 8162
+D3
+Ha um imenso rio a frente.
+~
+~
+0 -1 8116
 D5
 Há um imenso campo nessa direção.
 ~
@@ -1264,6 +1278,11 @@ próprios pés, muito menos o chão escorregadio embaixo deles.  Realmente não
 é uma situação agradável.
 ~
 81 9 0 0 0 0
+D1
+Nao ha nada alem de uma escuridao infinita.
+~
+~
+0 -1 8169
 D3
 Não há nada além de uma escuridão infinita.
 ~
@@ -1277,16 +1296,16 @@ próprios pés, muito menos o chão escorregadio embaixo deles.  Realmente não
 é uma situação agradável.
 ~
 81 9 0 0 0 0
-D0
-Não há nada além de uma escuridão infinita.
-~
-~
-0 -1 8213
 D2
 Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8173
+D3
+Nao ha nada alem de uma escuridao infinita.
+~
+~
+0 -1 8168
 S
 #8170
 Uma Passagem Escura~
@@ -1349,8 +1368,8 @@ Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8169
-D1
-Não há nada além de uma escuridão infinita.
+D3
+Nao ha nada alem de uma escuridao infinita.
 ~
 ~
 0 -1 8174
@@ -1366,7 +1385,12 @@ D1
 Não há nada além de uma escuridão infinita.
 ~
 ~
-0 -1 8171
+0 -1 8173
+D2
+Nao ha nada alem de uma escuridao infinita.
+~
+~
+0 -1 8191
 S
 #8175
 Uma Passagem Escura~
@@ -1380,6 +1404,11 @@ Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8170
+D1
+Nao ha nada alem de uma escuridao infinita.
+~
+~
+0 -1 8192
 S
 #8176
 A Câmara Principal~
@@ -1544,6 +1573,11 @@ Uma Sala Escura~
 caminhos parecem levar ao mesmo lugar tamanha a semelhança entre as salas.
 ~
 81 9 0 0 0 0
+D0
+Nao ha nada alem de uma escuridao infinita.
+~
+~
+0 -1 8193
 D3
 A câmara aparenta estar fechada.
 ~
@@ -1597,6 +1631,16 @@ Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8188
+D2
+Nao ha nada alem de uma escuridao infinita.
+~
+~
+3 -1 8189
+D9
+Nao ha nada alem de uma escuridao infinita.
+~
+~
+0 -1 8178
 S
 #8188
 Uma Sala Escura~
@@ -1625,7 +1669,7 @@ D0
 Não há nada além de uma escuridão infinita.
 ~
 ~
-0 -1 8179
+0 -1 8187
 D1
 Não há nada além de uma escuridão infinita.
 ~
@@ -1638,16 +1682,21 @@ Uma Sala Escura~
 caminhos parecem levar ao mesmo lugar tamanha a semelhança entre as salas.
 ~
 81 9 0 0 0 0
-D0
-Não há nada além de uma escuridão infinita.
-~
-~
-0 -1 8182
 D3
 Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8189
+D7
+Nao ha nada alem de uma escuridao infinita.
+~
+~
+0 -1 8188
+D8
+Nao ha nada alem de uma escuridao infinita.
+~
+~
+0 -1 8182
 S
 #8191
 Uma Sala Escura~
@@ -1659,7 +1708,7 @@ D0
 Não há nada além de uma escuridão infinita.
 ~
 ~
-0 -1 8181
+0 -1 8191
 D2
 Não há nada além de uma escuridão infinita.
 ~
@@ -1682,6 +1731,11 @@ Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8193
+D3
+Nao ha nada alem de uma escuridao infinita.
+~
+~
+3 -1 8175
 S
 #8193
 Uma Sala Escura~
@@ -1689,6 +1743,11 @@ Uma Sala Escura~
 caminhos parecem levar ao mesmo lugar tamanha a semelhança entre as salas.
 ~
 81 9 0 0 0 0
+D2
+Nao ha nada alem de uma escuridao infinita.
+~
+~
+0 -1 8184
 D3
 Não há nada além de uma escuridão infinita.
 ~
@@ -1725,11 +1784,6 @@ quase impossível mover-se em qualquer direção.  Você tem de ser muito
 cuidadoso para não afundar na areia movediça.
 ~
 81 9 0 0 0 0
-D0
-Não há nada além de uma escuridão infinita.
-~
-~
-0 -1 8196
 D1
 Existe uma passagem aqui.
 ~
@@ -1777,6 +1831,10 @@ Não há nada além de uma escuridão infinita.
 ~
 ~
 0 -1 8195
+D5
+~
+~
+3 0 8198
 S
 #8198
 Uma Sala Clara~
@@ -1980,16 +2038,16 @@ animais...  Há galinhas correndo pelo meio da rua, cães latindo, o alarido
 e a multidão transformam esta pequena rua em um caos total!
 ~
 81 1 0 0 0 1
-D2
-Há um pequeno mercado à frente.
-~
-~
-0 -1 8124
-D4
-Há um pequeno mercado à frente.
+D7
+Ha um mercado a frente.
 ~
 ~
 0 -1 8123
+D9
+Ha um mercado a frente.
+~
+~
+0 -1 8124
 S
 #8213
 O Baixo Egito~
@@ -1999,15 +2057,15 @@ incomparável, e ao sul você pode ouvir o rumor de um mercado com seus
 feirantes barulhentos.
 ~
 81 1 0 0 0 1
-D4
-Existe uma ponte nessa direção.
+D0
+Existe uma ponte nessa direcao.
 ~
 ~
-0 -1 8123
-D5
-Há um mercado nessa direção.
+0 -1 8134
+D2
+Ha um mercado nessa direcao.
 ~
 ~
-0 -1 8124
+0 0 8123
 S
 $~

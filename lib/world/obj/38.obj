@@ -233,16 +233,6 @@ Uma estátua de forma abstrata encontra-se aqui.~
 0 0 0 0
 80 10000 1000 0 0
 E
-inscrição~
-   "Esta estátua representa você, sim, você!  Assim como também representa
-todos os grandes homens e mulheres que se aventuram ou já se aventuraram
-por Vitália e deixaram aqui sua marca.  A maior glória que você poderá
-conquistar é a amizade de seus companheiros, e o amor deles será a melhor
-recompensa que irá receber.  Mantenha isso em mente e você nunca será
-esquecido, e ao mesmo tempo levará para sempre Vitália em seu coração.
-A AMIZADE irá abrir o mundo para você."
-~
-E
 estátua abstrata~
    Na verdade, essa estátua possui uma forma mais abstrata, por isso se
 destaca um pouco das demais.  Parece ser uma pessoa empunhando uma arma, mas
@@ -251,6 +241,16 @@ assim ela te lembra muito alguém que você conhece... só não está conseguind
 lembrar o nome.  O chão embaixo da estátua está um pouco arranhado, como se
 a houvessem arrastado algumas vezes.  Ao pé da estátua há uma pequena
 inscrição.
+~
+E
+inscrição~
+   "Esta estátua representa você, sim, você!  Assim como também representa
+todos os grandes homens e mulheres que se aventuram ou já se aventuraram
+por Vitália e deixaram aqui sua marca.  A maior glória que você poderá
+conquistar é a amizade de seus companheiros, e o amor deles será a melhor
+recompensa que irá receber.  Mantenha isso em mente e você nunca será
+esquecido, e ao mesmo tempo levará para sempre Vitália em seu coração.
+A AMIZADE irá abrir o mundo para você."
 ~
 #3809
 lista personalidades~
@@ -272,7 +272,7 @@ Lista da Série Personalidades
 Ainda não existem cartas desta série.
 ~
 #3810
-carta card itens~
+carta card itens alaric~
 o Card Lâmina Élfica de Alaric~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -290,7 +290,7 @@ a lâmina e o punho da espada completa essa arma, digna de um rei.
 	YTipo R, carta 3 de 21, Série Itens I.	n
 ~
 #3811
-carta card itens~
+carta card itens fogo~
 o Card Escudo de Fogo~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -308,7 +308,7 @@ realmente estão se movimentando.
 	YTipo R, carta 4 de 21, Série Itens I.	n
 ~
 #3812
-carta card itens~
+carta card itens zoghtu~
 o Card Manoplas de Zoghtu~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -326,7 +326,7 @@ bizarro, sobre a palma da manopla foi encrustrada uma gema cor de sangue.
 	YTipo R, carta 5 de 21, Série Itens I.	n
 ~
 #3813
-carta card itens~
+carta card itens horus~
 o Card Olho de Horus~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -343,7 +343,7 @@ quase capaz de saltar para fora da pintura e iluminar o ambiente ao seu redor.
 	YTipo R, carta 6 de 21, Série Itens I.	n
 ~
 #3814
-carta card itens~
+carta card itens carnax~
 o Card Carnax~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -360,7 +360,7 @@ impressão que os músculos da armadura se movem, como se ela estivesse viva.
 	YTipo R, carta 7 de 21, Série Itens I.	n
 ~
 #3815
-carta card itens~
+carta card itens huthven~
 o Card Manto das Trevas de Huthven~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -377,7 +377,7 @@ bastante frio ao toque.
 	YTipo R, carta 8 de 21, Série Itens I.	n
 ~
 #3816
-carta card itens~
+carta card itens bruenor~
 o Card Bastão de Bruenor~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -394,7 +394,7 @@ extensão deste belo artefato está coberta com símbolos religiosos.
 	YTipo R, carta 9 de 21, Série Itens I.	n
 ~
 #3817
-carta card itens~
+carta card itens caliope~
 o Card Tiara de Calíope~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -410,7 +410,7 @@ Conchas e pedras marinhas são os ornamentos dessa bela jóia.
 	YTipo R, carta 10 de 21, Série Itens I.	n
 ~
 #3818
-carta card itens~
+carta card itens jupiter~
 o Card Machado de Júpiter~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -427,7 +427,7 @@ com inúmeras jóias, tornando-o ainda mais especial.
 	YTipo R, carta 11 de 21, Série Itens I.	n
 ~
 #3819
-carta card itens~
+carta card itens cranaloc~
 o Card Anel de Cranaloc~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -445,7 +445,7 @@ não quer deixar de olhar pra sua pintura.
 	YTipo R, carta 12 de 21, Série Itens I.	N
 ~
 #3820
-carta card itens~
+carta card itens nabaqila~
 o Card Chave de Nabaqila~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -463,7 +463,7 @@ bastante afiada.
 	YTipo R, carta 13 de 21, Série Itens I.	n
 ~
 #3821
-carta card itens~
+carta card itens rosa~
 o Card Rosa Vermelha~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -480,7 +480,7 @@ envolta por uma brilhante chama.  Esta parece ser uma rosa muito especial.
 	YTipo R, carta 14 de 21, Série Itens I.	n
 ~
 #3822
-carta card itens~
+carta card itens calice~
 o Card Cálice Sagrado~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -497,7 +497,7 @@ bíblicas.  Seria essa então uma pintura do famoso Santo Graal?
 	YTipo R, carta 15 de 21, Série Itens I.	n
 ~
 #3823
-carta card itens~
+carta card itens inverno~
 o Card Manto do Inverno~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -514,7 +514,7 @@ Na borda da carta você percebe o símbolo da Lua de Prata, Teriany.
 	YTipo R, carta 16 de 21, Série Itens I.	n
 ~
 #3824
-carta card itens~
+carta card itens verao~
 o Card Bracelete do Verão~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -531,7 +531,7 @@ da carta você percebe o símbolo da Lua de Fogo, Latïzie.
 	YTipo R, carta 17 de 21, Série Itens I.	n
 ~
 #3825
-carta card itens~
+carta card itens primavera~
 o Card Anel da Primavera~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -548,7 +548,7 @@ Na borda da carta você percebe o símbolo da Lua de Prata, Kadrictes.
 	YTipo R, carta 18 de 21, Série Itens I.	n
 ~
 #3826
-carta card itens~
+carta card itens outono~
 o Card Cinturão do Outono~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -567,7 +567,7 @@ você percebe o símbolo da Lua de Safira, Aqrien.
 	YTipo R, carta 19 de 21, Série Itens I.	n
 ~
 #3827
-carta card itens~
+carta card itens phanzyenon~
 o Card Aro de Phanzyenon~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -585,7 +585,7 @@ se contorcendo dentro da pedra negra?
 	YTipo R, carta 20 de 21, Série Itens I.	n
 ~
 #3828
-carta card itens~
+carta card itens pena~
 o Card Pena Dourada do Escritor~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -604,7 +604,7 @@ pensar.
 	YTipo R, carta 21 de 21, Série Itens I.	n
 ~
 #3829
-carta card mobs~
+carta card mobs floresta~
 o Card Guardião da Floresta~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -619,7 +619,7 @@ a estranha imagem de uma sombra esfumaçada movendo-se entre as árvores.
 	BTipo E, carta 1 de 20, Série MOB´s I.	n
 ~
 #3830
-carta card mobs~
+carta card mobs drows~
 o Card Drows~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -639,7 +639,7 @@ lealdade a Lolth.
 	BTipo E, carta 2 de 20, Série MOB´s I.	n
 ~
 #3831
-carta card mobs~
+carta card mobs novatos~
 o Card Novatos~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -663,7 +663,7 @@ a cena.
 	BTipo R, carta 3 de 20, Série MOB´s I.	n
 ~
 #3832
-carta card mobs~
+carta card mobs urubu~
 o Card Urubu~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -679,7 +679,7 @@ provavelmente a procura de carniça.  O que mais você queria?
 	BTipo R, carta 4 de 20, Série MOB´s I.	n
 ~
 #3833
-carta card mobs~
+carta card mobs fido~
 o Card Fido~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -695,7 +695,7 @@ simples Fido, pequeno e sujo, revirando o lixo.
 	BTipo R, carta 5 de 20, Série MOB´s I.	n
 ~
 #3834
-carta card mobs~
+carta card mobs atoms~
 o Card Atoms~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -714,7 +714,7 @@ dos Atoms, como fadas, macacos, duendes e cobras.
 	BTipo I, carta 6 de 20, Série MOB´s I.	n
 ~
 #3835
-carta card mobs~
+carta card mobs bolha~
 o Card Bolha Gelatinosa Verde~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -731,7 +731,7 @@ flutuando dentro dessa asquerosa criatura.
 	BTipo I, carta 7 de 20, Série MOB´s I.	n
 ~
 #3836
-carta card mobs~
+carta card mobs lagarto~
 o Card Homens Lagarto~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -749,7 +749,7 @@ pela pintura que praticamente todos estão distraídos.
 	BTipo I, carta 8 de 20, Série MOB´s I.	n
 ~
 #3837
-carta card mobs~
+carta card mobs miconoides~
 o Card Miconóides~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -767,7 +767,7 @@ cantando, enquanto espalham inúmeros esporos pelo ar.
 	BTipo I, carta 9 de 20, Série MOB´s I.	n
 ~
 #3838
-carta card mobs~
+carta card mobs lamia~
 o Card Lâmia~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -784,7 +784,7 @@ cintura pra baixo seu corpo é de uma fera quadrúpede, semelhante a um felino.
 	BTipo I, carta 10 de 20, Série MOB´s I.	n
 ~
 #3839
-carta card mobs~
+carta card mobs xadrez~
 o Card Peças de Xadrez~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -800,7 +800,7 @@ vivas, sobre um campo de batalha que mais parece um enorme tabuleiro.
 	BTipo C, carta 11 de 20, Série MOB´s I.	n
 ~
 #3840
-carta card mobs~
+carta card mobs baralho~
 o Card Cartas de Baralho~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -818,7 +818,7 @@ ainda percebe a imagem de uma carta de uma Dama no alto de uma torre.
 	BTipo C, carta 12 de 20, Série MOB´s I.	n
 ~
 #3841
-carta card mobs~
+carta card mobs elfos~
 o Card Elfos~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -837,7 +837,7 @@ aparência apressada vem em sua direção.
 	BTipo C, carta 13 de 20, Série MOB´s I.	n
 ~
 #3842
-carta card mobs~
+carta card mobs gnomos~
 o Card Gnomos~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -856,7 +856,7 @@ mulher gnomo de aparência vaidosa.
 	BTipo C, carta 14 de 20, Série MOB´s I.	n
 ~
 #3843
-carta card mobs~
+carta card mobs anoes~
 o Card Anões~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -874,7 +874,7 @@ Ao fundo alguns anões parecem combater um gigante.
 	BTipo C, carta 15 de 20, Série MOB´s I.	n
 ~
 #3844
-carta card mobs~
+carta card mobs romano~
 o Card Cidadão Romano~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -894,7 +894,7 @@ leões.
 	BTipo C, carta 16 de 20, Série MOB´s I.	n
 ~
 #3845
-carta card mobs~
+carta card mobs hobbits~
 o Card Hobbits~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -914,7 +914,7 @@ faixa com os dizeres Feliz 111 Aniversário.
 	BTipo C, carta 17 de 20, Série MOB´s I.	n
 ~
 #3846
-carta card mobs~
+carta card mobs goblins~
 o Card Goblins~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -932,7 +932,7 @@ suja espada como se ordenando um ataque.
 	BTipo C, carta 18 de 20, Série MOB´s I.	n
 ~
 #3847
-carta card mobs~
+carta card mobs hobgoblins~
 o Card Hobgoblins~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -951,7 +951,7 @@ panela.  Parece que estão prestes a devorar alguma vítima recente.
 	BTipo C, carta 19 de 20, Série MOB´s I.	n
 ~
 #3848
-carta card mobs~
+carta card mobs orcs~
 o Card Orcs~
 Um card cujo verso parece mostrar um Fido de trás pra frente foi deixado aqui.~
 ~
@@ -966,7 +966,7 @@ imagem de um feroz orc agitando um enorme martelo de guerra.
 	BTipo C, carta 20 de 20, Série MOB´s I.	n
 ~
 #3849
-carta card mobsII~
+carta card mobsII puff~
 o Card Puff~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -982,7 +982,7 @@ Dragão dos Sonhos.
 	RTipo E, carta 1 de 25, Série MOB´s II.	n
 ~
 #3850
-carta card mobsII~
+carta card mobsII apocalipse~
 o Card Dragão do Apocalipse~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -998,7 +998,7 @@ exalando fogo pro suas narinas.
 	RTipo E, carta 2 de 25, Série MOB´s II.	n
 ~
 #3851
-carta card mobsII~
+carta card mobsII esqueleto~
 o Card Dragão Esqueleto~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1015,7 +1015,7 @@ bonito se não fosse tão assustador.
 	RTipo E, carta 3 de 25, Série MOB´s II.	n
 ~
 #3852
-carta card mobsII~
+carta card mobsII bebe~
 o Card Bebê Dragão~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1032,7 +1032,7 @@ mais de um metro ele ainda representa perigo para um aventureiro despreparado.
 	RTipo R, carta 4 de 25, Série MOB´s II.	n
 ~
 #3853
-carta card mobsII~
+carta card mobsII nidhogg~
 o Card Nidhogg~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1049,7 +1049,7 @@ notar uma grande águia real.
 	RTipo R, carta 5 de 25, Série MOB´s II.	n
 ~
 #3854
-carta card mobsII~
+carta card mobsII aglandiir~
 o Card Aglandiir~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1066,7 +1066,7 @@ notar que este deve ser um nobre entre os dragões.
 	RTipo I, carta 6 de 25, Série MOB´s II.	n
 ~
 #3855
-carta card mobsII~
+carta card mobsII fada~
 o Card Dragão Fada~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1082,7 +1082,7 @@ pousado sobre um girassol.
 	RTipo I, carta 7 de 25, Série MOB´s II.	n
 ~
 #3856
-carta card mobsII~
+carta card mobsII draco~
 o Card Draco~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1098,7 +1098,7 @@ atravessar a carta e gera em você um frio na espinha.
 	RTipo I, carta 8 de 25, Série MOB´s II.	n
 ~
 #3857
-carta card mobsII~
+carta card mobsII fafnir~
 o Card Fafnir~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1114,7 +1114,7 @@ pouco menor que suas garras.
 	RTipo I, carta 9 de 25, Série MOB´s II.	n
 ~
 #3858
-carta card mobsII~
+carta card mobsII dracolich~
 o Card Dracolich~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1130,7 +1130,7 @@ além da vida e da morte.
 	RTipo I, carta 10 de 25, Série MOB´s II.	n
 ~
 #3859
-carta card mobsII~
+carta card mobsII valik~
 o Card Valik~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1147,7 +1147,7 @@ repugnante.
 	RTipo I, carta 11 de 25, Série MOB´s II.	n
 ~
 #3860
-carta card mobsII~
+carta card mobsII invisivel~
 o Card Dragão Invisível~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1164,7 +1164,7 @@ tornando-se 'invisível'.
 	RTipo I, carta 12 de 25, Série MOB´s II.	n
 ~
 #3861
-carta card mobsII~
+carta card mobsII rainha~
 o Card Rainha Dragoneza~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1180,7 +1180,7 @@ de borboleta voando por uma linda vila.
 	RTipo C, carta 13 de 25, Série MOB´s II.	n
 ~
 #3862
-carta card mobsII~
+carta card mobsII tiamat~
 o Card Tiamat~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1197,7 +1197,7 @@ esquerda.  No canto da carta você nota uma pequena e estranha caixa.
 	RTipo C, carta 14 de 25, Série MOB´s II.	n
 ~
 #3863
-carta card mobsII~
+carta card mobsII dourado~
 o Card Ancião Dragão Dourado~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1214,7 +1214,7 @@ ele mais imponente ainda.
 	RTipo C, carta 15 de 25, Série MOB´s II.	n
 ~
 #3864
-carta card mobsII~
+carta card mobsII prateado~
 o Card Ancião Dragão Prateado~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1231,7 +1231,7 @@ para está magnifica criatura.
 	RTipo C, carta 16 de 25, Série MOB´s II.	n
 ~
 #3865
-carta card mobsII~
+carta card mobsII bronze~
 o Card Ancião Dragão de Bronze~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1247,7 +1247,7 @@ você fica hipnotizado pela beleza deste dragão.
 	RTipo C, carta 17 de 25, Série MOB´s II.	n
 ~
 #3866
-carta card mobsII~
+carta card mobsII anciao~
 o Card Dracolich Ancião~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1264,7 +1264,7 @@ dragões.
 	RTipo C, carta 18 de 25, Série MOB´s II.	n
 ~
 #3867
-carta card mobsII~
+carta card mobsII fantasma~
 o Card Dragão Fantasma~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1280,7 +1280,7 @@ substância transparênte, ele parece ser um espírito.
 	RTipo C, carta 19 de 25, Série MOB´s II.	n
 ~
 #3868
-carta card mobsII~
+carta card mobsII vermelho~
 o Card Ancião Dragão Vermelho~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1296,7 +1296,7 @@ seu rosto que este dragão é de poucas palavras.
 	RTipo C, carta 20 de 25, Série MOB´s II.	n
 ~
 #3869
-carta card mobsII~
+carta card mobsII azul~
 o Card Ancião Dragão Azul~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1312,7 +1312,7 @@ como o sangue, ele está sobrevoando um deserto.
 	RTipo C, carta 21 de 25, Série MOB´s II.	n
 ~
 #3870
-carta card mobsII~
+carta card mobsII amarelo~
 o Card Ancião Dragão Amarelo~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1329,7 +1329,7 @@ brilham como o ouro.
 	RTipo C, carta 22 de 25, Série MOB´s II.	n
 ~
 #3871
-carta card mobsII~
+carta card mobsII verde~
 o Card Ancião Dragão Verde~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1345,7 +1345,7 @@ cuidando de seus quatro filhotes.
 	RTipo C, carta 23 de 25, Série MOB´s II.	n
 ~
 #3872
-carta card mobsII~
+carta card mobsII negro~
 o Card Ancião Dragão Negro~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1361,7 +1361,7 @@ criatura e deseja que nunca encontre ela em seu caminho.
 	RTipo C, carta 24 de 25, Série MOB´s II.	n
 ~
 #3873
-carta card mobsII~
+carta card mobsII branco~
 o Card Ancião Dragão Branco~
 Jogada ao chão encontra-se um carta com um ovo de dragão.~
 ~
@@ -1382,8 +1382,8 @@ a pochete do colecionador~
 Uma linda pochete preta está caída no chão.~
 ~
 15 dq 0 0 0 al 0 0 0 0 0 0 0
-20 5 -1 0
-8 500000 50000 10 0
+500 9 -1 0
+8 500000 50000 0 0
 E
 pochete~
 Você vê uma linda pochete de couro negro com três aberturas para se
@@ -1392,19 +1392,23 @@ guardar cartas em seus compartimentos.  Esta pochete, mostra que você
 vermelhas: Serie Mob I.
 ~
 A
-1 2
+17 -10
 A
-17 -6
+2 2
 A
-19 1
+5 2
+A
+4 2
+A
+19 2
 #3875
 lupa colecionador~
 a lupa do colecionador~
 Uma pequena lupa está refletindo a luz em direção aos seus olhos.~
 ~
-12 dq 0 0 0 aor 0 0 0 0 0 0 0
-0 0 0 0
-5 500000 50000 10 0
+9 dq 0 0 0 aor 0 0 0 defg 0 0 0
+8 0 0 0
+5 500000 50000 0 0
 E
 lupa~
 Você vê uma lupa de cristal com um lindo e pequeno cabo de madre-perôla,
@@ -1413,19 +1417,21 @@ cartas colecionaveis.  Dizem que está lupa tem propriedas mágicas, será
 verdade?
 ~
 A
-4 1
+3 2
 A
-17 -2
+4 2
 A
-18 1
+6 2
+A
+19 2
 #3876
 luvas colecionador~
 as luvas do colecionador~
 Um par de luvas brilham com uma pequena aura caídas ao chão.~
 ~
-11 dq 0 0 0 ah 0 0 0 0 0 0 0
-0 0 0 0
-5 500000 50000 10 0
+9 dq 0 0 0 ah 0 0 0 0 0 0 0
+10 0 0 0
+5 500000 50000 0 0
 E
 luvas~
 Você vê um par de lindas luvas feitas de couro de Mink com uma
@@ -1434,21 +1440,21 @@ permitindo que as mesmas possam ser manuzeadas sem perigo de
 estraga-las.
 ~
 A
-17 -5
+1 2
 A
-2 1
+2 2
 A
-18 2
+18 3
 A
-19 1
+19 3
 #3877
 olho dragao gema~
 o olho do dragão~
 Uma linda gema vermelha do tamanho de uma maçã está caída no chão.~
 ~
-11 dq 0 0 0 ar 0 0 0 0 0 0 0
-0 0 0 0
-10 600000 60000 20 0
+9 dq 0 0 0 ar 0 0 0 0 c 0 0
+10 0 0 0
+10 600000 60000 15 0
 E
 olho~
 Você vê uma linda gema vermelha com um risco negro no meio, assim como
@@ -1461,7 +1467,7 @@ A
 A
 4 2
 A
-17 -5
+19 2
 A
 18 2
 #3878
@@ -1469,9 +1475,9 @@ calcas dragao~
 as calças com bolsos do dragão~
 Você uma calça com vários bolsos caída.~
 ~
-9 dq 0 0 0 af 0 0 0 0 0 0 0
-8 0 0 0
-15 600000 60000 20 0
+9 dq 0 0 0 af 0 0 0 t 0 0 0
+10 0 0 0
+15 600000 60000 15 0
 E
 calças~
 Estas calças de couro azul são feitas com as escamas de um Dragão
@@ -1480,21 +1486,21 @@ andarem por Vitália atrás de cartas, além disso ela possui vários
 bolsos que podem quardar mais de 100 cartas.
 ~
 A
-2 1
+14 100
 A
-14 25
+2 2
 A
-18 1
+18 2
 A
-19 1
+19 2
 #3879
 medalha dragao bons~
 a medalha do matador de dragões bons~
 Um pequeno pingente de um dragão vermelho está caído aqui.~
 ~
-11 djq 0 0 0 ac 0 0 0 0 0 0 0
+11 djq 0 0 0 ac 0 0 0 o 0 0 0
 0 0 0 0
-9 600000 60000 30 0
+9 600000 60000 15 0
 E
 medalha~
 Você vê um lindo pinguente de um Dragão Vermelho com suas asas
@@ -1503,9 +1509,9 @@ Este é o simbolo que você realmente é um grande colecionador cartas
 e matador de dragões.
 ~
 A
-17 -5
+17 -10
 A
-18 1
+18 3
 A
 19 3
 #3880
@@ -1513,9 +1519,9 @@ medalha dragao maus~
 a medalha do matador de dragões maus~
 Um pequeno pingente de um dragão dourado está caído aqui.~
 ~
-11 dkq 0 0 0 ac 0 0 0 0 0 0 0
+11 dkq 0 0 0 ac 0 0 0 n 0 0 0
 0 0 0 0
-9 600000 60000 30 0
+9 600000 60000 15 0
 E
 medalha~
 Você vê um lindo pinguente de um Dragão Dourado com suas asas
@@ -1524,13 +1530,13 @@ Este é o simbolo que você realmente é um grande colecionador cartas
 e matador de dragões.
 ~
 A
-17 -5
+17 -10
 A
-18 1
+18 3
 A
 19 3
 #3881
-carta card~
+carta card itens ossos~
 o Card Bracelete de Ossos~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -1547,7 +1553,7 @@ pedra como nunca viu antes, no centro do bracelete.
 	YTipo E, carta 1 de 21, Série Itens I.	n
 ~
 #3882
-carta card itens~
+carta card itens geandrias~
 o Card Espada de Geandrias~
 Um card cujo verso emite um brilho dourado foi deixado aqui.~
 ~
@@ -1563,4 +1569,12 @@ que há um grande rubi em sua ponta.
 
 	YTipo E, carta 2 de 21, Série Itens I.n
 ~
+#3883
+carta card coringa~
+o Card Coringa~
+Jogada ao chao encontre-se uma carta multicolorida.~
+~
+8 deg 0 0 0 ao 0 0 0 0 0 0 0
+0 0 0 0
+1 1000000 3000 0 0
 $~

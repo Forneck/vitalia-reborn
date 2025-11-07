@@ -25,8 +25,10 @@ pois ela está lhe tocando...
 20 8 2 5d20+943 2d3+10
 0 13385
 9 9 0
-GenWimpy: 2
-GenRoam: 52
+GenWimpy: 13
+GenLoot: 2
+GenRoam: 89
+GenFollow: 16
 E
 #13103
 homem serpente cobra lagarto~
@@ -96,6 +98,8 @@ somente algumas pequenas partes dele enquanto se aproxima.
 22 9 1 22d12+1400 2d3+11
 0 17068
 9 9 0
+GenWimpy: 3
+GenFollow: 10
 E
 #13108
 garin homem camuflado~
@@ -150,8 +154,10 @@ estas ruas que ainda não foram infestadas pelas sombras.
 15 5 4 15d12+430 1d5+7
 325 6427
 9 9 0
-GenWimpy: 2
-GenRoam: 51
+GenWimpy: 10
+GenLoot: 7
+GenRoam: 88
+GenFollow: 12
 E
 #13112
 guarda cidade sentinela torin~
@@ -165,6 +171,10 @@ Infelizmente :(
 25 11 0 25d12+1900 2d4+12
 800 23646
 9 9 0
+GenWimpy: 4
+GenLoot: 23
+GenRoam: 81
+GenFollow: 13
 E
 #13113
 sagrado guarda~
@@ -193,6 +203,8 @@ o nome... Dizendo o seguinte "Melki, inquisidor principal do Império".
 26 11 -4 12d20+1965 2d5+13
 850 26133
 9 9 0
+GenWimpy: 4
+GenFollow: 13
 E
 #13115
 adorin homem caverna cidadao~
@@ -206,6 +218,8 @@ esteve desempregado durante um bom tempo só pelo aspecto de suas roupas.
 26 11 -4 20d20+1765 2d5+13
 850 26133
 9 9 0
+GenWimpy: 3
+GenFollow: 13
 E
 #13116
 lesma escala parede~
@@ -273,6 +287,10 @@ melhor percebe perfeitamente que ele viveu toda a vida aqui.
 20 8 2 20d20+730 2d3+10
 550 13385
 9 9 0
+GenWimpy: 8
+GenLoot: 13
+GenRoam: 78
+GenFollow: 12
 E
 #13121
 sombra menos amiga opressiva~
@@ -285,6 +303,9 @@ Estas sombras são amigáveis e definitivamente menos opressivas.
 23 9 8 20d20+730 2d4+11
 700 19117
 9 9 0
+GenWimpy: 3
+GenRoam: 58
+GenFollow: 13
 E
 #13122
 rei sombras sombra~
@@ -299,6 +320,8 @@ uma magia muito poderosa; você consegue sentir isto daqui.
 36 18 -20 1d1+2425 3d7+18
 1350 65914
 9 9 0
+GenWimpy: 3
+GenFollow: 15
 E
 #13123
 sombra mutante~
@@ -325,6 +348,8 @@ fortíssima.
 26 11 -4 20d20+1430 2d5+13
 0 26133
 9 9 0
+GenWimpy: 5
+GenFollow: 10
 E
 #13125
 mutante ra mutada~
@@ -394,6 +419,10 @@ normal.  Mas de alguma maneira sua alma foi retirada.
 21 8 1 1d1+900 2d3+10
 600 15159
 9 9 1
+GenWimpy: 4
+GenLoot: 7
+GenRoam: 86
+GenFollow: 18
 E
 #13130
 cidadao torin fantasmagorico~
@@ -410,8 +439,10 @@ alguém possa a livrar deste mal.
 21 8 1 1d1+900 2d3+10
 600 15159
 9 9 2
-GenWimpy: 3
-GenRoam: 60
+GenWimpy: 6
+GenLoot: 1
+GenRoam: 80
+GenFollow: 13
 E
 #13131
 bola azul brilhante luz~

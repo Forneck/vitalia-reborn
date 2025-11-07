@@ -124,8 +124,10 @@ An undefined string.
 10 10 6 1d1+200 5d1+10
 125 1785
 9 9 1
-GenWimpy: 10
-GenRoam: 85
+GenWimpy: 17
+GenLoot: 2
+GenRoam: 89
+GenFollow: 11
 E
 #13410
 pacificador elfo~
@@ -152,8 +154,9 @@ An undefined string.
 1 17 8 1d1+30 2d1+3
 0 75
 9 9 0
-GenWimpy: 10
-GenRoam: 80
+GenWimpy: 22
+GenRoam: 87
+GenFollow: 5
 E
 #13412
 esquilo~
@@ -389,9 +392,10 @@ Você pouco pode ver olhando para esta criatura.
 1 14 7 1d1+100 3d1+6
 0 75
 9 9 1
-GenWimpy: 10
-GenLoot: 1
-GenRoam: 79
+GenWimpy: 14
+GenLoot: 2
+GenRoam: 86
+GenFollow: 5
 E
 #13431
 fada~
@@ -434,8 +438,9 @@ Uma pequena aranha com grande colmilhos e seis olhos vermelhos.
 45 2 -6 1d1+800 7d1+18
 0 50769
 9 9 2
-GenWimpy: 2
-GenRoam: 52
+GenWimpy: 7
+GenRoam: 82
+GenFollow: 10
 E
 #13434
 minhoca viscosa~
@@ -448,6 +453,9 @@ Ecow! Que bicho nojento!
 48 -5 -5 1d1+900 8d3+19
 0 62571
 9 9 2
+GenWimpy: 5
+GenRoam: 82
+GenFollow: 10
 E
 #13435
 rato~
@@ -474,6 +482,9 @@ hematófago?
 50 -1 -7 1d1+1200 9d4+21
 0 74625
 9 9 1
+GenWimpy: 2
+GenRoam: 52
+GenFollow: 11
 E
 #13437
 cobra verde~
@@ -538,6 +549,9 @@ você não pode definir.
 60 -6 -12 4d5+800 7d4+18
 0 90769
 9 9 2
+GenWimpy: 2
+GenRoam: 48
+GenFollow: 10
 E
 T 3008
 #13442
@@ -592,7 +606,8 @@ de linhagem nobre.
 25 1 2 1d6+300 3d8+5
 1200 12000
 9 9 1
-GenWimpy: 4
+GenWimpy: 7
+GenFollow: 18
 E
 #13446
 bibliotecario elfo~
@@ -621,6 +636,8 @@ aos primeiros dias da cidade élfica.
 28 0 0 1d7+350 3d8+6
 1400 14000
 9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #13448
 comerciante elfo~
@@ -677,6 +694,9 @@ da floresta.
 23 2 2 1d5+287 2d8+4
 1050 10500
 9 9 1
+GenWimpy: 3
+GenLoot: 1
+GenFollow: 13
 E
 #13452
 curandeiro elfo~

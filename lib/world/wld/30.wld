@@ -209,11 +209,6 @@ Você vê a saída para o hall de entrada.
 ~
 0 -1 3006
 E
-escritas gravacao gravacoes simbolos~
-Mesmo parecendo difícil de entender, você acha que parece muito com cerveja,
-poemas sobre cerveja, e pequenas canequinhas de cerveja.
-~
-E
 aviso~
 O aviso diz:
 Instruções grátis fornecidas pela Hospedaria Grunting Boar.
@@ -221,6 +216,11 @@ Instruções grátis fornecidas pela Hospedaria Grunting Boar.
    BUY  - Comprar alguma coisa (bebida) do taverneiro.
    LIST - O taverneiro vai lhe mostrar todas as diferentes bebidas e
 	  especialidades, e dirá o preço de cada uma.
+~
+E
+escritas gravacao gravacoes simbolos~
+Mesmo parecendo difícil de entender, você acha que parece muito com cerveja,
+poemas sobre cerveja, e pequenas canequinhas de cerveja.
 ~
 S
 #3008
@@ -256,14 +256,6 @@ Você pode ver a Rua Principal.
 ~
 0 -1 3013
 E
-aviso~
-Instruções grátis fornecidas pela loja:
-
-   BUY  - Compra algum pão ou pastel.
-   LIST - O padeiro gentilmente lhe dirá o preço e tipo de cada pão
-	  em sua padaria.
-~
-E
 paes prateleiras bolos~
    Você que vê que há pasteis realmente deliciosos. Devem ser feitos por um
 dinamarquês da Dinamarca (que na verdade não é a capital da Suécia!). Antigas
@@ -271,6 +263,14 @@ receitas da Escandinávia, Inglaterra, Alemanha Meridional, França Meridional,
 Rússia, Groelândia, Islandia, Estônia etc, etc.
    A visão desses enormes, impressionantes bolos de chocolates fazem sua boca
 encher d'água e sua alma cantar.
+~
+E
+aviso~
+Instruções grátis fornecidas pela loja:
+
+   BUY  - Compra algum pão ou pastel.
+   LIST - O padeiro gentilmente lhe dirá o preço e tipo de cada pão
+	  em sua padaria.
 ~
 S
 #3010
@@ -609,8 +609,8 @@ oeste.
 D0
 Você vê uma loja estranha.
 ~
-~
-0 -1 3081
+porta~
+4 2 3081
 D1
 Você vê a praça comum.
 ~
@@ -856,14 +856,9 @@ O portão da cidade é a oeste.
 portao~
 1 3112 3052
 E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
-~
-E
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
+ponte~
+É muito alta para alcancar mas parece que alguem poderia facilmente passar
+de uma torre para outra.
 ~
 E
 portao~
@@ -872,9 +867,14 @@ grandes tiras de ferro para deixá-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-ponte~
-É muito alta para alcancar mas parece que alguem poderia facilmente passar
-de uma torre para outra.
+torre torres~
+Ambas as torres são construídas com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
+~
+E
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
 ~
 S
 #3041
@@ -900,14 +900,9 @@ Você vê a Rua Principal.
 ~
 0 -1 3016
 E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
-~
-E
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
+ponte~
+É muito alta para alcançar mas parece que alguem poderia facilmente passar
+de uma torre para outra.
 ~
 E
 portao~
@@ -916,9 +911,14 @@ grandes tiras de ferro para deixa-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-ponte~
-É muito alta para alcançar mas parece que alguem poderia facilmente passar
-de uma torre para outra.
+torre torres~
+Ambas as torres são construídas com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
+~
+E
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
 ~
 S
 #3042
@@ -972,14 +972,14 @@ A estrada continua para o sul.
 ~
 0 -1 3047
 E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
-~
-E
 escrito escrita~
 Diz: 'Quem vigia os vigias?'
 E tambem: 'Morfetus esta próximo'
+~
+E
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
 ~
 S
 #3044
@@ -1125,18 +1125,18 @@ Você vê a confluência.
 ~
 0 -1 3100
 E
-muro~
-É construído de grandes rochas cinzas unidas entre sí com algum tipo de
-cimento. É muito alto pra subir.
+ponte~
+É construída com grande rochas, unidas entre si com algum tipo de cimento,
+Assim como o muro. Odyssey costuma tomar cerveja lá embaixo.
 ~
 E
 abertura~
 Você não consegue ver daqui como se estivesse bem abaixo de seus pés.
 ~
 E
-ponte~
-É construída com grande rochas, unidas entre si com algum tipo de cimento,
-Assim como o muro. Odyssey costuma tomar cerveja lá embaixo.
+muro~
+É construído de grandes rochas cinzas unidas entre sí com algum tipo de
+cimento. É muito alto pra subir.
 ~
 S
 #3052
@@ -1157,14 +1157,9 @@ A margem da floresta é a oeste.
 ~
 0 -1 6092
 E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
-~
-E
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
+ponte~
+É muito alta para alcançar mas parece que alguém poderia facilmente passar
+de uma torre para outra.
 ~
 E
 portao~
@@ -1173,9 +1168,14 @@ grandes tiras de ferro para deixá-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-ponte~
-É muito alta para alcançar mas parece que alguém poderia facilmente passar
-de uma torre para outra.
+torre torres~
+Ambas as torres são construídas com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
+~
+E
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
 ~
 S
 #3053
@@ -1196,14 +1196,9 @@ Você vê o portão da cidade.
 portao~
 1 3112 3041
 E
-muro~
-É construído de grandes rochas cinzas unidas entre si com algum tipo de
-cimento. É muito alto pra subir.
-~
-E
-torre torres~
-Ambas as torres são construídas com grandes rochas unidas entre si com
-algum tipo de cimento, assim como o muro da cidade.
+ponte~
+É muito alta para alcançar mas parece que alguém poderia facilmente passar
+de uma torre para outra.
 ~
 E
 portao~
@@ -1212,9 +1207,14 @@ grandes tiras de ferro para deixá-las ainda mais resistentes. Uma das portas
 possui uma fechadura enorme.
 ~
 E
-ponte~
-É muito alta para alcançar mas parece que alguém poderia facilmente passar
-de uma torre para outra.
+torre torres~
+Ambas as torres são construídas com grandes rochas unidas entre si com
+algum tipo de cimento, assim como o muro da cidade.
+~
+E
+muro~
+É construído de grandes rochas cinzas unidas entre si com algum tipo de
+cimento. É muito alto pra subir.
 ~
 S
 #3054
@@ -1241,16 +1241,16 @@ Você vê o extremo sul do templo.
 ~
 0 -1 3001
 E
+altar~
+Mesmo tendo mais de três metros de comprimento, o altar aparentemente é
+feito de um único bloco de marmore virgem.
+~
+E
 estatua odin rei deus~
 A estátua representa Odin sentado em seu trono. Ele tem longos cabelos
 grisalhos e barba, e um olhar severo em seu rosto. Acima de seu trono,
 bem sobre seus ombros, seus dois abutres Hugin e Munin estão pousados
 e a seus pés seus lobos Gere e Freke.
-~
-E
-altar~
-Mesmo tendo mais de três metros de comprimento, o altar aparentemente é
-feito de um único bloco de marmore virgem.
 ~
 S
 #3055
@@ -1379,30 +1379,6 @@ D4
 ~
 0 0 3008
 E
-procurados parede~
-Rostos de vários Assassinos e Ladrões conhecidos mal podem ser vistos atrás
-dos engradados na parede oeste. Alguns deles parecem familiares como aquele
-cara que você viu na Recepção ha um minuto... Mas eles são difíceis de ver
-atrás dos engradados.
-~
-E
-engradados~
-Como você sabe, é ilegal enviar itens de contrabando pelo correio de
-Midgaard. Os agentes da alfândega usam isso com desculpa para afanar
-bebidas, especiarias raras, ou qualquer coisa que eles possa achar
-útil ou desejável.
-~
-E
-teias~
-Parecem cobrir tudo, inclusive o carteiro.
-~
-E
-envelopes correspondecia~
-Envelopes de todos os tamanhos estão empilhados em grande montes pelo chão.
-Olhando de perto, você vê uma carta que você enviou bem a uma semana atrás,
-esquecida e meio roida por ratos em uma das pilhas.
-~
-E
 aviso~
 ,----------------------------------------------------------.
 | Instruções do Correio:                                   |
@@ -1419,6 +1395,30 @@ aviso~
 |         Selos custam 150 moedas por carta                |
 |         Digite 'HELP MAIL' para mais informações         |
 `----------------------------------------------------------'
+~
+E
+envelopes correspondecia~
+Envelopes de todos os tamanhos estão empilhados em grande montes pelo chão.
+Olhando de perto, você vê uma carta que você enviou bem a uma semana atrás,
+esquecida e meio roida por ratos em uma das pilhas.
+~
+E
+teias~
+Parecem cobrir tudo, inclusive o carteiro.
+~
+E
+engradados~
+Como você sabe, é ilegal enviar itens de contrabando pelo correio de
+Midgaard. Os agentes da alfândega usam isso com desculpa para afanar
+bebidas, especiarias raras, ou qualquer coisa que eles possa achar
+útil ou desejável.
+~
+E
+procurados parede~
+Rostos de vários Assassinos e Ladrões conhecidos mal podem ser vistos atrás
+dos engradados na parede oeste. Alguns deles parecem familiares como aquele
+cara que você viu na Recepção ha um minuto... Mas eles são difíceis de ver
+atrás dos engradados.
 ~
 S
 #3063
@@ -1794,13 +1794,13 @@ coisa?  Deixe seu recado escrito no enorme quadro.
 D2
 Você vê o beco.
 ~
-~
-0 -1 3024
+porta~
+2 2 3024
 D5
 Uma porta secreta e trancada leva para baixo, ao que parece ser um porão especial.
 ~
 porta secreta porao~
-32777 -1 3092
+0 -1 3092
 S
 #3082
 Em Frente à Taverna~
@@ -1986,12 +1986,12 @@ O bar parece ser apenas um pouco mais confortavel que a sala onde você está ag
 ~
 0 -1 3090
 E
-lareira coracao fogo~
-Você não vê nada de especial sobre o coração.
-~
-E
 lamparina lamparinas~
 Você não vê nada de especial sobre as lamparinas.
+~
+E
+lareira coracao fogo~
+Você não vê nada de especial sobre o coração.
 ~
 S
 #3090
@@ -2016,21 +2016,12 @@ Você vê de relance a entra da sua associação.
 ~
 0 -1 3089
 E
-lareira coracao fogo~
-Você não vê nada de especial sobre o coração.
-~
-E
-lamparina lamparinas~
-Você não vê nada de especial sobre as lamparinas.
-~
-E
-cabeca trofeu cabecas trofeis~
-Você vê uma zebra, um elefante, e MEU DEUS aquele deve ter sido um
-rinoceronte ENORME.
-~
-E
-banco bancos~
-Os bancos parecem ser bem confortáveis.
+placa~
+A placa diz:
+Aqui está o lance:
+Buy - Compre algo de beber da garçonete.
+List - A garçonete vai ler a lista de preços.
+A proposito, a garçonete não está a venda.
 ~
 E
 madeira indio~
@@ -2039,12 +2030,21 @@ parece quase vivo, mas uma batida rápida confirma que ele é feito de
  madeira maciça.
 ~
 E
-placa~
-A placa diz:
-Aqui está o lance:
-Buy - Compre algo de beber da garçonete.
-List - A garçonete vai ler a lista de preços.
-A proposito, a garçonete não está a venda.
+banco bancos~
+Os bancos parecem ser bem confortáveis.
+~
+E
+cabeca trofeu cabecas trofeis~
+Você vê uma zebra, um elefante, e MEU DEUS aquele deve ter sido um
+rinoceronte ENORME.
+~
+E
+lamparina lamparinas~
+Você não vê nada de especial sobre as lamparinas.
+~
+E
+lareira coracao fogo~
+Você não vê nada de especial sobre o coração.
 ~
 S
 #3091
@@ -2090,7 +2090,7 @@ D4
 Uma escada leva de volta ao brechó do Belchior.
 ~
 escada porta secreta~
-32777 -1 3081
+0 -1 3081
 E
 placa tipos leilao~
 TIPOS DE LEILÃO DISPONÍVEIS:

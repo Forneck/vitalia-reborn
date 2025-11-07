@@ -7,15 +7,15 @@ Uma longa e afiada espada está cravada até a metade numa pedra.~
 0 6 5 3
 15 106384 10638 0 0
 E
+escrituras~
+Você não consegue decifrá-las, lamento.  Talvez você devesse pedir ajuda a
+algum sábio ou mago...
+~
+E
 diamante afiada corte longa~
 É uma longa e fina espada com o fio de diamante sobre a lâmina de prata.
 Na lâmina há algumas inscrições em uma língua antiga, agora quase esquecida.
 O corte da espada é afiado como uma navalha e duro como diamante.
-~
-E
-escrituras~
-Você não consegue decifrá-las, lamento.  Talvez você devesse pedir ajuda a
-algum sábio ou mago...
 ~
 A
 18 2
@@ -93,10 +93,12 @@ um par de grevas élficas~
 Grevas de elos metálicos foram negligentemente deixadas aqui.~
 ~
 9 abk 0 0 0 af 0 0 0 0 0 0 0
-6 0 0 0
+7 0 0 0
 25 17500 1750 0 0
 A
 2 1
+A
+19 1
 #19009
 verde folha pocao~
 uma poção verde-folha~
@@ -143,7 +145,7 @@ uma grande sacola verde~
 Uma sacola verde foi deixada aqui.~
 ~
 15 0 0 0 0 ao 0 0 0 0 0 0 0
-100 0 0 0
+350 0 -1 0
 2 25 10 0 0
 #19015
 papiro papel~
@@ -179,13 +181,13 @@ Um pequeno cântaro de vidro foi deixado no chão.~
 0 0 100 0
 2 8000 800 0 0
 E
+verme radiante luz~
+O verme parece amigável...:)
+~
+E
 pequeno cantaro vidro~
 Você vê um pequeno cântaro perfeitamente feito de vidro.  Nele você vê um
 pequeno verme irradiando uma brilhante luz clara.
-~
-E
-verme radiante luz~
-O verme parece amigável...:)
 ~
 A
 18 2
@@ -249,18 +251,18 @@ Um alvo e reluzente brinco foi esquecido aqui.~
 0 0 0 0
 4 1000 100 0 0
 E
-brinco mithril~
-Você observa esse brinco e percebe tratar-se de um delicado trabalho dos
-ferreiros elfos: uma resistente esfera reluzente, sem nenhum traço de
-imperfeição sobre sua superfície.  Uma minúscula inscrição lhe chama
-atenção.
-~
-E
 inscricao minuscula~
 Você consegue ler:
 
 "Cópia autorizada do original"
 
+~
+E
+brinco mithril~
+Você observa esse brinco e percebe tratar-se de um delicado trabalho dos
+ferreiros elfos: uma resistente esfera reluzente, sem nenhum traço de
+imperfeição sobre sua superfície.  Uma minúscula inscrição lhe chama
+atenção.
 ~
 A
 17 -2

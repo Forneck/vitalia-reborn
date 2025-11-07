@@ -64,7 +64,7 @@ luas de Vitália, Teriany, que brilha com uma cor prateada.  Daqui você não é
 capaz de ver o final dessa rua.  Para leste e oeste estão as casas 1 e 2, ao
 sul está o centro da vila, e a rua continua para o norte.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 A rua continua nesta direção.
 ~
@@ -74,7 +74,7 @@ D1
 Você vê a casa número 1 desta rua.
 ~
 porta~
-0 -1 1050
+1 -1 1050
 D2
 Você vê o centro da vila.
 ~
@@ -84,7 +84,7 @@ D3
 Você vê a casa número 2 dessa rua.
 ~
 porta~
-0 -1 1051
+1 -1 1051
 S
 #1003
 A Rua do Luar de Prata~
@@ -93,7 +93,7 @@ luas de Vitália, Teriany, que brilha com uma cor prateada.  Daqui você não é
 capaz de ver o final dessa rua.  Para leste e oeste estão as casas 3 e 4, ao
 norte está o centro da vila, e a rua continua para o norte.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 Você vê o centro da vila.
 ~
@@ -103,7 +103,7 @@ D1
 Você vê a casa número 3 desta rua.
 ~
 porta~
-0 -1 1052
+1 -1 1052
 D2
 A rua continua nesta direção.
 ~
@@ -113,7 +113,7 @@ D3
 Você vê a casa número 4 dessa rua.
 ~
 porta~
-0 -1 1053
+1 -1 1053
 S
 #1004
 A Rua do Luar de Prata~
@@ -122,7 +122,7 @@ luas de Vitália, Teriany, que brilha com uma cor prateada.  Daqui você não é
 capaz de ver o final dessa rua.  Para leste e oeste estão as casas 5 e 6.  A
 rua continua para o norte e para o sul.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 A rua continua nesta direção.
 ~
@@ -132,7 +132,7 @@ D1
 Você vê a casa número 5 desta rua.
 ~
 porta~
-0 -1 1054
+1 -1 1054
 D2
 A rua continua nesta direção.
 ~
@@ -142,7 +142,7 @@ D3
 Você vê a casa número 6 dessa rua.
 ~
 porta~
-0 -1 1055
+1 -1 1055
 S
 #1005
 A Rua do Luar de Prata~
@@ -151,7 +151,7 @@ luas de Vitália, Teriany, que brilha com uma cor prateada.  Daqui você não é
 capaz de ver o final dessa rua.  Para leste e oeste estão as casas 7 e 8.  A
 rua continua para o norte e para o sul.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 A rua continua nesta direção.
 ~
@@ -161,7 +161,7 @@ D1
 Você vê a casa número 7 desta rua.
 ~
 porta~
-0 -1 1056
+1 -1 1056
 D2
 A rua continua nesta direção.
 ~
@@ -171,7 +171,7 @@ D3
 Você vê a casa número 8 dessa rua.
 ~
 porta~
-0 -1 1057
+1 -1 1057
 S
 #1006
 A Rua do Luar de Prata~
@@ -180,7 +180,7 @@ luas de Vitália, Teriany, que brilha com uma cor prateada.  Daqui você não é
 capaz de ver o final dessa rua.  Para leste e oeste estão as casas 9 e 10.
 A rua continua para o norte e para o sul.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 A rua continua nesta direção.
 ~
@@ -190,7 +190,7 @@ D1
 Você vê a casa número 9 desta rua.
 ~
 porta~
-0 -1 1058
+1 -1 1058
 D2
 A rua continua nesta direção.
 ~
@@ -200,7 +200,7 @@ D3
 Você vê a casa número 10 dessa rua.
 ~
 porta~
-0 -1 1059
+1 -1 1059
 S
 #1010
 A Rua do Luar de Fogo~
@@ -209,12 +209,12 @@ luas de Vitália, Latïzie, que brilha com uma cor avermelhada.  Daqui você
 não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 1 e
 2, ao leste está o centro da vila, e a rua continua para o oeste.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 Você vê a casa número 1 desta rua.
 ~
 porta~
-0 -1 1060
+1 -1 1060
 D1
 Você vê o centro da vila.
 ~
@@ -224,7 +224,7 @@ D2
 Você vê a casa número 2 dessa rua.
 ~
 porta~
-0 -1 1061
+1 -1 1061
 D3
 A rua continua nesta direção.
 ~
@@ -238,12 +238,12 @@ luas de Vitália, Latïzie, que brilha com uma cor avermelhada.  Daqui você
 não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 3 e
 4.  A rua continua para o leste e para o oeste.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 Você vê a casa número 3 desta rua.
 ~
 porta~
-0 -1 1062
+1 -1 1062
 D1
 A rua continua nesta direção.
 ~
@@ -253,7 +253,7 @@ D2
 Você vê a casa número 4 dessa rua.
 ~
 porta~
-0 -1 1063
+1 -1 1063
 D3
 A rua continua nesta direção.
 ~
@@ -267,12 +267,12 @@ luas de Vitália, Latïzie, que brilha com uma cor avermelhada.  Daqui você
 não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 5 e
 6.  A rua continua para o leste e para o oeste.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 Você vê a casa número 5 desta rua.
 ~
 porta~
-0 -1 1064
+1 -1 1064
 D1
 A rua continua nesta direção.
 ~
@@ -282,7 +282,7 @@ D2
 Você vê a casa número 6 dessa rua.
 ~
 porta~
-0 -1 1065
+1 -1 1065
 D3
 A rua continua nesta direção.
 ~
@@ -296,12 +296,12 @@ luas de Vitália, Latïzie, que brilha com uma cor avermelhada.  Daqui você
 não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 7 e
 8.  A rua continua para o leste e para o oeste.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 Você vê a casa número 7 desta rua.
 ~
 porta~
-0 -1 1066
+1 -1 1066
 D1
 A rua continua nesta direção.
 ~
@@ -311,7 +311,7 @@ D2
 Você vê a casa número 8 dessa rua.
 ~
 porta~
-0 -1 1067
+1 -1 1067
 D3
 A rua continua nesta direção.
 ~
@@ -325,12 +325,12 @@ luas de Vitália, Latïzie, que brilha com uma cor avermelhada.  Daqui você
 não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 9 e
 10.  A rua continua para o leste e para o oeste.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 Você vê a casa número 9 desta rua.
 ~
 porta~
-0 -1 1068
+1 -1 1068
 D1
 A rua continua nesta direção.
 ~
@@ -340,7 +340,7 @@ D2
 Você vê a casa número 10 dessa rua.
 ~
 porta~
-0 -1 1069
+1 -1 1069
 D3
 A rua continua nesta direção.
 ~
@@ -399,12 +399,12 @@ D0
 Você vê a casa número 1 desta rua.
 ~
 porta~
-0 -1 1080
+1 -1 1080
 D2
 Você vê a casa número 2 dessa rua.
 ~
 porta~
-0 -1 1081
+1 -1 1081
 D3
 A rua continua nesta direção.
 ~
@@ -423,12 +423,12 @@ das luas de Vitália, Aqrien, que brilha com uma cor azulada.  Daqui você
 não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 3 e
 4.  A rua continua para o leste e para o oeste.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 Você vê a casa número 3 desta rua.
 ~
 porta~
-0 -1 1082
+1 -1 1082
 D1
 A rua continua nesta direção.
 ~
@@ -438,7 +438,7 @@ D2
 Você vê a casa número 4 dessa rua.
 ~
 porta~
-0 -1 1083
+1 -1 1083
 D3
 A rua continua nesta direção.
 ~
@@ -457,7 +457,7 @@ D0
 Você vê a casa número 5 desta rua.
 ~
 porta~
-0 -1 1084
+1 -1 1084
 D1
 A rua continua nesta direção.
 ~
@@ -467,7 +467,7 @@ D2
 Você vê a casa número 6 dessa rua.
 ~
 porta~
-0 -1 1085
+1 -1 1085
 D3
 A rua continua nesta direção.
 ~
@@ -486,7 +486,7 @@ D0
 Você vê a casa número 7 desta rua.
 ~
 porta~
-0 -1 1086
+1 -1 1086
 D1
 A rua continua nesta direção.
 ~
@@ -496,7 +496,7 @@ D2
 Você vê a casa número 8 dessa rua.
 ~
 porta~
-0 -1 1087
+1 -1 1087
 D3
 A rua continua nesta direção.
 ~
@@ -543,7 +543,7 @@ D0
 Você vê a casa número 9 desta rua.
 ~
 porta~
-0 -1 1088
+1 -1 1088
 D1
 A rua continua nesta direção.
 ~
@@ -553,7 +553,7 @@ D2
 Você vê a casa número 10 dessa rua.
 ~
 porta~
-0 -1 1089
+1 -1 1089
 D3
 A rua continua nesta direção.
 ~
@@ -584,12 +584,12 @@ D0
 Você vê a casa número 1 desta rua.
 ~
 porta~
-0 -1 1090
+1 -1 1090
 D2
 Você vê a casa número 2 dessa rua.
 ~
 porta~
-0 -1 1091
+1 -1 1091
 D3
 A rua continua nesta direção.
 ~
@@ -613,7 +613,7 @@ D0
 Você vê a casa número 3 desta rua.
 ~
 porta~
-0 -1 1092
+1 -1 1092
 D1
 A rua continua nesta direção.
 ~
@@ -623,7 +623,7 @@ D2
 Você vê a casa número 4 dessa rua.
 ~
 porta~
-0 -1 1093
+1 -1 1093
 D3
 A rua continua nesta direção.
 ~
@@ -637,12 +637,12 @@ luas de Vitália, Kadrictes, que brilha com uma cor esverdeada.  Daqui você
 não é capaz de ver o final dessa rua.  Para norte e sul estão as casas 5 e
 6.  A rua continua para o leste e para o oeste.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 Você vê a casa número 5 desta rua.
 ~
 porta~
-0 -1 1094
+1 -1 1094
 D1
 A rua continua nesta direção.
 ~
@@ -652,7 +652,7 @@ D2
 Você vê a casa número 6 dessa rua.
 ~
 porta~
-0 -1 1095
+1 -1 1095
 D3
 A rua continua nesta direção.
 ~
@@ -671,7 +671,7 @@ D0
 Você vê a casa número 7 desta rua.
 ~
 porta~
-0 -1 1096
+1 -1 1096
 D1
 A rua continua nesta direção.
 ~
@@ -681,7 +681,7 @@ D2
 Você vê a casa número 8 dessa rua.
 ~
 porta~
-0 -1 1097
+1 -1 1097
 D3
 A rua continua nesta direção.
 ~
@@ -728,7 +728,7 @@ D0
 Você vê a casa número 9 desta rua.
 ~
 porta~
-0 -1 1098
+1 -1 1098
 D1
 A rua continua nesta direção.
 ~
@@ -738,7 +738,7 @@ D2
 Você vê a casa número 10 dessa rua.
 ~
 porta~
-0 -1 1099
+1 -1 1099
 D3
 A rua continua nesta direção.
 ~
@@ -773,7 +773,7 @@ D1
 Você vê a casa número 1 desta rua.
 ~
 porta~
-0 -1 1070
+1 -1 1070
 D2
 A rua continua nesta direção.
 ~
@@ -783,7 +783,7 @@ D3
 Você vê a casa número 2 dessa rua.
 ~
 porta~
-0 -1 1071
+1 -1 1071
 S
 #1041
 A Rua da Luz~
@@ -819,7 +819,7 @@ A Rua da Luz~
 final dessa rua.  Para leste e oeste estão as casas 5 e 6.  A rua continua
 para o norte e para o sul.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 A rua continua nesta direção.
 ~
@@ -829,7 +829,7 @@ D1
 Você vê a casa número 5 desta rua.
 ~
 porta~
-0 -1 1074
+1 -1 1074
 D2
 A rua continua nesta direção.
 ~
@@ -839,7 +839,7 @@ D3
 Você vê a casa número 6 dessa rua.
 ~
 porta~
-0 -1 1075
+1 -1 1075
 S
 #1043
 A Rua da Luz~
@@ -847,7 +847,7 @@ A Rua da Luz~
 final dessa rua.  Para leste e oeste estão as casas 7 e 8.  A rua continua
 para o norte e para o sul.
 ~
-10 0 0 0 0 1
+10 16384 0 0 0 1
 D0
 A rua continua nesta direção.
 ~
@@ -857,7 +857,7 @@ D1
 Você vê a casa número 7 desta rua.
 ~
 porta~
-0 -1 1076
+1 -1 1076
 D2
 A rua continua nesta direção.
 ~
@@ -867,7 +867,7 @@ D3
 Você vê a casa número 8 dessa rua.
 ~
 porta~
-0 -1 1077
+1 -1 1077
 S
 #1044
 A Rua da Luz~
@@ -885,7 +885,7 @@ D1
 Você vê a casa número 9 desta rua.
 ~
 porta~
-0 -1 1078
+1 -1 1078
 D2
 A rua continua nesta direção.
 ~
@@ -895,7 +895,7 @@ D3
 Você vê a casa número 10 dessa rua.
 ~
 porta~
-0 -1 1079
+1 -1 1079
 S
 #1050
 A Casa 1 da Rua do Luar de Prata~
@@ -908,7 +908,7 @@ D3
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1002
+1 -1 1002
 S
 #1051
 A Casa 2 da Rua do Luar de Prata~
@@ -916,12 +916,12 @@ A Casa 2 da Rua do Luar de Prata~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Prata, número 2.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D1
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1002
+1 -1 1002
 S
 #1052
 A Casa 3 da Rua do Luar de Prata~
@@ -934,7 +934,7 @@ D3
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1003
+1 -1 1003
 S
 #1053
 A Casa 4 da Rua do Luar de Prata~
@@ -942,12 +942,12 @@ A Casa 4 da Rua do Luar de Prata~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Prata, número 4.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D1
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1003
+1 -1 1003
 S
 #1054
 A Casa 5 da Rua do Luar de Prata~
@@ -955,12 +955,12 @@ A Casa 5 da Rua do Luar de Prata~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Prata, número 5.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D3
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1004
+1 -1 1004
 S
 #1055
 A Casa 6 da Rua do Luar de Prata~
@@ -968,12 +968,12 @@ A Casa 6 da Rua do Luar de Prata~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Prata, número 6.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D1
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1004
+1 -1 1004
 S
 #1056
 A Casa 7 da Rua do Luar de Prata~
@@ -981,12 +981,12 @@ A Casa 7 da Rua do Luar de Prata~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Prata, número 7.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D3
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1005
+1 -1 1005
 S
 #1057
 A Casa 8 da Rua do Luar de Prata~
@@ -994,12 +994,12 @@ A Casa 8 da Rua do Luar de Prata~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Prata, número 8.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D1
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1005
+1 -1 1005
 S
 #1058
 A Casa 9 da Rua do Luar de Prata~
@@ -1007,12 +1007,12 @@ A Casa 9 da Rua do Luar de Prata~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Prata, número 9.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D3
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1006
+1 -1 1006
 S
 #1059
 A Casa 10 da Rua do Luar de Prata~
@@ -1020,12 +1020,12 @@ A Casa 10 da Rua do Luar de Prata~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Prata, número 10.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D1
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1006
+1 -1 1006
 S
 #1060
 A Casa 1 da Rua do Luar de Fogo~
@@ -1033,7 +1033,7 @@ A Casa 1 da Rua do Luar de Fogo~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Fogo, número 1.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D2
 Você vê a saída para a rua.
 ~
@@ -1072,12 +1072,12 @@ A Casa 4 da Rua do Luar de Fogo~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Fogo, número 4.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D0
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1011
+1 -1 1011
 S
 #1064
 A Casa 5 da Rua do Luar de Fogo~
@@ -1085,12 +1085,12 @@ A Casa 5 da Rua do Luar de Fogo~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Fogo, número 5.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D2
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1012
+1 -1 1012
 S
 #1065
 A Casa 6 da Rua do Luar de Fogo~
@@ -1098,12 +1098,12 @@ A Casa 6 da Rua do Luar de Fogo~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Fogo, número 6.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D0
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1012
+1 -1 1012
 S
 #1066
 A Casa 7 da Rua do Luar de Fogo~
@@ -1124,7 +1124,7 @@ A Casa 8 da Rua do Luar de Fogo~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Fogo, número 8.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D0
 Você vê a saída para a rua.
 ~
@@ -1150,7 +1150,7 @@ A Casa 10 da Rua do Luar de Fogo~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Fogo, número 10.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D0
 Você vê a saída para a rua.
 ~
@@ -1215,7 +1215,7 @@ A Casa 5 da Rua da Luz~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua da Luz, número 5.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D3
 Você vê a saída para a rua.
 ~
@@ -1228,12 +1228,12 @@ A Casa 6 da Rua da Luz~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua da Luz, número 6.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D1
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1042
+1 -1 1042
 S
 #1076
 A Casa 7 da Rua da Luz~
@@ -1241,7 +1241,7 @@ A Casa 7 da Rua da Luz~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua da Luz, número 7.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D3
 Você vê a saída para a rua.
 ~
@@ -1319,7 +1319,7 @@ A Casa 3 da Rua do Luar de Safira~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Safira, número 3.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D2
 Você vê a saída para a rua.
 ~
@@ -1475,12 +1475,12 @@ A Casa 5 da Rua do Luar de Jade~
 saída é a porta que lhe levará devolta para a rua.  O endereço desta casa é
 Rua do Luar de Jade, número 5.
 ~
-10 12 0 0 0 1
+10 2572 0 0 0 1
 D2
 Você vê a saída para a rua.
 ~
 porta~
-0 -1 1032
+1 -1 1032
 S
 #1095
 A Casa 6 da Rua do Luar de Jade~

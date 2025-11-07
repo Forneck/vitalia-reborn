@@ -10,7 +10,10 @@ como se não tivesse tomado banho por um mês.
 21 0 -1 4d20+336 2d8+9
 10000 60000
 9 9 1
-GenWimpy: 2
+GenWimpy: 47
+GenLoot: 19
+GenEquip: 1
+GenFollow: 14
 E
 T 3013
 #6501
@@ -24,9 +27,12 @@ Ele é muito sujo e parece extremamente exausto pelo excesso de trabalho.
 13 7 2 25d5+170 2d4+6
 3500 16000
 9 9 1
-GenWimpy: 7
-GenRoam: 88
-GenGroup: 40
+GenWimpy: 41
+GenLoot: 53
+GenEquip: 1
+GenRoam: 89
+GenGroup: 95
+GenFollow: 12
 E
 #6502
 fantasma~
@@ -39,6 +45,9 @@ Um fantasma negro e quase transparente.
 25 4 -6 9d7+500 4d5+25
 45708 125000
 9 9 1
+GenWimpy: 28
+GenLoot: 1
+GenFollow: 12
 E
 T 3009
 #6503
@@ -77,6 +86,12 @@ Ele aparenta ser muito poderoso.
 21 0 1 4d20+340 3d7+4
 200 55000
 9 9 1
+GenWimpy: 12
+GenLoot: 23
+GenEquip: 1
+GenRoam: 89
+GenGroup: 78
+GenFollow: 16
 E
 #6506
 gigante~
@@ -90,6 +105,11 @@ estar em excelentes condições físicas.
 19 2 0 4d20+300 3d3+8
 2000 45000
 9 9 1
+GenWimpy: 12
+GenLoot: 4
+GenRoam: 89
+GenGroup: 18
+GenFollow: 18
 E
 #6507
 mineiro anao~
@@ -115,6 +135,8 @@ razoavelmente inteligente também para ter conseguido este posto.
 19 1 0 50d2+270 3d4+6
 18000 35000
 9 9 1
+GenWimpy: 6
+GenFollow: 13
 E
 #6509
 medico anao curandeiro~
@@ -140,6 +162,8 @@ An undefined string.
 3 18 7 10d3+35 2d3+2
 75 350
 9 9 1
+GenWimpy: 1
+GenFollow: 11
 E
 #6511
 anao~
@@ -165,6 +189,8 @@ An undefined string.
 14 6 1 5d10+170 2d5+4
 1300 20000
 9 9 1
+GenWimpy: 3
+GenFollow: 12
 E
 #6516
 labirinto guardião guardiao~

@@ -11,6 +11,9 @@ sido feito de metal.
 150 1567
 9 9 1
 BareHandAttack: 10
+GenWimpy: 10
+GenLoot: 11
+GenFollow: 9
 E
 #15501
 charley~
@@ -37,8 +40,9 @@ redor e diz, "Um, hei, era para você estar aqui?."
 6 8 5 3d5+103 3d3+2
 200 1987
 9 9 1
-GenWimpy: 2
-GenRoam: 45
+GenWimpy: 7
+GenRoam: 88
+GenFollow: 18
 E
 #15503
 mestre armas~

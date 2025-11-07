@@ -55,6 +55,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 4
+GenFollow: 15
 E
 #13802
 dragao cobre vermelho metalico~
@@ -79,6 +81,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 9
+GenFollow: 15
 E
 #13803
 dragao latao~
@@ -102,6 +106,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 5
+GenFollow: 15
 E
 #13804
 dragao pedra ametista~
@@ -124,6 +130,8 @@ Int: 25
 Wis: 25
 Con: 20
 Cha: 20
+GenWimpy: 3
+GenFollow: 15
 E
 #13805
 dragao pedra safira~
@@ -149,6 +157,8 @@ Int: 25
 Wis: 25
 Con: 20
 Cha: 20
+GenWimpy: 3
+GenFollow: 15
 E
 #13806
 dragao pedra esmeralda~
@@ -173,6 +183,8 @@ Int: 25
 Wis: 25
 Con: 20
 Cha: 20
+GenWimpy: 3
+GenFollow: 15
 E
 #13807
 dragao pedra topazio~
@@ -198,6 +210,8 @@ Int: 25
 Wis: 25
 Con: 20
 Cha: 20
+GenWimpy: 3
+GenFollow: 15
 E
 #13808
 dragao cristal~
@@ -222,6 +236,8 @@ Int: 25
 Wis: 25
 Con: 20
 Cha: 20
+GenWimpy: 5
+GenFollow: 15
 E
 #13809
 dragao ouro guardiao~
@@ -272,6 +288,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenFollow: 15
 E
 #13811
 ermitao dragao bahamut~
@@ -313,6 +331,8 @@ Dex: 8
 Int: 8
 Wis: 8
 Cha: 14
+GenWimpy: 5
+GenFollow: 10
 E
 #13813
 chronepsis dragao~
@@ -384,6 +404,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 5
+GenFollow: 16
 E
 T 3009
 #13816
@@ -412,6 +434,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 3
+GenFollow: 14
 E
 #13817
 dragao profundezas elfo negro~

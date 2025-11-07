@@ -2,6 +2,9 @@
 Vitalia~
 O Abismo Profundo~
 3900 3999 120 2 j 0 0 0 20 50 3
+M 0 3920 1 3994 	(Damorask)
+E 1 3931 5 12 	(um manto de sangue)
+E 1 3823 10 21 	(o Card Manto do Inverno)
 M 0 3919 1 3902 	(Valik, o dragão zumbi)
 E 1 3859 7 17 	(o Card Valik)
 E 1 3925 1 16 	(as garras de Valik)
@@ -52,9 +55,6 @@ E 1 3932 1 2 	(o anel do gelo)
 G 1 3936 1 -1 	(uma chave de gelo)
 M 0 3924 2 3993 	(um pilar de gelo)
 M 0 3926 1 3908 	(uma Pseudo-Hidra vermelha)
-M 0 3920 1 3994 	(Damorask)
-E 1 3931 5 12 	(um manto de sangue)
-E 1 3823 1 17 	(o Card Manto do Inverno)
 M 0 3913 1 3954 	(a tempestade gigante)
 E 1 3927 1 6 	(o capacete da tempestade)
 E 1 3928 1 9 	(as manoplas do trovão)

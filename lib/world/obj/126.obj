@@ -679,9 +679,9 @@ Lanca Majestosa Odin Gungnir~
 Gungnir, a poderosa lança de Odin~
 Uma majestosa lança de brilho celestial foi deixada aqui.~
 ~
-5 aeginq 0 0 0 an 0 0 0 0 0 0 0
-0 8 5 15
-10 8000000 800000 95 0
+5 aegq 0 0 0 an 0 0 0 0 0 0 0
+0 8 5 11
+10 8000000 800000 90 0
 E
 Lanca Majestosa Odin Gungnir~
 Você observa uma poderosa lança feita de um metal desconhecido pelos
@@ -702,9 +702,9 @@ Elmo Belo Ouro Passaro Odin~
 o elmo de Odin~
 Um belo elmo ornado por um imponente pássaro de ouro foi deixado aqui.~
 ~
-9 aegiq 0 0 0 ae 0 0 0 dv 0 0 0
-10 0 0 0
-8 6000000 600000 70 0
+9 aegq 0 0 0 ae 0 0 0 dv 0 0 0
+15 0 0 0
+8 6000000 600000 0 0
 E
 Elmo Belo Ouro Passaro Odin~
 Você observa um monumental elmo de aço com um majestoso pássaro
@@ -724,9 +724,9 @@ Anel Magico Draupnir Odin~
 Draupnir, o anel mágico de Odin~
 Um celestial anel dourado foi esquecido aqui, brilhando como o sol.~
 ~
-11 aegiq 0 0 0 ab 0 0 0 0 0 0 0
-0 0 0 0
-5 1000000 100000 70 0
+9 aegq 0 0 0 ab 0 0 0 0 0 0 0
+8 0 0 0
+5 1000000 100000 80 0
 E
 Anel Magico Draupnir~
 Você observa um belo anel dourado feito pelos habilidosos anões e entregue
@@ -735,9 +735,11 @@ mágico tem como peculiaridade produzir, a cada nova noite, oito anéis de
 igual peso.  Draupnir é um símbolo de riqueza, fartura e poder.
 ~
 A
-18 2
+18 1
 A
-19 2
+19 3
+A
+13 50
 #12628
 Martelo Mjollnir Thor~
 Mjollnir, o poderoso martelo de Thor~
@@ -823,7 +825,7 @@ Um sublime escudo foi deixado aqui, brilhando como a luz da aurora boreal.~
 ~
 9 aegiq 0 0 0 aj 0 0 0 0 0 0 0
 10 0 0 0
-10 4000000 400000 65 0
+10 4000000 400000 0 0
 E
 escudo aurora boreal~
 Você observa um grande e belo escudo metálico.  As antigas lendas dos povos
@@ -979,9 +981,9 @@ espada balmung azul~
 Balmung, a espada sagrada de Sigmund~
 Uma magnífica espada azul está fincada aqui no chão.~
 ~
-5 aegiknq 0 0 0 an 0 0 0 0 0 0 0
+5 aegikq 0 0 0 an 0 0 0 0 0 0 0
 0 4 8 3
-10 6500000 650000 55 0
+10 6500000 650000 75 0
 E
 espada balmung azul~
 Você observa a lendária e sagrada espada de sagrada de Sigmund, pai de
@@ -991,9 +993,9 @@ um raro metal azul entregue a ele pelos deuses do Valhala.
 A
 3 2
 A
-18 3
+18 8
 A
-19 3
+19 8
 #12642
 belo vestido transparente~
 um belo vestido transparente~
@@ -1309,9 +1311,9 @@ inanicao faca negra~
 a Inanição, a faca da rainha das trevas~
 Uma magnífica faca negra foi deixada aqui.~
 ~
-5 aeghjlnqs 0 0 0 ano 0 0 0 0 0 0 0
-0 6 4 14
-6 4000000 400000 75 0
+5 aeghijqs 0 0 0 ano 0 0 0 0 b 0 0
+0 6 4 11
+6 2000000 400000 75 0
 E
 inanicao faca negra~
 Você observa a temível e devastadora arma da rainha suprema de Niffheleim, a
@@ -1322,11 +1324,9 @@ empunhar tal arma seus inimigos ficam num estado de enfraquecimento
 lamentável e covarde.
 ~
 A
-13 -50
+18 7
 A
-18 4
-A
-19 3
+19 8
 #12662
 essencia morte~
 a essência da morte~
@@ -1389,8 +1389,8 @@ par ouro perneiras divinas~
 as perneiras divinas~
 Um par de perneiras de ouro foi esquecido aqui.~
 ~
-11 aegikq 0 0 0 af 0 0 0 0 0 0 0
-0 0 0 0
+9 aegkq 0 0 0 af 0 0 0 0 0 0 0
+10 0 0 0
 10 3000000 300000 80 0
 E
 par ouro perneiras divinas~
@@ -1408,9 +1408,9 @@ belo elmo esverdeado divino~
 o elmo divino~
 Um belo elmo esverdeado foi deixado aqui.~
 ~
-9 aegiq 0 0 0 ae 0 0 0 0 0 0 0
+9 aegq 0 0 0 ae 0 0 0 0 0 0 0
 10 0 0 0
-8 3400000 340000 70 0
+8 3400000 340000 0 0
 E
 belo elmo esverdeado divino~
 Você observa um belo elmo esverdeado, feito e abençoado pelas habilidosas
@@ -1429,7 +1429,7 @@ Um majestoso manto dourado foi esquecido aqui.~
 ~
 11 aegiq 0 0 0 ak 0 0 0 0 0 0 0
 0 0 0 0
-7 2800000 280000 80 0
+7 2800000 280000 90 0
 E
 manto dourado frei~
 Você observa o belo manto dourado do Deus Frei, o deus da fertilidade, na
@@ -1442,13 +1442,15 @@ A
 17 -10
 A
 18 2
+A
+19 2
 #12668
 armadura solar freyr~
 a magnífica armadura solar do Deus Freyr~
 Uma grandiosa armadura dourada foi deixada aqui, brilhando como o sol.~
 ~
 9 aegikq 0 0 0 ad 0 0 0 0 0 0 0
-14 0 0 0
+18 0 0 0
 20 5000000 500000 90 0
 E
 armadura solar freyr~
@@ -1458,16 +1460,18 @@ fervorosas chamas do astro rei.
 A
 1 2
 A
-19 1
+19 2
 A
 24 -3
+A
+18 1
 #12669
-armadura sanguinolenta tir~
+d~
 a armadura sanguinolenta de Tir~
 Uma poderosa armadura vermelha-metálica foi deixada aqui.~
 ~
-9 aegiq 0 0 0 ad 0 0 0 0 0 0 0
-12 0 0 0
+9 aegq 0 0 0 ad 0 0 0 0 0 0 0
+18 0 0 0
 20 5000000 500000 85 0
 E
 armadura sanguinolenta tir~
@@ -1479,7 +1483,7 @@ metálica em outras mãos nunca se manifestará.
 A
 3 2
 A
-18 1
+18 3
 #12670
 caluniador mascara~
 a máscara de Loge, o caluniador~
@@ -1498,6 +1502,10 @@ A
 3 2
 A
 17 -4
+A
+19 3
+A
+18 1
 #12671
 pequena esfera azul semente essencia vida~
 a semente de Friga~
@@ -1536,6 +1544,10 @@ A
 12 20
 A
 24 -2
+A
+18 2
+A
+19 2
 #12673
 serpente dourada njord~
 a serpente dourada de Njord~
@@ -1638,7 +1650,7 @@ escudo destino cristal~
 o escudo do destino~
 Um belo escudo de cristal foi deixado aqui, à espera do seu dono legítimo.~
 ~
-9 aegiq 0 0 0 aj 0 0 0 0 0 0 0
+9 aegq 0 0 0 aj 0 0 0 0 0 0 0
 15 0 0 0
 15 3000000 300000 85 0
 E
@@ -1647,6 +1659,10 @@ Você observa um magnífico escudo de cristal feito pela magia das três irmãs
 Norns, que o guardaram e protegeram até a sua chegada.  O escudo do destino
 dar ao seu dono o poder e a força de mudar o próprio destino.
 ~
+A
+18 3
+A
+19 1
 #12681
 azul celeste medalhao força~
 o medalhão da força~
@@ -1866,7 +1882,7 @@ as plumas dos ventos~
 Algumas plumas brancas foram deixadas aqui ou trazidas pelos ventos.~
 ~
 24 aegiq 0 0 0 ap 0 0 0 0 0 0 0
-0 0 25 0
+0 0 0 0
 3 500000 50000 20 0
 E
 plumas ventos~
@@ -2026,7 +2042,7 @@ argola ouro Ymir~
 a argola de ouro do lendário Ymir~
 Uma magnífica argola de ouro foi deixada aqui, brilhando como o sol.~
 ~
-11 aegiq 0 0 0 aq 0 0 0 0 0 0 0
+11 aegiq 0 0 0 aqs 0 0 0 0 0 0 0
 0 0 0 0
 4 1500000 150000 70 0
 E
@@ -2044,6 +2060,10 @@ A
 1 2
 A
 17 -6
+A
+19 1
+A
+18 1
 #12703
 faces ilusao mascara colorida~
 as mil faces da ilusão~
@@ -2061,15 +2081,17 @@ Utgard, o senhor das ilusões, Utgard-loki.  Utgard-loki é bastante conhecido
 pelas ilusões criadas por ele para o seu próprio proveito.
 ~
 A
-3 -2
+6 3
 A
 17 -6
+A
+18 3
 #12704
 arco flamejante~
 o arco flamejante de Logi~
 Um grande arco em chamas foi deixado aqui.~
 ~
-29 aegqr 0 0 0 an 0 0 0 0 0 0 0
+29 aegq 0 0 0 an 0 0 0 0 0 0 0
 75 0 0 0
 10 1800000 180000 75 0
 E
@@ -2231,7 +2253,7 @@ as asas da guardiã de Yggdrasil~
 Um belo par de asas brancas foi esquecido aqui.~
 ~
 24 aegikq 0 0 0 ap 0 0 0 0 0 0 0
-0 0 50 0
+0 0 0 0
 6 1500000 150000 50 0
 E
 asas guardia~
@@ -2492,6 +2514,10 @@ Uma tábua dourada foi deixada aqui, para lembrar a todos o dia do Ragnarok.~
 0 0 0 0
 30 3000 300 0 0
 E
+tabua ragnarok~
+Você observa uma magnífica tábua dourada com algumas runas e inscrições.
+~
+E
 inscricoes~
 O celestial e poderoso exercito de Odin deverá está sempre pronto para o
 pavoroso dia do Ragnarök.  Lembrem-se que este dia não virá inesperadamente.
@@ -2514,10 +2540,6 @@ Vigrid, onde também apareceriam o lobo Fenris, a serpente de Midgaard, o
 deus caluniador dos deuses e impostor com todos os seguidores de Hela e os
 gigantes do gelo.  Heindall levantar-se-ia e soaria a trombeta Gjall, para
 chamar à luta todos os deuses e heróis.
-~
-E
-tabua ragnarok~
-Você observa uma magnífica tábua dourada com algumas runas e inscrições.
 ~
 #12733
 pedra trono Odin~

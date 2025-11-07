@@ -50,6 +50,8 @@ ajuda.
 21 8 -3 2d4+250 3d6+12
 1000 29000
 6 6 1
+GenWimpy: 3
+GenFollow: 13
 E
 #5904
 mulher~
@@ -113,8 +115,9 @@ Um rato comum e desagradável.
 8 16 6 2d9+150 1d3+7
 0 3300
 9 9 1
-GenWimpy: 5
-GenRoam: 67
+GenWimpy: 8
+GenRoam: 86
+GenFollow: 9
 E
 #5909
 gunter~

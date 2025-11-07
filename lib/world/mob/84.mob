@@ -16,8 +16,9 @@ Dex: 16
 Int: 8
 Wis: 8
 Cha: 8
-GenWimpy: 13
+GenWimpy: 17
 GenLoot: 9
+GenFollow: 11
 E
 #8401
 beren~
@@ -86,6 +87,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 23
+GenFollow: 14
 E
 #8404
 arwen undomiel elfa~
@@ -110,6 +113,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 8
+GenFollow: 15
 E
 #8405
 glorfindel elfo~
@@ -131,6 +136,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 5
+GenFollow: 14
 E
 #8406
 elladan elfo~
@@ -153,6 +160,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 4
+GenFollow: 15
 E
 #8407
 elrohir elfo~
@@ -174,6 +183,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 11
+GenFollow: 15
 E
 #8408
 lindir elfo~
@@ -278,6 +289,8 @@ Int: 18
 Wis: 18
 Con: 18
 Cha: 18
+GenWimpy: 3
+GenFollow: 14
 E
 #8413
 elfa~
@@ -333,7 +346,8 @@ Int: 10
 Wis: 8
 Con: 7
 Cha: 18
-GenWimpy: 21
+GenWimpy: 42
 GenRoam: 87
+GenFollow: 9
 E
 $

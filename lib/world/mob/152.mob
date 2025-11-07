@@ -20,7 +20,13 @@ que não é natural emana dela, um frio que congela a alma em vez da pele.
 9 9 0
 BareHandAttack: 8
 Dex: 25
+GenWimpy: 37
+GenLoot: 94
+GenEquip: 3
+GenRoam: 2
 GenBrave: 75
+GenQuest: 8
+GenFollow: 13
 E
 T 15200
 T 15201
@@ -49,6 +55,8 @@ Str: 20
 Dex: 13
 Int: 13
 Wis: 15
+GenWimpy: 7
+GenFollow: 15
 E
 T 15204
 T 15205
@@ -78,6 +86,12 @@ Dex: 17
 Int: 16
 Wis: 15
 Con: 18
+GenWimpy: 8
+GenLoot: 1
+GenEquip: 1
+GenRoam: 89
+GenGroup: 2
+GenFollow: 14
 E
 #15203
 aranha cacadora sombras~
@@ -101,6 +115,9 @@ BareHandAttack: 4
 Str: 15
 Dex: 18
 Con: 18
+GenWimpy: 12
+GenRoam: 89
+GenFollow: 14
 E
 T 15209
 #15204
@@ -164,6 +181,11 @@ BareHandAttack: 7
 Str: 14
 Dex: 12
 Con: 13
+GenWimpy: 4
+GenLoot: 1
+GenEquip: 1
+GenRoam: 63
+GenFollow: 14
 E
 T 15209
 #15207
@@ -187,8 +209,10 @@ sedutor de orquídeas misturado com o fedor químico de veneno e sangue velho.
 50000 250000
 9 9 2
 BareHandAttack: 1
-GenWimpy: 3
-GenBrave: 100
+GenWimpy: 33
+GenBrave: 75
+GenQuest: 8
+GenFollow: 18
 E
 #15208
 kappa lodo tartaruga demonio~
@@ -220,7 +244,8 @@ exala um cheiro a doença e a terra molhada, e parece completamente inofensivo.
 50 1 -10 1d1+10 1d1+0
 1 1
 9 9 1
-GenWimpy: 4
+GenWimpy: 6
+GenFollow: 5
 E
 T 15207
 #15210
@@ -246,6 +271,8 @@ Int: 20
 Wis: 20
 Con: 20
 Cha: 20
+GenBrave: 2
+GenFollow: 15
 E
 T 15208
 #15211
@@ -270,6 +297,8 @@ longo dos séculos.
 9 9 1
 BareHandAttack: 13
 Wis: 25
+GenWimpy: 4
+GenFollow: 15
 E
 #15212
 inugami errante cao espirito~
@@ -295,6 +324,11 @@ Dex: 20
 Int: 17
 Wis: 17
 Con: 25
+GenWimpy: 5
+GenLoot: 4
+GenEquip: 1
+GenRoam: 66
+GenFollow: 14
 E
 #15213
 gashadokuro esqueleto gigante guardiao~
@@ -343,6 +377,8 @@ Dex: 25
 Int: 15
 Wis: 17
 Con: 18
+GenBrave: 8
+GenFollow: 16
 E
 #15215
 espirito vingativo fantasma odio~
@@ -368,6 +404,9 @@ Int: 15
 Wis: 15
 Con: 15
 Cha: 15
+GenWimpy: 26
+GenRoam: 81
+GenFollow: 14
 E
 #15216
 tengu demonio alado sombras~
@@ -394,6 +433,8 @@ Dex: 18
 Int: 25
 Wis: 25
 Con: 25
+GenBrave: 4
+GenFollow: 15
 E
 #15217
 artesao maldito espirito~
@@ -414,6 +455,9 @@ desfazerem em pó.
 500 10000
 9 9 1
 BareHandAttack: 13
+GenWimpy: 6
+GenLoot: 1
+GenFollow: 13
 E
 #15218
 coracao corrompido arvore-mae~
@@ -434,6 +478,7 @@ de corrupção eterna.
 9 9 0
 BareHandAttack: 12
 GenWimpy: 5
+GenFollow: 12
 E
 #15220
 zelador portal monge homem~

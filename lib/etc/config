@@ -38,10 +38,10 @@ max_npc_corpse_time = 5
 max_pc_corpse_time = 168
 
 * Number of tics before a PC is sent to the void.
-idle_void = 3
+idle_void = 15
 
 * Number of tics before a PC is autorented.
-idle_rent_time = 30
+idle_rent_time = 60
 
 * Level and above of players whom are immune to idle penalties.
 idle_max_level = 106
@@ -53,7 +53,7 @@ dts_are_dumps = 1
 load_into_inventory = 1
 
 * Should PC's be able to track through hidden or closed doors?
-track_through_doors = 0
+track_through_doors = 1
 
 * Should players who reach enough exp be prevented from automatically levelling to immortal?
 no_mort_to_immort = 1
@@ -76,20 +76,20 @@ default_minimap_size = 2
 * Do you want scripts to be attachable to players?
 script_players = 0
 
-* Should the fit evolve system be enabled?
-fit_evolve = 0
-
 * Does weather affect spell effectiveness?
-weather_affects_spells = 0
+weather_affects_spells = 1
 
 * Does weather affect spells based on school?
 school_weather_affects = 1
 
 * Maximum iterations for advanced pathfinding (0=dynamic scaling)
-max_pathfind_iterations = 10000
+max_pathfind_iterations = 0
 
 * Maximum zones in a pathfinding path (0=dynamic scaling)
-max_zone_path = 127
+max_zone_path = 0
+
+* Maximum objects allowed in player houses (0=unlimited)
+max_house_objs = 100
 
 * Text sent to players when OK is all that is needed.
 ok = Pronto.
@@ -107,25 +107,27 @@ noperson = Ninguém com esse nome aqui.
 noeffect = Aparentemente, nada aconteceu.
 
 
+
+
 * [ Rent/Crashsave Options ]
 * Should the MUD allow you to 'rent' for free?  (i.e. if you just quit,
 * your objects are saved at no cost, as in Merc-type MUDs.)
 free_rent = 1
 
 * Maximum number of items players are allowed to rent.
-max_obj_save = 100
+max_obj_save = 300
 
 * Should the game automatically save people?
 auto_save = 1
 
 * If auto_save = 1, how often (in minutes) should the game save people's objects?
-autosave_time = 1
+autosave_time = 30
 
 * Lifetime of crashfiles and force-rent (idlesave) files in days.
 crash_file_timeout = 10
 
 * Lifetime of normal rent files in days.
-rent_file_timeout = 30
+rent_file_timeout = 365
 
 
 
@@ -167,7 +169,7 @@ ress_room_3 = 13435
 * 'autorun' script, the port number there will override this setting.
 * Change the PORT= line in autorun instead of (or in addition to)
 * changing this.
-DFLT_PORT = 4000
+DFLT_PORT = 8242
 
 * default directory to use as data directory.
 DFLT_DIR = lib
@@ -255,7 +257,7 @@ ibt_autosave = 1
 * [ Autowiz Options ]
 * Should the game automatically create a new wizlist/immlist every time
 * someone immorts, or is promoted to a higher (or lower) god level?
-use_autowiz = 1
+use_autowiz = 0
 
 * If yes, what is the lowest level which should be on the wizlist?
 min_wizlist_lev = 106
@@ -271,10 +273,81 @@ debug_mode = 0
 
 
 
+
 * [ Experimental Features ]
 * Enable the new auction system?
 new_auction_system = 0
 
 * Enable the experimental bank system?
 experimental_bank_system = 0
+
+* Enable mob contextual socials (reputation/alignment/position based)?
+mob_contextual_socials = 1
+
+* Enable dynamic reputation system (combat, healing, giving, stealing, etc. - excludes quests)?
+dynamic_reputation = 1
+
+* Probability (%) of mob performing social per emotion tick (4 seconds)
+mob_emotion_social_chance = 5
+
+* Probability (%) of mob updating emotions per emotion tick (4 seconds)
+mob_emotion_update_chance = 50
+
+
+
+* [ Emotion System Configuration ]
+
+* Visual Indicator Thresholds (0-100)
+emotion_display_fear_threshold = 70
+emotion_display_anger_threshold = 70
+emotion_display_happiness_threshold = 80
+emotion_display_sadness_threshold = 70
+emotion_display_horror_threshold = 80
+emotion_display_pain_threshold = 70
+
+* Combat Flee Behavior Thresholds (0-100)
+emotion_flee_fear_low_threshold = 50
+emotion_flee_fear_high_threshold = 70
+emotion_flee_courage_low_threshold = 50
+emotion_flee_courage_high_threshold = 70
+emotion_flee_horror_threshold = 80
+
+* Combat Flee Behavior Modifiers (-100 to +100)
+emotion_flee_fear_low_modifier = 10
+emotion_flee_fear_high_modifier = 15
+emotion_flee_courage_low_modifier = -10
+emotion_flee_courage_high_modifier = -15
+emotion_flee_horror_modifier = 25
+
+* Pain System Damage Thresholds (% of max HP)
+emotion_pain_damage_minor_threshold = 5
+emotion_pain_damage_moderate_threshold = 10
+emotion_pain_damage_heavy_threshold = 25
+emotion_pain_damage_massive_threshold = 50
+
+* Pain System Pain Amounts (0-100)
+emotion_pain_minor_min = 1
+emotion_pain_minor_max = 5
+emotion_pain_moderate_min = 6
+emotion_pain_moderate_max = 15
+emotion_pain_heavy_min = 16
+emotion_pain_heavy_max = 30
+emotion_pain_massive_min = 31
+emotion_pain_massive_max = 50
+
+* Memory System Weights (1-10)
+emotion_memory_weight_recent = 10
+emotion_memory_weight_fresh = 7
+emotion_memory_weight_moderate = 5
+emotion_memory_weight_old = 3
+emotion_memory_weight_ancient = 1
+
+* Memory System Age Thresholds (seconds)
+emotion_memory_age_recent = 300
+emotion_memory_age_fresh = 600
+emotion_memory_age_moderate = 1800
+emotion_memory_age_old = 3600
+
+* Memory System Baseline Offset (0-100)
+emotion_memory_baseline_offset = 50
 

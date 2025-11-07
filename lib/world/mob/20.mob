@@ -8,7 +8,7 @@ Forte e musculoso, alguém não muito fácil de se encarar.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2001
 anluzir~
@@ -24,7 +24,7 @@ no ar.
 2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 1
+9 9 1
 E
 #2010
 tritão~
@@ -37,7 +37,7 @@ dureza do olhar desafiador que ele lança sobre você.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 0 600000
-8 8 1
+9 9 1
 E
 #2011
 sereia~
@@ -51,7 +51,7 @@ caprichos.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 0 600000
-8 8 2
+9 9 2
 E
 #2020
 anjo~
@@ -67,7 +67,7 @@ lutar com ele e, mesmo que estivesse em condições, jamais o venceria.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2021
 elfo ancião mitra~
@@ -88,7 +88,7 @@ imaginação?...
 2351168 0 0 0 524292 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 1
+9 9 1
 E
 #2030
 jasmin arcanja~
@@ -105,7 +105,7 @@ voltar.  Jasmin apesar de sua beleza, mostra uma grande força de combate.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 2
+9 9 2
 E
 #2031
 lucipher demônio~
@@ -122,7 +122,7 @@ se fosse você.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2032
 kentaurus centauro~
@@ -140,7 +140,7 @@ começará a contar suas looooooongas aventuras.
 2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 1
+9 9 1
 E
 #2040
 sentinela~
@@ -152,7 +152,7 @@ Forte e musculoso, alguém não muito fácil de se encarar.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2050
 glyph~
@@ -167,7 +167,10 @@ dado a eles pelo Deus Odin.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
+GenWimpy: 8
+GenLoot: 1
+GenFollow: 14
 E
 #2051
 holy~
@@ -182,7 +185,9 @@ dado a eles pelo Deus Odin.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
+GenWimpy: 9
+GenFollow: 13
 E
 #2052
 luna esfera brilhante sol~
@@ -198,7 +203,7 @@ que iluminou Solis em sua mais gloriosa oração.
 2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 2
+9 9 2
 E
 #2060
 sentinela~
@@ -210,7 +215,7 @@ Forte e musculoso, alguém não muito fácil de se encarar.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2070
 bucky~
@@ -223,7 +228,10 @@ protege a entrada com sua vida.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
+GenWimpy: 21
+GenLoot: 1
+GenFollow: 13
 E
 #2071
 giback~
@@ -236,7 +244,9 @@ invasores.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
+GenWimpy: 8
+GenFollow: 13
 E
 #2080
 esfinge~
@@ -251,7 +261,7 @@ passar.  Cuidado elas são perigosas.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 2
+9 9 2
 E
 #2082
 órix animal~
@@ -268,7 +278,7 @@ mancha branca em forma de raio entre seus chifres.
 2351168 0 0 0 256 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 1
+9 9 1
 E
 #2090
 efil~
@@ -281,7 +291,7 @@ você percebe que não deve incomoda-lo.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2091
 flahr~
@@ -294,7 +304,7 @@ você percebe que não deve incomoda-lo.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2092
 pói~
@@ -308,7 +318,7 @@ ser um animal muito fofo.
 2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 0
+9 9 0
 E
 #2100
 avatar hela~
@@ -331,7 +341,7 @@ ossos.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2101
 avatar hades~
@@ -354,7 +364,7 @@ tremer.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2102
 tríade suicidas~
@@ -376,7 +386,7 @@ suicidas estão em excelente condição.
 2351168 0 0 0 256 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 1
+9 9 1
 E
 #2110
 espírito~
@@ -392,7 +402,7 @@ faz pensar que mesmo após ter morrido, vive feliz perto de sua aldeia.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2111
 anjo~
@@ -408,7 +418,7 @@ ou pessoa impura, adentre este ambiente sagrado.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2120
 raish~
@@ -421,7 +431,7 @@ rodeiam seu corpo, você sente medo só de pensar em passar perto dele.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2121
 ramires~
@@ -434,7 +444,7 @@ poder que aparenta ter.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 2
+9 9 2
 E
 #2122
 seimer águia~
@@ -450,7 +460,7 @@ sente um grande poder que o faz arrepiar.
 2351168 0 0 0 256 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 2
+9 9 2
 E
 #2130
 olho grande~
@@ -466,7 +476,7 @@ Dinastia de Breyldon.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 0
+9 9 0
 E
 #2131
 olho grande~
@@ -482,7 +492,7 @@ Dinastia de Breyldon.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 0
+9 9 0
 E
 #2132
 essência ser etéreo~
@@ -495,7 +505,7 @@ da Grande Batalha do Exército de Breyldon.
 2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 0
+9 9 0
 E
 #2140
 colossus sentinela~
@@ -508,7 +518,7 @@ a ordem da guarda dessa guilda ele não sairá desse local.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2141
 kurast sentinela~
@@ -521,7 +531,7 @@ parece estar em uma espécie de transe, não o incomode.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2142
 alma balor~
@@ -535,7 +545,7 @@ vê uma árdua batalha sendo travada entre anjos e demônios.
 2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 1
+9 9 1
 E
 #2150
 guarda élfico~
@@ -551,7 +561,7 @@ de honra e respeito.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2151
 guarda élfico~
@@ -567,7 +577,7 @@ de honra e respeito.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2152
 rayana~
@@ -582,7 +592,7 @@ esforços.
 2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 2
+9 9 2
 E
 #2160
 ares deus guerra~
@@ -596,7 +606,9 @@ gigante.  Seu olhar é feroz.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
+GenWimpy: 9
+GenFollow: 12
 E
 #2161
 diana deusa caça~
@@ -609,7 +621,10 @@ muito branca e armada com um arco e flechas.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 2
+9 9 2
+GenWimpy: 6
+GenLoot: 1
+GenFollow: 11
 E
 #2162
 mary~
@@ -622,7 +637,7 @@ estar à procura de O'Connel.
 2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 2
+9 9 2
 E
 #2170
 wyvern dragão~
@@ -639,7 +654,7 @@ dentes longos e pontiagudos e seus olhos são avermelhados.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2171
 wyvern dragão~
@@ -656,7 +671,7 @@ dentes longos e pontiagudos e seus olhos são avermelhados.
 2351170 0 0 0 2320 0 0 0 0 E
 108 0 -12 6d10+1500 8d8+80
 500 600000
-8 8 1
+9 9 1
 E
 #2172
 flame dragão~
@@ -674,6 +689,6 @@ quente à distância e sua chama negra é fatal.
 2351168 0 0 0 0 0 0 0 0 E
 10 10 0 4d6+50 3d5+0
 0 10000
-8 8 1
+9 9 1
 E
 $

@@ -96,14 +96,16 @@ cancer carapaça~
 a carapaça de Câncer~
 Uma grande carapaça foi perdida aqui.~
 ~
-9 agjk 0 0 0 ad 0 0 0 0 0 0 0
+9 agj 0 0 0 ad 0 0 0 0 0 0 0
 12 0 0 0
-15 10000 5000 61 0
+15 10000 5000 15 0
 E
 cancer carapaça~
 Ela possui uma grande fissura no meio, resultado do poderoso golpe enferido
 por Hércules contra Câncer. Mas isso foi a muito tempo atrás...
 ~
+A
+2 2
 #9510
 leao pele~
 a pele de Leão~
@@ -111,7 +113,7 @@ A famosa pele de Leão foi esquecida aqui, no chão.~
 ~
 9 agj 0 0 0 ad 0 0 0 0 0 0 0
 10 0 0 0
-15 10000 5000 71 0
+15 10000 5000 0 0
 E
 leao pele~
 Hércules usou a metálica pele de Leão como armadura enquanto cumpria seus
@@ -143,7 +145,7 @@ Um grande escudo zodiacal foi abandonado aqui.~
 ~
 9 agk 0 0 0 aj 0 0 0 0 0 0 0
 9 0 0 0
-15 10000 5000 74 0
+15 10000 5000 0 0
 E
 escudo balanca libra~
 Esse escudo na verdade é a lendária balança da justiça, poderoso artefato
@@ -154,7 +156,7 @@ A
 A
 12 50
 A
-4 1
+4 2
 #9513
 escudo balanca libra~
 a balança da injustiça de Libra~
@@ -179,16 +181,16 @@ escorpiao ferrao~
 o ferrão de Escorpião~
 Um poderoso ferrão de escorpião foi esquecido aqui.~
 ~
-5 agjk 0 0 0 ano 0 0 0 0 0 0 0
+5 agikq 0 0 0 ano 0 0 0 0 0 0 0
 0 5 4 1
-7 10000 5000 76 0
+7 10000 5000 50 0
 E
 escorpiao ferrao~
 Antes do banimento de Escorpião, seu ferrão foi a arma que causou morte
 dolorosa a inúmeras pessoas. Cuidado com isso...
 ~
 A
-18 6
+18 10
 A
 19 6
 #9515
@@ -226,9 +228,9 @@ chifres capricornio~
 os chifres de Capricórnio~
 Um par de grandes chifres aqui foi perdido.~
 ~
-9 agj 0 0 0 ah 0 0 0 0 0 0 0
-4 0 0 0
-6 10000 5000 73 0
+9 agjq 0 0 0 ah 0 0 0 0 0 0 0
+8 0 0 0
+6 10000 5000 0 0
 E
 chifres capricornio~
 Esses estranhos e imensos chifres são obra divina.  Você fica surpreso

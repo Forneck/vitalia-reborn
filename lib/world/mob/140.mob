@@ -15,7 +15,7 @@ noturna.
 2875410 0 0 0 67436624 0 0 0 -1000 E
 45 -5 -10 8d8+1005 9d9+23
 5000 80000
-8 8 2
+9 9 2
 Str: 18
 Dex: 18
 Int: 18
@@ -40,7 +40,7 @@ Branca, bela e suave como o cair de um floco de neve.
 2875410 0 0 0 67174736 0 0 0 1000 E
 45 -5 -10 8d8+1005 9d9+23
 5000 80000
-8 8 2
+9 9 2
 Str: 18
 Dex: 18
 Int: 18
@@ -61,7 +61,7 @@ próxima aula.
 2678786 0 0 0 67698688 0 0 0 800 E
 18 4 0 4d8+616 3d4+11
 3330 36999
-8 8 2
+9 9 2
 E
 #14003
 violeta fada seria~
@@ -76,7 +76,7 @@ está com os restos da aula sobre a roupa.
 2678786 0 0 0 67698688 0 0 0 800 E
 17 3 0 5d7+606 4d3+10
 3330 33999
-8 8 2
+9 9 2
 E
 #14004
 alamanda fada veloz~
@@ -91,7 +91,7 @@ tipo, não acha?
 2678786 0 0 0 67698688 0 0 0 800 E
 15 5 -1 4d6+563 3d4+13
 3330 32999
-8 8 2
+9 9 2
 E
 #14005
 acacia delicada fada~
@@ -107,7 +107,7 @@ uma das "crianças".
 2678786 0 0 0 67698688 0 0 0 800 E
 13 6 1 4d5+589 3d4+9
 3330 31999
-8 8 2
+9 9 2
 E
 #14006
 malva fada~
@@ -122,7 +122,7 @@ não fazê-lo virar alguma coisa... rosa.
 2678786 0 0 0 67698688 0 0 0 800 E
 14 3 1 4d8+501 3d4+9
 3330 36000
-8 8 2
+9 9 2
 E
 #14007
 azaleia fada~
@@ -137,7 +137,7 @@ eficiente: ninguém é tão boa na coleta de néctar como ela.
 2678786 0 0 0 67698688 0 0 0 800 E
 20 3 -1 4d8+750 7d4+13
 3330 45000
-8 8 2
+9 9 2
 E
 #14008
 hibisco duende jovem~
@@ -152,7 +152,7 @@ fazendo com que o duende fique encabulado. É sempre assim...
 2678786 0 0 0 67698688 0 0 0 800 E
 18 4 1 8d3+659 3d4+13
 3330 35999
-8 8 1
+9 9 1
 E
 #14009
 lirio duende agitado~
@@ -167,7 +167,9 @@ aqui, ou Lírio terá de agir...
 2877458 0 0 0 67698688 0 0 0 800 E
 27 2 -4 4d8+819 7d5+17
 3330 50999
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 14
 E
 #14010
 absinto bonachao duende saltitante~
@@ -183,7 +185,7 @@ taverna O Velho Carvalho.
 2678786 0 0 0 67698688 0 0 0 800 E
 21 6 -2 7d4+671 3d4+14
 3330 39999
-8 8 1
+9 9 1
 E
 #14011
 dalia fada bebe fada-bebe~
@@ -198,7 +200,7 @@ bela fada.
 2678786 0 0 0 67698688 0 0 0 800 E
 9 10 2 4d3+216 3d4+9
 333 20999
-8 8 2
+9 9 2
 E
 #14012
 cipreste duende~
@@ -213,7 +215,7 @@ surpreender.
 2678786 0 0 0 67698688 0 0 0 800 E
 15 6 -3 4d8+603 3d4+12
 3330 27999
-8 8 1
+9 9 1
 E
 #14013
 freixo duendinho~
@@ -228,7 +230,9 @@ encontrou tempo para sondar a seu respeito.
 2678786 0 0 0 67698688 0 0 0 800 E
 12 5 0 4d8+405 3d4+12
 3330 25999
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 12
 E
 #14014
 papoula fada~
@@ -243,7 +247,7 @@ ela também é ótima em consertar varinhas.
 2678786 0 0 0 67698688 0 0 0 800 E
 27 4 -4 4d8+600 4d5+13
 3330 47999
-8 8 2
+9 9 2
 E
 #14015
 lilas fada~
@@ -271,7 +275,7 @@ e não teve coragem nem de pedir desculpas.
 2678786 0 0 0 67698688 0 0 0 800 E
 18 4 0 4d8+601 3d4+11
 3330 33999
-8 8 1
+9 9 1
 E
 #14017
 alamo duende trovador~
@@ -287,7 +291,7 @@ estranhamente, se revigorado enquanto ouvia o ensaio do duende.
 2678786 0 0 0 67698688 0 0 0 800 E
 21 5 -1 4d8+702 4d4+14
 3330 39999
-8 8 1
+9 9 1
 E
 #14018
 primula fada ancia~
@@ -303,7 +307,7 @@ com as soberanas.
 2678786 0 0 0 67698688 0 0 0 800 E
 36 0 -6 4d8+816 6d4+18
 3330 60000
-8 8 2
+9 9 2
 E
 #14019
 cedro duende apressado~
@@ -319,7 +323,9 @@ para as guardiãs daqui.
 2678786 0 0 0 67698688 0 0 0 800 E
 35 0 -5 4d8+900 6d4+18
 3330 59999
-8 8 1
+9 9 1
+GenWimpy: 8
+GenFollow: 14
 E
 #14020
 rosa-bebe rosa bebe~
@@ -331,7 +337,7 @@ A pequena rosa está dormindo... não faça barulho.
 2678786 0 0 0 67698688 0 0 0 800 E
 6 12 3 4d8+216 3d4+7
 30 12999
-8 8 2
+9 9 2
 E
 #14021
 joaninha adoidada~
@@ -346,7 +352,7 @@ com equipamento de segurança...
 2678786 0 0 0 67698688 0 0 0 800 E
 10 7 2 4d8+307 3d4+7
 63 18000
-8 8 2
+9 9 2
 E
 #14022
 botao tulipa~
@@ -358,7 +364,7 @@ O pequeno botão parece estar com fome.
 2678786 0 0 0 67698688 0 0 0 800 E
 8 12 3 4d8+201 3d4+8
 333 27999
-8 8 1
+9 9 1
 E
 #14023
 jovem duende abeto~
@@ -373,7 +379,7 @@ deseja beber.
 2678786 0 0 0 67698688 0 0 0 800 E
 107 4 0 4d8+216 3d4+11
 33333 72000
-8 8 1
+9 9 1
 E
 #14024
 borboleta alaranjada~
@@ -385,7 +391,7 @@ A pequena borboleta parece ter gostado de você.
 2678786 0 0 0 67698688 0 0 0 800 E
 5 13 4 4d8+108 3d4+7
 0 7999
-8 8 2
+9 9 2
 E
 #14025
 coruja branca~
@@ -398,7 +404,7 @@ dormir na paz de seu lar.
 2678786 0 0 0 67698688 0 0 0 800 E
 8 10 2 4d8+111 3d4+8
 27 11111
-8 8 2
+9 9 2
 E
 #14026
 lagarta pequena~
@@ -412,7 +418,7 @@ a linda borboleta que ela será.
 2154498 0 0 0 589824 0 0 0 800 E
 4 14 4 4d8+100 3d4+4
 0 5001
-8 8 2
+9 9 2
 E
 #14027
 maria-sem-vergonha flor falante~
@@ -426,7 +432,7 @@ ela sempre tem algum "babado forte" para contar.
 2154498 0 0 0 589824 0 0 0 800 E
 13 8 1 4d8+316 3d4+11
 333 20999
-8 8 2
+9 9 2
 E
 #14028
 crisantemo jovem~
@@ -440,7 +446,7 @@ bem-vista.
 2154498 0 0 0 589824 0 0 0 800 E
 14 7 3 4d8+211 3d4+10
 3 20999
-8 8 1
+9 9 1
 E
 #14029
 cigarra preguicosa~
@@ -453,7 +459,7 @@ andar por aí a acordou.  Que falta de respeito..
 2678786 0 0 0 67698688 0 0 0 800 E
 7 12 3 4d8+100 3d4+8
 3330 12999
-8 8 2
+9 9 2
 E
 #14030
 azevinho duende~
@@ -467,7 +473,7 @@ dando muito atenção para sua chegada.
 2678786 0 0 0 67698688 0 0 0 800 E
 18 4 1 4d8+716 4d4+14
 3330 33999
-8 8 1
+9 9 1
 E
 #14031
 simpatico geranio duende~
@@ -481,7 +487,7 @@ fazendo arranjos e vendendo-os em sua barraca. Que tal comprar uma flor?
 2678786 0 0 0 67698688 0 0 0 800 E
 107 4 0 4d8+216 3d4+11
 33333 72000
-8 8 1
+9 9 1
 E
 #14032
 girassol duende desengonçado~
@@ -496,7 +502,9 @@ próprio Girassol brilha no escuro.
 2678786 0 0 0 201918464 0 0 0 800 E
 18 4 1 4d8+716 4d4+14
 3330 33999
-8 8 1
+9 9 1
+GenWimpy: 3
+GenFollow: 13
 E
 #14033
 framboesa gordinha sorridente fada~
@@ -510,7 +518,7 @@ está trazendo diversos bolos para você escolher.  É, não vai ter jeito...
 2678786 0 0 0 67698688 0 0 0 800 E
 107 4 0 4d8+216 3d4+11
 33333 72000
-8 8 2
+9 9 2
 E
 #14034
 camomila fada~
@@ -522,7 +530,7 @@ Ela está distraída demais.
 2678786 0 0 0 67698688 0 0 0 800 E
 17 3 0 5d7+606 4d3+10
 3330 33999
-8 8 2
+9 9 2
 E
 #14035
 laricio duende~
@@ -538,7 +546,7 @@ de útil.
 2678786 0 0 0 67698688 0 0 0 800 E
 23 2 -2 7d5+681 4d4+14
 3330 37999
-8 8 1
+9 9 1
 E
 #14036
 trevo duende~
@@ -550,7 +558,7 @@ Não está pronto.
 2678786 0 0 0 67698688 0 0 0 800 E
 17 3 0 5d7+606 4d3+10
 3330 33999
-8 8 1
+9 9 1
 E
 #14037
 visco duende~
@@ -562,7 +570,7 @@ Não está pronto.
 2678786 0 0 0 67698688 0 0 0 800 E
 17 3 0 5d7+606 4d3+10
 3330 33999
-8 8 1
+9 9 1
 E
 #14038
 calendula fada~
@@ -578,7 +586,7 @@ em sua magia.
 2678786 0 0 0 67698688 0 0 0 800 E
 17 4 -1 5d7+581 4d3+12
 3330 34000
-8 8 2
+9 9 2
 E
 #14039
 zimbro duende~
@@ -590,6 +598,6 @@ Não está pronto.
 2678786 0 0 0 67698688 0 0 0 800 E
 17 3 0 5d7+606 4d3+10
 3330 33999
-8 8 1
+9 9 1
 E
 $

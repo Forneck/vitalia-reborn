@@ -10,8 +10,9 @@ pequeno, seu veneno pode ser letal.
 10 17 5 4d6+200 1d8+2
 0 500
 9 9 1
-GenWimpy: 2
-GenRoam: 28
+GenWimpy: 8
+GenRoam: 62
+GenFollow: 10
 E
 #17601
 lagarto~
@@ -25,8 +26,9 @@ Ao observar sua presença, ele abre sua boca mostrando suas enormes presas.
 13 15 2 4d6+280 1d8+2
 0 700
 9 9 1
-GenWimpy: 6
-GenRoam: 82
+GenWimpy: 12
+GenRoam: 87
+GenFollow: 6
 E
 #17602
 cidadao xi'an~
@@ -42,6 +44,9 @@ negros.
 20 6 -1 2d6+350 1d9+2
 1000 2500
 9 9 1
+GenWimpy: 3
+GenRoam: 66
+GenFollow: 14
 E
 #17603
 cidada xi'an~
@@ -71,6 +76,9 @@ negros.
 20 6 -1 2d6+350 1d9+2
 1000 2500
 9 9 1
+GenWimpy: 20
+GenRoam: 63
+GenFollow: 14
 E
 #17605
 chaoyang~
@@ -161,6 +169,8 @@ este guarda não parece ser um alvo fácil.
 80 -5 -24 5d5+1900 5d10+25
 10000 200000
 9 9 1
+GenWimpy: 3
+GenFollow: 15
 E
 #17611
 soldado chines~
@@ -175,6 +185,9 @@ qualquer invasor que por acaso se aproxime.
 30 5 -3 2d2+500 4d4+14
 300 30000
 9 9 1
+GenWimpy: 3
+GenRoam: 72
+GenFollow: 16
 E
 #17612
 guardiao~
@@ -234,6 +247,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 31
+GenFollow: 15
 E
 #17615
 concubina~
@@ -265,6 +280,8 @@ para proteger a cidade imperial.
 80 -5 -23 5d5+1100 5d9+20
 5000 175000
 9 9 1
+GenWimpy: 6
+GenFollow: 18
 E
 #17617
 leao leoes~
@@ -281,6 +298,8 @@ presas, para amedontrar os intrusos da Cidade Proibida.
 101 -19 -42 5d5+6000 10d9+37
 75000 3000000
 9 9 1
+GenWimpy: 18
+GenFollow: 15
 E
 #17618
 guardiao~
@@ -371,6 +390,8 @@ ao corpo, e uma sandália de couro.
 75 3 -15 6d3+1700 7d6+20
 0 150000
 9 3 1
+GenWimpy: 3
+GenFollow: 12
 E
 #17624
 sacerdote budista~
@@ -385,6 +406,8 @@ ao corpo, e uma sandália de couro.
 75 3 -15 6d3+1700 7d6+20
 0 150000
 3 3 1
+GenWimpy: 3
+GenFollow: 12
 E
 #17625
 guarda imperial~
@@ -404,6 +427,8 @@ proteger com a própria vida o seu imperador.
 50000 3400000
 9 9 1
 BareHandAttack: 11
+GenWimpy: 17
+GenFollow: 14
 E
 #17626
 chinesa~
@@ -419,6 +444,8 @@ veste uma estranha, mas muito enfeitada, máscara.
 25 7 3 4d6+705 3d8+5
 3000 60000
 9 9 2
+GenWimpy: 4
+GenFollow: 14
 E
 #17627
 chinesa~
@@ -434,6 +461,8 @@ veste uma estranha, mas muito enfeitada, máscara.
 25 7 3 4d6+705 3d8+5
 3000 60000
 9 9 2
+GenWimpy: 4
+GenFollow: 14
 E
 #17628
 xiezhi~
@@ -449,6 +478,8 @@ leão.  Em seu nariz você pode ver uma pequenina argola vermelha.
 70000 4204500
 5 5 1
 BareHandAttack: 8
+GenWimpy: 6
+GenFollow: 15
 E
 #17629
 imperador qing~
@@ -473,6 +504,8 @@ Int: 25
 Wis: 25
 Con: 25
 Cha: 25
+GenWimpy: 10
+GenFollow: 15
 E
 #17630
 guarda~
@@ -486,6 +519,8 @@ corpo, sobre uma túnica de seda, e empunha pequena espada de ferro.
 70 4 -20 3d3+1300 4d6+16
 5000 99344
 9 9 1
+GenWimpy: 8
+GenFollow: 16
 E
 #17631
 fenix ave~
@@ -534,5 +569,7 @@ todo em chamas, e de uma forma estranha, este fogo não parece queima-lo.
 101 -50 -37 7d7+9756 5d10+51
 1000 3600000
 9 9 1
+GenWimpy: 11
+GenFollow: 15
 E
 $

@@ -12,6 +12,8 @@ jardins.
 102 -21 -30 10d10+5999 7d10+45
 0 400000
 9 9 1
+GenWimpy: 19
+GenFollow: 11
 E
 #1501
 miguel anjo arcanjo~
@@ -26,6 +28,8 @@ isto também vai se esvanecendo e você não vê mais nada...
 101 -12 -15 2d100+2900 10d7+33
 0 280000
 9 9 1
+GenWimpy: 18
+GenFollow: 11
 E
 #1502
 gabriel anjo arcanjo~
@@ -40,6 +44,9 @@ de uma miraculosa jornada para a sagrada cidade de Jerusalém.
 101 -12 -15 2d100+2900 10d7+33
 0 280000
 9 9 1
+GenWimpy: 13
+GenLoot: 1
+GenFollow: 12
 E
 #1503
 rafael anjo arcanjo~
@@ -54,6 +61,8 @@ em sua mente.
 101 -12 -15 2d100+2900 10d7+33
 0 280000
 9 9 1
+GenWimpy: 3
+GenFollow: 12
 E
 #1504
 uriel anjo arcanjo~
@@ -67,6 +76,8 @@ e foi esse anjo, Uriel, que subiu os degraus mais altos.
 101 -12 -15 2d100+2900 10d7+33
 0 280000
 9 9 1
+GenWimpy: 3
+GenFollow: 12
 E
 #1505
 querubim~
@@ -96,6 +107,8 @@ império.  Ele ri de você e toma outro aperitivo.
 70 -5 -5 10d2+1180 2d8+12
 3450 21000
 6 6 1
+GenWimpy: 20
+GenFollow: 13
 E
 #1507
 gênio duende genio~
@@ -111,8 +124,10 @@ pequeno duende.
 75 -6 -7 25d2+1400 3d9+13
 0 70000
 9 9 0
-GenWimpy: 82
-GenRoam: 85
+GenWimpy: 93
+GenLoot: 2
+GenRoam: 89
+GenFollow: 11
 E
 #1508
 velho homem fracassado~
@@ -128,6 +143,10 @@ testa, e sua mão direita treme e treme...
 80 -11 -12 4d10+1840 6d9+26
 34000 180000
 9 9 1
+GenWimpy: 38
+GenLoot: 3
+GenEquip: 1
+GenFollow: 16
 E
 #1509
 califa hakim hakin~
@@ -142,6 +161,8 @@ há dias e ainda assim, seu sorriso é tão encantador...
 80 -11 -12 4d10+1840 6d9+26
 34000 180000
 9 9 1
+GenWimpy: 54
+GenFollow: 16
 E
 #1510
 judas escariotes~
@@ -155,6 +176,10 @@ Deus.
 100 -13 -10 5d10+2650 6d6+25
 30 145000
 9 9 1
+GenWimpy: 41
+GenLoot: 4
+GenEquip: 2
+GenFollow: 12
 E
 #1511
 faraó farao~
@@ -168,6 +193,9 @@ ele olha para você com ares de um forçado contentamento.
 80 -13 -10 5d10+1650 6d6+25
 25000 145000
 9 9 1
+GenWimpy: 63
+GenLoot: 1
+GenFollow: 14
 E
 #1512
 abu baquir primeiro califa~
@@ -182,6 +210,8 @@ nunca morreria.
 80 -13 -10 5d10+1650 6d6+25
 25000 145000
 9 9 1
+GenWimpy: 40
+GenFollow: 14
 E
 #1513
 umar segundo califa~
@@ -196,6 +226,9 @@ verdade da Palavra, então eu devo."
 80 -13 -10 5d10+1650 6d6+25
 25000 145000
 9 9 1
+GenWimpy: 44
+GenLoot: 1
+GenFollow: 13
 E
 #1514
 otomano terceiro califa~
@@ -211,6 +244,10 @@ final foi morto por seus inimigos.
 80 -14 -12 4d10+1840 6d9+26
 34000 180000
 9 9 1
+GenWimpy: 23
+GenLoot: 1
+GenEquip: 1
+GenFollow: 16
 E
 #1515
 ali quarto último califa~
@@ -226,6 +263,8 @@ decida por si só.
 80 -14 -12 4d10+1840 6d9+26
 34000 180000
 9 9 1
+GenWimpy: 32
+GenFollow: 13
 E
 #1516
 anjo belo iblis~
@@ -241,7 +280,10 @@ que serão suas se você o seguir.
 80 -12 -10 10d5+1650 6d6+25
 25000 145000
 9 9 1
-GenWimpy: 1
+GenWimpy: 53
+GenLoot: 6
+GenEquip: 1
+GenFollow: 14
 E
 #1517
 iblis satã sata tentação tentacao voz~
@@ -255,7 +297,9 @@ risada atormentada, gemendo, gritando e implorando.
 80 -12 -10 10d5+1650 6d6+25
 25000 145000
 9 9 1
-GenWimpy: 1
+GenWimpy: 41
+GenLoot: 1
+GenFollow: 14
 E
 #1518
 serpente dragão dragao satã sata iblis~
@@ -271,6 +315,9 @@ humanidade sucumbir diante de seu poder, olha para você como se você fosse a
 27 -12 -10 75d2+1825 6d8+25
 40000 180000
 9 9 1
+GenWimpy: 38
+GenLoot: 2
+GenFollow: 9
 E
 #1519
 demônio demonio fogo~
@@ -284,6 +331,10 @@ inferior que você teme ser seu destino.
 80 -12 -10 75d2+1825 6d8+25
 40000 180000
 9 9 1
+GenWimpy: 74
+GenLoot: 2
+GenEquip: 1
+GenFollow: 16
 E
 #1520
 bebê bebe inocente~
@@ -296,6 +347,9 @@ O Bebê está pouco atento a sua presença, perdido em um sonolento bocejo.
 100 -10 -10 5d100+3000 8d6+30
 20000 145000
 4 4 1
+GenWimpy: 34
+GenLoot: 1
+GenFollow: 15
 E
 #1521
 garoto adolescente~
@@ -309,6 +363,8 @@ nota que ele está contemplando as belezas da lua.
 74 -12 -12 5d10+1680 6d6+25
 22000 145000
 9 9 1
+GenWimpy: 27
+GenFollow: 15
 E
 #1522
 homem~
@@ -322,6 +378,8 @@ ajoelhado, ele é a imagem perfeita do contentamento.
 80 -14 -14 75d2+1820 6d8+27
 40000 180000
 5 5 1
+GenWimpy: 18
+GenFollow: 15
 E
 #1523
 alma~
@@ -335,5 +393,7 @@ explicar ou descrever esta perfeição, esta felicidade absoluta.
 90 -15 -15 100d2+2820 7d8+29
 0 190000
 9 9 1
+GenWimpy: 18
+GenFollow: 12
 E
 $
