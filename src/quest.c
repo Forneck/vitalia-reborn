@@ -346,10 +346,12 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
                          info, target_name);
             } else {
                 /* Target mob no longer exists - it may have been killed or despawned */
-                snprintf(temp_buf, sizeof(temp_buf),
-                         "%s\r\n\tyAVISO: O alvo específico não está mais disponível no mundo.\tn\r\n"
-                         "\tyA busca pode precisar ser abandonada.\tn",
-                         info);
+                snprintf(
+                    temp_buf, sizeof(temp_buf),
+                    "%s\r\n\tyAVISO: O alvo específico não está mais disponível no mundo.\tn\r\n"
+                    "\tyA busca pode precisar ser abandonada. Se o alvo foi morto, procure pela pedra mágica\tn\r\n"
+                    "\tyque pode ter sido deixada para trás e a entregue ao responsável pela busca.\tn",
+                    info);
             }
         } else {
             /* No specific target assigned yet */
@@ -358,6 +360,16 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
                      "\tyO alvo será identificado quando você aceitar a busca.\tn",
                      info);
         }
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For AQ_MOB_KILL quests, add information about magic stones */
+    if (QST_TYPE(rnum) == AQ_MOB_KILL) {
+        snprintf(temp_buf, sizeof(temp_buf),
+                 "%s\r\n\tyDICA: Se o alvo já foi eliminado, procure por uma pedra mágica\tn\r\n"
+                 "\tyque pode ter sido deixada e a entregue ao responsável pela busca.\tn",
+                 info);
         snprintf(buf, bufsize, "%s", temp_buf);
         return buf;
     }
