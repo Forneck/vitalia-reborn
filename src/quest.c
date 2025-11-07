@@ -348,7 +348,8 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
                 /* Target mob no longer exists - it may have been killed or despawned */
                 snprintf(temp_buf, sizeof(temp_buf),
                          "%s\r\n\tyAVISO: O alvo específico não está mais disponível no mundo.\tn\r\n"
-                         "\tyA busca pode precisar ser abandonada.\tn",
+                         "\tyProcure pela pedra mágica que ele pode ter deixado e a entregue ao responsável pela "
+                         "busca.\tn",
                          info);
             }
         } else {
@@ -358,6 +359,16 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
                      "\tyO alvo será identificado quando você aceitar a busca.\tn",
                      info);
         }
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For AQ_MOB_KILL quests, add information about magic stones */
+    if (QST_TYPE(rnum) == AQ_MOB_KILL) {
+        snprintf(temp_buf, sizeof(temp_buf),
+                 "%s\r\n\tyDICA: Se o alvo já foi eliminado, procure por uma pedra mágica\tn\r\n"
+                 "\tyque pode ter sido deixada e a entregue ao responsável pela busca.\tn",
+                 info);
         snprintf(buf, bufsize, "%s", temp_buf);
         return buf;
     }
@@ -785,9 +796,41 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                         generic_complete_quest(ch);
             break;
         case AQ_MOB_KILL:
-            if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict))
+            /* Check for direct kill */
+            if (!IS_NPC(ch) && vict && IS_NPC(vict) && (ch != vict)) {
                 if (QST_TARGET(rnum) == GET_MOB_VNUM(vict))
                     generic_complete_quest(ch);
+            }
+            /* Check for magic stone return to questmaster or requester */
+            else if (!IS_NPC(ch) && vict && IS_NPC(vict) && object && GET_OBJ_TYPE(object) == ITEM_MAGIC_STONE) {
+                /* Check if this magic stone is from the target mob */
+                if (GET_OBJ_VAL(object, 0) == QST_TARGET(rnum)) {
+                    /* Verify the object is actually in the NPC's inventory */
+                    struct obj_data *obj_check;
+                    bool has_object = false;
+
+                    /* Safety check: vict must have valid carrying list */
+                    if (!vict->carrying) {
+                        break;
+                    }
+
+                    for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
+                        if (obj_check == object) {
+                            has_object = true;
+                            break;
+                        }
+                    }
+
+                    if (has_object) {
+                        /* Check if returning to questmaster or original requester */
+                        if (GET_MOB_VNUM(vict) == QST_MASTER(rnum) || GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum)) {
+                            /* Extract the magic stone - it's been used */
+                            extract_obj(object);
+                            generic_complete_quest(ch);
+                        }
+                    }
+                }
+            }
             break;
         case AQ_MOB_SAVE:
             if (ch == vict)
@@ -864,7 +907,8 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                 generic_complete_quest(ch);
             break;
         case AQ_MOB_KILL_BOUNTY:
-            if (!IS_NPC(ch) && IS_NPC(vict) && (ch != vict)) {
+            /* Check for direct kill */
+            if (!IS_NPC(ch) && vict && IS_NPC(vict) && (ch != vict)) {
                 /* Check if this is the specific bounty target */
                 if (GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
                     /* We have a specific target ID - check against it */
@@ -874,6 +918,50 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                     /* No specific ID set - fallback to vnum matching (for old quests or if target respawned) */
                     if (QST_TARGET(rnum) == GET_MOB_VNUM(vict))
                         generic_complete_quest(ch);
+                }
+            }
+            /* Check for magic stone return to questmaster or requester */
+            else if (!IS_NPC(ch) && vict && IS_NPC(vict) && object && GET_OBJ_TYPE(object) == ITEM_MAGIC_STONE) {
+                /* For bounty quests, check both vnum and specific ID */
+                bool matches = false;
+
+                /* Check if vnum matches */
+                if (GET_OBJ_VAL(object, 0) == QST_TARGET(rnum)) {
+                    /* If we have a specific bounty target ID, also check that */
+                    if (GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
+                        if (GET_OBJ_VAL(object, 1) == GET_BOUNTY_TARGET_ID(ch))
+                            matches = true;
+                    } else {
+                        /* No specific ID required, vnum match is enough */
+                        matches = true;
+                    }
+                }
+
+                if (matches) {
+                    /* Verify the object is actually in the NPC's inventory */
+                    struct obj_data *obj_check;
+                    bool has_object = false;
+
+                    /* Safety check: vict must have valid carrying list */
+                    if (!vict->carrying) {
+                        break;
+                    }
+
+                    for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
+                        if (obj_check == object) {
+                            has_object = true;
+                            break;
+                        }
+                    }
+
+                    if (has_object) {
+                        /* Check if returning to questmaster or original requester */
+                        if (GET_MOB_VNUM(vict) == QST_MASTER(rnum) || GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum)) {
+                            /* Extract the magic stone - it's been used */
+                            extract_obj(object);
+                            generic_complete_quest(ch);
+                        }
+                    }
                 }
             }
             break;
@@ -1070,6 +1158,9 @@ static const char *get_quest_difficulty_string(qst_rnum rnum)
     }
 }
 
+/* Forward declaration */
+static bool is_bounty_target_available(qst_rnum rnum, struct char_data *ch);
+
 /* Unified quest display function - shows both regular and temporary quests */
 static void quest_show_unified(struct char_data *ch, struct char_data *qm)
 {
@@ -1094,6 +1185,11 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
                 /* For mortals, check level restrictions */
                 if (!is_quest_level_available(ch, rnum))
                     continue; /* Skip quests outside player's level range */
+
+                /* Skip bounty quests if the specific target is unavailable */
+                if (!is_bounty_target_available(rnum, ch))
+                    continue;
+
                 send_to_char(ch, "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
                              QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum), QST_MAXLEVEL(rnum),
                              (quest_completed ? "Sim" : "Não "));
@@ -1116,6 +1212,11 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
                 /* For mortals, check level restrictions */
                 if (!is_quest_level_available(ch, rnum))
                     continue; /* Skip quests outside player's level range */
+
+                /* Skip bounty quests if the specific target is unavailable */
+                if (!is_bounty_target_available(rnum, ch))
+                    continue;
+
                 send_to_char(ch, "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
                              QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum), QST_MAXLEVEL(rnum),
                              (quest_completed ? "Sim" : "Não "));
@@ -2466,6 +2567,44 @@ void load_temp_quest_assignments(void)
     log1("Temporary quest assignments loaded.");
 }
 
+/* Check if a bounty quest's target is currently available in the world
+ * Returns TRUE if the target is available or quest doesn't have a specific target yet
+ * Returns FALSE if the quest has a specific target that is no longer in the world */
+static bool is_bounty_target_available(qst_rnum rnum, struct char_data *ch)
+{
+    struct char_data *target_mob;
+
+    /* Safety check: validate quest rnum */
+    if (rnum == NOTHING || rnum < 0 || rnum >= total_quests)
+        return TRUE;
+
+    /* Only check for bounty quests */
+    if (QST_TYPE(rnum) != AQ_MOB_KILL_BOUNTY)
+        return TRUE;
+
+    /* If player hasn't accepted the quest yet (no bounty target ID), it's available */
+    if (!ch || IS_NPC(ch) || GET_BOUNTY_TARGET_ID(ch) == NOBODY)
+        return TRUE;
+
+    /* Check if this is the player's active quest */
+    if (GET_QUEST(ch) != QST_NUM(rnum))
+        return TRUE;
+
+    /* Search for the specific target mob in the world - with safety checks */
+    for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
+        /* Safety check: ensure target_mob is valid before accessing */
+        if (!target_mob)
+            break;
+
+        if (IS_NPC(target_mob) && char_script_id(target_mob) == GET_BOUNTY_TARGET_ID(ch)) {
+            return TRUE; /* Target is still in the world */
+        }
+    }
+
+    /* Target not found - it's been killed or despawned */
+    return FALSE;
+}
+
 /* Called from interpreter.c when player confirms quest acceptance */
 void accept_pending_quest(struct descriptor_data *d)
 {
@@ -2548,4 +2687,97 @@ void accept_pending_quest(struct descriptor_data *d)
     /* Clear pending quest data */
     d->pending_quest_vnum = NOTHING;
     d->pending_questmaster = NULL;
+}
+
+/* Check if there are any active kill quests for a specific mob vnum
+ * Returns true if there are active AQ_MOB_KILL or AQ_MOB_KILL_BOUNTY quests for this mob */
+bool has_active_kill_quest_for_mob(mob_vnum target_vnum)
+{
+    qst_rnum rnum;
+
+    /* Safety check: validate target_vnum */
+    if (target_vnum == NOTHING || target_vnum < 0)
+        return false;
+
+    for (rnum = 0; rnum < total_quests; rnum++) {
+        /* Safety check: ensure rnum is valid */
+        if (rnum < 0 || rnum >= total_quests)
+            break;
+
+        /* Only check kill-type quests */
+        if (QST_TYPE(rnum) != AQ_MOB_KILL && QST_TYPE(rnum) != AQ_MOB_KILL_BOUNTY)
+            continue;
+
+        /* Check if this quest targets our mob */
+        if (QST_TARGET(rnum) == target_vnum) {
+            /* Check if quest is mob-posted (those are the ones that can have the issue) */
+            if (IS_SET(QST_FLAGS(rnum), AQ_MOB_POSTED))
+                return true;
+        }
+    }
+
+    return false;
+}
+
+/* Check if player is carrying a magic stone for their active quest and fail the quest if so
+ * This is called before extracting NORENT items on logout/quit */
+void check_and_fail_quest_with_magic_stone(struct char_data *ch)
+{
+    qst_rnum rnum;
+    struct obj_data *obj;
+    bool has_magic_stone = false;
+
+    /* Safety checks */
+    if (!ch || IS_NPC(ch))
+        return;
+
+    /* Check if player has an active quest */
+    if (GET_QUEST(ch) == NOTHING)
+        return;
+
+    rnum = real_quest(GET_QUEST(ch));
+    if (rnum == NOTHING)
+        return;
+
+    /* Only check for kill-type quests */
+    if (QST_TYPE(rnum) != AQ_MOB_KILL && QST_TYPE(rnum) != AQ_MOB_KILL_BOUNTY)
+        return;
+
+    /* Check if player is carrying a magic stone that matches their quest */
+    for (obj = ch->carrying; obj; obj = obj->next_content) {
+        if (GET_OBJ_TYPE(obj) == ITEM_MAGIC_STONE) {
+            /* Check if this stone matches the quest target */
+            if (GET_OBJ_VAL(obj, 0) == QST_TARGET(rnum)) {
+                /* For bounty quests, also check the specific mob ID if set */
+                if (QST_TYPE(rnum) == AQ_MOB_KILL_BOUNTY && GET_BOUNTY_TARGET_ID(ch) != NOBODY) {
+                    if (GET_OBJ_VAL(obj, 1) == GET_BOUNTY_TARGET_ID(ch)) {
+                        has_magic_stone = true;
+                        break;
+                    }
+                } else {
+                    /* For regular kill quests, vnum match is sufficient */
+                    has_magic_stone = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    /* If player has the magic stone, fail the quest with penalty */
+    if (has_magic_stone) {
+        send_to_char(
+            ch, "\r\n\tyAVISO: Você estava carregando uma pedra mágica de busca que não pode ser preservada.\tn\r\n");
+        send_to_char(ch, "\tyA busca '%s' foi cancelada.\tn\r\n", QST_NAME(rnum));
+
+        /* Apply penalty if quest has one */
+        if (QST_PENALTY(rnum)) {
+            GET_QUESTPOINTS(ch) -= QST_PENALTY(rnum);
+            send_to_char(ch, "\tyVocê paga %d pontos de busca por ter perdido a pedra mágica.\tn\r\n",
+                         QST_PENALTY(rnum));
+        }
+
+        /* Clear the quest */
+        clear_quest(ch);
+        save_char(ch);
+    }
 }

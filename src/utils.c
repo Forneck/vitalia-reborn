@@ -2805,7 +2805,8 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
         snprintf(quest_desc, sizeof(quest_desc), "%s oferece recompensa por %s", GET_NAME(ch), target_name);
         snprintf(quest_info, sizeof(quest_info),
                  "%s está oferecendo uma recompensa pela eliminação de %s. "
-                 "Encontre e elimine este alvo para receber %d moedas de ouro e %d pontos de experiência.",
+                 "Encontre e elimine este alvo para receber %d moedas de ouro e %d pontos de experiência. "
+                 "Se o alvo já foi eliminado, procure pela pedra mágica que ele pode ter deixado e a traga de volta.",
                  GET_NAME(ch), target_name, calculated_reward, calculated_reward * 3);
         snprintf(quest_done, sizeof(quest_done), "Fantástico! Você eliminou o alvo. Aqui está sua recompensa!");
     }
@@ -3458,7 +3459,8 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
     snprintf(quest_desc, sizeof(quest_desc), "%s quer eliminar %s", GET_NAME(ch), target_name);
     snprintf(quest_info, sizeof(quest_info),
              "%s está incomodado com %s e quer vê-lo eliminado. "
-             "Encontre e elimine esta criatura para receber %d moedas de ouro e %d pontos de experiência.",
+             "Encontre e elimine esta criatura para receber %d moedas de ouro e %d pontos de experiência. "
+             "Se a criatura já foi eliminada, procure pela pedra mágica que ela pode ter deixado e a traga de volta.",
              GET_NAME(ch), target_name, calculated_reward, calculated_reward * 3);
     snprintf(quest_done, sizeof(quest_done), "Excelente trabalho! A ameaça foi eliminada!");
 
