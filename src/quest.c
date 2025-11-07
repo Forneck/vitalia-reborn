@@ -1638,13 +1638,32 @@ SPECIAL(questmaster)
 int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum)
 {
     int capability = 0;
+    int genetic_component = 0;
+    int emotion_modifier = 0;
     int level_diff;
 
     if (!IS_NPC(mob) || !mob->ai_data || rnum == NOTHING)
         return 0;
 
-    /* Base capability from quest genetics */
-    capability = GET_GENQUEST(mob) + GET_GENADVENTURER(mob);
+    /* Base capability from quest genetics (scaled to 0-60 to make room for emotions and other bonuses) */
+    genetic_component = ((GET_GENQUEST(mob) + GET_GENADVENTURER(mob)) * 60) / 200;
+    capability = genetic_component;
+
+    /* EMOTION SYSTEM: Adjust capability based on curiosity */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        /* High curiosity increases quest acceptance significantly */
+        if (mob->ai_data->emotion_curiosity >= 70) {
+            emotion_modifier += 20; /* High curiosity: +20% chance */
+        } else if (mob->ai_data->emotion_curiosity >= 50) {
+            emotion_modifier += 10; /* Moderate curiosity: +10% chance */
+        }
+        /* Low curiosity slightly reduces quest acceptance */
+        else if (mob->ai_data->emotion_curiosity <= 20) {
+            emotion_modifier -= 10; /* Very low curiosity: -10% chance */
+        }
+
+        capability += emotion_modifier;
+    }
 
     /* Level consideration */
     level_diff = GET_LEVEL(mob) - QST_MINLEVEL(rnum);
