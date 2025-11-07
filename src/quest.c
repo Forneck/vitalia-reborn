@@ -346,12 +346,11 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
                          info, target_name);
             } else {
                 /* Target mob no longer exists - it may have been killed or despawned */
-                snprintf(
-                    temp_buf, sizeof(temp_buf),
-                    "%s\r\n\tyAVISO: O alvo específico não está mais disponível no mundo.\tn\r\n"
-                    "\tyA busca pode precisar ser abandonada. Se o alvo foi morto, procure pela pedra mágica\tn\r\n"
-                    "\tyque pode ter sido deixada para trás e a entregue ao responsável pela busca.\tn",
-                    info);
+                snprintf(temp_buf, sizeof(temp_buf),
+                         "%s\r\n\tyAVISO: O alvo específico não está mais disponível no mundo.\tn\r\n"
+                         "\tyProcure pela pedra mágica que ele pode ter deixado e a entregue ao responsável pela "
+                         "busca.\tn",
+                         info);
             }
         } else {
             /* No specific target assigned yet */
@@ -1149,6 +1148,9 @@ static const char *get_quest_difficulty_string(qst_rnum rnum)
     }
 }
 
+/* Forward declaration */
+static bool is_bounty_target_available(qst_rnum rnum, struct char_data *ch);
+
 /* Unified quest display function - shows both regular and temporary quests */
 static void quest_show_unified(struct char_data *ch, struct char_data *qm)
 {
@@ -1173,6 +1175,11 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
                 /* For mortals, check level restrictions */
                 if (!is_quest_level_available(ch, rnum))
                     continue; /* Skip quests outside player's level range */
+
+                /* Skip bounty quests if the specific target is unavailable */
+                if (!is_bounty_target_available(rnum, ch))
+                    continue;
+
                 send_to_char(ch, "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
                              QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum), QST_MAXLEVEL(rnum),
                              (quest_completed ? "Sim" : "Não "));
@@ -1195,6 +1202,11 @@ static void quest_show_unified(struct char_data *ch, struct char_data *qm)
                 /* For mortals, check level restrictions */
                 if (!is_quest_level_available(ch, rnum))
                     continue; /* Skip quests outside player's level range */
+
+                /* Skip bounty quests if the specific target is unavailable */
+                if (!is_bounty_target_available(rnum, ch))
+                    continue;
+
                 send_to_char(ch, "\tg%4d\tn) \tc%-28.28s\tn \ty%-11s\tn \tw%3d-%-3d\tn   \ty(%s)\tn\r\n", ++counter,
                              QST_NAME(rnum), get_quest_difficulty_string(rnum), QST_MINLEVEL(rnum), QST_MAXLEVEL(rnum),
                              (quest_completed ? "Sim" : "Não "));
@@ -2543,6 +2555,36 @@ void load_temp_quest_assignments(void)
 
     fclose(fp);
     log1("Temporary quest assignments loaded.");
+}
+
+/* Check if a bounty quest's target is currently available in the world
+ * Returns TRUE if the target is available or quest doesn't have a specific target yet
+ * Returns FALSE if the quest has a specific target that is no longer in the world */
+static bool is_bounty_target_available(qst_rnum rnum, struct char_data *ch)
+{
+    struct char_data *target_mob;
+
+    /* Only check for bounty quests */
+    if (QST_TYPE(rnum) != AQ_MOB_KILL_BOUNTY)
+        return TRUE;
+
+    /* If player hasn't accepted the quest yet (no bounty target ID), it's available */
+    if (!ch || IS_NPC(ch) || GET_BOUNTY_TARGET_ID(ch) == NOBODY)
+        return TRUE;
+
+    /* Check if this is the player's active quest */
+    if (GET_QUEST(ch) != QST_NUM(rnum))
+        return TRUE;
+
+    /* Search for the specific target mob in the world */
+    for (target_mob = character_list; target_mob; target_mob = target_mob->next) {
+        if (IS_NPC(target_mob) && char_script_id(target_mob) == GET_BOUNTY_TARGET_ID(ch)) {
+            return TRUE; /* Target is still in the world */
+        }
+    }
+
+    /* Target not found - it's been killed or despawned */
+    return FALSE;
 }
 
 /* Called from interpreter.c when player confirms quest acceptance */
