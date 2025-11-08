@@ -995,9 +995,9 @@ ACMD(do_score)
                  GET_MANA(ch), GET_MAX_MANA(ch), gauge(0, 0, GET_MANA(ch), GET_MAX_MANA(ch)), GET_ALIGNMENT(ch),
                  align_gauge(GET_ALIGNMENT(ch)));
 
-    send_to_char(ch, " \tW Movimento\tb..:\tn %5d\tgMv\tn (%5d) %s \tn \tW Fôlego\tb.....:\tn%5d%s %s\tn\r\n",
-                 GET_MOVE(ch), GET_MAX_MOVE(ch), gauge(0, 0, GET_MOVE(ch), GET_MAX_MOVE(ch)), (50 * 100) / 50, "%",
-                 gauge(0, 0, 50, 50));
+    send_to_char(ch, " \tW Movimento\tb..:\tn %5d\tgMv\tn (%5d) %s \tn \tW Fôlego\tb.....:\tn%5d (%5d) %s\tn\r\n",
+                 GET_MOVE(ch), GET_MAX_MOVE(ch), gauge(0, 0, GET_MOVE(ch), GET_MAX_MOVE(ch)), GET_BREATH(ch),
+                 GET_MAX_BREATH(ch), gauge(0, 0, GET_BREATH(ch), GET_MAX_BREATH(ch)));
 
     send_to_char(ch, "\r\n");
 

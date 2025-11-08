@@ -23,6 +23,7 @@
 #include "screen.h"
 #include "spirits.h"
 #include "mud_event.h"
+#include "act.h"
 
 /* local file scope function prototypes */
 static int graf(int grafage, int p0, int p1, int p2, int p3, int p4, int p5, int p6);
