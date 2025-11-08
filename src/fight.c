@@ -357,7 +357,8 @@ static void make_magic_stone(struct char_data *ch, long target_id)
 
     GET_OBJ_WEIGHT(stone) = 1;
     GET_OBJ_RENT(stone) = 0;
-    GET_OBJ_TIMER(stone) = 0; /* No decay - stone persists until quest completion or player quits */
+    /* Set decay timer to prevent infinite accumulation - 48 ticks (~1 hour at 75 sec/tick) */
+    GET_OBJ_TIMER(stone) = 48;
 
     /* Place stone in the room where mob died - with safety checks */
     if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {

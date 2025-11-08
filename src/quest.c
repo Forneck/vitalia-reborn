@@ -2722,10 +2722,6 @@ bool has_active_kill_quest_for_mob(mob_vnum target_vnum)
         return false;
 
     for (rnum = 0; rnum < total_quests; rnum++) {
-        /* Safety check: ensure rnum is valid */
-        if (rnum < 0 || rnum >= total_quests)
-            break;
-
         /* Only check kill-type quests */
         if (QST_TYPE(rnum) != AQ_MOB_KILL && QST_TYPE(rnum) != AQ_MOB_KILL_BOUNTY)
             continue;
