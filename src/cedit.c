@@ -690,7 +690,7 @@ int save_config(IDXTYPE nowhere)
     fprintf(
         fl,
         "* The virtual numbers of the donation rooms.  Note: Add donation rooms\n"
-        "* sequentially (1 & 2 before 3). If you don't, you might not be able to\n"
+        "* sequentially (1 & 2 before 3, 3 before 4). If you don't, you might not be able to\n"
         "* donate. Use -1 for 'no such room'.\n"
         "donation_room_1 = %d\n"
         "donation_room_2 = %d\n"
@@ -1091,11 +1091,11 @@ static void cedit_disp_room_numbers(struct descriptor_data *d)
         "%s1%s) Donation Room #1    : %s%d\r\n"
         "%s2%s) Donation Room #2    : %s%d\r\n"
         "%s3%s) Donation Room #3    : %s%d\r\n"
-        "%s7%s) Donation Room #4    : %s%d\r\n"
+        "%sI%s) Donation Room #4    : %s%d\r\n"
         "%s4%s) Ress Room #1    : %s%d\r\n"
         "%s5%s) Ress Room #2    : %s%d\r\n"
         "%s6%s) Ress Room #3    : %s%d\r\n"
-        "%s8%s) Ress Room #4    : %s%d\r\n"
+        "%sJ%s) Ress Room #4    : %s%d\r\n"
         "%sQ%s) Exit To The Main Menu\r\n"
         "Enter your choice : ",
         grn, nrm, cyn, OLC_CONFIG(d)->room_nums.newbie_start_room, grn, nrm, cyn,
@@ -1841,12 +1841,14 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = CEDIT_RESS_ROOM_3;
                     return;
 
-                case '7':
+                case 'i':
+                case 'I':
                     write_to_output(d, "Enter the vnum for donation room #4 : ");
                     OLC_MODE(d) = CEDIT_DONATION_ROOM_4;
                     return;
 
-                case '8':
+                case 'j':
+                case 'J':
                     write_to_output(d, "Enter the vnum for ress room #4 : ");
                     OLC_MODE(d) = CEDIT_RESS_ROOM_4;
                     return;

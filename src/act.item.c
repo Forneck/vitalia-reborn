@@ -554,13 +554,12 @@ ACMD(do_drop)
         case SCMD_DONATE:
             sname = "doa";
             mode = SCMD_DONATE;
-            /* Calculate number of valid donation rooms */
+            /* fail + double chance for room 1 */
             num_don_rooms = (CONFIG_DON_ROOM_1 != NOWHERE) * 2 + (CONFIG_DON_ROOM_2 != NOWHERE) +
-                            (CONFIG_DON_ROOM_3 != NOWHERE) + (CONFIG_DON_ROOM_4 != NOWHERE);
+                            (CONFIG_DON_ROOM_3 != NOWHERE) + (CONFIG_DON_ROOM_4 != NOWHERE) + 1;
             switch (rand_number(0, num_don_rooms)) {
                 case 0:
-                    /* Room vnum 2 instead of junk mode */
-                    RDR = real_room(2);
+                    mode = SCMD_JUNK;
                     break;
                 case 1:
                 case 2:

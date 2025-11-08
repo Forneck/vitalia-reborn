@@ -1242,17 +1242,20 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_DON_ROOM_2 config_info.room_nums.donation_room_2
 /** Ge the third dontation room. */
 #define CONFIG_DON_ROOM_3 config_info.room_nums.donation_room_3
+/** Get the fourth donation room. */
 #define CONFIG_DON_ROOM_4 config_info.room_nums.donation_room_4
 
 #define CONFIG_DEAD_START config_info.room_nums.dead_start_room
 #define CONFIG_HOMETOWN_1 config_info.room_nums.hometown_1
 #define CONFIG_HOMETOWN_2 config_info.room_nums.hometown_2
 #define CONFIG_HOMETOWN_3 config_info.room_nums.hometown_3
+/** Get the 4th hometown room. */
 #define CONFIG_HOMETOWN_4 config_info.room_nums.hometown_4
 
 #define CONFIG_RESS_ROOM_1 config_info.room_nums.ress_room_1
 #define CONFIG_RESS_ROOM_2 config_info.room_nums.ress_room_2
 #define CONFIG_RESS_ROOM_3 config_info.room_nums.ress_room_3
+/** Get the fourth resurrection room. */
 #define CONFIG_RESS_ROOM_4 config_info.room_nums.ress_room_4
 
 /* Game Operation */
