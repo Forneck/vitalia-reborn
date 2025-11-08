@@ -1588,10 +1588,6 @@ SPECIAL(questmaster)
         has_temp_quests = TRUE;
     }
 
-    /* If no quests at all, not a questmaster */
-    if (!has_regular_quests && !has_temp_quests)
-        return FALSE;
-
     /* Handle secondary spec procs for regular quests */
     if (has_regular_quests) {
         for (rnum = 0; rnum < total_quests; rnum++) {
