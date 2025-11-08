@@ -1270,16 +1270,18 @@ int enter_player_game(struct descriptor_data *d)
     }
     if (PLR_FLAGGED(d->character, PLR_FROZEN))
         load_room = r_frozen_start_room;
+    if (PLR_FLAGGED(d->character, PLR_GHOST))
+        load_room = r_dead_start_room;
 
-    /* Check if player is a ghost and has been offline long enough for auto-resurrection */
-    /* Skip auto-resurrection if player is frozen (frozen status takes precedence) */
-    if (PLR_FLAGGED(d->character, PLR_GHOST) && !PLR_FLAGGED(d->character, PLR_FROZEN)) {
+    /* Check if living player has been offline long enough to be fully refreshed */
+    /* Skip if player is frozen, ghost, or has custom loadroom set */
+    if (!PLR_FLAGGED(d->character, PLR_GHOST) && !PLR_FLAGGED(d->character, PLR_FROZEN) &&
+        !PLR_FLAGGED(d->character, PLR_LOADROOM)) {
         time_t offline_time = time(0) - d->character->player.time.logon;
-        time_t corpse_decay_time = CONFIG_MAX_PC_CORPSE_TIME * SECS_PER_MUD_HOUR;
+        time_t refresh_time = CONFIG_MAX_PC_CORPSE_TIME * SECS_PER_MUD_HOUR;
 
-        if (offline_time >= corpse_decay_time) {
-            /* Auto-resurrect: player has been offline longer than corpse decay time */
-            REMOVE_BIT_AR(PLR_FLAGS(d->character), PLR_GHOST);
+        if (offline_time >= refresh_time) {
+            /* Player has been offline long enough - refresh and load at hometown */
 
             /* Restore full HP, Mana, Move */
             GET_HIT(d->character) = GET_MAX_HIT(d->character);
@@ -1292,26 +1294,17 @@ int enter_player_game(struct descriptor_data *d)
                 GET_COND(d->character, THIRST) = 24;
             }
 
-            /* System shock roll (same as offline resurrection) */
-            if ((GET_CON(d->character) > 3) && (rand_number(1, 101) > (75 + GET_CON(d->character))))
-                GET_CON(d->character) -= 1;
-
-            /* Load at hometown instead of dead start room, unless PLR_LOADROOM is set */
-            if (!PLR_FLAGGED(d->character, PLR_LOADROOM)) {
-                if (GET_HOMETOWN(d->character) == 1)
-                    load_room = r_hometown_1;
-                else if (GET_HOMETOWN(d->character) == 2)
-                    load_room = r_hometown_2;
-                else if (GET_HOMETOWN(d->character) == 3)
-                    load_room = r_hometown_3;
-                else if (GET_HOMETOWN(d->character) == 4)
-                    load_room = r_hometown_4;
-                else
-                    load_room = r_hometown_1;
-            }
-        } else {
-            /* Still within corpse timer - send to dead start room as normal */
-            load_room = r_dead_start_room;
+            /* Load at hometown */
+            if (GET_HOMETOWN(d->character) == 1)
+                load_room = r_hometown_1;
+            else if (GET_HOMETOWN(d->character) == 2)
+                load_room = r_hometown_2;
+            else if (GET_HOMETOWN(d->character) == 3)
+                load_room = r_hometown_3;
+            else if (GET_HOMETOWN(d->character) == 4)
+                load_room = r_hometown_4;
+            else
+                load_room = r_hometown_1;
         }
     }
     /* copyover */
