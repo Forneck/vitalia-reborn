@@ -1295,17 +1295,19 @@ int enter_player_game(struct descriptor_data *d)
             if ((GET_CON(d->character) > 3) && (rand_number(1, 101) > (75 + GET_CON(d->character))))
                 GET_CON(d->character) -= 1;
 
-            /* Load at hometown instead of dead start room */
-            if (GET_HOMETOWN(d->character) == 1)
-                load_room = r_hometown_1;
-            else if (GET_HOMETOWN(d->character) == 2)
-                load_room = r_hometown_2;
-            else if (GET_HOMETOWN(d->character) == 3)
-                load_room = r_hometown_3;
-            else if (GET_HOMETOWN(d->character) == 4)
-                load_room = r_hometown_4;
-            else
-                load_room = r_hometown_1;
+            /* Load at hometown instead of dead start room, unless PLR_LOADROOM is set */
+            if (!PLR_FLAGGED(d->character, PLR_LOADROOM)) {
+                if (GET_HOMETOWN(d->character) == 1)
+                    load_room = r_hometown_1;
+                else if (GET_HOMETOWN(d->character) == 2)
+                    load_room = r_hometown_2;
+                else if (GET_HOMETOWN(d->character) == 3)
+                    load_room = r_hometown_3;
+                else if (GET_HOMETOWN(d->character) == 4)
+                    load_room = r_hometown_4;
+                else
+                    load_room = r_hometown_1;
+            }
         } else {
             /* Still within corpse timer - send to dead start room as normal */
             load_room = r_dead_start_room;
