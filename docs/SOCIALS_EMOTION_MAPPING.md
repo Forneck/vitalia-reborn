@@ -242,7 +242,7 @@ The following entries were **removed** from the emotion system because they eith
 ## Summary Statistics
 
 - **Total socials in game:** 101
-- **Socials with emotion mappings:** 86
+- **Socials with emotion mappings:** 90 (89.1% coverage)
 - **Unmapped socials:** 11 (mostly self-directed/neutral)
 - **Invalid entries removed:** 50
 
