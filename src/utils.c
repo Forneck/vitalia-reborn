@@ -5242,26 +5242,25 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * Emotion changes: +happiness, +friendship, +trust, -anger, -fear
      * Includes: friendly gestures, affectionate actions, appreciation, happy/playful actions
      */
-    const char *positive_socials[] = {"bow",      "smile",   "nod",     "wave",    "applaud", "clap",    "greet",
-                                      "wink",     "grin",    "comfort", "pat",     "hug",     "cuddle",  "kiss",
-                                      "nuzzle",   "squeeze", "stroke",  "snuggle", "thank",   "worship", "giggle",
-                                      "chuckle",  "laugh",   "cackle",  "bounce",  "dance",   "sing",    "tango",
-                                      "whistle",  "yodel",   "curtsey", NULL};
+    const char *positive_socials[] = {
+        "bow",   "smile",  "nod",    "wave",   "applaud", "clap",   "greet",   "wink",  "grin",    "comfort", "pat",
+        "hug",   "cuddle", "kiss",   "nuzzle", "squeeze", "stroke", "snuggle", "thank", "worship", "giggle",  "chuckle",
+        "laugh", "cackle", "bounce", "dance",  "sing",    "tango",  "whistle", "yodel", "curtsey", NULL};
 
     /* Negative socials that increase anger, decrease trust/friendship
      * Emotion changes: +anger, -trust, -friendship, -happiness
      * Includes: hostile expressions, aggressive actions, verbal hostility
      */
-    const char *negative_socials[] = {"frown", "glare", "spit", "accuse", "curse", "taunt", "snicker", "slap",
-                                      "punch", "snap",  "snarl", "growl", "fume",  NULL};
+    const char *negative_socials[] = {"frown", "glare", "spit", "accuse", "curse", "taunt", "snicker",
+                                      "slap",  "punch", "snap", "snarl",  "growl", "fume",  NULL};
 
     /* Neutral/curious socials that increase curiosity
      * Emotion changes: +curiosity, slight +friendship if already friendly
      * Includes: observing, thinking, pointing, neutral actions
      * Note: "look" and "examine" are commands (not socials), removed
      */
-    const char *neutral_socials[] = {"ponder", "shrug", "peer",  "think",  "stare", "point",
-                                     "comb",   "sneeze", "cough", "hiccup", "yawn",  "snore", NULL};
+    const char *neutral_socials[] = {"ponder", "shrug", "peer",   "think", "stare", "point", "comb",
+                                     "sneeze", "cough", "hiccup", "yawn",  "snore", NULL};
 
     /* Fearful socials that the actor shows - might increase mob's courage/pride
      * Emotion changes (for mob): +courage, +pride, -fear (mob's own fear decreases)
@@ -5480,7 +5479,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral && !is_fearful) {
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful) {
         for (i = 0; playful_socials[i] != NULL; i++) {
             if (!strcmp(social_name, playful_socials[i])) {
                 is_playful = TRUE;
@@ -5489,7 +5489,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral && !is_fearful && !is_playful) {
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful && !is_playful) {
         for (i = 0; romantic_socials[i] != NULL; i++) {
             if (!strcmp(social_name, romantic_socials[i])) {
                 is_romantic = TRUE;
@@ -5652,7 +5653,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         int mob_trust = mob->ai_data->emotion_trust;
         int mob_friendship = mob->ai_data->emotion_friendship;
         int mob_love = mob->ai_data->emotion_love;
-        
+
         /* High relationship - receptive to romance */
         if (mob_friendship >= 60 || mob_love >= 40) {
             adjust_emotion(mob, &mob->ai_data->emotion_love, rand_number(5, 15));
