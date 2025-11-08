@@ -687,29 +687,27 @@ int save_config(IDXTYPE nowhere)
             "dead_start_room = %d\n\n",
             CONFIG_DEAD_START);
 
-    fprintf(fl,
-            "* The virtual numbers of the donation rooms.  Note: Add donation rooms\n"
-            "* sequentially (1 & 2 before 3). If you don't, you might not be able to\n"
-            "* donate. Use -1 for 'no such room'.\n"
-            "donation_room_1 = %d\n"
-            "donation_room_2 = %d\n"
-            "donation_room_3 = %d\n"
-            "donation_room_4 = %d\n\n",
-            CONFIG_DON_ROOM_1 != NOWHERE ? CONFIG_DON_ROOM_1 : -1,
-            CONFIG_DON_ROOM_2 != NOWHERE ? CONFIG_DON_ROOM_2 : -1,
-            CONFIG_DON_ROOM_3 != NOWHERE ? CONFIG_DON_ROOM_3 : -1,
-            CONFIG_DON_ROOM_4 != NOWHERE ? CONFIG_DON_ROOM_4 : -1);
+    fprintf(
+        fl,
+        "* The virtual numbers of the donation rooms.  Note: Add donation rooms\n"
+        "* sequentially (1 & 2 before 3). If you don't, you might not be able to\n"
+        "* donate. Use -1 for 'no such room'.\n"
+        "donation_room_1 = %d\n"
+        "donation_room_2 = %d\n"
+        "donation_room_3 = %d\n"
+        "donation_room_4 = %d\n\n",
+        CONFIG_DON_ROOM_1 != NOWHERE ? CONFIG_DON_ROOM_1 : -1, CONFIG_DON_ROOM_2 != NOWHERE ? CONFIG_DON_ROOM_2 : -1,
+        CONFIG_DON_ROOM_3 != NOWHERE ? CONFIG_DON_ROOM_3 : -1, CONFIG_DON_ROOM_4 != NOWHERE ? CONFIG_DON_ROOM_4 : -1);
 
-    fprintf(fl,
-            "* The virtual numbers of the hometowns rooms. Use -1 for 'no such room'.\n"
-            "hometown_1 = %d\n"
-            "hometown_2 = %d\n"
-            "hometown_3 = %d\n"
-            "hometown_4 = %d\n",
-            CONFIG_HOMETOWN_1 != NOWHERE ? CONFIG_HOMETOWN_1 : -1,
-            CONFIG_HOMETOWN_2 != NOWHERE ? CONFIG_HOMETOWN_2 : -1,
-            CONFIG_HOMETOWN_3 != NOWHERE ? CONFIG_HOMETOWN_3 : -1,
-            CONFIG_HOMETOWN_4 != NOWHERE ? CONFIG_HOMETOWN_4 : -1);
+    fprintf(
+        fl,
+        "* The virtual numbers of the hometowns rooms. Use -1 for 'no such room'.\n"
+        "hometown_1 = %d\n"
+        "hometown_2 = %d\n"
+        "hometown_3 = %d\n"
+        "hometown_4 = %d\n",
+        CONFIG_HOMETOWN_1 != NOWHERE ? CONFIG_HOMETOWN_1 : -1, CONFIG_HOMETOWN_2 != NOWHERE ? CONFIG_HOMETOWN_2 : -1,
+        CONFIG_HOMETOWN_3 != NOWHERE ? CONFIG_HOMETOWN_3 : -1, CONFIG_HOMETOWN_4 != NOWHERE ? CONFIG_HOMETOWN_4 : -1);
 
     fprintf(fl,
             "* The virtual numbers of the corpses rooms. Use -1 for 'no such room'.\n"
@@ -1103,12 +1101,12 @@ static void cedit_disp_room_numbers(struct descriptor_data *d)
         grn, nrm, cyn, OLC_CONFIG(d)->room_nums.newbie_start_room, grn, nrm, cyn,
         OLC_CONFIG(d)->room_nums.immort_start_room, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.frozen_start_room, grn, nrm,
         cyn, OLC_CONFIG(d)->room_nums.dead_start_room, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.hometown_1, grn, nrm,
-        cyn, OLC_CONFIG(d)->room_nums.hometown_2, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.hometown_3, grn, nrm,
-        cyn, OLC_CONFIG(d)->room_nums.hometown_4, grn, nrm, cyn,
-        OLC_CONFIG(d)->room_nums.donation_room_1, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.donation_room_2, grn, nrm,
-        cyn, OLC_CONFIG(d)->room_nums.donation_room_3, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.donation_room_4, grn, nrm, cyn,
-        OLC_CONFIG(d)->room_nums.ress_room_1, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_2, grn, nrm,
-        cyn, OLC_CONFIG(d)->room_nums.ress_room_3, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_4, grn, nrm);
+        cyn, OLC_CONFIG(d)->room_nums.hometown_2, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.hometown_3, grn, nrm, cyn,
+        OLC_CONFIG(d)->room_nums.hometown_4, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.donation_room_1, grn, nrm, cyn,
+        OLC_CONFIG(d)->room_nums.donation_room_2, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.donation_room_3, grn, nrm,
+        cyn, OLC_CONFIG(d)->room_nums.donation_room_4, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_1, grn, nrm,
+        cyn, OLC_CONFIG(d)->room_nums.ress_room_2, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_3, grn, nrm, cyn,
+        OLC_CONFIG(d)->room_nums.ress_room_4, grn, nrm);
 
     OLC_MODE(d) = CEDIT_ROOM_NUMBERS_MENU;
 }
@@ -2879,7 +2877,7 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 cedit_disp_room_numbers(d);
             }
             break;
-        
+
         case CEDIT_HOMETOWN_4:
             if (!*arg) {
                 write_to_output(d,

@@ -1166,7 +1166,6 @@ ASPELL(spell_stoneskin)
 
     if (victim == NULL)
         return;
-    
 
     /* Calculate new points to add: 1 point per 4 caster levels, min 1 */
     new_points = MAX(1, level / 4);
