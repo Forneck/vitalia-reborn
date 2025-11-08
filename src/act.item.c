@@ -686,6 +686,16 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
     act("$n entrega $p para você.", FALSE, ch, obj, vict, TO_VICT);
     act("$n entrega $p para $N.", TRUE, ch, obj, vict, TO_NOTVICT);
 
+    /* Special handling for magic stones - they need to trigger kill quest completion, not obj return */
+    if (GET_OBJ_TYPE(obj) == ITEM_MAGIC_STONE && !IS_NPC(ch) && GET_QUEST(ch) != NOTHING) {
+        int quest_type = GET_QUEST_TYPE(ch);
+        if (quest_type == AQ_MOB_KILL || quest_type == AQ_MOB_KILL_BOUNTY) {
+            /* Trigger the appropriate kill quest check which will extract the stone */
+            autoquest_trigger_check(ch, vict, obj, quest_type);
+            return; /* Don't process as regular object return */
+        }
+    }
+
     autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);
 
     /* Reputation gain for generosity (giving items to others) - dynamic reputation system */
