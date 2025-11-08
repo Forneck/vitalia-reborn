@@ -1272,7 +1272,8 @@ int enter_player_game(struct descriptor_data *d)
         load_room = r_frozen_start_room;
 
     /* Check if player is a ghost and has been offline long enough for auto-resurrection */
-    if (PLR_FLAGGED(d->character, PLR_GHOST)) {
+    /* Skip auto-resurrection if player is frozen (frozen status takes precedence) */
+    if (PLR_FLAGGED(d->character, PLR_GHOST) && !PLR_FLAGGED(d->character, PLR_FROZEN)) {
         time_t offline_time = time(0) - d->character->player.time.logon;
         time_t corpse_decay_time = CONFIG_MAX_PC_CORPSE_TIME * SECS_PER_MUD_HOUR;
 
