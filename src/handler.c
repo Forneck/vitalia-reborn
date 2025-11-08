@@ -475,6 +475,9 @@ void char_to_room(struct char_data *ch, room_rnum room)
                 case 3:
                     room = r_hometown_3;
                     break;
+                case 4:
+                    room = r_hometown_4;
+                    break;
                 default:
                     room = r_hometown_1;
                     break;

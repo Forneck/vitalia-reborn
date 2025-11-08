@@ -4462,21 +4462,19 @@ void advance_level(struct char_data *ch)
     else if (GET_LEVEL(ch) > 50)
         add_hp *= 1.40;
 
-          /* Ganha mana extra se já foi classe mágica */
-          if (add_mana == 0) {
-           if (WAS_MAGIC_USER(ch))
-               add_mana = rand_number(GET_LEVEL(ch), (int)(GET_LEVEL(ch) * 2));
-           else if (WAS_BARD(ch))
-               add_mana = rand_number(GET_LEVEL(ch), (int)(GET_LEVEL(ch) * 1.7));
-           else if (WAS_DRUID(ch))
-               add_mana = rand_number(GET_LEVEL(ch), (int)(GET_LEVEL(ch) * 1.7));
-           else if (WAS_CLERIC(ch))
-               add_mana = rand_number(GET_LEVEL(ch), (int)(GET_LEVEL(ch) * 1.5));
-           add_mana = MIN(add_mana, 15);
-       } else
-           add_mana = MIN(add_mana, 10);
-
-          
+    /* Ganha mana extra se já foi classe mágica */
+    if (add_mana == 0) {
+        if (WAS_MAGIC_USER(ch))
+            add_mana = rand_number(GET_LEVEL(ch), (int)(GET_LEVEL(ch) * 2));
+        else if (WAS_BARD(ch))
+            add_mana = rand_number(GET_LEVEL(ch), (int)(GET_LEVEL(ch) * 1.7));
+        else if (WAS_DRUID(ch))
+            add_mana = rand_number(GET_LEVEL(ch), (int)(GET_LEVEL(ch) * 1.7));
+        else if (WAS_CLERIC(ch))
+            add_mana = rand_number(GET_LEVEL(ch), (int)(GET_LEVEL(ch) * 1.5));
+        add_mana = MIN(add_mana, 15);
+    } else
+        add_mana = MIN(add_mana, 10);
 
     ch->points.max_hit += MAX(1, add_hp);
     ch->points.max_move += MAX(1, add_move);
@@ -4484,7 +4482,7 @@ void advance_level(struct char_data *ch)
     if (GET_LEVEL(ch) > 1)
         ch->points.max_mana += add_mana;
 
-    send_to_char(ch,"\tWVocê recebeu: Hp: %d | Mn: %d | Mv: %d \tn\r\n", add_hp, add_mana, add_move);   
+    send_to_char(ch, "\tWVocê recebeu: Hp: %d | Mn: %d | Mv: %d \tn\r\n", add_hp, add_mana, add_move);
     if (IS_MAGIC_USER(ch) || IS_CLERIC(ch))
         GET_PRACTICES(ch) += MAX(2, wis_app[GET_WIS(ch)].bonus);
     else
