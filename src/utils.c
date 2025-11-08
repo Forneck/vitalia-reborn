@@ -2521,13 +2521,19 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     }
 
     /* Configura valores da quest */
-    new_quest->value[0] = URANGE(1, base_questpoints, 10);         /* Enhanced Questpoints reward */
-    new_quest->value[1] = 0;                                       /* Penalty */
-    new_quest->value[2] = MAX(1, GET_LEVEL(ch) - 10);              /* Min level */
-    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15); /* Max level */
-    new_quest->value[4] = -1;                                      /* No time limit */
-    new_quest->value[5] = GET_MOB_VNUM(ch);                        /* Return mob */
-    new_quest->value[6] = 1;                                       /* Quantity */
+    new_quest->value[0] = URANGE(1, base_questpoints, 10); /* Enhanced Questpoints reward */
+    new_quest->value[1] = 0;                               /* Penalty */
+    /* For mobs above level 100, fix level range to 85-100 */
+    if (GET_LEVEL(ch) > 100) {
+        new_quest->value[2] = 85;  /* Min level */
+        new_quest->value[3] = 100; /* Max level */
+    } else {
+        new_quest->value[2] = MAX(1, GET_LEVEL(ch) - 10);              /* Min level */
+        new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15); /* Max level */
+    }
+    new_quest->value[4] = -1;               /* No time limit */
+    new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
+    new_quest->value[6] = 1;                /* Quantity */
 
     /* Determina se a quest deve ser repetível baseado no tipo de item */
     if (obj_rnum != NOTHING) {
@@ -2778,13 +2784,19 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
         base_questpoints += 1;
     }
 
-    new_quest->value[0] = URANGE(2, base_questpoints, 15);         /* Questpoints reward */
-    new_quest->value[1] = calculated_reward / 4;                   /* Penalty for failure */
-    new_quest->value[2] = MAX(10, GET_LEVEL(ch) - 5);              /* Min level */
-    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 20); /* Max level */
-    new_quest->value[4] = -1;                                      /* No time limit */
-    new_quest->value[5] = GET_MOB_VNUM(ch);                        /* Return mob */
-    new_quest->value[6] = 1;                                       /* Quantity */
+    new_quest->value[0] = URANGE(2, base_questpoints, 15); /* Questpoints reward */
+    new_quest->value[1] = calculated_reward / 4;           /* Penalty for failure */
+    /* For mobs above level 100, fix level range to 85-100 */
+    if (GET_LEVEL(ch) > 100) {
+        new_quest->value[2] = 85;  /* Min level */
+        new_quest->value[3] = 100; /* Max level */
+    } else {
+        new_quest->value[2] = MAX(10, GET_LEVEL(ch) - 5);              /* Min level */
+        new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 20); /* Max level */
+    }
+    new_quest->value[4] = -1;               /* No time limit */
+    new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
+    new_quest->value[6] = 1;                /* Quantity */
 
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
@@ -3027,13 +3039,19 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
         base_questpoints += 1;
     }
 
-    new_quest->value[0] = URANGE(1, base_questpoints, 12);         /* Questpoints reward */
-    new_quest->value[1] = calculated_reward / 5;                   /* Penalty for failure */
-    new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);              /* Min level */
-    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15); /* Max level */
-    new_quest->value[4] = -1;                                      /* No time limit */
-    new_quest->value[5] = GET_MOB_VNUM(ch);                        /* Return mob */
-    new_quest->value[6] = 1;                                       /* Quantity */
+    new_quest->value[0] = URANGE(1, base_questpoints, 12); /* Questpoints reward */
+    new_quest->value[1] = calculated_reward / 5;           /* Penalty for failure */
+    /* For mobs above level 100, fix level range to 85-100 */
+    if (GET_LEVEL(ch) > 100) {
+        new_quest->value[2] = 85;  /* Min level */
+        new_quest->value[3] = 100; /* Max level */
+    } else {
+        new_quest->value[2] = MAX(5, GET_LEVEL(ch) - 10);              /* Min level */
+        new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 15); /* Max level */
+    }
+    new_quest->value[4] = -1;               /* No time limit */
+    new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
+    new_quest->value[6] = 1;                /* Quantity */
 
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
@@ -3251,13 +3269,19 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
         base_questpoints += 1;
     }
 
-    new_quest->value[0] = URANGE(2, base_questpoints, 14);         /* Questpoints reward */
-    new_quest->value[1] = calculated_reward / 4;                   /* Penalty for failure */
-    new_quest->value[2] = MAX(8, GET_LEVEL(ch) - 8);               /* Min level */
-    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 18); /* Max level */
-    new_quest->value[4] = -1;                                      /* No time limit */
-    new_quest->value[5] = GET_MOB_VNUM(ch);                        /* Return mob */
-    new_quest->value[6] = 1;                                       /* Quantity */
+    new_quest->value[0] = URANGE(2, base_questpoints, 14); /* Questpoints reward */
+    new_quest->value[1] = calculated_reward / 4;           /* Penalty for failure */
+    /* For mobs above level 100, fix level range to 85-100 */
+    if (GET_LEVEL(ch) > 100) {
+        new_quest->value[2] = 85;  /* Min level */
+        new_quest->value[3] = 100; /* Max level */
+    } else {
+        new_quest->value[2] = MAX(8, GET_LEVEL(ch) - 8);               /* Min level */
+        new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 18); /* Max level */
+    }
+    new_quest->value[4] = -1;               /* No time limit */
+    new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
+    new_quest->value[6] = 1;                /* Quantity */
 
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
@@ -3441,13 +3465,19 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
         base_questpoints += 1;
     }
 
-    new_quest->value[0] = URANGE(2, base_questpoints, 15);         /* Questpoints reward */
-    new_quest->value[1] = calculated_reward / 4;                   /* Penalty for failure */
-    new_quest->value[2] = MAX(10, GET_LEVEL(ch) - 5);              /* Min level */
-    new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 20); /* Max level */
-    new_quest->value[4] = -1;                                      /* No time limit */
-    new_quest->value[5] = GET_MOB_VNUM(ch);                        /* Return mob */
-    new_quest->value[6] = 1;                                       /* Quantity */
+    new_quest->value[0] = URANGE(2, base_questpoints, 15); /* Questpoints reward */
+    new_quest->value[1] = calculated_reward / 4;           /* Penalty for failure */
+    /* For mobs above level 100, fix level range to 85-100 */
+    if (GET_LEVEL(ch) > 100) {
+        new_quest->value[2] = 85;  /* Min level */
+        new_quest->value[3] = 100; /* Max level */
+    } else {
+        new_quest->value[2] = MAX(10, GET_LEVEL(ch) - 5);              /* Min level */
+        new_quest->value[3] = MIN(LVL_IMMORT - 1, GET_LEVEL(ch) + 20); /* Max level */
+    }
+    new_quest->value[4] = -1;               /* No time limit */
+    new_quest->value[5] = GET_MOB_VNUM(ch); /* Return mob */
+    new_quest->value[6] = 1;                /* Quantity */
 
     /* Configura recompensas */
     new_quest->gold_reward = calculated_reward;
