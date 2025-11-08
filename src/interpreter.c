@@ -1263,6 +1263,8 @@ int enter_player_game(struct descriptor_data *d)
             load_room = r_hometown_2;
         else if (GET_HOMETOWN(d->character) == 3)
             load_room = r_hometown_3;
+        else if (GET_HOMETOWN(d->character) == 4)
+            load_room = r_hometown_4;
         else
             load_room = r_hometown_1;
     }
@@ -1929,6 +1931,9 @@ void nanny(struct descriptor_data *d, char *arg)
                 case 3:
                     write_to_output(d, "Thewster\r\n");
                     break;
+                case 4:
+                    write_to_output(d, "Bhogavati\r\n");
+                    break;
             }
 
             /* Finalize rebegin process */
@@ -2063,6 +2068,7 @@ void hometown_menu(struct descriptor_data *d)
     write_to_output(d, "\r\n1) Midgaard\r\n");
     write_to_output(d, "2) Nova Thalos\r\n");
     write_to_output(d, "3) Thewster\r\n");
+    write_to_output(d, "4) Bhogavati\r\n");
 }
 
 int parse_hometown(char arg)
@@ -2075,6 +2081,8 @@ int parse_hometown(char arg)
             return 2;
         case '3':
             return 3;
+        case '4':
+            return 4;
         default:
             return 0;
     }

@@ -1682,13 +1682,16 @@ struct room_numbers {
     room_vnum donation_room_1;   /**< vnum of donation room #1.            */
     room_vnum donation_room_2;   /**< vnum of donation room #2.            */
     room_vnum donation_room_3;   /**< vnum of donation room #3.            */
+    room_vnum donation_room_4;   /**< vnum of donation room #4.            */
     room_vnum dead_start_room;
     room_vnum hometown_1;
     room_vnum hometown_2;
     room_vnum hometown_3;
+    room_vnum hometown_4;
     room_vnum ress_room_1;
     room_vnum ress_room_2;
     room_vnum ress_room_3;
+    room_vnum ress_room_4;
 };
 
 /** Operational game variables. */

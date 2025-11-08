@@ -103,9 +103,11 @@ room_rnum r_dead_start_room;
 room_rnum r_hometown_1;
 room_rnum r_hometown_2;
 room_rnum r_hometown_3;
+room_rnum r_hometown_4;
 room_rnum r_ress_room_1;
 room_rnum r_ress_room_2;
 room_rnum r_ress_room_3;
+room_rnum r_ress_room_4;
 
 char *credits = NULL; /* game credits */
 char *news = NULL;    /* mud news */
@@ -1611,6 +1613,10 @@ static void check_start_rooms(void)
         log1("SYSERR:  Hometown 3 does not exist.  Change in config.c.");
         r_hometown_3 = CONFIG_NEWBIE_START;
     }
+    if ((r_hometown_4 = real_room(CONFIG_HOMETOWN_4)) == NOWHERE) {
+        log1("SYSERR:  Hometown 4 does not exist.  Change in config.c.");
+        r_hometown_4 = CONFIG_NEWBIE_START;
+    }
     if ((r_ress_room_1 = real_room(CONFIG_RESS_ROOM_1)) == NOWHERE) {
         log1("SYSERR:  RessRoom 1 does not exist.  Change in config.c.");
         r_ress_room_1 = CONFIG_NEWBIE_START;
@@ -1622,6 +1628,10 @@ static void check_start_rooms(void)
     if ((r_ress_room_3 = real_room(CONFIG_RESS_ROOM_3)) == NOWHERE) {
         log1("SYSERR:  RessRoom 3 does not exist.  Change in config.c.");
         r_ress_room_3 = CONFIG_NEWBIE_START;
+    }
+    if ((r_ress_room_4 = real_room(CONFIG_RESS_ROOM_4)) == NOWHERE) {
+        log1("SYSERR:  RessRoom 4 does not exist.  Change in config.c.");
+        r_ress_room_4 = CONFIG_NEWBIE_START;
     }
 }
 
@@ -4276,13 +4286,16 @@ static void load_default_config(void)
     CONFIG_DON_ROOM_1 = donation_room_1;
     CONFIG_DON_ROOM_2 = donation_room_2;
     CONFIG_DON_ROOM_3 = donation_room_3;
+    CONFIG_DON_ROOM_4 = donation_room_4;
     CONFIG_DEAD_START = dead_start_room;
     CONFIG_HOMETOWN_1 = hometown_1;
     CONFIG_HOMETOWN_2 = hometown_2;
     CONFIG_HOMETOWN_3 = hometown_3;
+    CONFIG_HOMETOWN_4 = hometown_4;
     CONFIG_RESS_ROOM_1 = ress_room_1;
     CONFIG_RESS_ROOM_2 = ress_room_2;
     CONFIG_RESS_ROOM_3 = ress_room_3;
+    CONFIG_RESS_ROOM_4 = ress_room_4;
 
     /* Game operation options. */
     CONFIG_DFLT_PORT = DFLT_PORT;
@@ -4442,6 +4455,11 @@ void load_config(void)
                         CONFIG_DON_ROOM_3 = NOWHERE;
                     else
                         CONFIG_DON_ROOM_3 = num;
+                else if (!str_cmp(tag, "donation_room_4"))
+                    if (num == -1)
+                        CONFIG_DON_ROOM_4 = NOWHERE;
+                    else
+                        CONFIG_DON_ROOM_4 = num;
                 else if (!str_cmp(tag, "dflt_dir")) {
                     if (CONFIG_DFLT_DIR)
                         free(CONFIG_DFLT_DIR);
@@ -4581,6 +4599,11 @@ void load_config(void)
                         CONFIG_HOMETOWN_3 = NOWHERE;
                     else
                         CONFIG_HOMETOWN_3 = num;
+                else if (!str_cmp(tag, "hometown_4"))
+                    if (num == -1)
+                        CONFIG_HOMETOWN_4 = NOWHERE;
+                    else
+                        CONFIG_HOMETOWN_4 = num;
                 break;
 
             case 'i':
@@ -4718,6 +4741,11 @@ void load_config(void)
                         CONFIG_RESS_ROOM_3 = NOWHERE;
                     else
                         CONFIG_RESS_ROOM_3 = num;
+                else if (!str_cmp(tag, "ress_room_4"))
+                    if (num == -1)
+                        CONFIG_RESS_ROOM_4 = NOWHERE;
+                    else
+                        CONFIG_RESS_ROOM_4 = num;
                 break;
 
             case 's':

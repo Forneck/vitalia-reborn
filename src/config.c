@@ -194,14 +194,17 @@ room_vnum frozen_start_room = 1202;
 room_vnum donation_room_1 = 3063;
 room_vnum donation_room_2 = 5510;
 room_vnum donation_room_3 = 235;
+room_vnum donation_room_4 = 11316;
 
 room_vnum dead_start_room = 1890;
 room_vnum hometown_1 = 3001;
 room_vnum hometown_2 = 5509;
 room_vnum hometown_3 = 13400;
+room_vnum hometown_4 = 11315;
 room_vnum ress_room_1 = 1803;
 room_vnum ress_room_2 = 5505;
 room_vnum ress_room_3 = 13435;
+room_vnum ress_room_4 = 11319;
 
 /* GAME OPERATION OPTIONS */
 
