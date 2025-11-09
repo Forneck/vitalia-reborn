@@ -2707,6 +2707,11 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
         return;
     }
 
+    /* DISABLED: MOB_KILL_BOUNTY quests temporarily disabled for testing */
+    if (quest_type == AQ_MOB_KILL_BOUNTY) {
+        return;
+    }
+
     /* Check if we've reached the limit of mob-posted quests */
     if (!can_add_mob_posted_quest()) {
         return;
@@ -3398,6 +3403,9 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
     if (!IS_NPC(ch) || !ch->ai_data) {
         return;
     }
+
+    /* DISABLED: MOB_KILL quests temporarily disabled for testing */
+    return;
 
     /* Check if we've reached the limit of mob-posted quests */
     if (!can_add_mob_posted_quest()) {

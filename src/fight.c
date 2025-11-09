@@ -645,10 +645,11 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
 
     make_corpse(ch);
 
+    /* DISABLED: Magic stone generation temporarily disabled for testing */
     /* Create magic stone if this mob is a target for any active kill quest */
-    if (ch && IS_NPC(ch) && has_active_kill_quest_for_mob(GET_MOB_VNUM(ch))) {
+    /* if (ch && IS_NPC(ch) && has_active_kill_quest_for_mob(GET_MOB_VNUM(ch))) {
         make_magic_stone(ch, char_script_id(ch));
-    }
+    } */
 
     // -- jr - Mar 17, 2000 * Enhancement of player death
     if (!IS_NPC(ch)) {
