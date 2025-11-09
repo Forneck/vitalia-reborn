@@ -1921,6 +1921,14 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             mob_proto[i].ai_data->genetics.healing_tendency = num_arg;
         }
     }
+    CASE("EmotionProfile")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Valid emotion profile values: 0-7 (EMOTION_PROFILE_*) */
+            RANGE(0, 7);
+            mob_proto[i].ai_data->emotional_profile = num_arg;
+        }
+    }
     CASE("BareHandAttack")
     {
         RANGE(0, NUM_ATTACK_TYPES - 1);

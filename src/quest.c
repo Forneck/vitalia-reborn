@@ -2426,6 +2426,139 @@ void quest_join_temp(struct char_data *ch, struct char_data *qm, char *arg)
 /* Save/Load Functions for Temporary Quest Assignments                     */
 /*--------------------------------------------------------------------------*/
 
+/**
+ * Apply an emotional profile to a mob
+ * This sets baseline emotions aligned with the emotion-driven behavior thresholds
+ * @param mob The mob to apply the profile to
+ * @param profile_type The emotional profile type (EMOTION_PROFILE_*)
+ */
+static void apply_emotional_profile(struct char_data *mob, int profile_type)
+{
+    if (!IS_NPC(mob) || !mob->ai_data)
+        return;
+
+    /* Reset all emotions to neutral baseline first */
+    mob->ai_data->emotion_fear = 25;
+    mob->ai_data->emotion_anger = 25;
+    mob->ai_data->emotion_happiness = 50;
+    mob->ai_data->emotion_sadness = 20;
+    mob->ai_data->emotion_friendship = 40;
+    mob->ai_data->emotion_love = 15;
+    mob->ai_data->emotion_trust = 40;
+    mob->ai_data->emotion_loyalty = 50;
+    mob->ai_data->emotion_curiosity = 40;
+    mob->ai_data->emotion_greed = 35;
+    mob->ai_data->emotion_pride = 30;
+    mob->ai_data->emotion_compassion = 40;
+    mob->ai_data->emotion_envy = 20;
+    mob->ai_data->emotion_courage = 40;
+    mob->ai_data->emotion_excitement = 35;
+
+    /* Apply profile-specific adjustments aligned with behavior thresholds */
+    switch (profile_type) {
+        case EMOTION_PROFILE_AGGRESSIVE:
+            /* High anger/aggression, low trust/friendship
+             * Crosses anger threshold (70) for negative socials
+             * Below trust threshold (30) for trade refusal */
+            mob->ai_data->emotion_anger = 75;      /* HIGH - triggers negative socials */
+            mob->ai_data->emotion_trust = 25;      /* LOW - refuses service */
+            mob->ai_data->emotion_friendship = 25; /* LOW - less likely to group */
+            mob->ai_data->emotion_loyalty = 25;    /* LOW - abandons groups easily */
+            mob->ai_data->emotion_compassion = 15; /* Very low empathy */
+            mob->ai_data->emotion_greed = 75;      /* HIGH - expensive trades */
+            mob->ai_data->emotion_courage = 70;    /* HIGH - stands ground */
+            mob->ai_data->emotion_happiness = 20;  /* Low happiness */
+            break;
+
+        case EMOTION_PROFILE_DEFENSIVE:
+            /* High fear/caution, low trust
+             * Below trust threshold (30) for trade refusal
+             * High fear affects flee behavior */
+            mob->ai_data->emotion_fear = 70;       /* HIGH - flees earlier */
+            mob->ai_data->emotion_trust = 25;      /* LOW - refuses service */
+            mob->ai_data->emotion_friendship = 35; /* Below high threshold */
+            mob->ai_data->emotion_loyalty = 40;    /* Moderate loyalty */
+            mob->ai_data->emotion_courage = 20;    /* LOW - cautious */
+            mob->ai_data->emotion_curiosity = 25;  /* LOW - avoids quests */
+            mob->ai_data->emotion_sadness = 50;    /* Moderate sadness */
+            break;
+
+        case EMOTION_PROFILE_BALANCED:
+            /* Moderate all emotions - crosses no extreme thresholds
+             * Good for general-purpose NPCs */
+            mob->ai_data->emotion_anger = 40;
+            mob->ai_data->emotion_happiness = 55;
+            mob->ai_data->emotion_trust = 50;      /* Mid-range - normal prices */
+            mob->ai_data->emotion_friendship = 55; /* Moderate - normal grouping */
+            mob->ai_data->emotion_loyalty = 55;    /* Moderate - normal group behavior */
+            mob->ai_data->emotion_greed = 40;      /* Moderate - fair prices */
+            mob->ai_data->emotion_curiosity = 50;  /* Moderate - accepts quests */
+            mob->ai_data->emotion_courage = 50;    /* Balanced */
+            break;
+
+        case EMOTION_PROFILE_SENSITIVE:
+            /* High empathy/compassion, low aggression
+             * High friendship/compassion, low anger
+             * Good for healers, helpers, friendly NPCs */
+            mob->ai_data->emotion_compassion = 75; /* HIGH - helpful */
+            mob->ai_data->emotion_friendship = 75; /* HIGH - joins groups easily */
+            mob->ai_data->emotion_trust = 65;      /* HIGH - good prices */
+            mob->ai_data->emotion_loyalty = 75;    /* HIGH - stays in group */
+            mob->ai_data->emotion_happiness = 75;  /* HIGH - positive socials */
+            mob->ai_data->emotion_anger = 15;      /* LOW - not aggressive */
+            mob->ai_data->emotion_greed = 20;      /* LOW - generous */
+            mob->ai_data->emotion_sadness = 30;    /* Moderate */
+            mob->ai_data->emotion_curiosity = 60;  /* Moderate-high */
+            break;
+
+        case EMOTION_PROFILE_CONFIDENT:
+            /* High courage/pride, low fear
+             * Confident leaders, warriors, guardians */
+            mob->ai_data->emotion_courage = 80;    /* Very high - rarely flees */
+            mob->ai_data->emotion_pride = 75;      /* HIGH - proud */
+            mob->ai_data->emotion_fear = 15;       /* LOW - fearless */
+            mob->ai_data->emotion_loyalty = 75;    /* HIGH - stays with group */
+            mob->ai_data->emotion_trust = 65;      /* HIGH - trusting */
+            mob->ai_data->emotion_happiness = 65;  /* Above average */
+            mob->ai_data->emotion_curiosity = 65;  /* Adventurous */
+            mob->ai_data->emotion_friendship = 60; /* Sociable */
+            break;
+
+        case EMOTION_PROFILE_GREEDY:
+            /* High greed/envy, low compassion
+             * Merchants, thieves, selfish characters */
+            mob->ai_data->emotion_greed = 80;      /* Very high - expensive */
+            mob->ai_data->emotion_envy = 75;       /* HIGH - refuses better players */
+            mob->ai_data->emotion_compassion = 15; /* LOW - selfish */
+            mob->ai_data->emotion_friendship = 30; /* LOW - not friendly */
+            mob->ai_data->emotion_loyalty = 30;    /* LOW - self-serving */
+            mob->ai_data->emotion_trust = 35;      /* LOW-moderate */
+            mob->ai_data->emotion_curiosity = 70;  /* HIGH - seeking opportunities */
+            break;
+
+        case EMOTION_PROFILE_LOYAL:
+            /* High loyalty/trust, high friendship
+             * Companions, guards, faithful servants */
+            mob->ai_data->emotion_loyalty = 85;    /* Very high - never abandons */
+            mob->ai_data->emotion_trust = 75;      /* HIGH - great prices */
+            mob->ai_data->emotion_friendship = 80; /* HIGH - joins groups */
+            mob->ai_data->emotion_love = 50;       /* Moderate-high - may follow */
+            mob->ai_data->emotion_compassion = 65; /* HIGH - helpful */
+            mob->ai_data->emotion_courage = 65;    /* Brave */
+            mob->ai_data->emotion_happiness = 65;  /* Content */
+            mob->ai_data->emotion_greed = 20;      /* LOW - fair */
+            break;
+
+        case EMOTION_PROFILE_NEUTRAL:
+        default:
+            /* Already set to neutral baseline - no changes needed */
+            break;
+    }
+
+    /* Store the profile type for reference */
+    mob->ai_data->emotional_profile = profile_type;
+}
+
 /* Initialize mob AI data with defaults for temporary quest master fields */
 void init_mob_ai_data(struct char_data *mob)
 {
@@ -2444,6 +2577,42 @@ void init_mob_ai_data(struct char_data *mob)
         /* Default follow tendency: 20% chance to follow others
          * This provides some following behavior without being too aggressive */
         mob->ai_data->genetics.follow_tendency = 20;
+    }
+
+    /* Initialize emotional_profile to neutral if not set */
+    if (mob->ai_data->emotional_profile < 0 || mob->ai_data->emotional_profile > 7) {
+        mob->ai_data->emotional_profile = EMOTION_PROFILE_NEUTRAL;
+    }
+
+    /* If a specific emotional profile is set, apply it first
+     * This provides consistent personality archetypes aligned with behavior thresholds */
+    if (mob->ai_data->emotional_profile != EMOTION_PROFILE_NEUTRAL) {
+        apply_emotional_profile(mob, mob->ai_data->emotional_profile);
+
+        /* Still apply genetics-based adjustments on top of the profile
+         * This allows fine-tuning of profile-based emotions */
+        if (mob->ai_data->genetics.wimpy_tendency > 0) {
+            mob->ai_data->emotion_fear =
+                MIN(100, mob->ai_data->emotion_fear + mob->ai_data->genetics.wimpy_tendency / 4);
+        }
+        if (mob->ai_data->genetics.brave_prevalence > 0) {
+            mob->ai_data->emotion_courage =
+                MIN(100, mob->ai_data->emotion_courage + mob->ai_data->genetics.brave_prevalence / 4);
+        }
+        if (mob->ai_data->genetics.group_tendency > 0) {
+            mob->ai_data->emotion_friendship =
+                MIN(100, mob->ai_data->emotion_friendship + mob->ai_data->genetics.group_tendency / 6);
+            mob->ai_data->emotion_loyalty =
+                MIN(100, mob->ai_data->emotion_loyalty + mob->ai_data->genetics.group_tendency / 4);
+        }
+
+        /* Ensure all emotions stay within bounds after adjustments */
+        mob->ai_data->emotion_fear = URANGE(0, mob->ai_data->emotion_fear, 100);
+        mob->ai_data->emotion_courage = URANGE(0, mob->ai_data->emotion_courage, 100);
+        mob->ai_data->emotion_friendship = URANGE(0, mob->ai_data->emotion_friendship, 100);
+        mob->ai_data->emotion_loyalty = URANGE(0, mob->ai_data->emotion_loyalty, 100);
+
+        return; /* Profile applied, skip genetics-based initialization */
     }
 
     /* Initialize emotions based on genetics and alignment

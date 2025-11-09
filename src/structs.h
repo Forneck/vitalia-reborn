@@ -1028,6 +1028,16 @@ struct mob_wishlist_item {
 #define ENTITY_TYPE_PLAYER 0
 #define ENTITY_TYPE_MOB 1
 
+/* Emotional profiles for mob personality initialization */
+#define EMOTION_PROFILE_NEUTRAL 0    /**< Neutral profile - balanced emotions (default) */
+#define EMOTION_PROFILE_AGGRESSIVE 1 /**< Aggressive profile - high anger, low trust/friendship */
+#define EMOTION_PROFILE_DEFENSIVE 2  /**< Defensive profile - high fear/caution, low trust */
+#define EMOTION_PROFILE_BALANCED 3   /**< Balanced profile - moderate all emotions */
+#define EMOTION_PROFILE_SENSITIVE 4  /**< Sensitive profile - high empathy, low aggression */
+#define EMOTION_PROFILE_CONFIDENT 5  /**< Confident profile - high courage, low fear */
+#define EMOTION_PROFILE_GREEDY 6     /**< Greedy profile - high greed/envy, low compassion */
+#define EMOTION_PROFILE_LOYAL 7      /**< Loyal profile - high loyalty/trust, high friendship */
+
 /* Interaction types for emotion memory */
 #define INTERACT_ATTACKED 0
 #define INTERACT_HEALED 1
@@ -1145,6 +1155,9 @@ struct mob_ai_data {
     int emotion_pain;        /* Pain level - physical suffering from violent actions */
     int emotion_horror;      /* Horror level - extreme fear/revulsion to disturbing acts */
     int emotion_humiliation; /* Humiliation level - degradation and loss of dignity */
+
+    /* Emotional profile type for personality consistency */
+    int emotional_profile; /* Emotional profile type (EMOTION_PROFILE_*) - affects baseline emotions */
 
     /* Temporary Quest Master functionality */
     bool is_temp_questmaster; /* True if this mob is acting as temporary quest master */
