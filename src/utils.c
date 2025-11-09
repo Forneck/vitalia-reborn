@@ -4629,7 +4629,7 @@ void update_mob_emotion_attacked(struct char_data *mob, struct char_data *attack
 
     /* Add to emotion memory */
     if (attacker) {
-        add_emotion_memory(mob, attacker, INTERACT_ATTACKED, 0);
+        add_emotion_memory(mob, attacker, INTERACT_ATTACKED, 0, NULL);
     }
 }
 
@@ -4688,7 +4688,7 @@ void update_mob_emotion_healed(struct char_data *mob, struct char_data *healer)
 
     /* Add to emotion memory */
     if (healer) {
-        add_emotion_memory(mob, healer, INTERACT_HEALED, 0);
+        add_emotion_memory(mob, healer, INTERACT_HEALED, 0, NULL);
     }
 }
 
@@ -4718,7 +4718,7 @@ void update_mob_emotion_ally_died(struct char_data *mob, struct char_data *dead_
 
     /* Add to emotion memory - this is a MAJOR event */
     if (dead_ally) {
-        add_emotion_memory(mob, dead_ally, INTERACT_ALLY_DIED, 1);
+        add_emotion_memory(mob, dead_ally, INTERACT_ALLY_DIED, 1, NULL);
     }
 }
 
@@ -4744,7 +4744,7 @@ void update_mob_emotion_received_item(struct char_data *mob, struct char_data *g
 
     /* Add to emotion memory */
     if (giver) {
-        add_emotion_memory(mob, giver, INTERACT_RECEIVED_ITEM, 0);
+        add_emotion_memory(mob, giver, INTERACT_RECEIVED_ITEM, 0, NULL);
     }
 }
 
@@ -4778,7 +4778,7 @@ void update_mob_emotion_stolen_from(struct char_data *mob, struct char_data *thi
 
     /* Add to emotion memory - theft is a MAJOR negative event */
     if (thief) {
-        add_emotion_memory(mob, thief, INTERACT_STOLEN_FROM, 1);
+        add_emotion_memory(mob, thief, INTERACT_STOLEN_FROM, 1, NULL);
     }
 }
 
@@ -4814,7 +4814,7 @@ void update_mob_emotion_rescued(struct char_data *mob, struct char_data *rescuer
 
     /* Add to emotion memory - rescue is a MAJOR positive event */
     if (rescuer) {
-        add_emotion_memory(mob, rescuer, INTERACT_RESCUED, 1);
+        add_emotion_memory(mob, rescuer, INTERACT_RESCUED, 1, NULL);
     }
 }
 
@@ -4844,7 +4844,7 @@ void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assist
 
     /* Add to emotion memory */
     if (assistant) {
-        add_emotion_memory(mob, assistant, INTERACT_ASSISTED, 0);
+        add_emotion_memory(mob, assistant, INTERACT_ASSISTED, 0, NULL);
     }
 }
 
@@ -5054,7 +5054,7 @@ void mob_mourn_death(struct char_data *mob, struct char_data *deceased)
  * @param interaction_type Type of interaction (INTERACT_*)
  * @param major_event 1 for major events (rescue, theft, ally death), 0 for normal
  */
-void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event)
+void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event, const char *social_name)
 {
     struct emotion_memory *memory;
     int entity_type;
@@ -5125,14 +5125,47 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
     memory->interaction_type = interaction_type;
     memory->major_event = major_event;
     memory->timestamp = time(0);
+    
+    /* Store social name if provided (for social interactions) */
+    if (social_name && *social_name) {
+        strncpy(memory->social_name, social_name, sizeof(memory->social_name) - 1);
+        memory->social_name[sizeof(memory->social_name) - 1] = '\0';
+    } else {
+        memory->social_name[0] = '\0';
+    }
 
-    /* Store simplified emotion snapshot */
-    memory->trust_level =
-        mob->ai_data->emotion_trust - CONFIG_EMOTION_MEMORY_BASELINE_OFFSET; /* Convert to -50 to +50 range */
-    memory->friendship_level =
-        mob->ai_data->emotion_friendship - CONFIG_EMOTION_MEMORY_BASELINE_OFFSET; /* Convert to -50 to +50 range */
+    /* Store complete emotion snapshot - all 20 emotions */
+    /* Basic emotions */
     memory->fear_level = mob->ai_data->emotion_fear;
     memory->anger_level = mob->ai_data->emotion_anger;
+    memory->happiness_level = mob->ai_data->emotion_happiness;
+    memory->sadness_level = mob->ai_data->emotion_sadness;
+    
+    /* Social emotions */
+    memory->friendship_level = mob->ai_data->emotion_friendship;
+    memory->love_level = mob->ai_data->emotion_love;
+    memory->trust_level = mob->ai_data->emotion_trust;
+    memory->loyalty_level = mob->ai_data->emotion_loyalty;
+    
+    /* Motivational emotions */
+    memory->curiosity_level = mob->ai_data->emotion_curiosity;
+    memory->greed_level = mob->ai_data->emotion_greed;
+    memory->pride_level = mob->ai_data->emotion_pride;
+    
+    /* Empathic emotions */
+    memory->compassion_level = mob->ai_data->emotion_compassion;
+    memory->envy_level = mob->ai_data->emotion_envy;
+    
+    /* Arousal emotions */
+    memory->courage_level = mob->ai_data->emotion_courage;
+    memory->excitement_level = mob->ai_data->emotion_excitement;
+    
+    /* Negative/aversive emotions */
+    memory->disgust_level = mob->ai_data->emotion_disgust;
+    memory->shame_level = mob->ai_data->emotion_shame;
+    memory->pain_level = mob->ai_data->emotion_pain;
+    memory->horror_level = mob->ai_data->emotion_horror;
+    memory->humiliation_level = mob->ai_data->emotion_humiliation;
 
     /* Advance circular buffer index */
     mob->ai_data->memory_index = (mob->ai_data->memory_index + 1) % EMOTION_MEMORY_SIZE;
@@ -5798,6 +5831,6 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
             interaction_type = INTERACT_SOCIAL_POSITIVE;
         }
 
-        add_emotion_memory(mob, actor, interaction_type, is_major);
+        add_emotion_memory(mob, actor, interaction_type, is_major, social_name);
     }
 }

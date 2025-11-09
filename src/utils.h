@@ -153,7 +153,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
 
 /* Emotion memory system functions */
-void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event);
+void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event, const char *social_name);
 int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
 void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
 
@@ -1326,6 +1326,20 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD config_info.emotion_config.display_sadness_threshold
 #define CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD config_info.emotion_config.display_horror_threshold
 #define CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD config_info.emotion_config.display_pain_threshold
+#define CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD config_info.emotion_config.display_compassion_threshold
+#define CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD config_info.emotion_config.display_courage_threshold
+#define CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD config_info.emotion_config.display_curiosity_threshold
+#define CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD config_info.emotion_config.display_disgust_threshold
+#define CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD config_info.emotion_config.display_envy_threshold
+#define CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD config_info.emotion_config.display_excitement_threshold
+#define CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD config_info.emotion_config.display_friendship_threshold
+#define CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD config_info.emotion_config.display_greed_threshold
+#define CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD config_info.emotion_config.display_humiliation_threshold
+#define CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD config_info.emotion_config.display_love_threshold
+#define CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD config_info.emotion_config.display_loyalty_threshold
+#define CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD config_info.emotion_config.display_pride_threshold
+#define CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD config_info.emotion_config.display_shame_threshold
+#define CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD config_info.emotion_config.display_trust_threshold
 
 /** Combat flee behavior thresholds */
 #define CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD config_info.emotion_config.flee_fear_low_threshold
