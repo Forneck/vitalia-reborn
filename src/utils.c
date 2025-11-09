@@ -5327,19 +5327,18 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * Includes: friendly gestures, affectionate actions, appreciation, happy/playful actions
      */
     const char *positive_socials[] = {
-        "bow",      "smile",    "nod",      "wave",     "applaud",  "clap",     "greet",    "wink",     "grin",
-        "comfort",  "pat",      "hug",      "cuddle",   "kiss",     "nuzzle",   "squeeze",  "stroke",   "snuggle",
-        "thank",    "worship",  "giggle",   "chuckle",  "laughs",   "cackle",   "bounce",   "dance",    "sing",
-        "tango",    "whistle",  "yodel",    "curtsey",  "salute",   "admire",   "welcome",  "handshake", "highfive",
-        NULL};
+        "bow",     "smile",   "nod",    "wave",    "applaud",   "clap",     "greet",  "wink",    "grin",    "comfort",
+        "pat",     "hug",     "cuddle", "kiss",    "nuzzle",    "squeeze",  "stroke", "snuggle", "thank",   "worship",
+        "giggle",  "chuckle", "laughs", "cackle",  "bounce",    "dance",    "sing",   "tango",   "whistle", "yodel",
+        "curtsey", "salute",  "admire", "welcome", "handshake", "highfive", NULL};
 
     /* Negative socials that increase anger, decrease trust/friendship
      * Emotion changes: +anger, -trust, -friendship, -happiness
      * Includes: hostile expressions, aggressive actions, verbal hostility
      */
-    const char *negative_socials[] = {"frown",  "glare",   "spit",  "accuse", "curse",   "taunt", "snicker",
-                                      "slap",   "punch",   "snap",  "snarl",  "growl",   "fume",  "sneer",
-                                      "eye",    "jeer",    "mock",  "ignore", "threaten", NULL};
+    const char *negative_socials[] = {"frown", "glare", "spit", "accuse", "curse",    "taunt", "snicker",
+                                      "slap",  "punch", "snap", "snarl",  "growl",    "fume",  "sneer",
+                                      "eye",   "jeer",  "mock", "ignore", "threaten", NULL};
 
     /* Neutral/curious socials that increase curiosity
      * Emotion changes: +curiosity, slight +friendship if already friendly
@@ -5354,7 +5353,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * Actor showing fear/submission makes mob feel emboldened
      * Includes: fear/submission actions, sadness expressions
      */
-    const char *fearful_socials[] = {"beg", "grovel", "cringe", "cry", "sulk", "sigh", "whine", "cower", "whimper", NULL};
+    const char *fearful_socials[] = {"beg",  "grovel", "cringe", "cry",     "sulk",
+                                     "sigh", "whine",  "cower",  "whimper", NULL};
 
     /* Severely inappropriate socials - context dependent responses (not fully blocked)
      * Sexual: Positive if very high intimacy/trust (love ≥80, trust ≥70), negative otherwise
@@ -5364,20 +5364,23 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      *   - Moderate: +curiosity, +shame, -trust
      *   - Low/none: +disgust, +horror, +anger, +shame, +humiliation, -trust, -friendship
      */
-    const char *blocked_socials[] = {"fondle", "grope", "french", "sex", "seduce", "despine", "shiskabob", "vice", NULL};
+    const char *blocked_socials[] = {"fondle",  "grope",     "french", "sex", "seduce",
+                                     "despine", "shiskabob", "vice",   NULL};
 
     /* Disgusting socials - trigger disgust and anger
      * Emotion changes: +disgust, +anger, -trust, -friendship, -happiness
      * Includes: gross/offensive actions
      */
-    const char *disgusting_socials[] = {"drool", "puke", "burp", "fart", "licks", "moan", "sniff", "earlick", "pant", "moon", "booger", NULL};
+    const char *disgusting_socials[] = {"drool", "puke",    "burp", "fart", "licks",  "moan",
+                                        "sniff", "earlick", "pant", "moon", "booger", NULL};
 
     /* Violent socials - trigger pain, fear, anger
      * Emotion changes: +pain, +anger, +fear, -trust, -friendship
      * Wimpy mobs: extra +fear; Brave mobs: extra +anger, +courage
      * Includes: physical aggression
      */
-    const char *violent_socials[] = {"spank", "tackle", "snowball", "needle", "shock", "whip", "vampire", "haircut", NULL};
+    const char *violent_socials[] = {"spank", "tackle",  "snowball", "needle", "shock",
+                                     "whip",  "vampire", "haircut",  NULL};
 
     /* Humiliating socials - trigger shame and humiliation
      * Emotion changes: +humiliation, +shame, +anger, -trust, -friendship, -pride
