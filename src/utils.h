@@ -153,7 +153,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
 
 /* Emotion memory system functions */
-void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event);
+void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event, const char *social_name);
 int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
 void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
 
