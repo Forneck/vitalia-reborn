@@ -1263,6 +1263,8 @@ int enter_player_game(struct descriptor_data *d)
             load_room = r_hometown_2;
         else if (GET_HOMETOWN(d->character) == 3)
             load_room = r_hometown_3;
+        else if (GET_HOMETOWN(d->character) == 4)
+            load_room = r_hometown_4;
         else
             load_room = r_hometown_1;
     }
@@ -1270,6 +1272,41 @@ int enter_player_game(struct descriptor_data *d)
         load_room = r_frozen_start_room;
     if (PLR_FLAGGED(d->character, PLR_GHOST))
         load_room = r_dead_start_room;
+
+    /* Check if living player has been offline long enough to be fully refreshed */
+    /* Skip if player is frozen, ghost, or has custom loadroom set */
+    if (!PLR_FLAGGED(d->character, PLR_GHOST) && !PLR_FLAGGED(d->character, PLR_FROZEN) &&
+        !PLR_FLAGGED(d->character, PLR_LOADROOM)) {
+        time_t offline_time = time(0) - d->character->player.time.logon;
+        time_t refresh_time = CONFIG_MAX_PC_CORPSE_TIME * SECS_PER_MUD_HOUR;
+
+        if (offline_time >= refresh_time) {
+            /* Player has been offline long enough - refresh and load at hometown */
+
+            /* Restore full HP, Mana, Move */
+            GET_HIT(d->character) = GET_MAX_HIT(d->character);
+            GET_MANA(d->character) = GET_MAX_MANA(d->character);
+            GET_MOVE(d->character) = GET_MAX_MOVE(d->character);
+
+            /* Set hunger and thirst to comfortable levels */
+            if (GET_LEVEL(d->character) < LVL_IMMORT) {
+                GET_COND(d->character, HUNGER) = 24;
+                GET_COND(d->character, THIRST) = 24;
+            }
+
+            /* Load at hometown */
+            if (GET_HOMETOWN(d->character) == 1)
+                load_room = r_hometown_1;
+            else if (GET_HOMETOWN(d->character) == 2)
+                load_room = r_hometown_2;
+            else if (GET_HOMETOWN(d->character) == 3)
+                load_room = r_hometown_3;
+            else if (GET_HOMETOWN(d->character) == 4)
+                load_room = r_hometown_4;
+            else
+                load_room = r_hometown_1;
+        }
+    }
     /* copyover */
     d->character->script_id = GET_IDNUM(d->character);
     /* find_char helper */
@@ -1929,6 +1966,9 @@ void nanny(struct descriptor_data *d, char *arg)
                 case 3:
                     write_to_output(d, "Thewster\r\n");
                     break;
+                case 4:
+                    write_to_output(d, "Bhogavati\r\n");
+                    break;
             }
 
             /* Finalize rebegin process */
@@ -2063,6 +2103,7 @@ void hometown_menu(struct descriptor_data *d)
     write_to_output(d, "\r\n1) Midgaard\r\n");
     write_to_output(d, "2) Nova Thalos\r\n");
     write_to_output(d, "3) Thewster\r\n");
+    write_to_output(d, "4) Bhogavati\r\n");
 }
 
 int parse_hometown(char arg)
@@ -2075,6 +2116,8 @@ int parse_hometown(char arg)
             return 2;
         case '3':
             return 3;
+        case '4':
+            return 4;
         default:
             return 0;
     }

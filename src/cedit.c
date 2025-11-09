@@ -125,14 +125,17 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->room_nums.donation_room_1 = CONFIG_DON_ROOM_1;
     OLC_CONFIG(d)->room_nums.donation_room_2 = CONFIG_DON_ROOM_2;
     OLC_CONFIG(d)->room_nums.donation_room_3 = CONFIG_DON_ROOM_3;
+    OLC_CONFIG(d)->room_nums.donation_room_4 = CONFIG_DON_ROOM_4;
 
     OLC_CONFIG(d)->room_nums.dead_start_room = CONFIG_DEAD_START;
     OLC_CONFIG(d)->room_nums.hometown_1 = CONFIG_HOMETOWN_1;
     OLC_CONFIG(d)->room_nums.hometown_2 = CONFIG_HOMETOWN_2;
     OLC_CONFIG(d)->room_nums.hometown_3 = CONFIG_HOMETOWN_3;
+    OLC_CONFIG(d)->room_nums.hometown_4 = CONFIG_HOMETOWN_4;
     OLC_CONFIG(d)->room_nums.ress_room_1 = CONFIG_RESS_ROOM_1;
     OLC_CONFIG(d)->room_nums.ress_room_2 = CONFIG_RESS_ROOM_2;
     OLC_CONFIG(d)->room_nums.ress_room_3 = CONFIG_RESS_ROOM_3;
+    OLC_CONFIG(d)->room_nums.ress_room_4 = CONFIG_RESS_ROOM_4;
 
     /* Game Operation */
     OLC_CONFIG(d)->operation.DFLT_PORT = CONFIG_DFLT_PORT;
@@ -302,13 +305,16 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_DON_ROOM_1 = OLC_CONFIG(d)->room_nums.donation_room_1;
     CONFIG_DON_ROOM_2 = OLC_CONFIG(d)->room_nums.donation_room_2;
     CONFIG_DON_ROOM_3 = OLC_CONFIG(d)->room_nums.donation_room_3;
+    CONFIG_DON_ROOM_4 = OLC_CONFIG(d)->room_nums.donation_room_4;
     CONFIG_DEAD_START = OLC_CONFIG(d)->room_nums.dead_start_room;
     CONFIG_HOMETOWN_1 = OLC_CONFIG(d)->room_nums.hometown_1;
     CONFIG_HOMETOWN_2 = OLC_CONFIG(d)->room_nums.hometown_2;
     CONFIG_HOMETOWN_3 = OLC_CONFIG(d)->room_nums.hometown_3;
+    CONFIG_HOMETOWN_4 = OLC_CONFIG(d)->room_nums.hometown_4;
     CONFIG_RESS_ROOM_1 = OLC_CONFIG(d)->room_nums.ress_room_1;
     CONFIG_RESS_ROOM_2 = OLC_CONFIG(d)->room_nums.ress_room_2;
     CONFIG_RESS_ROOM_3 = OLC_CONFIG(d)->room_nums.ress_room_3;
+    CONFIG_RESS_ROOM_4 = OLC_CONFIG(d)->room_nums.ress_room_4;
 
     /* Game Operation */
     CONFIG_DFLT_PORT = OLC_CONFIG(d)->operation.DFLT_PORT;
@@ -681,34 +687,38 @@ int save_config(IDXTYPE nowhere)
             "dead_start_room = %d\n\n",
             CONFIG_DEAD_START);
 
-    fprintf(fl,
-            "* The virtual numbers of the donation rooms.  Note: Add donation rooms\n"
-            "* sequentially (1 & 2 before 3). If you don't, you might not be able to\n"
-            "* donate. Use -1 for 'no such room'.\n"
-            "donation_room_1 = %d\n"
-            "donation_room_2 = %d\n"
-            "donation_room_3 = %d\n\n",
-            CONFIG_DON_ROOM_1 != NOWHERE ? CONFIG_DON_ROOM_1 : -1,
-            CONFIG_DON_ROOM_2 != NOWHERE ? CONFIG_DON_ROOM_2 : -1,
-            CONFIG_DON_ROOM_3 != NOWHERE ? CONFIG_DON_ROOM_3 : -1);
+    fprintf(
+        fl,
+        "* The virtual numbers of the donation rooms.  Note: Add donation rooms\n"
+        "* sequentially (1 & 2 before 3, 3 before 4). If you don't, you might not be able to\n"
+        "* donate. Use -1 for 'no such room'.\n"
+        "donation_room_1 = %d\n"
+        "donation_room_2 = %d\n"
+        "donation_room_3 = %d\n"
+        "donation_room_4 = %d\n\n",
+        CONFIG_DON_ROOM_1 != NOWHERE ? CONFIG_DON_ROOM_1 : -1, CONFIG_DON_ROOM_2 != NOWHERE ? CONFIG_DON_ROOM_2 : -1,
+        CONFIG_DON_ROOM_3 != NOWHERE ? CONFIG_DON_ROOM_3 : -1, CONFIG_DON_ROOM_4 != NOWHERE ? CONFIG_DON_ROOM_4 : -1);
 
-    fprintf(fl,
-            "* The virtual numbers of the hometowns rooms. Use -1 for 'no such room'.\n"
-            "hometown_1 = %d\n"
-            "hometown_2 = %d\n"
-            "hometown_3 = %d\n",
-            CONFIG_HOMETOWN_1 != NOWHERE ? CONFIG_HOMETOWN_1 : -1,
-            CONFIG_HOMETOWN_2 != NOWHERE ? CONFIG_HOMETOWN_2 : -1,
-            CONFIG_HOMETOWN_3 != NOWHERE ? CONFIG_HOMETOWN_3 : -1);
+    fprintf(
+        fl,
+        "* The virtual numbers of the hometowns rooms. Use -1 for 'no such room'.\n"
+        "hometown_1 = %d\n"
+        "hometown_2 = %d\n"
+        "hometown_3 = %d\n"
+        "hometown_4 = %d\n",
+        CONFIG_HOMETOWN_1 != NOWHERE ? CONFIG_HOMETOWN_1 : -1, CONFIG_HOMETOWN_2 != NOWHERE ? CONFIG_HOMETOWN_2 : -1,
+        CONFIG_HOMETOWN_3 != NOWHERE ? CONFIG_HOMETOWN_3 : -1, CONFIG_HOMETOWN_4 != NOWHERE ? CONFIG_HOMETOWN_4 : -1);
 
     fprintf(fl,
             "* The virtual numbers of the corpses rooms. Use -1 for 'no such room'.\n"
             "ress_room_1 = %d\n"
             "ress_room_2 = %d\n"
-            "ress_room_3 = %d\n",
+            "ress_room_3 = %d\n"
+            "ress_room_4 = %d\n",
             CONFIG_RESS_ROOM_1 != NOWHERE ? CONFIG_RESS_ROOM_1 : -1,
             CONFIG_RESS_ROOM_2 != NOWHERE ? CONFIG_RESS_ROOM_2 : -1,
-            CONFIG_RESS_ROOM_3 != NOWHERE ? CONFIG_RESS_ROOM_3 : -1);
+            CONFIG_RESS_ROOM_3 != NOWHERE ? CONFIG_RESS_ROOM_3 : -1,
+            CONFIG_RESS_ROOM_4 != NOWHERE ? CONFIG_RESS_ROOM_4 : -1);
 
     fprintf(fl, "\n\n\n* [ Game Operation Options ]\n");
 
@@ -1077,21 +1087,26 @@ static void cedit_disp_room_numbers(struct descriptor_data *d)
         "%sE%s) Hometown #1   : %s%d\r\n"
         "%sF%s) Hometown #2   : %s%d\r\n"
         "%sG%s) Hometown #3   : %s%d\r\n"
+        "%sH%s) Hometown #4   : %s%d\r\n"
         "%s1%s) Donation Room #1    : %s%d\r\n"
         "%s2%s) Donation Room #2    : %s%d\r\n"
         "%s3%s) Donation Room #3    : %s%d\r\n"
+        "%sI%s) Donation Room #4    : %s%d\r\n"
         "%s4%s) Ress Room #1    : %s%d\r\n"
         "%s5%s) Ress Room #2    : %s%d\r\n"
         "%s6%s) Ress Room #3    : %s%d\r\n"
+        "%sJ%s) Ress Room #4    : %s%d\r\n"
         "%sQ%s) Exit To The Main Menu\r\n"
         "Enter your choice : ",
         grn, nrm, cyn, OLC_CONFIG(d)->room_nums.newbie_start_room, grn, nrm, cyn,
         OLC_CONFIG(d)->room_nums.immort_start_room, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.frozen_start_room, grn, nrm,
         cyn, OLC_CONFIG(d)->room_nums.dead_start_room, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.hometown_1, grn, nrm,
         cyn, OLC_CONFIG(d)->room_nums.hometown_2, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.hometown_3, grn, nrm, cyn,
-        OLC_CONFIG(d)->room_nums.donation_room_1, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.donation_room_2, grn, nrm,
-        cyn, OLC_CONFIG(d)->room_nums.donation_room_3, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_1, grn, nrm,
-        cyn, OLC_CONFIG(d)->room_nums.ress_room_2, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_3, grn, nrm);
+        OLC_CONFIG(d)->room_nums.hometown_4, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.donation_room_1, grn, nrm, cyn,
+        OLC_CONFIG(d)->room_nums.donation_room_2, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.donation_room_3, grn, nrm,
+        cyn, OLC_CONFIG(d)->room_nums.donation_room_4, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_1, grn, nrm,
+        cyn, OLC_CONFIG(d)->room_nums.ress_room_2, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_3, grn, nrm, cyn,
+        OLC_CONFIG(d)->room_nums.ress_room_4, grn, nrm);
 
     OLC_MODE(d) = CEDIT_ROOM_NUMBERS_MENU;
 }
@@ -1226,6 +1241,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.display_sadness_threshold = 80;
             OLC_CONFIG(d)->emotion_config.display_horror_threshold = 90;
             OLC_CONFIG(d)->emotion_config.display_pain_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.display_compassion_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 60;  /* Show courage more */
+            OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.display_disgust_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_envy_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.display_excitement_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_friendship_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.display_greed_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_humiliation_threshold = 85;
+            OLC_CONFIG(d)->emotion_config.display_love_threshold = 85;
+            OLC_CONFIG(d)->emotion_config.display_loyalty_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_pride_threshold = 60;  /* Show pride more */
+            OLC_CONFIG(d)->emotion_config.display_shame_threshold = 85;
+            OLC_CONFIG(d)->emotion_config.display_trust_threshold = 80;
 
             /* Flee behavior - reduced fear impact, increased courage bonus */
             OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = 60;
@@ -1278,6 +1307,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.display_sadness_threshold = 65;
             OLC_CONFIG(d)->emotion_config.display_horror_threshold = 70;
             OLC_CONFIG(d)->emotion_config.display_pain_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_compassion_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 80;  /* Show courage less */
+            OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_disgust_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_envy_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_excitement_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_friendship_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_greed_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_humiliation_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_love_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_loyalty_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_pride_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_shame_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_trust_threshold = 70;
 
             /* Flee behavior - increased fear impact, reduced courage */
             OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = 40;
@@ -1329,6 +1372,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.display_sadness_threshold = 70;
             OLC_CONFIG(d)->emotion_config.display_horror_threshold = 80;
             OLC_CONFIG(d)->emotion_config.display_pain_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_compassion_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_disgust_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_envy_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_excitement_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_friendship_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_greed_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_humiliation_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_love_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_loyalty_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_pride_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_shame_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_trust_threshold = 70;
 
             OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = 50;
             OLC_CONFIG(d)->emotion_config.flee_fear_high_threshold = 70;
@@ -1378,6 +1435,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.display_sadness_threshold = 50;
             OLC_CONFIG(d)->emotion_config.display_horror_threshold = 60;
             OLC_CONFIG(d)->emotion_config.display_pain_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_compassion_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_disgust_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_envy_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_excitement_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_friendship_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_greed_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_humiliation_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_love_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_loyalty_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_pride_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_shame_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.display_trust_threshold = 50;
 
             /* Flee behavior - moderate */
             OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = 45;
@@ -1824,6 +1895,24 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case '6':
                     write_to_output(d, "Enter the vnum for ress room #3 : ");
                     OLC_MODE(d) = CEDIT_RESS_ROOM_3;
+                    return;
+
+                case 'i':
+                case 'I':
+                    write_to_output(d, "Enter the vnum for donation room #4 : ");
+                    OLC_MODE(d) = CEDIT_DONATION_ROOM_4;
+                    return;
+
+                case 'j':
+                case 'J':
+                    write_to_output(d, "Enter the vnum for ress room #4 : ");
+                    OLC_MODE(d) = CEDIT_RESS_ROOM_4;
+                    return;
+
+                case 'h':
+                case 'H':
+                    write_to_output(d, "Enter the room's vnum for hometown 4 : ");
+                    OLC_MODE(d) = CEDIT_HOMETOWN_4;
                     return;
 
                 case 'q':
@@ -2729,6 +2818,21 @@ void cedit_parse(struct descriptor_data *d, char *arg)
             }
             break;
 
+        case CEDIT_DONATION_ROOM_4:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter the vnum for donation room #4 : ");
+            } else if (real_room(atoi(arg)) == NOWHERE) {
+                write_to_output(d,
+                                "That room doesn't exist!\r\n"
+                                "Enter the vnum for donation room #4 : ");
+            } else {
+                OLC_CONFIG(d)->room_nums.donation_room_4 = atoi(arg);
+                cedit_disp_room_numbers(d);
+            }
+            break;
+
         case CEDIT_RESS_ROOM_1:
             if (!*arg) {
                 write_to_output(d,
@@ -2773,6 +2877,21 @@ void cedit_parse(struct descriptor_data *d, char *arg)
             }
             break;
 
+        case CEDIT_RESS_ROOM_4:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter the vnum for ress room #4 : ");
+            } else if (real_room(atoi(arg)) == NOWHERE) {
+                write_to_output(d,
+                                "That room doesn't exist!\r\n"
+                                "Enter the vnum for ress room #4 : ");
+            } else {
+                OLC_CONFIG(d)->room_nums.ress_room_4 = atoi(arg);
+                cedit_disp_room_numbers(d);
+            }
+            break;
+
         case CEDIT_HOMETOWN_1:
             if (!*arg) {
                 write_to_output(d,
@@ -2813,6 +2932,21 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                                 "Enter the vnum for hometown #3 : ");
             } else {
                 OLC_CONFIG(d)->room_nums.hometown_3 = atoi(arg);
+                cedit_disp_room_numbers(d);
+            }
+            break;
+
+        case CEDIT_HOMETOWN_4:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter the vnum for hometown #4 : ");
+            } else if (real_room(atoi(arg)) == NOWHERE) {
+                write_to_output(d,
+                                "That room doesn't exist!\r\n"
+                                "Enter the vnum for hometown #4 : ");
+            } else {
+                OLC_CONFIG(d)->room_nums.hometown_4 = atoi(arg);
                 cedit_disp_room_numbers(d);
             }
             break;

@@ -632,6 +632,11 @@ void shopping_buy(char *arg, struct char_data *ch, struct char_data *keeper, int
 
     send_to_char(ch, "Agora voce tem %s.\r\n", tempstr);
 
+    /* Emotion trigger: Fair trade (Economic Action 2.5) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && bought > 0) {
+        update_mob_emotion_fair_trade(keeper, ch);
+    }
+
     save_shop_nonnative(shop_nr, keeper);
     save_char(ch);
 }
@@ -824,6 +829,16 @@ void shopping_sell(char *arg, struct char_data *ch, struct char_data *keeper, in
     do_tell(keeper, tempbuf, cmd_tell, 0);
 
     send_to_char(ch, "O vendedor agora tem %s.\r\n", tempstr);
+
+    /* Emotion triggers: Fair trade and receiving valuables (Economic Action 2.5) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && sold > 0) {
+        update_mob_emotion_fair_trade(keeper, ch);
+
+        /* If selling valuable items (total value > 1000 gold), trigger greed/happiness */
+        if (goldamt >= 1000) {
+            update_mob_emotion_received_valuable(keeper, ch, goldamt);
+        }
+    }
 
     save_shop_nonnative(shop_nr, keeper);
     save_char(ch);

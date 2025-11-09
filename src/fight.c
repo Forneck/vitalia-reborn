@@ -357,7 +357,8 @@ static void make_magic_stone(struct char_data *ch, long target_id)
 
     GET_OBJ_WEIGHT(stone) = 1;
     GET_OBJ_RENT(stone) = 0;
-    GET_OBJ_TIMER(stone) = 0; /* No decay - stone persists until quest completion or player quits */
+    /* Set decay timer to prevent infinite accumulation - 48 ticks (~1 hour at 75 sec/tick) */
+    GET_OBJ_TIMER(stone) = 48;
 
     /* Place stone in the room where mob died - with safety checks */
     if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
@@ -598,6 +599,9 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
                             URANGE(0, witness->ai_data->emotion_happiness + rand_number(5, 15), 100);
                     }
                 }
+            } else if (!IS_NPC(ch) && witness->ai_data) {
+                /* Witnessing player death - new trigger for Environmental 2.2 */
+                update_mob_emotion_witnessed_death(witness, ch, killer);
             }
         }
     }
@@ -605,6 +609,19 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
     /* Check for bounty quest failures - if this mob was a bounty target for someone else */
     if (IS_NPC(ch)) {
         fail_bounty_quest(ch, killer);
+
+        /* Emotion trigger: Quest betrayal if a questmaster is killed (Quest-Related 2.4) */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && killer && GET_MOB_RNUM(ch) != NOBODY && GET_MOB_RNUM(ch) >= 0 &&
+            GET_MOB_RNUM(ch) <= top_of_mobt && mob_index[GET_MOB_RNUM(ch)].func == questmaster) {
+            /* Notify witnesses that a questmaster was killed */
+            struct char_data *witness, *next_witness;
+            for (witness = world[IN_ROOM(ch)].people; witness; witness = next_witness) {
+                next_witness = witness->next_in_room;
+                if (IS_NPC(witness) && witness->ai_data && witness != ch && witness != killer) {
+                    update_mob_emotion_quest_betrayal(witness, killer);
+                }
+            }
+        }
     }
 
     /* Alert Group if Applicable */

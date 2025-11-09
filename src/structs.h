@@ -1039,6 +1039,10 @@ struct mob_wishlist_item {
 #define INTERACT_SOCIAL_NEGATIVE 7
 #define INTERACT_SOCIAL_VIOLENT 8
 #define INTERACT_ALLY_DIED 9
+#define INTERACT_WITNESSED_DEATH 10
+#define INTERACT_QUEST_COMPLETE 11
+#define INTERACT_QUEST_FAIL 12
+#define INTERACT_BETRAYAL 13
 
 struct emotion_memory {
     int entity_type;      /* ENTITY_TYPE_PLAYER or ENTITY_TYPE_MOB */
@@ -1046,11 +1050,40 @@ struct emotion_memory {
     int interaction_type; /* Type of interaction (INTERACT_*) */
     int major_event;      /* 1 for major events (rescue, ally death, theft, extreme violence), 0 for normal */
     time_t timestamp;     /* When the interaction occurred (0 = unused slot) */
-    /* Simplified emotion snapshot - only track key emotions for memory efficiency (4 emotions vs 20) */
-    sh_int trust_level;      /* Trust at time of interaction (-50 to +50 range) */
-    sh_int friendship_level; /* Friendship at time of interaction (-50 to +50 range) */
-    sh_int fear_level;       /* Fear at time of interaction (0-100) */
-    sh_int anger_level;      /* Anger at time of interaction (0-100) */
+    char social_name[20]; /* Name of the social command if interaction was social (empty string otherwise) */
+
+    /* Complete emotion snapshot - track all 20 emotions to see how each interaction affected them */
+    /* Basic emotions */
+    sh_int fear_level;      /* Fear at time of interaction (0-100) */
+    sh_int anger_level;     /* Anger at time of interaction (0-100) */
+    sh_int happiness_level; /* Happiness at time of interaction (0-100) */
+    sh_int sadness_level;   /* Sadness at time of interaction (0-100) */
+
+    /* Social emotions */
+    sh_int friendship_level; /* Friendship at time of interaction (0-100) */
+    sh_int love_level;       /* Love at time of interaction (0-100) */
+    sh_int trust_level;      /* Trust at time of interaction (0-100) */
+    sh_int loyalty_level;    /* Loyalty at time of interaction (0-100) */
+
+    /* Motivational emotions */
+    sh_int curiosity_level; /* Curiosity at time of interaction (0-100) */
+    sh_int greed_level;     /* Greed at time of interaction (0-100) */
+    sh_int pride_level;     /* Pride at time of interaction (0-100) */
+
+    /* Empathic emotions */
+    sh_int compassion_level; /* Compassion at time of interaction (0-100) */
+    sh_int envy_level;       /* Envy at time of interaction (0-100) */
+
+    /* Arousal emotions */
+    sh_int courage_level;    /* Courage at time of interaction (0-100) */
+    sh_int excitement_level; /* Excitement at time of interaction (0-100) */
+
+    /* Negative/aversive emotions */
+    sh_int disgust_level;     /* Disgust at time of interaction (0-100) */
+    sh_int shame_level;       /* Shame at time of interaction (0-100) */
+    sh_int pain_level;        /* Pain at time of interaction (0-100) */
+    sh_int horror_level;      /* Horror at time of interaction (0-100) */
+    sh_int humiliation_level; /* Humiliation at time of interaction (0-100) */
 };
 
 struct mob_ai_data {
@@ -1682,13 +1715,16 @@ struct room_numbers {
     room_vnum donation_room_1;   /**< vnum of donation room #1.            */
     room_vnum donation_room_2;   /**< vnum of donation room #2.            */
     room_vnum donation_room_3;   /**< vnum of donation room #3.            */
+    room_vnum donation_room_4;   /**< vnum of donation room #4.            */
     room_vnum dead_start_room;
     room_vnum hometown_1;
     room_vnum hometown_2;
     room_vnum hometown_3;
+    room_vnum hometown_4;
     room_vnum ress_room_1;
     room_vnum ress_room_2;
     room_vnum ress_room_3;
+    room_vnum ress_room_4;
 };
 
 /** Operational game variables. */
@@ -1723,12 +1759,26 @@ struct autowiz_data {
 /** Emotion system configuration. */
 struct emotion_config_data {
     /* Visual indicator thresholds */
-    int display_fear_threshold;      /**< Min fear level to show (amedrontado) indicator (default: 70) */
-    int display_anger_threshold;     /**< Min anger level to show (furioso) indicator (default: 70) */
-    int display_happiness_threshold; /**< Min happiness level to show (feliz) indicator (default: 80) */
-    int display_sadness_threshold;   /**< Min sadness level to show (triste) indicator (default: 70) */
-    int display_horror_threshold;    /**< Min horror level to show (aterrorizado) indicator (default: 80) */
-    int display_pain_threshold;      /**< Min pain level to show (sofrendo) indicator (default: 70) */
+    int display_fear_threshold;        /**< Min fear level to show (amedrontado) indicator (default: 70) */
+    int display_anger_threshold;       /**< Min anger level to show (furioso) indicator (default: 70) */
+    int display_happiness_threshold;   /**< Min happiness level to show (feliz) indicator (default: 80) */
+    int display_sadness_threshold;     /**< Min sadness level to show (triste) indicator (default: 70) */
+    int display_horror_threshold;      /**< Min horror level to show (aterrorizado) indicator (default: 80) */
+    int display_pain_threshold;        /**< Min pain level to show (sofrendo) indicator (default: 70) */
+    int display_compassion_threshold;  /**< Min compassion level to show (compassivo) indicator (default: 70) */
+    int display_courage_threshold;     /**< Min courage level to show (corajoso) indicator (default: 70) */
+    int display_curiosity_threshold;   /**< Min curiosity level to show (curioso) indicator (default: 70) */
+    int display_disgust_threshold;     /**< Min disgust level to show (enojado) indicator (default: 70) */
+    int display_envy_threshold;        /**< Min envy level to show (invejoso) indicator (default: 70) */
+    int display_excitement_threshold;  /**< Min excitement level to show (animado) indicator (default: 70) */
+    int display_friendship_threshold;  /**< Min friendship level to show (amigavel) indicator (default: 70) */
+    int display_greed_threshold;       /**< Min greed level to show (ganancioso) indicator (default: 70) */
+    int display_humiliation_threshold; /**< Min humiliation level to show (humilhado) indicator (default: 70) */
+    int display_love_threshold;        /**< Min love level to show (apaixonado) indicator (default: 70) */
+    int display_loyalty_threshold;     /**< Min loyalty level to show (leal) indicator (default: 70) */
+    int display_pride_threshold;       /**< Min pride level to show (orgulhoso) indicator (default: 70) */
+    int display_shame_threshold;       /**< Min shame level to show (envergonhado) indicator (default: 70) */
+    int display_trust_threshold;       /**< Min trust level to show (confiante) indicator (default: 70) */
 
     /* Combat flee behavior thresholds */
     int flee_fear_low_threshold;     /**< Low fear threshold for flee modifier (default: 50) */

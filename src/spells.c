@@ -135,6 +135,9 @@ ASPELL(spell_recall)
         case 3:
             char_to_room(victim, r_hometown_3);
             break;
+        case 4:
+            char_to_room(victim, r_hometown_4);
+            break;
         default:
             char_to_room(victim, r_hometown_1);
             break;
@@ -1163,7 +1166,6 @@ ASPELL(spell_stoneskin)
 
     if (victim == NULL)
         return;
-    
 
     /* Calculate new points to add: 1 point per 4 caster levels, min 1 */
     new_points = MAX(1, level / 4);

@@ -151,9 +151,22 @@ void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assist
 void update_mob_emotion_passive(struct char_data *mob);
 void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
+void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data *victim, struct char_data *killer);
+void update_mob_emotion_saw_equipment(struct char_data *mob, struct char_data *target);
+void update_mob_emotion_entered_dangerous_area(struct char_data *mob);
+void update_mob_emotion_entered_safe_area(struct char_data *mob);
+void update_mob_emotion_harmed_by_spell(struct char_data *mob, struct char_data *caster);
+void update_mob_emotion_blessed_by_spell(struct char_data *mob, struct char_data *caster);
+void update_mob_emotion_witnessed_offensive_magic(struct char_data *mob, struct char_data *caster);
+void update_mob_emotion_quest_completed(struct char_data *mob, struct char_data *player);
+void update_mob_emotion_quest_failed(struct char_data *mob, struct char_data *player);
+void update_mob_emotion_quest_betrayal(struct char_data *mob, struct char_data *killer);
+void update_mob_emotion_fair_trade(struct char_data *mob, struct char_data *trader);
+void update_mob_emotion_received_valuable(struct char_data *mob, struct char_data *seller, int value);
 
 /* Emotion memory system functions */
-void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event);
+void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event,
+                        const char *social_name);
 int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
 void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
 
@@ -1242,15 +1255,21 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_DON_ROOM_2 config_info.room_nums.donation_room_2
 /** Ge the third dontation room. */
 #define CONFIG_DON_ROOM_3 config_info.room_nums.donation_room_3
+/** Get the fourth donation room. */
+#define CONFIG_DON_ROOM_4 config_info.room_nums.donation_room_4
 
 #define CONFIG_DEAD_START config_info.room_nums.dead_start_room
 #define CONFIG_HOMETOWN_1 config_info.room_nums.hometown_1
 #define CONFIG_HOMETOWN_2 config_info.room_nums.hometown_2
 #define CONFIG_HOMETOWN_3 config_info.room_nums.hometown_3
+/** Get the 4th hometown room. */
+#define CONFIG_HOMETOWN_4 config_info.room_nums.hometown_4
 
 #define CONFIG_RESS_ROOM_1 config_info.room_nums.ress_room_1
 #define CONFIG_RESS_ROOM_2 config_info.room_nums.ress_room_2
 #define CONFIG_RESS_ROOM_3 config_info.room_nums.ress_room_3
+/** Get the fourth resurrection room. */
+#define CONFIG_RESS_ROOM_4 config_info.room_nums.ress_room_4
 
 /* Game Operation */
 /** Get the default mud connection port. */
@@ -1320,6 +1339,20 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD config_info.emotion_config.display_sadness_threshold
 #define CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD config_info.emotion_config.display_horror_threshold
 #define CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD config_info.emotion_config.display_pain_threshold
+#define CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD config_info.emotion_config.display_compassion_threshold
+#define CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD config_info.emotion_config.display_courage_threshold
+#define CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD config_info.emotion_config.display_curiosity_threshold
+#define CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD config_info.emotion_config.display_disgust_threshold
+#define CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD config_info.emotion_config.display_envy_threshold
+#define CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD config_info.emotion_config.display_excitement_threshold
+#define CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD config_info.emotion_config.display_friendship_threshold
+#define CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD config_info.emotion_config.display_greed_threshold
+#define CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD config_info.emotion_config.display_humiliation_threshold
+#define CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD config_info.emotion_config.display_love_threshold
+#define CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD config_info.emotion_config.display_loyalty_threshold
+#define CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD config_info.emotion_config.display_pride_threshold
+#define CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD config_info.emotion_config.display_shame_threshold
+#define CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD config_info.emotion_config.display_trust_threshold
 
 /** Combat flee behavior thresholds */
 #define CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD config_info.emotion_config.flee_fear_low_threshold

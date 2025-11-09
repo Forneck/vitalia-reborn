@@ -286,6 +286,23 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim, int sp
         }
     }
 
+    /* Emotion trigger: Being harmed by spells (Magic/Spell Trigger 2.3) */
+    if (IS_NPC(victim) && victim->ai_data && CONFIG_MOB_CONTEXTUAL_SOCIALS && dam > 0 && ch != victim) {
+        update_mob_emotion_harmed_by_spell(victim, ch);
+    }
+
+    /* Emotion trigger: Witnessing offensive magic (Magic/Spell Trigger 2.3) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && dam > 0 && ch != victim && IN_ROOM(victim) != NOWHERE) {
+        struct char_data *witness, *next_witness;
+        /* Notify NPCs in the room who aren't in combat */
+        for (witness = world[IN_ROOM(victim)].people; witness; witness = next_witness) {
+            next_witness = witness->next_in_room;
+            if (IS_NPC(witness) && witness->ai_data && witness != ch && witness != victim) {
+                update_mob_emotion_witnessed_offensive_magic(witness, ch);
+            }
+        }
+    }
+
     /* and finally, inflict the damage */
     return (damage(ch, victim, dam, spellnum));
 }
@@ -458,6 +475,45 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
                 if (IS_GOOD(victim)) {
                     modify_player_reputation(ch, -rand_number(1, 3));
                 }
+            }
+        }
+    }
+
+    /* Emotion triggers for spell affects (Magic/Spell Trigger 2.3) */
+    if (effect && CONFIG_MOB_CONTEXTUAL_SOCIALS && ch != victim) {
+        if (IS_NPC(victim) && victim->ai_data) {
+            /* Determine if spell is harmful or beneficial based on multiple factors */
+            int is_harmful = 0;
+            int is_beneficial = 0;
+
+            /* Check if spell is violent */
+            if (spell->violent) {
+                is_harmful = 1;
+            }
+
+            /* Check if spell is from harmful schools/elements */
+            if (spell->school == SCHOOL_NECROMANCY || spell->element == ELEMENT_UNHOLY) {
+                is_harmful = 1;
+            }
+
+            /* Check if spell has negative modifiers (debuffs) */
+            for (i = 0; i < MAX_SPELL_AFFECTS; i++) {
+                if (af[i].modifier < 0 && af[i].location != APPLY_NONE) {
+                    is_harmful = 1;
+                }
+                /* Positive modifiers indicate beneficial spells */
+                else if (af[i].modifier > 0 && af[i].location != APPLY_NONE) {
+                    is_beneficial = 1;
+                }
+            }
+
+            /* Trigger appropriate emotion based on spell type */
+            if (is_harmful && !is_beneficial) {
+                /* Harmful spell (curse/debuff) */
+                update_mob_emotion_harmed_by_spell(victim, ch);
+            } else if (is_beneficial && !is_harmful) {
+                /* Beneficial spell (buff/bless) */
+                update_mob_emotion_blessed_by_spell(victim, ch);
             }
         }
     }

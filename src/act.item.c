@@ -556,7 +556,7 @@ ACMD(do_drop)
             mode = SCMD_DONATE;
             /* fail + double chance for room 1 */
             num_don_rooms = (CONFIG_DON_ROOM_1 != NOWHERE) * 2 + (CONFIG_DON_ROOM_2 != NOWHERE) +
-                            (CONFIG_DON_ROOM_3 != NOWHERE) + 1;
+                            (CONFIG_DON_ROOM_3 != NOWHERE) + (CONFIG_DON_ROOM_4 != NOWHERE) + 1;
             switch (rand_number(0, num_don_rooms)) {
                 case 0:
                     mode = SCMD_JUNK;
@@ -570,6 +570,9 @@ ACMD(do_drop)
                     break;
                 case 4:
                     RDR = real_room(CONFIG_DON_ROOM_3);
+                    break;
+                case 5:
+                    RDR = real_room(CONFIG_DON_ROOM_4);
                     break;
             }
             if (RDR == NOWHERE) {
@@ -678,6 +681,31 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
     } else if (GET_POS(vict) <= POS_DEAD) {
         act("$p: $N não pode carregar nada nestas condições!", FALSE, ch, obj, vict, TO_CHAR);
         return;
+    }
+
+    /* Special handling for magic stones - validate questmaster BEFORE transferring */
+    if (GET_OBJ_TYPE(obj) == ITEM_MAGIC_STONE && !IS_NPC(ch) && GET_QUEST(ch) != NOTHING) {
+        int quest_type = GET_QUEST_TYPE(ch);
+        if (quest_type == AQ_MOB_KILL || quest_type == AQ_MOB_KILL_BOUNTY) {
+            qst_rnum rnum = real_quest(GET_QUEST(ch));
+            /* Validate that vict is the correct questmaster or return mob for this quest */
+            if (rnum != NOTHING && IS_NPC(vict) &&
+                (GET_MOB_VNUM(vict) == QST_MASTER(rnum) || GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum))) {
+                /* Valid questmaster - transfer stone and complete quest */
+                obj_from_char(obj);
+                obj_to_char(obj, vict);
+                act("Você entrega $p para $N.", FALSE, ch, obj, vict, TO_CHAR);
+                act("$n entrega $p para você.", FALSE, ch, obj, vict, TO_VICT);
+                act("$n entrega $p para $N.", TRUE, ch, obj, vict, TO_NOTVICT);
+                /* Trigger quest completion which will extract the stone */
+                autoquest_trigger_check(ch, vict, obj, quest_type);
+                return;
+            } else {
+                /* Wrong NPC - inform player and prevent transfer */
+                send_to_char(ch, "Essa pedra mágica deve ser entregue ao responsável pela busca.\r\n");
+                return;
+            }
+        }
     }
 
     obj_from_char(obj);
