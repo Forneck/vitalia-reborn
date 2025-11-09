@@ -5327,39 +5327,38 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * Includes: friendly gestures, affectionate actions, appreciation, happy/playful actions
      */
     const char *positive_socials[] = {
-        "bow",      "smile",    "applaud",  "clap",     "greet",    "grin",      "comfort",  "pat",      "hug",
-        "cuddle",   "kiss",     "nuzzle",   "squeeze",  "stroke",   "snuggle",   "worship",  "giggle",   "laughs",
-        "cackle",   "bounce",   "dance",    "sing",     "tango",    "whistle",   "yodel",    "curtsey",  "salute",
-        "admire",   "welcome",  "handshake", "highfive", "nods",     "waves",     "winks",    "thanks",   "chuckles",
-        "beam",     "happy",    "gleam",    "cheers",   "enthuse",  "adoring",   NULL};
+        "bow",    "smile",   "applaud",   "clap",     "greet",   "grin",    "comfort", "pat",     "hug",
+        "cuddle", "kiss",    "nuzzle",    "squeeze",  "stroke",  "snuggle", "worship", "giggle",  "laughs",
+        "cackle", "bounce",  "dance",     "sing",     "tango",   "whistle", "yodel",   "curtsey", "salute",
+        "admire", "welcome", "handshake", "highfive", "nods",    "waves",   "winks",   "thanks",  "chuckles",
+        "beam",   "happy",   "gleam",     "cheers",   "enthuse", "adoring", NULL};
 
     /* Negative socials that increase anger, decrease trust/friendship
      * Emotion changes: +anger, -trust, -friendship, -happiness
      * Includes: hostile expressions, aggressive actions, verbal hostility
      */
-    const char *negative_socials[] = {
-        "frown",     "glare",     "spit",      "accuse",    "curse",     "taunt",   "snicker", "slap",     "snap",
-        "snarl",     "growl",     "fume",      "sneer",     "eye",       "jeer",    "mock",    "ignore",   "threaten",
-        "blame",     "criticize", "disapprove", "scold",     "hate",      "grimace", "evileye", NULL};
+    const char *negative_socials[] = {"frown", "glare", "spit",    "accuse",   "curse", "taunt",     "snicker",
+                                      "slap",  "snap",  "snarl",   "growl",    "fume",  "sneer",     "eye",
+                                      "jeer",  "mock",  "ignore",  "threaten", "blame", "criticize", "disapprove",
+                                      "scold", "hate",  "grimace", "evileye",  NULL};
 
     /* Neutral/curious socials that increase curiosity
      * Emotion changes: +curiosity, slight +friendship if already friendly
      * Includes: observing, thinking, pointing, neutral actions
      * Note: "look" and "examine" are commands (not socials), removed
      */
-    const char *neutral_socials[] = {
-        "ponder",  "peer",       "think",    "stare",    "point", "comb",   "sneeze",     "cough",   "hiccup",
-        "yawn",    "snore",      "shrugs",   "contemplate", "daydream", "gaze", "listen", "blink",   NULL};
+    const char *neutral_socials[] = {"ponder",      "peer",     "think",  "stare",  "point", "comb",
+                                     "sneeze",      "cough",    "hiccup", "yawn",   "snore", "shrugs",
+                                     "contemplate", "daydream", "gaze",   "listen", "blink", NULL};
 
     /* Fearful socials that the actor shows - might increase mob's courage/pride
      * Emotion changes (for mob): +courage, +pride, -fear (mob's own fear decreases)
      * Actor showing fear/submission makes mob feel emboldened
      * Includes: fear/submission actions, sadness expressions
      */
-    const char *fearful_socials[] = {
-        "beg",    "grovel",  "cringe", "cry",     "sulk",   "sigh",  "whine",    "cower", "whimper", "sob",
-        "weep",   "panic",   "eek",    "eep",     "flinch", "dread", "worry",    "despair", "crushed", "blue",
-        "crylaugh", NULL};
+    const char *fearful_socials[] = {"beg",     "grovel",  "cringe",  "cry",   "sulk",     "sigh", "whine",  "cower",
+                                     "whimper", "sob",     "weep",    "panic", "eek",      "eep",  "flinch", "dread",
+                                     "worry",   "despair", "crushed", "blue",  "crylaugh", NULL};
 
     /* Severely inappropriate socials - context dependent responses (not fully blocked)
      * Sexual: Positive if very high intimacy/trust (love ≥80, trust ≥70), negative otherwise
@@ -5376,35 +5375,35 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * Emotion changes: +disgust, +anger, -trust, -friendship, -happiness
      * Includes: gross/offensive actions
      */
-    const char *disgusting_socials[] = {
-        "drool", "puke",    "burp",  "fart",   "licks", "moan",  "sniff",  "earlick",
-        "pant",  "moon",    "booger", "belch", "gag",   "spew",  "phlegm", NULL};
+    const char *disgusting_socials[] = {"drool", "puke", "burp",   "fart",  "licks", "moan", "sniff",  "earlick",
+                                        "pant",  "moon", "booger", "belch", "gag",   "spew", "phlegm", NULL};
 
     /* Violent socials - trigger pain, fear, anger
      * Emotion changes: +pain, +anger, +fear, -trust, -friendship
      * Wimpy mobs: extra +fear; Brave mobs: extra +anger, +courage
      * Includes: physical aggression
+     * Note: spank, tackle, snowball, challenge, arrest have special contextual handling
+     * Note: vampire and haircut moved to silly/contextual categories (not actually violent)
      */
-    const char *violent_socials[] = {
-        "spank",    "tackle",   "snowball", "needle",  "shock",    "whip",   "vampire", "haircut", "bite",
-        "choke",    "strangle", "smack",    "smash",   "clobber",  "thwap",  "whack",   "pound",   "shootout",
-        "sword",    "smite",    "burn",     "challenge", "charge", "arrest", NULL};
+    const char *violent_socials[] = {"needle", "shock",  "whip",     "bite",   "choke",    "strangle",
+                                     "smack",  "smash",  "clobber",  "thwap",  "whack",    "pound",
+                                     "shootout", "sword", "smite",    "burn",   "charge",   NULL};
 
     /* Humiliating socials - trigger shame and humiliation
      * Emotion changes: +humiliation, +shame, +anger, -trust, -friendship, -pride
      * High pride mobs: extra +anger to humiliation
      * Includes: embarrassing/shameful actions
      */
-    const char *humiliating_socials[] = {"poke", "tickle", "ruffle", "suckit-up", "wedgie", "noogie", "pinch", "goose", NULL};
+    const char *humiliating_socials[] = {"poke",   "tickle", "ruffle", "suckit-up", "wedgie",
+                                         "noogie", "pinch",  "goose",  NULL};
 
     /* Playful/teasing socials - lighthearted, can increase happiness/friendship in right context
      * Emotion changes: +happiness, +friendship (if already friendly), or slight annoyance
      * Includes: teasing, playful actions
      */
-    const char *playful_socials[] = {
-        "pout",  "smirks", "wiggle", "twiddle", "flip",   "strut",     "nudge", "purr",     "hop",
-        "skip",  "boink",  "bonk",   "bop",     "pounce", "tag",       "tease", "joke",     "jest",
-        "nyuk",  "waggle", "cartwheel", "hula", NULL};
+    const char *playful_socials[] = {"pout", "smirks", "wiggle", "twiddle", "flip",      "strut",  "nudge", "purr",
+                                     "hop",  "skip",   "boink",  "bonk",    "bop",       "pounce", "tag",   "tease",
+                                     "joke", "jest",   "nyuk",   "waggle",  "cartwheel", "hula",   NULL};
 
     /* Romantic socials - context dependent, positive if receptive
      * Emotion changes (context-dependent):
@@ -5413,30 +5412,29 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * Includes: flirting, romantic gestures, affectionate touches
      * Note: 'massage', 'rose', 'knuckle', 'makeout', 'embrace' have special contextual handling below
      */
-    const char *romantic_socials[] = {
-        "flirt",  "love",   "ogle",    "beckon", "charm",   "smooch", "snog",    "propose",
-        "caress", "huggle", "ghug",    "cradle", "bearhug", NULL};
+    const char *romantic_socials[] = {"flirt",   "love",   "ogle",   "beckon", "charm",  "smooch",  "snog",
+                                      "propose", "caress", "huggle", "ghug",   "cradle", "bearhug", NULL};
 
     /* Agreeable/supportive socials - increase cooperation, reduce tension
      * Emotion changes: +trust, +friendship (slight), +happiness (slight)
      * Includes: agreement, apologies, supportive gestures
      */
-    const char *agreeable_socials[] = {
-        "agree", "ok", "yes", "apologize", "forgive", "console", "ack", "handraise", NULL};
+    const char *agreeable_socials[] = {"agree",   "ok",  "yes",       "apologize", "forgive",
+                                       "console", "ack", "handraise", NULL};
 
     /* Confused socials - express confusion or puzzlement
      * Emotion changes: +curiosity (slight), neutral emotional impact
      * Includes: confusion expressions, questioning gestures
      */
-    const char *confused_socials[] = {
-        "boggle", "confuse", "puzzle", "doh", "duh", "eww", "hmmmmm", "hrmph", "discombob", "disturbed", NULL};
+    const char *confused_socials[] = {"boggle", "confuse", "puzzle",    "doh",       "duh", "eww",
+                                      "hmmmmm", "hrmph",   "discombob", "disturbed", NULL};
 
     /* Celebratory socials - express joy, victory, excitement
      * Emotion changes: +happiness, +excitement (if mob is friendly)
      * Includes: celebrations, victory expressions
      */
-    const char *celebratory_socials[] = {
-        "huzzah", "tada", "yayfor", "battlecry", "rofl", "whoo", "romp", "sundance", NULL};
+    const char *celebratory_socials[] = {"huzzah", "tada", "yayfor",   "battlecry", "rofl",
+                                         "whoo",   "romp", "sundance", NULL};
 
     /* Misc neutral socials - minimal emotional impact, mostly curiosity
      * Emotion changes: +curiosity (minimal), generally neutral
@@ -5444,21 +5442,21 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * Note: This catch-all category ensures ALL 490 socials from socials.new are handled
      */
     const char *misc_neutral_socials[] = {
-        "relax",    "calm",      "breathe",   "relief",      "phew",       "abc",       "abrac",     "bloob",
-        "doodle",   "batman",    "snoopy",    "elephantma",  "crazy",      "crazed",    "insane",    "christmas",
-        "fish",     "pose",      "model",     "boast",       "brag",       "ego",       "pride",     "flex",
-        "juggle",   "rage",      "steam",     "grumbles",    "grunts",     "argh",      "postal",    "hysterical",
-        "brb",      "adieu",     "goodbye",   "reconnect",   "channel",    "wb",        "bark",      "meow",
-        "moo",      "howl",      "hiss",      "beer",        "coffee",     "cake",      "custard",   "carrot",
-        "pie",      "arch",      "eyebrow",   "eyeroll",     "facegrab",   "facepalm",  "fan",       "foot",
-        "crossfinger", "thumbsup", "armcross", "behind",     "ahem",       "aww",       "blah",      "boo",
-        "heh",      "oh",        "ouch",      "tsk",         "amused",     "chortle",   "snigger",   "egrin",
-        "bleed",    "blush",     "shake",     "shiver",      "scream",     "faint",     "collapse",  "fall",
-        "sweat",    "perspire",  "shudder",   "swoon",       "wince",      "gasp",      "groan",     "headache",
-        "pray",     "aim",       "avsalute",  "backclap",    "bat",        "bored",     "box",       "buzz",
-        "cold",     "conga",     "conga2",    "creep",       "curious",    "shame",     "rose",      "knuckle",
-        "embrace",  "makeout",   /* These 4 get special handling below but listed here for completeness */
-        NULL};  /* Remaining ~190 socials go here as catch-all with neutral emotional impact */
+        "relax",       "calm",     "breathe",  "relief",     "phew",     "abc",      "abrac",    "bloob",
+        "doodle",      "batman",   "snoopy",   "elephantma", "crazy",    "crazed",   "insane",   "christmas",
+        "fish",        "pose",     "model",    "boast",      "brag",     "ego",      "pride",    "flex",
+        "juggle",      "rage",     "steam",    "grumbles",   "grunts",   "argh",     "postal",   "hysterical",
+        "brb",         "adieu",    "goodbye",  "reconnect",  "channel",  "wb",       "bark",     "meow",
+        "moo",         "howl",     "hiss",     "beer",       "coffee",   "cake",     "custard",  "carrot",
+        "pie",         "arch",     "eyebrow",  "eyeroll",    "facegrab", "facepalm", "fan",      "foot",
+        "crossfinger", "thumbsup", "armcross", "behind",     "ahem",     "aww",      "blah",     "boo",
+        "heh",         "oh",       "ouch",     "tsk",        "amused",   "chortle",  "snigger",  "egrin",
+        "bleed",       "blush",    "shake",    "shiver",     "scream",   "faint",    "collapse", "fall",
+        "sweat",       "perspire", "shudder",  "swoon",      "wince",    "gasp",     "groan",    "headache",
+        "pray",        "aim",      "avsalute", "backclap",   "bat",      "bored",    "box",      "buzz",
+        "cold",        "conga",    "conga2",   "creep",      "curious",  "shame",    "rose",     "knuckle",
+        "embrace",     "makeout",  "vampire",  "haircut", /* Last 6 get special handling below */
+        NULL};
 
     int i;
     bool is_positive = FALSE;
@@ -5497,8 +5495,10 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         int mob_love = mob->ai_data->emotion_love;
         int mob_friendship = mob->ai_data->emotion_friendship;
 
-        /* Extremely violent socials (despine, shiskabob, vice) - always hostile response */
-        if (!strcmp(social_name, "despine") || !strcmp(social_name, "shiskabob") || !strcmp(social_name, "vice")) {
+        /* Extremely violent socials (despine, shiskabob, vice, choke, strangle, smite, sword) - always hostile response */
+        if (!strcmp(social_name, "despine") || !strcmp(social_name, "shiskabob") || !strcmp(social_name, "vice") ||
+            !strcmp(social_name, "choke") || !strcmp(social_name, "strangle") || !strcmp(social_name, "smite") ||
+            !strcmp(social_name, "sword")) {
             /* Extreme violence - always triggers horror, pain, and anger */
             adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(30, 50));
             adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(40, 60));
@@ -5920,7 +5920,7 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     }
 
     /* Special contextual handling for specific socials */
-    
+
     /* Context-dependent socials - massage */
     /* Massage: positive if trusted, disgusting if not */
     if (!strcmp(social_name, "massage")) {
@@ -6030,6 +6030,202 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
+    /* Snowball/Tackle: playful games between friends, assault otherwise */
+    if (!strcmp(social_name, "snowball") || !strcmp(social_name, "tackle")) {
+        int mob_friendship = mob->ai_data->emotion_friendship;
+        int mob_trust = mob->ai_data->emotion_trust;
+
+        /* Very high friendship (65+) and trust (50+) - playful game */
+        if (mob_friendship >= 65 && mob_trust >= 50) {
+            /* Friends playing - fun */
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(8, 18));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(5, 10));
+            adjust_emotion(mob, &mob->ai_data->emotion_excitement, rand_number(5, 12));
+            /* Mild pain but it's fun */
+            adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(2, 8));
+        }
+        /* Moderate friendship (40-64) - annoying/too rough */
+        else if (mob_friendship >= 40 || mob_trust >= 30) {
+            /* Not close enough for this */
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(8, 18));
+            adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(8, 15));
+        }
+        /* Low/no friendship - assault */
+        else {
+            /* Strangers - this is an attack */
+            adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(20, 35));
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(25, 40));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(20, 35));
+        }
+    }
+
+    /* Spank: playful/teasing between close friends, humiliating otherwise */
+    if (!strcmp(social_name, "spank")) {
+        int mob_friendship = mob->ai_data->emotion_friendship;
+        int mob_trust = mob->ai_data->emotion_trust;
+
+        /* Very high friendship (70+) and trust (60+) - playful teasing */
+        if (mob_friendship >= 70 && mob_trust >= 60) {
+            /* Very close friends - playful */
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 12));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(3, 8));
+            /* Slight humiliation even when playful */
+            adjust_emotion(mob, &mob->ai_data->emotion_humiliation, rand_number(2, 8));
+        }
+        /* Moderate relationship - humiliating and annoying */
+        else if (mob_friendship >= 30 || mob_trust >= 30) {
+            /* Not appropriate */
+            adjust_emotion(mob, &mob->ai_data->emotion_humiliation, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(15, 25));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(20, 35));
+        }
+        /* Low/no relationship - assault and deeply humiliating */
+        else {
+            /* Strangers - offensive assault */
+            adjust_emotion(mob, &mob->ai_data->emotion_humiliation, rand_number(25, 40));
+            adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(20, 35));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(25, 45));
+            adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(35, 50));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(30, 45));
+        }
+    }
+
+    /* Challenge: friendly competition vs hostile challenge */
+    if (!strcmp(social_name, "challenge")) {
+        int mob_friendship = mob->ai_data->emotion_friendship;
+        int mob_courage = mob->ai_data->emotion_courage;
+
+        /* High friendship (60+) - friendly competition */
+        if (mob_friendship >= 60) {
+            /* Friends competing - exciting */
+            adjust_emotion(mob, &mob->ai_data->emotion_excitement, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_pride, rand_number(8, 15));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(3, 8));
+            /* Brave mobs love the challenge */
+            if (mob_courage >= 60) {
+                adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(5, 12));
+            }
+        }
+        /* Moderate relationship (30-59) - neutral/uncertain */
+        else if (mob_friendship >= 30) {
+            /* Acquaintances - unsure of intent */
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_pride, rand_number(5, 12));
+            /* Slight tension */
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(3, 10));
+        }
+        /* Low/no relationship - hostile challenge */
+        else {
+            /* Strangers - threat */
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_pride, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(15, 25));
+            /* Brave mobs get angry, wimpy mobs get scared */
+            if (mob_courage >= 60) {
+                adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(8, 15));
+            } else if (mob_courage < 40) {
+                adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
+            }
+        }
+    }
+
+    /* Arrest: authority/justice context - depends on actor reputation and mob's criminal status */
+    if (!strcmp(social_name, "arrest")) {
+        int player_reputation = GET_REPUTATION(actor);
+
+        /* High reputation actor (60+) arresting evil mob - justice */
+        if (player_reputation >= 60 && IS_EVIL(mob)) {
+            /* Deserved arrest - fear and anger but less horror */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(20, 40));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_shame, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(20, 35));
+            /* Might try to flee or fight */
+            if (mob->ai_data->emotion_courage >= 50 && rand_number(1, 100) <= 40) {
+                adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(5, 15));
+            }
+        }
+        /* High reputation actor arresting good/neutral mob - unjust */
+        else if (player_reputation >= 60 && !IS_EVIL(mob)) {
+            /* Innocent victim - horror and betrayal */
+            adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(20, 35));
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(25, 45));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(20, 35));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(40, 60));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(35, 55));
+        }
+        /* Low reputation actor (criminal arresting anyone) - outrage */
+        else if (player_reputation < 30) {
+            /* Criminal trying to arrest - ridiculous */
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(25, 45));
+            adjust_emotion(mob, &mob->ai_data->emotion_disgust, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(30, 50));
+            /* High chance of fighting back */
+            if (mob->ai_data->emotion_courage >= 40 && rand_number(1, 100) <= 60 && !FIGHTING(mob)) {
+                act("$n se recusa a ser preso por um criminoso!", FALSE, mob, 0, actor, TO_ROOM);
+                set_fighting(mob, actor);
+            }
+        }
+        /* Moderate reputation - uncertain authority */
+        else {
+            /* Unclear if justified */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(15, 30));
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(15, 30));
+        }
+    }
+
+    /* Haircut: grooming action - helpful/caring between friends, invasive to strangers */
+    if (!strcmp(social_name, "haircut")) {
+        int mob_friendship = mob->ai_data->emotion_friendship;
+        int mob_trust = mob->ai_data->emotion_trust;
+
+        /* High friendship (65+) and trust (55+) - grooming/caring */
+        if (mob_friendship >= 65 && mob_trust >= 55) {
+            /* Close friends - helpful grooming */
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 12));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(5, 10));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(3, 8));
+        }
+        /* Moderate relationship (40-64 friendship) - uncomfortable */
+        else if (mob_friendship >= 40 || mob_trust >= 35) {
+            /* Not close enough - too personal */
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(5, 10));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(5, 12));
+            /* Slight discomfort */
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(3, 8));
+        }
+        /* Low/no relationship - invasive */
+        else {
+            /* Strangers - too personal/invasive */
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
+            adjust_emotion(mob, &mob->ai_data->emotion_disgust, rand_number(8, 15));
+            adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(15, 25));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(10, 20));
+        }
+    }
+
+    /* Vampire: silly vampire impression - generally amusing/silly */
+    if (!strcmp(social_name, "vampire")) {
+        /* Playful vampire impression */
+        adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
+        /* If friendly, finds it amusing */
+        if (mob->ai_data->emotion_friendship >= 50) {
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 12));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(2, 6));
+        }
+        /* Otherwise just mildly amused/confused */
+        else {
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
+        }
+    }
+
     /* Alignment interaction - opposite alignments intensify negative responses */
     if (is_negative) {
         if ((IS_GOOD(mob) && IS_EVIL(actor)) || (IS_EVIL(mob) && IS_GOOD(actor))) {
@@ -6093,9 +6289,15 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         int interaction_type;
         int is_major = 0;
 
-        /* Check if it was an extremely violent social (despine, shiskabob, vice) */
+        /* Check if it was an extremely violent social (despine, shiskabob, vice, choke, strangle, smite, sword) */
         if (is_blocked &&
             (!strcmp(social_name, "despine") || !strcmp(social_name, "shiskabob") || !strcmp(social_name, "vice"))) {
+            interaction_type = INTERACT_SOCIAL_VIOLENT;
+            is_major = 1; /* Extreme violence is a major event */
+        }
+        /* Check if it was other extreme violence not in blocked list */
+        else if (is_violent && (!strcmp(social_name, "choke") || !strcmp(social_name, "strangle") ||
+                                !strcmp(social_name, "smite") || !strcmp(social_name, "sword"))) {
             interaction_type = INTERACT_SOCIAL_VIOLENT;
             is_major = 1; /* Extreme violence is a major event */
         }
