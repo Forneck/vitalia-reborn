@@ -1732,6 +1732,20 @@ struct emotion_config_data {
     int display_sadness_threshold;   /**< Min sadness level to show (triste) indicator (default: 70) */
     int display_horror_threshold;    /**< Min horror level to show (aterrorizado) indicator (default: 80) */
     int display_pain_threshold;      /**< Min pain level to show (sofrendo) indicator (default: 70) */
+    int display_compassion_threshold;  /**< Min compassion level to show (compassivo) indicator (default: 70) */
+    int display_courage_threshold;     /**< Min courage level to show (corajoso) indicator (default: 70) */
+    int display_curiosity_threshold;   /**< Min curiosity level to show (curioso) indicator (default: 70) */
+    int display_disgust_threshold;     /**< Min disgust level to show (enojado) indicator (default: 70) */
+    int display_envy_threshold;        /**< Min envy level to show (invejoso) indicator (default: 70) */
+    int display_excitement_threshold;  /**< Min excitement level to show (animado) indicator (default: 70) */
+    int display_friendship_threshold;  /**< Min friendship level to show (amigavel) indicator (default: 70) */
+    int display_greed_threshold;       /**< Min greed level to show (ganancioso) indicator (default: 70) */
+    int display_humiliation_threshold; /**< Min humiliation level to show (humilhado) indicator (default: 70) */
+    int display_love_threshold;        /**< Min love level to show (apaixonado) indicator (default: 70) */
+    int display_loyalty_threshold;     /**< Min loyalty level to show (leal) indicator (default: 70) */
+    int display_pride_threshold;       /**< Min pride level to show (orgulhoso) indicator (default: 70) */
+    int display_shame_threshold;       /**< Min shame level to show (envergonhado) indicator (default: 70) */
+    int display_trust_threshold;       /**< Min trust level to show (confiante) indicator (default: 70) */
 
     /* Combat flee behavior thresholds */
     int flee_fear_low_threshold;     /**< Low fear threshold for flee modifier (default: 50) */
