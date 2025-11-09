@@ -1008,7 +1008,6 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
             time_t current_time = time(0);
             const char *interaction_names[] = {"Attacked", "Healed",  "ReceivedItem", "StolenFrom", "Rescued",
                                                "Assisted", "Social+", "Social-",      "SocialViol", "AllyDied"};
-            const char *entity_type_names[] = {"Player", "Mob"};
 
             /* Count valid memories */
             for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
@@ -1033,48 +1032,138 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                         const char *interaction_name = (mem->interaction_type >= 0 && mem->interaction_type <= 9)
                                                            ? interaction_names[mem->interaction_type]
                                                            : "Unknown";
-                        const char *entity_type_name = (mem->entity_type >= 0 && mem->entity_type <= 1)
-                                                           ? entity_type_names[mem->entity_type]
-                                                           : "Unknown";
+                        
+                        /* Try to resolve entity name */
+                        char entity_name[MAX_NAME_LENGTH + 20];
+                        if (mem->entity_type == ENTITY_TYPE_PLAYER) {
+                            /* For players, try to find them by ID */
+                            struct char_data *player = NULL;
+                            /* Search through character_list for player with matching IDNUM */
+                            for (player = character_list; player; player = player->next) {
+                                if (!IS_NPC(player) && GET_IDNUM(player) == mem->entity_id) {
+                                    snprintf(entity_name, sizeof(entity_name), "%s", GET_NAME(player));
+                                    break;
+                                }
+                            }
+                            if (!player) {
+                                snprintf(entity_name, sizeof(entity_name), "Player#%ld", mem->entity_id);
+                            }
+                        } else {
+                            /* For mobs, try to find them by script_id (runtime only) */
+                            struct char_data *mob = NULL;
+                            for (mob = character_list; mob; mob = mob->next) {
+                                if (IS_NPC(mob) && char_script_id(mob) == mem->entity_id) {
+                                    snprintf(entity_name, sizeof(entity_name), "%s", GET_NAME(mob));
+                                    break;
+                                }
+                            }
+                            if (!mob) {
+                                snprintf(entity_name, sizeof(entity_name), "Mob#%ld", mem->entity_id);
+                            }
+                        }
 
-                        /* Build emotion display - only show emotions that changed (non-zero/significant values) */
-                        char emotion_buf[256];
+                        /* Build emotion display - show all significant emotion values */
+                        char emotion_buf[512];
                         size_t offset = 0;
                         int has_emotions = 0;
+                        
+                        /* Show all 20 emotions that have non-zero values */
+                        if (mem->fear_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Fear:%d", mem->fear_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->anger_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Anger:%d", mem->anger_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->happiness_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Happy:%d", mem->happiness_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->sadness_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Sad:%d", mem->sadness_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->friendship_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Friend:%d", mem->friendship_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->love_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Love:%d", mem->love_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->trust_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Trust:%d", mem->trust_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->loyalty_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Loyal:%d", mem->loyalty_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->curiosity_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Curious:%d", mem->curiosity_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->greed_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Greed:%d", mem->greed_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->pride_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Pride:%d", mem->pride_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->compassion_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Compassion:%d", mem->compassion_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->envy_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Envy:%d", mem->envy_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->courage_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Courage:%d", mem->courage_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->excitement_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Excited:%d", mem->excitement_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->disgust_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Disgust:%d", mem->disgust_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->shame_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Shame:%d", mem->shame_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->pain_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Pain:%d", mem->pain_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->horror_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Horror:%d", mem->horror_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
+                        if (mem->humiliation_level > 0) {
+                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Humiliated:%d", mem->humiliation_level);
+                            if (n > 0 && offset + n < sizeof(emotion_buf)) { offset += n; has_emotions = 1; }
+                        }
 
-                        if (mem->trust_level != 0) {
-                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Trust:%+3d",
-                                             mem->trust_level);
-                            if (n > 0 && offset + n < sizeof(emotion_buf))
-                                offset += n;
-                            has_emotions = 1;
-                        }
-                        if (mem->friendship_level != 0) {
-                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Friend:%+3d",
-                                             mem->friendship_level);
-                            if (n > 0 && offset + n < sizeof(emotion_buf))
-                                offset += n;
-                            has_emotions = 1;
-                        }
-                        if (mem->fear_level != 0) {
-                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Fear:%3d",
-                                             mem->fear_level);
-                            if (n > 0 && offset + n < sizeof(emotion_buf))
-                                offset += n;
-                            has_emotions = 1;
-                        }
-                        if (mem->anger_level != 0) {
-                            int n = snprintf(emotion_buf + offset, sizeof(emotion_buf) - offset, " Anger:%3d",
-                                             mem->anger_level);
-                            if (n > 0 && offset + n < sizeof(emotion_buf))
-                                offset += n;
-                            has_emotions = 1;
+                        /* Build interaction details with social name if applicable */
+                        char interaction_details[128];
+                        if (mem->social_name[0] != '\0') {
+                            snprintf(interaction_details, sizeof(interaction_details), "%s(%s)", interaction_name, mem->social_name);
+                        } else {
+                            snprintf(interaction_details, sizeof(interaction_details), "%s", interaction_name);
                         }
 
-                        send_to_char(ch, "  [%s%2d min ago%s] %s:%ld %s%-12s%s%s%s\r\n", CCGRN(ch, C_NRM), age_minutes,
-                                     CCNRM(ch, C_NRM), entity_type_name, mem->entity_id, CCYEL(ch, C_NRM),
-                                     interaction_name, CCNRM(ch, C_NRM), mem->major_event ? " [MAJOR]" : "",
-                                     has_emotions ? emotion_buf : " (no emotion changes)");
+                        send_to_char(ch, "  [%s%2d min ago%s] %s %s%-18s%s%s\r\n", 
+                                     CCGRN(ch, C_NRM), age_minutes, CCNRM(ch, C_NRM), 
+                                     entity_name, CCYEL(ch, C_NRM), interaction_details, CCNRM(ch, C_NRM),
+                                     mem->major_event ? " [MAJOR]" : "");
+                        if (has_emotions) {
+                            send_to_char(ch, "      %sEmotions:%s%s\r\n", CCCYN(ch, C_NRM), CCNRM(ch, C_NRM), emotion_buf);
+                        }
                     }
                 }
             } else {
