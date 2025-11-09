@@ -1046,11 +1046,40 @@ struct emotion_memory {
     int interaction_type; /* Type of interaction (INTERACT_*) */
     int major_event;      /* 1 for major events (rescue, ally death, theft, extreme violence), 0 for normal */
     time_t timestamp;     /* When the interaction occurred (0 = unused slot) */
-    /* Simplified emotion snapshot - only track key emotions for memory efficiency (4 emotions vs 20) */
-    sh_int trust_level;      /* Trust at time of interaction (-50 to +50 range) */
-    sh_int friendship_level; /* Friendship at time of interaction (-50 to +50 range) */
+    char social_name[20]; /* Name of the social command if interaction was social (empty string otherwise) */
+    
+    /* Complete emotion snapshot - track all 20 emotions to see how each interaction affected them */
+    /* Basic emotions */
     sh_int fear_level;       /* Fear at time of interaction (0-100) */
     sh_int anger_level;      /* Anger at time of interaction (0-100) */
+    sh_int happiness_level;  /* Happiness at time of interaction (0-100) */
+    sh_int sadness_level;    /* Sadness at time of interaction (0-100) */
+    
+    /* Social emotions */
+    sh_int friendship_level; /* Friendship at time of interaction (0-100) */
+    sh_int love_level;       /* Love at time of interaction (0-100) */
+    sh_int trust_level;      /* Trust at time of interaction (0-100) */
+    sh_int loyalty_level;    /* Loyalty at time of interaction (0-100) */
+    
+    /* Motivational emotions */
+    sh_int curiosity_level;  /* Curiosity at time of interaction (0-100) */
+    sh_int greed_level;      /* Greed at time of interaction (0-100) */
+    sh_int pride_level;      /* Pride at time of interaction (0-100) */
+    
+    /* Empathic emotions */
+    sh_int compassion_level; /* Compassion at time of interaction (0-100) */
+    sh_int envy_level;       /* Envy at time of interaction (0-100) */
+    
+    /* Arousal emotions */
+    sh_int courage_level;    /* Courage at time of interaction (0-100) */
+    sh_int excitement_level; /* Excitement at time of interaction (0-100) */
+    
+    /* Negative/aversive emotions */
+    sh_int disgust_level;     /* Disgust at time of interaction (0-100) */
+    sh_int shame_level;       /* Shame at time of interaction (0-100) */
+    sh_int pain_level;        /* Pain at time of interaction (0-100) */
+    sh_int horror_level;      /* Horror at time of interaction (0-100) */
+    sh_int humiliation_level; /* Humiliation at time of interaction (0-100) */
 };
 
 struct mob_ai_data {
