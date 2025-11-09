@@ -670,17 +670,17 @@ void mobile_activity(void)
                     }
                 }
 
-                if (can_perform && rand_number(1, 100) <= 30) { /* 30% chance to perform action each round */
-                    /* Perform the appropriate resource action */
+                if (can_perform && rand_number(1, 100) <= 5) { /* 30% chance to perform action each round */
+                    /* Perform the appropriate resource action - disabled for reduce resources usage until fix*/
                     switch (ch->ai_data->current_goal) {
                         case GOAL_MINE:
-                            call_ACMD(do_mine, ch, "", 0, 0);
+                            //call_ACMD(do_mine, ch, "", 0, 0);
                             break;
                         case GOAL_FISH:
-                            call_ACMD(do_fishing, ch, "", 0, 0);
+                            //call_ACMD(do_fishing, ch, "", 0, 0);
                             break;
                         case GOAL_FORAGE:
-                            call_ACMD(do_forage, ch, "", 0, 0);
+                            //call_ACMD(do_forage, ch, "", 0, 0);
                             break;
                         case GOAL_EAVESDROP:
                             call_ACMD(do_eavesdrop, ch, "", 0, 0);
