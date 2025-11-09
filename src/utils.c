@@ -5368,8 +5368,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      *   - Moderate: +curiosity, +shame, -trust
      *   - Low/none: +disgust, +horror, +anger, +shame, +humiliation, -trust, -friendship
      */
-    const char *blocked_socials[] = {"fondle",  "grope",     "french", "sex", "seduce",
-                                     "despine", "shiskabob", "vice",   NULL};
+    const char *blocked_socials[] = {"fondle", "grope", "french",   "sex",   "seduce", "despine", "shiskabob",
+                                     "vice",   "choke", "strangle", "smite", "sword",  NULL};
 
     /* Disgusting socials - trigger disgust and anger
      * Emotion changes: +disgust, +anger, -trust, -friendship, -happiness
@@ -5384,10 +5384,10 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * Includes: physical aggression
      * Note: spank, tackle, snowball, challenge, arrest have special contextual handling
      * Note: vampire and haircut moved to silly/contextual categories (not actually violent)
+     * Note: choke, strangle, smite, sword moved to blocked_socials as extreme violence
      */
-    const char *violent_socials[] = {"needle",   "shock", "whip",    "bite",  "choke",  "strangle",
-                                     "smack",    "smash", "clobber", "thwap", "whack",  "pound",
-                                     "shootout", "sword", "smite",   "burn",  "charge", NULL};
+    const char *violent_socials[] = {"needle", "shock", "whip",     "bite", "smack",  "clobber", "thwap",
+                                     "whack",  "pound", "shootout", "burn", "charge", NULL};
 
     /* Humiliating socials - trigger shame and humiliation
      * Emotion changes: +humiliation, +shame, +anger, -trust, -friendship, -pride
@@ -5445,10 +5445,10 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     /* Silly/absurd socials - nonsense, absurd, funny actions
      * Emotion changes: +curiosity, +happiness if friendly, minimal impact overall
      * Includes: absurd actions, silly references, crazy behavior
+     * Note: vampire gets special contextual handling below and is NOT included here
      */
-    const char *silly_socials[] = {
-        "abc",   "abrac",  "bloob",  "doodle",    "batman", "snoopy",  "elephantma",
-        "crazy", "crazed", "insane", "christmas", "fish",   "vampire", /* vampire gets special silly handling */ NULL};
+    const char *silly_socials[] = {"abc",   "abrac",  "bloob",  "doodle",    "batman", "snoopy", "elephantma",
+                                   "crazy", "crazed", "insane", "christmas", "fish",   NULL};
 
     /* Performance socials - showing off, boasting, posing
      * Emotion changes: +pride (for mob if friendly), +annoyance if not friendly
@@ -5512,27 +5512,11 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     /* Misc neutral socials - truly miscellaneous with minimal emotional impact
      * Emotion changes: +curiosity (minimal), generally neutral
      * Includes: various actions that don't fit other categories
-     * Note: rose, knuckle, embrace, makeout, haircut get special contextual handling below
+     * Note: rose, knuckle, embrace, makeout, haircut, vampire get special contextual handling below and are NOT
+     * included here
      */
-    const char *misc_neutral_socials[] = {"aim",
-                                          "avsalute",
-                                          "backclap",
-                                          "bat",
-                                          "bored",
-                                          "box",
-                                          "buzz",
-                                          "cold",
-                                          "conga",
-                                          "conga2",
-                                          "creep",
-                                          "curious",
-                                          "shame",
-                                          "rose",
-                                          "knuckle",
-                                          "embrace",
-                                          "makeout",
-                                          "haircut",
-                                          /* Last 6 get special handling below */ NULL};
+    const char *misc_neutral_socials[] = {"aim",  "avsalute", "backclap", "bat",   "bored",   "box",   "buzz",
+                                          "cold", "conga",    "conga2",   "creep", "curious", "shame", NULL};
 
     int i;
     bool is_positive = FALSE;
@@ -5676,249 +5660,244 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
-    /* Categorize the social */
+    /* Categorize the social using efficient else-if chain */
+    bool category_found = FALSE;
+
     for (i = 0; positive_socials[i] != NULL; i++) {
         if (!strcmp(social_name, positive_socials[i])) {
             is_positive = TRUE;
+            category_found = TRUE;
             break;
         }
     }
 
-    if (!is_positive) {
+    if (!category_found) {
         for (i = 0; disgusting_socials[i] != NULL; i++) {
             if (!strcmp(social_name, disgusting_socials[i])) {
                 is_disgusting = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting) {
+    if (!category_found) {
         for (i = 0; violent_socials[i] != NULL; i++) {
             if (!strcmp(social_name, violent_socials[i])) {
                 is_violent = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent) {
+    if (!category_found) {
         for (i = 0; humiliating_socials[i] != NULL; i++) {
             if (!strcmp(social_name, humiliating_socials[i])) {
                 is_humiliating = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating) {
+    if (!category_found) {
         for (i = 0; negative_socials[i] != NULL; i++) {
             if (!strcmp(social_name, negative_socials[i])) {
                 is_negative = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative) {
+    if (!category_found) {
         for (i = 0; neutral_socials[i] != NULL; i++) {
             if (!strcmp(social_name, neutral_socials[i])) {
                 is_neutral = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral) {
+    if (!category_found) {
         for (i = 0; fearful_socials[i] != NULL; i++) {
             if (!strcmp(social_name, fearful_socials[i])) {
                 is_fearful = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful) {
+    if (!category_found) {
         for (i = 0; playful_socials[i] != NULL; i++) {
             if (!strcmp(social_name, playful_socials[i])) {
                 is_playful = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful) {
+    if (!category_found) {
         for (i = 0; romantic_socials[i] != NULL; i++) {
             if (!strcmp(social_name, romantic_socials[i])) {
                 is_romantic = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic) {
+    if (!category_found) {
         for (i = 0; agreeable_socials[i] != NULL; i++) {
             if (!strcmp(social_name, agreeable_socials[i])) {
                 is_agreeable = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable) {
+    if (!category_found) {
         for (i = 0; confused_socials[i] != NULL; i++) {
             if (!strcmp(social_name, confused_socials[i])) {
                 is_confused = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused) {
+    if (!category_found) {
         for (i = 0; celebratory_socials[i] != NULL; i++) {
             if (!strcmp(social_name, celebratory_socials[i])) {
                 is_celebratory = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
     /* Check new social categories */
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory) {
+    if (!category_found) {
         for (i = 0; relaxed_socials[i] != NULL; i++) {
             if (!strcmp(social_name, relaxed_socials[i])) {
                 is_relaxed = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed) {
+    if (!category_found) {
         for (i = 0; silly_socials[i] != NULL; i++) {
             if (!strcmp(social_name, silly_socials[i])) {
                 is_silly = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
-        !is_silly) {
+    if (!category_found) {
         for (i = 0; performance_socials[i] != NULL; i++) {
             if (!strcmp(social_name, performance_socials[i])) {
                 is_performance = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
-        !is_silly && !is_performance) {
+    if (!category_found) {
         for (i = 0; angry_expression_socials[i] != NULL; i++) {
             if (!strcmp(social_name, angry_expression_socials[i])) {
                 is_angry_expression = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
-        !is_silly && !is_performance && !is_angry_expression) {
+    if (!category_found) {
         for (i = 0; communication_socials[i] != NULL; i++) {
             if (!strcmp(social_name, communication_socials[i])) {
                 is_communication = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
-        !is_silly && !is_performance && !is_angry_expression && !is_communication) {
+    if (!category_found) {
         for (i = 0; animal_socials[i] != NULL; i++) {
             if (!strcmp(social_name, animal_socials[i])) {
                 is_animal = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
-        !is_silly && !is_performance && !is_angry_expression && !is_communication && !is_animal) {
+    if (!category_found) {
         for (i = 0; food_drink_socials[i] != NULL; i++) {
             if (!strcmp(social_name, food_drink_socials[i])) {
                 is_food_drink = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
-        !is_silly && !is_performance && !is_angry_expression && !is_communication && !is_animal && !is_food_drink) {
+    if (!category_found) {
         for (i = 0; gesture_socials[i] != NULL; i++) {
             if (!strcmp(social_name, gesture_socials[i])) {
                 is_gesture = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
-        !is_silly && !is_performance && !is_angry_expression && !is_communication && !is_animal && !is_food_drink &&
-        !is_gesture) {
+    if (!category_found) {
         for (i = 0; exclamation_socials[i] != NULL; i++) {
             if (!strcmp(social_name, exclamation_socials[i])) {
                 is_exclamation = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
-        !is_silly && !is_performance && !is_angry_expression && !is_communication && !is_animal && !is_food_drink &&
-        !is_gesture && !is_exclamation) {
+    if (!category_found) {
         for (i = 0; amused_socials[i] != NULL; i++) {
             if (!strcmp(social_name, amused_socials[i])) {
                 is_amused = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
-        !is_silly && !is_performance && !is_angry_expression && !is_communication && !is_animal && !is_food_drink &&
-        !is_gesture && !is_exclamation && !is_amused) {
+    if (!category_found) {
         for (i = 0; self_directed_socials[i] != NULL; i++) {
             if (!strcmp(social_name, self_directed_socials[i])) {
                 is_self_directed = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
     }
 
     /* Catch-all: if not in any specific category, check misc_neutral (ensures ALL socials are handled) */
-    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
-        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
-        !is_silly && !is_performance && !is_angry_expression && !is_communication && !is_animal && !is_food_drink &&
-        !is_gesture && !is_exclamation && !is_amused && !is_self_directed) {
+    if (!category_found) {
         for (i = 0; misc_neutral_socials[i] != NULL; i++) {
             if (!strcmp(social_name, misc_neutral_socials[i])) {
                 is_misc_neutral = TRUE;
+                category_found = TRUE;
                 break;
             }
         }
@@ -6499,14 +6478,13 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
 
     /* Vampire: silly vampire impression - generally amusing/silly */
     if (!strcmp(social_name, "vampire")) {
-        /* Playful vampire impression */
-        adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
         /* If friendly, finds it amusing */
         if (mob->ai_data->emotion_friendship >= 50) {
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
             adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 12));
             adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(2, 6));
         }
-        /* Otherwise just mildly amused/confused */
+        /* Otherwise just mildly curious/confused */
         else {
             adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
         }
