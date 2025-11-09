@@ -384,6 +384,8 @@ int write_mobile_espec(mob_vnum mvnum, struct char_data *mob, FILE *fd)
             fprintf(fd, "GenFollow: %d\n", GET_GENFOLLOW(mob));
         if (GET_GENHEALING(mob) != 0)
             fprintf(fd, "GenHealing: %d\n", GET_GENHEALING(mob));
+        if (mob->ai_data && mob->ai_data->emotional_profile != EMOTION_PROFILE_NEUTRAL)
+            fprintf(fd, "EmotionProfile: %d\n", mob->ai_data->emotional_profile);
     }
 
     fputs("E\n", fd);

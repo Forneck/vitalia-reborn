@@ -947,6 +947,30 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "* Memory System Baseline Offset (0-100)\n");
     fprintf(fl, "emotion_memory_baseline_offset = %d\n\n", CONFIG_EMOTION_MEMORY_BASELINE_OFFSET);
 
+    fprintf(fl, "* Trading Behavior Thresholds (0-100)\n");
+    fprintf(fl, "emotion_trade_trust_high_threshold = %d\n", CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_trade_trust_low_threshold = %d\n", CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD);
+    fprintf(fl, "emotion_trade_greed_high_threshold = %d\n", CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_trade_friendship_high_threshold = %d\n\n", CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD);
+
+    fprintf(fl, "* Quest Behavior Thresholds (0-100)\n");
+    fprintf(fl, "emotion_quest_curiosity_high_threshold = %d\n", CONFIG_EMOTION_QUEST_CURIOSITY_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_quest_loyalty_high_threshold = %d\n", CONFIG_EMOTION_QUEST_LOYALTY_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_quest_trust_high_threshold = %d\n", CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_quest_trust_low_threshold = %d\n\n", CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD);
+
+    fprintf(fl, "* Social Initiation Thresholds (0-100)\n");
+    fprintf(fl, "emotion_social_happiness_high_threshold = %d\n", CONFIG_EMOTION_SOCIAL_HAPPINESS_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_social_anger_high_threshold = %d\n", CONFIG_EMOTION_SOCIAL_ANGER_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_social_sadness_high_threshold = %d\n", CONFIG_EMOTION_SOCIAL_SADNESS_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_social_love_follow_threshold = %d\n\n", CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD);
+
+    fprintf(fl, "* Group Behavior Thresholds (0-100)\n");
+    fprintf(fl, "emotion_group_loyalty_high_threshold = %d\n", CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_group_loyalty_low_threshold = %d\n", CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD);
+    fprintf(fl, "emotion_group_friendship_high_threshold = %d\n", CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_group_envy_high_threshold = %d\n\n", CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD);
+
     fclose(fl);
 
     if (in_save_list(NOWHERE, SL_CFG))
@@ -1242,7 +1266,7 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.display_horror_threshold = 90;
             OLC_CONFIG(d)->emotion_config.display_pain_threshold = 80;
             OLC_CONFIG(d)->emotion_config.display_compassion_threshold = 80;
-            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 60;  /* Show courage more */
+            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 60; /* Show courage more */
             OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = 80;
             OLC_CONFIG(d)->emotion_config.display_disgust_threshold = 75;
             OLC_CONFIG(d)->emotion_config.display_envy_threshold = 80;
@@ -1252,7 +1276,7 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.display_humiliation_threshold = 85;
             OLC_CONFIG(d)->emotion_config.display_love_threshold = 85;
             OLC_CONFIG(d)->emotion_config.display_loyalty_threshold = 75;
-            OLC_CONFIG(d)->emotion_config.display_pride_threshold = 60;  /* Show pride more */
+            OLC_CONFIG(d)->emotion_config.display_pride_threshold = 60; /* Show pride more */
             OLC_CONFIG(d)->emotion_config.display_shame_threshold = 85;
             OLC_CONFIG(d)->emotion_config.display_trust_threshold = 80;
 
@@ -1297,6 +1321,30 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.memory_age_old = 2400;
 
             OLC_CONFIG(d)->emotion_config.memory_baseline_offset = 50;
+
+            /* Trading behavior thresholds - aggressive pricing */
+            OLC_CONFIG(d)->emotion_config.trade_trust_high_threshold = 70;      /* Harder to gain trust bonus */
+            OLC_CONFIG(d)->emotion_config.trade_trust_low_threshold = 40;       /* Less likely to refuse */
+            OLC_CONFIG(d)->emotion_config.trade_greed_high_threshold = 60;      /* More greedy */
+            OLC_CONFIG(d)->emotion_config.trade_friendship_high_threshold = 75; /* Harder to get discount */
+
+            /* Quest behavior thresholds - less quest-friendly */
+            OLC_CONFIG(d)->emotion_config.quest_curiosity_high_threshold = 75; /* Less curious */
+            OLC_CONFIG(d)->emotion_config.quest_loyalty_high_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.quest_trust_high_threshold = 70; /* Harder to get bonus */
+            OLC_CONFIG(d)->emotion_config.quest_trust_low_threshold = 40;  /* Less likely to refuse */
+
+            /* Social initiation thresholds - more aggressive socials */
+            OLC_CONFIG(d)->emotion_config.social_happiness_high_threshold = 80; /* Rarely happy */
+            OLC_CONFIG(d)->emotion_config.social_anger_high_threshold = 60;     /* More anger */
+            OLC_CONFIG(d)->emotion_config.social_sadness_high_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.social_love_follow_threshold = 85; /* Rarely follows */
+
+            /* Group behavior thresholds - less loyal */
+            OLC_CONFIG(d)->emotion_config.group_loyalty_high_threshold = 75;    /* Harder to stay loyal */
+            OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 40;     /* Easier to abandon */
+            OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 75; /* Harder to join */
+            OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 65;       /* More envious */
             break;
 
         case 2: /* Defensive - Mobs flee more easily, show fear */
@@ -1308,7 +1356,7 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.display_horror_threshold = 70;
             OLC_CONFIG(d)->emotion_config.display_pain_threshold = 60;
             OLC_CONFIG(d)->emotion_config.display_compassion_threshold = 70;
-            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 80;  /* Show courage less */
+            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 80; /* Show courage less */
             OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = 70;
             OLC_CONFIG(d)->emotion_config.display_disgust_threshold = 70;
             OLC_CONFIG(d)->emotion_config.display_envy_threshold = 70;
@@ -1363,6 +1411,30 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.memory_age_old = 4800;
 
             OLC_CONFIG(d)->emotion_config.memory_baseline_offset = 50;
+
+            /* Trading behavior thresholds - defensive pricing */
+            OLC_CONFIG(d)->emotion_config.trade_trust_high_threshold = 50;      /* Easier to gain trust bonus */
+            OLC_CONFIG(d)->emotion_config.trade_trust_low_threshold = 20;       /* More likely to refuse */
+            OLC_CONFIG(d)->emotion_config.trade_greed_high_threshold = 80;      /* Less greedy */
+            OLC_CONFIG(d)->emotion_config.trade_friendship_high_threshold = 60; /* Easier discount */
+
+            /* Quest behavior thresholds - cautious with quests */
+            OLC_CONFIG(d)->emotion_config.quest_curiosity_high_threshold = 80; /* Less curious */
+            OLC_CONFIG(d)->emotion_config.quest_loyalty_high_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.quest_trust_high_threshold = 50; /* Easier bonus */
+            OLC_CONFIG(d)->emotion_config.quest_trust_low_threshold = 20;  /* More likely to refuse */
+
+            /* Social initiation thresholds - fearful socials */
+            OLC_CONFIG(d)->emotion_config.social_happiness_high_threshold = 75; /* Less happy */
+            OLC_CONFIG(d)->emotion_config.social_anger_high_threshold = 80;     /* Less angry */
+            OLC_CONFIG(d)->emotion_config.social_sadness_high_threshold = 60;   /* More sad */
+            OLC_CONFIG(d)->emotion_config.social_love_follow_threshold = 75;    /* Easier follow */
+
+            /* Group behavior thresholds - less stable groups */
+            OLC_CONFIG(d)->emotion_config.group_loyalty_high_threshold = 75;    /* Harder to stay */
+            OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 35;     /* Easier to abandon */
+            OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 65; /* Easier join */
+            OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 75;       /* Less envious */
             break;
 
         case 3: /* Balanced - Default values (Phase 2 defaults) */
@@ -1425,6 +1497,30 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.memory_age_old = 3600;
 
             OLC_CONFIG(d)->emotion_config.memory_baseline_offset = 50;
+
+            /* Trading behavior thresholds - balanced */
+            OLC_CONFIG(d)->emotion_config.trade_trust_high_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.trade_trust_low_threshold = 30;
+            OLC_CONFIG(d)->emotion_config.trade_greed_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.trade_friendship_high_threshold = 70;
+
+            /* Quest behavior thresholds - balanced */
+            OLC_CONFIG(d)->emotion_config.quest_curiosity_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.quest_loyalty_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.quest_trust_high_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.quest_trust_low_threshold = 30;
+
+            /* Social initiation thresholds - balanced */
+            OLC_CONFIG(d)->emotion_config.social_happiness_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.social_anger_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.social_sadness_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.social_love_follow_threshold = 80;
+
+            /* Group behavior thresholds - balanced */
+            OLC_CONFIG(d)->emotion_config.group_loyalty_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 30;
+            OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 70;
             break;
 
         case 4: /* Sensitive - Emotions display more, memory lasts longer */
@@ -1491,6 +1587,288 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.memory_age_old = 7200;
 
             OLC_CONFIG(d)->emotion_config.memory_baseline_offset = 50;
+
+            /* Trading behavior thresholds - very responsive */
+            OLC_CONFIG(d)->emotion_config.trade_trust_high_threshold = 55;      /* Easy trust bonus */
+            OLC_CONFIG(d)->emotion_config.trade_trust_low_threshold = 25;       /* Easy refusal */
+            OLC_CONFIG(d)->emotion_config.trade_greed_high_threshold = 75;      /* Less greedy */
+            OLC_CONFIG(d)->emotion_config.trade_friendship_high_threshold = 60; /* Easy discount */
+
+            /* Quest behavior thresholds - very responsive */
+            OLC_CONFIG(d)->emotion_config.quest_curiosity_high_threshold = 65; /* More curious */
+            OLC_CONFIG(d)->emotion_config.quest_loyalty_high_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.quest_trust_high_threshold = 55; /* Easy bonus */
+            OLC_CONFIG(d)->emotion_config.quest_trust_low_threshold = 25;  /* Easy refusal */
+
+            /* Social initiation thresholds - very emotional */
+            OLC_CONFIG(d)->emotion_config.social_happiness_high_threshold = 60; /* More happy */
+            OLC_CONFIG(d)->emotion_config.social_anger_high_threshold = 60;     /* More angry */
+            OLC_CONFIG(d)->emotion_config.social_sadness_high_threshold = 60;   /* More sad */
+            OLC_CONFIG(d)->emotion_config.social_love_follow_threshold = 70;    /* Easier follow */
+
+            /* Group behavior thresholds - very social */
+            OLC_CONFIG(d)->emotion_config.group_loyalty_high_threshold = 65;    /* Easier stay */
+            OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 35;     /* Easier abandon */
+            OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 60; /* Easier join */
+            OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 75;       /* Less envious */
+            break;
+
+        case 5: /* Mercantile - Trading-focused, fair prices, trusting */
+            /* Display thresholds - moderate */
+            OLC_CONFIG(d)->emotion_config.display_fear_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_anger_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_happiness_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_sadness_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_horror_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.display_pain_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_compassion_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_disgust_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_envy_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_excitement_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_friendship_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_greed_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_humiliation_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_love_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_loyalty_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_pride_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_shame_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_trust_threshold = 60;
+
+            /* Flee behavior - moderate courage */
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.flee_horror_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_modifier = 10;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_modifier = 15;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_modifier = -10;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_modifier = -15;
+            OLC_CONFIG(d)->emotion_config.flee_horror_modifier = 25;
+
+            /* Pain system - standard */
+            OLC_CONFIG(d)->emotion_config.pain_damage_minor_threshold = 5;
+            OLC_CONFIG(d)->emotion_config.pain_damage_moderate_threshold = 10;
+            OLC_CONFIG(d)->emotion_config.pain_damage_heavy_threshold = 25;
+            OLC_CONFIG(d)->emotion_config.pain_damage_massive_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.pain_minor_min = 1;
+            OLC_CONFIG(d)->emotion_config.pain_minor_max = 5;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 6;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_max = 15;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 16;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_max = 30;
+            OLC_CONFIG(d)->emotion_config.pain_massive_min = 31;
+            OLC_CONFIG(d)->emotion_config.pain_massive_max = 50;
+
+            /* Memory system - moderate */
+            OLC_CONFIG(d)->emotion_config.memory_weight_recent = 10;
+            OLC_CONFIG(d)->emotion_config.memory_weight_fresh = 7;
+            OLC_CONFIG(d)->emotion_config.memory_weight_moderate = 5;
+            OLC_CONFIG(d)->emotion_config.memory_weight_old = 3;
+            OLC_CONFIG(d)->emotion_config.memory_weight_ancient = 1;
+            OLC_CONFIG(d)->emotion_config.memory_age_recent = 300;
+            OLC_CONFIG(d)->emotion_config.memory_age_fresh = 600;
+            OLC_CONFIG(d)->emotion_config.memory_age_moderate = 1800;
+            OLC_CONFIG(d)->emotion_config.memory_age_old = 3600;
+            OLC_CONFIG(d)->emotion_config.memory_baseline_offset = 50;
+
+            /* Trading behavior thresholds - VERY GENEROUS */
+            OLC_CONFIG(d)->emotion_config.trade_trust_high_threshold = 50;      /* Easy trust bonus */
+            OLC_CONFIG(d)->emotion_config.trade_trust_low_threshold = 20;       /* Rarely refuse */
+            OLC_CONFIG(d)->emotion_config.trade_greed_high_threshold = 80;      /* Not greedy */
+            OLC_CONFIG(d)->emotion_config.trade_friendship_high_threshold = 55; /* Easy discount */
+
+            /* Quest behavior thresholds - moderate */
+            OLC_CONFIG(d)->emotion_config.quest_curiosity_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.quest_loyalty_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.quest_trust_high_threshold = 55; /* Easy bonus */
+            OLC_CONFIG(d)->emotion_config.quest_trust_low_threshold = 25;
+
+            /* Social initiation thresholds - friendly */
+            OLC_CONFIG(d)->emotion_config.social_happiness_high_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.social_anger_high_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.social_sadness_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.social_love_follow_threshold = 75;
+
+            /* Group behavior thresholds - moderate */
+            OLC_CONFIG(d)->emotion_config.group_loyalty_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 30;
+            OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 75;
+            break;
+
+        case 6: /* Hermit - Antisocial, refuses interaction, distrusting */
+            /* Display thresholds - show negative emotions more */
+            OLC_CONFIG(d)->emotion_config.display_fear_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_anger_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_happiness_threshold = 85;
+            OLC_CONFIG(d)->emotion_config.display_sadness_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_horror_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_pain_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_compassion_threshold = 85;
+            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = 85;
+            OLC_CONFIG(d)->emotion_config.display_disgust_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_envy_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_excitement_threshold = 85;
+            OLC_CONFIG(d)->emotion_config.display_friendship_threshold = 85;
+            OLC_CONFIG(d)->emotion_config.display_greed_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_humiliation_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_love_threshold = 90;
+            OLC_CONFIG(d)->emotion_config.display_loyalty_threshold = 85;
+            OLC_CONFIG(d)->emotion_config.display_pride_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_shame_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_trust_threshold = 85;
+
+            /* Flee behavior - moderate, cautious */
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = 45;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_threshold = 55;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.flee_horror_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_modifier = 12;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_modifier = 18;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_modifier = -8;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_modifier = -12;
+            OLC_CONFIG(d)->emotion_config.flee_horror_modifier = 28;
+
+            /* Pain system - standard */
+            OLC_CONFIG(d)->emotion_config.pain_damage_minor_threshold = 5;
+            OLC_CONFIG(d)->emotion_config.pain_damage_moderate_threshold = 10;
+            OLC_CONFIG(d)->emotion_config.pain_damage_heavy_threshold = 25;
+            OLC_CONFIG(d)->emotion_config.pain_damage_massive_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.pain_minor_min = 1;
+            OLC_CONFIG(d)->emotion_config.pain_minor_max = 5;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 6;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_max = 15;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 16;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_max = 30;
+            OLC_CONFIG(d)->emotion_config.pain_massive_min = 31;
+            OLC_CONFIG(d)->emotion_config.pain_massive_max = 50;
+
+            /* Memory system - long memories */
+            OLC_CONFIG(d)->emotion_config.memory_weight_recent = 10;
+            OLC_CONFIG(d)->emotion_config.memory_weight_fresh = 8;
+            OLC_CONFIG(d)->emotion_config.memory_weight_moderate = 6;
+            OLC_CONFIG(d)->emotion_config.memory_weight_old = 4;
+            OLC_CONFIG(d)->emotion_config.memory_weight_ancient = 2;
+            OLC_CONFIG(d)->emotion_config.memory_age_recent = 360;
+            OLC_CONFIG(d)->emotion_config.memory_age_fresh = 720;
+            OLC_CONFIG(d)->emotion_config.memory_age_moderate = 2400;
+            OLC_CONFIG(d)->emotion_config.memory_age_old = 4800;
+            OLC_CONFIG(d)->emotion_config.memory_baseline_offset = 50;
+
+            /* Trading behavior thresholds - VERY DISTRUSTING */
+            OLC_CONFIG(d)->emotion_config.trade_trust_high_threshold = 75;      /* Hard trust bonus */
+            OLC_CONFIG(d)->emotion_config.trade_trust_low_threshold = 15;       /* Often refuse */
+            OLC_CONFIG(d)->emotion_config.trade_greed_high_threshold = 65;      /* More greedy */
+            OLC_CONFIG(d)->emotion_config.trade_friendship_high_threshold = 80; /* Hard discount */
+
+            /* Quest behavior thresholds - REFUSES QUESTS */
+            OLC_CONFIG(d)->emotion_config.quest_curiosity_high_threshold = 85; /* Not curious */
+            OLC_CONFIG(d)->emotion_config.quest_loyalty_high_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.quest_trust_high_threshold = 75; /* Hard bonus */
+            OLC_CONFIG(d)->emotion_config.quest_trust_low_threshold = 15;  /* Often refuse */
+
+            /* Social initiation thresholds - WITHDRAWN */
+            OLC_CONFIG(d)->emotion_config.social_happiness_high_threshold = 85; /* Rarely happy */
+            OLC_CONFIG(d)->emotion_config.social_anger_high_threshold = 65;     /* More angry */
+            OLC_CONFIG(d)->emotion_config.social_sadness_high_threshold = 55;   /* Often sad */
+            OLC_CONFIG(d)->emotion_config.social_love_follow_threshold = 90;    /* Rarely follows */
+
+            /* Group behavior thresholds - ANTISOCIAL */
+            OLC_CONFIG(d)->emotion_config.group_loyalty_high_threshold = 80;    /* Hard to stay */
+            OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 25;     /* Easy abandon */
+            OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 80; /* Hard to join */
+            OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 60;       /* Very envious */
+            break;
+
+        case 7: /* Loyal - Group-focused, stays with allies, faithful */
+            /* Display thresholds - show positive emotions more */
+            OLC_CONFIG(d)->emotion_config.display_fear_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_anger_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_happiness_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_sadness_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_horror_threshold = 85;
+            OLC_CONFIG(d)->emotion_config.display_pain_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_compassion_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_disgust_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_envy_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.display_excitement_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.display_friendship_threshold = 55;
+            OLC_CONFIG(d)->emotion_config.display_greed_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.display_humiliation_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_love_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.display_loyalty_threshold = 55;
+            OLC_CONFIG(d)->emotion_config.display_pride_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.display_shame_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.display_trust_threshold = 60;
+
+            /* Flee behavior - brave, stands ground */
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_threshold = 55;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_threshold = 45;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_threshold = 65;
+            OLC_CONFIG(d)->emotion_config.flee_horror_threshold = 85;
+            OLC_CONFIG(d)->emotion_config.flee_fear_low_modifier = 8;
+            OLC_CONFIG(d)->emotion_config.flee_fear_high_modifier = 12;
+            OLC_CONFIG(d)->emotion_config.flee_courage_low_modifier = -12;
+            OLC_CONFIG(d)->emotion_config.flee_courage_high_modifier = -18;
+            OLC_CONFIG(d)->emotion_config.flee_horror_modifier = 22;
+
+            /* Pain system - standard */
+            OLC_CONFIG(d)->emotion_config.pain_damage_minor_threshold = 5;
+            OLC_CONFIG(d)->emotion_config.pain_damage_moderate_threshold = 10;
+            OLC_CONFIG(d)->emotion_config.pain_damage_heavy_threshold = 25;
+            OLC_CONFIG(d)->emotion_config.pain_damage_massive_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.pain_minor_min = 1;
+            OLC_CONFIG(d)->emotion_config.pain_minor_max = 5;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_min = 6;
+            OLC_CONFIG(d)->emotion_config.pain_moderate_max = 15;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_min = 16;
+            OLC_CONFIG(d)->emotion_config.pain_heavy_max = 30;
+            OLC_CONFIG(d)->emotion_config.pain_massive_min = 31;
+            OLC_CONFIG(d)->emotion_config.pain_massive_max = 50;
+
+            /* Memory system - very long memories */
+            OLC_CONFIG(d)->emotion_config.memory_weight_recent = 10;
+            OLC_CONFIG(d)->emotion_config.memory_weight_fresh = 9;
+            OLC_CONFIG(d)->emotion_config.memory_weight_moderate = 7;
+            OLC_CONFIG(d)->emotion_config.memory_weight_old = 5;
+            OLC_CONFIG(d)->emotion_config.memory_weight_ancient = 3;
+            OLC_CONFIG(d)->emotion_config.memory_age_recent = 480;
+            OLC_CONFIG(d)->emotion_config.memory_age_fresh = 960;
+            OLC_CONFIG(d)->emotion_config.memory_age_moderate = 3600;
+            OLC_CONFIG(d)->emotion_config.memory_age_old = 7200;
+            OLC_CONFIG(d)->emotion_config.memory_baseline_offset = 50;
+
+            /* Trading behavior thresholds - TRUSTING */
+            OLC_CONFIG(d)->emotion_config.trade_trust_high_threshold = 55;      /* Easy trust bonus */
+            OLC_CONFIG(d)->emotion_config.trade_trust_low_threshold = 25;       /* Rarely refuse */
+            OLC_CONFIG(d)->emotion_config.trade_greed_high_threshold = 75;      /* Not greedy */
+            OLC_CONFIG(d)->emotion_config.trade_friendship_high_threshold = 60; /* Easy discount */
+
+            /* Quest behavior thresholds - helpful */
+            OLC_CONFIG(d)->emotion_config.quest_curiosity_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.quest_loyalty_high_threshold = 60; /* Very loyal */
+            OLC_CONFIG(d)->emotion_config.quest_trust_high_threshold = 55;   /* Easy bonus */
+            OLC_CONFIG(d)->emotion_config.quest_trust_low_threshold = 25;
+
+            /* Social initiation thresholds - FRIENDLY */
+            OLC_CONFIG(d)->emotion_config.social_happiness_high_threshold = 65; /* More happy */
+            OLC_CONFIG(d)->emotion_config.social_anger_high_threshold = 75;     /* Less angry */
+            OLC_CONFIG(d)->emotion_config.social_sadness_high_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.social_love_follow_threshold = 70; /* Easier follow */
+
+            /* Group behavior thresholds - VERY LOYAL TO GROUPS */
+            OLC_CONFIG(d)->emotion_config.group_loyalty_high_threshold = 60;    /* VERY easy to stay */
+            OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 35;     /* Hard to abandon */
+            OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 55; /* VERY easy to join */
+            OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 80;       /* Not envious */
             break;
     }
 }
@@ -2266,10 +2644,13 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case 'P':
                     write_to_output(d,
                                     "\r\nEmotion Configuration Presets:\r\n"
-                                    "1) Aggressive - Mobs fight harder, flee less\r\n"
-                                    "2) Defensive - Mobs flee more easily, show fear\r\n"
-                                    "3) Balanced - Default balanced values\r\n"
-                                    "4) Sensitive - Emotions display more, longer memory\r\n"
+                                    "1) Aggressive - Mobs fight harder, flee less, greedy\r\n"
+                                    "2) Defensive - Mobs flee more easily, show fear, cautious\r\n"
+                                    "3) Balanced - Default balanced values for all systems\r\n"
+                                    "4) Sensitive - Emotions display more, longer memory, social\r\n"
+                                    "5) Mercantile - Trading-focused, fair prices, trusting\r\n"
+                                    "6) Hermit - Antisocial, refuses interaction, distrusting\r\n"
+                                    "7) Loyal - Group-focused, stays with allies, faithful\r\n"
                                     "Q) Return to Emotion Menu\r\n"
                                     "Enter your choice : ");
                     OLC_MODE(d) = CEDIT_EMOTION_PRESET_MENU;
@@ -2292,6 +2673,9 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                 case '2':
                 case '3':
                 case '4':
+                case '5':
+                case '6':
+                case '7':
                     cedit_load_emotion_preset(d, *arg - '0');
                     write_to_output(d, "\r\nPreset loaded successfully!\r\n");
                     cedit_disp_emotion_menu(d);

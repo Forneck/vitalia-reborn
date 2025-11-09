@@ -418,7 +418,27 @@ void mob_emotion_activity(void)
         /* Mobs perform contextual socials based on reputation, alignment, gender, and position */
         /* Only perform if experimental feature is enabled */
         /* Probability controlled by CONFIG_MOB_EMOTION_SOCIAL_CHANCE (configurable in cedit) */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= CONFIG_MOB_EMOTION_SOCIAL_CHANCE) {
+        /* Emotion modifiers: high happiness/anger increases chance, high sadness decreases */
+        int social_chance = CONFIG_MOB_EMOTION_SOCIAL_CHANCE;
+
+        if (ch->ai_data) {
+            /* High happiness increases social probability */
+            if (ch->ai_data->emotion_happiness >= CONFIG_EMOTION_SOCIAL_HAPPINESS_HIGH_THRESHOLD) {
+                social_chance += 15; /* +15% for high happiness */
+            }
+            /* High anger increases negative social probability */
+            if (ch->ai_data->emotion_anger >= CONFIG_EMOTION_SOCIAL_ANGER_HIGH_THRESHOLD) {
+                social_chance += 10; /* +10% for high anger */
+            }
+            /* High sadness decreases social probability (withdrawal) */
+            if (ch->ai_data->emotion_sadness >= CONFIG_EMOTION_SOCIAL_SADNESS_HIGH_THRESHOLD) {
+                social_chance -= 15; /* -15% for high sadness (withdrawn) */
+            }
+            /* Ensure social_chance stays within reasonable bounds */
+            social_chance = MAX(1, MIN(social_chance, 95));
+        }
+
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && rand_number(1, 100) <= social_chance) {
             struct char_data *potential_target;
 
             /* Look for a suitable target in the room */
@@ -449,6 +469,45 @@ void mob_emotion_activity(void)
             /* If mob was extracted during social, continue to next mob in main loop */
             if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                 continue;
+        }
+
+        /* Love-based following: Mobs with high love (>80) should follow players they love */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data &&
+            ch->ai_data->emotion_love >= CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD) {
+            /* Look for a player to follow if not already following someone */
+            if (!ch->master && !MOB_FLAGGED(ch, MOB_SENTINEL) && !MOB_FLAGGED(ch, MOB_STAY_ZONE)) {
+                struct char_data *potential_love_target;
+                for (potential_love_target = world[IN_ROOM(ch)].people; potential_love_target;
+                     potential_love_target = potential_love_target->next_in_room) {
+                    /* Skip self and other mobs */
+                    if (potential_love_target == ch || IS_NPC(potential_love_target))
+                        continue;
+
+                    /* Must be able to see the target */
+                    if (!CAN_SEE(ch, potential_love_target))
+                        continue;
+
+                    /* Follow the player! */
+                    add_follower(ch, potential_love_target);
+
+                    /* Announce the following with a loving social or message */
+                    act("$n olha para $N com adoração e começa a seguir $M.", FALSE, ch, 0, potential_love_target,
+                        TO_NOTVICT);
+                    act("$n olha para você com adoração e começa a seguir você.", FALSE, ch, 0, potential_love_target,
+                        TO_VICT);
+
+                    /* Safety check for extraction */
+                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                        break;
+
+                    /* Only follow one player per tick */
+                    break;
+                }
+
+                /* If mob was extracted, continue to next mob */
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                    continue;
+            }
         }
 
         /* Passive emotion regulation - emotions gradually return to baseline (experimental feature) */
@@ -674,13 +733,13 @@ void mobile_activity(void)
                     /* Perform the appropriate resource action - disabled for reduce resources usage until fix*/
                     switch (ch->ai_data->current_goal) {
                         case GOAL_MINE:
-                            //call_ACMD(do_mine, ch, "", 0, 0);
+                            // call_ACMD(do_mine, ch, "", 0, 0);
                             break;
                         case GOAL_FISH:
-                            //call_ACMD(do_fishing, ch, "", 0, 0);
+                            // call_ACMD(do_fishing, ch, "", 0, 0);
                             break;
                         case GOAL_FORAGE:
-                            //call_ACMD(do_forage, ch, "", 0, 0);
+                            // call_ACMD(do_forage, ch, "", 0, 0);
                             break;
                         case GOAL_EAVESDROP:
                             call_ACMD(do_eavesdrop, ch, "", 0, 0);
@@ -2126,6 +2185,44 @@ bool mob_handle_grouping(struct char_data *ch)
             /* Lógica de Aceitação do Líder */
             int chance_aceitar =
                 100 - (GROUP(best_target_leader)->members->iSize * 15) + GET_GENGROUP(best_target_leader);
+
+            /* Emotion modifiers for group acceptance */
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && best_target_leader->ai_data && !IS_NPC(ch)) {
+                /* High friendship makes mobs more likely to accept into group */
+                if (best_target_leader->ai_data->emotion_friendship >= CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD) {
+                    chance_aceitar += 20; /* +20% chance to accept */
+                }
+
+                /* High envy refuses to group with better-equipped players */
+                if (best_target_leader->ai_data->emotion_envy >= CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD) {
+                    /* Check if the player is better equipped (simple heuristic: higher level or more gold) */
+                    if (GET_LEVEL(ch) > GET_LEVEL(best_target_leader) ||
+                        GET_GOLD(ch) > GET_GOLD(best_target_leader) * 2) {
+                        act("$n olha invejosamente para $N e recusa-se a formar um grupo.", TRUE, best_target_leader, 0,
+                            ch, TO_ROOM);
+                        return FALSE;
+                    }
+                }
+            }
+
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data) {
+                /* High friendship makes mobs more likely to join groups */
+                if (ch->ai_data->emotion_friendship >= CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD) {
+                    chance_aceitar += 15; /* +15% chance to join */
+                }
+
+                /* High envy refuses to group with better-equipped players */
+                if (ch->ai_data->emotion_envy >= CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD) {
+                    /* Check if the leader is better equipped */
+                    if (!IS_NPC(best_target_leader) && (GET_LEVEL(best_target_leader) > GET_LEVEL(ch) ||
+                                                        GET_GOLD(best_target_leader) > GET_GOLD(ch) * 2)) {
+                        act("$n olha invejosamente para $N e recusa-se a juntar ao grupo.", TRUE, ch, 0,
+                            best_target_leader, TO_ROOM);
+                        return FALSE;
+                    }
+                }
+            }
+
             if (rand_number(1, 120) <= chance_aceitar) {
                 join_group(ch, GROUP(best_target_leader));
                 act("$n junta-se ao grupo de $N.", TRUE, ch, 0, best_target_leader, TO_ROOM);

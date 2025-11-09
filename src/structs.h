@@ -1028,6 +1028,16 @@ struct mob_wishlist_item {
 #define ENTITY_TYPE_PLAYER 0
 #define ENTITY_TYPE_MOB 1
 
+/* Emotional profiles for mob personality initialization */
+#define EMOTION_PROFILE_NEUTRAL 0    /**< Neutral profile - balanced emotions (default) */
+#define EMOTION_PROFILE_AGGRESSIVE 1 /**< Aggressive profile - high anger, low trust/friendship */
+#define EMOTION_PROFILE_DEFENSIVE 2  /**< Defensive profile - high fear/caution, low trust */
+#define EMOTION_PROFILE_BALANCED 3   /**< Balanced profile - moderate all emotions */
+#define EMOTION_PROFILE_SENSITIVE 4  /**< Sensitive profile - high empathy, low aggression */
+#define EMOTION_PROFILE_CONFIDENT 5  /**< Confident profile - high courage, low fear */
+#define EMOTION_PROFILE_GREEDY 6     /**< Greedy profile - high greed/envy, low compassion */
+#define EMOTION_PROFILE_LOYAL 7      /**< Loyal profile - high loyalty/trust, high friendship */
+
 /* Interaction types for emotion memory */
 #define INTERACT_ATTACKED 0
 #define INTERACT_HEALED 1
@@ -1145,6 +1155,9 @@ struct mob_ai_data {
     int emotion_pain;        /* Pain level - physical suffering from violent actions */
     int emotion_horror;      /* Horror level - extreme fear/revulsion to disturbing acts */
     int emotion_humiliation; /* Humiliation level - degradation and loss of dignity */
+
+    /* Emotional profile type for personality consistency */
+    int emotional_profile; /* Emotional profile type (EMOTION_PROFILE_*) - affects baseline emotions */
 
     /* Temporary Quest Master functionality */
     bool is_temp_questmaster; /* True if this mob is acting as temporary quest master */
@@ -1822,6 +1835,30 @@ struct emotion_config_data {
     int memory_age_old;      /**< Seconds for old threshold (default: 3600 = 60min) */
 
     int memory_baseline_offset; /**< Offset for emotion level conversion (default: 50) */
+
+    /* Trading behavior thresholds */
+    int trade_trust_high_threshold;      /**< High trust for better shop prices (default: 60) */
+    int trade_trust_low_threshold;       /**< Low trust for service refusal (default: 30) */
+    int trade_greed_high_threshold;      /**< High greed increases prices (default: 70) */
+    int trade_friendship_high_threshold; /**< High friendship gives discounts (default: 70) */
+
+    /* Quest behavior thresholds */
+    int quest_curiosity_high_threshold; /**< High curiosity for quest offers (default: 70) */
+    int quest_loyalty_high_threshold;   /**< High loyalty for remembering helpers (default: 70) */
+    int quest_trust_high_threshold;     /**< High trust for better rewards (default: 60) */
+    int quest_trust_low_threshold;      /**< Low trust for quest refusal (default: 30) */
+
+    /* Social initiation thresholds */
+    int social_happiness_high_threshold; /**< High happiness for positive socials (default: 70) */
+    int social_anger_high_threshold;     /**< High anger for negative socials (default: 70) */
+    int social_sadness_high_threshold;   /**< High sadness for withdrawal (default: 70) */
+    int social_love_follow_threshold;    /**< Love level for following players (default: 80) */
+
+    /* Group behavior thresholds */
+    int group_loyalty_high_threshold;    /**< High loyalty stays in group when hurt (default: 70) */
+    int group_loyalty_low_threshold;     /**< Low loyalty abandons when scared (default: 30) */
+    int group_friendship_high_threshold; /**< High friendship for joining groups (default: 70) */
+    int group_envy_high_threshold;       /**< High envy refuses better-equipped players (default: 70) */
 };
 
 /** Experimental Features configuration. */

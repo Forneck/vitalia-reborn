@@ -1921,6 +1921,14 @@ static void interpret_espec(const char *keyword, const char *value, int i, int n
             mob_proto[i].ai_data->genetics.healing_tendency = num_arg;
         }
     }
+    CASE("EmotionProfile")
+    {
+        if (mob_proto[i].ai_data) {
+            /* Valid emotion profile values: 0-7 (EMOTION_PROFILE_*) */
+            RANGE(0, 7);
+            mob_proto[i].ai_data->emotional_profile = num_arg;
+        }
+    }
     CASE("BareHandAttack")
     {
         RANGE(0, NUM_ATTACK_TYPES - 1);
@@ -4386,6 +4394,30 @@ static void load_default_config(void)
     CONFIG_EMOTION_MEMORY_AGE_OLD = 3600;      /* 60 minutes */
 
     CONFIG_EMOTION_MEMORY_BASELINE_OFFSET = 50;
+
+    /* Trading behavior thresholds */
+    CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD = 60;
+    CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD = 30;
+    CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD = 70;
+
+    /* Quest behavior thresholds */
+    CONFIG_EMOTION_QUEST_CURIOSITY_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_QUEST_LOYALTY_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD = 60;
+    CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD = 30;
+
+    /* Social initiation thresholds */
+    CONFIG_EMOTION_SOCIAL_HAPPINESS_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_SOCIAL_ANGER_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_SOCIAL_SADNESS_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD = 80;
+
+    /* Group behavior thresholds */
+    CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD = 30;
+    CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD = 70;
+    CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD = 70;
 }
 
 void load_config(void)
@@ -4564,6 +4596,42 @@ void load_config(void)
                     CONFIG_EMOTION_MEMORY_AGE_OLD = num;
                 else if (!str_cmp(tag, "emotion_memory_baseline_offset"))
                     CONFIG_EMOTION_MEMORY_BASELINE_OFFSET = num;
+                /* Trading Behavior Thresholds */
+                else if (!str_cmp(tag, "emotion_trade_trust_high_threshold"))
+                    CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_trade_trust_low_threshold"))
+                    CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_trade_greed_high_threshold"))
+                    CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_trade_friendship_high_threshold"))
+                    CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD = num;
+                /* Quest Behavior Thresholds */
+                else if (!str_cmp(tag, "emotion_quest_curiosity_high_threshold"))
+                    CONFIG_EMOTION_QUEST_CURIOSITY_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_quest_loyalty_high_threshold"))
+                    CONFIG_EMOTION_QUEST_LOYALTY_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_quest_trust_high_threshold"))
+                    CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_quest_trust_low_threshold"))
+                    CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD = num;
+                /* Social Initiation Thresholds */
+                else if (!str_cmp(tag, "emotion_social_happiness_high_threshold"))
+                    CONFIG_EMOTION_SOCIAL_HAPPINESS_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_social_anger_high_threshold"))
+                    CONFIG_EMOTION_SOCIAL_ANGER_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_social_sadness_high_threshold"))
+                    CONFIG_EMOTION_SOCIAL_SADNESS_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_social_love_follow_threshold"))
+                    CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD = num;
+                /* Group Behavior Thresholds */
+                else if (!str_cmp(tag, "emotion_group_loyalty_high_threshold"))
+                    CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_group_loyalty_low_threshold"))
+                    CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_group_friendship_high_threshold"))
+                    CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD = num;
+                else if (!str_cmp(tag, "emotion_group_envy_high_threshold"))
+                    CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD = num;
                 break;
 
             case 'f':

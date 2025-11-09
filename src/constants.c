@@ -456,6 +456,17 @@ cpp_extern const struct wis_app_type wis_app[] = {
 
 const char *npc_class_types[] = {"Outro", "Undead", "Humanoide", "Animal", "Dragão", "Gigante", "\n"};
 
+/* Emotional profile types for mob personality archetypes */
+const char *emotion_profile_types[] = {"Neutral",    /* EMOTION_PROFILE_NEUTRAL 0 */
+                                       "Aggressive", /* EMOTION_PROFILE_AGGRESSIVE 1 */
+                                       "Defensive",  /* EMOTION_PROFILE_DEFENSIVE 2 */
+                                       "Balanced",   /* EMOTION_PROFILE_BALANCED 3 */
+                                       "Sensitive",  /* EMOTION_PROFILE_SENSITIVE 4 */
+                                       "Confident",  /* EMOTION_PROFILE_CONFIDENT 5 */
+                                       "Greedy",     /* EMOTION_PROFILE_GREEDY 6 */
+                                       "Loyal",      /* EMOTION_PROFILE_LOYAL 7 */
+                                       "\n"};
+
 /** Define a set of opposite directions from the cardinal directions. */
 int rev_dir[] = {SOUTH, WEST, NORTH, EAST, DOWN, UP, SOUTHEAST, SOUTHWEST, NORTHWEST, NORTHEAST};
 

@@ -66,6 +66,7 @@ extern size_t wear_bits_count;
 extern const char *climate_types[];
 extern const char *sky_conditions[];
 extern const char *npc_class_types[];
+extern const char *emotion_profile_types[];
 extern const char *sun_states[];
 extern const char *goal_names[];
 

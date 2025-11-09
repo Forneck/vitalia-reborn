@@ -468,6 +468,7 @@ static void medit_disp_genetics_menu(struct descriptor_data *d)
                     "%sA%s) Adventurer Tendency : %s%d%s\r\n"
                     "%sB%s) Follow Tendency     : %s%d%s\r\n"
                     "%sC%s) Healing Tendency    : %s%d%s\r\n"
+                    "%sE%s) Emotion Profile     : %s%s%s\r\n"
                     "%sQ%s) Return to main menu\r\n"
                     "Enter choice : ",
 
@@ -479,6 +480,10 @@ static void medit_disp_genetics_menu(struct descriptor_data *d)
                     mob->ai_data->genetics.trade_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.quest_tendency,
                     nrm, grn, nrm, yel, mob->ai_data->genetics.adventurer_tendency, nrm, grn, nrm, yel,
                     mob->ai_data->genetics.follow_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.healing_tendency,
+                    nrm, grn, nrm, yel,
+                    (mob->ai_data->emotional_profile >= 0 && mob->ai_data->emotional_profile <= 7
+                         ? emotion_profile_types[mob->ai_data->emotional_profile]
+                         : "Unknown"),
                     nrm, grn, nrm);
 
     OLC_MODE(d) = MEDIT_GENETICS_MENU;
@@ -934,6 +939,11 @@ void medit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = MEDIT_GEN_HEALING;
                     i++;
                     break;
+                case 'e':
+                case 'E':
+                    OLC_MODE(d) = MEDIT_EMOTION_PROFILE;
+                    i = 2; /* Special handling for emotion profile */
+                    break;
                 default:
                     medit_disp_genetics_menu(d);
                     return;
@@ -942,6 +952,18 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 break;
             else if (i == 1)
                 write_to_output(d, "\r\nEnter new value (0-100): ");
+            else if (i == 2)
+                write_to_output(d,
+                                "\r\nEmotion Profile:\r\n"
+                                "0) Neutral     - Genetics-based (default)\r\n"
+                                "1) Aggressive  - Hostile, untrusting, greedy\r\n"
+                                "2) Defensive   - Cautious, fearful, distrustful\r\n"
+                                "3) Balanced    - Moderate emotions\r\n"
+                                "4) Sensitive   - Empathetic, friendly, trusting\r\n"
+                                "5) Confident   - Brave, proud, loyal\r\n"
+                                "6) Greedy      - Acquisitive, envious, selfish\r\n"
+                                "7) Loyal       - Faithful, trustworthy, friendly\r\n"
+                                "Enter profile (0-7): ");
             else
                 write_to_output(d, "Oops...\r\n");
             return;
@@ -1293,6 +1315,15 @@ void medit_parse(struct descriptor_data *d, char *arg)
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
             }
             OLC_MOB(d)->ai_data->genetics.healing_tendency = LIMIT(i, 0, 100);
+            medit_disp_genetics_menu(d);
+            return;
+
+        case MEDIT_EMOTION_PROFILE:
+            if (!OLC_MOB(d)->ai_data) {
+                CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
+                memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+            }
+            OLC_MOB(d)->ai_data->emotional_profile = LIMIT(i, 0, 7);
             medit_disp_genetics_menu(d);
             return;
 

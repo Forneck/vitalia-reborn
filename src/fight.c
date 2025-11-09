@@ -1240,8 +1240,26 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                          * O medo pode levar à traição. Este é o local ideal.
                          ************************************************************/
                         if (GROUP(victim) && GROUP_LEADER(GROUP(victim)) != victim) {
+                            int abandon_chance = GET_GENWIMPY(victim);
+
+                            /* Emotion modifiers for group loyalty when hurt/scared */
+                            if (CONFIG_MOB_CONTEXTUAL_SOCIALS && victim->ai_data) {
+                                /* High loyalty makes mobs stay in group even when hurt */
+                                if (victim->ai_data->emotion_loyalty >= CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD) {
+                                    abandon_chance -= 30; /* -30 to abandon chance (more loyal) */
+                                }
+                                /* Low loyalty makes mobs abandon group when scared */
+                                else if (victim->ai_data->emotion_loyalty <
+                                         CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD) {
+                                    abandon_chance += 30; /* +30 to abandon chance (less loyal) */
+                                }
+
+                                /* Ensure abandon_chance stays reasonable */
+                                abandon_chance = MAX(0, MIN(abandon_chance, 150));
+                            }
+
                             /* A chance de abandonar é proporcional à sua tendência de fugir (Wimpy). */
-                            if (rand_number(1, 150) <= GET_GENWIMPY(victim)) {
+                            if (rand_number(1, 150) <= abandon_chance) {
                                 act("$n entra em pânico, abandona os seus companheiros e foge!", TRUE, victim, 0, 0,
                                     TO_ROOM);
                                 send_to_char(victim, "Você não aguenta mais e abandona o seu grupo!\r\n");
