@@ -100,6 +100,16 @@ static int is_ok_char(struct char_data *keeper, struct char_data *ch, int shop_n
     if (IS_GOD(ch))
         return (TRUE);
 
+    /* Check emotion-based trading restrictions for mobs with AI */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && !IS_NPC(ch)) {
+        /* Low trust makes shopkeeper refuse service */
+        if (keeper->ai_data->emotion_trust < CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD) {
+            snprintf(buf, sizeof(buf), "%s Eu não confio em você o suficiente para fazer negócios.", GET_NAME(ch));
+            do_tell(keeper, buf, cmd_tell, 0);
+            return (FALSE);
+        }
+    }
+
     if ((IS_GOOD(ch) && NOTRADE_GOOD(shop_nr)) || (IS_EVIL(ch) && NOTRADE_EVIL(shop_nr)) ||
         (IS_NEUTRAL(ch) && NOTRADE_NEUTRAL(shop_nr))) {
         snprintf(buf, sizeof(buf), "%s %s", GET_NAME(ch), MSG_NO_SELL_ALIGN);
@@ -439,7 +449,28 @@ static struct obj_data *get_purchase_obj(struct char_data *ch, char *arg, struct
    charisma, because on the flip side they'd get 11% inflation by having a 3. */
 static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper, struct char_data *buyer)
 {
-    return (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70));
+    float emotion_modifier = 1.0; /* Start with no emotion modifier */
+
+    /* Apply emotion-based price adjustments if keeper is a mob with AI data */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && !IS_NPC(buyer)) {
+        /* High trust gives better prices (discount for buyer) */
+        if (keeper->ai_data->emotion_trust >= CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD) {
+            emotion_modifier *= 0.90; /* 10% discount */
+        }
+
+        /* High greed increases prices (markup for keeper) */
+        if (keeper->ai_data->emotion_greed >= CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD) {
+            emotion_modifier *= 1.15; /* 15% markup */
+        }
+
+        /* High friendship gives discounts */
+        if (keeper->ai_data->emotion_friendship >= CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD) {
+            emotion_modifier *= 0.85; /* 15% discount */
+        }
+    }
+
+    return (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * 
+                 (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70) * emotion_modifier);
 }
 
 /* When the shopkeeper is buying, we reverse the discount. Also make sure we
@@ -448,7 +479,28 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
 {
     float sell_cost_modifier = SHOP_SELLPROFIT(shop_nr) * (1 - (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
     float buy_cost_modifier = SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(seller)) / 70.0);
+    float emotion_modifier = 1.0; /* Start with no emotion modifier */
     int price;
+
+    /* Apply emotion-based price adjustments if keeper is a mob with AI data */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && !IS_NPC(seller)) {
+        /* High trust gives better prices (keeper pays more when buying from player) */
+        if (keeper->ai_data->emotion_trust >= CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD) {
+            emotion_modifier *= 1.10; /* 10% bonus */
+        }
+
+        /* High greed decreases what keeper pays (keeper wants to profit more) */
+        if (keeper->ai_data->emotion_greed >= CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD) {
+            emotion_modifier *= 0.85; /* 15% reduction */
+        }
+
+        /* High friendship gives better prices (keeper pays more) */
+        if (keeper->ai_data->emotion_friendship >= CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD) {
+            emotion_modifier *= 1.15; /* 15% bonus */
+        }
+    }
+
+    sell_cost_modifier *= emotion_modifier;
 
     /* Ensure sell_cost_modifier doesn't go to 0 or negative */
     if (sell_cost_modifier < 0.01)

@@ -708,14 +708,36 @@ void generic_complete_quest(struct char_data *ch)
                          QST_POINTS(rnum));
         }
         if (QST_GOLD(rnum)) {
+            int gold_reward = QST_GOLD(rnum);
+
+            /* Apply emotion-based gold reward bonus for high trust questmasters */
+            if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+                mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
+                if (questmaster_rnum != NOBODY && IN_ROOM(ch) != NOWHERE) {
+                    struct char_data *questmaster = NULL;
+                    struct char_data *temp_char;
+                    for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                        if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum && temp_char->ai_data) {
+                            questmaster = temp_char;
+                            break;
+                        }
+                    }
+                    /* High trust gives 15% better rewards */
+                    if (questmaster && questmaster->ai_data &&
+                        questmaster->ai_data->emotion_trust >= CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD) {
+                        gold_reward = (int)(gold_reward * 1.15);
+                    }
+                }
+            }
+
             if ((IS_HAPPYHOUR) && (IS_HAPPYGOLD)) {
-                happy_gold = (int)(QST_GOLD(rnum) * (((float)(100 + HAPPY_GOLD)) / (float)100));
+                happy_gold = (int)(gold_reward * (((float)(100 + HAPPY_GOLD)) / (float)100));
                 happy_gold = MAX(happy_gold, 0);
                 increase_gold(ch, happy_gold);
                 send_to_char(ch, "Você recebeu %d moedas pelos seus serviços.\r\n", happy_gold);
             } else {
-                increase_gold(ch, QST_GOLD(rnum));
-                send_to_char(ch, "Você recebeu %d moedas pelos seus serviços.\r\n", QST_GOLD(rnum));
+                increase_gold(ch, gold_reward);
+                send_to_char(ch, "Você recebeu %d moedas pelos seus serviços.\r\n", gold_reward);
             }
         }
         if (QST_EXP(rnum)) {
@@ -1293,6 +1315,18 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
     }
 
     quest_num = atoi(argument);
+
+    /* Check emotion-based quest restrictions for mobs with AI */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(qm) && qm->ai_data && !IS_NPC(ch)) {
+        /* Low trust makes questmaster refuse to give quests */
+        if (qm->ai_data->emotion_trust < CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD) {
+            snprintf(buf, sizeof(buf), "%s diz, 'Eu não confio em você o suficiente para lhe dar uma busca, %s.'",
+                     GET_NAME(qm), GET_NAME(ch));
+            send_to_char(ch, "%s\r\n", buf);
+            save_char(ch);
+            return;
+        }
+    }
 
     if (GET_QUEST(ch) != NOTHING) {
         snprintf(buf, sizeof(buf), "%s diz, 'Mas você já tem uma busca ativa, %s!'", GET_NAME(qm), GET_NAME(ch));
