@@ -1822,6 +1822,30 @@ struct emotion_config_data {
     int memory_age_old;      /**< Seconds for old threshold (default: 3600 = 60min) */
 
     int memory_baseline_offset; /**< Offset for emotion level conversion (default: 50) */
+
+    /* Trading behavior thresholds */
+    int trade_trust_high_threshold;      /**< High trust for better shop prices (default: 60) */
+    int trade_trust_low_threshold;       /**< Low trust for service refusal (default: 30) */
+    int trade_greed_high_threshold;      /**< High greed increases prices (default: 70) */
+    int trade_friendship_high_threshold; /**< High friendship gives discounts (default: 70) */
+
+    /* Quest behavior thresholds */
+    int quest_curiosity_high_threshold; /**< High curiosity for quest offers (default: 70) */
+    int quest_loyalty_high_threshold;   /**< High loyalty for remembering helpers (default: 70) */
+    int quest_trust_high_threshold;     /**< High trust for better rewards (default: 60) */
+    int quest_trust_low_threshold;      /**< Low trust for quest refusal (default: 30) */
+
+    /* Social initiation thresholds */
+    int social_happiness_high_threshold; /**< High happiness for positive socials (default: 70) */
+    int social_anger_high_threshold;     /**< High anger for negative socials (default: 70) */
+    int social_sadness_high_threshold;   /**< High sadness for withdrawal (default: 70) */
+    int social_love_follow_threshold;    /**< Love level for following players (default: 80) */
+
+    /* Group behavior thresholds */
+    int group_loyalty_high_threshold;    /**< High loyalty stays in group when hurt (default: 70) */
+    int group_loyalty_low_threshold;     /**< Low loyalty abandons when scared (default: 30) */
+    int group_friendship_high_threshold; /**< High friendship for joining groups (default: 70) */
+    int group_envy_high_threshold;       /**< High envy refuses better-equipped players (default: 70) */
 };
 
 /** Experimental Features configuration. */

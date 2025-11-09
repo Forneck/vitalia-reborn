@@ -947,6 +947,30 @@ int save_config(IDXTYPE nowhere)
     fprintf(fl, "* Memory System Baseline Offset (0-100)\n");
     fprintf(fl, "emotion_memory_baseline_offset = %d\n\n", CONFIG_EMOTION_MEMORY_BASELINE_OFFSET);
 
+    fprintf(fl, "* Trading Behavior Thresholds (0-100)\n");
+    fprintf(fl, "emotion_trade_trust_high_threshold = %d\n", CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_trade_trust_low_threshold = %d\n", CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD);
+    fprintf(fl, "emotion_trade_greed_high_threshold = %d\n", CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_trade_friendship_high_threshold = %d\n\n", CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD);
+
+    fprintf(fl, "* Quest Behavior Thresholds (0-100)\n");
+    fprintf(fl, "emotion_quest_curiosity_high_threshold = %d\n", CONFIG_EMOTION_QUEST_CURIOSITY_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_quest_loyalty_high_threshold = %d\n", CONFIG_EMOTION_QUEST_LOYALTY_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_quest_trust_high_threshold = %d\n", CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_quest_trust_low_threshold = %d\n\n", CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD);
+
+    fprintf(fl, "* Social Initiation Thresholds (0-100)\n");
+    fprintf(fl, "emotion_social_happiness_high_threshold = %d\n", CONFIG_EMOTION_SOCIAL_HAPPINESS_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_social_anger_high_threshold = %d\n", CONFIG_EMOTION_SOCIAL_ANGER_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_social_sadness_high_threshold = %d\n", CONFIG_EMOTION_SOCIAL_SADNESS_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_social_love_follow_threshold = %d\n\n", CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD);
+
+    fprintf(fl, "* Group Behavior Thresholds (0-100)\n");
+    fprintf(fl, "emotion_group_loyalty_high_threshold = %d\n", CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_group_loyalty_low_threshold = %d\n", CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD);
+    fprintf(fl, "emotion_group_friendship_high_threshold = %d\n", CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD);
+    fprintf(fl, "emotion_group_envy_high_threshold = %d\n\n", CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD);
+
     fclose(fl);
 
     if (in_save_list(NOWHERE, SL_CFG))

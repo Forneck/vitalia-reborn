@@ -1400,4 +1400,28 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 /** Memory baseline offset */
 #define CONFIG_EMOTION_MEMORY_BASELINE_OFFSET config_info.emotion_config.memory_baseline_offset
 
+/* Trading behavior thresholds */
+#define CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD config_info.emotion_config.trade_trust_high_threshold
+#define CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD config_info.emotion_config.trade_trust_low_threshold
+#define CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD config_info.emotion_config.trade_greed_high_threshold
+#define CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD config_info.emotion_config.trade_friendship_high_threshold
+
+/* Quest behavior thresholds */
+#define CONFIG_EMOTION_QUEST_CURIOSITY_HIGH_THRESHOLD config_info.emotion_config.quest_curiosity_high_threshold
+#define CONFIG_EMOTION_QUEST_LOYALTY_HIGH_THRESHOLD config_info.emotion_config.quest_loyalty_high_threshold
+#define CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD config_info.emotion_config.quest_trust_high_threshold
+#define CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD config_info.emotion_config.quest_trust_low_threshold
+
+/* Social initiation thresholds */
+#define CONFIG_EMOTION_SOCIAL_HAPPINESS_HIGH_THRESHOLD config_info.emotion_config.social_happiness_high_threshold
+#define CONFIG_EMOTION_SOCIAL_ANGER_HIGH_THRESHOLD config_info.emotion_config.social_anger_high_threshold
+#define CONFIG_EMOTION_SOCIAL_SADNESS_HIGH_THRESHOLD config_info.emotion_config.social_sadness_high_threshold
+#define CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD config_info.emotion_config.social_love_follow_threshold
+
+/* Group behavior thresholds */
+#define CONFIG_EMOTION_GROUP_LOYALTY_HIGH_THRESHOLD config_info.emotion_config.group_loyalty_high_threshold
+#define CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD config_info.emotion_config.group_loyalty_low_threshold
+#define CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD config_info.emotion_config.group_friendship_high_threshold
+#define CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD config_info.emotion_config.group_envy_high_threshold
+
 #endif /* _UTILS_H_ */
