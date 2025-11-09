@@ -40,6 +40,9 @@ static void look_at_char(struct char_data *i, struct char_data *ch);
 static void look_at_target(struct char_data *ch, char *arg);
 static void look_in_direction(struct char_data *ch, int dir);
 static void look_in_obj(struct char_data *ch, char *arg);
+/* Emotion system helper */
+static void get_highest_emotion_display(struct char_data *mob, struct char_data *viewer, 
+                                         const char **out_text, const char **out_color);
 /* do_look, do_inventory utility functions */
 static void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mode, int show);
 /* do_look, do_equipment, do_examine, do_inventory */
@@ -330,6 +333,145 @@ static void look_at_char(struct char_data *i, struct char_data *ch)
     }
 }
 
+/**
+ * Helper function to determine the highest emotion above threshold for display.
+ * Checks all 20 emotions and returns the text and color for the dominant emotion.
+ * 
+ * @param mob The mob whose emotions to check
+ * @param viewer The character viewing the mob
+ * @param out_text Output pointer for emotion text (e.g., "(furioso)")
+ * @param out_color Output pointer for color code
+ */
+static void get_highest_emotion_display(struct char_data *mob, struct char_data *viewer, 
+                                         const char **out_text, const char **out_color)
+{
+    int highest_value = 0;
+    *out_text = NULL;
+    *out_color = NULL;
+    
+    /* Check all 20 emotions and find the highest one above threshold */
+    if (mob->ai_data->emotion_fear >= CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD && 
+        mob->ai_data->emotion_fear > highest_value) {
+        highest_value = mob->ai_data->emotion_fear;
+        *out_text = "(amedrontado)";
+        *out_color = CCMAG(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_anger >= CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD && 
+        mob->ai_data->emotion_anger > highest_value) {
+        highest_value = mob->ai_data->emotion_anger;
+        *out_text = "(furioso)";
+        *out_color = CCRED(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_happiness >= CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD && 
+        mob->ai_data->emotion_happiness > highest_value) {
+        highest_value = mob->ai_data->emotion_happiness;
+        *out_text = "(feliz)";
+        *out_color = CCYEL(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_sadness >= CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD && 
+        mob->ai_data->emotion_sadness > highest_value) {
+        highest_value = mob->ai_data->emotion_sadness;
+        *out_text = "(triste)";
+        *out_color = CCBLU(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_horror >= CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD && 
+        mob->ai_data->emotion_horror > highest_value) {
+        highest_value = mob->ai_data->emotion_horror;
+        *out_text = "(aterrorizado)";
+        *out_color = CBMAG(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_pain >= CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD && 
+        mob->ai_data->emotion_pain > highest_value) {
+        highest_value = mob->ai_data->emotion_pain;
+        *out_text = "(sofrendo)";
+        *out_color = CCRED(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_compassion >= CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD && 
+        mob->ai_data->emotion_compassion > highest_value) {
+        highest_value = mob->ai_data->emotion_compassion;
+        *out_text = "(compassivo)";
+        *out_color = CCGRN(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_courage >= CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD && 
+        mob->ai_data->emotion_courage > highest_value) {
+        highest_value = mob->ai_data->emotion_courage;
+        *out_text = "(corajoso)";
+        *out_color = CCYEL(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_curiosity >= CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD && 
+        mob->ai_data->emotion_curiosity > highest_value) {
+        highest_value = mob->ai_data->emotion_curiosity;
+        *out_text = "(curioso)";
+        *out_color = CCCYN(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_disgust >= CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD && 
+        mob->ai_data->emotion_disgust > highest_value) {
+        highest_value = mob->ai_data->emotion_disgust;
+        *out_text = "(enojado)";
+        *out_color = CCGRN(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_envy >= CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD && 
+        mob->ai_data->emotion_envy > highest_value) {
+        highest_value = mob->ai_data->emotion_envy;
+        *out_text = "(invejoso)";
+        *out_color = CCMAG(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_excitement >= CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD && 
+        mob->ai_data->emotion_excitement > highest_value) {
+        highest_value = mob->ai_data->emotion_excitement;
+        *out_text = "(animado)";
+        *out_color = CCYEL(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_friendship >= CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD && 
+        mob->ai_data->emotion_friendship > highest_value) {
+        highest_value = mob->ai_data->emotion_friendship;
+        *out_text = "(amigavel)";
+        *out_color = CCGRN(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_greed >= CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD && 
+        mob->ai_data->emotion_greed > highest_value) {
+        highest_value = mob->ai_data->emotion_greed;
+        *out_text = "(ganancioso)";
+        *out_color = CCYEL(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_humiliation >= CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD && 
+        mob->ai_data->emotion_humiliation > highest_value) {
+        highest_value = mob->ai_data->emotion_humiliation;
+        *out_text = "(humilhado)";
+        *out_color = CCMAG(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_love >= CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD && 
+        mob->ai_data->emotion_love > highest_value) {
+        highest_value = mob->ai_data->emotion_love;
+        *out_text = "(apaixonado)";
+        *out_color = CCRED(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_loyalty >= CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD && 
+        mob->ai_data->emotion_loyalty > highest_value) {
+        highest_value = mob->ai_data->emotion_loyalty;
+        *out_text = "(leal)";
+        *out_color = CCBLU(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_pride >= CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD && 
+        mob->ai_data->emotion_pride > highest_value) {
+        highest_value = mob->ai_data->emotion_pride;
+        *out_text = "(orgulhoso)";
+        *out_color = CCYEL(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_shame >= CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD && 
+        mob->ai_data->emotion_shame > highest_value) {
+        highest_value = mob->ai_data->emotion_shame;
+        *out_text = "(envergonhado)";
+        *out_color = CCMAG(viewer, C_NRM);
+    }
+    if (mob->ai_data->emotion_trust >= CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD && 
+        mob->ai_data->emotion_trust > highest_value) {
+        highest_value = mob->ai_data->emotion_trust;
+        *out_text = "(confiante)";
+        *out_color = CCGRN(viewer, C_NRM);
+    }
+}
+
 static void list_one_char(struct char_data *i, struct char_data *ch)
 {
     struct obj_data *furniture;
@@ -378,155 +520,13 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
         /* Only display if player has DISPEMOTE preference enabled */
         /* Shows the highest emotion that exceeds its threshold */
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS && i->ai_data && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_DISPEMOTE)) {
-            int highest_emotion = 0;
-            int highest_value = 0;
             const char *emotion_text = NULL;
             const char *emotion_color = NULL;
             
-            /* Check all 20 emotions and find the highest one above threshold */
-            if (i->ai_data->emotion_fear >= CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD && 
-                i->ai_data->emotion_fear > highest_value) {
-                highest_value = i->ai_data->emotion_fear;
-                highest_emotion = 1;
-                emotion_text = "(amedrontado)";
-                emotion_color = CCMAG(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_anger >= CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD && 
-                i->ai_data->emotion_anger > highest_value) {
-                highest_value = i->ai_data->emotion_anger;
-                highest_emotion = 2;
-                emotion_text = "(furioso)";
-                emotion_color = CCRED(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_happiness >= CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD && 
-                i->ai_data->emotion_happiness > highest_value) {
-                highest_value = i->ai_data->emotion_happiness;
-                highest_emotion = 3;
-                emotion_text = "(feliz)";
-                emotion_color = CCYEL(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_sadness >= CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD && 
-                i->ai_data->emotion_sadness > highest_value) {
-                highest_value = i->ai_data->emotion_sadness;
-                highest_emotion = 4;
-                emotion_text = "(triste)";
-                emotion_color = CCBLU(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_horror >= CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD && 
-                i->ai_data->emotion_horror > highest_value) {
-                highest_value = i->ai_data->emotion_horror;
-                highest_emotion = 5;
-                emotion_text = "(aterrorizado)";
-                emotion_color = CBMAG(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_pain >= CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD && 
-                i->ai_data->emotion_pain > highest_value) {
-                highest_value = i->ai_data->emotion_pain;
-                highest_emotion = 6;
-                emotion_text = "(sofrendo)";
-                emotion_color = CCRED(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_compassion >= CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD && 
-                i->ai_data->emotion_compassion > highest_value) {
-                highest_value = i->ai_data->emotion_compassion;
-                highest_emotion = 7;
-                emotion_text = "(compassivo)";
-                emotion_color = CCGRN(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_courage >= CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD && 
-                i->ai_data->emotion_courage > highest_value) {
-                highest_value = i->ai_data->emotion_courage;
-                highest_emotion = 8;
-                emotion_text = "(corajoso)";
-                emotion_color = CCYEL(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_curiosity >= CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD && 
-                i->ai_data->emotion_curiosity > highest_value) {
-                highest_value = i->ai_data->emotion_curiosity;
-                highest_emotion = 9;
-                emotion_text = "(curioso)";
-                emotion_color = CCCYN(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_disgust >= CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD && 
-                i->ai_data->emotion_disgust > highest_value) {
-                highest_value = i->ai_data->emotion_disgust;
-                highest_emotion = 10;
-                emotion_text = "(enojado)";
-                emotion_color = CCGRN(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_envy >= CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD && 
-                i->ai_data->emotion_envy > highest_value) {
-                highest_value = i->ai_data->emotion_envy;
-                highest_emotion = 11;
-                emotion_text = "(invejoso)";
-                emotion_color = CCMAG(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_excitement >= CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD && 
-                i->ai_data->emotion_excitement > highest_value) {
-                highest_value = i->ai_data->emotion_excitement;
-                highest_emotion = 12;
-                emotion_text = "(animado)";
-                emotion_color = CCYEL(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_friendship >= CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD && 
-                i->ai_data->emotion_friendship > highest_value) {
-                highest_value = i->ai_data->emotion_friendship;
-                highest_emotion = 13;
-                emotion_text = "(amigavel)";
-                emotion_color = CCGRN(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_greed >= CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD && 
-                i->ai_data->emotion_greed > highest_value) {
-                highest_value = i->ai_data->emotion_greed;
-                highest_emotion = 14;
-                emotion_text = "(ganancioso)";
-                emotion_color = CCYEL(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_humiliation >= CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD && 
-                i->ai_data->emotion_humiliation > highest_value) {
-                highest_value = i->ai_data->emotion_humiliation;
-                highest_emotion = 15;
-                emotion_text = "(humilhado)";
-                emotion_color = CCMAG(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_love >= CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD && 
-                i->ai_data->emotion_love > highest_value) {
-                highest_value = i->ai_data->emotion_love;
-                highest_emotion = 16;
-                emotion_text = "(apaixonado)";
-                emotion_color = CCRED(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_loyalty >= CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD && 
-                i->ai_data->emotion_loyalty > highest_value) {
-                highest_value = i->ai_data->emotion_loyalty;
-                highest_emotion = 17;
-                emotion_text = "(leal)";
-                emotion_color = CCBLU(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_pride >= CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD && 
-                i->ai_data->emotion_pride > highest_value) {
-                highest_value = i->ai_data->emotion_pride;
-                highest_emotion = 18;
-                emotion_text = "(orgulhoso)";
-                emotion_color = CCYEL(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_shame >= CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD && 
-                i->ai_data->emotion_shame > highest_value) {
-                highest_value = i->ai_data->emotion_shame;
-                highest_emotion = 19;
-                emotion_text = "(envergonhado)";
-                emotion_color = CCMAG(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_trust >= CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD && 
-                i->ai_data->emotion_trust > highest_value) {
-                highest_value = i->ai_data->emotion_trust;
-                highest_emotion = 20;
-                emotion_text = "(confiante)";
-                emotion_color = CCGRN(ch, C_NRM);
-            }
+            get_highest_emotion_display(i, ch, &emotion_text, &emotion_color);
             
             /* Display the highest emotion if any was found */
-            if (highest_emotion > 0 && emotion_text && emotion_color) {
+            if (emotion_text && emotion_color) {
                 send_to_char(ch, "%s%s%s ", emotion_color, emotion_text, CCNRM(ch, C_NRM));
             }
         }
@@ -563,155 +563,13 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
         /* Only display if player has DISPEMOTE preference enabled */
         /* Shows the highest emotion that exceeds its threshold */
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS && i->ai_data && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_DISPEMOTE)) {
-            int highest_emotion = 0;
-            int highest_value = 0;
             const char *emotion_text = NULL;
             const char *emotion_color = NULL;
             
-            /* Check all 20 emotions and find the highest one above threshold */
-            if (i->ai_data->emotion_fear >= CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD && 
-                i->ai_data->emotion_fear > highest_value) {
-                highest_value = i->ai_data->emotion_fear;
-                highest_emotion = 1;
-                emotion_text = "(amedrontado)";
-                emotion_color = CCMAG(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_anger >= CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD && 
-                i->ai_data->emotion_anger > highest_value) {
-                highest_value = i->ai_data->emotion_anger;
-                highest_emotion = 2;
-                emotion_text = "(furioso)";
-                emotion_color = CCRED(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_happiness >= CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD && 
-                i->ai_data->emotion_happiness > highest_value) {
-                highest_value = i->ai_data->emotion_happiness;
-                highest_emotion = 3;
-                emotion_text = "(feliz)";
-                emotion_color = CCYEL(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_sadness >= CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD && 
-                i->ai_data->emotion_sadness > highest_value) {
-                highest_value = i->ai_data->emotion_sadness;
-                highest_emotion = 4;
-                emotion_text = "(triste)";
-                emotion_color = CCBLU(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_horror >= CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD && 
-                i->ai_data->emotion_horror > highest_value) {
-                highest_value = i->ai_data->emotion_horror;
-                highest_emotion = 5;
-                emotion_text = "(aterrorizado)";
-                emotion_color = CBMAG(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_pain >= CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD && 
-                i->ai_data->emotion_pain > highest_value) {
-                highest_value = i->ai_data->emotion_pain;
-                highest_emotion = 6;
-                emotion_text = "(sofrendo)";
-                emotion_color = CCRED(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_compassion >= CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD && 
-                i->ai_data->emotion_compassion > highest_value) {
-                highest_value = i->ai_data->emotion_compassion;
-                highest_emotion = 7;
-                emotion_text = "(compassivo)";
-                emotion_color = CCGRN(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_courage >= CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD && 
-                i->ai_data->emotion_courage > highest_value) {
-                highest_value = i->ai_data->emotion_courage;
-                highest_emotion = 8;
-                emotion_text = "(corajoso)";
-                emotion_color = CCYEL(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_curiosity >= CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD && 
-                i->ai_data->emotion_curiosity > highest_value) {
-                highest_value = i->ai_data->emotion_curiosity;
-                highest_emotion = 9;
-                emotion_text = "(curioso)";
-                emotion_color = CCCYN(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_disgust >= CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD && 
-                i->ai_data->emotion_disgust > highest_value) {
-                highest_value = i->ai_data->emotion_disgust;
-                highest_emotion = 10;
-                emotion_text = "(enojado)";
-                emotion_color = CCGRN(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_envy >= CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD && 
-                i->ai_data->emotion_envy > highest_value) {
-                highest_value = i->ai_data->emotion_envy;
-                highest_emotion = 11;
-                emotion_text = "(invejoso)";
-                emotion_color = CCMAG(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_excitement >= CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD && 
-                i->ai_data->emotion_excitement > highest_value) {
-                highest_value = i->ai_data->emotion_excitement;
-                highest_emotion = 12;
-                emotion_text = "(animado)";
-                emotion_color = CCYEL(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_friendship >= CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD && 
-                i->ai_data->emotion_friendship > highest_value) {
-                highest_value = i->ai_data->emotion_friendship;
-                highest_emotion = 13;
-                emotion_text = "(amigavel)";
-                emotion_color = CCGRN(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_greed >= CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD && 
-                i->ai_data->emotion_greed > highest_value) {
-                highest_value = i->ai_data->emotion_greed;
-                highest_emotion = 14;
-                emotion_text = "(ganancioso)";
-                emotion_color = CCYEL(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_humiliation >= CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD && 
-                i->ai_data->emotion_humiliation > highest_value) {
-                highest_value = i->ai_data->emotion_humiliation;
-                highest_emotion = 15;
-                emotion_text = "(humilhado)";
-                emotion_color = CCMAG(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_love >= CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD && 
-                i->ai_data->emotion_love > highest_value) {
-                highest_value = i->ai_data->emotion_love;
-                highest_emotion = 16;
-                emotion_text = "(apaixonado)";
-                emotion_color = CCRED(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_loyalty >= CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD && 
-                i->ai_data->emotion_loyalty > highest_value) {
-                highest_value = i->ai_data->emotion_loyalty;
-                highest_emotion = 17;
-                emotion_text = "(leal)";
-                emotion_color = CCBLU(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_pride >= CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD && 
-                i->ai_data->emotion_pride > highest_value) {
-                highest_value = i->ai_data->emotion_pride;
-                highest_emotion = 18;
-                emotion_text = "(orgulhoso)";
-                emotion_color = CCYEL(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_shame >= CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD && 
-                i->ai_data->emotion_shame > highest_value) {
-                highest_value = i->ai_data->emotion_shame;
-                highest_emotion = 19;
-                emotion_text = "(envergonhado)";
-                emotion_color = CCMAG(ch, C_NRM);
-            }
-            if (i->ai_data->emotion_trust >= CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD && 
-                i->ai_data->emotion_trust > highest_value) {
-                highest_value = i->ai_data->emotion_trust;
-                highest_emotion = 20;
-                emotion_text = "(confiante)";
-                emotion_color = CCGRN(ch, C_NRM);
-            }
+            get_highest_emotion_display(i, ch, &emotion_text, &emotion_color);
             
             /* Display the highest emotion if any was found */
-            if (highest_emotion > 0 && emotion_text && emotion_color) {
+            if (emotion_text && emotion_color) {
                 send_to_char(ch, "%s%s%s ", emotion_color, emotion_text, CCNRM(ch, C_NRM));
             }
         }
