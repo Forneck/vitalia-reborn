@@ -611,7 +611,8 @@ void raw_kill(struct char_data *ch, struct char_data *killer)
         fail_bounty_quest(ch, killer);
 
         /* Emotion trigger: Quest betrayal if a questmaster is killed (Quest-Related 2.4) */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && killer && mob_index[GET_MOB_RNUM(ch)].func == questmaster) {
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && killer && GET_MOB_RNUM(ch) != NOBODY && GET_MOB_RNUM(ch) >= 0 &&
+            GET_MOB_RNUM(ch) <= top_of_mobt && mob_index[GET_MOB_RNUM(ch)].func == questmaster) {
             /* Notify witnesses that a questmaster was killed */
             struct char_data *witness, *next_witness;
             for (witness = world[IN_ROOM(ch)].people; witness; witness = next_witness) {

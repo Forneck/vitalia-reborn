@@ -744,7 +744,7 @@ void generic_complete_quest(struct char_data *ch)
         act("$n completou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
 
         /* Emotion trigger: Quest completion (Quest-Related 2.4) */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IN_ROOM(ch) != NOWHERE && rnum != NOTHING) {
             /* Find the questmaster mob and update their emotions */
             mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
             if (questmaster_rnum != NOBODY) {

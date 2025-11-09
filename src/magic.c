@@ -292,7 +292,7 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim, int sp
     }
 
     /* Emotion trigger: Witnessing offensive magic (Magic/Spell Trigger 2.3) */
-    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && dam > 0 && ch != victim) {
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && dam > 0 && ch != victim && IN_ROOM(victim) != NOWHERE) {
         struct char_data *witness, *next_witness;
         /* Notify NPCs in the room who aren't in combat */
         for (witness = world[IN_ROOM(victim)].people; witness; witness = next_witness) {
