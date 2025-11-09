@@ -1009,6 +1009,11 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
             const char *interaction_names[] = {"Attacked", "Healed",  "ReceivedItem", "StolenFrom", "Rescued",
                                                "Assisted", "Social+", "Social-",      "SocialViol", "AllyDied"};
 
+            /* Safety check: ensure memory_index is within valid range */
+            if (k->ai_data->memory_index < 0 || k->ai_data->memory_index >= EMOTION_MEMORY_SIZE) {
+                k->ai_data->memory_index = 0;
+            }
+
             /* Count valid memories */
             for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
                 if (k->ai_data->memories[i].timestamp > 0) {
@@ -1041,7 +1046,13 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                             /* Search through character_list for player with matching IDNUM */
                             for (player = character_list; player; player = player->next) {
                                 if (!IS_NPC(player) && GET_IDNUM(player) == mem->entity_id) {
-                                    snprintf(entity_name, sizeof(entity_name), "%s", GET_NAME(player));
+                                    /* Found the player - validate and copy name safely */
+                                    const char *name = GET_NAME(player);
+                                    if (name && *name) {
+                                        snprintf(entity_name, sizeof(entity_name), "%s", name);
+                                    } else {
+                                        snprintf(entity_name, sizeof(entity_name), "Player#%ld", mem->entity_id);
+                                    }
                                     break;
                                 }
                             }
@@ -1053,7 +1064,13 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
                             struct char_data *mob = NULL;
                             for (mob = character_list; mob; mob = mob->next) {
                                 if (IS_NPC(mob) && char_script_id(mob) == mem->entity_id) {
-                                    snprintf(entity_name, sizeof(entity_name), "%s", GET_NAME(mob));
+                                    /* Found the mob - validate and copy name safely */
+                                    const char *name = GET_NAME(mob);
+                                    if (name && *name) {
+                                        snprintf(entity_name, sizeof(entity_name), "%s", name);
+                                    } else {
+                                        snprintf(entity_name, sizeof(entity_name), "Mob#%ld", mem->entity_id);
+                                    }
                                     break;
                                 }
                             }
@@ -1151,7 +1168,10 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
 
                         /* Build interaction details with social name if applicable */
                         char interaction_details[128];
+                        /* Ensure social_name is null-terminated and safe to use */
                         if (mem->social_name[0] != '\0') {
+                            /* Add safety check - ensure social_name is properly terminated */
+                            mem->social_name[sizeof(mem->social_name) - 1] = '\0';
                             snprintf(interaction_details, sizeof(interaction_details), "%s(%s)", interaction_name, mem->social_name);
                         } else {
                             snprintf(interaction_details, sizeof(interaction_details), "%s", interaction_name);
