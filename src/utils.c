@@ -5436,27 +5436,103 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     const char *celebratory_socials[] = {"huzzah", "tada", "yayfor",   "battlecry", "rofl",
                                          "whoo",   "romp", "sundance", NULL};
 
-    /* Misc neutral socials - minimal emotional impact, mostly curiosity
-     * Emotion changes: +curiosity (minimal), generally neutral
-     * Includes: various gestures, actions, expressions with no strong emotional valence
-     * Note: This catch-all category ensures ALL 490 socials from socials.new are handled
+    /* Relaxed/calm socials - calming, relaxing actions
+     * Emotion changes: +happiness (slight), -anger, -fear
+     * Includes: calming actions, relief expressions
      */
-    const char *misc_neutral_socials[] = {
-        "relax",       "calm",     "breathe",  "relief",     "phew",     "abc",      "abrac",    "bloob",
-        "doodle",      "batman",   "snoopy",   "elephantma", "crazy",    "crazed",   "insane",   "christmas",
-        "fish",        "pose",     "model",    "boast",      "brag",     "ego",      "pride",    "flex",
-        "juggle",      "rage",     "steam",    "grumbles",   "grunts",   "argh",     "postal",   "hysterical",
-        "brb",         "adieu",    "goodbye",  "reconnect",  "channel",  "wb",       "bark",     "meow",
-        "moo",         "howl",     "hiss",     "beer",       "coffee",   "cake",     "custard",  "carrot",
-        "pie",         "arch",     "eyebrow",  "eyeroll",    "facegrab", "facepalm", "fan",      "foot",
-        "crossfinger", "thumbsup", "armcross", "behind",     "ahem",     "aww",      "blah",     "boo",
-        "heh",         "oh",       "ouch",     "tsk",        "amused",   "chortle",  "snigger",  "egrin",
-        "bleed",       "blush",    "shake",    "shiver",     "scream",   "faint",    "collapse", "fall",
-        "sweat",       "perspire", "shudder",  "swoon",      "wince",    "gasp",     "groan",    "headache",
-        "pray",        "aim",      "avsalute", "backclap",   "bat",      "bored",    "box",      "buzz",
-        "cold",        "conga",    "conga2",   "creep",      "curious",  "shame",    "rose",     "knuckle",
-        "embrace",     "makeout",  "vampire",  "haircut", /* Last 6 get special handling below */
-        NULL};
+    const char *relaxed_socials[] = {"relax", "calm", "breathe", "relief", "phew", NULL};
+
+    /* Silly/absurd socials - nonsense, absurd, funny actions
+     * Emotion changes: +curiosity, +happiness if friendly, minimal impact overall
+     * Includes: absurd actions, silly references, crazy behavior
+     */
+    const char *silly_socials[] = {
+        "abc",   "abrac",  "bloob",  "doodle",    "batman", "snoopy",  "elephantma",
+        "crazy", "crazed", "insane", "christmas", "fish",   "vampire", /* vampire gets special silly handling */ NULL};
+
+    /* Performance socials - showing off, boasting, posing
+     * Emotion changes: +pride (for mob if friendly), +annoyance if not friendly
+     * Includes: showing off, boasting, performing
+     */
+    const char *performance_socials[] = {"pose", "model", "boast", "brag", "ego", "pride", "flex", "juggle", NULL};
+
+    /* Angry expression socials - expressing anger/frustration
+     * Emotion changes: +anger (empathy if friendly), +curiosity, slight +fear
+     * Includes: anger expressions, frustration
+     * Note: These are EXPRESSIONS of anger, not hostile actions (those are in negative)
+     */
+    const char *angry_expression_socials[] = {"rage", "steam",  "grumbles",   "grunts",
+                                              "argh", "postal", "hysterical", NULL};
+
+    /* Communication meta socials - chat/communication related
+     * Emotion changes: +curiosity (minimal), neutral
+     * Includes: greetings/farewells, meta-game communication
+     */
+    const char *communication_socials[] = {"brb", "adieu", "goodbye", "reconnect", "channel", "wb", NULL};
+
+    /* Animal sound socials - making animal sounds
+     * Emotion changes: +curiosity, +amusement if friendly
+     * Includes: animal sounds and impressions
+     */
+    const char *animal_socials[] = {"bark", "meow", "moo", "howl", "hiss", NULL};
+
+    /* Food/drink socials - food and drink related
+     * Emotion changes: +curiosity, +friendship if sharing context
+     * Includes: food and beverage related socials
+     */
+    const char *food_drink_socials[] = {"beer", "coffee", "cake", "custard", "carrot", "pie", NULL};
+
+    /* Gesture socials - physical gestures and body language
+     * Emotion changes: +curiosity, context-dependent slight positive or negative
+     * Includes: various physical gestures
+     */
+    const char *gesture_socials[] = {"arch", "eyebrow",     "eyeroll",  "facegrab", "facepalm", "fan",
+                                     "foot", "crossfinger", "thumbsup", "armcross", "behind",   NULL};
+
+    /* Exclamation socials - verbal exclamations
+     * Emotion changes: +curiosity (minimal), generally neutral
+     * Includes: various exclamations and interjections
+     */
+    const char *exclamation_socials[] = {"ahem", "aww", "blah", "boo", "heh", "oh", "ouch", "tsk", NULL};
+
+    /* Amused socials - expressing amusement
+     * Emotion changes: +happiness if friendly, +curiosity otherwise
+     * Includes: laughter, amusement expressions
+     */
+    const char *amused_socials[] = {"amused", "chortle", "snigger", "egrin", NULL};
+
+    /* Self-directed physical socials - physical states, self-directed
+     * Emotion changes: +curiosity (minimal), +compassion if mob is compassionate
+     * Includes: self-directed physical states, no direct social interaction
+     */
+    const char *self_directed_socials[] = {"bleed",    "blush", "shake", "shiver",   "scream",  "faint",
+                                           "collapse", "fall",  "sweat", "perspire", "shudder", "swoon",
+                                           "wince",    "gasp",  "groan", "headache", "pray",    NULL};
+
+    /* Misc neutral socials - truly miscellaneous with minimal emotional impact
+     * Emotion changes: +curiosity (minimal), generally neutral
+     * Includes: various actions that don't fit other categories
+     * Note: rose, knuckle, embrace, makeout, haircut get special contextual handling below
+     */
+    const char *misc_neutral_socials[] = {"aim",
+                                          "avsalute",
+                                          "backclap",
+                                          "bat",
+                                          "bored",
+                                          "box",
+                                          "buzz",
+                                          "cold",
+                                          "conga",
+                                          "conga2",
+                                          "creep",
+                                          "curious",
+                                          "shame",
+                                          "rose",
+                                          "knuckle",
+                                          "embrace",
+                                          "makeout",
+                                          "haircut",
+                                          /* Last 6 get special handling below */ NULL};
 
     int i;
     bool is_positive = FALSE;
@@ -5472,6 +5548,17 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
     bool is_agreeable = FALSE;
     bool is_confused = FALSE;
     bool is_celebratory = FALSE;
+    bool is_relaxed = FALSE;
+    bool is_silly = FALSE;
+    bool is_performance = FALSE;
+    bool is_angry_expression = FALSE;
+    bool is_communication = FALSE;
+    bool is_animal = FALSE;
+    bool is_food_drink = FALSE;
+    bool is_gesture = FALSE;
+    bool is_exclamation = FALSE;
+    bool is_amused = FALSE;
+    bool is_self_directed = FALSE;
     bool is_misc_neutral = FALSE;
     int player_reputation;
 
@@ -5701,9 +5788,134 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
     }
 
-    /* Catch-all: if not in any specific category, check misc_neutral (ensures ALL socials are handled) */
+    /* Check new social categories */
     if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
         !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory) {
+        for (i = 0; relaxed_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, relaxed_socials[i])) {
+                is_relaxed = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed) {
+        for (i = 0; silly_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, silly_socials[i])) {
+                is_silly = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
+        !is_silly) {
+        for (i = 0; performance_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, performance_socials[i])) {
+                is_performance = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
+        !is_silly && !is_performance) {
+        for (i = 0; angry_expression_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, angry_expression_socials[i])) {
+                is_angry_expression = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
+        !is_silly && !is_performance && !is_angry_expression) {
+        for (i = 0; communication_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, communication_socials[i])) {
+                is_communication = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
+        !is_silly && !is_performance && !is_angry_expression && !is_communication) {
+        for (i = 0; animal_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, animal_socials[i])) {
+                is_animal = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
+        !is_silly && !is_performance && !is_angry_expression && !is_communication && !is_animal) {
+        for (i = 0; food_drink_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, food_drink_socials[i])) {
+                is_food_drink = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
+        !is_silly && !is_performance && !is_angry_expression && !is_communication && !is_animal && !is_food_drink) {
+        for (i = 0; gesture_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, gesture_socials[i])) {
+                is_gesture = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
+        !is_silly && !is_performance && !is_angry_expression && !is_communication && !is_animal && !is_food_drink &&
+        !is_gesture) {
+        for (i = 0; exclamation_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, exclamation_socials[i])) {
+                is_exclamation = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
+        !is_silly && !is_performance && !is_angry_expression && !is_communication && !is_animal && !is_food_drink &&
+        !is_gesture && !is_exclamation) {
+        for (i = 0; amused_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, amused_socials[i])) {
+                is_amused = TRUE;
+                break;
+            }
+        }
+    }
+
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
+        !is_silly && !is_performance && !is_angry_expression && !is_communication && !is_animal && !is_food_drink &&
+        !is_gesture && !is_exclamation && !is_amused) {
+        for (i = 0; self_directed_socials[i] != NULL; i++) {
+            if (!strcmp(social_name, self_directed_socials[i])) {
+                is_self_directed = TRUE;
+                break;
+            }
+        }
+    }
+
+    /* Catch-all: if not in any specific category, check misc_neutral (ensures ALL socials are handled) */
+    if (!is_positive && !is_disgusting && !is_violent && !is_humiliating && !is_negative && !is_neutral &&
+        !is_fearful && !is_playful && !is_romantic && !is_agreeable && !is_confused && !is_celebratory && !is_relaxed &&
+        !is_silly && !is_performance && !is_angry_expression && !is_communication && !is_animal && !is_food_drink &&
+        !is_gesture && !is_exclamation && !is_amused && !is_self_directed) {
         for (i = 0; misc_neutral_socials[i] != NULL; i++) {
             if (!strcmp(social_name, misc_neutral_socials[i])) {
                 is_misc_neutral = TRUE;
@@ -5910,6 +6122,79 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         /* Otherwise just mild curiosity */
         else {
             adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
+        }
+    } else if (is_relaxed) {
+        /* Relaxed/calm socials - calming, reducing tension */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(3, 8));
+        /* Reduce negative emotions */
+        if (mob->ai_data->emotion_anger > 20) {
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(3, 8));
+        }
+        if (mob->ai_data->emotion_fear > 20) {
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(2, 6));
+        }
+    } else if (is_silly) {
+        /* Silly/absurd socials - amusement or confusion */
+        adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
+        if (mob->ai_data->emotion_friendship >= 50) {
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 12));
+        }
+    } else if (is_performance) {
+        /* Performance socials - showing off */
+        if (mob->ai_data->emotion_friendship >= 50) {
+            /* Friends - impressed/proud */
+            adjust_emotion(mob, &mob->ai_data->emotion_pride, rand_number(3, 8));
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(2, 6));
+        } else {
+            /* Strangers - showing off is annoying */
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(2, 8));
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
+        }
+    } else if (is_angry_expression) {
+        /* Angry expression socials - empathy if friendly, fear otherwise */
+        if (mob->ai_data->emotion_friendship >= 50) {
+            /* Friends - empathetic concern */
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(5, 10));
+            adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(2, 6)); /* Some shared anger */
+        } else {
+            /* Strangers - threatening */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(3, 10));
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
+        }
+    } else if (is_communication) {
+        /* Communication meta socials - minimal impact */
+        adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(1, 4));
+    } else if (is_animal) {
+        /* Animal sound socials - amusement or curiosity */
+        adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
+        if (mob->ai_data->emotion_friendship >= 50) {
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(3, 8));
+        }
+    } else if (is_food_drink) {
+        /* Food/drink socials - curiosity, potential sharing context */
+        adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
+        if (mob->ai_data->emotion_friendship >= 60) {
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(2, 6));
+        }
+    } else if (is_gesture) {
+        /* Gesture socials - curiosity, context-dependent */
+        adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(2, 6));
+    } else if (is_exclamation) {
+        /* Exclamation socials - minimal curiosity */
+        adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(1, 4));
+    } else if (is_amused) {
+        /* Amused socials - share amusement if friendly */
+        if (mob->ai_data->emotion_friendship >= 50) {
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 12));
+            adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(2, 6));
+        } else {
+            adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(3, 8));
+        }
+    } else if (is_self_directed) {
+        /* Self-directed physical socials - compassion if mob is compassionate */
+        adjust_emotion(mob, &mob->ai_data->emotion_curiosity, rand_number(1, 5));
+        if (mob->ai_data->emotion_compassion >= 60) {
+            adjust_emotion(mob, &mob->ai_data->emotion_compassion, rand_number(3, 8));
         }
     } else if (is_misc_neutral) {
         /* Misc neutral socials - minimal emotional impact, mostly curiosity */
