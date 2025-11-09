@@ -743,6 +743,27 @@ void generic_complete_quest(struct char_data *ch)
         /* Notify the room that the character completed a quest */
         act("$n completou uma busca.", TRUE, ch, NULL, NULL, TO_ROOM);
 
+        /* Emotion trigger: Quest completion (Quest-Related 2.4) */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+            /* Find the questmaster mob and update their emotions */
+            mob_rnum questmaster_rnum = real_mobile(QST_MASTER(rnum));
+            if (questmaster_rnum != NOBODY) {
+                /* Look for questmaster in current room */
+                struct char_data *questmaster = NULL;
+                struct char_data *temp_char;
+                for (temp_char = world[IN_ROOM(ch)].people; temp_char; temp_char = temp_char->next_in_room) {
+                    if (IS_NPC(temp_char) && GET_MOB_RNUM(temp_char) == questmaster_rnum) {
+                        questmaster = temp_char;
+                        break;
+                    }
+                }
+                /* Update questmaster emotions if found */
+                if (questmaster && questmaster->ai_data) {
+                    update_mob_emotion_quest_completed(questmaster, ch);
+                }
+            }
+        }
+
         clear_quest(ch);
 
         /* Cleanup wishlist quests after completion */

@@ -151,9 +151,22 @@ void update_mob_emotion_assisted(struct char_data *mob, struct char_data *assist
 void update_mob_emotion_passive(struct char_data *mob);
 void update_mob_emotion_from_social(struct char_data *mob, struct char_data *actor, const char *social_name);
 void mob_mourn_death(struct char_data *mob, struct char_data *deceased);
+void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data *victim, struct char_data *killer);
+void update_mob_emotion_saw_equipment(struct char_data *mob, struct char_data *target);
+void update_mob_emotion_entered_dangerous_area(struct char_data *mob);
+void update_mob_emotion_entered_safe_area(struct char_data *mob);
+void update_mob_emotion_harmed_by_spell(struct char_data *mob, struct char_data *caster);
+void update_mob_emotion_blessed_by_spell(struct char_data *mob, struct char_data *caster);
+void update_mob_emotion_witnessed_offensive_magic(struct char_data *mob, struct char_data *caster);
+void update_mob_emotion_quest_completed(struct char_data *mob, struct char_data *player);
+void update_mob_emotion_quest_failed(struct char_data *mob, struct char_data *player);
+void update_mob_emotion_quest_betrayal(struct char_data *mob, struct char_data *killer);
+void update_mob_emotion_fair_trade(struct char_data *mob, struct char_data *trader);
+void update_mob_emotion_received_valuable(struct char_data *mob, struct char_data *seller, int value);
 
 /* Emotion memory system functions */
-void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event, const char *social_name);
+void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event,
+                        const char *social_name);
 int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
 void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
 

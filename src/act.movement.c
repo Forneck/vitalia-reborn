@@ -363,6 +363,24 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
     if (ch->desc != NULL)
         look_at_room(ch, 0);
 
+    /* Emotion trigger: Entering dangerous or safe areas (Environmental 2.2) */
+    if (IS_NPC(ch) && ch->ai_data && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        /* Check for dangerous areas - death traps, dangerous sectors, high-level zones */
+        if (ROOM_FLAGGED(going_to, ROOM_DEATH) || SECT(going_to) == SECT_LAVA || SECT(going_to) == SECT_QUICKSAND ||
+            SECT(going_to) == SECT_UNDERWATER) {
+            update_mob_emotion_entered_dangerous_area(ch);
+        }
+        /* Check for safe areas - peaceful rooms, cities, indoors */
+        else if (ROOM_FLAGGED(going_to, ROOM_PEACEFUL) || ROOM_FLAGGED(going_to, ROOM_HEAL) ||
+                 SECT(going_to) == SECT_CITY || SECT(going_to) == SECT_INSIDE) {
+            /* Only trigger if coming from a dangerous area */
+            if (!ROOM_FLAGGED(was_in, ROOM_PEACEFUL) && !ROOM_FLAGGED(was_in, ROOM_HEAL) && SECT(was_in) != SECT_CITY &&
+                SECT(was_in) != SECT_INSIDE) {
+                update_mob_emotion_entered_safe_area(ch);
+            }
+        }
+    }
+
     /* ... and Kill the player if the room is a death trap. */
     if (ROOM_FLAGGED(going_to, ROOM_DEATH) && GET_LEVEL(ch) < LVL_IMMORT) {
         mudlog(BRF, LVL_IMMORT, TRUE, "%s hit death trap #%d (%s)", GET_NAME(ch), GET_ROOM_VNUM(going_to),
