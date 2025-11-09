@@ -480,7 +480,11 @@ static void medit_disp_genetics_menu(struct descriptor_data *d)
                     mob->ai_data->genetics.trade_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.quest_tendency,
                     nrm, grn, nrm, yel, mob->ai_data->genetics.adventurer_tendency, nrm, grn, nrm, yel,
                     mob->ai_data->genetics.follow_tendency, nrm, grn, nrm, yel, mob->ai_data->genetics.healing_tendency,
-                    nrm, grn, nrm, yel, emotion_profile_types[mob->ai_data->emotional_profile], nrm, grn, nrm);
+                    nrm, grn, nrm, yel,
+                    (mob->ai_data->emotional_profile >= 0 && mob->ai_data->emotional_profile <= 7
+                         ? emotion_profile_types[mob->ai_data->emotional_profile]
+                         : "Unknown"),
+                    nrm, grn, nrm);
 
     OLC_MODE(d) = MEDIT_GENETICS_MENU;
 }

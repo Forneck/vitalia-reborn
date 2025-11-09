@@ -2196,8 +2196,8 @@ bool mob_handle_grouping(struct char_data *ch)
                 /* High envy refuses to group with better-equipped players */
                 if (best_target_leader->ai_data->emotion_envy >= CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD) {
                     /* Check if the player is better equipped (simple heuristic: higher level or more gold) */
-                    if (!IS_NPC(ch) && (GET_LEVEL(ch) > GET_LEVEL(best_target_leader) ||
-                                        GET_GOLD(ch) > GET_GOLD(best_target_leader) * 2)) {
+                    if (GET_LEVEL(ch) > GET_LEVEL(best_target_leader) ||
+                        GET_GOLD(ch) > GET_GOLD(best_target_leader) * 2) {
                         act("$n olha invejosamente para $N e recusa-se a formar um grupo.", TRUE, best_target_leader, 0,
                             ch, TO_ROOM);
                         return FALSE;
