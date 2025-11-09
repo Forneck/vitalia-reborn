@@ -5385,9 +5385,9 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
      * Note: spank, tackle, snowball, challenge, arrest have special contextual handling
      * Note: vampire and haircut moved to silly/contextual categories (not actually violent)
      */
-    const char *violent_socials[] = {"needle", "shock",  "whip",     "bite",   "choke",    "strangle",
-                                     "smack",  "smash",  "clobber",  "thwap",  "whack",    "pound",
-                                     "shootout", "sword", "smite",    "burn",   "charge",   NULL};
+    const char *violent_socials[] = {"needle",   "shock", "whip",    "bite",  "choke",  "strangle",
+                                     "smack",    "smash", "clobber", "thwap", "whack",  "pound",
+                                     "shootout", "sword", "smite",   "burn",  "charge", NULL};
 
     /* Humiliating socials - trigger shame and humiliation
      * Emotion changes: +humiliation, +shame, +anger, -trust, -friendship, -pride
@@ -5495,7 +5495,8 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         int mob_love = mob->ai_data->emotion_love;
         int mob_friendship = mob->ai_data->emotion_friendship;
 
-        /* Extremely violent socials (despine, shiskabob, vice, choke, strangle, smite, sword) - always hostile response */
+        /* Extremely violent socials (despine, shiskabob, vice, choke, strangle, smite, sword) - always hostile response
+         */
         if (!strcmp(social_name, "despine") || !strcmp(social_name, "shiskabob") || !strcmp(social_name, "vice") ||
             !strcmp(social_name, "choke") || !strcmp(social_name, "strangle") || !strcmp(social_name, "smite") ||
             !strcmp(social_name, "sword")) {
