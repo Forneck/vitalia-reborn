@@ -733,13 +733,13 @@ void mobile_activity(void)
                     /* Perform the appropriate resource action - disabled for reduce resources usage until fix*/
                     switch (ch->ai_data->current_goal) {
                         case GOAL_MINE:
-                            //call_ACMD(do_mine, ch, "", 0, 0);
+                            // call_ACMD(do_mine, ch, "", 0, 0);
                             break;
                         case GOAL_FISH:
-                            //call_ACMD(do_fishing, ch, "", 0, 0);
+                            // call_ACMD(do_fishing, ch, "", 0, 0);
                             break;
                         case GOAL_FORAGE:
-                            //call_ACMD(do_forage, ch, "", 0, 0);
+                            // call_ACMD(do_forage, ch, "", 0, 0);
                             break;
                         case GOAL_EAVESDROP:
                             call_ACMD(do_eavesdrop, ch, "", 0, 0);
@@ -2189,8 +2189,7 @@ bool mob_handle_grouping(struct char_data *ch)
             /* Emotion modifiers for group acceptance */
             if (CONFIG_MOB_CONTEXTUAL_SOCIALS && best_target_leader->ai_data && !IS_NPC(ch)) {
                 /* High friendship makes mobs more likely to accept into group */
-                if (best_target_leader->ai_data->emotion_friendship >=
-                    CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD) {
+                if (best_target_leader->ai_data->emotion_friendship >= CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD) {
                     chance_aceitar += 20; /* +20% chance to accept */
                 }
 

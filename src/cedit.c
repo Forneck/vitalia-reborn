@@ -1266,7 +1266,7 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.display_horror_threshold = 90;
             OLC_CONFIG(d)->emotion_config.display_pain_threshold = 80;
             OLC_CONFIG(d)->emotion_config.display_compassion_threshold = 80;
-            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 60;  /* Show courage more */
+            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 60; /* Show courage more */
             OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = 80;
             OLC_CONFIG(d)->emotion_config.display_disgust_threshold = 75;
             OLC_CONFIG(d)->emotion_config.display_envy_threshold = 80;
@@ -1276,7 +1276,7 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.display_humiliation_threshold = 85;
             OLC_CONFIG(d)->emotion_config.display_love_threshold = 85;
             OLC_CONFIG(d)->emotion_config.display_loyalty_threshold = 75;
-            OLC_CONFIG(d)->emotion_config.display_pride_threshold = 60;  /* Show pride more */
+            OLC_CONFIG(d)->emotion_config.display_pride_threshold = 60; /* Show pride more */
             OLC_CONFIG(d)->emotion_config.display_shame_threshold = 85;
             OLC_CONFIG(d)->emotion_config.display_trust_threshold = 80;
 
@@ -1332,7 +1332,7 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.display_horror_threshold = 70;
             OLC_CONFIG(d)->emotion_config.display_pain_threshold = 60;
             OLC_CONFIG(d)->emotion_config.display_compassion_threshold = 70;
-            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 80;  /* Show courage less */
+            OLC_CONFIG(d)->emotion_config.display_courage_threshold = 80; /* Show courage less */
             OLC_CONFIG(d)->emotion_config.display_curiosity_threshold = 70;
             OLC_CONFIG(d)->emotion_config.display_disgust_threshold = 70;
             OLC_CONFIG(d)->emotion_config.display_envy_threshold = 70;

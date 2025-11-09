@@ -1249,7 +1249,8 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                                     abandon_chance -= 30; /* -30 to abandon chance (more loyal) */
                                 }
                                 /* Low loyalty makes mobs abandon group when scared */
-                                else if (victim->ai_data->emotion_loyalty < CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD) {
+                                else if (victim->ai_data->emotion_loyalty <
+                                         CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD) {
                                     abandon_chance += 30; /* +30 to abandon chance (less loyal) */
                                 }
 

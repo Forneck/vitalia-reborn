@@ -469,8 +469,8 @@ static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper
         }
     }
 
-    return (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * 
-                 (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70) * emotion_modifier);
+    return (int)(GET_OBJ_COST(obj) * SHOP_BUYPROFIT(shop_nr) * (1 + (GET_CHA(keeper) - GET_CHA(buyer)) / (float)70) *
+                 emotion_modifier);
 }
 
 /* When the shopkeeper is buying, we reverse the discount. Also make sure we
