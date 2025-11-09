@@ -2190,6 +2190,7 @@ void observe_combat_equipment(struct char_data *observer, struct char_data *targ
 {
     int i, score;
     struct obj_data *eq;
+    int total_envy_items = 0;
 
     if (!IS_NPC(observer) || !observer->ai_data || !target)
         return;
@@ -2206,6 +2207,25 @@ void observe_combat_equipment(struct char_data *observer, struct char_data *targ
         /* Se a pontuação for muito alta (>100), adiciona à wishlist */
         if (score > 100) {
             add_item_to_wishlist(observer, GET_OBJ_VNUM(eq), score);
+            total_envy_items++;
+        }
+    }
+
+    /* Emotion trigger: Seeing desirable equipment triggers envy (Environmental 2.2 + Wishlist) */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && total_envy_items > 0) {
+        /* Increase envy based on number of desirable items */
+        int envy_increase = MIN(20, total_envy_items * 5);
+        adjust_emotion(observer, &observer->ai_data->emotion_envy, envy_increase);
+
+        /* High envy mobs also gain greed */
+        if (observer->ai_data->emotion_envy > 60) {
+            adjust_emotion(observer, &observer->ai_data->emotion_greed, rand_number(5, 10));
+        }
+
+        /* Greedy mobs with high envy become more aggressive/determined */
+        if (observer->ai_data->emotion_greed > 60 && observer->ai_data->emotion_envy > 60) {
+            adjust_emotion(observer, &observer->ai_data->emotion_courage, rand_number(3, 8));
+            adjust_emotion(observer, &observer->ai_data->emotion_anger, rand_number(3, 8));
         }
     }
 }
@@ -5054,7 +5074,8 @@ void mob_mourn_death(struct char_data *mob, struct char_data *deceased)
  * @param interaction_type Type of interaction (INTERACT_*)
  * @param major_event 1 for major events (rescue, theft, ally death), 0 for normal
  */
-void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event, const char *social_name)
+void add_emotion_memory(struct char_data *mob, struct char_data *entity, int interaction_type, int major_event,
+                        const char *social_name)
 {
     struct emotion_memory *memory;
     int entity_type;
@@ -5125,7 +5146,7 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
     memory->interaction_type = interaction_type;
     memory->major_event = major_event;
     memory->timestamp = time(0);
-    
+
     /* Store social name if provided (for social interactions) */
     if (social_name && *social_name) {
         strncpy(memory->social_name, social_name, sizeof(memory->social_name) - 1);
@@ -5140,26 +5161,26 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
     memory->anger_level = mob->ai_data->emotion_anger;
     memory->happiness_level = mob->ai_data->emotion_happiness;
     memory->sadness_level = mob->ai_data->emotion_sadness;
-    
+
     /* Social emotions */
     memory->friendship_level = mob->ai_data->emotion_friendship;
     memory->love_level = mob->ai_data->emotion_love;
     memory->trust_level = mob->ai_data->emotion_trust;
     memory->loyalty_level = mob->ai_data->emotion_loyalty;
-    
+
     /* Motivational emotions */
     memory->curiosity_level = mob->ai_data->emotion_curiosity;
     memory->greed_level = mob->ai_data->emotion_greed;
     memory->pride_level = mob->ai_data->emotion_pride;
-    
+
     /* Empathic emotions */
     memory->compassion_level = mob->ai_data->emotion_compassion;
     memory->envy_level = mob->ai_data->emotion_envy;
-    
+
     /* Arousal emotions */
     memory->courage_level = mob->ai_data->emotion_courage;
     memory->excitement_level = mob->ai_data->emotion_excitement;
-    
+
     /* Negative/aversive emotions */
     memory->disgust_level = mob->ai_data->emotion_disgust;
     memory->shame_level = mob->ai_data->emotion_shame;
@@ -5832,5 +5853,313 @@ void update_mob_emotion_from_social(struct char_data *mob, struct char_data *act
         }
 
         add_emotion_memory(mob, actor, interaction_type, is_major, social_name);
+    }
+}
+
+/**
+ * Update mob emotions when witnessing a player death (Environmental Trigger 2.2)
+ * @param mob The mob witnessing the death
+ * @param victim The character who died
+ * @param killer The character who killed the victim (can be NULL)
+ */
+void update_mob_emotion_witnessed_death(struct char_data *mob, struct char_data *victim, struct char_data *killer)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS || !victim)
+        return;
+
+    /* Don't process self-death or if already in combat */
+    if (mob == victim || FIGHTING(mob))
+        return;
+
+    /* Check if victim was friendly (high friendship/trust) */
+    int is_friendly = (mob->ai_data->emotion_friendship >= 50 || mob->ai_data->emotion_trust >= 50);
+
+    /* Check if victim was enemy (very low friendship, high anger) */
+    int is_enemy = (mob->ai_data->emotion_friendship < 30 && mob->ai_data->emotion_anger >= 50);
+
+    if (is_friendly) {
+        /* Friendly death → fear and sadness */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
+        adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(15, 25));
+        adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(10, 15));
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(15, 25));
+    } else if (is_enemy) {
+        /* Enemy death → satisfaction (happiness increase, fear decrease) */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(10, 20));
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(5, 15));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(5, 10));
+    } else {
+        /* Neutral/stranger death → general fear and horror */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(5, 15));
+        adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(5, 10));
+    }
+
+    /* Add to emotion memory if killer is known */
+    if (killer && killer != mob) {
+        add_emotion_memory(mob, killer, INTERACT_WITNESSED_DEATH, 1, NULL);
+    }
+}
+
+/**
+ * Update mob emotions when seeing powerful equipment (Environmental Trigger 2.2)
+ * @param mob The mob seeing the equipment
+ * @param target The character with powerful equipment
+ */
+void update_mob_emotion_saw_equipment(struct char_data *mob, struct char_data *target)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS || !target)
+        return;
+
+    /* Don't process if same character or already in combat */
+    if (mob == target || FIGHTING(mob))
+        return;
+
+    /* Seeing powerful equipment → envy */
+    adjust_emotion(mob, &mob->ai_data->emotion_envy, rand_number(5, 15));
+
+    /* Also slight decrease in happiness */
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(3, 8));
+
+    /* If mob has high greed, increase envy more */
+    if (mob->ai_data->emotion_greed > 60) {
+        adjust_emotion(mob, &mob->ai_data->emotion_envy, rand_number(5, 10));
+    }
+}
+
+/**
+ * Update mob emotions when entering a dangerous area (Environmental Trigger 2.2)
+ * @param mob The mob entering the dangerous area
+ */
+void update_mob_emotion_entered_dangerous_area(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Entering dangerous areas → fear increase */
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(5, 15));
+    adjust_emotion(mob, &mob->ai_data->emotion_courage, -rand_number(3, 8));
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(5, 10));
+
+    /* Brave mobs have less fear increase */
+    if (mob->ai_data->genetics.brave_prevalence > 50) {
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(3, 8));
+    }
+}
+
+/**
+ * Update mob emotions when entering a safe area (Environmental Trigger 2.2)
+ * @param mob The mob entering the safe area
+ */
+void update_mob_emotion_entered_safe_area(struct char_data *mob)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Returning to safe areas → fear decrease, happiness increase */
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(5, 10));
+
+    /* Also reduce pain and horror if present */
+    if (mob->ai_data->emotion_pain > 20) {
+        adjust_emotion(mob, &mob->ai_data->emotion_pain, -rand_number(5, 10));
+    }
+    if (mob->ai_data->emotion_horror > 20) {
+        adjust_emotion(mob, &mob->ai_data->emotion_horror, -rand_number(5, 10));
+    }
+}
+
+/**
+ * Update mob emotions when harmed by spells (Magic/Spell Trigger 2.3)
+ * @param mob The mob being harmed
+ * @param caster The character casting the harmful spell
+ */
+void update_mob_emotion_harmed_by_spell(struct char_data *mob, struct char_data *caster)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Being cursed/harmed by spells → anger, fear, pain */
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 15));
+    adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(15, 25));
+
+    /* Decrease trust and friendship */
+    adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(10, 15));
+
+    /* Add to emotion memory */
+    if (caster) {
+        add_emotion_memory(mob, caster, INTERACT_ATTACKED, 0, NULL);
+    }
+}
+
+/**
+ * Update mob emotions when blessed by beneficial spells (Magic/Spell Trigger 2.3)
+ * @param mob The mob being blessed
+ * @param caster The character casting the beneficial spell
+ */
+void update_mob_emotion_blessed_by_spell(struct char_data *mob, struct char_data *caster)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Being blessed/buffed → happiness, trust, gratitude (compassion) */
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(10, 15));
+    adjust_emotion(mob, &mob->ai_data->emotion_compassion, rand_number(10, 15));
+    adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(5, 15));
+
+    /* Decrease fear and anger */
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(5, 10));
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(5, 10));
+
+    /* Add to emotion memory */
+    if (caster) {
+        add_emotion_memory(mob, caster, INTERACT_HEALED, 0, NULL);
+    }
+}
+
+/**
+ * Update mob emotions when witnessing offensive magic (Magic/Spell Trigger 2.3)
+ * @param mob The mob witnessing the magic (non-combatant)
+ * @param caster The character casting the offensive spell
+ */
+void update_mob_emotion_witnessed_offensive_magic(struct char_data *mob, struct char_data *caster)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Don't process if in combat - combatants expect violence */
+    if (FIGHTING(mob))
+        return;
+
+    /* Witnessing offensive magic → fear, horror (for non-combatants) */
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(5, 10));
+
+    /* Brave mobs have less fear */
+    if (mob->ai_data->genetics.brave_prevalence > 50) {
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(5, 10));
+        adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(5, 10));
+    }
+}
+
+/**
+ * Update mob emotions when a quest is completed (Quest-Related Trigger 2.4)
+ * @param mob The quest giver mob
+ * @param player The player completing the quest
+ */
+void update_mob_emotion_quest_completed(struct char_data *mob, struct char_data *player)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS || !player)
+        return;
+
+    /* Quest completion → happiness, trust, friendship increase */
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(15, 25));
+    adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_loyalty, rand_number(5, 15));
+
+    /* Decrease any negative emotions */
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(10, 15));
+    adjust_emotion(mob, &mob->ai_data->emotion_sadness, -rand_number(10, 15));
+
+    /* Add to emotion memory */
+    add_emotion_memory(mob, player, INTERACT_QUEST_COMPLETE, 0, NULL);
+}
+
+/**
+ * Update mob emotions when a quest fails (Quest-Related Trigger 2.4)
+ * @param mob The quest giver mob
+ * @param player The player failing the quest
+ */
+void update_mob_emotion_quest_failed(struct char_data *mob, struct char_data *player)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS || !player)
+        return;
+
+    /* Quest failure → anger, disappointment (sadness), trust decrease */
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(10, 20));
+    adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(10, 15));
+    adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(15, 25));
+    adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(10, 20));
+
+    /* Decrease happiness */
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(15, 20));
+
+    /* Add to emotion memory */
+    add_emotion_memory(mob, player, INTERACT_QUEST_FAIL, 0, NULL);
+}
+
+/**
+ * Update mob emotions when witnessing quest betrayal (Quest-Related Trigger 2.4)
+ * @param mob The mob witnessing the betrayal
+ * @param killer The character who killed the quest giver
+ */
+void update_mob_emotion_quest_betrayal(struct char_data *mob, struct char_data *killer)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS || !killer)
+        return;
+
+    /* Don't process if same character */
+    if (mob == killer)
+        return;
+
+    /* Quest betrayal → horror, anger for witnesses */
+    adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(20, 35));
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, rand_number(20, 35));
+    adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(15, 25));
+    adjust_emotion(mob, &mob->ai_data->emotion_disgust, rand_number(15, 25));
+
+    /* Massive trust and friendship loss */
+    adjust_emotion(mob, &mob->ai_data->emotion_trust, -rand_number(30, 50));
+    adjust_emotion(mob, &mob->ai_data->emotion_friendship, -rand_number(30, 50));
+
+    /* Add to emotion memory - this is a MAJOR event */
+    add_emotion_memory(mob, killer, INTERACT_BETRAYAL, 1, NULL);
+}
+
+/**
+ * Update mob emotions on fair trade (Economic Action 2.5)
+ * @param mob The shopkeeper mob
+ * @param trader The character trading fairly
+ */
+void update_mob_emotion_fair_trade(struct char_data *mob, struct char_data *trader)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS || !trader)
+        return;
+
+    /* Receiving fair trade → trust, happiness */
+    adjust_emotion(mob, &mob->ai_data->emotion_trust, rand_number(5, 10));
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 15));
+    adjust_emotion(mob, &mob->ai_data->emotion_friendship, rand_number(3, 8));
+
+    /* Decrease any negative emotions slightly */
+    adjust_emotion(mob, &mob->ai_data->emotion_anger, -rand_number(3, 8));
+}
+
+/**
+ * Update mob emotions when receiving valuable items (Economic Action 2.5)
+ * @param mob The shopkeeper mob
+ * @param seller The character selling the valuable item
+ * @param value The value of the item being sold
+ */
+void update_mob_emotion_received_valuable(struct char_data *mob, struct char_data *seller, int value)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS || !seller)
+        return;
+
+    /* Selling valuable items to mob → greed response */
+    /* Scale greed increase with item value */
+    int greed_increase = MIN(20, MAX(5, value / 1000));
+    adjust_emotion(mob, &mob->ai_data->emotion_greed, greed_increase);
+    adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 15));
+
+    /* Greedy mobs become even happier */
+    if (mob->ai_data->emotion_greed > 60) {
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 10));
+        adjust_emotion(mob, &mob->ai_data->emotion_excitement, rand_number(5, 10));
     }
 }
