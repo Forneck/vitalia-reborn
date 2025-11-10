@@ -662,7 +662,7 @@ void point_update(void)
             }
         }
 
-        if (GET_OBJ_TYPE(j) == ITEM_PORTAL) {
+	else if (GET_OBJ_TYPE(j) == ITEM_PORTAL) {
             if (GET_OBJ_TIMER(j) == 1) {
                 if (j->in_room)
                     act("$p começa a desaparecer!", FALSE, 0, j, 0, TO_ROOM);
@@ -674,14 +674,16 @@ void point_update(void)
         }
         /* If the timer is set, count it down and at 0, try the trigger note
            to .rej hand-patchers: make this last in your point-update() */
-        else if (GET_OBJ_TIMER(j) > 0) {
+        else if (GET_OBJ_TIMER(j) > 0 && ) {
             GET_OBJ_TIMER(j)--;
+            timer_otrigger(j);
             if (!GET_OBJ_TIMER(j))
                 if (j->carried_by)
                     act("$p misteriosamente desaparece.", FALSE, j->carried_by, j, 0, TO_CHAR);
                 else if (j->in_room)
                     act("$p misteriosamente desaparece.", TRUE, 0, j, 0, TO_ROOM);
-            timer_otrigger(j);
+	    extract_obj(j);
+
         }
     }
 
