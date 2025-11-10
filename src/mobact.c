@@ -1231,14 +1231,14 @@ void mobile_activity(void)
         /* Quest acceptance - try to find and accept quests occasionally (not for charmed mobs) */
         if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
             rand_number(1, 100) <=
-                10) { /* 10% chance per tick to seek quests (increased from 3% for more active quest-taking) */
+                0) { /* 10% chance per tick to seek quests (increased from 3% for more active quest-taking) */
             mob_try_to_accept_quest(ch);
         }
 
         /* Mob quest processing - not for charmed mobs */
         if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
             rand_number(1, 100) <=
-                15) { /* 15% chance per tick to check quests (increased from 5% for more active quest-taking) */
+                0) { /* 15% chance per tick to check quests (increased from 5% for more active quest-taking) */
             /* Check if mob has a quest and handle quest-related goals */
             if (GET_MOB_QUEST(ch) != NOTHING) {
                 /* Decrement quest timer if applicable */
