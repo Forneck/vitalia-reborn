@@ -1975,7 +1975,6 @@ void nanny(struct descriptor_data *d, char *arg)
             /* Note: num_incarnations was already incremented when recording class history */
 
             /* Remove all affects before resetting (unaffect) - using optimized O(n) removal */
-            affect_remove_all(d->character);
 
             /* Reset reputation to initial value for new incarnation */
             d->character->player_specials->saved.reputation = 50; /* Default reputation, matches new character */
@@ -2027,12 +2026,11 @@ void nanny(struct descriptor_data *d, char *arg)
                     /* Restore retained skill if it exists */
                     if (d->character->player_specials->saved.retained_skills[i] > 0) {
                         SET_SKILL(d->character, i, d->character->player_specials->saved.retained_skills[i]);
-                        /* Clear retained_skills array after applying */
-                        d->character->player_specials->saved.retained_skills[i] = 0;
                     }
                 }
             }
 
+            affect_remove_all(d->character);
             save_char(d->character);
 
             write_to_output(d, "\r\nVocê renasceu com sucesso! Bem-vindo à sua nova vida.\r\n");
