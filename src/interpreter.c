@@ -1892,10 +1892,21 @@ void nanny(struct descriptor_data *d, char *arg)
                 write_to_output(d, "Você já é dessa classe. Escolha outra.\r\nClasse: ");
                 return;
             }
-            /* Check if class was already used */
+            /* Check if class was already used, but allow if all classes have been tried */
             if (WAS_FLAGGED(d->character, load_result)) {
-                write_to_output(d, "Você já viveu como essa classe. Escolha outra.\r\nClasse: ");
-                return;
+                /* Count how many classes have been tried (including current) */
+                int classes_tried = 0;
+                for (int i = 0; i < NUM_CLASSES; i++) {
+                    if (WAS_FLAGGED(d->character, i) || i == GET_CLASS(d->character)) {
+                        classes_tried++;
+                    }
+                }
+                /* Only reject if not all classes have been tried */
+                if (classes_tried < NUM_CLASSES) {
+                    write_to_output(d, "Você já viveu como essa classe. Escolha outra.\r\nClasse: ");
+                    return;
+                }
+                /* If all classes have been tried, allow reselection (already passed current class check) */
             }
             /* Mark current class as used and add to class history */
             SET_BIT_AR(d->character->player_specials->saved.was_class, GET_CLASS(d->character));
