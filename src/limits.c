@@ -663,7 +663,8 @@ void point_update(void)
         }
 
 	else if (GET_OBJ_TYPE(j) == ITEM_PORTAL) {
-            if (GET_OBJ_TIMER(j) == 1) {
+           GET_OBJ_TIMER(j)--;  
+	   if (GET_OBJ_TIMER(j) == 1) {
                 if (j->in_room)
                     act("$p começa a desaparecer!", FALSE, 0, j, 0, TO_ROOM);
             } else if (GET_OBJ_TIMER(j) == 0) {
