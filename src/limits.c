@@ -674,7 +674,7 @@ void point_update(void)
         }
         /* If the timer is set, count it down and at 0, try the trigger note
            to .rej hand-patchers: make this last in your point-update() */
-        else if (GET_OBJ_TIMER(j) > 0 && ) {
+        else if (GET_OBJ_TIMER(j) > 0  ) {
             GET_OBJ_TIMER(j)--;
             timer_otrigger(j);
             if (!GET_OBJ_TIMER(j))
