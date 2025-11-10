@@ -678,13 +678,13 @@ void point_update(void)
         else if (GET_OBJ_TIMER(j) > 0  ) {
             GET_OBJ_TIMER(j)--;
             timer_otrigger(j);
-            if (!GET_OBJ_TIMER(j))
+            if (!GET_OBJ_TIMER(j)){
                 if (j->carried_by)
                     act("$p misteriosamente desaparece.", FALSE, j->carried_by, j, 0, TO_CHAR);
                 else if (j->in_room)
                     act("$p misteriosamente desaparece.", TRUE, 0, j, 0, TO_ROOM);
-	    extract_obj(j);
-
+	        extract_obj(j);
+	    }
         }
     }
 
