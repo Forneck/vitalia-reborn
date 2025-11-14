@@ -1643,6 +1643,15 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             else
                 damage(victim, ch, dam, SPELL_WINDWALL);
         }
+
+        /* Check if the attacker died from counter-attack damage */
+        if (IS_NPC(ch)) {
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
+                return;
+        } else {
+            if (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
+                return;
+        }
     }
     /* check if the victim has a hitprcnt trigger */
     hitprcnt_mtrigger(victim);
