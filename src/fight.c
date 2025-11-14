@@ -1652,6 +1652,15 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             if (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
                 return;
         }
+    } else if (dam > 0) {
+        /* Both attacker and victim have counter-attack spells - they cancel each other */
+        if ((AFF_FLAGGED(ch, AFF_FIRESHIELD) && AFF_FLAGGED(victim, AFF_FIRESHIELD)) ||
+            (AFF_FLAGGED(ch, AFF_THISTLECOAT) && AFF_FLAGGED(victim, AFF_THISTLECOAT)) ||
+            (AFF_FLAGGED(ch, AFF_WINDWALL) && AFF_FLAGGED(victim, AFF_WINDWALL))) {
+            act("Sua barreira mágica anula a barreira de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A barreira mágica de $n anula sua barreira!", FALSE, ch, 0, victim, TO_VICT);
+            act("As barreiras mágicas de $n e $N se anulam mutuamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+        }
     }
     /* check if the victim has a hitprcnt trigger */
     hitprcnt_mtrigger(victim);
