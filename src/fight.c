@@ -1653,10 +1653,34 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 return;
         }
     } else if (dam > 0) {
-        /* Both attacker and victim have counter-attack spells - they cancel each other */
-        if ((AFF_FLAGGED(ch, AFF_FIRESHIELD) && AFF_FLAGGED(victim, AFF_FIRESHIELD)) ||
-            (AFF_FLAGGED(ch, AFF_THISTLECOAT) && AFF_FLAGGED(victim, AFF_THISTLECOAT)) ||
-            (AFF_FLAGGED(ch, AFF_WINDWALL) && AFF_FLAGGED(victim, AFF_WINDWALL))) {
+        /* Counter-attack spell interactions - rock-paper-scissors mechanic */
+        /* FIRESHIELD burns THISTLECOAT, THISTLECOAT blocks WINDWALL, WINDWALL extinguishes FIRESHIELD */
+
+        /* Attacker has FIRESHIELD, victim has THISTLECOAT - Fire burns thorns */
+        if (AFF_FLAGGED(ch, AFF_FIRESHIELD) && AFF_FLAGGED(victim, AFF_THISTLECOAT)) {
+            act("Sua barreira de fogo queima a barreira de espinhos de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A barreira de fogo de $n queima sua barreira de espinhos!", FALSE, ch, 0, victim, TO_VICT);
+            act("A barreira de fogo de $n queima a barreira de espinhos de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+            affect_from_char(victim, SPELL_THISTLECOAT);
+        }
+        /* Attacker has THISTLECOAT, victim has WINDWALL - Thorns block wind */
+        else if (AFF_FLAGGED(ch, AFF_THISTLECOAT) && AFF_FLAGGED(victim, AFF_WINDWALL)) {
+            act("Sua barreira de espinhos bloqueia a parede de vento de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A barreira de espinhos de $n bloqueia sua parede de vento!", FALSE, ch, 0, victim, TO_VICT);
+            act("A barreira de espinhos de $n bloqueia a parede de vento de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+            affect_from_char(victim, SPELL_WINDWALL);
+        }
+        /* Attacker has WINDWALL, victim has FIRESHIELD - Wind extinguishes fire */
+        else if (AFF_FLAGGED(ch, AFF_WINDWALL) && AFF_FLAGGED(victim, AFF_FIRESHIELD)) {
+            act("Sua parede de vento apaga a barreira de fogo de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A parede de vento de $n apaga sua barreira de fogo!", FALSE, ch, 0, victim, TO_VICT);
+            act("A parede de vento de $n apaga a barreira de fogo de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+            affect_from_char(victim, SPELL_FIRESHIELD);
+        }
+        /* Both attacker and victim have the same counter-attack spell - they cancel each other */
+        else if ((AFF_FLAGGED(ch, AFF_FIRESHIELD) && AFF_FLAGGED(victim, AFF_FIRESHIELD)) ||
+                 (AFF_FLAGGED(ch, AFF_THISTLECOAT) && AFF_FLAGGED(victim, AFF_THISTLECOAT)) ||
+                 (AFF_FLAGGED(ch, AFF_WINDWALL) && AFF_FLAGGED(victim, AFF_WINDWALL))) {
             act("Sua barreira mágica anula a barreira de $N!", FALSE, ch, 0, victim, TO_CHAR);
             act("A barreira mágica de $n anula sua barreira!", FALSE, ch, 0, victim, TO_VICT);
             act("As barreiras mágicas de $n e $N se anulam mutuamente!", FALSE, ch, 0, victim, TO_NOTVICT);
