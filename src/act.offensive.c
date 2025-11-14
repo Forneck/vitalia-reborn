@@ -473,6 +473,10 @@ ACMD(do_flee)
     int i, attempt, loss;
     struct char_data *was_fighting;
 
+    /* Safety check: validate room before accessing world array */
+    if (IN_ROOM(ch) == NOWHERE || IN_ROOM(ch) < 0 || IN_ROOM(ch) > top_of_world)
+        return;
+
     if (GET_POS(ch) < POS_FIGHTING) {
         send_to_char(ch, "Você não está em condições de fugir!\r\n");
         return;
@@ -492,6 +496,10 @@ ACMD(do_flee)
             }
 
             if (do_simple_move(ch, attempt, TRUE)) {
+                /* Safety check: character might have been extracted (e.g., death trap) */
+                if (PLR_FLAGGED(ch, PLR_NOTDEADYET) || MOB_FLAGGED(ch, MOB_NOTDEADYET))
+                    return;
+
                 send_to_char(ch, "Você foge de pernas para o ar.\r\n");
 
                 /************************************************
@@ -505,7 +513,9 @@ ACMD(do_flee)
                         ch->ai_data->genetics.wimpy_tendency = 100;
                 }
 
-                if (was_fighting && !IS_NPC(ch)) {
+                /* Safety check: was_fighting might have been extracted or become invalid */
+                if (was_fighting && !IS_NPC(ch) && !PLR_FLAGGED(was_fighting, PLR_NOTDEADYET) &&
+                    !MOB_FLAGGED(was_fighting, MOB_NOTDEADYET)) {
                     loss = GET_MAX_HIT(was_fighting) - GET_HIT(was_fighting);
                     loss *= GET_LEVEL(was_fighting);
                     send_to_char(ch, "Você perdeu %ld pontos de experiência.\r\n", (long)loss);
@@ -514,7 +524,8 @@ ACMD(do_flee)
 
                 if (FIGHTING(ch))
                     stop_fighting(ch);
-                if (was_fighting && ch == FIGHTING(was_fighting))
+                if (was_fighting && ch == FIGHTING(was_fighting) && !PLR_FLAGGED(was_fighting, PLR_NOTDEADYET) &&
+                    !MOB_FLAGGED(was_fighting, MOB_NOTDEADYET))
                     stop_fighting(was_fighting);
             } else {
                 send_to_char(ch, "Você tenta fugir, mas não consegue!\r\n");
