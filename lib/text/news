@@ -57,6 +57,7 @@
    Sistema de sílabas expandido com mecânicas de modificadores para voice casting.
    Novo comando @Ysyllables@n e descoberta de variantes de magias.
    Suporte no @Yspedit@n para campos de variantes de magias com sistema de pré-requisitos.
+   Variantes de magias permitem usar cartas para evocar mobs.
    Magias manuais agora exibem mensagens após conjuração.
    Recompensas de experiência adicionadas para magias sem dano.
    Problema de acúmulo excessivo de efeitos mágicos corrigido.
