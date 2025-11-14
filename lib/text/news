@@ -42,14 +42,10 @@
    Perfil emocional agora aparece em @YMEDIT@n e @YSTAT@n com exibição nomeada.
    
    @GSistema de Quests@n
-   Sistema de pedras mágicas para kill mob quests com prevenção de travamentos.
    Quests agora falham ao fazer logout.
-   Sistema de bounty quest com rastreamento de instâncias de mobs.
    Comando @Yquest list@n corrigido para questmasters sem quests atribuídos.
    Bug no @Yquest list@n corrigido com prompt de confirmação adicionado.
    Requisitos de nível de quest corrigidos para mobs acima do nível 100.
-   Acumulação de pedras mágicas e problemas de lag no sistema de kill quest corrigidos.
-   Quests @YMOB_KILL@n e @YMOB_KILL_BOUNTY@n desabilitados junto com geração de pedras mágicas.
    
    @YSistema de Rebegin@n
    Lógica de seleção de classe no @Yrebegin@n corrigida para permitir reseleção.
