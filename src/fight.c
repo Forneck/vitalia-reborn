@@ -1643,6 +1643,48 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             else
                 damage(victim, ch, dam, SPELL_WINDWALL);
         }
+
+        /* Check if the attacker died from counter-attack damage */
+        if (IS_NPC(ch)) {
+            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
+                return;
+        } else {
+            if (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
+                return;
+        }
+    } else if (dam > 0) {
+        /* Counter-attack spell interactions - rock-paper-scissors mechanic */
+        /* FIRESHIELD burns THISTLECOAT, THISTLECOAT blocks WINDWALL, WINDWALL extinguishes FIRESHIELD */
+
+        /* Attacker has FIRESHIELD, victim has THISTLECOAT - Fire burns thorns */
+        if (AFF_FLAGGED(ch, AFF_FIRESHIELD) && AFF_FLAGGED(victim, AFF_THISTLECOAT)) {
+            act("Sua barreira de fogo queima a barreira de espinhos de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A barreira de fogo de $n queima sua barreira de espinhos!", FALSE, ch, 0, victim, TO_VICT);
+            act("A barreira de fogo de $n queima a barreira de espinhos de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+            affect_from_char(victim, SPELL_THISTLECOAT);
+        }
+        /* Attacker has THISTLECOAT, victim has WINDWALL - Thorns block wind */
+        else if (AFF_FLAGGED(ch, AFF_THISTLECOAT) && AFF_FLAGGED(victim, AFF_WINDWALL)) {
+            act("Sua barreira de espinhos bloqueia a parede de vento de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A barreira de espinhos de $n bloqueia sua parede de vento!", FALSE, ch, 0, victim, TO_VICT);
+            act("A barreira de espinhos de $n bloqueia a parede de vento de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+            affect_from_char(victim, SPELL_WINDWALL);
+        }
+        /* Attacker has WINDWALL, victim has FIRESHIELD - Wind extinguishes fire */
+        else if (AFF_FLAGGED(ch, AFF_WINDWALL) && AFF_FLAGGED(victim, AFF_FIRESHIELD)) {
+            act("Sua parede de vento apaga a barreira de fogo de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A parede de vento de $n apaga sua barreira de fogo!", FALSE, ch, 0, victim, TO_VICT);
+            act("A parede de vento de $n apaga a barreira de fogo de $N!", FALSE, ch, 0, victim, TO_NOTVICT);
+            affect_from_char(victim, SPELL_FIRESHIELD);
+        }
+        /* Both attacker and victim have the same counter-attack spell - they cancel each other */
+        else if ((AFF_FLAGGED(ch, AFF_FIRESHIELD) && AFF_FLAGGED(victim, AFF_FIRESHIELD)) ||
+                 (AFF_FLAGGED(ch, AFF_THISTLECOAT) && AFF_FLAGGED(victim, AFF_THISTLECOAT)) ||
+                 (AFF_FLAGGED(ch, AFF_WINDWALL) && AFF_FLAGGED(victim, AFF_WINDWALL))) {
+            act("Sua barreira mágica anula a barreira de $N!", FALSE, ch, 0, victim, TO_CHAR);
+            act("A barreira mágica de $n anula sua barreira!", FALSE, ch, 0, victim, TO_VICT);
+            act("As barreiras mágicas de $n e $N se anulam mutuamente!", FALSE, ch, 0, victim, TO_NOTVICT);
+        }
     }
     /* check if the victim has a hitprcnt trigger */
     hitprcnt_mtrigger(victim);
@@ -1702,8 +1744,24 @@ void perform_violence(void)
 
         for (loop_attacks = 0;
              loop_attacks < num_of_attacks && FIGHTING(ch) && !MOB_FLAGGED(FIGHTING(ch), MOB_NOTDEADYET);
-             loop_attacks++)
+             loop_attacks++) {
             hit(ch, FIGHTING(ch), TYPE_UNDEFINED);
+
+            /* Check if the attacker died from counter-attack (e.g., FIRESHIELD) */
+            if (IS_NPC(ch)) {
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
+                    break;
+            } else {
+                if (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
+                    break;
+            }
+        }
+
+        /* Check if ch is still valid before calling mob special */
+        if (IS_NPC(ch) && (MOB_FLAGGED(ch, MOB_NOTDEADYET) || GET_POS(ch) <= POS_DEAD))
+            continue;
+        if (!IS_NPC(ch) && (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD))
+            continue;
 
         if (MOB_FLAGGED(ch, MOB_SPEC) && GET_MOB_SPEC(ch) && !MOB_FLAGGED(ch, MOB_NOTDEADYET)) {
             char actbuf[MAX_INPUT_LENGTH] = "";
