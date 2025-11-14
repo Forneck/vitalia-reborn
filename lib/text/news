@@ -8,117 +8,117 @@
 @n
 @C-@G=@Y>@W Outubro/Novembro de 2025 @C@Y<@G=@C-@n
 
-   @RCorreções Críticas de Estabilidade@n
-   Corrigido SIGSEGV no @Yhit()@n quando magias de contra-ataque matam o atacante (PR #515).
-   Implementado sistema de interação pedra-papel-tesoura para magias de contra-ataque (PR #515).
-   Corrigido SIGSEGV no @Ydo_flee()@n por acesso inválido a ponteiros de sala/personagem (PR #513).
-   Corrigido travamento no comando @YAWAY@n por falta de terminador de string (PR #503).
-   Corrigido segfault no @Ydeath_cry()@n por acesso inválido à sala (PR #469).
-   Corrigido SIGSEGV no @Y__strcasecmp_l_avx@n por falha não verificada do setlocale (PR #448).
-   Corrigido SIGSEGV no mob looting causado por condição de corrida TOCTOU (PR #436).
-   Corrigido NULL pointer no @Yhandle_obj@n durante recuperação de crash (PR #420).
-   Corrigido segfault no carregamento de objetos por ordem incorreta de posição (PR #416).
-   Corrigido overflow em buffer no @Yspedit@n causando segmentation fault (PR #402).
+   @RCorreções de Bugs e Estabilidade@n
+   Corrigido travamento em combate quando magias de contra-ataque matam o atacante.
+   Implementado sistema de interação pedra-papel-tesoura para magias de contra-ataque.
+   Corrigido travamento ao tentar fugir durante combate.
+   Corrigido travamento no comando @YAWAY@n.
+   Corrigido travamento quando personagens morrem em certas situações.
+   Corrigido problema de comparação de texto que causava travamentos.
+   Corrigido travamento quando mobs coletam itens de corpos.
+   Corrigido problema ao recuperar objetos após travamentos do servidor.
+   Corrigido travamento ao carregar objetos com ordem de posição incorreta.
+   Corrigido problema no @Yspedit@n que causava travamentos.
    
    @BSistema de Reputação@n
-   Novo sistema completo de reputação jogador-mob com bônus por classe (PR #384).
-   Sistema de reputação agora aparece no comando @Yscore@n e @Ystat@n (PR #464, #382).
-   Comandos @Yset@n para karma/reputação disponíveis para imortais (PR #382).
-   Reputação inicial corrigida para prevenir bloqueio de acesso a lojas (PR #386).
-   Sistema de reputação para jogadores malignos com bônus em todas classes (PR #398).
-   Reputação de mobs agora aparece no comando @Ystat@n (PR #509).
+   Novo sistema completo de reputação jogador-mob com bônus por classe.
+   Sistema de reputação agora aparece no comando @Yscore@n e @Ystat@n.
+   Comandos @Yset@n para karma/reputação disponíveis para imortais.
+   Reputação inicial corrigida para prevenir bloqueio de acesso a lojas.
+   Sistema de reputação para jogadores malignos com bônus em todas classes.
+   Reputação de mobs agora aparece no comando @Ystat@n.
    
    @MSistema de Emoções para Mobs@n
-   Sistema completo de comportamento baseado em emoções para mobs (PR #501).
-   20 emoções rastreadas com indicadores visuais e memória aprimorada (PR #497).
-   Gatilhos emocionais para eventos ambientais, magias, quests e comércio (PR #499).
-   Perfis emocionais (agressivo, defensivo, equilibrado, sensível, confiante, ganancioso, leal) (PR #501).
-   Sistema EMOTION Fase 2 & 3 com configuração completa de parâmetros (PR #467).
-   Integração do sistema de emoções na aceitação de quests por mobs (PR #481).
-   Pass separado de heartbeat para comportamento emocional/emote com probabilidades configuráveis (PR #392).
-   Sistema de @Ysocials@n expandido para mobs usarem 102 emotes com categorias emocionais (PR #408).
-   Sistema de @Ysocials@n mapeado: TODOS os 490 socials em 25 categorias com respostas contextuais (PR #412, #483).
-   Configuração de emoções agora disponível em @YCEDIT@n com presets (Mercantil, Eremita, Leal) (PR #501).
-   Perfil emocional agora aparece em @YMEDIT@n e @YSTAT@n com exibição nomeada (PR #501).
+   Sistema completo de comportamento baseado em emoções para mobs.
+   20 emoções rastreadas com indicadores visuais e memória aprimorada.
+   Gatilhos emocionais para eventos ambientais, magias, quests e comércio.
+   Perfis emocionais (agressivo, defensivo, equilibrado, sensível, confiante, ganancioso, leal).
+   Sistema de emoções expandido com configuração completa de parâmetros.
+   Integração do sistema de emoções na aceitação de quests por mobs.
+   Sistema de comportamento emocional e emotes com probabilidades configuráveis.
+   Sistema de @Ysocials@n expandido para mobs usarem 102 emotes com categorias emocionais.
+   Sistema de @Ysocials@n mapeado: TODOS os 490 socials em 25 categorias com respostas contextuais.
+   Configuração de emoções agora disponível em @YCEDIT@n com presets (Mercantil, Eremita, Leal).
+   Perfil emocional agora aparece em @YMEDIT@n e @YSTAT@n com exibição nomeada.
    
    @GSistema de Quests@n
-   Sistema de pedras mágicas para kill mob quests com prevenção de crash e melhor UX (PR #479).
-   Quests agora falham ao fazer logout (PR #479).
-   Completamento de bounty quest e rastreamento específico de instâncias de mob (PR #372).
-   Comando @Yquest list@n corrigido para questmasters sem quests atribuídos (PR #491).
-   Bug no @Yquest list@n corrigido com prompt de confirmação adicionado (PR #380).
-   Requisitos de nível de quest corrigidos para mobs acima do nível 100 (PR #487).
-   Acumulação de pedras mágicas e problemas de lag no sistema de kill quest corrigidos (PR #485).
-   Quests @YMOB_KILL@n e @YMOB_KILL_BOUNTY@n desabilitados junto com geração de pedras mágicas (PR #505).
+   Sistema de pedras mágicas para kill mob quests com prevenção de travamentos.
+   Quests agora falham ao fazer logout.
+   Sistema de bounty quest com rastreamento de instâncias de mobs.
+   Comando @Yquest list@n corrigido para questmasters sem quests atribuídos.
+   Bug no @Yquest list@n corrigido com prompt de confirmação adicionado.
+   Requisitos de nível de quest corrigidos para mobs acima do nível 100.
+   Acumulação de pedras mágicas e problemas de lag no sistema de kill quest corrigidos.
+   Quests @YMOB_KILL@n e @YMOB_KILL_BOUNTY@n desabilitados junto com geração de pedras mágicas.
    
    @YSistema de Rebegin@n
-   Lógica de seleção de classe no @Yrebegin@n corrigida para permitir reseleção (PR #507).
-   Remoção O(n²) de affects no rebegin corrigida e bugs de was_class/skill (PR #404).
-   Custo de mana de magias e habilidades retidas no rebegin corrigidos (PR #442).
-   Habilidades do remort agora são mantidas corretamente (commits diretos).
+   Lógica de seleção de classe no @Yrebegin@n corrigida para permitir reseleção.
+   Sistema de remoção de efeitos no rebegin corrigido e otimizado.
+   Custo de mana de magias e habilidades retidas no rebegin corrigidos.
+   Habilidades do remort agora são mantidas corretamente.
    
    @CSistema de Magias e Combate@n
-   Sistema de sílabas expandido com mecânicas de modificadores para voice casting (PR #396).
-   Novo comando @Ysyllables@n e descoberta de variantes de magias (PR #394).
-   Suporte no @Yspedit@n para campos de variantes de magias com sistema de pré-requisitos (PR #400).
-   Magias @YMAG_MANUAL@n agora exibem mensagens após conjuração (PR #388).
-   Recompensas de experiência adicionadas para magias sem dano (PR #471).
-   Overflow de inteiro em magias de affect acumulativo corrigido (PR #473).
-   Exploit de curse/remove curse limitado para prevenir escalonamento infinito de dano (PR #410).
-   Cálculo de custo de mana de magias corrigido (PR #442).
+   Sistema de sílabas expandido com mecânicas de modificadores para voice casting.
+   Novo comando @Ysyllables@n e descoberta de variantes de magias.
+   Suporte no @Yspedit@n para campos de variantes de magias com sistema de pré-requisitos.
+   Magias manuais agora exibem mensagens após conjuração.
+   Recompensas de experiência adicionadas para magias sem dano.
+   Problema de acúmulo excessivo de efeitos mágicos corrigido.
+   Exploit de curse/remove curse limitado para prevenir dano infinito.
+   Cálculo de custo de mana de magias corrigido.
    
    @RLojas e Comércio@n
-   Comerciantes oferecendo 0 ouro corrigido devido a arredondamento de cálculo (PR #424).
-   Arredondamento de preços de loja e lógica de saque/depósito bancário corrigidos (PR #430).
-   Mensagem de compra mostrando 0 moedas quando ocorrem depósitos automáticos corrigida (PR #434).
-   Transações de comerciantes padronizando para 1 moeda para itens sem valor corrigidas (PR #444).
-   Cálculo de @Ysell_price@n retornando 0 por erros e truncamento de inteiro corrigido (PR #450).
-   Parsing de float no @Ysedit@n corrompido pela locale pt_BR corrigido (PR #454).
+   Comerciantes oferecendo 0 ouro corrigido.
+   Arredondamento de preços de loja e lógica de saque/depósito bancário corrigidos.
+   Mensagem de compra mostrando 0 moedas quando ocorrem depósitos automáticos corrigida.
+   Transações de comerciantes padronizando para 1 moeda para itens sem valor corrigidas.
+   Cálculo de preços de venda corrigido.
+   Parsing de valores monetários no @Ysedit@n corrompido pela locale pt_BR corrigido.
    
    @WCidades e Ambientes@n
-   Nova cidade natal: @YBhogavati@n (cidade natal 4) adicionada (PR #493).
-   Bug da sala de doação 0 corrigido (PR #493).
-   Sistema de respiração implementado para salas subaquáticas e de alta altitude (PR #462).
-   Umidade do clima corrigida para prevenir valores negativos em climas desérticos (PR #511).
+   Nova cidade natal: @YBhogavati@n (cidade natal 4) adicionada.
+   Bug da sala de doação 0 corrigido.
+   Sistema de respiração implementado para salas subaquáticas e de alta altitude.
+   Umidade do clima corrigida para prevenir valores negativos em climas desérticos.
    
    @BHabilidades e Classes@n
-   Nova habilidade @Ypeek@n para Ladrões visualizarem inventário do alvo (PR #426).
-   Habilidade @Ynighthammer@n corrigida para usar estado natural da noite (PR #428).
-   Status do @Ynighthammer@n adicionado ao comando @Yscore@n (PR #432).
-   Custo de movimento do comando @Yshoot@n reduzido de 5 para 2 (PR #406).
+   Nova habilidade @Ypeek@n para Ladrões visualizarem inventário do alvo.
+   Habilidade @Ynighthammer@n corrigida para usar estado natural da noite.
+   Status do @Ynighthammer@n adicionado ao comando @Yscore@n.
+   Custo de movimento do comando @Yshoot@n reduzido de 5 para 2.
    
    @MSistema de Interface@n
-   Preferências @Yviewdamage@n e @Yshowemotions@n movidas para menu principal (PR #460).
-   Flag @YPRF_VIEWDAMAGE@n faltando adicionado ao array preference_bits (PR #446).
-   Barra de progresso de XP no comando @Yscore@n corrigida (PR #464).
-   Sistema de respiração (@Ybreath@n) exibido no @Yscore@n corrigido (PR #489).
-   Sangramento de cores em tags de status, exibição de equipamento e saída de comandos corrigido (PR #422).
+   Preferências @Yviewdamage@n e @Yshowemotions@n movidas para menu principal.
+   Preferência de visualização de dano corrigida.
+   Barra de progresso de XP no comando @Yscore@n corrigida.
+   Sistema de respiração exibido no @Yscore@n corrigido.
+   Sangramento de cores em tags de status, exibição de equipamento e saída de comandos corrigido.
    
    @YSistema de Objetos@n
-   Itens @YHANDS@n equipando no slot de @YWRIST@n corrigido (PR #452).
-   Persistência de objetos de casas com rastreamento recursivo de contêineres corrigido (PR #475).
-   Declaração implícita de @Yhas_scuba@n corrigida (PR #489).
+   Itens @YHANDS@n equipando no slot de @YWRIST@n corrigido.
+   Persistência de objetos de casas com rastreamento recursivo de contêineres corrigido.
+   Sistema de equipamento de mergulho corrigido.
    
    @RSistema de Comunicação@n
-   Sistema de correio com data embaralhada corrigido devido a formato de locale incorreto (PR #414).
-   Erros de digitação em português no comando @Ypeek@n corrigidos (PR #432).
+   Sistema de correio com data embaralhada corrigido.
+   Erros de digitação em português no comando @Ypeek@n corrigidos.
    
    @GSistema de Mobs com IA@n
-   Mobs encantados agora seguem corretamente seus mestres (PR #440).
-   Código @Yfollow_tendency@n adicionado ao sistema de genes de mobs (commits diretos).
-   Mobs inteligentes com chaves podem abrir portas automaticamente (mencionado em outubro).
+   Mobs encantados agora seguem corretamente seus mestres.
+   Código @Yfollow_tendency@n adicionado ao sistema de genes de mobs.
+   Mobs inteligentes com chaves podem abrir portas automaticamente.
    
    @CEditor de Áreas e Ferramentas@n
-   Códigos possessivos em português para objetos adicionados (PR #378).
-   Códigos de gênero em português e documentação abrangente do @YAEDIT@n adicionados (PR #376).
-   Exibição de @Ystoneskin@n no score corrigida para atualizar conforme duração diminui (PR #374).
-   Casa de leilão Belchior com vnum de sala correto (3150→3092) (PR #438).
+   Códigos possessivos em português para objetos adicionados.
+   Códigos de gênero em português e documentação abrangente do @YAEDIT@n adicionados.
+   Exibição de @Ystoneskin@n no score corrigida para atualizar conforme duração diminui.
+   Casa de leilão Belchior com sala correta.
    
    @WOutras Melhorias@n
-   Atualização de triggers do mundo (PR #465, #348).
-   Múltiplas correções de typos e pequenos ajustes em Rangers, portais e corpos (commits diretos).
-   Sistema de quests para mobs não aceita mais quests para reduzir lag (commits diretos).
-   Coleta de recursos desabilitada para mobs para reduzir lag (commits diretos).
+   Atualização de triggers do mundo.
+   Múltiplas correções de typos e pequenos ajustes em Rangers, portais e corpos.
+   Sistema de quests para mobs não aceita mais quests para reduzir lag.
+   Coleta de recursos desabilitada para mobs para reduzir lag.
 
 @C-@G=@Y>@W Outubro de 2025 @C@Y<@G=@C-@n
 
