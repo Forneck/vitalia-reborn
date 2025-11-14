@@ -979,7 +979,11 @@ static void do_stat_character(struct char_data *ch, struct char_data *k)
     if (!IS_NPC(k)) {
         send_to_char(ch, "Hometown: %d\r\n", GET_ROOM_VNUM(GET_HOMETOWN(k)));
         send_to_char(ch, "Karma: %'d, Reputation: %d\r\n", GET_KARMA(k), GET_REPUTATION(k));
-    } else if (IS_MOB(k) && k->ai_data && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+    } else if (IS_MOB(k)) {
+        /* Display mob reputation */
+        send_to_char(ch, "Reputation: %d\r\n", GET_REPUTATION(k));
+    }
+    if (IS_MOB(k) && k->ai_data && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
         /* Display mob emotions when experimental feature is enabled */
         send_to_char(ch, "%sEmotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
         send_to_char(ch, "  Basic: Fear[%s%d%s] Anger[%s%d%s] Happiness[%s%d%s] Sadness[%s%d%s]\r\n", CCCYN(ch, C_NRM),
