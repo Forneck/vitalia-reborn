@@ -1711,8 +1711,24 @@ void perform_violence(void)
 
         for (loop_attacks = 0;
              loop_attacks < num_of_attacks && FIGHTING(ch) && !MOB_FLAGGED(FIGHTING(ch), MOB_NOTDEADYET);
-             loop_attacks++)
+             loop_attacks++) {
             hit(ch, FIGHTING(ch), TYPE_UNDEFINED);
+
+            /* Check if the attacker died from counter-attack (e.g., FIRESHIELD) */
+            if (IS_NPC(ch)) {
+                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
+                    break;
+            } else {
+                if (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD)
+                    break;
+            }
+        }
+
+        /* Check if ch is still valid before calling mob special */
+        if (IS_NPC(ch) && (MOB_FLAGGED(ch, MOB_NOTDEADYET) || GET_POS(ch) <= POS_DEAD))
+            continue;
+        if (!IS_NPC(ch) && (PLR_FLAGGED(ch, PLR_NOTDEADYET) || GET_POS(ch) <= POS_DEAD))
+            continue;
 
         if (MOB_FLAGGED(ch, MOB_SPEC) && GET_MOB_SPEC(ch) && !MOB_FLAGGED(ch, MOB_NOTDEADYET)) {
             char actbuf[MAX_INPUT_LENGTH] = "";
