@@ -38,14 +38,14 @@ const char *aq_flags[] = {"REPEATABLE", "MOB_POSTED", "\n"};
  *--------------------------------------------------------------------------*/
 static int cmd_tell;
 
-static const char *quest_cmd[] = {"list", "history", "join", "leave", "progress", "status", "remove", "\n"};
+static const char *quest_cmd[] = {"list", "history", "join", "leave", "progress", "status", "remove", "clear", "\n"};
 
 static const char *quest_mort_usage = "Uso: quest list | history | progress | join <nn> | leave";
 
 static const char *quest_imm_usage =
     "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum> confirm";
 static const char *quest_god_usage =
-    "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum> confirm";
+    "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum> confirm | clear <player>";
 
 /*--------------------------------------------------------------------------*/
 /* Utility Functions                                                        */
@@ -1498,6 +1498,62 @@ static void quest_stat(struct char_data *ch, char *argument)
         send_to_char(ch, " [\ty%5d\tn] \tc%s\tn\r\n", QST_NEXT(rnum), QST_DESC(real_quest(QST_NEXT(rnum))));
 }
 
+/* Clear a player's current quest (GOD+ command) */
+static void quest_clear(struct char_data *ch, char *argument)
+{
+    struct char_data *vict;
+    qst_rnum rnum;
+    char arg[MAX_INPUT_LENGTH];
+
+    if (GET_LEVEL(ch) < LVL_GOD) {
+        send_to_char(ch, "You must be at least level GOD to clear player quests.\r\n");
+        return;
+    }
+
+    one_argument(argument, arg);
+
+    if (!*arg) {
+        send_to_char(ch, "Uso: quest clear <player>\r\n");
+        return;
+    }
+
+    /* Find the player */
+    if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_WORLD))) {
+        send_to_char(ch, "Não há ninguém com esse nome.\r\n");
+        return;
+    }
+
+    /* Don't allow clearing NPCs' quests */
+    if (IS_NPC(vict)) {
+        send_to_char(ch, "Você não pode limpar a busca de um mob.\r\n");
+        return;
+    }
+
+    /* Check if player has an active quest */
+    if (GET_QUEST(vict) == NOTHING) {
+        send_to_char(ch, "%s não tem nenhuma busca ativa.\r\n", GET_NAME(vict));
+        return;
+    }
+
+    /* Get quest info before clearing */
+    rnum = real_quest(GET_QUEST(vict));
+    if (rnum != NOTHING) {
+        send_to_char(ch, "Limpando busca de %s: [\ty%d\tn] \tc%s\tn\r\n", GET_NAME(vict), GET_QUEST(vict),
+                     QST_NAME(rnum));
+        send_to_char(vict, "Sua busca foi cancelada por um imortal.\r\n");
+    } else {
+        send_to_char(ch, "Limpando busca de %s (busca inválida vnum %d).\r\n", GET_NAME(vict), GET_QUEST(vict));
+        send_to_char(vict, "Sua busca foi cancelada por um imortal.\r\n");
+    }
+
+    /* Clear the quest without penalty */
+    clear_quest(vict);
+    save_char(vict);
+
+    send_to_char(ch, "\tGBusca limpa com sucesso.\tn\r\n");
+    mudlog(NRM, LVL_GOD, TRUE, "(GC) %s cleared %s's quest.", GET_NAME(ch), GET_NAME(vict));
+}
+
 static void quest_remove(struct char_data *ch, char *argument)
 {
     qst_rnum rnum;
@@ -1613,6 +1669,12 @@ ACMD(do_quest)
                     send_to_char(ch, "%s\r\n", usage_msg);
                 else
                     quest_remove(ch, arg2);
+                break;
+            case SCMD_QUEST_CLEAR:
+                if (GET_LEVEL(ch) < LVL_GOD)
+                    send_to_char(ch, "%s\r\n", usage_msg);
+                else
+                    quest_clear(ch, arg2);
                 break;
             default: /* Whe should never get here, but... */
                 send_to_char(ch, "%s\r\n", usage_msg);
