@@ -3720,9 +3720,6 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             if (!vict->ai_data) {
                 CREATE(vict->ai_data, struct mob_ai_data, 1);
                 memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
-                vict->ai_data->goal_destination = NOWHERE;
-                vict->ai_data->goal_item_vnum = NOTHING;
-                vict->ai_data->goal_target_mob_rnum = NOBODY;
                 init_mob_ai_data(vict);
             }
             vict->ai_data->current_goal = RANGE(0, 9);
@@ -3735,9 +3732,6 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             if (!vict->ai_data) {
                 CREATE(vict->ai_data, struct mob_ai_data, 1);
                 memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
-                vict->ai_data->goal_destination = NOWHERE;
-                vict->ai_data->goal_item_vnum = NOTHING;
-                vict->ai_data->goal_target_mob_rnum = NOBODY;
                 init_mob_ai_data(vict);
             }
             rnum = real_room(value);
@@ -3755,9 +3749,6 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             if (!vict->ai_data) {
                 CREATE(vict->ai_data, struct mob_ai_data, 1);
                 memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
-                vict->ai_data->goal_destination = NOWHERE;
-                vict->ai_data->goal_item_vnum = NOTHING;
-                vict->ai_data->goal_target_mob_rnum = NOBODY;
                 init_mob_ai_data(vict);
             }
             vict->ai_data->goal_item_vnum = (value == -1) ? NOTHING : value;
@@ -3770,9 +3761,6 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             if (!vict->ai_data) {
                 CREATE(vict->ai_data, struct mob_ai_data, 1);
                 memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
-                vict->ai_data->goal_destination = NOWHERE;
-                vict->ai_data->goal_item_vnum = NOTHING;
-                vict->ai_data->goal_target_mob_rnum = NOBODY;
                 init_mob_ai_data(vict);
             }
             vict->ai_data->goal_target_mob_rnum = (value == -1) ? NOBODY : value;
@@ -3785,9 +3773,6 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
             if (!vict->ai_data) {
                 CREATE(vict->ai_data, struct mob_ai_data, 1);
                 memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
-                vict->ai_data->goal_destination = NOWHERE;
-                vict->ai_data->goal_item_vnum = NOTHING;
-                vict->ai_data->goal_target_mob_rnum = NOBODY;
                 init_mob_ai_data(vict);
             }
             vict->ai_data->goal_timer = RANGE(0, 10000);
@@ -3800,9 +3785,6 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
                 if (!vict->ai_data) {
                     CREATE(vict->ai_data, struct mob_ai_data, 1);
                     memset(vict->ai_data, 0, sizeof(struct mob_ai_data));
-                    vict->ai_data->goal_destination = NOWHERE;
-                    vict->ai_data->goal_item_vnum = NOTHING;
-                    vict->ai_data->goal_target_mob_rnum = NOBODY;
                     init_mob_ai_data(vict);
                 }
                 vict->ai_data->reputation = RANGE(0, 100);

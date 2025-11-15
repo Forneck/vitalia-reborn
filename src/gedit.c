@@ -107,9 +107,6 @@ static void gedit_setup(struct descriptor_data *d, struct char_data *mob)
     if (!mob->ai_data) {
         CREATE(mob->ai_data, struct mob_ai_data, 1);
         memset(mob->ai_data, 0, sizeof(struct mob_ai_data));
-        mob->ai_data->goal_destination = NOWHERE;
-        mob->ai_data->goal_item_vnum = NOTHING;
-        mob->ai_data->goal_target_mob_rnum = NOBODY;
         init_mob_ai_data(mob);
     }
 }
