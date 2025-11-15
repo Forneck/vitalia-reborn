@@ -259,10 +259,11 @@ const char *wear_bits[] = {"TAKE", "FINGER", "NECK",  "BODY",    "HEAD",   "LEGS
 /** Describes the extra flags applied to an item.
  * @pre Must be in the same order as the defines.
  * Must end array with a single newline. */
-const char *extra_bits[] = {"GLOW",      "HUM",         "NO_RENT",    "NO_DONATE",    "NO_INVIS",    "INVISIBLE",
-                            "MAGIC",     "NO_DROP",     "BLESS",      "ANTI_GOOD",    "ANTI_EVIL",   "ANTI_NEUTRAL",
-                            "ANTI_MAGE", "ANTI_CLERIC", "ANTI_THIEF", "ANTI_WARRIOR", "NO_SELL",     "TWO_HANDS",
-                            "POISONED",  "ANTI_DRUID",  "ANTI_BARD",  "QUEST_ITEM",   "ANTI_RANGER", "\n"};
+const char *extra_bits[] = {"GLOW",         "HUM",          "NO_RENT",     "NO_DONATE",   "NO_INVIS",
+                            "INVISIBLE",    "MAGIC",        "NO_DROP",     "BLESS",       "ANTI_GOOD",
+                            "ANTI_EVIL",    "ANTI_NEUTRAL", "ANTI_MAGE",   "ANTI_CLERIC", "ANTI_THIEF",
+                            "ANTI_WARRIOR", "NO_SELL",      "TWO_HANDS",   "POISONED",    "ANTI_DRUID",
+                            "ANTI_BARD",    "QUEST_ITEM",   "ANTI_RANGER", "NO_LOCATE",   "\n"};
 
 /** Describes the apply types.
  * @pre Must be in the same order as the defines.

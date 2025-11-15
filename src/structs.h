@@ -526,8 +526,9 @@
 #define ITEM_ANTI_BARD 20
 #define ITEM_QUEST 21 /**< Item is a quest item         */
 #define ITEM_ANTI_RANGER 22
+#define ITEM_NOLOCATE 23 /**< Item cannot be found by locate object spell */
 /** Total number of item flags */
-#define NUM_ITEM_FLAGS 23
+#define NUM_ITEM_FLAGS 24
 
 /* Modifier constants used with obj affects ('A' fields) */
 #define APPLY_NONE 0           /**< No effect			*/

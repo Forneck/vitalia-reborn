@@ -1046,6 +1046,24 @@ int ok_shop_room(int shop_nr, room_vnum room)
     return (FALSE);
 }
 
+/* Check if a room is used by any shop
+ * Returns TRUE if the room is used by at least one shop, FALSE otherwise */
+int is_shop_room(room_vnum room)
+{
+    int shop_nr;
+
+    /* Safety check */
+    if (!shop_index || top_shop < 0)
+        return (FALSE);
+
+    /* Check all shops to see if this room is used by any of them */
+    for (shop_nr = 0; shop_nr <= top_shop; shop_nr++) {
+        if (ok_shop_room(shop_nr, room))
+            return (TRUE);
+    }
+    return (FALSE);
+}
+
 SPECIAL(shop_keeper)
 {
     struct char_data *keeper = (struct char_data *)me;

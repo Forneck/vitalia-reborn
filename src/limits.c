@@ -662,9 +662,9 @@ void point_update(void)
             }
         }
 
-	else if (GET_OBJ_TYPE(j) == ITEM_PORTAL) {
-           GET_OBJ_TIMER(j)--;  
-	   if (GET_OBJ_TIMER(j) == 1) {
+        else if (GET_OBJ_TYPE(j) == ITEM_PORTAL) {
+            GET_OBJ_TIMER(j)--;
+            if (GET_OBJ_TIMER(j) == 1) {
                 if (j->in_room)
                     act("$p começa a desaparecer!", FALSE, 0, j, 0, TO_ROOM);
             } else if (GET_OBJ_TIMER(j) == 0) {
@@ -673,18 +673,28 @@ void point_update(void)
                 extract_obj(j);
             }
         }
+        /* Handle negative timers (NOLOCATE flag removal for quest items) */
+        else if (GET_OBJ_TIMER(j) < 0) {
+            GET_OBJ_TIMER(j)++;
+            if (GET_OBJ_TIMER(j) == 0) {
+                /* Timer expired - remove NOLOCATE flag but keep the object */
+                if (OBJ_FLAGGED(j, ITEM_NOLOCATE)) {
+                    REMOVE_BIT_AR(GET_OBJ_EXTRA(j), ITEM_NOLOCATE);
+                }
+            }
+        }
         /* If the timer is set, count it down and at 0, try the trigger note
            to .rej hand-patchers: make this last in your point-update() */
-        else if (GET_OBJ_TIMER(j) > 0  ) {
+        else if (GET_OBJ_TIMER(j) > 0) {
             GET_OBJ_TIMER(j)--;
             timer_otrigger(j);
-            if (!GET_OBJ_TIMER(j)){
+            if (!GET_OBJ_TIMER(j)) {
                 if (j->carried_by)
                     act("$p misteriosamente desaparece.", FALSE, j->carried_by, j, 0, TO_CHAR);
                 else if (j->in_room)
                     act("$p misteriosamente desaparece.", TRUE, 0, j, 0, TO_ROOM);
-	        extract_obj(j);
-	    }
+                extract_obj(j);
+            }
         }
     }
 

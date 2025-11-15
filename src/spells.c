@@ -303,6 +303,10 @@ ASPELL(spell_locate_object)
         if (!isname_obj(name, i->name))
             continue;
 
+        /* Skip items marked as NOLOCATE (quest reward items carried by mobs) */
+        if (OBJ_FLAGGED(i, ITEM_NOLOCATE))
+            continue;
+
         send_to_char(ch, "%c%s está", UPPER(*i->short_description), i->short_description + 1);
 
         if (i->carried_by)
