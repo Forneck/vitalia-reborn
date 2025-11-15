@@ -910,6 +910,8 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                     /* Returned directly to original requester - complete quest normally */
                     /* Mark item with NOLOCATE to prevent locate object exploit */
                     SET_BIT_AR(GET_OBJ_EXTRA(object), ITEM_NOLOCATE);
+                    /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
+                    GET_OBJ_TIMER(object) = -28;
                     generic_complete_quest(ch);
                 } else if (GET_MOB_VNUM(vict) == QST_MASTER(rnum)) {
                     /* Returned to questmaster - transfer to original requester if different */
@@ -932,6 +934,8 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
 
                             /* Mark item with NOLOCATE to prevent locate object exploit */
                             SET_BIT_AR(GET_OBJ_EXTRA(object), ITEM_NOLOCATE);
+                            /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
+                            GET_OBJ_TIMER(object) = -28;
 
                             obj_to_char(object, original_requester);
                             act("$n entrega $p para quem solicitou.", FALSE, vict, object, NULL, TO_ROOM);

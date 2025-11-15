@@ -2415,6 +2415,8 @@ obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty)
     /* Mark the selected reward item with NOLOCATE to prevent locate object exploit */
     if (best_obj) {
         SET_BIT_AR(GET_OBJ_EXTRA(best_obj), ITEM_NOLOCATE);
+        /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
+        GET_OBJ_TIMER(best_obj) = -28;
     }
 
     return best_obj ? GET_OBJ_VNUM(best_obj) : NOTHING;
