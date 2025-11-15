@@ -112,12 +112,8 @@ static void gedit_setup(struct descriptor_data *d, struct char_data *mob)
         init_mob_ai_data(mob);
     }
 
-    /* Ensure goal_obj is NULL to prevent accessing stale pointers.
-     * Even if ai_data already exists, goal_obj might point to an extracted object. */
-    if (mob->ai_data->goal_obj) {
-        /* Clear goal_obj if it points to something, as we can't verify it's still valid */
-        mob->ai_data->goal_obj = NULL;
-    }
+    /* Always clear goal_obj to prevent accessing stale pointers. */
+    mob->ai_data->goal_obj = NULL;
 }
 
 static void gedit_disp_menu(struct descriptor_data *d)
@@ -247,13 +243,20 @@ void gedit_parse(struct descriptor_data *d, char *arg)
             }
 
             /* When changing the goal, clear all goal-related fields to prevent
-             * accessing stale pointers or invalid values from previous goals */
+             * accessing stale pointers or invalid values from previous goals.
+             * Also clear original_* fields to avoid stale key collection context. */
             OLC_MOB(d)->ai_data->current_goal = number;
             OLC_MOB(d)->ai_data->goal_obj = NULL;
             OLC_MOB(d)->ai_data->goal_destination = NOWHERE;
             OLC_MOB(d)->ai_data->goal_target_mob_rnum = NOBODY;
             OLC_MOB(d)->ai_data->goal_item_vnum = NOTHING;
             OLC_MOB(d)->ai_data->goal_timer = 0;
+            /* Clear original_* fields as well */
+            OLC_MOB(d)->ai_data->original_goal = -1;
+            OLC_MOB(d)->ai_data->original_obj = NULL;
+            OLC_MOB(d)->ai_data->original_destination = NOWHERE;
+            OLC_MOB(d)->ai_data->original_target_mob = NOBODY;
+            OLC_MOB(d)->ai_data->original_item_vnum = NOTHING;
             OLC_VAL(d) = TRUE;
             write_to_output(d, "Goal set to: %s (%d)\r\n", goal_names[number], number);
             write_to_output(d, "Goal parameters cleared. Set new parameters if needed.\r\n");
