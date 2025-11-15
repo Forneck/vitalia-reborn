@@ -753,6 +753,8 @@ void generic_complete_quest(struct char_data *ch)
         if (QST_OBJ(rnum) && QST_OBJ(rnum) != NOTHING) {
             if (real_object(QST_OBJ(rnum)) != NOTHING) {
                 if ((new_obj = read_object((QST_OBJ(rnum)), VIRTUAL)) != NULL) {
+                    /* Remove NOLOCATE flag from reward item when giving it to player */
+                    REMOVE_BIT_AR(GET_OBJ_EXTRA(new_obj), ITEM_NOLOCATE);
                     obj_to_char(new_obj, ch);
                     send_to_char(ch, "Você foi presentead%s com %s%s pelos seus serviços.\r\n", OA(ch),
                                  GET_OBJ_SHORT(new_obj), CCNRM(ch, C_NRM));

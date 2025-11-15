@@ -2412,6 +2412,11 @@ obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty)
         }
     }
 
+    /* Mark the selected reward item with NOLOCATE to prevent locate object exploit */
+    if (best_obj) {
+        SET_BIT_AR(GET_OBJ_EXTRA(best_obj), ITEM_NOLOCATE);
+    }
+
     return best_obj ? GET_OBJ_VNUM(best_obj) : NOTHING;
 }
 
