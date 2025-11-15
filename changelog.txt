@@ -2,6 +2,18 @@ TbaMUD is currently being developed by The Builder Academy. If you need any
 help, find any bugs, or have ideas for improvement please stop by TBA at 
 telnet://tbamud.com:9091 or email rumble@tbamud.com --Rumble
 @
+[Nov 15 2024] - Vitalia Reborn Development
+  feature: Percentual Load System for Zone Resets
+    - Added percentage-based loading for mobs and objects in zone files
+    - Negative values in arg2 now represent percentage chance (e.g., -50 = 50% chance)
+    - Positive values maintain traditional behavior (absolute max count)
+    - Fully backward compatible with existing zone files
+    - Supports all load commands: M (mob), O (object), G (give), E (equip), P (put)
+    - Zone editor (zedit) displays "Chance: X%" for percentual loads
+    - Zone editor displays "Max: X" for traditional loads
+    - Enables dynamic content and rare item drops
+    - See docs/PERCENTUAL_LOAD.md for complete documentation
+@
 [Oct 30 2024] - Vitalia Reborn Development
   feature: Evil Player Reputation System
     - Added reputation routes (infamy) for evil players of all classes

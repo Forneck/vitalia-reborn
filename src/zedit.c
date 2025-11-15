@@ -465,9 +465,14 @@ static void zedit_disp_menu(struct descriptor_data *d)
         write_to_output(d, "%s%d - %s", nrm, counter++, yel);
         switch (MYCMD.command) {
             case 'M':
-                write_to_output(d, "%sLoad %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
-                                mob_proto[MYCMD.arg1].player.short_descr, cyn, mob_index[MYCMD.arg1].vnum, yel,
-                                MYCMD.arg2);
+                if (MYCMD.arg2 < 0)
+                    write_to_output(d, "%sLoad %s [%s%d%s], Chance : %d%%", MYCMD.if_flag ? " then " : "",
+                                    mob_proto[MYCMD.arg1].player.short_descr, cyn, mob_index[MYCMD.arg1].vnum, yel,
+                                    -MYCMD.arg2);
+                else
+                    write_to_output(d, "%sLoad %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
+                                    mob_proto[MYCMD.arg1].player.short_descr, cyn, mob_index[MYCMD.arg1].vnum, yel,
+                                    MYCMD.arg2);
                 break;
             case 'C':
                 write_to_output(d, "%sCheck %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
@@ -475,25 +480,46 @@ static void zedit_disp_menu(struct descriptor_data *d)
                                 MYCMD.arg1);
                 break;
             case 'G':
-                write_to_output(d, "%sGive it %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
-                                obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
-                                MYCMD.arg2);
+                if (MYCMD.arg2 < 0)
+                    write_to_output(d, "%sGive it %s [%s%d%s], Chance : %d%%", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    -MYCMD.arg2);
+                else
+                    write_to_output(d, "%sGive it %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    MYCMD.arg2);
                 break;
             case 'O':
-                write_to_output(d, "%sLoad %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
-                                obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
-                                MYCMD.arg2);
+                if (MYCMD.arg2 < 0)
+                    write_to_output(d, "%sLoad %s [%s%d%s], Chance : %d%%", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    -MYCMD.arg2);
+                else
+                    write_to_output(d, "%sLoad %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    MYCMD.arg2);
                 break;
             case 'E':
-                write_to_output(d, "%sEquip with %s [%s%d%s], %s, Max : %d", MYCMD.if_flag ? " then " : "",
-                                obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
-                                equipment_types[MYCMD.arg3], MYCMD.arg2);
+                if (MYCMD.arg2 < 0)
+                    write_to_output(d, "%sEquip with %s [%s%d%s], %s, Chance : %d%%", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    equipment_types[MYCMD.arg3], -MYCMD.arg2);
+                else
+                    write_to_output(d, "%sEquip with %s [%s%d%s], %s, Max : %d", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    equipment_types[MYCMD.arg3], MYCMD.arg2);
                 break;
             case 'P':
-                write_to_output(d, "%sPut %s [%s%d%s] in %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
-                                obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
-                                obj_proto[MYCMD.arg3].short_description, cyn, obj_index[MYCMD.arg3].vnum, yel,
-                                MYCMD.arg2);
+                if (MYCMD.arg2 < 0)
+                    write_to_output(d, "%sPut %s [%s%d%s] in %s [%s%d%s], Chance : %d%%", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    obj_proto[MYCMD.arg3].short_description, cyn, obj_index[MYCMD.arg3].vnum, yel,
+                                    -MYCMD.arg2);
+                else
+                    write_to_output(d, "%sPut %s [%s%d%s] in %s [%s%d%s], Max : %d", MYCMD.if_flag ? " then " : "",
+                                    obj_proto[MYCMD.arg1].short_description, cyn, obj_index[MYCMD.arg1].vnum, yel,
+                                    obj_proto[MYCMD.arg3].short_description, cyn, obj_index[MYCMD.arg3].vnum, yel,
+                                    MYCMD.arg2);
                 break;
             case 'R':
                 write_to_output(d, "%sRemove %s [%s%d%s] from room.", MYCMD.if_flag ? " then " : "",
