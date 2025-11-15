@@ -147,6 +147,7 @@ static void timeadd(struct timeval *sum, struct timeval *a, struct timeval *b);
 static void flush_queues(struct descriptor_data *d);
 static void nonblock(socket_t s);
 static int perform_subst(struct descriptor_data *t, char *orig, char *subst);
+static int is_valid_utf8_byte(struct descriptor_data *t, unsigned char byte, const char *next_bytes, int remaining);
 static void record_usage(void);
 static char *make_prompt(struct descriptor_data *point);
 static void check_idle_passwords(void);
@@ -2078,7 +2079,7 @@ static int process_input(struct descriptor_data *t)
                     } else
                         space_left++;
                 }
-            } else if (isascii(*ptr) && isprint(*ptr)) {
+            } else if (is_valid_utf8_byte(t, (unsigned char)*ptr, ptr + 1, nl_pos - ptr - 1)) {
                 if ((*(write_point++) = *ptr) == '$') { /* copy one character */
                     *(write_point++) = '$';             /* if it's a $, double it */
                     space_left -= 2;
@@ -2163,6 +2164,45 @@ static int process_input(struct descriptor_data *t)
     *write_point = '\0';
 
     return (1);
+}
+
+/* Helper function to check if UTF-8 is enabled for a descriptor and validate UTF-8 byte sequences */
+static int is_valid_utf8_byte(struct descriptor_data *t, unsigned char byte, const char *next_bytes, int remaining)
+{
+    /* If UTF-8 is not enabled or no protocol, use ASCII-only validation */
+    if (!t || !t->pProtocol || !t->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt) {
+        return (isascii(byte) && isprint(byte));
+    }
+
+    /* ASCII printable characters are always valid */
+    if (byte < 0x80) {
+        return (isascii(byte) && isprint(byte));
+    }
+
+    /* Check for valid UTF-8 multi-byte sequence start */
+    if ((byte & 0xE0) == 0xC0) {
+        /* 2-byte sequence (110xxxxx) */
+        if (remaining >= 1 && (next_bytes[0] & 0xC0) == 0x80) {
+            return 1; /* Valid 2-byte sequence start */
+        }
+    } else if ((byte & 0xF0) == 0xE0) {
+        /* 3-byte sequence (1110xxxx) */
+        if (remaining >= 2 && (next_bytes[0] & 0xC0) == 0x80 && (next_bytes[1] & 0xC0) == 0x80) {
+            return 1; /* Valid 3-byte sequence start */
+        }
+    } else if ((byte & 0xF8) == 0xF0) {
+        /* 4-byte sequence (11110xxx) */
+        if (remaining >= 3 && (next_bytes[0] & 0xC0) == 0x80 && (next_bytes[1] & 0xC0) == 0x80 &&
+            (next_bytes[2] & 0xC0) == 0x80) {
+            return 1; /* Valid 4-byte sequence start */
+        }
+    } else if ((byte & 0xC0) == 0x80) {
+        /* Continuation byte (10xxxxxx) - should not appear as first byte */
+        return 1; /* Accept continuation bytes within a sequence */
+    }
+
+    /* Invalid UTF-8 byte */
+    return 0;
 }
 
 /* Perform substitution for the '^..^' csh-esque syntax orig is the orig
