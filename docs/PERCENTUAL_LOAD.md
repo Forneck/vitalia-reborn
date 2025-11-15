@@ -79,7 +79,9 @@ This feature is **fully backward compatible** with existing zone files:
 
 - Minimum: -1 (1% chance)
 - Maximum: -100 (100% chance, always loads)
-- Values like -150 would give a 150% chance, but are capped at 100% effective chance
+- Values less than -100 (e.g., -150) will always load, as they're effectively 100% chance (any value greater than 100 will always succeed)
+
+**Note:** A value of `0` (or `-0`, which is just `0`) does *not* represent "0% chance" in the percentage system. Instead, it triggers the traditional max count behavior, which means "don't load unless there are 0 instances"—effectively never loading. If you want a command to never load, use the traditional system with `0` as the max count. There is no "0% chance" in the percentual system; the minimum is `-1` (1% chance).
 
 ## Benefits
 
