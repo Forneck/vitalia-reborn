@@ -91,7 +91,7 @@ ACMD(do_oasis_gedit)
 
     /* Display the OLC messages to the players in the same room as the
        builder and also log it. */
-    act("$n começa a editar as metas de $N.", TRUE, d->character, 0, mob, TO_ROOM);
+    act("$n starts editing goals for $N.", TRUE, d->character, 0, mob, TO_ROOM);
     SET_BIT_AR(PLR_FLAGS(ch), PLR_WRITING);
 
     mudlog(CMP, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE, "OLC: %s starts editing goals for %s (%d)", GET_NAME(ch),
@@ -102,6 +102,7 @@ static void gedit_setup(struct descriptor_data *d, struct char_data *mob)
 {
     /* Store reference to the actual mob instance */
     OLC_MOB(d) = mob;
+    OLC_NUM(d) = GET_MOB_VNUM(mob);
     OLC_VAL(d) = FALSE; /* Has changed flag */
 
     /* Create AI data if it doesn't exist */
