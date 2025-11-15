@@ -2570,6 +2570,11 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->num_temp_quests = 0;
     mob->ai_data->max_temp_quests = 0;
 
+    /* Initialize reputation to 39 to allow mobs to participate in trading and quests.
+     * This value is just below the 40 threshold where quest reward penalties apply,
+     * and allows mobs to gain reputation through normal activities. */
+    mob->ai_data->reputation = 39;
+
     /* Set default values for genetics if not already set from mob files.
      * This ensures mobs have reasonable default behavior even without explicit genetics.
      * These defaults can be overridden by GenFollow, GenRoam, etc. in mob files. */

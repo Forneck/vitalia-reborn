@@ -110,6 +110,7 @@ static void gedit_setup(struct descriptor_data *d, struct char_data *mob)
         mob->ai_data->goal_destination = NOWHERE;
         mob->ai_data->goal_item_vnum = NOTHING;
         mob->ai_data->goal_target_mob_rnum = NOBODY;
+        init_mob_ai_data(mob);
     }
 }
 

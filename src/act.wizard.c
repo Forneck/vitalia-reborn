@@ -3723,6 +3723,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
                 vict->ai_data->goal_destination = NOWHERE;
                 vict->ai_data->goal_item_vnum = NOTHING;
                 vict->ai_data->goal_target_mob_rnum = NOBODY;
+                init_mob_ai_data(vict);
             }
             vict->ai_data->current_goal = RANGE(0, 9);
             break;
@@ -3737,6 +3738,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
                 vict->ai_data->goal_destination = NOWHERE;
                 vict->ai_data->goal_item_vnum = NOTHING;
                 vict->ai_data->goal_target_mob_rnum = NOBODY;
+                init_mob_ai_data(vict);
             }
             rnum = real_room(value);
             if (rnum == NOWHERE && value != -1) {
@@ -3756,6 +3758,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
                 vict->ai_data->goal_destination = NOWHERE;
                 vict->ai_data->goal_item_vnum = NOTHING;
                 vict->ai_data->goal_target_mob_rnum = NOBODY;
+                init_mob_ai_data(vict);
             }
             vict->ai_data->goal_item_vnum = (value == -1) ? NOTHING : value;
             break;
@@ -3770,6 +3773,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
                 vict->ai_data->goal_destination = NOWHERE;
                 vict->ai_data->goal_item_vnum = NOTHING;
                 vict->ai_data->goal_target_mob_rnum = NOBODY;
+                init_mob_ai_data(vict);
             }
             vict->ai_data->goal_target_mob_rnum = (value == -1) ? NOBODY : value;
             break;
@@ -3784,6 +3788,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
                 vict->ai_data->goal_destination = NOWHERE;
                 vict->ai_data->goal_item_vnum = NOTHING;
                 vict->ai_data->goal_target_mob_rnum = NOBODY;
+                init_mob_ai_data(vict);
             }
             vict->ai_data->goal_timer = RANGE(0, 10000);
             break;
@@ -3798,6 +3803,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
                     vict->ai_data->goal_destination = NOWHERE;
                     vict->ai_data->goal_item_vnum = NOTHING;
                     vict->ai_data->goal_target_mob_rnum = NOBODY;
+                    init_mob_ai_data(vict);
                 }
                 vict->ai_data->reputation = RANGE(0, 100);
             } else {
