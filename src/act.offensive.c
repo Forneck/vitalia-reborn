@@ -1238,13 +1238,18 @@ ACMD(do_shoot)
         return;
     }
 
-    /* Check movement cost */
+    /* Check movement cost - always use Ranger's base cost, then apply multiplier for other classes */
     spell = get_spell_by_vnum(SKILL_BOWS);
     if (spell && GET_LEVEL(ch) < LVL_IMMORT) {
-        num = get_spell_class(spell, GET_CLASS(ch));
+        /* Get the Ranger's spell assignment for base cost calculation */
+        num = get_spell_class(spell, CLASS_RANGER);
         if (num != -1 && spell->assign[num].num_mana) {
             move_cost =
                 formula_interpreter(ch, NULL, SKILL_BOWS, TRUE, spell->assign[num].num_mana, GET_LEVEL(ch), &rts_code);
+            /* Rangers are skilled with bows, other classes need 2x movement cost */
+            if (GET_CLASS(ch) != CLASS_RANGER) {
+                move_cost *= 2;
+            }
             if (GET_MOVE(ch) < move_cost) {
                 send_to_char(ch, "Você está muito cansado para atirar.\r\n");
                 return;
