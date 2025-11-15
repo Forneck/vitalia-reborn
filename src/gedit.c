@@ -18,6 +18,7 @@
 #include "constants.h"
 #include "screen.h"
 #include "modify.h"
+#include "quest.h"
 
 /* local functions */
 static void gedit_setup(struct descriptor_data *d, struct char_data *mob);
