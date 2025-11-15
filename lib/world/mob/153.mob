@@ -1,13 +1,13 @@
 #15300
-komainu jade branco guardiao~
+komainu jade branco guardiao leao~
 um komainu de jade branco~
-Um majestoso leao-cao de jade puro observa com olhos dourados incandescentes
+Um majestoso leao-cão de jade puro o observa com olhos dourados incandescentes
 ~
    Este Komainu e uma manifestacao da protecao divina durante o dia.  Seu corpo
 de jade branco imaculado irradia calor reconfortante.  Seus olhos brilham como
-brasas douradas, vendo atraves de mentiras.  Sua juba graciosamente entalhada
-parece capaz de cortar como lamina.  Quando voce se aproxima, sente protecao
-absoluta - a sensacao de estar seguro sob olhar vigilante.  Sua presenca
+brasas douradas, vendo através de mentiras.  Sua juba graciosamente entalhada
+parece capaz de cortar como lâmina.  Quando você se aproxima, sente proteção
+absoluta - a sensação de estar seguro sob olhar vigilante.  Sua presença
 tranquiliza durante o amanhecer.
 ~
 11005962 0 0 0 134293880 8 0 0 500 E
@@ -26,18 +26,21 @@ SavingRod: 21
 SavingPetri: 21
 SavingBreath: 21
 SavingSpell: 21
+GenBrave: 4
+GenFollow: 18
 E
+T 15301
 #15301
-kitsune obsidiana noite~
+kitsune obsidiana raposa~
 uma kitsune de obsidiana~
-Uma elegante raposa de nove caudas feita de obsidiana polida observa voce com olhos prateados
+Uma elegante raposa de nove caudas feita de obsidiana polida observa você
 ~
-   Esta Kitsune e manifestacao da protecao divina durante a noite.  Seu corpo de
-obsidiana negra polida e frio mas nao desconfortavel.  Nove caudas de nevoa
-prateada flutuam atras dela, movendo-se independentemente com graca
-sobrenatural.  Seus olhos como luas crescentes veem atraves de ilusoes e
-mentiras.  Quando voce se aproxima, sente julgamento - sendo avaliado por algo
-muito mais antigo e sabio.  Sua presenca intimida mas nao ameaca
+   Esta Kitsune e manifestação da proteção divina durante a noite.  Seu corpo de
+obsidiana negra polida é frio mas não desconfortável.  Nove caudas de névoa
+prateada flutuam atrás dela, movendo-se independentemente com graça
+sobrenatural.  Seus olhos como luas crescentes vêem através de ilusões e
+mentiras.  Quando você se aproxima, sente estar sendo avaliado por algo
+muito mais antigo e sábio.  Sua presença intimida mas não ameaça
 ~
 11008066 0 0 0 134556024 0 0 0 0 E
 85 -8 -41 17d17+850 14d14+14
@@ -55,59 +58,363 @@ SavingRod: 21
 SavingPetri: 21
 SavingBreath: 21
 SavingSpell: 21
+GenBrave: 4
+GenFollow: 15
 E
-T 15302
+T 15301
 #15302
-coelho adulto macho branco~
-um coelho adulto de pelagem branca~
-Um coelho adulto de pelagem branca imaculada observa voce com olhos dourados atentos.
+ofuda animado talisma papel~
+um ofuda animado~
+Uma folha de papel ofuda dourado-prateado flutua levemente no ar
 ~
-   Este coelho nao e comum.  Seu corpo e robusto e saudavel, com pelagem branca
-que brilha fracamente como se fosse tecida com luz lunar solidificada.  Suas
-orelhas, longas e eretas, captam cada som do ambiente com precisao sobrenatural.
-Seus olhos dourados irradiam uma inteligencia tranquila e observadora.  Quando
-se move, ha uma graa fluida em seus saltos que parece desafiar a gravidade.  A
-presenca deste coelho traz uma sensacao de calma e protecao.
+   O Ofuda é uma folha antiga de papel sagrado coberta de inscrições kanji que
+pulsam com energia mistica azul e dourada.  Seus caracteres fluem e mudam de
+forma conforme a magia ao redor muda, como se respondesse a cada fluxo de poder.
+A presença dele traz uma sensação de ordem, proteção e segurança absoluta.  
+Quando o examina, percebe que a folha nunca racha ou envelhece, mantendo uma
+vitalidade sobrenatural.
 ~
-3170304 0 0 0 0 0 0 0 0 E
-2 20 8 0d0+20 1d2+0
-20 400
-9 9 1
-E
-#15303
-coelha adulta femea prateada~
-uma coelha adulta de pelagem prateada~
-Uma coelha adulta de pelagem prateada repousa graciosamente.
-~
-   It looks unfinished.  Esta coelha possui uma beleza eterea que transcende o
-mundano.  Sua pelagem prateada reflete a luz de forma suave, criando um halo
-sutil ao seu redor.  Suas orelhas sao delicadas mas alertas, movendo-se
-constantemente para captar qualquer sinal de perigo ou paz.  Seus olhos, de um
-azul profundo como o cu do crepsculo, carregam uma sabedoria maternal e
-protetora.  Ela se move com cautela calculada, sempre consciente de sua prole
-proxima.  Sua presenca traz uma sensacao de serenidade e cuidado.
-~
-3170304 0 0 0 0 0 0 0 0 E
-2 20 8 0d0+20 1d2+0
-20 400
-9 9 2
-E
-#15304
-coelhinho filhote pequeno~
-um coelhinho filhote~
-Um coelhinho filhote salta alegremente, sua pelagem mesclada de branco e prata.
-~
-   Este pequeno filhote e a encarnacao da inocencia e alegria.  Sua pelagem e
-uma mistura encantadora de branco e prata, herdada de seus pais, ainda fofa e
-macia como nuvens.  Suas orelhas ainda sao pequenas e dobram levemente nas
-pontas.  Seus olhos, grandes e curiosos, brilham com um tom dourado-azulado,
-refletindo ambos os pais.  Ele salta com uma energia contagiante, explorando
-cada canto com entusiasmo infantil.  Sua presenca traz sorrisos involuntarios e
-um senso de esperanca renovada.
-~
-3170304 0 0 0 0 0 0 0 0 E
-1 20 9 0d0+10 1d2+0
-10 100
+3670016 0 0 0 8415488 0 0 0 1000 E
+100 -13 -50 20d20+1000 16d16+16
+1000 0
 9 9 0
+Int: 25
+Wis: 25
+SavingPara: 25
+SavingRod: 25
+SavingPetri: 25
+SavingBreath: 25
+SavingSpell: 25
+E
+T 15304
+#15303
+monge guardiao figura serena~
+um monge guardiao dos estandartes~
+Uma figura serena com vestes brancas e bordados dourados observa o pátio
+~
+   O monge é um espírito ancestral designado para proteger o Pátio.  Sua face
+calma, quase etérea, exala sabedoria e compaixão.  Ele caminha com passos
+pausados, conduzindo os peregrinos que buscam bênçãos ou orientação.  Suas
+mãos estão frequentemente unidas em prece ou segurando um bastão cerimonial,
+símbolo de equilíbrio e proteção.  Quando você o encara, sente um profundo
+respeito e a certeza de que está diante de uma entidade que transcende o tempo.
+~
+10739794 0 0 0 270712 0 0 0 1000 E
+80 -30 -38 16d16+800 13d13+30
+800 130000
+9 9 1
+BareHandAttack: 13
+Str: 18
+Dex: 18
+Int: 18
+Wis: 18
+Con: 18
+Cha: 18
+SavingPara: 20
+SavingRod: 20
+SavingPetri: 20
+SavingBreath: 20
+SavingSpell: 20
+GenEquip: 100
+GenBrave: 8
+GenFollow: 15
+GenHealing: 100
+E
+T 15301
+#15304
+tanuki astral espirituoso~
+um tanuki astral~
+Um tanuki astral esta aqui, dancando alegremente entre as fitas das oferendas.
+~
+   Este Tanuki Astral é um ser etéreo com névoa luminosa envolvendo seu corpo
+e olhos astutos.  Suas travessuras são suaves e misteriosas, protegendo as
+intenções dos peregrinos e recompensando os gentis com bênçãos inesperadas.
+~
+10739778 0 800 0 144443668 0 0 0 1000 E
+85 -30 -41 25d25+1050 14d14+30
+850 120000
+9 9 0
+BareHandAttack: 8
+Str: 22
+Dex: 20
+Int: 24
+Wis: 21
+Con: 21
+Cha: 25
+SavingPara: 21
+SavingRod: 21
+SavingPetri: 21
+SavingBreath: 21
+SavingSpell: 21
+E
+T 15306
+#15305
+espectro peregrino caminhante etereo~
+um espectro peregrino~
+Um espectro etéreo de um antigo peregrino flutua no caminho
+~
+   Este é o espírito de um antigo viajante que completou sua jornada de
+purificação inúmeras vezes.  Seu corpo translúcido brilha levemente,
+manifestando uma aura de paz encontrada.  Ele caminha lentamente pela Estrada
+das Lanternas, oferecendo bênçãos silenciosas aos novos peregrinos que por
+aqui passam.  Seus olhos são dois orbes de luz suave que irradiam compaixão
+infinita.  
+~
+10739778 0 800 0 10225940 0 0 0 1000 E
+85 -30 -41 25d25+1050 14d14+30
+850 120000
+9 9 0
+BareHandAttack: 8
+Str: 22
+Dex: 20
+Int: 24
+Wis: 21
+Con: 21
+Cha: 25
+SavingPara: 21
+SavingRod: 21
+SavingPetri: 21
+SavingBreath: 21
+SavingSpell: 21
+E
+#15306
+kappa guardiao ponte agua aquatico concha~
+um kappa guardiao~
+Um pequeno ser aquático com concha nas costas está vigiando aqui
+~
+   Este Kappa não é uma criatura malévola mas um guardião ancestral
+atribuído para proteger o rio sagrado.  Sua pele verde-musgo está marcada por
+séculos de devoção.  Seus olhos grandes e amarelos observam cada viajante que
+cruza a ponte, avaliando a pureza de suas intenções.
+~
+10738968 0 0 0 85532800 8 0 0 1000 E
+75 -28 -32 14d14+700 11d11+25
+700 120000
+9 9 0
+BareHandAttack: 13
+Str: 16
+Dex: 18
+Int: 15
+Wis: 17
+Con: 15
+Cha: 14
+SavingPara: 19
+SavingRod: 19
+SavingPetri: 19
+SavingBreath: 19
+SavingSpell: 19
+GenBrave: 5
+GenFollow: 10
+E
+#15307
+monge sombra meditacao antigo~
+um monge sombra~
+A silhueta de um monge antigo medita entre as pedras
+~
+   Esta é apenas a sombra etérea de um monge que alcançou iluminação neste
+jardim há séculos.  Sua forma sedentária iradia profunda paz.  Não interage
+mas sua presença inspira os viajantes a encontrar seu próprio caminho para a
+meditação.  Ocasionalmente, um leve sussurro de sabedoria parece ecoar de sua
+forma.
+~
+10737988 0 0 0 75571520 0 0 0 1000 E
+70 -25 -30 13d13+650 10d10+20
+650 115000
+9 9 0
+BareHandAttack: 10
+Str: 15
+Dex: 16
+Int: 18
+Wis: 20
+Con: 14
+Cha: 16
+SavingPara: 18
+SavingRod: 18
+SavingPetri: 18
+SavingBreath: 18
+SavingSpell: 18
+GenBrave: 4
+GenFollow: 8
+E
+#15308
+guerreiro ancestral estandarte antigo~
+um guerreiro ancestral~
+A forma etérea de um guerreiro antigo segura um estandarte
+~
+   Este é o espírito de um valoroso guerreiro que dedicou sua vida à
+proteção do caminho sagrado.  Sua forma translúcida brilha com uma aura de
+honra antiga.  Ele permanece sentinela no Pátio, segurando firmemente um dos
+estandartes.  Sua presença inspira coragem nos medrosos e humildade nos
+arrogantes.
+~
+10738000 0 0 0 27011328 0 0 0 1000 E
+82 -32 -38 16d16+800 13d13+32
+800 130000
+9 9 0
+BareHandAttack: 5
+Str: 19
+Dex: 17
+Int: 14
+Wis: 16
+Con: 18
+Cha: 17
+SavingPara: 21
+SavingRod: 21
+SavingPetri: 21
+SavingBreath: 21
+SavingSpell: 21
+GenBrave: 7
+GenFollow: 14
+E
+#15309
+anciao fantasma pegadas velho sabio~
+um ancião fantasmagórico~
+A imagem translúcida de um velho sábio caminha por aqui
+~
+   Este espectro é um mestre antigo que guiou inúmeros peregrinos através
+desta jornada.  Ele caminha entre as pegadas fossilizadas, ocasionalmente
+parando para contemplar uma particularmente antiga.  Sua presença é
+reconfortante, sugerindo que a jornada que os viajantes fazem já foi feita
+muitas vezes antes com sucesso.
+~
+2355544 0 0 0 129000000 0 0 0 1000 E
+78 -29 -36 15d15+750 12d12+29
+750 122000
+9 9 0
+BareHandAttack: 9
+Str: 16
+Dex: 15
+Int: 19
+Wis: 21
+Con: 15
+Cha: 17
+SavingPara: 20
+SavingRod: 20
+SavingPetri: 20
+SavingBreath: 20
+SavingSpell: 20
+GenBrave: 6
+GenFollow: 11
+E
+#15310
+monge oferendas silencioso~
+um monge silencioso~
+Um monge em vestes brancas organiza oferendas silenciosamente
+~
+   Este monge é um guardião atemporal das oferendas sagradas.  Ele trabalha em
+silêncio eterno, organizando e cuidando das oferendas deixadas pelos
+peregrinos.  Sua devoção é tão profunda que parece parte do próprio lugar.
+Seu rosto é sereno mas seus olhos carregam conhecimento de milênios de desejos
+humanos.
+~
+10744136 0 0 0 127000000 0 0 0 1000 E
+76 -27 -34 14d14+700 11d11+27
+700 100000
+9 9 1
+BareHandAttack: 13
+Str: 14
+Dex: 16
+Int: 17
+Wis: 19
+Con: 13
+Cha: 15
+SavingPara: 19
+SavingRod: 19
+SavingPetri: 19
+SavingBreath: 19
+SavingSpell: 19
+GenEquip: 50
+GenBrave: 5
+GenFollow: 9
+GenHealing: 80
+E
+#15311
+guardiao névoa espectral forma eterea~
+um guardião da névoa~
+Uma forma etérea materializa-se brevemente na névoa
+~
+   Este é um dos guardiões que protegem a Passagem da Eternidade de
+influências indesejadas.  Sua forma é tão integrada à névoa que é difícil
+determinar onde ele termina e a névoa começa.  Ocasionalmente, ele materializa
+parcialmente para avaliar os viajantes antes de deixá-los prosseguir.  Sua
+sabedoria é tão antiga quanto o próprio caminho.
+~
+10735696 0 0 0 131000000 0 0 0 1000 E
+79 -31 -37 15d15+800 12d12+31
+800 128000
+9 9 0
+BareHandAttack: 7
+Str: 17
+Dex: 18
+Int: 20
+Wis: 18
+Con: 17
+Cha: 16
+SavingPara: 20
+SavingRod: 20
+SavingPetri: 20
+SavingBreath: 20
+SavingSpell: 20
+GenBrave: 6
+GenFollow: 13
+E
+#15312
+espírito floral guardiao presenca luminosa~
+um espírito das flores~
+Uma presença luminosa entre as flores brilhando na névoa
+~
+   Este espírito é a manifestação viva do próprio Jardim da Névoa Eterna.
+Ela materializa entre as flores luminescentes, seu corpo composto de pétalas
+brilhantes e luz etérea.  Sua função é proteger a vida delicada do jardim
+enquanto permite que os peregrinos dignos apreciem sua beleza transcendental.
+~
+10736000 0 0 0 92277632 0 0 0 1000 E
+73 -26 -31 13d13+650 10d10+26
+650 112000
+9 9 0
+BareHandAttack: 6
+Str: 14
+Dex: 17
+Int: 16
+Wis: 18
+Con: 13
+Cha: 19
+SavingPara: 18
+SavingRod: 18
+SavingPetri: 18
+SavingBreath: 18
+SavingSpell: 18
+GenBrave: 5
+GenFollow: 7
+E
+#15313
+guardiao santuario celeste figura radiante~
+um guardião celestial~
+Uma figura radiante está aqui atentamente observando
+~
+   Este é um dos guardiões celestiais mais poderosos de todo Takamagahara,
+designado especificamente para proteger este santuário sagrado.  Sua forma é
+humanoide mas cercada por uma aura de ouro puro que brilha permanentemente.  
+Seus olhos contêm a sabedoria de todas as almas que já foram purificadas neste
+lugar.  Ele oferece bênção final aos dignos.
+~
+10746178 0 0 0 134291712 8 0 0 500 E
+88 -35 -42 18d18+900 15d15+50
+900 160000
+9 9 0
+BareHandAttack: 3
+Str: 20
+Dex: 19
+Int: 19
+Wis: 20
+Con: 19
+Cha: 20
+SavingPara: 22
+SavingRod: 22
+SavingPetri: 22
+SavingBreath: 22
+SavingSpell: 22
+GenBrave: 5
+GenFollow: 16
 E
 $
