@@ -1055,36 +1055,26 @@ void zedit_parse(struct descriptor_data *d, char *arg)
             switch (OLC_CMD(d).command) {
                 case 'M':
                 case 'O':
-                    pos = atoi(arg);
-                    /* For percentage loads (negative), clamp to -100 max. For traditional loads, clamp to
-                     * MAX_DUPLICATES */
-                    if (pos < 0)
-                        OLC_CMD(d).arg2 = MAX(-100, pos);
-                    else
-                        OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, pos);
-                    OLC_CMD(d).arg3 = real_room(OLC_NUM(d));
-                    zedit_disp_menu(d);
-                    break;
                 case 'G':
-                    pos = atoi(arg);
-                    /* For percentage loads (negative), clamp to -100 max. For traditional loads, clamp to
-                     * MAX_DUPLICATES */
-                    if (pos < 0)
-                        OLC_CMD(d).arg2 = MAX(-100, pos);
-                    else
-                        OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, pos);
-                    zedit_disp_menu(d);
-                    break;
                 case 'P':
                 case 'E':
-                    pos = atoi(arg);
                     /* For percentage loads (negative), clamp to -100 max. For traditional loads, clamp to
                      * MAX_DUPLICATES */
+                    pos = atoi(arg);
                     if (pos < 0)
                         OLC_CMD(d).arg2 = MAX(-100, pos);
                     else
                         OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, pos);
-                    zedit_disp_arg3(d);
+
+                    /* Now handle command-specific logic */
+                    if (OLC_CMD(d).command == 'M' || OLC_CMD(d).command == 'O') {
+                        OLC_CMD(d).arg3 = real_room(OLC_NUM(d));
+                        zedit_disp_menu(d);
+                    } else if (OLC_CMD(d).command == 'G') {
+                        zedit_disp_menu(d);
+                    } else { /* 'P' or 'E' */
+                        zedit_disp_arg3(d);
+                    }
                     break;
                 case 'V':
                     OLC_CMD(d).arg2 = atoi(arg); /* context */
