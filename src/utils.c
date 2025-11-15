@@ -3201,12 +3201,27 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
         target_mob_rnum = real_mobile(target_vnum);
         if (target_mob_rnum != NOBODY) {
             target_name = mob_proto[target_mob_rnum].player.short_descr;
+
+            /* Check if any instance of this mob is in a shop room */
+            struct char_data *mob_instance;
+            for (mob_instance = character_list; mob_instance; mob_instance = mob_instance->next) {
+                if (IS_NPC(mob_instance) && GET_MOB_VNUM(mob_instance) == target_vnum) {
+                    /* Found an instance - check if it's in a shop room */
+                    if (IN_ROOM(mob_instance) != NOWHERE && is_shop_room(GET_ROOM_VNUM(IN_ROOM(mob_instance)))) {
+                        log1("PROTECTION QUEST: %s tried to post MOB_SAVE quest for mob %d in shop room %d",
+                             GET_NAME(ch), target_vnum, GET_ROOM_VNUM(IN_ROOM(mob_instance)));
+                        act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
+                        return;
+                    }
+                }
+            }
         }
     } else if (quest_type == AQ_ROOM_CLEAR) {
         target_room_rnum = real_room(target_vnum);
         if (target_room_rnum != NOWHERE) {
-            /* Não posta quest para salas GODROOM ou player houses, mas permite DEATH */
-            if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE)) {
+            /* Não posta quest para salas GODROOM, player houses ou shop rooms */
+            if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE) ||
+                is_shop_room(target_vnum)) {
                 log1("PROTECTION QUEST: %s tried to post quest for restricted room %d", GET_NAME(ch), target_vnum);
                 act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
                 return;

@@ -1733,8 +1733,12 @@ int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum)
     switch (QST_TYPE(rnum)) {
         case AQ_MOB_KILL:
         case AQ_MOB_KILL_BOUNTY:
-        case AQ_PLAYER_KILL:
             capability += GET_GENBRAVE(mob); /* Combat quests need bravery */
+            break;
+        case AQ_PLAYER_KILL:
+            /* Player kill quests have increased priority for capable mobs */
+            capability += GET_GENBRAVE(mob);     /* Combat quests need bravery */
+            capability += GET_GENQUEST(mob) / 2; /* Additional boost from quest tendency */
             break;
         case AQ_OBJ_FIND:
         case AQ_ROOM_FIND:
