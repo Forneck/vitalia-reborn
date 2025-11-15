@@ -1523,6 +1523,12 @@ static void quest_clear(struct char_data *ch, char *argument)
         return;
     }
 
+    /* Safety check: validate vict pointer after getting it */
+    if (!vict) {
+        send_to_char(ch, "Erro ao encontrar o jogador.\r\n");
+        return;
+    }
+
     /* Don't allow clearing NPCs' quests */
     if (IS_NPC(vict)) {
         send_to_char(ch, "Você não pode limpar a busca de um mob.\r\n");
@@ -1531,18 +1537,21 @@ static void quest_clear(struct char_data *ch, char *argument)
 
     /* Check if player has an active quest */
     if (GET_QUEST(vict) == NOTHING) {
-        send_to_char(ch, "%s não tem nenhuma busca ativa.\r\n", GET_NAME(vict));
+        send_to_char(ch, "%s não tem nenhuma busca ativa.\r\n", GET_NAME(vict) ? GET_NAME(vict) : "Jogador");
         return;
     }
 
     /* Get quest info before clearing */
     rnum = real_quest(GET_QUEST(vict));
-    if (rnum != NOTHING) {
-        send_to_char(ch, "Limpando busca de %s: [\ty%d\tn] \tc%s\tn\r\n", GET_NAME(vict), GET_QUEST(vict),
-                     QST_NAME(rnum));
+    if (rnum != NOTHING && rnum >= 0 && rnum < total_quests) {
+        /* Safety check: validate quest name exists */
+        const char *quest_name = QST_NAME(rnum) ? QST_NAME(rnum) : "Quest desconhecida";
+        const char *vict_name = GET_NAME(vict) ? GET_NAME(vict) : "Jogador";
+        send_to_char(ch, "Limpando busca de %s: [\ty%d\tn] \tc%s\tn\r\n", vict_name, GET_QUEST(vict), quest_name);
         send_to_char(vict, "Sua busca foi cancelada por um imortal.\r\n");
     } else {
-        send_to_char(ch, "Limpando busca de %s (busca inválida vnum %d).\r\n", GET_NAME(vict), GET_QUEST(vict));
+        const char *vict_name = GET_NAME(vict) ? GET_NAME(vict) : "Jogador";
+        send_to_char(ch, "Limpando busca de %s (busca inválida vnum %d).\r\n", vict_name, GET_QUEST(vict));
         send_to_char(vict, "Sua busca foi cancelada por um imortal.\r\n");
     }
 
@@ -1551,7 +1560,9 @@ static void quest_clear(struct char_data *ch, char *argument)
     save_char(vict);
 
     send_to_char(ch, "\tGBusca limpa com sucesso.\tn\r\n");
-    mudlog(NRM, LVL_GOD, TRUE, "(GC) %s cleared %s's quest.", GET_NAME(ch), GET_NAME(vict));
+    /* Safety check: validate names before mudlog */
+    mudlog(NRM, LVL_GOD, TRUE, "(GC) %s cleared %s's quest.", GET_NAME(ch) ? GET_NAME(ch) : "Unknown",
+           GET_NAME(vict) ? GET_NAME(vict) : "Unknown");
 }
 
 static void quest_remove(struct char_data *ch, char *argument)

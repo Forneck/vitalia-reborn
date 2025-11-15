@@ -3205,9 +3205,19 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
             /* Check if any instance of this mob is in a shop room */
             struct char_data *mob_instance;
             for (mob_instance = character_list; mob_instance; mob_instance = mob_instance->next) {
+                /* Safety check: validate mob_instance before dereferencing */
+                if (!mob_instance)
+                    break;
+
+                /* Safety check: Skip characters marked for extraction */
+                if (MOB_FLAGGED(mob_instance, MOB_NOTDEADYET) || PLR_FLAGGED(mob_instance, PLR_NOTDEADYET))
+                    continue;
+
                 if (IS_NPC(mob_instance) && GET_MOB_VNUM(mob_instance) == target_vnum) {
                     /* Found an instance - check if it's in a shop room */
-                    if (IN_ROOM(mob_instance) != NOWHERE && is_shop_room(GET_ROOM_VNUM(IN_ROOM(mob_instance)))) {
+                    /* Safety check: validate room index before accessing world array */
+                    if (IN_ROOM(mob_instance) != NOWHERE && IN_ROOM(mob_instance) >= 0 &&
+                        IN_ROOM(mob_instance) <= top_of_world && is_shop_room(GET_ROOM_VNUM(IN_ROOM(mob_instance)))) {
                         log1("PROTECTION QUEST: %s tried to post MOB_SAVE quest for mob %d in shop room %d",
                              GET_NAME(ch), target_vnum, GET_ROOM_VNUM(IN_ROOM(mob_instance)));
                         act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
