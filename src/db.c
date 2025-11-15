@@ -2987,7 +2987,38 @@ void reset_zone(zone_rnum zone)
                 break;
 
             case 'M': /* read a mobile */
-                if (mob_index[ZCMD.arg1].number < ZCMD.arg2) {
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                if (ZCMD.arg2 < 0) {
+                    int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                    if (rand_number(1, 100) <= chance) {
+                        mob = read_mobile(ZCMD.arg1, REAL);
+
+                        /* Guarda o destino ANTES de mover o mob, usando a fonte de verdade (ZCMD). */
+                        room_rnum target_room_rnum = ZCMD.arg3;
+
+                        char_to_room(mob, target_room_rnum);
+
+                        /* Verifica se o destino é uma sala válida antes de guardar. */
+                        if (target_room_rnum != NOWHERE && target_room_rnum <= top_of_world) {
+                            mob->ai_data->guard_post = world[target_room_rnum].number;
+                        }
+
+                        load_mtrigger(mob);
+                        tmob = mob;
+                        last_cmd = 1;
+                        /* Parts for loading non-native items in shops, if mob * load
+                           was true, see if this mob is a shopkeeper, if it * is then
+                           we should try the load function */
+                        for (shop_nr = 0; shop_nr <= top_shop; shop_nr++) {
+                            if (SHOP_KEEPER(shop_nr) == mob->nr)
+                                break;
+                        }
+
+                        if (shop_nr <= top_shop)
+                            load_shop_nonnative(shop_nr, mob);
+                    } else
+                        last_cmd = 0;
+                } else if (mob_index[ZCMD.arg1].number < ZCMD.arg2) {
                     mob = read_mobile(ZCMD.arg1, REAL);
 
                     /* Guarda o destino ANTES de mover o mob, usando a fonte de verdade (ZCMD). */
@@ -3019,7 +3050,25 @@ void reset_zone(zone_rnum zone)
                 break;
 
             case 'O': /* read an object */
-                if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                if (ZCMD.arg2 < 0) {
+                    int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                    if (rand_number(1, 100) <= chance) {
+                        if (ZCMD.arg3 != NOWHERE) {
+                            obj = read_object(ZCMD.arg1, REAL);
+                            obj_to_room(obj, ZCMD.arg3);
+                            last_cmd = 1;
+                            load_otrigger(obj);
+                            tobj = obj;
+                        } else {
+                            obj = read_object(ZCMD.arg1, REAL);
+                            IN_ROOM(obj) = NOWHERE;
+                            last_cmd = 1;
+                            tobj = obj;
+                        }
+                    } else
+                        last_cmd = 0;
+                } else if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
                     if (ZCMD.arg3 != NOWHERE) {
                         obj = read_object(ZCMD.arg1, REAL);
                         obj_to_room(obj, ZCMD.arg3);
@@ -3038,7 +3087,23 @@ void reset_zone(zone_rnum zone)
                 break;
 
             case 'P': /* object to object */
-                if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                if (ZCMD.arg2 < 0) {
+                    int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                    if (rand_number(1, 100) <= chance) {
+                        obj = read_object(ZCMD.arg1, REAL);
+                        if (!(obj_to = get_obj_num(ZCMD.arg3))) {
+                            ZONE_ERROR("target obj not found, command disabled");
+                            ZCMD.command = '*';
+                            break;
+                        }
+                        obj_to_obj(obj, obj_to);
+                        last_cmd = 1;
+                        load_otrigger(obj);
+                        tobj = obj;
+                    } else
+                        last_cmd = 0;
+                } else if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
                     obj = read_object(ZCMD.arg1, REAL);
                     if (!(obj_to = get_obj_num(ZCMD.arg3))) {
                         ZONE_ERROR("target obj not found, command disabled");
@@ -3063,7 +3128,18 @@ void reset_zone(zone_rnum zone)
                     ZCMD.command = '*';
                     break;
                 }
-                if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                if (ZCMD.arg2 < 0) {
+                    int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                    if (rand_number(1, 100) <= chance) {
+                        obj = read_object(ZCMD.arg1, REAL);
+                        obj_to_char(obj, mob);
+                        last_cmd = 1;
+                        load_otrigger(obj);
+                        tobj = obj;
+                    } else
+                        last_cmd = 0;
+                } else if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
                     obj = read_object(ZCMD.arg1, REAL);
                     obj_to_char(obj, mob);
                     last_cmd = 1;
@@ -3090,7 +3166,30 @@ void reset_zone(zone_rnum zone)
                     ZCMD.command = '*';
                     break;
                 }
-                if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                if (ZCMD.arg2 < 0) {
+                    int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                    if (rand_number(1, 100) <= chance) {
+                        if (ZCMD.arg3 < 0 || ZCMD.arg3 >= NUM_WEARS) {
+                            char error[MAX_INPUT_LENGTH];
+                            snprintf(error, sizeof(error), "invalid equipment pos number (mob %s, obj %d, pos %d)",
+                                     GET_NAME(mob), obj_index[ZCMD.arg2].vnum, ZCMD.arg3);
+                            ZONE_ERROR(error);
+                        } else {
+                            obj = read_object(ZCMD.arg1, REAL);
+                            IN_ROOM(obj) = IN_ROOM(mob);
+                            load_otrigger(obj);
+                            if (wear_otrigger(obj, mob, ZCMD.arg3)) {
+                                IN_ROOM(obj) = NOWHERE;
+                                equip_char(mob, obj, ZCMD.arg3);
+                            } else
+                                obj_to_char(obj, mob);
+                            tobj = obj;
+                            last_cmd = 1;
+                        }
+                    } else
+                        last_cmd = 0;
+                } else if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
                     if (ZCMD.arg3 < 0 || ZCMD.arg3 >= NUM_WEARS) {
                         char error[MAX_INPUT_LENGTH];
                         snprintf(error, sizeof(error), "invalid equipment pos number (mob %s, obj %d, pos %d)",
