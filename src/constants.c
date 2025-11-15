@@ -497,6 +497,12 @@ const char *goal_names[] = {"None",               /* GOAL_NONE 0 */
                             "Go to questmaster",  /* GOAL_GOTO_QUESTMASTER 7 */
                             "Accept quest",       /* GOAL_ACCEPT_QUEST 8 */
                             "Complete quest",     /* GOAL_COMPLETE_QUEST 9 */
+                            "Mine",               /* GOAL_MINE 10 */
+                            "Fish",               /* GOAL_FISH 11 */
+                            "Forage",             /* GOAL_FORAGE 12 */
+                            "Eavesdrop",          /* GOAL_EAVESDROP 13 */
+                            "Collect key",        /* GOAL_COLLECT_KEY 14 */
+                            "Follow",             /* GOAL_FOLLOW 15 */
                             "\n"};
 
 const char *sky_conditions[] = {"CLOUDLESS", "CLOUDY", "RAINING", "LIGHTNING", "SNOWING", "\n"};

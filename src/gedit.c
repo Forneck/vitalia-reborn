@@ -163,18 +163,80 @@ static void gedit_disp_menu(struct descriptor_data *d)
 
 static void gedit_disp_goals(struct descriptor_data *d)
 {
-    int i;
-
     get_char_colors(d->character);
     clear_screen(d);
 
     write_to_output(d, "-- Available Goals --\r\n\r\n");
 
-    for (i = 0; i <= 9; i++) {
-        write_to_output(d, "%s%d%s) %s%s%s\r\n", grn, i, nrm, yel, goal_names[i], nrm);
-    }
+    /* GOAL_NONE 0 */
+    write_to_output(d, "%s0%s) %s%s%s - No required fields\r\n", grn, nrm, yel, goal_names[0], nrm);
 
-    write_to_output(d, "\r\nEnter goal number (0-9) or Q to return to main menu: ");
+    /* GOAL_GOTO_SHOP_TO_SELL 1 */
+    write_to_output(d,
+                    "%s1%s) %s%s%s - Requires: goal_destination (room), goal_obj (object), "
+                    "goal_target_mob_rnum (shopkeeper)\r\n",
+                    grn, nrm, yel, goal_names[1], nrm);
+
+    /* GOAL_RETURN_TO_POST 2 */
+    write_to_output(d, "%s2%s) %s%s%s - Requires: goal_destination (room)\r\n", grn, nrm, yel, goal_names[2], nrm);
+
+    /* GOAL_HUNT_TARGET 3 */
+    write_to_output(d, "%s3%s) %s%s%s - Requires: goal_target_mob_rnum (target), goal_item_vnum (optional)\r\n", grn,
+                    nrm, yel, goal_names[3], nrm);
+
+    /* GOAL_GOTO_SHOP_TO_BUY 4 */
+    write_to_output(d,
+                    "%s4%s) %s%s%s - Requires: goal_destination (room), goal_target_mob_rnum (shopkeeper), "
+                    "goal_item_vnum (item)\r\n",
+                    grn, nrm, yel, goal_names[4], nrm);
+
+    /* GOAL_POST_QUEST 5 */
+    write_to_output(d, "%s5%s) %s%s%s - Requires: goal_item_vnum (item for quest)\r\n", grn, nrm, yel, goal_names[5],
+                    nrm);
+
+    /* GOAL_GET_GOLD 6 */
+    write_to_output(d, "%s6%s) %s%s%s - No required fields (uses mob AI to collect gold)\r\n", grn, nrm, yel,
+                    goal_names[6], nrm);
+
+    /* GOAL_GOTO_QUESTMASTER 7 */
+    write_to_output(d, "%s7%s) %s%s%s - Requires: goal_destination (room), goal_item_vnum (item for quest)\r\n", grn,
+                    nrm, yel, goal_names[7], nrm);
+
+    /* GOAL_ACCEPT_QUEST 8 */
+    write_to_output(d, "%s8%s) %s%s%s - Requires: goal_destination (room), goal_target_mob_rnum (questmaster)\r\n", grn,
+                    nrm, yel, goal_names[8], nrm);
+
+    /* GOAL_COMPLETE_QUEST 9 */
+    write_to_output(d, "%s9%s) %s%s%s - No required fields (handled by quest system)\r\n", grn, nrm, yel, goal_names[9],
+                    nrm);
+
+    /* GOAL_MINE 10 */
+    write_to_output(d, "%s10%s) %s%s%s - No required fields (mob must have mining skill)\r\n", grn, nrm, yel,
+                    goal_names[10], nrm);
+
+    /* GOAL_FISH 11 */
+    write_to_output(d, "%s11%s) %s%s%s - No required fields (mob must have fishing skill)\r\n", grn, nrm, yel,
+                    goal_names[11], nrm);
+
+    /* GOAL_FORAGE 12 */
+    write_to_output(d, "%s12%s) %s%s%s - No required fields (mob must have forage skill)\r\n", grn, nrm, yel,
+                    goal_names[12], nrm);
+
+    /* GOAL_EAVESDROP 13 */
+    write_to_output(d, "%s13%s) %s%s%s - No required fields (mob must have eavesdrop skill)\r\n", grn, nrm, yel,
+                    goal_names[13], nrm);
+
+    /* GOAL_COLLECT_KEY 14 */
+    write_to_output(d,
+                    "%s14%s) %s%s%s - Requires: goal_destination (room), goal_item_vnum (key), "
+                    "goal_target_mob_rnum (optional)\r\n",
+                    grn, nrm, yel, goal_names[14], nrm);
+
+    /* GOAL_FOLLOW 15 */
+    write_to_output(d, "%s15%s) %s%s%s - No required fields (mob will follow nearby characters)\r\n", grn, nrm, yel,
+                    goal_names[15], nrm);
+
+    write_to_output(d, "\r\nEnter goal number (0-15) or Q to return to main menu: ");
     OLC_MODE(d) = GEDIT_GOAL_CHOICE;
 }
 
@@ -237,8 +299,8 @@ void gedit_parse(struct descriptor_data *d, char *arg)
             }
 
             number = atoi(arg);
-            if (number < 0 || number > 9) {
-                write_to_output(d, "Goal must be between 0 and 9. Try again: ");
+            if (number < 0 || number > 15) {
+                write_to_output(d, "Goal must be between 0 and 15. Try again: ");
                 return;
             }
 
@@ -259,7 +321,64 @@ void gedit_parse(struct descriptor_data *d, char *arg)
             OLC_MOB(d)->ai_data->original_item_vnum = NOTHING;
             OLC_VAL(d) = TRUE;
             write_to_output(d, "Goal set to: %s (%d)\r\n", goal_names[number], number);
-            write_to_output(d, "Goal parameters cleared. Set new parameters if needed.\r\n");
+            write_to_output(d, "Goal parameters cleared.\r\n");
+
+            /* Inform user which fields need to be set for this goal */
+            switch (number) {
+                case 0: /* GOAL_NONE */
+                    write_to_output(d, "No additional parameters required.\r\n");
+                    break;
+                case 1: /* GOAL_GOTO_SHOP_TO_SELL */
+                    write_to_output(d, "Required: Set goal room (2), goal object via AI, and target mob rnum (4)\r\n");
+                    break;
+                case 2: /* GOAL_RETURN_TO_POST */
+                    write_to_output(d, "Required: Set goal room (2)\r\n");
+                    break;
+                case 3: /* GOAL_HUNT_TARGET */
+                    write_to_output(d, "Required: Set target mob rnum (4). Optional: goal item vnum (3)\r\n");
+                    break;
+                case 4: /* GOAL_GOTO_SHOP_TO_BUY */
+                    write_to_output(d, "Required: Set goal room (2), target mob rnum (4), and goal item vnum (3)\r\n");
+                    break;
+                case 5: /* GOAL_POST_QUEST */
+                    write_to_output(d, "Required: Set goal item vnum (3)\r\n");
+                    break;
+                case 6: /* GOAL_GET_GOLD */
+                    write_to_output(d, "No additional parameters required (uses mob AI).\r\n");
+                    break;
+                case 7: /* GOAL_GOTO_QUESTMASTER */
+                    write_to_output(d, "Required: Set goal room (2) and goal item vnum (3)\r\n");
+                    break;
+                case 8: /* GOAL_ACCEPT_QUEST */
+                    write_to_output(d, "Required: Set goal room (2) and target mob rnum (4)\r\n");
+                    break;
+                case 9: /* GOAL_COMPLETE_QUEST */
+                    write_to_output(d, "No additional parameters required (handled by quest system).\r\n");
+                    break;
+                case 10: /* GOAL_MINE */
+                    write_to_output(d, "No additional parameters required (mob must have mining skill).\r\n");
+                    break;
+                case 11: /* GOAL_FISH */
+                    write_to_output(d, "No additional parameters required (mob must have fishing skill).\r\n");
+                    break;
+                case 12: /* GOAL_FORAGE */
+                    write_to_output(d, "No additional parameters required (mob must have forage skill).\r\n");
+                    break;
+                case 13: /* GOAL_EAVESDROP */
+                    write_to_output(d, "No additional parameters required (mob must have eavesdrop skill).\r\n");
+                    break;
+                case 14: /* GOAL_COLLECT_KEY */
+                    write_to_output(
+                        d, "Required: Set goal room (2) and goal item vnum (3). Optional: target mob rnum (4)\r\n");
+                    break;
+                case 15: /* GOAL_FOLLOW */
+                    write_to_output(d, "No additional parameters required (mob will follow nearby characters).\r\n");
+                    break;
+                default:
+                    write_to_output(d, "Set parameters as needed.\r\n");
+                    break;
+            }
+
             gedit_disp_menu(d);
             return;
 
