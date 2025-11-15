@@ -945,6 +945,9 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                             if (MOB_FLAGGED(original_requester, MOB_NOTDEADYET) ||
                                 PLR_FLAGGED(original_requester, PLR_NOTDEADYET))
                                 break;
+                            /* Safety check: object may have been extracted by DG scripts */
+                            if (object->carried_by != original_requester)
+                                break;
                             act("$n recebe $p de $N.", FALSE, original_requester, object, vict, TO_ROOM);
                             /* Safety check after second act() call */
                             if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET))
