@@ -983,6 +983,11 @@ void mobile_activity(void)
                         if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                             continue;
                     }
+                    /* Clear goal after posting quest or if no item to post */
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    ch->ai_data->goal_destination = NOWHERE;
+                    ch->ai_data->goal_item_vnum = NOTHING;
+                    ch->ai_data->goal_timer = 0;
                 } else if (ch->ai_data->current_goal == GOAL_ACCEPT_QUEST) {
                     /* Chegou ao questmaster para aceitar uma quest */
                     struct char_data *questmaster =
@@ -1015,6 +1020,12 @@ void mobile_activity(void)
                                 continue;
                         }
                     }
+                    /* Clear goal if quest was not accepted (no questmaster, already has quest, no quests available, or
+                     * didn't want to accept) */
+                    ch->ai_data->current_goal = GOAL_NONE;
+                    ch->ai_data->goal_destination = NOWHERE;
+                    ch->ai_data->goal_target_mob_rnum = NOBODY;
+                    ch->ai_data->goal_timer = 0;
                 } else if (ch->ai_data->current_goal == GOAL_COMPLETE_QUEST) {
                     /* Process quest completion based on quest type */
                     if (GET_QUEST(ch) != NOTHING) {
