@@ -564,6 +564,10 @@ void mobile_activity(void)
         if (FIGHTING(ch) || !AWAKE(ch))
             continue;
 
+        /* Skip paralyzed mobs - they cannot perform actions */
+        if (AFF_FLAGGED(ch, AFF_PARALIZE))
+            continue;
+
         /* Check if mob can level up from gained experience */
         check_mob_level_up(ch);
 

@@ -939,7 +939,19 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
 
                             obj_to_char(object, original_requester);
                             act("$n entrega $p para quem solicitou.", FALSE, vict, object, NULL, TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may extract object or characters */
+                            if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET))
+                                break;
+                            if (MOB_FLAGGED(original_requester, MOB_NOTDEADYET) ||
+                                PLR_FLAGGED(original_requester, PLR_NOTDEADYET))
+                                break;
                             act("$n recebe $p de $N.", FALSE, original_requester, object, vict, TO_ROOM);
+                            /* Safety check after second act() call */
+                            if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET))
+                                break;
+                            if (MOB_FLAGGED(original_requester, MOB_NOTDEADYET) ||
+                                PLR_FLAGGED(original_requester, PLR_NOTDEADYET))
+                                break;
                         }
 
                         /* Complete the quest */
