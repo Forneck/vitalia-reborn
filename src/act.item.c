@@ -716,6 +716,19 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
 
     autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);
 
+    /* Safety check: Quest completion may have extracted obj, ch, or vict through scripts/triggers */
+    if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET))
+        return;
+    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+        return;
+    /* Note: We cannot safely check if obj is still valid without a more complex tracking system.
+     * If obj was extracted during quest completion, the following code may access freed memory.
+     * To prevent crashes, we return early after quest completion, skipping reputation code. */
+    if (!IS_NPC(ch) && GET_QUEST(ch) == NOTHING) {
+        /* Quest was just completed (GET_QUEST cleared), skip reputation code to avoid accessing freed obj */
+        return;
+    }
+
     /* Reputation gain for generosity (giving items to others) - dynamic reputation system */
     if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {
         int rep_gain = 0;
