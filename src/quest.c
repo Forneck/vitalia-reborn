@@ -908,6 +908,8 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
 
                 if (GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum)) {
                     /* Returned directly to original requester - complete quest normally */
+                    /* Mark item with NOLOCATE to prevent locate object exploit */
+                    SET_BIT_AR(GET_OBJ_EXTRA(object), ITEM_NOLOCATE);
                     generic_complete_quest(ch);
                 } else if (GET_MOB_VNUM(vict) == QST_MASTER(rnum)) {
                     /* Returned to questmaster - transfer to original requester if different */
@@ -927,6 +929,10 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                         if (original_requester && original_requester != vict) {
                             /* Transfer item from questmaster to original requester */
                             obj_from_char(object);
+
+                            /* Mark item with NOLOCATE to prevent locate object exploit */
+                            SET_BIT_AR(GET_OBJ_EXTRA(object), ITEM_NOLOCATE);
+
                             obj_to_char(object, original_requester);
                             act("$n entrega $p para quem solicitou.", FALSE, vict, object, NULL, TO_ROOM);
                             act("$n recebe $p de $N.", FALSE, original_requester, object, vict, TO_ROOM);
