@@ -2570,6 +2570,18 @@ void init_mob_ai_data(struct char_data *mob)
     mob->ai_data->num_temp_quests = 0;
     mob->ai_data->max_temp_quests = 0;
 
+    /* Initialize goal fields to sentinel values to prevent SIGSEGV.
+     * These fields are checked against NOWHERE/NOTHING/NOBODY throughout the codebase.
+     * Setting them to 0 (from memset) would cause incorrect behavior. */
+    mob->ai_data->goal_destination = NOWHERE;
+    mob->ai_data->goal_item_vnum = NOTHING;
+    mob->ai_data->goal_target_mob_rnum = NOBODY;
+
+    /* Initialize reputation to 40 to allow mobs to participate in trading and quests.
+     * This value is at the threshold where quest reward penalties no longer apply (< 40 gets penalty),
+     * placing mobs in the "average" reputation tier (40-59) with no modifiers. */
+    mob->ai_data->reputation = 40;
+
     /* Set default values for genetics if not already set from mob files.
      * This ensures mobs have reasonable default behavior even without explicit genetics.
      * These defaults can be overridden by GenFollow, GenRoam, etc. in mob files. */

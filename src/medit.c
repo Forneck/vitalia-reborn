@@ -452,6 +452,7 @@ static void medit_disp_genetics_menu(struct descriptor_data *d)
     if (!mob->ai_data) {
         CREATE(mob->ai_data, struct mob_ai_data, 1);
         memset(mob->ai_data, 0, sizeof(struct mob_ai_data));
+        init_mob_ai_data(mob);
     }
 
     write_to_output(d,
@@ -1214,6 +1215,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.wimpy_tendency = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
@@ -1223,6 +1225,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.loot_tendency = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
@@ -1232,6 +1235,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.equip_tendency = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
@@ -1241,6 +1245,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.roam_tendency = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
@@ -1250,6 +1255,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.brave_prevalence = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
@@ -1259,6 +1265,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.group_tendency = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
@@ -1268,6 +1275,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.use_tendency = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
@@ -1277,6 +1285,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.trade_tendency = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
@@ -1286,6 +1295,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.quest_tendency = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
@@ -1295,6 +1305,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.adventurer_tendency = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
@@ -1304,6 +1315,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.follow_tendency = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
@@ -1313,6 +1325,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->genetics.healing_tendency = LIMIT(i, 0, 100);
             medit_disp_genetics_menu(d);
@@ -1322,6 +1335,7 @@ void medit_parse(struct descriptor_data *d, char *arg)
             if (!OLC_MOB(d)->ai_data) {
                 CREATE(OLC_MOB(d)->ai_data, struct mob_ai_data, 1);
                 memset(OLC_MOB(d)->ai_data, 0, sizeof(struct mob_ai_data));
+                init_mob_ai_data(OLC_MOB(d));
             }
             OLC_MOB(d)->ai_data->emotional_profile = LIMIT(i, 0, 7);
             medit_disp_genetics_menu(d);
