@@ -623,6 +623,9 @@ void point_update(void)
                     case ar_skip:
                         /* Don't touch the corpse, leave it in place */
                         break;
+                    case ar_ok:
+                        /* Successful resurrection - corpse is handled by raise functions */
+                        break;
                     case ar_dropobjs:
                         if (j->carried_by)
                             act("$p cai de suas mãos.", FALSE, j->carried_by, j, 0, TO_CHAR);
