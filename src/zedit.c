@@ -635,7 +635,7 @@ static void zedit_disp_arg2(struct descriptor_data *d)
         case 'E':
         case 'P':
         case 'G':
-            write_to_output(d, "Input the maximum number that can exist on the mud : ");
+            write_to_output(d, "Input the maximum number (or negative for %% chance, e.g. -50 = 50%%) : ");
             break;
         case 'D':
             for (i = 0; *dirs[i] != '\n'; i++) {
@@ -1048,24 +1048,42 @@ void zedit_parse(struct descriptor_data *d, char *arg)
             /*-------------------------------------------------------------------*/
         case ZEDIT_ARG2:
             /* Parse the input for arg2, and goto next quiz. */
-            if (!isdigit(*arg)) {
+            if (!is_number(arg)) {
                 write_to_output(d, "Must be a numeric value, try again : ");
                 return;
             }
             switch (OLC_CMD(d).command) {
                 case 'M':
                 case 'O':
-                    OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, atoi(arg));
+                    pos = atoi(arg);
+                    /* For percentage loads (negative), clamp to -100 max. For traditional loads, clamp to
+                     * MAX_DUPLICATES */
+                    if (pos < 0)
+                        OLC_CMD(d).arg2 = MAX(-100, pos);
+                    else
+                        OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, pos);
                     OLC_CMD(d).arg3 = real_room(OLC_NUM(d));
                     zedit_disp_menu(d);
                     break;
                 case 'G':
-                    OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, atoi(arg));
+                    pos = atoi(arg);
+                    /* For percentage loads (negative), clamp to -100 max. For traditional loads, clamp to
+                     * MAX_DUPLICATES */
+                    if (pos < 0)
+                        OLC_CMD(d).arg2 = MAX(-100, pos);
+                    else
+                        OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, pos);
                     zedit_disp_menu(d);
                     break;
                 case 'P':
                 case 'E':
-                    OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, atoi(arg));
+                    pos = atoi(arg);
+                    /* For percentage loads (negative), clamp to -100 max. For traditional loads, clamp to
+                     * MAX_DUPLICATES */
+                    if (pos < 0)
+                        OLC_CMD(d).arg2 = MAX(-100, pos);
+                    else
+                        OLC_CMD(d).arg2 = MIN(MAX_DUPLICATES, pos);
                     zedit_disp_arg3(d);
                     break;
                 case 'V':
