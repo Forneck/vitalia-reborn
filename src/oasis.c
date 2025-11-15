@@ -218,6 +218,9 @@ void cleanup_olc(struct descriptor_data *d, byte cleanup_type)
         else if (STATE(d) == CON_SPEDIT)
             mudlog(CMP, MAX(LVL_IMMORT, GET_INVIS_LEV(d->character)), TRUE, "OLC: %s stops editing spell files.",
                    GET_NAME(d->character));
+        else if (STATE(d) == CON_GEDIT)
+            mudlog(CMP, MAX(LVL_IMMORT, GET_INVIS_LEV(d->character)), TRUE, "OLC: %s stops editing mob goals.",
+                   GET_NAME(d->character));
         else
             mudlog(CMP, MAX(LVL_IMMORT, GET_INVIS_LEV(d->character)), TRUE,
                    "OLC: %s stops editing zone %d allowed zone %d", GET_NAME(d->character),
