@@ -6064,8 +6064,14 @@ static void show_retained_skills(struct char_data *ch)
             /* Get the class from class_history if we know the incarnation */
             if (incarnation >= 0 && incarnation < 100 && ch->player_specials->saved.class_history[incarnation] >= 0) {
                 class_num = ch->player_specials->saved.class_history[incarnation];
-                send_to_char(ch, "[ %-20s ] ---- [ %-10s ] ---- [ %dª enc. ]\r\n", skill_name(i),
-                             pc_class_types[class_num], incarnation + 1); /* +1 because incarnations start at 0 */
+                if (class_num < NUM_CLASSES) {
+                    send_to_char(ch, "[ %-20s ] ---- [ %-10s ] ---- [ %dª enc. ]\r\n", skill_name(i),
+                                 pc_class_types[class_num], incarnation + 1); /* +1 because incarnations start at 0 */
+                } else {
+                    /* Fallback for out-of-bounds class_num */
+                    send_to_char(ch, "[ %-20s ] ---- [ %-10s ] ---- [ %dª enc. ]\r\n", skill_name(i),
+                                 "desconhecida", incarnation + 1);
+                }
             } else {
                 /* Fallback for old data without incarnation info */
                 send_to_char(ch, "[ %-20s ] ---- [ %-10s ] ---- [ ??? ]\r\n", skill_name(i), "desconhecida");
