@@ -871,10 +871,18 @@ void update_variant_skills(struct char_data *ch, int prerequisite_vnum, int new_
     if (IS_NPC(ch))
         return;
 
+    /* Validate prerequisite_vnum is within valid bounds */
+    if (prerequisite_vnum <= 0 || prerequisite_vnum > MAX_SKILLS)
+        return;
+
     /* Iterate through all spells to find variants with this prerequisite */
     for (ptr = list_spells; ptr; ptr = ptr->next) {
         /* Check if this spell has the specified prerequisite */
         if (ptr->prerequisite_spell != prerequisite_vnum)
+            continue;
+
+        /* Validate variant vnum is within valid bounds before accessing skill array */
+        if (ptr->vnum <= 0 || ptr->vnum > MAX_SKILLS)
             continue;
 
         /* Check if player knows this variant */
