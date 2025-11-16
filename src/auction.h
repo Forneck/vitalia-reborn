@@ -10,9 +10,17 @@
 
 #include "structs.h"
 
-/* Auction types */
+/* Auction types - DEPRECATED: Use direction + price_mechanism instead */
 #define AUCTION_TYPE_ENGLISH 0 /* Ascendente, Primeiro Preço */
-#define AUCTION_TYPE_DUTCH 1   /* Descendente, Segundo Preço */
+#define AUCTION_TYPE_DUTCH 1   /* Descendente, Primeiro Preço */
+
+/* Auction direction */
+#define AUCTION_ASCENDING 0  /* Price goes up (traditional) */
+#define AUCTION_DESCENDING 1 /* Price goes down (Dutch-style) */
+
+/* Auction price mechanism */
+#define AUCTION_FIRST_PRICE 0  /* Winner pays their bid */
+#define AUCTION_SECOND_PRICE 1 /* Winner pays second-highest bid */
 
 /* Auction access modes */
 #define AUCTION_OPEN 0   /* Anyone can bid */
@@ -43,9 +51,11 @@ struct auction_data {
     obj_vnum item_vnum;                /* Virtual number of the item */
     int quantity;                      /* Number of items (for bulk auctions) */
 
-    int auction_type; /* AUCTION_TYPE_* */
-    int access_mode;  /* AUCTION_OPEN or AUCTION_CLOSED */
-    int state;        /* AUCTION_* state */
+    int auction_type;     /* AUCTION_TYPE_* (deprecated) */
+    int direction;        /* AUCTION_ASCENDING or AUCTION_DESCENDING */
+    int price_mechanism;  /* AUCTION_FIRST_PRICE or AUCTION_SECOND_PRICE */
+    int access_mode;      /* AUCTION_OPEN or AUCTION_CLOSED */
+    int state;            /* AUCTION_* state */
 
     long starting_price; /* Starting bid amount */
     long current_price;  /* Current highest bid */

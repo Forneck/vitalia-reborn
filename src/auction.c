@@ -85,6 +85,14 @@ struct auction_data *create_auction(struct char_data *seller, struct obj_data *i
     auction->quantity = 1; /* TODO: Handle bulk auctions */
 
     auction->auction_type = type;
+    /* Set direction and price mechanism based on legacy type, but allow override via config */
+    if (type == AUCTION_TYPE_ENGLISH) {
+        auction->direction = AUCTION_ASCENDING;
+        auction->price_mechanism = AUCTION_FIRST_PRICE;
+    } else {
+        auction->direction = AUCTION_DESCENDING;
+        auction->price_mechanism = AUCTION_FIRST_PRICE;
+    }
     auction->access_mode = access_mode;
     auction->state = AUCTION_INACTIVE;
 

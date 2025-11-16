@@ -110,11 +110,12 @@ ACMD(do_auction)
         if (!*arg1 || !*arg2) {
             send_to_char(ch, "Uso: leilao configurar [id_leilao] [opção] [valor]\r\n");
             send_to_char(ch, "\r\nOpções disponíveis:\r\n");
-            send_to_char(ch, "  tipo [ingles|holandes]     - Tipo do leilão\r\n");
-            send_to_char(ch, "  acesso [aberto|fechado]    - Modo de acesso\r\n");
-            send_to_char(ch, "  duracao [segundos]         - Duração (60-3600)\r\n");
-            send_to_char(ch, "  preco_minimo [valor]       - Preço mínimo de reserva\r\n");
-            send_to_char(ch, "  preco_compra [valor]       - Preço de compra direta\r\n");
+            send_to_char(ch, "  direcao [ascendente|descendente] - Direção do preço\r\n");
+            send_to_char(ch, "  mecanismo [primeiro|segundo]     - Mecanismo de preço\r\n");
+            send_to_char(ch, "  acesso [aberto|fechado]          - Modo de acesso\r\n");
+            send_to_char(ch, "  duracao [segundos]               - Duração (60-3600)\r\n");
+            send_to_char(ch, "  preco_minimo [valor]             - Preço mínimo de reserva\r\n");
+            send_to_char(ch, "  preco_compra [valor]             - Preço de compra direta\r\n");
             send_to_char(ch, "\r\nUse 'leilao ajuda' para mais detalhes sobre cada opção.\r\n");
             return;
         }
@@ -152,15 +153,29 @@ ACMD(do_auction)
         }
 
         /* Process configuration option */
-        if (is_abbrev(option, "tipo") || is_abbrev(option, "type")) {
-            if (is_abbrev(value, "ingles") || is_abbrev(value, "english")) {
-                auction->auction_type = AUCTION_TYPE_ENGLISH;
-                send_to_char(ch, "Tipo do leilão #%d alterado para INGLÊS (ascendente).\r\n", auction_id);
-            } else if (is_abbrev(value, "holandes") || is_abbrev(value, "dutch")) {
-                auction->auction_type = AUCTION_TYPE_DUTCH;
-                send_to_char(ch, "Tipo do leilão #%d alterado para HOLANDÊS (descendente).\r\n", auction_id);
+        if (is_abbrev(option, "direcao") || is_abbrev(option, "direction")) {
+            if (is_abbrev(value, "ascendente") || is_abbrev(value, "ascending") || is_abbrev(value, "asc")) {
+                auction->direction = AUCTION_ASCENDING;
+                auction->auction_type = AUCTION_TYPE_ENGLISH; /* Update legacy field */
+                send_to_char(ch, "Direção do leilão #%d alterada para ASCENDENTE (preço sobe).\r\n", auction_id);
+            } else if (is_abbrev(value, "descendente") || is_abbrev(value, "descending") || is_abbrev(value, "desc")) {
+                auction->direction = AUCTION_DESCENDING;
+                auction->auction_type = AUCTION_TYPE_DUTCH; /* Update legacy field */
+                send_to_char(ch, "Direção do leilão #%d alterada para DESCENDENTE (preço desce).\r\n", auction_id);
             } else {
-                send_to_char(ch, "Tipo inválido. Use: ingles ou holandes\r\n");
+                send_to_char(ch, "Direção inválida. Use: ascendente ou descendente\r\n");
+            }
+        } else if (is_abbrev(option, "mecanismo") || is_abbrev(option, "mechanism")) {
+            if (is_abbrev(value, "primeiro") || is_abbrev(value, "first") || is_abbrev(value, "1")) {
+                auction->price_mechanism = AUCTION_FIRST_PRICE;
+                send_to_char(ch, "Mecanismo do leilão #%d alterado para PRIMEIRO PREÇO.\r\n", auction_id);
+                send_to_char(ch, "O vencedor pagará exatamente o valor que ofereceu.\r\n");
+            } else if (is_abbrev(value, "segundo") || is_abbrev(value, "second") || is_abbrev(value, "2")) {
+                auction->price_mechanism = AUCTION_SECOND_PRICE;
+                send_to_char(ch, "Mecanismo do leilão #%d alterado para SEGUNDO PREÇO.\r\n", auction_id);
+                send_to_char(ch, "O vencedor pagará o valor do segundo maior lance.\r\n");
+            } else {
+                send_to_char(ch, "Mecanismo inválido. Use: primeiro ou segundo\r\n");
             }
         } else if (is_abbrev(option, "acesso") || is_abbrev(option, "access")) {
             if (is_abbrev(value, "aberto") || is_abbrev(value, "open")) {
@@ -363,38 +378,45 @@ ACMD(do_auction)
     if (is_abbrev(subcommand, "ajuda") || is_abbrev(subcommand, "help")) {
         send_to_char(ch, "\r\n&c=== AJUDA DO SISTEMA DE LEILÕES ===&n\r\n\r\n");
 
-        send_to_char(ch, "&YTIPOS DE LEILÃO:&n\r\n");
-        send_to_char(ch, "  &gINGLÊS (Ascendente/Primeiro Preço)&n - Padrão\r\n");
-        send_to_char(ch, "    • Começa com preço baixo e vai subindo\r\n");
+        send_to_char(ch, "&YDIREÇÃO DO LEILÃO:&n\r\n");
+        send_to_char(ch, "  &gASCENDENTE&n - Preço sobe com os lances (tradicional)\r\n");
+        send_to_char(ch, "    • Começa com preço baixo\r\n");
         send_to_char(ch, "    • Jogadores dão lances cada vez maiores\r\n");
-        send_to_char(ch, "    • Vence quem der o maior lance\r\n");
-        send_to_char(ch, "    • Paga o valor que ofereceu\r\n");
-        send_to_char(ch, "    • Exemplo: Lance inicial 100, jogador A dá 150, B dá 200 → B vence e paga 200\r\n\r\n");
+        send_to_char(ch, "    • Vence quem der o maior lance ao final\r\n\r\n");
 
-        send_to_char(ch, "  &gHOLANDÊS (Descendente/Segundo Preço)&n\r\n");
-        send_to_char(ch, "    • Começa com preço alto e vai baixando\r\n");
-        send_to_char(ch, "    • Primeiro lance aceito vence\r\n");
-        send_to_char(ch, "    • Paga o segundo maior lance (economia!)\r\n");
-        send_to_char(ch, "    • Exemplo: Preço inicial 500, jogador A aceita 300 → A vence mas paga menos\r\n\r\n");
+        send_to_char(ch, "  &gDESCENDENTE&n - Preço desce automaticamente (leilão holandês)\r\n");
+        send_to_char(ch, "    • Começa com preço alto\r\n");
+        send_to_char(ch, "    • Preço vai baixando automaticamente\r\n");
+        send_to_char(ch, "    • Primeiro a aceitar vence imediatamente\r\n\r\n");
+
+        send_to_char(ch, "&YMECANISMO DE PREÇO:&n\r\n");
+        send_to_char(ch, "  &gPRIMEIRO PREÇO&n - Vencedor paga o que ofereceu\r\n");
+        send_to_char(ch, "    • Pagamento = lance vencedor\r\n");
+        send_to_char(ch, "    • Exemplo: A dá 100, B dá 200 → B paga 200\r\n");
+        send_to_char(ch, "    • Mais comum e intuitivo\r\n\r\n");
+
+        send_to_char(ch, "  &gSEGUNDO PREÇO&n - Vencedor paga segundo maior lance (Vickrey)\r\n");
+        send_to_char(ch, "    • Pagamento = segundo maior lance\r\n");
+        send_to_char(ch, "    • Exemplo: A dá 100, B dá 200 → B paga 100\r\n");
+        send_to_char(ch, "    • Incentiva lances honestos\r\n\r\n");
+
+        send_to_char(ch, "&YCOMBINAÇÕES POSSÍVEIS:&n\r\n");
+        send_to_char(ch, "  • Ascendente + Primeiro Preço  = Leilão Inglês (padrão)\r\n");
+        send_to_char(ch, "  • Ascendente + Segundo Preço   = Leilão Vickrey\r\n");
+        send_to_char(ch, "  • Descendente + Primeiro Preço = Leilão Holandês\r\n");
+        send_to_char(ch, "  • Descendente + Segundo Preço  = Leilão Holandês Reverso\r\n\r\n");
 
         send_to_char(ch, "&YMODOS DE ACESSO:&n\r\n");
-        send_to_char(ch, "  &gABERTO&n - Padrão\r\n");
-        send_to_char(ch, "    • Qualquer jogador pode participar\r\n");
-        send_to_char(ch, "    • Basta ir até a casa de leilões\r\n");
-        send_to_char(ch, "    • Ideal para vender itens comuns\r\n\r\n");
-
-        send_to_char(ch, "  &gFECHADO&n\r\n");
-        send_to_char(ch, "    • Apenas jogadores convidados podem participar\r\n");
-        send_to_char(ch, "    • Convidados precisam pegar passe com Belchior\r\n");
-        send_to_char(ch, "    • Ideal para itens raros ou vendas privadas\r\n");
-        send_to_char(ch, "    • Use: leilao convidar [id] [jogador]\r\n\r\n");
+        send_to_char(ch, "  &gABERTO&n - Qualquer jogador pode participar\r\n");
+        send_to_char(ch, "  &gFECHADO&n - Apenas convidados (precisam de passe)\r\n\r\n");
 
         send_to_char(ch, "&YOPÇÕES DE CONFIGURAÇÃO:&n\r\n");
-        send_to_char(ch, "  &gtipo&n - Muda entre inglês e holandês\r\n");
-        send_to_char(ch, "  &gacesso&n - Muda entre aberto e fechado\r\n");
-        send_to_char(ch, "  &gduracao&n - Tempo do leilão (60-3600 segundos)\r\n");
-        send_to_char(ch, "  &gpreco_minimo&n - Preço de reserva (mínimo para vender)\r\n");
-        send_to_char(ch, "  &gpreco_compra&n - Preço de compra direta (encerra o leilão)\r\n\r\n");
+        send_to_char(ch, "  &gdirecao [ascendente|descendente]&n  - Direção do preço\r\n");
+        send_to_char(ch, "  &gmecanismo [primeiro|segundo]&n     - Mecanismo de preço\r\n");
+        send_to_char(ch, "  &gacesso [aberto|fechado]&n          - Modo de acesso\r\n");
+        send_to_char(ch, "  &gduracao [segundos]&n               - Tempo do leilão\r\n");
+        send_to_char(ch, "  &gpreco_minimo [valor]&n             - Preço mínimo\r\n");
+        send_to_char(ch, "  &gpreco_compra [valor]&n             - Compra direta\r\n\r\n");
 
         send_to_char(ch, "&YEXEMPLOS DE USO:&n\r\n");
         send_to_char(ch, "  leilao criar espada 1000\r\n");
