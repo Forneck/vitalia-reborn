@@ -388,4 +388,13 @@ void weather_change(int zone)
         }
     }
     zone_table[zone].weather = weather;
+
+    /* Apply weather effects to mob emotions in this zone */
+    struct char_data *ch;
+    for (ch = character_list; ch; ch = ch->next) {
+        /* Only affect NPCs that are in this zone and outdoors */
+        if (IS_NPC(ch) && world[IN_ROOM(ch)].zone == zone && OUTSIDE(ch)) {
+            apply_weather_to_mood(ch, weather, weather_info.sunlight);
+        }
+    }
 }

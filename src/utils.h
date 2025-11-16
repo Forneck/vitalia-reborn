@@ -174,6 +174,9 @@ void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int
 int get_effective_emotion_toward(struct char_data *mob, struct char_data *target, int emotion_type);
 int get_relationship_emotion(struct char_data *mob, struct char_data *target, int emotion_type);
 
+/* Weather-emotion integration - applies weather effects to mob moods */
+void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, int sunlight);
+
 /* Stoneskin utility functions */
 int get_stoneskin_points(struct char_data *ch);
 void set_stoneskin_points(struct char_data *ch, int points);

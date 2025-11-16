@@ -5357,7 +5357,7 @@ void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int
 /**
  * Get relationship-based emotion level toward a specific entity from memories.
  * This implements the "relationship layer" of the hybrid emotion system.
- * 
+ *
  * @param mob The mob whose relationship emotions to query
  * @param target The entity to check relationship with
  * @param emotion_type The type of emotion (EMOTION_TYPE_*)
@@ -5429,69 +5429,69 @@ int get_relationship_emotion(struct char_data *mob, struct char_data *target, in
 
             /* Get the specific emotion value from memory */
             switch (emotion_type) {
-            case EMOTION_TYPE_FEAR:
-                emotion_value = mem->fear_level;
-                break;
-            case EMOTION_TYPE_ANGER:
-                emotion_value = mem->anger_level;
-                break;
-            case EMOTION_TYPE_HAPPINESS:
-                emotion_value = mem->happiness_level;
-                break;
-            case EMOTION_TYPE_SADNESS:
-                emotion_value = mem->sadness_level;
-                break;
-            case EMOTION_TYPE_FRIENDSHIP:
-                emotion_value = mem->friendship_level;
-                break;
-            case EMOTION_TYPE_LOVE:
-                emotion_value = mem->love_level;
-                break;
-            case EMOTION_TYPE_TRUST:
-                emotion_value = mem->trust_level;
-                break;
-            case EMOTION_TYPE_LOYALTY:
-                emotion_value = mem->loyalty_level;
-                break;
-            case EMOTION_TYPE_CURIOSITY:
-                emotion_value = mem->curiosity_level;
-                break;
-            case EMOTION_TYPE_GREED:
-                emotion_value = mem->greed_level;
-                break;
-            case EMOTION_TYPE_PRIDE:
-                emotion_value = mem->pride_level;
-                break;
-            case EMOTION_TYPE_COMPASSION:
-                emotion_value = mem->compassion_level;
-                break;
-            case EMOTION_TYPE_ENVY:
-                emotion_value = mem->envy_level;
-                break;
-            case EMOTION_TYPE_COURAGE:
-                emotion_value = mem->courage_level;
-                break;
-            case EMOTION_TYPE_EXCITEMENT:
-                emotion_value = mem->excitement_level;
-                break;
-            case EMOTION_TYPE_DISGUST:
-                emotion_value = mem->disgust_level;
-                break;
-            case EMOTION_TYPE_SHAME:
-                emotion_value = mem->shame_level;
-                break;
-            case EMOTION_TYPE_PAIN:
-                emotion_value = mem->pain_level;
-                break;
-            case EMOTION_TYPE_HORROR:
-                emotion_value = mem->horror_level;
-                break;
-            case EMOTION_TYPE_HUMILIATION:
-                emotion_value = mem->humiliation_level;
-                break;
-            default:
-                emotion_value = 0;
-                break;
+                case EMOTION_TYPE_FEAR:
+                    emotion_value = mem->fear_level;
+                    break;
+                case EMOTION_TYPE_ANGER:
+                    emotion_value = mem->anger_level;
+                    break;
+                case EMOTION_TYPE_HAPPINESS:
+                    emotion_value = mem->happiness_level;
+                    break;
+                case EMOTION_TYPE_SADNESS:
+                    emotion_value = mem->sadness_level;
+                    break;
+                case EMOTION_TYPE_FRIENDSHIP:
+                    emotion_value = mem->friendship_level;
+                    break;
+                case EMOTION_TYPE_LOVE:
+                    emotion_value = mem->love_level;
+                    break;
+                case EMOTION_TYPE_TRUST:
+                    emotion_value = mem->trust_level;
+                    break;
+                case EMOTION_TYPE_LOYALTY:
+                    emotion_value = mem->loyalty_level;
+                    break;
+                case EMOTION_TYPE_CURIOSITY:
+                    emotion_value = mem->curiosity_level;
+                    break;
+                case EMOTION_TYPE_GREED:
+                    emotion_value = mem->greed_level;
+                    break;
+                case EMOTION_TYPE_PRIDE:
+                    emotion_value = mem->pride_level;
+                    break;
+                case EMOTION_TYPE_COMPASSION:
+                    emotion_value = mem->compassion_level;
+                    break;
+                case EMOTION_TYPE_ENVY:
+                    emotion_value = mem->envy_level;
+                    break;
+                case EMOTION_TYPE_COURAGE:
+                    emotion_value = mem->courage_level;
+                    break;
+                case EMOTION_TYPE_EXCITEMENT:
+                    emotion_value = mem->excitement_level;
+                    break;
+                case EMOTION_TYPE_DISGUST:
+                    emotion_value = mem->disgust_level;
+                    break;
+                case EMOTION_TYPE_SHAME:
+                    emotion_value = mem->shame_level;
+                    break;
+                case EMOTION_TYPE_PAIN:
+                    emotion_value = mem->pain_level;
+                    break;
+                case EMOTION_TYPE_HORROR:
+                    emotion_value = mem->horror_level;
+                    break;
+                case EMOTION_TYPE_HUMILIATION:
+                    emotion_value = mem->humiliation_level;
+                    break;
+                default:
+                    emotion_value = 0;
+                    break;
             }
 
             /* Accumulate weighted emotions */
@@ -5514,11 +5514,11 @@ int get_relationship_emotion(struct char_data *mob, struct char_data *target, in
  * This combines:
  * 1. MOOD (global emotional state) - base emotion level
  * 2. RELATIONSHIP (per-entity memories) - modifier based on past interactions
- * 
+ *
  * This implements the hybrid model requested in the emotion system upgrade:
  * - Mood affects all interactions (environmental, time-based, general state)
  * - Relationship modifies emotion specifically toward this target
- * 
+ *
  * @param mob The mob whose emotion to query
  * @param target The target entity (can be NULL for mood-only queries)
  * @param emotion_type The type of emotion (EMOTION_TYPE_*)
@@ -5536,69 +5536,69 @@ int get_effective_emotion_toward(struct char_data *mob, struct char_data *target
 
     /* Get MOOD (global state) - the base emotion */
     switch (emotion_type) {
-    case EMOTION_TYPE_FEAR:
-        mood_emotion = mob->ai_data->emotion_fear;
-        break;
-    case EMOTION_TYPE_ANGER:
-        mood_emotion = mob->ai_data->emotion_anger;
-        break;
-    case EMOTION_TYPE_HAPPINESS:
-        mood_emotion = mob->ai_data->emotion_happiness;
-        break;
-    case EMOTION_TYPE_SADNESS:
-        mood_emotion = mob->ai_data->emotion_sadness;
-        break;
-    case EMOTION_TYPE_FRIENDSHIP:
-        mood_emotion = mob->ai_data->emotion_friendship;
-        break;
-    case EMOTION_TYPE_LOVE:
-        mood_emotion = mob->ai_data->emotion_love;
-        break;
-    case EMOTION_TYPE_TRUST:
-        mood_emotion = mob->ai_data->emotion_trust;
-        break;
-    case EMOTION_TYPE_LOYALTY:
-        mood_emotion = mob->ai_data->emotion_loyalty;
-        break;
-    case EMOTION_TYPE_CURIOSITY:
-        mood_emotion = mob->ai_data->emotion_curiosity;
-        break;
-    case EMOTION_TYPE_GREED:
-        mood_emotion = mob->ai_data->emotion_greed;
-        break;
-    case EMOTION_TYPE_PRIDE:
-        mood_emotion = mob->ai_data->emotion_pride;
-        break;
-    case EMOTION_TYPE_COMPASSION:
-        mood_emotion = mob->ai_data->emotion_compassion;
-        break;
-    case EMOTION_TYPE_ENVY:
-        mood_emotion = mob->ai_data->emotion_envy;
-        break;
-    case EMOTION_TYPE_COURAGE:
-        mood_emotion = mob->ai_data->emotion_courage;
-        break;
-    case EMOTION_TYPE_EXCITEMENT:
-        mood_emotion = mob->ai_data->emotion_excitement;
-        break;
-    case EMOTION_TYPE_DISGUST:
-        mood_emotion = mob->ai_data->emotion_disgust;
-        break;
-    case EMOTION_TYPE_SHAME:
-        mood_emotion = mob->ai_data->emotion_shame;
-        break;
-    case EMOTION_TYPE_PAIN:
-        mood_emotion = mob->ai_data->emotion_pain;
-        break;
-    case EMOTION_TYPE_HORROR:
-        mood_emotion = mob->ai_data->emotion_horror;
-        break;
-    case EMOTION_TYPE_HUMILIATION:
-        mood_emotion = mob->ai_data->emotion_humiliation;
-        break;
-    default:
-        mood_emotion = 0;
-        break;
+        case EMOTION_TYPE_FEAR:
+            mood_emotion = mob->ai_data->emotion_fear;
+            break;
+        case EMOTION_TYPE_ANGER:
+            mood_emotion = mob->ai_data->emotion_anger;
+            break;
+        case EMOTION_TYPE_HAPPINESS:
+            mood_emotion = mob->ai_data->emotion_happiness;
+            break;
+        case EMOTION_TYPE_SADNESS:
+            mood_emotion = mob->ai_data->emotion_sadness;
+            break;
+        case EMOTION_TYPE_FRIENDSHIP:
+            mood_emotion = mob->ai_data->emotion_friendship;
+            break;
+        case EMOTION_TYPE_LOVE:
+            mood_emotion = mob->ai_data->emotion_love;
+            break;
+        case EMOTION_TYPE_TRUST:
+            mood_emotion = mob->ai_data->emotion_trust;
+            break;
+        case EMOTION_TYPE_LOYALTY:
+            mood_emotion = mob->ai_data->emotion_loyalty;
+            break;
+        case EMOTION_TYPE_CURIOSITY:
+            mood_emotion = mob->ai_data->emotion_curiosity;
+            break;
+        case EMOTION_TYPE_GREED:
+            mood_emotion = mob->ai_data->emotion_greed;
+            break;
+        case EMOTION_TYPE_PRIDE:
+            mood_emotion = mob->ai_data->emotion_pride;
+            break;
+        case EMOTION_TYPE_COMPASSION:
+            mood_emotion = mob->ai_data->emotion_compassion;
+            break;
+        case EMOTION_TYPE_ENVY:
+            mood_emotion = mob->ai_data->emotion_envy;
+            break;
+        case EMOTION_TYPE_COURAGE:
+            mood_emotion = mob->ai_data->emotion_courage;
+            break;
+        case EMOTION_TYPE_EXCITEMENT:
+            mood_emotion = mob->ai_data->emotion_excitement;
+            break;
+        case EMOTION_TYPE_DISGUST:
+            mood_emotion = mob->ai_data->emotion_disgust;
+            break;
+        case EMOTION_TYPE_SHAME:
+            mood_emotion = mob->ai_data->emotion_shame;
+            break;
+        case EMOTION_TYPE_PAIN:
+            mood_emotion = mob->ai_data->emotion_pain;
+            break;
+        case EMOTION_TYPE_HORROR:
+            mood_emotion = mob->ai_data->emotion_horror;
+            break;
+        case EMOTION_TYPE_HUMILIATION:
+            mood_emotion = mob->ai_data->emotion_humiliation;
+            break;
+        default:
+            mood_emotion = 0;
+            break;
     }
 
     /* If no target specified, return mood only (e.g., for environmental checks) */
@@ -7203,5 +7203,127 @@ void update_mob_emotion_received_valuable(struct char_data *mob, struct char_dat
     if (mob->ai_data->emotion_greed > 60) {
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 10));
         adjust_emotion(mob, &mob->ai_data->emotion_excitement, rand_number(5, 10));
+    }
+}
+
+/**
+ * Apply weather effects to a mob's mood (global emotional state)
+ * Based on WEATHER_EMOTION_INTEGRATION.md specification
+ *
+ * @param mob The mob whose emotions to update
+ * @param weather The weather data to apply
+ * @param sunlight The current sunlight level
+ */
+void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, int sunlight)
+{
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !weather || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Sky condition effects */
+    switch (weather->sky) {
+        case SKY_CLOUDLESS:
+            /* Clear skies: happiness +5-10, excitement +3-5, sadness -3-5, fear -2-3 */
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 10));
+            adjust_emotion(mob, &mob->ai_data->emotion_excitement, rand_number(3, 5));
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, -rand_number(3, 5));
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(2, 3));
+            break;
+
+        case SKY_CLOUDY:
+            /* Cloudy: sadness +2-4, happiness -2-3 */
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(2, 4));
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(2, 3));
+            break;
+
+        case SKY_RAINING:
+            /* Raining: sadness +3-6, happiness -3-5 */
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(3, 6));
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(3, 5));
+            break;
+
+        case SKY_LIGHTNING:
+            /* Lightning storm: fear +5-8, horror +3-5, excitement +3-5 */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(5, 8));
+            adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(3, 5));
+            adjust_emotion(mob, &mob->ai_data->emotion_excitement, rand_number(3, 5));
+            break;
+
+        case SKY_SNOWING:
+            /* Snowing: fear +2-3 */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(2, 3));
+            break;
+    }
+
+    /* Temperature effects */
+    if (weather->temperature < 0) {
+        /* Very cold: fear +3-5 */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(3, 5));
+    } else if (weather->temperature >= 0 && weather->temperature < 10) {
+        /* Cold: slight discomfort (modeled as reduced happiness) */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(1, 2));
+    } else if (weather->temperature >= 10 && weather->temperature <= 25) {
+        /* Comfortable: happiness +3-5 */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(3, 5));
+    } else if (weather->temperature > 25 && weather->temperature <= 35) {
+        /* Hot: reduced happiness/energy */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(2, 4));
+    } else if (weather->temperature > 35) {
+        /* Very hot: fear +2-4, significant discomfort */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(2, 4));
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(4, 6));
+        adjust_emotion(mob, &mob->ai_data->emotion_pain, rand_number(2, 3));
+    }
+
+    /* Humidity effects */
+    if (weather->humidity < 0.30) {
+        /* Low humidity: slight discomfort */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(1, 2));
+    } else if (weather->humidity >= 0.60 && weather->humidity < 0.80) {
+        /* High humidity: discomfort */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(2, 3));
+    } else if (weather->humidity >= 0.80) {
+        /* Very high humidity: significant discomfort */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(3, 4));
+    }
+
+    /* Wind effects */
+    if (weather->winds < 2.0) {
+        /* Calm: peaceful */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(1, 2));
+    } else if (weather->winds >= 2.0 && weather->winds < 5.0) {
+        /* Gentle breeze: pleasant */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(2, 4));
+    } else if (weather->winds >= 10.0 && weather->winds < 15.0) {
+        /* Strong wind: fear +3-5 */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(3, 5));
+    } else if (weather->winds >= 15.0) {
+        /* Very strong wind: fear +6-10, horror +3-5 */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(6, 10));
+        adjust_emotion(mob, &mob->ai_data->emotion_horror, rand_number(3, 5));
+    }
+
+    /* Time of day effects (sunlight) */
+    switch (sunlight) {
+        case SUN_RISE:
+            /* Dawn: happiness +2-4 */
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(2, 4));
+            break;
+
+        case SUN_LIGHT:
+            /* Daylight: happiness +3-5, fear -3-5 */
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(3, 5));
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -rand_number(3, 5));
+            adjust_emotion(mob, &mob->ai_data->emotion_courage, rand_number(2, 4));
+            break;
+
+        case SUN_SET:
+            /* Dusk: slight melancholy */
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, rand_number(1, 2));
+            break;
+
+        case SUN_DARK:
+            /* Nighttime: fear +3-6 */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(3, 6));
+            break;
     }
 }
