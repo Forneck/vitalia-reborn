@@ -858,6 +858,7 @@ ACMD(do_experiment)
  * Update variant skill levels when a prerequisite skill levels up.
  * When a skill is improved, all known variant skills that depend on it
  * should be updated to match the prerequisite skill level.
+ * This function recursively updates chains (A -> B -> C).
  *
  * @param ch The character whose skills are being updated
  * @param prerequisite_vnum The vnum of the prerequisite skill that was leveled up
@@ -887,6 +888,9 @@ void update_variant_skills(struct char_data *ch, int prerequisite_vnum, int new_
                          "@GVariante atualizada:@n Sua proficiência em @Y%s@n aumentou para %d "
                          "para corresponder à habilidade pré-requisito.\r\n",
                          ptr->name, new_level);
+
+            /* Recursively update any variants that depend on this variant (chain update) */
+            update_variant_skills(ch, ptr->vnum, new_level);
         }
     }
 }
