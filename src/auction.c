@@ -21,12 +21,34 @@
 extern SPECIAL(shop_keeper);
 extern SPECIAL(cryogenicist);
 extern shop_rnum find_shop_by_keeper(mob_rnum rnum);
+extern struct char_data *character_list;
 
 /* Global auction variables */
 struct auction_data *auction_list = NULL;
 struct auction_pass *auction_pass_list = NULL;
 struct auction_invitation *auction_invitation_list = NULL;
 int next_auction_id = 1;
+
+/**
+ * Find an online player by name (for auction system)
+ * This searches the character list directly without visibility checks
+ */
+static struct char_data *find_player_online(const char *name)
+{
+    struct char_data *i;
+
+    if (!name || !*name) {
+        return NULL;
+    }
+
+    for (i = character_list; i; i = i->next) {
+        if (!IS_NPC(i) && i->desc && !str_cmp(GET_NAME(i), name)) {
+            return i;
+        }
+    }
+
+    return NULL;
+}
 
 /**
  * Create a new auction
@@ -338,7 +360,7 @@ struct auction_data *find_auction(int auction_id)
 int place_bid(struct char_data *bidder, int auction_id, long amount)
 {
     struct auction_data *auction;
-    struct auction_bid *bid, *prev_bid;
+    struct auction_bid *bid, *prev_bid, **bid_ptr;
 
     if (!bidder) {
         return 0;
@@ -359,13 +381,19 @@ int place_bid(struct char_data *bidder, int auction_id, long amount)
         return 0;
     }
 
-    /* If this bidder already has a bid, refund their previous bid */
-    for (prev_bid = auction->bids; prev_bid; prev_bid = prev_bid->next) {
+    /* If this bidder already has a bid, refund and remove it */
+    bid_ptr = &auction->bids;
+    while (*bid_ptr) {
+        prev_bid = *bid_ptr;
         if (str_cmp(prev_bid->bidder_name, GET_NAME(bidder)) == 0) {
             /* Refund previous bid */
             increase_gold(bidder, prev_bid->amount);
+            /* Remove from list and free memory */
+            *bid_ptr = prev_bid->next;
+            free(prev_bid);
             break;
         }
+        bid_ptr = &prev_bid->next;
     }
 
     /* Reserve money from bidder (take it now, will be used when auction ends) */
@@ -510,9 +538,9 @@ void end_auction(struct auction_data *auction)
 
     /* Check if there was a winning bid */
     if (auction->winning_bid && auction->winning_bid->amount >= auction->reserve_price) {
-        /* Try to find seller and winner online */
-        seller = get_player_vis(NULL, auction->seller_name, NULL, 0);
-        winner = get_player_vis(NULL, auction->winning_bid->bidder_name, NULL, 0);
+        /* Try to find seller and winner online - using find_player_online instead of get_player_vis */
+        seller = find_player_online(auction->seller_name);
+        winner = find_player_online(auction->winning_bid->bidder_name);
 
         /* Refund all losing bidders */
         for (bid = auction->bids; bid; bid = bid->next) {
@@ -522,7 +550,7 @@ void end_auction(struct auction_data *auction)
             }
 
             /* Try to refund this bidder */
-            bidder_char = get_player_vis(NULL, bid->bidder_name, NULL, 0);
+            bidder_char = find_player_online(bid->bidder_name);
             if (bidder_char) {
                 increase_gold(bidder_char, bid->amount);
                 send_to_char(bidder_char, "Seu lance de %s moedas no leilão #%d foi superado. Moedas devolvidas.\r\n",
@@ -573,11 +601,11 @@ void end_auction(struct auction_data *auction)
              auction->winning_bid->amount);
     } else {
         /* No winning bid or reserve not met - refund all bidders and return item to seller */
-        seller = get_player_vis(NULL, auction->seller_name, NULL, 0);
+        seller = find_player_online(auction->seller_name);
 
         /* Refund all bidders */
         for (bid = auction->bids; bid; bid = bid->next) {
-            bidder_char = get_player_vis(NULL, bid->bidder_name, NULL, 0);
+            bidder_char = find_player_online(bid->bidder_name);
             if (bidder_char) {
                 increase_gold(bidder_char, bid->amount);
                 send_to_char(bidder_char, "O leilão #%d foi cancelado. Seu lance de %s moedas foi devolvido.\r\n",

@@ -85,8 +85,10 @@ ACMD(do_auction)
 
         if (auction) {
             auction->state = AUCTION_ACTIVE;
+            /* Safely access item description */
+            const char *item_desc = obj->short_description ? obj->short_description : "um item";
             send_to_char(ch, "Leilão #%d criado para %s com preço inicial de %d moedas.\r\n", auction->auction_id,
-                         obj->short_description, bid_amount);
+                         item_desc, bid_amount);
 
             /* Remove item from player's inventory - it's now in the auction system */
             obj_from_char(obj);
