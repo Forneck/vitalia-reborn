@@ -193,7 +193,7 @@ AutoRaiseResult autoraise_corpse(struct obj_data *corpse)
         raise_offline(ch, corpse);
         free_char(ch);
     } else {
-        raise_online(ch, NULL, corpse, corpse->in_room, FALSE);
+        raise_online(ch, NULL, corpse, corpse->in_room, 2);
     }
     return (ar_extract);
 }
