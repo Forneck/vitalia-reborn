@@ -35,12 +35,14 @@ ACMD(do_auction)
         send_to_char(ch, "Comandos de leilão disponíveis:\r\n");
         send_to_char(ch, "  leilao listar            - Ver leilões ativos\r\n");
         send_to_char(ch, "  leilao criar [item] [preço] - Criar novo leilão\r\n");
+        send_to_char(ch, "  leilao configurar [id] [opção] [valor] - Configurar leilão (vendedor)\r\n");
         send_to_char(ch, "  leilao dar [id] [valor]  - Dar lance em leilão\r\n");
         send_to_char(ch, "  leilao info [id]         - Ver detalhes do leilão\r\n");
         send_to_char(ch, "  leilao convidar [id] [jogador] - Convidar jogador para leilão fechado\r\n");
         send_to_char(ch, "  leilao desconvidar [id] [jogador] - Remover convite de jogador\r\n");
         send_to_char(ch, "  leilao convidados [id]   - Ver lista de convidados (vendedor)\r\n");
         send_to_char(ch, "  leilao passe             - Solicitar passe para leilões fechados\r\n");
+        send_to_char(ch, "  leilao ajuda             - Ver ajuda detalhada sobre tipos e opções\r\n");
         return;
     }
 
@@ -98,6 +100,126 @@ ACMD(do_auction)
                  auction->item_vnum);
         } else {
             send_to_char(ch, "Erro ao criar o leilão.\r\n");
+        }
+        return;
+    }
+
+    if (is_abbrev(subcommand, "configurar") || is_abbrev(subcommand, "config")) {
+        char option[MAX_INPUT_LENGTH], value[MAX_INPUT_LENGTH];
+
+        if (!*arg1 || !*arg2) {
+            send_to_char(ch, "Uso: leilao configurar [id_leilao] [opção] [valor]\r\n");
+            send_to_char(ch, "\r\nOpções disponíveis:\r\n");
+            send_to_char(ch, "  tipo [ingles|holandes]     - Tipo do leilão\r\n");
+            send_to_char(ch, "  acesso [aberto|fechado]    - Modo de acesso\r\n");
+            send_to_char(ch, "  duracao [segundos]         - Duração (60-3600)\r\n");
+            send_to_char(ch, "  preco_minimo [valor]       - Preço mínimo de reserva\r\n");
+            send_to_char(ch, "  preco_compra [valor]       - Preço de compra direta\r\n");
+            send_to_char(ch, "\r\nUse 'leilao ajuda' para mais detalhes sobre cada opção.\r\n");
+            return;
+        }
+
+        auction_id = atoi(arg1);
+        half_chop(argument, option, value);
+        {
+            char *val_ptr = value;
+            skip_spaces(&val_ptr);
+            strlcpy(value, val_ptr, sizeof(value));
+        }
+
+        auction = find_auction(auction_id);
+        if (!auction) {
+            send_to_char(ch, "Leilão #%d não encontrado.\r\n", auction_id);
+            return;
+        }
+
+        /* Check if player is the seller */
+        if (str_cmp(auction->seller_name, GET_NAME(ch)) != 0 && GET_LEVEL(ch) < LVL_IMMORT) {
+            send_to_char(ch, "Apenas o vendedor pode configurar este leilão.\r\n");
+            return;
+        }
+
+        /* Check if auction is still configurable (no bids yet) */
+        if (auction->bids != NULL) {
+            send_to_char(ch, "Não é possível alterar a configuração após o primeiro lance.\r\n");
+            return;
+        }
+
+        /* Check if auction is active */
+        if (auction->state != AUCTION_ACTIVE && auction->state != AUCTION_INACTIVE) {
+            send_to_char(ch, "Este leilão já foi finalizado.\r\n");
+            return;
+        }
+
+        /* Process configuration option */
+        if (is_abbrev(option, "tipo") || is_abbrev(option, "type")) {
+            if (is_abbrev(value, "ingles") || is_abbrev(value, "english")) {
+                auction->auction_type = AUCTION_TYPE_ENGLISH;
+                send_to_char(ch, "Tipo do leilão #%d alterado para INGLÊS (ascendente).\r\n", auction_id);
+            } else if (is_abbrev(value, "holandes") || is_abbrev(value, "dutch")) {
+                auction->auction_type = AUCTION_TYPE_DUTCH;
+                send_to_char(ch, "Tipo do leilão #%d alterado para HOLANDÊS (descendente).\r\n", auction_id);
+            } else {
+                send_to_char(ch, "Tipo inválido. Use: ingles ou holandes\r\n");
+            }
+        } else if (is_abbrev(option, "acesso") || is_abbrev(option, "access")) {
+            if (is_abbrev(value, "aberto") || is_abbrev(value, "open")) {
+                auction->access_mode = AUCTION_OPEN;
+                send_to_char(ch, "Modo de acesso do leilão #%d alterado para ABERTO.\r\n", auction_id);
+            } else if (is_abbrev(value, "fechado") || is_abbrev(value, "closed")) {
+                auction->access_mode = AUCTION_CLOSED;
+                send_to_char(ch, "Modo de acesso do leilão #%d alterado para FECHADO.\r\n", auction_id);
+                send_to_char(ch, "Use 'leilao convidar %d [jogador]' para convidar participantes.\r\n", auction_id);
+            } else {
+                send_to_char(ch, "Modo inválido. Use: aberto ou fechado\r\n");
+            }
+        } else if (is_abbrev(option, "duracao") || is_abbrev(option, "duration")) {
+            int new_duration = atoi(value);
+            if (new_duration < MIN_AUCTION_TIME || new_duration > MAX_AUCTION_TIME) {
+                send_to_char(ch, "Duração inválida. Use um valor entre %d e %d segundos.\r\n", MIN_AUCTION_TIME,
+                             MAX_AUCTION_TIME);
+            } else {
+                auction->duration = new_duration;
+                auction->end_time = auction->start_time + new_duration;
+                send_to_char(ch, "Duração do leilão #%d alterada para %d segundos (%d minutos).\r\n", auction_id,
+                             new_duration, new_duration / 60);
+            }
+        } else if (is_abbrev(option, "preco_minimo") || is_abbrev(option, "reserve")) {
+            long new_reserve = atol(value);
+            if (new_reserve < 0) {
+                send_to_char(ch, "Preço mínimo não pode ser negativo.\r\n");
+            } else if (new_reserve > 0 && new_reserve < auction->starting_price) {
+                send_to_char(ch, "Preço mínimo não pode ser menor que o preço inicial (%ld moedas).\r\n",
+                             auction->starting_price);
+            } else {
+                auction->reserve_price = new_reserve;
+                if (new_reserve > 0) {
+                    send_to_char(ch, "Preço mínimo do leilão #%d definido em %ld moedas.\r\n", auction_id, new_reserve);
+                    send_to_char(ch, "O item não será vendido se os lances não atingirem este valor.\r\n");
+                } else {
+                    send_to_char(ch, "Preço mínimo removido do leilão #%d.\r\n", auction_id);
+                }
+            }
+        } else if (is_abbrev(option, "preco_compra") || is_abbrev(option, "buyout")) {
+            long new_buyout = atol(value);
+            if (new_buyout < 0) {
+                send_to_char(ch, "Preço de compra não pode ser negativo.\r\n");
+            } else if (new_buyout > 0 && new_buyout <= auction->starting_price) {
+                send_to_char(ch, "Preço de compra deve ser maior que o preço inicial (%ld moedas).\r\n",
+                             auction->starting_price);
+            } else {
+                auction->buyout_price = new_buyout;
+                if (new_buyout > 0) {
+                    send_to_char(ch, "Preço de compra direta do leilão #%d definido em %ld moedas.\r\n", auction_id,
+                                 new_buyout);
+                    send_to_char(ch, "Qualquer lance neste valor encerrará o leilão imediatamente.\r\n");
+                } else {
+                    send_to_char(ch, "Preço de compra direta removido do leilão #%d.\r\n", auction_id);
+                }
+            }
+        } else {
+            send_to_char(ch, "Opção de configuração desconhecida: %s\r\n", option);
+            send_to_char(ch, "Use 'leilao configurar' sem argumentos para ver as opções disponíveis.\r\n");
         }
         return;
     }
@@ -235,6 +357,54 @@ ACMD(do_auction)
 
         auction_id = atoi(arg1);
         show_auction_invitations(ch, auction_id);
+        return;
+    }
+
+    if (is_abbrev(subcommand, "ajuda") || is_abbrev(subcommand, "help")) {
+        send_to_char(ch, "\r\n&c=== AJUDA DO SISTEMA DE LEILÕES ===&n\r\n\r\n");
+
+        send_to_char(ch, "&YTIPOS DE LEILÃO:&n\r\n");
+        send_to_char(ch, "  &gINGLÊS (Ascendente/Primeiro Preço)&n - Padrão\r\n");
+        send_to_char(ch, "    • Começa com preço baixo e vai subindo\r\n");
+        send_to_char(ch, "    • Jogadores dão lances cada vez maiores\r\n");
+        send_to_char(ch, "    • Vence quem der o maior lance\r\n");
+        send_to_char(ch, "    • Paga o valor que ofereceu\r\n");
+        send_to_char(ch, "    • Exemplo: Lance inicial 100, jogador A dá 150, B dá 200 → B vence e paga 200\r\n\r\n");
+
+        send_to_char(ch, "  &gHOLANDÊS (Descendente/Segundo Preço)&n\r\n");
+        send_to_char(ch, "    • Começa com preço alto e vai baixando\r\n");
+        send_to_char(ch, "    • Primeiro lance aceito vence\r\n");
+        send_to_char(ch, "    • Paga o segundo maior lance (economia!)\r\n");
+        send_to_char(ch, "    • Exemplo: Preço inicial 500, jogador A aceita 300 → A vence mas paga menos\r\n\r\n");
+
+        send_to_char(ch, "&YMODOS DE ACESSO:&n\r\n");
+        send_to_char(ch, "  &gABERTO&n - Padrão\r\n");
+        send_to_char(ch, "    • Qualquer jogador pode participar\r\n");
+        send_to_char(ch, "    • Basta ir até a casa de leilões\r\n");
+        send_to_char(ch, "    • Ideal para vender itens comuns\r\n\r\n");
+
+        send_to_char(ch, "  &gFECHADO&n\r\n");
+        send_to_char(ch, "    • Apenas jogadores convidados podem participar\r\n");
+        send_to_char(ch, "    • Convidados precisam pegar passe com Belchior\r\n");
+        send_to_char(ch, "    • Ideal para itens raros ou vendas privadas\r\n");
+        send_to_char(ch, "    • Use: leilao convidar [id] [jogador]\r\n\r\n");
+
+        send_to_char(ch, "&YOPÇÕES DE CONFIGURAÇÃO:&n\r\n");
+        send_to_char(ch, "  &gtipo&n - Muda entre inglês e holandês\r\n");
+        send_to_char(ch, "  &gacesso&n - Muda entre aberto e fechado\r\n");
+        send_to_char(ch, "  &gduracao&n - Tempo do leilão (60-3600 segundos)\r\n");
+        send_to_char(ch, "  &gpreco_minimo&n - Preço de reserva (mínimo para vender)\r\n");
+        send_to_char(ch, "  &gpreco_compra&n - Preço de compra direta (encerra o leilão)\r\n\r\n");
+
+        send_to_char(ch, "&YEXEMPLOS DE USO:&n\r\n");
+        send_to_char(ch, "  leilao criar espada 1000\r\n");
+        send_to_char(ch, "  leilao configurar 5 tipo holandes\r\n");
+        send_to_char(ch, "  leilao configurar 5 acesso fechado\r\n");
+        send_to_char(ch, "  leilao configurar 5 duracao 1800\r\n");
+        send_to_char(ch, "  leilao configurar 5 preco_minimo 5000\r\n");
+        send_to_char(ch, "  leilao convidar 5 Jogador\r\n\r\n");
+
+        send_to_char(ch, "&ROBSERVAÇÃO:&n Configurações só podem ser alteradas antes do primeiro lance!\r\n\r\n");
         return;
     }
 
