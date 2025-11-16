@@ -135,6 +135,7 @@ static void prefedit_disp_main_menu(struct descriptor_data *d)
 
     send_to_char(d->character,
                  "%sV%s) Ver Dano     : %s[%s%3s%s]         %sE%s) Ver Emocoes : %s[%s%3s%s]\r\n"
+                 "%sH%s) Barra Vida   : %s[%s%3s%s]\r\n"
                  "%sT%s) Preferencias do Toggle...\r\n",
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_VIEWDAMAGE) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
@@ -142,6 +143,9 @@ static void prefedit_disp_main_menu(struct descriptor_data *d)
                  CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_DISPEMOTE) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
                  ONOFF(PREFEDIT_FLAGGED(PRF_DISPEMOTE)), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
+                 CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+                 PREFEDIT_FLAGGED(PRF_HITBAR) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
+                 ONOFF(PREFEDIT_FLAGGED(PRF_HITBAR)), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
                  CCNRM(d->character, C_NRM));
 
     /* Imm Prefs */
@@ -324,41 +328,41 @@ static void prefedit_disp_auto_menu(struct descriptor_data *d)
     send_to_char(d->character,
                  "\r\n"
                  "%sOpcoes Automaticas\r\n"
-                 "%s1%s) Autoexits    %s[%s%3s%s]      %s7%s) Mapa Auto    %s[%s%3s%s]\r\n"
-                 "%s2%s) Autoloot     %s[%s%3s%s]      %s8%s) Chave Auto   %s[%s%3s%s]\r\n"
-                 "%s3%s) Autogold     %s[%s%3s%s]      %s9%s) Porta Auto   %s[%s%3s%s]\r\n"
-                 "%s4%s) Autosac      %s[%s%3s%s]      %s0%s) Hitbar       %s[%s%3s%s]\r\n"
+                 "%s1%s) Autoexits    %s[%s%3s%s]      %s6%s) Autosplit    %s[%s%3s%s]\r\n"
+                 "%s2%s) Autoloot     %s[%s%3s%s]      %s7%s) Mapa Auto    %s[%s%3s%s]\r\n"
+                 "%s3%s) Autogold     %s[%s%3s%s]      %s8%s) Chave Auto   %s[%s%3s%s]\r\n"
+                 "%s4%s) Autosac      %s[%s%3s%s]      %s9%s) Porta Auto   %s[%s%3s%s]\r\n"
                  "%s5%s) Autoassist   %s[%s%3s%s]      %s=%s) Auto Titulo  %s[%s%3s%s]\r\n"
-                 "%s6%s) Autosplit    %s[%s%3s%s]      %s-%s) Auto Examinar%s[%s%3s%s]\r\n",
+                 "%s-%s) Auto Examinar%s[%s%3s%s]\r\n",
                  CBWHT(d->character, C_NRM),
-                 /* Line 1 - autoexits and automap */
+                 /* Line 1 - autoexits and autosplit */
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOEXIT) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
                  ONOFF(PREFEDIT_FLAGGED(PRF_AUTOEXIT)), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
                  CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
-                 PREFEDIT_FLAGGED(PRF_AUTOMAP) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
-                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOMAP)), CCCYN(d->character, C_NRM),
-                 /* Line 2 - autoloot and autokey */
+                 PREFEDIT_FLAGGED(PRF_AUTOSPLIT) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
+                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOSPLIT)), CCCYN(d->character, C_NRM),
+                 /* Line 2 - autoloot and automap */
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOLOOT) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
                  ONOFF(PREFEDIT_FLAGGED(PRF_AUTOLOOT)), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
                  CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
-                 PREFEDIT_FLAGGED(PRF_AUTOKEY) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
-                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOKEY)), CCCYN(d->character, C_NRM),
-                 /* Line 3 - autogold and autodoor */
+                 PREFEDIT_FLAGGED(PRF_AUTOMAP) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
+                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOMAP)), CCCYN(d->character, C_NRM),
+                 /* Line 3 - autogold and autokey */
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOGOLD) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
                  ONOFF(PREFEDIT_FLAGGED(PRF_AUTOGOLD)), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
                  CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
-                 PREFEDIT_FLAGGED(PRF_AUTODOOR) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
-                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTODOOR)), CCCYN(d->character, C_NRM),
-                 /* Line 4 - autosac and hitbar */
+                 PREFEDIT_FLAGGED(PRF_AUTOKEY) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
+                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOKEY)), CCCYN(d->character, C_NRM),
+                 /* Line 4 - autosac and autodoor */
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOSAC) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
                  ONOFF(PREFEDIT_FLAGGED(PRF_AUTOSAC)), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
                  CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
-                 PREFEDIT_FLAGGED(PRF_HITBAR) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
-                 ONOFF(PREFEDIT_FLAGGED(PRF_HITBAR)), CCCYN(d->character, C_NRM),
+                 PREFEDIT_FLAGGED(PRF_AUTODOOR) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
+                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTODOOR)), CCCYN(d->character, C_NRM),
                  /* Line 5 - autoassist and autotitle */
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOASSIST) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
@@ -366,11 +370,8 @@ static void prefedit_disp_auto_menu(struct descriptor_data *d)
                  CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOTITLE) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
                  ONOFF(PREFEDIT_FLAGGED(PRF_AUTOTITLE)), CCCYN(d->character, C_NRM),
-                 /* Line 6 - autosplit and autoexam */
+                 /* Line 6 - autoexam */
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
-                 PREFEDIT_FLAGGED(PRF_AUTOSPLIT) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
-                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOSPLIT)), CCCYN(d->character, C_NRM), CBYEL(d->character, C_NRM),
-                 CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOEXAM) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
                  ONOFF(PREFEDIT_FLAGGED(PRF_AUTOEXAM)), CCCYN(d->character, C_NRM));
 
@@ -616,6 +617,11 @@ void prefedit_parse(struct descriptor_data *d, char *arg)
                     TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_DISPEMOTE);
                     break;
 
+                case 'h':
+                case 'H':
+                    TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_HITBAR);
+                    break;
+
                 default:
                     send_to_char(d->character, "%sInvalid choice!%s\r\n", CBRED(d->character, C_NRM),
                                  CCNRM(d->character, C_NRM));
@@ -856,10 +862,6 @@ void prefedit_parse(struct descriptor_data *d, char *arg)
 
                 case '9':
                     TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_AUTODOOR);
-                    break;
-
-                case '0':
-                    TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_HITBAR);
                     break;
 
                 case '=':
