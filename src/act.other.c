@@ -813,6 +813,18 @@ ACMD(do_experiment)
         if (ptr->status != available || ptr->type != SPELL || !ptr->discoverable)
             continue;
 
+        /* Validate spell vnum is within valid bounds */
+        if (ptr->vnum <= 0 || ptr->vnum > MAX_SKILLS)
+            continue;
+
+        /* Validate prerequisite vnum if present */
+        if (ptr->prerequisite_spell > 0 && ptr->prerequisite_spell > MAX_SKILLS)
+            continue;
+
+        /* Validate spell name exists */
+        if (!ptr->name)
+            continue;
+
         /* Check if player already knows this spell */
         if (GET_SKILL(ch, ptr->vnum) > 0)
             continue;
@@ -868,6 +880,10 @@ void update_variant_skills(struct char_data *ch, int prerequisite_vnum, int new_
 {
     struct str_spells *ptr;
 
+    /* Validate ch pointer */
+    if (!ch)
+        return;
+
     if (IS_NPC(ch))
         return;
 
@@ -883,6 +899,10 @@ void update_variant_skills(struct char_data *ch, int prerequisite_vnum, int new_
 
         /* Validate variant vnum is within valid bounds before accessing skill array */
         if (ptr->vnum <= 0 || ptr->vnum > MAX_SKILLS)
+            continue;
+
+        /* Validate spell name exists before using it */
+        if (!ptr->name)
             continue;
 
         /* Check if player knows this variant */
