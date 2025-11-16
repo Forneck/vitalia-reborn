@@ -175,6 +175,13 @@ int get_effective_emotion_toward(struct char_data *mob, struct char_data *target
 int get_relationship_emotion(struct char_data *mob, struct char_data *target, int emotion_type);
 
 /* Weather-emotion integration - applies weather effects to mob moods */
+/**
+ * Applies weather effects to mob moods.
+ * @param mob The mob whose mood is affected.
+ * @param weather Zone-specific weather data (does NOT include global sunlight).
+ * @param sunlight Global sunlight value (from weather_info.sunlight), which is updated in another_hour().
+ *        Sunlight is passed separately because it is global, while other weather data is zone-specific.
+ */
 void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, int sunlight);
 
 /* Stoneskin utility functions */

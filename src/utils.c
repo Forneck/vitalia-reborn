@@ -7210,9 +7210,14 @@ void update_mob_emotion_received_valuable(struct char_data *mob, struct char_dat
  * Apply weather effects to a mob's mood (global emotional state)
  * Based on WEATHER_EMOTION_INTEGRATION.md specification
  *
+ * Called hourly by weather_change() for each zone - iterates through character_list
+ * in weather.c to find affected NPCs. Only affects outdoor NPCs in the specified zone.
+ *
  * @param mob The mob whose emotions to update
- * @param weather The weather data to apply
- * @param sunlight The current sunlight level
+ * @param weather Zone-specific weather data (temperature, humidity, wind, sky state)
+ * @param sunlight Global sunlight value from weather_info.sunlight (updated in another_hour()).
+ *                 Sunlight is passed separately because it is global, while other weather
+ *                 data is zone-specific.
  */
 void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, int sunlight)
 {
@@ -7249,8 +7254,9 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
             break;
 
         case SKY_SNOWING:
-            /* Snowing: fear +2-3 */
+            /* Snowing: fear +2-3, discomfort +4-6 (modeled as happiness reduction) */
             adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(2, 3));
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(4, 6));
             break;
     }
 
@@ -7278,6 +7284,9 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
     if (weather->humidity < 0.30) {
         /* Low humidity: slight discomfort */
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(1, 2));
+    } else if (weather->humidity >= 0.30 && weather->humidity < 0.60) {
+        /* Comfortable humidity: calm +2-3, minimal stress */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(2, 3));
     } else if (weather->humidity >= 0.60 && weather->humidity < 0.80) {
         /* High humidity: discomfort */
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(2, 3));
@@ -7293,6 +7302,9 @@ void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, 
     } else if (weather->winds >= 2.0 && weather->winds < 5.0) {
         /* Gentle breeze: pleasant */
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(2, 4));
+    } else if (weather->winds >= 5.0 && weather->winds < 10.0) {
+        /* Moderate wind: stimulating but slightly uncomfortable */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -rand_number(2, 3));
     } else if (weather->winds >= 10.0 && weather->winds < 15.0) {
         /* Strong wind: fear +3-5 */
         adjust_emotion(mob, &mob->ai_data->emotion_fear, rand_number(3, 5));
