@@ -492,12 +492,20 @@ SPECIAL(belchior_auctioneer)
     char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
     int auction_id;
 
+    /* Validate belchior character pointer */
+    if (!belchior || !ch) {
+        return FALSE;
+    }
+
     /* First check if this is a shop-related command */
-    if (CMD_IS("buy") || CMD_IS("sell") || CMD_IS("list") || CMD_IS("value")) {
+    if (CMD_IS("buy") || CMD_IS("sell") || CMD_IS("list") || CMD_IS("value") || CMD_IS("identify")) {
         /* Find the shop number for Belchior */
-        if ((shop_nr = find_shop_by_keeper(GET_MOB_RNUM(belchior))) >= 0) {
+        shop_nr = find_shop_by_keeper(GET_MOB_RNUM(belchior));
+        if (shop_nr >= 0) {
             return shop_keeper(ch, me, cmd, argument);
         }
+        /* Shop not found, return FALSE to allow default command handling */
+        return FALSE;
     }
 
     /* Check for cryogenicist commands */
