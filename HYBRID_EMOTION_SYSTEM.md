@@ -242,12 +242,24 @@ if (best_loved) {
 - ✅ General demeanor changes
 - ✅ No specific target is involved
 - ✅ Updating emotions from non-entity events
+- ✅ **Social selection** (which social to perform - based on general mood)
 
 **Example:**
 ```c
 // Mob enters a dangerous area - update mood
 if (ROOM_FLAGGED(room, ROOM_DEATH_TRAP)) {
     adjust_emotion(mob, &mob->ai_data->emotion_fear, 15);
+}
+
+// Social initiation uses mood
+if (ch->ai_data->emotion_happiness >= 70) {
+    social_chance += 15;  // More likely to initiate socials when generally happy
+}
+
+// Social selection uses mood
+int mob_anger = ch->ai_data->emotion_anger;  // Check general anger
+if (mob_anger >= 80) {
+    perform_negative_social();  // Mob is generally angry
 }
 ```
 
@@ -258,6 +270,7 @@ if (ROOM_FLAGGED(room, ROOM_DEATH_TRAP)) {
 - ✅ Combat decisions toward specific opponents
 - ✅ Display emotions to specific viewers
 - ✅ Any interaction where target matters
+- ✅ **NOT social selection** (socials use mood, not relationship - see below)
 
 **Example:**
 ```c
@@ -457,6 +470,91 @@ Net result: More aggressive but less effective due to injuries
 ❌ Don't forget to pass target when it matters  
 ❌ Don't assume relationship emotions exist (they may not have memories yet)  
 ❌ Don't create complex emotion logic without mood + relationship  
+
+## Special Case: Social System Design
+
+### Why Socials Use Mood (Not Relationship)
+
+The social system (`mob_contextual_social` and social initiation) intentionally uses **mood only**, not the hybrid system. This is a deliberate design choice:
+
+**Social Initiation (Frequency):**
+```c
+// Uses mood to decide HOW OFTEN to perform socials
+if (ch->ai_data->emotion_happiness >= 70) {
+    social_chance += 15;  // Happy mobs socialize more
+}
+if (ch->ai_data->emotion_anger >= 70) {
+    social_chance += 10;  // Angry mobs also socialize (negatively)
+}
+```
+
+**Social Selection (Which Social):**
+```c
+// Uses mood to decide WHICH TYPE of social
+int mob_anger = ch->ai_data->emotion_anger;  // General anger
+int mob_fear = ch->ai_data->emotion_fear;    // General fear
+
+if (mob_anger >= 80) {
+    perform_negative_social(target);  // Glare, frown, etc.
+} else if (mob_fear >= 70) {
+    perform_fearful_social(target);   // Cower, cringe, etc.
+}
+```
+
+**Why Mood, Not Relationship?**
+
+1. **Ambiance:** Socials create atmospheric behavior. A generally angry mob should look angry to everyone in the room, not just to specific players.
+
+2. **Observability:** Other players in the room see the social. If Mob glares at Player A because of relationship history, Player B watching doesn't understand why. Using mood makes behavior predictable.
+
+3. **Performance:** Checking relationship for every potential target in a room during social selection would be expensive.
+
+4. **Emotion Updates:** When the target receives the social, `update_mob_emotion_from_social()` creates a memory, building relationship over time.
+
+**The Flow:**
+```
+1. Mood determines: Should I do a social? (initiation frequency)
+2. Mood determines: What type? (angry/happy/fearful social)
+3. Target is selected from room
+4. Social is performed
+5. Relationship memory is created with target
+6. Future interactions (combat, trading, quests) use relationship
+```
+
+**Example Scenario:**
+```
+Mob has:
+- Mood: anger = 85 (generally angry from being attacked)
+- Relationship: anger toward Player A = 90 (attacked it)
+- Relationship: anger toward Player B = 20 (helped it)
+
+Social Behavior:
+- Mob's mood (85) makes it likely to perform negative socials
+- Mob might glare at anyone in room (mood-driven selection)
+- But when trading: refuses Player A, gives discount to Player B (relationship)
+- And in combat: extra attacks against Player A only (relationship)
+```
+
+### Systems Using Mood vs Relationship
+
+**MOOD ONLY (Global State):**
+- ✅ Social initiation frequency
+- ✅ Social type selection
+- ✅ Pain effects on combat
+- ✅ Environmental fear/happiness
+- ✅ Passive emotion decay
+
+**RELATIONSHIP (Hybrid Per-Target):**
+- ✅ Shop pricing/service
+- ✅ Quest acceptance/rewards
+- ✅ Combat anger bonuses
+- ✅ Combat flee decisions
+- ✅ Emotion display to viewer
+- ✅ Love-based following
+
+**BOTH (Context-Dependent):**
+- ✅ Social reactions: Mood picks social, relationship memory created
+- ✅ Combat: Pain uses mood, anger uses relationship
 
 ## Testing Your Implementation
 
