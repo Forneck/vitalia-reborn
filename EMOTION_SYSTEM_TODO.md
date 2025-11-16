@@ -47,8 +47,8 @@ The emotion system now implements a **hybrid model** with two layers:
 - **DONE**: High fear (>70) increases flee probability during combat (uses hybrid system)
 - **DONE**: High courage (>70) reduces flee probability (uses hybrid system)
 - **DONE**: Horror level (>80) triggers panic flee (uses hybrid system)
-- **TODO**: High anger (>70) should increase attack frequency/damage
-- **TODO**: Pain level should affect combat effectiveness (accuracy/damage penalties)
+- **DONE**: High anger (>70) increases attack frequency and damage (uses hybrid system - per target)
+- **DONE**: Pain level affects combat effectiveness (accuracy/damage penalties, mood-based)
 
 #### 1.2 Trading Behavior
 - **DONE**: High trust (>60) gives better shop prices (uses hybrid system - per player)
@@ -242,13 +242,13 @@ Actions that should trigger emotion updates but currently don't:
 4. ✅ Trading behavior influenced by emotions (1.2) - uses hybrid system per player
 5. ✅ Quest behavior integration (1.3) - uses hybrid system per player
 6. ✅ Love-based following (1.4) - uses hybrid system to target specific players
+7. ✅ High anger affecting attack behavior (1.1) - extra attacks and damage bonus
+8. ✅ Pain affecting combat effectiveness (1.1) - accuracy and damage penalties
 
 ### Phase 2 (Short-term - Next Updates)
-1. High anger affecting attack behavior (1.1)
-2. Pain affecting combat effectiveness (1.1)
-3. Group behavior emotional integration (1.5)
-4. Additional emotion triggers for communication (2.1)
-5. Balance and tuning (6.1, 6.2)
+1. Group behavior emotional integration (1.5)
+2. Additional emotion triggers for communication (2.1)
+3. Balance and tuning (6.1, 6.2)
 
 ### Phase 3 (Medium-term)
 1. Emotion contagion basics (5.1)

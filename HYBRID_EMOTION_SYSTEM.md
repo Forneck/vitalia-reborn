@@ -374,6 +374,75 @@ When disabled:
 - `get_effective_emotion_toward()` returns 0
 - Falls back to traditional behavior
 
+### Combat Emotion Effects (NEW)
+
+The hybrid system now affects combat effectiveness through anger and pain emotions:
+
+#### Anger Increases Attack Power
+
+**Attack Frequency:**
+- When anger toward opponent >= threshold (default: 70)
+- Chance for extra attack per round (default: 25% chance)
+- Uses hybrid system: `get_effective_emotion_toward(mob, target, EMOTION_TYPE_ANGER)`
+- Example: Mob furious at Player A gets extra attacks against them specifically
+
+**Damage Bonus:**
+- High anger adds damage bonus (default: +15%)
+- Applied after all other damage calculations
+- Personalized: anger toward THIS opponent matters
+- Example: 100 base damage + 15% anger = 115 damage
+
+Configuration:
+```c
+CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD  // Default: 70
+CONFIG_EMOTION_COMBAT_ANGER_DAMAGE_BONUS    // Default: 15 (%)
+CONFIG_EMOTION_COMBAT_ANGER_ATTACK_BONUS    // Default: 25 (%)
+```
+
+#### Pain Reduces Combat Effectiveness
+
+Pain is **mood-based** (not relational) - physical suffering affects all combat:
+
+**Accuracy Penalty (THAC0):**
+- Low pain (>= 30): +1 THAC0 (worse accuracy)
+- Moderate pain (>= 50): +2 THAC0
+- High pain (>= 70): +4 THAC0 (significantly worse)
+- Higher THAC0 = harder to hit
+
+**Damage Reduction:**
+- Low pain: -5% damage output
+- Moderate pain: -10% damage output
+- High pain: -20% damage output
+- Applied after bonuses, before minimum damage
+
+Configuration:
+```c
+CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD        // Default: 30
+CONFIG_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD   // Default: 50
+CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD       // Default: 70
+CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW // Default: 1
+CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_MOD // Default: 2
+CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_HIGH // Default: 4
+CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW   // Default: 5 (%)
+CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD   // Default: 10 (%)
+CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH  // Default: 20 (%)
+```
+
+**Example Combat Scenario:**
+```
+Mob fighting Player A (whom it's very angry at):
+- Effective anger toward Player A: 85 (>= 70 threshold)
+- Pain level (mood): 45 (moderate pain zone)
+
+Effects:
+- 25% chance for extra attack this round (anger)
+- +15% damage on successful hits (anger)
+- +2 THAC0 penalty to hit (pain, accuracy)
+- -10% final damage output (pain, effectiveness)
+
+Net result: More aggressive but less effective due to injuries
+```
+
 ## Best Practices
 
 ### DO:
