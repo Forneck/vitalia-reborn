@@ -53,7 +53,7 @@ static struct char_data *find_player_online(const char *name)
 /**
  * Create a new auction
  */
-struct auction_data *create_auction(struct char_data *seller, struct obj_data *item, int type, int access_mode,
+struct auction_data *create_auction(struct char_data *seller, struct obj_data *item, int access_mode,
                                     long starting_price, long reserve_price, int duration)
 {
     struct auction_data *auction;
@@ -84,15 +84,9 @@ struct auction_data *create_auction(struct char_data *seller, struct obj_data *i
     auction->item_vnum = GET_OBJ_VNUM(item);
     auction->quantity = 1; /* TODO: Handle bulk auctions */
 
-    auction->auction_type = type;
-    /* Set direction and price mechanism based on legacy type, but allow override via config */
-    if (type == AUCTION_TYPE_ENGLISH) {
-        auction->direction = AUCTION_ASCENDING;
-        auction->price_mechanism = AUCTION_FIRST_PRICE;
-    } else {
-        auction->direction = AUCTION_DESCENDING;
-        auction->price_mechanism = AUCTION_FIRST_PRICE;
-    }
+    /* Initialize with default: Ascending, First Price (English auction) */
+    auction->direction = AUCTION_ASCENDING;
+    auction->price_mechanism = AUCTION_FIRST_PRICE;
     auction->access_mode = access_mode;
     auction->state = AUCTION_INACTIVE;
 
@@ -446,8 +440,12 @@ void show_auction_details(struct char_data *ch, int auction_id)
     send_to_char(ch, "========================\r\n");
     send_to_char(ch, "Item: %s\r\n", auction->item_name);
     send_to_char(ch, "Vendedor: %s\r\n", auction->seller_name);
-    send_to_char(ch, "Tipo: %s\r\n",
-                 (auction->auction_type == AUCTION_TYPE_ENGLISH) ? "Leilão Inglês" : "Leilão Holandês");
+
+    /* Show auction configuration */
+    const char *dir_str = (auction->direction == AUCTION_ASCENDING) ? "Ascendente" : "Descendente";
+    const char *mech_str = (auction->price_mechanism == AUCTION_FIRST_PRICE) ? "Primeiro Preço" : "Segundo Preço";
+    send_to_char(ch, "Tipo: %s, %s\r\n", dir_str, mech_str);
+
     send_to_char(ch, "Acesso: %s\r\n", (auction->access_mode == AUCTION_OPEN) ? "Aberto" : "Fechado");
     send_to_char(ch, "Preço Inicial: %s moedas\r\n", format_long_br(auction->starting_price));
     send_to_char(ch, "Preço Atual: %s moedas\r\n", format_long_br(auction->current_price));
@@ -507,6 +505,36 @@ void show_auction_list(struct char_data *ch)
 }
 
 /**
+ * Calculate the final price for an auction based on its mechanism
+ * Returns the amount the winner should pay
+ */
+static long calculate_final_price(struct auction_data *auction)
+{
+    struct auction_bid *bid;
+    long second_highest = auction->starting_price;
+
+    if (!auction || !auction->winning_bid) {
+        return 0;
+    }
+
+    /* First-price: winner pays their bid */
+    if (auction->price_mechanism == AUCTION_FIRST_PRICE) {
+        return auction->winning_bid->amount;
+    }
+
+    /* Second-price: winner pays second-highest bid */
+    /* Find the second highest bid */
+    for (bid = auction->bids; bid; bid = bid->next) {
+        if (bid != auction->winning_bid && bid->amount > second_highest) {
+            second_highest = bid->amount;
+        }
+    }
+
+    /* If no other bids, pay the starting price */
+    return second_highest;
+}
+
+/**
  * Update auction states and end expired auctions
  */
 void update_auctions(void)
@@ -546,9 +574,17 @@ void end_auction(struct auction_data *auction)
 
     /* Check if there was a winning bid */
     if (auction->winning_bid && auction->winning_bid->amount >= auction->reserve_price) {
+        long final_price = calculate_final_price(auction);
+        long refund_to_winner = 0;
+
         /* Try to find seller and winner online - using find_player_online instead of get_player_vis */
         seller = find_player_online(auction->seller_name);
         winner = find_player_online(auction->winning_bid->bidder_name);
+
+        /* Calculate refund for winner if second-price */
+        if (auction->price_mechanism == AUCTION_SECOND_PRICE && final_price < auction->winning_bid->amount) {
+            refund_to_winner = auction->winning_bid->amount - final_price;
+        }
 
         /* Refund all losing bidders */
         for (bid = auction->bids; bid; bid = bid->next) {
@@ -569,6 +605,11 @@ void end_auction(struct auction_data *auction)
             }
         }
 
+        /* Refund winner if second-price mechanism */
+        if (refund_to_winner > 0 && winner) {
+            increase_gold(winner, refund_to_winner);
+        }
+
         /* Create the item for the winner */
         if (auction->item_vnum > 0) {
             obj_rnum rnum = real_object(auction->item_vnum);
@@ -580,8 +621,16 @@ void end_auction(struct auction_data *auction)
                         obj_to_char(item, winner);
                         /* Safely access item description */
                         const char *item_desc = item->short_description ? item->short_description : "um item";
-                        snprintf(buf, sizeof(buf), "Você ganhou o leilão #%d! %s foi entregue a você.\r\n",
-                                 auction->auction_id, item_desc);
+                        if (auction->price_mechanism == AUCTION_SECOND_PRICE && refund_to_winner > 0) {
+                            snprintf(buf, sizeof(buf),
+                                     "Você ganhou o leilão #%d! %s foi entregue a você.\r\n"
+                                     "Você ofereceu %s mas pagou apenas %s (segundo preço).\r\n",
+                                     auction->auction_id, item_desc, format_long_br(auction->winning_bid->amount),
+                                     format_long_br(final_price));
+                        } else {
+                            snprintf(buf, sizeof(buf), "Você ganhou o leilão #%d! %s foi entregue a você.\r\n",
+                                     auction->auction_id, item_desc);
+                        }
                         send_to_char(winner, "%s", buf);
                     } else {
                         /* Winner offline - save item to their file (simplified: just log for now) */
@@ -593,20 +642,19 @@ void end_auction(struct auction_data *auction)
             }
         }
 
-        /* Transfer money to seller (winner's money already taken in place_bid) */
+        /* Transfer money to seller */
         if (seller) {
-            increase_gold(seller, auction->winning_bid->amount);
+            increase_gold(seller, final_price);
             snprintf(buf, sizeof(buf), "Seu leilão #%d foi vendido por %s moedas!\r\n", auction->auction_id,
-                     format_long_br(auction->winning_bid->amount));
+                     format_long_br(final_price));
             send_to_char(seller, "%s", buf);
         } else {
             /* Seller offline - save gold to their file (simplified: just log for now) */
-            log1("AUCTION: Seller %s offline, needs %ld gold credited", auction->seller_name,
-                 auction->winning_bid->amount);
+            log1("AUCTION: Seller %s offline, needs %ld gold credited", auction->seller_name, final_price);
         }
 
-        log1("AUCTION: Auction #%d sold to %s for %ld gold", auction->auction_id, auction->winning_bid->bidder_name,
-             auction->winning_bid->amount);
+        log1("AUCTION: Auction #%d sold to %s for %ld gold (bid %ld)", auction->auction_id,
+             auction->winning_bid->bidder_name, final_price, auction->winning_bid->amount);
     } else {
         /* No winning bid or reserve not met - refund all bidders and return item to seller */
         seller = find_player_online(auction->seller_name);

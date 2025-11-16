@@ -51,11 +51,10 @@ struct auction_data {
     obj_vnum item_vnum;                /* Virtual number of the item */
     int quantity;                      /* Number of items (for bulk auctions) */
 
-    int auction_type;     /* AUCTION_TYPE_* (deprecated) */
-    int direction;        /* AUCTION_ASCENDING or AUCTION_DESCENDING */
-    int price_mechanism;  /* AUCTION_FIRST_PRICE or AUCTION_SECOND_PRICE */
-    int access_mode;      /* AUCTION_OPEN or AUCTION_CLOSED */
-    int state;            /* AUCTION_* state */
+    int direction;       /* AUCTION_ASCENDING or AUCTION_DESCENDING */
+    int price_mechanism; /* AUCTION_FIRST_PRICE or AUCTION_SECOND_PRICE */
+    int access_mode;     /* AUCTION_OPEN or AUCTION_CLOSED */
+    int state;           /* AUCTION_* state */
 
     long starting_price; /* Starting bid amount */
     long current_price;  /* Current highest bid */
@@ -98,7 +97,7 @@ extern struct auction_invitation *auction_invitation_list;
 extern int next_auction_id;
 
 /* Function prototypes */
-struct auction_data *create_auction(struct char_data *seller, struct obj_data *item, int type, int access_mode,
+struct auction_data *create_auction(struct char_data *seller, struct obj_data *item, int access_mode,
                                     long starting_price, long reserve_price, int duration);
 int place_bid(struct char_data *bidder, int auction_id, long amount);
 int has_auction_pass(struct char_data *ch, int auction_id);

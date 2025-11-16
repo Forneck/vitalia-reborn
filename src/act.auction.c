@@ -82,8 +82,7 @@ ACMD(do_auction)
         }
 
         /* Create the auction */
-        auction =
-            create_auction(ch, obj, AUCTION_TYPE_ENGLISH, AUCTION_OPEN, bid_amount, bid_amount, 1800); /* 30 minutes */
+        auction = create_auction(ch, obj, AUCTION_OPEN, bid_amount, bid_amount, 1800); /* 30 minutes */
 
         if (auction) {
             auction->state = AUCTION_ACTIVE;
@@ -156,11 +155,9 @@ ACMD(do_auction)
         if (is_abbrev(option, "direcao") || is_abbrev(option, "direction")) {
             if (is_abbrev(value, "ascendente") || is_abbrev(value, "ascending") || is_abbrev(value, "asc")) {
                 auction->direction = AUCTION_ASCENDING;
-                auction->auction_type = AUCTION_TYPE_ENGLISH; /* Update legacy field */
                 send_to_char(ch, "Direção do leilão #%d alterada para ASCENDENTE (preço sobe).\r\n", auction_id);
             } else if (is_abbrev(value, "descendente") || is_abbrev(value, "descending") || is_abbrev(value, "desc")) {
                 auction->direction = AUCTION_DESCENDING;
-                auction->auction_type = AUCTION_TYPE_DUTCH; /* Update legacy field */
                 send_to_char(ch, "Direção do leilão #%d alterada para DESCENDENTE (preço desce).\r\n", auction_id);
             } else {
                 send_to_char(ch, "Direção inválida. Use: ascendente ou descendente\r\n");
