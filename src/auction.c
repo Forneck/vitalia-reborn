@@ -53,7 +53,12 @@ struct auction_data *create_auction(struct char_data *seller, struct obj_data *i
 
     auction->auction_id = next_auction_id++;
     strlcpy(auction->seller_name, GET_NAME(seller), sizeof(auction->seller_name));
-    strlcpy(auction->item_name, item->short_description, sizeof(auction->item_name));
+    /* Safely copy item name, handle NULL short_description */
+    if (item->short_description) {
+        strlcpy(auction->item_name, item->short_description, sizeof(auction->item_name));
+    } else {
+        snprintf(auction->item_name, sizeof(auction->item_name), "item #%d", GET_OBJ_VNUM(item));
+    }
     auction->item_vnum = GET_OBJ_VNUM(item);
     auction->quantity = 1; /* TODO: Handle bulk auctions */
 
@@ -303,7 +308,10 @@ void give_auction_pass(struct char_data *ch, int auction_id, int duration)
     auction_pass_list = pass;
 
     send_to_char(ch, "Belchior entrega a você um passe de leilão especial para o leilão #%d.\r\n", auction_id);
-    act("Belchior entrega um passe de leilão para $N.", FALSE, NULL, 0, ch, TO_ROOM);
+    /* Only show to room if character is in a room (not in OLC/editing) */
+    if (IN_ROOM(ch) != NOWHERE) {
+        act("Belchior entrega um passe de leilão para $n.", FALSE, ch, 0, 0, TO_ROOM);
+    }
 
     log1("AUCTION: Issued pass to %s for auction #%d", GET_NAME(ch), auction_id);
 }
@@ -534,8 +542,10 @@ void end_auction(struct auction_data *auction)
                     /* Deliver item to winner */
                     if (winner) {
                         obj_to_char(item, winner);
+                        /* Safely access item description */
+                        const char *item_desc = item->short_description ? item->short_description : "um item";
                         snprintf(buf, sizeof(buf), "Você ganhou o leilão #%d! %s foi entregue a você.\r\n",
-                                 auction->auction_id, item->short_description);
+                                 auction->auction_id, item_desc);
                         send_to_char(winner, "%s", buf);
                     } else {
                         /* Winner offline - save item to their file (simplified: just log for now) */
