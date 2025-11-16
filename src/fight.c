@@ -1377,6 +1377,7 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         if (!IS_NPC(ch) && (ch != victim) && PRF_FLAGGED(ch, PRF_AUTOLOOT)) {
             do_get(ch, "all corpo", 0, 0);
         }
+        /* AUTOEXAM must run before AUTOSAC so player can see corpse contents before it's sacrificed */
         if (!IS_NPC(ch) && (ch != victim) && PRF_FLAGGED(ch, PRF_AUTOEXAM)) {
             do_examine(ch, "corpo", 0, 0);
         }
