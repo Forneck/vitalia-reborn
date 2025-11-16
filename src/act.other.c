@@ -813,6 +813,18 @@ ACMD(do_experiment)
         if (ptr->status != available || ptr->type != SPELL || !ptr->discoverable)
             continue;
 
+        /* Validate spell vnum is within valid bounds */
+        if (ptr->vnum <= 0 || ptr->vnum > MAX_SKILLS)
+            continue;
+
+        /* Validate prerequisite vnum if present */
+        if (ptr->prerequisite_spell > 0 && ptr->prerequisite_spell > MAX_SKILLS)
+            continue;
+
+        /* Validate spell name exists */
+        if (!ptr->name)
+            continue;
+
         /* Check if player already knows this spell */
         if (GET_SKILL(ch, ptr->vnum) > 0)
             continue;
@@ -826,8 +838,8 @@ ACMD(do_experiment)
 
         /* Check if spoken syllables match */
         if (!strcmp(syllables, spoken_lower)) {
-            /* Found a match! Teach the spell to the player */
-            int learned_level = 15; /* Base proficiency for discovered spells */
+            /* Found a match! Teach the spell to the player at the same level as prerequisite */
+            int learned_level = (ptr->prerequisite_spell > 0) ? GET_SKILL(ch, ptr->prerequisite_spell) : 15;
 
             SET_SKILL(ch, ptr->vnum, learned_level);
 
@@ -852,6 +864,63 @@ ACMD(do_experiment)
                  "Você tenta combinar as sílabas místicas, mas elas não ressoam com nenhum\r\n"
                  "conhecimento que você possui. Talvez você precise aprender magias relacionadas\r\n"
                  "primeiro, ou essas sílabas não correspondem a nenhuma variante descobrível.\r\n");
+}
+
+/**
+ * Update variant skill levels when a prerequisite skill levels up.
+ * When a skill is improved, all known variant skills that depend on it
+ * should be updated to match the prerequisite skill level.
+ * This function recursively updates chains (A -> B -> C).
+ *
+ * @param ch The character whose skills are being updated
+ * @param prerequisite_vnum The vnum of the prerequisite skill that was leveled up
+ * @param new_level The new level of the prerequisite skill
+ */
+void update_variant_skills(struct char_data *ch, int prerequisite_vnum, int new_level)
+{
+    struct str_spells *ptr;
+
+    /* Validate ch pointer */
+    if (!ch)
+        return;
+
+    if (IS_NPC(ch))
+        return;
+
+    /* Validate prerequisite_vnum is within valid bounds */
+    if (prerequisite_vnum <= 0 || prerequisite_vnum > MAX_SKILLS)
+        return;
+
+    /* Iterate through all spells to find variants with this prerequisite */
+    for (ptr = list_spells; ptr; ptr = ptr->next) {
+        /* Check if this spell has the specified prerequisite */
+        if (ptr->prerequisite_spell != prerequisite_vnum)
+            continue;
+
+        /* Validate variant vnum is within valid bounds before accessing skill array */
+        if (ptr->vnum <= 0 || ptr->vnum > MAX_SKILLS)
+            continue;
+
+        /* Validate spell name exists before using it */
+        if (!ptr->name)
+            continue;
+
+        /* Check if player knows this variant */
+        if (GET_SKILL(ch, ptr->vnum) == 0)
+            continue;
+
+        /* Update variant skill level to match prerequisite if it's lower */
+        if (GET_SKILL(ch, ptr->vnum) < new_level) {
+            SET_SKILL(ch, ptr->vnum, new_level);
+            send_to_char(ch,
+                         "@GVariante atualizada:@n Sua proficiência em @Y%s@n aumentou para %d "
+                         "para corresponder à habilidade pré-requisito.\r\n",
+                         ptr->name, new_level);
+
+            /* Recursively update any variants that depend on this variant (chain update) */
+            update_variant_skills(ch, ptr->vnum, new_level);
+        }
+    }
 }
 
 ACMD(do_visible)
