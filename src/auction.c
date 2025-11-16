@@ -645,7 +645,6 @@ SPECIAL(belchior_auctioneer)
 {
     struct char_data *belchior = (struct char_data *)me;
     room_rnum shop_room, auction_room;
-    int shop_nr;
     char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
     int auction_id;
 
@@ -654,14 +653,13 @@ SPECIAL(belchior_auctioneer)
         return FALSE;
     }
 
-    /* First check if this is a shop-related command */
+    /* Validate argument pointer to prevent NULL dereference */
+    if (!argument) {
+        return FALSE;
+    }
+
+    /* Return FALSE for shop-related commands to let shop_keeper handle them */
     if (CMD_IS("buy") || CMD_IS("sell") || CMD_IS("list") || CMD_IS("value") || CMD_IS("identify")) {
-        /* Find the shop number for Belchior */
-        shop_nr = find_shop_by_keeper(GET_MOB_RNUM(belchior));
-        if (shop_nr >= 0) {
-            return shop_keeper(ch, me, cmd, argument);
-        }
-        /* Shop not found, return FALSE to allow default command handling */
         return FALSE;
     }
 
