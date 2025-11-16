@@ -854,6 +854,43 @@ ACMD(do_experiment)
                  "primeiro, ou essas sílabas não correspondem a nenhuma variante descobrível.\r\n");
 }
 
+/**
+ * Update variant skill levels when a prerequisite skill levels up.
+ * When a skill is improved, all known variant skills that depend on it
+ * should be updated to match the prerequisite skill level.
+ *
+ * @param ch The character whose skills are being updated
+ * @param prerequisite_vnum The vnum of the prerequisite skill that was leveled up
+ * @param new_level The new level of the prerequisite skill
+ */
+void update_variant_skills(struct char_data *ch, int prerequisite_vnum, int new_level)
+{
+    struct str_spells *ptr;
+
+    if (IS_NPC(ch))
+        return;
+
+    /* Iterate through all spells to find variants with this prerequisite */
+    for (ptr = list_spells; ptr; ptr = ptr->next) {
+        /* Check if this spell has the specified prerequisite */
+        if (ptr->prerequisite_spell != prerequisite_vnum)
+            continue;
+
+        /* Check if player knows this variant */
+        if (GET_SKILL(ch, ptr->vnum) == 0)
+            continue;
+
+        /* Update variant skill level to match prerequisite if it's lower */
+        if (GET_SKILL(ch, ptr->vnum) < new_level) {
+            SET_SKILL(ch, ptr->vnum, new_level);
+            send_to_char(ch,
+                         "@GVariante atualizada:@n Sua proficiência em @Y%s@n aumentou para %d "
+                         "para corresponder à habilidade pré-requisito.\r\n",
+                         ptr->name, new_level);
+        }
+    }
+}
+
 ACMD(do_visible)
 {
     if (GET_LEVEL(ch) >= LVL_IMMORT) {
