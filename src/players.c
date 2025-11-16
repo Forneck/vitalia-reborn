@@ -250,8 +250,10 @@ int load_char(const char *name, struct char_data *ch)
         ch->affected = NULL;
         for (i = 1; i <= MAX_SKILLS; i++)
             SET_SKILL(ch, i, 0);
-        for (i = 1; i <= MAX_SKILLS; i++)
+        for (i = 1; i <= MAX_SKILLS; i++) {
             ch->player_specials->saved.retained_skills[i] = 0;
+            ch->player_specials->saved.retained_skill_incarnation[i] = -1;
+        }
         GET_SEX(ch) = PFDEF_SEX;
         GET_CLASS(ch) = PFDEF_CLASS;
         GET_LEVEL(ch) = PFDEF_LEVEL;
@@ -876,9 +878,10 @@ void save_char(struct char_data *ch)
             fprintf(fl, "RtSk:\n");
             for (i = 1; i <= MAX_SKILLS; i++) {
                 if (ch->player_specials->saved.retained_skills[i])
-                    fprintf(fl, "%d %d\n", i, ch->player_specials->saved.retained_skills[i]);
+                    fprintf(fl, "%d %d %d\n", i, ch->player_specials->saved.retained_skills[i],
+                            ch->player_specials->saved.retained_skill_incarnation[i]);
             }
-            fprintf(fl, "0 0\n");
+            fprintf(fl, "0 0 0\n");
         }
 
         /* Save class history */
@@ -1110,14 +1113,21 @@ static void load_class_history(FILE *fl, struct char_data *ch)
 
 static void load_retained_skills(FILE *fl, struct char_data *ch)
 {
-    int num = 0, num2 = 0;
+    int num = 0, num2 = 0, num3 = -1;
     char line[MAX_INPUT_LENGTH + 1];
 
     do {
         get_line(fl, line);
-        sscanf(line, "%d %d", &num, &num2);
-        if (num != 0)
+        /* Try to read 3 values (new format with incarnation), fall back to 2 (old format) */
+        if (sscanf(line, "%d %d %d", &num, &num2, &num3) < 2) {
+            num = 0; /* Invalid line, stop */
+        }
+        if (num != 0) {
             ch->player_specials->saved.retained_skills[num] = num2;
+            /* If num3 wasn't read (old format), it stays -1 */
+            ch->player_specials->saved.retained_skill_incarnation[num] = num3;
+        }
+        num3 = -1; /* Reset for next iteration */
     } while (num != 0);
 }
 
