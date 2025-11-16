@@ -106,6 +106,7 @@ ACMD(do_auction)
 
     if (is_abbrev(subcommand, "configurar") || is_abbrev(subcommand, "config")) {
         char option[MAX_INPUT_LENGTH], value[MAX_INPUT_LENGTH];
+        char *remainder;
 
         if (!*arg1 || !*arg2) {
             send_to_char(ch, "Uso: leilao configurar [id_leilao] [opção] [valor]\r\n");
@@ -121,12 +122,11 @@ ACMD(do_auction)
         }
 
         auction_id = atoi(arg1);
-        half_chop(argument, option, value);
-        {
-            char *val_ptr = value;
-            skip_spaces(&val_ptr);
-            strlcpy(value, val_ptr, sizeof(value));
-        }
+        /* Parse option from arg2 and value from the remainder of the argument */
+        strlcpy(option, arg2, sizeof(option));
+        remainder = two_arguments(argument, arg1, arg2); /* Skip auction_id and option */
+        skip_spaces(&remainder);
+        strlcpy(value, remainder, sizeof(value));
 
         auction = find_auction(auction_id);
         if (!auction) {
