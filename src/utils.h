@@ -310,6 +310,10 @@ void char_from_furniture(struct char_data *ch);
 /* integer utils */
 #define URANGE(a, b, c) ((b) < (a) ? (a) : ((b) > (c) ? (c) : (b)))
 
+/* float utils */
+#define FMAX(a, b) ((a) > (b) ? (a) : (b))
+#define FMIN(a, b) ((a) < (b) ? (a) : (b))
+
 /* Various string utils. */
 /** If a is not null, FALSE or '0', return "YES"; if it is, return "NO" */
 #define YESNO(a) ((a) ? "YES" : "NO")
