@@ -3960,6 +3960,11 @@ void init_char(struct char_data *ch)
         ch->player_specials->saved.class_history[i] = -1;
     }
 
+    /* Initialize retained skill incarnation array */
+    for (int i = 0; i <= MAX_SKILLS; i++) {
+        ch->player_specials->saved.retained_skill_incarnation[i] = -1;
+    }
+
     /* If this is our first player make him IMPL. */
     if (top_of_p_table == 0) {
         GET_LEVEL(ch) = LVL_IMPL;

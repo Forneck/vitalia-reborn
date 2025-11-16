@@ -6041,7 +6041,63 @@ ACMD(do_gstats)
 }
 
 /*
- * rskill command - Manage retained skills for players
+ * Display retained skills for mortals in user-friendly format
+ */
+static void show_retained_skills(struct char_data *ch)
+{
+    int found = 0;
+    int incarnation;
+    int class_num;
+
+    if (!ch) {
+        return; /* Safety check - should never happen */
+    }
+
+    if (IS_NPC(ch)) {
+        send_to_char(ch, "NPCs não têm habilidades de remort.\r\n");
+        return;
+    }
+
+    if (!ch->player_specials) {
+        send_to_char(ch, "Erro: dados do jogador não disponíveis.\r\n");
+        return; /* Safety check for NULL player_specials */
+    }
+
+    send_to_char(ch, "\r\n&cHabilidades e Magias Levadas por Remort&n\r\n");
+    send_to_char(ch, "&c=====================================================&n\r\n\r\n");
+
+    for (int i = 1; i <= MAX_SKILLS; i++) {
+        if (ch->player_specials->saved.retained_skills[i] > 0) {
+            incarnation = ch->player_specials->saved.retained_skill_incarnation[i];
+
+            /* Get the class from class_history if we know the incarnation */
+            if (incarnation >= 0 && incarnation < 100 && ch->player_specials->saved.class_history[incarnation] >= 0) {
+                class_num = ch->player_specials->saved.class_history[incarnation];
+                if (class_num < NUM_CLASSES) {
+                    send_to_char(ch, "[ %-20s ] ---- [ %-10s ] ---- [ %dª enc. ]\r\n", skill_name(i),
+                                 pc_class_types[class_num], incarnation + 1); /* +1 because incarnations start at 0 */
+                } else {
+                    /* Fallback for out-of-bounds class_num */
+                    send_to_char(ch, "[ %-20s ] ---- [ %-10s ] ---- [ %dª enc. ]\r\n", skill_name(i), "desconhecida",
+                                 incarnation + 1);
+                }
+            } else {
+                /* Fallback for old data without incarnation info */
+                send_to_char(ch, "[ %-20s ] ---- [ %-10s ] ---- [ ??? ]\r\n", skill_name(i), "desconhecida");
+            }
+            found++;
+        }
+    }
+
+    if (!found) {
+        send_to_char(ch, "Você ainda não possui habilidades de remort.\r\n");
+    } else {
+        send_to_char(ch, "\r\n&cTotal: %d habilidades/magias de remort.&n\r\n", found);
+    }
+}
+
+/*
+ * rskill command - Manage retained skills for players (gods) or view them (mortals)
  */
 ACMD(do_rskill)
 {
@@ -6049,6 +6105,13 @@ ACMD(do_rskill)
     struct char_data *vict = NULL;
     int skill_num, skill_value;
 
+    /* Mortals can only view their own retained skills */
+    if (GET_LEVEL(ch) < LVL_GOD) {
+        show_retained_skills(ch);
+        return;
+    }
+
+    /* Only gods/admins get past this point */
     one_argument(two_arguments(argument, arg1, arg2), arg3);
 
     if (!*arg1) {
@@ -6068,6 +6131,11 @@ ACMD(do_rskill)
     if (IS_NPC(vict)) {
         send_to_char(ch, "You can't manage retained skills for NPCs.\r\n");
         return;
+    }
+
+    if (!vict->player_specials) {
+        send_to_char(ch, "Error: Player data not available.\r\n");
+        return; /* Safety check for NULL player_specials */
     }
 
     if (!*arg2) {
@@ -6132,6 +6200,9 @@ ACMD(do_rskill)
         }
 
         vict->player_specials->saved.retained_skills[skill_num] = skill_value;
+        /* Set incarnation to current for manually added skills */
+        vict->player_specials->saved.retained_skill_incarnation[skill_num] =
+            vict->player_specials->saved.num_incarnations;
         send_to_char(ch, "Added retained skill %d (%s) with value %d for %s.\r\n", skill_num, skill_name(skill_num),
                      skill_value, GET_NAME(vict));
         return;
@@ -6156,6 +6227,7 @@ ACMD(do_rskill)
 
         int old_value = vict->player_specials->saved.retained_skills[skill_num];
         vict->player_specials->saved.retained_skills[skill_num] = 0;
+        vict->player_specials->saved.retained_skill_incarnation[skill_num] = -1;
         send_to_char(ch, "Removed retained skill %d (%s, was %d%%) from %s.\r\n", skill_num, skill_name(skill_num),
                      old_value, GET_NAME(vict));
         return;
