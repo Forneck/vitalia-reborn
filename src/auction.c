@@ -51,6 +51,124 @@ static struct char_data *find_player_online(const char *name)
 }
 
 /**
+ * Give gold to an offline player
+ * Loads their character, adds gold, saves, and frees memory
+ * Returns 1 on success, 0 on failure
+ */
+static int give_gold_to_offline_player(const char *name, long amount)
+{
+    struct char_data *temp_char;
+    int success = 0;
+
+    if (!name || !*name || amount <= 0) {
+        return 0;
+    }
+
+    /* Check if player is online first */
+    if (find_player_online(name)) {
+        log1("ERROR: Attempted to give gold to online player %s via offline method", name);
+        return 0;
+    }
+
+    /* Create temporary character structure */
+    CREATE(temp_char, struct char_data, 1);
+    clear_char(temp_char);
+    CREATE(temp_char->player_specials, struct player_special_data, 1);
+    new_mobile_data(temp_char);
+
+    /* Try to load the player */
+    if (load_char(name, temp_char) >= 0) {
+        /* Add gold */
+        increase_gold(temp_char, amount);
+
+        /* Save the character */
+        save_char(temp_char);
+
+        log1("AUCTION: Credited %ld gold to offline player %s", amount, name);
+        success = 1;
+    } else {
+        log1("ERROR: Failed to load character %s for gold credit", name);
+    }
+
+    /* Clean up */
+    if (temp_char->player_specials) {
+        free(temp_char->player_specials);
+    }
+    free_char(temp_char);
+    free(temp_char);
+
+    return success;
+}
+
+/**
+ * Give an item to an offline player
+ * Loads their character, creates item, saves to rent, and frees memory
+ * Returns 1 on success, 0 on failure
+ */
+static int give_item_to_offline_player(const char *name, obj_vnum item_vnum)
+{
+    struct char_data *temp_char;
+    struct obj_data *item;
+    obj_rnum rnum;
+    int success = 0;
+
+    if (!name || !*name || item_vnum < 0) {
+        return 0;
+    }
+
+    /* Check if player is online first */
+    if (find_player_online(name)) {
+        log1("ERROR: Attempted to give item to online player %s via offline method", name);
+        return 0;
+    }
+
+    /* Get item real number */
+    rnum = real_object(item_vnum);
+    if (rnum == NOTHING) {
+        log1("ERROR: Invalid item vnum %d for offline delivery", item_vnum);
+        return 0;
+    }
+
+    /* Create temporary character structure */
+    CREATE(temp_char, struct char_data, 1);
+    clear_char(temp_char);
+    CREATE(temp_char->player_specials, struct player_special_data, 1);
+    new_mobile_data(temp_char);
+
+    /* Try to load the player */
+    if (load_char(name, temp_char) >= 0) {
+        /* Load their rent file */
+        Crash_load(temp_char);
+
+        /* Create the item */
+        item = read_object(rnum, REAL);
+        if (item) {
+            /* Give item to character */
+            obj_to_char(item, temp_char);
+
+            /* Save character with new item */
+            Crash_crashsave(temp_char);
+
+            log1("AUCTION: Delivered item %d to offline player %s", item_vnum, name);
+            success = 1;
+        } else {
+            log1("ERROR: Failed to create item %d for offline delivery", item_vnum);
+        }
+    } else {
+        log1("ERROR: Failed to load character %s for item delivery", name);
+    }
+
+    /* Clean up */
+    if (temp_char->player_specials) {
+        free(temp_char->player_specials);
+    }
+    free_char(temp_char);
+    free(temp_char);
+
+    return success;
+}
+
+/**
  * Create a new auction
  */
 struct auction_data *create_auction(struct char_data *seller, struct obj_data *item, int access_mode,
@@ -633,10 +751,18 @@ void end_auction(struct auction_data *auction)
                         }
                         send_to_char(winner, "%s", buf);
                     } else {
-                        /* Winner offline - save item to their file (simplified: just log for now) */
-                        log1("AUCTION: Winner %s offline, item %d needs manual delivery",
-                             auction->winning_bid->bidder_name, auction->item_vnum);
-                        extract_obj(item); /* Clean up for now */
+                        /* Winner offline - deliver item to their rent file */
+                        if (give_item_to_offline_player(auction->winning_bid->bidder_name, auction->item_vnum)) {
+                            /* Item delivered successfully */
+                            extract_obj(item);
+                        } else {
+                            /* Failed to deliver - log for manual intervention */
+                            log1(
+                                "AUCTION CRITICAL: Failed to deliver item %d to offline winner %s - manual "
+                                "intervention required",
+                                auction->item_vnum, auction->winning_bid->bidder_name);
+                            extract_obj(item); /* Clean up object */
+                        }
                     }
                 }
             }
@@ -649,8 +775,11 @@ void end_auction(struct auction_data *auction)
                      format_long_br(final_price));
             send_to_char(seller, "%s", buf);
         } else {
-            /* Seller offline - save gold to their file (simplified: just log for now) */
-            log1("AUCTION: Seller %s offline, needs %ld gold credited", auction->seller_name, final_price);
+            /* Seller offline - credit gold to their character file */
+            if (!give_gold_to_offline_player(auction->seller_name, final_price)) {
+                log1("AUCTION CRITICAL: Failed to credit %ld gold to offline seller %s - manual intervention required",
+                     final_price, auction->seller_name);
+            }
         }
 
         log1("AUCTION: Auction #%d sold to %s for %ld gold (bid %ld)", auction->auction_id,
@@ -667,7 +796,13 @@ void end_auction(struct auction_data *auction)
                 send_to_char(bidder_char, "O leilão #%d foi cancelado. Seu lance de %s moedas foi devolvido.\r\n",
                              auction->auction_id, format_long_br(bid->amount));
             } else {
-                log1("AUCTION: Bidder %s offline, needs %ld gold refunded", bid->bidder_name, bid->amount);
+                /* Refund offline bidder */
+                if (!give_gold_to_offline_player(bid->bidder_name, bid->amount)) {
+                    log1(
+                        "AUCTION CRITICAL: Failed to refund %ld gold to offline bidder %s - manual intervention "
+                        "required",
+                        bid->amount, bid->bidder_name);
+                }
             }
         }
 
@@ -682,9 +817,16 @@ void end_auction(struct auction_data *auction)
                         send_to_char(seller, "Seu leilão #%d não teve lances válidos. O item foi devolvido.\r\n",
                                      auction->auction_id);
                     } else {
-                        log1("AUCTION: Seller %s offline, item %d needs to be returned", auction->seller_name,
-                             auction->item_vnum);
-                        extract_obj(item); /* Clean up for now */
+                        /* Return item to offline seller */
+                        if (give_item_to_offline_player(auction->seller_name, auction->item_vnum)) {
+                            extract_obj(item);
+                        } else {
+                            log1(
+                                "AUCTION CRITICAL: Failed to return item %d to offline seller %s - manual intervention "
+                                "required",
+                                auction->item_vnum, auction->seller_name);
+                            extract_obj(item);
+                        }
                     }
                 }
             }
