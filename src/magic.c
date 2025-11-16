@@ -342,7 +342,15 @@ int mag_affects(int level, struct char_data *ch, struct char_data *victim, int s
             if (spell_modifier_diminish) {
                 af[i].modifier = af[i].modifier / 2; /* Halve effect for "minus" syllable */
             } else if (spell_modifier_amplify) {
-                af[i].modifier = af[i].modifier * 2; /* Double effect for "plus" syllable */
+                /* Double effect for "plus" syllable, but clamp to sbyte range to prevent overflow
+                 * sbyte ranges from -128 to 127, so we need to ensure the doubled value fits */
+                int temp_modifier = (int)af[i].modifier * 2;
+                if (temp_modifier < -128)
+                    af[i].modifier = -128;
+                else if (temp_modifier > 127)
+                    af[i].modifier = 127;
+                else
+                    af[i].modifier = (sbyte)temp_modifier;
             }
         } else {
             af[i].location = spell->applies[i].appl_num;
