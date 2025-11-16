@@ -826,8 +826,8 @@ ACMD(do_experiment)
 
         /* Check if spoken syllables match */
         if (!strcmp(syllables, spoken_lower)) {
-            /* Found a match! Teach the spell to the player */
-            int learned_level = 15; /* Base proficiency for discovered spells */
+            /* Found a match! Teach the spell to the player at the same level as prerequisite */
+            int learned_level = (ptr->prerequisite_spell > 0) ? GET_SKILL(ch, ptr->prerequisite_spell) : 15;
 
             SET_SKILL(ch, ptr->vnum, learned_level);
 
