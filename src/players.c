@@ -1116,6 +1116,15 @@ static void load_retained_skills(FILE *fl, struct char_data *ch)
     int num = 0, num2 = 0, num3 = -1;
     char line[MAX_INPUT_LENGTH + 1];
 
+    if (!ch || !ch->player_specials) {
+        /* Safety check - skip loading if character data is invalid */
+        do {
+            get_line(fl, line);
+            sscanf(line, "%d", &num);
+        } while (num != 0);
+        return;
+    }
+
     do {
         get_line(fl, line);
         /* Try to read 3 values (new format with incarnation), fall back to 2 (old format) */

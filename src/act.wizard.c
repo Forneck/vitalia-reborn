@@ -6049,9 +6049,18 @@ static void show_retained_skills(struct char_data *ch)
     int incarnation;
     int class_num;
 
+    if (!ch) {
+        return; /* Safety check - should never happen */
+    }
+
     if (IS_NPC(ch)) {
         send_to_char(ch, "NPCs não têm habilidades de remort.\r\n");
         return;
+    }
+
+    if (!ch->player_specials) {
+        send_to_char(ch, "Erro: dados do jogador não disponíveis.\r\n");
+        return; /* Safety check for NULL player_specials */
     }
 
     send_to_char(ch, "\r\n&cHabilidades e Magias Levadas por Remort&n\r\n");
@@ -6069,8 +6078,8 @@ static void show_retained_skills(struct char_data *ch)
                                  pc_class_types[class_num], incarnation + 1); /* +1 because incarnations start at 0 */
                 } else {
                     /* Fallback for out-of-bounds class_num */
-                    send_to_char(ch, "[ %-20s ] ---- [ %-10s ] ---- [ %dª enc. ]\r\n", skill_name(i),
-                                 "desconhecida", incarnation + 1);
+                    send_to_char(ch, "[ %-20s ] ---- [ %-10s ] ---- [ %dª enc. ]\r\n", skill_name(i), "desconhecida",
+                                 incarnation + 1);
                 }
             } else {
                 /* Fallback for old data without incarnation info */
@@ -6122,6 +6131,11 @@ ACMD(do_rskill)
     if (IS_NPC(vict)) {
         send_to_char(ch, "You can't manage retained skills for NPCs.\r\n");
         return;
+    }
+
+    if (!vict->player_specials) {
+        send_to_char(ch, "Error: Player data not available.\r\n");
+        return; /* Safety check for NULL player_specials */
     }
 
     if (!*arg2) {
