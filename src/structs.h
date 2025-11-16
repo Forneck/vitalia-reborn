@@ -311,9 +311,10 @@
 #define PRF_VERBOSE 40    /**< Listings like where are more verbose */
 #define PRF_VIEWDAMAGE 41 /**< Display damage values after attack messages */
 #define PRF_DISPEMOTE 42  /**< Display mob emotion indicators in room descriptions */
+#define PRF_AUTOEXAM 43   /**< Automatically examine corpses after killing */
 
 /** Total number of available PRF flags */
-#define NUM_PRF_FLAGS 43
+#define NUM_PRF_FLAGS 44
 
 /* Affect bits: used in char_data.char_specials.saved.affected_by */
 /* WARNING: In the world files, NEVER set the bits marked "R" ("Reserved") */

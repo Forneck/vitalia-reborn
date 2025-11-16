@@ -2366,6 +2366,7 @@ ACMD(do_toggle)
         {"autogold", PRF_AUTOGOLD, 0, "Autogold desligado.\r\n", "Autogold ligado.\r\n"},
         {"autosplit", PRF_AUTOSPLIT, 0, "Autosplit desligado.\r\n", "Autosplit ligado.\r\n"},
         {"autosac", PRF_AUTOSAC, 0, "Autosac desligado.\r\n", "Autosac ligado.\r\n"},
+        {"autoexam", PRF_AUTOEXAM, 0, "Auto examinar desligado.\r\n", "Auto examinar ligado.\r\n"},
         {"autoassist", PRF_AUTOASSIST, 0, "Autoassist desligado.\r\n", "Autoassist ligado.\r\n"},
         {"automap", PRF_AUTOMAP, 1, "Agora, você não irá mais ver o  mini-mapa.\r\n",
          "Agora, você irá ver o  mini-mapa.\r\n"},

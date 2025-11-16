@@ -264,7 +264,8 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
                  "%s8%s) Chave Auto   %s[%s%3s%s]\r\n"
                  "%s9%s) Porta Auto   %s[%s%3s%s]\r\n"
                  "%s0%s) Hitbar       %s[%s%3s%s]\r\n"
-                 "%s=%s) Auto Titulo  %s[%s%3s%s]\r\n",
+                 "%s=%s) Auto Titulo  %s[%s%3s%s]\r\n"
+                 "%s-%s) Auto Examinar%s[%s%3s%s]\r\n",
                  /* Line 7 - automap */
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOMAP) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
@@ -284,7 +285,11 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
                  /* Line 11 - autotitle*/
                  CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
                  PREFEDIT_FLAGGED(PRF_AUTOTITLE) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
-                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOTITLE)), CCCYN(d->character, C_NRM));
+                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOTITLE)), CCCYN(d->character, C_NRM),
+                 /* Line 12 - autoexam*/
+                 CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+                 PREFEDIT_FLAGGED(PRF_AUTOEXAM) ? CBGRN(d->character, C_NRM) : CBRED(d->character, C_NRM),
+                 ONOFF(PREFEDIT_FLAGGED(PRF_AUTOEXAM)), CCCYN(d->character, C_NRM));
 
     /* The bottom section of the toggles menu */
     send_to_char(d->character,
@@ -795,6 +800,10 @@ void prefedit_parse(struct descriptor_data *d, char *arg)
                     TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_AUTOTITLE);
                     break;
 
+                case '-':
+                    TOGGLE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_AUTOEXAM);
+                    break;
+
                 default:
                     send_to_char(d->character, "Invalid Choice, try again (Q to Quit to main menu): ");
                     return;
@@ -1016,6 +1025,10 @@ void prefedit_Restore_Defaults(struct descriptor_data *d)
     /* PRF_VERBOSE    - On */
     if (PREFEDIT_FLAGGED(PRF_VERBOSE))
         SET_BIT_AR(PREFEDIT_GET_FLAGS, PRF_VERBOSE);
+
+    /* PRF_AUTOEXAM    - Off */
+    if (PREFEDIT_FLAGGED(PRF_AUTOEXAM))
+        REMOVE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_AUTOEXAM);
 
     /* Other (non-toggle) options */
     PREFEDIT_GET_WIMP_LEV = 0;     /* Wimpy off by default */
