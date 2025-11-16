@@ -17379,3 +17379,82 @@ Cada classe ganha reputação extra por ações alinhadas com seu tema:
   @rLadrão Maligno@n roubando bondoso: +2-4 (base +1-2, bônus classe +1-2)
 #1
 $~
+LEILAO LEILÕES AUCTION AUCTIONS
+
+Sintaxe: leilao [subcomando] [argumentos]
+         leiloes
+
+O sistema de leilões permite que jogadores vendam e comprem itens através
+de leilões públicos ou privados.
+
+Subcomandos disponíveis:
+
+  @cleilao listar@n            - Ver todos os leilões ativos
+  @cleilao criar <item> <preço>@n - Criar um novo leilão
+  @cleilao dar <id> <valor>@n  - Dar um lance em um leilão
+  @cleilao info <id>@n         - Ver detalhes de um leilão específico
+  @cleilao convidar <id> <jogador>@n - Convidar jogador para leilão fechado
+  @cleilao desconvidar <id> <jogador>@n - Remover convite de jogador
+  @cleilao convidados <id>@n   - Ver lista de convidados (apenas vendedor)
+  @cleilao passe@n             - Informações sobre passes para leilões fechados
+
+O comando @cleiloes@n é um atalho para @cleilao listar@n.
+
+@gComo Funciona:@n
+
+@y1. Criar Leilão:@n
+   - Vá até a casa de leilões (procure por Belchior)
+   - Use: @cleilao criar <item> <preço_inicial>@n
+   - O item será removido do seu inventário
+   - O leilão durará 30 minutos
+
+@y2. Dar Lances:@n
+   - Use: @cleilao dar <id_leilao> <valor_lance>@n
+   - Seu lance deve ser maior que o lance atual
+   - O dinheiro será reservado imediatamente
+   - Se você der um novo lance, o anterior será devolvido
+
+@y3. Fim do Leilão:@n
+   - Após 30 minutos, o leilão termina automaticamente
+   - O vencedor recebe o item
+   - O vendedor recebe o dinheiro
+   - Perdedores têm seus lances devolvidos
+
+@rLeilões Fechados:@n
+   Alguns leilões são fechados e exigem convite ou passe especial.
+   Fale com Belchior para obter um passe se você foi convidado.
+
+@yExemplos:@n
+
+  > leiloes
+  Lista de Leilões Ativos:
+  ========================
+  Leilão #1: espada longa (Preço: 1000 moedas) - 15 minutos restantes
+
+  > leilao info 1
+  Leilão #1
+  Item: espada longa
+  Vendedor: Fulano
+  Preço Inicial: 500 moedas
+  Preço Atual: 1000 moedas
+  Lance Vencedor: 1000 moedas por Ciclano
+  Tempo Restante: 15 minutos
+
+  > leilao dar 1 1500
+  Lance de 1500 moedas aceito no leilão #1!
+
+  > leilao criar espada 500
+  Leilão #2 criado para espada longa com preço inicial de 500 moedas.
+
+@yObservações:@n
+  - Você precisa estar na casa de leilões para criar leilões ou dar lances
+  - Tenha dinheiro suficiente antes de dar um lance
+  - Não é possível cancelar um leilão uma vez criado
+  - O sistema está em fase experimental - reporte problemas aos imortais
+
+Veja também: @cBELCHIOR, COMPRAR, VENDER@n
+#0
+LEILOES
+
+Veja: @cLEILAO@n
+#0
