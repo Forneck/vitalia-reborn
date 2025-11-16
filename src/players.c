@@ -1122,7 +1122,7 @@ static void load_retained_skills(FILE *fl, struct char_data *ch)
         if (sscanf(line, "%d %d %d", &num, &num2, &num3) < 2) {
             num = 0; /* Invalid line, stop */
         }
-        if (num != 0) {
+        if (num > 0 && num <= MAX_SKILLS) {
             ch->player_specials->saved.retained_skills[num] = num2;
             /* If num3 wasn't read (old format), it stays -1 */
             ch->player_specials->saved.retained_skill_incarnation[num] = num3;
