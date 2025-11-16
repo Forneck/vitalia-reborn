@@ -471,12 +471,15 @@ void mob_emotion_activity(void)
                 continue;
         }
 
-        /* Love-based following: Mobs with high love (>80) should follow players they love */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data &&
-            ch->ai_data->emotion_love >= CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD) {
+        /* Love-based following: Mobs with high love (>80) toward specific players should follow them */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data) {
             /* Look for a player to follow if not already following someone */
             if (!ch->master && !MOB_FLAGGED(ch, MOB_SENTINEL) && !MOB_FLAGGED(ch, MOB_STAY_ZONE)) {
                 struct char_data *potential_love_target;
+                struct char_data *best_love_target = NULL;
+                int highest_love = 0;
+                
+                /* Find the player the mob loves most using hybrid emotion system */
                 for (potential_love_target = world[IN_ROOM(ch)].people; potential_love_target;
                      potential_love_target = potential_love_target->next_in_room) {
                     /* Skip self and other mobs */
@@ -487,13 +490,22 @@ void mob_emotion_activity(void)
                     if (!CAN_SEE(ch, potential_love_target))
                         continue;
 
-                    /* Follow the player! */
-                    add_follower(ch, potential_love_target);
+                    /* Check effective love toward this specific player */
+                    int effective_love = get_effective_emotion_toward(ch, potential_love_target, EMOTION_TYPE_LOVE);
+                    if (effective_love >= CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD && effective_love > highest_love) {
+                        highest_love = effective_love;
+                        best_love_target = potential_love_target;
+                    }
+                }
+                
+                /* Follow the most loved player if found */
+                if (best_love_target) {
+                    add_follower(ch, best_love_target);
 
                     /* Announce the following with a loving social or message */
-                    act("$n olha para $N com adoração e começa a seguir $M.", FALSE, ch, 0, potential_love_target,
+                    act("$n olha para $N com adoração e começa a seguir $M.", FALSE, ch, 0, best_love_target,
                         TO_NOTVICT);
-                    act("$n olha para você com adoração e começa a seguir você.", FALSE, ch, 0, potential_love_target,
+                    act("$n olha para você com adoração e começa a seguir você.", FALSE, ch, 0, best_love_target,
                         TO_VICT);
 
                     /* Safety check for extraction */

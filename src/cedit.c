@@ -1345,6 +1345,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 40;     /* Easier to abandon */
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 75; /* Harder to join */
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 65;       /* More envious */
+
+            /* Combat behavior - Aggressive preset: more anger bonus, less pain penalty */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 60;  /* Easier to trigger anger bonus */
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 20;    /* Higher damage bonus */
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 30;    /* Higher attack bonus */
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 40;    /* Less sensitive to pain */
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 1; /* Reduced penalties */
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 3;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 3;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 7;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 15;
             break;
 
         case 2: /* Defensive - Mobs flee more easily, show fear */
@@ -1435,6 +1449,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 35;     /* Easier to abandon */
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 65; /* Easier join */
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 75;       /* Less envious */
+
+            /* Combat behavior - Defensive preset: less anger bonus, more pain penalty */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 80;  /* Harder to trigger anger bonus */
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 10;    /* Lower damage bonus */
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 20;    /* Lower attack bonus */
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 20;    /* More sensitive to pain */
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 40;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 2;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 3; /* Higher penalties */
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 5;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 7;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 15;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 25;
             break;
 
         case 3: /* Balanced - Default values (Phase 2 defaults) */
@@ -1521,6 +1549,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 30;
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 70;
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 70;
+
+            /* Combat behavior thresholds and modifiers - balanced */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 15;
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 25;
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 30;
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 2;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 4;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 5;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 10;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 20;
             break;
 
         case 4: /* Sensitive - Emotions display more, memory lasts longer */
@@ -1611,6 +1653,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 35;     /* Easier abandon */
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 60; /* Easier join */
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 75;       /* Less envious */
+
+            /* Combat behavior - Sensitive preset: balanced combat emotions */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 15;
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 25;
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 30;
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 2;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 4;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 5;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 10;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 20;
             break;
 
         case 5: /* Mercantile - Trading-focused, fair prices, trusting */
@@ -1697,6 +1753,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 30;
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 65;
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 75;
+
+            /* Combat behavior - Mercantile preset: balanced combat */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 15;
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 25;
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 30;
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 2;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 4;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 5;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 10;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 20;
             break;
 
         case 6: /* Hermit - Antisocial, refuses interaction, distrusting */
@@ -1783,6 +1853,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 25;     /* Easy abandon */
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 80; /* Hard to join */
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 60;       /* Very envious */
+
+            /* Combat behavior - Hermit preset: moderate combat emotions */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 12;
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 20;
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 35;
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 55;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 2;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 3;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 5;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 10;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 18;
             break;
 
         case 7: /* Loyal - Group-focused, stays with allies, faithful */
@@ -1869,6 +1953,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 35;     /* Hard to abandon */
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 55; /* VERY easy to join */
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 80;       /* Not envious */
+
+            /* Combat behavior - Loyal preset: fight for allies */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 65;  /* Easier to get angry defending */
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 18;    /* Higher damage for allies */
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 28;
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 35;
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 55;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 2;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 3; /* Less affected by pain */
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 4;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 8;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 15;
             break;
     }
 }

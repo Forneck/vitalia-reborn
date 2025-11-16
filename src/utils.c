@@ -5355,6 +5355,280 @@ void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int
 }
 
 /**
+ * Get relationship-based emotion level toward a specific entity from memories.
+ * This implements the "relationship layer" of the hybrid emotion system.
+ * 
+ * @param mob The mob whose relationship emotions to query
+ * @param target The entity to check relationship with
+ * @param emotion_type The type of emotion (EMOTION_TYPE_*)
+ * @return Weighted average of emotion from memories, or 0 if no memories exist
+ */
+int get_relationship_emotion(struct char_data *mob, struct char_data *target, int emotion_type)
+{
+    int i, memory_count = 0;
+    int entity_type;
+    long entity_id;
+    time_t current_time;
+    int total_emotion = 0;
+    int total_weight = 0;
+
+    /* Comprehensive null and validity checks */
+    if (!mob || !target || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return 0;
+
+    /* Additional safety checks */
+    if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+        return 0;
+    if (IS_NPC(target) && MOB_FLAGGED(target, MOB_NOTDEADYET))
+        return 0;
+    if (!IS_NPC(target) && PLR_FLAGGED(target, PLR_NOTDEADYET))
+        return 0;
+
+    /* Determine entity type and ID */
+    if (IS_NPC(target)) {
+        entity_type = ENTITY_TYPE_MOB;
+        entity_id = char_script_id(target);
+        if (entity_id == 0)
+            return 0;
+    } else {
+        entity_type = ENTITY_TYPE_PLAYER;
+        entity_id = GET_IDNUM(target);
+        if (entity_id <= 0)
+            return 0;
+    }
+
+    current_time = time(0);
+
+    /* Search through all memories matching this entity */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &mob->ai_data->memories[i];
+
+        /* Check if memory matches entity and isn't too old */
+        if (mem->timestamp > 0 && mem->entity_type == entity_type && mem->entity_id == entity_id) {
+            int age_seconds = current_time - mem->timestamp;
+            int weight;
+            int emotion_value = 0;
+
+            /* Calculate weight based on age (newer = more weight) */
+            if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_RECENT) {
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_RECENT;
+            } else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_FRESH) {
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_FRESH;
+            } else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_MODERATE) {
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE;
+            } else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_OLD) {
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_OLD;
+            } else {
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT;
+            }
+
+            /* Major events have double weight */
+            if (mem->major_event) {
+                weight *= 2;
+            }
+
+            /* Get the specific emotion value from memory */
+            switch (emotion_type) {
+            case EMOTION_TYPE_FEAR:
+                emotion_value = mem->fear_level;
+                break;
+            case EMOTION_TYPE_ANGER:
+                emotion_value = mem->anger_level;
+                break;
+            case EMOTION_TYPE_HAPPINESS:
+                emotion_value = mem->happiness_level;
+                break;
+            case EMOTION_TYPE_SADNESS:
+                emotion_value = mem->sadness_level;
+                break;
+            case EMOTION_TYPE_FRIENDSHIP:
+                emotion_value = mem->friendship_level;
+                break;
+            case EMOTION_TYPE_LOVE:
+                emotion_value = mem->love_level;
+                break;
+            case EMOTION_TYPE_TRUST:
+                emotion_value = mem->trust_level;
+                break;
+            case EMOTION_TYPE_LOYALTY:
+                emotion_value = mem->loyalty_level;
+                break;
+            case EMOTION_TYPE_CURIOSITY:
+                emotion_value = mem->curiosity_level;
+                break;
+            case EMOTION_TYPE_GREED:
+                emotion_value = mem->greed_level;
+                break;
+            case EMOTION_TYPE_PRIDE:
+                emotion_value = mem->pride_level;
+                break;
+            case EMOTION_TYPE_COMPASSION:
+                emotion_value = mem->compassion_level;
+                break;
+            case EMOTION_TYPE_ENVY:
+                emotion_value = mem->envy_level;
+                break;
+            case EMOTION_TYPE_COURAGE:
+                emotion_value = mem->courage_level;
+                break;
+            case EMOTION_TYPE_EXCITEMENT:
+                emotion_value = mem->excitement_level;
+                break;
+            case EMOTION_TYPE_DISGUST:
+                emotion_value = mem->disgust_level;
+                break;
+            case EMOTION_TYPE_SHAME:
+                emotion_value = mem->shame_level;
+                break;
+            case EMOTION_TYPE_PAIN:
+                emotion_value = mem->pain_level;
+                break;
+            case EMOTION_TYPE_HORROR:
+                emotion_value = mem->horror_level;
+                break;
+            case EMOTION_TYPE_HUMILIATION:
+                emotion_value = mem->humiliation_level;
+                break;
+            default:
+                emotion_value = 0;
+                break;
+            }
+
+            /* Accumulate weighted emotions */
+            total_emotion += emotion_value * weight;
+            total_weight += weight;
+            memory_count++;
+        }
+    }
+
+    /* Calculate average weighted emotion */
+    if (total_weight > 0) {
+        return total_emotion / total_weight;
+    }
+
+    return 0;
+}
+
+/**
+ * Get effective emotion toward a specific target using hybrid emotion system.
+ * This combines:
+ * 1. MOOD (global emotional state) - base emotion level
+ * 2. RELATIONSHIP (per-entity memories) - modifier based on past interactions
+ * 
+ * This implements the hybrid model requested in the emotion system upgrade:
+ * - Mood affects all interactions (environmental, time-based, general state)
+ * - Relationship modifies emotion specifically toward this target
+ * 
+ * @param mob The mob whose emotion to query
+ * @param target The target entity (can be NULL for mood-only queries)
+ * @param emotion_type The type of emotion (EMOTION_TYPE_*)
+ * @return Effective emotion level (0-100), clamped to valid range
+ */
+int get_effective_emotion_toward(struct char_data *mob, struct char_data *target, int emotion_type)
+{
+    int mood_emotion = 0;
+    int relationship_emotion = 0;
+    int effective_emotion = 0;
+
+    /* Comprehensive null and validity checks */
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return 0;
+
+    /* Get MOOD (global state) - the base emotion */
+    switch (emotion_type) {
+    case EMOTION_TYPE_FEAR:
+        mood_emotion = mob->ai_data->emotion_fear;
+        break;
+    case EMOTION_TYPE_ANGER:
+        mood_emotion = mob->ai_data->emotion_anger;
+        break;
+    case EMOTION_TYPE_HAPPINESS:
+        mood_emotion = mob->ai_data->emotion_happiness;
+        break;
+    case EMOTION_TYPE_SADNESS:
+        mood_emotion = mob->ai_data->emotion_sadness;
+        break;
+    case EMOTION_TYPE_FRIENDSHIP:
+        mood_emotion = mob->ai_data->emotion_friendship;
+        break;
+    case EMOTION_TYPE_LOVE:
+        mood_emotion = mob->ai_data->emotion_love;
+        break;
+    case EMOTION_TYPE_TRUST:
+        mood_emotion = mob->ai_data->emotion_trust;
+        break;
+    case EMOTION_TYPE_LOYALTY:
+        mood_emotion = mob->ai_data->emotion_loyalty;
+        break;
+    case EMOTION_TYPE_CURIOSITY:
+        mood_emotion = mob->ai_data->emotion_curiosity;
+        break;
+    case EMOTION_TYPE_GREED:
+        mood_emotion = mob->ai_data->emotion_greed;
+        break;
+    case EMOTION_TYPE_PRIDE:
+        mood_emotion = mob->ai_data->emotion_pride;
+        break;
+    case EMOTION_TYPE_COMPASSION:
+        mood_emotion = mob->ai_data->emotion_compassion;
+        break;
+    case EMOTION_TYPE_ENVY:
+        mood_emotion = mob->ai_data->emotion_envy;
+        break;
+    case EMOTION_TYPE_COURAGE:
+        mood_emotion = mob->ai_data->emotion_courage;
+        break;
+    case EMOTION_TYPE_EXCITEMENT:
+        mood_emotion = mob->ai_data->emotion_excitement;
+        break;
+    case EMOTION_TYPE_DISGUST:
+        mood_emotion = mob->ai_data->emotion_disgust;
+        break;
+    case EMOTION_TYPE_SHAME:
+        mood_emotion = mob->ai_data->emotion_shame;
+        break;
+    case EMOTION_TYPE_PAIN:
+        mood_emotion = mob->ai_data->emotion_pain;
+        break;
+    case EMOTION_TYPE_HORROR:
+        mood_emotion = mob->ai_data->emotion_horror;
+        break;
+    case EMOTION_TYPE_HUMILIATION:
+        mood_emotion = mob->ai_data->emotion_humiliation;
+        break;
+    default:
+        mood_emotion = 0;
+        break;
+    }
+
+    /* If no target specified, return mood only (e.g., for environmental checks) */
+    if (!target || !CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        return URANGE(0, mood_emotion, 100);
+    }
+
+    /* Get RELATIONSHIP emotion from memories toward this specific target */
+    relationship_emotion = get_relationship_emotion(mob, target, emotion_type);
+
+    /* Combine mood and relationship:
+     * - If we have memories, relationship influences the final emotion
+     * - Relationship acts as a modifier (-50 to +50) to the mood base
+     * - This creates personalized emotions while maintaining general mood
+     */
+    if (relationship_emotion > 0) {
+        /* Calculate relationship modifier as deviation from neutral (50) */
+        int relationship_modifier = relationship_emotion - 50;
+        /* Apply relationship modifier to mood (weighted at 60% to prevent extremes) */
+        effective_emotion = mood_emotion + (relationship_modifier * 60 / 100);
+    } else {
+        /* No memories of this entity yet, use mood only */
+        effective_emotion = mood_emotion;
+    }
+
+    /* Clamp to valid range */
+    return URANGE(0, effective_emotion, 100);
+}
+
+/**
  * Update mob emotions based on receiving a social/emote from a player
  * @param mob The mob receiving the social
  * @param actor The character performing the social

@@ -722,10 +722,12 @@ void generic_complete_quest(struct char_data *ch)
                             break;
                         }
                     }
-                    /* High trust gives 15% better rewards */
-                    if (questmaster && questmaster->ai_data &&
-                        questmaster->ai_data->emotion_trust >= CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD) {
-                        gold_reward = (int)(gold_reward * 1.15);
+                    /* High trust gives 15% better rewards - use hybrid emotion system */
+                    if (questmaster && questmaster->ai_data) {
+                        int effective_trust = get_effective_emotion_toward(questmaster, ch, EMOTION_TYPE_TRUST);
+                        if (effective_trust >= CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD) {
+                            gold_reward = (int)(gold_reward * 1.15);
+                        }
                     }
                 }
             }
@@ -1343,10 +1345,11 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
 
     quest_num = atoi(argument);
 
-    /* Check emotion-based quest restrictions for mobs with AI */
+    /* Check emotion-based quest restrictions for mobs with AI - use hybrid emotion system */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(qm) && qm->ai_data && !IS_NPC(ch)) {
         /* Low trust makes questmaster refuse to give quests */
-        if (qm->ai_data->emotion_trust < CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD) {
+        int effective_trust = get_effective_emotion_toward(qm, ch, EMOTION_TYPE_TRUST);
+        if (effective_trust < CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD) {
             snprintf(buf, sizeof(buf), "%s diz, 'Eu não confio em você o suficiente para lhe dar uma busca, %s.'",
                      GET_NAME(qm), GET_NAME(ch));
             send_to_char(ch, "%s\r\n", buf);
