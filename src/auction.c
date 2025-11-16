@@ -28,6 +28,7 @@ struct auction_data *auction_list = NULL;
 struct auction_pass *auction_pass_list = NULL;
 struct auction_invitation *auction_invitation_list = NULL;
 int next_auction_id = 1;
+struct auction_stats global_auction_stats = {0, 0, 0, 0, 0, 0};
 
 /**
  * Find an online player by name (for auction system)
@@ -51,9 +52,127 @@ static struct char_data *find_player_online(const char *name)
 }
 
 /**
+ * Give gold to an offline player
+ * Loads their character, adds gold, saves, and frees memory
+ * Returns 1 on success, 0 on failure
+ */
+static int give_gold_to_offline_player(const char *name, long amount)
+{
+    struct char_data *temp_char;
+    int success = 0;
+
+    if (!name || !*name || amount <= 0) {
+        return 0;
+    }
+
+    /* Check if player is online first */
+    if (find_player_online(name)) {
+        log1("ERROR: Attempted to give gold to online player %s via offline method", name);
+        return 0;
+    }
+
+    /* Create temporary character structure */
+    CREATE(temp_char, struct char_data, 1);
+    clear_char(temp_char);
+    CREATE(temp_char->player_specials, struct player_special_data, 1);
+    new_mobile_data(temp_char);
+
+    /* Try to load the player */
+    if (load_char(name, temp_char) >= 0) {
+        /* Add gold */
+        increase_gold(temp_char, amount);
+
+        /* Save the character */
+        save_char(temp_char);
+
+        log1("AUCTION: Credited %ld gold to offline player %s", amount, name);
+        success = 1;
+    } else {
+        log1("ERROR: Failed to load character %s for gold credit", name);
+    }
+
+    /* Clean up */
+    if (temp_char->player_specials) {
+        free(temp_char->player_specials);
+    }
+    free_char(temp_char);
+    free(temp_char);
+
+    return success;
+}
+
+/**
+ * Give an item to an offline player
+ * Loads their character, creates item, saves to rent, and frees memory
+ * Returns 1 on success, 0 on failure
+ */
+static int give_item_to_offline_player(const char *name, obj_vnum item_vnum)
+{
+    struct char_data *temp_char;
+    struct obj_data *item;
+    obj_rnum rnum;
+    int success = 0;
+
+    if (!name || !*name || item_vnum < 0) {
+        return 0;
+    }
+
+    /* Check if player is online first */
+    if (find_player_online(name)) {
+        log1("ERROR: Attempted to give item to online player %s via offline method", name);
+        return 0;
+    }
+
+    /* Get item real number */
+    rnum = real_object(item_vnum);
+    if (rnum == NOTHING) {
+        log1("ERROR: Invalid item vnum %d for offline delivery", item_vnum);
+        return 0;
+    }
+
+    /* Create temporary character structure */
+    CREATE(temp_char, struct char_data, 1);
+    clear_char(temp_char);
+    CREATE(temp_char->player_specials, struct player_special_data, 1);
+    new_mobile_data(temp_char);
+
+    /* Try to load the player */
+    if (load_char(name, temp_char) >= 0) {
+        /* Load their rent file */
+        Crash_load(temp_char);
+
+        /* Create the item */
+        item = read_object(rnum, REAL);
+        if (item) {
+            /* Give item to character */
+            obj_to_char(item, temp_char);
+
+            /* Save character with new item */
+            Crash_crashsave(temp_char);
+
+            log1("AUCTION: Delivered item %d to offline player %s", item_vnum, name);
+            success = 1;
+        } else {
+            log1("ERROR: Failed to create item %d for offline delivery", item_vnum);
+        }
+    } else {
+        log1("ERROR: Failed to load character %s for item delivery", name);
+    }
+
+    /* Clean up */
+    if (temp_char->player_specials) {
+        free(temp_char->player_specials);
+    }
+    free_char(temp_char);
+    free(temp_char);
+
+    return success;
+}
+
+/**
  * Create a new auction
  */
-struct auction_data *create_auction(struct char_data *seller, struct obj_data *item, int type, int access_mode,
+struct auction_data *create_auction(struct char_data *seller, struct obj_data *item, int access_mode,
                                     long starting_price, long reserve_price, int duration)
 {
     struct auction_data *auction;
@@ -84,7 +203,9 @@ struct auction_data *create_auction(struct char_data *seller, struct obj_data *i
     auction->item_vnum = GET_OBJ_VNUM(item);
     auction->quantity = 1; /* TODO: Handle bulk auctions */
 
-    auction->auction_type = type;
+    /* Initialize with default: Ascending, First Price (English auction) */
+    auction->direction = AUCTION_ASCENDING;
+    auction->price_mechanism = AUCTION_FIRST_PRICE;
     auction->access_mode = access_mode;
     auction->state = AUCTION_INACTIVE;
 
@@ -104,6 +225,10 @@ struct auction_data *create_auction(struct char_data *seller, struct obj_data *i
     /* Add to global auction list */
     auction->next = auction_list;
     auction_list = auction;
+
+    /* Update statistics */
+    global_auction_stats.total_auctions_created++;
+    global_auction_stats.last_auction_time = time(0);
 
     log1("AUCTION: Created auction #%d for %s by %s", auction->auction_id, auction->item_name, auction->seller_name);
 
@@ -413,7 +538,16 @@ int place_bid(struct char_data *bidder, int auction_id, long amount)
     auction->current_price = amount;
     auction->winning_bid = bid;
 
+    /* Update statistics */
+    global_auction_stats.total_bids_placed++;
+
     log1("AUCTION: %s bid %ld on auction #%d", GET_NAME(bidder), amount, auction_id);
+
+    /* Check for buyout price - end auction immediately if met */
+    if (auction->buyout_price > 0 && amount >= auction->buyout_price) {
+        log1("AUCTION: Buyout price met on auction #%d, ending immediately", auction_id);
+        end_auction(auction);
+    }
 
     return 1;
 }
@@ -438,14 +572,22 @@ void show_auction_details(struct char_data *ch, int auction_id)
     send_to_char(ch, "========================\r\n");
     send_to_char(ch, "Item: %s\r\n", auction->item_name);
     send_to_char(ch, "Vendedor: %s\r\n", auction->seller_name);
-    send_to_char(ch, "Tipo: %s\r\n",
-                 (auction->auction_type == AUCTION_TYPE_ENGLISH) ? "Leilão Inglês" : "Leilão Holandês");
+
+    /* Show auction configuration */
+    const char *dir_str = (auction->direction == AUCTION_ASCENDING) ? "Ascendente" : "Descendente";
+    const char *mech_str = (auction->price_mechanism == AUCTION_FIRST_PRICE) ? "Primeiro Preço" : "Segundo Preço";
+    send_to_char(ch, "Tipo: %s, %s\r\n", dir_str, mech_str);
+
     send_to_char(ch, "Acesso: %s\r\n", (auction->access_mode == AUCTION_OPEN) ? "Aberto" : "Fechado");
     send_to_char(ch, "Preço Inicial: %s moedas\r\n", format_long_br(auction->starting_price));
     send_to_char(ch, "Preço Atual: %s moedas\r\n", format_long_br(auction->current_price));
 
     if (auction->reserve_price > auction->starting_price) {
         send_to_char(ch, "Preço Reserva: %s moedas\r\n", format_long_br(auction->reserve_price));
+    }
+
+    if (auction->buyout_price > 0) {
+        send_to_char(ch, "Preço de Compra Imediata: %s moedas\r\n", format_long_br(auction->buyout_price));
     }
 
     /* Show time remaining */
@@ -499,6 +641,36 @@ void show_auction_list(struct char_data *ch)
 }
 
 /**
+ * Calculate the final price for an auction based on its mechanism
+ * Returns the amount the winner should pay
+ */
+static long calculate_final_price(struct auction_data *auction)
+{
+    struct auction_bid *bid;
+    long second_highest = auction->starting_price;
+
+    if (!auction || !auction->winning_bid) {
+        return 0;
+    }
+
+    /* First-price: winner pays their bid */
+    if (auction->price_mechanism == AUCTION_FIRST_PRICE) {
+        return auction->winning_bid->amount;
+    }
+
+    /* Second-price: winner pays second-highest bid */
+    /* Find the second highest bid */
+    for (bid = auction->bids; bid; bid = bid->next) {
+        if (bid != auction->winning_bid && bid->amount > second_highest) {
+            second_highest = bid->amount;
+        }
+    }
+
+    /* If no other bids, pay the starting price */
+    return second_highest;
+}
+
+/**
  * Update auction states and end expired auctions
  */
 void update_auctions(void)
@@ -509,8 +681,40 @@ void update_auctions(void)
     for (auction = auction_list; auction; auction = next_auction) {
         next_auction = auction->next;
 
-        if (auction->state == AUCTION_ACTIVE && auction->end_time <= now) {
-            end_auction(auction);
+        if (auction->state == AUCTION_ACTIVE) {
+            /* Handle descending auctions - drop price automatically */
+            if (auction->direction == AUCTION_DESCENDING && auction->bids == NULL) {
+                /* Calculate price drop: 5% every 30 seconds, minimum 1 gold */
+                time_t elapsed = now - auction->start_time;
+                int drops = elapsed / 30; /* Drop every 30 seconds */
+
+                if (drops > 0) {
+                    long price_drop = (auction->starting_price * 5 * drops) / 100;
+                    if (price_drop < drops) {
+                        price_drop = drops; /* Minimum 1 gold per drop */
+                    }
+
+                    long new_price = auction->starting_price - price_drop;
+
+                    /* Don't drop below reserve price or 1 gold */
+                    if (new_price < auction->reserve_price && auction->reserve_price > 0) {
+                        new_price = auction->reserve_price;
+                    }
+                    if (new_price < 1) {
+                        new_price = 1;
+                    }
+
+                    /* Update current price if it changed */
+                    if (new_price != auction->current_price) {
+                        auction->current_price = new_price;
+                    }
+                }
+            }
+
+            /* Check if auction time expired */
+            if (auction->end_time <= now) {
+                end_auction(auction);
+            }
         }
     }
 
@@ -538,9 +742,17 @@ void end_auction(struct auction_data *auction)
 
     /* Check if there was a winning bid */
     if (auction->winning_bid && auction->winning_bid->amount >= auction->reserve_price) {
+        long final_price = calculate_final_price(auction);
+        long refund_to_winner = 0;
+
         /* Try to find seller and winner online - using find_player_online instead of get_player_vis */
         seller = find_player_online(auction->seller_name);
         winner = find_player_online(auction->winning_bid->bidder_name);
+
+        /* Calculate refund for winner if second-price */
+        if (auction->price_mechanism == AUCTION_SECOND_PRICE && final_price < auction->winning_bid->amount) {
+            refund_to_winner = auction->winning_bid->amount - final_price;
+        }
 
         /* Refund all losing bidders */
         for (bid = auction->bids; bid; bid = bid->next) {
@@ -561,6 +773,11 @@ void end_auction(struct auction_data *auction)
             }
         }
 
+        /* Refund winner if second-price mechanism */
+        if (refund_to_winner > 0 && winner) {
+            increase_gold(winner, refund_to_winner);
+        }
+
         /* Create the item for the winner */
         if (auction->item_vnum > 0) {
             obj_rnum rnum = real_object(auction->item_vnum);
@@ -572,33 +789,55 @@ void end_auction(struct auction_data *auction)
                         obj_to_char(item, winner);
                         /* Safely access item description */
                         const char *item_desc = item->short_description ? item->short_description : "um item";
-                        snprintf(buf, sizeof(buf), "Você ganhou o leilão #%d! %s foi entregue a você.\r\n",
-                                 auction->auction_id, item_desc);
+                        if (auction->price_mechanism == AUCTION_SECOND_PRICE && refund_to_winner > 0) {
+                            snprintf(buf, sizeof(buf),
+                                     "Você ganhou o leilão #%d! %s foi entregue a você.\r\n"
+                                     "Você ofereceu %s mas pagou apenas %s (segundo preço).\r\n",
+                                     auction->auction_id, item_desc, format_long_br(auction->winning_bid->amount),
+                                     format_long_br(final_price));
+                        } else {
+                            snprintf(buf, sizeof(buf), "Você ganhou o leilão #%d! %s foi entregue a você.\r\n",
+                                     auction->auction_id, item_desc);
+                        }
                         send_to_char(winner, "%s", buf);
                     } else {
-                        /* Winner offline - save item to their file (simplified: just log for now) */
-                        log1("AUCTION: Winner %s offline, item %d needs manual delivery",
-                             auction->winning_bid->bidder_name, auction->item_vnum);
-                        extract_obj(item); /* Clean up for now */
+                        /* Winner offline - deliver item to their rent file */
+                        if (give_item_to_offline_player(auction->winning_bid->bidder_name, auction->item_vnum)) {
+                            /* Item delivered successfully */
+                            extract_obj(item);
+                        } else {
+                            /* Failed to deliver - log for manual intervention */
+                            log1(
+                                "AUCTION CRITICAL: Failed to deliver item %d to offline winner %s - manual "
+                                "intervention required",
+                                auction->item_vnum, auction->winning_bid->bidder_name);
+                            extract_obj(item); /* Clean up object */
+                        }
                     }
                 }
             }
         }
 
-        /* Transfer money to seller (winner's money already taken in place_bid) */
+        /* Transfer money to seller */
         if (seller) {
-            increase_gold(seller, auction->winning_bid->amount);
+            increase_gold(seller, final_price);
             snprintf(buf, sizeof(buf), "Seu leilão #%d foi vendido por %s moedas!\r\n", auction->auction_id,
-                     format_long_br(auction->winning_bid->amount));
+                     format_long_br(final_price));
             send_to_char(seller, "%s", buf);
         } else {
-            /* Seller offline - save gold to their file (simplified: just log for now) */
-            log1("AUCTION: Seller %s offline, needs %ld gold credited", auction->seller_name,
-                 auction->winning_bid->amount);
+            /* Seller offline - credit gold to their character file */
+            if (!give_gold_to_offline_player(auction->seller_name, final_price)) {
+                log1("AUCTION CRITICAL: Failed to credit %ld gold to offline seller %s - manual intervention required",
+                     final_price, auction->seller_name);
+            }
         }
 
-        log1("AUCTION: Auction #%d sold to %s for %ld gold", auction->auction_id, auction->winning_bid->bidder_name,
-             auction->winning_bid->amount);
+        log1("AUCTION: Auction #%d sold to %s for %ld gold (bid %ld)", auction->auction_id,
+             auction->winning_bid->bidder_name, final_price, auction->winning_bid->amount);
+
+        /* Update statistics */
+        global_auction_stats.total_auctions_completed++;
+        global_auction_stats.total_gold_traded += final_price;
     } else {
         /* No winning bid or reserve not met - refund all bidders and return item to seller */
         seller = find_player_online(auction->seller_name);
@@ -611,7 +850,13 @@ void end_auction(struct auction_data *auction)
                 send_to_char(bidder_char, "O leilão #%d foi cancelado. Seu lance de %s moedas foi devolvido.\r\n",
                              auction->auction_id, format_long_br(bid->amount));
             } else {
-                log1("AUCTION: Bidder %s offline, needs %ld gold refunded", bid->bidder_name, bid->amount);
+                /* Refund offline bidder */
+                if (!give_gold_to_offline_player(bid->bidder_name, bid->amount)) {
+                    log1(
+                        "AUCTION CRITICAL: Failed to refund %ld gold to offline bidder %s - manual intervention "
+                        "required",
+                        bid->amount, bid->bidder_name);
+                }
             }
         }
 
@@ -626,15 +871,25 @@ void end_auction(struct auction_data *auction)
                         send_to_char(seller, "Seu leilão #%d não teve lances válidos. O item foi devolvido.\r\n",
                                      auction->auction_id);
                     } else {
-                        log1("AUCTION: Seller %s offline, item %d needs to be returned", auction->seller_name,
-                             auction->item_vnum);
-                        extract_obj(item); /* Clean up for now */
+                        /* Return item to offline seller */
+                        if (give_item_to_offline_player(auction->seller_name, auction->item_vnum)) {
+                            extract_obj(item);
+                        } else {
+                            log1(
+                                "AUCTION CRITICAL: Failed to return item %d to offline seller %s - manual intervention "
+                                "required",
+                                auction->item_vnum, auction->seller_name);
+                            extract_obj(item);
+                        }
                     }
                 }
             }
         }
 
         log1("AUCTION: Auction #%d ended without valid bids", auction->auction_id);
+
+        /* Update statistics */
+        global_auction_stats.total_auctions_failed++;
     }
 }
 
@@ -674,8 +929,8 @@ SPECIAL(belchior_auctioneer)
         two_arguments(argument, arg1, arg2);
 
         if (!*arg1) {
-            act("Belchior diz: 'Para obter um passe de leilão, me diga: passe <id_leilao>'", FALSE, ch, 0, belchior,
-                TO_CHAR);
+            act("Belchior diz: 'Para obter um passe de leilão, me diga: passe [numero_do_leilao]'", FALSE, ch, 0,
+                belchior, TO_CHAR);
             return TRUE;
         }
 
@@ -697,17 +952,25 @@ SPECIAL(belchior_auctioneer)
         } else {
             struct auction_data *auction = find_auction(auction_id);
             if (!auction) {
-                act("Belchior diz: 'Este leilão não existe.'", FALSE, ch, 0, belchior, TO_CHAR);
+                act("Belchior diz: 'Este leilão não existe. Use \"leilao listar\" para ver os leilões ativos.'", FALSE,
+                    ch, 0, belchior, TO_CHAR);
             } else if (auction->state != AUCTION_ACTIVE) {
-                act("Belchior diz: 'Este leilão não está ativo.'", FALSE, ch, 0, belchior, TO_CHAR);
+                act("Belchior diz: 'Este leilão não está ativo. Use \"leilao listar\" para ver os leilões ativos.'",
+                    FALSE, ch, 0, belchior, TO_CHAR);
             } else if (auction->access_mode != AUCTION_CLOSED) {
-                act("Belchior diz: 'Este é um leilão aberto, você não precisa de passe.'", FALSE, ch, 0, belchior,
+                act("Belchior sorri: 'Este é um leilão aberto! Você não precisa de passe.'", FALSE, ch, 0, belchior,
+                    TO_CHAR);
+                act("Belchior aponta para a escada: 'Basta descer para a casa de leilões.'", FALSE, ch, 0, belchior,
                     TO_CHAR);
             } else if (!is_invited_to_auction(ch, auction_id)) {
-                act("Belchior balança a cabeça: 'Você não foi convidado para este leilão.'", FALSE, ch, 0, belchior,
-                    TO_CHAR);
+                act("Belchior balança a cabeça: 'Você não foi convidado para este leilão fechado.'", FALSE, ch, 0,
+                    belchior, TO_CHAR);
+                act("Belchior diz: 'Apenas jogadores convidados pelo vendedor podem participar.'", FALSE, ch, 0,
+                    belchior, TO_CHAR);
             } else {
                 act("Belchior diz: 'Você já possui um passe válido para este leilão.'", FALSE, ch, 0, belchior,
+                    TO_CHAR);
+                act("Belchior aponta para a escada: 'Pode descer para a casa de leilões.'", FALSE, ch, 0, belchior,
                     TO_CHAR);
             }
         }
@@ -756,11 +1019,11 @@ SPECIAL(belchior_auctioneer)
     }
 
     if (needs_pass && !has_valid_pass) {
-        act("Belchior bloqueia seu caminho: 'Há leilões fechados acontecendo. Você precisa de um passe especial ou ser "
-            "convidado.'",
-            FALSE, ch, 0, belchior, TO_CHAR);
-        act("Belchior sussurra: 'Use \"passe <numero_leilao>\" se você foi convidado para algum leilão.'", FALSE, ch, 0,
-            belchior, TO_CHAR);
+        act("Belchior bloqueia seu caminho: 'Há leilões fechados acontecendo.'", FALSE, ch, 0, belchior, TO_CHAR);
+        act("Belchior explica: 'Se você foi convidado, primeiro obtenha um passe usando: passe [numero_leilao]'", FALSE,
+            ch, 0, belchior, TO_CHAR);
+        act("Belchior continua: 'Use \"leilao listar\" para ver os leilões disponíveis.'", FALSE, ch, 0, belchior,
+            TO_CHAR);
         act("Belchior impede $n de descer.", FALSE, ch, 0, 0, TO_ROOM);
         return TRUE;
     }
@@ -841,11 +1104,188 @@ void cleanup_finished_auctions(void)
 }
 
 /**
- * Save auctions to disk (placeholder)
+ * Save auctions to disk
  */
-void save_auctions(void) { /* TODO: Implement auction persistence */ }
+void save_auctions(void)
+{
+    FILE *fl;
+    struct auction_data *auction;
+    struct auction_bid *bid;
+    char filename[256];
+    int active_count = 0;
+
+    snprintf(filename, sizeof(filename), "lib/etc/auctions.dat");
+
+    if (!(fl = fopen(filename, "w"))) {
+        log1("AUCTION: Unable to open auction file for writing: %s", filename);
+        return;
+    }
+
+    /* Write header with format explanation */
+    fprintf(fl, "# Auction System Save File\n");
+    fprintf(fl, "# Format:\n");
+    fprintf(fl, "# NEXT_ID <next_auction_id>\n");
+    fprintf(fl, "# STATS <created> <completed> <failed> <gold_traded> <bids_placed> <last_time>\n");
+    fprintf(fl, "# A <id> <seller> <item_vnum> <direction> <mechanism> <access>\n");
+    fprintf(fl, "#   <start_price> <current_price> <reserve> <buyout>\n");
+    fprintf(fl, "#   <start_time> <end_time> <duration> <item_name>\n");
+    fprintf(fl, "# B <bidder_name> <amount> <timestamp>\n");
+    fprintf(fl, "# E (end of auction)\n");
+    fprintf(fl, "#\n");
+
+    /* Save next auction ID and statistics */
+    fprintf(fl, "NEXT_ID %d\n", next_auction_id);
+    fprintf(fl, "STATS %d %d %d %ld %d %ld\n", global_auction_stats.total_auctions_created,
+            global_auction_stats.total_auctions_completed, global_auction_stats.total_auctions_failed,
+            global_auction_stats.total_gold_traded, global_auction_stats.total_bids_placed,
+            (long)global_auction_stats.last_auction_time);
+
+    /* Save each active auction */
+    for (auction = auction_list; auction; auction = auction->next) {
+        if (auction->state != AUCTION_ACTIVE) {
+            continue; /* Only save active auctions */
+        }
+
+        /* Auction header: A <id> <seller> <item_vnum> <direction> <mechanism> <access> */
+        fprintf(fl, "A %d %s %d %d %d %d\n", auction->auction_id, auction->seller_name, auction->item_vnum,
+                auction->direction, auction->price_mechanism, auction->access_mode);
+
+        /* Price information */
+        fprintf(fl, "P %ld %ld %ld %ld\n", auction->starting_price, auction->current_price, auction->reserve_price,
+                auction->buyout_price);
+
+        /* Time information */
+        fprintf(fl, "T %ld %ld %d\n", (long)auction->start_time, (long)auction->end_time, auction->duration);
+
+        /* Item name (may contain spaces) */
+        fprintf(fl, "I %s\n", auction->item_name);
+
+        /* Save bids: B <bidder_name> <amount> <timestamp> */
+        for (bid = auction->bids; bid; bid = bid->next) {
+            fprintf(fl, "B %s %ld %ld\n", bid->bidder_name, bid->amount, (long)bid->timestamp);
+        }
+
+        /* End of auction marker */
+        fprintf(fl, "E\n");
+        active_count++;
+    }
+
+    fclose(fl);
+    log1("AUCTION: Saved %d active auctions to disk", active_count);
+}
 
 /**
- * Load auctions from disk (placeholder)
+ * Load auctions from disk
  */
-void load_auctions(void) { /* TODO: Implement auction loading */ }
+void load_auctions(void)
+{
+    FILE *fl;
+    char filename[256];
+    char line[MAX_INPUT_LENGTH];
+    char keyword;
+    struct auction_data *auction = NULL;
+    struct auction_bid *bid;
+    int loaded_count = 0;
+
+    snprintf(filename, sizeof(filename), "lib/etc/auctions.dat");
+
+    if (!(fl = fopen(filename, "r"))) {
+        log1("AUCTION: No auction file to load (this is normal on first run)");
+        return;
+    }
+
+    while (fgets(line, sizeof(line), fl)) {
+        /* Skip comments and empty lines */
+        if (line[0] == '#' || line[0] == '\n' || line[0] == '\r')
+            continue;
+
+        /* Remove newline */
+        line[strcspn(line, "\n")] = 0;
+
+        keyword = line[0];
+
+        if (keyword == 'N') { /* NEXT_ID */
+            sscanf(line, "NEXT_ID %d", &next_auction_id);
+        } else if (keyword == 'S') { /* STATS */
+            long temp_time;
+            sscanf(line, "STATS %d %d %d %ld %d %ld", &global_auction_stats.total_auctions_created,
+                   &global_auction_stats.total_auctions_completed, &global_auction_stats.total_auctions_failed,
+                   &global_auction_stats.total_gold_traded, &global_auction_stats.total_bids_placed, &temp_time);
+            global_auction_stats.last_auction_time = (time_t)temp_time;
+        } else if (keyword == 'A') { /* Auction header */
+            int temp_vnum;
+            CREATE(auction, struct auction_data, 1);
+            sscanf(line, "A %d %s %d %d %d %d", &auction->auction_id, auction->seller_name, &temp_vnum,
+                   &auction->direction, &auction->price_mechanism, &auction->access_mode);
+            auction->item_vnum = (obj_vnum)temp_vnum;
+            auction->state = AUCTION_ACTIVE;
+            auction->bids = NULL;
+            auction->winning_bid = NULL;
+            auction->invited_players = NULL;
+            auction->next = auction_list;
+            auction_list = auction;
+            loaded_count++;
+        } else if (keyword == 'P' && auction) { /* Price information */
+            sscanf(line, "P %ld %ld %ld %ld", &auction->starting_price, &auction->current_price,
+                   &auction->reserve_price, &auction->buyout_price);
+        } else if (keyword == 'T' && auction) { /* Time information */
+            long start_t, end_t;
+            sscanf(line, "T %ld %ld %d", &start_t, &end_t, &auction->duration);
+            auction->start_time = (time_t)start_t;
+            auction->end_time = (time_t)end_t;
+        } else if (keyword == 'I' && auction) { /* Item name */
+            /* Read the rest of the line after "I " */
+            const char *name_start = line + 2;
+            strlcpy(auction->item_name, name_start, sizeof(auction->item_name));
+        } else if (keyword == 'B' && auction) { /* Bid */
+            long timestamp;
+            CREATE(bid, struct auction_bid, 1);
+            sscanf(line, "B %s %ld %ld", bid->bidder_name, &bid->amount, &timestamp);
+            bid->timestamp = (time_t)timestamp;
+            bid->next = auction->bids;
+            auction->bids = bid;
+
+            /* Update winning bid if this is the highest */
+            if (!auction->winning_bid || bid->amount > auction->winning_bid->amount) {
+                auction->winning_bid = bid;
+            }
+        } else if (keyword == 'E') { /* End of auction */
+            auction = NULL;
+        }
+    }
+
+    fclose(fl);
+    log1("AUCTION: Loaded %d auctions from disk", loaded_count);
+}
+
+/**
+ * Show auction statistics
+ */
+void show_auction_stats(struct char_data *ch)
+{
+    int active_count = 0;
+    struct auction_data *auction;
+
+    /* Count active auctions */
+    for (auction = auction_list; auction; auction = auction->next) {
+        if (auction->state == AUCTION_ACTIVE) {
+            active_count++;
+        }
+    }
+
+    send_to_char(ch, "\r\n&c=== ESTATÍSTICAS DO SISTEMA DE LEILÕES ===&n\r\n\r\n");
+    send_to_char(ch, "Total de leilões criados: %d\r\n", global_auction_stats.total_auctions_created);
+    send_to_char(ch, "Leilões completados: %d\r\n", global_auction_stats.total_auctions_completed);
+    send_to_char(ch, "Leilões falhados: %d\r\n", global_auction_stats.total_auctions_failed);
+    send_to_char(ch, "Leilões ativos: %d\r\n", active_count);
+    send_to_char(ch, "Total de lances: %d\r\n", global_auction_stats.total_bids_placed);
+    send_to_char(ch, "Ouro total negociado: %s moedas\r\n", format_long_br(global_auction_stats.total_gold_traded));
+
+    if (global_auction_stats.last_auction_time > 0) {
+        char timebuf[80];
+        strftime(timebuf, sizeof(timebuf), "%Y-%m-%d %H:%M:%S", localtime(&global_auction_stats.last_auction_time));
+        send_to_char(ch, "Último leilão: %s\r\n", timebuf);
+    }
+
+    send_to_char(ch, "\r\n");
+}

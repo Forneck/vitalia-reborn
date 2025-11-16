@@ -10,9 +10,17 @@
 
 #include "structs.h"
 
-/* Auction types */
+/* Auction types - DEPRECATED: Use direction + price_mechanism instead */
 #define AUCTION_TYPE_ENGLISH 0 /* Ascendente, Primeiro Preço */
-#define AUCTION_TYPE_DUTCH 1   /* Descendente, Segundo Preço */
+#define AUCTION_TYPE_DUTCH 1   /* Descendente, Primeiro Preço */
+
+/* Auction direction */
+#define AUCTION_ASCENDING 0  /* Price goes up (traditional) */
+#define AUCTION_DESCENDING 1 /* Price goes down (Dutch-style) */
+
+/* Auction price mechanism */
+#define AUCTION_FIRST_PRICE 0  /* Winner pays their bid */
+#define AUCTION_SECOND_PRICE 1 /* Winner pays second-highest bid */
 
 /* Auction access modes */
 #define AUCTION_OPEN 0   /* Anyone can bid */
@@ -43,9 +51,10 @@ struct auction_data {
     obj_vnum item_vnum;                /* Virtual number of the item */
     int quantity;                      /* Number of items (for bulk auctions) */
 
-    int auction_type; /* AUCTION_TYPE_* */
-    int access_mode;  /* AUCTION_OPEN or AUCTION_CLOSED */
-    int state;        /* AUCTION_* state */
+    int direction;       /* AUCTION_ASCENDING or AUCTION_DESCENDING */
+    int price_mechanism; /* AUCTION_FIRST_PRICE or AUCTION_SECOND_PRICE */
+    int access_mode;     /* AUCTION_OPEN or AUCTION_CLOSED */
+    int state;           /* AUCTION_* state */
 
     long starting_price; /* Starting bid amount */
     long current_price;  /* Current highest bid */
@@ -81,14 +90,25 @@ struct auction_pass {
     struct auction_pass *next;         /* Next pass in the list */
 };
 
+/* Auction statistics structure */
+struct auction_stats {
+    int total_auctions_created;
+    int total_auctions_completed;
+    int total_auctions_failed;
+    long total_gold_traded;
+    int total_bids_placed;
+    time_t last_auction_time;
+};
+
 /* Global auction list */
 extern struct auction_data *auction_list;
 extern struct auction_pass *auction_pass_list;
 extern struct auction_invitation *auction_invitation_list;
 extern int next_auction_id;
+extern struct auction_stats global_auction_stats;
 
 /* Function prototypes */
-struct auction_data *create_auction(struct char_data *seller, struct obj_data *item, int type, int access_mode,
+struct auction_data *create_auction(struct char_data *seller, struct obj_data *item, int access_mode,
                                     long starting_price, long reserve_price, int duration);
 int place_bid(struct char_data *bidder, int auction_id, long amount);
 int has_auction_pass(struct char_data *ch, int auction_id);
@@ -106,6 +126,7 @@ struct auction_data *find_auction(int auction_id);
 void end_auction(struct auction_data *auction);
 void save_auctions(void);
 void load_auctions(void);
+void show_auction_stats(struct char_data *ch);
 
 /* Special function prototype for Belchior */
 SPECIAL(belchior_auctioneer);
