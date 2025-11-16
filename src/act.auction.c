@@ -239,8 +239,49 @@ ACMD(do_auction)
     }
 
     if (is_abbrev(subcommand, "passe")) {
-        /* Direct players to talk to Belchior */
-        send_to_char(ch, "Para obter um passe de leilão, vá até Belchior e use: passe [numero_do_leilao]\r\n");
+        struct auction_data *auc;
+        int has_open = 0, has_closed = 0, invited_count = 0;
+
+        /* Check what auctions are available */
+        for (auc = auction_list; auc; auc = auc->next) {
+            if (auc->state == AUCTION_ACTIVE) {
+                if (auc->access_mode == AUCTION_OPEN) {
+                    has_open = 1;
+                } else if (auc->access_mode == AUCTION_CLOSED) {
+                    has_closed = 1;
+                    if (is_invited_to_auction(ch, auc->auction_id)) {
+                        invited_count++;
+                    }
+                }
+            }
+        }
+
+        send_to_char(ch, "=== INFORMAÇÕES SOBRE PASSES DE LEILÃO ===\r\n\r\n");
+
+        if (!has_open && !has_closed) {
+            send_to_char(ch, "Não há leilões ativos no momento.\r\n");
+            send_to_char(ch, "Use 'leilao criar' para criar um novo leilão.\r\n");
+            return;
+        }
+
+        if (has_open) {
+            send_to_char(ch, "LEILÕES ABERTOS: Não precisam de passe!\r\n");
+            send_to_char(ch, "  → Vá até a casa de leilões (sala de Belchior, desça)\r\n");
+            send_to_char(ch, "  → Use 'leilao listar' para ver os leilões\r\n\r\n");
+        }
+
+        if (has_closed) {
+            send_to_char(ch, "LEILÕES FECHADOS: Precisam de passe especial!\r\n");
+            if (invited_count > 0) {
+                send_to_char(ch, "  → Você foi convidado para %d leilão(ões) fechado(s)!\r\n", invited_count);
+                send_to_char(ch, "  → Vá até Belchior e use: passe [numero_do_leilao]\r\n");
+                send_to_char(ch, "  → Use 'leilao listar' para ver os números dos leilões\r\n");
+            } else {
+                send_to_char(ch, "  → Você NÃO foi convidado para nenhum leilão fechado.\r\n");
+                send_to_char(ch, "  → Apenas convidados podem obter passes.\r\n");
+            }
+        }
+
         return;
     }
 

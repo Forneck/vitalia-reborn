@@ -697,17 +697,25 @@ SPECIAL(belchior_auctioneer)
         } else {
             struct auction_data *auction = find_auction(auction_id);
             if (!auction) {
-                act("Belchior diz: 'Este leilão não existe.'", FALSE, ch, 0, belchior, TO_CHAR);
+                act("Belchior diz: 'Este leilão não existe. Use \"leilao listar\" para ver os leilões ativos.'", FALSE,
+                    ch, 0, belchior, TO_CHAR);
             } else if (auction->state != AUCTION_ACTIVE) {
-                act("Belchior diz: 'Este leilão não está ativo.'", FALSE, ch, 0, belchior, TO_CHAR);
+                act("Belchior diz: 'Este leilão não está ativo. Use \"leilao listar\" para ver os leilões ativos.'",
+                    FALSE, ch, 0, belchior, TO_CHAR);
             } else if (auction->access_mode != AUCTION_CLOSED) {
-                act("Belchior diz: 'Este é um leilão aberto, você não precisa de passe.'", FALSE, ch, 0, belchior,
+                act("Belchior sorri: 'Este é um leilão aberto! Você não precisa de passe.'", FALSE, ch, 0, belchior,
+                    TO_CHAR);
+                act("Belchior aponta para a escada: 'Basta descer para a casa de leilões.'", FALSE, ch, 0, belchior,
                     TO_CHAR);
             } else if (!is_invited_to_auction(ch, auction_id)) {
-                act("Belchior balança a cabeça: 'Você não foi convidado para este leilão.'", FALSE, ch, 0, belchior,
-                    TO_CHAR);
+                act("Belchior balança a cabeça: 'Você não foi convidado para este leilão fechado.'", FALSE, ch, 0,
+                    belchior, TO_CHAR);
+                act("Belchior diz: 'Apenas jogadores convidados pelo vendedor podem participar.'", FALSE, ch, 0,
+                    belchior, TO_CHAR);
             } else {
                 act("Belchior diz: 'Você já possui um passe válido para este leilão.'", FALSE, ch, 0, belchior,
+                    TO_CHAR);
+                act("Belchior aponta para a escada: 'Pode descer para a casa de leilões.'", FALSE, ch, 0, belchior,
                     TO_CHAR);
             }
         }
@@ -756,11 +764,11 @@ SPECIAL(belchior_auctioneer)
     }
 
     if (needs_pass && !has_valid_pass) {
-        act("Belchior bloqueia seu caminho: 'Há leilões fechados acontecendo. Você precisa de um passe especial ou ser "
-            "convidado.'",
-            FALSE, ch, 0, belchior, TO_CHAR);
-        act("Belchior sussurra: 'Use \"passe [numero_leilao]\" se você foi convidado para algum leilão.'", FALSE, ch, 0,
-            belchior, TO_CHAR);
+        act("Belchior bloqueia seu caminho: 'Há leilões fechados acontecendo.'", FALSE, ch, 0, belchior, TO_CHAR);
+        act("Belchior explica: 'Se você foi convidado, primeiro obtenha um passe usando: passe [numero_leilao]'", FALSE,
+            ch, 0, belchior, TO_CHAR);
+        act("Belchior continua: 'Use \"leilao listar\" para ver os leilões disponíveis.'", FALSE, ch, 0, belchior,
+            TO_CHAR);
         act("Belchior impede $n de descer.", FALSE, ch, 0, 0, TO_ROOM);
         return TRUE;
     }
