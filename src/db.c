@@ -34,6 +34,7 @@
 #include "modify.h"
 #include "shop.h"
 #include "quest.h"
+#include "auction.h"
 #include "ibt.h"
 #include "mud_event.h"
 #include "msgedit.h"
@@ -549,6 +550,9 @@ void boot_world(void)
 
     log1("Loading temporary quest assignments.");
     load_temp_quest_assignments();
+
+    log1("Loading auctions.");
+    load_auctions();
 }
 
 static void free_extra_descriptions(struct extra_descr_data *edesc)

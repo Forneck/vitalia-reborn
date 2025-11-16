@@ -43,6 +43,7 @@ ACMD(do_auction)
         send_to_char(ch, "  leilao convidados [id]   - Ver lista de convidados (vendedor)\r\n");
         send_to_char(ch, "  leilao passe             - Solicitar passe para leilões fechados\r\n");
         send_to_char(ch, "  leilao ajuda             - Ver ajuda detalhada sobre tipos e opções\r\n");
+        send_to_char(ch, "  leilao estatisticas      - Ver estatísticas do sistema\r\n");
         return;
     }
 
@@ -471,6 +472,11 @@ ACMD(do_auction)
             }
         }
 
+        return;
+    }
+
+    if (is_abbrev(subcommand, "estatisticas") || is_abbrev(subcommand, "stats")) {
+        show_auction_stats(ch);
         return;
     }
 

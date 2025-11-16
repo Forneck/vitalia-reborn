@@ -90,11 +90,22 @@ struct auction_pass {
     struct auction_pass *next;         /* Next pass in the list */
 };
 
+/* Auction statistics structure */
+struct auction_stats {
+    int total_auctions_created;
+    int total_auctions_completed;
+    int total_auctions_failed;
+    long total_gold_traded;
+    int total_bids_placed;
+    time_t last_auction_time;
+};
+
 /* Global auction list */
 extern struct auction_data *auction_list;
 extern struct auction_pass *auction_pass_list;
 extern struct auction_invitation *auction_invitation_list;
 extern int next_auction_id;
+extern struct auction_stats global_auction_stats;
 
 /* Function prototypes */
 struct auction_data *create_auction(struct char_data *seller, struct obj_data *item, int access_mode,
@@ -115,6 +126,7 @@ struct auction_data *find_auction(int auction_id);
 void end_auction(struct auction_data *auction);
 void save_auctions(void);
 void load_auctions(void);
+void show_auction_stats(struct char_data *ch);
 
 /* Special function prototype for Belchior */
 SPECIAL(belchior_auctioneer);

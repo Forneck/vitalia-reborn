@@ -28,6 +28,7 @@ struct auction_data *auction_list = NULL;
 struct auction_pass *auction_pass_list = NULL;
 struct auction_invitation *auction_invitation_list = NULL;
 int next_auction_id = 1;
+struct auction_stats global_auction_stats = {0, 0, 0, 0, 0, 0};
 
 /**
  * Find an online player by name (for auction system)
@@ -224,6 +225,10 @@ struct auction_data *create_auction(struct char_data *seller, struct obj_data *i
     /* Add to global auction list */
     auction->next = auction_list;
     auction_list = auction;
+
+    /* Update statistics */
+    global_auction_stats.total_auctions_created++;
+    global_auction_stats.last_auction_time = time(0);
 
     log1("AUCTION: Created auction #%d for %s by %s", auction->auction_id, auction->item_name, auction->seller_name);
 
@@ -533,7 +538,16 @@ int place_bid(struct char_data *bidder, int auction_id, long amount)
     auction->current_price = amount;
     auction->winning_bid = bid;
 
+    /* Update statistics */
+    global_auction_stats.total_bids_placed++;
+
     log1("AUCTION: %s bid %ld on auction #%d", GET_NAME(bidder), amount, auction_id);
+
+    /* Check for buyout price - end auction immediately if met */
+    if (auction->buyout_price > 0 && amount >= auction->buyout_price) {
+        log1("AUCTION: Buyout price met on auction #%d, ending immediately", auction_id);
+        end_auction(auction);
+    }
 
     return 1;
 }
@@ -570,6 +584,10 @@ void show_auction_details(struct char_data *ch, int auction_id)
 
     if (auction->reserve_price > auction->starting_price) {
         send_to_char(ch, "Preço Reserva: %s moedas\r\n", format_long_br(auction->reserve_price));
+    }
+
+    if (auction->buyout_price > 0) {
+        send_to_char(ch, "Preço de Compra Imediata: %s moedas\r\n", format_long_br(auction->buyout_price));
     }
 
     /* Show time remaining */
@@ -663,8 +681,40 @@ void update_auctions(void)
     for (auction = auction_list; auction; auction = next_auction) {
         next_auction = auction->next;
 
-        if (auction->state == AUCTION_ACTIVE && auction->end_time <= now) {
-            end_auction(auction);
+        if (auction->state == AUCTION_ACTIVE) {
+            /* Handle descending auctions - drop price automatically */
+            if (auction->direction == AUCTION_DESCENDING && auction->bids == NULL) {
+                /* Calculate price drop: 5% every 30 seconds, minimum 1 gold */
+                time_t elapsed = now - auction->start_time;
+                int drops = elapsed / 30; /* Drop every 30 seconds */
+
+                if (drops > 0) {
+                    long price_drop = (auction->starting_price * 5 * drops) / 100;
+                    if (price_drop < drops) {
+                        price_drop = drops; /* Minimum 1 gold per drop */
+                    }
+
+                    long new_price = auction->starting_price - price_drop;
+
+                    /* Don't drop below reserve price or 1 gold */
+                    if (new_price < auction->reserve_price && auction->reserve_price > 0) {
+                        new_price = auction->reserve_price;
+                    }
+                    if (new_price < 1) {
+                        new_price = 1;
+                    }
+
+                    /* Update current price if it changed */
+                    if (new_price != auction->current_price) {
+                        auction->current_price = new_price;
+                    }
+                }
+            }
+
+            /* Check if auction time expired */
+            if (auction->end_time <= now) {
+                end_auction(auction);
+            }
         }
     }
 
@@ -784,6 +834,10 @@ void end_auction(struct auction_data *auction)
 
         log1("AUCTION: Auction #%d sold to %s for %ld gold (bid %ld)", auction->auction_id,
              auction->winning_bid->bidder_name, final_price, auction->winning_bid->amount);
+
+        /* Update statistics */
+        global_auction_stats.total_auctions_completed++;
+        global_auction_stats.total_gold_traded += final_price;
     } else {
         /* No winning bid or reserve not met - refund all bidders and return item to seller */
         seller = find_player_online(auction->seller_name);
@@ -833,6 +887,9 @@ void end_auction(struct auction_data *auction)
         }
 
         log1("AUCTION: Auction #%d ended without valid bids", auction->auction_id);
+
+        /* Update statistics */
+        global_auction_stats.total_auctions_failed++;
     }
 }
 
@@ -1047,11 +1104,193 @@ void cleanup_finished_auctions(void)
 }
 
 /**
- * Save auctions to disk (placeholder)
+ * Save auctions to disk
  */
-void save_auctions(void) { /* TODO: Implement auction persistence */ }
+void save_auctions(void)
+{
+    FILE *fl;
+    struct auction_data *auction;
+    struct auction_bid *bid;
+    char filename[256];
+
+    snprintf(filename, sizeof(filename), "lib/etc/auctions.dat");
+
+    if (!(fl = fopen(filename, "w"))) {
+        log1("AUCTION: Unable to open auction file for writing: %s", filename);
+        return;
+    }
+
+    /* Save next auction ID and statistics */
+    fprintf(fl, "NEXT_ID %d\n", next_auction_id);
+    fprintf(fl, "STATS %d %d %d %ld %d %ld\n", global_auction_stats.total_auctions_created,
+            global_auction_stats.total_auctions_completed, global_auction_stats.total_auctions_failed,
+            global_auction_stats.total_gold_traded, global_auction_stats.total_bids_placed,
+            global_auction_stats.last_auction_time);
+
+    /* Save each active auction */
+    for (auction = auction_list; auction; auction = auction->next) {
+        if (auction->state != AUCTION_ACTIVE) {
+            continue; /* Only save active auctions */
+        }
+
+        fprintf(fl, "AUCTION %d\n", auction->auction_id);
+        fprintf(fl, "SELLER %s\n", auction->seller_name);
+        fprintf(fl, "ITEM_NAME %s\n", auction->item_name);
+        fprintf(fl, "ITEM_VNUM %d\n", auction->item_vnum);
+        fprintf(fl, "DIRECTION %d\n", auction->direction);
+        fprintf(fl, "MECHANISM %d\n", auction->price_mechanism);
+        fprintf(fl, "ACCESS %d\n", auction->access_mode);
+        fprintf(fl, "START_PRICE %ld\n", auction->starting_price);
+        fprintf(fl, "CURRENT_PRICE %ld\n", auction->current_price);
+        fprintf(fl, "RESERVE_PRICE %ld\n", auction->reserve_price);
+        fprintf(fl, "BUYOUT_PRICE %ld\n", auction->buyout_price);
+        fprintf(fl, "START_TIME %ld\n", (long)auction->start_time);
+        fprintf(fl, "END_TIME %ld\n", (long)auction->end_time);
+        fprintf(fl, "DURATION %d\n", auction->duration);
+
+        /* Save bids */
+        for (bid = auction->bids; bid; bid = bid->next) {
+            fprintf(fl, "BID %s %ld %ld\n", bid->bidder_name, bid->amount, (long)bid->timestamp);
+        }
+
+        fprintf(fl, "END_AUCTION\n");
+    }
+
+    fprintf(fl, "END_FILE\n");
+    fclose(fl);
+
+    log1("AUCTION: Saved %d active auctions to disk", global_auction_stats.total_auctions_created -
+                                                          global_auction_stats.total_auctions_completed -
+                                                          global_auction_stats.total_auctions_failed);
+}
 
 /**
- * Load auctions from disk (placeholder)
+ * Load auctions from disk
  */
-void load_auctions(void) { /* TODO: Implement auction loading */ }
+void load_auctions(void)
+{
+    FILE *fl;
+    char filename[256];
+    char line[MAX_INPUT_LENGTH];
+    struct auction_data *auction = NULL;
+    struct auction_bid *bid;
+
+    snprintf(filename, sizeof(filename), "lib/etc/auctions.dat");
+
+    if (!(fl = fopen(filename, "r"))) {
+        log1("AUCTION: No auction file to load (this is normal on first run)");
+        return;
+    }
+
+    while (fgets(line, sizeof(line), fl)) {
+        char keyword[MAX_INPUT_LENGTH];
+        char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH], arg3[MAX_INPUT_LENGTH];
+
+        /* Remove newline */
+        line[strcspn(line, "\n")] = 0;
+
+        sscanf(line, "%s", keyword);
+
+        if (!strcmp(keyword, "NEXT_ID")) {
+            sscanf(line, "%*s %d", &next_auction_id);
+        } else if (!strcmp(keyword, "STATS")) {
+            sscanf(line, "%*s %d %d %d %ld %d %ld", &global_auction_stats.total_auctions_created,
+                   &global_auction_stats.total_auctions_completed, &global_auction_stats.total_auctions_failed,
+                   &global_auction_stats.total_gold_traded, &global_auction_stats.total_bids_placed,
+                   &global_auction_stats.last_auction_time);
+        } else if (!strcmp(keyword, "AUCTION")) {
+            /* Create new auction */
+            CREATE(auction, struct auction_data, 1);
+            sscanf(line, "%*s %d", &auction->auction_id);
+            auction->state = AUCTION_ACTIVE;
+            auction->bids = NULL;
+            auction->winning_bid = NULL;
+            auction->invited_players = NULL;
+            auction->next = auction_list;
+            auction_list = auction;
+        } else if (!strcmp(keyword, "SELLER") && auction) {
+            sscanf(line, "%*s %s", auction->seller_name);
+        } else if (!strcmp(keyword, "ITEM_NAME") && auction) {
+            /* Read the rest of the line after keyword */
+            const char *name_start = line + strlen("ITEM_NAME ");
+            strlcpy(auction->item_name, name_start, sizeof(auction->item_name));
+        } else if (!strcmp(keyword, "ITEM_VNUM") && auction) {
+            sscanf(line, "%*s %d", &auction->item_vnum);
+        } else if (!strcmp(keyword, "DIRECTION") && auction) {
+            sscanf(line, "%*s %d", &auction->direction);
+        } else if (!strcmp(keyword, "MECHANISM") && auction) {
+            sscanf(line, "%*s %d", &auction->price_mechanism);
+        } else if (!strcmp(keyword, "ACCESS") && auction) {
+            sscanf(line, "%*s %d", &auction->access_mode);
+        } else if (!strcmp(keyword, "START_PRICE") && auction) {
+            sscanf(line, "%*s %ld", &auction->starting_price);
+        } else if (!strcmp(keyword, "CURRENT_PRICE") && auction) {
+            sscanf(line, "%*s %ld", &auction->current_price);
+        } else if (!strcmp(keyword, "RESERVE_PRICE") && auction) {
+            sscanf(line, "%*s %ld", &auction->reserve_price);
+        } else if (!strcmp(keyword, "BUYOUT_PRICE") && auction) {
+            sscanf(line, "%*s %ld", &auction->buyout_price);
+        } else if (!strcmp(keyword, "START_TIME") && auction) {
+            long temp;
+            sscanf(line, "%*s %ld", &temp);
+            auction->start_time = (time_t)temp;
+        } else if (!strcmp(keyword, "END_TIME") && auction) {
+            long temp;
+            sscanf(line, "%*s %ld", &temp);
+            auction->end_time = (time_t)temp;
+        } else if (!strcmp(keyword, "DURATION") && auction) {
+            sscanf(line, "%*s %d", &auction->duration);
+        } else if (!strcmp(keyword, "BID") && auction) {
+            long timestamp;
+            CREATE(bid, struct auction_bid, 1);
+            sscanf(line, "%*s %s %ld %ld", bid->bidder_name, &bid->amount, &timestamp);
+            bid->timestamp = (time_t)timestamp;
+            bid->next = auction->bids;
+            auction->bids = bid;
+
+            /* Update winning bid if this is the highest */
+            if (!auction->winning_bid || bid->amount > auction->winning_bid->amount) {
+                auction->winning_bid = bid;
+            }
+        } else if (!strcmp(keyword, "END_AUCTION")) {
+            auction = NULL; /* Reset for next auction */
+        } else if (!strcmp(keyword, "END_FILE")) {
+            break;
+        }
+    }
+
+    fclose(fl);
+    log1("AUCTION: Loaded auctions from disk");
+}
+
+/**
+ * Show auction statistics
+ */
+void show_auction_stats(struct char_data *ch)
+{
+    int active_count = 0;
+    struct auction_data *auction;
+
+    /* Count active auctions */
+    for (auction = auction_list; auction; auction = auction->next) {
+        if (auction->state == AUCTION_ACTIVE) {
+            active_count++;
+        }
+    }
+
+    send_to_char(ch, "\r\n&c=== ESTATÍSTICAS DO SISTEMA DE LEILÕES ===&n\r\n\r\n");
+    send_to_char(ch, "Total de leilões criados: %d\r\n", global_auction_stats.total_auctions_created);
+    send_to_char(ch, "Leilões completados: %d\r\n", global_auction_stats.total_auctions_completed);
+    send_to_char(ch, "Leilões falhados: %d\r\n", global_auction_stats.total_auctions_failed);
+    send_to_char(ch, "Leilões ativos: %d\r\n", active_count);
+    send_to_char(ch, "Total de lances: %d\r\n", global_auction_stats.total_bids_placed);
+    send_to_char(ch, "Ouro total negociado: %s moedas\r\n", format_long_br(global_auction_stats.total_gold_traded));
+
+    if (global_auction_stats.last_auction_time > 0) {
+        char timebuf[80];
+        strftime(timebuf, sizeof(timebuf), "%Y-%m-%d %H:%M:%S", localtime(&global_auction_stats.last_auction_time));
+        send_to_char(ch, "Último leilão: %s\r\n", timebuf);
+    }
+
+    send_to_char(ch, "\r\n");
+}
