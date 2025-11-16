@@ -34,12 +34,12 @@ ACMD(do_auction)
     if (!*subcommand) {
         send_to_char(ch, "Comandos de leilão disponíveis:\r\n");
         send_to_char(ch, "  leilao listar            - Ver leilões ativos\r\n");
-        send_to_char(ch, "  leilao criar <item> <preço> - Criar novo leilão\r\n");
-        send_to_char(ch, "  leilao dar <id> <valor>  - Dar lance em leilão\r\n");
-        send_to_char(ch, "  leilao info <id>         - Ver detalhes do leilão\r\n");
-        send_to_char(ch, "  leilao convidar <id> <jogador> - Convidar jogador para leilão fechado\r\n");
-        send_to_char(ch, "  leilao desconvidar <id> <jogador> - Remover convite de jogador\r\n");
-        send_to_char(ch, "  leilao convidados <id>   - Ver lista de convidados (vendedor)\r\n");
+        send_to_char(ch, "  leilao criar [item] [preço] - Criar novo leilão\r\n");
+        send_to_char(ch, "  leilao dar [id] [valor]  - Dar lance em leilão\r\n");
+        send_to_char(ch, "  leilao info [id]         - Ver detalhes do leilão\r\n");
+        send_to_char(ch, "  leilao convidar [id] [jogador] - Convidar jogador para leilão fechado\r\n");
+        send_to_char(ch, "  leilao desconvidar [id] [jogador] - Remover convite de jogador\r\n");
+        send_to_char(ch, "  leilao convidados [id]   - Ver lista de convidados (vendedor)\r\n");
         send_to_char(ch, "  leilao passe             - Solicitar passe para leilões fechados\r\n");
         return;
     }
@@ -57,7 +57,7 @@ ACMD(do_auction)
 
     if (is_abbrev(subcommand, "criar")) {
         if (!*arg1 || !*arg2) {
-            send_to_char(ch, "Uso: leilao criar <item> <preço_inicial>\r\n");
+            send_to_char(ch, "Uso: leilao criar [item] [preço_inicial]\r\n");
             return;
         }
 
@@ -104,7 +104,7 @@ ACMD(do_auction)
 
     if (is_abbrev(subcommand, "dar")) {
         if (!*arg1 || !*arg2) {
-            send_to_char(ch, "Uso: leilao dar <id_leilao> <valor_lance>\r\n");
+            send_to_char(ch, "Uso: leilao dar [id_leilao] [valor_lance]\r\n");
             return;
         }
 
@@ -162,7 +162,7 @@ ACMD(do_auction)
 
     if (is_abbrev(subcommand, "info")) {
         if (!*arg1) {
-            send_to_char(ch, "Uso: leilao info <id_leilao>\r\n");
+            send_to_char(ch, "Uso: leilao info [id_leilao]\r\n");
             return;
         }
 
@@ -173,7 +173,7 @@ ACMD(do_auction)
 
     if (is_abbrev(subcommand, "convidar")) {
         if (!*arg1 || !*arg2) {
-            send_to_char(ch, "Uso: leilao convidar <id_leilao> <nome_jogador>\r\n");
+            send_to_char(ch, "Uso: leilao convidar [id_leilao] [nome_jogador]\r\n");
             return;
         }
 
@@ -202,7 +202,7 @@ ACMD(do_auction)
 
     if (is_abbrev(subcommand, "desconvidar")) {
         if (!*arg1 || !*arg2) {
-            send_to_char(ch, "Uso: leilao desconvidar <id_leilao> <nome_jogador>\r\n");
+            send_to_char(ch, "Uso: leilao desconvidar [id_leilao] [nome_jogador]\r\n");
             return;
         }
 
@@ -229,7 +229,7 @@ ACMD(do_auction)
 
     if (is_abbrev(subcommand, "convidados")) {
         if (!*arg1) {
-            send_to_char(ch, "Uso: leilao convidados <id_leilao>\r\n");
+            send_to_char(ch, "Uso: leilao convidados [id_leilao]\r\n");
             return;
         }
 
@@ -240,7 +240,7 @@ ACMD(do_auction)
 
     if (is_abbrev(subcommand, "passe")) {
         /* Direct players to talk to Belchior */
-        send_to_char(ch, "Para obter um passe de leilão, vá até Belchior e use: passe <id_leilao>\r\n");
+        send_to_char(ch, "Para obter um passe de leilão, vá até Belchior e use: passe [numero_do_leilao]\r\n");
         return;
     }
 

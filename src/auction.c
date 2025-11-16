@@ -674,8 +674,8 @@ SPECIAL(belchior_auctioneer)
         two_arguments(argument, arg1, arg2);
 
         if (!*arg1) {
-            act("Belchior diz: 'Para obter um passe de leilão, me diga: passe <id_leilao>'", FALSE, ch, 0, belchior,
-                TO_CHAR);
+            act("Belchior diz: 'Para obter um passe de leilão, me diga: passe [numero_do_leilao]'", FALSE, ch, 0,
+                belchior, TO_CHAR);
             return TRUE;
         }
 
@@ -759,7 +759,7 @@ SPECIAL(belchior_auctioneer)
         act("Belchior bloqueia seu caminho: 'Há leilões fechados acontecendo. Você precisa de um passe especial ou ser "
             "convidado.'",
             FALSE, ch, 0, belchior, TO_CHAR);
-        act("Belchior sussurra: 'Use \"passe <numero_leilao>\" se você foi convidado para algum leilão.'", FALSE, ch, 0,
+        act("Belchior sussurra: 'Use \"passe [numero_leilao]\" se você foi convidado para algum leilão.'", FALSE, ch, 0,
             belchior, TO_CHAR);
         act("Belchior impede $n de descer.", FALSE, ch, 0, 0, TO_ROOM);
         return TRUE;
