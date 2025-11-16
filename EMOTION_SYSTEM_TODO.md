@@ -2,44 +2,71 @@
 
 This document outlines potential enhancements to the mob emotion system in Vitalia Reborn.
 
-## Current Status
-The emotion system tracks 20 emotions across 5 categories and updates them based on:
-- Social interactions (socials)
-- Combat (attacking, being attacked, witnessing death)
-- Support actions (healing, rescue, assist)
-- Item transactions (giving, stealing)
-- Passive regulation (emotion decay)
+## Current Status - HYBRID EMOTION SYSTEM (v2.0)
+
+The emotion system now implements a **hybrid model** with two layers:
+
+### Layer 1: MOOD (Global State)
+- 20 emotion fields in mob_ai_data (emotion_fear, emotion_anger, etc.)
+- Represents the mob's general emotional state
+- Influenced by:
+  - Environmental factors (dangerous areas, safe zones)
+  - Time-based effects (weather, time of day - future)
+  - Recent general experiences
+  - Passive regulation (emotion decay toward baseline)
+  - Genetic personality traits (emotional_profile)
+
+### Layer 2: RELATIONSHIP (Per-Player/Entity)
+- Circular buffer of 10 emotion_memory entries per mob
+- Each memory stores a complete emotion snapshot after interactions
+- Memories are weighted by:
+  - Age (recent = more weight)
+  - Major events (2x weight for rescue, theft, betrayal, etc.)
+  - Interaction type (attacked, healed, social, quest, etc.)
+- Function: `get_effective_emotion_toward(mob, target, emotion_type)` combines:
+  - **Mood** (base emotion) + **Relationship** (modifier from memories)
+  - Returns personalized emotion value for decisions
+
+### Implementation Details
+- **COMPLETED**: Core hybrid system functions:
+  - `get_effective_emotion_toward()` - combines mood + relationship
+  - `get_relationship_emotion()` - extracts per-player emotion from memories
+  - 20 EMOTION_TYPE_* constants for identifying emotions
+- **COMPLETED**: Integration into decision points:
+  - Shop behavior (trust/greed/friendship per player)
+  - Combat flee (fear/courage toward specific attacker)
+  - Quest system (trust per player)
+  - Emotion display (shows feelings toward viewer)
+  - Love-based following (targets specific beloved players)
 
 ## Enhancement Categories
 
-### 1. Emotion-Driven Mob Behavior (HIGH PRIORITY)
-
-Currently, emotions are tracked and updated but only minimally influence mob decisions. Emotions should drive more behaviors:
+### 1. Emotion-Driven Mob Behavior
 
 #### 1.1 Combat Behavior
-- **TODO**: High fear (>70) should increase flee probability during combat
+- **DONE**: High fear (>70) increases flee probability during combat (uses hybrid system)
+- **DONE**: High courage (>70) reduces flee probability (uses hybrid system)
+- **DONE**: Horror level (>80) triggers panic flee (uses hybrid system)
 - **TODO**: High anger (>70) should increase attack frequency/damage
-- **TODO**: High courage (>70) should reduce flee probability
 - **TODO**: Pain level should affect combat effectiveness (accuracy/damage penalties)
-- **TODO**: Horror level (>80) should trigger panic flee regardless of courage
 
 #### 1.2 Trading Behavior
-- **TODO**: High trust (>60) should give better shop prices
-- **TODO**: Low trust (<30) should make shopkeepers refuse service
-- **TODO**: High greed should increase shop prices for buying
-- **TODO**: High friendship should give discounts
+- **DONE**: High trust (>60) gives better shop prices (uses hybrid system - per player)
+- **DONE**: Low trust (<30) makes shopkeepers refuse service (uses hybrid system - per player)
+- **DONE**: High greed increases shop prices (uses hybrid system - per player)
+- **DONE**: High friendship gives discounts (uses hybrid system - per player)
 
 #### 1.3 Quest Behavior
+- **DONE**: Low trust makes mobs refuse to give quests (uses hybrid system - per player)
+- **DONE**: High trust gives better quest rewards (uses hybrid system - per player)
 - **TODO**: High curiosity should make mobs more likely to offer quests
 - **TODO**: High loyalty should make mobs remember past quest helpers
-- **TODO**: High trust should make quest rewards better
-- **TODO**: Low trust should make mobs refuse to give quests
 
 #### 1.4 Social Initiation
-- **TODO**: Mobs with high happiness should initiate positive socials more often
-- **TODO**: Mobs with high anger should initiate negative socials
-- **TODO**: Mobs with high sadness should withdraw and social less
-- **TODO**: Mobs with high love (>80) should follow players they love
+- **DONE**: Mobs with high happiness initiate positive socials more often (mood-based)
+- **DONE**: Mobs with high anger initiate negative socials (mood-based)
+- **DONE**: Mobs with high sadness withdraw and social less (mood-based)
+- **DONE**: Mobs with high love (>80) follow players they love (uses hybrid system - per player)
 
 #### 1.5 Group Behavior
 - **TODO**: High loyalty should make mobs stay in group even when hurt
@@ -58,33 +85,33 @@ Actions that should trigger emotion updates but currently don't:
 - **TODO**: Receiving tells/whispers from strangers → curiosity or suspicion
 
 #### 2.2 Environmental Triggers
-- **TODO**: Witnessing player death → fear, sadness (if friendly), satisfaction (if enemy)
-- **TODO**: Seeing powerful equipment → envy
-- **TODO**: Entering dangerous areas → fear increase
-- **TODO**: Returning to safe areas → fear decrease, happiness increase
+- **DONE**: Witnessing player death → fear, sadness (uses existing system)
+- **DONE**: Seeing powerful equipment → envy (uses existing system)
+- **DONE**: Entering dangerous areas → fear increase (uses existing system)
+- **DONE**: Returning to safe areas → fear decrease, happiness increase (uses existing system)
 
 #### 2.3 Magic/Spell Effects
-- **TODO**: Being cursed/harmed by spells → anger, fear, pain
-- **TODO**: Being blessed/buffed → happiness, trust, gratitude
-- **TODO**: Witnessing offensive magic → fear, horror (for non-combatants)
+- **DONE**: Being cursed/harmed by spells → anger, fear, pain (uses existing system)
+- **DONE**: Being blessed/buffed → happiness, trust, gratitude (uses existing system)
+- **DONE**: Witnessing offensive magic → fear, horror (uses existing system)
 
 #### 2.4 Quest-Related Triggers
-- **TODO**: Quest completion → happiness, trust, friendship increase
-- **TODO**: Quest failure → anger, disappointment, trust decrease
-- **TODO**: Quest betrayal (killing quest giver) → horror, anger for witnesses
+- **DONE**: Quest completion → happiness, trust, friendship increase (uses existing system)
+- **DONE**: Quest failure → anger, trust decrease (uses existing system)
+- **DONE**: Quest betrayal (killing quest giver) → horror, anger (uses existing system)
 
 #### 2.5 Economic Actions
 - **TODO**: Being robbed (shopping) → anger, distrust
-- **TODO**: Receiving fair trade → trust, happiness
-- **TODO**: Selling valuable items to mob → greed response
+- **DONE**: Receiving fair trade → trust, happiness (uses existing system)
+- **DONE**: Selling valuable items to mob → greed response (uses existing system)
 
-### 3. Emotion Persistence & Memory (HIGH PRIORITY)
+### 3. Emotion Persistence & Memory - HYBRID SYSTEM IMPLEMENTED
 
 #### 3.1 Emotion History
-- **TODO**: Track emotion history per player (last 10 interactions)
-- **TODO**: Long-term relationships should build over multiple encounters
-- **TODO**: Negative events should be remembered longer than positive ones
-- **TODO**: Major events (rescue, theft, ally death) should have lasting impact
+- **DONE**: Track emotion history per player (10 interactions in circular buffer)
+- **DONE**: Long-term relationships build over multiple encounters (weighted by age)
+- **DONE**: Major events have lasting impact (2x weight: rescue, theft, ally death, etc.)
+- **IMPROVEMENT**: Consider longer decay times for negative events vs positive
 
 #### 3.2 Reputation Integration
 - **TODO**: Player reputation should initialize mob emotions at first meeting
@@ -208,22 +235,26 @@ Actions that should trigger emotion updates but currently don't:
 
 ## Implementation Priority
 
-### Phase 1 (Immediate - Next Update)
-1. Emotion-driven combat flee behavior (1.1)
-2. Emotion persistence/memory system (3.1)
-3. Basic emotion indicators in descriptions (4.1)
+### Phase 1 (COMPLETED - Hybrid System v2.0)
+1. ✅ Emotion-driven combat flee behavior (1.1) - uses hybrid system
+2. ✅ Emotion persistence/memory system (3.1) - hybrid model implemented
+3. ✅ Basic emotion indicators in descriptions (4.1) - uses hybrid system per viewer
+4. ✅ Trading behavior influenced by emotions (1.2) - uses hybrid system per player
+5. ✅ Quest behavior integration (1.3) - uses hybrid system per player
+6. ✅ Love-based following (1.4) - uses hybrid system to target specific players
 
-### Phase 2 (Short-term)
-1. Trading behavior influenced by emotions (1.2)
-2. Additional emotion triggers for spells/magic (2.3)
-3. Emotion display improvements (4.1)
-4. Balance and tuning (6.1, 6.2)
+### Phase 2 (Short-term - Next Updates)
+1. High anger affecting attack behavior (1.1)
+2. Pain affecting combat effectiveness (1.1)
+3. Group behavior emotional integration (1.5)
+4. Additional emotion triggers for communication (2.1)
+5. Balance and tuning (6.1, 6.2)
 
 ### Phase 3 (Medium-term)
-1. Quest behavior integration (1.3)
-2. Emotion contagion basics (5.1)
-3. Player feedback tools (7.1, 7.2)
-4. Faction system integration (8.2)
+1. Emotion contagion basics (5.1)
+2. Player feedback tools (7.1, 7.2)
+3. Faction system integration (8.2)
+4. Reputation system integration (3.2)
 
 ### Phase 4 (Long-term)
 1. Advanced emotion mechanics (5.2, 5.3, 5.4)
@@ -233,11 +264,26 @@ Actions that should trigger emotion updates but currently don't:
 
 ## Notes
 
+### Hybrid System Architecture
+- **Mood Layer**: Represents general emotional state (current emotion_* fields)
+  - Influenced by environment, time, general experiences
+  - Provides baseline for all interactions
+- **Relationship Layer**: Per-entity emotional memory (emotion_memory buffer)
+  - Tracks specific feelings toward individual players/mobs
+  - Weighted by recency and event importance
+  - Retrieved via `get_effective_emotion_toward()`
+- **Decision Making**: Always use `get_effective_emotion_toward()` for personalized behavior
+  - Shop pricing, quest acceptance, combat decisions, etc.
+  - Returns: mood_emotion + relationship_modifier
+- **Display**: Show effective emotions toward viewer for realistic perception
+
+### Development Guidelines
 - All enhancements should respect the CONFIG_MOB_CONTEXTUAL_SOCIALS flag
 - Performance must be monitored when adding emotion-based decisions
 - Backward compatibility must be maintained
 - Each enhancement should be individually toggleable for testing
 - Documentation must be updated for each implemented feature
+- Always use hybrid system functions for per-entity decisions
 
 ## Related Files
 
