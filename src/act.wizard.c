@@ -6063,8 +6063,8 @@ static void show_retained_skills(struct char_data *ch)
         return; /* Safety check for NULL player_specials */
     }
 
-    send_to_char(ch, "\r\n&cHabilidades e Magias Levadas por Remort&n\r\n");
-    send_to_char(ch, "&c=====================================================&n\r\n\r\n");
+    send_to_char(ch, "\r\n@cHabilidades e Magias Levadas por Remort@n\r\n");
+    send_to_char(ch, "@c=====================================================@n\r\n\r\n");
 
     for (int i = 1; i <= MAX_SKILLS; i++) {
         if (ch->player_specials->saved.retained_skills[i] > 0) {
@@ -6092,7 +6092,7 @@ static void show_retained_skills(struct char_data *ch)
     if (!found) {
         send_to_char(ch, "Você ainda não possui habilidades de remort.\r\n");
     } else {
-        send_to_char(ch, "\r\n&cTotal: %d habilidades/magias de remort.&n\r\n", found);
+        send_to_char(ch, "\r\n@cTotal: %d habilidades/magias de remort.@n\r\n", found);
     }
 }
 

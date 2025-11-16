@@ -374,49 +374,49 @@ ACMD(do_auction)
     }
 
     if (is_abbrev(subcommand, "ajuda") || is_abbrev(subcommand, "help")) {
-        send_to_char(ch, "\r\n&c=== AJUDA DO SISTEMA DE LEILÕES ===&n\r\n\r\n");
+        send_to_char(ch, "\r\n@c=== AJUDA DO SISTEMA DE LEILÕES ===@n\r\n\r\n");
 
-        send_to_char(ch, "&YDIREÇÃO DO LEILÃO:&n\r\n");
-        send_to_char(ch, "  &gASCENDENTE&n - Preço sobe com os lances (tradicional)\r\n");
+        send_to_char(ch, "@YDIREÇÃO DO LEILÃO:@n\r\n");
+        send_to_char(ch, "  @gASCENDENTE@n - Preço sobe com os lances (tradicional)\r\n");
         send_to_char(ch, "    • Começa com preço baixo\r\n");
         send_to_char(ch, "    • Jogadores dão lances cada vez maiores\r\n");
         send_to_char(ch, "    • Vence quem der o maior lance ao final\r\n\r\n");
 
-        send_to_char(ch, "  &gDESCENDENTE&n - Preço desce automaticamente (leilão holandês)\r\n");
+        send_to_char(ch, "  @gDESCENDENTE@n - Preço desce automaticamente (leilão holandês)\r\n");
         send_to_char(ch, "    • Começa com preço alto\r\n");
         send_to_char(ch, "    • Preço vai baixando automaticamente\r\n");
         send_to_char(ch, "    • Primeiro a aceitar vence imediatamente\r\n\r\n");
 
-        send_to_char(ch, "&YMECANISMO DE PREÇO:&n\r\n");
-        send_to_char(ch, "  &gPRIMEIRO PREÇO&n - Vencedor paga o que ofereceu\r\n");
+        send_to_char(ch, "@YMECANISMO DE PREÇO:@n\r\n");
+        send_to_char(ch, "  @gPRIMEIRO PREÇO@n - Vencedor paga o que ofereceu\r\n");
         send_to_char(ch, "    • Pagamento = lance vencedor\r\n");
         send_to_char(ch, "    • Exemplo: A dá 100, B dá 200 → B paga 200\r\n");
         send_to_char(ch, "    • Mais comum e intuitivo\r\n\r\n");
 
-        send_to_char(ch, "  &gSEGUNDO PREÇO&n - Vencedor paga segundo maior lance (Vickrey)\r\n");
+        send_to_char(ch, "  @gSEGUNDO PREÇO@n - Vencedor paga segundo maior lance (Vickrey)\r\n");
         send_to_char(ch, "    • Pagamento = segundo maior lance\r\n");
         send_to_char(ch, "    • Exemplo: A dá 100, B dá 200 → B paga 100\r\n");
         send_to_char(ch, "    • Incentiva lances honestos\r\n\r\n");
 
-        send_to_char(ch, "&YCOMBINAÇÕES POSSÍVEIS:&n\r\n");
+        send_to_char(ch, "@YCOMBINAÇÕES POSSÍVEIS:@n\r\n");
         send_to_char(ch, "  • Ascendente + Primeiro Preço  = Leilão Inglês (padrão)\r\n");
         send_to_char(ch, "  • Ascendente + Segundo Preço   = Leilão Vickrey\r\n");
         send_to_char(ch, "  • Descendente + Primeiro Preço = Leilão Holandês\r\n");
         send_to_char(ch, "  • Descendente + Segundo Preço  = Leilão Holandês Reverso\r\n\r\n");
 
-        send_to_char(ch, "&YMODOS DE ACESSO:&n\r\n");
-        send_to_char(ch, "  &gABERTO&n - Qualquer jogador pode participar\r\n");
-        send_to_char(ch, "  &gFECHADO&n - Apenas convidados (precisam de passe)\r\n\r\n");
+        send_to_char(ch, "@YMODOS DE ACESSO:@n\r\n");
+        send_to_char(ch, "  @gABERTO@n - Qualquer jogador pode participar\r\n");
+        send_to_char(ch, "  @gFECHADO@n - Apenas convidados (precisam de passe)\r\n\r\n");
 
-        send_to_char(ch, "&YOPÇÕES DE CONFIGURAÇÃO:&n\r\n");
-        send_to_char(ch, "  &gdirecao [ascendente|descendente]&n  - Direção do preço\r\n");
-        send_to_char(ch, "  &gmecanismo [primeiro|segundo]&n     - Mecanismo de preço\r\n");
-        send_to_char(ch, "  &gacesso [aberto|fechado]&n          - Modo de acesso\r\n");
-        send_to_char(ch, "  &gduracao [segundos]&n               - Tempo do leilão\r\n");
-        send_to_char(ch, "  &gpreco_minimo [valor]&n             - Preço mínimo\r\n");
-        send_to_char(ch, "  &gpreco_compra [valor]&n             - Compra direta\r\n\r\n");
+        send_to_char(ch, "@YOPÇÕES DE CONFIGURAÇÃO:@n\r\n");
+        send_to_char(ch, "  @gdirecao [ascendente|descendente]@n  - Direção do preço\r\n");
+        send_to_char(ch, "  @gmecanismo [primeiro|segundo]@n     - Mecanismo de preço\r\n");
+        send_to_char(ch, "  @gacesso [aberto|fechado]@n          - Modo de acesso\r\n");
+        send_to_char(ch, "  @gduracao [segundos]@n               - Tempo do leilão\r\n");
+        send_to_char(ch, "  @gpreco_minimo [valor]@n             - Preço mínimo\r\n");
+        send_to_char(ch, "  @gpreco_compra [valor]@n             - Compra direta\r\n\r\n");
 
-        send_to_char(ch, "&YEXEMPLOS DE USO:&n\r\n");
+        send_to_char(ch, "@YEXEMPLOS DE USO:@n\r\n");
         send_to_char(ch, "  leilao criar espada 1000\r\n");
         send_to_char(ch, "  leilao configurar 5 tipo holandes\r\n");
         send_to_char(ch, "  leilao configurar 5 acesso fechado\r\n");
@@ -424,7 +424,7 @@ ACMD(do_auction)
         send_to_char(ch, "  leilao configurar 5 preco_minimo 5000\r\n");
         send_to_char(ch, "  leilao convidar 5 Jogador\r\n\r\n");
 
-        send_to_char(ch, "&ROBSERVAÇÃO:&n Configurações só podem ser alteradas antes do primeiro lance!\r\n\r\n");
+        send_to_char(ch, "@ROBSERVAÇÃO:@n Configurações só podem ser alteradas antes do primeiro lance!\r\n\r\n");
         return;
     }
 
