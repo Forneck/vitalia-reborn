@@ -273,6 +273,7 @@ ACMD(do_gen_tog);
 #define SCMD_COLOR 33
 #define SCMD_HITBAR 34
 #define SCMD_AUTOTITLE 35
+#define SCMD_AUTOEXAM 36
 
 /* do_quit */
 ACMD(do_quit);

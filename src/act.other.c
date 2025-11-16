@@ -1528,6 +1528,9 @@ ACMD(do_gen_tog)
         case SCMD_AUTOTITLE:
             result = PRF_TOG_CHK(ch, PRF_AUTOTITLE);
             break;
+        case SCMD_AUTOEXAM:
+            result = PRF_TOG_CHK(ch, PRF_AUTOEXAM);
+            break;
         default:
             log1("SYSERR: Unknown subcmd %d in do_gen_toggle.", subcmd);
             return;

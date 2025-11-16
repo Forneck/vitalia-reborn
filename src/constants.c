@@ -117,7 +117,7 @@ const char *preference_bits[] = {
     "QUEST",     "SUMN",      "NO_REP",   "LIGHT",      "C1",      "C2",         "NO_WIZ",    "L1",         "L2",
     "NO_AUC",    "NO_GOS",    "NO_GTZ",   "RMFLG",      "D_AUTO",  "CLS",        "BLDWLK",    "AFK",        "AUTOLOOT",
     "AUTOGOLD",  "AUTOSPLIT", "AUTOSAC",  "AUTOASSIST", "AUTOMAP", "AUTOKEY",    "AUTODOOR",  "ZONERESETS", "HITBAR",
-    "AUTOTITLE", "NO_CLAN",   "MCCP",     "AUTOSIZE",   "VERBOSE", "VIEWDAMAGE", "DISPEMOTE", "\n"};
+    "AUTOTITLE", "NO_CLAN",   "MCCP",     "AUTOSIZE",   "VERBOSE", "VIEWDAMAGE", "DISPEMOTE", "AUTOEXAM",   "\n"};
 
 /** Affected bits.
  * @pre Must be in the same order as the defines.

@@ -1377,6 +1377,9 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         if (!IS_NPC(ch) && (ch != victim) && PRF_FLAGGED(ch, PRF_AUTOLOOT)) {
             do_get(ch, "all corpo", 0, 0);
         }
+        if (!IS_NPC(ch) && (ch != victim) && PRF_FLAGGED(ch, PRF_AUTOEXAM)) {
+            do_examine(ch, "corpo", 0, 0);
+        }
         if (IS_NPC(victim) && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_AUTOSAC)) {
             do_sac(ch, "corpo", 0, 0);
         }
