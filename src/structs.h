@@ -1040,6 +1040,28 @@ struct mob_wishlist_item {
 #define EMOTION_PROFILE_GREEDY 6     /**< Greedy profile - high greed/envy, low compassion */
 #define EMOTION_PROFILE_LOYAL 7      /**< Loyal profile - high loyalty/trust, high friendship */
 
+/* Emotion type constants for hybrid emotion system */
+#define EMOTION_TYPE_FEAR 0
+#define EMOTION_TYPE_ANGER 1
+#define EMOTION_TYPE_HAPPINESS 2
+#define EMOTION_TYPE_SADNESS 3
+#define EMOTION_TYPE_FRIENDSHIP 4
+#define EMOTION_TYPE_LOVE 5
+#define EMOTION_TYPE_TRUST 6
+#define EMOTION_TYPE_LOYALTY 7
+#define EMOTION_TYPE_CURIOSITY 8
+#define EMOTION_TYPE_GREED 9
+#define EMOTION_TYPE_PRIDE 10
+#define EMOTION_TYPE_COMPASSION 11
+#define EMOTION_TYPE_ENVY 12
+#define EMOTION_TYPE_COURAGE 13
+#define EMOTION_TYPE_EXCITEMENT 14
+#define EMOTION_TYPE_DISGUST 15
+#define EMOTION_TYPE_SHAME 16
+#define EMOTION_TYPE_PAIN 17
+#define EMOTION_TYPE_HORROR 18
+#define EMOTION_TYPE_HUMILIATION 19
+
 /* Interaction types for emotion memory */
 #define INTERACT_ATTACKED 0
 #define INTERACT_HEALED 1

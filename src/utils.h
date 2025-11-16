@@ -170,6 +170,10 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
 int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
 void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
 
+/* Hybrid emotion system - combines mood (global) with relationship (per-entity) emotions */
+int get_effective_emotion_toward(struct char_data *mob, struct char_data *target, int emotion_type);
+int get_relationship_emotion(struct char_data *mob, struct char_data *target, int emotion_type);
+
 /* Stoneskin utility functions */
 int get_stoneskin_points(struct char_data *ch);
 void set_stoneskin_points(struct char_data *ch, int points);

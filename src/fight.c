@@ -1204,24 +1204,39 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                     int genetic_component = (victim->ai_data->genetics.wimpy_tendency * 40) / 100;
                     flee_threshold = base_wimpy + genetic_component;
 
-                    /* 3. EMOTION SYSTEM: Adjust flee threshold based on emotions */
+                    /* 3. EMOTION SYSTEM: Adjust flee threshold based on emotions (hybrid system) */
                     if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+                        struct char_data *attacker = FIGHTING(victim);
+                        int effective_fear, effective_courage, effective_horror;
+                        
+                        /* Use hybrid emotion system: mood + relationship toward attacker */
+                        if (attacker) {
+                            effective_fear = get_effective_emotion_toward(victim, attacker, EMOTION_TYPE_FEAR);
+                            effective_courage = get_effective_emotion_toward(victim, attacker, EMOTION_TYPE_COURAGE);
+                            effective_horror = get_effective_emotion_toward(victim, attacker, EMOTION_TYPE_HORROR);
+                        } else {
+                            /* No specific attacker, use mood only */
+                            effective_fear = victim->ai_data->emotion_fear;
+                            effective_courage = victim->ai_data->emotion_courage;
+                            effective_horror = victim->ai_data->emotion_horror;
+                        }
+                        
                         /* High fear increases flee threshold (flee sooner) */
-                        if (victim->ai_data->emotion_fear >= CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD) {
+                        if (effective_fear >= CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD) {
                             emotion_modifier += CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER; /* Flee at +15% HP */
-                        } else if (victim->ai_data->emotion_fear >= CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD) {
+                        } else if (effective_fear >= CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD) {
                             emotion_modifier += CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER; /* Flee at +10% HP */
                         }
 
                         /* High courage reduces flee threshold (flee later) */
-                        if (victim->ai_data->emotion_courage >= CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD) {
+                        if (effective_courage >= CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD) {
                             emotion_modifier -= CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER; /* Flee at -15% HP */
-                        } else if (victim->ai_data->emotion_courage >= CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD) {
+                        } else if (effective_courage >= CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD) {
                             emotion_modifier -= CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER; /* Flee at -10% HP */
                         }
 
                         /* Horror overrides other emotions */
-                        if (victim->ai_data->emotion_horror >= CONFIG_EMOTION_FLEE_HORROR_THRESHOLD) {
+                        if (effective_horror >= CONFIG_EMOTION_FLEE_HORROR_THRESHOLD) {
                             emotion_modifier += CONFIG_EMOTION_FLEE_HORROR_MODIFIER; /* Panic flee at +25% HP */
                         }
 

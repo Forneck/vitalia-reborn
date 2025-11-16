@@ -102,8 +102,11 @@ static int is_ok_char(struct char_data *keeper, struct char_data *ch, int shop_n
 
     /* Check emotion-based trading restrictions for mobs with AI */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && !IS_NPC(ch)) {
+        /* Use hybrid emotion system: get effective trust toward this player */
+        int effective_trust = get_effective_emotion_toward(keeper, ch, EMOTION_TYPE_TRUST);
+        
         /* Low trust makes shopkeeper refuse service */
-        if (keeper->ai_data->emotion_trust < CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD) {
+        if (effective_trust < CONFIG_EMOTION_TRADE_TRUST_LOW_THRESHOLD) {
             snprintf(buf, sizeof(buf), "%s Eu não confio em você o suficiente para fazer negócios.", GET_NAME(ch));
             do_tell(keeper, buf, cmd_tell, 0);
             return (FALSE);
@@ -453,18 +456,23 @@ static int buy_price(struct obj_data *obj, int shop_nr, struct char_data *keeper
 
     /* Apply emotion-based price adjustments if keeper is a mob with AI data */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && !IS_NPC(buyer)) {
+        /* Use hybrid emotion system to get personalized emotions toward this buyer */
+        int effective_trust = get_effective_emotion_toward(keeper, buyer, EMOTION_TYPE_TRUST);
+        int effective_greed = get_effective_emotion_toward(keeper, buyer, EMOTION_TYPE_GREED);
+        int effective_friendship = get_effective_emotion_toward(keeper, buyer, EMOTION_TYPE_FRIENDSHIP);
+        
         /* High trust gives better prices (discount for buyer) */
-        if (keeper->ai_data->emotion_trust >= CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD) {
+        if (effective_trust >= CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD) {
             emotion_modifier *= 0.90; /* 10% discount */
         }
 
         /* High greed increases prices (markup for keeper) */
-        if (keeper->ai_data->emotion_greed >= CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD) {
+        if (effective_greed >= CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD) {
             emotion_modifier *= 1.15; /* 15% markup */
         }
 
         /* High friendship gives discounts */
-        if (keeper->ai_data->emotion_friendship >= CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD) {
+        if (effective_friendship >= CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD) {
             emotion_modifier *= 0.85; /* 15% discount */
         }
     }
@@ -484,18 +492,23 @@ static int sell_price(struct obj_data *obj, int shop_nr, struct char_data *keepe
 
     /* Apply emotion-based price adjustments if keeper is a mob with AI data */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(keeper) && keeper->ai_data && !IS_NPC(seller)) {
+        /* Use hybrid emotion system to get personalized emotions toward this seller */
+        int effective_trust = get_effective_emotion_toward(keeper, seller, EMOTION_TYPE_TRUST);
+        int effective_greed = get_effective_emotion_toward(keeper, seller, EMOTION_TYPE_GREED);
+        int effective_friendship = get_effective_emotion_toward(keeper, seller, EMOTION_TYPE_FRIENDSHIP);
+        
         /* High trust gives better prices (keeper pays more when buying from player) */
-        if (keeper->ai_data->emotion_trust >= CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD) {
+        if (effective_trust >= CONFIG_EMOTION_TRADE_TRUST_HIGH_THRESHOLD) {
             emotion_modifier *= 1.10; /* 10% bonus */
         }
 
         /* High greed decreases what keeper pays (keeper wants to profit more) */
-        if (keeper->ai_data->emotion_greed >= CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD) {
+        if (effective_greed >= CONFIG_EMOTION_TRADE_GREED_HIGH_THRESHOLD) {
             emotion_modifier *= 0.85; /* 15% reduction */
         }
 
         /* High friendship gives better prices (keeper pays more) */
-        if (keeper->ai_data->emotion_friendship >= CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD) {
+        if (effective_friendship >= CONFIG_EMOTION_TRADE_FRIENDSHIP_HIGH_THRESHOLD) {
             emotion_modifier *= 1.15; /* 15% bonus */
         }
     }
