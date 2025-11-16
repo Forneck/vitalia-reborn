@@ -98,6 +98,7 @@ int uninvite_player_from_auction(struct char_data *seller, int auction_id, const
 int request_auction_pass(struct char_data *ch, int auction_id);
 void give_auction_pass(struct char_data *ch, int auction_id, int duration);
 void update_auctions(void);
+void cleanup_finished_auctions(void);
 void show_auction_list(struct char_data *ch);
 void show_auction_details(struct char_data *ch, int auction_id);
 void show_auction_invitations(struct char_data *ch, int auction_id);

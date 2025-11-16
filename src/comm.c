@@ -85,6 +85,7 @@
 #include "mud_event.h"
 #include "ann.h"
 #include "protocol.h" /* for ProtocolNAWSAutoConfig */
+#include "auction.h"  /* for update_auctions */
 
 #ifndef INVALID_SOCKET
 #    define INVALID_SOCKET (-1)
@@ -1059,6 +1060,9 @@ void heartbeat(int heart_pulse)
 
     if (!(heart_pulse % PULSE_VIOLENCE))
         perform_violence();
+
+    if (CONFIG_NEW_AUCTION_SYSTEM && !(heart_pulse % (30 * PASSES_PER_SEC))) /* Every 30 seconds */
+        update_auctions();
 
     if (!(heart_pulse % (SECS_PER_MUD_HOUR / 3))) {
         beware_lightning();

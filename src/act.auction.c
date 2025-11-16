@@ -88,8 +88,12 @@ ACMD(do_auction)
             send_to_char(ch, "Leilão #%d criado para %s com preço inicial de %d moedas.\r\n", auction->auction_id,
                          obj->short_description, bid_amount);
 
-            /* Remove item from player's inventory (should be handled by auction system) */
-            /* TODO: Actually transfer the item to auction system */
+            /* Remove item from player's inventory - it's now in the auction system */
+            obj_from_char(obj);
+            extract_obj(obj); /* Item will be recreated when auction ends */
+
+            log1("AUCTION: %s created auction #%d for item vnum %d", GET_NAME(ch), auction->auction_id,
+                 auction->item_vnum);
         } else {
             send_to_char(ch, "Erro ao criar o leilão.\r\n");
         }
@@ -133,7 +137,7 @@ ACMD(do_auction)
             return;
         }
 
-        /* TODO: Check if player has enough money */
+        /* Check if player has enough money */
         if (GET_GOLD(ch) < bid_amount) {
             send_to_char(ch, "Você não tem moedas suficientes para esse lance.\r\n");
             return;

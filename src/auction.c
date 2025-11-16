@@ -330,7 +330,7 @@ struct auction_data *find_auction(int auction_id)
 int place_bid(struct char_data *bidder, int auction_id, long amount)
 {
     struct auction_data *auction;
-    struct auction_bid *bid;
+    struct auction_bid *bid, *prev_bid;
 
     if (!bidder) {
         return 0;
@@ -346,6 +346,23 @@ int place_bid(struct char_data *bidder, int auction_id, long amount)
         return 0;
     }
 
+    /* Check if bidder has enough money */
+    if (GET_GOLD(bidder) < amount) {
+        return 0;
+    }
+
+    /* If this bidder already has a bid, refund their previous bid */
+    for (prev_bid = auction->bids; prev_bid; prev_bid = prev_bid->next) {
+        if (str_cmp(prev_bid->bidder_name, GET_NAME(bidder)) == 0) {
+            /* Refund previous bid */
+            increase_gold(bidder, prev_bid->amount);
+            break;
+        }
+    }
+
+    /* Reserve money from bidder (take it now, will be used when auction ends) */
+    decrease_gold(bidder, amount);
+
     /* Create new bid */
     CREATE(bid, struct auction_bid, 1);
     strlcpy(bid->bidder_name, GET_NAME(bidder), sizeof(bid->bidder_name));
@@ -360,7 +377,7 @@ int place_bid(struct char_data *bidder, int auction_id, long amount)
     auction->current_price = amount;
     auction->winning_bid = bid;
 
-    /* TODO: Reserve money from bidder */
+    log1("AUCTION: %s bid %ld on auction #%d", GET_NAME(bidder), amount, auction_id);
 
     return 1;
 }
@@ -460,6 +477,9 @@ void update_auctions(void)
             end_auction(auction);
         }
     }
+
+    /* Clean up old finished auctions to prevent memory leaks */
+    cleanup_finished_auctions();
 }
 
 /**
@@ -467,18 +487,117 @@ void update_auctions(void)
  */
 void end_auction(struct auction_data *auction)
 {
+    struct char_data *seller, *winner, *bidder_char;
+    struct obj_data *item;
+    struct auction_bid *bid;
+    char buf[MAX_STRING_LENGTH];
+
     if (!auction) {
         return;
     }
 
     auction->state = AUCTION_FINISHED;
 
-    /* TODO: Implement auction completion logic */
-    /* - Transfer item to winner */
-    /* - Transfer money to seller */
-    /* - Send notifications */
+    log1("AUCTION: Ending auction #%d - %s", auction->auction_id, auction->item_name);
 
-    log1("AUCTION: Ended auction #%d - %s", auction->auction_id, auction->item_name);
+    /* Check if there was a winning bid */
+    if (auction->winning_bid && auction->winning_bid->amount >= auction->reserve_price) {
+        /* Try to find seller and winner online */
+        seller = get_player_vis(NULL, auction->seller_name, NULL, 0);
+        winner = get_player_vis(NULL, auction->winning_bid->bidder_name, NULL, 0);
+
+        /* Refund all losing bidders */
+        for (bid = auction->bids; bid; bid = bid->next) {
+            /* Skip the winning bid */
+            if (bid == auction->winning_bid) {
+                continue;
+            }
+
+            /* Try to refund this bidder */
+            bidder_char = get_player_vis(NULL, bid->bidder_name, NULL, 0);
+            if (bidder_char) {
+                increase_gold(bidder_char, bid->amount);
+                send_to_char(bidder_char, "Seu lance de %s moedas no leilão #%d foi superado. Moedas devolvidas.\r\n",
+                             format_long_br(bid->amount), auction->auction_id);
+            } else {
+                /* Bidder offline - log for manual refund */
+                log1("AUCTION: Bidder %s offline, needs %ld gold refunded", bid->bidder_name, bid->amount);
+            }
+        }
+
+        /* Create the item for the winner */
+        if (auction->item_vnum > 0) {
+            obj_rnum rnum = real_object(auction->item_vnum);
+            if (rnum != NOTHING) {
+                item = read_object(rnum, REAL);
+                if (item) {
+                    /* Deliver item to winner */
+                    if (winner) {
+                        obj_to_char(item, winner);
+                        snprintf(buf, sizeof(buf), "Você ganhou o leilão #%d! %s foi entregue a você.\r\n",
+                                 auction->auction_id, item->short_description);
+                        send_to_char(winner, "%s", buf);
+                    } else {
+                        /* Winner offline - save item to their file (simplified: just log for now) */
+                        log1("AUCTION: Winner %s offline, item %d needs manual delivery",
+                             auction->winning_bid->bidder_name, auction->item_vnum);
+                        extract_obj(item); /* Clean up for now */
+                    }
+                }
+            }
+        }
+
+        /* Transfer money to seller (winner's money already taken in place_bid) */
+        if (seller) {
+            increase_gold(seller, auction->winning_bid->amount);
+            snprintf(buf, sizeof(buf), "Seu leilão #%d foi vendido por %s moedas!\r\n", auction->auction_id,
+                     format_long_br(auction->winning_bid->amount));
+            send_to_char(seller, "%s", buf);
+        } else {
+            /* Seller offline - save gold to their file (simplified: just log for now) */
+            log1("AUCTION: Seller %s offline, needs %ld gold credited", auction->seller_name,
+                 auction->winning_bid->amount);
+        }
+
+        log1("AUCTION: Auction #%d sold to %s for %ld gold", auction->auction_id, auction->winning_bid->bidder_name,
+             auction->winning_bid->amount);
+    } else {
+        /* No winning bid or reserve not met - refund all bidders and return item to seller */
+        seller = get_player_vis(NULL, auction->seller_name, NULL, 0);
+
+        /* Refund all bidders */
+        for (bid = auction->bids; bid; bid = bid->next) {
+            bidder_char = get_player_vis(NULL, bid->bidder_name, NULL, 0);
+            if (bidder_char) {
+                increase_gold(bidder_char, bid->amount);
+                send_to_char(bidder_char, "O leilão #%d foi cancelado. Seu lance de %s moedas foi devolvido.\r\n",
+                             auction->auction_id, format_long_br(bid->amount));
+            } else {
+                log1("AUCTION: Bidder %s offline, needs %ld gold refunded", bid->bidder_name, bid->amount);
+            }
+        }
+
+        /* Return item to seller */
+        if (auction->item_vnum > 0) {
+            obj_rnum rnum = real_object(auction->item_vnum);
+            if (rnum != NOTHING) {
+                item = read_object(rnum, REAL);
+                if (item) {
+                    if (seller) {
+                        obj_to_char(item, seller);
+                        send_to_char(seller, "Seu leilão #%d não teve lances válidos. O item foi devolvido.\r\n",
+                                     auction->auction_id);
+                    } else {
+                        log1("AUCTION: Seller %s offline, item %d needs to be returned", auction->seller_name,
+                             auction->item_vnum);
+                        extract_obj(item); /* Clean up for now */
+                    }
+                }
+            }
+        }
+
+        log1("AUCTION: Auction #%d ended without valid bids", auction->auction_id);
+    }
 }
 
 /**
@@ -635,6 +754,54 @@ SPECIAL(belchior_auctioneer)
     }
 
     return FALSE;
+}
+
+/**
+ * Clean up finished auctions and their associated data
+ * Called periodically to free memory from completed auctions
+ */
+void cleanup_finished_auctions(void)
+{
+    struct auction_data *auction, *prev_auction, *next_auction;
+    struct auction_bid *bid, *next_bid;
+    time_t now = time(0);
+    time_t cleanup_threshold = 3600; /* Clean up auctions finished more than 1 hour ago */
+
+    prev_auction = NULL;
+    for (auction = auction_list; auction; auction = next_auction) {
+        next_auction = auction->next;
+
+        /* Clean up finished auctions that are old enough */
+        if (auction->state == AUCTION_FINISHED && (now - auction->end_time) > cleanup_threshold) {
+            log1("AUCTION: Cleaning up finished auction #%d", auction->auction_id);
+
+            /* Free all bids */
+            for (bid = auction->bids; bid; bid = next_bid) {
+                next_bid = bid->next;
+                free(bid);
+            }
+
+            /* Free invited players string if allocated */
+            if (auction->invited_players) {
+                free(auction->invited_players);
+            }
+
+            /* Remove from list */
+            if (prev_auction) {
+                prev_auction->next = next_auction;
+            } else {
+                auction_list = next_auction;
+            }
+
+            /* Free the auction itself */
+            free(auction);
+
+            /* Don't update prev_auction since we removed this one */
+            continue;
+        }
+
+        prev_auction = auction;
+    }
 }
 
 /**
