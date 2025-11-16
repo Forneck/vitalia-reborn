@@ -243,7 +243,7 @@ void weather_change(int zone)
     weather->humidity += ((diff * dice(1, 3) + dice(1, 6) - dice(1, 6)) / 100.0) * humidity_factor;
     /* Garante que a umidade nunca seja zero ou negativa - mínimo de 1% */
     weather->humidity =
-        URANGE(MAX(0.01, climate->humidity - 0.2), weather->humidity, climate->humidity + 0.3);   // Maior estabilidade
+        URANGE(FMAX(0.01, climate->humidity - 0.2), weather->humidity, climate->humidity + 0.3);   // Maior estabilidade
 
     /* 6. Atualiza o vento */
     diff = (weather->press_diff > 6 ? 1 : (weather->press_diff < -6 ? -1 : 0));
