@@ -649,8 +649,8 @@ static void list_spells_by_type(struct char_data *ch, int class_num, char type, 
         const char *color_normal = CCNRM(ch, C_CMP);
         const char *element_name = get_spell_element_name(entries[i].element);
 
-        len += snprintf(buf + len, sizeof(buf) - len, "%-30s [Nível Mínimo: %3d] [%s@%s %s]\r\n", entries[i].name,
-                        entries[i].level, element_color, color_normal, element_name);
+        len += snprintf(buf + len, sizeof(buf) - len, "%-30s [Nível Mínimo: %3d] [%s%s%s]\r\n", entries[i].name,
+                        entries[i].level, element_color, element_name, color_normal);
     }
 
     page_string(ch->desc, buf, TRUE);
