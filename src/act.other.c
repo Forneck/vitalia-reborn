@@ -532,6 +532,7 @@ ACMD(do_practice)
 struct spell_level_entry {
     char *name;
     int level;
+    int element;
 };
 
 /* Comparison function for qsort */
@@ -540,6 +541,39 @@ static int compare_spell_levels(const void *a, const void *b)
     const struct spell_level_entry *entry_a = (const struct spell_level_entry *)a;
     const struct spell_level_entry *entry_b = (const struct spell_level_entry *)b;
     return entry_a->level - entry_b->level;
+}
+
+/* Get color code for element display */
+static const char *get_element_color_code(struct char_data *ch, int element)
+{
+    switch (element) {
+        case ELEMENT_FIRE:
+            return CBRED(ch, C_CMP); /* Bright Red for Fire */
+        case ELEMENT_WATER:
+            return CBBLU(ch, C_CMP); /* Bright Blue for Water */
+        case ELEMENT_AIR:
+            return CBWHT(ch, C_CMP); /* Bright White for Air */
+        case ELEMENT_EARTH:
+            return CBYEL(ch, C_CMP); /* Bright Yellow for Earth */
+        case ELEMENT_LIGHTNING:
+            return CBCYN(ch, C_CMP); /* Bright Cyan for Lightning */
+        case ELEMENT_ICE:
+            return CCBLU(ch, C_CMP); /* Cyan for Ice */
+        case ELEMENT_ACID:
+            return CBGRN(ch, C_CMP); /* Bright Green for Acid */
+        case ELEMENT_POISON:
+            return CCGRN(ch, C_CMP); /* Green for Poison */
+        case ELEMENT_HOLY:
+            return CBYEL(ch, C_CMP); /* Bright Yellow for Holy */
+        case ELEMENT_UNHOLY:
+            return CBMAG(ch, C_CMP); /* Bright Magenta for Unholy */
+        case ELEMENT_MENTAL:
+            return CCMAG(ch, C_CMP); /* Magenta for Mental */
+        case ELEMENT_PHYSICAL:
+            return CCWHT(ch, C_CMP); /* White for Physical */
+        default:
+            return CCNRM(ch, C_CMP); /* Normal for Undefined */
+    }
 }
 
 /* Helper function to list spells/skills/chansons for a class */
@@ -587,6 +621,7 @@ static void list_spells_by_type(struct char_data *ch, int class_num, char type, 
             if (level >= 0) {
                 entries[i].name = ptr->name;
                 entries[i].level = level;
+                entries[i].element = ptr->element;
                 i++;
             }
         }
@@ -609,9 +644,13 @@ static void list_spells_by_type(struct char_data *ch, int class_num, char type, 
                        pc_class_types[class_num]);
     }
 
-    for (i = 0; i < count && len < sizeof(buf) - 60; i++) {
-        len +=
-            snprintf(buf + len, sizeof(buf) - len, "%-30s [Nível Mínimo: %3d]\r\n", entries[i].name, entries[i].level);
+    for (i = 0; i < count && len < sizeof(buf) - 80; i++) {
+        const char *element_color = get_element_color_code(ch, entries[i].element);
+        const char *color_normal = CCNRM(ch, C_CMP);
+        const char *element_name = get_spell_element_name(entries[i].element);
+
+        len += snprintf(buf + len, sizeof(buf) - len, "%-30s [Nível Mínimo: %3d] [%s@%s %s]\r\n", entries[i].name,
+                        entries[i].level, element_color, color_normal, element_name);
     }
 
     page_string(ch->desc, buf, TRUE);
