@@ -379,32 +379,27 @@ static void get_highest_emotion_display(struct char_data *mob, struct char_data 
     int effective_pride = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_PRIDE);
 
     /* Check all emotions and find the highest one above threshold */
-    if (effective_fear >= CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD &&
-        effective_fear > highest_value) {
+    if (effective_fear >= CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD && effective_fear > highest_value) {
         highest_value = effective_fear;
         *out_text = "(amedrontado)";
         *out_color = CCMAG(viewer, C_NRM);
     }
-    if (effective_anger >= CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD &&
-        effective_anger > highest_value) {
+    if (effective_anger >= CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD && effective_anger > highest_value) {
         highest_value = effective_anger;
         *out_text = "(furioso)";
         *out_color = CCRED(viewer, C_NRM);
     }
-    if (effective_happiness >= CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD &&
-        effective_happiness > highest_value) {
+    if (effective_happiness >= CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD && effective_happiness > highest_value) {
         highest_value = effective_happiness;
         *out_text = "(feliz)";
         *out_color = CCYEL(viewer, C_NRM);
     }
-    if (effective_sadness >= CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD &&
-        effective_sadness > highest_value) {
+    if (effective_sadness >= CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD && effective_sadness > highest_value) {
         highest_value = effective_sadness;
         *out_text = "(triste)";
         *out_color = CCBLU(viewer, C_NRM);
     }
-    if (effective_horror >= CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD &&
-        effective_horror > highest_value) {
+    if (effective_horror >= CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD && effective_horror > highest_value) {
         highest_value = effective_horror;
         *out_text = "(aterrorizado)";
         *out_color = CBMAG(viewer, C_NRM);
@@ -417,53 +412,45 @@ static void get_highest_emotion_display(struct char_data *mob, struct char_data 
         *out_color = CCRED(viewer, C_NRM);
     }
     int effective_compassion = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_COMPASSION);
-    if (effective_compassion >= CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD &&
-        effective_compassion > highest_value) {
+    if (effective_compassion >= CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD && effective_compassion > highest_value) {
         highest_value = effective_compassion;
         *out_text = "(compassivo)";
         *out_color = CCGRN(viewer, C_NRM);
     }
-    if (effective_courage >= CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD &&
-        effective_courage > highest_value) {
+    if (effective_courage >= CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD && effective_courage > highest_value) {
         highest_value = effective_courage;
         *out_text = "(corajoso)";
         *out_color = CCYEL(viewer, C_NRM);
     }
     int effective_curiosity = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_CURIOSITY);
-    if (effective_curiosity >= CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD &&
-        effective_curiosity > highest_value) {
+    if (effective_curiosity >= CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD && effective_curiosity > highest_value) {
         highest_value = effective_curiosity;
         *out_text = "(curioso)";
         *out_color = CCCYN(viewer, C_NRM);
     }
-    if (effective_disgust >= CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD &&
-        effective_disgust > highest_value) {
+    if (effective_disgust >= CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD && effective_disgust > highest_value) {
         highest_value = effective_disgust;
         *out_text = "(enojado)";
         *out_color = CCGRN(viewer, C_NRM);
     }
-    if (effective_envy >= CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD &&
-        effective_envy > highest_value) {
+    if (effective_envy >= CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD && effective_envy > highest_value) {
         highest_value = effective_envy;
         *out_text = "(invejoso)";
         *out_color = CCMAG(viewer, C_NRM);
     }
     int effective_excitement = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_EXCITEMENT);
-    if (effective_excitement >= CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD &&
-        effective_excitement > highest_value) {
+    if (effective_excitement >= CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD && effective_excitement > highest_value) {
         highest_value = effective_excitement;
         *out_text = "(animado)";
         *out_color = CCYEL(viewer, C_NRM);
     }
-    if (effective_friendship >= CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD &&
-        effective_friendship > highest_value) {
+    if (effective_friendship >= CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD && effective_friendship > highest_value) {
         highest_value = effective_friendship;
         *out_text = "(amigavel)";
         *out_color = CCGRN(viewer, C_NRM);
     }
     int effective_greed = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_GREED);
-    if (effective_greed >= CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD &&
-        effective_greed > highest_value) {
+    if (effective_greed >= CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD && effective_greed > highest_value) {
         highest_value = effective_greed;
         *out_text = "(ganancioso)";
         *out_color = CCYEL(viewer, C_NRM);
@@ -475,34 +462,29 @@ static void get_highest_emotion_display(struct char_data *mob, struct char_data 
         *out_text = "(humilhado)";
         *out_color = CCMAG(viewer, C_NRM);
     }
-    if (effective_love >= CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD &&
-        effective_love > highest_value) {
+    if (effective_love >= CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD && effective_love > highest_value) {
         highest_value = effective_love;
         *out_text = "(apaixonado)";
         *out_color = CCRED(viewer, C_NRM);
     }
     int effective_loyalty = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_LOYALTY);
-    if (effective_loyalty >= CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD &&
-        effective_loyalty > highest_value) {
+    if (effective_loyalty >= CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD && effective_loyalty > highest_value) {
         highest_value = effective_loyalty;
         *out_text = "(leal)";
         *out_color = CCBLU(viewer, C_NRM);
     }
-    if (effective_pride >= CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD &&
-        effective_pride > highest_value) {
+    if (effective_pride >= CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD && effective_pride > highest_value) {
         highest_value = effective_pride;
         *out_text = "(orgulhoso)";
         *out_color = CCYEL(viewer, C_NRM);
     }
     int effective_shame = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_SHAME);
-    if (effective_shame >= CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD &&
-        effective_shame > highest_value) {
+    if (effective_shame >= CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD && effective_shame > highest_value) {
         highest_value = effective_shame;
         *out_text = "(envergonhado)";
         *out_color = CCMAG(viewer, C_NRM);
     }
-    if (effective_trust >= CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD &&
-        effective_trust > highest_value) {
+    if (effective_trust >= CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD && effective_trust > highest_value) {
         highest_value = effective_trust;
         *out_text = "(confiante)";
         *out_color = CCGRN(viewer, C_NRM);
@@ -629,7 +611,7 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
     if (!IS_NPC(i) && PRF_FLAGGED(i, PRF_BUILDWALK))
         send_to_char(ch, "%s (construindo)%s", CBRED(ch, C_NRM), CCNRM(ch, C_NRM));
     if (!IS_NPC(i) && PRF_FLAGGED(i, PRF_AFK))
-        send_to_char(ch, "%s (%saway%s)%s", CCGRN(ch, C_NRM), CCCYN(ch, C_CMP), CCGRN(ch, C_CMP), CCNRM(ch, C_NRM));
+        send_to_char(ch, "%s (away)%s", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
 
     if (GET_POS(i) != POS_FIGHTING) {
 
