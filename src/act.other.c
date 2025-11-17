@@ -554,11 +554,11 @@ static const char *get_element_color_code(struct char_data *ch, int element)
         case ELEMENT_AIR:
             return CBWHT(ch, C_CMP); /* Bright White for Air */
         case ELEMENT_EARTH:
-            return CBYEL(ch, C_CMP); /* Bright Yellow for Earth */
+            return CCYEL(ch, C_CMP); /* Yellow for Earth */
         case ELEMENT_LIGHTNING:
             return CBCYN(ch, C_CMP); /* Bright Cyan for Lightning */
         case ELEMENT_ICE:
-            return CCBLU(ch, C_CMP); /* Cyan for Ice */
+            return CBBLU(ch, C_CMP); /* Bright Blue for Ice */
         case ELEMENT_ACID:
             return CBGRN(ch, C_CMP); /* Bright Green for Acid */
         case ELEMENT_POISON:
