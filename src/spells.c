@@ -23,6 +23,7 @@
 #include "fight.h"
 #include "spirits.h"
 #include "spedit.h"
+#include "quest.h"
 
 /* External declarations */
 extern struct weather_data climates[];
@@ -144,6 +145,11 @@ ASPELL(spell_recall)
     }
     act("$n aparece no meio da sala.", TRUE, victim, 0, 0, TO_ROOM);
     look_at_room(victim, 0);
+    /* Autoquest trigger checks after look_at_room so quest messages appear after room description */
+    if (!IS_NPC(victim)) {
+        autoquest_trigger_check(victim, 0, 0, AQ_ROOM_FIND);
+        autoquest_trigger_check(victim, 0, 0, AQ_MOB_FIND);
+    }
     entry_memory_mtrigger(victim);
     greet_mtrigger(victim, -1);
     greet_memory_mtrigger(victim);
@@ -172,6 +178,11 @@ ASPELL(spell_teleport)
     char_to_room(victim, to_room);
     act("$n lentamente entra em existencia até aparecer completamente.", FALSE, victim, 0, 0, TO_ROOM);
     look_at_room(victim, 0);
+    /* Autoquest trigger checks after look_at_room so quest messages appear after room description */
+    if (!IS_NPC(victim)) {
+        autoquest_trigger_check(victim, 0, 0, AQ_ROOM_FIND);
+        autoquest_trigger_check(victim, 0, 0, AQ_MOB_FIND);
+    }
     entry_memory_mtrigger(victim);
     greet_mtrigger(victim, -1);
     greet_memory_mtrigger(victim);
@@ -231,6 +242,11 @@ ASPELL(spell_summon)
     act("$n chega repentinamente.", TRUE, victim, 0, 0, TO_ROOM);
     act("$n lhe convocou!", FALSE, ch, 0, victim, TO_VICT);
     look_at_room(victim, 0);
+    /* Autoquest trigger checks after look_at_room so quest messages appear after room description */
+    if (!IS_NPC(victim)) {
+        autoquest_trigger_check(victim, 0, 0, AQ_ROOM_FIND);
+        autoquest_trigger_check(victim, 0, 0, AQ_MOB_FIND);
+    }
     entry_memory_mtrigger(victim);
     greet_mtrigger(victim, -1);
     greet_memory_mtrigger(victim);

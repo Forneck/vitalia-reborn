@@ -487,9 +487,6 @@ void char_to_room(struct char_data *ch, room_rnum room)
         world[room].people = ch;
         IN_ROOM(ch) = room;
 
-        autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
-        autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
-
         /* Check for escort quest completion */
         if (!IS_NPC(ch) && GET_QUEST_TYPE(ch) == AQ_MOB_ESCORT) {
             qst_rnum rnum = real_quest(GET_QUEST(ch));

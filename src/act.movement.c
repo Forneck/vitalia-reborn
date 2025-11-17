@@ -24,6 +24,7 @@
 #include "fight.h"
 #include "oasis.h" /* for buildwalk */
 #include "ann.h"
+#include "quest.h"
 
 /* local only functions */
 /* do_simple_move utility functions */
@@ -362,6 +363,12 @@ int do_simple_move(struct char_data *ch, int dir, int need_specials_check)
     /* ... and the room description to the character. */
     if (ch->desc != NULL)
         look_at_room(ch, 0);
+
+    /* Autoquest trigger checks: Must be after look_at_room so quest messages appear after room description */
+    if (!IS_NPC(ch)) {
+        autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
+        autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
+    }
 
     /* Emotion trigger: Entering dangerous or safe areas (Environmental 2.2) */
     if (IS_NPC(ch) && ch->ai_data && CONFIG_MOB_CONTEXTUAL_SOCIALS) {
@@ -833,6 +840,11 @@ ACMD(do_enter)
                 char_to_room(ch, target_room_rnum);
                 act("$n aparece saindo de $p.", TRUE, ch, obj, 0, TO_ROOM);
                 look_at_room(ch, 1);
+                /* Autoquest trigger checks after look_at_room so quest messages appear after room description */
+                if (!IS_NPC(ch)) {
+                    autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
+                    autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
+                }
                 return;
             }
         }
