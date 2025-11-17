@@ -21,6 +21,8 @@
 #include "genzon.h" /* for zone_rnum real_zone_by_thing */
 #include "fight.h"  /* for die() */
 #include "shop.h"   /* for END_OF macro */
+#include "quest.h"
+#include "act.h" /* for look_at_room */
 
 /* Local functions, macros, defines and structs */
 
@@ -306,6 +308,12 @@ WCMD(do_wteleport)
                 continue;
             char_from_room(ch);
             char_to_room(ch, target);
+            /* Show room and trigger quests for player characters */
+            if (!IS_NPC(ch) && ch->desc) {
+                look_at_room(ch, 0);
+                autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
+                autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
+            }
             enter_wtrigger(&world[IN_ROOM(ch)], ch, -1);
         }
     }
@@ -315,6 +323,12 @@ WCMD(do_wteleport)
             if (valid_dg_target(ch, DG_ALLOW_GODS)) {
                 char_from_room(ch);
                 char_to_room(ch, target);
+                /* Show room and trigger quests for player characters */
+                if (!IS_NPC(ch) && ch->desc) {
+                    look_at_room(ch, 0);
+                    autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
+                    autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
+                }
                 enter_wtrigger(&world[IN_ROOM(ch)], ch, -1);
             }
         }

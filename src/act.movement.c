@@ -840,6 +840,11 @@ ACMD(do_enter)
                 char_to_room(ch, target_room_rnum);
                 act("$n aparece saindo de $p.", TRUE, ch, obj, 0, TO_ROOM);
                 look_at_room(ch, 1);
+                /* Autoquest trigger checks after look_at_room so quest messages appear after room description */
+                if (!IS_NPC(ch)) {
+                    autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
+                    autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
+                }
                 return;
             }
         }
