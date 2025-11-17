@@ -1240,7 +1240,7 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
                     CHECK_VAR(OLC_CONFIG(d)->experimental.mob_contextual_socials), grn, nrm, cyn,
                     CHECK_VAR(OLC_CONFIG(d)->experimental.dynamic_reputation), grn, nrm, cyn,
                     OLC_CONFIG(d)->experimental.mob_emotion_social_chance, grn, nrm, cyn,
-                    OLC_CONFIG(d)->experimental.mob_emotion_update_chance, grn, nrm);
+                    OLC_CONFIG(d)->experimental.mob_emotion_update_chance);
 
     /* Weather emotion options - only show if mob_contextual_socials is enabled */
     if (OLC_CONFIG(d)->experimental.mob_contextual_socials) {
@@ -1248,7 +1248,7 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
                         "%s7%s) Clima Afeta Emoções de Mobs : %s%s\r\n"
                         "%s8%s) Multiplicador de Efeito do Clima (%%) : %s%d\r\n",
                         grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->experimental.weather_affects_emotions), grn, nrm, cyn,
-                        OLC_CONFIG(d)->experimental.weather_effect_multiplier, grn, nrm);
+                        OLC_CONFIG(d)->experimental.weather_effect_multiplier);
     }
 
     write_to_output(d,
