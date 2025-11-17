@@ -752,6 +752,176 @@ static void do_stat_object(struct char_data *ch, struct obj_data *j)
     do_sstat_object(ch, j);
 }
 
+/**
+ * Display effective emotions (hybrid: mood + relationship) of a mob toward a specific target.
+ * Only available to LVL_GOD and above.
+ */
+static void do_stat_mob_emotions(struct char_data *ch, struct char_data *mob, struct char_data *target)
+{
+    if (!IS_MOB(mob)) {
+        send_to_char(ch, "Effective emotions are only available for mobs.\r\n");
+        return;
+    }
+
+    if (!mob->ai_data) {
+        send_to_char(ch, "This mob has no AI data.\r\n");
+        return;
+    }
+
+    if (!CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        send_to_char(ch, "The emotion system is currently disabled.\r\n");
+        return;
+    }
+
+    send_to_char(ch, "\r\n%s=== Effective Emotions of %s toward %s ===%s\r\n", CCYEL(ch, C_NRM), GET_NAME(mob),
+                 GET_NAME(target), CCNRM(ch, C_NRM));
+    send_to_char(ch, "%s(Hybrid system: Mood + Relationship modifier)%s\r\n\r\n", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+
+    /* Display all 20 effective emotions using the hybrid system */
+    int eff_fear = get_effective_emotion_toward(mob, target, EMOTION_TYPE_FEAR);
+    int eff_anger = get_effective_emotion_toward(mob, target, EMOTION_TYPE_ANGER);
+    int eff_happiness = get_effective_emotion_toward(mob, target, EMOTION_TYPE_HAPPINESS);
+    int eff_sadness = get_effective_emotion_toward(mob, target, EMOTION_TYPE_SADNESS);
+
+    send_to_char(ch, "%sBasic Emotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Fear:      [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_fear, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_fear, CCNRM(ch, C_NRM),
+                 (eff_fear > mob->ai_data->emotion_fear)   ? "(relationship increases)"
+                 : (eff_fear < mob->ai_data->emotion_fear) ? "(relationship decreases)"
+                                                           : "");
+    send_to_char(ch, "  Anger:     [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_anger, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_anger, CCNRM(ch, C_NRM),
+                 (eff_anger > mob->ai_data->emotion_anger)   ? "(relationship increases)"
+                 : (eff_anger < mob->ai_data->emotion_anger) ? "(relationship decreases)"
+                                                             : "");
+    send_to_char(ch, "  Happiness: [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_happiness, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_happiness, CCNRM(ch, C_NRM),
+                 (eff_happiness > mob->ai_data->emotion_happiness)   ? "(relationship increases)"
+                 : (eff_happiness < mob->ai_data->emotion_happiness) ? "(relationship decreases)"
+                                                                     : "");
+    send_to_char(ch, "  Sadness:   [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_sadness, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_sadness, CCNRM(ch, C_NRM),
+                 (eff_sadness > mob->ai_data->emotion_sadness)   ? "(relationship increases)"
+                 : (eff_sadness < mob->ai_data->emotion_sadness) ? "(relationship decreases)"
+                                                                 : "");
+
+    int eff_friendship = get_effective_emotion_toward(mob, target, EMOTION_TYPE_FRIENDSHIP);
+    int eff_love = get_effective_emotion_toward(mob, target, EMOTION_TYPE_LOVE);
+    int eff_trust = get_effective_emotion_toward(mob, target, EMOTION_TYPE_TRUST);
+    int eff_loyalty = get_effective_emotion_toward(mob, target, EMOTION_TYPE_LOYALTY);
+
+    send_to_char(ch, "\r\n%sSocial Emotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Friendship:[Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_friendship, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_friendship, CCNRM(ch, C_NRM),
+                 (eff_friendship > mob->ai_data->emotion_friendship)   ? "(relationship increases)"
+                 : (eff_friendship < mob->ai_data->emotion_friendship) ? "(relationship decreases)"
+                                                                       : "");
+    send_to_char(ch, "  Love:      [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_love, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_love, CCNRM(ch, C_NRM),
+                 (eff_love > mob->ai_data->emotion_love)   ? "(relationship increases)"
+                 : (eff_love < mob->ai_data->emotion_love) ? "(relationship decreases)"
+                                                           : "");
+    send_to_char(ch, "  Trust:     [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_trust, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_trust, CCNRM(ch, C_NRM),
+                 (eff_trust > mob->ai_data->emotion_trust)   ? "(relationship increases)"
+                 : (eff_trust < mob->ai_data->emotion_trust) ? "(relationship decreases)"
+                                                             : "");
+    send_to_char(ch, "  Loyalty:   [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_loyalty, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_loyalty, CCNRM(ch, C_NRM),
+                 (eff_loyalty > mob->ai_data->emotion_loyalty)   ? "(relationship increases)"
+                 : (eff_loyalty < mob->ai_data->emotion_loyalty) ? "(relationship decreases)"
+                                                                 : "");
+
+    int eff_curiosity = get_effective_emotion_toward(mob, target, EMOTION_TYPE_CURIOSITY);
+    int eff_greed = get_effective_emotion_toward(mob, target, EMOTION_TYPE_GREED);
+    int eff_pride = get_effective_emotion_toward(mob, target, EMOTION_TYPE_PRIDE);
+
+    send_to_char(ch, "\r\n%sMotivational Emotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Curiosity: [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_curiosity, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_curiosity, CCNRM(ch, C_NRM),
+                 (eff_curiosity > mob->ai_data->emotion_curiosity)   ? "(relationship increases)"
+                 : (eff_curiosity < mob->ai_data->emotion_curiosity) ? "(relationship decreases)"
+                                                                     : "");
+    send_to_char(ch, "  Greed:     [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_greed, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_greed, CCNRM(ch, C_NRM),
+                 (eff_greed > mob->ai_data->emotion_greed)   ? "(relationship increases)"
+                 : (eff_greed < mob->ai_data->emotion_greed) ? "(relationship decreases)"
+                                                             : "");
+    send_to_char(ch, "  Pride:     [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_pride, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_pride, CCNRM(ch, C_NRM),
+                 (eff_pride > mob->ai_data->emotion_pride)   ? "(relationship increases)"
+                 : (eff_pride < mob->ai_data->emotion_pride) ? "(relationship decreases)"
+                                                             : "");
+
+    int eff_compassion = get_effective_emotion_toward(mob, target, EMOTION_TYPE_COMPASSION);
+    int eff_envy = get_effective_emotion_toward(mob, target, EMOTION_TYPE_ENVY);
+
+    send_to_char(ch, "\r\n%sEmpathic Emotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Compassion:[Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_compassion, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_compassion, CCNRM(ch, C_NRM),
+                 (eff_compassion > mob->ai_data->emotion_compassion)   ? "(relationship increases)"
+                 : (eff_compassion < mob->ai_data->emotion_compassion) ? "(relationship decreases)"
+                                                                       : "");
+    send_to_char(ch, "  Envy:      [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_envy, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_envy, CCNRM(ch, C_NRM),
+                 (eff_envy > mob->ai_data->emotion_envy)   ? "(relationship increases)"
+                 : (eff_envy < mob->ai_data->emotion_envy) ? "(relationship decreases)"
+                                                           : "");
+
+    int eff_courage = get_effective_emotion_toward(mob, target, EMOTION_TYPE_COURAGE);
+    int eff_excitement = get_effective_emotion_toward(mob, target, EMOTION_TYPE_EXCITEMENT);
+
+    send_to_char(ch, "\r\n%sArousal Emotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Courage:   [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_courage, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_courage, CCNRM(ch, C_NRM),
+                 (eff_courage > mob->ai_data->emotion_courage)   ? "(relationship increases)"
+                 : (eff_courage < mob->ai_data->emotion_courage) ? "(relationship decreases)"
+                                                                 : "");
+    send_to_char(ch, "  Excitement:[Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_excitement, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_excitement, CCNRM(ch, C_NRM),
+                 (eff_excitement > mob->ai_data->emotion_excitement)   ? "(relationship increases)"
+                 : (eff_excitement < mob->ai_data->emotion_excitement) ? "(relationship decreases)"
+                                                                       : "");
+
+    int eff_disgust = get_effective_emotion_toward(mob, target, EMOTION_TYPE_DISGUST);
+    int eff_shame = get_effective_emotion_toward(mob, target, EMOTION_TYPE_SHAME);
+    int eff_pain = get_effective_emotion_toward(mob, target, EMOTION_TYPE_PAIN);
+    int eff_horror = get_effective_emotion_toward(mob, target, EMOTION_TYPE_HORROR);
+    int eff_humiliation = get_effective_emotion_toward(mob, target, EMOTION_TYPE_HUMILIATION);
+
+    send_to_char(ch, "\r\n%sNegative/Aversive Emotions:%s\r\n", CCYEL(ch, C_NRM), CCNRM(ch, C_NRM));
+    send_to_char(ch, "  Disgust:   [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_disgust, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_disgust, CCNRM(ch, C_NRM),
+                 (eff_disgust > mob->ai_data->emotion_disgust)   ? "(relationship increases)"
+                 : (eff_disgust < mob->ai_data->emotion_disgust) ? "(relationship decreases)"
+                                                                 : "");
+    send_to_char(ch, "  Shame:     [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_shame, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_shame, CCNRM(ch, C_NRM),
+                 (eff_shame > mob->ai_data->emotion_shame)   ? "(relationship increases)"
+                 : (eff_shame < mob->ai_data->emotion_shame) ? "(relationship decreases)"
+                                                             : "");
+    send_to_char(ch, "  Pain:      [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_pain, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_pain, CCNRM(ch, C_NRM),
+                 (eff_pain > mob->ai_data->emotion_pain)   ? "(relationship increases)"
+                 : (eff_pain < mob->ai_data->emotion_pain) ? "(relationship decreases)"
+                                                           : "");
+    send_to_char(ch, "  Horror:    [Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_horror, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_horror, CCNRM(ch, C_NRM),
+                 (eff_horror > mob->ai_data->emotion_horror)   ? "(relationship increases)"
+                 : (eff_horror < mob->ai_data->emotion_horror) ? "(relationship decreases)"
+                                                               : "");
+    send_to_char(ch, "  Humiliation:[Mood:%s%3d%s] -> [Effective:%s%3d%s] %s\r\n", CCCYN(ch, C_NRM),
+                 mob->ai_data->emotion_humiliation, CCNRM(ch, C_NRM), CCGRN(ch, C_NRM), eff_humiliation,
+                 CCNRM(ch, C_NRM),
+                 (eff_humiliation > mob->ai_data->emotion_humiliation)   ? "(relationship increases)"
+                 : (eff_humiliation < mob->ai_data->emotion_humiliation) ? "(relationship decreases)"
+                                                                         : "");
+
+    send_to_char(ch,
+                 "\r\n%sNote:%s Effective emotions are used in combat, shopping, quests, and other interactions.\r\n",
+                 CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+}
+
 static void do_stat_character(struct char_data *ch, struct char_data *k)
 {
     char buf[MAX_STRING_LENGTH];
@@ -1406,7 +1576,25 @@ ACMD(do_stat)
         char *name = buf1;
         int number = get_number(&name);
 
-        if ((object = get_obj_in_equip_vis(ch, name, &number, ch->equipment)) != NULL)
+        /* Check if second argument is "emotions" for emotion display */
+        if (*buf2 && is_abbrev(buf2, "emotions")) {
+            /* Find the mob to display emotions for */
+            victim = NULL;
+            if ((victim = get_char_vis(ch, name, &number, FIND_CHAR_ROOM)) != NULL ||
+                (victim = get_char_vis(ch, name, &number, FIND_CHAR_WORLD)) != NULL) {
+
+                /* Check if user has permission */
+                if (GET_LEVEL(ch) < LVL_GOD) {
+                    send_to_char(ch, "Você precisa ser nível GOD ou superior para ver emoções efetivas.\r\n");
+                    return;
+                }
+
+                /* Display effective emotions toward the command issuer */
+                do_stat_mob_emotions(ch, victim, ch);
+            } else {
+                send_to_char(ch, "Nenhum mobile assim por aqui.\r\n");
+            }
+        } else if ((object = get_obj_in_equip_vis(ch, name, &number, ch->equipment)) != NULL)
             do_stat_object(ch, object);
         else if ((object = get_obj_in_list_vis(ch, name, &number, ch->carrying)) != NULL)
             do_stat_object(ch, object);
