@@ -1348,6 +1348,10 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_MOB_EMOTION_SOCIAL_CHANCE config_info.experimental.mob_emotion_social_chance
 /** Probability (%) of mob updating emotions per emotion tick */
 #define CONFIG_MOB_EMOTION_UPDATE_CHANCE config_info.experimental.mob_emotion_update_chance
+/** Weather affects mob emotions? */
+#define CONFIG_WEATHER_AFFECTS_EMOTIONS config_info.experimental.weather_affects_emotions
+/** Weather emotion effect multiplier (0-200%, stored as 0-200 integer) */
+#define CONFIG_WEATHER_EFFECT_MULTIPLIER config_info.experimental.weather_effect_multiplier
 
 /* Emotion System Configuration Macros */
 /** Visual indicator thresholds */

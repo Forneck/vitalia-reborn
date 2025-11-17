@@ -4414,8 +4414,10 @@ static void load_default_config(void)
     CONFIG_EXPERIMENTAL_BANK_SYSTEM = NO;
     CONFIG_MOB_CONTEXTUAL_SOCIALS = NO; /* Disabled by default - experimental feature */
     CONFIG_DYNAMIC_REPUTATION = NO;
-    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = 20; /* Default: 20% chance per emotion tick (4 seconds) */
-    CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30; /* Default: 30% chance per emotion tick (4 seconds) */
+    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = 20;  /* Default: 20% chance per emotion tick (4 seconds) */
+    CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30;  /* Default: 30% chance per emotion tick (4 seconds) */
+    CONFIG_WEATHER_AFFECTS_EMOTIONS = YES;  /* Enabled by default (requires mob_contextual_socials) */
+    CONFIG_WEATHER_EFFECT_MULTIPLIER = 100; /* Default: 100% (range 0-200) */
 
     /* Emotion system configuration defaults. */
     /* Visual indicator thresholds */
@@ -4822,6 +4824,8 @@ void load_config(void)
 
                 break;
 
+                break;
+
             case 'n':
                 if (!str_cmp(tag, "nameserver_is_slow"))
                     CONFIG_NS_IS_SLOW = num;
@@ -4930,6 +4934,10 @@ void load_config(void)
                     CONFIG_WELC_MESSG = fread_string(fl, buf);
                 } else if (!str_cmp(tag, "weather_affects_spells"))
                     CONFIG_WEATHER_AFFECTS_SPELLS = num;
+                else if (!str_cmp(tag, "weather_affects_emotions"))
+                    CONFIG_WEATHER_AFFECTS_EMOTIONS = num;
+                else if (!str_cmp(tag, "weather_effect_multiplier"))
+                    CONFIG_WEATHER_EFFECT_MULTIPLIER = num;
                 break;
 
             default:

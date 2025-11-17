@@ -163,6 +163,8 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->experimental.dynamic_reputation = CONFIG_DYNAMIC_REPUTATION;
     OLC_CONFIG(d)->experimental.mob_emotion_social_chance = CONFIG_MOB_EMOTION_SOCIAL_CHANCE;
     OLC_CONFIG(d)->experimental.mob_emotion_update_chance = CONFIG_MOB_EMOTION_UPDATE_CHANCE;
+    OLC_CONFIG(d)->experimental.weather_affects_emotions = CONFIG_WEATHER_AFFECTS_EMOTIONS;
+    OLC_CONFIG(d)->experimental.weather_effect_multiplier = CONFIG_WEATHER_EFFECT_MULTIPLIER;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -342,6 +344,8 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_DYNAMIC_REPUTATION = OLC_CONFIG(d)->experimental.dynamic_reputation;
     CONFIG_MOB_EMOTION_SOCIAL_CHANCE = OLC_CONFIG(d)->experimental.mob_emotion_social_chance;
     CONFIG_MOB_EMOTION_UPDATE_CHANCE = OLC_CONFIG(d)->experimental.mob_emotion_update_chance;
+    CONFIG_WEATHER_AFFECTS_EMOTIONS = OLC_CONFIG(d)->experimental.weather_affects_emotions;
+    CONFIG_WEATHER_EFFECT_MULTIPLIER = OLC_CONFIG(d)->experimental.weather_effect_multiplier;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -891,6 +895,16 @@ int save_config(IDXTYPE nowhere)
             "mob_emotion_update_chance = %d\n\n",
             CONFIG_MOB_EMOTION_UPDATE_CHANCE);
 
+    fprintf(fl,
+            "* Enable weather affects on mob emotions?\n"
+            "weather_affects_emotions = %d\n\n",
+            CONFIG_WEATHER_AFFECTS_EMOTIONS);
+
+    fprintf(fl,
+            "* Weather emotion effect multiplier (0-200%%, default 100)\n"
+            "weather_effect_multiplier = %d\n\n",
+            CONFIG_WEATHER_EFFECT_MULTIPLIER);
+
     fprintf(fl, "\n\n* [ Emotion System Configuration ]\n");
 
     fprintf(fl, "\n* Visual Indicator Thresholds (0-100)\n");
@@ -1220,15 +1234,27 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
                     "%s3%s) Sociais Contextuais de Mobs (reputação/alinhamento/posição) : %s%s\r\n"
                     "%s4%s) Sistema de Reputação Dinâmica (combate/cura/dar/roubar - exclui quests) : %s%s\r\n"
                     "%s5%s) Chance de Social de Emoção de Mob (%%) : %s%d\r\n"
-                    "%s6%s) Chance de Atualização de Emoção de Mob (%%) : %s%d\r\n"
-                    "%s0%s) Retornar ao Menu anterior\r\n"
-                    "Selecione uma opção : ",
+                    "%s6%s) Chance de Atualização de Emoção de Mob (%%) : %s%d\r\n",
                     grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->experimental.new_auction_system), grn, nrm, cyn,
                     CHECK_VAR(OLC_CONFIG(d)->experimental.experimental_bank_system), grn, nrm, cyn,
                     CHECK_VAR(OLC_CONFIG(d)->experimental.mob_contextual_socials), grn, nrm, cyn,
                     CHECK_VAR(OLC_CONFIG(d)->experimental.dynamic_reputation), grn, nrm, cyn,
                     OLC_CONFIG(d)->experimental.mob_emotion_social_chance, grn, nrm, cyn,
                     OLC_CONFIG(d)->experimental.mob_emotion_update_chance, grn, nrm);
+
+    /* Weather emotion options - only show if mob_contextual_socials is enabled */
+    if (OLC_CONFIG(d)->experimental.mob_contextual_socials) {
+        write_to_output(d,
+                        "%s7%s) Clima Afeta Emoções de Mobs : %s%s\r\n"
+                        "%s8%s) Multiplicador de Efeito do Clima (%%) : %s%d\r\n",
+                        grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->experimental.weather_affects_emotions), grn, nrm, cyn,
+                        OLC_CONFIG(d)->experimental.weather_effect_multiplier, grn, nrm);
+    }
+
+    write_to_output(d,
+                    "%s0%s) Retornar ao Menu anterior\r\n"
+                    "Selecione uma opção : ",
+                    grn, nrm);
 
     OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
 }
@@ -1347,10 +1373,10 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 65;       /* More envious */
 
             /* Combat behavior - Aggressive preset: more anger bonus, less pain penalty */
-            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 60;  /* Easier to trigger anger bonus */
-            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 20;    /* Higher damage bonus */
-            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 30;    /* Higher attack bonus */
-            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 40;    /* Less sensitive to pain */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 60; /* Easier to trigger anger bonus */
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 20;   /* Higher damage bonus */
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 30;   /* Higher attack bonus */
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 40;   /* Less sensitive to pain */
             OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 60;
             OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 80;
             OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
@@ -1451,10 +1477,10 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 75;       /* Less envious */
 
             /* Combat behavior - Defensive preset: less anger bonus, more pain penalty */
-            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 80;  /* Harder to trigger anger bonus */
-            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 10;    /* Lower damage bonus */
-            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 20;    /* Lower attack bonus */
-            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 20;    /* More sensitive to pain */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 80; /* Harder to trigger anger bonus */
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 10;   /* Lower damage bonus */
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 20;   /* Lower attack bonus */
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 20;   /* More sensitive to pain */
             OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 40;
             OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 60;
             OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 2;
@@ -1955,8 +1981,8 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 80;       /* Not envious */
 
             /* Combat behavior - Loyal preset: fight for allies */
-            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 65;  /* Easier to get angry defending */
-            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 18;    /* Higher damage for allies */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 65; /* Easier to get angry defending */
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 18;   /* Higher damage for allies */
             OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 28;
             OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 35;
             OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 55;
@@ -2588,6 +2614,10 @@ void cedit_parse(struct descriptor_data *d, char *arg)
 
                 case '3':
                     TOGGLE_VAR(OLC_CONFIG(d)->experimental.mob_contextual_socials);
+                    /* If disabling mob_contextual_socials, also disable weather affects emotions */
+                    if (!OLC_CONFIG(d)->experimental.mob_contextual_socials) {
+                        OLC_CONFIG(d)->experimental.weather_affects_emotions = NO;
+                    }
                     break;
 
                 case '4':
@@ -2605,6 +2635,28 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                         d, "\r\nEnter the probability (%%) of mob updating emotions per emotion tick (0-100) : ");
                     OLC_MODE(d) = CEDIT_MOB_EMOTION_UPDATE_CHANCE;
                     return;
+
+                case '7':
+                    /* Only allow toggling if mob_contextual_socials is enabled */
+                    if (OLC_CONFIG(d)->experimental.mob_contextual_socials) {
+                        TOGGLE_VAR(OLC_CONFIG(d)->experimental.weather_affects_emotions);
+                    } else {
+                        write_to_output(
+                            d, "\r\nWeather affects emotions requires mob contextual socials to be enabled!\r\n");
+                    }
+                    break;
+
+                case '8':
+                    /* Only allow setting if mob_contextual_socials is enabled */
+                    if (OLC_CONFIG(d)->experimental.mob_contextual_socials) {
+                        write_to_output(d, "\r\nEnter weather effect multiplier (0-200%%, default 100) : ");
+                        OLC_MODE(d) = CEDIT_WEATHER_EFFECT_MULTIPLIER;
+                        return;
+                    } else {
+                        write_to_output(
+                            d, "\r\nWeather effect multiplier requires mob contextual socials to be enabled!\r\n");
+                    }
+                    break;
 
                 case '0':
                 case 'q':
@@ -2637,6 +2689,17 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                                 "Enter the probability (%%) of mob updating emotions per emotion tick (0-100) : ");
             } else {
                 OLC_CONFIG(d)->experimental.mob_emotion_update_chance = LIMIT(atoi(arg), 0, 100);
+                cedit_disp_experimental_options(d);
+            }
+            break;
+
+        case CEDIT_WEATHER_EFFECT_MULTIPLIER:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter weather effect multiplier (0-200%%, default 100) : ");
+            } else {
+                OLC_CONFIG(d)->experimental.weather_effect_multiplier = LIMIT(atoi(arg), 0, 200);
                 cedit_disp_experimental_options(d);
             }
             break;
