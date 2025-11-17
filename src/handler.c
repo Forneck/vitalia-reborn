@@ -537,13 +537,6 @@ void obj_from_char(struct obj_data *object)
         log1("SYSERR: NULL object passed to obj_from_char.");
         return;
     }
-
-    /* Safety check: prevent segfault if carried_by is NULL (object already extracted) */
-    if (object->carried_by == NULL) {
-        log1("SYSERR: obj_from_char called on object not carried by anyone.");
-        return;
-    }
-
     REMOVE_FROM_LIST(object, object->carried_by->carrying, next_content);
 
     /* set flag for crash-save system, but not on mobs! */

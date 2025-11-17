@@ -247,7 +247,9 @@ static void perform_get_from_container(struct char_data *ch, struct obj_data *ob
             obj_to_char(obj, ch);
             act("Você pega $p de dentro de $P.", FALSE, ch, obj, cont, TO_CHAR);
             act("$n pega $p de dentro de $P.", TRUE, ch, obj, cont, TO_ROOM);
-            get_check_money(ch, obj);
+            /* Check if object still carried after act() triggers - might have been extracted */
+            if (obj->carried_by == ch)
+                get_check_money(ch, obj);
         }
     }
 }
@@ -307,7 +309,9 @@ int perform_get_from_room(struct char_data *ch, struct obj_data *obj)
         obj_to_char(obj, ch);
         act("Você pega $p.", FALSE, ch, obj, 0, TO_CHAR);
         act("$n pega $p.", TRUE, ch, obj, 0, TO_ROOM);
-        get_check_money(ch, obj);
+        /* Check if object still carried after act() triggers - might have been extracted */
+        if (obj->carried_by == ch)
+            get_check_money(ch, obj);
         return (1);
     }
     return (0);
