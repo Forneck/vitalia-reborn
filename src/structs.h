@@ -1886,18 +1886,18 @@ struct emotion_config_data {
     int group_envy_high_threshold;       /**< High envy refuses better-equipped players (default: 70) */
 
     /* Combat behavior thresholds and modifiers */
-    int combat_anger_high_threshold;      /**< High anger for increased attack frequency (default: 70) */
-    int combat_anger_damage_bonus;        /**< Damage bonus % from high anger (default: 15) */
-    int combat_anger_attack_bonus;        /**< Extra attack chance % from high anger (default: 25) */
-    int combat_pain_low_threshold;        /**< Low pain for minor penalties (default: 30) */
-    int combat_pain_moderate_threshold;   /**< Moderate pain for significant penalties (default: 50) */
-    int combat_pain_high_threshold;       /**< High pain for severe penalties (default: 70) */
-    int combat_pain_accuracy_penalty_low; /**< THAC0 penalty from low pain (default: 1) */
-    int combat_pain_accuracy_penalty_mod; /**< THAC0 penalty from moderate pain (default: 2) */
+    int combat_anger_high_threshold;       /**< High anger for increased attack frequency (default: 70) */
+    int combat_anger_damage_bonus;         /**< Damage bonus % from high anger (default: 15) */
+    int combat_anger_attack_bonus;         /**< Extra attack chance % from high anger (default: 25) */
+    int combat_pain_low_threshold;         /**< Low pain for minor penalties (default: 30) */
+    int combat_pain_moderate_threshold;    /**< Moderate pain for significant penalties (default: 50) */
+    int combat_pain_high_threshold;        /**< High pain for severe penalties (default: 70) */
+    int combat_pain_accuracy_penalty_low;  /**< THAC0 penalty from low pain (default: 1) */
+    int combat_pain_accuracy_penalty_mod;  /**< THAC0 penalty from moderate pain (default: 2) */
     int combat_pain_accuracy_penalty_high; /**< THAC0 penalty from high pain (default: 4) */
-    int combat_pain_damage_penalty_low;   /**< Damage reduction % from low pain (default: 5) */
-    int combat_pain_damage_penalty_mod;   /**< Damage reduction % from moderate pain (default: 10) */
-    int combat_pain_damage_penalty_high;  /**< Damage reduction % from high pain (default: 20) */
+    int combat_pain_damage_penalty_low;    /**< Damage reduction % from low pain (default: 5) */
+    int combat_pain_damage_penalty_mod;    /**< Damage reduction % from moderate pain (default: 10) */
+    int combat_pain_damage_penalty_high;   /**< Damage reduction % from high pain (default: 20) */
 };
 
 /** Experimental Features configuration. */
@@ -1908,6 +1908,8 @@ struct experimental_data {
     int dynamic_reputation;        /**< Dynamic reputation changes (combat, healing, giving, etc.)? */
     int mob_emotion_social_chance; /**< Probability (%) of mob performing social per emotion tick */
     int mob_emotion_update_chance; /**< Probability (%) of mob updating emotions per emotion tick */
+    int weather_affects_emotions;  /**< Weather affects mob emotions? (default: YES) */
+    int weather_effect_multiplier; /**< Weather emotion effect multiplier 0-200% (default: 100) */
 };
 
 /**

@@ -174,6 +174,16 @@ void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int
 int get_effective_emotion_toward(struct char_data *mob, struct char_data *target, int emotion_type);
 int get_relationship_emotion(struct char_data *mob, struct char_data *target, int emotion_type);
 
+/* Weather-emotion integration - applies weather effects to mob moods */
+/**
+ * Applies weather effects to mob moods.
+ * @param mob The mob whose mood is affected.
+ * @param weather Zone-specific weather data (does NOT include global sunlight).
+ * @param sunlight Global sunlight value (from weather_info.sunlight), which is updated in another_hour().
+ *        Sunlight is passed separately because it is global, while other weather data is zone-specific.
+ */
+void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, int sunlight);
+
 /* Stoneskin utility functions */
 int get_stoneskin_points(struct char_data *ch);
 void set_stoneskin_points(struct char_data *ch, int points);
@@ -1338,6 +1348,10 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_MOB_EMOTION_SOCIAL_CHANCE config_info.experimental.mob_emotion_social_chance
 /** Probability (%) of mob updating emotions per emotion tick */
 #define CONFIG_MOB_EMOTION_UPDATE_CHANCE config_info.experimental.mob_emotion_update_chance
+/** Weather affects mob emotions? */
+#define CONFIG_WEATHER_AFFECTS_EMOTIONS config_info.experimental.weather_affects_emotions
+/** Weather emotion effect multiplier (0-200%, stored as 0-200 integer) */
+#define CONFIG_WEATHER_EFFECT_MULTIPLIER config_info.experimental.weather_effect_multiplier
 
 /* Emotion System Configuration Macros */
 /** Visual indicator thresholds */
