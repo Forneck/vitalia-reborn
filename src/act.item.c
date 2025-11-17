@@ -243,12 +243,24 @@ static void perform_get_from_container(struct char_data *ch, struct obj_data *ob
         if (IS_CARRYING_N(ch) >= CAN_CARRY_N(ch))
             act("$p: você não pode carregar mais coisas.", FALSE, ch, obj, 0, TO_CHAR);
         else if (get_otrigger(obj, ch)) {
+            struct obj_data *temp_obj;
+            bool obj_still_valid = FALSE;
+
             obj_from_obj(obj);
             obj_to_char(obj, ch);
             act("Você pega $p de dentro de $P.", FALSE, ch, obj, cont, TO_CHAR);
             act("$n pega $p de dentro de $P.", TRUE, ch, obj, cont, TO_ROOM);
-            /* Check if object still carried after act() triggers - might have been extracted */
-            if (obj->carried_by == ch)
+
+            /* Check if object still exists in character's inventory after act() triggers
+             * Triggers may have extracted the object, so we must verify before accessing it */
+            for (temp_obj = ch->carrying; temp_obj; temp_obj = temp_obj->next_content) {
+                if (temp_obj == obj) {
+                    obj_still_valid = TRUE;
+                    break;
+                }
+            }
+
+            if (obj_still_valid)
                 get_check_money(ch, obj);
         }
     }
@@ -305,12 +317,24 @@ void get_from_container(struct char_data *ch, struct obj_data *cont, char *arg, 
 int perform_get_from_room(struct char_data *ch, struct obj_data *obj)
 {
     if (can_take_obj(ch, obj) && get_otrigger(obj, ch)) {
+        struct obj_data *temp_obj;
+        bool obj_still_valid = FALSE;
+
         obj_from_room(obj);
         obj_to_char(obj, ch);
         act("Você pega $p.", FALSE, ch, obj, 0, TO_CHAR);
         act("$n pega $p.", TRUE, ch, obj, 0, TO_ROOM);
-        /* Check if object still carried after act() triggers - might have been extracted */
-        if (obj->carried_by == ch)
+
+        /* Check if object still exists in character's inventory after act() triggers
+         * Triggers may have extracted the object, so we must verify before accessing it */
+        for (temp_obj = ch->carrying; temp_obj; temp_obj = temp_obj->next_content) {
+            if (temp_obj == obj) {
+                obj_still_valid = TRUE;
+                break;
+            }
+        }
+
+        if (obj_still_valid)
             get_check_money(ch, obj);
         return (1);
     }
