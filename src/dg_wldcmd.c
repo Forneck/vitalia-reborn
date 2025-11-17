@@ -308,9 +308,10 @@ WCMD(do_wteleport)
                 continue;
             char_from_room(ch);
             char_to_room(ch, target);
-            /* Show room and trigger quests for player characters */
-            if (!IS_NPC(ch) && ch->desc) {
+            /* Show room description to player characters */
+            if (!IS_NPC(ch)) {
                 look_at_room(ch, 0);
+                /* Autoquest trigger checks after look_at_room so quest messages appear after room description */
                 autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
                 autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
             }
@@ -323,9 +324,10 @@ WCMD(do_wteleport)
             if (valid_dg_target(ch, DG_ALLOW_GODS)) {
                 char_from_room(ch);
                 char_to_room(ch, target);
-                /* Show room and trigger quests for player characters */
-                if (!IS_NPC(ch) && ch->desc) {
+                /* Show room description to player characters */
+                if (!IS_NPC(ch)) {
                     look_at_room(ch, 0);
+                    /* Autoquest trigger checks after look_at_room so quest messages appear after room description */
                     autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
                     autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
                 }
