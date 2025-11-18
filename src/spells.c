@@ -839,8 +839,22 @@ ASPELL(spell_control_weather)
     change_val = dice(1, 6);
 
     /* Aplica a mudança na propriedade desejada na zona atual */
-    struct weather_data *weather = zone_table[world[IN_ROOM(ch)].zone].weather;
-    zone = world[IN_ROOM(ch)].zone; /* Pega o vnum da zona e converte pra rnum via zone_rnum */
+    /* Defensive programming: validate room and zone indices */
+    room_rnum room_num = IN_ROOM(ch);
+    if (room_num == NOWHERE || room_num < 0 || room_num > top_of_world) {
+        send_to_char(ch, "Erro: Localização inválida.\r\n");
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: spell_control_weather - invalid room %d for %s", room_num, GET_NAME(ch));
+        return;
+    }
+
+    zone = world[room_num].zone;
+    if (zone < 0 || zone > top_of_zone_table) {
+        send_to_char(ch, "Erro: Zona inválida.\r\n");
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: spell_control_weather - invalid zone %d for room %d", zone, room_num);
+        return;
+    }
+
+    struct weather_data *weather = zone_table[zone].weather;
     if (!weather) {
         send_to_char(ch, "O clima local está com muita instabilidade. Tente novamente mais tarde.\r\n");
         return;
@@ -1603,11 +1617,21 @@ float calculate_mana_density(struct char_data *ch)
         return density;
 
     room = IN_ROOM(ch);
+
+    /* Defensive programming: validate room index */
+    if (room < 0 || room > top_of_world) {
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: calculate_mana_density - invalid room %d for %s", room,
+               ch ? GET_NAME(ch) : "NULL");
+        return density;
+    }
+
     zone = world[room].zone;
 
     /* Validate zone */
-    if (zone < 0 || zone > top_of_zone_table)
+    if (zone < 0 || zone > top_of_zone_table) {
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: calculate_mana_density - invalid zone %d for room %d", zone, room);
         return density;
+    }
 
     weather = zone_table[zone].weather;
     if (!weather)
@@ -1738,15 +1762,24 @@ float calculate_mana_density(struct char_data *ch)
  * duplication across look_at_room, do_weather, and spell_control_weather.
  *
  * @param density The mana density value (0.0 to 1.5)
- * @param desc Pointer to store the Portuguese description string
- * @param color_level Pointer to store color level (0=cyan, 1=green, 2=yellow, 3=red, 4=bright_red)
+ * @param desc Pointer to store the Portuguese description string (must not be NULL)
+ * @param color_level Pointer to store color level (must not be NULL)
+ *                    0=cyan, 1=green, 2=yellow, 3=red, 4=bright_red
  *
  * Callers should use the color_level to select appropriate color macros:
  * 0 = CBCYN (exceptional), 1 = CBGRN (very high/high), 2 = CCYEL (normal),
  * 3 = CCRED (low), 4 = CBRED (very low)
+ *
+ * SAFETY: Returns immediately if desc or color_level is NULL (defensive programming)
  */
 void get_mana_density_description(float density, const char **desc, int *color_level)
 {
+    /* Defensive programming: validate pointers */
+    if (!desc || !color_level) {
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: get_mana_density_description called with NULL pointer(s)");
+        return;
+    }
+
     if (density >= 1.2) {
         *desc = "excepcional";
         *color_level = 0; /* CBCYN */

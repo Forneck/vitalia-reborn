@@ -1548,9 +1548,64 @@ static const char *get_weather_school_color(struct char_data *ch, int school)
     }
 }
 
+/**
+ * Safely append formatted string to buffer with overflow protection
+ *
+ * This helper prevents buffer overflows that can freeze players (requiring reconnect).
+ * If overflow would occur, appends "***OVERFLOW***" message and returns FALSE.
+ *
+ * @param buffer The destination buffer
+ * @param bufsize Total size of the buffer
+ * @param overflow_occurred Pointer to flag that tracks if overflow has occurred
+ * @param format Printf-style format string
+ * @param ... Variable arguments for format string
+ * @return TRUE if append succeeded, FALSE if overflow would occur
+ */
+static int safe_strcat_formatted(char *buffer, size_t bufsize, int *overflow_occurred, const char *format, ...)
+{
+    size_t current_len;
+    size_t remaining;
+    int written;
+    va_list args;
+
+    /* If overflow already occurred, don't append anything more */
+    if (*overflow_occurred)
+        return FALSE;
+
+    current_len = strlen(buffer);
+    remaining = bufsize - current_len;
+
+    /* Reserve space for potential overflow message */
+    if (remaining < 100) {
+        snprintf(buffer + current_len, remaining, "\r\n***LISTA TRUNCADA (OVERFLOW)***\r\n");
+        *overflow_occurred = TRUE;
+        return FALSE;
+    }
+
+    va_start(args, format);
+    written = vsnprintf(buffer + current_len, remaining, format, args);
+    va_end(args);
+
+    /* Check if output was truncated */
+    if (written < 0 || (size_t)written >= remaining) {
+        /* Truncation occurred, add overflow message */
+        snprintf(buffer + current_len, remaining, "\r\n***LISTA TRUNCADA (OVERFLOW)***\r\n");
+        *overflow_occurred = TRUE;
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
 /* Analyze weather conditions and show magical effects */
 static void show_magical_conditions(struct char_data *ch, struct weather_data *weather)
 {
+    /* Defensive programming: validate inputs */
+    if (!ch || !weather) {
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: show_magical_conditions called with NULL pointer(s)");
+        return;
+    }
+
     /* Use reasonable buffer sizes for weather display (1KB each is more than enough) */
     char favored_schools[1024] = "";
     char unfavored_schools[1024] = "";
@@ -1558,107 +1613,162 @@ static void show_magical_conditions(struct char_data *ch, struct weather_data *w
     char unfavored_elements[1024] = "";
     int has_favored_schools = 0, has_unfavored_schools = 0;
     int has_favored_elements = 0, has_unfavored_elements = 0;
+    size_t len; /* For safe buffer management */
 
     /* Check spell schools */
     if (weather->sky >= SKY_RAINING && weather->humidity > 0.6) {
-        snprintf(favored_schools + strlen(favored_schools), sizeof(favored_schools) - strlen(favored_schools),
-                 "  %sEvocação%s (+15%%)\r\n", get_weather_school_color(ch, SCHOOL_EVOCATION), CCNRM(ch, C_NRM));
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sEvocação%s (+15%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_EVOCATION), CCNRM(ch, C_NRM));
+        }
         has_favored_schools = 1;
     } else if (weather->sky <= SKY_CLOUDLESS && weather->humidity < 0.4) {
-        snprintf(unfavored_schools + strlen(unfavored_schools), sizeof(unfavored_schools) - strlen(unfavored_schools),
-                 "  %sEvocação%s (-10%%)\r\n", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sEvocação%s (-10%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
         has_unfavored_schools = 1;
     }
 
     if (weather->humidity >= 0.4 && weather->humidity <= 0.7) {
-        snprintf(favored_schools + strlen(favored_schools), sizeof(favored_schools) - strlen(favored_schools),
-                 "  %sConjuração%s (+10%%)\r\n", get_weather_school_color(ch, SCHOOL_CONJURATION), CCNRM(ch, C_NRM));
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sConjuração%s (+10%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_CONJURATION), CCNRM(ch, C_NRM));
+        }
         has_favored_schools = 1;
     }
 
     if (weather->sky == SKY_CLOUDY && weather->humidity > 0.8) {
-        snprintf(favored_schools + strlen(favored_schools), sizeof(favored_schools) - strlen(favored_schools),
-                 "  %sIlusão%s (+20%%)\r\n", get_weather_school_color(ch, SCHOOL_ILLUSION), CCNRM(ch, C_NRM));
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sIlusão%s (+20%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_ILLUSION), CCNRM(ch, C_NRM));
+        }
         has_favored_schools = 1;
     } else if (weather->sky == SKY_CLOUDLESS) {
-        snprintf(unfavored_schools + strlen(unfavored_schools), sizeof(unfavored_schools) - strlen(unfavored_schools),
-                 "  %sIlusão%s (-15%%)\r\n", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sIlusão%s (-15%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
         has_unfavored_schools = 1;
     }
 
     if (weather->sky == SKY_CLOUDLESS && weather->humidity < 0.5) {
-        snprintf(favored_schools + strlen(favored_schools), sizeof(favored_schools) - strlen(favored_schools),
-                 "  %sAdivinhação%s (+15%%)\r\n", get_weather_school_color(ch, SCHOOL_DIVINATION), CCNRM(ch, C_NRM));
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sAdivinhação%s (+15%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_DIVINATION), CCNRM(ch, C_NRM));
+        }
         has_favored_schools = 1;
     } else if (weather->sky >= SKY_RAINING) {
-        snprintf(unfavored_schools + strlen(unfavored_schools), sizeof(unfavored_schools) - strlen(unfavored_schools),
-                 "  %sAdivinhação%s (-10%%)\r\n", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sAdivinhação%s (-10%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
         has_unfavored_schools = 1;
     }
 
     if (weather->sky >= SKY_RAINING) {
-        snprintf(favored_schools + strlen(favored_schools), sizeof(favored_schools) - strlen(favored_schools),
-                 "  %sNecromancia%s (+20%%)\r\n", get_weather_school_color(ch, SCHOOL_NECROMANCY), CCNRM(ch, C_NRM));
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sNecromancia%s (+20%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_NECROMANCY), CCNRM(ch, C_NRM));
+        }
         has_favored_schools = 1;
     } else if (weather->sky == SKY_CLOUDLESS) {
-        snprintf(unfavored_schools + strlen(unfavored_schools), sizeof(unfavored_schools) - strlen(unfavored_schools),
-                 "  %sNecromancia%s (-15%%)\r\n", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sNecromancia%s (-15%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
         has_unfavored_schools = 1;
     }
 
     if (weather->pressure > 1020) {
-        snprintf(favored_schools + strlen(favored_schools), sizeof(favored_schools) - strlen(favored_schools),
-                 "  %sEncantamento%s (+5%%)\r\n", get_weather_school_color(ch, SCHOOL_ENCHANTMENT), CCNRM(ch, C_NRM));
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sEncantamento%s (+5%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_ENCHANTMENT), CCNRM(ch, C_NRM));
+        }
         has_favored_schools = 1;
     } else if (weather->pressure < 980) {
-        snprintf(unfavored_schools + strlen(unfavored_schools), sizeof(unfavored_schools) - strlen(unfavored_schools),
-                 "  %sEncantamento%s (-5%%)\r\n", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sEncantamento%s (-5%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
         has_unfavored_schools = 1;
     }
 
     /* Check spell elements */
     if (weather->humidity < 0.3) {
-        snprintf(favored_elements + strlen(favored_elements), sizeof(favored_elements) - strlen(favored_elements),
-                 "  %sFogo%s (+25%%)\r\n", get_weather_element_color(ch, ELEMENT_FIRE), CCNRM(ch, C_NRM));
+        len = strlen(favored_elements);
+        if (len < sizeof(favored_elements) - 100) { /* Ensure enough space */
+            snprintf(favored_elements + len, sizeof(favored_elements) - len, "  %sFogo%s (+25%%)\r\n",
+                     get_weather_element_color(ch, ELEMENT_FIRE), CCNRM(ch, C_NRM));
+        }
         has_favored_elements = 1;
     } else if (weather->humidity > 0.7) {
-        snprintf(unfavored_elements + strlen(unfavored_elements),
-                 sizeof(unfavored_elements) - strlen(unfavored_elements), "  %sFogo%s (-25%%)\r\n", CCRED(ch, C_NRM),
-                 CCNRM(ch, C_NRM));
+        len = strlen(unfavored_elements);
+        if (len < sizeof(unfavored_elements) - 100) { /* Ensure enough space */
+            snprintf(unfavored_elements + len, sizeof(unfavored_elements) - len, "  %sFogo%s (-25%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
         has_unfavored_elements = 1;
     }
 
     if (weather->humidity > 0.7) {
-        snprintf(favored_elements + strlen(favored_elements), sizeof(favored_elements) - strlen(favored_elements),
-                 "  %sÁgua%s (+25%%), %sGelo%s (+25%%)\r\n", get_weather_element_color(ch, ELEMENT_WATER),
-                 CCNRM(ch, C_NRM), get_weather_element_color(ch, ELEMENT_ICE), CCNRM(ch, C_NRM));
+        len = strlen(favored_elements);
+        if (len < sizeof(favored_elements) - 150) { /* Ensure enough space for longer line */
+            snprintf(favored_elements + len, sizeof(favored_elements) - len, "  %sÁgua%s (+25%%), %sGelo%s (+25%%)\r\n",
+                     get_weather_element_color(ch, ELEMENT_WATER), CCNRM(ch, C_NRM),
+                     get_weather_element_color(ch, ELEMENT_ICE), CCNRM(ch, C_NRM));
+        }
         has_favored_elements = 1;
     } else if (weather->humidity < 0.3) {
-        snprintf(unfavored_elements + strlen(unfavored_elements),
-                 sizeof(unfavored_elements) - strlen(unfavored_elements), "  %sÁgua%s (-25%%), %sGelo%s (-25%%)\r\n",
-                 CCRED(ch, C_NRM), CCNRM(ch, C_NRM), CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        len = strlen(unfavored_elements);
+        if (len < sizeof(unfavored_elements) - 150) { /* Ensure enough space for longer line */
+            snprintf(unfavored_elements + len, sizeof(unfavored_elements) - len,
+                     "  %sÁgua%s (-25%%), %sGelo%s (-25%%)\r\n", CCRED(ch, C_NRM), CCNRM(ch, C_NRM), CCRED(ch, C_NRM),
+                     CCNRM(ch, C_NRM));
+        }
         has_unfavored_elements = 1;
     }
 
     if (weather->humidity > 0.8 && weather->sky >= SKY_RAINING) {
-        snprintf(favored_elements + strlen(favored_elements), sizeof(favored_elements) - strlen(favored_elements),
-                 "  %sRaio%s (+30%%)\r\n", get_weather_element_color(ch, ELEMENT_LIGHTNING), CCNRM(ch, C_NRM));
+        len = strlen(favored_elements);
+        if (len < sizeof(favored_elements) - 100) { /* Ensure enough space */
+            snprintf(favored_elements + len, sizeof(favored_elements) - len, "  %sRaio%s (+30%%)\r\n",
+                     get_weather_element_color(ch, ELEMENT_LIGHTNING), CCNRM(ch, C_NRM));
+        }
         has_favored_elements = 1;
     } else if (weather->humidity < 0.2) {
-        snprintf(unfavored_elements + strlen(unfavored_elements),
-                 sizeof(unfavored_elements) - strlen(unfavored_elements), "  %sRaio%s (-20%%)\r\n", CCRED(ch, C_NRM),
-                 CCNRM(ch, C_NRM));
+        len = strlen(unfavored_elements);
+        if (len < sizeof(unfavored_elements) - 100) { /* Ensure enough space */
+            snprintf(unfavored_elements + len, sizeof(unfavored_elements) - len, "  %sRaio%s (-20%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
         has_unfavored_elements = 1;
     }
 
     if (weather->winds > 15.0) {
-        snprintf(favored_elements + strlen(favored_elements), sizeof(favored_elements) - strlen(favored_elements),
-                 "  %sAr%s (+20%%)\r\n", get_weather_element_color(ch, ELEMENT_AIR), CCNRM(ch, C_NRM));
+        len = strlen(favored_elements);
+        if (len < sizeof(favored_elements) - 100) { /* Ensure enough space */
+            snprintf(favored_elements + len, sizeof(favored_elements) - len, "  %sAr%s (+20%%)\r\n",
+                     get_weather_element_color(ch, ELEMENT_AIR), CCNRM(ch, C_NRM));
+        }
         has_favored_elements = 1;
     } else if (weather->winds < 2.0) {
-        snprintf(unfavored_elements + strlen(unfavored_elements),
-                 sizeof(unfavored_elements) - strlen(unfavored_elements), "  %sAr%s (-15%%)\r\n", CCRED(ch, C_NRM),
-                 CCNRM(ch, C_NRM));
+        len = strlen(unfavored_elements);
+        if (len < sizeof(unfavored_elements) - 100) { /* Ensure enough space */
+            snprintf(unfavored_elements + len, sizeof(unfavored_elements) - len, "  %sAr%s (-15%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
         has_unfavored_elements = 1;
     }
 
@@ -1692,15 +1802,37 @@ static void show_magical_conditions(struct char_data *ch, struct weather_data *w
 ACMD(do_weather)
 {
     zone_rnum zona;
-    zona = world[IN_ROOM(ch)].zone;
+    room_rnum room_num;
+    struct weather_data *weather;
     const char *sky_look[] = {"limpo", "nublado", "chuvoso", "relampejando", "nevando"};
 
-    int pressure = zone_table[zona].weather->pressure;
-    int press_diff = zone_table[zona].weather->press_diff;
-    int sky = zone_table[zona].weather->sky;
-    int temperature = zone_table[zona].weather->temperature;
-    float humidity = zone_table[zona].weather->humidity;
-    float wind = zone_table[zona].weather->winds;
+    /* Defensive programming: validate room and zone */
+    room_num = IN_ROOM(ch);
+    if (room_num == NOWHERE || room_num < 0 || room_num > top_of_world) {
+        send_to_char(ch, "Você não consegue sentir o clima aqui.\r\n");
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: do_weather - invalid room %d for %s", room_num, GET_NAME(ch));
+        return;
+    }
+
+    zona = world[room_num].zone;
+    if (zona < 0 || zona > top_of_zone_table) {
+        send_to_char(ch, "Você não consegue sentir o clima aqui.\r\n");
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: do_weather - invalid zone %d for room %d", zona, room_num);
+        return;
+    }
+
+    weather = zone_table[zona].weather;
+    if (!weather) {
+        send_to_char(ch, "O clima local está muito instável para ser percebido.\r\n");
+        return;
+    }
+
+    int pressure = weather->pressure;
+    int press_diff = weather->press_diff;
+    int sky = weather->sky;
+    int temperature = weather->temperature;
+    float humidity = weather->humidity;
+    float wind = weather->winds;
 
     const char *weather_feel;
     const char *temp_feel;
@@ -1788,7 +1920,7 @@ ACMD(do_weather)
         }
 
         /* Show magical conditions based on weather */
-        show_magical_conditions(ch, zone_table[zona].weather);
+        show_magical_conditions(ch, weather);
     } else {
         send_to_char(ch, " Você não tem idéia de como o tempo possa estar.\r\n");
     }
