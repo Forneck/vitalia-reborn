@@ -24,6 +24,7 @@
 #include "spirits.h"
 #include "spedit.h"
 #include "quest.h"
+#include "screen.h"
 
 /* External declarations */
 extern struct weather_data climates[];
@@ -838,6 +839,51 @@ ASPELL(spell_control_weather)
 
     act("$n canaliza a energia dos elementos, alterando o clima local!", TRUE, ch, 0, 0, TO_ROOM);
     send_to_zone_outdoor(zone, "O clima local parece estar mudando...\r\n");
+
+    /* Apply mana density boost to the zone for duration based on caster level */
+    /* Duration: 2-6 game hours depending on caster power */
+    int boost_duration = 2 + (GET_LEVEL(ch) / 20); /* Level 1-20: 2 hours, 21-40: 3 hours, etc. */
+    time_t boost_expire = time(NULL) + (boost_duration * SECS_PER_MUD_HOUR);
+
+    /* Boost amount: 0.2 to 0.4 based on caster level and change magnitude */
+    float boost_amount = 0.2 + (GET_LEVEL(ch) * 0.005) + (change_val * 0.02);
+    if (boost_amount > 0.4)
+        boost_amount = 0.4; /* Cap at 0.4 */
+
+    /* Set or extend the boost */
+    if (weather->mana_density_boost_expire < time(NULL)) {
+        /* No active boost, apply new one */
+        weather->mana_density_boost = boost_amount;
+        weather->mana_density_boost_expire = boost_expire;
+    } else {
+        /* Existing boost, extend duration and possibly increase amount */
+        weather->mana_density_boost_expire = boost_expire;
+        if (boost_amount > weather->mana_density_boost) {
+            weather->mana_density_boost = boost_amount;
+        }
+    }
+
+    /* Calculate and show new mana density to caster */
+    float new_density = calculate_mana_density(ch);
+    const char *density_desc;
+
+    if (new_density >= 1.2)
+        density_desc = "excepcional";
+    else if (new_density >= 0.9)
+        density_desc = "muito alta";
+    else if (new_density >= 0.7)
+        density_desc = "alta";
+    else if (new_density >= 0.5)
+        density_desc = "normal";
+    else
+        density_desc = "baixa";
+
+    send_to_char(ch,
+                 "\r\n%sVocê sente as energias mágicas se concentrarem na área!%s\r\n"
+                 "Densidade mágica agora: %s (%.2f)\r\n"
+                 "Duração do efeito: %d hora%s do jogo\r\n",
+                 CBGRN(ch, C_NRM), CCNRM(ch, C_NRM), density_desc, new_density, boost_duration,
+                 boost_duration > 1 ? "s" : "");
 }
 
 ASPELL(spell_transport_via_plants)
