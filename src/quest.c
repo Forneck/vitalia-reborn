@@ -38,14 +38,14 @@ const char *aq_flags[] = {"REPEATABLE", "MOB_POSTED", "\n"};
  *--------------------------------------------------------------------------*/
 static int cmd_tell;
 
-static const char *quest_cmd[] = {"list", "history", "join", "leave", "progress", "status", "remove", "\n"};
+static const char *quest_cmd[] = {"list", "history", "join", "leave", "progress", "status", "remove", "clear", "\n"};
 
 static const char *quest_mort_usage = "Uso: quest list | history | progress | join <nn> | leave";
 
 static const char *quest_imm_usage =
     "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum> confirm";
 static const char *quest_god_usage =
-    "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum> confirm";
+    "Uso: quest list | history | progress | join <nn> | leave | status <vnum> | remove <vnum> confirm | clear <player>";
 
 /*--------------------------------------------------------------------------*/
 /* Utility Functions                                                        */
@@ -722,10 +722,12 @@ void generic_complete_quest(struct char_data *ch)
                             break;
                         }
                     }
-                    /* High trust gives 15% better rewards */
-                    if (questmaster && questmaster->ai_data &&
-                        questmaster->ai_data->emotion_trust >= CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD) {
-                        gold_reward = (int)(gold_reward * 1.15);
+                    /* High trust gives 15% better rewards - use hybrid emotion system */
+                    if (questmaster && questmaster->ai_data) {
+                        int effective_trust = get_effective_emotion_toward(questmaster, ch, EMOTION_TYPE_TRUST);
+                        if (effective_trust >= CONFIG_EMOTION_QUEST_TRUST_HIGH_THRESHOLD) {
+                            gold_reward = (int)(gold_reward * 1.15);
+                        }
                     }
                 }
             }
@@ -753,6 +755,8 @@ void generic_complete_quest(struct char_data *ch)
         if (QST_OBJ(rnum) && QST_OBJ(rnum) != NOTHING) {
             if (real_object(QST_OBJ(rnum)) != NOTHING) {
                 if ((new_obj = read_object((QST_OBJ(rnum)), VIRTUAL)) != NULL) {
+                    /* Remove NOLOCATE flag from reward item when giving it to player */
+                    REMOVE_BIT_AR(GET_OBJ_EXTRA(new_obj), ITEM_NOLOCATE);
                     obj_to_char(new_obj, ch);
                     send_to_char(ch, "Você foi presentead%s com %s%s pelos seus serviços.\r\n", OA(ch),
                                  GET_OBJ_SHORT(new_obj), CCNRM(ch, C_NRM));
@@ -906,6 +910,10 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
 
                 if (GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum)) {
                     /* Returned directly to original requester - complete quest normally */
+                    /* Mark item with NOLOCATE to prevent locate object exploit */
+                    SET_BIT_AR(GET_OBJ_EXTRA(object), ITEM_NOLOCATE);
+                    /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
+                    GET_OBJ_TIMER(object) = -28;
                     generic_complete_quest(ch);
                 } else if (GET_MOB_VNUM(vict) == QST_MASTER(rnum)) {
                     /* Returned to questmaster - transfer to original requester if different */
@@ -925,9 +933,30 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                         if (original_requester && original_requester != vict) {
                             /* Transfer item from questmaster to original requester */
                             obj_from_char(object);
+
+                            /* Mark item with NOLOCATE to prevent locate object exploit */
+                            SET_BIT_AR(GET_OBJ_EXTRA(object), ITEM_NOLOCATE);
+                            /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
+                            GET_OBJ_TIMER(object) = -28;
+
                             obj_to_char(object, original_requester);
                             act("$n entrega $p para quem solicitou.", FALSE, vict, object, NULL, TO_ROOM);
+                            /* Safety check: act() can trigger DG scripts which may extract object or characters */
+                            if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET))
+                                break;
+                            if (MOB_FLAGGED(original_requester, MOB_NOTDEADYET) ||
+                                PLR_FLAGGED(original_requester, PLR_NOTDEADYET))
+                                break;
+                            /* Safety check: object may have been extracted by DG scripts */
+                            if (object->carried_by != original_requester)
+                                break;
                             act("$n recebe $p de $N.", FALSE, original_requester, object, vict, TO_ROOM);
+                            /* Safety check after second act() call */
+                            if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET))
+                                break;
+                            if (MOB_FLAGGED(original_requester, MOB_NOTDEADYET) ||
+                                PLR_FLAGGED(original_requester, PLR_NOTDEADYET))
+                                break;
                         }
 
                         /* Complete the quest */
@@ -1316,10 +1345,11 @@ static void quest_join_unified(struct char_data *ch, struct char_data *qm, char 
 
     quest_num = atoi(argument);
 
-    /* Check emotion-based quest restrictions for mobs with AI */
+    /* Check emotion-based quest restrictions for mobs with AI - use hybrid emotion system */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(qm) && qm->ai_data && !IS_NPC(ch)) {
         /* Low trust makes questmaster refuse to give quests */
-        if (qm->ai_data->emotion_trust < CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD) {
+        int effective_trust = get_effective_emotion_toward(qm, ch, EMOTION_TYPE_TRUST);
+        if (effective_trust < CONFIG_EMOTION_QUEST_TRUST_LOW_THRESHOLD) {
             snprintf(buf, sizeof(buf), "%s diz, 'Eu não confio em você o suficiente para lhe dar uma busca, %s.'",
                      GET_NAME(qm), GET_NAME(ch));
             send_to_char(ch, "%s\r\n", buf);
@@ -1498,6 +1528,73 @@ static void quest_stat(struct char_data *ch, char *argument)
         send_to_char(ch, " [\ty%5d\tn] \tc%s\tn\r\n", QST_NEXT(rnum), QST_DESC(real_quest(QST_NEXT(rnum))));
 }
 
+/* Clear a player's current quest (GOD+ command) */
+static void quest_clear(struct char_data *ch, char *argument)
+{
+    struct char_data *vict;
+    qst_rnum rnum;
+    char arg[MAX_INPUT_LENGTH];
+
+    if (GET_LEVEL(ch) < LVL_GOD) {
+        send_to_char(ch, "You must be at least level GOD to clear player quests.\r\n");
+        return;
+    }
+
+    one_argument(argument, arg);
+
+    if (!*arg) {
+        send_to_char(ch, "Uso: quest clear <player>\r\n");
+        return;
+    }
+
+    /* Find the player */
+    if (!(vict = get_char_vis(ch, arg, NULL, FIND_CHAR_WORLD))) {
+        send_to_char(ch, "Não há ninguém com esse nome.\r\n");
+        return;
+    }
+
+    /* Safety check: validate vict pointer after getting it */
+    if (!vict) {
+        send_to_char(ch, "Erro ao encontrar o jogador.\r\n");
+        return;
+    }
+
+    /* Don't allow clearing NPCs' quests */
+    if (IS_NPC(vict)) {
+        send_to_char(ch, "Você não pode limpar a busca de um mob.\r\n");
+        return;
+    }
+
+    /* Check if player has an active quest */
+    if (GET_QUEST(vict) == NOTHING) {
+        send_to_char(ch, "%s não tem nenhuma busca ativa.\r\n", GET_NAME(vict) ? GET_NAME(vict) : "Jogador");
+        return;
+    }
+
+    /* Get quest info before clearing */
+    rnum = real_quest(GET_QUEST(vict));
+    if (rnum != NOTHING && rnum >= 0 && rnum < total_quests) {
+        /* Safety check: validate quest name exists */
+        const char *quest_name = QST_NAME(rnum) ? QST_NAME(rnum) : "Quest desconhecida";
+        const char *vict_name = GET_NAME(vict) ? GET_NAME(vict) : "Jogador";
+        send_to_char(ch, "Limpando busca de %s: [\ty%d\tn] \tc%s\tn\r\n", vict_name, GET_QUEST(vict), quest_name);
+        send_to_char(vict, "Sua busca foi cancelada por um imortal.\r\n");
+    } else {
+        const char *vict_name = GET_NAME(vict) ? GET_NAME(vict) : "Jogador";
+        send_to_char(ch, "Limpando busca de %s (busca inválida vnum %d).\r\n", vict_name, GET_QUEST(vict));
+        send_to_char(vict, "Sua busca foi cancelada por um imortal.\r\n");
+    }
+
+    /* Clear the quest without penalty */
+    clear_quest(vict);
+    save_char(vict);
+
+    send_to_char(ch, "\tGBusca limpa com sucesso.\tn\r\n");
+    /* Safety check: validate names before mudlog */
+    mudlog(NRM, LVL_GOD, TRUE, "(GC) %s cleared %s's quest.", GET_NAME(ch) ? GET_NAME(ch) : "Unknown",
+           GET_NAME(vict) ? GET_NAME(vict) : "Unknown");
+}
+
 static void quest_remove(struct char_data *ch, char *argument)
 {
     qst_rnum rnum;
@@ -1613,6 +1710,12 @@ ACMD(do_quest)
                     send_to_char(ch, "%s\r\n", usage_msg);
                 else
                     quest_remove(ch, arg2);
+                break;
+            case SCMD_QUEST_CLEAR:
+                if (GET_LEVEL(ch) < LVL_GOD)
+                    send_to_char(ch, "%s\r\n", usage_msg);
+                else
+                    quest_clear(ch, arg2);
                 break;
             default: /* Whe should never get here, but... */
                 send_to_char(ch, "%s\r\n", usage_msg);
@@ -1733,8 +1836,12 @@ int calculate_mob_quest_capability(struct char_data *mob, qst_rnum rnum)
     switch (QST_TYPE(rnum)) {
         case AQ_MOB_KILL:
         case AQ_MOB_KILL_BOUNTY:
-        case AQ_PLAYER_KILL:
             capability += GET_GENBRAVE(mob); /* Combat quests need bravery */
+            break;
+        case AQ_PLAYER_KILL:
+            /* Player kill quests have increased priority for capable mobs */
+            capability += GET_GENBRAVE(mob);     /* Combat quests need bravery */
+            capability += GET_GENQUEST(mob) / 2; /* Additional boost from quest tendency */
             break;
         case AQ_OBJ_FIND:
         case AQ_ROOM_FIND:

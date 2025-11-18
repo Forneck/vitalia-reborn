@@ -273,6 +273,7 @@ ACMD(do_gen_tog);
 #define SCMD_COLOR 33
 #define SCMD_HITBAR 34
 #define SCMD_AUTOTITLE 35
+#define SCMD_AUTOEXAM 36
 
 /* do_quit */
 ACMD(do_quit);
@@ -301,6 +302,7 @@ ACMD(do_steal);
 ACMD(do_peek);
 ACMD(do_syllables);
 ACMD(do_experiment);
+void update_variant_skills(struct char_data *ch, int prerequisite_vnum, int new_level);
 ACMD(do_title);
 ACMD(do_autotitle);
 ACMD(do_visible);

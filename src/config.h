@@ -61,6 +61,7 @@ extern room_vnum ress_room_1;
 extern room_vnum ress_room_2;
 extern room_vnum ress_room_3;
 extern room_vnum ress_room_4;
+extern room_vnum dt_warehouse_room;
 
 /* Game Operation settings */
 extern ush_int DFLT_PORT;

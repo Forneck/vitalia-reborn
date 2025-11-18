@@ -108,6 +108,7 @@ cpp_extern const struct command_info cmd_info[] = {
     {"autosac", "autosac", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSAC, CMD_NOARG},
     {"autosplit", "autospl", POS_DEAD, do_gen_tog, 0, SCMD_AUTOSPLIT, CMD_NOARG},
     {"autotitle", "autotitle", POS_DEAD, do_autotitle, 0, 0, CMD_NOARG},
+    {"autoexam", "autoexam", POS_DEAD, do_gen_tog, 0, SCMD_AUTOEXAM, CMD_NOARG},
     {"away", "aw", POS_DEAD, do_gen_tog, 0, SCMD_AFK, CMD_NOARG},
     {"backstab", "ba", POS_STANDING, do_cast, 1, SKILL_BACKSTAB, CMD_ONEARG},
     {"backflip", "bac", POS_FIGHTING, do_cast, 1, SKILL_BACKFLIP, CMD_ONEARG},
@@ -290,7 +291,8 @@ cpp_extern const struct command_info cmd_info[] = {
     {"recite", "reci", POS_RESTING, do_use, 0, SCMD_RECITE, CMD_TWOARG},
     {"receive", "rece", POS_STANDING, do_not_here, 1, 0, CMD_NOARG},
     {"recent", "recent", POS_DEAD, do_recent, LVL_IMMORT, 0, CMD_NOARG},
-    {"rskill", "rskill", POS_DEAD, do_rskill, LVL_GOD, 0, CMD_TWOARG},
+    {"rskill", "rskill", POS_DEAD, do_rskill, 0, 0, CMD_TWOARG},
+    {"rskills", "rskills", POS_DEAD, do_rskill, 0, 0, CMD_NOARG},
     {"rstats", "rstats", POS_DEAD, do_rstats, LVL_IMMORT, 0, CMD_TWOARG},
     {"remove", "rem", POS_RESTING, do_remove, 0, 0, CMD_ONEARG},
     {"rent", "rent", POS_STANDING, do_not_here, 1, 0, CMD_NOARG},
@@ -1872,6 +1874,9 @@ void nanny(struct descriptor_data *d, char *arg)
             /* Add the selected skill to retained skills (don't clear existing retained skills) */
             if (skill_num > 0) {
                 d->character->player_specials->saved.retained_skills[skill_num] = GET_SKILL(d->character, skill_num);
+                /* Record which incarnation this skill came from */
+                d->character->player_specials->saved.retained_skill_incarnation[skill_num] =
+                    d->character->player_specials->saved.num_incarnations;
                 write_to_output(d, "Habilidade %s será mantida.\r\n", skill_name(skill_num));
             } else {
                 write_to_output(d, "Nenhuma habilidade será mantida.\r\n");

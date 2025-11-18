@@ -532,6 +532,7 @@ ACMD(do_practice)
 struct spell_level_entry {
     char *name;
     int level;
+    int element;
 };
 
 /* Comparison function for qsort */
@@ -540,6 +541,39 @@ static int compare_spell_levels(const void *a, const void *b)
     const struct spell_level_entry *entry_a = (const struct spell_level_entry *)a;
     const struct spell_level_entry *entry_b = (const struct spell_level_entry *)b;
     return entry_a->level - entry_b->level;
+}
+
+/* Get color code for element display */
+static const char *get_element_color_code(struct char_data *ch, int element)
+{
+    switch (element) {
+        case ELEMENT_FIRE:
+            return CBRED(ch, C_CMP); /* Bright Red for Fire */
+        case ELEMENT_WATER:
+            return CBBLU(ch, C_CMP); /* Bright Blue for Water */
+        case ELEMENT_AIR:
+            return CBWHT(ch, C_CMP); /* Bright White for Air */
+        case ELEMENT_EARTH:
+            return CCYEL(ch, C_CMP); /* Yellow for Earth */
+        case ELEMENT_LIGHTNING:
+            return CBCYN(ch, C_CMP); /* Bright Cyan for Lightning */
+        case ELEMENT_ICE:
+            return CBBLU(ch, C_CMP); /* Bright Blue for Ice */
+        case ELEMENT_ACID:
+            return CBGRN(ch, C_CMP); /* Bright Green for Acid */
+        case ELEMENT_POISON:
+            return CCGRN(ch, C_CMP); /* Green for Poison */
+        case ELEMENT_HOLY:
+            return CBYEL(ch, C_CMP); /* Bright Yellow for Holy */
+        case ELEMENT_UNHOLY:
+            return CBMAG(ch, C_CMP); /* Bright Magenta for Unholy */
+        case ELEMENT_MENTAL:
+            return CCMAG(ch, C_CMP); /* Magenta for Mental */
+        case ELEMENT_PHYSICAL:
+            return CCWHT(ch, C_CMP); /* White for Physical */
+        default:
+            return CCNRM(ch, C_CMP); /* Normal for Undefined */
+    }
 }
 
 /* Helper function to list spells/skills/chansons for a class */
@@ -587,6 +621,7 @@ static void list_spells_by_type(struct char_data *ch, int class_num, char type, 
             if (level >= 0) {
                 entries[i].name = ptr->name;
                 entries[i].level = level;
+                entries[i].element = ptr->element;
                 i++;
             }
         }
@@ -609,9 +644,13 @@ static void list_spells_by_type(struct char_data *ch, int class_num, char type, 
                        pc_class_types[class_num]);
     }
 
-    for (i = 0; i < count && len < sizeof(buf) - 60; i++) {
-        len +=
-            snprintf(buf + len, sizeof(buf) - len, "%-30s [Nível Mínimo: %3d]\r\n", entries[i].name, entries[i].level);
+    for (i = 0; i < count && len < sizeof(buf) - 80; i++) {
+        const char *element_color = get_element_color_code(ch, entries[i].element);
+        const char *color_normal = CCNRM(ch, C_CMP);
+        const char *element_name = get_spell_element_name(entries[i].element);
+
+        len += snprintf(buf + len, sizeof(buf) - len, "%-30s [Nível Mínimo: %3d] [%s%s%s]\r\n", entries[i].name,
+                        entries[i].level, element_color, element_name, color_normal);
     }
 
     page_string(ch->desc, buf, TRUE);
@@ -813,6 +852,18 @@ ACMD(do_experiment)
         if (ptr->status != available || ptr->type != SPELL || !ptr->discoverable)
             continue;
 
+        /* Validate spell vnum is within valid bounds */
+        if (ptr->vnum <= 0 || ptr->vnum > MAX_SKILLS)
+            continue;
+
+        /* Validate prerequisite vnum if present */
+        if (ptr->prerequisite_spell > 0 && ptr->prerequisite_spell > MAX_SKILLS)
+            continue;
+
+        /* Validate spell name exists */
+        if (!ptr->name)
+            continue;
+
         /* Check if player already knows this spell */
         if (GET_SKILL(ch, ptr->vnum) > 0)
             continue;
@@ -826,8 +877,8 @@ ACMD(do_experiment)
 
         /* Check if spoken syllables match */
         if (!strcmp(syllables, spoken_lower)) {
-            /* Found a match! Teach the spell to the player */
-            int learned_level = 15; /* Base proficiency for discovered spells */
+            /* Found a match! Teach the spell to the player at the same level as prerequisite */
+            int learned_level = (ptr->prerequisite_spell > 0) ? GET_SKILL(ch, ptr->prerequisite_spell) : 15;
 
             SET_SKILL(ch, ptr->vnum, learned_level);
 
@@ -852,6 +903,63 @@ ACMD(do_experiment)
                  "Você tenta combinar as sílabas místicas, mas elas não ressoam com nenhum\r\n"
                  "conhecimento que você possui. Talvez você precise aprender magias relacionadas\r\n"
                  "primeiro, ou essas sílabas não correspondem a nenhuma variante descobrível.\r\n");
+}
+
+/**
+ * Update variant skill levels when a prerequisite skill levels up.
+ * When a skill is improved, all known variant skills that depend on it
+ * should be updated to match the prerequisite skill level.
+ * This function recursively updates chains (A -> B -> C).
+ *
+ * @param ch The character whose skills are being updated
+ * @param prerequisite_vnum The vnum of the prerequisite skill that was leveled up
+ * @param new_level The new level of the prerequisite skill
+ */
+void update_variant_skills(struct char_data *ch, int prerequisite_vnum, int new_level)
+{
+    struct str_spells *ptr;
+
+    /* Validate ch pointer */
+    if (!ch)
+        return;
+
+    if (IS_NPC(ch))
+        return;
+
+    /* Validate prerequisite_vnum is within valid bounds */
+    if (prerequisite_vnum <= 0 || prerequisite_vnum > MAX_SKILLS)
+        return;
+
+    /* Iterate through all spells to find variants with this prerequisite */
+    for (ptr = list_spells; ptr; ptr = ptr->next) {
+        /* Check if this spell has the specified prerequisite */
+        if (ptr->prerequisite_spell != prerequisite_vnum)
+            continue;
+
+        /* Validate variant vnum is within valid bounds before accessing skill array */
+        if (ptr->vnum <= 0 || ptr->vnum > MAX_SKILLS)
+            continue;
+
+        /* Validate spell name exists before using it */
+        if (!ptr->name)
+            continue;
+
+        /* Check if player knows this variant */
+        if (GET_SKILL(ch, ptr->vnum) == 0)
+            continue;
+
+        /* Update variant skill level to match prerequisite if it's lower */
+        if (GET_SKILL(ch, ptr->vnum) < new_level) {
+            SET_SKILL(ch, ptr->vnum, new_level);
+            send_to_char(ch,
+                         "@GVariante atualizada:@n Sua proficiência em @Y%s@n aumentou para %d "
+                         "para corresponder à habilidade pré-requisito.\r\n",
+                         ptr->name, new_level);
+
+            /* Recursively update any variants that depend on this variant (chain update) */
+            update_variant_skills(ch, ptr->vnum, new_level);
+        }
+    }
 }
 
 ACMD(do_visible)
@@ -1458,6 +1566,9 @@ ACMD(do_gen_tog)
             break;
         case SCMD_AUTOTITLE:
             result = PRF_TOG_CHK(ch, PRF_AUTOTITLE);
+            break;
+        case SCMD_AUTOEXAM:
+            result = PRF_TOG_CHK(ch, PRF_AUTOEXAM);
             break;
         default:
             log1("SYSERR: Unknown subcmd %d in do_gen_toggle.", subcmd);

@@ -34,6 +34,7 @@
 #include "modify.h"
 #include "shop.h"
 #include "quest.h"
+#include "auction.h"
 #include "ibt.h"
 #include "mud_event.h"
 #include "msgedit.h"
@@ -549,6 +550,9 @@ void boot_world(void)
 
     log1("Loading temporary quest assignments.");
     load_temp_quest_assignments();
+
+    log1("Loading auctions.");
+    load_auctions();
 }
 
 static void free_extra_descriptions(struct extra_descr_data *edesc)
@@ -2987,71 +2991,110 @@ void reset_zone(zone_rnum zone)
                 break;
 
             case 'M': /* read a mobile */
-                if (mob_index[ZCMD.arg1].number < ZCMD.arg2) {
-                    mob = read_mobile(ZCMD.arg1, REAL);
-
-                    /* Guarda o destino ANTES de mover o mob, usando a fonte de verdade (ZCMD). */
-                    room_rnum target_room_rnum = ZCMD.arg3;
-
-                    char_to_room(mob, target_room_rnum);
-
-                    /* Verifica se o destino é uma sala válida antes de guardar. */
-                    if (target_room_rnum != NOWHERE && target_room_rnum <= top_of_world) {
-                        mob->ai_data->guard_post = world[target_room_rnum].number;
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                {
+                    int should_load = 0;
+                    if (ZCMD.arg2 < 0) {
+                        /* Percentage-based loading */
+                        int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                        should_load = (rand_number(1, 100) <= chance);
+                    } else {
+                        /* Traditional max count loading */
+                        should_load = (mob_index[ZCMD.arg1].number < ZCMD.arg2);
                     }
 
-                    load_mtrigger(mob);
-                    tmob = mob;
-                    last_cmd = 1;
-                    /* Parts for loading non-native items in shops, if mob * load
-                       was true, see if this mob is a shopkeeper, if it * is then
-                       we should try the load function */
-                    for (shop_nr = 0; shop_nr <= top_shop; shop_nr++) {
-                        if (SHOP_KEEPER(shop_nr) == mob->nr)
-                            break;
-                    }
+                    if (should_load) {
+                        mob = read_mobile(ZCMD.arg1, REAL);
 
-                    if (shop_nr <= top_shop)
-                        load_shop_nonnative(shop_nr, mob);
-                } else
-                    last_cmd = 0;
-                tobj = NULL;
+                        /* Store the destination BEFORE moving the mob, using the source of truth (ZCMD). */
+                        room_rnum target_room_rnum = ZCMD.arg3;
+
+                        char_to_room(mob, target_room_rnum);
+
+                        /* Verify that the destination is a valid room before storing. */
+                        if (target_room_rnum != NOWHERE && target_room_rnum <= top_of_world) {
+                            mob->ai_data->guard_post = world[target_room_rnum].number;
+                        }
+
+                        load_mtrigger(mob);
+                        tmob = mob;
+                        last_cmd = 1;
+                        /* Parts for loading non-native items in shops, if mob * load
+                           was true, see if this mob is a shopkeeper, if it * is then
+                           we should try the load function */
+                        for (shop_nr = 0; shop_nr <= top_shop; shop_nr++) {
+                            if (SHOP_KEEPER(shop_nr) == mob->nr)
+                                break;
+                        }
+
+                        if (shop_nr <= top_shop)
+                            load_shop_nonnative(shop_nr, mob);
+                    } else
+                        last_cmd = 0;
+                    tobj = NULL;
+                }
                 break;
 
             case 'O': /* read an object */
-                if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
-                    if (ZCMD.arg3 != NOWHERE) {
-                        obj = read_object(ZCMD.arg1, REAL);
-                        obj_to_room(obj, ZCMD.arg3);
-                        last_cmd = 1;
-                        load_otrigger(obj);
-                        tobj = obj;
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                {
+                    int should_load = 0;
+                    if (ZCMD.arg2 < 0) {
+                        /* Percentage-based loading */
+                        int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                        should_load = (rand_number(1, 100) <= chance);
                     } else {
-                        obj = read_object(ZCMD.arg1, REAL);
-                        IN_ROOM(obj) = NOWHERE;
-                        last_cmd = 1;
-                        tobj = obj;
+                        /* Traditional max count loading */
+                        should_load = (obj_index[ZCMD.arg1].number < ZCMD.arg2);
                     }
-                } else
-                    last_cmd = 0;
-                tmob = NULL;
+
+                    if (should_load) {
+                        if (ZCMD.arg3 != NOWHERE) {
+                            obj = read_object(ZCMD.arg1, REAL);
+                            obj_to_room(obj, ZCMD.arg3);
+                            last_cmd = 1;
+                            load_otrigger(obj);
+                            tobj = obj;
+                        } else {
+                            obj = read_object(ZCMD.arg1, REAL);
+                            IN_ROOM(obj) = NOWHERE;
+                            last_cmd = 1;
+                            tobj = obj;
+                        }
+                    } else
+                        last_cmd = 0;
+                    tmob = NULL;
+                }
                 break;
 
             case 'P': /* object to object */
-                if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
-                    obj = read_object(ZCMD.arg1, REAL);
-                    if (!(obj_to = get_obj_num(ZCMD.arg3))) {
-                        ZONE_ERROR("target obj not found, command disabled");
-                        ZCMD.command = '*';
-                        break;
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                {
+                    int should_load = 0;
+                    if (ZCMD.arg2 < 0) {
+                        /* Percentage-based loading */
+                        int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                        should_load = (rand_number(1, 100) <= chance);
+                    } else {
+                        /* Traditional max count loading */
+                        should_load = (obj_index[ZCMD.arg1].number < ZCMD.arg2);
                     }
-                    obj_to_obj(obj, obj_to);
-                    last_cmd = 1;
-                    load_otrigger(obj);
-                    tobj = obj;
-                } else
-                    last_cmd = 0;
-                tmob = NULL;
+
+                    if (should_load) {
+                        obj = read_object(ZCMD.arg1, REAL);
+                        if (!(obj_to = get_obj_num(ZCMD.arg3))) {
+                            ZONE_ERROR("target obj not found, command disabled");
+                            ZCMD.command = '*';
+                            break;
+                        }
+                        obj_to_obj(obj, obj_to);
+                        last_cmd = 1;
+                        load_otrigger(obj);
+                        tobj = obj;
+                    } else
+                        last_cmd = 0;
+                    tmob = NULL;
+                }
                 break;
 
             case 'G': /* obj_to_char */
@@ -3063,15 +3106,28 @@ void reset_zone(zone_rnum zone)
                     ZCMD.command = '*';
                     break;
                 }
-                if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
-                    obj = read_object(ZCMD.arg1, REAL);
-                    obj_to_char(obj, mob);
-                    last_cmd = 1;
-                    load_otrigger(obj);
-                    tobj = obj;
-                } else
-                    last_cmd = 0;
-                tmob = NULL;
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                {
+                    int should_load = 0;
+                    if (ZCMD.arg2 < 0) {
+                        /* Percentage-based loading */
+                        int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                        should_load = (rand_number(1, 100) <= chance);
+                    } else {
+                        /* Traditional max count loading */
+                        should_load = (obj_index[ZCMD.arg1].number < ZCMD.arg2);
+                    }
+
+                    if (should_load) {
+                        obj = read_object(ZCMD.arg1, REAL);
+                        obj_to_char(obj, mob);
+                        last_cmd = 1;
+                        load_otrigger(obj);
+                        tobj = obj;
+                    } else
+                        last_cmd = 0;
+                    tmob = NULL;
+                }
                 break;
 
             case 'C': /* Check mob */
@@ -3090,27 +3146,40 @@ void reset_zone(zone_rnum zone)
                     ZCMD.command = '*';
                     break;
                 }
-                if (obj_index[ZCMD.arg1].number < ZCMD.arg2) {
-                    if (ZCMD.arg3 < 0 || ZCMD.arg3 >= NUM_WEARS) {
-                        char error[MAX_INPUT_LENGTH];
-                        snprintf(error, sizeof(error), "invalid equipment pos number (mob %s, obj %d, pos %d)",
-                                 GET_NAME(mob), obj_index[ZCMD.arg2].vnum, ZCMD.arg3);
-                        ZONE_ERROR(error);
+                /* Percentual load: negative arg2 means percentage chance (e.g., -50 = 50%) */
+                {
+                    int should_load = 0;
+                    if (ZCMD.arg2 < 0) {
+                        /* Percentage-based loading */
+                        int chance = -ZCMD.arg2; /* Convert negative to positive percentage */
+                        should_load = (rand_number(1, 100) <= chance);
                     } else {
-                        obj = read_object(ZCMD.arg1, REAL);
-                        IN_ROOM(obj) = IN_ROOM(mob);
-                        load_otrigger(obj);
-                        if (wear_otrigger(obj, mob, ZCMD.arg3)) {
-                            IN_ROOM(obj) = NOWHERE;
-                            equip_char(mob, obj, ZCMD.arg3);
-                        } else
-                            obj_to_char(obj, mob);
-                        tobj = obj;
-                        last_cmd = 1;
+                        /* Traditional max count loading */
+                        should_load = (obj_index[ZCMD.arg1].number < ZCMD.arg2);
                     }
-                } else
-                    last_cmd = 0;
-                tmob = NULL;
+
+                    if (should_load) {
+                        if (ZCMD.arg3 < 0 || ZCMD.arg3 >= NUM_WEARS) {
+                            char error[MAX_INPUT_LENGTH];
+                            snprintf(error, sizeof(error), "invalid equipment pos number (mob %s, obj %d, pos %d)",
+                                     GET_NAME(mob), obj_index[ZCMD.arg1].vnum, ZCMD.arg3);
+                            ZONE_ERROR(error);
+                        } else {
+                            obj = read_object(ZCMD.arg1, REAL);
+                            IN_ROOM(obj) = IN_ROOM(mob);
+                            load_otrigger(obj);
+                            if (wear_otrigger(obj, mob, ZCMD.arg3)) {
+                                IN_ROOM(obj) = NOWHERE;
+                                equip_char(mob, obj, ZCMD.arg3);
+                            } else
+                                obj_to_char(obj, mob);
+                            tobj = obj;
+                            last_cmd = 1;
+                        }
+                    } else
+                        last_cmd = 0;
+                    tmob = NULL;
+                }
                 break;
 
             case 'R': /* rem obj from room */
@@ -3895,6 +3964,11 @@ void init_char(struct char_data *ch)
         ch->player_specials->saved.class_history[i] = -1;
     }
 
+    /* Initialize retained skill incarnation array */
+    for (int i = 0; i <= MAX_SKILLS; i++) {
+        ch->player_specials->saved.retained_skill_incarnation[i] = -1;
+    }
+
     /* If this is our first player make him IMPL. */
     if (top_of_p_table == 0) {
         GET_LEVEL(ch) = LVL_IMPL;
@@ -4304,6 +4378,7 @@ static void load_default_config(void)
     CONFIG_RESS_ROOM_2 = ress_room_2;
     CONFIG_RESS_ROOM_3 = ress_room_3;
     CONFIG_RESS_ROOM_4 = ress_room_4;
+    CONFIG_DT_WAREHOUSE = dt_warehouse_room;
 
     /* Game operation options. */
     CONFIG_DFLT_PORT = DFLT_PORT;
@@ -4340,8 +4415,10 @@ static void load_default_config(void)
     CONFIG_EXPERIMENTAL_BANK_SYSTEM = NO;
     CONFIG_MOB_CONTEXTUAL_SOCIALS = NO; /* Disabled by default - experimental feature */
     CONFIG_DYNAMIC_REPUTATION = NO;
-    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = 20; /* Default: 20% chance per emotion tick (4 seconds) */
-    CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30; /* Default: 30% chance per emotion tick (4 seconds) */
+    CONFIG_MOB_EMOTION_SOCIAL_CHANCE = 20;  /* Default: 20% chance per emotion tick (4 seconds) */
+    CONFIG_MOB_EMOTION_UPDATE_CHANCE = 30;  /* Default: 30% chance per emotion tick (4 seconds) */
+    CONFIG_WEATHER_AFFECTS_EMOTIONS = YES;  /* Enabled by default (requires mob_contextual_socials) */
+    CONFIG_WEATHER_EFFECT_MULTIPLIER = 100; /* Default: 100% (range 0-200) */
 
     /* Emotion system configuration defaults. */
     /* Visual indicator thresholds */
@@ -4472,6 +4549,11 @@ void load_config(void)
                     CONFIG_DIAGONAL_DIRS = num;
                 else if (!str_cmp(tag, "dts_are_dumps"))
                     CONFIG_DTS_ARE_DUMPS = num;
+                else if (!str_cmp(tag, "dt_warehouse_room"))
+                    if (num == -1)
+                        CONFIG_DT_WAREHOUSE = NOWHERE;
+                    else
+                        CONFIG_DT_WAREHOUSE = num;
                 else if (!str_cmp(tag, "donation_room_1"))
                     if (num == -1)
                         CONFIG_DON_ROOM_1 = NOWHERE;
@@ -4748,6 +4830,8 @@ void load_config(void)
 
                 break;
 
+                break;
+
             case 'n':
                 if (!str_cmp(tag, "nameserver_is_slow"))
                     CONFIG_NS_IS_SLOW = num;
@@ -4856,6 +4940,10 @@ void load_config(void)
                     CONFIG_WELC_MESSG = fread_string(fl, buf);
                 } else if (!str_cmp(tag, "weather_affects_spells"))
                     CONFIG_WEATHER_AFFECTS_SPELLS = num;
+                else if (!str_cmp(tag, "weather_affects_emotions"))
+                    CONFIG_WEATHER_AFFECTS_EMOTIONS = num;
+                else if (!str_cmp(tag, "weather_effect_multiplier"))
+                    CONFIG_WEATHER_EFFECT_MULTIPLIER = num;
                 break;
 
             default:

@@ -980,11 +980,17 @@ int skill_message(int dam, struct char_data *ch, struct char_data *vict, int att
                     act(msg->die_msg.room_msg, FALSE, ch, weap, vict, TO_NOTVICT);
                 } else {
                     if (msg->hit_msg.attacker_msg) {
+                        /* Display damage value if PRF_VIEWDAMAGE is set */
+                        if (GET_LEVEL(ch) >= LVL_IMMORT || PRF_FLAGGED(ch, PRF_VIEWDAMAGE))
+                            send_to_char(ch, "(%d) ", dam);
                         send_to_char(ch, CCYEL(ch, C_CMP));
                         act(msg->hit_msg.attacker_msg, FALSE, ch, weap, vict, TO_CHAR);
                         send_to_char(ch, CCNRM(ch, C_CMP));
                     }
 
+                    /* Display damage value to victim if PRF_VIEWDAMAGE is set */
+                    if (GET_LEVEL(vict) >= LVL_IMMORT || PRF_FLAGGED(vict, PRF_VIEWDAMAGE))
+                        send_to_char(vict, "\tR(%d)", dam);
                     send_to_char(vict, CCRED(vict, C_CMP));
                     act(msg->hit_msg.victim_msg, FALSE, ch, weap, vict, TO_VICT | TO_SLEEP);
                     send_to_char(vict, CCNRM(vict, C_CMP));
@@ -1204,24 +1210,39 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                     int genetic_component = (victim->ai_data->genetics.wimpy_tendency * 40) / 100;
                     flee_threshold = base_wimpy + genetic_component;
 
-                    /* 3. EMOTION SYSTEM: Adjust flee threshold based on emotions */
+                    /* 3. EMOTION SYSTEM: Adjust flee threshold based on emotions (hybrid system) */
                     if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+                        struct char_data *attacker = FIGHTING(victim);
+                        int effective_fear, effective_courage, effective_horror;
+
+                        /* Use hybrid emotion system: mood + relationship toward attacker */
+                        if (attacker) {
+                            effective_fear = get_effective_emotion_toward(victim, attacker, EMOTION_TYPE_FEAR);
+                            effective_courage = get_effective_emotion_toward(victim, attacker, EMOTION_TYPE_COURAGE);
+                            effective_horror = get_effective_emotion_toward(victim, attacker, EMOTION_TYPE_HORROR);
+                        } else {
+                            /* No specific attacker, use mood only */
+                            effective_fear = victim->ai_data->emotion_fear;
+                            effective_courage = victim->ai_data->emotion_courage;
+                            effective_horror = victim->ai_data->emotion_horror;
+                        }
+
                         /* High fear increases flee threshold (flee sooner) */
-                        if (victim->ai_data->emotion_fear >= CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD) {
+                        if (effective_fear >= CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD) {
                             emotion_modifier += CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER; /* Flee at +15% HP */
-                        } else if (victim->ai_data->emotion_fear >= CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD) {
+                        } else if (effective_fear >= CONFIG_EMOTION_FLEE_FEAR_LOW_THRESHOLD) {
                             emotion_modifier += CONFIG_EMOTION_FLEE_FEAR_LOW_MODIFIER; /* Flee at +10% HP */
                         }
 
                         /* High courage reduces flee threshold (flee later) */
-                        if (victim->ai_data->emotion_courage >= CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD) {
+                        if (effective_courage >= CONFIG_EMOTION_FLEE_COURAGE_HIGH_THRESHOLD) {
                             emotion_modifier -= CONFIG_EMOTION_FLEE_COURAGE_HIGH_MODIFIER; /* Flee at -15% HP */
-                        } else if (victim->ai_data->emotion_courage >= CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD) {
+                        } else if (effective_courage >= CONFIG_EMOTION_FLEE_COURAGE_LOW_THRESHOLD) {
                             emotion_modifier -= CONFIG_EMOTION_FLEE_COURAGE_LOW_MODIFIER; /* Flee at -10% HP */
                         }
 
                         /* Horror overrides other emotions */
-                        if (victim->ai_data->emotion_horror >= CONFIG_EMOTION_FLEE_HORROR_THRESHOLD) {
+                        if (effective_horror >= CONFIG_EMOTION_FLEE_HORROR_THRESHOLD) {
                             emotion_modifier += CONFIG_EMOTION_FLEE_HORROR_MODIFIER; /* Panic flee at +25% HP */
                         }
 
@@ -1377,6 +1398,10 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
         if (!IS_NPC(ch) && (ch != victim) && PRF_FLAGGED(ch, PRF_AUTOLOOT)) {
             do_get(ch, "all corpo", 0, 0);
         }
+        /* AUTOEXAM must run before AUTOSAC so player can see corpse contents before it's sacrificed */
+        if (!IS_NPC(ch) && (ch != victim) && PRF_FLAGGED(ch, PRF_AUTOEXAM)) {
+            do_examine(ch, "corpo", 0, 0);
+        }
         if (IS_NPC(victim) && !IS_NPC(ch) && PRF_FLAGGED(ch, PRF_AUTOSAC)) {
             do_sac(ch, "corpo", 0, 0);
         }
@@ -1468,6 +1493,22 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
     /* Calculate chance of hit. Lower THAC0 is better for attacker. */
     calc_thaco = compute_thaco(ch, victim);
+
+    /* HYBRID EMOTION SYSTEM: Pain affects accuracy (THAC0) for NPCs */
+    if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data) {
+        int pain_level = ch->ai_data->emotion_pain; /* Pain is mood-based */
+        if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD) {
+            /* High pain: severe accuracy penalty (default +4 to THAC0 = worse) */
+            calc_thaco += CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_HIGH;
+        } else if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD) {
+            /* Moderate pain: moderate accuracy penalty (default +2 to THAC0) */
+            calc_thaco += CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_MOD;
+        } else if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD) {
+            /* Low pain: minor accuracy penalty (default +1 to THAC0) */
+            calc_thaco += CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW;
+        }
+    }
+
     // check to see if the victim has prot from evil on, and if the
     // attacker
     // is in fact evil
@@ -1581,6 +1622,30 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
            POSITION_XXX constants. */
         if (GET_POS(victim) < POS_FIGHTING)
             dam *= 1 + (POS_FIGHTING - GET_POS(victim)) / 3;
+
+        /* HYBRID EMOTION SYSTEM: Anger and Pain affect combat effectiveness for NPCs */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data) {
+            /* High anger increases damage */
+            int effective_anger = get_effective_emotion_toward(ch, victim, EMOTION_TYPE_ANGER);
+            if (effective_anger >= CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD) {
+                /* Anger damage bonus (default 15%) */
+                dam += (dam * CONFIG_EMOTION_COMBAT_ANGER_DAMAGE_BONUS) / 100;
+            }
+
+            /* Pain reduces damage output */
+            int pain_level = ch->ai_data->emotion_pain; /* Pain is mood-based, not relational */
+            if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD) {
+                /* High pain: significant damage reduction (default 20%) */
+                dam -= (dam * CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH) / 100;
+            } else if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD) {
+                /* Moderate pain: moderate damage reduction (default 10%) */
+                dam -= (dam * CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD) / 100;
+            } else if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD) {
+                /* Low pain: minor damage reduction (default 5%) */
+                dam -= (dam * CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW) / 100;
+            }
+        }
+
         /* at least 1 hp damage min per hit */
         dam = MAX(1, dam);
         if (type == SKILL_BACKSTAB)
@@ -2027,8 +2092,23 @@ int attacks_per_round(struct char_data *ch)
         struct obj_data *wielded = GET_EQ(ch, WEAR_WIELD);
         if (wielded && GET_OBJ_TYPE(wielded) == ITEM_WEAPON)
             n += wpn_prof[get_weapon_prof(ch, wielded)].num_of_attacks;
-    } else
+    } else {
         n += ((int)GET_LEVEL(ch) / 25);
+
+        /* HYBRID EMOTION SYSTEM: High anger increases attack frequency for NPCs */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data && FIGHTING(ch)) {
+            /* Use hybrid system: check effective anger toward opponent */
+            int effective_anger = get_effective_emotion_toward(ch, FIGHTING(ch), EMOTION_TYPE_ANGER);
+
+            /* High anger (>= threshold) gives chance for extra attack */
+            if (effective_anger >= CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD) {
+                /* Random chance based on config (default 25%) */
+                if (rand_number(1, 100) <= CONFIG_EMOTION_COMBAT_ANGER_ATTACK_BONUS) {
+                    n++; /* Furious attack - one extra attack */
+                }
+            }
+        }
+    }
 
     return (n);
 }

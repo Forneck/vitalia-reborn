@@ -110,8 +110,8 @@ static struct map_info_type map_info[] = {
     {SECT_QUICKSAND, "\tc[\tYA\tc]\tn"},
     {SECT_LAVA, "\tc[\tRL\tc]\tn"},
     {SECT_ICE, "\tc[\tCO\tc]\tn"},
-    {-1, ""}, /* 15 */
-    {-1, ""},
+    {SECT_DESERT, "\tc[\tYD\tc]\tn"}, /* 15 - Desert: Yellow D */
+    {SECT_ROAD, "\tc[\tyR\tc]\tn"},   /* 16 - Road: yellow-brown R */
     {-1, ""},
     {-1, ""},
     {-1, ""},
@@ -146,8 +146,8 @@ static struct map_info_type world_map_info[] = {
     {SECT_QUICKSAND, "\tYA"},
     {SECT_LAVA, "\tRL"},
     {SECT_ICE, "\tCO"},
-    {-1, ""}, /* 15 */
-    {-1, ""},
+    {SECT_DESERT, "\tYD"}, /* 15 - Desert: Yellow D */
+    {SECT_ROAD, "\tyR"},   /* 16 - Road: yellow-brown R */
     {-1, ""},
     {-1, ""},
     {-1, ""},

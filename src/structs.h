@@ -142,8 +142,10 @@
 #define SECT_QUICKSAND 12   /**< Areia Movedica			*/
 #define SECT_LAVA 13        /**< lava			*/
 #define SECT_ICE 14         /**< gelo			*/
+#define SECT_DESERT 15      /**< deserto		*/
+#define SECT_ROAD 16        /**< estrada		*/
 /** The total number of room Sector Types */
-#define NUM_ROOM_SECTORS 15
+#define NUM_ROOM_SECTORS 17
 
 /* char and mob-related defines */
 
@@ -311,9 +313,10 @@
 #define PRF_VERBOSE 40    /**< Listings like where are more verbose */
 #define PRF_VIEWDAMAGE 41 /**< Display damage values after attack messages */
 #define PRF_DISPEMOTE 42  /**< Display mob emotion indicators in room descriptions */
+#define PRF_AUTOEXAM 43   /**< Automatically examine corpses after killing */
 
 /** Total number of available PRF flags */
-#define NUM_PRF_FLAGS 43
+#define NUM_PRF_FLAGS 44
 
 /* Affect bits: used in char_data.char_specials.saved.affected_by */
 /* WARNING: In the world files, NEVER set the bits marked "R" ("Reserved") */
@@ -474,8 +477,9 @@
 #define ITEM_PLANT 28 /**< Item is a plant       */
 #define ITEM_FIREWEAPON 29
 #define ITEM_MAGIC_STONE 30 /**< Item is a magic stone for quest completion */
+#define ITEM_CARDS 31       /**< Item is a card deck or cards */
 /** Total number of item types.*/
-#define NUM_ITEM_TYPES 31
+#define NUM_ITEM_TYPES 32
 
 /* Take/Wear flags: used by obj_data.obj_flags.wear_flags */
 #define ITEM_WEAR_TAKE 0   /**< Item can be taken */
@@ -526,8 +530,9 @@
 #define ITEM_ANTI_BARD 20
 #define ITEM_QUEST 21 /**< Item is a quest item         */
 #define ITEM_ANTI_RANGER 22
+#define ITEM_NOLOCATE 23 /**< Item cannot be found by locate object spell */
 /** Total number of item flags */
-#define NUM_ITEM_FLAGS 23
+#define NUM_ITEM_FLAGS 24
 
 /* Modifier constants used with obj affects ('A' fields) */
 #define APPLY_NONE 0           /**< No effect			*/
@@ -1038,6 +1043,28 @@ struct mob_wishlist_item {
 #define EMOTION_PROFILE_GREEDY 6     /**< Greedy profile - high greed/envy, low compassion */
 #define EMOTION_PROFILE_LOYAL 7      /**< Loyal profile - high loyalty/trust, high friendship */
 
+/* Emotion type constants for hybrid emotion system */
+#define EMOTION_TYPE_FEAR 0
+#define EMOTION_TYPE_ANGER 1
+#define EMOTION_TYPE_HAPPINESS 2
+#define EMOTION_TYPE_SADNESS 3
+#define EMOTION_TYPE_FRIENDSHIP 4
+#define EMOTION_TYPE_LOVE 5
+#define EMOTION_TYPE_TRUST 6
+#define EMOTION_TYPE_LOYALTY 7
+#define EMOTION_TYPE_CURIOSITY 8
+#define EMOTION_TYPE_GREED 9
+#define EMOTION_TYPE_PRIDE 10
+#define EMOTION_TYPE_COMPASSION 11
+#define EMOTION_TYPE_ENVY 12
+#define EMOTION_TYPE_COURAGE 13
+#define EMOTION_TYPE_EXCITEMENT 14
+#define EMOTION_TYPE_DISGUST 15
+#define EMOTION_TYPE_SHAME 16
+#define EMOTION_TYPE_PAIN 17
+#define EMOTION_TYPE_HORROR 18
+#define EMOTION_TYPE_HUMILIATION 19
+
 /* Interaction types for emotion memory */
 #define INTERACT_ATTACKED 0
 #define INTERACT_HEALED 1
@@ -1335,12 +1362,13 @@ struct player_special_data_saved {
     int num_incarnations; /* Number of incarnations		 */
 
     int karma;
-    int reputation;                      /**< Player reputation (0-100) for quest system */
-    time_t last_reputation_gain;         /**< Last time reputation was gained (anti-exploit) */
-    long last_give_recipient_id;         /**< ID of last character given to (anti-exploit) */
-    int was_class[RM_ARRAY_MAX];         /**< array of remorted classes */
-    int class_history[100];              /**< chronological sequence of classes (class numbers) */
-    int retained_skills[MAX_SKILLS + 1]; /**< skills retained from previous incarnations */
+    int reputation;                                 /**< Player reputation (0-100) for quest system */
+    time_t last_reputation_gain;                    /**< Last time reputation was gained (anti-exploit) */
+    long last_give_recipient_id;                    /**< ID of last character given to (anti-exploit) */
+    int was_class[RM_ARRAY_MAX];                    /**< array of remorted classes */
+    int class_history[100];                         /**< chronological sequence of classes (class numbers) */
+    int retained_skills[MAX_SKILLS + 1];            /**< skills retained from previous incarnations */
+    int retained_skill_incarnation[MAX_SKILLS + 1]; /**< which incarnation each retained skill came from */
 };
 
 /** Specials needed only by PCs, not NPCs.  Space for this structure is
@@ -1612,15 +1640,17 @@ struct nighthammer_data {
 /** Stores, and used to deliver, the current weather information
  * in the mud world. */
 struct weather_data {
-    int temperature; /* Temperatura atual (°C) */
-    int temp_diff;   /* Variação de temperatura */
-    int pressure;    /* Pressão atmosférica (hPa - Mb) */
-    int press_diff;  /* Variação da pressão */
-    float humidity;  /* Umidade relativa (%) */
-    float winds;     /* Velocidade do vento (m/s) */
-    int sky;         /* Estado do céu (claro, nublado, chovendo, etc.) */
-    int before;      /* Estado anterior do céu */
-    int sunlight;    /* Intensidade da luz solar */
+    int temperature;                  /* Temperatura atual (°C) */
+    int temp_diff;                    /* Variação de temperatura */
+    int pressure;                     /* Pressão atmosférica (hPa - Mb) */
+    int press_diff;                   /* Variação da pressão */
+    float humidity;                   /* Umidade relativa (%) */
+    float winds;                      /* Velocidade do vento (m/s) */
+    int sky;                          /* Estado do céu (claro, nublado, chovendo, etc.) */
+    int before;                       /* Estado anterior do céu */
+    int sunlight;                     /* Intensidade da luz solar */
+    float mana_density_boost;         /* Boost temporário de densidade mágica (Control Weather) */
+    time_t mana_density_boost_expire; /* Quando o boost expira */
 };
 
 /** Element in monster and object index-tables.
@@ -1738,6 +1768,7 @@ struct room_numbers {
     room_vnum ress_room_2;
     room_vnum ress_room_3;
     room_vnum ress_room_4;
+    room_vnum dt_warehouse_room; /**< vnum of death trap object warehouse. */
 };
 
 /** Operational game variables. */
@@ -1859,6 +1890,20 @@ struct emotion_config_data {
     int group_loyalty_low_threshold;     /**< Low loyalty abandons when scared (default: 30) */
     int group_friendship_high_threshold; /**< High friendship for joining groups (default: 70) */
     int group_envy_high_threshold;       /**< High envy refuses better-equipped players (default: 70) */
+
+    /* Combat behavior thresholds and modifiers */
+    int combat_anger_high_threshold;       /**< High anger for increased attack frequency (default: 70) */
+    int combat_anger_damage_bonus;         /**< Damage bonus % from high anger (default: 15) */
+    int combat_anger_attack_bonus;         /**< Extra attack chance % from high anger (default: 25) */
+    int combat_pain_low_threshold;         /**< Low pain for minor penalties (default: 30) */
+    int combat_pain_moderate_threshold;    /**< Moderate pain for significant penalties (default: 50) */
+    int combat_pain_high_threshold;        /**< High pain for severe penalties (default: 70) */
+    int combat_pain_accuracy_penalty_low;  /**< THAC0 penalty from low pain (default: 1) */
+    int combat_pain_accuracy_penalty_mod;  /**< THAC0 penalty from moderate pain (default: 2) */
+    int combat_pain_accuracy_penalty_high; /**< THAC0 penalty from high pain (default: 4) */
+    int combat_pain_damage_penalty_low;    /**< Damage reduction % from low pain (default: 5) */
+    int combat_pain_damage_penalty_mod;    /**< Damage reduction % from moderate pain (default: 10) */
+    int combat_pain_damage_penalty_high;   /**< Damage reduction % from high pain (default: 20) */
 };
 
 /** Experimental Features configuration. */
@@ -1869,6 +1914,8 @@ struct experimental_data {
     int dynamic_reputation;        /**< Dynamic reputation changes (combat, healing, giving, etc.)? */
     int mob_emotion_social_chance; /**< Probability (%) of mob performing social per emotion tick */
     int mob_emotion_update_chance; /**< Probability (%) of mob updating emotions per emotion tick */
+    int weather_affects_emotions;  /**< Weather affects mob emotions? (default: YES) */
+    int weather_effect_multiplier; /**< Weather emotion effect multiplier 0-200% (default: 100) */
 };
 
 /**

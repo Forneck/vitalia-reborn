@@ -225,6 +225,36 @@ int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
         mana = mana * 2; /* Double mana cost for "plus" syllable */
     }
 
+    /* Apply mana density modifier to mana cost
+     *
+     * DESIGN NOTE: The cost reduction in low-density areas (0.9x-0.95x cost) is intentionally
+     * LESS aggressive than the power reduction (0.8x-0.9x power in magic.c). This asymmetry
+     * ensures that casting in low-density areas is not "free" - you pay nearly full cost but
+     * get significantly reduced effect. This discourages spam-casting in poor conditions while
+     * still allowing strategic spell use when necessary.
+     *
+     * High-density areas provide both cost savings AND power increases, rewarding tactical
+     * positioning and use of Control Weather.
+     */
+    float mana_density = calculate_mana_density(ch);
+    float density_modifier = 1.0;
+
+    if (mana_density >= 1.2)
+        density_modifier = 0.7; /* 30% less mana in exceptional density */
+    else if (mana_density >= 0.9)
+        density_modifier = 0.8; /* 20% less mana in very high density */
+    else if (mana_density >= 0.7)
+        density_modifier = 0.9; /* 10% less mana in high density */
+    else if (mana_density >= 0.5)
+        density_modifier = 1.0; /* Normal cost at normal density */
+    else if (mana_density >= 0.3)
+        density_modifier = 0.95; /* Slightly less cost in low density (but spells 10% weaker) */
+    else
+        density_modifier = 0.9; /* Reduced cost in very low density (but spells 20% weaker) */
+
+    mana = (int)(mana * density_modifier);
+    mana = MAX(1, mana); /* Always cost at least 1 mana */
+
     return mana;
 }
 

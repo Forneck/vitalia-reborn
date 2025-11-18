@@ -243,11 +243,25 @@ static void perform_get_from_container(struct char_data *ch, struct obj_data *ob
         if (IS_CARRYING_N(ch) >= CAN_CARRY_N(ch))
             act("$p: você não pode carregar mais coisas.", FALSE, ch, obj, 0, TO_CHAR);
         else if (get_otrigger(obj, ch)) {
+            struct obj_data *temp_obj;
+            bool obj_still_valid = FALSE;
+
             obj_from_obj(obj);
             obj_to_char(obj, ch);
             act("Você pega $p de dentro de $P.", FALSE, ch, obj, cont, TO_CHAR);
             act("$n pega $p de dentro de $P.", TRUE, ch, obj, cont, TO_ROOM);
-            get_check_money(ch, obj);
+
+            /* Check if object still exists in character's inventory after act() triggers
+             * Triggers may have extracted the object, so we must verify before accessing it */
+            for (temp_obj = ch->carrying; temp_obj; temp_obj = temp_obj->next_content) {
+                if (temp_obj == obj) {
+                    obj_still_valid = TRUE;
+                    break;
+                }
+            }
+
+            if (obj_still_valid)
+                get_check_money(ch, obj);
         }
     }
 }
@@ -303,11 +317,25 @@ void get_from_container(struct char_data *ch, struct obj_data *cont, char *arg, 
 int perform_get_from_room(struct char_data *ch, struct obj_data *obj)
 {
     if (can_take_obj(ch, obj) && get_otrigger(obj, ch)) {
+        struct obj_data *temp_obj;
+        bool obj_still_valid = FALSE;
+
         obj_from_room(obj);
         obj_to_char(obj, ch);
         act("Você pega $p.", FALSE, ch, obj, 0, TO_CHAR);
         act("$n pega $p.", TRUE, ch, obj, 0, TO_ROOM);
-        get_check_money(ch, obj);
+
+        /* Check if object still exists in character's inventory after act() triggers
+         * Triggers may have extracted the object, so we must verify before accessing it */
+        for (temp_obj = ch->carrying; temp_obj; temp_obj = temp_obj->next_content) {
+            if (temp_obj == obj) {
+                obj_still_valid = TRUE;
+                break;
+            }
+        }
+
+        if (obj_still_valid)
+            get_check_money(ch, obj);
         return (1);
     }
     return (0);
@@ -715,6 +743,19 @@ void perform_give(struct char_data *ch, struct char_data *vict, struct obj_data 
     act("$n entrega $p para $N.", TRUE, ch, obj, vict, TO_NOTVICT);
 
     autoquest_trigger_check(ch, vict, obj, AQ_OBJ_RETURN);
+
+    /* Safety check: Quest completion may have extracted obj, ch, or vict through scripts/triggers */
+    if (MOB_FLAGGED(vict, MOB_NOTDEADYET) || PLR_FLAGGED(vict, PLR_NOTDEADYET))
+        return;
+    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+        return;
+    /* Note: We cannot safely check if obj is still valid without a more complex tracking system.
+     * If obj was extracted during quest completion, the following code may access freed memory.
+     * To prevent crashes, we return early after quest completion, skipping reputation code. */
+    if (!IS_NPC(ch) && GET_QUEST(ch) == NOTHING) {
+        /* Quest was just completed (GET_QUEST cleared), skip reputation code to avoid accessing freed obj */
+        return;
+    }
 
     /* Reputation gain for generosity (giving items to others) - dynamic reputation system */
     if (CONFIG_DYNAMIC_REPUTATION && !IS_NPC(ch)) {

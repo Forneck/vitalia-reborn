@@ -471,12 +471,15 @@ void mob_emotion_activity(void)
                 continue;
         }
 
-        /* Love-based following: Mobs with high love (>80) should follow players they love */
-        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data &&
-            ch->ai_data->emotion_love >= CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD) {
+        /* Love-based following: Mobs with high love (>80) toward specific players should follow them */
+        if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data) {
             /* Look for a player to follow if not already following someone */
             if (!ch->master && !MOB_FLAGGED(ch, MOB_SENTINEL) && !MOB_FLAGGED(ch, MOB_STAY_ZONE)) {
                 struct char_data *potential_love_target;
+                struct char_data *best_love_target = NULL;
+                int highest_love = 0;
+                
+                /* Find the player the mob loves most using hybrid emotion system */
                 for (potential_love_target = world[IN_ROOM(ch)].people; potential_love_target;
                      potential_love_target = potential_love_target->next_in_room) {
                     /* Skip self and other mobs */
@@ -487,13 +490,22 @@ void mob_emotion_activity(void)
                     if (!CAN_SEE(ch, potential_love_target))
                         continue;
 
-                    /* Follow the player! */
-                    add_follower(ch, potential_love_target);
+                    /* Check effective love toward this specific player */
+                    int effective_love = get_effective_emotion_toward(ch, potential_love_target, EMOTION_TYPE_LOVE);
+                    if (effective_love >= CONFIG_EMOTION_SOCIAL_LOVE_FOLLOW_THRESHOLD && effective_love > highest_love) {
+                        highest_love = effective_love;
+                        best_love_target = potential_love_target;
+                    }
+                }
+                
+                /* Follow the most loved player if found */
+                if (best_love_target) {
+                    add_follower(ch, best_love_target);
 
                     /* Announce the following with a loving social or message */
-                    act("$n olha para $N com adoração e começa a seguir $M.", FALSE, ch, 0, potential_love_target,
+                    act("$n olha para $N com adoração e começa a seguir $M.", FALSE, ch, 0, best_love_target,
                         TO_NOTVICT);
-                    act("$n olha para você com adoração e começa a seguir você.", FALSE, ch, 0, potential_love_target,
+                    act("$n olha para você com adoração e começa a seguir você.", FALSE, ch, 0, best_love_target,
                         TO_VICT);
 
                     /* Safety check for extraction */
@@ -562,6 +574,10 @@ void mobile_activity(void)
             continue;
 
         if (FIGHTING(ch) || !AWAKE(ch))
+            continue;
+
+        /* Skip paralyzed mobs - they cannot perform actions */
+        if (AFF_FLAGGED(ch, AFF_PARALIZE))
             continue;
 
         /* Check if mob can level up from gained experience */
@@ -1286,61 +1302,74 @@ void mobile_activity(void)
         }
 
         /* Mob combat quest posting - chance to post bounty/revenge quests (not for charmed mobs) */
-        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM) &&
-            rand_number(1, 100) <= 2) { /* 2% chance per tick to consider posting combat quests */
-            /* Check if mob should post a player kill quest (revenge for being attacked) */
+        if (ch->ai_data && !AFF_FLAGGED(ch, AFF_CHARM)) {
+            /* Dynamic probability based on quest tendency and bravery for player kill quests */
+            int combat_quest_chance = 2; /* Base 2% chance per tick */
+
+            /* Increase chance for player kill quests if mob is being hunted and capable */
             if (GET_GENBRAVE(ch) > 50 && GET_GENQUEST(ch) >= 5) {
-                /* Check if mob was recently attacked by a player (has hostile memory) */
                 struct char_data *attacker = HUNTING(ch);
                 if (attacker && !IS_NPC(attacker) && GET_GOLD(ch) > 200) {
-                    /* Post a player kill quest for revenge */
-                    int reward = MIN(GET_GOLD(ch) / 3, 500 + rand_number(0, 300));
-                    mob_posts_combat_quest(ch, AQ_PLAYER_KILL, NOTHING, reward);
-                    /* Safety check: mob_posts_combat_quest calls act() which may trigger DG scripts */
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                        continue;
-                    HUNTING(ch) = NULL; /* Clear hunting after posting quest */
+                    /* Increase probability significantly for player kill quests when mob is actively hunted */
+                    combat_quest_chance = 5 + (GET_GENQUEST(ch) / 20); /* 5-10% chance based on quest tendency */
                 }
             }
 
-            /* Check if mob should post a bounty quest against hostile mobs in area */
-            if (GET_GENQUEST(ch) >= 10 && GET_GOLD(ch) > 300) {
-                /* Safety check: Validate ch's room before accessing world array */
-                if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
-                    struct char_data *target, *next_target;
-                    /* Look for aggressive mobs in the same zone */
-                    for (target = character_list; target; target = next_target) {
-                        next_target = target->next;
-
-                        /* Safety check: Skip characters marked for extraction */
-                        if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+            if (rand_number(1, 100) <= combat_quest_chance) {
+                /* Check if mob should post a player kill quest (revenge for being attacked) */
+                if (GET_GENBRAVE(ch) > 50 && GET_GENQUEST(ch) >= 5) {
+                    /* Check if mob was recently attacked by a player (has hostile memory) */
+                    struct char_data *attacker = HUNTING(ch);
+                    if (attacker && !IS_NPC(attacker) && GET_GOLD(ch) > 200) {
+                        /* Post a player kill quest for revenge */
+                        int reward = MIN(GET_GOLD(ch) / 3, 500 + rand_number(0, 300));
+                        mob_posts_combat_quest(ch, AQ_PLAYER_KILL, NOTHING, reward);
+                        /* Safety check: mob_posts_combat_quest calls act() which may trigger DG scripts */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
                             continue;
-
-                        /* Safety check: Validate room before accessing world array */
-                        if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
-                            IN_ROOM(target) > top_of_world)
-                            continue;
-
-                        /* Skip mobs that should be excluded from quests (summoned, skill-spawned) */
-                        if (is_mob_excluded_from_quests(target))
-                            continue;
-
-                        if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
-                            MOB_FLAGGED(target, MOB_AGGRESSIVE) && GET_ALIGNMENT(target) < -200 &&
-                            GET_LEVEL(target) >= GET_LEVEL(ch) - 5) {
-
-                            /* Post bounty quest against this aggressive mob */
-                            int reward = MIN(GET_GOLD(ch) / 4, 400 + GET_LEVEL(target) * 10);
-                            mob_posts_combat_quest(ch, AQ_MOB_KILL_BOUNTY, GET_MOB_VNUM(target), reward);
-                            /* Safety check: mob_posts_combat_quest calls act() which may trigger DG scripts */
-                            if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                                break; /* Exit the loop, then continue to next mob in main loop */
-                            break;     /* Only post one bounty quest per tick */
-                        }
+                        HUNTING(ch) = NULL; /* Clear hunting after posting quest */
                     }
-                    /* Safety check after the loop in case ch was extracted */
-                    if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
-                        continue;
+                }
+
+                /* Check if mob should post a bounty quest against hostile mobs in area */
+                if (GET_GENQUEST(ch) >= 10 && GET_GOLD(ch) > 300) {
+                    /* Safety check: Validate ch's room before accessing world array */
+                    if (IN_ROOM(ch) != NOWHERE && IN_ROOM(ch) >= 0 && IN_ROOM(ch) <= top_of_world) {
+                        struct char_data *target, *next_target;
+                        /* Look for aggressive mobs in the same zone */
+                        for (target = character_list; target; target = next_target) {
+                            next_target = target->next;
+
+                            /* Safety check: Skip characters marked for extraction */
+                            if (MOB_FLAGGED(target, MOB_NOTDEADYET) || PLR_FLAGGED(target, PLR_NOTDEADYET))
+                                continue;
+
+                            /* Safety check: Validate room before accessing world array */
+                            if (!IS_NPC(target) || target == ch || IN_ROOM(target) == NOWHERE || IN_ROOM(target) < 0 ||
+                                IN_ROOM(target) > top_of_world)
+                                continue;
+
+                            /* Skip mobs that should be excluded from quests (summoned, skill-spawned) */
+                            if (is_mob_excluded_from_quests(target))
+                                continue;
+
+                            if (world[IN_ROOM(target)].zone == world[IN_ROOM(ch)].zone &&
+                                MOB_FLAGGED(target, MOB_AGGRESSIVE) && GET_ALIGNMENT(target) < -200 &&
+                                GET_LEVEL(target) >= GET_LEVEL(ch) - 5) {
+
+                                /* Post bounty quest against this aggressive mob */
+                                int reward = MIN(GET_GOLD(ch) / 4, 400 + GET_LEVEL(target) * 10);
+                                mob_posts_combat_quest(ch, AQ_MOB_KILL_BOUNTY, GET_MOB_VNUM(target), reward);
+                                /* Safety check: mob_posts_combat_quest calls act() which may trigger DG scripts */
+                                if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                                    break; /* Exit the loop, then continue to next mob in main loop */
+                                break;     /* Only post one bounty quest per tick */
+                            }
+                        }
+                        /* Safety check after the loop in case ch was extracted */
+                        if (MOB_FLAGGED(ch, MOB_NOTDEADYET) || PLR_FLAGGED(ch, PLR_NOTDEADYET))
+                            continue;
+                    }
                 }
             }
         }

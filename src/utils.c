@@ -2412,6 +2412,13 @@ obj_vnum select_mob_inventory_reward(struct char_data *ch, int difficulty)
         }
     }
 
+    /* Mark the selected reward item with NOLOCATE to prevent locate object exploit */
+    if (best_obj) {
+        SET_BIT_AR(GET_OBJ_EXTRA(best_obj), ITEM_NOLOCATE);
+        /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
+        GET_OBJ_TIMER(best_obj) = -28;
+    }
+
     return best_obj ? GET_OBJ_VNUM(best_obj) : NOTHING;
 }
 
@@ -2596,28 +2603,28 @@ void mob_posts_quest(struct char_data *ch, obj_vnum item_vnum, int reward)
     if (qm_char && qm_char != ch) {
         if (reward_item != NOTHING) {
             snprintf(quest_info, sizeof(quest_info),
-                     "%s está procurando por %s. Se você encontrar este item, "
-                     "traga-o para mim ou diretamente para %s para receber %d moedas de ouro, "
+                     "Alguém está procurando por %s. Se você encontrar este item, "
+                     "traga-o para mim ou diretamente para o solicitante para receber %d moedas de ouro, "
                      "%d pontos de experiência e %s como recompensa.",
-                     GET_NAME(ch), item_name, GET_NAME(ch), calculated_reward, calculated_reward * 2, reward_item_name);
+                     item_name, calculated_reward, calculated_reward * 2, reward_item_name);
         } else {
             snprintf(quest_info, sizeof(quest_info),
-                     "%s está procurando por %s. Se você encontrar este item, "
-                     "traga-o para mim ou diretamente para %s para receber sua recompensa.",
-                     GET_NAME(ch), item_name, GET_NAME(ch));
+                     "Alguém está procurando por %s. Se você encontrar este item, "
+                     "traga-o para mim ou diretamente para o solicitante para receber sua recompensa.",
+                     item_name);
         }
     } else {
         if (reward_item != NOTHING) {
             snprintf(quest_info, sizeof(quest_info),
-                     "%s está procurando por %s. Se você encontrar este item, "
-                     "traga-o de volta para %s para receber %d moedas de ouro, "
+                     "Alguém está procurando por %s. Se você encontrar este item, "
+                     "traga-o de volta ao solicitante para receber %d moedas de ouro, "
                      "%d pontos de experiência e %s como recompensa.",
-                     GET_NAME(ch), item_name, GET_NAME(ch), calculated_reward, calculated_reward * 2, reward_item_name);
+                     item_name, calculated_reward, calculated_reward * 2, reward_item_name);
         } else {
             snprintf(quest_info, sizeof(quest_info),
-                     "%s está procurando por %s. Se você encontrar este item, "
-                     "traga-o de volta para %s para receber sua recompensa.",
-                     GET_NAME(ch), item_name, GET_NAME(ch));
+                     "Alguém está procurando por %s. Se você encontrar este item, "
+                     "traga-o de volta ao solicitante para receber sua recompensa.",
+                     item_name);
         }
     }
     snprintf(quest_done, sizeof(quest_done),
@@ -2831,20 +2838,20 @@ void mob_posts_combat_quest(struct char_data *ch, int quest_type, int target_vnu
     /* Cria strings da quest baseadas no tipo */
     if (quest_type == AQ_PLAYER_KILL) {
         snprintf(quest_name, sizeof(quest_name), "Eliminar Assassinos");
-        snprintf(quest_desc, sizeof(quest_desc), "%s busca vingança contra assassinos", GET_NAME(ch));
+        snprintf(quest_desc, sizeof(quest_desc), "Busca vingança contra assassinos");
         snprintf(quest_info, sizeof(quest_info),
-                 "%s foi atacado por assassinos e busca vingança. Elimine qualquer "
+                 "Alguém foi atacado por assassinos e busca vingança. Elimine qualquer "
                  "assassino de jogadores para receber %d moedas de ouro e %d pontos de experiência.",
-                 GET_NAME(ch), calculated_reward, calculated_reward * 3);
+                 calculated_reward, calculated_reward * 3);
         snprintf(quest_done, sizeof(quest_done), "Excelente! Você eliminou um assassino. A justiça foi feita!");
     } else {
         snprintf(quest_name, sizeof(quest_name), "Caça %s", target_name);
-        snprintf(quest_desc, sizeof(quest_desc), "%s oferece recompensa por %s", GET_NAME(ch), target_name);
+        snprintf(quest_desc, sizeof(quest_desc), "Recompensa pela eliminação de %s", target_name);
         snprintf(quest_info, sizeof(quest_info),
-                 "%s está oferecendo uma recompensa pela eliminação de %s. "
+                 "Alguém está oferecendo uma recompensa pela eliminação de %s. "
                  "Encontre e elimine este alvo para receber %d moedas de ouro e %d pontos de experiência. "
                  "Se o alvo já foi eliminado, procure pela pedra mágica que ele pode ter deixado e a traga de volta.",
-                 GET_NAME(ch), target_name, calculated_reward, calculated_reward * 3);
+                 target_name, calculated_reward, calculated_reward * 3);
         snprintf(quest_done, sizeof(quest_done), "Fantástico! Você eliminou o alvo. Aqui está sua recompensa!");
     }
 
@@ -3089,26 +3096,26 @@ void mob_posts_exploration_quest(struct char_data *ch, int quest_type, int targe
             snprintf(quest_name, sizeof(quest_name), "Buscar %s", target_name);
             snprintf(quest_desc, sizeof(quest_desc), "Encontrar e trazer %s", target_name);
             snprintf(quest_info, sizeof(quest_info),
-                     "%s perdeu %s e precisa desesperadamente recuperá-lo. "
+                     "Alguém perdeu %s e precisa desesperadamente recuperá-lo. "
                      "Encontre e traga este item para receber %d moedas de ouro.",
-                     GET_NAME(ch), target_name, calculated_reward);
+                     target_name, calculated_reward);
             snprintf(quest_done, sizeof(quest_done), "Perfeito! Você encontrou o que eu estava procurando!");
             break;
         case AQ_ROOM_FIND:
             snprintf(quest_name, sizeof(quest_name), "Explorar local");
             snprintf(quest_desc, sizeof(quest_desc), "Explorar um local específico");
             snprintf(quest_info, sizeof(quest_info),
-                     "%s precisa que alguém explore um local específico (%s). "
+                     "Alguém precisa que alguém explore um local específico (%s). "
                      "Vá até lá para receber %d moedas de ouro.",
-                     GET_NAME(ch), target_name, calculated_reward);
+                     target_name, calculated_reward);
             snprintf(quest_done, sizeof(quest_done), "Excelente! Você chegou ao local que eu precisava explorar!");
             break;
         case AQ_MOB_FIND:
             snprintf(quest_name, sizeof(quest_name), "Encontrar %s", target_name);
             snprintf(quest_desc, sizeof(quest_desc), "Encontrar e falar com %s", target_name);
             snprintf(quest_info, sizeof(quest_info),
-                     "%s está procurando por %s. Encontre esta pessoa para receber %d moedas de ouro.", GET_NAME(ch),
-                     target_name, calculated_reward);
+                     "Alguém está procurando por %s. Encontre esta pessoa para receber %d moedas de ouro.", target_name,
+                     calculated_reward);
             snprintf(quest_done, sizeof(quest_done), "Maravilhoso! Você encontrou quem eu estava procurando!");
             break;
     }
@@ -3201,12 +3208,37 @@ void mob_posts_protection_quest(struct char_data *ch, int quest_type, int target
         target_mob_rnum = real_mobile(target_vnum);
         if (target_mob_rnum != NOBODY) {
             target_name = mob_proto[target_mob_rnum].player.short_descr;
+
+            /* Check if any instance of this mob is in a shop room */
+            struct char_data *mob_instance;
+            for (mob_instance = character_list; mob_instance; mob_instance = mob_instance->next) {
+                /* Safety check: validate mob_instance before dereferencing */
+                if (!mob_instance)
+                    break;
+
+                /* Safety check: Skip characters marked for extraction */
+                if (MOB_FLAGGED(mob_instance, MOB_NOTDEADYET) || PLR_FLAGGED(mob_instance, PLR_NOTDEADYET))
+                    continue;
+
+                if (IS_NPC(mob_instance) && GET_MOB_VNUM(mob_instance) == target_vnum) {
+                    /* Found an instance - check if it's in a shop room */
+                    /* Safety check: validate room index before accessing world array */
+                    if (IN_ROOM(mob_instance) != NOWHERE && IN_ROOM(mob_instance) >= 0 &&
+                        IN_ROOM(mob_instance) <= top_of_world && is_shop_room(GET_ROOM_VNUM(IN_ROOM(mob_instance)))) {
+                        log1("PROTECTION QUEST: %s tried to post MOB_SAVE quest for mob %d in shop room %d",
+                             GET_NAME(ch), target_vnum, GET_ROOM_VNUM(IN_ROOM(mob_instance)));
+                        act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
+                        return;
+                    }
+                }
+            }
         }
     } else if (quest_type == AQ_ROOM_CLEAR) {
         target_room_rnum = real_room(target_vnum);
         if (target_room_rnum != NOWHERE) {
-            /* Não posta quest para salas GODROOM ou player houses, mas permite DEATH */
-            if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE)) {
+            /* Não posta quest para salas GODROOM, player houses ou shop rooms */
+            if (ROOM_FLAGGED(target_room_rnum, ROOM_GODROOM) || ROOM_FLAGGED(target_room_rnum, ROOM_HOUSE) ||
+                is_shop_room(target_vnum)) {
                 log1("PROTECTION QUEST: %s tried to post quest for restricted room %d", GET_NAME(ch), target_vnum);
                 act("$n parece preocupado, mas não encontra ninguém para ajudar.", FALSE, ch, 0, 0, TO_ROOM);
                 return;
@@ -3514,12 +3546,12 @@ void mob_posts_general_kill_quest(struct char_data *ch, int target_vnum, int rew
 
     /* Cria strings da quest */
     snprintf(quest_name, sizeof(quest_name), "Eliminar %s", target_name);
-    snprintf(quest_desc, sizeof(quest_desc), "%s quer eliminar %s", GET_NAME(ch), target_name);
+    snprintf(quest_desc, sizeof(quest_desc), "Eliminação de %s solicitada", target_name);
     snprintf(quest_info, sizeof(quest_info),
-             "%s está incomodado com %s e quer vê-lo eliminado. "
+             "Alguém está incomodado com %s e quer vê-lo eliminado. "
              "Encontre e elimine esta criatura para receber %d moedas de ouro e %d pontos de experiência. "
              "Se a criatura já foi eliminada, procure pela pedra mágica que ela pode ter deixado e a traga de volta.",
-             GET_NAME(ch), target_name, calculated_reward, calculated_reward * 3);
+             target_name, calculated_reward, calculated_reward * 3);
     snprintf(quest_done, sizeof(quest_done), "Excelente trabalho! A ameaça foi eliminada!");
 
     new_quest->name = str_udup(quest_name);
@@ -5323,6 +5355,280 @@ void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int
 }
 
 /**
+ * Get relationship-based emotion level toward a specific entity from memories.
+ * This implements the "relationship layer" of the hybrid emotion system.
+ *
+ * @param mob The mob whose relationship emotions to query
+ * @param target The entity to check relationship with
+ * @param emotion_type The type of emotion (EMOTION_TYPE_*)
+ * @return Weighted average of emotion from memories, or 0 if no memories exist
+ */
+int get_relationship_emotion(struct char_data *mob, struct char_data *target, int emotion_type)
+{
+    int i, memory_count = 0;
+    int entity_type;
+    long entity_id;
+    time_t current_time;
+    int total_emotion = 0;
+    int total_weight = 0;
+
+    /* Comprehensive null and validity checks */
+    if (!mob || !target || !IS_NPC(mob) || !mob->ai_data || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return 0;
+
+    /* Additional safety checks */
+    if (MOB_FLAGGED(mob, MOB_NOTDEADYET) || PLR_FLAGGED(mob, PLR_NOTDEADYET))
+        return 0;
+    if (IS_NPC(target) && MOB_FLAGGED(target, MOB_NOTDEADYET))
+        return 0;
+    if (!IS_NPC(target) && PLR_FLAGGED(target, PLR_NOTDEADYET))
+        return 0;
+
+    /* Determine entity type and ID */
+    if (IS_NPC(target)) {
+        entity_type = ENTITY_TYPE_MOB;
+        entity_id = char_script_id(target);
+        if (entity_id == 0)
+            return 0;
+    } else {
+        entity_type = ENTITY_TYPE_PLAYER;
+        entity_id = GET_IDNUM(target);
+        if (entity_id <= 0)
+            return 0;
+    }
+
+    current_time = time(0);
+
+    /* Search through all memories matching this entity */
+    for (i = 0; i < EMOTION_MEMORY_SIZE; i++) {
+        struct emotion_memory *mem = &mob->ai_data->memories[i];
+
+        /* Check if memory matches entity and isn't too old */
+        if (mem->timestamp > 0 && mem->entity_type == entity_type && mem->entity_id == entity_id) {
+            int age_seconds = current_time - mem->timestamp;
+            int weight;
+            int emotion_value = 0;
+
+            /* Calculate weight based on age (newer = more weight) */
+            if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_RECENT) {
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_RECENT;
+            } else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_FRESH) {
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_FRESH;
+            } else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_MODERATE) {
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_MODERATE;
+            } else if (age_seconds < CONFIG_EMOTION_MEMORY_AGE_OLD) {
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_OLD;
+            } else {
+                weight = CONFIG_EMOTION_MEMORY_WEIGHT_ANCIENT;
+            }
+
+            /* Major events have double weight */
+            if (mem->major_event) {
+                weight *= 2;
+            }
+
+            /* Get the specific emotion value from memory */
+            switch (emotion_type) {
+                case EMOTION_TYPE_FEAR:
+                    emotion_value = mem->fear_level;
+                    break;
+                case EMOTION_TYPE_ANGER:
+                    emotion_value = mem->anger_level;
+                    break;
+                case EMOTION_TYPE_HAPPINESS:
+                    emotion_value = mem->happiness_level;
+                    break;
+                case EMOTION_TYPE_SADNESS:
+                    emotion_value = mem->sadness_level;
+                    break;
+                case EMOTION_TYPE_FRIENDSHIP:
+                    emotion_value = mem->friendship_level;
+                    break;
+                case EMOTION_TYPE_LOVE:
+                    emotion_value = mem->love_level;
+                    break;
+                case EMOTION_TYPE_TRUST:
+                    emotion_value = mem->trust_level;
+                    break;
+                case EMOTION_TYPE_LOYALTY:
+                    emotion_value = mem->loyalty_level;
+                    break;
+                case EMOTION_TYPE_CURIOSITY:
+                    emotion_value = mem->curiosity_level;
+                    break;
+                case EMOTION_TYPE_GREED:
+                    emotion_value = mem->greed_level;
+                    break;
+                case EMOTION_TYPE_PRIDE:
+                    emotion_value = mem->pride_level;
+                    break;
+                case EMOTION_TYPE_COMPASSION:
+                    emotion_value = mem->compassion_level;
+                    break;
+                case EMOTION_TYPE_ENVY:
+                    emotion_value = mem->envy_level;
+                    break;
+                case EMOTION_TYPE_COURAGE:
+                    emotion_value = mem->courage_level;
+                    break;
+                case EMOTION_TYPE_EXCITEMENT:
+                    emotion_value = mem->excitement_level;
+                    break;
+                case EMOTION_TYPE_DISGUST:
+                    emotion_value = mem->disgust_level;
+                    break;
+                case EMOTION_TYPE_SHAME:
+                    emotion_value = mem->shame_level;
+                    break;
+                case EMOTION_TYPE_PAIN:
+                    emotion_value = mem->pain_level;
+                    break;
+                case EMOTION_TYPE_HORROR:
+                    emotion_value = mem->horror_level;
+                    break;
+                case EMOTION_TYPE_HUMILIATION:
+                    emotion_value = mem->humiliation_level;
+                    break;
+                default:
+                    emotion_value = 0;
+                    break;
+            }
+
+            /* Accumulate weighted emotions */
+            total_emotion += emotion_value * weight;
+            total_weight += weight;
+            memory_count++;
+        }
+    }
+
+    /* Calculate average weighted emotion */
+    if (total_weight > 0) {
+        return total_emotion / total_weight;
+    }
+
+    return 0;
+}
+
+/**
+ * Get effective emotion toward a specific target using hybrid emotion system.
+ * This combines:
+ * 1. MOOD (global emotional state) - base emotion level
+ * 2. RELATIONSHIP (per-entity memories) - modifier based on past interactions
+ *
+ * This implements the hybrid model requested in the emotion system upgrade:
+ * - Mood affects all interactions (environmental, time-based, general state)
+ * - Relationship modifies emotion specifically toward this target
+ *
+ * @param mob The mob whose emotion to query
+ * @param target The target entity (can be NULL for mood-only queries)
+ * @param emotion_type The type of emotion (EMOTION_TYPE_*)
+ * @return Effective emotion level (0-100), clamped to valid range
+ */
+int get_effective_emotion_toward(struct char_data *mob, struct char_data *target, int emotion_type)
+{
+    int mood_emotion = 0;
+    int relationship_emotion = 0;
+    int effective_emotion = 0;
+
+    /* Comprehensive null and validity checks */
+    if (!mob || !IS_NPC(mob) || !mob->ai_data)
+        return 0;
+
+    /* Get MOOD (global state) - the base emotion */
+    switch (emotion_type) {
+        case EMOTION_TYPE_FEAR:
+            mood_emotion = mob->ai_data->emotion_fear;
+            break;
+        case EMOTION_TYPE_ANGER:
+            mood_emotion = mob->ai_data->emotion_anger;
+            break;
+        case EMOTION_TYPE_HAPPINESS:
+            mood_emotion = mob->ai_data->emotion_happiness;
+            break;
+        case EMOTION_TYPE_SADNESS:
+            mood_emotion = mob->ai_data->emotion_sadness;
+            break;
+        case EMOTION_TYPE_FRIENDSHIP:
+            mood_emotion = mob->ai_data->emotion_friendship;
+            break;
+        case EMOTION_TYPE_LOVE:
+            mood_emotion = mob->ai_data->emotion_love;
+            break;
+        case EMOTION_TYPE_TRUST:
+            mood_emotion = mob->ai_data->emotion_trust;
+            break;
+        case EMOTION_TYPE_LOYALTY:
+            mood_emotion = mob->ai_data->emotion_loyalty;
+            break;
+        case EMOTION_TYPE_CURIOSITY:
+            mood_emotion = mob->ai_data->emotion_curiosity;
+            break;
+        case EMOTION_TYPE_GREED:
+            mood_emotion = mob->ai_data->emotion_greed;
+            break;
+        case EMOTION_TYPE_PRIDE:
+            mood_emotion = mob->ai_data->emotion_pride;
+            break;
+        case EMOTION_TYPE_COMPASSION:
+            mood_emotion = mob->ai_data->emotion_compassion;
+            break;
+        case EMOTION_TYPE_ENVY:
+            mood_emotion = mob->ai_data->emotion_envy;
+            break;
+        case EMOTION_TYPE_COURAGE:
+            mood_emotion = mob->ai_data->emotion_courage;
+            break;
+        case EMOTION_TYPE_EXCITEMENT:
+            mood_emotion = mob->ai_data->emotion_excitement;
+            break;
+        case EMOTION_TYPE_DISGUST:
+            mood_emotion = mob->ai_data->emotion_disgust;
+            break;
+        case EMOTION_TYPE_SHAME:
+            mood_emotion = mob->ai_data->emotion_shame;
+            break;
+        case EMOTION_TYPE_PAIN:
+            mood_emotion = mob->ai_data->emotion_pain;
+            break;
+        case EMOTION_TYPE_HORROR:
+            mood_emotion = mob->ai_data->emotion_horror;
+            break;
+        case EMOTION_TYPE_HUMILIATION:
+            mood_emotion = mob->ai_data->emotion_humiliation;
+            break;
+        default:
+            mood_emotion = 0;
+            break;
+    }
+
+    /* If no target specified, return mood only (e.g., for environmental checks) */
+    if (!target || !CONFIG_MOB_CONTEXTUAL_SOCIALS) {
+        return URANGE(0, mood_emotion, 100);
+    }
+
+    /* Get RELATIONSHIP emotion from memories toward this specific target */
+    relationship_emotion = get_relationship_emotion(mob, target, emotion_type);
+
+    /* Combine mood and relationship:
+     * - If we have memories, relationship influences the final emotion
+     * - Relationship acts as a modifier (-50 to +50) to the mood base
+     * - This creates personalized emotions while maintaining general mood
+     */
+    if (relationship_emotion > 0) {
+        /* Calculate relationship modifier as deviation from neutral (50) */
+        int relationship_modifier = relationship_emotion - 50;
+        /* Apply relationship modifier to mood (weighted at 60% to prevent extremes) */
+        effective_emotion = mood_emotion + (relationship_modifier * 60 / 100);
+    } else {
+        /* No memories of this entity yet, use mood only */
+        effective_emotion = mood_emotion;
+    }
+
+    /* Clamp to valid range */
+    return URANGE(0, effective_emotion, 100);
+}
+
+/**
  * Update mob emotions based on receiving a social/emote from a player
  * @param mob The mob receiving the social
  * @param actor The character performing the social
@@ -6897,5 +7203,148 @@ void update_mob_emotion_received_valuable(struct char_data *mob, struct char_dat
     if (mob->ai_data->emotion_greed > 60) {
         adjust_emotion(mob, &mob->ai_data->emotion_happiness, rand_number(5, 10));
         adjust_emotion(mob, &mob->ai_data->emotion_excitement, rand_number(5, 10));
+    }
+}
+
+/**
+ * Apply weather effects to a mob's mood (global emotional state)
+ * Based on WEATHER_EMOTION_INTEGRATION.md specification
+ *
+ * Called hourly by weather_change() for each zone - iterates through character_list
+ * in weather.c to find affected NPCs. Only affects outdoor NPCs in the specified zone.
+ *
+ * @param mob The mob whose emotions to update
+ * @param weather Zone-specific weather data (temperature, humidity, wind, sky state)
+ * @param sunlight Global sunlight value from weather_info.sunlight (updated in another_hour()).
+ *                 Sunlight is passed separately because it is global, while other weather
+ *                 data is zone-specific.
+ */
+void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, int sunlight)
+{
+    int multiplier;
+
+    if (!mob || !IS_NPC(mob) || !mob->ai_data || !weather || !CONFIG_MOB_CONTEXTUAL_SOCIALS)
+        return;
+
+    /* Check if weather affects emotions is enabled */
+    if (!CONFIG_WEATHER_AFFECTS_EMOTIONS)
+        return;
+
+    /* Get the multiplier (stored as 0-200, representing 0-200%) */
+    multiplier = CONFIG_WEATHER_EFFECT_MULTIPLIER;
+
+    /* Sky condition effects */
+    switch (weather->sky) {
+        case SKY_CLOUDLESS:
+            /* Clear skies: happiness +5-10, excitement +3-5, sadness -3-5, fear -2-3 */
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(5, 10) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_excitement, (rand_number(3, 5) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, -(rand_number(3, 5) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(2, 3) * multiplier) / 100);
+            break;
+
+        case SKY_CLOUDY:
+            /* Cloudy: sadness +2-4, happiness -2-3 */
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, (rand_number(2, 4) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(2, 3) * multiplier) / 100);
+            break;
+
+        case SKY_RAINING:
+            /* Raining: sadness +3-6, happiness -3-5 */
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, (rand_number(3, 6) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(3, 5) * multiplier) / 100);
+            break;
+
+        case SKY_LIGHTNING:
+            /* Lightning storm: fear +5-8, horror +3-5, excitement +3-5 */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(5, 8) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_horror, (rand_number(3, 5) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_excitement, (rand_number(3, 5) * multiplier) / 100);
+            break;
+
+        case SKY_SNOWING:
+            /* Snowing: fear +2-3, discomfort +4-6 (modeled as happiness reduction) */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(2, 3) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(4, 6) * multiplier) / 100);
+            break;
+    }
+
+    /* Temperature effects */
+    if (weather->temperature < 0) {
+        /* Very cold: fear +3-5 */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(3, 5) * multiplier) / 100);
+    } else if (weather->temperature >= 0 && weather->temperature < 10) {
+        /* Cold: slight discomfort (modeled as reduced happiness) */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(1, 2) * multiplier) / 100);
+    } else if (weather->temperature >= 10 && weather->temperature <= 25) {
+        /* Comfortable: happiness +3-5 */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(3, 5) * multiplier) / 100);
+    } else if (weather->temperature > 25 && weather->temperature <= 35) {
+        /* Hot: reduced happiness/energy */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(2, 4) * multiplier) / 100);
+    } else if (weather->temperature > 35) {
+        /* Very hot: fear +2-4, significant discomfort */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(2, 4) * multiplier) / 100);
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(4, 6) * multiplier) / 100);
+        adjust_emotion(mob, &mob->ai_data->emotion_pain, (rand_number(2, 3) * multiplier) / 100);
+    }
+
+    /* Humidity effects */
+    if (weather->humidity < 0.30) {
+        /* Low humidity: slight discomfort */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(1, 2) * multiplier) / 100);
+    } else if (weather->humidity >= 0.30 && weather->humidity < 0.60) {
+        /* Comfortable humidity: calm +2-3, minimal stress */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(2, 3) * multiplier) / 100);
+    } else if (weather->humidity >= 0.60 && weather->humidity < 0.80) {
+        /* High humidity: discomfort */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(2, 3) * multiplier) / 100);
+    } else if (weather->humidity >= 0.80) {
+        /* Very high humidity: significant discomfort */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(3, 4) * multiplier) / 100);
+    }
+
+    /* Wind effects */
+    if (weather->winds < 2.0) {
+        /* Calm: peaceful */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(1, 2) * multiplier) / 100);
+    } else if (weather->winds >= 2.0 && weather->winds < 5.0) {
+        /* Gentle breeze: pleasant */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(2, 4) * multiplier) / 100);
+    } else if (weather->winds >= 5.0 && weather->winds < 10.0) {
+        /* Moderate wind: stimulating but slightly uncomfortable */
+        adjust_emotion(mob, &mob->ai_data->emotion_happiness, -(rand_number(2, 3) * multiplier) / 100);
+    } else if (weather->winds >= 10.0 && weather->winds < 15.0) {
+        /* Strong wind: fear +3-5 */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(3, 5) * multiplier) / 100);
+    } else if (weather->winds >= 15.0) {
+        /* Very strong wind: fear +6-10, horror +3-5 */
+        adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(6, 10) * multiplier) / 100);
+        adjust_emotion(mob, &mob->ai_data->emotion_horror, (rand_number(3, 5) * multiplier) / 100);
+    }
+
+    /* Time of day effects (sunlight) */
+    switch (sunlight) {
+        case SUN_RISE:
+            /* Dawn: happiness +2-4 */
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(2, 4) * multiplier) / 100);
+            break;
+
+        case SUN_LIGHT:
+            /* Daylight: happiness +3-5, fear -3-5 */
+            adjust_emotion(mob, &mob->ai_data->emotion_happiness, (rand_number(3, 5) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, -(rand_number(3, 5) * multiplier) / 100);
+            adjust_emotion(mob, &mob->ai_data->emotion_courage, (rand_number(2, 4) * multiplier) / 100);
+            break;
+
+        case SUN_SET:
+            /* Dusk: slight melancholy */
+            adjust_emotion(mob, &mob->ai_data->emotion_sadness, (rand_number(1, 2) * multiplier) / 100);
+            break;
+
+        case SUN_DARK:
+            /* Nighttime: fear +3-6 */
+            adjust_emotion(mob, &mob->ai_data->emotion_fear, (rand_number(3, 6) * multiplier) / 100);
+            break;
     }
 }

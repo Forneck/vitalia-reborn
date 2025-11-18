@@ -85,6 +85,7 @@
 #include "mud_event.h"
 #include "ann.h"
 #include "protocol.h" /* for ProtocolNAWSAutoConfig */
+#include "auction.h"  /* for update_auctions */
 
 #ifndef INVALID_SOCKET
 #    define INVALID_SOCKET (-1)
@@ -376,6 +377,8 @@ int main(int argc, char **argv)
     log1("Clearing game world.");
 
     if (!scheck) {
+        log1("Saving auctions before shutdown.");
+        save_auctions();
         log1("Saving temporary quest assignments before shutdown.");
         save_temp_quest_assignments();
     }
@@ -1060,6 +1063,15 @@ void heartbeat(int heart_pulse)
     if (!(heart_pulse % PULSE_VIOLENCE))
         perform_violence();
 
+    if (CONFIG_NEW_AUCTION_SYSTEM && !(heart_pulse % (30 * PASSES_PER_SEC))) { /* Every 30 seconds */
+        update_auctions();
+
+        /* Save auctions every 5 minutes */
+        if (!(heart_pulse % (300 * PASSES_PER_SEC))) {
+            save_auctions();
+        }
+    }
+
     if (!(heart_pulse % (SECS_PER_MUD_HOUR / 3))) {
         beware_lightning();
     }
@@ -1312,8 +1324,8 @@ static char *make_prompt(struct descriptor_data *d)
         }
 
         if (PRF_FLAGGED(d->character, PRF_AFK) && len < sizeof(prompt)) {
-            count = snprintf(prompt + len, sizeof(prompt) - len, "%s(%saway%s)%s", CCGRN(d->character, C_NRM),
-                             CCCYN(d->character, C_CMP), CCGRN(d->character, C_NRM), CCNRM(d->character, C_NRM));
+            count = snprintf(prompt + len, sizeof(prompt) - len, "%s(away)%s", CCGRN(d->character, C_NRM),
+                             CCNRM(d->character, C_NRM));
             if (count >= 0)
                 len += count;
         }

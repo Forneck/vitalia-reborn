@@ -170,6 +170,20 @@ void add_emotion_memory(struct char_data *mob, struct char_data *entity, int int
 int get_emotion_memory_modifier(struct char_data *mob, struct char_data *entity, int *trust_mod, int *friendship_mod);
 void clear_emotion_memories_of_entity(struct char_data *mob, long entity_id, int entity_type);
 
+/* Hybrid emotion system - combines mood (global) with relationship (per-entity) emotions */
+int get_effective_emotion_toward(struct char_data *mob, struct char_data *target, int emotion_type);
+int get_relationship_emotion(struct char_data *mob, struct char_data *target, int emotion_type);
+
+/* Weather-emotion integration - applies weather effects to mob moods */
+/**
+ * Applies weather effects to mob moods.
+ * @param mob The mob whose mood is affected.
+ * @param weather Zone-specific weather data (does NOT include global sunlight).
+ * @param sunlight Global sunlight value (from weather_info.sunlight), which is updated in another_hour().
+ *        Sunlight is passed separately because it is global, while other weather data is zone-specific.
+ */
+void apply_weather_to_mood(struct char_data *mob, struct weather_data *weather, int sunlight);
+
 /* Stoneskin utility functions */
 int get_stoneskin_points(struct char_data *ch);
 void set_stoneskin_points(struct char_data *ch, int points);
@@ -305,6 +319,10 @@ void char_from_furniture(struct char_data *ch);
 
 /* integer utils */
 #define URANGE(a, b, c) ((b) < (a) ? (a) : ((b) > (c) ? (c) : (b)))
+
+/* float utils */
+#define FMAX(a, b) ((a) > (b) ? (a) : (b))
+#define FMIN(a, b) ((a) < (b) ? (a) : (b))
 
 /* Various string utils. */
 /** If a is not null, FALSE or '0', return "YES"; if it is, return "NO" */
@@ -1270,6 +1288,8 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_RESS_ROOM_3 config_info.room_nums.ress_room_3
 /** Get the fourth resurrection room. */
 #define CONFIG_RESS_ROOM_4 config_info.room_nums.ress_room_4
+/** Get the death trap object warehouse room. */
+#define CONFIG_DT_WAREHOUSE config_info.room_nums.dt_warehouse_room
 
 /* Game Operation */
 /** Get the default mud connection port. */
@@ -1330,6 +1350,10 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_MOB_EMOTION_SOCIAL_CHANCE config_info.experimental.mob_emotion_social_chance
 /** Probability (%) of mob updating emotions per emotion tick */
 #define CONFIG_MOB_EMOTION_UPDATE_CHANCE config_info.experimental.mob_emotion_update_chance
+/** Weather affects mob emotions? */
+#define CONFIG_WEATHER_AFFECTS_EMOTIONS config_info.experimental.weather_affects_emotions
+/** Weather emotion effect multiplier (0-200%, stored as 0-200 integer) */
+#define CONFIG_WEATHER_EFFECT_MULTIPLIER config_info.experimental.weather_effect_multiplier
 
 /* Emotion System Configuration Macros */
 /** Visual indicator thresholds */
@@ -1423,5 +1447,19 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_EMOTION_GROUP_LOYALTY_LOW_THRESHOLD config_info.emotion_config.group_loyalty_low_threshold
 #define CONFIG_EMOTION_GROUP_FRIENDSHIP_HIGH_THRESHOLD config_info.emotion_config.group_friendship_high_threshold
 #define CONFIG_EMOTION_GROUP_ENVY_HIGH_THRESHOLD config_info.emotion_config.group_envy_high_threshold
+
+/* Combat emotion behavior */
+#define CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD config_info.emotion_config.combat_anger_high_threshold
+#define CONFIG_EMOTION_COMBAT_ANGER_DAMAGE_BONUS config_info.emotion_config.combat_anger_damage_bonus
+#define CONFIG_EMOTION_COMBAT_ANGER_ATTACK_BONUS config_info.emotion_config.combat_anger_attack_bonus
+#define CONFIG_EMOTION_COMBAT_PAIN_LOW_THRESHOLD config_info.emotion_config.combat_pain_low_threshold
+#define CONFIG_EMOTION_COMBAT_PAIN_MODERATE_THRESHOLD config_info.emotion_config.combat_pain_moderate_threshold
+#define CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD config_info.emotion_config.combat_pain_high_threshold
+#define CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW config_info.emotion_config.combat_pain_accuracy_penalty_low
+#define CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_MOD config_info.emotion_config.combat_pain_accuracy_penalty_mod
+#define CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_HIGH config_info.emotion_config.combat_pain_accuracy_penalty_high
+#define CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW config_info.emotion_config.combat_pain_damage_penalty_low
+#define CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_MOD config_info.emotion_config.combat_pain_damage_penalty_mod
+#define CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_HIGH config_info.emotion_config.combat_pain_damage_penalty_high
 
 #endif /* _UTILS_H_ */

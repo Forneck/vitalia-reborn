@@ -28,6 +28,7 @@
 #include "modify.h"
 #include "asciimap.h"
 #include "quest.h"
+#include "spedit.h"
 
 /* prototypes of local functions */
 /* do_diagnose utility functions */
@@ -364,124 +365,128 @@ static void get_highest_emotion_display(struct char_data *mob, struct char_data 
     *out_text = NULL;
     *out_color = NULL;
 
-    /* Check all 20 emotions and find the highest one above threshold */
-    if (mob->ai_data->emotion_fear >= CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD &&
-        mob->ai_data->emotion_fear > highest_value) {
-        highest_value = mob->ai_data->emotion_fear;
+    /* Use hybrid emotion system to get emotions toward the viewer */
+    int effective_fear = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_FEAR);
+    int effective_anger = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_ANGER);
+    int effective_happiness = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_HAPPINESS);
+    int effective_sadness = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_SADNESS);
+    int effective_trust = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_TRUST);
+    int effective_friendship = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_FRIENDSHIP);
+    int effective_love = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_LOVE);
+    int effective_disgust = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_DISGUST);
+    int effective_envy = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_ENVY);
+    int effective_horror = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_HORROR);
+    int effective_courage = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_COURAGE);
+    int effective_pride = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_PRIDE);
+
+    /* Check all emotions and find the highest one above threshold */
+    if (effective_fear >= CONFIG_EMOTION_DISPLAY_FEAR_THRESHOLD && effective_fear > highest_value) {
+        highest_value = effective_fear;
         *out_text = "(amedrontado)";
         *out_color = CCMAG(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_anger >= CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD &&
-        mob->ai_data->emotion_anger > highest_value) {
-        highest_value = mob->ai_data->emotion_anger;
+    if (effective_anger >= CONFIG_EMOTION_DISPLAY_ANGER_THRESHOLD && effective_anger > highest_value) {
+        highest_value = effective_anger;
         *out_text = "(furioso)";
         *out_color = CCRED(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_happiness >= CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD &&
-        mob->ai_data->emotion_happiness > highest_value) {
-        highest_value = mob->ai_data->emotion_happiness;
+    if (effective_happiness >= CONFIG_EMOTION_DISPLAY_HAPPINESS_THRESHOLD && effective_happiness > highest_value) {
+        highest_value = effective_happiness;
         *out_text = "(feliz)";
         *out_color = CCYEL(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_sadness >= CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD &&
-        mob->ai_data->emotion_sadness > highest_value) {
-        highest_value = mob->ai_data->emotion_sadness;
+    if (effective_sadness >= CONFIG_EMOTION_DISPLAY_SADNESS_THRESHOLD && effective_sadness > highest_value) {
+        highest_value = effective_sadness;
         *out_text = "(triste)";
         *out_color = CCBLU(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_horror >= CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD &&
-        mob->ai_data->emotion_horror > highest_value) {
-        highest_value = mob->ai_data->emotion_horror;
+    if (effective_horror >= CONFIG_EMOTION_DISPLAY_HORROR_THRESHOLD && effective_horror > highest_value) {
+        highest_value = effective_horror;
         *out_text = "(aterrorizado)";
         *out_color = CBMAG(viewer, C_NRM);
     }
+    /* Pain and some emotions are more mood-based, use mob's direct value */
     if (mob->ai_data->emotion_pain >= CONFIG_EMOTION_DISPLAY_PAIN_THRESHOLD &&
         mob->ai_data->emotion_pain > highest_value) {
         highest_value = mob->ai_data->emotion_pain;
         *out_text = "(sofrendo)";
         *out_color = CCRED(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_compassion >= CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD &&
-        mob->ai_data->emotion_compassion > highest_value) {
-        highest_value = mob->ai_data->emotion_compassion;
+    int effective_compassion = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_COMPASSION);
+    if (effective_compassion >= CONFIG_EMOTION_DISPLAY_COMPASSION_THRESHOLD && effective_compassion > highest_value) {
+        highest_value = effective_compassion;
         *out_text = "(compassivo)";
         *out_color = CCGRN(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_courage >= CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD &&
-        mob->ai_data->emotion_courage > highest_value) {
-        highest_value = mob->ai_data->emotion_courage;
+    if (effective_courage >= CONFIG_EMOTION_DISPLAY_COURAGE_THRESHOLD && effective_courage > highest_value) {
+        highest_value = effective_courage;
         *out_text = "(corajoso)";
         *out_color = CCYEL(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_curiosity >= CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD &&
-        mob->ai_data->emotion_curiosity > highest_value) {
-        highest_value = mob->ai_data->emotion_curiosity;
+    int effective_curiosity = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_CURIOSITY);
+    if (effective_curiosity >= CONFIG_EMOTION_DISPLAY_CURIOSITY_THRESHOLD && effective_curiosity > highest_value) {
+        highest_value = effective_curiosity;
         *out_text = "(curioso)";
         *out_color = CCCYN(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_disgust >= CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD &&
-        mob->ai_data->emotion_disgust > highest_value) {
-        highest_value = mob->ai_data->emotion_disgust;
+    if (effective_disgust >= CONFIG_EMOTION_DISPLAY_DISGUST_THRESHOLD && effective_disgust > highest_value) {
+        highest_value = effective_disgust;
         *out_text = "(enojado)";
         *out_color = CCGRN(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_envy >= CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD &&
-        mob->ai_data->emotion_envy > highest_value) {
-        highest_value = mob->ai_data->emotion_envy;
+    if (effective_envy >= CONFIG_EMOTION_DISPLAY_ENVY_THRESHOLD && effective_envy > highest_value) {
+        highest_value = effective_envy;
         *out_text = "(invejoso)";
         *out_color = CCMAG(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_excitement >= CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD &&
-        mob->ai_data->emotion_excitement > highest_value) {
-        highest_value = mob->ai_data->emotion_excitement;
+    int effective_excitement = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_EXCITEMENT);
+    if (effective_excitement >= CONFIG_EMOTION_DISPLAY_EXCITEMENT_THRESHOLD && effective_excitement > highest_value) {
+        highest_value = effective_excitement;
         *out_text = "(animado)";
         *out_color = CCYEL(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_friendship >= CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD &&
-        mob->ai_data->emotion_friendship > highest_value) {
-        highest_value = mob->ai_data->emotion_friendship;
+    if (effective_friendship >= CONFIG_EMOTION_DISPLAY_FRIENDSHIP_THRESHOLD && effective_friendship > highest_value) {
+        highest_value = effective_friendship;
         *out_text = "(amigavel)";
         *out_color = CCGRN(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_greed >= CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD &&
-        mob->ai_data->emotion_greed > highest_value) {
-        highest_value = mob->ai_data->emotion_greed;
+    int effective_greed = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_GREED);
+    if (effective_greed >= CONFIG_EMOTION_DISPLAY_GREED_THRESHOLD && effective_greed > highest_value) {
+        highest_value = effective_greed;
         *out_text = "(ganancioso)";
         *out_color = CCYEL(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_humiliation >= CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD &&
-        mob->ai_data->emotion_humiliation > highest_value) {
-        highest_value = mob->ai_data->emotion_humiliation;
+    int effective_humiliation = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_HUMILIATION);
+    if (effective_humiliation >= CONFIG_EMOTION_DISPLAY_HUMILIATION_THRESHOLD &&
+        effective_humiliation > highest_value) {
+        highest_value = effective_humiliation;
         *out_text = "(humilhado)";
         *out_color = CCMAG(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_love >= CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD &&
-        mob->ai_data->emotion_love > highest_value) {
-        highest_value = mob->ai_data->emotion_love;
+    if (effective_love >= CONFIG_EMOTION_DISPLAY_LOVE_THRESHOLD && effective_love > highest_value) {
+        highest_value = effective_love;
         *out_text = "(apaixonado)";
         *out_color = CCRED(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_loyalty >= CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD &&
-        mob->ai_data->emotion_loyalty > highest_value) {
-        highest_value = mob->ai_data->emotion_loyalty;
+    int effective_loyalty = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_LOYALTY);
+    if (effective_loyalty >= CONFIG_EMOTION_DISPLAY_LOYALTY_THRESHOLD && effective_loyalty > highest_value) {
+        highest_value = effective_loyalty;
         *out_text = "(leal)";
         *out_color = CCBLU(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_pride >= CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD &&
-        mob->ai_data->emotion_pride > highest_value) {
-        highest_value = mob->ai_data->emotion_pride;
+    if (effective_pride >= CONFIG_EMOTION_DISPLAY_PRIDE_THRESHOLD && effective_pride > highest_value) {
+        highest_value = effective_pride;
         *out_text = "(orgulhoso)";
         *out_color = CCYEL(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_shame >= CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD &&
-        mob->ai_data->emotion_shame > highest_value) {
-        highest_value = mob->ai_data->emotion_shame;
+    int effective_shame = get_effective_emotion_toward(mob, viewer, EMOTION_TYPE_SHAME);
+    if (effective_shame >= CONFIG_EMOTION_DISPLAY_SHAME_THRESHOLD && effective_shame > highest_value) {
+        highest_value = effective_shame;
         *out_text = "(envergonhado)";
         *out_color = CCMAG(viewer, C_NRM);
     }
-    if (mob->ai_data->emotion_trust >= CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD &&
-        mob->ai_data->emotion_trust > highest_value) {
-        highest_value = mob->ai_data->emotion_trust;
+    if (effective_trust >= CONFIG_EMOTION_DISPLAY_TRUST_THRESHOLD && effective_trust > highest_value) {
+        highest_value = effective_trust;
         *out_text = "(confiante)";
         *out_color = CCGRN(viewer, C_NRM);
     }
@@ -607,7 +612,7 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
     if (!IS_NPC(i) && PRF_FLAGGED(i, PRF_BUILDWALK))
         send_to_char(ch, "%s (construindo)%s", CBRED(ch, C_NRM), CCNRM(ch, C_NRM));
     if (!IS_NPC(i) && PRF_FLAGGED(i, PRF_AFK))
-        send_to_char(ch, "%s (%saway%s)%s", CCGRN(ch, C_NRM), CCCYN(ch, C_CMP), CCGRN(ch, C_CMP), CCNRM(ch, C_NRM));
+        send_to_char(ch, "%s (away)%s", CCGRN(ch, C_NRM), CCNRM(ch, C_NRM));
 
     if (GET_POS(i) != POS_FIGHTING) {
 
@@ -876,6 +881,40 @@ void look_at_room(struct char_data *ch, int ignore_brief)
     /* now list characters & objects */
     list_obj_to_char(world[IN_ROOM(ch)].contents, ch, SHOW_OBJ_LONG, FALSE);
     list_char_to_char(world[IN_ROOM(ch)].people, ch);
+
+    /* Show mana density if character has detect magic active */
+    if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
+        float mana_density = calculate_mana_density(ch);
+        const char *density_desc;
+        int color_level;
+        const char *density_color;
+
+        /* Get description and color level from helper function */
+        get_mana_density_description(mana_density, &density_desc, &color_level);
+
+        /* Map color level to color macro */
+        switch (color_level) {
+            case 0:
+                density_color = CBCYN(ch, C_NRM);
+                break;
+            case 1:
+                density_color = CBGRN(ch, C_NRM);
+                break;
+            case 2:
+                density_color = CCYEL(ch, C_NRM);
+                break;
+            case 3:
+                density_color = CCRED(ch, C_NRM);
+                break;
+            case 4:
+            default:
+                density_color = CBRED(ch, C_NRM);
+                break;
+        }
+
+        send_to_char(ch, "\r\n%sA densidade mágica aqui está %s%s%s.%s\r\n", CCMAG(ch, C_NRM), density_color,
+                     density_desc, CCNRM(ch, C_NRM), CCNRM(ch, C_NRM));
+    }
 }
 
 static void look_in_direction(struct char_data *ch, int dir)
@@ -1452,18 +1491,348 @@ ACMD(do_time)
     send_to_char(ch, " O %d%s dia do %s, Ano %d. \r\n ", day, suf, month_name[time_info.month], time_info.year);
 }
 
+/* Helper function to get element color for weather display */
+static const char *get_weather_element_color(struct char_data *ch, int element)
+{
+    switch (element) {
+        case ELEMENT_FIRE:
+            return CBRED(ch, C_NRM);
+        case ELEMENT_WATER:
+        case ELEMENT_ICE:
+            return CBBLU(ch, C_NRM);
+        case ELEMENT_AIR:
+            return CBWHT(ch, C_NRM);
+        case ELEMENT_EARTH:
+            return CCYEL(ch, C_NRM);
+        case ELEMENT_LIGHTNING:
+            return CBCYN(ch, C_NRM);
+        case ELEMENT_ACID:
+            return CBGRN(ch, C_NRM);
+        case ELEMENT_POISON:
+            return CCGRN(ch, C_NRM);
+        case ELEMENT_HOLY:
+            return CBYEL(ch, C_NRM);
+        case ELEMENT_UNHOLY:
+            return CBMAG(ch, C_NRM);
+        case ELEMENT_MENTAL:
+            return CCMAG(ch, C_NRM);
+        case ELEMENT_PHYSICAL:
+            return CCWHT(ch, C_NRM);
+        default:
+            return CCNRM(ch, C_NRM);
+    }
+}
+
+/* Helper function to get school color for weather display */
+static const char *get_weather_school_color(struct char_data *ch, int school)
+{
+    switch (school) {
+        case SCHOOL_EVOCATION:
+            return CBRED(ch, C_NRM);
+        case SCHOOL_CONJURATION:
+            return CBGRN(ch, C_NRM);
+        case SCHOOL_ILLUSION:
+            return CBMAG(ch, C_NRM);
+        case SCHOOL_DIVINATION:
+            return CBCYN(ch, C_NRM);
+        case SCHOOL_NECROMANCY:
+            return CBBLK(ch, C_NRM);
+        case SCHOOL_ENCHANTMENT:
+            return CBYEL(ch, C_NRM);
+        case SCHOOL_ABJURATION:
+            return CBBLU(ch, C_NRM);
+        case SCHOOL_ALTERATION:
+            return CBWHT(ch, C_NRM);
+        default:
+            return CCNRM(ch, C_NRM);
+    }
+}
+
+/**
+ * Safely append formatted string to buffer with overflow protection
+ *
+ * This helper prevents buffer overflows that can freeze players (requiring reconnect).
+ * If overflow would occur, appends "***OVERFLOW***" message and returns FALSE.
+ *
+ * @param buffer The destination buffer
+ * @param bufsize Total size of the buffer
+ * @param overflow_occurred Pointer to flag that tracks if overflow has occurred
+ * @param format Printf-style format string
+ * @param ... Variable arguments for format string
+ * @return TRUE if append succeeded, FALSE if overflow would occur
+ */
+static int safe_strcat_formatted(char *buffer, size_t bufsize, int *overflow_occurred, const char *format, ...)
+{
+    size_t current_len;
+    size_t remaining;
+    int written;
+    va_list args;
+
+    /* If overflow already occurred, don't append anything more */
+    if (*overflow_occurred)
+        return FALSE;
+
+    current_len = strlen(buffer);
+    remaining = bufsize - current_len;
+
+    /* Reserve space for potential overflow message */
+    if (remaining < 100) {
+        snprintf(buffer + current_len, remaining, "\r\n***LISTA TRUNCADA (OVERFLOW)***\r\n");
+        *overflow_occurred = TRUE;
+        return FALSE;
+    }
+
+    va_start(args, format);
+    written = vsnprintf(buffer + current_len, remaining, format, args);
+    va_end(args);
+
+    /* Check if output was truncated */
+    if (written < 0 || (size_t)written >= remaining) {
+        /* Truncation occurred, add overflow message */
+        snprintf(buffer + current_len, remaining, "\r\n***LISTA TRUNCADA (OVERFLOW)***\r\n");
+        *overflow_occurred = TRUE;
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
+/* Analyze weather conditions and show magical effects */
+static void show_magical_conditions(struct char_data *ch, struct weather_data *weather)
+{
+    /* Defensive programming: validate inputs */
+    if (!ch || !weather) {
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: show_magical_conditions called with NULL pointer(s)");
+        return;
+    }
+
+    /* Use reasonable buffer sizes for weather display (1KB each is more than enough) */
+    char favored_schools[1024] = "";
+    char unfavored_schools[1024] = "";
+    char favored_elements[1024] = "";
+    char unfavored_elements[1024] = "";
+    int has_favored_schools = 0, has_unfavored_schools = 0;
+    int has_favored_elements = 0, has_unfavored_elements = 0;
+    size_t len; /* For safe buffer management */
+
+    /* Check spell schools */
+    if (weather->sky >= SKY_RAINING && weather->humidity > 0.6) {
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sEvocação%s (+15%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_EVOCATION), CCNRM(ch, C_NRM));
+        }
+        has_favored_schools = 1;
+    } else if (weather->sky <= SKY_CLOUDLESS && weather->humidity < 0.4) {
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sEvocação%s (-10%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_schools = 1;
+    }
+
+    if (weather->humidity >= 0.4 && weather->humidity <= 0.7) {
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sConjuração%s (+10%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_CONJURATION), CCNRM(ch, C_NRM));
+        }
+        has_favored_schools = 1;
+    }
+
+    if (weather->sky == SKY_CLOUDY && weather->humidity > 0.8) {
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sIlusão%s (+20%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_ILLUSION), CCNRM(ch, C_NRM));
+        }
+        has_favored_schools = 1;
+    } else if (weather->sky == SKY_CLOUDLESS) {
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sIlusão%s (-15%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_schools = 1;
+    }
+
+    if (weather->sky == SKY_CLOUDLESS && weather->humidity < 0.5) {
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sAdivinhação%s (+15%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_DIVINATION), CCNRM(ch, C_NRM));
+        }
+        has_favored_schools = 1;
+    } else if (weather->sky >= SKY_RAINING) {
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sAdivinhação%s (-10%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_schools = 1;
+    }
+
+    if (weather->sky >= SKY_RAINING) {
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sNecromancia%s (+20%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_NECROMANCY), CCNRM(ch, C_NRM));
+        }
+        has_favored_schools = 1;
+    } else if (weather->sky == SKY_CLOUDLESS) {
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sNecromancia%s (-15%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_schools = 1;
+    }
+
+    if (weather->pressure > 1020) {
+        len = strlen(favored_schools);
+        if (len < sizeof(favored_schools) - 100) { /* Ensure enough space */
+            snprintf(favored_schools + len, sizeof(favored_schools) - len, "  %sEncantamento%s (+5%%)\r\n",
+                     get_weather_school_color(ch, SCHOOL_ENCHANTMENT), CCNRM(ch, C_NRM));
+        }
+        has_favored_schools = 1;
+    } else if (weather->pressure < 980) {
+        len = strlen(unfavored_schools);
+        if (len < sizeof(unfavored_schools) - 100) { /* Ensure enough space */
+            snprintf(unfavored_schools + len, sizeof(unfavored_schools) - len, "  %sEncantamento%s (-5%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_schools = 1;
+    }
+
+    /* Check spell elements */
+    if (weather->humidity < 0.3) {
+        len = strlen(favored_elements);
+        if (len < sizeof(favored_elements) - 100) { /* Ensure enough space */
+            snprintf(favored_elements + len, sizeof(favored_elements) - len, "  %sFogo%s (+25%%)\r\n",
+                     get_weather_element_color(ch, ELEMENT_FIRE), CCNRM(ch, C_NRM));
+        }
+        has_favored_elements = 1;
+    } else if (weather->humidity > 0.7) {
+        len = strlen(unfavored_elements);
+        if (len < sizeof(unfavored_elements) - 100) { /* Ensure enough space */
+            snprintf(unfavored_elements + len, sizeof(unfavored_elements) - len, "  %sFogo%s (-25%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_elements = 1;
+    }
+
+    if (weather->humidity > 0.7) {
+        len = strlen(favored_elements);
+        if (len < sizeof(favored_elements) - 150) { /* Ensure enough space for longer line */
+            snprintf(favored_elements + len, sizeof(favored_elements) - len, "  %sÁgua%s (+25%%), %sGelo%s (+25%%)\r\n",
+                     get_weather_element_color(ch, ELEMENT_WATER), CCNRM(ch, C_NRM),
+                     get_weather_element_color(ch, ELEMENT_ICE), CCNRM(ch, C_NRM));
+        }
+        has_favored_elements = 1;
+    } else if (weather->humidity < 0.3) {
+        len = strlen(unfavored_elements);
+        if (len < sizeof(unfavored_elements) - 150) { /* Ensure enough space for longer line */
+            snprintf(unfavored_elements + len, sizeof(unfavored_elements) - len,
+                     "  %sÁgua%s (-25%%), %sGelo%s (-25%%)\r\n", CCRED(ch, C_NRM), CCNRM(ch, C_NRM), CCRED(ch, C_NRM),
+                     CCNRM(ch, C_NRM));
+        }
+        has_unfavored_elements = 1;
+    }
+
+    if (weather->humidity > 0.8 && weather->sky >= SKY_RAINING) {
+        len = strlen(favored_elements);
+        if (len < sizeof(favored_elements) - 100) { /* Ensure enough space */
+            snprintf(favored_elements + len, sizeof(favored_elements) - len, "  %sRaio%s (+30%%)\r\n",
+                     get_weather_element_color(ch, ELEMENT_LIGHTNING), CCNRM(ch, C_NRM));
+        }
+        has_favored_elements = 1;
+    } else if (weather->humidity < 0.2) {
+        len = strlen(unfavored_elements);
+        if (len < sizeof(unfavored_elements) - 100) { /* Ensure enough space */
+            snprintf(unfavored_elements + len, sizeof(unfavored_elements) - len, "  %sRaio%s (-20%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_elements = 1;
+    }
+
+    if (weather->winds > 15.0) {
+        len = strlen(favored_elements);
+        if (len < sizeof(favored_elements) - 100) { /* Ensure enough space */
+            snprintf(favored_elements + len, sizeof(favored_elements) - len, "  %sAr%s (+20%%)\r\n",
+                     get_weather_element_color(ch, ELEMENT_AIR), CCNRM(ch, C_NRM));
+        }
+        has_favored_elements = 1;
+    } else if (weather->winds < 2.0) {
+        len = strlen(unfavored_elements);
+        if (len < sizeof(unfavored_elements) - 100) { /* Ensure enough space */
+            snprintf(unfavored_elements + len, sizeof(unfavored_elements) - len, "  %sAr%s (-15%%)\r\n",
+                     CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+        }
+        has_unfavored_elements = 1;
+    }
+
+    /* Display magical conditions if character level is high enough */
+    if (GET_LEVEL(ch) >= 5 &&
+        (has_favored_schools || has_unfavored_schools || has_favored_elements || has_unfavored_elements)) {
+        send_to_char(ch, "\r\n%s=== Condições Mágicas ===%s\r\n", CBCYN(ch, C_NRM), CCNRM(ch, C_NRM));
+
+        if (has_favored_schools) {
+            send_to_char(ch, "%sEscolas Favorecidas:%s\r\n", CBGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+            send_to_char(ch, "%s", favored_schools);
+        }
+
+        if (has_unfavored_schools) {
+            send_to_char(ch, "%sEscolas Desfavorecidas:%s\r\n", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+            send_to_char(ch, "%s", unfavored_schools);
+        }
+
+        if (has_favored_elements) {
+            send_to_char(ch, "%sElementos Favorecidos:%s\r\n", CBGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+            send_to_char(ch, "%s", favored_elements);
+        }
+
+        if (has_unfavored_elements) {
+            send_to_char(ch, "%sElementos Desfavorecidos:%s\r\n", CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+            send_to_char(ch, "%s", unfavored_elements);
+        }
+    }
+}
+
 ACMD(do_weather)
 {
     zone_rnum zona;
-    zona = world[IN_ROOM(ch)].zone;
+    room_rnum room_num;
+    struct weather_data *weather;
     const char *sky_look[] = {"limpo", "nublado", "chuvoso", "relampejando", "nevando"};
 
-    int pressure = zone_table[zona].weather->pressure;
-    int press_diff = zone_table[zona].weather->press_diff;
-    int sky = zone_table[zona].weather->sky;
-    int temperature = zone_table[zona].weather->temperature;
-    float humidity = zone_table[zona].weather->humidity;
-    float wind = zone_table[zona].weather->winds;
+    /* Defensive programming: validate room and zone */
+    room_num = IN_ROOM(ch);
+    if (room_num == NOWHERE || room_num < 0 || room_num > top_of_world) {
+        send_to_char(ch, "Você não consegue sentir o clima aqui.\r\n");
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: do_weather - invalid room %d for %s", room_num, GET_NAME(ch));
+        return;
+    }
+
+    zona = world[room_num].zone;
+    if (zona < 0 || zona > top_of_zone_table) {
+        send_to_char(ch, "Você não consegue sentir o clima aqui.\r\n");
+        mudlog(NRM, LVL_IMMORT, TRUE, "SYSERR: do_weather - invalid zone %d for room %d", zona, room_num);
+        return;
+    }
+
+    weather = zone_table[zona].weather;
+    if (!weather) {
+        send_to_char(ch, "O clima local está muito instável para ser percebido.\r\n");
+        return;
+    }
+
+    int pressure = weather->pressure;
+    int press_diff = weather->press_diff;
+    int sky = weather->sky;
+    int temperature = weather->temperature;
+    float humidity = weather->humidity;
+    float wind = weather->winds;
 
     const char *weather_feel;
     const char *temp_feel;
@@ -1499,6 +1868,59 @@ ACMD(do_weather)
             send_to_char(ch, "Temperatura %d º.C, Umidade %.2f\r\n", temperature, humidity);
             send_to_char(ch, "Vento: %.2f m/s\r\n", wind);
         }
+
+        /* Show mana density if character has detect magic active */
+        if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
+            float mana_density = calculate_mana_density(ch);
+            const char *density_desc;
+            int color_level;
+            const char *density_color;
+
+            /* Get description and color level from helper function */
+            get_mana_density_description(mana_density, &density_desc, &color_level);
+
+            /* Map color level to color macro */
+            switch (color_level) {
+                case 0:
+                    density_color = CBCYN(ch, C_NRM);
+                    break;
+                case 1:
+                    density_color = CBGRN(ch, C_NRM);
+                    break;
+                case 2:
+                    density_color = CCYEL(ch, C_NRM);
+                    break;
+                case 3:
+                    density_color = CCRED(ch, C_NRM);
+                    break;
+                case 4:
+                default:
+                    density_color = CBRED(ch, C_NRM);
+                    break;
+            }
+
+            send_to_char(ch, "\r\n%sDensidade Mágica:%s %s%s%s (%.2f)\r\n", CBCYN(ch, C_NRM), CCNRM(ch, C_NRM),
+                         density_color, density_desc, CCNRM(ch, C_NRM), mana_density);
+
+            /* Explain what the density means for spellcasting */
+            if (mana_density >= 0.9) {
+                send_to_char(ch,
+                             "  %sAs energias mágicas fluem abundantemente aqui!%s\r\n"
+                             "  Magias consomem menos mana e são mais poderosas.\r\n",
+                             CBGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+            } else if (mana_density >= 0.7) {
+                send_to_char(ch, "  %sAs condições são favoráveis para conjuração.%s\r\n", CCGRN(ch, C_NRM),
+                             CCNRM(ch, C_NRM));
+            } else if (mana_density < 0.5) {
+                send_to_char(ch,
+                             "  %sAs energias mágicas estão fracas neste local.%s\r\n"
+                             "  Magias serão menos eficientes aqui.\r\n",
+                             CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+            }
+        }
+
+        /* Show magical conditions based on weather */
+        show_magical_conditions(ch, weather);
     } else {
         send_to_char(ch, " Você não tem idéia de como o tempo possa estar.\r\n");
     }
@@ -2366,6 +2788,7 @@ ACMD(do_toggle)
         {"autogold", PRF_AUTOGOLD, 0, "Autogold desligado.\r\n", "Autogold ligado.\r\n"},
         {"autosplit", PRF_AUTOSPLIT, 0, "Autosplit desligado.\r\n", "Autosplit ligado.\r\n"},
         {"autosac", PRF_AUTOSAC, 0, "Autosac desligado.\r\n", "Autosac ligado.\r\n"},
+        {"autoexam", PRF_AUTOEXAM, 0, "Auto examinar desligado.\r\n", "Auto examinar ligado.\r\n"},
         {"autoassist", PRF_AUTOASSIST, 0, "Autoassist desligado.\r\n", "Autoassist ligado.\r\n"},
         {"automap", PRF_AUTOMAP, 1, "Agora, você não irá mais ver o  mini-mapa.\r\n",
          "Agora, você irá ver o  mini-mapa.\r\n"},

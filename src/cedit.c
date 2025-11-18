@@ -136,6 +136,7 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->room_nums.ress_room_2 = CONFIG_RESS_ROOM_2;
     OLC_CONFIG(d)->room_nums.ress_room_3 = CONFIG_RESS_ROOM_3;
     OLC_CONFIG(d)->room_nums.ress_room_4 = CONFIG_RESS_ROOM_4;
+    OLC_CONFIG(d)->room_nums.dt_warehouse_room = CONFIG_DT_WAREHOUSE;
 
     /* Game Operation */
     OLC_CONFIG(d)->operation.DFLT_PORT = CONFIG_DFLT_PORT;
@@ -163,6 +164,8 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->experimental.dynamic_reputation = CONFIG_DYNAMIC_REPUTATION;
     OLC_CONFIG(d)->experimental.mob_emotion_social_chance = CONFIG_MOB_EMOTION_SOCIAL_CHANCE;
     OLC_CONFIG(d)->experimental.mob_emotion_update_chance = CONFIG_MOB_EMOTION_UPDATE_CHANCE;
+    OLC_CONFIG(d)->experimental.weather_affects_emotions = CONFIG_WEATHER_AFFECTS_EMOTIONS;
+    OLC_CONFIG(d)->experimental.weather_effect_multiplier = CONFIG_WEATHER_EFFECT_MULTIPLIER;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -315,6 +318,7 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_RESS_ROOM_2 = OLC_CONFIG(d)->room_nums.ress_room_2;
     CONFIG_RESS_ROOM_3 = OLC_CONFIG(d)->room_nums.ress_room_3;
     CONFIG_RESS_ROOM_4 = OLC_CONFIG(d)->room_nums.ress_room_4;
+    CONFIG_DT_WAREHOUSE = OLC_CONFIG(d)->room_nums.dt_warehouse_room;
 
     /* Game Operation */
     CONFIG_DFLT_PORT = OLC_CONFIG(d)->operation.DFLT_PORT;
@@ -342,6 +346,8 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_DYNAMIC_REPUTATION = OLC_CONFIG(d)->experimental.dynamic_reputation;
     CONFIG_MOB_EMOTION_SOCIAL_CHANCE = OLC_CONFIG(d)->experimental.mob_emotion_social_chance;
     CONFIG_MOB_EMOTION_UPDATE_CHANCE = OLC_CONFIG(d)->experimental.mob_emotion_update_chance;
+    CONFIG_WEATHER_AFFECTS_EMOTIONS = OLC_CONFIG(d)->experimental.weather_affects_emotions;
+    CONFIG_WEATHER_EFFECT_MULTIPLIER = OLC_CONFIG(d)->experimental.weather_effect_multiplier;
 
     /* Emotion System Configuration */
     /* Visual indicator thresholds */
@@ -714,11 +720,18 @@ int save_config(IDXTYPE nowhere)
             "ress_room_1 = %d\n"
             "ress_room_2 = %d\n"
             "ress_room_3 = %d\n"
-            "ress_room_4 = %d\n",
+            "ress_room_4 = %d\n\n",
             CONFIG_RESS_ROOM_1 != NOWHERE ? CONFIG_RESS_ROOM_1 : -1,
             CONFIG_RESS_ROOM_2 != NOWHERE ? CONFIG_RESS_ROOM_2 : -1,
             CONFIG_RESS_ROOM_3 != NOWHERE ? CONFIG_RESS_ROOM_3 : -1,
             CONFIG_RESS_ROOM_4 != NOWHERE ? CONFIG_RESS_ROOM_4 : -1);
+
+    fprintf(fl,
+            "* The virtual number of the death trap object warehouse room.\n"
+            "* Objects from entities dying in death traps are sent here when\n"
+            "* dts_are_dumps is FALSE. Use -1 for 'no such room'.\n"
+            "dt_warehouse_room = %d\n",
+            CONFIG_DT_WAREHOUSE != NOWHERE ? CONFIG_DT_WAREHOUSE : -1);
 
     fprintf(fl, "\n\n\n* [ Game Operation Options ]\n");
 
@@ -890,6 +903,16 @@ int save_config(IDXTYPE nowhere)
             "* Probability (%%) of mob updating emotions per emotion tick (4 seconds)\n"
             "mob_emotion_update_chance = %d\n\n",
             CONFIG_MOB_EMOTION_UPDATE_CHANCE);
+
+    fprintf(fl,
+            "* Enable weather affects on mob emotions?\n"
+            "weather_affects_emotions = %d\n\n",
+            CONFIG_WEATHER_AFFECTS_EMOTIONS);
+
+    fprintf(fl,
+            "* Weather emotion effect multiplier (0-200%%, default 100)\n"
+            "weather_effect_multiplier = %d\n\n",
+            CONFIG_WEATHER_EFFECT_MULTIPLIER);
 
     fprintf(fl, "\n\n* [ Emotion System Configuration ]\n");
 
@@ -1120,6 +1143,7 @@ static void cedit_disp_room_numbers(struct descriptor_data *d)
         "%s5%s) Ress Room #2    : %s%d\r\n"
         "%s6%s) Ress Room #3    : %s%d\r\n"
         "%sJ%s) Ress Room #4    : %s%d\r\n"
+        "%sK%s) DT Warehouse Room    : %s%d\r\n"
         "%sQ%s) Exit To The Main Menu\r\n"
         "Enter your choice : ",
         grn, nrm, cyn, OLC_CONFIG(d)->room_nums.newbie_start_room, grn, nrm, cyn,
@@ -1130,7 +1154,7 @@ static void cedit_disp_room_numbers(struct descriptor_data *d)
         OLC_CONFIG(d)->room_nums.donation_room_2, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.donation_room_3, grn, nrm,
         cyn, OLC_CONFIG(d)->room_nums.donation_room_4, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_1, grn, nrm,
         cyn, OLC_CONFIG(d)->room_nums.ress_room_2, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_3, grn, nrm, cyn,
-        OLC_CONFIG(d)->room_nums.ress_room_4, grn, nrm);
+        OLC_CONFIG(d)->room_nums.ress_room_4, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.dt_warehouse_room, grn, nrm);
 
     OLC_MODE(d) = CEDIT_ROOM_NUMBERS_MENU;
 }
@@ -1220,15 +1244,27 @@ static void cedit_disp_experimental_options(struct descriptor_data *d)
                     "%s3%s) Sociais Contextuais de Mobs (reputação/alinhamento/posição) : %s%s\r\n"
                     "%s4%s) Sistema de Reputação Dinâmica (combate/cura/dar/roubar - exclui quests) : %s%s\r\n"
                     "%s5%s) Chance de Social de Emoção de Mob (%%) : %s%d\r\n"
-                    "%s6%s) Chance de Atualização de Emoção de Mob (%%) : %s%d\r\n"
-                    "%s0%s) Retornar ao Menu anterior\r\n"
-                    "Selecione uma opção : ",
+                    "%s6%s) Chance de Atualização de Emoção de Mob (%%) : %s%d\r\n",
                     grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->experimental.new_auction_system), grn, nrm, cyn,
                     CHECK_VAR(OLC_CONFIG(d)->experimental.experimental_bank_system), grn, nrm, cyn,
                     CHECK_VAR(OLC_CONFIG(d)->experimental.mob_contextual_socials), grn, nrm, cyn,
                     CHECK_VAR(OLC_CONFIG(d)->experimental.dynamic_reputation), grn, nrm, cyn,
                     OLC_CONFIG(d)->experimental.mob_emotion_social_chance, grn, nrm, cyn,
-                    OLC_CONFIG(d)->experimental.mob_emotion_update_chance, grn, nrm);
+                    OLC_CONFIG(d)->experimental.mob_emotion_update_chance);
+
+    /* Weather emotion options - only show if mob_contextual_socials is enabled */
+    if (OLC_CONFIG(d)->experimental.mob_contextual_socials) {
+        write_to_output(d,
+                        "%s7%s) Clima Afeta Emoções de Mobs : %s%s\r\n"
+                        "%s8%s) Multiplicador de Efeito do Clima (%%) : %s%d\r\n",
+                        grn, nrm, cyn, CHECK_VAR(OLC_CONFIG(d)->experimental.weather_affects_emotions), grn, nrm, cyn,
+                        OLC_CONFIG(d)->experimental.weather_effect_multiplier);
+    }
+
+    write_to_output(d,
+                    "%s0%s) Retornar ao Menu anterior\r\n"
+                    "Selecione uma opção : ",
+                    grn, nrm);
 
     OLC_MODE(d) = CEDIT_EXPERIMENTAL_MENU;
 }
@@ -1345,6 +1381,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 40;     /* Easier to abandon */
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 75; /* Harder to join */
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 65;       /* More envious */
+
+            /* Combat behavior - Aggressive preset: more anger bonus, less pain penalty */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 60; /* Easier to trigger anger bonus */
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 20;   /* Higher damage bonus */
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 30;   /* Higher attack bonus */
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 40;   /* Less sensitive to pain */
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 80;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 1; /* Reduced penalties */
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 3;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 3;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 7;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 15;
             break;
 
         case 2: /* Defensive - Mobs flee more easily, show fear */
@@ -1435,6 +1485,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 35;     /* Easier to abandon */
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 65; /* Easier join */
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 75;       /* Less envious */
+
+            /* Combat behavior - Defensive preset: less anger bonus, more pain penalty */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 80; /* Harder to trigger anger bonus */
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 10;   /* Lower damage bonus */
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 20;   /* Lower attack bonus */
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 20;   /* More sensitive to pain */
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 40;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 60;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 2;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 3; /* Higher penalties */
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 5;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 7;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 15;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 25;
             break;
 
         case 3: /* Balanced - Default values (Phase 2 defaults) */
@@ -1521,6 +1585,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 30;
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 70;
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 70;
+
+            /* Combat behavior thresholds and modifiers - balanced */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 15;
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 25;
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 30;
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 2;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 4;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 5;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 10;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 20;
             break;
 
         case 4: /* Sensitive - Emotions display more, memory lasts longer */
@@ -1611,6 +1689,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 35;     /* Easier abandon */
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 60; /* Easier join */
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 75;       /* Less envious */
+
+            /* Combat behavior - Sensitive preset: balanced combat emotions */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 15;
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 25;
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 30;
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 2;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 4;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 5;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 10;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 20;
             break;
 
         case 5: /* Mercantile - Trading-focused, fair prices, trusting */
@@ -1697,6 +1789,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 30;
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 65;
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 75;
+
+            /* Combat behavior - Mercantile preset: balanced combat */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 15;
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 25;
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 30;
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 50;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 70;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 2;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 4;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 5;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 10;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 20;
             break;
 
         case 6: /* Hermit - Antisocial, refuses interaction, distrusting */
@@ -1783,6 +1889,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 25;     /* Easy abandon */
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 80; /* Hard to join */
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 60;       /* Very envious */
+
+            /* Combat behavior - Hermit preset: moderate combat emotions */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 12;
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 20;
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 35;
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 55;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 2;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 3;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 5;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 10;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 18;
             break;
 
         case 7: /* Loyal - Group-focused, stays with allies, faithful */
@@ -1869,6 +1989,20 @@ static void cedit_load_emotion_preset(struct descriptor_data *d, int preset)
             OLC_CONFIG(d)->emotion_config.group_loyalty_low_threshold = 35;     /* Hard to abandon */
             OLC_CONFIG(d)->emotion_config.group_friendship_high_threshold = 55; /* VERY easy to join */
             OLC_CONFIG(d)->emotion_config.group_envy_high_threshold = 80;       /* Not envious */
+
+            /* Combat behavior - Loyal preset: fight for allies */
+            OLC_CONFIG(d)->emotion_config.combat_anger_high_threshold = 65; /* Easier to get angry defending */
+            OLC_CONFIG(d)->emotion_config.combat_anger_damage_bonus = 18;   /* Higher damage for allies */
+            OLC_CONFIG(d)->emotion_config.combat_anger_attack_bonus = 28;
+            OLC_CONFIG(d)->emotion_config.combat_pain_low_threshold = 35;
+            OLC_CONFIG(d)->emotion_config.combat_pain_moderate_threshold = 55;
+            OLC_CONFIG(d)->emotion_config.combat_pain_high_threshold = 75;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_low = 1;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_mod = 2;
+            OLC_CONFIG(d)->emotion_config.combat_pain_accuracy_penalty_high = 3; /* Less affected by pain */
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_low = 4;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_mod = 8;
+            OLC_CONFIG(d)->emotion_config.combat_pain_damage_penalty_high = 15;
             break;
     }
 }
@@ -2287,6 +2421,12 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = CEDIT_RESS_ROOM_4;
                     return;
 
+                case 'k':
+                case 'K':
+                    write_to_output(d, "Enter the vnum for DT warehouse room : ");
+                    OLC_MODE(d) = CEDIT_DT_WAREHOUSE_ROOM;
+                    return;
+
                 case 'h':
                 case 'H':
                     write_to_output(d, "Enter the room's vnum for hometown 4 : ");
@@ -2490,6 +2630,10 @@ void cedit_parse(struct descriptor_data *d, char *arg)
 
                 case '3':
                     TOGGLE_VAR(OLC_CONFIG(d)->experimental.mob_contextual_socials);
+                    /* If disabling mob_contextual_socials, also disable weather affects emotions */
+                    if (!OLC_CONFIG(d)->experimental.mob_contextual_socials) {
+                        OLC_CONFIG(d)->experimental.weather_affects_emotions = NO;
+                    }
                     break;
 
                 case '4':
@@ -2507,6 +2651,28 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                         d, "\r\nEnter the probability (%%) of mob updating emotions per emotion tick (0-100) : ");
                     OLC_MODE(d) = CEDIT_MOB_EMOTION_UPDATE_CHANCE;
                     return;
+
+                case '7':
+                    /* Only allow toggling if mob_contextual_socials is enabled */
+                    if (OLC_CONFIG(d)->experimental.mob_contextual_socials) {
+                        TOGGLE_VAR(OLC_CONFIG(d)->experimental.weather_affects_emotions);
+                    } else {
+                        write_to_output(
+                            d, "\r\nWeather affects emotions requires mob contextual socials to be enabled!\r\n");
+                    }
+                    break;
+
+                case '8':
+                    /* Only allow setting if mob_contextual_socials is enabled */
+                    if (OLC_CONFIG(d)->experimental.mob_contextual_socials) {
+                        write_to_output(d, "\r\nEnter weather effect multiplier (0-200%%, default 100) : ");
+                        OLC_MODE(d) = CEDIT_WEATHER_EFFECT_MULTIPLIER;
+                        return;
+                    } else {
+                        write_to_output(
+                            d, "\r\nWeather effect multiplier requires mob contextual socials to be enabled!\r\n");
+                    }
+                    break;
 
                 case '0':
                 case 'q':
@@ -2539,6 +2705,17 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                                 "Enter the probability (%%) of mob updating emotions per emotion tick (0-100) : ");
             } else {
                 OLC_CONFIG(d)->experimental.mob_emotion_update_chance = LIMIT(atoi(arg), 0, 100);
+                cedit_disp_experimental_options(d);
+            }
+            break;
+
+        case CEDIT_WEATHER_EFFECT_MULTIPLIER:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter weather effect multiplier (0-200%%, default 100) : ");
+            } else {
+                OLC_CONFIG(d)->experimental.weather_effect_multiplier = LIMIT(atoi(arg), 0, 200);
                 cedit_disp_experimental_options(d);
             }
             break;
@@ -3272,6 +3449,21 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                                 "Enter the vnum for ress room #4 : ");
             } else {
                 OLC_CONFIG(d)->room_nums.ress_room_4 = atoi(arg);
+                cedit_disp_room_numbers(d);
+            }
+            break;
+
+        case CEDIT_DT_WAREHOUSE_ROOM:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter the vnum for DT warehouse room : ");
+            } else if (real_room(atoi(arg)) == NOWHERE) {
+                write_to_output(d,
+                                "That room doesn't exist!\r\n"
+                                "Enter the vnum for DT warehouse room : ");
+            } else {
+                OLC_CONFIG(d)->room_nums.dt_warehouse_room = atoi(arg);
                 cedit_disp_room_numbers(d);
             }
             break;

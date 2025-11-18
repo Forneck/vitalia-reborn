@@ -487,9 +487,6 @@ void char_to_room(struct char_data *ch, room_rnum room)
         world[room].people = ch;
         IN_ROOM(ch) = room;
 
-        autoquest_trigger_check(ch, 0, 0, AQ_ROOM_FIND);
-        autoquest_trigger_check(ch, 0, 0, AQ_MOB_FIND);
-
         /* Check for escort quest completion */
         if (!IS_NPC(ch) && GET_QUEST_TYPE(ch) == AQ_MOB_ESCORT) {
             qst_rnum rnum = real_quest(GET_QUEST(ch));
@@ -1107,17 +1104,27 @@ void extract_char_final(struct char_data *ch)
     if (GROUP(ch))
         leave_group(ch);
 
+    /* Determine target room for objects.
+     * If DTs are not dumps and character is in a death trap,
+     * send objects to warehouse instead of death trap room. */
+    room_rnum target_room = IN_ROOM(ch);
+    if (!CONFIG_DTS_ARE_DUMPS && ROOM_FLAGGED(IN_ROOM(ch), ROOM_DEATH)) {
+        room_rnum warehouse = real_room(CONFIG_DT_WAREHOUSE);
+        if (warehouse != NOWHERE)
+            target_room = warehouse;
+    }
+
     /* transfer objects to room, if any */
     while (ch->carrying) {
         obj = ch->carrying;
         obj_from_char(obj);
-        obj_to_room(obj, IN_ROOM(ch));
+        obj_to_room(obj, target_room);
     }
 
     /* transfer equipment to room, if any */
     for (i = 0; i < NUM_WEARS; i++)
         if (GET_EQ(ch, i))
-            obj_to_room(unequip_char(ch, i), IN_ROOM(ch));
+            obj_to_room(unequip_char(ch, i), target_room);
 
     if (FIGHTING(ch))
         stop_fighting(ch);
