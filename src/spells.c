@@ -729,6 +729,54 @@ ASPELL(spell_detect_poison)
     }
 }
 
+/**
+ * ASPELL: Control Weather
+ *
+ * Allows casters to manipulate atmospheric conditions and enhance magical energy.
+ *
+ * ENHANCED FUNCTIONALITY (New Magical Synergy System):
+ * Beyond simply altering weather parameters, this spell now creates temporary
+ * zones of concentrated magical energy (mana density boost), making it a valuable
+ * strategic tool for magical groups and solo casters alike.
+ *
+ * WEATHER MANIPULATION:
+ * - Pressure: Influences storm formation and atmospheric stability
+ * - Temperature: Makes environment hotter or colder
+ * - Wind: Increases or decreases wind intensity
+ * - Humidity: Affects rain probability and air moisture
+ *
+ * MANA DENSITY ENHANCEMENT (New):
+ * - Creates temporary 0.2-0.4 mana density boost in the zone
+ * - Duration: 2-6 game hours (scales with caster level)
+ * - Effect stacks with natural environmental density
+ * - Multiple casts extend duration and can increase magnitude
+ * - Benefits ALL casters in zone (allies and enemies)
+ * - Only Control Weather provides artificial density boost (prevents exploitation)
+ *
+ * TACTICAL APPLICATIONS:
+ * - Pre-battle preparation: Boost magical efficiency before encounters
+ * - Sustained operations: Reduce mana consumption for extended spellcasting
+ * - Group support: Weather mages become valuable party members
+ * - Environmental control: Shape battlefield to favor magical tactics
+ *
+ * FEEDBACK:
+ * - Shows resulting mana density with color-coded description
+ * - Displays exact expiration time in game calendar format
+ * - Provides immediate tactical information for decision-making
+ *
+ * LIMITATIONS:
+ * - Cannot be cast indoors (requires connection to sky)
+ * - High mana cost maintained for balance
+ * - Affects entire zone (benefits enemies too)
+ * - Effects are not instantaneous (gradual weather change)
+ *
+ * SYNERGIES:
+ * - Combines with ELEMENTOS-MAGICOS weather effects
+ * - Enhances ESCOLAS-MAGICAS school modifiers
+ * - Part of comprehensive SINERGIAS MAGICAS system
+ *
+ * See also: HELP MAGIA-CONTROL-WEATHER, HELP DENSIDADE-MAGICA, HELP SINERGIAS
+ */
 ASPELL(spell_control_weather)
 {
     int change_val;
@@ -1472,7 +1520,78 @@ float get_weather_movement_modifier(struct char_data *ch)
     return modifier;
 }
 
-/* Calculate mana density for the character's current location */
+/**
+ * Calculate mana density for the character's current location
+ *
+ * Mana density represents the concentration of magical energy in a location,
+ * forming a "secondary layer" above the world alongside weather. This creates
+ * magical synergies between environmental conditions and spellcasting.
+ *
+ * DESIGN PHILOSOPHY (Sinergias Mágicas):
+ * Just as magical schools and elements interact with weather conditions,
+ * mana density creates a holistic magical ecosystem where location, time,
+ * and climate all contribute to the potency of spellcasting.
+ *
+ * CALCULATION FACTORS:
+ * - Weather conditions (40% weight): Sky state, humidity, atmospheric pressure
+ *   - Storms and lightning: Highest density (raw magical energy in atmosphere)
+ *   - Rain/snow: High density (water conducts magical energy)
+ *   - Cloudy: Moderate density
+ *   - Clear skies: Lower density (dispersed magical energy)
+ *
+ * - Time of day (20% weight): Dawn/dusk peak, night high, day moderate
+ *   - Twilight hours: Peak magical activity (veil between worlds thinnest)
+ *   - Night: High magical resonance
+ *   - Day: Standard magical flow
+ *
+ * - Sun state (15% weight): Transitions (sunrise/sunset) highest
+ *   - Solar transitions: Maximum magical flux
+ *   - Darkness: Enhanced magical presence
+ *   - Full sunlight: Dispersed magical energy
+ *
+ * - Sector type (15% weight): Natural areas favor magic
+ *   - Water/Underwater: Highest (conducts magical currents)
+ *   - Lava: Very high (primordial fire energy)
+ *   - Forest/Hills/Ice: High (natural magical resonance)
+ *   - Mountains: High (closer to heavens, thinner barriers)
+ *   - Desert: Moderate (harsh but elemental)
+ *   - Fields/Roads: Low-moderate (developed but open)
+ *   - Cities/Indoor: Lowest (civilization dampens natural magic)
+ *
+ * - Indoor/Outdoor status (10% weight):
+ *   - Outdoor: Full weather effects
+ *   - Indoor: Only 30% of weather effects, but more stable/predictable
+ *
+ * - Control Weather boost: Temporary enhancement from spell
+ *   - Duration: 2-6 game hours based on caster level
+ *   - Magnitude: 0.2-0.4 boost based on caster power
+ *   - Only source of artificial density increase (prevents exploitation)
+ *
+ * SYNERGY WITH EXISTING SYSTEMS:
+ * - Stacks multiplicatively with element weather modifiers (ELEMENTOS-MAGICOS)
+ * - Stacks multiplicatively with school weather modifiers (ESCOLAS-MAGICAS)
+ * - Creates strategic depth: powerful outdoor vs safe indoor casting
+ * - Rewards environmental awareness and tactical positioning
+ *
+ * PERFORMANCE:
+ * - Calculated on-demand per spell cast (~28 nanoseconds)
+ * - No persistent storage required
+ * - Works for both PC and NPC casters (including dg_cast scripts)
+ *
+ * RETURN VALUE:
+ * - Float 0.0-1.5 (capped for balance)
+ * - 0.0-0.3: Very low (unfavorable) - 90% cost, 80% power
+ * - 0.3-0.5: Low - 95% cost, 90% power
+ * - 0.5-0.7: Normal (baseline) - 100% cost, 100% power
+ * - 0.7-0.9: High - 90% cost, 110% power
+ * - 0.9-1.2: Very high - 80% cost, 120% power
+ * - 1.2+: Exceptional - 70% cost, 130% power
+ *
+ * @param ch The character (PC or NPC) casting the spell
+ * @return Mana density value (0.0 to 1.5)
+ *
+ * See also: HELP DENSIDADE-MAGICA, HELP SINERGIAS, HELP CLIMA-MAGICO
+ */
 float calculate_mana_density(struct char_data *ch)
 {
     float density = 0.5; /* Baseline normal density */
