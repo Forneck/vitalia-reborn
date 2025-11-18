@@ -164,9 +164,13 @@ quanta energia e necessaria para conjura-las e quao poderosas se tornam.
    - Modificadores de equipamento e niveis
 
    Exemplo de Sinergia Completa:
-   Um mago de fogo conjurando durante tempestade (alta densidade 1.1) em
-   clima seco (bonus fogo +25%) com escola Evocacao (bonus tempestade +15%)
-   tera: 90% custo mana, ~155% poder de dano total!
+   Um mago de fogo conjurando em clima seco claro (baixa umidade, bonus fogo
+   +25%) com alta densidade magica (1.1 via Control Weather, bonus +10%)
+   tera: 90% custo mana, ~137% poder de dano total!
+   
+   Um mago de raio conjurando durante tempestade chuvosa (alta umidade, bonus
+   raio +30%) com alta densidade (1.1, bonus +10%) e escola Evocacao (bonus
+   tempestade +15%) tera: 90% custo mana, ~160% poder de dano total!
 
 Veja tambem: MAGIA-CONTROL-WEATHER, MAGIA-DETECT-MAGIC, CLIMA-MAGICO,
 SINERGIAS, ELEMENTOS-MAGICOS, ESCOLAS-MAGICAS, WEATHER, LOOK

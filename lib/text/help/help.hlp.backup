@@ -5982,45 +5982,98 @@ Essa magia usara a forca da natureza para atingir o alvo. Somente
 e possivel usar essa magia em ambientes externos, e com tempo
 chuvoso ou pior.
 
-Veja Tambem: MAGIA-CONTROL-WEATHER
+Veja Tambem: MAGIA-CONTROL-WEATHER, WEATHER
+#1
+MAGIA-CASCADE-OF-HAIL
+
+Uso        : cast 'cascade of hail' <alvo>
+Acumulativa: -
+Duracao    : Instantanea
+Nivel      : Druida Nivel 17
+
+Essa magia de ataque cria tres ondas de granizo que atingem a todos
+em uma sala. Deve-se ter cuidado ao usa-la.
+#1
+MAGIA-CHARM-PERSON
+
+Uso        : cast 'charm person' <alvo>
+Acumulativa: Nao
+Duracao    : (432/Inteligencia do alvo) Horas
+Nivel      : Mago Nivel 25, Clerigo Nivel 28, Druida Nivel 24
+
+Nao e possivel encantar alguem que ja esteja encantado, e tambem
+encantar a si mesmo ou alguem de nivel mais alto que o seu.
+O alvo fara um teste contra paralisar, e se nao passar fica
+encantado, obedecendo todas as ordens de quem o encantou.
+
+Um alvo encantado seguira voce e nao podera te atacar. Voce
+pode comandar um alvo encantado atraves do comando order.
+
+Se o seu alvo for outro jogador e este estiver com a protecao de
+summon (nosummon) ativada, nao sera possivel encanta-lo.
+
+Veja Tambem: FOLLOW, ORDER, NOSUMMON
+#1
+MAGIA-CHILL-TOUCH
+
+Uso        : cast 'chill touch' <alvo>
+Acumulativa: -
+Duracao    : Instantanea
+Nivel      : Mago Nivel 3
+Resistencia: Contra magia para metade do dano
+
+Esta magia e mais poderosa que magic missile.
+O alvo que nao passar em um teste de resistencia
+perdera um ponto de forca.
+
+Veja Tambem: MAGIA-MAGIC-MISSILE
+#1
+MAGIA-COLOR-SPRAY
+
+Uso        : cast 'color spray' <alvo>
+Acumulativa: -
+Duracao    : Instantanea
+Nivel      : Mago Nivel 17
+Resistencia: Contra magia para metade do dano
+
+Esta magia e mais poderosa que lightning bolt.
+
+Veja Tambem: MAGIA-LIGHTNING-BOLT
+#1
+MAGIA-CONTROL-WEATHER
 
 Uso: cast 'control weather' <propriedade>=<aumentar|diminuir>
 Acumulativa: Sim
-Duracao: Mudancas graduais + Bonus de densidade (2-6 horas)
+Duracao: -
 Nivel: Clerigo 26, Druida 55
 
 A magia Control Weather permite ao conjurador influenciar as condicoes
-climaticas da regiao e criar zonas de alta densidade magica.
+climaticas da regiao. O efeito nao e imediato, mas altera gradualmente
+o clima ao longo do tempo.
 
 Parametros:
-pressao=aumentar|diminuir - Influencia tempestades
-temperatura=aumentar|diminuir - Altera calor/frio
-vento=aumentar|diminuir - Modifica intensidade dos ventos
-umidade=aumentar|diminuir - Afeta chuva e umidade do ar
 
-BONUS DE DENSIDADE MAGICA (Novo):
-Cria zona temporaria de alta densidade magica que:
-- Reduz custo de mana (70-100% do normal)
-- Aumenta poder magico (100-130% de efetividade)
-- Dura 2-6 horas do jogo (baseado no nivel)
-- Beneficia TODOS os conjuradores (aliados e inimigos)
+pressao=aumentar|diminuir - Influencia a formacao de tempestades e 
+mudancas bruscas no clima.
 
-Ao conjurar, voce vera:
-"Voce sente as energias magicas se concentrarem na area!
-Densidade magica agora: muito alta (1.05)
-Efeito ativo ate as 3 horas da tarde do dia 15 de Maqizie"
+temperatura=aumentar|diminuir - Torna o ambiente mais quente ou mais frio.
 
-APLICACOES:
-- Pre-batalha: Vantagem magica em encontros dificeis
-- Suporte de grupo: Reduz custos para todos os magos
-- Controle de campo: Molda vantagem tatica
+vento=aumentar|diminuir - Aumenta ou reduz a intensidade dos ventos.
 
-LIMITACOES:
-- Nao funciona em areas internas
-- Custo de mana permanece alto
-- Efeito de area (inimigos se beneficiam)
+umidade=aumentar|diminuir - Torna o ar mais seco ou mais umido, afetando
+a possibilidade de chuva.
 
-Veja tambem: WEATHER, DENSIDADE-MAGICA, SINERGIAS, TIME
+
+Exemplo de uso:
+
+> cast 'control weather' pressao=aumentar
+
+Embora esta magia possa alterar significativamente o clima ao longo do
+tempo, os efeitos nao sao instantaneos. Se deseja mudancas climaticas
+imediatas, sera necessario lancar a magia varias vezes ou combinar
+diferentes modificacoes no ambiente.
+
+Veja tambem: WEATHER, TIME
 #1
 MAGIA-CREATE-FOOD
 
@@ -16389,32 +16442,6 @@ errado. Agora, com o surgimento de novas teorias magicas, e' possivel
 combinar os efeitos de algumas magias com outras criando sinergias e
 efeitos melhores.
 
-   TIPOS DE SINERGIAS MAGICAS:
-
-   1. SINERGIAS DE PROTECAO ("Cebola Magica"):
-   Magos experientes podem criar camadas de protecao, como as camadas de
-   uma cebola. Magias como Fireshield, Thistlecoat, Windwall e Stoneskin
-   podem ser combinadas no mesmo alvo, criando multiplas camadas de defesa.
-   Cada camada age independentemente, proporcionando protecao abrangente.
-
-   2. SINERGIAS AMBIENTAIS (Nova Descoberta):
-   O ambiente afeta profundamente a eficacia magica. A densidade magica
-   do local, influenciada por clima, hora do dia, tipo de terreno e
-   localizacao (externo/interno), altera tanto o custo quanto o poder
-   das magias. Veja DENSIDADE-MAGICA para detalhes completos.
-
-   3. SINERGIAS ELEMENTAIS E DE ESCOLA:
-   Elementos magicos (ELEMENTOS-MAGICOS) e Escolas Arcanas (ESCOLAS-MAGICAS)
-   interagem com as condicoes climaticas. Magias de fogo prosperam em clima
-   seco, enquanto magias de agua ganham poder em alta umidade.
-
-   4. SINERGIAS DE ESTACOES E BIOMAS:
-   As quatro estacoes do ano combinam-se com diferentes biomas, criando
-   condicoes unicas que afetam sobrevivencia e eficacia magica.
-
-Veja tambem: DENSIDADE-MAGICA, CLIMA-MAGICO, ELEMENTOS-MAGICOS, 
-ESCOLAS-MAGICAS, WEATHER, MAGIA-CONTROL-WEATHER
-
 #1
 ESTACOES SEASONS
 
@@ -16876,14 +16903,7 @@ de seus feiticos.
    mas em dancar com ela, aproveitando seus ritmos e fluxos para amplificar
    o poder que ja reside dentro de si.
 
-   INTERACAO COM DENSIDADE MAGICA:
-
-   Todos os elementos sao afetados pela densidade magica do local alem
-   dos bonus especificos de clima. Um fogo em alta densidade queima mais
-   intensamente, independentemente da umidade. Esta sobreposicao cria
-   sinergias poderosas quando combinadas.
-
-Veja tambem: DENSIDADE-MAGICA, WEATHER, ESCOLAS-MAGICAS, MAGIA-CONTROL-WEATHER, SINERGIAS
+Veja tambem: WEATHER, ESCOLAS-MAGICAS, ELEMENTOS-MAGICOS, MAGIA-CONTROL-WEATHER
 #1
 ESCOLAS-MAGICAS ESCOLAS-DE-MAGIA MAGIC-SCHOOLS SCHOOLS-OF-MAGIC
 
@@ -17074,80 +17094,6 @@ de combate e sobrevivencia.
    tornando-se versateis em qualquer situacao.
 
 Veja tambem: CLASSES, SKILLS, ESCOLAS-MAGICAS
-#1
-DENSIDADE-MAGICA MANA-DENSITY DENSIDADE-DE-MANA
-
-   A densidade magica representa a concentracao de energia arcana em um
-local especifico. Esta descoberta revolucionaria revela que o ambiente
-nao apenas influencia quais magias sao eficazes, mas tambem quanta energia
-e necessaria para conjura-las e quao poderosas se tornam.
-
-   A densidade magica e uma "camada secundaria" invisivel sobre o mundo,
-formando sinergias com clima, terreno, e hora do dia.
-
-   FATORES QUE AFETAM A DENSIDADE:
-
-   1. CLIMA E CONDICOES ATMOSFERICAS (40%):
-      Tempestades: Densidade maxima | Chuva/Neve: Alta densidade
-      Nublado: Moderada | Ceu Limpo: Reduzida
-      Umidade 50-70%: Ideal | Pressao Baixa: Aumenta densidade
-
-   2. HORA DO DIA (20%):
-      Amanhecer/Entardecer: Maxima | Noite: Alta | Dia: Moderada
-
-   3. ESTADO SOLAR (15%):
-      Nascer/Por do Sol: Maximo | Escuridao: Amplificada
-
-   4. TIPO DE TERRENO (15%):
-      Alta: Agua, Lava, Gelo, Florestas, Montanhas
-      Moderada: Colinas, Desertos, Campos
-      Baixa: Estradas, Cidades, Interiores
-
-   5. LOCALIZACAO (10%):
-      Ar Livre: Efeitos completos | Interior: 30% dos efeitos, mais estavel
-
-   VISUALIZANDO A DENSIDADE:
-
-   Use MAGIA-DETECT-MAGIC para perceber a densidade. Com ela ativa:
-   - LOOK mostra: "A densidade magica aqui esta excepcional/alta/normal/baixa"
-   - WEATHER mostra detalhes completos incluindo valor numerico
-
-   EFEITOS DA DENSIDADE:
-
-   Excepcional (1.2+):  70% custo, 130% poder
-   Muito Alta (0.9+):   80% custo, 120% poder
-   Alta (0.7+):         90% custo, 110% poder
-   Normal (0.5-0.7):   100% custo, 100% poder
-   Baixa (0.3-0.5):     95% custo,  90% poder
-   Muito Baixa (<0.3):  90% custo,  80% poder
-
-   AUMENTANDO A DENSIDADE:
-
-   Apenas MAGIA-CONTROL-WEATHER pode aumentar artificialmente a densidade.
-   Duracao: 2-6 horas (nivel do conjurador)
-   Magnitude: +0.2 a +0.4 (poder do conjurador)
-   Beneficia TODOS os magos na area (aliados e inimigos)
-
-   ESTRATEGIAS:
-
-   Para Magos:
-   - Procure areas naturais para eficiencia
-   - Conjure durante tempestades ou crepusculo para poder maximo
-   - Use Control Weather antes de batalhas importantes
-
-   Para Grupos:
-   - Coordene preparacao com mago de Control Weather
-   - Lembre: densidade alta beneficia inimigos tambem
-
-   SINERGIAS:
-
-   Densidade combina-se multiplicativamente com bonus elementais e de escola.
-   Exemplo: Fogo em clima seco (umidade <30%) com alta densidade magica
-   (via Control Weather) = elemento +25%, densidade +20% = ~150% poder total!
-   Raio em tempestade chuvosa (umidade >80%) = elemento +30%, densidade +20% = ~156%!
-
-Veja tambem: MAGIA-CONTROL-WEATHER, MAGIA-DETECT-MAGIC, CLIMA-MAGICO,
-SINERGIAS, ELEMENTOS-MAGICOS, ESCOLAS-MAGICAS, WEATHER, LOOK
 #1
 ACENTOS ACCENTS UTF-8 CHARSET ENCODING ACENTUACAO CARACTERES-ESPECIAIS
 
