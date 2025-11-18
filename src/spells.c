@@ -915,17 +915,10 @@ ASPELL(spell_control_weather)
     /* Calculate and show new mana density to caster */
     float new_density = calculate_mana_density(ch);
     const char *density_desc;
+    int color_level;
 
-    if (new_density >= 1.2)
-        density_desc = "excepcional";
-    else if (new_density >= 0.9)
-        density_desc = "muito alta";
-    else if (new_density >= 0.7)
-        density_desc = "alta";
-    else if (new_density >= 0.5)
-        density_desc = "normal";
-    else
-        density_desc = "baixa";
+    /* Use helper function for consistent density description */
+    get_mana_density_description(new_density, &density_desc, &color_level);
 
     /* Calculate expiration time in game time */
     struct time_info_data expire_time = time_info;
@@ -939,13 +932,13 @@ ASPELL(spell_control_weather)
         expire_time.hours -= 24;
         expire_time.day++;
 
-        /* Handle day overflow */
-        if (expire_time.day > 34) { /* 35 days per month (0-34) */
+        /* Handle day overflow (35 days per month, indexed 0-34) */
+        if (expire_time.day > 34) {
             expire_time.day = 0;
             expire_time.month++;
 
-            /* Handle month overflow */
-            if (expire_time.month > 16) { /* 17 months per year (0-16) */
+            /* Handle month overflow (17 months per year, indexed 0-16) */
+            if (expire_time.month > 16) {
                 expire_time.month = 0;
                 expire_time.year++;
             }
@@ -1736,6 +1729,43 @@ float calculate_mana_density(struct char_data *ch)
         density = 1.5;
 
     return density;
+}
+
+/**
+ * Get mana density description
+ *
+ * This helper function centralizes the density description logic to avoid
+ * duplication across look_at_room, do_weather, and spell_control_weather.
+ *
+ * @param density The mana density value (0.0 to 1.5)
+ * @param desc Pointer to store the Portuguese description string
+ * @param color_level Pointer to store color level (0=cyan, 1=green, 2=yellow, 3=red, 4=bright_red)
+ *
+ * Callers should use the color_level to select appropriate color macros:
+ * 0 = CBCYN (exceptional), 1 = CBGRN (very high/high), 2 = CCYEL (normal),
+ * 3 = CCRED (low), 4 = CBRED (very low)
+ */
+void get_mana_density_description(float density, const char **desc, int *color_level)
+{
+    if (density >= 1.2) {
+        *desc = "excepcional";
+        *color_level = 0; /* CBCYN */
+    } else if (density >= 0.9) {
+        *desc = "muito alta";
+        *color_level = 1; /* CBGRN */
+    } else if (density >= 0.7) {
+        *desc = "alta";
+        *color_level = 1; /* CBGRN */
+    } else if (density >= 0.5) {
+        *desc = "normal";
+        *color_level = 2; /* CCYEL */
+    } else if (density >= 0.3) {
+        *desc = "baixa";
+        *color_level = 3; /* CCRED */
+    } else {
+        *desc = "muito baixa";
+        *color_level = 4; /* CBRED */
+    }
 }
 
 /* Get spell school name */

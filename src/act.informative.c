@@ -886,27 +886,30 @@ void look_at_room(struct char_data *ch, int ignore_brief)
     if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
         float mana_density = calculate_mana_density(ch);
         const char *density_desc;
+        int color_level;
         const char *density_color;
 
-        /* Describe mana density level */
-        if (mana_density >= 1.2) {
-            density_desc = "excepcional";
-            density_color = CBCYN(ch, C_NRM);
-        } else if (mana_density >= 0.9) {
-            density_desc = "muito alta";
-            density_color = CBGRN(ch, C_NRM);
-        } else if (mana_density >= 0.7) {
-            density_desc = "alta";
-            density_color = CBGRN(ch, C_NRM);
-        } else if (mana_density >= 0.5) {
-            density_desc = "normal";
-            density_color = CCYEL(ch, C_NRM);
-        } else if (mana_density >= 0.3) {
-            density_desc = "baixa";
-            density_color = CCRED(ch, C_NRM);
-        } else {
-            density_desc = "muito baixa";
-            density_color = CBRED(ch, C_NRM);
+        /* Get description and color level from helper function */
+        get_mana_density_description(mana_density, &density_desc, &color_level);
+
+        /* Map color level to color macro */
+        switch (color_level) {
+            case 0:
+                density_color = CBCYN(ch, C_NRM);
+                break;
+            case 1:
+                density_color = CBGRN(ch, C_NRM);
+                break;
+            case 2:
+                density_color = CCYEL(ch, C_NRM);
+                break;
+            case 3:
+                density_color = CCRED(ch, C_NRM);
+                break;
+            case 4:
+            default:
+                density_color = CBRED(ch, C_NRM);
+                break;
         }
 
         send_to_char(ch, "\r\n%sA densidade mágica aqui está %s%s%s.%s\r\n", CCMAG(ch, C_NRM), density_color,
@@ -1548,10 +1551,11 @@ static const char *get_weather_school_color(struct char_data *ch, int school)
 /* Analyze weather conditions and show magical effects */
 static void show_magical_conditions(struct char_data *ch, struct weather_data *weather)
 {
-    char favored_schools[MAX_STRING_LENGTH] = "";
-    char unfavored_schools[MAX_STRING_LENGTH] = "";
-    char favored_elements[MAX_STRING_LENGTH] = "";
-    char unfavored_elements[MAX_STRING_LENGTH] = "";
+    /* Use reasonable buffer sizes for weather display (1KB each is more than enough) */
+    char favored_schools[1024] = "";
+    char unfavored_schools[1024] = "";
+    char favored_elements[1024] = "";
+    char unfavored_elements[1024] = "";
     int has_favored_schools = 0, has_unfavored_schools = 0;
     int has_favored_elements = 0, has_unfavored_elements = 0;
 
@@ -1737,27 +1741,30 @@ ACMD(do_weather)
         if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
             float mana_density = calculate_mana_density(ch);
             const char *density_desc;
+            int color_level;
             const char *density_color;
 
-            /* Describe mana density level */
-            if (mana_density >= 1.2) {
-                density_desc = "excepcional";
-                density_color = CBCYN(ch, C_NRM);
-            } else if (mana_density >= 0.9) {
-                density_desc = "muito alta";
-                density_color = CBGRN(ch, C_NRM);
-            } else if (mana_density >= 0.7) {
-                density_desc = "alta";
-                density_color = CBGRN(ch, C_NRM);
-            } else if (mana_density >= 0.5) {
-                density_desc = "normal";
-                density_color = CCYEL(ch, C_NRM);
-            } else if (mana_density >= 0.3) {
-                density_desc = "baixa";
-                density_color = CCRED(ch, C_NRM);
-            } else {
-                density_desc = "muito baixa";
-                density_color = CBRED(ch, C_NRM);
+            /* Get description and color level from helper function */
+            get_mana_density_description(mana_density, &density_desc, &color_level);
+
+            /* Map color level to color macro */
+            switch (color_level) {
+                case 0:
+                    density_color = CBCYN(ch, C_NRM);
+                    break;
+                case 1:
+                    density_color = CBGRN(ch, C_NRM);
+                    break;
+                case 2:
+                    density_color = CCYEL(ch, C_NRM);
+                    break;
+                case 3:
+                    density_color = CCRED(ch, C_NRM);
+                    break;
+                case 4:
+                default:
+                    density_color = CBRED(ch, C_NRM);
+                    break;
             }
 
             send_to_char(ch, "\r\n%sDensidade Mágica:%s %s%s%s (%.2f)\r\n", CBCYN(ch, C_NRM), CCNRM(ch, C_NRM),

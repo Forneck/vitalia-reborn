@@ -1,15 +1,29 @@
 #!/bin/bash
 # Script to update help.hlp with new mana density system documentation
-
+#
 # This script adds the comprehensive help documentation to the help file
 # It should be run from the repository root directory
+
+set -e  # Exit on error
 
 HELP_FILE="lib/text/help/help.hlp"
 BACKUP_FILE="lib/text/help/help.hlp.original_backup"
 
-echo "Creating backup of $HELP_FILE..."
-cp "$HELP_FILE" "$BACKUP_FILE"
+# Validate that help file exists
+if [ ! -f "$HELP_FILE" ]; then
+    echo "Error: Help file '$HELP_FILE' does not exist."
+    echo "Please run this script from the repository root directory."
+    exit 1
+fi
 
+echo "Creating backup of $HELP_FILE..."
+if ! cp "$HELP_FILE" "$BACKUP_FILE"; then
+    echo "Error: Failed to create backup file '$BACKUP_FILE'"
+    exit 1
+fi
+
+echo "Backup successfully created: $BACKUP_FILE"
+echo ""
 echo "Help file updates should be applied manually by editing:"
 echo "  lib/text/help/help.hlp"
 echo ""

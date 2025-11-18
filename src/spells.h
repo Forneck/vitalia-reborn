@@ -366,6 +366,7 @@ float get_weather_duration_modifier(struct char_data *ch, int spell_element, int
 float get_weather_success_modifier(struct char_data *ch, int spell_element, int spell_school);
 float get_weather_movement_modifier(struct char_data *ch);
 float calculate_mana_density(struct char_data *ch);
+void get_mana_density_description(float density, const char **desc, int *color_level);
 const char *get_spell_school_name(int school);
 const char *get_spell_element_name(int element);
 const char *get_skill_school_name(int school);
