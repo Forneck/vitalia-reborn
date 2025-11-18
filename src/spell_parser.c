@@ -225,6 +225,26 @@ int mag_manacost(struct char_data *ch, struct char_data *tch, int spellnum)
         mana = mana * 2; /* Double mana cost for "plus" syllable */
     }
 
+    /* Apply mana density modifier to mana cost */
+    float mana_density = calculate_mana_density(ch);
+    float density_modifier = 1.0;
+
+    if (mana_density >= 1.2)
+        density_modifier = 0.7; /* 30% less mana in exceptional density */
+    else if (mana_density >= 0.9)
+        density_modifier = 0.8; /* 20% less mana in very high density */
+    else if (mana_density >= 0.7)
+        density_modifier = 0.9; /* 10% less mana in high density */
+    else if (mana_density >= 0.5)
+        density_modifier = 1.0; /* Normal cost at normal density */
+    else if (mana_density >= 0.3)
+        density_modifier = 0.95; /* Slightly less cost in low density (spells are weaker anyway) */
+    else
+        density_modifier = 0.9; /* Less cost but much weaker spells in very low density */
+
+    mana = (int)(mana * density_modifier);
+    mana = MAX(1, mana); /* Always cost at least 1 mana */
+
     return mana;
 }
 

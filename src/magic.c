@@ -227,6 +227,25 @@ int mag_damage(int level, struct char_data *ch, struct char_data *victim, int sp
         dam = (int)(dam * school_modifier);
     }
 
+    /* Apply mana density modifier to spell power */
+    float mana_density = calculate_mana_density(ch);
+    float density_power_modifier = 1.0;
+
+    if (mana_density >= 1.2)
+        density_power_modifier = 1.3; /* 30% more damage in exceptional density */
+    else if (mana_density >= 0.9)
+        density_power_modifier = 1.2; /* 20% more damage in very high density */
+    else if (mana_density >= 0.7)
+        density_power_modifier = 1.1; /* 10% more damage in high density */
+    else if (mana_density >= 0.5)
+        density_power_modifier = 1.0; /* Normal damage at normal density */
+    else if (mana_density >= 0.3)
+        density_power_modifier = 0.9; /* 10% less damage in low density */
+    else
+        density_power_modifier = 0.8; /* 20% less damage in very low density */
+
+    dam = (int)(dam * density_power_modifier);
+
     // special spells that formula interpreter can't deal with.
     switch (spellnum) {
         case SPELL_DISPEL_EVIL:
