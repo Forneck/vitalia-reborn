@@ -1638,15 +1638,17 @@ struct nighthammer_data {
 /** Stores, and used to deliver, the current weather information
  * in the mud world. */
 struct weather_data {
-    int temperature; /* Temperatura atual (°C) */
-    int temp_diff;   /* Variação de temperatura */
-    int pressure;    /* Pressão atmosférica (hPa - Mb) */
-    int press_diff;  /* Variação da pressão */
-    float humidity;  /* Umidade relativa (%) */
-    float winds;     /* Velocidade do vento (m/s) */
-    int sky;         /* Estado do céu (claro, nublado, chovendo, etc.) */
-    int before;      /* Estado anterior do céu */
-    int sunlight;    /* Intensidade da luz solar */
+    int temperature;                  /* Temperatura atual (°C) */
+    int temp_diff;                    /* Variação de temperatura */
+    int pressure;                     /* Pressão atmosférica (hPa - Mb) */
+    int press_diff;                   /* Variação da pressão */
+    float humidity;                   /* Umidade relativa (%) */
+    float winds;                      /* Velocidade do vento (m/s) */
+    int sky;                          /* Estado do céu (claro, nublado, chovendo, etc.) */
+    int before;                       /* Estado anterior do céu */
+    int sunlight;                     /* Intensidade da luz solar */
+    float mana_density_boost;         /* Boost temporário de densidade mágica (Control Weather) */
+    time_t mana_density_boost_expire; /* Quando o boost expira */
 };
 
 /** Element in monster and object index-tables.

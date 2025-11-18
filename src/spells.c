@@ -1388,6 +1388,147 @@ float get_weather_movement_modifier(struct char_data *ch)
     return modifier;
 }
 
+/* Calculate mana density for the character's current location */
+float calculate_mana_density(struct char_data *ch)
+{
+    float density = 0.5; /* Baseline normal density */
+    room_rnum room;
+    zone_rnum zone;
+    struct weather_data *weather;
+    int sector;
+    float weather_weight;
+    float weather_factor = 0.0;
+    float time_factor = 0.0;
+    float sun_factor = 0.0;
+    float sector_factor = 0.0;
+
+    /* Validate character and room */
+    if (!ch || IN_ROOM(ch) == NOWHERE)
+        return density;
+
+    room = IN_ROOM(ch);
+    zone = world[room].zone;
+
+    /* Validate zone */
+    if (zone < 0 || zone > top_of_zone_table)
+        return density;
+
+    weather = zone_table[zone].weather;
+    if (!weather)
+        return density;
+
+    sector = SECT(room);
+
+    /* Indoor rooms get reduced weather effect (30%) but more stable density */
+    weather_weight = ROOM_FLAGGED(room, ROOM_INDOORS) ? 0.3 : 1.0;
+
+    /* Weather contribution (40% of total when outdoors, 12% when indoors) */
+    /* Sky state contribution */
+    if (weather->sky == SKY_LIGHTNING)
+        weather_factor = 0.4; /* Storms have high magical energy */
+    else if (weather->sky == SKY_RAINING)
+        weather_factor = 0.3;
+    else if (weather->sky == SKY_SNOWING)
+        weather_factor = 0.25;
+    else if (weather->sky == SKY_CLOUDY)
+        weather_factor = 0.2;
+    else
+        weather_factor = 0.1; /* Clear skies have lower density */
+
+    /* Humidity factor (optimal around 50-70% for magical stability) */
+    if (weather->humidity >= 0.5 && weather->humidity <= 0.7)
+        weather_factor += 0.2;
+    else if (weather->humidity > 0.8)
+        weather_factor += 0.1;
+
+    /* Low pressure increases magical density (storms = low pressure) */
+    if (weather->pressure < 990)
+        weather_factor += 0.15;
+    else if (weather->pressure < 1000)
+        weather_factor += 0.1;
+    else if (weather->pressure > 1020)
+        weather_factor -= 0.05; /* High pressure reduces density slightly */
+
+    density += weather_factor * weather_weight * 0.4;
+
+    /* Time of day contribution (20% of total) */
+    /* Twilight hours (dawn and dusk) have peak magical density */
+    if (time_info.hours == 5 || time_info.hours == 6 || time_info.hours == 19 || time_info.hours == 20)
+        time_factor = 0.2; /* Peak at twilight */
+    else if (weather_info.sunlight == SUN_DARK)
+        time_factor = 0.15; /* High at night */
+    else if (weather_info.sunlight == SUN_LIGHT)
+        time_factor = 0.05; /* Lower during full daylight */
+    else
+        time_factor = 0.1; /* Moderate at other times */
+
+    density += time_factor;
+
+    /* Sun state contribution (15% of total) */
+    if (weather_info.sunlight == SUN_RISE || weather_info.sunlight == SUN_SET)
+        sun_factor = 0.15; /* Highest during transitions */
+    else if (weather_info.sunlight == SUN_DARK)
+        sun_factor = 0.10;
+    else
+        sun_factor = 0.05;
+
+    density += sun_factor;
+
+    /* Sector type contribution (15% of total) */
+    switch (sector) {
+        case SECT_WATER_SWIM:
+        case SECT_WATER_NOSWIM:
+        case SECT_UNDERWATER:
+            sector_factor = 0.15; /* Water enhances magical flow */
+            break;
+        case SECT_FOREST:
+        case SECT_HILLS:
+            sector_factor = 0.12; /* Natural areas have good density */
+            break;
+        case SECT_MOUNTAIN:
+        case SECT_CLIMBING:
+            sector_factor = 0.13; /* High altitude, thin air, but closer to sky */
+            break;
+        case SECT_CITY:
+        case SECT_INSIDE:
+            sector_factor = 0.05; /* Urban/developed areas have lower density */
+            break;
+        case SECT_FIELD:
+            sector_factor = 0.07; /* Open areas are neutral */
+            break;
+        case SECT_QUICKSAND:
+            sector_factor = 0.08; /* Unstable areas have moderate density */
+            break;
+        case SECT_LAVA:
+            sector_factor = 0.14; /* Lava regions have high fire energy */
+            break;
+        case SECT_ICE:
+            sector_factor = 0.12; /* Ice regions have cold energy */
+            break;
+        case SECT_FLYING:
+        case SECT_AIR_FLOW:
+            sector_factor = 0.11; /* Air sectors have wind energy */
+            break;
+        default:
+            sector_factor = 0.05;
+    }
+
+    density += sector_factor;
+
+    /* Check for Control Weather boost (active spell effect) */
+    if (weather->mana_density_boost_expire > time(NULL)) {
+        density += weather->mana_density_boost;
+    }
+
+    /* Cap density between 0.0 and 1.5 */
+    if (density < 0.0)
+        density = 0.0;
+    if (density > 1.5)
+        density = 1.5;
+
+    return density;
+}
+
 /* Get spell school name */
 const char *get_spell_school_name(int school)
 {

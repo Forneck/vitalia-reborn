@@ -1288,8 +1288,36 @@ ACMD(do_score)
         send_to_char(ch, "Você foi encantad%s!\r\n", OA(ch));
     if (AFF_FLAGGED(ch, AFF_DETECT_INVIS))
         send_to_char(ch, "Você sente a presença de objetos e pessoas invisíveis.\r\n");
-    if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC))
+    if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
+        float mana_density = calculate_mana_density(ch);
+        const char *density_desc;
+        const char *density_color;
+
+        /* Describe mana density level */
+        if (mana_density >= 1.2) {
+            density_desc = "excepcional";
+            density_color = CBCYN(ch, C_NRM);
+        } else if (mana_density >= 0.9) {
+            density_desc = "muito alta";
+            density_color = CBGRN(ch, C_NRM);
+        } else if (mana_density >= 0.7) {
+            density_desc = "alta";
+            density_color = CBGRN(ch, C_NRM);
+        } else if (mana_density >= 0.5) {
+            density_desc = "normal";
+            density_color = CCYEL(ch, C_NRM);
+        } else if (mana_density >= 0.3) {
+            density_desc = "baixa";
+            density_color = CCRED(ch, C_NRM);
+        } else {
+            density_desc = "muito baixa";
+            density_color = CBRED(ch, C_NRM);
+        }
+
         send_to_char(ch, "Você está sensivel a presença de coisas mágicas.\r\n");
+        send_to_char(ch, "  A densidade mágica local está %s%s%s (%.2f).\r\n", density_color, density_desc,
+                     CCNRM(ch, C_NRM), mana_density);
+    }
     if (AFF_FLAGGED(ch, AFF_SANCTUARY))
         send_to_char(ch, "Você está protegid%s pelo Santuario.\r\n", OA(ch));
     else if (AFF_FLAGGED(ch, AFF_GLOOMSHIELD))
@@ -1700,6 +1728,53 @@ ACMD(do_weather)
             send_to_char(ch, " Pressão: %d hPa, Céu: %s \r\n", pressure, sky_look[sky]);
             send_to_char(ch, "Temperatura %d º.C, Umidade %.2f\r\n", temperature, humidity);
             send_to_char(ch, "Vento: %.2f m/s\r\n", wind);
+        }
+
+        /* Show mana density if character has detect magic active */
+        if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
+            float mana_density = calculate_mana_density(ch);
+            const char *density_desc;
+            const char *density_color;
+
+            /* Describe mana density level */
+            if (mana_density >= 1.2) {
+                density_desc = "excepcional";
+                density_color = CBCYN(ch, C_NRM);
+            } else if (mana_density >= 0.9) {
+                density_desc = "muito alta";
+                density_color = CBGRN(ch, C_NRM);
+            } else if (mana_density >= 0.7) {
+                density_desc = "alta";
+                density_color = CBGRN(ch, C_NRM);
+            } else if (mana_density >= 0.5) {
+                density_desc = "normal";
+                density_color = CCYEL(ch, C_NRM);
+            } else if (mana_density >= 0.3) {
+                density_desc = "baixa";
+                density_color = CCRED(ch, C_NRM);
+            } else {
+                density_desc = "muito baixa";
+                density_color = CBRED(ch, C_NRM);
+            }
+
+            send_to_char(ch, "\r\n%sDensidade Mágica:%s %s%s%s (%.2f)\r\n", CBCYN(ch, C_NRM), CCNRM(ch, C_NRM),
+                         density_color, density_desc, CCNRM(ch, C_NRM), mana_density);
+
+            /* Explain what the density means for spellcasting */
+            if (mana_density >= 0.9) {
+                send_to_char(ch,
+                             "  %sAs energias mágicas fluem abundantemente aqui!%s\r\n"
+                             "  Magias consomem menos mana e são mais poderosas.\r\n",
+                             CBGRN(ch, C_NRM), CCNRM(ch, C_NRM));
+            } else if (mana_density >= 0.7) {
+                send_to_char(ch, "  %sAs condições são favoráveis para conjuração.%s\r\n", CCGRN(ch, C_NRM),
+                             CCNRM(ch, C_NRM));
+            } else if (mana_density < 0.5) {
+                send_to_char(ch,
+                             "  %sAs energias mágicas estão fracas neste local.%s\r\n"
+                             "  Magias serão menos eficientes aqui.\r\n",
+                             CCRED(ch, C_NRM), CCNRM(ch, C_NRM));
+            }
         }
 
         /* Show magical conditions based on weather */
