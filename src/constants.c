@@ -75,7 +75,8 @@ const char *exit_bits[] = {"DOOR",      "PICKPROOF", "GHOSTPROOF", "HIDDEN",   "
  * Must end array with a single newline. */
 const char *sector_types[] = {
     "Inside",     "City",      "Field",    "Forest",   "Hills",     "Mountains", "Water (Swim)", "Water (No Swim)",
-    "Underwater", "In Flight", "Climbing", "Air Flow", "Quicksand", "Lava",      "Ice",          "\n"};
+    "Underwater", "In Flight", "Climbing", "Air Flow", "Quicksand", "Lava",      "Ice",          "Desert",
+    "Road",       "\n"};
 
 /** PC and NPC sex.
  * @pre Must be in the same order as the defines.
