@@ -142,8 +142,10 @@
 #define SECT_QUICKSAND 12   /**< Areia Movedica			*/
 #define SECT_LAVA 13        /**< lava			*/
 #define SECT_ICE 14         /**< gelo			*/
+#define SECT_DESERT 15      /**< deserto		*/
+#define SECT_ROAD 16        /**< estrada		*/
 /** The total number of room Sector Types */
-#define NUM_ROOM_SECTORS 15
+#define NUM_ROOM_SECTORS 17
 
 /* char and mob-related defines */
 

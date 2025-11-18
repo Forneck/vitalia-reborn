@@ -881,6 +881,37 @@ void look_at_room(struct char_data *ch, int ignore_brief)
     /* now list characters & objects */
     list_obj_to_char(world[IN_ROOM(ch)].contents, ch, SHOW_OBJ_LONG, FALSE);
     list_char_to_char(world[IN_ROOM(ch)].people, ch);
+
+    /* Show mana density if character has detect magic active */
+    if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
+        float mana_density = calculate_mana_density(ch);
+        const char *density_desc;
+        const char *density_color;
+
+        /* Describe mana density level */
+        if (mana_density >= 1.2) {
+            density_desc = "excepcional";
+            density_color = CBCYN(ch, C_NRM);
+        } else if (mana_density >= 0.9) {
+            density_desc = "muito alta";
+            density_color = CBGRN(ch, C_NRM);
+        } else if (mana_density >= 0.7) {
+            density_desc = "alta";
+            density_color = CBGRN(ch, C_NRM);
+        } else if (mana_density >= 0.5) {
+            density_desc = "normal";
+            density_color = CCYEL(ch, C_NRM);
+        } else if (mana_density >= 0.3) {
+            density_desc = "baixa";
+            density_color = CCRED(ch, C_NRM);
+        } else {
+            density_desc = "muito baixa";
+            density_color = CBRED(ch, C_NRM);
+        }
+
+        send_to_char(ch, "\r\n%sA densidade mágica aqui está %s%s%s.%s\r\n", CCMAG(ch, C_NRM), density_color,
+                     density_desc, CCNRM(ch, C_NRM), CCNRM(ch, C_NRM));
+    }
 }
 
 static void look_in_direction(struct char_data *ch, int dir)
@@ -1288,36 +1319,8 @@ ACMD(do_score)
         send_to_char(ch, "Você foi encantad%s!\r\n", OA(ch));
     if (AFF_FLAGGED(ch, AFF_DETECT_INVIS))
         send_to_char(ch, "Você sente a presença de objetos e pessoas invisíveis.\r\n");
-    if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
-        float mana_density = calculate_mana_density(ch);
-        const char *density_desc;
-        const char *density_color;
-
-        /* Describe mana density level */
-        if (mana_density >= 1.2) {
-            density_desc = "excepcional";
-            density_color = CBCYN(ch, C_NRM);
-        } else if (mana_density >= 0.9) {
-            density_desc = "muito alta";
-            density_color = CBGRN(ch, C_NRM);
-        } else if (mana_density >= 0.7) {
-            density_desc = "alta";
-            density_color = CBGRN(ch, C_NRM);
-        } else if (mana_density >= 0.5) {
-            density_desc = "normal";
-            density_color = CCYEL(ch, C_NRM);
-        } else if (mana_density >= 0.3) {
-            density_desc = "baixa";
-            density_color = CCRED(ch, C_NRM);
-        } else {
-            density_desc = "muito baixa";
-            density_color = CBRED(ch, C_NRM);
-        }
-
+    if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC))
         send_to_char(ch, "Você está sensivel a presença de coisas mágicas.\r\n");
-        send_to_char(ch, "  A densidade mágica local está %s%s%s (%.2f).\r\n", density_color, density_desc,
-                     CCNRM(ch, C_NRM), mana_density);
-    }
     if (AFF_FLAGGED(ch, AFF_SANCTUARY))
         send_to_char(ch, "Você está protegid%s pelo Santuario.\r\n", OA(ch));
     else if (AFF_FLAGGED(ch, AFF_GLOOMSHIELD))

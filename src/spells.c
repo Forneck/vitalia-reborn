@@ -1509,6 +1509,12 @@ float calculate_mana_density(struct char_data *ch)
         case SECT_AIR_FLOW:
             sector_factor = 0.11; /* Air sectors have wind energy */
             break;
+        case SECT_DESERT:
+            sector_factor = 0.08; /* Arid regions have moderate density, harsh conditions */
+            break;
+        case SECT_ROAD:
+            sector_factor = 0.06; /* Roads are developed but more open than cities */
+            break;
         default:
             sector_factor = 0.05;
     }
