@@ -28,6 +28,7 @@
 
 /* External declarations */
 extern struct weather_data climates[];
+extern const char *month_name[];
 
 /* Special spells appear below. */
 ASPELL(spell_create_water)
@@ -878,12 +879,49 @@ ASPELL(spell_control_weather)
     else
         density_desc = "baixa";
 
+    /* Calculate expiration time in game time */
+    struct time_info_data expire_time = time_info;
+    int hours_to_add = boost_duration;
+
+    /* Add hours to current game time */
+    expire_time.hours += hours_to_add;
+
+    /* Handle hour overflow */
+    while (expire_time.hours >= 24) {
+        expire_time.hours -= 24;
+        expire_time.day++;
+
+        /* Handle day overflow */
+        if (expire_time.day > 34) { /* 35 days per month (0-34) */
+            expire_time.day = 0;
+            expire_time.month++;
+
+            /* Handle month overflow */
+            if (expire_time.month > 16) { /* 17 months per year (0-16) */
+                expire_time.month = 0;
+                expire_time.year++;
+            }
+        }
+    }
+
+    /* Determine time of day description */
+    const char *time_desc;
+    if (expire_time.hours >= 0 && expire_time.hours < 6)
+        time_desc = "madrugada";
+    else if (expire_time.hours >= 6 && expire_time.hours < 12)
+        time_desc = "manhã";
+    else if (expire_time.hours >= 12 && expire_time.hours < 18)
+        time_desc = "tarde";
+    else
+        time_desc = "noite";
+
     send_to_char(ch,
                  "\r\n%sVocê sente as energias mágicas se concentrarem na área!%s\r\n"
                  "Densidade mágica agora: %s (%.2f)\r\n"
-                 "Duração do efeito: %d hora%s do jogo\r\n",
-                 CBGRN(ch, C_NRM), CCNRM(ch, C_NRM), density_desc, new_density, boost_duration,
-                 boost_duration > 1 ? "s" : "");
+                 "Efeito ativo até %s %d horas da %s do dia %d de %s\r\n",
+                 CBGRN(ch, C_NRM), CCNRM(ch, C_NRM), density_desc, new_density, expire_time.hours >= 12 ? "às" : "as",
+                 expire_time.hours % 12 == 0 ? 12 : expire_time.hours % 12, time_desc, expire_time.day + 1,
+                 month_name[expire_time.month]);
 }
 
 ASPELL(spell_transport_via_plants)
