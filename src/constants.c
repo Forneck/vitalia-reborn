@@ -243,11 +243,11 @@ const char *equipment_types[] = {"Usado como luz",           /* 0  WEAR_LIGHT */
 /** Describes the type of object.
  * @pre Must be in the same order as the defines.
  * Must end array with a single newline. */
-const char *item_types[] = {
-    "UNDEFINED", "LIGHT",         "SCROLL", "WAND", "STAFF", "WEAPON",      "FURNITURE",   "AMMO",
-    "TREASURE",  "ARMOR",         "POTION", "WORN", "OTHER", "TRASH",       "TRAP",        "CONTAINER",
-    "NOTE",      "LIQ CONTAINER", "KEY",    "FOOD", "MONEY", "PEN",         "BOAT",        "FOUNTAIN",
-    "WINGS",     "CORPSE",        "PORTAL", "BOOK", "PLANT", "FIRE WEAPON", "MAGIC STONE", "\n"};
+const char *item_types[] = {"UNDEFINED", "LIGHT",       "SCROLL",      "WAND",          "STAFF",  "WEAPON", "FURNITURE",
+                            "AMMO",      "TREASURE",    "ARMOR",       "POTION",        "WORN",   "OTHER",  "TRASH",
+                            "TRAP",      "CONTAINER",   "NOTE",        "LIQ CONTAINER", "KEY",    "FOOD",   "MONEY",
+                            "PEN",       "BOAT",        "FOUNTAIN",    "WINGS",         "CORPSE", "PORTAL", "BOOK",
+                            "PLANT",     "FIRE WEAPON", "MAGIC STONE", "CARDS",         "\n"};
 
 /** Describes the wear flags set on an item.
  * @pre Must be in the same order as the defines.
