@@ -1288,6 +1288,8 @@ int get_mob_skill(struct char_data *ch, int skill_num);
 #define CONFIG_RESS_ROOM_3 config_info.room_nums.ress_room_3
 /** Get the fourth resurrection room. */
 #define CONFIG_RESS_ROOM_4 config_info.room_nums.ress_room_4
+/** Get the death trap object warehouse room. */
+#define CONFIG_DT_WAREHOUSE config_info.room_nums.dt_warehouse_room
 
 /* Game Operation */
 /** Get the default mud connection port. */

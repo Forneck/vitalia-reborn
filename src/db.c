@@ -4378,6 +4378,7 @@ static void load_default_config(void)
     CONFIG_RESS_ROOM_2 = ress_room_2;
     CONFIG_RESS_ROOM_3 = ress_room_3;
     CONFIG_RESS_ROOM_4 = ress_room_4;
+    CONFIG_DT_WAREHOUSE = dt_warehouse_room;
 
     /* Game operation options. */
     CONFIG_DFLT_PORT = DFLT_PORT;
@@ -4548,6 +4549,11 @@ void load_config(void)
                     CONFIG_DIAGONAL_DIRS = num;
                 else if (!str_cmp(tag, "dts_are_dumps"))
                     CONFIG_DTS_ARE_DUMPS = num;
+                else if (!str_cmp(tag, "dt_warehouse_room"))
+                    if (num == -1)
+                        CONFIG_DT_WAREHOUSE = NOWHERE;
+                    else
+                        CONFIG_DT_WAREHOUSE = num;
                 else if (!str_cmp(tag, "donation_room_1"))
                     if (num == -1)
                         CONFIG_DON_ROOM_1 = NOWHERE;

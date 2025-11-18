@@ -1106,10 +1106,10 @@ void extract_char_final(struct char_data *ch)
 
     /* Determine target room for objects.
      * If DTs are not dumps and character is in a death trap,
-     * send objects to warehouse (vnum 2) instead of death trap room. */
+     * send objects to warehouse instead of death trap room. */
     room_rnum target_room = IN_ROOM(ch);
     if (!CONFIG_DTS_ARE_DUMPS && ROOM_FLAGGED(IN_ROOM(ch), ROOM_DEATH)) {
-        room_rnum warehouse = real_room(2);
+        room_rnum warehouse = real_room(CONFIG_DT_WAREHOUSE);
         if (warehouse != NOWHERE)
             target_room = warehouse;
     }
