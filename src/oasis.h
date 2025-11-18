@@ -477,6 +477,8 @@ extern const char *nrm, *grn, *cyn, *yel, *YEL, *bln, *red;
 #define CEDIT_EMOTION_PRESET_MENU 119
 /* Weather emotion configuration */
 #define CEDIT_WEATHER_EFFECT_MULTIPLIER 120
+/* Death trap warehouse configuration */
+#define CEDIT_DT_WAREHOUSE_ROOM 121
 
 /* Hedit Submodes of connectedness. */
 #define HEDIT_CONFIRM_SAVESTRING 0

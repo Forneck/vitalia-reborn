@@ -206,6 +206,9 @@ room_vnum ress_room_2 = 5505;
 room_vnum ress_room_3 = 13435;
 room_vnum ress_room_4 = 11319;
 
+/* Virtual number of death trap object warehouse room. */
+room_vnum dt_warehouse_room = 2;
+
 /* GAME OPERATION OPTIONS */
 
 /* If false stock world files will be converted to 128bit. If true the MUD will

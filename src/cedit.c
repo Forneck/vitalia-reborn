@@ -136,6 +136,7 @@ static void cedit_setup(struct descriptor_data *d)
     OLC_CONFIG(d)->room_nums.ress_room_2 = CONFIG_RESS_ROOM_2;
     OLC_CONFIG(d)->room_nums.ress_room_3 = CONFIG_RESS_ROOM_3;
     OLC_CONFIG(d)->room_nums.ress_room_4 = CONFIG_RESS_ROOM_4;
+    OLC_CONFIG(d)->room_nums.dt_warehouse_room = CONFIG_DT_WAREHOUSE;
 
     /* Game Operation */
     OLC_CONFIG(d)->operation.DFLT_PORT = CONFIG_DFLT_PORT;
@@ -317,6 +318,7 @@ static void cedit_save_internally(struct descriptor_data *d)
     CONFIG_RESS_ROOM_2 = OLC_CONFIG(d)->room_nums.ress_room_2;
     CONFIG_RESS_ROOM_3 = OLC_CONFIG(d)->room_nums.ress_room_3;
     CONFIG_RESS_ROOM_4 = OLC_CONFIG(d)->room_nums.ress_room_4;
+    CONFIG_DT_WAREHOUSE = OLC_CONFIG(d)->room_nums.dt_warehouse_room;
 
     /* Game Operation */
     CONFIG_DFLT_PORT = OLC_CONFIG(d)->operation.DFLT_PORT;
@@ -718,11 +720,18 @@ int save_config(IDXTYPE nowhere)
             "ress_room_1 = %d\n"
             "ress_room_2 = %d\n"
             "ress_room_3 = %d\n"
-            "ress_room_4 = %d\n",
+            "ress_room_4 = %d\n\n",
             CONFIG_RESS_ROOM_1 != NOWHERE ? CONFIG_RESS_ROOM_1 : -1,
             CONFIG_RESS_ROOM_2 != NOWHERE ? CONFIG_RESS_ROOM_2 : -1,
             CONFIG_RESS_ROOM_3 != NOWHERE ? CONFIG_RESS_ROOM_3 : -1,
             CONFIG_RESS_ROOM_4 != NOWHERE ? CONFIG_RESS_ROOM_4 : -1);
+
+    fprintf(fl,
+            "* The virtual number of the death trap object warehouse room.\n"
+            "* Objects from entities dying in death traps are sent here when\n"
+            "* dts_are_dumps is FALSE. Use -1 for 'no such room'.\n"
+            "dt_warehouse_room = %d\n",
+            CONFIG_DT_WAREHOUSE != NOWHERE ? CONFIG_DT_WAREHOUSE : -1);
 
     fprintf(fl, "\n\n\n* [ Game Operation Options ]\n");
 
@@ -1134,6 +1143,7 @@ static void cedit_disp_room_numbers(struct descriptor_data *d)
         "%s5%s) Ress Room #2    : %s%d\r\n"
         "%s6%s) Ress Room #3    : %s%d\r\n"
         "%sJ%s) Ress Room #4    : %s%d\r\n"
+        "%sK%s) DT Warehouse Room    : %s%d\r\n"
         "%sQ%s) Exit To The Main Menu\r\n"
         "Enter your choice : ",
         grn, nrm, cyn, OLC_CONFIG(d)->room_nums.newbie_start_room, grn, nrm, cyn,
@@ -1144,7 +1154,7 @@ static void cedit_disp_room_numbers(struct descriptor_data *d)
         OLC_CONFIG(d)->room_nums.donation_room_2, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.donation_room_3, grn, nrm,
         cyn, OLC_CONFIG(d)->room_nums.donation_room_4, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_1, grn, nrm,
         cyn, OLC_CONFIG(d)->room_nums.ress_room_2, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.ress_room_3, grn, nrm, cyn,
-        OLC_CONFIG(d)->room_nums.ress_room_4, grn, nrm);
+        OLC_CONFIG(d)->room_nums.ress_room_4, grn, nrm, cyn, OLC_CONFIG(d)->room_nums.dt_warehouse_room, grn, nrm);
 
     OLC_MODE(d) = CEDIT_ROOM_NUMBERS_MENU;
 }
@@ -2411,6 +2421,12 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                     OLC_MODE(d) = CEDIT_RESS_ROOM_4;
                     return;
 
+                case 'k':
+                case 'K':
+                    write_to_output(d, "Enter the vnum for DT warehouse room : ");
+                    OLC_MODE(d) = CEDIT_DT_WAREHOUSE_ROOM;
+                    return;
+
                 case 'h':
                 case 'H':
                     write_to_output(d, "Enter the room's vnum for hometown 4 : ");
@@ -3433,6 +3449,21 @@ void cedit_parse(struct descriptor_data *d, char *arg)
                                 "Enter the vnum for ress room #4 : ");
             } else {
                 OLC_CONFIG(d)->room_nums.ress_room_4 = atoi(arg);
+                cedit_disp_room_numbers(d);
+            }
+            break;
+
+        case CEDIT_DT_WAREHOUSE_ROOM:
+            if (!*arg) {
+                write_to_output(d,
+                                "That is an invalid choice!\r\n"
+                                "Enter the vnum for DT warehouse room : ");
+            } else if (real_room(atoi(arg)) == NOWHERE) {
+                write_to_output(d,
+                                "That room doesn't exist!\r\n"
+                                "Enter the vnum for DT warehouse room : ");
+            } else {
+                OLC_CONFIG(d)->room_nums.dt_warehouse_room = atoi(arg);
                 cedit_disp_room_numbers(d);
             }
             break;

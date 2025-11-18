@@ -1764,6 +1764,7 @@ struct room_numbers {
     room_vnum ress_room_2;
     room_vnum ress_room_3;
     room_vnum ress_room_4;
+    room_vnum dt_warehouse_room; /**< vnum of death trap object warehouse. */
 };
 
 /** Operational game variables. */
