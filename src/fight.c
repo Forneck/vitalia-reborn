@@ -980,11 +980,17 @@ int skill_message(int dam, struct char_data *ch, struct char_data *vict, int att
                     act(msg->die_msg.room_msg, FALSE, ch, weap, vict, TO_NOTVICT);
                 } else {
                     if (msg->hit_msg.attacker_msg) {
+                        /* Display damage value if PRF_VIEWDAMAGE is set */
+                        if (GET_LEVEL(ch) >= LVL_IMMORT || PRF_FLAGGED(ch, PRF_VIEWDAMAGE))
+                            send_to_char(ch, "(%d) ", dam);
                         send_to_char(ch, CCYEL(ch, C_CMP));
                         act(msg->hit_msg.attacker_msg, FALSE, ch, weap, vict, TO_CHAR);
                         send_to_char(ch, CCNRM(ch, C_CMP));
                     }
 
+                    /* Display damage value to victim if PRF_VIEWDAMAGE is set */
+                    if (GET_LEVEL(vict) >= LVL_IMMORT || PRF_FLAGGED(vict, PRF_VIEWDAMAGE))
+                        send_to_char(vict, "\tR(%d)", dam);
                     send_to_char(vict, CCRED(vict, C_CMP));
                     act(msg->hit_msg.victim_msg, FALSE, ch, weap, vict, TO_VICT | TO_SLEEP);
                     send_to_char(vict, CCNRM(vict, C_CMP));
@@ -1208,7 +1214,7 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                     if (CONFIG_MOB_CONTEXTUAL_SOCIALS) {
                         struct char_data *attacker = FIGHTING(victim);
                         int effective_fear, effective_courage, effective_horror;
-                        
+
                         /* Use hybrid emotion system: mood + relationship toward attacker */
                         if (attacker) {
                             effective_fear = get_effective_emotion_toward(victim, attacker, EMOTION_TYPE_FEAR);
@@ -1220,7 +1226,7 @@ int damage(struct char_data *ch, struct char_data *victim, int dam, int attackty
                             effective_courage = victim->ai_data->emotion_courage;
                             effective_horror = victim->ai_data->emotion_horror;
                         }
-                        
+
                         /* High fear increases flee threshold (flee sooner) */
                         if (effective_fear >= CONFIG_EMOTION_FLEE_FEAR_HIGH_THRESHOLD) {
                             emotion_modifier += CONFIG_EMOTION_FLEE_FEAR_HIGH_MODIFIER; /* Flee at +15% HP */
@@ -1487,7 +1493,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
     /* Calculate chance of hit. Lower THAC0 is better for attacker. */
     calc_thaco = compute_thaco(ch, victim);
-    
+
     /* HYBRID EMOTION SYSTEM: Pain affects accuracy (THAC0) for NPCs */
     if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data) {
         int pain_level = ch->ai_data->emotion_pain; /* Pain is mood-based */
@@ -1502,7 +1508,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
             calc_thaco += CONFIG_EMOTION_COMBAT_PAIN_ACCURACY_PENALTY_LOW;
         }
     }
-    
+
     // check to see if the victim has prot from evil on, and if the
     // attacker
     // is in fact evil
@@ -1616,7 +1622,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
            POSITION_XXX constants. */
         if (GET_POS(victim) < POS_FIGHTING)
             dam *= 1 + (POS_FIGHTING - GET_POS(victim)) / 3;
-            
+
         /* HYBRID EMOTION SYSTEM: Anger and Pain affect combat effectiveness for NPCs */
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS && IS_NPC(ch) && ch->ai_data) {
             /* High anger increases damage */
@@ -1625,7 +1631,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 /* Anger damage bonus (default 15%) */
                 dam += (dam * CONFIG_EMOTION_COMBAT_ANGER_DAMAGE_BONUS) / 100;
             }
-            
+
             /* Pain reduces damage output */
             int pain_level = ch->ai_data->emotion_pain; /* Pain is mood-based, not relational */
             if (pain_level >= CONFIG_EMOTION_COMBAT_PAIN_HIGH_THRESHOLD) {
@@ -1639,7 +1645,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
                 dam -= (dam * CONFIG_EMOTION_COMBAT_PAIN_DAMAGE_PENALTY_LOW) / 100;
             }
         }
-        
+
         /* at least 1 hp damage min per hit */
         dam = MAX(1, dam);
         if (type == SKILL_BACKSTAB)
@@ -2088,12 +2094,12 @@ int attacks_per_round(struct char_data *ch)
             n += wpn_prof[get_weapon_prof(ch, wielded)].num_of_attacks;
     } else {
         n += ((int)GET_LEVEL(ch) / 25);
-        
+
         /* HYBRID EMOTION SYSTEM: High anger increases attack frequency for NPCs */
         if (CONFIG_MOB_CONTEXTUAL_SOCIALS && ch->ai_data && FIGHTING(ch)) {
             /* Use hybrid system: check effective anger toward opponent */
             int effective_anger = get_effective_emotion_toward(ch, FIGHTING(ch), EMOTION_TYPE_ANGER);
-            
+
             /* High anger (>= threshold) gives chance for extra attack */
             if (effective_anger >= CONFIG_EMOTION_COMBAT_ANGER_HIGH_THRESHOLD) {
                 /* Random chance based on config (default 25%) */
