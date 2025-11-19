@@ -1851,6 +1851,12 @@ void create_spells_db()
     spedit_save_internally(new_spell);
 
     // spell_improved_armor 55
+    // AC modifier formula scales from -30 to -80 based on caster level
+    // Formula: -(30 + MIN(50, self.level))
+    // At level 1: -30 - 1 = -31 AC
+    // At level 50+: -30 - 50 = -80 AC (capped)
+    // With "plus" voice modifier: doubled and clamped to sbyte range (-128 to 127)
+    // With "minus" voice modifier: halved
     CREATE(new_spell, struct str_spells, 1);
     spedit_init_new_spell(new_spell);
     new_spell->vnum = SPELL_IMPROVED_ARMOR;
@@ -1869,7 +1875,7 @@ void create_spells_db()
     new_spell->assign[1].level = 80;
     new_spell->assign[1].num_mana = strdup(buf);
     new_spell->applies[0].appl_num = APPLY_AC;
-    new_spell->applies[0].modifier = strdup("-80");
+    new_spell->applies[0].modifier = strdup("-(30 + (self.level < 50 ? self.level : 50))");
     new_spell->applies[0].duration = strdup("24");
     new_spell->messages.to_vict = strdup("Você sente alguém $r protegendo.");
     new_spell->messages.wear_off = strdup("Você se sente menos protegid$r.");
