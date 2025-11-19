@@ -6470,7 +6470,16 @@ Duracao    : 24 Horas
 Nivel      : Mago Nivel 18, Clerigo Nivel 80
 
 Essa magia possui o mesmo efeito de armor, mas melhora o AC um pouco mais.
-O AC que ela diminui varia com o nivel de quem a lancou, indo de 30 a 80 AC.
+Reduz o AC do alvo em 80 pontos, proporcionando melhor protecao em combate.
+
+FORMULA DO MODIFICADOR:
+- Base: -80 AC (menor AC = melhor protecao)
+- Com voz "plus": -128 AC (dobrado e limitado ao maximo)
+- Com voz "minus": -40 AC (reduzido pela metade)
+
+IMPORTANTE: O sistema possui protecao contra overflow de AC. O valor de AC
+e automaticamente limitado entre -1000 e +1000 para prevenir bugs que
+possam inverter a protecao para vulnerabilidade.
 
 OBS: Os efeitos de "armor", "improved armor" e qualquer uma das "skin like"s
 nao sao acumulativos.

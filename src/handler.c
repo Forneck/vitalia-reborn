@@ -171,7 +171,18 @@ static void aff_apply_modify(struct char_data *ch, byte loc, sbyte mod, char *ms
             break;
 
         case APPLY_AC:
-            GET_AC(ch) += mod;
+            /* Prevent AC overflow by clamping to reasonable limits
+             * AC normally ranges from -100 (best) to +100 (worst)
+             * Extended range to -1000/+1000 to accommodate edge cases */
+            {
+                long new_ac = (long)GET_AC(ch) + (long)mod;
+                if (new_ac > 1000)
+                    GET_AC(ch) = 1000;
+                else if (new_ac < -1000)
+                    GET_AC(ch) = -1000;
+                else
+                    GET_AC(ch) = (sh_int)new_ac;
+            }
             break;
 
         case APPLY_HITROLL:
@@ -290,6 +301,11 @@ void affect_total(struct char_data *ch)
     GET_CON(ch) = MAX(0, MIN(GET_CON(ch), i));
     GET_CHA(ch) = MAX(0, MIN(GET_CHA(ch), i));
     GET_STR(ch) = MAX(0, GET_STR(ch));
+
+    /* Clamp AC to reasonable limits to prevent overflow
+     * AC normally ranges from -100 (best) to +100 (worst)
+     * Extended range to -1000/+1000 to accommodate edge cases */
+    GET_AC(ch) = MAX(-1000, MIN(GET_AC(ch), 1000));
 
     if (IS_NPC(ch) || GET_LEVEL(ch) >= LVL_GRGOD) {
         GET_STR(ch) = MIN(GET_STR(ch), i);
