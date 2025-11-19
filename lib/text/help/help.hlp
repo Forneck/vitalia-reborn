@@ -5982,7 +5982,9 @@ Essa magia usara a forca da natureza para atingir o alvo. Somente
 e possivel usar essa magia em ambientes externos, e com tempo
 chuvoso ou pior.
 
-Veja Tambem: MAGIA-CONTROL-WEATHER
+Veja Tambem: MAGIA-CONTROL-WEATHER, WEATHER
+#1
+MAGIA-CONTROL-WEATHER
 
 Uso: cast 'control weather' <propriedade>=<aumentar|diminuir>
 Acumulativa: Sim
