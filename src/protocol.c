@@ -600,6 +600,7 @@ ssize_t ProtocolInput(descriptor_t *apDescriptor, char *apData, int aSize, char 
 const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *apLength)
 {
     static char Result[MAX_OUTPUT_BUFFER + 1];
+    static int in_use = 0; /* Reentrancy guard */
     const char Tab[] = "\t";
     const char MSP[] = "!!";
     const char MXPStart[] = "\033[1z<";
@@ -612,6 +613,13 @@ const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *
     protocol_t *pProtocol = apDescriptor ? apDescriptor->pProtocol : NULL;
     if (pProtocol == NULL || apData == NULL)
         return apData;
+    
+    /* Reentrancy guard: If buffer is already in use, return input unchanged to prevent corruption */
+    if (in_use) {
+        ReportBug("ProtocolOutput: Reentrancy detected! Returning unprocessed data to prevent corruption.\n");
+        return apData;
+    }
+    in_use = 1;
 
     /* Strip !!SOUND() triggers if they support MSP or are using sound */
     if (pProtocol->bMSP || pProtocol->pVariables[eMSDP_SOUND]->ValueInt)
@@ -1040,6 +1048,9 @@ const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *
     /* Store the length */
     if (apLength)
         *apLength = i;
+
+    /* Clear reentrancy guard before returning */
+    in_use = 0;
 
     /* Return the string */
     return Result;
