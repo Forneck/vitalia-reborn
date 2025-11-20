@@ -547,7 +547,7 @@ static void list_one_char(struct char_data *i, struct char_data *ch)
 
             /* Display the highest emotion if any was found */
             if (emotion_text && emotion_color) {
-                send_to_char(ch, "%s%s%s ", emotion_color, emotion_text, CCNRM(ch, C_NRM));
+                send_to_char(ch, "%s%s%s ", emotion_color, emotion_text, CCYEL(ch, C_NRM));
             }
         }
 
