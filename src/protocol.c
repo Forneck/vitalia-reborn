@@ -597,6 +597,27 @@ ssize_t ProtocolInput(descriptor_t *apDescriptor, char *apData, int aSize, char 
     return (CmdIndex);
 }
 
+/* ProtocolOutput: Process and format output data for transmission to client
+ * 
+ * This function processes output text, applying color codes, protocol-specific
+ * formatting, and UTF-8 filtering as needed for the client.
+ * 
+ * IMPORTANT: This function uses a static buffer and returns a pointer to it.
+ * The returned pointer is ONLY VALID until the next call to ProtocolOutput().
+ * Callers MUST immediately copy the returned data - do not store the pointer.
+ * 
+ * Safe usage:   strcpy(buffer, ProtocolOutput(...));
+ * UNSAFE usage: const char *ptr = ProtocolOutput(...); [later] use ptr;
+ * 
+ * The function includes a reentrancy guard to detect and prevent nested calls
+ * that would corrupt the static buffer. If reentrancy is detected, the function
+ * returns the input data unprocessed.
+ * 
+ * @param apDescriptor  Client descriptor for protocol negotiation info
+ * @param apData        Input text to process
+ * @param apLength      Pointer to length (updated with processed length)
+ * @return              Pointer to processed text (valid until next call)
+ */
 const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *apLength)
 {
     static char Result[MAX_OUTPUT_BUFFER + 1];
@@ -1039,7 +1060,7 @@ const char *ProtocolOutput(descriptor_t *apDescriptor, const char *apData, int *
      * or for protocol control sequences that could interfere with client identification */
     if (pProtocol && !pProtocol->pVariables[eMSDP_UTF_8]->ValueInt && apDescriptor &&
         STATE(apDescriptor) != CON_GET_PROTOCOL) {
-        static char FilteredResult[MAX_OUTPUT_BUFFER + 1];
+        char FilteredResult[MAX_OUTPUT_BUFFER + 1];
         FilterUTF8ToASCII(Result, FilteredResult, MAX_OUTPUT_BUFFER + 1);
         strcpy(Result, FilteredResult);
         i = strlen(Result);
