@@ -7122,14 +7122,39 @@ meditar enquanto voce ganha os pontos suficientes.
 
 Veja tambem: SPELL, REST, MEDITATE, SCORE
 #1
-MAP
+MAP MAPA
 
-Agora o mapa de Midgaard deve ser comprado.
-Para conseguir um mapa para voce, va' ate' a loja de mapas. La' voce podera'
-comprar o mapa de Midgaard e tambem de outras areas do mundo.
+Uso: map <distancia> [ normal | mundi ]
 
-Para chegar na loja de mapas, a partir do templo, ande tres passos para o sul,
-tres passos para o leste e um passo para o norte.
+O comando MAP exibe um mapa ASCII da area ao redor da sua localizacao atual.
+Voce pode especificar a distancia do mapa (quanto mais longe voce deseja ver)
+e o tipo de visualizacao.
+
+Argumentos:
+  <distancia> - Um numero de 1 a 12 indicando o alcance do mapa.
+                Se omitido, usa o tamanho padrao configurado no MUD.
+  
+  normal      - Exibe o mapa em modo normal (detalhado).
+  mundi       - Exibe o mapa em modo mundo (worldmap), mais compacto e com
+                maior alcance de visualizacao.
+
+O modo de visualizacao (normal ou mundi) e' automaticamente determinado pelo
+tipo de sala em que voce esta. Salas com a flag ROOM_WORLDMAP ou zonas com
+a flag ZONE_WORLDMAP exibem automaticamente em modo mundi. Voce pode
+sobrescrever esse comportamento especificando explicitamente "normal" ou
+"mundi" no comando.
+
+Exemplos:
+  map           - Exibe o mapa com o tamanho padrao
+  map 8         - Exibe o mapa com alcance de 8
+  map 5 mundi   - Exibe o mapa em modo mundo com alcance de 5
+  map 10 normal - Exibe o mapa em modo normal com alcance de 10
+
+O mapa mostra diferentes simbolos para cada tipo de terreno, como cidades,
+florestas, montanhas, agua, etc. Use o comando sem argumentos para ver a
+legenda completa.
+
+Veja tambem: AUTOMAP, LOOK
 #1
 MAXLOADED MAX-LOADED ZEDIT-MAXLOADED ZEDIT-MISTAKES 
 
