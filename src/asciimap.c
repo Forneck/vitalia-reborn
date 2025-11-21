@@ -514,6 +514,8 @@ static void perform_map(struct char_data *ch, char *argument, bool worldmap)
     count += sprintf(buf + count, "\tn%s Areia\\\\", map_info[SECT_QUICKSAND].disp);
     count += sprintf(buf + count, "\tn%s Lava\\\\", map_info[SECT_LAVA].disp);
     count += sprintf(buf + count, "\tn%s Gelo\\\\", map_info[SECT_ICE].disp);
+    count += sprintf(buf + count, "\tn%s Deserto\\\\", map_info[SECT_DESERT].disp);
+    count += sprintf(buf + count, "\tn%s Estrada\\\\", map_info[SECT_ROAD].disp);
 
     strcpy(buf, strfrmt(buf, LEGEND_WIDTH, CANVAS_HEIGHT + 2, FALSE, TRUE, TRUE));
 
