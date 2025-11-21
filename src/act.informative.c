@@ -935,12 +935,12 @@ void look_at_room(struct char_data *ch, int ignore_brief)
     if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_AUTOEXIT))
         do_auto_exits(ch);
     /* now list characters & objects */
-        obj_list_mode = SHOW_OBJ_LONG;
-        if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE))
-             obj_list_mode = SHOW_OBJ_SHORT;
+    obj_list_mode = SHOW_OBJ_LONG;
+    if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE))
+        obj_list_mode = SHOW_OBJ_SHORT;
 
-        list_obj_to_char(world[IN_ROOM(ch)].contents, ch, obj_list_mode, FALSE);
-        list_char_to_char(world[IN_ROOM(ch)].people, ch);
+    list_obj_to_char(world[IN_ROOM(ch)].contents, ch, obj_list_mode, FALSE);
+    list_char_to_char(world[IN_ROOM(ch)].people, ch);
 
 
     /* Show mana density if character has detect magic active */
