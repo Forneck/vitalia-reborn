@@ -472,13 +472,9 @@ static void perform_map(struct char_data *ch, char *argument, bool worldmap)
 
     centre = MAX_MAP / 2;
 
-    if (worldmap) {
-        min = centre - 2 * size;
-        max = centre + 2 * size;
-    } else {
-        min = centre - size;
-        max = centre + size;
-    }
+    /* Use the same range for both worldmap and normal modes */
+    min = centre - 2 * size;
+    max = centre + 2 * size;
 
     /* Blank the map */
     for (x = 0; x < MAX_MAP; ++x)
