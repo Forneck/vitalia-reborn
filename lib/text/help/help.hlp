@@ -7122,14 +7122,39 @@ meditar enquanto voce ganha os pontos suficientes.
 
 Veja tambem: SPELL, REST, MEDITATE, SCORE
 #1
-MAP
+MAP MAPA
 
-Agora o mapa de Midgaard deve ser comprado.
-Para conseguir um mapa para voce, va' ate' a loja de mapas. La' voce podera'
-comprar o mapa de Midgaard e tambem de outras areas do mundo.
+Uso: map [distancia] [normal | mundi]
 
-Para chegar na loja de mapas, a partir do templo, ande tres passos para o sul,
-tres passos para o leste e um passo para o norte.
+O comando MAP exibe um mapa da area ao redor da sua localizacao atual,
+permitindo que voce visualize os arredores e se oriente melhor em suas
+jornadas pelo mundo.
+
+Voce pode ajustar a distancia que deseja visualizar (de 1 a 12), sendo que
+valores muito altos ou baixos serao automaticamente ajustados. Se nao
+especificar, sera usado um alcance padrao confortavel.
+
+Ha dois estilos de visualizacao:
+  normal - Um mapa detalhado, ideal para explorar dungeons e areas fechadas
+  mundi  - Um mapa panoramico, mais adequado para viagens pelo mundo aberto
+
+Em certas regioes ao ar livre e grandes planices, o mapa automaticamente se
+ajusta para mostrar uma visao mais ampla do terreno. Em outras areas, como
+dungeons e construcoes, o mapa mostra detalhes mais proximos. Voce pode
+forcar um estilo especifico se desejar uma visualizacao diferente.
+
+Exemplos:
+  map           - Exibe o mapa com alcance padrao
+  map 8         - Exibe o mapa mostrando ate 8 unidades de distancia
+  map 5 mundi   - Exibe uma visao panoramica com alcance de 5
+  map 10 normal - Exibe uma visao detalhada com alcance de 10
+
+O mapa utiliza diferentes simbolos para representar terrenos variados:
+cidades, florestas, montanhas, rios e lagos, desertos, estradas e muito
+mais. Uma legenda completa e' exibida junto com o mapa para facilitar sua
+interpretacao.
+
+Veja tambem: AUTOMAP, LOOK
 #1
 MAXLOADED MAX-LOADED ZEDIT-MAXLOADED ZEDIT-MISTAKES 
 
