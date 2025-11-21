@@ -16759,26 +16759,32 @@ See also: MWISHLIST, GSTATS, STAT
 #101
 RSKILL
 
-Usage: rskill <player> <list|add|remove> [skill_num] [value]
-       rskill <player> list - Show all retained skills
-       rskill <player> add <skill_num> <value> - Add/set retained skill
-       rskill <player> remove <skill_num> - Remove retained skill
+Uso: rskill <jogador> <list|add|remove> [número_skill] [valor]
+     rskill <jogador> list - Listar todas as habilidades retidas
+     rskill <jogador> add <número_skill> <valor> - Adicionar/modificar habilidade
+     rskill <jogador> remove <número_skill> - Remover habilidade retida
 
-   Manages retained skills for players who have gone through the rebegin
-process. Retained skills are preserved across character reincarnations.
+   Gerencia habilidades retidas de jogadores que passaram pelo processo de
+rebegin (renascimento). Habilidades retidas são preservadas através das
+reencarnações do personagem.
 
-   This command allows direct manipulation of the retained skills system,
-letting immortals add, remove, or modify skills that players keep when
-they reincarnate through the rebegin system.
+   Este comando permite manipulação direta do sistema de habilidades retidas,
+permitindo que imortais adicionem, removam ou modifiquem habilidades que
+jogadores mantêm quando renascem através do sistema de rebegin.
 
-   Only works on player characters, not NPCs.
+   Funciona apenas com personagens de jogadores, não com NPCs.
 
-Examples:
-  > rskill player list
-  > rskill player add 142 75
-  > rskill player remove 142
+Exemplos:
+  > rskill jogador list
+  > rskill jogador add 142 75
+  > rskill jogador remove 142
 
-See also: REBEGIN, ADVANCE, SKILLSET
+   Use este comando com cuidado, pois habilidades retidas afetam
+significativamente as capacidades do personagem. Apenas conceda
+habilidades retidas quando justificado pela história do personagem
+ou como recompensa por eventos especiais.
+
+Veja também: RSKILLS, REBEGIN, ADVANCE, SKILLSET
 #107
 SYSLOG RUSAGE
 
@@ -17468,7 +17474,6 @@ Cada classe ganha reputação extra por ações alinhadas com seu tema:
   @rGuerreiro Maligno@n matando guarda bondoso: +3-6 (temido vilão!)
   @rLadrão Maligno@n roubando bondoso: +2-4 (base +1-2, bônus classe +1-2)
 #1
-$~
 LEILAO LEILÕES AUCTION AUCTIONS
 
 Sintaxe: leilao [subcomando] [argumentos]
@@ -17548,3 +17553,238 @@ LEILOES
 
 Veja: @cLEILAO@n
 #0
+AUTOEXAM
+
+Uso: autoexam
+
+   Quando ativado, esta opção faz com que você examine automaticamente
+objetos e criaturas ao olhar para eles. Isso permite ver detalhes
+adicionais sem precisar usar o comando 'examine' manualmente.
+
+   Esta funcionalidade é útil para aventureiros que desejam observar
+cada detalhe do mundo ao seu redor, identificando itens valiosos,
+armadilhas escondidas ou características especiais de criaturas.
+
+Veja também: EXAMINE, TOGGLE, LOOK
+#0
+CHANSONS CANÇÕES
+
+Uso: chansons [classe]
+
+   Este comando exibe uma lista completa das canções (chansons) disponíveis
+para a classe especificada, mostrando quais níveis são necessários para
+aprendê-las e praticá-las.
+
+   As canções são formas especiais de magia que usam o poder da música e
+da poesia para criar efeitos mágicos. Praticadas principalmente por bardos,
+estas habilidades representam a arte de tecer encantamentos através da
+melodia e do verso.
+
+   Se você não especificar uma classe, o comando mostrará as canções da
+sua classe atual. Caso contrário, você pode consultar as canções de
+qualquer classe para fins de estudo e planejamento.
+
+Exemplos:
+  > chansons          - Lista suas canções disponíveis (classe atual)
+  > chansons bardo    - Lista todas as canções da classe bardo
+  > chansons ranger   - Lista todas as canções da classe ranger
+
+Classes válidas: mago, clerigo, ladrao, guerreiro, druida, bardo, ranger
+
+   Use PRACTICE para aprender e aprimorar suas canções, e CAST para
+entoá-las durante suas aventuras.
+
+Veja também: SPELLS, PRACTICE, CAST, SKILLS
+#0
+SPELLS MAGIAS
+
+Uso: spells [classe]
+
+   Este comando exibe uma lista completa das magias (spells) disponíveis
+para a classe especificada, mostrando os níveis necessários para
+aprendê-las e os círculos de poder a que pertencem.
+
+   Cada classe possui um conjunto único de magias que reflete sua
+conexão com diferentes fontes de poder: magos dominam o arcano, clérigos
+canalizam divindade, druidas comandam a natureza, e assim por diante.
+
+   Se você não especificar uma classe, o comando mostrará as magias da
+sua classe atual. Caso contrário, você pode consultar as magias de
+qualquer classe para fins de estudo e planejamento de personagem.
+
+Exemplos:
+  > spells           - Lista suas magias disponíveis (classe atual)
+  > spells mago      - Lista todas as magias da classe mago
+  > spells clerigo   - Lista todas as magias da classe clérigo
+  > spells druida    - Lista todas as magias da classe druida
+
+Classes válidas: mago, clerigo, ladrao, guerreiro, druida, bardo, ranger
+
+   Esta consulta é essencial para planejar o desenvolvimento do seu
+personagem e entender quais poderes estarão disponíveis em níveis futuros.
+Use PRACTICE para aprender e aprimorar suas magias.
+
+Veja também: CHANSONS, PRACTICE, CAST, SKILLS
+#0
+RSKILLS RETAINED-SKILLS HABILIDADES-RETIDAS
+
+Uso: rskills
+
+   Este comando exibe as habilidades retidas do seu personagem. Habilidades
+retidas são competências especiais que seu personagem mantém mesmo após
+mudanças de classe ou outros eventos que normalmente as fariam desaparecer.
+
+   Estas habilidades representam o conhecimento e experiência que seu
+personagem acumulou ao longo de sua jornada, mantendo parte de seu
+treinamento anterior mesmo quando segue um novo caminho.
+
+   As habilidades retidas são uma marca da experiência e versatilidade
+do seu personagem, mostrando que os ensinamentos do passado não são
+facilmente esquecidos.
+
+Veja também: SKILLS, PRACTICE, MULTICLASS
+
+@rNota:@n Este comando é apenas para visualização. Para gerenciar habilidades
+retidas de outros jogadores, consulte o comando de administrador RSKILL.
+#0
+DISABLE
+
+Uso: disable [comando]
+
+   Este comando permite que administradores desabilitem comandos específicos
+do jogo temporariamente. Quando um comando está desabilitado, os jogadores
+não poderão usá-lo até que seja reabilitado.
+
+   Se usado sem argumentos, exibe a lista de comandos atualmente desabilitados.
+
+Exemplos:
+  > disable              - Ver comandos desabilitados
+  > disable shout        - Desabilitar o comando 'shout'
+
+   Use esta funcionalidade para manutenção do servidor, correção de bugs,
+ou para desabilitar temporariamente funcionalidades problemáticas sem
+precisar reiniciar o servidor.
+
+   Comandos desabilitados aparecem em cinza na lista de comandos e retornam
+uma mensagem informativa quando os jogadores tentam usá-los.
+
+Veja também: ENABLE, WIZUTIL
+
+@rAcesso:@n Este comando requer nível GRGOD (nível 108).
+#108
+ENABLE
+
+Uso: enable [comando]
+
+   Este comando permite que administradores reabilitem comandos que foram
+previamente desabilitados com o comando DISABLE. Quando um comando é
+reabilitado, os jogadores voltam a ter acesso normal a ele.
+
+   Se usado sem argumentos, exibe a lista de comandos atualmente desabilitados.
+
+Exemplos:
+  > enable               - Ver comandos desabilitados
+  > enable shout         - Reabilitar o comando 'shout'
+
+   Use este comando para restaurar funcionalidades após manutenção ou
+correção de problemas que motivaram a desabilitação temporária.
+
+Veja também: DISABLE, WIZUTIL
+
+@rAcesso:@n Este comando requer nível GRGOD (nível 108).
+#108
+EMOTIONCONFIG EMOTION-CONFIG
+
+Uso: emotionconfig
+
+   Este comando exibe a configuração completa do sistema de emoções de
+Vitalia. O sistema de emoções é uma mecânica avançada que simula estados
+emocionais dos personagens (medo, raiva, felicidade, tristeza, horror e dor),
+afetando seu comportamento em combate e interações sociais.
+
+   O comando mostra todos os parâmetros configuráveis do sistema:
+
+@yLimites de Exibição Visual:@n
+   - Limiares para mostrar indicadores emocionais nas descrições de sala
+   - Exemplos: "(amedrontado)", "(furioso)", "(aterrorizado)"
+
+@yComportamento de Fuga em Combate:@n
+   - Limiares e modificadores que afetam quando personagens fogem
+   - Valores de medo, coragem e horror que influenciam decisões
+
+@ySistema de Dor:@n
+   - Limiares de dano que causam diferentes níveis de dor
+   - Quantidades de dor geradas por diferentes tipos de dano
+
+@yDecaimento Emocional:@n
+   - Taxas de recuperação natural de cada emoção ao longo do tempo
+   - Taxas especiais durante repouso e sono
+
+@yMultiplicadores de Fontes:@n
+   - Modificadores para diferentes fontes de emoções (combate, clima, etc.)
+
+   Use o comando CEDIT para modificar estas configurações.
+
+Veja também: EMOTIONEXPORT, EMOTIONIMPORT, CEDIT, EMOTIONS
+
+@rAcesso:@n Este comando requer nível GRGOD (nível 108).
+#108
+EMOTIONEXPORT EMOTION-EXPORT
+
+Uso: emotionexport <nome_arquivo>
+
+   Este comando exporta toda a configuração atual do sistema de emoções
+para um arquivo, permitindo fazer backup das configurações ou compartilhá-las
+com outros administradores.
+
+   O arquivo será salvo no diretório de configuração do servidor com
+um timestamp para facilitar o controle de versões. O formato do arquivo
+é legível e pode ser editado manualmente se necessário.
+
+Exemplos:
+  > emotionexport backup_producao
+  > emotionexport teste_balanceamento
+
+   Use este comando antes de fazer mudanças experimentais nas configurações
+de emoções, permitindo restaurar facilmente as configurações anteriores
+caso necessário.
+
+@yDica:@n Combine com EMOTIONIMPORT para testar diferentes configurações
+e reverter para versões anteriores quando necessário.
+
+Veja também: EMOTIONIMPORT, EMOTIONCONFIG, CEDIT
+
+@rAcesso:@n Este comando requer nível GRGOD (nível 108).
+#108
+EMOTIONIMPORT EMOTION-IMPORT
+
+Uso: emotionimport <nome_arquivo>
+
+   Este comando importa configurações do sistema de emoções de um arquivo
+previamente exportado com EMOTIONEXPORT. Isso permite restaurar backups,
+aplicar configurações testadas ou compartilhar ajustes de balanceamento.
+
+   O arquivo deve estar no diretório de configuração do servidor e seguir
+o formato correto de exportação. Todas as configurações válidas no arquivo
+serão aplicadas imediatamente.
+
+Exemplos:
+  > emotionimport backup_producao
+  > emotionimport configuracao_evento
+
+   Após importar, use EMOTIONCONFIG para verificar se todas as configurações
+foram aplicadas corretamente. O sistema reportará quantos parâmetros foram
+importados com sucesso.
+
+@rAtenção:@n As mudanças são aplicadas imediatamente e afetam todos os
+jogadores. Certifique-se de que o arquivo contém as configurações desejadas
+antes de importar.
+
+@yDica:@n Sempre exporte a configuração atual antes de importar uma nova,
+criando um ponto de restauração.
+
+Veja também: EMOTIONEXPORT, EMOTIONCONFIG, CEDIT
+
+@rAcesso:@n Este comando requer nível GRGOD (nível 108).
+#108
+$~
