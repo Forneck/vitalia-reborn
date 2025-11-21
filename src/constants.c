@@ -473,17 +473,25 @@ const char *emotion_profile_types[] = {"Neutral",    /* EMOTION_PROFILE_NEUTRAL 
 int rev_dir[] = {SOUTH, WEST, NORTH, EAST, DOWN, UP, SOUTHEAST, SOUTHWEST, NORTHWEST, NORTHEAST};
 
 /** How much movement is lost moving through a particular sector type. */
-int movement_loss[] = {1, /* Inside     */
-                       1, /* City       */
-                       2, /* Field      */
-                       3, /* Forest     */
-                       4, /* Hills      */
-                       6, /* Mountains  */
-                       4, /* Swimming   */
-                       1, /* Unswimable */
-                       5, /* Underwater */
-                       1, /* Flying     */
-                       6, 2, 3, 2, 1};
+int movement_loss[] = {
+    1, /* Inside     */
+    1, /* City       */
+    2, /* Field      */
+    3, /* Forest     */
+    4, /* Hills      */
+    6, /* Mountains  */
+    4, /* Swimming   */
+    1, /* Unswimable */
+    5, /* Underwater */
+    1, /* Flying     */
+    6, /* Climbing   */
+    2, /* Air Flow   */
+    3, /* Quicksand  */
+    2, /* Lava       */
+    1, /* Ice        */
+    3, /* Desert     */
+    1  /* Road       */
+};
 
 const char *climate_types[] = {"TEMPERADO", "CHUVOSO", "TROPICAL", "FRIO/SECO", "DESERTO"};
 
