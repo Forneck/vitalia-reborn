@@ -29,6 +29,62 @@
 #include "asciimap.h"
 #include "quest.h"
 #include "spedit.h"
+#include "string.h"  /* garante que strcmp/strlcpy/strtok estejam disponíveis */
+
+/* Mapeia nomes crus de AFF (affected_bits) para nomes amigáveis. */
+static const char *aff_pretty_name(const char *raw)
+{
+    if (!raw || !*raw)
+        return "";
+
+    /* Itens sem bits de efeito (NOBITS) não devem aparecer em 'affects'. */
+    if (!strcmp(raw, "NOBITS"))
+        return "";
+
+    /* ---------- DEBUFFS / STATUS NEGATIVOS ---------- */
+    if (!strcmp(raw, "BLIND"))       return "blindness";
+    if (!strcmp(raw, "CURSE"))       return "curse";
+    if (!strcmp(raw, "POISON"))      return "poison";
+    if (!strcmp(raw, "SLEEP"))       return "sleep";
+    if (!strcmp(raw, "PARALYZE"))    return "paralyze";
+    if (!strcmp(raw, "CHARM"))       return "charm";
+
+    /* (Opcional) você pode considerar alguns como “controle”:
+     * TALKDEAD = falar com mortos (já mapeado em buff abaixo)
+     * NO_TRACK = impedir tracking (já está em buffs utilitários)
+     */
+
+    /* ---------- BUFFS / STATUS POSITIVOS E UTILITÁRIOS ---------- */
+    if (!strcmp(raw, "INVIS"))        return "invisibility";
+    if (!strcmp(raw, "DET-ALIGN"))    return "detect alignment";
+    if (!strcmp(raw, "DET-INVIS"))    return "detect invisibility";
+    if (!strcmp(raw, "DET-MAGIC"))    return "detect magic";
+    if (!strcmp(raw, "SENSE-LIFE"))   return "sense life";
+    if (!strcmp(raw, "WATWALK"))      return "waterwalk";
+    if (!strcmp(raw, "SANCT"))        return "sanctuary";
+    if (!strcmp(raw, "GROUP"))        return "group";
+    if (!strcmp(raw, "INFRA"))        return "infravision";
+    if (!strcmp(raw, "PROT-EVIL"))    return "protection from evil";
+    if (!strcmp(raw, "PROT-GOOD"))    return "protection from good";
+    if (!strcmp(raw, "NO_TRACK"))     return "no track";
+    if (!strcmp(raw, "STONESKIN"))    return "stoneskin";
+    if (!strcmp(raw, "FIRESHIELD"))   return "fireshield";
+    if (!strcmp(raw, "TALKDEAD"))     return "talk with dead";
+    if (!strcmp(raw, "FLYING"))       return "fly";
+    if (!strcmp(raw, "BREATH"))       return "breath";
+    if (!strcmp(raw, "LIGHT"))        return "light";
+    if (!strcmp(raw, "FIREFLIES"))    return "fireflies";
+    if (!strcmp(raw, "STINGING"))     return "stinging swarm";
+    if (!strcmp(raw, "THISTLECOAT"))  return "thistlecoat";
+    if (!strcmp(raw, "SOUNDBARRIER")) return "soundbarrier";
+    if (!strcmp(raw, "ADAGIO"))       return "adagio";
+    if (!strcmp(raw, "ALLEGRO"))      return "allegro";
+    if (!strcmp(raw, "GLOOMSHIELD"))  return "gloomshield";
+    if (!strcmp(raw, "PROT-SPELL"))   return "protection from spells";
+    if (!strcmp(raw, "WINDWALL"))     return "windwall";
+
+    return raw;
+}
 
 /* prototypes of local functions */
 /* do_diagnose utility functions */
@@ -1416,26 +1472,108 @@ ACMD(do_affects)
 {
     struct affected_type *aff;
     char duration_buf[128];
-    int has_affects = 0;
+    int has_spell_affects = 0;
+    int has_item_affects = 0;
 
     if (IS_NPC(ch))
         return;
 
+    /* 1) Efeitos vindos de magias (lista de affects do char) */
     send_to_char(ch, "\tWEfeitos ativos:\tn\r\n");
 
     for (aff = ch->affected; aff; aff = aff->next) {
         if (aff->duration == -1) {
             snprintf(duration_buf, sizeof(duration_buf), "permanente");
         } else {
-            snprintf(duration_buf, sizeof(duration_buf), "%d h%s", aff->duration, aff->duration == 1 ? "" : "s");
+            snprintf(duration_buf, sizeof(duration_buf), "%d h%s",
+                     aff->duration,
+                     (aff->duration == 1) ? "" : "s");
         }
 
-        send_to_char(ch, "  %s [%s]\r\n", skill_name(aff->spell), duration_buf);
-        has_affects = 1;
+        send_to_char(ch, "  %s [%s]\r\n",
+                     skill_name(aff->spell),
+                     duration_buf);
+        has_spell_affects = 1;
     }
 
-    if (!has_affects) {
-        send_to_char(ch, "  Nenhum efeito ativo.\r\n");
+    /* Se quiser, pode descomentar isso para mostrar quando não houver
+     * nenhum efeito de magia em ch->affected.
+     *
+     * if (!has_spell_affects)
+     *     send_to_char(ch, "  Nenhum efeito de magia ativo.\r\n");
+     */
+
+    /* 2) Efeitos vindos de itens equipados (AFF_XXX em GET_OBJ_AFFECT) */
+    {
+        int i;
+        struct obj_data *obj = NULL;
+        char bitbuf[MAX_STRING_LENGTH];
+        char localbuf[MAX_STRING_LENGTH];
+        char *tok;
+
+        /* Primeiro pass: apenas verificar se existe ALGUM efeito de item.
+         * (para decidir se vamos imprimir o cabeçalho "Efeitos de equipamentos:")
+         */
+        for (i = 0; i < NUM_WEARS && !has_item_affects; i++) {
+            if (!(obj = GET_EQ(ch, i)))
+                continue;
+
+            sprintbitarray(GET_OBJ_AFFECT(obj), affected_bits, AF_ARRAY_MAX, bitbuf);
+            if (!*bitbuf)
+                continue;
+
+            strlcpy(localbuf, bitbuf, sizeof(localbuf));
+            tok = strtok(localbuf, " ");
+            while (tok != NULL) {
+                const char *pretty = aff_pretty_name(tok);
+
+                if (*pretty && strcmp(pretty, "\n") != 0) {
+                    has_item_affects = 1;
+                    break;
+                }
+
+                tok = strtok(NULL, " ");
+            }
+        }
+
+        /* Se houver efeitos de item, imprimimos o cabeçalho e listamos por item */
+        if (has_item_affects) {
+            send_to_char(ch, "\r\nEfeitos de equipamentos:\r\n");
+
+            for (i = 0; i < NUM_WEARS; i++) {
+                if (!(obj = GET_EQ(ch, i)))
+                    continue;
+
+                sprintbitarray(GET_OBJ_AFFECT(obj), affected_bits, AF_ARRAY_MAX, bitbuf);
+                if (!*bitbuf)
+                    continue;
+
+                strlcpy(localbuf, bitbuf, sizeof(localbuf));
+                tok = strtok(localbuf, " ");
+
+                /* Vamos imprimir um bloco por item assim:
+                 * [descrição curta do item]
+                 *     -> efeito1
+                 *     -> efeito2
+                 */
+                int printed_header_for_this_item = 0;
+
+                while (tok != NULL) {
+                    const char *pretty = aff_pretty_name(tok);
+
+                    if (*pretty && strcmp(pretty, "\n") != 0) {
+                        if (!printed_header_for_this_item) {
+                            send_to_char(ch, "[%s]\r\n",
+                                         obj->short_description ? obj->short_description : "(item sem descrição)");
+                            printed_header_for_this_item = 1;
+                        }
+                        send_to_char(ch, "    -> %s\r\n", pretty);
+                    }
+
+                    tok = strtok(NULL, " ");
+                }
+            }
+        }
     }
 }
 
