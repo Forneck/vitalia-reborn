@@ -118,6 +118,7 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
 {
     int found = 0;
     struct char_data *temp;
+    bool skip_modifiers = FALSE;   /* não mostrar (zunindo), (aura...) em certos casos */
 
     if (!obj || !ch) {
         log1("SYSERR: NULL pointer in show_obj_to_char(): obj=%p ch=%p", (void *)obj, (void *)ch);
@@ -164,6 +165,53 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
             break;
 
         case SHOW_OBJ_SHORT:
+            /* 
+             * Formato especial em CASAS:
+             * - Sala do tipo HOUSE
+             * - Objeto está no chão da mesma sala do personagem
+             * Resultado: short [Nv. XX]
+             */
+            if (IN_ROOM(ch) != NOWHERE &&
+                ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) &&
+                IN_ROOM(obj) == IN_ROOM(ch)) {
+
+                int lvl = 0;
+
+                /* 
+                 * Ajuste conforme o seu MUD:
+                 * - Se tiver GET_OBJ_LEVEL, beleza.
+                 * - Senão, troque por seu campo/macro de nível de item.
+                 */
+#ifdef GET_OBJ_LEVEL
+                lvl = GET_OBJ_LEVEL(obj);
+#endif
+
+                /* Ainda respeita SHOWVNUMS, se ligado */
+                if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS)) {
+                    send_to_char(ch, "[%d] ", GET_OBJ_VNUM(obj));
+                    if (SCRIPT(obj)) {
+                        if (!TRIGGERS(SCRIPT(obj))->next)
+                            send_to_char(ch, "[T%d] ", GET_TRIG_VNUM(TRIGGERS(SCRIPT(obj))));
+                        else
+                            send_to_char(ch, "[TRIGS] ");
+                    }
+                }
+
+                /* nome do item [Nv. XX]
+                 * [ ]  = \tc (ciano escuro)
+                 * Nv   = \tg (verde escuro)
+                 * '.' e o número em branco (\tn)
+                 */
+                send_to_char(ch, "%s \tc[\tgNv\tn. %d\tc]\tn",
+                             obj->short_description,
+                             lvl);
+
+                /* Não queremos (zunindo), (aura...), então pulamos modifiers */
+                skip_modifiers = TRUE;
+                break;
+            }
+
+            /* Comportamento padrão fora de casas ou fora do chão da sala */
             if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS)) {
                 send_to_char(ch, "[%d] ", GET_OBJ_VNUM(obj));
                 if (SCRIPT(obj)) {
@@ -210,7 +258,9 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
     }
 end:
 
-    show_obj_modifiers(obj, ch, mode);
+    if (!skip_modifiers)
+        show_obj_modifiers(obj, ch, mode);
+
     send_to_char(ch, "\r\n");
 }
 
