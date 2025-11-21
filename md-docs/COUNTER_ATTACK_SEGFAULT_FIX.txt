@@ -1,0 +1,81 @@
+COUNTER-ATTACK SPELL SEGFAULT FIX
+==================================
+
+Issue: Segmentation fault in do_hit() when counter-attack spells kill the attacker
+
+Description:
+-----------
+A segmentation fault occurred when counter-attack spells (FIRESHIELD, THISTLECOAT, 
+WINDWALL) reflected damage back to the attacker, potentially killing them. After 
+the counter-attack damage was applied, the code continued execution without checking 
+if the attacker was still valid, leading to a segfault when trying to access the 
+dead character's memory.
+
+Root Cause:
+----------
+The hit() function in src/fight.c applied counter-attack spell damage to the attacker
+(lines 1624-1645) by calling damage(victim, ch, ...). If this damage killed the 
+attacker 'ch', the function continued executing and tried to:
+1. Call hitprcnt_mtrigger(victim) at line 1648
+2. In perform_violence(), continue looping attacks and calling mob specials
+
+Since 'ch' could be marked for extraction or already dead, any subsequent memory
+access to 'ch' resulted in a segfault.
+
+Solution:
+--------
+Two layers of protection were added:
+
+1. In hit() function (after line 1645):
+   - Added checks after counter-attack damage is applied
+   - If attacker is marked MOB_NOTDEADYET/PLR_NOTDEADYET or GET_POS <= POS_DEAD
+   - Function returns early to prevent further access to dead character
+
+2. In perform_violence() function (after line 1715):
+   - Added checks after each hit() call in the attack loop
+   - Breaks the attack loop if attacker dies from counter-attack
+   - Added validation before calling mob special procedures
+   - Prevents accessing dead character in subsequent iterations
+
+Changes Made:
+------------
+File: src/fight.c
+
+1. Lines 1647-1654: Added validation after counter-attack spells
+   - Checks if IS_NPC(ch) and uses MOB_FLAGGED(ch, MOB_NOTDEADYET)
+   - Checks if !IS_NPC(ch) and uses PLR_FLAGGED(ch, PLR_NOTDEADYET)
+   - Also checks GET_POS(ch) <= POS_DEAD
+   - Returns early if attacker is dead/marked for extraction
+
+2. Lines 1717-1724: Added validation inside perform_violence() attack loop
+   - Checks attacker status after each hit() call
+   - Breaks loop early if attacker dies from counter-attack
+
+3. Lines 1727-1731: Added validation before mob specials
+   - Ensures 'ch' is still valid before calling mob special procedures
+   - Handles both NPCs and players
+
+Testing:
+-------
+Scenario that previously caused crash:
+- Character A attacks Character B
+- Character B has FIRESHIELD/THISTLECOAT/WINDWALL active
+- Counter-attack damage kills Character A
+- Previously: Segfault when trying to access Character A
+- Now: Function returns safely without accessing dead character
+
+The fix prevents the segfault by detecting when the attacker has died and
+stopping execution before attempting to access invalid memory.
+
+Build Status:
+------------
+- Code formatted with clang-format
+- Compiled successfully with CMake
+- No compiler errors
+- CodeQL security analysis passed with 0 alerts
+
+Compatibility:
+-------------
+This fix is backward compatible and does not change game mechanics. It only
+prevents crashes when a misconfigured or powerful counter-attack spell kills
+the attacker. All existing spell behaviors remain unchanged.
