@@ -890,7 +890,7 @@ void look_at_room(struct char_data *ch, int ignore_brief)
     struct room_data *rm = &world[IN_ROOM(ch)];
     room_vnum target_room;
     target_room = IN_ROOM(ch);
-    int i;
+    int i, obj_list_mode;
     if (!ch->desc)
         return;
     if (IS_DARK(IN_ROOM(ch)) && !CAN_SEE_IN_DARK(ch)) {
@@ -935,8 +935,13 @@ void look_at_room(struct char_data *ch, int ignore_brief)
     if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_AUTOEXIT))
         do_auto_exits(ch);
     /* now list characters & objects */
-    list_obj_to_char(world[IN_ROOM(ch)].contents, ch, SHOW_OBJ_LONG, FALSE);
-    list_char_to_char(world[IN_ROOM(ch)].people, ch);
+        obj_list_mode = SHOW_OBJ_LONG;
+        if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE))
+             obj_list_mode = SHOW_OBJ_SHORT;
+
+        list_obj_to_char(world[IN_ROOM(ch)].contents, ch, obj_list_mode, FALSE);
+        list_char_to_char(world[IN_ROOM(ch)].people, ch);
+
 
     /* Show mana density if character has detect magic active */
     if (AFF_FLAGGED(ch, AFF_DETECT_MAGIC)) {
