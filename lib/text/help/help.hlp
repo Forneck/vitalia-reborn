@@ -17474,7 +17474,7 @@ Cada classe ganha reputação extra por ações alinhadas com seu tema:
   @rGuerreiro Maligno@n matando guarda bondoso: +3-6 (temido vilão!)
   @rLadrão Maligno@n roubando bondoso: +2-4 (base +1-2, bônus classe +1-2)
 #1
-LEILAO LEILÕES AUCTION AUCTIONS
+LEILAO LEILOES AUCTION AUCTIONS
 
 Sintaxe: leilao [subcomando] [argumentos]
          leiloes
@@ -17567,7 +17567,7 @@ armadilhas escondidas ou caracteristicas especiais de criaturas.
 
 Veja tambem: EXAMINE, TOGGLE, LOOK
 #0
-CHANSONS CANÇÕES
+CHANSONS CANCOES
 
 Uso: chansons [classe]
 
