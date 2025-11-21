@@ -7124,19 +7124,21 @@ Veja tambem: SPELL, REST, MEDITATE, SCORE
 #1
 MAP MAPA
 
-Uso: map <distancia> [ normal | mundi ]
+Uso: map [distancia] [normal | mundi]
 
 O comando MAP exibe um mapa ASCII da area ao redor da sua localizacao atual.
 Voce pode especificar a distancia do mapa (quanto mais longe voce deseja ver)
 e o tipo de visualizacao.
 
-Argumentos:
-  <distancia> - Um numero de 1 a 12 indicando o alcance do mapa.
-                Se omitido, usa o tamanho padrao configurado no MUD.
+Argumentos (ambos opcionais):
+  distancia - Um numero de 1 a 12 indicando o alcance do mapa. Valores fora
+              deste intervalo serao automaticamente ajustados para o limite
+              mais proximo. Se omitido, usa o tamanho padrao configurado no
+              MUD (geralmente 6).
   
-  normal      - Exibe o mapa em modo normal (detalhado).
-  mundi       - Exibe o mapa em modo mundo (worldmap), mais compacto e com
-                maior alcance de visualizacao.
+  normal    - Exibe o mapa em modo normal (detalhado).
+  mundi     - Exibe o mapa em modo mundo (worldmap), mais compacto e com
+              maior alcance de visualizacao.
 
 O modo de visualizacao (normal ou mundi) e' automaticamente determinado pelo
 tipo de sala em que voce esta. Salas com a flag ROOM_WORLDMAP ou zonas com
@@ -7145,14 +7147,14 @@ sobrescrever esse comportamento especificando explicitamente "normal" ou
 "mundi" no comando.
 
 Exemplos:
-  map           - Exibe o mapa com o tamanho padrao
+  map           - Exibe o mapa com o tamanho padrao e modo automatico
   map 8         - Exibe o mapa com alcance de 8
   map 5 mundi   - Exibe o mapa em modo mundo com alcance de 5
   map 10 normal - Exibe o mapa em modo normal com alcance de 10
 
-O mapa mostra diferentes simbolos para cada tipo de terreno, como cidades,
-florestas, montanhas, agua, etc. Use o comando sem argumentos para ver a
-legenda completa.
+O mapa mostra diferentes simbolos para cada tipo de terreno (cidades,
+florestas, montanhas, agua, etc.) e inclui uma legenda completa quando
+o comando e' usado com argumentos.
 
 Veja tambem: AUTOMAP, LOOK
 #1
