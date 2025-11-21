@@ -472,7 +472,11 @@ const char *emotion_profile_types[] = {"Neutral",    /* EMOTION_PROFILE_NEUTRAL 
 /** Define a set of opposite directions from the cardinal directions. */
 int rev_dir[] = {SOUTH, WEST, NORTH, EAST, DOWN, UP, SOUTHEAST, SOUTHWEST, NORTHWEST, NORTHEAST};
 
-/** How much movement is lost moving through a particular sector type. */
+/** How much movement is lost moving through a particular sector type.
+ * IMPORTANT: This array MUST have exactly NUM_ROOM_SECTORS (17) elements,
+ * one for each sector type from SECT_INSIDE (0) to SECT_ROAD (16).
+ * Missing entries will cause out-of-bounds memory access and bugs.
+ * When adding new sectors, update this array AND structs.h defines. */
 int movement_loss[] = {
     1, /* Inside     */
     1, /* City       */
