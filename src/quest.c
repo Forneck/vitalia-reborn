@@ -396,6 +396,78 @@ static char *format_quest_info(qst_rnum rnum, struct char_data *ch, char *buf, s
         return buf;
     }
 
+    /* For AQ_EMOTION_IMPROVE quests, add emotion type and target level info */
+    if (QST_TYPE(rnum) == AQ_EMOTION_IMPROVE) {
+        int emotion_type = QST_RETURNMOB(rnum);
+        int target_level = QST_QUANTITY(rnum);
+        const char *emotion_name = "emoção";
+
+        switch (emotion_type) {
+            case EMOTION_TYPE_FRIENDSHIP:
+                emotion_name = "amizade";
+                break;
+            case EMOTION_TYPE_TRUST:
+                emotion_name = "confiança";
+                break;
+            case EMOTION_TYPE_LOYALTY:
+                emotion_name = "lealdade";
+                break;
+            case EMOTION_TYPE_HAPPINESS:
+                emotion_name = "felicidade";
+                break;
+            case EMOTION_TYPE_COMPASSION:
+                emotion_name = "compaixão";
+                break;
+            case EMOTION_TYPE_LOVE:
+                emotion_name = "afeto";
+                break;
+        }
+
+        snprintf(temp_buf, sizeof(temp_buf),
+                 "%s\r\n\tyDICA: Interaja positivamente através de presentes, socials amigáveis\tn\r\n"
+                 "\tyou ajuda em combate para alcançar nível %d de %s.\tn",
+                 info, target_level, emotion_name);
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For AQ_MAGIC_GATHER quests, add density and location count info */
+    if (QST_TYPE(rnum) == AQ_MAGIC_GATHER && ch && !IS_NPC(ch)) {
+        float target_density = QST_QUANTITY(rnum) / 100.0;
+        int locations_remaining = GET_QUEST_COUNTER(ch);
+
+        snprintf(temp_buf, sizeof(temp_buf),
+                 "%s\r\n\tyDICA: Visite locais com densidade mágica >= %.2f.\tn\r\n"
+                 "\tyLocais restantes: %d\tn",
+                 info, target_density, locations_remaining);
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For AQ_RESOURCE_GATHER quests, add quantity info */
+    if (QST_TYPE(rnum) == AQ_RESOURCE_GATHER && ch && !IS_NPC(ch)) {
+        int items_remaining = GET_QUEST_COUNTER(ch);
+
+        snprintf(temp_buf, sizeof(temp_buf),
+                 "%s\r\n\tyIMPORTANTE: Entregue os itens ao questmaster ou requisitante.\tn\r\n"
+                 "\tyItens restantes: %d\tn",
+                 info, items_remaining);
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
+    /* For AQ_REPUTATION_BUILD quests, add reputation target info */
+    if (QST_TYPE(rnum) == AQ_REPUTATION_BUILD) {
+        int target_reputation = QST_QUANTITY(rnum);
+
+        snprintf(temp_buf, sizeof(temp_buf),
+                 "%s\r\n\tyDICA: Interaja positivamente, complete tarefas e faça trades\tn\r\n"
+                 "\typara alcançar nível %d de confiança.\tn",
+                 info, target_reputation);
+        snprintf(buf, bufsize, "%s", temp_buf);
+        return buf;
+    }
+
     /* For all other quest types or if no special formatting needed, return info */
     if (info != buf) {
         snprintf(buf, bufsize, "%s", info);
@@ -1091,9 +1163,17 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                 float target_density = QST_QUANTITY(rnum) / 100.0;
 
                 if (current_density >= target_density) {
-                    /* Decrement counter for number of locations to visit */
-                    if (--GET_QUEST_COUNTER(ch) <= 0) {
-                        generic_complete_quest(ch);
+                    /* Validate counter before decrement */
+                    if (GET_QUEST_COUNTER(ch) > 0) {
+                        /* Decrement counter for number of locations to visit */
+                        if (--GET_QUEST_COUNTER(ch) <= 0) {
+                            generic_complete_quest(ch);
+                        } else {
+                            send_to_char(ch, "Você coletou energia mágica. Ainda precisa visitar %d locais.\r\n",
+                                         GET_QUEST_COUNTER(ch));
+                        }
+                    } else {
+                        log1("EXPLOIT WARNING: AQ_MAGIC_GATHER counter already at 0 for %s", GET_NAME(ch));
                     }
                 }
             }
@@ -1117,6 +1197,10 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                     }
 
                     if (has_object) {
+                        /* Mark item with NOLOCATE to prevent locate object exploit */
+                        SET_BIT_AR(GET_OBJ_EXTRA(object), ITEM_NOLOCATE);
+                        /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
+                        GET_OBJ_TIMER(object) = -28;
                         generic_complete_quest(ch);
                     }
                 }
@@ -1180,13 +1264,18 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                         }
                     }
 
-                    /* Count this delivery */
-                    if (--GET_QUEST_COUNTER(ch) <= 0) {
-                        /* All resources delivered, complete quest */
-                        generic_complete_quest(ch);
+                    /* Count this delivery - validate counter first */
+                    if (GET_QUEST_COUNTER(ch) > 0) {
+                        if (--GET_QUEST_COUNTER(ch) <= 0) {
+                            /* All resources delivered, complete quest */
+                            generic_complete_quest(ch);
+                        } else {
+                            /* Still need more items */
+                            send_to_char(ch, "Você entregou 1 item. Ainda precisa de %d mais.\r\n",
+                                         GET_QUEST_COUNTER(ch));
+                        }
                     } else {
-                        /* Still need more items */
-                        send_to_char(ch, "Você entregou 1 item. Ainda precisa de %d mais.\r\n", GET_QUEST_COUNTER(ch));
+                        log1("EXPLOIT WARNING: AQ_RESOURCE_GATHER counter already at 0 for %s", GET_NAME(ch));
                     }
                 } else if (GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum)) {
                     /* Given directly to original requester */
@@ -1195,13 +1284,18 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
                     /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
                     GET_OBJ_TIMER(object) = -28;
 
-                    /* Count this delivery */
-                    if (--GET_QUEST_COUNTER(ch) <= 0) {
-                        /* All resources delivered, complete quest */
-                        generic_complete_quest(ch);
+                    /* Count this delivery - validate counter first */
+                    if (GET_QUEST_COUNTER(ch) > 0) {
+                        if (--GET_QUEST_COUNTER(ch) <= 0) {
+                            /* All resources delivered, complete quest */
+                            generic_complete_quest(ch);
+                        } else {
+                            /* Still need more items */
+                            send_to_char(ch, "Você entregou 1 item. Ainda precisa de %d mais.\r\n",
+                                         GET_QUEST_COUNTER(ch));
+                        }
                     } else {
-                        /* Still need more items */
-                        send_to_char(ch, "Você entregou 1 item. Ainda precisa de %d mais.\r\n", GET_QUEST_COUNTER(ch));
+                        log1("EXPLOIT WARNING: AQ_RESOURCE_GATHER counter already at 0 for %s", GET_NAME(ch));
                     }
                 }
             }
