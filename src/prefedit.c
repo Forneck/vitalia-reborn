@@ -246,23 +246,27 @@ static void prefedit_disp_toggles_menu(struct descriptor_data *d)
                  PREFEDIT_FLAGGED(PRF_NOTELL) ? CBRED(d->character, C_NRM) : CBGRN(d->character, C_NRM),
                  ONOFF(!PREFEDIT_FLAGGED(PRF_NOTELL)), CCCYN(d->character, C_NRM));
 
-    /* The bottom section of the toggles menu */
-    send_to_char(d->character,
-                 "\r\n"
-                 "%sOutras Flags\r\n"
-                 "%sF%s) No Summon    %s[%s%3s%s]      %sH%s) Breve    %s[%s%3s%s]\r\n"
-                 "%sG%s) Nao Repetir  %s[%s%3s%s]      %sI%s) Compacto %s[%s%3s%s]\r\n",
-                 CBWHT(d->character, C_NRM),
-                 /* Line 10 - nosummon and brief */
-                 CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
-                 CCYEL(d->character, C_NRM), ONOFF(!PREFEDIT_FLAGGED(PRF_SUMMONABLE)), CCCYN(d->character, C_NRM),
-                 CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
-                 CCYEL(d->character, C_NRM), ONOFF(PREFEDIT_FLAGGED(PRF_BRIEF)), CCCYN(d->character, C_NRM),
-                 /* Line 11 - norepeat and compact */
-                 CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
-                 CCYEL(d->character, C_NRM), ONOFF(PREFEDIT_FLAGGED(PRF_NOREPEAT)), CCCYN(d->character, C_NRM),
-                 CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
-                 CCYEL(d->character, C_NRM), ONOFF(PREFEDIT_FLAGGED(PRF_COMPACT)), CCCYN(d->character, C_NRM));
+/* The bottom section of the toggles menu */
+send_to_char(d->character,
+             "\r\n"
+             "%sOutras Flags\r\n"
+             "%sF%s) No Summon    %s[%s%3s%s]      %sH%s) Breve    %s[%s%3s%s]\r\n"
+             "%sG%s) Nao Repetir  %s[%s%3s%s]      %sI%s) Compacto %s[%s%3s%s]\r\n"
+             "%sZ%s) Casas - Exibir Nv. do item %s[%s%3s%s]\r\n",
+             CBWHT(d->character, C_NRM),
+             /* Line 10 - nosummon and brief */
+             CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+             CCYEL(d->character, C_NRM), ONOFF(!PREFEDIT_FLAGGED(PRF_SUMMONABLE)), CCCYN(d->character, C_NRM),
+             CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+             CCYEL(d->character, C_NRM), ONOFF(PREFEDIT_FLAGGED(PRF_BRIEF)), CCCYN(d->character, C_NRM),
+             /* Line 11 - norepeat and compact */
+             CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+             CCYEL(d->character, C_NRM), ONOFF(PREFEDIT_FLAGGED(PRF_NOREPEAT)), CCCYN(d->character, C_NRM),
+             CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+             CCYEL(d->character, C_NRM), ONOFF(PREFEDIT_FLAGGED(PRF_COMPACT)), CCCYN(d->character, C_NRM),
+             /* Line 12 - Inv. Casa alt */
+             CBYEL(d->character, C_NRM), CCNRM(d->character, C_NRM), CCCYN(d->character, C_NRM),
+             CCYEL(d->character, C_NRM), ONOFF(PREFEDIT_FLAGGED(PRF_HOUSE_ALTINV)), CCCYN(d->character, C_NRM));
 
     /* The bottom section of the toggles menu */
     send_to_char(
@@ -786,6 +790,14 @@ void prefedit_parse(struct descriptor_data *d, char *arg)
                 case 'u':
                 case 'U':
                     TOGGLE_VAR(d->pProtocol->bGMCP);
+                    break;
+
+                case 'z':
+                case 'Z':
+                    if (PREFEDIT_FLAGGED(PRF_HOUSE_ALTINV))
+                        REMOVE_BIT_AR(PREFEDIT_GET_FLAGS, PRF_HOUSE_ALTINV);
+                    else
+                        SET_BIT_AR(PREFEDIT_GET_FLAGS, PRF_HOUSE_ALTINV);
                     break;
 
                 default:
