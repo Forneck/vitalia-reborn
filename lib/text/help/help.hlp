@@ -17952,13 +17952,14 @@ necessidades, genetica e situacao atual.
 
 @y===== FUNCOES DE POSTING IMPLEMENTADAS =====@n
 
-@gTodas as 5 novas funcoes estao completas e funcionais:@n
+@gTodas as 7 novas funcoes estao completas e funcionais:@n
 1. mob_posts_emotion_quest() - Cria quests de melhoria de emocao
 2. mob_posts_magic_gather_quest() - Cria quests de coleta magica
 3. mob_posts_delivery_quest() - Cria quests de entrega de item
 4. mob_posts_resource_gather_quest() - Cria quests de coleta de recursos
 5. mob_posts_reputation_quest() - Cria quests de construcao de reputacao
-
+6. mob_posts_shop_buy_quest() - Cria quests de compra em loja
+7. mob_posts_shop_sell_quest() - Cria quests de venda em loja
 Mobs com AI apropriada agora podem autonomamente criar estes tipos de quest
 quando suas condicoes de posting sao satisfeitas (genetics, gold, necessidade).
 
