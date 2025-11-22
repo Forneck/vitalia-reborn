@@ -4504,7 +4504,7 @@ void mob_posts_shop_buy_quest(struct char_data *ch, obj_vnum item_vnum, int quan
     }
 
     /* Find questmaster for this zone */
-    questmaster_vnum = find_questmaster_for_zone_enhanced(ch, mob_zone);
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
     if (questmaster_vnum == NOBODY) {
         log1("SHOP BUY QUEST: No questmaster found for zone %d (%s)", mob_zone,
              zone_table[mob_zone].name ? zone_table[mob_zone].name : "Unknown");
@@ -4645,7 +4645,7 @@ void mob_posts_shop_sell_quest(struct char_data *ch, obj_vnum item_vnum, int qua
     }
 
     /* Find questmaster for this zone */
-    questmaster_vnum = find_questmaster_for_zone_enhanced(ch, mob_zone);
+    questmaster_vnum = find_questmaster_for_zone_enhanced(mob_zone, ch);
     if (questmaster_vnum == NOBODY) {
         log1("SHOP SELL QUEST: No questmaster found for zone %d (%s)", mob_zone,
              zone_table[mob_zone].name ? zone_table[mob_zone].name : "Unknown");
