@@ -17907,7 +17907,148 @@ Para testar e gerenciar o sistema:
    - Reputacao do mob afeta recompensas
    - Dificuldade calculada automaticamente
 
-Veja tambem: QEDIT, QUEST, AUTOQUESTS, CEDIT, MEDIT
+Veja tambem: QEDIT, QUEST, AUTOQUESTS, CEDIT, MEDIT, QUEST-GAPS
+
+@rAcesso:@n Este comando e informacao para nivel GOD+ (nivel 105+).
+#105
+QUEST-GAPS QUEST-FUTURE QUEST-TYPES-FUTURE MISSING-QUESTS
+
+@cANALISE DE LACUNAS NO SISTEMA DE QUESTS@n
+
+   Esta entrada documenta tipos de quest que PODERIAM ser adicionados ao sistema
+baseados nos sistemas existentes de emocoes, reputacao e densidade magica.
+
+@y===== ANALISE DOS SISTEMAS ATUAIS =====@n
+
+@gSistema de Emocoes (20 emocoes):@n
+- Basicas: Fear, Anger, Happiness, Sadness
+- Sociais: Friendship, Love, Trust, Loyalty  
+- Motivacionais: Curiosity, Greed, Pride
+- Empaticas: Compassion, Envy
+- Excitacao: Courage, Excitement
+- Negativas: Disgust, Shame, Pain
+
+@gSistema de Reputacao:@n
+- Escala 0-100
+- Afeta recompensas e aceitacao de quests
+- Aumenta com conclusao, diminui com falhas
+
+@gSistema de Densidade Magica:@n
+- Baseado em clima (tempestades = alta densidade)
+- Baseado em tempo (crepusculo = pico)
+- Baseado em setor (agua/floresta = mais alto)
+- Boosts por zona via Control Weather
+- Afeta poder e custo de magias
+
+@y===== LACUNAS IDENTIFICADAS =====@n
+
+@c1. QUESTS BASEADAS EM EMOCOES@n
+   @rAusentes: Quests Sociais/Diplomaticas@n
+   - Fazer amizades (aumentar friendship)
+   - Ganhar confianca de NPCs (aumentar trust)
+   - Mediar conflitos (reduzir anger)
+   - Confortar NPCs tristes (reduzir sadness)
+   - Construir lealdade com faccao (aumentar loyalty)
+   
+   @gImplementacao sugerida:@n AQ_EMOTION_IMPROVE (tipo 11)
+   - Mob posta quando solitario/zangado/com medo
+   - Triggers: dar presentes, socials, ajudar em combate
+   - Sistema de emocoes ja rastreia isso
+   - Requer interacao social, nao combate
+
+@c2. QUESTS BASEADAS EM MAGIA@n
+   @rAusentes: Quests Magicas@n
+   - Lancar magia em area de alta densidade
+   - Visitar locais com densidade magica especifica
+   - Estabilizar disturbio magico
+   - Aumentar densidade magica de area
+   - Coletar componentes magicos
+   
+   @gImplementacao sugerida:@n AQ_MAGIC_GATHER (tipo 12)
+   - Mob posta quando precisando de poder magico
+   - Player visita X locais com densidade > threshold
+   - Sistema de densidade magica ja calcula isso
+   - Nao-combate, exploracao magica
+
+@c3. QUESTS DE COMERCIO/INTERACAO@n
+   @rAusentes: Quests Sociais Nao-Combate@n
+   - Comerciar itens especificos com NPCs
+   - Ensinar habilidade para NPC
+   - Aprender de NPC
+   - Realizar entretenimento
+   - Espalhar informacao/rumores
+   
+   @gImplementacao sugerida:@n AQ_TRADE (tipo 13)
+   - Usa reputacao para preco
+   - Constroi trust emotion
+   - Alternativa nao-combate
+   - Mob posta quando precisando de item especifico
+
+@c4. QUESTS DE COLETA@n
+   @rAusentes: Colecao de Recursos@n
+   - Coletar X quantidade de itens especificos
+   - Colher do ambiente
+   - Minerar/forragear recursos especificos
+   
+   @gImplementacao sugerida:@n AQ_RESOURCE_GATHER (tipo 14)
+   - Similar a AQ_MOB_KILL mas para objetos
+   - Usa contador (QST_QUANTITY)
+   - Mob posta quando precisando de suprimentos
+
+@c5. QUESTS DE REPUTACAO@n
+   @rAusentes: Construcao de Reputacao@n
+   - Melhorar reputacao com faccao/zona
+   - Restaurar reputacao danificada
+   - Espalhar boa palavra sobre alguem
+   
+   @gImplementacao sugerida:@n AQ_REPUTATION_BUILD (tipo 15)
+   - Completar sub-tarefas (matar/coletar/comerciar)
+   - Sistema de reputacao ja existe
+   - Multi-objetivo complexo
+
+@y===== PRIORIDADES DE IMPLEMENTACAO =====@n
+
+@cALTA PRIORIDADE@n (aproveitam sistemas existentes):
+1. AQ_EMOTION_IMPROVE - Sistema de emocoes completo
+2. AQ_MAGIC_GATHER - Sistema de densidade ja funciona
+3. AQ_TRADE - Sistemas de reputacao e trust prontos
+
+@cMEDIA PRIORIDADE@n (implementacao moderada):
+4. AQ_RESOURCE_GATHER - Logica similar a mob kill
+5. AQ_REPUTATION_BUILD - Sistema base existe
+
+@cBAIXA PRIORIDADE@n (implementacao complexa):
+6. AQ_INVESTIGATE - Requer sistema de dialogos
+7. AQ_CRAFT - Requer sistema de crafting (pode nao existir)
+8. AQ_PUZZLE - Requer engine de puzzles
+
+@y===== NOTAS DE IMPLEMENTACAO =====@n
+
+Para cada novo tipo de quest:
+1. Adicionar em quest.h defines (incrementar NUM_AQ_TYPES)
+2. Adicionar em quest_types[] array (quest.c linha 31)
+3. Implementar em format_quest_info() (quest.c)
+4. Adicionar trigger em autoquest_trigger_check() (quest.c)
+5. Criar funcao mob_posts_XXX_quest() em utils.c
+6. Atualizar documentacao help
+7. Adicionar validacao em is_quest_valid()
+8. Testar com mobs de diferentes geneticas
+
+@rCONSIDERACAO IMPORTANTE:@n
+Antes de adicionar novos tipos, avaliar:
+- Balanceamento com tipos existentes
+- Impacto na performance (triggers frequentes?)
+- Complexidade para jogadores
+- Se sistemas necessarios ja existem
+- Se mobs usarao naturalmente
+
+@gEXEMPLO DE USO:@n
+Um mob com alta curiosity e baixa friendship poderia postar:
+- AQ_MAGIC_GATHER se em area de baixa densidade
+- AQ_EMOTION_IMPROVE se muito solitario
+- AQ_TRADE se precisando de item mas nao querendo sair
+
+Veja tambem: MOB-AUTOQUESTS, QEDIT, MEDIT, CEDIT
 
 @rAcesso:@n Este comando e informacao para nivel GOD+ (nivel 105+).
 #105
