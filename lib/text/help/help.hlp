@@ -17787,4 +17787,128 @@ Veja tambem: EMOTIONEXPORT, EMOTIONCONFIG, CEDIT
 
 @rAcesso:@n Este comando requer nivel GRGOD (nivel 108).
 #108
+MOB-AUTOQUESTS MOB-QUESTS AUTOQUEST-SYSTEM QUEST-POSTING
+
+@cSISTEMA DE AUTOQUESTS POSTADAS POR MOBS@n
+
+   O sistema de autoquests permite que mobs com IA postem quests dinamicamente
+para os jogadores. Mobs podem criar diferentes tipos de quests baseadas em suas
+necessidades, genetica e situacao atual.
+
+@y===== TIPOS DE QUESTS =====@n
+
+@c1. AQ_OBJ_FIND / AQ_OBJ_RETURN (Buscar Objeto)@n
+   - Jogador deve encontrar um objeto especifico
+   - Convertido automaticamente para AQ_OBJ_RETURN (entrega ao requisitante)
+   - Mob posta quando precisa de um item que nao possui
+   - Requisitos: Mob precisa ter ouro suficiente, item deve ser TAKE
+
+@c2. AQ_ROOM_FIND (Explorar Local)@n
+   - Jogador deve visitar uma sala especifica
+   - Mob posta quando quer informacoes sobre um local
+   - Quest mostra nome da sala E nome da zona (formato: "sala em zona")
+   - Requisitos: Sala nao pode ser GODROOM ou HOUSE
+
+@c3. AQ_MOB_FIND (Encontrar Mob)@n
+   - Jogador deve localizar e visitar um mob especifico
+   - Mob posta quando procura por outro mob
+   - Requisitos: Mob alvo deve existir no mundo
+
+@c4. AQ_MOB_KILL (Matar Mob)@n
+   - Jogador deve eliminar um mob especifico
+   - Se mob ja foi morto, pedra magica pode ser entregue
+   - Mob posta para remover uma ameaca
+   - Requisitos: Mob alvo deve existir
+
+@c5. AQ_MOB_SAVE (Salvar Mob)@n
+   - Jogador deve proteger/curar um mob especifico
+   - Quest completa quando mob esta saudavel (>80% HP) e fora de combate
+   - Raramente postada por mobs
+   - Requisitos: Mob alvo deve estar em perigo
+
+@c6. AQ_ROOM_CLEAR (Limpar Sala)@n
+   - Jogador deve eliminar todos os mobs de uma sala
+   - Mob posta para limpar uma area perigosa
+   - Requisitos: Sala deve ter mobs hostis
+
+@c7. AQ_PLAYER_KILL (Matar Jogador Assassino)@n
+   @rAVISO: Quest PvP - requer cuidado!@n
+   - Jogador deve eliminar qualquer jogador marcado como assassino (PKiller)
+   - Mob posta quando foi atacado por jogadores ou busca vinganca
+   - @yATIVA PvP@n - jogadores podem atacar uns aos outros
+   - Requisitos: Mob deve ter sido atacado ou ter baixa compassion
+   - @rRESTRICOES: Uso cuidadoso recomendado para evitar grief@n
+
+@c8. AQ_MOB_KILL_BOUNTY (Recompensa por Mob Especifico)@n
+   @yATUALMENTE DESABILITADA PARA TESTES@n
+   - Jogador deve eliminar um mob ESPECIFICO (nao qualquer do tipo)
+   - Sistema identifica instancia exata do mob alvo
+   - Pedra magica contem ID unico do alvo
+   - Requisitos: Mob alvo deve estar vivo no mundo
+
+@c9. AQ_MOB_ESCORT (Escoltar Mob)@n
+   - Jogador deve escoltar um mob ate um destino seguro
+   - Mob a ser escoltado spawna quando quest e aceita
+   - Quest falha se mob escoltado morrer
+   - Requisitos: Destino deve ser acessivel, mob nao pode ser NOKILL
+
+@y===== SISTEMA DE POSTING =====@n
+
+@gCondicoes para Mobs Postarem Quests:@n
+- Mob deve ter AI data (mob com comportamento inteligente)
+- Mob deve ter ouro suficiente para recompensa
+- Limite maximo de quests mob-posted nao pode ser excedido
+- Questmaster deve existir na zona ou zona adjacente
+- Mob deve ter genetics apropriadas (quest_tendency, adventurer_tendency, etc)
+
+@gQuestmasters:@n
+- Se questmaster normal nao acessivel, mob se torna questmaster temporario
+- Quests temporarias ficam com o mob ate serem completadas
+- Sistema salva quests em lib/etc/tempquests.dat para persistencia
+
+@gRecompensas:@n
+- Calculadas baseadas em dificuldade, nivel do mob e reputacao
+- Mobs podem oferecer itens do proprio inventario como recompensa extra
+- Ouro e deduzido do mob ao postar quest
+
+@gFalhas e Penalidades:@n
+- Quests de escolta: penalidade 2x se escoltado morrer
+- Quests de bounty: falham se outro jogador matar o alvo
+- Abandonar quest: penalidade normal em questpoints
+
+@y===== COMANDOS RELACIONADOS =====@n
+
+Para testar e gerenciar o sistema:
+- QEDIT: Editar quests manualmente
+- QUEST LIST: Ver quests disponiveis
+- QUEST STATUS <vnum>: Ver detalhes de uma quest
+- QUEST REMOVE <vnum> confirm: Remover quest mob-posted (gods)
+
+@y===== OBSERVACOES IMPORTANTES =====@n
+
+@r1. Quests PvP (AQ_PLAYER_KILL):@n
+   - Devem ser usadas com extremo cuidado
+   - Podem causar conflitos entre jogadores
+   - Recomenda-se limitar frequencia de posting
+   - Considere desabilitar se houver abuse
+
+@r2. Quests Bounty (AQ_MOB_KILL_BOUNTY):@n
+   - Atualmente desabilitadas (linha 2718 em utils.c)
+   - Sistema rastreia mobs especificos por script_id
+   - Requer mais testes antes de reativar
+
+@g3. Performance:@n
+   - Limite de MAX_MOB_POSTED_QUESTS quests ativas
+   - Quests sao salvas periodicamente
+   - Cleanup automatico de quests completadas
+
+@g4. Balanceamento:@n
+   - Genetica do mob afeta tipo e frequencia de quests
+   - Reputacao do mob afeta recompensas
+   - Dificuldade calculada automaticamente
+
+Veja tambem: QEDIT, QUEST, AUTOQUESTS, CEDIT, MEDIT
+
+@rAcesso:@n Este comando e informacao para nivel GOD+ (nivel 105+).
+#105
 $~
