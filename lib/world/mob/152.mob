@@ -46,7 +46,7 @@ forma antiga, uma garra nobre, mas o outro é um pesadelo de galhos e espinhos
 que gotejam uma seiva negra e ácida. A sua face é uma máscara de casca, mas dos
 seus buracos brilha um vazio que absorve a esperança.
 ~
-2222274 0 1000 0 606264 2 0 0 -1000 E
+2222272 0 1000 0 606264 2 0 0 -1000 E
 58 8 -40 12d10+1500 6d8+30
 5000 240000
 9 9 0
@@ -60,7 +60,6 @@ GenFollow: 15
 E
 T 15204
 T 15205
-T 15225
 #15202
 alma errante espirito fantasma~
 uma alma errante~
@@ -291,7 +290,7 @@ Os seus olhos, visíveis nas profundezas do capuz, não têm vida; são dois pon
 de luz pálida e fria, cheios de uma tristeza que se transformou em ódio ao
 longo dos séculos.
 ~
-2222274 0 1000 0 606264 2 0 0 -1000 E
+2222272 0 1000 0 606264 2 0 0 -1000 E
 59 9 -40 13d10+1600 7d8+35
 3000 95000
 9 9 1
@@ -346,7 +345,7 @@ Na sua caixa torácica vazia, um coração de luz fantasmagórica pulsa lentamen
 Os seus olhos são dois abismos de escuridão, e o seu rugido não é som, mas a
 libertação de toda a dor e agonia das almas que o compõem.
 ~
-10610754 0 1000 0 870456 2 0 0 -1000 E
+10610752 0 1000 0 870456 2 0 0 -1000 E
 63 13 -55 25d20+4000 10d12+60
 4000 300000
 9 9 0
@@ -367,7 +366,7 @@ pedra, está permanentemente crispada num rosnado. Ele não veste armadura, pois
 a sua pele é dura como ferro, e emana um cheiro a terra molhada, ozono e sangue
 fresco.
 ~
-10610754 0 1000 0 606264 2 0 0 -1000 E
+10610752 0 1000 0 606264 2 0 0 -1000 E
 64 16 -50 22d20+3800 15d10+70
 4000 280000
 9 9 1
@@ -450,7 +449,7 @@ redor, ocasionalmente materializam-se fragmentos das suas tentativas - pedaços
 de tigelas, espelhos rachados - que existem por um instante antes de se
 desfazerem em pó.
 ~
-2746562 0 1000 0 8994872 2 0 0 -1000 E
+2746560 0 1000 0 8994872 2 0 0 -1000 E
 55 5 -10 10d10+1000 4d8+20
 500 10000
 9 9 1

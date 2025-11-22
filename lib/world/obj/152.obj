@@ -209,7 +209,7 @@ Uma katana de brilho sinistro jaz aqui, a sua lâmina parece sussurrar promessas
 de sangue.~
 ~
 5 ah 0 0 0 an 0 0 0 0 0 0 0
-1 5 8 17
+1 6 7 3
 8 75000 8000 50 0
 T 15217
 E
@@ -246,7 +246,7 @@ Uma longa e elegante nodachi, com a lâmina manchada de um vermelho que nunca
 seca, está aqui.~
 ~
 5 a 0 0 0 an 0 0 0 0 0 0 0
-0 4 8 11
+2 5 8 3
 10 80000 9000 50 0
 E
 arma nodachi lua sangrenta~
@@ -339,7 +339,7 @@ adaga tantoo espinho arvore-mae~
 o tanto do espinho da árvore-mãe~
 Um tanto, cuja lâmina parece ser feita de madeira negra e farpada, está aqui.~
 ~
-5 d 0 0 0 an 0 0 0 0 0 0 0
+5 d 0 0 0 ano 0 0 0 0 0 0 0
 0 2 8 11
 5 45000 5500 0 0
 E
@@ -552,6 +552,8 @@ A
 23 2
 A
 4 2
+A
+19 3
 #15222
 amuleto coracao petrificado furia~
 o amuleto do coração petrificado~
@@ -833,11 +835,13 @@ pequenos espinhos podem brotar da sua superfície para proteger contra golpes.
 Um zumbido baixo e triste emana delas, a canção de uma natureza moribunda.
 ~
 A
-2 4
+2 2
 A
-20 3
+1 2
 A
-5 3
+5 2
+A
+19 -1
 #15234
 luvas seda pegajosa jorogumo~
 as luvas de seda pegajosa da jorogumo~
@@ -888,7 +892,7 @@ o anel do olho de aranha~
 Um anel de prata com um dos oito olhos de uma aranha gigante engastado. O olho
 se move.~
 ~
-9 b 0 0 0 ab 0 0 0 defg 0 0 0
+9 b 0 0 0 ab 0 0 0 efg 0 0 0
 2 0 0 0
 5 45000 5500 0 0
 E
@@ -1052,7 +1056,7 @@ Corrompido continuou a usá-las na morte. Elas tornam o portador mais lento, mas
 cada passo seu é tão firme que não pode ser derrubado por nenhum golpe.
 ~
 A
-14 -10
+14 -50
 A
 1 2
 A
@@ -1321,15 +1325,6 @@ T 15214
 T 15215
 T 15216
 T 15228
-T 15229
-T 15230
-T 15231
-T 15232
-T 15233
-T 15234
-T 15235
-T 15236
-T 15237
 E
 orbe bolinha musgo sussurrante amaldicoado~
 À primeira vista, parece ser apenas uma bola de musgo, talvez enrolada por um
@@ -1367,7 +1362,7 @@ Uma katana de brilho sereno e prateado repousa aqui, a sua lâmina parece cantar
 uma canção de paz.~
 ~
 5 bgik 0 0 0 an 0 0 0 i 0 0 0
-1 4 10 17
+1 6 6 3
 8 800000 25000 0 0
 E
 katana masamune serena sagrada~
@@ -1413,7 +1408,7 @@ energia suave.~
 ~
 5 ab 0 0 0 ano 0 0 0 i 0 0 0
 2 4 6 0
-5 450000 12000 0 0
+5 45000 12000 0 0
 E
 adaga tanto semente vida~
 O espinho da Árvore-Mãe Moribunda, outrora um canal de agonia e podridão, foi
@@ -1440,7 +1435,7 @@ que os saudáveis possam florescer.
 A
 18 2
 A
-19 2
+19 6
 A
 1 1
 A
@@ -1451,9 +1446,9 @@ a chama guia do peregrino~
 Uma chama dourada e quente flutua serenamente, emitindo uma luz que inspira
 coragem.~
 ~
-1 ab 0 0 0 a 0 0 0 0 0 0 0
+1 ab 0 0 0 a 0 0 0 A 0 0 0
 0 0 -1 0
-3 250000 8000 0 0
+3 25000 8000 0 0
 E
 luz chama guia peregrino~
 A alma do guerreiro que antes vagava perdida como um fogo-fátuo encontrou a
@@ -1492,7 +1487,7 @@ aura de paz.~
 ~
 9 bk 0 0 0 ae 0 0 0 0 0 0 0
 7 0 0 0
-4 380000 11000 0 0
+4 50000 11000 0 0
 E
 bandana hachimaki dever cumprido~
 O sangue e as lágrimas que manchavam este tecido evaporaram, e com eles, o ódio
@@ -1528,7 +1523,7 @@ aroma sagrado.~
 ~
 9 i 0 0 0 ac 0 0 0 0 0 0 0
 1 0 0 0
-1 400000 13000 0 0
+1 40000 13000 0 0
 E
 colar rosario prece atendida~
 As contas de oração, antes enegrecidas e rachadas pelo desespero de um monge,
@@ -1563,7 +1558,7 @@ fossem novas, irradia uma aura de coragem.~
 ~
 9 abi 0 0 0 ad 0 0 0 0 0 0 0
 10 0 0 0
-2 650000 20000 0 0
+2 65000 20000 0 0
 E
 armadura o-yoroi vigilia eterna~
 As marcas da derrota e do fogo desapareceram. A purificação honrou o sacrifício
@@ -1586,7 +1581,7 @@ interpõe entre a escuridão e a luz, continuando a vigília eterna que o seu
 antigo mestre começou há tanto tempo.
 ~
 A
-22 6
+1 2
 A
 5 1
 A
@@ -1599,7 +1594,7 @@ luar solidificado.~
 ~
 9 b 0 0 0 al 0 0 0 0 0 0 0
 9 0 0 0
-1 350000 11500 0 0
+1 35000 11500 0 0
 E
 cinto voto silencioso~
 A sombra e o ódio do espírito vingativo foram dissipados, deixando para trás
@@ -1632,9 +1627,9 @@ as asas do espírito guardião~
 Um par de asas etéreas, feitas de luz prateada e que se assemelham às de um
 falcão, emanam uma aura protetora.~
 ~
-24 abgik 0 0 0 ap 0 0 0 x 0 0 0
+24 abgik 0 0 0 ap 0 0 0 x d 0 0
 0 0 0 0
-1 600000 18000 0 0
+1 60000 18000 0 0
 E
 asas espirito guardiao~
 A alma do Tengu, um ser de orgulho e escuridão, foi redimida. O seu tormento e
@@ -1662,23 +1657,22 @@ A
 A
 5 2
 #15268
-kimono seda fantasma~
-o kimono de seda do artesão fantasma~
-Um kimono de seda de uma brancura imaculada, uma anomalia na sujidade da
-floresta.~
+kimono seda sagrado~
+o kimono de seda do artesão redimido~
+Um kimono de seda que emana uma suave luz dourada repousa aqui, purificando
+o ambiente.~
 ~
 9 b 0 0 0 ad 0 0 0 s 0 0 0
 10 0 0 0
-5 380000 15000 0 0
+5 38000 15000 0 0
 E
-kimono seda fantasma~
-Este kimono foi a obra-prima de um Artesão Maldito, a única criação que ele
-conseguiu completar na sua existência espectral, tecida a partir de fios de
-luar e arrependimento. O tecido é leve como uma pluma e move-se como fumaça.
-Vesti-lo é ser envolto numa aura de proteção etérea, que desvia golpes e magias
-como se não fossem reais. A sua beleza assombrosa é um testemunho de uma
-habilidade que nem a morte conseguiu apagar completamente.
-~
+kimono seda sagrado~
+Esta obra-prima simboliza a ascensão final do antigo Artesão, que encontrou a
+paz após séculos de tormento. Tecido a partir de fios de alvorada e perdão, o
+tecido é quente ao toque e brilha com uma luminescência divina. Vesti-lo é
+sentir o abraço de uma graça celestial, repelindo as trevas e a malícia com a
+pureza de sua essência. É a prova de que até a alma mais torturada pode criar
+algo santo.~
 A
 1 -3
 A
@@ -1694,7 +1688,7 @@ Um casaco haori, coberto por uma fina camada de cinzas que nunca se dissipa.~
 ~
 9 b 0 0 0 ak 0 0 0 0 0 0 0
 12 0 0 0
-2 300000 12000 0 0
+2 30000 12000 0 0
 E
 haori capitao cinzas~
 Este haori, um casaco usado sobre a armadura, pertenceu a um capitão samurai
