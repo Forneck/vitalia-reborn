@@ -3781,6 +3781,12 @@ void mob_posts_emotion_quest(struct char_data *ch, mob_vnum target_mob_vnum, int
         return;
     }
 
+    /* Validate mob is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        log1("SYSERR: mob_posts_emotion_quest called with mob %s not in valid room", GET_NAME(ch));
+        return;
+    }
+
     if (!can_add_mob_posted_quest()) {
         return;
     }
@@ -3926,6 +3932,12 @@ void mob_posts_magic_gather_quest(struct char_data *ch, float target_density, in
         return;
     }
 
+    /* Validate mob is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        log1("SYSERR: mob_posts_magic_gather_quest called with mob %s not in valid room", GET_NAME(ch));
+        return;
+    }
+
     if (!can_add_mob_posted_quest()) {
         return;
     }
@@ -4048,6 +4060,12 @@ void mob_posts_trade_quest(struct char_data *ch, mob_vnum target_mob_vnum, obj_v
     obj_rnum item_rnum = NOTHING;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Validate mob is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        log1("SYSERR: mob_posts_trade_quest called with mob %s not in valid room", GET_NAME(ch));
         return;
     }
 
@@ -4184,6 +4202,12 @@ void mob_posts_resource_gather_quest(struct char_data *ch, obj_vnum item_vnum, i
         return;
     }
 
+    /* Validate mob is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        log1("SYSERR: mob_posts_resource_gather_quest called with mob %s not in valid room", GET_NAME(ch));
+        return;
+    }
+
     if (!can_add_mob_posted_quest()) {
         return;
     }
@@ -4313,6 +4337,12 @@ void mob_posts_reputation_quest(struct char_data *ch, mob_vnum target_mob_vnum, 
     mob_rnum target_mob_rnum = NOBODY;
 
     if (!IS_NPC(ch) || !ch->ai_data) {
+        return;
+    }
+
+    /* Validate mob is in a valid room */
+    if (IN_ROOM(ch) == NOWHERE) {
+        log1("SYSERR: mob_posts_reputation_quest called with mob %s not in valid room", GET_NAME(ch));
         return;
     }
 
