@@ -22,15 +22,29 @@
 #include "comm.h"
 #include "screen.h"
 #include "quest.h"
+#include "spells.h"     /* for calculate_mana_density */
 #include "act.h"        /* for do_tell */
 #include "dg_scripts.h" /* for char_script_id */
 
 /*--------------------------------------------------------------------------
  * Exported global variables
  *--------------------------------------------------------------------------*/
-const char *quest_types[] = {
-    "Object",     "Room",        "Find mob",          "Kill mob",   "Save mob", "Return object",
-    "Clear room", "Kill player", "Kill mob (bounty)", "Escort mob", "\n"};
+const char *quest_types[] = {"Object",
+                             "Room",
+                             "Find mob",
+                             "Kill mob",
+                             "Save mob",
+                             "Return object",
+                             "Clear room",
+                             "Kill player",
+                             "Kill mob (bounty)",
+                             "Escort mob",
+                             "Improve emotion",
+                             "Magic gather",
+                             "Trade",
+                             "Resource gather",
+                             "Reputation build",
+                             "\n"};
 const char *aq_flags[] = {"REPEATABLE", "MOB_POSTED", "\n"};
 
 /*--------------------------------------------------------------------------
@@ -1048,6 +1062,164 @@ void autoquest_trigger_check(struct char_data *ch, struct char_data *vict, struc
             break;
         case AQ_MOB_ESCORT:
             /* Escort quest completion is handled separately in check_escort_quest_completion() */
+            break;
+        case AQ_EMOTION_IMPROVE:
+            /* Check if player improved specific emotion with target mob */
+            if (!IS_NPC(ch) && vict && IS_NPC(vict) && (ch != vict)) {
+                /* Check if this is the target mob */
+                if (QST_TARGET(rnum) == GET_MOB_VNUM(vict)) {
+                    /* Get the emotion type and target level from quest values */
+                    int emotion_type = QST_RETURNMOB(rnum); /* Reusing RETURNMOB for emotion type */
+                    int target_level = QST_QUANTITY(rnum);  /* Target emotion level */
+
+                    /* Get current emotion level toward player */
+                    int current_level = get_effective_emotion_toward(vict, ch, emotion_type);
+
+                    /* Check if target level reached */
+                    if (current_level >= target_level) {
+                        generic_complete_quest(ch);
+                    }
+                }
+            }
+            break;
+        case AQ_MAGIC_GATHER:
+            /* Check if player visited location with sufficient magical density */
+            if (!IS_NPC(ch) && type == AQ_ROOM_FIND) {
+                /* Get current magical density */
+                float current_density = calculate_mana_density(ch);
+                /* Target density threshold stored in value[6] as int (multiplied by 100) */
+                float target_density = QST_QUANTITY(rnum) / 100.0;
+
+                if (current_density >= target_density) {
+                    /* Decrement counter for number of locations to visit */
+                    if (--GET_QUEST_COUNTER(ch) <= 0) {
+                        generic_complete_quest(ch);
+                    }
+                }
+            }
+            break;
+        case AQ_TRADE:
+            /* Check if player traded required item with target mob */
+            if (!IS_NPC(ch) && vict && IS_NPC(vict) && object && (ch != vict)) {
+                /* Check if this is the target mob and correct item */
+                if (GET_MOB_VNUM(vict) == QST_TARGET(rnum) && GET_OBJ_VNUM(object) == QST_RETURNMOB(rnum)) {
+                    /* Verify the object is in the NPC's inventory (was traded/given) */
+                    struct obj_data *obj_check;
+                    bool has_object = false;
+
+                    if (vict->carrying) {
+                        for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
+                            if (obj_check == object) {
+                                has_object = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (has_object) {
+                        generic_complete_quest(ch);
+                    }
+                }
+            }
+            break;
+        case AQ_RESOURCE_GATHER:
+            /* Player must deliver multiple items to questmaster or requester */
+            if (!IS_NPC(ch) && vict && IS_NPC(vict) && object && GET_OBJ_VNUM(object) == QST_TARGET(rnum)) {
+                /* Check if the object is in the NPC's inventory (was given/traded) */
+                struct obj_data *obj_check;
+                bool has_object = false;
+
+                if (vict->carrying) {
+                    for (obj_check = vict->carrying; obj_check; obj_check = obj_check->next_content) {
+                        if (obj_check == object) {
+                            has_object = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (!has_object) {
+                    /* Object not in NPC's inventory - don't count it */
+                    break;
+                }
+
+                /* Check if giving to questmaster or original requester */
+                if (GET_MOB_VNUM(vict) == QST_MASTER(rnum)) {
+                    /* Given to questmaster - transfer to original requester if different */
+                    mob_rnum original_requester_rnum = real_mobile(QST_RETURNMOB(rnum));
+
+                    /* Mark item with NOLOCATE to prevent locate object exploit */
+                    SET_BIT_AR(GET_OBJ_EXTRA(object), ITEM_NOLOCATE);
+                    /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
+                    GET_OBJ_TIMER(object) = -28;
+
+                    if (original_requester_rnum != NOBODY) {
+                        struct char_data *original_requester = NULL;
+
+                        /* Find the original requester in the world */
+                        for (original_requester = character_list; original_requester;
+                             original_requester = original_requester->next) {
+                            if (IS_NPC(original_requester) &&
+                                GET_MOB_RNUM(original_requester) == original_requester_rnum) {
+                                break;
+                            }
+                        }
+
+                        if (original_requester && original_requester != vict) {
+                            /* Transfer item from questmaster to original requester */
+                            obj_from_char(object);
+                            obj_to_char(object, original_requester);
+
+                            /* Safety check: act() can trigger DG scripts which may extract object or characters */
+                            if (!MOB_FLAGGED(vict, MOB_NOTDEADYET) && !PLR_FLAGGED(vict, PLR_NOTDEADYET) &&
+                                !MOB_FLAGGED(original_requester, MOB_NOTDEADYET) &&
+                                !PLR_FLAGGED(original_requester, PLR_NOTDEADYET) &&
+                                object->carried_by == original_requester) {
+                                act("$n transfere $p para o requisitante.", FALSE, vict, object, NULL, TO_ROOM);
+                            }
+                        }
+                    }
+
+                    /* Count this delivery */
+                    if (--GET_QUEST_COUNTER(ch) <= 0) {
+                        /* All resources delivered, complete quest */
+                        generic_complete_quest(ch);
+                    } else {
+                        /* Still need more items */
+                        send_to_char(ch, "Você entregou 1 item. Ainda precisa de %d mais.\r\n", GET_QUEST_COUNTER(ch));
+                    }
+                } else if (GET_MOB_VNUM(vict) == QST_RETURNMOB(rnum)) {
+                    /* Given directly to original requester */
+                    /* Mark item with NOLOCATE to prevent locate object exploit */
+                    SET_BIT_AR(GET_OBJ_EXTRA(object), ITEM_NOLOCATE);
+                    /* Set timer to 28 ticks (1 MUD day) - negative value means "remove flag, don't extract" */
+                    GET_OBJ_TIMER(object) = -28;
+
+                    /* Count this delivery */
+                    if (--GET_QUEST_COUNTER(ch) <= 0) {
+                        /* All resources delivered, complete quest */
+                        generic_complete_quest(ch);
+                    } else {
+                        /* Still need more items */
+                        send_to_char(ch, "Você entregou 1 item. Ainda precisa de %d mais.\r\n", GET_QUEST_COUNTER(ch));
+                    }
+                }
+            }
+            break;
+        case AQ_REPUTATION_BUILD:
+            /* Reputation build quests check reputation level with target mob or zone */
+            if (!IS_NPC(ch) && vict && IS_NPC(vict)) {
+                /* Check if this is the target mob */
+                if (GET_MOB_VNUM(vict) == QST_TARGET(rnum)) {
+                    /* For now, use trust emotion as reputation proxy */
+                    int current_trust = get_effective_emotion_toward(vict, ch, EMOTION_TYPE_TRUST);
+                    int target_reputation = QST_QUANTITY(rnum);
+
+                    if (current_trust >= target_reputation) {
+                        generic_complete_quest(ch);
+                    }
+                }
+            }
             break;
         default:
             log1("SYSERR: Invalid quest type passed to autoquest_trigger_check");

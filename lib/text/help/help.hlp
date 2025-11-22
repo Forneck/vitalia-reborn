@@ -17852,6 +17852,47 @@ necessidades, genetica e situacao atual.
    - Quest falha se mob escoltado morrer
    - Requisitos: Destino deve ser acessivel, mob nao pode ser NOKILL
 
+@c10. AQ_EMOTION_IMPROVE (Melhorar Emocao)@n
+   @gNOVO - IMPLEMENTADO!@n
+   - Jogador deve melhorar emocao especifica com mob alvo
+   - Triggers: dar presentes, usar socials positivos, ajudar em combate
+   - Mob posta quando solitario (baixa friendship), desconfiado (baixa trust), ou triste
+   - Sistema de emocoes rastreia interacoes automaticamente
+   - Requisitos: Mob alvo deve existir, emocao valida (friendship, trust, loyalty, etc)
+
+@c11. AQ_MAGIC_GATHER (Coleta Magica)@n
+   @gNOVO - IMPLEMENTADO!@n
+   - Jogador deve visitar X locais com densidade magica alta
+   - Sistema calcula densidade baseado em clima, hora do dia, setor
+   - Mob posta quando precisa de poder magico ou energia
+   - Nao-combate, focado em exploracao magica
+   - Requisitos: Threshold de densidade configuravel
+
+@c12. AQ_TRADE (Comercio)@n
+   @gNOVO - IMPLEMENTADO!@n
+   - Jogador deve entregar item especifico para mob via trade/give
+   - Aumenta trust emotion com sucesso
+   - Usa sistema de reputacao para precificacao
+   - Alternativa nao-combate para aquisicao de itens
+   - Requisitos: Item deve existir e ser tradeable
+
+@c13. AQ_RESOURCE_GATHER (Coleta de Recursos)@n
+   @gNOVO - IMPLEMENTADO!@n
+   - Jogador deve coletar e entregar X quantidade de item especifico
+   - Similar a AQ_OBJ_RETURN mas com contador
+   - Jogador entrega itens um por vez ao questmaster/requisitante
+   - Sistema mostra progresso apos cada entrega
+   - Requisitos: Item deve existir e ser takeable
+   - @yIMPORTANTE:@n Recursos devem ser ENTREGUES, nao apenas coletados
+
+@c14. AQ_REPUTATION_BUILD (Construir Reputacao)@n
+   @gNOVO - IMPLEMENTADO!@n
+   - Jogador deve melhorar reputacao/trust com mob ou faccao
+   - Usa trust emotion como proxy de reputacao
+   - Requer multiplas interacoes positivas ao longo do tempo
+   - Mob posta quando precisa melhorar relacoes
+   - Requisitos: Mob alvo deve existir
+
 @y===== SISTEMA DE POSTING =====@n
 
 @gCondicoes para Mobs Postarem Quests:@n
