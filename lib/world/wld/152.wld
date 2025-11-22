@@ -613,6 +613,14 @@ frustrante, mas parece ser a única saída.
 ~
 0 -1 15213
 E
+espinheiros espinhos muralha barreira~
+Os espinheiros são diferentes de qualquer planta que já tenha visto. Seus ramos
+são de uma cor negra-azulada, duros como ferro, e os espinhos são longos, finos
+e afiados como agulhas de costura. Estão cobertos por uma substância pegajosa e
+escura que exala um odor ligeiramente ácido. A muralha que formam é tão densa
+que nem a luz nem o som conseguem passar por ela.
+~
+E
 flor camélia pureza~
 A camélia é uma anomalia de uma beleza dolorosa. As suas pétalas são como
 porcelana translúcida, e nenhuma praga ou sujidade da floresta ousa tocá-la.
@@ -620,14 +628,6 @@ Ela emana um calor suave e uma fragrância delicada a sândalo e chuva de
 primavera, um contraste gritante com o fedor do beco. Ao observá-la, tem a
 sensação de que a sua presença aqui não é um acidente, mas um convite; um foco
 de vontade sagrada que se recusa a ser extinto.
-~
-E
-espinheiros espinhos muralha barreira~
-Os espinheiros são diferentes de qualquer planta que já tenha visto. Seus ramos
-são de uma cor negra-azulada, duros como ferro, e os espinhos são longos, finos
-e afiados como agulhas de costura. Estão cobertos por uma substância pegajosa e
-escura que exala um odor ligeiramente ácido. A muralha que formam é tão densa
-que nem a luz nem o som conseguem passar por ela.
 ~
 S
 T 15210
@@ -2284,12 +2284,11 @@ dele. É a visão de um porto seguro, a certeza de que o terror ficou para trás
 ~
 0 -1 15248
 E
-pedras lajes caminho~
-As lajes de pedra branca que formam o caminho são antigas, mas imaculadamente
-limpas. Foram polidas por incontáveis passos até se tornarem lisas como seda ao
-toque. Encaixam-se umas nas outras com uma precisão que a natureza raramente
-permite, sugerindo que foram colocadas aqui por mãos que trabalhavam em
-perfeita harmonia com o mundo.
+bambu colmos~
+Os colmos de bambu são de um verde tão profundo que parecem quase negros na
+sombra. São grossos como o braço de um homem e crescem numa formação tão densa
+e ordenada que parece intencional, uma arquitetura viva. As suas folhas formam
+um teto que sussurra segredos de paz com a passagem da mais leve brisa.
 ~
 E
 lanternas pedra chama~
@@ -2299,11 +2298,12 @@ papel de arroz translúcido. A chama no seu interior não vacila nem produz fumo
 meditação e um farol de boas-vindas para uma alma cansada.
 ~
 E
-bambu colmos~
-Os colmos de bambu são de um verde tão profundo que parecem quase negros na
-sombra. São grossos como o braço de um homem e crescem numa formação tão densa
-e ordenada que parece intencional, uma arquitetura viva. As suas folhas formam
-um teto que sussurra segredos de paz com a passagem da mais leve brisa.
+pedras lajes caminho~
+As lajes de pedra branca que formam o caminho são antigas, mas imaculadamente
+limpas. Foram polidas por incontáveis passos até se tornarem lisas como seda ao
+toque. Encaixam-se umas nas outras com uma precisão que a natureza raramente
+permite, sugerindo que foram colocadas aqui por mãos que trabalhavam em
+perfeita harmonia com o mundo.
 ~
 S
 #15250
@@ -2357,20 +2357,13 @@ cuidados, de onde emana um perfume suave a ervas medicinais e flores noturnas.
 ~
 0 -1 15253
 E
-sino vento~
-Pendurado num dos galhos mais baixos da Sakura, um pequeno sino de ferro
-fundido, simples e sem adornos, balança sem que haja brisa. O seu som não é
-metálico, mas cristalino e puro. É um único tom, claro e penetrante, que ecoa a
-cada poucos segundos. Não é um som que quebra o silêncio, mas que o torna mais
-profundo.
-~
-E
-carpas peixes koi~
-Manchas de cor - laranja-pôr-do-sol, branco-neve, preto-tinta - movem-se sob a
-água com uma graça sobrenatural. As carpas não nadam; elas flutuam, descrevendo
-círculos lentos e perfeitos. Os seus movimentos são tão hipnóticos e
-deliberados que parecem ser os verdadeiros guardiões do tempo neste lugar,
-medindo a eternidade com cada volta silenciosa.
+arvore sakura cerejeira irma vida~
+Você foca a sua atenção na grande árvore. Não há vento, mas os seus galhos
+movem-se numa dança lenta e perpétua. Cada flor é uma pequena lanterna de luz
+rosada, e a casca do tronco, de um branco perolado, parece quente ao toque.
+Encostar a testa na árvore envia uma onda de calma profunda através de si,
+silenciando todas as preocupações. É a âncora deste santuário, a manifestação
+física da serenidade.
 ~
 E
 lago agua espelho~
@@ -2381,13 +2374,20 @@ profundezas é como olhar para um céu noturno sem estrelas - um vazio calmo e
 absoluto que convida à meditação.
 ~
 E
-arvore sakura cerejeira irma vida~
-Você foca a sua atenção na grande árvore. Não há vento, mas os seus galhos
-movem-se numa dança lenta e perpétua. Cada flor é uma pequena lanterna de luz
-rosada, e a casca do tronco, de um branco perolado, parece quente ao toque.
-Encostar a testa na árvore envia uma onda de calma profunda através de si,
-silenciando todas as preocupações. É a âncora deste santuário, a manifestação
-física da serenidade.
+carpas peixes koi~
+Manchas de cor - laranja-pôr-do-sol, branco-neve, preto-tinta - movem-se sob a
+água com uma graça sobrenatural. As carpas não nadam; elas flutuam, descrevendo
+círculos lentos e perfeitos. Os seus movimentos são tão hipnóticos e
+deliberados que parecem ser os verdadeiros guardiões do tempo neste lugar,
+medindo a eternidade com cada volta silenciosa.
+~
+E
+sino vento~
+Pendurado num dos galhos mais baixos da Sakura, um pequeno sino de ferro
+fundido, simples e sem adornos, balança sem que haja brisa. O seu som não é
+metálico, mas cristalino e puro. É um único tom, claro e penetrante, que ecoa a
+cada poucos segundos. Não é um som que quebra o silêncio, mas que o torna mais
+profundo.
 ~
 S
 #15251
@@ -2428,11 +2428,11 @@ refúgio.
 ~
 0 -1 15250
 E
-pedras lajes caminho~
-Ao baixar o olhar, vês que as lajes não foram cortadas, mas sim encontradas.
-Cada uma une-se à seguinte como se o próprio leito de um rio antigo tivesse
-sido aqui transplantado. Finos veios de quartzo nelas incrustados cintilam sob
-a luz das lanternas, um mapa de constelações esquecidas para guiar os seus pés.
+lanternas papel arroz~
+Não são lâmpadas, mas almas aprisionadas em papel e bambu. O papel, fino como a
+asa de uma borboleta ao amanhecer, difunde a luz numa aura quente. Símbolos
+antigos, pincelados com tinta negra, adornam cada uma: Harmonia, Paciência,
+Essência. Elas não iluminam o caminho; elas consagram-no.
 ~
 E
 som martelo~
@@ -2442,11 +2442,11 @@ respiração. É a voz de um mestre a conversar com o aço, não a dominá-lo. C
 toque é uma sílaba numa linguagem antiga de criação e forma.
 ~
 E
-lanternas papel arroz~
-Não são lâmpadas, mas almas aprisionadas em papel e bambu. O papel, fino como a
-asa de uma borboleta ao amanhecer, difunde a luz numa aura quente. Símbolos
-antigos, pincelados com tinta negra, adornam cada uma: Harmonia, Paciência,
-Essência. Elas não iluminam o caminho; elas consagram-no.
+pedras lajes caminho~
+Ao baixar o olhar, vês que as lajes não foram cortadas, mas sim encontradas.
+Cada uma une-se à seguinte como se o próprio leito de um rio antigo tivesse
+sido aqui transplantado. Finos veios de quartzo nelas incrustados cintilam sob
+a luz das lanternas, um mapa de constelações esquecidas para guiar os seus pés.
 ~
 S
 #15252
@@ -2486,20 +2486,20 @@ abandonar, um farol para o qual pode sempre regressar.
 ~
 0 -1 15250
 E
-canal agua luz~
-A água que flui sob a ponte não vem de nenhuma nascente visível nem parece ter
-um destino. Simplesmente é. A sua corrente é uma ilusão, pois a superfície
-permanece perfeitamente imóvel, mas a luz prateada que dela emana dança e
-treme, como se as estrelas tivessem escolhido o leito deste canal para o seu
-eterno repouso.
-~
-E
 ponte madeira arco~
 A madeira da ponte é de um branco-osso, a sua fibra tão lisa que parece marfim.
 Não há uma única farpa ou imperfeição. O seu arco é uma curva perfeita, uma lua
 crescente pousada sobre a água. Pisar nela não produz som, como se se
 caminhasse sobre neve recém-caída. É uma estrutura que exala uma sensação de
 pureza e força inabalável.
+~
+E
+canal agua luz~
+A água que flui sob a ponte não vem de nenhuma nascente visível nem parece ter
+um destino. Simplesmente é. A sua corrente é uma ilusão, pois a superfície
+permanece perfeitamente imóvel, mas a luz prateada que dela emana dança e
+treme, como se as estrelas tivessem escolhido o leito deste canal para o seu
+eterno repouso.
 ~
 S
 #15253
@@ -2534,14 +2534,6 @@ D2
 ~
 0 0 15258
 E
-insetos pirilampos luz~
-Os pequenos pontos de luz azulada não voam erraticamente. Eles movem-se em
-padrões lentos e graciosos, desenhando espirais no ar ou pairando sobre uma
-flor específica antes de passarem para a seguinte. Não são meros insetos;
-parecem ser os espíritos do jardim, os jardineiros invisíveis que cuidam de
-cada folha e pétala com o seu toque de luz.
-~
-E
 jardins canteiros plantas ervas~
 Você ajoelha-se para observar mais de perto. As folhas de uma planta têm veios
 de prata que brilham, enquanto outra enrola-se timidamente ao seu toque.
@@ -2549,6 +2541,14 @@ Pequenas flores, em forma de estrela ou de sino, florescem em recantos
 escondidos. Não há ervas daninhas. Cada planta cresce em harmonia com as suas
 vizinhas, um ecossistema perfeito em miniatura, um testemunho do poder da
 natureza quando não é maculada.
+~
+E
+insetos pirilampos luz~
+Os pequenos pontos de luz azulada não voam erraticamente. Eles movem-se em
+padrões lentos e graciosos, desenhando espirais no ar ou pairando sobre uma
+flor específica antes de passarem para a seguinte. Não são meros insetos;
+parecem ser os espíritos do jardim, os jardineiros invisíveis que cuidam de
+cada folha e pétala com o seu toque de luz.
 ~
 S
 #15254
@@ -2596,20 +2596,20 @@ constante e controlado, o respirar de um mestre ferreiro em meditação.
 ~
 0 -1 15255
 E
-esteiras bambu mercadorias~
-Sobre as esteiras de bambu, os objetos repousam. Uma única adaga, cuja lâmina
-parece conter a luz das estrelas; um conjunto de taças de chá, tão finas que
-parecem feitas de luar solidificado; um arco de madeira clara, cuja corda vibra
-com uma nota musical quando tocada. Cada item é uma história, e o seu silêncio
-é o seu vendedor.
-~
-E
 fonte agua pedra~
 A fonte é uma única rocha de rio, grande e escura, da qual a água brota do topo
 e escorre pelas suas laterais numa película perfeitamente lisa, sem perturbar a
 quietude com o seu som. Musgo de um verde aveludado cresce nas suas
 reentrâncias. Tocar na água é como tocar em seda líquida, fria e revitalizante.
 Diz-se que beber dela purifica não o corpo, mas os pensamentos.
+~
+E
+esteiras bambu mercadorias~
+Sobre as esteiras de bambu, os objetos repousam. Uma única adaga, cuja lâmina
+parece conter a luz das estrelas; um conjunto de taças de chá, tão finas que
+parecem feitas de luar solidificado; um arco de madeira clara, cuja corda vibra
+com uma nota musical quando tocada. Cada item é uma história, e o seu silêncio
+é o seu vendedor.
 ~
 S
 #15255
@@ -2644,12 +2644,12 @@ comercial da cidade.
 ~
 0 -1 15254
 E
-ferramentas parede~
-Penduradas em ganchos de madeira, as ferramentas do ferreiro são obras de arte
-por si só. Martelos com cabos de teixo polido, tenazes com garras que se
-encontram com a precisão de um beijo, cinzéis cuja ponta parece mais afiada que
-a razão. Não há um grão de ferrugem ou sujidade. Elas esperam, pacientes, pelo
-seu próximo ato de criação.
+fornalha chama fogo~
+A chama da fornalha é de um branco ofuscante, mas não irradia um calor
+agressivo. Dança com uma lentidão hipnótica, as suas línguas de fogo a subirem
+e a contorcerem-se como se estivessem a tecer a própria luz. Olhar para ela é
+sentir um calor que não queima a pele, mas que parece purificar a alma,
+queimando as impurezas dos seus pensamentos.
 ~
 E
 bigorna obsidiana~
@@ -2660,12 +2660,12 @@ nela, como se o metal que nela é moldado se rendesse sem resistência à sua
 vontade silenciosa.
 ~
 E
-fornalha chama fogo~
-A chama da fornalha é de um branco ofuscante, mas não irradia um calor
-agressivo. Dança com uma lentidão hipnótica, as suas línguas de fogo a subirem
-e a contorcerem-se como se estivessem a tecer a própria luz. Olhar para ela é
-sentir um calor que não queima a pele, mas que parece purificar a alma,
-queimando as impurezas dos seus pensamentos.
+ferramentas parede~
+Penduradas em ganchos de madeira, as ferramentas do ferreiro são obras de arte
+por si só. Martelos com cabos de teixo polido, tenazes com garras que se
+encontram com a precisão de um beijo, cinzéis cuja ponta parece mais afiada que
+a razão. Não há um grão de ferrugem ou sujidade. Elas esperam, pacientes, pelo
+seu próximo ato de criação.
 ~
 S
 #15256
@@ -2700,12 +2700,12 @@ de artesãos, um convite para partilhar a beleza aqui criada.
 ~
 0 -1 15254
 E
-obras esculturas entalhes~
-As esculturas parecem estar vivas, presas num instante de tempo. A graciosidade
-de uma garça, a sabedoria no rosto de uma tartaruga, a alegria na flor de lótus
-a desabrochar. A madeira não foi forçada a estas formas; parece ter-se
-entregado voluntariamente, como se o entalhador não a tivesse esculpido, mas
-apenas removido o excesso que escondia a sua verdadeira alma.
+ferramentas bancada~
+As ferramentas são pequenas e delicadas, extensões da mão do artesão. Os cabos
+de madeira são escuros e polidos pelo suor e pelo óleo de incontáveis horas de
+trabalho, moldados perfeitamente para um aperto confortável. As lâminas,
+mantidas com um cuidado fanático, são tão afiadas que parecem capazes de cortar
+um pensamento ao meio.
 ~
 E
 aparas madeira chao~
@@ -2716,12 +2716,12 @@ emana é o perfume da própria criação, a essência da floresta trazida para
 dentro de portas.
 ~
 E
-ferramentas bancada~
-As ferramentas são pequenas e delicadas, extensões da mão do artesão. Os cabos
-de madeira são escuros e polidos pelo suor e pelo óleo de incontáveis horas de
-trabalho, moldados perfeitamente para um aperto confortável. As lâminas,
-mantidas com um cuidado fanático, são tão afiadas que parecem capazes de cortar
-um pensamento ao meio.
+obras esculturas entalhes~
+As esculturas parecem estar vivas, presas num instante de tempo. A graciosidade
+de uma garça, a sabedoria no rosto de uma tartaruga, a alegria na flor de lótus
+a desabrochar. A madeira não foi forçada a estas formas; parece ter-se
+entregado voluntariamente, como se o entalhador não a tivesse esculpido, mas
+apenas removido o excesso que escondia a sua verdadeira alma.
 ~
 S
 #15257
@@ -2755,12 +2755,12 @@ fonte oferecem um contraste com o calor e a quietude íntima da casa de chá.
 ~
 0 -1 15254
 E
-arranjo flores ikebana~
-Num vaso de cerâmica simples, três elementos encontram um equilíbrio perfeito:
-um único galho de cerejeira em flor, representando o céu; uma folha larga de
-íris, simbolizando a terra; e um pequeno botão de camélia, representando o
-homem. A sua beleza não está na abundância, mas na harmonia e no espaço vazio
-entre eles, um lembrete da importância do que não é visto.
+mesas almofadas~
+As mesas são feitas de madeira escura e antiga, a sua superfície um espelho que
+reflete a luz quente das lanternas. As almofadas de seda, em tons de
+verde-musgo e azul-profundo, convidam ao repouso. Sentar-se aqui é sentir o
+corpo a relaxar, a postura a endireitar-se, e a mente a focar-se no simples ato
+de estar.
 ~
 E
 caldeirao agua cha~
@@ -2771,12 +2771,12 @@ som constante é um mantra, uma batida rítmica que ancora a sala na sua
 atmosfera de paz.
 ~
 E
-mesas almofadas~
-As mesas são feitas de madeira escura e antiga, a sua superfície um espelho que
-reflete a luz quente das lanternas. As almofadas de seda, em tons de
-verde-musgo e azul-profundo, convidam ao repouso. Sentar-se aqui é sentir o
-corpo a relaxar, a postura a endireitar-se, e a mente a focar-se no simples ato
-de estar.
+arranjo flores ikebana~
+Num vaso de cerâmica simples, três elementos encontram um equilíbrio perfeito:
+um único galho de cerejeira em flor, representando o céu; uma folha larga de
+íris, simbolizando a terra; e um pequeno botão de camélia, representando o
+homem. A sua beleza não está na abundância, mas na harmonia e no espaço vazio
+entre eles, um lembrete da importância do que não é visto.
 ~
 S
 #15258
@@ -2823,11 +2823,12 @@ no repouso, flui dela como uma nascente invisível.
 ~
 0 -1 15260
 E
-bacia agua tsukubai~
-Esculpida numa única pedra, a bacia está cheia até à borda com água tão clara
-que parece invisível. Uma única concha de bambu repousa sobre a sua borda. A
-água está sempre fresca. O ritual de lavar as mãos aqui é dito purificar não a
-pele, mas as intenções, preparando o espírito para a meditação ou a oração.
+areia ancinhada ondas~
+A areia branca e grossa foi ancinhada com uma precisão sobrenatural. As linhas
+fluem em padrões que imitam as ondulações da água, circulando as grandes rochas
+como se fossem ilhas num mar de tranquilidade. Não há um único grão fora do
+lugar. Os padrões parecem conter um significado profundo, uma matemática
+sagrada que acalma a mente.
 ~
 E
 rochas musgo~
@@ -2838,12 +2839,11 @@ com a natureza transitória das plantas, ensinando uma lição silenciosa sobre 
 eternidade.
 ~
 E
-areia ancinhada ondas~
-A areia branca e grossa foi ancinhada com uma precisão sobrenatural. As linhas
-fluem em padrões que imitam as ondulações da água, circulando as grandes rochas
-como se fossem ilhas num mar de tranquilidade. Não há um único grão fora do
-lugar. Os padrões parecem conter um significado profundo, uma matemática
-sagrada que acalma a mente.
+bacia agua tsukubai~
+Esculpida numa única pedra, a bacia está cheia até à borda com água tão clara
+que parece invisível. Uma única concha de bambu repousa sobre a sua borda. A
+água está sempre fresca. O ritual de lavar as mãos aqui é dito purificar não a
+pele, mas as intenções, preparando o espírito para a meditação ou a oração.
 ~
 S
 #15259
@@ -2876,12 +2876,12 @@ origem na terra viva que floresce lá fora.
 ~
 0 -1 15258
 E
-ervas secas teto~
-Pequenos molhos de ervas e flores secas pendem de vigas de madeira no teto,
-amarrados com fio de linho. Alfazema, alecrim, camomila, e dezenas de outras
-plantas que não reconhece. As suas formas frágeis e cores desbotadas enchem o
-ar com uma fragrância complexa e reconfortante, um dossel de remédios
-adormecidos.
+frascos gavetas~
+As paredes são uma biblioteca de cura. Pequenos frascos de vidro âmbar contêm
+óleos que brilham como joias líquidas. Gavetas de madeira de sândalo, ao serem
+abertas, libertam nuvens de pó de esporos ou o perfume de pétalas de rosa secas
+há um século. Tocar nestes recipientes é sentir a potência concentrada da
+natureza, à espera de ser libertada.
 ~
 E
 almofariz pilao~
@@ -2892,12 +2892,12 @@ revitalizante. O som lento e constante da moagem é uma prova da paciência
 necessária para extrair a verdadeira essência da cura.
 ~
 E
-frascos gavetas~
-As paredes são uma biblioteca de cura. Pequenos frascos de vidro âmbar contêm
-óleos que brilham como joias líquidas. Gavetas de madeira de sândalo, ao serem
-abertas, libertam nuvens de pó de esporos ou o perfume de pétalas de rosa secas
-há um século. Tocar nestes recipientes é sentir a potência concentrada da
-natureza, à espera de ser libertada.
+ervas secas teto~
+Pequenos molhos de ervas e flores secas pendem de vigas de madeira no teto,
+amarrados com fio de linho. Alfazema, alecrim, camomila, e dezenas de outras
+plantas que não reconhece. As suas formas frágeis e cores desbotadas enchem o
+ar com uma fragrância complexa e reconfortante, um dossel de remédios
+adormecidos.
 ~
 S
 #15260
@@ -2930,12 +2930,12 @@ comparação com a quietude intemporal e monocromática do templo.
 ~
 0 -1 15258
 E
-nevoa vapor chao~
-Uma névoa baixa e prateada cobre o chão da câmara, rodopiando lentamente em
-correntes invisíveis. É fria ao toque, mas não molha, e parece mover-se com uma
-intenção própria. Atravessá-la é como caminhar por entre nuvens, um passo de
-cada vez, com o mundo exterior a desaparecer e apenas a paz do templo a
-permanecer.
+luz veios mineral~
+Os veios prateados correm pelas paredes de pedra como rios de luar
+solidificado. A luz que emitem não é projetada, mas contida dentro do próprio
+mineral. Pulsam num ritmo lento e regular, como o bater de um coração imenso e
+adormecido. Tocar nos veios transmite uma vibração suave e uma sensação de
+calma profunda e inabalável.
 ~
 E
 piscina agua poço estrelas~
@@ -2946,12 +2946,12 @@ não só cura as doenças mais graves, mas também lava as memórias dolorosas,
 oferecendo um recomeço.
 ~
 E
-luz veios mineral~
-Os veios prateados correm pelas paredes de pedra como rios de luar
-solidificado. A luz que emitem não é projetada, mas contida dentro do próprio
-mineral. Pulsam num ritmo lento e regular, como o bater de um coração imenso e
-adormecido. Tocar nos veios transmite uma vibração suave e uma sensação de
-calma profunda e inabalável.
+nevoa vapor chao~
+Uma névoa baixa e prateada cobre o chão da câmara, rodopiando lentamente em
+correntes invisíveis. É fria ao toque, mas não molha, e parece mover-se com uma
+intenção própria. Atravessá-la é como caminhar por entre nuvens, um passo de
+cada vez, com o mundo exterior a desaparecer e apenas a paz do templo a
+permanecer.
 ~
 S
 #15261
@@ -3008,20 +3008,20 @@ pulsante da vida da cidade.
 ~
 0 -1 15252
 E
-pedras verticais ishi-doro~
-As pedras são monólitos de granito cobertos de líquenes e musgo. Não foram
-esculpidas, mas escolhidas pela sua forma natural e pela sua aura de
-permanência. Estão aqui há tanto tempo que parecem ter crescido do próprio
-solo. Tocar na sua superfície fria e áspera é sentir uma ligação com a história
-silenciosa e imemorial desta cidade.
-~
-E
 cerejeiras arvores~
 Estas cerejeiras são veneráveis anciãs, os seus troncos grossos e retorcidos
 cobertos por uma casca cinzenta e enrugada. Os seus galhos, no entanto, são
 jovens e vibrantes, cobertos por uma profusão de flores de um branco puro. Elas
 não são mágicas como a grande Sakura, mas a sua beleza natural e a sua idade
 transmitem uma profunda sensação de paz e continuidade.
+~
+E
+pedras verticais ishi-doro~
+As pedras são monólitos de granito cobertos de líquenes e musgo. Não foram
+esculpidas, mas escolhidas pela sua forma natural e pela sua aura de
+permanência. Estão aqui há tanto tempo que parecem ter crescido do próprio
+solo. Tocar na sua superfície fria e áspera é sentir uma ligação com a história
+silenciosa e imemorial desta cidade.
 ~
 S
 #15262
@@ -3062,12 +3062,12 @@ as cerejeiras brancas velam pelo caminho.
 ~
 0 -1 15261
 E
-chao madeira espelho~
-O chão de cedro foi polido por anos de cuidado até se tornar um espelho escuro.
-Reflete a luz das janelas e a forma de quem o pisa, criando uma sensação de se
-estar a flutuar num espaço de luz e sombra. O seu brilho impecável e a sua
-superfície perfeita falam da disciplina e do respeito que são a fundação deste
-lugar.
+caligrafia paredes rolos seda~
+Os rolos de seda exibem uma caligrafia que é mais do que escrita; é espírito
+tornado visível. Um único traço, forte e negro, transmite uma sensação de poder
+inabalável. Noutro, caracteres delicados e fluidos dançam no papel, evocando a
+graça de uma folha a cair. Olhar para eles é ler não apenas palavras, mas as
+emoções e a alma do mestre que segurou o pincel.
 ~
 E
 pinceis tinteiros~
@@ -3078,12 +3078,12 @@ concavidade para a água, e bastões de tinta sólida (sumi) que, quando moídos
 libertam o seu perfume de sândalo e fuligem de pinho.
 ~
 E
-caligrafia paredes rolos seda~
-Os rolos de seda exibem uma caligrafia que é mais do que escrita; é espírito
-tornado visível. Um único traço, forte e negro, transmite uma sensação de poder
-inabalável. Noutro, caracteres delicados e fluidos dançam no papel, evocando a
-graça de uma folha a cair. Olhar para eles é ler não apenas palavras, mas as
-emoções e a alma do mestre que segurou o pincel.
+chao madeira espelho~
+O chão de cedro foi polido por anos de cuidado até se tornar um espelho escuro.
+Reflete a luz das janelas e a forma de quem o pisa, criando uma sensação de se
+estar a flutuar num espaço de luz e sombra. O seu brilho impecável e a sua
+superfície perfeita falam da disciplina e do respeito que são a fundação deste
+lugar.
 ~
 S
 #15263
@@ -3116,12 +3116,12 @@ Nascente, onde a luz da eterna madrugada o espera.
 ~
 0 -1 15261
 E
-mesas leitura~
-Em clareiras entre as estantes, longas mesas baixas de madeira escura oferecem
-um lugar para o estudo. Almofadas de tecido simples estão dispostas ao seu
-redor. Sobre as mesas, suportes de leitura, pesos de papel de jade e tinteiros
-de pedra estão prontos para o uso. Estão todos vazios, à espera silenciosa de
-um erudito que procure os seus segredos.
+estantes rolos pergaminhos~
+As estantes de bambu escuro elevam-se até ao teto, organizadas em corredores
+que se perdem na penumbra. Cada nicho contém um rolo de pergaminho ou um códice
+de bambu. As fitas de seda - carmesim, safira, esmeralda, ouro - indicam o
+assunto: história, filosofia, botânica, poesia. É um arco-íris de sabedoria,
+uma floresta de conhecimento à espera de ser explorada.
 ~
 E
 luz claraboias po~
@@ -3132,12 +3132,12 @@ luz não revela, mas sugere, convidando o visitante a aproximar-se e a procurar
 a sabedoria na sombra.
 ~
 E
-estantes rolos pergaminhos~
-As estantes de bambu escuro elevam-se até ao teto, organizadas em corredores
-que se perdem na penumbra. Cada nicho contém um rolo de pergaminho ou um códice
-de bambu. As fitas de seda - carmesim, safira, esmeralda, ouro - indicam o
-assunto: história, filosofia, botânica, poesia. É um arco-íris de sabedoria,
-uma floresta de conhecimento à espera de ser explorada.
+mesas leitura~
+Em clareiras entre as estantes, longas mesas baixas de madeira escura oferecem
+um lugar para o estudo. Almofadas de tecido simples estão dispostas ao seu
+redor. Sobre as mesas, suportes de leitura, pesos de papel de jade e tinteiros
+de pedra estão prontos para o uso. Estão todos vazios, à espera silenciosa de
+um erudito que procure os seus segredos.
 ~
 S
 #15264
@@ -3170,12 +3170,12 @@ sagrado.
 ~
 0 -1 15261
 E
-filamentos energia petalas~
-Os fios de luz prateada movem-se com uma graça inteligente. Parecem as pétalas
-da Sakura, mas num estado mais puro, mais etéreo. Eles fluem ao seu redor, por
-vezes roçando suavemente em si, deixando um rasto de calor e uma sensação de
-bênção. São os pensamentos e os sonhos da cidade, a manifestação visível da sua
-paz.
+esfera luz coracao~
+A esfera de luz no centro pulsa com uma suavidade infinita. A sua cor muda
+lentamente, percorrendo todos os matizes do amanhecer: do rosa pálido ao
+dourado suave, ao azul celeste. Não emite calor nem é ofuscante. Olhar para ela
+é como olhar para a face da própria criação. Ela não exige nada, apenas é. E na
+sua existência, reside a força que mantém Shizuka a salvo.
 ~
 E
 plataforma cristal~
@@ -3186,12 +3186,12 @@ de luz, dando a sensação de se estar a flutuar sobre um oceano de almas
 tranquilas.
 ~
 E
-esfera luz coracao~
-A esfera de luz no centro pulsa com uma suavidade infinita. A sua cor muda
-lentamente, percorrendo todos os matizes do amanhecer: do rosa pálido ao
-dourado suave, ao azul celeste. Não emite calor nem é ofuscante. Olhar para ela
-é como olhar para a face da própria criação. Ela não exige nada, apenas é. E na
-sua existência, reside a força que mantém Shizuka a salvo.
+filamentos energia petalas~
+Os fios de luz prateada movem-se com uma graça inteligente. Parecem as pétalas
+da Sakura, mas num estado mais puro, mais etéreo. Eles fluem ao seu redor, por
+vezes roçando suavemente em si, deixando um rasto de calor e uma sensação de
+bênção. São os pensamentos e os sonhos da cidade, a manifestação visível da sua
+paz.
 ~
 S
 #15265
@@ -3224,14 +3224,6 @@ explosão de complexidade depois da simplicidade pura deste jardim.
 ~
 0 -1 15262
 E
-areia branca ancinhada~
-A areia aqui não imita as ondas do mar, mas é ancinhada em linhas perfeitamente
-retas e paralelas. Cada linha é um pensamento disciplinado, cada grão, um
-momento de concentração. Os padrões não são feitos para serem belos, mas para
-serem um exercício de ordem, um reflexo de uma mente que subjugou o caos e
-encontrou a clareza na estrutura.
-~
-E
 rocha negra~
 A rocha é de um basalto tão negro e polido que parece beber a luz do sol. A sua
 forma é vagamente oval, lisa e sem qualquer aresta. Não há inscrições nem
@@ -3239,5 +3231,174 @@ adornos. É um ponto de foco, uma âncora de escuridão no mar de areia branca. 
 sua presença é massiva e silenciosa, um símbolo da gravidade e da estabilidade
 que se podem encontrar no centro de uma mente calma.
 ~
+E
+areia branca ancinhada~
+A areia aqui não imita as ondas do mar, mas é ancinhada em linhas perfeitamente
+retas e paralelas. Cada linha é um pensamento disciplinado, cada grão, um
+momento de concentração. Os padrões não são feitos para serem belos, mas para
+serem um exercício de ordem, um reflexo de uma mente que subjugou o caos e
+encontrou a clareza na estrutura.
+~
+S
+#15266
+O nucleo da floresta~
+   You are in an unfinished room.  Voce esta no nucleo da floresta, se nao for
+um imortal, nao deveria estar aqui.
+~
+152 0 0 0 0 0
+D0
+~
+~
+0 0 15202
+D1
+~
+~
+0 0 15203
+D2
+~
+~
+0 0 15205
+D3
+~
+~
+0 0 15229
+S
+#15267
+Nucleo da floresta~
+Voce esta no nucleo da floresta, nao deveria estar aqui
+~
+152 0 0 0 0 0
+D0
+~
+~
+0 0 15207
+D1
+~
+~
+0 0 15211
+D2
+~
+~
+0 0 15209
+D3
+~
+~
+0 0 15213
+S
+#15268
+Nucleo da floresta~
+Voce esta no nucleo da floresta. E nao deveria estar aqui.
+~
+152 0 0 0 0 0
+D0
+~
+~
+0 0 15215
+D1
+~
+~
+0 0 15216
+D2
+~
+~
+0 0 15217
+D3
+~
+~
+0 0 15218
+S
+#15269
+Nucleo da Floresta~
+Voce esta no nucleo da floresta. E nao deveria estar aqui.
+~
+152 0 0 0 0 0
+D0
+~
+~
+0 0 15220
+D1
+~
+~
+0 0 15221
+D2
+~
+~
+0 0 15223
+D3
+~
+~
+0 0 15222
+D4
+~
+~
+0 0 15224
+D5
+~
+~
+0 0 15225
+D6
+~
+~
+0 0 15226
+D7
+~
+~
+0 0 15227
+D8
+~
+~
+0 0 15228
+S
+#15270
+Nucleo da floresta~
+Voce esta no nucleo da floresta. E nao deveria estar aqui.
+~
+152 0 0 0 0 0
+D0
+~
+~
+0 0 15229
+D1
+~
+~
+0 0 15230
+D2
+~
+~
+0 0 15231
+D3
+~
+~
+0 0 15232
+D4
+~
+~
+0 0 15233
+D5
+~
+~
+0 0 15234
+D6
+~
+~
+0 0 15235
+D7
+~
+~
+0 0 15237
+D8
+~
+~
+0 0 15238
+D9
+~
+~
+0 0 15239
+S
+#15299
+Sala dos segredos da floresta~
+Sala de seguranca para controle de saldos de itens.
+~
+152 0 0 0 0 0
 S
 $~
