@@ -118,6 +118,7 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
 {
     int found = 0;
     struct char_data *temp;
+    bool skip_modifiers = FALSE;  /* controla se vamos suprimir (zunindo), (aura...), etc */
 
     if (!obj || !ch) {
         log1("SYSERR: NULL pointer in show_obj_to_char(): obj=%p ch=%p", (void *)obj, (void *)ch);
@@ -163,18 +164,47 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
             send_to_char(ch, "%s", obj->description);
             break;
 
-        case SHOW_OBJ_SHORT:
-            if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS)) {
-                send_to_char(ch, "[%d] ", GET_OBJ_VNUM(obj));
-                if (SCRIPT(obj)) {
-                    if (!TRIGGERS(SCRIPT(obj))->next)
-                        send_to_char(ch, "[T%d] ", GET_TRIG_VNUM(TRIGGERS(SCRIPT(obj))));
-                    else
-                        send_to_char(ch, "[TRIGS] ");
-                }
-            }
+case SHOW_OBJ_SHORT:
+    /* Inventário alternativo só em casas E se o jogador tiver o toggle ligado */
+    if (IN_ROOM(ch) != NOWHERE &&
+        ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE) &&
+        IN_ROOM(obj) == IN_ROOM(ch) &&
+        PRF_FLAGGED(ch, PRF_HOUSE_ALTINV)) {
+
+#ifdef GET_OBJ_LEVEL
+        int lvl = GET_OBJ_LEVEL(obj);
+#else
+        int lvl = 0; /* Se não houver nível definido, mostra 0 ou ajuste conforme sua lógica */
+#endif
+
+        /* Formato:
+         * nome do item [Nv. XX]
+         *
+         * - nome: branco
+         * - colchetes: CIANO ESCURO (CCCYN)
+         * - "Nv": VERDE ESCURO (CCGRN)
+         * - ". XX": branco (CCNRM)
+         */
+        send_to_char(ch, "%s%s %s[%sNv%s. %d%s]%s",
+                     CCWHT(ch, C_NRM),         /* nome em branco */
+                     obj->short_description,
+                     CCCYN(ch, C_NRM),         /* abre colchete em ciano escuro */
+                     CCGRN(ch, C_NRM),         /* 'Nv' em verde escuro */
+                     CCNRM(ch, C_NRM),         /* volta para branco para '. XX' */
+                     lvl,
+                     CCCYN(ch, C_NRM),         /* fecha colchete em ciano escuro */
+                     CCNRM(ch, C_NRM));        /* reseta cor */
+
+        /* Não mostrar (zunindo), (aura brilhante), etc, neste modo alternativo */
+        skip_modifiers = TRUE;
+    } else {
+        /* Modo "comum" atual: S-DESC com modifiers (zunindo, aura, etc.) */
+        if (obj->short_description)
             send_to_char(ch, "%s", obj->short_description);
-            break;
+        else
+            send_to_char(ch, "Algo.");
+    }
+    break;
 
         case SHOW_OBJ_ACTION:
             switch (GET_OBJ_TYPE(obj)) {
@@ -210,9 +240,12 @@ void show_obj_to_char(struct obj_data *obj, struct char_data *ch, int mode)
     }
 end:
 
-    show_obj_modifiers(obj, ch, mode);
+    if (!skip_modifiers)
+        show_obj_modifiers(obj, ch, mode);
+
     send_to_char(ch, "\r\n");
 }
+
 
 static void show_obj_modifiers(struct obj_data *obj, struct char_data *ch, int mode)
 {
